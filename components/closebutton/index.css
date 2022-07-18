@@ -15,12 +15,15 @@ governing permissions and limitations under the License.
 @import "../commons/basebutton.css";
 
 .spectrum-CloseButton {
-  /* TODO How does %spectrum-BaseButton work? Check Radio Button */
-  @inherit: %spectrum-BaseButton;
-  position: relative;
-  border-color: transparent;
-  border-width: 0;
-  color: inherit;
+  /* Cross icon */
+  --spectrum-closebutton-content-color-default: var(--spectrum-neutral-content-color-default);
+  --spectrum-closebutton-content-color-hover: var(--spectrum-neutral-content-color-hover);
+  --spectrum-closebutton-content-color-down: var(--spectrum-neutral-content-color-down);
+  --spectrum-closebutton-content-color-focus: var(--spectrum-neutral-content-color-focus);
+
+
+  --spectrum-closebutton-content-color-disabled: var(--spectrum-disabled-content-color);
+  --spectrum-closebutton-background-color: var(--spectrum-disabled-background-color);
 
   --spectrum-closebutton-height: var(--spectrum-component-height-100);
 
@@ -31,37 +34,134 @@ governing permissions and limitations under the License.
   --spectrum-closebutton-black: var(--spectrum-black);
   --spectrum-closebutton-white: var(--spectrum-white);
 
+  --spectrum-closebutton-border-radius: var(--spectrum-global-dimension-size-400);
+  --spectrum-closebutton-width: var(--spectrum-global-dimension-size-400);
+
   --spectrum-closebutton-animation-duration: var(--spectrum-animation-duration-100);
 }
 
 .spectrum-Checkbox--sizeS {
   --spectrum-closebutton-height: var(--spectrum-component-height-75);
+
+  /* TODO Review tokens */
+  --spectrum-closebutton-width: var(--spectrum-global-dimension-size-300);
+  --spectrum-closebutton-size: var(--spectrum-global-dimension-size-300);
+  --spectrum-closebutton-border-radius: var(--spectrum-global-dimension-size-300);
 }
 
 .spectrum-Checkbox--sizeM {
   --spectrum-closebutton-height: var(--spectrum-component-height-100);
+
+  /* TODO Review tokens */
+  --spectrum-closebutton-width: var(--spectrum-global-dimension-size-400);
+  --spectrum-closebutton-size: var(--spectrum-global-dimension-size-400);
+  --spectrum-closebutton-border-radius: var(--spectrum-global-dimension-size-400);
 }
 
 .spectrum-Checkbox--sizeL {
   --spectrum-closebutton-height: var(--spectrum-component-height-200);
+
+  /* TODO Review tokens */
+  --spectrum-closebutton-width: var(--spectrum-global-dimension-size-500);
+  --spectrum-closebutton-size: var(--spectrum-global-dimension-size-500);
+  --spectrum-closebutton-border-radius: var(--spectrum-global-dimension-size-500);
 }
 
 .spectrum-Checkbox--sizeXL {
   --spectrum-closebutton-height: var(--spectrum-component-height-300);
+
+  /* TODO Review tokens */
+  --spectrum-closebutton-width: var(--spectrum-global-dimension-size-600);
+  --spectrum-closebutton-size: var(--spectrum-global-dimension-size-600);
+  --spectrum-closebutton-border-radius: var(--spectrum-global-dimension-size-600);
+}
+
+.spectrum-CloseButton--staticWhite {
+  --spectrum-closebutton-focus-ring-color: var(--spectrum-white);
+}
+
+.spectrum-CloseButton--staticBlack {
+  --spectrum-closebutton-focus-ring-color: var(--spectrum-black);
 }
 
 /* Windows high contrast mode */
-@media (forced-colors: active) {}
+@media (forced-colors: active) {
+  .spectrum-CloseButton {
+    --spectrum-alias-component-icon-color-default: ButtonText;
+    --spectrum-alias-component-icon-color-disabled: GrayText;
+    --spectrum-alias-component-icon-color-down: Highlight;
+    --spectrum-alias-component-icon-color-hover: Highlight;
+    --spectrum-alias-component-icon-color-key-focus: Highlight;
+    --spectrum-alias-component-icon-color-mouse-focus: Highlight;
+    --spectrum-closebutton-m-black-background-color-down: ButtonFace;
+    --spectrum-closebutton-m-black-background-color-hover: ButtonFace;
+    --spectrum-closebutton-m-black-background-color-key-focus: ButtonFace;
+    --spectrum-closebutton-m-black-background-color-mouse-focus: ButtonFace;
+    --spectrum-closebutton-m-black-uiicon-color: ButtonText;
+    --spectrum-closebutton-m-black-uiicon-color-disabled: GrayText;
+    --spectrum-closebutton-m-black-uiicon-color-down: Highlight;
+    --spectrum-closebutton-m-black-uiicon-color-hover: Highlight;
+    --spectrum-closebutton-m-black-uiicon-color-key-focus: Highlight;
+    --spectrum-closebutton-m-black-uiicon-color-mouse-focus: Highlight;
+    --spectrum-closebutton-m-white-background-color-down: ButtonFace;
+    --spectrum-closebutton-m-white-background-color-hover: ButtonFace;
+    --spectrum-closebutton-m-white-background-color-key-focus: ButtonFace;
+    --spectrum-closebutton-m-white-background-color-mouse-focus: ButtonFace;
+    --spectrum-closebutton-m-white-uiicon-color: ButtonText;
+    --spectrum-closebutton-m-white-uiicon-color-disabled: GrayText;
+    --spectrum-closebutton-m-white-uiicon-color-down: Highlight;
+    --spectrum-closebutton-m-white-uiicon-color-hover: Highlight;
+    --spectrum-closebutton-m-white-uiicon-color-key-focus: Highlight;
+    --spectrum-closebutton-m-white-uiicon-color-mouse-focus: Highlight;
+    &:focus-ring {
+      &:after {
+        forced-color-adjust: none;
+        box-shadow: 0 0 0 var(--spectrum-alias-focus-ring-size) var(--spectrum-alias-component-icon-color-default);
+        border-radius: 100%;
+        content: "";
+        display: block;
+        position: absolute;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        top: 0;
+        margin: var(--spectrum-alias-focus-ring-gap);
+        transition: opacity var(--spectrum-global-animation-duration-100) ease-out,
+                    margin var(--spectrum-global-animation-duration-100) ease-out; 
+      }
+    }
+  }
+}
 
 a.spectrum-CloseButton {
   /* TODO What is %spectrum-AnchorButton? */
   @inherit: %spectrum-AnchorButton;
 }
 
-/* special cases for focus-ring */
 .spectrum-CloseButton {
+  /* TODO How does %spectrum-BaseButton work? Check Radio Button */
+  @inherit: %spectrum-BaseButton;
+
+  height: var(--spectrum-closebutton-height);
+  width: var(--spectrum-closebutton-width);
+
+  position: relative;
+
+  color: inherit;
+
+  border-color: transparent;
+  border-radius: var(--spectrum-closebutton-border-radius);
+  border-width: 0;
+
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+  display: inline-flex;
+  padding: 0;
+
   transition: border-color var(--spectrum-closebutton-animation-duration) ease-in-out;
 
+  /* Focus */
   &:after {
     pointer-events: none;
     content: '';
@@ -83,12 +183,165 @@ a.spectrum-CloseButton {
       box-shadow: 0 0 0 var(--spectrum-closebutton-focus-ring-thickness) var(--spectrum-closebutton-focus-ring-color);
     }
   }
+
+  &:disabled {
+    background-color: transparent;
+
+    .spectrum-CloseButton-UIIcon {
+      color: var(--spectrum-closebutton-content-color-disabled);
+    }
+  }
+
+  &:not(:disabled) {
+    background-color: transparent;
+
+    &:hover {
+      background-color: var(--spectrum-closebutton-background-color);
+
+      .spectrum-CloseButton-UIIcon {
+        color: var(--spectrum-closebutton-content-color-hover); /* Review */
+      }
+    }
+
+    &:active {
+      background-color: var(--spectrum-global-color-gray-300); /* Review */
+
+      /* Review */
+      .spectrum-CloseButton-UIIcon {
+        color: var(--spectrum-closebutton-content-color-down)
+      }
+    }
+
+    &:focus-visible {
+      background-color: var(--spectrum-global-color-gray-300);
+
+      .spectrum-CloseButton-UIIcon {
+        color: var(--spectrum-closebutton-content-color-focus);
+      }
+    }
+
+    &.is-keyboardFocused {
+      background-color: var(--spectrum-global-color-gray-300);
+
+      .spectrum-CloseButton-UIIcon {
+        color: var(--spectrum-closebutton-content-color-focus);
+      }
+    }
+
+    .spectrum-CloseButton-UIIcon {
+      color: var(--spectrum-closebutton-content-color-default)
+    }
+
+    &:focus {
+      .spectrum-CloseButton-UIIcon {
+        color: var(--spectrum-closebutton-content-color-focus);
+      }
+    }
+
+    &.is-focused {
+      .spectrum-CloseButton-UIIcon {
+        color: var(--spectrum-closebutton-content-color-focus)
+      }
+    }
+  }
+
+  &--staticBlack {
+    &:not(:disabled) {
+      background-color: transparent;
+
+      &:hover {
+        background-color: var(--spectrum-closebutton-m-black-background-color-hover);
+
+        .spectrum-CloseButton-UIIcon {
+          color: var(--spectrum-closebutton-m-black-uiicon-color-hover);
+        }
+      }
+
+      &:active {
+        background-color: var(--spectrum-closebutton-m-black-background-color-down);
+
+        .spectrum-CloseButton-UIIcon {
+          color: var(--spectrum-closebutton-m-black-uiicon-color-down);
+        }
+      }
+
+      &:focus-visible {
+        background-color: var(--spectrum-closebutton-m-black-background-color-mouse-focus);
+
+        .spectrum-CloseButton-UIIcon {
+          color: var(--spectrum-closebutton-m-black-uiicon-color-mouse-focus);
+        }
+      }
+
+      &.is-keyboardFocused {
+        background-color: var(--spectrum-closebutton-m-black-background-color-key-focus);
+
+        .spectrum-CloseButton-UIIcon {
+          color: var(--spectrum-closebutton-m-black-uiicon-color-key-focus);
+        }
+      }
+
+      .spectrum-CloseButton-UIIcon {
+        color: var(--spectrum-closebutton-m-black-uiicon-color);
+      }
+    }
+
+    &:disabled {
+      .spectrum-CloseButton-UIIcon {
+        color: var(--spectrum-closebutton-m-black-uiicon-color-disabled);
+      }
+    }
+  }
+
+  &--staticWhite {
+    &:not(:disabled) {
+      background-color: transparent;
+
+      &:hover {
+        background-color: var(--spectrum-closebutton-m-white-background-color-hover);
+
+        .spectrum-CloseButton-UIIcon {
+          color: var(--spectrum-closebutton-m-white-uiicon-color-hover);
+        }
+      }
+
+      &:active {
+        background-color: var(--spectrum-closebutton-m-white-background-color-down);
+
+        .spectrum-CloseButton-UIIcon {
+          color: var(--spectrum-closebutton-m-white-uiicon-color-down);
+        }
+      }
+
+      &:focus-visible {
+        background-color: var(--spectrum-closebutton-m-white-background-color-mouse-focus);
+
+        .spectrum-CloseButton-UIIcon {
+          color: var(--spectrum-closebutton-m-white-uiicon-color-mouse-focus);
+        }
+      }
+
+      &.is-keyboardFocused {
+        background-color: var(--spectrum-closebutton-m-white-background-color-key-focus);
+
+        .spectrum-CloseButton-UIIcon {
+          color: var(--spectrum-closebutton-m-white-uiicon-color-key-focus);
+        }
+      }
+
+      .spectrum-CloseButton-UIIcon {
+        color: var(--spectrum-closebutton-m-white-uiicon-color);
+      }
+    }
+
+    &:disabled {
+      .spectrum-CloseButton-UIIcon {
+        color: var(--spectrum-closebutton-m-white-uiicon-color-disabled);
+      }
+    }
+  }
 }
 
-.spectrum-CloseButton--staticWhite {
-  --spectrum-closebutton-focus-ring-color: var(--spectrum-white);
-}
-
-.spectrum-CloseButton--staticBlack {
-  --spectrum-closebutton-focus-ring-color: var(--spectrum-black);
+.spectrum-CloseButton-UIIcon {
+  margin: 0;
 }
