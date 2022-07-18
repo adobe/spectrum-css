@@ -43,6 +43,7 @@ governing permissions and limitations under the License.
   /* Font */
   --spectrum-checkbox-font-size: var(--spectrum-font-size-100);
   --spectrum-checkbox-line-height: var(--spectrum-line-height-100);
+  --spectrum-checkbox-CJK-line-height: var(--spectrum-CJK-line-height-100);
 
   /* Size */
   --spectrum-checkbox-height: var(--spectrum-component-height-100);
@@ -424,11 +425,20 @@ governing permissions and limitations under the License.
   margin-block-start: var(--spectrum-checkbox-top-to-text);
 
   font-size: var(--spectrum-checkbox-font-size);
+
+  /* TODO Use font-weight and font-style tokens */
   /* font-weight: var(--spectrum-checkbox-text-font-weight); */
   /* font-style: var(--spectrum-checkbox-text-font-style); */
-  line-height: var(--spectrum-checkbox-line-height);
 
   transition: color var(--spectrum-checkbox-animation-duration) ease-in-out;
+
+  line-height: var(--spectrum-checkbox-line-height);
+
+  &:lang(js),
+  &:lang(zh),
+  &:lang(ko) {
+    line-height: var(--spectrum-checkbox-CJK-line-height, var(--spectrum-checkbox-line-height));
+  }
 }
 
 .spectrum-Checkbox-input {
