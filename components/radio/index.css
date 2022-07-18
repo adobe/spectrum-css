@@ -18,28 +18,26 @@ governing permissions and limitations under the License.
  */
 
 .spectrum-Radio {
-  /* label text colors for all themes */
-  --spectrum-radio-content-color-default: var(--spectrum-neutral-content-color-default);
-  --spectrum-radio-content-color-hover: var(--spectrum-neutral-content-color-hover);
-  --spectrum-radio-content-color-down: var(--spectrum-neutral-content-color-down);
-  --spectrum-radio-content-color-focus: var(--spectrum-neutral-content-color-key-focus);
+  /* state colors for all themes */
+  --spectrum-radio-neutral-content-color: var(--spectrum-neutral-content-color-default);
+  --spectrum-radio-neutral-content-color-hover: var(--spectrum-neutral-content-color-hover);
+  --spectrum-radio-neutral-content-color-down: var(--spectrum-neutral-content-color-down);
+  --spectrum-radio-neutral-content-color-focus: var(--spectrum-neutral-content-color-key-focus);
 
   /* focus ring all themes */
   --spectrum-radio-focus-ring-thickness: var(--spectrum-focus-ring-thickness);
   --spectrum-radio-focus-ring-gap: var(--spectrum-focus-ring-gap);
   --spectrum-radio-focus-ring-color: var(--spectrum-focus-ring-color);
 
-  /* disabled label color all themes */
+  /* disabled all themes */
   --spectrum-radio-disabled-content-color: var(--spectrum-disabled-content-color);
-
-  /* disabled border color all themes */
-  --spectrum-radio-button-border-color-disabled: var(--spectrum-gray-400);
+  --spectrum-radio-disabled-border-color: var(--spectrum-gray-400);
 
   /* emphasized state colors selection indicator all themes */
-  --spectrum-radio-button-border-color-emphasized-default: var(--spectrum-accent-color-900);
-  --spectrum-radio-button-border-color-emphasized-hover: var(--spectrum-accent-color-1000);
-  --spectrum-radio-button-border-color-emphasized-down: var(--spectrum-accent-color-1100);
-  --spectrum-radio-button-border-color-emphasized-focus: var(--spectrum-accent-color-1000);
+  --spectrum-radio-emphasized-accent-color: var(--spectrum-accent-color-900);
+  --spectrum-radio-emphasized-accent-color-hover: var(--spectrum-accent-color-1000);
+  --spectrum-radio-emphasized-accent-color-down: var(--spectrum-accent-color-1100);
+  --spectrum-radio-emphasized-accent-color-focus: var(--spectrum-accent-color-1000);
 
   /* selection indicator all themes */
   --spectrum-radio-border-width: var(--spectrum-border-width-200);
@@ -54,7 +52,7 @@ governing permissions and limitations under the License.
   --spectrum-radio-font-size: var(--spectrum-font-size-100);
   --spectrum-radio-line-height: var(--spectrum-line-height-100);
 
-  /* CKJ language support all themes */
+  /* CJK language support all themes */
   --spectrum-radio-cjk-line-height: var(--spectrum-CJK-line-height-100);
 
   /* animation all themes */
@@ -128,23 +126,22 @@ governing permissions and limitations under the License.
 @media (forced-colors: active) {
   .spectrum-Radio {
     /* high contrast text */
-    --highcontrast-radio-content-color-default: ButtonText;
-    --highcontrast-radio-content-color-hover: ButtonText;
-    --highcontrast-radio-content-color-down: ButtonText;
-    --highcontrast-radio-content-color-focus: ButtonText;
+    --highcontrast-radio-neutral-content-color: CanvasText;
+    --highcontrast-radio-neutral-content-color-hover: CanvasText;
+    --highcontrast-radio-neutral-content-color-down: CanvasText;
+    --highcontrast-radio-neutral-content-color-focus: CanvasText;
 
      /* high contrast selector */
     --highcontrast-radio-button-border-color-default: ButtonText;
     --highcontrast-radio-button-border-color-hover: Highlight;
     --highcontrast-radio-button-border-color-down: ButtonText;
     --highcontrast-radio-button-border-color-focus: Highlight;
-    --highcontrast-radio-button-background-color: ButtonFace;
 
     /* high contrast emphasized selector */
-    --highcontrast-radio-button-border-color-emphasized-default: ButtonText;
-    --highcontrast-radio-button-border-color-emphasized-hover: Highlight;
-    --highcontrast-radio-button-border-color-emphasized-down: ButtonText;
-    --highcontrast-radio-button-border-color-emphasized-focus: Highlight;
+    --highcontrast-radio-emphasized-accent-color: ButtonText;
+    --highcontrast-radio-emphasized-accent-color-hover: Highlight;
+    --highcontrast-radio-emphasized-accent-color-down: ButtonText;
+    --highcontrast-radio-emphasized-accent-color-focus: Highlight;
 
     /* high contrast checked selector */
     --highcontrast-radio-button-checked-border-color-default: Highlight;
@@ -156,7 +153,7 @@ governing permissions and limitations under the License.
     --highcontrast-radio-disabled-content-color: GrayText;
 
     /* high contrast disabled selector */
-    --highcontrast-radio-button-border-color-disabled: GrayText;
+    --highcontrast-radio-disabled-border-color: GrayText;
 
     /* high contrast focus ring */
      --highcontrast-radio-focus-ring-color: CanvasText;
@@ -193,9 +190,9 @@ governing permissions and limitations under the License.
     }
 
     .spectrum-Radio-label {
-      color: var(--highcontrast-radio-content-color-hover,
-                var(--mod-radio-content-color-hover,
-                    var(--spectrum-radio-content-color-hover)));
+      color: var(--highcontrast-radio-neutral-content-color-hover,
+                var(--mod-radio-neutral-content-color-hover,
+                    var(--spectrum-radio-neutral-content-color-hover)));
     }
   }
 
@@ -219,9 +216,9 @@ governing permissions and limitations under the License.
     }
 
     .spectrum-Radio-label {
-      color: var(--highcontrast-radio-content-color-down,
-                var(--mod-radio-content-color-down,
-                    var(--spectrum-radio-content-color-down)));
+      color: var(--highcontrast-radio-neutral-content-color-down,
+                var(--mod-radio-neutral-content-color-down,
+                    var(--spectrum-radio-neutral-content-color-down)));
     }
   }
 
@@ -260,17 +257,16 @@ governing permissions and limitations under the License.
     }
 
     .spectrum-Radio-label {
-      color: var(--highcontrast-radio-content-color-focus,
-                var(--mod-radio-content-color-focus,
-                    var(--spectrum-radio-content-color-focus)));
-    }
+      color: var(--highcontrast-radio-neutral-content-color-focus,
+                var(--mod-radio-neutral-content-color-focus,
+                    var(--spectrum-radio-neutral-content-color-focus)));    }
   }
 
   &.is-invalid {
     .spectrum-Radio-label {
-      color: var(--highcontrast-radio-content-color-default,
-                var(--mod-radio-content-color-default,
-                    var(--spectrum-radio-content-color-default)));
+      color: var(--highcontrast-radio-neutral-content-color,
+                var(--mod-radio-neutral-content-color,
+                    var(--spectrum-radio-neutral-content-color)));
     }
   }
 
@@ -301,9 +297,9 @@ governing permissions and limitations under the License.
     /* selection indicator emphasized */
     .spectrum-Radio-input:checked + .spectrum-Radio-button {
       &:before {
-        border-color: var(--highcontrast-radio-button-border-color-emphasized-default,
-                          var(--mod-radio-button-border-color-emphasized-default,
-                              var(--spectrum-radio-button-border-color-emphasized-default)));
+        border-color: var(--highcontrast-radio-emphasized-accent-color,
+                          var(--mod-radio-emphasized-accent-color,
+                              var(--spectrum-radio-emphasized-accent-color)));
       }
     }
 
@@ -311,9 +307,9 @@ governing permissions and limitations under the License.
       /* selection indicator emphasized hover */
       .spectrum-Radio-input:checked + .spectrum-Radio-button {
         &:before {
-          border-color: var(--highcontrast-radio-button-border-color-emphasized-hover,
-                            var(--mod-radio-button-border-color-emphasized-hover,
-                                var(--spectrum-radio-button-border-color-emphasized-hover)));
+          border-color: var(--highcontrast-radio-emphasized-accent-color-hover,
+                            var(--mod-radio-emphasized-accent-color-hover,
+                                var(--spectrum-radio-emphasized-accent-color-hover)));
         }
       }
     }
@@ -322,9 +318,9 @@ governing permissions and limitations under the License.
       /* selection indicator emphasized active */
       .spectrum-Radio-input:checked + .spectrum-Radio-button {
         &:before {
-          border-color: var(--highcontrast-radio-button-border-color-emphasized-down,
-                            var(--mod-radio-button-border-color-emphasized-down,
-                                var(--spectrum-radio-button-border-color-emphasized-down)));
+          border-color: var(--highcontrast-radio-emphasized-accent-color-down,
+                            var(--mod-radio-emphasized-accent-color-down,
+                                var(--spectrum-radio-emphasized-accent-color-down)));
         }
       }
     }
@@ -333,9 +329,9 @@ governing permissions and limitations under the License.
       /* selection indicator emphasized focus */
       .spectrum-Radio-input:checked + .spectrum-Radio-button {
         &:before {
-          border-color: var(--highcontrast-radio-button-border-color-emphasized-focus,
-                            var(--mod-radio-button-border-color-emphasized-focus,
-                                var(--spectrum-radio-button-border-color-emphasized-focus)));
+          border-color: var(--highcontrast-radio-emphasized-accent-color-focus,
+                            var(--mod-radio-emphasized-accent-color-focus,
+                                var(--spectrum-radio-emphasized-accent-color-focus)));
         }
       }
     }
@@ -347,9 +343,9 @@ governing permissions and limitations under the License.
 .spectrum-Radio .spectrum-Radio-input:checked {
   &:disabled + .spectrum-Radio-button {
     &:before {
-      border-color: var(--highcontrast-radio-button-border-color-disabled,
-                        var(--mod-radio-button-border-color-disabled,
-                            var(--spectrum-radio-button-border-color-disabled)));
+      border-color: var(--highcontrast-radio-disabled-border-color,
+                        var(--mod-radio-disabled-border-color,
+                            var(--spectrum-radio-disabled-border-color)));
     }
   }
 
@@ -430,9 +426,9 @@ governing permissions and limitations under the License.
   /* TODO: font weight and style tokens */
   /* font-weight: var(--spectrum-radio-text-font-weight); **** missing token resolves to 400 ****/
   /* font-style: var(--spectrum-radio-text-font-style); **** missing token resolves to normal ****/
-  color: var(--highcontrast-radio-content-color-default,
-            var(--mod-radio-content-color-default,
-                var(--spectrum-radio-content-color-default)));
+  color: var(--highcontrast-radio-neutral-content-color,
+            var(--mod-radio-neutral-content-color,
+                var(--spectrum-radio-neutral-content-color)));
   line-height: var(--mod-radio-line-height,
                   var(--spectrum-radio-line-height));
 
@@ -440,7 +436,7 @@ governing permissions and limitations under the License.
                         var(--spectrum-radio-animation-duration)) ease-in-out;
 }
 
-/* CKJ language support */
+/* CJK language support */
 .spectrum-Radio-label:lang(ja),
 .spectrum-Radio-label:lang(zh),
 .spectrum-Radio-label:lang(ko) {
