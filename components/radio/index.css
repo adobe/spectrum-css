@@ -53,8 +53,9 @@ governing permissions and limitations under the License.
   /* text styles all themes */
   --spectrum-radio-font-size: var(--spectrum-font-size-100);
   --spectrum-radio-line-height: var(--spectrum-line-height-100);
-  /* TODO: CJK language support */
-  /* --spectrum-radio-cjk-line-height: var(--spectrum-CJK-line-height-100); */
+
+  /* CKJ language support all themes */
+  --spectrum-radio-cjk-line-height: var(--spectrum-CJK-line-height-100);
 
   /* animation all themes */
   --spectrum-radio-animation-duration: var(--spectrum-animation-duration-100);
@@ -434,11 +435,16 @@ governing permissions and limitations under the License.
                 var(--spectrum-radio-content-color-default)));
   line-height: var(--mod-radio-line-height,
                   var(--spectrum-radio-line-height));
-  /* TODO: CJK language support */
-  /* line-height: var(--spectrum-radio-cjk-line-height); */
 
   transition: color var(--mod-radio-animation-duration,
                         var(--spectrum-radio-animation-duration)) ease-in-out;
+}
+
+/* CKJ language support */
+.spectrum-Radio-label:lang(ja),
+.spectrum-Radio-label:lang(zh),
+.spectrum-Radio-label:lang(ko) {
+  line-height: var(--spectrum-radio-cjk-line-height);
 }
 
 .spectrum-Radio-button {
