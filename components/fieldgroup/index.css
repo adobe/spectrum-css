@@ -21,8 +21,24 @@ governing permissions and limitations under the License.
   display: flex;
   vertical-align: top;
   flex-wrap: wrap;
+
+  /* horizontal fieldgroup */
+  &--horizontal {
+    .spectrum-FieldGroup-item:not(:last-child) {
+      margin-inline-end: var(--spectrum-fieldgroup-margin);
+    }
+  }
+
+  /* vertical fieldgroup */
+  &--vertical {
+    display: inline-flex;
+    flex-direction: column;
+  }
 }
 
+
+
+/* read only checkbox group */
 .spectrum-FieldGroup {
   .spectrum-Checkbox.is-readOnly {
     .spectrum-Checkbox-box {
@@ -41,13 +57,7 @@ governing permissions and limitations under the License.
   }
 }
 
-.spectrum-FieldGroup--horizontal {
-  .spectrum-FieldGroup-item:not(:last-child) {
-    margin-inline-end: var(--spectrum-fieldgroup-margin);
-  }
-}
+/* TODO - display of readOnly checkbox delimeter in right to left text direction */
+/* :dir(rtl) {
 
-.spectrum-FieldGroup--vertical {
-  display: inline-flex;
-  flex-direction: column;
-}
+} */

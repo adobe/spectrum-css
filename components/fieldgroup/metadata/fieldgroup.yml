@@ -1,5 +1,10 @@
 name: Field Group
-description: 'A group of fields, usually Radios or Checkboxes.'
+description: |
+  - A group of fields, usually Radios or Checkboxes.
+  - Fieldgroup incorporates the help text component which may appear below a fieldgroup.
+  - Help text is necesary to denote invalid checkbox and radio button fields.
+  - Invalid radio buttons are signified only by alert help text.
+  - Invalid checkboxes are signified by alert help text and alert input box color.
 examples:
   - id: fieldgroup
     name: Standard
@@ -8,87 +13,103 @@ examples:
 
         <div class="spectrum-Examples-item">
           <h4 class="spectrum-Heading spectrum-Heading--sizeXS spectrum-Examples-itemHeading">Radio</h4>
-
-          <div class="spectrum-FieldGroup spectrum-FieldGroup--horizontal">
-            <div class="spectrum-Radio spectrum-FieldGroup-item">
-              <input type="radio" name="pets" class="spectrum-Radio-input" id="radio-0">
-              <span class="spectrum-Radio-button"></span>
-              <label class="spectrum-Radio-label" for="radio-0">Kittens</label>
+          <form>
+            <div class="spectrum-FieldGroup spectrum-FieldGroup--horizontal">
+              <div class="spectrum-Radio spectrum-FieldGroup-item">
+                <input type="radio" name="pets" class="spectrum-Radio-input" id="radio-0">
+                <span class="spectrum-Radio-button"></span>
+                <label class="spectrum-Radio-label" for="radio-0">Kittens</label>
+              </div>
+              <div class="spectrum-Radio spectrum-FieldGroup-item">
+                <input type="radio" name="pets" class="spectrum-Radio-input" id="radio-1" checked>
+                <span class="spectrum-Radio-button"></span>
+                <label class="spectrum-Radio-label" for="radio-1">Puppies</label>
+              </div>
             </div>
-            <div class="spectrum-Radio spectrum-FieldGroup-item">
-              <input type="radio" name="pets" class="spectrum-Radio-input" id="radio-1" checked>
-              <span class="spectrum-Radio-button"></span>
-              <label class="spectrum-Radio-label" for="radio-1">Dogs</label>
-            </div>
-          </div>
+          </form>
         </div>
 
         <div class="spectrum-Examples-item">
           <h4 class="spectrum-Heading spectrum-Heading--sizeXS spectrum-Examples-itemHeading">Radio Invalid</h4>
-
-          <div class="spectrum-FieldGroup spectrum-FieldGroup--horizontal">
-            <div class="spectrum-Radio spectrum-FieldGroup-item is-invalid">
-              <input type="radio" name="pets" class="spectrum-Radio-input" id="radio-0">
-              <span class="spectrum-Radio-button"></span>
-              <label class="spectrum-Radio-label" for="radio-0">Kittens</label>
+          <form>
+            <div class="spectrum-FieldGroup spectrum-FieldGroup--horizontal">
+              <div class="spectrum-Radio spectrum-FieldGroup-item is-invalid">
+                <input type="radio" name="pets" class="spectrum-Radio-input" id="radio-0">
+                <span class="spectrum-Radio-button"></span>
+                <label class="spectrum-Radio-label" for="radio-0">Kittens</label>
+              </div>
+              <div class="spectrum-Radio spectrum-FieldGroup-item is-invalid">
+                <input type="radio" name="pets" class="spectrum-Radio-input" id="radio-1" checked>
+                <span class="spectrum-Radio-button"></span>
+                <label class="spectrum-Radio-label" for="radio-1">Puppies</label>
+              </div>
             </div>
-            <div class="spectrum-Radio spectrum-FieldGroup-item is-invalid">
-              <input type="radio" name="pets" class="spectrum-Radio-input" id="radio-1" checked>
-              <span class="spectrum-Radio-button"></span>
-              <label class="spectrum-Radio-label" for="radio-1">Dogs</label>
+            <div class="spectrum-HelpText spectrum-HelpText--sizeM spectrum-HelpText--negative">
+              <svg class="spectrum-Icon spectrum-Icon--sizeM spectrum-HelpText-validationIcon" focusable="false" aria-hidden="true">
+                <use xlink:href="#spectrum-icon-18-Alert" />
+              </svg>
+              <div class="spectrum-HelpText-text">Select an option.</div>
             </div>
-          </div>
+          </form>
         </div>
 
         <div class="spectrum-Examples-item">
           <h4 class="spectrum-Heading spectrum-Heading--sizeXS spectrum-Examples-itemHeading">Checkbox</h4>
 
-          <div class="spectrum-FieldGroup spectrum-FieldGroup--horizontal">
-            <label class="spectrum-Checkbox spectrum-Checkbox--sizeM spectrum-FieldGroup-item">
-              <input type="checkbox" class="spectrum-Checkbox-input" id="checkbox-0">
-              <span class="spectrum-Checkbox-box">
-                <svg class="spectrum-Icon spectrum-UIIcon-Checkmark100 spectrum-Checkbox-checkmark" focusable="false" aria-hidden="true">
-                  <use xlink:href="#spectrum-css-icon-Checkmark100" />
-                </svg>
-              </span>
-              <span class="spectrum-Checkbox-label">Checkbox</span>
-            </label>
-            <label class="spectrum-Checkbox spectrum-Checkbox--sizeM spectrum-FieldGroup-item">
-              <input type="checkbox" class="spectrum-Checkbox-input" id="checkbox-1" checked>
-              <span class="spectrum-Checkbox-box">
-                <svg class="spectrum-Icon spectrum-UIIcon-Checkmark100 spectrum-Checkbox-checkmark" focusable="false" aria-hidden="true">
-                  <use xlink:href="#spectrum-css-icon-Checkmark100" />
-                </svg>
-              </span>
-              <span class="spectrum-Checkbox-label">Checkbox</span>
-            </label>
-          </div>
+          <form>
+            <div class="spectrum-FieldGroup spectrum-FieldGroup--horizontal">
+              <label class="spectrum-Checkbox spectrum-Checkbox--sizeM spectrum-FieldGroup-item">
+                <input type="checkbox" class="spectrum-Checkbox-input" id="checkbox-0">
+                <span class="spectrum-Checkbox-box">
+                  <svg class="spectrum-Icon spectrum-UIIcon-Checkmark100 spectrum-Checkbox-checkmark" focusable="false" aria-hidden="true">
+                    <use xlink:href="#spectrum-css-icon-Checkmark100" />
+                  </svg>
+                </span>
+                <span class="spectrum-Checkbox-label">Checkbox</span>
+              </label>
+              <label class="spectrum-Checkbox spectrum-Checkbox--sizeM spectrum-FieldGroup-item">
+                <input type="checkbox" class="spectrum-Checkbox-input" id="checkbox-1" checked>
+                <span class="spectrum-Checkbox-box">
+                  <svg class="spectrum-Icon spectrum-UIIcon-Checkmark100 spectrum-Checkbox-checkmark" focusable="false" aria-hidden="true">
+                    <use xlink:href="#spectrum-css-icon-Checkmark100" />
+                  </svg>
+                </span>
+                <span class="spectrum-Checkbox-label">Checkbox</span>
+              </label>
+            </div>
+          </form>
         </div>
 
         <div class="spectrum-Examples-item">
           <h4 class="spectrum-Heading spectrum-Heading--sizeXS spectrum-Examples-itemHeading">Checkbox Invalid</h4>
-
-          <div class="spectrum-FieldGroup spectrum-FieldGroup--horizontal">
-            <label class="spectrum-Checkbox spectrum-Checkbox--sizeM spectrum-FieldGroup-item is-invalid">
-              <input type="checkbox" class="spectrum-Checkbox-input" id="checkbox-0">
-              <span class="spectrum-Checkbox-box">
-                <svg class="spectrum-Icon spectrum-UIIcon-Checkmark100 spectrum-Checkbox-checkmark" focusable="false" aria-hidden="true">
-                  <use xlink:href="#spectrum-css-icon-Checkmark100" />
-                </svg>
-              </span>
-              <span class="spectrum-Checkbox-label">Checkbox</span>
-            </label>
-            <label class="spectrum-Checkbox spectrum-Checkbox--sizeM spectrum-FieldGroup-item is-invalid">
-              <input type="checkbox" class="spectrum-Checkbox-input" id="checkbox-1" checked>
-              <span class="spectrum-Checkbox-box">
-                <svg class="spectrum-Icon spectrum-UIIcon-Checkmark100 spectrum-Checkbox-checkmark" focusable="false" aria-hidden="true">
-                  <use xlink:href="#spectrum-css-icon-Checkmark100" />
-                </svg>
-              </span>
-              <span class="spectrum-Checkbox-label">Checkbox</span>
-            </label>
-          </div>
-
+          <form>
+            <div class="spectrum-FieldGroup spectrum-FieldGroup--horizontal">
+              <label class="spectrum-Checkbox spectrum-Checkbox--sizeM spectrum-FieldGroup-item is-invalid">
+                <input type="checkbox" class="spectrum-Checkbox-input" id="checkbox-0">
+                <span class="spectrum-Checkbox-box">
+                  <svg class="spectrum-Icon spectrum-UIIcon-Checkmark100 spectrum-Checkbox-checkmark" focusable="false" aria-hidden="true">
+                    <use xlink:href="#spectrum-css-icon-Checkmark100" />
+                  </svg>
+                </span>
+                <span class="spectrum-Checkbox-label">Checkbox</span>
+              </label>
+              <label class="spectrum-Checkbox spectrum-Checkbox--sizeM spectrum-FieldGroup-item is-invalid">
+                <input type="checkbox" class="spectrum-Checkbox-input" id="checkbox-1" checked>
+                <span class="spectrum-Checkbox-box">
+                  <svg class="spectrum-Icon spectrum-UIIcon-Checkmark100 spectrum-Checkbox-checkmark" focusable="false" aria-hidden="true">
+                    <use xlink:href="#spectrum-css-icon-Checkmark100" />
+                  </svg>
+                </span>
+                <span class="spectrum-Checkbox-label">Checkbox</span>
+              </label>
+            </div>
+            <div class="spectrum-HelpText spectrum-HelpText--sizeM spectrum-HelpText--negative">
+              <svg class="spectrum-Icon spectrum-Icon--sizeM spectrum-HelpText-validationIcon" focusable="false" aria-hidden="true">
+                <use xlink:href="#spectrum-icon-18-Alert" />
+              </svg>
+              <div class="spectrum-HelpText-text">Select a checkbox.</div>
+            </div>
+          </form>
         </div>
       </div>
 
@@ -100,85 +121,102 @@ examples:
 
         <div class="spectrum-Examples-item">
           <h4 class="spectrum-Heading spectrum-Heading--sizeXS spectrum-Examples-itemHeading">Radio</h4>
-
-          <div class="spectrum-FieldGroup spectrum-FieldGroup--vertical">
-            <div class="spectrum-Radio spectrum-FieldGroup-item">
-              <input type="radio" name="animals" class="spectrum-Radio-input" id="radio-fieldgroup-vertical-1">
-              <span class="spectrum-Radio-button"></span>
-              <label class="spectrum-Radio-label" for="radio-fieldgroup-vertical-1">Kittens</label>
+          <form>
+            <div class="spectrum-FieldGroup spectrum-FieldGroup--vertical">
+              <div class="spectrum-Radio spectrum-FieldGroup-item">
+                <input type="radio" name="animals" class="spectrum-Radio-input" id="radio-fieldgroup-vertical-1">
+                <span class="spectrum-Radio-button"></span>
+                <label class="spectrum-Radio-label" for="radio-fieldgroup-vertical-1">Kittens</label>
+              </div>
+              <div class="spectrum-Radio spectrum-FieldGroup-item">
+                <input type="radio" name="animals" class="spectrum-Radio-input" id="radio-fieldgroup-vertical-2" checked>
+                <span class="spectrum-Radio-button"></span>
+                <label class="spectrum-Radio-label" for="radio-fieldgroup-vertical-2">Puppies</label>
+              </div>
             </div>
-            <div class="spectrum-Radio spectrum-FieldGroup-item">
-              <input type="radio" name="animals" class="spectrum-Radio-input" id="radio-fieldgroup-vertical-2">
-              <span class="spectrum-Radio-button"></span>
-              <label class="spectrum-Radio-label" for="radio-fieldgroup-vertical-2">Dogs</label>
-            </div>
-          </div>
+          </form>
         </div>
+
         <div class="spectrum-Examples-item">
           <h4 class="spectrum-Heading spectrum-Heading--sizeXS spectrum-Examples-itemHeading">Radio Invalid</h4>
-
-          <div class="spectrum-FieldGroup spectrum-FieldGroup--vertical">
-            <div class="spectrum-Radio spectrum-FieldGroup-item is-invalid">
-              <input type="radio" name="animals" class="spectrum-Radio-input" id="radio-fieldgroup-vertical-1">
-              <span class="spectrum-Radio-button"></span>
-              <label class="spectrum-Radio-label" for="radio-fieldgroup-vertical-1">Kittens</label>
+          <form>
+            <div class="spectrum-FieldGroup spectrum-FieldGroup--vertical">
+              <div class="spectrum-Radio spectrum-FieldGroup-item is-invalid">
+                <input type="radio" name="animals" class="spectrum-Radio-input" id="radio-fieldgroup-vertical-1">
+                <span class="spectrum-Radio-button"></span>
+                <label class="spectrum-Radio-label" for="radio-fieldgroup-vertical-1">Kittens</label>
+              </div>
+              <div class="spectrum-Radio spectrum-FieldGroup-item">
+                <input type="radio" name="animals" class="spectrum-Radio-input" id="radio-fieldgroup-vertical-2" checked>
+                <span class="spectrum-Radio-button"></span>
+                <label class="spectrum-Radio-label" for="radio-fieldgroup-vertical-2">Puppies</label>
+              </div>
             </div>
-            <div class="spectrum-Radio spectrum-FieldGroup-item">
-              <input type="radio" name="animals" class="spectrum-Radio-input" id="radio-fieldgroup-vertical-2">
-              <span class="spectrum-Radio-button"></span>
-              <label class="spectrum-Radio-label" for="radio-fieldgroup-vertical-2">Dogs</label>
+            <div class="spectrum-HelpText spectrum-HelpText--sizeM spectrum-HelpText--negative">
+              <svg class="spectrum-Icon spectrum-Icon--sizeM spectrum-HelpText-validationIcon" focusable="false" aria-hidden="true">
+                <use xlink:href="#spectrum-icon-18-Alert" />
+              </svg>
+              <div class="spectrum-HelpText-text">Select an option.</div>
             </div>
-          </div>
+          </form>
         </div>
 
         <div class="spectrum-Examples-item">
           <h4 class="spectrum-Heading spectrum-Heading--sizeXS spectrum-Examples-itemHeading">Checkbox</h4>
-
-          <div class="spectrum-FieldGroup spectrum-FieldGroup--vertical">
-            <label class="spectrum-Checkbox spectrum-Checkbox--sizeM spectrum-FieldGroup-item">
-              <input type="checkbox" class="spectrum-Checkbox-input">
-              <span class="spectrum-Checkbox-box">
-                <svg class="spectrum-Icon spectrum-UIIcon-Checkmark100 spectrum-Checkbox-checkmark" focusable="false" aria-hidden="true">
-                  <use xlink:href="#spectrum-css-icon-Checkmark100" />
-                </svg>
-              </span>
-              <span class="spectrum-Checkbox-label">Kibble</span>
-            </label>
-            <label class="spectrum-Checkbox spectrum-Checkbox--sizeM spectrum-FieldGroup-item">
-              <input type="checkbox" class="spectrum-Checkbox-input" checked>
-              <span class="spectrum-Checkbox-box">
-                <svg class="spectrum-Icon spectrum-UIIcon-Checkmark100 spectrum-Checkbox-checkmark" focusable="false" aria-hidden="true">
-                  <use xlink:href="#spectrum-css-icon-Checkmark100" />
-                </svg>
-              </span>
-              <span class="spectrum-Checkbox-label">Bits</span>
-            </label>
-          </div>
+          <form>
+            <div class="spectrum-FieldGroup spectrum-FieldGroup--vertical">
+              <label class="spectrum-Checkbox spectrum-Checkbox--sizeM spectrum-FieldGroup-item">
+                <input type="checkbox" class="spectrum-Checkbox-input">
+                <span class="spectrum-Checkbox-box">
+                  <svg class="spectrum-Icon spectrum-UIIcon-Checkmark100 spectrum-Checkbox-checkmark" focusable="false" aria-hidden="true">
+                    <use xlink:href="#spectrum-css-icon-Checkmark100" />
+                  </svg>
+                </span>
+                <span class="spectrum-Checkbox-label">Checkbox</span>
+              </label>
+              <label class="spectrum-Checkbox spectrum-Checkbox--sizeM spectrum-FieldGroup-item">
+                <input type="checkbox" class="spectrum-Checkbox-input" checked>
+                <span class="spectrum-Checkbox-box">
+                  <svg class="spectrum-Icon spectrum-UIIcon-Checkmark100 spectrum-Checkbox-checkmark" focusable="false" aria-hidden="true">
+                    <use xlink:href="#spectrum-css-icon-Checkmark100" />
+                  </svg>
+                </span>
+                <span class="spectrum-Checkbox-label">Checkbox</span>
+              </label>
+            </div>
+          </form>
         </div>
 
         <div class="spectrum-Examples-item">
           <h4 class="spectrum-Heading spectrum-Heading--sizeXS spectrum-Examples-itemHeading">Checkbox Invalid</h4>
-
-          <div class="spectrum-FieldGroup spectrum-FieldGroup--vertical">
-            <label class="spectrum-Checkbox spectrum-Checkbox--sizeM spectrum-FieldGroup-item is-invalid">
-              <input type="checkbox" class="spectrum-Checkbox-input">
-              <span class="spectrum-Checkbox-box">
-                <svg class="spectrum-Icon spectrum-UIIcon-Checkmark100 spectrum-Checkbox-checkmark" focusable="false" aria-hidden="true">
-                  <use xlink:href="#spectrum-css-icon-Checkmark100" />
-                </svg>
-              </span>
-              <span class="spectrum-Checkbox-label">Kibble</span>
-            </label>
-            <label class="spectrum-Checkbox spectrum-Checkbox--sizeM spectrum-FieldGroup-item is-invalid">
-              <input type="checkbox" class="spectrum-Checkbox-input" checked>
-              <span class="spectrum-Checkbox-box">
-                <svg class="spectrum-Icon spectrum-UIIcon-Checkmark100 spectrum-Checkbox-checkmark" focusable="false" aria-hidden="true">
-                  <use xlink:href="#spectrum-css-icon-Checkmark100" />
-                </svg>
-              </span>
-              <span class="spectrum-Checkbox-label">Bits</span>
-            </label>
-          </div>
+          <form>
+            <div class="spectrum-FieldGroup spectrum-FieldGroup--vertical">
+              <label class="spectrum-Checkbox spectrum-Checkbox--sizeM spectrum-FieldGroup-item is-invalid">
+                <input type="checkbox" class="spectrum-Checkbox-input">
+                <span class="spectrum-Checkbox-box">
+                  <svg class="spectrum-Icon spectrum-UIIcon-Checkmark100 spectrum-Checkbox-checkmark" focusable="false" aria-hidden="true">
+                    <use xlink:href="#spectrum-css-icon-Checkmark100" />
+                  </svg>
+                </span>
+                <span class="spectrum-Checkbox-label">Checkbox</span>
+              </label>
+              <label class="spectrum-Checkbox spectrum-Checkbox--sizeM spectrum-FieldGroup-item is-invalid">
+                <input type="checkbox" class="spectrum-Checkbox-input" checked>
+                <span class="spectrum-Checkbox-box">
+                  <svg class="spectrum-Icon spectrum-UIIcon-Checkmark100 spectrum-Checkbox-checkmark" focusable="false" aria-hidden="true">
+                    <use xlink:href="#spectrum-css-icon-Checkmark100" />
+                  </svg>
+                </span>
+                <span class="spectrum-Checkbox-label">Checkbox</span>
+              </label>
+            </div>
+            <div class="spectrum-HelpText spectrum-HelpText--sizeM spectrum-HelpText--negative">
+              <svg class="spectrum-Icon spectrum-Icon--sizeM spectrum-HelpText-validationIcon" focusable="false" aria-hidden="true">
+                <use xlink:href="#spectrum-icon-18-Alert" />
+              </svg>
+              <div class="spectrum-HelpText-text">Select a checkbox.</div>
+            </div>
+          </form>
         </div>
       </div>
   - id: fieldgroup-readonly-checkboxes
