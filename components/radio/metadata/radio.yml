@@ -47,13 +47,13 @@ examples:
 
           <form>
             <div class="spectrum-Radio spectrum-Radio--sizeM">
-              <input type="radio" name="pets" class="spectrum-Radio-input" id="radio-0">
+              <input type="radio" name="pets" class="spectrum-Radio-input" id="radio-2">
               <span class="spectrum-Radio-button spectrum-Radio-button--sizeM"></span>
               <label class="spectrum-Radio-label spectrum-Radio-label--sizeM" for="radio-0">Kittens</label>
             </div>
             <br>
             <div class="spectrum-Radio spectrum-Radio--sizeM">
-              <input type="radio" name="pets" class="spectrum-Radio-input" id="radio-1" checked>
+              <input type="radio" name="pets" class="spectrum-Radio-input" id="radio-3" checked>
               <span class="spectrum-Radio-button spectrum-Radio-button--sizeM"></span>
               <label class="spectrum-Radio-label spectrum-Radio-label--sizeM" for="radio-1">Puppies</label>
             </div>
@@ -66,13 +66,13 @@ examples:
 
           <form>
             <div class="spectrum-Radio spectrum-Radio--sizeL">
-              <input type="radio" name="pets" class="spectrum-Radio-input" id="radio-0">
+              <input type="radio" name="pets" class="spectrum-Radio-input" id="radio-4">
               <span class="spectrum-Radio-button spectrum-Radio-button--sizeL"></span>
               <label class="spectrum-Radio-label spectrum-Radio-label--sizeL" for="radio-0">Kittens</label>
             </div>
             <br>
             <div class="spectrum-Radio spectrum-Radio--sizeL">
-              <input type="radio" name="pets" class="spectrum-Radio-input" id="radio-1" checked>
+              <input type="radio" name="pets" class="spectrum-Radio-input" id="radio-5" checked>
               <span class="spectrum-Radio-button spectrum-Radio-button--sizeL"></span>
               <label class="spectrum-Radio-label spectrum-Radio-label--sizeL" for="radio-1">Puppies</label>
             </div>
@@ -85,13 +85,13 @@ examples:
 
           <form>
             <div class="spectrum-Radio spectrum-Radio--sizeXL">
-              <input type="radio" name="pets" class="spectrum-Radio-input" id="radio-0">
+              <input type="radio" name="pets" class="spectrum-Radio-input" id="radio-6">
               <span class="spectrum-Radio-button spectrum-Radio-button--sizeXL"></span>
               <label class="spectrum-Radio-label spectrum-Radio-label--sizeXL" for="radio-0">Kittens</label>
             </div>
             <br>
             <div class="spectrum-Radio spectrum-Radio--sizeXL">
-              <input type="radio" name="pets" class="spectrum-Radio-input" id="radio-1" checked>
+              <input type="radio" name="pets" class="spectrum-Radio-input" id="radio-7" checked>
               <span class="spectrum-Radio-button spectrum-Radio-button--sizeXL"></span>
               <label class="spectrum-Radio-label spectrum-Radio-label--sizeXL" for="radio-1">Puppies</label>
             </div>
@@ -110,13 +110,13 @@ examples:
 
           <form>
             <div class="spectrum-Radio">
-              <input type="radio" name="pets" class="spectrum-Radio-input" id="radio-0">
+              <input type="radio" name="pets" class="spectrum-Radio-input" id="radio-8">
               <span class="spectrum-Radio-button"></span>
               <label class="spectrum-Radio-label" for="radio-0">Kittens</label>
             </div>
             <br>
             <div class="spectrum-Radio">
-              <input type="radio" name="pets" class="spectrum-Radio-input" id="radio-1" checked>
+              <input type="radio" name="pets" class="spectrum-Radio-input" id="radio-9" checked>
               <span class="spectrum-Radio-button"></span>
               <label class="spectrum-Radio-label" for="radio-1">Puppies</label>
             </div>
@@ -129,13 +129,13 @@ examples:
 
           <form>
             <div class="spectrum-Radio is-invalid">
-              <input type="radio" name="pets" class="spectrum-Radio-input" id="radio-0">
+              <input type="radio" name="pets" class="spectrum-Radio-input" id="radio-10">
               <span class="spectrum-Radio-button"></span>
               <label class="spectrum-Radio-label" for="radio-0">Kittens</label>
             </div>
             <br>
             <div class="spectrum-Radio is-invalid">
-              <input type="radio" name="pets" class="spectrum-Radio-input" id="radio-1" checked>
+              <input type="radio" name="pets" class="spectrum-Radio-input" id="radio-11" checked>
               <span class="spectrum-Radio-button"></span>
               <label class="spectrum-Radio-label" for="radio-1">Puppies</label>
             </div>
@@ -148,13 +148,13 @@ examples:
 
           <form>
             <div class="spectrum-Radio">
-              <input type="radio" name="pets" class="spectrum-Radio-input" id="radio-0-disabled" disabled>
+              <input type="radio" name="pets" class="spectrum-Radio-input" id="radio-12-disabled" disabled>
               <span class="spectrum-Radio-button"></span>
               <label class="spectrum-Radio-label" for="radio-0">Kittens</label>
             </div>
             <br>
             <div class="spectrum-Radio">
-              <input type="radio" name="pets" class="spectrum-Radio-input" id="radio-1-disabled" checked disabled>
+              <input type="radio" name="pets" class="spectrum-Radio-input" id="radio-13-disabled" checked disabled>
               <span class="spectrum-Radio-button"></span>
               <label class="spectrum-Radio-label" for="radio-1">Puppies</label>
             </div>
@@ -167,13 +167,13 @@ examples:
 
           <form>
             <div class="spectrum-Radio is-readOnly">
-              <input type="radio" name="pets" class="spectrum-Radio-input" id="radio-0" readonly="readonly" disabled>
+              <input type="radio" name="pets" class="spectrum-Radio-input" id="radio-14" readonly="readonly" disabled>
               <span class="spectrum-Radio-button"></span>
               <label class="spectrum-Radio-label" for="radio-0">Kittens</label>
             </div>
             <br>
             <div class="spectrum-Radio is-readOnly">
-              <input type="radio" name="pets" class="spectrum-Radio-input" id="radio-1" checked readonly="readonly" disabled>
+              <input type="radio" name="pets" class="spectrum-Radio-input" id="radio-15" checked readonly="readonly" disabled>
               <span class="spectrum-Radio-button"></span>
               <label class="spectrum-Radio-label" for="radio-1">Puppies</label>
             </div>
@@ -191,13 +191,13 @@ examples:
 
           <form>
             <div class="spectrum-Radio spectrum-Radio--sizeM spectrum-Radio--emphasized">
-              <input type="radio" name="pets" class="spectrum-Radio-input" id="radio-0">
+              <input type="radio" name="pets" class="spectrum-Radio-input" id="radio-16">
               <span class="spectrum-Radio-button"></span>
               <label class="spectrum-Radio-label" for="radio-0">Kittens</label>
             </div>
             <br>
             <div class="spectrum-Radio spectrum-Radio--sizeM spectrum-Radio--emphasized">
-              <input type="radio" name="pets" class="spectrum-Radio-input" id="radio-1" checked>
+              <input type="radio" name="pets" class="spectrum-Radio-input" id="radio-17" checked>
               <span class="spectrum-Radio-button"></span>
               <label class="spectrum-Radio-label" for="radio-1">Puppies</label>
             </div>
@@ -210,13 +210,13 @@ examples:
 
           <form>
             <div class="spectrum-Radio spectrum-Radio--sizeM spectrum-Radio--emphasized is-invalid">
-              <input type="radio" name="pets" class="spectrum-Radio-input" id="radio-0">
+              <input type="radio" name="pets" class="spectrum-Radio-input" id="radio-18">
               <span class="spectrum-Radio-button"></span>
               <label class="spectrum-Radio-label" for="radio-0">Kittens</label>
             </div>
             <br>
             <div class="spectrum-Radio spectrum-Radio--sizeM spectrum-Radio--emphasized is-invalid">
-              <input type="radio" name="pets" class="spectrum-Radio-input" id="radio-1" checked>
+              <input type="radio" name="pets" class="spectrum-Radio-input" id="radio-19" checked>
               <span class="spectrum-Radio-button"></span>
               <label class="spectrum-Radio-label" for="radio-1">Puppies</label>
             </div>
@@ -229,13 +229,13 @@ examples:
 
           <form>
             <div class="spectrum-Radio spectrum-Radio--sizeM spectrum-Radio--emphasized">
-              <input type="radio" name="pets" class="spectrum-Radio-input" id="radio-0-disabled" disabled>
+              <input type="radio" name="pets" class="spectrum-Radio-input" id="radio-20-disabled" disabled>
               <span class="spectrum-Radio-button"></span>
               <label class="spectrum-Radio-label" for="radio-0">Kittens</label>
             </div>
             <br>
             <div class="spectrum-Radio spectrum-Radio--sizeM spectrum-Radio--emphasized">
-              <input type="radio" name="pets" class="spectrum-Radio-input" id="radio-1-disabled" checked disabled>
+              <input type="radio" name="pets" class="spectrum-Radio-input" id="radio-21-disabled" checked disabled>
               <span class="spectrum-Radio-button"></span>
               <label class="spectrum-Radio-label" for="radio-1">Puppies</label>
             </div>
@@ -248,13 +248,13 @@ examples:
 
           <form>
             <div class="spectrum-Radio spectrum-Radio--sizeM spectrum-Radio--emphasized is-readOnly">
-              <input type="radio" name="pets" class="spectrum-Radio-input" id="radio-0" readonly="readonly" disabled>
+              <input type="radio" name="pets" class="spectrum-Radio-input" id="radio-22" readonly="readonly" disabled>
               <span class="spectrum-Radio-button"></span>
               <label class="spectrum-Radio-label" for="radio-0">Kittens</label>
             </div>
             <br>
             <div class="spectrum-Radio spectrum-Radio--sizeM is-readOnly">
-              <input type="radio" name="pets" class="spectrum-Radio-input" id="radio-1" checked readonly="readonly" disabled>
+              <input type="radio" name="pets" class="spectrum-Radio-input" id="radio-23" checked readonly="readonly" disabled>
               <span class="spectrum-Radio-button"></span>
               <label class="spectrum-Radio-label" for="radio-1">Puppies</label>
             </div>
@@ -267,7 +267,7 @@ examples:
     name: Wrapping behavior
     markup: |
       <div class="spectrum-Radio">
-        <input type="radio" name="longname" class="spectrum-Radio-input" id="radio-3">
+        <input type="radio" name="longname" class="spectrum-Radio-input" id="radio-24">
         <span class="spectrum-Radio-button"></span>
         <label class="spectrum-Radio-label" for="radio-3">Radio with an extraordinarily long label please don't do this but if you did it should wrap text when it gets longer than the container which contains the radio which has an unacceptably long label</label>
       </div>
