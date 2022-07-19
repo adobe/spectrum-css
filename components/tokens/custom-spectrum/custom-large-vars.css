@@ -19,9 +19,6 @@ governing permissions and limitations under the License.
   --spectrum-edge-to-visual-only-200: 13px;
   --spectrum-edge-to-visual-only-300: 16px;
 
-  /* missing token for button control size small, see custom-vars.css */
-  --spectrum-radio-button-control-size-small: var(--spectrum-radio-button-control-size-small-mobile);
-
   /* tokens for button control size medium, large, extra large are available only as -desktop and -mobile */
   --spectrum-radio-button-control-size-medium: var(--spectrum-radio-button-control-size-medium-mobile);
   --spectrum-radio-button-control-size-large: var(--spectrum-radio-button-control-size-large-mobile);
