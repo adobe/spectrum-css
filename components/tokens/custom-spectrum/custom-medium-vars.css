@@ -10,12 +10,7 @@ OF ANY KIND, either express or implied. See the License for the specific languag
 governing permissions and limitations under the License.
 */
 
-/*
- * custom-medium-vars.css
- *
- * This file contains custom token overrides and additions for desktop scale,
- * (medium) default components.
- */
+/* This file contains overrides and additions to core tokens */
 
 .spectrum--medium {
   /* edge-to-visual-only is used for icon-only buttons */

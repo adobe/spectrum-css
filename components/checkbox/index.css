@@ -18,6 +18,12 @@ governing permissions and limitations under the License.
 
 /* Component tokens by t-shirt size */
 .spectrum-Checkbox {
+  /* Hardcoded properties */
+  --spectrum-checkbox-checkmark-size-small: 10px;
+  --spectrum-checkbox-checkmark-size-medium: 10px;
+  --spectrum-checkbox-checkmark-size-large: 10px;
+  --spectrum-checkbox-checkmark-size-extra-large: 12px;
+
   /* Color */
   --spectrum-checkbox-content-color-default: var(--spectrum-neutral-content-color-default);
   --spectrum-checkbox-content-color-hover: var(--spectrum-neutral-content-color-hover);
