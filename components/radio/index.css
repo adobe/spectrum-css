@@ -162,6 +162,13 @@ governing permissions and limitations under the License.
 
     /* high contrast focus ring */
      --highcontrast-radio-focus-ring-color: CanvasText;
+
+    /* ensure focus ring is visible if user agent has non-accessible system overrides */
+    .spectrum-Radio-button {
+      &:after {
+        forced-color-adjust: none;
+      }
+    }
   }
 }
 
