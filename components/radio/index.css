@@ -52,11 +52,15 @@ governing permissions and limitations under the License.
   --spectrum-radio-font-size: var(--spectrum-font-size-100);
   --spectrum-radio-line-height: var(--spectrum-line-height-100);
 
-  /* CJK language support all themes */
-  --spectrum-radio-cjk-line-height: var(--spectrum-CJK-line-height-100);
-
   /* animation all themes */
   --spectrum-radio-animation-duration: var(--spectrum-animation-duration-100);
+
+  /* CJK language support all themes */
+  &:lang(ja),
+  &:lang(zh),
+  &:lang(ko) {
+    --spectrum-radio-cjk-line-height: var(--spectrum-CJK-line-height-100);
+  }
 
   /* default radio size for no t-shirt size */
   --spectrum-radio-height: var(--spectrum-component-height-100);
@@ -70,6 +74,7 @@ governing permissions and limitations under the License.
 
   /* default radio text for no t-shirt size */
   --spectrum-radio-font-size: var(--spectrum-font-size-100);
+
 }
 
 .spectrum-Radio--sizeS {
@@ -434,13 +439,13 @@ governing permissions and limitations under the License.
 
   transition: color var(--mod-radio-animation-duration,
                         var(--spectrum-radio-animation-duration)) ease-in-out;
-}
 
-/* CJK language support */
-.spectrum-Radio-label:lang(ja),
-.spectrum-Radio-label:lang(zh),
-.spectrum-Radio-label:lang(ko) {
-  line-height: var(--spectrum-radio-cjk-line-height);
+  /* CJK language support */
+  &:lang(ja),
+  &:lang(zh),
+  &:lang(ko) {
+    line-height: var(--spectrum-radio-cjk-line-height);
+  }
 }
 
 .spectrum-Radio-button {
