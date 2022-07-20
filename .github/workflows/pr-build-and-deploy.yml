@@ -33,7 +33,7 @@ jobs:
           enable-pull-request-comment: true
           enable-commit-comment: false
           overwrites-pull-request-comment: true
-          alias: deploy-preview-${{ github.event.number }}--spectrum-css
+          alias: pr-${{ github.event.number }}--spectrum-css
         env:
           NETLIFY_AUTH_TOKEN: ${{ secrets.NETLIFY_AUTH_TOKEN }}
           NETLIFY_SITE_ID: ${{ secrets.NETLIFY_SITE_ID }}
