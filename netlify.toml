@@ -1,6 +1,3 @@
-[context.branch-deploy]
-  ignore = "bash ./netlify-build-ignore.sh"
-
 [[redirects]]
   from = "/"
   to = "/docs/"
