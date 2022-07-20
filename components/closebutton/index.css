@@ -105,32 +105,33 @@ governing permissions and limitations under the License.
 /* Windows high contrast mode */
 @media (forced-colors: active) {
   .spectrum-CloseButton {
-    /* --spectrum-alias-component-icon-color-default: ButtonText; */
-    /* --spectrum-alias-component-icon-color-disabled: GrayText; */
-    /* --spectrum-alias-component-icon-color-down: Highlight; */
-    /* --spectrum-alias-component-icon-color-hover: Highlight; */
-    /* --spectrum-alias-component-icon-color-key-focus: Highlight; */
-    /* --spectrum-alias-component-icon-color-mouse-focus: Highlight; */
-    /* --spectrum-closebutton-m-black-background-color-down: ButtonFace; */
-    /* --spectrum-closebutton-m-black-background-color-hover: ButtonFace; */
-    /* --spectrum-closebutton-m-black-background-color-key-focus: ButtonFace; */
-    /* --spectrum-closebutton-m-black-background-color-mouse-focus: ButtonFace; */
-    /* --spectrum-closebutton-m-black-uiicon-color: ButtonText; */
-    /* --spectrum-closebutton-m-black-uiicon-color-disabled: GrayText; */
-    /* --spectrum-closebutton-m-black-uiicon-color-down: Highlight; */
-    /* --spectrum-closebutton-m-black-uiicon-color-hover: Highlight; */
-    /* --spectrum-closebutton-m-black-uiicon-color-key-focus: Highlight; */
-    /* --spectrum-closebutton-m-black-uiicon-color-mouse-focus: Highlight; */
-    /* --spectrum-closebutton-m-white-background-color-down: ButtonFace; */
-    /* --spectrum-closebutton-m-white-background-color-hover: ButtonFace; */
-    /* --spectrum-closebutton-m-white-background-color-key-focus: ButtonFace; */
-    /* --spectrum-closebutton-m-white-background-color-mouse-focus: ButtonFace; */
-    /* --spectrum-closebutton-m-white-uiicon-color: ButtonText; */
-    /* --spectrum-closebutton-m-white-uiicon-color-disabled: GrayText; */
-    /* --spectrum-closebutton-m-white-uiicon-color-down: Highlight; */
-    /* --spectrum-closebutton-m-white-uiicon-color-hover: Highlight; */
-    /* --spectrum-closebutton-m-white-uiicon-color-key-focus: Highlight; */
-    /* --spectrum-closebutton-m-white-uiicon-color-mouse-focus: Highlight; */
+    /* TODO icon versus uicon? */
+    --highcontrast-closebutton-icon-color-default: ButtonText;
+    --highcontrast-closebutton-icon-color-disabled: GrayText;
+    --highcontrast-closebutton-icon-color-down: Highlight;
+    --highcontrast-closebutton-icon-color-hover: Highlight;
+    --highcontrast-closebutton-icon-color-key-focus: Highlight;
+    --highcontrast-closebutton-icon-color-mouse-focus: Highlight;
+    --highcontrast-closebutton-black-background-color-down: ButtonFace;
+    --highcontrast-closebutton-black-background-color-hover: ButtonFace;
+    --highcontrast-closebutton-black-background-color-key-focus: ButtonFace;
+    --highcontrast-closebutton-black-background-color-mouse-focus: ButtonFace;
+    --highcontrast-closebutton-black-uiicon-color: ButtonText;
+    --highcontrast-closebutton-black-uiicon-color-disabled: GrayText;
+    --highcontrast-closebutton-black-uiicon-color-down: Highlight;
+    --highcontrast-closebutton-black-uiicon-color-hover: Highlight;
+    --highcontrast-closebutton-black-uiicon-color-key-focus: Highlight;
+    --highcontrast-closebutton-black-uiicon-color-mouse-focus: Highlight;
+    --highcontrast-closebutton-white-background-color-down: ButtonFace;
+    --highcontrast-closebutton-white-background-color-hover: ButtonFace;
+    --highcontrast-closebutton-white-background-color-key-focus: ButtonFace;
+    --highcontrast-closebutton-white-background-color-mouse-focus: ButtonFace;
+    --highcontrast-closebutton-white-uiicon-color: ButtonText;
+    --highcontrast-closebutton-white-uiicon-color-disabled: GrayText;
+    --highcontrast-closebutton-white-uiicon-color-down: Highlight;
+    --highcontrast-closebutton-white-uiicon-color-hover: Highlight;
+    --highcontrast-closebutton-white-uiicon-color-key-focus: Highlight;
+    --highcontrast-closebutton-white-uiicon-color-mouse-focus: Highlight;
     &:focus-ring {
       &:after {
         forced-color-adjust: none;
@@ -230,6 +231,7 @@ a.spectrum-CloseButton {
       color: var(--spectrum-closebutton-content-color-default)
     }
 
+    &:focus,
     &.is-focused {
       .spectrum-CloseButton-UIIcon {
         color: var(--spectrum-closebutton-content-color-focus)
@@ -241,7 +243,6 @@ a.spectrum-CloseButton {
     background-color: var(--spectrum-closebutton-background-color-default);
 
     .spectrum-CloseButton-UIIcon {
-      /* TODO Review */
       color: var(--spectrum-closebutton-content-color-disabled);
     }
   }
