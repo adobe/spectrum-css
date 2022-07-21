@@ -21,6 +21,8 @@ governing permissions and limitations under the License.
   display: flex;
   vertical-align: top;
   flex-wrap: wrap;
+  padding: 0;
+  border: 0;
 
   /* horizontal fieldgroup */
   &--horizontal {
@@ -35,8 +37,6 @@ governing permissions and limitations under the License.
     flex-direction: column;
   }
 }
-
-
 
 /* read only checkbox group */
 .spectrum-FieldGroup {
@@ -56,8 +56,3 @@ governing permissions and limitations under the License.
     }
   }
 }
-
-/* TODO - display of readOnly checkbox delimeter in right to left text direction */
-/* :dir(rtl) {
-
-} */
