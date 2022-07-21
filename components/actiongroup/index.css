@@ -14,6 +14,7 @@ governing permissions and limitations under the License.
   --spectrum-actiongroup-button-spacing-reset: 0;
   --spectrum-actiongroup-border-radius-reset: 0;
   --spectrum-actiongroup-border-radius: var(--spectrum-corner-radius-100);
+  --spectrum-actiongroup-item-border-overlap-size: calc(-1 * var(--spectrum-border-width-100) / 2);
   /* spectrum-actionbutton-m-texticon-border-radius */
   /* 
     spectrum
@@ -77,22 +78,19 @@ governing permissions and limitations under the License.
 }
 
 .spectrum-ActionGroup--vertical {
+  gap: var(--spectrum-actiongroup-vertical-spacing-regular);
   display: inline-flex;
   flex-direction: column;
 
   .spectrum-ActionGroup-item + .spectrum-ActionGroup-item {
-    margin-block-start: var(--spectrum-actiongroup-vertical-spacing-regular);
-    margin-inline-start: var(--spectrum-actiongroup-button-spacing-reset);
-  }
-
-  &.spectrum-ActionGroup--vertical {
-    margin-block-start: var(--spectrum-actiongroup-vertical-spacing-regular);
+    /* margin-block-start: var(--spectrum-actiongroup-vertical-spacing-regular); */
     margin-inline-start: var(--spectrum-actiongroup-button-spacing-reset);
   }
 }
 
 .spectrum-ActionGroup--compact {
   gap: var(--spectrum-actiongroup-horizontal-spacing-compact);
+
   &.spectrum-ActionGroup--quiet {
     .spectrum-ActionGroup-item + .spectrum-ActionGroup-item {
       margin-inline-start: var(--spectrum-actiongroup-horizontal-spacing-compact);
@@ -106,6 +104,7 @@ governing permissions and limitations under the License.
       }
     }
   }
+
   &:not(.spectrum-ActionGroup--quiet) {
     flex-wrap: nowrap;
 
@@ -118,19 +117,15 @@ governing permissions and limitations under the License.
       &:first-child {
         border-start-start-radius: var(--spectrum-actiongroup-border-radius);
         border-end-start-radius: var(--spectrum-actiongroup-border-radius);
-        /* margin-inline-end: calc(
-          -1 * var(--spectrum-actionbutton-m-texticon-border-size) / 2
-        ); */
+        margin-inline-end: var(--spectrum-actiongroup-item-border-overlap-size);
         /* --spectrum-actionbutton-focus-ring-border-radius-adjusted: calc(var(--spectrum-actionbutton-m-quiet-textonly-border-radius) + var(--spectrum-actionbutton-m-textonly-focus-ring-gap)) var(--spectrum-alias-border-radius-xsmall) var(--spectrum-alias-border-radius-xsmall) calc(var(--spectrum-actionbutton-m-quiet-textonly-border-radius) + var(--spectrum-actionbutton-m-textonly-focus-ring-gap)); */
       }
 
       &:last-child {
         border-start-end-radius: var(--spectrum-actiongroup-border-radius);
         border-end-end-radius: var(--spectrum-actiongroup-border-radius);
-        /* margin-inline-start: calc(
-          -1 * var(--spectrum-actionbutton-m-texticon-border-size) / 2
-        ); */
-        margin-inline-end: 0;
+        margin-inline-start: var(--spectrum-actiongroup-item-border-overlap-size);
+        margin-inline-end: var(--spectrum-actiongroup-button-spacing-reset);
         /* --spectrum-actionbutton-focus-ring-border-radius-adjusted: var(--spectrum-alias-border-radius-xsmall) calc(var(--spectrum-actionbutton-m-quiet-textonly-border-radius) + var(--spectrum-actionbutton-m-textonly-focus-ring-gap)) calc(var(--spectrum-actionbutton-m-quiet-textonly-border-radius) + var(--spectrum-actionbutton-m-textonly-focus-ring-gap)) var(--spectrum-alias-border-radius-xsmall); */
       }
 
@@ -148,12 +143,8 @@ governing permissions and limitations under the License.
       }
 
       & + .spectrum-ActionGroup-item {
-        /* margin-inline-start: calc(
-          -1 * var(--spectrum-actionbutton-m-texticon-border-size) / 2
-        ); */
-        /* margin-inline-end: calc(
-          -1 * var(--spectrum-actionbutton-m-texticon-border-size) / 2
-        ); */
+        margin-inline-start: var(--spectrum-actiongroup-item-border-overlap-size);
+        margin-inline-end: var(--spectrum-actiongroup-item-border-overlap-size);
       }
 
       .spectrum-ActionButton-label {
@@ -163,35 +154,31 @@ governing permissions and limitations under the License.
 
     &.spectrum-ActionGroup--vertical {
       gap: var(--spectrum-actiongroup-vertical-spacing-compact);
+
       .spectrum-ActionGroup-item {
         border-radius: var(--spectrum-actiongroup-border-radius-reset);
 
         & + .spectrum-ActionGroup-item {
-          /* margin-block-start: calc(
-            -1 * var(--spectrum-actionbutton-m-texticon-border-size) / 2
-          ); */
-          /* margin-block-end: calc(
-            -1 * var(--spectrum-actionbutton-m-texticon-border-size) / 2
-          ); */
+          margin-inline-start: var(--spectrum-actiongroup-button-spacing-reset);
+          margin-inline-end: var(--spectrum-actiongroup-button-spacing-reset);
+          margin-block-start: var(--spectrum-actiongroup-item-border-overlap-size);
+          margin-block-end: var(--spectrum-actiongroup-item-border-overlap-size);
         }
 
         &:first-child {
           border-start-start-radius: var(--spectrum-actiongroup-border-radius);
           border-start-end-radius: var(--spectrum-actiongroup-border-radius);
           border-radius: var(--spectrum-actiongroup-border-radius-reset);
-          /* margin-block-end: calc(
-            -1 * var(--spectrum-actionbutton-m-texticon-border-size) / 2
-          ); */
+          margin-inline-end: var(--spectrum-actiongroup-button-spacing-reset);
+          margin-block-end: var(--spectrum-actiongroup-item-border-overlap-size);
         }
 
         &:last-child {
           border-end-start-radius: var(--spectrum-actiongroup-border-radius);
           border-end-end-radius: var(--spectrum-actiongroup-border-radius);
           border-radius: var(--spectrum-actiongroup-border-radius-reset);
-          /* margin-block-start: calc(
-            -1 * var(--spectrum-actionbutton-m-texticon-border-size) / 2
-          ); */
-          margin-block-end: 0;
+          margin-block-start: var(--spectrum-actiongroup-item-border-overlap-size);
+          margin-block-end: var(--spectrum-actiongroup-button-spacing-reset);
         }
       }
     }
