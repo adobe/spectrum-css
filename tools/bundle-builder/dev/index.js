@@ -156,7 +156,11 @@ function watchSite() {
 function watch() {
   serve();
 
+  watchWithinPackages(`${dirs.components}/tokens/custom-*/*.css`, 'rebuildCustoms', '*.css');
+
   watchWithinPackages(`${dirs.components}/*/{index,skin}.css`, 'buildMedium', '*.css');
+  watchWithinPackages(`${dirs.components}/*/themes/{spectrum,express}.css`, 'buildMedium', '*.css');
+
 
   watchWithinPackages(
     [

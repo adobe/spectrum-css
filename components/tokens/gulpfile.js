@@ -31,11 +31,20 @@ function concatIndex() {
     .pipe(gulp.dest('dist/'));
 }
 
-function buildCustoms() {
-  buildCustomSpectrum = () => gulp.src('custom-spectrum/*.css').pipe(gulp.dest('dist/css/spectrum/'));
-  buildCustomExpress = () => gulp.src('custom-express/*.css').pipe(gulp.dest('dist/css/express'));
-  return buildCustomSpectrum() && buildCustomExpress();
+function buildCustomSpectrum() {
+  return gulp.src('custom-spectrum/*.css')
+    .pipe(gulp.dest('dist/css/spectrum/'));
 }
+
+function buildCustomExpress() {
+  return gulp.src('custom-express/*.css')
+    .pipe(gulp.dest('dist/css/express'));
+}
+
+const buildCustoms = gulp.parallel(
+  buildCustomSpectrum,
+  buildCustomExpress
+);
 
 function styleDictionary(cb) {
   StyleDictionary.buildAllPlatforms();
@@ -46,6 +55,11 @@ exports.clean = clean;
 exports.build = exports.buildLite = exports.buildMedium = exports.default = gulp.series(
   clean,
   styleDictionary,
-  concatIndex,
-  buildCustoms
+  buildCustoms,
+  concatIndex
+);
+
+exports.rebuildCustoms = gulp.series(
+  buildCustoms,
+  concatIndex
 );
