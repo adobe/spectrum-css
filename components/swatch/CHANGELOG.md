@@ -3,6 +3,18 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+<a name="1.1.4"></a>
+## 1.1.4
+🗓 2022-07-25 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/swatch@1.1.3...@spectrum-css/swatch@1.1.4)
+
+### 🐛 Bug fixes
+
+* swatch high contrast support ([966db0a](https://github.com/adobe/spectrum-css/commit/966db0a))
+
+
+
+
+
 <a name="1.1.3"></a>
 ## 1.1.3
 🗓 2022-06-16 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/swatch@1.1.2...@spectrum-css/swatch@1.1.3)
