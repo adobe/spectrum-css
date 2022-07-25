@@ -114,6 +114,15 @@ governing permissions and limitations under the License.
 
 /* Windows high contrast mode */
 @media (forced-colors: active) {
+  .spectrum-Checkbox-input {
+    &:focus-ring + .spectrum-Checkbox-box {
+      forced-color-adjust: none;
+      outline-color: var(--highcontrast-checkbox-focus-ring-color, var(--mod-checkbox-focus-ring-color, var(--spectrum-checkbox-focus-ring-color)));
+      outline-style: auto;
+      outline-offset: var(--highcontrast-checkbox-focus-ring-gap, var(--mod-checkbox-focus-ring-gap, var(--spectrum-checkbox-focus-ring-gap)));
+      outline-width: var(--mod-focus-ring-thickness, var(--spectrum-focus-ring-thickness));
+    }
+  }
   .spectrum-Checkbox {
     --highcontrast-checkbox-content-color-default: ButtonText;
     --highcontrast-checkbox-content-color-hover: ButtonText;
