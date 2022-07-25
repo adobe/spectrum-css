@@ -3,6 +3,16 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+<a name="2.0.0-beta.1"></a>
+# 2.0.0-beta.1
+🗓 2022-07-25 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/helptext@2.0.0-beta.0...@spectrum-css/helptext@2.0.0-beta.1)
+
+**Note:** Version bump only for package @spectrum-css/helptext
+
+
+
+
+
 <a name="2.0.0-beta.0"></a>
 # 2.0.0-beta.0
 🗓 2022-07-25 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/helptext@1.0.20...@spectrum-css/helptext@2.0.0-beta.0)
