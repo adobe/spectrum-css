@@ -3,7 +3,7 @@ status: Verified
 SpectrumSiteSlug: https://spectrum.adobe.com/page/radio-button/
 description: |
   - Radio buttons allow users to select a single option from a list of mutually exclusive options. All possible options are exposed up front for users to compare.
-  - Invalid radio buttons are signified only by alert [HelpText](helptext.html) included in [FieldGroup](fieldgroup.html).
+  - Invalid radio buttons are signified by alert [HelpText](helptext.html) and [Icon](icon.html) included in [FieldGroup](fieldgroup.html).
   - Radio buttons should not be used on their own, they should always be used within a [FieldGroup](fieldgroup.html).
 
 sections:
@@ -15,7 +15,10 @@ sections:
       ### Read-only
       Radio Button now includes a read-only state in addition to the disabled state.
       - Read-only radio buttons are disabled, but not all disabled radio buttons are read-only.
-      - Read-only radio buttons do not have a focus ring, but the button should be focusable.
+      - Read-only radio buttons do not have a focus ring, but the button should be focusable.]
+
+      ### Invalid/Error State
+      - Invalid radio buttons are signified by alert [HelpText](helptext.html) and [Icon](icon.html) included in [FieldGroup](fieldgroup.html).
 
 examples:
   - id: radio
