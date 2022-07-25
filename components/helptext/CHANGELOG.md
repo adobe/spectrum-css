@@ -3,6 +3,21 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+<a name="2.0.0"></a>
+# 2.0.0
+🗓 2022-07-25 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/helptext@1.0.20...@spectrum-css/helptext@2.0.0)
+
+* feat(helptext)!: migrate to core tokens ([8f6075e](https://github.com/adobe/spectrum-css/commit/8f6075e))
+
+
+### 🛑 BREAKING CHANGES
+
+* This migrates the component to core tokens. Additionally, this adds support for Windows High Contrast Mode.
+
+
+
+
+
 <a name="2.0.0-beta.1"></a>
 # 2.0.0-beta.1
 🗓 2022-07-25 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/helptext@2.0.0-beta.0...@spectrum-css/helptext@2.0.0-beta.1)
