@@ -60,7 +60,8 @@ governing permissions and limitations under the License.
   --spectrum-checkbox-focus-ring-gap: var(--spectrum-focus-ring-gap);
   --spectrum-checkbox-focus-ring-thickness: var(--spectrum-focus-ring-thickness);
 
-  --spectrum-checkbox-border-width: calc(var(--spectrum-checkbox-control-size) / 2);
+  --spectrum-checkbox-border-width: var(--spectrum-border-width-200);;
+  --spectrum-checkbox-selected-border-width: calc(var(--spectrum-checkbox-control-size) / 2);
 
   /* Spacing */
   --spectrum-checkbox-top-to-text: var(--spectrum-component-top-to-text-100);
@@ -290,7 +291,7 @@ governing permissions and limitations under the License.
     .spectrum-Checkbox-input:checked + .spectrum-Checkbox-box {
       &:before {
         border-color: var(--highcontrast-checkbox-highlight-color-default, var(--mod-checkbox-control-selected-color-default, var(--spectrum-checkbox-control-selected-color-default)));
-        border-width: var(--mod-checkbox-border-width, var(--spectrum-checkbox-border-width));
+        border-width: var(--mod-checkbox-selected-border-width, var(--spectrum-checkbox-selected-border-width));
       }
 
       .spectrum-Checkbox-checkmark {
@@ -321,7 +322,7 @@ governing permissions and limitations under the License.
     .spectrum-Checkbox-input:checked + .spectrum-Checkbox-box {
       &:before {
         border-color: var(--highcontrast-checkbox-color-default, var(--mod-checkbox-invalid-color-default, var(--spectrum-checkbox-invalid-color-default)));
-        border-width: var(--mod-checkbox-border-width, var(--spectrum-checkbox-border-width));
+        border-width: var(--mod-checkbox-selected-border-width, var(--spectrum-checkbox-selected-border-width));
       }
     }
 
@@ -485,7 +486,7 @@ governing permissions and limitations under the License.
       border-color:
       var(--highcontrast-checkbox-highlight-color-default, var(--mod-checkbox-control-selected-color-default, var(--spectrum-checkbox-control-selected-color-default)));
       background-color: var(--mod-checkbox-checkmark-color, var(--spectrum-checkbox-checkmark-color));
-      border-width: var(--mod-checkbox-border-width, var(--spectrum-checkbox-border-width));
+      border-width: var(--mod-checkbox-selected-border-width, var(--spectrum-checkbox-selected-border-width));
     }
 
     .spectrum-Checkbox-checkmark {
