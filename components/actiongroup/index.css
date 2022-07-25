@@ -14,7 +14,8 @@ governing permissions and limitations under the License.
   --spectrum-actiongroup-button-spacing-reset: 0;
   --spectrum-actiongroup-border-radius-reset: 0;
   --spectrum-actiongroup-border-radius: var(--spectrum-corner-radius-100);
-  --spectrum-actiongroup-item-border-overlap-size: calc(-1 * var(--spectrum-border-width-100) / 2);
+  /* --spectrum-actiongroup-gap-size-compact: calc(-1 * var(--spectrum-actiongroup-horizontal-spacing-compact)); */
+  /* --spectrum-actiongroup-item-border-overlap-size: calc(-1 * var(--spectrum-border-width-100) / 2); */
   /* spectrum-actionbutton-m-texticon-border-radius */
   /* 
     spectrum
@@ -31,7 +32,7 @@ governing permissions and limitations under the License.
 
 /* hack: use var so it's not reported as unused */
 .🤫 {
-  /* border-radius: var(--spectrum-actionbutton-focus-ring-border-radius-adjusted); */
+  border-radius: var(--spectrum-actionbutton-focus-ring-border-radius-adjusted);
 }
 
 .spectrum-ActionGroup--sizeS {
@@ -81,17 +82,12 @@ governing permissions and limitations under the License.
   gap: var(--spectrum-actiongroup-vertical-spacing-regular);
   display: inline-flex;
   flex-direction: column;
-
-  .spectrum-ActionGroup-item + .spectrum-ActionGroup-item {
-    /* margin-block-start: var(--spectrum-actiongroup-vertical-spacing-regular); */
-    margin-inline-start: var(--spectrum-actiongroup-button-spacing-reset);
-  }
 }
 
 .spectrum-ActionGroup--compact {
-  gap: var(--spectrum-actiongroup-horizontal-spacing-compact);
+  gap: var(--spectrum-actiongroup-gap-size-compact);
 
-  &.spectrum-ActionGroup--quiet {
+  /* &.spectrum-ActionGroup--quiet {
     .spectrum-ActionGroup-item + .spectrum-ActionGroup-item {
       margin-inline-start: var(--spectrum-actiongroup-horizontal-spacing-compact);
       margin-block-start: var(--spectrum-actiongroup-button-spacing-reset);
@@ -103,7 +99,7 @@ governing permissions and limitations under the License.
         margin-block-start: var(--spectrum-actiongroup-vertical-spacing-compact);
       }
     }
-  }
+  } */
 
   &:not(.spectrum-ActionGroup--quiet) {
     flex-wrap: nowrap;
@@ -112,21 +108,26 @@ governing permissions and limitations under the License.
       position: relative;
       border-radius: var(--spectrum-actiongroup-border-radius-reset);
       z-index: 0;
-      /* --spectrum-actionbutton-focus-ring-border-radius-adjusted: var(--spectrum-alias-border-radius-xsmall); */
+      --spectrum-actionbutton-focus-ring-border-radius-adjusted: 1px;
 
       &:first-child {
         border-start-start-radius: var(--spectrum-actiongroup-border-radius);
         border-end-start-radius: var(--spectrum-actiongroup-border-radius);
-        margin-inline-end: var(--spectrum-actiongroup-item-border-overlap-size);
-        /* --spectrum-actionbutton-focus-ring-border-radius-adjusted: calc(var(--spectrum-actionbutton-m-quiet-textonly-border-radius) + var(--spectrum-actionbutton-m-textonly-focus-ring-gap)) var(--spectrum-alias-border-radius-xsmall) var(--spectrum-alias-border-radius-xsmall) calc(var(--spectrum-actionbutton-m-quiet-textonly-border-radius) + var(--spectrum-actionbutton-m-textonly-focus-ring-gap)); */
+        margin-inline-start: var(--spectrum-actiongroup-button-spacing-reset);
+        --spectrum-actionbutton-focus-ring-border-radius-adjusted: 1px;
+      }
+      
+      & + .spectrum-ActionGroup-item {
+        margin-inline-start: var(--spectrum-actiongroup-horizontal-spacing-compact);
+        margin-inline-end: var(--spectrum-actiongroup-horizontal-spacing-compact);
       }
 
       &:last-child {
         border-start-end-radius: var(--spectrum-actiongroup-border-radius);
         border-end-end-radius: var(--spectrum-actiongroup-border-radius);
-        margin-inline-start: var(--spectrum-actiongroup-item-border-overlap-size);
+        margin-inline-start: var(--spectrum-actiongroup-horizontal-spacing-compact);
         margin-inline-end: var(--spectrum-actiongroup-button-spacing-reset);
-        /* --spectrum-actionbutton-focus-ring-border-radius-adjusted: var(--spectrum-alias-border-radius-xsmall) calc(var(--spectrum-actionbutton-m-quiet-textonly-border-radius) + var(--spectrum-actionbutton-m-textonly-focus-ring-gap)) calc(var(--spectrum-actionbutton-m-quiet-textonly-border-radius) + var(--spectrum-actionbutton-m-textonly-focus-ring-gap)) var(--spectrum-alias-border-radius-xsmall); */
+        --spectrum-actionbutton-focus-ring-border-radius-adjusted: 1px;
       }
 
       &.is-selected {
@@ -142,10 +143,6 @@ governing permissions and limitations under the License.
         z-index: 3;
       }
 
-      & + .spectrum-ActionGroup-item {
-        margin-inline-start: var(--spectrum-actiongroup-item-border-overlap-size);
-        margin-inline-end: var(--spectrum-actiongroup-item-border-overlap-size);
-      }
 
       .spectrum-ActionButton-label {
         inline-size: auto;
@@ -153,7 +150,7 @@ governing permissions and limitations under the License.
     }
 
     &.spectrum-ActionGroup--vertical {
-      gap: var(--spectrum-actiongroup-vertical-spacing-compact);
+      gap: var(--spectrum-actiongroup-gap-size-compact);
 
       .spectrum-ActionGroup-item {
         border-radius: var(--spectrum-actiongroup-border-radius-reset);
@@ -161,8 +158,8 @@ governing permissions and limitations under the License.
         & + .spectrum-ActionGroup-item {
           margin-inline-start: var(--spectrum-actiongroup-button-spacing-reset);
           margin-inline-end: var(--spectrum-actiongroup-button-spacing-reset);
-          margin-block-start: var(--spectrum-actiongroup-item-border-overlap-size);
-          margin-block-end: var(--spectrum-actiongroup-item-border-overlap-size);
+          margin-block-start: var(--spectrum-actiongroup-button-spacing-reset);
+          margin-block-end: var(--spectrum-actiongroup-vertical-spacing-compact);
         }
 
         &:first-child {
@@ -170,14 +167,15 @@ governing permissions and limitations under the License.
           border-start-end-radius: var(--spectrum-actiongroup-border-radius);
           border-radius: var(--spectrum-actiongroup-border-radius-reset);
           margin-inline-end: var(--spectrum-actiongroup-button-spacing-reset);
-          margin-block-end: var(--spectrum-actiongroup-item-border-overlap-size);
+          margin-block-start: var(--spectrum-actiongroup-vertical-spacing-compact);
+          margin-block-end: var(--spectrum-actiongroup-vertical-spacing-compact);
         }
 
         &:last-child {
           border-end-start-radius: var(--spectrum-actiongroup-border-radius);
           border-end-end-radius: var(--spectrum-actiongroup-border-radius);
           border-radius: var(--spectrum-actiongroup-border-radius-reset);
-          margin-block-start: var(--spectrum-actiongroup-item-border-overlap-size);
+          margin-block-start: var(--spectrum-actiongroup-vertical-spacing-compact);
           margin-block-end: var(--spectrum-actiongroup-button-spacing-reset);
         }
       }
