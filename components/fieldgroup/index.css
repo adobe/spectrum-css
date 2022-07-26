@@ -12,11 +12,13 @@ governing permissions and limitations under the License.
 
 @import "../vars/css/components/spectrum-helptext.css";
 
+/* custom properties */
 .spectrum-FieldGroup {
   --spectrum-fieldgroup-margin: var(--spectrum-spacing-300);
   --spectrum-fieldgroup-readonly-delimiter: '\002c';
 }
 
+/* field group */
 .spectrum-FieldGroup {
   display: flex;
   vertical-align: top;
@@ -24,19 +26,35 @@ governing permissions and limitations under the License.
   padding: 0;
   border: 0;
 
-  /* horizontal fieldgroup */
+  /* horizontal field group */
   &--horizontal {
     .spectrum-FieldGroup-item:not(:last-child) {
       margin-inline-end: var(--spectrum-fieldgroup-margin);
     }
+
+    /* help text appears below horizontal fields */
+    .spectrum-HelpText {
+      flex-basis: 100%;
+    }
   }
 
-  /* vertical fieldgroup */
+  /* vertical field group */
   &--vertical {
     display: inline-flex;
     flex-direction: column;
   }
+
+  /* field group label - top position */
+  .spectrum-FieldLabel {
+    display: block;
+  }
+
+  /* field group label - side position */
+  .spectrum-FieldLabel--right {
+    display: table-cell;
+  }
 }
+
 
 /* read only checkbox group */
 .spectrum-FieldGroup {
@@ -46,7 +64,6 @@ governing permissions and limitations under the License.
     }
 
     /* ReadOnly checkbox fields delimited by commas */
-    /* TO DO - check right to left display of comma */
     &:not(:last-child) {
       .spectrum-Checkbox-label {
         &:after {
