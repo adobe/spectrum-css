@@ -16,11 +16,13 @@
     "build": "gulp"
   },
   "peerDependencies": {
-    "@spectrum-css/icon": "^3.0.21"
+    "@spectrum-css/icon": "^3.0.21",
+    "@spectrum-css/tokens": "^1.0.3"
   },
   "devDependencies": {
     "@spectrum-css/component-builder-simple": "^1.0.0-beta",
     "@spectrum-css/icon": "^3.0.23",
+    "@spectrum-css/tokens": "^1.0.3",
     "gulp": "^4.0.0"
   },
   "publishConfig": {
