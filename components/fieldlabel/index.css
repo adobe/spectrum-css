@@ -10,6 +10,16 @@ OF ANY KIND, either express or implied. See the License for the specific languag
 governing permissions and limitations under the License.
 */
 
+
+/* Component level tokens currently missing in core-tokens as of July 2022 */
+.spectrum--medium {
+  --spectrum-field-label-top-to-asterisk-small: 8px;
+}
+.spectrum--large {
+  --spectrum-field-label-top-to-asterisk-small: 11px;
+}
+
+
 .spectrum-FieldLabel--sizeS {
   --spectrum-fieldlabel-top-to-text: var(--spectrum-component-top-to-text-75);
   --spectrum-fieldlabel-bottom-to-text: var(--spectrum-component-bottom-to-text-75);
@@ -153,7 +163,7 @@ governing permissions and limitations under the License.
     flex-direction: column;
 
     & + .spectrum-Form-item {
-      margin-block-start: var(--mod-pacing-100, var(--spectrum-spacing-100));
+      margin-block-start: var(--mod-field-label-top-to-asterisk-small, var(--spectrum-field-label-top-to-asterisk-small));
     }
   }
 }
