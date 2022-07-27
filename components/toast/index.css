@@ -21,9 +21,7 @@ governing permissions and limitations under the License.
  */
 
 .spectrum-Toast {
-  /* Hardcoded variables */
-  --spectrum-toast-height: 48px; /* -desktop medium */
-  /* --spectrum-toast-height: 56px; /* -mobile large */
+  /* TODO --toast-height doesn't seem to be necessary and causes issues with wrapping */
 
   /* Size */
   --spectrum-toast-font-size: var(--spectrum-font-size-100);
@@ -32,25 +30,31 @@ governing permissions and limitations under the License.
   --spectrum-toast-line-height: var(--spectrum-line-height-100);
   --spectrum-toast-line-height-CJK: var(--spectrum-CJK-line-height-100);
 
-  /* Spacing */
+  /* Space */
 
   --spectrum-toast-spacing-icon-to-text: var(--spectrum-text-to-visual-100);
 
   --spectrum-toast-spacing-start-edge-to-text-and-icon: var(--spectrum-spacing-300);
   --spectrum-toast-spacing-text-and-action-button-to-divider: var(--spectrum-spacing-300);
 
-  --spectrum-toast-spacing-top-edge-to-icon: var(--spectrum-toast-top-to-workflow-icon);
+  --spectrum-toast-spacing-top-edge-to-divider: var(--spectrum-spacing-100);
+  --spectrum-toast-spacing-bottom-edge-to-divider: var(--spectrum-spacing-100);
+
   --spectrum-toast-spacing-top-edge-to-text: var(--spectrum-toast-top-to-text);
   --spectrum-toast-spacing-bottom-edge-to-text: var(--spectrum-toast-bottom-to-text);
+
+  --spectrum-toast-spacing-top-edge-to-icon: var(--spectrum-toast-top-to-workflow-icon);
 
   --spectrum-toast-spacing-text-to-action-button-horizontal: var(--spectrum-spacing-300);
   /* --spectrum-toast-spacing-text-to-action-button-vertical: var(--spacing-100); */
 
   --spectrum-toast-spacing-close-button: var(--spectrum-spacing-300);
   --spectrum-toast-spacing-top-edge-to-action-button: var(--spectrum-spacing-100);
-  /* --spectrum-toast-spacing-action-button-to-bottom-edge: var(--spectrum-spacing-100); */
+  --spectrum-toast-spacing-bottom-edge-to-action-button: var(--spectrum-spacing-100);
 
   /* --spectrum-toast-spacing-toast-to-edge: var(--spectrum-spacing-300); */
+
+  /* Color */
 
   --spectrum-toast-negative-background-color-default: var(--spectrum-negative-background-color-default);
   --spectrum-toast-positive-background-color-default: var(--spectrum-positive-background-color-default);
@@ -66,7 +70,7 @@ governing permissions and limitations under the License.
 }
 
 .spectrum-Toast {
-  height: var(--spectrum-toast-height);
+  /* height: var(--spectrum-toast-height); */
   box-sizing: border-box;
   display: inline-flex;
   flex-direction: row;
@@ -163,10 +167,16 @@ governing permissions and limitations under the License.
   display: flex;
   flex: 0 0 auto;
   align-items: flex-start;
-  align-self: center;
+
+  margin-block-start: var(--spectrum-toast-spacing-top-edge-to-divider);
+  margin-block-end: var(--spectrum-toast-spacing-bottom-edge-to-divider);
 
   border-inline-start-color: rgba(255, 255, 255, 0.2);
   padding-inline-end: var(--spectrum-toast-spacing-close-button);
+
+  .spectrum-CloseButton {
+      align-self: center;
+  }
 }
 
 .spectrum-Toast-body {
@@ -174,9 +184,10 @@ governing permissions and limitations under the License.
   align-self: center;
 
   .spectrum-Button {
-    /* TODO invalid value */
+    /* https://caniuse.com/mdn-css_properties_float_flow_relative_values */
     float: inline-end;
     margin-block-start: var(--spectrum-toast-spacing-top-edge-to-action-button);
+    margin-block-end: var(--spectrum-toast-spacing-bottom-edge-to-action-button);
     margin-inline-end: var(--spectrum-toast-spacing-text-and-action-button-to-divider);
   }
 
