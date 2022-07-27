@@ -33,9 +33,8 @@ governing permissions and limitations under the License.
   --spectrum-toast-line-height-CJK: var(--spectrum-CJK-line-height-100);
 
   /* Spacing */
-  --spectrum-toast-spacing-top-edge-to-icon: var(--spectrum-toast-top-to-workflow-icon);
 
-  /* --spectrum-toast-spacing-icon-to-text: var(--spectrum-text-to-visual-100); */
+  --spectrum-toast-spacing-icon-to-text: var(--spectrum-text-to-visual-100);
 
   --spectrum-toast-spacing-start-edge-to-text-and-icon: var(--spectrum-spacing-300);
   --spectrum-toast-spacing-text-and-button-to-divider: var(--spectrum-spacing-300);
@@ -122,13 +121,15 @@ governing permissions and limitations under the License.
   }
 }
 
+/* TODO note what type icon is */
 .spectrum-Toast-typeIcon {
   flex-shrink: 0;
   flex-grow: 0;
 
-  margin-block: var(--spectrum-toast-spacing-top-edge-to-icon);
-  /* TODO Correct value */
-  margin-inline-end: var(--spectrum-toast-spacing-text-and-button-to-divider);
+  /* TODO Remove margin-block-start, doesn't position correctly */
+  /* --spectrum-toast-spacing-top-edge-to-icon: var(--spectrum-toast-top-to-workflow-icon); */
+  /* margin-block-start: var(--spectrum-toast-spacing-top-edge-to-icon); */
+  margin-inline-end: var(--spectrum-toast-spacing-icon-to-text);
   margin-inline-start: 0;
 
   color: white;
