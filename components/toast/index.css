@@ -74,7 +74,6 @@ governing permissions and limitations under the License.
   border-radius: var(--spectrum-toast-corner-radius);
 
   padding-block: var(--spectrum-toast-spacing-toast-to-edge);
-  padding-inline-end: var(--spectrum-toast-spacing-close-button);
   padding-inline-start: var(--spectrum-toast-spacing-start-edge-to-text-and-icon);
 
   font-size: var(--spectrum-toast-font-size);
@@ -169,6 +168,7 @@ governing permissions and limitations under the License.
   align-self: center;
 
   border-inline-start-color: rgba(255, 255, 255, 0.2);
+  padding-inline-end: var(--spectrum-toast-spacing-close-button);
 }
 
 .spectrum-Toast-body {
