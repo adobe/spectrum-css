@@ -13,6 +13,11 @@ governing permissions and limitations under the License.
 /* toast/index.css
  * 
  * .spectrum-Toast::after is the Focus ring
+ *
+ * Component naming format:
+ * `--system-component-style-description-modifier`
+ * Example:
+ * `--spectrum-toast-spacing-text-to-button-horizontal`
  */
 
 .spectrum-Toast {
@@ -20,37 +25,35 @@ governing permissions and limitations under the License.
   --spectrum-toast-height: 48px; /* -desktop medium */
   /* --spectrum-toast-height: 56px; /* -mobile large */
 
-  /* --spectrum-toast-height: var(--spectrum-toast-height-mobile); */
-  --spectrum-toast-icon-padding-y: var(--spectrum-toast-top-to-workflow-icon);
-
-  --spectrum-toast-corner-radius: var(--spectrum-corner-radius-100);
-  --spectrum-toast-spacing-start-edge-to-icon: var(--spectrum-spacing-300);
-  --spectrum-toast-spacing-divider-and-close-to-end-edge: var(--spectrum-spacing-300);
-
+  /* Size */
   --spectrum-toast-font-size: var(--spectrum-font-size-100);
-  /* TODO Correct value */
-  --spectrum-toast-font-weight: normal;
-
-  --spectrum-toast-spacing-top-to-text: var(--spectrum-toast-top-to-text);
-  --spectrum-toast-spacing-bottom-to-text: var(--spectrum-toast-bottom-to-text);
-
-  --spectrum-toast-spacing-text-and-button-to-divider: var(--spectrum-spacing-300);
+  --spectrum-toast-corner-radius: var(--spectrum-corner-radius-100);
 
   --spectrum-toast-line-height: var(--spectrum-line-height-100);
-  --spectrum-toast-CJK-line-height: var(--spectrum-CJK-line-height-100);
+  --spectrum-toast-line-height-CJK: var(--spectrum-CJK-line-height-100);
 
-  --spectrum-toast-spacing-top-edge-to-button: var(--spectrum-spacing-100);
-  /* --spectrum-toast-spacing-bottom-edge-to-button: var(--spectrum-spacing-100); */
-  --spectrum-toast-spacing-text-to-button-horizontal: var(--spectrum-spacing-300);
+  /* Spacing */
+  --spectrum-toast-spacing-top-edge-to-icon: var(--spectrum-toast-top-to-workflow-icon);
+
+  /* --spectrum-toast-spacing-icon-to-text: var(--spectrum-text-to-visual-100); */
+
+  --spectrum-toast-spacing-start-edge-to-text-and-icon: var(--spectrum-spacing-300);
+  --spectrum-toast-spacing-text-and-button-to-divider: var(--spectrum-spacing-300);
+
+  --spectrum-toast-spacing-top-edge-to-text: var(--spectrum-toast-top-to-text);
+  --spectrum-toast-spacing-text-to-bottom: var(--spectrum-toast-bottom-to-text);
+
+  /* --spectrum-toast-spacing-text-to-action-button-horizontal: var(--spectrum-spacing-300); */
+  /* --spectrum-toast-spacing-text-to-action-button-vertical: var(--spacing-100); */
+
+  --spectrum-toast-spacing-close-button: var(--spectrum-spacing-300);
+  --spectrum-toast-spacing-top-edge-to-action-button: var(--spectrum-spacing-100);
+  /* --spectrum-toast-spacing-action-button-to-bottom-edge: var(--spectrum-spacing-100); */
 
   --spectrum-toast-spacing-toast-to-edge: var(--spectrum-spacing-300);
 
-  --spectrum-toast-spacing-start-edge-to-text-and-icon: var(--spectrum-spacing-300);
-
   --spectrum-toast-negative-background-color-default: var(--spectrum-negative-background-color-default);
-
   --spectrum-toast-positive-background-color-default: var(--spectrum-positive-background-color-default);
-
   --spectrum-toast-informative-background-color-default: var(--spectrum-informative-background-color-default);
 
   --spectrum-toast-text-and-icon-color: var(--spectrum-white);
@@ -72,11 +75,12 @@ governing permissions and limitations under the License.
   border-radius: var(--spectrum-toast-corner-radius);
 
   padding-block: var(--spectrum-toast-spacing-toast-to-edge);
-  padding-inline-end: var(--spectrum-toast-spacing-divider-and-close-to-end-edge);
-  padding-inline-start: var(--spectrum-toast-spacing-start-edge-to-icon);
+  padding-inline-end: var(--spectrum-toast-spacing-close-button);
+  padding-inline-start: var(--spectrum-toast-spacing-start-edge-to-text-and-icon);
 
   font-size: var(--spectrum-toast-font-size);
-  font-weight: var(--spectrum-toast-font-weight);
+  /* TODO Add or remove font-weight */
+  /* font-weight: var(--spectrum-toast-font-weight); */
   -webkit-font-smoothing: antialiased;
 
   background-color: var(--spectrum-toast-background-color-default);
@@ -122,7 +126,7 @@ governing permissions and limitations under the License.
   flex-shrink: 0;
   flex-grow: 0;
 
-  margin-block: var(--spectrum-toast-icon-padding-y);
+  margin-block: var(--spectrum-toast-spacing-top-edge-to-icon);
   /* TODO Correct value */
   margin-inline-end: var(--spectrum-toast-spacing-text-and-button-to-divider);
   margin-inline-start: 0;
@@ -135,9 +139,9 @@ governing permissions and limitations under the License.
   display: inline-block;
   box-sizing: border-box;
 
-  padding-block-start: var(--spectrum-toast-spacing-top-to-text);
+  padding-block-start: var(--spectrum-toast-spacing-top-edge-to-text);
   padding-inline-end: var(--spectrum-toast-spacing-text-and-button-to-divider);
-  padding-block-end: var(--spectrum-toast-spacing-bottom-to-text);
+  padding-block-end: var(--spectrum-toast-spacing-text-to-bottom);
   padding-inline-start: 0;
 
   /* TODO  */
@@ -149,7 +153,7 @@ governing permissions and limitations under the License.
   &:lang(js),
   &:lang(zh),
   &:lang(ko) {
-    line-height: var(--spectrum-toast-CJK-line-height, var(--mod-toast-line-height, var(--spectrum-toast-line-height)));
+    line-height: var(--spectrum-toast-line-height-CJK, var(--mod-toast-line-height, var(--spectrum-toast-line-height)));
   }
 
   text-align: start;
@@ -161,19 +165,7 @@ governing permissions and limitations under the License.
   display: flex;
   flex: 0 0 auto;
   align-items: flex-start;
-
-  .spectrum-Button,
-  .spectrum-ClearButton {
-    & + .spectrum-Button,
-    & + .spectrum-ClearButton {
-      margin-inline-start: var(--spectrum-toast-spacing-text-to-button-horizontal);
-    }
-  }
-
-  /* TODO */
-  .spectrum-CloseButton {
-    height: 100%;
-  }
+  align-self: center;
 
   border-inline-start-color: rgba(255, 255, 255, 0.2);
 }
@@ -185,7 +177,7 @@ governing permissions and limitations under the License.
   .spectrum-Button {
     /* TODO invalid value */
     float: inline-end;
-    margin-block-start: var(--spectrum-toast-spacing-top-edge-to-button);
+    margin-block-start: var(--spectrum-toast-spacing-top-edge-to-action-button);
     margin-inline-end: var(--spectrum-toast-spacing-toast-to-edge);
   }
 
