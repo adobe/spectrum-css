@@ -12,6 +12,13 @@ governing permissions and limitations under the License.
 
 @import "../vars/css/components/spectrum-helptext.css";
 
+/* fieldgroup/index.css
+ *
+ * fieldgroup contains four component dependences:
+ * radio, checkbox, helptext, fieldlabel
+ *
+ */
+
 /* custom properties */
 .spectrum-FieldGroup {
   --spectrum-fieldgroup-margin: var(--spectrum-spacing-300);
@@ -21,40 +28,46 @@ governing permissions and limitations under the License.
 /* field group */
 .spectrum-FieldGroup {
   display: flex;
-  vertical-align: top;
+  align-items: top;
   flex-wrap: wrap;
-  padding: 0;
-  border: 0;
 
-  /* horizontal field group */
+  /* field group label top aligned */
+  &--toplabel {
+    flex-direction: column;
+  }
+
+  /* field group label side aligned */
+  &--sidelabel {
+    flex-direction: row;
+  }
+}
+
+/* input fields layout */
+.spectrum-FieldGroupInputLayout {
+  display: flex;
+  align-items: top;
+  flex-wrap: wrap;
+
+  /* input fields stacked vertically */
+  &--vertical {
+    flex-direction: column;
+  }
+
+  /* input fields aligned horizontally */
   &--horizontal {
+    flex-direction: row;
+
+    /* space between horizontal fields */
     .spectrum-FieldGroup-item:not(:last-child) {
       margin-inline-end: var(--spectrum-fieldgroup-margin);
     }
 
-    /* help text appears below horizontal fields */
+    /* move help text down to new row */
     .spectrum-HelpText {
       flex-basis: 100%;
     }
   }
-
-  /* vertical field group */
-  &--vertical {
-    display: inline-flex;
-    flex-direction: column;
-  }
-
-  /* field group label - top position */
-  .spectrum-FieldLabel {
-    display: block;
-  }
-
-  /* field group label - side position */
-  .spectrum-FieldLabel--right {
-    display: table-cell;
-  }
 }
-
 
 /* read only checkbox group */
 .spectrum-FieldGroup {
