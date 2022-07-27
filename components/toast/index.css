@@ -76,49 +76,49 @@ governing permissions and limitations under the License.
   flex-direction: row;
   align-items: stretch;
 
-  border-radius: var(--spectrum-toast-corner-radius);
+  border-radius: var(--mod-toast-corner-radius, var(--spectrum-toast-corner-radius));
 
-  padding-inline-start: var(--spectrum-toast-spacing-start-edge-to-text-and-icon);
+  padding-inline-start: var(--mod-toast-spacing-start-edge-to-text-and-icon, var(--spectrum-toast-spacing-start-edge-to-text-and-icon));
 
-  font-size: var(--spectrum-toast-font-size);
+  font-size: var(--mod-toast-font-size, var(--spectrum-toast-font-size));
   /* TODO Add or remove font-weight */
   /* font-weight: var(--spectrum-toast-font-weight); */
   -webkit-font-smoothing: antialiased;
 
-  background-color: var(--spectrum-toast-background-color-default);
-  color: var(--spectrum-toast-background-color-default);
+  background-color: var(--mod-toast-background-color-default, var(--spectrum-toast-background-color-default));
+  color: var(--mod-toast-background-color-default, var(--spectrum-toast-background-color-default));
 
   &--negative,
     /* @deprecated */.spectrum-Toast--error {
-    background-color: var(--spectrum-toast-negative-background-color-default);
-    color: var(--spectrum-toast-negative-background-color-default);
+    background-color: var(--mod-toast-negative-background-color-default, var(--spectrum-toast-negative-background-color-default));
+    color: var(--mod-toast-negative-background-color-default, var(--spectrum-toast-negative-background-color-default));
 
     .spectrum-Toast-closeButton {
       &:focus-ring:not(:active) {
-        color: var(--spectrum-toast-negative-background-color-default);
+        color: var(--mod-toast-negative-background-color-default, var(--spectrum-toast-negative-background-color-default));
       }
     }
   }
 
   &--info {
-      background-color: var(--spectrum-toast-informative-background-color-default);
-      color: var(--spectrum-toast-informative-background-color-default);
+      background-color: var(--mod-toast-informative-background-color-default, var(--spectrum-toast-informative-background-color-default));
+      color: var(--mod-toast-informative-background-color-default, var(--spectrum-toast-informative-background-color-default));
 
     .spectrum-Toast-closeButton {
       &:focus-ring:not(:active) {
-        color: var(--spectrum-toast-informative-background-color-default);
+        color: var(--mod-toast-informative-background-color-default, var(--spectrum-toast-informative-background-color-default));
       }
     }
   }
 
   &--positive,
     /* @deprecated */.spectrum-Toast--success {
-    background-color: var(--spectrum-toast-positive-background-color-default);
-    color: var(--spectrum-toast-positive-background-color-default);
+    background-color: var(--mod-toast-positive-background-color-default, var(--spectrum-toast-positive-background-color-default));
+    color: var(--mod-toast-positive-background-color-default, var(--spectrum-toast-positive-background-color-default));
 
     .spectrum-Toast-closeButton {
       &:focus-ring:not(:active) {
-        color: var(--spectrum-toast-positive-background-color-default);
+        color: var(--mod-toast-positive-background-color-default, var(--spectrum-toast-positive-background-color-default));
       }
     }
   }
@@ -129,8 +129,8 @@ governing permissions and limitations under the License.
   flex-shrink: 0;
   flex-grow: 0;
 
-  margin-block-start: var(--spectrum-toast-spacing-top-edge-to-icon);
-  margin-inline-end: var(--spectrum-toast-spacing-icon-to-text);
+  margin-block-start: var(--mod-toast-spacing-top-edge-to-icon, var(--spectrum-toast-spacing-top-edge-to-icon));
+  margin-inline-end: var(--mod-toast-spacing-icon-to-text, var(--spectrum-toast-spacing-icon-to-text));
   margin-inline-start: 0;
 
   color: white;
@@ -141,12 +141,12 @@ governing permissions and limitations under the License.
   display: inline-block;
   box-sizing: border-box;
 
-  padding-block-start: var(--spectrum-toast-spacing-top-edge-to-text);
-  padding-block-end: var(--spectrum-toast-spacing-bottom-edge-to-text);
-  padding-inline-end: var(--spectrum-toast-spacing-text-to-action-button-horizontal);
+  padding-block-start: var(--mod-toast-spacing-top-edge-to-text, var(--spectrum-toast-spacing-top-edge-to-text));
+  padding-block-end: var(--mod-toast-spacing-bottom-edge-to-text, var(--spectrum-toast-spacing-bottom-edge-to-text));
+  padding-inline-end: var(--mod-toast-spacing-text-to-action-button-horizontal, var(--spectrum-toast-spacing-text-to-action-button-horizontal));
   padding-inline-start: 0;
 
-  /* TODO  */
+  /* TODO Are there different info text size and font weight? */
   /* font-size: var(--spectrum-toast-info-text-size); */
   /* font-weight: var(--spectrum-toast-info-text-font-weight); */
 
@@ -160,7 +160,7 @@ governing permissions and limitations under the License.
 
   text-align: start;
 
-  color: var(--spectrum-toast-text-and-icon-color);
+  color: var(--mod-toast-text-and-icon-color, var(--spectrum-toast-text-and-icon-color));
 }
 
 .spectrum-Toast-buttons {
@@ -168,11 +168,11 @@ governing permissions and limitations under the License.
   flex: 0 0 auto;
   align-items: flex-start;
 
-  margin-block-start: var(--spectrum-toast-spacing-top-edge-to-divider);
-  margin-block-end: var(--spectrum-toast-spacing-bottom-edge-to-divider);
+  margin-block-start: var(--mod-toast-spacing-top-edge-to-divider, var(--spectrum-toast-spacing-top-edge-to-divider));
+  margin-block-end: var(--mod-toast-spacing-bottom-edge-to-divider, var(--spectrum-toast-spacing-bottom-edge-to-divider));
 
   border-inline-start-color: rgba(255, 255, 255, 0.2);
-  padding-inline-end: var(--spectrum-toast-spacing-close-button);
+  padding-inline-end: var(--mod-toast-spacing-close-button, var(--spectrum-toast-spacing-close-button));
 
   .spectrum-CloseButton {
       align-self: center;
@@ -186,13 +186,13 @@ governing permissions and limitations under the License.
   .spectrum-Button {
     /* https://caniuse.com/mdn-css_properties_float_flow_relative_values */
     float: inline-end;
-    margin-block-start: var(--spectrum-toast-spacing-top-edge-to-action-button);
-    margin-block-end: var(--spectrum-toast-spacing-bottom-edge-to-action-button);
-    margin-inline-end: var(--spectrum-toast-spacing-text-and-action-button-to-divider);
+    margin-block-start: var(--mod-toast-spacing-top-edge-to-action-button, var(--spectrum-toast-spacing-top-edge-to-action-button));
+    margin-block-end: var(--mod-toast-spacing-bottom-edge-to-action-button, var(--spectrum-toast-spacing-bottom-edge-to-action-button));
+    margin-inline-end: var(--mod-toast-spacing-text-and-action-button-to-divider, var(--spectrum-toast-spacing-text-and-action-button-to-divider));
   }
 
   & + .spectrum-Toast-buttons {
-    padding-inline-start: var(--spectrum-toast-spacing-start-edge-to-text-and-icon);
+    padding-inline-start: var(--mod-toast-spacing-start-edge-to-text-and-icon, var(--spectrum-toast-spacing-start-edge-to-text-and-icon));
 
     border-inline-start-width: 1px;
     border-inline-start-style: solid;
