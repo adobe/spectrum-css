@@ -14,16 +14,19 @@ governing permissions and limitations under the License.
  * 
  * .spectrum-Toast::after is the Focus ring
  *
- * Component naming format:
+ * Component naming template:
  * `--system-component-style-description-modifier`
+ *
  * Example:
  * `--spectrum-toast-spacing-text-to-button-horizontal`
  */
 
 .spectrum-Toast {
-  /* TODO --toast-height doesn't seem to be necessary and causes issues with wrapping */
+  /* Hardcoded variables */
+  --spectrum-toast-font-weight: 400;
 
   /* Size */
+
   --spectrum-toast-font-size: var(--spectrum-font-size-100);
   --spectrum-toast-corner-radius: var(--spectrum-corner-radius-100);
 
@@ -46,13 +49,10 @@ governing permissions and limitations under the License.
   --spectrum-toast-spacing-top-edge-to-icon: var(--spectrum-toast-top-to-workflow-icon);
 
   --spectrum-toast-spacing-text-to-action-button-horizontal: var(--spectrum-spacing-300);
-  /* --spectrum-toast-spacing-text-to-action-button-vertical: var(--spacing-100); */
 
   --spectrum-toast-spacing-close-button: var(--spectrum-spacing-300);
   --spectrum-toast-spacing-top-edge-to-action-button: var(--spectrum-spacing-100);
   --spectrum-toast-spacing-bottom-edge-to-action-button: var(--spectrum-spacing-100);
-
-  /* --spectrum-toast-spacing-toast-to-edge: var(--spectrum-spacing-300); */
 
   /* Color */
 
@@ -70,7 +70,6 @@ governing permissions and limitations under the License.
 }
 
 .spectrum-Toast {
-  /* height: var(--spectrum-toast-height); */
   box-sizing: border-box;
   display: inline-flex;
   flex-direction: row;
@@ -81,8 +80,8 @@ governing permissions and limitations under the License.
   padding-inline-start: var(--mod-toast-spacing-start-edge-to-text-and-icon, var(--spectrum-toast-spacing-start-edge-to-text-and-icon));
 
   font-size: var(--mod-toast-font-size, var(--spectrum-toast-font-size));
-  /* TODO Add or remove font-weight */
-  /* font-weight: var(--spectrum-toast-font-weight); */
+  font-weight: var(--spectrum-toast-font-weight);
+
   -webkit-font-smoothing: antialiased;
 
   background-color: var(--mod-toast-background-color-default, var(--spectrum-toast-background-color-default));
@@ -101,8 +100,8 @@ governing permissions and limitations under the License.
   }
 
   &--info {
-      background-color: var(--mod-toast-informative-background-color-default, var(--spectrum-toast-informative-background-color-default));
-      color: var(--mod-toast-informative-background-color-default, var(--spectrum-toast-informative-background-color-default));
+    background-color: var(--mod-toast-informative-background-color-default, var(--spectrum-toast-informative-background-color-default));
+    color: var(--mod-toast-informative-background-color-default, var(--spectrum-toast-informative-background-color-default));
 
     .spectrum-Toast-closeButton {
       &:focus-ring:not(:active) {
@@ -124,7 +123,6 @@ governing permissions and limitations under the License.
   }
 }
 
-/* TODO note what type icon is */
 .spectrum-Toast-typeIcon {
   flex-shrink: 0;
   flex-grow: 0;
@@ -133,7 +131,7 @@ governing permissions and limitations under the License.
   margin-inline-end: var(--mod-toast-spacing-icon-to-text, var(--spectrum-toast-spacing-icon-to-text));
   margin-inline-start: 0;
 
-  color: white;
+  color: var(--spectrum-toast-text-and-icon-color);
 }
 
 .spectrum-Toast-content {
@@ -145,10 +143,6 @@ governing permissions and limitations under the License.
   padding-block-end: var(--mod-toast-spacing-bottom-edge-to-text, var(--spectrum-toast-spacing-bottom-edge-to-text));
   padding-inline-end: var(--mod-toast-spacing-text-to-action-button-horizontal, var(--spectrum-toast-spacing-text-to-action-button-horizontal));
   padding-inline-start: 0;
-
-  /* TODO Are there different info text size and font weight? */
-  /* font-size: var(--spectrum-toast-info-text-size); */
-  /* font-weight: var(--spectrum-toast-info-text-font-weight); */
 
   line-height: var(--mod-toast-line-height, var(--spectrum-toast-line-height));
 
@@ -175,7 +169,7 @@ governing permissions and limitations under the License.
   padding-inline-end: var(--mod-toast-spacing-close-button, var(--spectrum-toast-spacing-close-button));
 
   .spectrum-CloseButton {
-      align-self: center;
+      align-self: flex-start;
   }
 }
 
