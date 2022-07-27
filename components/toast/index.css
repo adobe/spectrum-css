@@ -39,6 +39,7 @@ governing permissions and limitations under the License.
   --spectrum-toast-spacing-start-edge-to-text-and-icon: var(--spectrum-spacing-300);
   --spectrum-toast-spacing-text-and-action-button-to-divider: var(--spectrum-spacing-300);
 
+  --spectrum-toast-spacing-top-edge-to-icon: var(--spectrum-toast-top-to-workflow-icon);
   --spectrum-toast-spacing-top-edge-to-text: var(--spectrum-toast-top-to-text);
   --spectrum-toast-spacing-text-to-bottom: var(--spectrum-toast-bottom-to-text);
 
@@ -49,7 +50,7 @@ governing permissions and limitations under the License.
   --spectrum-toast-spacing-top-edge-to-action-button: var(--spectrum-spacing-100);
   /* --spectrum-toast-spacing-action-button-to-bottom-edge: var(--spectrum-spacing-100); */
 
-  --spectrum-toast-spacing-toast-to-edge: var(--spectrum-spacing-300);
+  /* --spectrum-toast-spacing-toast-to-edge: var(--spectrum-spacing-300); */
 
   --spectrum-toast-negative-background-color-default: var(--spectrum-negative-background-color-default);
   --spectrum-toast-positive-background-color-default: var(--spectrum-positive-background-color-default);
@@ -73,7 +74,6 @@ governing permissions and limitations under the License.
 
   border-radius: var(--spectrum-toast-corner-radius);
 
-  padding-block: var(--spectrum-toast-spacing-toast-to-edge);
   padding-inline-start: var(--spectrum-toast-spacing-start-edge-to-text-and-icon);
 
   font-size: var(--spectrum-toast-font-size);
@@ -125,9 +125,7 @@ governing permissions and limitations under the License.
   flex-shrink: 0;
   flex-grow: 0;
 
-  /* TODO Remove margin-block-start, doesn't position correctly */
-  /* --spectrum-toast-spacing-top-edge-to-icon: var(--spectrum-toast-top-to-workflow-icon); */
-  /* margin-block-start: var(--spectrum-toast-spacing-top-edge-to-icon); */
+  margin-block-start: var(--spectrum-toast-spacing-top-edge-to-icon);
   margin-inline-end: var(--spectrum-toast-spacing-icon-to-text);
   margin-inline-start: 0;
 
