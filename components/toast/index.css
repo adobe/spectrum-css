@@ -41,7 +41,7 @@ governing permissions and limitations under the License.
 
   --spectrum-toast-spacing-top-edge-to-icon: var(--spectrum-toast-top-to-workflow-icon);
   --spectrum-toast-spacing-top-edge-to-text: var(--spectrum-toast-top-to-text);
-  --spectrum-toast-spacing-text-to-bottom: var(--spectrum-toast-bottom-to-text);
+  --spectrum-toast-spacing-bottom-edge-to-text: var(--spectrum-toast-bottom-to-text);
 
   --spectrum-toast-spacing-text-to-action-button-horizontal: var(--spectrum-spacing-300);
   /* --spectrum-toast-spacing-text-to-action-button-vertical: var(--spacing-100); */
@@ -138,8 +138,8 @@ governing permissions and limitations under the License.
   box-sizing: border-box;
 
   padding-block-start: var(--spectrum-toast-spacing-top-edge-to-text);
+  padding-block-end: var(--spectrum-toast-spacing-bottom-edge-to-text);
   padding-inline-end: var(--spectrum-toast-spacing-text-to-action-button-horizontal);
-  padding-block-end: var(--spectrum-toast-spacing-text-to-bottom);
   padding-inline-start: 0;
 
   /* TODO  */
