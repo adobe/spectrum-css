@@ -39,7 +39,6 @@ examples:
           </form>
         </div>
 
-
         <div class="spectrum-Examples-item">
           <h4 class="spectrum-Heading spectrum-Heading--sizeXS spectrum-Examples-itemHeading">Checkbox</h4>
 
@@ -78,6 +77,7 @@ examples:
 
       </div>
 
+
   - id: fieldgroup-horizontal
     name: Horizontal
     description: A horizontal group of fields.
@@ -110,7 +110,6 @@ examples:
             </div>
           </form>
         </div>
-
 
         <div class="spectrum-Examples-item">
           <h4 class="spectrum-Heading spectrum-Heading--sizeXS spectrum-Examples-itemHeading">Checkbox</h4>
@@ -149,6 +148,7 @@ examples:
         </div>
 
       </div>
+
 
   - id: fieldgroup-invalid
     name: Invalid
@@ -229,17 +229,17 @@ examples:
 
       </div>
 
-  - id: fieldgroup
-    name: Label Position
+
+  - id: fieldgroup-required-optional
+    name: Required or Optional
+    description: An optional or required group of fields.
     markup: |
       <div class="spectrum-Examples">
-
         <div class="spectrum-Examples-item">
-          <h4 class="spectrum-Heading spectrum-Heading--sizeXS spectrum-Examples-itemHeading">Side Label Vertical Radio</h4>
-
+          <h4 class="spectrum-Heading spectrum-Heading--sizeXS spectrum-Examples-itemHeading">Required</h4>
           <form class="spectrum-Form">
-            <div class="spectrum-FieldGroup spectrum-FieldGroup--sidelabel" role="radiogroup" aria-labelledby="radiogroup-label-4">
-              <div class="spectrum-FieldLabel spectrum-FieldLabel--sizeM spectrum-FieldLabel--right" id="radiogroup-label-4">Radio Group Label</div>
+            <div class="spectrum-FieldGroup spectrum-FieldGroup--toplabel" role="radiogroup" aria-labelledby="radiogroup-label-4">
+              <div class="spectrum-FieldLabel spectrum-FieldLabel--sizeM spectrum-FieldLabel" id="radiogroup-label-4">Radio Group Label (required)</div>
 
               <div class="spectrum-FieldGroupInputLayout spectrum-FieldGroupInputLayout--vertical" aria-describedby="helptext-radio-4">
                 <div class="spectrum-Radio spectrum-FieldGroup-item">
@@ -255,6 +255,95 @@ examples:
                 </div>
 
                 <div class="spectrum-HelpText spectrum-HelpText--sizeM spectrum-HelpText" id="helptext-radio-4">
+                  <div class="spectrum-HelpText-text">Select an option.</div>
+                </div>
+              </div>
+            </div>
+          </form>
+        </div>
+
+        <div class="spectrum-Examples-item">
+          <h4 class="spectrum-Heading spectrum-Heading--sizeXS spectrum-Examples-itemHeading">Required Asterisk</h4>
+          <form class="spectrum-Form">
+            <div class="spectrum-FieldGroup spectrum-FieldGroup--toplabel" role="radiogroup" aria-labelledby="radiogroup-label-5">
+              <div class="spectrum-FieldLabel spectrum-FieldLabel--sizeM spectrum-FieldLabel" id="radiogroup-label-5">Radio Group Label
+                <svg class="spectrum-Icon spectrum-UIIcon-Asterisk100 spectrum-FieldLabel-requiredIcon" focusable="false" aria-hidden="true">
+                  <use xlink:href="#spectrum-css-icon-Asterisk100" />
+                </svg>
+              </div>
+
+              <div class="spectrum-FieldGroupInputLayout spectrum-FieldGroupInputLayout--vertical" aria-describedby="helptext-radio-5">
+                <div class="spectrum-Radio spectrum-FieldGroup-item">
+                  <input type="radio" name="pets" class="spectrum-Radio-input" id="radio-8">
+                  <span class="spectrum-Radio-button"></span>
+                  <label class="spectrum-Radio-label" for="radio-0">Kittens</label>
+                </div>
+
+                <div class="spectrum-Radio spectrum-FieldGroup-item">
+                  <input type="radio" name="pets" class="spectrum-Radio-input" id="radio-9" checked>
+                  <span class="spectrum-Radio-button"></span>
+                  <label class="spectrum-Radio-label" for="radio-1">Puppies</label>
+                </div>
+
+                <div class="spectrum-HelpText spectrum-HelpText--sizeM spectrum-HelpText" id="helptext-radio-5">
+                  <div class="spectrum-HelpText-text">Select an option.</div>
+                </div>
+              </div>
+            </div>
+          </form>
+        </div>
+
+        <div class="spectrum-Examples-item">
+          <h4 class="spectrum-Heading spectrum-Heading--sizeXS spectrum-Examples-itemHeading">Optional</h4>
+          <form class="spectrum-Form">
+            <div class="spectrum-FieldGroup spectrum-FieldGroup--toplabel" role="radiogroup" aria-labelledby="radiogroup-label-6">
+              <div class="spectrum-FieldLabel spectrum-FieldLabel--sizeM spectrum-FieldLabel" id="radiogroup-label-6">Radio Group Label (optional)</div>
+
+              <div class="spectrum-FieldGroupInputLayout spectrum-FieldGroupInputLayout--vertical">
+                <div class="spectrum-Radio spectrum-FieldGroup-item">
+                  <input type="radio" name="pets" class="spectrum-Radio-input" id="radio-10">
+                  <span class="spectrum-Radio-button"></span>
+                  <label class="spectrum-Radio-label" for="radio-0">Kittens</label>
+                </div>
+
+                <div class="spectrum-Radio spectrum-FieldGroup-item">
+                  <input type="radio" name="pets" class="spectrum-Radio-input" id="radio-11" checked>
+                  <span class="spectrum-Radio-button"></span>
+                  <label class="spectrum-Radio-label" for="radio-1">Puppies</label>
+                </div>
+              </div>
+            </div>
+          </form>
+        </div>
+      </div>
+
+
+  - id: fieldgroup-sidelabel
+    name: Side Label Position
+    markup: |
+      <div class="spectrum-Examples">
+
+        <div class="spectrum-Examples-item">
+          <h4 class="spectrum-Heading spectrum-Heading--sizeXS spectrum-Examples-itemHeading">Side Label Vertical Radio</h4>
+
+          <form class="spectrum-Form">
+            <div class="spectrum-FieldGroup spectrum-FieldGroup--sidelabel" role="radiogroup" aria-labelledby="radiogroup-label-7">
+              <div class="spectrum-FieldLabel spectrum-FieldLabel--sizeM spectrum-FieldLabel--right" id="radiogroup-label-7">Radio Group Label</div>
+
+              <div class="spectrum-FieldGroupInputLayout spectrum-FieldGroupInputLayout--vertical" aria-describedby="helptext-radio-7">
+                <div class="spectrum-Radio spectrum-FieldGroup-item">
+                  <input type="radio" name="pets" class="spectrum-Radio-input" id="radio-12">
+                  <span class="spectrum-Radio-button"></span>
+                  <label class="spectrum-Radio-label" for="radio-0">Kittens</label>
+                </div>
+
+                <div class="spectrum-Radio spectrum-FieldGroup-item">
+                  <input type="radio" name="pets" class="spectrum-Radio-input" id="radio-13" checked>
+                  <span class="spectrum-Radio-button"></span>
+                  <label class="spectrum-Radio-label" for="radio-1">Puppies</label>
+                </div>
+
+                <div class="spectrum-HelpText spectrum-HelpText--sizeM spectrum-HelpText" id="helptext-radio-7">
                   <div class="spectrum-HelpText-text">Select an option.</div>
                 </div>
               </div>
@@ -301,32 +390,31 @@ examples:
           <h4 class="spectrum-Heading spectrum-Heading--sizeXS spectrum-Examples-itemHeading">Side Label Horizontal Radio</h4>
 
           <form class="spectrum-Form">
-            <div class="spectrum-FieldGroup spectrum-FieldGroup--sidelabel" role="radiogroup" aria-labelledby="radiogroup-label-5">
-              <div class="spectrum-FieldLabel spectrum-FieldLabel--sizeM spectrum-FieldLabel--right" id="radiogroup-label-5">Radio Group Label</div>
+            <div class="spectrum-FieldGroup spectrum-FieldGroup--sidelabel" role="radiogroup" aria-labelledby="radiogroup-label-8">
+              <div class="spectrum-FieldLabel spectrum-FieldLabel--sizeM spectrum-FieldLabel--right" id="radiogroup-label-8">Radio Group Label</div>
 
-              <div class="spectrum-FieldGroupInputLayout spectrum-FieldGroupInputLayout--horizontal" aria-describedby="helptext-radio-5">
+              <div class="spectrum-FieldGroupInputLayout spectrum-FieldGroupInputLayout--horizontal" aria-describedby="helptext-radio-8">
                 <div class="spectrum-Radio spectrum-FieldGroup-item">
-                  <input type="radio" name="pets" class="spectrum-Radio-input" id="radio-8">
+                  <input type="radio" name="pets" class="spectrum-Radio-input" id="radio-14">
                   <span class="spectrum-Radio-button"></span>
                   <label class="spectrum-Radio-label" for="radio-0">Kittens</label>
                 </div>
 
                 <div class="spectrum-Radio spectrum-FieldGroup-item">
-                  <input type="radio" name="pets" class="spectrum-Radio-input" id="radio-9" checked>
+                  <input type="radio" name="pets" class="spectrum-Radio-input" id="radio-15" checked>
                   <span class="spectrum-Radio-button"></span>
                   <label class="spectrum-Radio-label" for="radio-1">Puppies</label>
                 </div>
 
-                <div class="spectrum-HelpText spectrum-HelpText--sizeM spectrum-HelpText" id="helptext-radio-5">
+                <div class="spectrum-HelpText spectrum-HelpText--sizeM spectrum-HelpText" id="helptext-radio-8">
                   <div class="spectrum-HelpText-text">Select an option.</div>
                 </div>
               </div>
             </div>
           </form>
-        </div>
 
+          <hr>
 
-        <div class="spectrum-Examples-item">
           <h4 class="spectrum-Heading spectrum-Heading--sizeXS spectrum-Examples-itemHeading">Side Label Horizontal Checkbox</h4>
 
           <form class="spectrum-Form">
@@ -363,6 +451,7 @@ examples:
         </div>
 
       </div>
+
 
   - id: fieldgroup-readonly-checkboxes
     name: Read-only Checkboxes
