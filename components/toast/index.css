@@ -43,16 +43,13 @@ governing permissions and limitations under the License.
   --spectrum-toast-spacing-top-edge-to-divider: var(--spectrum-spacing-100);
   --spectrum-toast-spacing-bottom-edge-to-divider: var(--spectrum-spacing-100);
 
-  --spectrum-toast-spacing-top-edge-to-text: var(--spectrum-toast-top-to-text);
-  --spectrum-toast-spacing-bottom-edge-to-text: var(--spectrum-toast-bottom-to-text);
-
   --spectrum-toast-spacing-top-edge-to-icon: var(--spectrum-toast-top-to-workflow-icon);
 
   --spectrum-toast-spacing-text-to-action-button-horizontal: var(--spectrum-spacing-300);
 
   --spectrum-toast-spacing-close-button: var(--spectrum-spacing-300);
-  --spectrum-toast-spacing-top-edge-to-action-button: var(--spectrum-spacing-100);
-  --spectrum-toast-spacing-bottom-edge-to-action-button: var(--spectrum-spacing-100);
+  --spectrum-toast-spacing-edge-to-text-to-action-button-vertical: var(--spectrum-spacing-100);
+  --spectrum-toast-spacing-edge-to-text-to-action-button-vertical: var(--spectrum-spacing-100);
 
   /* Color */
 
@@ -93,7 +90,7 @@ governing permissions and limitations under the License.
     color: var(--mod-toast-negative-background-color-default, var(--spectrum-toast-negative-background-color-default));
 
     .spectrum-Toast-closeButton {
-      &:focus-ring:not(:active) {
+      &:focus-visible:not(:active) {
         color: var(--mod-toast-negative-background-color-default, var(--spectrum-toast-negative-background-color-default));
       }
     }
@@ -104,7 +101,7 @@ governing permissions and limitations under the License.
     color: var(--mod-toast-informative-background-color-default, var(--spectrum-toast-informative-background-color-default));
 
     .spectrum-Toast-closeButton {
-      &:focus-ring:not(:active) {
+      &:focus-visible:not(:active) {
         color: var(--mod-toast-informative-background-color-default, var(--spectrum-toast-informative-background-color-default));
       }
     }
@@ -116,7 +113,7 @@ governing permissions and limitations under the License.
     color: var(--mod-toast-positive-background-color-default, var(--spectrum-toast-positive-background-color-default));
 
     .spectrum-Toast-closeButton {
-      &:focus-ring:not(:active) {
+      &:focus-visible:not(:active) {
         color: var(--mod-toast-positive-background-color-default, var(--spectrum-toast-positive-background-color-default));
       }
     }
@@ -139,8 +136,9 @@ governing permissions and limitations under the License.
   display: inline-block;
   box-sizing: border-box;
 
-  padding-block-start: var(--mod-toast-spacing-top-edge-to-text, var(--spectrum-toast-spacing-top-edge-to-text));
-  padding-block-end: var(--mod-toast-spacing-bottom-edge-to-text, var(--spectrum-toast-spacing-bottom-edge-to-text));
+  padding-block-start: var(--mod-toast-spacing-edge-to-text-to-action-button-vertical, var(--spectrum-toast-spacing-edge-to-text-to-action-button-vertical));
+  padding-block-end: var(--mod-toast-spacing-edge-to-text-to-action-button-vertical, var(--spectrum-toast-spacing-edge-to-text-to-action-button-vertical));
+
   padding-inline-end: var(--mod-toast-spacing-text-to-action-button-horizontal, var(--spectrum-toast-spacing-text-to-action-button-horizontal));
   padding-inline-start: 0;
 
@@ -177,11 +175,12 @@ governing permissions and limitations under the License.
   flex: 1 1 auto;
   align-self: center;
 
+  padding-block-start: var(--mod-toast-spacing-edge-to-text-to-action-button-vertical, var(--spectrum-toast-spacing-edge-to-text-to-action-button-vertical));
+  padding-block-end: var(--mod-toast-spacing-edge-to-text-to-action-button-vertical, var(--spectrum-toast-spacing-edge-to-text-to-action-button-vertical));
+
   .spectrum-Button {
     /* https://caniuse.com/mdn-css_properties_float_flow_relative_values */
     float: inline-end;
-    margin-block-start: var(--mod-toast-spacing-top-edge-to-action-button, var(--spectrum-toast-spacing-top-edge-to-action-button));
-    margin-block-end: var(--mod-toast-spacing-bottom-edge-to-action-button, var(--spectrum-toast-spacing-bottom-edge-to-action-button));
     margin-inline-end: var(--mod-toast-spacing-text-and-action-button-to-divider, var(--spectrum-toast-spacing-text-and-action-button-to-divider));
   }
 
