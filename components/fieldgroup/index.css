@@ -68,14 +68,14 @@ governing permissions and limitations under the License.
   }
 }
 
-/* read only checkbox group */
+/* read-only checkbox group */
 .spectrum-FieldGroup {
   .spectrum-Checkbox.is-readOnly {
     .spectrum-Checkbox-box {
       display: none;
     }
 
-    /* ReadOnly checkbox fields delimited by commas */
+    /* read-only checkbox fields delimited by commas */
     &:not(:last-child) {
       .spectrum-Checkbox-label {
         &:after {

@@ -2,7 +2,7 @@ name: Field Group
 description: |
   - A group of fields, usually Radios or Checkboxes.
   - Fieldgroup incorporates the help text component which may appear below a fieldgroup.
-  - Help text is necessary to denote invalid checkbox and radio button fields.
+  - Help text is necessary to denote invalid checkbox fields, invalid radio button fields, and required fields.
   - Invalid radio buttons are signified only by alert help text.
   - Invalid checkboxes are signified by alert help text and alert input box color.
 examples:
