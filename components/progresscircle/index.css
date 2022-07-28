@@ -1,5 +1,5 @@
 /*
-Copyright 2019 Adobe. All rights reserved.
+Copyright 2022 Adobe. All rights reserved.
 This file is licensed to you under the Apache License, Version 2.0 (the "License");
 you may not use this file except in compliance with the License. You may obtain a copy
 of the License at http://www.apache.org/licenses/LICENSE-2.0
@@ -10,12 +10,41 @@ OF ANY KIND, either express or implied. See the License for the specific languag
 governing permissions and limitations under the License.
 */
 
+/* progresscircle/index.css
+ *
+ *
+ *
+ *
+ */
+
 @import "animation.css";
 
 .spectrum-ProgressCircle {
+  /* default size and thickness */
+  --spectrum-progress-circle-size: var(--spectrum-progress-circle-size-medium);
+  --spectrum-progress-circle-thickness: var(--spectrum-progress-circle-thickness-medium);
+}
+
+.spectrum-ProgressCircle--small {
+  --spectrum-progress-circle-size: var(--spectrum-progress-circle-size-small);
+  --spectrum-progress-circle-thickness: var(--spectrum-progress-circle-thickness-small);
+}
+
+.spectrum-ProgressCircle--medium {
+  --spectrum-progress-circle-size: var(--spectrum-progress-circle-size-medium);
+  --spectrum-progress-circle-thickness: var(--spectrum-progress-circle-thickness-medium);
+}
+
+.spectrum-ProgressCircle--large {
+  --spectrum-progress-circle-size: var(--spectrum-progress-circle-size-large);
+  --spectrum-progress-circle-thickness: var(--spectrum-progress-circle-thickness-large);
+}
+
+
+.spectrum-ProgressCircle {
   display: inline-block;
-  inline-size: var(--spectrum-progresscircle-m-width);
-  block-size: var(--spectrum-progresscircle-m-height);
+  inline-size: var(--spectrum-progress-circle-size);
+  block-size: var(--spectrum-progress-circle-size);
   position: relative;
   direction: ltr;
 
@@ -23,14 +52,17 @@ governing permissions and limitations under the License.
   /* more info: https://github.com/adobe/spectrum-web-components/issues/1392 */
   transform: translate3d(0, 0, 0);
 }
+
 .spectrum-ProgressCircle-track {
   box-sizing: border-box;
-  inline-size: calc(var(--spectrum-progresscircle-m-width));
-  block-size: calc(var(--spectrum-progresscircle-m-height));
+  inline-size: calc(var(--spectrum-progress-circle-size));
+  block-size: calc(var(--spectrum-progress-circle-size));
+
   border-style: solid;
-  border-width: var(--spectrum-progresscircle-m-border-size);
-  border-radius: var(--spectrum-progresscircle-m-width);
+  border-width: var(--spectrum-progress-circle-thickness);
+  border-radius: var(--spectrum-progress-circle-size);
 }
+
 .spectrum-ProgressCircle-fills {
   position: absolute;
   inset-block-start: 0;
@@ -38,14 +70,17 @@ governing permissions and limitations under the License.
   inline-size: 100%;
   block-size: 100%;
 }
+
 .spectrum-ProgressCircle-fill {
   box-sizing: border-box;
-  inline-size: calc(var(--spectrum-progresscircle-m-width));
-  block-size: calc(var(--spectrum-progresscircle-m-height));
+  inline-size: calc(var(--spectrum-progress-circle-size));
+  block-size: calc(var(--spectrum-progress-circle-size));
+
   border-style: solid;
-  border-width: var(--spectrum-progresscircle-m-border-size);
-  border-radius: var(--spectrum-progresscircle-m-width);
+  border-width: var(--spectrum-progress-circle-thickness);
+  border-radius: var(--spectrum-progress-circle-size);
 }
+
 .spectrum-ProgressCircle-fillMask1,
 .spectrum-ProgressCircle-fillMask2 {
   inline-size: 50%;
@@ -55,6 +90,7 @@ governing permissions and limitations under the License.
   overflow: hidden;
   position: absolute;
 }
+
 .spectrum-ProgressCircle-fillSubMask1,
 .spectrum-ProgressCircle-fillSubMask2 {
   inline-size: 100%;
@@ -63,10 +99,12 @@ governing permissions and limitations under the License.
   overflow: hidden;
   transform: rotate(-180deg);
 }
+
 .spectrum-ProgressCircle-fillMask2 {
   transform: rotate(0deg);
 }
 
+/*
 .spectrum-ProgressCircle--small {
   inline-size: var(--spectrum-progresscircle-s-width);
   block-size: var(--spectrum-progresscircle-s-height);
@@ -74,6 +112,7 @@ governing permissions and limitations under the License.
   .spectrum-ProgressCircle-track {
     inline-size: calc(var(--spectrum-progresscircle-s-width));
     block-size: calc(var(--spectrum-progresscircle-s-height));
+
     border-style: solid;
     border-width: var(--spectrum-progresscircle-s-border-size);
     border-radius: var(--spectrum-progresscircle-s-width);
@@ -81,6 +120,7 @@ governing permissions and limitations under the License.
   .spectrum-ProgressCircle-fill {
     inline-size: calc(var(--spectrum-progresscircle-s-width));
     block-size: calc(var(--spectrum-progresscircle-s-height));
+
     border-style: solid;
     border-width: var(--spectrum-progresscircle-s-border-size);
     border-radius: var(--spectrum-progresscircle-s-width);
@@ -94,6 +134,7 @@ governing permissions and limitations under the License.
   .spectrum-ProgressCircle-track {
     inline-size: calc(var(--spectrum-progresscircle-l-width));
     block-size: calc(var(--spectrum-progresscircle-l-height));
+
     border-style: solid;
     border-width: var(--spectrum-progresscircle-l-border-size);
     border-radius: var(--spectrum-progresscircle-l-width);
@@ -102,11 +143,12 @@ governing permissions and limitations under the License.
   .spectrum-ProgressCircle-fill {
     inline-size: calc(var(--spectrum-progresscircle-l-width));
     block-size: calc(var(--spectrum-progresscircle-l-height));
+
     border-style: solid;
     border-width: var(--spectrum-progresscircle-l-border-size);
     border-radius: var(--spectrum-progresscircle-l-width);
   }
-}
+} */
 
 .spectrum-ProgressCircle--indeterminate {
   .spectrum-ProgressCircle-fills {
