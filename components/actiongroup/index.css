@@ -32,7 +32,7 @@ governing permissions and limitations under the License.
 
 /* hack: use var so it's not reported as unused */
 .🤫 {
-  border-radius: var(--spectrum-actionbutton-focus-ring-border-radius-adjusted);
+  border-radius: var(--spectrum-actionbutton-focus-ring-border-radius);
 }
 
 .spectrum-ActionGroup--sizeS {
@@ -108,13 +108,13 @@ governing permissions and limitations under the License.
       position: relative;
       border-radius: var(--spectrum-actiongroup-border-radius-reset);
       z-index: 0;
-      --spectrum-actionbutton-focus-ring-border-radius-adjusted: 1px;
+      /* --spectrum-actionbutton-focus-ring-border-radius-adjusted: 1px; */
 
       &:first-child {
         border-start-start-radius: var(--spectrum-actiongroup-border-radius);
         border-end-start-radius: var(--spectrum-actiongroup-border-radius);
         margin-inline-start: var(--spectrum-actiongroup-button-spacing-reset);
-        --spectrum-actionbutton-focus-ring-border-radius-adjusted: 1px;
+        --spectrum-actionbutton-focus-ring-border-radius: var(--spectrum-actionbutton-focus-ring-border-radius) 1px 1px var(--spectrum-actionbutton-focus-ring-border-radius);
       }
       
       & + .spectrum-ActionGroup-item {
@@ -127,7 +127,7 @@ governing permissions and limitations under the License.
         border-end-end-radius: var(--spectrum-actiongroup-border-radius);
         margin-inline-start: var(--spectrum-actiongroup-horizontal-spacing-compact);
         margin-inline-end: var(--spectrum-actiongroup-button-spacing-reset);
-        --spectrum-actionbutton-focus-ring-border-radius-adjusted: 1px;
+        --spectrum-actionbutton-focus-ring-border-radius: var(--spectrum-actionbutton-focus-ring-border-radius) var(--spectrum-actionbutton-focus-ring-border-radius) 1px 1px;
       }
 
       &.is-selected {
