@@ -12,9 +12,6 @@ governing permissions and limitations under the License.
 
 /* progresscircle/index.css
  *
- *
- *
- *
  */
 
 @import "animation.css";
@@ -52,6 +49,17 @@ governing permissions and limitations under the License.
   --spectrum-progress-circle-thickness: var(--spectrum-progress-circle-thickness-large);
 }
 
+/* windows high contrast mode */
+@media (forced-colors: active) {
+  .spectrum-ProgressCircle {
+    /* fill is bright color */
+    --highcontrast-progress-circle-fill-border-color: Highlight;
+
+    /* fill over background is bright color */
+    --highcontrast-progress-circle-fill-border-color-over-background: Highlight;
+  }
+}
+
 .spectrum-ProgressCircle {
   display: inline-block;
   inline-size: var(--mod-progress-circle-size,
@@ -66,11 +74,6 @@ governing permissions and limitations under the License.
   transform: translate3d(0, 0, 0);
 }
 
-/* TODO - Windows high contrast mode */
-/* @media (forced-colors: active) {
-
-} */
-
 .spectrum-ProgressCircle-track {
   box-sizing: border-box;
   inline-size: var(--mod-progress-circle-size,
@@ -84,7 +87,7 @@ governing permissions and limitations under the License.
   border-radius: var(--mod-progress-circle-size,
                     var(--spectrum-progress-circle-size));
   border-color: var(--mod-progress-circle-track-border-color,
-                    var(--spectrum-progress-circle-track-border-color));
+                        var(--spectrum-progress-circle-track-border-color));
 }
 
 /* circle progress fill parent container */
@@ -109,8 +112,9 @@ governing permissions and limitations under the License.
                     var(--spectrum-progress-circle-thickness));
   border-radius: var(--mod-progress-circle-size,
                       var(--spectrum-progress-circle-size));
-  border-color: var(--mod-progress-circle-fill-border-color,
-                    var(--spectrum-progress-circle-fill-border-color));
+  border-color:  var(--highcontrast-progress-circle-fill-border-color,
+                    var(--mod-progress-circle-fill-border-color,
+                        var(--spectrum-progress-circle-fill-border-color)));
 }
 
 /* circle colors over background */
@@ -120,8 +124,9 @@ governing permissions and limitations under the License.
                       var(--spectrum-progress-circle-track-border-color-over-background));
   }
   .spectrum-ProgressCircle-fill {
-    border-color: var(--mod-progress-circle-fill-border-color-over-background,
-                      var(--spectrum-progress-circle-fill-border-color-over-background));
+    border-color: var(--highcontrast-progress-circle-fill-border-color-over-background,
+                      var(--mod-progress-circle-fill-border-color-over-background,
+                          var(--spectrum-progress-circle-fill-border-color-over-background)));
   }
 }
 
