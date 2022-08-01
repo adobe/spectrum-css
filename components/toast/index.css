@@ -10,17 +10,6 @@ OF ANY KIND, either express or implied. See the License for the specific languag
 governing permissions and limitations under the License.
 */
 
-/* toast/index.css
- * 
- * .spectrum-Toast::after is the Focus ring
- *
- * Component naming template:
- * `--system-component-style-description-modifier`
- *
- * Example:
- * `--spectrum-toast-spacing-text-to-button-horizontal`
- */
-
 .spectrum-Toast {
   /* Hardcoded variables */
   --spectrum-toast-font-weight: 400;
