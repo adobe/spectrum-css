@@ -172,6 +172,9 @@ governing permissions and limitations under the License.
 }
 
 .spectrum-Toast-body {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
   flex: 1 1 auto;
   align-self: center;
 
@@ -179,9 +182,16 @@ governing permissions and limitations under the License.
   padding-block-end: var(--mod-toast-spacing-edge-to-text-to-action-button-vertical, var(--spectrum-toast-spacing-edge-to-text-to-action-button-vertical));
 
   .spectrum-Button {
-    /* https://caniuse.com/mdn-css_properties_float_flow_relative_values */
-    float: inline-end;
     margin-inline-end: var(--mod-toast-spacing-text-and-action-button-to-divider, var(--spectrum-toast-spacing-text-and-action-button-to-divider));
+
+    [dir="ltr"] & {
+      margin-left: auto;
+    }
+
+    [dir="rtl"] & {
+      margin-right: auto;
+      margin-inline-end: var(--mod-toast-spacing-text-and-action-button-to-divider, var(--spectrum-toast-spacing-text-and-action-button-to-divider));
+    }
   }
 
   & + .spectrum-Toast-buttons {
