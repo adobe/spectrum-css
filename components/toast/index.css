@@ -75,7 +75,7 @@ governing permissions and limitations under the License.
   color: var(--mod-toast-background-color-default, var(--spectrum-toast-background-color-default));
 
   &--negative,
-    /* @deprecated */.spectrum-Toast--error {
+    /* @deprecated */&--error {
     background-color: var(--mod-toast-negative-background-color-default, var(--spectrum-toast-negative-background-color-default));
     color: var(--mod-toast-negative-background-color-default, var(--spectrum-toast-negative-background-color-default));
 
@@ -98,7 +98,7 @@ governing permissions and limitations under the License.
   }
 
   &--positive,
-    /* @deprecated */.spectrum-Toast--success {
+    /* @deprecated */&--success {
     background-color: var(--mod-toast-positive-background-color-default, var(--spectrum-toast-positive-background-color-default));
     color: var(--mod-toast-positive-background-color-default, var(--spectrum-toast-positive-background-color-default));
 
