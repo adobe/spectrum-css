@@ -42,41 +42,18 @@ governing permissions and limitations under the License.
 .spectrum-Divider--sizeS {
   --spectrum-divider-thickness: var(--spectrum-divider-thickness-small);
   --spectrum-divider-background-color: var(--spectrum-divider-background-color-small);
-
-  &--staticWhite {
-    --spectrum-divider-background-color: var(--spectrum-divider-background-color-small-static-white);
-  }
-
-  &--staticBlack {
-    --spectrum-divider-background-color: var(--spectrum-divider-background-color-small-static-black);
-  }
 }
 
 .spectrum-Divider--sizeM {
   --spectrum-divider-thickness: var(--spectrum-divider-thickness-medium);
   --spectrum-divider-background-color: var(--spectrum-divider-background-color-medium);
-
-  &--staticWhite {
-    --spectrum-divider-background-color: var(--spectrum-divider-background-color-medium-static-white);
-  }
-
-  &--staticBlack {
-    --spectrum-divider-background-color: var(--spectrum-divider-background-color-medium-static-black);
-  }
 }
 
 .spectrum-Divider--sizeL {
   --spectrum-divider-thickness: var(--spectrum-divider-thickness-large);
   --spectrum-divider-background-color: var(--spectrum-divider-background-color-large);
-
-  &--staticWhite {
-    --spectrum-divider-background-color: var(--spectrum-divider-background-color-large-static-white);
-  }
-
-  &--staticBlack {
-    --spectrum-divider-background-color: var(--spectrum-divider-background-color-large-static-black);
-  }
 }
+
 
 .spectrum-Divider {
   block-size: var(--spectrum-divider-thickness);
@@ -90,6 +67,34 @@ governing permissions and limitations under the License.
   border-radius: var(--spectrum-divider-thickness);
 
   background-color: var(--spectrum-divider-background-color);
+
+  &--staticWhite {
+    &.spectrum-Divider--sizeS {
+      --spectrum-divider-background-color: var(--spectrum-divider-background-color-small-static-white);
+    }
+
+    &.spectrum-Divider--sizeM {
+      --spectrum-divider-background-color: var(--spectrum-divider-background-color-medium-static-white);
+    }
+
+    &.spectrum-Divider--sizeL {
+      --spectrum-divider-background-color: var(--spectrum-divider-background-color-large-static-white);
+    }
+  }
+
+  &--staticBlack {
+    &.spectrum-Divider--sizeS {
+      --spectrum-divider-background-color: var(--spectrum-divider-background-color-small-static-black);
+    }
+
+    &.spectrum-Divider--sizeM {
+      --spectrum-divider-background-color: var(--spectrum-divider-background-color-medium-static-black);
+    }
+
+    &.spectrum-Divider--sizeL {
+      --spectrum-divider-background-color: var(--spectrum-divider-background-color-large-static-black);
+    }
+  }
 
   &--vertical {
     block-size: 100%;

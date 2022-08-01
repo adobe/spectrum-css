@@ -98,18 +98,15 @@ examples:
     name: Static White
     markup: |
       <div class="spectrum-Examples">
-        <div style="background-color: rgb(15, 121, 125); color: rgb(15, 121, 125); padding: 15px 20px; width: 100%;">
-          <h2 class="spectrum-Heading spectrum-Heading--sizeS">Small</h2>
+        <div style="background-color: rgb(0, 119, 114); color: rgb(255, 255, 255); padding: 15px 20px; width: 100%;">
+          <h2 class="spectrum-Heading spectrum-Heading--sizeS" style="color: rgb(255, 255, 255);">Small</h2>
           <hr class="spectrum-Divider spectrum-Divider--sizeS spectrum-Divider--staticWhite">
-          <p class="spectrum-Body">Divide subsections, or divide different groups of elements (between panels, rails, etc.)</p>
 
-          <h2 class="spectrum-Heading spectrum-Heading--sizeS">Medium</h2>
+          <h2 class="spectrum-Heading spectrum-Heading--sizeS" style="color: rgb(255, 255, 255);">Medium</h2>
           <hr class="spectrum-Divider spectrum-Divider--sizeM spectrum-Divider--staticWhite">
-          <p class="spectrum-Body">Divide subsections, or divide different groups of elements (between panels, rails, etc.)</p>
 
-          <h2 class="spectrum-Heading spectrum-Heading--sizeS">Large</h2>
+          <h2 class="spectrum-Heading spectrum-Heading--sizeS" style="color: rgb(255, 255, 255);">Large</h2>
           <hr class="spectrum-Divider spectrum-Divider--sizeL spectrum-Divider--staticWhite">
-          <p class="spectrum-Body">Divide subsections, or divide different groups of elements (between panels, rails, etc.)</p>
         </div>
       </div>
 
@@ -118,17 +115,14 @@ examples:
     name: Static Black
     markup: |
       <div class="spectrum-Examples">
-        <div style="background-color: rgb(181, 209, 211); color: rgb(181, 209, 211); padding: 15px 20px; width: 100%;">
+        <div style="background-color: rgb(206, 247, 243); padding: 15px 20px; width: 100%;">
           <h2 class="spectrum-Heading spectrum-Heading--sizeS">Small</h2>
           <hr class="spectrum-Divider spectrum-Divider--sizeS spectrum-Divider--staticBlack">
-          <p class="spectrum-Body">Divide subsections, or divide different groups of elements (between panels, rails, etc.)</p>
 
           <h2 class="spectrum-Heading spectrum-Heading--sizeS">Medium</h2>
           <hr class="spectrum-Divider spectrum-Divider--sizeM spectrum-Divider--staticBlack">
-          <p class="spectrum-Body">Divide subsections, or divide different groups of elements (between panels, rails, etc.)</p>
 
           <h2 class="spectrum-Heading spectrum-Heading--sizeS">Large</h2>
           <hr class="spectrum-Divider spectrum-Divider--sizeL spectrum-Divider--staticBlack">
-          <p class="spectrum-Body">Divide subsections, or divide different groups of elements (between panels, rails, etc.)</p>
         </div>
       </div>
