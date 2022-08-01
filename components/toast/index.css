@@ -47,6 +47,8 @@ governing permissions and limitations under the License.
   --spectrum-toast-informative-background-color-default: var(--spectrum-informative-background-color-default);
 
   --spectrum-toast-text-and-icon-color: var(--spectrum-white);
+
+  --spectrum-toast-divider-color: var(--spectrum-transparent-white-300);
 }
 
 @media (forced-colors: active) {
@@ -152,11 +154,12 @@ governing permissions and limitations under the License.
   margin-block-start: var(--mod-toast-spacing-top-edge-to-divider, var(--spectrum-toast-spacing-top-edge-to-divider));
   margin-block-end: var(--mod-toast-spacing-bottom-edge-to-divider, var(--spectrum-toast-spacing-bottom-edge-to-divider));
 
-  border-inline-start-color: rgba(255, 255, 255, 0.2);
+  /* Divider color for Text | Action Button */
+  border-inline-start-color: var(--mod-toast-divider-color, var(--spectrum-toast-divider-color));
   padding-inline-end: var(--mod-toast-spacing-close-button, var(--spectrum-toast-spacing-close-button));
 
   .spectrum-CloseButton {
-      align-self: flex-start;
+    align-self: flex-start;
   }
 }
 
