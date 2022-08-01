@@ -12,7 +12,7 @@ governing permissions and limitations under the License.
 
 .spectrum-Toast {
   /* Hardcoded variables */
-  --spectrum-toast-font-weight: 400;
+  --spectrum-toast-font-weight: var(--spectrum-font-weight-regular);
 
   /* Size */
 
