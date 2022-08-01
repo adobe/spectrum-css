@@ -39,7 +39,6 @@ governing permissions and limitations under the License.
 
   --spectrum-toast-spacing-close-button: var(--spectrum-spacing-300);
   --spectrum-toast-spacing-edge-to-text-to-action-button-vertical: var(--spectrum-spacing-100);
-  --spectrum-toast-spacing-edge-to-text-to-action-button-vertical: var(--spectrum-spacing-100);
 
   /* Color */
 
@@ -51,9 +50,8 @@ governing permissions and limitations under the License.
 }
 
 @media (forced-colors: active) {
-  .spectrum-Toast {
-    border: var(--mod-toast-border-width, var(--spectrum-toast-border-width)) solid transparent;
-  }
+  /* Border is visible in high contrast mode */
+  --highcontrast-toast-border-color: ButtonText;
 }
 
 .spectrum-Toast {
@@ -62,6 +60,7 @@ governing permissions and limitations under the License.
   flex-direction: row;
   align-items: stretch;
 
+  border: var(--mod-toast-border-width, var(--spectrum-toast-border-width)) solid var(--highcontrast-toast-border-color, transparent);
   border-radius: var(--mod-toast-corner-radius, var(--spectrum-toast-corner-radius));
 
   padding-inline-start: var(--mod-toast-spacing-start-edge-to-text-and-icon, var(--spectrum-toast-spacing-start-edge-to-text-and-icon));
