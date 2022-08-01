@@ -18,6 +18,7 @@ governing permissions and limitations under the License.
 
   --spectrum-toast-font-size: var(--spectrum-font-size-100);
   --spectrum-toast-corner-radius: var(--spectrum-corner-radius-100);
+  --spectrum-toast-border-width: var(--spectrum-border-width-100);
 
   --spectrum-toast-line-height: var(--spectrum-line-height-100);
   --spectrum-toast-line-height-CJK: var(--spectrum-CJK-line-height-100);
@@ -51,7 +52,7 @@ governing permissions and limitations under the License.
 
 @media (forced-colors: active) {
   .spectrum-Toast {
-    border: 1px solid transparent;
+    border: var(--mod-toast-border-width, var(--spectrum-toast-border-width)) solid transparent;
   }
 }
 
