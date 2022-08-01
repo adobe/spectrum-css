@@ -15,13 +15,13 @@
   "scripts": {
     "build": "gulp"
   },
-  "dependencies": {
-    "@spectrum-css/vars": "^8.0.0"
+  "peerDependencies": {
+    "@spectrum-css/tokens": "^1.0.1"
   },
   "devDependencies": {
     "@spectrum-css/actionbutton": "^1.1.14",
     "@spectrum-css/actiongroup": "^2.0.0",
-    "@spectrum-css/component-builder": "^3.2.0",
+    "@spectrum-css/component-builder-simple": "^1.0.0-beta",
     "@spectrum-css/vars": "^3.0.1",
     "gulp": "^4.0.0"
   },
