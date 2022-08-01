@@ -117,7 +117,7 @@ governing permissions and limitations under the License.
   margin-inline-end: var(--mod-toast-spacing-icon-to-text, var(--spectrum-toast-spacing-icon-to-text));
   margin-inline-start: 0;
 
-  color: var(--spectrum-toast-text-and-icon-color);
+  color: var(--mod-toast-text-and-icon-color, var(--spectrum-toast-text-and-icon-color));
 }
 
 .spectrum-Toast-content {
