@@ -118,7 +118,7 @@ governing permissions and limitations under the License.
 }
 
 /* circle colors over background */
-.spectrum-ProgressCircle.spectrum-ProgressCircle--overBackground {
+.spectrum-ProgressCircle.spectrum-ProgressCircle--staticWhite {
   .spectrum-ProgressCircle-track {
     border-color: var(--mod-progress-circle-track-border-color-over-background,
                       var(--spectrum-progress-circle-track-border-color-over-background));

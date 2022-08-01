@@ -124,14 +124,14 @@ examples:
       </div>
 
 
-  - id: progresscircle-over-background
-    name: Over Background
+  - id: progresscircle-static-white
+    name: Static White
     markup: |
       <div class="spectrum-Examples" id="standard-loaders">
         <div class="spectrum-Examples-item">
           <h4 class="spectrum-Heading spectrum-Heading--sizeXS spectrum-Examples-itemHeading" style="margin-bottom: 2rem">Standard</h4>
           <div style="width: 250px; height: 150px; background-color: #0F797D; display: flex; align-items: center; justify-content: space-around;" id="ob-loaders">
-            <div class="spectrum-ProgressCircle spectrum-ProgressCircle--small spectrum-ProgressCircle--overBackground">
+            <div class="spectrum-ProgressCircle spectrum-ProgressCircle--small spectrum-ProgressCircle--staticWhite">
               <div class="spectrum-ProgressCircle-track"></div>
               <div class="spectrum-ProgressCircle-fills">
                 <div class="spectrum-ProgressCircle-fillMask1">
@@ -147,7 +147,7 @@ examples:
               </div>
             </div>
 
-            <div class="spectrum-ProgressCircle spectrum-ProgressCircle--overBackground">
+            <div class="spectrum-ProgressCircle spectrum-ProgressCircle--medium spectrum-ProgressCircle--staticWhite">
               <div class="spectrum-ProgressCircle-track"></div>
               <div class="spectrum-ProgressCircle-fills">
                 <div class="spectrum-ProgressCircle-fillMask1">
@@ -163,7 +163,7 @@ examples:
               </div>
             </div>
 
-            <div class="spectrum-ProgressCircle spectrum-ProgressCircle--large spectrum-ProgressCircle--overBackground">
+            <div class="spectrum-ProgressCircle spectrum-ProgressCircle--large spectrum-ProgressCircle--staticWhite">
               <div class="spectrum-ProgressCircle-track"></div>
               <div class="spectrum-ProgressCircle-fills">
                 <div class="spectrum-ProgressCircle-fillMask1">
@@ -184,7 +184,7 @@ examples:
         <div class="spectrum-Examples-item">
           <h4 class="spectrum-Heading spectrum-Heading--sizeXS spectrum-Examples-itemHeading" style="margin-bottom: 2rem">Indeterminate</h4>
           <div style="width: 250px; height: 150px; background-color: #0F797D; display: flex; align-items: center; justify-content: space-around;" id="ob-loaders">
-            <div class="spectrum-ProgressCircle spectrum-ProgressCircle--indeterminate spectrum-ProgressCircle--small spectrum-ProgressCircle--overBackground">
+            <div class="spectrum-ProgressCircle spectrum-ProgressCircle--indeterminate spectrum-ProgressCircle--small spectrum-ProgressCircle--staticWhite">
             <div class="spectrum-ProgressCircle-track"></div>
               <div class="spectrum-ProgressCircle-fills">
                 <div class="spectrum-ProgressCircle-fillMask1">
@@ -199,7 +199,7 @@ examples:
                 </div>
               </div>
             </div>
-            <div class="spectrum-ProgressCircle spectrum-ProgressCircle--indeterminate spectrum-ProgressCircle--overBackground">
+            <div class="spectrum-ProgressCircle spectrum-ProgressCircle--indeterminate spectrum-ProgressCircle--staticWhite">
               <div class="spectrum-ProgressCircle-track"></div>
               <div class="spectrum-ProgressCircle-fills">
                 <div class="spectrum-ProgressCircle-fillMask1">
@@ -215,7 +215,7 @@ examples:
               </div>
             </div>
 
-            <div class="spectrum-ProgressCircle spectrum-ProgressCircle--indeterminate spectrum-ProgressCircle--large spectrum-ProgressCircle--overBackground">
+            <div class="spectrum-ProgressCircle spectrum-ProgressCircle--indeterminate spectrum-ProgressCircle--large spectrum-ProgressCircle--staticWhite">
               <div class="spectrum-ProgressCircle-track"></div>
               <div class="spectrum-ProgressCircle-fills">
                 <div class="spectrum-ProgressCircle-fillMask1">
