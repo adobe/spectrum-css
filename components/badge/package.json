@@ -16,10 +16,10 @@
     "build": "gulp"
   },
   "peerDependencies": {
-    "@spectrum-css/vars": "^8.0.0"
+    "@spectrum-css/tokens": "^1.0.1"
   },
   "devDependencies": {
-    "@spectrum-css/component-builder": "^3.2.0",
+    "@spectrum-css/component-builder-simple": "^1.0.0-beta",
     "@spectrum-css/vars": "^8.0.0",
     "gulp": "^4.0.0"
   },
