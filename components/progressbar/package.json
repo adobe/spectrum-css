@@ -17,10 +17,10 @@
   },
   "peerDependencies": {
     "@spectrum-css/fieldlabel": "^4.0.24",
-    "@spectrum-css/vars": "^8.0.0"
+    "@spectrum-css/tokens": "^1.0.4"
   },
   "devDependencies": {
-    "@spectrum-css/component-builder": "^3.2.0",
+    "@spectrum-css/component-builder-simple": "^1.0.0-beta",
     "@spectrum-css/fieldlabel": "^4.0.29",
     "@spectrum-css/vars": "^8.0.0",
     "gulp": "^4.0.0"
