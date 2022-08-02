@@ -21,7 +21,7 @@ governing permissions and limitations under the License.
   --spectrum-toast-border-width: var(--spectrum-border-width-100);
 
   --spectrum-toast-line-height: var(--spectrum-line-height-100);
-  --spectrum-toast-line-height-CJK: var(--spectrum-CJK-line-height-100);
+  --spectrum-toast-line-height-cjk: var(--spectrum-CJK-line-height-100);
 
   /* Space */
 
@@ -135,10 +135,10 @@ governing permissions and limitations under the License.
 
   line-height: var(--mod-toast-line-height, var(--spectrum-toast-line-height));
 
-  &:lang(js),
+  &:lang(ja),
   &:lang(zh),
   &:lang(ko) {
-    line-height: var(--spectrum-toast-line-height-CJK, var(--mod-toast-line-height, var(--spectrum-toast-line-height)));
+    line-height: var(--spectrum-toast-line-height-cjk, var(--mod-toast-line-height, var(--spectrum-toast-line-height)));
   }
 
   text-align: start;
