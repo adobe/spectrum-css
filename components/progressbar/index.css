@@ -11,6 +11,13 @@ governing permissions and limitations under the License.
 */
 
 .spectrum-ProgressBar {
+  /* Hardcoded tokens */
+  --spectrum-progressbar-animation-ease-in-out-indeterminate: cubic-bezier(.45, 0, .40, 1);
+  --spectrum-progressbar-animation-duration-indeterminate: 1000ms;
+  --spectrum-progressbar-fill-inline-size-indeterminate: 70%;
+
+  /* Size */
+  /* Review inclusivity */
   --spectrum-progressbar-min-width: var(--spectrum-progress-bar-minimum-width);
   --spectrum-progressbar-max-width: var(--spectrum-progress-bar-maximum-width);
 
@@ -19,12 +26,14 @@ governing permissions and limitations under the License.
   --spectrum-progressbar-line-height: var(--spectrum-line-height-100);
   --spectrum-progressbar-line-height-cjk: var(--spectrum-CJK-line-height-100);
 
+  --spectrum-progressbar-thickness: var(--spectrum-progress-bar-thickness-medium);
+
+  /* Spacing */
   --spectrum-progressbar-spacing-label-to-progressbar: var(--spectrum-spacing-75);
   --spectrum-progressbar-spacing-top-to-text: var(--spectrum-component-top-to-text-100);
   --spectrum-progressbar-spacing-label-to-text: var(--spectrum-spacing-200);
 
-  --spectrum-progressbar-thickness: var(--spectrum-progress-bar-thickness-medium);
-
+  /* Color */
   --spectrum-progressbar-text-color: var(--spectrum-neutral-content-color-default);
 
   --spectrum-progressbar-track-color: var(--spectrum-gray-300);
@@ -38,33 +47,33 @@ governing permissions and limitations under the License.
 .spectrum-ProgressBar--sizeS {
   --spectrum-progressbar-font-size: var(--spectrum-progress-bar-font-size-75);
 
-  --spectrum-progressbar-spacing-top-to-text: var(--spectrum-component-top-to-text-75);
-
   --spectrum-progressbar-thickness: var(--spectrum-progress-bar-thickness-small);
+
+  --spectrum-progressbar-spacing-top-to-text: var(--spectrum-component-top-to-text-75);
 }
 
 .spectrum-ProgressBar--sizeM {
   --spectrum-progressbar-font-size: var(--spectrum-progress-bar-font-size-75);
 
-  --spectrum-progressbar-spacing-top-to-text: var(--spectrum-component-top-to-text-100);
-
   --spectrum-progressbar-thickness: var(--spectrum-progress-bar-thickness-medium);
+
+  --spectrum-progressbar-spacing-top-to-text: var(--spectrum-component-top-to-text-100);
 }
 
 .spectrum-ProgressBar--sizeL {
   --spectrum-progressbar-font-size: var(--spectrum-progress-bar-font-size-100);
 
-  --spectrum-progressbar-spacing-top-to-text: var(--spectrum-component-top-to-text-200);
-
   --spectrum-progressbar-thickness: var(--spectrum-progress-bar-thickness-large);
+
+  --spectrum-progressbar-spacing-top-to-text: var(--spectrum-component-top-to-text-200);
 }
 
 .spectrum-ProgressBar--sizeXL {
   --spectrum-progressbar-font-size: var(--spectrum-progress-bar-font-size-200);
 
-  --spectrum-progressbar-spacing-top-to-text: var(--spectrum-component-top-to-text-300);
-
   --spectrum-progressbar-thickness: var(--spectrum-progress-bar-thickness-extra-large);
+
+  --spectrum-progressbar-spacing-top-to-text: var(--spectrum-component-top-to-text-300);
 }
 
 .spectrum-ProgressBar {
@@ -126,6 +135,7 @@ governing permissions and limitations under the License.
     margin-inline-end: var(--mod-spacing-label-to-text, var(--spectrum-spacing-label-to-text));
     margin-block-end: 0;
   }
+
   .spectrum-ProgressBar-percentage {
     order: 3;
     text-align: end;
@@ -135,39 +145,41 @@ governing permissions and limitations under the License.
 }
 
 .spectrum-ProgressBar--indeterminate .spectrum-ProgressBar-fill {
-  /* inline-size: var(--spectrum-progressbar-indeterminate-fill-width); */
-  /* TODO missing token for indeterminate fill width? */
-  inline-size: 70%;
+  /* TODO review */
+  inline-size: var(--mod-progressbar-fill-inline-size-indeterminate, var(--spectrum-progressbar-fill-inline-size-indeterminate));
   position: relative;
-  animation-timing-function: 1000ms;
+  /* TODO review */
+  animation-timing-function: var(--mod-progressbar-animation-ease-in-out-indeterminate, var(--spectrum-progressbar-animation-ease-in-out-indeterminate));
   will-change: transform;
 }
 
+/* TODO look into modifier reuse and moving complexity to token definitions */
 [dir="ltr"] .spectrum-ProgressBar--indeterminate .spectrum-ProgressBar-fill {
   animation: indeterminate-loop-ltr
-    var(--spectrum-progressbar-indeterminate-duration) infinite;
+             var(--mod-progressbar-animation-duration-indeterminate, var(--spectrum-progressbar-animation-duration-indeterminate)); infinite;
 }
 [dir="rtl"] .spectrum-ProgressBar--indeterminate .spectrum-ProgressBar-fill {
   animation: indeterminate-loop-rtl
-    var(--spectrum-progressbar-indeterminate-duration) infinite;
+             var(--mod-progressbar-animation-duration-indeterminate, var(--spectrum-progressbar-animation-duration-indeterminate)); infinite;
 }
 
 @keyframes indeterminate-loop-ltr {
   from {
     transform: translate(
-      calc(-1 * var(--spectrum-progressbar-indeterminate-fill-width))
+      calc(-1 * var(--mod-progressbar-fill-inline-size-indeterminate, var(--spectrum-progressbar-fill-inline-size-indeterminate)))
     );
   }
   to {
-    transform: translate(var(--spectrum-progressbar-width));
+    /* TODO review */
+    transform: translate(var(--spectrum-progressbar-min-width));
   }
 }
 
 @keyframes indeterminate-loop-rtl {
   from {
-    transform: translate(var(--spectrum-progressbar-width));
+    transform: translate(var(--spectrum-progressbar-min-width));
   }
   to {
-    transform: translate(calc(-1 * var(--spectrum-progressbar-width)));
+    transform: translate(calc(-1 * var(--spectrum-progressbar-min-width)));
   }
 }
