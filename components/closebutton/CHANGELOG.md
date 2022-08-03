@@ -3,6 +3,23 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+<a name="2.0.0"></a>
+# 2.0.0
+🗓 2022-08-03 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/closebutton@1.2.13...@spectrum-css/closebutton@2.0.0)
+
+* feat(closebutton)!: migrate closebutton to core tokens (CSS-118) (#1477) ([766f9da](https://github.com/adobe/spectrum-css/commit/766f9da)), closes [#1477](https://github.com/adobe/spectrum-css/issues/1477)
+
+
+### 🛑 BREAKING CHANGES
+
+* migrates closebutton to core tokens
+
+Co-authored-by: Patrick Fulton <pfulton@adobe.com>
+
+
+
+
+
 <a name="1.2.13"></a>
 ## 1.2.13
 🗓 2022-06-29 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/closebutton@1.2.12...@spectrum-css/closebutton@1.2.13)
