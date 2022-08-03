@@ -1,5 +1,5 @@
 /*
-Copyright 2019 Adobe. All rights reserved.
+Copyright 2022 Adobe. All rights reserved.
 This file is licensed to you under the Apache License, Version 2.0 (the "License");
 you may not use this file except in compliance with the License. You may obtain a copy
 of the License at http://www.apache.org/licenses/LICENSE-2.0
@@ -10,10 +10,207 @@ OF ANY KIND, either express or implied. See the License for the specific languag
 governing permissions and limitations under the License.
 */
 
-@import "../vars/css/scales/spectrum-large.css";
-@import "../vars/css/scales/spectrum-medium.css";
-@import "../vars/css/components/spectrum-badge.css";
+/*
+ * Component naming template:
+ * `--system-component-style-description-modifier`
+ *
+ * Example:
+ * `--spectrum-badge-spacing-text-to-icon-horizontal`
+ */
 
+
+.spectrum-Badge {
+  /*** GENERAL STYLES applicable to all t-shirt sizes and all themes ***/
+
+  /* badge styling */
+  --spectrum-badge-corner-radius: var(--spectrum-corner-radius-100);
+
+  /* label text styles */
+  --spectrum-badge-line-height: var(--spectrum-line-height-100);
+  --spectrum-badge-cjk-line-height: var(--spectrum-CJK-line-height-100);
+
+  /* text and icon color default white */
+  --spectrum-badge-label-icon-color-white: var(--spectrum-white);
+
+  /* text and icon color black */
+  --spectrum-badge-label-icon-color-black: var(--spectrum-black);
+
+  /* background color default */
+  --spectrum-badge-background-color-default: var(--spectrum-neutral-subdued-background-color-default);
+
+  /*  TODO - background colors */
+  /* --spectrum-badge-background-color-default: var(--spectrum-neutral-subdued-background-color-default);
+  --spectrum-badge-background-color-accent: var(--spectrum-accent-background-color-default);
+  --spectrum-badge-background-color-informative: var(--spectrum-informative-background-color-default);
+  --spectrum-badge-background-color-negative: var(--spectrum-negative-background-color-default);
+  --spectrum-badge-background-color-positive: var(--spectrum-positive-background-color-default); */
+
+
+  /*** DEFAULT STYLE fallbacks if no t-shirt size - uses Medium t-shirt styles ***/
+  /* badge height - fallback if no t-shirt size */
+  --spectrum-badge-height: var(--spectrum-component-height-100);
+
+  /* label font size - fallback if no t-shirt size */
+  --spectrum-badge-font-size: var(--spectrum-font-size-100);
+
+  /* label spacing - fallback if no t-shirt size */
+  --spectrum-badge-label-spacing-vertical-top: var(--spectrum-component-top-to-text-100);
+  --spectrum-badge-label-spacing-vertical-bottom: var(--spectrum-component-bottom-to-text-100);
+  --spectrum-badge-label-spacing-horizontal: var(--spectrum-component-edge-to-text-100);
+
+  /* icon size - fallback if no t-shirt size */
+  --spectrum-badge-workflow-icon-size: var(--spectrum-workflow-icon-size-100);
+
+  /* icon spacing - fallback if no t-shirt size */
+  --spectrum-badge-icon-text-spacing: var(--spectrum-text-to-visual-100);
+  --spectrum-badge-icon-spacing-horizontal: var(--spectrum-component-edge-to-visual-100);
+  --spectrum-badge-icon-spacing-vertical-top: var(--spectrum-component-top-to-workflow-icon-100);
+  --spectrum-badge-icon-only-spacing-horizontal: var(--spectrum-component-edge-to-visual-only-100);
+}
+
+
+.spectrum-Badge--sizeS {
+  --spectrum-badge-height: var(--spectrum-component-height-75);
+
+  /* label */
+  --spectrum-badge-font-size: var(--spectrum-font-size-75);
+  --spectrum-badge-label-spacing-vertical-top: var(--spectrum-component-top-to-text-75);
+  --spectrum-badge-label-spacing-vertical-bottom: var(--spectrum-component-bottom-to-text-75);
+  --spectrum-badge-label-spacing-horizontal: var(--spectrum-component-edge-to-text-75);
+
+  /* icon */
+  --spectrum-badge-workflow-icon-size: var(--spectrum-workflow-icon-size-75);
+  --spectrum-badge-icon-text-spacing: var(--spectrum-text-to-visual-75);
+  --spectrum-badge-icon-spacing-horizontal: var(--spectrum-component-edge-to-visual-75);
+  --spectrum-badge-icon-spacing-vertical-top: var(--spectrum-component-top-to-workflow-icon-75);
+  --spectrum-badge-icon-only-spacing-horizontal: var(--spectrum-component-edge-to-visual-only-75);
+}
+
+.spectrum-Badge--sizeM {
+  --spectrum-badge-height: var(--spectrum-component-height-100);
+
+  /* label */
+  --spectrum-badge-font-size: var(--spectrum-font-size-100);
+  --spectrum-badge-label-spacing-vertical-top: var(--spectrum-component-top-to-text-100);
+  --spectrum-badge-label-spacing-vertical-bottom: var(--spectrum-component-bottom-to-text-100);
+  --spectrum-badge-label-spacing-horizontal: var(--spectrum-component-edge-to-text-100);
+
+  /* icon */
+  --spectrum-badge-workflow-icon-size: var(--spectrum-workflow-icon-size-100);
+  --spectrum-badge-icon-text-spacing: var(--spectrum-text-to-visual-100);
+  --spectrum-badge-icon-spacing-horizontal: var(--spectrum-component-edge-to-visual-100);
+  --spectrum-badge-icon-spacing-vertical-top: var(--spectrum-component-top-to-workflow-icon-100);
+  --spectrum-badge-icon-only-spacing-horizontal: var(--spectrum-component-edge-to-visual-only-100);
+}
+
+.spectrum-Badge--sizeL {
+  --spectrum-badge-height: var(--spectrum-component-height-100);
+
+  /* label */
+  --spectrum-badge-font-size: var(--spectrum-font-size-200);
+  --spectrum-badge-label-spacing-vertical-top: var(--spectrum-component-top-to-text-200);
+  --spectrum-badge-label-spacing-vertical-bottom: var(--spectrum-component-bottom-to-text-200);
+  --spectrum-badge-label-spacing-horizontal: var(--spectrum-component-edge-to-text-200);
+
+  /* icon */
+  --spectrum-badge-workflow-icon-size: var(--spectrum-workflow-icon-size-200);
+  --spectrum-badge-icon-text-spacing: var(--spectrum-text-to-visual-200);
+  --spectrum-badge-icon-spacing-horizontal: var(--spectrum-component-edge-to-visual-200);
+  --spectrum-badge-icon-spacing-vertical-top: var(--spectrum-component-top-to-workflow-icon-200);
+  --spectrum-badge-icon-only-spacing-horizontal: var(--spectrum-component-edge-to-visual-only-200);
+}
+
+.spectrum-Badge--sizeXL {
+  --spectrum-badge-height: var(--spectrum-component-height-100);
+
+  /* label */
+  --spectrum-badge-font-size: var(--spectrum-font-size-300);
+  --spectrum-badge-label-spacing-vertical-top: var(--spectrum-component-top-to-text-300);
+  --spectrum-badge-label-spacing-vertical-bottom: var(--spectrum-component-bottom-to-text-300);
+  --spectrum-badge-label-spacing-horizontal: var(--spectrum-component-edge-to-text-300);
+
+  /* icon */
+  --spectrum-badge-workflow-icon-size: var(--spectrum-workflow-icon-size-300);
+  --spectrum-badge-icon-text-spacing: var(--spectrum-text-to-visual-300);
+  --spectrum-badge-icon-spacing-horizontal: var(--spectrum-component-edge-to-visual-300);
+  --spectrum-badge-icon-spacing-vertical-top: var(--spectrum-component-top-to-workflow-icon-300);
+  --spectrum-badge-icon-only-spacing-horizontal: var(--spectrum-component-edge-to-visual-only-300);
+}
+
+
+.spectrum-Badge {
+  block-size: var(--spectrum-badge-height);
+  inline-size: auto;
+
+  display: inline-flex;
+  position: relative;
+
+  cursor: default;
+
+  -webkit-font-smoothing: subpixel-antialiased;
+  -moz-osx-font-smoothing: auto;
+  font-smoothing: subpixel-antialiased;
+
+  border-radius: var(--spectrum-badge-corner-radius);
+
+  background: var(--spectrum-badge-background-color-default);
+  color: var(--spectrum-badge-label-icon-color-white);
+
+  /* text and icon black */
+  &--black-text {
+    color: var(--spectrum-badge-label-icon-color-black);
+  }
+}
+
+/* label */
+.spectrum-Badge-label {
+  font-size: var(--spectrum-badge-font-size);
+  line-height: var(--spectrum-badge-line-height);
+
+  margin-inline-end: var(--spectrum-badge-label-spacing-horizontal);
+  margin-inline-start: var(--spectrum-badge-label-spacing-horizontal);
+  margin-block-start: var(--spectrum-badge-label-spacing-vertical-top);
+  margin-block-end: var(--spectrum-badge-label-spacing-vertical-bottom);
+
+  color: var(--spectrum-badge-label-icon-color-white);
+
+  /* black text and icon */
+  .spectrum-Badge--black-text & {
+    color: var(--spectrum-badge-label-icon-color-black);
+  }
+
+  /* CJK language support */
+  &:lang(ja),
+  &:lang(zh),
+  &:lang(ko) {
+    line-height: var(--spectrum-badge-cjk-line-height);
+  }
+}
+
+
+/* optional icon */
+.spectrum-Badge-icon {
+  block-size: var(--spectrum-badge-workflow-icon-size);
+  inline-size: var(--spectrum-badge-workflow-icon-size);
+
+  margin-inline-start: var(--spectrum-badge-icon-spacing-horizontal);
+  margin-inline-end: var(--spectrum-badge-icon-text-spacing);
+  margin-block-start: var(--spectrum-badge-icon-spacing-vertical-top);
+
+  color: var(--spectrum-badge-label-icon-color-white);
+
+  &--no-label {
+    margin-inline-start: var(--spectrum-badge-icon-only-spacing-horizontal);
+    margin-inline-end: var(--spectrum-badge-icon-only-spacing-horizontal);
+  }
+
+  /* black text and icon */
+  .spectrum-Badge--black-text & {
+    color: var(--spectrum-badge-label-icon-color-black);
+  }
+}
+
+  /*  TODO - background colors
 .spectrum-Badge--sizeS {
   @remapvars {
     find: /--spectrum-badge-s(.*)/;
@@ -45,24 +242,4 @@ governing permissions and limitations under the License.
     replace: --spectrum-badge$1;
   }
 }
-
-.spectrum-Badge {
-  display: inline-block;
-  position: relative;
-
-  inline-size: auto;
-
-  padding-block: var(--spectrum-badge-neutral-textonly-text-padding-top) var(--spectrum-badge-neutral-textonly-text-padding-bottom);
-  padding-inline: var(--spectrum-badge-neutral-textonly-padding-right) var(--spectrum-badge-neutral-textonly-padding-left);
-
-  border-radius: var(--spectrum-badge-neutral-textonly-border-top-left-radius) var(--spectrum-badge-neutral-textonly-border-top-right-radius) var(--spectrum-badge-neutral-textonly-border-bottom-right-radius) var(--spectrum-badge-neutral-textonly-border-bottom-left-radius);
-
-  font-size: var(--spectrum-badge-neutral-textonly-text-size);
-  line-height: var(--spectrum-badge-neutral-textonly-text-line-height);
-
-  cursor: default;
-
-  -webkit-font-smoothing: subpixel-antialiased;
-  -moz-osx-font-smoothing: auto;
-  font-smoothing: subpixel-antialiased;
-}
+ */
