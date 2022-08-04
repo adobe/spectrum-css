@@ -30,7 +30,7 @@ governing permissions and limitations under the License.
   --spectrum-progressbar-thickness: var(--spectrum-progress-bar-thickness-medium);
 
   /* Spacing */
-  /* --spectrum-progressbar-spacing-label-to-progressbar: var(--spectrum-spacing-75); */
+  --spectrum-progressbar-spacing-label-to-progressbar: var(--spectrum-spacing-75);
   --spectrum-progressbar-spacing-top-to-text: var(--spectrum-component-top-to-text-100);
   --spectrum-progressbar-spacing-label-to-text: var(--spectrum-spacing-200);
 
@@ -41,8 +41,8 @@ governing permissions and limitations under the License.
   --spectrum-progressbar-fill-color: var(--spectrum-blue-900);
 
   --spectrum-progressbar-label-and-value-white: var(--spectrum-white);
-  /* --spectrum-progressbar-track-white: var(--spectrum-transparent-white-300); */
-  /* --spectrum-progressbar-fill-white: var(--spectrum-white); */
+  --spectrum-progressbar-track-color-white: var(--spectrum-transparent-white-300);
+  --spectrum-progressbar-fill-color-white: var(--spectrum-white);
 }
 
 .spectrum-ProgressBar--sizeS {
@@ -100,15 +100,15 @@ governing permissions and limitations under the License.
   font-size: var(--mod-progressbar-font-size, var(--spectrum-progressbar-font-size));
 
   /* Variants  */
-  .spectrum-ProgressBar--sideLabel {
+  &--sideLabel {
     display: inline-flex;
     flex-flow: row;
     justify-content: space-between;
     inline-size: auto;
   
     .spectrum-ProgressBar-track {
-      min-width: var(--mod-progressbar-min-width, var(--spectrum-progressbar-min-width));
-      flex: 1 1 var(--mod-progressbar-min-width, var(--spectrum-progressbar-min-width));
+      min-width: var(--mod-progressbar-size, var(--spectrum-progressbar-size));
+      flex: 1 1 var(--mod-progressbar-size, var(--spectrum-progressbar-size));
     }
   
     .spectrum-ProgressBar-label {
@@ -128,18 +128,16 @@ governing permissions and limitations under the License.
   &--overBackground {
     .spectrum-ProgressBar-fill {
       color: var(--mod-progressbar-label-and-value-white, var(--spectrum-progressbar-label-and-value-white));
-      background: var(--mod-progressbar-fill-color, var(--spectrum-progressbar-fill-color));
+      background: var(--mod-progressbar-fill-color-white, var(--spectrum-progressbar-fill-color-white));
     }
 
     .spectrum-ProgressBar-label,
     .spectrum-ProgressBar-percentage {
-      /* color: var(--spectrum-progressbar-m-overbackground-track-fill-color); */
+      color: var(--mode-progressbar-label-and-value-white, var(--spectrum-progressbar-label-and-value-white));
     }
 
     .spectrum-ProgressBar-track {
-      background-color: var(
-        /* --spectrum-progressbar-m-overbackground-track-color */
-      );
+      background-color: var(--spectrum-progressbar-track-color-white);
     }
   }
 
@@ -185,7 +183,8 @@ governing permissions and limitations under the License.
 .spectrum-ProgressBar-label,
 .spectrum-ProgressBar-percentage {
   text-align: start;
-  margin-block-end: var(--mod-spectrum-progressbar-spacing-top-to-text, var(--spectrum-progressbar-spacing-top-to-text));
+  margin-block-start: var(--mod-progressbar-spacing-top-to-text, var(--spectrum-progressbar-spacing-top-to-text));
+  margin-block-end: var(--mod-progressbar-spacing-label-to-progressbar, var(--spectrum-progressbar-spacing-label-to-progressbar));
 
   color: var(--mod-progressbar-text-color, var(--spectrum-progressbar-text-color));
 }
