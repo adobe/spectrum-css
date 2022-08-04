@@ -10,15 +10,6 @@ OF ANY KIND, either express or implied. See the License for the specific languag
 governing permissions and limitations under the License.
 */
 
-/*
- * Component naming template:
- * `--system-component-style-description-modifier`
- *
- * Example:
- * `--spectrum-badge-spacing-text-to-icon-horizontal`
- */
-
-
 .spectrum-Badge {
   /*** GENERAL STYLES applicable to all t-shirt sizes and all themes ***/
 
@@ -139,7 +130,7 @@ governing permissions and limitations under the License.
 
 
 .spectrum-Badge {
-  block-size: var(--spectrum-badge-height);
+  min-block-size: var(--spectrum-badge-height);
   inline-size: auto;
 
   display: inline-flex;
@@ -167,14 +158,14 @@ governing permissions and limitations under the License.
   font-size: var(--spectrum-badge-font-size);
   line-height: var(--spectrum-badge-line-height);
 
-  margin-inline-end: var(--spectrum-badge-label-spacing-horizontal);
-  margin-inline-start: var(--spectrum-badge-label-spacing-horizontal);
-  margin-block-start: var(--spectrum-badge-label-spacing-vertical-top);
-  margin-block-end: var(--spectrum-badge-label-spacing-vertical-bottom);
+  padding-inline-end: var(--spectrum-badge-label-spacing-horizontal);
+  padding-inline-start: var(--spectrum-badge-label-spacing-horizontal);
+  padding-block-start: var(--spectrum-badge-label-spacing-vertical-top);
+  padding-block-end: var(--spectrum-badge-label-spacing-vertical-bottom);
 
   color: var(--spectrum-badge-label-icon-color-white);
 
-  /* black text and icon */
+  /* black text and icon variant */
   .spectrum-Badge--black-text & {
     color: var(--spectrum-badge-label-icon-color-black);
   }
@@ -185,6 +176,11 @@ governing permissions and limitations under the License.
   &:lang(ko) {
     line-height: var(--spectrum-badge-cjk-line-height);
   }
+
+  /* remove left padding from label if preceded by an icon */
+  .spectrum-Badge-icon + & {
+    padding-inline-start: 0;
+  }
 }
 
 
@@ -192,54 +188,24 @@ governing permissions and limitations under the License.
 .spectrum-Badge-icon {
   block-size: var(--spectrum-badge-workflow-icon-size);
   inline-size: var(--spectrum-badge-workflow-icon-size);
+  flex: 0 0 var(--spectrum-badge-workflow-icon-size);
 
-  margin-inline-start: var(--spectrum-badge-icon-spacing-horizontal);
-  margin-inline-end: var(--spectrum-badge-icon-text-spacing);
-  margin-block-start: var(--spectrum-badge-icon-spacing-vertical-top);
+  padding-inline-start: var(--spectrum-badge-icon-spacing-horizontal);
+  /* icon with label has reduced padding between icon and text */
+  padding-inline-end: var(--spectrum-badge-icon-text-spacing);
+  padding-block-start: var(--spectrum-badge-icon-spacing-vertical-top);
+  padding-block-end: var(--spectrum-badge-icon-spacing-vertical-top);
 
   color: var(--spectrum-badge-label-icon-color-white);
 
   &--no-label {
-    margin-inline-start: var(--spectrum-badge-icon-only-spacing-horizontal);
-    margin-inline-end: var(--spectrum-badge-icon-only-spacing-horizontal);
+    /* icon without label has identical padding left and right */
+    padding-inline-start: var(--spectrum-badge-icon-only-spacing-horizontal);
+    padding-inline-end: var(--spectrum-badge-icon-only-spacing-horizontal);
   }
 
-  /* black text and icon */
+  /* black text and icon variant */
   .spectrum-Badge--black-text & {
     color: var(--spectrum-badge-label-icon-color-black);
   }
 }
-
-  /*  TODO - background colors
-.spectrum-Badge--sizeS {
-  @remapvars {
-    find: /--spectrum-badge-s(.*)/;
-    filter: color;
-    replace: --spectrum-badge$1;
-  }
-}
-
-.spectrum-Badge--sizeM {
-  @remapvars {
-    find: /--spectrum-badge-m(.*)/;
-    filter: color;
-    replace: --spectrum-badge$1;
-  }
-}
-
-.spectrum-Badge--sizeL {
-  @remapvars {
-    find: /--spectrum-badge-l(.*)/;
-    filter: color;
-    replace: --spectrum-badge$1;
-  }
-}
-
-.spectrum-Badge--sizeXL {
-  @remapvars {
-    find: /--spectrum-badge-xl(.*)/;
-    filter: color;
-    replace: --spectrum-badge$1;
-  }
-}
- */
