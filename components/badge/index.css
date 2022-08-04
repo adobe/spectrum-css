@@ -29,13 +29,12 @@ governing permissions and limitations under the License.
   /* background color default */
   --spectrum-badge-background-color-default: var(--spectrum-neutral-subdued-background-color-default);
 
-  /*  TODO - background colors */
-  /* --spectrum-badge-background-color-default: var(--spectrum-neutral-subdued-background-color-default);
+  /* background colors */
+  --spectrum-badge-background-color-default: var(--spectrum-neutral-subdued-background-color-default);
   --spectrum-badge-background-color-accent: var(--spectrum-accent-background-color-default);
   --spectrum-badge-background-color-informative: var(--spectrum-informative-background-color-default);
   --spectrum-badge-background-color-negative: var(--spectrum-negative-background-color-default);
-  --spectrum-badge-background-color-positive: var(--spectrum-positive-background-color-default); */
-
+  --spectrum-badge-background-color-positive: var(--spectrum-positive-background-color-default);
 
   /*** DEFAULT STYLE fallbacks if no t-shirt size - uses Medium t-shirt styles ***/
   /* badge height - fallback if no t-shirt size */
@@ -151,6 +150,27 @@ governing permissions and limitations under the License.
   &--black-text {
     color: var(--spectrum-badge-label-icon-color-black);
   }
+
+  /* background color variants */
+  &--neutral {
+    background: var(--spectrum-badge-background-color-default);
+  }
+
+  &--accent {
+    background: var(--spectrum-badge-background-color-accent);
+  }
+
+  &--informative {
+    background: var(--spectrum-badge-background-color-informative);
+  }
+
+  &--negative {
+    background: var(--spectrum-badge-background-color-negative);
+  }
+
+  &--positive {
+    background: var(--spectrum-badge-background-color-positive);
+  }
 }
 
 /* label */
@@ -188,6 +208,8 @@ governing permissions and limitations under the License.
 .spectrum-Badge-icon {
   block-size: var(--spectrum-badge-workflow-icon-size);
   inline-size: var(--spectrum-badge-workflow-icon-size);
+
+  /* ensures icon does not shrink when badge width is limited */
   flex: 0 0 var(--spectrum-badge-workflow-icon-size);
 
   padding-inline-start: var(--spectrum-badge-icon-spacing-horizontal);

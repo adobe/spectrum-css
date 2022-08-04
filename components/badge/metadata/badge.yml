@@ -1,69 +1,55 @@
 name: Badge
 SpectrumSiteSlug: https://spectrum.adobe.com/page/badge/
+description: |
+  - Badge may include a label with no icon, an icon with no label, or an icon with a label
+  - Badge t-shirt sizes correspond to icon sizes
+
+sections:
+  - name: Migration Guide
+    description: |
+      ### Action Button now requires a class on its icon
+      The `.spectrum-ActionButton-icon` class is now required on the icon.
+
 examples:
   - id: badge
     name: Standard
     markup: |
       <div class="spectrum-Badge spectrum-Badge--sizeM spectrum-Badge--neutral">
-        <div class="spectrum-Badge-label">Neutral</div>
+        <span class="spectrum-Badge-label">Neutral</span>
+      </div>
+
+      <div class="spectrum-Badge spectrum-Badge--sizeM spectrum-Badge--accent">
+        <span class="spectrum-Badge-label">Accent</span>
       </div>
 
       <div class="spectrum-Badge spectrum-Badge--sizeM spectrum-Badge--informative">
-        <div class="spectrum-Badge-label">Informative</div>
-      </div>
-
-      <div class="spectrum-Badge spectrum-Badge--sizeM spectrum-Badge--positive">
-        <div class="spectrum-Badge-label">Positive</div>
+        <span class="spectrum-Badge-label">Informative</span>
       </div>
 
       <div class="spectrum-Badge spectrum-Badge--sizeM spectrum-Badge--negative">
-        <div class="spectrum-Badge-label">Negative</div>
+        <span class="spectrum-Badge-label">Positive</span>
       </div>
 
-      <div class="spectrum-Badge spectrum-Badge--sizeM spectrum-Badge--fuchsia">
-        <div class="spectrum-Badge-label">Fuchsia</div>
+      <div class="spectrum-Badge spectrum-Badge--sizeM spectrum-Badge--positive">
+        <span class="spectrum-Badge-label">Negative</span>
       </div>
 
-      <div class="spectrum-Badge spectrum-Badge--sizeM spectrum-Badge--indigo">
-        <div class="spectrum-Badge-label">Indigo</div>
-      </div>
-
-      <div class="spectrum-Badge spectrum-Badge--sizeM spectrum-Badge--magenta">
-        <div class="spectrum-Badge-label">Magenta</div>
-      </div>
-
-      <div class="spectrum-Badge spectrum-Badge--sizeM spectrum-Badge--purple">
-        <div class="spectrum-Badge-label">Purple</div>
-      </div>
-
-      <div class="spectrum-Badge spectrum-Badge--sizeM spectrum-Badge--seafoam">
-        <div class="spectrum-Badge-label">Seafoam</div>
-      </div>
-
-      <div class="spectrum-Badge spectrum-Badge--sizeM spectrum-Badge--yellow">
-        <div class="spectrum-Badge-label">Yellow</div>
-      </div>
 
   - id: badge
     name: Sizing
     markup: |
-
         <h4 class="spectrum-Heading spectrum-Heading--sizeXS spectrum-Examples-itemHeading">Label Only</h4>
-
-        <div class="spectrum-Badge spectrum-Badge spectrum-Badge--neutral">
-          <div class="spectrum-Badge-label">No Size</div>
-        </div>
-
+        <br>
         <div class="spectrum-Badge spectrum-Badge--sizeS spectrum-Badge--neutral">
-          <div class="spectrum-Badge-label">Small</div>
+          <span class="spectrum-Badge-label">Small</span>
         </div>
 
         <div class="spectrum-Badge spectrum-Badge--sizeM spectrum-Badge--neutral">
-          <div class="spectrum-Badge-label">Medium</div>
+          <span class="spectrum-Badge-label">Medium</span>
         </div>
 
         <div class="spectrum-Badge spectrum-Badge--sizeL spectrum-Badge--neutral">
-          <div class="spectrum-Badge-label">Large</div>
+          <span class="spectrum-Badge-label">Large</span>
         </div>
 
         <div class="spectrum-Badge spectrum-Badge--sizeXL spectrum-Badge--neutral">
@@ -76,14 +62,7 @@ examples:
         <br>
 
         <h4 class="spectrum-Heading spectrum-Heading--sizeXS spectrum-Examples-itemHeading">Icon Only</h4>
-
-        <div class="spectrum-Badge spectrum-Badge spectrum-Badge--neutral">
-          <svg class="spectrum-Icon spectrum-Icon spectrum-Badge-icon spectrum-Badge-icon--no-label" focusable="false" aria-hidden="true">
-            <use xlink:href="#spectrum-icon-18-Info" />
-          </svg>
-        </div>
-
-
+        <br>
         <div class="spectrum-Badge spectrum-Badge--sizeS spectrum-Badge--neutral">
           <svg class="spectrum-Icon spectrum-Icon--sizeS spectrum-Badge-icon spectrum-Badge-icon--no-label" focusable="false" aria-hidden="true">
             <use xlink:href="#spectrum-icon-18-Info" />
@@ -114,33 +93,26 @@ examples:
         <br>
 
         <h4 class="spectrum-Heading spectrum-Heading--sizeXS spectrum-Examples-itemHeading">Icon with Label</h4>
-
-        <div class="spectrum-Badge spectrum-Badge spectrum-Badge--neutral">
-          <svg class="spectrum-Icon spectrum-Icon spectrum-Badge-icon spectrum-Badge-icon" focusable="false" aria-hidden="true">
-            <use xlink:href="#spectrum-icon-18-Info" />
-          </svg>
-          <div class="spectrum-Badge-label">No Size</div>
-        </div>
-
+        <br>
         <div class="spectrum-Badge spectrum-Badge--sizeS spectrum-Badge--neutral">
           <svg class="spectrum-Icon spectrum-Icon--sizeS spectrum-Badge-icon spectrum-Badge-icon" focusable="false" aria-hidden="true">
             <use xlink:href="#spectrum-icon-18-Info" />
           </svg>
-          <div class="spectrum-Badge-label">Small</div>
+          <span class="spectrum-Badge-label">Small</span>
         </div>
 
         <div class="spectrum-Badge spectrum-Badge--sizeM spectrum-Badge--neutral">
           <svg class="spectrum-Icon spectrum-Icon--sizeM spectrum-Badge-icon spectrum-Badge-icon" focusable="false" aria-hidden="true">
             <use xlink:href="#spectrum-icon-18-Info" />
           </svg>
-          <div class="spectrum-Badge-label">Medium</div>
+          <span class="spectrum-Badge-label">Medium</span>
         </div>
 
         <div class="spectrum-Badge spectrum-Badge--sizeL spectrum-Badge--neutral">
           <svg class="spectrum-Icon spectrum-Icon--sizeL spectrum-Badge-icon spectrum-Badge-icon" focusable="false" aria-hidden="true">
             <use xlink:href="#spectrum-icon-18-Info" />
           </svg>
-          <div class="spectrum-Badge-label">Large</div>
+          <span class="spectrum-Badge-label">Large</span>
         </div>
 
         <div class="spectrum-Badge spectrum-Badge--sizeXL spectrum-Badge--neutral">
@@ -149,35 +121,6 @@ examples:
           </svg>
           <div class="spectrum-Badge-label">Extra Large</div>
         </div>
-
-
-  - id: badge
-    name: Icon
-    markup: |
-      <div class="spectrum-Examples">
-        <div class="spectrum-Examples-item">
-          <h4 class="spectrum-Heading spectrum-Heading--sizeXS spectrum-Examples-itemHeading">Icon with Label</h4>
-
-          <div class="spectrum-Badge spectrum-Badge--sizeM spectrum-Badge--neutral">
-            <svg class="spectrum-Icon spectrum-Icon--sizeM spectrum-Badge-icon spectrum-Badge-icon" focusable="false" aria-hidden="true">
-              <use xlink:href="#spectrum-icon-18-Info" />
-            </svg>
-            <div class="spectrum-Badge-label">Badge Label</div>
-          </div>
-
-        </div>
-
-        <div class="spectrum-Examples-item">
-          <h4 class="spectrum-Heading spectrum-Heading--sizeXS spectrum-Examples-itemHeading">Icon Only</h4>
-
-          <div class="spectrum-Badge spectrum-Badge--sizeM spectrum-Badge--neutral">
-            <svg class="spectrum-Icon spectrum-Icon--sizeM spectrum-Badge-icon spectrum-Badge-icon--no-label" focusable="false" aria-hidden="true">
-              <use xlink:href="#spectrum-icon-18-Info" />
-            </svg>
-          </div>
-
-        </div>
-      </div>
 
 
   - id: badge
