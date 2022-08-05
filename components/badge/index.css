@@ -171,6 +171,23 @@ governing permissions and limitations under the License.
   &--positive {
     background: var(--spectrum-badge-background-color-positive);
   }
+
+  /* fixed position variants with border radius 0 on the fixed edge of the component */
+  &--fixed-left {
+    border-radius: 0 var(--spectrum-badge-corner-radius) var(--spectrum-badge-corner-radius) 0;
+  }
+
+  &--fixed-right {
+    border-radius: var(--spectrum-badge-corner-radius) 0 0 var(--spectrum-badge-corner-radius);
+  }
+
+  &--fixed-top {
+    border-radius: 0 0 var(--spectrum-badge-corner-radius) var(--spectrum-badge-corner-radius);
+  }
+
+  &--fixed-bottom {
+    border-radius: var(--spectrum-badge-corner-radius) var(--spectrum-badge-corner-radius) 0 0;
+  }
 }
 
 /* label */
@@ -202,7 +219,6 @@ governing permissions and limitations under the License.
     padding-inline-start: 0;
   }
 }
-
 
 /* optional icon */
 .spectrum-Badge-icon {
