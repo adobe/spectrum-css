@@ -16,14 +16,14 @@
     "build": "gulp"
   },
   "peerDependencies": {
-    "@spectrum-css/actionbutton": "^2.0.3",
-    "@spectrum-css/tokens": "^1.0.1"
+    "@spectrum-css/actionbutton": "^2.1.1",
+    "@spectrum-css/tokens": "^1.0.4"
   },
   "devDependencies": {
-    "@spectrum-css/actionbutton": "^2.0.3",
+    "@spectrum-css/actionbutton": "^2.1.1",
     "@spectrum-css/component-builder-simple": "^1.0.0-beta",
     "@spectrum-css/icon": "^3.0.23",
-    "@spectrum-css/tokens": "^1.0.1",
+    "@spectrum-css/tokens": "^1.0.4",
     "gulp": "^4.0.0"
   },
   "publishConfig": {
