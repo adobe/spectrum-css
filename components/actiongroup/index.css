@@ -44,7 +44,7 @@ governing permissions and limitations under the License.
 .spectrum-ActionGroup {
   display: flex;
   flex-wrap: wrap;
-  gap: var(--spectrum-actiongroup-horizontal-spacing-regular);
+  gap: var(--mod-actiongroup-horizontal-spacing-regular, var(--spectrum-actiongroup-horizontal-spacing-regular));
 
   .spectrum-ActionGroup-item {
     flex-shrink: 0;
@@ -58,41 +58,41 @@ governing permissions and limitations under the License.
 }
 
 .spectrum-ActionGroup--vertical {
-  gap: var(--spectrum-actiongroup-vertical-spacing-regular);
+  gap: var(--mod-actiongroup-vertical-spacing-regular, var(--spectrum-actiongroup-vertical-spacing-regular));
   display: inline-flex;
   flex-direction: column;
 }
 
 .spectrum-ActionGroup--compact {
-  gap: var(--spectrum-actiongroup-gap-size-compact);
+  gap: var(--mod-actiongroup-gap-size-compact, var(--spectrum-actiongroup-gap-size-compact));
 
   &:not(.spectrum-ActionGroup--quiet) {
     flex-wrap: nowrap;
 
     .spectrum-ActionGroup-item {
       position: relative;
-      border-radius: var(--spectrum-actiongroup-border-radius-reset);
+      border-radius: var(--mod-actiongroup-border-radius-reset, var(--spectrum-actiongroup-border-radius-reset));
       z-index: 0;
 
       &:first-child {
-        border-start-start-radius: var(--spectrum-actiongroup-border-radius);
-        border-end-start-radius: var(--spectrum-actiongroup-border-radius);
-        margin-inline-start: var(--spectrum-actiongroup-button-spacing-reset);
-        --spectrum-actionbutton-focus-ring-border-radius: var(--spectrum-actiongroup-border-radius) 0px 0px var(--spectrum-actiongroup-border-radius);
+        border-start-start-radius: var(--mod-actiongroup-border-radius, var(--spectrum-actiongroup-border-radius));
+        border-end-start-radius: var(--mod-actiongroup-border-radius, var(--spectrum-actiongroup-border-radius));
+        margin-inline-start: var(--mod-actiongroup-button-spacing-reset, var(--spectrum-actiongroup-button-spacing-reset));
+        --spectrum-actionbutton-focus-ring-border-radius: var(--mod-actiongroup-border-radius, var(--spectrum-actiongroup-border-radius)) 0px 0px var(--mod-actiongroup-border-radius, var(--spectrum-actiongroup-border-radius));
       }
       
       & + .spectrum-ActionGroup-item {
-        margin-inline-start: var(--spectrum-actiongroup-horizontal-spacing-compact);
-        margin-inline-end: var(--spectrum-actiongroup-horizontal-spacing-compact);
+        margin-inline-start: var(--mod-actiongroup-horizontal-spacing-compact, var(--spectrum-actiongroup-horizontal-spacing-compact));
+        margin-inline-end: var(--mod-actiongroup-horizontal-spacing-compact, var(--spectrum-actiongroup-horizontal-spacing-compact));
         --spectrum-actionbutton-focus-ring-border-radius: 0px;
       }
 
       &:last-child {
-        border-start-end-radius: var(--spectrum-actiongroup-border-radius);
-        border-end-end-radius: var(--spectrum-actiongroup-border-radius);
-        margin-inline-start: var(--spectrum-actiongroup-horizontal-spacing-compact);
-        margin-inline-end: var(--spectrum-actiongroup-button-spacing-reset);
-        --spectrum-actionbutton-focus-ring-border-radius: 0px var(--spectrum-actiongroup-border-radius) var(--spectrum-actiongroup-border-radius) 0px;
+        border-start-end-radius: var(--mod-actiongroup-border-radius, var(--spectrum-actiongroup-border-radius));
+        border-end-end-radius: var(--mod-actiongroup-border-radius, var(--spectrum-actiongroup-border-radius));
+        margin-inline-start: var(--mod-actiongroup-horizontal-spacing-compact, var(--spectrum-actiongroup-horizontal-spacing-compact));
+        margin-inline-end: var(--mod-actiongroup-border-radius-reset, var(--spectrum-actiongroup-border-radius-reset));
+        --spectrum-actionbutton-focus-ring-border-radius: 0px var(--mod-actiongroup-border-radius, var(--spectrum-actiongroup-border-radius)) var(--mod-actiongroup-border-radius, var(--spectrum-actiongroup-border-radius)) 0px;
       }
 
       &.is-selected {
@@ -115,33 +115,33 @@ governing permissions and limitations under the License.
     }
 
     &.spectrum-ActionGroup--vertical {
-      gap: var(--spectrum-actiongroup-gap-size-compact);
+      gap: var(--mod-actiongroup-gap-size-compact, var(--spectrum-actiongroup-gap-size-compact));
 
       .spectrum-ActionGroup-item {
-        border-radius: var(--spectrum-actiongroup-border-radius-reset);
+        border-radius: var(--mod-actiongroup-border-radius-reset, var(--spectrum-actiongroup-border-radius-reset));
 
         &:first-child {
-          border-start-start-radius: var(--spectrum-actiongroup-border-radius);
-          border-start-end-radius: var(--spectrum-actiongroup-border-radius);
-          margin-inline-end: var(--spectrum-actiongroup-button-spacing-reset);
-          margin-block-start: var(--spectrum-actiongroup-vertical-spacing-compact);
-          margin-block-end: var(--spectrum-actiongroup-vertical-spacing-compact);
-          --spectrum-actionbutton-focus-ring-border-radius: var(--spectrum-actiongroup-border-radius) var(--spectrum-actiongroup-border-radius) 0px 0px;
+          border-start-start-radius: var(--mod-actiongroup-border-radius, var(--spectrum-actiongroup-border-radius));
+          border-start-end-radius: var(--mod-actiongroup-border-radius, var(--spectrum-actiongroup-border-radius));
+          margin-inline-end: var(--mod-actiongroup-button-spacing-reset, var(--spectrum-actiongroup-button-spacing-reset));
+          margin-block-start: var(--mod-actiongroup-vertical-spacing-compact, var(--spectrum-actiongroup-vertical-spacing-compact));
+          margin-block-end: var(--mod-actiongroup-vertical-spacing-compact, var(--spectrum-actiongroup-vertical-spacing-compact));
+          --spectrum-actionbutton-focus-ring-border-radius: var(--mod-actiongroup-border-radius, var(--spectrum-actiongroup-border-radius)) var(--mod-actiongroup-border-radius, var(--spectrum-actiongroup-border-radius)) 0px 0px;
         }
 
         & + .spectrum-ActionGroup-item {
-          margin-inline-start: var(--spectrum-actiongroup-button-spacing-reset);
-          margin-inline-end: var(--spectrum-actiongroup-button-spacing-reset);
-          margin-block-start: var(--spectrum-actiongroup-button-spacing-reset);
-          margin-block-end: var(--spectrum-actiongroup-vertical-spacing-compact);
+          margin-inline-start: var(--mod-actiongroup-button-spacing-reset, var(--spectrum-actiongroup-button-spacing-reset));
+          margin-inline-end: var(--mod-actiongroup-button-spacing-reset, var(--spectrum-actiongroup-button-spacing-reset));
+          margin-block-start: var(--mod-actiongroup-button-spacing-reset, var(--spectrum-actiongroup-button-spacing-reset));
+          margin-block-end: var(--mod-actiongroup-vertical-spacing-compact, var(--spectrum-actiongroup-vertical-spacing-compact));
         }
 
         &:last-child {
-          border-end-start-radius: var(--spectrum-actiongroup-border-radius);
-          border-end-end-radius: var(--spectrum-actiongroup-border-radius);
-          margin-block-start: var(--spectrum-actiongroup-vertical-spacing-compact);
-          margin-block-end: var(--spectrum-actiongroup-button-spacing-reset);
-          --spectrum-actionbutton-focus-ring-border-radius: 0px 0px var(--spectrum-actiongroup-border-radius) var(--spectrum-actiongroup-border-radius);
+          border-end-start-radius: var(--mod-actiongroup-border-radius, var(--spectrum-actiongroup-border-radius));
+          border-end-end-radius: var(--mod-actiongroup-border-radius, var(--spectrum-actiongroup-border-radius));
+          margin-block-start: var(--mod-actiongroup-vertical-spacing-compact, var(--spectrum-actiongroup-vertical-spacing-compact));
+          margin-block-end: var(--mod-actiongroup-button-spacing-reset, var(--spectrum-actiongroup-button-spacing-reset));
+          --spectrum-actionbutton-focus-ring-border-radius: 0px 0px var(--mod-actiongroup-border-radius, var(--spectrum-actiongroup-border-radius)) var(--mod-actiongroup-border-radius, var(--spectrum-actiongroup-border-radius));
         }
       }
     }
