@@ -13,6 +13,7 @@ governing permissions and limitations under the License.
 .spectrum-ProgressBar {
   /* Hardcoded tokens */
   --spectrum-progressbar-animation-ease-in-out-indeterminate: cubic-bezier(.45, 0, .40, 1);
+
   --spectrum-progressbar-animation-duration-indeterminate: 1000ms;
   --spectrum-progressbar-fill-inline-size-indeterminate: 70%;
   --spectrum-progressbar-size: 192px;
@@ -204,6 +205,7 @@ governing permissions and limitations under the License.
   position: relative;
   /* TODO review */
   animation-timing-function: var(--mod-progressbar-animation-ease-in-out-indeterminate, var(--spectrum-progressbar-animation-ease-in-out-indeterminate));
+
   will-change: transform;
 }
 
@@ -220,20 +222,20 @@ governing permissions and limitations under the License.
 @keyframes indeterminate-loop-ltr {
   from {
     transform: translate(
-      calc(-1 * var(--mod-progressbar-fill-inline-size-indeterminate, var(--spectrum-progressbar-fill-inline-size-indeterminate)))
+      calc(-1 * var(--spectrum-progressbar-fill-inline-size-indeterminate))
     );
   }
   to {
     /* TODO review */
-    transform: translate(var(--spectrum-progressbar-min-width));
+    transform: translate(var(--spectrum-progressbar-size));
   }
 }
 
 @keyframes indeterminate-loop-rtl {
   from {
-    transform: translate(var(--spectrum-progressbar-min-width));
+    transform: translate(var(--spectrum-progressbar-fill-inline-size-indeterminate));
   }
   to {
-    transform: translate(calc(-1 * var(--spectrum-progressbar-min-width)));
+    transform: translate(calc(-1 * var(--spectrum-progressbar-size)));
   }
 }
