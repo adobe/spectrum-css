@@ -129,7 +129,8 @@ governing permissions and limitations under the License.
 
 
 .spectrum-Badge {
-  min-block-size: var(--spectrum-badge-height);
+  min-block-size: var(--mod-badge-height,
+                      var(--spectrum-badge-height));
   inline-size: auto;
 
   display: inline-flex;
@@ -141,77 +142,99 @@ governing permissions and limitations under the License.
   -moz-osx-font-smoothing: auto;
   font-smoothing: subpixel-antialiased;
 
-  border-radius: var(--spectrum-badge-corner-radius);
+  border-radius: var(--mod-badge-corner-radius,
+                    var(--spectrum-badge-corner-radius));
 
-  background: var(--spectrum-badge-background-color-default);
-  color: var(--spectrum-badge-label-icon-color-white);
+  background: var(--mod-badge-background-color-default,
+                  var(--spectrum-badge-background-color-default));
+  color: var(--mod-badge-label-icon-color-white,
+            var(--spectrum-badge-label-icon-color-white));
 
   /* text and icon black */
   &--black-text {
-    color: var(--spectrum-badge-label-icon-color-black);
+    color: var(--mod-badge-label-icon-color-black,
+              var(--spectrum-badge-label-icon-color-black));
   }
 
   /* background color variants */
   &--neutral {
-    background: var(--spectrum-badge-background-color-default);
+    background: var(--mod-badge-background-color-default,
+                    var(--spectrum-badge-background-color-default));
   }
 
   &--accent {
-    background: var(--spectrum-badge-background-color-accent);
+    background: var(--mod-badge-background-color-accent,
+                    var(--spectrum-badge-background-color-accent));
   }
 
   &--informative {
-    background: var(--spectrum-badge-background-color-informative);
+    background: var(--mod-badge-background-color-informative,
+                    var(--spectrum-badge-background-color-informative));
   }
 
   &--negative {
-    background: var(--spectrum-badge-background-color-negative);
+    background: var(--mod-badge-background-color-negative,
+                    var(--spectrum-badge-background-color-negative));
   }
 
   &--positive {
-    background: var(--spectrum-badge-background-color-positive);
+    background: var(--mod-badge-background-color-positive,
+                    var(--spectrum-badge-background-color-positive));
   }
 
   /* fixed position variants with border radius 0 on the fixed edge of the component */
   &--fixed-left {
-    border-radius: 0 var(--spectrum-badge-corner-radius) var(--spectrum-badge-corner-radius) 0;
+    border-top-left-radius: 0;
+    border-bottom-left-radius: 0;
   }
 
   &--fixed-right {
-    border-radius: var(--spectrum-badge-corner-radius) 0 0 var(--spectrum-badge-corner-radius);
+    border-top-right-radius: 0;
+    border-bottom-right-radius: 0;
   }
 
   &--fixed-top {
-    border-radius: 0 0 var(--spectrum-badge-corner-radius) var(--spectrum-badge-corner-radius);
+    border-top-left-radius: 0;
+    border-top-right-radius: 0;
   }
 
   &--fixed-bottom {
-    border-radius: var(--spectrum-badge-corner-radius) var(--spectrum-badge-corner-radius) 0 0;
+    border-bottom-left-radius: 0;
+    border-bottom-right-radius: 0;
   }
 }
 
 /* label */
 .spectrum-Badge-label {
-  font-size: var(--spectrum-badge-font-size);
-  line-height: var(--spectrum-badge-line-height);
+  font-size: var(--mod-badge-font-size,
+                      var(--spectrum-badge-font-size));
+  line-height: var(--mod-badge-line-height,
+                      var(--spectrum-badge-line-height));
 
-  padding-inline-end: var(--spectrum-badge-label-spacing-horizontal);
-  padding-inline-start: var(--spectrum-badge-label-spacing-horizontal);
-  padding-block-start: var(--spectrum-badge-label-spacing-vertical-top);
-  padding-block-end: var(--spectrum-badge-label-spacing-vertical-bottom);
+  padding-inline-end: var(--mod-badge-label-spacing-horizontal,
+                      var(--spectrum-badge-label-spacing-horizontal));
+  padding-inline-start: var(--mod-badge-label-spacing-horizontal,
+                      var(--spectrum-badge-label-spacing-horizontal));
+  padding-block-start: var(--mod-badge-label-spacing-vertical-top,
+                      var(--spectrum-badge-label-spacing-vertical-top));
+  padding-block-end: var(--mod-badge-label-spacing-vertical-bottom,
+                      var(--spectrum-badge-label-spacing-vertical-bottom));
 
-  color: var(--spectrum-badge-label-icon-color-white);
+  color: var(--mod-badge-label-icon-color-white,
+                      var(--spectrum-badge-label-icon-color-white));
 
   /* black text and icon variant */
   .spectrum-Badge--black-text & {
-    color: var(--spectrum-badge-label-icon-color-black);
+    color: var(--mod-badge-label-icon-color-black,
+                      var(--spectrum-badge-label-icon-color-black));
   }
 
   /* CJK language support */
   &:lang(ja),
   &:lang(zh),
   &:lang(ko) {
-    line-height: var(--spectrum-badge-cjk-line-height);
+    line-height: var(--mod-badge-cjk-line-height,
+                      var(--spectrum-badge-cjk-line-height));
   }
 
   /* remove left padding from label if preceded by an icon */
@@ -222,28 +245,39 @@ governing permissions and limitations under the License.
 
 /* optional icon */
 .spectrum-Badge-icon {
-  block-size: var(--spectrum-badge-workflow-icon-size);
-  inline-size: var(--spectrum-badge-workflow-icon-size);
+  block-size: var(--mod-badge-workflow-icon-size,
+                      var(--spectrum-badge-workflow-icon-size));
+  inline-size: var(--mod-badge-workflow-icon-size,
+                      var(--spectrum-badge-workflow-icon-size));
 
   /* ensures icon does not shrink when badge width is limited */
-  flex: 0 0 var(--spectrum-badge-workflow-icon-size);
+  flex: 0 0 var(--mod-badge-workflow-icon-size,
+                      var(--spectrum-badge-workflow-icon-size));
 
-  padding-inline-start: var(--spectrum-badge-icon-spacing-horizontal);
+  padding-inline-start: var(--mod-badge-icon-spacing-horizontal,
+                      var(--spectrum-badge-icon-spacing-horizontal));
   /* icon with label has reduced padding between icon and text */
-  padding-inline-end: var(--spectrum-badge-icon-text-spacing);
-  padding-block-start: var(--spectrum-badge-icon-spacing-vertical-top);
-  padding-block-end: var(--spectrum-badge-icon-spacing-vertical-top);
+  padding-inline-end: var(--mod-badge-icon-text-spacing,
+                      var(--spectrum-badge-icon-text-spacing));
+  padding-block-start: var(--mod-badge-icon-spacing-vertical-top,
+                      var(--spectrum-badge-icon-spacing-vertical-top));
+  padding-block-end: var(--mod-badge-icon-spacing-vertical-top,
+                      var(--spectrum-badge-icon-spacing-vertical-top));
 
-  color: var(--spectrum-badge-label-icon-color-white);
+  color: var(--mod-badge-label-icon-color-white,
+                      var(--spectrum-badge-label-icon-color-white));
 
   &--no-label {
     /* icon without label has identical padding left and right */
-    padding-inline-start: var(--spectrum-badge-icon-only-spacing-horizontal);
-    padding-inline-end: var(--spectrum-badge-icon-only-spacing-horizontal);
+    padding-inline-start: var(--mod-badge-icon-only-spacing-horizontal,
+                      var(--spectrum-badge-icon-only-spacing-horizontal));
+    padding-inline-end: var(--mod-badge-icon-only-spacing-horizontal,
+                      var(--spectrum-badge-icon-only-spacing-horizontal));
   }
 
   /* black text and icon variant */
   .spectrum-Badge--black-text & {
-    color: var(--spectrum-badge-label-icon-color-black);
+    color: var(--mod-badge-label-icon-color-black,
+                      var(--spectrum-badge-label-icon-color-black));
   }
 }
