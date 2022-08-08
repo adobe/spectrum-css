@@ -51,6 +51,12 @@ governing permissions and limitations under the License.
   --spectrum-divider-background-color: var(--spectrum-divider-background-color-large);
 }
 
+/* windows high contrast mode */
+@media (forced-colors: active) {
+  .spectrum-Divider {
+    --spectrum-divider-background-color: CanvasText;
+  }
+}
 
 .spectrum-Divider {
   block-size:  var(--mod-divider-thickness,
