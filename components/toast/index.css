@@ -37,7 +37,7 @@ governing permissions and limitations under the License.
 
   --spectrum-toast-spacing-text-to-action-button-horizontal: var(--spectrum-spacing-300);
 
-  --spectrum-toast-spacing-close-button: var(--spectrum-spacing-300);
+  --spectrum-toast-spacing-close-button: var(--spectrum-spacing-100);
   --spectrum-toast-spacing-edge-to-text-to-action-button-vertical: var(--spectrum-spacing-100);
 
   /* Color */
@@ -185,7 +185,7 @@ governing permissions and limitations under the License.
   }
 
   & + .spectrum-Toast-buttons {
-    padding-inline-start: var(--mod-toast-spacing-start-edge-to-text-and-icon, var(--spectrum-toast-spacing-start-edge-to-text-and-icon));
+    padding-inline-start: var(--mod-toast-spacing-close-button, var(--spectrum-toast-spacing-close-button));
 
     border-inline-start-width: 1px;
     border-inline-start-style: solid;
