@@ -94,7 +94,70 @@ governing permissions and limitations under the License.
   max-inline-size: var(--mod-progressbar-max-size, var(--spectrum-progressbar-max-size));
   min-inline-size: var(--mod-progressbar-min-size, var(--spectrum-progressbar-min-size));
 
+  /* Label and Percentage */
+  .spectrum-ProgressBar-label,
+  .spectrum-ProgressBar-percentage {
+    text-align: start;
+    margin-block-start: var(--mod-progressbar-spacing-top-to-text, var(--spectrum-progressbar-spacing-top-to-text));
+    margin-block-end: var(--mod-progressbar-spacing-label-to-progressbar, var(--spectrum-progressbar-spacing-label-to-progressbar));
+
+    line-height: var(--mod-progressbar-line-height, var(--spectrum-progressbar-line-height));
+
+    &:lang(ja),
+    &:lang(zh),
+    &:lang(ko) {
+      line-height: var(--spectrum-progressbar-line-height-cjk, var(--mod-progressbar-line-height, var(--spectrum-progressbar-line-height)));
+    }
+
+    color: var(--mod-progressbar-text-color, var(--spectrum-progressbar-text-color));
+  }
+
+  /* Label */
+  .spectrum-ProgressBar-label {
+    flex: 1 1 0%;
+  }
+
+  /* Percentage */
+  .spectrum-ProgressBar-percentage {
+    align-self: flex-start;
+    margin-inline-start: var(--mod-progressbar-spacing-label-to-text, var(--spectrum-progressbar-spacing-label-to-text));
+  }
+
+  /* Track */
+  .spectrum-ProgressBar-track {
+    /* Visually apply border radius to child elements */
+    overflow: hidden;
+    inline-size: 100%;
+    block-size: var(--mod-progressbar-thickness, var(--spectrum-progressbar-thickness));
+    border-radius: var(--spectrum-progressbar-corner-radius);
+    z-index: 1; /* to fix a weird webkit bug with rounded corners and masking */
+  
+    background: var(--mod-progressbar-track-color, var(--spectrum-progressbar-track-color));
+  }
+  
+  /* Fill */
+  .spectrum-ProgressBar-fill {
+    border: none;
+    block-size: var(--mod-progressbar-thickness, var(--spectrum-progressbar-thickness));
+  
+    transition: width 1s;
+  
+    
+    background: var(--mod-progressbar-fill-color, var(--spectrum-progressbar-fill-color));
+  }
+
+  &--indeterminate .spectrum-ProgressBar-fill {
+    /* TODO review */
+    inline-size: var(--mod-progressbar-fill-inline-size-indeterminate, var(--spectrum-progressbar-fill-inline-size-indeterminate));
+    position: relative;
+    /* TODO review */
+    animation-timing-function: var(--mod-progressbar-animation-ease-in-out-indeterminate, var(--spectrum-progressbar-animation-ease-in-out-indeterminate));
+
+    will-change: transform;
+  }
+
   /* Variants  */
+  /* Side Label */
   &--sideLabel {
     display: inline-flex;
     flex-flow: row;
@@ -119,6 +182,7 @@ governing permissions and limitations under the License.
     }
   }
 
+  /* Static White */
   &--staticWhite {
     .spectrum-ProgressBar-fill {
       color: var(--mod-progressbar-label-and-value-white, var(--spectrum-progressbar-label-and-value-white));
@@ -134,66 +198,10 @@ governing permissions and limitations under the License.
       background-color: var(--spectrum-progressbar-track-color-white);
     }
   }
- }
-
-.spectrum-ProgressBar-track {
-  /* Visually apply border radius to child elements */
-  overflow: hidden;
-  inline-size: 100%;
-  block-size: var(--mod-progressbar-thickness, var(--spectrum-progressbar-thickness));
-  border-radius: var(--spectrum-progressbar-corner-radius);
-  z-index: 1; /* to fix a weird webkit bug with rounded corners and masking */
-
-  background: var(--mod-progressbar-track-color, var(--spectrum-progressbar-track-color));
 }
 
-.spectrum-ProgressBar-fill {
-  border: none;
-  block-size: var(--mod-progressbar-thickness, var(--spectrum-progressbar-thickness));
+/* Animations  */
 
-  transition: width 1s;
-
-  
-  background: var(--mod-progressbar-fill-color, var(--spectrum-progressbar-fill-color));
-}
-
-.spectrum-ProgressBar-label,
-.spectrum-ProgressBar-percentage {
-  text-align: start;
-  margin-block-start: var(--mod-progressbar-spacing-top-to-text, var(--spectrum-progressbar-spacing-top-to-text));
-  margin-block-end: var(--mod-progressbar-spacing-label-to-progressbar, var(--spectrum-progressbar-spacing-label-to-progressbar));
-
-  line-height: var(--mod-progressbar-line-height, var(--spectrum-progressbar-line-height));
-
-  &:lang(ja),
-  &:lang(zh),
-  &:lang(ko) {
-    line-height: var(--spectrum-progressbar-line-height-cjk, var(--mod-progressbar-line-height, var(--spectrum-progressbar-line-height)));
-  }
-
-  color: var(--mod-progressbar-text-color, var(--spectrum-progressbar-text-color));
-}
-
-.spectrum-ProgressBar-label {
-  flex: 1 1 0%;
-}
-
-.spectrum-ProgressBar-percentage {
-  align-self: flex-start;
-  margin-inline-start: var(--mod-progressbar-spacing-label-to-text, var(--spectrum-progressbar-spacing-label-to-text));
-}
-
-.spectrum-ProgressBar--indeterminate .spectrum-ProgressBar-fill {
-  /* TODO review */
-  inline-size: var(--mod-progressbar-fill-inline-size-indeterminate, var(--spectrum-progressbar-fill-inline-size-indeterminate));
-  position: relative;
-  /* TODO review */
-  animation-timing-function: var(--mod-progressbar-animation-ease-in-out-indeterminate, var(--spectrum-progressbar-animation-ease-in-out-indeterminate));
-
-  will-change: transform;
-}
-
-/* TODO look into modifier reuse and moving complexity to token definitions */
 [dir="ltr"] .spectrum-ProgressBar--indeterminate .spectrum-ProgressBar-fill {
   animation: indeterminate-loop-ltr
              var(--mod-progressbar-animation-duration-indeterminate, var(--spectrum-progressbar-animation-duration-indeterminate)) infinite;
