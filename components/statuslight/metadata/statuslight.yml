@@ -77,12 +77,6 @@ examples:
     status: Verified
     markup: |
       <div class="spectrum-StatusLight spectrum-StatusLight--sizeS spectrum-StatusLight--negative">Rejected</div>
-  - id: statuslight-disabled
-    name: Disabled
-    status: Verified
-    description: The disabled state of Status Light.
-    markup: |
-      <div class="spectrum-StatusLight spectrum-StatusLight--sizeS is-disabled">Disabled</div>
   - id: statuslight-active
     name: Active
     status: Deprecated
