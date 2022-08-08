@@ -77,10 +77,3 @@ examples:
     status: Verified
     markup: |
       <div class="spectrum-StatusLight spectrum-StatusLight--sizeS spectrum-StatusLight--negative">Rejected</div>
-  - id: statuslight-active
-    name: Active
-    status: Deprecated
-    details: Use the `info` variant instead
-    description: The active variant of Status Light
-    markup: |
-      <div class="spectrum-StatusLight spectrum-StatusLight--sizeS spectrum-StatusLight--active">Active</div>
