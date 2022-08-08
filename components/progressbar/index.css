@@ -124,7 +124,7 @@ governing permissions and limitations under the License.
     }
   }
 
-  &--overBackground {
+  &--staticWhite {
     .spectrum-ProgressBar-fill {
       color: var(--mod-progressbar-label-and-value-white, var(--spectrum-progressbar-label-and-value-white));
       background: var(--mod-progressbar-fill-color-white, var(--spectrum-progressbar-fill-color-white));
