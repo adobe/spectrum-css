@@ -11,6 +11,10 @@ governing permissions and limitations under the License.
 */
 
 .spectrum-StatusLight {
+  /* Static tokens */
+  --spectrum-statuslight-corner-radius: 50%;
+
+  /* Size */
   --spectrum-statuslight-height: var(--spectrum-component-height-100);
   --spectrum-statuslight-dot-size: var(--spectrum-status-light-dot-size-medium);
   --spectrum-statuslight-line-height: var(--spectrum-line-height-100);
@@ -148,7 +152,7 @@ governing permissions and limitations under the License.
     display: inline-block;
     inline-size: var(--spectrum-statuslight-dot-size);
     block-size: var(--spectrum-statuslight-dot-size);
-    /* border-radius: var(--spectrum-statuslight-info-dot-border-radius); */
+    border-radius: var(--spectrum-statuslight-corner-radius);
 
     /* margin-block: var(--spectrum-statuslight-info-dot-resolved-margin-top) var(--spectrum-global-dimension-size-0); */
     margin-block: var(--spectrum-statuslight-spacing-top-to-dot);
