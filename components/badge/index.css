@@ -11,25 +11,23 @@ governing permissions and limitations under the License.
 */
 
 .spectrum-Badge {
-  /*** GENERAL STYLES applicable to all t-shirt sizes and all themes ***/
-
-  /* badge styling */
+  /* badge styling for all t-shirt sizes and all themes */
   --spectrum-badge-corner-radius: var(--spectrum-corner-radius-100);
 
-  /* label text styles */
+  /* label text styles for all t-shirt sizes and all themes */
   --spectrum-badge-line-height: var(--spectrum-line-height-100);
   --spectrum-badge-cjk-line-height: var(--spectrum-CJK-line-height-100);
 
-  /* text and icon color default white */
+  /* text and icon color default white for all t-shirt sizes and all themes */
   --spectrum-badge-label-icon-color-white: var(--spectrum-white);
 
-  /* text and icon color black */
+  /* text and icon color black for all t-shirt sizes and all themes */
   --spectrum-badge-label-icon-color-black: var(--spectrum-black);
 
-  /* background color default */
+  /* background color default for all t-shirt sizes and all themes */
   --spectrum-badge-background-color-default: var(--spectrum-neutral-subdued-background-color-default);
 
-  /* background colors */
+  /* background colors for all t-shirt sizes and all themes */
   --spectrum-badge-background-color-default: var(--spectrum-neutral-subdued-background-color-default);
   --spectrum-badge-background-color-accent: var(--spectrum-accent-background-color-default);
   --spectrum-badge-background-color-informative: var(--spectrum-informative-background-color-default);
@@ -127,6 +125,12 @@ governing permissions and limitations under the License.
   --spectrum-badge-icon-only-spacing-horizontal: var(--spectrum-component-edge-to-visual-only-300);
 }
 
+/* windows high contrast mode */
+@media (forced-colors: active) {
+  .spectrum-Badge {
+    border-color: CanvasText;
+  }
+}
 
 .spectrum-Badge {
   min-block-size: var(--mod-badge-height,
@@ -144,6 +148,7 @@ governing permissions and limitations under the License.
 
   border-radius: var(--mod-badge-corner-radius,
                     var(--spectrum-badge-corner-radius));
+  border: 1px solid transparent;
 
   background: var(--mod-badge-background-color-default,
                   var(--spectrum-badge-background-color-default));
