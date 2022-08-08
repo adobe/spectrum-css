@@ -16,12 +16,12 @@ governing permissions and limitations under the License.
 
   --spectrum-progressbar-animation-duration-indeterminate: 1000ms;
   --spectrum-progressbar-fill-inline-size-indeterminate: 70%;
-  --spectrum-progressbar-size: 192px;
+  --spectrum-progressbar-size-default: 192px;
 
   /* Size */
   /* Review inclusivity */
-  --spectrum-progressbar-min-width: var(--spectrum-progress-bar-minimum-width);
-  /* --spectrum-progressbar-max-width: var(--spectrum-progress-bar-maximum-width); */
+  --spectrum-progressbar-min-size: var(--spectrum-progress-bar-minimum-width);
+  --spectrum-progressbar-max-size: var(--spectrum-progress-bar-maximum-width);
 
   --spectrum-progressbar-font-size: var(--spectrum-font-size-75);
 
@@ -93,23 +93,21 @@ governing permissions and limitations under the License.
   flex-flow: row wrap;
   justify-content: space-between;
   align-items: center;
-  /* Review */
-  inline-size: var(--mod-progressbar-size, var(--spectrum-progressbar-size));
-  /* max-inline-size: var(--mod-progressbar-max-width, var(--spectrum-progressbar-max-width)); */
+  font-size: var(--mod-progressbar-font-size, var(--spectrum-progressbar-font-size));
   vertical-align: top;
 
-  font-size: var(--mod-progressbar-font-size, var(--spectrum-progressbar-font-size));
+  inline-size: var(--mod-progressbar-size-default, var(--spectrum-progressbar-size-default));
+  max-inline-size: var(--mod-progressbar-max-size, var(--spectrum-progressbar-max-size));
+  min-inline-size: var(--mod-progressbar-min-size, var(--spectrum-progressbar-min-size));
 
   /* Variants  */
   &--sideLabel {
     display: inline-flex;
     flex-flow: row;
     justify-content: space-between;
-    inline-size: auto;
-  
+
     .spectrum-ProgressBar-track {
-      min-width: var(--mod-progressbar-size, var(--spectrum-progressbar-size));
-      flex: 1 1 var(--mod-progressbar-size, var(--spectrum-progressbar-size));
+      flex: 1 1 var(--mod-progressbar-size-default, var(--spectrum-progressbar-size-default));
     }
   
     .spectrum-ProgressBar-label {
@@ -227,7 +225,7 @@ governing permissions and limitations under the License.
   }
   to {
     /* TODO review */
-    transform: translate(var(--spectrum-progressbar-size));
+    transform: translate(var(--spectrum-progressbar-size-default));
   }
 }
 
@@ -236,6 +234,6 @@ governing permissions and limitations under the License.
     transform: translate(var(--spectrum-progressbar-fill-inline-size-indeterminate));
   }
   to {
-    transform: translate(calc(-1 * var(--spectrum-progressbar-size)));
+    transform: translate(calc(-1 * var(--spectrum-progressbar-size-default)));
   }
 }
