@@ -13,10 +13,12 @@ governing permissions and limitations under the License.
 .spectrum-ProgressBar {
   /* Hardcoded tokens */
   --spectrum-progressbar-animation-ease-in-out-indeterminate: cubic-bezier(.45, 0, .40, 1);
-
   --spectrum-progressbar-animation-duration-indeterminate: 1000ms;
+
   --spectrum-progressbar-fill-inline-size-indeterminate: 70%;
   --spectrum-progressbar-size-default: 192px;
+
+  --spectrum-progressbar-corner-radius: var(--spectrum-corner-radius-100);
 
   /* Size */
   --spectrum-progressbar-font-size: var(--spectrum-font-size-75);
@@ -139,8 +141,7 @@ governing permissions and limitations under the License.
   overflow: hidden;
   inline-size: 100%;
   block-size: var(--mod-progressbar-thickness, var(--spectrum-progressbar-thickness));
-  /* border-radius: var(--spectrum-progressbar-border-radius); */
-  border-radius: 5px;
+  border-radius: var(--spectrum-progressbar-corner-radius);
   z-index: 1; /* to fix a weird webkit bug with rounded corners and masking */
 
   background: var(--mod-progressbar-track-color, var(--spectrum-progressbar-track-color));
