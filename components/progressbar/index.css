@@ -25,8 +25,8 @@ governing permissions and limitations under the License.
 
   --spectrum-progressbar-font-size: var(--spectrum-font-size-75);
 
-  /* --spectrum-progressbar-line-height: var(--spectrum-line-height-100); */
-  /* --spectrum-progressbar-line-height-cjk: var(--spectrum-CJK-line-height-100); */
+  --spectrum-progressbar-line-height: var(--spectrum-line-height-100);
+  --spectrum-progressbar-line-height-cjk: var(--spectrum-CJK-line-height-100);
 
   --spectrum-progressbar-thickness: var(--spectrum-progress-bar-thickness-medium);
 
@@ -184,6 +184,14 @@ governing permissions and limitations under the License.
   text-align: start;
   margin-block-start: var(--mod-progressbar-spacing-top-to-text, var(--spectrum-progressbar-spacing-top-to-text));
   margin-block-end: var(--mod-progressbar-spacing-label-to-progressbar, var(--spectrum-progressbar-spacing-label-to-progressbar));
+
+  line-height: var(--mod-progressbar-line-height, var(--spectrum-progressbar-line-height));
+
+  &:lang(ja),
+  &:lang(zh),
+  &:lang(ko) {
+    line-height: var(--spectrum-progressbar-line-height-cjk, var(--mod-progressbar-line-height, var(--spectrum-progressbar-line-height)));
+  }
 
   color: var(--mod-progressbar-text-color, var(--spectrum-progressbar-text-color));
 }
