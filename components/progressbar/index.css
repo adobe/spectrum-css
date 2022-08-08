@@ -15,7 +15,7 @@ governing permissions and limitations under the License.
   --spectrum-progressbar-animation-ease-in-out-indeterminate: cubic-bezier(.45, 0, .40, 1);
   --spectrum-progressbar-animation-duration-indeterminate: 1000ms;
 
-  --spectrum-progressbar-fill-inline-size-indeterminate: 70%;
+  --spectrum-progressbar-fill-size-indeterminate: 70%;
   --spectrum-progressbar-size-default: 192px;
 
   --spectrum-progressbar-corner-radius: var(--spectrum-corner-radius-100);
@@ -214,20 +214,19 @@ governing permissions and limitations under the License.
 @keyframes indeterminate-loop-ltr {
   from {
     transform: translate(
-      calc(-1 * var(--spectrum-progressbar-fill-inline-size-indeterminate))
+      calc(-1 * var(--mod-progressbar-fill-size-indeterminate, var(--spectrum-progressbar-fill-size-indeterminate)))
     );
   }
   to {
-    /* TODO review */
-    transform: translate(var(--spectrum-progressbar-size-default));
+    transform: translate(var(--mod-progressbar-size-default, var(--spectrum-progressbar-size-default)));
   }
 }
 
 @keyframes indeterminate-loop-rtl {
   from {
-    transform: translate(var(--spectrum-progressbar-fill-inline-size-indeterminate));
+    transform: translate(var(--mod-progressbar-size-default, var(--spectrum-progressbar-fill-size-indeterminate)));
   }
   to {
-    transform: translate(calc(-1 * var(--spectrum-progressbar-size-default)));
+    transform: translate(calc(-1 * var(--mod-progressbar-size-default, var(--spectrum-progressbar-size-default))));
   }
 }
