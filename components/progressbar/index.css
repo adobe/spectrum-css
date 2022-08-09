@@ -142,8 +142,7 @@ governing permissions and limitations under the License.
     inline-size: 100%;
     block-size: var(--mod-progressbar-thickness, var(--spectrum-progressbar-thickness));
     border-radius: var(--spectrum-progressbar-corner-radius);
-    z-index: 1; /* to fix a weird webkit bug with rounded corners and masking */
-  
+
     background: var(--highcontrast-progressbar-track-color, var(--mod-progressbar-track-color, var(--spectrum-progressbar-track-color)));
   }
   
