@@ -1,5 +1,5 @@
 /*
-Copyright 2020 Adobe. All rights reserved.
+Copyright 2022 Adobe. All rights reserved.
 This file is licensed to you under the Apache License, Version 2.0 (the "License");
 you may not use this file except in compliance with the License. You may obtain a copy
 of the License at http://www.apache.org/licenses/LICENSE-2.0
@@ -10,10 +10,12 @@ OF ANY KIND, either express or implied. See the License for the specific languag
 governing permissions and limitations under the License.
 */
 
-@import '../overlay/index.css';
+/* @import '../overlay/index.css'; */
+/* @import "../vars/css/components/overlay.css"; */
+/* @import "../vars/css/components/overlay/index.css";  */;
 
 .spectrum-Popover {
-  --spectrum-popover-target-offset: 13px;
+  /* --spectrum-popover-target-offset: 13px;
   --spectrum-popover-dialog-padding: 30px 29px;
   --spectrum-popover-dialog-min-width: 270px;
 
@@ -21,77 +23,107 @@ governing permissions and limitations under the License.
   --spectrum-popover-min-height: var(--spectrum-global-dimension-size-400);
 
   /* Popover tip positioning for left/right oriented popovers (-11px/-25px) */
-  --spectrum-popover-tip-horizontal-offset: calc(var(--spectrum-global-dimension-size-250) * -1);
+  /* --spectrum-popover-tip-horizontal-offset: calc(var(--spectrum-global-dimension-size-250) * -1); */
   /* Popover tip positioning for top/bottom oriented popovers (6px/8px) */
-  --spectrum-popover-tip-vertical-offset: var(--spectrum-global-dimension-size-75);
+  /* --spectrum-popover-tip-vertical-offset: var(--spectrum-global-dimension-size-75); */
 
-  --spectrum-popover-tip-triangle-top-offset: calc(var(--spectrum-global-dimension-size-225) * -1);
+  /*--spectrum-popover-tip-triangle-top-offset: calc(var(--spectrum-global-dimension-size-225) * -1); */
+
+  --spectrum-popover-corner-radius: var(--spectrum-corner-radius-100);
+
+  --spectrum-popover-tip-width: var(--spectrum-popover-tip-width);
+  --spectrum-popover-tip-height: var(--spectrum-popover-tip-height);
+
+  --spectrum-popover-spacing-vertical: var(--spectrum-popover-top-to-content-area);
+  --spectrum-popover-spacing-to-source: var(--spectrum-spacing-100);
+  --spectrum-popover-spacing-container: var(--spectrum-spacing-100);
+
+  --spectrum-popover-background-color: var(--spectrum-background-layer-2-color);
+  --spectrum-popover-border-color: var(--spectrum-gray-400);
+  --spectrum-popover-shadow-horizontal: var(--spectrum-drop-shadow-x);
+  --spectrum-popover-shadow-vertical: var(--spectrum-drop-shadow-y);
+  --spectrum-popover-shadow-blur: var(--spectrum-drop-shadow-blur);
+  --spectrum-popover-shadow-color: var(--spectrum-drop-shadow-color);
 }
 
 .spectrum-Popover {
-  @inherit: %spectrum-overlay;
+  /* @inherit: %spectrum-overlay; */
 
   /* Be a flexbox to allow a full sized content area that scrolls */
   display: inline-flex;
   flex-direction: column;
   box-sizing: border-box;
 
-  min-width: var(--spectrum-popover-min-width);
-  min-height: var(--spectrum-popover-min-height);
+  /* min-width: var(--spectrum-popover-min-width);
+  min-height: var(--spectrum-popover-min-height); */
 
   position: absolute;
 
   border-style: solid;
-  border-width: var(--spectrum-popover-border-size);
-  border-radius: var(--spectrum-popover-border-radius);
+  /* border-width: var(--spectrum-popover-border-size); */
+  border-radius: var(--spectrum-popover-corner-radius);
 
   outline: none; /* Hide focus outline */
   box-sizing: border-box;
 
+  padding: var(--spectrum-popover-spacing-vertical) 0;
+  margin: var(--spectrum-popover-spacing-container);
+
+  border-color: var(--spectrum-popover-border-color);
+  background-color: var(--spectrum-popover-background-color);
+
+  box-shadow: var(--spectrum-popover-shadow-horizontal) var(--spectrum-popover-shadow-vertical) var(--spectrum-popover-shadow-blur) var(--spectrum-popover-shadow-color);
+
   &.is-open {
-    @inherit: %spectrum-overlay--open;
+    /* @inherit: %spectrum-overlay--open; */
   }
 }
 
 .spectrum-Popover-tip {
   position: absolute;
-  --spectrum-popover-tip-size: var(--spectrum-popover-tip-width);
-  --spectrum-popover-tip-borderWidth: var(--spectrum-popover-border-size);
+  width: var(--spectrum-popover-tip-width);
+  height: var(--spectrum-popover-tip-height);
+
+  /*--spectrum-popover-tip-borderWidth: var(--spectrum-popover-border-size); */
   /* https://stackoverflow.com/questions/44170229/how-to-prevent-half-pixel-svg-shift-on-high-pixel-ratio-devices-retina */
   -webkit-transform: translate(0, 0);
 
   .spectrum-Popover-tip-triangle {
     stroke-linecap: square;
     stroke-linejoin: miter;
-    stroke-width: var(--spectrum-popover-border-size);
+    stroke: var(--spectrum-popover-border-color);
+    stroke-width: inherit;
+    fill: var(--spectrum-popover-background-color);
   }
 }
 
 .spectrum-Popover--dialog {
-  min-width: var(--spectrum-popover-dialog-min-width);
-  padding: var(--spectrum-popover-dialog-padding);
+  /* min-width: var(--spectrum-popover-dialog-min-width);
+  padding: var(--spectrum-popover-dialog-padding); */
 }
 
+/* left popover with tip pointing right */
 .spectrum-Popover--left {
   &.spectrum-Popover--withTip {
-    margin-right: var(--spectrum-popover-target-offset);
+    transform: translateX(calc(var(--spectrum-popover-spacing-to-source) * -1));
   }
 
   &.is-open {
-    @inherit: %spectrum-overlay--left--open;
+    /* @inherit: %spectrum-overlay--left--open; */
   }
   .spectrum-Popover-tip {
     left: 100%;
   }
 }
 
+/* right popover with tip pointing left */
 .spectrum-Popover--right {
   &.spectrum-Popover--withTip {
-    margin-left: var(--spectrum-popover-target-offset);
+    transform: translateX(var(--spectrum-popover-spacing-to-source));
   }
 
   &.is-open {
-    @inherit: %spectrum-overlay--right--open;
+    /* @inherit: %spectrum-overlay--right--open; */
   }
   .spectrum-Popover-tip {
     right: 100%;
@@ -99,22 +131,24 @@ governing permissions and limitations under the License.
   }
 }
 
-/* Center the tip by default */
+/* left and right popover tip */
 .spectrum-Popover--left,
 .spectrum-Popover--right {
   .spectrum-Popover-tip {
-    top: 50%;
-    margin-top: calc(var(--spectrum-global-dimension-size-150) * -1);
+    top: 0;
+    bottom: 0;
+    margin: auto;
   }
 }
 
+/* bottom popover with tip pointing up */
 .spectrum-Popover--bottom {
   &.spectrum-Popover--withTip {
-    margin-top: var(--spectrum-popover-target-offset);
+    transform: translateY(var(--spectrum-popover-spacing-to-source));
   }
 
   &.is-open {
-    @inherit: %spectrum-overlay--bottom--open;
+    /* @inherit: %spectrum-overlay--bottom--open; */
   }
   .spectrum-Popover-tip {
     bottom: 100%;
@@ -122,24 +156,26 @@ governing permissions and limitations under the License.
   }
 }
 
+/* top popover with tip pointing down */
 .spectrum-Popover--top {
   &.spectrum-Popover--withTip {
-    margin-bottom: var(--spectrum-popover-target-offset);
+    transform: translateY(calc(var(--spectrum-popover-spacing-to-source) * -1));
   }
 
   &.is-open {
-    @inherit: %spectrum-overlay--top--open;
+    /* @inherit: %spectrum-overlay--top--open; */
   }
   .spectrum-Popover-tip {
     top: 100%;
   }
 }
 
-/* Center the tip by default */
+/* top and bottom popover tip */
 .spectrum-Popover--bottom,
 .spectrum-Popover--top {
   .spectrum-Popover-tip {
-    left: 50%;
-    margin-left: calc(var(--spectrum-global-dimension-size-150) * -1);
+    right: 0;
+    left: 0;
+    margin: auto;
   }
 }
