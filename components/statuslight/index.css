@@ -13,6 +13,7 @@ governing permissions and limitations under the License.
 .spectrum-StatusLight {
   /* Static tokens */
   --spectrum-statuslight-corner-radius: 50%;
+  --spectrum-statuslight-font-weight: 400;
 
   /* Size */
   --spectrum-statuslight-height: var(--spectrum-component-height-100);
@@ -24,11 +25,9 @@ governing permissions and limitations under the License.
 
   /* Space */
   --spectrum-statuslight-spacing-dot-to-label: var(--spectrum-text-to-visual-100);
-  /* --spectrum-statuslight-spacing-top-to-dot: var(--spectrum-status-light-top-to-dot-medium); */
+  --spectrum-statuslight-spacing-top-to-dot: var(--spectrum-status-light-top-to-dot-medium);
   --spectrum-statuslight-spacing-top-to-label: var(--spectrum-component-top-to-text-100);
   /* --spectrum-statuslight-spacing-bottom-to-label: var(--spectrum-component-bottom-to-text-100); */
-
-  --spectrum-statuslight-spacing-top-to-dot: calc(var(--spectrum-status-light-top-to-dot-medium) - var(--spectrum-component-top-to-text-100));
 
   /* Color */
   --spectrum-statuslight-subdued-content-color-default: var(--spectrum-neutral-subdued-content-color-default);
@@ -121,13 +120,12 @@ governing permissions and limitations under the License.
 
   min-height: var(--spectrum-statuslight-height);
 
-  /* padding-block: var(--spectrum-statuslight-info-text-padding-top) var(--spectrum-statuslight-info-text-padding-bottom); */
   padding-block: var(--spectrum-statuslight-spacing-top-to-label);
   padding-inline: 0;
   box-sizing: border-box;
 
   font-size: var(--spectrum-statuslight-font-size);
-  /* font-weight: var(--spectrum-statuslight-info-text-font-weight); */
+  font-weight: var(--spectrum-statuslight-font-weight);
 
   line-height: var(--spectrum-statuslight-line-height);
 
@@ -149,8 +147,7 @@ governing permissions and limitations under the License.
     block-size: var(--spectrum-statuslight-dot-size);
     border-radius: var(--spectrum-statuslight-corner-radius);
 
-    /* margin-block: var(--spectrum-statuslight-info-dot-resolved-margin-top) var(--spectrum-global-dimension-size-0); */
-    margin-block-start: var(--spectrum-statuslight-spacing-top-to-dot);
+    margin-block-start: calc(var(--spectrum-statuslight-spacing-top-to-dot) - var(--spectrum-statuslight-spacing-top-to-label));
     margin-inline-end: var(--spectrum-statuslight-spacing-dot-to-label);
 
     /* support high contrast/forced-color-adjust mode for dot */
