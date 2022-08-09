@@ -14,24 +14,24 @@ examples:
         <div class="spectrum-Examples-item">
           <h4 class="spectrum-Heading spectrum-Heading--sizeXS spectrum-Examples-itemHeading">S</h4>
 
-          <div class="spectrum-StatusLight spectrum-StatusLight--sizeS spectrum-StatusLight--info"><span class="spectrum-StatusLight-label">Small</span></div>
+          <div class="spectrum-StatusLight spectrum-StatusLight--sizeS spectrum-StatusLight--info">Small</div>
         </div>
         <div class="spectrum-Examples-item">
           <h4 class="spectrum-Heading spectrum-Heading--sizeXS spectrum-Examples-itemHeading">M (default)</h4>
 
-          <div class="spectrum-StatusLight spectrum-StatusLight--sizeM spectrum-StatusLight--info"><span class="spectrum-StatusLight-label">Medium</span></div>
+          <div class="spectrum-StatusLight spectrum-StatusLight--sizeM spectrum-StatusLight--info">Medium</div>
         </div>
 
         <div class="spectrum-Examples-item">
           <h4 class="spectrum-Heading spectrum-Heading--sizeXS spectrum-Examples-itemHeading">L</h4>
 
-          <div class="spectrum-StatusLight spectrum-StatusLight--sizeL spectrum-StatusLight--info"><span class="spectrum-StatusLight-label">Large</span></div>
+          <div class="spectrum-StatusLight spectrum-StatusLight--sizeL spectrum-StatusLight--info">Large</div>
         </div>
 
         <div class="spectrum-Examples-item">
           <h4 class="spectrum-Heading spectrum-Heading--sizeXS spectrum-Examples-itemHeading">XL</h4>
 
-          <div class="spectrum-StatusLight spectrum-StatusLight--sizeXL spectrum-StatusLight--info"><span class="spectrum-StatusLight-label">Extra Large</span></div>
+          <div class="spectrum-StatusLight spectrum-StatusLight--sizeXL spectrum-StatusLight--info">Extra Large</div>
         </div>
       </div>
   - id: statuslight-wrapping
@@ -44,6 +44,13 @@ examples:
     name: Colors
     status: Verified
     markup: |
+      <div class="spectrum-StatusLight spectrum-StatusLight--sizeS spectrum-StatusLight--gray">Gray Status</div>
+      <div class="spectrum-StatusLight spectrum-StatusLight--sizeS spectrum-StatusLight--red">Red Status</div>
+      <div class="spectrum-StatusLight spectrum-StatusLight--sizeS spectrum-StatusLight--orange">Orange Status</div>
+      <div class="spectrum-StatusLight spectrum-StatusLight--sizeS spectrum-StatusLight--green">Green Status</div>
+      <div class="spectrum-StatusLight spectrum-StatusLight--sizeS spectrum-StatusLight--cyan">Cyan Status</div>
+      <div class="spectrum-StatusLight spectrum-StatusLight--sizeS spectrum-StatusLight--blue">Blue Status</div>
+
       <div class="spectrum-StatusLight spectrum-StatusLight--sizeS spectrum-StatusLight--celery">Celery Status</div>
       <div class="spectrum-StatusLight spectrum-StatusLight--sizeS spectrum-StatusLight--yellow">Yellow Status</div>
       <div class="spectrum-StatusLight spectrum-StatusLight--sizeS spectrum-StatusLight--fuchsia">Fuchsia Status</div>
@@ -57,6 +64,11 @@ examples:
     status: Verified
     markup: |
       <div class="spectrum-StatusLight spectrum-StatusLight--sizeS spectrum-StatusLight--neutral">Paused</div>
+  - id: statuslight-accent
+    name: Accent
+    status: Verified
+    markup: |
+      <div class="spectrum-StatusLight spectrum-StatusLight--sizeS spectrum-StatusLight--accent">Accent</div>
   - id: statuslight-info
     name: Info
     status: Verified
