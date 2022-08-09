@@ -27,7 +27,7 @@ governing permissions and limitations under the License.
   --spectrum-statuslight-spacing-dot-to-label: var(--spectrum-text-to-visual-100);
   --spectrum-statuslight-spacing-top-to-dot: var(--spectrum-status-light-top-to-dot-medium);
   --spectrum-statuslight-spacing-top-to-label: var(--spectrum-component-top-to-text-100);
-  /* --spectrum-statuslight-spacing-bottom-to-label: var(--spectrum-component-bottom-to-text-100); */
+  --spectrum-statuslight-spacing-bottom-to-label: var(--spectrum-component-bottom-to-text-100);
 
   /* Color */
   --spectrum-statuslight-subdued-content-color-default: var(--spectrum-neutral-subdued-content-color-default);
@@ -63,7 +63,7 @@ governing permissions and limitations under the License.
   --spectrum-statuslight-spacing-dot-to-label: var(--spectrum-text-to-visual-75);
   --spectrum-statuslight-spacing-top-to-dot: var(--spectrum-status-light-top-to-dot-small);
   --spectrum-statuslight-spacing-top-to-label: var(--spectrum-component-top-to-text-75);
-  /* --spectrum-statuslight-spacing-bottom-to-label: var(--spectrum-component-bottom-to-text-75); */
+  --spectrum-statuslight-spacing-bottom-to-label: var(--spectrum-component-bottom-to-text-75);
 }
 
 .spectrum-StatusLight--sizeM {
@@ -75,7 +75,7 @@ governing permissions and limitations under the License.
   --spectrum-statuslight-spacing-dot-to-label: var(--spectrum-text-to-visual-100);
   --spectrum-statuslight-spacing-top-to-dot: var(--spectrum-status-light-top-to-dot-medium);
   --spectrum-statuslight-spacing-top-to-label: var(--spectrum-component-top-to-text-100);
-  /* --spectrum-statuslight-spacing-bottom-to-label: var(--spectrum-component-bottom-to-text-100); */
+  --spectrum-statuslight-spacing-bottom-to-label: var(--spectrum-component-bottom-to-text-100);
  }
 
 .spectrum-StatusLight--sizeL {
@@ -87,7 +87,7 @@ governing permissions and limitations under the License.
   --spectrum-statuslight-spacing-dot-to-label: var(--spectrum-text-to-visual-200);
   --spectrum-statuslight-spacing-top-to-dot: var(--spectrum-status-light-top-to-dot-large);
   --spectrum-statuslight-spacing-top-to-label: var(--spectrum-component-top-to-text-200);
-  /* --spectrum-statuslight-spacing-bottom-to-label: var(--spectrum-component-bottom-to-text-200); */
+  --spectrum-statuslight-spacing-bottom-to-label: var(--spectrum-component-bottom-to-text-200);
 }
 
 .spectrum-StatusLight--sizeXL {
@@ -99,7 +99,7 @@ governing permissions and limitations under the License.
   --spectrum-statuslight-spacing-dot-to-label: var(--spectrum-text-to-visual-300);
   --spectrum-statuslight-spacing-top-to-dot: var(--spectrum-status-light-top-to-dot-extra-large);
   --spectrum-statuslight-spacing-top-to-label: var(--spectrum-component-top-to-text-300);
-  /* --spectrum-statuslight-spacing-bottom-to-label: var(--spectrum-component-bottom-to-text-300); */
+  --spectrum-statuslight-spacing-bottom-to-label: var(--spectrum-component-bottom-to-text-300);
 }
 
 @media (forced-colors: active) {
@@ -120,7 +120,8 @@ governing permissions and limitations under the License.
 
   min-height: var(--spectrum-statuslight-height);
 
-  padding-block: var(--spectrum-statuslight-spacing-top-to-label);
+  padding-block-start: var(--spectrum-statuslight-spacing-top-to-label);
+  padding-block-end: var(--spectrum-statuslight-spacing-bottom-to-label);
   padding-inline: 0;
   box-sizing: border-box;
 
@@ -247,4 +248,3 @@ governing permissions and limitations under the License.
 .spectrum-StatusLight--magenta::before {
   background-color: var(--spectrum-statuslight-nonsemantic-magenta-color);
 }
-
