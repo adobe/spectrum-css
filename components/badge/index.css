@@ -188,24 +188,24 @@ governing permissions and limitations under the License.
   }
 
   /* fixed position variants with border radius 0 on the fixed edge of the component */
-  &--fixed-left {
-    border-top-left-radius: 0;
-    border-bottom-left-radius: 0;
+  &--fixed-inline-start {
+    border-start-start-radius: 0;
+    border-end-start-radius: 0;
   }
 
-  &--fixed-right {
-    border-top-right-radius: 0;
-    border-bottom-right-radius: 0;
+  &--fixed-inline-end {
+    border-start-end-radius: 0;
+    border-end-end-radius: 0;
   }
 
-  &--fixed-top {
-    border-top-left-radius: 0;
-    border-top-right-radius: 0;
+  &--fixed-block-start {
+    border-start-start-radius: 0;
+    border-start-end-radius: 0;
   }
 
-  &--fixed-bottom {
-    border-bottom-left-radius: 0;
-    border-bottom-right-radius: 0;
+  &--fixed-block-end {
+    border-end-start-radius: 0;
+    border-end-end-radius: 0;
   }
 }
 
