@@ -18,12 +18,6 @@ governing permissions and limitations under the License.
 
 /* Component tokens by t-shirt size */
 .spectrum-Checkbox {
-  /* Hardcoded properties */
-  --spectrum-checkbox-checkmark-size-small: 10px;
-  --spectrum-checkbox-checkmark-size-medium: 10px;
-  --spectrum-checkbox-checkmark-size-large: 10px;
-  --spectrum-checkbox-checkmark-size-extra-large: 12px;
-
   /* Color */
   --spectrum-checkbox-content-color-default: var(--spectrum-neutral-content-color-default);
   --spectrum-checkbox-content-color-hover: var(--spectrum-neutral-content-color-hover);
@@ -55,7 +49,6 @@ governing permissions and limitations under the License.
   --spectrum-checkbox-height: var(--spectrum-component-height-100);
   --spectrum-checkbox-control-size: var(--spectrum-checkbox-control-size-medium);
   --spectrum-checkbox-control-corner-radius: var(--spectrum-corner-radius-75);
-  --spectrum-checkbox-checkmark-size: var(--spectrum-checkbox-checkmark-size-medium);
 
   --spectrum-checkbox-focus-ring-gap: var(--spectrum-focus-ring-gap);
   --spectrum-checkbox-focus-ring-thickness: var(--spectrum-focus-ring-thickness);
@@ -74,7 +67,6 @@ governing permissions and limitations under the License.
 
   --spectrum-checkbox-height: var(--spectrum-component-height-75);
   --spectrum-checkbox-control-size: var(--spectrum-checkbox-control-size-small);
-  --spectrum-checkbox-checkmark-size: var(--spectrum-checkbox-checkmark-size-small);
 
   --spectrum-checkbox-top-to-text: var(--spectrum-component-top-to-text-75);
   --spectrum-checkbox-text-to-control: var(--spectrum-text-to-control-75);
@@ -85,7 +77,6 @@ governing permissions and limitations under the License.
 
   --spectrum-checkbox-height: var(--spectrum-component-height-100);
   --spectrum-checkbox-control-size: var(--spectrum-checkbox-control-size-medium);
-  --spectrum-checkbox-checkmark-size: var(--spectrum-checkbox-checkmark-size-medium);
 
   --spectrum-checkbox-top-to-text: var(--spectrum-component-top-to-text-100);
   --spectrum-checkbox-text-to-control: var(--spectrum-text-to-control-100);
@@ -96,7 +87,6 @@ governing permissions and limitations under the License.
 
   --spectrum-checkbox-height: var(--spectrum-component-height-200);
   --spectrum-checkbox-control-size: var(--spectrum-checkbox-control-size-large);
-  --spectrum-checkbox-checkmark-size: var(--spectrum-checkbox-checkmark-size-large);
 
   --spectrum-checkbox-top-to-text: var(--spectrum-component-top-to-text-200);
   --spectrum-checkbox-text-to-control: var(--spectrum-text-to-control-200);
@@ -107,7 +97,6 @@ governing permissions and limitations under the License.
 
   --spectrum-checkbox-height: var(--spectrum-component-height-300);
   --spectrum-checkbox-control-size: var(--spectrum-checkbox-control-size-extra-large);
-  --spectrum-checkbox-checkmark-size: var(--spectrum-checkbox-checkmark-size-extra-large);
 
   --spectrum-checkbox-top-to-text: var(--spectrum-component-top-to-text-300);
   --spectrum-checkbox-text-to-control: var(--spectrum-text-to-control-300);
@@ -511,6 +500,10 @@ governing permissions and limitations under the License.
 }
 
 .spectrum-Checkbox-box {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
   position: relative;
   box-sizing: border-box;
   inline-size: var(--mod-checkbox-control-size, var(--spectrum-checkbox-control-size));
@@ -568,26 +561,14 @@ governing permissions and limitations under the License.
 .spectrum-Checkbox-checkmark,
 .spectrum-Checkbox-partialCheckmark {
   color: var(--highcontrast-checkbox-background-color-default, var(--mode-checkbox-checkmark-color, var(--spectrum-checkbox-checkmark-color)));
-
-  position: absolute;
-  inset-block-start: 50%;
-  inset-inline-start: 50%;
-
   opacity: 0;
   transform: scale(0);
 
   transition: opacity var(--mod-checkbox-animation-duration, var(--spectrum-checkbox-animation-duration)) ease-in-out, transform var(--mod-checkbox-animation-duration, var(--spectrum-checkbox-animation-duration)) ease-in-out;
 }
 
-.spectrum-Checkbox-checkmark {
-  margin-block-start: calc(var(--mod-checkbox-checkmark-size, var(--spectrum-checkbox-checkmark-size)) / -2);
-  margin-inline-start: calc(var(--mod-checkbox-checkmark-size, var(--spectrum-checkbox-checkmark-size)) / -2);
-}
-
 .spectrum-Checkbox-partialCheckmark {
   display: none;
-  margin-block-start: calc(var(--mod-checkbox-checkmark-size, var(--spectrum-checkbox-checkmark-size)) / -2);
-  margin-inline-start: calc(var(--mod-checkbox-checkmark-size, var(--spectrum-checkbox-checkmark-size)) / -2);
 }
 
 /* Disabled */
