@@ -47,18 +47,17 @@ examples:
       <div class="spectrum-StatusLight spectrum-StatusLight--sizeS spectrum-StatusLight--gray">Gray Status</div>
       <div class="spectrum-StatusLight spectrum-StatusLight--sizeS spectrum-StatusLight--red">Red Status</div>
       <div class="spectrum-StatusLight spectrum-StatusLight--sizeS spectrum-StatusLight--orange">Orange Status</div>
+      <div class="spectrum-StatusLight spectrum-StatusLight--sizeS spectrum-StatusLight--yellow">Yellow Status</div>
+      <div class="spectrum-StatusLight spectrum-StatusLight--sizeS spectrum-StatusLight--chartreuse">Chartreuse Status</div>
+      <div class="spectrum-StatusLight spectrum-StatusLight--sizeS spectrum-StatusLight--celery">Celery Status</div>
       <div class="spectrum-StatusLight spectrum-StatusLight--sizeS spectrum-StatusLight--green">Green Status</div>
+      <div class="spectrum-StatusLight spectrum-StatusLight--sizeS spectrum-StatusLight--seafoam">Seafoam Status</div>
       <div class="spectrum-StatusLight spectrum-StatusLight--sizeS spectrum-StatusLight--cyan">Cyan Status</div>
       <div class="spectrum-StatusLight spectrum-StatusLight--sizeS spectrum-StatusLight--blue">Blue Status</div>
-
-      <div class="spectrum-StatusLight spectrum-StatusLight--sizeS spectrum-StatusLight--celery">Celery Status</div>
-      <div class="spectrum-StatusLight spectrum-StatusLight--sizeS spectrum-StatusLight--yellow">Yellow Status</div>
-      <div class="spectrum-StatusLight spectrum-StatusLight--sizeS spectrum-StatusLight--fuchsia">Fuchsia Status</div>
       <div class="spectrum-StatusLight spectrum-StatusLight--sizeS spectrum-StatusLight--indigo">Indigo Status</div>
-      <div class="spectrum-StatusLight spectrum-StatusLight--sizeS spectrum-StatusLight--seafoam">Seafoam Status</div>
-      <div class="spectrum-StatusLight spectrum-StatusLight--sizeS spectrum-StatusLight--chartreuse">Chartreuse Status</div>
-      <div class="spectrum-StatusLight spectrum-StatusLight--sizeS spectrum-StatusLight--magenta">Magenta Status</div>
       <div class="spectrum-StatusLight spectrum-StatusLight--sizeS spectrum-StatusLight--purple">Purple Status</div>
+      <div class="spectrum-StatusLight spectrum-StatusLight--sizeS spectrum-StatusLight--fuchsia">Fuchsia Status</div>
+      <div class="spectrum-StatusLight spectrum-StatusLight--sizeS spectrum-StatusLight--magenta">Magenta Status</div>
   - id: statuslight-neutral
     name: Neutral
     status: Verified
@@ -68,7 +67,7 @@ examples:
     name: Accent
     status: Verified
     markup: |
-      <div class="spectrum-StatusLight spectrum-StatusLight--sizeS spectrum-StatusLight--accent">Accent</div>
+      <div class="spectrum-StatusLight spectrum-StatusLight--sizeS spectrum-StatusLight--info">Accent</div>
   - id: statuslight-info
     name: Info
     status: Verified

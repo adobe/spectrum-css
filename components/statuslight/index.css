@@ -160,8 +160,22 @@ governing permissions and limitations under the License.
   font-style: italic;
 }
 
+/* Semantic Colors */
+
+.spectrum-StatusLight--neutral {
+  color: var(--spectrum-statuslight-subdued-content-color-default);
+
+  &::before {
+    background-color: var(--spectrum-statuslight-semantic-gray-color);
+  }
+}
+
 .spectrum-StatusLight--accent::before {
   background-color: var(--spectrum-statuslight-semantic-accent-color);
+}
+
+.spectrum-StatusLight--info::before {
+  background-color: var(--spectrum-statuslight-semantic-info-color);
 }
 
 .spectrum-StatusLight--negative::before {
@@ -176,17 +190,7 @@ governing permissions and limitations under the License.
   background-color: var(--spectrum-statuslight-semantic-positive-color);
 }
 
-.spectrum-StatusLight--info::before {
-  background-color: var(--spectrum-statuslight-semantic-info-color);
-}
-
-.spectrum-StatusLight--neutral {
-  color: var(--spectrum-statuslight-subdued-content-color-default);
-
-  &::before {
-    background-color: var(--spectrum-statuslight-semantic-gray-color);
-  }
-}
+/* Non-Semantic Colors */
 
 .spectrum-StatusLight--gray::before {
   background-color: var(--spectrum-statuslight-nonsemantic-gray-color);
@@ -200,8 +204,24 @@ governing permissions and limitations under the License.
   background-color: var(--spectrum-statuslight-nonsemantic-orange-color);
 }
 
+.spectrum-StatusLight--yellow::before {
+  background-color: var(--spectrum-statuslight-nonsemantic-yellow-color);
+}
+
+.spectrum-StatusLight--chartreuse::before {
+  background-color: var(--spectrum-statuslight-nonsemantic-chartreuse-color);
+}
+
+.spectrum-StatusLight--celery::before {
+  background-color: var(--spectrum-statuslight-nonsemantic-celery-color);
+}
+
 .spectrum-StatusLight--green::before {
   background-color: var(--spectrum-statuslight-nonsemantic-green-color);
+}
+
+.spectrum-StatusLight--seafoam::before {
+  background-color: var(--spectrum-statuslight-nonsemantic-seafoam-color);
 }
 
 .spectrum-StatusLight--cyan::before {
@@ -212,35 +232,19 @@ governing permissions and limitations under the License.
   background-color: var(--spectrum-statuslight-nonsemantic-blue-color);
 }
 
-.spectrum-StatusLight--celery::before {
-  background-color: var(--spectrum-statuslight-nonsemantic-celery-color);
+.spectrum-StatusLight--indigo::before {
+  background-color: var(--spectrum-statuslight-nonsemantic-indigo-color);
 }
 
-.spectrum-StatusLight--yellow::before {
-  background-color: var(--spectrum-statuslight-nonsemantic-yellow-color);
+.spectrum-StatusLight--purple::before {
+  background-color: var(--spectrum-statuslight-nonsemantic-purple-color);
 }
 
 .spectrum-StatusLight--fuchsia::before {
   background-color: var(--spectrum-statuslight-nonsemantic-fuchsia-color);
 }
 
-.spectrum-StatusLight--indigo::before {
-  background-color: var(--spectrum-statuslight-nonsemantic-indigo-color);
-}
-
-.spectrum-StatusLight--seafoam::before {
-  background-color: var(--spectrum-statuslight-nonsemantic-seafoam-color);
-}
-
-.spectrum-StatusLight--chartreuse::before {
-  background-color: var(--spectrum-statuslight-nonsemantic-chartreuse-color);
-}
-
 .spectrum-StatusLight--magenta::before {
   background-color: var(--spectrum-statuslight-nonsemantic-magenta-color);
-}
-
-.spectrum-StatusLight--purple::before {
-  background-color: var(--spectrum-statuslight-nonsemantic-purple-color);
 }
 
