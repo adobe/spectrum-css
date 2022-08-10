@@ -439,7 +439,17 @@ governing permissions and limitations under the License.
   padding: var(--spectrum-cssexample-padding-y) var(--spectrum-cssexample-padding-x);
 
   border-radius: var(--spectrum-cssexample-border-radius) var(--spectrum-cssexample-border-radius) 0 0;
+
+  &:has(> .spectrum-CSSExample-example-staticWhite) { 
+    background-color: var(--spectrum-docs-static-white-background-color);
+    border-color: var(--spectrum-docs-static-white-background-color);
+  }
+  &:has(> .spectrum-CSSExample-example-staticBlack) { 
+    background-color: var(--spectrum-docs-static-black-background-color);
+    border-color: var(--spectrum-docs-static-black-background-color);
+  }
 }
+
 
 .spectrum-CSSExample-markup {
   position: relative;
