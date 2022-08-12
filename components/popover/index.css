@@ -11,171 +11,273 @@ governing permissions and limitations under the License.
 */
 
 /* @import '../overlay/index.css'; */
-/* @import "../vars/css/components/overlay.css"; */
-/* @import "../vars/css/components/overlay/index.css";  */;
+ /* @import "../vars/css/components/spectrum-overlay.css"; - does not work, not in vars */
+/* @spectrum-css/overlay */
 
 .spectrum-Popover {
-  /* --spectrum-popover-target-offset: 13px;
-  --spectrum-popover-dialog-padding: 30px 29px;
-  --spectrum-popover-dialog-min-width: 270px;
-
-  --spectrum-popover-min-width: var(--spectrum-global-dimension-size-400);
-  --spectrum-popover-min-height: var(--spectrum-global-dimension-size-400);
-
-  /* Popover tip positioning for left/right oriented popovers (-11px/-25px) */
-  /* --spectrum-popover-tip-horizontal-offset: calc(var(--spectrum-global-dimension-size-250) * -1); */
-  /* Popover tip positioning for top/bottom oriented popovers (6px/8px) */
-  /* --spectrum-popover-tip-vertical-offset: var(--spectrum-global-dimension-size-75); */
-
-  /*--spectrum-popover-tip-triangle-top-offset: calc(var(--spectrum-global-dimension-size-225) * -1); */
-
   --spectrum-popover-corner-radius: var(--spectrum-corner-radius-100);
 
-  --spectrum-popover-tip-width: var(--spectrum-popover-tip-width);
-  --spectrum-popover-tip-height: var(--spectrum-popover-tip-height);
+  --spectrum-popover-pointer-width: var(--spectrum-popover-tip-width);
+  --spectrum-popover-pointer-height: var(--spectrum-popover-tip-height);
+  --spectrum-popover-pointer-spacing-to-edge: 4px; /* TODO - missing token - should change according to source width */
 
   --spectrum-popover-spacing-vertical: var(--spectrum-popover-top-to-content-area);
   --spectrum-popover-spacing-to-source: var(--spectrum-spacing-100);
   --spectrum-popover-spacing-container: var(--spectrum-spacing-100);
 
   --spectrum-popover-background-color: var(--spectrum-background-layer-2-color);
+
+    /* border width token missing from redline components XD specs - resolves to 1px */
+  --spectrum-popover-border-width: var(--spectrum-border-width-100);
   --spectrum-popover-border-color: var(--spectrum-gray-400);
+
   --spectrum-popover-shadow-horizontal: var(--spectrum-drop-shadow-x);
   --spectrum-popover-shadow-vertical: var(--spectrum-drop-shadow-y);
   --spectrum-popover-shadow-blur: var(--spectrum-drop-shadow-blur);
   --spectrum-popover-shadow-color: var(--spectrum-drop-shadow-color);
 }
 
+/* outer container to control spacing around component */
 .spectrum-Popover {
-  /* @inherit: %spectrum-overlay; */
+  /* TODO - resolve missing overlay dependency */
+   /* @inherit: %spectrum-overlay; */
 
-  /* Be a flexbox to allow a full sized content area that scrolls */
-  display: inline-flex;
-  flex-direction: column;
-  box-sizing: border-box;
-
+  /* TODO - resolve missing tokens */
   /* min-width: var(--spectrum-popover-min-width);
   min-height: var(--spectrum-popover-min-height); */
 
+  box-sizing: border-box;
   position: absolute;
 
-  border-style: solid;
-  /* border-width: var(--spectrum-popover-border-size); */
-  border-radius: var(--spectrum-popover-corner-radius);
+  /* default spacing outside content container */
+  padding: var(--spectrum-popover-spacing-container);
 
   outline: none; /* Hide focus outline */
-  box-sizing: border-box;
 
-  padding: var(--spectrum-popover-spacing-vertical) 0;
-  margin: var(--spectrum-popover-spacing-container);
-
-  border-color: var(--spectrum-popover-border-color);
-  background-color: var(--spectrum-popover-background-color);
-
-  box-shadow: var(--spectrum-popover-shadow-horizontal) var(--spectrum-popover-shadow-vertical) var(--spectrum-popover-shadow-blur) var(--spectrum-popover-shadow-color);
-
+  /* TODO - add general open animation */
   &.is-open {
     /* @inherit: %spectrum-overlay--open; */
   }
-}
 
-.spectrum-Popover-tip {
-  position: absolute;
-  width: var(--spectrum-popover-tip-width);
-  height: var(--spectrum-popover-tip-height);
+  /* inner content container with border and background styles */
+  .spectrum-Popover-content {
+    padding: var(--spectrum-popover-spacing-vertical) 0;
 
-  /*--spectrum-popover-tip-borderWidth: var(--spectrum-popover-border-size); */
-  /* https://stackoverflow.com/questions/44170229/how-to-prevent-half-pixel-svg-shift-on-high-pixel-ratio-devices-retina */
-  -webkit-transform: translate(0, 0);
+    position: relative;
 
-  .spectrum-Popover-tip-triangle {
-    stroke-linecap: square;
-    stroke-linejoin: miter;
-    stroke: var(--spectrum-popover-border-color);
-    stroke-width: inherit;
-    fill: var(--spectrum-popover-background-color);
+    display: inline-flex;
+    flex-direction: column;
+
+    border-style: solid;
+    border-radius: var(--spectrum-popover-corner-radius);
+    border-color: var(--spectrum-popover-border-color);
+    border-width: var(--spectrum-popover-border-width);
+
+    background-color: var(--spectrum-popover-background-color);
+
+    box-shadow: var(--spectrum-popover-shadow-horizontal) var(--spectrum-popover-shadow-vertical) var(--spectrum-popover-shadow-blur) var(--spectrum-popover-shadow-color);
   }
-}
 
-.spectrum-Popover--dialog {
-  /* min-width: var(--spectrum-popover-dialog-min-width);
-  padding: var(--spectrum-popover-dialog-padding); */
-}
-
-/* left popover with tip pointing right */
-.spectrum-Popover--left {
+  /* has tip triangle */
   &.spectrum-Popover--withTip {
-    transform: translateX(calc(var(--spectrum-popover-spacing-to-source) * -1));
+    /* TODO - placeholder */
   }
 
-  &.is-open {
-    /* @inherit: %spectrum-overlay--left--open; */
-  }
+  /* tip triangle SVG */
   .spectrum-Popover-tip {
-    left: 100%;
+    position: absolute;
+
+    width: var(--spectrum-popover-pointer-width);
+    height: var(--spectrum-popover-pointer-height);
+
+    box-sizing: border-box;
+
+    /* TODO for dev - temporary while sizing tip - remove for shipping */
+    overflow: visible;
+
+    /* https://stackoverflow.com/questions/44170229/how-to-prevent-half-pixel-svg-shift-on-high-pixel-ratio-devices-retina */
+
+    .spectrum-Popover-tip-triangle {
+      stroke-linecap: square;
+      stroke-linejoin: miter;
+      stroke: var(--spectrum-popover-border-color);
+      stroke-width: var(--spectrum-popover-border-width);
+      fill: var(--spectrum-popover-background-color);
+    }
   }
 }
 
-/* right popover with tip pointing left */
-.spectrum-Popover--right {
+
+/* popover is top of source with tip pointing down - default placement */
+.spectrum-Popover--top, /* visual provided */
+.spectrum-Popover--top-left,
+.spectrum-Popover--top-right,
+.spectrum-Popover--top-start, /* visual provided */
+.spectrum-Popover--top-end {
+  /* default spacing outside content container */
+  padding: var(--spectrum-popover-spacing-container);
+
+  /* has tip triangle */
   &.spectrum-Popover--withTip {
-    transform: translateX(var(--spectrum-popover-spacing-to-source));
+    /* add tip height to spacing to source */
+    padding-bottom: calc(var(--spectrum-popover-pointer-height) + var(--spectrum-popover-spacing-to-source));
+    padding-top: var(--spectrum-popover-spacing-container);
   }
 
-  &.is-open {
-    /* @inherit: %spectrum-overlay--right--open; */
-  }
-  .spectrum-Popover-tip {
-    right: 100%;
-    transform: scaleX(-1);
-  }
-}
-
-/* left and right popover tip */
-.spectrum-Popover--left,
-.spectrum-Popover--right {
-  .spectrum-Popover-tip {
-    top: 0;
-    bottom: 0;
-    margin: auto;
-  }
-}
-
-/* bottom popover with tip pointing up */
-.spectrum-Popover--bottom {
-  &.spectrum-Popover--withTip {
-    transform: translateY(var(--spectrum-popover-spacing-to-source));
-  }
-
-  &.is-open {
-    /* @inherit: %spectrum-overlay--bottom--open; */
-  }
-  .spectrum-Popover-tip {
-    bottom: 100%;
-    transform: scaleY(-1);
-  }
-}
-
-/* top popover with tip pointing down */
-.spectrum-Popover--top {
-  &.spectrum-Popover--withTip {
-    transform: translateY(calc(var(--spectrum-popover-spacing-to-source) * -1));
-  }
-
+  /* TODO - import overlay - animate opening upward */
   &.is-open {
     /* @inherit: %spectrum-overlay--top--open; */
   }
-  .spectrum-Popover-tip {
-    top: 100%;
-  }
-}
 
-/* top and bottom popover tip */
-.spectrum-Popover--bottom,
-.spectrum-Popover--top {
+  /* tip defaults to center bottom */
   .spectrum-Popover-tip {
+    /* move pointer to extend beyond the edge of the container */
+    transform: translateY(var(--spectrum-popover-pointer-height));
+    bottom: 0;
     right: 0;
     left: 0;
     margin: auto;
   }
+}
+
+/* popover is top and left of source */
+.spectrum-Popover--top-left {
+  /* move tip bottom left */
+  .spectrum-Popover-tip {
+    /* move pointer to extend beyond the edge of the container */
+    transform: translateY(var(--spectrum-popover-pointer-height));
+    bottom: 0;
+    right: var(--spectrum-popover-pointer-spacing-to-edge); /* TODO - missing token */
+    left: auto;
+  }
+}
+
+/* popover is top and right of source */
+.spectrum-Popover--top-right {
+  /* tip triangle */
+  .spectrum-Popover-tip {
+    /* move pointer to extend beyond the edge of the container */
+    transform: translateY(var(--spectrum-popover-pointer-height));
+    bottom: 0;
+    left: var(--spectrum-popover-pointer-spacing-to-edge); /* TODO - missing token */
+    right: auto;
+  }
+}
+
+/* bottom popover with tip pointing up */
+.spectrum-Popover--bottom, /* visual provided */
+.spectrum-Popover--bottom-left,
+.spectrum-Popover--bottom-right,
+.spectrum-Popover--bottom-start, /* visual provided */
+.spectrum-Popover--bottom-end, /* visual provided */ {
+  /* default spacing outside content container */
+  padding: var(--spectrum-popover-spacing-container);
+
+  /* has tip triangle */
+  &.spectrum-Popover--withTip {
+    /* add tip height to spacing to source */
+    padding-top: calc(var(--spectrum-popover-pointer-height) + var(--spectrum-popover-spacing-to-source));
+    padding-bottom: var(--spectrum-popover-spacing-container);
+  }
+
+  /* TODO - import overlay - animate opening downward */
+  &.is-open {
+    /* @inherit: %spectrum-overlay--bottom--open; */
+  }
+
+  /* tip defaults to center top */
+  .spectrum-Popover-tip {
+    bottom: 100%;
+    right: 0;
+    left: 0;
+    margin: auto;
+    transform: scaleY(-1);
+  }
+}
+
+/* popover is bottom and left of source */
+.spectrum-Popover--bottom-left {
+  /* tip moves to left */
+  .spectrum-Popover-tip {
+    right: var(--spectrum-popover-pointer-spacing-to-edge); /* TODO - missing token */
+    left: auto;
+  }
+}
+
+/* popover is bottom and right of source */
+.spectrum-Popover--bottom-right {
+  /* tip moves to right */
+  .spectrum-Popover-tip {
+    left: var(--spectrum-popover-pointer-spacing-to-edge); /* TODO - missing token */
+    right: auto;
+  }
+}
+
+
+/* left popover with tip pointing right */
+.spectrum-Popover--left,
+.spectrum-Popover--left-bottom, /* visual provided */
+.spectrum-Popover--left-top {
+  /* default spacing outside content container */
+  padding: var(--spectrum-popover-spacing-container);
+
+  /* has tip triangle */
+  &.spectrum-Popover--withTip {
+    /* add tip height to spacing to source */
+
+  }
+
+  /* TODO - import overlay - animate opening to left */
+  &.is-open {
+    /* @inherit: %spectrum-overlay--left--open; */
+  }
+
+  .spectrum-Popover-tip {
+    left: 100%;
+    top: 0;
+    bottom: 0;
+
+    /* rotate tip to vertical orientation */
+    transform: rotate(-90deg);
+    transform-origin: calc(var(--spectrum-popover-pointer-height) / 2);
+  }
+}
+
+/* right popover with tip pointing left */
+.spectrum-Popover--right,
+.spectrum-Popover--right-bottom,
+.spectrum-Popover--right-top /* visual provided */ {
+  /* default spacing outside content container */
+  padding: var(--spectrum-popover-spacing-container);
+
+  /* has tip triangle */
+  &.spectrum-Popover--withTip {
+    /* add tip height to spacing to source */
+  }
+
+  /* TODO - import overlay - animate opening to right */
+  &.is-open {
+    /* @inherit: %spectrum-overlay--right--open; */
+  }
+
+  .spectrum-Popover-tip {
+    right: 100%;
+    top: 0;
+    bottom: 0;
+
+    /* rotate tip to vertical orientation */
+    transform: rotate(90deg);
+    transform-origin: 0 0;
+  }
+}
+
+/* TODO - additional placements */
+.spectrum-Popover--start,
+.spectrum-Popover--start-top,
+.spectrum-Popover--start-bottom,
+
+.spectrum-Popover--end,
+.spectrum-Popover--end-top,
+.spectrum-Popover--end-bottom {
+  /* TODO - placeholder */
 }
