@@ -16,34 +16,58 @@ governing permissions and limitations under the License.
 }
 
 .spectrum-Swatch {
-  --spectrum-swatch-size-xs: var(--spectrum-global-dimension-size-200);
-  --spectrum-swatch-size-s: var(--spectrum-global-dimension-size-300);
-  --spectrum-swatch-size-m: var(--spectrum-global-dimension-size-400);
-  --spectrum-swatch-size-l: var(--spectrum-global-dimension-size-500);
+  /* --spectrum-swatch-size-xs: var(--spectrum-global-dimension-size-200); */
+  /* --spectrum-swatch-size-s: var(--spectrum-global-dimension-size-300); */
+  /* --spectrum-swatch-size-m: var(--spectrum-global-dimension-size-400); */
+  /* --spectrum-swatch-size-l: var(--spectrum-global-dimension-size-500); */
 
-  --spectrum-swatch-disabled-icon-size-xs: var(--spectrum-global-dimension-size-150);
-  --spectrum-swatch-disabled-icon-size-s: var(--spectrum-global-dimension-size-200);
-  --spectrum-swatch-disabled-icon-size-m: var(--spectrum-global-dimension-size-225);
-  --spectrum-swatch-disabled-icon-size-l: var(--spectrum-global-dimension-size-250);
-  --spectrum-swatch-disabled-icon-color: var(--spectrum-global-color-static-gray-50);
-  --spectrum-swatch-disabled-icon-stroke-color: rgba(var(--spectrum-global-color-static-black-rgb), 0.51);
+  /* --spectrum-swatch-disabled-icon-size-xs: var(--spectrum-global-dimension-size-150); */
+  /* --spectrum-swatch-disabled-icon-size-s: var(--spectrum-global-dimension-size-200); */
+  /* --spectrum-swatch-disabled-icon-size-m: var(--spectrum-global-dimension-size-225); */
+  /* --spectrum-swatch-disabled-icon-size-l: var(--spectrum-global-dimension-size-250); */
+  /* --spectrum-swatch-disabled-icon-color: var(--spectrum-global-color-static-gray-50); */
+  /* --spectrum-swatch-disabled-icon-stroke-color: rgba(var(--spectrum-global-color-static-black-rgb), 0.51); */
 
-  --spectrum-swatch-selection-padding: var(--spectrum-global-dimension-size-100);
-  --spectrum-swatch-selection-indicator-border-width: var(--spectrum-global-dimension-size-25);
-  --spectrum-swatch-selection-indicator-border-color: var(--spectrum-global-color-gray-900);
-  --spectrum-swatch-background-color-selected: var(--spectrum-global-color-gray-50);
+  /* --spectrum-swatch-selection-padding: var(--spectrum-global-dimension-size-100); */
+  /* --spectrum-swatch-selection-indicator-border-width: var(--spectrum-global-dimension-size-25); */
+  /* --spectrum-swatch-selection-indicator-border-color: var(--spectrum-global-color-gray-900); */
+  /* --spectrum-swatch-background-color-selected: var(--spectrum-global-color-gray-50); */
 
-  --spectrum-swatch-border-radius: var(--spectrum-alias-border-radius-regular);
-  --spectrum-swatch-fill-border-radius-selected: var(--spectrum-alias-border-radius-small);
+  /* --spectrum-swatch-border-radius: var(--spectrum-alias-border-radius-regular); */
+  /* --spectrum-swatch-fill-border-radius-selected: var(--spectrum-alias-border-radius-small); */
 
-  --spectrum-swatch-fill-border-width: var(--spectrum-alias-border-size-thin);
-  --spectrum-swatch-fill-border-color: rgba(var(--spectrum-global-color-gray-900-rgb), 0.51);
-  --spectrum-swatch-fill-border-color-light: rgba(var(--spectrum-global-color-gray-900-rgb), 0.20);
+  /* --spectrum-swatch-fill-border-width: var(--spectrum-alias-border-size-thin); */
+  /* --spectrum-swatch-fill-border-color: rgba(var(--spectrum-global-color-gray-900-rgb), 0.51); */
+  /* --spectrum-swatch-fill-border-color-light: rgba(var(--spectrum-global-color-gray-900-rgb), 0.20); */
 
-  --spectrum-swatch-background-offset: 0px;
-  --spectrum-swatch-checkerboard-size: var(--spectrum-global-dimension-static-size-100);
+  /* --spectrum-swatch-background-offset: 0px; */
+  /* --spectrum-swatch-checkerboard-size: var(--spectrum-global-dimension-static-size-100); */
 
-  display: flex;
+  --spectrum-swatch-size: var(--spectrum-swatch-size-small);
+}
+
+.spectrum-Swatch--sizeS {
+  --spectrum-swatch-size: var(--spectrum-swatch-size-extra-small);
+
+}
+
+.spectrum-Swatch--sizeM {
+  --spectrum-swatch-size: var(--spectrum-swatch-size-small);
+
+}
+
+.spectrum-Swatch--sizeL {
+  --spectrum-swatch-size: var(--spectrum-swatch-size-medium);
+
+}
+
+.spectrum-Swatch--sizeXL {
+  --spectrum-swatch-size: var(--spectrum-swatch-size-large);
+
+}
+
+.spectrum-Swatch {
+    display: flex;
   align-items: center;
   justify-content: center;
 
@@ -266,8 +290,8 @@ governing permissions and limitations under the License.
 
 /* shape = square is default */
 .spectrum-Swatch--sizeXS {
-  width: var(--spectrum-swatch-size-xs);
-  height: var(--spectrum-swatch-size-xs);
+  width: var(--spectrum-swatch-size);
+  height: var(--spectrum-swatch-size);
 
   .spectrum-Swatch-disabledIcon {
     width: var(--spectrum-swatch-disabled-icon-size-xs);
@@ -276,8 +300,8 @@ governing permissions and limitations under the License.
 }
 
 .spectrum-Swatch--sizeS {
-  width: var(--spectrum-swatch-size-s);
-  height: var(--spectrum-swatch-size-s);
+  width: var(--spectrum-swatch-size);
+  height: var(--spectrum-swatch-size);
 
   .spectrum-Swatch-disabledIcon {
     width: var(--spectrum-swatch-disabled-icon-size-s);
@@ -286,18 +310,18 @@ governing permissions and limitations under the License.
 }
 
 .spectrum-Swatch--sizeM {
-  width: var(--spectrum-swatch-size-m);
-  height: var(--spectrum-swatch-size-m);
+  width: var(--spectrum-swatch-size);
+  height: var(--spectrum-swatch-size);
 
   .spectrum-Swatch-disabledIcon {
-    width: var(--spectrum-swatch-disabled-icon-size-m);
-    height: var(--spectrum-swatch-disabled-icon-size-m);
+    width: var(--spectrum-swatch-disabled-icon-size);
+    height: var(--spectrum-swatch-disabled-icon-size);
   }
 }
 
 .spectrum-Swatch--sizeL {
-  width: var(--spectrum-swatch-size-l);
-  height: var(--spectrum-swatch-size-l);
+  width: var(--spectrum-swatch-size);
+  height: var(--spectrum-swatch-size);
 
   .spectrum-Swatch-disabledIcon {
     width: var(--spectrum-swatch-disabled-icon-size-l);
@@ -307,19 +331,19 @@ governing permissions and limitations under the License.
 
 .spectrum-Swatch--rectangle {
   &.spectrum-Swatch--sizeXS {
-    width: calc(var(--spectrum-swatch-size-xs) * 2);
+    width: calc(var(--spectrum-swatch-size) * 2);
   }
 
   &.spectrum-Swatch--sizeS {
-    width: calc(var(--spectrum-swatch-size-s) * 2);
+    width: calc(var(--spectrum-swatch-size) * 2);
   }
 
   &.spectrum-Swatch--sizeM {
-    width: calc(var(--spectrum-swatch-size-m) * 2);
+    width: calc(var(--spectrum-swatch-size) * 2);
   }
 
   &.spectrum-Swatch--sizeL {
-    width: calc(var(--spectrum-swatch-size-l) * 2);
+    width: calc(var(--spectrum-swatch-size) * 2);
   }
 }
 
