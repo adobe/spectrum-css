@@ -34,7 +34,7 @@ examples:
 
       <div class="spectrum-Examples">
         <div class="spectrum-Examples-item">
-          <h4 class="spectrum-Heading spectrum-Heading--sizeXS spectrum-Examples-itemHeading">With SVG Tip</h4>
+          <h4 class="spectrum-Heading spectrum-Heading--sizeXS spectrum-Examples-itemHeading">With CSS Tip</h4>
 
           <div class="spectrum-Popover spectrum-Popover--withTip is-open">
             <div class="spectrum-Popover-content">
@@ -53,9 +53,8 @@ examples:
                   <span class="spectrum-Menu-itemLabel">United States of America</span>
                 </li>
               </ul>
-              <svg xmlns="http://www.w3.org/svg/2000" class="spectrum-Popover-tip">
-                <path class="spectrum-Popover-tip-triangle" d="M 0.7071067811865476 0 L 11.414213562373096 10.707106781186548 L 22.121320343559645 0"></path>
-              </svg>
+              <div class="spectrum-Popover-tip">
+              </div>
             </div>
           </div>
 
@@ -80,9 +79,8 @@ examples:
                   <section class="spectrum-Dialog-content">Cupcake ipsum dolor sit amet jelly beans. Chocolate jelly caramels. Icing soufflé chupa chups donut cheesecake. Jelly-o chocolate cake sweet roll cake danish candy biscuit halvah.</section>
                 </div>
               </section>
-              <svg xmlns="http://www.w3.org/svg/2000" class="spectrum-Popover-tip">
-                <path class="spectrum-Popover-tip-triangle" d="M 0.7071067811865476 0 L 11.414213562373096 10.707106781186548 L 22.121320343559645 0"></path>
-              </svg>
+              <div class="spectrum-Popover-tip">
+              </div>
             </div>
           </div>
 
@@ -116,9 +114,8 @@ examples:
                   </div>
                 </div>
               </section>
-              <svg xmlns="http://www.w3.org/svg/2000" class="spectrum-Popover-tip">
-                <path class="spectrum-Popover-tip-triangle" d="M 0.7071067811865476 0 L 11.414213562373096 10.707106781186548 L 22.121320343559645 0"></path>
-              </svg>
+              <div class="spectrum-Popover-tip">
+              </div>
             </div>
           </div>
 
@@ -143,9 +140,8 @@ examples:
                   <section class="spectrum-Dialog-content">Cupcake ipsum dolor sit amet jelly beans. Chocolate jelly caramels. Icing soufflé chupa chups donut cheesecake. Jelly-o chocolate cake sweet roll cake danish candy biscuit halvah.</section>
                 </div>
               </section>
-              <svg xmlns="http://www.w3.org/svg/2000" class="spectrum-Popover-tip">
-                <path class="spectrum-Popover-tip-triangle" d="M 0.7071067811865476 0 L 11.414213562373096 10.707106781186548 L 22.121320343559645 0"></path>
-              </svg>
+              <div class="spectrum-Popover-tip">
+              </div>
             </div>
           </div>
 
@@ -167,9 +163,8 @@ examples:
                   <section class="spectrum-Dialog-content">Cupcake ipsum dolor sit amet jelly beans. Chocolate jelly caramels. Icing soufflé chupa chups donut cheesecake. Jelly-o chocolate cake sweet roll cake danish candy biscuit halvah.</section>
                 </div>
               </section>
-              <svg xmlns="http://www.w3.org/svg/2000" class="spectrum-Popover-tip">
-                <path class="spectrum-Popover-tip-triangle" d="M 0.7071067811865476 0 L 11.414213562373096 10.707106781186548 L 22.121320343559645 0"></path>
-              </svg>
+              <div class="spectrum-Popover-tip">
+              </div>
             </div>
           </div>
 
@@ -192,9 +187,8 @@ examples:
                   <section class="spectrum-Dialog-content">Cupcake ipsum dolor sit amet jelly beans. Chocolate jelly caramels. Icing soufflé chupa chups donut cheesecake. Jelly-o chocolate cake sweet roll cake danish candy biscuit halvah.</section>
                 </div>
               </section>
-              <svg xmlns="http://www.w3.org/svg/2000" class="spectrum-Popover-tip">
-                <path class="spectrum-Popover-tip-triangle" d="M 0.7071067811865476 0 L 11.414213562373096 10.707106781186548 L 22.121320343559645 0"></path>
-              </svg>
+              <div class="spectrum-Popover-tip">
+              </div>
             </div>
           </div>
 
@@ -233,9 +227,8 @@ examples:
                   <section class="spectrum-Dialog-content">Cupcake ipsum dolor sit amet jelly beans. Chocolate jelly caramels. Icing soufflé chupa chups donut cheesecake. Jelly-o chocolate cake sweet roll cake danish candy biscuit halvah.</section>
                 </div>
               </section>
-              <svg xmlns="http://www.w3.org/svg/2000" class="spectrum-Popover-tip">
-                <path class="spectrum-Popover-tip-triangle" d="M 0.7071067811865476 0 L 11.414213562373096 10.707106781186548 L 22.121320343559645 0"></path>
-              </svg>
+              <div class="spectrum-Popover-tip">
+              </div>
             </div>
           </div>
 
@@ -257,9 +250,8 @@ examples:
                   <section class="spectrum-Dialog-content">Cupcake ipsum dolor sit amet jelly beans. Chocolate jelly caramels. Icing soufflé chupa chups donut cheesecake. Jelly-o chocolate cake sweet roll cake danish candy biscuit halvah.</section>
                 </div>
               </section>
-              <svg xmlns="http://www.w3.org/svg/2000" class="spectrum-Popover-tip">
-                <path class="spectrum-Popover-tip-triangle" d="M 0.7071067811865476 0 L 11.414213562373096 10.707106781186548 L 22.121320343559645 0"></path>
-              </svg>
+              <div class="spectrum-Popover-tip">
+              </div>
             </div>
           </div>
 
@@ -281,9 +273,8 @@ examples:
                   <section class="spectrum-Dialog-content">Cupcake ipsum dolor sit amet jelly beans. Chocolate jelly caramels. Icing soufflé chupa chups donut cheesecake. Jelly-o chocolate cake sweet roll cake danish candy biscuit halvah.</section>
                 </div>
               </section>
-              <svg xmlns="http://www.w3.org/svg/2000" class="spectrum-Popover-tip">
-                <path class="spectrum-Popover-tip-triangle" d="M 0.7071067811865476 0 L 11.414213562373096 10.707106781186548 L 22.121320343559645 0"></path>
-              </svg>
+              <div class="spectrum-Popover-tip">
+              </div>
             </div>
           </div>
 
@@ -320,9 +311,8 @@ examples:
                   <section class="spectrum-Dialog-content">Cupcake ipsum dolor sit amet jelly beans. Chocolate jelly caramels. Icing soufflé chupa chups donut cheesecake. Jelly-o chocolate cake sweet roll cake danish candy biscuit halvah.</section>
                 </div>
               </section>
-              <svg xmlns="http://www.w3.org/svg/2000" class="spectrum-Popover-tip">
-                <path class="spectrum-Popover-tip-triangle" d="M 0.7071067811865476 0 L 11.414213562373096 10.707106781186548 L 22.121320343559645 0"></path>
-              </svg>
+              <div class="spectrum-Popover-tip">
+              </div>
             </div>
           </div>
 
@@ -335,12 +325,46 @@ examples:
       <div class="spectrum-Examples">
         <div class="spectrum-Examples-item">
           <h4 class="spectrum-Heading spectrum-Heading--sizeXS spectrum-Examples-itemHeading">Right Top</h4>
+          <div class="spectrum-Popover spectrum-Popover--right-top spectrum-Popover--withTip is-open spectrum-Popover" role="presentation">
+            <div class="spectrum-Popover-content">
+              <section class="spectrum-Dialog spectrum-Dialog--small" role="dialog" tabindex="-1" aria-modal="true">
+                <div class="spectrum-Dialog-grid" style="display: grid;">
+                  <h1 class="spectrum-Dialog-heading spectrum-Dialog-heading--noHeader">Very Very Very Very Long Popover Title</h1>
+                  <hr class="spectrum-Divider spectrum-Divider--sizeM spectrum-Divider--horizontal spectrum-Dialog-divider">
+                  <section class="spectrum-Dialog-content">Cupcake ipsum dolor sit amet jelly beans. Chocolate jelly caramels. Icing soufflé chupa chups donut cheesecake. Jelly-o chocolate cake sweet roll cake danish candy biscuit halvah.</section>
+                </div>
+              </section>
+              <div class="spectrum-Popover-tip">
+              </div>
+            </div>
+          </div>
+
+          <div class="dummy-spacing" style="height: 240px"></div>
+          <br>
+          <br>
         </div>
       </div>
 
       <div class="spectrum-Examples">
         <div class="spectrum-Examples-item">
           <h4 class="spectrum-Heading spectrum-Heading--sizeXS spectrum-Examples-itemHeading">Right Bottom</h4>
+          <div class="spectrum-Popover spectrum-Popover--right-bottom spectrum-Popover--withTip is-open spectrum-Popover" role="presentation">
+            <div class="spectrum-Popover-content">
+              <section class="spectrum-Dialog spectrum-Dialog--small" role="dialog" tabindex="-1" aria-modal="true">
+                <div class="spectrum-Dialog-grid" style="display: grid;">
+                  <h1 class="spectrum-Dialog-heading spectrum-Dialog-heading--noHeader">Very Very Very Very Long Popover Title</h1>
+                  <hr class="spectrum-Divider spectrum-Divider--sizeM spectrum-Divider--horizontal spectrum-Dialog-divider">
+                  <section class="spectrum-Dialog-content">Cupcake ipsum dolor sit amet jelly beans. Chocolate jelly caramels. Icing soufflé chupa chups donut cheesecake. Jelly-o chocolate cake sweet roll cake danish candy biscuit halvah.</section>
+                </div>
+              </section>
+              <div class="spectrum-Popover-tip">
+              </div>
+            </div>
+          </div>
+
+          <div class="dummy-spacing" style="height: 240px"></div>
+          <br>
+          <br>
         </div>
       </div>
 
@@ -361,9 +385,8 @@ examples:
                   <section class="spectrum-Dialog-content">Cupcake ipsum dolor sit amet jelly beans. Chocolate jelly caramels. Icing soufflé chupa chups donut cheesecake. Jelly-o chocolate cake sweet roll cake danish candy biscuit halvah.</section>
                 </div>
               </section>
-              <svg xmlns="http://www.w3.org/svg/2000" class="spectrum-Popover-tip">
-                <path class="spectrum-Popover-tip-triangle" d="M 0.7071067811865476 0 L 11.414213562373096 10.707106781186548 L 22.121320343559645 0"></path>
-              </svg>
+              <div class="spectrum-Popover-tip">
+              </div>
             </div>
           </div>
 
@@ -376,12 +399,46 @@ examples:
       <div class="spectrum-Examples">
         <div class="spectrum-Examples-item">
           <h4 class="spectrum-Heading spectrum-Heading--sizeXS spectrum-Examples-itemHeading">Left Top</h4>
+          <div class="spectrum-Popover spectrum-Popover--left-top spectrum-Popover--withTip is-open spectrum-Popover" role="presentation">
+            <div class="spectrum-Popover-content">
+              <section class="spectrum-Dialog spectrum-Dialog--small" role="dialog" tabindex="-1" aria-modal="true">
+                <div class="spectrum-Dialog-grid" style="display: grid;">
+                  <h1 class="spectrum-Dialog-heading spectrum-Dialog-heading--noHeader">Very Very Very Very Long Popover Title</h1>
+                  <hr class="spectrum-Divider spectrum-Divider--sizeM spectrum-Divider--horizontal spectrum-Dialog-divider">
+                  <section class="spectrum-Dialog-content">Cupcake ipsum dolor sit amet jelly beans. Chocolate jelly caramels. Icing soufflé chupa chups donut cheesecake. Jelly-o chocolate cake sweet roll cake danish candy biscuit halvah.</section>
+                </div>
+              </section>
+              <div class="spectrum-Popover-tip">
+              </div>
+            </div>
+          </div>
+
+          <div class="dummy-spacing" style="height: 240px"></div>
+          <br>
+          <br>
         </div>
       </div>
 
       <div class="spectrum-Examples">
         <div class="spectrum-Examples-item">
           <h4 class="spectrum-Heading spectrum-Heading--sizeXS spectrum-Examples-itemHeading">Left Bottom</h4>
+          <div class="spectrum-Popover spectrum-Popover--left-bottom spectrum-Popover--withTip is-open spectrum-Popover" role="presentation">
+            <div class="spectrum-Popover-content">
+              <section class="spectrum-Dialog spectrum-Dialog--small" role="dialog" tabindex="-1" aria-modal="true">
+                <div class="spectrum-Dialog-grid" style="display: grid;">
+                  <h1 class="spectrum-Dialog-heading spectrum-Dialog-heading--noHeader">Very Very Very Very Long Popover Title</h1>
+                  <hr class="spectrum-Divider spectrum-Divider--sizeM spectrum-Divider--horizontal spectrum-Dialog-divider">
+                  <section class="spectrum-Dialog-content">Cupcake ipsum dolor sit amet jelly beans. Chocolate jelly caramels. Icing soufflé chupa chups donut cheesecake. Jelly-o chocolate cake sweet roll cake danish candy biscuit halvah.</section>
+                </div>
+              </section>
+              <div class="spectrum-Popover-tip">
+              </div>
+            </div>
+          </div>
+
+          <div class="dummy-spacing" style="height: 240px"></div>
+          <br>
+          <br>
         </div>
       </div>
 
