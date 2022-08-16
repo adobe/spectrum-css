@@ -89,33 +89,6 @@ governing permissions and limitations under the License.
     background-color: var(--spectrum-popover-background-color);
 
     box-shadow: var(--spectrum-popover-shadow-horizontal) var(--spectrum-popover-shadow-vertical) var(--spectrum-popover-shadow-blur) var(--spectrum-popover-shadow-color);
-
-    /* tip triangle defaults to pointing down - outer triangle is border */
-    .spectrum-Popover-tip {
-      position: absolute;
-      margin: 0 auto;
-      height: var(--spectrum-popover-pointer-height);
-      width: var(--spectrum-popover-pointer-width);
-      left: 0;
-      right: 0;
-      bottom: 0;
-      top: 100%;
-      background: var(--spectrum-popover-border-color);
-      /* transform: translate(0, var(--spectrum-popover-pointer-height)); move triangle just outside edge */
-      clip-path: polygon(-1px -1px, 50% 100%, 100% 0); /* triangle pointing down */
-
-      /* inner triangle shape */
-      &::after {
-        position: absolute;
-        z-index: 0;
-        content: "";
-        height: inherit;
-        width: inherit;
-        background-color: var(--spectrum-popover-background-color);
-        clip-path: inherit;
-        margin-top: calc(var(--spectrum-popover-border-width) * -1); /* move inner triangle up to reveal border */
-      }
-    }
   }
 
   /* has tip triangle */
@@ -123,9 +96,37 @@ governing permissions and limitations under the License.
     /* add tip height to spacing to source */
     padding-bottom: calc(var(--spectrum-popover-pointer-height) + var(--spectrum-popover-spacing-to-source));
     padding-top: var(--spectrum-popover-spacing-container);
+
+    .spectrum-Popover-content {
+
+     /* tip triangle defaults to pointing down */
+      &::before,
+      &::after {
+        content: "";
+        position: absolute;
+        height: var(--spectrum-popover-pointer-height);
+        width: var(--spectrum-popover-pointer-width);
+        margin: auto;
+        left: 0;
+        right: 0;
+        top: 100%;
+        clip-path: polygon(0 0, 50% 100%, 100% 0);
+      }
+
+      /* before element is triangle border */
+      &::before {
+        background: var(--spectrum-popover-border-color);
+      }
+
+      /* after element is the triangle fill with offset to show the border */
+      &::after {
+        background: var(--spectrum-popover-background-color);
+        /* move fill up by 150% of border width - percentage matches 2:1 triangle ratio */
+        top: calc(100% - (var(--spectrum-popover-border-width) * 1.5));
+      }
+    }
   }
 }
-
 
 /* popover is top of source with tip pointing down - default placement */
 .spectrum-Popover--top, /* visual provided */
@@ -140,32 +141,63 @@ governing permissions and limitations under the License.
   &.is-open {
     /* @inherit: %spectrum-overlay--top--open; */
   }
+
+  &.spectrum-Popover--withTip {
+    /* add tip height to spacing to source */
+    padding-bottom: calc(var(--spectrum-popover-pointer-height) + var(--spectrum-popover-spacing-to-source));
+    padding-top: var(--spectrum-popover-spacing-container);
+  }
 }
+
+.spectrum-Popover--top-left {
+
+  &.spectrum-Popover--withTip {
+
+    .spectrum-Popover-content {
+      /* tip triangle  */
+      &::before,
+      &::after {
+        left: auto;
+        right: var(--spectrum-popover-pointer-edge-offset);
+      }
+    }
+  }
+}
+
+.spectrum-Popover--top-right {
+
+  &.spectrum-Popover--withTip {
+
+    .spectrum-Popover-content {
+      /* tip triangle  */
+      &::before,
+      &::after {
+        right: auto;
+        left: var(--spectrum-popover-pointer-edge-offset);
+      }
+    }
+  }
+}
+
+
 
 /* popover is top and left of source */
 .spectrum-Popover--top-left {
 
-  .spectrum-Popover-content {
-
-    /* move tip bottom right to point near source */
-    .spectrum-Popover-tip {
-      left: 100%;
-      margin-right: var(--spectrum-popover-pointer-edge-offset); /* TODO - missing token */
+  &.spectrum-Popover--withTip {
+    .spectrum-Popover-content {
+      /* tip triangle  */
+      &::before,
+      &::after {
+      }
     }
   }
 }
 
+
 /* popover is top and right of source */
 .spectrum-Popover--top-right {
-
-  .spectrum-Popover-content {
-
-    /* move tip bottom left to point near source */
-    .spectrum-Popover-tip {
-      margin-left: var(--spectrum-popover-pointer-edge-offset); /* TODO - missing token */
-      right: 100%;
-    }
-  }
+  /* placeholder */
 }
 
 /* TODO - additional placements for logical properties */
@@ -199,41 +231,16 @@ governing permissions and limitations under the License.
     /* @inherit: %spectrum-overlay--bottom--open; */
   }
 
-  .spectrum-Popover-content {
-
-    /* tip triangle moved and transformed to point up */
-    .spectrum-Popover-tip {
-      bottom: 100%;
-      top: 0;
-      transform: scaleY(-1) translateY(100%);
-    }
-  }
 }
 
 /* popover is bottom and left of source */
 .spectrum-Popover--bottom-left {
-
-  .spectrum-Popover-content {
-
-    /* tip moves to left */
-    .spectrum-Popover-tip {
-      margin-right: var(--spectrum-popover-pointer-edge-offset); /* TODO - missing token */
-      left: 100%;
-    }
-  }
+  /* placeholder */
 }
 
 /* popover is bottom and right of source */
 .spectrum-Popover--bottom-right {
-
-  .spectrum-Popover-content {
-
-    /* tip moves to right */
-    .spectrum-Popover-tip {
-      margin-left: var(--spectrum-popover-pointer-edge-offset); /* TODO - missing token */
-      right: 100%;
-    }
-  }
+  /* placeholder */
 }
 
 /* TODO - additional placements for logical properties */
@@ -265,50 +272,14 @@ governing permissions and limitations under the License.
   &.is-open {
     /* @inherit: %spectrum-overlay--left--open; */
   }
-
-  .spectrum-Popover-content {
-    /* redraw tip triangle pointing right */
-    .spectrum-Popover-tip {
-      left: 100%;
-      top: 0;
-      bottom: 0;
-      margin: auto;
-      clip-path: polygon(0 0, 0 100%, 100% 50%);
-      height: var(--spectrum-popover-pointer-width);
-      width: var(--spectrum-popover-pointer-height);
-
-      &::after {
-        margin-top: 0;
-        margin-left: calc(var(--spectrum-popover-border-width) * -1); /* move inner triangle up to reveal border */
-      }
-    }
-  }
 }
 
 .spectrum-Popover--left-top {
-
-  .spectrum-Popover-content {
-
-    /* move tip to top */
-    .spectrum-Popover-tip {
-      top: 0;
-      bottom: 100%;
-      margin-top: var(--spectrum-popover-pointer-edge-offset); /* TODO - missing token */
-    }
-  }
+  /* placeholder */
 }
 
 .spectrum-Popover--left-bottom {
-
-  .spectrum-Popover-content {
-
-    /* move tip to bottom */
-    .spectrum-Popover-tip {
-      top: 100%;
-      bottom: 0;
-      margin-bottom: var(--spectrum-popover-pointer-edge-offset); /* TODO - missing token */
-    }
-  }
+  /* placeholder */
 }
 
 /* right popover with tip pointing left */
@@ -329,50 +300,14 @@ governing permissions and limitations under the License.
   &.is-open {
     /* @inherit: %spectrum-overlay--right--open; */
   }
-
-  .spectrum-Popover-content {
-    .spectrum-Popover-tip {
-      right: 100%;
-      top: 0;
-      bottom: 0;
-      margin: auto;
-      clip-path: polygon(100% 0, 0 50%, 100% 100%); /* triangle right */
-      height: var(--spectrum-popover-pointer-width);
-      width: var(--spectrum-popover-pointer-height);
-      transform: translateX(-100%);
-
-      &::after {
-        margin-top: 0;
-        margin-left: var(--spectrum-popover-border-width); /* move inner triangle up to reveal border */
-      }
-    }
-  }
 }
 
 .spectrum-Popover--right-top {
-
-  .spectrum-Popover-content {
-
-    /* move tip to top */
-    .spectrum-Popover-tip {
-      top: 0;
-      bottom: 100%;
-      margin-top: var(--spectrum-popover-pointer-edge-offset); /* TODO - missing token */
-    }
-  }
+  /* placeholder */
 }
 
 .spectrum-Popover--right-bottom {
-
-  .spectrum-Popover-content {
-
-    /* move tip to bottom */
-    .spectrum-Popover-tip {
-      top: 100%;
-      bottom: 0;
-      margin-bottom: var(--spectrum-popover-pointer-edge-offset); /* TODO - missing token */
-    }
-  }
+  /* placeholder */
 }
 
 /* TODO - additional placements for logical properties */
