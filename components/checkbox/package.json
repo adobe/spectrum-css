@@ -1,6 +1,6 @@
 {
   "name": "@spectrum-css/checkbox",
-  "version": "4.0.0-beta.2",
+  "version": "4.0.0-beta.3",
   "description": "The Spectrum CSS checkbox component",
   "license": "Apache-2.0",
   "main": "dist/index-vars.css",
@@ -16,13 +16,13 @@
     "build": "gulp"
   },
   "peerDependencies": {
-    "@spectrum-css/icon": "^3.0.21",
-    "@spectrum-css/tokens": "^1.0.3"
+    "@spectrum-css/icon": "^3.0.23",
+    "@spectrum-css/tokens": "^1.0.4"
   },
   "devDependencies": {
     "@spectrum-css/component-builder-simple": "^1.0.0-beta",
     "@spectrum-css/icon": "^3.0.23",
-    "@spectrum-css/tokens": "^1.0.3",
+    "@spectrum-css/tokens": "^1.0.4",
     "gulp": "^4.0.0"
   },
   "publishConfig": {
