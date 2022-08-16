@@ -45,7 +45,7 @@ governing permissions and limitations under the License.
   --spectrum-swatch-disabled-icon-border-color: var(--spectrum-swatch-disabled-icon-border-color);
   --spectrum-swatch-disabled-icon-color: var(--spectrum-white);
   --spectrum-swatch-background-color: var(--spectrum-gray-50);
-  /* --spectrum-swatch-dash-icon-color: var(--spectrum-gray-800); */
+  --spectrum-swatch-dash-icon-color: var(--spectrum-gray-800);
   --spectrum-swatch-slash-icon-color: var(--spectrum-red-500);
   --spectrum-swatch-focus-ring-color: var(--spectrum-focus-ring-color);
 }
@@ -154,12 +154,14 @@ governing permissions and limitations under the License.
     }
   }
 
+  /* Why is this variant called mixed? */
   &.is-mixedValue {
     .spectrum-Swatch-fill {
       background: var(--spectrum-swatch-background-color);
     }
 
     .spectrum-Swatch-mixedValueIcon {
+      color: var(--spectrum-swatch-dash-icon-color);
       visibility: visible;
     }
   }
