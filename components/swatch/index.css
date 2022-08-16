@@ -30,6 +30,8 @@ governing permissions and limitations under the License.
   --spectrum-swatch-slash-thickness-medium: 4px;
   --spectrum-swatch-slash-thickness-large: 5px;
 
+  --spectrum-swatch-focus-ring-border-radius: 8px;
+
   /* --spectrum-swatch-size-xs: var(--spectrum-global-dimension-size-200); */
   /* --spectrum-swatch-size-s: var(--spectrum-global-dimension-size-300); */
   /* --spectrum-swatch-size-m: var(--spectrum-global-dimension-size-400); */
@@ -227,11 +229,7 @@ governing permissions and limitations under the License.
     }
   }
 
-  &:focus-visible {
-    &:after {
-      opacity: 1;
-    }
-  }
+
 
   /* selection indicator */
   &:before {
@@ -250,15 +248,22 @@ governing permissions and limitations under the License.
   &:after {
     content: '';
     position: absolute;
-    /* Review */
-    inset: calc(-1 * var(--spectrum-swatch-border-thickness));
+    /* inset: calc(-2 * var(--spectrum-swatch-border-thickness-selected)); */
+    inset: calc(-2 * var(--spectrum-swatch-focus-ring-gap));
 
     opacity: 0;
 
     border: var(--spectrum-swatch-focus-ring-thickness) solid var(--spectrum-swatch-focus-ring-color);
-    border-radius: var(--spectrum-swatch-border-radius);
+    /* border-radius: var(--spectrum-swatch-border-radius); */
+    border-radius: var(--spectrum-swatch-focus-ring-border-radius);
 
     transition: opacity var(--spectrum-animation-duration-100) ease-in-out;
+  }
+
+  &:focus-visible {
+    &:after {
+      opacity: 1;
+    }
   }
 }
 
@@ -282,20 +287,21 @@ governing permissions and limitations under the License.
   background-color: var(--spectrum-swatch-background-color);
 
   /* background-size: */
-    /* calc(var(--spectrum-swatch-checkerboard-size) * 2) */
-    /* calc(var(--spectrum-swatch-checkerboard-size) * 2); */
+  /*   calc(var(--spectrum-swatch-checkerboard-size) * 2) */
+  /*   calc(var(--spectrum-swatch-checkerboard-size) * 2); */
+
   /* background-position: */
-    /* var(--spectrum-swatch-background-offset) var(--spectrum-swatch-background-offset), */
-    /* var(--spectrum-swatch-background-offset) calc(var(--spectrum-swatch-checkerboard-size) + var(--spectrum-swatch-background-offset)), */
-    /* calc(var(--spectrum-swatch-checkerboard-size) + var(--spectrum-swatch-background-offset)) calc(-1 * var(--spectrum-swatch-checkerboard-size) + var(--spectrum-swatch-background-offset)), */
-    /* calc(-1 * var(--spectrum-swatch-checkerboard-size) + var(--spectrum-swatch-background-offset)) var(--spectrum-swatch-background-offset); */
+  /*   var(--spectrum-swatch-background-offset) var(--spectrum-swatch-background-offset), */
+  /*   var(--spectrum-swatch-background-offset) calc(var(--spectrum-swatch-checkerboard-size) + var(--spectrum-swatch-background-offset)), */
+  /*   calc(var(--spectrum-swatch-checkerboard-size) + var(--spectrum-swatch-background-offset)) calc(-1 * var(--spectrum-swatch-checkerboard-size) + var(--spectrum-swatch-background-offset)), */
+  /*   calc(-1 * var(--spectrum-swatch-checkerboard-size) + var(--spectrum-swatch-background-offset)) var(--spectrum-swatch-background-offset); */
 
   /* Add a half-percent to fix diagonal line issue in Chrome on non-retina displays */
   /* background-image: */
-    /* linear-gradient(-45deg, transparent 75.5%, var(--spectrum-colorcontrol-checkerboard-dark-color) 75.5%), */
-    /* linear-gradient(45deg, transparent 75.5%, var(--spectrum-colorcontrol-checkerboard-dark-color) 75.5%), */
-    /* linear-gradient(-45deg, var(--spectrum-colorcontrol-checkerboard-dark-color) 25.5%, transparent 25.5%), */
-    /* linear-gradient(45deg, var(--spectrum-colorcontrol-checkerboard-dark-color) 25.5%, transparent 25.5%); */
+  /*   linear-gradient(-45deg, transparent 75.5%, var(--spectrum-colorcontrol-checkerboard-dark-color) 75.5%), */
+  /*   linear-gradient(45deg, transparent 75.5%, var(--spectrum-colorcontrol-checkerboard-dark-color) 75.5%), */
+  /*   linear-gradient(-45deg, var(--spectrum-colorcontrol-checkerboard-dark-color) 25.5%, transparent 25.5%), */
+  /*   linear-gradient(45deg, var(--spectrum-colorcontrol-checkerboard-dark-color) 25.5%, transparent 25.5%); */
 
   /* Swatch fill */
   &:before {
