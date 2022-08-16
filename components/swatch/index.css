@@ -12,7 +12,7 @@ governing permissions and limitations under the License.
 
 .🤫 {
   /* hack: make sure we don't complain about this color being undefined */
-  /* --spectrum-picked-color: 0; */
+  --spectrum-picked-color: 0;
 }
 
 /* shape = square is default */
@@ -78,25 +78,25 @@ governing permissions and limitations under the License.
   --spectrum-swatch-focus-ring-color: var(--spectrum-focus-ring-color);
 }
 
-.spectrum-Swatch--sizeS {
+.spectrum-Swatch--sizeXS {
   --spectrum-swatch-size: var(--spectrum-swatch-size-extra-small);
   --spectrum-swatch-disabled-icon-size: var(--spectrum-workflow-icon-size-50);
   --spectrum-swatch-slash-thickness: var(--spectrum-swatch-slash-thickness-extra-small);
 }
 
-.spectrum-Swatch--sizeM {
+.spectrum-Swatch--sizeS {
   --spectrum-swatch-size: var(--spectrum-swatch-size-small);
   --spectrum-swatch-disabled-icon-size: var(--spectrum-workflow-icon-size-75);
   --spectrum-swatch-slash-thickness: var(--spectrum-swatch-slash-thickness-small);
 }
 
-.spectrum-Swatch--sizeL {
+.spectrum-Swatch--sizeM {
   --spectrum-swatch-size: var(--spectrum-swatch-size-medium);
   --spectrum-swatch-disabled-icon-size: var(--spectrum-workflow-icon-size-100);
   --spectrum-swatch-slash-thickness: var(--spectrum-swatch-slash-thickness-medium);
 }
 
-.spectrum-Swatch--sizeXL {
+.spectrum-Swatch--sizeL {
   --spectrum-swatch-size: var(--spectrum-swatch-size-large);
   --spectrum-swatch-disabled-icon-size: var(--spectrum-workflow-icon-size-200);
   --spectrum-swatch-slash-thickness: var(--spectrum-swatch-slash-thickness-large);
@@ -218,30 +218,6 @@ governing permissions and limitations under the License.
         }
       }
     }
-
-    /* &.spectrum-Swatch--sizeXS { */
-    /*   .spectrum-Swatch-fill:after  { */
-    /*     height: 2px; */
-    /*   } */
-    /* } */
-
-    /* &.spectrum-Swatch--sizeS { */
-    /*   .spectrum-Swatch-fill:after  { */
-    /*     height: 3px; */
-    /*   } */
-    /* } */
-
-    /* &.spectrum-Swatch--sizeM { */
-    /*   .spectrum-Swatch-fill:after  { */
-    /*     height: 4px; */
-    /*   } */
-    /* } */
-
-    /* &.spectrum-Swatch--sizeL { */
-    /*   .spectrum-Swatch-fill:after  { */
-    /*     height: 5px; */
-    /*   } */
-    /* } */
   }
 
   &[disabled],
@@ -321,6 +297,7 @@ governing permissions and limitations under the License.
     /* linear-gradient(-45deg, var(--spectrum-colorcontrol-checkerboard-dark-color) 25.5%, transparent 25.5%), */
     /* linear-gradient(45deg, var(--spectrum-colorcontrol-checkerboard-dark-color) 25.5%, transparent 25.5%); */
 
+  /* Swatch fill */
   &:before {
     content: '';
     position: absolute;
@@ -328,8 +305,7 @@ governing permissions and limitations under the License.
 
     z-index: 0;
 
-    /* background-color: var(--spectrum-picked-color, transparent); */
-    background-color: teal;
+    background-color: var(--spectrum-picked-color, transparent);
 
     /* Swatch border */
     /* box-shadow: inset 0 0 0 var(--spectrum-swatch-fill-border-width) var(--spectrum-swatch-fill-border-color); */
