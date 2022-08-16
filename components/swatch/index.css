@@ -38,6 +38,9 @@ governing permissions and limitations under the License.
   --spectrum-swatch-border-color-regular: rgba(0, 0, 0, 0.5);
   --spectrum-swatch-border-color-light: rgba(0, 0, 0, 0.2);
 
+  /* Static watch fil height */
+  --spectrum-swatch-spacing-selected: 8px;
+
   /*  */
   --spectrum-swatch-size: var(--spectrum-swatch-size-small);
   --spectrum-swatch-border-radius: var(--spectrum-corner-radius-100);
@@ -147,8 +150,8 @@ governing permissions and limitations under the License.
     /* --spectrum-swatch-background-offset: -4px; /\* correct for selected size *\/ */
 
     .spectrum-Swatch-fill {
-      width: calc(100% - var(--spectrum-swatch-focus-ring-gap));
-      height: calc(100% - var(--spectrum-swatch-focus-ring-gap));
+      width: calc(100% - var(--spectrum-swatch-spacing-selected));
+      height: calc(100% - var(--spectrum-swatch-spacing-selected));
 
       /* border-radius: var(--spectrum-swatch-fill-border-radius-selected); */
       border-radius: var(--spectrum-swatch-border-radius);
