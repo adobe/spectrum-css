@@ -19,18 +19,6 @@ governing permissions and limitations under the License.
 
 /* Swatch tokens */
 .spectrum-Swatch {
-  /* Static swatch t-shirt sizes for medium scale */
-  --spectrum-swatch-size-extra-small: 16px;
-  --spectrum-swatch-size-small: 24px;
-  --spectrum-swatch-size-medium: 32px;
-  --spectrum-swatch-size-large: 40px;
-
-  /* Static slash thickness t-shirt sizes */
-  --spectrum-swatch-slash-thickness-extra-small: 2px;
-  --spectrum-swatch-slash-thickness-small: 3px;
-  --spectrum-swatch-slash-thickness-medium: 4px;
-  --spectrum-swatch-slash-thickness-large: 5px;
-
   /* Static swatch focus ring border radius */
   --spectrum-swatch-focus-ring-border-radius: 8px;
 
