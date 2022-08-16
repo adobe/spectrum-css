@@ -19,14 +19,14 @@ governing permissions and limitations under the License.
 
 /* Swatch tokens */
 .spectrum-Swatch {
-  /* Static swatch focus ring border radius */
+  /* Missing: Static swatch focus ring border radius */
   --spectrum-swatch-focus-ring-border-radius: 8px;
 
-  /* Static swatch border radius */
+  /* Static swatch border colors in place of missing swatch-border-color */
   --spectrum-swatch-border-color-regular: rgba(0, 0, 0, 0.5);
   --spectrum-swatch-border-color-light: rgba(0, 0, 0, 0.2);
 
-  /* Static watch fil height */
+  /* Static watch fill height border-width-200 isn't thick enough */
   --spectrum-swatch-spacing-selected: 8px;
 
   /*  */
@@ -39,8 +39,7 @@ governing permissions and limitations under the License.
   --spectrum-swatch-focus-ring-thickness: var(--spectrum-focus-ring-thickness);
   --spectrum-swatch-focus-ring-gap: var(--spectrum-focus-ring-gap);
 
-  /* Missing token */
-  /* --spectrum-swatch-border-color: var(--spectrum-swatch-border-color); */
+  --spectrum-swatch-border-color: var(--spectrum-swatch-border-color);
   --spectrum-swatch-border-color-selected: var(--spectrum-gray-900);
   /* --spectrum-swatch-inner-border-color-selected: var(--spectrum-gray-50); */
   --spectrum-swatch-disabled-icon-border-color: var(--spectrum-swatch-disabled-icon-border-color);
@@ -141,15 +140,11 @@ governing permissions and limitations under the License.
       width: calc(100% - var(--spectrum-swatch-spacing-selected));
       height: calc(100% - var(--spectrum-swatch-spacing-selected));
 
-      /* border-radius: var(--spectrum-swatch-fill-border-radius-selected); */
-      border-radius: var(--spectrum-swatch-border-radius);
+      /* no border radius when selected */
+      border-radius: 0;
 
-      /* no border when selected */
       &:before {
-        /* Use 2px border-radius here? */
-        /* border-radius: var(--spectrum-swatch-fill-border-radius-selected); */
-        border-radius: var(--spectrum-swatch-border-radius);
-
+        border-radius: 0;
         box-shadow: none;
       }
     }
