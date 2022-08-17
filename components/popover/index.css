@@ -123,9 +123,6 @@ governing permissions and limitations under the License.
 .spectrum-Popover--top-right,
 .spectrum-Popover--top-start, /* visual provided */
 .spectrum-Popover--top-end {
-  /* default spacing outside content container */
-  padding: var(--spectrum-popover-spacing-container);
-
   /* TODO - import overlay - animate opening upward */
   &.is-open {
     /* @inherit: %spectrum-overlay--top--open; */
@@ -134,7 +131,6 @@ governing permissions and limitations under the License.
   &.spectrum-Popover--withTip {
     /* add tip height to spacing to source */
     padding-bottom: calc(var(--spectrum-popover-pointer-height) + var(--spectrum-popover-spacing-to-source));
-    padding-top: var(--spectrum-popover-spacing-container);
   }
 }
 
@@ -198,9 +194,6 @@ governing permissions and limitations under the License.
 .spectrum-Popover--bottom-right,
 .spectrum-Popover--bottom-start, /* visual provided */
 .spectrum-Popover--bottom-end /* visual provided */ {
-  /* default spacing outside content container */
-  padding: var(--spectrum-popover-spacing-container);
-
   /* TODO - import overlay - animate opening downward */
   &.is-open {
     /* @inherit: %spectrum-overlay--bottom--open; */
@@ -288,9 +281,6 @@ governing permissions and limitations under the License.
 .spectrum-Popover--right,
 .spectrum-Popover--right-bottom,
 .spectrum-Popover--right-top /* visual provided */ {
-  /* default spacing outside content container */
-  padding: var(--spectrum-popover-spacing-container);
-
   /* TODO - import overlay - animate opening to right */
   &.is-open {
     /* @inherit: %spectrum-overlay--right--open; */
@@ -300,7 +290,7 @@ governing permissions and limitations under the License.
   &.spectrum-Popover--withTip {
     /* add tip height to spacing to source */
     padding-left: calc(var(--spectrum-popover-pointer-height) + var(--spectrum-popover-spacing-to-source));
-    padding-right: var(--spectrum-popover-spacing-container);
+    padding-bottom: var(--spectrum-popover-spacing-container);
 
     .spectrum-Popover-content {
      /* tip triangle points left */
@@ -357,9 +347,6 @@ governing permissions and limitations under the License.
 .spectrum-Popover--left,
 .spectrum-Popover--left-bottom, /* visual provided */
 .spectrum-Popover--left-top {
-  /* default spacing outside content container */
-  padding: var(--spectrum-popover-spacing-container);
-
   /* TODO - import overlay - animate opening to left */
   &.is-open {
     /* @inherit: %spectrum-overlay--left--open; */
@@ -369,7 +356,7 @@ governing permissions and limitations under the License.
   &.spectrum-Popover--withTip {
     /* add tip height to spacing to source */
     padding-right: calc(var(--spectrum-popover-pointer-height) + var(--spectrum-popover-spacing-to-source));
-    padding-left: var(--spectrum-popover-spacing-container);
+    padding-bottom: var(--spectrum-popover-spacing-container);
 
     .spectrum-Popover-content {
      /* tip triangle points left */
@@ -428,6 +415,7 @@ governing permissions and limitations under the License.
 .spectrum-Popover--start-bottom {
   &.spectrum-Popover--withTip {
     padding-inline-end: calc(var(--spectrum-popover-pointer-height) + var(--spectrum-popover-spacing-to-source));
+    padding-bottom: var(--spectrum-popover-spacing-container);
 
     .spectrum-Popover-content {
       /* tip triangle  */
@@ -490,6 +478,7 @@ governing permissions and limitations under the License.
 .spectrum-Popover--end-bottom {
   &.spectrum-Popover--withTip {
     padding-inline-start: calc(var(--spectrum-popover-pointer-height) + var(--spectrum-popover-spacing-to-source));
+    padding-bottom: var(--spectrum-popover-spacing-container);
 
     .spectrum-Popover-content {
       /* tip triangle  */
