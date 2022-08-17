@@ -12,14 +12,12 @@ governing permissions and limitations under the License.
 
 /* Swatch tokens */
 .spectrum-Swatch {
-  /* Missing: Static swatch focus ring border radius */
+  /* Static properties - no tokens */
   --spectrum-swatch-focus-ring-border-radius: 8px;
 
-  /* Static swatch border colors in place of missing swatch-border-color */
   --spectrum-swatch-border-color-regular: rgba(0, 0, 0, 0.5);
   --spectrum-swatch-border-color-light: rgba(0, 0, 0, 0.2);
 
-  /* Static watch fill height border-width-200 isn't thick enough */
   --spectrum-swatch-spacing-selected: 8px;
 
   /* Size */
@@ -117,7 +115,6 @@ governing permissions and limitations under the License.
     height: var(--spectrum-swatch-disabled-icon-size);
   }
 
-  /* rounding = default is default */
   &,
   &:before {
     border-radius: var(--spectrum-swatch-border-radius);
@@ -125,9 +122,6 @@ governing permissions and limitations under the License.
 
   &.is-selected {
     background-color: var(--spectrum-swatch-inner-border-color-selected);
-
-    /* --spectrum-swatch-background-offset: -4px; /\* correct for selected size *\/ */
-
     .spectrum-Swatch-fill {
       width: calc(100% - var(--spectrum-swatch-spacing-selected));
       height: calc(100% - var(--spectrum-swatch-spacing-selected));
@@ -240,11 +234,10 @@ governing permissions and limitations under the License.
 
   border-radius: var(--spectrum-swatch-border-radius);
 
-  /* background-color: var(--spectrum-color-control-checkerboard-light-color); */
   background-color: var(--spectrum-swatch-fill-background-color);
 
   /* Checkerboard fill */
-  /* Static checkerboard fill tokens */
+  /* Static checkerboard properties */
   --spectrum-swatch-checkerboard-size: 8px;
   --spectrum-swatch-checkerboard-background-offset: 0px;
   --spectrum-swatch-checkerboard-dark-color: rgb(217, 217, 217);
@@ -305,7 +298,6 @@ governing permissions and limitations under the License.
   visibility: hidden;
   pointer-events: none;
 
-  /* color: var(--spectrum-global-color-gray-700); */
   color: var(--spectrum-swatch-fill-background-color);
 }
 
@@ -316,7 +308,6 @@ governing permissions and limitations under the License.
   visibility: hidden;
   pointer-events: none;
 
-  /* Review */
   color: var(--spectrum-swatch-disabled-icon-color);
   stroke: var(--spectrum-swatch-disabled-icon-color);
 }
