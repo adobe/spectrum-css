@@ -12,7 +12,7 @@ governing permissions and limitations under the License.
 
 
 
-.spectrum-Switch-sizeS {
+.spectrum-Switch--sizeS {
   --spectrum-switch-height: var(--spectrum-component-height-75);
   --spectrum-switch-control-width: var(--spectrum-switch-control-width-small);
   --spectrum-switch-control-height: var(--spectrum-switch-control-height-small);
@@ -23,8 +23,8 @@ governing permissions and limitations under the License.
   --spectrum-switch-font-size: var(--spectrum-font-size-75);
 }
 
-/* @TODO add support for lang CJK-line-height */
-.spectrum-Switch-sizeM {
+
+.spectrum-Switch--sizeM {
   --spectrum-switch-height: var(--spectrum-component-height-100);
   --spectrum-switch-control-width: var(--spectrum-switch-control-width-medium);
   --spectrum-switch-control-height: var(--spectrum-switch-control-height-medium);
@@ -36,7 +36,7 @@ governing permissions and limitations under the License.
 
 }
 
-.spectrum-Switch-sizeL {
+.spectrum-Switch--sizeL {
   --spectrum-switch-height: var(--spectrum-component-height-200);
   --spectrum-switch-control-width: var(--spectrum-switch-control-width-large);
   --spectrum-switch-control-height: var(--spectrum-switch-control-height-large);
@@ -48,7 +48,7 @@ governing permissions and limitations under the License.
 
 }
 
-.spectrum-Switch-sizeXL {
+.spectrum-Switch--sizeXL {
   --spectrum-switch-height: var(--spectrum-component-height-300);
   --spectrum-switch-control-width: var(--spectrum-switch-control-width-extra-large);
   --spectrum-switch-control-height: var(--spectrum-switch-control-height-extra-large);
@@ -68,9 +68,6 @@ governing permissions and limitations under the License.
 
   min-block-size: var(--mod-switch-height, var(--spectrum-switch-height));
   max-inline-size: 100%;
-
-  /* TODO check min-width for switch group */
-  /* margin-inline-end: calc(var(--spectrum-switch-control-width) * 2); */
 
   vertical-align: top;
 
@@ -270,18 +267,6 @@ governing permissions and limitations under the License.
         border-color: var(--highcontrast-switch-handle-border-color-active,
             var(--spectrum-switch-handle-border-color-active,
               var(--spectrum-switch-handle-border-color-active)));
-      }
-    }
-  }
-
-  /* TODO REMOVE */
-  &:disabled,
-  &.is-disabled {
-    .spectrum-Switch-switch {
-      &:before {
-        border-color: var(--highcontrast-switch-handle-border-color-disabled,
-            var(--mod-switch-handle-border-color-disabled,
-              var(--spectrum-switch-handle-border-color-disabled)));
       }
     }
   }
