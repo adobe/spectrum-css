@@ -29,7 +29,7 @@ governing permissions and limitations under the License.
   /* Static watch fill height border-width-200 isn't thick enough */
   --spectrum-swatch-spacing-selected: 8px;
 
-  /*  */
+  /* Size */
   --spectrum-swatch-size: var(--spectrum-swatch-size-small);
   --spectrum-swatch-border-radius: var(--spectrum-corner-radius-100);
   --spectrum-swatch-border-thickness: var(--spectrum-border-width-100);
@@ -46,7 +46,7 @@ governing permissions and limitations under the License.
   --spectrum-swatch-disabled-icon-color: var(--spectrum-white);
   --spectrum-swatch-background-color: var(--spectrum-gray-50);
   --spectrum-swatch-dash-icon-color: var(--spectrum-gray-800);
-  --spectrum-swatch-slash-icon-color: var(--spectrum-red-500);
+  --spectrum-swatch-slash-icon-color: var(--spectrum-red-900);
   --spectrum-swatch-focus-ring-color: var(--spectrum-focus-ring-color);
 }
 
@@ -166,11 +166,12 @@ governing permissions and limitations under the License.
     }
   }
 
-  /* Slash */
+  /* What does is-nothing mean? */
   &.is-nothing {
     .spectrum-Swatch-fill {
       background: var(--spectrum-swatch-background-color);
 
+      /* Slash */
       &:after {
         height: var(--spectrum-swatch-slash-thickness);
         content: '';
