@@ -217,13 +217,11 @@ governing permissions and limitations under the License.
   &:after {
     content: '';
     position: absolute;
-    /* inset: calc(-2 * var(--spectrum-swatch-border-thickness-selected)); */
     inset: calc(-2 * var(--spectrum-swatch-focus-ring-gap));
 
     opacity: 0;
 
     border: var(--spectrum-swatch-focus-ring-thickness) solid var(--spectrum-swatch-focus-ring-color);
-    /* border-radius: var(--spectrum-swatch-border-radius); */
     border-radius: var(--spectrum-swatch-focus-ring-border-radius);
 
     transition: opacity var(--spectrum-animation-duration-100) ease-in-out;
@@ -255,22 +253,28 @@ governing permissions and limitations under the License.
   /* background-color: var(--spectrum-color-control-checkerboard-light-color); */
   background-color: var(--spectrum-swatch-background-color);
 
-  /* background-size: */
-  /*   calc(var(--spectrum-swatch-checkerboard-size) * 2) */
-  /*   calc(var(--spectrum-swatch-checkerboard-size) * 2); */
+  /* Checkerboard fill */
+  /* Static checkerboard fill tokens */
+  --spectrum-swatch-checkerboard-size: 8px;
+  --spectrum-swatch-checkerboard-background-offset: 0px;
+  --spectrum-swatch-checkerboard-dark-color: rgb(217, 217, 217);
 
-  /* background-position: */
-  /*   var(--spectrum-swatch-background-offset) var(--spectrum-swatch-background-offset), */
-  /*   var(--spectrum-swatch-background-offset) calc(var(--spectrum-swatch-checkerboard-size) + var(--spectrum-swatch-background-offset)), */
-  /*   calc(var(--spectrum-swatch-checkerboard-size) + var(--spectrum-swatch-background-offset)) calc(-1 * var(--spectrum-swatch-checkerboard-size) + var(--spectrum-swatch-background-offset)), */
-  /*   calc(-1 * var(--spectrum-swatch-checkerboard-size) + var(--spectrum-swatch-background-offset)) var(--spectrum-swatch-background-offset); */
+  background-size:
+    calc(var(--spectrum-swatch-checkerboard-size) * 2)
+    calc(var(--spectrum-swatch-checkerboard-size) * 2);
+
+  background-position:
+    var(--spectrum-swatch-checkerboard-background-offset) var(--spectrum-swatch-checkerboard-background-offset),
+    var(--spectrum-swatch-checkerboard-background-offset) calc(var(--spectrum-swatch-checkerboard-size) + var(--spectrum-swatch-checkerboard-background-offset)),
+    calc(var(--spectrum-swatch-checkerboard-size) + var(--spectrum-swatch-checkerboard-background-offset)) calc(-1 * var(--spectrum-swatch-checkerboard-size) + var(--spectrum-swatch-checkerboard-background-offset)),
+    calc(-1 * var(--spectrum-swatch-checkerboard-size) + var(--spectrum-swatch-checkerboard-background-offset)) var(--spectrum-swatch-checkerboard-background-offset);
 
   /* Add a half-percent to fix diagonal line issue in Chrome on non-retina displays */
-  /* background-image: */
-  /*   linear-gradient(-45deg, transparent 75.5%, var(--spectrum-colorcontrol-checkerboard-dark-color) 75.5%), */
-  /*   linear-gradient(45deg, transparent 75.5%, var(--spectrum-colorcontrol-checkerboard-dark-color) 75.5%), */
-  /*   linear-gradient(-45deg, var(--spectrum-colorcontrol-checkerboard-dark-color) 25.5%, transparent 25.5%), */
-  /*   linear-gradient(45deg, var(--spectrum-colorcontrol-checkerboard-dark-color) 25.5%, transparent 25.5%); */
+  background-image:
+    linear-gradient(-45deg, transparent 75.5%, var(--spectrum-swatch-checkerboard-dark-color) 75.5%),
+    linear-gradient(45deg, transparent 75.5%, var(--spectrum-swatch-checkerboard-dark-color) 75.5%),
+    linear-gradient(-45deg, var(--spectrum-swatch-checkerboard-dark-color) 25.5%, transparent 25.5%),
+    linear-gradient(45deg, var(--spectrum-swatch-checkerboard-dark-color) 25.5%, transparent 25.5%);
 
   /* Swatch fill */
   &:before {
