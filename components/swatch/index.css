@@ -10,13 +10,6 @@ OF ANY KIND, either express or implied. See the License for the specific languag
 governing permissions and limitations under the License.
 */
 
-.🤫 {
-  /* hack: make sure we don't complain about this color being undefined */
-  --spectrum-picked-color: 0;
-}
-
-/* shape = square is default */
-
 /* Swatch tokens */
 .spectrum-Swatch {
   /* Missing: Static swatch focus ring border radius */
@@ -44,7 +37,7 @@ governing permissions and limitations under the License.
   /* --spectrum-swatch-inner-border-color-selected: var(--spectrum-gray-50); */
   --spectrum-swatch-disabled-icon-border-color: var(--spectrum-swatch-disabled-icon-border-color);
   --spectrum-swatch-disabled-icon-color: var(--spectrum-white);
-  --spectrum-swatch-background-color: var(--spectrum-gray-50);
+  --spectrum-swatch-fill-background-color: var(--spectrum-gray-50);
   --spectrum-swatch-dash-icon-color: var(--spectrum-gray-800);
   --spectrum-swatch-slash-icon-color: var(--spectrum-red-900);
   --spectrum-swatch-focus-ring-color: var(--spectrum-focus-ring-color);
@@ -85,7 +78,7 @@ governing permissions and limitations under the License.
     /* --spectrum-swatch-selection-indicator-border-color: Highlight; */
     /* --spectrum-swatch-fill-border-color: ButtonText; */
     /* --spectrum-swatch-fill-border-color-light: ButtonText; */
-    /* --spectrum-swatch-background-color-selected: ButtonFace; */
+    /* --spectrum-swatch-fill-background-color-selected: ButtonFace; */
     &.is-disabled {
       .spectrum-Swatch-fill {
         forced-color-adjust: auto;
@@ -131,8 +124,8 @@ governing permissions and limitations under the License.
   }
 
   &.is-selected {
-    /* background-color: var(--spectrum-swatch-background-color-selected); */
-    background-color: var(--spectrum-swatch-background-color);
+    /* background-color: var(--spectrum-swatch-fill-background-color-selected); */
+    background-color: var(--spectrum-swatch-fill-background-color);
 
     /* --spectrum-swatch-background-offset: -4px; /\* correct for selected size *\/ */
 
@@ -157,7 +150,7 @@ governing permissions and limitations under the License.
   /* Why is this variant called mixed? */
   &.is-mixedValue {
     .spectrum-Swatch-fill {
-      background: var(--spectrum-swatch-background-color);
+      background: var(--spectrum-swatch-fill-background-color);
     }
 
     .spectrum-Swatch-mixedValueIcon {
@@ -169,7 +162,7 @@ governing permissions and limitations under the License.
   /* What does is-nothing mean? */
   &.is-nothing {
     .spectrum-Swatch-fill {
-      background: var(--spectrum-swatch-background-color);
+      background: var(--spectrum-swatch-fill-background-color);
 
       /* Slash */
       &:after {
@@ -251,7 +244,7 @@ governing permissions and limitations under the License.
   border-radius: var(--spectrum-swatch-border-radius);
 
   /* background-color: var(--spectrum-color-control-checkerboard-light-color); */
-  background-color: var(--spectrum-swatch-background-color);
+  background-color: var(--spectrum-swatch-fill-background-color);
 
   /* Checkerboard fill */
   /* Static checkerboard fill tokens */
@@ -284,7 +277,7 @@ governing permissions and limitations under the License.
 
     z-index: 0;
 
-    background-color: var(--spectrum-picked-color, transparent);
+    background-color: var(--mod-swatch-fill-background-color, var(--spectrum-swatch-fill-background-color), transparent);
 
     /* Swatch border */
     box-shadow: inset 0 0 0 var(--spectrum-swatch-border-thickness) var(--spectrum-swatch-border-color-regular);
@@ -316,7 +309,7 @@ governing permissions and limitations under the License.
   pointer-events: none;
 
   /* color: var(--spectrum-global-color-gray-700); */
-  color: var(--spectrum-swatch-background-color);
+  color: var(--spectrum-swatch-fill-background-color);
 }
 
 .spectrum-Swatch-disabledIcon {
