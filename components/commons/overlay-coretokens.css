@@ -3,6 +3,7 @@ Copyright 2019 Adobe. All rights reserved.
 This file is licensed to you under the Apache License, Version 2.0 (the "License");
 you may not use this file except in compliance with the License. You may obtain a copy
 of the License at http://www.apache.org/licenses/LICENSE-2.0
+
 Unless required by applicable law or agreed to in writing, software distributed under
 the License is distributed on an "AS IS" BASIS, WITHOUT WARRANTIES OR REPRESENTATIONS
 OF ANY KIND, either express or implied. See the License for the specific language
@@ -10,7 +11,9 @@ governing permissions and limitations under the License.
 */
 
 %spectrum-overlay {
-  --spectrum-overlay-animation-distance: var(--spectrum-picker-m-texticon-popover-offset-y);
+  /* TODO: replace with core tokens */
+  --spectrum-overlay-animation-distance: 6px;
+  --spectrum-global-animation-duration-100: 130ms;
 
   visibility: hidden;
 
@@ -34,17 +37,21 @@ governing permissions and limitations under the License.
 }
 
 %spectrum-overlay--bottom--open {
+  --spectrum-overlay-animation-distance: 6px;
   transform: translateY(var(--spectrum-overlay-animation-distance));
 }
 
 %spectrum-overlay--top--open {
+  --spectrum-overlay-animation-distance: 6px;
   transform: translateY(calc(-1 * var(--spectrum-overlay-animation-distance)));
 }
 
 %spectrum-overlay--right--open {
+  --spectrum-overlay-animation-distance: 6px;
   transform: translateX(var(--spectrum-overlay-animation-distance));
 }
 
 %spectrum-overlay--left--open {
+  --spectrum-overlay-animation-distance: 6px;
   transform: translateX(calc(-1 * var(--spectrum-overlay-animation-distance)));
 }
