@@ -13,6 +13,7 @@ governing permissions and limitations under the License.
 /* @import '../overlay/index.css'; */
  /* @import "../vars/css/components/spectrum-overlay.css"; - does not work, not in vars */
 /* @spectrum-css/overlay */
+@import "../commons/overlay-coretokens.css";
 
 .spectrum-Popover {
   --spectrum-popover-corner-radius: var(--spectrum-corner-radius-100);
@@ -42,8 +43,7 @@ governing permissions and limitations under the License.
 
 /* outer container to control spacing around component */
 .spectrum-Popover {
-  /* TODO - resolve missing overlay dependency */
-   /* @inherit: %spectrum-overlay; */
+   @inherit: %spectrum-overlay;
 
   /* TODO - resolve missing tokens */
   /* min-width: var(--spectrum-popover-min-width);
@@ -57,9 +57,8 @@ governing permissions and limitations under the License.
 
   outline: none; /* Hide focus outline */
 
-  /* TODO - add general open animation */
   &.is-open {
-    /* @inherit: %spectrum-overlay--open; */
+    @inherit: %spectrum-overlay--open;
   }
 
   /* inner content container with border and background styles */
@@ -123,9 +122,8 @@ governing permissions and limitations under the License.
 .spectrum-Popover--top-right,
 .spectrum-Popover--top-start, /* visual provided */
 .spectrum-Popover--top-end {
-  /* TODO - import overlay - animate opening upward */
   &.is-open {
-    /* @inherit: %spectrum-overlay--top--open; */
+    @inherit: %spectrum-overlay--top--open;
   }
 
   &.spectrum-Popover--withTip {
@@ -194,9 +192,8 @@ governing permissions and limitations under the License.
 .spectrum-Popover--bottom-right,
 .spectrum-Popover--bottom-start, /* visual provided */
 .spectrum-Popover--bottom-end /* visual provided */ {
-  /* TODO - import overlay - animate opening downward */
   &.is-open {
-    /* @inherit: %spectrum-overlay--bottom--open; */
+    @inherit: %spectrum-overlay--bottom--open;
   }
 
   /* has tip triangle */
@@ -281,9 +278,8 @@ governing permissions and limitations under the License.
 .spectrum-Popover--right,
 .spectrum-Popover--right-bottom,
 .spectrum-Popover--right-top /* visual provided */ {
-  /* TODO - import overlay - animate opening to right */
   &.is-open {
-    /* @inherit: %spectrum-overlay--right--open; */
+    @inherit: %spectrum-overlay--right--open;
   }
 
   /* has tip triangle */
@@ -347,9 +343,8 @@ governing permissions and limitations under the License.
 .spectrum-Popover--left,
 .spectrum-Popover--left-bottom, /* visual provided */
 .spectrum-Popover--left-top {
-  /* TODO - import overlay - animate opening to left */
   &.is-open {
-    /* @inherit: %spectrum-overlay--left--open; */
+    @inherit: %spectrum-overlay--left--open;
   }
 
   /* has tip triangle */
