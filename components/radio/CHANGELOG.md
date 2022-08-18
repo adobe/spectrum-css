@@ -3,6 +3,26 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+<a name="4.0.0"></a>
+# 4.0.0
+🗓 2022-08-18 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/radio@3.0.24...@spectrum-css/radio@4.0.0)
+
+* feat(radio)!: migrate to core tokens (#1484) ([1514402](https://github.com/adobe/spectrum-css/commit/1514402)), closes [#1484](https://github.com/adobe/spectrum-css/issues/1484)
+
+
+### 🛑 BREAKING CHANGES
+
+* this migrates the Radio component to core tokens.
+
+Additionally, it brings the component up-to-date with the latest design spec:
+* Changes the color of the `invalid` state
+* Updates guidance for `invalid` state
+* Updates Windows High Contrast Mode
+
+
+
+
+
 <a name="4.0.0-beta.1"></a>
 # 4.0.0-beta.1
 🗓 2022-08-02 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/radio@3.0.24...@spectrum-css/radio@4.0.0-beta.1)
