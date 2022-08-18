@@ -60,8 +60,8 @@ examples:
     name: Static Black
     status: Verified
     markup: |
-      <div style="style="background-color: rgb(181, 209, 211); color: rgb(181, 209, 211); padding: 15px 20px; display: inline-block;">
-        <p class="spectrum-Body" style="color: rgb(255, 255, 255);">
+      <div style="background-color: rgb(181, 209, 211); color: rgb(181, 209, 211); padding: 15px 20px; display: inline-block;">
+        <p class="spectrum-Body">
           Hello, this is my <a href="#" class="spectrum-Link spectrum-Link--staticBlack"> spectrum-Link--staticBlack</a>. This is just filler text, but if you keep reading maybe something good will happen.
         </p>
       </div>

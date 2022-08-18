@@ -18,25 +18,33 @@ governing permissions and limitations under the License.
   --spectrum-link-text-color-primary-focus: var(--spectrum-accent-content-color-key-focus);
 
   /* Secondary */
-  /* --spectrum-link-text-color-secondary-default: var(--spectrum-neutral-content-color-default); */
-  /* --spectrum-link-text-color-secondary-hover: var(--spectrum-neutral-content-color-hover); */
-  /* --spectrum-link-text-color-secondary-down: var(--spectrum-neutral-content-color-down); */
-  /* --spectrum-link-text-color-secondary-focus: var(--spectrum-neutral-content-color-key-focus); */
+  --spectrum-link-text-color-secondary-default: var(--spectrum-neutral-content-color-default);
+  --spectrum-link-text-color-secondary-hover: var(--spectrum-neutral-content-color-hover);
+  --spectrum-link-text-color-secondary-down: var(--spectrum-neutral-content-color-down);
+  --spectrum-link-text-color-secondary-focus: var(--spectrum-neutral-content-color-key-focus);
 
   --spectrum-link-text-color-white: var(--spectrum-white);
   --spectrum-link-text-color-black: var(--spectrum-black);
 }
 
+.spectrum-Link--staticBlack {
+  color: var(--spectrum-link-text-color-black);
+}
+
+.spectrum-Link--staticWhite {
+  color: var(--spectrum-link-text-color-white);
+}
+
 @media (forced-colors: active) {
 
   /* &--staticBlack { */
-  /*   --highcontrast-closebutton-static-background-color-default: ButtonFace; */
+  /*   --highcontrast-link-text-color-blackcolor-default: ButtonFace; */
   /*   --highcontrast-closebutton-icon-color-default: Highlight; */
   /*   --highcontrast-closebutton-icon-color-disabled: GrayText; */
   /* } */
 
   /* &--staticWhite { */
-  /*   --highcontrast-closebutton-static-background-color-default: ButtonFace; */
+  /*   --highcontrast-link-text-color-blackcolor-default: ButtonFace; */
   /*   --highcontrast-closebutton-icon-color-default: Highlight; */
   /*   --highcontrast-closebutton-icon-color-disabled: Highlight; */
   /* } */
@@ -89,18 +97,18 @@ governing permissions and limitations under the License.
 }
 
 .spectrum-Link--secondary {
-  color: inherit;
+  color: var(--spectrum-link-text-color-secondary-default);
 
   &:hover {
-    color: inherit;
+    color: var(--spectrum-link-text-color-secondary-hover);
   }
 
   &:active {
-    color: inherit;
+    color: var(--spectrum-link-text-color-secondary-active);
   }
 
   &:focus {
-    color: inherit;
+    color: var(--spectrum-link-text-color-secondary-focus);
   }
 }
 
@@ -120,22 +128,3 @@ governing permissions and limitations under the License.
   color: var(--spectrum-link-text-color-black);
 }
 
-/* .spectrum-CloseButton--staticWhite { */
-/*   --spectrum-closebutton-static-background-color-default: transparent; */
-/*   --spectrum-closebutton-static-background-color-hover: var(--spectrum-transparent-white-300); */
-/*   --spectrum-closebutton-static-background-color-down: var(--spectrum-transparent-white-400); */
-/*   --spectrum-closebutton-static-background-color-focus: var(--spectrum-transparent-white-300); */
-/*   --spectrum-closebutton-icon-color-default: var(--spectrum-white); */
-/*   --spectrum-closebutton-icon-color-disabled: var(--spectrum-disabled-static-white-content-color); */
-/*   --spectrum-closebutton-focus-ring-color: var(--spectrum-static-white-focus-ring-color); */
-/* } */
-
-/* .spectrum-CloseButton--staticBlack { */
-/*   --spectrum-closebutton-static-background-color-default: transparent; */
-/*   --spectrum-closebutton-static-background-color-hover: var(--spectrum-transparent-black-300); */
-/*   --spectrum-closebutton-static-background-color-down: var(--spectrum-transparent-black-400); */
-/*   --spectrum-closebutton-static-background-color-focus: var(--spectrum-transparent-black-300); */
-/*   --spectrum-closebutton-icon-color-default: var(--spectrum-black); */
-/*   --spectrum-closebutton-icon-color-disabled: var(--spectrum-disabled-static-black-content-color); */
-/*   --spectrum-closebutton-focus-ring-color: var(--spectrum-static-black-focus-ring-color); */
-/* } */
