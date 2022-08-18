@@ -22,7 +22,7 @@ governing permissions and limitations under the License.
 
    /* TODO - missing token - default pointer spacing from edge - same as corner radius */
    /* change this token to be 1/2 of source width to center pointer over source */
-  --spectrum-popover-pointer-edge-offset: var(--spectrum-corner-radius-100);
+  --spectrum-popover-pointer-edge-spacing-minimum: var(--spectrum-corner-radius-100);
 
   --spectrum-popover-spacing-vertical: var(--spectrum-popover-top-to-content-area);
   --spectrum-popover-spacing-to-source: var(--spectrum-spacing-100);
@@ -142,7 +142,7 @@ governing permissions and limitations under the License.
       &::before,
       &::after {
         left: auto;
-        right: var(--spectrum-popover-pointer-edge-offset);
+        right: var(--spectrum-popover-pointer-edge-spacing-minimum);
       }
     }
   }
@@ -156,7 +156,7 @@ governing permissions and limitations under the License.
       &::before,
       &::after {
         right: auto;
-        left: var(--spectrum-popover-pointer-edge-offset);
+        left: var(--spectrum-popover-pointer-edge-spacing-minimum);
       }
     }
   }
@@ -169,7 +169,7 @@ governing permissions and limitations under the License.
       /* tip triangle  */
       &::before,
       &::after {
-        margin-inline-start: var(--spectrum-popover-pointer-edge-offset);
+        margin-inline-start: var(--spectrum-popover-pointer-edge-spacing-minimum);
       }
     }
   }
@@ -182,7 +182,7 @@ governing permissions and limitations under the License.
       /* tip triangle  */
       &::before,
       &::after {
-        margin-inline-end: var(--spectrum-popover-pointer-edge-offset);
+        margin-inline-end: var(--spectrum-popover-pointer-edge-spacing-minimum);
       }
     }
   }
@@ -231,7 +231,7 @@ governing permissions and limitations under the License.
       &::before,
       &::after {
         left: auto;
-        right: var(--spectrum-popover-pointer-edge-offset);
+        right: var(--spectrum-popover-pointer-edge-spacing-minimum);
       }
     }
   }
@@ -245,7 +245,7 @@ governing permissions and limitations under the License.
       &::before,
       &::after {
         right: auto;
-        left: var(--spectrum-popover-pointer-edge-offset);
+        left: var(--spectrum-popover-pointer-edge-spacing-minimum);
       }
     }
   }
@@ -258,7 +258,7 @@ governing permissions and limitations under the License.
       /* tip triangle  */
       &::before,
       &::after {
-        margin-inline-start: var(--spectrum-popover-pointer-edge-offset);
+        margin-inline-start: var(--spectrum-popover-pointer-edge-spacing-minimum);
       }
     }
   }
@@ -271,7 +271,7 @@ governing permissions and limitations under the License.
       /* tip triangle  */
       &::before,
       &::after {
-        margin-inline-end: var(--spectrum-popover-pointer-edge-offset);
+        margin-inline-end: var(--spectrum-popover-pointer-edge-spacing-minimum);
       }
     }
   }
@@ -323,7 +323,7 @@ governing permissions and limitations under the License.
       &::before,
       &::after {
         bottom: auto;
-        top: var(--spectrum-popover-pointer-edge-offset);
+        top: var(--spectrum-popover-pointer-edge-spacing-minimum);
       }
     }
   }
@@ -337,7 +337,7 @@ governing permissions and limitations under the License.
       &::before,
       &::after {
         top: auto;
-        bottom: var(--spectrum-popover-pointer-edge-offset);
+        bottom: var(--spectrum-popover-pointer-edge-spacing-minimum);
       }
     }
   }
@@ -389,7 +389,7 @@ governing permissions and limitations under the License.
       &::before,
       &::after {
         bottom: auto;
-        top: var(--spectrum-popover-pointer-edge-offset);
+        top: var(--spectrum-popover-pointer-edge-spacing-minimum);
       }
     }
   }
@@ -403,7 +403,7 @@ governing permissions and limitations under the License.
       &::before,
       &::after {
         top: auto;
-        bottom: var(--spectrum-popover-pointer-edge-offset);
+        bottom: var(--spectrum-popover-pointer-edge-spacing-minimum);
       }
     }
   }
@@ -451,7 +451,7 @@ governing permissions and limitations under the License.
       /* tip triangle  */
       &::before,
       &::after {
-        top: var(--spectrum-popover-pointer-edge-offset);
+        top: var(--spectrum-popover-pointer-edge-spacing-minimum);
         bottom: auto;
       }
     }
@@ -465,7 +465,7 @@ governing permissions and limitations under the License.
       /* tip triangle  */
       &::before,
       &::after {
-        bottom: var(--spectrum-popover-pointer-edge-offset);
+        bottom: var(--spectrum-popover-pointer-edge-spacing-minimum);
         top: auto;
       }
     }
@@ -514,7 +514,7 @@ governing permissions and limitations under the License.
       /* tip triangle  */
       &::before,
       &::after {
-        top: var(--spectrum-popover-pointer-edge-offset);
+        top: var(--spectrum-popover-pointer-edge-spacing-minimum);
         bottom: auto;
       }
     }
@@ -528,7 +528,7 @@ governing permissions and limitations under the License.
       /* tip triangle  */
       &::before,
       &::after {
-        bottom: var(--spectrum-popover-pointer-edge-offset);
+        bottom: var(--spectrum-popover-pointer-edge-spacing-minimum);
         top: auto;
       }
     }
