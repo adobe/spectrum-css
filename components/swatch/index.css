@@ -31,7 +31,7 @@ governing permissions and limitations under the License.
   --spectrum-swatch-focus-ring-gap: var(--spectrum-focus-ring-gap);
 
   --spectrum-swatch-border-color: var(--spectrum-swatch-border-color);
-  --spectrum-swatch-border-color-selected: var(--spectrum-gray-900);
+  /* --spectrum-swatch-border-color-selected: var(--spectrum-gray-900); */
   --spectrum-swatch-inner-border-color-selected: var(--spectrum-gray-50);
   --spectrum-swatch-disabled-icon-border-color: var(--spectrum-swatch-disabled-icon-border-color);
   --spectrum-swatch-disabled-icon-color: var(--spectrum-white);
@@ -71,12 +71,13 @@ governing permissions and limitations under the License.
     forced-color-adjust: none;
   }
   .spectrum-Swatch {
-    /* --spectrum-swatch-disabled-icon-color: grayText; */
-    /* --spectrum-swatch-focus-ring-color: ButtonText; */
-    /* --spectrum-swatch-selection-indicator-border-color: Highlight; */
-    /* --spectrum-swatch-fill-border-color: ButtonText; */
-    /* --spectrum-swatch-fill-border-color-light: ButtonText; */
-    /* --spectrum-swatch-fill-background-color-selected: ButtonFace; */
+    --highcontrast-swatch-disabled-icon-color: grayText;
+    --highcontrast-swatch-focus-ring-color: ButtonText;
+    --highcontrast-swatch-border-color-selected: Highlight;
+    --highcontrast-swatch-border-color: ButtonText;
+    --highcontrast-swatch-border-color-light: ButtonText;
+    /* --highcontrast-swatch-fill-background-color-selected: ButtonFace; */
+    --highcontrast-swatch-fill-background-color: ButtonFace;
     &.is-disabled {
       .spectrum-Swatch-fill {
         forced-color-adjust: auto;
@@ -121,7 +122,7 @@ governing permissions and limitations under the License.
   }
 
   &.is-selected {
-    background-color: var(--spectrum-swatch-inner-border-color-selected);
+    background-color: var(--highcontrast-swatch-border-color-selected, var(--mod-swatch-inner-border-color-selected, var(--spectrum-swatch-inner-border-color-selected)));
     .spectrum-Swatch-fill {
       width: calc(100% - var(--mod-swatch-spacing-selected, var(--spectrum-swatch-spacing-selected)));
       height: calc(100% - var(--mod-swatch-spacing-selected, var(--spectrum-swatch-spacing-selected)));
@@ -140,9 +141,18 @@ governing permissions and limitations under the License.
     }
   }
 
+  /* Swatch fill with transparent background-color for images, gradients, and svgs  */
+  &.is-image {
+    .spectrum-Swatch-fill {
+      &::before {
+        background-color: transparent;
+      }
+    }
+  }
+
   &.is-mixedValue {
     .spectrum-Swatch-fill {
-      background: var(--spectrum-swatch-fill-background-color);
+      background: var(--highcontrast-swatch-fill-background-color, var(--mod-swatch-fill-background-color, var(--spectrum-swatch-fill-background-color)));
     }
 
     .spectrum-Swatch-mixedValueIcon {
@@ -151,10 +161,9 @@ governing permissions and limitations under the License.
     }
   }
 
-  /* What does is-nothing mean? */
   &.is-nothing {
     .spectrum-Swatch-fill {
-      background: var(--spectrum-swatch-fill-background-color);
+      background-color: var(--highcontrast-swatch-fill-background-color, var(--mod-swatch-fill-background-color, var(--spectrum-swatch-fill-background-color)));
 
       /* Slash */
       &:after {
@@ -191,7 +200,9 @@ governing permissions and limitations under the License.
     position: absolute;
     inset: 0;
 
-    border: var(--spectrum-swatch-border-thickness-selected) solid var(--spectrum-swatch-border-color-selected);
+    border-width: var(--mod-swatch-border-thickness-selected, var(--spectrum-swatch-border-thickness-selected));
+    border-style: solid;
+    border-color: var(--highcontrast-swatch-border-color, var(--mod-swatch-border-color, var(--spectrum-swatch-border-color)));
 
     opacity: 0;
 
@@ -202,14 +213,16 @@ governing permissions and limitations under the License.
   &:after {
     content: '';
     position: absolute;
-    inset: calc(-2 * var(--spectrum-swatch-focus-ring-gap));
+    inset: calc(-2 * var(--mod-swatch-focus-ring-gap, var(--spectrum-swatch-focus-ring-gap)));
 
     opacity: 0;
 
-    border: var(--mod-swatch-focus-ring-thickness, var(--spectrum-swatch-focus-ring-thickness)) solid var(--spectrum-swatch-focus-ring-color);
+    border-width: var(--mod-swatch-focus-ring-thickness, var(--spectrum-swatch-focus-ring-thickness));
+    border-style: solid;
+    border-color: var(--highcontrast-swatch-focus-ring-color, var(--mod-swatch-focus-ring-color, var(--spectrum-swatch-focus-ring-color)));
     border-radius: var(--mod-swatch-focus-ring-border-radius, var(--mod-swatch-focus-ring-border-radius, var(--spectrum-swatch-focus-ring-border-radius)));
 
-    transition: opacity var(--spectrum-animation-duration-100) ease-in-out;
+    transition: opacity var(--mod-animation-duration-100, var(--spectrum-animation-duration-100)) ease-in-out;
   }
 
   &:focus-visible {
@@ -234,13 +247,15 @@ governing permissions and limitations under the License.
 
   border-radius: var(--mod-swatch-border-radius, var(--spectrum-swatch-border-radius));
 
-  background-color: var(--spectrum-swatch-fill-background-color);
 
   /* Checkerboard fill */
   /* Static checkerboard properties */
   --spectrum-swatch-checkerboard-size: 8px;
   --spectrum-swatch-checkerboard-background-offset: 0px;
   --spectrum-swatch-checkerboard-dark-color: rgb(217, 217, 217);
+  --spectrum-swatch-checkerboard-light-color: rgb(255, 255, 255);
+
+  background-color: var(--spectrum-swatch-checkerboard-light-color);
 
   background-size:
     calc(var(--mod-swatch-checkerboard-size, var(--spectrum-swatch-checkerboard-size)) * 2)
@@ -259,18 +274,17 @@ governing permissions and limitations under the License.
     linear-gradient(-45deg, var(--spectrum-swatch-checkerboard-dark-color) 25.5%, transparent 25.5%),
     linear-gradient(45deg, var(--spectrum-swatch-checkerboard-dark-color) 25.5%, transparent 25.5%);
 
-  /* Swatch fill */
+  /* Swatch fill - default */
   &:before {
     content: '';
     position: absolute;
     inset: 0;
-
     z-index: 0;
 
-    background-color: var(--mod-swatch-fill-background-color, var(--spectrum-swatch-fill-background-color), transparent);
+    background-color: var(--highcontrast-swatch-fill-background-color, var(--mod-swatch-fill-background-color, var(--spectrum-swatch-fill-background-color)));
 
     /* Swatch border */
-    box-shadow: inset 0 0 0 var(--mod-swatch-border-thickness, var(--spectrum-swatch-border-thickness)) var(--spectrum-swatch-border-color-regular);
+    box-shadow: inset 0 0 0 var(--mod-swatch-border-thickness, var(--spectrum-swatch-border-thickness)) var(--highcontrast-swatch-border-color, var(--mod-swatch-border-color-regular, var(--spectrum-swatch-border-color-regular)));
 
     border-radius: var(--mod-swatch-border-radius, var(--spectrum-swatch-border-radius));
   }
@@ -280,7 +294,7 @@ governing permissions and limitations under the License.
 .spectrum-Swatch--lightBorder {
   .spectrum-Swatch-fill {
     &:before {
-      box-shadow: inset 0 0 0 var(--mod-swatch-border-thickness, var(--spectrum-swatch-border-thickness)) var(--spectrum-swatch-border-color-light);
+      box-shadow: inset 0 0 0 var(--mod-swatch-border-thickness, var(--spectrum-swatch-border-thickness)) var(--highcontrast-swatch-border-color-light, var(--mod-swatch-border-color-light, var(--spectrum-swatch-border-color-light)));
     }
   }
 }
@@ -298,7 +312,7 @@ governing permissions and limitations under the License.
   visibility: hidden;
   pointer-events: none;
 
-  color: var(--spectrum-swatch-fill-background-color);
+  color: var(--highcontrast-swatch-fill-background-color, var(--mod-swatch-fill-background-color, var(--spectrum-swatch-fill-background-color)));
 }
 
 .spectrum-Swatch-disabledIcon {
@@ -308,8 +322,8 @@ governing permissions and limitations under the License.
   visibility: hidden;
   pointer-events: none;
 
-  color: var(--spectrum-swatch-disabled-icon-color);
-  stroke: var(--spectrum-swatch-disabled-icon-color);
+  color: var(--highcontrast-swatch-disabled-icon-color, var(--mod-swatch-disabled-icon-color, var(--spectrum-swatch-disabled-icon-color)));
+  stroke: var(--highcontrast-swatch-disabled-icon-color, var(--mod-swatch-disabled-icon-color, var(--spectrum-swatch-disabled-icon-color)));
 }
 
 .spectrum-Swatch--rectangle {
