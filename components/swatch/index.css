@@ -30,8 +30,8 @@ governing permissions and limitations under the License.
   --spectrum-swatch-focus-ring-thickness: var(--spectrum-focus-ring-thickness);
   --spectrum-swatch-focus-ring-gap: var(--spectrum-focus-ring-gap);
 
+  /* Color */
   --spectrum-swatch-border-color: var(--spectrum-swatch-border-color);
-  /* --spectrum-swatch-border-color-selected: var(--spectrum-gray-900); */
   --spectrum-swatch-inner-border-color-selected: var(--spectrum-gray-50);
   --spectrum-swatch-disabled-icon-border-color: var(--spectrum-swatch-disabled-icon-border-color);
   --spectrum-swatch-disabled-icon-color: var(--spectrum-white);
@@ -67,28 +67,21 @@ governing permissions and limitations under the License.
 
 /* Windows high contrast mode */
 @media (forced-colors: active) {
-  .spectrum-Swatch-fill {
-    forced-color-adjust: none;
-  }
   .spectrum-Swatch {
     --highcontrast-swatch-disabled-icon-color: grayText;
-    --highcontrast-swatch-focus-ring-color: ButtonText;
+    --highcontrast-swatch-focus-ring-color: Highlight;
     --highcontrast-swatch-border-color-selected: Highlight;
     --highcontrast-swatch-border-color: ButtonText;
-    --highcontrast-swatch-border-color-light: ButtonText;
-    /* --highcontrast-swatch-fill-background-color-selected: ButtonFace; */
     --highcontrast-swatch-fill-background-color: ButtonFace;
+    --highcontrast-swatch-fill-foreground-color: ButtonText;
+
+    .spectrum-Swatch-fill {
+      forced-color-adjust: none;
+    }
+
     &.is-disabled {
       .spectrum-Swatch-fill {
         forced-color-adjust: auto;
-      }
-    }
-    /* Slash */
-    &.is-nothing {
-      .spectrum-Swatch-fill {
-        &:after {
-          background: ButtonText;
-        }
       }
     }
   }
@@ -141,7 +134,7 @@ governing permissions and limitations under the License.
     }
   }
 
-  /* Swatch fill with transparent background-color for images, gradients, and svgs  */
+  /* Swatch fill: Image, Gradient, SVG */
   &.is-image {
     .spectrum-Swatch-fill {
       &::before {
@@ -161,18 +154,18 @@ governing permissions and limitations under the License.
     }
   }
 
+  /* Swatch fill: Not fill with Slash */
   &.is-nothing {
     .spectrum-Swatch-fill {
       background-color: var(--highcontrast-swatch-fill-background-color, var(--mod-swatch-fill-background-color, var(--spectrum-swatch-fill-background-color)));
 
-      /* Slash */
       &:after {
         height: var(--mod-swatch-slash-thickness, var(--spectrum-swatch-slash-thickness));
         content: '';
         position: absolute;
         transform: rotate(-45deg);
         width: 200%; /* just needs to be bigger than a swatch */
-        background: var(--spectrum-swatch-slash-icon-color);
+        background: var(--highcontrast-swatch-fill-foreground-color, var(--mod-swatch-slash-icon-color, var(--spectrum-swatch-slash-icon-color)));
       }
     }
 
@@ -274,7 +267,7 @@ governing permissions and limitations under the License.
     linear-gradient(-45deg, var(--spectrum-swatch-checkerboard-dark-color) 25.5%, transparent 25.5%),
     linear-gradient(45deg, var(--spectrum-swatch-checkerboard-dark-color) 25.5%, transparent 25.5%);
 
-  /* Swatch fill - default */
+  /* Swatch fill: Default */
   &:before {
     content: '';
     position: absolute;
@@ -294,7 +287,7 @@ governing permissions and limitations under the License.
 .spectrum-Swatch--lightBorder {
   .spectrum-Swatch-fill {
     &:before {
-      box-shadow: inset 0 0 0 var(--mod-swatch-border-thickness, var(--spectrum-swatch-border-thickness)) var(--highcontrast-swatch-border-color-light, var(--mod-swatch-border-color-light, var(--spectrum-swatch-border-color-light)));
+      box-shadow: inset 0 0 0 var(--mod-swatch-border-thickness, var(--spectrum-swatch-border-thickness)) var(--highcontrast-swatch-border-color, var(--mod-swatch-border-color-light, var(--spectrum-swatch-border-color-light)));
     }
   }
 }
@@ -304,6 +297,7 @@ governing permissions and limitations under the License.
   .spectrum-Swatch-fill {
     &:before {
       box-shadow: none;
+      background-color: var(--highcontrast-swatch-fill-foreground-color, var(--mod-swatch-fill-background-color, var(--spectrum-swatch-fill-background-color)));
     }
   }
 }
