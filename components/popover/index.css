@@ -162,27 +162,27 @@ governing permissions and limitations under the License.
   }
 }
 
-/* logical property - popover is above and horizontally before source */
+/* logical property - popover is above and horizontally AFTER source */
 .spectrum-Popover--top-start {
   &.spectrum-Popover--withTip {
     .spectrum-Popover-content {
       /* tip triangle  */
       &::before,
       &::after {
-        margin-inline-end: var(--spectrum-popover-pointer-edge-offset);
+        margin-inline-start: var(--spectrum-popover-pointer-edge-offset);
       }
     }
   }
 }
 
-/* logical property - popover is above and horizontally after source */
+/* logical property - popover is above and horizontally BEFORE source */
 .spectrum-Popover--top-end {
   &.spectrum-Popover--withTip {
     .spectrum-Popover-content {
       /* tip triangle  */
       &::before,
       &::after {
-        margin-inline-start: var(--spectrum-popover-pointer-edge-offset);
+        margin-inline-end: var(--spectrum-popover-pointer-edge-offset);
       }
     }
   }
@@ -251,27 +251,27 @@ governing permissions and limitations under the License.
   }
 }
 
-/* logical property - popover is below and horizontally before source */
+/* logical property - popover is below and horizontally AFTER source */
 .spectrum-Popover--bottom-start {
   &.spectrum-Popover--withTip {
     .spectrum-Popover-content {
       /* tip triangle  */
       &::before,
       &::after {
-        margin-inline-end: var(--spectrum-popover-pointer-edge-offset);
+        margin-inline-start: var(--spectrum-popover-pointer-edge-offset);
       }
     }
   }
 }
 
-/* logical property - popover is below and horizontally after source */
+/* logical property - popover is below and horizontally BEFORE source */
 .spectrum-Popover--bottom-end {
   &.spectrum-Popover--withTip {
     .spectrum-Popover-content {
       /* tip triangle  */
       &::before,
       &::after {
-        margin-inline-start: var(--spectrum-popover-pointer-edge-offset);
+        margin-inline-end: var(--spectrum-popover-pointer-edge-offset);
       }
     }
   }
