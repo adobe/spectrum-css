@@ -124,9 +124,20 @@ governing permissions and limitations under the License.
 
 .spectrum-Link--staticWhite {
   color: var(--spectrum-link-text-color-white);
+
+  &:hover,
+  &:active,
+  &:focus {
+    color: var(--spectrum-link-text-color-white);
+  }
 }
 
 .spectrum-Link--staticBlack {
   color: var(--spectrum-link-text-color-black);
-}
 
+  &:hover,
+  &:active,
+  &:focus {
+    color: var(--spectrum-link-text-color-black);
+  }
+}
