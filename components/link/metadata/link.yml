@@ -49,7 +49,7 @@ examples:
     name: Quiet (Secondary)
     status: Verified
     markup: |
-      <p> This uses <a href="#" class="spectrum-Link spectrum-Link--quiet spectrum-Link--secondary">spectrum-Link--quiet</a>.</p>
+      <p> This uses <a href="#" class="spectrum-Link spectrum-Link--quiet spectrum-Link--secondary">spectrum-Link--quiet and spectrum-Link--secondary</a>.</p>
 
   - id: link-quiet-static-white
     name: Quiet (Static White)
@@ -57,7 +57,7 @@ examples:
     markup: |
       <div style="background-color: rgb(15, 121, 125); padding: 15px 20px; display: inline-block;">
         <p class="spectrum-Body" style="color: rgb(255, 255, 255);">
-          Hello, this is my <a href="#" class="spectrum-Link spectrum-Link--staticWhite spectrum-Link--quiet"> spectrum-Link--staticWhite</a>. This is just filler text, but if you keep reading maybe something good will happen.
+          Hello, this is my <a href="#" class="spectrum-Link spectrum-Link--staticWhite spectrum-Link--quiet"> spectrum-Link--staticWhite and spectrum-Link--quiet</a>. This is just filler text, but if you keep reading maybe something good will happen.
         </p>
       </div>
 
@@ -67,6 +67,6 @@ examples:
     markup: |
       <div style="background-color: rgb(181, 209, 211); padding: 15px 20px; display: inline-block;">
         <p class="spectrum-Body" style=" color: rgb(34, 34, 34);">
-          Hello, this is my <a href="#" class="spectrum-Link spectrum-Link--staticBlack spectrum-Link--quiet"> spectrum-Link--staticBlack</a>. This is just filler text, but if you keep reading maybe something good will happen.
+          Hello, this is my <a href="#" class="spectrum-Link spectrum-Link--staticBlack spectrum-Link--quiet"> spectrum-Link--staticBlack and spectrum-Link--quiet</a>. This is just filler text, but if you keep reading maybe something good will happen.
         </p>
       </div>
