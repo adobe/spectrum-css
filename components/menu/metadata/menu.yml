@@ -8,6 +8,87 @@ section:
       ### Change workflow icon size to medium
       Please replace `.spectrum-Icon--sizeS` with `.spectrum-Icon--sizeM`.
 examples:
+  - id: sizing
+    name: Sizing
+    markup: |
+      <div class="spectrum-Examples">
+        <div class="spectrum-Examples-item">
+          <h4 class="spectrum-Heading spectrum-Heading--sizeXS spectrum-Examples-itemHeading">S</h4>
+          <div class="spectrum-Examples-itemGroup">
+            <ul class="spectrum-Menu spectrum-Menu--sizeS" role="menu">
+              <li class="spectrum-Menu-item" role="menuitem" tabindex="0">
+                <span class="spectrum-Menu-itemLabel">Small Menu</span>
+              </li>
+              <li class="spectrum-Menu-item" role="menuitem" tabindex="0">
+                <span class="spectrum-Menu-itemLabel">Small Menu</span>
+              </li>
+              <li class="spectrum-Menu-item" role="menuitem" tabindex="0">
+                <span class="spectrum-Menu-itemLabel">Small Menu</span>
+              </li>
+              <li class="spectrum-Menu-item" role="menuitem" tabindex="0">
+                <span class="spectrum-Menu-itemLabel">Small Menu</span>
+              </li>
+            </ul>
+          </div>
+        </div>
+        <div class="spectrum-Examples-item">
+          <h4 class="spectrum-Heading spectrum-Heading--sizeXS spectrum-Examples-itemHeading">M</h4>
+          <div class="spectrum-Examples-itemGroup">
+            <ul class="spectrum-Menu spectrum-Menu--sizeM" role="menu">
+              <li class="spectrum-Menu-item" role="menuitem" tabindex="0">
+                <span class="spectrum-Menu-itemLabel">Medium Menu</span>
+              </li>
+              <li class="spectrum-Menu-item" role="menuitem" tabindex="0">
+                <span class="spectrum-Menu-itemLabel">Medium Menu</span>
+              </li>
+              <li class="spectrum-Menu-item" role="menuitem" tabindex="0">
+                <span class="spectrum-Menu-itemLabel">Medium Menu</span>
+              </li>
+              <li class="spectrum-Menu-item" role="menuitem" tabindex="0">
+                <span class="spectrum-Menu-itemLabel">Medium Menu</span>
+              </li>
+            </ul>
+          </div>
+        </div>
+        <div class="spectrum-Examples-item">
+          <h4 class="spectrum-Heading spectrum-Heading--sizeXS spectrum-Examples-itemHeading">L</h4>
+          <div class="spectrum-Examples-itemGroup">
+            <ul class="spectrum-Menu spectrum-Menu--sizeL" role="menu">
+              <li class="spectrum-Menu-item" role="menuitem" tabindex="0">
+                <span class="spectrum-Menu-itemLabel">Large Menu</span>
+              </li>
+              <li class="spectrum-Menu-item" role="menuitem" tabindex="0">
+                <span class="spectrum-Menu-itemLabel">Large Menu</span>
+              </li>
+              <li class="spectrum-Menu-item" role="menuitem" tabindex="0">
+                <span class="spectrum-Menu-itemLabel">Large Menu</span>
+              </li>
+              <li class="spectrum-Menu-item" role="menuitem" tabindex="0">
+                <span class="spectrum-Menu-itemLabel">Large Menu</span>
+              </li>
+            </ul>
+          </div>
+        </div>
+        <div class="spectrum-Examples-item">
+          <h4 class="spectrum-Heading spectrum-Heading--sizeXS spectrum-Examples-itemHeading">XL</h4>
+          <div class="spectrum-Examples-itemGroup">
+            <ul class="spectrum-Menu spectrum-Menu--sizeXL" role="menu">
+              <li class="spectrum-Menu-item" role="menuitem" tabindex="0">
+                <span class="spectrum-Menu-itemLabel">XL Menu</span>
+              </li>
+              <li class="spectrum-Menu-item" role="menuitem" tabindex="0">
+                <span class="spectrum-Menu-itemLabel">XL Menu</span>
+              </li>
+              <li class="spectrum-Menu-item" role="menuitem" tabindex="0">
+                <span class="spectrum-Menu-itemLabel">XL Menu</span>
+              </li>
+              <li class="spectrum-Menu-item" role="menuitem" tabindex="0">
+                <span class="spectrum-Menu-itemLabel">XL Menu</span>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
   - id: selectlist
     name: Standard
     markup: |
