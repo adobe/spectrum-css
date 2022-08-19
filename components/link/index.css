@@ -28,28 +28,15 @@ governing permissions and limitations under the License.
   --spectrum-link-text-color-black: var(--spectrum-black);
 }
 
-.spectrum-Link--staticBlack {
-  color: var(--spectrum-link-text-color-black);
-}
-
-.spectrum-Link--staticWhite {
-  color: var(--spectrum-link-text-color-white);
-}
-
 /* Windows high contrast mode */
 @media (forced-colors: active) {
+  &--staticBlack {
+    --highcontrast-link-text-color-black: ButtonFace;
+  }
 
-  /* &--staticBlack { */
-  /*   --highcontrast-link-text-color-blackcolor-default: ButtonFace; */
-  /*   --highcontrast-closebutton-icon-color-default: Highlight; */
-    /* --highcontrast-closebutton-icon-color-disabled: GrayText; */
-  /* } */
-
-  /* &--staticWhite { */
-  /*   --highcontrast-link-text-color-blackcolor-default: ButtonFace; */
-  /*   --highcontrast-closebutton-icon-color-default: Highlight; */
-  /*   --highcontrast-closebutton-icon-color-disabled: Highlight; */
-  /* } */
+  &--staticWhite {
+    --highcontrast-link-text-color-white: ButtonFace;
+  }
 
   .spectrum-Link--secondary {
     color: LinkText;
@@ -123,21 +110,21 @@ governing permissions and limitations under the License.
 }
 
 .spectrum-Link--staticWhite {
-  color: var(--spectrum-link-text-color-white);
+  color: var(--highcontrast-link-text-color-white, var(--mod-link-text-color-white, var(--spectrum-link-text-color-white)));
 
   &:hover,
   &:active,
   &:focus {
-    color: var(--spectrum-link-text-color-white);
+    color: var(--highcontrast-link-text-color-white, var(--mod-link-text-color-white, var(--spectrum-link-text-color-white)));
   }
 }
 
 .spectrum-Link--staticBlack {
-  color: var(--spectrum-link-text-color-black);
+  color: var(--highcontrast-link-text-color-black, var(--mod-link-text-color-black, var(--spectrum-link-text-color-black)));
 
   &:hover,
   &:active,
   &:focus {
-    color: var(--spectrum-link-text-color-black);
+    color: var(--highcontrast-link-text-color-black, var(--mod-link-text-color-black, var(--spectrum-link-text-color-black)));
   }
 }
