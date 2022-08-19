@@ -11,6 +11,7 @@ governing permissions and limitations under the License.
 */
 
 .spectrum-Link {
+  /* Colors */
   /* Primary */
   --spectrum-link-text-color-primary-default: var(--spectrum-accent-content-color);
   --spectrum-link-text-color-primary-hover: var(--spectrum-accent-content-color-hover);
@@ -35,6 +36,7 @@ governing permissions and limitations under the License.
   color: var(--spectrum-link-text-color-white);
 }
 
+/* Windows high contrast mode */
 @media (forced-colors: active) {
 
   /* &--staticBlack { */
