@@ -4,7 +4,7 @@
   "private": true,
   "scripts": {
     "build": "gulp -LL",
-    "dev": "NODE_ENV=development gulp dev",
+    "dev": "NODE_ENV=development BROWSERSYNC_OPEN=true gulp dev",
     "clean": "gulp clean",
     "start": "npm run dev",
     "ci-all": "npm run build",
