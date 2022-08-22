@@ -18,6 +18,8 @@ const dirs = require('../lib/dirs');
 
 const docs = require('../docs');
 const subrunner = require('../subrunner');
+const bundleBuilder = require('../index.js');
+
 
 function serve() {
 
@@ -26,6 +28,10 @@ function serve() {
   if (process.env.BROWSERSYNC_PORT) {
     PORT = process.env.BROWSERSYNC_PORT;
     logger.info(`Setting '${PORT} as port for browsersync, which hopefully is valid`);
+  }
+
+  if (process.env.BROWSERSYNC_OPEN) {
+    logger.info('New browser instance will open');
   }
 
   browserSync({
@@ -163,8 +169,17 @@ function watchSite() {
   );
 }
 
+function watchCommons() {  
+  gulp.watch(
+    [`${dirs.components}/commons/*.css`], 
+    gulp.series(bundleBuilder.buildDepenenciesOfCommons, bundleBuilder.copyPackages, reload)
+  );
+}
+
 function watch() {
   serve();
+
+  watchCommons();
 
   watchWithinPackages(`${dirs.components}/tokens/custom-*/*.css`, 'rebuildCustoms', '*.css');
 
@@ -203,8 +218,9 @@ function watch() {
         }
     }
   );
-
+    
   watchSite();
+
 }
 
 exports.watch = watch;
