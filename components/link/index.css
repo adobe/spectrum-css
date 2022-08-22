@@ -67,16 +67,7 @@ governing permissions and limitations under the License.
   outline: none;
   cursor: pointer;
 
-  &:focus-visible {
-    text-decoration: underline;
-    text-decoration-style: double;
-  }
-
   color: var(--spectrum-link-text-color-primary-default);
-
-  &:hover {
-    color: var(--spectrum-link-text-color-primary-hover);
-  }
 
   &:active {
     color: var(--spectrum-link-text-color-primary-active);
@@ -84,6 +75,12 @@ governing permissions and limitations under the License.
 
   &:focus-visible {
     color: var(--spectrum-link-text-color-primary-focus);
+    text-decoration: underline;
+    text-decoration-style: double;
+  }
+
+  &:hover {
+    color: var(--spectrum-link-text-color-primary-hover);
   }
 }
 
