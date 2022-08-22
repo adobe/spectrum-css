@@ -14,17 +14,26 @@ const gulp = require('gulp');
 const logger = require('gulplog');
 const browserSync = require('browser-sync');
 const path = require('path');
-const dirs = require('../lib/dirs')
+const dirs = require('../lib/dirs');
 
 const docs = require('../docs');
 const subrunner = require('../subrunner');
 
 function serve() {
+
+  let PORT = 3000;
+
+  if (process.env.BROWSERSYNC_PORT) {
+    PORT = process.env.BROWSERSYNC_PORT;
+    logger.info(`Setting '${PORT} as port for browsersync, which hopefully is valid`);
+  }
+
   browserSync({
     startPath: 'docs/index.html',
     server: `${process.cwd()}/dist/`,
     notify: process.env.BROWSERSYNC_NOTIFY === 'true' ? true : false,
-    open: process.env.BROWSERSYNC_OPEN === 'true' ? true : false
+    open: process.env.BROWSERSYNC_OPEN === 'true' ? true : false,
+    port: PORT
   });
 }
 

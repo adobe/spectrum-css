@@ -335,15 +335,19 @@ The following tasks are available:
 
 - `gulp build` - Performs a build of all components and the top level package
 - `gulp buildComponents` - Performs a build of all components
-- `gulp dev` - Performs a lite build (custom properties only), opens your browser with the documentation site, then starts watching components and website files
+- `gulp dev` - Performs a lite build (custom properties only), runs browsersync and serves the documentation on the default port (3000), then starts watching components and website files
 - `gulp clean` - Cleans all output files for the project and all components
-- `gulp watch` - Assuming a build has already been performed, immediately opens your browser with the documentation site, then starts watching components and website files
+- `gulp watch` - Assuming a build has already been performed, re-starts starts watching components and website files. Presumes a browser is already open to your locally served docs
+- `gulp watch-relaunch` - Restarts watch and opens a new browser for the docs URL
 - `gulp buildCombined` - Builds the combined output files (`dist/spectrum-*.css`)
 - `gulp buildStandalone` - Builds the standalone output files (`dist/standalone/spectrum-*.css`)
 - `gulp release` - Performs a release of the top-level package
 - `gulp packageLint` - Lint the `package.json` file for each component in the monorepo
 - `gulp readmeLint` - Generate a generic `README.md` file for each component in the monorepo
 
+Note: `yarn run dev` will run `gulp dev` above but trigger browsersync to open the documentation URL. You can set `BROWSERSYNC_OPEN=true` to change dev and watch to always open the URL.
+
+You can set a new port for `watch` by setting `BROWSERSYNC_PORT=<port number>`, e.g. `export BROWSERSYNC_PORT=9000; gulp watch` to set the port to `9000`.
 
 
 ## Testing

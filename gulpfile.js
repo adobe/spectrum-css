@@ -215,6 +215,11 @@ exports.devHeavy = gulp.series(
   exports.devHeavy
 );
 
+exports['watch-relaunch'] = function() {
+  process.env['BROWSERSYNC_OPEN'] = true;
+  exports.watch();
+}
+
 exports.buildDocs = builder.buildDocs;
 
 exports.releaseBundles = releaseBundles;
