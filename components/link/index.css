@@ -11,6 +11,8 @@ governing permissions and limitations under the License.
 */
 
 .spectrum-Link {
+  --spectrum-link-animation-duration: var(--spectrum-animation-duration-100);
+
   /* Colors */
   /* Primary */
   --spectrum-link-text-color-primary-default: var(--spectrum-accent-content-color);
@@ -61,7 +63,7 @@ governing permissions and limitations under the License.
   /* Remove gaps in links underline in iOS 8+ and Safari 8+. */
   -webkit-text-decoration-skip: objects;
   text-decoration: underline;
-  transition: color var(--spectrum-animation-duration-100) ease-in-out;
+  transition: color var(--spectrum-link-animation-duration) ease-in-out;
   outline: none;
   cursor: pointer;
 
