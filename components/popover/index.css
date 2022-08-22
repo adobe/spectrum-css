@@ -70,6 +70,7 @@ governing permissions and limitations under the License.
     border-width: var(--spectrum-popover-border-width);
 
     background-color: var(--spectrum-popover-background-color);
+    /* TODO - check if this should be filter instead of box-shadow */
     box-shadow: var(--spectrum-popover-shadow-horizontal) var(--spectrum-popover-shadow-vertical) var(--spectrum-popover-shadow-blur) var(--spectrum-popover-shadow-color);
   }
 
@@ -192,6 +193,40 @@ governing permissions and limitations under the License.
     /* placeholder for animation */
   }
 }
+
+
+.spectrum-Popover--start,
+.spectrum-Popover--start-top,
+.spectrum-Popover--start-bottom {
+  /* TODO - import overlay - animate opening to ?? */
+  &.is-open {
+    /* placeholder for animation */
+  }
+
+  /* right to left read direction animation */
+  [dir="rtl"] & {
+    &.is-open {
+      /* placeholder for animation */
+    }
+  }
+}
+
+.spectrum-Popover--end,
+.spectrum-Popover--end-top,
+.spectrum-Popover--end-bottom {
+  /* TODO - import overlay - animate opening to ?? */
+  &.is-open {
+    /* placeholder for animation */
+  }
+
+  /* right to left read direction animation */
+  [dir="rtl"] & {
+    &.is-open {
+      /* placeholder for animation */
+    }
+  }
+}
+
 
 /* HAS TIP - popover with triangle pointer */
 .spectrum-Popover--withTip {
