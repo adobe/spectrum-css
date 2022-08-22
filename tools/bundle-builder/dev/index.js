@@ -30,7 +30,7 @@ function serve() {
     logger.info(`Setting '${PORT} as port for browsersync, which hopefully is valid`);
   }
 
-  if (process.env.BROWSERSYNC_OPEN) {
+  if (process.env.BROWSERSYNC_OPEN === 'true') {
     logger.info('New browser instance will open');
   }
 
