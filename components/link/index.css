@@ -33,11 +33,11 @@ governing permissions and limitations under the License.
 /* Windows high contrast mode */
 @media (forced-colors: active) {
   &--staticBlack {
-    --highcontrast-link-text-color-black: ButtonFace;
+    --highcontrast-link-text-color-black: ButtonText;
   }
 
   &--staticWhite {
-    --highcontrast-link-text-color-white: ButtonFace;
+    --highcontrast-link-text-color-white: ButtonText;
   }
 
   .spectrum-Link--secondary {
