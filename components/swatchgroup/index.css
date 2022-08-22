@@ -26,13 +26,12 @@ governing permissions and limitations under the License.
 
 /* Regular (Default) */
 .spectrum-SwatchGroup {
-
   gap: var(--mod-swatchgroup-spacing-regular, var(--spectrum-swatchgroup-spacing-regular));
 }
 
 /* Compact*/
 .spectrum-SwatchGroup--compact {
-  gap: var(--mod-swatchgroup-spacing-regular, var(--spectrum-swatchgroup-spacing-regular));
+  gap: var(--mod-swatchgroup-spacing-compact, var(--spectrum-swatchgroup-spacing-compact));
 }
 
 /* Spacious */
