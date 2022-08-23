@@ -89,6 +89,153 @@ examples:
           </div>
         </div>
       </div>
+  - id: sizing-with-icons
+    name: Sizing with Icons
+    markup: |
+      <div class="spectrum-Examples">
+        <div class="spectrum-Examples-item">
+          <h4 class="spectrum-Heading spectrum-Heading--sizeXS spectrum-Examples-itemHeading">S</h4>
+          <div class="spectrum-Examples-itemGroup">
+            <ul class="spectrum-Menu spectrum-Menu--sizeS" role="menu">
+              <li class="spectrum-Menu-item" role="menuitem" tabindex="0">
+                <svg class="spectrum-Icon spectrum-Icon--sizeS spectrum-Menu-itemIcon" focusable="false" aria-hidden="true" aria-label="Cut Icon">
+                  <use xlink:href="#spectrum-icon-18-Cut"></use>
+                </svg>
+                <span class="spectrum-Menu-itemLabel">Cut</span>
+              </li>
+              <li class="spectrum-Menu-item" role="menuitem" tabindex="0">
+                <svg class="spectrum-Icon spectrum-Icon--sizeS spectrum-Menu-itemIcon" focusable="false" aria-hidden="true" aria-label="Copy Icon">
+                  <use xlink:href="#spectrum-icon-18-Copy"></use>
+                </svg>
+                <span class="spectrum-Menu-itemLabel">Copy</span>
+              </li>
+              <li class="spectrum-Menu-item" role="menuitem" tabindex="0">
+                <svg class="spectrum-Icon spectrum-Icon--sizeS spectrum-Menu-itemIcon" focusable="false" aria-hidden="true" aria-label="Paste Icon">
+                  <use xlink:href="#spectrum-icon-18-Paste"></use>
+                </svg>
+                <span class="spectrum-Menu-itemLabel">Paste</span>
+              </li>
+            </ul>
+          </div>
+        </div>
+        <div class="spectrum-Examples-item">
+          <h4 class="spectrum-Heading spectrum-Heading--sizeXS spectrum-Examples-itemHeading">M</h4>
+          <div class="spectrum-Examples-itemGroup">
+            <ul class="spectrum-Menu spectrum-Menu--sizeM" role="menu">
+              <li class="spectrum-Menu-item" role="menuitem" tabindex="0">
+                <svg class="spectrum-Icon spectrum-Icon--sizeM spectrum-Menu-itemIcon" focusable="false" aria-hidden="true" aria-label="Cut Icon">
+                  <use xlink:href="#spectrum-icon-18-Cut"></use>
+                </svg>
+                <span class="spectrum-Menu-itemLabel">Cut</span>
+              </li>
+              <li class="spectrum-Menu-item" role="menuitem" tabindex="0">
+                <svg class="spectrum-Icon spectrum-Icon--sizeM spectrum-Menu-itemIcon" focusable="false" aria-hidden="true" aria-label="Copy Icon">
+                  <use xlink:href="#spectrum-icon-18-Copy"></use>
+                </svg>
+                <span class="spectrum-Menu-itemLabel">Copy</span>
+              </li>
+              <li class="spectrum-Menu-item" role="menuitem" tabindex="0">
+                <svg class="spectrum-Icon spectrum-Icon--sizeM spectrum-Menu-itemIcon" focusable="false" aria-hidden="true" aria-label="Paste Icon">
+                  <use xlink:href="#spectrum-icon-18-Paste"></use>
+                </svg>
+                <span class="spectrum-Menu-itemLabel">Paste</span>
+              </li>
+            </ul>
+          </div>
+        </div>
+        <div class="spectrum-Examples-item">
+          <h4 class="spectrum-Heading spectrum-Heading--sizeXS spectrum-Examples-itemHeading">L</h4>
+          <div class="spectrum-Examples-itemGroup">
+            <ul class="spectrum-Menu spectrum-Menu--sizeL" role="menu">
+              <li class="spectrum-Menu-item" role="menuitem" tabindex="0">
+                <svg class="spectrum-Icon spectrum-Icon--sizeL spectrum-Menu-itemIcon" focusable="false" aria-hidden="true" aria-label="Cut Icon">
+                  <use xlink:href="#spectrum-icon-18-Cut"></use>
+                </svg>
+                <span class="spectrum-Menu-itemLabel">Cut</span>
+              </li>
+              <li class="spectrum-Menu-item" role="menuitem" tabindex="0">
+                <svg class="spectrum-Icon spectrum-Icon--sizeL spectrum-Menu-itemIcon" focusable="false" aria-hidden="true" aria-label="Copy Icon">
+                  <use xlink:href="#spectrum-icon-18-Copy"></use>
+                </svg>
+                <span class="spectrum-Menu-itemLabel">Copy</span>
+              </li>
+              <li class="spectrum-Menu-item" role="menuitem" tabindex="0">
+                <svg class="spectrum-Icon spectrum-Icon--sizeL spectrum-Menu-itemIcon" focusable="false" aria-hidden="true" aria-label="Paste Icon">
+                  <use xlink:href="#spectrum-icon-18-Paste"></use>
+                </svg>
+                <span class="spectrum-Menu-itemLabel">Paste</span>
+              </li>
+            </ul>
+          </div>
+        </div>
+        <div class="spectrum-Examples-item">
+          <h4 class="spectrum-Heading spectrum-Heading--sizeXS spectrum-Examples-itemHeading">XL</h4>
+          <div class="spectrum-Examples-itemGroup">
+            <ul class="spectrum-Menu spectrum-Menu--sizeXL" role="menu">
+              <li class="spectrum-Menu-item" role="menuitem" tabindex="0">
+                <svg class="spectrum-Icon spectrum-Icon--sizeXL spectrum-Menu-itemIcon" focusable="false" aria-hidden="true" aria-label="Cut Icon">
+                  <use xlink:href="#spectrum-icon-18-Cut"></use>
+                </svg>
+                <span class="spectrum-Menu-itemLabel">Cut</span>
+              </li>
+              <li class="spectrum-Menu-item" role="menuitem" tabindex="0">
+                <svg class="spectrum-Icon spectrum-Icon--sizeXL spectrum-Menu-itemIcon" focusable="false" aria-hidden="true" aria-label="Copy Icon">
+                  <use xlink:href="#spectrum-icon-18-Copy"></use>
+                </svg>
+                <span class="spectrum-Menu-itemLabel">Copy</span>
+              </li>
+              <li class="spectrum-Menu-item" role="menuitem" tabindex="0">
+                <svg class="spectrum-Icon spectrum-Icon--sizeXL spectrum-Menu-itemIcon" focusable="false" aria-hidden="true" aria-label="Paste Icon">
+                  <use xlink:href="#spectrum-icon-18-Paste"></use>
+                </svg>
+                <span class="spectrum-Menu-itemLabel">Paste</span>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+  - id: descriptions
+    name: With descriptions
+    markup: |
+      <div class="spectrum-Examples">
+        <div class="spectrum-Examples-item">
+          <ul class="spectrum-Menu spectrum-Menu--sizeM" role="menu">
+            <li class="spectrum-Menu-item" role="menuitem" tabindex="0">
+              <span class="spectrum-Menu-itemLabel">Quick export</span>
+              <span class="spectrum-Menu-itemDescription">Share a snapshot</span>
+            </li>
+            <li class="spectrum-Menu-item" role="menuitem" tabindex="0">
+              <span class="spectrum-Menu-itemLabel">Open a copy</span>
+              <span class="spectrum-Menu-itemDescription">Illustrator for iPad</span>
+            </li>
+            <li class="spectrum-Menu-item" role="menuitem" tabindex="0">
+              <span class="spectrum-Menu-itemLabel">Share link</span>
+              <span class="spectrum-Menu-itemDescription">Enable comments and download</span>
+            </li>
+          </ul>
+        </div>
+      </div>
+  - id: sizing-descriptions
+    name: Sizing with descriptions
+    markup: |
+      <div class="spectrum-Examples">
+        <div class="spectrum-Examples-item">
+          <ul class="spectrum-Menu" role="menu">
+            <li class="spectrum-Menu-item" role="menuitem" tabindex="0">
+              <span class="spectrum-Menu-itemLabel">Quick export</span>
+              <span class="spectrum-Menu-itemDescription">Share a snapshot</span>
+            </li>
+            <li class="spectrum-Menu-item" role="menuitem" tabindex="0">
+              <span class="spectrum-Menu-itemLabel">Open a copy</span>
+              <span class="spectrum-Menu-itemDescription">Illustrator for iPad</span>
+            </li>
+            <li class="spectrum-Menu-item" role="menuitem" tabindex="0">
+              <span class="spectrum-Menu-itemLabel">Share link</span>
+              <span class="spectrum-Menu-itemDescription">Enable comments and download</span>
+            </li>
+          </ul>
+        </div>
+      </div>
   - id: selectlist
     name: Standard
     markup: |

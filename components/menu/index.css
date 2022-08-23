@@ -30,6 +30,8 @@ governing permissions and limitations under the License.
   --spectrum-menu-item-edge-to-checkmark: var(--spectrum-workflow-icon-size-75);
   --spectrum-menu-item-text-to-control: var(--spectrum-text-to-control-75);
 
+  --spectrum-menu-item-description-font-size: var(--spectrum-font-size-50);
+
   /* --spectrum-menu-item-edge-to-chevron: var(--spectrum-menu-top-to-chevron-small); */
 
   --spectrum-menu-section-header-font-size: var(--spectrum-font-size-75);
@@ -52,6 +54,8 @@ governing permissions and limitations under the License.
 
   --spectrum-menu-item-edge-to-checkmark: var(--spectrum-workflow-icon-size-100);
   --spectrum-menu-item-text-to-control: var(--spectrum-text-to-control-100);
+
+  --spectrum-menu-item-description-font-size: var(--spectrum-font-size-75);
 
   /* --spectrum-menu-item-edge-to-chevron: var(--spectrum-menu-top-to-chevron-medium); */
 
@@ -76,6 +80,8 @@ governing permissions and limitations under the License.
   --spectrum-menu-item-edge-to-checkmark: var(--spectrum-workflow-icon-size-200);
   --spectrum-menu-item-text-to-control: var(--spectrum-text-to-control-200);
 
+  --spectrum-menu-item-description-font-size: var(--spectrum-font-size-100);
+
   /* --spectrum-menu-item-edge-to-chevron: var(--spectrum-menu-top-to-chevron-large); */
 
   --spectrum-menu-section-header-font-size: var(--spectrum-font-size-200);
@@ -98,6 +104,8 @@ governing permissions and limitations under the License.
 
   --spectrum-menu-item-edge-to-checkmark: var(--spectrum-workflow-icon-size-300);
   --spectrum-menu-item-text-to-control: var(--spectrum-text-to-control-300);
+
+  --spectrum-menu-item-description-font-size: var(--spectrum-font-size-200);
 
   /* --spectrum-menu-item-edge-to-chevron: var(--spectrum-menu-top-to-chevron-extra-large); */
 
@@ -128,6 +136,18 @@ governing permissions and limitations under the License.
   /* 10% */
   /* --spectrum-menu-item-background-opacity-focus: var(--spectrum-menu-background-focus); */
 
+  /* temporary */
+  --spectrum-menu-item-background-color-base: var(--spectrum-gray-900);
+  --spectrum-menu-item-background-opacity-default: 0;
+  --spectrum-menu-item-background-opacity-hover: 10%;
+  --spectrum-menu-item-background-opacity-down: 10%;
+  --spectrum-menu-item-background-opacity-key-focus: 10%;
+  
+  --spectrum-menu-item-background-color-default: rgba(var(--spectrum-menu-item-background-color-base), var(--spectrum-menu-item-background-opacity-default));
+  --spectrum-menu-item-background-color-hover: rgba(var(--spectrum-menu-item-background-color-base), 75%);
+  --spectrum-menu-item-background-color-down: rgba(var(--spectrum-menu-item-background-color-base), var(--spectrum-menu-item-background-opacity-down));
+  --spectrum-menu-item-background-color-key-focus: rgba(var(--spectrum-menu-item-background-color-base), var(--spectrum-menu-item-background-opacity-key-focus));
+
   --spectrum-menu-item-label-content-color-default: var(--spectrum-neutral-content-color-default);
   --spectrum-menu-item-label-content-color-hover: var(--spectrum-neutral-content-color-hover);
   --spectrum-menu-item-label-content-color-down: var(--spectrum-neutral-content-color-down);
@@ -141,6 +161,9 @@ governing permissions and limitations under the License.
   /* --spectrum-menu-item-background-color-disabled: var(--spectrum-transparent); */
   --spectrum-menu-item-label-content-color-disabled: var(--spectrum-disabled-content-color);
   --spectrum-menu-item-label-icon-color-disabled: var(--spectrum-disabled-content-color);
+
+  --spectrum-menu-item-description-line-height: var(--spectrum-line-height-100);
+  --spectrum-menu-item-description-cjk-line-height: var(--spectrum-CJK-line-height-100);
 
   --spectrum-menu-item-description-color-default: var(--spectrum-neutral-subdued-content-color-default);
   --spectrum-menu-item-description-color-hover: var(--spectrum-neutral-subdued-content-color-hover);
@@ -254,6 +277,11 @@ governing permissions and limitations under the License.
   &:lang(zh),
   &:lang(ko) {
     .spectrum-Menu-item {
+      /* might need to be defined on label, description instead of here */
+      line-height: var(--mod-menu-item-label-cjk-line-height, var(--spectrum-menu-item-label-cjk-line-height));
+    }
+
+    .spectrum-Menu-itemDescription {
       line-height: var(--mod-menu-item-label-cjk-line-height, var(--spectrum-menu-item-label-cjk-line-height));
     }
   }
@@ -267,12 +295,15 @@ governing permissions and limitations under the License.
 .spectrum-Menu-item {
   cursor: pointer;
   position: relative;
-  display: flex;
+  display: grid;
   align-items: center;
 
   box-sizing: border-box;
+
+  background-color: var(--mod-menu-item-background-color-default, var(--spectrum-menu-item-background-color-default));
   
-  font-size: var(--mod-menu-item-label-font-size, var(--spectrum-menu-item-label-font-size));
+  /* probably need to assign font-size on a per-child basis */
+  /* font-size: var(--mod-menu-item-label-font-size, var(--spectrum-menu-item-label-font-size)); */
   line-height: var(--mod-menu-item-label-line-height, var(--spectrum-menu-item-label-line-height));
 
   min-block-size: var(--mod-menu-item-min-height, var(--spectrum-menu-item-min-height));
@@ -297,8 +328,20 @@ governing permissions and limitations under the License.
   font-style: normal; */
   text-decoration: none;
 
-  &:focus {
+  grid-template-areas:
+    "selectedArea iconArea checkboxArea labelArea        valueArea actionsArea chevronArea"
+    ".            .        .            descriptionArea  .         .           .          ";
+  
+  grid-template-columns: auto auto auto 1fr auto auto auto;
+  grid-template-rows: 1fr auto;
+
+  /* can we do focus? */
+  /* &:focus {
     outline: none;
+  } */
+
+  &:hover {
+    background-color: var(--mod-menu-item-background-color-hover, var(--spectrum-menu-item-background-color-hover));
   }
 
   &.is-selected {
@@ -308,17 +351,18 @@ governing permissions and limitations under the License.
         var(--spectrum-popover-border-size)
     ); */
 
+    border-color: var(--mod-menu-item-focus-indicator-color, var(--spectrum-menu-item-focus-indicator-color));
+
     .spectrum-Menu-checkmark {
       display: block;
     }
   }
 
-  .spectrum-Icon,
+  /* .spectrum-Icon,
   .spectrum-Menu-itemIcon {
-    /* Don't get smaller, you're an icon! */
     flex-shrink: 0;
     align-self: flex-start;
-  }
+  } */
 
   /* .spectrum-Icon + .spectrum-Menu-itemLabel,
   .spectrum-Menu-itemIcon + .spectrum-Menu-itemLabel {
@@ -331,6 +375,63 @@ governing permissions and limitations under the License.
         var(--spectrum-alias-workflow-icon-size-m)
     );
   } */
+}
+
+.spectrum-Menu-itemLabel {
+  font-size: var(--mod-menu-item-label-font-size, var(--spectrum-menu-item-label-font-size));
+}
+
+.spectrum-menu-itemIcon {
+  grid-area: iconArea;
+}
+
+.spectrum-menu-itemSelection {
+  grid-area: selectedArea;
+}
+
+.spectrum-Menu-itemLabel {
+  /* background-color: pink; */
+  grid-area: labelArea;
+}
+
+.spectrum-Menu-itemValue {
+  grid-area: valueArea;
+}
+
+.spectrum-Menu-itemActions {
+  grid-area: actionsArea;
+}
+
+.spectrum-Menu-itemChevron {
+  grid-area: chevronArea;
+}
+
+.spectrum-Menu-itemDescription {
+  grid-area: descriptionArea;
+}
+
+.spectrum-Menu-itemIcon {
+  /* flex-shrink: 0;
+  align-self: flex-start; */
+
+  inline-size: var(--mod-menu-item-icon-width, var(--spectrum-menu-item-icon-width));
+  block-size: var(--mod-menu-item-icon-height, var(--spectrum-menu-item-icon-height));
+}
+
+/* icons are not checkmarks */
+/* icons are also not actions */
+.spectrum-Icon + .spectrum-Menu-itemLabel,
+.spectrum-Menu-itemIcon + .spectrum-Menu-itemLabel {
+  margin-inline-start: var(--mod-menu-item-label-text-to-visual, var(--spectrum-menu-item-label-text-to-visual));
+}
+
+.spectrum-Menu-itemDescription {
+  background-color: orange;
+  font-size: var(--mod-menu-item-description-font-size, var(--spectrum-menu-item-description-font-size));
+  hyphens: auto;
+  overflow-wrap: break-word;
+  margin-block-start: var(--mod-menu-item-label-to-description-spacing, var(--spectrum-menu-item-label-to-description-spacing));
+  line-height: var(--mod-menu-item-description-line-height, var(--spectrum-menu-item-description-line-height));
 }
 
 /* .spectrum-Menu-itemLabel {
