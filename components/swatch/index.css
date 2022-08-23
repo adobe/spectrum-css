@@ -18,8 +18,6 @@ governing permissions and limitations under the License.
   --spectrum-swatch-border-color-regular: rgba(0, 0, 0, 0.5);
   --spectrum-swatch-border-color-light: rgba(0, 0, 0, 0.2);
 
-  --spectrum-swatch-spacing-selected: 8px;
-
   /* Size */
   --spectrum-swatch-size: var(--spectrum-swatch-size-small);
   --spectrum-swatch-border-radius: var(--spectrum-corner-radius-100);
@@ -28,6 +26,7 @@ governing permissions and limitations under the License.
   --spectrum-swatch-disabled-icon-size: var(--spectrum-workflow-icon-size-75);
   --spectrum-swatch-slash-thickness: var(--spectrum-swatch-slash-thickness-small);
   --spectrum-swatch-focus-ring-thickness: var(--spectrum-focus-ring-thickness);
+  --spectrum-swatch-spacing-selected: var(--spectrum-swatch-border-thickness-selected) * 4;
   --spectrum-swatch-focus-ring-gap: var(--spectrum-focus-ring-gap);
 
   /* Color */
