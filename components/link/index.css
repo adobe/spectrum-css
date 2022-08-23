@@ -63,40 +63,40 @@ governing permissions and limitations under the License.
   /* Remove gaps in links underline in iOS 8+ and Safari 8+. */
   -webkit-text-decoration-skip: objects;
   text-decoration: underline;
-  transition: color var(--spectrum-link-animation-duration) ease-in-out;
+  transition: color var(--mod-link-animation-duration, var(--spectrum-link-animation-duration)) ease-in-out;
   outline: none;
   cursor: pointer;
 
-  color: var(--spectrum-link-text-color-primary-default);
+  color: var(--mod-link-text-color-primary-default, var(--spectrum-link-text-color-primary-default));
 
   &:active {
-    color: var(--spectrum-link-text-color-primary-active);
+    color: var(--mod-link-text-color-primary-active, var(--spectrum-link-text-color-primary-active));
   }
 
   &:focus-visible {
-    color: var(--spectrum-link-text-color-primary-focus);
+    color: var(--mod-link-text-color-primary-focus, var(--spectrum-link-text-color-primary-focus));
     text-decoration: underline;
     text-decoration-style: double;
   }
 
   &:hover {
-    color: var(--spectrum-link-text-color-primary-hover);
+    color: var(--mod-link-text-color-primary-hover, var(--spectrum-link-text-color-primary-hover));
   }
 }
 
 .spectrum-Link--secondary {
-  color: var(--spectrum-link-text-color-secondary-default);
+  color: var(--mod-link-text-color-secondary-default, var(--spectrum-link-text-color-secondary-default));
 
   &:hover {
-    color: var(--spectrum-link-text-color-secondary-hover);
+    color: var(--mod-link-text-color-secondary-hover, var(--spectrum-link-text-color-secondary-hover));
   }
 
   &:active {
-    color: var(--spectrum-link-text-color-secondary-active);
+    color: var(--mod-link-text-color-secondary-active, var(--spectrum-link-text-color-secondary-active));
   }
 
   &:focus {
-    color: var(--spectrum-link-text-color-secondary-focus);
+    color: var(--mod-link-text-color-secondary-focus, var(--spectrum-link-text-color-secondary-focus));
   }
 }
 
