@@ -128,8 +128,8 @@ governing permissions and limitations under the License.
 .spectrum-FieldLabel--right {
   display: inline-block;
   text-align: end;
-  padding-block: var(--mod-fieldlabel-side-padding-to, var(--spectrum-fieldlabel-side-padding-top))0;
-  padding-inline: 0 var(--mod-fieldlabel-side-padding-right), var(--spectrum-fieldlabel-side-padding-right));
+  padding-block: var(--mod-fieldlabel-side-padding-top, var(--spectrum-fieldlabel-side-padding-top)) 0;
+  padding-inline: 0 var(--mod-fieldlabel-side-padding-right, var(--spectrum-fieldlabel-side-padding-right));
 }
 
 .spectrum-Form {
