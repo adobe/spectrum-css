@@ -32,12 +32,8 @@ governing permissions and limitations under the License.
 
 /* Windows high contrast mode */
 @media (forced-colors: active) {
-  &--staticBlack {
-    --highcontrast-link-text-color-black: ButtonText;
-  }
-
-  &--staticWhite {
-    --highcontrast-link-text-color-white: ButtonText;
+  .spectrum-Link {
+      --highcontrast-link-focus-color: CanvasText;
   }
 
   .spectrum-Link--secondary {
@@ -55,6 +51,14 @@ governing permissions and limitations under the License.
       color: LinkText;
     }
   }
+
+  &--staticBlack {
+    --highcontrast-link-text-color-black: ButtonText;
+  }
+
+  &--staticWhite {
+    --highcontrast-link-text-color-white: ButtonText;
+  }
 }
 
 .spectrum-Link {
@@ -69,6 +73,10 @@ governing permissions and limitations under the License.
 
   color: var(--mod-link-text-color-primary-default, var(--spectrum-link-text-color-primary-default));
 
+  &:hover {
+    color: var(--mod-link-text-color-primary-hover, var(--spectrum-link-text-color-primary-hover));
+  }
+
   &:active {
     color: var(--mod-link-text-color-primary-active, var(--spectrum-link-text-color-primary-active));
   }
@@ -77,10 +85,7 @@ governing permissions and limitations under the License.
     color: var(--mod-link-text-color-primary-focus, var(--spectrum-link-text-color-primary-focus));
     text-decoration: underline;
     text-decoration-style: double;
-  }
-
-  &:hover {
-    color: var(--mod-link-text-color-primary-hover, var(--spectrum-link-text-color-primary-hover));
+    text-decoration-color: var(--highcontrast-link-focus-color, inherit);
   }
 }
 
