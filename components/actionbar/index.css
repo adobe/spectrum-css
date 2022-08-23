@@ -12,34 +12,42 @@ governing permissions and limitations under the License.
 .spectrum-ActionBar {
   --spectrum-actionbar-height: var(--spectrum-action-bar-height);
   --spectrum-actionbar-corner-radius: var(--spectrum-corner-radius-100);
+
+  /* colors */
   --spectrum-actionbar-popover-background-color: var(--spectrum-gray-50);
   --spectrum-actionbar-popover-border-color: var(--spectrum-gray-400);
 
-  /* item counter */
+  /* item counter field label */
   --spectrum-actionbar-item-counter-font-size : var(--spectrum-font-size-100);
   --spectrum-actionbar-item-counter-line-height : var(--spectrum-line-height-100);
   --spectrum-actionbar-item-counter-color: var(--spectrum-neutral-content-color-default);
 
-  /* CJK language support */
+  /* CJK language support for item counter */
   &:lang(ja),
   &:lang(zh),
   &:lang(ko) {
     --spectrum-actionbar-item-counter-line-height-cjk : var(--spectrum-CJK-line-height-100);
   }
 
-  /* emphasized */
+  /* emphasized variation colors */
   --spectrum-actionbar-emphasized-background-color : var(--spectrum-informative-background-color-default);
   --spectrum-actionbar-emphasized-item-counter-color: var(--spectrum-white);
 
-  /* spacing */
-  --spectrum-actionbar-spacing-close-button-start-edge : var(--spectrum-spacing-100);
-  --spectrum-actionbar-spacing-close-button-to-item-counter : var(--spectrum-spacing-75);
-  --spectrum-actionbar-spacing-item-counter-to-action-group: var(--spectrum-spacing-400);
-  --spectrum-actionbar-spacing-action-group-to-end-edge : var(--spectrum-spacing-100);
-  --spectrum-actionbar-spacing-close-button-top-edge: var(--spectrum-spacing-100);
-  --spectrum-actionbar-spacing-item-counter-top-edge : var(--spectrum-action-bar-top-to-item-counter);
-  --spectrum-actionbar-spacing-actiongroup-top-edge: var(--spectrum-spacing-100);
+  /* spacing of action bar outer edge */
   --spectrum-actionbar-spacing-outter-edge: var(--spectrum-spacing-300);
+
+  /* spacing of close button */
+  --spectrum-actionbar-spacing-close-button-top: var(--spectrum-spacing-100);
+  --spectrum-actionbar-spacing-close-button-start : var(--spectrum-spacing-100);
+  --spectrum-actionbar-spacing-close-button-end: var(--spectrum-spacing-75);
+
+  /* spacing of item counter field label */
+  --spectrum-actionbar-spacing-item-counter-top : var(--spectrum-action-bar-top-to-item-counter);
+  --spectrum-actionbar-spacing-item-counter-end: var(--spectrum-spacing-400);
+
+  /* spacing of action group */
+  --spectrum-actionbar-spacing-action-group-top: var(--spectrum-spacing-100);
+  --spectrum-actionbar-spacing-action-group-end: var(--spectrum-spacing-100);
 
   /* drop shadow */
   --spectrum-actionbar-drop-shadow-horizontal : var(--spectrum-drop-shadow-x);
@@ -48,36 +56,38 @@ governing permissions and limitations under the License.
   --spectrum-actionbar-drop-shadow-color : var(--spectrum-drop-shadow-color);
 }
 
+/* ActionBar is outer wrapper with nested popover component within */
 .spectrum-ActionBar {
   padding: 0 var(--spectrum-actionbar-spacing-outter-edge) var(--spectrum-actionbar-spacing-outter-edge) var(--spectrum-actionbar-spacing-outter-edge);
+
+  /* Account for fixed width */
+  box-sizing: border-box;
+  /* Take up no space when not open */
+  block-size: 0;
 
   inset-block-end: 0;
   z-index: 1;
 
-  /* Account for fixed width */
-  box-sizing: border-box;
-
-  /* Take up no space when not open */
-  block-size: 0;
   opacity: 0;
 
   /* Clip anything outside of us, whether we're open or not. This makes the animation smooth */
+  /* Hide overflow of closed and open to smooth animation */
   overflow: hidden;
 
   /* Let clicks in blank space fall through */
   pointer-events: none;
 
   &.is-open {
-    /* add bottom padding to height */
-    block-size: calc(var(--spectrum-actionbar-height) + var(--spectrum-actionbar-spacing-outter-edge));
+    /* add bottom padding to height to allow space for popover and bottom padding */
+    block-size: calc(var(--spectrum-actionbar-height) + var(--spectrum-actionbar-spacing-outter-edge)); /* 64px */
     opacity: 1;
   }
 
   /* close button */
   .spectrum-CloseButton {
-    margin-inline-start: var(--spectrum-actionbar-spacing-close-button-start-edge);
-    margin-inline-end: var(--spectrum-actionbar-spacing-close-button-to-item-counter);
-    margin-block-start: var(--spectrum-actionbar-spacing-close-button-top-edge);
+    margin-inline-start: var(--spectrum-actionbar-spacing-close-button-start);
+    margin-inline-end: var(--spectrum-actionbar-spacing-close-button-end);
+    margin-block-start: var(--spectrum-actionbar-spacing-close-button-top);
   }
 
   /* item counter */
@@ -86,8 +96,8 @@ governing permissions and limitations under the License.
     color: var(--spectrum-actionbar-item-counter-color);
     line-height: var(--spectrum-actionbar-item-counter-line-height);
 
-    margin-inline-end: var(--spectrum-actionbar-spacing-item-counter-to-action-group);
-    margin-block-start: var(--spectrum-actionbar-spacing-item-counter-top-edge);
+    margin-inline-end: var(--spectrum-actionbar-spacing-item-counter-end);
+    margin-block-start: var(--spectrum-actionbar-spacing-item-counter-top);
 
     /* CJK language support */
     &:lang(ja),
@@ -97,11 +107,11 @@ governing permissions and limitations under the License.
     }
   }
 
-    /* action group */
-  .spectrum-ActionGroup {
-    margin-top: var(--spectrum-actionbar-spacing-actiongroup-top-edge);
-    margin-inline-end: var(--spectrum-actionbar-spacing-action-group-to-end-edge);
-    margin-block-start: var(--spectrum-actionbar-spacing-actiongroup-top-edge);
+  /* action group - neutralize old non-logical top margin */
+  .spectrum-ActionGroup,
+  .spectrum-ActionGroup:not(.spectrum-ActionGroup--vertical).spectrum-ActionGroup:not(.spectrum-ActionGroup--compact) {
+    margin-inline-end: var(--spectrum-actionbar-spacing-action-group-end);
+    margin-block-start: var(--spectrum-actionbar-spacing-action-group-top);
   }
 }
 
@@ -112,7 +122,6 @@ governing permissions and limitations under the License.
 
   flex-direction: row;
   align-items: center;
-  //justify-content: space-between;
 
   height: 100%;
 
@@ -141,6 +150,8 @@ governing permissions and limitations under the License.
     border: none;
   }
 
+  /* ensure text is legible on emphasized background */
+  .spectrum-ActionButton,
   .spectrum-FieldLabel {
     color: var(--spectrum-actionbar-emphasized-item-counter-color);
   }
