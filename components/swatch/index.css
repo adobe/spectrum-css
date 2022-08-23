@@ -116,8 +116,15 @@ governing permissions and limitations under the License.
   &.is-selected {
     background-color: var(--highcontrast-swatch-border-color-selected, var(--mod-swatch-inner-border-color-selected, var(--spectrum-swatch-inner-border-color-selected)));
     .spectrum-Swatch-fill {
-      width: calc(100% - var(--mod-swatch-spacing-selected, var(--spectrum-swatch-spacing-selected)));
-      height: calc(100% - var(--mod-swatch-spacing-selected, var(--spectrum-swatch-spacing-selected)));
+      clip-path: polygon(
+        calc(var(--mod-swatch-border-thickness-selected, var(--spectrum-swatch-border-thickness-selected)) * 2)
+        calc(var(--mod-swatch-border-thickness-selected, var(--spectrum-swatch-border-thickness-selected)) * 2),
+        calc(100% - var(--mod-swatch-border-thickness-selected, var(--spectrum-swatch-border-thickness-selected)) * 2)
+        calc(var(--mod-swatch-border-thickness-selected, var(--spectrum-swatch-border-thickness-selected)) * 2),
+        calc(100% - var(--mod-swatch-border-thickness-selected, var(--spectrum-swatch-border-thickness-selected)) * 2)
+        calc(100% - var(--mod-swatch-border-thickness-selected, var(--spectrum-swatch-border-thickness-selected)) * 2),
+        calc(var(--mod-swatch-border-thickness-selected, var(--spectrum-swatch-border-thickness-selected)) * 2)
+        calc(100% - var(--mod-swatch-border-thickness-selected, var(--spectrum-swatch-border-thickness-selected)) * 2));
 
       /* no border radius when selected */
       border-radius: 0;
@@ -183,8 +190,6 @@ governing permissions and limitations under the License.
       visibility: visible;
     }
   }
-
-
 
   /* selection indicator */
   &:before {
@@ -347,6 +352,10 @@ governing permissions and limitations under the License.
     &.is-selected .spectrum-Swatch-fill,
     &.is-selected .spectrum-Swatch-fill:before {
       border-radius: 100%;
+    }
+
+    &.is-selected .spectrum-Swatch-fill {
+      clip-path: circle(calc(50% - (var(--mod-swatch-border-thickness-selected, var(--spectrum-swatch-border-thickness-selected)) * 2)) at 50% 50%);
     }
   }
 }
