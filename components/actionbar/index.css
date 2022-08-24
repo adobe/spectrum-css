@@ -96,6 +96,9 @@ governing permissions and limitations under the License.
     color: var(--spectrum-actionbar-item-counter-color);
     line-height: var(--spectrum-actionbar-item-counter-line-height);
 
+    /* neutralize padding for correct spacing within ActionBar */
+    padding: 0;
+
     margin-inline-end: var(--spectrum-actionbar-spacing-item-counter-end);
     margin-block-start: var(--spectrum-actionbar-spacing-item-counter-top);
 
@@ -107,22 +110,19 @@ governing permissions and limitations under the License.
     }
   }
 
+  /* TODO - ensure beta is loading properly */
   /* action group - neutralize old non-logical top margin */
   .spectrum-ActionGroup,
   .spectrum-ActionGroup:not(.spectrum-ActionGroup--vertical).spectrum-ActionGroup:not(.spectrum-ActionGroup--compact) {
     margin-inline-end: var(--spectrum-actionbar-spacing-action-group-end);
     margin-block-start: var(--spectrum-actionbar-spacing-action-group-top);
+
+    /* align to end by default */
+    margin-inline-start: auto;
   }
 }
 
 .spectrum-ActionBar-popover {
-  display: flex;
-  //place-items: center start;
-  justify-content: flex-start;
-
-  flex-direction: row;
-  align-items: center;
-
   height: 100%;
 
   border-radius: var(--spectrum-actionbar-corner-radius);
@@ -140,6 +140,13 @@ governing permissions and limitations under the License.
 
   /* Let clicks do their thing */
   pointer-events: auto;
+
+  /* TODO - confirm new nesting on popover is copacetic */
+  /* popover-content controls inner layout */
+  .spectrum-Popover-content {
+    display: flex;
+    flex-direction: row;
+  }
 }
 
 .spectrum-ActionBar--emphasized {
