@@ -26,7 +26,6 @@ governing permissions and limitations under the License.
   --spectrum-swatch-disabled-icon-size: var(--spectrum-workflow-icon-size-75);
   --spectrum-swatch-slash-thickness: var(--spectrum-swatch-slash-thickness-small);
   --spectrum-swatch-focus-ring-thickness: var(--spectrum-focus-ring-thickness);
-  --spectrum-swatch-spacing-selected: var(--spectrum-swatch-border-thickness-selected) * 4;
   --spectrum-swatch-focus-ring-gap: var(--spectrum-focus-ring-gap);
 
   /* Color */
@@ -217,7 +216,7 @@ governing permissions and limitations under the License.
     border-width: var(--mod-swatch-focus-ring-thickness, var(--spectrum-swatch-focus-ring-thickness));
     border-style: solid;
     border-color: var(--highcontrast-swatch-focus-ring-color, var(--mod-swatch-focus-ring-color, var(--spectrum-swatch-focus-ring-color)));
-    border-radius: var(--mod-swatch-focus-ring-border-radius, var(--mod-swatch-focus-ring-border-radius, var(--spectrum-swatch-focus-ring-border-radius)));
+    border-radius: var(--mod-swatch-focus-ring-border-radius, var(--spectrum-swatch-focus-ring-border-radius));
 
     transition: opacity var(--mod-animation-duration-100, var(--spectrum-animation-duration-100)) ease-in-out;
   }
