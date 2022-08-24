@@ -10,8 +10,6 @@ OF ANY KIND, either express or implied. See the License for the specific languag
 governing permissions and limitations under the License.
 */
 
-
-
 .spectrum-Switch--sizeS {
   --spectrum-switch-height: var(--spectrum-component-height-75);
   --spectrum-switch-control-width: var(--spectrum-switch-control-width-small);
@@ -293,6 +291,9 @@ governing permissions and limitations under the License.
   /* disabled, un-mutable */
   &:disabled,
   &[disabled] {
+
+
+
     &+.spectrum-Switch-switch {
       background-color: var(--highcontrast-switch-background-color-disabled,
           var(--mod-switch-background-color-disabled,
@@ -312,7 +313,6 @@ governing permissions and limitations under the License.
               var(--spectrum-switch-label-color-disabled)));
       }
     }
-
   }
 }
 
@@ -329,6 +329,16 @@ governing permissions and limitations under the License.
   }
 }
 
+/* disabled coloring */
+.spectrum-Switch--disabled {
+  --spectrum-switch-handle-border-color: var(--spectrum-gray-400);
+  --spectrum-switch-background-color: var(--spectrum-gray-300);
+  --spectrum-switch-background-color-selected: var(--spectrum-gray-400);
+  --spectrum-switch-label-color: var(--spectrum-disabled-content-color);
+  /* disable hover as well */
+  --spectrum-switch-handle-border-color-hover: var(--spectrum-gray-400);
+  --spectrum-switch-handle-border-color-down: var(--spectrum-gray-400);
+}
 
 /* high contrast mode */
 @media (forced-colors: active) {
