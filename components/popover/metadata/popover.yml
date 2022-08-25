@@ -8,7 +8,7 @@ examples:
         <div class="spectrum-Examples-item">
           <h4 class="spectrum-Heading spectrum-Heading--sizeXS spectrum-Examples-itemHeading">Default</h4>
 
-          <div class="spectrum-Popover is-open">
+          <div class="spectrum-Popover ">
             <div class="spectrum-Popover-content">
               <ul class="spectrum-Menu" role="listbox">
                 <li class="spectrum-Menu-item is-selected" role="option" aria-selected="true" tabindex="0">
@@ -33,7 +33,7 @@ examples:
         <div class="spectrum-Examples-item">
           <h4 class="spectrum-Heading spectrum-Heading--sizeXS spectrum-Examples-itemHeading">With CSS Tip</h4>
 
-          <div class="spectrum-Popover spectrum-Popover--withTip is-open">
+          <div class="spectrum-Popover spectrum-Popover--withTip ">
             <div class="spectrum-Popover-content">
               <ul class="spectrum-Menu" role="listbox">
                 <li class="spectrum-Menu-item is-selected" role="option" aria-selected="true" tabindex="0">
@@ -64,7 +64,7 @@ examples:
       <div class="spectrum-Examples">
         <div class="spectrum-Examples-item">
           <h4 class="spectrum-Heading spectrum-Heading--sizeXS spectrum-Examples-itemHeading">Dialog</h4>
-          <div class="spectrum-Popover spectrum-Popover--top spectrum-Popover--withTip is-open spectrum-Popover" role="presentation">
+          <div class="spectrum-Popover spectrum-Popover--top spectrum-Popover--withTip  spectrum-Popover" role="presentation">
             <div class="spectrum-Popover-content">
               <section class="spectrum-Dialog spectrum-Dialog--small" role="dialog" tabindex="-1" aria-modal="true">
                 <div class="spectrum-Dialog-grid" style="display: grid;">
@@ -81,7 +81,7 @@ examples:
 
         <div class="spectrum-Examples-item">
           <h4 class="spectrum-Heading spectrum-Heading--sizeXS spectrum-Examples-itemHeading">Dialog with Error</h4>
-          <div class="spectrum-Popover spectrum-Popover--top spectrum-Popover--withTip is-open spectrum-Popover" role="presentation">
+          <div class="spectrum-Popover spectrum-Popover--top spectrum-Popover--withTip  spectrum-Popover" role="presentation">
             <div class="spectrum-Popover-content">
               <section class="spectrum-Dialog spectrum-Dialog--small spectrum-Dialog--error" role="dialog" tabindex="-1" aria-modal="true">
                 <div class="spectrum-Dialog-grid" style="display: grid;">
@@ -115,7 +115,7 @@ examples:
       <div class="spectrum-Examples">
         <div class="spectrum-Examples-item">
           <h4 class="spectrum-Heading spectrum-Heading--sizeXS spectrum-Examples-itemHeading">Top</h4>
-          <div class="spectrum-Popover spectrum-Popover--top spectrum-Popover--withTip is-open spectrum-Popover" role="presentation">
+          <div class="spectrum-Popover spectrum-Popover--top spectrum-Popover--withTip  spectrum-Popover" role="presentation">
             <div class="spectrum-Popover-content">
               <section class="spectrum-Dialog spectrum-Dialog--small" role="dialog" tabindex="-1" aria-modal="true">
                 <div class="spectrum-Dialog-grid" style="display: grid;">
@@ -133,7 +133,7 @@ examples:
       <div class="spectrum-Examples">
         <div class="spectrum-Examples-item">
           <h4 class="spectrum-Heading spectrum-Heading--sizeXS spectrum-Examples-itemHeading">Top Left</h4>
-          <div class="spectrum-Popover spectrum-Popover--top-left spectrum-Popover--withTip is-open spectrum-Popover" role="presentation">
+          <div class="spectrum-Popover spectrum-Popover--top-left spectrum-Popover--withTip  spectrum-Popover" role="presentation">
             <div class="spectrum-Popover-content">
               <section class="spectrum-Dialog spectrum-Dialog--small" role="dialog" tabindex="-1" aria-modal="true">
                 <div class="spectrum-Dialog-grid" style="display: grid;">
@@ -149,7 +149,7 @@ examples:
 
         <div class="spectrum-Examples-item">
           <h4 class="spectrum-Heading spectrum-Heading--sizeXS spectrum-Examples-itemHeading">Top Right</h4>
-          <div class="spectrum-Popover spectrum-Popover--top-right spectrum-Popover--withTip is-open spectrum-Popover" role="presentation">
+          <div class="spectrum-Popover spectrum-Popover--top-right spectrum-Popover--withTip  spectrum-Popover" role="presentation">
             <div class="spectrum-Popover-content">
               <section class="spectrum-Dialog spectrum-Dialog--small" role="dialog" tabindex="-1" aria-modal="true">
                 <div class="spectrum-Dialog-grid" style="display: grid;">
@@ -167,7 +167,7 @@ examples:
       <div class="spectrum-Examples">
         <div class="spectrum-Examples-item">
           <h4 class="spectrum-Heading spectrum-Heading--sizeXS spectrum-Examples-itemHeading">Top Start</h4>
-          <div class="spectrum-Popover spectrum-Popover--top-start spectrum-Popover--withTip is-open spectrum-Popover" role="presentation">
+          <div class="spectrum-Popover spectrum-Popover--top-start spectrum-Popover--withTip  spectrum-Popover" role="presentation">
             <div class="spectrum-Popover-content">
               <section class="spectrum-Dialog spectrum-Dialog--small" role="dialog" tabindex="-1" aria-modal="true">
                 <div class="spectrum-Dialog-grid" style="display: grid;">
@@ -183,7 +183,7 @@ examples:
 
         <div class="spectrum-Examples-item">
           <h4 class="spectrum-Heading spectrum-Heading--sizeXS spectrum-Examples-itemHeading">Top End</h4>
-          <div class="spectrum-Popover spectrum-Popover--top-end spectrum-Popover--withTip is-open spectrum-Popover" role="presentation">
+          <div class="spectrum-Popover spectrum-Popover--top-end spectrum-Popover--withTip  spectrum-Popover" role="presentation">
             <div class="spectrum-Popover-content">
               <section class="spectrum-Dialog spectrum-Dialog--small" role="dialog" tabindex="-1" aria-modal="true">
                 <div class="spectrum-Dialog-grid" style="display: grid;">
@@ -206,7 +206,7 @@ examples:
       <div class="spectrum-Examples">
         <div class="spectrum-Examples-item">
           <h4 class="spectrum-Heading spectrum-Heading--sizeXS spectrum-Examples-itemHeading">Bottom</h4>
-          <div class="spectrum-Popover spectrum-Popover--bottom spectrum-Popover--withTip is-open spectrum-Popover" role="presentation">
+          <div class="spectrum-Popover spectrum-Popover--bottom spectrum-Popover--withTip  spectrum-Popover" role="presentation">
             <div class="spectrum-Popover-content">
               <section class="spectrum-Dialog spectrum-Dialog--small" role="dialog" tabindex="-1" aria-modal="true">
                 <div class="spectrum-Dialog-grid" style="display: grid;">
@@ -224,7 +224,7 @@ examples:
       <div class="spectrum-Examples">
         <div class="spectrum-Examples-item">
           <h4 class="spectrum-Heading spectrum-Heading--sizeXS spectrum-Examples-itemHeading">Bottom Left</h4>
-          <div class="spectrum-Popover spectrum-Popover--bottom-left spectrum-Popover--withTip is-open spectrum-Popover" role="presentation">
+          <div class="spectrum-Popover spectrum-Popover--bottom-left spectrum-Popover--withTip  spectrum-Popover" role="presentation">
             <div class="spectrum-Popover-content">
               <section class="spectrum-Dialog spectrum-Dialog--small" role="dialog" tabindex="-1" aria-modal="true">
                 <div class="spectrum-Dialog-grid" style="display: grid;">
@@ -240,7 +240,7 @@ examples:
 
         <div class="spectrum-Examples-item">
           <h4 class="spectrum-Heading spectrum-Heading--sizeXS spectrum-Examples-itemHeading">Bottom Right</h4>
-          <div class="spectrum-Popover spectrum-Popover--bottom-right spectrum-Popover--withTip is-open spectrum-Popover" role="presentation">
+          <div class="spectrum-Popover spectrum-Popover--bottom-right spectrum-Popover--withTip  spectrum-Popover" role="presentation">
             <div class="spectrum-Popover-content">
               <section class="spectrum-Dialog spectrum-Dialog--small" role="dialog" tabindex="-1" aria-modal="true">
                 <div class="spectrum-Dialog-grid" style="display: grid;">
@@ -258,7 +258,7 @@ examples:
       <div class="spectrum-Examples">
         <div class="spectrum-Examples-item">
           <h4 class="spectrum-Heading spectrum-Heading--sizeXS spectrum-Examples-itemHeading">Bottom Start</h4>
-          <div class="spectrum-Popover spectrum-Popover--bottom-start spectrum-Popover--withTip is-open spectrum-Popover" role="presentation">
+          <div class="spectrum-Popover spectrum-Popover--bottom-start spectrum-Popover--withTip  spectrum-Popover" role="presentation">
             <div class="spectrum-Popover-content">
               <section class="spectrum-Dialog spectrum-Dialog--small" role="dialog" tabindex="-1" aria-modal="true">
                 <div class="spectrum-Dialog-grid" style="display: grid;">
@@ -275,7 +275,7 @@ examples:
 
         <div class="spectrum-Examples-item">
           <h4 class="spectrum-Heading spectrum-Heading--sizeXS spectrum-Examples-itemHeading">Bottom End</h4>
-          <div class="spectrum-Popover spectrum-Popover--bottom-end spectrum-Popover--withTip is-open spectrum-Popover" role="presentation">
+          <div class="spectrum-Popover spectrum-Popover--bottom-end spectrum-Popover--withTip  spectrum-Popover" role="presentation">
             <div class="spectrum-Popover-content">
               <section class="spectrum-Dialog spectrum-Dialog--small" role="dialog" tabindex="-1" aria-modal="true">
                 <div class="spectrum-Dialog-grid" style="display: grid;">
@@ -297,7 +297,7 @@ examples:
       <div class="spectrum-Examples">
         <div class="spectrum-Examples-item">
           <h4 class="spectrum-Heading spectrum-Heading--sizeXS spectrum-Examples-itemHeading">Right</h4>
-          <div class="spectrum-Popover spectrum-Popover--right spectrum-Popover--withTip is-open spectrum-Popover" role="presentation">
+          <div class="spectrum-Popover spectrum-Popover--right spectrum-Popover--withTip  spectrum-Popover" role="presentation">
             <div class="spectrum-Popover-content">
               <section class="spectrum-Dialog spectrum-Dialog--small" role="dialog" tabindex="-1" aria-modal="true">
                 <div class="spectrum-Dialog-grid" style="display: grid;">
@@ -315,7 +315,7 @@ examples:
       <div class="spectrum-Examples">
         <div class="spectrum-Examples-item">
           <h4 class="spectrum-Heading spectrum-Heading--sizeXS spectrum-Examples-itemHeading">Right Top</h4>
-          <div class="spectrum-Popover spectrum-Popover--right-top spectrum-Popover--withTip is-open spectrum-Popover" role="presentation">
+          <div class="spectrum-Popover spectrum-Popover--right-top spectrum-Popover--withTip  spectrum-Popover" role="presentation">
             <div class="spectrum-Popover-content">
               <section class="spectrum-Dialog spectrum-Dialog--small" role="dialog" tabindex="-1" aria-modal="true">
                 <div class="spectrum-Dialog-grid" style="display: grid;">
@@ -331,7 +331,7 @@ examples:
 
         <div class="spectrum-Examples-item">
           <h4 class="spectrum-Heading spectrum-Heading--sizeXS spectrum-Examples-itemHeading">Right Bottom</h4>
-          <div class="spectrum-Popover spectrum-Popover--right-bottom spectrum-Popover--withTip is-open spectrum-Popover" role="presentation">
+          <div class="spectrum-Popover spectrum-Popover--right-bottom spectrum-Popover--withTip  spectrum-Popover" role="presentation">
             <div class="spectrum-Popover-content">
               <section class="spectrum-Dialog spectrum-Dialog--small" role="dialog" tabindex="-1" aria-modal="true">
                 <div class="spectrum-Dialog-grid" style="display: grid;">
@@ -354,7 +354,7 @@ examples:
       <div class="spectrum-Examples">
         <div class="spectrum-Examples-item">
           <h4 class="spectrum-Heading spectrum-Heading--sizeXS spectrum-Examples-itemHeading">Left</h4>
-          <div class="spectrum-Popover spectrum-Popover--left spectrum-Popover--withTip is-open spectrum-Popover" role="presentation">
+          <div class="spectrum-Popover spectrum-Popover--left spectrum-Popover--withTip  spectrum-Popover" role="presentation">
             <div class="spectrum-Popover-content">
               <section class="spectrum-Dialog spectrum-Dialog--small" role="dialog" tabindex="-1" aria-modal="true">
                 <div class="spectrum-Dialog-grid" style="display: grid;">
@@ -372,7 +372,7 @@ examples:
       <div class="spectrum-Examples">
         <div class="spectrum-Examples-item">
           <h4 class="spectrum-Heading spectrum-Heading--sizeXS spectrum-Examples-itemHeading">Left Top</h4>
-          <div class="spectrum-Popover spectrum-Popover--left-top spectrum-Popover--withTip is-open spectrum-Popover" role="presentation">
+          <div class="spectrum-Popover spectrum-Popover--left-top spectrum-Popover--withTip  spectrum-Popover" role="presentation">
             <div class="spectrum-Popover-content">
               <section class="spectrum-Dialog spectrum-Dialog--small" role="dialog" tabindex="-1" aria-modal="true">
                 <div class="spectrum-Dialog-grid" style="display: grid;">
@@ -388,7 +388,7 @@ examples:
 
         <div class="spectrum-Examples-item">
           <h4 class="spectrum-Heading spectrum-Heading--sizeXS spectrum-Examples-itemHeading">Left Bottom</h4>
-          <div class="spectrum-Popover spectrum-Popover--left-bottom spectrum-Popover--withTip is-open spectrum-Popover" role="presentation">
+          <div class="spectrum-Popover spectrum-Popover--left-bottom spectrum-Popover--withTip  spectrum-Popover" role="presentation">
             <div class="spectrum-Popover-content">
               <section class="spectrum-Dialog spectrum-Dialog--small" role="dialog" tabindex="-1" aria-modal="true">
                 <div class="spectrum-Dialog-grid" style="display: grid;">
@@ -411,7 +411,7 @@ examples:
       <div class="spectrum-Examples">
         <div class="spectrum-Examples-item">
         <h4 class="spectrum-Heading spectrum-Heading--sizeXS spectrum-Examples-itemHeading">Start</h4>
-          <div class="spectrum-Popover spectrum-Popover--start spectrum-Popover--withTip is-open spectrum-Popover" role="presentation">
+          <div class="spectrum-Popover spectrum-Popover--start spectrum-Popover--withTip  spectrum-Popover" role="presentation">
             <div class="spectrum-Popover-content">
               <section class="spectrum-Dialog spectrum-Dialog--small" role="dialog" tabindex="-1" aria-modal="true">
                 <div class="spectrum-Dialog-grid" style="display: grid;">
@@ -429,7 +429,7 @@ examples:
       <div class="spectrum-Examples">
         <div class="spectrum-Examples-item">
           <h4 class="spectrum-Heading spectrum-Heading--sizeXS spectrum-Examples-itemHeading">Start Top</h4>
-          <div class="spectrum-Popover spectrum-Popover--start-top spectrum-Popover--withTip is-open spectrum-Popover" role="presentation">
+          <div class="spectrum-Popover spectrum-Popover--start-top spectrum-Popover--withTip  spectrum-Popover" role="presentation">
             <div class="spectrum-Popover-content">
               <section class="spectrum-Dialog spectrum-Dialog--small" role="dialog" tabindex="-1" aria-modal="true">
                 <div class="spectrum-Dialog-grid" style="display: grid;">
@@ -445,7 +445,7 @@ examples:
 
         <div class="spectrum-Examples-item">
           <h4 class="spectrum-Heading spectrum-Heading--sizeXS spectrum-Examples-itemHeading">Start Bottom</h4>
-          <div class="spectrum-Popover spectrum-Popover--start-bottom spectrum-Popover--withTip is-open spectrum-Popover" role="presentation">
+          <div class="spectrum-Popover spectrum-Popover--start-bottom spectrum-Popover--withTip  spectrum-Popover" role="presentation">
             <div class="spectrum-Popover-content">
               <section class="spectrum-Dialog spectrum-Dialog--small" role="dialog" tabindex="-1" aria-modal="true">
                 <div class="spectrum-Dialog-grid" style="display: grid;">
@@ -468,7 +468,7 @@ examples:
       <div class="spectrum-Examples">
         <div class="spectrum-Examples-item">
         <h4 class="spectrum-Heading spectrum-Heading--sizeXS spectrum-Examples-itemHeading">End</h4>
-          <div class="spectrum-Popover spectrum-Popover--end spectrum-Popover--withTip is-open spectrum-Popover" role="presentation">
+          <div class="spectrum-Popover spectrum-Popover--end spectrum-Popover--withTip  spectrum-Popover" role="presentation">
             <div class="spectrum-Popover-content">
               <section class="spectrum-Dialog spectrum-Dialog--small" role="dialog" tabindex="-1" aria-modal="true">
                 <div class="spectrum-Dialog-grid" style="display: grid;">
@@ -486,7 +486,7 @@ examples:
       <div class="spectrum-Examples">
         <div class="spectrum-Examples-item">
           <h4 class="spectrum-Heading spectrum-Heading--sizeXS spectrum-Examples-itemHeading">End Top</h4>
-          <div class="spectrum-Popover spectrum-Popover--end-top spectrum-Popover--withTip is-open spectrum-Popover" role="presentation">
+          <div class="spectrum-Popover spectrum-Popover--end-top spectrum-Popover--withTip  spectrum-Popover" role="presentation">
             <div class="spectrum-Popover-content">
               <section class="spectrum-Dialog spectrum-Dialog--small" role="dialog" tabindex="-1" aria-modal="true">
                 <div class="spectrum-Dialog-grid" style="display: grid;">
@@ -502,7 +502,7 @@ examples:
 
         <div class="spectrum-Examples-item">
           <h4 class="spectrum-Heading spectrum-Heading--sizeXS spectrum-Examples-itemHeading">End Bottom</h4>
-          <div class="spectrum-Popover spectrum-Popover--end-bottom spectrum-Popover--withTip is-open spectrum-Popover" role="presentation">
+          <div class="spectrum-Popover spectrum-Popover--end-bottom spectrum-Popover--withTip  spectrum-Popover" role="presentation">
             <div class="spectrum-Popover-content">
               <section class="spectrum-Dialog spectrum-Dialog--small" role="dialog" tabindex="-1" aria-modal="true">
                 <div class="spectrum-Dialog-grid" style="display: grid;">

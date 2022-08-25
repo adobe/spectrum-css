@@ -54,8 +54,10 @@ governing permissions and limitations under the License.
 
   outline: none; /* Hide focus outline */
 
+  /* default opens and animates upward */
   &.is-open {
     @inherit: %spectrum-overlay--open;
+    @inherit: %spectrum-overlay--top--open;
   }
 
   /* inner content container with border and background styles */
@@ -112,144 +114,99 @@ governing permissions and limitations under the License.
   }
 }
 
+/* position naming - first position term is popover position, second term is source position */
+/* example: --top-left = popover is to top and source is to left */
 
 /* popover position is at top of source - default placement */
 .spectrum-Popover--top,
-
-/* NO DESIGN REFERENCE for top-left */
 .spectrum-Popover--top-left,
-
-/* NO DESIGN REFERENCE for top-right */
 .spectrum-Popover--top-right,
 .spectrum-Popover--top-start,
-
-/* NO DESIGN REFERENCE for top-end */
 .spectrum-Popover--top-end {
+  /* popover animates upward ⬆ */
   &.is-open {
     @inherit: %spectrum-overlay--top--open;
   }
 }
 
-
 /* popover position is at bottom of source */
 .spectrum-Popover--bottom,
-
-/* NO DESIGN REFERENCE for bottom-left */
 .spectrum-Popover--bottom-left,
-
-/* NO DESIGN REFERENCE for bottom-right */
 .spectrum-Popover--bottom-right,
 .spectrum-Popover--bottom-start,
 .spectrum-Popover--bottom-end {
+  /* popover animates downward ⬇ */
   &.is-open {
     @inherit: %spectrum-overlay--bottom--open;
   }
 }
 
-
 /* popover position is right of source */
-/* NO DESIGN REFERENCE for right */
 .spectrum-Popover--right,
-
-/* NO DESIGN REFERENCE for right-bottom */
 .spectrum-Popover--right-bottom,
 .spectrum-Popover--right-top {
+  /* popover animates towards right ⮕ */
   &.is-open {
     @inherit: %spectrum-overlay--right--open;
   }
 }
 
-
 /* popover position is left of source */
-/* NO DESIGN REFERENCE for left */
 .spectrum-Popover--left,
 .spectrum-Popover--left-bottom,
-
-/* NO DESIGN REFERENCE for left-top */
 .spectrum-Popover--left-top {
+  /* popover animates towards left ⬅ */
   &.is-open {
     @inherit: %spectrum-overlay--left--open;
   }
 }
 
-
-/* logical property - popover position is horizontally BEFORE source with tip pointing at source -??? */
-/* NO DESIGN REFERENCE */
+/* logical property - popover is horizontally at start */
 .spectrum-Popover--start,
 .spectrum-Popover--start-top,
 .spectrum-Popover--start-bottom {
-  /* TODO - import overlay - animate opening to start */
+  /* LTR read, popover animates towards left ⬅ */
   &.is-open {
-    /* placeholder for animation */
-  }
-}
-
-
-/* logical property - popover position is horizontally AFTER source with tip pointing at source -??? */
-/* NO DESIGN REFERENCE */
-.spectrum-Popover--end,
-.spectrum-Popover--end-top,
-.spectrum-Popover--end-bottom {
-    /* TODO - import overlay - animate opening to END */
-  &.is-open {
-    /* placeholder for animation */
-  }
-}
-
-
-.spectrum-Popover--start,
-.spectrum-Popover--start-top,
-.spectrum-Popover--start-bottom {
-  /* TODO - import overlay - animate opening to ?? */
-  &.is-open {
-    /* placeholder for animation */
+    @inherit: %spectrum-overlay--left--open;
   }
 
-  /* right to left read direction animation */
+  /* RTL read, popover animates towards right ⮕ */
   [dir="rtl"] & {
     &.is-open {
-      /* placeholder for animation */
+      @inherit: %spectrum-overlay--right--open;
     }
   }
 }
 
+/* logical property - popover is horizontally at end */
 .spectrum-Popover--end,
 .spectrum-Popover--end-top,
 .spectrum-Popover--end-bottom {
-  /* TODO - import overlay - animate opening to ?? */
+  /* LTR read, popover animates towards right ⮕ */
   &.is-open {
-    /* placeholder for animation */
+    @inherit: %spectrum-overlay--right--open;
   }
 
-  /* right to left read direction animation */
+  /* RTL read, popover animates towards left ⬅ */
   [dir="rtl"] & {
     &.is-open {
-      /* placeholder for animation */
+      @inherit: %spectrum-overlay--left--open;
     }
   }
 }
-
 
 /* HAS TIP - popover with triangle pointer */
 .spectrum-Popover--withTip {
   /* popover position is at top of source with tip pointing down */
   &.spectrum-Popover--top,
-
-  /* NO DESIGN REFERENCE FOR TOP-LEFT */
   &.spectrum-Popover--top-left,
-
-  /* NO DESIGN REFERENCE FOR TOP-RIGHT */
   &.spectrum-Popover--top-right,
-
   &.spectrum-Popover--top-start,
-
-  /* NO DESIGN REFERENCE FOR TOP-END */
   &.spectrum-Popover--top-end {
     /* add tip height to spacing to source */
     padding-bottom: calc(var(--spectrum-popover-pointer-height) + var(--spectrum-popover-spacing-to-source));
   }
 
-  /* NO DESIGN REFERENCE FOR TOP-LEFT */
   &.spectrum-Popover--top-left {
     .spectrum-Popover-content {
       /* tip triangle  */
@@ -261,7 +218,6 @@ governing permissions and limitations under the License.
     }
   }
 
-  /* NO DESIGN REFERENCE FOR TOP-RIGHT */
   &.spectrum-Popover--top-right{
     .spectrum-Popover-content {
       /* tip triangle  */
@@ -273,7 +229,7 @@ governing permissions and limitations under the License.
     }
   }
 
-  /* logical property - popover position is above and horizontally AFTER source */
+  /* logical property - popover is above, source is at start */
   &.spectrum-Popover--top-start {
     .spectrum-Popover-content {
       /* tip triangle  */
@@ -284,8 +240,7 @@ governing permissions and limitations under the License.
     }
   }
 
-  /* NO DESIGN REFERENCE FOR TOP-END */
-  /* logical property - popover position is above and horizontally BEFORE source */
+  /* logical property - popover is above, source is at end */
   &.spectrum-Popover--top-end {
     .spectrum-Popover-content {
       /* tip triangle  */
@@ -298,11 +253,7 @@ governing permissions and limitations under the License.
 
   /* popover position is bottom of source with tip pointing up */
   &.spectrum-Popover--bottom,
-
-  /* NO DESIGN REFERENCE FOR BOTTOM-LEFT */
   &.spectrum-Popover--bottom-left,
-
-  /* NO DESIGN REFERENCE FOR BOTTOM-RIGHT */
   &.spectrum-Popover--bottom-right,
   &.spectrum-Popover--bottom-start,
   &.spectrum-Popover--bottom-end {
@@ -327,8 +278,7 @@ governing permissions and limitations under the License.
     }
   }
 
-  /* NO DESIGN REFERENCE FOR BOTTOM-LEFT */
-  /* popover position is bottom and left of source */
+  /* popover position is bottom, source is at left */
   &.spectrum-Popover--bottom-left {
     .spectrum-Popover-content {
       /* tip triangle  */
@@ -340,8 +290,7 @@ governing permissions and limitations under the License.
     }
   }
 
-  /* NO DESIGN REFERENCE FOR BOTTOM-RIGHT */
-  /* popover position is bottom and right of source */
+  /* popover position is bottom, source is at right */
   &.spectrum-Popover--bottom-right {
     .spectrum-Popover-content {
       /* tip triangle  */
@@ -353,7 +302,7 @@ governing permissions and limitations under the License.
     }
   }
 
-  /* logical property - popover position is below and horizontally AFTER source */
+  /* logical property - popover is below, source is at start */
   &.spectrum-Popover--bottom-start {
     .spectrum-Popover-content {
       /* tip triangle  */
@@ -364,7 +313,7 @@ governing permissions and limitations under the License.
     }
   }
 
-  /* logical property - popover position is below and horizontally BEFORE source */
+  /* logical property - popover is below, source is at end */
   &.spectrum-Popover--bottom-end {
     .spectrum-Popover-content {
       /* tip triangle  */
@@ -376,18 +325,15 @@ governing permissions and limitations under the License.
   }
 
   /* right popover position with tip pointing left */
-  /* NO DESIGN REFERENCE FOR RIGHT */
   &.spectrum-Popover--right,
-
-    /* NO DESIGN REFERENCE FOR RIGHT-BOTTOM */
   &.spectrum-Popover--right-bottom,
-  &.spectrum-Popover--right-top /* visual provided */ {
+  &.spectrum-Popover--right-top {
     /* add tip height to spacing to source */
     padding-left: calc(var(--spectrum-popover-pointer-height) + var(--spectrum-popover-spacing-to-source));
     padding-bottom: var(--spectrum-popover-spacing-container);
 
     .spectrum-Popover-content {
-     /* tip triangle points left */
+     /* tip triangle pointing left */
       &::before,
       &::after {
         /* swap height and width for vertical triangle */
@@ -433,18 +379,15 @@ governing permissions and limitations under the License.
   }
 
   /* left popover position with tip pointing right */
-  /* NO DESIGN REFERENCE FOR LEFT */
   &.spectrum-Popover--left,
   &.spectrum-Popover--left-bottom,
-
-  /* NO DESIGN REFERENCE FOR LEFT-TOP */
   &.spectrum-Popover--left-top {
     /* add tip height to spacing to source */
     padding-right: calc(var(--spectrum-popover-pointer-height) + var(--spectrum-popover-spacing-to-source));
     padding-bottom: var(--spectrum-popover-spacing-container);
 
     .spectrum-Popover-content {
-     /* tip triangle points left */
+     /* tip triangle points right */
       &::before,
       &::after {
         /* swap height and width for vertical triangle */
@@ -465,7 +408,6 @@ governing permissions and limitations under the License.
     }
   }
 
-  /* NO DESIGN REFERENCE FOR LEFT-TOP */
   /* left popover position with tip at top pointing right */
   &.spectrum-Popover--left-top {
     .spectrum-Popover-content {
@@ -490,14 +432,9 @@ governing permissions and limitations under the License.
     }
   }
 
-  /* logical property - popover position is horizontally before source with tip pointing at source */
-  /* NO DESIGN REFERENCE FOR START- */
+  /* logical property - start popover position with tip pointing toward end */
   &.spectrum-Popover--start,
-
-  /* NO DESIGN REFERENCE FOR START-TOP */
   &.spectrum-Popover--start-top,
-
-  /* NO DESIGN REFERENCE FOR START-BOTTOM */
   &.spectrum-Popover--start-bottom {
     padding-inline-end: calc(var(--spectrum-popover-pointer-height) + var(--spectrum-popover-spacing-to-source));
     padding-bottom: var(--spectrum-popover-spacing-container);
@@ -528,8 +465,7 @@ governing permissions and limitations under the License.
     }
   }
 
-  /* logical property - popover position is top and horizontally BEFORE source with tip pointing at source */
-  /* NO DESIGN REFERENCE FOR START-TOP */
+  /* logical property - start popover position with top tip pointing toward end  */
   &.spectrum-Popover--start-top {
     .spectrum-Popover-content {
       /* tip triangle  */
@@ -541,8 +477,7 @@ governing permissions and limitations under the License.
     }
   }
 
-  /* logical property - popover position is bottom and horizontally BEFORE source with tip pointing at source */
-  /* NO DESIGN REFERENCE FOR START-BOTTOM */
+  /* logical property - start popover position with bottom tip pointing toward end  */
   &.spectrum-Popover--start-bottom {
     .spectrum-Popover-content {
       /* tip triangle  */
@@ -554,14 +489,9 @@ governing permissions and limitations under the License.
     }
   }
 
-  /* logical property - popover position is horizontally AFTER source with tip pointing at source */
-  /* NO DESIGN REFERENCE FOR END */
+  /* logical property - end popover position with tip pointing toward start */
   &.spectrum-Popover--end,
-
-  /* NO DESIGN REFERENCE FOR END-TOP */
   &.spectrum-Popover--end-top,
-
-  /* NO DESIGN REFERENCE FOR END-BOTTOM */
   &.spectrum-Popover--end-bottom {
       padding-inline-start: calc(var(--spectrum-popover-pointer-height) + var(--spectrum-popover-spacing-to-source));
       padding-bottom: var(--spectrum-popover-spacing-container);
@@ -592,8 +522,7 @@ governing permissions and limitations under the License.
     }
   }
 
-  /* logical property - popover position is top and horizontally after source with tip pointing at source */
-  /* NO DESIGN REFERENCE FOR END-TOP */
+  /* logical property - end popover position with top tip pointing toward start */
   &.spectrum-Popover--end-top {
     .spectrum-Popover-content {
       /* tip triangle  */
@@ -605,8 +534,7 @@ governing permissions and limitations under the License.
     }
   }
 
-  /* logical property - popover position is bottom and horizontally after source with tip pointing at source */
-  /* NO DESIGN REFERENCE FOR END-BOTTOM */
+  /* logical property - end popover position with bottom tip pointing toward start */
   &.spectrum-Popover--end-bottom {
     .spectrum-Popover-content {
       /* tip triangle  */
