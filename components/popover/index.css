@@ -21,6 +21,8 @@ governing permissions and limitations under the License.
    /* default pointer spacing from edge - same as corner radius */
   --spectrum-popover-pointer-edge-spacing-minimum: var(--spectrum-corner-radius-100);
 
+  /* TODO - cross offset margin available to customize - default is 0 */
+
   --spectrum-popover-spacing-vertical: var(--spectrum-popover-top-to-content-area);
   --spectrum-popover-spacing-to-source: var(--spectrum-spacing-100);
   --spectrum-popover-spacing-container: var(--spectrum-spacing-100);
