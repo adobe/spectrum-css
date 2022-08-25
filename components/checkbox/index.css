@@ -175,7 +175,7 @@ governing permissions and limitations under the License.
 
     .spectrum-Checkbox-input:checked + .spectrum-Checkbox-box {
       &:before {
-        border-color: var(--highcontrast-checkbox-highlight-color-down, var(--mod-checkbox-conrol-selected-color-down, var(--spectrum-checkbox-control-selected-color-down)));
+        border-color: var(--highcontrast-checkbox-highlight-color-down, var(--mod-checkbox-control-selected-color-down, var(--spectrum-checkbox-control-selected-color-down)));
       }
     }
 
@@ -184,7 +184,7 @@ governing permissions and limitations under the License.
     }
   }
 
-  /* &:focus {
+  /* &:focus-ring {
     .spectrum-Checkbox-box {
       &:before {
         border-color: var(--highcontrast-checkbox-highlight-color-focus, var(--mod-checkbox-emphasized-color-focus, var(--spectrum-checkbox-emphasized-color-focus)));
@@ -348,16 +348,16 @@ governing permissions and limitations under the License.
     }
 
     /* Selected and Indeterminate Focus States */
-    .spectrum-Checkbox-input.focus-ring + .spectrum-Checkbox-box,
-    .spectrum-Checkbox-input.focus-ring:checked + .spectrum-Checkbox-box,
-    &.is-indeterminate .spectrum-Checkbox-input.focus-ring + .spectrum-Checkbox-box {
+    .spectrum-Checkbox-input:focus-ring + .spectrum-Checkbox-box,
+    .spectrum-Checkbox-input:focus-ring:checked + .spectrum-Checkbox-box,
+    &.is-indeterminate .spectrum-Checkbox-input:focus-ring + .spectrum-Checkbox-box {
        &:before {
         border-color: var(--highcontrast-checkbox-highlight-color-focus, var(--mod-checkbox-emphasized-color-focus, var(--spectrum-checkbox-emphasized-color-focus)));
        }
     }
 
     /* Selected Invalid Focus State */
-    &.is-invalid .spectrum-Checkbox-input.focus-ring:checked + .spectrum-Checkbox-box {
+    &.is-invalid .spectrum-Checkbox-input:focus-ring:checked + .spectrum-Checkbox-box {
       &:before {
         border-color: var(--highcontrast-checkbox-color-focus, var(--mod-checkbox-invalid-color-focus, var(--spectrum-checkbox-invalid-color-focus)));
       }
@@ -404,7 +404,7 @@ governing permissions and limitations under the License.
     }
 
     /* Focus State */
-    &:focus {
+    &:focus-ring {
       .spectrum-Checkbox-input:checked + .spectrum-Checkbox-box,
       .spectrum-Checkbox-box {
         &:before {
@@ -484,27 +484,7 @@ governing permissions and limitations under the License.
     }
   }
 
-  /* &:focus {
-    .spectrum-Checkbox-box {
-      &:before {
-        border-color: var(--highcontrast-checkbox-highlight-color-focus, var(--mod-checkbox-emphasized-color-focus, var(--spectrum-checkbox-emphasized-color-focus)));
-      }
-    }
-
-    .spectrum-Checkbox-box {
-      &:after {
-        border-style: solid;
-        border-color:
-        var(--highcontrast-checkbox-focus-ring-color, var(--mod-checkbox-focus-ring-color, var(--spectrum-checkbox-focus-ring-color)));
-      }
-    }
-
-    .spectrum-Checkbox-label {
-      color: var(--highcontrast-checkbox-content-color-focus, var(--mod-checkbox-content-color-focus, var(--spectrum-checkbox-content-color-focus)));
-    }
-  } */
-
-  &.focus-ring + .spectrum-Checkbox-box {
+  &:focus-ring + .spectrum-Checkbox-box {
     &:before {
       border-color: var(--highcontrast-checkbox-highlight-color-focus, var(--mod-checkbox-emphasized-color-focus, var(--spectrum-checkbox-emphasized-color-focus)));
     }
@@ -518,7 +498,7 @@ governing permissions and limitations under the License.
     }
   }
 
-  &.focus-ring + .spectrum-Checkbox-label {
+  &:focus-ring + .spectrum-Checkbox-label {
     color: var(--highcontrast-checkbox-content-color-focus, var(--mod-checkbox-content-color-focus, var(--spectrum-checkbox-content-color-focus)));
   }
 }
