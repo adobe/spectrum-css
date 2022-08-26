@@ -466,9 +466,19 @@ governing permissions and limitations under the License.
 .spectrum-Menu-chevron {
   transform: logical rotate(0deg);
 }
+*/
 
 .spectrum-Menu-sectionHeading {
+  color: var(--mod-menu-section-header-color, var(--spectrum-menu-section-header-color));
   display: block;
+
+  font-size: var(--mod-menu-section-header-font-size, var(--spectrum-menu-section-header-font-size));
+  font-weight: var(--mod-menu-section-header-font-weight, var(--spectrum-menu-section-header-font-weight));
+
+  min-inline-size: var(--mod-menu-item-min-height, var(--spectrum-menu-item-min-height));
+  padding-block-start: var(--mod-menu-item-top-edge-to-text, var(--spectrum-menu-item-top-edge-to-text));
+
+  /* display: block;
   margin: var(--spectrum-listitem-texticon-heading-margin);
   padding: var(--spectrum-listitem-texticon-heading-padding);
 
@@ -476,10 +486,22 @@ governing permissions and limitations under the License.
   font-weight: var(--spectrum-listitem-texticon-heading-text-font-weight);
   line-height: var(--spectrum-listitem-texticon-heading-line-height);
   text-transform: var(--spectrum-listitem-texticon-heading-text-transform);
-  letter-spacing: var(--spectrum-listitem-texticon-heading-letter-spacing);
-} */
+  letter-spacing: var(--spectrum-listitem-texticon-heading-letter-spacing); */
+}
 
 .spectrum-Menu .spectrum-Menu {
   /* Fill parent menu when nested */
   display: block;
+}
+
+.spectrum-Menu-item--collapsible {
+  /* collapsible sub-menus */
+
+  .spectrum-Menu {
+    display: none;
+  }
+
+  .spectrum-Menu.is-open {
+    display: block;
+  }
 }
