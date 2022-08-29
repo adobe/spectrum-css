@@ -33,12 +33,12 @@ governing permissions and limitations under the License.
   /* Color */
   --spectrum-statuslight-content-color-default: var(--spectrum-neutral-content-color-default);
   --spectrum-statuslight-subdued-content-color-default: var(--spectrum-neutral-subdued-content-color-default);
-  --spectrum-statuslight-semantic-gray-color: var(--spectrum-gray-500);
-  --spectrum-statuslight-semantic-accent-color: var(--spectrum-accent-color-800);
-  --spectrum-statuslight-semantic-negative-color: var(--spectrum-negative-color-800);
-  --spectrum-statuslight-semantic-info-color: var(--spectrum-informative-color-800);
-  --spectrum-statuslight-semantic-notice-color: var(--spectrum-notice-color-600);
-  --spectrum-statuslight-semantic-positive-color: var(--spectrum-positive-color-700);
+  --spectrum-statuslight-semantic-neutral-color: var(--spectrum-neutral-visual-color);
+  --spectrum-statuslight-semantic-accent-color: var(--spectrum-accent-visual-color);
+  --spectrum-statuslight-semantic-negative-color: var(--spectrum-negative-visual-color);
+  --spectrum-statuslight-semantic-info-color: var(--spectrum-informative-visual-color);
+  --spectrum-statuslight-semantic-notice-color: var(--spectrum-notice-visual-color);
+  --spectrum-statuslight-semantic-positive-color: var(--spectrum-positive-visual-color);
   --spectrum-statuslight-nonsemantic-gray-color: var(--spectrum-gray-500);
   --spectrum-statuslight-nonsemantic-red-color: var(--spectrum-red-800);
   --spectrum-statuslight-nonsemantic-orange-color: var(--spectrum-orange-600);
@@ -169,7 +169,7 @@ governing permissions and limitations under the License.
   color: var(--highcontrast-statuslight-subdued-content-color-default, var(--mod-statuslight-subdued-content-color-default, var(--spectrum-statuslight-subdued-content-color-default)));
 
   &::before {
-    background-color: var(--mod-statuslight-semantic-gray-color, var(--spectrum-statuslight-semantic-gray-color));
+    background-color: var(--mod-statuslight-semantic-neutral-color, var(--spectrum-statuslight-semantic-neutral-color));
   }
 }
 
