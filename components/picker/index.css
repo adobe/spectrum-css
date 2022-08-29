@@ -1,5 +1,5 @@
 /*
-Copyright 2019 Adobe. All rights reserved.
+Copyright 2022 Adobe. All rights reserved.
 This file is licensed to you under the Apache License, Version 2.0 (the "License");
 you may not use this file except in compliance with the License. You may obtain a copy
 of the License at http://www.apache.org/licenses/LICENSE-2.0
@@ -11,91 +11,31 @@ governing permissions and limitations under the License.
 */
 
 @import "../commons/basebutton.css";
-@import "../vars/css/components/spectrum-picker.css";
-
 
 .spectrum-Picker {
-  @inherit: %spectrum-BaseButton;
+  --spectrum-picker-text-icon-height: var(--spectrum-global-dimension-size-400);
 
-  display: flex;
-  justify-content: center;
-  align-items: center;
+  /* New tokens */
+  /* Size */
+  --spectrum-picker-text-icon-size: 12px;
+  --spectrum-picker-text-icon-border-size: 1px;
 
-  /* Truncate if menu options make us too wide */
-  max-inline-size: 100%;
-  inline-size: var(--spectrum-picker-texticon-width);
-  min-inline-size: var(--spectrum-picker-texticon-min-width);
-  block-size: var(--spectrum-picker-texticon-height);
+  /* Space */
+  --spectrum-picker-spacing-text-icon-to-edge: 11px;
 
-  margin: 0;
-  padding-block: 0;
+  /* Legacy tokens */
+  --spectrum-picker-textonly-border-radius: inherit;
 
-  /* Start with text-only padding */
-  padding-inline: var(--spectrum-picker-textonly-padding-left-adjusted) var(--spectrum-picker-textonly-padding-right-adjusted);
+  --spectrum-picker-textonly-border-size: 1px;
+  --spectrum-picker-texticon-placeholder-font-weight: 400;
+  --spectrum-picker-texticon-placeholder-font-style: italic;
+  /* Margin between text and error icon*/
+  --spectrum-picker-texticon-error-icon-margin-left: 12px;
+  /* Margin between text and caret */
+  --spectrum-picker-texticon-ui-icon-gap: 8px;
 
-  border-width: var(--spectrum-picker-texticon-border-size);
-  border-style: solid;
-  border-radius: var(--spectrum-picker-texticon-border-radius);
 
-  transition: background-color var(--spectrum-global-animation-duration-100),
-    box-shadow var(--spectrum-global-animation-duration-100),
-    border-color var(--spectrum-global-animation-duration-100);
 
-  &:disabled,
-  &.is-disabled {
-    border-width: var(--spectrum-picker-texticon-disabled-border-size);
-    cursor: default;
-  }
-
-  .spectrum-Picker-icon {
-    flex-shrink: 0;
-
-    /* todo: In theory, this is right -- there should be more gap with an icon -- but in practice, it does not match */
-    /* margin-inline-start: calc(var(--spectrum-picker-texticon-padding-left) - var(--spectrum-picker-texticon-textonly-padding-left)); */
-    margin-inline-end: var(--spectrum-picker-texticon-icon-gap);
-  }
-
-  .spectrum-Picker-label + .spectrum-Picker-icon {
-    /* Scoot over, assuming we have both icon and text */
-    margin-inline-start: calc(-1 * (var(--spectrum-picker-textonly-padding-left-adjusted) - var(--spectrum-picker-padding-left-adjusted)));
-  }
-}
-
-.spectrum-Picker--sizeS {
-  @remapvars {
-    find: /--spectrum-picker-s(.*)/;
-    filter: color;
-    replace: --spectrum-picker$1;
-  }
-}
-
-.spectrum-Picker--sizeM {
-  @remapvars {
-    find: /--spectrum-picker-m(.*)/;
-    filter: color;
-    replace: --spectrum-picker$1;
-  }
-
-  --spectrum-picker-texticon-padding-left: var(--spectrum-picker-m-texticon-padding-left);
-}
-
-.spectrum-Picker--sizeL {
-  @remapvars {
-    find: /--spectrum-picker-l(.*)/;
-    filter: color;
-    replace: --spectrum-picker$1;
-  }
-}
-
-.spectrum-Picker--sizeXL {
-  @remapvars {
-    find: /--spectrum-picker-xl(.*)/;
-    filter: color;
-    replace: --spectrum-picker$1;
-  }
-}
-
-.spectrum-Picker {
   /* todo: remove when fixed in DNA */
   --spectrum-picker-texticon-min-width: var(--spectrum-global-dimension-size-400);
 
@@ -109,15 +49,59 @@ governing permissions and limitations under the License.
   --spectrum-picker-texticon-border-size-increase-focus: 1px;
 
   /* Adjustments for inset/outset padding in DNA */
-  --spectrum-picker-padding-left-adjusted: calc(var(--spectrum-picker-texticon-padding-left) - var(--spectrum-picker-texticon-border-size));
-  --spectrum-picker-padding-right-adjusted: calc(var(--spectrum-picker-texticon-padding-right) - var(--spectrum-picker-texticon-border-size));
-  --spectrum-picker-textonly-padding-left-adjusted: calc(var(--spectrum-picker-textonly-padding-left) - var(--spectrum-picker-textonly-border-size));
-  --spectrum-picker-textonly-padding-right-adjusted: calc(var(--spectrum-picker-textonly-padding-right) - var(--spectrum-picker-textonly-border-size));
+  --spectrum-picker-padding-left-adjusted: calc(var(--spectrum-picker-spacing-text-icon-to-edge) - var(--spectrum-picker-text-icon-border-size));
+  --spectrum-picker-padding-right-adjusted: calc(var(--spectrum-picker-spacing-text-icon-to-edge) - var(--spectrum-picker-text-icon-border-size));
+  /*TODO Figure out what textonly-padding is */
+  /*--spectrum-picker-textonly-padding-left-adjusted: calc(var(--spectrum-picker-textonly-padding-left) - var(--spectrum-picker-textonly-border-size));*/
+  /*--spectrum-picker-textonly-padding-right-adjusted: calc(var(--spectrum-picker-textonly-padding-right) - var(--spectrum-picker-textonly-border-size));*/
+
   --spectrum-picker-focus-ring-border-radius-adjusted: calc(var(--spectrum-picker-textonly-border-radius) + var(--spectrum-picker-focus-ring-gap));
 }
 
-/* special cases for focus-ring */
+.spectrum-Picker--sizeS {
+  --spectrum-picker-text-icon-height: var(--spectrum-global-dimension-size-300);
+}
+
+.spectrum-Picker--sizeM {
+  --spectrum-picker-text-icon-height: var(--spectrum-global-dimension-size-400);
+}
+
+.spectrum-Picker--sizeL {
+  --spectrum-picker-text-icon-height: var(--spectrum-global-dimension-size-500);
+}
+
+.spectrum-Picker--sizeXL {
+  --spectrum-picker-text-icon-height: var(--spectrum-global-dimension-size-600);
+}
+
 .spectrum-Picker {
+  @inherit: %spectrum-BaseButton;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  /* Truncate if menu options make us too wide */
+  max-inline-size: 100%;
+  /* inline-size: var(--spectrum-picker-texticon-width); */
+  min-inline-size: var(--spectrum-picker-texticon-min-width);
+  block-size: var(--spectrum-picker-text-icon-height);
+
+  margin: 0;
+  padding-block: 0;
+
+  /* Start with text-only padding */
+  padding-inline: var(--spectrum-picker-spacing-text-icon-to-edge) var(--spectrum-picker-spacing-text-icon-to-edge);
+
+  border-width: var(--spectrum-picker-texticon-border-size);
+  border-style: solid;
+  border-radius: var(--spectrum-picker-texticon-border-radius);
+
+  transition: background-color var(--spectrum-global-animation-duration-100),
+    box-shadow var(--spectrum-global-animation-duration-100),
+    border-color var(--spectrum-global-animation-duration-100);
+
+  /* special cases for focus-ring */
   --spectrum-picker-focus-ring-gap: var(--spectrum-alias-component-focusring-gap);
   --spectrum-picker-focus-ring-size: var(--spectrum-alias-component-focusring-size);
   --spectrum-picker-focus-ring-color: var(--spectrum-picker-m-textonly-focusring-border-color-key-focus);
@@ -145,91 +129,26 @@ governing permissions and limitations under the License.
       box-shadow: 0 0 0 var(--spectrum-picker-focus-ring-size) var(--spectrum-picker-focus-ring-color);
     }
   }
-}
-
-.spectrum-Picker--quiet {
-  @remapvars {
-    find: /--spectrum-picker-m-quiet(.*)/;
-    filter: color;
-    replace: --spectrum-picker-$1;
-  }
-
-  /* Todo: fix in DNA, should have been zero */
-  --spectrum-picker-texticon-border-size: 0;
-  --spectrum-picker-texticon-border-radius: 0;
-  --spectrum-picker-textonly-padding-left: 0;
-  --spectrum-picker-textonly-padding-right: 0;
-  --spectrum-picker-quiet-background-color-key-focus: transparent;
-  --spectrum-picker-quiet-border-color-key-focus: var(--spectrum-global-color-blue-400);
-}
-
-.spectrum-Picker--quiet {
-  inline-size: auto;
-  min-inline-size: 0;
 
   &:disabled,
   &.is-disabled {
-    &:focus-ring {
-      box-shadow: none;
-    }
+    border-width: var(--spectrum-picker-texticon-disabled-border-size);
+    cursor: default;
   }
-}
 
-.spectrum-Picker-label {
-  /* Be the biggest, but also shrink! */
-  flex: 1 1 auto;
+  .spectrum-Picker-icon {
+    flex-shrink: 0;
 
-  white-space: nowrap;
-  overflow: hidden;
-
-  block-size: calc(
-    var(--spectrum-picker-texticon-height) - calc(var(--spectrum-picker-texticon-border-size) * 2)
-  );
-  line-height: calc(
-    var(--spectrum-picker-texticon-height) - calc(var(--spectrum-picker-texticon-border-size) * 2)
-  );
-
-  font-size: var(--spectrum-picker-texticon-text-size);
-
-  text-overflow: ellipsis;
-  text-align: start;
-
-  &.is-placeholder {
-    font-weight: var(--spectrum-picker-texticon-placeholder-font-weight);
-    font-style: var(--spectrum-picker-texticon-placeholder-font-style);
-    transition: color var(--spectrum-global-animation-duration-100) ease-in-out;
+    /* todo: In theory, this is right -- there should be more gap with an icon -- but in practice, it does not match */
+    /* margin-inline-start: calc(var(--spectrum-picker-texticon-padding-left) - var(--spectrum-picker-texticon-textonly-padding-left)); */
+    margin-inline-end: var(--spectrum-picker-spacing-text-icon-to-edge);
   }
-}
 
-/* The picker chevron */
-.spectrum-Picker-menuIcon {
-  display: inline-block;
-  position: relative;
-  vertical-align: top;
-  transition: color var(--spectrum-global-animation-duration-100) ease-out;
-  flex-shrink: 0;
-}
+  .spectrum-Picker-label + .spectrum-Picker-icon {
+    /* Scoot over, assuming we have both icon and text */
+    margin-inline-start: calc(-1 * (var(--spectrum-picker-texticon-ui-icon-gap) - var(--spectrum-picker-padding-left-adjusted)));
+  }
 
-.spectrum-Picker-validationIcon {
-  margin-inline-start: var(--spectrum-picker-texticon-error-icon-margin-left);
-}
-
-.spectrum-Picker-label ~ .spectrum-Picker-menuIcon {
-  margin-inline-start: var(--spectrum-picker-texticon-ui-icon-gap);
-}
-
-.spectrum-Picker-popover {
-  max-inline-size: var(--spectrum-picker-texticon-popover-max-width);
-}
-
-.spectrum-Picker-popover--quiet {
-  margin-inline-start: calc(
-    -1 * calc(var(--spectrum-picker-m-quiet-texticon-popover-offset-x) +
-          var(--spectrum-popover-border-size))
-  );
-}
-
-.spectrum-Picker {
   color: var(--spectrum-picker-m-texticon-text-color);
   background-color: var(--spectrum-picker-m-texticon-background-color);
   border-color: var(--spectrum-picker-m-texticon-border-color);
@@ -310,6 +229,82 @@ governing permissions and limitations under the License.
   }
 }
 
+.spectrum-Picker--quiet {
+  /* Todo: fix in DNA, should have been zero */
+  --spectrum-picker-texticon-border-size: 0;
+  --spectrum-picker-texticon-border-radius: 0;
+  --spectrum-picker-textonly-padding-left: 0;
+  --spectrum-picker-textonly-padding-right: 0;
+  --spectrum-picker-quiet-background-color-key-focus: transparent;
+  --spectrum-picker-quiet-border-color-key-focus: var(--spectrum-global-color-blue-400);
+}
+
+.spectrum-Picker--quiet {
+  inline-size: auto;
+  min-inline-size: 0;
+
+  &:disabled,
+  &.is-disabled {
+    &:focus-ring {
+      box-shadow: none;
+    }
+  }
+}
+
+.spectrum-Picker-label {
+  /* Be the biggest, but also shrink! */
+  flex: 1 1 auto;
+
+  white-space: nowrap;
+  overflow: hidden;
+
+  block-size: calc(
+    var(--spectrum-picker-text-icon-height) - calc(var(--spectrum-picker-texticon-border-size) * 2)
+  );
+  line-height: calc(
+    var(--spectrum-picker-text-icon-height) - calc(var(--spectrum-picker-texticon-border-size) * 2)
+  );
+
+  font-size: var(--spectrum-picker-text-icon-size);
+
+  text-overflow: ellipsis;
+  text-align: start;
+
+  &.is-placeholder {
+    font-weight: var(--spectrum-picker-texticon-placeholder-font-weight);
+    font-style: var(--spectrum-picker-texticon-placeholder-font-style);
+    transition: color var(--spectrum-global-animation-duration-100) ease-in-out;
+  }
+}
+
+/* The picker chevron */
+.spectrum-Picker-menuIcon {
+  display: inline-block;
+  position: relative;
+  vertical-align: top;
+  transition: color var(--spectrum-global-animation-duration-100) ease-out;
+  flex-shrink: 0;
+}
+
+.spectrum-Picker-validationIcon {
+  margin-inline-start: var(--spectrum-picker-texticon-error-icon-margin-left);
+}
+
+.spectrum-Picker-label ~ .spectrum-Picker-menuIcon {
+  margin-inline-start: var(--spectrum-picker-texticon-ui-icon-gap);
+}
+
+.spectrum-Picker-popover {
+  max-inline-size: var(--spectrum-picker-texticon-popover-max-width);
+}
+
+.spectrum-Picker-popover--quiet {
+  margin-inline-start: calc(
+    -1 * calc(var(--spectrum-picker-m-quiet-texticon-popover-offset-x) +
+          var(--spectrum-popover-border-size))
+  );
+}
+
 .spectrum-Picker-menuIcon {
   color: var(--spectrum-picker-m-texticon-icon-color);
 }
@@ -379,6 +374,7 @@ governing permissions and limitations under the License.
     color: var(--spectrum-picker-m-texticon-text-color-disabled);
   }
 }
+
 @media (forced-colors: active)
 {
   .spectrum-Picker {
