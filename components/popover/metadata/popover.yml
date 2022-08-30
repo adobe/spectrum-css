@@ -31,7 +31,7 @@ examples:
         </div>
 
         <div class="spectrum-Examples-item">
-          <h4 class="spectrum-Heading spectrum-Heading--sizeXS spectrum-Examples-itemHeading" style="margin-bottom: 16px;">With CSS Tip</h4>
+          <h4 class="spectrum-Heading spectrum-Heading--sizeXS spectrum-Examples-itemHeading" style="margin-bottom: 16px;">With Tip</h4>
                     <br>
           <div style="position: relative;">
             <div class="spectrum-Popover spectrum-Popover--withTip is-open">
@@ -74,13 +74,19 @@ examples:
                 </div>
               </section>
             </div>
+            <div class="dummy-spacing" style="position: relative; box-sizing: border-box; height: 230px; min-width: 400px; max-width: 50%;"></div>
 
-            <div class="dummy-spacing" style="position: relative; height: 248px; min-width: 400px; max-width: 50%;"></div>
+            <div class="dummy-source" style="position: relative; display: flex; align-items: center; justify-content: center; width: 100px; height: 50px; background: #E6E6E6; border-radius: 8px; box-sizing: border-box;">
+              <span><em>Source</em></span>
+            </div>
+            <br>
           </div>
 
-
-        <div class="spectrum-Examples-item">
+        <div class="spectrum-Examples-item" style="position: relative;">
           <h4 class="spectrum-Heading spectrum-Heading--sizeXS spectrum-Examples-itemHeading" style="margin-bottom: 16px;">Cross Offset of Tip</h4>
+          <div class="dummy-source" style="position: relative; margin-left: auto; display: flex; align-items: center; justify-content: center; width: 100px; height: 50px; background: #E6E6E6; border-radius: 8px; box-sizing: border-box; margin-bottom: 8px;">
+            <span><em>Source</em></span>
+          </div>
 
           <div class="spectrum-Popover  spectrum-Popover--bottom-end spectrum-Popover--withTip is-open" role="presentation" style="--spectrum-popover-pointer-edge-offset: 50px;">
             <section class="spectrum-Dialog spectrum-Dialog--small" role="dialog" tabindex="-1" aria-modal="true">
@@ -91,9 +97,10 @@ examples:
               </div>
             </section>
           </div>
-            <div class="dummy-spacing" style="position: relative; height: 248px; min-width: 400px; max-width: 50%;"></div>
+          <div class="dummy-spacing" style="position: relative; box-sizing: border-box; height: 230px; min-width: 400px; max-width: 50%;"></div>
         </div>
       </div>
+
 
   - id: popover-dialog
     name: Popover - Dialog style
@@ -136,7 +143,7 @@ examples:
                 </div>
               </section>
             </div>
-            <div class="dummy-spacing" style="position: relative; height: 248px; min-width: 480px; max-width: 50%;"></div>
+            <div class="dummy-spacing" style="position: relative; height: 264px; min-width: 480px; max-width: 50%;"></div>
         </div>
       </div>
 
@@ -160,7 +167,6 @@ examples:
               <div class="dummy-spacing" style="position: relative; height: 236px; min-width: 400px; max-width: 50%;"></div>
           </div>
         </div>
-
 
         <div class="spectrum-Examples">
           <div class="spectrum-Examples-item">
@@ -191,7 +197,6 @@ examples:
               <div class="dummy-spacing" style="position: relative; height: 236px; min-width: 400px; max-width: 50%;"></div>
           </div>
         </div>
-
 
       <div class="spectrum-Examples">
         <div class="spectrum-Examples-item">
@@ -241,6 +246,7 @@ examples:
               </section>
             </div>
             <div class="dummy-spacing" style="position: relative; height: 236px; min-width: 400px; max-width: 50%;"></div>
+            <br>
         </div>
       </div>
 
@@ -257,6 +263,7 @@ examples:
               </section>
             </div>
             <div class="dummy-spacing" style="position: relative; height: 236px; min-width: 400px; max-width: 50%;"></div>
+            <br>
         </div>
 
         <div class="spectrum-Examples-item">
@@ -271,6 +278,7 @@ examples:
               </section>
             </div>
             <div class="dummy-spacing" style="position: relative; height: 236px; min-width: 400px; max-width: 50%;"></div>
+            <br>
         </div>
       </div>
 
@@ -287,6 +295,7 @@ examples:
               </section>
             </div>
             <div class="dummy-spacing" style="position: relative; height: 236px; min-width: 400px; max-width: 50%;"></div>
+            <br>
         </div>
 
         <div class="spectrum-Examples-item">
@@ -312,18 +321,18 @@ examples:
       <div class="spectrum-Examples">
         <div class="spectrum-Examples-item">
           <h4 class="spectrum-Heading spectrum-Heading--sizeXS spectrum-Examples-itemHeading" style="margin-bottom: 16px;">Left</h4>
-            <div class="spectrum-Popover spectrum-Popover--left spectrum-Popover--withTip is-open" role="presentation">
-              <section class="spectrum-Dialog spectrum-Dialog--small" role="dialog" tabindex="-1" aria-modal="true">
-                <div class="spectrum-Dialog-grid" style="display: grid;">
-                  <h1 class="spectrum-Dialog-heading spectrum-Dialog-heading--noHeader">Popover Title</h1>
-                  <hr class="spectrum-Divider spectrum-Divider--sizeM spectrum-Divider--horizontal spectrum-Dialog-divider">
-                  <section class="spectrum-Dialog-content">Cupcake ipsum dolor sit amet jelly beans. Chocolate jelly caramels. Icing soufflé chupa chups donut cheesecake. Jelly-o chocolate cake sweet roll cake danish candy biscuit halvah.</section>
-                 </div>
-              </section>
-            </div>
-            <div class="dummy-spacing" style="position: relative; height: 236px; min-width: 400px; max-width: 50%;"></div>
+          <div class="spectrum-Popover spectrum-Popover--left spectrum-Popover--withTip is-open" role="presentation">
+            <section class="spectrum-Dialog spectrum-Dialog--small" role="dialog" tabindex="-1" aria-modal="true">
+              <div class="spectrum-Dialog-grid" style="display: grid;">
+                <h1 class="spectrum-Dialog-heading spectrum-Dialog-heading--noHeader">Popover Title</h1>
+                <hr class="spectrum-Divider spectrum-Divider--sizeM spectrum-Divider--horizontal spectrum-Dialog-divider">
+                <section class="spectrum-Dialog-content">Cupcake ipsum dolor sit amet jelly beans. Chocolate jelly caramels. Icing soufflé chupa chups donut cheesecake. Jelly-o chocolate cake sweet roll cake danish candy biscuit halvah.</section>
+               </div>
+            </section>
           </div>
+          <div class="dummy-spacing" style="position: relative; height: 236px; min-width: 400px; max-width: 50%;"></div>
         </div>
+      </div>
 
       <div class="spectrum-Examples">
         <div class="spectrum-Examples-item">
@@ -348,12 +357,12 @@ examples:
                   <h1 class="spectrum-Dialog-heading spectrum-Dialog-heading--noHeader">Popover Title</h1>
                   <hr class="spectrum-Divider spectrum-Divider--sizeM spectrum-Divider--horizontal spectrum-Dialog-divider">
                   <section class="spectrum-Dialog-content">Cupcake ipsum dolor sit amet jelly beans. Chocolate jelly caramels. Icing soufflé chupa chups donut cheesecake. Jelly-o chocolate cake sweet roll cake danish candy biscuit halvah.</section>
-                 </div>
+                </div>
               </section>
             </div>
             <div class="dummy-spacing" style="position: relative; height: 236px; min-width: 400px; max-width: 50%;"></div>
+          </div>
         </div>
-      </div>
 
 
   - id: popover-right
@@ -373,6 +382,7 @@ examples:
               </section>
             </div>
             <div class="dummy-spacing" style="position: relative; height: 236px; min-width: 400px; max-width: 50%;"></div>
+            <br>
         </div>
       </div>
 
@@ -430,30 +440,30 @@ examples:
       <div class="spectrum-Examples">
         <div class="spectrum-Examples-item">
           <h4 class="spectrum-Heading spectrum-Heading--sizeXS spectrum-Examples-itemHeading" style="margin-bottom: 16px;">End Top</h4>
-            <div class="spectrum-Popover spectrum-Popover--end-top spectrum-Popover--withTip is-open" role="presentation">
-              <section class="spectrum-Dialog spectrum-Dialog--small" role="dialog" tabindex="-1" aria-modal="true">
-                <div class="spectrum-Dialog-grid" style="display: grid;">
-                  <h1 class="spectrum-Dialog-heading spectrum-Dialog-heading--noHeader">Popover Title</h1>
-                  <hr class="spectrum-Divider spectrum-Divider--sizeM spectrum-Divider--horizontal spectrum-Dialog-divider">
-                  <section class="spectrum-Dialog-content">Cupcake ipsum dolor sit amet jelly beans. Chocolate jelly caramels. Icing soufflé chupa chups donut cheesecake. Jelly-o chocolate cake sweet roll cake danish candy biscuit halvah.</section>
-                 </div>
-              </section>
-            </div>
-            <div class="dummy-spacing" style="position: relative; height: 236px; min-width: 400px; max-width: 50%;"></div>
+          <div class="spectrum-Popover spectrum-Popover--end-top spectrum-Popover--withTip is-open" role="presentation">
+            <section class="spectrum-Dialog spectrum-Dialog--small" role="dialog" tabindex="-1" aria-modal="true">
+              <div class="spectrum-Dialog-grid" style="display: grid;">
+                <h1 class="spectrum-Dialog-heading spectrum-Dialog-heading--noHeader">Popover Title</h1>
+                <hr class="spectrum-Divider spectrum-Divider--sizeM spectrum-Divider--horizontal spectrum-Dialog-divider">
+                <section class="spectrum-Dialog-content">Cupcake ipsum dolor sit amet jelly beans. Chocolate jelly caramels. Icing soufflé chupa chups donut cheesecake. Jelly-o chocolate cake sweet roll cake danish candy biscuit halvah.</section>
+               </div>
+            </section>
+          </div>
+          <div class="dummy-spacing" style="position: relative; height: 236px; min-width: 400px; max-width: 50%;"></div>
         </div>
 
         <div class="spectrum-Examples-item">
           <h4 class="spectrum-Heading spectrum-Heading--sizeXS spectrum-Examples-itemHeading" style="margin-bottom: 16px;">End Bottom</h4>
-            <div class="spectrum-Popover spectrum-Popover--end-bottom spectrum-Popover--withTip is-open" role="presentation">
-              <section class="spectrum-Dialog spectrum-Dialog--small" role="dialog" tabindex="-1" aria-modal="true">
-                <div class="spectrum-Dialog-grid" style="display: grid;">
-                  <h1 class="spectrum-Dialog-heading spectrum-Dialog-heading--noHeader">Popover Title</h1>
-                  <hr class="spectrum-Divider spectrum-Divider--sizeM spectrum-Divider--horizontal spectrum-Dialog-divider">
-                  <section class="spectrum-Dialog-content">Cupcake ipsum dolor sit amet jelly beans. Chocolate jelly caramels. Icing soufflé chupa chups donut cheesecake. Jelly-o chocolate cake sweet roll cake danish candy biscuit halvah.</section>
-                 </div>
-              </section>
-            </div>
-            <div class="dummy-spacing" style="position: relative; height: 236px; min-width: 400px; max-width: 50%;"></div>
+          <div class="spectrum-Popover spectrum-Popover--end-bottom spectrum-Popover--withTip is-open" role="presentation">
+            <section class="spectrum-Dialog spectrum-Dialog--small" role="dialog" tabindex="-1" aria-modal="true">
+              <div class="spectrum-Dialog-grid" style="display: grid;">
+                <h1 class="spectrum-Dialog-heading spectrum-Dialog-heading--noHeader">Popover Title</h1>
+                <hr class="spectrum-Divider spectrum-Divider--sizeM spectrum-Divider--horizontal spectrum-Dialog-divider">
+                <section class="spectrum-Dialog-content">Cupcake ipsum dolor sit amet jelly beans. Chocolate jelly caramels. Icing soufflé chupa chups donut cheesecake. Jelly-o chocolate cake sweet roll cake danish candy biscuit halvah.</section>
+               </div>
+            </section>
+          </div>
+          <div class="dummy-spacing" style="position: relative; height: 236px; min-width: 400px; max-width: 50%;"></div>
         </div>
       </div>
 
@@ -465,45 +475,45 @@ examples:
       <div class="spectrum-Examples">
         <div class="spectrum-Examples-item">
         <h4 class="spectrum-Heading spectrum-Heading--sizeXS spectrum-Examples-itemHeading" style="margin-bottom: 16px;">Start</h4>
-            <div class="spectrum-Popover spectrum-Popover--start spectrum-Popover--withTip is-open" role="presentation">
-              <section class="spectrum-Dialog spectrum-Dialog--small" role="dialog" tabindex="-1" aria-modal="true">
-                <div class="spectrum-Dialog-grid" style="display: grid;">
-                  <h1 class="spectrum-Dialog-heading spectrum-Dialog-heading--noHeader">Popover Title</h1>
-                  <hr class="spectrum-Divider spectrum-Divider--sizeM spectrum-Divider--horizontal spectrum-Dialog-divider">
-                  <section class="spectrum-Dialog-content">Cupcake ipsum dolor sit amet jelly beans. Chocolate jelly caramels. Icing soufflé chupa chups donut cheesecake. Jelly-o chocolate cake sweet roll cake danish candy biscuit halvah.</section>
-                 </div>
-              </section>
-            </div>
-            <div class="dummy-spacing" style="position: relative; height: 236px; min-width: 400px; max-width: 50%;"></div>
+          <div class="spectrum-Popover spectrum-Popover--start spectrum-Popover--withTip is-open" role="presentation">
+            <section class="spectrum-Dialog spectrum-Dialog--small" role="dialog" tabindex="-1" aria-modal="true">
+              <div class="spectrum-Dialog-grid" style="display: grid;">
+                <h1 class="spectrum-Dialog-heading spectrum-Dialog-heading--noHeader">Popover Title</h1>
+                <hr class="spectrum-Divider spectrum-Divider--sizeM spectrum-Divider--horizontal spectrum-Dialog-divider">
+                <section class="spectrum-Dialog-content">Cupcake ipsum dolor sit amet jelly beans. Chocolate jelly caramels. Icing soufflé chupa chups donut cheesecake. Jelly-o chocolate cake sweet roll cake danish candy biscuit halvah.</section>
+               </div>
+            </section>
+          </div>
+          <div class="dummy-spacing" style="position: relative; height: 236px; min-width: 400px; max-width: 50%;"></div>
         </div>
       </div>
 
       <div class="spectrum-Examples">
         <div class="spectrum-Examples-item">
           <h4 class="spectrum-Heading spectrum-Heading--sizeXS spectrum-Examples-itemHeading" style="margin-bottom: 16px;">Start Top</h4>
-            <div class="spectrum-Popover spectrum-Popover--start-top spectrum-Popover--withTip is-open" role="presentation">
-              <section class="spectrum-Dialog spectrum-Dialog--small" role="dialog" tabindex="-1" aria-modal="true">
-                <div class="spectrum-Dialog-grid" style="display: grid;">
-                  <h1 class="spectrum-Dialog-heading spectrum-Dialog-heading--noHeader">Popover Title</h1>
-                  <hr class="spectrum-Divider spectrum-Divider--sizeM spectrum-Divider--horizontal spectrum-Dialog-divider">
-                  <section class="spectrum-Dialog-content">Cupcake ipsum dolor sit amet jelly beans. Chocolate jelly caramels. Icing soufflé chupa chups donut cheesecake. Jelly-o chocolate cake sweet roll cake danish candy biscuit halvah.</section>
-                 </div>
-              </section>
-            </div>
-            <div class="dummy-spacing" style="position: relative; height: 236px; min-width: 400px; max-width: 50%;"></div>
+          <div class="spectrum-Popover spectrum-Popover--start-top spectrum-Popover--withTip is-open" role="presentation">
+            <section class="spectrum-Dialog spectrum-Dialog--small" role="dialog" tabindex="-1" aria-modal="true">
+              <div class="spectrum-Dialog-grid" style="display: grid;">
+                <h1 class="spectrum-Dialog-heading spectrum-Dialog-heading--noHeader">Popover Title</h1>
+                <hr class="spectrum-Divider spectrum-Divider--sizeM spectrum-Divider--horizontal spectrum-Dialog-divider">
+                <section class="spectrum-Dialog-content">Cupcake ipsum dolor sit amet jelly beans. Chocolate jelly caramels. Icing soufflé chupa chups donut cheesecake. Jelly-o chocolate cake sweet roll cake danish candy biscuit halvah.</section>
+               </div>
+            </section>
+          </div>
+          <div class="dummy-spacing" style="position: relative; height: 236px; min-width: 400px; max-width: 50%;"></div>
         </div>
 
         <div class="spectrum-Examples-item">
           <h4 class="spectrum-Heading spectrum-Heading--sizeXS spectrum-Examples-itemHeading" style="margin-bottom: 16px;">Start Bottom</h4>
-            <div class="spectrum-Popover spectrum-Popover--start-bottom spectrum-Popover--withTip is-open" role="presentation">
-              <section class="spectrum-Dialog spectrum-Dialog--small" role="dialog" tabindex="-1" aria-modal="true">
-                <div class="spectrum-Dialog-grid" style="display: grid;">
-                  <h1 class="spectrum-Dialog-heading spectrum-Dialog-heading--noHeader">Popover Title</h1>
-                  <hr class="spectrum-Divider spectrum-Divider--sizeM spectrum-Divider--horizontal spectrum-Dialog-divider">
-                  <section class="spectrum-Dialog-content">Cupcake ipsum dolor sit amet jelly beans. Chocolate jelly caramels. Icing soufflé chupa chups donut cheesecake. Jelly-o chocolate cake sweet roll cake danish candy biscuit halvah.</section>
-                 </div>
-              </section>
-            </div>
-            <div class="dummy-spacing" style="position: relative; height: 236px; min-width: 400px; max-width: 50%;"></div>
+          <div class="spectrum-Popover spectrum-Popover--start-bottom spectrum-Popover--withTip is-open" role="presentation">
+            <section class="spectrum-Dialog spectrum-Dialog--small" role="dialog" tabindex="-1" aria-modal="true">
+              <div class="spectrum-Dialog-grid" style="display: grid;">
+                <h1 class="spectrum-Dialog-heading spectrum-Dialog-heading--noHeader">Popover Title</h1>
+                <hr class="spectrum-Divider spectrum-Divider--sizeM spectrum-Divider--horizontal spectrum-Dialog-divider">
+                <section class="spectrum-Dialog-content">Cupcake ipsum dolor sit amet jelly beans. Chocolate jelly caramels. Icing soufflé chupa chups donut cheesecake. Jelly-o chocolate cake sweet roll cake danish candy biscuit halvah.</section>
+               </div>
+            </section>
+          </div>
+          <div class="dummy-spacing" style="position: relative; height: 236px; min-width: 400px; max-width: 50%;"></div>
         </div>
       </div>
