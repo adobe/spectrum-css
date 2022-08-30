@@ -14,16 +14,32 @@ const gulp = require('gulp');
 const logger = require('gulplog');
 const browserSync = require('browser-sync');
 const path = require('path');
-const dirs = require('../lib/dirs')
+const dirs = require('../lib/dirs');
 
 const docs = require('../docs');
 const subrunner = require('../subrunner');
+const bundleBuilder = require('../index.js');
+
 
 function serve() {
+
+  let PORT = 3000;
+
+  if (process.env.BROWSERSYNC_PORT) {
+    PORT = process.env.BROWSERSYNC_PORT;
+    logger.info(`Setting '${PORT} as port for browsersync, which hopefully is valid`);
+  }
+
+  if (process.env.BROWSERSYNC_OPEN === 'true') {
+    logger.info('New browser instance will open');
+  }
+
   browserSync({
     startPath: 'docs/index.html',
     server: `${process.cwd()}/dist/`,
-    notify: process.env.BROWSERSYNC_NOTIFY === 'true' ? true : false
+    notify: process.env.BROWSERSYNC_NOTIFY === 'true' ? true : false,
+    open: process.env.BROWSERSYNC_OPEN === 'true' ? true : false,
+    port: PORT
   });
 }
 
@@ -153,8 +169,17 @@ function watchSite() {
   );
 }
 
+function watchCommons() {  
+  gulp.watch(
+    [`${dirs.components}/commons/*.css`], 
+    gulp.series(bundleBuilder.buildDepenenciesOfCommons, bundleBuilder.copyPackages, reload)
+  );
+}
+
 function watch() {
   serve();
+
+  watchCommons();
 
   watchWithinPackages(`${dirs.components}/tokens/custom-*/*.css`, 'rebuildCustoms', '*.css');
 
@@ -169,22 +194,33 @@ function watch() {
     ],
     (changedFile, package, done) => {
       // Do this as gulp tasks to avoid premature stream termination
-      gulp.series(
-        // Get data first so nav builds
-        docs.buildSite_getData,
-        function buildDocs_forDep() {
-          logger.debug(`Building docs for ${package}`);
-          return docs.buildDocs_forDep(package)
-            .finally(() => {
-              done();
-              reload();
-            });
+      try {
+        let result = gulp.series(
+          // Get data first so nav builds
+          function buildSite_getData() {
+            logger.debug(`Building nav data for ${package}`);
+            return docs.buildSite_getData()
+          },
+          function buildDocs_forDep() {
+            logger.debug(`Building docs for ${package}`);
+            return docs.buildDocs_forDep(package)
+          }
+          )();
+        // this catches yaml parsing errors
+        // should stop the series from running 
+        } catch (error) {
+          done(error);
+        } finally {
+          // we have to do this 
+          // or gulp will get wedged by the error
+          done();
+          reload();
         }
-      )();
     }
   );
-
+    
   watchSite();
+
 }
 
 exports.watch = watch;
