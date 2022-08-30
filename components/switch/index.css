@@ -134,7 +134,7 @@ governing permissions and limitations under the License.
   /* positions the pseudo elements relative to this one */
   position: relative;
 
-  inline-size: var(--spectrum-switch-control-width, var(--spectrum-switch-control-width));
+  inline-size: var(--mod-switch-control-width, var(--spectrum-switch-control-width));
 
   /* Fix vertical alignment when not wrapping since we're flex-start */
   margin-block: calc(var(--mod-switch-height, var(--spectrum-switch-height)) - var(--mod-switch-control-height, var(--spectrum-switch-control-height)) - var(--mod-switch-spacing-top-to-control, var(--spectrum-switch-spacing-top-to-control)));

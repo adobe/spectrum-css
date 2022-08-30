@@ -83,7 +83,7 @@ examples:
     status: Verified
     description: The emphasized variant of the Switch.
     markup: |
-      <div class="spectrum-Switch spectrum-Switch--sizeM spectrum-Switch--">
+      <div class="spectrum-Switch spectrum-Switch-sizeM spectrum-Switch--emphasized">
         <input type="checkbox" class="spectrum-Switch-input" id="switch-onoff-0">
         <span class="spectrum-Switch-switch"></span>
         <label class="spectrum-Switch-label" for="switch-onoff-0">Switch Off</label>
