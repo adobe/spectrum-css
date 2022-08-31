@@ -21,9 +21,6 @@ governing permissions and limitations under the License.
   /* popover inner padding */
   --spectrum-popover-content-area-spacing-vertical: var(--spectrum-popover-top-to-content-area);
 
-  /* popover spacing between popover and source */
-  --spectrum-popover-spacing-to-source: var(--spectrum-spacing-100);
-
   /* popover drop shadow */
   --spectrum-popover-shadow-horizontal: var(--spectrum-drop-shadow-x);
   --spectrum-popover-shadow-vertical: var(--spectrum-drop-shadow-y);
@@ -42,9 +39,6 @@ governing permissions and limitations under the License.
 
   /* pointer tip - spacing to edge will center pointer to source - apply in markup by setting '--spectrum-popover-pointer-edge-offset' value == half of source */
   --spectrum-popover-pointer-edge-spacing: calc(var(--spectrum-popover-pointer-edge-offset) - (var(--spectrum-popover-tip-width) / 2));
-
-  /* override animation distance for correct spacing to source */
-  /* --spectrum-popover-overlay-animation-distance: calc(var(--spectrum-popover-tip-height) + var(--spectrum-popover-spacing-to-source)); */
 }
 
 /* windows high contrast mode */
@@ -75,8 +69,6 @@ governing permissions and limitations under the License.
   background-color: var(--mod-popover-background-color, var(--spectrum-popover-background-color));
   filter: drop-shadow(var(--mod-popover-shadow-horizontal, var(--spectrum-popover-shadow-horizontal)) var(--mod-popover-shadow-vertical, var(--spectrum-popover-shadow-vertical)) var(--mod-popover-shadow-blur, var(--spectrum-popover-shadow-blur)) var(--mod-popover-shadow-color, var(--spectrum-popover-shadow-color)));
 
-  margin-bottom: var(--mod-popover-spacing-to-source, var(--spectrum-popover-spacing-to-source));
-
   /* default opens and animates upward */
   &.is-open {
     @inherit: %spectrum-overlay--open;
@@ -85,7 +77,6 @@ governing permissions and limitations under the License.
 
   /* has tip triangle */
   &.spectrum-Popover--withTip {
-    margin-bottom: calc(var(--mod-popover-pointer-height, var(--spectrum-popover-pointer-height)) + var(--mod-popover-spacing-to-source, var(--spectrum-popover-spacing-to-source)));
 
     .spectrum-Popover-tip,
     .spectrum-Popover-tip::after {
@@ -124,8 +115,6 @@ governing permissions and limitations under the License.
 .spectrum-Popover--top-right,
 .spectrum-Popover--top-start,
 .spectrum-Popover--top-end {
-  margin-bottom: var(--mod-popover-spacing-to-source, var(--spectrum-popover-spacing-to-source));
-
   /* popover animates upward ⬆ */
   &.is-open {
     @inherit: %spectrum-overlay--top--open;
@@ -139,10 +128,6 @@ governing permissions and limitations under the License.
 .spectrum-Popover--bottom-right,
 .spectrum-Popover--bottom-start,
 .spectrum-Popover--bottom-end {
-  margin-bottom: var(--mod-popover-spacing-to-source, var(--spectrum-popover-spacing-to-source));
-  margin-bottom: unset;
-
-
   /* popover animates downward ⬇ */
   &.is-open {
     @inherit: %spectrum-overlay--bottom--open;
@@ -154,9 +139,6 @@ governing permissions and limitations under the License.
 .spectrum-Popover--right,
 .spectrum-Popover--right-bottom,
 .spectrum-Popover--right-top {
-  margin-left: var(--mod-popover-spacing-to-source, var(--spectrum-popover-spacing-to-source));
-  margin-bottom: unset;
-
   /* popover animates towards right ⮕ */
   &.is-open {
     @inherit: %spectrum-overlay--right--open;
@@ -167,9 +149,6 @@ governing permissions and limitations under the License.
 .spectrum-Popover--left,
 .spectrum-Popover--left-bottom,
 .spectrum-Popover--left-top {
-  margin-right: var(--mod-popover-spacing-to-source, var(--spectrum-popover-spacing-to-source));
-  margin-bottom: unset;
-
   /* popover animates towards left ⬅ */
   &.is-open {
     @inherit: %spectrum-overlay--left--open;
@@ -180,9 +159,6 @@ governing permissions and limitations under the License.
 .spectrum-Popover--start,
 .spectrum-Popover--start-top,
 .spectrum-Popover--start-bottom {
-  margin-inline-end: var(--mod-popover-spacing-to-source, var(--spectrum-popover-spacing-to-source));
-  margin-bottom: unset;
-
   /* LTR read, popover animates towards left ⬅ */
   &.is-open {
     @inherit: %spectrum-overlay--left--open;
@@ -200,9 +176,6 @@ governing permissions and limitations under the License.
 .spectrum-Popover--end,
 .spectrum-Popover--end-top,
 .spectrum-Popover--end-bottom {
-  margin-inline-start: var(--mod-popover-spacing-to-source, var(--spectrum-popover-spacing-to-source));
-  margin-bottom: unset;
-
   /* LTR read, popover animates towards right ⮕ */
   &.is-open {
     @inherit: %spectrum-overlay--right--open;
@@ -220,14 +193,6 @@ governing permissions and limitations under the License.
 /* HAS TIP - popover with triangle pointer */
 .spectrum-Popover--withTip {
   /* popover position is at top of source with tip pointing down */
-  &.spectrum-Popover--top,
-  &.spectrum-Popover--top-left,
-  &.spectrum-Popover--top-right,
-  &.spectrum-Popover--top-start,
-  &.spectrum-Popover--top-end {
-    margin-bottom: calc(var(--mod-popover-pointer-height, var(--spectrum-popover-pointer-height)) + var(--mod-popover-spacing-to-source, var(--spectrum-popover-spacing-to-source)));
-  }
-
   &.spectrum-Popover--top-left {
     /* tip triangle  */
     .spectrum-Popover-tip {
@@ -266,10 +231,6 @@ governing permissions and limitations under the License.
   &.spectrum-Popover--bottom-right,
   &.spectrum-Popover--bottom-start,
   &.spectrum-Popover--bottom-end {
-    /* add tip height to spacing to source */
-    margin-top: calc(var(--mod-popover-pointer-height, var(--spectrum-popover-pointer-height)) + var(--mod-popover-spacing-to-source, var(--spectrum-popover-spacing-to-source)));
-    margin-bottom: unset;
-
    /* tip triangle points up */
     .spectrum-Popover-tip,
     .spectrum-Popover-tip::after {
@@ -323,10 +284,6 @@ governing permissions and limitations under the License.
   &.spectrum-Popover--right,
   &.spectrum-Popover--right-bottom,
   &.spectrum-Popover--right-top {
-    /* add tip height to spacing to source */
-    margin-left: calc(var(--mod-popover-pointer-height, var(--spectrum-popover-pointer-height)) + var(--mod-popover-spacing-to-source, var(--spectrum-popover-spacing-to-source)));
-    margin-bottom: unset;
-
    /* tip triangle pointing left */
     .spectrum-Popover-tip,
     .spectrum-Popover-tip::after {
@@ -369,10 +326,6 @@ governing permissions and limitations under the License.
   &.spectrum-Popover--left,
   &.spectrum-Popover--left-bottom,
   &.spectrum-Popover--left-top {
-    /* add tip height to spacing to source */
-    margin-right: calc(var(--mod-popover-pointer-height, var(--spectrum-popover-pointer-height)) + var(--mod-popover-spacing-to-source, var(--spectrum-popover-spacing-to-source)));
-    margin-bottom: unset;
-
    /* tip triangle points right */
     .spectrum-Popover-tip,
     .spectrum-Popover-tip::after {
@@ -415,9 +368,6 @@ governing permissions and limitations under the License.
   &.spectrum-Popover--start,
   &.spectrum-Popover--start-top,
   &.spectrum-Popover--start-bottom {
-    margin-inline-end: calc(var(--mod-popover-pointer-height, var(--spectrum-popover-pointer-height)) + var(--mod-popover-spacing-to-source, var(--spectrum-popover-spacing-to-source)));
-    margin-bottom: unset;
-
     /* tip triangle  */
     .spectrum-Popover-tip,
     .spectrum-Popover-tip::after {
@@ -464,9 +414,6 @@ governing permissions and limitations under the License.
   &.spectrum-Popover--end,
   &.spectrum-Popover--end-top,
   &.spectrum-Popover--end-bottom {
-    margin-inline-start: calc(var(--mod-popover-pointer-height, var(--spectrum-popover-pointer-height)) + var(--mod-popover-spacing-to-source, var(--spectrum-popover-spacing-to-source)));
-    margin-bottom: unset;
-
     /* tip triangle  */
     .spectrum-Popover-tip,
     .spectrum-Popover-tip::after {
