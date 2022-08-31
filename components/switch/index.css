@@ -205,7 +205,7 @@ governing permissions and limitations under the License.
     inset-inline-start: 0;
 
     border-width: var(--mod-border-width-200, var(--spectrum-border-width-200));
-    border-radius: var(--mod-corner-radius-200, var(--spectrum-corner-radius-200));
+    border-radius: calc(var(--mod-switch-control-height, var(--spectrum-switch-control-height)) / 2);
     border-style: solid;
   }
 
