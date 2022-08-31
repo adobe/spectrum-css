@@ -14,7 +14,6 @@ governing permissions and limitations under the License.
 
 .spectrum-Popover {
   --spectrum-popover-background-color: var(--spectrum-background-layer-2-color);
-
   --spectrum-popover-border-width: var(--spectrum-border-width-100);
   --spectrum-popover-border-color: var(--spectrum-gray-400);
 
@@ -77,31 +76,15 @@ governing permissions and limitations under the License.
 
   /* has tip triangle */
   &.spectrum-Popover--withTip {
-
-    .spectrum-Popover-tip,
-    .spectrum-Popover-tip::after {
-      position: absolute;
-      display: inline-block;
-      height: var(--mod-popover-pointer-height, var(--spectrum-popover-pointer-height));
-      width: var(--mod-popover-pointer-width, var(--spectrum-popover-pointer-width));
-      margin: auto;
-      left: 0;
-      right: 0;
-      top: 100%;
-      clip-path: polygon(0 0, 50% 100%, 100% 0);
-    }
-
-    /* tip border */
     .spectrum-Popover-tip {
-      background: var(--mod-popover-border-color, var(--spectrum-popover-border-color));
-    }
-
-    /* tip fill */
-    .spectrum-Popover-tip::after {
-      background: var(--mod-popover-background-color, var(--spectrum-popover-background-color));
-      /* move fill up by 150% of border width - percentage matches 2:1 triangle ratio */
-      top: calc(var(--mod-popover-border-width, var(--spectrum-popover-border-width)) * -1.5);
-      content: "";
+      /* triangle polygon */
+      .spectrum-Popover-tip-triangle {
+        stroke-linecap: square;
+        stroke-linejoin: miter;
+        fill: var(--mod-popover-background-color, var(--spectrum-popover-background-color));
+        stroke: var(--mod-popover-border-color, var(--spectrum-popover-border-color));
+        stroke-width: var(--mod-popover-border-width, var(--spectrum-popover-border-width));
+      }
     }
   }
 }
@@ -118,7 +101,6 @@ governing permissions and limitations under the License.
   /* popover animates upward ⬆ */
   &.is-open {
     @inherit: %spectrum-overlay--top--open;
-    /* transform: translateY(calc(var(--mod-popover-overlay-animation-distance, var(--spectrum-popover-overlay-animation-distance)) * -1)); */
   }
 }
 
@@ -131,7 +113,6 @@ governing permissions and limitations under the License.
   /* popover animates downward ⬇ */
   &.is-open {
     @inherit: %spectrum-overlay--bottom--open;
-    /* transform: translateY(var(--mod-popover-overlay-animation-distance, var(--spectrum-popover-overlay-animation-distance))); */
   }
 }
 
@@ -189,20 +170,39 @@ governing permissions and limitations under the License.
   }
 }
 
-
 /* HAS TIP - popover with triangle pointer */
 .spectrum-Popover--withTip {
+  &.spectrum-Popover,
+  &.spectrum-Popover--top,
+  &.spectrum-Popover--top-left,
+  &.spectrum-Popover--top-right,
+  &.spectrum-Popover--top-start,
+  &.spectrum-Popover--top-end,
+  &.spectrum-Popover--bottom,
+  &.spectrum-Popover--bottom-left,
+  &.spectrum-Popover--bottom-right,
+  &.spectrum-Popover--bottom-start,
+  &.spectrum-Popover--bottom-end {
+    .spectrum-Popover-tip {
+      width: var(--mod-popover-pointer-width, var(--spectrum-popover-pointer-width));
+      height: var(--mod-popover-pointer-height, var(--spectrum-popover-pointer-height));
+      position: absolute;
+      top: 100%;
+      left: 0;
+      right: 0;
+      margin: auto;
+    }
+  }
+
   /* popover position is at top of source with tip pointing down */
   &.spectrum-Popover--top-left {
-    /* tip triangle  */
     .spectrum-Popover-tip {
       left: var(--mod-popover-pointer-edge-spacing, var(--spectrum-popover-pointer-edge-spacing));
       right: auto;
     }
   }
 
-  &.spectrum-Popover--top-right{
-    /* tip triangle  */
+  &.spectrum-Popover--top-right {
     .spectrum-Popover-tip {
       left: auto;
       right: var(--mod-popover-pointer-edge-spacing, var(--spectrum-popover-pointer-edge-spacing));
@@ -211,7 +211,6 @@ governing permissions and limitations under the License.
 
   /* logical property - popover is above, source is at start */
   &.spectrum-Popover--top-start {
-    /* tip triangle  */
     .spectrum-Popover-tip {
       margin-inline-start: var(--mod-popover-pointer-edge-spacing, var(--spectrum-popover-pointer-edge-spacing));
     }
@@ -219,7 +218,6 @@ governing permissions and limitations under the License.
 
   /* logical property - popover is above, source is at end */
   &.spectrum-Popover--top-end {
-    /* tip triangle  */
     .spectrum-Popover-tip {
       margin-inline-end: var(--mod-popover-pointer-edge-spacing, var(--spectrum-popover-pointer-edge-spacing));
     }
@@ -231,24 +229,16 @@ governing permissions and limitations under the License.
   &.spectrum-Popover--bottom-right,
   &.spectrum-Popover--bottom-start,
   &.spectrum-Popover--bottom-end {
-   /* tip triangle points up */
-    .spectrum-Popover-tip,
-    .spectrum-Popover-tip::after {
+    .spectrum-Popover-tip {
       top: auto;
       bottom: 100%;
-      clip-path: polygon(0 100%, 50% 0, 100% 100%);
-    }
-
-    /* after element is the triangle fill with offset to show the border */
-    .spectrum-Popover-tip::after {
-      /* move fill up by 150% of border width - percentage matches 2:1 triangle ratio */
-      bottom: calc(var(--mod-popover-border-width, var(--spectrum-popover-border-width)) * -1.5);
+      /* flip triangle to face up */
+      transform: scaleY(-1);
     }
   }
 
   /* popover position is bottom, source is at left */
   &.spectrum-Popover--bottom-left {
-    /* tip triangle  */
     .spectrum-Popover-tip {
       left: var(--mod-popover-pointer-edge-spacing, var(--spectrum-popover-pointer-edge-spacing));
       right: auto;
@@ -257,7 +247,6 @@ governing permissions and limitations under the License.
 
   /* popover position is bottom, source is at right */
   &.spectrum-Popover--bottom-right {
-    /* tip triangle  */
     .spectrum-Popover-tip {
       left: auto;
       right: var(--mod-popover-pointer-edge-spacing, var(--spectrum-popover-pointer-edge-spacing));
@@ -266,7 +255,6 @@ governing permissions and limitations under the License.
 
   /* logical property - popover is below, source is at start */
   &.spectrum-Popover--bottom-start {
-    /* tip triangle  */
     .spectrum-Popover-tip {
       margin-inline-start: var(--mod-popover-pointer-edge-spacing, var(--spectrum-popover-pointer-edge-spacing));
     }
@@ -274,93 +262,72 @@ governing permissions and limitations under the License.
 
   /* logical property - popover is below, source is at end */
   &.spectrum-Popover--bottom-end {
-    /* tip triangle  */
     .spectrum-Popover-tip {
       margin-inline-end: var(--mod-popover-pointer-edge-spacing, var(--spectrum-popover-pointer-edge-spacing));
     }
   }
 
   /* right popover position with tip pointing left */
+  &.spectrum-Popover--left,
+  &.spectrum-Popover--left-bottom,
+  &.spectrum-Popover--left-top,
   &.spectrum-Popover--right,
   &.spectrum-Popover--right-bottom,
-  &.spectrum-Popover--right-top {
-   /* tip triangle pointing left */
-    .spectrum-Popover-tip,
-    .spectrum-Popover-tip::after {
+  &.spectrum-Popover--right-top,
+  &.spectrum-Popover--start,
+  &.spectrum-Popover--start-top,
+  &.spectrum-Popover--start-bottom,
+  &.spectrum-Popover--end,
+  &.spectrum-Popover--end-top,
+  &.spectrum-Popover--end-bottom {
+    .spectrum-Popover-tip {
       /* swap height and width for vertical triangle */
       width: var(--mod-popover-pointer-height, var(--spectrum-popover-pointer-height));
       height: var(--mod-popover-pointer-width, var(--spectrum-popover-pointer-width));
       top: 0;
       bottom: 0;
-      left: auto;
-      right: 100%;
-      clip-path: polygon(100% 0, 0 50%, 100% 100%);
     }
 
-    /* after element is the triangle fill with offset to show the border */
-    .spectrum-Popover-tip::after {
-      /* move fill up by 150% of border width - percentage matches 2:1 triangle ratio */
-      right: calc(var(--mod-popover-border-width, var(--spectrum-popover-border-width)) * -1.5);
+    &.spectrum-Popover--right,
+    &.spectrum-Popover--right-bottom,
+    &.spectrum-Popover--right-top {
+      .spectrum-Popover-tip {
+        right: 100%;
+        left: auto;
+      }
     }
-  }
 
-  /* right popover position with tip at top pointing left */
-  &.spectrum-Popover--right-top {
-    /* tip triangle  */
-    .spectrum-Popover-tip {
-      top: var(--mod-popover-pointer-edge-spacing, var(--spectrum-popover-pointer-edge-spacing));
-      bottom: auto;
-    }
-  }
-
-  /* right popover position with tip at bottom pointing left */
-  &.spectrum-Popover--right-bottom {
-    /* tip triangle  */
-    .spectrum-Popover-tip {
-      top: auto;
-      bottom: var(--mod-popover-pointer-edge-spacing, var(--spectrum-popover-pointer-edge-spacing));
-    }
-  }
-
-  /* left popover position with tip pointing right */
   &.spectrum-Popover--left,
   &.spectrum-Popover--left-bottom,
   &.spectrum-Popover--left-top {
-   /* tip triangle points right */
-    .spectrum-Popover-tip,
-    .spectrum-Popover-tip::after {
-      /* swap height and width for vertical triangle */
-      width: var(--mod-popover-pointer-height, var(--spectrum-popover-pointer-height));
-      height: var(--mod-popover-pointer-width, var(--spectrum-popover-pointer-width));
-      top: 0;
-      bottom: 0;
-      right: auto;
+    .spectrum-Popover-tip {
       left: 100%;
-      clip-path: polygon(0 0, 100% 50%, 0 100%);
-    }
-
-    /* after element is the triangle fill with offset to show the border */
-    .spectrum-Popover-tip::after {
-      /* offset fill up by 150% of border width - percentage matches 2:1 triangle ratio */
-      left: calc(var(--mod-popover-border-width, var(--spectrum-popover-border-width)) * -1.5);
+      right: auto;
+      /* flip tip to point right */
+      transform: scaleX(-1);
     }
   }
 
-  /* left popover position with tip at top pointing right */
-  &.spectrum-Popover--left-top {
-    /* tip triangle  */
-    .spectrum-Popover-tip {
-      top: var(--mod-popover-pointer-edge-spacing, var(--spectrum-popover-pointer-edge-spacing));
-      bottom: auto;
+    /* right popover position with tip at top pointing left */
+    &.spectrum-Popover--right-top,
+    &.spectrum-Popover--left-top,
+    &.spectrum-Popover--start-top,
+    &.spectrum-Popover--end-top {
+      .spectrum-Popover-tip {
+        top: var(--mod-popover-pointer-edge-spacing, var(--spectrum-popover-pointer-edge-spacing));
+        bottom: auto;
+      }
     }
-  }
 
-  /* left popover position with tip at bottom pointing right */
-  &.spectrum-Popover--left-bottom {
-    /* tip triangle  */
-    .spectrum-Popover-tip {
-      top: auto;
-      bottom: var(--mod-popover-pointer-edge-spacing, var(--spectrum-popover-pointer-edge-spacing));
+    /* right popover position with tip at bottom pointing left */
+    &.spectrum-Popover--right-bottom,
+    &.spectrum-Popover--left-bottom,
+    &.spectrum-Popover--start-bottom,
+    &.spectrum-Popover--end-bottom {
+      .spectrum-Popover-tip {
+        top: auto;
+        bottom: var(--mod-popover-pointer-edge-spacing, var(--spectrum-popover-pointer-edge-spacing));
+      }
     }
   }
 
@@ -368,45 +335,14 @@ governing permissions and limitations under the License.
   &.spectrum-Popover--start,
   &.spectrum-Popover--start-top,
   &.spectrum-Popover--start-bottom {
-    /* tip triangle  */
-    .spectrum-Popover-tip,
-    .spectrum-Popover-tip::after {
-      /* swap height and width for vertical triangle */
-      width: var(--mod-popover-pointer-height, var(--spectrum-popover-pointer-height));
-      height: var(--mod-popover-pointer-width, var(--spectrum-popover-pointer-width));
-      top: 0;
-      bottom: 0;
+    .spectrum-Popover-tip {
       margin-inline-start: 100%;
-      clip-path: polygon(0 0, 100% 50%, 0 100%);
+      /* flip tip to point right */
+      transform: scaleX(-1);
 
-      /* right to left read direction */
       [dir="rtl"] & {
-        clip-path: polygon(100% 0, 0 50%, 100% 100%);
+        transform: none;
       }
-    }
-
-    /* after element is the triangle fill with offset to show the border */
-    .spectrum-Popover-tip::after {
-      /* offset fill up by 150% of border width - percentage matches 2:1 triangle ratio */
-      margin-inline-start: calc(var(--mod-popover-border-width, var(--spectrum-popover-border-width)) * -1.5);
-    }
-  }
-
-  /* logical property - start popover position with top tip pointing toward end  */
-  &.spectrum-Popover--start-top {
-    /* tip triangle  */
-    .spectrum-Popover-tip {
-      top: var(--mod-popover-pointer-edge-spacing, var(--spectrum-popover-pointer-edge-spacing));
-      bottom: auto;
-    }
-  }
-
-  /* logical property - start popover position with bottom tip pointing toward end  */
-  &.spectrum-Popover--start-bottom {
-    /* tip triangle  */
-    .spectrum-Popover-tip {
-      top: auto;
-      bottom: var(--mod-popover-pointer-edge-spacing, var(--spectrum-popover-pointer-edge-spacing));
     }
   }
 
@@ -415,44 +351,13 @@ governing permissions and limitations under the License.
   &.spectrum-Popover--end-top,
   &.spectrum-Popover--end-bottom {
     /* tip triangle  */
-    .spectrum-Popover-tip,
-    .spectrum-Popover-tip::after {
-      /* swap height and width for vertical triangle */
-      width: var(--mod-popover-pointer-height, var(--spectrum-popover-pointer-height));
-      height: var(--mod-popover-pointer-width, var(--spectrum-popover-pointer-width));
-      top: 0;
-      bottom: 0;
+    .spectrum-Popover-tip {
       margin-inline-end: 100%;
-      clip-path: polygon(100% 0, 0 50%, 100% 100%);
 
-      /* right to left read direction */
       [dir="rtl"] & {
-        clip-path: polygon(0 0, 100% 50%, 0 100%);
+        /* flip tip to point right */
+        transform: scaleX(-1);
       }
-    }
-
-    /* after element is the triangle fill with offset to show the border */
-    .spectrum-Popover-tip::after {
-      /* offset fill up by 150% of border width - percentage matches 2:1 triangle ratio */
-      margin-inline-end: calc(var(--mod-popover-border-width, var(--spectrum-popover-border-width)) * -1.5);
-    }
-  }
-
-  /* logical property - end popover position with top tip pointing toward start */
-  &.spectrum-Popover--end-top {
-    /* tip triangle  */
-    .spectrum-Popover-tip {
-      top: var(--mod-popover-pointer-edge-spacing, var(--spectrum-popover-pointer-edge-spacing));
-      bottom: auto;
-    }
-  }
-
-  /* logical property - end popover position with bottom tip pointing toward start */
-  &.spectrum-Popover--end-bottom {
-    /* tip triangle  */
-    .spectrum-Popover-tip {
-      top: auto;
-      bottom: var(--mod-popover-pointer-edge-spacing, var(--spectrum-popover-pointer-edge-spacing));
     }
   }
 }
