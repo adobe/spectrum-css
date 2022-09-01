@@ -74,25 +74,25 @@ examples:
       <div class="spectrum-Examples">
         <div class="spectrum-Examples-item">
           <h4 class="spectrum-Heading spectrum-Heading--sizeXS spectrum-Examples-itemHeading" style="margin-bottom: 16px;">Cross Offset of Tip =  50px</h4>
-            <div class="spectrum-Popover spectrum-Popover--top-start spectrum-Popover--withTip is-open" role="presentation" style="--spectrum-popover-pointer-edge-offset: 50px;">
-              <section class="spectrum-Dialog spectrum-Dialog--small" role="dialog" tabindex="-1" aria-modal="true">
-                <div class="spectrum-Dialog-grid" style="display: grid;">
-                  <h1 class="spectrum-Dialog-heading spectrum-Dialog-heading--noHeader">Popover Title</h1>
-                  <hr class="spectrum-Divider spectrum-Divider--sizeM spectrum-Divider--horizontal spectrum-Dialog-divider">
-                  <section class="spectrum-Dialog-content">Cupcake ipsum dolor sit amet jelly beans. Chocolate jelly caramels. Icing soufflé chupa chups donut cheesecake. Jelly-o chocolate cake sweet roll cake danish candy biscuit halvah.</section>
-                </div>
-              </section>
-              <svg class="spectrum-Popover-tip" viewBox="0 -0.5 16 9">
-                <path class="spectrum-Popover-tip-triangle" d="M-1,-1 8,8 17,-1">
-              </svg>
-            </div>
-            <div class="dummy-spacing" style="position: relative; box-sizing: border-box; height: 224px; min-width: 400px; max-width: 50%;"></div>
-
-            <div class="dummy-source" style="position: relative; display: flex; align-items: center; justify-content: center; width: 100px; height: 50px; background: #E6E6E6; border-radius: 8px; box-sizing: border-box;">
-              <span><em>Source 50x100</em></span>
-            </div>
-            <br>
+          <div class="spectrum-Popover spectrum-Popover--top-start spectrum-Popover--withTip is-open" role="presentation" style="--spectrum-popover-pointer-edge-offset: 50px;">
+            <section class="spectrum-Dialog spectrum-Dialog--small" role="dialog" tabindex="-1" aria-modal="true">
+              <div class="spectrum-Dialog-grid" style="display: grid;">
+                <h1 class="spectrum-Dialog-heading spectrum-Dialog-heading--noHeader">Popover Title</h1>
+                <hr class="spectrum-Divider spectrum-Divider--sizeM spectrum-Divider--horizontal spectrum-Dialog-divider">
+                <section class="spectrum-Dialog-content">Cupcake ipsum dolor sit amet jelly beans. Chocolate jelly caramels. Icing soufflé chupa chups donut cheesecake. Jelly-o chocolate cake sweet roll cake danish candy biscuit halvah.</section>
+              </div>
+            </section>
+            <svg class="spectrum-Popover-tip" viewBox="0 -0.5 16 9">
+              <path class="spectrum-Popover-tip-triangle" d="M-1,-1 8,8 17,-1">
+            </svg>
           </div>
+          <div class="dummy-spacing" style="position: relative; box-sizing: border-box; height: 224px; min-width: 400px; max-width: 50%;"></div>
+
+          <div class="dummy-source" style="position: relative; display: flex; align-items: center; justify-content: center; width: 100px; height: 50px; background: #E6E6E6; border-radius: 8px; box-sizing: border-box;">
+            <span><em>Source 50x100</em></span>
+          </div>
+          <br>
+        </div>
 
         <div class="spectrum-Examples-item" style="position: relative;">
           <h4 class="spectrum-Heading spectrum-Heading--sizeXS spectrum-Examples-itemHeading" style="margin-bottom: 16px;">Cross Offset of Tip = 50px</h4>
@@ -100,7 +100,7 @@ examples:
             <span><em>Source 50x100</em></span>
           </div>
 
-          <div class="spectrum-Popover  spectrum-Popover--bottom-end spectrum-Popover--withTip is-open" role="presentation" style="--spectrum-popover-pointer-edge-offset: 50px;">
+          <div class="spectrum-Popover spectrum-Popover--bottom-end spectrum-Popover--withTip is-open" role="presentation" style="--spectrum-popover-pointer-edge-offset: 50px;">
             <section class="spectrum-Dialog spectrum-Dialog--small" role="dialog" tabindex="-1" aria-modal="true">
               <div class="spectrum-Dialog-grid" style="display: grid;">
                 <h1 class="spectrum-Dialog-heading spectrum-Dialog-heading--noHeader">Popover Title</h1>
