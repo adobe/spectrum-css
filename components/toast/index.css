@@ -18,6 +18,7 @@ governing permissions and limitations under the License.
 
   --spectrum-toast-font-size: var(--spectrum-font-size-100);
   --spectrum-toast-corner-radius: var(--spectrum-corner-radius-100);
+  --spectrum-toast-block-size: var(--spectrum-toast-height);
   --spectrum-toast-border-width: var(--spectrum-border-width-100);
 
   --spectrum-toast-line-height: var(--spectrum-line-height-100);
@@ -36,9 +37,7 @@ governing permissions and limitations under the License.
   --spectrum-toast-spacing-top-edge-to-icon: var(--spectrum-toast-top-to-workflow-icon);
 
   --spectrum-toast-spacing-text-to-action-button-horizontal: var(--spectrum-spacing-300);
-
   --spectrum-toast-spacing-close-button: var(--spectrum-spacing-100);
-  --spectrum-toast-spacing-edge-to-text-to-action-button-vertical: var(--spectrum-spacing-100);
 
   /* Color */
 
@@ -61,6 +60,7 @@ governing permissions and limitations under the License.
   display: inline-flex;
   flex-direction: row;
   align-items: stretch;
+  min-block-size: var(--spectrum-toast-block-size);
 
   border: var(--mod-toast-border-width, var(--spectrum-toast-border-width)) solid var(--highcontrast-toast-border-color, transparent);
   border-radius: var(--mod-toast-corner-radius, var(--spectrum-toast-corner-radius));
@@ -125,8 +125,8 @@ governing permissions and limitations under the License.
   display: inline-block;
   box-sizing: border-box;
 
-  padding-block-start: var(--mod-toast-spacing-edge-to-text-to-action-button-vertical, var(--spectrum-toast-spacing-edge-to-text-to-action-button-vertical));
-  padding-block-end: var(--mod-toast-spacing-edge-to-text-to-action-button-vertical, var(--spectrum-toast-spacing-edge-to-text-to-action-button-vertical));
+  padding-block-start: calc(var(--mod-toast-top-to-text, var(--spectrum-toast-top-to-text)) - var(--mod-spacing-100, var(--spectrum-spacing-100)));
+  padding-block-end: calc(var(--mod-toast-bottom-to-text, var(--spectrum-toast-bottom-to-text)) - var(--mod-spacing-100, var(--spectrum-spacing-100)));
 
   padding-inline-end: var(--mod-toast-spacing-text-to-action-button-horizontal, var(--spectrum-toast-spacing-text-to-action-button-horizontal));
   padding-inline-start: 0;
@@ -168,8 +168,8 @@ governing permissions and limitations under the License.
   flex: 1 1 auto;
   align-self: center;
 
-  padding-block-start: var(--mod-toast-spacing-edge-to-text-to-action-button-vertical, var(--spectrum-toast-spacing-edge-to-text-to-action-button-vertical));
-  padding-block-end: var(--mod-toast-spacing-edge-to-text-to-action-button-vertical, var(--spectrum-toast-spacing-edge-to-text-to-action-button-vertical));
+  padding-block-start: var(--mod-spacing-100, var(--spectrum-spacing-100));
+  padding-block-end: var(--mod-spacing-100, var(--spectrum-spacing-100));
 
   .spectrum-Button {
     margin-inline-end: var(--mod-toast-spacing-text-and-action-button-to-divider, var(--spectrum-toast-spacing-text-and-action-button-to-divider));
