@@ -171,6 +171,7 @@ governing permissions and limitations under the License.
 }
 
 /* HAS TIP - popover with triangle pointer */
+/* default, top, and bottom position tip */
 .spectrum-Popover--withTip {
   &.spectrum-Popover,
   &.spectrum-Popover--top,
@@ -191,6 +192,8 @@ governing permissions and limitations under the License.
       left: 0;
       right: 0;
       margin: auto;
+      /* https://stackoverflow.com/questions/44170229/how-to-prevent-half-pixel-svg-shift-on-high-pixel-ratio-devices-retina */
+      transform: translate(0, 0);
     }
   }
 
@@ -294,6 +297,8 @@ governing permissions and limitations under the License.
       .spectrum-Popover-tip {
         right: 100%;
         left: auto;
+        /* flip tip to point left */
+        transform: scaleX(-1);
       }
     }
 
@@ -303,8 +308,6 @@ governing permissions and limitations under the License.
     .spectrum-Popover-tip {
       left: 100%;
       right: auto;
-      /* flip tip to point right */
-      transform: scaleX(-1);
     }
   }
 
@@ -337,11 +340,11 @@ governing permissions and limitations under the License.
   &.spectrum-Popover--start-bottom {
     .spectrum-Popover-tip {
       margin-inline-start: 100%;
-      /* flip tip to point right */
-      transform: scaleX(-1);
 
       [dir="rtl"] & {
         transform: none;
+        /* flip tip to point left */
+        transform: scaleX(-1);
       }
     }
   }
@@ -353,10 +356,12 @@ governing permissions and limitations under the License.
     /* tip triangle  */
     .spectrum-Popover-tip {
       margin-inline-end: 100%;
+      /* flip tip to point right */
+      transform: scaleX(-1);
 
       [dir="rtl"] & {
         /* flip tip to point right */
-        transform: scaleX(-1);
+        transform: scaleX(1);
       }
     }
   }
