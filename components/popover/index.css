@@ -43,7 +43,7 @@ governing permissions and limitations under the License.
 /* windows high contrast mode */
 @media (forced-colors: active) {
   .spectrum-Popover {
-    --spectrum-popover-border-color: CanvasText;
+    --highcontrast-popover-border-color: CanvasText;
   }
 }
 
@@ -62,7 +62,7 @@ governing permissions and limitations under the License.
 
   border-style: solid;
   border-radius: var(--mod-popover-corner-radius, var(--spectrum-popover-corner-radius));
-  border-color: var(--mod-popover-border-color, var(--spectrum-popover-border-color));
+  border-color: var(--highcontrast-popover-border-color, var(--mod-popover-border-color, var(--spectrum-popover-border-color)));
   border-width: var(--mod-popover-border-width, var(--spectrum-popover-border-width));
 
   background-color: var(--mod-popover-background-color, var(--spectrum-popover-background-color));
