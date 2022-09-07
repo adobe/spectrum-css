@@ -56,6 +56,19 @@ governing permissions and limitations under the License.
   --spectrum-actionbar-shadow-color : var(--mod-drop-shadow-color, var(--spectrum-drop-shadow-color));
 }
 
+/* windows high contrast mode */
+@media (forced-colors: active) {
+  .spectrum-ActionBar {
+    --highcontrast-actionbar-popover-border-color: CanvasText;
+  }
+
+  .spectrum-ActionBar--emphasized {
+    .spectrum-ActionBar-popover {
+      --highcontrast-actionbar-popover-border-color: CanvasText;
+    }
+  }
+}
+
 /* ActionBar is outer wrapper with nested popover component within */
 .spectrum-ActionBar {
   margin-block-end: var(--mod-actionbar-spacing-outter-edge, var(--spectrum-actionbar-spacing-outter-edge));
@@ -89,7 +102,7 @@ governing permissions and limitations under the License.
     position: relative;
 
     border-radius: var(--mod-actionbar-corner-radius, var(--spectrum-actionbar-corner-radius));
-    border-color: var(--mod-actionbar-popover-border-color, var(--spectrum-actionbar-popover-border-color));
+    border-color: var(--highcontrast-actionbar-popover-border-color, var(--mod-actionbar-popover-border-color, var(--spectrum-actionbar-popover-border-color)));
     background-color: var(--mod-actionbar-popover-background-color, var(--spectrum-actionbar-popover-background-color));
 
     filter: drop-shadow(var(--mod-actionbar-shadow-horizontal, var(--spectrum-actionbar-shadow-horizontal)) var(--mod-actionbar-shadow-vertical, var(--spectrum-actionbar-shadow-vertical)) var(--mod-actionbar-shadow-blur, var(--spectrum-actionbar-shadow-blur)) var(--mod-actionbar-shadow-color, var(--spectrum-actionbar-shadow-color)));
@@ -154,7 +167,8 @@ governing permissions and limitations under the License.
   .spectrum-ActionBar-popover {
     filter: none;
     background-color: var(--mod-actionbar-emphasized-background-color, var(--spectrum-actionbar-emphasized-background-color));
-    border: none;
+    /* border transparent instead of none so WHCM will have visible border */
+    border-color: transparent;
   }
 
   /* ensure text is legible on emphasized background */
