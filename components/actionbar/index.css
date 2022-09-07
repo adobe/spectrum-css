@@ -62,6 +62,7 @@ governing permissions and limitations under the License.
 
   /* Account for fixed width */
   box-sizing: border-box;
+
   /* Take up no space when not open */
   block-size: 0;
 
@@ -78,8 +79,7 @@ governing permissions and limitations under the License.
   pointer-events: none;
 
   &.is-open {
-    /* add bottom padding to height to allow space for popover and bottom padding */
-    block-size: calc(var(--spectrum-actionbar-height) + var(--spectrum-actionbar-spacing-outter-edge)); /* 64px */
+    block-size: var(--spectrum-actionbar-height); /* 56px / 48px */
     opacity: 1;
   }
 
@@ -141,12 +141,9 @@ governing permissions and limitations under the License.
   /* Let clicks do their thing */
   pointer-events: auto;
 
-  /* TODO - confirm new nesting on popover is copacetic */
-  /* popover-content controls inner layout */
-  .spectrum-Popover-content {
-    display: flex;
-    flex-direction: row;
-  }
+  /* inner layout of content items */
+  display: flex;
+  flex-direction: row;
 }
 
 .spectrum-ActionBar--emphasized {
