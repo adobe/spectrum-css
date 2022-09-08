@@ -198,6 +198,281 @@ examples:
           </div>
         </div>
       </div>
+  - id: with-disabled-items
+    name: With disabled item(s)
+    markup: |
+      <div class="spectrum-Examples">
+        <div class="spectrum-Examples-item">
+          <h4 class="spectrum-Heading spectrum-Heading--sizeXS spectrum-Examples-itemHeading">Menu with icons</h4>
+          <div class="spectrum-Examples-itemGroup">
+            <ul class="spectrum-Menu spectrum-Menu--sizeM" role="menu">
+              <li class="spectrum-Menu-item" role="menuitem" tabindex="0">
+                <svg class="spectrum-Icon spectrum-Icon--sizeM spectrum-Menu-itemIcon" focusable="false" aria-hidden="true" aria-label="Cut Icon">
+                  <use xlink:href="#spectrum-icon-18-Cut"></use>
+                </svg>
+                <span class="spectrum-Menu-itemLabel">Cut</span>
+              </li>
+              <li class="spectrum-Menu-item" role="menuitem" tabindex="0">
+                <svg class="spectrum-Icon spectrum-Icon--sizeM spectrum-Menu-itemIcon" focusable="false" aria-hidden="true" aria-label="Copy Icon">
+                  <use xlink:href="#spectrum-icon-18-Copy"></use>
+                </svg>
+                <span class="spectrum-Menu-itemLabel">Copy</span>
+              </li>
+              <li class="spectrum-Menu-item is-disabled" role="menuitem" aria-disabled="true">
+                <svg class="spectrum-Icon spectrum-Icon--sizeM spectrum-Menu-itemIcon" focusable="false" aria-hidden="true" aria-label="Paste Icon">
+                  <use xlink:href="#spectrum-icon-18-Paste"></use>
+                </svg>
+                <span class="spectrum-Menu-itemLabel">Paste</span>
+              </li>
+            </ul>
+          </div>
+        </div>
+        <div class="spectrum-Examples-item">
+          <h4 class="spectrum-Heading spectrum-Heading--sizeXS spectrum-Examples-itemHeading">Menu with descriptions</h4>
+          <div class="spectrum-Examples-itemGroup">
+            <ul class="spectrum-Menu spectrum-Menu--sizeM" role="menu">
+              <li class="spectrum-Menu-item" role="menuitem" tabindex="0">
+                <span class="spectrum-Menu-itemLabel">Quick export</span>
+                <span class="spectrum-Menu-itemDescription">Share a snapshot</span>
+              </li>
+              <li class="spectrum-Menu-item" role="menuitem" tabindex="0">
+                <span class="spectrum-Menu-itemLabel">Open a copy</span>
+                <span class="spectrum-Menu-itemDescription">Illustrator for iPad</span>
+              </li>
+              <li class="spectrum-Menu-item is-disabled" role="menuitem" aria-disabled="true">
+                <span class="spectrum-Menu-itemLabel">Share link</span>
+                <span class="spectrum-Menu-itemDescription">Enable comments and download</span>
+              </li>
+            </ul>
+          </div>
+        </div>
+        <div class="spectrum-Examples-item">
+          <h4 class="spectrum-Heading spectrum-Heading--sizeXS spectrum-Examples-itemHeading">Menu with icons & descriptions</h4>
+          <div class="spectrum-Examples-itemGroup">
+            <ul class="spectrum-Menu spectrum-Menu--sizeM" role="menu">
+              <li class="spectrum-Menu-item" role="menuitem" tabindex="0">
+                <svg class="spectrum-Icon spectrum-Icon--sizeM spectrum-Menu-itemIcon" focusable="false" aria-hidden="true" aria-label="Export Icon">
+                  <use xlink:href="#spectrum-icon-18-Export"></use>
+                </svg>
+                <span class="spectrum-Menu-itemLabel">Quick export</span>
+                <span class="spectrum-Menu-itemDescription">Share a snapshot</span>
+              </li>
+              <li class="spectrum-Menu-item" role="menuitem" tabindex="0">
+                <svg class="spectrum-Icon spectrum-Icon--sizeM spectrum-Menu-itemIcon" focusable="false" aria-hidden="true" aria-label="Folder Open Icon">
+                  <use xlink:href="#spectrum-icon-18-FolderOpen"></use>
+                </svg>
+                <span class="spectrum-Menu-itemLabel">Open a copy</span>
+                <span class="spectrum-Menu-itemDescription">Illustrator for iPad</span>
+              </li>
+              <li class="spectrum-Menu-item is-disabled" role="menuitem" aria-disabled="true">
+                <svg class="spectrum-Icon spectrum-Icon--sizeM spectrum-Menu-itemIcon" focusable="false" aria-hidden="true" aria-label="Share Icon">
+                  <use xlink:href="#spectrum-icon-18-Share"></use>
+                </svg>
+                <span class="spectrum-Menu-itemLabel">Share link</span>
+                <span class="spectrum-Menu-itemDescription">Enable comments and download</span>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+  - id: sizing-descriptions
+    name: Sizing with descriptions
+    markup: |
+      <div class="spectrum-Examples">
+        <div class="spectrum-Examples-item">
+          <h4 class="spectrum-Heading spectrum-Heading--sizeXS spectrum-Examples-itemHeading">S</h4>
+          <div class="spectrum-Examples-itemGroup">
+            <ul class="spectrum-Menu spectrum-Menu--sizeS" role="menu">
+              <li class="spectrum-Menu-item" role="menuitem" tabindex="0">
+                <span class="spectrum-Menu-itemLabel">Quick export</span>
+                <span class="spectrum-Menu-itemDescription">Share a snapshot</span>
+              </li>
+              <li class="spectrum-Menu-item" role="menuitem" tabindex="0">
+                <span class="spectrum-Menu-itemLabel">Open a copy</span>
+                <span class="spectrum-Menu-itemDescription">Illustrator for iPad</span>
+              </li>
+              <li class="spectrum-Menu-item" role="menuitem" tabindex="0">
+                <span class="spectrum-Menu-itemLabel">Share link</span>
+                <span class="spectrum-Menu-itemDescription">Enable comments and download</span>
+              </li>
+            </ul>
+          </div>
+        </div>
+        <div class="spectrum-Examples-item">
+          <h4 class="spectrum-Heading spectrum-Heading--sizeXS spectrum-Examples-itemHeading">M</h4>
+          <div class="spectrum-Examples-itemGroup">
+            <ul class="spectrum-Menu spectrum-Menu--sizeM" role="menu">
+              <li class="spectrum-Menu-item" role="menuitem" tabindex="0">
+                <span class="spectrum-Menu-itemLabel">Quick export</span>
+                <span class="spectrum-Menu-itemDescription">Share a snapshot</span>
+              </li>
+              <li class="spectrum-Menu-item" role="menuitem" tabindex="0">
+                <span class="spectrum-Menu-itemLabel">Open a copy</span>
+                <span class="spectrum-Menu-itemDescription">Illustrator for iPad</span>
+              </li>
+              <li class="spectrum-Menu-item" role="menuitem" tabindex="0">
+                <span class="spectrum-Menu-itemLabel">Share link</span>
+                <span class="spectrum-Menu-itemDescription">Enable comments and download</span>
+              </li>
+            </ul>
+          </div>
+        </div>
+        <div class="spectrum-Examples-item">
+          <h4 class="spectrum-Heading spectrum-Heading--sizeXS spectrum-Examples-itemHeading">L</h4>
+          <div class="spectrum-Examples-itemGroup">
+            <ul class="spectrum-Menu spectrum-Menu--sizeL" role="menu">
+              <li class="spectrum-Menu-item" role="menuitem" tabindex="0">
+                <span class="spectrum-Menu-itemLabel">Quick export</span>
+                <span class="spectrum-Menu-itemDescription">Share a snapshot</span>
+              </li>
+              <li class="spectrum-Menu-item" role="menuitem" tabindex="0">
+                <span class="spectrum-Menu-itemLabel">Open a copy</span>
+                <span class="spectrum-Menu-itemDescription">Illustrator for iPad</span>
+              </li>
+              <li class="spectrum-Menu-item" role="menuitem" tabindex="0">
+                <span class="spectrum-Menu-itemLabel">Share link</span>
+                <span class="spectrum-Menu-itemDescription">Enable comments and download</span>
+              </li>
+            </ul>
+          </div>
+        </div>
+        <div class="spectrum-Examples-item">
+          <h4 class="spectrum-Heading spectrum-Heading--sizeXS spectrum-Examples-itemHeading">XL</h4>
+          <div class="spectrum-Examples-itemGroup">
+            <ul class="spectrum-Menu spectrum-Menu--sizeXL" role="menu">
+              <li class="spectrum-Menu-item" role="menuitem" tabindex="0">
+                <span class="spectrum-Menu-itemLabel">Quick export</span>
+                <span class="spectrum-Menu-itemDescription">Share a snapshot</span>
+              </li>
+              <li class="spectrum-Menu-item" role="menuitem" tabindex="0">
+                <span class="spectrum-Menu-itemLabel">Open a copy</span>
+                <span class="spectrum-Menu-itemDescription">Illustrator for iPad</span>
+              </li>
+              <li class="spectrum-Menu-item" role="menuitem" tabindex="0">
+                <span class="spectrum-Menu-itemLabel">Share link</span>
+                <span class="spectrum-Menu-itemDescription">Enable comments and download</span>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+  - id: sizing-descriptions-icons
+    name: Sizing with descriptions and icons
+    markup: |
+      <div class="spectrum-Examples">
+        <div class="spectrum-Examples-item">
+          <h4 class="spectrum-Heading spectrum-Heading--sizeXS spectrum-Examples-itemHeading">S</h4>
+          <div class="spectrum-Examples-itemGroup">
+            <ul class="spectrum-Menu spectrum-Menu--sizeS" role="menu">
+              <li class="spectrum-Menu-item" role="menuitem" tabindex="0">
+                <svg class="spectrum-Icon spectrum-Icon--sizeS spectrum-Menu-itemIcon" focusable="false" aria-hidden="true" aria-label="Export Icon">
+                  <use xlink:href="#spectrum-icon-18-Export"></use>
+                </svg>
+                <span class="spectrum-Menu-itemLabel">Quick export</span>
+                <span class="spectrum-Menu-itemDescription">Share a snapshot</span>
+              </li>
+              <li class="spectrum-Menu-item" role="menuitem" tabindex="0">
+                <svg class="spectrum-Icon spectrum-Icon--sizeS spectrum-Menu-itemIcon" focusable="false" aria-hidden="true" aria-label="Folder Open Icon">
+                  <use xlink:href="#spectrum-icon-18-FolderOpen"></use>
+                </svg>
+                <span class="spectrum-Menu-itemLabel">Open a copy</span>
+                <span class="spectrum-Menu-itemDescription">Illustrator for iPad</span>
+              </li>
+              <li class="spectrum-Menu-item" role="menuitem" tabindex="0">
+                <svg class="spectrum-Icon spectrum-Icon--sizeS spectrum-Menu-itemIcon" focusable="false" aria-hidden="true" aria-label="Share Icon">
+                  <use xlink:href="#spectrum-icon-18-Share"></use>
+                </svg>
+                <span class="spectrum-Menu-itemLabel">Share link</span>
+                <span class="spectrum-Menu-itemDescription">Enable comments and download</span>
+              </li>
+            </ul>
+          </div>
+        </div>
+        <div class="spectrum-Examples-item">
+          <h4 class="spectrum-Heading spectrum-Heading--sizeXS spectrum-Examples-itemHeading">M</h4>
+          <div class="spectrum-Examples-itemGroup">
+            <ul class="spectrum-Menu spectrum-Menu--sizeM" role="menu">
+              <li class="spectrum-Menu-item" role="menuitem" tabindex="0">
+                <svg class="spectrum-Icon spectrum-Icon--sizeM spectrum-Menu-itemIcon" focusable="false" aria-hidden="true" aria-label="Export Icon">
+                  <use xlink:href="#spectrum-icon-18-Export"></use>
+                </svg>
+                <span class="spectrum-Menu-itemLabel">Quick export</span>
+                <span class="spectrum-Menu-itemDescription">Share a snapshot</span>
+              </li>
+              <li class="spectrum-Menu-item" role="menuitem" tabindex="0">
+                <svg class="spectrum-Icon spectrum-Icon--sizeM spectrum-Menu-itemIcon" focusable="false" aria-hidden="true" aria-label="Folder Open Icon">
+                  <use xlink:href="#spectrum-icon-18-FolderOpen"></use>
+                </svg>
+                <span class="spectrum-Menu-itemLabel">Open a copy</span>
+                <span class="spectrum-Menu-itemDescription">Illustrator for iPad</span>
+              </li>
+              <li class="spectrum-Menu-item" role="menuitem" tabindex="0">
+                <svg class="spectrum-Icon spectrum-Icon--sizeM spectrum-Menu-itemIcon" focusable="false" aria-hidden="true" aria-label="Share Icon">
+                  <use xlink:href="#spectrum-icon-18-Share"></use>
+                </svg>
+                <span class="spectrum-Menu-itemLabel">Share link</span>
+                <span class="spectrum-Menu-itemDescription">Enable comments and download</span>
+              </li>
+            </ul>
+          </div>
+        </div>
+        <div class="spectrum-Examples-item">
+          <h4 class="spectrum-Heading spectrum-Heading--sizeXS spectrum-Examples-itemHeading">L</h4>
+          <div class="spectrum-Examples-itemGroup">
+            <ul class="spectrum-Menu spectrum-Menu--sizeL" role="menu">
+              <li class="spectrum-Menu-item" role="menuitem" tabindex="0">
+                <svg class="spectrum-Icon spectrum-Icon--sizeL spectrum-Menu-itemIcon" focusable="false" aria-hidden="true" aria-label="Export Icon">
+                  <use xlink:href="#spectrum-icon-18-Export"></use>
+                </svg>
+                <span class="spectrum-Menu-itemLabel">Quick export</span>
+                <span class="spectrum-Menu-itemDescription">Share a snapshot</span>
+              </li>
+              <li class="spectrum-Menu-item" role="menuitem" tabindex="0">
+                <svg class="spectrum-Icon spectrum-Icon--sizeL spectrum-Menu-itemIcon" focusable="false" aria-hidden="true" aria-label="Folder Open Icon">
+                  <use xlink:href="#spectrum-icon-18-FolderOpen"></use>
+                </svg>
+                <span class="spectrum-Menu-itemLabel">Open a copy</span>
+                <span class="spectrum-Menu-itemDescription">Illustrator for iPad</span>
+              </li>
+              <li class="spectrum-Menu-item" role="menuitem" tabindex="0">
+                <svg class="spectrum-Icon spectrum-Icon--sizeL spectrum-Menu-itemIcon" focusable="false" aria-hidden="true" aria-label="Share Icon">
+                  <use xlink:href="#spectrum-icon-18-Share"></use>
+                </svg>
+                <span class="spectrum-Menu-itemLabel">Share link</span>
+                <span class="spectrum-Menu-itemDescription">Enable comments and download</span>
+              </li>
+            </ul>
+          </div>
+        </div>
+        <div class="spectrum-Examples-item">
+          <h4 class="spectrum-Heading spectrum-Heading--sizeXS spectrum-Examples-itemHeading">XL</h4>
+          <div class="spectrum-Examples-itemGroup">
+            <ul class="spectrum-Menu spectrum-Menu--sizeXL" role="menu">
+              <li class="spectrum-Menu-item" role="menuitem" tabindex="0">
+                <svg class="spectrum-Icon spectrum-Icon--sizeXL spectrum-Menu-itemIcon" focusable="false" aria-hidden="true" aria-label="Export Icon">
+                  <use xlink:href="#spectrum-icon-18-Export"></use>
+                </svg>
+                <span class="spectrum-Menu-itemLabel">Quick export</span>
+                <span class="spectrum-Menu-itemDescription">Share a snapshot</span>
+              </li>
+              <li class="spectrum-Menu-item" role="menuitem" tabindex="0">
+                <svg class="spectrum-Icon spectrum-Icon--sizeXL spectrum-Menu-itemIcon" focusable="false" aria-hidden="true" aria-label="Folder Open Icon">
+                  <use xlink:href="#spectrum-icon-18-FolderOpen"></use>
+                </svg>
+                <span class="spectrum-Menu-itemLabel">Open a copy</span>
+                <span class="spectrum-Menu-itemDescription">Illustrator for iPad</span>
+              </li>
+              <li class="spectrum-Menu-item" role="menuitem" tabindex="0">
+                <svg class="spectrum-Icon spectrum-Icon--sizeXL spectrum-Menu-itemIcon" focusable="false" aria-hidden="true" aria-label="Share Icon">
+                  <use xlink:href="#spectrum-icon-18-Share"></use>
+                </svg>
+                <span class="spectrum-Menu-itemLabel">Share link</span>
+                <span class="spectrum-Menu-itemDescription">Enable comments and download</span>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
   - id: collapsible
     name: Collapsible
     markup: |
@@ -206,9 +481,7 @@ examples:
           <h4>CONTAINER PRESETS</h4>
           <ul class="spectrum-Menu spectrum-Menu--sizeM" role="menu">
             <li class="spectrum-Menu-item spectrum-Menu-item--collapsible" role="menuitem" tabindex="0">
-              <button type="button" id="spectrum-menu-item-0-label" aria-controls="spectrum-menu-item-0-submenu" aria-expanded="true">
-                <span class="spectrum-Menu-itemLabel">Web Design</span>
-              </button>
+              <span class="spectrum-Menu-itemLabel">Web Design</span>
               <ul id="spectrum-menu-item-0-submenu" class="spectrum-Menu spectrum-Menu--sizeM is-open" aria-labelledby="spectrum-menu-item-0-label" role="menu">
                 <li class="spectrum-Menu-item" role="menuitem" tabindex="0">
                   <span class="spectrum-Menu-itemLabel">Web Large</span>
@@ -233,9 +506,7 @@ examples:
               </ul>
             </li>
             <li class="spectrum-Menu-item spectrum-Menu-item--collapsible" role="menuitem" tabindex="0">
-              <button type="button" id="spectrum-menu-item-1-label" aria-controls="spectrum-menu-item-1-submenu" aria-expanded="true">
-                <span class="spectrum-Menu-itemLabel">Mobile</span>
-              </button>
+              <span class="spectrum-Menu-itemLabel">Mobile</span>
               <ul id="spectrum-menu-item-1-submenu" class="spectrum-Menu spectrum-Menu--sizeM" aria-labelledby="spectrum-menu-item-1-label" role="menu">
                 <li class="spectrum-Menu-item" role="menuitem" tabindex="0">
                   <span class="spectrum-Menu-itemLabel">Mobile Large</span>
@@ -282,49 +553,6 @@ examples:
                   <span class="spectrum-Menu-itemLabel">Example text</span>
                 </li>
               </ul>
-            </li>
-          </ul>
-        </div>
-      </div>
-
-  - id: descriptions
-    name: With descriptions
-    markup: |
-      <div class="spectrum-Examples">
-        <div class="spectrum-Examples-item">
-          <ul class="spectrum-Menu spectrum-Menu--sizeM" role="menu">
-            <li class="spectrum-Menu-item" role="menuitem" tabindex="0">
-              <span class="spectrum-Menu-itemLabel">Quick export</span>
-              <span class="spectrum-Menu-itemDescription">Share a snapshot</span>
-            </li>
-            <li class="spectrum-Menu-item" role="menuitem" tabindex="0">
-              <span class="spectrum-Menu-itemLabel">Open a copy</span>
-              <span class="spectrum-Menu-itemDescription">Illustrator for iPad</span>
-            </li>
-            <li class="spectrum-Menu-item" role="menuitem" tabindex="0">
-              <span class="spectrum-Menu-itemLabel">Share link</span>
-              <span class="spectrum-Menu-itemDescription">Enable comments and download</span>
-            </li>
-          </ul>
-        </div>
-      </div>
-  - id: sizing-descriptions
-    name: Sizing with descriptions
-    markup: |
-      <div class="spectrum-Examples">
-        <div class="spectrum-Examples-item">
-          <ul class="spectrum-Menu spectrum-Menu--sizeM" role="menu">
-            <li class="spectrum-Menu-item" role="menuitem" tabindex="0">
-              <span class="spectrum-Menu-itemLabel">Quick export</span>
-              <span class="spectrum-Menu-itemDescription">Share a snapshot</span>
-            </li>
-            <li class="spectrum-Menu-item" role="menuitem" tabindex="0">
-              <span class="spectrum-Menu-itemLabel">Open a copy</span>
-              <span class="spectrum-Menu-itemDescription">Illustrator for iPad</span>
-            </li>
-            <li class="spectrum-Menu-item" role="menuitem" tabindex="0">
-              <span class="spectrum-Menu-itemLabel">Share link</span>
-              <span class="spectrum-Menu-itemDescription">Enable comments and download</span>
             </li>
           </ul>
         </div>
@@ -430,6 +658,27 @@ examples:
                   </svg>
                 </li>
               </ul>
+            </li>
+          </ul>
+        </div>
+      </div>
+  - id: single-selection
+    name: Single Selection
+    markup: |
+      <div class="spectrum-Examples">
+        <div class="spectrum-Examples-item">
+          <ul class="spectrum-Menu spectrum-Menu--sizeM is-selectable" role="menu">
+            <li class="spectrum-Menu-item is-selected" role="menuitem" tabindex="0">
+              <span class="spectrum-Menu-itemLabel">Marquee</span>
+              <svg class="spectrum-Icon spectrum-Icon--sizeM spectrum-UIIcon-Checkmark100 spectrum-Menu-itemIcon spectrum-Menu-checkmark" focusable="false" aria-hidden="true">
+                <use xlink:href="#spectrum-css-icon-Checkmark100" />
+              </svg>
+            </li>
+            <li class="spectrum-Menu-item" role="menuitem" tabindex="0">
+              <span class="spectrum-Menu-itemLabel">Add</span>
+            </li>
+            <li class="spectrum-Menu-item" role="menuitem" tabindex="0">
+              <span class="spectrum-Menu-itemLabel">Subtract</span>
             </li>
           </ul>
         </div>
