@@ -10,6 +10,11 @@ OF ANY KIND, either express or implied. See the License for the specific languag
 governing permissions and limitations under the License.
 */
 
+.🤫 {
+  /* hack: make sure we don't complain about this color being undefined */
+  --spectrum-picked-color: 0;
+}
+
 /* Swatch tokens */
 .spectrum-Swatch {
   /* Static properties - no tokens */
@@ -33,7 +38,7 @@ governing permissions and limitations under the License.
   --spectrum-swatch-inner-border-color-selected: var(--spectrum-gray-50);
   --spectrum-swatch-disabled-icon-border-color: var(--spectrum-swatch-disabled-icon-border-color);
   --spectrum-swatch-disabled-icon-color: var(--spectrum-white);
-  --spectrum-swatch-fill-background-color: var(--spectrum-gray-50);
+  /*--spectrum-swatch-fill-background-color: var(--spectrum-gray-50);*/
   --spectrum-swatch-dash-icon-color: var(--spectrum-gray-800);
   --spectrum-swatch-slash-icon-color: var(--spectrum-red-900);
   --spectrum-swatch-focus-ring-color: var(--spectrum-focus-ring-color);
@@ -70,7 +75,7 @@ governing permissions and limitations under the License.
     --highcontrast-swatch-focus-ring-color: Highlight;
     --highcontrast-swatch-border-color-selected: Highlight;
     --highcontrast-swatch-border-color: ButtonText;
-    --highcontrast-swatch-fill-background-color: ButtonFace;
+    /*--highcontrast-swatch-fill-background-color: ButtonFace;*/
     --highcontrast-swatch-fill-foreground-color: ButtonText;
 
     .spectrum-Swatch-fill {
@@ -150,7 +155,7 @@ governing permissions and limitations under the License.
 
   &.is-mixedValue {
     .spectrum-Swatch-fill {
-      background: var(--highcontrast-swatch-fill-background-color, var(--mod-swatch-fill-background-color, var(--spectrum-swatch-fill-background-color)));
+      background: var(--spectrum-picked-color, transparent);
     }
 
     .spectrum-Swatch-mixedValueIcon {
@@ -162,7 +167,7 @@ governing permissions and limitations under the License.
   /* Swatch fill: Not fill with Slash */
   &.is-nothing {
     .spectrum-Swatch-fill {
-      background-color: var(--highcontrast-swatch-fill-background-color, var(--mod-swatch-fill-background-color, var(--spectrum-swatch-fill-background-color)));
+      background-color: var(--spectrum-picked-color, transparent);
 
       &:after {
         height: var(--mod-swatch-slash-thickness, var(--spectrum-swatch-slash-thickness));
@@ -277,7 +282,7 @@ governing permissions and limitations under the License.
     inset: 0;
     z-index: 0;
 
-    background-color: var(--highcontrast-swatch-fill-background-color, var(--mod-swatch-fill-background-color, var(--spectrum-swatch-fill-background-color)));
+    background-color: var(--spectrum-picked-color, transparent);
 
     /* Swatch border */
     box-shadow: inset 0 0 0 var(--mod-swatch-border-thickness, var(--spectrum-swatch-border-thickness)) var(--highcontrast-swatch-border-color, var(--mod-swatch-border-color-regular, var(--spectrum-swatch-border-color-regular)));
@@ -300,7 +305,7 @@ governing permissions and limitations under the License.
   .spectrum-Swatch-fill {
     &:before {
       box-shadow: none;
-      background-color: var(--highcontrast-swatch-fill-foreground-color, var(--mod-swatch-fill-background-color, var(--spectrum-swatch-fill-background-color)));
+      background-color: var(--highcontrast-swatch-fill-foreground-color, var(--spectrum-picked-color));
     }
   }
 }
@@ -309,7 +314,7 @@ governing permissions and limitations under the License.
   visibility: hidden;
   pointer-events: none;
 
-  color: var(--highcontrast-swatch-fill-background-color, var(--mod-swatch-fill-background-color, var(--spectrum-swatch-fill-background-color)));
+  color: var(--spectrum-picked-color, transparent);
 }
 
 .spectrum-Swatch-disabledIcon {
