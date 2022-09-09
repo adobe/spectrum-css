@@ -190,7 +190,7 @@ governing permissions and limitations under the License.
   --spectrum-menu-item-focus-indicator-width: var(--spectrum-border-width-200);
   --spectrum-menu-item-focus-indicator-color: var(--spectrum-blue-800);
   --spectrum-menu-item-focus-ring-color: var(--spectrum-blue-800);
-  --spectrum-menu-item-label-min-space-to-actions: var(--spectrum-spacing-100);
+  --spectrum-menu-item-label-to-value-area-min-spacing: var(--spectrum-spacing-100);
   --spectrum-menu-item-value-to-actions-area-spacing: var(--spectrum-spacing-100);
 
   --spectrum-menu-item-label-content-color-default: var(--spectrum-neutral-content-color-default);
@@ -351,7 +351,6 @@ governing permissions and limitations under the License.
 .spectrum-Menu-item {
   cursor: pointer;
   position: relative;
-  display: grid;
   align-items: center;
 
   box-sizing: border-box;
@@ -384,14 +383,6 @@ governing permissions and limitations under the License.
   font-style: normal; */
   text-decoration: none;
 
-  grid-template-areas:
-    "selectedArea checkmarkArea iconArea labelArea        valueArea actionsArea chevronArea"
-    ".            .             .        descriptionArea  .         .           .          "
-    ".            .             .        submenuArea      .         .           .          ";
-  
-  grid-template-columns: auto auto auto 1fr auto auto auto;
-  grid-template-rows: 1fr auto;
-
   /* .spectrum-Icon,
   .spectrum-Menu-itemIcon {
     flex-shrink: 0;
@@ -409,6 +400,32 @@ governing permissions and limitations under the License.
         var(--spectrum-alias-workflow-icon-size-m)
     );
   } */
+}
+
+.spectrum-Menu-item {
+  display: grid;
+  grid-template-areas:
+    "selectedArea chevronAreaCollapsible checkmarkArea iconArea labelArea        valueArea actionsArea chevronAreaDrillIn"
+    ".            .                      .             .        descriptionArea  .         .           .                 "
+    ".            .                      .             .        submenuArea      .         .           .                 ";
+  
+  grid-template-columns: auto auto auto auto 1fr auto auto auto;
+  grid-template-rows: 1fr auto;
+}
+
+.spectrum-Menu-item .spectrum-Menu-item {
+  display: grid;
+  grid-template-areas: "submenuItemLabelArea submenuItemValueArea";
+  grid-template-columns: auto auto;
+  grid-template-rows: 1fr auto;
+}
+
+.spectrum-Menu-item .spectrum-Menu-item .spectrum-Menu-itemLabel {
+  grid-area: submenuItemLabelArea;
+}
+
+.spectrum-Menu-item .spectrum-Menu-item .spectrum-Menu-itemValue {
+  grid-area: submenuItemValueArea;
 }
 
 /* TODO: is this needed? */
@@ -538,8 +555,16 @@ governing permissions and limitations under the License.
   grid-area: actionsArea;
 }
 
-.spectrum-Menu-itemChevron {
+.spectrum-Menu-chevron {
   grid-area: chevronArea;
+}
+
+.spectrum-Menu-item--collapsible .spectrum-Menu-chevron {
+  grid-area: chevronAreaCollapsible;
+}
+
+.spectrum-Menu-item--collapsible .spectrum-Menu-sectionHeading {
+  grid-area: labelArea;
 }
 
 .spectrum-Menu-itemDescription {
@@ -559,10 +584,11 @@ governing permissions and limitations under the License.
 }
 
 /* 
-  TODO: ask design about sizing for the checkmark -
+  TODO: ask design about sizing for the checkmark and chevron -
   temporarily using the values from pre-core tokens
 */
-.spectrum-Menu-checkmark {
+.spectrum-Menu-checkmark,
+.spectrum-Menu-chevron {
   /* 75 = global-dimension-static-size-125 = 10px */
   /* 100 = global-dimension-static-size-125 = 10px */
   /* 200 = global-dimension-static-size-150 = 12px */
@@ -580,7 +606,9 @@ governing permissions and limitations under the License.
 .spectrum-Icon ~ .spectrum-Menu-itemDescription,
 .spectrum-Menu-itemIcon ~ .spectrum-Menu-itemDescription,
 .spectrum-Menu-checkmark + .spectrum-Menu-itemIcon,
-.spectrum-Menu-checkmark + .spectrum-Icon {
+.spectrum-Menu-checkmark + .spectrum-Icon,
+.spectrum-Menu-chevron + .spectrum-Menu-itemIcon,
+.spectrum-Menu-chevron + .spectrum-Icon {
   margin-inline-start: var(--mod-menu-item-label-text-to-visual, var(--spectrum-menu-item-label-text-to-visual));
 }
 
@@ -603,6 +631,15 @@ governing permissions and limitations under the License.
     100% - var(--spectrum-listitem-texticon-ui-icon-width) -
       var(--spectrum-listitem-texticon-icon-gap)
   ); */
+}
+
+.spectrum-Menu-itemLabel + .spectrum-Menu-itemValue {
+  margin-inline-start: var(--mod-menu-item-label-to-value-area-min-spacing, var(--spectrum-menu-item-label-to-value-area-min-spacing));
+}
+
+.spectrum-Menu-itemValue {
+  margin-block-start: var(--mod-menu-item-top-edge-to-text, var(--spectrum-menu-item-top-edge-to-text));
+  justify-self: end;
 }
 
 .spectrum-Menu-itemLabel--wrapping {
@@ -659,6 +696,12 @@ governing permissions and limitations under the License.
 .spectrum-Menu-item--collapsible {
   /* collapsible sub-menus */
 
+  &.is-open {
+    .spectrum-Menu-chevron {
+      transform: rotate(90deg);
+    }
+  }
+
   .spectrum-Menu {
     display: none;
   }
@@ -666,4 +709,8 @@ governing permissions and limitations under the License.
   .spectrum-Menu.is-open {
     display: block;
   }
+}
+
+.spectrum-Menu-item--drillIn {
+  /* nested submenus that display inside a popover */
 }
