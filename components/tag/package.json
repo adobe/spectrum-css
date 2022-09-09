@@ -16,15 +16,15 @@
     "build": "gulp"
   },
   "peerDependencies": {
-    "@spectrum-css/clearbutton": "^1.2.10",
-    "@spectrum-css/vars": "^8.0.0"
+    "@spectrum-css/clearbutton": "^1.2.13",
+    "@spectrum-css/tokens": "^4.0.0"
   },
   "devDependencies": {
     "@spectrum-css/avatar": "^5.0.20",
     "@spectrum-css/clearbutton": "^1.2.13",
-    "@spectrum-css/component-builder": "^3.2.1",
     "@spectrum-css/icon": "^3.0.24",
-    "@spectrum-css/vars": "^8.0.0",
+    "@spectrum-css/component-builder-simple": "^2.0.0",
+    "@spectrum-css/tokens": "^4.0.0",
     "gulp": "^4.0.0"
   },
   "publishConfig": {
