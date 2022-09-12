@@ -1,8 +1,15 @@
 name: In-Line Alert
 SpectrumSiteSlug: https://spectrum.adobe.com/page/in-line-alert/
 examples:
+  - id: inlinealert-neutral
+    name: Neutral
+    markup: |
+      <div class="spectrum-InLineAlert">
+        <div class="spectrum-InLineAlert-header">Information in-line alert header</div>
+        <div class="spectrum-InLineAlert-content">This is an alert.</div>
+      </div>
   - id: inlinealert-info
-    name: Info
+    name: Informative
     markup: |
       <div class="spectrum-InLineAlert spectrum-InLineAlert--info">
         <svg class="spectrum-Icon spectrum-Icon--sizeM spectrum-InLineAlert-icon" focusable="false" aria-hidden="true">
@@ -11,14 +18,24 @@ examples:
         <div class="spectrum-InLineAlert-header">Information in-line alert header</div>
         <div class="spectrum-InLineAlert-content">This is an alert.</div>
       </div>
-  - id: inlinealert-success
-    name: Success
+  - id: inlinealert-positive
+    name: Positive
     markup: |
-      <div class="spectrum-InLineAlert spectrum-InLineAlert--success">
+      <div class="spectrum-InLineAlert spectrum-InLineAlert--positive">
         <svg class="spectrum-Icon spectrum-Icon--sizeM spectrum-InLineAlert-icon" focusable="false" aria-hidden="true">
           <use xlink:href="#spectrum-icon-18-CheckmarkCircle" />
         </svg>
-        <div class="spectrum-InLineAlert-header">Successful in-line alert header</div>
+        <div class="spectrum-InLineAlert-header">Positive in-line alert header</div>
+        <div class="spectrum-InLineAlert-content">This is an alert.</div>
+      </div>
+  - id: inlinealert-notice
+    name: Notice
+    markup: |
+      <div class="spectrum-InLineAlert spectrum-InLineAlert--notice">
+        <svg class="spectrum-Icon spectrum-Icon--sizeM spectrum-InLineAlert-icon" focusable="false" aria-hidden="true">
+          <use xlink:href="#spectrum-icon-18-Alert" />
+        </svg>
+        <div class="spectrum-InLineAlert-header">Notice in-line alert - Oh no</div>
         <div class="spectrum-InLineAlert-content">This is an alert.</div>
       </div>
   - id: inlinealert-negative
@@ -31,32 +48,12 @@ examples:
         <div class="spectrum-InLineAlert-header">negative in-line alert header</div>
         <div class="spectrum-InLineAlert-content">This is an alert.</div>
       </div>
-  - id: inlinealert-help
-    name: Help
-    markup: |
-      <div class="spectrum-InLineAlert spectrum-InLineAlert--help">
-        <svg class="spectrum-Icon spectrum-Icon--sizeM spectrum-InLineAlert-icon" focusable="false" aria-hidden="true">
-          <use xlink:href="#spectrum-icon-18-Help" />
-        </svg>
-        <div class="spectrum-InLineAlert-header">Information in-line alert header</div>
-        <div class="spectrum-InLineAlert-content">This is an alert.</div>
-      </div>
-  - id: inlinealert-error
-    name: Error
-    markup: |
-      <div class="spectrum-InLineAlert spectrum-InLineAlert--error">
-        <svg class="spectrum-Icon spectrum-Icon--sizeM spectrum-InLineAlert-icon" focusable="false" aria-hidden="true">
-          <use xlink:href="#spectrum-icon-18-Alert" />
-        </svg>
-        <div class="spectrum-InLineAlert-header">Error in-line alert - Oh no</div>
-        <div class="spectrum-InLineAlert-content">This is an alert.</div>
-      </div>
   - id: inlinealert-closable
     name: Closable
     dnaStatus: Contribution
     description: An in-line alert with a close button in the footer. Combine this strategy with any variant.
     markup: |
-      <div class="spectrum-InLineAlert spectrum-InLineAlert--error">
+      <div class="spectrum-InLineAlert spectrum-InLineAlert--negative">
         <svg class="spectrum-Icon spectrum-Icon--sizeM spectrum-InLineAlert-icon" focusable="false" aria-hidden="true">
           <use xlink:href="#spectrum-icon-18-Alert" />
         </svg>

@@ -11,5 +11,9 @@ governing permissions and limitations under the License.
 
 @container (--system: spectrum) {
     .spectrum-InlineAlert {
+      --spectrum-inlinealert-border-and-icon-color-info: var(--spectrum-blue-800);
+      --spectrum-inlinealert-border-and-icon-color-positive: var(--spectrum-green-800);
+      --spectrum-inlinealert-border-and-icon-color-notice: var(--spectrum-orange-600);
+      --spectrum-inlinealert-border-and-icon-color-negative: var(--spectrum-red-800);
     }
 }

@@ -10,14 +10,23 @@ OF ANY KIND, either express or implied. See the License for the specific languag
 governing permissions and limitations under the License.
 */
 
-@import "../vars/css/components/spectrum-inlinealert.css";
-
 .spectrum-InLineAlert {
-  --spectrum-inlinealert-neutral-title-height: 38px;
-  --spectrum-inlinealert-neutral-corner-radius: 4px;
+  /* Size*/
+  --spectrum-inlinealert-border-width: var(--spectrum-border-width-100);
+  --spectrum-inlinealert-border-radius: var(--spectrum-corner-radius-100);
+  --spectrum-inlinealert-icon-size: var(--spectrum-workflow-icon-size-100);
+  --spectrum-inlinealert-min-inline-size: var(--spectrum-in-line-alert-minimum-width);
+  --spectrum-inlinealert-header-min-block-size: var(--spectrum-component-height-50);
 
-  /* DNA */
-  --spectrum-inlinealert-neutral-border-width: 2px;
+  /* Spacing*/
+  --spectrum-inlinealert-spacing-edge-to-text: var(--spectrum-spacing-400);
+  --spectrum-inlinealert-spacing-header-to-icon: var(--spectrum-spacing-400);
+  --spectrum-inlinealert-spacing-header-content-button-spacing: var(--spectrum-spacing-300);
+
+  /* Color */
+  --spectrum-inlinealert-background-color: var(--spectrum-gray-50);
+  --spectrum-inlinealert-border-and-icon-color: var(--spectrum-gray-600);
+  --spectrum-inlinealert-header-and-content-color: var(--spectrum-gray-900);
 }
 
 .spectrum-InLineAlert {
@@ -25,49 +34,57 @@ governing permissions and limitations under the License.
 
   display: inline-block;
   box-sizing: border-box;
-  min-inline-size: var(--spectrum-inlinealert-neutral-min-width);
-  min-block-size: var(--spectrum-inlinealert-neutral-title-height);
+  min-inline-size: var(--spectrum-inlinealert-min-inline-size);
   margin-block: 8px;
   margin-inline: 0;
-  padding-block: var(--spectrum-inlinealert-neutral-padding-y);
-  padding-inline: var(--spectrum-inlinealert-neutral-padding-x);
+  padding-block: var(--spectrum-inlinealert-spacing-edge-to-text);
+  padding-inline: var(--spectrum-inlinealert-spacing-edge-to-text);
 
-  border-width: var(--spectrum-inlinealert-neutral-border-width);
+  border-block-width: var(--spectrum-inlinealert-border-width);
   border-style: solid;
-  border-radius: var(--spectrum-inlinealert-neutral-corner-radius);
+  border-radius: var(--spectrum-inlinealert-border-radius);
+
+  background-color: var(--spectrum-inlinealert-background-color);
+  /* default color set to body color, header element overwrites this */
+  color: var(--spectrum-inlinealert-header-and-content-color);
+  border-color: var(--spectrum-inlinealert-border-and-icon-color);
 }
 
 .spectrum-InLineAlert-icon {
   position: absolute;
   display: block;
-  inset-block-start: 20px;
-  inset-inline-end: 20px;
+  inset-block-start: var(--spectrum-inlinealert-icon-size);
+  inset-inline-end: var(--spectrum-inlinealert-icon-size);
 }
 
 .spectrum-InLineAlert-header {
   display: inline-block;
   block-size: auto;
-  min-block-size: 0;
+  min-block-size: var(--spectrum-inlinealert-header-min-block-size);
   margin: 0;
   padding: 0;
 
-  /* Leave room for the icon */
-  padding-inline-end: 30px;
+  /* Header and Icon spacing */
+  padding-inline-end: var(--spectrum-inlinealert-spacing-header-to-icon);
 
   font-size: 14px;
   font-weight: 700;
   font-style: normal;
   line-height: 14px;
   text-transform: none;
+
+  color: var(--spectrum-inlinealert-header-and-content-color);
 }
 
 .spectrum-InLineAlert-content {
   display: block;
-  margin: var(--spectrum-inlinealert-neutral-content-margin-top) 0 0 0;
+  margin: var(--spectrum-inlinealert-spacing-header-content-button-spacing) 0 0 0;
   padding: 0;
 
   font-size: 14px;
   word-wrap: break-word;
+
+  color: var(--spectrum-inlinealert-header-and-content-color);
 }
 
 .spectrum-InLineAlert-footer {
@@ -88,3 +105,37 @@ governing permissions and limitations under the License.
     margin-inline-start: 0.75rem;
   }
 }
+
+.spectrum-InLineAlert--info {
+  border-color: var(--spectrum-inlinealert-border-and-icon-color-info);
+
+  .spectrum-InLineAlert-icon {
+    color: var(--spectrum-inlinealert-border-and-icon-color-info);
+  }
+}
+
+.spectrum-InLineAlert--notice {
+  border-color: var(--spectrum-inlinealert-border-and-icon-color-notice);
+
+  .spectrum-InLineAlert-icon {
+    color: var(--spectrum-inlinealert-border-and-icon-color-notice);
+  }
+}
+
+.spectrum-InLineAlert--positive {
+  border-color: var(--spectrum-inlinealert-border-and-icon-color-positive);
+
+  .spectrum-InLineAlert-icon {
+    color: var(--spectrum-inlinealert-border-and-icon-color-positive);
+  }
+}
+
+.spectrum-InLineAlert--negative {
+  border-color: var(--spectrum-inlinealert-border-and-icon-color-negative);
+
+  .spectrum-InLineAlert-icon {
+    color: var(--spectrum-inlinealert-border-and-icon-color-negative);
+  }
+}
+
+
