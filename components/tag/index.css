@@ -32,9 +32,6 @@ governing permissions and limitations under the License.
   --spectrum-tag-icon-spacing-block-start: var(--spectrum-component-top-to-workflow-icon-100);
   --spectrum-tag-icon-spacing-block-end: var(--spectrum-component-top-to-workflow-icon-100);
 
-  /* spacing horizontal defaults if no t-shirt size or theme - set to classic medium */
-  --spectrum-tag-spacing-inline-start: var(--spectrum-component-edge-to-visual-100);
-
   /* space from label to end edge */
   --spectrum-tag-spacing-inline-end: var(--spectrum-component-edge-to-text-100);
 
@@ -47,7 +44,6 @@ governing permissions and limitations under the License.
   --spectrum-tag-clear-button-spacing-block: var(--spectrum-tag-top-to-cross-icon-medium);
   --spectrum-tag-clear-button-spacing-block: var(--spectrum-tag-top-to-cross-icon-large);
 
-
   /* avatar spacing default if no t-shirt size */
   --spectrum-tag-avatar-spacing-block-start: var(--spectrum-tag-top-to-avatar-medium);
   --spectrum-tag-avatar-spacing-block-end: var(--spectrum-tag-top-to-avatar-medium);
@@ -55,8 +51,44 @@ governing permissions and limitations under the License.
   /* label spacing default if no t-shirt size */
   --spectrum-tag-label-spacing-block: var(--spectrum-component-top-to-text-100);
 
+  /* invalid border */
+  --spectrum-tag-border-color-invalid: var(--spectrum-negative-color-900);
+  --spectrum-tag-border-color-invalid-hover: var(--spectrum-negative-color-1000);
+  --spectrum-tag-border-color-invalid-active: var(--spectrum-negative-color-1100);
+  --spectrum-tag-border-color-invalid-focus: var(--spectrum-negative-color-1000);
 
-  /* --spectrum-tag-: var(--spectrum-); */
+  /* invalid content */
+  --spectrum-tag-content-color-invalid: var(--spectrum-negative-content-color);
+  --spectrum-tag-content-color-invalid-hover: var(--spectrum-negative-content-color-hover);
+  --spectrum-tag-content-color-invalid-active: var(--spectrum-negative-content-color-down);
+  --spectrum-tag-content-color-invalid-focus: var(--spectrum-negative-content-color-key-focus);
+
+  /* invalid selected */
+  --spectrum-tag-background-color-invalid-selected: var(--spectrum-negative-background-color-default);
+  --spectrum-tag-background-color-invalid-selected-hover: var(--spectrum-negative-background-color-hover);
+  --spectrum-tag-background-color-invalid-selected-active: var(--spectrum-negative-background-color-down);
+  --spectrum-tag-background-color-invalid-selected-focus: var(--spectrum-negative-background-color-key-focus);
+
+  /* invalid text */
+  --spectrum-tag-content-color-invalid-selected: var(--spectrum-white);
+
+  /* emphasized text */
+  --spectrum-tag-content-color-emphasized: var(--spectrum-white);
+
+  /* selected text */
+  --spectrum-tag-content-color-selected: var(--spectrum-white);
+
+  /* emphasized */
+  --spectrum-tag-background-color-emphasized: var(--spectrum-accent-background-color-default);
+  --spectrum-tag-background-color-emphasized-hover: var(--spectrum-accent-background-color-hover);
+  --spectrum-tag-background-color-emphasized-active: var(--spectrum-accent-background-color-down);
+  --spectrum-tag-background-color-emphasized-focus: var(--spectrum-accent-background-color-key-focus);
+
+  /* disabled */
+  --spectrum-tag-content-color-disabled: var(--spectrum-disabled-content-color);
+
+  /* focus ring */
+  --spectrum-tag-focus-ring-color: var(--spectrum-focus-ring-color);
 }
 
 
@@ -111,28 +143,30 @@ governing permissions and limitations under the License.
 /* windows high contrast mode */
 @media (forced-colors: active) {
   .spectrum-Tag {
+    /* placeholder */
   }
 }
 
 
 
 .spectrum-Tag {
+  border-color: var(--spectrum-tag-border-color);
   border-radius: var(--spectrum-tag-corner-radius);
   border-width: var(--spectrum-tag-border-width);
+  border-style: solid;
+
+  background-color: var(--spectrum-tag-background-color);
+
   padding-inline-start: var(--spectrum-tag-spacing-inline-start);
-
-  /* space from lable text to end edge */
+  /* space from label text to end edge */
   padding-inline-end: var(--spectrum-tag-spacing-inline-end);
-
   block-size: var(--spectrum-tag-height);
-
   position: relative;
   display: inline-flex;
   /* align-items: center; */
   box-sizing: border-box;
   vertical-align: bottom;
   max-inline-size: 100%;
-  border-style: solid;
   outline: none;
   user-select: none;
 
@@ -145,8 +179,23 @@ governing permissions and limitations under the License.
     pointer-events: none;
   }
 
+  > .spectrum-Tag-label {
+    line-height: 1; /* PLACEHOLDER FOR TOKEN */
+    font-weight: normal; /* PLACEHOLDER FOR TOKEN */
+
+    flex: 1 1 auto;
+    font-size: var(--spectrum-tag-font-size);
+    cursor: default;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+
+    margin-block-start: var(--spectrum-tag-label-spacing-block);
+  }
+
   > .spectrum-Icon,
   > .spectrum-Avatar {
+    color: var(--spectrum-tag-content-color);
     margin-inline-end: var(--spectrum-tag-clear-button-spacing-inline-start);
   }
 
@@ -163,7 +212,7 @@ governing permissions and limitations under the License.
     margin-block-end: var(--spectrum-tag-avatar-spacing-block-end);
   }
 
-  /* ✖ clear button */
+  /* clear button ✖ */
   .spectrum-Tag-clearButton {
     padding-block: 0;
 
@@ -182,27 +231,166 @@ governing permissions and limitations under the License.
       width: auto;
     }
   }
+
+  &:hover {
+    border-color: var(--spectrum-tag-border-color-hover);
+    background-color: var(--spectrum-tag-background-color-hover);
+
+    > .spectrum-Tag-label,
+    > .spectrum-Icon,
+    > .spectrum-Avatar,
+    > .spectrum-Tag-clearButton {
+      color: var(--spectrum-tag-content-color-hover);
+    }
+  }
+
+  &:active {
+    border-color: var(--spectrum-tag-border-color-active);
+    background-color: var(--spectrum-tag-background-color-active);
+
+    > .spectrum-Tag-label,
+    > .spectrum-Icon,
+    > .spectrum-Avatar,
+    > .spectrum-Tag-clearButton {
+      color: var(--spectrum-tag-content-color-active);
+    }
+  }
+
+  &:focus-visible,
+  &.is-focused {
+    border-color: var(--spectrum-tag-border-color-focus);
+    background-color: var(--spectrum-tag-background-color-focus);
+
+    > .spectrum-Tag-label,
+    > .spectrum-Icon,
+    > .spectrum-Avatar,
+    > .spectrum-Tag-clearButton {
+      color: var(--spectrum-tag-content-color-focus);
+    }
+  }
+}
+
+.spectrum-Tag.is-invalid {
+  border-color: var(--spectrum-tag-border-color-invalid);
+
+  > .spectrum-Tag-label,
+  > .spectrum-Icon,
+  > .spectrum-Avatar,
+  > .spectrum-Tag-clearButton {
+    color: var(--spectrum-tag-content-color-invalid);
+  }
+
+  &:hover {
+    border-color: var(--spectrum-tag-border-color-invalid-hover);
+
+    > .spectrum-Tag-label,
+    > .spectrum-Icon,
+    > .spectrum-Avatar,
+    > .spectrum-Tag-clearButton {
+      color: var(--spectrum-tag-content-color-invalid-hover);
+    }
+  }
+
+  &:active {
+    border-color: var(--spectrum-tag-border-color-invalid-active);
+
+    > .spectrum-Tag-label,
+    > .spectrum-Icon,
+    > .spectrum-Avatar,
+    > .spectrum-Tag-clearButton {
+      color: var(--spectrum-tag-content-color-invalid-active);
+    }
+  }
+
+  &:focus-visible,
+  &.is-focused {
+    border-color: var(--spectrum-tag-border-color-invalid-focus);
+
+    > .spectrum-Tag-label,
+    > .spectrum-Icon,
+    > .spectrum-Avatar,
+    > .spectrum-Tag-clearButton {
+      color: var(--spectrum-tag-content-color-invalid-focus);
+    }
+  }
+
+  &.is-selected {
+    background-color: var(--spectrum-tag-background-color-invalid-selected);
+
+    > .spectrum-Tag-label,
+    > .spectrum-Icon,
+    > .spectrum-Avatar,
+    > .spectrum-Tag-clearButton {
+      color: var(--spectrum-tag-content-color-invalid-selected);
+    }
+
+    &:hover {
+      background-color: var(--spectrum-tag-background-color-invalid-selected-hover);
+    }
+
+    &:active {
+      background-color: var(--spectrum-tag-background-color-invalid-selected-active);
+    }
+
+    &:focus-visible,
+    &.is-focused {
+      background-color: var(--spectrum-tag-background-color-invalid-selected-focus);
+    }
+  }
 }
 
 
+/* emphasized */
+.spectrum-Tag.is-emphasized {
+  border-color: transparent;
+  background-color: var(--spectrum-tag-background-color-emphasized);
 
-.spectrum-Tag-label {
-  line-height: 1; /* PLACEHOLDER FOR TOKEN */
-  font-weight: normal; /* PLACEHOLDER FOR TOKEN */
+  > .spectrum-Tag-label,
+  > .spectrum-Icon,
+  > .spectrum-Avatar,
+  > .spectrum-Tag-clearButton {
+    color: var(--spectrum-tag-content-color-emphasized);
+  }
 
-  flex: 1 1 auto;
-  font-size: var(--spectrum-tag-font-size);
-  cursor: default;
-  overflow: hidden;
-  white-space: nowrap;
-  text-overflow: ellipsis;
+  &:hover {
+    background-color: var(--spectrum-tag-background-color-emphasized-hover);
+  }
 
-  margin-block-start: var(--spectrum-tag-label-spacing-block);
+  &:active {
+    background-color: var(--spectrum-tag-background-color-emphasized-active);
+  }
+
+  &:focus-visible,
+  &.is-focused {
+    background-color: var(--spectrum-tag-background-color-emphasized-focus);
+  }
 }
 
-
-/* focus */
+/* selected */
 .spectrum-Tag.is-selected {
+  background-color: var(--spectrum-tag-background-color-selected);
+
+  > .spectrum-Tag-label,
+  > .spectrum-Icon,
+  > .spectrum-Avatar,
+  > .spectrum-Tag-clearButton {
+    color: var(--spectrum-tag-content-color-selected);
+  }
+
+  &:hover {
+    background-color: var(--spectrum-tag-background-color-selected-hover);
+  }
+
+  &:active {
+    background-color: var(--spectrum-tag-background-color-selected-active);
+  }
+
+  &:focus-visible,
+  &.is-focused {
+    background-color: var(--spectrum-tag-background-color-selected-focus);
+  }
+
+
   &:focus-visible,
   &.is-focused {
     &:after {
@@ -213,12 +401,24 @@ governing permissions and limitations under the License.
       height: 100%;
       left: 0;
       top: 0;
-      border: 3px solid orange;
+      border: 3px solid var(--spectrum-tag-focus-ring-color); /* PLACHOLDER */
 
       box-shadow: none; /* PLACEHOLDER FOR TOKEN */
 
       border-width: var(--spectrum-tag-focus-ring-thickness);
       margin: var(--spectrum-tag-focus-ring-gap); /* placeholder style - adjust */
     }
+  }
+}
+
+.spectrum-Tag.is-disabled {
+  border-color: var(--spectrum-tag-border-color-disabled);
+  background-color: var(--spectrum-tag-background-color-disabled);
+
+  > .spectrum-Tag-label,
+  > .spectrum-Icon,
+  > .spectrum-Avatar,
+  > .spectrum-Tag-clearButton {
+    color: var(--spectrum-tag-content-color-disabled);
   }
 }

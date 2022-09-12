@@ -78,8 +78,8 @@ examples:
             </svg>
             <span class="spectrum-Tag-label">Tag label</span>
           </div>
-
         </div>
+
         <div class="spectrum-Examples-item">
           <h4 class="spectrum-Heading spectrum-Heading--sizeXS spectrum-Examples-itemHeading">Selected + Invalid</h4>
 
@@ -90,6 +90,22 @@ examples:
           <div class="spectrum-Tag spectrum-Tag--sizeS is-selected is-invalid" tabindex="0">
             <svg class="spectrum-Icon spectrum-Icon--sizeS spectrum-Tag-icon" focusable="false" aria-hidden="true" aria-label="Tag">
               <use xlink:href="#spectrum-icon-24-Alert" />
+            </svg>
+            <span class="spectrum-Tag-label">Tag label</span>
+          </div>
+
+        </div>
+
+        <div class="spectrum-Examples-item">
+          <h4 class="spectrum-Heading spectrum-Heading--sizeXS spectrum-Examples-itemHeading">Emphasized</h4>
+
+          <div class="spectrum-Tag spectrum-Tag--sizeS is-emphasized" tabindex="0">
+            <span class="spectrum-Tag-label">Tag label</span>
+          </div>
+
+          <div class="spectrum-Tag spectrum-Tag--sizeS is-emphasized" tabindex="0">
+            <svg class="spectrum-Icon spectrum-Icon--sizeS spectrum-Tag-icon" focusable="false" aria-hidden="true" aria-label="Tag">
+              <use xlink:href="#spectrum-icon-18-CheckmarkCircle" />
             </svg>
             <span class="spectrum-Tag-label">Tag label</span>
           </div>
