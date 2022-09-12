@@ -275,6 +275,46 @@ examples:
           </div>
         </div>
       </div>
+  - id: text-overflow
+    name: Text overflow
+    markup: |
+      <div class="spectrum-Examples">
+        <div class="spectrum-Examples-item">
+          <h4 class="spectrum-Heading spectrum-Heading--sizeXS spectrum-Examples-itemHeading">Menu without descriptions</h4>
+          <div class="spectrum-Examples-itemGroup" style="max-width: 150px;">
+            <ul class="spectrum-Menu spectrum-Menu--sizeM" role="menu">
+              <li class="spectrum-Menu-item" role="menuitem" tabindex="0">
+                <span class="spectrum-Menu-itemLabel">Small (works best for mobile phones)</span>
+              </li>
+              <li class="spectrum-Menu-item" role="menuitem" tabindex="0">
+                <span class="spectrum-Menu-itemLabel">Medium (all purpose)</span>
+              </li>
+              <li class="spectrum-Menu-item" role="menuitem" tabindex="0">
+                <span class="spectrum-Menu-itemLabel">Large (works best for printing)</span>
+              </li>
+            </ul>
+          </div>
+        </div>
+        <div class="spectrum-Examples-item">
+          <h4 class="spectrum-Heading spectrum-Heading--sizeXS spectrum-Examples-itemHeading">Menu with descriptions</h4>
+          <div class="spectrum-Examples-itemGroup" style="max-width: 150px;">
+            <ul class="spectrum-Menu spectrum-Menu--sizeM" role="menu">
+              <li class="spectrum-Menu-item" role="menuitem" tabindex="0">
+                <span class="spectrum-Menu-itemLabel">Small (works best for mobile phones)</span>
+                <span class="spectrum-Menu-itemDescription">A lengthy description about small is here</span>
+              </li>
+              <li class="spectrum-Menu-item" role="menuitem" tabindex="0">
+                <span class="spectrum-Menu-itemLabel">Medium (all purpose)</span>
+                <span class="spectrum-Menu-itemDescription">A lengthy description about medium is here</span>
+              </li>
+              <li class="spectrum-Menu-item" role="menuitem" tabindex="0">
+                <span class="spectrum-Menu-itemLabel">Large (works best for printing)</span>
+                <span class="spectrum-Menu-itemDescription">A lengthy description about large is here</span>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
   - id: sizing-descriptions
     name: Sizing with descriptions
     markup: |
