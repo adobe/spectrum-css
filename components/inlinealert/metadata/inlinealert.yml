@@ -5,7 +5,7 @@ examples:
     name: Neutral
     markup: |
       <div class="spectrum-InLineAlert">
-        <div class="spectrum-InLineAlert-header">Information in-line alert header</div>
+        <div class="spectrum-InLineAlert-header">Neutral in-line alert header</div>
         <div class="spectrum-InLineAlert-content">This is an alert.</div>
       </div>
   - id: inlinealert-info

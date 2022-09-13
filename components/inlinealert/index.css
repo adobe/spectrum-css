@@ -67,8 +67,8 @@ governing permissions and limitations under the License.
   gap: var(--mod-inlinealert-spacing-header-to-icon, var(--spectrum-inlinealert-spacing-header-to-icon));
 
   font-size: var(--mod-inlinealert-font-size, var(--spectrum-inlinealert-font-size));
-  font-weight: var(--mod-inlinealert-font-weight, var(--spectrum-inline-font-weight));
-  font-style: var(--mod-inlinealert-font-style, var(--spectrum-inline-font-style));
+  font-weight: var(--mod-inlinealert-font-weight, var(--spectrum-inlinealert-font-weight));
+  font-style: var(--mod-inlinealert-font-style, var(--spectrum-inlinealert-font-style));
   line-height: var(--mod-inlinealert-line-height, var(--spectrum-inlinealert-line-height));
   text-transform: none;
 
