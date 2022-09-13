@@ -15,7 +15,7 @@ governing permissions and limitations under the License.
     /* clear button space end - theme specific */
     --spectrum-tag-clear-button-spacing-inline-end: var(--spectrum-text-to-visual-100);
 
-    /* spacing horizontal defaults if no t-shirt size - set to medium */
+    /* spacing horizontal fallback if no t-shirt size */
     --spectrum-tag-spacing-inline-start: var(--spectrum-component-edge-to-visual-100);
 
     /* border */
@@ -51,7 +51,7 @@ governing permissions and limitations under the License.
   /* t-shirt sizes */
   .spectrum-Tag--sizeS {
     --spectrum-tag-spacing-inline-start: var(--spectrum-component-edge-to-visual-75);
-    --spectrum-tag-spacing-inline-end: var(--spectrum-component-edge-to-text-75);
+    --spectrum-tag-label-spacing-inline-end: var(--spectrum-component-edge-to-text-75);
 
     --spectrum-tag-corner-radius: var(--spectrum-corner-radius-100);
 
@@ -61,7 +61,7 @@ governing permissions and limitations under the License.
 
   .spectrum-Tag--sizeM {
     --spectrum-tag-spacing-inline-start: var(--spectrum-component-edge-to-visual-100);
-    --spectrum-tag-spacing-inline-end: var(--spectrum-component-edge-to-text-100);
+    --spectrum-tag-label-spacing-inline-end: var(--spectrum-component-edge-to-text-100);
 
     --spectrum-tag-corner-radius: var(--spectrum-corner-radius-100);
 
@@ -71,7 +71,7 @@ governing permissions and limitations under the License.
 
   .spectrum-Tag--sizeL {
     --spectrum-tag-spacing-inline-start: var(--spectrum-component-edge-to-visual-200);
-    --spectrum-tag-spacing-inline-end: var(--spectrum-component-edge-to-text-200);
+    --spectrum-tag-label-spacing-inline-end: var(--spectrum-component-edge-to-text-200);
 
     --spectrum-tag-corner-radius: var(--spectrum-corner-radius-100);
 
