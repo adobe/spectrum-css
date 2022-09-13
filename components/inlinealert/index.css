@@ -34,38 +34,38 @@ governing permissions and limitations under the License.
 
   display: inline-block;
   box-sizing: border-box;
-  min-inline-size: var(--spectrum-inlinealert-min-inline-size);
+  min-inline-size: var(--mod-inlinealert-min-inline-size, var(--spectrum-inlinealert-min-inline-size));
   margin-block: 8px;
   margin-inline: 0;
-  padding-block: var(--spectrum-inlinealert-spacing-edge-to-text);
-  padding-inline: var(--spectrum-inlinealert-spacing-edge-to-text);
+  padding-block: var(--mod-inlinealert-spacing-edge-to-text, var(--spectrum-inlinealert-spacing-edge-to-text));
+  padding-inline: var(--mod-inlinealert-spacing-edge-to-text, var(--spectrum-inlinealert-spacing-edge-to-text));
 
-  border-block-width: var(--spectrum-inlinealert-border-width);
+  border-block-width: var(--mod-inlinealert-border-width, var(--spectrum-inlinealert-border-width));
   border-style: solid;
-  border-radius: var(--spectrum-inlinealert-border-radius);
+  border-radius: var(--mod-inlinealert-border-radius, var(--spectrum-inlinealert-border-radius));
 
-  background-color: var(--spectrum-inlinealert-background-color);
+  background-color: var(--mod-inlinealert-background-color, var(--spectrum-inlinealert-background-color));
   /* default color set to body color, header element overwrites this */
-  color: var(--spectrum-inlinealert-header-and-content-color);
-  border-color: var(--spectrum-inlinealert-border-and-icon-color);
+  color: var(--mod-inlinealert-header-and-content-color, var(--spectrum-inlinealert-header-and-content-color));
+  border-color: var(--mod-inlinealert-border-and-icon-color, var(--spectrum-inlinealert-border-and-icon-color));
 }
 
 .spectrum-InLineAlert-icon {
   position: absolute;
   display: block;
   inset-block-start: var(--spectrum-inlinealert-icon-size);
-  inset-inline-end: var(--spectrum-inlinealert-icon-size);
+  inset-inline-end: var(--mod-inlinealert-icon-size, var(--spectrum-inlinealert-icon-size));
 }
 
 .spectrum-InLineAlert-header {
   display: inline-block;
   block-size: auto;
-  min-block-size: var(--spectrum-inlinealert-header-min-block-size);
+  min-block-size: var(--mod-inlinealert-header-min-block-size, var(--spectrum-inlinealert-header-min-block-size));
   margin: 0;
   padding: 0;
 
   /* Header and Icon spacing */
-  padding-inline-end: var(--spectrum-inlinealert-spacing-header-to-icon);
+  padding-inline-end: var(--mod-inlinealert-spacing-header-to-icon, var(--spectrum-inlinealert-spacing-header-to-icon));
 
   font-size: 14px;
   font-weight: 700;
@@ -73,18 +73,18 @@ governing permissions and limitations under the License.
   line-height: 14px;
   text-transform: none;
 
-  color: var(--spectrum-inlinealert-header-and-content-color);
+  color: var(--mod-inlinealert-header-and-content-color, var(--spectrum-inlinealert-header-and-content-color));
 }
 
 .spectrum-InLineAlert-content {
   display: block;
-  margin: var(--spectrum-inlinealert-spacing-header-content-button-spacing) 0 0 0;
+  margin: var(--mod-inlinealert-spacing-header-content-button-spacing, var(--spectrum-inlinealert-spacing-header-content-button-spacing)) 0 0 0;
   padding: 0;
 
   font-size: 14px;
   word-wrap: break-word;
 
-  color: var(--spectrum-inlinealert-header-and-content-color);
+  color: var(--mod-inlinealert-header-and-content-color, var(--spectrum-inlinealert-header-and-content-color));
 }
 
 .spectrum-InLineAlert-footer {
@@ -107,34 +107,34 @@ governing permissions and limitations under the License.
 }
 
 .spectrum-InLineAlert--info {
-  border-color: var(--spectrum-inlinealert-border-and-icon-color-info);
+  border-color: var(--mod-inlinealert-border-and-icon-color-info, var(--spectrum-inlinealert-border-and-icon-color-info));
 
   .spectrum-InLineAlert-icon {
-    color: var(--spectrum-inlinealert-border-and-icon-color-info);
+    color: var(--mod-inlinealert-border-and-icon-color-info, var(--spectrum-inlinealert-border-and-icon-color-info));
   }
 }
 
 .spectrum-InLineAlert--notice {
-  border-color: var(--spectrum-inlinealert-border-and-icon-color-notice);
+  border-color: var(--mod-inlinealert-border-and-icon-color-notice, var(--spectrum-inlinealert-border-and-icon-color-notice));
 
   .spectrum-InLineAlert-icon {
-    color: var(--spectrum-inlinealert-border-and-icon-color-notice);
+    color: var(--mod-inlinealert-border-and-icon-color-notice, var(--spectrum-inlinealert-border-and-icon-color-notice));
   }
 }
 
 .spectrum-InLineAlert--positive {
-  border-color: var(--spectrum-inlinealert-border-and-icon-color-positive);
+  border-color: var(--mod-inlinealert-border-and-icon-color-positive, var(--spectrum-inlinealert-border-and-icon-color-positive));
 
   .spectrum-InLineAlert-icon {
-    color: var(--spectrum-inlinealert-border-and-icon-color-positive);
+    color: var(--mod-inlinealert-border-and-icon-color-positive, var(--spectrum-inlinealert-border-and-icon-color-positive));
   }
 }
 
 .spectrum-InLineAlert--negative {
-  border-color: var(--spectrum-inlinealert-border-and-icon-color-negative);
+  border-color: var(--mod-inlinealert-border-and-icon-color-negative, var(--spectrum-inlinealert-border-and-icon-color-negative));
 
   .spectrum-InLineAlert-icon {
-    color: var(--spectrum-inlinealert-border-and-icon-color-negative);
+    color: var(--mod-inlinealert-border-and-icon-color-negative, var(--spectrum-inlinealert-border-and-icon-color-negative));
   }
 }
 
