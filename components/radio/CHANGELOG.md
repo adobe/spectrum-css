@@ -3,6 +3,18 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+<a name="4.0.4"></a>
+## 4.0.4
+🗓 2022-09-13 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/radio@4.0.3...@spectrum-css/radio@4.0.4)
+
+### 🐛 Bug fixes
+
+* **radio:** resolve error due to core tokens breaking change ([d7eaf96](https://github.com/adobe/spectrum-css/commit/d7eaf96))
+
+
+
+
+
 <a name="4.0.3"></a>
 ## 4.0.3
 🗓 2022-09-13 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/radio@4.0.2...@spectrum-css/radio@4.0.3)

@@ -3,6 +3,18 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+<a name="2.0.8"></a>
+## 2.0.8
+🗓 2022-09-13 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/helptext@2.0.7...@spectrum-css/helptext@2.0.8)
+
+### 🐛 Bug fixes
+
+* **helptext:** resolve error due to core tokens breaking change ([640e24f](https://github.com/adobe/spectrum-css/commit/640e24f))
+
+
+
+
+
 <a name="2.0.7"></a>
 ## 2.0.7
 🗓 2022-09-13 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/helptext@2.0.6...@spectrum-css/helptext@2.0.7)
