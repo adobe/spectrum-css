@@ -59,7 +59,7 @@ governing permissions and limitations under the License.
   &:lang(ja),
   &:lang(zh),
   &:lang(ko) {
-    --spectrum-radio-cjk-line-height: var(--spectrum-CJK-line-height-100);
+    --spectrum-radio-cjk-line-height: var(--spectrum-cjk-line-height-100);
   }
 
   /* default radio size for no t-shirt size */
