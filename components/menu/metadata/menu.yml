@@ -542,15 +542,13 @@ examples:
                 </li>
               </ul>
             </li>
-            <li class="spectrum-Menu-item spectrum-Menu-item--collapsible" role="menuitem" tabindex="0">
+            <li class="spectrum-Menu-item spectrum-Menu-item--collapsible is-open" role="menuitem" tabindex="0">
               <svg class="spectrum-Icon spectrum-Icon--sizeM spectrum-UIIcon-ChevronRight100 spectrum-Menu-chevron spectrum-Menu-itemIcon" focusable="false" aria-hidden="true" aria-label="Next">
                 <use xlink:href="#spectrum-css-icon-Chevron100" />
               </svg>
-              <svg class="spectrum-Icon spectrum-Icon--sizeM spectrum-Menu-itemIcon" focusable="false" aria-hidden="true" aria-label="Mobile Phone Icon">
-                <use xlink:href="#spectrum-icon-18-DevicePhone"></use>
-              </svg>
+              
               <span class="spectrum-Menu-sectionHeading" id="menu-heading-category-1" aria-hidden="true">Mobile</span>
-              <ul id="spectrum-menu-item-1-submenu" class="spectrum-Menu spectrum-Menu--sizeM" aria-labelledby="spectrum-menu-item-1-label" role="menu">
+              <ul id="spectrum-menu-item-1-submenu" class="spectrum-Menu spectrum-Menu--sizeM is-open" aria-labelledby="spectrum-menu-item-1-label" role="menu">
                 <li class="spectrum-Menu-item" role="menuitem" tabindex="0">
                   <span class="spectrum-Menu-itemLabel">Mobile Large</span>
                   <span class="spectrum-Menu-itemValue">1920 x 1080</span>

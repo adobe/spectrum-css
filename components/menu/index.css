@@ -185,7 +185,7 @@ governing permissions and limitations under the License.
 
 .spectrum-Menu {
   --spectrum-menu-item-label-line-height: var(--spectrum-line-height-100);
-  --spectrum-menu-item-label-cjk-line-height: var(--spectrum-CJK-line-height-100);
+  --spectrum-menu-item-label-cjk-line-height: var(--spectrum-cjk-line-height-100);
   --spectrum-menu-item-label-to-description-spacing: 1px;
   --spectrum-menu-item-focus-indicator-width: var(--spectrum-border-width-200);
   --spectrum-menu-item-focus-indicator-color: var(--spectrum-blue-800);
@@ -208,7 +208,7 @@ governing permissions and limitations under the License.
   --spectrum-menu-item-label-icon-color-disabled: var(--spectrum-disabled-content-color);
 
   --spectrum-menu-item-description-line-height: var(--spectrum-line-height-100);
-  --spectrum-menu-item-description-cjk-line-height: var(--spectrum-CJK-line-height-100);
+  --spectrum-menu-item-description-cjk-line-height: var(--spectrum-cjk-line-height-100);
 
   --spectrum-menu-item-description-color-default: var(--spectrum-neutral-subdued-content-color-default);
   --spectrum-menu-item-description-color-hover: var(--spectrum-neutral-subdued-content-color-hover);
@@ -217,7 +217,7 @@ governing permissions and limitations under the License.
   --spectrum-menu-item-description-color-disabled: var(--spectrum-disabled-content-color);
 
   --spectrum-menu-section-header-line-height: var(--spectrum-line-height-100);
-  --spectrum-menu-section-header-cjk-line-height: var(--spectrum-CJK-line-height-100);
+  --spectrum-menu-section-header-cjk-line-height: var(--spectrum-cjk-line-height-100);
   --spectrum-menu-section-header-font-weight: var(--spectrum-font-weight-bold);
   --spectrum-menu-section-header-color: var(--spectrum-gray-900);
   --spectrum-menu-collapsible-icon-color: var(--spectrum-gray-900);
@@ -236,7 +236,18 @@ governing permissions and limitations under the License.
   --spectrum-menu-chevron-icon-color-hover: var(--spectrum-neutral-subdued-content-color-hover);
   --spectrum-menu-chevron-icon-color-down: var(--spectrum-neutral-subdued-content-color-down);
   --spectrum-menu-chevron-icon-color-focus: var(--spectrum-neutral-subdued-content-color-key-focus);
+
+  /* "one" icon: chevron + additional icon (we don't count the chevron as an icon because it HAS to be there for a collapisble) */
+  /* should result in a negative value */
+  --spectrum-menu-item-collapisble-has-icon-submenu-margin-x-start: calc((var(--spectrum-menu-item-label-inline-edge-to-content) + var(--spectrum-menu-item-checkmark-width) + var(--spectrum-menu-item-text-to-control) + var(--spectrum-menu-item-icon-width) + var(--spectrum-menu-item-label-text-to-visual)) * -1);
   
+  --spectrum-menu-item-collapisble-has-icon-submenu-item-padding-x-start: calc((var(--spectrum-menu-item-label-inline-edge-to-content) + var(--spectrum-menu-item-label-inline-edge-to-content) + var(--spectrum-menu-item-checkmark-width) + var(--spectrum-menu-item-text-to-control) + var(--spectrum-menu-item-icon-width) + var(--spectrum-menu-item-label-text-to-visual)));
+
+  /* "no" icon: just the chevron (we're not counting it because it HAS to be there for a collapisble) */
+  /* should result in a negative value */
+  --spectrum-menu-item-collapisble-no-icon-submenu-margin-x-start: calc((var(--spectrum-menu-item-label-inline-edge-to-content) + var(--spectrum-menu-item-icon-width) + var(--spectrum-menu-item-label-text-to-visual)) * -1);;
+  
+  --spectrum-menu-item-collapisble-no-icon-submenu-item-padding-x-start: calc((var(--spectrum-menu-item-label-inline-edge-to-content) + var(--spectrum-menu-item-label-inline-edge-to-content) + var(--spectrum-menu-item-icon-width) + var(--spectrum-menu-item-label-text-to-visual) - var(--spectrum-menu-item-focus-indicator-width)));
   
   
   /* --spectrum-menu-margin-x: var(--spectrum-global-dimension-size-40);
@@ -583,33 +594,24 @@ governing permissions and limitations under the License.
   inline-size: var(--mod-menu-item-icon-width, var(--spectrum-menu-item-icon-width));
 }
 
-/* 
-  TODO: ask design about sizing for the checkmark and chevron -
-  temporarily using the values from pre-core tokens
-*/
 .spectrum-Menu-checkmark,
 .spectrum-Menu-chevron {
-  /* 75 = global-dimension-static-size-125 = 10px */
-  /* 100 = global-dimension-static-size-125 = 10px */
-  /* 200 = global-dimension-static-size-150 = 12px */
-  /* 300 = global-dimension-static-size-175 = 14px */
   block-size: var(--mod-menu-item-checkmark-height, var(--spectrum-menu-item-checkmark-height));
   inline-size: var(--mod-menu-item-checkmark-width, var(--spectrum-menu-item-checkmark-width));
 }
 
-/* 
-  TODO: ask design about spacing between checkmark + icon -
-  temporarily using the same value between icon & label for now
-*/
 .spectrum-Icon + .spectrum-Menu-itemLabel,
 .spectrum-Menu-itemIcon + .spectrum-Menu-itemLabel,
 .spectrum-Icon ~ .spectrum-Menu-itemDescription,
-.spectrum-Menu-itemIcon ~ .spectrum-Menu-itemDescription,
+.spectrum-Menu-itemIcon ~ .spectrum-Menu-itemDescription {
+  margin-inline-start: var(--mod-menu-item-label-text-to-visual, var(--spectrum-menu-item-label-text-to-visual));
+}
+
 .spectrum-Menu-checkmark + .spectrum-Menu-itemIcon,
 .spectrum-Menu-checkmark + .spectrum-Icon,
 .spectrum-Menu-chevron + .spectrum-Menu-itemIcon,
 .spectrum-Menu-chevron + .spectrum-Icon {
-  margin-inline-start: var(--mod-menu-item-label-text-to-visual, var(--spectrum-menu-item-label-text-to-visual));
+  margin-inline-start: var(--mod-menu-item-text-to-control, var(--spectrum-menu-item-text-to-control));
 }
 
 .spectrum-Menu-itemDescription {
@@ -696,11 +698,31 @@ governing permissions and limitations under the License.
 .spectrum-Menu-item--collapsible {
   /* collapsible sub-menus */
 
+  
+  /* the width of the chevron  */
+  /* --my-calc: calc(var(--spectrum-menu-item-checkmark-width) + ) */
+
+  /*
+    .spectrum-Menu-item--collapsible > .spectrum-Menu-itemIcon + .spectrum-Menu-itemIcon ~ .spectrum-Menu
+  */
+
   &.is-open {
     .spectrum-Menu-chevron {
       transform: rotate(90deg);
     }
   }
+
+  &.is-open:hover,
+  &.is-open:active,
+  &.is-open:focus,
+  &.is-open.is-focused {
+    background-color: var(--highcontrast-menu-item-background-color-default, var(--mod-menu-item-background-color-default, var(--spectrum-menu-item-background-color-default)));
+  }
+
+  /* need to cover case when there's no icon, just chevron */
+  /* > .spectrum-Menu-itemIcon + .spectrum-Menu-itemIcon ~ .spectrum-Menu {
+    background-color: purple !important;
+  } */
 
   .spectrum-Menu {
     display: none;
@@ -708,6 +730,44 @@ governing permissions and limitations under the License.
 
   .spectrum-Menu.is-open {
     display: block;
+  }
+
+  .spectrum-Menu-item {}
+
+}
+
+/*
+  assume that if an item is collapsible, it will 
+  have a chevron and we need to adjust position of submenus to account for that
+*/
+.spectrum-Menu-item--collapsible .spectrum-Menu {
+  /* reposition the entire submenu to be flush left with the parent menu item */
+  margin-inline-start: var(--mod-menu-item-collapisble-no-icon-submenu-margin-x-start, var(--spectrum-menu-item-collapisble-no-icon-submenu-margin-x-start));
+
+  .spectrum-Menu-item {
+    /*
+      allow item to take up full width of parent,
+      but make the content start where the parent item's label text starts
+    */
+    padding-inline-start: var(--mod-menu-item-collapisble-no-icon-submenu-item-padding-x-start, var(--spectrum-menu-item-collapisble-no-icon-submenu-item-padding-x-start));
+  }
+}
+
+/*
+  assume that if an item is collapsible and has two icons
+  that one is a chevron and one is a non-chevron
+  and we need to adjust position of submenus to account for both of those icons
+*/
+.spectrum-Menu-item--collapsible > .spectrum-Menu-itemIcon + .spectrum-Menu-itemIcon ~ .spectrum-Menu {
+  /* reposition the entire submenu to be flush left with the parent menu item */
+  margin-inline-start: var(--mod-menu-item-collapisble-has-icon-submenu-margin-x-start, var(--spectrum-menu-item-collapisble-has-icon-submenu-margin-x-start));
+
+  .spectrum-Menu-item {
+    /*
+      allow item to take up full width of parent,
+      but make the content start where the parent item's label text starts
+    */
+    padding-inline-start: var(--mod-menu-item-collapisble-has-icon-submenu-item-padding-x-start, var(--spectrum-menu-item-collapisble-has-icon-submenu-item-padding-x-start));
   }
 }
 
