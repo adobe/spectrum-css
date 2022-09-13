@@ -11,6 +11,12 @@ governing permissions and limitations under the License.
 */
 
 .spectrum-InLineAlert {
+  /* Static properties */
+  --spectrum-inlinealert-font-size: 14px;
+  --spectrum-inlinealert-font-weight: 700;
+  --spectrum-inlinealert-font-style: normal;
+  --spectrum-inlinealert-line-height: 14px;
+
   /* Size*/
   --spectrum-inlinealert-border-width: var(--spectrum-border-width-100);
   --spectrum-inlinealert-border-radius: var(--spectrum-corner-radius-100);
@@ -60,10 +66,10 @@ governing permissions and limitations under the License.
   /* Minimum space between header and icon */
   gap: var(--mod-inlinealert-spacing-header-to-icon, var(--spectrum-inlinealert-spacing-header-to-icon));
 
-  font-size: 14px;
-  font-weight: 700;
-  font-style: normal;
-  line-height: 14px;
+  font-size: var(--mod-inlinealert-font-size, var(--spectrum-inlinealert-font-size));
+  font-weight: var(--mod-inlinealert-font-weight, var(--spectrum-inline-font-weight));
+  font-style: var(--mod-inlinealert-font-style, var(--spectrum-inline-font-style));
+  line-height: var(--mod-inlinealert-line-height, var(--spectrum-inlinealert-line-height));
   text-transform: none;
 
   min-block-size: var(--mod-inlinealert-header-min-block-size, var(--spectrum-inlinealert-header-min-block-size));
@@ -76,7 +82,6 @@ governing permissions and limitations under the License.
   margin: var(--mod-inlinealert-spacing-header-content-button, var(--spectrum-inlinealert-spacing-header-content-button)) 0 0 0;
   padding: 0;
 
-  font-size: 14px;
   word-wrap: break-word;
 
   color: var(--mod-inlinealert-header-and-content-color, var(--spectrum-inlinealert-header-and-content-color));
