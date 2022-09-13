@@ -97,13 +97,6 @@ governing permissions and limitations under the License.
   &:empty {
     display: none;
   }
-
-  .spectrum-Button {
-    margin-inline-end: 0;
-
-    /* Spacing between buttons */
-    margin-inline-start: 0.75rem;
-  }
 }
 
 .spectrum-InLineAlert--info {
