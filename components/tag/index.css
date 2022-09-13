@@ -11,45 +11,23 @@ governing permissions and limitations under the License.
 */
 
 .spectrum-Tag {
-  --spectrum-tag-animation-duration: var(--spectrum-animation-duration-100);
 
+  /* TODO - replace placeholder disabled avatar opacity with correct token once avatar is migrated */
+  --spectrum-avatar-opacity-disabled: 0.3;
+
+  --spectrum-tag-animation-duration: var(--spectrum-animation-duration-100);
   --spectrum-tag-border-width: var(--spectrum-border-width-100);
 
   /* focus ring */
   --spectrum-tag-focus-ring-thickness: var(focus-ring-thickness);
   --spectrum-tag-focus-ring-gap: var(focus-ring-gap);
+  --spectrum-tag-focus-ring-color: var(--spectrum-focus-ring-color);
 
-  /* tag defaults if no t-shirt size - set to medium */
-  --spectrum-tag-height: var(--spectrum-component-height-100);
+  /* label */
+  --spectrum-tag-label-line-height: var(--spectrum-line-height-100);
 
-  /* text defaults if no t-shirt size - set to medium */
-  --spectrum-tag-font-size: var(--spectrum-font-size-100);
-
-  /* icon defaults if no t-shirt size - set to medium */
-  --spectrum-tag-icon-size: var(--spectrum-workflow-icon-size-100);
-
-  /* icon spacing defaults if no t-shirt size - set to medium */
-  --spectrum-tag-icon-spacing-block-start: var(--spectrum-component-top-to-workflow-icon-100);
-  --spectrum-tag-icon-spacing-block-end: var(--spectrum-component-top-to-workflow-icon-100);
-
-  /* space from label to end edge */
+  /* label space to end edge */
   --spectrum-tag-spacing-inline-end: var(--spectrum-component-edge-to-text-100);
-
-  /* ✖ clear button spacing defaults if no t-shirt size - set to medium */
-  /* clear button space start - not theme specific (end spacing is theme-specific) */
-  --spectrum-tag-clear-button-spacing-inline-start: var(--spectrum-text-to-visual-100);
-
-  /* clear button spacing block */
-  --spectrum-tag-clear-button-spacing-block: var(--spectrum-tag-top-to-cross-icon-small);
-  --spectrum-tag-clear-button-spacing-block: var(--spectrum-tag-top-to-cross-icon-medium);
-  --spectrum-tag-clear-button-spacing-block: var(--spectrum-tag-top-to-cross-icon-large);
-
-  /* avatar spacing default if no t-shirt size */
-  --spectrum-tag-avatar-spacing-block-start: var(--spectrum-tag-top-to-avatar-medium);
-  --spectrum-tag-avatar-spacing-block-end: var(--spectrum-tag-top-to-avatar-medium);
-
-  /* label spacing default if no t-shirt size */
-  --spectrum-tag-label-spacing-block: var(--spectrum-component-top-to-text-100);
 
   /* invalid border */
   --spectrum-tag-border-color-invalid: var(--spectrum-negative-color-900);
@@ -63,20 +41,11 @@ governing permissions and limitations under the License.
   --spectrum-tag-content-color-invalid-active: var(--spectrum-negative-content-color-down);
   --spectrum-tag-content-color-invalid-focus: var(--spectrum-negative-content-color-key-focus);
 
-  /* invalid selected */
+  /* invalid selected background */
   --spectrum-tag-background-color-invalid-selected: var(--spectrum-negative-background-color-default);
   --spectrum-tag-background-color-invalid-selected-hover: var(--spectrum-negative-background-color-hover);
   --spectrum-tag-background-color-invalid-selected-active: var(--spectrum-negative-background-color-down);
   --spectrum-tag-background-color-invalid-selected-focus: var(--spectrum-negative-background-color-key-focus);
-
-  /* invalid text */
-  --spectrum-tag-content-color-invalid-selected: var(--spectrum-white);
-
-  /* emphasized text */
-  --spectrum-tag-content-color-emphasized: var(--spectrum-white);
-
-  /* selected text */
-  --spectrum-tag-content-color-selected: var(--spectrum-white);
 
   /* emphasized */
   --spectrum-tag-background-color-emphasized: var(--spectrum-accent-background-color-default);
@@ -87,8 +56,41 @@ governing permissions and limitations under the License.
   /* disabled */
   --spectrum-tag-content-color-disabled: var(--spectrum-disabled-content-color);
 
-  /* focus ring */
-  --spectrum-tag-focus-ring-color: var(--spectrum-focus-ring-color);
+  /* invalid text */
+  --spectrum-tag-content-color-invalid-selected: var(--spectrum-white);
+
+  /* emphasized text */
+  --spectrum-tag-content-color-emphasized: var(--spectrum-white);
+
+  /* selected text */
+  --spectrum-tag-content-color-selected: var(--spectrum-white);
+
+  /* ↧↧↧ Fallback defaults in case of no t-shirt size - set to Medium styles ↧↧↧ */
+  /* avatar spacing fallback if no t-shirt size */
+  --spectrum-tag-avatar-spacing-block-start: var(--spectrum-tag-top-to-avatar-medium);
+  --spectrum-tag-avatar-spacing-block-end: var(--spectrum-tag-top-to-avatar-medium);
+
+  /* label spacing fallback if no t-shirt size */
+  --spectrum-tag-label-spacing-block: var(--spectrum-component-top-to-text-100);
+
+  /* clear button inline spacing fallback if no t-shirt size */
+  --spectrum-tag-clear-button-spacing-inline-start: var(--spectrum-text-to-visual-100);
+
+  /* tag defaults if no t-shirt size */
+  --spectrum-tag-height: var(--spectrum-component-height-100);
+
+  /* text defaults if no t-shirt size */
+  --spectrum-tag-font-size: var(--spectrum-font-size-100);
+
+  /* icon fallback if no t-shirt size */
+  --spectrum-tag-icon-size: var(--spectrum-workflow-icon-size-100);
+
+  /* icon spacing fallback if no t-shirt size */
+  --spectrum-tag-icon-spacing-block-start: var(--spectrum-component-top-to-workflow-icon-100);
+  --spectrum-tag-icon-spacing-block-end: var(--spectrum-component-top-to-workflow-icon-100);
+
+  /* clear button spacing if no t-shirt size */
+  --spectrum-tag-clear-button-spacing-block: var(--spectrum-tag-top-to-cross-icon-medium);
 }
 
 
@@ -97,7 +99,9 @@ governing permissions and limitations under the License.
   --spectrum-tag-height: var(--spectrum-component-height-75);
   --spectrum-tag-font-size: var(--spectrum-font-size-75);
   --spectrum-tag-icon-size: var(--spectrum-workflow-icon-size-75);
+
   --spectrum-tag-clear-button-spacing-inline-start: var(--spectrum-text-to-visual-75);
+  --spectrum-tag-clear-button-spacing-block: var(--spectrum-tag-top-to-cross-icon-small);
 
   --spectrum-tag-icon-spacing-block-start: var(--spectrum-component-top-to-workflow-icon-75);
   --spectrum-tag-icon-spacing-block-end: var(--spectrum-component-top-to-workflow-icon-75);
@@ -112,7 +116,9 @@ governing permissions and limitations under the License.
   --spectrum-tag-height: var(--spectrum-component-height-100);
   --spectrum-tag-font-size: var(--spectrum-font-size-100);
   --spectrum-tag-icon-size: var(--spectrum-workflow-icon-size-100);
+
   --spectrum-tag-clear-button-spacing-inline-start: var(--spectrum-text-to-visual-100);
+  --spectrum-tag-clear-button-spacing-block: var(--spectrum-tag-top-to-cross-icon-medium);
 
   --spectrum-tag-icon-spacing-block-start: var(--spectrum-component-top-to-workflow-icon-100);
   --spectrum-tag-icon-spacing-block-end: var(--spectrum-component-top-to-workflow-icon-100);
@@ -127,7 +133,9 @@ governing permissions and limitations under the License.
   --spectrum-tag-height: var(--spectrum-component-height-200);
   --spectrum-tag-font-size: var(--spectrum-font-size-200);
   --spectrum-tag-icon-size: var(--spectrum-workflow-icon-size-200);
+
   --spectrum-tag-clear-button-spacing-inline-start: var(--spectrum-text-to-visual-200);
+  --spectrum-tag-clear-button-spacing-block: var(--spectrum-tag-top-to-cross-icon-large);
 
   --spectrum-tag-icon-spacing-block-start: var(--spectrum-component-top-to-workflow-icon-200);
   --spectrum-tag-icon-spacing-block-end: var(--spectrum-component-top-to-workflow-icon-200);
@@ -137,7 +145,6 @@ governing permissions and limitations under the License.
 
   --spectrum-tag-label-spacing-block: var(--spectrum-component-top-to-text-200);
 }
-
 
 
 /* windows high contrast mode */
@@ -163,7 +170,6 @@ governing permissions and limitations under the License.
   block-size: var(--spectrum-tag-height);
   position: relative;
   display: inline-flex;
-  /* align-items: center; */
   box-sizing: border-box;
   vertical-align: bottom;
   max-inline-size: 100%;
@@ -175,12 +181,8 @@ governing permissions and limitations under the License.
               box-shadow var(--spectrum-tag-animation-duration) ease-in-out,
               background-color var(--spectrum-tag-animation-duration) ease-in-out;
 
-  &.is-disabled {
-    pointer-events: none;
-  }
-
   > .spectrum-Tag-label {
-    line-height: 1; /* PLACEHOLDER FOR TOKEN */
+    line-height: var(--spectrum-tag-label-line-height); /* PLACEHOLDER FOR TOKEN */
     font-weight: normal; /* PLACEHOLDER FOR TOKEN */
 
     flex: 1 1 auto;
@@ -214,8 +216,6 @@ governing permissions and limitations under the License.
 
   /* clear button ✖ */
   .spectrum-Tag-clearButton {
-    padding-block: 0;
-
     margin-block-start: var(--spectrum-tag-clear-button-spacing-block);
     margin-block-end: var(--spectrum-tag-clear-button-spacing-block);
 
@@ -315,6 +315,7 @@ governing permissions and limitations under the License.
   }
 
   &.is-selected {
+    border-color: transparent;
     background-color: var(--spectrum-tag-background-color-invalid-selected);
 
     > .spectrum-Tag-label,
@@ -368,6 +369,7 @@ governing permissions and limitations under the License.
 
 /* selected */
 .spectrum-Tag.is-selected {
+  border-color: transparent;
   background-color: var(--spectrum-tag-background-color-selected);
 
   > .spectrum-Tag-label,
@@ -403,8 +405,6 @@ governing permissions and limitations under the License.
       top: 0;
       border: 3px solid var(--spectrum-tag-focus-ring-color); /* PLACHOLDER */
 
-      box-shadow: none; /* PLACEHOLDER FOR TOKEN */
-
       border-width: var(--spectrum-tag-focus-ring-thickness);
       margin: var(--spectrum-tag-focus-ring-gap); /* placeholder style - adjust */
     }
@@ -414,11 +414,16 @@ governing permissions and limitations under the License.
 .spectrum-Tag.is-disabled {
   border-color: var(--spectrum-tag-border-color-disabled);
   background-color: var(--spectrum-tag-background-color-disabled);
+  pointer-events: none;
 
   > .spectrum-Tag-label,
   > .spectrum-Icon,
   > .spectrum-Avatar,
   > .spectrum-Tag-clearButton {
     color: var(--spectrum-tag-content-color-disabled);
+  }
+
+  > .spectrum-Avatar {
+    opacity: var(--spectrum-avatar-opacity-disabled);
   }
 }
