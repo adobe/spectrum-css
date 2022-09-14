@@ -144,22 +144,34 @@ governing permissions and limitations under the License.
   }
 
   /* action group */
-  .spectrum-ActionGroup,
-  /* TODO - the following ActionGroup class may be removed after all components are migrated */
-  .spectrum-ActionGroup:not(.spectrum-ActionGroup--vertical).spectrum-ActionGroup:not(.spectrum-ActionGroup--compact) {
+  .spectrum-ActionGroup {
     margin-inline-end: var(--mod-actionbar-spacing-action-group-end, var(--spectrum-actionbar-spacing-action-group-end));
     margin-block-start: var(--mod-actionbar-spacing-action-group-top, var(--spectrum-actionbar-spacing-action-group-top));
-
     /* align to end by default */
     margin-inline-start: auto;
   }
 
-  /* TODO - may be removed after all components are migrated */
-  /* action group items - neutralize top margin */
-  .spectrum-ActionGroup-item,
-  .spectrum-ActionGroup:not(.spectrum-ActionGroup--vertical).spectrum-ActionGroup:not(.spectrum-ActionGroup--compact) .spectrum-ActionGroup-item {
+  .spectrum-ActionGroup-item {
     margin-block-start: 0;
     margin-top: 0;
+  }
+
+  /* TODO - the following ActionGroup + item vertical and compact style overrides may be removed after all components are migrated */
+  .spectrum-ActionGroup {
+    &:not(.spectrum-ActionGroup--vertical) {
+    &:not(.spectrum-ActionGroup--compact) {
+        margin-inline-end: var(--mod-actionbar-spacing-action-group-end, var(--spectrum-actionbar-spacing-action-group-end));
+        margin-block-start: var(--mod-actionbar-spacing-action-group-top, var(--spectrum-actionbar-spacing-action-group-top));
+        /* align to end by default */
+        margin-inline-start: auto;
+
+        /* action group items - neutralize top margin */
+        .spectrum-ActionGroup-item {
+          margin-block-start: 0;
+          margin-top: 0;
+        }
+      }
+    }
   }
 }
 
