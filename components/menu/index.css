@@ -239,7 +239,7 @@ governing permissions and limitations under the License.
 
   /* "one" icon: chevron + additional icon (we don't count the chevron as an icon because it HAS to be there for a collapisble) */
   /* should result in a negative value */
-  --spectrum-menu-item-collapisble-has-icon-submenu-margin-x-start: calc((var(--spectrum-menu-item-label-inline-edge-to-content) + var(--spectrum-menu-item-checkmark-width) + var(--spectrum-menu-item-text-to-control) + var(--spectrum-menu-item-icon-width) + var(--spectrum-menu-item-focus-indicator-width)) * -1);
+  /* --spectrum-menu-item-collapisble-has-icon-submenu-margin-x-start: calc((var(--spectrum-menu-item-label-inline-edge-to-content) + var(--spectrum-menu-item-checkmark-width) + var(--spectrum-menu-item-text-to-control) + var(--spectrum-menu-item-icon-width) + var(--spectrum-menu-item-focus-indicator-width)) * -1); */
   /* --spectrum-menu-item-collapisble-has-icon-submenu-margin-x-start: -52px; */
   
   --spectrum-menu-item-collapisble-has-icon-submenu-item-padding-x-start:
@@ -249,11 +249,12 @@ governing permissions and limitations under the License.
         + var(--spectrum-menu-item-text-to-control)
         + var(--spectrum-menu-item-icon-width)
         + var(--spectrum-menu-item-label-text-to-visual)
+        + var(--spectrum-menu-item-focus-indicator-width)
     ));
 
   /* "no" icon: just the chevron (we're not counting it because it HAS to be there for a collapisble) */
   /* should result in a negative value */
-  --spectrum-menu-item-collapisble-no-icon-submenu-margin-x-start: calc((var(--spectrum-menu-item-label-inline-edge-to-content) + var(--spectrum-menu-item-icon-width) + var(--spectrum-menu-item-label-text-to-visual)) * -1);;
+  /* --spectrum-menu-item-collapisble-no-icon-submenu-margin-x-start: calc((var(--spectrum-menu-item-label-inline-edge-to-content) + var(--spectrum-menu-item-icon-width) + var(--spectrum-menu-item-label-text-to-visual)) * -1);; */
   /* --spectrum-menu-item-collapisble-no-icon-submenu-margin-x-start: -24px; */
   --spectrum-menu-item-collapisble-no-icon-submenu-item-padding-x-start:
     calc((
@@ -314,14 +315,6 @@ governing permissions and limitations under the License.
   padding: 0;
   list-style-type: none;
   overflow: auto;
-  
-  /* margin-block: var(--spectrum-popover-padding-y); */
-
-  > .spectrum-Menu-sectionHeading {
-    /* Support headings as LI */
-    /* margin-block-start: var(--spectrum-menu-margin-x);
-    margin-block-end: var(--spectrum-menu-margin-x); */
-  }
 
   /* &.is-selectable {
     .spectrum-Menu-item {
@@ -388,7 +381,7 @@ governing permissions and limitations under the License.
 
   min-block-size: var(--mod-menu-item-min-height, var(--spectrum-menu-item-min-height));
   padding-block-end: var(--mod-menu-item-bottom-edge-to-text, var(--spectrum-menu-item-bottom-edge-to-text));
-  /* padding-inline: var(--mod-menu-item-label-inline-edge-to-content, var(--spectrum-menu-item-label-inline-edge-to-content)); */
+  padding-inline: var(--mod-menu-item-label-inline-edge-to-content, var(--spectrum-menu-item-label-inline-edge-to-content));
   
   /* padding: var(--spectrum-listitem-texticon-padding-y)
     var(--spectrum-listitem-texticon-padding-right)
@@ -586,7 +579,8 @@ governing permissions and limitations under the License.
   grid-area: chevronArea;
 }
 
-.spectrum-Menu-item {
+/* for the no-padding approach */
+/* .spectrum-Menu-item {
   > :first-child {
     background-color: pink;
     margin-inline-start: calc(var(--mod-menu-item-label-inline-edge-to-content, var(--spectrum-menu-item-label-inline-edge-to-content)) + var(--spectrum-menu-item-focus-indicator-width));
@@ -598,7 +592,7 @@ governing permissions and limitations under the License.
   }
 
 
-}
+} */
 
 /* TODO: double check this. Is this necessary? An error? */
 .spectrum-Menu-item--collapsible .spectrum-Menu-chevron {
@@ -661,8 +655,8 @@ governing permissions and limitations under the License.
   /* line-height: var(--spectrum-listitem-texticon-label-line-height); */
   hyphens: auto;
   overflow-wrap: break-word;
-  /* margin-block-start: var(--mod-menu-item-top-edge-to-text, var(--spectrum-menu-item-top-edge-to-text)); */
-  margin-inline-end: var(--mod-menu-section-header-inline-edge-to-content, var(--spectrum-menu-section-header-inline-edge-to-content));
+  margin-block-start: var(--mod-menu-item-top-edge-to-text, var(--spectrum-menu-item-top-edge-to-text));
+  /* margin-inline-end: var(--mod-menu-section-header-inline-edge-to-content, var(--spectrum-menu-section-header-inline-edge-to-content)); */
   /* inline-size: calc(
     100% - var(--spectrum-listitem-texticon-ui-icon-width) -
       var(--spectrum-listitem-texticon-icon-gap)
@@ -674,6 +668,7 @@ governing permissions and limitations under the License.
 }
 
 .spectrum-Menu-itemValue {
+  font-size: var(--mod-menu-item-label-font-size, var(--spectrum-menu-item-label-font-size));
   margin-block-start: var(--mod-menu-item-top-edge-to-text, var(--spectrum-menu-item-top-edge-to-text));
   justify-self: end;
 }
@@ -712,7 +707,7 @@ governing permissions and limitations under the License.
   min-inline-size: var(--mod-menu-item-min-height, var(--spectrum-menu-item-min-height));
   margin-block-start: var(--mod-menu-item-top-edge-to-text, var(--spectrum-menu-item-top-edge-to-text));
   /* margin-inline-start: var(--mod-menu-section-header-inline-edge-to-content, var(--spectrum-menu-section-header-inline-edge-to-content)); */
-  margin-inline-end: var(--mod-menu-section-header-inline-edge-to-content, var(--spectrum-menu-section-header-inline-edge-to-content));
+  /* margin-inline-end: var(--mod-menu-section-header-inline-edge-to-content, var(--spectrum-menu-section-header-inline-edge-to-content)); */
 
   /* display: block;
   margin: var(--spectrum-listitem-texticon-heading-margin);
@@ -742,6 +737,8 @@ governing permissions and limitations under the License.
   */
 
   &.is-open {
+    padding-block-end: 0;
+
     .spectrum-Menu-chevron {
       transform: rotate(90deg);
     }
@@ -760,11 +757,11 @@ governing permissions and limitations under the License.
   } */
 
   .spectrum-Menu {
+    margin-block-start: calc(var(--mod-menu-item-bottom-edge-to-text, var(--spectrum-menu-item-bottom-edge-to-text)) / 2);
     display: none;
   }
 
   .spectrum-Menu.is-open {
-    /* border: 2px green solid; */
     display: block;
   }
 
@@ -777,11 +774,11 @@ governing permissions and limitations under the License.
 
 /*
   assume that if an item is collapsible, it will 
-  have a chevron and we need to adjust position of submenus to account for that
+  have a chevron and we need to adjust position of submenu items to account for that
 */
 .spectrum-Menu-item--collapsible .spectrum-Menu {
-  /* reposition the entire submenu to be flush left with the parent menu item */
-  /* margin-inline-start: var(--mod-menu-item-collapisble-no-icon-submenu-margin-x-start, var(--spectrum-menu-item-collapisble-no-icon-submenu-margin-x-start)); */
+  /* reposition the entire submenu to be flush left with the parent menu item via negative margins */
+  margin-inline: calc(var(--mod-menu-item-label-inline-edge-to-content, var(--spectrum-menu-item-label-inline-edge-to-content)) * -1);
 
   .spectrum-Menu-item {
     /*
@@ -795,12 +792,9 @@ governing permissions and limitations under the License.
 /*
   assume that if an item is collapsible and has two icons
   that one is a chevron and one is a non-chevron
-  and we need to adjust position of submenus to account for both of those icons
+  and we need to adjust padding of submenu items to account for both of those icons
 */
 .spectrum-Menu-item--collapsible > .spectrum-Menu-itemIcon + .spectrum-Menu-itemIcon ~ .spectrum-Menu {
-  /* reposition the entire submenu to be flush left with the parent menu item */
-  /* margin-inline-start: var(--mod-menu-item-collapisble-has-icon-submenu-margin-x-start, var(--spectrum-menu-item-collapisble-has-icon-submenu-margin-x-start)); */
-
   .spectrum-Menu-item {
     /*
       allow item to take up full width of parent,
