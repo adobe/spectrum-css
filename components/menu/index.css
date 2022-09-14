@@ -138,7 +138,7 @@ governing permissions and limitations under the License.
   /* --spectrum-menu-item-edge-to-chevron: var(--spectrum-menu-top-to-chevron-extra-large); */
 
   --spectrum-menu-section-header-font-size: var(--spectrum-font-size-300);
-  --spectrum-menu-section-header-min-height: var(--spectrum-component-height-300);
+  --spectrum-menu-section-header-min-height: var(--spectrum-component-height-300); 
   --spectrum-menu-section-header-min-width: var(--spectrum-component-height-300);
   --spectrum-menu-section-header-inline-edge-to-content: var(--spectrum-component-edge-to-text-300);
   /* --spectrum-menu-section-header-top-edge-to-icon: var(--spectrum-menu-top-to-chevron-extra-large); */
@@ -239,15 +239,29 @@ governing permissions and limitations under the License.
 
   /* "one" icon: chevron + additional icon (we don't count the chevron as an icon because it HAS to be there for a collapisble) */
   /* should result in a negative value */
-  --spectrum-menu-item-collapisble-has-icon-submenu-margin-x-start: calc((var(--spectrum-menu-item-label-inline-edge-to-content) + var(--spectrum-menu-item-checkmark-width) + var(--spectrum-menu-item-text-to-control) + var(--spectrum-menu-item-icon-width) + var(--spectrum-menu-item-label-text-to-visual)) * -1);
+  --spectrum-menu-item-collapisble-has-icon-submenu-margin-x-start: calc((var(--spectrum-menu-item-label-inline-edge-to-content) + var(--spectrum-menu-item-checkmark-width) + var(--spectrum-menu-item-text-to-control) + var(--spectrum-menu-item-icon-width) + var(--spectrum-menu-item-focus-indicator-width)) * -1);
+  /* --spectrum-menu-item-collapisble-has-icon-submenu-margin-x-start: -52px; */
   
-  --spectrum-menu-item-collapisble-has-icon-submenu-item-padding-x-start: calc((var(--spectrum-menu-item-label-inline-edge-to-content) + var(--spectrum-menu-item-label-inline-edge-to-content) + var(--spectrum-menu-item-checkmark-width) + var(--spectrum-menu-item-text-to-control) + var(--spectrum-menu-item-icon-width) + var(--spectrum-menu-item-label-text-to-visual)));
+  --spectrum-menu-item-collapisble-has-icon-submenu-item-padding-x-start:
+    calc((
+      var(--spectrum-menu-item-label-inline-edge-to-content)
+        + var(--spectrum-menu-item-checkmark-width)
+        + var(--spectrum-menu-item-text-to-control)
+        + var(--spectrum-menu-item-icon-width)
+        + var(--spectrum-menu-item-label-text-to-visual)
+    ));
 
   /* "no" icon: just the chevron (we're not counting it because it HAS to be there for a collapisble) */
   /* should result in a negative value */
   --spectrum-menu-item-collapisble-no-icon-submenu-margin-x-start: calc((var(--spectrum-menu-item-label-inline-edge-to-content) + var(--spectrum-menu-item-icon-width) + var(--spectrum-menu-item-label-text-to-visual)) * -1);;
-  
-  --spectrum-menu-item-collapisble-no-icon-submenu-item-padding-x-start: calc((var(--spectrum-menu-item-label-inline-edge-to-content) + var(--spectrum-menu-item-label-inline-edge-to-content) + var(--spectrum-menu-item-icon-width) + var(--spectrum-menu-item-label-text-to-visual) - var(--spectrum-menu-item-focus-indicator-width)));
+  /* --spectrum-menu-item-collapisble-no-icon-submenu-margin-x-start: -24px; */
+  --spectrum-menu-item-collapisble-no-icon-submenu-item-padding-x-start:
+    calc((
+      var(--spectrum-menu-item-label-inline-edge-to-content)
+        + var(--spectrum-menu-item-checkmark-width)
+        + var(--spectrum-menu-item-label-text-to-visual)
+        + var(--spectrum-menu-item-focus-indicator-width)
+    ));
   
   
   /* --spectrum-menu-margin-x: var(--spectrum-global-dimension-size-40);
@@ -374,7 +388,7 @@ governing permissions and limitations under the License.
 
   min-block-size: var(--mod-menu-item-min-height, var(--spectrum-menu-item-min-height));
   padding-block-end: var(--mod-menu-item-bottom-edge-to-text, var(--spectrum-menu-item-bottom-edge-to-text));
-  padding-inline: var(--mod-menu-item-label-inline-edge-to-content, var(--spectrum-menu-item-label-inline-edge-to-content));
+  /* padding-inline: var(--mod-menu-item-label-inline-edge-to-content, var(--spectrum-menu-item-label-inline-edge-to-content)); */
   
   /* padding: var(--spectrum-listitem-texticon-padding-y)
     var(--spectrum-listitem-texticon-padding-right)
@@ -385,7 +399,8 @@ governing permissions and limitations under the License.
 
   /* menu item indicator on selected elements */
   /* place it, but set it to transparent to prevent layout shifting when going from deselected to selected */
-  border-inline-start: var(--mod-menu-item-focus-indicator-width, var(--spectrum-menu-item-focus-indicator-width)) solid transparent;
+  /* border-inline-start: var(--mod-menu-item-focus-indicator-width, var(--spectrum-menu-item-focus-indicator-width)) solid transparent; */
+
 
   /* border-inline-start: var(--spectrum-listitem-texticon-focus-indicator-size) solid
     transparent;
@@ -455,7 +470,8 @@ governing permissions and limitations under the License.
 .spectrum-Menu-item:focus-ring,
 .spectrum-Menu-item.is-focused {
   background-color: var(--highcontrast-menu-item-background-color-key-focus, var(--mod-menu-item-background-color-key-focus, var(--spectrum-menu-item-background-color-key-focus)));
-  border-inline-start-color: var(--highcontrast-menu-item-focus-indicator-color, var(--mod-menu-item-focus-indicator-color, var(--spectrum-menu-item-focus-indicator-color)));
+  /* border-inline-start-color: var(--highcontrast-menu-item-focus-indicator-color, var(--mod-menu-item-focus-indicator-color, var(--spectrum-menu-item-focus-indicator-color))); */
+  box-shadow: inset var(--mod-menu-item-focus-indicator-width, var(--spectrum-menu-item-focus-indicator-width)) 0 var(--highcontrast-menu-item-focus-indicator-color, var(--mod-menu-item-focus-indicator-color, var(--spectrum-menu-item-focus-indicator-color)));
 
   .spectrum-Menu-itemIcon {
     fill: var(--highcontrast-menu-item-label-icon-color-focus, var(--mod-menu-item-label-icon-color-focus, var(--spectrum-menu-item-label-icon-color-focus)));
@@ -570,6 +586,21 @@ governing permissions and limitations under the License.
   grid-area: chevronArea;
 }
 
+.spectrum-Menu-item {
+  > :first-child {
+    background-color: pink;
+    margin-inline-start: calc(var(--mod-menu-item-label-inline-edge-to-content, var(--spectrum-menu-item-label-inline-edge-to-content)) + var(--spectrum-menu-item-focus-indicator-width));
+  }
+
+  .spectrum-Menu-item > :first-child {
+    background-color: transparent;
+    margin-inline-start: 0;
+  }
+
+
+}
+
+/* TODO: double check this. Is this necessary? An error? */
 .spectrum-Menu-item--collapsible .spectrum-Menu-chevron {
   grid-area: chevronAreaCollapsible;
 }
@@ -584,6 +615,7 @@ governing permissions and limitations under the License.
 
 .spectrum-Menu-item--collapsible .spectrum-Menu {
   grid-area: submenuArea;
+  grid-column: 1 / -1;
 }
 
 .spectrum-Menu-itemIcon {
@@ -603,7 +635,9 @@ governing permissions and limitations under the License.
 .spectrum-Icon + .spectrum-Menu-itemLabel,
 .spectrum-Menu-itemIcon + .spectrum-Menu-itemLabel,
 .spectrum-Icon ~ .spectrum-Menu-itemDescription,
-.spectrum-Menu-itemIcon ~ .spectrum-Menu-itemDescription {
+.spectrum-Menu-itemIcon ~ .spectrum-Menu-itemDescription,
+.spectrum-Icon + .spectrum-Menu-sectionHeading,
+.spectrum-Menu-itemIcon + .spectrum-Menu-sectionHeading {
   margin-inline-start: var(--mod-menu-item-label-text-to-visual, var(--spectrum-menu-item-label-text-to-visual));
 }
 
@@ -615,7 +649,6 @@ governing permissions and limitations under the License.
 }
 
 .spectrum-Menu-itemDescription {
-  /* background-color: orange; */
   font-size: var(--mod-menu-item-description-font-size, var(--spectrum-menu-item-description-font-size));
   hyphens: auto;
   overflow-wrap: break-word;
@@ -628,7 +661,8 @@ governing permissions and limitations under the License.
   /* line-height: var(--spectrum-listitem-texticon-label-line-height); */
   hyphens: auto;
   overflow-wrap: break-word;
-  margin-block-start: var(--mod-menu-item-top-edge-to-text, var(--spectrum-menu-item-top-edge-to-text));
+  /* margin-block-start: var(--mod-menu-item-top-edge-to-text, var(--spectrum-menu-item-top-edge-to-text)); */
+  margin-inline-end: var(--mod-menu-section-header-inline-edge-to-content, var(--spectrum-menu-section-header-inline-edge-to-content));
   /* inline-size: calc(
     100% - var(--spectrum-listitem-texticon-ui-icon-width) -
       var(--spectrum-listitem-texticon-icon-gap)
@@ -677,7 +711,8 @@ governing permissions and limitations under the License.
 
   min-inline-size: var(--mod-menu-item-min-height, var(--spectrum-menu-item-min-height));
   margin-block-start: var(--mod-menu-item-top-edge-to-text, var(--spectrum-menu-item-top-edge-to-text));
-  margin-inline-start: var(--mod-menu-section-header-inline-edge-to-content, var(--spectrum-menu-section-header-inline-edge-to-content));
+  /* margin-inline-start: var(--mod-menu-section-header-inline-edge-to-content, var(--spectrum-menu-section-header-inline-edge-to-content)); */
+  margin-inline-end: var(--mod-menu-section-header-inline-edge-to-content, var(--spectrum-menu-section-header-inline-edge-to-content));
 
   /* display: block;
   margin: var(--spectrum-listitem-texticon-heading-margin);
@@ -729,10 +764,14 @@ governing permissions and limitations under the License.
   }
 
   .spectrum-Menu.is-open {
+    /* border: 2px green solid; */
     display: block;
   }
 
-  .spectrum-Menu-item {}
+  .spectrum-Menu-item.is-focused {
+    /* border-inline-start-color: var(--highcontrast-menu-item-focus-indicator-color, var(--mod-menu-item-focus-indicator-color, var(--spectrum-menu-item-focus-indicator-color))); */
+    /* border: 2px red solid; */
+  }
 
 }
 
@@ -742,7 +781,7 @@ governing permissions and limitations under the License.
 */
 .spectrum-Menu-item--collapsible .spectrum-Menu {
   /* reposition the entire submenu to be flush left with the parent menu item */
-  margin-inline-start: var(--mod-menu-item-collapisble-no-icon-submenu-margin-x-start, var(--spectrum-menu-item-collapisble-no-icon-submenu-margin-x-start));
+  /* margin-inline-start: var(--mod-menu-item-collapisble-no-icon-submenu-margin-x-start, var(--spectrum-menu-item-collapisble-no-icon-submenu-margin-x-start)); */
 
   .spectrum-Menu-item {
     /*
@@ -760,7 +799,7 @@ governing permissions and limitations under the License.
 */
 .spectrum-Menu-item--collapsible > .spectrum-Menu-itemIcon + .spectrum-Menu-itemIcon ~ .spectrum-Menu {
   /* reposition the entire submenu to be flush left with the parent menu item */
-  margin-inline-start: var(--mod-menu-item-collapisble-has-icon-submenu-margin-x-start, var(--spectrum-menu-item-collapisble-has-icon-submenu-margin-x-start));
+  /* margin-inline-start: var(--mod-menu-item-collapisble-has-icon-submenu-margin-x-start, var(--spectrum-menu-item-collapisble-has-icon-submenu-margin-x-start)); */
 
   .spectrum-Menu-item {
     /*
