@@ -18,11 +18,11 @@ governing permissions and limitations under the License.
   --spectrum-actionbar-item-counter-line-height : var(--mod-line-height-100, var(--spectrum-line-height-100));
   --spectrum-actionbar-item-counter-color: var(--mod-neutral-content-color-default, var(--spectrum-neutral-content-color-default));
 
-  /* CJK language support for item counter */
+  /* cjk language support for item counter */
   &:lang(ja),
   &:lang(zh),
   &:lang(ko) {
-    --spectrum-actionbar-item-counter-line-height-cjk : var(--mod-CJK-line-height-100, var(--spectrum-CJK-line-height-100));
+    --spectrum-actionbar-item-counter-line-height-cjk : var(--mod-cjk-line-height-100, var(--spectrum-cjk-line-height-100));
   }
 
   /* colors - applied to popover */
@@ -135,7 +135,7 @@ governing permissions and limitations under the License.
     color: var(--mod-actionbar-item-counter-color, var(--spectrum-actionbar-item-counter-color));
     line-height: var(--mod-actionbar-item-counter-line-height, var(--spectrum-actionbar-item-counter-line-height));
 
-    /* CJK language support */
+    /* cjk language support */
     &:lang(ja),
     &:lang(zh),
     &:lang(ko) {
