@@ -168,7 +168,7 @@ governing permissions and limitations under the License.
   block-size: var(--spectrum-tag-height);
   position: relative;
   display: inline-flex;
-  box-sizing: border-box;
+  box-sizing: content-box;
   vertical-align: bottom;
   max-inline-size: 100%;
   outline: none;
