@@ -81,3 +81,44 @@ governing permissions and limitations under the License.
     --spectrum-tag-clear-button-spacing-inline-end: var(--spectrum-component-pill-edge-to-visual-200);
   }
 }
+
+/* windows high contrast mode */
+@media (forced-colors: active) {
+  .spectrum-Tag {
+    forced-color-adjust: none;
+    --spectrum-tag-border-color: ButtonText;
+    --spectrum-tag-border-color-hover: ButtonText;
+    --spectrum-tag-border-color-active: ButtonText;
+    --spectrum-tag-border-color-focus: ButtonText;
+
+    --spectrum-tag-background-color: ButtonFace;
+    --spectrum-tag-background-color-hover: ButtonFace;
+    --spectrum-tag-background-color-active: ButtonFace;
+    --spectrum-tag-background-color-focus: ButtonFace;
+
+    --spectrum-tag-content-color: ButtonText;
+    --spectrum-tag-content-color-hover: ButtonText;
+    --spectrum-tag-content-color-active: ButtonText;
+    --spectrum-tag-content-color-focus: ButtonText;
+
+    &.is-selected {
+      --spectrum-tag-border-color-selected: Highlight;
+      --spectrum-tag-border-color-selected-hover: Highlight;
+      --spectrum-tag-border-color-selected-active: Highlight;
+      --spectrum-tag-border-color-selected-focus: Highlight;
+
+      --spectrum-tag-background-color-selected: Highlight;
+      --spectrum-tag-background-color-selected-hover: Highlight;
+      --spectrum-tag-background-color-selected-active: Highlight;
+      --spectrum-tag-background-color-selected-focus: Highlight;
+
+      --spectrum-tag-content-color-selected: HighlightText;
+    }
+
+    &.is-disabled {
+      --spectrum-tag-border-color-disabled: GrayText;
+      --spectrum-tag-background-color-disabled: ButtonFace;
+      --spectrum-tag-content-color-disabled: GrayText;
+    }
+  }
+}

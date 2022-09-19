@@ -11,7 +11,6 @@ governing permissions and limitations under the License.
 */
 
 .spectrum-Tag {
-
   /* TODO - replace placeholder disabled avatar opacity with correct token once avatar is migrated */
   --spectrum-avatar-opacity-disabled: 0.3;
 
@@ -29,41 +28,49 @@ governing permissions and limitations under the License.
   /* label space to end edge */
   --spectrum-tag-label-spacing-inline-end: var(--spectrum-component-edge-to-text-100);
 
-  /* invalid border */
+  /* selected content */
+  --spectrum-tag-content-color-selected: var(--spectrum-white);
+
+  /* invalid variant */
   --spectrum-tag-border-color-invalid: var(--spectrum-negative-color-900);
   --spectrum-tag-border-color-invalid-hover: var(--spectrum-negative-color-1000);
   --spectrum-tag-border-color-invalid-active: var(--spectrum-negative-color-1100);
   --spectrum-tag-border-color-invalid-focus: var(--spectrum-negative-color-1000);
 
-  /* invalid content */
+  /* invalid variant content */
   --spectrum-tag-content-color-invalid: var(--spectrum-negative-content-color);
   --spectrum-tag-content-color-invalid-hover: var(--spectrum-negative-content-color-hover);
   --spectrum-tag-content-color-invalid-active: var(--spectrum-negative-content-color-down);
   --spectrum-tag-content-color-invalid-focus: var(--spectrum-negative-content-color-key-focus);
 
-  /* invalid selected background */
+  /* invalid selected variant */
+  --spectrum-tag-border-color-invalid-selected: var(--spectrum-negative-background-color-default);
+  --spectrum-tag-border-color-invalid-selected-hover: var(--spectrum-negative-background-color-hover);
+  --spectrum-tag-border-color-invalid-selected-focus: var(--spectrum-negative-background-color-down);
+  --spectrum-tag-border-color-invalid-selected-active: var(--spectrum-negative-background-color-key-focus);
   --spectrum-tag-background-color-invalid-selected: var(--spectrum-negative-background-color-default);
   --spectrum-tag-background-color-invalid-selected-hover: var(--spectrum-negative-background-color-hover);
   --spectrum-tag-background-color-invalid-selected-active: var(--spectrum-negative-background-color-down);
   --spectrum-tag-background-color-invalid-selected-focus: var(--spectrum-negative-background-color-key-focus);
 
-  /* emphasized */
+  /* invalid selected variant content */
+  --spectrum-tag-content-color-invalid-selected: var(--spectrum-white);
+
+  /* emphasized variant */
+  --spectrum-tag-border-color-emphasized: var(--spectrum-accent-background-color-default);
+  --spectrum-tag-border-color-emphasized-hover: var(--spectrum-accent-background-color-hover);
+  --spectrum-tag-border-color-emphasized-active: var(--spectrum-accent-background-color-down);
+  --spectrum-tag-border-color-emphasized-focus: var(--spectrum-accent-background-color-key-focus);
   --spectrum-tag-background-color-emphasized: var(--spectrum-accent-background-color-default);
   --spectrum-tag-background-color-emphasized-hover: var(--spectrum-accent-background-color-hover);
   --spectrum-tag-background-color-emphasized-active: var(--spectrum-accent-background-color-down);
   --spectrum-tag-background-color-emphasized-focus: var(--spectrum-accent-background-color-key-focus);
 
-  /* disabled */
-  --spectrum-tag-content-color-disabled: var(--spectrum-disabled-content-color);
-
-  /* invalid text */
-  --spectrum-tag-content-color-invalid-selected: var(--spectrum-white);
-
-  /* emphasized text */
+  /* emphasized variant content */
   --spectrum-tag-content-color-emphasized: var(--spectrum-white);
 
-  /* selected text */
-  --spectrum-tag-content-color-selected: var(--spectrum-white);
+  /* disabled variant content */
+  --spectrum-tag-content-color-disabled: var(--spectrum-disabled-content-color);
 
   /* ↧↧↧ Fallback defaults in case of no t-shirt size - set to Medium styles ↧↧↧ */
   /* avatar spacing fallback if no t-shirt size */
@@ -84,8 +91,6 @@ governing permissions and limitations under the License.
 
   /* icon fallback if no t-shirt size */
   --spectrum-tag-icon-size: var(--spectrum-workflow-icon-size-100);
-
-  /* icon spacing fallback if no t-shirt size */
   --spectrum-tag-icon-spacing-block-start: var(--spectrum-component-top-to-workflow-icon-100);
   --spectrum-tag-icon-spacing-block-end: var(--spectrum-component-top-to-workflow-icon-100);
 
@@ -150,50 +155,58 @@ governing permissions and limitations under the License.
 /* windows high contrast mode */
 @media (forced-colors: active) {
   .spectrum-Tag {
-    /* --spectrum-tag-border-color: Highlight;
-    --spectrum-tag-background-color: Highlight;
-    --spectrum-tag-content-color: Highlight;
-
-    --spectrum-tag-border-color-hover: Highlight;
-    --spectrum-tag-background-color-hover: Highlight; */
-
+    forced-color-adjust: none;
 
     &.is-invalid {
       --spectrum-tag-border-color-invalid: Highlight;
-      --spectrum-tag-content-color-invalid: Highlight;
+      --spectrum-tag-border-color-invalid-hover: Highlight;
+      --spectrum-tag-border-color-invalid-active: Highlight;
+      --spectrum-tag-border-color-invalid-focus: Highlight;
+
+      --spectrum-tag-content-color-invalid: CanvasText;
+      --spectrum-tag-content-color-invalid-hover: CanvasText;
+      --spectrum-tag-content-color-invalid-active: CanvasText;
+      --spectrum-tag-content-color-invalid-focus: CanvasText;
 
       &.is-selected {
-        forced-color-adjust: none;
+        --spectrum-tag-border-color-invalid-selected: Highlight;
+        --spectrum-tag-border-color-invalid-selected-hover: Highlight;
+        --spectrum-tag-border-color-invalid-selected-focus: Highlight;
+        --spectrum-tag-border-color-invalid-selected-active: Highlight;
+
         --spectrum-tag-background-color-invalid-selected: Highlight;
-        --spectrum-tag-content-color-invalid-selected: Highlight;
+        --spectrum-tag-background-color-invalid-selected-hover: Highlight;
+        --spectrum-tag-background-color-invalid-selected-active: Highlight;
+        --spectrum-tag-background-color-invalid-selected-focus: Highlight;
+
+        --spectrum-tag-content-color-invalid-selected: HighlightText;
       }
     }
 
-    &.is-selected {
-      forced-color-adjust: none;
-      --spectrum-tag-background-color-selected: Highlight;
-      --spectrum-tag-content-color-selected: HighlightText;
-    }
-
     &.is-emphasized {
-      --spectrum-tag-background-color-emphasized: Highlight;
-    }
+      --spectrum-tag-border-color-emphasized: Highlight;
+      --spectrum-tag-border-color-emphasized-hover: Highlight;
+      --spectrum-tag-border-color-emphasized-active: Highlight;
+      --spectrum-tag-border-color-emphasized-focus: Highlight;
 
-    &.is-disabled {
-      --spectrum-tag-border-color-disabled: GrayText;
-      //--spectrum-tag-background-color-disabled: GrayText;
-      --spectrum-tag-content-color-disabled: GrayText;
+      --spectrum-tag-background-color-emphasized: ButtonFace;
+      --spectrum-tag-background-color-emphasized-hover: ButtonFace;
+      --spectrum-tag-background-color-emphasized-active: ButtonFace;
+      --spectrum-tag-background-color-emphasized-focus: ButtonFace;
+
+      --spectrum-tag-content-color-emphasized: CanvasText;
     }
   }
 }
 
 .spectrum-Tag {
   border-color: var(--spectrum-tag-border-color);
+  background-color: var(--spectrum-tag-background-color);
+  color: var(--spectrum-tag-content-color);
+
   border-radius: var(--spectrum-tag-corner-radius);
   border-width: var(--spectrum-tag-border-width);
   border-style: solid;
-
-  background-color: var(--spectrum-tag-background-color);
 
   padding-inline-start: var(--spectrum-tag-spacing-inline-start);
   block-size: var(--spectrum-tag-height);
@@ -229,7 +242,6 @@ governing permissions and limitations under the License.
 
   > .spectrum-Icon,
   > .spectrum-Avatar {
-    color: var(--spectrum-tag-content-color);
     margin-inline-end: var(--spectrum-tag-clear-button-spacing-inline-start);
   }
 
@@ -246,7 +258,7 @@ governing permissions and limitations under the License.
     margin-block-end: var(--spectrum-tag-avatar-spacing-block-end);
   }
 
-  /* clear button ✖ */
+  /* clear button */
   .spectrum-Tag-clearButton {
     margin-block-start: var(--spectrum-tag-clear-button-spacing-block);
     margin-block-end: var(--spectrum-tag-clear-button-spacing-block);
@@ -256,6 +268,9 @@ governing permissions and limitations under the License.
 
     /* end spacing is theme-specific */
     margin-inline-end: var(--spectrum-tag-clear-button-spacing-inline-end);
+
+    /* ensure clear button is correct color */
+    color: currentcolor;
 
     /* TODO: re-evaluate after ClearButton migration */
     .spectrum-ClearButton-fill {
@@ -268,169 +283,45 @@ governing permissions and limitations under the License.
   &:hover {
     border-color: var(--spectrum-tag-border-color-hover);
     background-color: var(--spectrum-tag-background-color-hover);
-
-    > .spectrum-Tag-label,
-    > .spectrum-Icon,
-    > .spectrum-Avatar,
-    > .spectrum-Tag-clearButton {
-      color: var(--spectrum-tag-content-color-hover);
-    }
+    color: var(--spectrum-tag-content-color-hover);
   }
 
   &:active {
     border-color: var(--spectrum-tag-border-color-active);
     background-color: var(--spectrum-tag-background-color-active);
-
-    > .spectrum-Tag-label,
-    > .spectrum-Icon,
-    > .spectrum-Avatar,
-    > .spectrum-Tag-clearButton {
-      color: var(--spectrum-tag-content-color-active);
-    }
+    color: var(--spectrum-tag-content-color-active)
   }
 
   &:focus-visible,
   &.is-focused {
     border-color: var(--spectrum-tag-border-color-focus);
     background-color: var(--spectrum-tag-background-color-focus);
-
-    > .spectrum-Tag-label,
-    > .spectrum-Icon,
-    > .spectrum-Avatar,
-    > .spectrum-Tag-clearButton {
-      color: var(--spectrum-tag-content-color-focus);
-    }
+    color: var(--spectrum-tag-content-color-focus);
   }
 }
 
-.spectrum-Tag.is-invalid {
-  border-color: var(--spectrum-tag-border-color-invalid);
-  background-color: var(--spectrum-tag-background-color);s
-
-  > .spectrum-Tag-label,
-  > .spectrum-Icon,
-  > .spectrum-Avatar,
-  > .spectrum-Tag-clearButton {
-    color: var(--spectrum-tag-content-color-invalid);
-  }
-
-  &:hover {
-    border-color: var(--spectrum-tag-border-color-invalid-hover);
-
-    > .spectrum-Tag-label,
-    > .spectrum-Icon,
-    > .spectrum-Avatar,
-    > .spectrum-Tag-clearButton {
-      color: var(--spectrum-tag-content-color-invalid-hover);
-    }
-  }
-
-  &:active {
-    border-color: var(--spectrum-tag-border-color-invalid-active);
-
-    > .spectrum-Tag-label,
-    > .spectrum-Icon,
-    > .spectrum-Avatar,
-    > .spectrum-Tag-clearButton {
-      color: var(--spectrum-tag-content-color-invalid-active);
-    }
-  }
-
-  &:focus-visible,
-  &.is-focused {
-    border-color: var(--spectrum-tag-border-color-invalid-focus);
-
-    > .spectrum-Tag-label,
-    > .spectrum-Icon,
-    > .spectrum-Avatar,
-    > .spectrum-Tag-clearButton {
-      color: var(--spectrum-tag-content-color-invalid-focus);
-    }
-  }
-
-  &.is-selected {
-    border-color: var(--spectrum-tag-background-color-invalid-selected);
-    background-color: var(--spectrum-tag-background-color-invalid-selected);
-
-    > .spectrum-Tag-label,
-    > .spectrum-Icon,
-    > .spectrum-Avatar,
-    > .spectrum-Tag-clearButton {
-      color: var(--spectrum-tag-content-color-invalid-selected);
-    }
-
-    &:hover {
-      border-color: var(--spectrum-tag-background-color-invalid-selected-hover);
-      background-color: var(--spectrum-tag-background-color-invalid-selected-hover);
-    }
-
-    &:active {
-      border-color: var(--spectrum-tag-background-color-invalid-selected-active);
-      background-color: var(--spectrum-tag-background-color-invalid-selected-active);
-    }
-
-    &:focus-visible,
-    &.is-focused {
-      background-color: var(--spectrum-tag-background-color-invalid-selected-focus);
-    }
-  }
-}
-
-
-/* emphasized */
-.spectrum-Tag.is-emphasized {
-  border-color: var(--spectrum-tag-background-color-emphasized);
-  background-color: var(--spectrum-tag-background-color-emphasized);
-
-  > .spectrum-Tag-label,
-  > .spectrum-Icon,
-  > .spectrum-Avatar,
-  > .spectrum-Tag-clearButton {
-    color: var(--spectrum-tag-content-color-emphasized);
-  }
-
-  &:hover {
-    border-color: var(--spectrum-tag-background-color-emphasized-hover);
-    background-color: var(--spectrum-tag-background-color-emphasized-hover);
-  }
-
-  &:active {
-    border-color: var(--spectrum-tag-background-color-emphasized-active);
-    background-color: var(--spectrum-tag-background-color-emphasized-active);
-  }
-
-  &:focus-visible,
-  &.is-focused {
-    border-color: var(--spectrum-tag-background-color-emphasized-focus);
-    background-color: var(--spectrum-tag-background-color-emphasized-focus);
-  }
-}c
 
 /* selected */
 .spectrum-Tag.is-selected {
-  border-color: var(--spectrum-tag-background-color-selected);
+  border-color: var(--spectrum-tag-border-color-selected);
   background-color: var(--spectrum-tag-background-color-selected);
-
-  > .spectrum-Tag-label,
-  > .spectrum-Icon,
-  > .spectrum-Avatar,
-  > .spectrum-Tag-clearButton {
-    color: var(--spectrum-tag-content-color-selected);
-  }
+  color: var(--spectrum-tag-content-color-selected);
 
   &:hover {
+    border-color: var(--spectrum-tag-border-color-selected-hover);
     background-color: var(--spectrum-tag-background-color-selected-hover);
   }
 
   &:active {
+    border-color: var(--spectrum-tag-border-color-selected-active);
     background-color: var(--spectrum-tag-background-color-selected-active);
   }
 
   &:focus-visible,
   &.is-focused {
+    border-color: var(--spectrum-tag-border-color-selected-focus);
     background-color: var(--spectrum-tag-background-color-selected-focus);
   }
-
 
   &:focus-visible,
   &.is-focused {
@@ -450,17 +341,81 @@ governing permissions and limitations under the License.
   }
 }
 
+
+.spectrum-Tag.is-invalid {
+  border-color: var(--spectrum-tag-border-color-invalid);
+  color: var(--spectrum-tag-content-color-invalid);
+
+  &:hover {
+    border-color: var(--spectrum-tag-border-color-invalid-hover);
+    color: var(--spectrum-tag-content-color-invalid-hover);
+  }
+
+  &:active {
+    border-color: var(--spectrum-tag-border-color-invalid-active);
+    color: var(--spectrum-tag-content-color-invalid-active);
+  }
+
+  &:focus-visible,
+  &.is-focused {
+    border-color: var(--spectrum-tag-border-color-invalid-focus);
+    color: var(--spectrum-tag-content-color-invalid-focus);
+  }
+
+  &.is-selected {
+    border-color: var(--spectrum-tag-border-color-invalid-selected);
+    background-color: var(--spectrum-tag-background-color-invalid-selected);
+    color: var(--spectrum-tag-content-color-invalid-selected);
+
+    &:hover {
+      border-color: var(--spectrum-tag-border-color-invalid-selected-hover);
+      background-color: var(--spectrum-tag-background-color-invalid-selected-hover);
+    }
+
+    &:active {
+      border-color: var(--spectrum-tag-border-color-invalid-selected-active);
+      background-color: var(--spectrum-tag-background-color-invalid-selected-active);
+    }
+
+    &:focus-visible,
+    &.is-focused {
+      border-color: var(--spectrum-tag-border-color-invalid-selected-focus);
+      background-color: var(--spectrum-tag-background-color-invalid-selected-focus);
+    }
+  }
+}
+
+
+/* emphasized */
+.spectrum-Tag.is-emphasized {
+  border-color: var(--spectrum-tag-border-color-emphasized);
+  background-color: var(--spectrum-tag-background-color-emphasized);
+  color: var(--spectrum-tag-content-color-emphasized);
+
+  &:hover {
+    border-color: var(--spectrum-tag-border-color-emphasized-hover);
+    background-color: var(--spectrum-tag-background-color-emphasized-hover);
+  }
+
+  &:active {
+    border-color: var(--spectrum-tag-border-color-emphasized-active);
+    background-color: var(--spectrum-tag-background-color-emphasized-active);
+  }
+
+  &:focus-visible,
+  &.is-focused {
+    border-color: var(--spectrum-tag-border-color-emphasized-focus);
+    background-color: var(--spectrum-tag-background-color-emphasized-focus);
+  }
+}
+
+
+/* disabled */
 .spectrum-Tag.is-disabled {
   border-color: var(--spectrum-tag-border-color-disabled);
   background-color: var(--spectrum-tag-background-color-disabled);
+  color: var(--spectrum-tag-content-color-disabled);
   pointer-events: none;
-
-  > .spectrum-Tag-label,
-  > .spectrum-Icon,
-  > .spectrum-Avatar,
-  > .spectrum-Tag-clearButton {
-    color: var(--spectrum-tag-content-color-disabled);
-  }
 
   > .spectrum-Avatar {
     opacity: var(--spectrum-avatar-opacity-disabled);
