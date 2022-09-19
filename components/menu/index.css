@@ -348,10 +348,15 @@ governing permissions and limitations under the License.
       line-height: var(--mod-menu-item-label-cjk-line-height, var(--spectrum-menu-item-label-cjk-line-height));
     }
   }
+
+  .spectrum-Menu-divider {
+    overflow: visible;
+    inline-size: auto;
+    margin-block: var(--mod-menu-item-bottom-edge-to-text, var(--spectrum-menu-item-bottom-edge-to-text));
+  }
 }
 
 .spectrum-Menu-itemIcon {
-  /* margin-block-start: var(--mod-menu-item-top-edge-to-icon, var(--spectrum-menu-item-top-edge-to-icon)); */
   fill: var(--highcontrast-menu-item-label-icon-color-default, var(--mod-menu-item-label-icon-color-default, var(--spectrum-menu-item-label-icon-color-default)));
 }
 
@@ -542,9 +547,7 @@ governing permissions and limitations under the License.
 
 .spectrum-Menu-itemIcon {
   grid-area: iconArea;
-  /* grid-row: 1 / -1; */
   align-self: center;
-  /* todo give chevron some top margin */
 }
 
 .spectrum-Menu-checkmark {
@@ -630,9 +633,6 @@ governing permissions and limitations under the License.
 }
 
 .spectrum-Menu-itemIcon:not(.spectrum-Menu-chevron, .spectrum-Menu-checkmark) {
-  /* flex-shrink: 0;
-  align-self: flex-start; */
-
   block-size: var(--mod-menu-item-icon-height, var(--spectrum-menu-item-icon-height));
   inline-size: var(--mod-menu-item-icon-width, var(--spectrum-menu-item-icon-width));
 }
@@ -687,7 +687,6 @@ governing permissions and limitations under the License.
 
 .spectrum-Menu-itemValue {
   font-size: var(--mod-menu-item-label-font-size, var(--spectrum-menu-item-label-font-size));
-  /* margin-block-start: var(--mod-menu-item-top-edge-to-text, var(--spectrum-menu-item-top-edge-to-text)); */
   justify-self: end;
 }
 
@@ -826,9 +825,16 @@ governing permissions and limitations under the License.
 }
 
 .spectrum-Menu-item--drillIn {
-  .spectrum-Menu-chevron {
-    /* align-self: center; */
-    /* margin-block-start: var(--mod-menu-item-top-edge-to-text, var(--spectrum-menu-item-top-edge-to-text)); */
+  &.is-open {
+    background-color: var(--highcontrast-menu-item-background-color-hover, var(--mod-menu-item-background-color-hover, var(--spectrum-menu-item-background-color-hover)));
+
+    .spectrum-Menu-itemIcon {
+      fill: var(--highcontrast-menu-item-label-icon-color-hover, var(--mod-menu-item-label-icon-color-hover, var(--spectrum-menu-item-label-icon-color-hover)));
+    }
+
+    .spectrum-Menu-checkmark {
+      fill: var(--highcontrast-menu-checkmark-icon-color-hover, var(--mod-menu-checkmark-icon-color-hover, var(--spectrum-menu-checkmark-icon-color-hover)));
+    }
   }
 
   .spectrum-Menu-itemLabel + .spectrum-Menu-chevron {
