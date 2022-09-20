@@ -37,6 +37,11 @@ governing permissions and limitations under the License.
     --spectrum-tag-content-color-focus: var(--spectrum-neutral-content-color-key-focus);
 
     /* selected */
+    --spectrum-tag-border-color-selected: var(--spectrum-neutral-background-color-default);
+    --spectrum-tag-border-color-selected-hover: var(--spectrum-neutral-background-color-hover);
+    --spectrum-tag-border-color-selected-active: var(--spectrum-neutral-background-color-down);
+    --spectrum-tag-border-color-selected-focus: var(--spectrum-neutral-background-color-key-focus);
+
     --spectrum-tag-background-color-selected: var(--spectrum-neutral-background-color-default);
     --spectrum-tag-background-color-selected-hover: var(--spectrum-neutral-background-color-hover);
     --spectrum-tag-background-color-selected-active: var(--spectrum-neutral-background-color-down);
