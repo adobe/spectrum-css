@@ -562,9 +562,17 @@ governing permissions and limitations under the License.
     padding-inline-start: var(--spectrum-menu-item-selectable-edge-to-text-not-selected);
   }
 
+  .spectrum-Menu-checkmark {
+    display: none;
+  }
+
   /* remove inline-start spacing once an item is selected and a checkmark appears */
   .spectrum-Menu-item.is-selected {
     padding-inline-start: var(--spectrum-menu-item-label-inline-edge-to-content);
+    
+    .spectrum-Menu-checkmark {
+      display: block;
+    }
   }
 }
 
