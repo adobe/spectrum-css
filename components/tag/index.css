@@ -249,8 +249,8 @@ governing permissions and limitations under the License.
     block-size: var(--spectrum-tag-icon-size);
     inline-size: var(--spectrum-tag-icon-size);
 
-    margin-block-start: var(--spectrum-tag-icon-spacing-block-start);
-    margin-block-end: var(--spectrum-tag-icon-spacing-block-end);
+    margin-block-start: calc(var(--spectrum-tag-icon-spacing-block-start) - var(--spectrum-tag-border-width));
+    margin-block-end: calc(var(--spectrum-tag-icon-spacing-block-end) - var(--spectrum-tag-border-width));
   }
 
   > .spectrum-Avatar {
