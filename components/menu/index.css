@@ -635,6 +635,13 @@ governing permissions and limitations under the License.
   inline-size: var(--mod-menu-item-checkmark-width, var(--spectrum-menu-item-checkmark-width));
 }
 
+.spectrum-Menu-item:not(.is-selected) {
+  .spectrum-Menu-checkmark + .spectrum-Menu-itemLabel,
+  .spectrum-Menu-checkmark + .spectrum-Menu-itemLabel {
+    margin-inline-start: 0;
+  }
+}
+
 .spectrum-Icon + .spectrum-Menu-itemLabel,
 .spectrum-Menu-itemIcon + .spectrum-Menu-itemLabel,
 .spectrum-Icon ~ .spectrum-Menu-itemDescription,
