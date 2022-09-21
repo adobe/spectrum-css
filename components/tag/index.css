@@ -311,10 +311,12 @@ governing permissions and limitations under the License.
       display: inline-block;
       position: absolute;
       margin: auto;
-      top: calc(-2 * (var(--mod-tag-focus-ring-gap, var(--spectrum-tag-focus-ring-gap))));
-      left: calc(-2 * (var(--mod-tag-focus-ring-gap, var(--spectrum-tag-focus-ring-gap))));
-      width: calc(100% + (var(--mod-tag-focus-ring-gap, var(--spectrum-tag-focus-ring-gap)) * 2));
-      height: calc(100% + (var(--mod-tag-focus-ring-gap, var(--spectrum-tag-focus-ring-gap)) * 2));
+      left: calc((var(--mod-tag-focus-ring-gap, var(--spectrum-tag-focus-ring-gap)) * -2) + (var(--mod-tag-border-width, var(--spectrum-tag-border-width)) * -1));
+      top: calc((var(--mod-tag-focus-ring-gap, var(--spectrum-tag-focus-ring-gap)) * -2) + (var(--mod-tag-border-width, var(--spectrum-tag-border-width)) * -1));
+      width: calc(100% + (var(--mod-tag-focus-ring-gap, var(--spectrum-tag-focus-ring-gap)) * 2)
+                  + (var(--mod-tag-border-width, var(--spectrum-tag-border-width)) * 2));
+      height: calc(100% + (var(--mod-tag-focus-ring-gap, var(--spectrum-tag-focus-ring-gap)) * 2)
+                  + (var(--mod-tag-border-width, var(--spectrum-tag-border-width)) * 2));
       border-color: var(--highcontrast-tag-focus-ring-color, var(--mod-tag-focus-ring-color, var(--spectrum-tag-focus-ring-color)));
       border-radius: calc(var(--mod-tag-corner-radius, var(--spectrum-tag-corner-radius))
                            + var(--mod-tag-focus-ring-gap, var(--spectrum-tag-focus-ring-gap)));
