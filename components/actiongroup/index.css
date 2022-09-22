@@ -1,5 +1,5 @@
 /*
-Copyright 2019 Adobe. All rights reserved.
+Copyright 2022 Adobe. All rights reserved.
 This file is licensed to you under the Apache License, Version 2.0 (the "License");
 you may not use this file except in compliance with the License. You may obtain a copy
 of the License at http://www.apache.org/licenses/LICENSE-2.0
@@ -10,95 +10,89 @@ OF ANY KIND, either express or implied. See the License for the specific languag
 governing permissions and limitations under the License.
 */
 
-.spectrum-ActionGroup {
-  --spectrum-actiongroup-button-gap-reset: 0;
-}
-
 /* hack: use var so it's not reported as unused */
 .🤫 {
-  border-radius: var(--spectrum-actionbutton-focus-ring-border-radius-adjusted);
+  border-radius: var(--spectrum-actionbutton-focus-ring-border-radius);
+}
+
+.spectrum-ActionGroup {
+  --spectrum-actiongroup-button-spacing-reset: 0;
+  --spectrum-actiongroup-border-radius-reset: 0;
+  --spectrum-actiongroup-border-radius: var(--spectrum-corner-radius-100);
+}
+
+.spectrum-ActionGroup--sizeS {
+  --spectrum-actiongroup-horizontal-spacing-regular: var(--spectrum-spacing-75);
+  --spectrum-actiongroup-vertical-spacing-regular: var(--spectrum-spacing-75);
+}
+
+.spectrum-ActionGroup--sizeM {
+  --spectrum-actiongroup-horizontal-spacing-regular: var(--spectrum-spacing-100);
+  --spectrum-actiongroup-vertical-spacing-regular: var(--spectrum-spacing-100);
+}
+
+.spectrum-ActionGroup--sizeL {
+  --spectrum-actiongroup-horizontal-spacing-regular: var(--spectrum-spacing-100);
+  --spectrum-actiongroup-vertical-spacing-regular: var(--spectrum-spacing-100);
+}
+
+.spectrum-ActionGroup--sizeXL {
+  --spectrum-actiongroup-horizontal-spacing-regular: var(--spectrum-spacing-100);
+  --spectrum-actiongroup-vertical-spacing-regular: var(--spectrum-spacing-100);
 }
 
 .spectrum-ActionGroup {
   display: flex;
   flex-wrap: wrap;
+  gap: var(--mod-actiongroup-horizontal-spacing-regular, var(--spectrum-actiongroup-horizontal-spacing-regular));
 
   .spectrum-ActionGroup-item {
     flex-shrink: 0;
   }
 
   &:not(.spectrum-ActionGroup--vertical)&:not(.spectrum-ActionGroup--compact) {
-    margin-block-start: calc(-1 * var(--spectrum-actiongroup-button-gap-y));
-
     .spectrum-ActionGroup-item {
       flex-shrink: 0;
-      margin-block-start: var(--spectrum-actiongroup-button-gap-y);
-
-      &:not(:last-child) {
-        margin-inline-end: var(--spectrum-actiongroup-button-gap-x);
-      }
     }
   }
 }
 
 .spectrum-ActionGroup--vertical {
+  gap: var(--mod-actiongroup-vertical-spacing-regular, var(--spectrum-actiongroup-vertical-spacing-regular));
   display: inline-flex;
   flex-direction: column;
-
-  .spectrum-ActionGroup-item + .spectrum-ActionGroup-item {
-    margin-block-start: var(--spectrum-actiongroup-button-gap-y);
-    margin-inline-start: var(--spectrum-actiongroup-button-gap-reset);
-  }
-
-  &.spectrum-ActionGroup--vertical {
-    margin-block-start: var(--spectrum-actiongroup-button-gap-y);
-    margin-inline-start: var(--spectrum-actiongroup-button-gap-reset);
-  }
 }
 
 .spectrum-ActionGroup--compact {
-  gap: var(--spectrum-actiongroup-compact-button-gap);
-  &.spectrum-ActionGroup--quiet {
-    .spectrum-ActionGroup-item + .spectrum-ActionGroup-item {
-      margin-inline-start: var(--spectrum-actiongroup-quiet-compact-button-gap);
-      margin-block-start: var(--spectrum-actiongroup-button-gap-reset);
-    }
+  gap: var(--mod-actiongroup-gap-size-compact, var(--spectrum-actiongroup-gap-size-compact));
 
-    &.spectrum-ActionGroup--vertical {
-      .spectrum-ActionGroup-item + .spectrum-ActionGroup-item {
-        margin-inline-start: var(--spectrum-actiongroup-button-gap-reset);
-        margin-block-start: var(
-          --spectrum-actiongroup-quiet-compact-button-gap
-        );
-      }
-    }
-  }
   &:not(.spectrum-ActionGroup--quiet) {
     flex-wrap: nowrap;
 
     .spectrum-ActionGroup-item {
       position: relative;
-      border-radius: 0;
+      border-radius: var(--mod-actiongroup-border-radius-reset, var(--spectrum-actiongroup-border-radius-reset));
       z-index: 0;
-      --spectrum-actionbutton-focus-ring-border-radius-adjusted: var(--spectrum-alias-border-radius-xsmall);
 
       &:first-child {
-        border-start-start-radius: var(--spectrum-actionbutton-m-texticon-border-radius);
-        border-end-start-radius: var(--spectrum-actionbutton-m-texticon-border-radius);
-        margin-inline-end: calc(
-          -1 * var(--spectrum-actionbutton-m-texticon-border-size) / 2
-        );
-        --spectrum-actionbutton-focus-ring-border-radius-adjusted: calc(var(--spectrum-actionbutton-m-quiet-textonly-border-radius) + var(--spectrum-actionbutton-m-textonly-focus-ring-gap)) var(--spectrum-alias-border-radius-xsmall) var(--spectrum-alias-border-radius-xsmall) calc(var(--spectrum-actionbutton-m-quiet-textonly-border-radius) + var(--spectrum-actionbutton-m-textonly-focus-ring-gap));
+        border-start-start-radius: var(--mod-actiongroup-border-radius, var(--spectrum-actiongroup-border-radius));
+        border-end-start-radius: var(--mod-actiongroup-border-radius, var(--spectrum-actiongroup-border-radius));
+        margin-inline-start: var(--mod-actiongroup-button-spacing-reset, var(--spectrum-actiongroup-button-spacing-reset));
+        --spectrum-actionbutton-focus-ring-border-radius: var(--mod-actiongroup-border-radius, var(--spectrum-actiongroup-border-radius)) 0px 0px var(--mod-actiongroup-border-radius, var(--spectrum-actiongroup-border-radius));
+      }
+      
+      & + .spectrum-ActionGroup-item {
+        margin-inline-start: var(--mod-actiongroup-horizontal-spacing-compact, var(--spectrum-actiongroup-horizontal-spacing-compact));
+        margin-inline-end: var(--mod-actiongroup-horizontal-spacing-compact, var(--spectrum-actiongroup-horizontal-spacing-compact));
+        --spectrum-actionbutton-focus-ring-border-radius: 0px;
       }
 
       &:last-child {
-        border-start-end-radius: var(--spectrum-actionbutton-m-texticon-border-radius);
-        border-end-end-radius: var(--spectrum-actionbutton-m-texticon-border-radius);
-        margin-inline-start: calc(
-          -1 * var(--spectrum-actionbutton-m-texticon-border-size) / 2
-        );
-        margin-inline-end: 0;
-        --spectrum-actionbutton-focus-ring-border-radius-adjusted: var(--spectrum-alias-border-radius-xsmall) calc(var(--spectrum-actionbutton-m-quiet-textonly-border-radius) + var(--spectrum-actionbutton-m-textonly-focus-ring-gap)) calc(var(--spectrum-actionbutton-m-quiet-textonly-border-radius) + var(--spectrum-actionbutton-m-textonly-focus-ring-gap)) var(--spectrum-alias-border-radius-xsmall);
+        border-start-end-radius: var(--mod-actiongroup-border-radius, var(--spectrum-actiongroup-border-radius));
+        border-end-end-radius: var(--mod-actiongroup-border-radius, var(--spectrum-actiongroup-border-radius));
+        margin-inline-start: var(--mod-actiongroup-horizontal-spacing-compact, var(--spectrum-actiongroup-horizontal-spacing-compact));
+        margin-inline-end: var(--mod-actiongroup-border-radius-reset, var(--spectrum-actiongroup-border-radius-reset));
+        --spectrum-actionbutton-focus-ring-border-radius: 0px var(--mod-actiongroup-border-radius, var(--spectrum-actiongroup-border-radius)) var(--mod-actiongroup-border-radius, var(--spectrum-actiongroup-border-radius)) 0px;
       }
 
       &.is-selected {
@@ -114,14 +108,6 @@ governing permissions and limitations under the License.
         z-index: 3;
       }
 
-      & + .spectrum-ActionGroup-item {
-        margin-inline-start: calc(
-          -1 * var(--spectrum-actionbutton-m-texticon-border-size) / 2
-        );
-        margin-inline-end: calc(
-          -1 * var(--spectrum-actionbutton-m-texticon-border-size) / 2
-        );
-      }
 
       .spectrum-ActionButton-label {
         inline-size: auto;
@@ -129,36 +115,33 @@ governing permissions and limitations under the License.
     }
 
     &.spectrum-ActionGroup--vertical {
-      gap: 0;
-      .spectrum-ActionGroup-item {
-        border-radius: 0;
+      gap: var(--mod-actiongroup-gap-size-compact, var(--spectrum-actiongroup-gap-size-compact));
 
-        & + .spectrum-ActionGroup-item {
-          margin-block-start: calc(
-            -1 * var(--spectrum-actionbutton-m-texticon-border-size) / 2
-          );
-          margin-block-end: calc(
-            -1 * var(--spectrum-actionbutton-m-texticon-border-size) / 2
-          );
-        }
+      .spectrum-ActionGroup-item {
+        border-radius: var(--mod-actiongroup-border-radius-reset, var(--spectrum-actiongroup-border-radius-reset));
 
         &:first-child {
-          border-start-start-radius: var(--spectrum-actionbutton-m-texticon-border-radius);
-          border-start-end-radius: var(--spectrum-actionbutton-m-texticon-border-radius);
-          border-radius: 0;
-          margin-block-end: calc(
-            -1 * var(--spectrum-actionbutton-m-texticon-border-size) / 2
-          );
+          border-start-start-radius: var(--mod-actiongroup-border-radius, var(--spectrum-actiongroup-border-radius));
+          border-start-end-radius: var(--mod-actiongroup-border-radius, var(--spectrum-actiongroup-border-radius));
+          margin-inline-end: var(--mod-actiongroup-button-spacing-reset, var(--spectrum-actiongroup-button-spacing-reset));
+          margin-block-start: var(--mod-actiongroup-vertical-spacing-compact, var(--spectrum-actiongroup-vertical-spacing-compact));
+          margin-block-end: var(--mod-actiongroup-vertical-spacing-compact, var(--spectrum-actiongroup-vertical-spacing-compact));
+          --spectrum-actionbutton-focus-ring-border-radius: var(--mod-actiongroup-border-radius, var(--spectrum-actiongroup-border-radius)) var(--mod-actiongroup-border-radius, var(--spectrum-actiongroup-border-radius)) 0px 0px;
+        }
+
+        & + .spectrum-ActionGroup-item {
+          margin-inline-start: var(--mod-actiongroup-button-spacing-reset, var(--spectrum-actiongroup-button-spacing-reset));
+          margin-inline-end: var(--mod-actiongroup-button-spacing-reset, var(--spectrum-actiongroup-button-spacing-reset));
+          margin-block-start: var(--mod-actiongroup-button-spacing-reset, var(--spectrum-actiongroup-button-spacing-reset));
+          margin-block-end: var(--mod-actiongroup-vertical-spacing-compact, var(--spectrum-actiongroup-vertical-spacing-compact));
         }
 
         &:last-child {
-          border-end-start-radius: var(--spectrum-actionbutton-m-texticon-border-radius);
-          border-end-end-radius: var(--spectrum-actionbutton-m-texticon-border-radius);
-          border-radius: 0;
-          margin-block-start: calc(
-            -1 * var(--spectrum-actionbutton-m-texticon-border-size) / 2
-          );
-          margin-block-end: 0;
+          border-end-start-radius: var(--mod-actiongroup-border-radius, var(--spectrum-actiongroup-border-radius));
+          border-end-end-radius: var(--mod-actiongroup-border-radius, var(--spectrum-actiongroup-border-radius));
+          margin-block-start: var(--mod-actiongroup-vertical-spacing-compact, var(--spectrum-actiongroup-vertical-spacing-compact));
+          margin-block-end: var(--mod-actiongroup-button-spacing-reset, var(--spectrum-actiongroup-button-spacing-reset));
+          --spectrum-actionbutton-focus-ring-border-radius: 0px 0px var(--mod-actiongroup-border-radius, var(--spectrum-actiongroup-border-radius)) var(--mod-actiongroup-border-radius, var(--spectrum-actiongroup-border-radius));
         }
       }
     }
