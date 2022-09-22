@@ -52,8 +52,12 @@ governing permissions and limitations under the License.
 }
 
 @media (forced-colors: active) {
-  /* Border is visible in high contrast mode */
-  --highcontrast-toast-border-color: ButtonText;
+  .spectrum-Toast {
+    /* Border is visible in high contrast mode */
+    --highcontrast-toast-border-color: ButtonText;
+
+    border: var(--mod-toast-border-width, var(--spectrum-toast-border-width)) solid var(--highcontrast-toast-border-color, transparent);
+  }
 }
 
 .spectrum-Toast {
@@ -63,7 +67,6 @@ governing permissions and limitations under the License.
   align-items: stretch;
   min-block-size: var(--spectrum-toast-block-size);
 
-  border: var(--mod-toast-border-width, var(--spectrum-toast-border-width)) solid var(--highcontrast-toast-border-color, transparent);
   border-radius: var(--mod-toast-corner-radius, var(--spectrum-toast-corner-radius));
 
   padding-inline-start: var(--mod-toast-spacing-start-edge-to-text-and-icon, var(--spectrum-toast-spacing-start-edge-to-text-and-icon));
