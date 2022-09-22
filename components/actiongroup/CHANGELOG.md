@@ -3,6 +3,24 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+<a name="3.0.0"></a>
+# 3.0.0
+🗓 2022-09-22 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/actiongroup@2.0.0...@spectrum-css/actiongroup@3.0.0)
+
+* feat(actiongroup)!: migrate to core tokens (#1492) ([be1d629](https://github.com/adobe/spectrum-css/commit/be1d629)), closes [#1492](https://github.com/adobe/spectrum-css/issues/1492)
+
+
+### 🛑 BREAKING CHANGES
+
+* migrates the ActionGroup to core tokens
+
+* feat: migrates the component to core tokens
+* feat: adds t-shirt sizes & requires the addition of a `.spectrum-ActionGroup--size*` class.
+
+
+
+
+
 <a name="2.0.0"></a>
 # 2.0.0
 🗓 2022-06-16 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/actiongroup@1.0.26...@spectrum-css/actiongroup@2.0.0)
