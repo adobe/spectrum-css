@@ -523,6 +523,18 @@ governing permissions and limitations under the License.
   /*** ↓ Browser Mitigations for Input ↓ ***/
   /* Remove the margin for input in Firefox and Safari. */
   margin: 0;
+  vertical-align: top; /* used to align them correctly in forms. */
+
+  background-color: var(--spectrum-textfield-background-color);
+  border-color: var(--spectrum-textfield-border-color);
+  color: var(--spectrum-textfield-text-color);
+
+  border: var(--spectrum-textfield-border-size) solid;
+  border-radius: var(--spectrum-textfield-border-radius);
+  border-color: var(--spectrum-textfield-border-color);
+  outline: none;
+
+  transition: border-color var(--spectrum-textfield-animation-duration) ease-in-out;
 
   text-overflow: ellipsis;
 
@@ -742,6 +754,24 @@ governing permissions and limitations under the License.
       color: var(--highcontrast-textfield-text-color-readonly, var(--mod-textfield-text-color-readonly, var(--spectrum-textfield-text-color-readonly)));
       background-color: transparent;
     }
+
+    .is-disabled:hover&,
+    .is-disabled&,
+    :disabled {
+      background-color: var(--spectrum-textfield-background-color-quiet-disabled);
+      border-color: var(--spectrum-textfield-border-color-quiet-disabled);
+    }
+  }
+
+  /****** ReadOnly Variant ******/
+  .spectrum-Textfield.is-readOnly &,
+  .spectrum-Textfield.is-readOnly:hover &,
+  &:read-only {
+    background-color: var(--spectrum-textfield-background-color-readonly);
+    border-color: var(--spectrum-textfield-border-color-readonly);
+    color: var(--spectrum-textfield-text-color-readonly);
+
+    -webkit-text-fill-color: var(--spectrum-textfield-text-color-readonly);
   }
 }
 
@@ -813,3 +843,4 @@ governing permissions and limitations under the License.
     }
   }
 }
+

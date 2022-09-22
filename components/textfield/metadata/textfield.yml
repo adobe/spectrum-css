@@ -6,6 +6,7 @@ sections:
   - name: Migration Guide
     description: |
 
+<<<<<<< HEAD
       ### T-shirt sizes
       As of token migration, textfield now has t-shirt sizes. Medium is the default size if no size variant is applied. Icon sizes must match each t-shirt size. Validation icons are as follows.
 
@@ -17,6 +18,10 @@ sections:
 
       ### Help Text
       As of token migration, Help text is optional and has only one position below the textfield input. Help text aligns with the input in both standard and side label layouts.
+=======
+      ### Label
+      Textfield must always have a label. Label placement is top or on the side.
+>>>>>>> b8bb223c4 (feat(textfield)!: initial migration with placeholder tokens)
 
       ### Composition
       As of 3.0.0, Textfield is now composed the same way a DecoratedTextfield was previously.
@@ -150,6 +155,16 @@ examples:
         <div class="spectrum-HelpText spectrum-HelpText--sizeM spectrum-HelpText--neutral">
           <div id="helptext-7" class="spectrum-HelpText-text">Create a password with at least 8 characters.</div>
         </div>
+      </div>
+
+  - id: textfield
+    name: Textfield Icon
+    markup: |
+      <div class="spectrum-Textfield">
+        <svg class="spectrusm-Icon spectrum-Icon-sizeM spectrum-Textfield-Icon spectrum-Search-icon" focusable="false" aria-hidden="true">
+          <use xlink:href="#spectrum-icon-18-Magnify" />
+        </svg>
+        <input type="text" placeholder="Enter your name" name="field" value="" class="spectrum-Textfield-input">
       </div>
 
   - id: textfield
