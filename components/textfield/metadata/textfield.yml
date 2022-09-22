@@ -5,6 +5,10 @@ SpectrumSiteSlug: https://spectrum.adobe.com/page/text-field/
 sections:
   - name: Migration Guide
     description: |
+
+      ### Label
+      Textfield must always have a label. Label placement is top or on the side.
+
       ### Composition
       As of 3.0.0, Textfield is now composed the same way a DecoratedTextfield was preivously.
 
@@ -38,6 +42,16 @@ examples:
     name: Standard
     markup: |
       <div class="spectrum-Textfield">
+        <input type="text" placeholder="Enter your name" name="field" value="" class="spectrum-Textfield-input">
+      </div>
+
+  - id: textfield
+    name: Textfield Icon
+    markup: |
+      <div class="spectrum-Textfield">
+        <svg class="spectrusm-Icon spectrum-Icon-sizeM spectrum-Textfield-Icon spectrum-Search-icon" focusable="false" aria-hidden="true">
+          <use xlink:href="#spectrum-icon-18-Magnify" />
+        </svg>
         <input type="text" placeholder="Enter your name" name="field" value="" class="spectrum-Textfield-input">
       </div>
 
