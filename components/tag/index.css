@@ -300,8 +300,7 @@ governing permissions and limitations under the License.
   }
 
   &:focus-visible,
-  &.is-focused,
-  &:nth-child(3) {
+  &.is-focused {
     border-color: var(--highcontrast-tag-border-color-focus, var(--mod-tag-border-color-focus, var(--spectrum-tag-border-color-focus)));
     background-color: var(--highcontrast-tag-background-color-focus, var(--mod-tag-background-color-focus, var(--spectrum-tag-background-color-focus)));
     color: var(--highcontrast-tag-content-color-focus, var(--mod-tag-content-color-focus, var(--spectrum-tag-content-color-focus)));
