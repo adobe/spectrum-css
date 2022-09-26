@@ -15,7 +15,7 @@ sections:
 
       #### Position of Tip
       - Default tip position is centered on the edge for top/bottom/left/right/start/end positions.
-      - Default tip position is distance from edge == popover corner radius for all other positions.
+      - Default tip position is distance from edge is equal to popover corner radius for all other positions.
       - Popover tip position can be overridden in implementation to center with the source by setting '--spectrum-popover-pointer-edge-offset' equal to half the width of the source (for top and bottom popovers) or half the height of the source (for side popovers).
 
       #### Tip SVG
@@ -78,7 +78,7 @@ examples:
 
 
   - id: popover-offset
-    name: Popover - Offset
+    name: Popover - Cross Offset
     description: Spectrum Popover tip distance to edge is overridden in implementation by setting the property to half of the source width or height. This results in the tip centering with the center of the source.
     markup: |
       <div class="spectrum-Examples">
@@ -181,7 +181,6 @@ examples:
 
   - id: popover-top
     name: Popover - Position Top
-    description: Spectrum Popovers are implemented using the Dialog's inner elements.
     markup: |
       <div class="spectrum-Examples">
           <div class="spectrum-Examples-item">
@@ -277,7 +276,6 @@ examples:
 
   - id: popover-bottom
     name: Popover - Position Bottom
-    description: Spectrum Popovers are implemented using the Dialog's inner elements.
     markup: |
       <div class="spectrum-Examples">
         <div class="spectrum-Examples-item">
@@ -377,7 +375,6 @@ examples:
 
   - id: popover-left
     name: Popover - Position Left
-    description: Spectrum Popovers are implemented using the Dialog's inner elements.
     markup: |
       <div class="spectrum-Examples">
         <div class="spectrum-Examples-item">
@@ -437,7 +434,6 @@ examples:
 
   - id: popover-right
     name: Popover - Position Right
-    description: Spectrum Popovers are implemented using the Dialog's inner elements.
     markup: |
       <div class="spectrum-Examples">
         <div class="spectrum-Examples-item">
@@ -496,69 +492,8 @@ examples:
       </div>
 
 
-  - id: popover-end
-    name: Popover - Position End
-    description: Spectrum Popovers are implemented using the Dialog's inner elements.
-    markup: |
-      <div class="spectrum-Examples">
-        <div class="spectrum-Examples-item">
-        <h4 class="spectrum-Heading spectrum-Heading--sizeXS spectrum-Examples-itemHeading" style="margin-bottom: 16px;">End</h4>
-            <div class="spectrum-Popover spectrum-Popover--end spectrum-Popover--withTip is-open" role="presentation">
-              <section class="spectrum-Dialog spectrum-Dialog--small" role="dialog" tabindex="-1" aria-modal="true">
-                <div class="spectrum-Dialog-grid" style="display: grid;">
-                  <h1 class="spectrum-Dialog-heading spectrum-Dialog-heading--noHeader">Popover Title</h1>
-                  <hr class="spectrum-Divider spectrum-Divider--sizeM spectrum-Divider--horizontal spectrum-Dialog-divider">
-                  <section class="spectrum-Dialog-content">Cupcake ipsum dolor sit amet jelly beans. Chocolate jelly caramels. Icing soufflé chupa chups donut cheesecake. Jelly-o chocolate cake sweet roll cake danish candy biscuit halvah.</section>
-                 </div>
-              </section>
-              <svg class="spectrum-Popover-tip" viewBox="0 -0.5 9 16">
-                <path class="spectrum-Popover-tip-triangle" d="M-1,-1 8,8 -1,17">
-              </svg>
-            </div>
-            <div class="dummy-spacing" style="position: relative; height: 236px; min-width: 400px; max-width: 50%;"></div>
-        </div>
-      </div>
-
-      <div class="spectrum-Examples">
-        <div class="spectrum-Examples-item">
-          <h4 class="spectrum-Heading spectrum-Heading--sizeXS spectrum-Examples-itemHeading" style="margin-bottom: 16px;">End Top</h4>
-          <div class="spectrum-Popover spectrum-Popover--end-top spectrum-Popover--withTip is-open" role="presentation">
-            <section class="spectrum-Dialog spectrum-Dialog--small" role="dialog" tabindex="-1" aria-modal="true">
-              <div class="spectrum-Dialog-grid" style="display: grid;">
-                <h1 class="spectrum-Dialog-heading spectrum-Dialog-heading--noHeader">Popover Title</h1>
-                <hr class="spectrum-Divider spectrum-Divider--sizeM spectrum-Divider--horizontal spectrum-Dialog-divider">
-                <section class="spectrum-Dialog-content">Cupcake ipsum dolor sit amet jelly beans. Chocolate jelly caramels. Icing soufflé chupa chups donut cheesecake. Jelly-o chocolate cake sweet roll cake danish candy biscuit halvah.</section>
-               </div>
-            </section>
-            <svg class="spectrum-Popover-tip" viewBox="0 0.5 9 16">
-              <path class="spectrum-Popover-tip-triangle" d="M-1,-1 8,8 -1,17">
-            </svg>
-          </div>
-          <div class="dummy-spacing" style="position: relative; height: 236px; min-width: 400px; max-width: 50%;"></div>
-        </div>
-
-        <div class="spectrum-Examples-item">
-          <h4 class="spectrum-Heading spectrum-Heading--sizeXS spectrum-Examples-itemHeading" style="margin-bottom: 16px;">End Bottom</h4>
-          <div class="spectrum-Popover spectrum-Popover--end-bottom spectrum-Popover--withTip is-open" role="presentation">
-            <section class="spectrum-Dialog spectrum-Dialog--small" role="dialog" tabindex="-1" aria-modal="true">
-              <div class="spectrum-Dialog-grid" style="display: grid;">
-                <h1 class="spectrum-Dialog-heading spectrum-Dialog-heading--noHeader">Popover Title</h1>
-                <hr class="spectrum-Divider spectrum-Divider--sizeM spectrum-Divider--horizontal spectrum-Dialog-divider">
-                <section class="spectrum-Dialog-content">Cupcake ipsum dolor sit amet jelly beans. Chocolate jelly caramels. Icing soufflé chupa chups donut cheesecake. Jelly-o chocolate cake sweet roll cake danish candy biscuit halvah.</section>
-               </div>
-            </section>
-            <svg class="spectrum-Popover-tip" viewBox="0 0.5 9 16">
-              <path class="spectrum-Popover-tip-triangle" d="M-1,-1 8,8 -1,17">
-            </svg>
-          </div>
-          <div class="dummy-spacing" style="position: relative; height: 236px; min-width: 400px; max-width: 50%;"></div>
-        </div>
-      </div>
-
-
   - id: popover-start
     name: Popover - Position Start
-    description: Spectrum Popovers are implemented using the Dialog's inner elements.
     markup: |
       <div class="spectrum-Examples">
         <div class="spectrum-Examples-item">
@@ -600,6 +535,64 @@ examples:
         <div class="spectrum-Examples-item">
           <h4 class="spectrum-Heading spectrum-Heading--sizeXS spectrum-Examples-itemHeading" style="margin-bottom: 16px;">Start Bottom</h4>
           <div class="spectrum-Popover spectrum-Popover--start-bottom spectrum-Popover--withTip is-open" role="presentation">
+            <section class="spectrum-Dialog spectrum-Dialog--small" role="dialog" tabindex="-1" aria-modal="true">
+              <div class="spectrum-Dialog-grid" style="display: grid;">
+                <h1 class="spectrum-Dialog-heading spectrum-Dialog-heading--noHeader">Popover Title</h1>
+                <hr class="spectrum-Divider spectrum-Divider--sizeM spectrum-Divider--horizontal spectrum-Dialog-divider">
+                <section class="spectrum-Dialog-content">Cupcake ipsum dolor sit amet jelly beans. Chocolate jelly caramels. Icing soufflé chupa chups donut cheesecake. Jelly-o chocolate cake sweet roll cake danish candy biscuit halvah.</section>
+               </div>
+            </section>
+            <svg class="spectrum-Popover-tip" viewBox="0 0.5 9 16">
+              <path class="spectrum-Popover-tip-triangle" d="M-1,-1 8,8 -1,17">
+            </svg>
+          </div>
+          <div class="dummy-spacing" style="position: relative; height: 236px; min-width: 400px; max-width: 50%;"></div>
+        </div>
+      </div>
+
+  - id: popover-end
+    name: Popover - Position End
+    markup: |
+      <div class="spectrum-Examples">
+        <div class="spectrum-Examples-item">
+        <h4 class="spectrum-Heading spectrum-Heading--sizeXS spectrum-Examples-itemHeading" style="margin-bottom: 16px;">End</h4>
+            <div class="spectrum-Popover spectrum-Popover--end spectrum-Popover--withTip is-open" role="presentation">
+              <section class="spectrum-Dialog spectrum-Dialog--small" role="dialog" tabindex="-1" aria-modal="true">
+                <div class="spectrum-Dialog-grid" style="display: grid;">
+                  <h1 class="spectrum-Dialog-heading spectrum-Dialog-heading--noHeader">Popover Title</h1>
+                  <hr class="spectrum-Divider spectrum-Divider--sizeM spectrum-Divider--horizontal spectrum-Dialog-divider">
+                  <section class="spectrum-Dialog-content">Cupcake ipsum dolor sit amet jelly beans. Chocolate jelly caramels. Icing soufflé chupa chups donut cheesecake. Jelly-o chocolate cake sweet roll cake danish candy biscuit halvah.</section>
+                 </div>
+              </section>
+              <svg class="spectrum-Popover-tip" viewBox="0 -0.5 9 16">
+                <path class="spectrum-Popover-tip-triangle" d="M-1,-1 8,8 -1,17">
+              </svg>
+            </div>
+            <div class="dummy-spacing" style="position: relative; height: 236px; min-width: 400px; max-width: 50%;"></div>
+        </div>
+      </div>
+
+      <div class="spectrum-Examples">
+        <div class="spectrum-Examples-item">
+          <h4 class="spectrum-Heading spectrum-Heading--sizeXS spectrum-Examples-itemHeading" style="margin-bottom: 16px;">End Top</h4>
+          <div class="spectrum-Popover spectrum-Popover--end-top spectrum-Popover--withTip is-open" role="presentation">
+            <section class="spectrum-Dialog spectrum-Dialog--small" role="dialog" tabindex="-1" aria-modal="true">
+              <div class="spectrum-Dialog-grid" style="display: grid;">
+                <h1 class="spectrum-Dialog-heading spectrum-Dialog-heading--noHeader">Popover Title</h1>
+                <hr class="spectrum-Divider spectrum-Divider--sizeM spectrum-Divider--horizontal spectrum-Dialog-divider">
+                <section class="spectrum-Dialog-content">Cupcake ipsum dolor sit amet jelly beans. Chocolate jelly caramels. Icing soufflé chupa chups donut cheesecake. Jelly-o chocolate cake sweet roll cake danish candy biscuit halvah.</section>
+               </div>
+            </section>
+            <svg class="spectrum-Popover-tip" viewBox="0 0.5 9 16">
+              <path class="spectrum-Popover-tip-triangle" d="M-1,-1 8,8 -1,17">
+            </svg>
+          </div>
+          <div class="dummy-spacing" style="position: relative; height: 236px; min-width: 400px; max-width: 50%;"></div>
+        </div>
+
+        <div class="spectrum-Examples-item">
+          <h4 class="spectrum-Heading spectrum-Heading--sizeXS spectrum-Examples-itemHeading" style="margin-bottom: 16px;">End Bottom</h4>
+          <div class="spectrum-Popover spectrum-Popover--end-bottom spectrum-Popover--withTip is-open" role="presentation">
             <section class="spectrum-Dialog spectrum-Dialog--small" role="dialog" tabindex="-1" aria-modal="true">
               <div class="spectrum-Dialog-grid" style="display: grid;">
                 <h1 class="spectrum-Dialog-heading spectrum-Dialog-heading--noHeader">Popover Title</h1>
