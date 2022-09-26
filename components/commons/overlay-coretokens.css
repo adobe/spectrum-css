@@ -13,15 +13,15 @@ governing permissions and limitations under the License.
 %spectrum-overlay {
   /* TODO: replace with core tokens */
   --spectrum-overlay-animation-distance: 6px;
-  --spectrum-global-animation-duration-100: 130ms;
+  --spectrum-overlay-animation-duration: var(--spectrum-animation-duration-100);
 
   visibility: hidden;
 
   opacity: 0;
 
-  transition: transform var(--spectrum-global-animation-duration-100) ease-in-out,
-              opacity var(--spectrum-global-animation-duration-100) ease-in-out,
-              visibility 0ms linear var(--spectrum-global-animation-duration-100);
+  transition: transform var(--spectrum-overlay-animation-duration) ease-in-out,
+              opacity var(--spectrum-overlay-animation-duration) ease-in-out,
+              visibility 0ms linear var(--spectrum-overlay-animation-duration);
 
   pointer-events: none;
 }
