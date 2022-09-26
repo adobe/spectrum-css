@@ -71,7 +71,6 @@ governing permissions and limitations under the License.
   /* default opens and animates upward */
   &.is-open {
     @inherit: %spectrum-overlay--open;
-    @inherit: %spectrum-overlay--top--open;
   }
 
   /* has tip triangle */
@@ -93,6 +92,7 @@ governing permissions and limitations under the License.
 /* example: --top-left = popover is to top and source is to left */
 
 /* popover position is at top of source - default placement */
+.spectrum-Popover,
 .spectrum-Popover--top,
 .spectrum-Popover--top-left,
 .spectrum-Popover--top-right,
