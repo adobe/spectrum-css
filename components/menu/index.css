@@ -35,6 +35,7 @@ governing permissions and limitations under the License.
   /* TODO: remove below once above is defined */
   --spectrum-menu-item-selectable-edge-to-text-not-selected: 28px;
 
+  /* TODO: replace the height & width values with icon size tokens when they are defined */
   --spectrum-menu-item-checkmark-height: 10px;
   --spectrum-menu-item-checkmark-width: 10px;
 }
@@ -63,6 +64,7 @@ governing permissions and limitations under the License.
   /* TODO: remove below once above is defined */
   --spectrum-menu-item-selectable-edge-to-text-not-selected: 32px;
 
+  /* TODO: replace the height & width values with icon size tokens when they are defined */
   --spectrum-menu-item-checkmark-height: 10px;
   --spectrum-menu-item-checkmark-width: 10px;
 }
@@ -91,6 +93,7 @@ governing permissions and limitations under the License.
   /* TODO: remove below once above is defined */
   --spectrum-menu-item-selectable-edge-to-text-not-selected: 38px;
 
+  /* TODO: replace the height & width values with icon size tokens when they are defined */
   --spectrum-menu-item-checkmark-height: 12px;
   --spectrum-menu-item-checkmark-width: 12px;
 }
@@ -119,6 +122,7 @@ governing permissions and limitations under the License.
   /* TODO: remove below once above is defined */
   --spectrum-menu-item-selectable-edge-to-text-not-selected: 45px;
 
+  /* TODO: replace the height & width values with icon size tokens when they are defined */
   --spectrum-menu-item-checkmark-height: 14px;
   --spectrum-menu-item-checkmark-width: 14px;
 }
@@ -127,15 +131,31 @@ governing permissions and limitations under the License.
 .spectrum--large {
   .spectrum-Menu--sizeS {
     --spectrum-menu-item-selectable-edge-to-text-not-selected: 34px;
+    
+    /* TODO: replace the height & width values with icon size tokens when they are defined */
+    --spectrum-menu-item-checkmark-height: 12px;
+    --spectrum-menu-item-checkmark-width: 12px;
   }
   .spectrum-Menu--sizeM {
     --spectrum-menu-item-selectable-edge-to-text-not-selected: 42px;
+    
+    /* TODO: replace the height & width values with icon size tokens when they are defined */
+    --spectrum-menu-item-checkmark-height: 14px;
+    --spectrum-menu-item-checkmark-width: 14px;
   }
   .spectrum-Menu--sizeL {
     --spectrum-menu-item-selectable-edge-to-text-not-selected: 47px;
+    
+    /* TODO: replace the height & width values with icon size tokens when they are defined */
+    --spectrum-menu-item-checkmark-height: 16px;
+    --spectrum-menu-item-checkmark-width: 16px;
   }
   .spectrum-Menu--sizeXL {
     --spectrum-menu-item-selectable-edge-to-text-not-selected: 54px;
+    
+    /* TODO: replace the height & width values with icon size tokens when they are defined */
+    --spectrum-menu-item-checkmark-height: 16px;
+    --spectrum-menu-item-checkmark-width: 16px;
   }
 }
 
@@ -270,7 +290,7 @@ governing permissions and limitations under the License.
         --highcontrast-menu-item-value-color-focus: HighlightText;
       }
       
-      &:focus-ring,
+      &:focus-visible,
       &:focus,
       &.is-focused {
         --highcontrast-menu-item-focus-indicator-color: Highlight;
@@ -384,7 +404,11 @@ governing permissions and limitations under the License.
   grid-area: submenuItemValueArea;
 }
 
-.spectrum-Menu-item:focus {
+.spectrum-Menu-item:focus,
+.spectrum-Menu-item:focus-visible,
+.spectrum-Menu-item.is-focused {
+  background-color: var(--highcontrast-menu-item-background-color-key-focus, var(--mod-menu-item-background-color-key-focus, var(--spectrum-menu-item-background-color-key-focus)));
+  box-shadow: inset var(--mod-menu-item-focus-indicator-width, var(--spectrum-menu-item-focus-indicator-width)) 0px 0px 0px var(--highcontrast-menu-item-focus-indicator-color, var(--mod-menu-item-focus-indicator-color, var(--spectrum-menu-item-focus-indicator-color)));
   outline: none;
 
   .spectrum-Menu-itemLabel {
@@ -416,41 +440,8 @@ governing permissions and limitations under the License.
   }
 }
 
-.spectrum-Menu-item:focus-ring,
-.spectrum-Menu-item.is-focused {
-  background-color: var(--highcontrast-menu-item-background-color-key-focus, var(--mod-menu-item-background-color-key-focus, var(--spectrum-menu-item-background-color-key-focus)));
-  box-shadow: inset var(--mod-menu-item-focus-indicator-width, var(--spectrum-menu-item-focus-indicator-width)) 0px 0px 0px var(--highcontrast-menu-item-focus-indicator-color, var(--mod-menu-item-focus-indicator-color, var(--spectrum-menu-item-focus-indicator-color)));
-
-  .spectrum-Menu-itemLabel {
-    color: var(--highcontrast-menu-item-label-content-color-focus, var(--mod-menu-item-label-content-color-focus, var(--spectrum-menu-item-label-content-color-focus)));
-  }
-
-  .spectrum-Menu-sectionHeading {
-    color: var(--highcontrast-menu-section-header-color, var(--mod-menu-section-header-color, var(--spectrum-menu-section-header-color)));
-  }
-
-  .spectrum-Menu-itemDescription {
-    color: var(--highcontrast-menu-item-description-color-focus, var(--mod-menu-item-description-color-focus, var(--spectrum-menu-item-description-color-focus)));
-  }
-
-  .spectrum-Menu-itemValue {
-    color: var(--highcontrast-menu-item-value-color-focus, var(--mod-menu-item-value-color-focus, var(--spectrum-menu-item-value-color-focus)));
-  }
-  
-  .spectrum-Menu-itemIcon:not(.spectrum-Menu-chevron, .spectrum-Menu-checkmark) {
-    fill: var(--highcontrast-menu-item-label-icon-color-focus, var(--mod-menu-item-label-icon-color-focus, var(--spectrum-menu-item-label-icon-color-focus)));
-  }
-
-  .spectrum-Menu-chevron {
-    fill: var(--highcontrast-menu-collapsible-icon-color, var(--mod-menu-collapsible-icon-color, var(--spectrum-menu-collapsible-icon-color)));
-  }
-
-  .spectrum-Menu-checkmark {
-    fill: var(--highcontrast-menu-checkmark-icon-color-focus, var(--mod-menu-checkmark-icon-color-focus, var(--spectrum-menu-checkmark-icon-color-focus)));
-  }
-}
-
-[dir="rtl"] .spectrum-Menu-item:focus-ring,
+[dir="rtl"] .spectrum-Menu-item:focus,
+[dir="rtl"] .spectrum-Menu-item:focus-visible,
 [dir="rtl"] .spectrum-Menu-item.is-focused {
   box-shadow: inset calc(var(--mod-menu-item-focus-indicator-width, var(--spectrum-menu-item-focus-indicator-width)) * -1) 0 0 var(--highcontrast-menu-item-focus-indicator-color, var(--mod-menu-item-focus-indicator-color, var(--spectrum-menu-item-focus-indicator-color)));
 }
@@ -790,7 +781,7 @@ governing permissions and limitations under the License.
   }
 
   &:focus,
-  &:focus-ring,
+  &:focus-visible,
   &.is-focused {
     .spectrum-Menu-chevron {
       fill: var(--highcontrast-menu-drillin-icon-color-focus, var(--mod-menu-drillin-icon-color-focus, var(--spectrum-menu-drillin-icon-color-focus)));
