@@ -6,12 +6,22 @@ sections:
     ### New Popover Positions
     - Popover has 22 available positions. 10 positions use logical properties.
     - Popover position and distance to source should be handled by implementation.
-    - In this document, Popover positions only impact default tip positioning.
-    - Default tip position is centered on the edge for top/bottom/left/right/start/end positions.
-    - Default tip position is distance from edge == popover corner radius for all other positions.
-    - Popover tip position can be overridden in implementation to center with the source by setting '--spectrum-popover-pointer-edge-offset' equal to half the width of the source (for top and bottom popovers) or half the height of the source (for side popovers).
-    - Popover tip SVG polygon can retain the same points for top and bottom (it is flipped in the CSS)
-    - Popover tip SVG polygon can retain the same points for left/right/start/end (it is flipped in the CSS)
+    - In this document, Popover positions will appear to only impact default tip positioning because popovers in this document are already open by default.
+    - Animation direction, speed, and distance are handled by overlay.
+
+      #### Position Class Naming
+      - First position term is popover position, second term is source position.
+      - Example: --top-left = popover is to top and source is to left.
+
+      #### Position of Tip
+      - Default tip position is centered on the edge for top/bottom/left/right/start/end positions.
+      - Default tip position is distance from edge == popover corner radius for all other positions.
+      - Popover tip position can be overridden in implementation to center with the source by setting '--spectrum-popover-pointer-edge-offset' equal to half the width of the source (for top and bottom popovers) or half the height of the source (for side popovers).
+
+      #### Tip SVG
+      - Tip SVG should be updated in the markup
+      - Popover tip SVG polygon can retain the same markup and points for top and bottom (it is flipped in the CSS)
+      - Popover tip SVG polygon can retain the same markup and points for left/right/start/end (it is flipped in the CSS)
 
 examples:
   - id: popover
@@ -520,7 +530,7 @@ examples:
                 <section class="spectrum-Dialog-content">Cupcake ipsum dolor sit amet jelly beans. Chocolate jelly caramels. Icing soufflé chupa chups donut cheesecake. Jelly-o chocolate cake sweet roll cake danish candy biscuit halvah.</section>
                </div>
             </section>
-            <svg class="spectrum-Popover-tip">
+            <svg class="spectrum-Popover-tip" viewBox="0 0.5 9 16">
               <path class="spectrum-Popover-tip-triangle" d="M-1,-1 8,8 -1,17">
             </svg>
           </div>
@@ -537,7 +547,7 @@ examples:
                 <section class="spectrum-Dialog-content">Cupcake ipsum dolor sit amet jelly beans. Chocolate jelly caramels. Icing soufflé chupa chups donut cheesecake. Jelly-o chocolate cake sweet roll cake danish candy biscuit halvah.</section>
                </div>
             </section>
-            <svg class="spectrum-Popover-tip">
+            <svg class="spectrum-Popover-tip" viewBox="0 0.5 9 16">
               <path class="spectrum-Popover-tip-triangle" d="M-1,-1 8,8 -1,17">
             </svg>
           </div>
@@ -561,7 +571,7 @@ examples:
                 <section class="spectrum-Dialog-content">Cupcake ipsum dolor sit amet jelly beans. Chocolate jelly caramels. Icing soufflé chupa chups donut cheesecake. Jelly-o chocolate cake sweet roll cake danish candy biscuit halvah.</section>
                </div>
             </section>
-            <svg class="spectrum-Popover-tip">
+            <svg class="spectrum-Popover-tip" viewBox="0 0.5 9 16">
               <path class="spectrum-Popover-tip-triangle" d="M-1,-1 8,8 -1,17">
             </svg>
           </div>
@@ -580,7 +590,7 @@ examples:
                 <section class="spectrum-Dialog-content">Cupcake ipsum dolor sit amet jelly beans. Chocolate jelly caramels. Icing soufflé chupa chups donut cheesecake. Jelly-o chocolate cake sweet roll cake danish candy biscuit halvah.</section>
                </div>
             </section>
-            <svg class="spectrum-Popover-tip">
+            <svg class="spectrum-Popover-tip" viewBox="0 0.5 9 16">
               <path class="spectrum-Popover-tip-triangle" d="M-1,-1 8,8 -1,17">
             </svg>
           </div>
@@ -597,7 +607,7 @@ examples:
                 <section class="spectrum-Dialog-content">Cupcake ipsum dolor sit amet jelly beans. Chocolate jelly caramels. Icing soufflé chupa chups donut cheesecake. Jelly-o chocolate cake sweet roll cake danish candy biscuit halvah.</section>
                </div>
             </section>
-            <svg class="spectrum-Popover-tip">
+            <svg class="spectrum-Popover-tip" viewBox="0 0.5 9 16">
               <path class="spectrum-Popover-tip-triangle" d="M-1,-1 8,8 -1,17">
             </svg>
           </div>
