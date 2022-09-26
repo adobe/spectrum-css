@@ -294,6 +294,11 @@ governing permissions and limitations under the License.
       &:focus,
       &.is-focused {
         --highcontrast-menu-item-focus-indicator-color: Highlight;
+        --highcontrast-menu-item-label-content-color-focus: ButtonText;
+        --highcontrast-menu-item-description-color-focus: ButtonText;
+        --highcontrast-menu-section-header-color: ButtonText;
+        --highcontrast-menu-item-value-color-focus: ButtonText;
+        --highcontrast-menu-item-value-color-focus: ButtonText;
       }
 
       &.is-disabled {
@@ -306,7 +311,7 @@ governing permissions and limitations under the License.
       &.is-open:active,
       &.is-open:focus,
       &.is-open.is-focused {
-        --highcontrast-menu-item-background-color-default: ButtonText;
+        --highcontrast-menu-item-background-color-default: transparent;
       }
 
       .spectrum-Menu-item {
