@@ -17,9 +17,9 @@ governing permissions and limitations under the License.
 
 /* Swatch tokens */
 .spectrum-Swatch {
-  /* Static properties - no tokens */
+  /* Placeholder tokens */
   --spectrum-swatch-focus-ring-border-radius: 8px;
-  --spectrum-swatch-border-color-regular: rgba(0, 0, 0, 0.5);
+  --spectrum-swatch-icon-border-color: rgba(0, 0, 0, 0.51);
 
   /* Size */
   --spectrum-swatch-size: var(--spectrum-swatch-size-small);
@@ -32,11 +32,10 @@ governing permissions and limitations under the License.
   --spectrum-swatch-focus-ring-gap: var(--spectrum-focus-ring-gap);
 
   /* Color */
-  --spectrum-swatch-border-color: var(--spectrum-swatch-border-color);
+  --spectrum-swatch-border-color-selected: var(--spectrum-gray-900);
   --spectrum-swatch-inner-border-color-selected: var(--spectrum-gray-50);
   --spectrum-swatch-disabled-icon-border-color: var(--spectrum-swatch-disabled-icon-border-color);
   --spectrum-swatch-disabled-icon-color: var(--spectrum-white);
-  /*--spectrum-swatch-fill-background-color: var(--spectrum-gray-50);*/
   --spectrum-swatch-dash-icon-color: var(--spectrum-gray-800);
   --spectrum-swatch-slash-icon-color: var(--spectrum-red-900);
   --spectrum-swatch-focus-ring-color: var(--spectrum-focus-ring-color);
@@ -66,14 +65,26 @@ governing permissions and limitations under the License.
   --spectrum-swatch-slash-thickness: var(--spectrum-swatch-slash-thickness-large);
 }
 
+
+/* Light theme placeholder tokens */
+.spectrum--light {
+  --spectrum-swatch-border-color: rgba(0, 0, 0, 0.51);
+}
+
+/* Dark and Darkest theme placeholder tokens */
+.spectrum--dark,
+.spectrum--darkest {
+  --spectrum-swatch-border-color: rgba(255, 255, 255, 0.51);
+}
+
 /* Windows high contrast mode */
 @media (forced-colors: active) {
   .spectrum-Swatch {
     --highcontrast-swatch-disabled-icon-color: GrayText;
-    --highcontrast-swatch-focus-ring-color: Highlight;
+    --highcontrast-swatch-focus-ring-color:  ButtonText;
     --highcontrast-swatch-background-color-selected: Background;
-    --highcontrast-swatch-border-color: Highlight;
-    --highcontrast-swatch-box-shadow-color: ButtonText;
+    --highcontrast-swatch-border-color-selected: Highlight;
+    --highcontrast-swatch-border-color: ButtonText;
     --highcontrast-swatch-fill-foreground-color: ButtonText;
 
     .spectrum-Swatch-fill {
@@ -202,7 +213,7 @@ governing permissions and limitations under the License.
 
     border-width: var(--mod-swatch-border-thickness-selected, var(--spectrum-swatch-border-thickness-selected));
     border-style: solid;
-    border-color: var(--highcontrast-swatch-border-color, var(--mod-swatch-border-color, var(--spectrum-swatch-border-color)));
+    border-color: var(--highcontrast-swatch-border-color-selected, var(--mod-swatch-border-color-selected, var(--spectrum-swatch-border-color-selected)));
 
     opacity: 0;
 
@@ -284,7 +295,7 @@ governing permissions and limitations under the License.
     background-color: var(--spectrum-picked-color, transparent);
 
     /* Swatch border */
-    box-shadow: inset 0 0 0 var(--mod-swatch-border-thickness, var(--spectrum-swatch-border-thickness)) var(--highcontrast-swatch-box-shadow-color, var(--mod-swatch-border-color-regular, var(--spectrum-swatch-border-color-regular)));
+    box-shadow: inset 0 0 0 var(--mod-swatch-border-thickness, var(--spectrum-swatch-border-thickness)) var(--highcontrast-swatch-border-color, var(--mod-swatch-border-color, var(--spectrum-swatch-border-color)));
     border-radius: var(--mod-swatch-border-radius, var(--spectrum-swatch-border-radius));
   }
 }
@@ -323,7 +334,7 @@ governing permissions and limitations under the License.
 
   /* Icon outline color - does not need a highcontrast token because the icon fill color provides contrast. */
   path:last-child {
-    fill: var(--mod-swatch-border-color-regular, var(--spectrum-swatch-border-color-regular));
+    fill: var(--mod-swatch-icon-border-color, var(--spectrum-swatch-icon-border-color));
   }
 }
 
