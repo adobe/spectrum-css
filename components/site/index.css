@@ -125,6 +125,31 @@ governing permissions and limitations under the License.
   overflow-y: auto;
 }
 
+.spectrum-Site-searchResults a {
+  text-decoration: none;
+}
+
+.spectrum-Site-searchResults .spectrum-Menu-item {
+  padding: 0;
+}
+
+.spectrum-Site-searchResults .spectrum-Menu-item .spectrum-Menu-sectionHeading,
+.spectrum-Site-searchResults .spectrum-Menu-item .spectrum-Menu-item {
+  padding-inline: var(--spectrum-global-dimension-size-300);
+}
+
+.spectrum-Site-searchResults .spectrum-Menu-item .spectrum-Menu-sectionHeading {
+  margin-block-end: var(--spectrum-global-dimension-size-100);
+}
+
+.spectrum-Site-searchResults .spectrum-Menu-item:hover {
+  background-color: transparent;
+}
+
+.spectrum-Site-searchResults .spectrum-Menu-item .spectrum-Menu-item:hover {
+  background-color: var(--spectrum-alias-highlight-hover);
+}
+
 .spectrum-Site-noSearchResults {
   padding: var(--spectrum-global-dimension-size-400) var(--spectrum-global-dimension-size-400) var(--spectrum-global-dimension-size-400);
 }

@@ -386,6 +386,7 @@ governing permissions and limitations under the License.
 .spectrum-Menu-item {
   display: grid;
   grid-template-areas:
+    ".            chevronAreaCollapsible .             iconArea sectionHeadingArea  .         .           .                 "
     "selectedArea chevronAreaCollapsible checkmarkArea iconArea labelArea        valueArea actionsArea chevronAreaDrillIn"
     ".            .                      .             .        descriptionArea  .         .           .                 "
     ".            .                      .             .        submenuArea      .         .           .                 ";
@@ -602,15 +603,26 @@ governing permissions and limitations under the License.
   grid-area: chevronAreaCollapsible;
 }
 
+.spectrum-Menu-sectionHeading {
+  grid-area: sectionHeadingArea;
+  grid-column: 1 / -1;
+}
+
 .spectrum-Menu-item--collapsible .spectrum-Menu-sectionHeading {
-  grid-area: labelArea;
+  /*
+    start at 5th column, to account for icons & match sectionHeadingArea
+    ". chevronAreaCollapsible . iconArea sectionHeadingArea  .  .  ."
+    stretch to last column
+  */
+  grid-column: 5 / -1;
 }
 
 .spectrum-Menu-itemDescription {
   grid-area: descriptionArea;
 }
 
-.spectrum-Menu-item--collapsible .spectrum-Menu {
+.spectrum-Menu-item--collapsible .spectrum-Menu,
+.spectrum-Menu-item .spectrum-Menu {
   grid-area: submenuArea;
   grid-column: 1 / -1;
 }
