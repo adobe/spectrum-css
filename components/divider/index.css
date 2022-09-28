@@ -55,6 +55,12 @@ governing permissions and limitations under the License.
 @media (forced-colors: active) {
   .spectrum-Divider {
     --spectrum-divider-background-color: CanvasText;
+    --spectrum-divider-background-color-small-static-white: CanvasText;
+    --spectrum-divider-background-color-medium-static-white: CanvasText;
+    --spectrum-divider-background-color-large-static-white: CanvasText;
+    --spectrum-divider-background-color-small-static-black: CanvasText;
+    --spectrum-divider-background-color-medium-static-black: CanvasText;
+    --spectrum-divider-background-color-large-static-black: CanvasText;
   }
 }
 
