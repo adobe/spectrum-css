@@ -13,6 +13,8 @@ governing permissions and limitations under the License.
 @import "../commons/overlay-coretokens.css";
 
 .spectrum-Popover {
+  --spectrum-popover-cross-offset: 0; /* change to offset from source, default is 0 */
+
   --spectrum-popover-background-color: var(--spectrum-background-layer-2-color);
   --spectrum-popover-border-width: var(--spectrum-border-width-100);
   --spectrum-popover-border-color: var(--spectrum-gray-400);
@@ -97,6 +99,7 @@ governing permissions and limitations under the License.
 .spectrum-Popover--top-right,
 .spectrum-Popover--top-start,
 .spectrum-Popover--top-end {
+  margin-bottom: var(--spectrum-popover-cross-offset);
   /* popover animates upward ⬆ */
   &.is-open {
     @inherit: %spectrum-overlay--top--open;
@@ -109,6 +112,7 @@ governing permissions and limitations under the License.
 .spectrum-Popover--bottom-right,
 .spectrum-Popover--bottom-start,
 .spectrum-Popover--bottom-end {
+  margin-top: var(--spectrum-popover-cross-offset);
   /* popover animates downward ⬇ */
   &.is-open {
     @inherit: %spectrum-overlay--bottom--open;
@@ -119,6 +123,7 @@ governing permissions and limitations under the License.
 .spectrum-Popover--right,
 .spectrum-Popover--right-bottom,
 .spectrum-Popover--right-top {
+  margin-left: var(--spectrum-popover-cross-offset);
   /* popover animates towards right ⮕ */
   &.is-open {
     @inherit: %spectrum-overlay--right--open;
@@ -129,6 +134,7 @@ governing permissions and limitations under the License.
 .spectrum-Popover--left,
 .spectrum-Popover--left-bottom,
 .spectrum-Popover--left-top {
+  margin-right: var(--spectrum-popover-cross-offset);
   /* popover animates towards left ⬅ */
   &.is-open {
     @inherit: %spectrum-overlay--left--open;
@@ -139,6 +145,7 @@ governing permissions and limitations under the License.
 .spectrum-Popover--start,
 .spectrum-Popover--start-top,
 .spectrum-Popover--start-bottom {
+  margin-inline-end: var(--spectrum-popover-cross-offset);
   /* LTR read, popover animates towards left ⬅ */
   &.is-open {
     @inherit: %spectrum-overlay--left--open;
@@ -156,6 +163,7 @@ governing permissions and limitations under the License.
 .spectrum-Popover--end,
 .spectrum-Popover--end-top,
 .spectrum-Popover--end-bottom {
+  margin-inline-start: var(--spectrum-popover-cross-offset);
   /* LTR read, popover animates towards right ⮕ */
   &.is-open {
     @inherit: %spectrum-overlay--right--open;
