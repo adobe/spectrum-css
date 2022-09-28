@@ -3,6 +3,25 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+<a name="8.0.0"></a>
+# 8.0.0
+🗓 2022-09-28 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/toast@7.0.11...@spectrum-css/toast@8.0.0)
+
+* feat(toast)!: migrate toast to core tokens (#1483) ([99510a3](https://github.com/adobe/spectrum-css/commit/99510a3)), closes [#1483](https://github.com/adobe/spectrum-css/issues/1483)
+
+
+### 🛑 BREAKING CHANGES
+
+* migrates Toast to core tokens
+
+* removes `error` variant
+* removes `warning` variant
+* removes `success` variant
+
+
+
+
+
 <a name="7.0.11"></a>
 ## 7.0.11
 🗓 2022-06-29 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/toast@7.0.10...@spectrum-css/toast@7.0.11)
