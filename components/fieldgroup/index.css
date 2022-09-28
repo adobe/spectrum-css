@@ -48,12 +48,12 @@ governing permissions and limitations under the License.
   flex-wrap: wrap;
 
   /* input fields stacked vertically */
-  &--vertical {
+  .spectrum-FieldGroup--vertical & {
     flex-direction: column;
   }
 
-  /* input fields aligned horizontally */
-  &--horizontal {
+   /* input fields aligned horizontally */
+  .spectrum-FieldGroup--horizontal & {
     flex-direction: row;
 
     /* space between horizontal fields */

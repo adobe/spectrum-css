@@ -15,10 +15,10 @@ examples:
           <h4 class="spectrum-Heading spectrum-Heading--sizeXS spectrum-Examples-itemHeading">Radio</h4>
 
           <form class="spectrum-Form">
-            <div class="spectrum-FieldGroup spectrum-FieldGroup--toplabel" role="radiogroup" aria-labelledby="radiogroup-label-1">
+            <div class="spectrum-FieldGroup spectrum-FieldGroup--toplabel spectrum-FieldGroup--vertical" role="radiogroup" aria-labelledby="radiogroup-label-1">
               <div class="spectrum-FieldLabel spectrum-FieldLabel--sizeM spectrum-FieldLabel" id="radiogroup-label-1">Radio Group Label</div>
 
-              <div class="spectrum-FieldGroupInputLayout spectrum-FieldGroupInputLayout--vertical" aria-describedby="helptext-radio-1">
+              <div class="spectrum-FieldGroupInputLayout" aria-describedby="helptext-radio-1">
                 <div class="spectrum-Radio spectrum-FieldGroup-item">
                   <input type="radio" name="pets" class="spectrum-Radio-input" id="radio-0">
                   <span class="spectrum-Radio-button"></span>
@@ -43,10 +43,10 @@ examples:
           <h4 class="spectrum-Heading spectrum-Heading--sizeXS spectrum-Examples-itemHeading">Checkbox</h4>
 
           <form class="spectrum-Form">
-            <div class="spectrum-FieldGroup spectrum-FieldGroup--toplabel" role="group" aria-labelledby="checkboxgroup-label-1">
+            <div class="spectrum-FieldGroup spectrum-FieldGroup--toplabel spectrum-FieldGroup--vertical" role="group" aria-labelledby="checkboxgroup-label-1">
               <div class="spectrum-FieldLabel spectrum-FieldLabel--sizeM spectrum-FieldLabel" id="checkboxgroup-label-1">Checkbox Group Label</div>
 
-              <div class="spectrum-FieldGroupInputLayout spectrum-FieldGroupInputLayout--vertical" aria-describedby="helptext-checkbox-1">
+              <div class="spectrum-FieldGroupInputLayout" aria-describedby="helptext-checkbox-1">
                 <label class="spectrum-Checkbox spectrum-Checkbox--sizeM spectrum-FieldGroup-item">
                   <input type="checkbox" class="spectrum-Checkbox-input" id="checkbox-0">
                   <span class="spectrum-Checkbox-box">
@@ -87,10 +87,10 @@ examples:
           <h4 class="spectrum-Heading spectrum-Heading--sizeXS spectrum-Examples-itemHeading">Radio</h4>
 
           <form class="spectrum-Form">
-            <div class="spectrum-FieldGroup spectrum-FieldGroup--toplabel" role="radiogroup" aria-labelledby="radiogroup-label-2">
+            <div class="spectrum-FieldGroup spectrum-FieldGroup--toplabel spectrum-FieldGroup--horizontal" role="radiogroup" aria-labelledby="radiogroup-label-2">
               <div class="spectrum-FieldLabel spectrum-FieldLabel--sizeM spectrum-FieldLabel" id="radiogroup-label-2">Radio Group Label</div>
 
-              <div class="spectrum-FieldGroupInputLayout spectrum-FieldGroupInputLayout--horizontal" aria-describedby="helptext-radio-2">
+              <div class="spectrum-FieldGroupInputLayout" aria-describedby="helptext-radio-2">
                 <div class="spectrum-Radio spectrum-FieldGroup-item">
                   <input type="radio" name="pets" class="spectrum-Radio-input" id="radio-2">
                   <span class="spectrum-Radio-button"></span>
@@ -115,10 +115,10 @@ examples:
           <h4 class="spectrum-Heading spectrum-Heading--sizeXS spectrum-Examples-itemHeading">Checkbox</h4>
 
           <form class="spectrum-Form">
-            <div class="spectrum-FieldGroup spectrum-FieldGroup--toplabel" role="group" aria-labelledby="checkboxgroup-label-2">
+            <div class="spectrum-FieldGroup spectrum-FieldGroup--toplabel spectrum-FieldGroup--horizontal" role="group" aria-labelledby="checkboxgroup-label-2">
               <div class="spectrum-FieldLabel spectrum-FieldLabel--sizeM spectrum-FieldLabel" id="checkboxgroup-label-2">Checkbox Group Label</div>
 
-              <div class="spectrum-FieldGroupInputLayout spectrum-FieldGroupInputLayout--horizontal" aria-describedby="helptext-checkbox-2">
+              <div class="spectrum-FieldGroupInputLayout" aria-describedby="helptext-checkbox-2">
                 <label class="spectrum-Checkbox spectrum-Checkbox--sizeM spectrum-FieldGroup-item">
                   <input type="checkbox" class="spectrum-Checkbox-input" id="checkbox-2">
                   <span class="spectrum-Checkbox-box">
@@ -160,10 +160,10 @@ examples:
           <h4 class="spectrum-Heading spectrum-Heading--sizeXS spectrum-Examples-itemHeading">Radio</h4>
 
           <form class="spectrum-Form">
-            <div class="spectrum-FieldGroup spectrum-FieldGroup--toplabel" role="radiogroup" aria-labelledby="radiogroup-label-3">
+            <div class="spectrum-FieldGroup spectrum-FieldGroup--toplabel spectrum-FieldGroup--horizontal" role="radiogroup" aria-labelledby="radiogroup-label-3">
               <div class="spectrum-FieldLabel spectrum-FieldLabel--sizeM spectrum-FieldLabel" id="radiogroup-label-3">Radio Group Label</div>
 
-              <div class="spectrum-FieldGroupInputLayout spectrum-FieldGroupInputLayout--horizontal" aria-describedby="helptext-radio-3">
+              <div class="spectrum-FieldGroupInputLayout" aria-describedby="helptext-radio-3">
                 <div class="spectrum-Radio spectrum-FieldGroup-item is-invalid">
                   <input type="radio" name="pets" class="spectrum-Radio-input" id="radio-4">
                   <span class="spectrum-Radio-button"></span>
@@ -192,10 +192,10 @@ examples:
           <h4 class="spectrum-Heading spectrum-Heading--sizeXS spectrum-Examples-itemHeading">Checkbox</h4>
 
           <form class="spectrum-Form">
-            <div class="spectrum-FieldGroup spectrum-FieldGroup--toplabel" role="group" aria-labelledby="checkboxgroup-label-3">
+            <div class="spectrum-FieldGroup spectrum-FieldGroup--toplabel spectrum-FieldGroup--horizontal" role="group" aria-labelledby="checkboxgroup-label-3">
               <div class="spectrum-FieldLabel spectrum-FieldLabel--sizeM spectrum-FieldLabel" id="checkboxgroup-label-3">Checkbox Group Label</div>
 
-              <div class="spectrum-FieldGroupInputLayout spectrum-FieldGroupInputLayout--horizontal" aria-describedby="helptext-checkbox-3">
+              <div class="spectrum-FieldGroupInputLayout" aria-describedby="helptext-checkbox-3">
                 <label class="spectrum-Checkbox spectrum-Checkbox--sizeM spectrum-FieldGroup-item is-invalid">
                   <input type="checkbox" class="spectrum-Checkbox-input" id="checkbox-4">
                   <span class="spectrum-Checkbox-box">
@@ -238,10 +238,10 @@ examples:
         <div class="spectrum-Examples-item">
           <h4 class="spectrum-Heading spectrum-Heading--sizeXS spectrum-Examples-itemHeading">Required</h4>
           <form class="spectrum-Form">
-            <div class="spectrum-FieldGroup spectrum-FieldGroup--toplabel" role="radiogroup" aria-labelledby="radiogroup-label-4">
+            <div class="spectrum-FieldGroup spectrum-FieldGroup--toplabel spectrum-FieldGroup--vertical" role="radiogroup" aria-labelledby="radiogroup-label-4">
               <div class="spectrum-FieldLabel spectrum-FieldLabel--sizeM spectrum-FieldLabel" id="radiogroup-label-4">Radio Group Label (required)</div>
 
-              <div class="spectrum-FieldGroupInputLayout spectrum-FieldGroupInputLayout--vertical" aria-describedby="helptext-radio-4">
+              <div class="spectrum-FieldGroupInputLayout" aria-describedby="helptext-radio-4">
                 <div class="spectrum-Radio spectrum-FieldGroup-item">
                   <input type="radio" name="pets" class="spectrum-Radio-input" id="radio-6">
                   <span class="spectrum-Radio-button"></span>
@@ -265,14 +265,14 @@ examples:
         <div class="spectrum-Examples-item">
           <h4 class="spectrum-Heading spectrum-Heading--sizeXS spectrum-Examples-itemHeading">Required Asterisk</h4>
           <form class="spectrum-Form">
-            <div class="spectrum-FieldGroup spectrum-FieldGroup--toplabel" role="radiogroup" aria-labelledby="radiogroup-label-5">
+            <div class="spectrum-FieldGroup spectrum-FieldGroup--toplabel spectrum-FieldGroup--vertical" role="radiogroup" aria-labelledby="radiogroup-label-5">
               <div class="spectrum-FieldLabel spectrum-FieldLabel--sizeM spectrum-FieldLabel" id="radiogroup-label-5">Radio Group Label
                 <svg class="spectrum-Icon spectrum-UIIcon-Asterisk100 spectrum-FieldLabel-requiredIcon" focusable="false" aria-hidden="true">
                   <use xlink:href="#spectrum-css-icon-Asterisk100" />
                 </svg>
               </div>
 
-              <div class="spectrum-FieldGroupInputLayout spectrum-FieldGroupInputLayout--vertical" aria-describedby="helptext-radio-5">
+              <div class="spectrum-FieldGroupInputLayout" aria-describedby="helptext-radio-5">
                 <div class="spectrum-Radio spectrum-FieldGroup-item">
                   <input type="radio" name="pets" class="spectrum-Radio-input" id="radio-8">
                   <span class="spectrum-Radio-button"></span>
@@ -296,10 +296,10 @@ examples:
         <div class="spectrum-Examples-item">
           <h4 class="spectrum-Heading spectrum-Heading--sizeXS spectrum-Examples-itemHeading">Optional</h4>
           <form class="spectrum-Form">
-            <div class="spectrum-FieldGroup spectrum-FieldGroup--toplabel" role="radiogroup" aria-labelledby="radiogroup-label-6">
+            <div class="spectrum-FieldGroup spectrum-FieldGroup--toplabel spectrum-FieldGroup--vertical" role="radiogroup" aria-labelledby="radiogroup-label-6">
               <div class="spectrum-FieldLabel spectrum-FieldLabel--sizeM spectrum-FieldLabel" id="radiogroup-label-6">Radio Group Label (optional)</div>
 
-              <div class="spectrum-FieldGroupInputLayout spectrum-FieldGroupInputLayout--vertical">
+              <div class="spectrum-FieldGroupInputLayout">
                 <div class="spectrum-Radio spectrum-FieldGroup-item">
                   <input type="radio" name="pets" class="spectrum-Radio-input" id="radio-10">
                   <span class="spectrum-Radio-button"></span>
@@ -327,10 +327,10 @@ examples:
           <h4 class="spectrum-Heading spectrum-Heading--sizeXS spectrum-Examples-itemHeading">Side Label Vertical Radio</h4>
 
           <form class="spectrum-Form">
-            <div class="spectrum-FieldGroup spectrum-FieldGroup--sidelabel" role="radiogroup" aria-labelledby="radiogroup-label-7">
+            <div class="spectrum-FieldGroup spectrum-FieldGroup--sidelabel spectrum-FieldGroup--vertical" role="radiogroup" aria-labelledby="radiogroup-label-7">
               <div class="spectrum-FieldLabel spectrum-FieldLabel--sizeM spectrum-FieldLabel--right" id="radiogroup-label-7">Radio Group Label</div>
 
-              <div class="spectrum-FieldGroupInputLayout spectrum-FieldGroupInputLayout--vertical" aria-describedby="helptext-radio-7">
+              <div class="spectrum-FieldGroupInputLayout" aria-describedby="helptext-radio-7">
                 <div class="spectrum-Radio spectrum-FieldGroup-item">
                   <input type="radio" name="pets" class="spectrum-Radio-input" id="radio-12">
                   <span class="spectrum-Radio-button"></span>
@@ -355,10 +355,10 @@ examples:
           <h4 class="spectrum-Heading spectrum-Heading--sizeXS spectrum-Examples-itemHeading">Side Label Vertical Checkbox</h4>
 
           <form class="spectrum-Form">
-            <div class="spectrum-FieldGroup spectrum-FieldGroup--sidelabel" role="radiogroup" aria-labelledby="checkboxgroup-label-4">
+            <div class="spectrum-FieldGroup spectrum-FieldGroup--sidelabel spectrum-FieldGroup--vertical" role="radiogroup" aria-labelledby="checkboxgroup-label-4">
               <div class="spectrum-FieldLabel spectrum-FieldLabel--sizeM spectrum-FieldLabel--right" id="checkboxgroup-label-4">Checkbox Group Label</div>
 
-              <div class="spectrum-FieldGroupInputLayout spectrum-FieldGroupInputLayout--vertical" aria-describedby="helptext-checkbox-4">
+              <div class="spectrum-FieldGroupInputLayout" aria-describedby="helptext-checkbox-4">
                 <label class="spectrum-Checkbox spectrum-Checkbox--sizeM spectrum-FieldGroup-item">
                   <input type="checkbox" class="spectrum-Checkbox-input" id="checkbox-6">
                   <span class="spectrum-Checkbox-box">
@@ -390,10 +390,10 @@ examples:
           <h4 class="spectrum-Heading spectrum-Heading--sizeXS spectrum-Examples-itemHeading">Side Label Horizontal Radio</h4>
 
           <form class="spectrum-Form">
-            <div class="spectrum-FieldGroup spectrum-FieldGroup--sidelabel" role="radiogroup" aria-labelledby="radiogroup-label-8">
+            <div class="spectrum-FieldGroup spectrum-FieldGroup--sidelabel spectrum-FieldGroup--horizontal" role="radiogroup" aria-labelledby="radiogroup-label-8">
               <div class="spectrum-FieldLabel spectrum-FieldLabel--sizeM spectrum-FieldLabel--right" id="radiogroup-label-8">Radio Group Label</div>
 
-              <div class="spectrum-FieldGroupInputLayout spectrum-FieldGroupInputLayout--horizontal" aria-describedby="helptext-radio-8">
+              <div class="spectrum-FieldGroupInputLayout" aria-describedby="helptext-radio-8">
                 <div class="spectrum-Radio spectrum-FieldGroup-item">
                   <input type="radio" name="pets" class="spectrum-Radio-input" id="radio-14">
                   <span class="spectrum-Radio-button"></span>
@@ -418,10 +418,10 @@ examples:
           <h4 class="spectrum-Heading spectrum-Heading--sizeXS spectrum-Examples-itemHeading">Side Label Horizontal Checkbox</h4>
 
           <form class="spectrum-Form">
-            <div class="spectrum-FieldGroup spectrum-FieldGroup--sidelabel" role="radiogroup" aria-labelledby="checkboxgroup-label-5">
+            <div class="spectrum-FieldGroup spectrum-FieldGroup--sidelabel spectrum-FieldGroup--horizontal" role="radiogroup" aria-labelledby="checkboxgroup-label-5">
               <div class="spectrum-FieldLabel spectrum-FieldLabel--sizeM spectrum-FieldLabel--right" id="checkboxgroup-label-5">Checkbox Group Label</div>
 
-              <div class="spectrum-FieldGroupInputLayout spectrum-FieldGroupInputLayout--horizontal" aria-describedby="helptext-checkbox-5">
+              <div class="spectrum-FieldGroupInputLayout" aria-describedby="helptext-checkbox-5">
                 <label class="spectrum-Checkbox spectrum-Checkbox--sizeM spectrum-FieldGroup-item">
                   <input type="checkbox" class="spectrum-Checkbox-input" id="checkbox-8">
                   <span class="spectrum-Checkbox-box">
