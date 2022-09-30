@@ -123,6 +123,31 @@ governing permissions and limitations under the License.
 /****** WHCM ******/
 @media (forced-colors: active) {
   .spectrum-Textfield {
+    --spectrum-textfield-border-color: TODO;
+    --spectrum-textfield-border-color-hover: TODO;
+    --spectrum-textfield-text-color: TODO;
+
+    --spectrum-textfield-placeholder-color: GrayText;
+    --spectrum-textfield-placeholder-color-hover: GrayText;
+
+    --spectrum-textfield-icon-color-success: TODO;
+    --spectrum-textfield-icon-color-invalid: TODO;
+
+    --spectrum-textfield-border-color-quiet: TODO;
+    --spectrum-textfield-border-color-quiet-hover: Highlight;
+    --spectrum-textfield-border-color-quiet-active: Highlight;
+    --spectrum-textfield-border-color-quiet-focus: Highlight;
+
+    --spectrum-textfield-border-color-quiet-invalid: TODO;
+    --spectrum-textfield-border-color-quiet-invalid-focus:  TODO;
+
+    --spectrum-textfield-border-color-disabled: GrayText;
+    --spectrum-textfield-text-color-disabled: GrayText;
+
+    --spectrum-textfield-border-color-quiet-disabled: GrayText;
+    --spectrum-textfield-border-color-readonly:  TODO;
+    --spectrum-textfield-text-color-readonly: TODO;
+    --spectrum-textfield-focus-indicator-color: Highlight;
 
     &.is-keyboardFocused {
       &::after {
