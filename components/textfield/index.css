@@ -244,7 +244,7 @@ governing permissions and limitations under the License.
     &:focus, &:focus-within {
       /* focus indicator is focused state */
       &::after {
-        forced-color-adjust: none;
+        //forced-color-adjust: none;
       }
     }
   }
