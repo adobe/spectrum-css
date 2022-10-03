@@ -133,7 +133,7 @@ governing permissions and limitations under the License.
     --spectrum-textfield-icon-color-success: TODO;
     --spectrum-textfield-icon-color-invalid: TODO;
 
-    --spectrum-textfield-border-color-quiet: TODO;
+    --spectrum-textfield-border-color-quiet: Highlight;
     --spectrum-textfield-border-color-quiet-hover: Highlight;
     --spectrum-textfield-border-color-quiet-active: Highlight;
     --spectrum-textfield-border-color-quiet-focus: Highlight;
@@ -151,7 +151,7 @@ governing permissions and limitations under the License.
 
     &.is-keyboardFocused {
       &::after {
-        forced-color-adjust: none;
+        //forced-color-adjust: none;
       }
     }
   }
@@ -159,11 +159,12 @@ governing permissions and limitations under the License.
 
 /****** Text field and text area ******/
 .spectrum-Textfield {
-  display: inline-flex;
+  display: inline-block;
   position: relative;
   min-inline-size: var(--spectrum-textfield-min-width);
   inline-size: var(--spectrum-textfield-single-line-width);
   outline: none;
+  margin: auto;
 
   /****** Hover ******/
   &:hover {
@@ -180,9 +181,45 @@ governing permissions and limitations under the License.
     }
   }
 
+  /****** Focus Indicator ******/
+  &::after {
+    pointer-events: none;
+    content: '';
+    position: absolute;
+    display: inline-block;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    top: 0;
+    margin: auto;
+
+    /* ensures focus indicator centers if borders or gap change */
+    margin-inline-start: calc((var(--mod-textfield-focus-indicator-gap, var(--spectrum-textfield-focus-indicator-gap))
+                              + var(--mod-textfield-focus-indicator-thickness, var(--spectrum-textfield-focus-indicator-thickness))
+                              + var(--mod-textfield-border-size, var(--spectrum-textfield-border-size)))
+                              * -1);
+
+    inline-size: calc(100% + (var(--mod-textfield-focus-indicator-gap, var(--spectrum-textfield-focus-indicator-gap)) * 2)
+                + (var(--mod-textfield-border-size, var(--spectrum-textfield-border-size)) * 2));
+    block-size: calc(100% + (var(--mod-textfield-focus-indicator-gap, var(--spectrum-textfield-focus-indicator-gap)) * 2)
+                + (var(--mod-textfield-border-size, var(--spectrum-textfield-border-size)) * 2));
+
+    border-radius: calc(var(--spectrum-textfield-border-radius) + var(--spectrum-textfield-focus-indicator-gap));
+    border-color: transparent;
+    border-width: var(--spectrum-textfield-focus-indicator-thickness);
+    border-style: solid;
+    border-radius: calc(var(--mod-textfield-border-radius, var(--spectrum-textfield-border-radius))
+                         + var(--mod-textfield-focus-indicator-gap, var(--spectrum-textfield-focus-indicator-gap))
+                         + var(--mod-textfield-border-size, var(--spectrum-textfield-border-size)));
+
+    transition: box-shadow var(--spectrum-textfield-animation-duration) ease-in-out,
+                border-color var(--spectrum-textfield-animation-duration) ease-in-out;
+  }
+
   /****** Focus ******/
   &:focus-visible,
-  &.is-keyboardFocused {
+  &.is-keyboardFocused,
+  &.is-focused {
     &::after {
       border-color: var(--spectrum-textfield-focus-indicator-color);
     }
@@ -193,30 +230,16 @@ governing permissions and limitations under the License.
       }
 
       &::after {
-        margin: 0;
-        box-shadow: none;
-        border-bottom: 2px solid var(--spectrum-textfield-focus-indicator-color);
-        bottom: calc(-1 * (var(--spectrum-textfield-focus-indicator-gap) + var(--spectrum-textfield-border-size)));
+        border-color: transparent;
+        border-width: 0;
+        border-bottom-width: var(--spectrum-textfield-focus-indicator-thickness);
+        border-bottom-color: var(--spectrum-textfield-focus-indicator-color);
+        inline-size: 100%;
+        margin-inline-start: 0;
       }
     }
   }
 
-  /****** Focus Indicator ******/
-  &::after {
-    pointer-events: none;
-    content: '';
-    position: absolute;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    top: 0;
-    margin: calc(var(--spectrum-textfield-focus-indicator-gap) * -1);
-    border-width: var(--spectrum-textfield-focus-indicator-thickness);
-    border-radius: calc(var(--spectrum-textfield-border-radius) + var(--spectrum-textfield-focus-indicator-gap));
-    border-color: transparent;
-    transition: box-shadow var(--spectrum-textfield-animation-duration) ease-in-out,
-                border-color var(--spectrum-textfield-animation-duration) ease-in-out;
-  }
 
   /****** Focus Indicator Quiet ******/
   &.spectrum-Textfield--quiet {
