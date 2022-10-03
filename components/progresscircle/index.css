@@ -28,6 +28,9 @@ governing permissions and limitations under the License.
   /* default size and thickness */
   --spectrum-progress-circle-size: var(--spectrum-progress-circle-size-medium);
   --spectrum-progress-circle-thickness: var(--spectrum-progress-circle-thickness-medium);
+
+  /* track border style */
+  --spectrum-progress-circle-track-border-style: solid;
 }
 
 .spectrum-ProgressCircle--small {
@@ -54,6 +57,11 @@ governing permissions and limitations under the License.
     /* fill over background is bright color */
     --highcontrast-progress-circle-fill-border-color-over-background: Highlight;
   }
+
+  /* track double for visibility */
+  .spectrum-ProgressCircle-track {
+    --spectrum-progress-circle-track-border-style: double;
+  }
 }
 
 .spectrum-ProgressCircle {
@@ -77,7 +85,9 @@ governing permissions and limitations under the License.
   block-size: var(--mod-progress-circle-size,
                   var(--spectrum-progress-circle-size));
 
-  border-style: solid;
+  border-style: var(--highcontrast-progress-circle-track-border-style,
+                    var(--mod-progress-circle-track-border-style,
+                    var(--spectrum-progress-circle-track-border-style)));
   border-width: var(--mod-progress-circle-thickness,
                     var(--spectrum-progress-circle-thickness));
   border-radius: var(--mod-progress-circle-size,
