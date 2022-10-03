@@ -3,6 +3,23 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+<a name="6.0.0"></a>
+# 6.0.0
+🗓 2022-10-03 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/buttongroup@5.0.13...@spectrum-css/buttongroup@6.0.0)
+
+* refactor(buttongroup)!: migrate to core tokens (#1514) ([66b3826](https://github.com/adobe/spectrum-css/commit/66b3826)), closes [#1514](https://github.com/adobe/spectrum-css/issues/1514)
+
+
+### 🛑 BREAKING CHANGES
+
+* migrates ButtonGroup to core tokens
+
+* feat: add variants for t-shirt sizes
+
+
+
+
+
 <a name="5.0.13"></a>
 ## 5.0.13
 🗓 2022-06-16 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/buttongroup@5.0.12...@spectrum-css/buttongroup@5.0.13)
