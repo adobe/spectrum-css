@@ -1,5 +1,5 @@
 /*
-Copyright 2019 Adobe. All rights reserved.
+Copyright 2022 Adobe. All rights reserved.
 This file is licensed to you under the Apache License, Version 2.0 (the "License");
 you may not use this file except in compliance with the License. You may obtain a copy
 of the License at http://www.apache.org/licenses/LICENSE-2.0
@@ -11,27 +11,42 @@ governing permissions and limitations under the License.
 */
 
 .spectrum-ButtonGroup {
-  --spectrum-buttongroup-button-gap-reset: 0;
+  --spectrum-buttongroup-spacing-horizontal: var(--spectrum-spacing-300);
+  --spectrum-buttongroup-spacing-vertical: var(--spectrum-spacing-300);
+}
+
+.spectrum-ButtonGroup--sizeS {
+  --spectrum-buttongroup-spacing-horizontal: var(--spectrum-spacing-200);
+  --spectrum-buttongroup-spacing-vertical: var(--spectrum-spacing-200);
+}
+
+.spectrum-ButtonGroup--sizeM {
+  --spectrum-buttongroup-spacing-horizontal: var(--spectrum-spacing-300);
+  --spectrum-buttongroup-spacing-vertical: var(--spectrum-spacing-300);
+}
+
+.spectrum-ButtonGroup--sizeL {
+  --spectrum-buttongroup-spacing-horizontal: var(--spectrum-spacing-300);
+  --spectrum-buttongroup-spacing-vertical: var(--spectrum-spacing-300);
+}
+
+.spectrum-ButtonGroup--sizeXL {
+  --spectrum-buttongroup-spacing-horizontal: var(--spectrum-spacing-300);
+  --spectrum-buttongroup-spacing-vertical: var(--spectrum-spacing-300);
 }
 
 .spectrum-ButtonGroup {
   display: flex;
+  flex-wrap: wrap;
+  gap: var(--mod-buttongroup-spacing-horizontal, var(--spectrum-buttongroup-spacing-horizontal));
 
   .spectrum-ButtonGroup-item {
     flex-shrink: 0;
-  }
-
-  .spectrum-ButtonGroup-item + .spectrum-ButtonGroup-item {
-    margin-inline-start: var(--spectrum-buttongroup-button-gap-x);
   }
 }
 
 .spectrum-ButtonGroup--vertical {
   display: inline-flex;
   flex-direction: column;
-
-  .spectrum-ButtonGroup-item + .spectrum-ButtonGroup-item {
-    margin-block-start: var(--spectrum-buttongroup-button-gap-y);
-    margin-inline-start: var(--spectrum-buttongroup-button-gap-reset);
-  }
+  gap: var(--mod-buttongroup-spacing-vertical, var(--spectrum-buttongroup-spacing-vertical));
 }
