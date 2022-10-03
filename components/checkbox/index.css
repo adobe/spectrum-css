@@ -43,7 +43,7 @@ governing permissions and limitations under the License.
   /* Font */
   --spectrum-checkbox-font-size: var(--spectrum-font-size-100);
   --spectrum-checkbox-line-height: var(--spectrum-line-height-100);
-  --spectrum-checkbox-CJK-line-height: var(--spectrum-CJK-line-height-100);
+  --spectrum-checkbox-cjk-line-height: var(--spectrum-cjk-line-height-100);
 
   /* Size */
   --spectrum-checkbox-height: var(--spectrum-component-height-100);
@@ -433,7 +433,7 @@ governing permissions and limitations under the License.
   &:lang(js),
   &:lang(zh),
   &:lang(ko) {
-    line-height: var(--spectrum-checkbox-CJK-line-height, var(--mod-checkbox-line-height, var(--spectrum-checkbox-line-height)));
+    line-height: var(--spectrum-checkbox-cjk-line-height, var(--mod-checkbox-line-height, var(--spectrum-checkbox-line-height)));
   }
 }
 
