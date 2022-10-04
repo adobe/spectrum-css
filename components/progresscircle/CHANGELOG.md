@@ -3,6 +3,23 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+<a name="2.0.0"></a>
+# 2.0.0
+🗓 2022-10-04 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/progresscircle@1.0.23...@spectrum-css/progresscircle@2.0.0)
+
+* feat(progresscircle)!: migrate to core tokens ([27fdaea](https://github.com/adobe/spectrum-css/commit/27fdaea))
+
+
+### 🛑 BREAKING CHANGES
+
+* migrates progress circle to core tokens
+
+Co-authored-by: Patrick Fulton <pfulton@adobe.com>
+
+
+
+
+
 <a name="1.0.23"></a>
 ## 1.0.23
 🗓 2022-06-16 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/progresscircle@1.0.22...@spectrum-css/progresscircle@1.0.23)
