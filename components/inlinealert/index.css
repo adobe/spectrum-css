@@ -86,7 +86,10 @@ governing permissions and limitations under the License.
 
 .spectrum-InLineAlert-content {
   display: block;
-  margin: var(--mod-inlinealert-spacing-header-content-button, var(--spectrum-inlinealert-spacing-header-content-button)) 0 0 0;
+  margin-block-start: var(--mod-inlinealert-spacing-header-content-button, var(--spectrum-inlinealert-spacing-header-content-button));
+  margin-block-end: 0;
+  margin-inline-start: 0;
+  margin-inline-end: 0;
   padding: 0;
 
   word-wrap: break-word;
