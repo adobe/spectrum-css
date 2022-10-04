@@ -3,6 +3,24 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+<a name="4.0.0"></a>
+# 4.0.0
+🗓 2022-10-04 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/checkbox@3.1.3...@spectrum-css/checkbox@4.0.0)
+
+* feat(checkbox)!: migrate checkbox component to core tokens (CSS-99) (#1465) ([20b5917](https://github.com/adobe/spectrum-css/commit/20b5917)), closes [#1465](https://github.com/adobe/spectrum-css/issues/1465)
+
+
+### 🛑 BREAKING CHANGES
+
+* migrates Checkbox to core tokens
+
+Co-authored-by: Patrick Fulton <pfulton@adobe.com>
+Co-authored-by: Garth Braithwaite <garthdb@gmail.com>
+
+
+
+
+
 <a name="3.1.3"></a>
 ## 3.1.3
 🗓 2022-06-16 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/checkbox@3.1.2...@spectrum-css/checkbox@3.1.3)
