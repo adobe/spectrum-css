@@ -13,9 +13,11 @@ governing permissions and limitations under the License.
 .spectrum-InLineAlert {
   /* Static properties */
   --spectrum-inlinealert-font-size: 14px;
-  --spectrum-inlinealert-font-weight: 700;
   --spectrum-inlinealert-font-style: normal;
   --spectrum-inlinealert-line-height: 14px;
+
+  /* Font */
+  --spectrum-inlinealert-font-weight: var(--spectrum-font-weight-bold);
 
   /* Size*/
   --spectrum-inlinealert-border-width: var(--spectrum-border-width-100);
