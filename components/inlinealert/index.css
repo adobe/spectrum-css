@@ -62,8 +62,8 @@ governing permissions and limitations under the License.
 }
 
 .spectrum-InLineAlert-icon {
-  inline-size: var(--spectrum-inlinealert-icon-size);
-  block-size: var(--spectrum-inlinealert-icon-size);
+  inline-size: var(--mod-inlinealert-icon-size, var(--spectrum-inlinealert-icon-size));
+  block-size: var(--mod-inlinealert-icon-size, var(--spectrum-inlinealert-icon-size));
 }
 
 .spectrum-InLineAlert-header {
