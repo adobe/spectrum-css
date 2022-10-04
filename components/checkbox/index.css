@@ -184,26 +184,6 @@ governing permissions and limitations under the License.
     }
   }
 
-  /* &:focus-ring {
-    .spectrum-Checkbox-box {
-      &:before {
-        border-color: var(--highcontrast-checkbox-highlight-color-focus, var(--mod-checkbox-emphasized-color-focus, var(--spectrum-checkbox-emphasized-color-focus)));
-      }
-    }
-
-    .spectrum-Checkbox-box {
-      &:after {
-        border-style: solid;
-        border-color:
-        var(--highcontrast-checkbox-focus-ring-color, var(--mod-checkbox-focus-ring-color, var(--spectrum-checkbox-focus-ring-color)));
-      }
-    }
-
-    .spectrum-Checkbox-label {
-      color: var(--highcontrast-checkbox-content-color-focus, var(--mod-checkbox-content-color-focus, var(--spectrum-checkbox-content-color-focus)));
-    }
-  } */
-
   /* Selected Invalid */
   &.is-invalid {
     .spectrum-Checkbox-input:checked + .spectrum-Checkbox-box,
