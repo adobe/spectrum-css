@@ -32,12 +32,6 @@ governing permissions and limitations under the License.
   --spectrum-inlinealert-header-and-content-color: var(--spectrum-gray-900);
 }
 
-@media (forced-colors: active) {
-  --highcontrast-inlinealert-background-color: Background;
-  --highcontrast-inlinealert-header-and-content-color: CanvasText;
-  --highcontrast-inlinealert-border-and-icon-color: ButtonBorder;
-}
-
 .spectrum-InLineAlert {
   position: relative;
 
@@ -54,6 +48,14 @@ governing permissions and limitations under the License.
 
   background-color: var(--highcontrast-inlinealert-background-color, var(--mod-inlinealert-background-color, var(--spectrum-inlinealert-background-color)));
   border-color: var(--highcontrast-inlinealert-border-and-icon-color, var(--mod-inlinealert-border-and-icon-color, var(--spectrum-inlinealert-border-and-icon-color)));
+}
+
+@media (forced-colors: active) {
+  .spectrum-InLineAlert {
+    --highcontrast-inlinealert-background-color: Background;
+    --highcontrast-inlinealert-header-and-content-color: CanvasText;
+    --highcontrast-inlinealert-border-and-icon-color: ButtonBorder;
+  }
 }
 
 .spectrum-InLineAlert-icon {
