@@ -15,6 +15,8 @@ sections:
       ### New Action Button markup
       Action Button requires `.spectrum-ActionButton-icon` class on icons nested inside of Action Button.
 
+      Emphasized Action Bar requires `.spectrum-ActionButton-staticWhite` class on Action Button.
+
       ### New ActionGroup markup
       Action Bar now uses the new ActionGroup markup. Replace `.spectrum-ButtonGroup` with `.spectrum-ActionGroup` and apply `.spectrum-ActionGroup-item` to each action button. See the [Action Group](actiongroup.html) for more information.
 
@@ -131,13 +133,13 @@ examples:
           <label class="spectrum-FieldLabel spectrum-FieldLabel--sizeS">2 Selected</label>
 
           <div class="spectrum-ActionGroup">
-            <button class="spectrum-ActionButton spectrum-ActionButton--sizeM spectrum-ActionButton--quiet spectrum-ActionGroup-item">
+            <button class="spectrum-ActionButton spectrum-ActionButton--sizeM spectrum-ActionButton--quiet spectrum-ActionButton--staticWhite spectrum-ActionGroup-item">
               <span class="spectrum-ActionButton-label">Edit</span>
             </button>
-            <button class="spectrum-ActionButton spectrum-ActionButton--sizeM spectrum-ActionButton--quiet spectrum-ActionGroup-item">
+            <button class="spectrum-ActionButton spectrum-ActionButton--sizeM spectrum-ActionButton--quiet spectrum-ActionButton--staticWhite spectrum-ActionGroup-item">
               <span class="spectrum-ActionButton-label">Copy</span>
             </button>
-            <button class="spectrum-ActionButton spectrum-ActionButton--sizeM spectrum-ActionButton--quiet spectrum-ActionGroup-item">
+            <button class="spectrum-ActionButton spectrum-ActionButton--sizeM spectrum-ActionButton--quiet spectrum-ActionButton--staticWhite spectrum-ActionGroup-item">
               <span class="spectrum-ActionButton-label">Delete</span>
             </button>
           </div>
@@ -156,19 +158,19 @@ examples:
           <label class="spectrum-FieldLabel spectrum-FieldLabel--sizeS">2 Selected</label>
 
           <div class="spectrum-ActionGroup">
-            <button class="spectrum-ActionButton spectrum-ActionButton--sizeM spectrum-ActionButton--quiet spectrum-ActionGroup-item">
+            <button class="spectrum-ActionButton spectrum-ActionButton--sizeM spectrum-ActionButton--quiet spectrum-ActionButton--staticWhite spectrum-ActionGroup-item">
               <svg class="spectrum-Icon spectrum-Icon--sizeM spectrum-ActionButton-icon" focusable="false" aria-hidden="true" aria-label="Edit">
                 <use xlink:href="#spectrum-icon-18-Edit"></use>
               </svg>
               <span class="spectrum-ActionButton-label">Edit</span>
             </button>
-            <button class="spectrum-ActionButton spectrum-ActionButton--sizeM spectrum-ActionButton--quiet spectrum-ActionGroup-item">
+            <button class="spectrum-ActionButton spectrum-ActionButton--sizeM spectrum-ActionButton--quiet spectrum-ActionButton--staticWhite spectrum-ActionGroup-item">
               <svg class="spectrum-Icon spectrum-Icon--sizeM spectrum-ActionButton-icon" focusable="false" aria-hidden="true" aria-label="Copy">
                 <use xlink:href="#spectrum-icon-18-Copy"></use>
               </svg>
               <span class="spectrum-ActionButton-label">Copy</span>
             </button>
-            <button class="spectrum-ActionButton spectrum-ActionButton--sizeM spectrum-ActionButton--quiet spectrum-ActionGroup-item">
+            <button class="spectrum-ActionButton spectrum-ActionButton--sizeM spectrum-ActionButton--quiet spectrum-ActionButton--staticWhite spectrum-ActionGroup-item">
               <svg class="spectrum-Icon spectrum-Icon--sizeM spectrum-ActionButton-icon" focusable="false" aria-hidden="true" aria-label="Delete">
                 <use xlink:href="#spectrum-icon-18-Delete"></use>
               </svg>
@@ -190,17 +192,17 @@ examples:
           <label class="spectrum-FieldLabel spectrum-FieldLabel--sizeS">2 Selected</label>
 
           <div class="spectrum-ActionGroup">
-            <button class="spectrum-ActionButton spectrum-ActionButton--sizeM spectrum-ActionButton--quiet spectrum-ActionGroup-item">
+            <button class="spectrum-ActionButton spectrum-ActionButton--sizeM spectrum-ActionButton--quiet spectrum-ActionButton--staticWhite spectrum-ActionGroup-item">
               <svg class="spectrum-Icon spectrum-Icon--sizeM spectrum-ActionButton-icon" focusable="false" aria-hidden="true" aria-label="Edit">
                 <use xlink:href="#spectrum-icon-18-Edit"></use>
               </svg>
             </button>
-            <button class="spectrum-ActionButton spectrum-ActionButton--sizeM spectrum-ActionButton--quiet spectrum-ActionGroup-item">
+            <button class="spectrum-ActionButton spectrum-ActionButton--sizeM spectrum-ActionButton--quiet spectrum-ActionButton--staticWhite spectrum-ActionGroup-item">
               <svg class="spectrum-Icon spectrum-Icon--sizeM spectrum-ActionButton-icon" focusable="false" aria-hidden="true" aria-label="Copy">
                 <use xlink:href="#spectrum-icon-18-Copy"></use>
               </svg>
             </button>
-            <button class="spectrum-ActionButton spectrum-ActionButton--sizeM spectrum-ActionButton--quiet spectrum-ActionGroup-item">
+            <button class="spectrum-ActionButton spectrum-ActionButton--sizeM spectrum-ActionButton--quiet spectrum-ActionButton--staticWhite spectrum-ActionGroup-item">
               <svg class="spectrum-Icon spectrum-Icon--sizeM spectrum-ActionButton-icon" focusable="false" aria-hidden="true" aria-label="Delete">
                 <use xlink:href="#spectrum-icon-18-Delete"></use>
               </svg>
