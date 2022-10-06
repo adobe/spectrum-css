@@ -3,6 +3,23 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+<a name="2.0.0"></a>
+# 2.0.0
+🗓 2022-10-06 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/swatch@1.1.4...@spectrum-css/swatch@2.0.0)
+
+* feat(swatch)!: migrate swatch to core tokens (#1501) ([47b5ec9](https://github.com/adobe/spectrum-css/commit/47b5ec9)), closes [#1501](https://github.com/adobe/spectrum-css/issues/1501)
+
+
+### 🛑 BREAKING CHANGES
+
+* migrates Swatch to core tokens
+
+Co-authored-by: Patrick Fulton <pfulton@adobe.com>
+
+
+
+
+
 <a name="1.1.4"></a>
 ## 1.1.4
 🗓 2022-07-25 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/swatch@1.1.3...@spectrum-css/swatch@1.1.4)
