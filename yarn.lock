@@ -1468,6 +1468,13 @@
   resolved "https://registry.yarnpkg.com/@spectrum-css/closebutton/-/closebutton-1.2.13.tgz#a02a33e211349138bcde0988cd4317749a7618e4"
   integrity sha512-V/P/XVWPh/TR2Qo66vn6o+vi5/utDbrMIdNV+zuF1dbl1wxH5QMOdCQrQOtzHrzcwulJRu3+Sk759VRPojLYCA==
 
+"@spectrum-css/divider@^1.0.27":
+  version "1.0.27"
+  resolved "https://registry.yarnpkg.com/@spectrum-css/divider/-/divider-1.0.27.tgz#435bf738a65b4eb15c899edf5c536bea22f2d679"
+  integrity sha512-hWKPHOEo9lkOGN5zecpVVwVxE3x0SJHQJKDNx1g0xs/P/AthAboK+L1c9Rq29czNfcQ2kUjumi4igzQzcqABMQ==
+  dependencies:
+    "@spectrum-css/vars" "^8.0.0"
+
 "@spectrum-css/radio@^3.0.24":
   version "3.0.24"
   resolved "https://registry.yarnpkg.com/@spectrum-css/radio/-/radio-3.0.24.tgz#7a08476edf42be2007b75f7765c18c26eb3a9880"
