@@ -3,6 +3,18 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+<a name="3.2.20"></a>
+## 3.2.20
+🗓 2022-10-06 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/tabs@3.2.19...@spectrum-css/tabs@3.2.20)
+
+### 🐛 Bug fixes
+
+* **tabs:** selection indicator scroll overflow border ([#1513](https://github.com/adobe/spectrum-css/issues/1513)) ([3f740ad](https://github.com/adobe/spectrum-css/commit/3f740ad))
+
+
+
+
+
 <a name="3.2.19"></a>
 ## 3.2.19
 🗓 2022-07-25 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/tabs@3.2.18...@spectrum-css/tabs@3.2.19)
