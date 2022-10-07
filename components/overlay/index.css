@@ -10,7 +10,8 @@ governing permissions and limitations under the License.
 */
 
 %spectrum-overlay {
-  --spectrum-overlay-animation-distance: var(--spectrum-picker-m-texticon-popover-offset-y);
+  --spectrum-overlay-animation-distance: 6px; /* placeholder token */
+  --spectrum-global-animation-duration-100: var(--spectrum-animation-duration-100);
 
   visibility: hidden;
 
