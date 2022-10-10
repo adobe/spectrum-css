@@ -132,7 +132,7 @@ examples:
     status: Deprecated
     details: Use `positive` instead.
     markup: |
-      <span class="spectrum-Tooltip spectrum-Tooltip--success spectrum-Tooltip--top is-open">
+      <span class="spectrum-Tooltip spectrum-Tooltip--positive spectrum-Tooltip--top is-open">
         <span class="spectrum-Tooltip-label">Label</span>
         <span class="spectrum-Tooltip-tip"></span>
       </span>
@@ -141,7 +141,7 @@ examples:
     status: Deprecated
     details: Use `negative` instead.
     markup: |
-      <span class="spectrum-Tooltip spectrum-Tooltip--error spectrum-Tooltip--top is-open">
+      <span class="spectrum-Tooltip spectrum-Tooltip--negative spectrum-Tooltip--top is-open">
         <span class="spectrum-Tooltip-label">Label</span>
         <span class="spectrum-Tooltip-tip"></span>
       </span>
@@ -156,7 +156,7 @@ examples:
     markup: |
       <span class="spectrum-Tooltip spectrum-Tooltip--top spectrum-Tooltip--info is-open">
         <svg class="spectrum-Icon spectrum-Icon--sizeM spectrum-Tooltip-typeIcon" focusable="false" aria-hidden="true">
-          <use xlink:href="#spectrum-icon-18-Help" />
+          <use xlink:href="#spectrum-icon-18-Info" />
         </svg>
         <span class="spectrum-Tooltip-label">Help</span>
         <span class="spectrum-Tooltip-tip"></span>
