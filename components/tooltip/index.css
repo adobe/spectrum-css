@@ -55,6 +55,9 @@ governing permissions and limitations under the License.
   /* tip */
   --spectrum-tooltip-tip-inline-size: var(--spectrum-tooltip-tip-width);
   --spectrum-tooltip-tip-block-size: var(--spectrum-tooltip-tip-height);
+
+  /* pointer tip - default spacing to edge - corner radius plus half of tip width to neutralize override */
+  --spectrum-tooltip-pointer-corner-spacing: var(--spectrum-corner-radius-100);
 }
 
 .spectrum-Tooltip {
@@ -147,61 +150,147 @@ governing permissions and limitations under the License.
   clip-path: polygon(0 -5%, 50% 100%, 100% -5%);
 }
 
-.spectrum-Tooltip--right,
-.spectrum-Tooltip--left {
-  .spectrum-Tooltip-tip {
-    top: 0;
-    bottom: 0;
+
+/* TOOLTIP PLACEMENT */
+
+/* tooltip position is at top of source - default placement */
+.spectrum-Tooltip--top,
+.spectrum-Tooltip--top-left,
+.spectrum-Tooltip--top-right,
+.spectrum-Tooltip--top-start,
+.spectrum-Tooltip--top-end {
+  margin-bottom: var(--spectrum-tooltip-tip-block-size);
+
+  /* tooltip animates upward ⬆ */
+  &.is-open {
+    @inherit: %spectrum-overlay--top--open;
   }
 }
 
-.spectrum-Tooltip--right {
+/* tooltip position is at bottom of source */
+.spectrum-Tooltip--bottom,
+.spectrum-Tooltip--bottom-left,
+.spectrum-Tooltip--bottom-right,
+.spectrum-Tooltip--bottom-start,
+.spectrum-Tooltip--bottom-end {
+  margin-top: var(--spectrum-tooltip-tip-block-size);
+
+  /* Tooltip animates downward ⬇ */
+  &.is-open {
+    @inherit: %spectrum-overlay--bottom--open;
+  }
+}
+
+/* tooltip position is right of source */
+.spectrum-Tooltip--right,
+.spectrum-Tooltip--right-bottom,
+.spectrum-Tooltip--right-top {
   margin-left: var(--spectrum-tooltip-tip-block-size);
 
   &.is-open {
     @inherit: %spectrum-overlay--right--open;
   }
-
-  .spectrum-Tooltip-tip {
-    transform: rotate(90deg);
-    left: auto;
-    right: calc(100% - (var(--spectrum-tooltip-tip-height) / 2));
-  }
 }
 
-.spectrum-Tooltip--left {
+
+/* tooltip position is left of source */
+.spectrum-Tooltip--left,
+.spectrum-Tooltip--left-bottom,
+.spectrum-Tooltip--left-top {
   margin-right: var(--spectrum-tooltip-tip-block-size);
 
   &.is-open {
     @inherit: %spectrum-overlay--left--open;
   }
+}
 
-  .spectrum-Tooltip-tip {
-    transform: rotate(-90deg);
-    left: calc(100% - (var(--spectrum-tooltip-tip-height) / 2));
-    right: auto;
+/* logical property - tooltip is horizontally at start */
+.spectrum-Tooltip--start,
+.spectrum-Tooltip--start-top,
+.spectrum-Tooltip--start-bottom {
+  margin-inline-end: var(--spectrum-tooltip-tip-height);
+
+  /* LTR read, tooltip animates towards left ⬅ */
+  &.is-open {
+    @inherit: %spectrum-overlay--left--open;
+  }
+
+  /* RTL read, tooltip animates towards right ⮕ */
+  [dir="rtl"] & {
+    &.is-open {
+      @inherit: %spectrum-overlay--right--open;
+    }
   }
 }
 
-.spectrum-Tooltip--top {
-  margin-bottom: var(--spectrum-tooltip-tip-block-size);
+/* logical property - tooltip is horizontally at end */
+.spectrum-Tooltip--end,
+.spectrum-Tooltip--end-top,
+.spectrum-Tooltip--end-bottom {
+  margin-inline-start: var(--spectrum-tooltip-tip-height);
 
+  /* LTR read, tooltip animates towards right ⮕ */
   &.is-open {
-    @inherit: %spectrum-overlay--top--open;
+    @inherit: %spectrum-overlay--right--open;
   }
 
+  /* RTL read, tooltip animates towards left ⬅ */
+  [dir="rtl"] & {
+  &.is-open {
+      @inherit: %spectrum-overlay--left--open;
+    }
+  }
+}
+
+/********* TIP PLACEMENT***********/
+
+/* tip is at bottom pointing down ▽ */
+.spectrum-Tooltip--top,
+.spectrum-Tooltip--top-left,
+.spectrum-Tooltip--top-right,
+.spectrum-Tooltip--top-start,
+.spectrum-Tooltip--top-end {
   .spectrum-Tooltip-tip {
     top: 100%;
   }
 }
 
-.spectrum-Tooltip--bottom {
-  margin-top: var(--spectrum-tooltip-tip-block-size);
-
-  &.is-open {
-    @inherit: %spectrum-overlay--bottom--open;
+/* tip is at bottom left pointing down ▽ */
+.spectrum-Tooltip--top-left {
+  .spectrum-Tooltip-tip {
+    left: var(--spectrum-tooltip-pointer-corner-spacing);
+    right: auto;
   }
+}
 
+/* tip is at bottom right pointing down ▽ */
+.spectrum-Tooltip--top-right {
+  .spectrum-Tooltip-tip {
+    right: var(--spectrum-tooltip-pointer-corner-spacing);
+    left: auto;
+  }
+}
+
+/* logical property - Tooltip is above, source and tip are at start, tip pointing down ▽ */
+.spectrum-Tooltip--top-start {
+  .spectrum-Tooltip-tip {
+    margin-inline-start: var(--spectrum-tooltip-pointer-corner-spacing);
+  }
+}
+
+/* logical property - Tooltip is above, source and tip are at end, tip pointing down ▽ */
+.spectrum-Tooltip--top-end {
+  .spectrum-Tooltip-tip {
+    margin-inline-end: var(--spectrum-tooltip-pointer-corner-spacing);
+  }
+}
+
+/* tip is at top pointing up △ */
+.spectrum-Tooltip--bottom,
+.spectrum-Tooltip--bottom-left,
+.spectrum-Tooltip--bottom-right,
+.spectrum-Tooltip--bottom-start,
+.spectrum-Tooltip--bottom-end {
   .spectrum-Tooltip-tip {
     transform: rotate(-180deg);
     top: auto;
@@ -209,6 +298,149 @@ governing permissions and limitations under the License.
   }
 }
 
+/* Tooltip position is bottom, source is at left, tip pointing up △ */
+.spectrum-Tooltip--bottom-left {
+  .spectrum-Tooltip-tip {
+    left: var(--spectrum-tooltip-pointer-corner-spacing);
+    right: auto;
+  }
+}
+
+/* Tooltip position is bottom, source is at right, tip pointing up △ */
+.spectrum-Tooltip--bottom-right {
+  .spectrum-Tooltip-tip {
+    left: auto;
+    right: var(--spectrum-tooltip-pointer-corner-spacing);
+  }
+}
+
+/* logical property - Tooltip is below, source is at start, tip pointing up △ */
+.spectrum-Tooltip--bottom-start {
+  .spectrum-Tooltip-tip {
+    margin-inline-start: var(--spectrum-tooltip-pointer-corner-spacing);
+  }
+}
+
+/* logical property - Tooltip is below, source is at end, tip pointing up △ */
+.spectrum-Tooltip--bottom-end {
+  .spectrum-Tooltip-tip {
+    margin-inline-end: var(--spectrum-tooltip-pointer-corner-spacing);
+  }
+}
+
+/* right and left */
+.spectrum-Tooltip--right,
+.spectrum-Tooltip--right-bottom,
+.spectrum-Tooltip--right-top,
+.spectrum-Tooltip--left,
+.spectrum-Tooltip--left-bottom,
+.spectrum-Tooltip--left-top {
+  .spectrum-Tooltip-tip {
+    top: 0;
+    bottom: 0;
+  }
+}
+
+/* tooltip position is right of source */
+.spectrum-Tooltip--right,
+.spectrum-Tooltip--right-bottom,
+.spectrum-Tooltip--right-top {
+  .spectrum-Tooltip-tip {
+    transform: rotate(90deg);
+    left: auto;
+    right: calc(100% - (var(--spectrum-tooltip-tip-height) / 2));
+  }
+}
+
+/* tooltip position is left of source */
+.spectrum-Tooltip--left,
+.spectrum-Tooltip--left-bottom,
+.spectrum-Tooltip--left-top {
+  .spectrum-Tooltip-tip {
+    transform: rotate(-90deg);
+    left: calc(100% - (var(--spectrum-tooltip-tip-height) / 2));
+    right: auto;
+  }
+}
+
+/* Tooltip with tip at top */
+.spectrum-Tooltip--right-top,
+.spectrum-Tooltip--left-top,
+.spectrum-Tooltip--start-top,
+.spectrum-Tooltip--end-top {
+  .spectrum-Tooltip-tip {
+    top: var(--spectrum-tooltip-pointer-corner-spacing);
+    bottom: auto;
+  }
+}
+
+/* Tooltip with tip at bottom */
+.spectrum-Tooltip--right-bottom,
+.spectrum-Tooltip--left-bottom,
+.spectrum-Tooltip--start-bottom,
+.spectrum-Tooltip--end-bottom {
+  .spectrum-Tooltip-tip {
+    top: auto;
+    bottom: var(--spectrum-tooltip-pointer-corner-spacing);
+  }
+}
+
+/* logical property - start Tooltip position with tip pointing toward end -  LTR default is ▷ */
+.spectrum-Tooltip--start,
+.spectrum-Tooltip--start-top,
+.spectrum-Tooltip--start-bottom {
+  .spectrum-Tooltip-tip {
+    transform: rotate(-90deg);
+    left: calc(100% - (var(--spectrum-tooltip-tip-height) / 2));
+    right: auto;
+    top: 0;
+    bottom: 0;
+
+    [dir="rtl"] & {
+      transform: rotate(90deg);
+      left: auto;
+      right: calc(100% - (var(--spectrum-tooltip-tip-height) / 2));
+    }
+  }
+}
+
+/* logical property - end Tooltip position with tip pointing toward start  -  LTR default is ◁ **/
+.spectrum-Tooltip--end,
+.spectrum-Tooltip--end-top,
+.spectrum-Tooltip--end-bottom {
+  /* tip triangle  */
+  .spectrum-Tooltip-tip {
+    transform: rotate(90deg);
+    left: auto;
+    right: calc(100% - (var(--spectrum-tooltip-tip-height) / 2));
+    top: 0;
+    bottom: 0;
+
+    [dir="rtl"] & {
+      transform: rotate(-90deg);
+      left: calc(100% - (var(--spectrum-tooltip-tip-height) / 2));
+      right: auto;
+    }
+  }
+}
+
+.spectrum-Tooltip--start-top,
+.spectrum-Tooltip--end-top {
+  .spectrum-Tooltip-tip {
+    top: var(--spectrum-tooltip-pointer-corner-spacing);
+    bottom: auto;
+  }
+}
+
+.spectrum-Tooltip--start-bottom,
+.spectrum-Tooltip--end-bottom {
+  .spectrum-Tooltip-tip {
+    top: auto;
+    bottom: var(--spectrum-tooltip-pointer-corner-spacing);
+  }
+}
+
+/* Icon */
 .spectrum-Tooltip-typeIcon {
   margin-inline-end: var(--spectrum-tooltip-icon-spacing-inline-end);
   margin-block-start: var(--spectrum-tooltip-icon-spacing-block-start);
@@ -218,6 +450,7 @@ governing permissions and limitations under the License.
   flex-shrink: 0;
 }
 
+/* label */
 .spectrum-Tooltip-label {
   /* Make sure line height is correct to prevent problems in Windows */
   line-height: var(--spectrum-tooltip-line-height);
@@ -250,28 +483,32 @@ governing permissions and limitations under the License.
     opacity: 1;
   }
 
-  .spectrum-Tooltip--top {
-    bottom: 100%;
+  .spectrum-Tooltip--top,
+  .spectrum-Tooltip--bottom {
     left: 50%;
     transform: translate(-50%, 0);
+  }
+
+  .spectrum-Tooltip--top {
+    bottom: 100%;
   }
 
   .spectrum-Tooltip--bottom {
     top: 100%;
-    left: 50%;
-    transform: translate(-50%, 0);
+  }
+
+  .spectrum-Tooltip--left,
+  .spectrum-Tooltip--right {
+    top: 50%;
+    transform: translate(0, -50%);
   }
 
   .spectrum-Tooltip--left {
     right: 100%;
-    top: 50%;
-    transform: translate(0, -50%);
   }
 
   .spectrum-Tooltip--right {
     left: 100%;
-    top: 50%;
-    transform: translate(0, -50%);
   }
 
   &:hover .spectrum-Tooltip.spectrum-Tooltip--top,
