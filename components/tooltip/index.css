@@ -341,25 +341,29 @@ governing permissions and limitations under the License.
   }
 }
 
-/* tooltip position is right of source */
+/* tooltip position is right of source pointing left ◁ */
 .spectrum-Tooltip--right,
 .spectrum-Tooltip--right-bottom,
 .spectrum-Tooltip--right-top {
   .spectrum-Tooltip-tip {
-    transform: rotate(90deg);
     left: auto;
-    right: calc(100% - (var(--spectrum-tooltip-tip-height) / 2));
+    right: 100%;
+    clip-path: polygon(0 50%, 105% 100%, 105% 0);
+    height: var(--spectrum-tooltip-tip-width);
+    width: var(--spectrum-tooltip-tip-height);
   }
 }
 
-/* tooltip position is left of source */
+/* tooltip position is left of source pointing right ▷ */
 .spectrum-Tooltip--left,
 .spectrum-Tooltip--left-bottom,
 .spectrum-Tooltip--left-top {
   .spectrum-Tooltip-tip {
-    transform: rotate(-90deg);
-    left: calc(100% - (var(--spectrum-tooltip-tip-height) / 2));
+    left: 100%;
     right: auto;
+    clip-path: polygon(-5% 0, -5% 100%, 100% 50%);
+    height: var(--spectrum-tooltip-tip-width);
+    width: var(--spectrum-tooltip-tip-height);
   }
 }
 
@@ -390,16 +394,20 @@ governing permissions and limitations under the License.
 .spectrum-Tooltip--start-top,
 .spectrum-Tooltip--start-bottom {
   .spectrum-Tooltip-tip {
-    transform: rotate(-90deg);
-    left: calc(100% - (var(--spectrum-tooltip-tip-height) / 2));
-    right: auto;
     top: 0;
     bottom: 0;
+    left: 100%;
+    right: auto;
+    clip-path: polygon(-5% 0, -5% 100%, 100% 50%);
+    height: var(--spectrum-tooltip-tip-width);
+    width: var(--spectrum-tooltip-tip-height);
 
     [dir="rtl"] & {
-      transform: rotate(90deg);
       left: auto;
-      right: calc(100% - (var(--spectrum-tooltip-tip-height) / 2));
+      right: 100%;
+      clip-path: polygon(0 50%, 105% 100%, 105% 0);
+      height: var(--spectrum-tooltip-tip-width);
+      width: var(--spectrum-tooltip-tip-height);
     }
   }
 }
@@ -410,16 +418,20 @@ governing permissions and limitations under the License.
 .spectrum-Tooltip--end-bottom {
   /* tip triangle  */
   .spectrum-Tooltip-tip {
-    transform: rotate(90deg);
-    left: auto;
-    right: calc(100% - (var(--spectrum-tooltip-tip-height) / 2));
     top: 0;
     bottom: 0;
+    left: auto;
+    right: 100%;
+    clip-path: polygon(0 50%, 105% 100%, 105% 0);
+    height: var(--spectrum-tooltip-tip-width);
+    width: var(--spectrum-tooltip-tip-height);
 
     [dir="rtl"] & {
-      transform: rotate(-90deg);
-      left: calc(100% - (var(--spectrum-tooltip-tip-height) / 2));
+      left: 100%;
       right: auto;
+      clip-path: polygon(-5% 0, -5% 100%, 100% 50%);
+      height: var(--spectrum-tooltip-tip-width);
+      width: var(--spectrum-tooltip-tip-height);
     }
   }
 }
