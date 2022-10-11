@@ -10,34 +10,71 @@ OF ANY KIND, either express or implied. See the License for the specific languag
 governing permissions and limitations under the License.
 */
 
-@import "../vars/css/components/spectrum-fieldlabel.css";
+
+/* Component level tokens currently missing in core-tokens as of July 2022 or are simply incorrect */
+.spectrum--medium {
+  --spectrum-field-label-top-to-asterisk-small: 8px;
+}
+
+.spectrum--large {
+  --spectrum-field-label-top-to-asterisk-small: 11px;
+}
 
 .spectrum-FieldLabel--sizeS {
-  @remapvars {
-    find: --spectrum-fieldlabel-s-;
-    replace: --spectrum-fieldlabel-;
-  }
+  --spectrum-fieldlabel-top-to-text: var(--spectrum-component-top-to-text-75);
+  --spectrum-fieldlabel-bottom-to-text: var(--spectrum-component-bottom-to-text-75);
+  --spectrum-fieldlabel-font-size: var(--spectrum-font-size-75);
+
+  --spectrum-fieldlabel-line-height: var(--spectrum-line-height-100);
+  --spectrum-fieldlabel-cjk-line-height: var(--spectrum-cjk-line-height-100);
+
+  --spectrum-fieldlabel-asterisk-gap: var(--spectrum-field-label-top-to-asterisk-small);
+  --spectrum-fieldlabel-side-padding-top: var(--spectrum-component-top-to-text-75);
+  --spectrum-fieldlabel-side-padding-right: var(--spectrum-spacing-100);
+  --spectrum-field-label-text-to-asterisk: var(--spectrum-field-label-text-to-asterisk-small);
 }
 
 .spectrum-FieldLabel--sizeM {
-  @remapvars {
-    find: --spectrum-fieldlabel-m-;
-    replace: --spectrum-fieldlabel-;
-  }
+  --spectrum-fieldlabel-top-to-text: var(--spectrum-component-top-to-text-75);
+  --spectrum-fieldlabel-bottom-to-text: var(--spectrum-component-bottom-to-text-75);
+  --spectrum-fieldlabel-font-size: var(--spectrum-font-size-75);
+
+  --spectrum-fieldlabel-line-height: var(--spectrum-line-height-200);
+  --spectrum-fieldlabel-cjk-line-height: var(--spectrum-cjk-line-height-200);
+
+  --spectrum-fieldlabel-asterisk-gap: var(--spectrum-field-label-top-to-asterisk-medium);
+  --spectrum-fieldlabel-side-padding-top: var(--spectrum-component-top-to-text-75);
+  --spectrum-fieldlabel-side-padding-right: var(--spectrum-spacing-200);
+  --spectrum-field-label-text-to-asterisk: var(--spectrum-field-label-text-to-asterisk-medium);
 }
 
 .spectrum-FieldLabel--sizeL {
-  @remapvars {
-    find: --spectrum-fieldlabel-l-;
-    replace: --spectrum-fieldlabel-;
-  }
+  --spectrum-fieldlabel-top-to-text: var(--spectrum-component-top-to-text-100);
+  --spectrum-fieldlabel-bottom-to-text: var(--spectrum-component-bottom-to-text-100);
+  --spectrum-fieldlabel-font-size: var(--spectrum-font-size-100);
+
+  --spectrum-fieldlabel-line-height: var(--spectrum-line-height-100);
+  --spectrum-fieldlabel-cjk-line-height: var(--spectrum-cjk-line-height-100);
+
+  --spectrum-fieldlabel-asterisk-gap: var(--spectrum-field-label-top-to-asterisk-large);
+  --spectrum-fieldlabel-side-padding-top: var(--spectrum-component-top-to-text-100);
+  --spectrum-fieldlabel-side-padding-right: var(--spectrum-spacing-200);
+  --spectrum-field-label-text-to-asterisk: var(--spectrum-field-label-text-to-asterisk-large);
 }
 
 .spectrum-FieldLabel--sizeXL {
-  @remapvars {
-    find: --spectrum-fieldlabel-xl-;
-    replace: --spectrum-fieldlabel-;
-  }
+  --spectrum-fieldlabel-top-to-text: var(--spectrum-component-top-to-text-200);
+  --spectrum-fieldlabel-bottom-to-text: var(--spectrum-component-bottom-to-text-200);
+  --spectrum-fieldlabel-font-size: var(--spectrum-font-size-200);
+
+  --spectrum-fieldlabel-line-height: var(--spectrum-line-height-200);
+  --spectrum-fieldlabel-cjk-line-height: var(--spectrum-cjk-line-height-200);
+
+
+  --spectrum-fieldlabel-asterisk-gap: var(--spectrum-field-label-top-to-asterisk-extra-large);
+  --spectrum-fieldlabel-side-padding-top: var(--spectrum-component-top-to-text-200);
+  --spectrum-fieldlabel-side-padding-right: var(--spectrum-spacing-200);
+  --spectrum-field-label-text-to-asterisk: var(--spectrum-field-label-text-to-asterisk-extra-large);
 }
 
 .spectrum-FieldLabel {
@@ -45,12 +82,13 @@ governing permissions and limitations under the License.
 
   box-sizing: border-box;
 
-  padding-block: var(--spectrum-fieldlabel-padding-top) var(--spectrum-fieldlabel-padding-bottom);
+  padding-block: var(--spectrum-fieldlabel-top-to-text) var(--spectrum-fieldlabel-bottom-to-text);
   padding-inline: 0;
 
-  font-size: var(--spectrum-fieldlabel-text-size);
-  font-weight: var(--spectrum-fieldlabel-text-font-weight);
-  line-height: var(--spectrum-fieldlabel-text-line-height);
+  font-size: var(--mod-fieldlabel-font-size, var(--spectrum-fieldlabel-font-size));
+  font-weight: var(--mod-font-weight-regular, var(--spectrum-font-weight-regular));
+
+  line-height: var(--mod-fieldlabel-line-height, var(--spectrum-fieldlabel-line-height));
 
   vertical-align: top;
 
@@ -59,39 +97,51 @@ governing permissions and limitations under the License.
   font-smoothing: subpixel-antialiased;
 }
 
+/* international lang support */
+.spectrum-FieldLabel {
+
+  &:lang(ja),
+  &:lang(zh),
+  &:lang(ko) {
+    line-height: var(--mod-fieldlabel-cjk-line-height, var(--spectrum-fieldlabel-cjk-line-height));
+  }
+}
+
 .spectrum-FieldLabel-requiredIcon {
-  margin-block: 0; /* Previously used this improperly, it doesn't reposition asterisk, just increased top margin on the whole field label var(--spectrum-fieldlabel-asterisk-margin-y) */
-  margin-inline: var(--spectrum-fieldlabel-asterisk-gap) 0;
+  margin-block: 0;
+  /* Previously used this improperly, it doesn't reposition asterisk, just increased top margin on the whole field label var(--spectrum-fieldlabel-asterisk-margin-y) */
+  margin-inline: var(--mod-fieldlabel-asterisk-gap, var(--spectrum-fieldlabel-asterisk-gap)) 0;
 }
 
 .spectrum-FieldLabel--left {
   display: inline-block;
-  padding-block: var(--spectrum-fieldlabel-m-side-padding-top) 0;
-  padding-inline: 0 var(--spectrum-fieldlabel-m-side-padding-right);
+  padding-block: var(--mod-fieldlabel-side-padding-top, var(--spectrum-fieldlabel-side-padding-top)) 0;
+  padding-inline: 0 var(--mod-fieldlabel-side-padding-right, var(--spectrum-fieldlabel-side-padding-right));
 
   & .spectrum-FieldLabel-requiredIcon {
-    margin-block: var(--spectrum-fieldlabel-m-side-asterisk-margin-y) 0;
-    margin-inline: var(--spectrum-fieldlabel-asterisk-gap) 0;
+    margin-block: var(--mod-field-label-text-to-asterisk, var(--spectrum-field-label-text-to-asterisk)) 0;
+    margin-inline: var(--mod-fieldlabel-asterisk-gap, var(--spectrum-fieldlabel-asterisk-gap)) 0;
   }
 }
 
 .spectrum-FieldLabel--right {
   display: inline-block;
   text-align: end;
-  padding-block: var(--spectrum-fieldlabel-m-side-padding-top) 0;
-  /* todo: correct missing DNA variable */
-  padding-inline: 0 var(--spectrum-fieldlabel-m-side-padding-right);
+  padding-block: var(--mod-fieldlabel-side-padding-top, var(--spectrum-fieldlabel-side-padding-top)) 0;
+  padding-inline: 0 var(--mod-fieldlabel-side-padding-right, var(--spectrum-fieldlabel-side-padding-right));
 }
 
 .spectrum-Form {
-  --spectrum-tableform-border-spacing: 0 var(--spectrum-global-dimension-size-300);
-  --spectrum-tableform-margin: calc(var(--spectrum-global-dimension-size-250) * -1) 0;
-  --spectrum-tableform-labelsabove-item-gap: var(--spectrum-global-dimension-size-100);
+  /* for /docs/form.html to set field-label inside form */
+  --spectrum-tableform-border-spacing: 0 var(--mod-spacing-300, var(--spectrum-spacing-300));
+  /* matching 20px, missing global token for 20px */
+  --spectrum-tableform-margin-calc: calc(var(--spectrum-spacing-300) + var(--spectrum-spacing-200));
+  --spectrum-tableform-margin: calc(var(--spectrum-tableform-margin-calc) * -1) 0;
 
   display: table;
   border-collapse: separate;
-  border-spacing: var(--spectrum-tableform-border-spacing);
-  margin: var(--spectrum-tableform-margin);
+  border-spacing: var(--mod-tableform-border-spacing, var(--spectrum-tableform-border-spacing));
+  margin: var(--mod-tableform-margin, var(--spectrum-tableform-margin));
 }
 
 .spectrum-Form-item {
@@ -99,8 +149,20 @@ governing permissions and limitations under the License.
 }
 
 .spectrum-Form-itemLabel {
-  @extend .spectrum-FieldLabel;
   display: table-cell;
+}
+
+/* disabled state */
+
+.spectrum-FieldLabel,
+.spectrum-Form-itemLabel {
+  &.is-disabled {
+    color: var(--mod-disabled-content-color, var(--spectrum-disabled-content-color));
+
+    .spectrum-FieldLabel-requiredIcon {
+      color: var(--mod-disabled-content-color, var(--spectrum-disabled-content-color));
+    }
+  }
 }
 
 .spectrum-Form-itemField {
@@ -116,8 +178,8 @@ governing permissions and limitations under the License.
     display: flex;
     flex-direction: column;
 
-    & + .spectrum-Form-item {
-      margin-block-start: var(--spectrum-tableform-labelsabove-item-gap);
+    &+.spectrum-Form-item {
+      margin-block-start: var(--mod-field-label-top-to-asterisk-small, var(--spectrum-field-label-top-to-asterisk-small));
     }
   }
 }
