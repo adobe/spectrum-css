@@ -25,9 +25,9 @@ governing permissions and limitations under the License.
   --spectrum-radio-neutral-content-color-focus: var(--spectrum-neutral-content-color-key-focus);
 
   /* focus ring all themes */
-  --spectrum-radio-focus-ring-thickness: var(--spectrum-focus-ring-thickness);
-  --spectrum-radio-focus-ring-gap: var(--spectrum-focus-ring-gap);
-  --spectrum-radio-focus-ring-color: var(--spectrum-focus-ring-color);
+  --spectrum-radio-focus-indicator-thickness: var(--spectrum-focus-indicator-thickness);
+  --spectrum-radio-focus-indicator-gap: var(--spectrum-focus-indicator-gap);
+  --spectrum-radio-focus-indicator-color: var(--spectrum-focus-indicator-color);
 
   /* disabled all themes */
   --spectrum-radio-disabled-content-color: var(--spectrum-disabled-content-color);
@@ -161,7 +161,7 @@ governing permissions and limitations under the License.
     --highcontrast-radio-disabled-border-color: GrayText;
 
     /* high contrast focus ring */
-     --highcontrast-radio-focus-ring-color: CanvasText;
+     --highcontrast-radio-focus-indicator-color: CanvasText;
 
     /* ensure focus ring is visible if user agent has non-accessible system overrides */
     .spectrum-Radio-button {
@@ -248,14 +248,14 @@ governing permissions and limitations under the License.
       /* focus ring is focused state */
       &:after {
         border-style: solid;
-        border-color: var(--highcontrast-radio-focus-ring-color,
-                          var(--mod-radio-focus-ring-color,
-                              var(--spectrum-radio-focus-ring-color)));
-        border-width: var(--mod-radio-focus-ring-thickness,
-                          var(--spectrum-radio-focus-ring-thickness));
+        border-color: var(--highcontrast-radio-focus-indicator-color,
+                          var(--mod-radio-focus-indicator-color,
+                              var(--spectrum-radio-focus-indicator-color)));
+        border-width: var(--mod-radio-focus-indicator-thickness,
+                          var(--spectrum-radio-focus-indicator-thickness));
 
-        width: calc(var(--spectrum-radio-button-control-size) + (var(--spectrum-radio-focus-ring-gap) * 2));
-        height: calc(var(--spectrum-radio-button-control-size) + (var(--spectrum-radio-focus-ring-gap) * 2));
+        width: calc(var(--spectrum-radio-button-control-size) + (var(--spectrum-radio-focus-indicator-gap) * 2));
+        height: calc(var(--spectrum-radio-button-control-size) + (var(--spectrum-radio-focus-indicator-gap) * 2));
       }
     }
 
@@ -416,11 +416,11 @@ governing permissions and limitations under the License.
   &:focus-ring {
     + .spectrum-Radio-button {
       &:after {
-        border-width: var(--mod-radio-focus-ring-thickness,
-                          var(--spectrum-radio-focus-ring-thickness));
-        border-color: var(--highcontrast-radio-focus-ring-color,
-                          var(--mod-radio-focus-ring-color,
-                              var(--spectrum-radio-focus-ring-color)));
+        border-width: var(--mod-radio-focus-indicator-thickness,
+                          var(--spectrum-radio-focus-indicator-thickness));
+        border-color: var(--highcontrast-radio-focus-indicator-color,
+                          var(--mod-radio-focus-indicator-color,
+                              var(--spectrum-radio-focus-indicator-color)));
       }
     }
   }
