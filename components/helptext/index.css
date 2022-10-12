@@ -22,8 +22,8 @@ governing permissions and limitations under the License.
   }
 
   &.spectrum-HelpText--negative {
-    --spectrum-helptext-content-color-default: var(--spectrum-negative-content-color);
-    --spectrum-helptext-icon-color-default: var(--spectrum-negative-content-color);
+    --spectrum-helptext-content-color-default: var(--spectrum-negative-color-900);
+    --spectrum-helptext-icon-color-default: var(--spectrum-negative-color-900);
   }
 
   &.is-disabled {
