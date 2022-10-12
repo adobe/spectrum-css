@@ -116,7 +116,7 @@ governing permissions and limitations under the License.
     margin: 0;
   }
 
-  /* Variants */
+  /****** Variants ******/
   &--info,
   &--info .spectrum-Tooltip-tip {
     background-color: var(--spectrum-tooltip-background-color-informative);
@@ -133,6 +133,7 @@ governing permissions and limitations under the License.
   }
 }
 
+/****** Tip Base Styles ******/
 .spectrum-Tooltip-tip {
   position: absolute;
 
@@ -150,10 +151,26 @@ governing permissions and limitations under the License.
   clip-path: polygon(0 -5%, 50% 100%, 100% -5%);
 }
 
+/****** Icon ******/
+.spectrum-Tooltip-typeIcon {
+  margin-inline-end: var(--spectrum-tooltip-icon-spacing-inline-end);
+  margin-block-start: var(--spectrum-tooltip-icon-spacing-block-start);
+  width: var(--spectrum-tooltip-icon-width);
+  height: var(--spectrum-tooltip-icon-height);
+  align-self: flex-start;
+  flex-shrink: 0;
+}
 
-/* TOOLTIP PLACEMENT */
+/****** Label ******/
+.spectrum-Tooltip-label {
+  /* Make sure line height is correct to prevent problems in Windows */
+  line-height: var(--spectrum-tooltip-line-height);
+  margin-block-start: var(--spectrum-tooltip-spacing-block-start);
+  margin-block-end: var(--spectrum-tooltip-spacing-block-end);
+}
 
-/* tooltip position is at top of source - default placement */
+/****** Tooltip Placement and Animation Direction ******/
+/* position is top of source - default */
 .spectrum-Tooltip--top,
 .spectrum-Tooltip--top-left,
 .spectrum-Tooltip--top-right,
@@ -187,11 +204,11 @@ governing permissions and limitations under the License.
 .spectrum-Tooltip--right-top {
   margin-left: var(--spectrum-tooltip-tip-block-size);
 
+  /* Tooltip animates to right ⮕ */
   &.is-open {
     @inherit: %spectrum-overlay--right--open;
   }
 }
-
 
 /* tooltip position is left of source */
 .spectrum-Tooltip--left,
@@ -199,6 +216,7 @@ governing permissions and limitations under the License.
 .spectrum-Tooltip--left-top {
   margin-right: var(--spectrum-tooltip-tip-block-size);
 
+  /* Tooltip animates to left ⬅ */
   &.is-open {
     @inherit: %spectrum-overlay--left--open;
   }
@@ -255,36 +273,6 @@ governing permissions and limitations under the License.
   }
 }
 
-/* tip is at bottom left pointing down ▽ */
-.spectrum-Tooltip--top-left {
-  .spectrum-Tooltip-tip {
-    left: var(--spectrum-tooltip-pointer-corner-spacing);
-    right: auto;
-  }
-}
-
-/* tip is at bottom right pointing down ▽ */
-.spectrum-Tooltip--top-right {
-  .spectrum-Tooltip-tip {
-    right: var(--spectrum-tooltip-pointer-corner-spacing);
-    left: auto;
-  }
-}
-
-/* logical property - Tooltip is above, source and tip are at start, tip pointing down ▽ */
-.spectrum-Tooltip--top-start {
-  .spectrum-Tooltip-tip {
-    margin-inline-start: var(--spectrum-tooltip-pointer-corner-spacing);
-  }
-}
-
-/* logical property - Tooltip is above, source and tip are at end, tip pointing down ▽ */
-.spectrum-Tooltip--top-end {
-  .spectrum-Tooltip-tip {
-    margin-inline-end: var(--spectrum-tooltip-pointer-corner-spacing);
-  }
-}
-
 /* tip is at top pointing up △ */
 .spectrum-Tooltip--bottom,
 .spectrum-Tooltip--bottom-left,
@@ -292,13 +280,14 @@ governing permissions and limitations under the License.
 .spectrum-Tooltip--bottom-start,
 .spectrum-Tooltip--bottom-end {
   .spectrum-Tooltip-tip {
-    transform: rotate(-180deg);
+    transform: rotate(180deg);
     top: auto;
     bottom: 100%;
   }
 }
 
-/* Tooltip position is bottom, source is at left, tip pointing up △ */
+/* tip is horizontal at left */
+.spectrum-Tooltip--top-left,
 .spectrum-Tooltip--bottom-left {
   .spectrum-Tooltip-tip {
     left: var(--spectrum-tooltip-pointer-corner-spacing);
@@ -306,7 +295,8 @@ governing permissions and limitations under the License.
   }
 }
 
-/* Tooltip position is bottom, source is at right, tip pointing up △ */
+/* tip is horizontal at right */
+.spectrum-Tooltip--top-right,
 .spectrum-Tooltip--bottom-right {
   .spectrum-Tooltip-tip {
     left: auto;
@@ -314,21 +304,23 @@ governing permissions and limitations under the License.
   }
 }
 
-/* logical property - Tooltip is below, source is at start, tip pointing up △ */
+/* logical property - tip is horizontal at start */
+.spectrum-Tooltip--top-start,
 .spectrum-Tooltip--bottom-start {
   .spectrum-Tooltip-tip {
     margin-inline-start: var(--spectrum-tooltip-pointer-corner-spacing);
   }
 }
 
-/* logical property - Tooltip is below, source is at end, tip pointing up △ */
+/* logical property - tip is horizonal at end */
+.spectrum-Tooltip--top-end,
 .spectrum-Tooltip--bottom-end {
   .spectrum-Tooltip-tip {
     margin-inline-end: var(--spectrum-tooltip-pointer-corner-spacing);
   }
 }
 
-/* right and left */
+/* tip right and left resets */
 .spectrum-Tooltip--right,
 .spectrum-Tooltip--right-bottom,
 .spectrum-Tooltip--right-top,
@@ -341,7 +333,7 @@ governing permissions and limitations under the License.
   }
 }
 
-/* tooltip position is right of source pointing left ◁ */
+/* tip is vertical pointing left ◁ */
 .spectrum-Tooltip--right,
 .spectrum-Tooltip--right-bottom,
 .spectrum-Tooltip--right-top {
@@ -354,22 +346,36 @@ governing permissions and limitations under the License.
   }
 }
 
-/* tooltip position is left of source pointing right ▷ */
+/* tip is vertical pointing horizontally */
 .spectrum-Tooltip--left,
 .spectrum-Tooltip--left-bottom,
-.spectrum-Tooltip--left-top {
+.spectrum-Tooltip--left-top,
+.spectrum-Tooltip--start,
+.spectrum-Tooltip--start-top,
+.spectrum-Tooltip--start-bottom {
   .spectrum-Tooltip-tip {
-    left: 100%;
-    right: auto;
     clip-path: polygon(-5% 0, -5% 100%, 100% 50%);
     height: var(--spectrum-tooltip-tip-width);
     width: var(--spectrum-tooltip-tip-height);
   }
 }
 
-/* Tooltip with tip at top */
+
+/* tip is vertical pointing right ▷ */
+.spectrum-Tooltip--left,
+.spectrum-Tooltip--left-bottom,
+.spectrum-Tooltip--left-top {
+  .spectrum-Tooltip-tip {
+    left: 100%;
+    right: auto;
+  }
+}
+
+/* tip is vertical at top */
 .spectrum-Tooltip--right-top,
 .spectrum-Tooltip--left-top,
+.spectrum-Tooltip--start-top,
+.spectrum-Tooltip--end-top,
 .spectrum-Tooltip--start-top,
 .spectrum-Tooltip--end-top {
   .spectrum-Tooltip-tip {
@@ -378,9 +384,11 @@ governing permissions and limitations under the License.
   }
 }
 
-/* Tooltip with tip at bottom */
+/* tip at bottom */
 .spectrum-Tooltip--right-bottom,
 .spectrum-Tooltip--left-bottom,
+.spectrum-Tooltip--start-bottom,
+.spectrum-Tooltip--end-bottom,
 .spectrum-Tooltip--start-bottom,
 .spectrum-Tooltip--end-bottom {
   .spectrum-Tooltip-tip {
@@ -389,7 +397,10 @@ governing permissions and limitations under the License.
   }
 }
 
-/* logical property - start Tooltip position with tip pointing toward end -  LTR default is ▷ */
+
+
+
+/* tip logical property - LTR tip pointing toward end ▷ */
 .spectrum-Tooltip--start,
 .spectrum-Tooltip--start-top,
 .spectrum-Tooltip--start-bottom {
@@ -398,10 +409,8 @@ governing permissions and limitations under the License.
     bottom: 0;
     left: 100%;
     right: auto;
-    clip-path: polygon(-5% 0, -5% 100%, 100% 50%);
-    height: var(--spectrum-tooltip-tip-width);
-    width: var(--spectrum-tooltip-tip-height);
 
+    /* RTL tip pointing toward end ◁ */
     [dir="rtl"] & {
       left: auto;
       right: 100%;
@@ -412,7 +421,7 @@ governing permissions and limitations under the License.
   }
 }
 
-/* logical property - end Tooltip position with tip pointing toward start  -  LTR default is ◁ **/
+/* tip logical property - LTR tip pointing toward start ◁ */
 .spectrum-Tooltip--end,
 .spectrum-Tooltip--end-top,
 .spectrum-Tooltip--end-bottom {
@@ -426,6 +435,7 @@ governing permissions and limitations under the License.
     height: var(--spectrum-tooltip-tip-width);
     width: var(--spectrum-tooltip-tip-height);
 
+    /* RTL tip pointing toward start ▷ */
     [dir="rtl"] & {
       left: 100%;
       right: auto;
@@ -436,39 +446,10 @@ governing permissions and limitations under the License.
   }
 }
 
-.spectrum-Tooltip--start-top,
-.spectrum-Tooltip--end-top {
-  .spectrum-Tooltip-tip {
-    top: var(--spectrum-tooltip-pointer-corner-spacing);
-    bottom: auto;
-  }
-}
 
-.spectrum-Tooltip--start-bottom,
-.spectrum-Tooltip--end-bottom {
-  .spectrum-Tooltip-tip {
-    top: auto;
-    bottom: var(--spectrum-tooltip-pointer-corner-spacing);
-  }
-}
 
-/* Icon */
-.spectrum-Tooltip-typeIcon {
-  margin-inline-end: var(--spectrum-tooltip-icon-spacing-inline-end);
-  margin-block-start: var(--spectrum-tooltip-icon-spacing-block-start);
-  width: var(--spectrum-tooltip-icon-width);
-  height: var(--spectrum-tooltip-icon-height);
-  align-self: flex-start;
-  flex-shrink: 0;
-}
 
-/* label */
-.spectrum-Tooltip-label {
-  /* Make sure line height is correct to prevent problems in Windows */
-  line-height: var(--spectrum-tooltip-line-height);
-  margin-block-start: var(--spectrum-tooltip-spacing-block-start);
-  margin-block-end: var(--spectrum-tooltip-spacing-block-end);
-}
+
 
 /* CSS open animation */
 .u-tooltip-showOnHover {
