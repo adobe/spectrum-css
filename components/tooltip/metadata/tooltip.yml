@@ -294,31 +294,222 @@ examples:
     status: Unverified
     description: A tooltip that shows on hover using CSS only. Note that this approach does not support text wrapping.
     markup: |
-      <span class="u-tooltip-showOnHover" style="margin: 15px 50px; cursor: default;">
-        Left
-        <div class="spectrum-Tooltip spectrum-Tooltip--left">
-          <span class="spectrum-Tooltip-label">Tooltip Left</span>
-          <span class="spectrum-Tooltip-tip"></span>
+      <div class="spectrum-Examples">
+        <div class="spectrum-Examples-item">
+          <h4 class="spectrum-Heading spectrum-Heading--sizeXS spectrum-Examples-itemHeading">Top</h4>
+
+          <span class="u-tooltip-showOnHover" style="margin: 15px 50px; cursor: default;">
+            Top
+            <span class="spectrum-Tooltip spectrum-Tooltip--top">
+              <span class="spectrum-Tooltip-label">Top</span>
+              <span class="spectrum-Tooltip-tip"></span>
+            </span>
+            </span>
+          </span>
+          <br><br>
+
+          <span class="u-tooltip-showOnHover" style="margin: 15px 50px; cursor: default;">
+            Top Left
+            <span class="spectrum-Tooltip spectrum-Tooltip--top-left">
+            <span class="spectrum-Tooltip-label">Top Left</span>
+            <span class="spectrum-Tooltip-tip"></span>
+            </span>
+          </span>
+          <br><br>
+
+           <span class="u-tooltip-showOnHover" style="margin: 15px 50px; cursor: default;">
+             Top Right
+            <span class="spectrum-Tooltip spectrum-Tooltip--top-right">
+            <span class="spectrum-Tooltip-label">Top Right</span>
+            <span class="spectrum-Tooltip-tip"></span>
+            </span>
+          </span>
+          <br><br>
+
+          <span class="u-tooltip-showOnHover" style="margin: 15px 50px; cursor: default;">
+            Top Start
+            <span class="spectrum-Tooltip spectrum-Tooltip--top-start">
+            <span class="spectrum-Tooltip-label">Top Start</span>
+            <span class="spectrum-Tooltip-tip"></span>
+            </span>
+          </span>
+          <br><br>
+
+          <span class="u-tooltip-showOnHover" style="margin: 15px 50px; cursor: default;">
+            Top End
+            <span class="spectrum-Tooltip spectrum-Tooltip--top-end">
+            <span class="spectrum-Tooltip-label">Top End</span>
+            <span class="spectrum-Tooltip-tip"></span>
+            </span>
+          </span>
+          <br><br>
         </div>
-      </span>
-      <span class="u-tooltip-showOnHover" style="margin: 15px 50px; cursor: default;">
-        Bottom
-        <div class="spectrum-Tooltip spectrum-Tooltip--bottom">
-          <span class="spectrum-Tooltip-label">Tooltip Bottom</span>
-          <span class="spectrum-Tooltip-tip"></span>
+
+        <div class="spectrum-Examples-item">
+          <h4 class="spectrum-Heading spectrum-Heading--sizeXS spectrum-Examples-itemHeading">Left</h4>
+          <span class="u-tooltip-showOnHover" style="margin: 15px 50px; cursor: default;">
+            Left
+            <span class="spectrum-Tooltip spectrum-Tooltip--left">
+            <span class="spectrum-Tooltip-label">Left</span>
+            <span class="spectrum-Tooltip-tip"></span>
+            </span>
+          </span>
+          <br><br>
+
+          <span class="u-tooltip-showOnHover" style="margin: 15px 50px; cursor: default;">
+            Left Top
+            <span class="spectrum-Tooltip spectrum-Tooltip--left-top">
+            <span class="spectrum-Tooltip-label">Left Top</span>
+            <span class="spectrum-Tooltip-tip"></span>
+            </span>
+          </span>
+          <br><br>
+
+          <span class="u-tooltip-showOnHover" style="margin: 15px 50px; cursor: default;">
+            Left Bottom
+            <span class="spectrum-Tooltip spectrum-Tooltip--left-bottom">
+            <span class="spectrum-Tooltip-label">Left Bottom</span>
+            <span class="spectrum-Tooltip-tip"></span>
+            </span>
+          </span>
+          <br><br>
         </div>
-      </span>
-      <span class="u-tooltip-showOnHover" style="margin: 15px 50px; cursor: default;">
-        Top
-        <div class="spectrum-Tooltip spectrum-Tooltip--top">
-          <span class="spectrum-Tooltip-label">Tooltip Top</span>
-          <span class="spectrum-Tooltip-tip"></span>
+
+        <div class="spectrum-Examples-item">
+          <h4 class="spectrum-Heading spectrum-Heading--sizeXS spectrum-Examples-itemHeading">Right</h4>
+          <span class="u-tooltip-showOnHover" style="margin: 15px 50px; cursor: default;">
+            Right
+            <span class="spectrum-Tooltip spectrum-Tooltip--right">
+            <span class="spectrum-Tooltip-label">Right</span>
+            <span class="spectrum-Tooltip-tip"></span>
+            </span>
+          </span>
+          <br><br>
+
+          <span class="u-tooltip-showOnHover" style="margin: 15px 50px; cursor: default;">
+            Right Top
+            <span class="spectrum-Tooltip spectrum-Tooltip--right-top">
+            <span class="spectrum-Tooltip-label">Right Top</span>
+            <span class="spectrum-Tooltip-tip"></span>
+            </span>
+          </span>
+          <br><br>
+
+          <span class="u-tooltip-showOnHover" style="margin: 15px 50px; cursor: default;">
+            Right Bottom
+            <span class="spectrum-Tooltip spectrum-Tooltip--right-bottom">
+            <span class="spectrum-Tooltip-label">Right Bottom</span>
+            <span class="spectrum-Tooltip-tip"></span>
+            </span>
+          </span>
+          <br><br>
         </div>
-      </span>
-      <span class="u-tooltip-showOnHover" style="margin: 15px 50px; cursor: default;">
-        Right
-        <div class="spectrum-Tooltip spectrum-Tooltip--right">
-          <span class="spectrum-Tooltip-label">Tooltip Right</span>
-          <span class="spectrum-Tooltip-tip"></span>
+
+        <div class="spectrum-Examples-item">
+          <h4 class="spectrum-Heading spectrum-Heading--sizeXS spectrum-Examples-itemHeading">Bottom</h4>
+          <span class="u-tooltip-showOnHover" style="margin: 15px 50px; cursor: default;">
+            Bottom
+            <span class="spectrum-Tooltip spectrum-Tooltip--bottom">
+            <span class="spectrum-Tooltip-label">Bottom</span>
+            <span class="spectrum-Tooltip-tip"></span>
+            </span>
+          </span>
+          <br><br>
+
+          <span class="u-tooltip-showOnHover" style="margin: 15px 50px; cursor: default;">
+            Bottom Left
+            <span class="spectrum-Tooltip spectrum-Tooltip--bottom-left">
+            <span class="spectrum-Tooltip-label">Bottom Left</span>
+            <span class="spectrum-Tooltip-tip"></span>
+            </span>
+          </span>
+          <br><br>
+
+           <span class="u-tooltip-showOnHover" style="margin: 15px 50px; cursor: default;">
+             Bottom Right
+            <span class="spectrum-Tooltip spectrum-Tooltip--bottom-right">
+            <span class="spectrum-Tooltip-label">Bottom Right</span>
+            <span class="spectrum-Tooltip-tip"></span>
+            </span>
+          </span>
+          <br><br>
+
+          <span class="u-tooltip-showOnHover" style="margin: 15px 50px; cursor: default;">
+            Bottom Start
+            <span class="spectrum-Tooltip spectrum-Tooltip--bottom-start">
+            <span class="spectrum-Tooltip-label">Bottom Start</span>
+            <span class="spectrum-Tooltip-tip"></span>
+            </span>
+          </span>
+          <br><br>
+
+          <span class="u-tooltip-showOnHover" style="margin: 15px 50px; cursor: default;">
+            Bottom End
+            <span class="spectrum-Tooltip spectrum-Tooltip--bottom-end">
+            <span class="spectrum-Tooltip-label">Bottom End</span>
+            <span class="spectrum-Tooltip-tip"></span>
+            </span>
+          </span>
+          <br><br>
         </div>
-      </span>
+
+        <div class="spectrum-Examples-item">
+           <h4 class="spectrum-Heading spectrum-Heading--sizeXS spectrum-Examples-itemHeading">Start</h4>
+          <span class="u-tooltip-showOnHover" style="margin: 15px 50px; cursor: default;">
+            Start
+            <span class="spectrum-Tooltip spectrum-Tooltip--start">
+            <span class="spectrum-Tooltip-label">Start</span>
+            <span class="spectrum-Tooltip-tip"></span>
+            </span>
+          </span>
+          <br><br>
+
+          <span class="u-tooltip-showOnHover" style="margin: 15px 50px; cursor: default;">
+            Start Top
+            <span class="spectrum-Tooltip spectrum-Tooltip--start-top">
+            <span class="spectrum-Tooltip-label">Start Top</span>
+            <span class="spectrum-Tooltip-tip"></span>
+            </span>
+          </span>
+          <br><br>
+
+          <span class="u-tooltip-showOnHover" style="margin: 15px 50px; cursor: default;">
+            Start Bottom
+            <span class="spectrum-Tooltip spectrum-Tooltip--start-bottom">
+            <span class="spectrum-Tooltip-label">Start Bottom</span>
+            <span class="spectrum-Tooltip-tip"></span>
+            </span>
+          </span>
+          <br><br>
+        </div>
+
+        <div class="spectrum-Examples-item">
+           <h4 class="spectrum-Heading spectrum-Heading--sizeXS spectrum-Examples-itemHeading">End</h4>
+          <span class="u-tooltip-showOnHover" style="margin: 15px 50px; cursor: default;">
+            End
+            <span class="spectrum-Tooltip spectrum-Tooltip--end">
+            <span class="spectrum-Tooltip-label">End</span>
+            <span class="spectrum-Tooltip-tip"></span>
+            </span>
+          </span>
+          <br><br>
+
+          <span class="u-tooltip-showOnHover" style="margin: 15px 50px; cursor: default;">
+            End Top
+            <span class="spectrum-Tooltip spectrum-Tooltip--end-top">
+            <span class="spectrum-Tooltip-label">End Top</span>
+            <span class="spectrum-Tooltip-tip"></span>
+            </span>
+          </span>
+          <br><br>
+
+          <span class="u-tooltip-showOnHover" style="margin: 15px 50px; cursor: default;">
+            End Bottom
+            <span class="spectrum-Tooltip spectrum-Tooltip--end-bottom">
+            <span class="spectrum-Tooltip-label">End Bottom</span>
+            <span class="spectrum-Tooltip-tip"></span>
+            </span>
+          </span>
+          <br><br>
+        </div>
+      </div>

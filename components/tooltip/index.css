@@ -262,7 +262,7 @@ governing permissions and limitations under the License.
 
 /********* TIP PLACEMENT***********/
 
-/* tip is at bottom pointing down ▽ */
+/* tip is horizontal at bottom pointing down ▽ */
 .spectrum-Tooltip--top,
 .spectrum-Tooltip--top-left,
 .spectrum-Tooltip--top-right,
@@ -273,7 +273,7 @@ governing permissions and limitations under the License.
   }
 }
 
-/* tip is at top pointing up △ */
+/* tip is horizontal at top pointing up △ */
 .spectrum-Tooltip--bottom,
 .spectrum-Tooltip--bottom-left,
 .spectrum-Tooltip--bottom-right,
@@ -312,7 +312,7 @@ governing permissions and limitations under the License.
   }
 }
 
-/* logical property - tip is horizonal at end */
+/* logical property - tip is horizontal at end */
 .spectrum-Tooltip--top-end,
 .spectrum-Tooltip--bottom-end {
   .spectrum-Tooltip-tip {
@@ -326,7 +326,13 @@ governing permissions and limitations under the License.
 .spectrum-Tooltip--right-top,
 .spectrum-Tooltip--left,
 .spectrum-Tooltip--left-bottom,
-.spectrum-Tooltip--left-top {
+.spectrum-Tooltip--left-top,
+.spectrum-Tooltip--start,
+.spectrum-Tooltip--start-top,
+.spectrum-Tooltip--start-bottom,
+.spectrum-Tooltip--end,
+.spectrum-Tooltip--end-top,
+.spectrum-Tooltip--end-bottom {
   .spectrum-Tooltip-tip {
     top: 0;
     bottom: 0;
@@ -346,7 +352,7 @@ governing permissions and limitations under the License.
   }
 }
 
-/* tip is vertical pointing horizontally */
+/* tip is vertical pointing left or start */
 .spectrum-Tooltip--left,
 .spectrum-Tooltip--left-bottom,
 .spectrum-Tooltip--left-top,
@@ -375,8 +381,6 @@ governing permissions and limitations under the License.
 .spectrum-Tooltip--right-top,
 .spectrum-Tooltip--left-top,
 .spectrum-Tooltip--start-top,
-.spectrum-Tooltip--end-top,
-.spectrum-Tooltip--start-top,
 .spectrum-Tooltip--end-top {
   .spectrum-Tooltip-tip {
     top: var(--spectrum-tooltip-pointer-corner-spacing);
@@ -384,11 +388,9 @@ governing permissions and limitations under the License.
   }
 }
 
-/* tip at bottom */
+/* tip is vertical at bottom */
 .spectrum-Tooltip--right-bottom,
 .spectrum-Tooltip--left-bottom,
-.spectrum-Tooltip--start-bottom,
-.spectrum-Tooltip--end-bottom,
 .spectrum-Tooltip--start-bottom,
 .spectrum-Tooltip--end-bottom {
   .spectrum-Tooltip-tip {
@@ -397,16 +399,11 @@ governing permissions and limitations under the License.
   }
 }
 
-
-
-
-/* tip logical property - LTR tip pointing toward end ▷ */
+/* tip logical property - LTR tip pointing toward end -  ▷ LTR / ◁ RTL */
 .spectrum-Tooltip--start,
 .spectrum-Tooltip--start-top,
 .spectrum-Tooltip--start-bottom {
   .spectrum-Tooltip-tip {
-    top: 0;
-    bottom: 0;
     left: 100%;
     right: auto;
 
@@ -421,14 +418,12 @@ governing permissions and limitations under the License.
   }
 }
 
-/* tip logical property - LTR tip pointing toward start ◁ */
+/* tip logical property - LTR tip pointing toward start - ◁ LTR / ▷ RTL */
 .spectrum-Tooltip--end,
 .spectrum-Tooltip--end-top,
 .spectrum-Tooltip--end-bottom {
   /* tip triangle  */
   .spectrum-Tooltip-tip {
-    top: 0;
-    bottom: 0;
     left: auto;
     right: 100%;
     clip-path: polygon(0 50%, 105% 100%, 105% 0);
@@ -445,11 +440,6 @@ governing permissions and limitations under the License.
     }
   }
 }
-
-
-
-
-
 
 /* CSS open animation */
 .u-tooltip-showOnHover {
@@ -477,58 +467,169 @@ governing permissions and limitations under the License.
   }
 
   .spectrum-Tooltip--top,
-  .spectrum-Tooltip--bottom {
+  .spectrum-Tooltip--top-left,
+  .spectrum-Tooltip--top-right,
+  .spectrum-Tooltip--top-start,
+  .spectrum-Tooltip--top-end,
+  .spectrum-Tooltip--bottom,
+  .spectrum-Tooltip--bottom-left,
+  .spectrum-Tooltip--bottom-right,
+  .spectrum-Tooltip--bottom-start,
+  .spectrum-Tooltip--bottom-end {
     left: 50%;
     transform: translate(-50%, 0);
   }
 
-  .spectrum-Tooltip--top {
+  .spectrum-Tooltip--top,
+  .spectrum-Tooltip--top-left,
+  .spectrum-Tooltip--top-right,
+  .spectrum-Tooltip--top-start,
+  .spectrum-Tooltip--top-end {
     bottom: 100%;
   }
 
-  .spectrum-Tooltip--bottom {
+  .spectrum-Tooltip--bottom,
+  .spectrum-Tooltip--bottom-left,
+  .spectrum-Tooltip--bottom-right,
+  .spectrum-Tooltip--bottom-start,
+  .spectrum-Tooltip--bottom-end {
     top: 100%;
   }
 
   .spectrum-Tooltip--left,
-  .spectrum-Tooltip--right {
+  .spectrum-Tooltip--left-bottom,
+  .spectrum-Tooltip--left-top,
+  .spectrum-Tooltip--right,
+  .spectrum-Tooltip--right-bottom,
+  .spectrum-Tooltip--right-top,
+  .spectrum-Tooltip--start,
+  .spectrum-Tooltip--start-top,
+  .spectrum-Tooltip--start-bottom,
+  .spectrum-Tooltip--end,
+  .spectrum-Tooltip--end-top,
+  .spectrum-Tooltip--end-bottom {
     top: 50%;
     transform: translate(0, -50%);
   }
 
-  .spectrum-Tooltip--left {
+  .spectrum-Tooltip--left,
+  .spectrum-Tooltip--left-bottom,
+  .spectrum-Tooltip--left-top,
+  .spectrum-Tooltip--start,
+  .spectrum-Tooltip--start-top,
+  .spectrum-Tooltip--start-bottom {
     right: 100%;
   }
 
-  .spectrum-Tooltip--right {
+   /* RTL */
+  [dir="rtl"] & {
+    .spectrum-Tooltip--start,
+    .spectrum-Tooltip--start-top,
+    .spectrum-Tooltip--start-bottom {
+      left: 100%;
+      right: auto;
+    }
+  }
+
+  .spectrum-Tooltip--right,
+  .spectrum-Tooltip--right-top,
+  .spectrum-Tooltip--right-bottom,
+  .spectrum-Tooltip--end,
+  .spectrum-Tooltip--end-top,
+  .spectrum-Tooltip--end-bottom {
     left: 100%;
   }
 
-  &:hover .spectrum-Tooltip.spectrum-Tooltip--top,
-  &:focus .spectrum-Tooltip.spectrum-Tooltip--top,
-  &.is-focused .spectrum-Tooltip.spectrum-Tooltip--top,
-  *:focus .spectrum-Tooltip.spectrum-Tooltip--top {
-    transform: translate(-50%, calc(var(--spectrum-tooltip-space-to-source) * -1));
+   /* RTL */
+  [dir="rtl"] & {
+    .spectrum-Tooltip--end,
+    .spectrum-Tooltip--end-top,
+    .spectrum-Tooltip--end-bottom {
+      left: auto;
+      right: 100%;
+    }
   }
 
-  &:hover .spectrum-Tooltip.spectrum-Tooltip--bottom,
-  &:focus .spectrum-Tooltip.spectrum-Tooltip--bottom,
-  &.is-focused .spectrum-Tooltip.spectrum-Tooltip--bottom,
-  *:focus .spectrum-Tooltip.spectrum-Tooltip--bottom {
-    transform: translate(-50%, var(--spectrum-tooltip-space-to-source));
+  &:hover,
+  &:focus,
+  &.is-focused,
+  *:focus {
+    .spectrum-Tooltip--top,
+    .spectrum-Tooltip--top-left,
+    .spectrum-Tooltip--top-right,
+    .spectrum-Tooltip--top-start,
+    .spectrum-Tooltip--top-end {
+      transform: translate(-50%, calc(var(--spectrum-tooltip-space-to-source) * -1));
+    }
   }
 
-  &:hover .spectrum-Tooltip.spectrum-Tooltip--left,
-  &:focus .spectrum-Tooltip.spectrum-Tooltip--left,
-  &.is-focused .spectrum-Tooltip.spectrum-Tooltip--left,
-  *:focus .spectrum-Tooltip.spectrum-Tooltip--left {
-    transform: translate(calc(var(--spectrum-tooltip-space-to-source) * -1), -50%);
+  &:hover,
+  &:focus,
+  &.is-focused,
+  *:focus {
+    .spectrum-Tooltip--bottom,
+    .spectrum-Tooltip--bottom-left,
+    .spectrum-Tooltip--bottom-right,
+    .spectrum-Tooltip--bottom-start,
+    .spectrum-Tooltip--bottom-end {
+      transform: translate(-50%, var(--spectrum-tooltip-space-to-source));
+    }
   }
 
-  &:hover .spectrum-Tooltip.spectrum-Tooltip--right,
-  &:focus .spectrum-Tooltip.spectrum-Tooltip--right,
-  &.is-focused .spectrum-Tooltip.spectrum-Tooltip--right,
-  *:focus .spectrum-Tooltip.spectrum-Tooltip--right {
-    transform: translate(var(--spectrum-tooltip-space-to-source), -50%);
+
+  &:hover,
+  &:focus,
+  &.is-focused,
+  *:focus {
+    .spectrum-Tooltip--left,
+    .spectrum-Tooltip--left-bottom,
+    .spectrum-Tooltip--left-top,
+    .spectrum-Tooltip--start,
+    .spectrum-Tooltip--start-top,
+    .spectrum-Tooltip--start-bottom {
+      transform: translate(calc(var(--spectrum-tooltip-space-to-source) * -1), -50%);
+    }
+  }
+
+   /* RTL */
+  [dir="rtl"] & {
+    &:hover,
+    &:focus,
+    &.is-focused,
+    *:focus {
+      .spectrum-Tooltip--start,
+      .spectrum-Tooltip--start-top,
+      .spectrum-Tooltip--start-bottom {
+        transform: translate(var(--spectrum-tooltip-space-to-source), -50%);
+      }
+    }
+  }
+
+  &:hover,
+  &:focus,
+  &.is-focused,
+  *:focus {
+    .spectrum-Tooltip--right ,
+    .spectrum-Tooltip--right-top,
+    .spectrum-Tooltip--right-bottom,
+    .spectrum-Tooltip--end,
+    .spectrum-Tooltip--end-top,
+    .spectrum-Tooltip--end-bottom {
+      transform: translate(var(--spectrum-tooltip-space-to-source), -50%);
+    }
+  }
+
+   /* RTL */
+  [dir="rtl"] & {
+    &:hover,
+    &:focus,
+    &.is-focused,
+    *:focus {
+      .spectrum-Tooltip--end,
+      .spectrum-Tooltip--end-top,
+      .spectrum-Tooltip--end-bottom {
+        transform: translate(calc(var(--spectrum-tooltip-space-to-source) * -1), -50%);
+      }
+    }
   }
 }
