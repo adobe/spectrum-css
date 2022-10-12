@@ -3,6 +3,18 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+<a name="4.0.2"></a>
+## 4.0.2
+🗓 2022-10-12 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/checkbox@4.0.1...@spectrum-css/checkbox@4.0.2)
+
+### 🐛 Bug fixes
+
+* **checkbox:** whcm focus states ([#1527](https://github.com/adobe/spectrum-css/issues/1527)) ([ddca193](https://github.com/adobe/spectrum-css/commit/ddca193))
+
+
+
+
+
 <a name="4.0.1"></a>
 ## 4.0.1
 🗓 2022-10-04 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/checkbox@4.0.0...@spectrum-css/checkbox@4.0.1)
