@@ -3,6 +3,23 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+<a name="5.0.0"></a>
+# 5.0.0
+🗓 2022-10-12 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/inlinealert@4.0.13...@spectrum-css/inlinealert@5.0.0)
+
+* refactor(inlinealert)!: migrate to core tokens (#1519) ([a4d72ad](https://github.com/adobe/spectrum-css/commit/a4d72ad)), closes [#1519](https://github.com/adobe/spectrum-css/issues/1519)
+
+
+### 🛑 BREAKING CHANGES
+
+* migrates InlineAlert to core tokens
+
+Co-authored-by: Patrick Fulton <pfulton@adobe.com>
+
+
+
+
+
 <a name="4.0.13"></a>
 ## 4.0.13
 🗓 2022-06-16 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/inlinealert@4.0.12...@spectrum-css/inlinealert@4.0.13)
