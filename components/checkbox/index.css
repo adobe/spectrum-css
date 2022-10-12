@@ -102,38 +102,6 @@ governing permissions and limitations under the License.
   --spectrum-checkbox-text-to-control: var(--spectrum-text-to-control-300);
 }
 
-/* Windows high contrast mode */
-@media (forced-colors: active) {
-  .spectrum-Checkbox-input {
-    &:focus-ring + .spectrum-Checkbox-box {
-      forced-color-adjust: none;
-      outline-color: var(--highcontrast-checkbox-focus-ring-color, var(--mod-checkbox-focus-ring-color, var(--spectrum-checkbox-focus-ring-color)));
-      outline-style: auto;
-      outline-offset: var(--highcontrast-checkbox-focus-ring-gap, var(--mod-checkbox-focus-ring-gap, var(--spectrum-checkbox-focus-ring-gap)));
-      outline-width: var(--mod-focus-ring-thickness, var(--spectrum-focus-ring-thickness));
-    }
-  }
-  .spectrum-Checkbox {
-    --highcontrast-checkbox-content-color-default: ButtonText;
-    --highcontrast-checkbox-content-color-hover: ButtonText;
-    --highcontrast-checkbox-content-color-down: ButtonText;
-    --highcontrast-checkbox-content-color-focus: ButtonText;
-
-    --highcontrast-checkbox-background-color-default: Background;
-
-    --highcontrast-checkbox-color-default: ButtonText;
-    --highcontrast-checkbox-color-hover: ButtonText;
-
-    --highcontrast-checkbox-highlight-color-default: Highlight;
-    --highcontrast-checkbox-highlight-color-hover: Highlight;
-    --highcontrast-checkbox-highlight-color-down: Highlight;
-
-    --highcontrast-checkbox-disabled-color-default: GrayText;
-
-    --highcontrast-checkbox-focus-ring-color: ButtonText;
-  }
-}
-
 /* Default Unchecked */
 .spectrum-Checkbox {
   color: var(--highcontrast-checkbox-content-color-default, var(--mod-checkbox-content-color-default, var(--spectrum-checkbox-content-color-default)));
@@ -472,8 +440,8 @@ governing permissions and limitations under the License.
     &:after {
       forced-color-adjust: none;
       box-shadow:
-      0 0 0 var(--mod-checkbox-focus-ring-thinkness, var(--spectrum-checkbox-focus-ring-thickness))
-      var(--mod-checkbox-focus-ring-color, var(--spectrum-checkbox-focus-ring-color));
+        0 0 0 var(--mod-checkbox-focus-ring-thinkness, var(--spectrum-checkbox-focus-ring-thickness))
+        var(--highcontrast-checkbox-focus-ring-color, var(--mod-checkbox-focus-ring-color, var(--spectrum-checkbox-focus-ring-color)));
       margin: calc(var(--mod-checkbox-focus-ring-gap, var(--spectrum-checkbox-focus-ring-gap)) * -1);
     }
   }
@@ -569,5 +537,46 @@ governing permissions and limitations under the License.
   &:disabled ~ .spectrum-Checkbox-label {
     forced-color-adjust: none;
     color: var(--highcontrast-checkbox-disabled-color-default, var(--mod-checkbox-content-color-disabled, var(--spectrum-checkbox-content-color-disabled)));
+  }
+}
+
+/* Windows high contrast mode */
+@media (forced-colors: active) {
+  .spectrum-Checkbox-input {
+    &:focus-ring + .spectrum-Checkbox-box {
+      forced-color-adjust: none;
+      outline-color: var(--highcontrast-checkbox-focus-ring-color, var(--mod-checkbox-focus-ring-color, var(--spectrum-checkbox-focus-ring-color)));
+      outline-style: auto;
+      outline-offset: var(--highcontrast-checkbox-focus-ring-gap, var(--mod-checkbox-focus-ring-gap, var(--spectrum-checkbox-focus-ring-gap)));
+      outline-width: var(--mod-focus-ring-thickness, var(--spectrum-focus-ring-thickness));
+
+      &:after {
+        box-shadow:
+        0 0 0 0 var(--highcontrast-checkbox-focus-ring-color, var(--mod-checkbox-focus-ring-color, var(--spectrum-checkbox-focus-ring-color)));
+      }
+    }
+  }
+  .spectrum-Checkbox {
+    --highcontrast-checkbox-content-color-default: ButtonText;
+    --highcontrast-checkbox-content-color-hover: ButtonText;
+    --highcontrast-checkbox-content-color-down: ButtonText;
+    --highcontrast-checkbox-content-color-focus: ButtonText;
+
+    --highcontrast-checkbox-background-color-default: Background;
+
+    --highcontrast-checkbox-color-default: ButtonText;
+    --highcontrast-checkbox-color-hover: ButtonText;
+
+    --highcontrast-checkbox-highlight-color-default: Highlight;
+    --highcontrast-checkbox-highlight-color-hover: Highlight;
+    --highcontrast-checkbox-highlight-color-down: Highlight;
+
+    --highcontrast-checkbox-disabled-color-default: GrayText;
+
+    --highcontrast-checkbox-focus-ring-color: ButtonText;
+
+    --highcontrast-checkbox-highlight-color-focus: Highlight;
+    --highcontrast-checkbox-focus-ring-color: FieldText;
+    --highcontrast-checkbox-color-focus: FieldText;
   }
 }
