@@ -15,7 +15,10 @@ governing permissions and limitations under the License.
 .spectrum-Picker {
   /* Placeholder tokens*/
   --spectrum-picker-minimum-width-multiplier: 2px;
-  
+
+  /* Font */
+  --spectrum-picker-font-size: var(--spectrum-font-size-100);
+
   /* Size */
   --spectrum-picker-min-inline-size: var(--spectrum-picker-minimum-width-multiplier);
   --spectrum-picker-block-size: var(--spectrum-component-height-100);
@@ -33,20 +36,21 @@ governing permissions and limitations under the License.
   --spectrum-picker-animation-duration: var(--spectrum-animation-duration-100);
 
   /* Color */
-  --spectrum-picker-text-color-default: var(--spectrum-neutral-content-color-default);
-  --spectrum-picker-text-color-hover: var(--spectrum-neutral-content-color-hover);
-  --spectrum-picker-text-color-active: var(--spectrum-neutral-content-color-down);
-  --spectrum-picker-text-color-key-focus: var(--spectrum-neutral-content-color-key-focus);
+  --spectrum-picker-font-color-default: var(--spectrum-neutral-content-color-default);
+  --spectrum-picker-font-color-hover: var(--spectrum-neutral-content-color-hover);
+  --spectrum-picker-font-color-active: var(--spectrum-neutral-content-color-down);
+  --spectrum-picker-font-color-key-focus: var(--spectrum-neutral-content-color-key-focus);
 
   /* --spectrum-picker-icon-color-default: var(--spectrum-neutral-content-color-default); */
   --spectrum-picker-icon-color-hover: var(--spectrum-neutral-content-color-hover);
   /* --spectrum-picker-icon-color-active: var(--spectrum-neutral-content-color-down); */
   /* --spectrum-picker-icon-color-key-focus: var(--spectrum-neutral-content-color-key-focus); */
 
-  --spectrum-negative-border-color-default: var(--spectrum-negative-color-900);
+  /* --spectrum-negative-border-color-default: var(--spectrum-negative-color-900); */
   --spectrum-negative-border-color-hover: var(--spectrum-negative-color-1000);
   --spectrum-negative-border-color-down: var(--spectrum-negative-color-1100);
   --spectrum-negative-border-color-key-focus: var(--spectrum-negative-color-1000);
+
   --spectrum-picker-border-color-error-default: var(--spectrum-negative-border-color-default);
   --spectrum-picker-border-color-error-hover: var(--spectrum-negative-border-color-hover);
   --spectrum-picker-border-color-error-active: var(--spectrum-negative-border-color-down);
@@ -55,7 +59,7 @@ governing permissions and limitations under the License.
   --spectrum-picker-icon-color-error: var(--spectrum-negative-visual-color);
 
   --spectrum-picker-background-color-disabled: var(--spectrum-disabled-background-color);
-  --spectrum-picker-text-color-disabled: var(--spectrum-disabled-content-color);
+  --spectrum-picker-font-color-disabled: var(--spectrum-disabled-content-color);
   --spectrum-picker-icon-color-disabled: var(--spectrum-disabled-content-color);
 
   /* Legacy tokens */
@@ -95,21 +99,29 @@ governing permissions and limitations under the License.
 .spectrum-Picker--sizeS {
   --spectrum-picker-block-size: var(--spectrum-component-height-75);
   --spectrum-picker-spacing-text-to-icon: var(--spectrum-text-to-visual-75);
+
+  --spectrum-picker-font-size: var(--spectrum-font-size-75);
 }
 
 .spectrum-Picker--sizeM {
   --spectrum-picker-block-size: var(--spectrum-component-height-100);
   --spectrum-picker-spacing-text-to-icon: var(--spectrum-text-to-visual-100);
+
+  --spectrum-picker-font-size: var(--spectrum-font-size-100);
 }
 
 .spectrum-Picker--sizeL {
   --spectrum-picker-block-size: var(--spectrum-component-height-200);
   --spectrum-picker-spacing-text-to-icon: var(--spectrum-text-to-visual-200);
+
+  --spectrum-picker-font-size: var(--spectrum-font-size-200);
 }
 
 .spectrum-Picker--sizeXL {
   --spectrum-picker-block-size: var(--spectrum-component-height-300);
   --spectrum-picker-spacing-text-to-icon: var(--spectrum-text-to-visual-300);
+
+  --spectrum-picker-font-size: var(--spectrum-font-size-300);
 }
 
 .spectrum-Picker {
@@ -142,7 +154,7 @@ governing permissions and limitations under the License.
 
   /* transition: border-color var(--spectrum-picker-animation-duration) ease-in-out; */
 
-  color: var(--spectrum-picker-text-color-default);
+  color: var(--spectrum-picker-font-color-default);
   background-color: var(--spectrum-picker-background-color-default);
   border-color: var(--spectrum-picker-border-color-default);
 
@@ -190,7 +202,7 @@ governing permissions and limitations under the License.
   }
 
   &:hover {
-    color: var(--spectrum-picker-text-color-hover);
+    color: var(--spectrum-picker-font-color-hover);
     background-color: var(--spectrum-picker-background-color-hover);
     border-color: var(--spectrum-picker-border-color-hover);
 
@@ -206,7 +218,7 @@ governing permissions and limitations under the License.
 
     &.is-placeholder {
       .spectrum-Picker-label {
-        color: var(--spectrum-picker-text-color-active);
+        color: var(--spectrum-picker-font-color-active);
       }
     }
   }
@@ -219,10 +231,10 @@ governing permissions and limitations under the License.
     /* todo: use real DNA var */
     --spectrum-picker-border-size-increase-focus: 1px;
     box-shadow: 0 0 0 var(--spectrum-picker-border-size-increase-focus) var(--spectrum-picker-border-color-key-focus);
-    color: var(--spectrum-picker-text-color-key-focus);
+    color: var(--spectrum-picker-font-color-key-focus);
 
     &.is-placeholder {
-      color: var(--spectrum-picker-text-color-key-focus);
+      color: var(--spectrum-picker-font-color-key-focus);
     }
   }
 
@@ -252,7 +264,7 @@ governing permissions and limitations under the License.
   &:disabled,
   &.is-disabled {
     background-color: var(--spectrum-picker-background-color-disabled);
-    color: var(--spectrum-picker-text-color-disabled);
+    color: var(--spectrum-picker-font-color-disabled);
 
     .spectrum-Picker-icon,
     .spectrum-Picker-menuIcon,
@@ -262,8 +274,57 @@ governing permissions and limitations under the License.
 
     .spectrum-Picker-label {
       &.is-placeholder {
-        color: var(--spectrum-picker-text-color-disabled);
+        color: var(--spectrum-picker-font-color-disabled);
       }
     }
+  }
+}
+
+.spectrum-Picker--quiet {
+  /* Todo: fix in DNA, should have been zero */
+  /* --spectrum-picker-texticon-border-size: 0;
+  --spectrum-picker-texticon-border-radius: 0;
+  --spectrum-picker-textonly-padding-left: 0;
+  --spectrum-picker-textonly-padding-right: 0;
+  --spectrum-picker-quiet-background-color-key-focus: transparent;
+  --spectrum-picker-quiet-border-color-key-focus: var(--spectrum-global-color-blue-400); */
+}
+
+.spectrum-Picker--quiet {
+  inline-size: auto;
+  min-inline-size: 0;
+
+  &:disabled,
+  &.is-disabled {
+    &:focus-ring {
+      box-shadow: none;
+    }
+  }
+}
+
+.spectrum-Picker-label {
+  /* Be the biggest, but also shrink! */
+  flex: 1 1 auto;
+
+  white-space: nowrap;
+  overflow: hidden;
+
+  block-size: calc(
+    var(--spectrum-picker-block-size) - calc(var(--spectrum-picker-border-size) * 2)
+  );
+  line-height: calc(
+    var(--spectrum-picker-block-size) - calc(var(--spectrum-picker-border-size) * 2)
+  );
+
+  font-size: var(--spectrum-picker-font-size);
+
+  text-overflow: ellipsis;
+  text-align: start;
+
+  &.is-placeholder {
+    /* TODO handle with typography styles */
+    font-weight: 400;
+    font-style: italic;
+    transition: color var(--spectrum-picker-animation-duration) ease-in-out;
   }
 }

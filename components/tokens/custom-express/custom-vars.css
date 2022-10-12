@@ -14,4 +14,11 @@ governing permissions and limitations under the License.
 
 .spectrum--express {
   --system: express;
+
+  --spectrum-focus-ring-thickness: 1px;
+  --spectrum-focus-ring-gap: 1px;
+  --spectrum-focus-ring-color: blue;
+  --spectrum-static-white-focus-ring-color: black;
+  --spectrum-static-black-focus-ring-color: white;
+  --spectrum-negative-content-color: red;
 }
