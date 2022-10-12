@@ -286,7 +286,7 @@ governing permissions and limitations under the License.
   }
 }
 
-/* tip is horizontal at left */
+/* tip is horizontal at left △ ▽ */
 .spectrum-Tooltip--top-left,
 .spectrum-Tooltip--bottom-left {
   .spectrum-Tooltip-tip {
@@ -295,7 +295,7 @@ governing permissions and limitations under the License.
   }
 }
 
-/* tip is horizontal at right */
+/* tip is horizontal at right △ ▽ */
 .spectrum-Tooltip--top-right,
 .spectrum-Tooltip--bottom-right {
   .spectrum-Tooltip-tip {
@@ -304,7 +304,7 @@ governing permissions and limitations under the License.
   }
 }
 
-/* logical property - tip is horizontal at start */
+/* logical property - tip is horizontal at start △ ▽ */
 .spectrum-Tooltip--top-start,
 .spectrum-Tooltip--bottom-start {
   .spectrum-Tooltip-tip {
@@ -312,7 +312,7 @@ governing permissions and limitations under the License.
   }
 }
 
-/* logical property - tip is horizontal at end */
+/* logical property - tip is horizontal at end △ ▽ */
 .spectrum-Tooltip--top-end,
 .spectrum-Tooltip--bottom-end {
   .spectrum-Tooltip-tip {
@@ -320,7 +320,7 @@ governing permissions and limitations under the License.
   }
 }
 
-/* tip right and left resets */
+/* tip right left start end resets ◁ ▷ */
 .spectrum-Tooltip--right,
 .spectrum-Tooltip--right-bottom,
 .spectrum-Tooltip--right-top,
@@ -339,10 +339,13 @@ governing permissions and limitations under the License.
   }
 }
 
-/* tip is vertical pointing left ◁ */
+/* tip is vertical pointing ◁ LEFT or END ◁ LTR / ▷ RTL */
 .spectrum-Tooltip--right,
 .spectrum-Tooltip--right-bottom,
-.spectrum-Tooltip--right-top {
+.spectrum-Tooltip--right-top,
+.spectrum-Tooltip--end,
+.spectrum-Tooltip--end-top,
+.spectrum-Tooltip--end-bottom {
   .spectrum-Tooltip-tip {
     left: auto;
     right: 100%;
@@ -352,62 +355,11 @@ governing permissions and limitations under the License.
   }
 }
 
-/* tip is vertical pointing left or start */
-.spectrum-Tooltip--left,
-.spectrum-Tooltip--left-bottom,
-.spectrum-Tooltip--left-top,
+/* tip logical property - tip pointing toward END -  ▷ LTR / ◁ RTL */
 .spectrum-Tooltip--start,
 .spectrum-Tooltip--start-top,
 .spectrum-Tooltip--start-bottom {
   .spectrum-Tooltip-tip {
-    clip-path: polygon(-5% 0, -5% 100%, 100% 50%);
-    height: var(--spectrum-tooltip-tip-width);
-    width: var(--spectrum-tooltip-tip-height);
-  }
-}
-
-
-/* tip is vertical pointing right ▷ */
-.spectrum-Tooltip--left,
-.spectrum-Tooltip--left-bottom,
-.spectrum-Tooltip--left-top {
-  .spectrum-Tooltip-tip {
-    left: 100%;
-    right: auto;
-  }
-}
-
-/* tip is vertical at top */
-.spectrum-Tooltip--right-top,
-.spectrum-Tooltip--left-top,
-.spectrum-Tooltip--start-top,
-.spectrum-Tooltip--end-top {
-  .spectrum-Tooltip-tip {
-    top: var(--spectrum-tooltip-pointer-corner-spacing);
-    bottom: auto;
-  }
-}
-
-/* tip is vertical at bottom */
-.spectrum-Tooltip--right-bottom,
-.spectrum-Tooltip--left-bottom,
-.spectrum-Tooltip--start-bottom,
-.spectrum-Tooltip--end-bottom {
-  .spectrum-Tooltip-tip {
-    top: auto;
-    bottom: var(--spectrum-tooltip-pointer-corner-spacing);
-  }
-}
-
-/* tip logical property - LTR tip pointing toward end -  ▷ LTR / ◁ RTL */
-.spectrum-Tooltip--start,
-.spectrum-Tooltip--start-top,
-.spectrum-Tooltip--start-bottom {
-  .spectrum-Tooltip-tip {
-    left: 100%;
-    right: auto;
-
-    /* RTL tip pointing toward end ◁ */
     [dir="rtl"] & {
       left: auto;
       right: 100%;
@@ -418,19 +370,27 @@ governing permissions and limitations under the License.
   }
 }
 
+/* tip is vertical pointing ▷ RIGHT or START ▷ LTR / ◁ RTL */
+.spectrum-Tooltip--left,
+.spectrum-Tooltip--left-bottom,
+.spectrum-Tooltip--left-top,
+.spectrum-Tooltip--start,
+.spectrum-Tooltip--start-top,
+.spectrum-Tooltip--start-bottom {
+  .spectrum-Tooltip-tip {
+    left: 100%;
+    right: auto;
+    clip-path: polygon(-5% 0, -5% 100%, 100% 50%);
+    height: var(--spectrum-tooltip-tip-width);
+    width: var(--spectrum-tooltip-tip-height);
+  }
+}
+
 /* tip logical property - LTR tip pointing toward start - ◁ LTR / ▷ RTL */
 .spectrum-Tooltip--end,
 .spectrum-Tooltip--end-top,
 .spectrum-Tooltip--end-bottom {
-  /* tip triangle  */
   .spectrum-Tooltip-tip {
-    left: auto;
-    right: 100%;
-    clip-path: polygon(0 50%, 105% 100%, 105% 0);
-    height: var(--spectrum-tooltip-tip-width);
-    width: var(--spectrum-tooltip-tip-height);
-
-    /* RTL tip pointing toward start ▷ */
     [dir="rtl"] & {
       left: 100%;
       right: auto;
@@ -441,7 +401,30 @@ governing permissions and limitations under the License.
   }
 }
 
-/* CSS open animation */
+/* tip is vertical at top ◁ ▷ */
+.spectrum-Tooltip--right-top,
+.spectrum-Tooltip--left-top,
+.spectrum-Tooltip--start-top,
+.spectrum-Tooltip--end-top {
+  .spectrum-Tooltip-tip {
+    top: var(--spectrum-tooltip-pointer-corner-spacing);
+    bottom: auto;
+  }
+}
+
+/* tip is vertical at bottom ◁ ▷ */
+.spectrum-Tooltip--right-bottom,
+.spectrum-Tooltip--left-bottom,
+.spectrum-Tooltip--start-bottom,
+.spectrum-Tooltip--end-bottom {
+  .spectrum-Tooltip-tip {
+    top: auto;
+    bottom: var(--spectrum-tooltip-pointer-corner-spacing);
+  }
+}
+
+
+/*** CSS Hover Animation ***/
 .u-tooltip-showOnHover {
   display: inline-block;
   position: relative;
@@ -538,6 +521,7 @@ governing permissions and limitations under the License.
   .spectrum-Tooltip--end-top,
   .spectrum-Tooltip--end-bottom {
     left: 100%;
+    right: auto;
   }
 
    /* RTL */
