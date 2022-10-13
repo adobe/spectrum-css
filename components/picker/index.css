@@ -75,12 +75,12 @@ governing permissions and limitations under the License.
   /* Margin between text and caret */
   /* --spectrum-picker-texticon-ui-icon-gap: 8px; */
 
-  /* special cases for focus-ring */
+  /* special cases for focus indicator */
   --spectrum-focus-indicator-gap: 2px;
-  --spectrum-picker-focus-ring-gap: var(--spectrum-focus-indicator-gap);
+  --spectrum-picker-focus-indicator-gap: var(--spectrum-focus-indicator-gap);
   --spectrum-focus-indicator-thickness: 2px;
-  --spectrum-picker-focus-ring-size: var(--spectrum-focus-indicator-thickness);
-  --spectrum-picker-focus-ring-color: var(--spectrum-focus-indicator-color);
+  --spectrum-picker-focus-indicator-size: var(--spectrum-focus-indicator-thickness);
+  --spectrum-picker-focus-indicator-color: var(--spectrum-focus-indicator-color);
 
   /* Todo: fix in DNA, should have been zero */
   /* --spectrum-picker-texticon-disabled-border-size: 0; */
@@ -96,7 +96,7 @@ governing permissions and limitations under the License.
   /*--spectrum-picker-textonly-padding-left-adjusted: calc(var(--spectrum-picker-textonly-padding-left) - var(--spectrum-picker-textonly-border-size));*/
   /*--spectrum-picker-textonly-padding-right-adjusted: calc(var(--spectrum-picker-textonly-padding-right) - var(--spectrum-picker-textonly-border-size));*/
 
-  --spectrum-picker-focus-ring-border-radius-adjusted: calc(var(--spectrum-picker-border-radius) + var(--spectrum-picker-focus-ring-gap));
+  --spectrum-picker-focus-indicator-border-radius-adjusted: calc(var(--spectrum-picker-border-radius) + var(--spectrum-picker-focus-indicator-gap));
 }
 
 .spectrum-Picker--sizeS {
@@ -130,7 +130,7 @@ governing permissions and limitations under the License.
 /* Windows high contrast mode */
 @media (forced-colors: active) {
   .spectrum-Picker {
-    /* --spectrum-picker-focus-ring-color: Highlight; */
+    /* --spectrum-picker-focus-indicator-color: Highlight; */
     /* --spectrum-picker-m-quiet-texticon-border-color-down: ButtonText; */
     /* --spectrum-picker-m-quiet-texticon-border-color: ButtonText; */
     /* --spectrum-picker-m-quiet-texticon-placeholder-text-color-key-focus: GrayText; */
@@ -160,7 +160,7 @@ governing permissions and limitations under the License.
     &.is-focused {
       forced-color-adjust: none;
       outline: 0;
-      /* box-shadow: 0 1px 0 0 var(--spectrum-picker-focus-ring-color); */
+      /* box-shadow: 0 1px 0 0 var(--spectrum-picker-focus-indicator-color); */
     }
   }
 }
@@ -207,8 +207,8 @@ governing permissions and limitations under the License.
     right: 0;
     bottom: 0;
     top: 0;
-    margin: calc((var(--spectrum-picker-focus-ring-gap) + var(--spectrum-picker-border-size)) * -1);
-    border-radius: var(--spectrum-picker-focus-ring-border-radius-adjusted);
+    margin: calc((var(--spectrum-picker-focus-indicator-gap) + var(--spectrum-picker-border-size)) * -1);
+    border-radius: var(--spectrum-picker-focus-indicator-border-radius-adjusted);
     transition: box-shadow var(--spectrum-picker-animation-duration) ease-in-out;
   }
 
@@ -218,8 +218,8 @@ governing permissions and limitations under the License.
 
     /* Focus ring */
     &:after {
-      /* --spectrum-picker-focus-ring-color: transparent; */
-      box-shadow: 0 0 0 var(--spectrum-picker-focus-ring-size) var(--spectrum-picker-focus-ring-color);
+      /* --spectrum-picker-focus-indicator-color: transparent; */
+      box-shadow: 0 0 0 var(--spectrum-picker-focus-indicator-size) var(--spectrum-picker-focus-indicator-color);
     }
   }
 
@@ -427,7 +427,7 @@ governing permissions and limitations under the License.
 .spectrum-Picker--quiet {
   border: none;
   border-radius: 0;
-  padding-inline: var(--spectrum-spacing-edge-to-text-quiet);
+  padding-inline: var(--spectrum-picker-spacing-edge-to-text-quiet);
 
   color: var(--spectrum-picker-font-color-default);
   background-color: transparent;
@@ -440,7 +440,7 @@ governing permissions and limitations under the License.
   &:focus-visible,
   &.is-focused {
     /* background-color: var(--spectrum-picker-quiet-background-color-key-focus); */
-    box-shadow: 0 var(--spectrum-picker-focus-ring-size) 0 0 var(--spectrum-picker-focus-ring-color);
+    box-shadow: 0 var(--spectrum-picker-focus-indicator-size) 0 0 var(--spectrum-picker-focus-indicator-color);
 
 
     &.is-placeholder {
@@ -468,7 +468,7 @@ governing permissions and limitations under the License.
   &.is-invalid {
     &:focus-visible,
     &.is-focused {
-      /* box-shadow: 0 2px 0 0 var(--spectrum-picker-m-texticon-border-color-error-key-focus); */
+      box-shadow: 0 var(--spectrum-picker-focus-indicator-size) 0 0 var(--spectrum-picker-focus-indicator-color);
     }
   }
 
