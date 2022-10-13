@@ -28,9 +28,10 @@ governing permissions and limitations under the License.
 
   /* --spectrum-picker-text-icon-size: 12px; */
 
-
   /* Spacing */
   --spectrum-picker-spacing-edge-to-text: var(--spectrum-component-edge-to-text-100);
+  --spectrum-picker-spacing-edge-to-text-quiet: var(--spectrum-field-edge-to-text-quiet);
+
   --spectrum-picker-spacing-text-to-icon: var(--spectrum-text-to-visual-100);
   --spectrum-picker-spacing-text-to-alert-icon-inline-start: var(--spectrum-field-text-to-alert-icon-medium);
 
@@ -425,6 +426,8 @@ governing permissions and limitations under the License.
 
 .spectrum-Picker--quiet {
   border: none;
+  border-radius: 0;
+  padding-inline: var(--spectrum-spacing-edge-to-text-quiet);
 
   color: var(--spectrum-picker-font-color-default);
   background-color: transparent;
@@ -437,7 +440,8 @@ governing permissions and limitations under the License.
   &:focus-visible,
   &.is-focused {
     /* background-color: var(--spectrum-picker-quiet-background-color-key-focus); */
-    /* box-shadow: 0 2px 0 0 var(--spectrum-picker-quiet-border-color-key-focus); */
+    box-shadow: 0 var(--spectrum-picker-focus-ring-size) 0 0 var(--spectrum-picker-focus-ring-color);
+
 
     &.is-placeholder {
       /* color: var(--spectrum-picker-m-quiet-texticon-placeholder-text-color-key-focus); */
