@@ -31,6 +31,7 @@ governing permissions and limitations under the License.
   /* Spacing */
   --spectrum-picker-spacing-edge-to-text: var(--spectrum-component-edge-to-text-100);
   --spectrum-picker-spacing-text-to-icon: var(--spectrum-text-to-visual-100);
+  --spectrum-picker-spacing-text-to-alert-icon-inline-start: var(--spectrum-field-text-to-alert-icon-medium);
 
   /* Animation */
   --spectrum-picker-animation-duration: var(--spectrum-animation-duration-100);
@@ -97,31 +98,31 @@ governing permissions and limitations under the License.
 }
 
 .spectrum-Picker--sizeS {
+  --spectrum-picker-font-size: var(--spectrum-font-size-75);
   --spectrum-picker-block-size: var(--spectrum-component-height-75);
   --spectrum-picker-spacing-text-to-icon: var(--spectrum-text-to-visual-75);
-
-  --spectrum-picker-font-size: var(--spectrum-font-size-75);
+  --spectrum-picker-spacing-text-to-alert-icon-inline-start: var(--spectrum-field-text-to-alert-icon-small);
 }
 
 .spectrum-Picker--sizeM {
+  --spectrum-picker-font-size: var(--spectrum-font-size-100);
   --spectrum-picker-block-size: var(--spectrum-component-height-100);
   --spectrum-picker-spacing-text-to-icon: var(--spectrum-text-to-visual-100);
-
-  --spectrum-picker-font-size: var(--spectrum-font-size-100);
+  --spectrum-picker-spacing-text-to-alert-icon-inline-start: var(--spectrum-field-text-to-alert-icon-medium);
 }
 
 .spectrum-Picker--sizeL {
+  --spectrum-picker-font-size: var(--spectrum-font-size-200);
   --spectrum-picker-block-size: var(--spectrum-component-height-200);
   --spectrum-picker-spacing-text-to-icon: var(--spectrum-text-to-visual-200);
-
-  --spectrum-picker-font-size: var(--spectrum-font-size-200);
+  --spectrum-picker-spacing-text-to-alert-icon-inline-start: var(--spectrum-field-text-to-alert-icon-large);
 }
 
 .spectrum-Picker--sizeXL {
+  --spectrum-picker-font-size: var(--spectrum-font-size-300);
   --spectrum-picker-block-size: var(--spectrum-component-height-300);
   --spectrum-picker-spacing-text-to-icon: var(--spectrum-text-to-visual-300);
-
-  --spectrum-picker-font-size: var(--spectrum-font-size-300);
+  --spectrum-picker-spacing-text-to-alert-icon-inline-start: var(--spectrum-field-text-to-alert-icon-extra-large);
 }
 
 .spectrum-Picker {
@@ -327,4 +328,27 @@ governing permissions and limitations under the License.
     font-style: italic;
     transition: color var(--spectrum-picker-animation-duration) ease-in-out;
   }
+}
+
+/* The picker chevron */
+.spectrum-Picker-menuIcon {
+  display: inline-block;
+  position: relative;
+  vertical-align: top;
+  transition: color var(--spectrum-picker-animation-duration) ease-out;
+  flex-shrink: 0;
+}
+
+.spectrum-Picker-validationIcon {
+  /* margin-inline-start: var(--spectrum-picker-texticon-error-icon-margin-left); */
+  margin-inline-start: var(--spectrum-picker-spacing-text-to-alert-icon-inline-start);
+}
+
+.spectrum-Picker-label ~ .spectrum-Picker-menuIcon {
+  margin-inline-start: var(--spectrum-picker-spacing-text-to-icon);
+}
+
+.spectrum-Picker-popover {
+  /* TODO Where should this value come from? */
+  /* max-inline-size: var(--spectrum-picker-texticon-popover-max-width); */
 }
