@@ -3,6 +3,28 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+<a name="4.0.0"></a>
+# 4.0.0
+🗓 2022-10-13 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/tokens@3.0.0...@spectrum-css/tokens@4.0.0)
+
+* feat(tokens)!: use latest beta release ([b60a8e7](https://github.com/adobe/spectrum-css/commit/b60a8e7))
+
+
+### 🛑 BREAKING CHANGES
+
+* removes and renames a number of tokens already being used by consuming packages
+
+feat: adds 114 new tokens
+refactor: renames 10 tokens
+refactor: updates 14 existing token values
+refactor: removes 13 tokens from the system
+
+Full release notes can be found here: https://github.com/adobe/spectrum-tokens/releases/tag/v12.0.0-beta.53
+
+
+
+
+
 <a name="3.0.0"></a>
 # 3.0.0
 🗓 2022-09-16 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/tokens@2.0.0...@spectrum-css/tokens@3.0.0)

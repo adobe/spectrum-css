@@ -3,6 +3,27 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+<a name="3.0.0"></a>
+# 3.0.0
+🗓 2022-10-13 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/closebutton@2.0.7...@spectrum-css/closebutton@3.0.0)
+
+* refactor(closebutton)!: remap core token aliases & rename aliases ([dc3afde](https://github.com/adobe/spectrum-css/commit/dc3afde))
+
+
+### 🛑 BREAKING CHANGES
+
+* remaps existing aliases to new/renamed core token values
+
+* `--spectrum-focus-ring-thickness` renamed to `--spectrum-focus-indicator-thickness`
+* `--spectrum-focus-ring-gap` renamed to `--spectrum-focus-indicator-gap`
+* `--spectrum-focus-ring-color` renamed to `--spectrum-focus-indicator-color`
+* `--spectrum-static-white-focus-ring-color` renamed to `--spectrum-static-white-focus-indicator-color`
+* `--spectrum-static-black-focus-ring-color` renamed to `--spectrum-static-black-focus-indicator-color`
+
+
+
+
+
 <a name="2.0.7"></a>
 ## 2.0.7
 🗓 2022-09-16 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/closebutton@2.0.6...@spectrum-css/closebutton@2.0.7)

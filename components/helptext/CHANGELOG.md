@@ -3,6 +3,23 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+<a name="3.0.0"></a>
+# 3.0.0
+🗓 2022-10-13 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/helptext@2.0.9...@spectrum-css/helptext@3.0.0)
+
+* refactor(helptext)!: remap core token aliases & rename aliases ([b34d4df](https://github.com/adobe/spectrum-css/commit/b34d4df))
+
+
+### 🛑 BREAKING CHANGES
+
+* remaps existing aliases to new/renamed core token values
+
+* `--spectrum-negative-content-color` removed and `--spectrum-negative-color-900` used in its place
+
+
+
+
+
 <a name="2.0.9"></a>
 ## 2.0.9
 🗓 2022-09-16 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/helptext@2.0.8...@spectrum-css/helptext@2.0.9)

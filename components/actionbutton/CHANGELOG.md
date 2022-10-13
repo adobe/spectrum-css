@@ -3,6 +3,27 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+<a name="3.0.0"></a>
+# 3.0.0
+🗓 2022-10-13 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/actionbutton@2.1.8...@spectrum-css/actionbutton@3.0.0)
+
+* refactor(actionbutton)!: remap core token aliases & rename aliases ([5966f9b](https://github.com/adobe/spectrum-css/commit/5966f9b))
+
+
+### 🛑 BREAKING CHANGES
+
+* remaps existing aliases to new/renamed core token values
+
+* `--spectrum-focus-ring-thickness` renamed to `--spectrum-focus-indicator-thickness`
+* `--spectrum-focus-ring-gap` renamed to `--spectrum-focus-indicator-gap`
+* `--spectrum-focus-ring-color` renamed to `--spectrum-focus-indicator-color`
+* `--spectrum-static-white-focus-ring-color` renamed to `--spectrum-static-white-focus-indicator-color`
+* `--spectrum-static-black-focus-ring-color` renamed to `--spectrum-static-black-focus-indicator-color`
+
+
+
+
+
 <a name="2.1.8"></a>
 ## 2.1.8
 🗓 2022-09-16 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/actionbutton@2.1.7...@spectrum-css/actionbutton@2.1.8)

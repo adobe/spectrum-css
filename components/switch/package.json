@@ -1,6 +1,6 @@
 {
   "name": "@spectrum-css/switch",
-  "version": "2.0.0",
+  "version": "3.0.0",
   "description": "The Spectrum CSS switch component",
   "license": "Apache-2.0",
   "main": "dist/index-vars.css",
@@ -19,7 +19,7 @@
     "@spectrum-css/tokens": "^1.0.7"
   },
   "devDependencies": {
-    "@spectrum-css/component-builder-simple": "^1.0.0-beta.0",
+    "@spectrum-css/component-builder-simple": "^2.0.0",
     "@spectrum-css/tokens": "^1.0.7",
     "gulp": "^4.0.0"
   },

@@ -3,6 +3,25 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+<a name="5.0.0"></a>
+# 5.0.0
+🗓 2022-10-13 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/radio@4.0.5...@spectrum-css/radio@5.0.0)
+
+* refactor(radio)!: remap core token aliases & rename aliases ([660694c](https://github.com/adobe/spectrum-css/commit/660694c))
+
+
+### 🛑 BREAKING CHANGES
+
+* remaps existing aliases to new/renamed core token values
+
+* `--spectrum-focus-ring-thickness` renamed to `--spectrum-focus-indicator-thickness`
+* `--spectrum-focus-ring-gap` renamed to `--spectrum-focus-indicator-gap`
+* `--spectrum-focus-ring-color` renamed to `--spectrum-focus-indicator-color`
+
+
+
+
+
 <a name="4.0.5"></a>
 ## 4.0.5
 🗓 2022-09-16 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/radio@4.0.4...@spectrum-css/radio@4.0.5)

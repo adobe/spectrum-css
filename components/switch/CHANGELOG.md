@@ -3,6 +3,25 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+<a name="3.0.0"></a>
+# 3.0.0
+🗓 2022-10-13 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/switch@2.0.0...@spectrum-css/switch@3.0.0)
+
+* refactor(switch)!: remap core token aliases & rename aliases ([165bbb6](https://github.com/adobe/spectrum-css/commit/165bbb6))
+
+
+### 🛑 BREAKING CHANGES
+
+* remaps existing aliases to new/renamed core token values
+
+* `--spectrum-focus-ring-thickness` renamed to `--spectrum-focus-indicator-thickness`
+* `--spectrum-focus-ring-gap` renamed to `--spectrum-focus-indicator-gap`
+* `--spectrum-focus-ring-color` renamed to `--spectrum-focus-indicator-color`
+
+
+
+
+
 <a name="2.0.0"></a>
 # 2.0.0
 🗓 2022-09-16 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/switch@1.0.23...@spectrum-css/switch@2.0.0)
