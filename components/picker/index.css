@@ -34,6 +34,7 @@ governing permissions and limitations under the License.
 
   --spectrum-picker-spacing-text-to-icon: var(--spectrum-text-to-visual-100);
   --spectrum-picker-spacing-text-to-alert-icon-inline-start: var(--spectrum-field-text-to-alert-icon-medium);
+  --spectrum-picker-spacing-alert-icon-to-disclosure-icon: var(--spectrum-picker-visual-to-disclosure-icon-medium);
 
   /* Animation */
   --spectrum-picker-animation-duration: var(--spectrum-animation-duration-100);
@@ -46,8 +47,8 @@ governing permissions and limitations under the License.
 
   --spectrum-picker-icon-color-default: var(--spectrum-neutral-content-color-default);
   --spectrum-picker-icon-color-hover: var(--spectrum-neutral-content-color-hover);
-  /* --spectrum-picker-icon-color-active: var(--spectrum-neutral-content-color-down); */
-  /* --spectrum-picker-icon-color-key-focus: var(--spectrum-neutral-content-color-key-focus); */
+  --spectrum-picker-icon-color-active: var(--spectrum-neutral-content-color-down);
+  --spectrum-picker-icon-color-key-focus: var(--spectrum-neutral-content-color-key-focus);
 
   /* --spectrum-negative-border-color-default: var(--spectrum-negative-color-900); */
   --spectrum-negative-border-color-hover: var(--spectrum-negative-color-1000);
@@ -104,6 +105,7 @@ governing permissions and limitations under the License.
   --spectrum-picker-block-size: var(--spectrum-component-height-75);
   --spectrum-picker-spacing-text-to-icon: var(--spectrum-text-to-visual-75);
   --spectrum-picker-spacing-text-to-alert-icon-inline-start: var(--spectrum-field-text-to-alert-icon-small);
+  --spectrum-picker-spacing-alert-icon-to-disclosure-icon: var(--spectrum-picker-visual-to-disclosure-icon-small);
 }
 
 .spectrum-Picker--sizeM {
@@ -111,6 +113,7 @@ governing permissions and limitations under the License.
   --spectrum-picker-block-size: var(--spectrum-component-height-100);
   --spectrum-picker-spacing-text-to-icon: var(--spectrum-text-to-visual-100);
   --spectrum-picker-spacing-text-to-alert-icon-inline-start: var(--spectrum-field-text-to-alert-icon-medium);
+  --spectrum-picker-spacing-alert-icon-to-disclosure-icon: var(--spectrum-picker-visual-to-disclosure-icon-medium);
 }
 
 .spectrum-Picker--sizeL {
@@ -118,6 +121,7 @@ governing permissions and limitations under the License.
   --spectrum-picker-block-size: var(--spectrum-component-height-200);
   --spectrum-picker-spacing-text-to-icon: var(--spectrum-text-to-visual-200);
   --spectrum-picker-spacing-text-to-alert-icon-inline-start: var(--spectrum-field-text-to-alert-icon-large);
+  --spectrum-picker-spacing-alert-icon-to-disclosure-icon: var(--spectrum-picker-visual-to-disclosure-icon-large);
 }
 
 .spectrum-Picker--sizeXL {
@@ -125,6 +129,7 @@ governing permissions and limitations under the License.
   --spectrum-picker-block-size: var(--spectrum-component-height-300);
   --spectrum-picker-spacing-text-to-icon: var(--spectrum-text-to-visual-300);
   --spectrum-picker-spacing-text-to-alert-icon-inline-start: var(--spectrum-field-text-to-alert-icon-extra-large);
+  --spectrum-picker-spacing-alert-icon-to-disclosure-icon: var(--spectrum-picker-visual-to-disclosure-icon-extra-large);
 }
 
 /* Windows high contrast mode */
@@ -225,16 +230,7 @@ governing permissions and limitations under the License.
 
   .spectrum-Picker-icon {
     flex-shrink: 0;
-
-    /* todo: In theory, this is right -- there should be more gap with an icon -- but in practice, it does not match */
-    /* margin-inline-start: calc(var(--spectrum-picker-texticon-padding-left) - var(--spectrum-picker-texticon-textonly-padding-left)); */
-    margin-inline-end: var(--spectrum-picker-spacing-edge-to-text);
-  }
-
-  .spectrum-Picker-label + .spectrum-Picker-icon {
-    /* Scoot over, assuming we have both icon and text */
-    /* margin-inline-start: calc(-1 * (var(--spectrum-picker-texticon-ui-icon-gap) - var(--spectrum-picker-padding-left-adjusted))); */
-    margin-inline-start: var(--spectrum-picker-spacing-text-to-icon);
+    margin-inline-end: var(--spectrum-picker-spacing-text-to-icon);
   }
 
   &:hover {
@@ -387,8 +383,17 @@ governing permissions and limitations under the License.
   vertical-align: top;
   transition: color var(--spectrum-picker-animation-duration) ease-out;
   flex-shrink: 0;
+  margin-inline-start: var(--spectrum-picker-spacing-alert-icon-to-disclosure-icon);
 
   color: var(--spectrum-picker-icon-color-default);
+
+  &:focus {
+    color: var(--spectrum-picker-icon-color-key-focus);
+  }
+
+  &:active {
+    color: var(--spectrum-picker-icon-color-active);
+  }
 }
 
 .spectrum-Picker-validationIcon {
