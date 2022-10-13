@@ -43,7 +43,7 @@ governing permissions and limitations under the License.
   --spectrum-picker-font-color-active: var(--spectrum-neutral-content-color-down);
   --spectrum-picker-font-color-key-focus: var(--spectrum-neutral-content-color-key-focus);
 
-  /* --spectrum-picker-icon-color-default: var(--spectrum-neutral-content-color-default); */
+  --spectrum-picker-icon-color-default: var(--spectrum-neutral-content-color-default);
   --spectrum-picker-icon-color-hover: var(--spectrum-neutral-content-color-hover);
   /* --spectrum-picker-icon-color-active: var(--spectrum-neutral-content-color-down); */
   /* --spectrum-picker-icon-color-key-focus: var(--spectrum-neutral-content-color-key-focus); */
@@ -126,6 +126,44 @@ governing permissions and limitations under the License.
   --spectrum-picker-spacing-text-to-alert-icon-inline-start: var(--spectrum-field-text-to-alert-icon-extra-large);
 }
 
+/* Windows high contrast mode */
+@media (forced-colors: active) {
+  .spectrum-Picker {
+    /* --spectrum-picker-focus-ring-color: Highlight; */
+    /* --spectrum-picker-m-quiet-texticon-border-color-down: ButtonText; */
+    /* --spectrum-picker-m-quiet-texticon-border-color: ButtonText; */
+    /* --spectrum-picker-m-quiet-texticon-placeholder-text-color-key-focus: GrayText; */
+    /* --spectrum-picker-m-texticon-border-color-error-key-focus: Highlight; */
+    /* --spectrum-picker-m-texticon-placeholder-text-color-disabled: GrayText; */
+    /* --spectrum-picker-m-texticon-placeholder-text-color-down: GrayText; */
+    /* --spectrum-picker-m-texticon-placeholder-text-color-hover: GrayText; */
+    /* --spectrum-picker-m-texticon-placeholder-text-color-key-focus: GrayText; */
+    /* --spectrum-picker-m-texticon-placeholder-text-color-mouse-focus: GrayText; */
+    /* --spectrum-picker-m-texticon-placeholder-text-color: GrayText; */
+    /* --spectrum-picker-m-texticon-text-color-disabled: GrayText; */
+    /* --spectrum-picker-m-texticon-text-color-key-focus: ButtonText; */
+    /* --spectrum-picker-m-texticon-text-color: ButtonText; */
+    /* --spectrum-picker-m-textonly-focusring-border-color-key-focus: Highlight; */
+    /* --spectrum-picker-quiet-border-color-key-focus: Highlight; */
+    &:focus-visible {
+      /* outline: 2px solid Highlight; */
+    }
+    &:disabled,
+    .is-disabled {
+      border-color: GrayText;
+      /* border-width: var(--spectrum-picker-texticon-border-size); */
+    }
+  }
+  .spectrum-Picker--quiet {
+    &:focus-visible,
+    &.is-focused {
+      forced-color-adjust: none;
+      outline: 0;
+      /* box-shadow: 0 1px 0 0 var(--spectrum-picker-focus-ring-color); */
+    }
+  }
+}
+
 .spectrum-Picker {
   @inherit: %spectrum-BaseButton;
 
@@ -173,7 +211,7 @@ governing permissions and limitations under the License.
     transition: box-shadow var(--spectrum-picker-animation-duration) ease-in-out;
   }
 
-  &:focus-ring {
+  &:focus-visible {
     /* kill the default ring */
     box-shadow: none;
 
@@ -218,7 +256,7 @@ governing permissions and limitations under the License.
     }
   }
 
-  &:focus-ring,
+  &:focus-visible,
   &.is-focused {
     background-color: var(--spectrum-picker-background-color-key-focus);
     border-color: var(--spectrum-picker-border-color-key-focus);
@@ -249,7 +287,7 @@ governing permissions and limitations under the License.
       border-color: var(--spectrum-picker-border-color-error-active);
     }
 
-    &:focus-ring,
+    &:focus-visible,
     &.is-focused {
       border-color: var(--spectrum-picker-border-color-error-key-focus);
       box-shadow: 0 0 0 var(--spectrum-picker-border-size-increase-focus) var(--spectrum-picker-border-color-error-key-focus);
@@ -294,7 +332,7 @@ governing permissions and limitations under the License.
 
   &:disabled,
   &.is-disabled {
-    &:focus-ring {
+    &:focus-visible {
       box-shadow: none;
     }
   }
@@ -324,6 +362,16 @@ governing permissions and limitations under the License.
     font-weight: 400;
     font-style: italic;
     transition: color var(--spectrum-picker-animation-duration) ease-in-out;
+
+    color: var(--spectrum-picker-font-color-default);
+
+    &:hover {
+      color: var(--spectrum-picker-font-color-hover);
+    }
+
+    &:active {
+      color: var(--spectrum-picker-font-color-active);
+    }
   }
 }
 
@@ -334,6 +382,8 @@ governing permissions and limitations under the License.
   vertical-align: top;
   transition: color var(--spectrum-picker-animation-duration) ease-out;
   flex-shrink: 0;
+
+  color: var(--spectrum-picker-icon-color-default);
 }
 
 .spectrum-Picker-validationIcon {
@@ -348,4 +398,74 @@ governing permissions and limitations under the License.
 .spectrum-Picker-popover {
   /* TODO Where should this value come from? */
   /* max-inline-size: var(--spectrum-picker-texticon-popover-max-width); */
+}
+
+/* Placeholder tokens */
+.spectrum--medium {
+  --spectrum-picker-popover-quiet-offset-x: 12px;
+}
+
+.spectrum--large {
+  --spectrum-picker-popover-quiet-offset-x: 15px;
+}
+
+.spectrum-Picker-popover--quiet {
+  --spectrum-picker-popover-border-size: 1px;
+
+  margin-inline-start: calc(
+    -1 * calc(
+      var(--spectrum-picker-popover-quiet-offset-x) + var(--spectrum-picker-popover-border-size)
+    )
+  );
+}
+
+.spectrum-Picker--quiet {
+  border: none;
+
+  color: var(--spectrum-picker-font-color-default);
+  background-color: transparent;
+
+  &:hover {
+    /* background-color: var(--spectrum-picker-m-quiet-texticon-background-color-hover); */
+    /* color: var(--spectrum-picker-m-texticon-text-color-hover); */
+  }
+
+  &:focus-visible,
+  &.is-focused {
+    /* background-color: var(--spectrum-picker-quiet-background-color-key-focus); */
+    /* box-shadow: 0 2px 0 0 var(--spectrum-picker-quiet-border-color-key-focus); */
+
+    &.is-placeholder {
+      /* color: var(--spectrum-picker-m-quiet-texticon-placeholder-text-color-key-focus); */
+    }
+    .spectrum-Picker-menuIcon {
+      /* color: var(--spectrum-picker-m-texticon-icon-color-key-focus) */
+    }
+    &::after {
+      box-shadow: none;
+    }
+  }
+
+  &:active,
+  &.is-open {
+    background-color: transparent;
+
+    &:focus-visible,
+    &.is-focused {
+      /* background-color: var(--spectrum-picker-quiet-background-color-key-focus); */
+      /* box-shadow: 0 2px 0 0 var(--spectrum-picker-quiet-border-color-key-focus); */
+    }
+  }
+
+  &.is-invalid {
+    &:focus-visible,
+    &.is-focused {
+      /* box-shadow: 0 2px 0 0 var(--spectrum-picker-m-texticon-border-color-error-key-focus); */
+    }
+  }
+
+  &:disabled,
+  &.is-disabled {
+    background-color: transparent;
+  }
 }
