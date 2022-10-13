@@ -50,11 +50,6 @@ governing permissions and limitations under the License.
   --spectrum-picker-icon-color-active: var(--spectrum-neutral-content-color-down);
   --spectrum-picker-icon-color-key-focus: var(--spectrum-neutral-content-color-key-focus);
 
-  /* --spectrum-negative-border-color-default: var(--spectrum-negative-color-900); */
-  --spectrum-negative-border-color-hover: var(--spectrum-negative-color-1000);
-  --spectrum-negative-border-color-down: var(--spectrum-negative-color-1100);
-  --spectrum-negative-border-color-key-focus: var(--spectrum-negative-color-1000);
-
   --spectrum-picker-border-color-error-default: var(--spectrum-negative-border-color-default);
   --spectrum-picker-border-color-error-hover: var(--spectrum-negative-border-color-hover);
   --spectrum-picker-border-color-error-active: var(--spectrum-negative-border-color-down);
