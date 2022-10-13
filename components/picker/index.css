@@ -212,10 +212,12 @@ governing permissions and limitations under the License.
   }
 
   &:focus-visible {
-    /* kill the default ring */
-    box-shadow: none;
+    /* Remove native outline */
+    outline: none;
 
+    /* Focus ring */
     &:after {
+      /* --spectrum-picker-focus-ring-color: transparent; */
       box-shadow: 0 0 0 var(--spectrum-picker-focus-ring-size) var(--spectrum-picker-focus-ring-color);
     }
   }
@@ -259,7 +261,9 @@ governing permissions and limitations under the License.
   &:focus-visible,
   &.is-focused {
     background-color: var(--spectrum-picker-background-color-key-focus);
+    background-color: transparent;
     border-color: var(--spectrum-picker-border-color-key-focus);
+    border-color: transparent;
 
     /* todo: use real DNA var */
     --spectrum-picker-border-size-increase-focus: 1px;
