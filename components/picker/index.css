@@ -15,6 +15,7 @@ governing permissions and limitations under the License.
 .spectrum-Picker {
   /* Placeholder tokens*/
   --spectrum-picker-minimum-width-multiplier: 2px;
+  --spectrum-picker-border-size-disabled: 0;
 
   /* Font */
   --spectrum-picker-font-size: var(--spectrum-font-size-100);
@@ -181,13 +182,6 @@ governing permissions and limitations under the License.
     }
   }
 
-  &:disabled,
-  &.is-disabled {
-    /* border-width: var(--spectrum-picker-texticon-disabled-border-size); */
-    border-width: var(--spectrum-picker-border-size);
-    cursor: default;
-  }
-
   .spectrum-Picker-icon {
     flex-shrink: 0;
 
@@ -264,6 +258,9 @@ governing permissions and limitations under the License.
 
   &:disabled,
   &.is-disabled {
+    border-width: var(--spectrum-picker-border-size-disabled);
+    cursor: default;
+
     background-color: var(--spectrum-picker-background-color-disabled);
     color: var(--spectrum-picker-font-color-disabled);
 
