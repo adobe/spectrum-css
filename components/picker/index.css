@@ -62,36 +62,12 @@ governing permissions and limitations under the License.
   --spectrum-picker-font-color-disabled: var(--spectrum-disabled-content-color);
   --spectrum-picker-icon-color-disabled: var(--spectrum-disabled-content-color);
 
-  /* Legacy tokens */
-  /*
-  --spectrum-picker-textonly-border-size: 1px;
-  --spectrum-picker-texticon-placeholder-font-weight: 400;
-  --spectrum-picker-texticon-placeholder-font-style: italic; */
-  /* Margin between text and error icon*/
-  /* --spectrum-picker-texticon-error-icon-margin-left: 12px; */
-  /* Margin between text and caret */
-  /* --spectrum-picker-texticon-ui-icon-gap: 8px; */
-
   /* special cases for focus indicator */
   --spectrum-focus-indicator-gap: 2px;
   --spectrum-picker-focus-indicator-gap: var(--spectrum-focus-indicator-gap);
   --spectrum-focus-indicator-thickness: 2px;
   --spectrum-picker-focus-indicator-size: var(--spectrum-focus-indicator-thickness);
   --spectrum-picker-focus-indicator-color: var(--spectrum-focus-indicator-color);
-
-  /* Todo: fix in DNA, should have been zero */
-  /* --spectrum-picker-texticon-disabled-border-size: 0; */
-
-  /* --spectrum-picker-texticon-popover-max-width: var(--spectrum-global-dimension-size-3000);
-  --spectrum-picker-texticon-width: var(--spectrum-global-dimension-size-2400); */
-
-
-  /* Adjustments for inset/outset padding in DNA */
-  /* --spectrum-picker-padding-left-adjusted: calc(var(--spectrum-picker-spacing-text-icon-to-edge) - var(--spectrum-picker-text-icon-border-size)); */
-  /* --spectrum-picker-padding-right-adjusted: calc(var(--spectrum-picker-spacing-text-icon-to-edge) - var(--spectrum-picker-text-icon-border-size)); */
-  /*TODO Figure out what textonly-padding is */
-  /*--spectrum-picker-textonly-padding-left-adjusted: calc(var(--spectrum-picker-textonly-padding-left) - var(--spectrum-picker-textonly-border-size));*/
-  /*--spectrum-picker-textonly-padding-right-adjusted: calc(var(--spectrum-picker-textonly-padding-right) - var(--spectrum-picker-textonly-border-size));*/
 
   --spectrum-picker-focus-indicator-border-radius-adjusted: calc(var(--spectrum-picker-border-radius) + var(--spectrum-picker-focus-indicator-gap));
 }
@@ -202,8 +178,6 @@ governing permissions and limitations under the License.
   transition: background-color var(--spectrum-picker-animation-duration),
     box-shadow var(--spectrum-picker-animation-duration),
     border-color var(--spectrum-picker-animation-duration) ease-in-out;
-
-  /* transition: border-color var(--spectrum-picker-animation-duration) ease-in-out; */
 
   color: var(--spectrum-picker-font-color-default);
   background-color: var(--spectrum-picker-background-color-default);
@@ -483,8 +457,7 @@ governing permissions and limitations under the License.
 
     &:focus-visible,
     &.is-focused {
-      /* background-color: var(--spectrum-picker-quiet-background-color-key-focus); */
-      /* box-shadow: 0 2px 0 0 var(--spectrum-picker-quiet-border-color-key-focus); */
+      box-shadow: 0 var(--spectrum-picker-focus-indicator-size) 0 0 var(--spectrum-picker-focus-indicator-color);
     }
   }
 

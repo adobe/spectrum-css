@@ -154,8 +154,8 @@ examples:
         </svg>
       </button>
 
-      <h4>Closed</h4>
-      <button class="spectrum-Picker spectrum-Picker--sizeM" aria-haspopup="listbox" style="width: 240px">
+      <h4>Closed - Loading</h4>
+      <button class="spectrum-Picker spectrum-Picker--sizeM is-loading" aria-haspopup="listbox" style="width: 240px">
         <span class="spectrum-Picker-label is-placeholder">Loading...</span>
         <div class="spectrum-ProgressCircle spectrum-ProgressCircle--indeterminate spectrum-ProgressCircle--small">
             <div class="spectrum-ProgressCircle-track"></div>
