@@ -35,6 +35,7 @@ governing permissions and limitations under the License.
   --spectrum-picker-spacing-icon-to-disclosure-icon: var(--spectrum-picker-visual-to-disclosure-icon-medium);
   --spectrum-picker-spacing-label-to-picker: var(--spectrum-field-label-to-component);
   --spectrum-picker-spacing-label-to-picker-quiet: var(--spectrum-field-label-to-component-quiet-medium);
+  --spectrum-picker-spacing-picker-to-popover: var(--spectrum-component-to-menu-medium);
 
   /* Animation */
   --spectrum-picker-animation-duration: var(--spectrum-animation-duration-100);
@@ -102,6 +103,7 @@ governing permissions and limitations under the License.
   --spectrum-picker-spacing-text-to-alert-icon-inline-start: var(--spectrum-field-text-to-alert-icon-small);
   --spectrum-picker-spacing-icon-to-disclosure-icon: var(--spectrum-picker-visual-to-disclosure-icon-small);
   --spectrum-picker-spacing-label-to-picker-quiet: var(--spectrum-field-label-to-component-quiet-small);
+  --spectrum-picker-spacing-picker-to-popover: var(--spectrum-component-to-menu-small);
 }
 
 .spectrum-Picker--sizeM {
@@ -111,6 +113,7 @@ governing permissions and limitations under the License.
   --spectrum-picker-spacing-text-to-alert-icon-inline-start: var(--spectrum-field-text-to-alert-icon-medium);
   --spectrum-picker-spacing-icon-to-disclosure-icon: var(--spectrum-picker-visual-to-disclosure-icon-medium);
   --spectrum-picker-spacing-label-to-picker-quiet: var(--spectrum-field-label-to-component-quiet-medium);
+  --spectrum-picker-spacing-picker-to-popover: var(--spectrum-component-to-menu-medium);
 }
 
 .spectrum-Picker--sizeL {
@@ -120,6 +123,7 @@ governing permissions and limitations under the License.
   --spectrum-picker-spacing-text-to-alert-icon-inline-start: var(--spectrum-field-text-to-alert-icon-large);
   --spectrum-picker-spacing-icon-to-disclosure-icon: var(--spectrum-picker-visual-to-disclosure-icon-large);
   --spectrum-picker-spacing-label-to-picker-quiet: var(--spectrum-field-label-to-component-quiet-large);
+  --spectrum-picker-spacing-picker-to-popover: var(--spectrum-component-to-menu-large);
 }
 
 .spectrum-Picker--sizeXL {
@@ -129,6 +133,7 @@ governing permissions and limitations under the License.
   --spectrum-picker-spacing-text-to-alert-icon-inline-start: var(--spectrum-field-text-to-alert-icon-extra-large);
   --spectrum-picker-spacing-icon-to-disclosure-icon: var(--spectrum-picker-visual-to-disclosure-icon-extra-large);
   --spectrum-picker-spacing-label-to-picker-quiet: var(--spectrum-field-label-to-component-quiet-extra-large);
+  --spectrum-picker-spacing-picker-to-popover: var(--spectrum-component-to-menu-extra-large);
 }
 
 /* Windows high contrast mode */
@@ -414,6 +419,12 @@ governing permissions and limitations under the License.
 .spectrum-Picker-popover {
   /* TODO Where should this value come from? */
   /* max-inline-size: var(--spectrum-picker-texticon-popover-max-width); */
+}
+
+.spectrum-Picker + .spectrum-Popover--bottom.is-open {
+  /* TODO Fix */
+  transform: translateY(var(--spectrum-picker-spacing-picker-to-popover));
+  transform: translateY(var(--spectrum-component-to-menu-medium));
 }
 
 /* Placeholder tokens */
