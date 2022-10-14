@@ -32,7 +32,7 @@ governing permissions and limitations under the License.
 
   --spectrum-picker-spacing-text-to-icon: var(--spectrum-text-to-visual-100);
   --spectrum-picker-spacing-text-to-alert-icon-inline-start: var(--spectrum-field-text-to-alert-icon-medium);
-  --spectrum-picker-spacing-alert-icon-to-disclosure-icon: var(--spectrum-picker-visual-to-disclosure-icon-medium);
+  --spectrum-picker-spacing-icon-to-disclosure-icon: var(--spectrum-picker-visual-to-disclosure-icon-medium);
   --spectrum-picker-spacing-label-to-picker: var(--spectrum-field-label-to-component);
   --spectrum-picker-spacing-label-to-picker-quiet: var(--spectrum-field-label-to-component-quiet-medium);
 
@@ -100,7 +100,7 @@ governing permissions and limitations under the License.
   --spectrum-picker-block-size: var(--spectrum-component-height-75);
   --spectrum-picker-spacing-text-to-icon: var(--spectrum-text-to-visual-75);
   --spectrum-picker-spacing-text-to-alert-icon-inline-start: var(--spectrum-field-text-to-alert-icon-small);
-  --spectrum-picker-spacing-alert-icon-to-disclosure-icon: var(--spectrum-picker-visual-to-disclosure-icon-small);
+  --spectrum-picker-spacing-icon-to-disclosure-icon: var(--spectrum-picker-visual-to-disclosure-icon-small);
   --spectrum-picker-spacing-label-to-picker-quiet: var(--spectrum-field-label-to-component-quiet-small);
 }
 
@@ -109,7 +109,7 @@ governing permissions and limitations under the License.
   --spectrum-picker-block-size: var(--spectrum-component-height-100);
   --spectrum-picker-spacing-text-to-icon: var(--spectrum-text-to-visual-100);
   --spectrum-picker-spacing-text-to-alert-icon-inline-start: var(--spectrum-field-text-to-alert-icon-medium);
-  --spectrum-picker-spacing-alert-icon-to-disclosure-icon: var(--spectrum-picker-visual-to-disclosure-icon-medium);
+  --spectrum-picker-spacing-icon-to-disclosure-icon: var(--spectrum-picker-visual-to-disclosure-icon-medium);
   --spectrum-picker-spacing-label-to-picker-quiet: var(--spectrum-field-label-to-component-quiet-medium);
 }
 
@@ -118,7 +118,7 @@ governing permissions and limitations under the License.
   --spectrum-picker-block-size: var(--spectrum-component-height-200);
   --spectrum-picker-spacing-text-to-icon: var(--spectrum-text-to-visual-200);
   --spectrum-picker-spacing-text-to-alert-icon-inline-start: var(--spectrum-field-text-to-alert-icon-large);
-  --spectrum-picker-spacing-alert-icon-to-disclosure-icon: var(--spectrum-picker-visual-to-disclosure-icon-large);
+  --spectrum-picker-spacing-icon-to-disclosure-icon: var(--spectrum-picker-visual-to-disclosure-icon-large);
   --spectrum-picker-spacing-label-to-picker-quiet: var(--spectrum-field-label-to-component-quiet-large);
 }
 
@@ -127,7 +127,7 @@ governing permissions and limitations under the License.
   --spectrum-picker-block-size: var(--spectrum-component-height-300);
   --spectrum-picker-spacing-text-to-icon: var(--spectrum-text-to-visual-300);
   --spectrum-picker-spacing-text-to-alert-icon-inline-start: var(--spectrum-field-text-to-alert-icon-extra-large);
-  --spectrum-picker-spacing-alert-icon-to-disclosure-icon: var(--spectrum-picker-visual-to-disclosure-icon-extra-large);
+  --spectrum-picker-spacing-icon-to-disclosure-icon: var(--spectrum-picker-visual-to-disclosure-icon-extra-large);
   --spectrum-picker-spacing-label-to-picker-quiet: var(--spectrum-field-label-to-component-quiet-extra-large);
 }
 
@@ -228,11 +228,6 @@ governing permissions and limitations under the License.
     }
   }
 
-  .spectrum-Picker-icon {
-    flex-shrink: 0;
-    margin-inline-end: var(--spectrum-picker-spacing-text-to-icon);
-  }
-
   &:hover {
     color: var(--spectrum-picker-font-color-hover);
     background-color: var(--spectrum-picker-background-color-hover);
@@ -295,6 +290,12 @@ governing permissions and limitations under the License.
     }
   }
 
+  &.is-loading {
+    .spectrum-Picker-menuIcon {
+      color: var(--spectrum-picker-icon-color-disabled);
+    }
+  }
+
   &:disabled,
   &.is-disabled {
     border-width: var(--spectrum-picker-border-size-disabled);
@@ -314,6 +315,11 @@ governing permissions and limitations under the License.
         color: var(--spectrum-picker-font-color-disabled);
       }
     }
+  }
+
+  .spectrum-Picker-icon {
+    flex-shrink: 0;
+    margin-inline-end: var(--spectrum-picker-spacing-text-to-icon);
   }
 }
 
@@ -383,7 +389,7 @@ governing permissions and limitations under the License.
   vertical-align: top;
   transition: color var(--spectrum-picker-animation-duration) ease-out;
   flex-shrink: 0;
-  margin-inline-start: var(--spectrum-picker-spacing-alert-icon-to-disclosure-icon);
+  margin-inline-start: var(--spectrum-picker-spacing-icon-to-disclosure-icon);
 
   color: var(--spectrum-picker-icon-color-default);
 
