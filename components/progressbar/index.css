@@ -43,6 +43,9 @@ governing permissions and limitations under the License.
   --spectrum-progressbar-text-color: var(--spectrum-neutral-content-color-default);
   --spectrum-progressbar-track-color: var(--spectrum-gray-300);
   --spectrum-progressbar-fill-color: var(--spectrum-accent-color-900);
+  --spectrum-progressbar-fill-color-positive: var(--spectrum-positive-visual-color);
+  --spectrum-progressbar-fill-color-notice: var(--spectrum-notice-visual-color);
+  --spectrum-progressbar-fill-color-negative: var(--spectrum-negative-visual-color);
   --spectrum-progressbar-label-and-value-white: var(--spectrum-white);
   --spectrum-progressbar-track-color-white: var(--spectrum-transparent-white-300);
   --spectrum-progressbar-fill-color-white: var(--spectrum-white);
@@ -146,7 +149,23 @@ governing permissions and limitations under the License.
     background: var(--highcontrast-progressbar-track-color, var(--mod-progressbar-track-color, var(--spectrum-progressbar-track-color)));
   }
   
-  /* Fill */
+  /* Fill variants */
+  &.is-positive {
+    .spectrum-ProgressBar-fill {
+      background: var(--highcontrast-progressbar-fill-color-positive, var(--mod-progressbar-fill-color-positive, var(--spectrum-progressbar-fill-color-positive)));
+    }
+  }
+  &.is-notice {
+    .spectrum-ProgressBar-fill {
+      background: var(--highcontrast-progressbar-fill-color-notice, var(--mod-progressbar-fill-color-notice, var(--spectrum-progressbar-fill-color-notice)));
+    }
+  }
+  &.is-negative {
+    .spectrum-ProgressBar-fill {
+      background: var(--highcontrast-progressbar-fill-color-negative, var(--mod-progressbar-fill-color-negative, var(--spectrum-progressbar-fill-color-negative)));
+    }
+  }
+
   .spectrum-ProgressBar-fill {
     border: none;
     block-size: var(--mod-progressbar-thickness, var(--spectrum-progressbar-thickness));
