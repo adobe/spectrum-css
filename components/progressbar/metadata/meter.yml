@@ -31,4 +31,12 @@ examples:
             <div class="spectrum-ProgressBar-fill" style="width: 90%;"></div>
           </div>
         </div>
+      <div style="margin: 20px 0;">
+        <div class="spectrum-ProgressBar spectrum-ProgressBar--sizeM" value="40" role="progressbar" aria-valuenow="40" aria-valuemin="0" aria-valuemax="100">
+          <div class="spectrum-FieldLabel spectrum-FieldLabel--sizeM spectrum-ProgressBar-label">Storage Space</div>
+          <div class="spectrum-FieldLabel spectrum-FieldLabel--sizeM spectrum-ProgressBar-percentage">40%</div>
+          <div class="spectrum-ProgressBar-track">
+            <div class="spectrum-ProgressBar-fill" style="width: 40%;"></div>
+          </div>
+        </div>
       </div>
