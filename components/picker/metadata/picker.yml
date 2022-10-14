@@ -45,6 +45,7 @@ examples:
     name: Standard
     markup: |
       <h4>Closed</h4>
+      <div class="spectrum-FieldLabel spectrum-FieldLabel--sizeM">Country</div>
       <button class="spectrum-Picker spectrum-Picker--sizeM" aria-haspopup="listbox" style="width: 240px">
         <span class="spectrum-Picker-label is-placeholder">Select a Country with a very long label, too long in fact</span>
         <svg class="spectrum-Icon spectrum-UIIcon-ChevronDown100 spectrum-Picker-menuIcon" focusable="false" aria-hidden="true">
@@ -257,6 +258,7 @@ examples:
     status: Verified
     markup: |
       <h4>Closed</h4>
+      <div class="spectrum-FieldLabel spectrum-FieldLabel--sizeM">Country</div>
       <button class="spectrum-Picker spectrum-Picker--sizeM spectrum-Picker--quiet" aria-haspopup="listbox">
         <span class="spectrum-Picker-label is-placeholder">Select a Country</span>
         <svg class="spectrum-Icon spectrum-UIIcon-ChevronDown100 spectrum-Picker-menuIcon" focusable="false" aria-hidden="true">
