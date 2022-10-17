@@ -413,7 +413,8 @@ governing permissions and limitations under the License.
   }
 
  /* focus ring is focused state */
-  &:focus-ring {
+  &:focus-ring,
+  &:focus-visible {
     + .spectrum-Radio-button {
       &:after {
         border-width: var(--mod-radio-focus-indicator-thickness,
