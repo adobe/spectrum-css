@@ -421,6 +421,10 @@ governing permissions and limitations under the License.
         border-color: var(--highcontrast-radio-focus-indicator-color,
                           var(--mod-radio-focus-indicator-color,
                               var(--spectrum-radio-focus-indicator-color)));
+        border-style: solid;
+
+        width: calc(var(--spectrum-radio-button-control-size) + (var(--spectrum-radio-focus-indicator-gap) * 2));
+        height: calc(var(--spectrum-radio-button-control-size) + (var(--spectrum-radio-focus-indicator-gap) * 2));
       }
     }
   }
