@@ -1,5 +1,10 @@
 name: Tooltip
 SpectrumSiteSlug: https://spectrum.adobe.com/page/tooltip/
+sections:
+  - name: Migration Guide
+    description: |
+      ### Tooltip now has 22 directions
+      - 10 of the new directions are logical and should be tested both left-to-right and right-to-left
 examples:
   - id: tooltip
     name: Neutral
