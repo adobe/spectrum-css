@@ -3,6 +3,18 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+<a name="5.0.1"></a>
+## 5.0.1
+🗓 2022-10-17 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/radio@5.0.0...@spectrum-css/radio@5.0.1)
+
+### 🐛 Bug fixes
+
+* **radio:** provide focus ring visibility when tabbing ([#1530](https://github.com/adobe/spectrum-css/issues/1530)) ([d411408](https://github.com/adobe/spectrum-css/commit/d411408))
+
+
+
+
+
 <a name="5.0.0"></a>
 # 5.0.0
 🗓 2022-10-13 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/radio@4.0.5...@spectrum-css/radio@5.0.0)
