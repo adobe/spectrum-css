@@ -26,7 +26,7 @@ governing permissions and limitations under the License.
 
   /* Size */
   --spectrum-progressbar-font-size: var(--spectrum-font-size-75);
-  --spectrum-progressbar-line-height-cjk: var(--spectrum-CJK-line-height-100);
+  --spectrum-progressbar-line-height-cjk: var(--spectrum-cjk-line-height-100);
 
   --spectrum-progressbar-min-size: var(--spectrum-progress-bar-minimum-width);
   --spectrum-progressbar-max-size: var(--spectrum-progress-bar-maximum-width);
@@ -152,17 +152,17 @@ governing permissions and limitations under the License.
   /* Fill variants */
   &.is-positive {
     .spectrum-ProgressBar-fill {
-      background: var(--highcontrast-progressbar-fill-color-positive, var(--mod-progressbar-fill-color-positive, var(--spectrum-progressbar-fill-color-positive)));
+      background: var(--highcontrast-progressbar-fill-color, var(--mod-progressbar-fill-color-positive, var(--spectrum-progressbar-fill-color-positive)));
     }
   }
   &.is-notice {
     .spectrum-ProgressBar-fill {
-      background: var(--highcontrast-progressbar-fill-color-notice, var(--mod-progressbar-fill-color-notice, var(--spectrum-progressbar-fill-color-notice)));
+      background: var(--highcontrast-progressbar-fill-color, var(--mod-progressbar-fill-color-notice, var(--spectrum-progressbar-fill-color-notice)));
     }
   }
   &.is-negative {
     .spectrum-ProgressBar-fill {
-      background: var(--highcontrast-progressbar-fill-color-negative, var(--mod-progressbar-fill-color-negative, var(--spectrum-progressbar-fill-color-negative)));
+      background: var(--highcontrast-progressbar-fill-color, var(--mod-progressbar-fill-color-negative, var(--spectrum-progressbar-fill-color-negative)));
     }
   }
 
