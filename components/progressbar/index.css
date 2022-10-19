@@ -64,9 +64,9 @@ governing permissions and limitations under the License.
   --spectrum-progressbar-size-default: var(--spectrum-progressbar-size-2400);
 
   --spectrum-progressbar-font-size: var(--spectrum-font-size-75);
-  --spectrum-progressbar-thickness: var(--spectrum-progress-bar-thickness-medium);
+  --spectrum-progressbar-thickness: var(--spectrum-progress-bar-thickness-large);
 
-  --spectrum-progressbar-spacing-top-to-text: var(--spectrum-component-top-to-text-100);
+  --spectrum-progressbar-spacing-top-to-text: var(--spectrum-component-top-to-text-75);
 }
 
 .spectrum-ProgressBar--sizeL {
