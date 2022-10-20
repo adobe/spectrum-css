@@ -26,7 +26,7 @@ governing permissions and limitations under the License.
   --spectrum-textfield-spacing-block-quiet: var(--spectrum-field-edge-to-border-quiet);
 
   --spectrum-textfield-placeholder-font-family: var(--spectrum-font-family-default);
-  --spectrum-textfield-placeholder-font-weight: var(--spectrum-font-regular);
+  --spectrum-textfield-placeholder-font-weight: 400; /* var(--spectrum-font-regular) */
 
   /* default spacing inline */
   --spectrum-textfield-spacing-inline: var(--spectrum-component-edge-to-text-100);
@@ -140,7 +140,7 @@ governing permissions and limitations under the License.
 
 .spectrum-Textfield--sizeXL {
   --spectrum-textfield-height: var(--spectrum-component-height-300);
-  --spectrum-textfield-label-spacing-block-quie: var(--spectrum-field-label-to-component-quiet-extra-large);
+  --spectrum-textfield-label-spacing-block-quiet: var(--spectrum-field-label-to-component-quiet-extra-large);
   --spectrum-textfield-placeholder-font-size: var(--spectrum-font-size-300);
   --spectrum-textfield-spacing-inline: var(--spectrum-component-edge-to-text-200);
   --spectrum-textfield-icon-size-invalid: var(--spectrum-workflow-icon-size-300);
@@ -455,6 +455,8 @@ governing permissions and limitations under the License.
     font-family: var(--spectrum-textfield-placeholder-font-family);
     font-weight: var(--spectrum-textfield-placeholder-font-weight);
     color: var(--spectrum-textfield-text-color-default);
+    margin-block-start: var(--spectrum-textfield-spacing-block-start); // TODO - check that spacing is intact when text is replaced
+    margin-block-end: var(--spectrum-textfield-spacing-block-end); // TODO - check that spacing is intact when text is replaced
   }
 
   .spectrum-Textfield:hover &::placeholder {
@@ -506,7 +508,7 @@ governing permissions and limitations under the License.
   &:disabled,
   .spectrum-Textfield.is-disabled &,
   .spectrum-Textfield.is-disabled:hover & {
-    color: var(--spectrum-textfield-text-color-disabled);
+    background-color: var(--spectrum-textfield-background-color-disabled);
 
     /* Disable the resize functionality when disabled */
     resize: none;
@@ -515,7 +517,7 @@ governing permissions and limitations under the License.
     opacity: 1;
 
     &::placeholder {
-
+      color: var(--spectrum-textfield-text-color-disabled);
     }
   }
 
