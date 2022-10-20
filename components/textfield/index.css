@@ -11,138 +11,163 @@ governing permissions and limitations under the License.
 */
 
 .spectrum-Textfield {
-  /* TODO - Replace placeholders with tokens when available */
-  /* Assume all tokens here are placeholders */
-  --spectrum-textfield-animation-duration: var(--spectrum-animation-duration-100);
-  --spectrum-textfield-background-color: var(--spectrum-gray-50); /* 255 light, 29 dark, 0 darkest */
+  --spectrum-textfield-min-width: var(--spectrum-text-field-minimum-width-multiplier);
 
-  /* text field size */
-  --spectrum-textfield-height: var(--spectrum-component-height-100); /* 32px */
-  --spectrum-textfield-min-width: 48px;
-  --spectrum-textfield-single-line-width: 192px;
+  /* default height */
+  --spectrum-textfield-height: var(--spectrum-component-height-100);
 
-  /* text area size */
-  --spectrum-textarea-height: auto;
-  --spectrum-textarea-min-height: var(--spectrum-component-height-100); /* 32px */
+  /* default spacing quiet */
+  --spectrum-textfield-label-spacing-block-quiet: var(--spectrum-field-label-to-component-quiet-medium);
 
-  /* text field padding */
-  --spectrum-textfield-padding-top: var(--spectrum-component-top-to-text-50); /* 3px / 4px */
-  --spectrum-textfield-padding-bottom: var(--spectrum-component-bottom-to-text-75); /* 5px / 6px */
-  --spectrum-textfield-padding-right: var(--spectrum-component-edge-to-text-100); /* 12px */
-  --spectrum-textfield-padding-left: var(--spectrum-component-edge-to-text-50); /* 10px */
-  --spectrum-textfield-padding-left-quiet: 0px;
-  --spectrum-textfield-padding-right-quiet: var(--spectrum-border-width-100); /* 22px */
+  --spectrum-textfield-label-spacing-block: var(--spectrum-field-label-to-component);
+  --spectrum-textfield-helptext-spacing-block: var(--spectrum-help-text-to-component);
+  --spectrum-textfield-corner-radius: var(--spectrum-corner-radius-100);
 
-  /* text area padding */
-  --spectrum-textarea-padding-top: var(--spectrum-component-top-to-text-100); /* 6px */
-  --spectrum-textarea-padding-bottom: var(--spectrum-component-bottom-to-text-200); /* 9px */
-  --spectrum-textarea-padding-right: 12px; /* 12px */
-  --spectrum-textarea-padding-left: 11px; /* 11px */
+  --spectrum-textfield-spacing-block-quiet: var(--spectrum-field-edge-to-border-quiet);
 
-  /* text */
-  --spectrum-textfield-text-font-family: var(--spectrum-font-family-base); /* todo: check if font family is adobe clean */
-  --spectrum-textfield-text-size: var(--spectrum-font-size-75);
-  --spectrum-textfield-text-line-height: var(--spectrum-line-height-100);
+  --spectrum-textfield-placeholder-font-family: var(--spectrum-font-family-default);
+  --spectrum-textfield-placeholder-font-weight: var(--spectrum-font-regular);
 
-  /* text color */
-  --spectrum-textfield-text-color: var(--spectrum-gray-800); /* 34 34 34 maybe */
-  --spectrum-textfield-text-color-disabled: var(--spectrum-gray-500); /* 144 144 144 */
-  --spectrum-textfield-text-color-readonly: var(--spectrum-gray-800); /* 34 34 34 */
+  /* default spacing inline */
+  --spectrum-textfield-spacing-inline: var(--spectrum-component-edge-to-text-100);
+  --spectrum-textfield-spacing-inline-quiet: var(--spectrum-field-edge-to-text-quiet);
 
-  /* placeholder text */
-  --spectrum-textfield-placeholder-text-font-style: italic;
-  --spectrum-textfield-placeholder-text-font-weight: var(--spectrum-font-weight-regular);
-  --spectrum-textfield-placeholder-text-font-weight-hover: var(--spectrum-font-weight-regular); /* check hover weight */
+  /* default spacing block */
+  --spectrum-textfield-spacing-block-start: var(--spectrum-component-top-to-text-100);
+  --spectrum-textfield-spacing-block-end: var(--spectrum-component-bottom-to-text-100);
 
-  /* placeholder text color */
-  --spectrum-textfield-placeholder-color: var(--spectrum-gray-600); /* 70, 70, 70 */
-  --spectrum-textfield-placeholder-color-hover: var(--spectrum-gray-800); /* 34 34 34 maybe */
+  /* default icon size */
+  --spectrum-textfield-icon-size-invalid: var(--spectrum-workflow-icon-size-100);
 
-  /* icons */
-  --spectrum-textfield-icon-size: var(--spectrum-workflow-icon-size-50); /* 14px md 18px lg */
-  --spectrum-textfield-icon-margin-end: var(--spectrum-component-edge-to-text-100); /* 12px md 15px lg */
-  --spectrum-textfield-icon-color: var(--spectrum-gray-800); /* placeholder icon color */
-  --spectrum-textfield-icon-color-hover: var(--spectrum-gray-800); /* placeholder icon hover color */
-  --spectrum-textfield-icon-gap: var(--spectrum-text-to-visual-100); /* 10px */
-  --spectrum-textfield-icon-gap-quiet: 0px;
+  /* default icon spacing */
+  --spectrum-textfield-icon-spacing-inline-end: var(--spectrum-field-edge-to-alert-icon-medium);
+  --spectrum-textfield-icon-spacing-inline-valid: var(--spectrum-field-edge-to-validation-icon-medium);
 
-  /* success validation icon */
-  --spectrum-textfield-icon-color-success: var(--spectrum-green-1000); /* 0 101 62 */
-  --spectrum-textfield-icon-color-disabled-success: transparent;
-  --spectrum-textfield-icon-height-success: 10px; /* 10px md 14px lg */
-  --spectrum-textfield-icon-width-success: 10px; /* 10px 14px */
-  --spectrum-textfield-icon-margin-end-success: var(--spectrum-component-edge-to-text-100); /* 12px 15px */
-  --spectrum-textfield-icon-margin-end-quiet-success: 0px;
+  --spectrum-textfield-icon-spacing-inline-end-quiet-invalid: var(--spectrum-field-edge-to-alert-icon-quiet);
 
-  /* invalid validation icon */
-  --spectrum-textfield-icon-color-invalid: var(--spectrum-red-1000); /* 180 0 0 */
-  --spectrum-textfield-icon-height-invalid: var(--spectrum-workflow-icon-size-100); /* 18px */
-  --spectrum-textfield-icon-width-invalid: var(--spectrum-workflow-icon-size-100); /* 18px */
-  --spectrum-textfield-icon-margin-end-invalid: var(--spectrum-component-edge-to-text-100); /* 12px 15px */
-  --spectrum-textfield-icon-margin-end-quiet-invalid: 0px;
+  --spectrum-textfield-icon-spacing-inline-quiet-valid: var(--spectrum-field-edge-to-validation-icon-quiet);
 
-  /* quiet background */
-  --spectrum-textfield-background-color-quiet: transparent;
 
-  /* border */
-  --spectrum-textfield-border-radius: var(--spectrum-corner-radius-100);;
-  --spectrum-textfield-border-size: var(--spectrum-border-width-100);
-  --spectrum-textfield-border-color: var(--spectrum-gray-400); /* 177 177 177 */
-  --spectrum-textfield-border-color-hover: var(--spectrum-gray-500); /* 144 144 144 */
+  --spectrum-textfield-: var(--spectrum-font-size-75);
+  --spectrum-textfield-: var(--spectrum-font-size-75);
+  --spectrum-textfield-: var(--spectrum-font-size-100);
+  --spectrum-textfield-: var(--spectrum-font-size-200);
 
-  /* invalid border */
-  --spectrum-textfield-border-color-invalid: var(--spectrum-red-1000); /* 180 0 0 */
-  --spectrum-textfield-border-color-disabled-invalid: transparent; /* 180 0 0 */
+  --spectrum-textfield-: var(--spectrum-font-family-default);
+  --spectrum-textfield-: var(--spectrum-font-regular);
 
-  /* quiet border */
-  --spectrum-textfield-border-radius-quiet: 0px;
-  --spectrum-textfield-border-bottom-size-quiet: var(--spectrum-border-width-100); /* 1px */
-  --spectrum-textfield-border-color-quiet: var(--spectrum-gray-400); /* 177 177 177 */
-  --spectrum-textfield-border-color-quiet-hover: var(--spectrum-gray-500); /* 144 144 144 */;
-  --spectrum-textfield-border-color-quiet-active: var(--spectrum-blue-900); /* 2 101 220 */
-  --spectrum-textfield-border-color-quiet-focus: var(--spectrum-blue-900); /* 2 101 220 */
-  --spectrum-textfield-border-color-quiet-invalid: var(--spectrum-red-900); /* 211 21 16 */
-  --spectrum-textfield-border-color-quiet-invalid-focus: var(--spectrum-red-1000); /* 180 0 0 */
+  --spectrum-textfield-: var(--spectrum-component-bottom-to-text-75);
+  --spectrum-textfield-: var(--spectrum-component-bottom-to-text-75);
+  --spectrum-textfield-: var(--spectrum-component-bottom-to-text-100);
+  --spectrum-textfield-: var(--spectrum-component-bottom-to-text-200);
 
-  /* disabled border */
-  --spectrum-textfield-border-color-disabled: transparent;
-  --spectrum-textfield-border-color-quiet-disabled: var(--spectrum-gray-300); /* 213 213 213 */
+  --spectrum-textfield-: var(--spectrum-character-count-to-field-quiet-small);
+  --spectrum-textfield-: var(--spectrum-character-count-to-field-quiet-medium);
+  --spectrum-textfield-: var(--spectrum-character-count-to-field-quiet-large);
+  --spectrum-textfield-: var(--spectrum-character-count-to-field-quiet-extra-large);
 
-  /* readonly border */
-  --spectrum-textfield-border-color-readonly: transparent;
+  --spectrum-textfield-: var(--spectrum-side-label-character-count-to-field);
 
-  /* disabled background */
-  --spectrum-textfield-background-color-disabled: var(--spectrum-gray-200); /* 230 230 230 */
-  --spectrum-textfield-background-color-quiet-disabled: transparent;
+  --spectrum-textfield-: var(--spectrum-side-label-character-count-top-margin-small);
+  --spectrum-textfield-: var(--spectrum-side-label-character-count-top-margin-medium);
+  --spectrum-textfield-: var(--spectrum-side-label-character-count-top-margin-large);
+  --spectrum-textfield-: var(--spectrum-side-label-character-count-top-margin-extra-large);
 
-  /* readonly background */
-  --spectrum-textfield-background-color-readonly: transparent;
+  --spectrum-textfield-: var(--spectrum-spacing-200);
+  --spectrum-textfield-: var(--spectrum-focus-indicator-thickness);
+  --spectrum-textfield-: var(--spectrum-focus-indicator-gap);
 
-  /* focus indicator */
-  --spectrum-textfield-focus-indicator-gap: var(--spectrum-focus-ring-gap);
-  --spectrum-textfield-focus-indicator-thickness: var(--spectrum-focus-ring-thickness);
-  --spectrum-textfield-focus-indicator-color: var(--spectrum-blue-800); /* placeholder blue-800 */
+  /*** COLORS ***/
+
+  --spectrum-textfield-background-color: var(--spectrum-gray-50);
+  --spectrum-textfield-: var(--spectrum-negative-border-color-default);
+  --spectrum-textfield-: var(--spectrum-negative-border-color-hover);
+  --spectrum-textfield-: var(--spectrum-negative-border-color-down);
+  --spectrum-textfield-: var(--spectrum-negative-border-color-key-focus);
+
+  --spectrum-textfield-: var(--spectrum-neutral-content-color-default);
+  --spectrum-textfield-: var(--spectrum-neutral-content-color-hover);
+  --spectrum-textfield-: var(--spectrum-neutral-content-color-down);
+  --spectrum-textfield-: var(--spectrum-neutral-content-color-key-focus);
+  --spectrum-textfield-: var(--spectrum-negative-visual-color);
+  --spectrum-textfield-: var(--spectrum-positive-visual-color);
+  --spectrum-textfield-: var(--spectrum-disabled-background-color);
+  --spectrum-textfield-: var(--spectrum-disabled-content-color);
+
+  --spectrum-textfield-: var(--spectrum-focus-indicator-color);
 }
 
-/* hack: define var so it's not reported as undefined */
-.🤫 {
-  --spectrum-textfield-icon-inline-end-override: 0; /* TODO - why is this 0? Looks weird */
+
+.spectrum-Textfield--sizeS {
+  --spectrum-textfield-height: var(--spectrum-component-height-75);
+  --spectrum-textfield-label-spacing-block-quiet: var(--spectrum-field-label-to-component-quiet-small);
+  --spectrum-textfield-placeholder-font-size: var(--spectrum-font-size-75);
+  --spectrum-textfield-spacing-inline: var(--spectrum-component-edge-to-text-75);
+  --spectrum-textfield-icon-size-invalid: var(--spectrum-workflow-icon-size-75);
+  --spectrum-textfield-icon-spacing-inline-end: var(--spectrum-field-edge-to-alert-icon-small);
+  --spectrum-textfield-icon-spacing-inline-valid: var(--spectrum-field-edge-to-validation-icon-small);
+  --spectrum-textfield-icon-spacing-block-invalid: var(--spectrum-field-top-to-alert-icon-small);
+  --spectrum-textfield-icon-spacing-block-valid: var(--spectrum-field-text-to-validation-icon-small);
+}
+
+.spectrum-Textfield--sizeM {
+  --spectrum-textfield-height: var(--spectrum-component-height-100);
+  --spectrum-textfield-label-spacing-block-quiet: var(--spectrum-field-label-to-component-quiet-medium);
+  --spectrum-textfield-placeholder-font-size: var(--spectrum-font-size-100);
+  --spectrum-textfield-spacing-inline: var(--spectrum-component-edge-to-text-100);
+  --spectrum-textfield-icon-size-invalid: var(--spectrum-workflow-icon-size-100);
+  --spectrum-textfield-icon-spacing-inline-end: var(--spectrum-field-edge-to-alert-icon-medium);
+  --spectrum-textfield-icon-spacing-inline-valid: var(--spectrum-field-edge-to-validation-icon-medium);
+  --spectrum-textfield-icon-spacing-block-invalid: var(--spectrum-field-top-to-alert-icon-medium);
+  --spectrum-textfield-icon-spacing-block-valid: var(--spectrum-field-text-to-validation-icon-medium);
+}
+
+.spectrum-Textfield--sizeL {
+  --spectrum-textfield-height: var(--spectrum-component-height-200);
+  --spectrum-textfield-label-spacing-block-quiet: var(--spectrum-field-label-to-component-quiet-large);
+  --spectrum-textfield-placeholder-font-size: var(--spectrum-font-size-200);
+  --spectrum-textfield-spacing-inline: var(--spectrum-component-edge-to-text-200);
+  --spectrum-textfield-icon-size-invalid: var(--spectrum-workflow-icon-size-200);
+  --spectrum-textfield-icon-spacing-inline-end: var(--spectrum-field-edge-to-alert-icon-large);
+  --spectrum-textfield-icon-spacing-inline-valid: var(--spectrum-field-edge-to-validation-icon-large);
+  --spectrum-textfield-icon-spacing-block-invalid: var(--spectrum-field-top-to-alert-icon-large);
+  --spectrum-textfield-icon-spacing-block-valid: var(--spectrum-field-text-to-validation-icon-large);
+}
+
+.spectrum-Textfield--sizeXL {
+  --spectrum-textfield-height: var(--spectrum-component-height-300);
+  --spectrum-textfield-label-spacing-block-quie: var(--spectrum-field-label-to-component-quiet-extra-large);
+  --spectrum-textfield-placeholder-font-size: var(--spectrum-font-size-300);
+  --spectrum-textfield-spacing-inline: var(--spectrum-component-edge-to-text-200);
+  --spectrum-textfield-icon-size-invalid: var(--spectrum-workflow-icon-size-300);
+  --spectrum-textfield-icon-spacing-inline-end: var(--spectrum-field-edge-to-alert-icon-extra-large);
+  --spectrum-textfield-icon-spacing-inline-valid: var(--spectrum-field-edge-to-validation-icon-extra-large);
+  --spectrum-textfield-icon-spacing-block-invalid: var(--spectrum-field-top-to-alert-icon-extra-large);
+  --spectrum-textfield-icon-spacing-block-valid: var(--spectrum-field-text-to-validation-icon-extra-large);
+}
+s
+
+.spectrum-Textfield--multiline--sizeS {
+  /* placeholder */
+}
+
+.spectrum-Textfield--multiline--sizeM {
+  /* placeholder */
+}
+
+.spectrum-Textfield--multiline--sizeL {
+  /* placeholder */
+}
+
+.spectrum-Textfield--multiline--sizeXL {
+  /* placeholder */
 }
 
 
 /****** WHCM ******/
 @media (forced-colors: active) {
   .spectrum-Textfield {
-    --spectrum-textfield-placeholder-color: GrayText;
-    --spectrum-textfield-placeholder-color-hover: GrayText;
-    --spectrum-textfield-border-color-quiet-hover: Highlight;
-    --spectrum-textfield-border-color-quiet-active: Highlight;
-    --spectrum-textfield-border-color-invalid: Highlight;
-    --spectrum-textfield-border-color-quiet-invalid: Highlight;
-    --spectrum-textfield-border-color-disabled: GrayText;
-    --spectrum-textfield-border-color-disabled-invalid: GrayText;
-    --spectrum-textfield-text-color-disabled: GrayText;
-    --spectrum-textfield-border-color-quiet-disabled: GrayText;
+
 
     /* retain focus indicator color */
     &::after {
@@ -151,31 +176,88 @@ governing permissions and limitations under the License.
   }
 }
 
-/****** Text field and text area ******/
+
+
+
+/****** TEXT FIELD AND TEXT AREA ******/
 .spectrum-Textfield {
   display: inline-block;
   position: relative;
-  min-inline-size: var(--spectrum-textfield-min-width);
-  inline-size: var(--spectrum-textfield-single-line-width);
   outline: none;
   margin: auto;
 
+  min-inline-size: var(--spectrum-textfield-min-width);
+
+
+  /****** CHILD ELEMENTS CHILD ELEMENTS CHILD ELEMENTS CHILD ELEMENTS ******/
+
+  /****** LABEL ******/
+  .spectrum-FieldLabel {
+    margin-block-end: var(--spectrum-textfield-label-spacing-block);
+
+    /* quiet label */
+    .spectrum-Textfield--quiet & {
+      margin-block-end: var(--spectrum-textfield-label-spacing-block-quiet);
+    }
+  }
+
+  /****** CHARACTER COUNT ******/
+  .spectrum-Textfield-character-count {
+
+  }
+
+  /****** HELP TEXT ******/
+  .spectrum-HelpText-text {
+    margin-block-start: var(--spectrum-textfield-helptext-spacing-block);
+  }
+
+
+  /****** STATES STATES STATES STATES STATES STATES STATES STATES STATES STATES STATES ******/
   /****** Hover ******/
   &:hover {
     .spectrum-Textfield-input {
       border-color: var(--spectrum-textfield-border-color-hover);
 
       &::placeholder {
-        color: var(--spectrum-textfield-placeholder-color-hover);
       }
     }
 
     .spectrum-Textfield-Icon {
-      color: var(--spectrum-textfield-icon-color-hover); /* TODO - replace with correct color */
+
     }
   }
 
-  /****** Focus Indicator ******/
+
+  /****** Focus ******/
+  &:focus-visible,
+  &.is-keyboardFocused,
+  &.is-focused {
+    .spectrum-Textfield-input {
+      border-color: var(--spectrum-textfield-border-color-focus);
+    }
+
+    /****** Focus Indicator is Focused ******/
+    &::after {
+
+    }
+
+    /****** Focus Quiet ******/
+    &.spectrum-Textfield--quiet {
+      .spectrum-Textfield-input {
+        box-shadow: none;
+      }
+
+      /****** Focus Indicator Quiet is Focused ******/
+      &::after {
+        border-color: transparent;
+        border-width: 0;
+        inline-size: 100%;
+        margin-inline-start: 0;
+      }
+    }
+  }
+
+  /****** Focus Indicator Defaults ******/
   &::after {
     pointer-events: none;
     content: '';
@@ -186,55 +268,9 @@ governing permissions and limitations under the License.
     bottom: 0;
     top: 0;
     margin: auto;
-
-    /* ensures focus indicator centers if borders or gap change */
-    margin-inline-start: calc((var(--mod-textfield-focus-indicator-gap, var(--spectrum-textfield-focus-indicator-gap))
-                              + var(--mod-textfield-focus-indicator-thickness, var(--spectrum-textfield-focus-indicator-thickness))
-                              + var(--mod-textfield-border-size, var(--spectrum-textfield-border-size)))
-                              * -1);
-
-    inline-size: calc(100% + (var(--mod-textfield-focus-indicator-gap, var(--spectrum-textfield-focus-indicator-gap)) * 2)
-                + (var(--mod-textfield-border-size, var(--spectrum-textfield-border-size)) * 2));
-    block-size: calc(100% + (var(--mod-textfield-focus-indicator-gap, var(--spectrum-textfield-focus-indicator-gap)) * 2)
-                + (var(--mod-textfield-border-size, var(--spectrum-textfield-border-size)) * 2));
-
-    border-radius: calc(var(--spectrum-textfield-border-radius) + var(--spectrum-textfield-focus-indicator-gap));
     border-color: transparent;
-    border-width: var(--spectrum-textfield-focus-indicator-thickness);
     border-style: solid;
-    border-radius: calc(var(--mod-textfield-border-radius, var(--spectrum-textfield-border-radius))
-                         + var(--mod-textfield-focus-indicator-gap, var(--spectrum-textfield-focus-indicator-gap))
-                         + var(--mod-textfield-border-size, var(--spectrum-textfield-border-size)));
-
-    transition: box-shadow var(--spectrum-textfield-animation-duration) ease-in-out,
-                border-color var(--spectrum-textfield-animation-duration) ease-in-out;
   }
-
-  /****** Focus ******/
-  &:focus-visible,
-  &.is-keyboardFocused,
-  &.is-focused {
-    &::after {
-      border-color: var(--spectrum-textfield-focus-indicator-color);
-    }
-
-    &.spectrum-Textfield--quiet {
-      .spectrum-Textfield-input {
-        box-shadow: none;
-      }
-
-      &::after {
-        border-color: transparent;
-        border-width: 0;
-        border-bottom-width: var(--spectrum-textfield-focus-indicator-thickness);
-        border-bottom-color: var(--spectrum-textfield-focus-indicator-color);
-        border-radius: var(--spectrum-textfield-border-radius-quiet);
-        inline-size: 100%;
-        margin-inline-start: 0;
-      }
-    }
-  }
-
 
   /****** Focus Indicator Quiet ******/
   &.spectrum-Textfield--quiet {
@@ -242,43 +278,100 @@ governing permissions and limitations under the License.
       border-radius: 0;
     }
   }
+
+  /****** ACTIVE ******/
+  &:active {
+    .spectrum-Textfield-input {
+      border-color: var(--spectrum-textfield-border-color-active);
+    }
+  }
 }
+
+
+/****** ICONS ******/
+.spectrum-Textfield-Icon,
+.spectrum-Textfield-validationIcon {
+  pointer-events: none;
+}
+
+/****** Icon Left - What is this for? ******/
+/* styles the left icon for textfield, assumes usage of workflow icon sizing (18px by 18px) */
+.spectrum-Textfield-Icon {
+  display: block;
+  position: absolute;
+
+  .spectrum-Textfield--quiet & {
+    /* Since quiet button has no left padding, push the icon all the way to the left */
+    inset-inline-start: 0;
+
+    & ~ .spectrum-Textfield-input {
+
+    }
+  }
+
+  /* styles the textfield properly if the left icon is provided */
+  & + .spectrum-Textfield-input {
+
+  }
+}
+
+/****** Validation Icon ✔ / ⚠️ ******/
+.spectrum-Textfield-validationIcon {
+  position: absolute;
+  pointer-events: all;
+
+
+  .spectrum-Textfield--quiet & {
+    padding-inline-end: 0;
+  }
+
+  /* invalid icon ⚠️ */
+  .spectrum-Textfield.is-invalid & {
+    block-size: var(--spectrum-textfield-icon-size-invalid);
+    inline-size: var(--spectrum-textfield-icon-size-invalid);
+    margin-block-start: var(--spectrum-textfield-icon-spacing-block-invalid);
+    margin-block-end: var(--spectrum-textfield-icon-spacing-block-invalid);
+    margin-inline-end: var(--spectrum-textfield-icon-spacing-inline-end-invalid);
+
+    /* quiet invalid icon */
+    .spectrum-Textfield--quiet& {
+      margin-inline-end: var(--spectrum-textfield-icon-spacing-inline-end-quiet-invalid);
+    }
+  }
+
+  /* valid icon ✔ */
+  .spectrum-Textfield.is-valid & {
+    margin-block-start: var(--spectrum-textfield-icon-spacing-block-valid);
+    margin-block-end: var(--spectrum-textfield-icon-spacing-block-valid);
+    margin-inline-end: var(--spectrum-textfield-icon-spacing-inline-valid);
+
+    /* valid quiet icon */
+    .spectrum-Textfield--quiet& {
+      margin-inline-end: var(--spectrum-textfield-icon-spacing-inline-quiet-valid);
+    }
+  }
+
+  /* valid icon disabled */
+  .spectrum-Textfield.is-disabled & {
+
+  }
+}
+
 
 /****** INPUT ******/
 .spectrum-Textfield-input {
   box-sizing: border-box;
   inline-size: 100%;
-  block-size: var(--spectrum-textfield-height);
-  /* Apply padding by default to center text, giving consistency between input and textfield */
-  padding: var(--spectrum-textfield-padding-top)
-          var(--spectrum-textfield-padding-right) var(--spectrum-textfield-padding-bottom)
-          calc(var(--spectrum-textfield-padding-left) + 1px);
   /* Use padding instead of text-indent because text-indent does not left align the text in Edge browser  */
   text-indent: 0;
   /* Remove the margin for input in Firefox and Safari. */
   margin: 0;
   vertical-align: top; /* used to align them correctly in forms. */
-
-  background-color: var(--spectrum-textfield-background-color);
-  border-color: var(--spectrum-textfield-border-color);
-  color: var(--spectrum-textfield-text-color);
-
-  border: var(--spectrum-textfield-border-size) solid;
-  border-radius: var(--spectrum-textfield-border-radius);
-  border-color: var(--spectrum-textfield-border-color);
   outline: none;
-
-  transition: border-color var(--spectrum-textfield-animation-duration) ease-in-out;
-
   /* Show the overflow for input in Edge. */
   overflow: visible;
-
   /* Change the input font styles in all browsers */
-  font-family: var(--spectrum-textfield-text-font-family);
-  font-size: var(--spectrum-textfield-text-size);
-  line-height: var(--spectrum-textfield-text-line-height);
   text-overflow: ellipsis;
-
   -webkit-appearance: none;
   /*
     Removes the native spin buttons in Firefox; -moz-appearance: none results in spinners.
@@ -290,74 +383,16 @@ governing permissions and limitations under the License.
   */
   -moz-appearance: textfield;
 
-  /**** Input - placeholder text *****/
-  &::placeholder {
-    color: var(--spectrum-textfield-placeholder-color);
-    font-weight: var(--spectrum-textfield-placeholder-text-font-weight);
-    font-style: var(--spectrum-textfield-placeholder-text-font-style);
-    font-style: italic;
-    transition: color var(--spectrum-textfield-animation-duration) ease-in-out;
-    opacity: 1;
-  }
+  background-color: var(--spectrum-textfield-background-color);
 
-  /* added to work with Edge, note, it needs double ::
-   * not single : which is what autoprefixer will add
-   */
-  &::-ms-input-placeholder {
-    font-weight: var(--spectrum-textfield-placeholder-text-font-weight);
-    font-style: var(--spectrum-textfield-placeholder-text-font-style);
-    transition: color var(--spectrum-textfield-animation-duration) ease-in-out;
-    opacity: 1;
-  }
+  border-style: solid;
+  border-color: var(--spectrum-textfield-border-color);
+  border-radius: var(--spectrum-textfield-corner-radius);
+  border-width: var(--spectrum-textfield-border-width);
 
- /* Input - cjk language */
-  &:lang(ja),
-  &:lang(zh),
-  &:lang(ko) {
-    &::placeholder {
-      font-style: normal;
-    }
+  padding-inline: var(--spectrum-textfield-spacing-inline);
 
-    &::-ms-input-placeholder {
-      /* added to work with Edge, same as above */
-      font-style: normal;
-    }
-  }
-
-  /****** Input - Hover ******/
-  &:hover {
-    &::placeholder {
-      font-weight: var(--spectrum-textfield-placeholder-text-font-weight-hover);
-    }
-  }
-
-  /****** Input - Disabled ******/
-  .spectrum-Textfield.is-disabled.is-invalid & {
-    border-color: var(--spectrum-textfield-border-color-disabled-invalid);
-  }
-
-  &:disabled,
-  .spectrum-Textfield.is-disabled &,
-  .spectrum-Textfield.is-disabled:hover & {
-    background-color: var(--spectrum-textfield-background-color-disabled);
-    border-color: var(--spectrum-textfield-border-color-disabled);
-    color: var(--spectrum-textfield-text-color-disabled);
-
-    /* For safari mobile browser */
-    -webkit-text-fill-color: var(--spectrum-textfield-text-color-disabled);
-
-    /* Disable the resize functionality when disabled */
-    resize: none;
-
-    /* The opacity must be set to 1 */
-    opacity: 1;
-
-    &::placeholder {
-      color: var(--spectrum-textfield-text-color-disabled);
-      font-weight: var(--spectrum-textfield-placeholder-text-font-weight);
-    }
-  }
-
+  /**** INPUT BROWSER MITIGATIONS *****/
   /* Remove the native clear button in IE */
   /* http://stackoverflow.com/questions/14007655/remove-ie10s-clear-field-x-button-on-certain-inputs */
   &::-ms-clear {
@@ -378,199 +413,129 @@ governing permissions and limitations under the License.
     box-shadow: none;
   }
 
+
+  /**** PLACEHOLDER TEXT *****/
+  &::placeholder {
+    font-style: italic;
+    opacity: 1;
+    font-size: var(--spectrum-textfield-placeholder-font-size);
+    font-family: var(--spectrum-textfield-placeholder-font-family);
+    font-weight: var(--spectrum-textfield-placeholder-font-weight);
+  }
+
+  /* added to work with Edge, note, it needs double ::
+   * not single : which is what autoprefixer will add
+   */
+  &::-ms-input-placeholder {
+    opacity: 1;
+  }
+
+ /* Input - cjk language */
+  &:lang(ja),
+  &:lang(zh),
+  &:lang(ko) {
+    &::placeholder {
+      font-style: normal;
+    }
+
+    &::-ms-input-placeholder {
+      /* added to work with Edge, same as above */
+      font-style: normal;
+    }
+  }
+
+
+  /****** INPUT STATES INPUT STATES INPUT STATES INPUT STATES INPUT STATES INPUT STATES ******/
+  /****** Input - Hover ******/
+  &:hover {
+    &::placeholder {
+
+    }
+  }
+
+  /****** INPUT VARIANTS INPUT VARIANTS INPUT VARIANTS INPUT VARIANTS INPUT VARIANTS INPUT VARIANTS ******/
+  /****** Input - Disabled ******/
+  &:disabled,
+  .spectrum-Textfield.is-disabled &,
+  .spectrum-Textfield.is-disabled:hover & {
+
+    /* Disable the resize functionality when disabled */
+    resize: none;
+
+    /* The opacity must be set to 1 */
+    opacity: 1;
+
+    &::placeholder {
+
+    }
+  }
+
+
   /****** Input - Valid ******/
   .spectrum-Textfield.is-valid & {
-    padding-inline-end: calc(
-      var(--spectrum-textfield-padding-right) +
-      var(--spectrum-textfield-icon-width-success) +
-      var(--spectrum-textfield-icon-margin-end-success)
-    );
+
   }
 
   /****** Input - Invalid ******/
   .spectrum-Textfield.is-invalid & {
-    border-color: var(--spectrum-textfield-border-color-invalid);
-    padding-inline-end: calc(
-      var(--spectrum-textfield-padding-right) +
-      var(--spectrum-textfield-icon-width-invalid) +
-      var(--spectrum-textfield-icon-margin-end-invalid)
-    );
+
   }
 
-  /****** Input - Quiet Variant ******/
-  .spectrum-Textfield--quiet & {
-    border-radius: var(--spectrum-textfield-border-radius-quiet);
-    border-block-start-width: 0;
-    border-block-end-width: var(--spectrum-textfield-border-bottom-size-quiet);
-    border-inline-width: 0;
+  /****** Input - Disabled Invalid ******/
+  .spectrum-Textfield.is-disabled.is-invalid & {
 
-    /* removes the side padding to align the text properly */
-    padding-inline-start: var(--spectrum-textfield-padding-left-quiet);
-    padding-inline-end: var(--spectrum-textfield-padding-right-quiet);
+  }
+
+
+  /****** Input - Quiet ******/
+  .spectrum-Textfield--quiet & {
+    border-block-start-width: 0;
+    border-inline-width: 0;
+    margin-block-end: var(--spectrum-textfield-spacing-block-quiet);
+    padding-inline: var(--spectrum-textfield-spacing-inline-quiet);
 
     /* Treat all quiet inputs and text areas the same */
     resize: none;
     overflow-y: hidden;
 
-    background-color: var(--spectrum-textfield-background-color-quiet);
-    border-color: var(--spectrum-textfield-border-color-quiet);
-
     /* parent Textfield hover */
     :hover& {
-      border-color: var(--spectrum-textfield-border-color-quiet-hover);
     }
 
     :active& {
-      border-color: var(--spectrum-textfield-border-color-quiet-active)
     }
 
     .is-focused&,
     &:focus {
-      border-color: var(--spectrum-textfield-border-color-quiet-focus);
+    }
+
+    .is-valid& {
     }
 
     .is-invalid& {
-      border-color: var(--spectrum-textfield-border-color-quiet-invalid);
-
       .is-focused&,
       &:focus {
-        border-color: var(--spectrum-textfield-border-color-quiet-invalid-focus);
       }
 
       .is-keyboardFocused&,
       &:focus-visible {
-        border-color: var(--spectrum-textfield-border-color-quiet-invalid-focus);
       }
-    }
-
-    .is-invalid& {
-      padding-inline-end: calc(
-        var(--spectrum-textfield-icon-width-invalid) +
-          var(--spectrum-textfield-icon-margin-end-quiet-invalid)
-      );
-    }
-
-    .is-valid& {
-      padding-inline-end: calc(
-        var(--spectrum-textfield-icon-width-success) +
-          var(--spectrum-textfield-icon-margin-end-quiet-success)
-      );
     }
 
     .is-disabled:hover&,
     .is-disabled&,
     :disabled {
-      background-color: var(--spectrum-textfield-background-color-quiet-disabled);
-      border-color: var(--spectrum-textfield-border-color-quiet-disabled);
     }
   }
 
-  /****** ReadOnly Variant ******/
+  /****** Input - ReadOnly ******/
   .spectrum-Textfield.is-readOnly &,
   .spectrum-Textfield.is-readOnly:hover &,
   &:read-only {
-    background-color: var(--spectrum-textfield-background-color-readonly);
-    border-color: var(--spectrum-textfield-border-color-readonly);
-    color: var(--spectrum-textfield-text-color-readonly);
-    -webkit-text-fill-color: var(--spectrum-textfield-text-color-readonly);
+
   }
 }
 
-/****** Icons ******/
-.spectrum-Textfield-Icon,
-.spectrum-Textfield-validationIcon {
-  pointer-events: none;
-}
-
-/****** Icon Left - What is this for? ******/
-/* styles the left icon for textfield, assumes usage of workflow icon sizing (18px by 18px) */
-.spectrum-Textfield-Icon {
-  display: block;
-  position: absolute;
-  block-size: var(--spectrum-textfield-icon-size);
-  inline-size: var(--spectrum-textfield-icon-size);
-  inset-inline-start: var(--spectrum-textfield-padding-left);
-  inset-block-start: calc(
-    var(--spectrum-textfield-height) / 2 -
-      var(--spectrum-textfield-icon-size) / 2
-  );
-
-  color: var(--spectrum-textfield-icon-color);
-
-  .spectrum-Textfield--quiet & {
-    /* Since quiet button has no left padding, push the icon all the way to the left */
-    inset-inline-start: 0;
-
-    & ~ .spectrum-Textfield-input {
-      padding-inline-start: calc(
-        var(--spectrum-textfield-icon-size) +
-          var(--spectrum-textfield-icon-gap-quiet)
-      );
-    }
-  }
-
-  /* styles the textfield properly if the left icon is provided */
-  & + .spectrum-Textfield-input {
-    /* Use padding instead of text-indent so long strings don't overlap the icon */
-    padding-inline-start: calc(
-      var(--spectrum-textfield-padding-left) +
-        var(--spectrum-textfield-icon-size) +
-        var(--spectrum-textfield-icon-gap)
-    );
-  }
-}
-
-/****** Validation Icon ✔ / ⚠️ ******/
-.spectrum-Textfield-validationIcon {
-  position: absolute;
-  pointer-events: all;
-  inset-inline-end: var(--spectrum-textfield-icon-margin-end);
-
-  .spectrum-Textfield--quiet & {
-    padding-inline-end: 0;
-  }
-
-  /* invalid icon */
-  .spectrum-Textfield.is-invalid & {
-    inline-size: var(--spectrum-textfield-icon-width-invalid);
-    block-size: var(--spectrum-textfield-icon-height-invalid);
-    inset-block-end: calc(
-      calc(var(--spectrum-textfield-height) / 2) -
-        calc(var(--spectrum-textfield-icon-height-invalid) / 2)
-    );
-
-    inset-inline-end: var(--spectrum-textfield-icon-margin-end-invalid);
-
-    color: var(--spectrum-textfield-icon-color-invalid);
-
-    .spectrum-Textfield--quiet& {
-      inset-inline-end: var(--spectrum-textfield-icon-inline-end-override, 0);
-    }
-  }
-
-  /* valid icon */
-  .spectrum-Textfield.is-valid & {
-    inline-size: var(--spectrum-textfield-icon-width-success);
-    block-size: var(--spectrum-textfield-icon-height-success);
-    inset-block-end: calc(
-      calc(var(--spectrum-textfield-height) / 2) -
-        calc(var(--spectrum-textfield-icon-height-success) / 2)
-    );
-    inset-inline-end: var(--spectrum-textfield-icon-margin-end-success);
-
-    color: var(--spectrum-textfield-icon-color-success);
-
-    /* valid quiet icon */
-    .spectrum-Textfield--quiet& {
-      inset-inline-end: var(--spectrum-textfield-icon-inline-end-override, 0);
-    }
-  }
-
-  /* valid icon disabled */
-  .spectrum-Textfield.is-disabled & {
-    color: var(--spectrum-textfield-icon-color-disabled-success);
-  }
-}
 
 
 
@@ -580,19 +545,13 @@ governing permissions and limitations under the License.
   /* Input Text Area Quiet */
   &.spectrum-Textfield--quiet {
     .spectrum-Textfield-input {
-      block-size: var(--spectrum-textfield-height);
-      min-block-size: var(--spectrum-textfield-height);
+
     }
   }
 
   /****** Text Area / Multiline Input ******/
   .spectrum-Textfield-input {
-    block-size: var(--spectrum-textarea-height);
-    min-block-size: var(--spectrum-textarea-min-height);
-    padding: var(--spectrum-textarea-padding-top)
-              var(--spectrum-textarea-padding-right)
-              var(--spectrum-textarea-padding-bottom)
-              calc(var(--spectrum-textarea-padding-left) - 1px);
+
 
     /* Remove the default vertical scrollbar for textarea in IE. */
     overflow: auto;
@@ -601,9 +560,7 @@ governing permissions and limitations under the License.
   /****** Text Area /Multiline Icon ******/
   .spectrum-Textfield-Icon {
     & ~ .spectrum-Textfield-input {
-      block-size: var(--spectrum-textfield-height);
-      min-block-size: var(--spectrum-textfield-height);
+
     }
   }
 }
-
