@@ -28,7 +28,7 @@ examples:
         <div class="spectrum-Textfield spectrum-InputGroup-textfield">
           <input type="text" class="spectrum-Textfield-input spectrum-InputGroup-input" aria-invalid="false" placeholder="Choose a date" value="">
         </div>
-        <button tabindex="-1" class="spectrum-PickerButton spectrum-PickerButton--sizeM spectrum-PickerButton--icononly spectrum-PickerButton--high spectrum-PickerButton--right spectrum-InputGroup-button" aria-haspopup="dialog" aria-label="Calendar" aria-expanded="false">
+        <button tabindex="-1" class="spectrum-PickerButton spectrum-PickerButton--sizeM spectrum-PickerButton--icononly spectrum-PickerButton--right spectrum-InputGroup-button" aria-haspopup="dialog" aria-label="Calendar" aria-expanded="false">
           <div class="spectrum-PickerButton-fill">
             <svg class="spectrum-PickerButton-icon spectrum-Icon spectrum-Icon--sizeM" focusable="false" aria-hidden="true" aria-label="Calendar">
               <use xlink:href="#spectrum-icon-18-Calendar" />
@@ -70,7 +70,7 @@ examples:
         <div class="spectrum-Textfield spectrum-InputGroup-textfield">
           <input type="text" class="spectrum-Textfield-input spectrum-InputGroup-input spectrum-Datepicker-endField" placeholder="mm/dd/yyyy" name="end" value="">
         </div>
-        <button tabindex="-1" class="spectrum-PickerButton spectrum-PickerButton--sizeM spectrum-PickerButton--icononly spectrum-PickerButton--high spectrum-PickerButton--right spectrum-InputGroup-button" aria-haspopup="dialog" aria-label="Calendar" aria-expanded="false">
+        <button tabindex="-1" class="spectrum-PickerButton spectrum-PickerButton--sizeM spectrum-PickerButton--icononly spectrum-PickerButton--right spectrum-InputGroup-button" aria-haspopup="dialog" aria-label="Calendar" aria-expanded="false">
           <div class="spectrum-PickerButton-fill">
             <svg class="spectrum-PickerButton-icon spectrum-Icon spectrum-Icon--sizeM" focusable="false" aria-hidden="true" aria-label="Calendar">
               <use xlink:href="#spectrum-icon-18-Calendar" />
@@ -92,7 +92,7 @@ examples:
           </svg>
           <input type="text" class="spectrum-Textfield-input spectrum-InputGroup-input spectrum-Datepicker-endField" aria-invalid="true" placeholder="mm/dd/yyyy" name="end" value="">
         </div>
-        <button tabindex="-1" class="spectrum-PickerButton spectrum-PickerButton--sizeM spectrum-PickerButton--icononly spectrum-PickerButton--high spectrum-PickerButton--right spectrum-InputGroup-button is-invalid" aria-haspopup="dialog">
+        <button tabindex="-1" class="spectrum-PickerButton spectrum-PickerButton--sizeM spectrum-PickerButton--icononly spectrum-PickerButton--right spectrum-InputGroup-button is-invalid" aria-haspopup="dialog">
           <div class="spectrum-PickerButton-fill">
             <svg class="spectrum-PickerButton-icon spectrum-Icon spectrum-Icon--sizeM" focusable="false" aria-hidden="true" aria-label="Calendar">
               <use xlink:href="#spectrum-icon-18-Calendar" />
@@ -111,7 +111,7 @@ examples:
         <div class="spectrum-Textfield spectrum-InputGroup-textfield is-disabled">
           <input type="text" class="spectrum-Textfield-input spectrum-InputGroup-input spectrum-Datepicker-endField" placeholder="mm/dd/yyyy" name="end" value="" disabled>
         </div>
-        <button tabindex="-1" class="spectrum-PickerButton spectrum-PickerButton--sizeM spectrum-PickerButton--icononly spectrum-PickerButton--high spectrum-PickerButton--right spectrum-InputGroup-button" aria-haspopup="dialog" disabled>
+        <button tabindex="-1" class="spectrum-PickerButton spectrum-PickerButton--sizeM spectrum-PickerButton--icononly spectrum-PickerButton--right spectrum-InputGroup-button" aria-haspopup="dialog" disabled>
           <div class="spectrum-PickerButton-fill">
             <svg class="spectrum-PickerButton-icon spectrum-Icon spectrum-Icon--sizeM" focusable="false" aria-hidden="true" aria-label="Calendar">
               <use xlink:href="#spectrum-icon-18-Calendar" />
@@ -130,7 +130,7 @@ examples:
         <div class="spectrum-Textfield spectrum-InputGroup-textfield">
           <input type="text" class="spectrum-Textfield-input spectrum-InputGroup-input spectrum-Datepicker-endField" placeholder="mm/dd/yyyy hh:mm a" name="end" value="">
         </div>
-        <button tabindex="-1" class="spectrum-PickerButton spectrum-PickerButton--sizeM spectrum-PickerButton--icononly spectrum-PickerButton--high spectrum-PickerButton--right spectrum-InputGroup-button" aria-haspopup="dialog" aria-label="Calendar" aria-expanded="false">
+        <button tabindex="-1" class="spectrum-PickerButton spectrum-PickerButton--sizeM spectrum-PickerButton--icononly spectrum-PickerButton--right spectrum-InputGroup-button" aria-haspopup="dialog" aria-label="Calendar" aria-expanded="false">
           <div class="spectrum-PickerButton-fill">
             <svg class="spectrum-PickerButton-icon spectrum-Icon spectrum-Icon--sizeM" focusable="false" aria-hidden="true" aria-label="Calendar">
               <use xlink:href="#spectrum-icon-18-Calendar" />
@@ -151,7 +151,7 @@ examples:
           </svg>
           <input type="text" class="spectrum-Textfield-input spectrum-InputGroup-input spectrum-Datepicker-endField" placeholder="mm/dd/yyyy hh:mm a" name="end" value="">
         </div>
-        <button tabindex="-1" class="spectrum-PickerButton spectrum-PickerButton--sizeM spectrum-PickerButton--icononly spectrum-PickerButton--high spectrum-PickerButton--right spectrum-InputGroup-button is-invalid" aria-haspopup="dialog">
+        <button tabindex="-1" class="spectrum-PickerButton spectrum-PickerButton--sizeM spectrum-PickerButton--icononly spectrum-PickerButton--right spectrum-InputGroup-button is-invalid" aria-haspopup="dialog">
           <div class="spectrum-PickerButton-fill">
             <svg class="spectrum-PickerButton-icon spectrum-Icon spectrum-Icon--sizeM" focusable="false" aria-hidden="true" aria-label="Calendar">
               <use xlink:href="#spectrum-icon-18-Calendar" />
