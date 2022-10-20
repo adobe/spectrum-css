@@ -124,7 +124,7 @@ examples:
     markup: |
       <div class="spectrum-ActionBar spectrum-ActionBar--emphasized is-open">
         <div class="spectrum-Popover spectrum-ActionBar-popover is-open">
-          <button class="spectrum-CloseButton spectrum-CloseButton--sizeM">
+          <button class="spectrum-CloseButton spectrum-CloseButton--sizeM spectrum-CloseButton--staticWhite">
             <svg class="spectrum-CloseButton-UIIcon spectrum-Icon spectrum-UIIcon-Cross100" focusable="false" aria-hidden="true">
               <use xlink:href="#spectrum-css-icon-Cross100" />
             </svg>
@@ -149,7 +149,7 @@ examples:
 
       <div class="spectrum-ActionBar spectrum-ActionBar--emphasized is-open">
         <div class="spectrum-Popover spectrum-ActionBar-popover is-open">
-          <button class="spectrum-CloseButton spectrum-CloseButton--sizeM">
+          <button class="spectrum-CloseButton spectrum-CloseButton--sizeM spectrum-CloseButton--staticWhite">
             <svg class="spectrum-CloseButton-UIIcon spectrum-Icon spectrum-UIIcon-Cross100" focusable="false" aria-hidden="true">
               <use xlink:href="#spectrum-css-icon-Cross100" />
             </svg>
@@ -183,7 +183,7 @@ examples:
 
       <div class="spectrum-ActionBar spectrum-ActionBar--emphasized is-open">
         <div class="spectrum-Popover spectrum-ActionBar-popover is-open">
-          <button class="spectrum-CloseButton spectrum-CloseButton--sizeM">
+          <button class="spectrum-CloseButton spectrum-CloseButton--sizeM spectrum-CloseButton--staticWhite">
             <svg class="spectrum-CloseButton-UIIcon spectrum-Icon spectrum-UIIcon-Cross100" focusable="false" aria-hidden="true">
               <use xlink:href="#spectrum-css-icon-Cross100" />
             </svg>
