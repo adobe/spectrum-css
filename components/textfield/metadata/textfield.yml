@@ -81,6 +81,19 @@ examples:
         </div>
       </div>
 
+  - id: textfield-sidelabel
+    name: Textfield with Side Label
+    markup: |
+      <div class="spectrum-Textfield spectrum-Textfield--sidelabel">
+        <svg class="spectrusm-Icon spectrum-Icon-sizeM spectrum-Textfield-Icon spectrum-Search-icon" focusable="false" aria-hidden="true">
+          <use xlink:href="#spectrum-icon-18-Magnify" />
+        </svg>
+        <label for="textfield-md-sidelabel" class="spectrum-FieldLabel spectrum-FieldLabel--sizeM">Text field label</label>
+        <span class="spectrum-Textfield-character-count>50</span>
+        <input id-"textfield-md-sidelabel" type="text" placeholder="Enter your name" name="field" value="" class="spectrum-Textfield-input">
+      </div>
+
+
   - id: textfield-icon
     name: Textfield Icon
     markup: |
@@ -110,11 +123,36 @@ examples:
     description: |
       *Spectrum for Adobe Express uses a different icon. Use the `SX_Alert_18_N.svg` icon in the Express workflow icon set.*    
     markup: |
-      <div class="spectrum-Textfield is-valid">
+      <div class="spectrum-Textfield spectrum-Textfield--sizeS is-valid">
+        <svg class="spectrum-Icon spectrum-UIIcon-Checkmark100 spectrum-Textfield-validationIcon" focusable="false" aria-hidden="true">
+          <use xlink:href="#spectrum-css-icon-Checkmark75" />
+        </svg>
+        <label for="textfield-sm-valid" class="spectrum-FieldLabel spectrum-FieldLabel--sizeS">Text field label</label>
+        <input id="textfield-sm-valid" type="text" placeholder="Enter your name" name="field" value="A valid input" class="spectrum-Textfield-input" pattern="[\w\s]+" required>
+      </div>
+
+      <div class="spectrum-Textfield spectrum-Textfield--sizeM is-valid">
         <svg class="spectrum-Icon spectrum-UIIcon-Checkmark100 spectrum-Textfield-validationIcon" focusable="false" aria-hidden="true">
           <use xlink:href="#spectrum-css-icon-Checkmark100" />
         </svg>
-        <input type="text" placeholder="Enter your name" name="field" value="A valid input" class="spectrum-Textfield-input" pattern="[\w\s]+" required>
+        <label for="textfield-md-valid" class="spectrum-FieldLabel spectrum-FieldLabel--sizeS">Text field label</label>
+        <input id="textfield-md-valid" type="text" placeholder="Enter your name" name="field" value="A valid input" class="spectrum-Textfield-input" pattern="[\w\s]+" required>
+      </div>
+
+      <div class="spectrum-Textfield spectrum-Textfield--sizeL is-valid">
+        <svg class="spectrum-Icon spectrum-UIIcon-Checkmark100 spectrum-Textfield-validationIcon" focusable="false" aria-hidden="true">
+          <use xlink:href="#spectrum-css-icon-Checkmark200" />
+        </svg>
+        <label for="textfield-l-valid" class="spectrum-FieldLabel spectrum-FieldLabel--sizeS">Text field label</label>
+        <input id="textfield-l-valid" type="text" placeholder="Enter your name" name="field" value="A valid input" class="spectrum-Textfield-input" pattern="[\w\s]+" required>
+      </div>
+
+      <div class="spectrum-Textfield spectrum-Textfield--sizeXL is-valid">
+        <svg class="spectrum-Icon spectrum-UIIcon-Checkmark100 spectrum-Textfield-validationIcon" focusable="false" aria-hidden="true">
+          <use xlink:href="#spectrum-css-icon-Checkmark300" />
+        </svg>
+        <label for="textfield-xl-valid" class="spectrum-FieldLabel spectrum-FieldLabel--sizeS">Text field label</label>
+        <input id="textfield-xl-valid" type="text" placeholder="Enter your name" name="field" value="A valid input" class="spectrum-Textfield-input" pattern="[\w\s]+" required>
       </div>
 
   - id: textfield
