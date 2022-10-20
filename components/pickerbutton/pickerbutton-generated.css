@@ -165,7 +165,7 @@ governing permissions and limitations under the License.
   &:disabled {
     &:not(.is-open) {
       .spectrum-PickerButton-fill {
-        background-color: var(--spectrum-alias-infieldbutton-fill-loudnessMedium-background-color-disabled);
+        background-color: var(--spectrum-alias-infieldbutton-fill-loudnessHigh-background-color-disabled);
       }
     }
 
@@ -177,18 +177,18 @@ governing permissions and limitations under the License.
   &:not(:disabled) {
     &:not(.is-open) {
       .spectrum-PickerButton-fill {
-        background-color: var(--spectrum-alias-infieldbutton-fill-loudnessMedium-background-color-default);
+        background-color: var(--spectrum-alias-infieldbutton-fill-loudnessHigh-background-color-default);
       }
 
       &:hover {
         .spectrum-PickerButton-fill {
-          background-color: var(--spectrum-alias-infieldbutton-fill-loudnessMedium-background-color-hover);
+          background-color: var(--spectrum-alias-infieldbutton-fill-loudnessHigh-background-color-hover);
         }
       }
 
       &:active {
         .spectrum-PickerButton-fill {
-          background-color: var(--spectrum-alias-infieldbutton-fill-loudnessMedium-background-color-down);
+          background-color: var(--spectrum-alias-infieldbutton-fill-loudnessHigh-background-color-down);
         }
       }
     }
@@ -486,7 +486,7 @@ governing permissions and limitations under the License.
     }
   }
 
-  &.spectrum-PickerButton--low {
+  &.spectrum-PickerButton--quiet {
     &:disabled {
       &:not(.is-open) {
         .spectrum-PickerButton-fill {
@@ -576,30 +576,30 @@ governing permissions and limitations under the License.
     &:disabled {
       &:not(.is-open) {
         .spectrum-PickerButton-fill {
-          background-color: transparent;
+          background-color: var(--spectrum-alias-infieldbutton-fill-loudnessMedium-background-color-disabled)
         }
       }
 
       .spectrum-PickerButton-fill {
-        border-color: var(--spectrum-alias-infieldbutton-fill-loudnessMedium-border-color-disabled)
+        border-color: var(--spectrum-alias-infieldbutton-fill-loudnessHigh-border-color-disabled)
       }
     }
 
     &:not(:disabled) {
       &:not(.is-open) {
         .spectrum-PickerButton-fill {
-          background-color: transparent;
+          background-color: var(--spectrum-alias-infieldbutton-fill-loudnessHigh-background-color-default)
         }
 
         &:hover {
           .spectrum-PickerButton-fill {
-            background-color: transparent;
+            background-color: var(--spectrum-alias-infieldbutton-fill-loudnessHigh-background-color-hover)
           }
         }
 
         &:active {
           .spectrum-PickerButton-fill {
-            background-color: transparent;
+            background-color: var(--spectrum-alias-infieldbutton-fill-loudnessHigh-background-color-down)
           }
         }
       }
