@@ -574,7 +574,7 @@ governing permissions and limitations under the License.
     }
   }
 
-  &.spectrum-PickerButton--medium {
+  &.spectrum-PickerButton--quiet {
     &:disabled {
       &:not(.is-open) {
         .spectrum-PickerButton-fill {
