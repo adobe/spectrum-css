@@ -162,123 +162,121 @@ governing permissions and limitations under the License.
     }
   }
 
-  &.spectrum-PickerButton {
-    &:disabled {
-      &:not(.is-open) {
-        .spectrum-PickerButton-fill {
-          background-color: var(--spectrum-alias-infieldbutton-fill-loudnessHigh-background-color-disabled)
-        }
-      }
-
+  &:disabled {
+    &:not(.is-open) {
       .spectrum-PickerButton-fill {
-        border-color: var(--spectrum-alias-infieldbutton-fill-loudnessHigh-border-color-disabled)
+        background-color: var(--spectrum-alias-infieldbutton-fill-loudnessHigh-background-color-disabled)
       }
     }
 
+    .spectrum-PickerButton-fill {
+      border-color: var(--spectrum-alias-infieldbutton-fill-loudnessHigh-border-color-disabled)
+    }
+  }
+
+  &:not(:disabled) {
+    &:not(.is-open) {
+      .spectrum-PickerButton-fill {
+        background-color: var(--spectrum-alias-infieldbutton-fill-loudnessHigh-background-color-default)
+      }
+
+      &:hover {
+        .spectrum-PickerButton-fill {
+          background-color: var(--spectrum-alias-infieldbutton-fill-loudnessHigh-background-color-hover)
+        }
+      }
+
+      &:active {
+        .spectrum-PickerButton-fill {
+          background-color: var(--spectrum-alias-infieldbutton-fill-loudnessHigh-background-color-down)
+        }
+      }
+    }
+  }
+
+  &.is-invalid {
     &:not(:disabled) {
-      &:not(.is-open) {
+      .spectrum-PickerButton-fill {
+        border-color: var(--spectrum-alias-input-border-color-invalid-default)
+      }
+
+      &:hover {
         .spectrum-PickerButton-fill {
-          background-color: var(--spectrum-alias-infieldbutton-fill-loudnessHigh-background-color-default)
+          border-color: var(--spectrum-alias-input-border-color-invalid-hover)
         }
+      }
 
-        &:hover {
-          .spectrum-PickerButton-fill {
-            background-color: var(--spectrum-alias-infieldbutton-fill-loudnessHigh-background-color-hover)
-          }
+      &:active {
+        .spectrum-PickerButton-fill {
+          border-color: var(--spectrum-alias-input-border-color-invalid-down)
         }
+      }
 
-        &:active {
-          .spectrum-PickerButton-fill {
-            background-color: var(--spectrum-alias-infieldbutton-fill-loudnessHigh-background-color-down)
-          }
+      &:focus {
+        .spectrum-PickerButton-fill {
+          border-color: var(--spectrum-alias-input-border-color-invalid-mouse-focus)
+        }
+      }
+
+      &.is-focused {
+        .spectrum-PickerButton-fill {
+          border-color: var(--spectrum-alias-input-border-color-invalid-mouse-focus)
+        }
+      }
+
+      &:focus-visible {
+        .spectrum-PickerButton-fill {
+          border-color: var(--spectrum-alias-input-border-color-invalid-key-focus)
+        }
+      }
+
+      &.is-keyboardFocused {
+        .spectrum-PickerButton-fill {
+          border-color: var(--spectrum-alias-input-border-color-invalid-key-focus)
         }
       }
     }
+  }
 
-    &.is-invalid {
-      &:not(:disabled) {
+  &:not(.is-invalid) {
+    &:not(:disabled) {
+      .spectrum-PickerButton-fill {
+        border-color: var(--spectrum-alias-infieldbutton-fill-border-color-default)
+      }
+
+      &:hover {
         .spectrum-PickerButton-fill {
-          border-color: var(--spectrum-alias-input-border-color-invalid-default)
-        }
-
-        &:hover {
-          .spectrum-PickerButton-fill {
-            border-color: var(--spectrum-alias-input-border-color-invalid-hover)
-          }
-        }
-
-        &:active {
-          .spectrum-PickerButton-fill {
-            border-color: var(--spectrum-alias-input-border-color-invalid-down)
-          }
-        }
-
-        &:focus {
-          .spectrum-PickerButton-fill {
-            border-color: var(--spectrum-alias-input-border-color-invalid-mouse-focus)
-          }
-        }
-
-        &.is-focused {
-          .spectrum-PickerButton-fill {
-            border-color: var(--spectrum-alias-input-border-color-invalid-mouse-focus)
-          }
-        }
-
-        &:focus-visible {
-          .spectrum-PickerButton-fill {
-            border-color: var(--spectrum-alias-input-border-color-invalid-key-focus)
-          }
-        }
-
-        &.is-keyboardFocused {
-          .spectrum-PickerButton-fill {
-            border-color: var(--spectrum-alias-input-border-color-invalid-key-focus)
-          }
+          border-color: var(--spectrum-alias-infieldbutton-fill-border-color-hover)
         }
       }
-    }
 
-    &:not(.is-invalid) {
-      &:not(:disabled) {
+      &:active {
         .spectrum-PickerButton-fill {
-          border-color: var(--spectrum-alias-infieldbutton-fill-border-color-default)
+          border-color: var(--spectrum-alias-infieldbutton-fill-border-color-down)
         }
+      }
 
-        &:hover {
-          .spectrum-PickerButton-fill {
-            border-color: var(--spectrum-alias-infieldbutton-fill-border-color-hover)
-          }
+      &:focus {
+        .spectrum-PickerButton-fill {
+          border-color: var(--spectrum-alias-infieldbutton-fill-border-color-mouse-focus)
         }
+      }
 
-        &:active {
-          .spectrum-PickerButton-fill {
-            border-color: var(--spectrum-alias-infieldbutton-fill-border-color-down)
-          }
+      &.is-focused {
+        .spectrum-PickerButton-fill {
+          border-color: var(--spectrum-alias-infieldbutton-fill-border-color-mouse-focus)
         }
+      }
 
-        &:focus {
-          .spectrum-PickerButton-fill {
-            border-color: var(--spectrum-alias-infieldbutton-fill-border-color-mouse-focus)
-          }
+      &:focus-visible {
+        .spectrum-PickerButton-fill {
+          border-color: var(--spectrum-alias-infieldbutton-fill-border-color-key-focus)
         }
+      }
 
-        &.is-focused {
-          .spectrum-PickerButton-fill {
-            border-color: var(--spectrum-alias-infieldbutton-fill-border-color-mouse-focus)
-          }
-        }
-
-        &:focus-visible {
-          .spectrum-PickerButton-fill {
-            border-color: var(--spectrum-alias-infieldbutton-fill-border-color-key-focus)
-          }
-        }
-
-        &.is-keyboardFocused {
-          .spectrum-PickerButton-fill {
-            border-color: var(--spectrum-alias-infieldbutton-fill-border-color-key-focus)
-          }
+      &.is-keyboardFocused {
+        .spectrum-PickerButton-fill {
+          border-color: var(--spectrum-alias-infieldbutton-fill-border-color-key-focus)
         }
       }
     }
