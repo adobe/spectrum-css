@@ -116,7 +116,7 @@ examples:
         <div class="spectrum-Textfield spectrum-Textfield--quiet spectrum-InputGroup-textfield">
           <input type="text" placeholder="Type here" name="field" value="" class="spectrum-Textfield-input spectrum-InputGroup-input">
         </div>
-        <button tabindex="-1" class="spectrum-PickerButton spectrum-PickerButton--sizeM spectrum-PickerButton--uiicononly spectrum-PickerButton--medium spectrum-PickerButton--right spectrum-InputGroup-button" aria-haspopup="listbox">
+        <button tabindex="-1" class="spectrum-PickerButton spectrum-PickerButton--sizeM spectrum-PickerButton--uiicononly spectrum-PickerButton--quiet spectrum-PickerButton--right spectrum-InputGroup-button" aria-haspopup="listbox">
           <div class="spectrum-PickerButton-fill">
             <svg class="spectrum-PickerButton-UIIcon spectrum-Icon spectrum-UIIcon-ChevronDown200" focusable="false" aria-hidden="true">
               <use xlink:href="#spectrum-css-icon-Chevron200" />
@@ -130,7 +130,7 @@ examples:
         <div class="spectrum-Textfield spectrum-Textfield--quiet spectrum-InputGroup-textfield">
           <input type="text" placeholder="Type here" name="field" value="" class="spectrum-Textfield-input spectrum-InputGroup-input">
         </div>
-        <button tabindex="-1" class="spectrum-PickerButton spectrum-PickerButton--sizeM spectrum-PickerButton--uiicononly spectrum-PickerButton--medium spectrum-PickerButton--right spectrum-InputGroup-button" aria-haspopup="listbox">
+        <button tabindex="-1" class="spectrum-PickerButton spectrum-PickerButton--sizeM spectrum-PickerButton--uiicononly spectrum-PickerButton--quiet spectrum-PickerButton--right spectrum-InputGroup-button" aria-haspopup="listbox">
           <div class="spectrum-PickerButton-fill">
             <svg class="spectrum-PickerButton-UIIcon spectrum-Icon spectrum-UIIcon-ChevronDown200" focusable="false" aria-hidden="true">
               <use xlink:href="#spectrum-css-icon-Chevron200" />
@@ -163,7 +163,7 @@ examples:
         <div class="spectrum-Textfield spectrum-Textfield--quiet spectrum-InputGroup-textfield is-disabled">
           <input type="text" placeholder="Type here" name="field" value="" class="spectrum-Textfield-input spectrum-InputGroup-input" disabled>
         </div>
-        <button tabindex="-1" class="spectrum-PickerButton spectrum-PickerButton--sizeM spectrum-PickerButton--uiicononly spectrum-PickerButton--medium spectrum-PickerButton--right spectrum-InputGroup-button" disabled aria-haspopup="listbox">
+        <button tabindex="-1" class="spectrum-PickerButton spectrum-PickerButton--sizeM spectrum-PickerButton--uiicononly spectrum-PickerButton--quiet spectrum-PickerButton--right spectrum-InputGroup-button" disabled aria-haspopup="listbox">
           <div class="spectrum-PickerButton-fill">
             <svg class="spectrum-PickerButton-UIIcon spectrum-Icon spectrum-UIIcon-ChevronDown200" focusable="false" aria-hidden="true">
               <use xlink:href="#spectrum-css-icon-Chevron200" />
@@ -180,7 +180,7 @@ examples:
           </svg>
           <input type="text" placeholder="Type here" name="field" value="" class="spectrum-Textfield-input spectrum-InputGroup-input">
         </div>
-        <button tabindex="-1" class="spectrum-PickerButton spectrum-PickerButton--sizeM spectrum-PickerButton--uiicononly spectrum-PickerButton--medium spectrum-PickerButton--right spectrum-InputGroup-button is-invalid" aria-haspopup="listbox">
+        <button tabindex="-1" class="spectrum-PickerButton spectrum-PickerButton--sizeM spectrum-PickerButton--uiicononly spectrum-PickerButton--quiet spectrum-PickerButton--right spectrum-InputGroup-button is-invalid" aria-haspopup="listbox">
           <div class="spectrum-PickerButton-fill">
             <svg class="spectrum-PickerButton-UIIcon spectrum-Icon spectrum-UIIcon-ChevronDown200" focusable="false" aria-hidden="true">
               <use xlink:href="#spectrum-css-icon-Chevron200" />
