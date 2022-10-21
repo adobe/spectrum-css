@@ -18,9 +18,9 @@ governing permissions and limitations under the License.
   --spectrum-tag-border-width: var(--spectrum-border-width-100);
 
   /* focus ring */
-  --spectrum-tag-focus-ring-thickness: var(--spectrum-focus-ring-thickness);
-  --spectrum-tag-focus-ring-gap: var(--spectrum-focus-ring-gap);
-  --spectrum-tag-focus-ring-color: var(--spectrum-focus-ring-color);
+  --spectrum-tag-focus-ring-thickness: var(--spectrum-focus-indicator-thickness);
+  --spectrum-tag-focus-ring-gap: var(--spectrum-focus-indicator-gap);
+  --spectrum-tag-focus-ring-color: var(--spectrum-focus-indicator-color);
 
   /* label */
   --spectrum-tag-label-line-height: var(--spectrum-line-height-100);
@@ -38,7 +38,7 @@ governing permissions and limitations under the License.
   --spectrum-tag-border-color-invalid-focus: var(--spectrum-negative-color-1000);
 
   /* invalid variant content */
-  --spectrum-tag-content-color-invalid: var(--spectrum-negative-content-color);
+  --spectrum-tag-content-color-invalid: var(--spectrum-negative-content-color-default);
   --spectrum-tag-content-color-invalid-hover: var(--spectrum-negative-content-color-hover);
   --spectrum-tag-content-color-invalid-active: var(--spectrum-negative-content-color-down);
   --spectrum-tag-content-color-invalid-focus: var(--spectrum-negative-content-color-key-focus);
