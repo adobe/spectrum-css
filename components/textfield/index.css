@@ -218,6 +218,56 @@ governing permissions and limitations under the License.
   text-overflow: ellipsis;
   -webkit-appearance: none;
 
+  /****** Focus Indicator Base Styles ******/
+  &::after {
+    block-size: calc(var(--spectrum-textfield-height)
+                    + (var(--spectrum-textfield-focus-indicator-gap) * 2));
+    inline-size: calc(100% + (var(--spectrum-textfield-focus-indicator-gap) * 2));
+    position: absolute;
+    display: inline-block;
+    left: 0;
+    bottom: 0;
+    margin-block-end: calc((var(--spectrum-textfield-focus-indicator-gap)
+                              + var(--spectrum-textfield-focus-indicator-thickness))
+                              * -1);
+    margin-inline-start: calc((var(--spectrum-textfield-focus-indicator-gap)
+                              + var(--spectrum-textfield-focus-indicator-thickness))
+                              * -1);
+    pointer-events: none;
+    content: '';
+    border-color: transparent;
+    border-style: solid;
+    border-width: var(--spectrum-textfield-focus-indicator-thickness);
+
+    border-radius: calc(var(--spectrum-textfield-corner-radius)
+                        + var(--spectrum-textfield-border-width)
+                        + var(--spectrum-textfield-focus-indicator-gap));
+  }
+
+  &.is-focused {
+    &::after {
+      border-color: var(--spectrum-textfield-focus-indicator-color);
+    }
+  }
+
+  &:focus-visible,
+  &.is-keyboardFocused {
+    &::after {
+      border-color: var(--spectrum-textfield-focus-indicator-color);
+    }
+  }
+
+  /* Quiet Focus Indicator 🤫 */
+  &--quiet {
+    &::after {
+      inline-size: 100%;
+      margin-inline-start: 0;
+      border-radius: 0;
+      border-width: 0;
+      border-bottom-width: var(--spectrum-textfield-focus-indicator-thickness);
+    }
+  }
+
   /****** LABEL ******/
   .spectrum-FieldLabel {
     display: inline-block;
@@ -258,17 +308,38 @@ governing permissions and limitations under the License.
   }
 }
 
-
 /****** ICONS ******/
 .spectrum-Textfield-Icon,
 .spectrum-Textfield-validationIcon {
   pointer-events: none;
 }
 
+/****** TODO - Icon Left - What is this for? No examples in YML ******/
+/* styles the left icon for textfield, assumes usage of workflow icon sizing (18px by 18px) */
+.spectrum-Textfield-Icon {
+  display: block;
+  position: absolute;
+
+  .spectrum-Textfield--quiet & {
+    /* Since quiet button has no left padding, push the icon all the way to the left */
+    inset-inline-start: 0;
+
+    /* styles the textfield properly if the left icon is provided */
+    & ~ .spectrum-Textfield-input {
+    }
+  }
+
+  /* styles the textfield properly if the left icon is provided */
+  & + .spectrum-Textfield-input {
+  }
+}
+
 /****** Validation Icons - ⚠️ and ✅ ******/
 .spectrum-Textfield-validationIcon {
   position: absolute;
   pointer-events: all;
+  right: 0;
+  bottom: 0;
 
   /* Quiet Icons 🤫 */
   .spectrum-Textfield--quiet & {
@@ -306,39 +377,20 @@ governing permissions and limitations under the License.
   }
 }
 
-
-/****** TODO - Icon Left - What is this for? No examples in YML ******/
-/* styles the left icon for textfield, assumes usage of workflow icon sizing (18px by 18px) */
-.spectrum-Textfield-Icon {
-  display: block;
-  position: absolute;
-
-  .spectrum-Textfield--quiet & {
-    /* Since quiet button has no left padding, push the icon all the way to the left */
-    inset-inline-start: 0;
-
-    & ~ .spectrum-Textfield-input {
-    }
-  }
-
-  /* styles the textfield properly if the left icon is provided */
-  & + .spectrum-Textfield-input {
-  }
-}
-
-
 /****** TEX FIELD INPUT ******/
 .spectrum-Textfield-input {
-  display: block;
+  box-sizing: border-box;
+
   block-size: var(--spectrum-textfield-height);
   min-inline-size: var(--spectrum-textfield-min-width);
-  box-sizing: border-box;
   padding-inline: var(--spectrum-textfield-spacing-inline);
-
+  /* Use padding instead of text-indent because text-indent does not left align the text in Edge browser  */
+  text-indent: 0;
   vertical-align: top; /* used to align them correctly in forms. */
-
   outline: none;
+
   background-color: var(--spectrum-textfield-background-color);
+
   border-style: solid;
   border-color: var(--spectrum-textfield-border-color);
   border-radius: var(--spectrum-textfield-corner-radius);
@@ -349,7 +401,26 @@ governing permissions and limitations under the License.
   font-weight: var(--spectrum-textfield-font-weight);
   color: var(--spectrum-textfield-text-color-default);
 
+  transition: border-color var(--spectrum-animation-duration-100) ease-in-out;
+
   /**** Browser Mitigations for Input *****/
+  /* Remove the margin for input in Firefox and Safari. */
+  margin: 0;
+
+  /* Show the overflow for input in Edge. */
+  overflow: visible;
+
+  -webkit-appearance: none;
+  /*
+    Removes the native spin buttons in Firefox; -moz-appearance: none results in spinners.
+    This has to come after -webkit-appearance or it gets overridden (#214)
+    Details: http://stackoverflow.com/questions/23372903/hide-spinner-in-input-number-firefox-29
+
+    Sets the opacity to 1 as normalize.css sets an opacity to placeholders
+    Details: https://github.com/csstools/normalize.css/blob/main/normalize.css#L297
+  */
+  -moz-appearance: textfield;
+
   /* Remove the native clear button in IE */
   /* http://stackoverflow.com/questions/14007655/remove-ie10s-clear-field-x-button-on-certain-inputs */
   &::-ms-clear {
@@ -380,14 +451,28 @@ governing permissions and limitations under the License.
   /**** PLACEHOLDER TEXT *****/
   &::placeholder {
     opacity: 1;
-    margin-block-start: var(--spectrum-textfield-spacing-block-start); /* TODO - check that spacing is intact when text is replaced */
-    margin-block-end: var(--spectrum-textfield-spacing-block-end); /* TODO - check that spacing is intact when text is replaced */
+    margin-block-start: var(--spectrum-textfield-spacing-block-start);
+    margin-block-end: var(--spectrum-textfield-spacing-block-end);
+    transition: color var(--spectrum-animation-duration-100) ease-in-out;
   }
 
+  /**** PLACEHOLDER TEXT CJK *****/
+  &:lang(ja),
+  &:lang(zh),
+  &:lang(ko) {
+    &::placeholder {
+      font-style: normal;
+    }
+    &::-ms-input-placeholder {
+      /* added to work with Edge, same as above */
+      font-style: normal;
+    }
+  }
 
   /****** INPUT STATES ******/
   /****** Hover ******/
-  &:hover {
+  &:hover,
+  .spectrum-Textfield:hover & {
     border-color: var(--spectrum-textfield-border-color-hover);
 
     &::placeholder {
@@ -396,7 +481,8 @@ governing permissions and limitations under the License.
   }
 
   /****** Active ******/
-  &:active {
+  &:active,
+  .spectrum-Textfield:active & {
     border-color: var(--spectrum-textfield-border-color-active);
 
     &::placeholder {
@@ -414,68 +500,15 @@ governing permissions and limitations under the License.
     }
   }
 
-  &:focus-ring,
   &:focus-visible,
+  &:focus-ring,
   .spectrum-Textfield.is-keyboardFocused & {
     border-color: var(--spectrum-textfield-border-color-focus);
-
-    /* Focus Indicator - Is Focused */
-     &::after {
-       border-color: var(--spectrum-textfield-focus-indicator-color);
-     }
+    border-color: orange;
 
     &::placeholder {
       color: var(--spectrum-textfield-text-color-focus);
     }
-  }
-
-  /****** Focus Indicator Base Styles ******/
-  &::after {
-    pointer-events: none;
-    content: '';
-    position: absolute;
-    display: inline-block;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    top: 0;
-    margin: auto;
-    border-color: transparent;
-    border-style: solid;
-    border-width: var(--spectrum-textfield-focus-indicator-thickness);
-    block-size: calc(var(--spectrum-textfield-height)
-                    + (var(--spectrum-textfield-focus-indicator-gap) * 2));
-    inline-size: calc(100% + (var(--spectrum-textfield-focus-indicator-gap) * 2));
-  }
-
-  /* Quiet Focus Indicator 🤫 */
-  .spectrum-Textfield--quiet & {
-    &:after {
-      border-radius: 0;
-    }
-  }
-
-  /* Quiet Focus Indicator - Is Focused 🤫 */
-  .spectrum-Textfield--quiet &:focus-ring,
-  .spectrum-Textfield--quiet &:focus-visible,
-  .spectrum-Textfield--quiet.is-keyboardFocused & {
-    &:after {
-      border-width: 0;
-      border-bottom-width: var(--spectrum-textfield-focus-indicator-thickness);
-    }
-  }
-
-
-  /****** Input - Quiet 🤫 ******/
-  .spectrum-Textfield--quiet & {
-    border-block-start-width: 0;
-    border-inline-width: 0;
-    margin-block-end: var(--spectrum-textfield-spacing-block-quiet);
-    padding-inline: var(--spectrum-textfield-spacing-inline-quiet);
-
-    /* Treat all quiet inputs and text areas the same */
-    resize: none;
-    overflow-y: hidden;
   }
 
     /****** Input - ReadOnly ******/
@@ -504,6 +537,22 @@ governing permissions and limitations under the License.
     }
   }
 
+  /****** Input - Quiet 🤫 ******/
+  .spectrum-Textfield--quiet &,
+  .spectrum-Textfield--quiet &:disabled,
+  .spectrum-Textfield--quiet.is-disabled & {
+    border-block-start-width: 0;
+    border-inline-width: 0;
+    margin-block-end: var(--spectrum-textfield-spacing-block-quiet);
+    padding-inline: var(--spectrum-textfield-spacing-inline-quiet);
+    background-color: transparent;
+    border-radius: 0;
+
+    /* Treat all quiet inputs and text areas the same */
+    resize: none;
+    overflow-y: hidden;
+  }
+
   /****** Input - Valid ✅ ******/
   .spectrum-Textfield.is-valid & {
 
@@ -512,22 +561,22 @@ governing permissions and limitations under the License.
   /****** Input - Invalid ⚠️ ******/
   .spectrum-Textfield.is-invalid & {
     border-color: var(--spectrum-textfield-border-color-negative-default);
-  }
 
-  &:hover,
-  .spectrum-Textfield.is-invalid:hover & {
-    border-color: var(--spectrum-textfield-border-color-negative-hover);
-  }
+    &:hover,
+    .spectrum-Textfield.is-invalid:hover & {
+      border-color: var(--spectrum-textfield-border-color-negative-hover);
+    }
 
-  &:active,
-  .spectrum-Textfield.is-invalid:active & {
-    border-color: var(--spectrum-textfield-border-color-negative-active);
-  }
+    &:active,
+    .spectrum-Textfield.is-invalid:active & {
+      border-color: var(--spectrum-textfield-border-color-negative-active);
+    }
 
-  .spectrum-Textfield.is-invalid:focus-visible &,
-  .spectrum-Textfield.is-invalid.is-keyboardFocused &,
-  .spectrum-Textfield.is-invalid.is-focused & {
-    border-color: var(--spectrum-textfield-border-color-negative-focus);
+    .spectrum-Textfield.is-invalid:focus-visible &,
+    .spectrum-Textfield.is-invalid.is-keyboardFocused &,
+    .spectrum-Textfield.is-invalid.is-focused & {
+      border-color: var(--spectrum-textfield-border-color-negative-focus);
+    }
   }
 }
 
