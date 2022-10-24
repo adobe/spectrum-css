@@ -1,6 +1,18 @@
 name: In-Field Button
 status: Contribution
 SpectrumSiteSlug: https://spectrum.adobe.com/page/picker/
+sections:
+  - name: Migration Guide
+    description: |
+      ### In-Field Button uses the [Quiet](infieldbutton.html#quiet) variant instead of loudness levels.
+
+      The Loudness level classes, `.spectrum-InfieldButton--low`, `.spectrum-InfieldButton--medium`, and `.spectrum-InfieldButton--high`, have been removed.
+
+      - Use the base class, `.spectrum-InfieldButton`, to apply the default button styles. The default styles correspond to what was previously the Loudness - High variant, which used the class `.spectrum-InfieldButton--high`.
+      - Use the modifier class, `spectrum-InfieldButton--quiet`, to apply the quiet variant styles. Quiet corresponds to what was previously the Loudness - Low variant, which used the class `.spectrum-InfieldButton--low` class.
+
+      The Loudness - Medium variant has been removed, so there is no equivalent.
+
 examples:
   - id: infieldbutton-sizing
     name: Sizing
