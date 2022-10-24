@@ -92,14 +92,16 @@ examples:
     name: Disabled
     markup: |
       <div class="spectrum-Textfield is-disabled">
-        <input type="text" placeholder="Enter your name" name="field" value="" class="spectrum-Textfield-input" disabled>
+      <label for="textfield-disabled" class="spectrum-FieldLabel spectrum-FieldLabel--sizeM">Text field label</label>
+        <input id="textfield-disabled" type="text"  placeholder="Enter your name" name="field" value="" class="spectrum-Textfield-input" disabled>
       </div>
 
   - id: textfield-readonly
     name: Read-only
     markup: |
       <div class="spectrum-Textfield is-readOnly">
-        <input type="text" placeholder="Enter your name" name="field" value="This text is read-only" class="spectrum-Textfield-input" readonly="readonly">
+      <label for="textfield-readonly" class="spectrum-FieldLabel spectrum-FieldLabel--sizeM">Text field label</label>
+        <input id="textfield-readonly" type="text"  placeholder="Enter your name" name="field" value="This text is read-only" class="spectrum-Textfield-input" readonly="readonly">
       </div>
 
   - id: textfield
@@ -143,10 +145,11 @@ examples:
     name: Valid (disabled)
     markup: |
       <div class="spectrum-Textfield is-valid is-disabled">
+      <label for="textfield-valid-disabled" class="spectrum-FieldLabel spectrum-FieldLabel--sizeM">Text field label</label>
         <svg class="spectrum-Icon spectrum-UIIcon-Checkmark100 spectrum-Textfield-validationIcon" focusable="false" aria-hidden="true">
           <use xlink:href="#spectrum-css-icon-Checkmark100" />
         </svg>
-        <input type="text" placeholder="Enter your name" name="field" value="A valid input" class="spectrum-Textfield-input" pattern="[\w\s]+" required disabled>
+        <input id="textfield-valid-disabled" type="text" placeholder="Enter your name" name="field" value="A valid input" class="spectrum-Textfield-input" pattern="[\w\s]+" required disabled>
       </div>
 
   - id: textfield
@@ -190,24 +193,27 @@ examples:
     name: Invalid (disabled)
     markup: |
       <div class="spectrum-Textfield is-invalid is-disabled">
+      <label for="textfield-invalid-disabled" class="spectrum-FieldLabel spectrum-FieldLabel--sizeM">Text field label</label>
         <svg class="spectrum-Icon spectrum-Icon--sizeM spectrum-Textfield-validationIcon" focusable="false" aria-hidden="true">
           <use xlink:href="#spectrum-icon-18-Alert" />
         </svg>
-        <input type="text" placeholder="Enter your name" name="field" value="Invalid input" class="spectrum-Textfield-input" disabled>
+        <input id="textfield-invalid-disabled" type="text" placeholder="Enter your name" name="field" value="Invalid input" class="spectrum-Textfield-input" disabled>
       </div>
 
   - id: textfield
     name: Focused
     markup: |
       <div class="spectrum-Textfield is-focused">
-        <input type="text" placeholder="Enter your name" name="field" value="" class="spectrum-Textfield-input">
+        <label for="textfield-focused" class="spectrum-FieldLabel spectrum-FieldLabel--sizeM">Text field label</label>
+        <input id="textfield-focused" type="text" placeholder="Enter your name" name="field" value="" class="spectrum-Textfield-input">
       </div>
 
   - id: textfield
     name: Keyboard Focused
     markup: |
       <div class="spectrum-Textfield is-keyboardFocused">
-        <input type="text" placeholder="Enter your name" name="field" value="" class="spectrum-Textfield-input">
+        <label for="textfield-keyboard-focused" class="spectrum-FieldLabel spectrum-FieldLabel--sizeM">Text field label</label>
+        <input id="textfield-keyboard-focused" type="text" placeholder="Enter your name" name="field" value="" class="spectrum-Textfield-input">
       </div>
 
   - id: textfield
@@ -216,10 +222,11 @@ examples:
       *Spectrum for Adobe Express uses a different icon. Use the `SX_Alert_18_N.svg` icon in the Express workflow icon set.*    
     markup: |
       <div class="spectrum-Textfield is-invalid is-focused">
+        <label for="textfield-focused-invalid" class="spectrum-FieldLabel spectrum-FieldLabel--sizeM">Text field label</label>
         <svg class="spectrum-Icon spectrum-Icon--sizeM spectrum-Textfield-validationIcon" focusable="false" aria-hidden="true">
           <use xlink:href="#spectrum-icon-18-Alert" />
         </svg>
-        <input type="text" placeholder="Enter your name" name="field" value="Invalid input" class="spectrum-Textfield-input" pattern="[\d]+" required>
+        <input id="textfield-focused-invalid" type="text" placeholder="Enter your name" name="field" value="Invalid input" class="spectrum-Textfield-input" pattern="[\d]+" required>
       </div>
 
   - id: textfield
@@ -228,104 +235,115 @@ examples:
       *Spectrum for Adobe Express uses a different icon. Use the `SX_Alert_18_N.svg` icon in the Express workflow icon set.*
     markup: |
       <div class="spectrum-Textfield is-invalid is-keyboardFocused">
+        <label for="textfield-keyboard-focused-invalid" class="spectrum-FieldLabel spectrum-FieldLabel--sizeM">Text field label</label>
         <svg class="spectrum-Icon spectrum-Icon--sizeM spectrum-Textfield-validationIcon" focusable="false" aria-hidden="true">
           <use xlink:href="#spectrum-icon-18-Alert" />
         </svg>
-        <input type="text" placeholder="Enter your name" name="field" value="Invalid input" class="spectrum-Textfield-input" pattern="[\d]+" required>
+        <input id="textfield-keyboard-focused-invalid" type="text" placeholder="Enter your name" name="field" value="Invalid input" class="spectrum-Textfield-input" pattern="[\d]+" required>
       </div>
 
   - id: textfield-quiet
     name: Quiet
     markup: |
       <div class="spectrum-Textfield spectrum-Textfield--quiet">
-        <input type="text" placeholder="Enter your name" name="field" value="" class="spectrum-Textfield-input">
+        <label for="textfield-quiet" class="spectrum-FieldLabel spectrum-FieldLabel--sizeM">Text field label</label>
+        <input id="textfield-quiet" type="text" placeholder="Enter your name" name="field" value="" class="spectrum-Textfield-input">
       </div>
 
   - id: textfield-quiet
     name: Quiet Disabled
     markup: |
       <div class="spectrum-Textfield spectrum-Textfield--quiet is-disabled">
-        <input type="text" placeholder="Enter your name" name="field" value="" class="spectrum-Textfield-input" disabled>
+        <label for="textfield-quiet-disabled" class="spectrum-FieldLabel spectrum-FieldLabel--sizeM">Text field label</label>
+        <input id="textfield-quiet-disabled" type="text" placeholder="Enter your name" name="field" value="" class="spectrum-Textfield-input" disabled>
       </div>
 
   - id: textfield-quiet
     name: Quiet Valid
     markup: |
       <div class="spectrum-Textfield spectrum-Textfield--quiet is-valid">
+        <label for="textfield-quiet-valid" class="spectrum-FieldLabel spectrum-FieldLabel--sizeM">Text field label</label>
         <svg class="spectrum-Icon spectrum-UIIcon-Checkmark100 spectrum-Textfield-validationIcon" focusable="false" aria-hidden="true">
           <use xlink:href="#spectrum-css-icon-Checkmark100" />
         </svg>
-        <input type="text" placeholder="Enter your name" name="field" value="A valid input" class="spectrum-Textfield-input" pattern="[\w\s]+" required>
+        <input id="textfield-quiet-valid" type="text" placeholder="Enter your name" name="field" value="A valid input" class="spectrum-Textfield-input" pattern="[\w\s]+" required>
       </div>
 
   - id: textfield-quiet
     name: Quiet Valid (disabled)
     markup: |
       <div class="spectrum-Textfield spectrum-Textfield--quiet is-valid is-disabled">
+        <label for="textfield-quiet-valid-disabled" class="spectrum-FieldLabel spectrum-FieldLabel--sizeM">Text field label</label>
         <svg class="spectrum-Icon spectrum-UIIcon-Checkmark100 spectrum-Textfield-validationIcon" focusable="false" aria-hidden="true">
           <use xlink:href="#spectrum-css-icon-Checkmark100" />
         </svg>
-        <input type="text" placeholder="Enter your name" name="field" value="A valid input" class="spectrum-Textfield-input" pattern="[\w\s]+" required disabled>
+        <input id="textfield-quiet-valid-disabled" type="text" placeholder="Enter your name" name="field" value="A valid input" class="spectrum-Textfield-input" pattern="[\w\s]+" required disabled>
       </div>
 
-  - id: textfield-quiet
+  - id: textfield-quiet-invalid
     name: Quiet Invalid
     description: |
       *Spectrum for Adobe Express uses a different icon. Use the `SX_Alert_18_N.svg` icon in the Express workflow icon set.*
     markup: |
       <div class="spectrum-Textfield spectrum-Textfield--quiet is-invalid">
+        <label for="textfield-quiet-invalid" class="spectrum-FieldLabel spectrum-FieldLabel--sizeM">Text field label</label>
         <svg class="spectrum-Icon spectrum-Icon--sizeM spectrum-Textfield-validationIcon" focusable="false" aria-hidden="true">
           <use xlink:href="#spectrum-icon-18-Alert" />
         </svg>
-        <input type="text" placeholder="Enter your name" name="field" value="Invalid input" class="spectrum-Textfield-input" pattern="[\d]+" required>
+        <input id="textfield-quiet-invalid" type="text" placeholder="Enter your name" name="field" value="Invalid input" class="spectrum-Textfield-input" pattern="[\d]+" required>
       </div>
 
-  - id: textfield-quiet
+  - id: textfield-quiet-invalid-disabled
     name: Quiet Invalid (disabled)
     description: |
       *Spectrum for Adobe Express uses a different icon. Use the `SX_Alert_18_N.svg` icon in the Express workflow icon set.*
     markup: |
       <div class="spectrum-Textfield spectrum-Textfield--quiet is-invalid is-disabled">
+        <label for="textfield-quiet-invalid-disabled" class="spectrum-FieldLabel spectrum-FieldLabel--sizeM">Text field label</label>
         <svg class="spectrum-Icon spectrum-Icon--sizeM spectrum-Textfield-validationIcon" focusable="false" aria-hidden="true">
           <use xlink:href="#spectrum-icon-18-Alert" />
         </svg>
-        <input type="text" placeholder="Enter your name" name="field" value="Invalid input" class="spectrum-Textfield-input" disabled>
+        <input id="textfield-quiet-invalid-disabled" type="text" placeholder="Enter your name" name="field" value="Invalid input" class="spectrum-Textfield-input" disabled>
       </div>
 
-  - id: textfield-quiet
+  - id: textfield-quiet-focused
     name: Quiet Focused
     markup: |
       <div class="spectrum-Textfield spectrum-Textfield--quiet is-focused">
-        <input type="text" placeholder="Enter your name" name="field" value="" class="spectrum-Textfield-input">
+        <label for="textfield-quiet-focused" class="spectrum-FieldLabel spectrum-FieldLabel--sizeM">Text field label</label>
+        <input id="textfield-quiet-focused" type="text" placeholder="Enter your name" name="field" value="" class="spectrum-Textfield-input">
       </div>
 
   - id: textfield-quiet
     name: Quiet Keyboard Focused
     markup: |
       <div class="spectrum-Textfield spectrum-Textfield--quiet is-keyboardFocused">
-        <input type="text" placeholder="Enter your name" name="field" value="" class="spectrum-Textfield-input">
+        <label for="textfield-quiet-keyboard-focused" class="spectrum-FieldLabel spectrum-FieldLabel--sizeM">Text field label</label>
+        <input id="textfield-quiet-keyboard-focused" type="text" placeholder="Enter your name" name="field" value="" class="spectrum-Textfield-input">
       </div>
 
-  - id: textfield-quiet
+  - id: textfield-focused-invalid
     name: Quiet Focused (invalid)
     description: |
       *Spectrum for Adobe Express uses a different icon. Use the `SX_Alert_18_N.svg` icon in the Express workflow icon set.*
     markup: |
       <div class="spectrum-Textfield spectrum-Textfield--quiet is-invalid is-focused">
+        <label for="textfield-focused-invalid" class="spectrum-FieldLabel spectrum-FieldLabel--sizeM">Text field label</label>
         <svg class="spectrum-Icon spectrum-Icon--sizeM spectrum-Textfield-validationIcon" focusable="false" aria-hidden="true">
           <use xlink:href="#spectrum-icon-18-Alert" />
         </svg>
-        <input type="text" placeholder="Enter your name" name="field" value="Invalid input" class="spectrum-Textfield-input" pattern="[\d]+" required>
+        <input id="textfield-focused-invalid" type="text" placeholder="Enter your name" name="field" value="Invalid input" class="spectrum-Textfield-input" pattern="[\d]+" required>
       </div>
 
-  - id: textfield-quiet
+  - id: textfield-keyboard-focused-invalid
     name: Quiet Keyboard Focused (invalid)
     description: |
       *Spectrum for Adobe Express uses a different icon. Use the `SX_Alert_18_N.svg` icon in the Express workflow icon set.*
     markup: |
       <div class="spectrum-Textfield spectrum-Textfield--quiet is-invalid is-keyboardFocused">
+        <label for="textfield-keyboard-focused-invalid" class="spectrum-FieldLabel spectrum-FieldLabel--sizeM">Text field label</label>
         <svg class="spectrum-Icon spectrum-Icon--sizeM spectrum-Textfield-validationIcon" focusable="false" aria-hidden="true">
           <use xlink:href="#spectrum-icon-18-Alert" />
         </svg>
-        <input type="text" placeholder="Enter your name" name="field" value="Invalid input" class="spectrum-Textfield-input" pattern="[\d]+" required>
+        <input id="textfield-keyboard-focused-invalid" type="text" placeholder="Enter your name" name="field" value="Invalid input" class="spectrum-Textfield-input" pattern="[\d]+" required>
       </div>
