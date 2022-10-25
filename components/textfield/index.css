@@ -287,42 +287,47 @@ governing permissions and limitations under the License.
     }
   }
 
-  &--sidelabel {
-    .spectrum-Textfield-character-count {
-      background: orange;
-    }
-  }
-
   /****** CHARACTER COUNT ******/
   .spectrum-Textfield-character-count {
     display: inline;
     margin-block-end: var(--spectrum-textfield-character-count-spacing-block);
     margin-inline-start: var(--spectrum-textfield-character-count-spacing-inline);
     float: right;
-
     font-size: var(--spectrum-textfield-character-count-font-size);
     font-family: var(--spectrum-textfield-character-count-font-family);
     font-weight: var(--spectrum-textfield-character-count-font-weight);
-
-    .spectrum-Textfield--sidelabel & {
-      background: lime;
-    }
-
-    /* Quiet Character Count 🤫 */
-    .spectrum-Textfield--quiet & {
-      margin-block-end: var(--spectrum-textfield-character-count-spacing-block-quiet);
-    }
-
-    /* Side Label Character Count - Positioned Inline End */
-    .spectrum-Textfield--sidelabel & {
-      margin-block-start: var(--spectrum-textfield-character-count-spacing-block-side);
-      margin-inline-start: var(--spectrum-textfield-character-count-spacing-inline-side);
-    }
   }
 
   /****** HELP TEXT ******/
   .spectrum-HelpText-text {
     margin-block-start: var(--spectrum-textfield-helptext-spacing-block);
+  }
+
+
+/***** VARIANTS *****/
+
+  &--quiet {
+    /* Quiet Character Count 🤫 */
+    .spectrum-Textfield-character-count {
+      margin-block-end: var(--spectrum-textfield-character-count-spacing-block-quiet);
+    }
+  }
+
+  &--sidelabel {
+    .spectrum-Textfield-input {
+      display: inline-block;
+    }
+
+    .spectrum-FieldLabel {
+      display: inline-block;
+    }
+
+    /* Side Label Character Count - Positioned Inline End */
+    .spectrum-Textfield-character-count {
+      margin-block-start: var(--spectrum-textfield-character-count-spacing-block-side);
+      margin-inline-start: var(--spectrum-textfield-character-count-spacing-inline-side);
+      display: inline-block;
+    }
   }
 }
 
