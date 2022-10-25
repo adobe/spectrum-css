@@ -16,7 +16,7 @@ governing permissions and limitations under the License.
 
   /* label text styles for all t-shirt sizes and all themes */
   --spectrum-badge-line-height: var(--spectrum-line-height-100);
-  --spectrum-badge-cjk-line-height: var(--spectrum-CJK-line-height-100);
+  --spectrum-badge-cjk-line-height: var(--spectrum-cjk-line-height-100);
 
   /* text and icon color default white for all t-shirt sizes and all themes */
   --spectrum-badge-label-icon-color-white: var(--spectrum-white);
@@ -235,7 +235,7 @@ governing permissions and limitations under the License.
                       var(--spectrum-badge-label-icon-color-black));
   }
 
-  /* CJK language support */
+  /* cjk language support */
   &:lang(ja),
   &:lang(zh),
   &:lang(ko) {
