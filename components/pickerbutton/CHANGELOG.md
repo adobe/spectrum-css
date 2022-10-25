@@ -3,6 +3,25 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+<a name="2.0.0"></a>
+# 2.0.0
+🗓 2022-10-25 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/pickerbutton@1.1.22...@spectrum-css/pickerbutton@2.0.0)
+
+* refactor(infieldbutton,inputgroup,pickerbutton)!: drop loudness api ([c97d40e](https://github.com/adobe/spectrum-css/commit/c97d40e))
+* refactor(pickerbutton)!: replace medium loudness with quiet ([6e87687](https://github.com/adobe/spectrum-css/commit/6e87687))
+* refactor(pickerbutton)!: remove loudness levels ([3fc182a](https://github.com/adobe/spectrum-css/commit/3fc182a))
+
+
+### 🛑 BREAKING CHANGES
+
+* remove high loudness selectors from pickerbutton, apply quiet background color from inputgroup, change loudness api to quiet for infieldbutton
+* replaces `medium` loudness with `quiet`
+* refactor spectrum-PickerButton--high to use base spectrum-PickerButton styles
+
+
+
+
+
 <a name="1.1.22"></a>
 ## 1.1.22
 🗓 2022-06-29 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/pickerbutton@1.1.21...@spectrum-css/pickerbutton@1.1.22)
