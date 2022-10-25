@@ -27,6 +27,7 @@ governing permissions and limitations under the License.
   /* default label spacing */
   --spectrum-textfield-label-spacing-block: var(--spectrum-field-label-to-component);
   --spectrum-textfield-label-spacing-block-quiet: var(--spectrum-field-label-to-component-quiet-medium);
+  --spectrum-textfield-label-spacing-inline-side-label: var(--spectrum-spacing-100);
 
   /* default help text spacing */
   --spectrum-textfield-helptext-spacing-block: var(--spectrum-help-text-to-component);
@@ -83,8 +84,8 @@ governing permissions and limitations under the License.
   --spectrum-textfield-text-color-focus: var(--spectrum-neutral-content-color-key-focus);
   --spectrum-textfield-text-color-disabled: var(--spectrum-disabled-content-color);
 
-  --spectrum-textfield-icon-color-invalid: var(--spectrum-negative-visual-color);
-  --spectrum-textfield-icon-color-valid: var(--spectrum-positive-visual-color);
+  --spectrum-textfield-content-color-invalid: var(--spectrum-negative-visual-color);
+  --spectrum-textfield-content-color-valid: var(--spectrum-positive-visual-color);
 
   --spectrum-textfield-focus-indicator-color: var(--spectrum-focus-indicator-color);
 }
@@ -94,6 +95,7 @@ governing permissions and limitations under the License.
 .spectrum-Textfield--sizeS {
   --spectrum-textfield-height: var(--spectrum-component-height-75);
   --spectrum-textfield-label-spacing-block-quiet: var(--spectrum-field-label-to-component-quiet-small);
+  --spectrum-textfield-label-spacing-inline-side-label: var(--spectrum-spacing-100);
   --spectrum-textfield-placeholder-font-size: var(--spectrum-font-size-75);
   --spectrum-textfield-spacing-inline: var(--spectrum-component-edge-to-text-75);
   --spectrum-textfield-icon-size-invalid: var(--spectrum-workflow-icon-size-75);
@@ -112,6 +114,7 @@ governing permissions and limitations under the License.
 .spectrum-Textfield--sizeM {
   --spectrum-textfield-height: var(--spectrum-component-height-100);
   --spectrum-textfield-label-spacing-block-quiet: var(--spectrum-field-label-to-component-quiet-medium);
+  --spectrum-textfield-label-spacing-inline-side-label: var(--spectrum-spacing-200);
   --spectrum-textfield-placeholder-font-size: var(--spectrum-font-size-100);
   --spectrum-textfield-spacing-inline: var(--spectrum-component-edge-to-text-100);
   --spectrum-textfield-icon-size-invalid: var(--spectrum-workflow-icon-size-100);
@@ -130,6 +133,7 @@ governing permissions and limitations under the License.
 .spectrum-Textfield--sizeL {
   --spectrum-textfield-height: var(--spectrum-component-height-200);
   --spectrum-textfield-label-spacing-block-quiet: var(--spectrum-field-label-to-component-quiet-large);
+  --spectrum-textfield-label-spacing-inline-side-label: var(--spectrum-spacing-200);
   --spectrum-textfield-placeholder-font-size: var(--spectrum-font-size-200);
   --spectrum-textfield-spacing-inline: var(--spectrum-component-edge-to-text-200);
   --spectrum-textfield-icon-size-invalid: var(--spectrum-workflow-icon-size-200);
@@ -148,6 +152,7 @@ governing permissions and limitations under the License.
 .spectrum-Textfield--sizeXL {
   --spectrum-textfield-height: var(--spectrum-component-height-300);
   --spectrum-textfield-label-spacing-block-quiet: var(--spectrum-field-label-to-component-quiet-extra-large);
+  --spectrum-textfield-label-spacing-inline-side-label: var(--spectrum-spacing-200);
   --spectrum-textfield-placeholder-font-size: var(--spectrum-font-size-300);
   --spectrum-textfield-spacing-inline: var(--spectrum-component-edge-to-text-200);
   --spectrum-textfield-icon-size-invalid: var(--spectrum-workflow-icon-size-300);
@@ -162,24 +167,6 @@ governing permissions and limitations under the License.
   --spectrum-textfield-character-count-spacing-block-quiet: var(--spectrum-character-count-to-field-quiet-extra-large);
   --spectrum-textfield-character-count-spacing-block-side: var(--spectrum-side-label-character-count-top-margin-extra-large);
 }
-
-/* Text area t-shirt sizes */
-.spectrum-Textfield--multiline--sizeS {
-  /* placeholder */
-}
-
-.spectrum-Textfield--multiline--sizeM {
-  /* placeholder */
-}
-
-.spectrum-Textfield--multiline--sizeL {
-  /* placeholder */
-}
-
-.spectrum-Textfield--multiline--sizeXL {
-  /* placeholder */
-}
-
 
 /****** WHCM ******/
 @media (forced-colors: active) {
@@ -199,7 +186,6 @@ governing permissions and limitations under the License.
   position: relative;
   outline: none;
   margin: auto;
-  display: inline-block;
 
   /*** ↓ browser mitigations for text field ↓ ***/
   /* Edge - Use padding instead of text-indent because text-indent does not left align the text  */
@@ -225,37 +211,6 @@ governing permissions and limitations under the License.
   text-overflow: ellipsis;
   -webkit-appearance: none;
 
-  /****** Focus Indicator Base Styles ******/
-  &::after {
-    block-size: calc(var(--spectrum-textfield-height)
-                    + (var(--spectrum-textfield-focus-indicator-gap) * 2));
-    inline-size: calc(100% + (var(--spectrum-textfield-focus-indicator-gap) * 2));
-    position: absolute;
-    display: inline-block;
-    left: 0;
-    bottom: 0;
-    margin-block-end: calc((var(--spectrum-textfield-focus-indicator-gap)
-                              + var(--spectrum-textfield-focus-indicator-thickness))
-                              * -1);
-    margin-inline-start: calc((var(--spectrum-textfield-focus-indicator-gap)
-                              + var(--spectrum-textfield-focus-indicator-thickness))
-                              * -1);
-    pointer-events: none;
-    content: '';
-    border-color: transparent;
-    border-style: solid;
-    border-width: var(--spectrum-textfield-focus-indicator-thickness);
-
-    border-radius: calc(var(--spectrum-textfield-corner-radius)
-                        + var(--spectrum-textfield-border-width)
-                        + var(--spectrum-textfield-focus-indicator-gap));
-  }
-
-  &.is-focused {
-    &::after {
-      border-color: var(--spectrum-textfield-focus-indicator-color);
-    }
-  }
 
   &:focus-visible,
   &.is-keyboardFocused {
@@ -277,22 +232,18 @@ governing permissions and limitations under the License.
 
   /****** LABEL ******/
   .spectrum-FieldLabel {
-    display: inline;
     margin-block-end: var(--spectrum-textfield-label-spacing-block);
 
     /* Quiet Label 🤫 */
     .spectrum-Textfield--quiet & {
       margin-block-end: var(--spectrum-textfield-label-spacing-block-quiet);
-      color: red;
     }
   }
 
   /****** CHARACTER COUNT ******/
   .spectrum-Textfield-character-count {
-    display: inline;
     margin-block-end: var(--spectrum-textfield-character-count-spacing-block);
     margin-inline-start: var(--spectrum-textfield-character-count-spacing-inline);
-    float: right;
     font-size: var(--spectrum-textfield-character-count-font-size);
     font-family: var(--spectrum-textfield-character-count-font-family);
     font-weight: var(--spectrum-textfield-character-count-font-weight);
@@ -305,7 +256,6 @@ governing permissions and limitations under the License.
 
 
 /***** VARIANTS *****/
-
   &--quiet {
     /* Quiet Character Count 🤫 */
     .spectrum-Textfield-character-count {
@@ -315,18 +265,63 @@ governing permissions and limitations under the License.
 
   &--sidelabel {
     .spectrum-Textfield-input {
-      display: inline-block;
+      /* placeholder */
     }
 
     .spectrum-FieldLabel {
-      display: inline-block;
+      margin-inline-end: var(--spectrum-textfield-label-spacing-inline-side-label);
     }
 
     /* Side Label Character Count - Positioned Inline End */
     .spectrum-Textfield-character-count {
       margin-block-start: var(--spectrum-textfield-character-count-spacing-block-side);
       margin-inline-start: var(--spectrum-textfield-character-count-spacing-inline-side);
-      display: inline-block;
+    }
+  }
+}
+
+/* Input wrapper enables cross-browser focus indicator */
+.spectrum-Textfield-input-wrapper {
+  position: relative;
+  display: inline-block;
+
+  /****** Focus Indicator Base Styles ******/
+  &::after {
+    block-size: calc(var(--spectrum-textfield-height)
+                    + (var(--spectrum-textfield-focus-indicator-gap) * 2));
+    inline-size: calc(100% + (var(--spectrum-textfield-focus-indicator-gap) * 2));
+    position: absolute;
+    display: inline-block;
+    left: 0;
+    top: 0;
+    margin-block-start: calc((var(--spectrum-textfield-focus-indicator-gap)
+                              + var(--spectrum-textfield-focus-indicator-thickness))
+                              * -1);
+    margin-inline-start: calc((var(--spectrum-textfield-focus-indicator-gap)
+                              + var(--spectrum-textfield-focus-indicator-thickness))
+                              * -1);
+    pointer-events: none;
+    content: '';
+    border-color: transparent;
+    border-style: solid;
+    border-width: var(--spectrum-textfield-focus-indicator-thickness);
+    border-radius: calc(var(--spectrum-textfield-corner-radius)
+                        + var(--spectrum-textfield-border-width)
+                        + var(--spectrum-textfield-focus-indicator-gap));
+  }
+
+  /* TODO - find out if keyboard focus has different styles than is-focused */
+  .spectrum-Textfield.is-focused & {
+    &::after {
+      border-color: var(--spectrum-textfield-focus-indicator-color);
+    }
+  }
+
+  /* TODO - find out if keyboard focus has different styles than is-focused */
+  .spectrum-Textfield:focus-visible &,
+  .spectrum-Textfield.is-keyboardFocused & {
+    &::after {
+      border-color: var(--spectrum-textfield-focus-indicator-color);
     }
   }
 }
@@ -378,7 +373,7 @@ governing permissions and limitations under the License.
     margin-block-end: var(--spectrum-textfield-icon-spacing-block-invalid);
     margin-inline-start: var(--spectrum-textfield-icon-spacing-inline-start-invalid);
     margin-inline-end: var(--spectrum-textfield-icon-spacing-inline-end-invalid);
-    color: var(--spectrum-textfield-icon-color-invalid);
+    color: var(--spectrum-textfield-content-color-invalid);
 
     /* Quiet Invalid Icon ⚠️🤫 */
     .spectrum-Textfield--quiet& {
@@ -392,7 +387,7 @@ governing permissions and limitations under the License.
     margin-block-end: var(--spectrum-textfield-icon-spacing-block-valid);
     margin-inline-start: var(--spectrum-textfield-icon-spacing-inline-start-valid);
     margin-inline-end: var(--spectrum-textfield-icon-spacing-inline-end-valid);
-    color: var(--spectrum-textfield-icon-color-valid);
+    color: var(--spectrum-textfield-content-color-valid);
 
     /* Quiet Valid Icon ✅🤫 */
     .spectrum-Textfield--quiet& {
@@ -404,7 +399,6 @@ governing permissions and limitations under the License.
 /****** TEX FIELD INPUT ******/
 .spectrum-Textfield-input {
   box-sizing: border-box;
-  display: block;
   block-size: var(--spectrum-textfield-height);
   min-inline-size: var(--spectrum-textfield-min-width);
   padding-inline: var(--spectrum-textfield-spacing-inline);
@@ -515,6 +509,7 @@ governing permissions and limitations under the License.
   }
 
   /****** Focus ******/
+  /* TODO - find out if keyboard focus has different styles than is-focused */
   &:focus,
   .spectrum-Textfield.is-focused & {
     border-color: var(--spectrum-textfield-border-color-focus);
@@ -524,6 +519,7 @@ governing permissions and limitations under the License.
     }
   }
 
+  /* TODO - find out if keyboard focus has different styles than is-focused */
   &:focus-visible,
   &:focus-ring,
   .spectrum-Textfield.is-keyboardFocused & {
@@ -534,7 +530,7 @@ governing permissions and limitations under the License.
     }
   }
 
-    /****** Input Variant - ReadOnly ******/
+  /****** Input Variant - ReadOnly ******/
   .spectrum-Textfield.is-readOnly &,
   .spectrum-Textfield.is-readOnly:hover &,
   &:read-only {
@@ -578,7 +574,7 @@ governing permissions and limitations under the License.
 
   /****** Input - Valid ✅ ******/
   .spectrum-Textfield.is-valid & {
-
+    /* placeholder - remove if not needed */
   }
 
   /****** Input - Invalid ⚠️ ******/
@@ -606,6 +602,23 @@ governing permissions and limitations under the License.
 
 
 
+/* Text area t-shirt sizes - should these be at the top or down here? */
+.spectrum-Textfield--multiline--sizeS {
+  /* placeholder */
+}
+
+.spectrum-Textfield--multiline--sizeM {
+  /* placeholder */
+}
+
+.spectrum-Textfield--multiline--sizeL {
+  /* placeholder */
+}
+
+.spectrum-Textfield--multiline--sizeXL {
+  /* placeholder */
+}
+
 
 /****** ▤ Text Area / Multiline ******/
 .spectrum-Textfield--multiline {
@@ -613,13 +626,12 @@ governing permissions and limitations under the License.
   /* Input Text Area Quiet */
   &.spectrum-Textfield--quiet {
     .spectrum-Textfield-input {
-
+      /* placeholder */
     }
   }
 
   /****** Text Area / Multiline Input ******/
   .spectrum-Textfield-input {
-
 
     /* Remove the default vertical scrollbar for textarea in IE. */
     overflow: auto;
@@ -628,7 +640,7 @@ governing permissions and limitations under the License.
   /****** Text Area /Multiline Icon ******/
   .spectrum-Textfield-Icon {
     & ~ .spectrum-Textfield-input {
-
+      /* placeholder */
     }
   }
 }
