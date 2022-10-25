@@ -51,7 +51,8 @@ governing permissions and limitations under the License.
   --spectrum-progressbar-fill-color-white: var(--spectrum-white);
 }
 
-.spectrum-ProgressBar--sizeS {
+/* Meter only supports size S and L */
+.spectrum-ProgressBar--sizeS, .spectrum-Meter--sizeS {
   --spectrum-progressbar-size-default: var(--spectrum-progressbar-size-2400);
 
   --spectrum-progressbar-font-size: var(--spectrum-font-size-75);
@@ -69,7 +70,8 @@ governing permissions and limitations under the License.
   --spectrum-progressbar-spacing-top-to-text: var(--spectrum-component-top-to-text-75);
 }
 
-.spectrum-ProgressBar--sizeL {
+/* Meter only supports size S and L */
+.spectrum-ProgressBar--sizeL, .spectrum-Meter--sizeL {
   --spectrum-progressbar-size-default: var(--spectrum-progressbar-size-2500);
 
   --spectrum-progressbar-font-size: var(--spectrum-font-size-100);
