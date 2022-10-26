@@ -13,26 +13,27 @@ examples:
   - id: meter-sizes
     name: Sizing
     markup: |
-      <div style="margin: 20px 0;">
-        <div class="spectrum-ProgressBar spectrum-Meter--sizeS is-positive" value="50" role="progressbar" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100" style="width: 200px;">
-          <div class="spectrum-FieldLabel spectrum-FieldLabel--sizeS spectrum-ProgressBar-label">Storage Space</div>
-          <div class="spectrum-FieldLabel spectrum-FieldLabel--sizeS spectrum-ProgressBar-percentage">50%</div>
-          <div class="spectrum-ProgressBar-track">
-            <div class="spectrum-ProgressBar-fill" style="width: 50%;"></div>
-          </div>
+      <div class="spectrum-Examples" style="flex-direction: column;">
+        <div class="spectrum-Examples-item">
+          <div class="spectrum-ProgressBar spectrum-Meter--sizeS is-positive" value="50" role="progressbar" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100" style="width: 200px;">
+            <div class="spectrum-FieldLabel spectrum-FieldLabel--sizeS spectrum-ProgressBar-label">Storage Space</div>
+            <div class="spectrum-FieldLabel spectrum-FieldLabel--sizeS spectrum-ProgressBar-percentage">50%</div>
+            <div class="spectrum-ProgressBar-track">
+              <div class="spectrum-ProgressBar-fill" style="width: 50%;"></div>
+            </div>
         </div>
       </div>
-      <div style="margin: 20px 0; width: 200px;">
+      </br>
+      <div class="spectrum-Examples-item"  style="margin-bottom: 20px;">
         <div class="spectrum-ProgressBar spectrum-Meter--sizeL is-notice" value="80" role="progressbar" aria-valuenow="80" aria-valuemin="0" aria-valuemax="100" style="width: 200px;">
           <div class="spectrum-FieldLabel spectrum-FieldLabel--sizeL spectrum-ProgressBar-label">Storage Space</div>
           <div class="spectrum-FieldLabel spectrum-FieldLabel--sizeL spectrum-ProgressBar-percentage">80%</div>
           <div class="spectrum-ProgressBar-track">
             <div class="spectrum-ProgressBar-fill" style="width: 80%;"></div>
-          </div>
         </div>
-      
-  - id: meter-small
-    name: Variant options
+      </div>
+  - id: meter-colors
+    name: Colors
     markup: |
       <div style="margin: 20px 0;">
         <div class="spectrum-ProgressBar spectrum-Meter--sizeL is-positive" value="50" role="progressbar" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100">
@@ -69,3 +70,38 @@ examples:
           </div>
         </div>
       </div>
+  - id: meter-neutral
+    name: Neutral
+    markup: |
+      <div style="margin: 20px 0;">
+        <div class="spectrum-ProgressBar spectrum-Meter--sizeL is-positive" value="50" role="progressbar" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100">
+          <div class="spectrum-FieldLabel spectrum-FieldLabel--sizeL spectrum-ProgressBar-label">Storage Space</div>
+          <div class="spectrum-FieldLabel spectrum-FieldLabel--sizeL spectrum-ProgressBar-percentage">50%</div>
+          <div class="spectrum-ProgressBar-track">
+            <div class="spectrum-ProgressBar-fill" style="width: 50%;"></div>
+          </div>
+        </div>
+      </div>
+  - id: meter-notice
+    name: Notice
+    markup: |
+      <div style="margin: 20px 0;">
+        <div class="spectrum-ProgressBar spectrum-Meter--sizeL is-notice" value="80" role="progressbar" aria-valuenow="80" aria-valuemin="0" aria-valuemax="100">
+          <div class="spectrum-FieldLabel spectrum-FieldLabel--sizeL spectrum-ProgressBar-label">Storage Space</div>
+          <div class="spectrum-FieldLabel spectrum-FieldLabel--sizeL spectrum-ProgressBar-percentage">80%</div>
+          <div class="spectrum-ProgressBar-track">
+            <div class="spectrum-ProgressBar-fill" style="width: 80%;"></div>
+          </div>
+        </div>
+      </div>
+  - id: meter-negative
+    name: Negative 
+    markup: |
+      <div style="margin: 20px 0;">
+        <div class="spectrum-ProgressBar spectrum-Meter--sizeL is-negative" value="90" role="progressbar" aria-valuenow="90" aria-valuemin="0" aria-valuemax="100">
+          <div class="spectrum-FieldLabel spectrum-FieldLabel--sizeL spectrum-ProgressBar-label">Storage Space</div>
+          <div class="spectrum-FieldLabel spectrum-FieldLabel--sizeL spectrum-ProgressBar-percentage">90%</div>
+          <div class="spectrum-ProgressBar-track">
+            <div class="spectrum-ProgressBar-fill" style="width: 90%;"></div>
+          </div>
+        </div>
