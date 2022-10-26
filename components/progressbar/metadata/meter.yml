@@ -1,7 +1,7 @@
 name: Meter
 description: |
   Meter is implemented using the [Progress bar](progressbar.html) component. Refer to the [Progress bar API docs](progressbar.html) for API details.
-  Meter should be only used in size `S` and `L` and could use the meter t-shirt sized classnames. [The Meter table of options](https://spectrum.adobe.com/page/meter/#Table-of-options) provides further details on which variants are available.
+  Meter should be only used with `S` or `L` t-shirt sizes along with Progress Bar classes of the same t-shirt size. [The Meter table of options](https://spectrum.adobe.com/page/meter/#Table-of-options) provides further details on which variants are available.
 
   | Previous size classname         | New size classname                |
   | ------------------------------- | --------------------------------- |
@@ -23,7 +23,7 @@ examples:
         </div>
       </div>
       <div style="margin: 20px 0; width: 200px;">
-        <div class="spectrum-ProgressBar spectrum-Meter--sizeSL is-notice" value="80" role="progressbar" aria-valuenow="80" aria-valuemin="0" aria-valuemax="100" style="width: 200px;">
+        <div class="spectrum-ProgressBar spectrum-Meter--sizeL is-notice" value="80" role="progressbar" aria-valuenow="80" aria-valuemin="0" aria-valuemax="100" style="width: 200px;">
           <div class="spectrum-FieldLabel spectrum-FieldLabel--sizeL spectrum-ProgressBar-label">Storage Space</div>
           <div class="spectrum-FieldLabel spectrum-FieldLabel--sizeL spectrum-ProgressBar-percentage">80%</div>
           <div class="spectrum-ProgressBar-track">
