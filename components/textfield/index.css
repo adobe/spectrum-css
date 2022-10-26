@@ -603,25 +603,124 @@ governing permissions and limitations under the License.
 
 
 /* Text area t-shirt sizes - should these be at the top or down here? */
+.spectrum-Textfield--multiline {
+  --spectrum-text-area-min-inline-size: var(--spectrum-text-area-minimum-width);
+  --spectrum-text-area-min-block-size: var(--spectrum-text-area-minimum-height);
+
+  --spectrum-text-area-block-size: var(--spectrum-component-height-100);
+
+  --spectrum-text-area-border-radius: var(--spectrum-corner-radius-100);
+
+  --spectrum-text-area-font-size: var(--spectrum-font-size-100);
+
+  --spectrum-text-area-spacing-label-to-component: var(--spectrum-field-label-to-component);
+  --spectrum-text-area-spacing-help-text-to-component: var(--spectrum-help-text-to-component);
+  --spectrum-text-area-spacing-top-to-text: var(--spectrum-component-top-to-text-100);
+
+  --spectrum-text-area-alert-icon-size: var(--spectrum-workflow-icon-size-100);
+  --spectrum-text-area-spacing-alert-icon-to-edge: var(--spectrum-field-edge-to-alert-icon-medium);
+  --spectrum-text-area-spacing-validation-icon-to-edge: var(--spectrum-field-edge-to-validation-icon-medium);
+  --spectrum-text-area-spacing-input-to-alert-icon: var(--spectrum-field-text-to-alert-icon-medium);
+  --spectrum-text-area-spacing-input-to-validation-icon: var(--spectrum-field-text-to-alert-icon-medium);
+
+  &.spectrum-Textfield--quiet {
+    /* TODO */
+    /* --spectrum-text-area-spacing-edge-to-border: var(--spectrum-field-edge-to-border-quiet); */
+    --spectrum-text-area-spacing-label-to-component: var(--spectrum-field-label-to-component-quiet-medium);
+    --spectrum-text-area-spacing-alert-icon-to-edge: var(--spectrum-field-edge-to-alert-icon-quiet);
+    --spectrum-text-area-spacing-validation-icon-to-edge: var(--spectrum-field-edge-to-validation-icon-quiet);
+  }
+
+}
+
 .spectrum-Textfield--multiline--sizeS {
-  /* placeholder */
+  --spectrum-text-area-block-size: var(--spectrum-component-height-75);
+  --spectrum-text-area-font-size: var(--spectrum-font-size-75);
+
+  --spectrum-text-area-spacing-top-to-text: var(--spectrum-component-top-to-text-75);
+  --spectrum-text-area-spacing-bottom-to-text: var(--spectrum-component-top-to-text-75);
+
+  --spectrum-text-area-alert-icon-size: var(--spectrum-workflow-icon-size-75);
+  --spectrum-text-area-spacing-alert-icon-to-edge: var(--spectrum-field-edge-to-alert-icon-small);
+  --spectrum-text-area-spacing-validation-icon-to-edge: var(--spectrum-field-edge-to-validation-icon-small);
+  --spectrum-text-area-spacing-input-to-alert-icon: var(--spectrum-field-text-to-alert-icon-small);
+  --spectrum-text-area-spacing-input-to-validation-icon: var(--spectrum-field-text-to-validation-icon-small);
+
+  &.spectrum-Textfield--quiet {
+    --spectrum-text-area-spacing-label-to-component: var(--spectrum-field-label-to-component-quiet-small);
+  }
 }
 
 .spectrum-Textfield--multiline--sizeM {
-  /* placeholder */
+  --spectrum-text-area-block-size: var(--spectrum-component-height-100);
+  --spectrum-text-area-font-size: var(--spectrum-font-size-100);
+
+  --spectrum-text-area-spacing-top-to-text: var(--spectrum-component-top-to-text-100);
+  --spectrum-text-area-spacing-bottom-to-text: var(--spectrum-component-top-to-text-100);
+
+  --spectrum-text-area-alert-icon-size: var(--spectrum-workflow-icon-size-100);
+  --spectrum-text-area-spacing-alert-icon-to-edge: var(--spectrum-field-edge-to-alert-icon-medium);
+  --spectrum-text-area-spacing-validation-icon-to-edge: var(--spectrum-field-edge-to-validation-icon-medium);
+  --spectrum-text-area-spacing-input-to-alert-icon: var(--spectrum-field-text-to-alert-icon-medium);
+  --spectrum-text-area-spacing-input-to-validation-icon: var(--spectrum-field-text-to-validation-icon-medium);
+
+  &.spectrum-Textfield--quiet {
+    --spectrum-text-area-spacing-label-to-component: var(--spectrum-field-label-to-component-quiet-medium);
+  }
 }
 
 .spectrum-Textfield--multiline--sizeL {
-  /* placeholder */
+  --spectrum-text-area-block-size: var(--spectrum-component-height-200);
+  --spectrum-text-area-font-size: var(--spectrum-font-size-200);
+
+  --spectrum-text-area-spacing-top-to-text: var(--spectrum-component-top-to-text-200);
+  --spectrum-text-area-spacing-bottom-to-text: var(--spectrum-component-top-to-text-200);
+
+  --spectrum-text-area-alert-icon-size: var(--spectrum-workflow-icon-size-200);
+  --spectrum-text-area-spacing-alert-icon-to-edge: var(--spectrum-field-edge-to-alert-icon-large);
+  --spectrum-text-area-spacing-validation-icon-to-edge: var(--spectrum-field-edge-to-validation-icon-large);
+  --spectrum-text-area-spacing-input-to-alert-icon: var(--spectrum-field-text-to-alert-icon-large);
+  --spectrum-text-area-spacing-input-to-validation-icon: var(--spectrum-field-text-to-validation-icon-large);
+
+  &.spectrum-Textfield--quiet {
+    --spectrum-text-area-spacing-label-to-component: var(--spectrum-field-label-to-component-quiet-large);
+  }
 }
 
 .spectrum-Textfield--multiline--sizeXL {
-  /* placeholder */
-}
+  --spectrum-text-area-block-size: var(--spectrum-component-height-300);
+  --spectrum-text-area-font-size: var(--spectrum-font-size-300);
 
+  --spectrum-text-area-spacing-top-to-text: var(--spectrum-component-top-to-text-300);
+  --spectrum-text-area-spacing-bottom-to-text: var(--spectrum-component-top-to-text-300);
+
+  --spectrum-text-area-alert-icon-size: var(--spectrum-workflow-icon-size-300);
+  --spectrum-text-area-spacing-alert-icon-to-edge: var(--spectrum-field-edge-to-alert-icon-extra-large);
+  --spectrum-text-area-spacing-validation-icon-to-edge: var(--spectrum-field-edge-to-validation-icon-extra-large);
+  --spectrum-text-area-spacing-input-to-alert-icon: var(--spectrum-field-text-to-alert-icon-extra-large);
+  --spectrum-text-area-spacing-input-to-validation-icon: var(--spectrum-field-text-to-validation-icon-extra-large);
+
+  &.spectrum-Textfield--quiet {
+    --spectrum-text-area-spacing-label-to-component: var(--spectrum-field-label-to-component-quiet-extra-large);
+  }
+}
 
 /****** ▤ Text Area / Multiline ******/
 .spectrum-Textfield--multiline {
+  block-size: var(--mod-text-area-block-size, var(--spectrum-text-area-block-size));
+  min-block-size: var(--mod-spectrum-text-area-min-block-size, var(--spectrum-text-area-min-block-size));
+  min-inline-size: var(--mod-text-area-min-inline-size, var(--spectrum-text-area-min-inline-size));
+
+  font-size: var(--mod-text-area-font-size, var(--spectrum-text-area-font-size));
+
+  margin-block-start: var(--mod-text-area-spacing-label-to-component, var(--spectrum-text-area-spacing-label-to-component));
+  margin-block-end: var(--mod-text-area-spacing-help-text-to-component, var(--spectrum-text-area-spacing-help-text-to-component));
+
+  padding-block-start: var(--mod-text-area-spacing-top-to-text, var(--spectrum-text-area-spacing-top-to-text));
+  padding-block-end: var(--mod-text-area-spacing-bottom-to-text, var(--spectrum-text-area-spacing-bottom-to-text));
+
+  border-size: var(--mod-text-area-border-size, var(--spectrum-text-area-border-size));
+  border-radius: var(--mod-text-area-border-radius, var(--spectrum-text-area-border-radius));
 
   /* Input Text Area Quiet */
   &.spectrum-Textfield--quiet {
@@ -632,13 +731,28 @@ governing permissions and limitations under the License.
 
   /****** Text Area / Multiline Input ******/
   .spectrum-Textfield-input {
+    /* TODO Alert icon */
+    margin-inline-end: var(--mod-text-area-spacing-input-to-alert-icon, var(--spectrum-text-area-spacing-input-to-alert-icon));
+
+    /* TODO Validation icon */
+    margin-inline-end: var(--mod-text-area-spacing-input-to-validation-icon, var(--spectrum-text-area-spacing-input-to-validation-icon));
 
     /* Remove the default vertical scrollbar for textarea in IE. */
     overflow: auto;
   }
 
-  /****** Text Area /Multiline Icon ******/
+  /****** Text Area / Multiline Icon ******/
+
   .spectrum-Textfield-Icon {
+    /* TODO Alert icon */
+    inline-size: var(--mod-text-area-alert-icon-size, var(--spectrum-text-area-alert-icon-size));
+    block-size: var(--mod-text-area-alert-icon-size, var(--spectrum-text-area-alert-icon-size));
+
+    margin-inline-end: var(--mod-text-area-spacing-alert-icon-to-edge, var(--spectrum-text-area-spacing-alert-icon-to-edge));
+
+    /* TODO Validation icon */
+    margin-inline-end: var(--mod-text-area-spacing-validation-icon-to-edge, var(--spectrum-text-area-spacing-validation-icon-to-edge));
+
     & ~ .spectrum-Textfield-input {
       /* placeholder */
     }
