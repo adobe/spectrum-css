@@ -62,6 +62,7 @@ governing permissions and limitations under the License.
   --spectrum-textfield-character-count-font-weight: var(--spectrum-font-regular-default);
   --spectrum-textfield-character-count-font-size: var(--spectrum-font-size-75);
   --spectrum-textfield-character-count-spacing-inline: var(--spectrum-spacing-200);
+  --spectrum-textfield-character-count-spacing-block: var(--spectrum-component-bottom-to-text-75);
   --spectrum-textfield-character-count-spacing-inline-side: var(--spectrum-side-label-character-count-to-field);
   --spectrum-textfield-character-count-spacing-block-side: var(--spectrum-side-label-character-count-top-margin-medium);
 
@@ -211,7 +212,11 @@ governing permissions and limitations under the License.
   text-overflow: ellipsis;
   -webkit-appearance: none;
 
+  display: inline-grid;
+  grid-template-columns: 1fr 1fr auto;
+  grid-template-rows: auto auto;
 
+  /* TODO - find out if keyboard focus has different styles than is-focused */
   &:focus-visible,
   &.is-keyboardFocused {
     &::after {
@@ -233,6 +238,8 @@ governing permissions and limitations under the License.
   /****** LABEL ******/
   .spectrum-FieldLabel {
     margin-block-end: var(--spectrum-textfield-label-spacing-block);
+    grid-row: 1;
+    grid-column: 1 / span 2;
 
     /* Quiet Label 🤫 */
     .spectrum-Textfield--quiet & {
@@ -242,16 +249,25 @@ governing permissions and limitations under the License.
 
   /****** CHARACTER COUNT ******/
   .spectrum-Textfield-character-count {
+    display: flex;
+    align-items: flex-end;
+    vertical-align: bottom;
+    line-height: 1;
+
     margin-block-end: var(--spectrum-textfield-character-count-spacing-block);
     margin-inline-start: var(--spectrum-textfield-character-count-spacing-inline);
     font-size: var(--spectrum-textfield-character-count-font-size);
     font-family: var(--spectrum-textfield-character-count-font-family);
     font-weight: var(--spectrum-textfield-character-count-font-weight);
+    grid-row: 1;
+    grid-column: 3 / span 1;
   }
 
   /****** HELP TEXT ******/
-  .spectrum-HelpText-text {
+  .spectrum-HelpText {
     margin-block-start: var(--spectrum-textfield-helptext-spacing-block);
+    grid-row: 3;
+    grid-column: 1 / span 3;
   }
 
 
@@ -264,26 +280,40 @@ governing permissions and limitations under the License.
   }
 
   &--sidelabel {
-    .spectrum-Textfield-input {
-      /* placeholder */
+    .spectrum-Textfield-input-wrapper {
+      grid-row: 1;
+      grid-column: 2 / span 1;
     }
 
     .spectrum-FieldLabel {
       margin-inline-end: var(--spectrum-textfield-label-spacing-inline-side-label);
+      grid-row: 1;
+      grid-column: 1 / span 1;
     }
 
     /* Side Label Character Count - Positioned Inline End */
     .spectrum-Textfield-character-count {
       margin-block-start: var(--spectrum-textfield-character-count-spacing-block-side);
       margin-inline-start: var(--spectrum-textfield-character-count-spacing-inline-side);
+      grid-row: 1;
+      grid-column: 3 / span 1;
+    }
+
+    .spectrum-HelpText {
+      grid-row: 2;
+      grid-column: 2 / span 1;
     }
   }
 }
 
 /* Input wrapper enables cross-browser focus indicator */
 .spectrum-Textfield-input-wrapper {
+  box-sizing: border-box;
+  block-size: var(--spectrum-textfield-height);
+  min-inline-size: var(--spectrum-textfield-min-width);
   position: relative;
-  display: inline-block;
+  grid-row: 2;
+  grid-column: 1 / span 3;
 
   /****** Focus Indicator Base Styles ******/
   &::after {
@@ -291,7 +321,6 @@ governing permissions and limitations under the License.
                     + (var(--spectrum-textfield-focus-indicator-gap) * 2));
     inline-size: calc(100% + (var(--spectrum-textfield-focus-indicator-gap) * 2));
     position: absolute;
-    display: inline-block;
     left: 0;
     top: 0;
     margin-block-start: calc((var(--spectrum-textfield-focus-indicator-gap)
@@ -401,6 +430,8 @@ governing permissions and limitations under the License.
   box-sizing: border-box;
   block-size: var(--spectrum-textfield-height);
   min-inline-size: var(--spectrum-textfield-min-width);
+  /* use inline size so grid alignments work */
+  inline-size: 100%;
   padding-inline: var(--spectrum-textfield-spacing-inline);
   /* Use padding instead of text-indent because text-indent does not left align the text in Edge browser  */
   text-indent: 0;
