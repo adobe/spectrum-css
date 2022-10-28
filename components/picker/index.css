@@ -148,6 +148,7 @@ governing permissions and limitations under the License.
     }
   }
   .spectrum-Picker--quiet {
+    &:focus-ring,
     &:focus-visible,
     &.is-focused {
       forced-color-adjust: none;
@@ -202,6 +203,7 @@ governing permissions and limitations under the License.
     transition: box-shadow var(--spectrum-picker-animation-duration) ease-in-out;
   }
 
+  &:focus-ring,
   &:focus-visible {
     /* Remove native outline */
     outline: none;
@@ -234,7 +236,9 @@ governing permissions and limitations under the License.
     }
   }
 
+  &:focus-ring,
   &:focus-visible,
+  &:focus-ring,
   &.is-focused {
     background-color: var(--highcontrast-picker-background-color-default, var(--mod-picker-background-color-key-focus, var(--spectrum-picker-background-color-key-focus)));
 
@@ -264,6 +268,7 @@ governing permissions and limitations under the License.
       border-color: var(--highcontrast-picker-border-color-error-active, var(--mod-picker-border-color-error-active, var(--spectrum-picker-border-color-error-active)));
     }
 
+    &:focus-ring,
     &:focus-visible,
     &.is-focused {
       border-color: var(--highcontrast-picker-border-color-error-default, var(--mod-picker-border-color-error-key-focus, var(--spectrum-picker-border-color-error-key-focus)));
@@ -311,6 +316,7 @@ governing permissions and limitations under the License.
 
   &:disabled,
   &.is-disabled {
+    &:focus-ring,
     &:focus-visible {
       box-shadow: none;
     }
@@ -364,6 +370,7 @@ governing permissions and limitations under the License.
 
   color: var(--highcontrast-picker-icon-color-default, var(--mod-picker-icon-color-default, var(--spectrum-picker-icon-color-default)));
 
+  &:focus-ring,
   &:focus-visible {
     color: var(--highcontrast-picker-icon-color-key-focus, var(--mod-picker-icon-color-key-focus, var(--spectrum-picker-icon-color-key-focus)));
   }
@@ -395,6 +402,7 @@ governing permissions and limitations under the License.
   color: var(--highcontrast-picker-font-color-default, var(--mod-picker-font-color-default, var(--spectrum-picker-font-color-default)));
   background-color: transparent;
 
+  &:focus-ring,
   &:focus-visible,
   &.is-focused {
     box-shadow: 0 var(--mod-picker-focus-indicator-size, var(--spectrum-picker-focus-indicator-size)) 0 0 var(--highcontrast-picker-focus-indicator-color, var(--spectrum-picker-focus-indicator-color));
@@ -408,6 +416,7 @@ governing permissions and limitations under the License.
   &.is-open {
     background-color: transparent;
 
+    &:focus-ring,
     &:focus-visible,
     &.is-focused {
       box-shadow: 0 var(--mod-picker-focus-indicator-size, var(--spectrum-picker-focus-indicator-size)) 0 0 var(--highcontrast-picker-focus-indicator-color, var(--mod-picker-focus-indicator-color, var(--spectrum-picker-focus-indicator-color)));
@@ -415,6 +424,7 @@ governing permissions and limitations under the License.
   }
 
   &.is-invalid {
+    &:focus-ring,
     &:focus-visible,
     &.is-focused {
       box-shadow: 0 var(--mod-picker-focus-indicator-size, var(--spectrum-picker-focus-indicator-size)) 0 0 var(--highcontrast-picker-focus-indicator-color, var(--mod-picker-focus-indicator-color, var(--spectrum-picker-focus-indicator-color)));
