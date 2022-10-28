@@ -296,17 +296,12 @@ examples:
 
         <div class="spectrum-Examples-item">
           <h4>Read-only</h4>
-          <button class="spectrum-Picker spectrum-Picker--sizeM is-invalid" disabled aria-haspopup="listbox" style="width: 240px">
-            <span class="spectrum-Picker-label is-placeholder">Select a Country</span>
-            <svg class="spectrum-Icon spectrum-Icon--sizeM spectrum-Picker-validationIcon" focusable="false" aria-hidden="true" aria-label="Alert">
-              <use xlink:href="#spectrum-icon-18-Alert" />
-            </svg>
-            <svg class="spectrum-Icon spectrum-UIIcon-ChevronDown100 spectrum-Picker-menuIcon" focusable="false" aria-hidden="true">
-              <use xlink:href="#spectrum-css-icon-Chevron100" />
-            </svg>
+          <div class="spectrum-FieldLabel spectrum-FieldLabel--sizeM">Country</div>
+          <button class="spectrum-Picker spectrum-Picker--sizeM
+          spectrum-Picker--quiet spectrum-Picker is-disabled is-readonly" disabled aria-haspopup="listbox" style="width: 240px">
+            <span class="spectrum-Picker-label">United States</span>
           </button>
         </div>
-
       </div>
 
   - id: picker-sizing
