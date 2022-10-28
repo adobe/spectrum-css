@@ -402,13 +402,19 @@ governing permissions and limitations under the License.
   color: var(--highcontrast-picker-font-color-default, var(--mod-picker-font-color-default, var(--spectrum-picker-font-color-default)));
   background-color: transparent;
 
+  &:hover {
+    background-color: transparent;
+  }
+
   &:focus-ring,
   &:focus-visible,
   &.is-focused {
-    box-shadow: 0 var(--mod-picker-focus-indicator-size, var(--spectrum-picker-focus-indicator-size)) 0 0 var(--highcontrast-picker-focus-indicator-color, var(--spectrum-picker-focus-indicator-color));
+    background-color: transparent;
+
 
     &::after {
-      box-shadow: none;
+      border-radius: 0;
+      box-shadow: 0 var(--mod-picker-focus-indicator-size, var(--spectrum-picker-focus-indicator-size)) 0 0 var(--highcontrast-picker-focus-indicator-color, var(--spectrum-picker-focus-indicator-color));
     }
   }
 
@@ -419,7 +425,9 @@ governing permissions and limitations under the License.
     &:focus-ring,
     &:focus-visible,
     &.is-focused {
-      box-shadow: 0 var(--mod-picker-focus-indicator-size, var(--spectrum-picker-focus-indicator-size)) 0 0 var(--highcontrast-picker-focus-indicator-color, var(--mod-picker-focus-indicator-color, var(--spectrum-picker-focus-indicator-color)));
+      &::after {
+        box-shadow: 0 var(--mod-picker-focus-indicator-size, var(--spectrum-picker-focus-indicator-size)) 0 0 var(--highcontrast-picker-focus-indicator-color, var(--mod-picker-focus-indicator-color, var(--spectrum-picker-focus-indicator-color)));
+      }
     }
   }
 
@@ -427,7 +435,9 @@ governing permissions and limitations under the License.
     &:focus-ring,
     &:focus-visible,
     &.is-focused {
-      box-shadow: 0 var(--mod-picker-focus-indicator-size, var(--spectrum-picker-focus-indicator-size)) 0 0 var(--highcontrast-picker-focus-indicator-color, var(--mod-picker-focus-indicator-color, var(--spectrum-picker-focus-indicator-color)));
+      &::after {
+        box-shadow: 0 var(--mod-picker-focus-indicator-size, var(--spectrum-picker-focus-indicator-size)) 0 0 var(--highcontrast-picker-focus-indicator-color, var(--mod-picker-focus-indicator-color, var(--spectrum-picker-focus-indicator-color)));
+      }
     }
   }
 
