@@ -237,9 +237,10 @@ governing permissions and limitations under the License.
   &:focus-visible,
   &.is-focused {
     background-color: var(--highcontrast-picker-background-color-default, var(--mod-picker-background-color-key-focus, var(--spectrum-picker-background-color-key-focus)));
-    border-color: transparent;
 
-    box-shadow: 0 0 0 var(--mod-picker-border-size, var(--spectrum-picker-border-size)) var(--highcontrast-picker-border-color-key-focus, var(--mod-picker-border-color-key-focus, var(--spectrum-picker-border-color-key-focus)));
+    border-color: var(--highcontrast-picker-border-color-key-focus, var(--mod-picker-border-color-key-focus, var(--spectrum-picker-border-color-key-focus)));
+    border-size: var(--mod-picker-border-size, var(--spectrum-picker-border-size));
+
     color: var(--highcontrast-picker-font-color-key-focus, var(--mod-picker-font-color-key-focus, var(--spectrum-picker-font-color-key-focus)));
 
     &.is-placeholder {
