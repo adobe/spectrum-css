@@ -10,10 +10,13 @@ sections:
       Textfield now has t-shirt sizes. Icon sizes must match each t-shirt size.
 
       ### Label
-      Textfield must always have a label. Label placement is top or on the side.
+      Textfield must always have a label. Label placement is top or on the side (start).
+
+      ### Character Count
+      Textfield now has an optional character count. The character count moves to the side (end) when the label position is on the side.
 
       ### Composition
-      As of 3.0.0, Textfield is now composed the same way a DecoratedTextfield was preivously.
+      As of 3.0.0, Textfield is now composed the same way a DecoratedTextfield was previously.
 
       That is, the outer element `div.spectrum-Textfield` contains a `input.spectrum-Textfield-input`.
 
@@ -260,7 +263,7 @@ examples:
           </svg>
           <input id="textfield-sm-invalid" type="text" placeholder="Enter your name" name="field" value="Invalid input" class="spectrum-Textfield-input" pattern="[\d]+" required>
         </div>
-        <div class="spectrum-HelpText spectrum-HelpText--sizeS spectrum-HelpText--neutral">
+        <div class="spectrum-HelpText spectrum-HelpText--sizeS spectrum-HelpText--negative">
           <div class="spectrum-HelpText-text">Create a password with at least 8 characters.</div>
         </div>
       </div>
@@ -273,7 +276,7 @@ examples:
           </svg>
           <input id="textfield-md-invalid" type="text" placeholder="Enter your name" name="field" value="Invalid input" class="spectrum-Textfield-input" pattern="[\d]+" required>
         </div>
-        <div class="spectrum-HelpText spectrum-HelpText--sizeM spectrum-HelpText--neutral">
+        <div class="spectrum-HelpText spectrum-HelpText--sizeM spectrum-HelpText--negative">
           <div class="spectrum-HelpText-text">Create a password with at least 8 characters.</div>
         </div>
       </div>
@@ -286,7 +289,7 @@ examples:
           </svg>
           <input id="textfield-l-invalid" type="text" placeholder="Enter your name" name="field" value="Invalid input" class="spectrum-Textfield-input" pattern="[\d]+" required>
         </div>
-        <div class="spectrum-HelpText spectrum-HelpText--sizeL spectrum-HelpText--neutral">
+        <div class="spectrum-HelpText spectrum-HelpText--sizeL spectrum-HelpText--negative">
           <div class="spectrum-HelpText-text">Create a password with at least 8 characters.</div>
         </div>
       </div>
@@ -299,7 +302,7 @@ examples:
           </svg>
           <input id="textfield-xl-invalid" type="text" placeholder="Enter your name" name="field" value="Invalid input" class="spectrum-Textfield-input" pattern="[\d]+" required>
         </div>
-        <div class="spectrum-HelpText spectrum-HelpText--sizeXL spectrum-HelpText--neutral">
+        <div class="spectrum-HelpText spectrum-HelpText--sizeXL spectrum-HelpText--negative">
           <div class="spectrum-HelpText-text">Create a password with at least 8 characters.</div>
         </div>
       </div>

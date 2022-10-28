@@ -84,9 +84,10 @@ governing permissions and limitations under the License.
   --spectrum-textfield-text-color-active: var(--spectrum-neutral-content-color-down);
   --spectrum-textfield-text-color-focus: var(--spectrum-neutral-content-color-key-focus);
   --spectrum-textfield-text-color-disabled: var(--spectrum-disabled-content-color);
+  --spectrum-textfield-text-color-readonly: var(--spectrum-neutral-content-color-default);
 
-  --spectrum-textfield-content-color-invalid: var(--spectrum-negative-visual-color);
-  --spectrum-textfield-content-color-valid: var(--spectrum-positive-visual-color);
+  --spectrum-textfield-icon-color-invalid: var(--spectrum-negative-visual-color);
+  --spectrum-textfield-icon-color-valid: var(--spectrum-positive-visual-color);
 
   --spectrum-textfield-focus-indicator-color: var(--spectrum-focus-indicator-color);
 }
@@ -172,11 +173,33 @@ governing permissions and limitations under the License.
 /****** WHCM ******/
 @media (forced-colors: active) {
   .spectrum-Textfield {
-  /* placeholder */
+    --spectrum-textfield-border-color-hover: Highlight;
+    --spectrum-textfield-border-color-active: Highlight;
+    --spectrum-textfield-border-color-focus: Highlight;
 
-    /* retain focus indicator color */
-    &::after {
-      forced-color-adjust: none;
+    --spectrum-textfield-border-color-negative-default: Highlight;
+    --spectrum-textfield-border-color-negative-hover: Highlight;
+    --spectrum-textfield-border-color-negative-active: Highlight;
+    --spectrum-textfield-border-color-negative-focus: Highlight;
+
+    --spectrum-textfield-text-color-default: GrayText;
+    --spectrum-textfield-text-color-hover: GrayText;
+    --spectrum-textfield-text-color-active: GrayText;
+    --spectrum-textfield-text-color-focus: GrayText;
+    --spectrum-textfield-text-color-disabled: GrayText;
+    --spectrum-textfield-text-color-readonly: CanvasText;
+
+    --spectrum-textfield-focus-indicator-color: Highlight;
+
+    &.is-focused,
+    &.is-keyboardFocused,
+    &:focus-within {
+      .spectrum-Textfield-input-wrapper {
+        /* focus indicator is focused state */
+        &::after {
+          forced-color-adjust: none;
+        }
+      }
     }
   }
 }
@@ -224,10 +247,23 @@ governing permissions and limitations under the License.
   &.is-focused,
   &.is-keyboardFocused,
   &:focus-within {
+
     .spectrum-Textfield-input-wrapper {
       /* focus indicator is focused state */
       &::after {
         border-color: var(--spectrum-textfield-focus-indicator-color);
+        border-width: var(--spectrum-textfield-focus-indicator-thickness);
+      }
+    }
+  }
+
+  &--quiet.is-focused,
+  &--quiet.is-keyboardFocused,
+  &--quiet:focus-within {
+    .spectrum-Textfield-input-wrapper {
+      /* quiet focus indicator is focused state */
+      &::after {
+        border-width: 0 0 var(--spectrum-textfield-focus-indicator-thickness) 0;
       }
     }
   }
@@ -270,7 +306,6 @@ governing permissions and limitations under the License.
         margin-inline-start: 0;
         margin-block-start: 0;
         border-radius: 0;
-        border-width: 0 0 var(--spectrum-textfield-focus-indicator-thickness) 0;
       }
     }
 
@@ -309,6 +344,30 @@ governing permissions and limitations under the License.
       grid-column: 2 / span 1;
     }
   }
+
+  /****** Variant - Disabled ******/
+  &.is-disabled,
+  &.is-disabled:hover {
+    .spectrum-Textfield-validationIcon {
+      color: transparent;
+    }
+
+    /* Disabled validation icons are transparent */
+    &.is-invalid,
+    &.is-valid {
+      .spectrum-Textfield-validationIcon {
+        color: transparent;
+      }
+    }
+  }
+
+  /****** Variant - ReadOnly ******/
+  &.is-readOnly
+  &.is-readOnly:hover {
+    .spectrum-Textfield-validationIcon {
+      color: transparent;
+    }
+  }
 }
 
 /****** Input Wrapper for input and focus indicator ******/
@@ -338,7 +397,7 @@ governing permissions and limitations under the License.
     content: '';
     border-color: transparent;
     border-style: solid;
-    border-width: var(--spectrum-textfield-focus-indicator-thickness);
+    border-width: 0;
     border-radius: calc(var(--spectrum-textfield-corner-radius)
                         + var(--spectrum-textfield-border-width)
                         + var(--spectrum-textfield-focus-indicator-gap));
@@ -392,7 +451,7 @@ governing permissions and limitations under the License.
     margin-block-end: var(--spectrum-textfield-icon-spacing-block-invalid);
     margin-inline-start: var(--spectrum-textfield-icon-spacing-inline-start-invalid);
     margin-inline-end: var(--spectrum-textfield-icon-spacing-inline-end-invalid);
-    color: var(--spectrum-textfield-content-color-invalid);
+    color: var(--spectrum-textfield-icon-color-invalid);
 
     /* Quiet Invalid Icon ⚠️🤫 */
     .spectrum-Textfield--quiet& {
@@ -406,7 +465,7 @@ governing permissions and limitations under the License.
     margin-block-end: var(--spectrum-textfield-icon-spacing-block-valid);
     margin-inline-start: var(--spectrum-textfield-icon-spacing-inline-start-valid);
     margin-inline-end: var(--spectrum-textfield-icon-spacing-inline-end-valid);
-    color: var(--spectrum-textfield-content-color-valid);
+    color: var(--spectrum-textfield-icon-color-valid);
 
     /* Quiet Valid Icon ✅🤫 */
     .spectrum-Textfield--quiet& {
@@ -435,7 +494,6 @@ governing permissions and limitations under the License.
   font-size: var(--spectrum-textfield-placeholder-font-size);
   font-family: var(--spectrum-textfield-font-family);
   font-weight: var(--spectrum-textfield-font-weight);
-  color: var(--spectrum-textfield-text-color-default);
 
   /**** Browser Mitigations for Input *****/
   /* Remove the margin for input in Firefox and Safari. */
@@ -487,6 +545,7 @@ governing permissions and limitations under the License.
     opacity: 1;
     margin-block-start: var(--spectrum-textfield-spacing-block-start);
     margin-block-end: var(--spectrum-textfield-spacing-block-end);
+    color: var(--spectrum-textfield-text-color-default);
     transition: color var(--spectrum-animation-duration-100) ease-in-out;
   }
 
@@ -547,31 +606,6 @@ governing permissions and limitations under the License.
   }
 
   /*** TODO - should all variant styles be in the same place up top? ***/
-  /****** Input Variant - ReadOnly ******/
-  .spectrum-Textfield.is-readOnly &,
-  .spectrum-Textfield.is-readOnly:hover &,
-  &:read-only {
-    background-color: transparent;
-    border-color: transparent;
-  /* placeholder - only text is visible, no background or border */
-  }
-
-  /****** Input Variant - Disabled 🚫 ******/
-  &:disabled,
-  .spectrum-Textfield.is-disabled &,
-  .spectrum-Textfield.is-disabled:hover & {
-    background-color: var(--spectrum-textfield-background-color-disabled);
-
-    /* Disable the resize functionality when disabled */
-    resize: none;
-
-    /* The opacity must be set to 1 */
-    opacity: 1;
-
-    &::placeholder {
-      color: var(--spectrum-textfield-text-color-disabled);
-    }
-  }
 
   /****** Input Variant - Quiet 🤫 ******/
   .spectrum-Textfield--quiet &,
@@ -582,6 +616,7 @@ governing permissions and limitations under the License.
     margin-block-end: var(--spectrum-textfield-spacing-block-quiet);
     padding-inline: var(--spectrum-textfield-spacing-inline-quiet);
     background-color: transparent;
+    border-color: var(--spectrum-textfield-background-color-disabled);
     border-radius: 0;
 
     /* Treat all quiet inputs and text areas the same */
@@ -612,6 +647,36 @@ governing permissions and limitations under the License.
     .spectrum-Textfield.is-invalid.is-keyboardFocused &,
     .spectrum-Textfield.is-invalid.is-focused & {
       border-color: var(--spectrum-textfield-border-color-negative-focus);
+    }
+  }
+
+  /****** Input Variant - Disabled 🚫 ******/
+  &:disabled,
+  .spectrum-Textfield.is-disabled &,
+  .spectrum-Textfield.is-disabled:hover & {
+    background-color: var(--spectrum-textfield-background-color-disabled);
+    border-color: transparent;
+
+    /* Disable the resize functionality when disabled */
+    resize: none;
+
+    /* The opacity must be set to 1 */
+    opacity: 1;
+
+    &::placeholder {
+      color: var(--spectrum-textfield-text-color-disabled);
+    }
+  }
+
+  /****** Input Variant - ReadOnly ******/
+  .spectrum-Textfield.is-readOnly &,
+  .spectrum-Textfield.is-readOnly:hover &,
+  &:read-only {
+    background-color: transparent;
+    border-color: transparent;
+
+    &::placeholder {
+      color: var(--spectrum-textfield-text-color-readonly);
     }
   }
 }
