@@ -22,16 +22,18 @@ governing permissions and limitations under the License.
     --spectrum-picker-popover-quiet-offset-x: 15px;
   }
 
-  /* Font */
+  /* font */
   --spectrum-picker-font-size: var(--spectrum-font-size-100);
 
-  /* Size */
+  /* height and width */
   --spectrum-picker-min-inline-size: var(--spectrum-picker-minimum-width-multiplier);
   --spectrum-picker-block-size: var(--spectrum-component-height-100);
+
+  /* border */
   --spectrum-picker-border-size: var(--spectrum-border-width-100);
   --spectrum-picker-border-radius: var(--spectrum-corner-radius-100);
 
-  /* Spacing */
+  /* spacing */
   --spectrum-picker-spacing-edge-to-text: var(--spectrum-component-edge-to-text-100);
   --spectrum-picker-spacing-edge-to-text-quiet: var(--spectrum-field-edge-to-text-quiet);
 
@@ -42,10 +44,10 @@ governing permissions and limitations under the License.
   --spectrum-picker-spacing-label-to-picker-quiet: var(--spectrum-field-label-to-component-quiet-medium);
   --spectrum-picker-spacing-picker-to-popover: var(--spectrum-component-to-menu-medium);
 
-  /* Animation */
+  /* animation */
   --spectrum-picker-animation-duration: var(--spectrum-animation-duration-100);
 
-  /* Color */
+  /* color */
   --spectrum-picker-font-color-default: var(--spectrum-neutral-content-color-default);
   --spectrum-picker-font-color-hover: var(--spectrum-neutral-content-color-hover);
   --spectrum-picker-font-color-active: var(--spectrum-neutral-content-color-down);
