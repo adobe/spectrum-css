@@ -383,14 +383,6 @@ governing permissions and limitations under the License.
   transform: translateY(var(--mod-component-to-menu-medium, var(--spectrum-component-to-menu-medium)));
 }
 
-.spectrum-Picker-popover--quiet {
-  margin-inline-start: calc(
-    -1 * calc(
-      var(--mod-picker-popover-quiet-offset-x, var(--spectrum-picker-popover-quiet-offset-x)) + var(--mod-picker-border-size, var(--spectrum-picker-border-size))
-    )
-  );
-}
-
 .spectrum-Picker--quiet {
   border: none;
   border-radius: 0;
