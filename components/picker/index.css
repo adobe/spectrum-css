@@ -30,7 +30,7 @@ governing permissions and limitations under the License.
   --spectrum-picker-block-size: var(--spectrum-component-height-100);
 
   /* border */
-  --spectrum-picker-border-size: var(--spectrum-border-width-100);
+  --spectrum-picker-border-width: var(--spectrum-border-width-100);
   --spectrum-picker-border-radius: var(--spectrum-corner-radius-100);
 
   /* spacing */
@@ -200,7 +200,6 @@ governing permissions and limitations under the License.
     top: 0;
     margin: calc((var(--spectrum-picker-focus-indicator-gap) + var(--spectrum-picker-border-size)) * -1);
     border-radius: var(--spectrum-picker-focus-indicator-border-radius-adjusted);
-    transition: box-shadow var(--spectrum-picker-animation-duration) ease-in-out;
   }
 
   &:focus-ring,
@@ -243,7 +242,7 @@ governing permissions and limitations under the License.
     background-color: var(--highcontrast-picker-background-color-default, var(--mod-picker-background-color-key-focus, var(--spectrum-picker-background-color-key-focus)));
 
     border-color: var(--highcontrast-picker-border-color-key-focus, var(--mod-picker-border-color-key-focus, var(--spectrum-picker-border-color-key-focus)));
-    border-size: var(--mod-picker-border-size, var(--spectrum-picker-border-size));
+    border-width: var(--mod-picker-border-width, var(--spectrum-picker-border-width));
 
     color: var(--highcontrast-picker-font-color-key-focus, var(--mod-picker-font-color-key-focus, var(--spectrum-picker-font-color-key-focus)));
 
@@ -272,7 +271,7 @@ governing permissions and limitations under the License.
     &:focus-visible,
     &.is-focused {
       border-color: var(--highcontrast-picker-border-color-error-default, var(--mod-picker-border-color-error-key-focus, var(--spectrum-picker-border-color-error-key-focus)));
-      box-shadow: 0 0 0 var(--mod-picker-border-size, var(--spectrum-picker-border-size)) var(--highcontrast-picker-border-color-error-default, var(--mod-picker-border-color-error-key-focus, var(--spectrum-picker-border-color-error-key-focus)));
+      box-shadow: 0 0 0 var(--mod-picker-border-width, var(--spectrum-picker-border-width)) var(--highcontrast-picker-border-color-error-default, var(--mod-picker-border-color-error-key-focus, var(--spectrum-picker-border-color-error-key-focus)));
     }
   }
 
@@ -284,7 +283,7 @@ governing permissions and limitations under the License.
 
   &:disabled,
   &.is-disabled {
-    border-width: var(--mod-picker-border-size, var(--spectrum-picker-border-size));
+    border-width: var(--mod-picker-border-width, var(--spectrum-picker-border-width));
     cursor: default;
 
     background-color: var(--highcontrast-picker-background-color-disabled, var(--mod-picker-background-color-disabled, var(--spectrum-picker-background-color-disabled)));
@@ -411,10 +410,10 @@ governing permissions and limitations under the License.
   &.is-focused {
     background-color: transparent;
 
-
     &::after {
       border-radius: 0;
       box-shadow: 0 var(--mod-picker-focus-indicator-size, var(--spectrum-picker-focus-indicator-size)) 0 0 var(--highcontrast-picker-focus-indicator-color, var(--spectrum-picker-focus-indicator-color));
+      margin: calc((var(--spectrum-picker-focus-indicator-gap) + var(--spectrum-picker-border-size)) * -1) 0;
     }
   }
 
@@ -435,6 +434,8 @@ governing permissions and limitations under the License.
     &:focus-ring,
     &:focus-visible,
     &.is-focused {
+
+      box-shadow: none;
       &::after {
         box-shadow: 0 var(--mod-picker-focus-indicator-size, var(--spectrum-picker-focus-indicator-size)) 0 0 var(--highcontrast-picker-focus-indicator-color, var(--mod-picker-focus-indicator-color, var(--spectrum-picker-focus-indicator-color)));
       }
