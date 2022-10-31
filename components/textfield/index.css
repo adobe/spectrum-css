@@ -237,7 +237,7 @@ governing permissions and limitations under the License.
 
   /* Grid layout for child components */
   display: inline-grid;
-  grid-template-columns: 1fr 1fr auto;
+  grid-template-columns: auto auto auto;
   grid-template-rows: auto auto;
 
   /* FOCUS STATE GUIDE */
@@ -245,9 +245,7 @@ governing permissions and limitations under the License.
   /* .is-keyboardFocused - spectrum-Textfield gets keyboard tab focus while child input gets :focus-ring */
   /* :focus-within - parent selector which activates visible focus indicator and :focus on the input */
   &.is-focused,
-  &.is-keyboardFocused,
-  &:focus-within {
-
+  &.is-keyboardFocused {
     .spectrum-Textfield-input-wrapper {
       /* focus indicator is focused state */
       &::after {
@@ -279,10 +277,13 @@ governing permissions and limitations under the License.
   .spectrum-Textfield-character-count {
     grid-row: 1;
     grid-column: 3 / span 1;
-    display: flex;
+    display: inline-flex;
     align-items: flex-end;
+    justify-content: flex-end;
+    width: auto;
     margin-block-end: var(--spectrum-textfield-character-count-spacing-block);
     margin-inline-start: var(--spectrum-textfield-character-count-spacing-inline);
+    margin-inline-end: 0;
     font-size: var(--spectrum-textfield-character-count-font-size);
     font-family: var(--spectrum-textfield-character-count-font-family);
     font-weight: var(--spectrum-textfield-character-count-font-weight);
