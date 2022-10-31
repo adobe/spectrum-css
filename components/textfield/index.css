@@ -240,32 +240,6 @@ governing permissions and limitations under the License.
   grid-template-columns: auto auto auto;
   grid-template-rows: auto auto;
 
-  /* FOCUS STATE GUIDE */
-  /* .is-focused - spectrum-Textfield uses this to demonstrate focus appearance in the YML */
-  /* .is-keyboardFocused - spectrum-Textfield gets keyboard tab focus while child input gets :focus-ring */
-  /* :focus-within - parent selector which activates visible focus indicator and :focus on the input */
-  &.is-focused,
-  &.is-keyboardFocused {
-    .spectrum-Textfield-input-wrapper {
-      /* focus indicator is focused state */
-      &::after {
-        border-color: var(--spectrum-textfield-focus-indicator-color);
-        border-width: var(--spectrum-textfield-focus-indicator-thickness);
-      }
-    }
-  }
-
-  &--quiet.is-focused,
-  &--quiet.is-keyboardFocused,
-  &--quiet:focus-within {
-    .spectrum-Textfield-input-wrapper {
-      /* quiet focus indicator is focused state */
-      &::after {
-        border-width: 0 0 var(--spectrum-textfield-focus-indicator-thickness) 0;
-      }
-    }
-  }
-
   /****** LABEL ******/
   .spectrum-FieldLabel {
     grid-row: 1;
@@ -295,83 +269,17 @@ governing permissions and limitations under the License.
     grid-column: 1 / span 3;
     margin-block-start: var(--spectrum-textfield-helptext-spacing-block);
   }
-
-/***** VARIANTS *****/
-  /* Quiet Variant 🤫 */
-  &--quiet {
-    .spectrum-Textfield-input-wrapper {
-      /* Quiet Focus Indicator */
-      &::after {
-        inline-size: 100%;
-        block-size: calc(var(--spectrum-textfield-height) + var(--spectrum-textfield-focus-indicator-gap));
-        margin-inline-start: 0;
-        margin-block-start: 0;
-        border-radius: 0;
-      }
-    }
-
-    .spectrum-FieldLabel {
-      margin-block-end: var(--spectrum-textfield-label-spacing-block-quiet);
-    }
-
-    .spectrum-Textfield-character-count {
-      margin-block-end: var(--spectrum-textfield-character-count-spacing-block-quiet);
-    }
-  }
-
-  /* Side label layout variant */
-  &--sidelabel {
-    .spectrum-Textfield-input-wrapper {
-      grid-row: 1;
-      grid-column: 2 / span 1;
-    }
-
-    .spectrum-FieldLabel {
-      grid-row: 1;
-      grid-column: 1 / span 1;
-      margin-inline-end: var(--spectrum-textfield-label-spacing-inline-side-label);
-    }
-
-    .spectrum-Textfield-character-count {
-      grid-row: 1;
-      grid-column: 3 / span 1;
-      align-items: flex-start;
-      margin-block-start: var(--spectrum-textfield-character-count-spacing-block-side);
-      margin-inline-start: var(--spectrum-textfield-character-count-spacing-inline-side);
-    }
-
-    .spectrum-HelpText {
-      grid-row: 2;
-      grid-column: 2 / span 1;
-    }
-  }
-
-  /****** Variant - Disabled ******/
-  &.is-disabled,
-  &.is-disabled:hover {
-    .spectrum-Textfield-validationIcon {
-      color: transparent;
-    }
-
-    /* Disabled validation icons are transparent */
-    &.is-invalid,
-    &.is-valid {
-      .spectrum-Textfield-validationIcon {
-        color: transparent;
-      }
-    }
-  }
-
-  /****** Variant - ReadOnly ******/
-  &.is-readOnly
-  &.is-readOnly:hover {
-    .spectrum-Textfield-validationIcon {
-      color: transparent;
-    }
-  }
 }
 
-/****** Input Wrapper for input and focus indicator ******/
+/****** VALIDATION ICONS - ⚠️ and ✅ ******/
+.spectrum-Textfield-validationIcon {
+  position: absolute;
+  pointer-events: all;
+  right: 0;
+  bottom: 0;
+}
+
+/****** INPUT WRAPPER for input and focus indicator ******/
 .spectrum-Textfield-input-wrapper {
   grid-row: 2;
   grid-column: 1 / span 3;
@@ -405,77 +313,7 @@ governing permissions and limitations under the License.
   }
 }
 
-/****** TODO - Icon Left - What is this for? Search? No examples in YML ******/
-/* styles the left icon for textfield, assumes usage of workflow icon sizing (18px by 18px) */
-.spectrum-Textfield-icon {
-  display: block;
-  position: absolute;
-  block-size: /* placeholder */;
-  inline-size: /* placeholder */;
-  inset-inline-start: /* placeholder */;
-  inset-block-start: /* placeholder */;
-
-  .spectrum-Textfield--quiet & {
-    /* Since quiet button has no left padding, push the icon all the way to the left */
-    inset-inline-start: 0;
-
-    /* styles the textfield properly if the left icon is provided */
-    & ~ .spectrum-Textfield-input {
-      padding-inline-start: /* placeholder */;
-    }
-  }
-
-  /* styles the textfield properly if the left icon is provided */
-  & + .spectrum-Textfield-input {
-    /* Use padding instead of text-indent so long strings don't overlap the icon */
-    padding-inline-start: /* placeholder */;
-  }
-}
-
-/****** Validation Icons - ⚠️ and ✅ ******/
-.spectrum-Textfield-validationIcon {
-  position: absolute;
-  pointer-events: all;
-  right: 0;
-  bottom: 0;
-
-  /* Quiet Icons 🤫 */
-  .spectrum-Textfield--quiet & {
-    padding-inline-end: 0;
-  }
-
-  /*** Invalid Icon ⚠️ ***/
-  .spectrum-Textfield.is-invalid & {
-    block-size: var(--spectrum-textfield-icon-size-invalid);
-    inline-size: var(--spectrum-textfield-icon-size-invalid);
-    margin-block-start: var(--spectrum-textfield-icon-spacing-block-invalid);
-    margin-block-end: var(--spectrum-textfield-icon-spacing-block-invalid);
-    margin-inline-start: var(--spectrum-textfield-icon-spacing-inline-start-invalid);
-    margin-inline-end: var(--spectrum-textfield-icon-spacing-inline-end-invalid);
-    color: var(--spectrum-textfield-icon-color-invalid);
-
-    /* Quiet Invalid Icon ⚠️🤫 */
-    .spectrum-Textfield--quiet& {
-      margin-inline-end: var(--spectrum-textfield-icon-spacing-inline-end-quiet-invalid);
-    }
-  }
-
-  /* Valid Icon ✅ */
-  .spectrum-Textfield.is-valid & {
-    margin-block-start: var(--spectrum-textfield-icon-spacing-block-valid);
-    margin-block-end: var(--spectrum-textfield-icon-spacing-block-valid);
-    margin-inline-start: var(--spectrum-textfield-icon-spacing-inline-start-valid);
-    margin-inline-end: var(--spectrum-textfield-icon-spacing-inline-end-valid);
-    color: var(--spectrum-textfield-icon-color-valid);
-
-    /* Quiet Valid Icon ✅🤫 */
-    .spectrum-Textfield--quiet& {
-      margin-inline-end: var(--spectrum-textfield-icon-spacing-inline-end-quiet-valid);
-    }
-  }
-}
-
-/****** TEX FIELD INPUT ******/
+/****** INPUT ******/
 .spectrum-Textfield-input {
   box-sizing: border-box;
   block-size: var(--spectrum-textfield-height);
@@ -563,125 +401,296 @@ governing permissions and limitations under the License.
       font-style: normal;
     }
   }
+}
 
-  /****** Hover ******/
-  &:hover,
-  .spectrum-Textfield:hover & {
-    border-color: var(--spectrum-textfield-border-color-hover);
 
-    &::placeholder {
-      color: var(--spectrum-textfield-text-color-hover);
+.spectrum-Textfield {
+  /*** Valid ✅ ***/
+  &.is-valid {
+    .spectrum-Textfield-validationIcon {
+      margin-block-start: var(--spectrum-textfield-icon-spacing-block-valid);
+      margin-block-end: var(--spectrum-textfield-icon-spacing-block-valid);
+      margin-inline-start: var(--spectrum-textfield-icon-spacing-inline-start-valid);
+      margin-inline-end: var(--spectrum-textfield-icon-spacing-inline-end-valid);
+      color: var(--spectrum-textfield-icon-color-valid);
     }
   }
 
-  /****** Active ******/
-  &:active,
-  .spectrum-Textfield:active & {
-    border-color: var(--spectrum-textfield-border-color-active);
+  /*** Invalid ⚠️ ***/
+  &.is-invalid {
+    .spectrum-Textfield-validationIcon {
+      block-size: var(--spectrum-textfield-icon-size-invalid);
+      inline-size: var(--spectrum-textfield-icon-size-invalid);
+      margin-block-start: var(--spectrum-textfield-icon-spacing-block-invalid);
+      margin-block-end: var(--spectrum-textfield-icon-spacing-block-invalid);
+      margin-inline-start: var(--spectrum-textfield-icon-spacing-inline-start-invalid);
+      margin-inline-end: var(--spectrum-textfield-icon-spacing-inline-end-invalid);
+      color: var(--spectrum-textfield-icon-color-invalid);
+    }
 
-    &::placeholder {
-      color: var(--spectrum-textfield-text-color-active);
+    .spectrum-Textfield-input {
+      border-color: var(--spectrum-textfield-border-color-negative-default);
+    }
+
+    &:hover {
+      .spectrum-Textfield-input {
+        border-color: var(--spectrum-textfield-border-color-negative-hover);
+      }
+    }
+
+    &:active {
+      .spectrum-Textfield-input {
+        border-color: var(--spectrum-textfield-border-color-negative-active);
+      }
+    }
+
+    /* Mouse Focus */
+    &.is-focused {
+      .spectrum-Textfield-input {
+        border-color: var(--spectrum-textfield-border-color-negative-focus);
+      }
+    }
+
+    /* Keyboard Focus */
+    &.is-keyboardFocused,
+    &:focus-within {
+      .spectrum-Textfield-input,
+      .spectrum-Textfield-input:focus-ring {
+        border-color: var(--spectrum-textfield-border-color-negative-focus);
+      }
     }
   }
 
-  /****** Focus ******/
-  /* TODO - find out if keyboard focus has different styles than is-focused */
-  &:focus,
-  .spectrum-Textfield.is-focused & {
-    border-color: var(--spectrum-textfield-border-color-focus);
-
-    &::placeholder {
-      color: var(--spectrum-textfield-text-color-focus);
-    }
-  }
-
-  /* TODO - find out if keyboard focus has different styles than is-focused */
-  &:focus-visible,
-  &:focus-ring,
-  .spectrum-Textfield.is-keyboardFocused & {
-    border-color: var(--spectrum-textfield-border-color-focus);
-
-    &::placeholder {
-      color: var(--spectrum-textfield-text-color-focus);
-    }
-  }
-
-  /*** TODO - should all variant styles be in the same place up top? ***/
-
-  /****** Input Variant - Quiet 🤫 ******/
-  .spectrum-Textfield--quiet &,
-  .spectrum-Textfield--quiet &:disabled,
-  .spectrum-Textfield--quiet.is-disabled & {
-    border-block-start-width: 0;
-    border-inline-width: 0;
-    margin-block-end: var(--spectrum-textfield-spacing-block-quiet);
-    padding-inline: var(--spectrum-textfield-spacing-inline-quiet);
-    background-color: transparent;
-    border-color: var(--spectrum-textfield-background-color-disabled);
-    border-radius: 0;
-
-    /* Treat all quiet inputs and text areas the same */
-    resize: none;
-    overflow-y: hidden;
-  }
-
-  /****** Input - Valid ✅ ******/
-  .spectrum-Textfield.is-valid & {
-    /* placeholder - remove if not needed */
-  }
-
-  /****** Input - Invalid ⚠️ ******/
-  .spectrum-Textfield.is-invalid & {
-    border-color: var(--spectrum-textfield-border-color-negative-default);
-
-    &:hover,
-    .spectrum-Textfield.is-invalid:hover & {
-      border-color: var(--spectrum-textfield-border-color-negative-hover);
-    }
-
-    &:active,
-    .spectrum-Textfield.is-invalid:active & {
-      border-color: var(--spectrum-textfield-border-color-negative-active);
-    }
-
-    .spectrum-Textfield.is-invalid:focus-visible &,
-    .spectrum-Textfield.is-invalid.is-keyboardFocused &,
-    .spectrum-Textfield.is-invalid.is-focused & {
-      border-color: var(--spectrum-textfield-border-color-negative-focus);
-    }
-  }
-
-  /****** Input Variant - Disabled 🚫 ******/
+  /****** State - Disabled 🚫 ******/
   &:disabled,
-  .spectrum-Textfield.is-disabled &,
-  .spectrum-Textfield.is-disabled:hover & {
-    background-color: var(--spectrum-textfield-background-color-disabled);
-    border-color: transparent;
+  &.is-disabled,
+  &.is-disabled:hover {
 
-    /* Disable the resize functionality when disabled */
-    resize: none;
+    /* Disabled validation icons are transparent */
+    .spectrum-Textfield-validationIcon {
+      color: transparent;
+    }
 
-    /* The opacity must be set to 1 */
-    opacity: 1;
+    .spectrum-Textfield-input {
+      background-color: var(--spectrum-textfield-background-color-disabled);
+      border-color: transparent;
+      //color: var(--spectrum-textfield-text-color-disabled);
 
-    &::placeholder {
-      color: var(--spectrum-textfield-text-color-disabled);
+      /* Disable the resize functionality when disabled */
+      resize: none;
+
+      /* The opacity must be set to 1 */
+      opacity: 1;
+
+      &::placeholder {
+        color: var(--spectrum-textfield-text-color-disabled);
+      }
     }
   }
 
-  /****** Input Variant - ReadOnly ******/
-  .spectrum-Textfield.is-readOnly &,
-  .spectrum-Textfield.is-readOnly:hover &,
-  &:read-only {
-    background-color: transparent;
-    border-color: transparent;
+  /*** Variant - Side Label ***/
+  &--sidelabel {
+    .spectrum-Textfield-input-wrapper {
+      grid-row: 1;
+      grid-column: 2 / span 1;
+    }
 
-    &::placeholder {
-      color: var(--spectrum-textfield-text-color-readonly);
+    .spectrum-FieldLabel {
+      grid-row: 1;
+      grid-column: 1 / span 1;
+      margin-inline-end: var(--spectrum-textfield-label-spacing-inline-side-label);
+    }
+
+    .spectrum-Textfield-character-count {
+      grid-row: 1;
+      grid-column: 3 / span 1;
+      align-items: flex-start;
+      margin-block-start: var(--spectrum-textfield-character-count-spacing-block-side);
+      margin-inline-start: var(--spectrum-textfield-character-count-spacing-inline-side);
+    }
+
+    .spectrum-HelpText {
+      grid-row: 2;
+      grid-column: 2 / span 1;
+    }
+  }
+
+
+  /*** Variant - Quiet 🤫 and Disabled ***/
+  &--quiet {
+    .spectrum-Textfield-input {
+      border-block-start-width: 0;
+      border-inline-width: 0;
+      margin-block-end: var(--spectrum-textfield-spacing-block-quiet);
+      padding-inline: var(--spectrum-textfield-spacing-inline-quiet);
+      background-color: transparent;
+      border-color: var(--spectrum-textfield-background-color-disabled);
+      border-radius: 0;
+
+      /* Treat all quiet inputs and text areas the same */
+      resize: none;
+      overflow-y: hidden;
+    }
+
+    /* quiet disabled */
+    &.is-disabled {
+      .spectrum-Textfield-input {
+        background-color: transparent;
+        border-color: var(--spectrum-textfield-background-color-disabled);
+
+        &::placeholder {
+          color: var(--spectrum-textfield-text-color-disabled);
+        }
+      }
+    }
+  }
+
+
+  /*** Variant - Quiet 🤫 ***/
+  &--quiet {
+
+    .spectrum-FieldLabel {
+      margin-block-end: var(--spectrum-textfield-label-spacing-block-quiet);
+    }
+
+    .spectrum-Textfield-character-count {
+      margin-block-end: var(--spectrum-textfield-character-count-spacing-block-quiet);
+    }
+
+    .spectrum-Textfield-input-wrapper {
+      /* Quiet Focus Indicator */
+      &::after {
+        inline-size: 100%;
+        block-size: calc(var(--spectrum-textfield-height) + var(--spectrum-textfield-focus-indicator-gap));
+        margin-inline-start: 0;
+        margin-block-start: 0;
+        border-radius: 0;
+      }
+    }
+
+    .spectrum-Textfield-input {
+
+    }
+
+    .spectrum-Textfield-validationIcon {
+       padding-inline-end: 0;
+    }
+
+    /* Quiet Valid Icon ✅🤫 */
+    &.is-valid {
+      .spectrum-Textfield-validationIcon {
+        margin-inline-end: var(--spectrum-textfield-icon-spacing-inline-end-quiet-valid);
+      }
+    }
+
+    /* Quiet Invalid Icon ⚠️🤫 */
+    &.is-invalid {
+      .spectrum-Textfield-validationIcon {
+        margin-inline-end: var(--spectrum-textfield-icon-spacing-inline-end-quiet-invalid);
+      }
+    }
+  }
+
+  /****** Variant - ReadOnly ******/
+  &.is-readOnly,
+  &.is-readOnly:hover,
+  &.is-readOnly:active,
+  &.is-readOnly:focus,
+  &.is-readOnly.is-focused,
+  &.is-readOnly.is-keyboardFocused,
+  &.is-readOnly.is-keyboardFocused:focus-within {
+    .spectrum-Textfield-validationIcon {
+      color: transparent;
+    }
+
+    .spectrum-Textfield-input-wrapper::after {
+      border: 0;
+    }
+
+    .spectrum-Textfield-input,
+    .spectrum-Textfield-input:focus-ring,
+    .spectrum-Textfield-input:focus-visible {
+      background-color: transparent;
+      border-color: transparent;
+
+      &::placeholder {
+        color: var(--spectrum-textfield-text-color-readonly);
+        background-color: transparent;
+      }
+    }
+  }
+
+  /*** Hover ***/
+  &:hover {
+    .spectrum-Textfield-input {
+      border-color: var(--spectrum-textfield-border-color-hover);
+
+      &::placeholder {
+        color: var(--spectrum-textfield-text-color-hover);
+      }
+    }
+  }
+
+  /*** Active ***/
+  &:active {
+    .spectrum-Textfield-input {
+      border-color: var(--spectrum-textfield-border-color-active);
+
+      &::placeholder {
+        color: var(--spectrum-textfield-text-color-active);
+      }
+    }
+  }
+
+  /*** Mouse Focus - TODO - get design specs, should be different from keyboard focus ***/
+  &:focus,
+  &.is-focused {
+    .spectrum-Textfield-input-wrapper {
+      /* focus indicator is focused state */
+      &::after {
+        //border-color: var(--spectrum-textfield-focus-indicator-color);
+        //border-width: var(--spectrum-textfield-focus-indicator-thickness);
+      }
+    }
+
+    .spectrum-Textfield-input {
+      border-color: var(--spectrum-textfield-border-color-focus);
+
+      &::placeholder {
+        color: var(--spectrum-textfield-text-color-focus);
+      }
+    }
+  }
+
+  /*** Keyboard Focus ***/
+  &.is-keyboardFocused,
+  &.is-keyboardFocused:focus-within {
+    .spectrum-Textfield-input-wrapper {
+      /* focus indicator is focused state */
+      &::after {
+        border-color: var(--spectrum-textfield-focus-indicator-color);
+        border-width: var(--spectrum-textfield-focus-indicator-thickness);
+      }
+
+      .spectrum-Textfield--quiet & {
+        /* quiet focus indicator is focused state */
+        &::after {
+          border-width: 0 0 var(--spectrum-textfield-focus-indicator-thickness) 0;
+        }
+      }
+    }
+
+    .spectrum-Textfield-input,
+    .spectrum-Textfield-input:focus-ring,
+    .spectrum-Textfield-input:focus-visible {
+      border-color: var(--spectrum-textfield-border-color-focus);
+
+      &::placeholder {
+        color: var(--spectrum-textfield-text-color-focus);
+      }
     }
   }
 }
-
 
 
 
