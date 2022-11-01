@@ -7,6 +7,7 @@ sections:
     description: |
       ### T-shirt sizes
       As of token migration, textfield now has t-shirt sizes. Medium is the default size if no size variant is applied. Icon sizes must match each t-shirt size. Validation icons are as follows.
+<<<<<<< HEAD
 
       ### Label
       As of token migration, textfield must always have a label. Label placement is top or on the side (start).
@@ -16,21 +17,30 @@ sections:
 
       ### Help Text
       As of token migration, Help text is optional and has only one position below the textfield input. Help text aligns with the input in both standard and side label layouts.
+=======
+>>>>>>> 882ddfd8e (feat(textarea): update text area yml)
 
       ### Label
-      Textfield must always have a label. Label placement is top or on the side (start).
+      As of token migration, textfield must always have a label. Label placement is top or on the side (start).
 
       ### Character Count
-      Textfield now has an optional character count. The character count moves to the side (end) when the label position is on the side.
+      As of token migration, textfield now has an optional character count. The character count moves to the side (end) when the label position is on the side.
+
+      ### Help Text
+      As of token migration, Help text is optional and has only one position below the textfield input. Help text aligns with the input in both standard and side label layouts.
 
       ### Composition
       As of 3.0.0, Textfield is now composed the same way a DecoratedTextfield was previously.
 
       That is, the outer element `div.spectrum-Textfield` contains a `input.spectrum-Textfield-input`.
 
+<<<<<<< HEAD
       As of spectrum tokens migration, Textfield uses grid to align the label, character count, helptext, and focus indicator in both the default and sidelabel layouts.
 
       Any application using Textarea Grows (Textarea input which automatically resizes vertically to accommodate content that is entered) will need to place the sizer element within the same grid area as the input and focus indicator.
+=======
+      As of spectrum tokens migration, Textfield contains an additional nested div wrapping the input. The outer element `div.spectrum-Textfield` contains the child components (label, character count, and help text) as well as the additional `div.spectrum-Textfield-input-wrapper` which contains `input.spectrum-Textfield-input`. The additional nested div is necessary to ensure the focus indicator aligns with the input.
+>>>>>>> 882ddfd8e (feat(textarea): update text area yml)
 
       ### Icons
       Icons are now added as SVGs, with `svg.spectrum-Textfield-icon` for workflow icons, and `svg.spectrum-Textfield-validationIcon` for UI icons.
@@ -75,7 +85,11 @@ sections:
       Extra Large
       `spectrum-Icon spectrum-Icon--sizeXL spectrum-Textfield-validationIcon`
 
+<<<<<<< HEAD
       ### Removal of `:valid`, `:invalid`, and `::placeholder`
+=======
+      ### Removal of `:valid` and `:invalid`
+>>>>>>> 882ddfd8e (feat(textarea): update text area yml)
       Textfield no longer supports the CSS pseudo selectors [`:invalid`](https://developer.mozilla.org/en-US/docs/Web/CSS/:invalid) and [`:value`](https://developer.mozilla.org/en-US/docs/Web/CSS/:valid).
 
       The CSS pseudo-element [`::placeholder`](https://developer.mozilla.org/en-US/docs/Web/CSS/::placeholder) has been deprecated due to accessibility. The styling remains for backwards compatibility but it is advised to stop utilizing placeholders moving forward.
@@ -86,20 +100,6 @@ sections:
       Variants must be applied to the parent element, i.e. `.spectrum-Textfield.spectrum-Textfield--quiet` or `.spectrum-Textfield.spectrum-Textfield--multiline`. The `<input>` will be styled appropriately.
 
 examples:
-  - id: textfield-testing-collection
-    name: With Helptext, lable, and character count Inside spectrum-Textfield
-    markup: |
-      <div class="spectrum-Textfield">
-        <label for="textfield-1" class="spectrum-FieldLabel spectrum-FieldLabel--sizeM">Text field standard layout</label>
-        <span class="spectrum-Textfield-character-count">50</span>
-        <div class="spectrum-Textfield-input-wrapper">
-          <input id="textfield-1" type="text" placeholder="Enter your name" name="field" value="" class="spectrum-Textfield-input">
-        </div>
-        <div class="spectrum-HelpText spectrum-HelpText--sizeM spectrum-HelpText--neutral">
-          <div class="spectrum-HelpText-text">Create a password with at least 8 characters.</div>
-        </div>
-      </div>
-
   - id: textfield-sizes
     name: Standard Sizes
     markup: |
@@ -109,6 +109,9 @@ examples:
         <div class="spectrum-Textfield-input-wrapper">
           <input id="textfield-sm" type="text" placeholder="Enter your name" name="field" value="" class="spectrum-Textfield-input">
         </div>
+        <div class="spectrum-HelpText spectrum-HelpText--sizeS spectrum-HelpText--neutral">
+          <div class="spectrum-HelpText-text">Create a password with at least 8 characters.</div>
+        </div>
       </div>
 
       <div class="spectrum-Textfield spectrum-Textfield--sizeM">
@@ -116,6 +119,9 @@ examples:
         <span class="spectrum-Textfield-character-count">50</span>
         <div class="spectrum-Textfield-input-wrapper">
           <input id="textfield-md" type="text" placeholder="Enter your name" name="field" value="" class="spectrum-Textfield-input">
+        </div>
+        <div class="spectrum-HelpText spectrum-HelpText--sizeM spectrum-HelpText--neutral">
+          <div class="spectrum-HelpText-text">Create a password with at least 8 characters.</div>
         </div>
       </div>
 
@@ -125,6 +131,9 @@ examples:
         <div class="spectrum-Textfield-input-wrapper">
           <input id="textfield-l" type="text" placeholder="Enter your name" name="field" value="" class="spectrum-Textfield-input">
         </div>
+        <div class="spectrum-HelpText spectrum-HelpText--sizeL spectrum-HelpText--neutral">
+          <div class="spectrum-HelpText-text">Create a password with at least 8 characters.</div>
+        </div>
       </div>
 
       <div class="spectrum-Textfield spectrum-Textfield--sizeXL">
@@ -132,6 +141,9 @@ examples:
         <span class="spectrum-Textfield-character-count">50</span>
         <div class="spectrum-Textfield-input-wrapper">
           <input id="textfield-xl" type="text" placeholder="Enter your name" name="field" value="" class="spectrum-Textfield-input">
+        </div>
+         <div class="spectrum-HelpText spectrum-HelpText--sizeXL spectrum-HelpText--neutral">
+          <div class="spectrum-HelpText-text">Create a password with at least 8 characters.</div>
         </div>
       </div>
 
@@ -148,6 +160,17 @@ examples:
         </div>
       </div>
 
+  - id: textfield-character-count
+    name: With Character Count
+    markup: |
+      <div class="spectrum-Textfield">
+        <label for="textfield-1" class="spectrum-FieldLabel spectrum-FieldLabel--sizeM">Text field standard layout</label>
+        <span class="spectrum-Textfield-character-count">50</span>
+        <div class="spectrum-Textfield-input-wrapper">
+          <input id="textfield-1" type="text" placeholder="Enter your name" name="field" value="" class="spectrum-Textfield-input">
+        </div>
+      </div>
+
   - id: textfield-sidelabel
     name: Textfield with Side Label
     markup: |
@@ -155,7 +178,7 @@ examples:
         <label for="textfield-md-sidelabel" class="spectrum-FieldLabel spectrum-FieldLabel--sizeM">Text field label</label>
         <span class="spectrum-Textfield-character-count">50</span>
         <div class="spectrum-Textfield-input-wrapper">
-          <input id-"textfield-md-sidelabel" type="text" placeholder="Enter your name" name="field" value="" class="spectrum-Textfield-input">
+          <input id="textfield-md-sidelabel" type="text" placeholder="Enter your name" name="field" value="" class="spectrum-Textfield-input">
         </div>
         <div class="spectrum-HelpText spectrum-HelpText--sizeM spectrum-HelpText--neutral">
           <div class="spectrum-HelpText-text">Create a password with at least 8 characters.</div>
@@ -198,12 +221,12 @@ examples:
       </div>
 
       <div class="spectrum-Textfield spectrum-Textfield--sizeM is-valid">
-        <label for="textfield-l-valid" class="spectrum-FieldLabel spectrum-FieldLabel--sizeM">Text field label</label>
+        <label for="textfield-m-valid" class="spectrum-FieldLabel spectrum-FieldLabel--sizeM">Text field label</label>
         <div class="spectrum-Textfield-input-wrapper">
           <svg class="spectrum-Icon spectrum-UIIcon-Checkmark100 spectrum-Textfield-validationIcon" focusable="false" aria-hidden="true">
             <use xlink:href="#spectrum-css-icon-Checkmark100" />
           </svg>
-          <input id="textfield-l-valid" type="text" placeholder="Enter your name" name="field" value="A valid input" class="spectrum-Textfield-input" pattern="[\w\s]+" required>
+          <input id="textfield-m-valid" type="text" placeholder="Enter your name" name="field" value="A valid input" class="spectrum-Textfield-input" pattern="[\w\s]+" required>
         </div>
       </div>
 
