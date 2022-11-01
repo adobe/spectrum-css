@@ -3,6 +3,23 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+<a name="5.0.0"></a>
+# 5.0.0
+🗓 2022-11-01 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/actionbar@4.0.1...@spectrum-css/actionbar@5.0.0)
+
+* refactor(actionbar)!: migrate to core tokens (#1512) ([f0be21c](https://github.com/adobe/spectrum-css/commit/f0be21c)), closes [#1512](https://github.com/adobe/spectrum-css/issues/1512)
+
+
+### 🛑 BREAKING CHANGES
+
+* migrates ActionBar to core tokens
+
+Co-authored-by: Patrick Fulton <pfulton@adobe.com>
+
+
+
+
+
 <a name="4.0.1"></a>
 ## 4.0.1
 🗓 2022-06-29 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/actionbar@4.0.0...@spectrum-css/actionbar@4.0.1)
