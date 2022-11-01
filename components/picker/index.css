@@ -76,7 +76,7 @@ governing permissions and limitations under the License.
   --spectrum-picker-focus-indicator-size: var(--spectrum-focus-indicator-thickness);
   --spectrum-picker-focus-indicator-color: var(--spectrum-focus-indicator-color);
 
-  --spectrum-picker-focus-indicator-border-radius-adjusted: calc(var(--spectrum-picker-border-radius) + var(--spectrum-picker-focus-indicator-gap));
+  --spectrum-picker-focus-indicator-border-radius: calc(var(--spectrum-picker-border-radius) + var(--spectrum-picker-focus-indicator-gap) + var(--spectrum-picker-border-width));
 }
 
 .spectrum-Picker--sizeS {
@@ -190,7 +190,7 @@ governing permissions and limitations under the License.
   background-color: var(--highcontrast-picker-background-color-default, var(--mod-picker-background-color-default, var(--spectrum-picker-background-color-default)));
   border-color: var(--highcontrast-picker-border-color-default, var(--mod-picker-border-color-default, var(--spectrum-picker-border-color-default)));
 
-  &:after {
+  &::after {
     pointer-events: none;
     content: '';
     position: absolute;
@@ -199,7 +199,7 @@ governing permissions and limitations under the License.
     bottom: 0;
     top: 0;
     margin: calc((var(--spectrum-picker-focus-indicator-gap) + var(--spectrum-picker-border-size)) * -1);
-    border-radius: var(--spectrum-picker-focus-indicator-border-radius-adjusted);
+    border-radius: var(--spectrum-picker-focus-indicator-border-radius);
   }
 
   &:focus-ring,
@@ -208,7 +208,7 @@ governing permissions and limitations under the License.
     outline: none;
 
     /* Focus ring */
-    &:after {
+    &::after {
       box-shadow: 0 0 0 var(--mod-picker-focus-indicator-size, var(--spectrum-picker-focus-indicator-size)) var(--highcontrast-picker-focus-indicator-color, var(--mod-picker-focus-indicator-color, var(--spectrum-picker-focus-indicator-color)));
     }
   }
@@ -235,7 +235,6 @@ governing permissions and limitations under the License.
     }
   }
 
-  &:focus-ring,
   &:focus-visible,
   &:focus-ring,
   &.is-focused {
