@@ -12,6 +12,15 @@ governing permissions and limitations under the License.
 
 @import "../commons/basebutton-coretokens.css";
 
+/* Placeholder tokens to align Popover with Picker */
+.spectrum--medium {
+  --spectrum-picker-popover-quiet-offset-x: 12px;
+}
+
+.spectrum--large {
+  --spectrum-picker-popover-quiet-offset-x: 14px;
+}
+
 .spectrum-Picker {
   /* font */
   --spectrum-picker-font-size: var(--spectrum-font-size-100);
@@ -400,6 +409,10 @@ governing permissions and limitations under the License.
   transform: translateY(var(--mod-picker-spacing-picker-to-popover, var(--spectrum-picker-spacing-picker-to-popover)));
 }
 
+.spectrum-Picker--quiet + .spectrum-Popover--bottom.is-open {
+  margin-inline-start: calc(-1 * var(--spectrum-picker-popover-quiet-offset-x));
+}
+
 .spectrum-Picker--quiet {
   border: none;
   border-radius: 0;
@@ -408,6 +421,10 @@ governing permissions and limitations under the License.
 
   color: var(--highcontrast-picker-font-color-default, var(--mod-picker-font-color-default, var(--spectrum-picker-font-color-default)));
   background-color: transparent;
+
+  &::after {
+    border: none;
+  }
 
   &:hover {
     background-color: transparent;
