@@ -70,7 +70,7 @@ governing permissions and limitations under the License.
   --spectrum-textfield-focus-indicator-thickness: var(--spectrum-focus-indicator-thickness);
   --spectrum-textfield-focus-indicator-gap: var(--spectrum-focus-indicator-gap);
 
-  /*** COLORS ***/
+  /*** Colors ***/
   --spectrum-textfield-background-color: var(--spectrum-gray-50);
   --spectrum-textfield-background-color-disabled: var(--spectrum-disabled-background-color);
 
@@ -93,7 +93,7 @@ governing permissions and limitations under the License.
 }
 
 
-/* Text field t-shirt sizes */
+/********* Text field t-shirt sizes *********/
 .spectrum-Textfield--sizeS {
   --spectrum-textfield-height: var(--spectrum-component-height-75);
   --spectrum-textfield-label-spacing-block-quiet: var(--spectrum-field-label-to-component-quiet-small);
@@ -170,7 +170,7 @@ governing permissions and limitations under the License.
   --spectrum-textfield-character-count-spacing-block-side: var(--spectrum-side-label-character-count-top-margin-extra-large);
 }
 
-/****** WHCM ******/
+/********* WHCM *********/
 @media (forced-colors: active) {
   .spectrum-Textfield {
     --spectrum-textfield-border-color-hover: Highlight;
@@ -205,13 +205,13 @@ governing permissions and limitations under the License.
 }
 
 
-/****** TEXT FIELD AND TEXT AREA Outer Wrapper ******/
+/********* TEXT FIELD and TEXT AREA Outer Wrapper *********/
 .spectrum-Textfield {
   position: relative;
   outline: none;
   margin: auto;
 
-  /*** ↓ browser mitigations for text field ↓ ***/
+  /*** ↓ Browser Mitigations for Text Field ↓ ***/
   /* Edge - Use padding instead of text-indent because text-indent does not left align the text  */
   text-indent: 0;
 
@@ -240,30 +240,14 @@ governing permissions and limitations under the License.
   grid-template-columns: auto auto auto;
   grid-template-rows: auto auto;
 
-  /****** LABEL ******/
+  /********* Child Component - Label *********/
   .spectrum-FieldLabel {
     grid-row: 1;
     grid-column: 1 / span 2;
     margin-block-end: var(--spectrum-textfield-label-spacing-block);
   }
 
-  /****** CHARACTER COUNT ******/
-  .spectrum-Textfield-character-count {
-    grid-row: 1;
-    grid-column: 3 / span 1;
-    display: inline-flex;
-    align-items: flex-end;
-    justify-content: flex-end;
-    width: auto;
-    margin-block-end: var(--spectrum-textfield-character-count-spacing-block);
-    margin-inline-start: var(--spectrum-textfield-character-count-spacing-inline);
-    margin-inline-end: 0;
-    font-size: var(--spectrum-textfield-character-count-font-size);
-    font-family: var(--spectrum-textfield-character-count-font-family);
-    font-weight: var(--spectrum-textfield-character-count-font-weight);
-  }
-
-  /****** HELP TEXT ******/
+  /********* Child Component - Help Text *********/
   .spectrum-HelpText {
     grid-row: 3;
     grid-column: 1 / span 3;
@@ -271,7 +255,23 @@ governing permissions and limitations under the License.
   }
 }
 
-/****** VALIDATION ICONS - ⚠️ and ✅ ******/
+/********* Child Element - Character Count *********/
+.spectrum-Textfield-character-count {
+  grid-row: 1;
+  grid-column: 3 / span 1;
+  display: inline-flex;
+  align-items: flex-end;
+  justify-content: flex-end;
+  width: auto;
+  margin-block-end: var(--spectrum-textfield-character-count-spacing-block);
+  margin-inline-start: var(--spectrum-textfield-character-count-spacing-inline);
+  margin-inline-end: 0;
+  font-size: var(--spectrum-textfield-character-count-font-size);
+  font-family: var(--spectrum-textfield-character-count-font-family);
+  font-weight: var(--spectrum-textfield-character-count-font-weight);
+}
+
+/********* Child Element - Validation Icons - ⚠️ ✅ *********/
 .spectrum-Textfield-validationIcon {
   position: absolute;
   pointer-events: all;
@@ -279,7 +279,7 @@ governing permissions and limitations under the License.
   bottom: 0;
 }
 
-/****** INPUT WRAPPER for input and focus indicator ******/
+/********* Child div - Input Wrapper - for alignment of focus indicator *********/
 .spectrum-Textfield-input-wrapper {
   grid-row: 2;
   grid-column: 1 / span 3;
@@ -288,7 +288,7 @@ governing permissions and limitations under the License.
   min-inline-size: var(--spectrum-textfield-min-width);
   position: relative;
 
-  /* Focus Indicator Base Styles */
+  /*** Focus Indicator - Unfocused Base Styles ***/
   &::after {
     block-size: calc(var(--spectrum-textfield-height)
                     + (var(--spectrum-textfield-focus-indicator-gap) * 2));
@@ -313,7 +313,7 @@ governing permissions and limitations under the License.
   }
 }
 
-/****** INPUT ******/
+/********* Child Element - Input *********/
 .spectrum-Textfield-input {
   box-sizing: border-box;
   block-size: var(--spectrum-textfield-height);
@@ -333,8 +333,9 @@ governing permissions and limitations under the License.
   font-size: var(--spectrum-textfield-placeholder-font-size);
   font-family: var(--spectrum-textfield-font-family);
   font-weight: var(--spectrum-textfield-font-weight);
+  color: var(--spectrum-textfield-text-color-default);
 
-  /**** Browser Mitigations for Input *****/
+  /*** ↓ Browser Mitigations for Input ↓ ***/
   /* Remove the margin for input in Firefox and Safari. */
   margin: 0;
 
@@ -379,7 +380,7 @@ governing permissions and limitations under the License.
     opacity: 1;
   }
 
-  /**** PLACEHOLDER TEXT *****/
+  /*** Input Placeholder Text ***/
   &::placeholder {
     opacity: 1;
     margin-block-start: var(--spectrum-textfield-spacing-block-start);
@@ -388,7 +389,7 @@ governing permissions and limitations under the License.
     transition: color var(--spectrum-animation-duration-100) ease-in-out;
   }
 
-  /**** PLACEHOLDER TEXT CJK *****/
+  /*** Input Placeholder Text - CJK ***/
   &:lang(ja),
   &:lang(zh),
   &:lang(ko) {
@@ -403,9 +404,79 @@ governing permissions and limitations under the License.
   }
 }
 
-
+/********* Texfield States and Variants *********/
 .spectrum-Textfield {
-  /*** Valid ✅ ***/
+  /********* User Action States *********/
+  /****** Hover ******/
+  &:hover {
+    .spectrum-Textfield-input {
+      border-color: var(--spectrum-textfield-border-color-hover);
+
+      &::placeholder {
+        color: var(--spectrum-textfield-text-color-hover);
+      }
+    }
+  }
+
+  /******Active ******/
+  &:active {
+    .spectrum-Textfield-input {
+      border-color: var(--spectrum-textfield-border-color-active);
+
+      &::placeholder {
+        color: var(--spectrum-textfield-text-color-active);
+      }
+    }
+  }
+
+  /*** ! TODO - get design specs, should be different from keyboard focus ***/
+  /****** Mouse Focus ******/
+  &:focus,
+  &.is-focused {
+    .spectrum-Textfield-input-wrapper {
+      /* focus indicator is focused state */
+      &::after {
+        //border-color: var(--spectrum-textfield-focus-indicator-color);
+        //border-width: var(--spectrum-textfield-focus-indicator-thickness);
+      }
+    }
+
+    .spectrum-Textfield-input {
+      border-color: var(--spectrum-textfield-border-color-focus);
+      color: var(--spectrum-textfield-text-color-focus);
+
+      &::placeholder {
+        color: var(--spectrum-textfield-text-color-focus);
+      }
+    }
+  }
+
+  /****** Keyboard Focus ******/
+  &.is-keyboardFocused,
+  &.is-keyboardFocused:focus-within {
+    .spectrum-Textfield-input-wrapper {
+      /* focus indicator is focused state */
+      &::after {
+        border-color: var(--spectrum-textfield-focus-indicator-color);
+        border-width: var(--spectrum-textfield-focus-indicator-thickness);
+      }
+    }
+
+    .spectrum-Textfield-input,
+    .spectrum-Textfield-input:focus-ring,
+    .spectrum-Textfield-input:focus-visible {
+      border-color: var(--spectrum-textfield-border-color-focus);
+      color: var(--spectrum-textfield-text-color-focus);
+
+      &::placeholder {
+        color: var(--spectrum-textfield-text-color-focus);
+      }
+    }
+  }
+
+
+/********* Component Validation *********/
+  /****** Validation - Valid ✅ ******/
   &.is-valid {
     .spectrum-Textfield-validationIcon {
       margin-block-start: var(--spectrum-textfield-icon-spacing-block-valid);
@@ -416,7 +487,7 @@ governing permissions and limitations under the License.
     }
   }
 
-  /*** Invalid ⚠️ ***/
+  /****** Validation - Invalid ⚠️ ******/
   &.is-invalid {
     .spectrum-Textfield-validationIcon {
       block-size: var(--spectrum-textfield-icon-size-invalid);
@@ -432,26 +503,28 @@ governing permissions and limitations under the License.
       border-color: var(--spectrum-textfield-border-color-negative-default);
     }
 
+    /*** Invalid Hover ***/
     &:hover {
       .spectrum-Textfield-input {
         border-color: var(--spectrum-textfield-border-color-negative-hover);
       }
     }
 
+    /*** Invalid Active ***/
     &:active {
       .spectrum-Textfield-input {
         border-color: var(--spectrum-textfield-border-color-negative-active);
       }
     }
 
-    /* Mouse Focus */
+    /*** Invalid Mouse Focus ***/
     &.is-focused {
       .spectrum-Textfield-input {
         border-color: var(--spectrum-textfield-border-color-negative-focus);
       }
     }
 
-    /* Keyboard Focus */
+    /*** Invalid Keyboard Focus ***/
     &.is-keyboardFocused,
     &:focus-within {
       .spectrum-Textfield-input,
@@ -461,7 +534,8 @@ governing permissions and limitations under the License.
     }
   }
 
-  /****** State - Disabled 🚫 ******/
+/********* Component Status *********/
+  /****** Status - Disabled 🚫 ******/
   &:disabled,
   &.is-disabled,
   &.is-disabled:hover {
@@ -474,7 +548,7 @@ governing permissions and limitations under the License.
     .spectrum-Textfield-input {
       background-color: var(--spectrum-textfield-background-color-disabled);
       border-color: transparent;
-      //color: var(--spectrum-textfield-text-color-disabled);
+      color: var(--spectrum-textfield-text-color-disabled);
 
       /* Disable the resize functionality when disabled */
       resize: none;
@@ -484,6 +558,36 @@ governing permissions and limitations under the License.
 
       &::placeholder {
         color: var(--spectrum-textfield-text-color-disabled);
+      }
+    }
+  }
+
+  /****** Status - ReadOnly ******/
+  &.is-readOnly,
+  &.is-readOnly:hover,
+  &.is-readOnly:active,
+  &.is-readOnly:focus,
+  &.is-readOnly.is-focused,
+  &.is-readOnly.is-keyboardFocused,
+  &.is-readOnly.is-keyboardFocused:focus-within {
+    .spectrum-Textfield-validationIcon {
+      color: transparent;
+    }
+
+    .spectrum-Textfield-input-wrapper::after {
+      border: 0;
+    }
+
+    .spectrum-Textfield-input,
+    .spectrum-Textfield-input:focus-ring,
+    .spectrum-Textfield-input:focus-visible {
+      background-color: transparent;
+      border-color: transparent;
+      color: var(--spectrum-textfield-text-color-readonly);
+
+      &::placeholder {
+        color: var(--spectrum-textfield-text-color-readonly);
+        background-color: transparent;
       }
     }
   }
@@ -516,8 +620,27 @@ governing permissions and limitations under the License.
   }
 
 
-  /*** Variant - Quiet 🤫 and Disabled ***/
+  /****** Variant - Quiet 🤫 ******/
   &--quiet {
+    .spectrum-FieldLabel {
+      margin-block-end: var(--spectrum-textfield-label-spacing-block-quiet);
+    }
+
+    .spectrum-Textfield-character-count {
+      margin-block-end: var(--spectrum-textfield-character-count-spacing-block-quiet);
+    }
+
+    .spectrum-Textfield-input-wrapper {
+      /** Quiet Focus Indicator **/
+      &::after {
+        inline-size: 100%;
+        block-size: calc(var(--spectrum-textfield-height) + var(--spectrum-textfield-focus-indicator-gap));
+        margin-inline-start: 0;
+        margin-block-start: 0;
+        border-radius: 0;
+      }
+    }
+
     .spectrum-Textfield-input {
       border-block-start-width: 0;
       border-inline-width: 0;
@@ -532,7 +655,7 @@ governing permissions and limitations under the License.
       overflow-y: hidden;
     }
 
-    /* quiet disabled */
+    /*** Quiet Status - Disabled 🚫 ***/
     &.is-disabled {
       .spectrum-Textfield-input {
         background-color: transparent;
@@ -543,150 +666,35 @@ governing permissions and limitations under the License.
         }
       }
     }
-  }
 
-
-  /*** Variant - Quiet 🤫 ***/
-  &--quiet {
-
-    .spectrum-FieldLabel {
-      margin-block-end: var(--spectrum-textfield-label-spacing-block-quiet);
-    }
-
-    .spectrum-Textfield-character-count {
-      margin-block-end: var(--spectrum-textfield-character-count-spacing-block-quiet);
-    }
-
-    .spectrum-Textfield-input-wrapper {
-      /* Quiet Focus Indicator */
-      &::after {
-        inline-size: 100%;
-        block-size: calc(var(--spectrum-textfield-height) + var(--spectrum-textfield-focus-indicator-gap));
-        margin-inline-start: 0;
-        margin-block-start: 0;
-        border-radius: 0;
-      }
-    }
-
-    .spectrum-Textfield-input {
-
-    }
-
+    /*** Quiet Validation ***/
     .spectrum-Textfield-validationIcon {
        padding-inline-end: 0;
     }
 
-    /* Quiet Valid Icon ✅🤫 */
+    /*** Quiet Valid ✅ ***/
     &.is-valid {
       .spectrum-Textfield-validationIcon {
         margin-inline-end: var(--spectrum-textfield-icon-spacing-inline-end-quiet-valid);
       }
     }
 
-    /* Quiet Invalid Icon ⚠️🤫 */
+    /*** Quiet Invalid ⚠️ ***/
     &.is-invalid {
       .spectrum-Textfield-validationIcon {
         margin-inline-end: var(--spectrum-textfield-icon-spacing-inline-end-quiet-invalid);
       }
     }
-  }
 
-  /****** Variant - ReadOnly ******/
-  &.is-readOnly,
-  &.is-readOnly:hover,
-  &.is-readOnly:active,
-  &.is-readOnly:focus,
-  &.is-readOnly.is-focused,
-  &.is-readOnly.is-keyboardFocused,
-  &.is-readOnly.is-keyboardFocused:focus-within {
-    .spectrum-Textfield-validationIcon {
-      color: transparent;
-    }
-
-    .spectrum-Textfield-input-wrapper::after {
-      border: 0;
-    }
-
-    .spectrum-Textfield-input,
-    .spectrum-Textfield-input:focus-ring,
-    .spectrum-Textfield-input:focus-visible {
-      background-color: transparent;
-      border-color: transparent;
-
-      &::placeholder {
-        color: var(--spectrum-textfield-text-color-readonly);
-        background-color: transparent;
-      }
-    }
-  }
-
-  /*** Hover ***/
-  &:hover {
-    .spectrum-Textfield-input {
-      border-color: var(--spectrum-textfield-border-color-hover);
-
-      &::placeholder {
-        color: var(--spectrum-textfield-text-color-hover);
-      }
-    }
-  }
-
-  /*** Active ***/
-  &:active {
-    .spectrum-Textfield-input {
-      border-color: var(--spectrum-textfield-border-color-active);
-
-      &::placeholder {
-        color: var(--spectrum-textfield-text-color-active);
-      }
-    }
-  }
-
-  /*** Mouse Focus - TODO - get design specs, should be different from keyboard focus ***/
-  &:focus,
-  &.is-focused {
-    .spectrum-Textfield-input-wrapper {
-      /* focus indicator is focused state */
-      &::after {
-        //border-color: var(--spectrum-textfield-focus-indicator-color);
-        //border-width: var(--spectrum-textfield-focus-indicator-thickness);
-      }
-    }
-
-    .spectrum-Textfield-input {
-      border-color: var(--spectrum-textfield-border-color-focus);
-
-      &::placeholder {
-        color: var(--spectrum-textfield-text-color-focus);
-      }
-    }
-  }
-
-  /*** Keyboard Focus ***/
-  &.is-keyboardFocused,
-  &.is-keyboardFocused:focus-within {
-    .spectrum-Textfield-input-wrapper {
-      /* focus indicator is focused state */
-      &::after {
-        border-color: var(--spectrum-textfield-focus-indicator-color);
-        border-width: var(--spectrum-textfield-focus-indicator-thickness);
-      }
-
-      .spectrum-Textfield--quiet & {
-        /* quiet focus indicator is focused state */
+    /*** Quiet Action State - Keyboard Focus ***/
+    &.is-keyboardFocused,
+    &.is-keyboardFocused:focus-within {
+      .spectrum-Textfield-input-wrapper {
+        /* focus indicator is focused state */
         &::after {
+          border-color: var(--spectrum-textfield-focus-indicator-color);
           border-width: 0 0 var(--spectrum-textfield-focus-indicator-thickness) 0;
         }
-      }
-    }
-
-    .spectrum-Textfield-input,
-    .spectrum-Textfield-input:focus-ring,
-    .spectrum-Textfield-input:focus-visible {
-      border-color: var(--spectrum-textfield-border-color-focus);
-
-      &::placeholder {
-        color: var(--spectrum-textfield-text-color-focus);
       }
     }
   }
@@ -694,6 +702,7 @@ governing permissions and limitations under the License.
 
 
 
+/********* TEXT AREA / MULTILINE STARTS *********/
 /* Text area t-shirt sizes - should these be at the top or down here? */
 .spectrum-Textfield--multiline {
   --spectrum-text-area-min-inline-size: var(--spectrum-text-area-minimum-width);
@@ -797,7 +806,7 @@ governing permissions and limitations under the License.
   }
 }
 
-/****** ▤ Text Area / Multiline ******/
+/********* ▤ Text Area / Multiline *********/
 .spectrum-Textfield--multiline {
   block-size: var(--mod-text-area-block-size, var(--spectrum-text-area-block-size));
   min-block-size: var(--mod-spectrum-text-area-min-block-size, var(--spectrum-text-area-min-block-size));
@@ -821,7 +830,7 @@ governing permissions and limitations under the License.
     }
   }
 
-  /****** Text Area / Multiline Input ******/
+  /********* Text Area / Multiline Input *********/
   .spectrum-Textfield-input {
     /* TODO Alert icon */
     margin-inline-end: var(--mod-text-area-spacing-input-to-alert-icon, var(--spectrum-text-area-spacing-input-to-alert-icon));
@@ -833,7 +842,7 @@ governing permissions and limitations under the License.
     overflow: auto;
   }
 
-  /****** Text Area / Multiline Icon ******/
+  /********* Text Area / Multiline Icon *********/
 
   .spectrum-Textfield-Icon {
     /* TODO Alert icon */
