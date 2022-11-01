@@ -73,7 +73,7 @@ governing permissions and limitations under the License.
   --spectrum-focus-indicator-gap: 2px;
   --spectrum-picker-focus-indicator-gap: var(--spectrum-focus-indicator-gap);
   --spectrum-focus-indicator-thickness: 2px;
-  --spectrum-picker-focus-indicator-size: var(--spectrum-focus-indicator-thickness);
+  --spectrum-picker-focus-indicator-thickness: var(--spectrum-focus-indicator-thickness);
   --spectrum-picker-focus-indicator-color: var(--spectrum-focus-indicator-color);
 }
 
@@ -199,9 +199,9 @@ governing permissions and limitations under the License.
     inline-size: calc(100% + (var(--spectrum-picker-focus-indicator-gap) * 2) + (var(--spectrum-picker-border-size) * 2));
     block-size: calc(100% + (var(--spectrum-picker-focus-indicator-gap) * 2) + (var(--spectrum-picker-border-size) * 2));
     margin: auto;
-    margin-inline-start: calc((var(--spectrum-picker-focus-indicator-gap) + var(--spectrum-picker-focus-indicator-size) + var(--spectrum-picker-border-size)) * -1);
+    margin-inline-start: calc((var(--spectrum-picker-focus-indicator-gap) + var(--spectrum-picker-focus-indicator-thickness) + var(--spectrum-picker-border-size)) * -1);
     border-style: solid;
-    border-width: var(--spectrum-picker-focus-indicator-size);
+    border-width: var(--spectrum-picker-focus-indicator-thickness);
     border-color: transparent;
     border-radius: calc(var(--spectrum-picker-border-radius) + var(--spectrum-picker-focus-indicator-gap) + var(--spectrum-picker-border-width));
   }
@@ -274,7 +274,6 @@ governing permissions and limitations under the License.
     &:focus-visible,
     &.is-focused {
       border-color: var(--highcontrast-picker-border-color-error-default, var(--mod-picker-border-color-error-key-focus, var(--spectrum-picker-border-color-error-key-focus)));
-      box-shadow: 0 0 0 var(--mod-picker-border-width, var(--spectrum-picker-border-width)) var(--highcontrast-picker-border-color-error-default, var(--mod-picker-border-color-error-key-focus, var(--spectrum-picker-border-color-error-key-focus)));
     }
   }
 
@@ -320,7 +319,7 @@ governing permissions and limitations under the License.
   &.is-disabled {
     &:focus-ring,
     &:focus-visible {
-      box-shadow: none;
+      border-color: transparent;
     }
   }
 }
@@ -414,8 +413,9 @@ governing permissions and limitations under the License.
     background-color: transparent;
 
     &::after {
+      border: none;
       border-radius: 0;
-      box-shadow: 0 var(--mod-picker-focus-indicator-size, var(--spectrum-picker-focus-indicator-size)) 0 0 var(--highcontrast-picker-focus-indicator-color, var(--spectrum-picker-focus-indicator-color));
+      box-shadow: 0 var(--mod-picker-focus-indicator-thickness, var(--spectrum-picker-focus-indicator-thickness)) 0 0 var(--highcontrast-picker-focus-indicator-color, var(--mod-picker-focus-indicator-color, var(--spectrum-picker-focus-indicator-color)));
       margin: calc((var(--spectrum-picker-focus-indicator-gap) + var(--spectrum-picker-border-size)) * -1) 0;
     }
   }
@@ -428,7 +428,7 @@ governing permissions and limitations under the License.
     &:focus-visible,
     &.is-focused {
       &::after {
-        box-shadow: 0 var(--mod-picker-focus-indicator-size, var(--spectrum-picker-focus-indicator-size)) 0 0 var(--highcontrast-picker-focus-indicator-color, var(--mod-picker-focus-indicator-color, var(--spectrum-picker-focus-indicator-color)));
+        box-shadow: 0 var(--mod-picker-focus-indicator-thickness, var(--spectrum-picker-focus-indicator-thickness)) 0 0 var(--highcontrast-picker-focus-indicator-color, var(--mod-picker-focus-indicator-color, var(--spectrum-picker-focus-indicator-color)));
       }
     }
   }
@@ -437,10 +437,10 @@ governing permissions and limitations under the License.
     &:focus-ring,
     &:focus-visible,
     &.is-focused {
-
       box-shadow: none;
+
       &::after {
-        box-shadow: 0 var(--mod-picker-focus-indicator-size, var(--spectrum-picker-focus-indicator-size)) 0 0 var(--highcontrast-picker-focus-indicator-color, var(--mod-picker-focus-indicator-color, var(--spectrum-picker-focus-indicator-color)));
+        box-shadow: 0 var(--mod-picker-focus-indicator-thickness, var(--spectrum-picker-focus-indicator-thickness)) 0 0 var(--highcontrast-picker-focus-indicator-color, var(--mod-picker-focus-indicator-color, var(--spectrum-picker-focus-indicator-color)));
       }
     }
   }
