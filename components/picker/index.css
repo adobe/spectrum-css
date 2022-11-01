@@ -449,10 +449,4 @@ governing permissions and limitations under the License.
   &.is-disabled {
     background-color: transparent;
   }
-
-  &.is-readonly {
-    user-select: text;
-
-    color: var(--highcontrast-picker-font-color-default, var(--mod-picker-font-color-default, var(--spectrum-picker-font-color-default)));
-  }
 }

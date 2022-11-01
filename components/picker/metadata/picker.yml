@@ -293,15 +293,6 @@ examples:
             </button>
           </div>
         </div>
-
-        <div class="spectrum-Examples-item">
-          <h4>Read-only</h4>
-          <div class="spectrum-FieldLabel spectrum-FieldLabel--sizeM">Country</div>
-          <button class="spectrum-Picker spectrum-Picker--sizeM
-          spectrum-Picker--quiet spectrum-Picker is-disabled is-readonly" disabled aria-haspopup="listbox" style="width: 240px">
-            <span class="spectrum-Picker-label">United States</span>
-          </button>
-        </div>
       </div>
 
   - id: picker-sizing
