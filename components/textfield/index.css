@@ -811,7 +811,7 @@ governing permissions and limitations under the License.
   padding-block-start: var(--mod-text-area-spacing-top-to-text, var(--spectrum-text-area-spacing-top-to-text));
   padding-block-end: var(--mod-text-area-spacing-bottom-to-text, var(--spectrum-text-area-spacing-bottom-to-text));
 
-  border-size: var(--mod-text-area-border-size, var(--spectrum-text-area-border-size));
+  border-width: var(--mod-text-area-border-size, var(--spectrum-text-area-border-size));
   border-radius: var(--mod-text-area-border-radius, var(--spectrum-text-area-border-radius));
 
   /* Input Text Area Quiet */
