@@ -209,6 +209,7 @@ governing permissions and limitations under the License.
     content: '';
     position: absolute;
     left: 0;
+    right: 0;
     bottom: 0;
     top: 0;
     margin: calc((var(--spectrum-picker-focus-indicator-gap) + var(--spectrum-picker-border-size)) * -1);
@@ -247,6 +248,10 @@ governing permissions and limitations under the License.
   &.is-open {
     background-color: var(--highcontrast-picker-background-default, var(--mod-picker-background-color-active, var(--spectrum-picker-background-color-active)));
     border-color: var(--highcontrast-picker-border-color-active, var(--mod-picker-border-color-active, var(--spectrum-picker-border-color-active)));
+
+    &::after {
+      border-color: transparent;
+    }
 
     &.is-placeholder {
       .spectrum-Picker-label {
@@ -451,12 +456,12 @@ governing permissions and limitations under the License.
     &:focus-visible,
     &.is-focused {
       &::after {
-        box-shadow: 0 var(--mod-picker-focus-indicator-thickness, var(--spectrum-picker-focus-indicator-thickness)) 0 0 var(--highcontrast-picker-focus-indicator-color, var(--mod-picker-focus-indicator-color, var(--spectrum-picker-focus-indicator-color)));
+        box-shadow: none;
       }
     }
   }
 
-  &.is-invalid {
+  &.is-invalid:not(.is-open) {
     &:focus-ring,
     &:focus-visible,
     &.is-focused {

@@ -455,7 +455,8 @@ examples:
       </button>
 
       <h4>Open</h4>
-      <button class="spectrum-Picker spectrum-Picker--sizeM spectrum-Picker--quiet is-invalid" aria-haspopup="listbox">
+      <button class="spectrum-Picker spectrum-Picker--sizeM
+      spectrum-Picker--quiet is-invalid is-open" aria-haspopup="listbox">
         <span class="spectrum-Picker-label">Ballard</span>
         <svg class="spectrum-Icon spectrum-Icon--sizeM spectrum-Picker-validationIcon" focusable="false" aria-hidden="true" aria-label="Alert">
           <use xlink:href="#spectrum-icon-18-Alert" />
