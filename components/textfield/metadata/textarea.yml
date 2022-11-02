@@ -81,7 +81,7 @@ examples:
   - id: textfield-sidelabel
     name: Textfield with Side Label
     markup: |
-      <div class="spectrum-Textfield spectrum-Textfield--multiline spectrum-Textfield--multiline--sidelabel">
+      <div class="spectrum-Textfield spectrum-Textfield--multiline spectrum-Textfield--sidelabel">
         <label for="textfield-md-sidelabel" class="spectrum-FieldLabel spectrum-FieldLabel--sizeM">Text field label</label>
         <span class="spectrum-Textfield-character-count">50</span>
         <div class="spectrum-Textfield-input-wrapper">
@@ -210,7 +210,7 @@ examples:
     name: Quiet
     markup: |
       <div class="spectrum-Textfield spectrum-Textfield--multiline spectrum-Textfield--quiet">
-        <label for="textarea-quiet" class="spectrum-FieldLabel spectrum-FieldLabel--sizeM">Text field label</label>
+        <label for="textarea-quiet" class="spectrum-FieldLabel spectrum-FieldLabel--sizeM">Text area</label>
         <div class="spectrum-Textfield-input-wrapper">
           <textarea id="textarea-quiet" placeholder="Enter your name" name="field" class="spectrum-Textfield-input"></textarea>
         </div>
