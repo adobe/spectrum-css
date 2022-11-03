@@ -3,16 +3,13 @@ description: |
   Tray Dialogs are typically used to portray information on mobile device or
   smaller screens.
 
-  Wrap `spectrum-Tray` with `spectrum-Tray-overlay` to visually differentiate
-  the Tray from the rest of the view.
-
 SpectrumSiteSlug: https://spectrum.adobe.com/page/trays/
 examples:
   - id: tray
     name: Tray
-    demoClassName: spectrum-CSSExample-example--overlay
     markup: |
-      <div class="spectrum-Tray-overlay spectrum-CSSExample-dialog">
+      <div
+       class="spectrum-CSSExample-dialog" style="background: rgba(0,0,0,0.4); display: flex; justify-content: center;">
         <div class="spectrum-Tray is-open spectrum-Tray">
           <section class="spectrum-Dialog spectrum-Dialog--large" role="dialog" tabindex="-1" aria-modal="true">
             <div class="spectrum-Dialog-grid">
