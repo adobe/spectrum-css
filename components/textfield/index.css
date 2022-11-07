@@ -338,8 +338,6 @@ governing permissions and limitations under the License.
   grid-row: 2;
   grid-column: 1 / span 3;
   box-sizing: border-box;
-  block-size: var(--mod-textfield-height, var(--spectrum-textfield-height));
-  min-inline-size: var(--mod-textfield-min-width, var(--spectrum-textfield-min-width));
   position: relative;
 
   /*** Focus Indicator - Unfocused Base Styles ***/
@@ -405,7 +403,8 @@ governing permissions and limitations under the License.
 .spectrum-Textfield-input {
   box-sizing: border-box;
   inline-size: 100%;
-  block-size: 100%;
+  min-inline-size: var(--mod-textfield-min-width, var(--spectrum-textfield-min-width));
+  block-size: var(--mod-textfield-height, var(--spectrum-textfield-height));
   padding-block-start: var(--mod-textfield-spacing-block-start, var(--spectrum-textfield-spacing-block-start));
   padding-block-end: var(--mod-textfield-spacing-block-end, var(--spectrum-textfield-spacing-block-end));
   padding-inline: var(--mod-textfield-spacing-inline, var(--spectrum-textfield-spacing-inline));
@@ -651,16 +650,30 @@ governing permissions and limitations under the License.
 }
 
 .spectrum-Textfield--multiline {
-  block-size: auto;
-  inline-size: auto;
-
   .spectrum-Textfield-input-wrapper {
-    min-inline-size: var(--mod-text-area-min-inline-size, var(--spectrum-text-area-min-inline-size));
-    min-block-size: var(--mod-spectrum-text-area-min-block-size, var(--spectrum-text-area-min-block-size));
+    display: grid;
+
+    /* allows auto resizing */
+    &::before {
+      content: attr(data-replicated-value) " ";
+      white-space: pre-wrap;
+    }
   }
 
   .spectrum-Textfield-input {
-    /* placeholder */
+    min-inline-size: var(--mod-text-area-min-inline-size, var(--spectrum-text-area-min-inline-size));
+    min-block-size: var(--mod-spectrum-text-area-min-block-size, var(--spectrum-text-area-min-block-size));
+    block-size: unset;
+    /* allows auto resizing */
+    resize: none;
+    overflow: hidden;
+  }
+
+  /* allows auto resizing */
+  .spectrum-Textfield-input,
+  .spectrum-Textfield-input-wrapper::before {
+    /* put input and psuedo element in same grid area */
+    grid-area: 1 / 1 / 2 / 2;
   }
 
 /********* Component Validation *********/
@@ -674,7 +687,6 @@ governing permissions and limitations under the License.
 /********* Component Variants *********/
   /****** Variant - Quiet 🤫 ******/
   &.spectrum-Textfield--quiet {
-
     .spectrum-Textfield-input-wrapper {
       min-block-size: var(--mod-text-area-min-block-size-quiet, var(--spectrum-text-area-min-block-size-quiet));
     }
