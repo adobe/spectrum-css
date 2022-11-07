@@ -74,6 +74,7 @@ governing permissions and limitations under the License.
   --spectrum-textfield-background-color: var(--spectrum-gray-50);
   --spectrum-textfield-background-color-disabled: var(--spectrum-disabled-background-color);
 
+  --spectrum-textfield-border-color-disabled: var(--spectrum-disabled-border-color);
   --spectrum-textfield-border-color-negative-default: var(--spectrum-negative-border-color-default);
   --spectrum-textfield-border-color-negative-hover: var(--spectrum-negative-border-color-hover);
   --spectrum-textfield-border-color-negative-focus: var(--spectrum-negative-border-color-key-focus);
@@ -246,6 +247,10 @@ governing permissions and limitations under the License.
   .spectrum-Textfield--quiet & {
     margin-block-end: var(--mod-textfield-label-spacing-block-quiet, var(--spectrum-textfield-label-spacing-block-quiet));
   }
+
+  .is-disabled & {
+    color: var(--spectrum-textfield-text-color-disabled);
+  }
 }
 
 /********* Child Component - Help Text *********/
@@ -256,7 +261,6 @@ governing permissions and limitations under the License.
     margin-block-start: var(--mod-textfield-helptext-spacing-block, var(--spectrum-textfield-helptext-spacing-block));
   }
 }
-
 
 /********* Child Element - Character Count *********/
 .spectrum-Textfield-character-count {
@@ -377,7 +381,6 @@ governing permissions and limitations under the License.
   }
 
   .spectrum-Textfield--quiet & {
-    /** Quiet Focus Indicator **/
     &::after {
       inline-size: 100%;
       block-size: calc(var(--mod-textfield-height, var(--spectrum-textfield-height))
@@ -387,6 +390,11 @@ governing permissions and limitations under the License.
       margin-block-start: 0;
       border-radius: 0;
       border-color: var(--highcontrast-textfield-focus-indicator-color, var(--mod-textfield-focus-indicator-color, var(--spectrum-textfield-focus-indicator-color)));
+    }
+  }
+
+  .spectrum-Textfield--quiet.is-keyboardFocused & {
+    &::after {
       border-width: 0 0 var(--mod-textfield-focus-indicator-width, var(--spectrum-textfield-focus-indicator-width)) 0;
     }
   }
@@ -567,7 +575,7 @@ governing permissions and limitations under the License.
   .spectrum-Textfield--quiet.is-disabled:hover &,
   &:disabled {
     background-color: transparent;
-    border-color: var(--mod-textfield-background-color-disabled, var(--spectrum-textfield-background-color-disabled));
+    border-color: var(--mod-textfield-border-color-disabled, var(--spectrum-textfield-border-color-disabled));
 
     &::placeholder {
       color: var(--highcontrast-textfield-text-color-disabled, var(--mod-textfield-text-color-disabled, var(--spectrum-textfield-text-color-disabled)));
