@@ -381,7 +381,7 @@ governing permissions and limitations under the License.
   .spectrum-Textfield--quiet & {
     &::after {
       inline-size: 100%;
-      block-size: calc(var(--mod-textfield-height, var(--spectrum-textfield-height))
+      block-size: calc(100%
                       + var(--mod-textfield-focus-indicator-gap, var(--spectrum-textfield-focus-indicator-gap))
                       + var(--mod-textfield-border-width, var(--spectrum-textfield-border-width)));
       margin-inline-start: 0;
@@ -657,16 +657,26 @@ governing permissions and limitations under the License.
     &::before {
       content: attr(data-replicated-value) " ";
       white-space: pre-wrap;
+      visibility: hidden;
     }
   }
 
   .spectrum-Textfield-input {
     min-inline-size: var(--mod-text-area-min-inline-size, var(--spectrum-text-area-min-inline-size));
-    min-block-size: var(--mod-spectrum-text-area-min-block-size, var(--spectrum-text-area-min-block-size));
-    block-size: unset;
+    min-block-size: var(--mod-text-area-min-block-size, var(--spectrum-text-area-min-block-size));
+    block-size: auto;
     /* allows auto resizing */
     resize: none;
     overflow: hidden;
+  }
+
+  &.spectrum-Textfield--quiet {
+    .spectrum-Textfield-input {
+      min-block-size: var(--mod-text-area-min-block-size-quiet, var(--spectrum-text-area-min-block-size-quiet));
+      //block-size: unset;
+      //min-block-size: unset;
+      //block-size: clamp(var(--spectrum-text-area-min-block-size-quiet), var(--spectrum-text-area-min-block-size-quiet), auto);
+    }
   }
 
   /* allows auto resizing */
@@ -681,14 +691,6 @@ governing permissions and limitations under the License.
   &.is-invalid {
     .spectrum-Textfield-validationIcon {
       margin-block-end: auto;
-    }
-  }
-
-/********* Component Variants *********/
-  /****** Variant - Quiet 🤫 ******/
-  &.spectrum-Textfield--quiet {
-    .spectrum-Textfield-input-wrapper {
-      min-block-size: var(--mod-text-area-min-block-size-quiet, var(--spectrum-text-area-min-block-size-quiet));
     }
   }
 }
