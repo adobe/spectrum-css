@@ -7,6 +7,19 @@ sections:
     description: |
      See the [Textfield migration guide](textfield.html#migrationguide) for migration information.
 examples:
+  - id: textfield-auto-resize
+    name: Text Area with Auto Resizing
+    markup: |
+      <div class="spectrum-Textfield spectrum-Textfield--multiline spectrum-Textfield--multiline--sizeM">
+        <label for="textfield-helptext" class="spectrum-FieldLabel spectrum-FieldLabel--sizeM">Text field label</label>
+        <span class="spectrum-Textfield-character-count">50</span>
+        <div class="spectrum-Textfield-input-wrapper">
+          <textarea id="textfield-helptext" placeholder="Enter your name" name="field" class="spectrum-Textfield-input" onInput="this.parentNode.dataset.replicatedValue = this.value"></textarea>
+        </div>
+        <div class="spectrum-HelpText spectrum-HelpText--sizeM spectrum-HelpText--neutral">
+          <div class="spectrum-HelpText-text">Create a password with at least 8 characters.</div>
+        </div>
+      </div>
   - id: textfield
     name: Standard Sizes
     markup: |
