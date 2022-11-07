@@ -502,8 +502,10 @@ governing permissions and limitations under the License.
   .is-focused &,
   &:focus {
     border-color: var(--mod-textfield-border-color-focus, var(--spectrum-textfield-border-color-focus));
-    border-color: var(--mod-textfield-border-color-focus-hover, var(--spectrum-textfield-border-color-focus-hover));
-    /* TODO - hover focus */
+
+    &:hover {
+      border-color: var(--mod-textfield-border-color-focus-hover, var(--spectrum-textfield-border-color-focus-hover));
+    }
 
     &::placeholder {
       color: var(--highcontrast-textfield-text-color-focus, var(--mod-textfield-text-color-focus, var(--spectrum-textfield-text-color-focus)));
