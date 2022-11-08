@@ -27,6 +27,34 @@ examples:
           <h4 class="spectrum-Heading spectrum-Heading--sizeXS spectrum-Examples-itemHeading">Radio</h4>
 
           <form class="spectrum-Form">
+            <div class="spectrum-FieldGroup" role="radiogroup" aria-labelledby="radiogroup-label-1">
+              <div class="spectrum-FieldLabel spectrum-FieldLabel--sizeM" id="radiogroup-label-1">Radio Group Label</div>
+
+              <div class="spectrum-FieldGroupInputLayout" aria-describedby="helptext-radio-1">
+                <div class="spectrum-Radio spectrum-FieldGroup-item">
+                  <input type="radio" name="pets" class="spectrum-Radio-input" id="radio-0">
+                  <span class="spectrum-Radio-button"></span>
+                  <label class="spectrum-Radio-label" for="radio-0">Kittens</label>
+                </div>
+
+                <div class="spectrum-Radio spectrum-FieldGroup-item">
+                  <input type="radio" name="pets" class="spectrum-Radio-input" id="radio-1" checked>
+                  <span class="spectrum-Radio-button"></span>
+                  <label class="spectrum-Radio-label" for="radio-1">Puppies</label>
+                </div>
+
+                <div class="spectrum-HelpText spectrum-HelpText--sizeM spectrum-HelpText" id="helptext-radio-1">
+                  <div class="spectrum-HelpText-text">Select an option.</div>
+                </div>
+              </div>
+            </div>
+          </form>
+        </div>
+
+        <div class="spectrum-Examples-item">
+          <h4 class="spectrum-Heading spectrum-Heading--sizeXS spectrum-Examples-itemHeading">Radio</h4>
+
+          <form class="spectrum-Form">
             <div class="spectrum-FieldGroup spectrum-FieldGroup--toplabel spectrum-FieldGroup--vertical" role="radiogroup" aria-labelledby="radiogroup-label-1">
               <div class="spectrum-FieldLabel spectrum-FieldLabel--sizeM" id="radiogroup-label-1">Radio Group Label</div>
 
@@ -340,7 +368,7 @@ examples:
 
           <form class="spectrum-Form">
             <div class="spectrum-FieldGroup spectrum-FieldGroup--sidelabel spectrum-FieldGroup--vertical" role="radiogroup" aria-labelledby="radiogroup-label-7">
-              <div class="spectrum-FieldLabel spectrum-FieldLabel--sizeM--right" id="radiogroup-label-7">Radio Group Label</div>
+              <div class="spectrum-FieldLabel spectrum-FieldLabel--sizeM spectrum-FieldLabel--right" id="radiogroup-label-7">Radio Group Label</div>
 
               <div class="spectrum-FieldGroupInputLayout" aria-describedby="helptext-radio-7">
                 <div class="spectrum-Radio spectrum-FieldGroup-item">
@@ -368,7 +396,7 @@ examples:
 
           <form class="spectrum-Form">
             <div class="spectrum-FieldGroup spectrum-FieldGroup--sidelabel spectrum-FieldGroup--vertical" role="radiogroup" aria-labelledby="checkboxgroup-label-4">
-              <div class="spectrum-FieldLabel spectrum-FieldLabel--sizeM--right" id="checkboxgroup-label-4">Checkbox Group Label</div>
+              <div class="spectrum-FieldLabel spectrum-FieldLabel--sizeM spectrum-FieldLabel--right" id="checkboxgroup-label-4">Checkbox Group Label</div>
 
               <div class="spectrum-FieldGroupInputLayout" aria-describedby="helptext-checkbox-4">
                 <label class="spectrum-Checkbox spectrum-Checkbox--sizeM spectrum-FieldGroup-item">
@@ -403,7 +431,7 @@ examples:
 
           <form class="spectrum-Form">
             <div class="spectrum-FieldGroup spectrum-FieldGroup--sidelabel spectrum-FieldGroup--horizontal" role="radiogroup" aria-labelledby="radiogroup-label-8">
-              <div class="spectrum-FieldLabel spectrum-FieldLabel--sizeM--right" id="radiogroup-label-8">Radio Group Label</div>
+              <div class="spectrum-FieldLabel spectrum-FieldLabel--sizeM spectrum-FieldLabel--right" id="radiogroup-label-8">Radio Group Label</div>
 
               <div class="spectrum-FieldGroupInputLayout" aria-describedby="helptext-radio-8">
                 <div class="spectrum-Radio spectrum-FieldGroup-item">
@@ -431,7 +459,7 @@ examples:
 
           <form class="spectrum-Form">
             <div class="spectrum-FieldGroup spectrum-FieldGroup--sidelabel spectrum-FieldGroup--horizontal" role="radiogroup" aria-labelledby="checkboxgroup-label-5">
-              <div class="spectrum-FieldLabel spectrum-FieldLabel--sizeM--right" id="checkboxgroup-label-5">Checkbox Group Label</div>
+              <div class="spectrum-FieldLabel spectrum-FieldLabel--sizeM spectrum-FieldLabel--right" id="checkboxgroup-label-5">Checkbox Group Label</div>
 
               <div class="spectrum-FieldGroupInputLayout" aria-describedby="helptext-checkbox-5">
                 <label class="spectrum-Checkbox spectrum-Checkbox--sizeM spectrum-FieldGroup-item">
