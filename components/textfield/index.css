@@ -381,9 +381,7 @@ governing permissions and limitations under the License.
   .spectrum-Textfield--quiet & {
     &::after {
       inline-size: 100%;
-      block-size: calc(100%
-                      + var(--mod-textfield-focus-indicator-gap, var(--spectrum-textfield-focus-indicator-gap))
-                      + var(--mod-textfield-border-width, var(--spectrum-textfield-border-width)));
+      block-size: calc(100% + var(--mod-textfield-focus-indicator-gap, var(--spectrum-textfield-focus-indicator-gap)));
       margin-inline-start: 0;
       margin-block-start: 0;
       border-radius: 0;
