@@ -29,6 +29,7 @@ governing permissions and limitations under the License.
   display: flex;
   align-items: top;
   flex-wrap: wrap;
+  flex-direction: column;
 
   /* field group label top aligned */
   &--toplabel {
@@ -46,6 +47,7 @@ governing permissions and limitations under the License.
   display: flex;
   align-items: top;
   flex-wrap: wrap;
+  flex-direction: column;
 
   /* input fields stacked vertically */
   .spectrum-FieldGroup--vertical & {
