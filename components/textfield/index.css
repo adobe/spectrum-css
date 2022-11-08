@@ -652,47 +652,15 @@ governing permissions and limitations under the License.
 }
 
 .spectrum-Textfield--multiline {
-  .spectrum-Textfield-input-wrapper {
-    display: grid;
-
-    /* allows auto resizing */
-    &::before {
-      content: attr(data-replicated-value) " ";
-      white-space: pre-wrap;
-      visibility: hidden;
-    }
-  }
-
   .spectrum-Textfield-input {
     min-inline-size: var(--mod-text-area-min-inline-size, var(--spectrum-text-area-min-inline-size));
     min-block-size: var(--mod-text-area-min-block-size, var(--spectrum-text-area-min-block-size));
-    block-size: auto;
-    /* allows auto resizing */
     resize: none;
-    overflow: hidden;
   }
 
   &.spectrum-Textfield--quiet {
     .spectrum-Textfield-input {
       min-block-size: var(--mod-text-area-min-block-size-quiet, var(--spectrum-text-area-min-block-size-quiet));
-      //block-size: unset;
-      //min-block-size: unset;
-      //block-size: clamp(var(--spectrum-text-area-min-block-size-quiet), var(--spectrum-text-area-min-block-size-quiet), auto);
-    }
-  }
-
-  /* allows auto resizing */
-  .spectrum-Textfield-input,
-  .spectrum-Textfield-input-wrapper::before {
-    /* put input and psuedo element in same grid area */
-    grid-area: 1 / 1 / 2 / 2;
-  }
-
-/********* Component Validation *********/
-  &.is-valid,
-  &.is-invalid {
-    .spectrum-Textfield-validationIcon {
-      margin-block-end: auto;
     }
   }
 }
