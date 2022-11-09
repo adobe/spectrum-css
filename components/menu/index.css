@@ -30,14 +30,10 @@ governing permissions and limitations under the License.
   --spectrum-menu-section-header-min-width: var(--spectrum-component-height-75);
 
   /* selection/checkmark */
-  /* TODO: eventual token name: */
-  /* --spectrum-menu-item-selectable-edge-to-text-not-selected: var(--spectrum-menu-item-edge-to-text-not-selected-small); */
-  /* TODO: remove below once above is defined */
-  --spectrum-menu-item-selectable-edge-to-text-not-selected: 28px;
+  --spectrum-menu-item-selectable-edge-to-text-not-selected: var(--spectrum-menu-item-selectable-edge-to-text-not-selected-small);
 
-  /* TODO: replace the height & width values with icon size tokens when they are defined */
-  --spectrum-menu-item-checkmark-height: 10px;
-  --spectrum-menu-item-checkmark-width: 10px;
+  --spectrum-menu-item-checkmark-height: var(--spectrum-menu-item-checkmark-height-small);
+  --spectrum-menu-item-checkmark-width: var(--spectrum-menu-item-checkmark-width-small);
 }
 
 .spectrum-Menu--sizeM {
@@ -59,14 +55,10 @@ governing permissions and limitations under the License.
   --spectrum-menu-section-header-font-size: var(--spectrum-font-size-100);
   --spectrum-menu-section-header-min-width: var(--spectrum-component-height-100);
 
-  /* TODO: eventual token name: */
-  /* --spectrum-menu-item-selectable-edge-to-text-not-selected: var(--spectrum-menu-item-edge-to-text-not-selected-medium); */
-  /* TODO: remove below once above is defined */
-  --spectrum-menu-item-selectable-edge-to-text-not-selected: 32px;
+  --spectrum-menu-item-selectable-edge-to-text-not-selected: var(--spectrum-menu-item-selectable-edge-to-text-not-selected-medium);
 
-  /* TODO: replace the height & width values with icon size tokens when they are defined */
-  --spectrum-menu-item-checkmark-height: 10px;
-  --spectrum-menu-item-checkmark-width: 10px;
+  --spectrum-menu-item-checkmark-height: var(--spectrum-menu-item-checkmark-height-medium);
+  --spectrum-menu-item-checkmark-width: var(--spectrum-menu-item-checkmark-width-medium);
 }
 
 .spectrum-Menu--sizeL {
@@ -88,14 +80,10 @@ governing permissions and limitations under the License.
   --spectrum-menu-section-header-font-size: var(--spectrum-font-size-200);
   --spectrum-menu-section-header-min-width: var(--spectrum-component-height-200);
 
-  /* TODO: eventual token name: */
-  /* --spectrum-menu-item-selectable-edge-to-text-not-selected: var(--spectrum-menu-item-edge-to-text-not-selected-large); */
-  /* TODO: remove below once above is defined */
-  --spectrum-menu-item-selectable-edge-to-text-not-selected: 38px;
+  --spectrum-menu-item-selectable-edge-to-text-not-selected: var(--spectrum-menu-item-selectable-edge-to-text-not-selected-large);
 
-  /* TODO: replace the height & width values with icon size tokens when they are defined */
-  --spectrum-menu-item-checkmark-height: 12px;
-  --spectrum-menu-item-checkmark-width: 12px;
+  --spectrum-menu-item-checkmark-height: var(--spectrum-menu-item-checkmark-height-large);
+  --spectrum-menu-item-checkmark-width: var(--spectrum-menu-item-checkmark-width-large);
 }
 
 .spectrum-Menu--sizeXL {
@@ -117,46 +105,10 @@ governing permissions and limitations under the License.
   --spectrum-menu-section-header-font-size: var(--spectrum-font-size-300);
   --spectrum-menu-section-header-min-width: var(--spectrum-component-height-300);
 
-  /* TODO: eventual token name: */
-  /* --spectrum-menu-item-selectable-edge-to-text-not-selected: var(--spectrum-menu-item-edge-to-text-not-selected-extra-large); */
-  /* TODO: remove below once above is defined */
-  --spectrum-menu-item-selectable-edge-to-text-not-selected: 45px;
+  --spectrum-menu-item-selectable-edge-to-text-not-selected: var(--spectrum-menu-item-selectable-edge-to-text-not-selected-extra-large);
 
-  /* TODO: replace the height & width values with icon size tokens when they are defined */
-  --spectrum-menu-item-checkmark-height: 14px;
-  --spectrum-menu-item-checkmark-width: 14px;
-}
-
-/* TODO: temporary & can be removed once the tokens are defined in the core tokens package */
-.spectrum--large {
-  .spectrum-Menu--sizeS {
-    --spectrum-menu-item-selectable-edge-to-text-not-selected: 34px;
-    
-    /* TODO: replace the height & width values with icon size tokens when they are defined */
-    --spectrum-menu-item-checkmark-height: 12px;
-    --spectrum-menu-item-checkmark-width: 12px;
-  }
-  .spectrum-Menu--sizeM {
-    --spectrum-menu-item-selectable-edge-to-text-not-selected: 42px;
-    
-    /* TODO: replace the height & width values with icon size tokens when they are defined */
-    --spectrum-menu-item-checkmark-height: 14px;
-    --spectrum-menu-item-checkmark-width: 14px;
-  }
-  .spectrum-Menu--sizeL {
-    --spectrum-menu-item-selectable-edge-to-text-not-selected: 47px;
-    
-    /* TODO: replace the height & width values with icon size tokens when they are defined */
-    --spectrum-menu-item-checkmark-height: 16px;
-    --spectrum-menu-item-checkmark-width: 16px;
-  }
-  .spectrum-Menu--sizeXL {
-    --spectrum-menu-item-selectable-edge-to-text-not-selected: 54px;
-    
-    /* TODO: replace the height & width values with icon size tokens when they are defined */
-    --spectrum-menu-item-checkmark-height: 16px;
-    --spectrum-menu-item-checkmark-width: 16px;
-  }
+  --spectrum-menu-item-checkmark-height: var(--spectrum-menu-item-checkmark-height-extra-large);
+  --spectrum-menu-item-checkmark-width: var(--spectrum-menu-item-checkmark-width-extra-large);
 }
 
 .spectrum-Menu {
