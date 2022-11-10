@@ -15,7 +15,7 @@ governing permissions and limitations under the License.
 
   /* Colors */
   /* Primary */
-  --spectrum-link-text-color-primary-default: var(--spectrum-accent-content-color);
+  --spectrum-link-text-color-primary-default: var(--spectrum-accent-content-color-default);
   --spectrum-link-text-color-primary-hover: var(--spectrum-accent-content-color-hover);
   --spectrum-link-text-color-primary-active: var(--spectrum-accent-content-color-down);
   --spectrum-link-text-color-primary-focus: var(--spectrum-accent-content-color-key-focus);
