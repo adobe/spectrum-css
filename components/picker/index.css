@@ -222,7 +222,7 @@ governing permissions and limitations under the License.
     border-style: solid;
     border-width: var(--mod-picker-focus-indicator-thickness, var(--spectrum-picker-focus-indicator-thickness));
     border-color: transparent;
-    border-radius: calc(var(--mod-picker-border-radius, var(--spectrum-picker-border-radius)) + var(--spectrum-picker-focus-indicator-gap) + var(--spectrum-picker-border-width));
+    border-radius: calc(var(--mod-picker-border-radius, var(--spectrum-picker-border-radius)) + var(--mod-picker-focus-indicator-gap, var(--spectrum-picker-focus-indicator-gap)) + var(--mod-picker-border-width, var(--spectrum-picker-border-width)));
   }
 
   &:focus-ring,
