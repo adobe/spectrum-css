@@ -3,6 +3,24 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+<a name="3.0.0"></a>
+# 3.0.0
+🗓 2022-11-10 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/overlay@2.0.2-alpha.0...@spectrum-css/overlay@3.0.0)
+
+* refactor(popover)!: migrate to core tokens (#1509) ([011e486](https://github.com/adobe/spectrum-css/commit/011e486)), closes [#1509](https://github.com/adobe/spectrum-css/issues/1509)
+
+
+### 🛑 BREAKING CHANGES
+
+* migrates popover to core tokens
+
+Co-authored-by: Garth Braithwaite <garthdb@gmail.com>
+Co-authored-by: Patrick Fulton <pfulton@adobe.com>
+
+
+
+
+
 <a name="2.0.2"></a>
 ## 2.0.2
 🗓 2021-09-29 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/overlay@2.0.2-alpha.0...@spectrum-css/overlay@2.0.2)

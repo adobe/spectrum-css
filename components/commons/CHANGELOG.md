@@ -3,6 +3,24 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+<a name="4.0.0"></a>
+# 4.0.0
+🗓 2022-11-10 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/commons@3.0.6...@spectrum-css/commons@4.0.0)
+
+* refactor(popover)!: migrate to core tokens (#1509) ([011e486](https://github.com/adobe/spectrum-css/commit/011e486)), closes [#1509](https://github.com/adobe/spectrum-css/issues/1509)
+
+
+### 🛑 BREAKING CHANGES
+
+* migrates popover to core tokens
+
+Co-authored-by: Garth Braithwaite <garthdb@gmail.com>
+Co-authored-by: Patrick Fulton <pfulton@adobe.com>
+
+
+
+
+
 <a name="3.0.6"></a>
 ## 3.0.6
 🗓 2022-06-16 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/commons@3.0.5...@spectrum-css/commons@3.0.6)
