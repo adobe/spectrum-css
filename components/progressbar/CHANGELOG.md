@@ -3,6 +3,26 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+<a name="2.0.0"></a>
+# 2.0.0
+🗓 2022-11-10 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/progressbar@1.0.33...@spectrum-css/progressbar@2.0.0)
+
+* feat(progressbar)!: migrate progressbar to core tokens  (#1493) ([c0fc49f](https://github.com/adobe/spectrum-css/commit/c0fc49f)), closes [#1493](https://github.com/adobe/spectrum-css/issues/1493)
+
+
+### 🛑 BREAKING CHANGES
+
+* migrate ProgressBar to core tokens
+
+* feat(meter!): meter now only supports sizes S & L
+
+Co-authored-by: Patrick Fulton <pfulton@adobe.com>
+Co-authored-by: Bernhard Schmidt <52184321+bernhard-adobe@users.noreply.github.com>
+
+
+
+
+
 <a name="1.0.33"></a>
 ## 1.0.33
 🗓 2022-07-25 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/progressbar@1.0.32...@spectrum-css/progressbar@1.0.33)
