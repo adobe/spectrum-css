@@ -58,17 +58,18 @@ governing permissions and limitations under the License.
   /* Start offset by the animation distance */
   transform: translateY(100%);
   /* Exit animations */
-  transition: opacity var(--mod-tray-exit-animation-duration, var(--spectrum-tray-exit-animation-delay))
+  transition: opacity
+      var(--mod-tray-exit-animation-duration, var(--spectrum-tray-exit-animation-duration))
       cubic-bezier(0.5, 0, 1, 1)
       var(--mod-tray-exit-animation-delay, var(--spectrum-tray-exit-animation-delay)),
-    visibility 0ms linear
-      calc(
-        var(--mod-tray-exit-animation-delay, var(--spectrum-tray-exit-animation-delay)) +
-          var(--mod-tray-exit-animation-duration, var(--spectrum-tray-exit-animation-duration))
-      ),
-    transform var(--mod-tray-exit-animation-duration, var(--spectrum-tray-exit-animation-duration))
+    visibility
+      var(--mod-tray-exit-animation-duration, var(--spectrum-tray-exit-animation-duration))
+      linear
+      calc(var(--mod-tray-exit-animation-delay, var(--spectrum-tray-exit-animation-delay)) + var(--mod-tray-exit-animation-duration, var(--spectrum-tray-exit-animation-duration))),
+    transform
+      var(--mod-tray-exit-animation-duration, var(--spectrum-tray-exit-animation-duration))
       cubic-bezier(0.5, 0, 1, 1)
-      var(--mod-tray-exit-animation-delay, var(--spectrum-tray-exit-animation-duration));
+      var(--mod-tray-exit-animation-delay, var(--spectrum-tray-exit-animation-delay));
 
   background-color: var(--highcontrast-tray-background-color, var(--mod-tray-background-color, var(--spectrum-tray-background-color)));
 
