@@ -483,6 +483,9 @@ governing permissions and limitations under the License.
   /*** Input Placeholder Text ***/
   &::placeholder {
     opacity: 1;
+    font-size: var(--mod-textfield-placeholder-font-size, var(--spectrum-textfield-placeholder-font-size));
+    font-family: var(--mod-textfield-font-family, var(--spectrum-textfield-font-family));
+    font-weight: var(--mod-textfield-font-weight, var(--spectrum-textfield-font-weight));
     color: var(--highcontrast-textfield-text-color-default, var(--mod-textfield-text-color-default, var(--spectrum-textfield-text-color-default)));
     transition: color var(--mod-animation-duration-100, var(--spectrum-animation-duration-100)) ease-in-out;
   }
