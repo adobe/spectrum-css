@@ -120,7 +120,7 @@ function reload(cb) {
 
 function watchSite() {
   gulp.watch(
-    `${dirs.site}/*.pug`,
+    `${dirs.site}/*.njk`,
     gulp.series(
       docs.buildSite_pages,
       reload
@@ -128,7 +128,7 @@ function watchSite() {
   );
 
   gulp.watch(
-    `${dirs.site}/includes/*.pug`,
+    `${dirs.site}/includes/*.njk`,
     gulp.series(
       gulp.parallel(
         docs.buildSite_html,
@@ -140,7 +140,7 @@ function watchSite() {
 
   gulp.watch(
     [
-      `${dirs.site}/templates/siteComponent.pug`,
+      `${dirs.site}/templates/siteComponent.njk`,
       `${dirs.site}/util.js`
     ],
     gulp.series(

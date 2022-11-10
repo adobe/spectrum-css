@@ -30,6 +30,10 @@ const depUtils = require('../lib/depUtils');
 
 const npmFetch = require('npm-registry-fetch');
 
+// adding nunjucks
+const nunjucksRender = require('gulp-nunjucks-render')
+const nunjucksCompiler = require('nunjucks');
+
 let minimumDeps = [
   'icon',
   'statuslight',
@@ -142,8 +146,8 @@ async function buildDocs_forDep(dep) {
         file.path = ext(file.path, '.html');
 
         try {
-          const templatePath = `${dirs.site}/templates/siteComponent.pug`;
-          let compiled = pugCompiler.renderFile(templatePath, templateData);
+          const templatePath = `${dirs.site}/templates/siteComponent.njk`;
+          let compiled = nunjucksCompiler.render(templatePath, templateData)
           file.contents = Buffer.from(compiled);
         } catch (err) {
           return cb(err);
@@ -288,16 +292,17 @@ function buildSite_copyFreshResources() {
 }
 
 function buildSite_html() {
-  return gulp.src(`${dirs.site}/*.pug`)
+  return gulp.src(`${dirs.site}/*.njk`)
     .pipe(data(function(file) {
       return {
         util: require(`${dirs.site}/util`),
-        pageURL: path.basename(file.basename, '.pug') + '.html',
-        dependencyOrder: minimumDeps
+        pageURL: path.basename(file.basename, '.njk') + '.html',
+        dependencyOrder: minimumDeps,
+        nav: templateData.nav // adding navigation data
       };
     }))
-    .pipe(pug({
-      locals: templateData
+    .pipe(nunjucksRender({
+      path: 'site/templates'
     }))
     .pipe(gulp.dest('dist/docs/'));
 }
