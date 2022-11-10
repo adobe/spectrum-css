@@ -3,6 +3,23 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+<a name="4.0.0"></a>
+# 4.0.0
+🗓 2022-11-10 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/fieldgroup@3.1.4...@spectrum-css/fieldgroup@4.0.0)
+
+* feat(fieldgroup)!: migrate to core tokens (#1486) ([17c4795](https://github.com/adobe/spectrum-css/commit/17c4795)), closes [#1486](https://github.com/adobe/spectrum-css/issues/1486)
+
+
+### 🛑 BREAKING CHANGES
+
+* migrates FieldGroup to core tokens
+
+Co-authored-by: Patrick Fulton <pfulton@adobe.com>
+
+
+
+
+
 <a name="3.1.4"></a>
 ## 3.1.4
 🗓 2022-06-16 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/fieldgroup@3.1.3...@spectrum-css/fieldgroup@3.1.4)
