@@ -3,6 +3,25 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+<a name="4.0.0"></a>
+# 4.0.0
+🗓 2022-11-10 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/link@3.1.23...@spectrum-css/link@4.0.0)
+
+* feat(link)!: migrate link to core tokens (#1504) ([3c29244](https://github.com/adobe/spectrum-css/commit/3c29244)), closes [#1504](https://github.com/adobe/spectrum-css/issues/1504)
+
+
+### 🛑 BREAKING CHANGES
+
+* migrates Link to core tokens
+
+refactor: remove t-shirt sizes
+
+Co-authored-by: Patrick Fulton <pfulton@adobe.com>
+
+
+
+
+
 <a name="3.1.23"></a>
 ## 3.1.23
 🗓 2022-06-16 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/link@3.1.22...@spectrum-css/link@3.1.23)

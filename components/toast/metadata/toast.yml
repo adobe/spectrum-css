@@ -29,6 +29,8 @@ sections:
   - id: toast-info
     name: Info
     status: Verified
+    description: |
+      *Spectrum for Adobe Express uses a different icon. Use the `SX_Info_18_S.svg` icon in the Express workflow icon set.*
     markup: |
       <div class="spectrum-Toast spectrum-Toast--info">
         <svg class="spectrum-Icon spectrum-Icon--sizeM spectrum-Toast-typeIcon" focusable="false" aria-hidden="true">
@@ -48,6 +50,8 @@ sections:
   - id: toast-negative
     name: Negative
     status: Verified
+    description: |
+      *Spectrum for Adobe Express uses a different icon. Use the `SX_Alert_18_S.svg` icon in the Express workflow icon set.*
     markup: |
       <div class="spectrum-Toast spectrum-Toast--negative">
         <svg class="spectrum-Icon spectrum-Icon--sizeM spectrum-Toast-typeIcon" focusable="false" aria-hidden="true">
@@ -70,6 +74,8 @@ sections:
   - id: toast-positive
     name: Positive
     status: Verified
+    description: |
+      *Spectrum for Adobe Express uses a different icon. Use the `SX_CheckmarkCircle_18_S.svg` icon in the Express workflow icon set.*
     markup: |
       <div class="spectrum-Toast spectrum-Toast--positive">
         <svg class="spectrum-Icon spectrum-Icon--sizeM spectrum-Toast-typeIcon" focusable="false" aria-hidden="true">

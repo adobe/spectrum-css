@@ -1475,15 +1475,20 @@
   dependencies:
     "@spectrum-css/vars" "^8.0.0"
 
-"@spectrum-css/fieldlabel@^4.0.29":
-  version "4.0.29"
-  resolved "https://registry.yarnpkg.com/@spectrum-css/fieldlabel/-/fieldlabel-4.0.29.tgz#c09de2495b041a308b0cf110b1185cbb77c188fe"
-  integrity sha512-MRputoPSSiIC0PoPOaX5zeDHyVcHdbfib7lCBk9di8R/eed3UzHvQeBwclAvCxkVHuyfIIzgaK3mlIt4flAvlw==
+"@spectrum-css/fieldgroup@^3.1.4":
+  version "3.1.4"
+  resolved "https://registry.yarnpkg.com/@spectrum-css/fieldgroup/-/fieldgroup-3.1.4.tgz#aede57bda56c41310d262774a8805eefc89ddf74"
+  integrity sha512-ynqkD1OWicCEW7hgYQWzJUrUih+guJHjDtPbTKYhCbnxPqi6aifKmLstBehCgs4iG4+YfGDdZTppW64A3o5foQ==
 
-"@spectrum-css/radio@^3.0.24":
-  version "3.0.24"
-  resolved "https://registry.yarnpkg.com/@spectrum-css/radio/-/radio-3.0.24.tgz#7a08476edf42be2007b75f7765c18c26eb3a9880"
-  integrity sha512-C/saSKXb3dNCWprsP4iXkFFEmRrxwsdm2Al04myZ6pxOJ4tr1WjHAAtorwUgaUiyR87OnL1mGX2aWrFEN1mvtQ==
+"@spectrum-css/link@^3.1.23":
+  version "3.1.23"
+  resolved "https://registry.yarnpkg.com/@spectrum-css/link/-/link-3.1.23.tgz#9d9ff64c41366edbfdb19d04a5deec88bf2ea8fd"
+  integrity sha512-CAJQGnGTrTtR4tF1L94ou9Y+c4vnx9d5rWhb3AMzKb2Focqz02xSkTyaCCH7OM/3CwD8TCLOMANon8LcRpGAjA==
+
+"@spectrum-css/popover@^5.0.18":
+  version "5.0.18"
+  resolved "https://registry.yarnpkg.com/@spectrum-css/popover/-/popover-5.0.18.tgz#4e8d1b15b0f96ff3c19a6642ebae7937e99723a4"
+  integrity sha512-MpdlGjj6Y03l65UUiww8ulc6t6xImQFsIAqzDIuvtH+8BPEM4IbizJFGa6LEEvkMhHiwRF1s94LDg3d+q3ZmvA==
 
 "@spectrum-css/spectrum-css-vr-test-assets-essential@^1.0.46":
   version "1.0.46"

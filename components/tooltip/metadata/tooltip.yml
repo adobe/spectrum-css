@@ -16,6 +16,8 @@ examples:
   - id: tooltip-info
     name: Informative
     status: Verified
+    description: |
+      *Spectrum for Adobe Express uses a different icon. Use the `SX_Info_14_S.svg` icon in the Express workflow icon set.*
     markup: |
       <span class="spectrum-Tooltip spectrum-Tooltip--top spectrum-Tooltip--info is-open">
         <span class="spectrum-Tooltip-label">Label</span>
@@ -42,6 +44,8 @@ examples:
   - id: tooltip-positive
     name: Positive
     status: Verified
+    description: |
+      *Spectrum for Adobe Express uses a different icon. Use the `SX_CheckmarkCircle_14_S.svg` icon in the Express workflow icon set.*
     markup: |
       <span class="spectrum-Tooltip spectrum-Tooltip--top spectrum-Tooltip--positive is-open">
         <span class="spectrum-Tooltip-label">Label</span>
@@ -68,6 +72,8 @@ examples:
   - id: tooltip-negative
     name: Negative
     status: Verified
+    description: |
+      *Spectrum for Adobe Express uses a different icon. Use the `SX_Alert_14_S.svg` icon in the Express workflow icon set.*
     markup: |
       <span class="spectrum-Tooltip spectrum-Tooltip--top spectrum-Tooltip--negative is-open">
         <span class="spectrum-Tooltip-label">Label</span>
@@ -143,7 +149,10 @@ examples:
     name: Help
     status: Deprecated
     details: Use `info`
-    description: An informative tooltip with a help icon.
+    description: |
+      An informative tooltip with a help icon.
+
+      *Spectrum for Adobe Express uses a different icon. Use the `SX_Help_14_S.svg` icon in the Express workflow icon set.*
     markup: |
       <span class="spectrum-Tooltip spectrum-Tooltip--top spectrum-Tooltip--info is-open">
         <svg class="spectrum-Icon spectrum-Icon--sizeM spectrum-Tooltip-typeIcon" focusable="false" aria-hidden="true">

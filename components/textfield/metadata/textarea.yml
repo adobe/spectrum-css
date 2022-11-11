@@ -43,6 +43,8 @@ examples:
 
   - id: textfield
     name: Invalid
+    description: |
+      *Spectrum for Adobe Express uses a different icon. Use the `SX_Alert_18_N.svg` icon in the Express workflow icon set.*
     markup: |
       <div class="spectrum-Textfield spectrum-Textfield--multiline is-invalid">
         <svg class="spectrum-Icon spectrum-Icon--sizeM spectrum-Textfield-validationIcon" focusable="false" aria-hidden="true">
@@ -77,6 +79,8 @@ examples:
 
   - id: textfield
     name: Focused (invalid)
+    description: |
+      *Spectrum for Adobe Express uses a different icon. Use the `SX_Alert_18_N.svg` icon in the Express workflow icon set.*
     markup: |
       <div class="spectrum-Textfield spectrum-Textfield--multiline is-invalid is-focused">
         <svg class="spectrum-Icon spectrum-Icon--sizeM spectrum-Textfield-validationIcon" focusable="false" aria-hidden="true">
@@ -87,6 +91,8 @@ examples:
 
   - id: textfield
     name: Keyboard Focused (invalid)
+    description: |
+      *Spectrum for Adobe Express uses a different icon. Use the `SX_Alert_18_N.svg` icon in the Express workflow icon set.*
     markup: |
       <div class="spectrum-Textfield spectrum-Textfield--multiline is-invalid is-keyboardFocused">
         <svg class="spectrum-Icon spectrum-Icon--sizeM spectrum-Textfield-validationIcon" focusable="false" aria-hidden="true">
@@ -111,6 +117,8 @@ examples:
 
   - id: textfield-quiet
     name: Quiet Valid
+    description: |
+      *Spectrum for Adobe Express uses a different icon. Use the `SX_Alert_18_N.svg` icon in the Express workflow icon set.*    
     markup: |
       <div class="spectrum-Textfield spectrum-Textfield--multiline spectrum-Textfield--quiet is-valid">
         <svg class="spectrum-Icon spectrum-UIIcon-Checkmark100 spectrum-Textfield-validationIcon" focusable="false" aria-hidden="true">
@@ -131,6 +139,8 @@ examples:
 
   - id: textfield-quiet
     name: Quiet Invalid
+    description: |
+      *Spectrum for Adobe Express uses a different icon. Use the `SX_Alert_18_N.svg` icon in the Express workflow icon set.*
     markup: |
       <div class="spectrum-Textfield spectrum-Textfield--multiline spectrum-Textfield--quiet is-invalid">
         <svg class="spectrum-Icon spectrum-Icon--sizeM spectrum-Textfield-validationIcon" focusable="false" aria-hidden="true">
@@ -165,6 +175,8 @@ examples:
 
   - id: textfield-quiet
     name: Quiet Focused (invalid)
+    description: |
+      *Spectrum for Adobe Express uses a different icon. Use the `SX_Alert_18_N.svg` icon in the Express workflow icon set.*
     markup: |
       <div class="spectrum-Textfield spectrum-Textfield--multiline spectrum-Textfield--quiet is-invalid is-focused">
         <svg class="spectrum-Icon spectrum-Icon--sizeM spectrum-Textfield-validationIcon" focusable="false" aria-hidden="true">
@@ -175,6 +187,8 @@ examples:
 
   - id: textfield-quiet
     name: Quiet Keyboard Focused (invalid)
+    description: |
+      *Spectrum for Adobe Express uses a different icon. Use the `SX_Alert_18_N.svg` icon in the Express workflow icon set.*
     markup: |
       <div class="spectrum-Textfield spectrum-Textfield--multiline spectrum-Textfield--quiet is-invalid is-keyboardFocused">
         <svg class="spectrum-Icon spectrum-Icon--sizeM spectrum-Textfield-validationIcon" focusable="false" aria-hidden="true">
