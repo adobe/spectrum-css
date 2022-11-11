@@ -3,9 +3,8 @@
     <head>
         <title>{{component.name}} - Spectrum CSS</title>
         {% include './dependencies.njk' %}
-        <script type="text/javascript">
+        {# <script type="text/javascript">
             // Get DNA data
-            console.log(component, dnaVars)
 
             util.populateDNAInfo(component, dnaVars);
 
@@ -46,7 +45,7 @@
             console.log("examples" + examples)
 
             let status = dnaStatusTranslation[component.dnaStatus] || component.dnaStatus;
-        </script>
+        </script> #}
     </head>
     <body>
         <div class="spectrum-Site">
@@ -250,7 +249,7 @@
                                     </div>
                                 </section>
                             {% endif %}
-                            {% if examples.length %}
+                            {% if component.examples.length %}
                                 <header class="spectrum-CSSComponent-sectionHeading" id="variants">
                                     <h2 class="spectrum-Heading spectrum-Heading--sizeM">
                                         <a href="#variants" class="spectrum-BigSubtleLink">
@@ -258,16 +257,16 @@
                                         </a>
                                     </h2>
                                     <hr class="spectrum-Divider spectrum-Divider--large"/>
-                                    {% asyncEach example in examples %}
-                                        {% include "./example.njk" %}
-                                    {% endeach %}
+                                    {% for example in component.examples %}
+                                    {% include "./example.njk" %}
+                                    {% endfor %}
                                 </header>
                             {% endif %}
-                            {% if component.sections %}
-                                {# {% asyncEach section in component.sections %}
+                            {# {% if component.sections %}
+                        {% asyncEach section in component.sections %}
                                     {% include "./section.njk" %}
-                                {% endeach %} #}
-                            {% endif %}
+                                {% endeach %}
+                    {% endif %} #}
                         </article>
                     </div>
                 </div>
