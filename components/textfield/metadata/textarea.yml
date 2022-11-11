@@ -10,7 +10,7 @@ examples:
   - id: textfield
     name: Standard Sizes
     markup: |
-      <div class="spectrum-Textfield spectrum-Textfield--multiline spectrum-Textfield--multiline--sizeS">
+      <div class="spectrum-Textfield spectrum-Textfield--sizeS spectrum-Textfield--multiline">
         <label for="textfield-sm" class="spectrum-FieldLabel spectrum-FieldLabel--sizeS">Enter your name</label>
         <span class="spectrum-Textfield-character-count">50</span>
         <div class="spectrum-Textfield-input-wrapper">
@@ -21,7 +21,7 @@ examples:
         </div>
       </div>
 
-      <div class="spectrum-Textfield spectrum-Textfield--multiline spectrum-Textfield--multiline--sizeM">
+      <div class="spectrum-Textfield spectrum-Textfield--sizeM spectrum-Textfield--multiline">
         <label for="textfield-md" class="spectrum-FieldLabel spectrum-FieldLabel--sizeM">Enter your name</label>
         <span class="spectrum-Textfield-character-count">50</span>
         <div class="spectrum-Textfield-input-wrapper">
@@ -32,7 +32,7 @@ examples:
         </div>
       </div>
 
-      <div class="spectrum-Textfield spectrum-Textfield--multiline spectrum-Textfield--multiline--sizeL">
+      <div class="spectrum-Textfield spectrum-Textfield--sizeL spectrum-Textfield--multiline">
         <label for="textfield-l" class="spectrum-FieldLabel spectrum-FieldLabel--sizeL">Enter your name</label>
         <span class="spectrum-Textfield-character-count">50</span>
         <div class="spectrum-Textfield-input-wrapper">
@@ -43,7 +43,7 @@ examples:
         </div>
       </div>
 
-      <div class="spectrum-Textfield spectrum-Textfield--multiline spectrum-Textfield--multiline--sizeXL">
+      <div class="spectrum-Textfield spectrum-Textfield--sizeXL spectrum-Textfield--multiline">
         <label for="textfield-xl" class="spectrum-FieldLabel spectrum-FieldLabel--sizeXL">Enter your name</label>
         <span class="spectrum-Textfield-character-count">50</span>
         <div class="spectrum-Textfield-input-wrapper">
@@ -229,7 +229,7 @@ examples:
   - id: textfield-quiet
     name: Quiet Valid
     description: |
-      *Spectrum for Adobe Express uses a different icon. Use the `SX_Alert_18_N.svg` icon in the Express workflow icon set.*    
+      *Spectrum for Adobe Express uses a different icon. Use the `SX_Alert_18_N.svg` icon in the Express workflow icon set.*
     markup: |
       <div class="spectrum-Textfield spectrum-Textfield--multiline spectrum-Textfield--quiet is-valid">
         <label for="textarea-quiet-valid" class="spectrum-FieldLabel spectrum-FieldLabel--sizeM">Enter your name</label>
