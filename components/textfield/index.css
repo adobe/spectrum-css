@@ -46,19 +46,12 @@ governing permissions and limitations under the License.
   --spectrum-textfield-icon-spacing-inline-end-quiet-valid: var(--spectrum-field-edge-to-validation-icon-quiet);
   --spectrum-textfield-icon-spacing-block-valid: var(--spectrum-field-top-to-validation-icon-medium);
 
-  /* correct font token */
-  /* --spectrum-textfield-font-family: var(--spectrum-font-family-default); */
-
-  /* placeholder font token */
-  --spectrum-textfield-font-family: adobe-clean, 'Source Sans Pro', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Ubuntu, 'Trebuchet MS', 'Lucida Grande', sans-serif;
+  /* font styles */
+  --spectrum-textfield-font-family: adobe-clean, 'Source Sans Pro', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Ubuntu, 'Trebuchet MS', 'Lucida Grande', sans-serif; /* Placeholder - TODO - replace with --spectrum-font-family-default */
   --spectrum-textfield-font-weight: var(--spectrum-font-regular-default);
 
-  /* character count text defaults */
-  /* character count correct font token */
-  /* --spectrum-textfield-character-count-font-family: var(--spectrum-font-family-default); */
-
-  /* character count placeholder font token */
-  --spectrum-textfield-character-count-font-family: adobe-clean, 'Source Sans Pro', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Ubuntu, 'Trebuchet MS', 'Lucida Grande', sans-serif;
+  /* character count */
+  --spectrum-textfield-character-count-font-family: adobe-clean, 'Source Sans Pro', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Ubuntu, 'Trebuchet MS', 'Lucida Grande', sans-serif; /* Placeholder - TODO - replace with --spectrum-font-family-default */
   --spectrum-textfield-character-count-font-weight: var(--spectrum-font-regular-default);
   --spectrum-textfield-character-count-font-size: var(--spectrum-font-size-75);
   --spectrum-textfield-character-count-spacing-inline: var(--spectrum-spacing-200);
@@ -76,10 +69,8 @@ governing permissions and limitations under the License.
   /* Text Colors */
   --spectrum-textfield-text-color-default: var(--spectrum-neutral-content-color-default);
   --spectrum-textfield-text-color-hover: var(--spectrum-neutral-content-color-hover);
-  /* --spectrum-textfield-text-color-focus: var(--spectrum-neutral-content-color-focus); Correct token for text focus */
-  --spectrum-textfield-text-color-focus: var(--spectrum-neutral-content-color-default); /* Placeholder - TODO - replace placeholder with  above token when available */
-
-  --spectrum-textfield-text-color-focus-hover: var(--spectrum-neutral-content-color-key-focus);
+  --spectrum-textfield-text-color-focus: var(--spectrum-neutral-content-color-default); /* Placeholder - TODO - replace with --spectrum-neutral-content-color-focus */
+  --spectrum-textfield-text-color-focus-hover: var(--spectrum-neutral-content-color-default); /* Placeholder - TODO - replace with --spectrum-neutral-content-color-focus-hover */
   --spectrum-textfield-text-color-keyboard-focus: var(--spectrum-neutral-content-color-key-focus);
 
   /* Read Only Text Color */
@@ -93,10 +84,8 @@ governing permissions and limitations under the License.
   /* Invalid Colors */
   --spectrum-textfield-border-color-invalid-default: var(--spectrum-negative-border-color-default);
   --spectrum-textfield-border-color-invalid-hover: var(--spectrum-negative-border-color-hover);
-  /* --spectrum-textfield-border-color-invalid-focus: var(--spectrum-negative-border-color-focus); Correct token for negative border focus */
-  --spectrum-textfield-border-color-invalid-focus: var(--spectrum-negative-border-color-default); /* Placeholder - TODO - replace placeholder with  above token when available */
-  /* --spectrum-textfield-border-color-invalid-focus-hover: var(--spectrum-negative-border-color-focus-hover); Correct token for negative border focus hover */
-  --spectrum-textfield-border-color-invalid-focus-hover: var(--spectrum-negative-border-color-default); /* Placeholder - TODO - replace placeholder with  above token when available */
+  --spectrum-textfield-border-color-invalid-focus: var(--spectrum-negative-border-color-default); /* Placeholder - TODO - replace with --spectrum-negative-border-color-focus */
+  --spectrum-textfield-border-color-invalid-focus-hover: var(--spectrum-negative-border-color-default); /* Placeholder - TODO - replace with --spectrum-negative-border-color-focus-hover */
   --spectrum-textfield-border-color-invalid-keyboard-focus: var(--spectrum-negative-border-color-key-focus);
   --spectrum-textfield-icon-color-invalid: var(--spectrum-negative-visual-color);
 
