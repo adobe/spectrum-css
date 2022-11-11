@@ -321,7 +321,7 @@ governing permissions and limitations under the License.
     margin-block-end: var(--mod-textfield-icon-spacing-block-valid, var(--spectrum-textfield-icon-spacing-block-valid));
     margin-inline-start: var(--mod-textfield-icon-spacing-inline-start-valid, var(--spectrum-textfield-icon-spacing-inline-start-valid));
     margin-inline-end: var(--mod-textfield-icon-spacing-inline-end-valid, var(--spectrum-textfield-icon-spacing-inline-end-valid));
-    color: var(--mod-textfield-icon-color-valid, var(--spectrum-textfield-icon-color-valid));
+    color: var(--highcontrast-textfield-icon-color-valid, var(--mod-textfield-icon-color-valid, var(--spectrum-textfield-icon-color-valid)));
   }
 
   /****** Validation Icon - Invalid ⚠️ ******/
@@ -332,7 +332,7 @@ governing permissions and limitations under the License.
     margin-block-end: var(--mod-textfield-icon-spacing-block-invalid, var(--spectrum-textfield-icon-spacing-block-invalid));
     margin-inline-start: var(--mod-textfield-icon-spacing-inline-start-invalid, var(--spectrum-textfield-icon-spacing-inline-start-invalid));
     margin-inline-end: var(--mod-textfield-icon-spacing-inline-end-invalid, var(--spectrum-textfield-icon-spacing-inline-end-invalid));
-    color: var(--mod-textfield-icon-color-invalid, var(--spectrum-textfield-icon-color-invalid));
+    color: var(--highcontrast-textfield-icon-color-invalid, var(--mod-textfield-icon-color-invalid, var(--spectrum-textfield-icon-color-invalid)));
   }
 
   .is-disabled &,
@@ -523,7 +523,7 @@ governing permissions and limitations under the License.
   /* mouse focus */
   .is-focused &,
   &:focus {
-    border-color: var(--mod-textfield-border-color-focus, var(--spectrum-textfield-border-color-focus));
+    border-color: var(--highcontrast-textfield-border-color-focus, var(--mod-textfield-border-color-focus, var(--spectrum-textfield-border-color-focus)));
     color: var(--highcontrast-textfield-text-color-focus, var(--mod-textfield-text-color-focus, var(--spectrum-textfield-text-color-focus)));
 
     &::placeholder {
@@ -532,7 +532,7 @@ governing permissions and limitations under the License.
 
     /* focus hover */
     &:hover {
-      border-color: var(--mod-textfield-border-color-focus-hover, var(--spectrum-textfield-border-color-focus-hover));
+      border-color: var(--highcontrast-textfield-border-color-focus-hover, var(--mod-textfield-border-color-focus-hover, var(--spectrum-textfield-border-color-focus-hover)));
       color: var(--highcontrast-textfield-text-color-focus-hover, var(--mod-textfield-text-color-focus-hover, var(--spectrum-textfield-text-color-focus-hover)));
 
       &::placeholder {
