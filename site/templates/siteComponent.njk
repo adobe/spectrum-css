@@ -3,49 +3,9 @@
     <head>
         <title>{{component.name}} - Spectrum CSS</title>
         {% include './dependencies.njk' %}
-        {# <script type="text/javascript">
-            // Get DNA data
-
-            util.populateDNAInfo(component, dnaVars);
-
-            // Arrange examples for processing
-            var examples;
-            if (!component.examples) {
-                // Only one top-level example
-                examples = [component];
-            } else {
-                // Multiple child examples
-                examples = component.examples;
-            }
-
-            if (!Array.isArray(examples)) {
-                examples = Object.values(examples);
-            }
-
-            examples.forEach(example => {
-                if (example.dnaStatus === 'Deprecated' || example.cssStatus === 'Deprecated') {
-                    example.status = 'Deprecated';
-                } else if (example.cssStatus === 'Verified' || example.dnaStatus === 'Canon') {
-                    example.status = 'Verified';
-                } else {
-                    example.status = 'Contribution';
-                }
-            });
-
-            let dnaStatusTranslation = {
-                'Canon': 'Verified',
-                'Precursor': 'Contribution'
-            };
-
-            let exampleOrder = {
-                'Verified': 1,
-                'Contribution': 2,
-                'Deprecated': 3
-            };
-            console.log("examples" + examples)
-
-            let status = dnaStatusTranslation[component.dnaStatus] || component.dnaStatus;
-        </script> #}
+        {% block js %}
+            <script type="text/javscript" src = "./test.js"></script>
+        {% endblock %}
     </head>
     <body>
         <div class="spectrum-Site">
@@ -172,11 +132,17 @@
                                 <tr>
                                     <th class="spectrum-Body--secondary">Component status</th>
                                     <td>
-                                        <div class="spectrum-StatusLight spectrum-StatusLight--sizeM spectrum-CSSComponent-status spectrum-StatusLight--{{util.getStatusLightVariant(component.dnaStatus)}}`)= status"></div>
+                                        <div class="spectrum-StatusLight spectrum-StatusLight--sizeM spectrum-CSSComponent-status spectrum-StatusLight--{{ util.getStatusLightVariant(component.dnaStatus) }}">{{status}}</div>
                                     </td>
                                 </tr>
                                 <tr>
                                     <th class="spectrum-Body--secondary">Last released </th>
+                                    <td>
+                                        {{releaseDate}}
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <th class="spectrum-Body--secondary">Current version </th>
                                     <td>
                                         <bdo dir="ltr">{{pkg.name}}@{{pkg.version}}</bdo>
                                     </td>
@@ -245,7 +211,8 @@
                                 </header>
                                 <section class="spectrum-CSSComponent-description">
                                     <div class="spectrum-Body spectrum-Body--sizeM">
-                                        {{util.markdown.render(component.description)}}
+                                        {# {% set import = util.markdown.render(component.description) %} #}
+                                        {{ util.markdown.render(component.description) | safe }}
                                     </div>
                                 </section>
                             {% endif %}
@@ -257,21 +224,23 @@
                                         </a>
                                     </h2>
                                     <hr class="spectrum-Divider spectrum-Divider--large"/>
-                                    {% for example in component.examples %}
-                                    {% include "./example.njk" %}
-                                    {% endfor %}
                                 </header>
+                                {% for example in component.examples %}
+                                    {% include "./example.njk" %}
+                                {% endfor %}
                             {% endif %}
-                            {# {% if component.sections %}
-                        {% asyncEach section in component.sections %}
-                                    {% include "./section.njk" %}
+                            {% if component.sections %}
+                                {% asyncEach section in component.sections %}
+                                {% include "./section.njk" %}
                                 {% endeach %}
-                    {% endif %} #}
+                            {% endif %}
                         </article>
                     </div>
+                    {% include './footer.njk' %}
                 </div>
             </div>
         </div>
+        {% include './pageBottom.njk' %}
     </body>
 
 </html>
