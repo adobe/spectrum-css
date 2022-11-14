@@ -24,6 +24,7 @@ governing permissions and limitations under the License.
 
   /* label */
   --spectrum-tag-label-line-height: var(--spectrum-line-height-100);
+  --spectrum-tag-label-font-weight: var(--spectrum-font-weight-regular);
 
   /* label space to end edge */
   --spectrum-tag-label-spacing-inline-end: var(--spectrum-component-edge-to-text-100);
@@ -223,25 +224,6 @@ governing permissions and limitations under the License.
               box-shadow var(--mod-tag-animation-duration, var(--spectrum-tag-animation-duration)) ease-in-out,
               background-color var(--mod-tag-animation-duration, var(--spectrum-tag-animation-duration)) ease-in-out;
 
-  > .spectrum-Tag-label {
-    line-height: var(--mod-tag-label-line-height, var(--spectrum-tag-label-line-height));
-    font-weight: normal; /* PLACEHOLDER FOR TOKEN */
-
-    flex: 1 1 auto;
-    font-size: var(--mod-tag-font-size, var(--spectrum-tag-font-size));
-    cursor: default;
-    overflow: hidden;
-    white-space: nowrap;
-    text-overflow: ellipsis;
-
-    margin-block-start: calc(var(--mod-tag-label-spacing-block, var(--spectrum-tag-label-spacing-block))
-                            - var(--mod-tag-border-width, var(--spectrum-tag-border-width)));
-
-    /* space from label text to end edge */
-    margin-inline-end: calc(var(--mod-tag-label-spacing-inline-end, var(--spectrum-tag-label-spacing-inline-end))
-                            - var(--mod-tag-border-width, var(--spectrum-tag-border-width)));
-  }
-
   > .spectrum-Icon,
   > .spectrum-Avatar {
     margin-inline-end: var(--mod-tag-clear-button-spacing-inline-start, var(--spectrum-tag-clear-button-spacing-inline-start));
@@ -343,6 +325,25 @@ governing permissions and limitations under the License.
   }
 }
 
+.spectrum-Tag-label {
+  block-size: 100%;
+  line-height: var(--mod-tag-label-line-height, var(--spectrum-tag-label-line-height));
+  font-weight: var(--spectrum-tag-label-font-weight);
+
+  flex: 1 1 auto;
+  font-size: var(--mod-tag-font-size, var(--spectrum-tag-font-size));
+  cursor: default;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+
+  margin-block-start: calc(var(--mod-tag-label-spacing-block, var(--spectrum-tag-label-spacing-block))
+                          - var(--mod-tag-border-width, var(--spectrum-tag-border-width)));
+
+  /* space from label text to end edge */
+  margin-inline-end: calc(var(--mod-tag-label-spacing-inline-end, var(--spectrum-tag-label-spacing-inline-end))
+                          - var(--mod-tag-border-width, var(--spectrum-tag-border-width)));
+}
 
 /* selected */
 .spectrum-Tag.is-selected {
