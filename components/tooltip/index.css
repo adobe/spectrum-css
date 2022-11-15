@@ -10,7 +10,7 @@ OF ANY KIND, either express or implied. See the License for the specific languag
 governing permissions and limitations under the License.
 */
 
-@import "../overlay/index.css";
+@import "../commons/overlay-coretokens.css";
 
 .spectrum-Tooltip {
   --spectrum-tooltip-animation-duration: var(--spectrum-animation-duration-100);
