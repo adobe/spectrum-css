@@ -22,6 +22,13 @@ governing permissions and limitations under the License.
 }
 
 .spectrum-Picker {
+  /* Placeholders */
+  --spectrum-negative-border-color-hover: var(--spectrum-negative-color-1000);
+  --spectrum-negative-border-color-focus: var(--spectrum-negative-color-1000);
+  --spectrum-negative-border-color-focus-hover: var(--spectrum-negative-border-color-down);
+  --spectrum-neutral-content-color-focus: var(--spectrum-neutral-content-color-down);
+  --spectrum-neutral-content-color-focus-hover: var(--spectrum-neutral-content-color-down);
+
   /* font */
   --spectrum-picker-font-size: var(--spectrum-font-size-100);
 
@@ -52,17 +59,23 @@ governing permissions and limitations under the License.
 
   /* color */
   --spectrum-picker-font-color-default: var(--spectrum-neutral-content-color-default);
+  --spectrum-picker-font-color-default-open: var(--spectrum-neutral-content-color-focus);
   --spectrum-picker-font-color-hover: var(--spectrum-neutral-content-color-hover);
+  --spectrum-picker-font-color-hover-open: var(--spectrum-neutral-content-color-focus-hover);
   --spectrum-picker-font-color-active: var(--spectrum-neutral-content-color-down);
   --spectrum-picker-font-color-key-focus: var(--spectrum-neutral-content-color-key-focus);
 
   --spectrum-picker-icon-color-default: var(--spectrum-neutral-content-color-default);
+  --spectrum-picker-icon-color-default-open: var(--spectrum-neutral-content-color-focus);
   --spectrum-picker-icon-color-hover: var(--spectrum-neutral-content-color-hover);
+  --spectrum-picker-icon-color-hover-open: var(--spectrum-neutral-content-color-focus-hover);
   --spectrum-picker-icon-color-active: var(--spectrum-neutral-content-color-down);
   --spectrum-picker-icon-color-key-focus: var(--spectrum-neutral-content-color-key-focus);
 
   --spectrum-picker-border-color-error-default: var(--spectrum-negative-border-color-default);
+  --spectrum-picker-border-color-error-default-open: var(--spectrum-negative-border-color-focus);
   --spectrum-picker-border-color-error-hover: var(--spectrum-negative-border-color-hover);
+  --spectrum-picker-border-color-error-hover-open: var(--spectrum-negative-border-color-focus-hover);
   --spectrum-picker-border-color-error-active: var(--spectrum-negative-border-color-down);
   --spectrum-picker-border-color-error-key-focus: var(--spectrum-negative-border-color-key-focus);
 
@@ -140,20 +153,28 @@ governing permissions and limitations under the License.
 
     --highcontrast-picker-border-color-default: ButtonText;
     --highcontrast-picker-border-color-active: ButtonText;
-    --highcontrast-picker-border-color-error-active: ButtonText;
     --highcontrast-picker-border-color-key-focus: Highlight;
 
-    --highcontrast-picker-font-color-key-focus: ButtonText;
+    --highcontrast-picker-border-color-error-default-open: ButtonText;
+    --highcontrast-picker-border-color-error-hover: ButtonText;
+    --highcontrast-picker-border-color-error-active: ButtonText;
+
     --highcontrast-picker-font-color-default: ButtonText;
+    --highcontrast-picker-font-color-default-open: ButtonText;
+    /* --highcontrast-picker-font-color-hover-open: ButtonText; */
+    --highcontrast-picker-font-color-key-focus: ButtonText;
     --highcontrast-picker-font-color-disabled: GrayText;
 
     --highcontrast-picker-background-color-default: Background;
     --highcontrast-picker-background-color-disabled: Background;
 
     --highcontrast-picker-icon-color-default: ButtonText;
+    --highcontrast-picker-icon-color-default-open: ButtonText;
     --highcontrast-picker-icon-color-hover: ButtonText;
-    --highcontrast-picker-icon-color-error-default: ButtonText;
+    --highcontrast-picker-icon-color-hover-open: ButtonText;
     --highcontrast-picker-icon-color-key-focus: Highlight;
+
+    --highcontrast-picker-icon-color-error-default: ButtonText;
 
     --highcontrast-picker-focus-indicator-color: Highlight;
 
@@ -246,10 +267,9 @@ governing permissions and limitations under the License.
     }
   }
 
-  &:active,
-  &.is-open {
-    background-color: var(--highcontrast-picker-background-default, var(--mod-picker-background-color-active, var(--spectrum-picker-background-color-active)));
-    border-color: var(--highcontrast-picker-border-color-active, var(--mod-picker-border-color-active, var(--spectrum-picker-border-color-active)));
+  &:active {
+    background-color: var(--highcontrast-picker-background-active, var(--mod-picker-background-color-active, var(--spectrum-picker-background-color-active)));
+    border-color: var(--highcontrast-picker-border-color-active, var(--mod-picker-border-active, var(--spectrum-picker-border-color-active)));
 
     &::after {
       border-color: transparent;
@@ -277,6 +297,26 @@ governing permissions and limitations under the License.
     }
   }
 
+  &.is-open {
+    color: var(--highcontrast-picker-font-color-default-open, var(--mod-picker-font-color-default-open, var(--spectrum-picker-font-color-default-open)));
+    background-color: var(--highcontrast-picker-background-default-open, var(--mod-picker-background-color-default-open, var(--spectrum-picker-background-color-default-open)));
+    border-color: var(--highcontrast-picker-border-color-default-open, var(--mod-picker-border-default-open, var(--spectrum-picker-border-color-default-open)));
+
+    &:hover {
+      color: var(--highcontrast-picker-font-color-default, var(--mod-picker-font-color-hover-open, var(--spectrum-picker-font-color-hover-open)));
+      background-color: var(--spectrum-picker-background-color-hover-open);
+      border-color: var(--spectrum-picker-border-color-hover-open);
+
+      .spectrum-Picker-menuIcon {
+        color: var(--highcontrast-picker-icon-color-hover-open, var(--mod-picker-icon-color-hover-open, var(--spectrum-picker-icon-color-hover-open)));
+      }
+    }
+
+    .spectrum-Picker-menuIcon {
+      color: var(--highcontrast-picker-icon-color-default-open, var(--mod-picker-icon-color-default-open, var(--spectrum-picker-icon-color-default-open)));
+    }
+  }
+
   &.is-invalid {
     border-color: var(--highcontrast-picker-border-color-error-default, var(--mod-picker-border-color-error-default, var(--spectrum-picker-border-color-error-default)));
 
@@ -285,12 +325,20 @@ governing permissions and limitations under the License.
     }
 
     &:hover {
-      border-color: var(--highcontrast-picker-border-color-error-default, var(--mod-picker-border-color-error-hover, var(--spectrum-picker-border-color-error-hover)));
+      border-color: var(--highcontrast-picker-border-color-error-hover, var(--mod-picker-border-color-error-hover, var(--spectrum-picker-border-color-error-hover)));
     }
 
-    &:active,
-    &.is-open {
+
+    &:active {
       border-color: var(--highcontrast-picker-border-color-error-active, var(--mod-picker-border-color-error-active, var(--spectrum-picker-border-color-error-active)));
+    }
+
+    &.is-open {
+      border-color: var(--highcontrast-picker-border-color-error-default-open, var(--mod-picker-border-color-error-default-open, var(--spectrum-picker-border-color-error-default-open)));
+    }
+
+    &.is-open:hover {
+      border-color: var(--highcontrast-picker-border-color-error-hover-open, var(--mod-picker-border-color-error-hover-open, var(--spectrum-picker-border-color-error-hover-open)));
     }
 
     &:focus-ring,
