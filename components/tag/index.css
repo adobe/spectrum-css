@@ -224,12 +224,12 @@ governing permissions and limitations under the License.
               box-shadow var(--mod-tag-animation-duration, var(--spectrum-tag-animation-duration)) ease-in-out,
               background-color var(--mod-tag-animation-duration, var(--spectrum-tag-animation-duration)) ease-in-out;
 
-  .spectrum-Icon,
+  .spectrum-Tags-itemIcon,
   .spectrum-Avatar {
     margin-inline-end: var(--mod-tag-clear-button-spacing-inline-start, var(--spectrum-tag-clear-button-spacing-inline-start));
   }
 
-  > .spectrum-Icon {
+  .spectrum-Tags-itemIcon {
     block-size: var(--mod-tag-icon-size, var(--spectrum-tag-icon-size));
     inline-size: var(--mod-tag-icon-size, var(--spectrum-tag-icon-size));
 
@@ -239,7 +239,7 @@ governing permissions and limitations under the License.
                             - var(--mod-tag-border-width, var(--spectrum-tag-border-width)));
   }
 
-  > .spectrum-Avatar {
+  .spectrum-Avatar {
     margin-block-start: calc(var(--mod-tag-avatar-spacing-block-start, var(--spectrum-tag-avatar-spacing-block-start))
                             - var(--mod-tag-border-width, var(--spectrum-tag-border-width)));
     margin-block-end: calc(var(--mod-tag-avatar-spacing-block-end, var(--spectrum-tag-avatar-spacing-block-end))
@@ -443,7 +443,7 @@ governing permissions and limitations under the License.
   color: var(--highcontrast-tag-content-color-disabled, var(--mod-tag-content-color-disabled, var(--spectrum-tag-content-color-disabled)));
   pointer-events: none;
 
-  > .spectrum-Avatar {
+  .spectrum-Avatar {
     opacity: var(--mod-avatar-opacity-disabled, var(--spectrum-avatar-opacity-disabled));
   }
 }
