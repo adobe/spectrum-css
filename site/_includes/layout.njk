@@ -1,0 +1,18 @@
+<!doctype html>
+<html class="spectrum spectrum--light spectrum--medium" lang="en-US" dir="ltr">
+    <head>
+        <title>{{ component.name or title }} - Spectrum CSS</title>
+        {% include './partials/meta-info.njk' %}
+    </head>
+    <body>
+        <div class="spectrum-Site">
+            {% include './header.njk' %}
+            <div class="spectrum-Site-content">
+                {% include "./partials/sidenav.njk" %}
+                {% block content %}
+                    {{ content | safe }}
+                {% endblock %}
+            </div>
+        </div>
+    </body>
+</html>

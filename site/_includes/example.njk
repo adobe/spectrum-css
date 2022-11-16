@@ -1,0 +1,9 @@
+<article class="spectrum-CSSExample">
+  <h3 id="{{example.slug}}" class="spectrum-CSSExample-heading spectrum-Heading spectrum-Heading--sizeS">
+    <a href="#{{example.slug}}" class="spectrum-CSSComponent-link">{{example.name}}</a>
+    <div class="spectrum-StatusLight spectrum-StatusLight--sizeM spectrum-CSSExample-status spectrum-StatusLight--{{ util.getStatusLightVariant(example.status) }}">
+      {{ example.status }}
+    </div>
+  </h3>
+  {% include "./exampleContent.njk" %}
+</article>
