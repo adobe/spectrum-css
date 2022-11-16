@@ -117,7 +117,11 @@ governing permissions and limitations under the License.
 
   --spectrum-tag-label-spacing-block: var(--spectrum-component-top-to-text-75);
 
+  /* tokens based on theme and t-shirt size */
   --spectrum-tag-corner-radius: var(--spectrum-tag-size-small-corner-radius);
+  --spectrum-tag-spacing-inline-start: var(--spectrum-tag-size-small-spacing-inline-start);
+  --spectrum-tag-label-spacing-inline-end: var(--spectrum-tag-size-small-label-spacing-inline-end);
+  --spectrum-tag-clear-button-spacing-inline-end: var(--spectrum-tag-size-small-clear-button-spacing-inline-end);
 }
 
 .spectrum-Tag--sizeM {
@@ -136,7 +140,11 @@ governing permissions and limitations under the License.
 
   --spectrum-tag-label-spacing-block: var(--spectrum-component-top-to-text-100);
 
+    /* tokens based on theme and t-shirt size */
   --spectrum-tag-corner-radius: var(--spectrum-tag-size-medium-corner-radius);
+  --spectrum-tag-spacing-inline-start: var(--spectrum-tag-size-medium-spacing-inline-start);
+  --spectrum-tag-label-spacing-inline-end: var(--spectrum-tag-size-medium-label-spacing-inline-end);
+  --spectrum-tag-clear-button-spacing-inline-end: var(--spectrum-tag-size-medium-clear-button-spacing-inline-end);
 }
 
 .spectrum-Tag--sizeL {
@@ -155,7 +163,11 @@ governing permissions and limitations under the License.
 
   --spectrum-tag-label-spacing-block: var(--spectrum-component-top-to-text-200);
 
+    /* tokens based on theme and t-shirt size */
   --spectrum-tag-corner-radius: var(--spectrum-tag-size-large-corner-radius);
+  --spectrum-tag-spacing-inline-start: var(--spectrum-tag-size-large-spacing-inline-start);
+  --spectrum-tag-label-spacing-inline-end: var(--spectrum-tag-size-large-label-spacing-inline-end);
+  --spectrum-tag-clear-button-spacing-inline-end: var(--spectrum-tag-size-large-clear-button-spacing-inline-end);
 }
 
 

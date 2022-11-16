@@ -55,32 +55,19 @@ governing permissions and limitations under the License.
     /* disabled */
     --spectrum-tag-border-color-disabled: var(--spectrum-disabled-border-color);
     --spectrum-tag-background-color-disabled: transparent;
+
+    /* tokens based on theme and t-shirt size */
+    --spectrum-tag-size-small-spacing-inline-start: var(--spectrum-component-pill-edge-to-visual-75);
+    --spectrum-tag-size-small-label-spacing-inline-end: var(--spectrum-component-pill-edge-to-text-75);
+    --spectrum-tag-size-small-clear-button-spacing-inline-end: var(--spectrum-component-pill-edge-to-visual-75);
+    --spectrum-tag-size-medium-spacing-inline-start: var(--spectrum-component-pill-edge-to-visual-100);
+    --spectrum-tag-size-medium-label-spacing-inline-end: var(--spectrum-component-pill-edge-to-text-100);
+    --spectrum-tag-size-medium-clear-button-spacing-inline-end: var(--spectrum-component-pill-edge-to-visual-100);
+    --spectrum-tag-size-large-spacing-inline-start: var(--spectrum-component-pill-edge-to-visual-200);
+    --spectrum-tag-size-large-label-spacing-inline-end: var(--spectrum-component-pill-edge-to-text-200);
+    --spectrum-tag-size-large-clear-button-spacing-inline-end: var(--spectrum-component-pill-edge-to-visual-200);
   }
 
-  /* t-shirt sizes */
-  .spectrum-Tag--sizeS {
-    --spectrum-tag-spacing-inline-start: var(--spectrum-component-pill-edge-to-visual-75);
-    --spectrum-tag-label-spacing-inline-end: var(--spectrum-component-pill-edge-to-text-75);
-
-    /* clear button space end - theme specific */
-    --spectrum-tag-clear-button-spacing-inline-end: var(--spectrum-component-pill-edge-to-visual-75);
-  }
-
-  .spectrum-Tag--sizeM {
-    --spectrum-tag-spacing-inline-start: var(--spectrum-component-pill-edge-to-visual-100);
-    --spectrum-tag-label-spacing-inline-end: var(--spectrum-component-pill-edge-to-text-100);
-
-    /* clear button space end - theme specific */
-    --spectrum-tag-clear-button-spacing-inline-end: var(--spectrum-component-pill-edge-to-visual-100);
-  }
-
-  .spectrum-Tag--sizeL {
-    --spectrum-tag-spacing-inline-start: var(--spectrum-component-pill-edge-to-visual-200);
-    --spectrum-tag-label-spacing-inline-end: var(--spectrum-component-pill-edge-to-text-200);
-
-    /* clear button space end - theme specific */
-    --spectrum-tag-clear-button-spacing-inline-end: var(--spectrum-component-pill-edge-to-visual-200);
-  }
 }
 
 /* windows high contrast mode */
