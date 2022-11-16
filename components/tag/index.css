@@ -224,8 +224,8 @@ governing permissions and limitations under the License.
               box-shadow var(--mod-tag-animation-duration, var(--spectrum-tag-animation-duration)) ease-in-out,
               background-color var(--mod-tag-animation-duration, var(--spectrum-tag-animation-duration)) ease-in-out;
 
-  > .spectrum-Icon,
-  > .spectrum-Avatar {
+  .spectrum-Icon,
+  .spectrum-Avatar {
     margin-inline-end: var(--mod-tag-clear-button-spacing-inline-start, var(--spectrum-tag-clear-button-spacing-inline-start));
   }
 
@@ -240,7 +240,6 @@ governing permissions and limitations under the License.
   }
 
   > .spectrum-Avatar {
-    margin-block-start: var(--mod-tag-avatar-spacing-block-start, var(--spectrum-tag-avatar-spacing-block-start));
     margin-block-start: calc(var(--mod-tag-avatar-spacing-block-start, var(--spectrum-tag-avatar-spacing-block-start))
                             - var(--mod-tag-border-width, var(--spectrum-tag-border-width)));
     margin-block-end: calc(var(--mod-tag-avatar-spacing-block-end, var(--spectrum-tag-avatar-spacing-block-end))
