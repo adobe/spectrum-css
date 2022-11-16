@@ -24,6 +24,11 @@ governing permissions and limitations under the License.
     --spectrum-tag-border-color-active: var(--spectrum-gray-900);
     --spectrum-tag-border-color-focus: var(--spectrum-gray-800);
 
+    /* corner border radius */
+    --spectrum-tag-size-small-corner-radius: var(--spectrum-corner-radius-100);
+    --spectrum-tag-size-medium-corner-radius: var(--spectrum-corner-radius-100);
+    --spectrum-tag-size-large-corner-radius: var(--spectrum-corner-radius-100);
+
     /* background */
     --spectrum-tag-background-color: var(--spectrum-gray-75);
     --spectrum-tag-background-color-hover: var(--spectrum-gray-75);
@@ -58,8 +63,6 @@ governing permissions and limitations under the License.
     --spectrum-tag-spacing-inline-start: var(--spectrum-component-edge-to-visual-75);
     --spectrum-tag-label-spacing-inline-end: var(--spectrum-component-edge-to-text-75);
 
-    --spectrum-tag-corner-radius: var(--spectrum-corner-radius-100);
-
     /* clear button space end - theme specific */
     --spectrum-tag-clear-button-spacing-inline-end: var(--spectrum-component-edge-to-visual-75);
   }
@@ -68,8 +71,6 @@ governing permissions and limitations under the License.
     --spectrum-tag-spacing-inline-start: var(--spectrum-component-edge-to-visual-100);
     --spectrum-tag-label-spacing-inline-end: var(--spectrum-component-edge-to-text-100);
 
-    --spectrum-tag-corner-radius: var(--spectrum-corner-radius-100);
-
     /* clear button space end - theme specific */
     --spectrum-tag-clear-button-spacing-inline-end: var(--spectrum-component-edge-to-visual-100);
   }
@@ -77,8 +78,6 @@ governing permissions and limitations under the License.
   .spectrum-Tag--sizeL {
     --spectrum-tag-spacing-inline-start: var(--spectrum-component-edge-to-visual-200);
     --spectrum-tag-label-spacing-inline-end: var(--spectrum-component-edge-to-text-200);
-
-    --spectrum-tag-corner-radius: var(--spectrum-corner-radius-100);
 
     /* clear button space end - theme specific */
     --spectrum-tag-clear-button-spacing-inline-end: var(--spectrum-component-edge-to-visual-200);

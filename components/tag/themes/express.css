@@ -24,6 +24,11 @@ governing permissions and limitations under the License.
     --spectrum-tag-background-color-active: var(--spectrum-gray-400);
     --spectrum-tag-background-color-focus: var(--spectrum-gray-300);
 
+    /* express has pill style full corner radius ⬭ */
+    --spectrum-tag-size-small-corner-radius: var(--spectrum-component-height-75);
+    --spectrum-tag-size-medium-corner-radius: var(--spectrum-component-height-100);
+    --spectrum-tag-size-large-corner-radius: var(--spectrum-component-height-200);
+
     /* background */
     --spectrum-tag-border-color: var(--spectrum-gray-300);
     --spectrum-tag-border-color-hover: var(--spectrum-gray-400);
@@ -57,9 +62,6 @@ governing permissions and limitations under the License.
     --spectrum-tag-spacing-inline-start: var(--spectrum-component-pill-edge-to-visual-75);
     --spectrum-tag-label-spacing-inline-end: var(--spectrum-component-pill-edge-to-text-75);
 
-    /* express has pill style full corner radius */
-    --spectrum-tag-corner-radius: var(--spectrum-component-height-75);
-
     /* clear button space end - theme specific */
     --spectrum-tag-clear-button-spacing-inline-end: var(--spectrum-component-pill-edge-to-visual-75);
   }
@@ -68,9 +70,6 @@ governing permissions and limitations under the License.
     --spectrum-tag-spacing-inline-start: var(--spectrum-component-pill-edge-to-visual-100);
     --spectrum-tag-label-spacing-inline-end: var(--spectrum-component-pill-edge-to-text-100);
 
-    /* express has pill style full corner radius ⬭ */
-    --spectrum-tag-corner-radius: var(--spectrum-component-height-100);
-
     /* clear button space end - theme specific */
     --spectrum-tag-clear-button-spacing-inline-end: var(--spectrum-component-pill-edge-to-visual-100);
   }
@@ -78,9 +77,6 @@ governing permissions and limitations under the License.
   .spectrum-Tag--sizeL {
     --spectrum-tag-spacing-inline-start: var(--spectrum-component-pill-edge-to-visual-200);
     --spectrum-tag-label-spacing-inline-end: var(--spectrum-component-pill-edge-to-text-200);
-
-    /* express has pill style full corner radius ⬭ */
-    --spectrum-tag-corner-radius: var(--spectrum-component-height-200);
 
     /* clear button space end - theme specific */
     --spectrum-tag-clear-button-spacing-inline-end: var(--spectrum-component-pill-edge-to-visual-200);

@@ -116,6 +116,8 @@ governing permissions and limitations under the License.
   --spectrum-tag-avatar-spacing-block-end: var(--spectrum-tag-top-to-avatar-small);
 
   --spectrum-tag-label-spacing-block: var(--spectrum-component-top-to-text-75);
+
+  --spectrum-tag-corner-radius: var(--spectrum-tag-size-small-corner-radius);
 }
 
 .spectrum-Tag--sizeM {
@@ -133,6 +135,8 @@ governing permissions and limitations under the License.
   --spectrum-tag-avatar-spacing-block-end: var(--spectrum-tag-top-to-avatar-medium);
 
   --spectrum-tag-label-spacing-block: var(--spectrum-component-top-to-text-100);
+
+  --spectrum-tag-corner-radius: var(--spectrum-tag-size-medium-corner-radius);
 }
 
 .spectrum-Tag--sizeL {
@@ -150,6 +154,8 @@ governing permissions and limitations under the License.
   --spectrum-tag-avatar-spacing-block-end: var(--spectrum-tag-top-to-avatar-large);
 
   --spectrum-tag-label-spacing-block: var(--spectrum-component-top-to-text-200);
+
+  --spectrum-tag-corner-radius: var(--spectrum-tag-size-large-corner-radius);
 }
 
 
