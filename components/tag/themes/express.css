@@ -12,9 +12,6 @@ governing permissions and limitations under the License.
 
 @container (--system: express) {
   .spectrum-Tag {
-    /* spacing horizontal fallback if no t-shirt size */
-    --spectrum-tag-spacing-inline-start: var(--spectrum-component-edge-to-visual-100);
-
     /* border */
     --spectrum-tag-background-color: transparent;
     --spectrum-tag-background-color-hover: var(--spectrum-gray-300);

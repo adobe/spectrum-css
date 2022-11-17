@@ -230,6 +230,7 @@ governing permissions and limitations under the License.
 
   padding-inline-start: calc(var(--mod-tag-spacing-inline-start, var(--spectrum-tag-spacing-inline-start))
                             - var(--mod-tag-border-width, var(--spectrum-tag-border-width)));
+
   block-size: var(--mod-tag-height, var(--spectrum-tag-height));
   position: relative;
   display: inline-flex;
