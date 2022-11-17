@@ -12,9 +12,6 @@ governing permissions and limitations under the License.
 
 @container (--system: spectrum) {
   .spectrum-Tag {
-    /* clear button space end - theme specific */
-    --spectrum-tag-clear-button-spacing-inline-end: var(--spectrum-text-to-visual-100);
-
     /* spacing horizontal fallback if no t-shirt size */
     --spectrum-tag-spacing-inline-start: var(--spectrum-component-edge-to-visual-100);
 

@@ -268,19 +268,18 @@ governing permissions and limitations under the License.
 
   /* clear button */
   .spectrum-Tag-clearButton {
-    margin: 0;
-
     margin-block-start: calc(var(--mod-tag-clear-button-spacing-block, var(--spectrum-tag-clear-button-spacing-block))
                             - var(--mod-tag-border-width, var(--spectrum-tag-border-width)));
     margin-block-end: calc(var(--mod-tag-clear-button-spacing-block, var(--spectrum-tag-clear-button-spacing-block))
                           - var(--mod-tag-border-width, var(--spectrum-tag-border-width)));
 
-    /* move button negative calc to cancel label end margin, then add button start margin */
+      /* move button negative calc to cancel label end margin, then add button start margin */
     margin-inline-start: calc(var(--mod-tag-clear-button-spacing-inline-start, var(--spectrum-tag-clear-button-spacing-inline-start))
                               + (var(--mod-tag-label-spacing-inline-end, var(--spectrum-tag-label-spacing-inline-end)) * -1));
 
     /* end spacing is theme-specific */
-    margin-inline-end: var(--mod-tag-clear-button-spacing-inline-end, var(--spectrum-tag-clear-button-spacing-inline-end));
+    margin-inline-end: calc(var(--mod-tag-clear-button-spacing-inline-end, var(--spectrum-tag-clear-button-spacing-inline-end))
+                            - var(--mod-tag-border-width, var(--spectrum-tag-border-width)));
 
     /* ensure clear button is correct color */
     color: currentcolor;
