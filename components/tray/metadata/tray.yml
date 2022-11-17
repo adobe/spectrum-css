@@ -8,15 +8,14 @@ examples:
   - id: tray
     name: Tray
     markup: |
-      <div
-       class="spectrum-CSSExample-dialog" style="background: rgba(0,0,0,0.4); display: flex; justify-content: center;">
-        <div class="spectrum-Modal spectrum-Tray is-open spectrum-Tray">
-          <section class="spectrum-Dialog spectrum-Dialog--large" role="dialog" tabindex="-1" aria-modal="true">
-            <div class="spectrum-Dialog-grid">
-              <h1 class="spectrum-Dialog-heading spectrum-Dialog-heading--noHeader">New Messages</h1>
-              <hr class="spectrum-Divider spectrum-Divider--sizeM spectrum-Divider--horizontal spectrum-Dialog-divider">
-              <section class="spectrum-Dialog-content">You have 5 new messages.</section>
-            </div>
-          </section>
+        <div class="spectrum-Tray-wrapper spectrum-CSSExample-dialog" style="background: rgba(0,0,0,0.4);">
+          <div class="spectrum-Modal spectrum-Tray is-open spectrum-Tray">
+            <section class="spectrum-Dialog spectrum-Dialog--large" role="dialog" tabindex="-1" aria-modal="true">
+              <div class="spectrum-Dialog-grid">
+                <h1 class="spectrum-Dialog-heading spectrum-Dialog-heading--noHeader">New Messages</h1>
+                <hr class="spectrum-Divider spectrum-Divider--sizeM spectrum-Divider--horizontal spectrum-Dialog-divider">
+                <section class="spectrum-Dialog-content">You have 5 new messages.</section>
+              </div>
+            </section>
+          </div>
         </div>
-      </div>

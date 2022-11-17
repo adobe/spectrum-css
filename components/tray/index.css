@@ -34,16 +34,14 @@ governing permissions and limitations under the License.
   }
 }
 
-/* https://developer.mozilla.org/en-US/docs/Web/CSS/@media/orientation
- * Limit Tray width to 375px and round corners when the viewport is in landscape orientation
- * (width is greater than height)
- */
-@media screen and (orientation: landscape) {
-  .spectrum-Tray {
-    border-top-left-radius: var(--mod-tray-corner-radius, var(--spectrum-tray-corner-radius));
-    border-top-right-radius: var(--mod-tray-corner-radius, var(--spectrum-tray-corner-radius));
-    max-inline-size: var(--mod-tray-max-inline-size, var(--spectrum-tray-max-inline-size));
-  }
+.spectrum-Tray-wrapper {
+  inset-inline-start: 0;
+  /* Positioned at the bottom of the window */
+  position: fixed;
+  bottom: 0;
+  display: flex;
+  justify-content: center;
+  inline-size: 100%;
 }
 
 .spectrum-Tray {
@@ -55,6 +53,10 @@ governing permissions and limitations under the License.
   margin-block-start: var(--mod-tray-spacing-edge-to-tray-safe-zone, var(--spectrum-tray-spacing-edge-to-tray-safe-zone));
   overflow: auto;
   outline: none;
+
+  /* Unset spectrum-Modal border-radius */
+  border-radius: unset;
+
   /* Start offset by the animation distance */
   transform: translateY(100%);
   /* Exit animations */
@@ -85,3 +87,16 @@ governing permissions and limitations under the License.
     transform: translateY(0);
   }
 }
+
+/* https://developer.mozilla.org/en-US/docs/Web/CSS/@media/orientation
+ * Limit Tray width to 375px and round corners when the viewport is in landscape orientation
+ * (width is greater than height)
+ */
+@media screen and (orientation: landscape) {
+  .spectrum-Tray {
+    border-top-left-radius: var(--mod-tray-corner-radius, var(--spectrum-tray-corner-radius));
+    border-top-right-radius: var(--mod-tray-corner-radius, var(--spectrum-tray-corner-radius));
+    max-inline-size: var(--mod-tray-max-inline-size, var(--spectrum-tray-max-inline-size));
+  }
+}
+
