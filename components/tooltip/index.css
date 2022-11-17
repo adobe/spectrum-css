@@ -58,6 +58,9 @@ governing permissions and limitations under the License.
 
   /* pointer tip - default spacing to edge - corner radius plus half of tip width to neutralize override */
   --spectrum-tooltip-pointer-corner-spacing: var(--spectrum-corner-radius-100);
+
+  /* neutral background changes per theme */
+  --spectrum-tooltip-background-color-default: var(--spectrum-tooltip-backgound-color-default-neutral);
 }
 
 @media (forced-colors: active) {
