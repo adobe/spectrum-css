@@ -590,20 +590,29 @@ governing permissions and limitations under the License.
   }
 }
 
-.spectrum-Icon + .spectrum-Menu-itemLabel,
-.spectrum-Menu-itemIcon + .spectrum-Menu-itemLabel,
-.spectrum-Icon ~ .spectrum-Menu-itemDescription,
-.spectrum-Menu-itemIcon ~ .spectrum-Menu-itemDescription,
-.spectrum-Icon + .spectrum-Menu-sectionHeading,
-.spectrum-Menu-itemIcon + .spectrum-Menu-sectionHeading {
-  margin-inline-start: var(--mod-menu-item-label-text-to-visual, var(--spectrum-menu-item-label-text-to-visual));
+/* always provide space at the end of a workflow icon */
+.spectrum-Menu-itemIcon--workflowIcon {
+  margin-inline-end: var(--mod-menu-item-label-text-to-visual, var(--spectrum-menu-item-label-text-to-visual));
 }
 
-.spectrum-Menu-checkmark + .spectrum-Menu-itemIcon,
-.spectrum-Menu-checkmark + .spectrum-Icon,
-.spectrum-Menu-chevron + .spectrum-Menu-itemIcon,
-.spectrum-Menu-chevron + .spectrum-Icon {
-  margin-inline-start: var(--mod-menu-item-text-to-control, var(--spectrum-menu-item-text-to-control));
+/* checkmarks that have text directly next to them */
+.spectrum-Menu-checkmark--withAdjacentText {
+  margin-inline-end: var(--mod-menu-item-label-text-to-visual, var(--spectrum-menu-item-label-text-to-visual));
+}
+
+/* checkmarks that have an icon directly next to them */
+.spectrum-Menu-checkmark--withAdjacentIcon {
+  margin-inline-end: var(--mod-menu-item-text-to-control, var(--spectrum-menu-item-text-to-control));
+}
+
+/* chevrons (aka collapsibles) that have an icon directly next to them */
+.spectrum-Menu-chevron--withAdjacentIcon {
+  margin-inline-end: var(--mod-menu-item-text-to-control, var(--spectrum-menu-item-text-to-control));
+}
+
+/* chevrons (aka collapsibles) that have no icon and instead have text directly next to them */
+.spectrum-Menu-chevron--withAdjacentText {
+  margin-inline-end: var(--mod-menu-item-text-to-control, var(--spectrum-menu-item-text-to-control));
 }
 
 .spectrum-Menu-itemDescription {
