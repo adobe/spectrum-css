@@ -18,7 +18,7 @@ governing permissions and limitations under the License.
     --spectrum-tag-background-color-active: var(--spectrum-gray-400);
     --spectrum-tag-background-color-focus: var(--spectrum-gray-300);
 
-    /* express has pill style full corner radius ⬭ */
+    /* express has pill style full corner radius */
     --spectrum-tag-size-small-corner-radius: var(--spectrum-component-height-75);
     --spectrum-tag-size-medium-corner-radius: var(--spectrum-component-height-100);
     --spectrum-tag-size-large-corner-radius: var(--spectrum-component-height-200);
@@ -61,7 +61,6 @@ governing permissions and limitations under the License.
     --spectrum-tag-size-large-label-spacing-inline-end: var(--spectrum-component-pill-edge-to-text-200);
     --spectrum-tag-size-large-clear-button-spacing-inline-end: var(--spectrum-component-pill-edge-to-visual-200);
   }
-
 }
 
 /* windows high contrast mode */
