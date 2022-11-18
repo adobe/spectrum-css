@@ -71,10 +71,16 @@ governing permissions and limitations under the License.
   --spectrum-tag-content-color-disabled: var(--spectrum-disabled-content-color);
 
   /* ↧↧↧ Fallback defaults in case of no t-shirt size - set to Medium styles ↧↧↧ */
+  /* icon spacing fallback if no t-shirt size */
+  --spectrum-tag-icon-spacing-inline-end: var(--spectrum-text-to-visual-100);
+  --spectrum-tag-icon-size: var(--spectrum-workflow-icon-size-100);
+  --spectrum-tag-icon-spacing-block-start: var(--spectrum-component-top-to-workflow-icon-100);
+  --spectrum-tag-icon-spacing-block-end: var(--spectrum-component-top-to-workflow-icon-100);
+
   /* avatar spacing fallback if no t-shirt size */
   --spectrum-tag-avatar-spacing-block-start: var(--spectrum-tag-top-to-avatar-medium);
   --spectrum-tag-avatar-spacing-block-end: var(--spectrum-tag-top-to-avatar-medium);
-  --spectrum-tag-icon-avatar-spacing-inline-end: var(--spectrum-text-to-visual-100);
+  --spectrum-tag-avatar-spacing-inline-end: var(--spectrum-text-to-visual-100);
 
   /* label spacing fallback if no t-shirt size */
   --spectrum-tag-label-spacing-block: var(--spectrum-component-top-to-text-100);
@@ -87,11 +93,6 @@ governing permissions and limitations under the License.
 
   /* text defaults if no t-shirt size */
   --spectrum-tag-font-size: var(--spectrum-font-size-100);
-
-  /* icon fallback if no t-shirt size */
-  --spectrum-tag-icon-size: var(--spectrum-workflow-icon-size-100);
-  --spectrum-tag-icon-spacing-block-start: var(--spectrum-component-top-to-workflow-icon-100);
-  --spectrum-tag-icon-spacing-block-end: var(--spectrum-component-top-to-workflow-icon-100);
 
   /* clear button spacing if no t-shirt size */
   --spectrum-tag-clear-button-spacing-block: var(--spectrum-tag-top-to-cross-icon-medium);
@@ -109,10 +110,11 @@ governing permissions and limitations under the License.
 
   --spectrum-tag-icon-spacing-block-start: var(--spectrum-component-top-to-workflow-icon-75);
   --spectrum-tag-icon-spacing-block-end: var(--spectrum-component-top-to-workflow-icon-75);
+  --spectrum-tag-icon-spacing-inline-end: var(--spectrum-text-to-visual-75);
 
   --spectrum-tag-avatar-spacing-block-start: var(--spectrum-tag-top-to-avatar-small);
   --spectrum-tag-avatar-spacing-block-end: var(--spectrum-tag-top-to-avatar-small);
-  --spectrum-tag-icon-avatar-spacing-inline-end: var(--spectrum-text-to-visual-75);
+  --spectrum-tag-avatar-spacing-inline-end: var(--spectrum-text-to-visual-75);
 
   --spectrum-tag-label-spacing-block: var(--spectrum-component-top-to-text-75);
 
@@ -133,10 +135,11 @@ governing permissions and limitations under the License.
 
   --spectrum-tag-icon-spacing-block-start: var(--spectrum-component-top-to-workflow-icon-100);
   --spectrum-tag-icon-spacing-block-end: var(--spectrum-component-top-to-workflow-icon-100);
+  --spectrum-tag-icon-spacing-inline-end: var(--spectrum-text-to-visual-100);
 
   --spectrum-tag-avatar-spacing-block-start: var(--spectrum-tag-top-to-avatar-medium); /* 6px 9px */
   --spectrum-tag-avatar-spacing-block-end: var(--spectrum-tag-top-to-avatar-medium);
-  --spectrum-tag-icon-avatar-spacing-inline-end: var(--spectrum-text-to-visual-100);
+  --spectrum-tag-avatar-spacing-inline-end: var(--spectrum-text-to-visual-100);
 
   --spectrum-tag-label-spacing-block: var(--spectrum-component-top-to-text-100);
 
@@ -157,10 +160,11 @@ governing permissions and limitations under the License.
 
   --spectrum-tag-icon-spacing-block-start: var(--spectrum-component-top-to-workflow-icon-200);
   --spectrum-tag-icon-spacing-block-end: var(--spectrum-component-top-to-workflow-icon-200);
+  --spectrum-tag-icon-spacing-inline-end: var(--spectrum-text-to-visual-200);
 
   --spectrum-tag-avatar-spacing-block-start: var(--spectrum-tag-top-to-avatar-large);
   --spectrum-tag-avatar-spacing-block-end: var(--spectrum-tag-top-to-avatar-large);
-  --spectrum-tag-icon-avatar-spacing-inline-end: var(--spectrum-text-to-visual-200);
+  --spectrum-tag-avatar-spacing-inline-end: var(--spectrum-text-to-visual-200);
 
   --spectrum-tag-label-spacing-block: var(--spectrum-component-top-to-text-200);
 
@@ -230,6 +234,7 @@ governing permissions and limitations under the License.
 
   padding-inline-start: calc(var(--mod-tag-spacing-inline-start, var(--spectrum-tag-spacing-inline-start))
                             - var(--mod-tag-border-width, var(--spectrum-tag-border-width)));
+  padding-inline-end: 0;
 
   block-size: var(--mod-tag-height, var(--spectrum-tag-height));
   position: relative;
@@ -245,10 +250,6 @@ governing permissions and limitations under the License.
               box-shadow var(--mod-tag-animation-duration, var(--spectrum-tag-animation-duration)) ease-in-out,
               background-color var(--mod-tag-animation-duration, var(--spectrum-tag-animation-duration)) ease-in-out;
 
-  .spectrum-Tags-itemIcon,
-  .spectrum-Avatar {
-    margin-inline-end: var(--mod-tag-icon-avatar-spacing-inline-end, var(--spectrum-tag-icon-avatar-spacing-inline-end));
-  }
 
   .spectrum-Tags-itemIcon {
     block-size: var(--mod-tag-icon-size, var(--spectrum-tag-icon-size));
@@ -258,6 +259,7 @@ governing permissions and limitations under the License.
                             - var(--mod-tag-border-width, var(--spectrum-tag-border-width)));
     margin-block-end: calc(var(--mod-tag-icon-spacing-block-end, var(--spectrum-tag-icon-spacing-block-end))
                             - var(--mod-tag-border-width, var(--spectrum-tag-border-width)));
+    margin-inline-end: var(--mod-tag-icon-spacing-inline-end, var(--spectrum-tag-icon-spacing-inline-end));
   }
 
   .spectrum-Avatar {
@@ -265,11 +267,14 @@ governing permissions and limitations under the License.
                             - var(--mod-tag-border-width, var(--spectrum-tag-border-width)));
     margin-block-end: calc(var(--mod-tag-avatar-spacing-block-end, var(--spectrum-tag-avatar-spacing-block-end))
                          - var(--mod-tag-border-width, var(--spectrum-tag-border-width)));
+    margin-inline-end: var(--mod-tag-avatar-spacing-inline-end, var(--spectrum-tag-avatar-spacing-inline-end));
   }
 
   /* clear button */
+  .spectrum-ClearButton,
   .spectrum-Tag-clearButton {
     padding: 0;
+    margin: 0;
     margin-block-start: calc(var(--mod-tag-clear-button-spacing-block, var(--spectrum-tag-clear-button-spacing-block))
                             - var(--mod-tag-border-width, var(--spectrum-tag-border-width)));
     margin-block-end: calc(var(--mod-tag-clear-button-spacing-block, var(--spectrum-tag-clear-button-spacing-block))
@@ -285,6 +290,12 @@ governing permissions and limitations under the License.
 
     /* ensure clear button is correct color */
     color: currentcolor;
+
+    /* neutralize excess space around clear button */
+    .spectrum-Icon {
+      padding: 0;
+      margin: 0;
+    }
 
     /* TODO: re-evaluate after ClearButton migration */
     .spectrum-ClearButton-fill {
