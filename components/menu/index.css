@@ -162,6 +162,10 @@ governing permissions and limitations under the License.
   --spectrum-menu-item-value-color-down: var(--spectrum-neutral-subdued-content-color-down);
   --spectrum-menu-item-value-color-focus: var(--spectrum-neutral-subdued-content-color-key-focus);
 
+  --spectrum-menu-checkmark-display-hidden: none;
+  --spectrum-menu-checkmark-display-shown: block;
+  --spectrum-menu-checkmark-display: var(--spectrum-menu-checkmark-display-shown);
+
   /* "one" icon: chevron + additional icon (we don't count the chevron as an icon because it HAS to be there for a collapsible) */
   --spectrum-menu-item-collapsible-has-icon-submenu-item-padding-x-start:
     calc((
@@ -295,6 +299,7 @@ governing permissions and limitations under the License.
 
 .spectrum-Menu-checkmark {
   align-self: center;
+  display: var(--mod-menu-checkmark-display, var(--spectrum-menu-checkmark-display));
   fill: var(--highcontrast-menu-checkmark-icon-color-default, var(--mod-menu-checkmark-icon-color-default, var(--spectrum-menu-checkmark-icon-color-default)));
   opacity: 1;
 }
@@ -490,25 +495,20 @@ governing permissions and limitations under the License.
 }
 
 /* menus with "selectable" menuitems */
-.spectrum-Menu.is-selectable {
-  /* provide inline-start spacing for potential checkmarks */
-  .spectrum-Menu-item {
-    padding-inline-start: var(--mod-menu-item-selectable-edge-to-text-not-selected, var(--spectrum-menu-item-selectable-edge-to-text-not-selected));
-  }
+/* provide inline-start spacing for potential checkmarks */
+.spectrum-Menu-item--is-selectable {
+  --spectrum-menu-checkmark-display: var(--spectrum-menu-checkmark-display-hidden);
 
-  .spectrum-Menu-checkmark {
-    display: none;
-  }
-
-  /* remove inline-start spacing once an item is selected and a checkmark appears */
-  .spectrum-Menu-item.is-selected {
-    padding-inline-start: var(--mod-menu-item-label-inline-edge-to-content, var(--spectrum-menu-item-label-inline-edge-to-content));
-    
-    .spectrum-Menu-checkmark {
-      display: block;
-    }
-  }
+  padding-inline-start: var(--mod-menu-item-selectable-edge-to-text-not-selected, var(--spectrum-menu-item-selectable-edge-to-text-not-selected));  
 }
+
+/* remove inline-start spacing once an item is selected and a checkmark appears */
+.spectrum-Menu-item--is-selected {
+  --spectrum-menu-checkmark-display: var(--spectrum-menu-checkmark-display-shown);
+
+  padding-inline-start: var(--mod-menu-item-label-inline-edge-to-content, var(--spectrum-menu-item-label-inline-edge-to-content));
+}
+
 
 .spectrum-menu-itemSelection {
   grid-area: selectedArea;
@@ -581,13 +581,6 @@ governing permissions and limitations under the License.
 .spectrum-Menu-checkmark {
   block-size: var(--mod-menu-item-checkmark-height, var(--spectrum-menu-item-checkmark-height));
   inline-size: var(--mod-menu-item-checkmark-width, var(--spectrum-menu-item-checkmark-width));
-}
-
-.spectrum-Menu-item:not(.is-selected) {
-  .spectrum-Menu-checkmark + .spectrum-Menu-itemLabel,
-  .spectrum-Menu-checkmark + .spectrum-Menu-itemLabel {
-    margin-inline-start: 0;
-  }
 }
 
 /* always provide space at the end of a workflow icon */
