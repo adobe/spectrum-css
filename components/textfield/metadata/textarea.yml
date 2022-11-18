@@ -11,10 +11,10 @@ examples:
     name: Standard Sizes
     markup: |
       <div class="spectrum-Textfield spectrum-Textfield--sizeS spectrum-Textfield--multiline">
-        <label for="textfield-sm" class="spectrum-FieldLabel spectrum-FieldLabel--sizeS">Enter your name</label>
+        <label for="textfield-sm" class="spectrum-FieldLabel spectrum-FieldLabel--sizeS">Password</label>
         <span class="spectrum-Textfield-character-count">50</span>
         <div class="spectrum-Textfield-input-wrapper">
-          <textarea id="textfield-s" placeholder="Lisa Wilson" name="field" class="spectrum-Textfield-input"></textarea>
+          <textarea id="textfield-s" placeholder="Enter Password" name="field" class="spectrum-Textfield-input"></textarea>
         </div>
         <div class="spectrum-HelpText spectrum-HelpText--sizeS spectrum-HelpText--neutral">
           <div class="spectrum-HelpText-text">Create a password with at least 8 characters.</div>
@@ -22,10 +22,10 @@ examples:
       </div>
 
       <div class="spectrum-Textfield spectrum-Textfield--sizeM spectrum-Textfield--multiline">
-        <label for="textfield-md" class="spectrum-FieldLabel spectrum-FieldLabel--sizeM">Enter your name</label>
+        <label for="textfield-md" class="spectrum-FieldLabel spectrum-FieldLabel--sizeM">Password</label>
         <span class="spectrum-Textfield-character-count">50</span>
         <div class="spectrum-Textfield-input-wrapper">
-          <textarea id="textfield-m" placeholder="Lisa Wilson" name="field" class="spectrum-Textfield-input"></textarea>
+          <textarea id="textfield-m" placeholder="Enter Password" name="field" class="spectrum-Textfield-input"></textarea>
         </div>
         <div class="spectrum-HelpText spectrum-HelpText--sizeM spectrum-HelpText--neutral">
           <div class="spectrum-HelpText-text">Create a password with at least 8 characters.</div>
@@ -33,10 +33,10 @@ examples:
       </div>
 
       <div class="spectrum-Textfield spectrum-Textfield--sizeL spectrum-Textfield--multiline">
-        <label for="textfield-l" class="spectrum-FieldLabel spectrum-FieldLabel--sizeL">Enter your name</label>
+        <label for="textfield-l" class="spectrum-FieldLabel spectrum-FieldLabel--sizeL">Password</label>
         <span class="spectrum-Textfield-character-count">50</span>
         <div class="spectrum-Textfield-input-wrapper">
-          <textarea id="textfield-l" placeholder="Lisa Wilson" name="field" class="spectrum-Textfield-input"></textarea>
+          <textarea id="textfield-l" placeholder="Enter Password" name="field" class="spectrum-Textfield-input"></textarea>
         </div>
         <div class="spectrum-HelpText spectrum-HelpText--sizeL spectrum-HelpText--neutral">
           <div class="spectrum-HelpText-text">Create a password with at least 8 characters.</div>
@@ -44,10 +44,10 @@ examples:
       </div>
 
       <div class="spectrum-Textfield spectrum-Textfield--sizeXL spectrum-Textfield--multiline">
-        <label for="textfield-xl" class="spectrum-FieldLabel spectrum-FieldLabel--sizeXL">Enter your name</label>
+        <label for="textfield-xl" class="spectrum-FieldLabel spectrum-FieldLabel--sizeXL">Password</label>
         <span class="spectrum-Textfield-character-count">50</span>
         <div class="spectrum-Textfield-input-wrapper">
-          <textarea id="textfield-xl" placeholder="Lisa Wilson" name="field" class="spectrum-Textfield-input"></textarea>
+          <textarea id="textfield-xl" placeholder="Enter Password" name="field" class="spectrum-Textfield-input"></textarea>
         </div>
         <div class="spectrum-HelpText spectrum-HelpText--sizeXL spectrum-HelpText--neutral">
           <div class="spectrum-HelpText-text">Create a password with at least 8 characters.</div>
@@ -58,9 +58,9 @@ examples:
     name: Textfield with Help Text
     markup: |
       <div class="spectrum-Textfield spectrum-Textfield--multiline">
-        <label for="textfield-helptext" class="spectrum-FieldLabel spectrum-FieldLabel--sizeM">Enter your name</label>
+        <label for="textfield-helptext" class="spectrum-FieldLabel spectrum-FieldLabel--sizeM">Password</label>
         <div class="spectrum-Textfield-input-wrapper">
-          <textarea id="textfield-helptext" placeholder="Lisa Wilson" name="field" class="spectrum-Textfield-input"></textarea>
+          <textarea id="textfield-helptext" placeholder="Enter Password" name="field" class="spectrum-Textfield-input"></textarea>
         </div>
         <div class="spectrum-HelpText spectrum-HelpText--sizeM spectrum-HelpText--neutral">
           <div class="spectrum-HelpText-text">Create a password with at least 8 characters.</div>
@@ -82,10 +82,10 @@ examples:
     name: Textfield with Side Label
     markup: |
       <div class="spectrum-Textfield spectrum-Textfield--multiline spectrum-Textfield--sidelabel">
-        <label for="textfield-md-sidelabel" class="spectrum-FieldLabel spectrum-FieldLabel--sizeM">Enter your name</label>
+        <label for="textfield-md-sidelabel" class="spectrum-FieldLabel spectrum-FieldLabel--sizeM">Password</label>
         <span class="spectrum-Textfield-character-count">50</span>
         <div class="spectrum-Textfield-input-wrapper">
-          <textarea id="textfield-md-sidelabel" placeholder="Lisa Wilson" name="field" class="spectrum-Textfield-input"></textarea>
+          <textarea id="textfield-md-sidelabel" placeholder="Enter Password" name="field" class="spectrum-Textfield-input"></textarea>
         </div>
         <div class="spectrum-HelpText spectrum-HelpText--sizeM spectrum-HelpText--neutral">
           <div class="spectrum-HelpText-text">Create a password with at least 8 characters.</div>
