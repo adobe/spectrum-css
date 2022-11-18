@@ -175,54 +175,6 @@ governing permissions and limitations under the License.
   --spectrum-tag-clear-button-spacing-inline-end: var(--spectrum-tag-size-large-clear-button-spacing-inline-end);
 }
 
-
-/* windows high contrast mode */
-@media (forced-colors: active) {
-  .spectrum-Tag {
-    forced-color-adjust: none;
-
-    &.is-invalid {
-      --spectrum-tag-border-color-invalid: Highlight;
-      --spectrum-tag-border-color-invalid-hover: Highlight;
-      --spectrum-tag-border-color-invalid-active: Highlight;
-      --spectrum-tag-border-color-invalid-focus: Highlight;
-
-      --spectrum-tag-content-color-invalid: CanvasText;
-      --spectrum-tag-content-color-invalid-hover: CanvasText;
-      --spectrum-tag-content-color-invalid-active: CanvasText;
-      --spectrum-tag-content-color-invalid-focus: CanvasText;
-
-      &.is-selected {
-        --spectrum-tag-border-color-invalid-selected: Highlight;
-        --spectrum-tag-border-color-invalid-selected-hover: Highlight;
-        --spectrum-tag-border-color-invalid-selected-focus: Highlight;
-        --spectrum-tag-border-color-invalid-selected-active: Highlight;
-
-        --spectrum-tag-background-color-invalid-selected: Highlight;
-        --spectrum-tag-background-color-invalid-selected-hover: Highlight;
-        --spectrum-tag-background-color-invalid-selected-active: Highlight;
-        --spectrum-tag-background-color-invalid-selected-focus: Highlight;
-
-        --spectrum-tag-content-color-invalid-selected: HighlightText;
-      }
-    }
-
-    &.is-emphasized {
-      --spectrum-tag-border-color-emphasized: Highlight;
-      --spectrum-tag-border-color-emphasized-hover: Highlight;
-      --spectrum-tag-border-color-emphasized-active: Highlight;
-      --spectrum-tag-border-color-emphasized-focus: Highlight;
-
-      --spectrum-tag-background-color-emphasized: ButtonFace;
-      --spectrum-tag-background-color-emphasized-hover: ButtonFace;
-      --spectrum-tag-background-color-emphasized-active: ButtonFace;
-      --spectrum-tag-background-color-emphasized-focus: ButtonFace;
-
-      --spectrum-tag-content-color-emphasized: CanvasText;
-    }
-  }
-}
-
 .spectrum-Tag {
   border-color: var(--highcontrast-tag-border-color, var(--mod-tag-border-color, var(--spectrum-tag-border-color)));
   background-color: var(--highcontrast-tag-background-color, var(--mod-tag-background-color, var(--spectrum-tag-background-color)));
@@ -479,5 +431,87 @@ governing permissions and limitations under the License.
 
   .spectrum-Avatar {
     opacity: var(--mod-avatar-opacity-disabled, var(--spectrum-avatar-opacity-disabled));
+  }
+}
+
+/* windows high contrast mode */
+@media (forced-colors: active) {
+  .spectrum-Tag {
+    forced-color-adjust: none;
+
+    --spectrum-tag-border-color: ButtonText;
+    --spectrum-tag-border-color-hover: ButtonText;
+    --spectrum-tag-border-color-active: ButtonText;
+    --spectrum-tag-border-color-focus: ButtonText;
+
+    --spectrum-tag-background-color: ButtonFace;
+    --spectrum-tag-background-color-hover: ButtonFace;
+    --spectrum-tag-background-color-active: ButtonFace;
+    --spectrum-tag-background-color-focus: ButtonFace;
+
+    --spectrum-tag-content-color: ButtonText;
+    --spectrum-tag-content-color-hover: ButtonText;
+    --spectrum-tag-content-color-active: ButtonText;
+    --spectrum-tag-content-color-focus: ButtonText;
+
+    &.is-selected {
+      --spectrum-tag-border-color-selected: Highlight;
+      --spectrum-tag-border-color-selected-hover: Highlight;
+      --spectrum-tag-border-color-selected-active: Highlight;
+      --spectrum-tag-border-color-selected-focus: Highlight;
+
+      --spectrum-tag-background-color-selected: Highlight;
+      --spectrum-tag-background-color-selected-hover: Highlight;
+      --spectrum-tag-background-color-selected-active: Highlight;
+      --spectrum-tag-background-color-selected-focus: Highlight;
+
+      --spectrum-tag-content-color-selected: HighlightText;
+    }
+
+    &.is-disabled {
+      --spectrum-tag-border-color-disabled: GrayText;
+      --spectrum-tag-background-color-disabled: ButtonFace;
+      --spectrum-tag-content-color-disabled: GrayText;
+    }
+
+    &.is-invalid {
+      --spectrum-tag-border-color-invalid: Highlight;
+      --spectrum-tag-border-color-invalid-hover: Highlight;
+      --spectrum-tag-border-color-invalid-active: Highlight;
+      --spectrum-tag-border-color-invalid-focus: Highlight;
+
+      --spectrum-tag-content-color-invalid: CanvasText;
+      --spectrum-tag-content-color-invalid-hover: CanvasText;
+      --spectrum-tag-content-color-invalid-active: CanvasText;
+      --spectrum-tag-content-color-invalid-focus: CanvasText;
+
+      &.is-selected {
+        --spectrum-tag-border-color-invalid-selected: Highlight;
+        --spectrum-tag-border-color-invalid-selected-hover: Highlight;
+        --spectrum-tag-border-color-invalid-selected-focus: Highlight;
+        --spectrum-tag-border-color-invalid-selected-active: Highlight;
+
+        --spectrum-tag-background-color-invalid-selected: Highlight;
+        --spectrum-tag-background-color-invalid-selected-hover: Highlight;
+        --spectrum-tag-background-color-invalid-selected-active: Highlight;
+        --spectrum-tag-background-color-invalid-selected-focus: Highlight;
+
+        --spectrum-tag-content-color-invalid-selected: HighlightText;
+      }
+    }
+
+    &.is-emphasized {
+      --spectrum-tag-border-color-emphasized: Highlight;
+      --spectrum-tag-border-color-emphasized-hover: Highlight;
+      --spectrum-tag-border-color-emphasized-active: Highlight;
+      --spectrum-tag-border-color-emphasized-focus: Highlight;
+
+      --spectrum-tag-background-color-emphasized: ButtonFace;
+      --spectrum-tag-background-color-emphasized-hover: ButtonFace;
+      --spectrum-tag-background-color-emphasized-active: ButtonFace;
+      --spectrum-tag-background-color-emphasized-focus: ButtonFace;
+
+      --spectrum-tag-content-color-emphasized: CanvasText;
+    }
   }
 }
