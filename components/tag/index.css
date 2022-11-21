@@ -439,79 +439,79 @@ governing permissions and limitations under the License.
   .spectrum-Tag {
     forced-color-adjust: none;
 
-    --spectrum-tag-border-color: ButtonText;
-    --spectrum-tag-border-color-hover: ButtonText;
-    --spectrum-tag-border-color-active: ButtonText;
-    --spectrum-tag-border-color-focus: ButtonText;
+    --highcontrast-tag-border-color: ButtonText;
+    --highcontrast-tag-border-color-hover: ButtonText;
+    --highcontrast-tag-border-color-active: ButtonText;
+    --highcontrast-tag-border-color-focus: ButtonText;
 
-    --spectrum-tag-background-color: ButtonFace;
-    --spectrum-tag-background-color-hover: ButtonFace;
-    --spectrum-tag-background-color-active: ButtonFace;
-    --spectrum-tag-background-color-focus: ButtonFace;
+    --highcontrast-tag-background-color: ButtonFace;
+    --highcontrast-tag-background-color-hover: ButtonFace;
+    --highcontrast-tag-background-color-active: ButtonFace;
+    --highcontrast-tag-background-color-focus: ButtonFace;
 
-    --spectrum-tag-content-color: ButtonText;
-    --spectrum-tag-content-color-hover: ButtonText;
-    --spectrum-tag-content-color-active: ButtonText;
-    --spectrum-tag-content-color-focus: ButtonText;
+    --highcontrast-tag-content-color: ButtonText;
+    --highcontrast-tag-content-color-hover: ButtonText;
+    --highcontrast-tag-content-color-active: ButtonText;
+    --highcontrast-tag-content-color-focus: ButtonText;
 
     &.is-selected {
-      --spectrum-tag-border-color-selected: Highlight;
-      --spectrum-tag-border-color-selected-hover: Highlight;
-      --spectrum-tag-border-color-selected-active: Highlight;
-      --spectrum-tag-border-color-selected-focus: Highlight;
+      --highcontrast-tag-border-color-selected: Highlight;
+      --highcontrast-tag-border-color-selected-hover: Highlight;
+      --highcontrast-tag-border-color-selected-active: Highlight;
+      --highcontrast-tag-border-color-selected-focus: Highlight;
 
-      --spectrum-tag-background-color-selected: Highlight;
-      --spectrum-tag-background-color-selected-hover: Highlight;
-      --spectrum-tag-background-color-selected-active: Highlight;
-      --spectrum-tag-background-color-selected-focus: Highlight;
+      --highcontrast-tag-background-color-selected: Highlight;
+      --highcontrast-tag-background-color-selected-hover: Highlight;
+      --highcontrast-tag-background-color-selected-active: Highlight;
+      --highcontrast-tag-background-color-selected-focus: Highlight;
 
-      --spectrum-tag-content-color-selected: HighlightText;
+      --highcontrast-tag-content-color-selected: HighlightText;
     }
 
     &.is-disabled {
-      --spectrum-tag-border-color-disabled: GrayText;
-      --spectrum-tag-background-color-disabled: ButtonFace;
-      --spectrum-tag-content-color-disabled: GrayText;
+      --highcontrast-tag-border-color-disabled: GrayText;
+      --highcontrast-tag-background-color-disabled: ButtonFace;
+      --highcontrast-tag-content-color-disabled: GrayText;
     }
 
     &.is-invalid {
-      --spectrum-tag-border-color-invalid: Highlight;
-      --spectrum-tag-border-color-invalid-hover: Highlight;
-      --spectrum-tag-border-color-invalid-active: Highlight;
-      --spectrum-tag-border-color-invalid-focus: Highlight;
+      --highcontrast-tag-border-color-invalid: Highlight;
+      --highcontrast-tag-border-color-invalid-hover: Highlight;
+      --highcontrast-tag-border-color-invalid-active: Highlight;
+      --highcontrast-tag-border-color-invalid-focus: Highlight;
 
-      --spectrum-tag-content-color-invalid: CanvasText;
-      --spectrum-tag-content-color-invalid-hover: CanvasText;
-      --spectrum-tag-content-color-invalid-active: CanvasText;
-      --spectrum-tag-content-color-invalid-focus: CanvasText;
+      --highcontrast-tag-content-color-invalid: CanvasText;
+      --highcontrast-tag-content-color-invalid-hover: CanvasText;
+      --highcontrast-tag-content-color-invalid-active: CanvasText;
+      --highcontrast-tag-content-color-invalid-focus: CanvasText;
 
       &.is-selected {
-        --spectrum-tag-border-color-invalid-selected: Highlight;
-        --spectrum-tag-border-color-invalid-selected-hover: Highlight;
-        --spectrum-tag-border-color-invalid-selected-focus: Highlight;
-        --spectrum-tag-border-color-invalid-selected-active: Highlight;
+        --highcontrast-tag-border-color-invalid-selected: Highlight;
+        --highcontrast-tag-border-color-invalid-selected-hover: Highlight;
+        --highcontrast-tag-border-color-invalid-selected-focus: Highlight;
+        --highcontrast-tag-border-color-invalid-selected-active: Highlight;
 
-        --spectrum-tag-background-color-invalid-selected: Highlight;
-        --spectrum-tag-background-color-invalid-selected-hover: Highlight;
-        --spectrum-tag-background-color-invalid-selected-active: Highlight;
-        --spectrum-tag-background-color-invalid-selected-focus: Highlight;
+        --highcontrast-tag-background-color-invalid-selected: Highlight;
+        --highcontrast-tag-background-color-invalid-selected-hover: Highlight;
+        --highcontrast-tag-background-color-invalid-selected-active: Highlight;
+        --highcontrast-tag-background-color-invalid-selected-focus: Highlight;
 
-        --spectrum-tag-content-color-invalid-selected: HighlightText;
+        --highcontrast-tag-content-color-invalid-selected: HighlightText;
       }
     }
 
     &.is-emphasized {
-      --spectrum-tag-border-color-emphasized: Highlight;
-      --spectrum-tag-border-color-emphasized-hover: Highlight;
-      --spectrum-tag-border-color-emphasized-active: Highlight;
-      --spectrum-tag-border-color-emphasized-focus: Highlight;
+      --highcontrast-tag-border-color-emphasized: Highlight;
+      --highcontrast-tag-border-color-emphasized-hover: Highlight;
+      --highcontrast-tag-border-color-emphasized-active: Highlight;
+      --highcontrast-tag-border-color-emphasized-focus: Highlight;
 
-      --spectrum-tag-background-color-emphasized: ButtonFace;
-      --spectrum-tag-background-color-emphasized-hover: ButtonFace;
-      --spectrum-tag-background-color-emphasized-active: ButtonFace;
-      --spectrum-tag-background-color-emphasized-focus: ButtonFace;
+      --highcontrast-tag-background-color-emphasized: ButtonFace;
+      --highcontrast-tag-background-color-emphasized-hover: ButtonFace;
+      --highcontrast-tag-background-color-emphasized-active: ButtonFace;
+      --highcontrast-tag-background-color-emphasized-focus: ButtonFace;
 
-      --spectrum-tag-content-color-emphasized: CanvasText;
+      --highcontrast-tag-content-color-emphasized: CanvasText;
     }
   }
 }
