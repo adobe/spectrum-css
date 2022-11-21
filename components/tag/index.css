@@ -203,7 +203,8 @@ governing permissions and limitations under the License.
               background-color var(--mod-tag-animation-duration, var(--spectrum-tag-animation-duration)) ease-in-out;
 
 
-  .spectrum-Tags-itemIcon {
+  .spectrum-Tags-itemIcon,
+  .spectrum-Icon {
     block-size: var(--mod-tag-icon-size, var(--spectrum-tag-icon-size));
     inline-size: var(--mod-tag-icon-size, var(--spectrum-tag-icon-size));
 
