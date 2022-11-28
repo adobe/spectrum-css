@@ -1,7 +1,22 @@
-const eleventySass = require("eleventy-sass")
-const util = require("./site/util.js")
-const prism = require("prismjs")
+/*
+Copyright 2022 Adobe. All rights reserved.
+This file is licensed to you under the Apache License, Version 2.0 (the "License");
+you may not use this file except in compliance with the License. You may obtain a copy
+of the License at http://www.apache.org/licenses/LICENSE-2.0
+
+Unless required by applicable law or agreed to in writing, software distributed under
+the License is distributed on an "AS IS" BASIS, WITHOUT WARRANTIES OR REPRESENTATIONS
+OF ANY KIND, either express or implied. See the License for the specific language
+governing permissions and limitations under the License.
+*/
+
+// all imports
+// const eleventySass = require("eleventy-sass")
+// const util = require("./site/util.js")
+// const prism = require("prismjs")
 const syntaxHighlight = require("@11ty/eleventy-plugin-syntaxhighlight")
+const getAllYMLFiles = require('./site/scripts/build_navigation-items')
+
 
 module.exports = function (eleventyConfig) {
   eleventyConfig.addNunjucksGlobal("WATCH_MODE", process.env.WATCH_MODE)
@@ -17,6 +32,12 @@ module.exports = function (eleventyConfig) {
   let options = {
     html: true,
   }
+  // debug filter
+  // remove from prod
+  eleventyConfig.addFilter("debugger", (...args) => {
+    // console.log(...args)
+    debugger
+  })
 
   eleventyConfig.setLibrary(
     "md",
@@ -62,16 +83,13 @@ module.exports = function (eleventyConfig) {
       },
     })
   )
-
-
-
+  // plugin for sysntax highlighting
   eleventyConfig.addPlugin(syntaxHighlight, {
     init: function ({ Prism }) {
       Prism.languages["html-live"] = Prism.languages.html
       Prism.languages["html-no-demo"] = Prism.languages.html
     },
   })
-
 
   // eleventyConfig.addExtension('css', {
   //   outputFileExtension: 'css',
@@ -81,12 +99,17 @@ module.exports = function (eleventyConfig) {
   //       autoprefixer,
   //       csso
   //     ]).process(inputContent, { from: inputPath });
-  
+
   //     return async () => {
   //       return output.css;
   //     }
   //   }
   // });
+
+  eleventyConfig.addNunjucksGlobal("template", function () {
+    const root_folder = "components"
+    return getAllYMLFiles(root_folder)
+  })
 
   return {
     dir: {

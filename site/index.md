@@ -1,6 +1,5 @@
 ---
 layout: home.njk
-title: Crash Course
 ---
 
 <div class="spectrum-Site-page spectrum-Typography">
