@@ -26,7 +26,7 @@ governing permissions and limitations under the License.
   --spectrum-fieldlabel-font-size: var(--spectrum-font-size-75);
 
   --spectrum-fieldlabel-line-height: var(--spectrum-line-height-100);
-  --spectrum-fieldlabel-cjk-line-height: var(--spectrum-cjk-line-height-100);
+  --spectrum-fieldlabel-line-height-cjk: var(--spectrum-line-height-cjk-100);
 
   --spectrum-fieldlabel-asterisk-gap: var(--spectrum-field-label-top-to-asterisk-small);
   --spectrum-fieldlabel-side-padding-top: var(--spectrum-component-top-to-text-75);
@@ -40,7 +40,7 @@ governing permissions and limitations under the License.
   --spectrum-fieldlabel-font-size: var(--spectrum-font-size-75);
 
   --spectrum-fieldlabel-line-height: var(--spectrum-line-height-200);
-  --spectrum-fieldlabel-cjk-line-height: var(--spectrum-cjk-line-height-200);
+  --spectrum-fieldlabel-line-height-cjk: var(--spectrum-line-height-cjk-200);
 
   --spectrum-fieldlabel-asterisk-gap: var(--spectrum-field-label-top-to-asterisk-medium);
   --spectrum-fieldlabel-side-padding-top: var(--spectrum-component-top-to-text-75);
@@ -54,7 +54,7 @@ governing permissions and limitations under the License.
   --spectrum-fieldlabel-font-size: var(--spectrum-font-size-100);
 
   --spectrum-fieldlabel-line-height: var(--spectrum-line-height-100);
-  --spectrum-fieldlabel-cjk-line-height: var(--spectrum-cjk-line-height-100);
+  --spectrum-fieldlabel-line-height-cjk: var(--spectrum-line-height-cjk-100);
 
   --spectrum-fieldlabel-asterisk-gap: var(--spectrum-field-label-top-to-asterisk-large);
   --spectrum-fieldlabel-side-padding-top: var(--spectrum-component-top-to-text-100);
@@ -68,7 +68,7 @@ governing permissions and limitations under the License.
   --spectrum-fieldlabel-font-size: var(--spectrum-font-size-200);
 
   --spectrum-fieldlabel-line-height: var(--spectrum-line-height-200);
-  --spectrum-fieldlabel-cjk-line-height: var(--spectrum-cjk-line-height-200);
+  --spectrum-fieldlabel-line-height-cjk: var(--spectrum-line-height-cjk-200);
 
 
   --spectrum-fieldlabel-asterisk-gap: var(--spectrum-field-label-top-to-asterisk-extra-large);
@@ -103,7 +103,7 @@ governing permissions and limitations under the License.
   &:lang(ja),
   &:lang(zh),
   &:lang(ko) {
-    line-height: var(--mod-fieldlabel-cjk-line-height, var(--spectrum-fieldlabel-cjk-line-height));
+    line-height: var(--mod-fieldlabel-line-height-cjk, var(--spectrum-fieldlabel-line-height-cjk));
   }
 }
 

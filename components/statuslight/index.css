@@ -20,7 +20,7 @@ governing permissions and limitations under the License.
   --spectrum-statuslight-height: var(--spectrum-component-height-100);
   --spectrum-statuslight-dot-size: var(--spectrum-status-light-dot-size-medium);
   --spectrum-statuslight-line-height: var(--spectrum-line-height-100);
-  --spectrum-statuslight-line-height-cjk: var(--spectrum-cjk-line-height-100);
+  --spectrum-statuslight-line-height-cjk: var(--spectrum-line-height-cjk-100);
 
   --spectrum-statuslight-font-size: var(--spectrum-font-size-100);
 
@@ -129,14 +129,14 @@ governing permissions and limitations under the License.
   font-size: var(--mod-statuslight-font-size, var(--spectrum-statuslight-font-size));
   font-weight: var(--mod-statuslight-font-weight, var(--spectrum-statuslight-font-weight));
 
-  line-height: var(--mod-statuslight-line-height, --spectrum-statuslight-line-height);
+  line-height: var(--mod-statuslight-line-height, var(--spectrum-statuslight-line-height));
 
   color: var(--highcontrast-statuslight-content-color-default, var(--mod-statuslight-content-color-default, var(--spectrum-statuslight-content-color-default)));
 
   &:lang(ja),
   &:lang(zh),
   &:lang(ko) {
-    line-height: var(--spectrum-statuslight-line-height-cjk, var(--mod-statuslight-line-height, var(--spectrum-statuslight-line-height)));
+    line-height: var(--mod-statuslight-line-height-cjk, var(--spectrum-statuslight-line-height-cjk));
   }
 
   /* Dot */
