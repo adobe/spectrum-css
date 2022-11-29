@@ -621,12 +621,3 @@ governing permissions and limitations under the License.
     }
   }
 }
-
-.xxx {
-  left: var(--mod-tooltip-pointer-corner-spacing, var(--spectrum-tooltip-pointer-corner-spacing));
-  right: var(--mod-tooltip-pointer-corner-spacing, var(--spectrum-tooltip-pointer-corner-spacing));
-  margin-inline-start: var(--mod-tooltip-pointer-corner-spacing, var(--spectrum-tooltip-pointer-corner-spacing));
-  margin-inline-end: var(--mod-tooltip-pointer-corner-spacing, var(--spectrum-tooltip-pointer-corner-spacing));
-      height: var(--mod-tooltip-tip-inline-size, var(--spectrum-tooltip-tip-inline-size));
-    width: var(--mod-tooltip-tip-block-size, var(--spectrum-tooltip-tip-block-size));
-}
