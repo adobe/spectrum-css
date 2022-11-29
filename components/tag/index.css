@@ -203,11 +203,19 @@ governing permissions and limitations under the License.
               background-color var(--mod-tag-animation-duration, var(--spectrum-tag-animation-duration)) ease-in-out;
 
 
-  .spectrum-Tags-itemIcon,
-  .spectrum-Icon {
+  .spectrum-Tags-itemIcon {
     block-size: var(--mod-tag-icon-size, var(--spectrum-tag-icon-size));
     inline-size: var(--mod-tag-icon-size, var(--spectrum-tag-icon-size));
 
+    margin-block-start: calc(var(--mod-tag-icon-spacing-block-start, var(--spectrum-tag-icon-spacing-block-start))
+                            - var(--mod-tag-border-width, var(--spectrum-tag-border-width)));
+    margin-block-end: calc(var(--mod-tag-icon-spacing-block-end, var(--spectrum-tag-icon-spacing-block-end))
+                            - var(--mod-tag-border-width, var(--spectrum-tag-border-width)));
+    margin-inline-end: var(--mod-tag-icon-spacing-inline-end, var(--spectrum-tag-icon-spacing-inline-end));
+  }
+
+  /* magnify icon for web components */
+  .spectrum-Icon {
     margin-block-start: calc(var(--mod-tag-icon-spacing-block-start, var(--spectrum-tag-icon-spacing-block-start))
                             - var(--mod-tag-border-width, var(--spectrum-tag-border-width)));
     margin-block-end: calc(var(--mod-tag-icon-spacing-block-end, var(--spectrum-tag-icon-spacing-block-end))
@@ -248,6 +256,8 @@ governing permissions and limitations under the License.
     .spectrum-Icon {
       padding: 0;
       margin: 0;
+      margin-block: 0;
+      margin-inline: 0;
     }
 
     /* TODO: re-evaluate after ClearButton migration */
