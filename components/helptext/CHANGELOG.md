@@ -3,6 +3,18 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+<a name="3.0.2"></a>
+## 3.0.2
+🗓 2022-11-29 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/helptext@3.0.1...@spectrum-css/helptext@3.0.2)
+
+### 🐛 Bug fixes
+
+* resolve missing tokens errors due to name changes ([#1555](https://github.com/adobe/spectrum-css/issues/1555)) ([ddae027](https://github.com/adobe/spectrum-css/commit/ddae027))
+
+
+
+
+
 <a name="3.0.1"></a>
 ## 3.0.1
 🗓 2022-11-11 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/helptext@3.0.0...@spectrum-css/helptext@3.0.1)
