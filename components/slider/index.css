@@ -151,6 +151,7 @@ governing permissions and limitations under the License.
     display: block;
     block-size: 100%;
 
+    /* reset all border radii */
     border-start-start-radius: 0;
     border-end-start-radius: 0;
     border-start-end-radius: 0;
@@ -162,14 +163,14 @@ governing permissions and limitations under the License.
   &:first-of-type {
     &:before {
       border-start-start-radius: var(--mod-slider-track-corner-radius, var(--spectrum-slider-track-corner-radius));
-      border-end-start-radius: var(--mod-slider-track-corner-radius, var(--spectrum-slider-track-corner-radius))) 0;
+      border-end-start-radius: var(--mod-slider-track-corner-radius, var(--spectrum-slider-track-corner-radius));
     }
   }
 
   &:last-of-type {
     &:before {
-      border-start-start-radius: var(--mod-slider-track-corner-radius, var(--spectrum-slider-track-corner-radius));
-      border-end-start-radius: var(--mod-slider-track-corner-radius, var(--spectrum-slider-track-corner-radius));
+      border-start-end-radius: var(--mod-slider-track-corner-radius, var(--spectrum-slider-track-corner-radius));
+      border-end-end-radius: var(--mod-slider-track-corner-radius, var(--spectrum-slider-track-corner-radius));
     }
   }
 }
@@ -233,7 +234,7 @@ governing permissions and limitations under the License.
     }
 
     &:last-of-type {
-      padding-inline: ar(--spectrum-slider-track-handleoffset) 0;
+      padding-inline: var(--spectrum-slider-track-handleoffset) 0;
       inset-inline-start: auto;
       inset-inline-end: var(--mod-slider-range-track-reset, var(--spectrum-slider-range-track-reset));
       margin-inline-end: var(--mod-slider-track-margin-offset, var(--spectrum-slider-track-margin-offset));
