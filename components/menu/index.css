@@ -113,7 +113,7 @@ governing permissions and limitations under the License.
 
 .spectrum-Menu {
   --spectrum-menu-item-label-line-height: var(--spectrum-line-height-100);
-  --spectrum-menu-item-label-cjk-line-height: var(--spectrum-cjk-line-height-100);
+  --spectrum-menu-item-label-line-height-cjk: var(--spectrum-line-height-cjk-100);
   --spectrum-menu-item-label-to-description-spacing: var(--spectrum-menu-item-label-to-description);
   --spectrum-menu-item-focus-indicator-width: var(--spectrum-border-width-200);
   --spectrum-menu-item-focus-indicator-color: var(--spectrum-blue-800);
@@ -133,7 +133,7 @@ governing permissions and limitations under the License.
   --spectrum-menu-item-label-icon-color-disabled: var(--spectrum-disabled-content-color);
 
   --spectrum-menu-item-description-line-height: var(--spectrum-line-height-100);
-  --spectrum-menu-item-description-cjk-line-height: var(--spectrum-cjk-line-height-100);
+  --spectrum-menu-item-description-line-height-cjk: var(--spectrum-line-height-cjk-100);
 
   --spectrum-menu-item-description-color-default: var(--spectrum-neutral-subdued-content-color-default);
   --spectrum-menu-item-description-color-hover: var(--spectrum-neutral-subdued-content-color-hover);
@@ -142,7 +142,7 @@ governing permissions and limitations under the License.
   --spectrum-menu-item-description-color-disabled: var(--spectrum-disabled-content-color);
 
   --spectrum-menu-section-header-line-height: var(--spectrum-line-height-100);
-  --spectrum-menu-section-header-cjk-line-height: var(--spectrum-cjk-line-height-100);
+  --spectrum-menu-section-header-line-height-cjk: var(--spectrum-line-height-cjk-100);
   --spectrum-menu-section-header-font-weight: var(--spectrum-font-weight-bold);
   --spectrum-menu-section-header-color: var(--spectrum-gray-900);
   --spectrum-menu-collapsible-icon-color: var(--spectrum-gray-900);
@@ -274,15 +274,15 @@ governing permissions and limitations under the License.
   &:lang(zh),
   &:lang(ko) {
     .spectrum-Menu-item {
-      line-height: var(--mod-menu-item-label-cjk-line-height, var(--spectrum-menu-item-label-cjk-line-height));
+      line-height: var(--mod-menu-item-label-line-height-cjk, var(--spectrum-menu-item-label-line-height-cjk));
     }
 
     .spectrum-Menu-itemDescription {
-      line-height: var(--mod-menu-item-description-cjk-line-height, var(--spectrum-menu-item-description-cjk-line-height));
+      line-height: var(--mod-menu-item-description-line-height-cjk, var(--spectrum-menu-item-description-line-height-cjk));
     }
 
     .spectrum-Menu-sectionHeading {
-      line-height: var(--mod-menu-section-header-cjk-line-height, var(--spectrum-menu-section-header-cjk-line-height));
+      line-height: var(--mod-menu-section-header-line-height-cjk, var(--spectrum-menu-section-header-line-height-cjk));
     }
   }
 
