@@ -49,12 +49,12 @@ governing permissions and limitations under the License.
   --spectrum-textfield-icon-spacing-block-valid: var(--spectrum-field-top-to-validation-icon-medium);
 
   /* font styles */
-  --spectrum-textfield-font-family: var(--spectrum-font-family-base); /* custom variable for non-functional token --spectrum-font-family-default */
-  --spectrum-textfield-font-weight: var(--spectrum-font-regular-default);
+  --spectrum-textfield-font-family: var(--spectrum-font-family-default);
+  --spectrum-textfield-font-weight: var(--spectrum-font-weight-regular);
 
   /* character count */
-  --spectrum-textfield-character-count-font-family: var(--spectrum-font-family-base); /* custom variable for non-functional token --spectrum-font-family-default */
-  --spectrum-textfield-character-count-font-weight: var(--spectrum-font-regular-default);
+  --spectrum-textfield-character-count-font-family: var(--spectrum-font-family-default);
+  --spectrum-textfield-character-count-font-weight: var(--spectrum-font-weight-regular);
   --spectrum-textfield-character-count-font-size: var(--spectrum-font-size-75);
   --spectrum-textfield-character-count-spacing-inline: var(--spectrum-spacing-200);
   --spectrum-textfield-character-count-spacing-block: var(--spectrum-component-bottom-to-text-75);
@@ -71,8 +71,8 @@ governing permissions and limitations under the License.
   /* Text Colors */
   --spectrum-textfield-text-color-default: var(--spectrum-neutral-content-color-default);
   --spectrum-textfield-text-color-hover: var(--spectrum-neutral-content-color-hover);
-  --spectrum-textfield-text-color-focus: var(--spectrum-neutral-content-color-default); /* Placeholder - TODO - replace with --spectrum-neutral-content-color-focus */
-  --spectrum-textfield-text-color-focus-hover: var(--spectrum-neutral-content-color-default); /* Placeholder - TODO - replace with --spectrum-neutral-content-color-focus-hover */
+  --spectrum-textfield-text-color-focus: var(--spectrum-neutral-content-color-focus);
+  --spectrum-textfield-text-color-focus-hover: var(-spectrum-neutral-content-color-focus-hover);
   --spectrum-textfield-text-color-keyboard-focus: var(--spectrum-neutral-content-color-key-focus);
 
   /* Read Only Text Color */
@@ -86,8 +86,8 @@ governing permissions and limitations under the License.
   /* Invalid Colors */
   --spectrum-textfield-border-color-invalid-default: var(--spectrum-negative-border-color-default);
   --spectrum-textfield-border-color-invalid-hover: var(--spectrum-negative-border-color-hover);
-  --spectrum-textfield-border-color-invalid-focus: var(--spectrum-negative-border-color-default); /* Placeholder - TODO - replace with --spectrum-negative-border-color-focus */
-  --spectrum-textfield-border-color-invalid-focus-hover: var(--spectrum-negative-border-color-default); /* Placeholder - TODO - replace with --spectrum-negative-border-color-focus-hover */
+  --spectrum-textfield-border-color-invalid-focus: var(--spectrum-negative-border-color-focus);
+  --spectrum-textfield-border-color-invalid-focus-hover: var(--spectrum-negative-border-color-focus-hover);
   --spectrum-textfield-border-color-invalid-keyboard-focus: var(--spectrum-negative-border-color-key-focus);
   --spectrum-textfield-icon-color-invalid: var(--spectrum-negative-visual-color);
 
