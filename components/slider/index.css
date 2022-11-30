@@ -65,7 +65,7 @@ governing permissions and limitations under the License.
 }
 
 .spectrum-Slider {
-  --spectrum-slider-cjk-line-height: var(--mod-cjk-line-height-100, var(--spectrum-cjk-line-height-100));
+  --spectrum-slider-cjk-line-height: var(--mod-line-height-cjk-100, var(--spectrum-line-height-cjk-100));
 
   --spectrum-slider-min-size: var(--mod-spacing-900, var(--spectrum-spacing-900));
   --spectrum-slider-height-size: var(--mod-component-height-200, var(--spectrum-component-height-200));
