@@ -245,7 +245,7 @@ governing permissions and limitations under the License.
     margin-inline-start: calc(var(--mod-tag-clear-button-spacing-inline-start, var(--spectrum-tag-clear-button-spacing-inline-start))
                               + (var(--mod-tag-label-spacing-inline-end, var(--spectrum-tag-label-spacing-inline-end)) * -1));
 
-    /* end spacing is theme-specific */
+    /* end spacing is themef-specific */
     margin-inline-end: calc(var(--mod-tag-clear-button-spacing-inline-end, var(--spectrum-tag-clear-button-spacing-inline-end))
                             - var(--mod-tag-border-width, var(--spectrum-tag-border-width)));
 
@@ -260,12 +260,17 @@ governing permissions and limitations under the License.
       margin-inline: 0;
     }
 
-    /* TODO: re-evaluate after ClearButton migration */
+    /* width of fill neutralized to ensure correct inline spacing within tag */
+    --spectrum-clearbutton-fill-size: auto;
+    --spectrum-clearbutton-fill-background-color: transparent;
+
     .spectrum-ClearButton-fill {
-      /* width neutralized to ensure correct inline spacing within tag */
-      width: auto;
-      background-color: transparent;
+      background-color: var(--spectrum-clearbutton-fill-background-color);
+
+      inline-size: var(--spectrum-clearbutton-fill-size);
+      block-size: var(--spectrum-clearbutton-fill-size);
     }
+
   }
 
   &:hover {
