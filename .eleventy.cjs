@@ -15,7 +15,7 @@ governing permissions and limitations under the License.
 // const util = require("./site/util.js")
 // const prism = require("prismjs")
 const syntaxHighlight = require("@11ty/eleventy-plugin-syntaxhighlight")
-const getAllYMLFiles = require('./site/scripts/build_navigation-items')
+const getAllYMLFiles = require('./site/scripts/build_navigation-items.cjs')
 
 
 module.exports = function (eleventyConfig) {
@@ -91,21 +91,6 @@ module.exports = function (eleventyConfig) {
     },
   })
 
-  // eleventyConfig.addExtension('css', {
-  //   outputFileExtension: 'css',
-  //   compile: async (inputContent, inputPath) => {
-  //     let output = await postcss([
-  //       pimport,
-  //       autoprefixer,
-  //       csso
-  //     ]).process(inputContent, { from: inputPath });
-
-  //     return async () => {
-  //       return output.css;
-  //     }
-  //   }
-  // });
-
   eleventyConfig.addNunjucksGlobal("template", function () {
     const root_folder = "components"
     return getAllYMLFiles(root_folder)
@@ -114,7 +99,7 @@ module.exports = function (eleventyConfig) {
   return {
     dir: {
       input: "site",
-      output: "_site",
+      output: "_site"
     },
     passthroughFileCopy: true,
     templateFormats: ["njk", "md", "css", "yml"],
