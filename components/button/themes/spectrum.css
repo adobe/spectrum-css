@@ -63,7 +63,7 @@ governing permissions and limitations under the License.
                 --spectrum-button-border-color-down: var(--spectrum-accent-color-1100);
                 --spectrum-button-border-color-focus: var(--spectrum-accent-color-1000);
 
-                --spectrum-button-content-color-default: var(--spectrum-accent-content-color);
+                --spectrum-button-content-color-default: var(--spectrum-accent-content-color-default);
                 --spectrum-button-content-color-hover: var(--spectrum-accent-content-color-hover);
                 --spectrum-button-content-color-down: var(--spectrum-accent-content-color-down);
                 --spectrum-button-content-color-focus: var(--spectrum-accent-content-color-key-focus);
@@ -106,7 +106,7 @@ governing permissions and limitations under the License.
                 --spectrum-button-border-color-down: var(--spectrum-negative-color-1100);
                 --spectrum-button-border-color-focus: var(--spectrum-negative-color-1000);
 
-                --spectrum-button-content-color-default: var(--spectrum-negative-content-color);
+                --spectrum-button-content-color-default: var(--spectrum-negative-content-color-default);
                 --spectrum-button-content-color-hover: var(--spectrum-negative-content-color-hover);
                 --spectrum-button-content-color-down: var(--spectrum-negative-content-color-down);
                 --spectrum-button-content-color-focus: var(--spectrum-negative-content-color-key-focus);
@@ -273,7 +273,7 @@ governing permissions and limitations under the License.
             --spectrum-button-content-color-down: var(--spectrum-black);
             --spectrum-button-content-color-focus: var(--spectrum-black);
 
-            --spectrum-button-focus-ring-color: var(--spectrum-static-white-focus-ring-color);
+            --spectrum-button-focus-indicator-color: var(--spectrum-static-white-focus-indicator-color);
 
             --spectrum-button-background-color-disabled: var(--spectrum-disabled-static-white-background-color);
             --spectrum-button-border-color-disabled: transparent;
@@ -295,7 +295,7 @@ governing permissions and limitations under the License.
                 --spectrum-button-content-color-down: var(--spectrum-white);
                 --spectrum-button-content-color-focus: var(--spectrum-white);
 
-                --spectrum-button-focus-ring-color: var(--spectrum-static-white-focus-ring-color);
+                --spectrum-button-focus-indicator-color: var(--spectrum-static-white-focus-indicator-color);
 
                 --spectrum-button-background-color-disabled: transparent;
                 --spectrum-button-border-color-disabled: var(--spectrum-disabled-static-white-border-color);
@@ -334,7 +334,7 @@ governing permissions and limitations under the License.
             --spectrum-button-content-color-down: var(--spectrum-white);
             --spectrum-button-content-color-focus: var(--spectrum-white);
 
-            --spectrum-button-focus-ring-color: var(--spectrum-static-white-focus-ring-color);
+            --spectrum-button-focus-indicator-color: var(--spectrum-static-white-focus-indicator-color);
 
             --spectrum-button-background-color-disabled: var(--spectrum-disabled-static-white-background-color);
             --spectrum-button-border-color-disabled: transparent;
@@ -356,7 +356,7 @@ governing permissions and limitations under the License.
                 --spectrum-button-content-color-down: var(--spectrum-white);
                 --spectrum-button-content-color-focus: var(--spectrum-white);
 
-                --spectrum-button-focus-ring-color: var(--spectrum-static-white-focus-ring-color);
+                --spectrum-button-focus-indicator-color: var(--spectrum-static-white-focus-indicator-color);
 
                 --spectrum-button-background-color-disabled: transparent;
                 --spectrum-button-border-color-disabled: var(--spectrum-disabled-static-white-border-color);
@@ -381,7 +381,7 @@ governing permissions and limitations under the License.
             --spectrum-button-content-color-down: var(--spectrum-white);
             --spectrum-button-content-color-focus: var(--spectrum-white);
 
-            --spectrum-button-focus-ring-color: var(--spectrum-static-black-focus-ring-color);
+            --spectrum-button-focus-indicator-color: var(--spectrum-static-black-focus-indicator-color);
 
             --spectrum-button-background-color-disabled: var(--spectrum-disabled-static-black-background-color);
             --spectrum-button-border-color-disabled: transparent;
@@ -403,7 +403,7 @@ governing permissions and limitations under the License.
                 --spectrum-button-content-color-down: var(--spectrum-black);
                 --spectrum-button-content-color-focus: var(--spectrum-black);
 
-                --spectrum-button-focus-ring-color: var(--spectrum-static-black-focus-ring-color);
+                --spectrum-button-focus-indicator-color: var(--spectrum-static-black-focus-indicator-color);
 
                 --spectrum-button-background-color-disabled: transparent;
                 --spectrum-button-border-color-disabled: var(--spectrum-disabled-static-black-border-color);
@@ -429,7 +429,7 @@ governing permissions and limitations under the License.
             --spectrum-button-content-color-down: var(--spectrum-black);
             --spectrum-button-content-color-focus: var(--spectrum-black);
 
-            --spectrum-button-focus-ring-color: var(--spectrum-static-black-focus-ring-color);
+            --spectrum-button-focus-indicator-color: var(--spectrum-static-black-focus-indicator-color);
 
             --spectrum-button-background-color-disabled: var(--spectrum-disabled-static-black-background-color);
             --spectrum-button-border-color-disabled: transparent;
@@ -451,7 +451,7 @@ governing permissions and limitations under the License.
                 --spectrum-button-content-color-down: var(--spectrum-black);
                 --spectrum-button-content-color-focus: var(--spectrum-black);
 
-                --spectrum-button-focus-ring-color: var(--spectrum-static-black-focus-ring-color);
+                --spectrum-button-focus-indicator-color: var(--spectrum-static-black-focus-indicator-color);
 
                 --spectrum-button-background-color-disabled: transparent;
                 --spectrum-button-border-color-disabled: var(--spectrum-disabled-static-black-border-color);
