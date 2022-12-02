@@ -622,14 +622,11 @@ governing permissions and limitations under the License.
   overflow-wrap: break-word;
 }
 
-.spectrum-Menu-itemLabel + .spectrum-Menu-itemValue {
-  margin-inline-start: var(--mod-menu-item-label-to-value-area-min-spacing, var(--spectrum-menu-item-label-to-value-area-min-spacing));
-}
-
 .spectrum-Menu-itemValue {
   color: var(--highcontrast-menu-item-value-color-default, var(--mod-menu-item-value-color-default, var(--spectrum-menu-item-value-color-default)));
   font-size: var(--mod-menu-item-label-font-size, var(--spectrum-menu-item-label-font-size));
   justify-self: end;
+  margin-inline-start: var(--mod-menu-item-label-to-value-area-min-spacing, var(--spectrum-menu-item-label-to-value-area-min-spacing));
 }
 
 .spectrum-Menu-itemLabel--wrapping {
@@ -700,7 +697,7 @@ governing permissions and limitations under the License.
   that one is a chevron and one is a non-chevron
   and we need to adjust padding of submenu items to account for both of those icons
 */
-.spectrum-Menu-item--collapsible > .spectrum-Menu-itemIcon + .spectrum-Menu-itemIcon ~ .spectrum-Menu {
+.spectrum-Menu-item--collapsible-withWorkflowIcon .spectrum-Menu {
   .spectrum-Menu-item {
     /*
       allow item to take up full width of parent,
@@ -713,6 +710,7 @@ governing permissions and limitations under the License.
 .spectrum-Menu-item--drillIn {
   .spectrum-Menu-chevron {
     fill: var(--highcontrast-menu-drillin-icon-color-default, var(--mod-menu-drillin-icon-color-default, var(--spectrum-menu-drillin-icon-color-default)));
+    margin-inline-start: var(--mod-menu-item-label-to-value-area-min-spacing, var(--spectrum-menu-item-label-to-value-area-min-spacing));
   }
 
   &.is-open {
@@ -729,10 +727,6 @@ governing permissions and limitations under the License.
     .spectrum-Menu-checkmark {
       fill: var(--highcontrast-menu-checkmark-icon-color-hover, var(--mod-menu-checkmark-icon-color-hover, var(--spectrum-menu-checkmark-icon-color-hover)));
     }
-  }
-
-  .spectrum-Menu-itemLabel + .spectrum-Menu-chevron {
-    margin-inline-start: var(--mod-menu-item-label-to-value-area-min-spacing, var(--spectrum-menu-item-label-to-value-area-min-spacing));
   }
 
   &:hover {

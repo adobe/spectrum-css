@@ -521,7 +521,7 @@ examples:
           <h4 class="spectrum-Heading spectrum-Heading--sizeXS spectrum-Examples-itemHeading">S</h4>
           <div class="spectrum-Examples-itemGroup">
             <ul class="spectrum-Menu spectrum-Menu--sizeS" role="menu">
-              <li class="spectrum-Menu-item spectrum-Menu-item--collapsible is-open" role="menuitem" tabindex="0">
+              <li class="spectrum-Menu-item spectrum-Menu-item--collapsible spectrum-Menu-item--collapsible-withWorkflowIcon is-open" role="menuitem" tabindex="0">
                 <svg class="spectrum-Icon spectrum-Icon--sizeS spectrum-UIIcon-ChevronRight75 spectrum-Menu-chevron spectrum-Menu-chevron--withAdjacentIcon spectrum-Menu-itemIcon" focusable="false" aria-hidden="true" aria-label="Next">
                   <use xlink:href="#spectrum-css-icon-Chevron75" />
                 </svg>
@@ -565,7 +565,7 @@ examples:
                   </li>
                 </ul>
               </li>
-              <li class="spectrum-Menu-item spectrum-Menu-item--collapsible" role="menuitem" tabindex="0">
+              <li class="spectrum-Menu-item spectrum-Menu-item--collapsible spectrum-Menu-item--collapsible-withWorkflowIcon" role="menuitem" tabindex="0">
                 <svg class="spectrum-Icon spectrum-Icon--sizeS spectrum-UIIcon-ChevronRight75 spectrum-Menu-chevron spectrum-Menu-chevron--withAdjacentIcon spectrum-Menu-itemIcon" focusable="false" aria-hidden="true" aria-label="Next">
                   <use xlink:href="#spectrum-css-icon-Chevron75" />
                 </svg>
@@ -588,7 +588,7 @@ examples:
                   </li>
                 </ul>
               </li>
-              <li class="spectrum-Menu-item spectrum-Menu-item--collapsible" role="menuitem" tabindex="0">
+              <li class="spectrum-Menu-item spectrum-Menu-item--collapsible spectrum-Menu-item--collapsible-withWorkflowIcon" role="menuitem" tabindex="0">
                 <svg class="spectrum-Icon spectrum-Icon--sizeS spectrum-UIIcon-ChevronRight75 spectrum-Menu-chevron spectrum-Menu-chevron--withAdjacentIcon spectrum-Menu-itemIcon" focusable="false" aria-hidden="true" aria-label="Next">
                   <use xlink:href="#spectrum-css-icon-Chevron75" />
                 </svg>
@@ -611,7 +611,7 @@ examples:
                   </li>
                 </ul>
               </li>
-              <li class="spectrum-Menu-item spectrum-Menu-item--collapsible" role="menuitem" tabindex="0">
+              <li class="spectrum-Menu-item spectrum-Menu-item--collapsible spectrum-Menu-item--collapsible-withWorkflowIcon" role="menuitem" tabindex="0">
                 <svg class="spectrum-Icon spectrum-Icon--sizeS spectrum-UIIcon-ChevronRight75 spectrum-Menu-chevron spectrum-Menu-chevron--withAdjacentIcon spectrum-Menu-itemIcon" focusable="false" aria-hidden="true" aria-label="Next">
                   <use xlink:href="#spectrum-css-icon-Chevron75" />
                 </svg>
@@ -641,7 +641,7 @@ examples:
           <h4 class="spectrum-Heading spectrum-Heading--sizeXS spectrum-Examples-itemHeading">M</h4>
           <div class="spectrum-Examples-itemGroup">
             <ul class="spectrum-Menu spectrum-Menu--sizeM" role="menu">
-              <li class="spectrum-Menu-item spectrum-Menu-item--collapsible is-open" role="menuitem" tabindex="0">
+              <li class="spectrum-Menu-item spectrum-Menu-item--collapsible spectrum-Menu-item--collapsible-withWorkflowIcon is-open" role="menuitem" tabindex="0">
                 <svg class="spectrum-Icon spectrum-Icon--sizeM spectrum-UIIcon-ChevronRight100 spectrum-Menu-chevron spectrum-Menu-chevron--withAdjacentIcon spectrum-Menu-itemIcon" focusable="false" aria-hidden="true" aria-label="Next">
                   <use xlink:href="#spectrum-css-icon-Chevron100" />
                 </svg>
@@ -685,7 +685,7 @@ examples:
                   </li>
                 </ul>
               </li>
-              <li class="spectrum-Menu-item spectrum-Menu-item--collapsible" role="menuitem" tabindex="0">
+              <li class="spectrum-Menu-item spectrum-Menu-item--collapsible spectrum-Menu-item--collapsible-withWorkflowIcon" role="menuitem" tabindex="0">
                 <svg class="spectrum-Icon spectrum-Icon--sizeM spectrum-UIIcon-ChevronRight100 spectrum-Menu-chevron spectrum-Menu-chevron--withAdjacentIcon spectrum-Menu-itemIcon" focusable="false" aria-hidden="true" aria-label="Next">
                   <use xlink:href="#spectrum-css-icon-Chevron100" />
                 </svg>
@@ -708,7 +708,7 @@ examples:
                   </li>
                 </ul>
               </li>
-              <li class="spectrum-Menu-item spectrum-Menu-item--collapsible" role="menuitem" tabindex="0">
+              <li class="spectrum-Menu-item spectrum-Menu-item--collapsible spectrum-Menu-item--collapsible-withWorkflowIcon" role="menuitem" tabindex="0">
                 <svg class="spectrum-Icon spectrum-Icon--sizeM spectrum-UIIcon-ChevronRight100 spectrum-Menu-chevron spectrum-Menu-chevron--withAdjacentIcon spectrum-Menu-itemIcon" focusable="false" aria-hidden="true" aria-label="Next">
                   <use xlink:href="#spectrum-css-icon-Chevron100" />
                 </svg>
@@ -731,7 +731,7 @@ examples:
                   </li>
                 </ul>
               </li>
-              <li class="spectrum-Menu-item spectrum-Menu-item--collapsible" role="menuitem" tabindex="0">
+              <li class="spectrum-Menu-item spectrum-Menu-item--collapsible spectrum-Menu-item--collapsible-withWorkflowIcon" role="menuitem" tabindex="0">
                 <svg class="spectrum-Icon spectrum-Icon--sizeM spectrum-UIIcon-ChevronRight100 spectrum-Menu-chevron spectrum-Menu-chevron--withAdjacentIcon spectrum-Menu-itemIcon" focusable="false" aria-hidden="true" aria-label="Next">
                   <use xlink:href="#spectrum-css-icon-Chevron100" />
                 </svg>
@@ -761,7 +761,7 @@ examples:
           <h4 class="spectrum-Heading spectrum-Heading--sizeXS spectrum-Examples-itemHeading">L</h4>
           <div class="spectrum-Examples-itemGroup">
             <ul class="spectrum-Menu spectrum-Menu--sizeL" role="menu">
-              <li class="spectrum-Menu-item spectrum-Menu-item--collapsible is-open" role="menuitem" tabindex="0">
+              <li class="spectrum-Menu-item spectrum-Menu-item--collapsible spectrum-Menu-item--collapsible-withWorkflowIcon is-open" role="menuitem" tabindex="0">
                 <svg class="spectrum-Icon spectrum-Icon--sizeL spectrum-UIIcon-ChevronRight200 spectrum-Menu-chevron spectrum-Menu-chevron--withAdjacentIcon spectrum-Menu-itemIcon" focusable="false" aria-hidden="true" aria-label="Next">
                   <use xlink:href="#spectrum-css-icon-Chevron200" />
                 </svg>
@@ -805,7 +805,7 @@ examples:
                   </li>
                 </ul>
               </li>
-              <li class="spectrum-Menu-item spectrum-Menu-item--collapsible" role="menuitem" tabindex="0">
+              <li class="spectrum-Menu-item spectrum-Menu-item--collapsible spectrum-Menu-item--collapsible-withWorkflowIcon" role="menuitem" tabindex="0">
                 <svg class="spectrum-Icon spectrum-Icon--sizeL spectrum-UIIcon-ChevronRight200 spectrum-Menu-chevron spectrum-Menu-chevron--withAdjacentIcon spectrum-Menu-itemIcon" focusable="false" aria-hidden="true" aria-label="Next">
                   <use xlink:href="#spectrum-css-icon-Chevron200" />
                 </svg>
@@ -828,7 +828,7 @@ examples:
                   </li>
                 </ul>
               </li>
-              <li class="spectrum-Menu-item spectrum-Menu-item--collapsible" role="menuitem" tabindex="0">
+              <li class="spectrum-Menu-item spectrum-Menu-item--collapsible spectrum-Menu-item--collapsible-withWorkflowIcon" role="menuitem" tabindex="0">
                 <svg class="spectrum-Icon spectrum-Icon--sizeL spectrum-UIIcon-ChevronRight200 spectrum-Menu-chevron spectrum-Menu-chevron--withAdjacentIcon spectrum-Menu-itemIcon" focusable="false" aria-hidden="true" aria-label="Next">
                   <use xlink:href="#spectrum-css-icon-Chevron200" />
                 </svg>
@@ -851,7 +851,7 @@ examples:
                   </li>
                 </ul>
               </li>
-              <li class="spectrum-Menu-item spectrum-Menu-item--collapsible" role="menuitem" tabindex="0">
+              <li class="spectrum-Menu-item spectrum-Menu-item--collapsible spectrum-Menu-item--collapsible-withWorkflowIcon" role="menuitem" tabindex="0">
                 <svg class="spectrum-Icon spectrum-Icon--sizeL spectrum-UIIcon-ChevronRight200 spectrum-Menu-chevron spectrum-Menu-chevron--withAdjacentIcon spectrum-Menu-itemIcon" focusable="false" aria-hidden="true" aria-label="Next">
                   <use xlink:href="#spectrum-css-icon-Chevron200" />
                 </svg>
@@ -881,7 +881,7 @@ examples:
           <h4 class="spectrum-Heading spectrum-Heading--sizeXS spectrum-Examples-itemHeading">XL</h4>
           <div class="spectrum-Examples-itemGroup">
             <ul class="spectrum-Menu spectrum-Menu--sizeXL" role="menu">
-              <li class="spectrum-Menu-item spectrum-Menu-item--collapsible is-open" role="menuitem" tabindex="0">
+              <li class="spectrum-Menu-item spectrum-Menu-item--collapsible spectrum-Menu-item--collapsible-withWorkflowIcon is-open" role="menuitem" tabindex="0">
                 <svg class="spectrum-Icon spectrum-Icon--sizeXL spectrum-UIIcon-Chevron300 spectrum-Menu-chevron spectrum-Menu-chevron--withAdjacentIcon spectrum-Menu-itemIcon" focusable="false" aria-hidden="true" aria-label="Next">
                   <use xlink:href="#spectrum-css-icon-Chevron300" />
                 </svg>
@@ -925,7 +925,7 @@ examples:
                   </li>
                 </ul>
               </li>
-              <li class="spectrum-Menu-item spectrum-Menu-item--collapsible" role="menuitem" tabindex="0">
+              <li class="spectrum-Menu-item spectrum-Menu-item--collapsible spectrum-Menu-item--collapsible-withWorkflowIcon" role="menuitem" tabindex="0">
                 <svg class="spectrum-Icon spectrum-Icon--sizeXL spectrum-UIIcon-Chevron300 spectrum-Menu-chevron spectrum-Menu-chevron--withAdjacentIcon spectrum-Menu-itemIcon" focusable="false" aria-hidden="true" aria-label="Next">
                   <use xlink:href="#spectrum-css-icon-Chevron300" />
                 </svg>
@@ -948,7 +948,7 @@ examples:
                   </li>
                 </ul>
               </li>
-              <li class="spectrum-Menu-item spectrum-Menu-item--collapsible" role="menuitem" tabindex="0">
+              <li class="spectrum-Menu-item spectrum-Menu-item--collapsible spectrum-Menu-item--collapsible-withWorkflowIcon" role="menuitem" tabindex="0">
                 <svg class="spectrum-Icon spectrum-Icon--sizeXL spectrum-UIIcon-Chevron300 spectrum-Menu-chevron spectrum-Menu-chevron--withAdjacentIcon spectrum-Menu-itemIcon" focusable="false" aria-hidden="true" aria-label="Next">
                   <use xlink:href="#spectrum-css-icon-Chevron300" />
                 </svg>
@@ -971,7 +971,7 @@ examples:
                   </li>
                 </ul>
               </li>
-              <li class="spectrum-Menu-item spectrum-Menu-item--collapsible" role="menuitem" tabindex="0">
+              <li class="spectrum-Menu-item spectrum-Menu-item--collapsible spectrum-Menu-item--collapsible-withWorkflowIcon" role="menuitem" tabindex="0">
                 <svg class="spectrum-Icon spectrum-Icon--sizeXL spectrum-UIIcon-Chevron300 spectrum-Menu-chevron spectrum-Menu-chevron--withAdjacentIcon spectrum-Menu-itemIcon" focusable="false" aria-hidden="true" aria-label="Next">
                   <use xlink:href="#spectrum-css-icon-Chevron300" />
                 </svg>
