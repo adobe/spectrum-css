@@ -157,7 +157,7 @@ governing permissions and limitations under the License.
   left: 50%;
   transform: translateX(-50%);
 
-  background-color: var(--mod-tooltip-background-color-default, var(--spectrum-tooltip-background-color-default));
+  background-color: var(--highcontrast-tooltip-background-color-default, var(--mod-tooltip-background-color-default, var(--spectrum-tooltip-background-color-default)));
 
   /* clip path has -5% to avoid hairline gap */
   clip-path: polygon(0 -5%, 50% 100%, 100% -5%);
