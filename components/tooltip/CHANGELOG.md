@@ -3,6 +3,23 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+<a name="4.0.0"></a>
+# 4.0.0
+🗓 2022-12-06 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/tooltip@3.1.20...@spectrum-css/tooltip@4.0.0)
+
+* feat(tooltip)!: migrate to core tokens ([2087a67](https://github.com/adobe/spectrum-css/commit/2087a67))
+
+
+### 🛑 BREAKING CHANGES
+
+* - Migrates Tooltip to core tokens
+
+Co-authored-by: Patrick Fulton <pfulton@adobe.com>
+
+
+
+
+
 <a name="3.1.20"></a>
 ## 3.1.20
 🗓 2022-11-11 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/tooltip@3.1.19...@spectrum-css/tooltip@3.1.20)
