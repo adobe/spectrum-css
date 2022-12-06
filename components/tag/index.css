@@ -191,6 +191,7 @@ governing permissions and limitations under the License.
   block-size: var(--mod-tag-height, var(--spectrum-tag-height));
   position: relative;
   display: inline-flex;
+  align-items: center;
   box-sizing: border-box;
   vertical-align: bottom;
   max-inline-size: 100%;
@@ -214,15 +215,6 @@ governing permissions and limitations under the License.
     margin-inline-end: var(--mod-tag-icon-spacing-inline-end, var(--spectrum-tag-icon-spacing-inline-end));
   }
 
-  /* magnify icon for web components */
-  .spectrum-Icon {
-    margin-block-start: calc(var(--mod-tag-icon-spacing-block-start, var(--spectrum-tag-icon-spacing-block-start))
-                            - var(--mod-tag-border-width, var(--spectrum-tag-border-width)));
-    margin-block-end: calc(var(--mod-tag-icon-spacing-block-end, var(--spectrum-tag-icon-spacing-block-end))
-                            - var(--mod-tag-border-width, var(--spectrum-tag-border-width)));
-    margin-inline-end: var(--mod-tag-icon-spacing-inline-end, var(--spectrum-tag-icon-spacing-inline-end));
-  }
-
   .spectrum-Avatar {
     margin-block-start: calc(var(--mod-tag-avatar-spacing-block-start, var(--spectrum-tag-avatar-spacing-block-start))
                             - var(--mod-tag-border-width, var(--spectrum-tag-border-width)));
@@ -232,45 +224,56 @@ governing permissions and limitations under the License.
   }
 
   /* clear button */
-  .spectrum-ClearButton,
   .spectrum-Tag-clearButton {
-    padding: 0;
-    margin: 0;
-    margin-block-start: calc(var(--mod-tag-clear-button-spacing-block, var(--spectrum-tag-clear-button-spacing-block))
+    box-sizing: border-box;
+
+    padding-block-start: calc(var(--mod-tag-clear-button-spacing-block, var(--spectrum-tag-clear-button-spacing-block))
                             - var(--mod-tag-border-width, var(--spectrum-tag-border-width)));
-    margin-block-end: calc(var(--mod-tag-clear-button-spacing-block, var(--spectrum-tag-clear-button-spacing-block))
+    padding-block-end: calc(var(--mod-tag-clear-button-spacing-block, var(--spectrum-tag-clear-button-spacing-block))
                           - var(--mod-tag-border-width, var(--spectrum-tag-border-width)));
 
     /* move button negative calc to cancel label end margin, then add button start margin */
     margin-inline-start: calc(var(--mod-tag-clear-button-spacing-inline-start, var(--spectrum-tag-clear-button-spacing-inline-start))
                               + (var(--mod-tag-label-spacing-inline-end, var(--spectrum-tag-label-spacing-inline-end)) * -1));
 
-    /* end spacing is themef-specific */
+    /* end spacing is theme-specific */
     margin-inline-end: calc(var(--mod-tag-clear-button-spacing-inline-end, var(--spectrum-tag-clear-button-spacing-inline-end))
                             - var(--mod-tag-border-width, var(--spectrum-tag-border-width)));
 
     /* ensure clear button is correct color */
     color: currentcolor;
 
-    /* neutralize excess space around clear button */
-    .spectrum-Icon {
-      padding: 0;
-      margin: 0;
-      margin-block: 0;
-      margin-inline: 0;
-    }
-
     /* width of fill neutralized to ensure correct inline spacing within tag */
-    --spectrum-clearbutton-fill-size: auto;
+    --spectrum-clearbutton-fill-size: fit-content;
     --spectrum-clearbutton-fill-background-color: transparent;
 
     .spectrum-ClearButton-fill {
-      background-color: var(--spectrum-clearbutton-fill-background-color);
+      background-color: var(--mod-clearbutton-fill-background-color, var(--spectrum-clearbutton-fill-background-color));
 
-      inline-size: var(--spectrum-clearbutton-fill-size);
-      block-size: var(--spectrum-clearbutton-fill-size);
+      inline-size: var(--mod-clearbutton-fill-size, var(--spectrum-clearbutton-fill-size));
+      block-size: var(--mod-clearbutton-fill-size, var(--spectrum-clearbutton-fill-size));
     }
+  }
 
+  .spectrum-Tags-itemLabel {
+    block-size: 100%;
+    box-sizing: border-box;
+    line-height: var(--mod-tag-label-line-height, var(--spectrum-tag-label-line-height));
+    font-weight: var(--mod-tag-label-font-weight), var(--spectrum-tag-label-font-weight));
+
+    flex: 1 1 auto;
+    font-size: var(--mod-tag-font-size, var(--spectrum-tag-font-size));
+    cursor: default;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+
+    padding-block-start: calc(var(--mod-tag-label-spacing-block, var(--spectrum-tag-label-spacing-block))
+                            - var(--mod-tag-border-width, var(--spectrum-tag-border-width)));
+
+    /* space from label text to end edge */
+    margin-inline-end: calc(var(--mod-tag-label-spacing-inline-end, var(--spectrum-tag-label-spacing-inline-end))
+                            - var(--mod-tag-border-width, var(--spectrum-tag-border-width)));
   }
 
   &:hover {
@@ -326,25 +329,7 @@ governing permissions and limitations under the License.
   }
 }
 
-.spectrum-Tags-itemLabel {
-  block-size: 100%;
-  line-height: var(--mod-tag-label-line-height, var(--spectrum-tag-label-line-height));
-  font-weight: var(--spectrum-tag-label-font-weight);
 
-  flex: 1 1 auto;
-  font-size: var(--mod-tag-font-size, var(--spectrum-tag-font-size));
-  cursor: default;
-  overflow: hidden;
-  white-space: nowrap;
-  text-overflow: ellipsis;
-
-  margin-block-start: calc(var(--mod-tag-label-spacing-block, var(--spectrum-tag-label-spacing-block))
-                          - var(--mod-tag-border-width, var(--spectrum-tag-border-width)));
-
-  /* space from label text to end edge */
-  margin-inline-end: calc(var(--mod-tag-label-spacing-inline-end, var(--spectrum-tag-label-spacing-inline-end))
-                          - var(--mod-tag-border-width, var(--spectrum-tag-border-width)));
-}
 
 /* selected */
 .spectrum-Tag.is-selected {
