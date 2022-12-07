@@ -259,7 +259,7 @@ governing permissions and limitations under the License.
     block-size: 100%;
     box-sizing: border-box;
     line-height: var(--mod-tag-label-line-height, var(--spectrum-tag-label-line-height));
-    font-weight: var(--mod-tag-label-font-weight), var(--spectrum-tag-label-font-weight));
+    font-weight: var(--mod-tag-label-font-weight, var(--spectrum-tag-label-font-weight));
 
     flex: 1 1 auto;
     font-size: var(--mod-tag-font-size, var(--spectrum-tag-font-size));
