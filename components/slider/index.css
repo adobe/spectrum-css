@@ -84,6 +84,8 @@ governing permissions and limitations under the License.
 
 
   /* colors */
+  --spectrum-slider-track-fill-color: var(--highcontrast-slider-track-fill-color, var(--mod-slider-track-fill-color, var(--spectrum-slider-track-fill-color)));
+
   --spectrum-slider-track-color-disabled: var(--highcontrast-disabled-background-color, var(--mod-disabled-background-color, var(--spectrum-disabled-background-color)));
   --spectrum-slider-track-fill-color-disabled: var(--highcontrast-disabled-background-color, var(--mod-disabled-background-color, var(--spectrum-disabled-background-color)));
   --spectrum-slider-handle-border-color-disabled: var(--highcontrast-disabled-border-color, var(--mod-disabled-border-color, var(--spectrum-disabled-border-color)));
@@ -295,7 +297,9 @@ governing permissions and limitations under the License.
 
 
   margin-block: calc(var(--mod-slider-bottom-to-handle, var(--spectrum-slider-bottom-to-handle)) * -1 + var(--mod-slider-margin-top-offset, var(--spectrum-slider-margin-top-offset))) 0;
-  margin-inline: calc(var(--mod-slider-handle-size, var(--spectrum-slider-handle-size)) / -2 - var(--mod-slider-tick-mark-width, var(--spectrum-slider-tick-mark-width)) / 2) 0;
+
+
+  margin-inline: calc(var(--mod-slider-handle-size, var(--spectrum-slider-handle-size)) / -2) 0;
   border-width: var(--mod-border-width-200, var(--spectrum-border-width-200));
   border-style: solid;
 
@@ -521,6 +525,10 @@ governing permissions and limitations under the License.
   .spectrum-Slider-track:first-child {
     &::before {
       background: var(--highcontrast-slider-track-fill-color, var(--mod-slider-track-fill-color, var(--spectrum-slider-track-fill-color)));
+      @media (forced-colors: active) {
+        forced-color-adjust: none;
+        background: ButtonText;
+      }
     }
   }
 }
@@ -528,6 +536,11 @@ governing permissions and limitations under the License.
 .spectrum-Slider-fill {
   &::before {
     background: var(--highcontrast-slider-track-fill-color, var(--mod-slider-track-fill-color, var(--spectrum-slider-track-fill-color)));
+
+    @media (forced-colors: active) {
+      forced-color-adjust: none;
+      background: ButtonText;
+    }
   }
 }
 
@@ -563,11 +576,16 @@ governing permissions and limitations under the License.
 .spectrum-Slider--ramp {
   .spectrum-Slider-handle {
     box-shadow: 0 0 0 var(--spectrum-slider-handle-gap) var(--highcontrast-slider-ramp-handle-border-color-active, var(--mod-slider-ramp-handle-border-color-active, var(--spectrum-slider-ramp-handle-border-color-active)));
+
+    @media (forced-colors: active) {
+      background: ButtonFace;
+    }
   }
 }
 
 .spectrum-Slider-input {
   background: transparent;
+  
 }
 
 .spectrum-Slider-tick {
@@ -618,6 +636,7 @@ governing permissions and limitations under the License.
       }
     }
 
+
     &.spectrum-Slider--filled {
       .spectrum-Slider-track:first-child {
         &::before {
@@ -665,8 +684,19 @@ governing permissions and limitations under the License.
       }
     }
 
-    --spectrum-slider-track-color: ButtonText;
-    --spectrum-slider-track-fill-color: ButtonText;
+    .spectrum-Slider-track {
+      &:before {
+        forced-color-adjust: none;
+        background-color: ButtonText;
+      }
+    }
+
+    --spectrum-slider-track-color: GrayText;
+    --spectrum-slider-track-fill-color: GrayText;
+
+    --spectrum-slider-track-color-disabled: GrayText;
+    --spectrum-slider-track-fill-color-disabled: GrayText;
+
     --spectrum-slider-ramp-track-color: ButtonText;
     --spectrum-slider-ramp-track-color-disabled: GrayText;
 
@@ -683,8 +713,6 @@ governing permissions and limitations under the License.
     --spectrum-slider-handle-border-color-key-focus: Highlight;
     --spectrum-slider-handle-focus-ring-color-key-focus: Highlight;
 
-    --spectrum-slider-track-color-disabled: GrayText;
-    --spectrum-slider-track-fill-color-disabled: GrayText;
 
     --spectrum-slider-handle-border-color-disabled: GrayText;
 
