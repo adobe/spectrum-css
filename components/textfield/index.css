@@ -13,6 +13,7 @@ governing permissions and limitations under the License.
 .spectrum-Textfield {
   --spectrum-texfield-animation-duration: var(--spectrum-animation-duration-100);
 
+  --spectrum-textfield-width: 240px; /* override per api */
   --spectrum-textfield-min-width: var(--spectrum-text-field-minimum-width-multiplier);
   --spectrum-textfield-corner-radius: var(--spectrum-corner-radius-100);
 
@@ -362,6 +363,9 @@ governing permissions and limitations under the License.
   grid-column: 1 / span 3;
   box-sizing: border-box;
   position: relative;
+
+  /* prevent input from expanding to width of helptext */
+  inline-size: var(--mod-textfield-width, var(--spectrum-textfield-width));
 
   /*** Focus Indicator - Unfocused Base Styles ***/
   &::after {

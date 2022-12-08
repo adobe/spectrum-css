@@ -13,7 +13,7 @@ sections:
       As of token migration, textfield must always have a label. Label placement is top or on the side (start).
 
       ### Character Count
-      As of token migration, textfield now has an optional character count. The character count moves to the side (end) when the label position is on the side.
+      As of token migration, textfield now has an optional character count. The character count moves to the side (end) when the label position is on the side (start). This count needs to be read by a screen reader but we cannot just use a live region as that will result in an overly verbose experience Adjust the markup of the character count for optimal accessibility for each API.
 
       ### Help Text
       As of token migration, Help text is optional and has only one position below the textfield input. Help text aligns with the input in both standard and side label layouts.
@@ -133,7 +133,7 @@ examples:
           <input id="textfield-helptext" type="text" placeholder="Enter Password" name="field" value="" class="spectrum-Textfield-input" pattern=".{8,}" aria-describedby="helptext-5 character-count-5">
         </div>
         <div class="spectrum-HelpText spectrum-HelpText--sizeM spectrum-HelpText--neutral">
-          <div class="spectrum-HelpText-text">Create a password with at least 8 characters. Create a password with at least 8 characters.Create a password with at least 8 characters.Create a password with at least 8 characters.</div>
+          <div class="spectrum-HelpText-text">Create a password with at least 8 characters.</div>
         </div>
       </div>
 
