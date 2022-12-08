@@ -260,6 +260,14 @@ governing permissions and limitations under the License.
   grid-template-rows: auto auto;
 }
 
+/* align search icon */
+.spectrum-Textfield-icon {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  margin: auto;
+}
+
 /********* Child Component - Label *********/
 .spectrum-FieldLabel {
   .spectrum-Textfield & {
