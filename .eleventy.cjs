@@ -26,7 +26,7 @@ module.exports = function (eleventyConfig) {
   eleventyConfig.addPassthroughCopy({ "site/resources/js": "js" })
   eleventyConfig.addPassthroughCopy({ "site/resources/css": "css" })
 
-  eleventyConfig.addPassthroughCopy("components")
+  
   let markdownIt = require("markdown-it")
   let markdownItAnchors = require("markdown-it-anchor")
   let options = {

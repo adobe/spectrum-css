@@ -1,0 +1,13 @@
+---
+layout: layout.njk
+---
+
+<div class="spectrum-Site">
+    {% include './header.njk' %}
+    <div class="spectrum-Site-content">
+        {% include "./partials/sidenav.njk" %}
+        <div class="spectrum-Site-mainContent">
+            {{ content | safe }}
+        </div>
+    </div>
+</div>

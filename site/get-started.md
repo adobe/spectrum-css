@@ -1,9 +1,8 @@
 ---
-layout: home.njk
+layout: root.njk
 title: Getting Started
 ---
 
-<div class="spectrum-Site-mainContent">
   <div class="spectrum-Site-mainContainer">
     <div class="spectrum-Site-page spectrum-Typography">
       <h1 class="spectrum-Heading spectrum-Heading--sizeXXL spectrum-Heading--serif">Get started with Spectrum CSS</h1>
@@ -119,4 +118,3 @@ $ npm install @spectrum-css/vars @spectrum-css/button @spectrum-css/page
       </section>
     </div>
   </div>
-</div>

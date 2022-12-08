@@ -3,16 +3,11 @@
     <head>
         <title>{{ title }} Spectrum CSS</title>
         {% include './partials/meta-info.njk' %}
+        {% block head %}{% endblock %}
     </head>
     <body>
-        <div class="spectrum-Site">
-            {% include './header.njk' %}
-            <div class="spectrum-Site-content">
-                {% include "./partials/sidenav.njk" %}
-                {% block content %}
-                    {{ content | safe }}
-                {% endblock %}
-            </div>
-        </div>
+        {% block content %}
+            {{ content | safe }}
+        {% endblock %}
     </body>
 </html>

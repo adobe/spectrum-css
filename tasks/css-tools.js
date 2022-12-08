@@ -41,6 +41,9 @@ export const processCSS = async (cssPath) => {
         .catch((error) => {
             console.error(error?.message || error);
         });
+        if(cssPath.includes('components/vars')) {
+            wrappedCSS += originCSS;
+        }
         wrappedCSS += processedCSS;
         fs.writeFileSync(cssPath, wrappedCSS);
 };
