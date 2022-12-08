@@ -559,8 +559,10 @@ governing permissions and limitations under the License.
 .spectrum-Slider--ramp {
   .spectrum-Slider-handle {
     box-shadow: 0 0 0 var(--spectrum-slider-handle-gap) var(--highcontrast-slider-ramp-handle-border-color-active, var(--mod-slider-ramp-handle-border-color-active, var(--spectrum-slider-ramp-handle-border-color-active)));
+
     @media (forced-colors: active) {
       background: ButtonFace;
+      background: red;
     }
   }
 }
@@ -572,6 +574,12 @@ governing permissions and limitations under the License.
 .spectrum-Slider-tick {
   &:after {
     background-color: var(--highcontrast-slider-tick-mark-color, var(--mod-slider-tick-mark-color, var(--spectrum-slider-tick-mark-color)));
+
+    @media (forced-colors: active) {
+      forced-color-adjust: none;
+      background: ButtonText;
+    }
+    
   }
 }
 
