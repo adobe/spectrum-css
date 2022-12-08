@@ -49,11 +49,11 @@ governing permissions and limitations under the License.
   --spectrum-textfield-icon-spacing-block-valid: var(--spectrum-field-top-to-validation-icon-medium);
 
   /* font styles */
-  --spectrum-textfield-font-family: var(--spectrum-font-family-default);
+  --spectrum-textfield-font-family: var(--spectrum-font-family-base); /* placeholder for --spectrum-font-family-default */
   --spectrum-textfield-font-weight: var(--spectrum-font-weight-regular);
 
   /* character count */
-  --spectrum-textfield-character-count-font-family: var(--spectrum-font-family-default);
+  --spectrum-textfield-character-count-font-family: var(--spectrum-font-family-base); /* placeholder for --spectrum-font-family-default */
   --spectrum-textfield-character-count-font-weight: var(--spectrum-font-weight-regular);
   --spectrum-textfield-character-count-font-size: var(--spectrum-font-size-75);
   --spectrum-textfield-character-count-spacing-inline: var(--spectrum-spacing-200);
