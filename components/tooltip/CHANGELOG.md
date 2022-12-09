@@ -3,6 +3,18 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+<a name="4.0.2"></a>
+## 4.0.2
+🗓 2022-12-09 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/tooltip@4.0.1...@spectrum-css/tooltip@4.0.2)
+
+### 🐛 Bug fixes
+
+* **tooltip:** update inline padding ([#1561](https://github.com/adobe/spectrum-css/issues/1561)) ([be8d1fb](https://github.com/adobe/spectrum-css/commit/be8d1fb))
+
+
+
+
+
 <a name="4.0.1"></a>
 ## 4.0.1
 🗓 2022-12-09 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/tooltip@4.0.0...@spectrum-css/tooltip@4.0.1)
