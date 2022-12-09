@@ -2,12 +2,19 @@
   "name": "spectrum-css-monorepo",
   "version": "0.0.0",
   "private": true,
+  "homepage": "https://opensource.adobe.com/spectrum-css/",
   "scripts": {
-    "build": "gulp -LL",
+    "build": "run-s build:site build:preview mv:preview",
+    "build:components": "gulp buildComponents -LLL ",
+    "build:site": "gulp -LL",
+    "build:preview": "yarn workspace @spectrum-css/preview build",
     "dev": "NODE_ENV=development BROWSERSYNC_OPEN=true gulp dev",
     "clean": "gulp clean",
-    "start": "npm run dev",
-    "ci-all": "npm run build",
+    "mv:preview": "mv tools/preview/storybook-static dist/preview",
+    "prestart": "[[ -z ${SKIP_BUILD} ]] && yarn build:components || exit 0",
+    "start": "NODE_ENV=development run-p watch start:preview",
+    "start:preview": "yarn workspace @spectrum-css/preview start",
+    "ci-all": "yarn build",
     "release": "npx lerna publish",
     "release:beta-from-package": "yarn run clean && yarn run build && npx lerna publish from-package --conventional-prerelease --preid beta --pre-dist-tag beta",
     "release:site": "gulp prepareSite && gh-pages -d dist-site/ -f -e .",
@@ -31,11 +38,13 @@
     "type": "git",
     "url": "https://github.com/adobe/spectrum-css.git"
   },
-  "author": "Larry Davis <lazdnet@gmail.com>",
+  "author": "Adobe",
   "contributors": [
+    "Larry Davis <lazdnet@gmail.com>",
     "Garth Braithwaite <garthdb@gmail.com> (https://garthdb.com)",
     "Patrick Fulton <pfulton@users.noreply.github.com>",
-    "Steve Gill <stevengill97@gmail.com>"
+    "Steve Gill <stevengill97@gmail.com>",
+    "Cassondra Roberts <castastrophe@users.noreply.github.com> (https://allons-y.llc)"
   ],
   "bugs": {
     "url": "https://github.com/adobe/spectrum-css/issues"
@@ -61,6 +70,7 @@
     "loadicons": "^1.0.0",
     "lunr": "^2.3.6",
     "markdown-it": "^12.3.2",
+    "npm-run-all": "^4.1.5",
     "prismjs": "^1.23.0",
     "semver": "^6.3.0",
     "through2": "^3.0.1",
