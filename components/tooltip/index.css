@@ -34,14 +34,14 @@ governing permissions and limitations under the License.
   --spectrum-tooltip-font-weight: var(--spectrum-font-weight-regular); /* TODO - check is still 400 */
 
   /* horizontal spacing */
-  --spectrum-tooltip-spacing-inline-start: var(--spectrum-component-edge-to-visual-75);
-  --spectrum-tooltip-spacing-inline-end: var(--spectrum-component-edge-to-text-75);
+  --spectrum-tooltip-spacing-inline: var(--spectrum-component-edge-to-text-75);
 
   /* vertical spacing */
   --spectrum-tooltip-spacing-block-start: var(--spectrum-component-top-to-text-75);
   --spectrum-tooltip-spacing-block-end: var(--spectrum-component-bottom-to-text-75);
 
   /* icon spacing */
+  --spectrum-tooltip-icon-spacing-inline-start: var(--spectrum-text-to-visual-75);
   --spectrum-tooltip-icon-spacing-inline-end: var(--spectrum-text-to-visual-75);
   --spectrum-tooltip-icon-spacing-block-start: var(--spectrum-component-top-to-workflow-icon-75);
 
@@ -91,8 +91,7 @@ governing permissions and limitations under the License.
   vertical-align: top;
 
   width: auto;
-  padding-inline-start: var(--mod-tooltip-spacing-inline-start, var(--spectrum-tooltip-spacing-inline-start));
-  padding-inline-end: var(--mod-tooltip-spacing-inline-end, var(--spectrum-tooltip-spacing-inline-end));
+  padding-inline: var(--mod-tooltip-spacing-inline, var(--spectrum-tooltip-spacing-inline));
 
   border-radius: var(--mod-tooltip-border-radius, var(--spectrum-tooltip-border-radius));
 
@@ -340,6 +339,9 @@ governing permissions and limitations under the License.
 
 /****** Icon ******/
 .spectrum-Tooltip-typeIcon {
+  /* subtract tooltip padding from icon start margin */
+  margin-inline-start: calc(var(--mod-tooltip-icon-spacing-inline-start, var(--spectrum-tooltip-icon-spacing-inline-start))
+                            - var(--mod-tooltip-spacing-inline, var(--spectrum-tooltip-spacing-inline)));
   margin-inline-end: var(--mod-tooltip-icon-spacing-inline-end, var(--spectrum-tooltip-icon-spacing-inline-end));
   margin-block-start: var(--mod-tooltip-icon-spacing-block-start, var(--spectrum-tooltip-icon-spacing-block-start));
   width: var(--mod-tooltip-icon-width, var(--spectrum-tooltip-icon-width));
