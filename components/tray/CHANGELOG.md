@@ -3,6 +3,25 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+<a name="2.0.0"></a>
+# 2.0.0
+🗓 2022-12-09 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/tray@1.0.31...@spectrum-css/tray@2.0.0)
+
+* feat(tray)!: migrate to core tokens (#1535) ([442c5f6](https://github.com/adobe/spectrum-css/commit/442c5f6)), closes [#1535](https://github.com/adobe/spectrum-css/issues/1535)
+
+
+### 🛑 BREAKING CHANGES
+
+* migrates the Tray to core tokens
+
+* removes the `375px` breakpoint, which was previously used to apply a `max-width` and border radius to the Tray, and instead this uses an orientation media query to apply these styles when viewport is in landscape orientation or when the width is greater than the height.
+
+Co-authored-by: Patrick Fulton <pfulton@adobe.com>
+
+
+
+
+
 <a name="1.0.31"></a>
 ## 1.0.31
 🗓 2022-11-11 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/tray@1.0.30...@spectrum-css/tray@1.0.31)
