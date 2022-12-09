@@ -230,6 +230,9 @@ governing permissions and limitations under the License.
   outline: none;
   margin: auto;
 
+  /* prevent input from expanding to width of helptext */
+  inline-size: var(--mod-textfield-width, var(--spectrum-textfield-width));
+
   /*** ↓ Browser Mitigations for Text Field ↓ ***/
   /* Edge - Use padding instead of text-indent because text-indent does not left align the text  */
   text-indent: 0;
@@ -371,9 +374,6 @@ governing permissions and limitations under the License.
   grid-column: 1 / span 3;
   box-sizing: border-box;
   position: relative;
-
-  /* prevent input from expanding to width of helptext */
-  inline-size: var(--mod-textfield-width, var(--spectrum-textfield-width));
 
   /*** Focus Indicator - Unfocused Base Styles ***/
   &::after {
