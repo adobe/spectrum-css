@@ -72,7 +72,8 @@ governing permissions and limitations under the License.
 
   --spectrum-slider-track-corner-radius: var(--mod-corner-radius-75, var(--spectrum-corner-radius-75));
   --spectrum-slider-label-margin-start: var(--mod-spacing-300, var(--spectrum-spacing-300));
-  --spectrum-slider-handle-border-width-down: var(--spectrum-slider-handle-border-width-down, var(--spectrum-slider-handle-border-width-down));
+  --spectrum-slider-handle-border-width-down: var(--mod-slider-handle-border-width-down, var(--spectrum-slider-handle-border-width-down));
+  --spectrum-slider-handle-border-width: var(--mod-border-width-200, var(--spectrum-border-width-200));
   --spectrum-slider-handle-margin-left: calc(var(--mod-slider-handle-size, var(--spectrum-slider-handle-size)) / -2);
   --spectrum-slider-controls-margin: calc(var(--mod-slider-handle-size, var(--spectrum-slider-handle-size)) / 2);
   --spectrum-slider-track-margin-offset: calc(var(--mod-slider-controls-margin, var(--spectrum-slider-controls-margin)) * -1);
@@ -283,7 +284,7 @@ governing permissions and limitations under the License.
 
   margin-block: calc(var(--mod-slider-bottom-to-handle, var(--spectrum-slider-bottom-to-handle)) * -1 + var(--mod-slider-margin-top-offset, var(--spectrum-slider-margin-top-offset))) 0;
   margin-inline: calc(var(--mod-slider-handle-size, var(--spectrum-slider-handle-size)) / -2) 0;
-  border-width: var(--mod-border-width-200, var(--spectrum-border-width-200));
+  border-width: var(--mod-slider-handle-border-width, var(--spectrum-slider-handle-border-width));
   border-style: solid;
 
   border-radius: var(--mod-slider-handle-border-radius, var(--spectrum-slider-handle-border-radius));
@@ -295,7 +296,7 @@ governing permissions and limitations under the License.
   &:active,
   &.is-focused,
   &.is-dragged {
-    border-width: var(--mod-slider-handle-border-width-down, var(--spectrum-slider-handle-border-width-down));
+    border-width: var(--mod-slider-handle-border-width, var(--spectrum-slider-handle-border-width));
   }
 
   &:active,
@@ -530,6 +531,11 @@ governing permissions and limitations under the License.
 .spectrum-Slider-ramp {
   path {
     fill: var(--highcontrast-slider-ramp-track-color, var(--mod-slider-ramp-track-color, var(--spectrum-slider-ramp-track-color)));
+
+    @media (forced-colors: active) {
+      forced-color-adjust: none;
+      fill: ButtonText;
+    }
   }
 }
 
@@ -558,11 +564,13 @@ governing permissions and limitations under the License.
 
 .spectrum-Slider--ramp {
   .spectrum-Slider-handle {
-    box-shadow: 0 0 0 var(--spectrum-slider-handle-gap) var(--highcontrast-slider-ramp-handle-border-color-active, var(--mod-slider-ramp-handle-border-color-active, var(--spectrum-slider-ramp-handle-border-color-active)));
-    box-shadow: 0 0 0 var(--spectrum-slider-handle-gap) var(--highcontrast-slider-ramp-handle-border-color-active var(--mod-ectrum-slider-ramp-handle-border-color-active var(--spectrum-slider-ramp-handle-border-color-active)));
+    box-shadow: 0 0 0 var(--spectrum-slider-handle-gap) var(--highcontrast-slider-ramp-handle-border-color-active, var(--mod-sectrum-slider-ramp-handle-border-color-active, var(--spectrum-slider-ramp-handle-border-color-active)));
 
     @media (forced-colors: active) {
-      background: ButtonFace;
+      forced-color-adjust: none;
+      box-shadow: 0 0 0 var(--spectrum-slider-handle-gap) ButtonFace;
+      border-color: ButtonText;
+      background-color: ButtonFace;
     }
   }
 }
@@ -640,8 +648,21 @@ governing permissions and limitations under the License.
     }
 
     .spectrum-Slider-ramp {
+      @media (forced-colors: active) {
+      & + .spectrum-Slider-handle {
+          forced-color-adjust: none;
+          fill: ButtonFace;
+          background-color: ButtonFace;
+        }
+      }
+
       path {
         fill: var(--highcontrast-slider-ramp-track-color-disabled, var(--mod-slider-ramp-track-color-disabled, var(--spectrum-slider-ramp-track-color-disabled)));
+
+        @media (forced-colors: active) {
+          forced-color-adjust: none;
+          fill: GrayText;
+        }
       }
     }
 
