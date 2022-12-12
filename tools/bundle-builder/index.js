@@ -99,6 +99,25 @@ let buildStandalone = gulp.series(
   )
 );
 
+
+// run buildLite on a selected set of packages that depend on commons
+// yay: faster than 'rebuild everything' approach
+// boo: must add new packages here as commons grows
+function buildDepenenciesOfCommons() {
+  const dependentComponents = [
+    `${dirs.components}/actionbutton`,
+    `${dirs.components}/button`,
+    `${dirs.components}/clearbutton`,
+    `${dirs.components}/closebutton`,
+    `${dirs.components}/infieldbutton`,
+    `${dirs.components}/logicbutton`,
+    `${dirs.components}/picker`,
+    `${dirs.components}/pickerbutton`
+  ];
+  return subrunner.runTaskOnPackages('buildLite', dependentComponents)
+}
+
+
 function copyPackages() {
   return gulp.src([
     `${dirs.components}/*/package.json`,
@@ -222,6 +241,8 @@ exports.buildCombined = buildCombined;
 exports.buildStandalone = buildStandalone;
 exports.buildLite = buildLite;
 exports.buildDocs = docs.buildDocs;
+exports.buildDepenenciesOfCommons = buildDepenenciesOfCommons;
+exports.copyPackages = copyPackages;
 exports.dev = devTask;
 exports.clean = clean;
 exports.build = build;

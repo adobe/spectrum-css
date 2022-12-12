@@ -3,6 +3,117 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+<a name="3.0.3"></a>
+## 3.0.3
+🗓 2022-12-09 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/actionbutton@3.0.2...@spectrum-css/actionbutton@3.0.3)
+
+**Note:** Version bump only for package @spectrum-css/actionbutton
+
+
+
+
+
+<a name="3.0.2"></a>
+## 3.0.2
+🗓 2022-11-29 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/actionbutton@3.0.1...@spectrum-css/actionbutton@3.0.2)
+
+**Note:** Version bump only for package @spectrum-css/actionbutton
+
+
+
+
+
+<a name="3.0.1"></a>
+## 3.0.1
+🗓 2022-11-11 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/actionbutton@3.0.0...@spectrum-css/actionbutton@3.0.1)
+
+**Note:** Version bump only for package @spectrum-css/actionbutton
+
+
+
+
+
+<a name="3.0.0"></a>
+# 3.0.0
+🗓 2022-10-13 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/actionbutton@2.1.8...@spectrum-css/actionbutton@3.0.0)
+
+* refactor(actionbutton)!: remap core token aliases & rename aliases ([5966f9b](https://github.com/adobe/spectrum-css/commit/5966f9b))
+
+
+### 🛑 BREAKING CHANGES
+
+* remaps existing aliases to new/renamed core token values
+
+* `--spectrum-focus-ring-thickness` renamed to `--spectrum-focus-indicator-thickness`
+* `--spectrum-focus-ring-gap` renamed to `--spectrum-focus-indicator-gap`
+* `--spectrum-focus-ring-color` renamed to `--spectrum-focus-indicator-color`
+* `--spectrum-static-white-focus-ring-color` renamed to `--spectrum-static-white-focus-indicator-color`
+* `--spectrum-static-black-focus-ring-color` renamed to `--spectrum-static-black-focus-indicator-color`
+
+
+
+
+
+<a name="2.1.8"></a>
+## 2.1.8
+🗓 2022-09-16 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/actionbutton@2.1.7...@spectrum-css/actionbutton@2.1.8)
+
+**Note:** Version bump only for package @spectrum-css/actionbutton
+
+
+
+
+
+<a name="2.1.7"></a>
+## 2.1.7
+🗓 2022-09-13 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/actionbutton@2.1.6...@spectrum-css/actionbutton@2.1.7)
+
+**Note:** Version bump only for package @spectrum-css/actionbutton
+
+
+
+
+
+<a name="2.1.6"></a>
+## 2.1.6
+🗓 2022-09-13 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/actionbutton@2.1.5...@spectrum-css/actionbutton@2.1.6)
+
+**Note:** Version bump only for package @spectrum-css/actionbutton
+
+
+
+
+
+<a name="2.1.5"></a>
+## 2.1.5
+🗓 2022-09-12 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/actionbutton@2.1.4...@spectrum-css/actionbutton@2.1.5)
+
+**Note:** Version bump only for package @spectrum-css/actionbutton
+
+
+
+
+
+<a name="2.1.4"></a>
+## 2.1.4
+🗓 2022-08-26 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/actionbutton@2.1.3...@spectrum-css/actionbutton@2.1.4)
+
+**Note:** Version bump only for package @spectrum-css/actionbutton
+
+
+
+
+
+<a name="2.1.3"></a>
+## 2.1.3
+🗓 2022-08-17 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/actionbutton@2.1.2...@spectrum-css/actionbutton@2.1.3)
+
+**Note:** Version bump only for package @spectrum-css/actionbutton
+
+
+
+
+
 <a name="2.1.2"></a>
 ## 2.1.2
 🗓 2022-08-16 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/actionbutton@2.1.1...@spectrum-css/actionbutton@2.1.2)

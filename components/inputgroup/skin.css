@@ -25,6 +25,18 @@ governing permissions and limitations under the License.
     &:disabled:hover {
       border-color: var(--spectrum-textfield-m-quiet-texticon-border-color-disabled);
     }
+
+    &:disabled:not(.is-open) {
+      .spectrum-PickerButton-fill {
+        border-color: transparent;
+      }
+    }
+
+    &:not(:disabled):not(.is-open) {
+      .spectrum-PickerButton-fill {
+        background-color: transparent;
+      }
+    }
   }
 
   &:hover:not(.is-focused):not(.is-keyboardFocused):not(.is-disabled) {

@@ -3,6 +3,25 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+<a name="3.4.0"></a>
+# 3.4.0
+🗓 2022-09-12 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/bundle-builder@3.3.1...@spectrum-css/bundle-builder@3.4.0)
+
+### ✨ Features
+
+* adding port customiztion  and re-launch for watch ([5c7aeef](https://github.com/adobe/spectrum-css/commit/5c7aeef))
+* watch covers components/commons ([5d1b682](https://github.com/adobe/spectrum-css/commit/5d1b682))
+
+
+### 🐛 Bug fixes
+
+* dev hanging on yaml error and dev opening browser tabs ([fbfc622](https://github.com/adobe/spectrum-css/commit/fbfc622))
+* made browser open message more perfect ([dad62eb](https://github.com/adobe/spectrum-css/commit/dad62eb))
+
+
+
+
+
 <a name="3.3.1"></a>
 ## 3.3.1
 🗓 2022-07-22 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/bundle-builder@3.3.0...@spectrum-css/bundle-builder@3.3.1)

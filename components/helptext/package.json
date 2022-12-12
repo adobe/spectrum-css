@@ -1,6 +1,6 @@
 {
   "name": "@spectrum-css/helptext",
-  "version": "2.0.3",
+  "version": "3.0.3",
   "description": "The Spectrum CSS helptext component",
   "license": "Apache-2.0",
   "main": "dist/index-vars.css",
@@ -17,14 +17,12 @@
   },
   "peerDependencies": {
     "@spectrum-css/icon": "^3.0.23",
-    "@spectrum-css/tokens": "^1.0.2",
-    "@spectrum-css/vars": "^8.0.0"
+    "@spectrum-css/tokens": "^6.0.0"
   },
   "devDependencies": {
-    "@spectrum-css/component-builder-simple": "^1.0.0-beta",
-    "@spectrum-css/icon": "^3.0.23",
-    "@spectrum-css/tokens": "^1.0.5",
-    "@spectrum-css/vars": "^8.0.0",
+    "@spectrum-css/component-builder-simple": "^2.0.0",
+    "@spectrum-css/icon": "^3.0.24",
+    "@spectrum-css/tokens": "^6.0.0",
     "gulp": "^4.0.0"
   },
   "publishConfig": {

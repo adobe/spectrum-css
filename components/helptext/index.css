@@ -22,8 +22,8 @@ governing permissions and limitations under the License.
   }
 
   &.spectrum-HelpText--negative {
-    --spectrum-helptext-content-color-default: var(--spectrum-negative-content-color);
-    --spectrum-helptext-icon-color-default: var(--spectrum-negative-content-color);
+    --spectrum-helptext-content-color-default: var(--spectrum-negative-color-900);
+    --spectrum-helptext-icon-color-default: var(--spectrum-negative-color-900);
   }
 
   &.is-disabled {
@@ -34,7 +34,7 @@ governing permissions and limitations under the License.
   &:lang(ja),
   &:lang(zh),
   &:lang(ko) {
-    --spectrum-helptext-cjk-line-height: var(--spectrum-CJK-line-height-100);
+    --spectrum-helptext-line-height-cjk: var(--spectrum-line-height-cjk-100);
   }
 }
 
@@ -121,7 +121,7 @@ governing permissions and limitations under the License.
   &:lang(zh),
   &:lang(ko) {
     .spectrum-HelpText-text {
-      line-height: var(--mod-helptext-cjk-line-height, var(--spectrum-helptext-cjk-line-height));
+      line-height: var(--mod-helptext-line-height-cjk, var(--spectrum-helptext-line-height-cjk));
     }
   }
 

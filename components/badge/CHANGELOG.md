@@ -3,6 +3,44 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+<a name="2.0.2"></a>
+## 2.0.2
+🗓 2022-12-09 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/badge@2.0.1...@spectrum-css/badge@2.0.2)
+
+**Note:** Version bump only for package @spectrum-css/badge
+
+
+
+
+
+<a name="2.0.1"></a>
+## 2.0.1
+🗓 2022-11-29 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/badge@2.0.0...@spectrum-css/badge@2.0.1)
+
+### 🐛 Bug fixes
+
+* resolve missing tokens errors due to name changes ([#1555](https://github.com/adobe/spectrum-css/issues/1555)) ([ddae027](https://github.com/adobe/spectrum-css/commit/ddae027))
+
+
+
+
+
+<a name="2.0.0"></a>
+# 2.0.0
+🗓 2022-10-25 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/badge@1.0.20...@spectrum-css/badge@2.0.0)
+
+* refactor(badge)!: migrate to core tokens (#1494) ([a1ef4a5](https://github.com/adobe/spectrum-css/commit/a1ef4a5)), closes [#1494](https://github.com/adobe/spectrum-css/issues/1494)
+
+
+### 🛑 BREAKING CHANGES
+
+* migrates badge to core tokens
+Co-authored-by: Patrick Fulton <pfulton@adobe.com>
+
+
+
+
+
 <a name="1.0.20"></a>
 ## 1.0.20
 🗓 2022-06-16 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/badge@1.0.19...@spectrum-css/badge@1.0.20)

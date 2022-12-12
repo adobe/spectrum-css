@@ -3,6 +3,65 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+<a name="4.0.2"></a>
+## 4.0.2
+🗓 2022-12-09 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/tooltip@4.0.1...@spectrum-css/tooltip@4.0.2)
+
+### 🐛 Bug fixes
+
+* **tooltip:** update inline padding ([#1561](https://github.com/adobe/spectrum-css/issues/1561)) ([be8d1fb](https://github.com/adobe/spectrum-css/commit/be8d1fb))
+
+
+
+
+
+<a name="4.0.1"></a>
+## 4.0.1
+🗓 2022-12-09 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/tooltip@4.0.0...@spectrum-css/tooltip@4.0.1)
+
+**Note:** Version bump only for package @spectrum-css/tooltip
+
+
+
+
+
+<a name="4.0.0"></a>
+# 4.0.0
+🗓 2022-12-06 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/tooltip@3.1.20...@spectrum-css/tooltip@4.0.0)
+
+* feat(tooltip)!: migrate to core tokens ([2087a67](https://github.com/adobe/spectrum-css/commit/2087a67))
+
+
+### 🛑 BREAKING CHANGES
+
+* - Migrates Tooltip to core tokens
+
+Co-authored-by: Patrick Fulton <pfulton@adobe.com>
+
+
+
+
+
+<a name="3.1.20"></a>
+## 3.1.20
+🗓 2022-11-11 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/tooltip@3.1.19...@spectrum-css/tooltip@3.1.20)
+
+**Note:** Version bump only for package @spectrum-css/tooltip
+
+
+
+
+
+<a name="3.1.19"></a>
+## 3.1.19
+🗓 2022-11-10 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/tooltip@3.1.18...@spectrum-css/tooltip@3.1.19)
+
+**Note:** Version bump only for package @spectrum-css/tooltip
+
+
+
+
+
 <a name="3.1.18"></a>
 ## 3.1.18
 🗓 2022-06-16 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/tooltip@3.1.17...@spectrum-css/tooltip@3.1.18)

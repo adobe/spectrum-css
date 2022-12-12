@@ -3,6 +3,73 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+<a name="5.0.5"></a>
+## 5.0.5
+🗓 2022-12-09 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/inlinealert@5.0.4...@spectrum-css/inlinealert@5.0.5)
+
+**Note:** Version bump only for package @spectrum-css/inlinealert
+
+
+
+
+
+<a name="5.0.4"></a>
+## 5.0.4
+🗓 2022-11-29 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/inlinealert@5.0.3...@spectrum-css/inlinealert@5.0.4)
+
+**Note:** Version bump only for package @spectrum-css/inlinealert
+
+
+
+
+
+<a name="5.0.3"></a>
+## 5.0.3
+🗓 2022-11-11 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/inlinealert@5.0.2...@spectrum-css/inlinealert@5.0.3)
+
+**Note:** Version bump only for package @spectrum-css/inlinealert
+
+
+
+
+
+<a name="5.0.2"></a>
+## 5.0.2
+🗓 2022-11-10 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/inlinealert@5.0.1...@spectrum-css/inlinealert@5.0.2)
+
+**Note:** Version bump only for package @spectrum-css/inlinealert
+
+
+
+
+
+<a name="5.0.1"></a>
+## 5.0.1
+🗓 2022-10-13 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/inlinealert@5.0.0...@spectrum-css/inlinealert@5.0.1)
+
+**Note:** Version bump only for package @spectrum-css/inlinealert
+
+
+
+
+
+<a name="5.0.0"></a>
+# 5.0.0
+🗓 2022-10-12 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/inlinealert@4.0.13...@spectrum-css/inlinealert@5.0.0)
+
+* refactor(inlinealert)!: migrate to core tokens (#1519) ([a4d72ad](https://github.com/adobe/spectrum-css/commit/a4d72ad)), closes [#1519](https://github.com/adobe/spectrum-css/issues/1519)
+
+
+### 🛑 BREAKING CHANGES
+
+* migrates InlineAlert to core tokens
+
+Co-authored-by: Patrick Fulton <pfulton@adobe.com>
+
+
+
+
+
 <a name="4.0.13"></a>
 ## 4.0.13
 🗓 2022-06-16 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/inlinealert@4.0.12...@spectrum-css/inlinealert@4.0.13)

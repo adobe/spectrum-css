@@ -1,6 +1,6 @@
 {
   "name": "@spectrum-css/component-builder",
-  "version": "3.2.0",
+  "version": "3.2.1",
   "description": "The Spectrum CSS component builder",
   "repository": {
     "type": "git",
@@ -35,6 +35,7 @@
     "postcss-dir-pseudo-class": "^5.0.0",
     "postcss-discard-empty": "^4.0.1",
     "postcss-dropdupedvars": "^1.1.2",
+    "postcss-droproot": "^1.0.3",
     "postcss-dropunusedvars": "^1.2.1",
     "postcss-focus-ring": "^1.0.0",
     "postcss-functions": "^3.0.0",

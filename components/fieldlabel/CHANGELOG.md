@@ -3,6 +3,86 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+<a name="5.0.6"></a>
+## 5.0.6
+🗓 2022-12-09 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/fieldlabel@5.0.5...@spectrum-css/fieldlabel@5.0.6)
+
+**Note:** Version bump only for package @spectrum-css/fieldlabel
+
+
+
+
+
+<a name="5.0.5"></a>
+## 5.0.5
+🗓 2022-11-29 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/fieldlabel@5.0.4...@spectrum-css/fieldlabel@5.0.5)
+
+### 🐛 Bug fixes
+
+* resolve missing tokens errors due to name changes ([#1555](https://github.com/adobe/spectrum-css/issues/1555)) ([ddae027](https://github.com/adobe/spectrum-css/commit/ddae027))
+
+
+
+
+
+<a name="5.0.4"></a>
+## 5.0.4
+🗓 2022-11-11 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/fieldlabel@5.0.3...@spectrum-css/fieldlabel@5.0.4)
+
+**Note:** Version bump only for package @spectrum-css/fieldlabel
+
+
+
+
+
+<a name="5.0.3"></a>
+## 5.0.3
+🗓 2022-11-10 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/fieldlabel@5.0.2...@spectrum-css/fieldlabel@5.0.3)
+
+**Note:** Version bump only for package @spectrum-css/fieldlabel
+
+
+
+
+
+<a name="5.0.2"></a>
+## 5.0.2
+🗓 2022-10-17 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/fieldlabel@5.0.1...@spectrum-css/fieldlabel@5.0.2)
+
+**Note:** Version bump only for package @spectrum-css/fieldlabel
+
+
+
+
+
+<a name="5.0.1"></a>
+## 5.0.1
+🗓 2022-10-13 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/fieldlabel@5.0.0...@spectrum-css/fieldlabel@5.0.1)
+
+**Note:** Version bump only for package @spectrum-css/fieldlabel
+
+
+
+
+
+<a name="5.0.0"></a>
+# 5.0.0
+🗓 2022-10-11 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/fieldlabel@4.0.29...@spectrum-css/fieldlabel@5.0.0)
+
+* feat(fieldlabel)!: migrate to core tokens (CSS-102) (#1476) ([45802a6](https://github.com/adobe/spectrum-css/commit/45802a6)), closes [#1476](https://github.com/adobe/spectrum-css/issues/1476)
+
+
+### 🛑 BREAKING CHANGES
+
+* migrates FieldLabel to core tokens
+
+Co-authored-by: Monet Fort <lunarfusion@users.noreply.github.com>
+Co-authored-by: Patrick Fulton <pfulton@users.noreply.github.com>
+
+
+
+
+
 <a name="4.0.29"></a>
 ## 4.0.29
 🗓 2022-07-25 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/fieldlabel@4.0.28...@spectrum-css/fieldlabel@4.0.29)
