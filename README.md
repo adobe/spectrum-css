@@ -11,19 +11,21 @@ Spectrum CSS provides a standard CSS implementation of the Spectrum design langu
 
 ## Show me a demo
 
-Check out [the documentation site](http://opensource.adobe.com/spectrum-css/) for a demo of every component included in Spectrum CSS.
+Check out the [component viewer](http://opensource.adobe.com/spectrum-css/preview) for a demo of every component included in Spectrum CSS or spin it up locally with: `yarn start`. This preview is driven by [Storybook](https://storybook.js.org/docs/web-components/get-started/introduction), a development tool that enables rapid prototyping and test suite integration.
+
+Alternatively, you can preview the [documentation site](http://opensource.adobe.com/spectrum-css/) or spin up the site locally with: `yarn dev`.
 
 ## Where is the JavaScript?
 
 Spectrum CSS is CSS-only, implementing only the interactivity that can be done with pure CSS. Thus, Spectrum CSS should only be used by implementations of Spectrum, or very simple applications that only need things like typography, checkboxes, text fields, etc.
 
-Adobe maintains separate JavaScript libraries written with React, Angular, and web components that use Spectrum CSS to create fully interactive Spectrum components. These libraries will be open sourced soon.
+Adobe maintains separate JavaScript libraries written with [web components](https://opensource.adobe.com/spectrum-web-components/) and [React](https://react-spectrum.adobe.com/react-spectrum/index.html) that use Spectrum CSS to create fully interactive Spectrum components.
 
 ## Using Spectrum CSS
 
-The preferred method of using Spectrum CSS relies on custom properties to swap out variables for different themes and colorstops. This has the lowest bundle size and the simplest usage, but is incompatible with < IE 11
+The preferred method of using Spectrum CSS relies on custom properties to swap out variables for different themes and colorstops. This has the lowest bundle size and the simplest usage, but is incompatible with < IE 11.
 
-To use Spectrum CSS with IE 11 or without, see the [legacy usage documentation](README-legacy.md).
+To use Spectrum CSS with IE 11, see the [legacy usage documentation](README-legacy.md).
 
 ### Installing components
 
@@ -41,11 +43,7 @@ If you are an existing user of Spectrum CSS and rely on the previous bundle pack
 
 ### Using components
 
-Spectrum CSS components have build output that uses CSS custom properties to change themes and scales. This has the lowest bundle size and the simplest usage, but is incompatible with IE 11.
-
-To use Spectrum CSS with IE 11, see the [legacy usage documentation](README-legacy.md).
-
-If you're targeting modern browsers, start by including the base set of variables:
+Spectrum CSS components have build output that uses CSS custom properties to change themes and scales. Start by including the base set of variables:
 
 ```html
 <!-- Include global variables first -->
@@ -70,7 +68,7 @@ If you're targeting modern browsers, start by including the base set of variable
 <link rel="stylesheet" href="node_modules/@spectrum-css/button/dist/index-vars.css">
 ```
 
-Then, make sure you've included the relevant classes to choose which scale and colorstop you want:
+Make sure you've included the relevant classes to choose which scale and colorstop you want:
 ```html
 <html class="spectrum spectrum--medium spectrum--light">
 ```
@@ -90,9 +88,9 @@ To switch to Express, load vars from `@spectrum-css/expressvars` instead of `@sp
 </head>
 ```
 
-Then you can use components by copy/pasting their code from [the documentation](http://opensource.adobe.com/spectrum-css/).
+Components can then be added by leveraging the code from [the documentation](http://opensource.adobe.com/spectrum-css/).
 
-With the magic of CSS custom properties, you can infinitely nest different color stops and themes, [as illustrated here](https://codepen.io/lazd/pen/axXMRL).
+Because CSS custom properties honor the cascading nature of CSS, you can infinitely nest different colorstops and themes, [as illustrated here](https://codepen.io/lazd/pen/axXMRL).
 
 ### Modifying components
 
@@ -269,16 +267,18 @@ Run the following commands:
 ```
 yarn global add gulp-cli
 yarn install
-gulp dev
+yarn start
 ```
 
-Your `dist/` folder should now have a local copy of the Spectrum CSS docs and minimal CSS files, and your browser should be open with the project documentation. Editing any of the `.css` or `.yml` files in `components/*` will update the project documentation and live reload in your browser.
+Your `dist/` folder should now have a local copy of the Spectrum CSS docs and minimal CSS files, and your browser should be open with the project's preview site. Editing any of the `.css` or the `.stories.js` files in `components/*` will update the project documentation and live reload in your browser.
 
 **Important:** Ensure you have Node.js > 10.10 installed or the build system will not run. Node.js > 12.x is preferred.
 
+To spin up the local development environment ([Storybook](https://storybook.js.org/docs/web-components/get-started/introduction)) without first building the components, use: `SKIP_BUILD=true yarn start` as `yarn start` alone will start from a clean build.
+
 ### Documentation site
 
-#### Local development
+#### Local documentation site
 
 Building the project will build and launch the project documentation site in your browser automatically.
 

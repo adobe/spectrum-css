@@ -1,0 +1,25 @@
+.sidebar-header > div:has(img) {
+  margin-right: 8px;
+}
+
+.docblock-argstable-head {
+  display: none;
+}
+
+.docblock-argstable-body td>span:has(select),
+.docblock-argstable-body td textarea {
+  max-width: var(--spectrum-alias-single-line-width, var(--spectrum-global-dimension-size-2400)) !important;
+}
+
+input,
+textarea,
+select {
+  border-radius: 4px !important;
+}
+
+input:focus,
+textarea:focus,
+select:focus {
+  border-color: rgb(2, 101, 220) !important;
+  box-shadow: rgb(2, 101, 220) 0 0 0 1px inset !important;
+}
