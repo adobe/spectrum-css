@@ -3,7 +3,6 @@ import { useEffect } from '@storybook/client-api';
 import '@spectrum-css/vars/dist/spectrum-global.css';
 import '@spectrum-css/vars/dist/components/index.css';
 
-import '@spectrum-css/vars/dist/spectrum-lightest.css';
 import '@spectrum-css/vars/dist/spectrum-light.css';
 import '@spectrum-css/vars/dist/spectrum-dark.css';
 import '@spectrum-css/vars/dist/spectrum-darkest.css';
@@ -55,7 +54,7 @@ export const withContextWrapper = (StoryFn, context) => {
     
     if (window.__spectrum_context__.color !== color) {
       window.__spectrum_context__.color = color;
-      ['lightest', 'light', 'dark', 'darkest'].forEach(c => document.body.classList.remove(`spectrum--${c}`));
+      ['light', 'dark', 'darkest'].forEach(c => document.body.classList.remove(`spectrum--${c}`));
       if (color) document.body.classList.add(`spectrum--${color}`);
     }
   

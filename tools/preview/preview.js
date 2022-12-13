@@ -55,14 +55,13 @@ export const argTypes = {
     color: {
       name: 'Color',
       description: 'Controls the color context of the component.',
-      options: ['lightest', 'light', 'dark', 'darkest'],
+      options: ['light', 'dark', 'darkest'],
       defaultValue: 'light',
       type: { required: true },
       table: { category: "Global", defaultValue: { summary: 'light' } },
       control: {
         type: 'select',
         labels: {
-          lightest: 'Lightest',
           light: 'Light (default)',
           dark: 'Dark',
           darkest: 'Darkest',
