@@ -3,6 +3,18 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+<a name="5.0.7"></a>
+## 5.0.7
+🗓 2022-12-14 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/fieldlabel@5.0.6...@spectrum-css/fieldlabel@5.0.7)
+
+### 🐛 Bug fixes
+
+* **fieldlabel:** add missing color token ([#1563](https://github.com/adobe/spectrum-css/issues/1563)) ([f2d7487](https://github.com/adobe/spectrum-css/commit/f2d7487))
+
+
+
+
+
 <a name="5.0.6"></a>
 ## 5.0.6
 🗓 2022-12-09 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/fieldlabel@5.0.5...@spectrum-css/fieldlabel@5.0.6)

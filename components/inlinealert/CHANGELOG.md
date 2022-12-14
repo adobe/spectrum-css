@@ -3,6 +3,16 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+<a name="5.0.7"></a>
+## 5.0.7
+🗓 2022-12-14 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/inlinealert@5.0.5...@spectrum-css/inlinealert@5.0.7)
+
+**Note:** Version bump only for package @spectrum-css/inlinealert
+
+
+
+
+
 <a name="5.0.6"></a>
 ## 5.0.6
 🗓 2022-12-13 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/inlinealert@5.0.5...@spectrum-css/inlinealert@5.0.6)
