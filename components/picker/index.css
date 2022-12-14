@@ -383,10 +383,8 @@ governing permissions and limitations under the License.
       color: var(--highcontrast-picker-icon-color-disabled, var(--mod-picker-icon-color-disabled, var(--spectrum-picker-icon-color-disabled)));
     }
 
-    .spectrum-Picker-label {
-      &.is-placeholder {
-        color: var(--highcontrast-picker-font-color-disabled, var(--mod-picker-font-color-disabled, var(--spectrum-picker-font-color-disabled)));
-      }
+    .spectrum-Picker-label.is-placeholder {
+      color: var(--highcontrast-picker-font-color-disabled, var(--mod-picker-font-color-disabled, var(--spectrum-picker-font-color-disabled)));
     }
   }
 
