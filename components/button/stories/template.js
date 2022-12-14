@@ -1,15 +1,15 @@
 import { html } from 'lit-html';
 import { classMap } from 'lit-html/directives/class-map.js';
 
-import { generateSVG } from '@spectrum-css/preview/icons.js';
+import { Template as IconTemplate } from '../../icon/stories/template.js';
 
 export const titleCase = (str) => `${str.charAt(0).toUpperCase()}${str.slice(1)}`;
 
 // More on component templates: https://storybook.js.org/docs/web-components/writing-stories/introduction#using-args
-export const Template = ({ label, hideLabel, icon, size, variant, staticColor, treatment, isDisabled, className }) => {
+export const Template = ({ label, hideLabel, icon, size, variant, staticColor, treatment, isDisabled, express }) => {
   let classList = {};
   
-  if (!className) className = 'spectrum-Button';
+  let className = 'spectrum-Button';
   classList[className] = true;
 
   if (variant) classList[`${className}--${variant}`] = true;
@@ -19,7 +19,10 @@ export const Template = ({ label, hideLabel, icon, size, variant, staticColor, t
 
   return html`
     <button class=${classMap(classList)} ?disabled=${isDisabled}>
-      ${typeof icon === 'string' ? generateSVG(icon, size) : ''}
+      ${typeof icon === 'string' ? IconTemplate({
+        iconName: icon,
+        size
+      }) : ''}
       ${label && !hideLabel ? html`<span class=${`${className}-label`}>${label}</span>` : ''}
     </button>
   `;

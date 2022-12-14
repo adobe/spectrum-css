@@ -5,10 +5,27 @@ import {
   withReducedMotionWrapper
 } from "./decorators/index.js";
 
-import '@spectrum-css/tokens/dist/index.css';
-import '@spectrum-css/page/dist/index-vars.css';
+import '@spectrum-css/vars/css/globals/index.css';
+import '@spectrum-css/expressvars/css/globals/index.css';
 
-window.__spectrum_context__ = {};
+import '@spectrum-css/vars/css/components/index.css';
+import '@spectrum-css/expressvars/css/components/index.css';
+
+import '@spectrum-css/vars/css/themes/spectrum-light.css';
+import '@spectrum-css/vars/css/themes/spectrum-dark.css';
+import '@spectrum-css/vars/css/themes/spectrum-darkest.css';
+
+import '@spectrum-css/expressvars/css/themes/spectrum-light.css';
+import '@spectrum-css/expressvars/css/themes/spectrum-dark.css';
+import '@spectrum-css/expressvars/css/themes/spectrum-darkest.css';
+
+import '@spectrum-css/vars/css/scales/spectrum-medium.css';
+import '@spectrum-css/vars/css/scales/spectrum-large.css';
+
+import '@spectrum-css/expressvars/css/scales/spectrum-medium.css';
+import '@spectrum-css/expressvars/css/scales/spectrum-large.css';
+
+import '@spectrum-css/tokens/dist/index.css';
 
 window.addEventListener('DOMContentLoaded', () => {
   document.body.classList.add('spectrum');
@@ -141,6 +158,15 @@ export const parameters = {
         language: 'html',
     },
     iframeHeight: '200px',
+  },
+  status: {
+    statuses: {
+      migrated: {
+        background: '#f0f0f0',
+        color: '#444',
+        description: 'Migrated to the latest tokens.',
+      },
+    },
   },
 };
 
