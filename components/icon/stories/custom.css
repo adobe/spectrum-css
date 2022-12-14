@@ -1,0 +1,22 @@
+.icon-list {
+    display: grid;
+    gap: var(--spectrum-alias-item-control-gap-m);
+    grid-template-columns: repeat(auto-fill, 4rem);
+}
+
+.spectrum-Toast {
+    position: absolute;
+    top: 1em;
+    left: 1em;
+    z-index: 10;
+}
+
+.spectrum-Thumbnail:hover {
+    cursor: copy;
+    outline: 2px solid var(--spectrum-global-color-blue-400);
+    outline-offset: 2px;
+}
+
+.spectrum-Toast[hidden] {
+    display: none;
+}

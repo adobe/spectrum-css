@@ -5,13 +5,14 @@
 import { Template } from "./template";
 
 // Load styles for this component
-import '../dist/index-vars.css';
+import '../index.css';
 
 export default {
   title: "Help text",
   description: "Help text provides either an informative description or an error message that gives more context about what a user needs to input. It’s commonly used in forms.",
   component: "HelpText",
   argTypes: {
+    reducedMotion: { table: { disable: true } },
     text: {
       name: "Text",
       type: { name: "string", required: true },
@@ -87,6 +88,9 @@ export default {
   parameters: {
     actions: {
       handles: []
+    },
+    status: {
+      type: process.env.MIGRATED_PACKAGES.includes('helptext') ? 'migrated' : undefined
     }
   }
 };

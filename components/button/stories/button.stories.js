@@ -1,14 +1,14 @@
 // More on default export: https: //storybook.js.org/docs/web-components/writing-stories/introduction#default-export
 // More on args: https: //storybook.js.org/docs/web-components/writing-stories/args
 
-// A helper to generate arguments from a schema
-import { iconType } from "@spectrum-css/preview/icons.js";
+import { default as IconStories } from '../../icon/stories/icon.stories.js';
 
 // Import the component markup template
 import { Template } from "./template";
 
 // Load styles for this component
-import '../dist/index-vars.css';
+import '../index.css';
+import '../skin.css';
 
 export default {
   title: "Button",
@@ -24,13 +24,7 @@ export default {
       },
       control: { type: "text" }
     },
-    icon: {
-      ...iconType,
-      table: {
-        type: { summary: "string" },
-        category: "Component"
-      }
-    },
+    icon: IconStories && IconStories.argTypes && IconStories.argTypes.iconName ? IconStories.argTypes.iconName : {},
     hideLabel: {
       name: "HideLabel",
       type: { name: "boolean", required: false },
@@ -133,6 +127,9 @@ export default {
   parameters: {
     actions: {
       handles: ["mouseover .spectrum-Button", "click .spectrum-Button", "focus .spectrum-Button", "active .spectrum-Button", "hover .spectrum-Button"],
+    },
+    status: {
+      type: process.env.MIGRATED_PACKAGES.includes('button') ? 'migrated' : undefined
     }
   }
 };
@@ -142,7 +139,7 @@ Default.args = {};
 
 export const OutlineWithIcon = Template.bind({});
 OutlineWithIcon.args = {
-  style: 'outline',
+  treatment: 'outline',
   icon: 'Edit'
 };
 
