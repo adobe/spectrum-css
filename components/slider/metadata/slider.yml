@@ -276,19 +276,22 @@ examples:
           <div class="spectrum-Slider-value" role="textbox" aria-readonly="true" aria-labelledby="spectrum-Slider-label-14">14</div>
         </div>
         <div class="spectrum-Slider-controls">
-          <div class="spectrum-Slider-track"></div>
           <div class="spectrum-Slider-ticks">
             <div class="spectrum-Slider-tick"></div>
             <div class="spectrum-Slider-tick"></div>
             <div class="spectrum-Slider-tick"></div>
             <div class="spectrum-Slider-tick"></div>
             <div class="spectrum-Slider-tick"></div>
-            <div class="spectrum-Slider-tick"></div>
           </div>
-          <div class="spectrum-Slider-handle" style="left: 40%;">
-            <input type="range" class="spectrum-Slider-input" value="14" step="2" min="10" max="20" id="spectrum-Slider-input-14">
+          <div class="spectrum-Slider-trackContainer">
+            <div class="spectrum-Slider-track"></div>
+            <div class="spectrum-Slider-track"></div>
           </div>
-          <div class="spectrum-Slider-track"></div>
+          <div class="spectrum-Slider-handleContainer">
+            <div class="spectrum-Slider-handle" style="left: 75%;">
+              <input type="range" class="spectrum-Slider-input" value="14" step="2" min="10" max="20" id="spectrum-Slider-input-14">
+            </div>
+          </div>
         </div>
       </div>
       <div class="spectrum-Slider spectrum-Slider--sizeM spectrum-Slider--tick is-disabled">
@@ -297,19 +300,22 @@ examples:
           <div class="spectrum-Slider-value" role="textbox" aria-readonly="true" aria-labelledby="spectrum-Slider-label-15">14</div>
         </div>
         <div class="spectrum-Slider-controls">
-          <div class="spectrum-Slider-track"></div>
           <div class="spectrum-Slider-ticks">
             <div class="spectrum-Slider-tick"></div>
             <div class="spectrum-Slider-tick"></div>
             <div class="spectrum-Slider-tick"></div>
             <div class="spectrum-Slider-tick"></div>
             <div class="spectrum-Slider-tick"></div>
-            <div class="spectrum-Slider-tick"></div>
           </div>
-          <div class="spectrum-Slider-handle" style="left: 40%;">
-            <input type="range" class="spectrum-Slider-input" value="14" step="2" min="10" max="20" disabled id="spectrum-Slider-input-15">
+          <div class="spectrum-Slider-trackContainer">
+            <div class="spectrum-Slider-track"></div>
+            <div class="spectrum-Slider-track"></div>
           </div>
-          <div class="spectrum-Slider-track"></div>
+          <div class="spectrum-Slider-handleContainer">
+            <div class="spectrum-Slider-handle" style="left: 75%;">
+              <input type="range" class="spectrum-Slider-input" value="14" step="2" min="10" max="20" id="spectrum-Slider-input-14">
+            </div>
+          </div>
         </div>
       </div>
   - id: slider-tick
@@ -322,7 +328,6 @@ examples:
           <div class="spectrum-Slider-value" role="textbox" aria-readonly="true" aria-labelledby="spectrum-Slider-label-12">14</div>
         </div>
         <div class="spectrum-Slider-controls">
-          <div class="spectrum-Slider-track"></div>
           <div class="spectrum-Slider-ticks">
             <div class="spectrum-Slider-tick">
               <div class="spectrum-Slider-tickLabel">0</div>
@@ -343,19 +348,24 @@ examples:
               <div class="spectrum-Slider-tickLabel">100</div>
             </div>
           </div>
-          <div class="spectrum-Slider-handle" style="left: 40%;">
-            <input type="range" class="spectrum-Slider-input" value="14" step="2" min="10" max="20" id="spectrum-Slider-input-12">
+          <div class="spectrum-Slider-trackContainer">
+            <div class="spectrum-Slider-track"></div>
+            <div class="spectrum-Slider-track"></div>
           </div>
-          <div class="spectrum-Slider-track"></div>
+          <div class="spectrum-Slider-handleContainer">
+            <div class="spectrum-Slider-handle" style="left: 40%;">
+              <input type="range" class="spectrum-Slider-input" value="14" step="2" min="10" max="20" id="spectrum-Slider-input-12">
+            </div>
+          </div>
         </div>
       </div>
+
       <div class="spectrum-Slider spectrum-Slider--sizeM is-disabled">
         <div class="spectrum-Slider-labelContainer">
           <label class="spectrum-Slider-label" id="spectrum-Slider-label-13" for="spectrum-Slider-input-13">Slider Label - Disabled</label>
           <div class="spectrum-Slider-value" role="textbox" aria-readonly="true" aria-labelledby="spectrum-Slider-label-13">14</div>
         </div>
         <div class="spectrum-Slider-controls">
-          <div class="spectrum-Slider-track"></div>
           <div class="spectrum-Slider-ticks">
             <div class="spectrum-Slider-tick">
               <div class="spectrum-Slider-tickLabel">0</div>
@@ -376,10 +386,15 @@ examples:
               <div class="spectrum-Slider-tickLabel">100</div>
             </div>
           </div>
-          <div class="spectrum-Slider-handle" style="left: 40%;">
-            <input type="range" class="spectrum-Slider-input" value="14" step="2" min="10" max="20" disabled id="spectrum-Slider-input-13">
+          <div class="spectrum-Slider-trackContainer">
+            <div class="spectrum-Slider-track"></div>
+            <div class="spectrum-Slider-track"></div>
           </div>
-          <div class="spectrum-Slider-track"></div>
+          <div class="spectrum-Slider-handleContainer">
+            <div class="spectrum-Slider-handle" style="left: 40%;">
+              <input type="range" class="spectrum-Slider-input" value="14" step="2" min="10" max="20" id="spectrum-Slider-input-12">
+            </div>
+          </div>
         </div>
       </div>
   - id: slider-ramp

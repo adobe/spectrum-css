@@ -477,17 +477,18 @@ governing permissions and limitations under the License.
 /* backwards compatibility: these are not required, but they make the handle go to the edegs and align right */
 .spectrum-Slider-handleContainer,
 .spectrum-Slider-trackContainer {
-  width: calc(100% + var(--mod-slider-handle-size, var(--spectrum-slider-handle-size)));
+  /* width: calc(100% + var(--mod-slider-handle-size, var(--spectrum-slider-handle-size))); */
+  width: calc(100% + var(--spectrum-slider-handle-size));
 
   position: absolute;
   top: calc(var(--mod-slider-control-height, var(--spectrum-slider-control-height)) / 2 - 1px);
 
-  margin-left: calc(var(--mod-slider-handle-size, var(--spectrum-slider-handle-size)))/ 2 * -1);
+  /* margin-left: calc(var(--mod-slider-handle-size, var(--spectrum-slider-handle-size)))/ 2 * -1); */
+  margin-left: calc(var(--spectrum-slider-handle-size) / 2 * -1);
 }
 
 .spectrum-Slider-trackContainer {
   height: var(--mod-slider-height-size, var(--spectrum-slider-height-size));
-  height: var(--mod-component-height-200, var(--spectrum-component-height-200));
 
   /* stop edges from peeking out */
   overflow: hidden;
