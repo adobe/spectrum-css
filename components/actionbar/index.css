@@ -164,12 +164,8 @@ governing permissions and limitations under the License.
   }
 
   /* ensure text is legible on emphasized background */
-  .spectrum-ActionButton,
-  .spectrum-FieldLabel,
-  .spectrum-CloseButton-UIIcon {
+  .spectrum-FieldLabel {
     color: var(--mod-actionbar-emphasized-item-counter-color, var(--spectrum-actionbar-emphasized-item-counter-color));
-    /* apply fill so SVG icon is the correct color */
-    fill: var(--mod-actionbar-emphasized-item-counter-color, var(--spectrum-actionbar-emphasized-item-counter-color));
   }
 }
 
