@@ -3,6 +3,16 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+<a name="5.0.7"></a>
+## 5.0.7
+🗓 2022-12-16 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/actionbar@5.0.6...@spectrum-css/actionbar@5.0.7)
+
+**Note:** Version bump only for package @spectrum-css/actionbar
+
+
+
+
+
 <a name="5.0.6"></a>
 ## 5.0.6
 🗓 2022-12-15 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/actionbar@5.0.5...@spectrum-css/actionbar@5.0.6)
