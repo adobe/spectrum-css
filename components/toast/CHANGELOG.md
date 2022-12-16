@@ -3,6 +3,16 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+<a name="8.0.9"></a>
+## 8.0.9
+🗓 2022-12-16 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/toast@8.0.8...@spectrum-css/toast@8.0.9)
+
+**Note:** Version bump only for package @spectrum-css/toast
+
+
+
+
+
 <a name="8.0.8"></a>
 ## 8.0.8
 🗓 2022-12-15 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/toast@8.0.7...@spectrum-css/toast@8.0.8)
