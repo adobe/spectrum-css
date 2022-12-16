@@ -5,8 +5,12 @@
         <div class="spectrum-Site-content">
             {% include "./partials/sidenav.njk" %}
             <div class="spectrum-Site-mainContent">
-                {{ content | safe }}
+                <div class="spectrum-Site-mainContainer">
+                    {{ content | safe }}
+                </div>
+                {% include 'footer.njk' %}
             </div>
         </div>
     </div>
+    {% include 'pageBottom.njk' %}
 {% endblock %}

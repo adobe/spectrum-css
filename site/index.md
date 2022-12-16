@@ -6,9 +6,9 @@ layout: home.njk
         <div class="spectrum-Site-hero">
             <div class="spectrum-Site-heroHeading">
                 <h1 class="spectrum-Heading spectrum-Heading--sizeXXXL spectrum-Heading--serif">Spectrum CSS</h1>
+            </div>
                 <p class="spectrum-Body spectrum-Body--sizeXL">Spectrum CSS is an open-source implementation of Spectrum, Adobe’s design system. It includes components and resources to make applications more cohesive.</p>
                 <img alt="Spectrum CSS Hero image" src="img/spectrum-css_illustration_desktop@2x.png?w=976&amp;h=446" srcset="img/spectrum-css_illustration_desktop@2x.png 2x" class="spectrum-Site-heroImage"/>
-            </div>
             <div class="spectrum-HomeCards">
                 <div class="spectrum-HomeCard"><img class="spectrum-HomeCard-image" src="img/illustration_documentation.svg" alt="Documentation illustation"/>
                     <div class="spectrum-HomeCard-content">
