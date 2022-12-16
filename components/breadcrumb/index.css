@@ -1,5 +1,5 @@
 /*
-Copyright 2019 Adobe. All rights reserved.
+Copyright 2022 Adobe. All rights reserved.
 This file is licensed to you under the Apache License, Version 2.0 (the "License");
 you may not use this file except in compliance with the License. You may obtain a copy
 of the License at http://www.apache.org/licenses/LICENSE-2.0
@@ -10,27 +10,117 @@ OF ANY KIND, either express or implied. See the License for the specific languag
 governing permissions and limitations under the License.
 */
 
-@import "../vars/css/components/spectrum-breadcrumb.css";
 
-.spectrum-Breadcrumbs--sizeS {
-  @remapvars {
-    find: /--spectrum-breadcrumb(.*)-s-/;
-    filter: color;
-    replace: --spectrum-breadcrumb$1-;
-  }
+.spectrum-Breadcrumbs {
+  /* block size */
+  --spectrum-breadcrumbs-block-size: var(--spectrum-breadcrumbs-height);
+  --spectrum-breadcrumbs-block-size-compact : var(--spectrum-breadcrumbs-height-compact);
+  --spectrum-breadcrumbs-block-size-multiline: var(--spectrum-breadcrumbs-height-multiline);
+
+  /* text regular */
+  --spectrum-breadcrumbs-font-size : var(--spectrum-font-size-200);
+  --spectrum-breadcrumbs-font-family : var(--spectrum-font-family-base); /* placeholder for --spectrum-font-family-default */
+  --spectrum-breadcrumbs-font-weight : var(--spectrum-font-weight-regular); /* placeholder for --spectrum-font-regular */
+
+  /* text regular active item */
+  --spectrum-breadcrumbs-font-size-current : var(--spectrum-font-size-200);
+  --spectrum-breadcrumbs-font-family-current: var(--spectrum-font-family-base); /* placeholder for --spectrum-font-family-default */
+  --spectrum-breadcrumbs-font-weight-current: var(--spectrum-font-weight-bold); /* placeholder for --spectrum-font-bold */
+
+  /* text compact */
+  --spectrum-breadcrumbs-font-size-compact: var(--spectrum-font-size-100);
+  --spectrum-breadcrumbs-font-family-compact: var(--spectrum-font-family-base); /* placeholder for --spectrum-font-family-default */
+  --spectrum-breadcrumbs-font-weight-compact: var(--spectrum-font-weight-regular); /* placeholder for --spectrum-font-regular */
+
+  /* text compact active item */
+  --spectrum-breadcrumbs-font-size-compact-current: var(--spectrum-font-size-100);
+  --spectrum-breadcrumbs-font-family-compact-current: var(--spectrum-font-family-base); /* placeholder for --spectrum-font-family-default */
+  --spectrum-breadcrumbs-font-weight-compact-current: var(--spectrum-font-weight-bold); /* placeholder for --spectrum-font-bold */
+
+  /* text multiline */
+  --spectrum-breadcrumbs-font-size-multiline: var(--spectrum-font-size-75);
+  --spectrum-breadcrumbs-font-family-multiline: var(--spectrum-font-family-base); /* placeholder for --spectrum-font-family-default */
+  --spectrum-breadcrumbs-font-weight-multiline: var(--spectrum-font-weight-regular); /* placeholder for --spectrum-font-regular */
+
+  /* text multiline active item */
+  --spectrum-breadcrumbs-font-size-multiline-current: var(--spectrum-font-size-300);
+  --spectrum-breadcrumbs-font-family-multiline-current: var(--spectrum-font-family-base); /* placeholder for --spectrum-font-family-default */
+  --spectrum-breadcrumbs-font-weight-multiline-current: var(--spectrum-font-weight-bold); /* placeholder for --spectrum-font-bold */
+
+  /* hover, active, focus underline */
+  --spectrum-breadcrumbs-text-decoration-thickness : var(--spectrum-text-underline-thickness);
+  --spectrum-breadcrumbs-text-decoration-gap : var(--spectrum-text-underline-gap);
+
+  /* space between items */
+  --spectrum-breadcrumbs-item-spacing-inline-end : var(--spectrum-text-to-visual-100);
+
+  /* vertical spacing */
+  --spectrum-breadcrumbs-text-spacing-block-start: var(--spectrum-breadcrumbs-top-to-text);
+  --spectrum-breadcrumbs-text-spacing-block-end: var(--spectrum-breadcrumbs-bottom-to-text);
+  --spectrum-breadcrumbs-icon-spacing-block: var(--spectrum-breadcrumbs-top-to-separator-icon);
+
+  /* compact vertical spacing */
+  --spectrum-breadcrumbs-text-spacing-block-start-compact: var(--spectrum-breadcrumbs-top-to-text-compact);
+  --spectrum-breadcrumbs-text-spacing-block-end-compact: var(--spectrum-breadcrumbs-bottom-to-text-compact);
+  --spectrum-breadcrumbs-icon-spacing-block-compact: var(--spectrum-breadcrumbs-top-to-separator-icon-compact);
+
+  /* multiline vertical spacing */
+  --spectrum-breadcrumbs-text-spacing-block-start-multiline: var(--spectrum-breadcrumbs-top-to-text-multiline);
+  --spectrum-breadcrumbs-text-spacing-block-end-multiline: var(--spectrum-breadcrumbs-bottom-to-text-multiline);
+  --spectrum-breadcrumbs-text-spacing-block-between-multiline: var(--spectrum-breadcrumbs-top-text-to-bottom-text); /* vertical between lines */
+  --spectrum-breadcrumbs-icon-spacing-block-start-multiline: var(--spectrum-breadcrumbs-top-to-separator-icon-multiline);
+  --spectrum-breadcrumbs-icon-spacing-block-between-multiline : var(--spectrum-breadcrumbs-separator-icon-to-bottom-text-multiline); /* vertical between lines */
+
+  /* horizontal spacing of list */
+  --spectrum-breadcrumbs-inline-start : var(--spectrum-breadcrumbs-start-edge-to-text);
+  --spectrum-breadcrumbs-inline-end : var(--spectrum-breadcrumbs-end-edge-to-text);
+
+  /* menu action button icon spacing */
+  --spectrum-breadcrumbs-action-button-spacing-inline: var(--spectrum-breadcrumbs-truncated-menu-to-separator-icon);
+
+  --spectrum-breadcrumbs-action-button-spacing-block: var(--spectrum-breadcrumbs-top-to-truncated-menu);
+  --spectrum-breadcrumbs-action-button-spacing-block-compact: var(--spectrum-breadcrumbs-top-to-truncated-menu-compact); /* compact */
+
+  --spectrum-breadcrumbs-action-button-spacing-inline-start: var(--spectrum-breadcrumbs-start-edge-to-truncated-menu); /* if icon is first item */
+
+  --spectrum-breadcrumbs-action-button-spacing-block-multiline: var(--spectrum-breadcrumbs-top-to-truncated-menu-compact); /* multiline */
+  --spectrum-breadcrumbs-action-button-spacing-block-between-multiline: var(--spectrum-breadcrumbs-truncated-menu-to-bottom-text); /* multiline */
+
+
+  /* COLORS */
+  --spectrum-breadcrumbs-text-color : var(--spectrum-neutral-subdued-content-color-default);
+  --spectrum-breadcrumbs-text-color-current: var(--spectrum-neutral-content-color-default);
+  --spectrum-breadcrumbs-separator-color: var(--spectrum-neutral-content-color-default);
+  --spectrum-breadcrumbs-action-button-color: var(--spectrum-neutral-subdued-content-color-default);
+  --spectrum-breadcrumbs-action-button-color-disabled: var(--spectrum-disabled-content-color);
+
+  --spectrum-breadcrumbs-focus-indicator-color: var(--spectrum-focus-indicator-color);
 }
-.spectrum-Breadcrumbs--sizeM {
-  @remapvars {
-    find: /--spectrum-breadcrumb(.*)-m-/;
-    filter: color;
-    replace: --spectrum-breadcrumb$1-;
+
+  .x {
+    /* menu action button icon spacing */
+    padding-inline: var(--spectrum-breadcrumbs-action-button-spacing-inline);
+
+    padding-block: var(--spectrum-breadcrumbs-action-button-spacing-block);
+    padding-block: var(--spectrum-breadcrumbs-action-button-spacing-block-compact); /* compact */
+
+    padding-inline-start: var(--spectrum-breadcrumbs-action-button-spacing-inline-start); /* if icon is first item */
+
+    padding-block: var(--spectrum-breadcrumbs-action-button-spacing-block-multiline); /* multiline */
+    padding-block: var(--spectrum-breadcrumbs-action-button-spacing-block-between-multiline); /* multiline */
+
+    color: var(--spectrum-breadcrumbs-text-color);
+    color: var(--spectrum-breadcrumbs-text-color-current);
+    color: var(--spectrum-breadcrumbs-separator-color);
+    color: var(--spectrum-breadcrumbs-action-button-color);
+    color: var(--spectrum-breadcrumbs-action-button-color-disabled);
+    color: var(--spectrum-breadcrumbs-focus-indicator-color);
   }
-}
-.spectrum-Breadcrumbs--sizeL {
-  @remapvars {
-    find: /--spectrum-breadcrumb(.*)-l-/;
-    filter: color;
-    replace: --spectrum-breadcrumb$1-;
+
+/* windows high contrast mode */
+@media (forced-colors: active) {
+  .spectrum-Breadcrumbs {
+
   }
 }
 
@@ -44,40 +134,41 @@ governing permissions and limitations under the License.
   flex-basis: 0%;
 
   margin: 0;
-  padding: 0;
+  /* horizontal spacing of list */
+  padding-inline-start: var(--spectrum-breadcrumbs-inline-start);
+  padding-inline-end: var(--spectrum-breadcrumbs-inline-end);
+
+  block-size: var(--spectrum-breadcrumbs-block-size);
+
+  &--compact {
+    block-size: var(--spectrum-breadcrumbs-block-size-compact);
+  }
+
+  &--multiline {
+    block-size: var(--spectrum-breadcrumbs-block-size-multiline);
+  }
 }
 
 .spectrum-Breadcrumbs-itemSeparator {
   position: relative;
 
   /* Fix alignment, it's not quite centered */
-  inset-block-start: var(--spectrum-global-dimension-size-10);
+  margin-inline-end: var(--spectrum-breadcrumbs-item-spacing-inline-end);
+  margin-block: var(--spectrum-breadcrumbs-icon-spacing-block);
 
   transform: logical scale(1) rotate(0deg);
 
   opacity: 1;
-}
 
-.spectrum-Breadcrumbs-item--sizeS {
-  @remapvars {
-    find: /--spectrum-breadcrumb(.*)-s-/;
-    filter: color;
-    replace: --spectrum-breadcrumb$1-;
+  .spectrum-Breadcrumbs--compact & {
+    margin-block: var(--spectrum-breadcrumbs-icon-spacing-block-compact);
   }
-}
-.spectrum-Breadcrumbs-item--sizeM {
-  @remapvars {
-    find: /--spectrum-breadcrumb(.*)-m-/;
-    filter: color;
-    replace: --spectrum-breadcrumb$1-;
+
+  .spectrum-Breadcrumbs--multiline & {
+    margin-block-start: var(--spectrum-breadcrumbs-icon-spacing-block-start-multiline);
+    margin-block-end: var(--spectrum-breadcrumbs-icon-spacing-block-between-multiline);  /* vertical between lines */
   }
-}
-.spectrum-Breadcrumbs-item--sizeL {
-  @remapvars {
-    find: /--spectrum-breadcrumb(.*)-l-/;
-    filter: color;
-    replace: --spectrum-breadcrumb$1-;
-  }
+
 }
 
 .spectrum-Breadcrumbs-item {
@@ -86,25 +177,53 @@ governing permissions and limitations under the License.
   justify-content: flex-start;
 
   box-sizing: border-box;
-  block-size: var(--spectrum-breadcrumb-list-height);
 
   position: relative;
 
   white-space: nowrap;
-  font-size: var(--spectrum-breadcrumb-item-text-size);
-  font-weight: var(--spectrum-breadcrumb-item-text-font-weight);
-  line-height: var(--spectrum-breadcrumb-item-text-line-height);
+  font-family: var(--spectrum-breadcrumbs-font-family);
+  font-size: var(--spectrum-breadcrumbs-font-size);
+  font-weight: var(--spectrum-breadcrumbs-font-weight);
+  line-height: 1; /* placeholder for token */
+
+
+  .spectrum-Breadcrumbs--compact & {
+    font-family: var(--spectrum-breadcrumbs-font-family-compact);
+    font-size: var(--spectrum-breadcrumbs-font-size-compact);
+    font-weight: var(--spectrum-breadcrumbs-font-weight-compact);
+  }
+
+  .spectrum-Breadcrumbs--multiline & {
+    font-family: var(--spectrum-breadcrumbs-font-family-multiline);
+    font-size: var(--spectrum-breadcrumbs-font-size-multiline);
+    font-weight: var(--spectrum-breadcrumbs-font-weight-multiline);
+  }
 
   &:last-of-type {
-    font-weight: var(--spectrum-breadcrumb-title-text-font-weight);
+    font-family: var(--spectrum-breadcrumbs-font-family-current);
+    font-size: var(--spectrum-breadcrumbs-font-size-current);
+    font-weight: var(--spectrum-breadcrumbs-font-weight-current);
 
     .spectrum-Breadcrumbs-itemSeparator {
       display: none;
     }
+
+    .spectrum-Breadcrumbs--compact &:last-of-type {
+      font-family: var(--spectrum-breadcrumbs-font-family-compact-current);
+      font-size: var(--spectrum-breadcrumbs-font-size-compact-current);
+      font-weight: var(--spectrum-breadcrumbs-font-weight-compact-current);
+    }
+
+    .spectrum-Breadcrumbs--multiline &:last-of-type {
+      font-family: var(--spectrum-breadcrumbs-font-family-multiline-current);
+      font-size: var(--spectrum-breadcrumbs-font-size-multiline-current);
+      font-weight: var(--spectrum-breadcrumbs-font-weight-multiline-current);
+    }
+
   }
 
   > .spectrum-ActionButton {
-    margin-inline-end: var(--spectrum-breadcrumb-button-gap);
+    margin-inline-end: 1rem; /* placeholder for token */
   }
 }
 
@@ -116,17 +235,32 @@ governing permissions and limitations under the License.
   align-items: center;
   justify-content: flex-start;
 
-  padding-block: 0;
-  padding-inline: var(--spectrum-breadcrumb-item-padding-x);
-  block-size: var(--spectrum-breadcrumb-list-height);
+  box-sizing: border-box;
+  margin-inline-end: var(--spectrum-breadcrumbs-item-spacing-inline-end);
+  padding-block-start: var(--spectrum-breadcrumbs-text-spacing-block-start);
+  padding-block-end: var(--spectrum-breadcrumbs-text-spacing-block-end);
 
-  margin-inline-end: var(--spectrum-breadcrumb-item-margin-right);
-
-  border-radius: var(--spectrum-breadcrumb-item-border-radius);
+  border-radius: 1rem; /* placeholder for token */
 
   outline: none;
 
   text-decoration: none;
+
+  .spectrum-Breadcrumbs--compact & {
+    /* compact vertical spacing */
+    padding-block-start: var(--spectrum-breadcrumbs-text-spacing-block-start-compact);
+    padding-block-end: var(--spectrum-breadcrumbs-text-spacing-block-end-compact);
+  }
+
+  .spectrum-Breadcrumbs--multiline & {
+    /* multiline vertical spacing */
+    padding-block-start: var(--spectrum-breadcrumbs-text-spacing-block-start-multiline);
+    padding-block-end: var(--spectrum-breadcrumbs-text-spacing-block-between-multiline); /* vertical between lines */
+
+    &:last-of-type {
+      padding-block-end: var(--spectrum-breadcrumbs-text-spacing-block-end-multiline);
+    }
+  }
 
   &[href],
   &[tabindex="0"] {
@@ -135,6 +269,8 @@ governing permissions and limitations under the License.
     &:hover,
     &:focus-ring {
       text-decoration: underline;
+      text-decoration-thickness: var(--spectrum-breadcrumbs-text-decoration-thickness);
+      text-underline-offset: var(--spectrum-breadcrumbs-text-decoration-gap);
     }
   }
 }
@@ -150,9 +286,9 @@ governing permissions and limitations under the License.
   inline-size: 100%;
   block-size: 100%;
 
-  border-width: var(--spectrum-breadcrumb-item-border-size-key-focus);
+  border-width: 1px; /* placeholder for token */
   border-style: solid;
-  border-radius: var(--spectrum-breadcrumb-item-border-radius);
+  border-radius: 1px; /* placeholder for token */
 
   content: "";
   pointer-events: none;
@@ -162,20 +298,20 @@ governing permissions and limitations under the License.
   flex-wrap: wrap;
 
   .spectrum-Breadcrumbs-item {
-    font-size: var(--spectrum-breadcrumb-multiline-item-text-size);
-    font-weight: var(--spectrum-breadcrumb-multiline-item-text-font-weight);
-    line-height: var(--spectrum-breadcrumb-multiline-item-text-line-height);
+    font-size: 1rem; /* placeholder for token */
+    font-weight: 400; /* placeholder for token */
+    line-height: 1; /* placeholder for token */
 
     &:last-of-type {
       block-size: auto;
 
       inline-size: 100%;
 
-      margin-block-start: var(--spectrum-breadcrumb-multiline-title-margin-top);
+      margin-block-start: 1rem; /* placeholder for token */
 
-      font-size: var(--spectrum-breadcrumb-multiline-title-text-size);
-      font-weight: var(--spectrum-breadcrumb-multiline-title-text-font-weight);
-      line-height: var(--spectrum-breadcrumb-multiline-title-text-line-height);
+      font-size: 1rem; /* placeholder for token */
+      font-weight: 400; /* placeholder for token */
+      line-height: 1; /* placeholder for token */
 
       .spectrum-Breadcrumbs-itemLink {
         block-size: auto;
