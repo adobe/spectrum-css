@@ -11,15 +11,16 @@ governing permissions and limitations under the License.
 */
 
 .spectrum-Avatar {
-  --spectrum-avatar-border-radius: 50%;
-  --spectrum-avatar-border-width: 0;
+  /* --spectrum-avatar-border-radius: 50%; */
+  /* --spectrum-avatar-border-width: 2px; */
 
   --spectrum-avatar-inline-size: var(--spectrum-avatar-size-100);
   --spectrum-avatar-block-size: var(--spectrum-avatar-size-100);
 
-  /* --spectrum-avatar-focus-indicator-thickness: var(--spectrum-focus-indicator-thickness); */
-  /* --spectrum-avatar-focus-indicator-gap: var(--spectrum-focus-indicator-gap); */
-  /* --spectrum-avatar-focus-indicator-color: var(--spectrum-focus-indicator-color); */
+  --spectrum-avatar-focus-indicator-thickness: var(--spectrum-focus-indicator-thickness);
+  --spectrum-avatar-focus-indicator-gap: var(--spectrum-focus-indicator-gap);
+  --spectrum-avatar-focus-indicator-color: var(--spectrum-focus-indicator-color);
+  --spectrum-avatar-border-radius: 50%;
 
   --spectrum-avatar-color-opacity: 1;
   --spectrum-avatar-color-opacity-disabled: var(--spectrum-avatar-opacity-disabled);
@@ -74,7 +75,7 @@ governing permissions and limitations under the License.
   .spectrum-Avatar {
     --highcontrast-avatar-color-opacity-disabled: 1;
     --highcontrast-avatar-outline-color-disabled: GrayText;
-    --highcontrast-avatar-focus-indicator-color: Highlight;
+    /* --highcontrast-avatar-focus-indicator-color: Highlight; */
 
     &.is-disabled {
       outline: 2px solid var(--highcontrast-avatar-outline-color-disabled);
@@ -88,34 +89,55 @@ governing permissions and limitations under the License.
   inline-size: var(--mod-avatar-inline-size, var(--spectrum-avatar-inline-size));
   block-size: var(--mod-avatar-block-size, var(--spectrum-avatar-block-size));
 
-  border-radius: var(--mod-avatar-border-radius, var(--spectrum-avatar-border-radius));
+  /* border-radius: var(--mod-avatar-border-radius, var(--spectrum-avatar-border-radius)); */
+  border-radius: var(--spectrum-avatar-border-radius);
   border-width: 0;
+
+  outline: none;
 
   -webkit-user-drag: none;
   user-select: none;
-  overflow: hidden;
+
+  overflow: visible;
 
   opacity: var(--mod-avatar-color-opacity, var(--spectrum-avatar-color-opacity));
-  
-  &::after {
-    content: '';
-    position: absolute;
-    inset-block-start: 0;
-    inset-block-end: 0;
-    inset-inline-start: 0;
-    inset-inline-end: 0;
-    box-sizing: border-box;
-    border-width: var(--mod-avatar-border-width, var(--spectrum-avatar-border-width));
-    border-style: solid;
-    /* border-color: */
-    border-radius: var(--mod-avatar-border-radius, var(--spectrum-avatar-border-radius));
-  }
 
   &.is-disabled {
     opacity: var(--highcontrast-avatar-color-opacity-disabled, var(--mod-avatar-color-opacity-disabled, var(--spectrum-avatar-color-opacity-disabled)));
   }
+
+  &:focus-within:not(.is-disabled) .spectrum-Avatar-link::after {
+    pointer-events: none;
+    content: "";
+    position: absolute;
+    top: calc(
+      var(--spectrum-avatar-focus-indicator-gap) *
+      -2);
+    left: calc(
+      var(--spectrum-avatar-focus-indicator-gap) * 
+      -2);
+  
+    inline-size: calc(
+      var(--spectrum-avatar-inline-size) + 
+      calc(var(--spectrum-avatar-focus-indicator-gap) * 2));
+    block-size: calc(
+      var(--spectrum-avatar-inline-size) + 
+      calc(var(--spectrum-avatar-focus-indicator-gap) * 2));
+  
+    border-style: solid;
+    border-width: var(--spectrum-avatar-focus-indicator-thickness);
+    border-color: var(--spectrum-avatar-focus-indicator-color);
+    border-radius: var(--spectrum-avatar-border-radius);
+  }
 }
+
+.spectrum-Avatar-link {
+  outline: none;
+}
+
 .spectrum-Avatar-image {
   inline-size: var(--mod-avatar-inline-size, var(--spectrum-avatar-inline-size));
   block-size: var(--mod-avatar-block-size, var(--spectrum-avatar-block-size));
+
+  border-radius: var(--spectrum-avatar-border-radius);
 }
