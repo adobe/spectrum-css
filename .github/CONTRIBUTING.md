@@ -35,13 +35,13 @@ by project committers.
 
 Start by [forking](https://help.github.com/articles/fork-a-repo/) the repo, then [clone](https://help.github.com/articles/cloning-a-repository/) your fork:
 
-```
+```shell
 git clone git@github.com:yourusername/spectrum-css.git
 ```
 
 Set up a branch for your feature or bug fix, push it to your fork, and set up a remote for the upstream repo:
 
-```
+```shell
 git checkout -b my-awesome-new-feature
 git push -u origin my-awesome-new-feature
 git remote add upstream git@github.com:adobe/spectrum-css.git
@@ -49,44 +49,50 @@ git remote add upstream git@github.com:adobe/spectrum-css.git
 
 Install [yarn](https://yarnpkg.com/en/docs/install):
 
-```
+```shell
 brew install yarn || curl -o- -L https://yarnpkg.com/install.sh | bash
 ```
 
 Make sure the [gulp-cli](https://github.com/gulpjs/gulp-cli) is installed globally:
 
-```
+```shell
 yarn global add gulp-cli
 ```
 
 Install dependencies:
 
-```
+```shell
 yarn install
+```
+
+To generate a new component, run the generator:
+
+```shell
+yarn new component
 ```
 
 Build the project, open a livereloading browser window, and watch for changes:
 
-```
-gulp dev
+```shell
+yarn dev
 ```
 
 Commit changes with a [conventional commit message](https://www.conventionalcommits.org), making sure to correctly use `feat:`, `fix:`, and `BREAKING CHANGE` accordingly, and referencing the relevant issue number (if any):
 
-```
+```shell
 git commit -m "fix: calendar rendering issue in Safari, fixes #252"
 ```
 
 Make sure your branch is up to date with the original repo:
 
-```
+```shell
 git fetch upstream
 git merge upstream/main
 ```
 
 Review your changes and any possible conflicts and push to your fork:
 
-```
+```shell
 git push origin
 ```
 
