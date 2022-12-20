@@ -593,8 +593,8 @@ governing permissions and limitations under the License.
 
   /* invalid keyboard focus */
   .is-invalid.is-keyboardFocused &,
-  &:focus-ring,
-  &:focus-visible {
+  .is-invalid &:focus-ring,
+  .is-invalid &:focus-visible {
     border-color: var(--highcontrast-textfield-border-color-invalid-keyboard-focus, var(--mod-textfield-border-color-invalid-keyboard-focus, var(--spectrum-textfield-border-color-invalid-keyboard-focus)));
   }
 
