@@ -113,8 +113,9 @@ governing permissions and limitations under the License.
 
 .spectrum-Breadcrumbs {
   display: flex;
-  justify-content: flex-start;
-  align-items: flex-start;
+  /* justify-content: flex-start; */
+  flex-direction: row;
+
   list-style-type: none;
   flex-wrap: nowrap;
   flex-grow: 1;
@@ -134,6 +135,9 @@ governing permissions and limitations under the License.
 
   &--multiline {
     block-size: var(--spectrum-breadcrumbs-block-size-multiline);
+
+    flex-wrap: wrap;
+    align-items: flex-start;
   }
 }
 
@@ -172,7 +176,6 @@ governing permissions and limitations under the License.
   font-family: var(--spectrum-breadcrumbs-font-family);
   font-size: var(--spectrum-breadcrumbs-font-size);
   font-weight: var(--spectrum-breadcrumbs-font-weight);
-  line-height: 1; /* placeholder for token */
 
   margin-block-start: var(--spectrum-breadcrumbs-text-spacing-block-start);
   margin-block-end: var(--spectrum-breadcrumbs-text-spacing-block-end);
@@ -204,6 +207,7 @@ governing permissions and limitations under the License.
       block-size: auto;
       inline-size: 100%;
 
+      margin-block-start: 0;
       margin-block-end: var(--spectrum-breadcrumbs-text-spacing-block-end-multiline);
     }
 
@@ -315,8 +319,4 @@ governing permissions and limitations under the License.
   pointer-events: none;
 
   border-color: var(--spectrum-breadcrumbs-focus-indicator-color);
-}
-
-.spectrum-Breadcrumbs--multiline {
-  flex-wrap: wrap;
 }
