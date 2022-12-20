@@ -52,6 +52,7 @@ governing permissions and limitations under the License.
   /* font styles */
   --spectrum-textfield-font-family: var(--spectrum-font-family-base); /* placeholder for --spectrum-font-family-default */
   --spectrum-textfield-font-weight: var(--spectrum-font-weight-regular);
+  --spectrum-textfield-placeholder-font-size: var(--spectrum-font-size-100);
 
   /* character count */
   --spectrum-textfield-character-count-font-family: var(--spectrum-font-family-base); /* placeholder for --spectrum-font-family-default */
