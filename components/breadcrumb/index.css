@@ -71,13 +71,14 @@ governing permissions and limitations under the License.
   --spectrum-breadcrumbs-icon-spacing-block-start-multiline: var(--spectrum-breadcrumbs-top-to-separator-icon-multiline);
   --spectrum-breadcrumbs-icon-spacing-block-between-multiline : var(--spectrum-breadcrumbs-separator-icon-to-bottom-text-multiline); /* vertical between lines */
 
-  /* horizontal spacing of list */
+  /* horizontal outer spacing of list */
   --spectrum-breadcrumbs-inline-start : var(--spectrum-breadcrumbs-start-edge-to-text);
   --spectrum-breadcrumbs-inline-end : var(--spectrum-breadcrumbs-end-edge-to-text);
 
   /* menu action button icon spacing */
   --spectrum-breadcrumbs-action-button-spacing-inline: var(--spectrum-breadcrumbs-truncated-menu-to-separator-icon);
 
+  /* action button spacing */
   --spectrum-breadcrumbs-action-button-spacing-block: var(--spectrum-breadcrumbs-top-to-truncated-menu);
   --spectrum-breadcrumbs-action-button-spacing-block-compact: var(--spectrum-breadcrumbs-top-to-truncated-menu-compact); /* compact */
 
@@ -86,6 +87,9 @@ governing permissions and limitations under the License.
   --spectrum-breadcrumbs-action-button-spacing-block-multiline: var(--spectrum-breadcrumbs-top-to-truncated-menu-compact); /* multiline */
   --spectrum-breadcrumbs-action-button-spacing-block-between-multiline: var(--spectrum-breadcrumbs-truncated-menu-to-bottom-text); /* multiline */
 
+  /* Focus Indicator */
+  --spectrum-breadcrumbs-focus-indicator-thickness: var(--spectrum-focus-indicator-thickness);
+  --spectrum-breadcrumbs-focus-indicator-gap: var(--spectrum-focus-indicator-gap);
 
   /* COLORS */
   --spectrum-breadcrumbs-text-color : var(--spectrum-neutral-subdued-content-color-default);
@@ -96,26 +100,6 @@ governing permissions and limitations under the License.
 
   --spectrum-breadcrumbs-focus-indicator-color: var(--spectrum-focus-indicator-color);
 }
-
-  .x {
-    /* menu action button icon spacing */
-    padding-inline: var(--spectrum-breadcrumbs-action-button-spacing-inline);
-
-    padding-block: var(--spectrum-breadcrumbs-action-button-spacing-block);
-    padding-block: var(--spectrum-breadcrumbs-action-button-spacing-block-compact); /* compact */
-
-    padding-inline-start: var(--spectrum-breadcrumbs-action-button-spacing-inline-start); /* if icon is first item */
-
-    padding-block: var(--spectrum-breadcrumbs-action-button-spacing-block-multiline); /* multiline */
-    padding-block: var(--spectrum-breadcrumbs-action-button-spacing-block-between-multiline); /* multiline */
-
-    color: var(--spectrum-breadcrumbs-text-color);
-    color: var(--spectrum-breadcrumbs-text-color-current);
-    color: var(--spectrum-breadcrumbs-separator-color);
-    color: var(--spectrum-breadcrumbs-action-button-color);
-    color: var(--spectrum-breadcrumbs-action-button-color-disabled);
-    color: var(--spectrum-breadcrumbs-focus-indicator-color);
-  }
 
 /* windows high contrast mode */
 @media (forced-colors: active) {
@@ -160,6 +144,8 @@ governing permissions and limitations under the License.
 
   opacity: 1;
 
+  color: var(--spectrum-breadcrumbs-separator-color);
+
   .spectrum-Breadcrumbs--compact & {
     margin-block: var(--spectrum-breadcrumbs-icon-spacing-block-compact);
   }
@@ -186,17 +172,25 @@ governing permissions and limitations under the License.
   font-weight: var(--spectrum-breadcrumbs-font-weight);
   line-height: 1; /* placeholder for token */
 
-
   .spectrum-Breadcrumbs--compact & {
     font-family: var(--spectrum-breadcrumbs-font-family-compact);
     font-size: var(--spectrum-breadcrumbs-font-size-compact);
     font-weight: var(--spectrum-breadcrumbs-font-weight-compact);
+
+    > .spectrum-ActionButton {
+      margin-block: var(--spectrum-breadcrumbs-action-button-spacing-block-compact);
+    }
   }
 
   .spectrum-Breadcrumbs--multiline & {
     font-family: var(--spectrum-breadcrumbs-font-family-multiline);
     font-size: var(--spectrum-breadcrumbs-font-size-multiline);
     font-weight: var(--spectrum-breadcrumbs-font-weight-multiline);
+
+    > .spectrum-ActionButton {
+      margin-block-start: var(--spectrum-breadcrumbs-action-button-spacing-block-multiline);
+      margin-block-end: var(--spectrum-breadcrumbs-action-button-spacing-block-between-multiline);
+    }
   }
 
   &:last-of-type {
@@ -219,11 +213,24 @@ governing permissions and limitations under the License.
       font-size: var(--spectrum-breadcrumbs-font-size-multiline-current);
       font-weight: var(--spectrum-breadcrumbs-font-weight-multiline-current);
     }
-
   }
 
   > .spectrum-ActionButton {
-    margin-inline-end: 1rem; /* placeholder for token */
+    margin-inline: var(--spectrum-breadcrumbs-action-button-spacing-inline);
+    margin-block: var(--spectrum-breadcrumbs-action-button-spacing-block);
+
+    color: var(--spectrum-breadcrumbs-action-button-color);
+
+    &:disabled {
+      color: var(--spectrum-breadcrumbs-action-button-color-disabled);
+    }
+  }
+
+  &:first-of-type {
+    /* if folder icon is first item */
+    > .spectrum-ActionButton {
+      margin-inline-start: var(--spectrum-breadcrumbs-action-button-spacing-inline-start);
+    }
   }
 }
 
@@ -237,14 +244,21 @@ governing permissions and limitations under the License.
 
   box-sizing: border-box;
   margin-inline-end: var(--spectrum-breadcrumbs-item-spacing-inline-end);
-  padding-block-start: var(--spectrum-breadcrumbs-text-spacing-block-start);
-  padding-block-end: var(--spectrum-breadcrumbs-text-spacing-block-end);
+  margin-block-start: var(--spectrum-breadcrumbs-text-spacing-block-start);
+  margin-block-end: var(--spectrum-breadcrumbs-text-spacing-block-end);
 
   border-radius: 1rem; /* placeholder for token */
 
   outline: none;
 
   text-decoration: none;
+
+  color: var(--spectrum-breadcrumbs-text-color);
+
+  .spectrum-Breadcrumbs-item:last-of-type & {
+    color: var(--spectrum-breadcrumbs-text-color-current);
+  }
+
 
   .spectrum-Breadcrumbs--compact & {
     /* compact vertical spacing */
@@ -283,15 +297,17 @@ governing permissions and limitations under the License.
 
   box-sizing: border-box;
   display: block;
-  inline-size: 100%;
-  block-size: 100%;
+  inline-size: calc(100% + (var(--spectrum-breadcrumbs-focus-indicator-gap) * 2) + (var(--spectrum-breadcrumbs-focus-indicator-thickness) * 2));
+  block-size: calc(100% + (var(--spectrum-breadcrumbs-focus-indicator-gap) * 2) + (var(--spectrum-breadcrumbs-focus-indicator-thickness) * 2));
 
-  border-width: 1px; /* placeholder for token */
+  border-width: var(--spectrum-breadcrumbs-focus-indicator-thickness);
   border-style: solid;
   border-radius: 1px; /* placeholder for token */
 
   content: "";
   pointer-events: none;
+
+  border-color: var(--spectrum-breadcrumbs-focus-indicator-color);
 }
 
 .spectrum-Breadcrumbs--multiline {
