@@ -52,7 +52,7 @@ governing permissions and limitations under the License.
   --spectrum-breadcrumbs-text-decoration-gap : var(--spectrum-text-underline-gap);
 
   /* space between items */
-  --spectrum-breadcrumbs-item-spacing-inline-end : var(--spectrum-text-to-visual-100);
+  --spectrum-breadcrumbs-separator-spacing-inline : var(--spectrum-text-to-visual-100);
 
   /* vertical spacing */
   --spectrum-breadcrumbs-text-spacing-block-start: var(--spectrum-breadcrumbs-top-to-text);
@@ -91,6 +91,9 @@ governing permissions and limitations under the License.
   --spectrum-breadcrumbs-focus-indicator-thickness: var(--spectrum-focus-indicator-thickness);
   --spectrum-breadcrumbs-focus-indicator-gap: var(--spectrum-focus-indicator-gap);
 
+  /* placeholder for border radius for focus indicator */
+  --spectrum-breadcrumbs-item-link-border-radius: var(--spectrum-corner-radius-100);
+
   /* COLORS */
   --spectrum-breadcrumbs-text-color : var(--spectrum-neutral-subdued-content-color-default);
   --spectrum-breadcrumbs-text-color-current: var(--spectrum-neutral-content-color-default);
@@ -111,6 +114,7 @@ governing permissions and limitations under the License.
 .spectrum-Breadcrumbs {
   display: flex;
   justify-content: flex-start;
+  align-items: flex-start;
   list-style-type: none;
   flex-wrap: nowrap;
   flex-grow: 1;
@@ -136,14 +140,12 @@ governing permissions and limitations under the License.
 .spectrum-Breadcrumbs-itemSeparator {
   position: relative;
 
-  /* Fix alignment, it's not quite centered */
-  margin-inline-end: var(--spectrum-breadcrumbs-item-spacing-inline-end);
   margin-block: var(--spectrum-breadcrumbs-icon-spacing-block);
+  margin-inline: var(--spectrum-breadcrumbs-separator-spacing-inline);
 
   transform: logical scale(1) rotate(0deg);
 
   opacity: 1;
-
   color: var(--spectrum-breadcrumbs-separator-color);
 
   .spectrum-Breadcrumbs--compact & {
@@ -172,10 +174,17 @@ governing permissions and limitations under the License.
   font-weight: var(--spectrum-breadcrumbs-font-weight);
   line-height: 1; /* placeholder for token */
 
+  margin-block-start: var(--spectrum-breadcrumbs-text-spacing-block-start);
+  margin-block-end: var(--spectrum-breadcrumbs-text-spacing-block-end);
+
   .spectrum-Breadcrumbs--compact & {
     font-family: var(--spectrum-breadcrumbs-font-family-compact);
     font-size: var(--spectrum-breadcrumbs-font-size-compact);
     font-weight: var(--spectrum-breadcrumbs-font-weight-compact);
+
+    /* compact vertical spacing */
+    margin-block-start: var(--spectrum-breadcrumbs-text-spacing-block-start-compact);
+    margin-block-end: var(--spectrum-breadcrumbs-text-spacing-block-end-compact);
 
     > .spectrum-ActionButton {
       margin-block: var(--spectrum-breadcrumbs-action-button-spacing-block-compact);
@@ -186,6 +195,17 @@ governing permissions and limitations under the License.
     font-family: var(--spectrum-breadcrumbs-font-family-multiline);
     font-size: var(--spectrum-breadcrumbs-font-size-multiline);
     font-weight: var(--spectrum-breadcrumbs-font-weight-multiline);
+
+    /* multiline vertical spacing */
+    margin-block-start: var(--spectrum-breadcrumbs-text-spacing-block-start-multiline);
+    margin-block-end: var(--spectrum-breadcrumbs-text-spacing-block-between-multiline); /* vertical between lines */
+
+    &:last-of-type {
+      block-size: auto;
+      inline-size: 100%;
+
+      margin-block-end: var(--spectrum-breadcrumbs-text-spacing-block-end-multiline);
+    }
 
     > .spectrum-ActionButton {
       margin-block-start: var(--spectrum-breadcrumbs-action-button-spacing-block-multiline);
@@ -243,11 +263,8 @@ governing permissions and limitations under the License.
   justify-content: flex-start;
 
   box-sizing: border-box;
-  margin-inline-end: var(--spectrum-breadcrumbs-item-spacing-inline-end);
-  margin-block-start: var(--spectrum-breadcrumbs-text-spacing-block-start);
-  margin-block-end: var(--spectrum-breadcrumbs-text-spacing-block-end);
 
-  border-radius: 1rem; /* placeholder for token */
+  border-radius: var(--spectrum-breadcrumbs-item-link-border-radius); /* placeholder for token */
 
   outline: none;
 
@@ -257,23 +274,6 @@ governing permissions and limitations under the License.
 
   .spectrum-Breadcrumbs-item:last-of-type & {
     color: var(--spectrum-breadcrumbs-text-color-current);
-  }
-
-
-  .spectrum-Breadcrumbs--compact & {
-    /* compact vertical spacing */
-    padding-block-start: var(--spectrum-breadcrumbs-text-spacing-block-start-compact);
-    padding-block-end: var(--spectrum-breadcrumbs-text-spacing-block-end-compact);
-  }
-
-  .spectrum-Breadcrumbs--multiline & {
-    /* multiline vertical spacing */
-    padding-block-start: var(--spectrum-breadcrumbs-text-spacing-block-start-multiline);
-    padding-block-end: var(--spectrum-breadcrumbs-text-spacing-block-between-multiline); /* vertical between lines */
-
-    &:last-of-type {
-      padding-block-end: var(--spectrum-breadcrumbs-text-spacing-block-end-multiline);
-    }
   }
 
   &[href],
@@ -289,11 +289,16 @@ governing permissions and limitations under the License.
   }
 }
 
+/* focus indicator */
 .spectrum-Breadcrumbs-item.is-dragged .spectrum-Breadcrumbs-itemLink:before,
 .spectrum-Breadcrumbs-itemLink:focus-ring:before {
   position: absolute;
-  inset-block-start: 0;
-  inset-inline-start: 0;
+  left: 0;
+  right: 0;
+
+  margin-inline-start: calc((var(--mod-breadcrumbs-focus-indicator-gap, var(--spectrum-breadcrumbs-focus-indicator-gap))
+                                + var(--mod-breadcrumbs-focus-indicator-thickness, var(--spectrum-breadcrumbs-focus-indicator-thickness)))
+                                * -1);
 
   box-sizing: border-box;
   display: block;
@@ -302,7 +307,9 @@ governing permissions and limitations under the License.
 
   border-width: var(--spectrum-breadcrumbs-focus-indicator-thickness);
   border-style: solid;
-  border-radius: 1px; /* placeholder for token */
+  border-radius: calc(var(--mod-breadcrumbs-item-link-border-radius, var(--spectrum-breadcrumbs-item-link-border-radius))
+                       + var(--mod-breadcrumbs-focus-indicator-gap, var(--spectrum-breadcrumbs-focus-indicator-gap))
+                       + var(--mod-breadcrumbs-focus-indicator-thickness, var(--spectrum-breadcrumbs-focus-indicator-thickness)));
 
   content: "";
   pointer-events: none;
@@ -312,28 +319,4 @@ governing permissions and limitations under the License.
 
 .spectrum-Breadcrumbs--multiline {
   flex-wrap: wrap;
-
-  .spectrum-Breadcrumbs-item {
-    font-size: 1rem; /* placeholder for token */
-    font-weight: 400; /* placeholder for token */
-    line-height: 1; /* placeholder for token */
-
-    &:last-of-type {
-      block-size: auto;
-
-      inline-size: 100%;
-
-      margin-block-start: 1rem; /* placeholder for token */
-
-      font-size: 1rem; /* placeholder for token */
-      font-weight: 400; /* placeholder for token */
-      line-height: 1; /* placeholder for token */
-
-      .spectrum-Breadcrumbs-itemLink {
-        block-size: auto;
-
-        text-decoration: none;
-      }
-    }
-  }
 }
