@@ -112,20 +112,21 @@ governing permissions and limitations under the License.
 }
 
 .spectrum-Breadcrumbs {
-  display: flex;
-  /* justify-content: flex-start; */
-  flex-direction: row;
-
   list-style-type: none;
-  flex-wrap: nowrap;
-  flex-grow: 1;
-  flex-shrink: 0;
-  flex-basis: 0%;
 
   margin: 0;
   /* horizontal spacing of list */
   padding-inline-start: var(--spectrum-breadcrumbs-inline-start);
   padding-inline-end: var(--spectrum-breadcrumbs-inline-end);
+
+  display: flex;
+  flex-wrap: nowrap;
+  flex-grow: 1;
+  flex-shrink: 0;
+  flex-basis: 0%;
+  justify-content: flex-start;
+  flex-direction: row;
+  align-items: center;
 
   block-size: var(--spectrum-breadcrumbs-block-size);
 
@@ -137,7 +138,7 @@ governing permissions and limitations under the License.
     block-size: var(--spectrum-breadcrumbs-block-size-multiline);
 
     flex-wrap: wrap;
-    align-items: flex-start;
+    align-content: center;
   }
 }
 
@@ -160,34 +161,25 @@ governing permissions and limitations under the License.
     margin-block-start: var(--spectrum-breadcrumbs-icon-spacing-block-start-multiline);
     margin-block-end: var(--spectrum-breadcrumbs-icon-spacing-block-between-multiline);  /* vertical between lines */
   }
-
 }
 
 .spectrum-Breadcrumbs-item {
-  display: inline-flex;
-  align-items: center;
-  justify-content: flex-start;
-
   box-sizing: border-box;
 
   position: relative;
+
+  display: inline-flex;
 
   white-space: nowrap;
   font-family: var(--spectrum-breadcrumbs-font-family);
   font-size: var(--spectrum-breadcrumbs-font-size);
   font-weight: var(--spectrum-breadcrumbs-font-weight);
-
-  margin-block-start: var(--spectrum-breadcrumbs-text-spacing-block-start);
-  margin-block-end: var(--spectrum-breadcrumbs-text-spacing-block-end);
+  line-height: 1.3; /* missing token */
 
   .spectrum-Breadcrumbs--compact & {
     font-family: var(--spectrum-breadcrumbs-font-family-compact);
     font-size: var(--spectrum-breadcrumbs-font-size-compact);
     font-weight: var(--spectrum-breadcrumbs-font-weight-compact);
-
-    /* compact vertical spacing */
-    margin-block-start: var(--spectrum-breadcrumbs-text-spacing-block-start-compact);
-    margin-block-end: var(--spectrum-breadcrumbs-text-spacing-block-end-compact);
 
     > .spectrum-ActionButton {
       margin-block: var(--spectrum-breadcrumbs-action-button-spacing-block-compact);
@@ -199,16 +191,9 @@ governing permissions and limitations under the License.
     font-size: var(--spectrum-breadcrumbs-font-size-multiline);
     font-weight: var(--spectrum-breadcrumbs-font-weight-multiline);
 
-    /* multiline vertical spacing */
-    margin-block-start: var(--spectrum-breadcrumbs-text-spacing-block-start-multiline);
-    margin-block-end: var(--spectrum-breadcrumbs-text-spacing-block-between-multiline); /* vertical between lines */
-
     &:last-of-type {
       block-size: auto;
       inline-size: 100%;
-
-      margin-block-start: 0;
-      margin-block-end: var(--spectrum-breadcrumbs-text-spacing-block-end-multiline);
     }
 
     > .spectrum-ActionButton {
@@ -236,6 +221,11 @@ governing permissions and limitations under the License.
       font-family: var(--spectrum-breadcrumbs-font-family-multiline-current);
       font-size: var(--spectrum-breadcrumbs-font-size-multiline-current);
       font-weight: var(--spectrum-breadcrumbs-font-weight-multiline-current);
+
+      .spectrum-Breadcrumbs-itemLink {
+        margin-block-start: 0;
+        margin-block-end: var(--spectrum-breadcrumbs-text-spacing-block-end-multiline);
+      }
     }
   }
 
@@ -262,22 +252,33 @@ governing permissions and limitations under the License.
   cursor: default;
   position: relative;
 
-  display: inline-flex;
-  align-items: center;
-  justify-content: flex-start;
-
   box-sizing: border-box;
 
-  border-radius: var(--spectrum-breadcrumbs-item-link-border-radius); /* placeholder for token */
+  display: block;
 
+  border-radius: var(--spectrum-breadcrumbs-item-link-border-radius); /* placeholder for token */
   outline: none;
 
   text-decoration: none;
-
   color: var(--spectrum-breadcrumbs-text-color);
+
+  margin-block-start: var(--spectrum-breadcrumbs-text-spacing-block-start);
+  margin-block-end: var(--spectrum-breadcrumbs-text-spacing-block-end);
 
   .spectrum-Breadcrumbs-item:last-of-type & {
     color: var(--spectrum-breadcrumbs-text-color-current);
+  }
+
+  .spectrum-Breadcrumbs--compact & {
+    /* compact vertical spacing */
+    margin-block-start: var(--spectrum-breadcrumbs-text-spacing-block-start-compact);
+    margin-block-end: var(--spectrum-breadcrumbs-text-spacing-block-end-compact);
+  }
+
+  .spectrum-Breadcrumbs--multiline & {
+    /* multiline vertical spacing */
+    margin-block-start: var(--spectrum-breadcrumbs-text-spacing-block-start-multiline);
+    margin-block-end: var(--spectrum-breadcrumbs-text-spacing-block-between-multiline); /* vertical between lines */
   }
 
   &[href],
@@ -298,9 +299,12 @@ governing permissions and limitations under the License.
 .spectrum-Breadcrumbs-itemLink:focus-ring:before {
   position: absolute;
   left: 0;
-  right: 0;
+
 
   margin-inline-start: calc((var(--mod-breadcrumbs-focus-indicator-gap, var(--spectrum-breadcrumbs-focus-indicator-gap))
+                                + var(--mod-breadcrumbs-focus-indicator-thickness, var(--spectrum-breadcrumbs-focus-indicator-thickness)))
+                                * -1);
+  margin-block-start: calc((var(--mod-breadcrumbs-focus-indicator-gap, var(--spectrum-breadcrumbs-focus-indicator-gap))
                                 + var(--mod-breadcrumbs-focus-indicator-thickness, var(--spectrum-breadcrumbs-focus-indicator-thickness)))
                                 * -1);
 
