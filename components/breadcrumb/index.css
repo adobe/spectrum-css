@@ -165,12 +165,10 @@ governing permissions and limitations under the License.
 
 .spectrum-Breadcrumbs-item {
   box-sizing: border-box;
-
   position: relative;
-
   display: inline-flex;
-
   white-space: nowrap;
+
   font-family: var(--spectrum-breadcrumbs-font-family);
   font-size: var(--spectrum-breadcrumbs-font-size);
   font-weight: var(--spectrum-breadcrumbs-font-weight);
@@ -315,9 +313,7 @@ governing permissions and limitations under the License.
 
   border-width: var(--spectrum-breadcrumbs-focus-indicator-thickness);
   border-style: solid;
-  border-radius: calc(var(--mod-breadcrumbs-item-link-border-radius, var(--spectrum-breadcrumbs-item-link-border-radius))
-                       + var(--mod-breadcrumbs-focus-indicator-gap, var(--spectrum-breadcrumbs-focus-indicator-gap))
-                       + var(--mod-breadcrumbs-focus-indicator-thickness, var(--spectrum-breadcrumbs-focus-indicator-thickness)));
+  border-radius: var(--mod-breadcrumbs-item-link-border-radius, var(--spectrum-breadcrumbs-item-link-border-radius));
 
   content: "";
   pointer-events: none;
