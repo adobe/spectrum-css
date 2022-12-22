@@ -103,11 +103,9 @@ governing permissions and limitations under the License.
     content: "";
     position: absolute;
     top: calc(
-      var(--mod-avatar-focus-indicator-gap, var(--spectrum-avatar-focus-indicator-gap)) *
-      -2);
+      var(--mod-avatar-focus-indicator-gap, var(--spectrum-avatar-focus-indicator-gap)) * -2);
     left: calc(
-      var(--mod-avatar-focus-indicator-gap, var(--spectrum-avatar-focus-indicator-gap)) *
-      -2);
+      var(--mod-avatar-focus-indicator-gap, var(--spectrum-avatar-focus-indicator-gap)) * -2);
   
     inline-size: calc(
       var(--mod-avatar-inline-size, var(--spectrum-avatar-inline-size)) +
