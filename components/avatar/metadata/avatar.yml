@@ -148,14 +148,10 @@ examples:
         <div class="spectrum-Examples-item">
           <h4 class="spectrum-Heading spectrum-Heading--sizeXS spectrum-Examples-itemHeading">700</h4>
           <div class="spectrum-Avatar spectrum-Avatar--size700">
-            <a href="#" class="spectrum-Avatar-link">
-              <img class="spectrum-Avatar-image" src="img/example-ava.jpg" alt="Avatar">
-            </a>
+            <img class="spectrum-Avatar-image" src="img/example-ava.jpg" alt="Avatar">
           </div>
           <div class="spectrum-Avatar spectrum-Avatar--size700 is-disabled"">
-            <a href="#" class="spectrum-Avatar-link">
-              <img class="spectrum-Avatar-image" src="img/example-ava.jpg" alt="Disabled Avatar">
-            </a>
+            <img class="spectrum-Avatar-image" src="img/example-ava.jpg" alt="Disabled Avatar">
           </div>
         </div>
       </div>
