@@ -107,7 +107,13 @@ governing permissions and limitations under the License.
 /* windows high contrast mode */
 @media (forced-colors: active) {
   .spectrum-Breadcrumbs {
+    --highcontrast-breadcrumbs-text-color: LinkText;
+    --highcontrast-breadcrumbs-text-color-current: CanvasText;
+    --highcontrast-breadcrumbs-separator-color: CanvasText;
+    --highcontrast-breadcrumbs-action-button-color: LinkText;
+    --highcontrast-breadcrumbs-action-button-color-disabled: GrayText;
 
+    --highcontrast-breadcrumbs-focus-indicator-color: CanvasText;
   }
 }
 
@@ -151,7 +157,7 @@ governing permissions and limitations under the License.
   transform: logical scale(1) rotate(0deg);
 
   opacity: 1;
-  color: var(--mod-breadcrumbs-separator-color, var(--spectrum-breadcrumbs-separator-color));
+  color: var(--highcontrast-breadcrumbs-separator-color, var(--mod-breadcrumbs-separator-color, var(--spectrum-breadcrumbs-separator-color)));
 
   .spectrum-Breadcrumbs--compact & {
     margin-block: var(--mod-breadcrumbs-icon-spacing-block-compact, var(--spectrum-breadcrumbs-icon-spacing-block-compact));
@@ -231,10 +237,10 @@ governing permissions and limitations under the License.
     margin-inline: var(--mod-breadcrumbs-action-button-spacing-inline, var(--spectrum-breadcrumbs-action-button-spacing-inline));
     margin-block: var(--mod-breadcrumbs-action-button-spacing-block, var(--spectrum-breadcrumbs-action-button-spacing-block));
 
-    color: var(--mod-breadcrumbs-action-button-color, var(--spectrum-breadcrumbs-action-button-color));
+    color: var(--highcontrast-breadcrumbs-action-button-color, var(--mod-breadcrumbs-action-button-color, var(--spectrum-breadcrumbs-action-button-color)));
 
     &:disabled {
-      color: var(--mod-breadcrumbs-action-button-color-disabled, var(--spectrum-breadcrumbs-action-button-color-disabled));
+      color: var(--highcontrast-breadcrumbs-action-button-color-disabled, var(--mod-breadcrumbs-action-button-color-disabled, var(--spectrum-breadcrumbs-action-button-color-disabled)));
     }
   }
 
@@ -258,13 +264,13 @@ governing permissions and limitations under the License.
   outline: none;
 
   text-decoration: none;
-  color: var(--mod-breadcrumbs-text-color, var(--spectrum-breadcrumbs-text-color));
+  color: var(--highcontrast-breadcrumbs-text-color, var(--mod-breadcrumbs-text-color, var(--spectrum-breadcrumbs-text-color)));
 
   margin-block-start: var(--mod-breadcrumbs-text-spacing-block-start, var(--spectrum-breadcrumbs-text-spacing-block-start));
   margin-block-end: var(--mod-breadcrumbs-text-spacing-block-end, var(--spectrum-breadcrumbs-text-spacing-block-end));
 
   .spectrum-Breadcrumbs-item:last-of-type & {
-    color: var(--mod-breadcrumbs-text-color-current, var(--spectrum-breadcrumbs-text-color-current));
+    color: var(--highcontrast-breadcrumbs-text-color-current, var(--mod-breadcrumbs-text-color-current, var(--spectrum-breadcrumbs-text-color-current)));
   }
 
   .spectrum-Breadcrumbs--compact & {
@@ -319,5 +325,5 @@ governing permissions and limitations under the License.
   content: "";
   pointer-events: none;
 
-  border-color: var(--mod-breadcrumbs-focus-indicator-color, var(--spectrum-breadcrumbs-focus-indicator-color));
+  border-color: var(--highcontrast-breadcrumbs-focus-indicator-color, var(--mod-breadcrumbs-focus-indicator-color, var(--spectrum-breadcrumbs-focus-indicator-color)));
 }
