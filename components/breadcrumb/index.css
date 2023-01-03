@@ -95,7 +95,7 @@ governing permissions and limitations under the License.
   --spectrum-breadcrumbs-item-link-border-radius: var(--spectrum-corner-radius-100);
 
   /* COLORS */
-  --spectrum-breadcrumbs-text-color : var(--spectrum-neutral-subdued-content-color-default);
+  --spectrum-breadcrumbs-text-color: var(--spectrum-neutral-subdued-content-color-default);
   --spectrum-breadcrumbs-text-color-current: var(--spectrum-neutral-content-color-default);
   --spectrum-breadcrumbs-separator-color: var(--spectrum-neutral-content-color-default);
   --spectrum-breadcrumbs-action-button-color: var(--spectrum-neutral-subdued-content-color-default);
@@ -116,8 +116,8 @@ governing permissions and limitations under the License.
 
   margin: 0;
   /* horizontal spacing of list */
-  padding-inline-start: var(--spectrum-breadcrumbs-inline-start);
-  padding-inline-end: var(--spectrum-breadcrumbs-inline-end);
+  padding-inline-start: var(--mod-breadcrumbs-inline-start, var(--spectrum-breadcrumbs-inline-start));
+  padding-inline-end: var(--mod-breadcrumbs-inline-end, var(--spectrum-breadcrumbs-inline-end));
 
   display: flex;
   flex-wrap: nowrap;
@@ -128,14 +128,14 @@ governing permissions and limitations under the License.
   flex-direction: row;
   align-items: center;
 
-  block-size: var(--spectrum-breadcrumbs-block-size);
+  block-size: var(--mod-breadcrumbs-block-size, var(--spectrum-breadcrumbs-block-size));
 
   &--compact {
-    block-size: var(--spectrum-breadcrumbs-block-size-compact);
+    block-size: var(--mod-breadcrumbs-block-size-compact, var(--spectrum-breadcrumbs-block-size-compact));
   }
 
   &--multiline {
-    block-size: var(--spectrum-breadcrumbs-block-size-multiline);
+    block-size: var(--mod-breadcrumbs-block-size-multiline, var(--spectrum-breadcrumbs-block-size-multiline));
 
     flex-wrap: wrap;
     align-content: center;
@@ -145,21 +145,21 @@ governing permissions and limitations under the License.
 .spectrum-Breadcrumbs-itemSeparator {
   position: relative;
 
-  margin-block: var(--spectrum-breadcrumbs-icon-spacing-block);
-  margin-inline: var(--spectrum-breadcrumbs-separator-spacing-inline);
+  margin-block: var(--mod-breadcrumbs-icon-spacing-block, var(--spectrum-breadcrumbs-icon-spacing-block));
+  margin-inline: var(--mod-breadcrumbs-separator-spacing-inline, var(--spectrum-breadcrumbs-separator-spacing-inline));
 
   transform: logical scale(1) rotate(0deg);
 
   opacity: 1;
-  color: var(--spectrum-breadcrumbs-separator-color);
+  color: var(--mod-breadcrumbs-separator-color, var(--spectrum-breadcrumbs-separator-color));
 
   .spectrum-Breadcrumbs--compact & {
-    margin-block: var(--spectrum-breadcrumbs-icon-spacing-block-compact);
+    margin-block: var(--mod-breadcrumbs-icon-spacing-block-compact, var(--spectrum-breadcrumbs-icon-spacing-block-compact));
   }
 
   .spectrum-Breadcrumbs--multiline & {
-    margin-block-start: var(--spectrum-breadcrumbs-icon-spacing-block-start-multiline);
-    margin-block-end: var(--spectrum-breadcrumbs-icon-spacing-block-between-multiline);  /* vertical between lines */
+    margin-block-start: var(--mod-breadcrumbs-icon-spacing-block-start-multiline, var(--spectrum-breadcrumbs-icon-spacing-block-start-multiline));
+    margin-block-end: var(--mod-breadcrumbs-icon-spacing-block-between-multiline, var(--spectrum-breadcrumbs-icon-spacing-block-between-multiline));  /* vertical between lines */
   }
 }
 
@@ -169,25 +169,25 @@ governing permissions and limitations under the License.
   display: inline-flex;
   white-space: nowrap;
 
-  font-family: var(--spectrum-breadcrumbs-font-family);
-  font-size: var(--spectrum-breadcrumbs-font-size);
-  font-weight: var(--spectrum-breadcrumbs-font-weight);
+  font-family: var(--mod-breadcrumbs-font-family, var(--spectrum-breadcrumbs-font-family));
+  font-size: var(--mod-breadcrumbs-font-size, var(--spectrum-breadcrumbs-font-size));
+  font-weight: var(--mod-breadcrumbs-font-weight, var(--spectrum-breadcrumbs-font-weight));
   line-height: 1.3; /* missing token */
 
   .spectrum-Breadcrumbs--compact & {
-    font-family: var(--spectrum-breadcrumbs-font-family-compact);
-    font-size: var(--spectrum-breadcrumbs-font-size-compact);
-    font-weight: var(--spectrum-breadcrumbs-font-weight-compact);
+    font-family: var(--mod-breadcrumbs-font-family-compact, var(--spectrum-breadcrumbs-font-family-compact));
+    font-size: var(--mod-breadcrumbs-font-size-compact, var(--spectrum-breadcrumbs-font-size-compact));
+    font-weight: var(--mod-breadcrumbs-font-weight-compact, var(--spectrum-breadcrumbs-font-weight-compact));
 
     > .spectrum-ActionButton {
-      margin-block: var(--spectrum-breadcrumbs-action-button-spacing-block-compact);
+      margin-block: var(--mod-breadcrumbs-action-button-spacing-block-compact, var(--spectrum-breadcrumbs-action-button-spacing-block-compact));
     }
   }
 
   .spectrum-Breadcrumbs--multiline & {
-    font-family: var(--spectrum-breadcrumbs-font-family-multiline);
-    font-size: var(--spectrum-breadcrumbs-font-size-multiline);
-    font-weight: var(--spectrum-breadcrumbs-font-weight-multiline);
+    font-family: var(--mod-breadcrumbs-font-family-multiline, var(--spectrum-breadcrumbs-font-family-multiline));
+    font-size: var(--mod-breadcrumbs-font-size-multiline, var(--spectrum-breadcrumbs-font-size-multiline));
+    font-weight: var(--mod-breadcrumbs-font-weight-multiline, var(--spectrum-breadcrumbs-font-weight-multiline));
 
     &:last-of-type {
       block-size: auto;
@@ -195,53 +195,53 @@ governing permissions and limitations under the License.
     }
 
     > .spectrum-ActionButton {
-      margin-block-start: var(--spectrum-breadcrumbs-action-button-spacing-block-multiline);
-      margin-block-end: var(--spectrum-breadcrumbs-action-button-spacing-block-between-multiline);
+      margin-block-start: var(--mod-breadcrumbs-action-button-spacing-block-multiline, var(--spectrum-breadcrumbs-action-button-spacing-block-multiline));
+      margin-block-end: var(--mod-breadcrumbs-action-button-spacing-block-between-multiline, var(--spectrum-breadcrumbs-action-button-spacing-block-between-multiline));
     }
   }
 
   &:last-of-type {
-    font-family: var(--spectrum-breadcrumbs-font-family-current);
-    font-size: var(--spectrum-breadcrumbs-font-size-current);
-    font-weight: var(--spectrum-breadcrumbs-font-weight-current);
+    font-family: var(--mod-breadcrumbs-font-family-current, var(--spectrum-breadcrumbs-font-family-current));
+    font-size: var(--mod-breadcrumbs-font-size-current, var(--spectrum-breadcrumbs-font-size-current));
+    font-weight: var(--mod-breadcrumbs-font-weight-current, var(--spectrum-breadcrumbs-font-weight-current));
 
     .spectrum-Breadcrumbs-itemSeparator {
       display: none;
     }
 
     .spectrum-Breadcrumbs--compact &:last-of-type {
-      font-family: var(--spectrum-breadcrumbs-font-family-compact-current);
-      font-size: var(--spectrum-breadcrumbs-font-size-compact-current);
-      font-weight: var(--spectrum-breadcrumbs-font-weight-compact-current);
+      font-family: var(--mod-breadcrumbs-font-family-compact-current, var(--spectrum-breadcrumbs-font-family-compact-current));
+      font-size: var(--mod-breadcrumbs-font-size-compact-current, var(--spectrum-breadcrumbs-font-size-compact-current));
+      font-weight: var(--mod-breadcrumbs-font-weight-compact-current, var(--spectrum-breadcrumbs-font-weight-compact-current));
     }
 
     .spectrum-Breadcrumbs--multiline &:last-of-type {
-      font-family: var(--spectrum-breadcrumbs-font-family-multiline-current);
-      font-size: var(--spectrum-breadcrumbs-font-size-multiline-current);
-      font-weight: var(--spectrum-breadcrumbs-font-weight-multiline-current);
+      font-family: var(--mod-breadcrumbs-font-family-multiline-current, var(--spectrum-breadcrumbs-font-family-multiline-current));
+      font-size: var(--mod-breadcrumbs-font-size-multiline-current, var(--spectrum-breadcrumbs-font-size-multiline-current));
+      font-weight: var(--mod-breadcrumbs-font-weight-multiline-current, var(--spectrum-breadcrumbs-font-weight-multiline-current));
 
       .spectrum-Breadcrumbs-itemLink {
         margin-block-start: 0;
-        margin-block-end: var(--spectrum-breadcrumbs-text-spacing-block-end-multiline);
+        margin-block-end: var(--mod-breadcrumbs-text-spacing-block-end-multiline, var(--spectrum-breadcrumbs-text-spacing-block-end-multiline));
       }
     }
   }
 
   > .spectrum-ActionButton {
-    margin-inline: var(--spectrum-breadcrumbs-action-button-spacing-inline);
-    margin-block: var(--spectrum-breadcrumbs-action-button-spacing-block);
+    margin-inline: var(--mod-breadcrumbs-action-button-spacing-inline, var(--spectrum-breadcrumbs-action-button-spacing-inline));
+    margin-block: var(--mod-breadcrumbs-action-button-spacing-block, var(--spectrum-breadcrumbs-action-button-spacing-block));
 
-    color: var(--spectrum-breadcrumbs-action-button-color);
+    color: var(--mod-breadcrumbs-action-button-color, var(--spectrum-breadcrumbs-action-button-color));
 
     &:disabled {
-      color: var(--spectrum-breadcrumbs-action-button-color-disabled);
+      color: var(--mod-breadcrumbs-action-button-color-disabled, var(--spectrum-breadcrumbs-action-button-color-disabled));
     }
   }
 
   &:first-of-type {
     /* if folder icon is first item */
     > .spectrum-ActionButton {
-      margin-inline-start: var(--spectrum-breadcrumbs-action-button-spacing-inline-start);
+      margin-inline-start: var(--mod-breadcrumbs-action-button-spacing-inline-start, var(--spectrum-breadcrumbs-action-button-spacing-inline-start));
     }
   }
 }
@@ -254,29 +254,29 @@ governing permissions and limitations under the License.
 
   display: block;
 
-  border-radius: var(--spectrum-breadcrumbs-item-link-border-radius); /* placeholder for token */
+  border-radius: var(--mod-breadcrumbs-item-link-border-radius, var(--spectrum-breadcrumbs-item-link-border-radius)); /* placeholder for token */
   outline: none;
 
   text-decoration: none;
-  color: var(--spectrum-breadcrumbs-text-color);
+  color: var(--mod-breadcrumbs-text-color, var(--spectrum-breadcrumbs-text-color));
 
-  margin-block-start: var(--spectrum-breadcrumbs-text-spacing-block-start);
-  margin-block-end: var(--spectrum-breadcrumbs-text-spacing-block-end);
+  margin-block-start: var(--mod-breadcrumbs-text-spacing-block-start, var(--spectrum-breadcrumbs-text-spacing-block-start));
+  margin-block-end: var(--mod-breadcrumbs-text-spacing-block-end, var(--spectrum-breadcrumbs-text-spacing-block-end));
 
   .spectrum-Breadcrumbs-item:last-of-type & {
-    color: var(--spectrum-breadcrumbs-text-color-current);
+    color: var(--mod-breadcrumbs-text-color-current, var(--spectrum-breadcrumbs-text-color-current));
   }
 
   .spectrum-Breadcrumbs--compact & {
     /* compact vertical spacing */
-    margin-block-start: var(--spectrum-breadcrumbs-text-spacing-block-start-compact);
-    margin-block-end: var(--spectrum-breadcrumbs-text-spacing-block-end-compact);
+    margin-block-start: var(--mod-breadcrumbs-text-spacing-block-start-compact, var(--spectrum-breadcrumbs-text-spacing-block-start-compact));
+    margin-block-end: var(--mod-breadcrumbs-text-spacing-block-end-compact, var(--spectrum-breadcrumbs-text-spacing-block-end-compact));
   }
 
   .spectrum-Breadcrumbs--multiline & {
     /* multiline vertical spacing */
-    margin-block-start: var(--spectrum-breadcrumbs-text-spacing-block-start-multiline);
-    margin-block-end: var(--spectrum-breadcrumbs-text-spacing-block-between-multiline); /* vertical between lines */
+    margin-block-start: var(--mod-breadcrumbs-text-spacing-block-start-multiline, var(--spectrum-breadcrumbs-text-spacing-block-start-multiline));
+    margin-block-end: var(--mod-breadcrumbs-text-spacing-block-between-multiline, var(--spectrum-breadcrumbs-text-spacing-block-between-multiline)); /* vertical between lines */
   }
 
   &[href],
@@ -286,8 +286,8 @@ governing permissions and limitations under the License.
     &:hover,
     &:focus-ring {
       text-decoration: underline;
-      text-decoration-thickness: var(--spectrum-breadcrumbs-text-decoration-thickness);
-      text-underline-offset: var(--spectrum-breadcrumbs-text-decoration-gap);
+      text-decoration-thickness: var(--mod-breadcrumbs-text-decoration-thickness, var(--spectrum-breadcrumbs-text-decoration-thickness));
+      text-underline-offset: var(--mod-breadcrumbs-text-decoration-gap, var(--spectrum-breadcrumbs-text-decoration-gap));
     }
   }
 }
@@ -298,7 +298,6 @@ governing permissions and limitations under the License.
   position: absolute;
   left: 0;
 
-
   margin-inline-start: calc((var(--mod-breadcrumbs-focus-indicator-gap, var(--spectrum-breadcrumbs-focus-indicator-gap))
                                 + var(--mod-breadcrumbs-focus-indicator-thickness, var(--spectrum-breadcrumbs-focus-indicator-thickness)))
                                 * -1);
@@ -308,15 +307,17 @@ governing permissions and limitations under the License.
 
   box-sizing: border-box;
   display: block;
-  inline-size: calc(100% + (var(--spectrum-breadcrumbs-focus-indicator-gap) * 2) + (var(--spectrum-breadcrumbs-focus-indicator-thickness) * 2));
-  block-size: calc(100% + (var(--spectrum-breadcrumbs-focus-indicator-gap) * 2) + (var(--spectrum-breadcrumbs-focus-indicator-thickness) * 2));
+  inline-size: calc(100% + (var(--mod-breadcrumbs-focus-indicator-gap, var(--spectrum-breadcrumbs-focus-indicator-gap)) * 2)
+                    + (var(--mod-breadcrumbs-focus-indicator-thickness, var(--spectrum-breadcrumbs-focus-indicator-thickness)) * 2));
+  block-size: calc(100% + (var(--mod-breadcrumbs-focus-indicator-gap, var(--spectrum-breadcrumbs-focus-indicator-gap)) * 2)
+                    + (var(--mod-breadcrumbs-focus-indicator-thickness, var(--spectrum-breadcrumbs-focus-indicator-thickness)) * 2));
 
-  border-width: var(--spectrum-breadcrumbs-focus-indicator-thickness);
+  border-width: var(--mod-breadcrumbs-focus-indicator-thickness, var(--spectrum-breadcrumbs-focus-indicator-thickness));
   border-style: solid;
   border-radius: var(--mod-breadcrumbs-item-link-border-radius, var(--spectrum-breadcrumbs-item-link-border-radius));
 
   content: "";
   pointer-events: none;
 
-  border-color: var(--spectrum-breadcrumbs-focus-indicator-color);
+  border-color: var(--mod-breadcrumbs-focus-indicator-color, var(--spectrum-breadcrumbs-focus-indicator-color));
 }
