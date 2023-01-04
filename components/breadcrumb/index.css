@@ -312,7 +312,6 @@ governing permissions and limitations under the License.
 .spectrum-Breadcrumbs-item.is-dragged .spectrum-Breadcrumbs-itemLink:before,
 .spectrum-Breadcrumbs-itemLink:focus-ring:before {
   position: absolute;
-  left: 0;
 
   margin-inline-start: calc((var(--mod-breadcrumbs-focus-indicator-gap, var(--spectrum-breadcrumbs-focus-indicator-gap))
                                 + var(--mod-breadcrumbs-focus-indicator-thickness, var(--spectrum-breadcrumbs-focus-indicator-thickness)))
