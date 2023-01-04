@@ -96,7 +96,8 @@ governing permissions and limitations under the License.
 
   /* COLORS */
   --spectrum-breadcrumbs-text-color: var(--spectrum-neutral-subdued-content-color-default);
-  --spectrum-breadcrumbs-text-color-current: var(--spectrum-neutral-content-color-default);
+  --spectrum-breadcrumbs-text-color-current: var(--spectrum-neutral-content-color-default); /* PLACEHOLDER */
+  --spectrum-breadcrumbs-text-color-disabled: var(--spectrum-disabled-content-color);
   --spectrum-breadcrumbs-separator-color: var(--spectrum-neutral-content-color-default);
   --spectrum-breadcrumbs-action-button-color: var(--spectrum-neutral-subdued-content-color-default);
   --spectrum-breadcrumbs-action-button-color-disabled: var(--spectrum-disabled-content-color);
@@ -109,6 +110,7 @@ governing permissions and limitations under the License.
   .spectrum-Breadcrumbs {
     --highcontrast-breadcrumbs-text-color: LinkText;
     --highcontrast-breadcrumbs-text-color-current: CanvasText;
+    --highcontrast-breadcrumbs-text-color-disabled: GrayText;
     --highcontrast-breadcrumbs-separator-color: CanvasText;
     --highcontrast-breadcrumbs-action-button-color: LinkText;
     --highcontrast-breadcrumbs-action-button-color-disabled: GrayText;
@@ -268,6 +270,10 @@ governing permissions and limitations under the License.
 
   margin-block-start: var(--mod-breadcrumbs-text-spacing-block-start, var(--spectrum-breadcrumbs-text-spacing-block-start));
   margin-block-end: var(--mod-breadcrumbs-text-spacing-block-end, var(--spectrum-breadcrumbs-text-spacing-block-end));
+
+  &.is-disabled {
+    color: var(--highcontrast-breadcrumbs-text-color-disabled, var(--mod-breadcrumbs-text-color-disabled, var(--spectrum-breadcrumbs-text-color-disabled)));
+  }
 
   .spectrum-Breadcrumbs-item:last-of-type & {
     color: var(--highcontrast-breadcrumbs-text-color-current, var(--mod-breadcrumbs-text-color-current, var(--spectrum-breadcrumbs-text-color-current)));
