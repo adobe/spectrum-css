@@ -100,7 +100,8 @@ governing permissions and limitations under the License.
   }
 }
 
-.spectrum-Avatar:not(.is-disabled) .spectrum-Avatar-link:focus {
+.spectrum-Avatar:not(.is-disabled) .spectrum-Avatar-link.focus-ring,
+.spectrum-Avatar:not(.is-disabled) .spectrum-Avatar-link:focus-visible {
   &::after {
     pointer-events: none;
     content: "";
