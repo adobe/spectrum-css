@@ -1,5 +1,5 @@
 /*
-Copyright 2022 Adobe. All rights reserved.
+Copyright 2023 Adobe. All rights reserved.
 This file is licensed to you under the Apache License, Version 2.0 (the "License");
 you may not use this file except in compliance with the License. You may obtain a copy
 of the License at http://www.apache.org/licenses/LICENSE-2.0
@@ -11,11 +11,12 @@ governing permissions and limitations under the License.
 */
 
 .spectrum-Avatar {
-  --spectrum-avatar-border-radius: 50%;
   --spectrum-avatar-color-opacity: 1;
 
   --spectrum-avatar-inline-size: var(--spectrum-avatar-size-100);
   --spectrum-avatar-block-size: var(--spectrum-avatar-size-100);
+
+  --spectrum-avatar-border-radius: var(--spectrum-avatar-block-size);
 
   --spectrum-avatar-focus-indicator-thickness: var(--spectrum-focus-indicator-thickness);
   --spectrum-avatar-focus-indicator-gap: var(--spectrum-focus-indicator-gap);
@@ -97,15 +98,15 @@ governing permissions and limitations under the License.
   &.is-disabled {
     opacity: var(--highcontrast-avatar-color-opacity-disabled, var(--mod-avatar-color-opacity-disabled, var(--spectrum-avatar-color-opacity-disabled)));
   }
+}
 
-  &:focus-within:not(.is-disabled) .spectrum-Avatar-link::after {
+.spectrum-Avatar:not(.is-disabled) .spectrum-Avatar-link:focus {
+  &::after {
     pointer-events: none;
     content: "";
     position: absolute;
-    top: calc(
-      var(--mod-avatar-focus-indicator-gap, var(--spectrum-avatar-focus-indicator-gap)) * -2);
-    left: calc(
-      var(--mod-avatar-focus-indicator-gap, var(--spectrum-avatar-focus-indicator-gap)) * -2);
+    inset-block-start: calc((var(--mod-avatar-focus-indicator-gap, var(--spectrum-avatar-focus-indicator-gap)) + var(--mod-avatar-focus-indicator-thickness, var(--spectrum-avatar-focus-indicator-thickness))) * -1);
+    inset-inline-start: calc((var(--mod-avatar-focus-indicator-gap, var(--spectrum-avatar-focus-indicator-gap)) + var(--mod-avatar-focus-indicator-thickness, var(--spectrum-avatar-focus-indicator-thickness))) * -1);
   
     inline-size: calc(
       var(--mod-avatar-inline-size, var(--spectrum-avatar-inline-size)) +
