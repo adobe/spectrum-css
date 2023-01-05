@@ -93,7 +93,10 @@ governing permissions and limitations under the License.
   --spectrum-textfield-border-color-invalid-keyboard-focus: var(--spectrum-negative-border-color-key-focus);
   --spectrum-textfield-icon-color-invalid: var(--spectrum-negative-visual-color);
 
+  --spectrum-textfield-text-color-invalid: var(--spectrum-neutral-content-color-default);
+
    /* Valid Colors */
+  --spectrum-textfield-text-color-valid: var(--spectrum-neutral-content-color-default);
   --spectrum-textfield-icon-color-valid: var(--spectrum-positive-visual-color);
 
    /* Focus Indicator Color */
@@ -197,20 +200,21 @@ governing permissions and limitations under the License.
 /********* WHCM *********/
 @media (forced-colors: active) {
   .spectrum-Textfield {
-    --spectrum-textfield-border-color-hover: Highlight;
-    --spectrum-textfield-border-color-keyboard-focus: Highlight;
+    --highcontrast-textfield-border-color-hover: Highlight;
+    --highcontrast-textfield-border-color-keyboard-focus: Highlight;
 
-    --spectrum-textfield-border-color-invalid-default: Highlight;
-    --spectrum-textfield-border-color-invalid-hover: Highlight;
-    --spectrum-textfield-border-color-invalid-keyboard-focus: Highlight;
+    --highcontrast-textfield-border-color-invalid-default: Highlight;
+    --highcontrast-textfield-border-color-invalid-hover: Highlight;
+    --highcontrast-textfield-border-color-invalid-keyboard-focus: Highlight;
 
-    --spectrum-textfield-text-color-default: GrayText;
-    --spectrum-textfield-text-color-hover: GrayText;
-    --spectrum-textfield-text-color-keyboard-focus: GrayText;
-    --spectrum-textfield-text-color-disabled: GrayText;
-    --spectrum-textfield-text-color-readonly: CanvasText;
+    --highcontrast-textfield-text-color-default: GrayText;
+    --highcontrast-textfield-text-color-hover: GrayText;
+    --highcontrast-textfield-text-color-keyboard-focus: GrayText;
+    --highcontrast-textfield-text-color-disabled: GrayText;
+    --highcontrast-textfield-text-color-readonly: CanvasText;
 
-    --spectrum-textfield-focus-indicator-color: Highlight;
+    --highcontrast-textfield-text-color-valid: CanvasText;
+    --highcontrast-textfield-text-color-invalid: CanvasText;
 
     &.is-focused,
     &.is-keyboardFocused {
@@ -403,7 +407,7 @@ governing permissions and limitations under the License.
   .is-keyboardFocused & {
     /* focus indicator is focused state */
     &::after {
-      border-color: var(--highcontrast-textfield-focus-indicator-color, var(--mod-textfield-focus-indicator-color, var(--spectrum-textfield-focus-indicator-color)));
+      border-color: var(--mod-textfield-focus-indicator-color, var(--spectrum-textfield-focus-indicator-color));
       border-width: var(--mod-textfield-focus-indicator-width, var(--spectrum-textfield-focus-indicator-width));
     }
   }
@@ -568,8 +572,14 @@ governing permissions and limitations under the License.
     }
   }
 
+  /*** Input Valid ✅ ***/
+  .is-valid & {
+    color: var(--highcontrast-textfield-text-color-valid, var(--mod-textfield-text-color-valid, var(--spectrum-textfield-text-color-valid)));
+  }
+
   /*** Input Invalid ⚠️ ***/
   .is-invalid & {
+    color: var(--highcontrast-textfield-text-color-invalid, var(--mod-textfield-text-color-invalid, var(--spectrum-textfield-text-color-invalid)));
     border-color: var(--highcontrast-textfield-border-color-invalid-default, var(--mod-textfield-border-color-invalid-default, var(--spectrum-textfield-border-color-invalid-default)));
   }
 
