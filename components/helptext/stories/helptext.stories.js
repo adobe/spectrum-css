@@ -1,6 +1,3 @@
-// More on default export: https://storybook.js.org/docs/web-components/writing-stories/introduction#default-export
-// More on args: https://storybook.js.org/docs/web-components/writing-stories/args
-
 // Import the component markup template
 import { Template } from "./template";
 
@@ -12,6 +9,16 @@ export default {
   description: "Help text provides either an informative description or an error message that gives more context about what a user needs to input. It’s commonly used in forms.",
   component: "HelpText",
   argTypes: {
+    rootClass: {
+      name: "Class name",
+      type: { name: "string", required: true },
+      defaultValue: "spectrum-HelpText",
+      table: { disable: true },
+      control: {
+        readonly: true,
+      }
+    },
+    customClasses: { table: { disable: true } },
     reducedMotion: { table: { disable: true } },
     text: {
       name: "Text",

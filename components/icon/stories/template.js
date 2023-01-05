@@ -1,35 +1,58 @@
 import { html } from 'lit-html';
+import { ifDefined } from 'lit-html/directives/if-defined.js';
 import { unsafeHTML } from 'lit-html/directives/unsafe-html.js';
 
-const fetchIconSVG = (iconName, scale, setName = undefined) => {
-  if (!setName || setName === 'workflow') {
-    // Check adobe workflow icons first
-    let icon = require(`!!raw-loader!@adobe/spectrum-css-workflow-icons/dist/${scale !== 'medium' ? `24` : `18`}/${iconName}.svg`);
+const fetchIconSVG = (
+  iconName,
+  scale = 'medium',
+  setName = 'workflow'
+) => {
+  let icon;
+
+  // Check adobe workflow icons first
+  if (setName === 'workflow') {
+    try {
+      icon = require(`!!raw-loader!@adobe/spectrum-css-workflow-icons/dist/${scale !== 'medium' ? `24` : `18`}/${iconName}.svg`);
+    } catch (e) {}
+
     if (icon && icon.default) {
-      return {
-        icon: icon.default,
-        setName: 'workflow'
-      };
+      icon = icon.default;
     }
   }
 
   // Check locally for icon set if not found
-  icon = require(`!!raw-loader!../${scale ? scale : 'medium'}/${iconName}.svg`);
+  if (setName === 'ui' || !icon) {
+    try {
+      icon = require(`!!raw-loader!@spectrum-css/icon/${scale ? scale : 'medium'}/${iconName}.svg`);
+    } catch (e) {}
 
-  return {
-    icon: icon ? icon.default : undefined,
-    setName: 'ui'
-  };
+    if (icon && icon.default) {
+      setName = 'ui';
+      icon = icon.default;
+    }
+  }
+
+  return { icon, setName };
 }
 
+/**
+ * @typedef { keyof import("./icon.stories").default.args } IconArgs
+ * @typedef { IconArgs & { scale: string, useRef: boolean, setName: 'workflow' | 'ui' } } IconProps
+ */
+
+/**
+ * Template for rendering an icon
+ * @type {(IconProps) => import('lit-html').TemplateResult<1>}
+ */
 export const Template = ({
-    iconName,
-    size = 'm', 
-    fill = undefined,
-    scale = 'medium',
-    customClasses = [],
-    useRef = false,
-    setName = undefined,
+  rootClass,
+  iconName,
+  size = 'm',
+  fill,
+  scale = 'medium',
+  customClasses = [],
+  useRef = false,
+  setName = 'workflow',
 }) => {
   if (!iconName) return html``;
 
@@ -38,7 +61,7 @@ export const Template = ({
     const iconData = fetchIconSVG(iconName, scale, setName);
 
     if (!iconData || !iconData.icon) {
-      console.error(`Icon ${iconName} not found in ${!setName ? `either the workflow or UI set.` : `the ${setName} set.`}`); 
+      console.error(`Icon ${iconName} not found in ${!setName ? `either the workflow or UI set.` : `the ${setName} set.`}`);
       return;
     }
 
@@ -46,24 +69,24 @@ export const Template = ({
     setName = iconData.setName;
   }
 
-  const className = !setName || setName === 'workflow' ? 'spectrum-Icon' : 'spectrum-UIIcon';
-  const classList = [ className, ...customClasses ];
+  const className = !setName || setName === 'workflow' ? '' : 'spectrum-UIIcon';
+  const classList = {
+    [rootClass]: true,
+    [setName === 'ui' ? 'spectrum-UIIcon' : '']: true,
+    ...customClasses.map(c => ({ [c]: true })),
+  };
 
   // If the icon was found in the workflow set, add the standard classes
   if (setName === 'workflow') {
-    classList.push(
-      `${className}--size${size.toUpperCase()}`,
-    );
+    if (size) classList.push(`${className}--size${size.toUpperCase()}`);
   } else {
-    classList.push(
-      `${className}-${iconName}`,
-      `${className}--${scale}`
-    );
+    classList.push(`${className}-${iconName}`);
+    if (scale) classList.push(`${className}--${scale}`);
   }
 
   const inlineStyle = fill ? `color: ${fill}` : '';
   if (!useRef) {
-    const iconString = iconSVG.replace(/^<svg(.*)>/, `<svg class="${classList.join(' ')}" style="${inlineStyle}" focusable="false" aria-hidden="true" role="img" $1>`);
+    const iconString = iconSVG.replace(/^<svg(.*)>/, `<svg class=${classMap(classList)} style=${ifDefined(inlineStyle)} focusable="false" aria-hidden="true" role="img" $1>`);
     return html`${unsafeHTML(iconString)}`;
   }
 
@@ -77,7 +100,7 @@ export const Template = ({
   }
 
   return html`
-    <svg class=${classList.join(' ')} style=${inlineStyle} focusable="false" aria-hidden="true" aria-labelledby=${iconName} role="img">
+    <svg class=${classMap(classList)} style=${ifDefined(inlineStyle)} focusable="false" aria-hidden="true" aria-labelledby=${iconName} role="img">
       <title id=${iconName}>${iconName.replace(/([A-Z])/g, ' $1').trim()}</title>
       <use xlink:href="#${iconID}" href="#${iconID}"/>
     </svg>
