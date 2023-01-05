@@ -16,9 +16,24 @@ governing permissions and limitations under the License.
 }
 
 .spectrum {
+  --spectrum-animation-linear: cubic-bezier(0, 0, 1, 1);
+  --spectrum-animation-duration-0: 0ms;
   --spectrum-animation-duration-100: 130ms;
   --spectrum-animation-duration-200: 160ms;
+  --spectrum-animation-duration-300: 190ms;
+  --spectrum-animation-duration-400: 220ms;
   --spectrum-animation-duration-500: 250ms;
+  --spectrum-animation-duration-600: 300ms;
+  --spectrum-animation-duration-700: 350ms;
+  --spectrum-animation-duration-800: 400ms;
+  --spectrum-animation-duration-900: 450ms;
+  --spectrum-animation-duration-1000: 500ms;
+  --spectrum-animation-duration-2000: 1000ms;
+  --spectrum-animation-duration-4000: 2000ms;
+  --spectrum-animation-ease-in-out: cubic-bezier(.45, 0, .40, 1);
+  --spectrum-animation-ease-in: cubic-bezier(.50, 0, 1, 1);
+  --spectrum-animation-ease-out: cubic-bezier(0, 0, 0.40, 1);
+  --spectrum-animation-ease-linear: cubic-bezier(0, 0, 1, 1);
 
   --spectrum-font-family-base: adobe-clean, 'Source Sans Pro', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Ubuntu, 'Trebuchet MS', 'Lucida Grande', sans-serif;
   --spectrum-font-family-serif: adobe-clean-serif, 'Source Serif Pro', Georgia, serif;
