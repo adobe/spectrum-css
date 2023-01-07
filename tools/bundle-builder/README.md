@@ -48,7 +48,7 @@ The following tasks are available:
 * `gulp buildLite` - Build only the custom properties for every component, generate the documentation site
 * `gulp buildHeavy` - Build all CSS for every component, generate the documentation site
 * `gulp dev` - Perform a lite build, start a server, and watch for changes
-* `gulp devHeavy` - Perform a heavy build, start a server, and watch for changes. **Use this when testing IE 11**
+* `gulp devHeavy` - Perform a heavy build, start a server, and watch for changes.
 * `gulp watch` - If a build as already been performed, start a server and watch for changes
 * `gulp release` - Perform a release
 
