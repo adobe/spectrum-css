@@ -34,7 +34,6 @@ export default async (plop) => {
 		return pkgs;
 	}, []);
 
-	// plop.setHelper('or', () => Array.prototype.slice.call(arguments, 0, -1).some(Boolean));
 	plop.setHelper('parse', (str, sep = '/', start = 0, end = undefined) => {
 		if (!str) return;
 		const array = str.split(sep);
