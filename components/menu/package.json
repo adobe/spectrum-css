@@ -13,7 +13,7 @@
     "url": "https://github.com/adobe/spectrum-css/issues"
   },
   "scripts": {
-    "build": "gulp"
+    "build": "node index.js"
   },
   "peerDependencies": {
     "@spectrum-css/divider": "^1.0.23",

@@ -5,7 +5,7 @@
   "license": "Apache-2.0",
   "main": "dist/index.css",
   "scripts": {
-    "build": "gulp build"
+    "build": "node index.js"
   },
   "repository": {
     "type": "git",

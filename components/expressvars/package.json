@@ -5,7 +5,8 @@
   "license": "Apache-2.0",
   "main": "dist/spectrum-metadata.json",
   "scripts": {
-    "update": "gulp update"
+    "update": "gulp update",
+    "build": "node index.js"
   },
   "repository": {
     "type": "git",
