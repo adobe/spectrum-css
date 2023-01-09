@@ -10,6 +10,7 @@
     "build:preview": "yarn workspace @spectrum-css/preview build",
     "dev": "NODE_ENV=development BROWSERSYNC_OPEN=true gulp dev",
     "clean": "gulp clean",
+    "new": "yarn workspace @spectrum-css/generator new",
     "mv:preview": "mv tools/preview/storybook-static dist/preview",
     "start": "NODE_ENV=development yarn workspace @spectrum-css/preview start",
     "ci-all": "yarn build",
