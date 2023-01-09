@@ -11,10 +11,7 @@ governing permissions and limitations under the License.
 */
 
 const path = require('path');
-const fsp = require('fs').promises;
 const gulp = require('gulp');
-const ext = require('replace-ext');
-const logger = require('gulplog');
 const through = require('through2');
 
 const del = require('del');

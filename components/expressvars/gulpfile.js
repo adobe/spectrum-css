@@ -11,7 +11,6 @@ governing permissions and limitations under the License.
 */
 
 const gulp = require('gulp');
-const logger = require('gulplog');
 const fs = require('fs');
 const concat = require('gulp-concat');
 const replace = require('gulp-replace');

@@ -11,10 +11,7 @@ governing permissions and limitations under the License.
 */
 
 const path = require('path');
-const fsp = require('fs').promises;
 const gulp = require('gulp');
-const ext = require('replace-ext');
-const logger = require('gulplog');
 const through = require('through2');
 
 const del = require('del');
@@ -357,7 +354,6 @@ function generateDNAFiles() {
         let fullName = `${varBaseName}-${varName}`;
         let cssVariableName = getCSSVariableReference(value);
         if (colorVariables[fullName] && colorVariables[fullName].cssVariableName !== cssVariableName) {
-          // logger.debug(`Found override for ${fullName} (${colorVariables[fullName].cssVariableName} vs ${cssVariableName})`);
           componentColorOverrides[colorVariables[fullName].name][fullName] = colorVariables[fullName].value;
           componentColorOverrides[stopName][fullName] = value;
           overriddenTokens[fullName] = true;
@@ -384,7 +380,6 @@ function generateDNAFiles() {
         let fullName = `${varBaseName}-${varName}`;
         let cssVariableName = getCSSVariableReference(value);
         if (dimensionVariables[fullName] && dimensionVariables[fullName].cssVariableName !== cssVariableName) {
-          // logger.debug(`Found override for ${fullName} (${dimensionVariables[fullName].cssVariableName} vs ${cssVariableName})`);
           componentDimensionOverrides[dimensionVariables[fullName].name][fullName] = dimensionVariables[fullName].value;
           componentDimensionOverrides[scaleName][fullName] = value;
           overriddenTokens[fullName] = true;
