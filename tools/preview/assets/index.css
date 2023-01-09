@@ -1,3 +1,10 @@
+body {
+  font-family: var(--spectrum-font-family-base);
+  background-color: var(--spectrum-alias-background-color-default, var(--spectrum-global-color-gray-100));
+  color: var(--spectrum-alias-text-color-default, var(--spectrum-global-color-gray-900));
+  -webkit-tap-highlight-color: rgba(0,0,0,0);
+}
+
 .sidebar-header > div:has(img,a) {
   margin-right: 8px;
 }

@@ -3,7 +3,7 @@ import {
   withTextDirectionWrapper,
   withLanguageWrapper,
   withReducedMotionWrapper
-} from "./decorators/index.js";
+} from './decorators/index.js';
 
 import '@spectrum-css/vars/css/globals/index.css';
 import '@spectrum-css/expressvars/css/globals/index.css';
@@ -27,9 +27,7 @@ import '@spectrum-css/expressvars/css/scales/spectrum-large.css';
 
 import '@spectrum-css/tokens/dist/index.css';
 
-window.addEventListener('DOMContentLoaded', () => {
-  document.body.classList.add('spectrum');
-});
+import './global.js';
 
 // Rendered as controls; these properties are assigned
 //      to the document root element
@@ -75,7 +73,7 @@ export const argTypes = {
       options: ['light', 'dark', 'darkest'],
       defaultValue: 'light',
       type: { required: true },
-      table: { category: "Global", defaultValue: { summary: 'light' } },
+      table: { category: 'Global', defaultValue: { summary: 'light' } },
       control: {
         type: 'select',
         labels: {
@@ -88,7 +86,7 @@ export const argTypes = {
     scale: {
       name: 'Platform scale',
       defaultValue: 'medium',
-      table: { category: "Global", defaultValue: { summary: 'm' } },
+      table: { category: 'Global', defaultValue: { summary: 'm' } },
       options: ['medium', 'large'],
       type: { required: true },
       control: {
@@ -106,14 +104,14 @@ export const argTypes = {
       description: 'Reduce animation and transitions',
       defaultValue: false,
       control: { type: 'boolean' },
-      table: { category: "Global", defaultValue: { summary: false } },
+      table: { category: 'Global', defaultValue: { summary: false } },
       type: { required: true },
     },
     express: {
       name: 'Express',
       description: 'Use the express theme',
       defaultValue: false,
-      table: { category: "Global", defaultValue: { summary: false } },
+      table: { category: 'Global', defaultValue: { summary: false } },
       type: { required: true },
       control: { type: 'boolean' },
     },

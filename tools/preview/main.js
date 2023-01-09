@@ -18,7 +18,7 @@ module.exports = {
       options: {
         viewport: false, // Don't need viewports b/c the medium/large contexts are used to support scaling.
         backgrounds: false, // Don't need backgrounds b/c this is handled by the color contexts.
-        configureJSX: true, // Enables JSX support in MDX for projects that aren't configured to handle the format. 
+        configureJSX: true, // Enables JSX support in MDX for projects that aren't configured to handle the format.
         transcludeMarkdown: true, // Support markdown in MDX files.
       }
     },
@@ -119,7 +119,7 @@ module.exports = {
               options: {
                 injectType: "linkTag",
                 attributes: {
-                  "data-source": "processed"
+                  "data-source": "raw"
                 }
               }
             },
