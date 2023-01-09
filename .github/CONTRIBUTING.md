@@ -65,10 +65,16 @@ Install dependencies:
 yarn install
 ```
 
+To generate a new component, run the generator:
+
+```shell
+yarn new component
+```
+
 Build the project, open a livereloading browser window, and watch for changes:
 
 ```shell
-gulp dev
+yarn dev
 ```
 
 Commit changes with a [conventional commit message](https://www.conventionalcommits.org), making sure to correctly use `feat:`, `fix:`, and `BREAKING CHANGE` accordingly, and referencing the relevant issue number (if any):
