@@ -201,10 +201,13 @@ governing permissions and limitations under the License.
 @media (forced-colors: active) {
   .spectrum-Textfield {
     --highcontrast-textfield-border-color-hover: Highlight;
+    --highcontrast-textfield-border-color-focus: Highlight;
     --highcontrast-textfield-border-color-keyboard-focus: Highlight;
+    --highcontrast-textfield-focus-indicator-color: CanvasText;
 
     --highcontrast-textfield-border-color-invalid-default: Highlight;
     --highcontrast-textfield-border-color-invalid-hover: Highlight;
+    --highcontrast-textfield-border-color-invalid-focus: Highlight;
     --highcontrast-textfield-border-color-invalid-keyboard-focus: Highlight;
 
     --highcontrast-textfield-text-color-default: GrayText;
@@ -407,7 +410,7 @@ governing permissions and limitations under the License.
   .is-keyboardFocused & {
     /* focus indicator is focused state */
     &::after {
-      border-color: var(--mod-textfield-focus-indicator-color, var(--spectrum-textfield-focus-indicator-color));
+      border-color: var(--highcontrast-textfield-focus-indicator-color, var(--mod-textfield-focus-indicator-color, var(--spectrum-textfield-focus-indicator-color)));
       border-width: var(--mod-textfield-focus-indicator-width, var(--spectrum-textfield-focus-indicator-width));
     }
   }
