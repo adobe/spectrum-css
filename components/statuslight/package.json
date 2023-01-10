@@ -3,7 +3,7 @@
   "version": "5.0.6",
   "description": "The Spectrum CSS statuslight component",
   "license": "Apache-2.0",
-  "main": "dist/index-vars.css",
+  "homepage": "https://opensource.adobe.com/spectrum-css/",
   "repository": {
     "type": "git",
     "url": "https://github.com/adobe/spectrum-css.git",
@@ -12,6 +12,7 @@
   "bugs": {
     "url": "https://github.com/adobe/spectrum-css/issues"
   },
+  "main": "dist/index-vars.css",
   "scripts": {
     "build": "gulp"
   },
@@ -25,6 +26,5 @@
   },
   "publishConfig": {
     "access": "public"
-  },
-  "homepage": "https://opensource.adobe.com/spectrum-css/"
+  }
 }

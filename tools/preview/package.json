@@ -1,14 +1,21 @@
 {
-  "author": "Adobe",
-  "description": "A Spectrum CSS preview",
-  "license": "Apache-2.0",
-  "main": "main.js",
   "name": "@spectrum-css/preview",
   "version": "1.0.4",
+  "description": "A Spectrum CSS preview",
+  "license": "Apache-2.0",
+  "author": "Adobe",
   "homepage": "https://opensource.adobe.com/spectrum-css/preview",
+  "main": "main.js",
   "scripts": {
     "build": "build-storybook --config-dir .",
     "start": "WATCH_MODE=true start-storybook -p 6006 --config-dir ."
+  },
+  "dependencies": {
+    "@adobe/spectrum-css-workflow-icons": "^1.2.1",
+    "@spectrum-css/expressvars": "^2.0.1",
+    "@spectrum-css/icon": "^3.0.25",
+    "@spectrum-css/tokens": "^4.0.0",
+    "@spectrum-css/vars": "^8.0.0"
   },
   "devDependencies": {
     "@babel/core": "^7.20.5",
@@ -39,12 +46,5 @@
     "react-syntax-highlighter": "^15.5.0",
     "source-map-loader": "^1.0.0",
     "webpack": "^4.46.0"
-  },
-  "dependencies": {
-    "@adobe/spectrum-css-workflow-icons": "^1.2.1",
-    "@spectrum-css/expressvars": "^2.0.1",
-    "@spectrum-css/icon": "^3.0.25",
-    "@spectrum-css/tokens": "^4.0.0",
-    "@spectrum-css/vars": "^8.0.0"
   }
 }

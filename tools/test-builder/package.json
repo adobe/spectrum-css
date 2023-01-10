@@ -1,8 +1,9 @@
 {
+  "private": true,
   "name": "@spectrum-css/test-builder",
   "version": "1.0.3",
-  "private": true,
   "description": "The Spectrum CSS text builder",
+  "license": "Apache-2.0",
   "repository": {
     "type": "git",
     "url": "https://github.com/adobe/spectrum-css.git",
@@ -11,7 +12,6 @@
   "bugs": {
     "url": "https://github.com/adobe/spectrum-css/issues"
   },
-  "license": "Apache-2.0",
   "dependencies": {
     "del": "^5.0.0",
     "gulp": "^4.0.0",

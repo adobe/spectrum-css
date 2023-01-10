@@ -3,10 +3,7 @@
   "version": "2.0.1",
   "description": "The Spectrum CSS vars for Express package",
   "license": "Apache-2.0",
-  "main": "dist/spectrum-metadata.json",
-  "scripts": {
-    "update": "gulp update"
-  },
+  "homepage": "https://opensource.adobe.com/spectrum-css/",
   "repository": {
     "type": "git",
     "url": "https://github.com/adobe/spectrum-css.git",
@@ -14,6 +11,10 @@
   },
   "bugs": {
     "url": "https://github.com/adobe/spectrum-css/issues"
+  },
+  "main": "dist/spectrum-metadata.json",
+  "scripts": {
+    "update": "gulp update"
   },
   "devDependencies": {
     "del": "^5.0.0",
@@ -27,6 +28,5 @@
   },
   "publishConfig": {
     "access": "public"
-  },
-  "homepage": "https://opensource.adobe.com/spectrum-css/"
+  }
 }
