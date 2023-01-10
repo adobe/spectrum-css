@@ -22,7 +22,9 @@ module.exports = function (eleventyConfig) {
   eleventyConfig.addNunjucksGlobal("WATCH_MODE", process.env.WATCH_MODE)
   eleventyConfig.setUseGitIgnore(false)
 
-  
+  eleventyConfig.addPassthroughCopy({ "site/resources/img": "img" })
+  eleventyConfig.addPassthroughCopy({ "site/resources/js": "js" })
+  eleventyConfig.addPassthroughCopy({ "site/resources/css": "css" })
   let markdownIt = require("markdown-it")
   let markdownItAnchors = require("markdown-it-anchor")
   let options = {
