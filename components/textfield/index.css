@@ -735,7 +735,7 @@ governing permissions and limitations under the License.
   .spectrum-Textfield-input {
     min-inline-size: var(--mod-text-area-min-inline-size, var(--spectrum-text-area-min-inline-size));
     min-block-size: var(--mod-text-area-min-block-size, var(--spectrum-text-area-min-block-size));
-    resize: none;
+    resize: inherit;
   }
 
   &.spectrum-Textfield--quiet {
