@@ -3,10 +3,11 @@
   "version": "0.0.0",
   "private": true,
   "homepage": "https://opensource.adobe.com/spectrum-css/",
+  "type":"module",
   "scripts": {
     "build:all": "run-p build:11ty build:css",
-    "dev:11ty": "NODE_ENV=development BROWSERSYNC_OPEN=true @11ty/eleventy --config=.eleventy.cjs --serve",
-    "build:11ty": "@11ty/eleventy --config=.eleventy.cjs",
+    "dev:11ty": "NODE_ENV=development BROWSERSYNC_OPEN=true npx @11ty/eleventy --config=./site/.eleventy.cjs --serve",
+    "build:11ty": "npx @11ty/eleventy --config=./site/.eleventy.cjs",
     "build:css": "node ./tasks/build-css.js && pretty-quick --fix --pattern \"{components}/**/*.css\"",
     "build:css:watch": "node ./tasks/watch-css.js",
     "build:watch": "run-p build:css:watch",
