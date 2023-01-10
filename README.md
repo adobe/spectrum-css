@@ -11,19 +11,21 @@ Spectrum CSS provides a standard CSS implementation of the Spectrum design langu
 
 ## Show me a demo
 
-Check out [the documentation site](http://opensource.adobe.com/spectrum-css/) for a demo of every component included in Spectrum CSS.
+Check out the [component viewer](http://opensource.adobe.com/spectrum-css/preview) for a demo of every component included in Spectrum CSS or spin it up locally with: `yarn start`. This preview is driven by [Storybook](https://storybook.js.org/docs/web-components/get-started/introduction), a development tool that enables rapid prototyping and test suite integration.
+
+Alternatively, you can preview the [documentation site](http://opensource.adobe.com/spectrum-css/) or spin up the site locally with: `yarn dev`.
 
 ## Where is the JavaScript?
 
 Spectrum CSS is CSS-only, implementing only the interactivity that can be done with pure CSS. Thus, Spectrum CSS should only be used by implementations of Spectrum, or very simple applications that only need things like typography, checkboxes, text fields, etc.
 
-Adobe maintains separate JavaScript libraries written with React, Angular, and web components that use Spectrum CSS to create fully interactive Spectrum components. These libraries will be open sourced soon.
+Adobe maintains separate JavaScript libraries written with [web components](https://opensource.adobe.com/spectrum-web-components/) and [React](https://react-spectrum.adobe.com/react-spectrum/index.html) that use Spectrum CSS to create fully interactive Spectrum components.
 
 ## Using Spectrum CSS
 
-The preferred method of using Spectrum CSS relies on custom properties to swap out variables for different themes and colorstops. This has the lowest bundle size and the simplest usage, but is incompatible with < IE 11
+The preferred method of using Spectrum CSS relies on custom properties to swap out variables for different themes and colorstops. This has the lowest bundle size and the simplest usage, but is incompatible with < IE 11.
 
-To use Spectrum CSS with IE 11 or without, see the [legacy usage documentation](README-legacy.md).
+To use Spectrum CSS with IE 11, see the [legacy usage documentation](README-legacy.md).
 
 ### Installing components
 
@@ -31,7 +33,7 @@ Each component is released on npm as a separate, individually versioned package 
 
 To get started, install the following components:
 
-```
+```shell
 npm install @spectrum-css/vars @spectrum-css/typography @spectrum-css/page @spectrum-css/icon @spectrum-css/button
 ```
 
@@ -41,11 +43,7 @@ If you are an existing user of Spectrum CSS and rely on the previous bundle pack
 
 ### Using components
 
-Spectrum CSS components have build output that uses CSS custom properties to change themes and scales. This has the lowest bundle size and the simplest usage, but is incompatible with IE 11.
-
-To use Spectrum CSS with IE 11, see the [legacy usage documentation](README-legacy.md).
-
-If you're targeting modern browsers, start by including the base set of variables:
+Spectrum CSS components have build output that uses CSS custom properties to change themes and scales. Start by including the base set of variables:
 
 ```html
 <!-- Include global variables first -->
@@ -70,7 +68,8 @@ If you're targeting modern browsers, start by including the base set of variable
 <link rel="stylesheet" href="node_modules/@spectrum-css/button/dist/index-vars.css">
 ```
 
-Then, make sure you've included the relevant classes to choose which scale and colorstop you want:
+Make sure you've included the relevant classes to choose which scale and colorstop you want:
+
 ```html
 <html class="spectrum spectrum--medium spectrum--light">
 ```
@@ -90,9 +89,9 @@ To switch to Express, load vars from `@spectrum-css/expressvars` instead of `@sp
 </head>
 ```
 
-Then you can use components by copy/pasting their code from [the documentation](http://opensource.adobe.com/spectrum-css/).
+Components can then be added by leveraging the code from [the documentation](http://opensource.adobe.com/spectrum-css/).
 
-With the magic of CSS custom properties, you can infinitely nest different color stops and themes, [as illustrated here](https://codepen.io/lazd/pen/axXMRL).
+Because CSS custom properties honor the cascading nature of CSS, you can infinitely nest different colorstops and themes, [as illustrated here](https://codepen.io/lazd/pen/axXMRL).
 
 ### Modifying components
 
@@ -117,7 +116,6 @@ Based on which scales you'll be using, you can choose to load different files:
 * `@spectrum-css/icon/dist/spectrum-css-icons-medium.svg` - Medium icons only, supports `.spectrum--medium` only
 * `@spectrum-css/icon/dist/spectrum-css-icons-large.svg` - Large icons only, supports `.spectrum--large` only
 
-
 **Note:** If you're using `spectrum-css-icons.svg`, be sure to add `.spectrum--medium` or `.spectrum--large` to the `<html>` element, or you'll see both medium and large icons at once.
 
 ### Importing workflow icons
@@ -139,6 +137,7 @@ To take advantage of locale specific changes such as placeholders not italicizin
 In addition, you must set the `dir` attribute for components to render correctly.
 
 For English, a left-to-right language:
+
 ```html
 <html lang="en" dir="ltr">
 ```
@@ -189,7 +188,7 @@ You've created an `index.css` that imports a few components, a scale, and a colo
 
 To build an more optimized bundle, you can employ a few simple PostCSS plugins. First, install them:
 
-```sh
+```shell
 npm i postcss-import postcss-varfallback postcss-dropunusedvars cssnano --save-dev
 ```
 
@@ -208,7 +207,7 @@ module.exports = {
 
 Finally, include PostCSS in your build process, or run it from the command line:
 
-```sh
+```shell
 postcss -o dist/index.min.css index.css
 ```
 
@@ -266,19 +265,21 @@ Check out the [contributing guidelines](.github/CONTRIBUTING.md) for quick start
 
 Run the following commands:
 
-```
+```shell
 yarn global add gulp-cli
 yarn install
-gulp dev
+yarn start
 ```
 
-Your `dist/` folder should now have a local copy of the Spectrum CSS docs and minimal CSS files, and your browser should be open with the project documentation. Editing any of the `.css` or `.yml` files in `components/*` will update the project documentation and live reload in your browser.
+Your `dist/` folder should now have a local copy of the Spectrum CSS docs and minimal CSS files, and your browser should be open with the project's preview site. Editing any of the `.css` or the `.stories.js` files in `components/*` will update the project documentation and live reload in your browser.
 
 **Important:** Ensure you have Node.js > 10.10 installed or the build system will not run. Node.js > 12.x is preferred.
 
+To spin up the local development environment ([Storybook](https://storybook.js.org/docs/web-components/get-started/introduction)) without first building the components, use: `SKIP_BUILD=true yarn start` as `yarn start` alone will start from a clean build.
+
 ### Documentation site
 
-#### Local development
+#### Local documentation site
 
 Building the project will build and launch the project documentation site in your browser automatically.
 
@@ -288,7 +289,7 @@ See [site generation](site/README.md) and [documentation generation](tools/bundl
 
 Checkout `nextjs` branch, pull, and install dependencies.
 
-```
+```shell
 git checkout nextjs
 git pull
 yarn install
@@ -296,59 +297,58 @@ yarn install
 
 Update `yml` data from main
 
-```
+```shell
 yarn importdata
 ```
 
 Run `prep` script to build the static site locally
 
-```
+```shell
 yarn prep
 ````
 
 Commit changes
 
-```
+```shell
 git commit -am '<message here>'
 ```
 
 Deploy
 
-```
+```shell
 yarn deploy
 ```
 
 Push changes to `nextjs` branch
 
-```
+```shell
 git push origin nextjs
 ```
 
 ### Updating Tokens / CSS variables from Spectrum DNA
+
 Instructions for updating tokens from [Spectrum DNA](https://git.corp.adobe.com/Spectrum/spectrum-dna) can be found here:
 [components/vars/README.md](components/vars/README.md)
-
 
 ### CLI
 
 The following tasks are available:
 
-- `gulp build` - Performs a build of all components and the top level package
-- `gulp buildComponents` - Performs a build of all components
-- `gulp dev` - Performs a lite build (custom properties only), runs browsersync and serves the documentation on the default port (3000), then starts watching components and website files
-- `gulp clean` - Cleans all output files for the project and all components
-- `gulp watch` - Assuming a build has already been performed, re-starts starts watching components and website files. Presumes a browser is already open to your locally served docs
-- `gulp watch-relaunch` - Restarts watch and opens a new browser for the docs URL
-- `gulp buildCombined` - Builds the combined output files (`dist/spectrum-*.css`)
-- `gulp buildStandalone` - Builds the standalone output files (`dist/standalone/spectrum-*.css`)
-- `gulp release` - Performs a release of the top-level package
-- `gulp packageLint` - Lint the `package.json` file for each component in the monorepo
-- `gulp readmeLint` - Generate a generic `README.md` file for each component in the monorepo
+* `gulp build` - Performs a build of all components and the top level package
+* `gulp buildComponents` - Performs a build of all components
+* `gulp dev` - Performs a lite build (custom properties only), runs browsersync and serves the documentation on the default port (3000), then starts watching components and website files
+* `gulp clean` - Cleans all output files for the project and all components
+* `gulp watch` - Assuming a build has already been performed, re-starts starts watching components and website files. Presumes a browser is already open to your locally served docs
+* `gulp watch-relaunch` - Restarts watch and opens a new browser for the docs URL
+* `gulp buildCombined` - Builds the combined output files (`dist/spectrum-*.css`)
+* `gulp buildStandalone` - Builds the standalone output files (`dist/standalone/spectrum-*.css`)
+* `gulp release` - Performs a release of the top-level package
+* `gulp packageLint` - Lint the `package.json` file for each component in the monorepo
+* `gulp readmeLint` - Generate a generic `README.md` file for each component in the monorepo
 
 Note: `yarn run dev` will run `gulp dev` above but trigger browsersync to open the documentation URL. You can set `BROWSERSYNC_OPEN=true` to change dev and watch to always open the URL.
 
 You can set a new port for `watch` by setting `BROWSERSYNC_PORT=<port number>`, e.g. `export BROWSERSYNC_PORT=9000; gulp watch` to set the port to `9000`.
-
 
 ## Testing
 
@@ -372,11 +372,10 @@ The reference bitmap images are published as an NPM package [@spectrum-css/spect
 
 The following yarn scripts are available for testing:
 
-- `yarn run backstop:docker:test` - Run all the visual regression tests.
-- `yarn run backstop:docker:test button` - Run test for `button` component only.
+* `yarn run backstop:docker:test` - Run all the visual regression tests.
+* `yarn run backstop:docker:test button` - Run test for `button` component only.
 
 ___
-
 
 ## Releasing
 
@@ -386,7 +385,7 @@ Releasing individual components is handled by Lerna. When any component or its d
 
 To release everything that has changed, simply run:
 
-```
+```shell
 npm run release
 ```
 
@@ -396,7 +395,7 @@ Version numbers are automatically determined, changelogs generated, and packages
 
 After performing a release, run the following command to release the website:
 
-```
+```shell
 npm run release:site
 ```
 
@@ -404,7 +403,7 @@ npm run release:site
 
 Bundles are released with a separate command, intended to be ran after individual components are released. To release bundles, simply run:
 
-```
+```shell
 npm run release:bundles
 ```
 
@@ -422,12 +421,13 @@ To publish prerelease versions:
 * Depending on the severity of your change(s), and before publishing to npm, Lerna should show a preview of the affected package version numbers that look something like: `@spectrum-css/tag: 3.3.8 => 3.3.9-beta.0`. Additionally, at this time, Lerna will ask if you would like to continue with publishing the changes or cancel.
 * Selecting `y` to publish will publish the affected package(s) to npm.
 
-### Manual prerelease versioning & publishing:
+### Manual prerelease versioning & publishing
+
 Occasionally, you may want to run a prerelease for an individual package and skip a version bump for consuming packages. It's possible to manually change a package's version number to achieve this.
+
 * For the package that you want to prerelease, manually alter the version number in the package's `package.json` file.
   * For example, let's say you'd like to release a `beta` version of the Switch component. In the Switch's `package.json`, manually change the `version` number from its current number (`"version": "1.0.23"`) to the next appropriate semver version number (`"version": "2.0.0-beta.0"`).
 * Save your changes, and commit them with the appropriate conventional commit-style commit message: `chore(switch): manual version bump for beta release` or something similar.
 * You **must** run a build **before** continuing with the prerelease. An npm task for cleaning, building, and beta publishing is available, and it can be run via the following command: `yarn run release:beta-from-package`. This command will perform a full `clean` (via the `clean` task), a full `build` (via the `build` task), and will attempt to publish the package (via `npx lerna publish --conventional-prerelease --preid beta --pre-dist-tag beta`).
 * Depending on the severity of your change(s), and before publishing to npm, Lerna should show a preview of the affected package version number that looks something like: `@spectrum-css/switch: 1.0.23 => 2.0.0-beta.0`. Additionally, at this time, Lerna will ask if you would like to continue with publishing the changes or cancel.
 * Selecting `y` to publish will publish the affected package(s) to npm.
-

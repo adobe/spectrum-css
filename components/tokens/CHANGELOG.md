@@ -3,6 +3,64 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+<a name="6.2.0"></a>
+# 6.2.0
+🗓 2023-01-05 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/tokens@6.1.0...@spectrum-css/tokens@6.2.0)
+
+### ✨ Features
+
+* **tokens:** adds global animation vars ([#1570](https://github.com/adobe/spectrum-css/issues/1570)) ([0450c28](https://github.com/adobe/spectrum-css/commit/0450c28))
+
+
+
+
+
+<a name="6.1.0"></a>
+# 6.1.0
+🗓 2022-12-15 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/tokens@6.0.0...@spectrum-css/tokens@6.1.0)
+
+### ✨ Features
+
+* **tokens:** use spectrum-tokens v12.0.0-beta.63 ([#1566](https://github.com/adobe/spectrum-css/issues/1566)) ([c91d20a](https://github.com/adobe/spectrum-css/commit/c91d20a))
+
+
+
+
+
+<a name="6.0.0"></a>
+# 6.0.0
+🗓 2022-12-09 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/tokens@5.0.0...@spectrum-css/tokens@6.0.0)
+
+* feat(tray)!: migrate to core tokens (#1535) ([442c5f6](https://github.com/adobe/spectrum-css/commit/442c5f6)), closes [#1535](https://github.com/adobe/spectrum-css/issues/1535)
+
+
+### 🛑 BREAKING CHANGES
+
+* migrates the Tray to core tokens
+
+* removes the `375px` breakpoint, which was previously used to apply a `max-width` and border radius to the Tray, and instead this uses an orientation media query to apply these styles when viewport is in landscape orientation or when the width is greater than the height.
+
+Co-authored-by: Patrick Fulton <pfulton@adobe.com>
+
+
+
+
+
+<a name="5.0.0"></a>
+# 5.0.0
+🗓 2022-11-29 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/tokens@4.0.0...@spectrum-css/tokens@5.0.0)
+
+* chore(tokens)!: use latest spectrum-tokens release (#1553) ([9ba68a3](https://github.com/adobe/spectrum-css/commit/9ba68a3)), closes [#1553](https://github.com/adobe/spectrum-css/issues/1553)
+
+
+### 🛑 BREAKING CHANGES
+
+* updates to the latest @adobe/spectrum-tokens release which includes many renamed and deleted tokens.
+
+
+
+
+
 <a name="4.0.0"></a>
 # 4.0.0
 🗓 2022-10-13 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/tokens@3.0.0...@spectrum-css/tokens@4.0.0)

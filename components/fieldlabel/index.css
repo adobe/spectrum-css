@@ -10,6 +10,9 @@ OF ANY KIND, either express or implied. See the License for the specific languag
 governing permissions and limitations under the License.
 */
 
+.spectrum-FieldLabel {
+  --spectrum-fieldlabel-color: var(--spectrum-neutral-subdued-content-color-default);
+}
 
 /* Component level tokens currently missing in core-tokens as of July 2022 or are simply incorrect */
 .spectrum--medium {
@@ -26,7 +29,7 @@ governing permissions and limitations under the License.
   --spectrum-fieldlabel-font-size: var(--spectrum-font-size-75);
 
   --spectrum-fieldlabel-line-height: var(--spectrum-line-height-100);
-  --spectrum-fieldlabel-cjk-line-height: var(--spectrum-cjk-line-height-100);
+  --spectrum-fieldlabel-line-height-cjk: var(--spectrum-line-height-cjk-100);
 
   --spectrum-fieldlabel-asterisk-gap: var(--spectrum-field-label-top-to-asterisk-small);
   --spectrum-fieldlabel-side-padding-top: var(--spectrum-component-top-to-text-75);
@@ -40,7 +43,7 @@ governing permissions and limitations under the License.
   --spectrum-fieldlabel-font-size: var(--spectrum-font-size-75);
 
   --spectrum-fieldlabel-line-height: var(--spectrum-line-height-200);
-  --spectrum-fieldlabel-cjk-line-height: var(--spectrum-cjk-line-height-200);
+  --spectrum-fieldlabel-line-height-cjk: var(--spectrum-line-height-cjk-200);
 
   --spectrum-fieldlabel-asterisk-gap: var(--spectrum-field-label-top-to-asterisk-medium);
   --spectrum-fieldlabel-side-padding-top: var(--spectrum-component-top-to-text-75);
@@ -54,7 +57,7 @@ governing permissions and limitations under the License.
   --spectrum-fieldlabel-font-size: var(--spectrum-font-size-100);
 
   --spectrum-fieldlabel-line-height: var(--spectrum-line-height-100);
-  --spectrum-fieldlabel-cjk-line-height: var(--spectrum-cjk-line-height-100);
+  --spectrum-fieldlabel-line-height-cjk: var(--spectrum-line-height-cjk-100);
 
   --spectrum-fieldlabel-asterisk-gap: var(--spectrum-field-label-top-to-asterisk-large);
   --spectrum-fieldlabel-side-padding-top: var(--spectrum-component-top-to-text-100);
@@ -68,7 +71,7 @@ governing permissions and limitations under the License.
   --spectrum-fieldlabel-font-size: var(--spectrum-font-size-200);
 
   --spectrum-fieldlabel-line-height: var(--spectrum-line-height-200);
-  --spectrum-fieldlabel-cjk-line-height: var(--spectrum-cjk-line-height-200);
+  --spectrum-fieldlabel-line-height-cjk: var(--spectrum-line-height-cjk-200);
 
 
   --spectrum-fieldlabel-asterisk-gap: var(--spectrum-field-label-top-to-asterisk-extra-large);
@@ -95,6 +98,8 @@ governing permissions and limitations under the License.
   -webkit-font-smoothing: subpixel-antialiased;
   -moz-osx-font-smoothing: auto;
   font-smoothing: subpixel-antialiased;
+
+  color: var(--spectrum-fieldlabel-color);
 }
 
 /* international lang support */
@@ -103,7 +108,7 @@ governing permissions and limitations under the License.
   &:lang(ja),
   &:lang(zh),
   &:lang(ko) {
-    line-height: var(--mod-fieldlabel-cjk-line-height, var(--spectrum-fieldlabel-cjk-line-height));
+    line-height: var(--mod-fieldlabel-line-height-cjk, var(--spectrum-fieldlabel-line-height-cjk));
   }
 }
 

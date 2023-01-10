@@ -3,6 +3,46 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+<a name="6.0.19"></a>
+## 6.0.19
+🗓 2022-12-16 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/dialog@6.0.18...@spectrum-css/dialog@6.0.19)
+
+**Note:** Version bump only for package @spectrum-css/dialog
+
+
+
+
+
+<a name="6.0.18"></a>
+## 6.0.18
+🗓 2022-12-14 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/dialog@6.0.16...@spectrum-css/dialog@6.0.18)
+
+**Note:** Version bump only for package @spectrum-css/dialog
+
+
+
+
+
+<a name="6.0.17"></a>
+## 6.0.17
+🗓 2022-12-13 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/dialog@6.0.16...@spectrum-css/dialog@6.0.17)
+
+**Note:** Version bump only for package @spectrum-css/dialog
+
+
+
+
+
+<a name="6.0.16"></a>
+## 6.0.16
+🗓 2022-11-11 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/dialog@6.0.15...@spectrum-css/dialog@6.0.16)
+
+**Note:** Version bump only for package @spectrum-css/dialog
+
+
+
+
+
 <a name="6.0.15"></a>
 ## 6.0.15
 🗓 2022-06-29 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/dialog@6.0.14...@spectrum-css/dialog@6.0.15)
