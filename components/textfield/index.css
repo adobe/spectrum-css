@@ -210,14 +210,25 @@ governing permissions and limitations under the License.
     --highcontrast-textfield-border-color-invalid-focus: Highlight;
     --highcontrast-textfield-border-color-invalid-keyboard-focus: Highlight;
 
-    --highcontrast-textfield-text-color-default: GrayText;
-    --highcontrast-textfield-text-color-hover: GrayText;
-    --highcontrast-textfield-text-color-keyboard-focus: GrayText;
-    --highcontrast-textfield-text-color-disabled: GrayText;
-    --highcontrast-textfield-text-color-readonly: CanvasText;
-
     --highcontrast-textfield-text-color-valid: CanvasText;
     --highcontrast-textfield-text-color-invalid: CanvasText;
+
+    .spectrum-Textfield-input {
+      --highcontrast-textfield-text-color-default: CanvasText;
+      --highcontrast-textfield-text-color-hover: CanvasText;
+      --highcontrast-textfield-text-color-keyboard-focus: CanvasText;
+      --highcontrast-textfield-text-color-disabled: GrayText;
+      --highcontrast-textfield-text-color-readonly: CanvasText;
+
+      &::placeholder {
+        --highcontrast-textfield-text-color-default: GrayText;
+        --highcontrast-textfield-text-color-hover: GrayText;
+        --highcontrast-textfield-text-color-keyboard-focus: GrayText;
+        --highcontrast-textfield-text-color-disabled: GrayText;
+        --highcontrast-textfield-text-color-readonly: CanvasText;
+      }
+    }
+
 
     &.is-focused,
     &.is-keyboardFocused {
