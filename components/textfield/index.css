@@ -288,6 +288,23 @@ governing permissions and limitations under the License.
   top: 0;
   bottom: 0;
   margin: auto;
+  color: var(--highcontrast-textfield-text-color-default, var(--mod-textfield-text-color-default, var(--spectrum-textfield-text-color-default)));
+
+  .spectrum-Textfield.is-disabled & {
+    color: var(--highcontrast-textfield-text-color-disabled, var(--mod-textfield-text-color-disabled, var(--spectrum-textfield-text-color-disabled)));
+  }
+
+  .spectrum-Textfield--quiet & {
+    color: var(--highcontrast-textfield-text-color-default, var(--mod-textfield-text-color-default, var(--spectrum-textfield-text-color-default)));
+  }
+
+  .spectrum-Textfield--quiet.is-disabled & {
+    color: var(--highcontrast-textfield-text-color-disabled, var(--mod-textfield-text-color-disabled, var(--spectrum-textfield-text-color-disabled)));
+  }
+
+  .spectrum-Textfield.is-readOnly & {
+    color: var(--highcontrast-textfield-text-color-readonly, var(--mod-textfield-text-color-readonly, var(--spectrum-textfield-text-color-readonly)));
+  }
 }
 
 /********* Child Component - Label *********/
