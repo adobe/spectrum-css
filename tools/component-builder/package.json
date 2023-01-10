@@ -2,6 +2,7 @@
   "name": "@spectrum-css/component-builder",
   "version": "3.2.1",
   "description": "The Spectrum CSS component builder",
+  "license": "Apache-2.0",
   "repository": {
     "type": "git",
     "url": "https://github.com/adobe/spectrum-css.git",
@@ -9,11 +10,6 @@
   },
   "bugs": {
     "url": "https://github.com/adobe/spectrum-css/issues"
-  },
-  "license": "Apache-2.0",
-  "peerDependencies": {
-    "@spectrum-css/tokens": "^1.0.0-beta",
-    "@spectrum-css/vars": "^8.0.0"
   },
   "dependencies": {
     "autoprefixer": "^6.5.3",
@@ -51,5 +47,9 @@
     "pug": "^3.0.1",
     "replace-ext": "^1.0.0",
     "through2": "^3.0.1"
+  },
+  "peerDependencies": {
+    "@spectrum-css/tokens": "^1.0.0-beta",
+    "@spectrum-css/vars": "^8.0.0"
   }
 }

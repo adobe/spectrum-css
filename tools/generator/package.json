@@ -14,8 +14,8 @@
   "bugs": {
     "url": "https://github.com/adobe/spectrum-css/issues"
   },
-  "main": "plopfile.js",
   "type": "module",
+  "main": "plopfile.js",
   "scripts": {
     "new": "plop",
     "test": "echo \"Error: no test specified\" && exit 1"
