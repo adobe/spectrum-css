@@ -26,7 +26,7 @@ governing permissions and limitations under the License.
 
   /* Size */
   --spectrum-progressbar-font-size: var(--spectrum-font-size-75);
-  --spectrum-progressbar-line-height-cjk: var(--spectrum-line-height-cjk-100);
+  --spectrum-progressbar-line-height-cjk: var(--spectrum-cjk-line-height-100);
 
   --spectrum-progressbar-min-size: var(--spectrum-progress-bar-minimum-width);
   --spectrum-progressbar-max-size: var(--spectrum-progress-bar-maximum-width);

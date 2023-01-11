@@ -34,7 +34,7 @@ governing permissions and limitations under the License.
   &:lang(ja),
   &:lang(zh),
   &:lang(ko) {
-    --spectrum-helptext-line-height-cjk: var(--spectrum-line-height-cjk-100);
+    --spectrum-helptext-line-height-cjk: var(--spectrum-cjk-line-height-100);
   }
 }
 
