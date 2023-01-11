@@ -1,0 +1,13 @@
+<!doctype html>
+<html class="spectrum spectrum--light spectrum--medium" lang="en-US" dir="ltr">
+    <head>
+        <title>{{ title }} Spectrum CSS</title>
+        {% include './partials/meta-info.njk' %}
+        {% block head %}{% endblock %}
+    </head>
+    <body>
+        {% block content %}
+            {{ content | safe }}
+        {% endblock %}
+    </body>
+</html>

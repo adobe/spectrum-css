@@ -35,6 +35,8 @@
     "through2": "^3.0.1"
   },
   "dependencies": {
-    "npm-registry-fetch": "^11.0.0"
+    "gulp-nunjucks-render": "^2.2.3",
+    "npm-registry-fetch": "^11.0.0",
+    "nunjucks": "^3.2.3"
   }
 }

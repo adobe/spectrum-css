@@ -1,0 +1,16 @@
+{% extends 'layout.njk' %}
+{% block content %}
+    <div class="spectrum-Site">
+        {% include './header.njk' %}
+        <div class="spectrum-Site-content">
+            {% include "./partials/sidenav.njk" %}
+            <div class="spectrum-Site-mainContent">
+                <div class="spectrum-Site-mainContainer">
+                    {{ content | safe }}
+                </div>
+                {% include 'footer.njk' %}
+            </div>
+        </div>
+    </div>
+    {% include 'pageBottom.njk' %}
+{% endblock %}
