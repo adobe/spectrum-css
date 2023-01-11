@@ -392,7 +392,7 @@ governing permissions and limitations under the License.
   margin-inline-start: var(--mod-slider-label-margin-start, var(--spectrum-slider-label-margin-start));
 }
 
-/* Slider misses core-tokens for tick */
+/* Slider misses core-tokens for tick variant */
 .spectrum-Slider-ticks {
   display: flex;
   justify-content: space-between;
@@ -402,6 +402,12 @@ governing permissions and limitations under the License.
   margin: 0 var(--mod-slider-track-margin-offset, var(--spectrum-slider-track-margin-offset));
   margin-block-start: calc(var(--spectrum-slider-height-size) / 2 - var(--spectrum-slider-tick-mark-height) / 2);
 
+  /* missing core-token for handle fill-color */
+  &~.spectrum-Slider-handleContainer {
+    .spectrum-Slider-handle {
+      background: var(--mod-slider-ticks-handle-background-color, var(--spectrum-slider-ticks-handle-background-color));
+    }
+  }
 }
 
 .spectrum-Slider-tick {
@@ -566,6 +572,9 @@ governing permissions and limitations under the License.
 .spectrum-Slider--ramp {
   .spectrum-Slider-handle {
     box-shadow: 0 0 0 var(--spectrum-slider-handle-gap) var(--highcontrast-slider-ramp-handle-border-color-active, var(--mod-sectrum-slider-ramp-handle-border-color-active, var(--spectrum-slider-ramp-handle-border-color-active)));
+
+    /* currently in tokens v5.0.0 the background-color for the handle are not yet defined */
+    background: var(--mod-slider-ramp-handle-background-color, var(--spectrum-slider-ramp-handle-background-color));
 
     @media (forced-colors: active) {
       forced-color-adjust: none;
