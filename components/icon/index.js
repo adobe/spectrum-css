@@ -9,110 +9,177 @@ the License is distributed on an "AS IS" BASIS, WITHOUT WARRANTIES OR REPRESENTA
 OF ANY KIND, either express or implied. See the License for the specific language
 governing permissions and limitations under the License.
 */
-const gulp = require('gulp');
-const rename = require('gulp-rename');
 const path = require('path');
-const svgmin = require('gulp-svgmin');
-const replace = require('gulp-replace');
-const sort = require('gulp-sort');
-const svgcombiner = require('gulp-svgcombiner');
-const svgstore = require('gulp-svgstore');
-const del = require('del');
-const vinylPaths = require('vinyl-paths');
+const glob = require('glob');
+const rename = require('stream-rename');
+const svgmin = require('svgmin');
+const replace = require('replace-in-file');
+const sort = require('sort-stream');
+const svgcombiner = require('svgcombiner');
+const svgstore = require('svgstore');
+const async = require('async')
 
-function clean() {
+
+async function clean() {
+  const del = await import('del');
   return del([
     'combined/**'
   ]);
 }
 
+/**
+ * @description This code will read all the files in the medium and large directories, 
+ * transform the data in the files using the replace and svgmin functions, 
+ * rename the files, and write the modified versions to the current directory.
+ */
 function sanitizeIcons() {
-  return gulp.src('{medium,large}/*.svg')
-    .pipe(replace(/<defs>[\s\S]*?<\/defs>/m, ''))
-    .pipe(replace(/<rect[\s\S]*?\/>/m, ''))
-    .pipe(svgmin({
-      plugins: [
-        {
-          removeAttrs: {
-            attrs: [
-              'class',
-              'data-name',
-              'id'
-            ]
-          }
-        },
-        { collapseGroups: true }
-      ]
-    }))
-    .pipe(vinylPaths(del)) // delete the original file
-    .pipe(rename(path => path.basename = path.basename.split('_').pop().replace('Size', '')))
-    .pipe(gulp.dest('./'));
+  glob('{medium,large}/*.svg', (err, files) => {
+    if (err) {
+      console.error(err);
+      return;
+    }
+    files.forEach(file => {
+      fs.createReadStream(file)
+        .pipe(replace(/<defs>[\s\S]*?<\/defs>/m, ''))
+        .pipe(replace(/<rect[\s\S]*?\/>/m, ''))
+        .pipe(svgmin({
+          plugins: [
+            {
+              removeAttrs: {
+                attrs: [
+                  'class',
+                  'data-name',
+                  'id'
+                ]
+              }
+            },
+            { collapseGroups: true }
+          ]
+        }))
+        .pipe(rename((path) => path.basename = path.basename.split('_').pop().replace('Size', '')))
+        .pipe(fs.createWriteStream(file.replace('{medium,large}/', './')))
+        .on('finish', () => {
+          del(file); // delete the original file
+        });
+    });
+  });
 }
 
+/**
+ * @description This code will read all the files in the medium and large directories, transform the data in the files using the sort and svgcombiner functions,
+ * and write the modified versions to the
+ */
 function generateCombinedIcons() {
-  return gulp.src('{medium,large}/*.svg')
-    .pipe(sort())
-    .pipe(svgcombiner({
-      processName: function(filePath) {
-        // Clean filename
-        return path.basename(filePath, path.extname(filePath)).replace(/S_UI(.*?)_.*/, '$1');
-      },
-      processClass: function(filePath) {
-        // Return the last directory
-        return 'spectrum-UIIcon--' + path.dirname(filePath).split(path.sep).pop();
-      }
-    }))
-    .pipe(gulp.dest('combined/'));
+  glob('{medium,large}/*.svg', (err, files) => {
+    if (err) {
+      console.error(err);
+      return;
+    }
+    fs.createReadStream(files)
+      .pipe(sort())
+      .pipe(svgcombiner({
+        processName(filePath) {
+          // Clean filename
+          return path.basename(filePath, path.extname(filePath)).replace(/S_UI(.*?)_.*/, '$1');
+        },
+        processClass(filePath) {
+          // Return the last directory
+          return 'spectrum-UIIcon--' + path.dirname(filePath).split(path.sep).pop();
+        }
+      }))
+      .pipe(fs.createWriteStream('combined/'))
+  });
 }
 
 // Only ran by Adobe
-const updateIcons = gulp.series(
-  clean,
-  sanitizeIcons,
-  generateCombinedIcons
-);
+
+const updateIcons = (callback) => {
+  async.series([
+    clean,
+    sanitizeIcons,
+    generateCombinedIcons
+  ], callback);
+}
 
 const tasks = require('@spectrum-css/component-builder');
 
+/**
+ * @description This code will read all the files in the combined directory, 
+ * transform the data in the files using the rename and svgstore functions, 
+ * and write the modified versions to the dist directory.
+ * @author Rajdeep
+ */
 function generateSVGSprite() {
-  return gulp.src('combined/*.svg')
-    .pipe(rename(function(filePath) {
-      filePath.basename = 'spectrum-css-icon-' + filePath.basename;
-    }))
-    .pipe(svgstore({
-      inlineSvg: true
-    }))
-    .pipe(rename('spectrum-css-icons.svg'))
-    .pipe(gulp.dest('dist/'));
-}
-
-function getSVGSpriteTask(size) {
-  return function generateSVGSprite() {
-    return gulp.src(`${size}/*.svg`)
-      .pipe(rename(function(filePath) {
-        filePath.basename = 'spectrum-css-icon-' + filePath.basename.replace(/S_UI(.*?)_.*/, '$1');
+  glob('combined/*.svg', (err, files) => {
+    if (err) {
+      console.error(err);
+      return;
+    }
+    fs.createReadStream(files)
+      .pipe(rename((filePath) => {
+        filePath.basename = 'spectrum-css-icon-' + filePath.basename;
       }))
       .pipe(svgstore({
         inlineSvg: true
       }))
-      .pipe(rename(`spectrum-css-icons-${size}.svg`))
-      .pipe(gulp.dest('dist/'));
+      .pipe(rename('spectrum-css-icons.svg'))
+      .pipe(fs.createWriteStream('dist/'))
+  });
+}
+
+/**
+ * @description This code defines a getSVGSpriteTask function that takes a
+ * size parameter and returns a 
+ * function that generates an SVG sprite for the specified size. 
+ * The returned function reads all the files in the specified directory, 
+ * transforms the data in the files using the rename and svgstore functions, and writes 
+ * the modified versions to the dist directory
+ * @param {*} size 
+ * @author Rajdeepx`` 
+ */
+function getSVGSpriteTask(size) {
+  return (callback) => {
+    glob(`${size}/*.svg`, (err, files) => {
+      if (err) {
+        console.error(err);
+        return;
+      }
+      fs.createReadStream(files)
+        .pipe(rename((filePath) => {
+          filePath.basename = 'spectrum-css-icon-' + filePath.basename.replace(/S_UI(.*?)_.*/, '$1');
+        }))
+        .pipe(svgstore({
+          inlineSvg: true
+        }))
+        .pipe(rename(`spectrum-css-icons-${size}.svg`))
+        .pipe(fs.createWriteStream('dist/'))
+        .on('finish', callback);
+    });
   };
 }
 
 const generateSVGSpriteMedium = getSVGSpriteTask('medium');
 const generateSVGSpriteLarge = getSVGSpriteTask('large');
 
-const buildIcons = gulp.parallel(
-  generateSVGSpriteMedium,
-  generateSVGSpriteLarge,
-  generateSVGSprite
-);
+const buildIcons = async function() {
+  try {
+    await generateSVGSpriteMedium();
+    await generateSVGSpriteLarge();
+    await generateSVGSprite();
+  } catch (err) {
+    console.error(err);
+  }
+}
 
-const build = gulp.parallel(
-  buildIcons,
-  tasks.buildCSS
-);
+const build = async function() {
+  try {
+    await buildIcons();
+    await tasks.buildCSS();
+  } catch (err) {
+    console.error(err);
+  }
+}
+
 
 exports.updateIcons = updateIcons;
 exports.build = exports.buildLite = exports.buildHeavy = exports.buildMedium = build;

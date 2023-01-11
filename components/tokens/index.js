@@ -9,42 +9,54 @@ the License is distributed on an "AS IS" BASIS, WITHOUT WARRANTIES OR REPRESENTA
 OF ANY KIND, either express or implied. See the License for the specific language
 governing permissions and limitations under the License.
 */
-
-const gulp = require('gulp');
-const concat = require('gulp-concat');
-const del = require('del');
+const fs = require('fs')
 const StyleDictionary = require('style-dictionary').extend('config.js');
+const fg = require('fast-glob')
+const path = require('path')
+const async = require('async')
 
-function clean() {
+async function clean() {
+  const del = await import('del');
   return del('dist/*');
 }
 
-function concatIndex() {
-  return gulp.src([
+async function concatIndex() {
+  const files = await fg([
     'dist/css/*.css',
     'dist/css/spectrum/*.css',
     'dist/css/express/*.css',
     'custom-spectrum/*.css',
     'custom-express/*.css'
-  ])
-    .pipe(concat('index.css'))
-    .pipe(gulp.dest('dist/'));
+  ]);
+
+  let indexCss = '';
+  // eslint-disable-next-line no-restricted-syntax
+  for (const file of files) {
+    indexCss += fs.readFileSync(file, 'utf8');
+  }
+
+  fs.writeFileSync('dist/index.css', indexCss);
 }
 
-function buildCustomSpectrum() {
-  return gulp.src('custom-spectrum/*.css')
-    .pipe(gulp.dest('dist/css/spectrum/'));
+async function buildCustomSpectrum() {
+  const files = await fg('custom-spectrum/*.css');
+  // eslint-disable-next-line no-restricted-syntax
+  for (const file of files) {
+    fs.copyFileSync(file, `dist/css/spectrum/${path.basename(file)}`);
+  }
 }
 
-function buildCustomExpress() {
-  return gulp.src('custom-express/*.css')
-    .pipe(gulp.dest('dist/css/express'));
+async function buildCustomExpress() {
+  const files = await fg('custom-express/*.css');
+  // eslint-disable-next-line no-restricted-syntax
+  for (const file of files) {
+    fs.copyFileSync(file, `dist/css/express/${path.basename(file)}`);
+  }
 }
 
-const buildCustoms = gulp.parallel(
-  buildCustomSpectrum,
-  buildCustomExpress
-);
+const buildCustoms = (callback) => {
+  async.parallel([buildCustomSpectrum, buildCustomExpress], callback);
+};
 
 function styleDictionary(cb) {
   StyleDictionary.buildAllPlatforms();
@@ -52,14 +64,11 @@ function styleDictionary(cb) {
 }
 
 exports.clean = clean;
-exports.build = exports.buildLite = exports.buildMedium = exports.default = gulp.series(
-  clean,
-  styleDictionary,
-  buildCustoms,
-  concatIndex
-);
+exports.build = exports.buildLite = exports.buildMedium = exports.default = (callback) => {
+  async.series([clean, styleDictionary, buildCustoms, concatIndex], callback);
+};
 
-exports.rebuildCustoms = gulp.series(
+exports.rebuildCustoms = (callback) => async.series([
   buildCustoms,
   concatIndex
-);
+], callback);
