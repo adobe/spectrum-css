@@ -15,7 +15,7 @@ export const Template = ({ rootClass, size }) => {
 
   return html`{{#if example}}
     <!-- Example markup -->
-    {{{ example }}}{{#else}}
+    {{{ example }}}{{else}}
     <!-- Component mark-up goes here -->
     <div class=${classMap(classList)}></div>{{/if}}
   `;
