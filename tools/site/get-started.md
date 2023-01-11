@@ -1,5 +1,5 @@
 ---
-layout: root.njk
+layout: layouts/base.njk
 title: Getting Started
 ---
 

@@ -12,7 +12,6 @@ governing permissions and limitations under the License.
 const gulp = require('gulp');
 const fsp = require('fs').promises;
 const path = require('path');
-const pug = require('pug');
 const data = require('gulp-data');
 const rename = require('gulp-rename');
 const yaml = require('js-yaml');

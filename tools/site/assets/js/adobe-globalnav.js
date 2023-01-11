@@ -1,4 +1,3 @@
-<script>
 window.adobeGlobalnavConfig = {
   locale: 'en',
   footer: {
@@ -44,5 +43,4 @@ window.adobeGlobalnavConfig = {
       document.getElementsByTagName("head")[0].appendChild(css);
     }
   }
-}
-</script>
+};

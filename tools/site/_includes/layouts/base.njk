@@ -1,0 +1,71 @@
+<!doctype html>
+<html lang="en-US" dir="ltr">
+    <head>
+        <title>{{ title }} Spectrum CSS</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1"/>
+        <meta name="description" content="The CSS implementation of Adobe's Spectrum design system"/>
+        <meta charset="utf-8"/>
+        <link rel="icon" type="image/png" href="favicon.png"/>
+        <link rel="stylesheet" type="text/css" href="{{ "/components/vars/spectrum-global.css" | url }}"/>
+        <link rel="stylesheet" type="text/css" href="{{ "/components/vars/spectrum-darkest.css" | url }}"/>
+        <link rel="stylesheet" type="text/css" href="{{ "/components/vars/spectrum-dark.css" | url }}"/>
+        <link rel="stylesheet" type="text/css" href="{{ "/components/vars/spectrum-light.css" | url }}"/>
+        <link rel="stylesheet" type="text/css" href="{{ "/components/vars/spectrum-medium.css" | url }}"/>
+        <link rel="stylesheet" type="text/css" href="{{ "/components/vars/spectrum-large.css" | url }}"/>
+        <link rel="stylesheet" type="text/css" href="{{ "/components/tokens/index.css" | url }}"/> 
+        {% for dep in dependencyOrder %} 
+            {% set path %}/components/{{ dep }}/index-vars.css{% endset %}
+        <link rel="stylesheet" type="text/css" href="{{ path | url }}" data-dependency="{{ dep }}" /> 
+        {% endfor %} 
+        <link rel="stylesheet" type="text/css" href="{{ "/css/site.css" | url }}"/>
+        <link rel="stylesheet" type="text/css" href="{{ "/css/docs.css" | url }}"/>
+
+        {# <link rel="stylesheet" type="text/css" href="{{ "/css/prism/prism.css" | url }}" data-prism="data-prism"/> #}
+        <link rel="stylesheet" type="text/css" href="{{ "/dependencies/prism.css" | url }}">
+        {# <link href="https://unpkg.com/prismjs@1.20.0/themes/prism-dark.css" rel="stylesheet"> #}
+
+        {% if not process.env.VRT %}
+            <link
+                rel="stylesheet"
+                type="text/css"
+                href="//wwwimages2.adobe.com/etc/beagle/public/globalnav/adobe-globalnav/latest/adobe-globalnav.min.css"/>
+        {% endif %}
+
+        {% block head %}{% endblock %}
+    </head>
+    <body class="spectrum spectrum--light spectrum--medium">
+        <div class="spectrum-Site">
+            <div class="spectrum-Site-overlay" id="site-overlay"></div>
+            <div class="spectrum-Site-header">
+                <button class="spectrum-ActionButton spectrum-ActionButton--sizeM spectrum-ActionButton--quiet" is-selected="is-selected" id="site-menu">
+                    <svg class="spectrum-Icon spectrum-Icon--sizeM" focusable="false" aria-hidden="true" aria-label="Show Menu">
+                        <use xlink:href="#spectrum-icon-18-ShowMenu"></use>
+                    </svg>
+                </button>
+            </div>
+            <div class="spectrum-Site-content">
+                {% include ("partials/sidenav.njk" if not process.env.VRT) %}
+
+                <div class="spectrum-Site-mainContent">
+                    <div class="spectrum-Site-mainContainer">
+                        {% block content %}{% endblock %}
+                    </div>
+
+                    {% include ("partials/globalnav.njk" if not process.env.VRT) %}
+                </div>
+
+            </div>
+        </div>
+        <div class="spectrum-Underlay" id="spectrum-underlay"></div>
+    </body>
+    <script src="{{ "/dependencies/loadicons.js" | url }}"></script>
+    <script src="{{ "/dependencies/focus-ring-polyfill.js" | url }}"></script>
+    <script src="{{ "/dependencies/lunr.js" | url }}"></script>
+    <script src="{{ "/js/typekit.js" | url }}"></script>
+    <script src="{{ "/js/SpectrumSwitcher.js" | url }}"></script>
+    <script src="{{ "/js/Search.js" | url }}"></script>
+    <script src="{{ "/js/site.js" | url }}"></script>
+    <script src="{{ "/js/docs.js" | url }}"></script>
+    <script src="{{ "/js/enhancement.js" | url }}"></script>
+    <script src="{{ "/js/polyfills.js" | url }}"></script>
+</html>

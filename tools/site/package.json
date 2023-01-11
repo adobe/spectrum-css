@@ -1,0 +1,40 @@
+{
+  "author": "Adobe",
+  "description": "Tooling to build the Spectrum CSS site.",
+  "license": "Apache-2.0",
+  "main": ".eleventy.js",
+  "type": "commonjs",
+  "name": "@spectrum-css/build-site",
+  "version": "1.0.0",
+  "homepage": "https://opensource.adobe.com/spectrum-css",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/adobe/spectrum-css.git",
+    "directory": "tools/site"
+  },
+  "bugs": {
+    "url": "https://github.com/adobe/spectrum-css/issues"
+  },
+  "scripts": {
+    "clean": "rimraf ../../_site",
+    "serve": "NODE_ENV=development BROWSERSYNC_OPEN=true yarn build --serve",
+    "prebuild": "yarn clean",
+    "build": "eleventy --config=.eleventy.js"
+  },
+  "devDependencies": {
+    "@adobe/spectrum-css-workflow-icons": "^1.5.4",
+    "@adobe/focus-ring-polyfill": "^0.1.5",
+    "@11ty/eleventy": "^1.0.2",
+    "@11ty/eleventy-plugin-syntaxhighlight": "^4.2.0",
+    "glob": "^8.0.3",
+    "gulplog": "^2.0.1",
+    "loadicons": "^1.0.0",
+    "lunr": "^2.3.9",
+    "markdown-it": "^13.0.1",
+    "markdown-it-anchor": "^8.6.6",
+    "prismjs": "^1.29.0",
+    "js-yaml": "^3.13.1",
+    "replace-ext": "^2.0.0",
+    "rimraf": "^3.0.2"
+  }
+}

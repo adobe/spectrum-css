@@ -14,7 +14,6 @@ const gulp = require('gulp');
 const path = require('path');
 const through = require('through2');
 const postcss = require('gulp-postcss');
-const rename = require('gulp-rename');
 const concat = require('gulp-concat');
 const postcssReal = require('postcss');
 const fsp = require('fs').promises;

@@ -14,8 +14,8 @@ governing permissions and limitations under the License.
 
 'use strict';
 
-loadIcons('../components/icon/spectrum-css-icons.svg');
-loadIcons('img/spectrum-icons.svg');
+loadIcons('../icons/ui/spectrum-css-icons.svg');
+loadIcons('../icons/workflow/spectrum-icons.svg');
 
 // Show and hide code samples
 function toggleMarkupVisibility(event) {

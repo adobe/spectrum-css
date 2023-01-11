@@ -162,7 +162,6 @@ Search.prototype.showResults = function(event) {
   var isRTL = window.getComputedStyle(document.documentElement, null).getPropertyValue('direction') === 'rtl';
 
   if (isRTL) {
-    var width = window.innerWidth;
     this.popover.style.right = `${window.innerWidth - inputRect.right}px`;
     this.popover.style.left = 'auto';
   }
@@ -259,8 +258,6 @@ Search.prototype.doSearch = function() {
 
 Search.prototype.search = function(val) {
   this.searchVal = val;
-
-  let components = [];
 
   let r = [];
   if (val.length > 1) {

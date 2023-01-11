@@ -38,7 +38,7 @@ Within each component package, the `metadata.yml` file contains all of the examp
 
 Additional examples that should appear in the navigation independent of the main component page can be added as `metadata/*.yml`. These are treated as a separate documentation page completely, but they share the same dependencies as the main page.
 
-See the [site documentation](../site/README.md) for details on dependency lazy-loading when navigating.
+See the [site documentation](../tools/site/README.md) for details on dependency lazy-loading when navigating.
 
 ## Viewing documentation
 
@@ -51,8 +51,8 @@ See the [site documentation](../site/README.md) for details on dependency lazy-l
 
 ## Adding a one-off example page
 
-See the [site documentation](../site/README.md) for details on adding a one-off example page for a given component.
+See the [site documentation](../tools/site/README.md) for details on adding a one-off example page for a given component.
 
 ## Adding and editing resources
 
-See the [site documentation](../site/README.md) for details on adding and editing resources.
+See the [site documentation](../tools/site/README.md) for details on adding and editing resources.

@@ -13,19 +13,15 @@ const gulp = require('gulp');
 const fs = require('fs');
 const fsp = fs.promises;
 const path = require('path');
-const pugCompiler = require('pug');
-const pug = require('gulp-pug');
 const data = require('gulp-data');
 const rename = require('gulp-rename');
 const yaml = require('js-yaml');
 const through = require('through2');
 const ext = require('replace-ext');
 const logger = require('gulplog');
-const colors = require('colors');
 const lunr = require('lunr');
 
 const dirs = require('../lib/dirs');
-const exec = require('../lib/exec');
 const depUtils = require('../lib/depUtils');
 
 const npmFetch = require('npm-registry-fetch');

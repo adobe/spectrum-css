@@ -10,7 +10,7 @@ OF ANY KIND, either express or implied. See the License for the specific languag
 governing permissions and limitations under the License.
 */
 const postcss = require('postcss');
-const { parse } = require('postcss-values-parser');
+const { parse } = require('postcss-value-parser');
 
 const selectorParser = require('postcss-selector-parser');
 const addDir = selectors => {
