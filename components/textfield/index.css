@@ -286,7 +286,7 @@ governing permissions and limitations under the License.
   position: absolute;
   top: 0;
   bottom: 0;
-  margin: auto;
+  margin-block: auto;
   color: var(--highcontrast-textfield-text-color-default, var(--mod-textfield-text-color-default, var(--spectrum-textfield-text-color-default)));
 
   .spectrum-Textfield.is-disabled & {
@@ -493,6 +493,8 @@ governing permissions and limitations under the License.
   /*** ↓ Browser Mitigations for Input ↓ ***/
   /* Remove the margin for input in Firefox and Safari. */
   margin: 0;
+
+  text-overflow: ellipsis;
 
   /* Show the overflow for input in Edge. */
   overflow: visible;
