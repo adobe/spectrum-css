@@ -741,6 +741,9 @@ governing permissions and limitations under the License.
   &.spectrum-Textfield--quiet {
     .spectrum-Textfield-input {
       min-block-size: var(--mod-text-area-min-block-size-quiet, var(--spectrum-text-area-min-block-size-quiet));
+      /* Treat all quiet inputs and text areas the same */
+      resize: none;
+      overflow-y: hidden;
     }
   }
 }
