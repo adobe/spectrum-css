@@ -73,7 +73,6 @@ governing permissions and limitations under the License.
 
   --spectrum-slider-track-corner-radius: var(--mod-corner-radius-75, var(--spectrum-corner-radius-75));
   --spectrum-slider-label-margin-start: var(--mod-spacing-300, var(--spectrum-spacing-300));
-  --spectrum-slider-handle-border-width-down: var(--mod-slider-handle-border-width-down, var(--spectrum-slider-handle-border-width-down));
   --spectrum-slider-handle-border-width: var(--mod-border-width-200, var(--spectrum-border-width-200));
   --spectrum-slider-handle-margin-left: calc(var(--mod-slider-handle-size, var(--spectrum-slider-handle-size)) / -2);
   --spectrum-slider-controls-margin: calc(var(--mod-slider-handle-size, var(--spectrum-slider-handle-size)) / 2);
