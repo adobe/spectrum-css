@@ -142,7 +142,7 @@ governing permissions and limitations under the License.
 /* Windows high contrast mode */
 @media (forced-colors: active) {
   .spectrum-Picker {
-    --highcontrast-picker-focus-indicator-color: Highlight;
+    --highcontrast-picker-focus-indicator-color: CanvasText;
 
     --highcontrast-picker-border-color-default: ButtonText;
     --highcontrast-picker-border-color-active: ButtonText;
@@ -154,7 +154,6 @@ governing permissions and limitations under the License.
 
     --highcontrast-picker-font-color-default: ButtonText;
     --highcontrast-picker-font-color-default-open: ButtonText;
-    /* --highcontrast-picker-font-color-hover-open: ButtonText; */
     --highcontrast-picker-font-color-key-focus: ButtonText;
     --highcontrast-picker-font-color-disabled: GrayText;
 
