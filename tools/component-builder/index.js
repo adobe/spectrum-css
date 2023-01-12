@@ -10,48 +10,51 @@ OF ANY KIND, either express or implied. See the License for the specific languag
 governing permissions and limitations under the License.
 */
 
-const gulp = require('gulp');
-const del = require('del');
+const del = require("del")
+const async = require("async")
 
-const css = require('./css');
-const docs = require('./docs');
+const css = require("./css")
+const docs = require("./docs")
 
 function clean() {
-  return del('dist/*');
+  return del("dist/*")
 }
 
-const build = gulp.series(
-  clean,
-  gulp.parallel(
-    css.buildVars,
-    docs.buildDocs
+const build = function (callback) {
+  async.series(
+    [
+      clean,
+      function (callback1) {
+        async.parallel([css.buildVars, docs.buildDocs], callback1)
+      },
+    ],
+    callback
   )
-);
+}
 
-const buildLite = gulp.series(
-  clean,
-  css.buildIndexVars
-);
+// build lite method
+const buildLite = function (callback) {
+  async.series([clean, css.buildIndexVars], callback)
+}
 
-const buildMedium = gulp.series(
-  clean,
-  css.buildVars
-);
+// build medium method
+const buildMedium = function (callback) {
+  async.series([clean, css.buildVars], callback)
+}
+// build heavy method
+const buildHeavy = function (callback) {
+  async.series([clean, css.buildCSS], callback)
+}
 
-const buildHeavy = gulp.series(
-  clean,
-  css.buildCSS
-);
+exports.default = build
+exports.build = build
+exports.buildLite = buildLite
+exports.buildMedium = buildMedium
+exports.buildHeavy = buildHeavy
+exports.clean = clean
 
-exports.default = build;
-exports.build = build;
-exports.buildLite = buildLite;
-exports.buildMedium = buildMedium;
-exports.buildHeavy = buildHeavy;
-exports.clean = clean;
+exports.buildCSS = css.buildCSS
+exports.buildVars = css.buildVars
 
-exports.buildCSS = css.buildCSS;
-exports.buildVars = css.buildVars;
-
-exports.buildDocs = docs.buildDocs;
-exports.buildDocs_html = docs.buildDocs_html;
+exports.buildDocs = docs.buildDocs
+exports.buildDocs_html = docs.buildDocs_html

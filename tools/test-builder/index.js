@@ -10,27 +10,49 @@ OF ANY KIND, either express or implied. See the License for the specific languag
 governing permissions and limitations under the License.
 */
 
-const {src, dest, task, series} = require('gulp');
 const scenarioList = require('./plugins/scenarioList');
 const fs = require('fs');
 const {getPackages} = require('@lerna/project');
 const { PackageGraph } = require('@lerna/package-graph');
+const glob = require('glob');
 
-const buildBaseScenarioList = () =>
-  src('dist/docs/*.html')
-    .pipe(scenarioList())
-    .pipe(dest('.'));
+const buildBaseScenarioList = () => {
+  glob('dist/docs/*.html', (err, files) => {
+    if (err) {
+      console.error(err);
+      return;
+    }
+
+    files.forEach(file => {
+      fs.readFile(file, (err, data) => {
+        if (err) {
+          console.error(err);
+          return;
+        }
+
+        const transformedData = scenarioList(data);
+
+        fs.writeFile(file, transformedData, err => {
+          if (err) {
+            console.error(err);
+          }
+        });
+      });
+    });
+  });
+};
 
 const addLocalDependents = async () => {
   const packages = await getPackages('.');
   const packageGraph = new PackageGraph(packages);
   const packageLocalDependentsSet
     = JSON.parse(fs.readFileSync('backstop_data/backstop_scenarios.json', 'utf8')).reduce((acc, current) => {
-    if (!acc.has(current.package) && packageGraph.get(current.package)) {
-      acc.set(current.package, Array.from(packageGraph.get(current.package).localDependents.keys()));
-    }
-    return acc;
-  }, new Map());
+      if (!acc.has(current.package) && packageGraph.get(current.package)) {
+        // eslint-disable-next-line max-len
+        acc.set(current.package, Array.from(packageGraph.get(current.package).localDependents.keys()));
+      }
+      return acc;
+    }, new Map());
   return fs.writeFile('backstop_data/packageDependentMap.json',
     JSON.stringify(Array.from(packageLocalDependentsSet.entries()), null, 2),
     (err) => {
@@ -41,4 +63,9 @@ const addLocalDependents = async () => {
 exports.buildBaseScenarioList = buildBaseScenarioList;
 exports.addLocalDependents = addLocalDependents;
 
-task('test:init', series(buildBaseScenarioList, addLocalDependents));
+const testInit = async () => {
+  await buildBaseScenarioList();
+  await addLocalDependents();
+}
+
+testInit();

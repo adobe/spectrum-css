@@ -1,5 +1,5 @@
 /*
-Copyright 2019 Adobe. All rights reserved.
+Copyright 2022 Adobe. All rights reserved.
 This file is licensed to you under the Apache License, Version 2.0 (the "License");
 you may not use this file except in compliance with the License. You may obtain a copy
 of the License at http://www.apache.org/licenses/LICENSE-2.0
@@ -10,95 +10,206 @@ OF ANY KIND, either express or implied. See the License for the specific languag
 governing permissions and limitations under the License.
 */
 
-const gulp = require('gulp');
-const del = require('del');
-const concat = require('gulp-concat');
-const rename = require('gulp-rename');
+const fg = require("fast-glob")
+const del = require("del")
+const path = require('path')
+const fs = require("fs")
+const async = require("async")
+const concat = require("concat-stream")
+const depUtils = require("./lib/depUtils")
+const exec = require("./lib/exec")
+const dirs = require("./lib/dirs")
+const docs = require("./docs")
+const dev = require("./dev")
+const subrunner = require("./subrunner")
+const release = require("./release")
+const vars = require("./vars")
 
-const depUtils = require('./lib/depUtils');
-const exec = require('./lib/exec');
-const dirs = require('./lib/dirs');
+let dependencyOrder = null;
 
-const docs = require('./docs');
-const dev = require('./dev');
-const subrunner = require('./subrunner');
-const release = require('./release');
-const vars = require('./vars');
-
-function clean() {
-  let globs = [
-    'dist/*'
-  ];
+async function clean() {
+  const globs = ["dist/*"]
 
   // Don't delete the dist folder inside of installed packages
   if (process.cwd() === dirs.topLevel) {
-    globs.push(`${dirs.components}/*/dist/*`);
+    globs.push(`${dirs.components}/*/dist/*`)
   }
 
-  return del(globs);
+  return del(globs)
 }
 
-// Combined
 function concatPackageFiles(taskName, input, output, directory) {
-  let func = function() {
-    let glob;
+  const func = function () {
+    let glob
     if (Array.isArray(input)) {
-      glob = [];
+      glob = []
 
-      dependencyOrder.forEach(function(dep) {
-        input.forEach(function(file) {
-          glob.push(dirs.resolve(dep) + `/${file}`);
-        });
-      });
-    }
-    else {
-      glob = dependencyOrder.map(function(dep) {
-        return dirs.resolve(dep) + `/${input}`;
-      });
+      dependencyOrder.forEach((dep) => {
+        input.forEach((file) => {
+          glob.push(`${dirs.resolve(dep)}/${file}`)
+        })
+      })
+    } else {
+      glob = dependencyOrder.map((dep) => `${dirs.resolve(dep)}/${input}`)
     }
 
-    return gulp.src(glob, { allowEmpty: true })
-      .pipe(concat(output))
-      .pipe(gulp.dest(`dist/${directory || ''}`));
-  };
+    const srcFiles = fs
+      .readdirSync(glob)
+      .filter((file) => file.endsWith(".css"))
+    const destDirectory = path.join("dist", directory || "")
 
-  Object.defineProperty(func, 'name', { value: taskName, writable: false });
+    concat(srcFiles, path.join(destDirectory, output))
+      .then(() => {
+        console.log("Files concatenated successfully")
+      })
+      .catch((err) => {
+        console.error(err)
+      })
+  }
 
-  return func;
+  Object.defineProperty(func, "name", { value: taskName, writable: false })
+
+  return func
 }
 
-var dependencyOrder = null;
-async function getDependencyOrder(done) {
-  dependencyOrder = await depUtils.getFolderDependencyOrder(dirs.components);
+
+async function getDependencyOrder() {
+  dependencyOrder = await depUtils.getFolderDependencyOrder(dirs.components)
 }
 
-let buildCombined = gulp.series(
-  getDependencyOrder,
-  gulp.parallel(
-    concatPackageFiles('buildCombined_core', 'index.css', 'spectrum-core.css'),
-    concatPackageFiles('buildCombined_large', 'index-lg.css', 'spectrum-core-lg.css'),
-    concatPackageFiles('buildCombined_diff', 'index-diff.css', 'spectrum-core-diff.css'),
-    concatPackageFiles('buildCombined_light', 'multiStops/light.css', 'spectrum-light.css'),
-    concatPackageFiles('buildCombined_lightest', 'multiStops/lightest.css', 'spectrum-lightest.css'),
-    concatPackageFiles('buildCombined_dark', 'multiStops/dark.css', 'spectrum-dark.css'),
-    concatPackageFiles('buildCombined_darkest', 'multiStops/darkest.css', 'spectrum-darkest.css')
-  )
-);
+const buildCombined = async.series(
+  [
+    getDependencyOrder,
+    (callback) => {
+      async.parallel(
+        [
+          () => concatPackageFiles(
+            "buildCombined_core",
+            "index.css",
+            "spectrum-core.css",
+            callback
+          ),
+          () => concatPackageFiles(
+            "buildCombined_large",
+            "index-lg.css",
+            "spectrum-core-lg.css",
+            callback
+          ),
+          () => concatPackageFiles(
+            "buildCombined_diff",
+            "index-diff.css",
+            "spectrum-core-diff.css",
+            callback
+          ),
+          () => concatPackageFiles(
+            "buildCombined_light",
+            "multiStops/light.css",
+            "spectrum-light.css",
+            callback
+          ),
+          () => concatPackageFiles(
+            "buildCombined_lightest",
+            "multiStops/lightest.css",
+            "spectrum-lightest.css",
+            callback
+          ),
+          () => concatPackageFiles(
+            "buildCombined_dark",
+            "multiStops/dark.css",
+            "spectrum-dark.css",
+            callback
+          ),
+          () => concatPackageFiles(
+            "buildCombined_darkest",
+            "multiStops/darkest.css",
+            "spectrum-darkest.css",
+            callback
+          ),
+        ],
+        callback
+      )
+    },
+  ],
+  (err) => {
+    if (err) {
+      console.error(err)
+    }
+  }
+)
 
-let buildStandalone = gulp.series(
-  getDependencyOrder,
-  gulp.parallel(
-    concatPackageFiles('buildStandalone_light', ['index.css', 'colorStops/light.css' ], 'spectrum-light.css', 'standalone/'),
-    concatPackageFiles('buildStandalone_lightest', ['index.css', 'colorStops/lightest.css' ], 'spectrum-lightest.css', 'standalone/'),
-    concatPackageFiles('buildStandalone_dark', ['index.css', 'colorStops/dark.css' ], 'spectrum-dark.css', 'standalone/'),
-    concatPackageFiles('buildStandalone_darkest', ['index.css', 'colorStops/darkest.css' ], 'spectrum-darkest.css', 'standalone/'),
-    concatPackageFiles('buildStandalone_lightLarge', ['index-lg.css', 'colorStops/light.css' ], 'spectrum-light-lg.css', 'standalone/'),
-    concatPackageFiles('buildStandalone_lightestLarge', ['index-lg.css', 'colorStops/lightest.css' ], 'spectrum-lightest-lg.css', 'standalone/'),
-    concatPackageFiles('buildStandalone_darkLarge', ['index-lg.css', 'colorStops/dark.css' ], 'spectrum-dark-lg.css', 'standalone/'),
-    concatPackageFiles('buildStandalone_darkestLarge', ['index-lg.css', 'colorStops/darkest.css' ], 'spectrum-darkest-lg.css', 'standalone/'),
-  )
-);
-
+const buildStandalone = async.series(
+  [
+    getDependencyOrder,
+    (callback) => {
+      async.parallel(
+        [
+          () => concatPackageFiles(
+            "buildStandalone_light",
+            ["index.css", "colorStops/light.css"],
+            "spectrum-light.css",
+            "standalone/",
+            callback
+          ),
+          () => concatPackageFiles(
+            "buildStandalone_lightest",
+            ["index.css", "colorStops/lightest.css"],
+            "spectrum-lightest.css",
+            "standalone/",
+            callback
+          ),
+          () => concatPackageFiles(
+            "buildStandalone_dark",
+            ["index.css", "colorStops/dark.css"],
+            "spectrum-dark.css",
+            "standalone/",
+            callback
+          ),
+          () => concatPackageFiles(
+            "buildStandalone_darkest",
+            ["index.css", "colorStops/darkest.css"],
+            "spectrum-darkest.css",
+            "standalone/",
+            callback
+          ),
+          () => concatPackageFiles(
+            "buildStandalone_lightLarge",
+            ["index-lg.css", "colorStops/light.css"],
+            "spectrum-light-lg.css",
+            "standalone/",
+            callback
+          ),
+          () => concatPackageFiles(
+            "buildStandalone_lightestLarge",
+            ["index-lg.css", "colorStops/lightest.css"],
+            "spectrum-lightest-lg.css",
+            "standalone/",
+            callback
+          ),
+          () => concatPackageFiles(
+            "buildStandalone_darkLarge",
+            ["index-lg.css", "colorStops/dark.css"],
+            "spectrum-dark-lg.css",
+            "standalone/",
+            callback
+          ),
+          () => concatPackageFiles(
+            "buildStandalone_darkestLarge",
+            ["index-lg.css", "colorStops/darkest.css"],
+            "spectrum-darkest-lg.css",
+            "standalone/",
+            callback
+          ),
+        ],
+        callback
+      )
+    },
+  ],
+  (err) => {
+    if (err) {
+      console.error(err)
+    }
+  }
+)
 
 // run buildLite on a selected set of packages that depend on commons
 // yay: faster than 'rebuild everything' approach
@@ -112,141 +223,187 @@ function buildDepenenciesOfCommons() {
     `${dirs.components}/infieldbutton`,
     `${dirs.components}/logicbutton`,
     `${dirs.components}/picker`,
-    `${dirs.components}/pickerbutton`
-  ];
-  return subrunner.runTaskOnPackages('buildLite', dependentComponents)
+    `${dirs.components}/pickerbutton`,
+  ]
+  return subrunner.runTaskOnPackages("buildLite", dependentComponents)
 }
-
 
 function copyPackages() {
-  return gulp.src([
+  // Get array of file paths matching the glob pattern
+  const files = [
     `${dirs.components}/*/package.json`,
     `${dirs.components}/*/dist/**`,
-    `!${dirs.components}/*/dist/docs/**`
-  ])
-    .pipe(rename(function(file) {
-      file.dirname = file.dirname.replace('/dist', '');
-    }))
-    .pipe(gulp.dest('dist/components/'));
+    `!${dirs.components}/*/dist/docs/**`,
+  ].reduce(async (acc, pattern) => acc.concat(await fg(pattern)), [])
+
+  // Iterate over the array of file paths
+  files.forEach((file) => {
+    // Read the contents of the file
+    const contents = fs.readFileSync(file)
+
+    // Modify the file path to remove the '/dist' part of the dirname
+    const newFile = file.replace("/dist", "")
+
+    // Create the destination directory if it doesn't exist
+    const destDir = path.dirname(newFile)
+    if (!fs.existsSync(destDir)) {
+      fs.mkdirSync(destDir, { recursive: true })
+    }
+
+    // Write the file to the destination
+    fs.writeFileSync(newFile, contents)
+  })
 }
 
-function buildIfTopLevel() {
-  let builtTasks = gulp.parallel(
-    docs.build,
-    buildCombined,
-    buildStandalone,
-    copyPackages
-  );
+async function buildIfTopLevel() {
+  let builtTasks = async () => {
+    try {
+      await Promise.all([
+        docs.build(),
+        buildCombined(),
+        buildStandalone(),
+        copyPackages()
+      ]);
+    } catch(error) {
+      console.error(error);
+    }
+  }
 
   if (process.cwd() === dirs.topLevel) {
     // Run a build for all packages first
-    return gulp.series(
-      subrunner.buildComponents,
-      builtTasks
-    );
+    return async.series([subrunner.buildComponents, builtTasks], (err) => {
+      if (err) {
+        console.error(err)
+      }
+    })
   }
 
   // They're already built, just include the output
-  return builtTasks;
+  return builtTasks
 }
 
-let build = gulp.series(
-  clean,
-  buildIfTopLevel(),
-  vars.copyVars
-);
+const build = async.series([clean, buildIfTopLevel(), vars.copyVars], (err) => {
+  if (err) {
+    console.error(err)
+  }
+})
 
-let buildLite = gulp.series(
-  clean,
-  function buildComponentsLite() {
-    return subrunner.runTaskOnAllComponents('buildLite');
-  },
-  gulp.parallel(
-    docs.build,
-    copyPackages
-  )
-);
+// const subrunner = {
+//   runTaskOnAllComponents(task, callback) {
+//     // code to run task on all components
+//     callback()
+//   },
+// }
 
-let buildMedium = gulp.series(
-  clean,
-  function buildComponentsLite() {
-    return subrunner.runTaskOnAllComponents('buildMedium');
-  },
-  gulp.parallel(
-    docs.build,
-    copyPackages
-  )
-);
+const buildComponents = async (type) => {
+  return subrunner.runTaskOnAllComponents('buildLite');
+}
 
-let buildHeavy = gulp.series(
-  clean,
-  function buildComponentsLite() {
-    return subrunner.runTaskOnAllComponents('buildHeavy');
-  },
-  gulp.parallel(
-    docs.build,
-    copyPackages
-  )
-);
+const buildLite = async () => {
+  try {
+    await clean();
+    await buildComponents('buildLite');
+    await Promise.all([docs.build(), copyPackages()]);
+  } catch(error) {
+    console.error(error);
+  }
+}
 
-let devTask;
+const buildMedium = async () => {
+  try {
+    await clean();
+    await buildComponents('buildMedium');
+    await Promise.all([docs.build(), copyPackages()]);
+  } catch(error) {
+    console.error(error);
+  }
+}
+
+const buildHeavy = async () => {
+  try {
+    await clean();
+    await buildComponents('buildHeavy');
+    await Promise.all([docs.build(), copyPackages()]);
+  } catch(error) {
+    console.error(error);
+  }
+}
+
+let devTask
 if (process.cwd() === dirs.topLevel) {
   // Build all packages if at the top level
-  devTask = gulp.series(
-    buildLite,
-    dev.watch
-  );
-}
-else {
+  devTask = async.series([buildLite, dev.watch], (err) => {
+    if (err) {
+      console.error(err)
+    }
+  })
+} else {
   // Otherwise, just start watching
-  devTask = gulp.series(
-    clean,
-    gulp.parallel(
-      docs.build,
-
-      copyPackages
-    ),
-    dev.watch
-  );
+  devTask = async.series(
+    [
+      clean,
+      (callback) => {
+        async.parallel([docs.build, copyPackages], callback)
+      },
+      dev.watch,
+    ],
+    (err) => {
+      if (err) {
+        console.error(err)
+      }
+    }
+  )
 }
 
-exports.devHeavy = gulp.series(
-  buildHeavy,
-  dev.watch
-);
+exports.devHeavy = async.series([buildHeavy, dev.watch], (err) => {
+  if (err) {
+    console.error(err)
+  }
+})
 
-exports.copyVars = vars.copyVars;
+exports.copyVars = vars.copyVars
 
-exports.prePack = gulp.series(
-  build,
-  release.releaseBackwardsCompat
-);
+exports.prePack = async () => {
+  try {
+    await build();
+    await release.releaseBackwardsCompat();
+  } catch(error) {
+    console.error(error);
+  }
+}
 
-exports.release = gulp.series(
-  release.updateAndTagRelease,
-  exec.task('yarnInstall', 'yarn install --frozen-lockfile'),
-  build,
-  exec.task('npmPublish', 'npm publish'),
-  exec.task('gitPush', 'git push')
-);
+exports.release = async.series(
+  [
+    release.updateAndTagRelease,
+    exec.task("yarnInstall", "yarn install --frozen-lockfile"),
+    build,
+    exec.task("npmPublish", "npm publish"),
+    exec.task("gitPush", "git push"),
+  ],
+  (err) => {
+    if (err) {
+      console.error(err)
+    }
+  }
+)
 
-exports.generateChangelog = release.generateChangelog;
-exports.buildUniqueVars = vars.buildUnique;
+exports.generateChangelog = release.generateChangelog
+exports.buildUniqueVars = vars.buildUnique
 
-exports.ghPages = release.ghPages;
-exports.postPublish = release.releaseBackwardsCompatCleanup;
+exports.ghPages = release.ghPages
+exports.postPublish = release.releaseBackwardsCompatCleanup
 
-exports.buildComponents = subrunner.buildComponents;
-exports.buildCombined = buildCombined;
-exports.buildStandalone = buildStandalone;
-exports.buildLite = buildLite;
-exports.buildDocs = docs.buildDocs;
-exports.buildDepenenciesOfCommons = buildDepenenciesOfCommons;
-exports.copyPackages = copyPackages;
-exports.dev = devTask;
-exports.clean = clean;
-exports.build = build;
-exports.watch = dev.watch;
-exports.default = buildMedium;
+exports.buildComponents = subrunner.buildComponents
+exports.buildCombined = buildCombined
+exports.buildStandalone = buildStandalone
+exports.buildLite = buildLite
+exports.buildDocs = docs.buildDocs
+exports.buildDepenenciesOfCommons = buildDepenenciesOfCommons
+exports.copyPackages = copyPackages
+exports.dev = devTask
+exports.clean = clean
+exports.build = build
+exports.watch = dev.watch
+exports.default = buildMedium
 
-exports.updateAndTagRelease = release.updateAndTagRelease;
+exports.updateAndTagRelease = release.updateAndTagRelease

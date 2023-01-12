@@ -9,342 +9,418 @@ the License is distributed on an "AS IS" BASIS, WITHOUT WARRANTIES OR REPRESENTA
 OF ANY KIND, either express or implied. See the License for the specific language
 governing permissions and limitations under the License.
 */
-const gulp = require('gulp');
-const fs = require('fs');
-const fsp = fs.promises;
-const path = require('path');
-const pugCompiler = require('pug');
-const pug = require('gulp-pug');
-const data = require('gulp-data');
-const rename = require('gulp-rename');
-const yaml = require('js-yaml');
-const through = require('through2');
-const ext = require('replace-ext');
-const logger = require('gulplog');
-const colors = require('colors');
-const lunr = require('lunr');
-
-const dirs = require('../lib/dirs');
-const exec = require('../lib/exec');
-const depUtils = require('../lib/depUtils');
-
-const npmFetch = require('npm-registry-fetch');
+const fs = require("fs")
+const fsp = fs.promises
+const fg = require('fast-glob')
+const path = require("path")
+const yaml = require("js-yaml")
+const through = require("through2")
+const ext = require("replace-ext")
+const logger = require("logger")
+const lunr = require("lunr")
+const async = require("async")
+const npmFetch = require("npm-registry-fetch")
+const nunjucks = require("nunjucks")
+const glob = require('glob')
+const dirs = require("../lib/dirs")
+const depUtils = require("../lib/depUtils")
+const copyResources = require("../lib/copyUtils")
 
 // adding nunjucks
-const nunjucksRender = require('gulp-nunjucks-render')
-const nunjucksCompiler = require('nunjucks');
 
-let minimumDeps = [
-  'icon',
-  'statuslight',
-  'link',
-  'page',
-  'site',
-  'typography',
-  'tooltip',
-  'sidenav',
-  'actionbutton',
-  'button',
-  'textfield',
-  'clearbutton',
-  'search',
-  'menu',
-  'fieldlabel',
-  'picker',
-  'popover',
-  'underlay',
-  'card',
-  'divider',
-  'illustratedmessage',
-  'accordion',
-  'table'
-];
+const minimumDeps = [
+  "icon",
+  "statuslight",
+  "link",
+  "page",
+  "site",
+  "typography",
+  "tooltip",
+  "sidenav",
+  "actionbutton",
+  "button",
+  "textfield",
+  "clearbutton",
+  "search",
+  "menu",
+  "fieldlabel",
+  "picker",
+  "popover",
+  "underlay",
+  "card",
+  "divider",
+  "illustratedmessage",
+  "accordion",
+  "table",
+]
 
-let templateData = {
+const templateData = {
   nav: [],
-  pkg: JSON.parse(fs.readFileSync('package.json', 'utf8'))
-};
+  pkg: JSON.parse(fs.readFileSync("package.json", "utf8")),
+}
 
 async function buildDocs_forDep(dep) {
   // Drop package org
-  dep = dep.split('/').pop();
+  dep = dep.split("/").pop()
 
-  let metadata = JSON.parse(await fsp.readFile(path.join(dirs.components, 'vars', 'dist', 'spectrum-metadata.json')));
+  const metadata = JSON.parse(
+    await fs.promises.readFile(
+      path.join(dirs.components, "vars", "dist", "spectrum-metadata.json")
+    )
+  )
 
-  let dependencyOrder = await depUtils.getPackageDependencyOrder(path.join(dirs.components, dep));
+  const dependencyOrder = await depUtils.getPackageDependencyOrder(
+    path.join(dirs.components, dep)
+  )
 
-  let dirName = `${dirs.components}/${dep}`;
+  const dirName = `${dirs.components}/${dep}`
 
-  logger.debug(`Will build docs for package in ${dirs.components}/${dep}`);
+  console.debug(`Will build docs for package in ${dirs.components}/${dep}`)
+  // This code uses the glob function to select the files based on the given patterns,
+  // and the through2 module to create a stream that processes the data.
+  // The transform function is called for each file in the stream, 
+  // and performs the necessary transformation on the file data.
 
-  return new Promise((resolve, reject) => {
-    gulp.src(
-      [
-        `${dirName}/metadata.yml`,
-        `${dirName}/metadata/*.yml`
-      ], {
-        allowEmpty: true
+  // The code loops over the matches array and creates a read stream for each file,
+  // pipes the data through the transform stream, and writes the transformed data to a new file.
+  const files = [`${dirName}/metadata.yml`, `${dirName}/metadata/*.yml`]
+
+  async function transform(file, enc, callback) {
+    const componentDeps = dependencyOrder.map((dep) => dep.split("/").pop())
+    componentDeps.push(dep)
+
+    const pkg = JSON.parse(
+      await fsp.readFile(path.join(dirs.components, dep, "package.json"))
+    )
+
+    let docsDeps = minimumDeps.concat(componentDeps)
+    docsDeps = docsDeps.filter((dep, i) => docsDeps.indexOf(dep) === i)
+
+    let date
+    try {
+      const data = await npmFetch.json(pkg.name)
+      date = data.time[pkg.version]
+      date = new Date(date).toLocaleDateString("en-US", {
+        year: "numeric",
+        month: "long",
+        day: "numeric",
+      })
+    } catch (err) {
+      date = "Unreleased"
+      logger.error(
+        `Could not determine date of release for ${pkg.name}@${pkg.version}`
+      )
+    }
+
+    const transformedFile = Object.assign(
+      {},
+      {
+        util: require(`${dirs.site}/util`),
+        dnaVars: metadata,
+      },
+      templateData,
+      {
+        pageURL: `${path.basename(file.basename, ".yml")  }.html`,
+        dependencyOrder: docsDeps,
+        releaseDate: date,
+        pkg: pkg,
       }
     )
-      .pipe(rename(function(file) {
-        if (file.basename === 'metadata') {
-          file.basename = dep;
-        }
-      }))
-      .pipe(data(async function(file) {
-        let componentDeps = dependencyOrder.map((dep) => dep.split('/').pop());
-        componentDeps.push(dep);
 
-        let pkg = JSON.parse(await fsp.readFile(path.join(dirs.components, dep, 'package.json')));
+    callback(null, transformedFile)
+  }
+  // eslint-disable-next-line consistent-return
+  function compileNunJucks(file, enc, cb) {
+    let component
+    const componentName = file.dirname.replace("/metadata", "").split("/").pop()
+    try {
+      component = yaml.safeLoad(String(file.contents))
+    } catch (safeloadError) {
+      logger.error(
+        "Uh, oh... during buildDocs_forDep, yaml loading failed for".yellow,
+        componentName.red
+      )
+      throw safeloadError
+    }
 
-        let docsDeps = minimumDeps.concat(componentDeps);
-        docsDeps = docsDeps.filter((dep, i) => docsDeps.indexOf(dep) === i);
+    if (!component.id) {
+      if (file.basename === "metadata.yml") {
+        // Use the component's name
+        component.id = dep
+      } else {
+        // Use the example file name
+        component.id = path.basename(file.basename, ".yml")
+      }
+    }
+    let templateData = Object.assign(
+      {},
+      { component: component },
+      file.data || {}
+    )
 
-        let date;
-        try {
-          const data = await npmFetch.json(pkg.name);
-          date = data.time[pkg.version];
-          date = new Date(date).toLocaleDateString('en-US', { year: 'numeric', month: 'long', day: 'numeric' });
-        }
-        catch (err) {
-          date = 'Unreleased';
-          logger.error(`Could not determine date of release for ${pkg.name}@${pkg.version}`);
-        }
+    file.path = ext(file.path, ".html")
 
-        return Object.assign({}, {
-          util: require(`${dirs.site}/util`),
-          dnaVars: metadata
-        }, templateData, {
-          pageURL: path.basename(file.basename, '.yml') + '.html',
-          dependencyOrder: docsDeps,
-          releaseDate: date,
-          pkg: pkg
-        });
-      }))
-      .pipe(through.obj(function compilePug(file, enc, cb) {
-        let component;
-        var componentName = file.dirname.replace('/metadata', '').split('/').pop();
-        try {
-          component = yaml.safeLoad(String(file.contents));
-        } catch (safeloadError) {
-          logger.error('Uh, oh... during buildDocs_forDep, yaml loading failed for'.yellow, componentName.red);
-          throw safeloadError;
-        }
+    try {
+      const templatePath = `${dirs.site}/templates/siteComponent.njk`
+      const compiled = nunjucks.render(templatePath, templateData)
+      file.contents = Buffer.from(compiled)
+    } catch (err) {
+      return cb(err)
+    }
+    cb(null, file)
+  }
 
-        if (!component.id) {
-          if (file.basename === 'metadata.yml') {
-            // Use the component's name
-            component.id = dep;
-          }
-          else {
-            // Use the example file name
-            component.id = path.basename(file.basename, '.yml');
-          }
-        }
-        let templateData = Object.assign({}, { component: component }, file.data || {});
-
-        file.path = ext(file.path, '.html');
-
-        try {
-          const templatePath = `${dirs.site}/templates/siteComponent.njk`;
-          let compiled = nunjucksCompiler.render(templatePath, templateData)
-          file.contents = Buffer.from(compiled);
-        } catch (err) {
-          return cb(err);
-        }
-        cb(null, file);
-      }))
-      .pipe(gulp.dest('dist/docs/'))
-      .on('end', resolve)
-      .on('error', reject);
-  });
+  glob(files, { allowEmpty: true }, (err, matches) => {
+    if (err) {
+      // Handle the error
+    } else {
+      // eslint-disable-next-line no-restricted-syntax
+      for (const file of matches) {
+        fs.createReadStream(file)
+          .pipe(through.obj(transform))
+          .pipe(fs.createWriteStream(file.replace("metadata", dep)))
+          .pipe(through.obj(compileNunJucks))
+          .pipe(fs.createWriteStream(`dist/docs/${path.basename(file)}`))
+      }
+    }
+  })
 }
 
 // Combined
 async function buildDocs_individualPackages() {
-  let dependencies = await depUtils.getFolderDependencyOrder(dirs.components);
+  const dependencies = await depUtils.getFolderDependencyOrder(dirs.components)
 
-  return Promise.all(dependencies.map(buildDocs_forDep));
+  return Promise.all(dependencies.map(buildDocs_forDep))
 }
 
 function buildSite_generateIndex() {
-  return gulp.src([
+  const metadataFiles = fg([
     `${dirs.components}/*/metadata.yml`,
-    `${dirs.components}/*/metadata/*.yml`
+    `${dirs.components}/*/metadata/*.yml`,
   ])
-  .pipe(function() {
-    let docs = [];
-    let store = {};
-    let latestFile = null;
+  metadataFiles.forEach((file) => {
+    // read the contents of the file
+    const docs = []
+    const store = {}
+    let latestFile = null
+    // eslint-disable-next-line no-shadow
     function readYML(file, enc, cb) {
-      let componentData;
+      let componentData
       try {
-        componentData = yaml.safeLoad(String(file.contents));
+        componentData = yaml.safeLoad(String(file.contents))
       } catch (err) {
-        return cb(err);
+        return cb(err)
       }
 
-      var componentName = file.dirname.replace('/metadata', '').split('/').pop();
+      const componentName = file.dirname.replace("/metadata", "").split("/").pop()
 
-      if (path.basename(file.basename) === 'metadata.yml') {
-        file.basename = componentName;
+      if (path.basename(file.basename) === "metadata.yml") {
+        file.basename = componentName
       }
 
-      var fileName = ext(file.basename, '.html');
+      const fileName = ext(file.basename, ".html")
 
       docs.push({
         href: fileName,
         name: componentData.name,
-        description: componentData.description
-      });
+        description: componentData.description,
+      })
 
       store[fileName] = {
         href: fileName,
         name: componentData.name,
         component: componentName,
-        description: componentData.description
-      };
+        description: componentData.description,
+      }
 
-      latestFile = file;
+      latestFile = file
 
-      cb();
+      cb()
     }
 
     function endStream(cb) {
-      let indexFile = latestFile.clone({contents: false});
-      indexFile.path = path.join(latestFile.base, 'index.json');
+      const indexFile = latestFile.clone({ contents: false })
+      indexFile.path = path.join(latestFile.base, "index.json")
 
-      let index = lunr(function() {
-        this.ref('href');
-        this.field('name', { boost: 10 });
-        this.field('description');
+      const index = lunr(function () {
+        this.ref("href")
+        this.field("name", { boost: 10 })
+        this.field("description")
 
-        docs.forEach(function(doc) {
-          this.add(doc);
-        }, this);
-      });
+        docs.forEach(function (doc) {
+          this.add(doc)
+        }, this)
+      })
 
       // Note: could merge main index here using technique from https://www.garysieling.com/blog/building-a-full-text-index-in-javascript
 
-      indexFile.contents = Buffer.from(JSON.stringify(index));
-      this.push(indexFile);
+      indexFile.contents = Buffer.from(JSON.stringify(index))
+      this.push(indexFile)
 
-      let storeFile = latestFile.clone({contents: false});
-      storeFile.path = path.join(latestFile.base, 'store.json');
-      storeFile.contents = Buffer.from(JSON.stringify(store));
-      this.push(storeFile);
+      const storeFile = latestFile.clone({ contents: false })
+      storeFile.path = path.join(latestFile.base, "store.json")
+      storeFile.contents = Buffer.from(JSON.stringify(store))
+      this.push(storeFile)
 
-      cb();
+      cb()
     }
 
-    return through.obj(readYML, endStream);
-  }())
-  .pipe(gulp.dest('dist/docs/'));
-};
+    const transformedContents = through.obj(readYML, endStream)
+    fs.writeFileSync(`dist/docs/${file}`, transformedContents)
+  })
+}
 
-function buildSite_getData() {
-  let nav = [];
-  return gulp.src([
+/**
+ * @description This will loop through each file in the metadataFiles array, 
+ * read the contents of the file
+ * using the fs module's readFileSync method, perform any necessary t
+ * ransformations on the contents, and then add an entry to the nav array for each file.
+ * Finally, the nav array is sorted and assigned to the templateData.nav property.
+ */
+async function buildSite_getData() {
+  const nav = []
+  const metadataFiles = await fg([
     `${dirs.components}/*/metadata.yml`,
-    `${dirs.components}/*/metadata/*.yml`
+    `${dirs.components}/*/metadata/*.yml`,
   ])
-  .pipe(through.obj(function readYML(file, enc, cb) {
-    let componentData;
-    var componentName = file.dirname.replace('/metadata', '').split('/').pop();
+  console.log(metadataFiles)
+  metadataFiles.forEach((file) => {
+    let componentData
+    const componentName = file.replace("/metadata", "").split("/").pop()
     try {
-      componentData = yaml.safeLoad(String(file.contents));
+      componentData = yaml.safeLoad(fs.readFileSync(file, "utf8"))
     } catch (safeloadError) {
-      logger.error('Uh, oh... during buildDocs_getData, yaml loading failed for'.yellow, componentName.red);
-      throw safeloadError;
-    } 
-
-    if (path.basename(file.basename) === 'metadata.yml') {
-      file.basename = componentName;
+      logger.error(
+        "Uh, oh... during buildDocs_getData, yaml loading failed for".yellow,
+        componentName.red
+      )
+      throw safeloadError
     }
 
-    var fileName = ext(file.basename, '.html');
+    const fileName =
+      path.basename(file) === "metadata.yml" ? componentName : `${file}.html`
+
     nav.push({
       name: componentData.name,
       component: componentName,
       hide: componentData.hide,
       fastLoad: componentData.fastLoad,
       href: fileName,
-      description: componentData.description
-    });
-
-    cb(null, file);
-  }))
-  .on('end', function() {
-    templateData.nav = nav.sort(function(a, b) {
-      return a.name <= b.name ? -1 : 1;
-    });
+      description: componentData.description,
+    })
   })
-};
+
+  templateData.nav = nav.sort((a, b) => (a.name <= b.name ? -1 : 1))
+}
 
 function buildSite_copyResources() {
-  return gulp.src(`${dirs.site}/dist/**`)
-    .pipe(gulp.dest('dist/docs/'));
+  copyResources(`${dirs.site}/dist/**`, "dist/docs")
 }
 
 function buildSite_copyFreshResources() {
-  return gulp.src(`${dirs.site}/resources/**`)
-    .pipe(gulp.dest('dist/docs/'));
+  copyResources(`${dirs.site}/resources/**`, "dist/docs")
 }
 
+/**
+ * @description This will loop through each file in the siteFiles array, 
+ * read the contents of the file
+ * using the fs module's readFileSync method, perform any necessary transformations 
+ * on the contents using the nunjucksRender function, and then write 
+ * the transformed contents to a new file in the dist/docs/
+ * directory using the fs module's writeFileSync method.
+ */
 function buildSite_html() {
-  return gulp.src(`${dirs.site}/*.njk`)
-    .pipe(data(function(file) {
-      return {
-        util: require(`${dirs.site}/util`),
-        pageURL: path.basename(file.basename, '.njk') + '.html',
-        dependencyOrder: minimumDeps,
-        nav: templateData.nav // adding navigation data
-      };
-    }))
-    .pipe(nunjucksRender({
-      path: 'site/templates'
-    }))
-    .pipe(gulp.dest('dist/docs/'));
+  const siteFiles = glob.sync(`${dirs.site}/*.njk`)
+
+  siteFiles.forEach((file) => {
+    const fileContents = fs.readFileSync(file, "utf8")
+    const data = {
+      // eslint-disable-next-line import/no-dynamic-require
+      util: require(`${dirs.site}/util`),
+      pageURL: `${path.basename(file, ".njk")}.html`,
+      dependencyOrder: minimumDeps,
+      nav: templateData.nav,
+    }
+
+    const transformedContents = nunjucks.renderString(
+      "site/templates",
+      fileContents
+    )
+
+    fs.writeFileSync(
+      `dist/docs/${path.basename(file, ".njk")}.html`,
+      transformedContents
+    )
+  })
 }
 
 function copySiteWorkflowIcons() {
-  return gulp.src(path.join(path.dirname(require.resolve('@adobe/spectrum-css-workflow-icons')), 'spectrum-icons.svg'))
-    .pipe(gulp.dest('dist/docs/img/'));
+  const sourcePath = path.join(
+    path.dirname(require.resolve("@adobe/spectrum-css-workflow-icons")),
+    "spectrum-icons.svg"
+  )
+
+  const destinationPath = "dist/docs/img/"
+
+  fs.copyFileSync(sourcePath, `${destinationPath}/spectrum-icons.svg`)
 }
 
-let buildSite_pages = gulp.series(
-  buildSite_getData,
-  buildSite_html
-);
+const buildSite_pages = function (callback) {
+  async.series([buildSite_getData, buildSite_html], callback)
+}
 
-exports.buildSite = gulp.parallel(
-  buildSite_copyResources,
-  buildSite_pages
-);
+exports.buildSite = function (callback) {
+  async.parallel([buildSite_copyResources, buildSite_pages], callback)
+}
 
-let buildDocs = gulp.series(
-  buildSite_getData,
-  gulp.parallel(
-    buildSite_generateIndex,
-    buildDocs_individualPackages,
-    buildSite_copyResources,
-    copySiteWorkflowIcons
+/**
+ * @description This will first run the buildSite_getData function, 
+ * and then run the buildSite_generateIndex, 
+ * buildDocs_individualPackages, buildSite_copyResources, and copySiteWorkflowIcons 
+ * functions in parallel. The callback function will be invoked
+ * when all of the tasks in the series have completed.
+ * @param {*} callback
+ */
+const buildDocs = function (callback) {
+  async.series(
+    [
+      buildSite_getData,
+      // eslint-disable-next-line no-shadow
+      function (callback) {
+        async.parallel(
+          [
+            buildSite_generateIndex,
+            buildDocs_individualPackages,
+            buildSite_copyResources,
+            copySiteWorkflowIcons,
+          ],
+          callback
+        )
+      },
+    ],
+    callback
   )
-);
+}
 
-let build = gulp.series(
-  buildSite_getData,
-  gulp.parallel(
-    buildDocs,
-    buildSite_html
+// eslint-disable-next-line func-names
+const build = function (callback) {
+  async.series(
+    [
+      buildSite_getData,
+      // eslint-disable-next-line no-shadow
+      function (callback) {
+        async.parallel([buildDocs, buildSite_html], callback)
+      },
+    ],
+    callback
   )
-);
+}
 
-exports.buildSite_getData = buildSite_getData;
-exports.buildSite_copyResources = buildSite_copyResources;
-exports.buildSite_copyFreshResources = buildSite_copyFreshResources;
-exports.buildSite_pages = buildSite_pages;
-exports.buildSite_html = buildSite_html;
-exports.buildDocs_forDep = buildDocs_forDep;
-exports.buildDocs = buildDocs;
-exports.build = build;
+exports.buildSite_getData = buildSite_getData
+exports.buildSite_copyResources = buildSite_copyResources
+exports.buildSite_copyFreshResources = buildSite_copyFreshResources
+exports.buildSite_pages = buildSite_pages
+exports.buildSite_html = buildSite_html
+exports.buildDocs_forDep = buildDocs_forDep
+exports.buildDocs = buildDocs
+exports.build = build

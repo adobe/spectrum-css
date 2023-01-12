@@ -1,5 +1,5 @@
 /*
-Copyright 2019 Adobe. All rights reserved.
+Copyright 2022 Adobe. All rights reserved.
 This file is licensed to you under the Apache License, Version 2.0 (the "License");
 you may not use this file except in compliance with the License. You may obtain a copy
 of the License at http://www.apache.org/licenses/LICENSE-2.0
@@ -9,57 +9,68 @@ the License is distributed on an "AS IS" BASIS, WITHOUT WARRANTIES OR REPRESENTA
 OF ANY KIND, either express or implied. See the License for the specific language
 governing permissions and limitations under the License.
 */
-
-const gulp = require('gulp');
-const postcss = require('gulp-postcss');
-const concat = require('gulp-concat');
-const processors = require('./processors').processors;
-const rename = require('gulp-rename');
-
-const legacyBuild = require('./legacyBuild');
-const vars = require('./vars');
+const async = require("async")
+const fs = require("fs")
+const postcss = require("postcss")
+const { processors } = require("./processors")
+// const legacyBuild = require("./legacyBuild")
+const vars = require("./vars")
 
 // Read in all variables used
 // Read in all vars from recent DNA
 // Include definitions if they refer to a variable, static if not
 
-function buildIndexVars() {
-  return gulp.src([
-    'index.css',
-    'skin.css'
-  ], {
-    allowEmpty: true // Allow missing skin.css
-  })
-    .pipe(concat('index-vars.css'))
-    .pipe(postcss(processors))
-    .pipe(gulp.dest('dist/'));
+async function buildIndexVars() {
+  // Read the contents of index.css and skin.css
+  let indexCss = ""
+  let skinCss = ""
+  try {
+    indexCss = fs.readFileSync("index.css", "utf-8")
+  } catch (e) {
+    console.error(`Error reading index.css: ${e}`)
+  }
+  try {
+    skinCss = fs.readFileSync("skin.css", "utf-8")
+  } catch (e) {
+    // Do nothing if skin.css is missing
+  }
+
+  // Concatenate the two files
+  const css = indexCss + skinCss
+
+  // Process the CSS with PostCSS
+  return postcss(processors)
+    .process(css)
+    .then((result) => {
+      // Write the processed CSS to dist/index-vars.css
+      fs.writeFileSync("dist/index-vars.css", result.css)
+    })
 }
 
-let buildVars = gulp.series(
-  buildIndexVars,
-  vars.bakeVars
-);
+const buildVars = function (callback) {
+  async.series([buildIndexVars, vars.bakeVars], callback)
+}
 
-exports.buildIndexVars = buildIndexVars;
-exports.buildVars = buildVars;
+exports.buildIndexVars = buildIndexVars
+exports.buildVars = buildVars
 
-exports.buildCSS = gulp.series(
-  buildVars,
-  function copyIndex() {
-    // Just copy index.vars as index.css to maintain backwards compat
-    return gulp.src('dist/index-vars.css')
-      .pipe(rename((file) => {
-        file.basename = 'index';
-      }))
-      .pipe(gulp.dest('dist/'))
-  }
-  /*
-  ,gulp.parallel(
-    legacyBuild.buildDiff,
-    legacyBuild.buildMedium,
-    legacyBuild.buildLarge,
-    legacyBuild.buildSingleStops,
-    legacyBuild.buildMultiStops
+exports.buildCSS = function (callback) {
+  async.series(
+    [
+      buildVars,
+      function copyIndex() {
+        // Read the contents of dist/index-vars.css
+        let css = ""
+        try {
+          css = fs.readFileSync("dist/index-vars.css", "utf-8")
+        } catch (e) {
+          console.error(`Error reading index-vars.css: ${e}`)
+        }
+
+        // Write the contents to dist/index.css
+        fs.writeFileSync("dist/index.css", css)
+      }
+    ],
+    callback
   )
-  */
-);
+}
