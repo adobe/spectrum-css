@@ -39,17 +39,17 @@ function prepareBuild(cb) {
 function copyGlobals() {
   glob('css/globals/*.css', { ignore: ['css/globals/spectrum-dimensionAliases.css', 'css/globals/spectrum-colorAliases.css'] }, (err, files) => {
     if (err) {
-      console.error(err);
+      console.error("Error in copyGlobals" + err);
     }
     files.forEach((file) => {
       fs.readFile(file, 'utf8', (error, data) => {
         if (error) {
-          console.error(error);
+          console.error("Error in copyGlobals" + error);
         }
         const modifiedData = data.replace(/:root {/, '.spectrum {');
         fs.writeFile(file.replace('css/globals/', 'dist/globals/'), modifiedData, 'utf8', err => {
           if (err) {
-            console.error(err);
+            console.error("Error in copyGlobals" + err);
           }
         });
       });
@@ -76,13 +76,13 @@ async function copySources() {
   files.forEach((file) => {
     fs.readFile(file, 'utf8', (err, data) => {
       if (err) {
-        console.error(err);
+        console.error("Error in copySources" + err);
         return;
       }
       const modifiedData = data.replace(':root', classMap[path.basename(file)]);
       fs.writeFile(file.replace('css/', 'dist/'), modifiedData, 'utf8', (error) => {
         if (error) {
-          console.error(error);
+          console.error("Error in copySources" + error);
         }
       });
     });

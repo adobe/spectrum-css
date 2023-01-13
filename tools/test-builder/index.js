@@ -10,31 +10,31 @@ OF ANY KIND, either express or implied. See the License for the specific languag
 governing permissions and limitations under the License.
 */
 
-const scenarioList = require('./plugins/scenarioList');
 const fs = require('fs');
 const {getPackages} = require('@lerna/project');
 const { PackageGraph } = require('@lerna/package-graph');
 const glob = require('glob');
+const scenarioList = require('./plugins/scenarioList');
 
 const buildBaseScenarioList = () => {
   glob('dist/docs/*.html', (err, files) => {
     if (err) {
-      console.error(err);
+      console.error("Error in component test builder docs " + err);
       return;
     }
 
-    files.forEach(file => {
+    files.forEach((file) => {
       fs.readFile(file, (err, data) => {
         if (err) {
-          console.error(err);
+          console.error("Error in component test builder docs " + err);
           return;
         }
 
         const transformedData = scenarioList(data);
 
-        fs.writeFile(file, transformedData, err => {
+        fs.writeFile(file, transformedData, (err) => {
           if (err) {
-            console.error(err);
+            console.error("Error in component test builder docs " + err);
           }
         });
       });

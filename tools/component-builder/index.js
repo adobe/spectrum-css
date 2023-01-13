@@ -10,40 +10,33 @@ OF ANY KIND, either express or implied. See the License for the specific languag
 governing permissions and limitations under the License.
 */
 
-const del = require("del")
-const async = require("async")
+const { deleteAsync } = require("del")
 
 const css = require("./css")
 const docs = require("./docs")
 
-function clean() {
-  return del("dist/*")
+async function clean() {
+  await deleteAsync("dist/*")
 }
 
-const build = function (callback) {
-  async.series(
-    [
-      clean,
-      function (callback1) {
-        async.parallel([css.buildVars, docs.buildDocs], callback1)
-      },
-    ],
-    callback
-  )
+const build = async () => {
+  await clean()
+  await Promise.all([css.buildVars(), docs.buildDocs()])
 }
 
-// build lite method
-const buildLite = function (callback) {
-  async.series([clean, css.buildIndexVars], callback)
+const buildLite = async () => {
+  await clean()
+  await css.buildIndexVars()
 }
 
-// build medium method
-const buildMedium = function (callback) {
-  async.series([clean, css.buildVars], callback)
+const buildMedium = async () => {
+  await clean()
+  await css.buildVars()
 }
-// build heavy method
-const buildHeavy = function (callback) {
-  async.series([clean, css.buildCSS], callback)
+
+const buildHeavy = async () => {
+  await clean()
+  await css.buildCSS()
 }
 
 exports.default = build

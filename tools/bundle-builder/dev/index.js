@@ -113,7 +113,7 @@ function watchSite() {
   const pattern1 = path.join(dirs.site, "*.njk")
   glob(pattern1, (error, files) => {
     if (error) {
-      console.error(error)
+      console.error("Error in bundle_builder dev " + error)
       return
     }
 
@@ -125,7 +125,7 @@ function watchSite() {
             reload,
           ], (err) => {
             if (err) {
-              console.error(err);
+              console.error("Error in bundle_builder dev " + err);
             }
           });
         }
@@ -137,7 +137,7 @@ function watchSite() {
   const pattern2 = path.join(dirs.site, "includes/*.njk")
   glob(pattern2, (error, files) => {
     if (error) {
-      console.error(error)
+      console.error("Error in bundle_builder dev " + error)
       return
     }
 
@@ -154,7 +154,7 @@ function watchSite() {
             reload,
           ], (err) => {
             if (err) {
-              console.error(err);
+              console.error("Error in bundle_builder dev " + err);
             }
           });
         }
@@ -179,7 +179,7 @@ function watchSite() {
           reload,
         ], (err) => {
           if (err) {
-            console.error(err);
+            console.error("Error in bundle_builder dev " + err);
           }
         });
       }
@@ -194,7 +194,7 @@ function watchSite() {
   patterns.forEach((pattern) => {
     glob(pattern, (error, files) => {
       if (error) {
-        console.error(error)
+        console.error("Error in bundle_builder dev " + error)
         return
       }
 
@@ -213,7 +213,7 @@ function watchSite() {
               },
             ], (err) => {
               if (err) {
-                console.error(err);
+                console.error("Error in bundle_builder dev " + err);
               }
             });
           }
@@ -232,7 +232,7 @@ function watchCommons() {
         reload,
       ], (err) => {
         if (err) {
-          console.error(err);
+          console.error("Error in bundle_builder dev " + err);
         }
       });
     }

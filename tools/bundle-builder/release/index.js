@@ -168,7 +168,7 @@ const ghPages = async function() {
     }
   } catch (err) {
     // Handle any errors that may have occurred
-    console.error(err);
+    console.error("Error in release " + err);
   }
 };
 

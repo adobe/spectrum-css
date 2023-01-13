@@ -53,7 +53,7 @@ async function buildDocs_html() {
     package = await readJSONFile("package.json")
     dependencies = await getDependencies()
   } catch (err) {
-    console.error(err)
+    console.error("Error in component builder docs " + err)
     return
   }
 
@@ -79,7 +79,7 @@ async function buildDocs_html() {
   filePaths.forEach((filePath) => {
     fs.readFile(filePath, "utf8", (err, contents) => {
       if (err) {
-        console.error(err)
+        console.error("Error in component builder docs " + err)
         return
       }
 
@@ -109,12 +109,12 @@ async function buildDocs_html() {
           compiled,
           (err) => {
             if (err) {
-              console.error(err)
+              console.error("Error in component builder docs " + err)
             }
           }
         )
       } catch (e) {
-        console.error(e)
+        console.error("Error in component builder docs " + e)
       }
     })
   })
@@ -124,7 +124,7 @@ function buildDocs_resources() {
   // Read all files in the source directory
   fs.readdir(`${sitePath}/dist/`, (err, fileNames) => {
     if (err) {
-      console.error(err)
+      console.error("Error in component builder docs " + err)
       return
     }
 
@@ -133,14 +133,14 @@ function buildDocs_resources() {
       // Read file contents
       fs.readFile(`${sitePath}/dist/${fileName}`, (err, contents) => {
         if (err) {
-          console.error(err)
+          console.error("Error in component builder docs " + err)
           return
         }
 
         // Write file contents to the destination directory
         fs.writeFile(path.join("dist/docs/", fileName), contents, (err) => {
           if (err) {
-            console.error(err)
+            console.error("Error in component builder docs " + err)
           }
         })
       })
@@ -153,7 +153,7 @@ async function buildDocs_copyDeps() {
   try {
     dependencies = await getDependencies()
   } catch (err) {
-    console.error(err)
+    console.error("Error in component builder docs " + err)
     return
   }
 
@@ -165,7 +165,7 @@ async function buildDocs_copyDeps() {
       // Read the file contents
       fs.readFile(filePath, (err, contents) => {
         if (err) {
-          console.error(err)
+          console.error("Error in component builder docs " + err)
           return
         }
 
@@ -179,7 +179,7 @@ async function buildDocs_copyDeps() {
           contents,
           (err) => {
             if (err) {
-              console.error(err)
+              console.error("Error in component builder docs " + err)
             }
           }
         )

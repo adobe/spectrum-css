@@ -29,7 +29,7 @@ const build = async.series(
       const data = await fs.readFile(srcPath, 'utf8');
       await fs.writeFile(destPath, data, 'utf8');
     } catch (err) {
-      console.error(err);
+      console.error("Error in component buildersimple " + err);
     }
   }
 );

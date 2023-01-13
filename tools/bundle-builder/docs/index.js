@@ -11,17 +11,16 @@ governing permissions and limitations under the License.
 */
 const fs = require("fs")
 const fsp = fs.promises
-const fg = require('fast-glob')
+const fg = require("fast-glob")
 const path = require("path")
 const yaml = require("js-yaml")
 const through = require("through2")
 const ext = require("replace-ext")
 const logger = require("logger")
 const lunr = require("lunr")
-const async = require("async")
 const npmFetch = require("npm-registry-fetch")
 const nunjucks = require("nunjucks")
-const glob = require('glob')
+const glob = require("glob")
 const dirs = require("../lib/dirs")
 const depUtils = require("../lib/depUtils")
 const copyResources = require("../lib/copyUtils")
@@ -78,7 +77,7 @@ async function buildDocs_forDep(dep) {
   console.debug(`Will build docs for package in ${dirs.components}/${dep}`)
   // This code uses the glob function to select the files based on the given patterns,
   // and the through2 module to create a stream that processes the data.
-  // The transform function is called for each file in the stream, 
+  // The transform function is called for each file in the stream,
   // and performs the necessary transformation on the file data.
 
   // The code loops over the matches array and creates a read stream for each file,
@@ -120,7 +119,7 @@ async function buildDocs_forDep(dep) {
       },
       templateData,
       {
-        pageURL: `${path.basename(file.basename, ".yml")  }.html`,
+        pageURL: `${path.basename(file.basename, ".yml")}.html`,
         dependencyOrder: docsDeps,
         releaseDate: date,
         pkg: pkg,
@@ -212,7 +211,10 @@ function buildSite_generateIndex() {
         return cb(err)
       }
 
-      const componentName = file.dirname.replace("/metadata", "").split("/").pop()
+      const componentName = file.dirname
+        .replace("/metadata", "")
+        .split("/")
+        .pop()
 
       if (path.basename(file.basename) === "metadata.yml") {
         file.basename = componentName
@@ -271,7 +273,7 @@ function buildSite_generateIndex() {
 }
 
 /**
- * @description This will loop through each file in the metadataFiles array, 
+ * @description This will loop through each file in the metadataFiles array,
  * read the contents of the file
  * using the fs module's readFileSync method, perform any necessary t
  * ransformations on the contents, and then add an entry to the nav array for each file.
@@ -283,7 +285,6 @@ async function buildSite_getData() {
     `${dirs.components}/*/metadata.yml`,
     `${dirs.components}/*/metadata/*.yml`,
   ])
-  console.log(metadataFiles)
   metadataFiles.forEach((file) => {
     let componentData
     const componentName = file.replace("/metadata", "").split("/").pop()
@@ -322,10 +323,10 @@ function buildSite_copyFreshResources() {
 }
 
 /**
- * @description This will loop through each file in the siteFiles array, 
+ * @description This will loop through each file in the siteFiles array,
  * read the contents of the file
- * using the fs module's readFileSync method, perform any necessary transformations 
- * on the contents using the nunjucksRender function, and then write 
+ * using the fs module's readFileSync method, perform any necessary transformations
+ * on the contents using the nunjucksRender function, and then write
  * the transformed contents to a new file in the dist/docs/
  * directory using the fs module's writeFileSync method.
  */
@@ -365,55 +366,54 @@ function copySiteWorkflowIcons() {
   fs.copyFileSync(sourcePath, `${destinationPath}/spectrum-icons.svg`)
 }
 
-const buildSite_pages = function (callback) {
-  async.series([buildSite_getData, buildSite_html], callback)
+// build all the site pages
+const buildSite_pages = async () => {
+  try {
+    await buildSite_getData()
+    await buildSite_html()
+  } catch (e) {
+    console.log("Error in builder-builder docs " + e)
+  }
 }
 
-exports.buildSite = function (callback) {
-  async.parallel([buildSite_copyResources, buildSite_pages], callback)
+exports.buildSite = async () => {
+  try {
+    await Promise.all([buildSite_copyResources(), buildSite_pages()])
+  } catch (e) {
+    console.log("Error in builder-builder docs " + e)
+  }
 }
 
 /**
- * @description This will first run the buildSite_getData function, 
- * and then run the buildSite_generateIndex, 
- * buildDocs_individualPackages, buildSite_copyResources, and copySiteWorkflowIcons 
+ * @description This will first run the buildSite_getData function,
+ * and then run the buildSite_generateIndex,
+ * buildDocs_individualPackages, buildSite_copyResources, and copySiteWorkflowIcons
  * functions in parallel. The callback function will be invoked
  * when all of the tasks in the series have completed.
  * @param {*} callback
  */
-const buildDocs = function (callback) {
-  async.series(
-    [
-      buildSite_getData,
-      // eslint-disable-next-line no-shadow
-      function (callback) {
-        async.parallel(
-          [
-            buildSite_generateIndex,
-            buildDocs_individualPackages,
-            buildSite_copyResources,
-            copySiteWorkflowIcons,
-          ],
-          callback
-        )
-      },
-    ],
-    callback
-  )
+async function buildDocs() {
+  try {
+    await buildSite_getData()
+    await Promise.all([
+      buildSite_generateIndex(),
+      buildDocs_individualPackages(),
+      buildSite_copyResources(),
+      copySiteWorkflowIcons(),
+    ])
+  } catch (e) {
+    console.log("Error in builder-builder docs " + e)
+  }
 }
 
 // eslint-disable-next-line func-names
-const build = function (callback) {
-  async.series(
-    [
-      buildSite_getData,
-      // eslint-disable-next-line no-shadow
-      function (callback) {
-        async.parallel([buildDocs, buildSite_html], callback)
-      },
-    ],
-    callback
-  )
+async function build() {
+  try {
+    await buildSite_getData()
+    await Promise.all([buildDocs(), buildSite_html()])
+  } catch (e) {
+    console.log("Error in builder-builder docs " + e)
+  }
 }
 
 exports.buildSite_getData = buildSite_getData
