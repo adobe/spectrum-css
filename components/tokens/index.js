@@ -9,66 +9,89 @@ the License is distributed on an "AS IS" BASIS, WITHOUT WARRANTIES OR REPRESENTA
 OF ANY KIND, either express or implied. See the License for the specific language
 governing permissions and limitations under the License.
 */
-const fs = require('fs')
-const StyleDictionary = require('style-dictionary').extend('config.js');
-const fg = require('fast-glob')
-const path = require('path')
-const async = require('async')
+const fs = require("fs")
+const StyleDictionary = require("style-dictionary").extend("config.js")
+const fg = require("fast-glob")
+const path = require("path")
+const async = require("async")
 
 async function clean() {
-  const del = await import('del');
-  return del('dist/*');
+  try {
+    const {deleteSync} = await import("del")
+    return await deleteSync("dist/*")
+  } catch (e) {
+    throw new Error(e)
+  }
 }
 
 async function concatIndex() {
   const files = await fg([
-    'dist/css/*.css',
-    'dist/css/spectrum/*.css',
-    'dist/css/express/*.css',
-    'custom-spectrum/*.css',
-    'custom-express/*.css'
-  ]);
+    "dist/css/*.css",
+    "dist/css/spectrum/*.css",
+    "dist/css/express/*.css",
+    "custom-spectrum/*.css",
+    "custom-express/*.css",
+  ])
 
-  let indexCss = '';
+  let indexCss = ""
   // eslint-disable-next-line no-restricted-syntax
   for (const file of files) {
-    indexCss += fs.readFileSync(file, 'utf8');
+    indexCss += fs.readFileSync(file, "utf8")
   }
 
-  fs.writeFileSync('dist/index.css', indexCss);
+  fs.writeFileSync("dist/index.css", indexCss)
 }
 
 async function buildCustomSpectrum() {
-  const files = await fg('custom-spectrum/*.css');
+  const files = await fg("custom-spectrum/*.css")
   // eslint-disable-next-line no-restricted-syntax
   for (const file of files) {
-    fs.copyFileSync(file, `dist/css/spectrum/${path.basename(file)}`);
+    fs.copyFileSync(file, `dist/css/spectrum/${path.basename(file)}`)
   }
 }
 
 async function buildCustomExpress() {
-  const files = await fg('custom-express/*.css');
+  const files = await fg("custom-express/*.css")
   // eslint-disable-next-line no-restricted-syntax
   for (const file of files) {
-    fs.copyFileSync(file, `dist/css/express/${path.basename(file)}`);
+    fs.copyFileSync(file, `dist/css/express/${path.basename(file)}`)
   }
 }
 
-const buildCustoms = (callback) => {
-  async.parallel([buildCustomSpectrum, buildCustomExpress], callback);
-};
-
-function styleDictionary(cb) {
-  StyleDictionary.buildAllPlatforms();
-  cb();
+const buildCustoms = async () => {
+  await Promise.all([buildCustomSpectrum(), buildCustomExpress()])
 }
 
-exports.clean = clean;
-exports.build = exports.buildLite = exports.buildMedium = exports.default = (callback) => {
-  async.series([clean, styleDictionary, buildCustoms, concatIndex], callback);
-};
+function styleDictionary(cb) {
+  StyleDictionary.buildAllPlatforms()
+ // cb()
+}
 
-exports.rebuildCustoms = (callback) => async.series([
-  buildCustoms,
-  concatIndex
-], callback);
+exports.clean = clean
+
+const parellelCalls = async () => {
+  try {
+    await clean()
+    await styleDictionary()
+    await buildCustoms()
+    await concatIndex()
+  } catch (e) {
+    throw new Error(e)
+  }
+}
+exports.build =
+  exports.buildLite =
+  exports.buildMedium =
+  exports.default =
+    parellelCalls
+
+const parellelRebuildCustoms = async () => {
+  try {
+    await buildCustoms()
+    await concatIndex()
+  } catch (e) {
+    throw new Error(e)
+  }
+}
+
+exports.rebuildCustoms = parellelRebuildCustoms
