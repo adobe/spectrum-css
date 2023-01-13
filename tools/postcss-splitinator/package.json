@@ -3,6 +3,7 @@
   "version": "1.0.0-beta.1",
   "description": "Turn container queryies into the var hack",
   "main": "index.js",
+  "private": true,
   "scripts": {
     "test": "ava"
   },

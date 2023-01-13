@@ -3,6 +3,7 @@
   "version": "2.0.1",
   "description": "Re-map and transform selectors",
   "main": "index.js",
+  "private": true,
   "scripts": {
     "test": "ava"
   },

@@ -3,6 +3,7 @@
   "version": "1.0.3",
   "description": "Remove :root rules",
   "main": "index.js",
+  "private": true,
   "scripts": {
     "test": "ava"
   },
