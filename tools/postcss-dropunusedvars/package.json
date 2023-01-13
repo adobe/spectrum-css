@@ -3,6 +3,7 @@
   "version": "1.2.1",
   "description": "Remove unused variable definitions",
   "main": "index.js",
+  "private": true,
   "scripts": {
     "test": "ava"
   },
