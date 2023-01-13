@@ -3,6 +3,16 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+<a name="1.1.4"></a>
+## 1.1.4
+🗓 2023-01-13 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/postcss-varfallback@1.1.3...postcss-varfallback@1.1.4)
+
+**Note:** Version bump only for package postcss-varfallback
+
+
+
+
+
 <a name="1.1.3"></a>
 ## 1.1.3
 🗓 2022-06-16 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/postcss-varfallback@1.1.2...postcss-varfallback@1.1.3)

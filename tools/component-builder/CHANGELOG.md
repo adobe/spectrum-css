@@ -3,6 +3,16 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+<a name="3.2.2"></a>
+## 3.2.2
+🗓 2023-01-13 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/component-builder@3.2.1...@spectrum-css/component-builder@3.2.2)
+
+**Note:** Version bump only for package @spectrum-css/component-builder
+
+
+
+
+
 <a name="3.2.1"></a>
 ## 3.2.1
 🗓 2022-11-11 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/component-builder@3.2.0...@spectrum-css/component-builder@3.2.1)

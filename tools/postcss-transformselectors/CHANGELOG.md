@@ -3,6 +3,16 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+<a name="2.0.2"></a>
+## 2.0.2
+🗓 2023-01-13 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/postcss-transformselectors@2.0.1...postcss-transformselectors@2.0.2)
+
+**Note:** Version bump only for package postcss-transformselectors
+
+
+
+
+
 <a name="2.0.1"></a>
 ## 2.0.1
 🗓 2022-03-17 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/postcss-transformselectors@2.0.0-alpha.0...postcss-transformselectors@2.0.1)
