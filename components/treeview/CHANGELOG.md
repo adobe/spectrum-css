@@ -3,6 +3,16 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+<a name="6.0.23"></a>
+## 6.0.23
+🗓 2023-01-13 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/treeview@6.0.22...@spectrum-css/treeview@6.0.23)
+
+**Note:** Version bump only for package @spectrum-css/treeview
+
+
+
+
+
 <a name="6.0.22"></a>
 ## 6.0.22
 🗓 2022-12-16 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/treeview@6.0.21...@spectrum-css/treeview@6.0.22)

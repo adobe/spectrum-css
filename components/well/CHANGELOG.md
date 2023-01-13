@@ -3,6 +3,16 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+<a name="3.0.24"></a>
+## 3.0.24
+🗓 2023-01-13 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/well@3.0.23...@spectrum-css/well@3.0.24)
+
+**Note:** Version bump only for package @spectrum-css/well
+
+
+
+
+
 <a name="3.0.23"></a>
 ## 3.0.23
 🗓 2022-11-11 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/well@3.0.22...@spectrum-css/well@3.0.23)
