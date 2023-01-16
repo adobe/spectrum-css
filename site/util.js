@@ -1,3 +1,5 @@
+/* eslint-disable guard-for-in */
+/* eslint-disable no-restricted-syntax */
 /*
 Copyright 2019 Adobe. All rights reserved.
 This file is licensed to you under the Apache License, Version 2.0 (the "License");
@@ -10,7 +12,7 @@ OF ANY KIND, either express or implied. See the License for the specific languag
 governing permissions and limitations under the License.
 */
 
-const logger = require('gulplog');
+// const logger = require('gulplog');
 
 const md = require('markdown-it')({
   html: true,
@@ -23,36 +25,36 @@ function defaultRenderer(tokens, idx, options, env, self) {
   return self.renderToken(tokens, idx, options, env, self);
 }
 
-let ruleClassnames = {
-  'link_open': 'spectrum-Link',
-  'table_open': 'spectrum-Table spectrum-Table--sizeM',
-  'thead_open': 'spectrum-Table-head',
-  'tr_open': 'spectrum-Table-row',
-  'tbody_open': 'spectrum-Table-body',
-  'th_open': 'spectrum-Table-headCell',
-  'td_open': 'spectrum-Table-cell',
-  'code_inline': 'spectrum-Code spectrum-Code--sizeS',
-  'code_block': 'spectrum-Code spectrum-Code--sizeS'
+const ruleClassnames = {
+  link_open: 'spectrum-Link',
+  table_open: 'spectrum-Table spectrum-Table--sizeM',
+  thead_open: 'spectrum-Table-head',
+  tr_open: 'spectrum-Table-row',
+  tbody_open: 'spectrum-Table-body',
+  th_open: 'spectrum-Table-headCell',
+  td_open: 'spectrum-Table-cell',
+  code_inline: 'spectrum-Code spectrum-Code--sizeS',
+  code_block: 'spectrum-Code spectrum-Code--sizeS'
 };
 
-for (let [rule, className] of Object.entries(ruleClassnames)) {
-  md.renderer.rules[rule] = (function(className) {
+for (const [rule, className] of Object.entries(ruleClassnames)) {
+  md.renderer.rules[rule] = (function (className) {
     const oldRule = md.renderer.rules[rule] || defaultRenderer;
     return function (tokens, idx, options, env, self) {
       tokens[idx].attrPush(['class', className]);
       return oldRule(tokens, idx, options, env, self);
     };
-  })(className);
+  }(className));
 }
 
 const code_inline = md.renderer.rules.code_inline || defaultRenderer;
-md.renderer.rules.code_inline = function(tokens, idx, options, env, self) {
+md.renderer.rules.code_inline = function (tokens, idx, options, env, self) {
   const token = tokens[idx];
   // ~ indicates markup that should be red
   if (token.content.substr(0, 1) === '~' && token.content.substr(-1) === '~') {
-    let aIndex = tokens[idx].attrIndex('class');
+    const aIndex = tokens[idx].attrIndex('class');
 
-    let className = 'spectrum-CSSExample-oldAPI';
+    const className = 'spectrum-CSSExample-oldAPI';
     if (aIndex < 0) {
       // add class
       tokens[idx].attrPush(['class', className]);
@@ -68,15 +70,15 @@ md.renderer.rules.code_inline = function(tokens, idx, options, env, self) {
 };
 
 const headingMap = {
-  'h1': 'spectrum-Heading spectrum-Heading--sizeL',
-  'h2': 'spectrum-Heading spectrum-Heading--sizeM',
-  'h3': 'spectrum-Heading spectrum-Heading--sizeS',
-  'h4': 'spectrum-Heading spectrum-Heading--sizeXS',
-  'h5': 'spectrum-Heading spectrum-Heading--sizeXXS'
+  h1: 'spectrum-Heading spectrum-Heading--sizeL',
+  h2: 'spectrum-Heading spectrum-Heading--sizeM',
+  h3: 'spectrum-Heading spectrum-Heading--sizeS',
+  h4: 'spectrum-Heading spectrum-Heading--sizeXS',
+  h5: 'spectrum-Heading spectrum-Heading--sizeXXS'
 };
 
-md.renderer.rules.heading_open = function(tokens, idx, options, env, self) {
-  let headingClass = headingMap[tokens[idx].tag];
+md.renderer.rules.heading_open = function (tokens, idx, options, env, self) {
+  const headingClass = headingMap[tokens[idx].tag];
   if (headingClass) {
     tokens[idx].attrPush(['class', headingClass]);
   }
@@ -88,77 +90,77 @@ exports.markdown = md;
 exports.Prism = require('prismjs');
 
 const statusLightVariants = {
-  'Deprecated': 'negative',
+  Deprecated: 'negative',
 
   'Beta Contribution': 'notice',
 
-  'Contribution': 'notice',
-  'Unverified': 'notice',
+  Contribution: 'notice',
+  Unverified: 'notice',
 
-  'Canon': 'positive',
-  'Verified': 'positive'
+  Canon: 'positive',
+  Verified: 'positive'
 };
 
 const dnaStatusTranslation = {
-  'Released': 'Canon',
-  'Beta': 'Contribution',
-  'Precursor': 'Contribution'
+  Released: 'Canon',
+  Beta: 'Contribution',
+  Precursor: 'Contribution'
 };
 
 const cssStatusTranslation = {
-  'Contribution': 'Unverified',
-  'Unverified': 'Unverified',
-  'Verified': 'Verified'
+  Contribution: 'Unverified',
+  Unverified: 'Unverified',
+  Verified: 'Verified'
 };
 
-exports.getStatusLightVariant = function(status) {
+exports.getStatusLightVariant = function (status) {
   return statusLightVariants[status] || 'neutral';
 };
 
-exports.getDNAStatus = function(dnaComponentId, dnaStatus, cssStatus) {
+exports.getDNAStatus = function (dnaComponentId, dnaStatus, cssStatus) {
   if (cssStatus === 'Deprecated') {
     dnaStatus = 'Deprecated';
   }
 
   if (cssStatus === 'Verified') {
     if (dnaStatusTranslation[dnaStatus] !== 'Canon') {
-      logger.debug(`${dnaComponentId} is ${cssStatus} in CSS, but ${dnaStatus} in DNA`);
+     // logger.debug(`${dnaComponentId} is ${cssStatus} in CSS, but ${dnaStatus} in DNA`);
     }
   }
 
   if (!dnaStatus) {
-    logger.debug(`${dnaComponentId} has no DNA status`);
+   // logger.debug(`${dnaComponentId} has no DNA status`);
     dnaStatus = 'Contribution';
   }
 
   return dnaStatusTranslation[dnaStatus] || dnaStatus;
 };
 
-exports.getCSSStatus = function(dnaComponentId, cssStatus) {
+exports.getCSSStatus = function (dnaComponentId, cssStatus) {
   if (!cssStatus) {
     cssStatus = 'Contribution';
   }
   return cssStatusTranslation[cssStatus] || cssStatus;
 };
 
-exports.getSlug = function(name, subName) {
+exports.getSlug = function (name, subName) {
   if (subName) {
     name += `-${subName}`;
   }
   return name.toLowerCase().replace(/[^a-z\-]/g, '');
 };
 
-exports.populateDNAInfo = function(component, dnaVars) {
+exports.populateDNAInfo = function (component, dnaVars) {
   // Get DNA information
-  var dnaComponentId = component.id || component.name.toLowerCase();
+  const dnaComponentId = component.id || component.name.toLowerCase();
 
   // Get info based on component variation first, then component name second
-  var dnaComponentTitle = dnaVars['spectrum-' + dnaComponentId + '-name'];
+  const dnaComponentTitle = dnaVars[`spectrum-${dnaComponentId}-name`];
 
-  var dnaDescription = dnaVars['spectrum-' + dnaComponentId + '-description'];
+  // const dnaDescription = dnaVars[`spectrum-${dnaComponentId}-description`];
 
-  var cssStatus = this.getCSSStatus(dnaComponentId, component.status);
-  var dnaStatus = this.getDNAStatus(dnaComponentId, dnaVars['spectrum-' + dnaComponentId + '-status'] || component.dnaStatus, cssStatus);
+  const cssStatus = this.getCSSStatus(dnaComponentId, component.status);
+  const dnaStatus = this.getDNAStatus(dnaComponentId, dnaVars[`spectrum-${dnaComponentId}-status`] || component.dnaStatus, cssStatus);
 
   // Store the info
   component.name = component.name || dnaComponentTitle;
@@ -176,17 +178,17 @@ exports.populateDNAInfo = function(component, dnaVars) {
   }
 
   if (component.examples) {
-    for (id in component.examples) {
+    // eslint-disable-next-line no-undef
+    for (const id in component.examples) {
       let example = component.examples[id];
       if (typeof example === 'string') {
         // Handle markup only examples
         example = {
-          id: id,
+          id,
           markup: example
         };
         component.examples[id] = example;
-      }
-      else {
+      } else {
         example.id = example.id || id;
       }
 
