@@ -13,7 +13,7 @@ const semver = require('semver');
 const path = require('path');
 const fsp = require('fs').promises;
 const gulp = require('gulp');
-const logger = require('gulplog');
+const logger = require('../lib/logger');
 const conventionalChangelog = require('gulp-conventional-changelog');
 const exec = require('../lib/exec');
 
@@ -104,7 +104,7 @@ function generateChangelog() {
 
     await exec.promise(`touch CHANGELOG.md`);
 
-    gulp.src('CHANGELOG.md')
+    fs.createReadStream('CHANGELOG.md')
       .pipe(conventionalChangelog({
         preset: 'spectrum',
         lernaPackage: pkg.name,
@@ -147,7 +147,7 @@ function generateChangelog() {
       }, {
         // conventional-changelog-writer options go here
       }))
-      .pipe(gulp.dest('./'))
+      .pipe(fs.createWriteStream('./'))
       .on('finish', resolve)
       .on('error', reject);
   });

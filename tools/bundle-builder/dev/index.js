@@ -11,12 +11,12 @@ governing permissions and limitations under the License.
 */
 
 const fs = require("fs")
-const logger = require("logger")
 const browserSync = require("browser-sync")
 const path = require("path")
 const glob = require("glob")
 const chokidar = require("chokidar")
 const async = require("async")
+const logger = require("../lib/logger")
 const dirs = require("../lib/dirs")
 const docs = require("../docs")
 const subrunner = require("../subrunner")

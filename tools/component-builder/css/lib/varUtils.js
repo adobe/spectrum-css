@@ -15,19 +15,19 @@ const postcss = require('postcss');
 const concat = require('gulp-concat');
 const through = require('through2');
 const fsp = require('fs').promises;
-const logger = require('gulplog');
+// const logger = require('gulplog');
 const path = require('path');
 
 function getVarsFromCSS(css) {
-  let variableList = [];
-  let root = postcss.parse(css);
+  const variableList = [];
+  const root = postcss.parse(css);
 
   root.walkRules((rule, ruleIndex) => {
     rule.walkDecls((decl) => {
-      let matches = decl.value.match(/var\(.*?\)/g);
+      const matches = decl.value.match(/var\(.*?\)/g);
       if (matches) {
-        matches.forEach(function(match) {
-          let varName = match.replace(/var\((--[\w\-]+),?.*?\)/, '$1').trim();
+        matches.forEach((match) => {
+          const varName = match.replace(/var\((--[\w\-]+),?.*?\)/, '$1').trim();
           if (variableList.indexOf(varName) === -1) {
             variableList.push(varName);
           }
@@ -39,13 +39,13 @@ function getVarsFromCSS(css) {
 }
 
 function getVarsDefinedInCSS(css) {
-  let variableList = [];
-  let root = postcss.parse(css);
+  const variableList = [];
+  const root = postcss.parse(css);
 
   root.walkRules((rule, ruleIndex) => {
     rule.walkDecls((decl) => {
       if (decl.prop.startsWith('--')) {
-        let varName = decl.prop;
+        const varName = decl.prop;
         if (variableList.indexOf(varName) === -1) {
           variableList.push(varName);
         }
@@ -56,8 +56,8 @@ function getVarsDefinedInCSS(css) {
 }
 
 function getVarValues(css) {
-  let root = postcss.parse(css);
-  let variables = {};
+  const root = postcss.parse(css);
+  const variables = {};
 
   root.walkRules((rule, ruleIndex) => {
     rule.walkDecls((decl) => {
@@ -69,8 +69,8 @@ function getVarValues(css) {
 }
 
 function getClassNames(contents, pkgName) {
-  let root = postcss.parse(contents);
-  let classNames = [];
+  const root = postcss.parse(contents);
+  const classNames = [];
 
   function addClassname(className) {
     if (classNames.indexOf(className) === -1) {
@@ -78,8 +78,8 @@ function getClassNames(contents, pkgName) {
     }
   }
 
-  let result = root.walkRules((rule, ruleIndex) => {
-    let selector = rule.selectors[0];
+  const result = root.walkRules((rule, ruleIndex) => {
+    const selector = rule.selectors[0];
 
     if (pkgName === 'page') {
       className = '';
@@ -92,12 +92,12 @@ function getClassNames(contents, pkgName) {
         return true;
       }
 
-      let selector = fullSelector.split(' ').shift();
+      const selector = fullSelector.split(' ').shift();
 
       if (rule.type === 'rule') {
-        let matches = selector.match(/^\.spectrum-[\w]+/);
+        const matches = selector.match(/^\.spectrum-[\w]+/);
         if (matches) {
-          let modSelector = matches[0]
+          const modSelector = matches[0]
           addClassname(modSelector);
         }
       }
@@ -105,18 +105,18 @@ function getClassNames(contents, pkgName) {
   });
 
   if (classNames.length === 0) {
-    logger.error(`Could not find classNames for ${pkgName}, assuming no classNames`);
+    //.error(`Could not find classNames for ${pkgName}, assuming no classNames`);
     classNames.push('');
   }
 
-  logger.debug(`Found classNames ${classNames.join(', ')} for ${pkgName}`);
+  //logger.debug(`Found classNames ${classNames.join(', ')} for ${pkgName}`);
 
   return classNames;
 }
 
 function resolveValue(value, vars) {
   if (value) {
-    let match = value.match(/var\((.+),?.*?\)/);
+    const match = value.match(/var\((.+),?.*?\)/);
     if (match) {
       return match[1];
     }
@@ -128,13 +128,13 @@ const varDir = path.join(path.dirname(require.resolve('@spectrum-css/vars')), '.
 const coreTokensFile = require.resolve('@spectrum-css/tokens');
 
 async function readDNAVariables(file) {
-  let css = await fsp.readFile(path.join(varDir, 'css', file));
-  let vars = getVarValues(css);
+  const css = await fsp.readFile(path.join(varDir, 'css', file));
+  const vars = getVarValues(css);
   return vars;
 }
 
 function getVariableDeclarations(classNames, vars) {
-  let varNames = Object.keys(vars);
+  const varNames = Object.keys(vars);
   if (varNames.length) {
     return `
 ${classNames.map((className) => `${className}`).join(',\n')} {
@@ -159,7 +159,7 @@ function getAllVars() {
       coreTokensFile
     ])
       .pipe(concat('everything.css'))
-      .pipe(through.obj(function getAllVars(file, enc, cb) {
+      .pipe(through.obj((file, enc, cb) => {
         variableList = getVarValues(file.contents.toString());
 
         cb(null, file);
@@ -181,7 +181,7 @@ function getAllComponentVars() {
       `${varDir}/custom.css`
     ])
       .pipe(concat('everything.css'))
-      .pipe(through.obj(function getAllVars(file, enc, cb) {
+      .pipe(through.obj((file, enc, cb) => {
         variableList = getVarValues(file.contents.toString());
 
         cb(null, file);
