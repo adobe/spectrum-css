@@ -10,13 +10,13 @@ OF ANY KIND, either express or implied. See the License for the specific languag
 governing permissions and limitations under the License.
 */
 
-const gulp = require('gulp');
 const postcss = require('postcss');
-const concat = require('gulp-concat');
 const through = require('through2');
 const fsp = require('fs').promises;
 // const logger = require('gulplog');
 const path = require('path');
+const fg = require("fast-glob");
+const fs = require("fs")
 
 function getVarsFromCSS(css) {
   const variableList = [];
@@ -148,48 +148,56 @@ ${varNames.map((varName) => `  ${varName}: ${vars[varName]};`).join('\n')}
 
 function getAllVars() {
   return new Promise((resolve, reject) => {
-    let variableList;
-
-    gulp.src([
+    const filePatterns = [
       `${varDir}/css/themes/*.css`,
       `${varDir}/css/scales/*.css`,
       `${varDir}/css/components/*.css`,
       `${varDir}/css/globals/*.css`,
-      `${varDir}/custom.css`,
-      coreTokensFile
-    ])
-      .pipe(concat('everything.css'))
-      .pipe(through.obj((file, enc, cb) => {
-        variableList = getVarValues(file.contents.toString());
+      `${varDir}custom.css`,
+    ]
 
-        cb(null, file);
-      }))
-      .on('finish', () => {
-        resolve(variableList);
+    fg(filePatterns, (error, files) => {
+      if (error) {
+        reject(error)
+      }
+
+      let variableList = []
+
+      files.forEach((file) => {
+        const contents = fs.readFileSync(file, "utf8")
+        variableList = getVarValues(contents)
       })
-      .on('error', reject);
-  });
+
+      fs.writeFileSync("everything.css", variableList.join(""))
+      resolve(variableList)
+    })
+  })
 }
 
+/**
+ * @description get all components vars
+ * @returns 
+ */
 function getAllComponentVars() {
   return new Promise((resolve, reject) => {
-    let variableList;
-
-    gulp.src([
+    const filePatterns = [
       `${varDir}/css/components/*.css`,
       `${varDir}/css/globals/*.css`,
       `${varDir}/custom.css`
-    ])
-      .pipe(concat('everything.css'))
-      .pipe(through.obj((file, enc, cb) => {
-        variableList = getVarValues(file.contents.toString());
+    ]
 
-        cb(null, file);
-      }))
-      .on('finish', () => {
-        resolve(variableList);
+    fg(filePatterns, (error, files) => {
+      if (error) {
+        reject(error)
+      }
+      let variableList = [];
+      files.forEach((file) => {
+        const contents = fs.readFileSync(file, "utf8")
+        variableList = getVarValues(contents);
       })
-      .on('error', reject);
+      fs.writeFileSync("everything.css", variableList.join(""))
+      resolve(variableList)
+    })
   });
 }
 

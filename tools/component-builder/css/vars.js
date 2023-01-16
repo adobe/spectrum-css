@@ -11,30 +11,29 @@ OF ANY KIND, either express or implied. See the License for the specific languag
 governing permissions and limitations under the License.
 */
 
-const gulp = require('gulp');
 const through = require('through2');
 // const postcss = require('postcss');
 // const logger = require('gulplog');
 const fsp = require('fs').promises;
 const path = require('path');
-
+const fs = require('fs')
 const varUtils = require('./lib/varUtils');
 
 // Todo: get these values from a common place?
-const colorStops = [
-  'darkest',
-  'dark',
-  'light',
-  'lightest'
-];
+// const colorStops = [
+//   'darkest',
+//   'dark',
+//   'light',
+//   'lightest'
+// ];
 
-const scales = [
-  'medium',
-  'large'
-];
+// const scales = [
+//   'medium',
+//   'large'
+// ];
 
 function bakeVars() {
-  return gulp.src([
+  return fs.createReadStream([
     'dist/index-vars.css'
   ])
     .pipe(through.obj(async (file, enc, cb) => {
@@ -85,7 +84,7 @@ function bakeVars() {
 
       cb(null, newFile);
     }))
-    .pipe(gulp.dest('dist/'));
+    .pipe(fs.createWriteStream('dist/'));
 }
 
 exports.bakeVars = bakeVars;

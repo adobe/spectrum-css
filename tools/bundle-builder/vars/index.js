@@ -15,6 +15,7 @@ const path = require("path")
 const through = require('through2');
 const postcss = require("postcss")
 const concat = require("concat-stream")
+const fg = require('fast-glob');
 const dirs = require("../lib/dirs.js")
 
 // Uhg share this with component-builder
@@ -59,7 +60,7 @@ function getAllVars() {
       `${dirs.components}/tokens/dist/index.css`,
     ]
 
-    glob(filePatterns, (error, files) => {
+    fg(filePatterns, (error, files) => {
       if (error) {
         reject(error)
       }
@@ -77,6 +78,7 @@ function getAllVars() {
   })
 }
 
+// eslint-disable-next-line consistent-return
 function resolveValue(value) {
   if (value) {
     const match = value.match(/var\((.+),?.*?\)/)

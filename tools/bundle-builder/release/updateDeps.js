@@ -12,9 +12,8 @@ governing permissions and limitations under the License.
 const semver = require('semver');
 const path = require('path');
 const fsp = require('fs').promises;
-const gulp = require('gulp');
 const logger = require('../lib/logger');
-const conventionalChangelog = require('gulp-conventional-changelog');
+const conventionalChangelog = require('conventional-changelog');
 const exec = require('../lib/exec');
 
 async function readPackage(dir) {

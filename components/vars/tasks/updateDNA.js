@@ -1,5 +1,10 @@
+/* eslint-disable max-len */
+/* eslint-disable guard-for-in */
+/* eslint-disable no-unused-vars */
+/* eslint-disable no-continue */
+/* eslint-disable no-restricted-syntax */
 /*
-Copyright 2019 Adobe. All rights reserved.
+Copyright 2022 Adobe. All rights reserved.
 This file is licensed to you under the Apache License, Version 2.0 (the "License");
 you may not use this file except in compliance with the License. You may obtain a copy
 of the License at http://www.apache.org/licenses/LICENSE-2.0
@@ -9,18 +14,14 @@ the License is distributed on an "AS IS" BASIS, WITHOUT WARRANTIES OR REPRESENTA
 OF ANY KIND, either express or implied. See the License for the specific language
 governing permissions and limitations under the License.
 */
-
+const fs = require('fs');
 const path = require('path');
-const fsp = require('fs').promises;
-const gulp = require('gulp');
-const ext = require('replace-ext');
-const logger = require('gulplog');
 const through = require('through2');
 
-const del = require('del');
+const { delAsync } = require('del');
 
 // Base variables we can just map directly
-let flatVars = [
+const flatVars = [
   'colorGlobals',
   'fontGlobals',
   'dimensionGlobals',
@@ -28,7 +29,7 @@ let flatVars = [
   'staticAliases'
 ];
 
-let dropTokens = {
+const dropTokens = {
   'name': true,
   'description': true,
   'status:': true,
@@ -40,21 +41,20 @@ function stripReference(value) {
 }
 
 function getJSVariableReference(value) {
-  let reference = stripReference(value);
-  let parts = reference.split('.');
-  let finalReference = parts.shift() + parts.map(JSON.stringify).map(value => `[${value}]`).join('');
+  const reference = stripReference(value);
+  const parts = reference.split('.');
+  const finalReference = parts.shift() + parts.map(JSON.stringify).map((value) => `[${value}]`).join('');
   return finalReference;
 }
 
 function getExport(key, value) {
   if (value[0] === '$') {
-    let reference = getJSVariableReference(value.substr(1));
+    const reference = getJSVariableReference(value.substr(1));
     return `exports[${JSON.stringify(key)}] = ${reference};
 `;
-  } else {
-    return `exports[${JSON.stringify(key)}] = ${JSON.stringify(value)};
+  } 
+  return `exports[${JSON.stringify(key)}] = ${JSON.stringify(value)};
 `;
-  }
 }
 
 function getCSSVariableReference(value) {
@@ -75,8 +75,8 @@ function getCSSVariableReference(value) {
     value = value.replace(/animationGlobals\./, 'global-animation.');
     value = value.replace(/staticAliases\./, 'alias.');
 
-    let parts = value.split('.');
-    return '--spectrum-' + parts.join('-');
+    const parts = value.split('.');
+    return `--spectrum-${parts.join('-')}`;
   }
   return value;
 }
@@ -90,25 +90,24 @@ function getCSSVarName(prefix, key) {
 function getCSSVar(prefix, key, value) {
   key = getCSSVarName(prefix, key);
   if (value[0] === '$') {
-    let reference = getCSSVariableReference(value);
+    const reference = getCSSVariableReference(value);
     return `  ${key}: var(${reference});
 `;
-  } else {
-    value = processValue(key, value);
-    return `  ${key}: ${value};
+  } 
+  value = processValue(key, value);
+  return `  ${key}: ${value};
 `;
-  }
 }
 
 function initializeObject(array) {
-  return array.reduce(function(a, v) {
+  return array.reduce((a, v) => {
     a[v] = {}; return a;
   }, {});
 }
 
 function populateObject(parentObject, keysOfParent, keyOfChild) {
-  let obj = {}
-  for (let key of keysOfParent) {
+  const obj = {}
+  for (const key of keysOfParent) {
     obj[key] = parentObject[key][keyOfChild];
   }
   return obj;
@@ -118,7 +117,7 @@ function processValue(name, value) {
   if (name.indexOf('animation') !== -1) {
     if (value[0] === '(') {
       return `cubic-bezier${value}`;
-    } else if (name.match(/delay$/) && value.indexOf('ms') === -1) {
+    } if (name.match(/delay$/) && value.indexOf('ms') === -1) {
       return `${value}ms`;
     }
     return value;
@@ -147,22 +146,22 @@ function isDimensionalValue(key, value) {
 }
 
 function calculateOverrides(objects, processValue) {
-  let commonKeys = {
-    name: true,
-    description: true,
-    varBaseName: true
-  };
+  // const commonKeys = {
+  //   name: true,
+  //   description: true,
+  //   varBaseName: true
+  // };
 
-  let identical = {};
-  let overrides = {};
-  for (let objectName of Object.keys(objects)) {
+  const identical = {};
+  const overrides = {};
+  for (const objectName of Object.keys(objects)) {
     overrides[objectName] = {};
   }
 
   // Get all the keys from all the objects
-  let keys = [];
-  for (let object of Object.values(objects)) {
-    for (let key in object) {
+  const keys = [];
+  for (const object of Object.values(objects)) {
+    for (const key in object) {
       if (keys.indexOf(key) === -1) {
         keys.push(key);
       }
@@ -170,11 +169,11 @@ function calculateOverrides(objects, processValue) {
   }
 
   // Assume we have the same keys in each object
-  for (let key of keys) {
+  for (const key of keys) {
     let isIdentical = true;
     let value;
 
-    for (let [objectName, object] of Object.entries(objects)) {
+    for (const [objectName, object] of Object.entries(objects)) {
       value = object[key];
 
       if (dropTokens[key]) {
@@ -183,12 +182,12 @@ function calculateOverrides(objects, processValue) {
         continue;
       }
 
-      let compareValue = processValue(object[key]);
+      const compareValue = processValue(object[key]);
 
       // Check if the value is the same the same in all other objects
-      for (let [otherObjectName, otherObject] of Object.entries(objects)) {
-        let otherValue = otherObject[key];
-        let otherCompareValue = processValue(otherObject[key]);
+      for (const [otherObjectName, otherObject] of Object.entries(objects)) {
+        const otherValue = otherObject[key];
+        const otherCompareValue = processValue(otherObject[key]);
 
         if (!isIdentical || compareValue !== otherCompareValue) {
           isIdentical = false;
@@ -208,11 +207,10 @@ function calculateOverrides(objects, processValue) {
 
 function generateDNAFiles() {
   const dnaJSONPath = path.join(path.dirname(require.resolve('@adobe/spectrum-tokens-deprecated')), '..', 'dist', 'data', 'json', 'dna-linked.json');
-  return gulp.src(dnaJSONPath)
+  return fs.createReadStream(dnaJSONPath)
     .pipe(through.obj(function translateJSON(file, enc, cb) {
-
-      let pushFile = (contents, fileName, folder) => {
-        let vinylFile = file.clone({
+      const pushFile = (contents, fileName, folder) => {
+        const vinylFile = file.clone({
           contents: false
         });
         vinylFile.path = path.join(file.base, folder || '', fileName);
@@ -220,18 +218,18 @@ function generateDNAFiles() {
         this.push(vinylFile);
       };
 
-      let generateCSSFile = (sections, fileName, folder) => {
+      const generateCSSFile = (sections, fileName, folder) => {
         let contents = `:root {
 `;
 
-        sections.forEach(section => {
-          let prefix = section.varBaseName;
-          for (let key in section) {
+        sections.forEach((section) => {
+          const prefix = section.varBaseName;
+          for (const key in section) {
             if (dropTokens[key]) {
               continue;
             }
 
-            let value = section[key];
+            const value = section[key];
             if (value[0] === '[' && value[value.length - 1] === ']') {
               console.error(`Skipping ${prefix}-${key}, value is an array`);
               continue;
@@ -239,10 +237,9 @@ function generateDNAFiles() {
 
             if (value.startsWith('rgb(')) {
               // Make -rgb variables for everything that's an actual rgb()
-              contents += getCSSVar(prefix, key + '-rgb', value.replace(/^rgb\((.*?)\)/, '$1'));
+              contents += getCSSVar(prefix, `${key}-rgb`, value.replace(/^rgb\((.*?)\)/, '$1'));
               contents += getCSSVar(prefix, key, `rgb(var(${getCSSVarName(prefix, key)}-rgb))`);
-            }
-            else {
+            } else {
               contents += getCSSVar(prefix, key, value);
             }
           }
@@ -254,20 +251,20 @@ function generateDNAFiles() {
         pushFile(contents, `spectrum-${fileName}.css`, folder);
       };
 
-      let generateCSSIndexFile = (files, folder) => {
-        let contents = `${files.map(module => `@import ${JSON.stringify(module)};`).join('\n')}`;
+      const generateCSSIndexFile = (files, folder) => {
+        const contents = `${files.map((module) => `@import ${JSON.stringify(module)};`).join('\n')}`;
         pushFile(contents, 'index.css', folder);
       };
 
-      let generateJSIndexFile = (files, folder) => {
-        let contents = `${files.map(module => `exports[${JSON.stringify(module.replace(/.*?\/(.*?)/, '$1'))}] = require("./${module}.js");`).join('\n')}`;
+      const generateJSIndexFile = (files, folder) => {
+        const contents = `${files.map((module) => `exports[${JSON.stringify(module.replace(/.*?\/(.*?)/, '$1'))}] = require("./${module}.js");`).join('\n')}`;
         pushFile(contents, 'index.js', folder);
       };
 
-      let generateJSFile = (sections, fileName, folder) => {
-        let folderParts = folder.split('/');
-        let folderCount = folderParts.length;
-        let basePath = folderCount > 1 ? '../'.repeat(folderCount - 1) : './';
+      const generateJSFile = (sections, fileName, folder) => {
+        const folderParts = folder.split('/');
+        const folderCount = folderParts.length;
+        const basePath = folderCount > 1 ? '../'.repeat(folderCount - 1) : './';
         let contents = '';
 
         // We have issues with switch, so only allow self refs for base vars
@@ -276,19 +273,19 @@ function generateDNAFiles() {
 `;
         }
 
-        let dependencies = {};
+        const dependencies = {};
 
-        sections.forEach(section => {
-          for (let key in section) {
+        sections.forEach((section) => {
+          for (const key in section) {
             if (dropTokens[key]) {
               continue;
             }
 
-            let value = section[key];
+            const value = section[key];
             contents += getExport(key, value);
 
             if (value[0] === '$') {
-              let dependency = stripReference(value.substr(1)).split('.').shift();
+              const dependency = stripReference(value.substr(1)).split('.').shift();
               if (dependency != fileName) {
                 dependencies[dependency] = true;
               }
@@ -297,7 +294,7 @@ function generateDNAFiles() {
         });
 
         let requires = '';
-        for (let dependency in dependencies) {
+        for (const dependency in dependencies) {
           requires += `const ${dependency} = require('${basePath}${dependency}.js');
 `;
         }
@@ -306,45 +303,43 @@ function generateDNAFiles() {
         dnaModules.push(path.join(folderParts.slice(1).join('/'), fileName));
       };
 
-      let generateFiles = (sections, fileName, folder = '') => {
+      const generateFiles = (sections, fileName, folder = '') => {
         generateCSSFile(sections, fileName, `css/${folder}`);
       // generateJSFile(sections, fileName, `js/${folder}`);
       };
 
-      let data = JSON.parse(String(file.contents));
-      let dnaData = data.dna;
-      let metadata = {
+      const data = JSON.parse(String(file.contents));
+      const dnaData = data.dna;
+      const metadata = {
         'dna-version': dnaData.version
       };
       let dnaModules = [];
 
       // Get the list of stops and scales
-      let stops = Object.keys(dnaData.colorStopData).filter(stopName => {
-        return dnaData.colorStopData[stopName].colorTokens.status !== 'Deprecated';
-      });
-      let scales = Object.keys(dnaData.scaleData);
-      let components = Object.keys(dnaData.components[stops[0]][scales[0]]).filter(componentName => {
+      const stops = Object.keys(dnaData.colorStopData).filter((stopName) => dnaData.colorStopData[stopName].colorTokens.status !== 'Deprecated');
+      const scales = Object.keys(dnaData.scaleData);
+      const components = Object.keys(dnaData.components[stops[0]][scales[0]]).filter((componentName) => 
         // Ok this is gross, but we have to skip this bad boy because it duplicates tokens from selectlist!
-        return componentName !== 'select';
-      });
+        componentName !== 'select'
+      );
 
       // Anything that doesn't consistently reference the same variable or value between stops/scales
-      let componentColorOverrides = initializeObject(stops);
-      let componentDimensionOverrides = initializeObject(scales);
+      const componentColorOverrides = initializeObject(stops);
+      const componentDimensionOverrides = initializeObject(scales);
 
       // Globals
-      flatVars.forEach(key => {
+      flatVars.forEach((key) => {
         // generateJSFile([dnaData[key]], key, 'js/globals');
         generateCSSFile([dnaData[key]], key, 'css/globals');
       });
 
       // Elements
-      let jsElementVariables = initializeObject(components);
-      let componentVariables = initializeObject(components);
-      let colorVariables = {};
-      let dimensionVariables = {};
-      let cssFilesGenerated = {};
-      let overriddenTokens = {};
+      const jsElementVariables = initializeObject(components);
+      const componentVariables = initializeObject(components);
+      const colorVariables = {};
+      const dimensionVariables = {};
+      const cssFilesGenerated = {};
+      const overriddenTokens = {};
 
       function addColorVariable(componentName, varName, value, varBaseName, stopName, stateName) {
         // Strip invalid # from placeholder variables
@@ -354,8 +349,8 @@ function generateDNAFiles() {
           varName += `-${stateName}`;
         }
 
-        let fullName = `${varBaseName}-${varName}`;
-        let cssVariableName = getCSSVariableReference(value);
+        const fullName = `${varBaseName}-${varName}`;
+        const cssVariableName = getCSSVariableReference(value);
         if (colorVariables[fullName] && colorVariables[fullName].cssVariableName !== cssVariableName) {
           // logger.debug(`Found override for ${fullName} (${colorVariables[fullName].cssVariableName} vs ${cssVariableName})`);
           componentColorOverrides[colorVariables[fullName].name][fullName] = colorVariables[fullName].value;
@@ -381,8 +376,8 @@ function generateDNAFiles() {
           varName += `-${stateName}`;
         }
 
-        let fullName = `${varBaseName}-${varName}`;
-        let cssVariableName = getCSSVariableReference(value);
+        const fullName = `${varBaseName}-${varName}`;
+        const cssVariableName = getCSSVariableReference(value);
         if (dimensionVariables[fullName] && dimensionVariables[fullName].cssVariableName !== cssVariableName) {
           // logger.debug(`Found override for ${fullName} (${dimensionVariables[fullName].cssVariableName} vs ${cssVariableName})`);
           componentDimensionOverrides[dimensionVariables[fullName].name][fullName] = dimensionVariables[fullName].value;
@@ -400,33 +395,35 @@ function generateDNAFiles() {
         jsElementVariables[componentName][varName] = value;
       }
 
-      for (let stopName of stops) {
-        let stop = dnaData.components[stopName];
+      for (const stopName of stops) {
+        const stop = dnaData.components[stopName];
 
-        for (let scaleName of scales) {
-          let scale = stop[scaleName];
+        for (const scaleName of scales) {
+          const scale = stop[scaleName];
 
-          for (let componentName of components) {
-            let component = scale[componentName];
+          for (const componentName of components) {
+            const component = scale[componentName];
 
-            for (let variantName in component) {
-              let variant = component[variantName];
+            for (const variantName in component) {
+              const variant = component[variantName];
 
-              let metadataKeyBase = 'spectrum-' + componentName + (variantName === 'default' ? '' : `-${variantName}`);
+              const metadataKeyBase = `spectrum-${componentName}${variantName === 'default' ? '' : `-${variantName}`}`;
               metadata[`${metadataKeyBase}-name`] = variant.name;
               metadata[`${metadataKeyBase}-description`] = variant.description;
               metadata[`${metadataKeyBase}-status`] = variant.status;
               metadata[`${metadataKeyBase}-version`] = variant.version;
 
               if (variant.states) {
-                for (let stateName in variant.states) {
-                  let state = variant.states[stateName];
-                  if (stateName === 'text-color') console.log({
-                      variant
-                    })
-                  for (let key in state) {
-                    let value = state[key];
-                    let varName = key;
+                for (const stateName in variant.states) {
+                  const state = variant.states[stateName];
+                  if (stateName === 'text-color') {
+console.log({
+                    variant
+                  })
+}
+                  for (const key in state) {
+                    const value = state[key];
+                    const varName = key;
                     if (isColorValue(varName, value)) {
                       addColorVariable(componentName, varName, value, variant.varBaseName, stopName, stateName);
                     } else {
@@ -437,25 +434,25 @@ function generateDNAFiles() {
               }
 
               if (variant.colors) {
-                for (let key in variant.colors) {
-                  let value = variant.colors[key];
-                  let varName = key;
+                for (const key in variant.colors) {
+                  const value = variant.colors[key];
+                  const varName = key;
                   addColorVariable(componentName, varName, value, variant.varBaseName, stopName);
                 }
               }
 
               if (variant.dimensions) {
-                for (let key in variant.dimensions) {
-                  let value = variant.dimensions[key];
-                  let varName = key;
+                for (const key in variant.dimensions) {
+                  const value = variant.dimensions[key];
+                  const varName = key;
                   addDimensionVariable(componentName, varName, value, variant.varBaseName, scaleName);
                 }
               }
 
               if (variant.animation) {
-                for (let key in variant.animation) {
-                  let value = variant.animation[key];
-                  let varName = key;
+                for (const key in variant.animation) {
+                  const value = variant.animation[key];
+                  const varName = key;
                   addDimensionVariable(componentName, varName, value, variant.varBaseName, scaleName);
                 }
               }
@@ -464,7 +461,7 @@ function generateDNAFiles() {
         }
       }
 
-      for (let componentName of components) {
+      for (const componentName of components) {
         generateCSSFile([
           componentVariables[componentName]
         ], componentName, 'css/components');
@@ -479,15 +476,15 @@ function generateDNAFiles() {
       pushFile(JSON.stringify(metadata, null, 2), 'spectrum-metadata.json', 'json/');
 
       // Determine alias overrides
-      let [colorAliases, colorAliasesOverrides] = calculateOverrides(populateObject(dnaData.colorStopData, stops, 'colorAliases'), getCSSVariableReference);
+      const [colorAliases, colorAliasesOverrides] = calculateOverrides(populateObject(dnaData.colorStopData, stops, 'colorAliases'), getCSSVariableReference);
 
       // Remove aliases with the same values from colorstops
-      for (let aliasName in colorAliases) {
+      for (const aliasName in colorAliases) {
         if (dropTokens[aliasName]) {
           continue;
         }
-        for (let stopName in dnaData.colorStopData) {
-          let stop = dnaData.colorStopData[stopName];
+        for (const stopName in dnaData.colorStopData) {
+          const stop = dnaData.colorStopData[stopName];
           delete stop.colorAliases[aliasName];
         }
       }
@@ -498,15 +495,15 @@ function generateDNAFiles() {
       ], 'colorAliases', 'css/globals/');
 
       // Determine semantic overrides
-      let [colorSemantics, colorSemanticsOverrides] = calculateOverrides(populateObject(dnaData.colorStopData, stops, 'colorSemantics'), getCSSVariableReference);
+      const [colorSemantics, colorSemanticsOverrides] = calculateOverrides(populateObject(dnaData.colorStopData, stops, 'colorSemantics'), getCSSVariableReference);
 
       // Remove semantics with the same values from colorstops
-      for (let semanticName in colorSemantics) {
+      for (const semanticName in colorSemantics) {
         if (dropTokens[semanticName]) {
           continue;
         }
-        for (let stopName in dnaData.colorStopData) {
-          let stop = dnaData.colorStopData[stopName];
+        for (const stopName in dnaData.colorStopData) {
+          const stop = dnaData.colorStopData[stopName];
           delete stop.colorSemantics[semanticName];
         }
       }
@@ -516,8 +513,8 @@ function generateDNAFiles() {
       ], 'colorSemantics', 'css/globals/');
 
       // Write out stops
-      for (let stopName in dnaData.colorStopData) {
-        let stop = dnaData.colorStopData[stopName];
+      for (const stopName in dnaData.colorStopData) {
+        const stop = dnaData.colorStopData[stopName];
         if (stop.colorTokens.status === 'Deprecated') {
           continue;
         }
@@ -531,15 +528,15 @@ function generateDNAFiles() {
       }
 
       // Determine dimension alias overrides
-      let [dimensionAliases, dimensionAliasOverrides] = calculateOverrides(populateObject(dnaData.scaleData, scales, 'dimensionAliases'), getCSSVariableReference);
+      const [dimensionAliases, dimensionAliasOverrides] = calculateOverrides(populateObject(dnaData.scaleData, scales, 'dimensionAliases'), getCSSVariableReference);
 
       // Remove aliases with the same values from scales
-      for (let aliasName in dimensionAliases) {
+      for (const aliasName in dimensionAliases) {
         if (dropTokens[aliasName]) {
           continue;
         }
-        for (let scaleName in dnaData.scaleData) {
-          let scale = dnaData.scaleData[scaleName];
+        for (const scaleName in dnaData.scaleData) {
+          const scale = dnaData.scaleData[scaleName];
           delete scale.dimensionAliases[aliasName];
         }
       }
@@ -549,8 +546,8 @@ function generateDNAFiles() {
       ], 'dimensionAliases', 'css/globals/');
 
       // Scales
-      for (let scaleName in dnaData.scaleData) {
-        let scale = dnaData.scaleData[scaleName];
+      for (const scaleName in dnaData.scaleData) {
+        const scale = dnaData.scaleData[scaleName];
 
         generateFiles([
           scale.dimensionTokens,
@@ -561,49 +558,49 @@ function generateDNAFiles() {
 
       cb();
     }))
-    .pipe(gulp.dest('./'))
+    .pipe(fs.createWriteStream('./'))
 }
 
 function generateIndex(source, dest) {
-  return function generateIndex() {
+  return function generateIndexInner() {
     let lastFile;
-    let componentFilenames = [];
-    return gulp.src(source)
+    const componentFilenames = [];
+    return fs.createReadStream(source)
       .pipe(through.obj(
-        function(file, enc, cb) {
+        (file, enc, cb) => {
           lastFile = file;
           componentFilenames.push(path.basename(file.path));
           cb(null);
         },
-        function(cb) {
-          let vinylFile = lastFile.clone({
+        function (cb) {
+          const vinylFile = lastFile.clone({
             contents: false
           });
           vinylFile.path = path.join(lastFile.base, 'index.css');
-          vinylFile.contents = Buffer.from(componentFilenames.map(fileName => `@import '${fileName}';`).join('\n'));
+          vinylFile.contents = Buffer.from(componentFilenames.map((fileName) => `@import '${fileName}';`).join('\n'));
           this.push(vinylFile);
           cb();
         }
       ))
-      .pipe(gulp.dest(dest));
+      .pipe(fs.createWriteStream(dest));
   }
 }
 
-let generateComponentIndex = generateIndex('css/components/*.css', 'css/components/');
-let generateGlobalsIndex = generateIndex('css/globals/*.css', 'css/globals/');
+const generateComponentIndex = generateIndex('css/components/*.css', 'css/components/');
+const generateGlobalsIndex = generateIndex('css/globals/*.css', 'css/globals/');
 
-function clean() {
-  return del([
+async function clean() {
+  await delAsync([
     'css/*',
     'js/*'
   ]);
 }
 
-exports.updateDNA = gulp.series(
-  clean,
-  generateDNAFiles,
-  gulp.parallel(
-    generateComponentIndex,
-    generateGlobalsIndex
-  )
-);
+exports.updateDNA = async () => {
+  await clean()
+  await generateDNAFiles()
+  await Promise.all([
+    generateComponentIndex(),
+    generateGlobalsIndex()
+  ])
+}
