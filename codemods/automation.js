@@ -34,6 +34,7 @@ function loopOverFolders(dir) {
   const files = fs.readdirSync(dir);
 
   // Loop over the files and directories
+  // eslint-disable-next-line no-restricted-syntax
   for (const file of files) {
     const filePath = path.join(dir, file);
     const stat = fs.statSync(filePath);
