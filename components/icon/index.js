@@ -93,12 +93,10 @@ function generateCombinedIcons() {
 
 // Only ran by Adobe
 
-const updateIcons = (callback) => {
-  async.series([
-    clean,
-    sanitizeIcons,
-    generateCombinedIcons
-  ], callback);
+const updateIcons =  async () => {
+  await clean();
+  await sanitizeIcons();
+  await generateCombinedIcons();
 }
 
 const tasks = require('@spectrum-css/component-builder');

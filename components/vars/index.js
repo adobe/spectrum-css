@@ -331,47 +331,30 @@ function copyMetadata() {
 
 /**
  * @descriptio This code will define a build function that performs a series of tasks in a
- * specified order, using the async.series function.
  * @param {*} callback
  */
-const build = (callback) => {
-  async.series(
-    [
-      clean,
-      prepareBuild,
-      () => {
-        async.parallel(
-          [
-            copyMetadata,
-            copyGlobals,
-            copySources,
-            copyComponents,
-            concatGlobalsTemp,
-            processColorAliases,
-            processDimensionAliases,
-          ],
-          callback
-        )
-      },
-      concatGlobalsFinal,
-    ],
-    callback
-  )
+ const build = async () => {
+  await clean();
+  await prepareBuild();
+  await Promise.all([
+    copyMetadata(),
+    copyGlobals(),
+    copySources(),
+    copyComponents(),
+    concatGlobalsTemp(),
+    processColorAliases(),
+    processDimensionAliases()
+  ])
+  await concatGlobalsFinal()
 }
 
 /**
  * @description This code defines an update function that performs a series of tasks
- * in a specified order, using the async.series function
  */
-exports.update = (callback) => {
-  async.series(
-    [
-      // eslint-disable-next-line global-require
-      require("./tasks/updateDNA").updateDNA,
-      build,
-    ],
-    callback
-  )
+ exports.update = async () => {
+  // eslint-disable-next-line global-require
+  await require('./tasks/updateDNA')();
+  await build()
 }
 
 exports.clean = clean
