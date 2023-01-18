@@ -24,6 +24,9 @@ governing permissions and limitations under the License.
 .spectrum-Picker {
   /* font */
   --spectrum-picker-font-size: var(--spectrum-font-size-100);
+  --spectrum-picker-placeholder-font-style-default: italic;
+  --spectrum-picker-placeholder-cjk-font-style: normal;
+  --spectrum-picker-placeholder-font-style: var(--spectrum-picker-placeholder-font-style-default);
 
   /* height and width */
   --spectrum-picker-min-inline-size: var(--spectrum-picker-minimum-width-multiplier);
@@ -42,6 +45,12 @@ governing permissions and limitations under the License.
   --spectrum-picker-spacing-icon-to-disclosure-icon: var(--spectrum-picker-visual-to-disclosure-icon-medium);
   --spectrum-picker-spacing-label-to-picker: var(--spectrum-field-label-to-component);
   --spectrum-picker-spacing-label-to-picker-quiet: var(--spectrum-field-label-to-component-quiet-medium);
+
+  &:lang(ja),
+  &:lang(zh),
+  &:lang(ko) {
+    --spectrum-picker-placeholder-font-style: var(--spectrum-picker-placeholder-cjk-font-style);
+  }
 
   & + .spectrum-Popover--bottom.is-open {
     --spectrum-picker-spacing-picker-to-popover: var(--spectrum-component-to-menu-medium);
@@ -427,7 +436,7 @@ governing permissions and limitations under the License.
 
   &.is-placeholder {
     font-weight: 400;
-    font-style: italic;
+    font-style: var(--mod-picker-placeholder-font-style, var(--spectrum-picker-placeholder-font-style));
     transition: color var(--mod-picker-animation-duration, var(--spectrum-picker-animation-duration)) ease-in-out;
 
     color: var(--highcontrast-picker-font-color-default, var(--mod-picker-font-color-default, var(--spectrum-picker-font-color-default)));
