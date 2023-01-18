@@ -177,8 +177,6 @@ governing permissions and limitations under the License.
 
     --highcontrast-picker-icon-color-error-default: ButtonText;
 
-    --highcontrast-picker-focus-indicator-color: Highlight;
-
     &:disabled,
     .is-disabled {
       border-color: GrayText;
