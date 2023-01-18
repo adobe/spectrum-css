@@ -713,7 +713,7 @@ governing permissions and limitations under the License.
   }
 
   .spectrum-FieldLabel {
-    grid-row: 1;
+    grid-row: 1 / span 2;
     grid-column: 1 / span 1;
     margin-inline-end: var(--mod-textfield-label-spacing-inline-side-label, var(--spectrum-textfield-label-spacing-inline-side-label));
   }
