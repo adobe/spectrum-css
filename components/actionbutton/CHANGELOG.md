@@ -3,6 +3,16 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+<a name="3.0.8"></a>
+## 3.0.8
+🗓 2023-01-18 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/actionbutton@3.0.6...@spectrum-css/actionbutton@3.0.8)
+
+**Note:** Version bump only for package @spectrum-css/actionbutton
+
+
+
+
+
 <a name="3.0.7"></a>
 ## 3.0.7
 🗓 2023-01-13 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/actionbutton@3.0.6...@spectrum-css/actionbutton@3.0.7)

@@ -1,6 +1,6 @@
 {
   "name": "@spectrum-css/page",
-  "version": "5.0.13",
+  "version": "5.0.14",
   "description": "The Spectrum CSS page component",
   "license": "Apache-2.0",
   "homepage": "https://opensource.adobe.com/spectrum-css/",
@@ -17,10 +17,10 @@
     "build": "gulp"
   },
   "dependencies": {
-    "@spectrum-css/vars": "^8.0.1"
+    "@spectrum-css/vars": "^8.0.2"
   },
   "devDependencies": {
-    "@spectrum-css/component-builder": "^3.2.2",
+    "@spectrum-css/component-builder": "^3.2.3",
     "@spectrum-css/vars": "^4.0.0",
     "gulp": "^4.0.0"
   },
