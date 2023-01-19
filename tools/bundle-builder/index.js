@@ -27,7 +27,8 @@ const vars = require('./vars');
 
 function clean() {
   let globs = [
-    'dist/*'
+    'dist/*',
+    '!dist/preview'
   ];
 
   // Don't delete the dist folder inside of installed packages
