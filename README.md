@@ -352,28 +352,12 @@ You can set a new port for `watch` by setting `BROWSERSYNC_PORT=<port number>`, 
 
 ## Testing
 
-Visual regression testing is implemented by [BackstopJS](https://github.com/garris/BackstopJS). To avoid browser rendering inconsistent issue, the test needs to run with a docker container.
+Visual regression testing is documented in more detail inside the [tests package](tests/README.md).
 
-### Setup docker
+The following scripts are available for testing:
 
-Install docker on your machine [Download Docker](https://hub.docker.com/search/?type=edition&offering=community&architecture=amd64)
-
-### Reference bitmap images
-
-The reference bitmap images are published as an NPM package [@spectrum-css/spectrum-css-vr-test-assets-essential](https://www.npmjs.com/package/@spectrum-css/spectrum-css-vr-test-assets-essential). Before the test, please try to upgrade this package.
-
-`yarn upgrade @spectrum-css/spectrum-css-vr-test-assets-essential`
-
-### Start VRT dev server mode
-
-`VRT=true yarn dev`
-
-### Testing CLI targets
-
-The following yarn scripts are available for testing:
-
-* `yarn backstop:docker:test` - Run all the visual regression tests.
-* `yarn backstop:docker:test button` - Run test for `button` component only.
+* `yarn test` - Run all the visual regression tests.
+* `yarn test button` - Run test for `button` component only.
 
 ___
 

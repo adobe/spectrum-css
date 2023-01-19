@@ -10,14 +10,14 @@ OF ANY KIND, either express or implied. See the License for the specific languag
 governing permissions and limitations under the License.
 */
 
-const scenarioConfigs = require('./backstop_scenarios');
+const scenarioConfigs = require('./backstop_scenarios.json');
 const scenarios = [];
 const excludedScenarios = new Set(['@spectrum-css/progressbar', '@spectrum-css/progresscircle', '@spectrum-css/coachmark', '@spectrum-css/index', '@spectrum-css/get', '@spectrum-css/halo']);
 const themes = new Set().add('light');
 const scales = new Set().add('medium');
 const varsversions = new Set().add('default');
 const packageNameSet = new Set();
-const packageDependentMap = new Map(require('./packageDependentMap'));
+const packageDependentMap = new Map(require('./packageDependentMap.json'));
 
 const LOCALHOST_MAC = 'host.docker.internal';
 const LOCALHOST_LINUX = '127.0.0.1';
@@ -26,7 +26,7 @@ let isDocker = false;
 let env = 'local';
 let host = LOCALHOST_MAC;
 let report = 'CI';
-let bitmapsRef = 'node_modules/@spectrum-css/spectrum-css-vr-test-assets-essential/bitmaps_reference';
+let bitmapsRef = '../node_modules/@spectrum-css/spectrum-css-vr-test-assets-essential/bitmaps_reference';
 let captureLimit = 2;
 
 // Shared scenario configuration
@@ -138,10 +138,10 @@ module.exports = {
   scenarios,
   paths: {
     bitmaps_reference: bitmapsRef,
-    bitmaps_test: 'backstop_data/bitmaps_test',
-    engine_scripts: 'backstop_data/engine_scripts',
-    html_report: 'backstop_data/html_report',
-    ci_report: 'backstop_data/ci_report'
+    bitmaps_test: 'bitmaps_test',
+    engine_scripts: 'engine_scripts',
+    html_report: 'html_report',
+    ci_report: 'ci_report'
   },
   report: [`${report}`],
   engine: 'playwright',
@@ -153,7 +153,7 @@ module.exports = {
     ],
     waitTimeout: 300*1000 // 5 minutes
   },
-  readyTimeout: 60*1000, // 1 minute 
+  readyTimeout: 60*1000, // 1 minute
   asyncCaptureLimit: captureLimit,
   asyncCompareLimit: 50,
   debug: false,
