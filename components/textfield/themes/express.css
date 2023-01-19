@@ -11,6 +11,16 @@ governing permissions and limitations under the License.
 */
 
 @container (--system: express) {
+  /* @todo remove this when stepper is migrated; this ensures stepper buttons inherit border color and width */
+  .spectrum-Stepper {
+    --spectrum-textfield-m-texticon-border-color: var(--spectrum-gray-400);
+
+    .spectrum-Stepper-stepUp,
+    .spectrum-Stepper-stepDown {
+      --spectrum-stepper-border-size: var(--spectrum-border-width-200);
+    }
+  }
+
   .spectrum-Textfield {
     --spectrum-textfield-border-color: var(--spectrum-gray-400);
     --spectrum-textfield-border-color-hover: var(--spectrum-gray-500);
