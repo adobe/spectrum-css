@@ -15,9 +15,11 @@ const StyleDictionary = require('style-dictionary');
 const CSSSetsFormatter = require('style-dictionary-sets').CSSSetsFormatter;
 const NameKebabTransfom = require('style-dictionary-sets').NameKebabTransfom;
 const AttributeSetsTransform = require('style-dictionary-sets').AttributeSetsTransform;
+const RGBBreakoutTransform = require('./rgb-breakout-transform.js');
 
 StyleDictionary.registerTransform(NameKebabTransfom);
 StyleDictionary.registerTransform(AttributeSetsTransform);
+StyleDictionary.registerTransform(RGBBreakoutTransform);
 StyleDictionary.registerFormat(CSSSetsFormatter);
 
 const systemNames = ['express', 'spectrum', 'wireframe'];
@@ -132,7 +134,7 @@ module.exports = {
   platforms: {
     CSS: {
       buildPath: 'dist/css/',
-      transforms: [AttributeSetsTransform.name, NameKebabTransfom.name],
+      transforms: [AttributeSetsTransform.name, NameKebabTransfom.name, RGBBreakoutTransform.name],
       prefix: 'spectrum',
       files: [
         {

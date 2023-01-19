@@ -1,0 +1,48 @@
+diff --git a/node_modules/style-dictionary-sets/lib/css-sets-formatter.js b/node_modules/style-dictionary-sets/lib/css-sets-formatter.js
+index 6f48750..3a97269 100644
+--- a/node_modules/style-dictionary-sets/lib/css-sets-formatter.js
++++ b/node_modules/style-dictionary-sets/lib/css-sets-formatter.js
+@@ -17,6 +17,16 @@ const formatter = ({ dictionary, platform, file, options }) => {
+     resultAr.push(
+       `  --${name.join("-")}: ${valueFormatter(token, platform, dictionary)};`
+     );
++    Object.keys(token.attributes).forEach((key) => {
++      if (key === "sets") return;
++      const value = token.attributes[key];
++      if (typeof value !== "string") return;
++
++      const attrName = helpers.generateNameArray(token, platform.prefix, key);
++      resultAr.push(
++        `  --${attrName.join("-")}: ${value};`
++      );
++    });
+   });
+ 
+   const selector = options.selector ? options.selector : ":root";
+diff --git a/node_modules/style-dictionary-sets/lib/helper-functions.js b/node_modules/style-dictionary-sets/lib/helper-functions.js
+index c2b68ba..fc74d79 100644
+--- a/node_modules/style-dictionary-sets/lib/helper-functions.js
++++ b/node_modules/style-dictionary-sets/lib/helper-functions.js
+@@ -7,17 +7,17 @@ const isObject = (item) =>
+ 
+ const isASet = (value) => isObject(value) && "sets" in value;
+ 
+-const generateNameArray = (token, prefix) => {
+-  let name = prefix ? [prefix] : [];
+-  const cleanTokenPath = [];
++const generateNameArray = (token, prefix = "", postfix = "") => {
++  const name = [];
+   for (let i = 0; i < token.path.length; i++) {
+     if (token.path[i] === "sets") {
+       i++;
+     } else {
+-      cleanTokenPath.push(token.path[i]);
++      name.push(token.path[i]);
+     }
+   }
+-  name = name.concat(cleanTokenPath);
++  if (prefix) name.unshift(prefix);
++  if (postfix) name.push(postfix);
+   return name;
+ };
+ 
