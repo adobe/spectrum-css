@@ -20,15 +20,6 @@
     "url": "https://github.com/adobe/spectrum-css/issues"
   },
   "scripts": {
-    "backstop:approve": "backstop approve --config=backstop_data/backstop_test.js",
-    "backstop:ci:clean": "backstop clean --docker --config=backstop_data/backstop_test.js --env=ci",
-    "backstop:ci:reference": "wait-on http://127.0.0.1:3000/docs/index.html && gulp test:init && backstop reference --docker --config=backstop_data/backstop_test.js --env=ci",
-    "backstop:ci:test": "wait-on http://127.0.0.1:3000/docs/index.html && gulp test:init && backstop test --docker --config=backstop_data/backstop_test.js --env=ci",
-    "backstop:clean": "rm -rf backstop_data/bitmaps_test backstop_data/html_report",
-    "backstop:docker:reference": "wait-on http://127.0.0.1:3000/docs/index.html && gulp test:init && backstop reference --docker --config=backstop_data/backstop_test.js --env=local",
-    "backstop:docker:test": "wait-on http://127.0.0.1:3000/docs/index.html && gulp test:init && backstop test --docker --config=backstop_data/backstop_test.js --env=local",
-    "backstop:test": "backstop test --config=backstop_data/backstop_test.js --env=local",
-    "backstop:test-all": "backstop test --docker --config=backstop_data/backstop_test.js --env=local themes=light,dark,darkest scales=medium,large",
     "build": "run-s build:site build:preview # preview cannot be built until the component assets are finished",
     "build:clean": "run-s clean build",
     "build:components": "lerna run --stream --scope \"@spectrum-css/*\" --ignore \"@spectrum-css/{*-builder*,preview,generator,site}\" build",
@@ -39,7 +30,6 @@
     "ci-all": "yarn build",
     "clean": "gulp clean",
     "dev": "NODE_ENV=development BROWSERSYNC_OPEN=true gulp dev",
-    "kill-zombies": "pkill -f \"(chrome)?(--headless)\"",
     "new": "yarn workspace @spectrum-css/generator new",
     "precommit": "lint-staged",
     "prepare": "husky install && gulp prepare",
@@ -49,39 +39,20 @@
     "release:bundles": "gulp releaseBundles",
     "release:site": "gulp prepareSite && gh-pages -d dist-site/ -f -e .",
     "start": "NODE_ENV=development yarn workspace @spectrum-css/preview start",
+    "test": "VRT=true run-p dev \"test:run {1}\" --",
+    "test:run": "yarn workspace @spectrum-css/test run test",
     "version:build": "SCOPE=$(lerna changed | tr \"\\\\n\" ,) && lerna run --stream --scope \"{${SCOPE%,}}\" --ignore \"@spectrum-css/{*-builder*,preview,generator,site}\" build",
     "watch": "gulp watch"
   },
   "workspaces": [
     "components/*",
-    "tools/*"
+    "tools/*",
+    "tests"
   ],
-  "resolutions": {
-    "axios": "^0.21.1",
-    "dot-prop": "^5.2.0",
-    "handlebars": "^4.5.2",
-    "https-proxy-agent": "^3.0.0",
-    "http-proxy": "^1.18.1",
-    "jimp": "^0.16.1",
-    "node-fetch": "^2.6.1",
-    "lodash": "^4.17.19",
-    "yargs-parser": "^20.2.7",
-    "minimist": "^1.2.5",
-    "is-url-superb": "^4.0.0",
-    "postcss-values-parser": "^4.0.0",
-    "xmlhttprequest-ssl": "^1.6.2",
-    "y18n": "^5.0.5"
-  },
   "devDependencies": {
     "@adobe/focus-ring-polyfill": "^0.1.5",
-    "@adobe/spectrum-css-workflow-icons": "^1.2.1",
-    "@adobe/spectrum-express-tokens-deprecated": "^1.0.0-beta.35",
-    "@adobe/spectrum-tokens-deprecated": "^11.8.0",
     "@commitlint/cli": "^8.3.3",
     "@commitlint/config-conventional": "^8.3.3",
-    "@spectrum-css/spectrum-css-vr-test-assets-essential": "^1.0.46",
-    "audit-ci": "^2.0.1",
-    "backstopjs-spectrum": "6.16.0",
     "del": "^5.1.0",
     "gh-pages": "^3.0.0",
     "gulp": "^4.0.0",
@@ -98,8 +69,7 @@
     "prismjs": "^1.23.0",
     "rimraf": "^4.1.1",
     "semver": "^6.3.0",
-    "through2": "^3.0.1",
-    "wait-on": "^6.0.1"
+    "through2": "^3.0.1"
   },
   "husky": {
     "hooks": {
