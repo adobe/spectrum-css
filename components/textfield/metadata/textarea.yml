@@ -13,9 +13,7 @@ examples:
       <div class="spectrum-Textfield spectrum-Textfield--sizeS spectrum-Textfield--multiline">
         <label for="textfield-sm" class="spectrum-FieldLabel spectrum-FieldLabel--sizeS">Password</label>
         <span id="character-count-1" class="spectrum-Textfield-character-count">50</span>
-        <div class="spectrum-Textfield-input-wrapper">
-          <textarea id="textfield-s" placeholder="Enter Password" name="field" class="spectrum-Textfield-input"  pattern=".{8,}" aria-describedby="helptext-1 character-count-1"></textarea>
-        </div>
+        <textarea id="textfield-s" placeholder="Enter Password" name="field" class="spectrum-Textfield-input"  pattern=".{8,}" aria-describedby="helptext-1 character-count-1"></textarea>
         <div class="spectrum-HelpText spectrum-HelpText--sizeS spectrum-HelpText--neutral">
           <div class="spectrum-HelpText-text">Create a password with at least 8 characters.</div>
         </div>
@@ -24,9 +22,7 @@ examples:
       <div class="spectrum-Textfield spectrum-Textfield--sizeM spectrum-Textfield--multiline">
         <label for="textfield-md" class="spectrum-FieldLabel spectrum-FieldLabel--sizeM">Password</label>
         <span id="character-count-2" class="spectrum-Textfield-character-count">50</span>
-        <div class="spectrum-Textfield-input-wrapper">
-          <textarea id="textfield-m" placeholder="Enter Password" name="field" class="spectrum-Textfield-input"  pattern=".{8,}" aria-describedby="helptext-2 character-count-2"></textarea>
-        </div>
+        <textarea id="textfield-m" placeholder="Enter Password" name="field" class="spectrum-Textfield-input"  pattern=".{8,}" aria-describedby="helptext-2 character-count-2"></textarea>
         <div class="spectrum-HelpText spectrum-HelpText--sizeM spectrum-HelpText--neutral">
           <div class="spectrum-HelpText-text">Create a password with at least 8 characters.</div>
         </div>
@@ -35,9 +31,7 @@ examples:
       <div class="spectrum-Textfield spectrum-Textfield--sizeL spectrum-Textfield--multiline">
         <label for="textfield-l" class="spectrum-FieldLabel spectrum-FieldLabel--sizeL">Password</label>
         <span id="character-count-3" class="spectrum-Textfield-character-count">50</span>
-        <div class="spectrum-Textfield-input-wrapper">
-          <textarea id="textfield-l" placeholder="Enter Password" name="field" class="spectrum-Textfield-input"  pattern=".{8,}" aria-describedby="helptext-3 character-count-3"></textarea>
-        </div>
+        <textarea id="textfield-l" placeholder="Enter Password" name="field" class="spectrum-Textfield-input"  pattern=".{8,}" aria-describedby="helptext-3 character-count-3"></textarea>
         <div class="spectrum-HelpText spectrum-HelpText--sizeL spectrum-HelpText--neutral">
           <div class="spectrum-HelpText-text">Create a password with at least 8 characters.</div>
         </div>
@@ -46,9 +40,7 @@ examples:
       <div class="spectrum-Textfield spectrum-Textfield--sizeXL spectrum-Textfield--multiline">
         <label for="textfield-xl" class="spectrum-FieldLabel spectrum-FieldLabel--sizeXL">Password</label>
         <span id="character-count-4" class="spectrum-Textfield-character-count">50</span>
-        <div class="spectrum-Textfield-input-wrapper">
-          <textarea id="textfield-xl" placeholder="Enter Password" name="field" class="spectrum-Textfield-input"  pattern=".{8,}" aria-describedby="helptext-4 character-count-4"></textarea>
-        </div>
+        <textarea id="textfield-xl" placeholder="Enter Password" name="field" class="spectrum-Textfield-input"  pattern=".{8,}" aria-describedby="helptext-4 character-count-4"></textarea>
         <div class="spectrum-HelpText spectrum-HelpText--sizeXL spectrum-HelpText--neutral">
           <div class="spectrum-HelpText-text">Create a password with at least 8 characters.</div>
         </div>
@@ -59,9 +51,7 @@ examples:
     markup: |
       <div class="spectrum-Textfield spectrum-Textfield--multiline">
         <label for="textfield-helptext" class="spectrum-FieldLabel spectrum-FieldLabel--sizeM">Password</label>
-        <div class="spectrum-Textfield-input-wrapper">
-          <textarea id="textfield-helptext" placeholder="Enter Password" name="field" class="spectrum-Textfield-input"  pattern=".{8,}" aria-describedby="helptext-5 character-count-5"></textarea>
-        </div>
+        <textarea id="textfield-helptext" placeholder="Enter Password" name="field" class="spectrum-Textfield-input"  pattern=".{8,}" aria-describedby="helptext-5 character-count-5"></textarea>
         <div class="spectrum-HelpText spectrum-HelpText--sizeM spectrum-HelpText--neutral">
           <div class="spectrum-HelpText-text">Create a password with at least 8 characters.</div>
         </div>
@@ -73,9 +63,7 @@ examples:
       <div class="spectrum-Textfield spectrum-Textfield--multiline">
         <label for="textfield-character-count" class="spectrum-FieldLabel spectrum-FieldLabel--sizeM">Enter your name</label>
         <span id="character-count-5" class="spectrum-Textfield-character-count">50</span>
-        <div class="spectrum-Textfield-input-wrapper">
-          <textarea id="textfield-character-count" placeholder="Lisa Wilson" name="field" class="spectrum-Textfield-input" pattern="[\w\s]+" aria-describedby="helptext-5 character-count-5"></textarea>
-        </div>
+        <textarea id="textfield-character-count" placeholder="Lisa Wilson" name="field" class="spectrum-Textfield-input" pattern="[\w\s]+" aria-describedby="helptext-5 character-count-5"></textarea>
       </div>
 
   - id: textfield-sidelabel
@@ -84,9 +72,7 @@ examples:
       <div class="spectrum-Textfield spectrum-Textfield--multiline spectrum-Textfield--sidelabel">
         <label for="textfield-md-sidelabel" class="spectrum-FieldLabel spectrum-FieldLabel--sizeM">Password</label>
         <span id="character-count-6" class="spectrum-Textfield-character-count">50</span>
-        <div class="spectrum-Textfield-input-wrapper">
-          <textarea id="textfield-md-sidelabel" placeholder="Enter Password" name="field" class="spectrum-Textfield-input"  pattern=".{8,}" aria-describedby="helptext-6 character-count-6"></textarea>
-        </div>
+        <textarea id="textfield-md-sidelabel" placeholder="Enter Password" name="field" class="spectrum-Textfield-input"  pattern=".{8,}" aria-describedby="helptext-6 character-count-6"></textarea>
         <div class="spectrum-HelpText spectrum-HelpText--sizeM spectrum-HelpText--neutral">
           <div class="spectrum-HelpText-text">Create a password with at least 8 characters.</div>
         </div>
@@ -97,9 +83,7 @@ examples:
     markup: |
       <div class="spectrum-Textfield spectrum-Textfield--multiline is-disabled">
         <label for="textarea-disabled" class="spectrum-FieldLabel spectrum-FieldLabel--sizeM">Enter your name</label>
-        <div class="spectrum-Textfield-input-wrapper">
-          <textarea id="textarea-disabled" placeholder="Lisa Wilson" name="field" class="spectrum-Textfield-input" pattern="[\w\s]+" aria-describedby="helptext-7 character-count-7" disabled></textarea>
-        </div>
+        <textarea id="textarea-disabled" placeholder="Lisa Wilson" name="field" class="spectrum-Textfield-input" pattern="[\w\s]+" aria-describedby="helptext-7 character-count-7" disabled></textarea>
       </div>
 
   - id: textfield
@@ -107,12 +91,10 @@ examples:
     markup: |
       <div class="spectrum-Textfield spectrum-Textfield--multiline is-valid">
         <label for="textarea-valid" class="spectrum-FieldLabel spectrum-FieldLabel--sizeM">Enter your name</label>
-        <div class="spectrum-Textfield-input-wrapper">
-          <svg class="spectrum-Icon spectrum-UIIcon-Checkmark100 spectrum-Textfield-validationIcon" focusable="false" aria-hidden="true">
-            <use xlink:href="#spectrum-css-icon-Checkmark100" />
-          </svg>
-          <textarea id="textarea-valid" placeholder="Lisa Wilson" name="field"  class="spectrum-Textfield-input" pattern="[\w\s]+" aria-describedby="helptext-8 character-count-8" required>A valid input</textarea>
-        </div>
+        <svg class="spectrum-Icon spectrum-UIIcon-Checkmark100 spectrum-Textfield-validationIcon" focusable="false" aria-hidden="true">
+          <use xlink:href="#spectrum-css-icon-Checkmark100" />
+        </svg>
+        <textarea id="textarea-valid" placeholder="Lisa Wilson" name="field"  class="spectrum-Textfield-input" pattern="[\w\s]+" aria-describedby="helptext-8 character-count-8" required>A valid input</textarea>
       </div>
 
   - id: textfield
@@ -120,12 +102,10 @@ examples:
     markup: |
       <div class="spectrum-Textfield spectrum-Textfield--multiline is-valid is-disabled">
         <label for="textarea-valid-disabled" class="spectrum-FieldLabel spectrum-FieldLabel--sizeM">Enter your name</label>
-        <div class="spectrum-Textfield-input-wrapper">
-          <svg class="spectrum-Icon spectrum-UIIcon-Checkmark100 spectrum-Textfield-validationIcon" focusable="false" aria-hidden="true">
-            <use xlink:href="#spectrum-css-icon-Checkmark100" />
-          </svg>
-          <textarea id="textarea-valid-disabled" placeholder="Lisa Wilson" name="field"  class="spectrum-Textfield-input" pattern="[\w\s]+" aria-describedby="helptext-9 character-count-9" required disabled>A valid input</textarea>
-        </div>
+        <svg class="spectrum-Icon spectrum-UIIcon-Checkmark100 spectrum-Textfield-validationIcon" focusable="false" aria-hidden="true">
+          <use xlink:href="#spectrum-css-icon-Checkmark100" />
+        </svg>
+        <textarea id="textarea-valid-disabled" placeholder="Lisa Wilson" name="field"  class="spectrum-Textfield-input" pattern="[\w\s]+" aria-describedby="helptext-9 character-count-9" required disabled>A valid input</textarea>
       </div>
 
   - id: textfield
@@ -135,12 +115,10 @@ examples:
     markup: |
       <div class="spectrum-Textfield spectrum-Textfield--multiline is-invalid">
         <label for="textarea-invalid" class="spectrum-FieldLabel spectrum-FieldLabel--sizeM">Enter your name</label>
-        <div class="spectrum-Textfield-input-wrapper">
-          <svg class="spectrum-Icon spectrum-Icon--sizeM spectrum-Textfield-validationIcon" focusable="false" aria-hidden="true">
-            <use xlink:href="#spectrum-icon-18-Alert" />
-          </svg>
-          <textarea id="textarea--invalid" placeholder="Lisa Wilson" name="field"  class="spectrum-Textfield-input" pattern="[\w\s]+" aria-describedby="helptext-10 character-count-10" required>Invalid input</textarea>
-        </div>
+        <svg class="spectrum-Icon spectrum-Icon--sizeM spectrum-Textfield-validationIcon" focusable="false" aria-hidden="true">
+          <use xlink:href="#spectrum-icon-18-Alert" />
+        </svg>
+        <textarea id="textarea--invalid" placeholder="Lisa Wilson" name="field"  class="spectrum-Textfield-input" pattern="[\w\s]+" aria-describedby="helptext-10 character-count-10" required>Invalid input</textarea>
       </div>
 
   - id: textfield
@@ -148,12 +126,10 @@ examples:
     markup: |
       <div class="spectrum-Textfield spectrum-Textfield--multiline is-invalid is-disabled">
         <label for="textarea-invalid-disabled" class="spectrum-FieldLabel spectrum-FieldLabel--sizeM">Enter your name</label>
-        <div class="spectrum-Textfield-input-wrapper">
-          <svg class="spectrum-Icon spectrum-Icon--sizeM spectrum-Textfield-validationIcon" focusable="false" aria-hidden="true">
-            <use xlink:href="#spectrum-icon-18-Alert" />
-          </svg>
-          <textarea id="textarea-invalid-disabled" placeholder="Lisa Wilson" name="field"  class="spectrum-Textfield-input" pattern="[\w\s]+" aria-describedby="helptext-11 character-count-11" disabled>Invalid input</textarea>
-        </div>
+        <svg class="spectrum-Icon spectrum-Icon--sizeM spectrum-Textfield-validationIcon" focusable="false" aria-hidden="true">
+          <use xlink:href="#spectrum-icon-18-Alert" />
+        </svg>
+        <textarea id="textarea-invalid-disabled" placeholder="Lisa Wilson" name="field"  class="spectrum-Textfield-input" pattern="[\w\s]+" aria-describedby="helptext-11 character-count-11" disabled>Invalid input</textarea>
       </div>
 
   - id: textfield
@@ -161,9 +137,7 @@ examples:
     markup: |
       <div class="spectrum-Textfield spectrum-Textfield--multiline is-focused">
         <label for="textarea-focused" class="spectrum-FieldLabel spectrum-FieldLabel--sizeM">Enter your name</label>
-        <div class="spectrum-Textfield-input-wrapper">
-          <textarea id="textarea-focused"placeholder="Lisa Wilson" name="field" class="spectrum-Textfield-input" pattern="[\w\s]+" aria-describedby="helptext-12 character-count-12"></textarea>
-        </div>
+        <textarea id="textarea-focused"placeholder="Lisa Wilson" name="field" class="spectrum-Textfield-input" pattern="[\w\s]+" aria-describedby="helptext-12 character-count-12"></textarea>
       </div>
 
   - id: textfield
@@ -171,9 +145,7 @@ examples:
     markup: |
       <div class="spectrum-Textfield spectrum-Textfield--multiline is-keyboardFocused">
         <label for="textarea-keyboard-focused" class="spectrum-FieldLabel spectrum-FieldLabel--sizeM">Enter your name</label>
-        <div class="spectrum-Textfield-input-wrapper">
-          <textarea id="textarea-keyboard-focused" placeholder="Lisa Wilson" name="field" class="spectrum-Textfield-input" pattern="[\w\s]+" aria-describedby="helptext-13 character-count-13"></textarea>
-        </div>
+        <textarea id="textarea-keyboard-focused" placeholder="Lisa Wilson" name="field" class="spectrum-Textfield-input" pattern="[\w\s]+" aria-describedby="helptext-13 character-count-13"></textarea>
       </div>
 
   - id: textfield
@@ -183,12 +155,10 @@ examples:
     markup: |
       <div class="spectrum-Textfield spectrum-Textfield--multiline is-invalid is-focused">
         <label for="textarea-focused-invalid" class="spectrum-FieldLabel spectrum-FieldLabel--sizeM">Enter your name</label>
-        <div class="spectrum-Textfield-input-wrapper">
-          <svg class="spectrum-Icon spectrum-Icon--sizeM spectrum-Textfield-validationIcon" focusable="false" aria-hidden="true">
-            <use xlink:href="#spectrum-icon-18-Alert" />
-          </svg>
-          <textarea id="textarea-focused-invalid" placeholder="Lisa Wilson" name="field"  class="spectrum-Textfield-input" pattern="[\w\s]+" aria-describedby="helptext-14 character-count-14" required>Invalid input</textarea>
-        </div>
+        <svg class="spectrum-Icon spectrum-Icon--sizeM spectrum-Textfield-validationIcon" focusable="false" aria-hidden="true">
+          <use xlink:href="#spectrum-icon-18-Alert" />
+        </svg>
+        <textarea id="textarea-focused-invalid" placeholder="Lisa Wilson" name="field"  class="spectrum-Textfield-input" pattern="[\w\s]+" aria-describedby="helptext-14 character-count-14" required>Invalid input</textarea>
       </div>
 
   - id: textfield
@@ -198,12 +168,10 @@ examples:
     markup: |
       <div class="spectrum-Textfield spectrum-Textfield--multiline is-invalid is-keyboardFocused">
         <label for="textarea-keyboard-focused-invalid" class="spectrum-FieldLabel spectrum-FieldLabel--sizeM">Enter your name</label>
-        <div class="spectrum-Textfield-input-wrapper">
-          <svg class="spectrum-Icon spectrum-Icon--sizeM spectrum-Textfield-validationIcon" focusable="false" aria-hidden="true">
-            <use xlink:href="#spectrum-icon-18-Alert" />
-          </svg>
-          <textarea id="textarea-keyboard-focused-invalid" placeholder="Lisa Wilson" name="field"  class="spectrum-Textfield-input" pattern="[\w\s]+" aria-describedby="helptext-15 character-count-15" required>Invalid input</textarea>
-        </div>
+        <svg class="spectrum-Icon spectrum-Icon--sizeM spectrum-Textfield-validationIcon" focusable="false" aria-hidden="true">
+          <use xlink:href="#spectrum-icon-18-Alert" />
+        </svg>
+        <textarea id="textarea-keyboard-focused-invalid" placeholder="Lisa Wilson" name="field"  class="spectrum-Textfield-input" pattern="[\w\s]+" aria-describedby="helptext-15 character-count-15" required>Invalid input</textarea>
       </div>
 
   - id: textfield-quiet
@@ -211,9 +179,7 @@ examples:
     markup: |
       <div class="spectrum-Textfield spectrum-Textfield--multiline spectrum-Textfield--quiet">
         <label for="textarea-quiet" class="spectrum-FieldLabel spectrum-FieldLabel--sizeM">Text area</label>
-        <div class="spectrum-Textfield-input-wrapper">
-          <textarea id="textarea-quiet" placeholder="Lisa Wilson" name="field" class="spectrum-Textfield-input" pattern="[\w\s]+" aria-describedby="helptext-16 character-count-16"></textarea>
-        </div>
+        <textarea id="textarea-quiet" placeholder="Lisa Wilson" name="field" class="spectrum-Textfield-input" pattern="[\w\s]+" aria-describedby="helptext-16 character-count-16"></textarea>
       </div>
 
   - id: textfield-quiet
@@ -221,9 +187,7 @@ examples:
     markup: |
       <div class="spectrum-Textfield spectrum-Textfield--multiline spectrum-Textfield--quiet is-disabled">
         <label for="textarea-quiet-disabled" class="spectrum-FieldLabel spectrum-FieldLabel--sizeM">Enter your name</label>
-        <div class="spectrum-Textfield-input-wrapper">
-          <textarea id="textarea-quiet-disabled" placeholder="Lisa Wilson" name="field" class="spectrum-Textfield-input" pattern="[\w\s]+" aria-describedby="helptext-17 character-count-17" disabled></textarea>
-        </div>
+        <textarea id="textarea-quiet-disabled" placeholder="Lisa Wilson" name="field" class="spectrum-Textfield-input" pattern="[\w\s]+" aria-describedby="helptext-17 character-count-17" disabled></textarea>
       </div>
 
   - id: textfield-quiet
@@ -233,12 +197,10 @@ examples:
     markup: |
       <div class="spectrum-Textfield spectrum-Textfield--multiline spectrum-Textfield--quiet is-valid">
         <label for="textarea-quiet-valid" class="spectrum-FieldLabel spectrum-FieldLabel--sizeM">Enter your name</label>
-        <div class="spectrum-Textfield-input-wrapper">
-          <svg class="spectrum-Icon spectrum-UIIcon-Checkmark100 spectrum-Textfield-validationIcon" focusable="false" aria-hidden="true">
-            <use xlink:href="#spectrum-css-icon-Checkmark100" />
-          </svg>
-          <textarea id="textarea-quiet-valid" placeholder="Lisa Wilson" name="field"  class="spectrum-Textfield-input" pattern="[\w\s]+" aria-describedby="helptext-18 character-count-18" required>A valid input</textarea>
-        </div>
+        <svg class="spectrum-Icon spectrum-UIIcon-Checkmark100 spectrum-Textfield-validationIcon" focusable="false" aria-hidden="true">
+          <use xlink:href="#spectrum-css-icon-Checkmark100" />
+        </svg>
+        <textarea id="textarea-quiet-valid" placeholder="Lisa Wilson" name="field"  class="spectrum-Textfield-input" pattern="[\w\s]+" aria-describedby="helptext-18 character-count-18" required>A valid input</textarea>
       </div>
 
   - id: textfield-quiet
@@ -246,12 +208,10 @@ examples:
     markup: |
       <div class="spectrum-Textfield spectrum-Textfield--multiline spectrum-Textfield--quiet is-valid is-disabled">
         <label for="textarea-valid-disabled" class="spectrum-FieldLabel spectrum-FieldLabel--sizeM">Enter your name</label>
-        <div class="spectrum-Textfield-input-wrapper">
-          <svg class="spectrum-Icon spectrum-UIIcon-Checkmark100 spectrum-Textfield-validationIcon" focusable="false" aria-hidden="true">
-            <use xlink:href="#spectrum-css-icon-Checkmark100" />
-          </svg>
-          <textarea id="textarea-valid-disabled"placeholder="Lisa Wilson" name="field"  class="spectrum-Textfield-input" pattern="[\w\s]+" aria-describedby="helptext-19 character-count-19" required disabled>A valid input</textarea>
-        </div>
+        <svg class="spectrum-Icon spectrum-UIIcon-Checkmark100 spectrum-Textfield-validationIcon" focusable="false" aria-hidden="true">
+          <use xlink:href="#spectrum-css-icon-Checkmark100" />
+        </svg>
+        <textarea id="textarea-valid-disabled"placeholder="Lisa Wilson" name="field"  class="spectrum-Textfield-input" pattern="[\w\s]+" aria-describedby="helptext-19 character-count-19" required disabled>A valid input</textarea>
       </div>
 
   - id: textfield-quiet
@@ -261,12 +221,10 @@ examples:
     markup: |
       <div class="spectrum-Textfield spectrum-Textfield--multiline spectrum-Textfield--quiet is-invalid">
         <label for="textarea-quiet-invalid" class="spectrum-FieldLabel spectrum-FieldLabel--sizeM">Enter your name</label>
-        <div class="spectrum-Textfield-input-wrapper">
-          <svg class="spectrum-Icon spectrum-Icon--sizeM spectrum-Textfield-validationIcon" focusable="false" aria-hidden="true">
-            <use xlink:href="#spectrum-icon-18-Alert" />
-          </svg>
-          <textarea id="textarea-quiet-invalid" placeholder="Lisa Wilson" name="field"  class="spectrum-Textfield-input" pattern="[\w\s]+" aria-describedby="helptext-20 character-count-20" required>Invalid input</textarea>
-        </div>
+        <svg class="spectrum-Icon spectrum-Icon--sizeM spectrum-Textfield-validationIcon" focusable="false" aria-hidden="true">
+          <use xlink:href="#spectrum-icon-18-Alert" />
+        </svg>
+        <textarea id="textarea-quiet-invalid" placeholder="Lisa Wilson" name="field"  class="spectrum-Textfield-input" pattern="[\w\s]+" aria-describedby="helptext-20 character-count-20" required>Invalid input</textarea>
       </div>
 
   - id: textfield-quiet
@@ -274,12 +232,10 @@ examples:
     markup: |
       <div class="spectrum-Textfield spectrum-Textfield--multiline spectrum-Textfield--quiet is-invalid is-disabled">
         <label for="textarea-quiet-invalid-disabled" class="spectrum-FieldLabel spectrum-FieldLabel--sizeM">Enter your name</label>
-        <div class="spectrum-Textfield-input-wrapper">
         <svg class="spectrum-Icon spectrum-Icon--sizeM spectrum-Textfield-validationIcon" focusable="false" aria-hidden="true">
           <use xlink:href="#spectrum-icon-18-Alert" />
         </svg>
-          <textarea id="textarea-quiet-invalid-disabled" placeholder="Lisa Wilson" name="field"  class="spectrum-Textfield-input" pattern="[\w\s]+" aria-describedby="helptext-21 character-count-21" disabled>Invalid input</textarea>
-        </div>
+        <textarea id="textarea-quiet-invalid-disabled" placeholder="Lisa Wilson" name="field"  class="spectrum-Textfield-input" pattern="[\w\s]+" aria-describedby="helptext-21 character-count-21" disabled>Invalid input</textarea>
       </div>
 
   - id: textfield-quiet
@@ -287,9 +243,7 @@ examples:
     markup: |
       <div class="spectrum-Textfield spectrum-Textfield--multiline spectrum-Textfield--quiet is-focused">
         <label for="textarea-quiet-focused" class="spectrum-FieldLabel spectrum-FieldLabel--sizeM">Enter your name</label>
-        <div class="spectrum-Textfield-input-wrapper">
-          <textarea id="textarea-quiet-focused" placeholder="Lisa Wilson" name="field" class="spectrum-Textfield-input" pattern="[\w\s]+" aria-describedby="helptext-22 character-count-22"></textarea>
-        </div>
+        <textarea id="textarea-quiet-focused" placeholder="Lisa Wilson" name="field" class="spectrum-Textfield-input" pattern="[\w\s]+" aria-describedby="helptext-22 character-count-22"></textarea>
       </div>
 
   - id: textfield-quiet
@@ -297,9 +251,7 @@ examples:
     markup: |
       <div class="spectrum-Textfield spectrum-Textfield--multiline spectrum-Textfield--quiet is-keyboardFocused">
         <label for="textarea-quiet-keyboard-focused" class="spectrum-FieldLabel spectrum-FieldLabel--sizeM">Enter your name</label>
-        <div class="spectrum-Textfield-input-wrapper">
-          <textarea id="textarea-quiet-keyboard-focused" placeholder="Lisa Wilson" name="field" class="spectrum-Textfield-input" pattern="[\w\s]+" aria-describedby="helptext-23 character-count-23"></textarea>
-        </div>
+        <textarea id="textarea-quiet-keyboard-focused" placeholder="Lisa Wilson" name="field" class="spectrum-Textfield-input" pattern="[\w\s]+" aria-describedby="helptext-23 character-count-23"></textarea>
       </div>
 
   - id: textfield-quiet
@@ -309,12 +261,10 @@ examples:
     markup: |
       <div class="spectrum-Textfield spectrum-Textfield--multiline spectrum-Textfield--quiet is-invalid is-focused">
         <label for="textarea-quiet-focused-invalid" class="spectrum-FieldLabel spectrum-FieldLabel--sizeM">Enter your name</label>
-        <div class="spectrum-Textfield-input-wrapper">
-          <svg class="spectrum-Icon spectrum-Icon--sizeM spectrum-Textfield-validationIcon" focusable="false" aria-hidden="true">
-            <use xlink:href="#spectrum-icon-18-Alert" />
-          </svg>
-          <textarea id="textarea-quiet-focused-invalid" placeholder="Lisa Wilson" name="field"  class="spectrum-Textfield-input" pattern="[\w\s]+" aria-describedby="helptext-24 character-count-24" required>Invalid input</textarea>
-        </div>
+        <svg class="spectrum-Icon spectrum-Icon--sizeM spectrum-Textfield-validationIcon" focusable="false" aria-hidden="true">
+          <use xlink:href="#spectrum-icon-18-Alert" />
+        </svg>
+        <textarea id="textarea-quiet-focused-invalid" placeholder="Lisa Wilson" name="field"  class="spectrum-Textfield-input" pattern="[\w\s]+" aria-describedby="helptext-24 character-count-24" required>Invalid input</textarea>
       </div>
 
   - id: textfield-quiet
@@ -324,10 +274,8 @@ examples:
     markup: |
       <div class="spectrum-Textfield spectrum-Textfield--multiline spectrum-Textfield--quiet is-invalid is-keyboardFocused">
         <label for="textarea-quiet-keyboard-focused-invalid" class="spectrum-FieldLabel spectrum-FieldLabel--sizeM">Enter your name</label>
-        <div class="spectrum-Textfield-input-wrapper">
-          <svg class="spectrum-Icon spectrum-Icon--sizeM spectrum-Textfield-validationIcon" focusable="false" aria-hidden="true">
-            <use xlink:href="#spectrum-icon-18-Alert" />
-          </svg>
-          <textarea id="textarea-quiet-keyboard-focused-invalid" placeholder="Lisa Wilson" name="field"  class="spectrum-Textfield-input" pattern="[\w\s]+" aria-describedby="helptext-25 character-count-25" required>Invalid input</textarea>
-        </div>
+        <svg class="spectrum-Icon spectrum-Icon--sizeM spectrum-Textfield-validationIcon" focusable="false" aria-hidden="true">
+          <use xlink:href="#spectrum-icon-18-Alert" />
+        </svg>
+        <textarea id="textarea-quiet-keyboard-focused-invalid" placeholder="Lisa Wilson" name="field"  class="spectrum-Textfield-input" pattern="[\w\s]+" aria-describedby="helptext-25 character-count-25" required>Invalid input</textarea>
       </div>

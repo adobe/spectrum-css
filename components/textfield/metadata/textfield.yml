@@ -83,9 +83,7 @@ examples:
       <div class="spectrum-Textfield spectrum-Textfield--sizeS">
         <label for="textfield-sm" class="spectrum-FieldLabel spectrum-FieldLabel--sizeS">Password</label>
         <span id="character-count-1" class="spectrum-Textfield-character-count">50</span>
-        <div class="spectrum-Textfield-input-wrapper">
-          <input id="textfield-sm" type="text" placeholder="Enter Password" name="field" value="" class="spectrum-Textfield-input" pattern=".{8,}" aria-describedby="helptext-1 character-count-1">
-        </div>
+        <input id="textfield-sm" type="text" placeholder="Enter Password" name="field" value="" class="spectrum-Textfield-input" pattern=".{8,}" aria-describedby="helptext-1 character-count-1">
         <div class="spectrum-HelpText spectrum-HelpText--sizeS spectrum-HelpText--neutral">
           <div id="helptext-size-small" class="spectrum-HelpText-text">Create a password with at least 8 characters.</div>
         </div>
@@ -94,9 +92,7 @@ examples:
       <div class="spectrum-Textfield spectrum-Textfield--sizeM">
         <label for="textfield-md" class="spectrum-FieldLabel spectrum-FieldLabel--sizeM">Password</label>
         <span id="character-count-2" class="spectrum-Textfield-character-count">50</span>
-        <div class="spectrum-Textfield-input-wrapper">
-          <input id="textfield-m" type="text" placeholder="Enter Password" name="field" value="" class="spectrum-Textfield-input" pattern=".{8,}" aria-describedby="helptext-2 character-count-2">
-        </div>
+        <input id="textfield-m" type="text" placeholder="Enter Password" name="field" value="" class="spectrum-Textfield-input" pattern=".{8,}" aria-describedby="helptext-2 character-count-2">
         <div class="spectrum-HelpText spectrum-HelpText--sizeM spectrum-HelpText--neutral">
           <div class="spectrum-HelpText-text">Create a password with at least 8 characters.</div>
         </div>
@@ -105,9 +101,7 @@ examples:
       <div class="spectrum-Textfield spectrum-Textfield--sizeL">
         <label for="textfield-l" class="spectrum-FieldLabel spectrum-FieldLabel--sizeL">Password</label>
         <span id="character-count-3" class="spectrum-Textfield-character-count">50</span>
-        <div class="spectrum-Textfield-input-wrapper">
-          <input id="textfield-l" type="text" placeholder="Enter Password" name="field" value="" class="spectrum-Textfield-input" pattern=".{8,}" aria-describedby="helptext-3 character-count-3">
-        </div>
+        <input id="textfield-l" type="text" placeholder="Enter Password" name="field" value="" class="spectrum-Textfield-input" pattern=".{8,}" aria-describedby="helptext-3 character-count-3">
         <div class="spectrum-HelpText spectrum-HelpText--sizeL spectrum-HelpText--neutral">
           <div class="spectrum-HelpText-text">Create a password with at least 8 characters.</div>
         </div>
@@ -116,9 +110,7 @@ examples:
       <div class="spectrum-Textfield spectrum-Textfield--sizeXL">
         <label for="textfield-xl" class="spectrum-FieldLabel spectrum-FieldLabel--sizeXL">Password</label>
         <span id="character-count-4" class="spectrum-Textfield-character-count">50</span>
-        <div class="spectrum-Textfield-input-wrapper">
-          <input id="textfield-xl" type="text" placeholder="Enter Password" name="field" value="" class="spectrum-Textfield-input" pattern=".{8,}" aria-describedby="helptext-4 character-count-4">
-        </div>
+        <input id="textfield-xl" type="text" placeholder="Enter Password" name="field" value="" class="spectrum-Textfield-input" pattern=".{8,}" aria-describedby="helptext-4 character-count-4">
          <div class="spectrum-HelpText spectrum-HelpText--sizeXL spectrum-HelpText--neutral">
           <div class="spectrum-HelpText-text">Create a password with at least 8 characters.</div>
         </div>
@@ -129,9 +121,7 @@ examples:
     markup: |
       <div class="spectrum-Textfield">
         <label for="textfield-helptext" class="spectrum-FieldLabel spectrum-FieldLabel--sizeM">Password</label>
-        <div class="spectrum-Textfield-input-wrapper">
-          <input id="textfield-helptext" type="text" placeholder="Enter Password" name="field" value="" class="spectrum-Textfield-input" pattern=".{8,}" aria-describedby="helptext-5 character-count-5">
-        </div>
+        <input id="textfield-helptext" type="text" placeholder="Enter Password" name="field" value="" class="spectrum-Textfield-input" pattern=".{8,}" aria-describedby="helptext-5 character-count-5">
         <div class="spectrum-HelpText spectrum-HelpText--sizeM spectrum-HelpText--neutral">
           <div class="spectrum-HelpText-text">Create a password with at least 8 characters.</div>
         </div>
@@ -143,9 +133,7 @@ examples:
       <div class="spectrum-Textfield">
         <label for="textfield-1" class="spectrum-FieldLabel spectrum-FieldLabel--sizeM">Enter your name</label>
         <span id="character-count-6" class="spectrum-Textfield-character-count">50</span>
-        <div class="spectrum-Textfield-input-wrapper">
-          <input id="textfield-1" type="text" placeholder="Lisa Wilson" name="field" value="" class="spectrum-Textfield-input" pattern="[\w\s]+" aria-describedby="helptext-6 character-count-6">
-        </div>
+        <input id="textfield-1" type="text" placeholder="Lisa Wilson" name="field" value="" class="spectrum-Textfield-input" pattern="[\w\s]+" aria-describedby="helptext-6 character-count-6">
       </div>
 
   - id: textfield-sidelabel
@@ -154,9 +142,7 @@ examples:
       <div class="spectrum-Textfield spectrum-Textfield--sidelabel">
         <label for="textfield-md-sidelabel" class="spectrum-FieldLabel spectrum-FieldLabel--sizeM">Password</label>
         <span id="character-count-7" class="spectrum-Textfield-character-count">50</span>
-        <div class="spectrum-Textfield-input-wrapper">
-          <input id="textfield-md-sidelabel" type="text" placeholder="Enter Password" name="field" value="" class="spectrum-Textfield-input" pattern=".{8,}" aria-describedby="helptext-7 character-count-7">
-        </div>
+        <input id="textfield-md-sidelabel" type="text" placeholder="Enter Password" name="field" value="" class="spectrum-Textfield-input" pattern=".{8,}" aria-describedby="helptext-7 character-count-7">
         <div class="spectrum-HelpText spectrum-HelpText--sizeM spectrum-HelpText--neutral">
           <div class="spectrum-HelpText-text">Create a password with at least 8 characters.</div>
         </div>
@@ -167,9 +153,7 @@ examples:
     markup: |
       <div class="spectrum-Textfield is-disabled">
         <label for="textfield-disabled" class="spectrum-FieldLabel spectrum-FieldLabel--sizeM">Enter your name</label>
-        <div class="spectrum-Textfield-input-wrapper">
-          <input id="textfield-disabled" type="text"  placeholder="Lisa Wilson" name="field" value="" class="spectrum-Textfield-input" pattern="[\w\s]+" aria-describedby="helptext-8 character-count-8" disabled>
-        </div>
+        <input id="textfield-disabled" type="text"  placeholder="Lisa Wilson" name="field" value="" class="spectrum-Textfield-input" pattern="[\w\s]+" aria-describedby="helptext-8 character-count-8" disabled>
       </div>
 
   - id: textfield-readonly
@@ -177,9 +161,7 @@ examples:
     markup: |
       <div class="spectrum-Textfield is-readOnly">
       <label for="textfield-readonly" class="spectrum-FieldLabel spectrum-FieldLabel--sizeM">Enter your name</label>
-        <div class="spectrum-Textfield-input-wrapper">
-          <input id="textfield-readonly" type="text"  placeholder="Lisa Wilson" name="field" value="This text is read-only" class="spectrum-Textfield-input" pattern="[\w\s]+" aria-describedby="helptext-9 character-count-9" readonly="readonly" aria-describedby="helptext-7 character-count-7">
-        </div>
+        <input id="textfield-readonly" type="text"  placeholder="Lisa Wilson" name="field" value="This text is read-only" class="spectrum-Textfield-input" pattern="[\w\s]+" aria-describedby="helptext-9 character-count-9" readonly="readonly" aria-describedby="helptext-7 character-count-7">
       </div>
 
   - id: textfield
@@ -189,42 +171,34 @@ examples:
     markup: |
       <div class="spectrum-Textfield spectrum-Textfield--sizeS is-valid">
         <label for="textfield-sm-valid" class="spectrum-FieldLabel spectrum-FieldLabel--sizeS">Enter your name</label>
-        <div class="spectrum-Textfield-input-wrapper">
           <svg class="spectrum-Icon spectrum-UIIcon-Checkmark75 spectrum-Textfield-validationIcon" focusable="false" aria-hidden="true">
             <use xlink:href="#spectrum-css-icon-Checkmark75" />
           </svg>
           <input id="textfield-sm-valid" type="text" placeholder="Lisa Wilson" name="field" value="A valid input" class="spectrum-Textfield-input" pattern="[\w\s]+" aria-describedby="helptext-10 character-count-10" required>
-        </div>
       </div>
 
       <div class="spectrum-Textfield spectrum-Textfield--sizeM is-valid">
         <label for="textfield-m-valid" class="spectrum-FieldLabel spectrum-FieldLabel--sizeM">Enter your name</label>
-        <div class="spectrum-Textfield-input-wrapper">
-          <svg class="spectrum-Icon spectrum-UIIcon-Checkmark100 spectrum-Textfield-validationIcon" focusable="false" aria-hidden="true">
-            <use xlink:href="#spectrum-css-icon-Checkmark100" />
-          </svg>
-          <input id="textfield-m-valid" type="text" placeholder="Lisa Wilson" name="field" value="A valid input" class="spectrum-Textfield-input" pattern="[\w\s]+" aria-describedby="helptext-11 character-count-11" required>
+        <svg class="spectrum-Icon spectrum-UIIcon-Checkmark100 spectrum-Textfield-validationIcon" focusable="false" aria-hidden="true">
+          <use xlink:href="#spectrum-css-icon-Checkmark100" />
+        </svg>
+        <input id="textfield-m-valid" type="text" placeholder="Lisa Wilson" name="field" value="A valid input" class="spectrum-Textfield-input" pattern="[\w\s]+" aria-describedby="helptext-11 character-count-11" required>
         </div>
-      </div>
 
       <div class="spectrum-Textfield spectrum-Textfield--sizeL is-valid">
         <label for="textfield-l-valid" class="spectrum-FieldLabel spectrum-FieldLabel--sizeL">Enter your name</label>
-        <div class="spectrum-Textfield-input-wrapper">
-          <svg class="spectrum-Icon spectrum-UIIcon-Checkmark200 spectrum-Textfield-validationIcon" focusable="false" aria-hidden="true">
-            <use xlink:href="#spectrum-css-icon-Checkmark200" />
-          </svg>
-          <input id="textfield-l-valid" type="text" placeholder="Lisa Wilson" name="field" value="A valid input" class="spectrum-Textfield-input" pattern="[\w\s]+" aria-describedby="helptext-12 character-count-12" required>
-        </div>
+        <svg class="spectrum-Icon spectrum-UIIcon-Checkmark200 spectrum-Textfield-validationIcon" focusable="false" aria-hidden="true">
+          <use xlink:href="#spectrum-css-icon-Checkmark200" />
+        </svg>
+        <input id="textfield-l-valid" type="text" placeholder="Lisa Wilson" name="field" value="A valid input" class="spectrum-Textfield-input" pattern="[\w\s]+" aria-describedby="helptext-12 character-count-12" required>
       </div>
 
       <div class="spectrum-Textfield spectrum-Textfield--sizeXL is-valid">
         <label for="textfield-xl-valid" class="spectrum-FieldLabel spectrum-FieldLabel--sizeXL">Enter your name</label>
-        <div class="spectrum-Textfield-input-wrapper">
-          <svg class="spectrum-Icon spectrum-UIIcon-Checkmark300 spectrum-Textfield-validationIcon" focusable="false" aria-hidden="true">
-            <use xlink:href="#spectrum-css-icon-Checkmark300" />
-          </svg>
-          <input id="textfield-xl-valid" type="text" placeholder="Lisa Wilson" name="field" value="A valid input" class="spectrum-Textfield-input" pattern="[\w\s]+" aria-describedby="helptext-13 character-count-13" required>
-        </div>
+        <svg class="spectrum-Icon spectrum-UIIcon-Checkmark300 spectrum-Textfield-validationIcon" focusable="false" aria-hidden="true">
+          <use xlink:href="#spectrum-css-icon-Checkmark300" />
+        </svg>
+        <input id="textfield-xl-valid" type="text" placeholder="Lisa Wilson" name="field" value="A valid input" class="spectrum-Textfield-input" pattern="[\w\s]+" aria-describedby="helptext-13 character-count-13" required>
       </div>
 
   - id: textfield
@@ -232,12 +206,10 @@ examples:
     markup: |
       <div class="spectrum-Textfield is-valid is-disabled">
       <label for="textfield-valid-disabled" class="spectrum-FieldLabel spectrum-FieldLabel--sizeM">Enter your name</label>
-      <div class="spectrum-Textfield-input-wrapper">
-        <svg class="spectrum-Icon spectrum-UIIcon-Checkmark100 spectrum-Textfield-validationIcon" focusable="false" aria-hidden="true">
-          <use xlink:href="#spectrum-css-icon-Checkmark100" />
-        </svg>
-          <input id="textfield-valid-disabled" type="text" placeholder="Lisa Wilson" name="field" value="A valid input" class="spectrum-Textfield-input" pattern="[\w\s]+" aria-describedby="helptext-14 character-count-14" required disabled>
-        </div>
+      <svg class="spectrum-Icon spectrum-UIIcon-Checkmark100 spectrum-Textfield-validationIcon" focusable="false" aria-hidden="true">
+        <use xlink:href="#spectrum-css-icon-Checkmark100" />
+      </svg>
+        <input id="textfield-valid-disabled" type="text" placeholder="Lisa Wilson" name="field" value="A valid input" class="spectrum-Textfield-input" pattern="[\w\s]+" aria-describedby="helptext-14 character-count-14" required disabled>
       </div>
 
   - id: textfield
@@ -247,12 +219,10 @@ examples:
     markup: |
       <div class="spectrum-Textfield spectrum-Textfield--sizeS is-invalid">
         <label for="textfield-sm-invalid" class="spectrum-FieldLabel spectrum-FieldLabel--sizeS">Password</label>
-        <div class="spectrum-Textfield-input-wrapper">
-          <svg class="spectrum-Icon spectrum-Icon--sizeS spectrum-Textfield-validationIcon" focusable="false" aria-hidden="true">
-            <use xlink:href="#spectrum-icon-18-Alert" />
-          </svg>
-          <input id="textfield-sm-invalid" type="text" placeholder="Enter Password" name="field" value="Invalid input" class="spectrum-Textfield-input" pattern=".{8,}" aria-describedby="helptext-15 character-count-15" required>
-        </div>
+        <svg class="spectrum-Icon spectrum-Icon--sizeS spectrum-Textfield-validationIcon" focusable="false" aria-hidden="true">
+          <use xlink:href="#spectrum-icon-18-Alert" />
+        </svg>
+        <input id="textfield-sm-invalid" type="text" placeholder="Enter Password" name="field" value="Invalid input" class="spectrum-Textfield-input" pattern=".{8,}" aria-describedby="helptext-15 character-count-15" required>
         <div class="spectrum-HelpText spectrum-HelpText--sizeS spectrum-HelpText--negative">
           <div class="spectrum-HelpText-text">Create a password with at least 8 characters.</div>
         </div>
@@ -260,12 +230,10 @@ examples:
 
       <div class="spectrum-Textfield spectrum-Textfield--sizeM is-invalid">
         <label for="textfield-md-invalid" class="spectrum-FieldLabel spectrum-FieldLabel--sizeS">Password</label>
-        <div class="spectrum-Textfield-input-wrapper">
-          <svg class="spectrum-Icon spectrum-Icon--sizeM spectrum-Textfield-validationIcon" focusable="false" aria-hidden="true">
-            <use xlink:href="#spectrum-icon-18-Alert" />
-          </svg>
-          <input id="textfield-md-invalid" type="text" placeholder="Enter Password" name="field" value="Invalid input" class="spectrum-Textfield-input"  pattern=".{8,}" aria-describedby="helptext-16 character-count-16" required>
-        </div>
+        <svg class="spectrum-Icon spectrum-Icon--sizeM spectrum-Textfield-validationIcon" focusable="false" aria-hidden="true">
+          <use xlink:href="#spectrum-icon-18-Alert" />
+        </svg>
+        <input id="textfield-md-invalid" type="text" placeholder="Enter Password" name="field" value="Invalid input" class="spectrum-Textfield-input"  pattern=".{8,}" aria-describedby="helptext-16 character-count-16" required>
         <div class="spectrum-HelpText spectrum-HelpText--sizeM spectrum-HelpText--negative">
           <div class="spectrum-HelpText-text">Create a password with at least 8 characters.</div>
         </div>
@@ -273,12 +241,10 @@ examples:
 
       <div class="spectrum-Textfield spectrum-Textfield--sizeL is-invalid">
         <label for="textfield-l-invalid" class="spectrum-FieldLabel spectrum-FieldLabel--sizeS">Password</label>
-        <div class="spectrum-Textfield-input-wrapper">
-          <svg class="spectrum-Icon spectrum-Icon--sizeL spectrum-Textfield-validationIcon" focusable="false" aria-hidden="true">
-            <use xlink:href="#spectrum-icon-18-Alert" />
-          </svg>
-          <input id="textfield-l-invalid" type="text" placeholder="Enter Password" name="field" value="Invalid input" class="spectrum-Textfield-input"  pattern=".{8,}" aria-describedby="helptext-17 character-count-17" required>
-        </div>
+        <svg class="spectrum-Icon spectrum-Icon--sizeL spectrum-Textfield-validationIcon" focusable="false" aria-hidden="true">
+          <use xlink:href="#spectrum-icon-18-Alert" />
+        </svg>
+        <input id="textfield-l-invalid" type="text" placeholder="Enter Password" name="field" value="Invalid input" class="spectrum-Textfield-input"  pattern=".{8,}" aria-describedby="helptext-17 character-count-17" required>
         <div class="spectrum-HelpText spectrum-HelpText--sizeL spectrum-HelpText--negative">
           <div class="spectrum-HelpText-text">Create a password with at least 8 characters.</div>
         </div>
@@ -286,12 +252,10 @@ examples:
 
       <div class="spectrum-Textfield spectrum-Textfield--sizeXL is-invalid">
         <label for="textfield-xl-invalid" class="spectrum-FieldLabel spectrum-FieldLabel--sizeS">Password</label>
-        <div class="spectrum-Textfield-input-wrapper">
-          <svg class="spectrum-Icon spectrum-Icon--sizeXL spectrum-Textfield-validationIcon" focusable="false" aria-hidden="true">
-            <use xlink:href="#spectrum-icon-18-Alert" />
-          </svg>
-          <input id="textfield-xl-invalid" type="text" placeholder="Enter Password" name="field" value="Invalid input" class="spectrum-Textfield-input"  pattern=".{8,}" aria-describedby="helptext-18 character-count-18" required>
-        </div>
+        <svg class="spectrum-Icon spectrum-Icon--sizeXL spectrum-Textfield-validationIcon" focusable="false" aria-hidden="true">
+          <use xlink:href="#spectrum-icon-18-Alert" />
+        </svg>
+        <input id="textfield-xl-invalid" type="text" placeholder="Enter Password" name="field" value="Invalid input" class="spectrum-Textfield-input"  pattern=".{8,}" aria-describedby="helptext-18 character-count-18" required>
         <div class="spectrum-HelpText spectrum-HelpText--sizeXL spectrum-HelpText--negative">
           <div class="spectrum-HelpText-text">Create a password with at least 8 characters.</div>
         </div>
@@ -301,13 +265,11 @@ examples:
     name: Invalid (disabled)
     markup: |
       <div class="spectrum-Textfield is-invalid is-disabled">
-      <label for="textfield-invalid-disabled" class="spectrum-FieldLabel spectrum-FieldLabel--sizeM">Enter your name</label>
-        <div class="spectrum-Textfield-input-wrapper">
-          <svg class="spectrum-Icon spectrum-Icon--sizeM spectrum-Textfield-validationIcon" focusable="false" aria-hidden="true">
-            <use xlink:href="#spectrum-icon-18-Alert" />
-          </svg>
-          <input id="textfield-invalid-disabled" type="text" placeholder="Lisa Wilson" name="field" value="Invalid input" class="spectrum-Textfield-input" pattern="[\w\s]+" aria-describedby="helptext-19 character-count-19" disabled>
-        </div>
+        <label for="textfield-invalid-disabled" class="spectrum-FieldLabel spectrum-FieldLabel--sizeM">Enter your name</label>
+        <svg class="spectrum-Icon spectrum-Icon--sizeM spectrum-Textfield-validationIcon" focusable="false" aria-hidden="true">
+          <use xlink:href="#spectrum-icon-18-Alert" />
+        </svg>
+        <input id="textfield-invalid-disabled" type="text" placeholder="Lisa Wilson" name="field" value="Invalid input" class="spectrum-Textfield-input" pattern="[\w\s]+" aria-describedby="helptext-19 character-count-19" disabled>
       </div>
 
   - id: textfield
@@ -315,9 +277,7 @@ examples:
     markup: |
       <div class="spectrum-Textfield is-focused">
         <label for="textfield-focused" class="spectrum-FieldLabel spectrum-FieldLabel--sizeM">Enter your name</label>
-        <div class="spectrum-Textfield-input-wrapper">
-          <input id="textfield-focused" type="text" placeholder="Lisa Wilson" name="field" value="" class="spectrum-Textfield-input" pattern="[\w\s]+" aria-describedby="helptext-20 character-count-20">
-        </div>
+        <input id="textfield-focused" type="text" placeholder="Lisa Wilson" name="field" value="" class="spectrum-Textfield-input" pattern="[\w\s]+" aria-describedby="helptext-20 character-count-20">
       </div>
 
   - id: textfield
@@ -325,9 +285,7 @@ examples:
     markup: |
       <div class="spectrum-Textfield is-keyboardFocused">
         <label for="textfield-keyboard-focused" class="spectrum-FieldLabel spectrum-FieldLabel--sizeM">Enter your name</label>
-        <div class="spectrum-Textfield-input-wrapper">
-          <input id="textfield-keyboard-focused" type="text" placeholder="Lisa Wilson" name="field" value="" class="spectrum-Textfield-input" pattern="[\w\s]+" aria-describedby="helptext-21 character-count-21">
-        </div>
+        <input id="textfield-keyboard-focused" type="text" placeholder="Lisa Wilson" name="field" value="" class="spectrum-Textfield-input" pattern="[\w\s]+" aria-describedby="helptext-21 character-count-21">
       </div>
 
   - id: textfield
@@ -337,12 +295,10 @@ examples:
     markup: |
       <div class="spectrum-Textfield is-invalid is-focused">
         <label for="textfield-focused-invalid" class="spectrum-FieldLabel spectrum-FieldLabel--sizeM">Enter your name</label>
-        <div class="spectrum-Textfield-input-wrapper">
-          <svg class="spectrum-Icon spectrum-Icon--sizeM spectrum-Textfield-validationIcon" focusable="false" aria-hidden="true">
-            <use xlink:href="#spectrum-icon-18-Alert" />
-          </svg>
-          <input id="textfield-focused-invalid" type="text" placeholder="Lisa Wilson" name="field" value="Invalid input" class="spectrum-Textfield-input" pattern="[\w\s]+" aria-describedby="helptext-22 character-count-22" required>
-      </div>
+        <svg class="spectrum-Icon spectrum-Icon--sizeM spectrum-Textfield-validationIcon" focusable="false" aria-hidden="true">
+          <use xlink:href="#spectrum-icon-18-Alert" />
+        </svg>
+        <input id="textfield-focused-invalid" type="text" placeholder="Lisa Wilson" name="field" value="Invalid input" class="spectrum-Textfield-input" pattern="[\w\s]+" aria-describedby="helptext-22 character-count-22" required>
       </div>
 
   - id: textfield
@@ -352,12 +308,10 @@ examples:
     markup: |
       <div class="spectrum-Textfield is-invalid is-keyboardFocused">
         <label for="textfield-keyboard-focused-invalid" class="spectrum-FieldLabel spectrum-FieldLabel--sizeM">Enter your name</label>
-        <div class="spectrum-Textfield-input-wrapper">
-          <svg class="spectrum-Icon spectrum-Icon--sizeM spectrum-Textfield-validationIcon" focusable="false" aria-hidden="true">
-            <use xlink:href="#spectrum-icon-18-Alert" />
-          </svg>
-          <input id="textfield-keyboard-focused-invalid" type="text" placeholder="Lisa Wilson" name="field" value="Invalid input" class="spectrum-Textfield-input" pattern="[\w\s]+" aria-describedby="helptext-23 character-count-23" required>
-        </div>
+        <svg class="spectrum-Icon spectrum-Icon--sizeM spectrum-Textfield-validationIcon" focusable="false" aria-hidden="true">
+          <use xlink:href="#spectrum-icon-18-Alert" />
+        </svg>
+        <input id="textfield-keyboard-focused-invalid" type="text" placeholder="Lisa Wilson" name="field" value="Invalid input" class="spectrum-Textfield-input" pattern="[\w\s]+" aria-describedby="helptext-23 character-count-23" required>
       </div>
 
   - id: textfield-quiet
@@ -365,9 +319,7 @@ examples:
     markup: |
       <div class="spectrum-Textfield spectrum-Textfield--quiet">
         <label for="textfield-quiet" class="spectrum-FieldLabel spectrum-FieldLabel--sizeM">Enter your name</label>
-        <div class="spectrum-Textfield-input-wrapper">
-          <input id="textfield-quiet" type="text" placeholder="Lisa Wilson" name="field" value="" class="spectrum-Textfield-input" pattern="[\w\s]+" aria-describedby="helptext-24 character-count-24">
-        </div>
+        <input id="textfield-quiet" type="text" placeholder="Lisa Wilson" name="field" value="" class="spectrum-Textfield-input" pattern="[\w\s]+" aria-describedby="helptext-24 character-count-24">
       </div>
 
   - id: textfield-quiet
@@ -375,9 +327,7 @@ examples:
     markup: |
       <div class="spectrum-Textfield spectrum-Textfield--quiet is-disabled">
         <label for="textfield-quiet-disabled" class="spectrum-FieldLabel spectrum-FieldLabel--sizeM">Enter your name</label>
-        <div class="spectrum-Textfield-input-wrapper">
-          <input id="textfield-quiet-disabled" type="text" placeholder="Lisa Wilson" name="field" value="" class="spectrum-Textfield-input" pattern="[\w\s]+" aria-describedby="helptext-25 character-count-25" disabled>
-        </div>
+        <input id="textfield-quiet-disabled" type="text" placeholder="Lisa Wilson" name="field" value="" class="spectrum-Textfield-input" pattern="[\w\s]+" aria-describedby="helptext-25 character-count-25" disabled>
       </div>
 
   - id: textfield-quiet
@@ -385,12 +335,10 @@ examples:
     markup: |
       <div class="spectrum-Textfield spectrum-Textfield--quiet is-valid">
         <label for="textfield-quiet-valid" class="spectrum-FieldLabel spectrum-FieldLabel--sizeM">Enter your name</label>
-        <div class="spectrum-Textfield-input-wrapper">
-          <svg class="spectrum-Icon spectrum-UIIcon-Checkmark100 spectrum-Textfield-validationIcon" focusable="false" aria-hidden="true">
-            <use xlink:href="#spectrum-css-icon-Checkmark100" />
-          </svg>
-          <input id="textfield-quiet-valid" type="text" placeholder="Lisa Wilson" name="field" value="A valid input" class="spectrum-Textfield-input" pattern="[\w\s]+" aria-describedby="helptext-26 character-count-26" required>
-        </div>
+        <svg class="spectrum-Icon spectrum-UIIcon-Checkmark100 spectrum-Textfield-validationIcon" focusable="false" aria-hidden="true">
+          <use xlink:href="#spectrum-css-icon-Checkmark100" />
+        </svg>
+        <input id="textfield-quiet-valid" type="text" placeholder="Lisa Wilson" name="field" value="A valid input" class="spectrum-Textfield-input" pattern="[\w\s]+" aria-describedby="helptext-26 character-count-26" required>
       </div>
 
   - id: textfield-quiet
@@ -398,12 +346,10 @@ examples:
     markup: |
       <div class="spectrum-Textfield spectrum-Textfield--quiet is-valid is-disabled">
         <label for="textfield-quiet-valid-disabled" class="spectrum-FieldLabel spectrum-FieldLabel--sizeM">Enter your name</label>
-        <div class="spectrum-Textfield-input-wrapper">
-          <svg class="spectrum-Icon spectrum-UIIcon-Checkmark100 spectrum-Textfield-validationIcon" focusable="false" aria-hidden="true">
-            <use xlink:href="#spectrum-css-icon-Checkmark100" />
-          </svg>
-          <input id="textfield-quiet-valid-disabled" type="text" placeholder="Lisa Wilson" name="field" value="A valid input" class="spectrum-Textfield-input" pattern="[\w\s]+" aria-describedby="helptext-27 character-count-27" required disabled>
-        </div>
+        <svg class="spectrum-Icon spectrum-UIIcon-Checkmark100 spectrum-Textfield-validationIcon" focusable="false" aria-hidden="true">
+          <use xlink:href="#spectrum-css-icon-Checkmark100" />
+        </svg>
+        <input id="textfield-quiet-valid-disabled" type="text" placeholder="Lisa Wilson" name="field" value="A valid input" class="spectrum-Textfield-input" pattern="[\w\s]+" aria-describedby="helptext-27 character-count-27" required disabled>
       </div>
 
   - id: textfield-quiet-invalid
@@ -413,12 +359,10 @@ examples:
     markup: |
       <div class="spectrum-Textfield spectrum-Textfield--quiet is-invalid">
         <label for="textfield-quiet-invalid" class="spectrum-FieldLabel spectrum-FieldLabel--sizeM">Enter your name</label>
-        <div class="spectrum-Textfield-input-wrapper">
-          <svg class="spectrum-Icon spectrum-Icon--sizeM spectrum-Textfield-validationIcon" focusable="false" aria-hidden="true">
-            <use xlink:href="#spectrum-icon-18-Alert" />
-          </svg>
-          <input id="textfield-quiet-invalid" type="text" placeholder="Lisa Wilson" name="field" value="Invalid input" class="spectrum-Textfield-input" pattern="[\w\s]+" aria-describedby="helptext-28 character-count-28" required>
-        </div>
+        <svg class="spectrum-Icon spectrum-Icon--sizeM spectrum-Textfield-validationIcon" focusable="false" aria-hidden="true">
+          <use xlink:href="#spectrum-icon-18-Alert" />
+        </svg>
+        <input id="textfield-quiet-invalid" type="text" placeholder="Lisa Wilson" name="field" value="Invalid input" class="spectrum-Textfield-input" pattern="[\w\s]+" aria-describedby="helptext-28 character-count-28" required>
       </div>
 
   - id: textfield-quiet-invalid-disabled
@@ -428,12 +372,10 @@ examples:
     markup: |
       <div class="spectrum-Textfield spectrum-Textfield--quiet is-invalid is-disabled">
         <label for="textfield-quiet-invalid-disabled" class="spectrum-FieldLabel spectrum-FieldLabel--sizeM">Enter your name</label>
-        <div class="spectrum-Textfield-input-wrapper">
-          <svg class="spectrum-Icon spectrum-Icon--sizeM spectrum-Textfield-validationIcon" focusable="false" aria-hidden="true">
-            <use xlink:href="#spectrum-icon-18-Alert" />
-          </svg>
-          <input id="textfield-quiet-invalid-disabled" type="text" placeholder="Lisa Wilson" name="field" value="Invalid input" class="spectrum-Textfield-input" pattern="[\w\s]+" aria-describedby="helptext-29 character-count-29" disabled>
-        </div>
+        <svg class="spectrum-Icon spectrum-Icon--sizeM spectrum-Textfield-validationIcon" focusable="false" aria-hidden="true">
+          <use xlink:href="#spectrum-icon-18-Alert" />
+        </svg>
+        <input id="textfield-quiet-invalid-disabled" type="text" placeholder="Lisa Wilson" name="field" value="Invalid input" class="spectrum-Textfield-input" pattern="[\w\s]+" aria-describedby="helptext-29 character-count-29" disabled>
       </div>
 
   - id: textfield-quiet-focused
@@ -441,9 +383,7 @@ examples:
     markup: |
       <div class="spectrum-Textfield spectrum-Textfield--quiet is-focused">
         <label for="textfield-quiet-focused" class="spectrum-FieldLabel spectrum-FieldLabel--sizeM">Enter your name</label>
-        <div class="spectrum-Textfield-input-wrapper">
-          <input id="textfield-quiet-focused" type="text" placeholder="Lisa Wilson" name="field" value="" class="spectrum-Textfield-input" pattern="[\w\s]+" aria-describedby="helptext-30 character-count-30">
-        </div>
+        <input id="textfield-quiet-focused" type="text" placeholder="Lisa Wilson" name="field" value="" class="spectrum-Textfield-input" pattern="[\w\s]+" aria-describedby="helptext-30 character-count-30">
       </div>
 
   - id: textfield-quiet
@@ -451,9 +391,7 @@ examples:
     markup: |
       <div class="spectrum-Textfield spectrum-Textfield--quiet is-keyboardFocused">
         <label for="textfield-quiet-keyboard-focused" class="spectrum-FieldLabel spectrum-FieldLabel--sizeM">Enter your name</label>
-        <div class="spectrum-Textfield-input-wrapper">
-          <input id="textfield-quiet-keyboard-focused" type="text" placeholder="Lisa Wilson" name="field" value="" class="spectrum-Textfield-input" pattern="[\w\s]+" aria-describedby="helptext-31 character-count-31">
-        </div>
+        <input id="textfield-quiet-keyboard-focused" type="text" placeholder="Lisa Wilson" name="field" value="" class="spectrum-Textfield-input" pattern="[\w\s]+" aria-describedby="helptext-31 character-count-31">
       </div>
 
   - id: textfield-focused-invalid
@@ -463,12 +401,10 @@ examples:
     markup: |
       <div class="spectrum-Textfield spectrum-Textfield--quiet is-invalid is-focused">
         <label for="textfield-focused-invalid" class="spectrum-FieldLabel spectrum-FieldLabel--sizeM">Enter your name</label>
-        <div class="spectrum-Textfield-input-wrapper">
-          <svg class="spectrum-Icon spectrum-Icon--sizeM spectrum-Textfield-validationIcon" focusable="false" aria-hidden="true">
-            <use xlink:href="#spectrum-icon-18-Alert" />
-          </svg>
-          <input id="textfield-focused-invalid" type="text" placeholder="Lisa Wilson" name="field" value="Invalid input" class="spectrum-Textfield-input" pattern="[\w\s]+" aria-describedby="helptext-32 character-count-32" required>
-        </div>
+        <svg class="spectrum-Icon spectrum-Icon--sizeM spectrum-Textfield-validationIcon" focusable="false" aria-hidden="true">
+          <use xlink:href="#spectrum-icon-18-Alert" />
+        </svg>
+        <input id="textfield-focused-invalid" type="text" placeholder="Lisa Wilson" name="field" value="Invalid input" class="spectrum-Textfield-input" pattern="[\w\s]+" aria-describedby="helptext-32 character-count-32" required>
       </div>
 
   - id: textfield-keyboard-focused-invalid
@@ -478,10 +414,8 @@ examples:
     markup: |
       <div class="spectrum-Textfield spectrum-Textfield--quiet is-invalid is-keyboardFocused">
         <label for="textfield-keyboard-focused-invalid" class="spectrum-FieldLabel spectrum-FieldLabel--sizeM">Enter your name</label>
-        <div class="spectrum-Textfield-input-wrapper">
-          <svg class="spectrum-Icon spectrum-Icon--sizeM spectrum-Textfield-validationIcon" focusable="false" aria-hidden="true">
-            <use xlink:href="#spectrum-icon-18-Alert" />
-          </svg>
-          <input id="textfield-keyboard-focused-invalid" type="text" placeholder="Lisa Wilson" name="field" value="Invalid input" class="spectrum-Textfield-input" pattern="[\w\s]+" aria-describedby="helptext-33 character-count-33" required>
-        </div>
+        <svg class="spectrum-Icon spectrum-Icon--sizeM spectrum-Textfield-validationIcon" focusable="false" aria-hidden="true">
+          <use xlink:href="#spectrum-icon-18-Alert" />
+        </svg>
+        <input id="textfield-keyboard-focused-invalid" type="text" placeholder="Lisa Wilson" name="field" value="Invalid input" class="spectrum-Textfield-input" pattern="[\w\s]+" aria-describedby="helptext-33 character-count-33" required>
       </div>
