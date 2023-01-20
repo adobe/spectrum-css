@@ -13,20 +13,23 @@ governing permissions and limitations under the License.
 
 .spectrum-ColorWheel {
   /* todo: fix this in DNA */
-  --spectrum-colorwheel-focus-ring-size: var(--spectrum-global-dimension-static-size-25);
+  /* what is going on with the focus and interactivity with this component?
+  --spectrum-colorwheel-focus-ring-size: 2px; placeholder var(--spectrum-global-dimension-static-size-25); */
   --spectrum-colorwheel-border-radius: 100%;
-  --spectrum-colorwheel-width: calc(var(--spectrum-global-dimension-size-125) * 16);
+  --spectrum-colorwheel-width: 160px; /* placeholder calc(var(--spectrum-global-dimension-size-125) * 16); */
   --spectrum-colorwheel-height: var(--spectrum-colorwheel-width);
 }
 
-%spectrum-ColorControl-handle--focused {
-  /* Bigger handle when focused */
-  width: calc(var(--spectrum-colorhandle-size) * 2);
-  height: calc(var(--spectrum-colorhandle-size) * 2);
 
-  margin-left: calc(-1 * var(--spectrum-colorhandle-size));
-  margin-top: calc(-1 * var(--spectrum-colorhandle-size));
+%spectrum-ColorControl-handle--focused {
+  /*// Bigger handle when focused */
+  width: calc(16px * 2); /* place holder var(--spectrum-colorhandle-size) */
+  height: calc(16px * 2); /* place holder var(--spectrum-colorhandle-size) */
+
+  margin-left: calc(-1 * 16px); /* place holder var(--spectrum-colorhandle-size) */
+  margin-top: calc(-1 * 16px); /* place holder var(--spectrum-colorhandle-size) */
 }
+
 
 /** index.css (scale dependent) */
 
@@ -77,7 +80,7 @@ governing permissions and limitations under the License.
   border-radius: 100%;
   box-sizing: border-box;
 
-  border-width: var(--spectrum-colorwheel-border-size);
+  border-width: 1px; /* placeholder var(--spectrum-colorwheel-border-size); */
   border-style: solid;
 }
 
@@ -90,7 +93,7 @@ governing permissions and limitations under the License.
 .spectrum-ColorWheel-innerCircle {
   fill: transparent;
 
-  stroke-width: var(--spectrum-colorwheel-border-size);
+  stroke-width: 1px; /* placeholder var(--spectrum-colorwheel-border-size); */
 }
 
 .spectrum-ColorWheel-slider {
@@ -102,10 +105,12 @@ governing permissions and limitations under the License.
   top: 50%;
 }
 
-/* from skin.css
+
+/* from skin */
 .spectrum-ColorWheel {
-  // todo: fix this in DNA
-  --spectrum-colorwheel-border-color: var(--spectrum-colorarea-border-color);
+  /* // todo: fix this in DNA */
+  --spectrum-colorwheel-border-color: black ; /* placeholder var(--spectrum-colorarea-border-color); */
+  --spectrum-colorwheel-fill-color-disabled: grey; /* placeholder for fill of disabled color wheel*/
 }
 
 .spectrum-ColorWheel {
@@ -119,7 +124,7 @@ governing permissions and limitations under the License.
       fill: var(--spectrum-colorwheel-fill-color-disabled);
     }
 
-    // hide all the little colored bits
+    /* // hide all the little colored bits */
     .spectrum-ColorWheel-segment {
       display: none;
     }
@@ -143,4 +148,4 @@ governing permissions and limitations under the License.
   .spectrum-ColorWheel {
     forced-color-adjust: none;
   }
-} */
+}
