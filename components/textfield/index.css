@@ -283,16 +283,77 @@ governing permissions and limitations under the License.
 
   /* Grid layout for child components */
   display: inline-grid;
-  grid-template-columns: auto auto auto;
-  grid-template-rows: auto auto;
+  grid-template-columns: auto auto;
+  grid-template-rows: auto auto auto;
+
+  /*** Focus Indicator - Unfocused Base Styles ***/
+  &::after {
+    block-size: calc(100% + (var(--mod-textfield-focus-indicator-gap, var(--spectrum-textfield-focus-indicator-gap)) * 2));
+    inline-size: calc(100% + (var(--mod-textfield-focus-indicator-gap, var(--spectrum-textfield-focus-indicator-gap)) * 2));
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    margin-block-start: calc((var(--mod-textfield-focus-indicator-gap, var(--spectrum-textfield-focus-indicator-gap))
+                              + var(--mod-textfield-focus-indicator-width, var(--spectrum-textfield-focus-indicator-width)))
+                              * -1);
+    margin-inline-start: calc((var(--mod-textfield-focus-indicator-gap, var(--spectrum-textfield-focus-indicator-gap))
+                              + var(--mod-textfield-focus-indicator-width, var(--spectrum-textfield-focus-indicator-width)))
+                              * -1);
+    pointer-events: none;
+    content: '';
+    border-style: solid;
+    border-color: transparent;
+    border-width: 0;
+    border-radius: calc(var(--mod-textfield-corner-radius, var(--spectrum-textfield-corner-radius))
+                        + var(--mod-textfield-border-width, var(--spectrum-textfield-border-width))
+                        + var(--mod-textfield-focus-indicator-gap, var(--spectrum-textfield-focus-indicator-gap)));
+
+    /* place in same cell: input, focus indicator, and grows sizer */
+    grid-row: 2 / span 1;
+    grid-column: 1 / span 2;
+  }
+
+  .is-keyboardFocused & {
+    /* focus indicator is focused state */
+    &::after {
+      border-color: var(--highcontrast-textfield-focus-indicator-color, var(--mod-textfield-focus-indicator-color, var(--spectrum-textfield-focus-indicator-color)));
+      border-width: var(--mod-textfield-focus-indicator-width, var(--spectrum-textfield-focus-indicator-width));
+    }
+  }
+
+  .is-readOnly & {
+    &::after {
+      border: 0;
+    }
+  }
+
+  &--quiet {
+    &::after {
+      inline-size: 100%;
+      block-size: calc(100% + var(--mod-textfield-focus-indicator-gap, var(--spectrum-textfield-focus-indicator-gap)));
+      margin-inline-start: 0;
+      margin-block-start: 0;
+      border-radius: 0;
+      border-color: var(--highcontrast-textfield-focus-indicator-color, var(--mod-textfield-focus-indicator-color, var(--spectrum-textfield-focus-indicator-color)));
+    }
+  }
+
+  &--quiet.is-keyboardFocused & {
+    &::after {
+      border-width: 0 0 var(--mod-textfield-focus-indicator-width, var(--spectrum-textfield-focus-indicator-width)) 0;
+    }
+  }
 }
+
 
 /* align search icon */
 .spectrum-Textfield-icon {
   position: absolute;
-  top: 0;
-  bottom: 0;
-  margin-block: auto;
+  top: 0; /* TODO - reevaluate block spacing when search field is migrated */
+  bottom: 0; /* TODO - reevaluate block spacing when search field is migrated */
+  margin-block: auto; /* TODO - reevaluate block spacing when search field is migrated */
+
   color: var(--highcontrast-textfield-text-color-default, var(--mod-textfield-text-color-default, var(--spectrum-textfield-text-color-default)));
 
   .spectrum-Textfield.is-disabled & {
@@ -315,9 +376,9 @@ governing permissions and limitations under the License.
 /********* Child Component - Label *********/
 .spectrum-FieldLabel {
   .spectrum-Textfield & {
-    grid-row: 1;
-    grid-column: 1 / span 2;
     margin-block-end: var(--mod-textfield-label-spacing-block, var(--spectrum-textfield-label-spacing-block));
+    grid-row: 1;
+    grid-column: 1 / span 1;
   }
 
   .spectrum-Textfield--quiet & {
@@ -332,16 +393,14 @@ governing permissions and limitations under the License.
 /********* Child Component - Help Text *********/
 .spectrum-HelpText {
   .spectrum-Textfield & {
-    grid-row: 3;
-    grid-column: 1 / span 3;
     margin-block-start: var(--mod-textfield-helptext-spacing-block, var(--spectrum-textfield-helptext-spacing-block));
+    grid-row: 3;
+    grid-column: 1 / span 2;
   }
 }
 
 /********* Child Element - Character Count *********/
 .spectrum-Textfield-character-count {
-  grid-row: 1;
-  grid-column: 3 / span 1;
   display: inline-flex;
   align-items: flex-end;
   justify-content: flex-end;
@@ -352,6 +411,8 @@ governing permissions and limitations under the License.
   font-size: var(--mod-textfield-character-count-font-size, var(--spectrum-textfield-character-count-font-size));
   font-family: var(--mod-textfield-character-count-font-family, var(--spectrum-textfield-character-count-font-family));
   font-weight: var(--mod-textfield-character-count-font-weight, var(--spectrum-textfield-character-count-font-weight));
+  grid-row: 1;
+  grid-column: 2 / span 1;
 
   .spectrum-Textfield--quiet & {
     margin-block-end: var(--mod-textfield-character-count-spacing-block-quiet, var(--spectrum-textfield-character-count-spacing-block-quiet));
@@ -365,6 +426,8 @@ governing permissions and limitations under the License.
   top: 0;
   right: 0;
   margin-inline-start: auto;
+  grid-row: 2;
+  grid-column: 2;
 
   [dir="rtl"] & {
     left: 0;
@@ -410,69 +473,6 @@ governing permissions and limitations under the License.
   }
 }
 
-/********* Child div - Input Wrapper - for alignment of focus indicator *********/
-.spectrum-Textfield-input-wrapper {
-  grid-row: 2;
-  grid-column: 1 / span 3;
-  box-sizing: border-box;
-  position: relative;
-
-  /*** Focus Indicator - Unfocused Base Styles ***/
-  &::after {
-    block-size: calc(100% + (var(--mod-textfield-focus-indicator-gap, var(--spectrum-textfield-focus-indicator-gap)) * 2));
-    inline-size: calc(100% + (var(--mod-textfield-focus-indicator-gap, var(--spectrum-textfield-focus-indicator-gap)) * 2));
-    position: absolute;
-    left: 0;
-    right: 0;
-    top: 0;
-    margin-block-start: calc((var(--mod-textfield-focus-indicator-gap, var(--spectrum-textfield-focus-indicator-gap))
-                              + var(--mod-textfield-focus-indicator-width, var(--spectrum-textfield-focus-indicator-width)))
-                              * -1);
-    margin-inline-start: calc((var(--mod-textfield-focus-indicator-gap, var(--spectrum-textfield-focus-indicator-gap))
-                              + var(--mod-textfield-focus-indicator-width, var(--spectrum-textfield-focus-indicator-width)))
-                              * -1);
-    pointer-events: none;
-    content: '';
-    border-color: transparent;
-    border-style: solid;
-    border-width: 0;
-    border-radius: calc(var(--mod-textfield-corner-radius, var(--spectrum-textfield-corner-radius))
-                        + var(--mod-textfield-border-width, var(--spectrum-textfield-border-width))
-                        + var(--mod-textfield-focus-indicator-gap, var(--spectrum-textfield-focus-indicator-gap)));
-  }
-
-  .is-keyboardFocused & {
-    /* focus indicator is focused state */
-    &::after {
-      border-color: var(--highcontrast-textfield-focus-indicator-color, var(--mod-textfield-focus-indicator-color, var(--spectrum-textfield-focus-indicator-color)));
-      border-width: var(--mod-textfield-focus-indicator-width, var(--spectrum-textfield-focus-indicator-width));
-    }
-  }
-
-  .is-readOnly & {
-    &::after {
-      border: 0;
-    }
-  }
-
-  .spectrum-Textfield--quiet & {
-    &::after {
-      inline-size: 100%;
-      block-size: calc(100% + var(--mod-textfield-focus-indicator-gap, var(--spectrum-textfield-focus-indicator-gap)));
-      margin-inline-start: 0;
-      margin-block-start: 0;
-      border-radius: 0;
-      border-color: var(--highcontrast-textfield-focus-indicator-color, var(--mod-textfield-focus-indicator-color, var(--spectrum-textfield-focus-indicator-color)));
-    }
-  }
-
-  .spectrum-Textfield--quiet.is-keyboardFocused & {
-    &::after {
-      border-width: 0 0 var(--mod-textfield-focus-indicator-width, var(--spectrum-textfield-focus-indicator-width)) 0;
-    }
-  }
-}
-
 /********* Child Element - Input *********/
 .spectrum-Textfield-input {
   box-sizing: border-box;
@@ -515,6 +515,10 @@ governing permissions and limitations under the License.
     Details: https://github.com/csstools/normalize.css/blob/main/normalize.css#L297
   */
   -moz-appearance: textfield;
+
+  /* place in same cell: input, focus indicator, and grows sizer */
+  grid-row: 2;
+  grid-column: 1 / span 2;
 
   /* Remove the native clear button in IE */
   /* http://stackoverflow.com/questions/14007655/remove-ie10s-clear-field-x-button-on-certain-inputs */
@@ -713,28 +717,42 @@ governing permissions and limitations under the License.
 
 /*** Layout Variant - Side Label ***/
 .spectrum-Textfield--sidelabel {
-  .spectrum-Textfield-input-wrapper {
-    grid-row: 1;
-    grid-column: 2 / span 1;
+  grid-template-columns: auto auto auto;
+  grid-template-rows: auto auto;
+
+  /*** Focus Indicator ***/
+  &::after {
+    grid-row: 1/span 1;
+    grid-column: 2/span 1;
   }
 
   .spectrum-FieldLabel {
-    grid-row: 1 / span 2;
-    grid-column: 1 / span 1;
     margin-inline-end: var(--mod-textfield-label-spacing-inline-side-label, var(--spectrum-textfield-label-spacing-inline-side-label));
+    grid-row: 1/span 2;
+    grid-column: 1/span 1;
   }
 
   .spectrum-Textfield-character-count {
-    grid-row: 1;
-    grid-column: 3 / span 1;
     align-items: flex-start;
     margin-block-start: var(--mod-textfield-character-count-spacing-block-side, var(--spectrum-textfield-character-count-spacing-block-side));
     margin-inline-start: var(--mod-textfield-character-count-spacing-inline-side, var(--spectrum-textfield-character-count-spacing-inline-side));
+    grid-row: 1;
+    grid-column: 3/span 1;
   }
 
   .spectrum-HelpText {
     grid-row: 2;
-    grid-column: 2 / span 1;
+    grid-column: 2/span 1;
+  }
+
+  .spectrum-Textfield-validationIcon {
+    grid-row: 1/span 1;
+    grid-column: 2/span 1;
+  }
+
+  .spectrum-Textfield-input {
+    grid-row: 1/span 1;
+    grid-column: 2/span 1;
   }
 }
 
