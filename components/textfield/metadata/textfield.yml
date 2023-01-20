@@ -23,7 +23,9 @@ sections:
 
       That is, the outer element `div.spectrum-Textfield` contains a `input.spectrum-Textfield-input`.
 
-      As of spectrum tokens migration, Textfield contains an additional nested div wrapping the input. The outer element `div.spectrum-Textfield` contains the child components (label, character count, and help text) as well as the additional `div.spectrum-Textfield-input-wrapper` which contains `input.spectrum-Textfield-input`. The additional nested div is necessary to ensure the focus indicator aligns with the input.
+      As of spectrum tokens migration, Textfield uses grid to align the label, character count, helptext, and focus indicator in both the default and sidelabel layouts.
+
+      Any application using Textarea Grows (Textarea input which automatically resizes vertically to accommodate content that is entered) will need to place the sizer element within the same grid area as the input and focus indicator.
 
       ### Icons
       Icons are now added as SVGs, with `svg.spectrum-Textfield-icon` for workflow icons, and `svg.spectrum-Textfield-validationIcon` for UI icons.
