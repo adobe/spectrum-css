@@ -49,6 +49,9 @@ governing permissions and limitations under the License.
   --spectrum-textfield-icon-spacing-inline-end-quiet-valid: var(--spectrum-field-edge-to-validation-icon-quiet);
   --spectrum-textfield-icon-spacing-block-valid: var(--spectrum-field-top-to-validation-icon-medium);
 
+  /* icon end spacing override for combobox */
+  --spectrum-textfield-icon-spacing-inline-end-override: 32px; /* TODO - placeholder - reevaluate after combobox migration */
+
   /* font styles */
   --spectrum-textfield-font-family: var(--spectrum-font-family-base); /* placeholder for --spectrum-font-family-default */
   --spectrum-textfield-font-weight: var(--spectrum-font-weight-regular);
@@ -432,6 +435,11 @@ governing permissions and limitations under the License.
   [dir="rtl"] & {
     left: 0;
     right: auto;
+  }
+
+  /* TODO - reevaluate after combobox is migrated - ensures icon is not under picker button */
+  .spectrum-InputGroup & {
+    margin-inline-end: var(--spectrum-textfield-icon-spacing-inline-end-override);
   }
 
   /****** Validation Icon - Valid ✅ ******/
