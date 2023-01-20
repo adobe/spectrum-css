@@ -7,18 +7,6 @@ sections:
     description: |
       ### T-shirt sizes
       As of token migration, textfield now has t-shirt sizes. Medium is the default size if no size variant is applied. Icon sizes must match each t-shirt size. Validation icons are as follows.
-<<<<<<< HEAD
-
-      ### Label
-      As of token migration, textfield must always have a label. Label placement is top or on the side (start).
-
-      ### Character Count
-      As of token migration, textfield now has an optional character count. The character count moves to the side (end) when the label position is on the side (start). This count needs to be read by a screen reader but we cannot just use a live region as that will result in an overly verbose experience Adjust the markup of the character count for optimal accessibility for each API.
-
-      ### Help Text
-      As of token migration, Help text is optional and has only one position below the textfield input. Help text aligns with the input in both standard and side label layouts.
-=======
->>>>>>> 882ddfd8e (feat(textarea): update text area yml)
 
       ### Label
       As of token migration, textfield must always have a label. Label placement is top or on the side (start).
@@ -34,13 +22,9 @@ sections:
 
       That is, the outer element `div.spectrum-Textfield` contains a `input.spectrum-Textfield-input`.
 
-<<<<<<< HEAD
       As of spectrum tokens migration, Textfield uses grid to align the label, character count, helptext, and focus indicator in both the default and sidelabel layouts.
 
       Any application using Textarea Grows (Textarea input which automatically resizes vertically to accommodate content that is entered) will need to place the sizer element within the same grid area as the input and focus indicator.
-=======
-      As of spectrum tokens migration, Textfield contains an additional nested div wrapping the input. The outer element `div.spectrum-Textfield` contains the child components (label, character count, and help text) as well as the additional `div.spectrum-Textfield-input-wrapper` which contains `input.spectrum-Textfield-input`. The additional nested div is necessary to ensure the focus indicator aligns with the input.
->>>>>>> 882ddfd8e (feat(textarea): update text area yml)
 
       ### Icons
       Icons are now added as SVGs, with `svg.spectrum-Textfield-icon` for workflow icons, and `svg.spectrum-Textfield-validationIcon` for UI icons.
@@ -85,11 +69,7 @@ sections:
       Extra Large
       `spectrum-Icon spectrum-Icon--sizeXL spectrum-Textfield-validationIcon`
 
-<<<<<<< HEAD
-      ### Removal of `:valid`, `:invalid`, and `::placeholder`
-=======
       ### Removal of `:valid` and `:invalid`
->>>>>>> 882ddfd8e (feat(textarea): update text area yml)
       Textfield no longer supports the CSS pseudo selectors [`:invalid`](https://developer.mozilla.org/en-US/docs/Web/CSS/:invalid) and [`:value`](https://developer.mozilla.org/en-US/docs/Web/CSS/:valid).
 
       The CSS pseudo-element [`::placeholder`](https://developer.mozilla.org/en-US/docs/Web/CSS/::placeholder) has been deprecated due to accessibility. The styling remains for backwards compatibility but it is advised to stop utilizing placeholders moving forward.
