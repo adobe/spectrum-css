@@ -10,16 +10,16 @@ OF ANY KIND, either express or implied. See the License for the specific languag
 governing permissions and limitations under the License.
 */
 
-
 .spectrum-ColorWheel {
   /* todo: fix this in DNA */
   /* what is going on with the focus and interactivity with this component?
   --spectrum-colorwheel-focus-ring-size: 2px; placeholder var(--spectrum-global-dimension-static-size-25); */
   --spectrum-colorwheel-border-radius: 100%;
+  --spectrum-colorwheel-border-color: var(--spectrum-transparent-black-200) ; /* placeholder var(--spectrum-colorarea-border-color); */
   --spectrum-colorwheel-width: 160px; /* placeholder calc(var(--spectrum-global-dimension-size-125) * 16); */
   --spectrum-colorwheel-height: var(--spectrum-colorwheel-width);
+  --spectrum-colorwheel-fill-color-disabled: var(--spectrum-disabled-background-color);
 }
-
 
 %spectrum-ColorControl-handle--focused {
   /*// Bigger handle when focused */
@@ -29,7 +29,6 @@ governing permissions and limitations under the License.
   margin-left: calc(-1 * 16px); /* place holder var(--spectrum-colorhandle-size) */
   margin-top: calc(-1 * 16px); /* place holder var(--spectrum-colorhandle-size) */
 }
-
 
 /** index.css (scale dependent) */
 
@@ -109,8 +108,8 @@ governing permissions and limitations under the License.
 /* from skin */
 .spectrum-ColorWheel {
   /* // todo: fix this in DNA */
-  --spectrum-colorwheel-border-color: black ; /* placeholder var(--spectrum-colorarea-border-color); */
-  --spectrum-colorwheel-fill-color-disabled: grey; /* placeholder for fill of disabled color wheel*/
+
+
 }
 
 .spectrum-ColorWheel {
