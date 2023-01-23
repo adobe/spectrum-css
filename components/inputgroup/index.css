@@ -107,7 +107,7 @@ governing permissions and limitations under the License.
 
 .spectrum-InputGroup-input {
   /* todo: when we add t-shirt sizing, this will be wrong ❤️ */
-  padding-right: var(--spectrum-alias-infieldbutton-full-height-m);
+  padding-inline-end: var(--spectrum-alias-infieldbutton-full-height-m);
 
   /* fill space */
   flex: 1;

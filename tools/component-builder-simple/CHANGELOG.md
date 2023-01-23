@@ -3,6 +3,26 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+<a name="2.0.2"></a>
+## 2.0.2
+🗓 2023-01-18 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/component-builder-simple@2.0.0...@spectrum-css/component-builder-simple@2.0.2)
+
+**Note:** Version bump only for package @spectrum-css/component-builder-simple
+
+
+
+
+
+<a name="2.0.1"></a>
+## 2.0.1
+🗓 2023-01-13 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/component-builder-simple@2.0.0...@spectrum-css/component-builder-simple@2.0.1)
+
+**Note:** Version bump only for package @spectrum-css/component-builder-simple
+
+
+
+
+
 <a name="2.0.0"></a>
 # 2.0.0
 🗓 2022-10-13 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/component-builder-simple@1.0.0...@spectrum-css/component-builder-simple@2.0.0)

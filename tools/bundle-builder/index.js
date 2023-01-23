@@ -27,8 +27,13 @@ const vars = require("./vars")
 
 let dependencyOrder = null;
 
+
+
 async function clean() {
-  const globs = ["dist/*"]
+  let globs = [
+    'dist/*',
+    '!dist/preview'
+  ];
 
   // Don't delete the dist folder inside of installed packages
   if (process.cwd() === dirs.topLevel) {

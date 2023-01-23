@@ -1,17 +1,18 @@
 {
+  "private": true,
   "name": "postcss-splitinator",
   "version": "1.0.0-beta.1",
   "description": "Turn container queryies into the var hack",
+  "license": "Apache-2.0",
+  "author": "Adobe",
   "main": "index.js",
   "scripts": {
     "test": "ava"
   },
-  "author": "Larry Davis <lazdnet@gmail.com>",
-  "license": "BSD-2-Clause",
-  "publishConfig": {
-    "access": "public"
-  },
   "dependencies": {
     "postcss": "^7.0.32"
+  },
+  "publishConfig": {
+    "access": "public"
   }
 }

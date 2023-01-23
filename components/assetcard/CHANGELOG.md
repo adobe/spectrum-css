@@ -3,6 +3,46 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+<a name="1.1.8"></a>
+## 1.1.8
+🗓 2023-01-18 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/assetcard@1.1.6...@spectrum-css/assetcard@1.1.8)
+
+**Note:** Version bump only for package @spectrum-css/assetcard
+
+
+
+
+
+<a name="1.1.7"></a>
+## 1.1.7
+🗓 2023-01-13 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/assetcard@1.1.6...@spectrum-css/assetcard@1.1.7)
+
+**Note:** Version bump only for package @spectrum-css/assetcard
+
+
+
+
+
+<a name="1.1.6"></a>
+## 1.1.6
+🗓 2022-12-16 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/assetcard@1.1.5...@spectrum-css/assetcard@1.1.6)
+
+**Note:** Version bump only for package @spectrum-css/assetcard
+
+
+
+
+
+<a name="1.1.5"></a>
+## 1.1.5
+🗓 2022-11-11 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/assetcard@1.1.4...@spectrum-css/assetcard@1.1.5)
+
+**Note:** Version bump only for package @spectrum-css/assetcard
+
+
+
+
+
 <a name="1.1.4"></a>
 ## 1.1.4
 🗓 2022-06-16 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/assetcard@1.1.3...@spectrum-css/assetcard@1.1.4)
