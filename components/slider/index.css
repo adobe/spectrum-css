@@ -312,11 +312,11 @@ governing permissions and limitations under the License.
     top: 50%;
 
     transition: box-shadow var(--mod-animation-duration-100, var(--spectrum-animation-duration-100)) ease-out,
-      width var(--mod-animation-duration-100, var(--spectrum-animation-duration-100)) ease-out,
-      height var(--mod-animation-duration-100, var(--spectrum-animation-duration-100)) ease-out;
+      inline-size var(--mod-animation-duration-100, var(--spectrum-animation-duration-100)) ease-out,
+      block-size var(--mod-animation-duration-100, var(--spectrum-animation-duration-100)) ease-out;
 
-    width: var(--mod-slider-handle-size, var(--spectrum-slider-handle-size));
-    height: var(--mod-slider-handle-size, var(--spectrum-slider-handle-size));
+    inline-size: var(--mod-slider-handle-size, var(--spectrum-slider-handle-size));
+    block-size: var(--mod-slider-handle-size, var(--spectrum-slider-handle-size));
 
     transform: translate(-50%, -50%);
 
@@ -325,8 +325,8 @@ governing permissions and limitations under the License.
 
   &.is-focused {
     &:before {
-      width: calc(var(--mod-slider-handle-size, var(--spectrum-slider-handle-size)) + var(--mod-focus-indicator-gap, var(--spectrum-focus-indicator-gap)) * 2);
-      height: calc(var(--mod-slider-handle-size, var(--spectrum-slider-handle-size)) + var(--mod-focus-indicator-gap, var(--spectrum-focus-indicator-gap)) * 2);
+      inline-size: calc(var(--mod-slider-handle-size, var(--spectrum-slider-handle-size)) + var(--mod-focus-indicator-gap, var(--spectrum-focus-indicator-gap)) * 2);
+      block-size: calc(var(--mod-slider-handle-size, var(--spectrum-slider-handle-size)) + var(--mod-focus-indicator-gap, var(--spectrum-focus-indicator-gap)) * 2);
     }
   }
 }
