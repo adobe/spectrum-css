@@ -151,6 +151,11 @@ governing permissions and limitations under the License.
   margin-bottom: var(--spectrum-dialog-confirm-divider-margin-bottom);
 }
 
+/* remove top vertical padding of spectrum-Dialog-content from bottom margin of first divider after heading */
+.spectrum-Dialog--fullscreen .spectrum-Dialog-heading + .spectrum-Dialog-divider {
+  margin-bottom: calc(var(--spectrum-dialog-confirm-divider-margin-bottom) - (var(--spectrum-dialog-confirm-description-padding) * 2));
+}
+
 .spectrum-Dialog--noDivider {
   .spectrum-Dialog-divider {
     display: none;
@@ -182,7 +187,7 @@ governing permissions and limitations under the License.
   line-height: var(--spectrum-dialog-confirm-description-text-line-height);
 
   /* this is kinda dumb, but needed for the keyboard focus rings so they don't get clipped. is there a better way to treat this */
-  padding: 0 var(--spectrum-dialog-confirm-description-padding);
+  padding: calc(var(--spectrum-dialog-confirm-description-padding) * 2);
   margin: 0 var(--spectrum-dialog-confirm-description-margin);
 }
 
