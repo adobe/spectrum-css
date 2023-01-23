@@ -47,30 +47,25 @@ async function buildIndexVars() {
     })
 }
 
-const buildVars = function (callback) {
-  async.series([buildIndexVars, vars.bakeVars], callback)
+const buildVars = async function () {
+  await buildIndexVars();
+  await vars.bakeVars();
 }
 
 exports.buildIndexVars = buildIndexVars
 exports.buildVars = buildVars
 
-exports.buildCSS = function (callback) {
-  async.series(
-    [
-      buildVars,
-      function copyIndex() {
-        // Read the contents of dist/index-vars.css
-        let css = ""
-        try {
-          css = fs.readFileSync("dist/index-vars.css", "utf-8")
-        } catch (e) {
+exports.buildCSS = async () => {
+  try {
+      await buildVars();
+      let css = ""
+      try {
+          css = await fs.promises.readFile("dist/index-vars.css", "utf-8")
+      } catch (e) {
           console.error(`Error reading index-vars.css: ${e}`)
-        }
-
-        // Write the contents to dist/index.css
-        fs.writeFileSync("dist/index.css", css)
       }
-    ],
-    callback
-  )
+      await fs.promises.writeFile("dist/index.css", css)
+  } catch (err) {
+      console.error("Error in build " + err);
+  }
 }

@@ -11,7 +11,7 @@ governing permissions and limitations under the License.
 */
 
 const path = require("path")
-const fs = require('fs')
+const fs = require("fs")
 const postcssReal = require("postcss")
 const fsp = require("fs").promises
 const { parse } = require("postcss-values-parser")
@@ -287,27 +287,17 @@ function checkBuiltCSS() {
   return checkCSS("dist/index.css")
 }
 
-exports.buildCSS = function (callback) {
-  async.series(
-    [
-      checkSourceCSS,
-      function (callback) {
-        async.parallel(
-          [
-            buildCSS,
-            buildCSSWithoutThemes,
-            function (callback) {
-              async.series(
-                [buildCSSThemes, buildCSSThemeIndex, buildExpressTheme],
-                callback
-              )
-            },
-          ],
-          callback
-        )
-      },
-      checkBuiltCSS,
-    ],
-    callback
-  )
+exports.buildCSS = async function () {
+  try {
+    await checkSourceCSS()
+    await Promise.all([buildCSS(), buildCSSWithoutThemes()])
+    await Promise.all([
+      buildCSSThemes(),
+      buildCSSThemeIndex(),
+      buildExpressTheme(),
+    ])
+    await checkBuiltCSS()
+  } catch (err) {
+    console.error("Error in buildCSS: " + err)
+  }
 }

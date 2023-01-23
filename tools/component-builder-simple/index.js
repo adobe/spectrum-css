@@ -9,7 +9,6 @@ the License is distributed on an "AS IS" BASIS, WITHOUT WARRANTIES OR REPRESENTA
 OF ANY KIND, either express or implied. See the License for the specific language
 governing permissions and limitations under the License.
 */
-const async = require('async');
 const fs = require('fs')
 const del = require('del');
 const css = require('./css');
@@ -21,18 +20,16 @@ function clean() {
 const srcPath = 'dist/index.css';
 const destPath = 'dist/index-vars.css';
 
-const build = async.series(
-  clean,
-  css.buildCSS,
-  async () => {
-    try {
+const build = async () => {
+  try {
+      await clean();
+      await css.buildCSS();
       const data = await fs.readFile(srcPath, 'utf8');
       await fs.writeFile(destPath, data, 'utf8');
-    } catch (err) {
+  } catch (err) {
       console.error("Error in component buildersimple " + err);
-    }
   }
-);
+}
 
 exports.default = build;
 exports.build = build;

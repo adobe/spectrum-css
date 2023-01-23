@@ -188,12 +188,16 @@ async function buildDocs_copyDeps() {
   })
 }
 
-let buildDocs = function(callback) {
-  async.parallel([buildDocs_resources, buildDocs_copyDeps, buildDocs_html], callback);
+let buildDocs = async function() {
+  await Promise.all([
+    buildDocs_resources(),
+    buildDocs_copyDeps(),
+    buildDocs_html()
+  ])
 };
 
 exports.buildDocs = buildDocs;
 
-exports.buildDocs_html = function(callback) {
-  async.series([buildDocs_html], callback);
+exports.buildDocs_html = async function() {
+  await buildDocs_html()
 };
