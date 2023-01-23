@@ -118,7 +118,7 @@ function watchSite() {
     }
 
     files.forEach((file) => {
-      fs.watch(file, (eventType) => {
+      chokidar.watch(file, (eventType) => {
         if (eventType === "change") {
           async.series([
             docs.buildSite_pages,
@@ -142,7 +142,7 @@ function watchSite() {
     }
 
     files.forEach((file) => {
-      fs.watch(file, (eventType) => {
+      chokidar.watch(file, (eventType) => {
         if (eventType === "change") {
           async.series([
             (callback) => {
@@ -168,7 +168,7 @@ function watchSite() {
     path.join(dirs.site, "util.js"),
   ]
   templates.forEach((template) => {
-    fs.watch(template, (eventType) => {
+    chokidar.watch(template, (eventType) => {
       if (eventType === "change") {
         async.series([
           (callback) => {
@@ -199,7 +199,7 @@ function watchSite() {
       }
 
       files.forEach((file) => {
-        fs.watch(file, (eventType) => {
+        chokidar.watch(file, (eventType) => {
           if (eventType === "change") {
             async.series([
               docs.buildSite_copyFreshResources,
@@ -224,7 +224,7 @@ function watchSite() {
 }
 
 function watchCommons() {
-  fs.watch(`${dirs.components}/commons/*.css`, (eventType) => {
+  chokidar.watch(`${dirs.components}/commons/*.css`, (eventType) => {
     if (eventType === "change") {
       async.series([
         bundleBuilder.buildDepenenciesOfCommons,

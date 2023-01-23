@@ -192,12 +192,12 @@ async function buildDocs_individualPackages() {
   return Promise.all(dependencies.map(buildDocs_forDep))
 }
 
-function buildSite_generateIndex() {
-  const metadataFiles = fg([
+async function buildSite_generateIndex() {
+  const metadataFiles = await fg([
     `${dirs.components}/*/metadata.yml`,
     `${dirs.components}/*/metadata/*.yml`,
   ])
-  metadataFiles.forEach((file) => {
+  (metadataFiles || []).forEach((file) => {
     // read the contents of the file
     const docs = []
     const store = {}
