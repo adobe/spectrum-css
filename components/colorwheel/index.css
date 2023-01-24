@@ -12,9 +12,11 @@ governing permissions and limitations under the License.
 
 .spectrum-ColorWheel {
   --spectrum-colorwheel-border-radius: 100%;
-  --spectrum-colorwheel-border-color: var(--spectrum-transparent-black-200) ; /* placeholder var(--spectrum-colorarea-border-color); */
-  --spectrum-colorwheel-width: 160px; /* placeholder calc(var(--spectrum-global-dimension-size-125) * 16); */
-  --spectrum-colorwheel-height: var(--spectrum-colorwheel-width);
+  --spectrum-colorwheel-border-color:   var(--spectrum-transparent-black-200);
+  --spectrum-colorwheel-border-width: var(--spectrum-border-width-100);
+  --spectrum-colorwheel-min-width: var(--spectrum-color-wheel-minimum-width); /*  ;placeholder calc(var(--spectrum-global-dimension-size-125) * 16); */
+  --spectrum-colorwheel-width: var(--spectrum-colorwheel-min-width);
+  --spectrum-colorwheel-height: var(--spectrum-colorwheel-min-width);
   --spectrum-colorwheel-fill-color-disabled: var(--spectrum-disabled-background-color);
 }
 
@@ -42,6 +44,7 @@ governing permissions and limitations under the License.
 .spectrum-ColorWheel {
   position: relative;
   display: block;
+  min-width: var(--spectrum-colorwheel-min-width);
   width: var(--spectrum-colorwheel-width);
   height: var(--spectrum-colorwheel-height);
 
@@ -60,6 +63,17 @@ governing permissions and limitations under the License.
 
   &.is-disabled {
     pointer-events: none;
+    .spectrum-ColorWheel-outerCircle,
+    .spectrum-ColorWheel-innerCircle {
+      stroke: var(--spectrum-colorwheel-border-color-disabled);
+    }
+    .spectrum-ColorWheel-outerCircle {
+      fill: var(--spectrum-colorwheel-fill-color-disabled);
+    }
+    /* // hide all the little colored bits */
+    .spectrum-ColorWheel-segment {
+      display: none;
+    }
   }
 
   &.is-dragged {
@@ -75,9 +89,9 @@ governing permissions and limitations under the License.
   height: var(--spectrum-colorwheel-height);
   border-radius: 100%;
   box-sizing: border-box;
-
-  border-width: 1px; /* placeholder var(--spectrum-colorwheel-border-size); */
+  border-width: var(--spectrum-colorwheel-border-width);
   border-style: solid;
+  border-color: var(--spectrum-colorwheel-border-color);
 }
 
 .spectrum-ColorWheel-wheel {
@@ -88,8 +102,10 @@ governing permissions and limitations under the License.
 .spectrum-ColorWheel-outerCircle,
 .spectrum-ColorWheel-innerCircle {
   fill: transparent;
+  stroke: var(--spectrum-colorwheel-border-color);
+  stroke-width: var(--spectrum-colorwheel-border-width);
+}
 
-  stroke-width: 1px; /* placeholder var(--spectrum-colorwheel-border-size); */
 }
 
 .spectrum-ColorWheel-slider {
@@ -99,41 +115,6 @@ governing permissions and limitations under the License.
 .spectrum-ColorWheel-handle {
   left: 50%;
   top: 50%;
-}
-
-
-/* from skin */
-.spectrum-ColorWheel {
-  /* // todo: fix this in DNA */
-
-
-}
-
-.spectrum-ColorWheel {
-  &.is-disabled {
-    .spectrum-ColorWheel-outerCircle,
-    .spectrum-ColorWheel-innerCircle {
-      stroke: var(--spectrum-colorwheel-border-color-disabled);
-    }
-
-    .spectrum-ColorWheel-outerCircle {
-      fill: var(--spectrum-colorwheel-fill-color-disabled);
-    }
-
-    /* // hide all the little colored bits */
-    .spectrum-ColorWheel-segment {
-      display: none;
-    }
-  }
-}
-
-.spectrum-ColorWheel-gradient {
-  border-color: var(--spectrum-colorwheel-border-color);
-}
-
-.spectrum-ColorWheel-outerCircle,
-.spectrum-ColorWheel-innerCircle {
-  stroke: var(--spectrum-colorwheel-border-color);
 }
 
 @media (forced-colors: active) {
