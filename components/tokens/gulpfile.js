@@ -12,11 +12,12 @@ governing permissions and limitations under the License.
 
 const gulp = require('gulp');
 const concat = require('gulp-concat');
-const del = require('del');
 const StyleDictionary = require('style-dictionary').extend('config.js');
+const rimraf = require('rimraf')
 
-function clean() {
-  return del('dist/*');
+async function clean() {
+  rimraf('dist/*', function () { console.log("done"); });
+
 }
 
 function concatIndex() {
