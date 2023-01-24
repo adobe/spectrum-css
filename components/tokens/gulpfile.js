@@ -16,8 +16,8 @@ const StyleDictionary = require('style-dictionary').extend('config.js');
 const rimraf = require('rimraf')
 
 async function clean() {
-  rimraf('dist/*', function () { console.log("done"); });
-
+  rimraf.sync('dist/*');
+  console.log("done")
 }
 
 function concatIndex() {

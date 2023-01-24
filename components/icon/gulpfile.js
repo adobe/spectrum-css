@@ -21,7 +21,8 @@ const rimraf = require('rimraf')
 const vinylPaths = require('vinyl-paths');
 
 function clean() {
-  rimraf('combined/**', function () { console.log("done"); })
+  rimraf.sync('combined/**');
+  console.log("done");
 }
 
 function sanitizeIcons() {

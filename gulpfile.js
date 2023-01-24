@@ -169,8 +169,8 @@ See the [Spectrum CSS documentation](https://opensource.adobe.com/spectrum-css/)
 
 /** Site */
 async function prepareSite_clean() {
-  rimraf('dist-site/', function () { console.log("done"); })
-  
+  rimraf.sync('dist-site/');
+  console.log("done");
 }
 
 function prepareSite_components() {
