@@ -22,7 +22,7 @@
   },
   "scripts": {
     "build:all": "run-p build:11ty build:css",
-    "dev:11ty": "yarn build:11ty && yarn build:css && NODE_ENV=development BROWSERSYNC_OPEN=true npx @11ty/eleventy --config=./site/.eleventy.cjs --serve",
+    "dev:11ty": "yarn build:11ty && yarn dev && NODE_ENV=development BROWSERSYNC_OPEN=true npx @11ty/eleventy --config=./site/.eleventy.cjs --serve",
     "build:11ty": "npx @11ty/eleventy --config=./site/.eleventy.cjs",
     "build:css": "node ./tasks/build-css.js && pretty-quick --fix --pattern \"{components}/**/*.css\"",
     "build:css:watch": "node ./tasks/watch-css.js",
@@ -44,7 +44,7 @@
     "build:site": "gulp -LL",
     "ci-all": "yarn build",
     "clean": "gulp clean",
-    "dev": "NODE_ENV=development BROWSERSYNC_OPEN=true gulp dev",
+    "dev": "gulp dev",
     "kill-zombies": "pkill -f \"(chrome)?(--headless)\"",
     "new": "yarn workspace @spectrum-css/generator new",
     "precommit": "lint-staged",
