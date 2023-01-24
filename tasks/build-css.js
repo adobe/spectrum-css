@@ -269,9 +269,8 @@ const concatIndex = async (name) => {
 }
 
 const clean = async (name) => {
-  rimraf(`${dest_folder}/${name}/dist/*`, function () {
-    console.log("done")
-  })
+  rimraf.sync(`${dest_folder}/${name}/dist/*`);
+  console.log("done")
 }
 
 const buildCustoms = async (itemName) => {
