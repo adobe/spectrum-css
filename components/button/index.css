@@ -165,8 +165,8 @@ a.spectrum-Button {
 
 .spectrum-Button-label {
   @inherit: %spectrum-ButtonLabel;
-  padding-top:var(--mod-button-padding-label-top, var(--spectrum-button-padding-label-top));
-  padding-bottom: var(--mod-button-padding-label-bottom, var(--spectrum-button-padding-label-bottom));
+  padding-block-start: var(--mod-button-padding-label-top, var(--spectrum-button-padding-label-top));
+  padding-block-end: var(--mod-button-padding-label-bottom, var(--spectrum-button-padding-label-bottom));
 }
 
 .spectrum-Button {
