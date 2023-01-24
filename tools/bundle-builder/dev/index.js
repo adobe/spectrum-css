@@ -140,7 +140,7 @@ function watchSite() {
 
   gulp.watch(
     [
-      `${dirs.site}/templates/siteComponent.njk`,
+      `${dirs.site}/_includes/siteComponent.njk`,
       `${dirs.site}/util.js`
     ],
     gulp.series(

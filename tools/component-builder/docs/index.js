@@ -19,7 +19,7 @@ const yaml = require('js-yaml');
 const merge = require('merge-stream');
 const through = require('through2');
 const ext = require('replace-ext');
-const nunjucksCompiler = require('nunjucks');
+const nunjucks = require('nunjucks')
 
 const sitePath = path.join(__dirname, '..', '..', '..', 'site');
 const util = require(`${sitePath}/util`);
@@ -94,8 +94,8 @@ function buildDocs_html() {
           file.path = ext(file.path, '.html');
 
           try {
-            const templatePath = `${sitePath}/templates/individualComponent.njk`;
-            let compiled = nunjucksCompiler.render(templatePath, data)
+            const templatePath = `${sitePath}/_includes/individualComponent.njk`;
+            let compiled = nunjucks.render(templatePath, data)
             file.contents = Buffer.from(compiled);
           } catch (e) {
             return cb(e);

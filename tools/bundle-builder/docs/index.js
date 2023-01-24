@@ -146,7 +146,7 @@ async function buildDocs_forDep(dep) {
         file.path = ext(file.path, '.html');
 
         try {
-          const templatePath = `${dirs.site}/templates/siteComponent.njk`;
+          const templatePath = `${dirs.site}/_includes/siteComponent.njk`;
           let compiled = nunjucksCompiler.render(templatePath, templateData)
           file.contents = Buffer.from(compiled);
         } catch (err) {
@@ -302,7 +302,7 @@ function buildSite_html() {
       };
     }))
     .pipe(nunjucksRender({
-      path: 'site/templates'
+      path: 'site/_includes'
     }))
     .pipe(gulp.dest('dist/docs/'));
 }
