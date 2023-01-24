@@ -11,18 +11,21 @@ OF ANY KIND, either express or implied. See the License for the specific languag
 governing permissions and limitations under the License.
 */
 
-import fg from "fast-glob"
-import { processCSS } from "./css-tools.js"
-import fs from "fs-extra"
-import glob from "glob"
-import { readFile, writeFile } from "fs"
-import path from "path"
-import concat from "concat"
-import util from "util"
-import { deleteAsync } from "del"
+const fg = require("fast-glob")
+const { processCSS } = require("./css-tools.js")
+const fs = require("fs-extra")
+const glob = require("glob")
+const { readFile, writeFile } = require("fs")
+const path = require("path")
+const concat = require("concat")
+const util = require("util")
+const rimraf = require("rimraf")
+const fs_s = require('fs')
 
-import StyleDictionary from "style-dictionary"
-const styleDictionary = StyleDictionary.extend("config.cjs")
+
+const StyleDictionary = require("style-dictionary")
+
+const styleDictionary = StyleDictionary.extend("config.js")
 
 const copyFilePromise = util.promisify(fs.copyFile)
 
@@ -205,6 +208,27 @@ function copyComponents() {
   )
 }
 
+const renameIndexCSS = async (component) => {
+  fs_s.readdir(component, (err, files) => {
+      if (err) throw err
+
+      for (const file of files) {
+        if (
+          path.extname(file) === ".css" &&
+          path.basename(file, ".css") === "index"
+        ) {
+          const oldPath = path.join(component, file)
+          const newPath = path.join(component, "index-vars.css")
+
+          fs.rename(oldPath, newPath, (err) => {
+            if (err) throw err
+            console.log(`Renamed ${oldPath} to ${newPath}`)
+          })
+        }
+      }
+    })
+}
+
 // main build function
 const buildCSS = async () => {
   fs.copySync(root_folder, dest_folder)
@@ -212,13 +236,14 @@ const buildCSS = async () => {
   fs.readdirSync(dest_folder, { withFileTypes: true })
     .filter((item) => item.isDirectory())
     .forEach(async (item) => {
-      if (item.name === "vars") {
+      if (item.name === "vars" || item.name === 'expressvars') {
         await copyGlobals(item)
         await copySources()
         await copyComponents()
       } else if (item.name === "tokens") {
         await parseTokensCSS(item.name)
       } else {
+        await renameIndexCSS(`${dest_folder}/${item.name}`)
         for (const cssPath of await fg([`${dest_folder}/${item.name}/*.css`])) {
           await processCSS(cssPath)
           fs.copy(
@@ -244,7 +269,9 @@ const concatIndex = async (name) => {
 }
 
 const clean = async (name) => {
-  await deleteAsync([`${dest_folder}/${name}/dist/*`])
+  rimraf(`${dest_folder}/${name}/dist/*`, function () {
+    console.log("done")
+  })
 }
 
 const buildCustoms = async (itemName) => {

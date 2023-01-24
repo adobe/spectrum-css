@@ -10,14 +10,14 @@ OF ANY KIND, either express or implied. See the License for the specific languag
 governing permissions and limitations under the License.
 */
 
-import path from 'path';
-import fs from 'fs';
-import postcss from 'postcss';
-import processors from './processors.cjs'
-import { fileURLToPath } from 'url';
+const path = require('path');
+const fs = require('fs');
+const postcss = require('postcss');
+const processors = require('./processors.cjs');
+const { fileURLToPath } = require('url');
 
 // const { postCSSPlugins, wrapCSSResult } = cssProcessing;
-const __dirname = path.dirname(fileURLToPath(import.meta.url));
+
 const configPath = path.resolve(path.join(__dirname, '..', 'config'));
 let header;
 try {
@@ -28,7 +28,7 @@ try {
 
 header = header.replace('<%= YEAR %>', new Date().getFullYear());
 
-export const processCSS = async (cssPath) => {
+const processCSS = async (cssPath) => {
     let wrappedCSS = header;
     const originCSS = fs.readFileSync(cssPath, 'utf8');
     const processedCSS = await postcss(processors.getProcessors(false, false))
@@ -47,3 +47,5 @@ export const processCSS = async (cssPath) => {
         wrappedCSS += processedCSS;
         fs.writeFileSync(cssPath, wrappedCSS);
 };
+
+exports.processCSS =  processCSS
