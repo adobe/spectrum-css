@@ -3,6 +3,26 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+<a name="3.3.18"></a>
+## 3.3.18
+🗓 2023-01-18 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/taggroup@3.3.16...@spectrum-css/taggroup@3.3.18)
+
+**Note:** Version bump only for package @spectrum-css/taggroup
+
+
+
+
+
+<a name="3.3.17"></a>
+## 3.3.17
+🗓 2023-01-13 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/taggroup@3.3.16...@spectrum-css/taggroup@3.3.17)
+
+**Note:** Version bump only for package @spectrum-css/taggroup
+
+
+
+
+
 <a name="3.3.16"></a>
 ## 3.3.16
 🗓 2022-12-16 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/taggroup@3.3.15...@spectrum-css/taggroup@3.3.16)

@@ -1,9 +1,9 @@
 {
   "name": "@spectrum-css/pagination",
-  "version": "5.0.19",
+  "version": "5.0.21",
   "description": "The Spectrum CSS pagination component",
   "license": "Apache-2.0",
-  "main": "dist/index-vars.css",
+  "homepage": "https://opensource.adobe.com/spectrum-css/",
   "repository": {
     "type": "git",
     "url": "https://github.com/adobe/spectrum-css.git",
@@ -12,6 +12,7 @@
   "bugs": {
     "url": "https://github.com/adobe/spectrum-css/issues"
   },
+  "main": "dist/index-vars.css",
   "scripts": {
     "build": "gulp"
   },
@@ -25,16 +26,15 @@
   },
   "devDependencies": {
     "@spectrum-css/actionbutton": "^1.1.14",
-    "@spectrum-css/button": "^6.0.17",
-    "@spectrum-css/component-builder": "^3.2.1",
-    "@spectrum-css/icon": "^3.0.25",
-    "@spectrum-css/splitbutton": "^5.0.17",
-    "@spectrum-css/textfield": "^3.2.6",
-    "@spectrum-css/vars": "^8.0.0",
+    "@spectrum-css/button": "^6.0.19",
+    "@spectrum-css/component-builder": "^3.2.3",
+    "@spectrum-css/icon": "^3.0.27",
+    "@spectrum-css/splitbutton": "^5.0.19",
+    "@spectrum-css/textfield": "^3.2.8",
+    "@spectrum-css/vars": "^8.0.2",
     "gulp": "^4.0.0"
   },
   "publishConfig": {
     "access": "public"
-  },
-  "homepage": "https://opensource.adobe.com/spectrum-css/"
+  }
 }

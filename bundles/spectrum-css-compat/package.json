@@ -2,26 +2,22 @@
   "name": "@adobe/spectrum-css",
   "version": "3.0.0",
   "description": "The Spectrum CSS top-level backwards compatible package",
+  "license": "Apache-2.0",
+  "author": "Adobe",
+  "homepage": "https://opensource.adobe.com/spectrum-css/",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/adobe/spectrum-css.git"
+  },
+  "bugs": {
+    "url": "https://github.com/adobe/spectrum-css/issues"
+  },
   "scripts": {
     "build": "gulp build",
     "prepack": "gulp prePack",
     "postpublish": "gulp postPublish",
     "release": "gulp release"
   },
-  "repository": {
-    "type": "git",
-    "url": "https://github.com/adobe/spectrum-css.git"
-  },
-  "author": "Larry Davis <lazdnet@gmail.com>",
-  "contributors": [
-    "Garth Braithwaite <garthdb@gmail.com> (https://garthdb.com)",
-    "Steve Gill <stevengill97@gmail.com>"
-  ],
-  "bugs": {
-    "url": "https://github.com/adobe/spectrum-css/issues"
-  },
-  "homepage": "https://opensource.adobe.com/spectrum-css/",
-  "license": "Apache-2.0",
   "devDependencies": {
     "@spectrum-css/accordion": "^3.0.0",
     "@spectrum-css/actionbar": "^3.0.0",

@@ -13,9 +13,7 @@ import '@spectrum-css/vars/css/components/index.css';
 import '@spectrum-css/vars/css/scales/spectrum-medium.css';
 import '@spectrum-css/vars/css/themes/spectrum-light.css';
 
-window.addEventListener('DOMContentLoaded', () => {
-    document.body.classList.add('spectrum');
-});
+import './global.js';
 
 addons.setConfig({
     theme: create({

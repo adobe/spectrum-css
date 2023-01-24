@@ -1,13 +1,10 @@
 {
   "private": false,
   "name": "@spectrum-css/generator",
-  "version": "1.0.1",
+  "version": "1.0.4",
   "description": "A tool to quickly create standardized components",
   "license": "Apache-2.0",
   "author": "Adobe",
-  "contributors": [
-    "Cassondra Roberts <castastrophe@users.noreply.github.com> (https://allons-y.llc)"
-  ],
   "homepage": "https://opensource.adobe.com/spectrum-css/",
   "repository": {
     "type": "git",
@@ -17,8 +14,8 @@
   "bugs": {
     "url": "https://github.com/adobe/spectrum-css/issues"
   },
-  "main": "plopfile.js",
   "type": "module",
+  "main": "plopfile.js",
   "scripts": {
     "new": "plop",
     "test": "echo \"Error: no test specified\" && exit 1"

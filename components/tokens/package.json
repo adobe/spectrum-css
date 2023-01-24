@@ -1,12 +1,9 @@
 {
   "name": "@spectrum-css/tokens",
-  "version": "6.2.0",
+  "version": "6.2.2",
   "description": "The Spectrum CSS tokens package",
   "license": "Apache-2.0",
-  "main": "dist/index.css",
-  "scripts": {
-    "build": "gulp build"
-  },
+  "homepage": "https://opensource.adobe.com/spectrum-css/",
   "repository": {
     "type": "git",
     "url": "https://github.com/adobe/spectrum-css.git",
@@ -14,6 +11,10 @@
   },
   "bugs": {
     "url": "https://github.com/adobe/spectrum-css/issues"
+  },
+  "main": "dist/index.css",
+  "scripts": {
+    "build": "gulp build"
   },
   "devDependencies": {
     "@adobe/spectrum-tokens": "12.0.0-beta.63",
@@ -24,6 +25,5 @@
   },
   "publishConfig": {
     "access": "public"
-  },
-  "homepage": "https://opensource.adobe.com/spectrum-css/"
+  }
 }

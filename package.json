@@ -1,9 +1,25 @@
 {
+  "private": true,
   "name": "spectrum-css-monorepo",
   "version": "0.0.0",
-  "private": true,
+  "license": "Apache-2.0",
+  "author": "Adobe",
+  "contributors": [
+    "Cassondra Roberts <castastrophe@users.noreply.github.com> (https://allons-y.llc)",
+    "Garth Braithwaite <garthdb@gmail.com> (https://garthdb.com)",
+    "Larry Davis <lazdnet@gmail.com>",
+    "Patrick Fulton <pfulton@users.noreply.github.com>",
+    "Steve Gill <stevengill97@gmail.com>",
+    "Rajdeep Chandra <rajrock38@gmail.com>"
+  ],
   "homepage": "https://opensource.adobe.com/spectrum-css/",
-  "type":"module",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/adobe/spectrum-css.git"
+  },
+  "bugs": {
+    "url": "https://github.com/adobe/spectrum-css/issues"
+  },
   "scripts": {
     "build:all": "run-p build:11ty build:css",
     "dev:11ty": "NODE_ENV=development BROWSERSYNC_OPEN=true npx @11ty/eleventy --config=./site/.eleventy.cjs --serve",
@@ -11,50 +27,59 @@
     "build:css": "node ./tasks/build-css.js && pretty-quick --fix --pattern \"{components}/**/*.css\"",
     "build:css:watch": "node ./tasks/watch-css.js",
     "build:watch": "run-p build:css:watch",
-
-    "build": "run-s build:site build:preview mv:preview",
-    "build:components": "gulp buildComponents -LLL ",
-    "build:site": "gulp -LL",
-    "build:preview": "yarn workspace @spectrum-css/preview build",
-    "dev": "NODE_ENV=development BROWSERSYNC_OPEN=true gulp dev",
-    "clean": "gulp clean",
-    "new": "yarn workspace @spectrum-css/generator new",
-    "mv:preview": "mv tools/preview/storybook-static dist/preview",
-    "start": "NODE_ENV=development yarn workspace @spectrum-css/preview start",
-    "ci-all": "yarn build",
-    "release": "npx lerna publish",
-    "release:beta-from-package": "yarn run clean && yarn run build && npx lerna publish from-package --conventional-prerelease --preid beta --pre-dist-tag beta",
-    "release:site": "gulp prepareSite && gh-pages -d dist-site/ -f -e .",
-    "release:bundles": "gulp releaseBundles",
-    "version": "gulp version",
-    "preversion": "yarn build",
     "backstop:approve": "backstop approve --config=backstop_data/backstop_test.js",
-    "backstop:test": "backstop test --config=backstop_data/backstop_test.js --env=local",
-    "backstop:clean": "rm -rf backstop_data/bitmaps_test backstop_data/html_report",
-    "backstop:docker:test": "wait-on http://127.0.0.1:3000/docs/index.html && gulp test:init && backstop test --docker --config=backstop_data/backstop_test.js --env=local",
-    "backstop:docker:reference": "wait-on http://127.0.0.1:3000/docs/index.html && gulp test:init && backstop reference --docker --config=backstop_data/backstop_test.js --env=local",
     "backstop:ci:clean": "backstop clean --docker --config=backstop_data/backstop_test.js --env=ci",
-    "backstop:ci:test": "wait-on http://127.0.0.1:3000/docs/index.html && gulp test:init && backstop test --docker --config=backstop_data/backstop_test.js --env=ci",
     "backstop:ci:reference": "wait-on http://127.0.0.1:3000/docs/index.html && gulp test:init && backstop reference --docker --config=backstop_data/backstop_test.js --env=ci",
+    "backstop:ci:test": "wait-on http://127.0.0.1:3000/docs/index.html && gulp test:init && backstop test --docker --config=backstop_data/backstop_test.js --env=ci",
+    "backstop:clean": "rm -rf backstop_data/bitmaps_test backstop_data/html_report",
+    "backstop:docker:reference": "wait-on http://127.0.0.1:3000/docs/index.html && gulp test:init && backstop reference --docker --config=backstop_data/backstop_test.js --env=local",
+    "backstop:docker:test": "wait-on http://127.0.0.1:3000/docs/index.html && gulp test:init && backstop test --docker --config=backstop_data/backstop_test.js --env=local",
+    "backstop:test": "backstop test --config=backstop_data/backstop_test.js --env=local",
     "backstop:test-all": "backstop test --docker --config=backstop_data/backstop_test.js --env=local themes=light,dark,darkest scales=medium,large",
-    "kill-zombies": "pkill -f \"(chrome)?(--headless)\""
+    "build": "run-s build:site build:preview # preview cannot be built until the component assets are finished",
+    "build:clean": "run-s clean build",
+    "build:components": "gulp buildComponents -LLL ",
+    "build:preview": "yarn workspace @spectrum-css/preview build",
+    "postbuild:preview": "rimraf dist/preview && mv tools/preview/storybook-static dist/preview",
+    "build:site": "gulp -LL",
+    "ci-all": "yarn build",
+    "clean": "gulp clean",
+    "dev": "NODE_ENV=development BROWSERSYNC_OPEN=true gulp dev",
+    "kill-zombies": "pkill -f \"(chrome)?(--headless)\"",
+    "new": "yarn workspace @spectrum-css/generator new",
+    "precommit": "lint-staged",
+    "prepare": "husky install && gulp prepare",
+    "prerelease": "yarn build:clean",
+    "release": "lerna publish --no-private",
+    "prerelease:beta-from-package": "yarn build:clean",
+    "release:beta-from-package": "lerna publish from-package --conventional-prerelease --preid beta --pre-dist-tag beta --no-private",
+    "release:bundles": "gulp releaseBundles",
+    "release:site": "gulp prepareSite && gh-pages -d dist-site/ -f -e .",
+    "start": "NODE_ENV=development yarn workspace @spectrum-css/preview start",
+    "preversion": "yarn build:clean",
+    "version": "gulp version",
+    "watch": "gulp watch"
   },
-  "repository": {
-    "type": "git",
-    "url": "https://github.com/adobe/spectrum-css.git"
-  },
-  "author": "Adobe",
-  "contributors": [
-    "Larry Davis <lazdnet@gmail.com>",
-    "Garth Braithwaite <garthdb@gmail.com> (https://garthdb.com)",
-    "Patrick Fulton <pfulton@users.noreply.github.com>",
-    "Steve Gill <stevengill97@gmail.com>",
-    "Cassondra Roberts <castastrophe@users.noreply.github.com> (https://allons-y.llc)"
+  "workspaces": [
+    "components/*",
+    "tools/*"
   ],
-  "bugs": {
-    "url": "https://github.com/adobe/spectrum-css/issues"
+  "resolutions": {
+    "axios": "^0.21.1",
+    "dot-prop": "^5.2.0",
+    "handlebars": "^4.5.2",
+    "https-proxy-agent": "^3.0.0",
+    "http-proxy": "^1.18.1",
+    "jimp": "^0.16.1",
+    "node-fetch": "^2.6.1",
+    "lodash": "^4.17.19",
+    "yargs-parser": "^20.2.7",
+    "minimist": "^1.2.5",
+    "is-url-superb": "^4.0.0",
+    "postcss-values-parser": "^4.0.0",
+    "xmlhttprequest-ssl": "^1.6.2",
+    "y18n": "^5.0.5"
   },
-  "license": "Apache-2.0",
   "devDependencies": {
     "@11ty/eleventy": "^1.0.2",
     "@11ty/eleventy-plugin-syntaxhighlight": "^4.2.0",
@@ -80,8 +105,9 @@
     "gulp": "^4.0.0",
     "gulp-replace": "^1.0.0",
     "gulplog": "^1.0.0",
-    "husky": "^3.0.5",
+    "husky": "^8.0.3",
     "lerna": "^4.0.0",
+    "lint-staged": "^13.1.0",
     "loadicons": "^1.0.0",
     "lunr": "^2.3.6",
     "markdown-it": "^12.3.2",
@@ -107,7 +133,9 @@
     "prettier": "^2.8.0",
     "pretty-quick": "^3.1.3",
     "npm-run-all": "^4.1.5",
+    "prettier-package-json": "^2.8.0",
     "prismjs": "^1.23.0",
+    "rimraf": "^4.1.1",
     "semver": "^6.3.0",
     "style-dictionary": "^3.7.1",
     "style-dictionary-sets": "^2.0.5",
@@ -115,29 +143,15 @@
     "util": "^0.12.5",
     "wait-on": "^6.0.1"
   },
-  "resolutions": {
-    "axios": "^0.21.1",
-    "dot-prop": "^5.2.0",
-    "handlebars": "^4.5.2",
-    "https-proxy-agent": "^3.0.0",
-    "http-proxy": "^1.18.1",
-    "jimp": "^0.16.1",
-    "node-fetch": "^2.6.1",
-    "lodash": "^4.17.19",
-    "yargs-parser": "^20.2.7",
-    "minimist": "^1.2.5",
-    "is-url-superb": "^4.0.0",
-    "postcss-values-parser": "^4.0.0",
-    "xmlhttprequest-ssl": "^1.6.2",
-    "y18n": "^5.0.5"
-  },
-  "workspaces": [
-    "components/*",
-    "tools/*"
-  ],
   "husky": {
     "hooks": {
-      "commit-msg": "commitlint -E HUSKY_GIT_PARAMS"
+      "commit-msg": "commitlint -E HUSKY_GIT_PARAMS",
+      "pre-commit": "lint-staged"
     }
+  },
+  "lint-staged": {
+    "package.json": [
+      "prettier-package-json --write"
+    ]
   }
 }

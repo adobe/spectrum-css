@@ -5,22 +5,18 @@ import { classMap } from 'lit-html/directives/class-map.js';
 // import { Template as IconTemplate } from '../../icon/stories/template.js';
 
 // More on component templates: https://storybook.js.org/docs/web-components/writing-stories/introduction#using-args
-export const Template = ({ size }) => {
-  const classList = {};
-
-  let className = 'spectrum-{{ pascalCase name }}';
-  classList[className] = true;
-
-  if (size) classList[`${className}--size${size.toUpperCase()}`] = true;
+export const Template = ({ rootClass, size }) => {
+  const classList = {
+    [rootClass]: true,
+    [`${className}--size${size.toUpperCase()}`]: true,
+  };
 
   // const icon = IconTemplate({ iconName: icon, size });
 
-  return html`
+  return html`{{#if example}}
+    <!-- Example markup -->
+    {{{ example }}}{{else}}
     <!-- Component mark-up goes here -->
-    <div class=${classMap(classList)}></div>{{#if example}}
-    <!--
-      ## Example markup
-      {{{ example }}}
-    -->{{/if}}
+    <div class=${classMap(classList)}></div>{{/if}}
   `;
 }
