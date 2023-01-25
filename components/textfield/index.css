@@ -49,6 +49,7 @@ governing permissions and limitations under the License.
 /* hack: define var so it's not reported as undefined */
 .🤫 {
   --spectrum-textfield-icon-inline-end-override: 0;
+  --spectrum-textfield-texticon-padding-left: 0;
 }
 
 .spectrum-Textfield {
