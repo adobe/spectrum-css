@@ -12,24 +12,7 @@ governing permissions and limitations under the License.
 
 
 
-/* missing tokens for variant with Tick, also need t-shirt sizing */
-.spectrum--medium {
-  --spectrum-slider-tick-mark-height: 10px;
-  /* --spectrum-global-dimension-size-125 */
-  --spectrum-slider-tick-mark-width: 2px;
-  /* --spectrum-global-dimension-size-25: */
-  --spectrum-slider-tick-mark-border-radius: 2px;
-  /* --spectrum-global-dimension-size-25 2px for Spectrum,   --spectrum-global-dimension-size-10 1px for Express */
-  --spectrum-slider-ramp-track-height: 16px;
-  /* dimension-size-200 */
-}
 
-.spectrum--large {
-  --spectrum-slider-tick-mark-height: 13px;
-  --spectrum-slider-tick-mark-width: 2px;
-  --spectrum-slider-tick-mark-border-radius: 2px;
-  --spectrum-slider-ramp-track-height: 20px;
-}
 
 .spectrum-Slider--sizeS {
   --spectrum-slider-handle-size: var(--spectrum-slider-handle-size-small);
@@ -78,6 +61,8 @@ governing permissions and limitations under the License.
   --spectrum-slider-track-middle-handleoffset: calc(var(--spectrum-slider-handle-gap) + calc(var(--spectrum-slider-handle-size) / 2));
   --spectrum-slider-input-top-size: calc(var(--spectrum-slider-handle-size) / -2 / 4);
   --spectrum-slider-track-fill-thickness: var(--spectrum-slider-track-thickness);
+  --spectrum-slider-tick-mark-width: var(--spectrum-border-width-200);
+  --spectrum-slider-tick-mark-border-radius: 2px;
 
   /* aka 80px */
   /* colors */
@@ -568,6 +553,8 @@ governing permissions and limitations under the License.
     background: var(--mod-slider-ramp-handle-background-color, var(--spectrum-slider-ramp-handle-background-color));
 
     @media (forced-colors: active) {
+      /* forced-color-adjust required to ensure the "circle" around the handle is transparent */
+      forced-color-adjust: none;
       box-shadow: 0 0 0 var(--spectrum-slider-handle-gap) ButtonFace;
       border-color: ButtonText;
       background-color: ButtonFace;
@@ -683,8 +670,6 @@ governing permissions and limitations under the License.
 @media (forced-colors: active) {
 
   .spectrum-Slider {
-
-
     --spectrum-slider-track-color: GrayText;
     --spectrum-slider-track-fill-color: GrayText;
 
