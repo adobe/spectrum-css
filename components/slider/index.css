@@ -77,7 +77,7 @@ governing permissions and limitations under the License.
   --spectrum-slider-track-margin-offset: calc(var(--spectrum-slider-controls-margin) * -1);
   --spectrum-slider-track-middle-handleoffset: calc(var(--spectrum-slider-handle-gap) + calc(var(--spectrum-slider-handle-size) / 2));
   --spectrum-slider-input-top-size: calc(var(--spectrum-slider-handle-size) / -2 / 4);
-
+  --spectrum-slider-track-fill-thickness: var(--spectrum-slider-track-thickness);
 
   /* aka 80px */
   /* colors */
@@ -121,14 +121,14 @@ governing permissions and limitations under the License.
   inline-size: calc(100% - calc(var(--mod-slider-controls-margin, var(--spectrum-slider-controls-margin))) * 2);
   margin-inline-start: var(--mod-slider-controls-margin, var(--spectrum-slider-controls-margin));
   min-block-size: var(--mod-slider-height-size, var(--spectrum-slider-height-size));
-
+  block-size: var(--mod-slider-control-height, var(--spectrum-slider-control-height));
   margin-block-end: var(--mod-slider-bottom-to-handle, var(--spectrum-slider-bottom-to-handle));
   vertical-align: top;
 }
 
 .spectrum-Slider-track,
 .spectrum-Slider-fill {
-  block-size: var(--mod-slider-track-thickness, var(--spectrum-slider-track-thickness));
+  block-size: var(--mod-slider-track-fill-thickness, var(--spectrum-slider-track-fill-thickness));
   box-sizing: border-box;
 
   position: absolute;
@@ -220,8 +220,6 @@ governing permissions and limitations under the License.
       &:before {
         border-start-start-radius: var(--mod-slider-track-corner-radius, var(--spectrum-slider-track-corner-radius));
         border-end-start-radius: var(--mod-slider-track-corner-radius, var(--spectrum-slider-track-corner-radius));
-        border-start-end-radius: 0;
-        border-end-end-radius: 0;
       }
     }
 
@@ -234,8 +232,6 @@ governing permissions and limitations under the License.
       &:before {
         border-start-end-radius: var(--mod-slider-track-corner-radius, var(--spectrum-slider-track-corner-radius));
         border-end-end-radius: var(--mod-slider-track-corner-radius, var(--spectrum-slider-track-corner-radius));
-        border-start-start-radius: 0;
-        border-end-start-radius: 0;
       }
     }
   }
@@ -569,13 +565,6 @@ governing permissions and limitations under the License.
 
     /* currently in tokens v5.0.0 the background-color for the handle are not yet defined */
     background: var(--mod-slider-ramp-handle-background-color, var(--spectrum-slider-ramp-handle-background-color));
-
-    @media (forced-colors: active) {
-      forced-color-adjust: none;
-      box-shadow: 0 0 0 var(--spectrum-slider-handle-gap) ButtonFace;
-      border-color: ButtonText;
-      background-color: ButtonFace;
-    }
   }
 }
 
@@ -586,12 +575,10 @@ governing permissions and limitations under the License.
 .spectrum-Slider-tick {
   &:after {
     background-color: var(--highcontrast-slider-tick-mark-color, var(--mod-slider-tick-mark-color, var(--spectrum-slider-tick-mark-color)));
-
     @media (forced-colors: active) {
       forced-color-adjust: none;
       background: ButtonText;
     }
-    
   }
 }
 
@@ -690,6 +677,15 @@ governing permissions and limitations under the License.
 
 
 @media (forced-colors: active) {
+  .spectrum-Slider--ramp {
+    .spectrum-Slider-handle {
+      forced-color-adjust: none;
+        box-shadow: 0 0 0 var(--spectrum-slider-handle-gap) ButtonFace;
+        border-color: ButtonText;
+        background-color: ButtonFace;
+    }
+  }
+
   .spectrum-Slider {
     .spectrum-Slider-handle {
       &:before {
@@ -703,6 +699,7 @@ governing permissions and limitations under the License.
         background-color: ButtonText;
       }
     }
+
 
     --spectrum-slider-track-color: GrayText;
     --spectrum-slider-track-fill-color: GrayText;
@@ -738,10 +735,8 @@ governing permissions and limitations under the License.
 
     --spectrum-slider-ramp-handle-border-color-active: ButtonText;
 
-    .spectrum-Slider--ramp {
-      .spectrum-Slider-handle {
-        forced-color-adjust: none;
-      }
-    }
+
+
+
   }
 }
