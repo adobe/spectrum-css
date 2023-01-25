@@ -6,7 +6,7 @@
             <nav>
                 <ul class="spectrum-SideNav spectrum-SideNav--multiLevel">
                     <li class="spectrum-SideNav-item">
-                        <a class="spectrum-SideNav-itemLink" href="/get-started">Get started</a>
+                        <a class="spectrum-SideNav-itemLink" href="/getting-started">Get started</a>
                     </li>
                     <li class="spectrum-SideNav-item">
                         <a class="spectrum-SideNav-itemLink" href="https://github.com/adobe/spectrum-css" target="_blank" rel="noopener">GitHub</a>
@@ -17,7 +17,7 @@
                             {% asyncEach component in template() %}
                             {% if not component.hide %}
                                 <li class="spectrum-SideNav-item {{ 'is-selected' if (pageURL === component.href) }}">
-                                    <a href="{{component.href}}" class="spectrum-SideNav-itemLink {{ 'js-fastLoad' if component.fastLoad === true }}">
+                                    <a href="/docs/{{component.href}}" class="spectrum-SideNav-itemLink {{ 'js-fastLoad' if component.fastLoad === true }}">
                                         {{ component.name }}
                                     </a>
                                 </li>
