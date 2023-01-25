@@ -66,7 +66,6 @@ let templateData = {
   nav: [],
   pkg: JSON.parse(fs.readFileSync('package.json', 'utf8'))
 };
-
 async function buildDocs_forDep(dep) {
   // Drop package org
   dep = dep.split('/').pop();
@@ -143,7 +142,44 @@ async function buildDocs_forDep(dep) {
             component.id = path.basename(file.basename, '.yml');
           }
         }
-        let templateData = Object.assign({}, { component: component }, file.data || {});
+
+        require(`${dirs.site}/util`).populateDNAInfo(component, metadata);
+
+        // Arrange examples for processing
+        var examples;
+        if (!component.examples) {
+          // Only one top-level example
+          examples = [component];
+        }
+        else {
+          // Multiple child examples
+          examples = component.examples;
+        }
+
+        if (!Array.isArray(examples)) {
+          examples = Object.values(examples);
+        }
+
+      examples.forEach(example => {
+      if (example.dnaStatus === 'Deprecated' || example.cssStatus === 'Deprecated') {
+        example.status = 'Deprecated';
+      }
+      else if (example.cssStatus === 'Verified' || example.dnaStatus === 'Canon') {
+        example.status = 'Verified';
+        }
+        else {
+        example.status = 'Contribution';
+        }
+        });
+        
+        let dnaStatusTranslation = {
+        'Canon': 'Verified',
+        'Precursor': 'Contribution'
+        };
+        
+        let status = dnaStatusTranslation[component.dnaStatus] || component.dnaStatus;
+
+        let templateData = Object.assign({}, { component: component }, {status: status} , file.data || {});
 
         file.path = ext(file.path, '.html');
 

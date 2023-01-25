@@ -14,7 +14,7 @@
                     <li class="spectrum-SideNav-item">
                         <a class="spectrum-SideNav-itemLink" href="#">Components</a>
                         <ul class="spectrum-SideNav spectrum-SideNav--multiLevel">
-                            {% asyncEach component in nav %}
+                            {% asyncEach component in template() %}
                             {% if not component.hide %}
                                 <li class="spectrum-SideNav-item {{ 'is-selected' if (pageURL === component.href) }}">
                                     <a href="/docs/{{component.href}}" class="spectrum-SideNav-itemLink {{ 'js-fastLoad' if component.fastLoad === true }}">
