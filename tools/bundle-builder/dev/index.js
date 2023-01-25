@@ -177,7 +177,7 @@ function watchCommons() {
 }
 
 function watch() {
-  serve();
+ // serve();
 
   watchCommons();
 
@@ -223,4 +223,4 @@ function watch() {
 
 }
 
-exports.watch = watch;
+// exports.watch = watch;

@@ -195,7 +195,7 @@ if (process.cwd() === dirs.topLevel) {
   // Build all packages if at the top level
   devTask = gulp.series(
     buildLite,
-    dev.watch
+   // dev.watch
   );
 }
 else {
@@ -207,13 +207,13 @@ else {
 
       copyPackages
     ),
-    dev.watch
+   // dev.watch
   );
 }
 
 exports.devHeavy = gulp.series(
   buildHeavy,
-  dev.watch
+//  dev.watch
 );
 
 exports.copyVars = vars.copyVars;
@@ -247,7 +247,7 @@ exports.copyPackages = copyPackages;
 exports.dev = devTask;
 exports.clean = clean;
 exports.build = build;
-exports.watch = dev.watch;
+// exports.watch = dev.watch;
 exports.default = buildMedium;
 
 exports.updateAndTagRelease = release.updateAndTagRelease;
