@@ -14,7 +14,7 @@ governing permissions and limitations under the License.
   --spectrum-colorwheel-border-radius: 100%;
   --spectrum-colorwheel-border-color:   var(--spectrum-transparent-black-200);
   --spectrum-colorwheel-border-width: var(--spectrum-border-width-100);
-  --spectrum-colorwheel-min-width: var(--spectrum-color-wheel-minimum-width); /*  ;placeholder calc(var(--spectrum-global-dimension-size-125) * 16); */
+  --spectrum-colorwheel-min-width: var(--spectrum-color-wheel-minimum-width);
   --spectrum-colorwheel-width: var(--spectrum-colorwheel-min-width);
   --spectrum-colorwheel-height: var(--spectrum-colorwheel-min-width);
   --spectrum-colorwheel-fill-color-disabled: var(--spectrum-disabled-background-color);
@@ -29,8 +29,7 @@ governing permissions and limitations under the License.
   margin-top: calc(-1 * 16px); /* place holder var(--spectrum-colorhandle-size) */
 }
 
-/** index.css (scale dependent) */
-
+/* hides slider component */
 %spectrum-ColorControl-hiddenField {
   opacity: 0;
   position: absolute;
@@ -47,9 +46,7 @@ governing permissions and limitations under the License.
   min-width: var(--spectrum-colorwheel-min-width);
   width: var(--spectrum-colorwheel-width);
   height: var(--spectrum-colorwheel-height);
-
   border-radius: var(--spectrum-colorwheel-border-radius);
-
   user-select: none;
   cursor: default;
 
@@ -89,9 +86,7 @@ governing permissions and limitations under the License.
   height: var(--spectrum-colorwheel-height);
   border-radius: 100%;
   box-sizing: border-box;
-  border-width: var(--spectrum-colorwheel-border-width);
-  border-style: solid;
-  border-color: var(--spectrum-colorwheel-border-color);
+  border: var(--spectrum-colorwheel-border-width) solid var(--spectrum-colorwheel-border-color);
 }
 
 .spectrum-ColorWheel-wheel {
@@ -99,13 +94,15 @@ governing permissions and limitations under the License.
   z-index: 1;
 }
 
+.spectrum-ColorWheel-segment {
+  transform: translate(5px, 5px);
+}
+
 .spectrum-ColorWheel-outerCircle,
 .spectrum-ColorWheel-innerCircle {
   fill: transparent;
   stroke: var(--spectrum-colorwheel-border-color);
   stroke-width: var(--spectrum-colorwheel-border-width);
-}
-
 }
 
 .spectrum-ColorWheel-slider {
@@ -117,10 +114,11 @@ governing permissions and limitations under the License.
   top: 50%;
 }
 
+/* for Window High Contrast Mode */
 @media (forced-colors: active) {
   .spectrum-ColorWheel {
     --spectrum-colorwheel-border-color-disabled : GrayText;
-    --spectrum-colorwheel-fill-color-disabled : Canvas;
+    --spectrum-colorwheel-fill-color-disabled: Canvas;
   }
   .spectrum-ColorWheel {
     forced-color-adjust: none;
