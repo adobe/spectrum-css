@@ -20,6 +20,7 @@ const merge = require('merge-stream');
 const through = require('through2');
 const ext = require('replace-ext');
 const nunjucks = require('nunjucks')
+var env = nunjucks.configure();
 
 const sitePath = path.join(__dirname, '..', '..', '..', 'site');
 const util = require(`${sitePath}/util`);
@@ -95,7 +96,7 @@ function buildDocs_html() {
 
           try {
             const templatePath = `${sitePath}/_includes/individualComponent.njk`;
-            let compiled = nunjucks.render(templatePath, data)
+            let compiled = env.render(templatePath, data);
             file.contents = Buffer.from(compiled);
           } catch (e) {
             return cb(e);

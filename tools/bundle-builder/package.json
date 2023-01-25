@@ -15,7 +15,6 @@
   "devDependencies": {
     "browser-sync": "^2.26.14",
     "colors": "^1.3.3",
-    "del": "^5.0.0",
     "dependency-solver": "^1.0.6",
     "gulp": "^4.0.0",
     "gulp-concat": "^2.6.1",
@@ -28,11 +27,8 @@
     "loadicons": "^1.0.0",
     "replace-ext": "^1.0.0",
     "semver": "^6.3.0",
-    "through2": "^3.0.1"
-  },
-  "dependencies": {
-    "gulp-nunjucks-render": "^2.2.3",
-    "npm-registry-fetch": "^11.0.0",
-    "nunjucks": "^3.2.3"
+    "through2": "^3.0.1",
+    "gulp-nunjucks": "^5.1.0",
+    "npm-registry-fetch": "^11.0.0"
   }
 }

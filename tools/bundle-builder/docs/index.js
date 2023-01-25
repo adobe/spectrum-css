@@ -31,8 +31,10 @@ const depUtils = require('../lib/depUtils');
 const npmFetch = require('npm-registry-fetch');
 
 // adding nunjucks
-const nunjucksRender = require('gulp-nunjucks-render')
-const nunjucksCompiler = require('nunjucks');
+const nunjucksCompiler = require('gulp-nunjucks-render')
+const nunjucks = require('nunjucks');
+
+var env = nunjucks.configure();
 
 let minimumDeps = [
   'icon',
@@ -147,7 +149,7 @@ async function buildDocs_forDep(dep) {
 
         try {
           const templatePath = `${dirs.site}/_includes/siteComponent.njk`;
-          let compiled = nunjucksCompiler.render(templatePath, templateData)
+          let compiled = env.render(templatePath, templateData);
           file.contents = Buffer.from(compiled);
         } catch (err) {
           return cb(err);
@@ -283,12 +285,12 @@ function buildSite_getData() {
 
 function buildSite_copyResources() {
   return gulp.src(`${dirs.site}/dist/**`)
-    .pipe(gulp.dest('dist/docs/'));
+    .pipe(gulp.dest('dist/'));
 }
 
 function buildSite_copyFreshResources() {
   return gulp.src(`${dirs.site}/resources/**`)
-    .pipe(gulp.dest('dist/docs/'));
+    .pipe(gulp.dest('dist/'));
 }
 
 function buildSite_html() {
@@ -301,7 +303,7 @@ function buildSite_html() {
         nav: templateData.nav // adding navigation data
       };
     }))
-    .pipe(nunjucksRender({
+    .pipe(nunjucksCompiler({
       path: 'site/_includes'
     }))
     .pipe(gulp.dest('dist/docs/'));
@@ -309,7 +311,7 @@ function buildSite_html() {
 
 function copySiteWorkflowIcons() {
   return gulp.src(path.join(path.dirname(require.resolve('@adobe/spectrum-css-workflow-icons')), 'spectrum-icons.svg'))
-    .pipe(gulp.dest('dist/docs/img/'));
+    .pipe(gulp.dest('dist/img/'));
 }
 
 let buildSite_pages = gulp.series(
