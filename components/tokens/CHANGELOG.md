@@ -3,6 +3,18 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+<a name="6.3.0"></a>
+# 6.3.0
+🗓 2023-01-25 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/tokens@6.2.2...@spectrum-css/tokens@6.3.0)
+
+### ✨ Features
+
+* **tokens:** adds platform size props for slider ([#1594](https://github.com/adobe/spectrum-css/issues/1594)) ([d889fdf](https://github.com/adobe/spectrum-css/commit/d889fdf))
+
+
+
+
+
 <a name="6.2.2"></a>
 ## 6.2.2
 🗓 2023-01-18 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/tokens@6.2.0...@spectrum-css/tokens@6.2.2)

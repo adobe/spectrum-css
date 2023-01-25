@@ -3,6 +3,16 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+<a name="5.0.22"></a>
+## 5.0.22
+🗓 2023-01-25 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/pagination@5.0.21...@spectrum-css/pagination@5.0.22)
+
+**Note:** Version bump only for package @spectrum-css/pagination
+
+
+
+
+
 <a name="5.0.21"></a>
 ## 5.0.21
 🗓 2023-01-18 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/pagination@5.0.19...@spectrum-css/pagination@5.0.21)
