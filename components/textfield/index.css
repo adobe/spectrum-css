@@ -317,7 +317,7 @@ governing permissions and limitations under the License.
     grid-column: 1 / span 2;
   }
 
-  .is-keyboardFocused & {
+  &.is-keyboardFocused {
     /* focus indicator is focused state */
     &::after {
       border-color: var(--highcontrast-textfield-focus-indicator-color, var(--mod-textfield-focus-indicator-color, var(--spectrum-textfield-focus-indicator-color)));
@@ -342,7 +342,7 @@ governing permissions and limitations under the License.
     }
   }
 
-  &--quiet.is-keyboardFocused & {
+  &--quiet.is-keyboardFocused {
     &::after {
       border-width: 0 0 var(--mod-textfield-focus-indicator-width, var(--spectrum-textfield-focus-indicator-width)) 0;
     }
