@@ -18,6 +18,7 @@ governing permissions and limitations under the License.
   --spectrum-colorwheel-width: var(--spectrum-colorwheel-min-width);
   --spectrum-colorwheel-height: var(--spectrum-colorwheel-min-width);
   --spectrum-colorwheel-fill-color-disabled: var(--spectrum-disabled-background-color);
+  --spectrum-colorwheel-track-width: var(--spectrum-color-control-track-width);
 }
 
 %spectrum-ColorControl-handle--focused {
@@ -60,10 +61,6 @@ governing permissions and limitations under the License.
 
   &.is-disabled {
     pointer-events: none;
-    .spectrum-ColorWheel-outerCircle,
-    .spectrum-ColorWheel-innerCircle {
-      stroke: var(--spectrum-colorwheel-border-color-disabled);
-    }
     .spectrum-ColorWheel-outerCircle {
       fill: var(--spectrum-colorwheel-fill-color-disabled);
     }
@@ -105,6 +102,10 @@ governing permissions and limitations under the License.
   stroke-width: var(--spectrum-colorwheel-border-width);
 }
 
+.spectrum-ColorWheel-track-width {
+  r: calc(80px - var(--spectrum-colorwheel-track-width));
+}
+
 .spectrum-ColorWheel-slider {
   @extend %spectrum-ColorControl-hiddenField;
 }
@@ -114,10 +115,10 @@ governing permissions and limitations under the License.
   top: 50%;
 }
 
-/* for Window High Contrast Mode */
+/* TODO test on WHCM for Window High Contrast Mode */
 @media (forced-colors: active) {
   .spectrum-ColorWheel {
-    --spectrum-colorwheel-border-color-disabled : GrayText;
+    /* --spectrum-colorwheel-border-color-disabled : GrayText; */
     --spectrum-colorwheel-fill-color-disabled: Canvas;
   }
   .spectrum-ColorWheel {
