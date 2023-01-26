@@ -3,6 +3,21 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+<a name="7.0.0-beta.5"></a>
+# 7.0.0-beta.5
+🗓 2023-01-26 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/button@6.0.20...@spectrum-css/button@7.0.0-beta.5)
+
+### ✨ Features
+
+* **button!:** core token migration for button ([28786ab](https://github.com/adobe/spectrum-css/commit/28786ab))
+* fix label padding ([9f1517a](https://github.com/adobe/spectrum-css/commit/9f1517a))
+* logical padding ([bc7bb10](https://github.com/adobe/spectrum-css/commit/bc7bb10))
+* migrating to core tokens v5.0.0 ([6e640ba](https://github.com/adobe/spectrum-css/commit/6e640ba))
+
+
+
+
+
 <a name="6.0.20"></a>
 ## 6.0.20
 🗓 2023-01-25 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/button@6.0.19...@spectrum-css/button@6.0.20)
