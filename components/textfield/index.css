@@ -235,11 +235,9 @@ governing permissions and limitations under the License.
 
     &.is-focused,
     &.is-keyboardFocused {
-      .spectrum-Textfield-input-wrapper {
-        /* focus indicator is focused state */
-        &::after {
-          forced-color-adjust: none;
-        }
+      /* focus indicator is focused state */
+      &::after {
+        forced-color-adjust: none;
       }
     }
   }
