@@ -49,6 +49,7 @@
     "release:bundles": "gulp releaseBundles",
     "release:site": "gulp prepareSite && gh-pages -d dist-site/ -f -e .",
     "start": "NODE_ENV=development yarn workspace @spectrum-css/preview start",
+    "test:visual": "yarn workspace @spectrum-css/preview test:chromatic",
     "version:build": "SCOPE=$(lerna changed | tr \"\\\\n\" ,) && lerna run --stream --scope \"{${SCOPE%,}}\" --ignore \"@spectrum-css/{*-builder*,preview,generator,site}\" build",
     "watch": "gulp watch"
   },

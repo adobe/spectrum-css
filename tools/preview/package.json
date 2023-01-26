@@ -3,12 +3,15 @@
   "version": "1.0.7",
   "description": "A Spectrum CSS preview",
   "license": "Apache-2.0",
-  "author": "Adobe",
+  "author": {
+    "name": "Adobe"
+  },
   "homepage": "https://opensource.adobe.com/spectrum-css/preview",
   "main": "main.js",
   "scripts": {
     "build": "build-storybook --config-dir .",
-    "start": "WATCH_MODE=true start-storybook -p 6006 --config-dir ."
+    "start": "WATCH_MODE=true start-storybook -p 6006 --config-dir .",
+    "test:chromatic": "chromatic --project-token $(grep CHROMATIC_PROJECT_TOKEN ../../.env | cut -d '=' -f2)"
   },
   "dependencies": {
     "@adobe/spectrum-css-workflow-icons": "^1.2.1",
@@ -47,5 +50,7 @@
     "react-syntax-highlighter": "^15.5.0",
     "source-map-loader": "^1.0.0",
     "webpack": "^4.46.0"
-  }
+  },
+  "readme": "ERROR: No README data found!",
+  "_id": "@spectrum-css/preview@1.0.7"
 }
