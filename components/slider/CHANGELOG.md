@@ -3,6 +3,16 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+<a name="3.1.12"></a>
+## 3.1.12
+🗓 2023-01-27 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/slider@3.1.11...@spectrum-css/slider@3.1.12)
+
+**Note:** Version bump only for package @spectrum-css/slider
+
+
+
+
+
 <a name="3.1.11"></a>
 ## 3.1.11
 🗓 2023-01-25 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/slider@3.1.10...@spectrum-css/slider@3.1.11)
