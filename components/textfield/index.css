@@ -52,6 +52,12 @@ governing permissions and limitations under the License.
   /* icon end spacing override for combobox */
   --spectrum-textfield-icon-spacing-inline-end-override: 32px; /* TODO - placeholder - reevaluate after combobox migration */
 
+
+  /* TODO - icon spacing override for search - reevaluate after search is migrated */
+  --spectrum-Textfield-workflow-icon-width: 18px;
+  --spectrum-Textfield-workflow-icon-gap: 6px;
+
+
   /* font styles */
   --spectrum-textfield-font-family: var(--spectrum-font-family-base); /* placeholder for --spectrum-font-family-default */
   --spectrum-textfield-font-weight: var(--spectrum-font-weight-regular);
@@ -347,13 +353,14 @@ governing permissions and limitations under the License.
   }
 }
 
-
+/* TODO - reevaluate icon styles when search field is migrated */
 /* align search icon */
 .spectrum-Textfield-icon {
+  display: block;
   position: absolute;
-  top: 0; /* TODO - reevaluate block spacing when search field is migrated */
-  bottom: 0; /* TODO - reevaluate block spacing when search field is migrated */
-  margin-block: auto; /* TODO - reevaluate block spacing when search field is migrated */
+  top: 0;
+  bottom: 0;
+  margin-block: auto;
 
   color: var(--highcontrast-textfield-text-color-default, var(--mod-textfield-text-color-default, var(--spectrum-textfield-text-color-default)));
 
@@ -526,6 +533,12 @@ governing permissions and limitations under the License.
   grid-row: 2;
   grid-column: 1 / span 2;
 
+  /* TODO - quiet search field left padding - reevaluate when search is migrated */
+  .spectrum-Textfield--quiet .spectrum-Textfield-icon ~ & {
+    padding-inline-start: calc(var(--mod--Textfield-workflow-icon-gap, var(--spectrum-Textfield-workflow-icon-gap))
+                              + var(--mod-Textfield-workflow-icon-width, var(--spectrum-Textfield-workflow-icon-width)));
+  }
+
   /* Remove the native clear button in IE */
   /* http://stackoverflow.com/questions/14007655/remove-ie10s-clear-field-x-button-on-certain-inputs */
   &::-ms-clear {
@@ -691,7 +704,7 @@ governing permissions and limitations under the License.
     /* Treat all quiet inputs and text areas the same */
     resize: none;
     overflow-y: hidden;
-   }
+  }
 
   /****** Input - Quiet 🤫 + Disabled 🚫 ******/
   .spectrum-Textfield--quiet.is-disabled &,
