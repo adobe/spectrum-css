@@ -22,7 +22,7 @@ governing permissions and limitations under the License.
 }
 
 %spectrum-ColorControl-handle--focused {
-  /*// Bigger handle when focused */
+  /* Bigger handle when focused */
   width: calc(16px * 2); /* place holder var(--spectrum-colorhandle-size) */
   height: calc(16px * 2); /* place holder var(--spectrum-colorhandle-size) */
 
@@ -63,7 +63,7 @@ governing permissions and limitations under the License.
     .spectrum-ColorWheel-outerCircle {
       fill: var(--spectrum-colorwheel-fill-color-disabled);
     }
-    /* // hide all the little colored bits */
+    /* hides all the little colored bits */
     .spectrum-ColorWheel-segment {
       display: none;
     }
