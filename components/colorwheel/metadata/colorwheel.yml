@@ -99,7 +99,7 @@ examples:
         var height = canvas.height;
         var centerX = width / 2;
         var centerY = height / 2;
-        var ringSize =  73;
+        var ringSize = 74;
 
         for (var i = 0; i < 360; i += Math.PI / 8) {
           var rad = i * (2 * Math.PI) / 360;
