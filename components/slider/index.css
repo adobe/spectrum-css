@@ -249,10 +249,6 @@ governing permissions and limitations under the License.
     /* Flip the ramp automatically for RTL */
     transform: logical rotate(0deg);
   }
-
-  /* &+.spectrum-Slider-handle {
-    margin-block: calc(var(--mod-slider-bottom-to-handle, var(--spectrum-slider-bottom-to-handle)) * -1 - 5px + var(--mod-slider-margin-top-offset, var(--spectrum-slider-margin-top-offset))) 0;
-  } */
 }
 
 .spectrum-Slider-handle {
@@ -498,10 +494,6 @@ governing permissions and limitations under the License.
 .spectrum-Slider-track {
   &::before {
     background: var(--highcontrast-slider-track-color, var(--mod-slider-track-color, var(--spectrum-slider-track-color)));
-
-    @media (forced-colors: active) {
-      background-color: ButtonText;
-    }
   }
 }
 
@@ -515,9 +507,6 @@ governing permissions and limitations under the License.
   .spectrum-Slider-track:first-child {
     &::before {
       background: var(--highcontrast-slider-track-fill-color, var(--mod-slider-track-fill-color, var(--spectrum-slider-track-fill-color)));
-      @media (forced-colors: active) {
-        background: ButtonText;
-      }
     }
   }
 }
@@ -525,19 +514,12 @@ governing permissions and limitations under the License.
 .spectrum-Slider-fill {
   &::before {
     background: var(--highcontrast-slider-track-fill-color, var(--mod-slider-track-fill-color, var(--spectrum-slider-track-fill-color)));
-    @media (forced-colors: active) {
-      background: ButtonText;
-    }
   }
 }
 
 .spectrum-Slider-ramp {
   path {
     fill: var(--highcontrast-slider-ramp-track-color, var(--mod-slider-ramp-track-color, var(--spectrum-slider-ramp-track-color)));
-
-    @media (forced-colors: active) {
-      fill: ButtonText;
-    }
   }
 }
 
@@ -588,9 +570,6 @@ governing permissions and limitations under the License.
 .spectrum-Slider-tick {
   &:after {
     background-color: var(--highcontrast-slider-tick-mark-color, var(--mod-slider-tick-mark-color, var(--spectrum-slider-tick-mark-color)));
-    @media (forced-colors: active) {
-      background: ButtonText;
-    }
   }
 }
 
@@ -651,19 +630,16 @@ governing permissions and limitations under the License.
     }
 
     .spectrum-Slider-ramp {
+      /* Slider handle turns transparent in high contrast mode for ramp */
       @media (forced-colors: active) {
-      & + .spectrum-Slider-handle {
-          fill: ButtonFace;
-          background-color: ButtonFace;
-        }
+        & + .spectrum-Slider-handle {
+            fill: ButtonFace;
+            background-color: ButtonFace;
+          }
       }
 
       path {
         fill: var(--highcontrast-slider-ramp-track-color-disabled, var(--mod-slider-ramp-track-color-disabled, var(--spectrum-slider-ramp-track-color-disabled)));
-
-        @media (forced-colors: active) {
-          fill: GrayText;
-        }
       }
     }
 
@@ -694,6 +670,15 @@ governing permissions and limitations under the License.
 
     --spectrum-slider-track-color-disabled: GrayText;
     --spectrum-slider-track-fill-color-disabled: GrayText;
+
+    /*  over-writes */
+    --highcontrast-slider-track-color: ButtonText;
+    --highcontrast-slider-track-fill-color: ButtonText;
+    --highcontrast-slider-track-fill-color: ButtonText;
+    --highcontrast-slider-ramp-track-color: ButtonText;
+    --highcontrast-slider-ramp-track-color-disabled: GrayText;
+    --highcontrast-slider-tick-mark-color: ButtonText;
+
 
     --spectrum-slider-track-color: ButtonText;
     --spectrum-slider-track-fill-color: ButtonText;
