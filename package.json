@@ -26,6 +26,7 @@
     "build:preview": "yarn workspace @spectrum-css/preview build",
     "postbuild:preview": "rimraf dist/preview && mv tools/preview/storybook-static dist/preview",
     "build:site": "gulp -LL",
+    "check:peerDeps": "node ./tasks/checkPeerDependencies.js ./components",
     "ci-all": "yarn build",
     "clean": "gulp clean",
     "dev": "NODE_ENV=development BROWSERSYNC_OPEN=true gulp dev",

@@ -186,12 +186,7 @@ exports.graduatePeerDeps = graduatePeerDeps;
 exports.readmeLint = readmeLint;
 exports.packageLint = packageLint;
 
-exports.checkPeerDependencies = checkPeerDependencies;
-
-exports.version = gulp.series(
-  checkPeerDependencies,
-  builder.build
-);
+exports.version = builder.build;
 
 exports.dev = gulp.series(
   exports.copySiteResources,
