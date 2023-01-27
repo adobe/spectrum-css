@@ -1,7 +1,7 @@
 {
     "private": true,
     "name": "@spectrum-css/test",
-    "version": "1.0.0",
+    "version": "1.0.1",
     "description": "The Spectrum CSS test suite",
     "license": "Apache-2.0",
     "author": "Adobe",
@@ -33,7 +33,7 @@
     },
     "dependencies": {
         "@spectrum-css/spectrum-css-vr-test-assets-essential": "^1.0.46",
-        "@spectrum-css/test-builder": "^1.0.3",
+        "@spectrum-css/test-builder": "^1.0.4",
         "backstopjs-spectrum": "6.16.0",
         "gulp": "^4.0.0",
         "rimraf": "^4.1.1",
