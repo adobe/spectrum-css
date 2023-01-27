@@ -98,7 +98,7 @@ governing permissions and limitations under the License.
 .spectrum-ColorWheel-outerCircle,
 .spectrum-ColorWheel-innerCircle {
   fill: transparent;
-  stroke: var(--spectrum-colorwheel-border-color);
+  stroke: var(--highcontrast-colorwheel-border-color, var(--spectrum-colorwheel-border-color));
   stroke-width: var(--spectrum-colorwheel-border-width);
 }
 
@@ -116,12 +116,9 @@ governing permissions and limitations under the License.
   top: 50%;
 }
 
-/* TODO test on WHCM for Window High Contrast Mode */
+/* Window High Contrast Mode */
 @media (forced-colors: active) {
   .spectrum-ColorWheel {
-    --spectrum-colorwheel-border-color : GrayText;
-  }
-  .spectrum-ColorWheel {
-    forced-color-adjust: none;
+    --highcontrast-colorwheel-border-color: GrayText;
   }
 }
