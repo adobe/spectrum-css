@@ -119,8 +119,7 @@ governing permissions and limitations under the License.
 /* TODO test on WHCM for Window High Contrast Mode */
 @media (forced-colors: active) {
   .spectrum-ColorWheel {
-    /* --spectrum-colorwheel-border-color-disabled : GrayText; */
-    --spectrum-colorwheel-fill-color-disabled: Canvas;
+    --spectrum-colorwheel-border-color : GrayText;
   }
   .spectrum-ColorWheel {
     forced-color-adjust: none;
