@@ -4,7 +4,7 @@ const site = require('./site/gulpfile.js');
 const subrunner = require('./tools/bundle-builder/subrunner');
 const through = require('through2');
 const replace = require('gulp-replace');
-const del = require('del');
+const rimraf = require('rimraf')
 
 Object.assign(exports, builder);
 Object.assign(exports, site);
@@ -166,8 +166,9 @@ See the [Spectrum CSS documentation](https://opensource.adobe.com/spectrum-css/)
 }
 
 /** Site */
-function prepareSite_clean() {
-  return del('dist-site/');
+async function prepareSite_clean() {
+  rimraf.sync('dist-site/');
+  console.log("done");
 }
 
 function prepareSite_components() {
@@ -213,10 +214,10 @@ exports.devHeavy = gulp.series(
   exports.devHeavy
 );
 
-exports['watch-relaunch'] = function() {
-  process.env['BROWSERSYNC_OPEN'] = true;
-  exports.watch();
-}
+// exports['watch-relaunch'] = function() {
+//   process.env['BROWSERSYNC_OPEN'] = true;
+//   exports.watch();
+// }
 
 exports.buildDocs = builder.buildDocs;
 

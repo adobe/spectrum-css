@@ -17,13 +17,12 @@ const replace = require('gulp-replace');
 const sort = require('gulp-sort');
 const svgcombiner = require('gulp-svgcombiner');
 const svgstore = require('gulp-svgstore');
-const del = require('del');
+const rimraf = require('rimraf')
 const vinylPaths = require('vinyl-paths');
 
 function clean() {
-  return del([
-    'combined/**'
-  ]);
+  rimraf.sync('combined/**');
+  console.log("done");
 }
 
 function sanitizeIcons() {

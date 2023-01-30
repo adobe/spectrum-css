@@ -1,0 +1,23 @@
+{
+  "name": "@spectrum-css/documentation",
+  "version": "1.0.0",
+  "description": "Documentation site workspace",
+  "license": "Apache-2.0",
+  "author": "Adobe",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/adobe/spectrum-css.git",
+    "directory": "site/"
+  },
+  "bugs": {
+    "url": "https://github.com/adobe/spectrum-css/issues"
+  },
+  "scripts": {
+    "build": "npx @11ty/eleventy --config=.eleventy.js"
+  },
+  "devDependencies": {
+    "gulp": "^4.0.2",
+    "@11ty/eleventy": "^1.0.2",
+    "@11ty/eleventy-plugin-syntaxhighlight": "^4.2.0"
+  }
+}
