@@ -1,6 +1,6 @@
 {
   "name": "@spectrum-css/vars",
-  "version": "8.0.2",
+  "version": "8.0.3",
   "description": "The Spectrum CSS vars package",
   "license": "Apache-2.0",
   "homepage": "https://opensource.adobe.com/spectrum-css/",
@@ -14,6 +14,7 @@
   },
   "main": "dist/spectrum-metadata.json",
   "scripts": {
+    "build": "gulp build",
     "update": "gulp update"
   },
   "devDependencies": {

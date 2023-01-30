@@ -3,6 +3,26 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+<a name="3.0.5"></a>
+## 3.0.5
+🗓 2023-01-27 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/site@3.0.4...@spectrum-css/site@3.0.5)
+
+**Note:** Version bump only for package @spectrum-css/site
+
+
+
+
+
+<a name="3.0.4"></a>
+## 3.0.4
+🗓 2023-01-25 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/site@3.0.3...@spectrum-css/site@3.0.4)
+
+**Note:** Version bump only for package @spectrum-css/site
+
+
+
+
+
 <a name="3.0.3"></a>
 ## 3.0.3
 🗓 2023-01-18 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/site@3.0.1...@spectrum-css/site@3.0.3)

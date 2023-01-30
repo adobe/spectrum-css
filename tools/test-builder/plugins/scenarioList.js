@@ -13,7 +13,6 @@ governing permissions and limitations under the License.
 const through = require('through2');
 const File = require('vinyl');
 const path = require('path');
-const fs = require('fs');
 
 const sortByLabel = (a, b) => {
   if (a.label > b.label)
@@ -43,21 +42,9 @@ module.exports = () => {
   function createScenarioList(cb) {
     scenarios = scenarios.sort(sortByLabel);
 
-    // const existingScenarioList = JSON
-    //   .parse(fs.readFileSync('backstop_data/backstop_scenarios.json', 'utf8'))
-    //   .sort(sortByLabel);
-
-    // const combinedScenarioList = scenarios.reduce((acc, current) => {
-    //   if (!acc.find(i => current.label === i.label)) {
-    //     acc.push(current);
-    //   }
-    //   return acc;
-    // }, existingScenarioList).sort(sortByLabel);
-
     const file = new File('utf8');
-    // file.contents = Buffer.from(JSON.stringify(combinedScenarioList, null, 2));
     file.contents = Buffer.from(JSON.stringify(scenarios, null, 2));
-    file.path = 'backstop_data/backstop_scenarios.json';
+    file.path = 'backstop_scenarios.json';
     this.push(file);
 
     cb();
