@@ -21,6 +21,8 @@
     "url": "https://github.com/adobe/spectrum-css/issues"
   },
   "scripts": {
+    "dev:docs": "gulp dev && NODE_ENV=development BROWSERSYNC_OPEN=true yarn workspace @spectrum-css/documentation run build --serve",
+    "build:docs": "yarn workspace @spectrum-css/documentation build",
     "build": "run-s build:site build:preview # preview cannot be built until the component assets are finished",
     "build:clean": "run-s clean build",
     "build:components": "lerna run --stream --scope \"@spectrum-css/*\" --ignore \"@spectrum-css/{*-builder*,preview,generator,site}\" build",
@@ -30,7 +32,7 @@
     "check:peerDeps": "gulp checkPeerDependencies # validate peer deps for components; escapes before running lerna if they are not valid",
     "ci-all": "yarn build",
     "clean": "gulp clean",
-    "dev": "NODE_ENV=development BROWSERSYNC_OPEN=true gulp dev",
+    "dev": "yarn dev:docs",
     "new": "yarn workspace @spectrum-css/generator new",
     "precommit": "lint-staged",
     "prepare": "husky install && gulp prepare",
@@ -48,11 +50,10 @@
   "workspaces": [
     "components/*",
     "tools/*",
-    "tests"
+    "tests",
+    "site"
   ],
   "devDependencies": {
-    "@11ty/eleventy": "^1.0.2",
-    "@11ty/eleventy-plugin-syntaxhighlight": "^4.2.0",
     "@adobe/focus-ring-polyfill": "^0.1.5",
     "@commitlint/cli": "^8.3.3",
     "@commitlint/config-conventional": "^8.3.3",

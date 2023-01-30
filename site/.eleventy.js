@@ -87,14 +87,14 @@ module.exports = function (eleventyConfig) {
   })
 
   eleventyConfig.addNunjucksGlobal("template", function () {
-    const root_folder = "components"
+    const root_folder = "../components"
     return getAllYMLFiles(root_folder)
   })
 
   return {
     dir: {
-      input: "site",
-      output: "dist"
+      input: "content",
+      output: "../dist"
     },
     passthroughFileCopy: true,
     templateFormats: ["njk", "md", "css", "yml"],
