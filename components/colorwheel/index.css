@@ -34,6 +34,17 @@ governing permissions and limitations under the License.
   }
 }
 
+/********* WHCM *********/
+@media (forced-colors: active) {
+  .spectrum-ColorWheel {
+    --spectrum-colorwheel-border-color-disabled : GrayText;
+    --spectrum-colorwheel-fill-color-disabled : Canvas;
+  }
+  .spectrum-ColorWheel {
+    forced-color-adjust: none;
+  }
+}
+
 %spectrum-ColorControl-handle--focused {
   /* Bigger handle when focused */
   width: calc(var(--spectrum-colorhandle-size) * 2);
@@ -127,11 +138,4 @@ governing permissions and limitations under the License.
 .spectrum-ColorWheel-handle {
   left: 50%;
   top: 50%;
-}
-
-/* Window High Contrast Mode */
-@media (forced-colors: active) {
-  .spectrum-ColorWheel {
-    --highcontrast-colorwheel-border-color: GrayText;
-  }
 }
