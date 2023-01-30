@@ -26,7 +26,7 @@ governing permissions and limitations under the License.
   /* text regular active item */
   --spectrum-breadcrumbs-font-size-current: var(--spectrum-font-size-200);
   --spectrum-breadcrumbs-font-family-current: var(--spectrum-font-family-base); /* placeholder for --spectrum-font-family-default */
-  --spectrum-breadcrumbs-font-weight-current: var(--spectrum-font-weight-bold); /* placeholder for --spectrum-font-bold */
+  --spectrum-breadcrumbs-font-weight-current: var(--spectrum-bold-font-weight); /* placeholder for --spectrum-font-bold */
 
   /* text compact */
   --spectrum-breadcrumbs-font-size-compact: var(--spectrum-font-size-100);
@@ -36,7 +36,7 @@ governing permissions and limitations under the License.
   /* text compact active item */
   --spectrum-breadcrumbs-font-size-compact-current: var(--spectrum-font-size-100);
   --spectrum-breadcrumbs-font-family-compact-current: var(--spectrum-font-family-base); /* placeholder for --spectrum-font-family-default */
-  --spectrum-breadcrumbs-font-weight-compact-current: var(--spectrum-font-weight-bold); /* placeholder for --spectrum-font-bold */
+  --spectrum-breadcrumbs-font-weight-compact-current: var(--spectrum-bold-font-weight); /* placeholder for --spectrum-font-bold */
 
   /* text multiline */
   --spectrum-breadcrumbs-font-size-multiline: var(--spectrum-font-size-75);
@@ -46,7 +46,7 @@ governing permissions and limitations under the License.
   /* text multiline active item */
   --spectrum-breadcrumbs-font-size-multiline-current: var(--spectrum-font-size-300);
   --spectrum-breadcrumbs-font-family-multiline-current: var(--spectrum-font-family-base); /* placeholder for --spectrum-font-family-default */
-  --spectrum-breadcrumbs-font-weight-multiline-current: var(--spectrum-font-weight-bold); /* placeholder for --spectrum-font-bold */
+  --spectrum-breadcrumbs-font-weight-multiline-current: var(--spectrum-bold-font-weight); /* placeholder for --spectrum-font-bold */
 
   /* hover, active, focus underline */
   --spectrum-breadcrumbs-text-decoration-thickness: var(--spectrum-text-underline-thickness);
