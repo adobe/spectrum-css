@@ -13,7 +13,7 @@ governing permissions and limitations under the License.
 @import "../vars/css/components/spectrum-treeview.css";
 
 .spectrum-TreeView {
-  --spectrum-treeview-heading-font-weight: var(--spectrum-global-bold-font-weight);
+  --spectrum-treeview-heading-font-weight: var(--spectrum-global-font-weight-bold);
   --spectrum-treeview-item-hover-offset: var(--spectrum-global-dimension-size-25);
   --spectrum-treeview-item-border-size-selected: var(--spectrum-alias-border-size-thin);
 }

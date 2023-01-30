@@ -260,7 +260,7 @@ governing permissions and limitations under the License.
   box-shadow: 0 var(--spectrum-global-dimension-static-size-25) var(--spectrum-global-dimension-static-size-75) rgb(0, 0, 0, 0.15);
 
   color: var(--spectrum-global-color-static-white);
-  font-weight: var(--spectrum-global-bold-font-weight);
+  font-weight: var(--spectrum-global-font-weight-bold);
   font-size: var(--spectrum-global-dimension-font-size-400);
 
   visibility: hidden;
