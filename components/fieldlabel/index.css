@@ -15,6 +15,8 @@ governing permissions and limitations under the License.
   
   --spectrum-field-label-top-to-asterisk: var(--spectrum-field-label-top-to-asterisk-medium);
   --spectrum-field-label-text-to-asterisk: var(--spectrum-field-label-text-to-asterisk-medium);
+
+  --spectrum-fieldlabel-font-weight: var(--spectrum-regular-font-weight);
 }
 
 .spectrum-FieldLabel--sizeS {
@@ -86,7 +88,7 @@ governing permissions and limitations under the License.
   padding-inline: 0;
 
   font-size: var(--mod-fieldlabel-font-size, var(--spectrum-fieldlabel-font-size));
-  font-weight: var(--mod-font-weight-regular, var(--spectrum-font-weight-regular));
+  font-weight: var(--mod-fieldlabel-font-weight, var(--spectrum-fieldlabel-font-weight));
 
   line-height: var(--mod-fieldlabel-line-height, var(--spectrum-fieldlabel-line-height));
 

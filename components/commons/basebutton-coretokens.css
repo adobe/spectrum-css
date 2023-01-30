@@ -47,7 +47,8 @@ governing permissions and limitations under the License.
 
   text-decoration: none;
   font-family: var(--mod-font-family-base, var(--spectrum-font-family-base));
-  line-height: var(--mod-line-height-small, var(--spectrum-line-height-small)); 
+
+  line-height: var(--mod-line-height-100, var(--spectrum-line-height-100));
 
   user-select: none;
   -webkit-user-select: none;
