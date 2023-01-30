@@ -3,6 +3,18 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+<a name="6.0.24"></a>
+## 6.0.24
+🗓 2023-01-30 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/dialog@6.0.23...@spectrum-css/dialog@6.0.24)
+
+### 🐛 Bug fixes
+
+* **dialog:** adjust padding and margins to avoid focus indicator clip ([#1593](https://github.com/adobe/spectrum-css/issues/1593)) ([30b854c](https://github.com/adobe/spectrum-css/commit/30b854c))
+
+
+
+
+
 <a name="6.0.23"></a>
 ## 6.0.23
 🗓 2023-01-27 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/dialog@6.0.22...@spectrum-css/dialog@6.0.23)
