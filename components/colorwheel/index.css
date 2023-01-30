@@ -21,6 +21,8 @@ governing permissions and limitations under the License.
   --spectrum-colorwheel-border-width: var(--spectrum-border-width-100);
   --spectrum-colorwheel-fill-color-disabled: var(--spectrum-disabled-background-color);
 
+  --spectrum-colorhandle-size: 16px; /* TODO replace with new token for ColorHandle, placeholder for old token var(--spectrum-colorhandle-size) */
+
   --spectrum-colorwheel-track-width: var(--spectrum-color-control-track-width);
 
   .spectrum--large & {
@@ -34,11 +36,11 @@ governing permissions and limitations under the License.
 
 %spectrum-ColorControl-handle--focused {
   /* Bigger handle when focused */
-  width: calc(16px * 2); /* place holder var(--spectrum-colorhandle-size) */
-  height: calc(16px * 2); /* place holder var(--spectrum-colorhandle-size) */
+  width: calc(var(--spectrum-colorhandle-size) * 2);
+  height: calc(var(--spectrum-colorhandle-size) * 2);
 
-  margin-left: calc(-1 * 16px); /* place holder var(--spectrum-colorhandle-size) */
-  margin-top: calc(-1 * 16px); /* place holder var(--spectrum-colorhandle-size) */
+  margin-left: calc(-1 * var(--spectrum-colorhandle-size));
+  margin-top: calc(-1 * var(--spectrum-colorhandle-size));
 }
 
 /* hides slider component, see extend below */
