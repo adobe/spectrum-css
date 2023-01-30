@@ -3,6 +3,41 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+<a name="6.0.1"></a>
+## 6.0.1
+🗓 2023-01-27 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/breadcrumb@6.0.0...@spectrum-css/breadcrumb@6.0.1)
+
+**Note:** Version bump only for package @spectrum-css/breadcrumb
+
+
+
+
+
+<a name="6.0.0"></a>
+# 6.0.0
+🗓 2023-01-27 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/breadcrumb@5.0.5...@spectrum-css/breadcrumb@6.0.0)
+
+* feat(breadcrumb)!: migrate to new tokens system (#1569) ([a46f3c3](https://github.com/adobe/spectrum-css/commit/a46f3c3)), closes [#1569](https://github.com/adobe/spectrum-css/issues/1569)
+
+
+### 🛑 BREAKING CHANGES
+
+* migrates the Breadcrumb to the new tokens system
+
+
+
+
+
+<a name="5.0.5"></a>
+## 5.0.5
+🗓 2023-01-25 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/breadcrumb@5.0.4...@spectrum-css/breadcrumb@5.0.5)
+
+**Note:** Version bump only for package @spectrum-css/breadcrumb
+
+
+
+
+
 <a name="5.0.4"></a>
 ## 5.0.4
 🗓 2023-01-18 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/breadcrumb@5.0.2...@spectrum-css/breadcrumb@5.0.4)

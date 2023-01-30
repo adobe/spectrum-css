@@ -101,10 +101,19 @@ function getTokensDefinedInCSS(root) {
  * @description get all core tokens from spectrum-css/tokens
  */
 async function getCoreTokens() {
-  const coreTokensFile = require.resolve("@spectrum-css/tokens")
-  let contents = await fsp.readFile(coreTokensFile, "utf8")
-  let root = postcssReal.parse(contents)
-  return getTokensDefinedInCSS(root)
+  const fetchOptions = {
+    paths: [
+      process.cwd(),
+      path.join(process.cwd(), '../../')
+    ]
+  };
+  /* Resolve core tokens first from the current working directory, or if not found, from the root of the monorepo */
+  const coreTokensFile = require.resolve('@spectrum-css/tokens', fetchOptions);
+  const coreTokensPkg = require.resolve('@spectrum-css/tokens/package.json', fetchOptions);
+  if (coreTokensPkg) console.log('Core tokens version:', await fsp.readFile(coreTokensPkg, 'utf8').then(JSON.parse).then(pkg => pkg.version));
+  let contents = await fsp.readFile(coreTokensFile, 'utf8');
+  let root = postcssReal.parse(contents);
+  return getTokensDefinedInCSS(root);
 }
 
 /**

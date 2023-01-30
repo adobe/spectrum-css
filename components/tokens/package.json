@@ -1,11 +1,8 @@
 {
   "name": "@spectrum-css/tokens",
-  "version": "6.2.2",
+  "version": "6.3.0",
   "description": "The Spectrum CSS tokens package",
   "license": "Apache-2.0",
-  "scripts": {
-    "build": "node index.js"
-  },
   "repository": {
     "type": "git",
     "url": "https://github.com/adobe/spectrum-css.git",
@@ -15,10 +12,17 @@
     "url": "https://github.com/adobe/spectrum-css/issues"
   },
   "main": "dist/index.css",
+  "scripts": {
+    "build:tokens": "node index.js",
+    "prebuild": "rimraf dist/*",
+    "build": "style-dictionary build",
+    "postbuild": "gulp rebuildCustoms"
+  },
   "devDependencies": {
     "@adobe/spectrum-tokens": "12.0.0-beta.63",
     "gulp": "^4.0.0",
     "gulp-concat": "^2.6.1",
+    "rimraf": "^4.1.1",
     "style-dictionary": "^3.7.0",
     "style-dictionary-sets": "^2.0.2"
   },
