@@ -95,7 +95,7 @@ function buildDocs_html() {
           file.path = ext(file.path, '.html');
 
           try {
-            const templatePath = `${sitePath}/_includes/individualComponent.njk`;
+            const templatePath = `${sitePath}/content/_includes/individualComponent.njk`;
             let compiled = env.render(templatePath, data);
             file.contents = Buffer.from(compiled);
           } catch (e) {
