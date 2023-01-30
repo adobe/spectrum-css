@@ -95,7 +95,7 @@ governing permissions and limitations under the License.
 .spectrum-InLineAlert-footer {
   display: flex;
   justify-content: flex-end;
-  margin-block-start: var(--mod-inlinealert-spacing-header-content-butto, var(--spectrum-inlinealert-spacing-header-content-button));
+  margin-block-start: var(--mod-inlinealert-spacing-header-content-button, var(--spectrum-inlinealert-spacing-header-content-button));
 
   &:empty {
     display: none;
