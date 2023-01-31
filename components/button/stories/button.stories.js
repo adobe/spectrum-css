@@ -8,7 +8,6 @@ import { Template } from "./template";
 
 // Load styles for this component
 import '../index.css';
-import '../skin.css';
 
 export default {
   title: "Button",
