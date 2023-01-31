@@ -3,6 +3,21 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+<a name="7.0.0"></a>
+# 7.0.0
+🗓 2023-01-31 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/button@7.0.0-beta.6...@spectrum-css/button@7.0.0)
+
+* feat(button)!: migrating button to core-tokens (CSS-97) (#1479) ([0640be0](https://github.com/adobe/spectrum-css/commit/0640be0)), closes [#1479](https://github.com/adobe/spectrum-css/issues/1479)
+
+
+### 🛑 BREAKING CHANGES
+
+* migrates the Button to core tokens
+
+
+
+
+
 <a name="7.0.0-beta.5"></a>
 # 7.0.0-beta.5
 🗓 2023-01-26 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/button@6.0.20...@spectrum-css/button@7.0.0-beta.5)
