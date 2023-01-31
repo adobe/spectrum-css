@@ -10,13 +10,13 @@ OF ANY KIND, either express or implied. See the License for the specific languag
 governing permissions and limitations under the License.
 */
 
-const { deleteAsync } = require("del")
+const del = require("del")
 
 const css = require("./css")
 const docs = require("./docs")
 
 async function clean() {
-  await deleteAsync("dist/*")
+  return del("dist/*")
 }
 
 const build = async () => {
