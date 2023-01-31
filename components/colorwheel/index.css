@@ -11,10 +11,9 @@ governing permissions and limitations under the License.
 */
 
 .spectrum-ColorWheel {
-  /*  ensures visual width equal token value, calculating min-width off of a 6.25% increase to account for added width with SVG positioning */
-  --spectrum-colorwheel-min-width: calc(var(--spectrum-color-wheel-minimum-width) + (var(--spectrum-color-wheel-minimum-width) * 0.0625));
-  --spectrum-colorwheel-width: var(--spectrum-colorwheel-min-width);
-  --spectrum-colorwheel-height: var(--spectrum-colorwheel-min-width);
+  --spectrum-colorwheel-minimum-width: var(--spectrum-color-wheel-minimum-width);
+  --spectrum-colorwheel-width: var(--spectrum-colorwheel-minimum-width);
+  --spectrum-colorwheel-height: var(--spectrum-colorwheel-minimum-width);
 
   --spectrum-colorwheel-border-color:   var(--spectrum-transparent-black-200);
   --spectrum-colorwheel-border-width: var(--spectrum-border-width-100);
