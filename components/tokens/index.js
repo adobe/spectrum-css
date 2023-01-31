@@ -14,11 +14,11 @@ const StyleDictionary = require("style-dictionary").extend("config.js")
 const fg = require("fast-glob")
 const path = require("path")
 const async = require("async")
+const del = require("del");
 
 async function clean() {
   try {
-    const {deleteSync} = await import("del")
-    return await deleteSync("dist/*")
+    return del("dist/*")
   } catch (e) {
     throw new Error(e)
   }

@@ -17,7 +17,7 @@ const path = require("path")
 const fsp = require("fs").promises
 const semver = require("semver")
 const glob = require("glob")
-
+const del = require("del")
 const builder = require("./tools/bundle-builder")
 const test = require("./tools/test-builder")
 const site = require("./site/index.cjs")
@@ -207,11 +207,8 @@ async function readmeLint() {
   )
 }
 
-/** Site */
-// working
-async function prepareSite_clean() {
-  const { deleteAsync } = await import("del")
-  return deleteAsync("dist-site/")
+function prepareSite_clean() {
+  return del("dist-site/")
 }
 
 async function prepareSite_components() {
@@ -284,49 +281,39 @@ const prepareSite = async () => {
     throw new Error("Error in prepareSite" + e)
   }
 }
-// exports.prepareSite = prepareSite
-// exports.graduatePeerDeps = graduatePeerDeps
-// exports.readmeLint = readmeLint
-// exports.packageLint = packageLint
 
-// exports.checkPeerDependencies = checkPeerDependencies
+const version = () => {
+  return checkPeerDependencies().then(() => {
+    return builder.build();
+  });
+};
 
-// const prepareVersion = async () => {
-//   try {
-//     await checkPeerDependencies()
-//     await builder.build()
-//   } catch (e) {
-//     throw new Error(e)
-//   }
-// }
+const dev = () => {
+  return Promise.all([site.copySiteResources(), exports.dev]);
+};
 
-// exports.version = prepareVersion()
+const devHeavy = () => {
+  return Promise.all([site.copySiteResources(), exports.devHeavy]);
+};
 
-// exports.dev = async () => {
-//   try {
-//     await Promise.all([exports.copySiteResources(), exports.dev()])
-//   } catch (err) {
-//     throw err
-//   }
-// }
+const watchRelaunch = () => {
+  process.env['BROWSERSYNC_OPEN'] = true;
+  return exports.watch();
+};
 
-// exports.devHeavy = async () => {
-//   try {
-//     await Promise.all([exports.copySiteResources(), exports.devHeavy()])
-//   } catch (err) {
-//     throw err
-//   }
-// }
 
-// exports["watch-relaunch"] = function () {
-//   process.env["BROWSERSYNC_OPEN"] = true
-//   exports.watch()
-// }
+module.exports = {
+  prepareSite,
+  graduatePeerDeps,
+  readmeLint,
+  packageLint,
+  checkPeerDependencies,
+  version,
+  dev,
+  devHeavy,
+  'watch-relaunch': watchRelaunch,
+  buildDocs: builder.buildDocs,
+  releaseBundles,
+  prepare: site.copySiteResources
+};
 
-// exports.buildDocs = builder.buildDocs
-
-// exports.releaseBundles = releaseBundles
-
-// exports.prepare = site.copySiteResources
-
-prepareSite()

@@ -21,6 +21,20 @@
     "url": "https://github.com/adobe/spectrum-css/issues"
   },
   "scripts": {
+    "prepareSite": "node index.js prepareSite",
+    "graduatePeerDeps": "node index.js graduatePeerDeps",
+    "readmeLint": "node index.js readmeLint",
+    "packageLint": "node index.js packageLint",
+    "checkPeerDependencies": "node index.js checkPeerDependencies",
+    "version": "node index.js version",
+    "devAll": "node index.js dev",
+    "devHeavy": "node index.js devHeavy",
+    "watch-relaunch": "node index.js watch-relaunch",
+    "buildDocs": "node index.js buildDocs",
+    "releaseBundles": "node index.js releaseBundles",
+    "prepareAll": "node index.js prepare",
+
+
     "dev:docs": "gulp dev && NODE_ENV=development BROWSERSYNC_OPEN=true yarn workspace @spectrum-css/documentation run build --serve",
     "build:docs": "yarn workspace @spectrum-css/documentation build",
     "build": "run-s build:site build:preview # preview cannot be built until the component assets are finished",

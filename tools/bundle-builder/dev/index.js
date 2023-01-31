@@ -118,16 +118,14 @@ function watchSite() {
     }
 
     files.forEach((file) => {
-      chokidar.watch(file, (eventType) => {
+      chokidar.watch(file, async (eventType) => {
         if (eventType === "change") {
-          async.series([
-            docs.buildSite_pages,
-            reload,
-          ], (err) => {
-            if (err) {
-              console.error("Error in bundle_builder dev " + err);
-            }
-          });
+          try {
+            await docs.buildSite_pages()
+            await reload()
+          } catch (e) {
+            console.err(e)
+          }
         }
       })
     })
@@ -142,21 +140,17 @@ function watchSite() {
     }
 
     files.forEach((file) => {
-      chokidar.watch(file, (eventType) => {
+      chokidar.watch(file, async (eventType) => {
         if (eventType === "change") {
-          async.series([
-            (callback) => {
-              async.parallel([
-                docs.buildSite_html,
-                docs.buildDocs,
-              ], callback);
-            },
-            reload,
-          ], (err) => {
-            if (err) {
-              console.error("Error in bundle_builder dev " + err);
-            }
-          });
+          try {
+            await Promise.all([
+              docs.buildSite_html(),
+              docs.buildDocs()
+            ])
+            await reload();
+          } catch (e) {
+            console.error(e)
+          }
         }
       })
     })
@@ -168,20 +162,16 @@ function watchSite() {
     path.join(dirs.site, "util.js"),
   ]
   templates.forEach((template) => {
-    chokidar.watch(template, (eventType) => {
+    chokidar.watch(template, async (eventType) => {
       if (eventType === "change") {
-        async.series([
-          (callback) => {
-            async.parallel([
-              docs.buildDocs,
-            ], callback);
-          },
-          reload,
-        ], (err) => {
-          if (err) {
-            console.error("Error in bundle_builder dev " + err);
-          }
-        });
+        try {
+          await Promise.all([
+            docs.buildDocs()
+          ])
+          await reload()
+        } catch (e) {
+          console.error(e)
+        }        
       }
     })
   })
@@ -199,23 +189,21 @@ function watchSite() {
       }
 
       files.forEach((file) => {
-        chokidar.watch(file, (eventType) => {
+        chokidar.watch(file, async (eventType) => {
           if (eventType === "change") {
-            async.series([
-              docs.buildSite_copyFreshResources,
-              function injectSiteResources() {
+            try {
+              await docs.buildSite_copyFreshResources();
+              async function injectSiteResources() {
                 const cssFiles = fs.readdirSync(path.join('dist', 'docs', 'css')).filter((fl) => fl.endsWith('.css'));
                 const jsFiles = fs.readdirSync(path.join('dist', 'docs', 'js')).filter((fl) => fl.endsWith('.js'));
                 const allFiles = [...cssFiles, ...jsFiles];
                 allFiles.forEach((fl) => {
                   browserSync.stream(path.join('dist', 'docs', fl));
                 });
-              },
-            ], (err) => {
-              if (err) {
-                console.error("Error in bundle_builder dev " + err);
               }
-            });
+            } catch (e) {
+              console.error(e)
+            }
           }
         })
       })
@@ -224,17 +212,15 @@ function watchSite() {
 }
 
 function watchCommons() {
-  chokidar.watch(`${dirs.components}/commons/*.css`, (eventType) => {
+  chokidar.watch(`${dirs.components}/commons/*.css`, async (eventType) => {
     if (eventType === "change") {
-      async.series([
-        bundleBuilder.buildDepenenciesOfCommons,
-        bundleBuilder.copyPackages,
-        reload,
-      ], (err) => {
-        if (err) {
-          console.error("Error in bundle_builder dev " + err);
-        }
-      });
+      try {
+        await bundleBuilder.buildDepenenciesOfCommons();
+        await bundleBuilder.copyPackages();
+        await reload()
+      } catch (e) {
+        console.error(e)
+      }
     }
   })
 }
