@@ -3,6 +3,16 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+<a name="5.0.0"></a>
+# 5.0.0
+🗓 2023-01-31 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/commons@5.0.0-beta.0...@spectrum-css/commons@5.0.0)
+
+**Note:** Version bump only for package @spectrum-css/commons
+
+
+
+
+
 <a name="5.0.0-beta.0"></a>
 # 5.0.0-beta.0
 🗓 2023-01-31 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/commons@4.0.2...@spectrum-css/commons@5.0.0-beta.0)
