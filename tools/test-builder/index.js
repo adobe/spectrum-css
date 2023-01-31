@@ -9,36 +9,28 @@ the License is distributed on an "AS IS" BASIS, WITHOUT WARRANTIES OR REPRESENTA
 OF ANY KIND, either express or implied. See the License for the specific language
 governing permissions and limitations under the License.
 */
-
+const scenarioList = require('./plugins/scenarioList');
 const fs = require('fs');
 const {getPackages} = require('@lerna/project');
 const { PackageGraph } = require('@lerna/package-graph');
-const glob = require('glob');
-const scenarioList = require('./plugins/scenarioList');
+const glob = require("glob");
+const util = require("util");
 
-const buildBaseScenarioList = () => {
-  glob('dist/docs/*.html', (err, files) => {
-    if (err) {
-      console.error("Error in component test builder docs " + err);
-      return;
-    }
+const buildBaseScenarioList = async () => {
+  const htmlFiles = await util.promisify(glob)('dist/docs/*.html');
 
-    files.forEach((file) => {
-      fs.readFile(file, (err, data) => {
-        if (err) {
-          console.error("Error in component test builder docs " + err);
-          return;
-        }
+  let scenarioListOutput = [];
+  for (const htmlFile of htmlFiles) {
+    scenarioListOutput = scenarioListOutput.concat(scenarioList(htmlFile));
+  }
 
-        const transformedData = scenarioList(data);
-
-        fs.writeFile(file, transformedData, (err) => {
-          if (err) {
-            console.error("Error in component test builder docs " + err);
-          }
-        });
+  return new Promise((resolve, reject) => {
+    fs.writeFile("backstop_data/backstop_scenarios.json",
+      JSON.stringify(scenarioListOutput, null, 2),
+      (err) => {
+        if (err) reject(err);
+        resolve();
       });
-    });
   });
 };
 
@@ -46,25 +38,26 @@ const addLocalDependents = async () => {
   const packages = await getPackages('.');
   const packageGraph = new PackageGraph(packages);
   const packageLocalDependentsSet
-    = JSON.parse(fs.readFileSync('backstop_scenarios.json', 'utf8')).reduce((acc, current) => {
+    = JSON.parse(fs.readFileSync('backstop_data/backstop_scenarios.json', 'utf8')).reduce((acc, current) => {
     if (!acc.has(current.package) && packageGraph.get(current.package)) {
       acc.set(current.package, Array.from(packageGraph.get(current.package).localDependents.keys()));
     }
     return acc;
   }, new Map());
-  return fs.writeFile('packageDependentMap.json',
+  return fs.writeFile('backstop_data/packageDependentMap.json',
     JSON.stringify(Array.from(packageLocalDependentsSet.entries()), null, 2),
     (err) => {
       if (err) throw err;
     });
 };
 
-exports.buildBaseScenarioList = buildBaseScenarioList;
-exports.addLocalDependents = addLocalDependents;
+const init = async () => {
+  try {
+    await buildBaseScenarioList();
+    await addLocalDependents();
+  } catch (error) {
+    console.error(error);
+  }
+};
 
-const testInit = async () => {
-  await buildBaseScenarioList();
-  await addLocalDependents();
-}
-
-testInit();
+init();

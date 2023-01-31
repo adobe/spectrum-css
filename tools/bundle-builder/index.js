@@ -82,140 +82,33 @@ async function getDependencyOrder() {
   dependencyOrder = await depUtils.getFolderDependencyOrder(dirs.components)
 }
 
-const buildCombined = async.series(
-  [
-    getDependencyOrder,
-    (callback) => {
-      async.parallel(
-        [
-          () => concatPackageFiles(
-            "buildCombined_core",
-            "index.css",
-            "spectrum-core.css",
-            callback
-          ),
-          () => concatPackageFiles(
-            "buildCombined_large",
-            "index-lg.css",
-            "spectrum-core-lg.css",
-            callback
-          ),
-          () => concatPackageFiles(
-            "buildCombined_diff",
-            "index-diff.css",
-            "spectrum-core-diff.css",
-            callback
-          ),
-          () => concatPackageFiles(
-            "buildCombined_light",
-            "multiStops/light.css",
-            "spectrum-light.css",
-            callback
-          ),
-          () => concatPackageFiles(
-            "buildCombined_lightest",
-            "multiStops/lightest.css",
-            "spectrum-lightest.css",
-            callback
-          ),
-          () => concatPackageFiles(
-            "buildCombined_dark",
-            "multiStops/dark.css",
-            "spectrum-dark.css",
-            callback
-          ),
-          () => concatPackageFiles(
-            "buildCombined_darkest",
-            "multiStops/darkest.css",
-            "spectrum-darkest.css",
-            callback
-          ),
-        ],
-        callback
-      )
-    },
-  ],
-  (err) => {
-    if (err) {
-      console.error(err)
-    }
-  }
-)
+let buildCombined = async () => {
+  await getDependencyOrder();
+  await Promise.all([
+  concatPackageFiles('buildCombined_core', 'index.css', 'spectrum-core.css'),
+  concatPackageFiles('buildCombined_large', 'index-lg.css', 'spectrum-core-lg.css'),
+  concatPackageFiles('buildCombined_diff', 'index-diff.css', 'spectrum-core-diff.css'),
+  concatPackageFiles('buildCombined_light', 'multiStops/light.css', 'spectrum-light.css'),
+  concatPackageFiles('buildCombined_lightest', 'multiStops/lightest.css', 'spectrum-lightest.css'),
+  concatPackageFiles('buildCombined_dark', 'multiStops/dark.css', 'spectrum-dark.css'),
+  concatPackageFiles('buildCombined_darkest', 'multiStops/darkest.css', 'spectrum-darkest.css')
+  ]);
+  };
 
-const buildStandalone = async.series(
-  [
-    getDependencyOrder,
-    (callback) => {
-      async.parallel(
-        [
-          () => concatPackageFiles(
-            "buildStandalone_light",
-            ["index.css", "colorStops/light.css"],
-            "spectrum-light.css",
-            "standalone/",
-            callback
-          ),
-          () => concatPackageFiles(
-            "buildStandalone_lightest",
-            ["index.css", "colorStops/lightest.css"],
-            "spectrum-lightest.css",
-            "standalone/",
-            callback
-          ),
-          () => concatPackageFiles(
-            "buildStandalone_dark",
-            ["index.css", "colorStops/dark.css"],
-            "spectrum-dark.css",
-            "standalone/",
-            callback
-          ),
-          () => concatPackageFiles(
-            "buildStandalone_darkest",
-            ["index.css", "colorStops/darkest.css"],
-            "spectrum-darkest.css",
-            "standalone/",
-            callback
-          ),
-          () => concatPackageFiles(
-            "buildStandalone_lightLarge",
-            ["index-lg.css", "colorStops/light.css"],
-            "spectrum-light-lg.css",
-            "standalone/",
-            callback
-          ),
-          () => concatPackageFiles(
-            "buildStandalone_lightestLarge",
-            ["index-lg.css", "colorStops/lightest.css"],
-            "spectrum-lightest-lg.css",
-            "standalone/",
-            callback
-          ),
-          () => concatPackageFiles(
-            "buildStandalone_darkLarge",
-            ["index-lg.css", "colorStops/dark.css"],
-            "spectrum-dark-lg.css",
-            "standalone/",
-            callback
-          ),
-          () => concatPackageFiles(
-            "buildStandalone_darkestLarge",
-            ["index-lg.css", "colorStops/darkest.css"],
-            "spectrum-darkest-lg.css",
-            "standalone/",
-            callback
-          ),
-        ],
-        callback
-      )
-    },
-  ],
-  (err) => {
-    if (err) {
-      console.error(err)
-    }
-  }
-)
 
+  let buildStandalone = async () => {
+    await getDependencyOrder();
+    await Promise.all([
+      concatPackageFiles('buildStandalone_light', ['index.css', 'colorStops/light.css' ], 'spectrum-light.css', 'standalone/'),
+      concatPackageFiles('buildStandalone_lightest', ['index.css', 'colorStops/lightest.css' ], 'spectrum-lightest.css', 'standalone/'),
+      concatPackageFiles('buildStandalone_dark', ['index.css', 'colorStops/dark.css' ], 'spectrum-dark.css', 'standalone/'),
+      concatPackageFiles('buildStandalone_darkest', ['index.css', 'colorStops/darkest.css' ], 'spectrum-darkest.css', 'standalone/'),
+      concatPackageFiles('buildStandalone_lightLarge', ['index-lg.css', 'colorStops/light.css' ], 'spectrum-light-lg.css', 'standalone/'),
+      concatPackageFiles('buildStandalone_lightestLarge', ['index-lg.css', 'colorStops/lightest.css' ], 'spectrum-lightest-lg.css', 'standalone/'),
+      concatPackageFiles('buildStandalone_darkLarge', ['index-lg.css', 'colorStops/dark.css' ], 'spectrum-dark-lg.css', 'standalone/'),
+      concatPackageFiles('buildStandalone_darkestLarge', ['index-lg.css', 'colorStops/darkest.css' ], 'spectrum-darkest-lg.css', 'standalone/'),
+    ]);
+  };
 // run buildLite on a selected set of packages that depend on commons
 // yay: faster than 'rebuild everything' approach
 // boo: must add new packages here as commons grows
@@ -276,22 +169,27 @@ async function buildIfTopLevel() {
 
   if (process.cwd() === dirs.topLevel) {
     // Run a build for all packages first
-    return async.series([subrunner.buildComponents, builtTasks], (err) => {
-      if (err) {
-        console.error(err)
-      }
-    })
+    try {
+      await subrunner.buildComponents();
+      await builtTasks();
+    } catch (error) {
+      console.error(error);
+    }
   }
 
   // They're already built, just include the output
   return builtTasks
 }
 
-const build = async.series([clean, buildIfTopLevel(), vars.copyVars], (err) => {
-  if (err) {
-    console.error(err)
+const build = async () => {
+  try {
+    await clean();
+    await buildIfTopLevel();
+    await vars.copyVars();
+  } catch (error) {
+    console.error(error);
   }
-})
+}
 
 // const subrunner = {
 //   runTaskOnAllComponents(task, callback) {
@@ -337,34 +235,35 @@ const buildHeavy = async () => {
 let devTask
 if (process.cwd() === dirs.topLevel) {
   // Build all packages if at the top level
-  devTask = async.series([buildLite, dev.watch], (err) => {
-    if (err) {
-      console.error(err)
+  devTask = async () => {
+    try {
+      await buildLite()
+      await dev.watch()
+    } catch (error) {
+      console.error(error);
     }
-  })
+  }
 } else {
   // Otherwise, just start watching
-  devTask = async.series(
-    [
-      clean,
-      (callback) => {
-        async.parallel([docs.build, copyPackages], callback)
-      },
-      dev.watch,
-    ],
-    (err) => {
-      if (err) {
-        console.error(err)
-      }
+  devTask = async () => {
+    try {
+      await clean();
+      await Promise.all([docs.build(), copyPackages()]);
+      await dev.watch();
+    } catch (error) {
+      console.error(error);
     }
-  )
+  }
 }
 
-exports.devHeavy = async.series([buildHeavy, dev.watch], (err) => {
-  if (err) {
-    console.error(err)
+exports.devHeavy = async () => {
+  try {
+  await buildHeavy()
+  await dev.watch()
+  }  catch (error) {
+    console.error(error);
   }
-})
+}
 
 exports.copyVars = vars.copyVars
 
@@ -377,20 +276,17 @@ exports.prePack = async () => {
   }
 }
 
-exports.release = async.series(
-  [
-    release.updateAndTagRelease,
-    exec.task("yarnInstall", "yarn install --frozen-lockfile"),
-    build,
-    exec.task("npmPublish", "npm publish"),
-    exec.task("gitPush", "git push"),
-  ],
-  (err) => {
-    if (err) {
-      console.error(err)
-    }
+exports.release = async () => {
+  try {
+    await release.updateAndTagRelease();
+    await exec.task("yarnInstall", "yarn install --frozen-lockfile");
+    await build();
+    await exec.task("npmPublish", "npm publish");
+    await exec.task("gitPush", "git push");
+  } catch (err) {
+    console.error(err);
   }
-)
+}
 
 exports.generateChangelog = release.generateChangelog
 exports.buildUniqueVars = vars.buildUnique
