@@ -13,7 +13,6 @@ const fs = require("fs")
 const StyleDictionary = require("style-dictionary").extend("config.js")
 const fg = require("fast-glob")
 const path = require("path")
-const async = require("async")
 const del = require("del");
 
 async function clean() {
