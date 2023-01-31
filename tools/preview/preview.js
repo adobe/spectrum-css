@@ -27,6 +27,9 @@ import '@spectrum-css/expressvars/css/scales/spectrum-large.css';
 
 import '@spectrum-css/tokens/dist/index.css';
 
+// Loading typography on every page because it's a useful utility
+import '@spectrum-css/typography';
+
 import './global.js';
 
 // Rendered as controls; these properties are assigned
@@ -70,10 +73,13 @@ export const argTypes = {
     color: {
       name: 'Color',
       description: 'Controls the color context of the component.',
-      options: ['light', 'dark', 'darkest'],
-      defaultValue: 'light',
       type: { required: true },
-      table: { category: 'Global', defaultValue: { summary: 'light' } },
+      table: {
+        type: { summary: 'light | dark | darkest' },
+        defaultValue: { summary: 'light' },
+        category: 'Global',
+      },
+      options: ['light', 'dark', 'darkest'],
       control: {
         type: 'select',
         labels: {
@@ -81,14 +87,18 @@ export const argTypes = {
           dark: 'Dark',
           darkest: 'Darkest',
         }
-      }
+      },
     },
     scale: {
       name: 'Platform scale',
-      defaultValue: 'medium',
-      table: { category: 'Global', defaultValue: { summary: 'm' } },
-      options: ['medium', 'large'],
+      description: 'Controls the platform scale of the component.',
+      table: {
+        type: { summary: 'medium | large' },
+        defaultValue: { summary: 'medium' },
+        category: 'Global',
+      },
       type: { required: true },
+      options: ['medium', 'large'],
       control: {
           type: 'radio',
           labels: {
@@ -102,19 +112,44 @@ export const argTypes = {
       name: 'Reduce motion',
       title: 'Reduce motion',
       description: 'Reduce animation and transitions',
-      defaultValue: false,
-      control: { type: 'boolean' },
-      table: { category: 'Global', defaultValue: { summary: false } },
+      table: {
+        type: { summary: 'boolean' },
+        defaultValue: { summary: false },
+        category: 'Global',
+      },
       type: { required: true },
+      control: 'boolean',
     },
     express: {
       name: 'Express',
-      description: 'Use the express theme',
-      defaultValue: false,
-      table: { category: 'Global', defaultValue: { summary: false } },
+      description: 'The express theme is a variation of Spectrum.',
+      table: {
+        type: { summary: 'boolean' },
+        defaultValue: { summary: false },
+        category: 'Global',
+      },
       type: { required: true },
-      control: { type: 'boolean' },
+      control: 'boolean',
     },
+    /* None of these should show up in the args table but are necessary for rendering the templates */
+    rootClass: {
+      name: "Class name",
+      type: { name: "string", required: true },
+      table: { disable: true },
+      control: { readonly: true }
+    },
+    customClasses: {
+      name: "Custom classes",
+      type: { name: "string", required: false },
+      table: { disable: true },
+      control: 'object',
+    },
+    id: {
+      name: "Element ID",
+      type: { name: "string", required: false },
+      table: { disable: true },
+      control: 'text',
+    }
 };
 
 export const args = {
@@ -122,6 +157,7 @@ export const args = {
     scale: 'medium',
     reducedMotion: false,
     express: false,
+    customClasses: [],
 };
 
 export const parameters = {
@@ -132,7 +168,7 @@ export const parameters = {
   isToolShown: false,
   isFullscreen: false,
   controls: {
-    expanded: false,
+    expanded: true,
     hideNoControlsWarning: true,
     sort: 'requiredFirst',
   },

@@ -1,85 +1,118 @@
-import { html } from 'lit-html';
-import { unsafeHTML } from 'lit-html/directives/unsafe-html.js';
+import { html } from "lit-html";
+import { ifDefined } from "lit-html/directives/if-defined.js";
+import { unsafeHTML } from "lit-html/directives/unsafe-html.js";
+import { classMap } from "lit-html/directives/class-map.js";
 
-const fetchIconSVG = (iconName, scale, setName = undefined) => {
-  if (!setName || setName === 'workflow') {
-    // Check adobe workflow icons first
-    let icon = require(`!!raw-loader!@adobe/spectrum-css-workflow-icons/dist/${scale !== 'medium' ? `24` : `18`}/${iconName}.svg`);
-    if (icon && icon.default) {
-      return {
-        icon: icon.default,
-        setName: 'workflow'
-      };
-    }
-  }
+import { fetchIconSVG } from "./utilities.js";
 
-  // Check locally for icon set if not found
-  icon = require(`!!raw-loader!../${scale ? scale : 'medium'}/${iconName}.svg`);
+/**
+ * @typedef { keyof import("./icon.stories").default.args } IconArgs
+ * @typedef { IconArgs & { scale: string, useRef: boolean, setName: 'workflow' | 'ui' } } IconProps
+ */
 
-  return {
-    icon: icon ? icon.default : undefined,
-    setName: 'ui'
-  };
-}
-
+/**
+ * Template for rendering an icon
+ * @type {(IconProps) => import('lit-html').TemplateResult<1>}
+ */
 export const Template = ({
-    iconName,
-    size = 'm', 
-    fill = undefined,
-    scale = 'medium',
-    customClasses = [],
-    useRef = false,
-    setName = undefined,
+  rootClass = "spectrum-Icon",
+  size = "m",
+  iconName,
+  fill,
+  customClasses = [],
+  useRef = false,
+  setName = "workflow",
+  ...globals
 }) => {
-  if (!iconName) return html``;
-
-  let iconSVG;
-  if (!useRef) {
-    const iconData = fetchIconSVG(iconName, scale, setName);
-
-    if (!iconData || !iconData.icon) {
-      console.error(`Icon ${iconName} not found in ${!setName ? `either the workflow or UI set.` : `the ${setName} set.`}`); 
-      return;
-    }
-
-    iconSVG = iconData.icon;
-    setName = iconData.setName;
-  }
-
-  const className = !setName || setName === 'workflow' ? 'spectrum-Icon' : 'spectrum-UIIcon';
-  const classList = [ className, ...customClasses ];
-
-  // If the icon was found in the workflow set, add the standard classes
-  if (setName === 'workflow') {
-    classList.push(
-      `${className}--size${size.toUpperCase()}`,
+  if (!iconName) {
+    console.warn(
+      "Could not render a result because no icon name was provided to the icon template."
     );
-  } else {
-    classList.push(
-      `${className}-${iconName}`,
-      `${className}--${scale}`
+    return html``;
+  }
+
+  const { scale } = globals;
+
+  let idKey = iconName;
+  if (['Chevron', 'Arrow'].some(c => iconName.startsWith(c)) && ['Right', 'Left', 'Down', 'Up'].some(c => iconName.includes(c))) {
+    idKey = iconName.replace(/(Right|Left|Down|Up)/, '');
+  }
+
+  let inlineStyle;
+  if (fill) inlineStyle = `color: ${fill}`;
+  let { icon, setName: foundSet } = !useRef
+    ? fetchIconSVG({ iconName: idKey, setName, ...globals })
+    : { icon: undefined, setName };
+
+  if (!useRef && !icon) {
+    console.warn(`Icon ${iconName} not found.`);
+    return html``;
+  }
+
+  if (foundSet) setName = foundSet;
+
+  try {
+    import(/* webpackPrefetch: true */ "../index.css");
+  } catch (e) {
+    console.warn(e);
+  }
+
+  const classList = {
+    [rootClass]: true,
+    [`spectrum-UIIcon-${iconName}`]: !!(setName === "ui"),
+    [`${rootClass}--${scale}`]: !!(setName === "ui" && scale),
+    [`${rootClass}--size${size?.toUpperCase()}`]: !!(
+      (!setName || setName === "workflow") &&
+      size
+    ),
+    ...customClasses.reduce((a, c) => ({ ...a, [c]: true }), {}),
+  };
+
+  // If we found an icon above, return that value with the appended class list
+  if (icon) {
+    return html`${unsafeHTML(
+      icon.replace(
+        /^<svg(.*)>/,
+        `<svg class="${Object.entries(classList)
+          .filter(([, v]) => v === true)
+          .map(([k]) => k)
+          .join(" ")}"${
+          inlineStyle ? ` style="${inlineStyle}"` : ""
+        } focusable="false" aria-hidden="true" role="img" $1>`
+      )
+    )}`;
+  }
+
+  // Otherwise, we need to render a reference to the icon
+
+  // ui ID: #spectrum-css-icon-${iconName}
+  // workflow ID: #spectrum-icon-(18|24)-${iconName}
+  const iconID =
+    setName !== "workflow"
+      ? `spectrum-css-icon-${idKey}`
+      : `spectrum-icon-${scale !== "medium" ? `24` : `18`}-${iconName}`;
+
+  try {
+    import(
+      /* webpackPrefetch: true */ `!!raw-loader!@adobe/spectrum-css-workflow-icons/dist/spectrum-icons.svg`
     );
+    import(
+      /* webpackPrefetch: true */ `!!raw-loader!@spectrum-css/icon/dist/spectrum-css-icons.svg`
+    );
+  } catch (e) {
+    console.warn(e);
   }
 
-  const inlineStyle = fill ? `color: ${fill}` : '';
-  if (!useRef) {
-    const iconString = iconSVG.replace(/^<svg(.*)>/, `<svg class="${classList.join(' ')}" style="${inlineStyle}" focusable="false" aria-hidden="true" role="img" $1>`);
-    return html`${unsafeHTML(iconString)}`;
-  }
-
-  let iconID;
-  if (setName === 'workflow') {
-    // workflow ID: spectrum-icon-(18|24)-${iconName}
-    iconID = `spectrum-icon-${scale !== 'medium' ? `24` : `18`}-${iconName}`;
-  } else {
-    // ui ID: spectrum-css-icon-${iconName}
-    iconID = `spectrum-css-icon-${iconName}`;
-  }
-
-  return html`
-    <svg class=${classList.join(' ')} style=${inlineStyle} focusable="false" aria-hidden="true" aria-labelledby=${iconName} role="img">
-      <title id=${iconName}>${iconName.replace(/([A-Z])/g, ' $1').trim()}</title>
-      <use xlink:href="#${iconID}" href="#${iconID}"/>
-    </svg>
-  `;
+  return html` <svg
+    class=${classMap(classList)}
+    id=${ifDefined(globals.id)}
+    style=${ifDefined(inlineStyle)}
+    focusable="false"
+    aria-hidden="true"
+    aria-labelledby=${iconName}
+    role="img"
+  >
+    <title id=${iconName}>${iconName.replace(/([A-Z])/g, " $1").trim()}</title>
+    <use xlink:href="#${iconID}" href="#${iconID}" />
+  </svg>`;
 };

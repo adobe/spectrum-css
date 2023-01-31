@@ -1,98 +1,74 @@
-// More on default export: https://storybook.js.org/docs/web-components/writing-stories/introduction#default-export
-// More on args: https://storybook.js.org/docs/web-components/writing-stories/args
-
 // Import the component markup template
 import { Template } from "./template";
 
-// Load styles for this component
-import '../index.css';
-
 export default {
   title: "Help text",
-  description: "Help text provides either an informative description or an error message that gives more context about what a user needs to input. It’s commonly used in forms.",
+  description:
+    "Help text provides either an informative description or an error message that gives more context about what a user needs to input. It’s commonly used in forms.",
   component: "HelpText",
   argTypes: {
     reducedMotion: { table: { disable: true } },
     text: {
       name: "Text",
       type: { name: "string", required: true },
-      defaultValue: "Create a password with at least 8 characters.",
       table: {
         type: { summary: "string" },
         disable: false,
         category: "Component",
-        defaultValue: {
-          summary: "Create a password with at least 8 characters."
-        }
       },
-      control: { type: "text" }
+      control: { type: "text" },
     },
     treatment: {
       name: "Treatment",
-      type: { name: "string", required: true },
-      defaultValue: "neutral",
+      type: { name: "string" },
       table: {
         type: { summary: "string" },
         category: "Component",
-        defaultValue: { summary: "neutral" }
       },
       options: ["neutral", "negative"],
-      control: "inline-radio"
+      control: "inline-radio",
     },
     hideIcon: {
       name: "HideIcon",
-      type: { name: "boolean", required: true },
-      defaultValue: false,
+      type: { name: "boolean" },
       description: "Only applicable if treatment is negative.",
       table: {
         type: { summary: "boolean" },
         disable: false,
         category: "Advanced",
-        defaultValue: null
       },
       control: {
         type: "boolean",
-        if: { arg: 'treatment', eq: 'negative' }
-      }
-    },
-    size: {
-      name: "Size",
-      type: { name: "string", required: true },
-      defaultValue: "m",
-      table: {
-        type: { summary: "string" },
-        category: "Component",
-        defaultValue: { summary: "m" }
+        if: { arg: "treatment", eq: "negative" },
       },
-      options: ["s", "m", "l", "xl"],
-      control: "select"
     },
     isDisabled: {
       name: "IsDisabled",
-      type: { name: "boolean", required: true },
-      defaultValue: false,
+      type: { name: "boolean" },
       table: {
         type: { summary: "boolean" },
-        category: "Advanced"
+        category: "Advanced",
       },
-      control: "boolean"
-    }
+      control: "boolean",
+    },
   },
   args: {
+    rootClass: "spectrum-HelpText",
     text: "Create a password with at least 8 characters.",
     treatment: "neutral",
     hideIcon: false,
-    size: "m",
-    isDisabled: false
+    isDisabled: false,
   },
   parameters: {
     actions: {
-      handles: []
+      handles: [],
     },
     status: {
-      type: process.env.MIGRATED_PACKAGES.includes('helptext') ? 'migrated' : undefined
-    }
-  }
+      type: process.env.MIGRATED_PACKAGES.includes("helptext")
+        ? "migrated"
+        : undefined,
+    },
+  },
 };
 
 export const Default = Template.bind({});
