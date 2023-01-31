@@ -1,29 +1,59 @@
-import { html } from 'lit-html';
-import { classMap } from 'lit-html/directives/class-map.js';
+import { html } from "lit-html";
+import { classMap } from "lit-html/directives/class-map.js";
+import { ifDefined } from "lit-html/directives/if-defined.js";
 
-import { Template as IconTemplate } from '../../icon/stories/template.js';
+import { lowerCase, capitalize } from "lodash-es";
 
-export const titleCase = (str) => `${str.charAt(0).toUpperCase()}${str.slice(1)}`;
+import { Template as Icon } from "@spectrum-css/icon/stories/template.js";
 
-// More on component templates: https://storybook.js.org/docs/web-components/writing-stories/introduction#using-args
-export const Template = ({ label, hideLabel, icon, size, variant, staticColor, treatment, isDisabled, express }) => {
-  let classList = {};
-  
-  let className = 'spectrum-Button';
-  classList[className] = true;
+export const Template = ({
+  rootClass = "spectrum-Button",
+  customClasses = [],
+  size = "m",
+  label,
+  hideLabel = false,
+  icon,
+  variant,
+  staticColor,
+  treatment,
+  isDisabled = false,
+  isOpen = true,
+  ...globals
+}) => {
+  const { express } = globals;
+  try {
+    // Load styles for this component
+    import(/* webpackPrefetch: true */ "../index.css");
 
-  if (variant) classList[`${className}--${variant}`] = true;
-  if (treatment) classList[`${className}--${treatment}`] = true;
-  if (size) classList[`${className}--size${size.toUpperCase()}`] = true;
-  if (staticColor) classList[`${className}--static${titleCase(staticColor)}`] = true;
+    if (express) import(/* webpackPrefetch: true */ "../themes/express.css");
+    else import(/* webpackPrefetch: true */ "../themes/spectrum.css");
+  } catch (e) {
+    console.warn(e);
+  }
 
   return html`
-    <button class=${classMap(classList)} ?disabled=${isDisabled}>
-      ${typeof icon === 'string' ? IconTemplate({
-        iconName: icon,
-        size
-      }) : ''}
-      ${label && !hideLabel ? html`<span class=${`${className}-label`}>${label}</span>` : ''}
+    <button
+      class=${classMap({
+        [rootClass]: true,
+        "is-open": isOpen,
+        [`${rootClass}--size${size?.toUpperCase()}`]: typeof size !== "undefined",
+        [`${rootClass}--${variant}`]: typeof variant !== "undefined",
+        [`${rootClass}--${treatment}`]: typeof treatment !== "undefined",
+        [`${rootClass}--static${capitalize(lowerCase(staticColor))}`]: typeof staticColor !== "undefined",
+        ...customClasses.reduce((a, c) => ({ ...a, [c]: true }), {}),
+      })}
+      id=${ifDefined(globals.id)}
+      ?disabled=${isDisabled}>
+      ${icon
+        ? Icon({
+            ...globals,
+            iconName: icon,
+            customClasses: [`${rootClass}-UIIcon`],
+          })
+        : ""}
+      ${label && !hideLabel
+        ? html`<span class=${`${rootClass}-label`}>${label}</span>`
+        : ""}
     </button>
   `;
 };
