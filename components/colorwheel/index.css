@@ -35,8 +35,8 @@ governing permissions and limitations under the License.
 /********* WHCM *********/
 @media (forced-colors: active) {
   .spectrum-ColorWheel {
-    --spectrum-colorwheel-border-color-disabled : GrayText;
-    --spectrum-colorwheel-fill-color-disabled : Canvas;
+    --highcontrast-colorwheel-border-color-disabled : GrayText;
+    --highcontrast-colorwheel-fill-color-disabled : Canvas;
   }
   .spectrum-ColorWheel {
     forced-color-adjust: none;
@@ -44,7 +44,7 @@ governing permissions and limitations under the License.
 }
 
 %spectrum-ColorControl-handle--focused {
-  /* Bigger handle when focused */
+  /* Bigger colorhandle when focused */
   width: calc(var(--spectrum-colorhandle-size) * 2);
   height: calc(var(--spectrum-colorhandle-size) * 2);
 
@@ -52,7 +52,7 @@ governing permissions and limitations under the License.
   margin-top: calc(-1 * var(--spectrum-colorhandle-size));
 }
 
-/* hides slider component, see extend below */
+/* hides slider element, see extend below */
 %spectrum-ColorControl-hiddenField {
   opacity: 0;
   position: absolute;
@@ -66,7 +66,7 @@ governing permissions and limitations under the License.
 .spectrum-ColorWheel {
   position: relative;
   display: block;
-  min-width: var(--spectrum-colorwheel-min-width);
+  min-width: var(--spectrum-colorwheel-minimum-width);
   width: var(--spectrum-colorwheel-width);
   height: var(--spectrum-colorwheel-height);
   user-select: none;
@@ -102,11 +102,6 @@ governing permissions and limitations under the License.
   z-index: 1;
 }
 
-/* adjusts masks so it aligns with positioning of SVG  */
-.spectrum-ColorWheel-segment {
-  transform: translate(5px, 5px);
-}
-
 .spectrum-ColorWheel-outerCircle,
 .spectrum-ColorWheel-innerCircle {
   fill: transparent;
@@ -114,7 +109,7 @@ governing permissions and limitations under the License.
   stroke-width: var(--spectrum-colorwheel-border-width);
 }
 
-/* adjusts size of mask-disabled and inner circle track width */
+/* adjusts size of mask and inner circle track width */
 .spectrum-ColorWheel-track-width {
   r: calc(var(--spectrum-ColorWheel-radius) - var(--spectrum-colorwheel-track-width));
 }
