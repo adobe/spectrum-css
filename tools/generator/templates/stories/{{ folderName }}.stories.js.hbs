@@ -1,11 +1,7 @@
 // Import the component markup template
 import { Template } from "./template";
 
-// Load styles for this component
-import '../index.css';
-
 // Uncomment if you plan to include an icon
-// import '@spectrum-css/icon';
 // import { default as IconStories } from '../../icon/stories/icon.stories.js';
 
 // More on default export: https://storybook.js.org/docs/web-components/writing-stories/introduction#default-export
@@ -14,17 +10,6 @@ export default {
   description: "{{ description }}",
   component: "{{ pascalCase name }}",
   argTypes: {
-    rootClass: {
-      name: "Class name",
-      type: { name: "string", required: true },
-      defaultValue: "spectrum-{{ pascalCase name }}",
-      table: { disable: true },
-      control: { readonly: true },
-    },
-    // Allows this component to be leveraged as a sub-component of others
-    customClasses: { table: { disable: true } },
-    // Use this to allow custom content (nested components for example) to be passed to the template
-    content: { table: { disable: true } },
     size: {
       name: "Size",
       type: { name: "string", required: true },
@@ -42,6 +27,7 @@ export default {
   },
   // More on args: https://storybook.js.org/docs/web-components/writing-stories/args
   args: {
+    rootClass: "spectrum-{{ pascalCase name }}",
     size: "m",
   },
   parameters: {

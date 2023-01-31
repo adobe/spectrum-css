@@ -6,6 +6,9 @@ import { repeat } from "lit-html/directives/repeat.js";
 import { Template as Divider } from "@spectrum-css/divider/stories/template.js";
 import { Template as Icon } from "@spectrum-css/icon/stories/template.js";
 
+import "../index.css";
+import "../skin.css";
+
 export const MenuItem = ({
   rootClass,
   label,
@@ -17,6 +20,7 @@ export const MenuItem = ({
   isChecked = false,
   isFocused = false,
   role = "menuitem",
+  id,
   ...globals
 }) => html`
     <li
@@ -28,7 +32,7 @@ export const MenuItem = ({
         "is-selected": isSelected,
         "is-disabled": isDisabled,
       })}
-      id=${ifDefined(globals.id)}
+      id=${ifDefined(id)}
       role=${ifDefined(role)}
       aria-selected=${isSelected ? "true" : "false"}
       aria-disabled=${isDisabled ? "true" : "false"}
@@ -63,7 +67,7 @@ export const MenuGroup = ({
   ...globals
 }) => html`
     <li
-      id=${ifDefined(globals.id)}
+      id=${ifDefined(id)}
       role="presentation">
       ${heading
         ? html`<span
@@ -93,6 +97,7 @@ export const Submenu = ({
   isDisabled = false,
   isFocused = false,
   role = "menuitem",
+  id,
   ...globals
 }) => html`
     <li
@@ -102,7 +107,7 @@ export const Submenu = ({
         "is-disabled": isDisabled,
         "is-focused": isFocused,
       })}
-      id=${ifDefined(globals.id)}
+      id=${ifDefined(id)}
       role=${ifDefined(role)}
       tabindex="0">
       ${label
@@ -133,14 +138,6 @@ export const Template = ({
   id,
   ...globals
 }) => {
-  try {
-    // Load styles for this component
-    import(/* webpackPrefetch: true */ "../index.css");
-    import(/* webpackPrefetch: true */ "../skin.css");
-  } catch (e) {
-    console.warn(e);
-  }
-
   return html`
     <ul
       class=${classMap({

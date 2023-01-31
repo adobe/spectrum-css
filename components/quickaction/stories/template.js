@@ -4,6 +4,9 @@ import { ifDefined } from "lit-html/directives/if-defined.js";
 
 import { Template as ActionButton } from "@spectrum-css/actionbutton/stories/template.js";
 
+import "../index.css";
+import "../skin.css";
+
 export const Template = ({
   rootClass = "spectrum-QuickActions",
   size = "m",
@@ -12,19 +15,13 @@ export const Template = ({
   position,
   noOverlay = false,
   content = [],
+  id,
   customClasses = [],
   ...globals
 }) => {
   if (!content.length) {
     console.warn("Quick actions require content be passed in to render.");
     return html``;
-  }
-
-  try {
-    import(/* webpackPrefetch: true */ "../index.css");
-    import(/* webpackPrefetch: true */ "../skin.css");
-  } catch (e) {
-    console.warn(e);
   }
 
   if (!content.some((c) => c.icon)) {
@@ -42,7 +39,7 @@ export const Template = ({
           [`${rootClass}--textOnly`]: textOnly,
           ...customClasses.reduce((a, c) => ({ ...a, [c]: true }), {}),
         })}"
-        id=${ifDefined(globals.id)}>
+        id=${ifDefined(id)}>
         ${content.map((c) => {
           if (typeof c === "object" && c.icon || c.label) {
             return ActionButton({ ...globals, ...c, isQuiet: true });

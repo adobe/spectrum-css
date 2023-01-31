@@ -3,6 +3,7 @@ import { html } from "lit-html";
 // Import the component markup template
 import { Template } from "./template";
 
+
 import landscape from "./example-card-landscape.jpeg";
 import portrait from "./example-card-portrait.jpg";
 import square from "./example-card-square.png";

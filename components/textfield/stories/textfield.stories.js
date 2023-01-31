@@ -9,7 +9,7 @@ export default {
   argTypes: {
   },
   args: {
-    rootClass: "spectrum-TextField",
+    rootClass: "spectrum-Textfield",
   },
   parameters: {
     actions: {

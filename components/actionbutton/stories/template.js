@@ -6,6 +6,8 @@ import { lowerCase, capitalize } from "lodash-es";
 
 import { Template as Icon } from "@spectrum-css/icon/stories/template.js";
 
+import "../index.css";
+
 export const Template = ({
   rootClass = "spectrum-ActionButton",
   size = "m",
@@ -27,7 +29,6 @@ export const Template = ({
   const { express } = globals;
 
   try {
-    import(/* webpackPrefetch: true */ "../index.css");
     if (!express) import(/* webpackPrefetch: true */ "../themes/spectrum.css");
     else import(/* webpackPrefetch: true */ "../themes/express.css");
   } catch (e) {

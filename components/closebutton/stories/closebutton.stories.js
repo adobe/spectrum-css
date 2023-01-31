@@ -31,7 +31,7 @@ export default {
       type: { name: "boolean" },
       table: {
         type: { summary: "boolean" },
-        category: "Component",
+        category: "State",
       },
       control: "boolean",
     },
@@ -43,7 +43,7 @@ export default {
   },
   parameters: {
     actions: {
-      handles: ["click .spectrum-CloseButton", "focus .spectrum-CloseButton"],
+      handles: ["click .spectrum-CloseButton"],
     },
     status: {
       type: process.env.MIGRATED_PACKAGES.includes("closebutton")

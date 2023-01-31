@@ -2,20 +2,21 @@ import { html } from "lit-html";
 import { classMap } from "lit-html/directives/class-map.js";
 import { ifDefined } from "lit-html/directives/if-defined.js";
 
+import { Template as Modal } from '@spectrum-css/modal/stories/template.js';
+
+import "../index.css";
+
 export const Template = ({
   rootClass = "spectrum-Tray",
   isOpen = true,
   content = [],
   customClasses = ["spectrum-Modal"],
+  id,
   ...globals
 }) => {
   const { express } = globals;
 
   try {
-    import(/* webpackPrefetch: true */ "@spectrum-css/modal");
-
-    // Load styles for this component
-    import(/* webpackPrefetch: true */ "../index.css");
     if (!express) import(/* webpackPrefetch: true */ "../themes/spectrum.css");
     else import(/* webpackPrefetch: true */ "../themes/express.css");
   } catch (e) {
@@ -30,7 +31,7 @@ export const Template = ({
           "is-open": isOpen,
           ...customClasses.reduce((a, c) => ({ ...a, [c]: true }), {}),
         })}
-        id=${ifDefined(globals.id)}>
+        id=${ifDefined(id)}>
         ${content.map((c) => {
           const { template, ...props } = c;
           return template({ ...props, ...globals });

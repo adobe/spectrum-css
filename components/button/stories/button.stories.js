@@ -1,6 +1,7 @@
 // Import the component markup template
 import { Template } from "./template";
 
+
 import { default as IconStories } from "../../icon/stories/icon.stories.js";
 
 export default {
@@ -41,7 +42,7 @@ export default {
       },
       control: {
         type: "boolean",
-        // if: { arg: 'icon', truthy: true }
+        if: { arg: 'icon', truthy: true }
       },
     },
     variant: {
@@ -69,7 +70,7 @@ export default {
       type: { name: "boolean" },
       table: {
         type: { summary: "boolean" },
-        category: "Component",
+        category: "State",
       },
       control: "boolean",
     },
@@ -103,7 +104,7 @@ export default {
   },
   parameters: {
     actions: {
-      handles: ["click .spectrum-Button", "focus .spectrum-Button"],
+      handles: ["click .spectrum-Button"],
     },
     status: {
       type: process.env.MIGRATED_PACKAGES.includes("button")
