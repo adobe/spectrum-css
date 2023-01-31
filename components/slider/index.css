@@ -119,7 +119,9 @@ governing permissions and limitations under the License.
 
 /* Sliders with ticks + tick mark labels require more space */
 .spectrum-Slider--tick {
-  margin-block-end: var(--mod-slider-bottom-to-handle, var(--spectrum-slider-bottom-to-handle));
+  margin-block-end: calc(2 * var(--mod-slider-control-height, var(--spectrum-slider-control-height)));
+  .spectrum-Slider-controls {
+  }
 }
 
 .spectrum-Slider-track,
@@ -455,6 +457,10 @@ governing permissions and limitations under the License.
       inset-inline-end: 0;
     }
   }
+
+
+
+  
 }
 
 
