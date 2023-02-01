@@ -19,6 +19,7 @@ governing permissions and limitations under the License.
   --spectrum-colorwheel-border-width: var(--spectrum-border-width-100);
   --spectrum-colorwheel-fill-color-disabled: var(--spectrum-disabled-background-color);
 
+  --spectrum-colorwheel-colorarea-margin: var(--spectrum-color-wheel-color-area-margin);
   --spectrum-colorhandle-size: 16px; /* TODO replace with new token for ColorHandle, placeholder for old token var(--spectrum-colorhandle-size) */
 
   --spectrum-colorwheel-track-width: var(--spectrum-color-control-track-width);
@@ -99,6 +100,25 @@ governing permissions and limitations under the License.
   }
 }
 
+.spectrum-ColorWheel-internals{
+  display: flex;
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  width: 100px;
+  height: 100px;
+  margin: auto;
+}
+
+.spectrum-ColorWheel-colorarea{
+  display: inline-block;
+  height: auto;
+  width: 100%;
+  margin: var(--spectrum-colorwheel-colorarea-margin);
+}
+
 .spectrum-ColorWheel-wheel {
   position: relative;
   z-index: 1;
@@ -123,4 +143,61 @@ governing permissions and limitations under the License.
 .spectrum-ColorWheel-handle {
   left: 50%;
   top: 50%;
+}
+
+
+
+
+/* JENN DON"T COMMIT THIS!!  */
+
+.spectrum-ColorArea {
+  position: relative;
+  display: inline-block;
+  width: 100%;
+  height: 100%;
+
+  border-radius: 4px;
+
+  cursor: default;
+
+  user-select: none;
+
+  &.is-focused {
+    z-index: 2;
+
+    .spectrum-ColorArea-handle {
+      @extend %spectrum-ColorControl-handle--focused;
+    }
+  }
+
+  &.is-disabled {
+    pointer-events: none;
+  }
+
+  /* the floating inset box shadow must be a separate element since <canvas> won't take it */
+   &:before {
+    content: '';
+    z-index: 1;
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    border-radius: 4px;
+  }
+}
+
+.spectrum-ColorArea-handle {
+  left: 0;
+  top: 0;
+}
+
+.spectrum-ColorArea-gradient {
+  width: 100%;
+  height: 100%;
+  border-radius: 4px;
+}
+
+.spectrum-ColorArea-slider {
+  @extend %spectrum-ColorControl-hiddenField;
 }
