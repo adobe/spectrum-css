@@ -249,13 +249,6 @@ governing permissions and limitations under the License.
   }
 }
 
-
-/* TODO - stepper button border color - remove when stepper is migrated - remove from themes also */
-🤫 {
-  border-color: var(--spectrum-textfield-m-texticon-border-color);
-  border-width: var(--spectrum-stepper-border-size);
-}
-
 /********* TEXT FIELD and TEXT AREA Outer Wrapper *********/
 .spectrum-Textfield {
   position: relative;
