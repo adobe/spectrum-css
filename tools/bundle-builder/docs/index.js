@@ -13,22 +13,22 @@ const gulp = require('gulp');
 const fs = require('fs');
 const fsp = fs.promises;
 const path = require('path');
-const pugCompiler = require('pug');
-const pug = require('gulp-pug');
 const data = require('gulp-data');
 const rename = require('gulp-rename');
 const yaml = require('js-yaml');
 const through = require('through2');
 const ext = require('replace-ext');
 const logger = require('gulplog');
-const colors = require('colors');
 const lunr = require('lunr');
 
 const dirs = require('../lib/dirs');
-const exec = require('../lib/exec');
 const depUtils = require('../lib/depUtils');
 
 const npmFetch = require('npm-registry-fetch');
+
+// adding nunjucks
+const nunjucksCompiler = require('gulp-nunjucks-render')
+const nunjucks = require('nunjucks');
 
 let minimumDeps = [
   'icon',
@@ -60,24 +60,22 @@ let templateData = {
   nav: [],
   pkg: JSON.parse(fs.readFileSync('package.json', 'utf8'))
 };
-
 async function buildDocs_forDep(dep) {
   // Drop package org
   dep = dep.split('/').pop();
 
-  let metadata = JSON.parse(await fsp.readFile(path.join(dirs.components, 'vars', 'dist', 'spectrum-metadata.json')));
+  const metadata = await fsp.readFile(require.resolve('@spectrum-css/vars/dist/spectrum-metadata.json')).then(JSON.parse);
 
-  let dependencyOrder = await depUtils.getPackageDependencyOrder(path.join(dirs.components, dep));
+  const package = path.dirname(require.resolve(`@spectrum-css/${dep}/package.json`));
+  const dependencyOrder = await depUtils.getPackageDependencyOrder(package);
 
-  let dirName = `${dirs.components}/${dep}`;
-
-  logger.debug(`Will build docs for package in ${dirs.components}/${dep}`);
+  logger.debug(`Will build docs for package in ${package}`);
 
   return new Promise((resolve, reject) => {
     gulp.src(
       [
-        `${dirName}/metadata.yml`,
-        `${dirName}/metadata/*.yml`
+        `${package}/metadata.yml`,
+        `${package}/metadata/*.yml`
       ], {
         allowEmpty: true
       }
@@ -91,7 +89,7 @@ async function buildDocs_forDep(dep) {
         let componentDeps = dependencyOrder.map((dep) => dep.split('/').pop());
         componentDeps.push(dep);
 
-        let pkg = JSON.parse(await fsp.readFile(path.join(dirs.components, dep, 'package.json')));
+        let pkg = await fsp.readFile(path.join(dirs.components, dep, 'package.json')).then(JSON.parse);
 
         let docsDeps = minimumDeps.concat(componentDeps);
         docsDeps = docsDeps.filter((dep, i) => docsDeps.indexOf(dep) === i);
@@ -117,7 +115,7 @@ async function buildDocs_forDep(dep) {
           pkg: pkg
         });
       }))
-      .pipe(through.obj(function compilePug(file, enc, cb) {
+      .pipe(through.obj(function compileTemplates(file, enc, cb) {
         let component;
         var componentName = file.dirname.replace('/metadata', '').split('/').pop();
         try {
@@ -131,23 +129,51 @@ async function buildDocs_forDep(dep) {
           if (file.basename === 'metadata.yml') {
             // Use the component's name
             component.id = dep;
-          }
-          else {
+          } else {
             // Use the example file name
             component.id = path.basename(file.basename, '.yml');
           }
         }
-        let templateData = Object.assign({}, { component: component }, file.data || {});
+
+        require(`${dirs.site}/util`).populateDNAInfo(component, metadata);
+
+        // Arrange examples for processing
+        var examples;
+        if (!component.examples) {
+          // Only one top-level example
+          examples = [component];
+        } else {
+          // Multiple child examples
+          examples = component.examples;
+        }
+
+        if (!Array.isArray(examples)) {
+          examples = Object.values(examples);
+        }
+
+        examples.forEach(example => {
+          if (example.dnaStatus === 'Deprecated' || example.cssStatus === 'Deprecated') {
+            example.status = 'Deprecated';
+          } else if (example.cssStatus === 'Verified' || example.dnaStatus === 'Canon') {
+            example.status = 'Verified';
+          } else {
+            example.status = 'Contribution';
+          }
+        });
+
+        const dnaStatusTranslation = {
+          'Canon': 'Verified',
+          'Precursor': 'Contribution'
+        };
 
         file.path = ext(file.path, '.html');
 
-        try {
-          const templatePath = `${dirs.site}/templates/siteComponent.pug`;
-          let compiled = pugCompiler.renderFile(templatePath, templateData);
-          file.contents = Buffer.from(compiled);
-        } catch (err) {
-          return cb(err);
-        }
+        const compiled = nunjucks.render(`${dirs.site}/content/_includes/siteComponent.njk`, {
+          ...file.data || {},
+          component,
+          status: dnaStatusTranslation[component.dnaStatus] || component.dnaStatus,
+        });
+        file.contents = Buffer.from(compiled);
         cb(null, file);
       }))
       .pipe(gulp.dest('dist/docs/'))
@@ -222,12 +248,12 @@ function buildSite_generateIndex() {
 
       // Note: could merge main index here using technique from https://www.garysieling.com/blog/building-a-full-text-index-in-javascript
 
-      indexFile.contents = Buffer.from(JSON.stringify(index));
+      indexFile.contents = Buffer.from(JSON.stringify(index, null, 2));
       this.push(indexFile);
 
       let storeFile = latestFile.clone({contents: false});
       storeFile.path = path.join(latestFile.base, 'store.json');
-      storeFile.contents = Buffer.from(JSON.stringify(store));
+      storeFile.contents = Buffer.from(JSON.stringify(store, null, 2));
       this.push(storeFile);
 
       cb();
@@ -252,7 +278,7 @@ function buildSite_getData() {
     } catch (safeloadError) {
       logger.error('Uh, oh... during buildDocs_getData, yaml loading failed for'.yellow, componentName.red);
       throw safeloadError;
-    } 
+    }
 
     if (path.basename(file.basename) === 'metadata.yml') {
       file.basename = componentName;
@@ -277,34 +303,20 @@ function buildSite_getData() {
   })
 };
 
-function buildSite_copyResources() {
-  return gulp.src(`${dirs.site}/dist/**`)
-    .pipe(gulp.dest('dist/docs/'));
-}
-
-function buildSite_copyFreshResources() {
-  return gulp.src(`${dirs.site}/resources/**`)
-    .pipe(gulp.dest('dist/docs/'));
-}
-
 function buildSite_html() {
-  return gulp.src(`${dirs.site}/*.pug`)
+  return gulp.src(`${dirs.site}/*.njk`)
     .pipe(data(function(file) {
       return {
         util: require(`${dirs.site}/util`),
-        pageURL: path.basename(file.basename, '.pug') + '.html',
-        dependencyOrder: minimumDeps
+        pageURL: path.basename(file.basename, '.njk') + '.html',
+        dependencyOrder: minimumDeps,
+        nav: templateData.nav // adding navigation data
       };
     }))
-    .pipe(pug({
-      locals: templateData
+    .pipe(nunjucksCompiler({
+      path: 'site/content/_includes'
     }))
     .pipe(gulp.dest('dist/docs/'));
-}
-
-function copySiteWorkflowIcons() {
-  return gulp.src(path.join(path.dirname(require.resolve('@adobe/spectrum-css-workflow-icons')), 'spectrum-icons.svg'))
-    .pipe(gulp.dest('dist/docs/img/'));
 }
 
 let buildSite_pages = gulp.series(
@@ -312,20 +324,12 @@ let buildSite_pages = gulp.series(
   buildSite_html
 );
 
-exports.buildSite = gulp.parallel(
-  buildSite_copyResources,
-  buildSite_pages
-);
+exports.buildSite = buildSite_pages;
 
-let buildDocs = gulp.series(
-  buildSite_getData,
-  gulp.parallel(
+let buildDocs = gulp.parallel(
     buildSite_generateIndex,
     buildDocs_individualPackages,
-    buildSite_copyResources,
-    copySiteWorkflowIcons
-  )
-);
+  );
 
 let build = gulp.series(
   buildSite_getData,
@@ -336,10 +340,11 @@ let build = gulp.series(
 );
 
 exports.buildSite_getData = buildSite_getData;
-exports.buildSite_copyResources = buildSite_copyResources;
-exports.buildSite_copyFreshResources = buildSite_copyFreshResources;
 exports.buildSite_pages = buildSite_pages;
 exports.buildSite_html = buildSite_html;
 exports.buildDocs_forDep = buildDocs_forDep;
-exports.buildDocs = buildDocs;
+exports.buildDocs = gulp.series(
+  buildSite_getData,
+  buildDocs
+);
 exports.build = build;

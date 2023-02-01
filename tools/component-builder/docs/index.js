@@ -9,22 +9,25 @@ the License is distributed on an "AS IS" BASIS, WITHOUT WARRANTIES OR REPRESENTA
 OF ANY KIND, either express or implied. See the License for the specific language
 governing permissions and limitations under the License.
 */
-const gulp = require('gulp');
 const fsp = require('fs').promises;
 const path = require('path');
-const pug = require('pug');
+
+const gulp = require('gulp');
 const data = require('gulp-data');
 const rename = require('gulp-rename');
+
 const yaml = require('js-yaml');
 const merge = require('merge-stream');
 const through = require('through2');
 const ext = require('replace-ext');
 
-const sitePath = path.join(__dirname, '..', '..', '..', 'site');
-const util = require(`${sitePath}/util`);
+const nunjucks = require('nunjucks');
+
+const sitePath = path.dirname(require.resolve('@spectrum-css/documentation'));
+const util = require(`${sitePath}/util.js`);
 
 async function readJSONFile(filepath) {
-  return JSON.parse(await fsp.readFile(filepath));
+  return fsp.readFile(filepath).then(JSON.parse);
 }
 
 async function getDependencies(packagePath = '') {
@@ -64,7 +67,7 @@ function buildDocs_html() {
 
     let packageName = package.name.split('/').pop();
 
-    let dnaVars = readJSONFile(path.join(path.dirname(require.resolve('@spectrum-css/vars')), '..', 'dist', 'spectrum-metadata.json'));
+    let dnaVars = readJSONFile(require.resolve('@spectrum-css/vars/dist/spectrum-metadata.json'));
 
     gulp.src(
       [
@@ -87,14 +90,14 @@ function buildDocs_html() {
           util: util
         };
       }))
-      .pipe(through.obj(function compilePug(file, enc, cb) {
+      .pipe(through.obj(function compileTemplates(file, enc, cb) {
           let data = Object.assign({}, { component: yaml.safeLoad(String(file.contents)) }, file.data || {});
 
           file.path = ext(file.path, '.html');
 
           try {
-            const templatePath = `${sitePath}/templates/individualComponent.pug`;
-            let compiled = pug.renderFile(templatePath, data);
+            const template = nunjucks.compile(`${sitePath}/content/_includes/individualComponent.njk`);
+            let compiled = nunjucks.render(template, data);
             file.contents = Buffer.from(compiled);
           } catch (e) {
             return cb(e);
