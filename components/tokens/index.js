@@ -68,21 +68,25 @@ function styleDictionary(cb) {
 
 exports.clean = clean
 
-const parellelCalls = async () => {
-  try {
-    await clean()
-    await styleDictionary()
-    await buildCustoms()
-    await concatIndex()
-  } catch (e) {
-    throw new Error(e)
-  }
-}
+
 exports.build =
   exports.buildLite =
   exports.buildMedium =
   exports.default =
-    parellelCalls
+  function() {
+    return new Promise((resolve, reject) => {
+      Promise.all([
+        clean(),
+        styleDictionary(),
+        buildCustoms(),
+        concatIndex()
+      ]).then(() => {
+        resolve();
+      }).catch(err => {
+        reject(err);
+      });
+    });
+  };
 
 const parellelRebuildCustoms = async () => {
   try {

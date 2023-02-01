@@ -10,55 +10,53 @@ OF ANY KIND, either express or implied. See the License for the specific languag
 governing permissions and limitations under the License.
 */
 
-// const colors = require('colors');
+const colors = require("colors")
+const logger = require("../lib/logger")
 const path = require("path")
 const dirs = require("../lib/dirs")
 const depUtils = require("../lib/depUtils")
-const logger = require("../lib/logger")
 
 function chdir(dir) {
   process.chdir(dir)
   logger.debug(`Working directory changed to ${dir.magenta}`)
 }
 
+/*
+  Run the specified gulp task for the given package
+*/
 function runComponentTask(packageDir, task, callback) {
   // Drop org
-  const packageName = packageDir.split("/").pop()
+  packageName = packageDir.split("/").pop()
 
-  const indexFile = path.join(packageDir, "index.js")
+  var gulpfile = path.join(packageDir, "index.js")
 
-  const cwd = process.cwd()
+  let cwd = process.cwd()
 
   chdir(packageDir)
 
-  const tasks = require(`${indexFile}`)
+  var tasks = require(`${gulpfile}`)
 
   if (tasks[task]) {
     logger.warn(`Starting '${packageName.yellow}:${task.yellow}'...`)
-    try {
-      tasks[task]((err) => {
+
+    tasks[task]()
+      .then(() => {
         chdir(cwd)
-
-        if (err) {
-          logger.error(
-            `Error running '${packageName.yellow}:${task.yellow}': ${err}`
-          )
-
-          callback(err)
-        } else {
-          logger.warn(`Finished '${packageName.yellow}:${task.yellow}'`)
-
-          callback()
-        }
+        logger.warn(`Finished '${packageName.yellow}:${task.yellow}'`)
+        callback()
       })
-    } catch (e) {
-      console.error("Error in subrunner " + e)
-    }
+      .catch((err) => {
+        chdir(cwd)
+        logger.error(
+          `Error running '${packageName.yellow}:${task.yellow}': ${err}`
+        )
+        callback(err)
+      })
   } else {
-    const err = new Error(
+    var err = new Error(
       `Task '${packageName.yellow}:${task.yellow}' not found!`
     )
-    logger.error("Error in subrunner " + err)
+    logger.error(err)
 
     chdir(cwd)
 
@@ -67,21 +65,34 @@ function runComponentTask(packageDir, task, callback) {
 }
 
 /*
+  Run a task on every component in dependency order
+*/
+async function runTaskOnAllComponents(task) {
+  let components = await depUtils.getFolderDependencyOrder(dirs.components)
+
+  components = components.map((component) =>
+    path.join(dirs.components, component.split("/").pop())
+  )
+
+  return runTaskOnPackages(task, components)
+}
+
+/*
   Run a task on every package
 */
 function runTaskOnPackages(task, packages) {
   return new Promise(async (resolve, reject) => {
-    const packageCount = packages.length
+    let packageCount = packages.length
 
     function getNextPackage() {
       return packages.shift()
     }
 
     function processPackage() {
-      const packageDir = getNextPackage()
+      var packageDir = getNextPackage()
 
       if (packageDir) {
-        runComponentTask(packageDir, task, (err) => {
+        runComponentTask(packageDir, task, function (err) {
           if (err) {
             if (!process.env.FORCE) {
               process.exit(1)
@@ -95,20 +106,9 @@ function runTaskOnPackages(task, packages) {
       }
     }
 
+    // Kick off a gulp build for each package
     processPackage()
   })
-}
-
-/*
-  Run a task on every component in dependency order
-*/
-async function runTaskOnAllComponents(task) {
-  let components = await depUtils.getFolderDependencyOrder(dirs.components)
-
-  components = components.map((component) => path.join(dirs.components, component.split("/").pop())
-  )
-
-  return runTaskOnPackages(task, components)
 }
 
 /*

@@ -289,11 +289,13 @@ const version = () => {
 };
 
 const dev = () => {
-  return Promise.all([site.copySiteResources(), exports.dev]);
+  console.log('Inside dev')
+  return Promise.all([site.copySiteResources(), builder.dev()]);
 };
 
 const devHeavy = () => {
-  return Promise.all([site.copySiteResources(), exports.devHeavy]);
+  console.log('Inside DevHeavy')
+  return Promise.all([site.copySiteResources(), builder.devHeavy()]);
 };
 
 const watchRelaunch = () => {
@@ -317,3 +319,6 @@ module.exports = {
   prepare: site.copySiteResources
 };
 
+if (process.argv[2] === 'dev') {
+  dev();
+}

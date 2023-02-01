@@ -25,18 +25,42 @@ const build = async () => {
 }
 
 const buildLite = async () => {
-  await clean()
-  await css.buildIndexVars()
+  return new Promise((resolve, reject) => {
+    Promise.all([
+      clean(),
+      css.buildIndexVars() // done till here
+    ]).then(() => {
+      resolve();
+    }).catch(err => {
+      reject(err);
+    });
+  });
 }
 
 const buildMedium = async () => {
-  await clean()
-  await css.buildVars()
+  return new Promise((resolve, reject) => {
+    Promise.all([
+      clean(),
+      css.buildVars()
+    ]).then(() => {
+      resolve();
+    }).catch(err => {
+      reject(err);
+    });
+  });
 }
 
 const buildHeavy = async () => {
-  await clean()
-  await css.buildCSS()
+  return new Promise((resolve, reject) => {
+    Promise.all([
+      clean(),
+      css.buildCSS()
+    ]).then(() => {
+      resolve();
+    }).catch(err => {
+      reject(err);
+    });
+  });
 }
 
 exports.default = build

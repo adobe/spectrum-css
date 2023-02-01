@@ -30,6 +30,7 @@ let dependencyOrder = null;
 
 
 async function clean() {
+  console.log("Starting Clean")
   let globs = [
     'dist/*',
     '!dist/preview'
@@ -39,7 +40,7 @@ async function clean() {
   if (process.cwd() === dirs.topLevel) {
     globs.push(`${dirs.components}/*/dist/*`)
   }
-
+  console.log("Finishing Clean")
   return del(globs)
 }
 
@@ -199,14 +200,17 @@ const build = async () => {
 // }
 
 const buildComponents = async (type) => {
-  return subrunner.runTaskOnAllComponents('buildLite');
+  console.log('Starting buildComponents')
+  return subrunner.runTaskOnAllComponents(type);
 }
 
 const buildLite = async () => {
+  console.log('Starting buildLite')
   try {
     await clean();
     await buildComponents('buildLite');
     await Promise.all([docs.build(), copyPackages()]);
+    console.log('Finishiing buildLite')
   } catch(error) {
     console.error(error);
   }

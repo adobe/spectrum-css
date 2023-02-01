@@ -11,8 +11,8 @@ governing permissions and limitations under the License.
 */
 const fs = require("fs")
 const postcss = require("postcss")
-const { processors } = require("./processors")
-// const legacyBuild = require("./legacyBuild")
+const processors = require("./processors").processors
+// const legacyBuild = require('./legacyBuild');
 const vars = require("./vars")
 
 // Read in all variables used
@@ -20,35 +20,22 @@ const vars = require("./vars")
 // Include definitions if they refer to a variable, static if not
 
 async function buildIndexVars() {
-  // Read the contents of index.css and skin.css
-  let indexCss = ""
-  let skinCss = ""
+  const files = ["index.css", "skin.css"].filter((file) => fs.existsSync(file))
   try {
-    indexCss = fs.readFileSync("index.css", "utf-8")
-  } catch (e) {
-    console.error(`Error reading index.css: ${e}`)
-  }
-  try {
-    skinCss = fs.readFileSync("skin.css", "utf-8")
-  } catch (e) {
-    // Do nothing if skin.css is missing
-  }
+    const result = await postcss(processors).process(
+      files.map((file) => fs.readFileSync(file, "utf-8")).join(""),
+      { from: undefined }
+    )
 
-  // Concatenate the two files
-  const css = indexCss + skinCss
-
-  // Process the CSS with PostCSS
-  return postcss(processors)
-    .process(css)
-    .then((result) => {
-      // Write the processed CSS to dist/index-vars.css
-      fs.writeFileSync("dist/index-vars.css", result.css)
-    })
+    fs.writeFileSync(path.join("dist", "index-vars.css"), result.css)
+  } catch (e) {
+    console.error(e)
+  }
 }
 
 const buildVars = async function () {
-  await buildIndexVars();
-  await vars.bakeVars();
+  await buildIndexVars()
+  await vars.bakeVars()
 }
 
 exports.buildIndexVars = buildIndexVars
@@ -56,15 +43,15 @@ exports.buildVars = buildVars
 
 exports.buildCSS = async () => {
   try {
-      await buildVars();
-      let css = ""
-      try {
-          css = await fs.promises.readFile("dist/index-vars.css", "utf-8")
-      } catch (e) {
-          console.error(`Error reading index-vars.css: ${e}`)
-      }
-      await fs.promises.writeFile("dist/index.css", css)
+    await buildVars()
+    let css = ""
+    try {
+      css = await fs.promises.readFile("dist/index-vars.css", "utf-8")
+    } catch (e) {
+      console.error(`Error reading index-vars.css: ${e}`)
+    }
+    await fs.promises.writeFile("dist/index.css", css)
   } catch (err) {
-      console.error("Error in build " + err);
+    console.error("Error in build " + err)
   }
 }
