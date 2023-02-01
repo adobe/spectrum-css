@@ -3,6 +3,16 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+<a name="1.2.20"></a>
+## 1.2.20
+🗓 2023-02-01 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/picker@1.2.19...@spectrum-css/picker@1.2.20)
+
+**Note:** Version bump only for package @spectrum-css/picker
+
+
+
+
+
 <a name="1.2.19"></a>
 ## 1.2.19
 🗓 2023-02-01 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/picker@1.2.18...@spectrum-css/picker@1.2.19)

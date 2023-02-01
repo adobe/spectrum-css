@@ -3,6 +3,16 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+<a name="2.0.14"></a>
+## 2.0.14
+🗓 2023-02-01 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/colorhandle@2.0.13...@spectrum-css/colorhandle@2.0.14)
+
+**Note:** Version bump only for package @spectrum-css/colorhandle
+
+
+
+
+
 <a name="2.0.13"></a>
 ## 2.0.13
 🗓 2023-01-27 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/colorhandle@2.0.12...@spectrum-css/colorhandle@2.0.13)
