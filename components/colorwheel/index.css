@@ -83,7 +83,9 @@ governing permissions and limitations under the License.
   &.is-disabled {
     pointer-events: none;
     .spectrum-ColorWheel-outerCircle {
-      fill: var(--spectrum-colorwheel-fill-color-disabled);
+      fill: var(--highcontrast-colorwheel-fill-color-disabled, var(--spectrum-colorwheel-fill-color-disabled));
+      stroke: var(--highcontrast-colorwheel-border-color-disabled, var(--spectrum-colorwheel-border-color));
+
     }
     /* hides all the little colored bits */
     .spectrum-ColorWheel-segment {
@@ -105,7 +107,7 @@ governing permissions and limitations under the License.
 .spectrum-ColorWheel-outerCircle,
 .spectrum-ColorWheel-innerCircle {
   fill: transparent;
-  stroke: var(--highcontrast-colorwheel-border-color, var(--spectrum-colorwheel-border-color));
+  stroke: var(--spectrum-colorwheel-border-color);
   stroke-width: var(--spectrum-colorwheel-border-width);
 }
 
