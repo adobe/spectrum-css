@@ -69,8 +69,8 @@ governing permissions and limitations under the License.
 .spectrum-ColorWheel {
   position: relative;
   display: block;
-  min-width: var(--spectrum-colorwheel-minimum-width);
-  width: var(--spectrum-colorwheel-width);
+  min-width: var(--mod-colorwheel-minimum-width, var(--spectrum-colorwheel-minimum-width));
+  width: var(--mod-colorwheel-width, var(--spectrum-colorwheel-width));
   height: var(--spectrum-colorwheel-height);
   user-select: none;
   cursor: default;
@@ -86,9 +86,8 @@ governing permissions and limitations under the License.
   &.is-disabled {
     pointer-events: none;
     .spectrum-ColorWheel-outerCircle {
-      fill: var(--highcontrast-colorwheel-fill-color-disabled, var(--spectrum-colorwheel-fill-color-disabled));
-      stroke: var(--highcontrast-colorwheel-border-color-disabled, var(--spectrum-colorwheel-border-color));
-
+      fill: var(--highcontrast-colorwheel-fill-color-disabled, var(--mod-colorwheel-fill-color-doisabled, var(--spectrum-colorwheel-fill-color-disabled)));
+      stroke: var(--highcontrast-colorwheel-border-color-disabled, var(--mod-colorwheel-border-color, var(--spectrum-colorwheel-border-color)));
     }
     /* hides all the little colored bits */
     .spectrum-ColorWheel-segment {
@@ -118,7 +117,7 @@ governing permissions and limitations under the License.
   display: inline-block;
   height: auto;
   width: 100%;
-  margin: var(--spectrum-colorwheel-colorarea-margin);
+  margin: var(--mod-colorwheel-colorarea-margin, var(--spectrum-colorwheel-colorarea-margin));
 }
 
 .spectrum-ColorWheel-wheel {
@@ -135,7 +134,7 @@ governing permissions and limitations under the License.
 
 /* adjusts size of mask and inner circle track width */
 .spectrum-ColorWheel-track-width {
-  r: calc(var(--spectrum-ColorWheel-radius) - var(--spectrum-colorwheel-track-width));
+  r: calc(var(--spectrum-ColorWheel-radius) - var(--mod-colorwheel-track-width, var(--spectrum-colorwheel-track-width)));
 }
 
 .spectrum-ColorWheel-slider {
