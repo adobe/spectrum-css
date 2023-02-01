@@ -1,0 +1,34 @@
+{% if example.description %}
+  <div class="spectrum-Typography">
+    <section class="spectrum-CSSExample-description spectrum-Body spectrum-Body--sizeM">
+      {{ util.markdown.render(example.description) | safe }}
+    </section>
+  </div>
+{% endif %}
+{% if example.details %}
+  <div class="spectrum-Typography">
+    <section class="spectrum-CSSExample-description spectrum-Body spectrum-Body--sizeM">
+      {{ util.markdown.render(example.details) | safe }}
+    </section>
+  </div>
+{% endif %}
+{% if example.markup %}
+  <section class="spectrum-CSSExample-container">
+    <div class="spectrum-CSSExample-example">
+      {{ example.markup | safe }}
+    </div>
+    <div class="spectrum-CSSExample-markup">
+      {% if example
+        .markup
+        .split('\n')
+        .length > 2 %}
+        <a href="#" class="js-markup-toggle spectrum-CSSExample-markupToggle spectrum-Link">Show markup</a>
+      {% endif %}
+      <bdo dir="ltr">
+<pre class="spectrum-Code spectrum-Code--sizeXS">
+<code class="language-markup">{{ util.Prism.highlight(example.markup, util.Prism.languages.markup, 'markup') | safe }}</code>
+</pre>
+      </bdo>
+    </div>
+  </section>
+{% endif %}
