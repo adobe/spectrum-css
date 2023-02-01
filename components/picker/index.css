@@ -75,6 +75,8 @@ governing permissions and limitations under the License.
     filter: color;
     replace: --spectrum-picker$1;
   }
+
+  --spectrum-picker-texticon-padding-left: var(--spectrum-picker-m-texticon-padding-left);
 }
 
 .spectrum-Picker--sizeL {
