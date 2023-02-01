@@ -35,7 +35,9 @@ let scales = [
 function bakeVars() {
   return gulp.src([
     'dist/index-vars.css'
-  ])
+  ], {
+    allowEmpty: true,
+  })
   .pipe(through.obj(async function doBake(file, enc, cb) {
     let pkg = JSON.parse(await fsp.readFile(path.join('package.json')));
     let pkgName = pkg.name.split('/').pop();

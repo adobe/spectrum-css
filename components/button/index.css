@@ -125,7 +125,7 @@ governing permissions and limitations under the License.
 
 
   font-size: var(--mod-button-font-size, var(--spectrum-button-font-size));
-  font-weight: var(--mod-font-weight-bold, var(--spectrum-font-weight-bold));
+  font-weight: var(--mod-bold-font-weight, var(--spectrum-bold-font-weight));
 
   &:hover,
   &:active {
