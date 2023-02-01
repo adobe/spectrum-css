@@ -11,9 +11,7 @@ governing permissions and limitations under the License.
 */
 
 .spectrum-ColorWheel {
-  --spectrum-colorwheel-minimum-width: var(--spectrum-color-wheel-minimum-width);
-  --spectrum-colorwheel-width: var(--spectrum-colorwheel-minimum-width);
-  --spectrum-colorwheel-height: var(--spectrum-colorwheel-minimum-width);
+  --spectrum-colorwheel-height: var(--spectrum-colorwheel-width);
 
   --spectrum-colorwheel-border-color:   var(--spectrum-transparent-black-200);
   --spectrum-colorwheel-border-width: var(--spectrum-border-width-100);
@@ -26,10 +24,14 @@ governing permissions and limitations under the License.
 
   .spectrum--large & {
     --spectrum-ColorWheel-radius: 90px;
+    --spectrum-colorwheel-width: 240px; /* placeholder for incoming color-wheel-width token */
+    --spectrum-colorwheel-minimum-width: 219px; /* placeholder for incoming color-wheel-minimum-width*/
   }
 
   .spectrum--medium & {
     --spectrum-ColorWheel-radius: 85px;
+    --spectrum-colorwheel-width: 192px; /* placeholder for incoming color-wheel-width token */
+    --spectrum-colorwheel-minimum-width: 175px; /* placeholder for incoming color-wheel-minimum-width*/
   }
 }
 
