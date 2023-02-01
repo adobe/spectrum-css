@@ -14,6 +14,10 @@ examples:
     name: Standard
     markup: |
       <div class="spectrum-ColorWheel">
+        <div class="spectrum-ColorWheel-internals">
+          <div class="spectrum-ColorWheel-colorarea">
+          </div>
+        </div>
         <svg class="spectrum-ColorWheel-wheel" viewBox="0 0 160 160" aria-hidden="true">
           <defs>
             <mask id="mask">
