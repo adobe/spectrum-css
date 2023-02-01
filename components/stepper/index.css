@@ -12,22 +12,50 @@ governing permissions and limitations under the License.
 
 .spectrum-Stepper {
 
-  --spectrum-stepper-width: var(--spectrum-global-dimension-size-900);
-  --spectrum-stepper-border-size: var(--spectrum-alias-border-size-thin);
+  /* TODO - ask Design to evaluate these widths */
+  .spectrum--medium {
+    & {
+      --spectrum-stepper-width: 72px; /* replaces --spectrum-global-dimension-size-900 */
+      --spectrum-stepper-icon-width: 10px; /* placeholder for --spectrum-alias-ui-icon-chevron-size-75 */
+    }
+  }
 
-  --spectrum-stepper-button-height: calc(var(--spectrum-alias-single-line-height) / 2);
-  --spectrum-stepper-button-width: calc(var(--spectrum-global-dimension-size-300) - var(--spectrum-stepper-border-size));
+  .spectrum--large {
+    & {
+      --spectrum-stepper-width: 90px; /* replaces --spectrum-global-dimension-size-900 */
+      --spectrum-stepper-icon-width: 12px; /* placeholder for --spectrum-alias-ui-icon-chevron-size-75 */
+    }
+  }
 
-  --spectrum-stepper-button-padding: calc(var(--spectrum-global-dimension-size-150) / 2);
+  --spectrum-stepper-button-offset: calc(var(--spectrum-stepper-button-width) / 2 - var(--spectrum-stepper-icon-width) / 2); /* TODO - reevaluate when icons are migrated */
+
+  --spectrum-stepper-button-width: var(--spectrum-component-height-75); /* this height token matches the previous width token */
+
+  --spectrum-stepper-button-padding: var(--spectrum-component-edge-to-visual-50); /* 6px md + 7px lg - previously 6px md + 7.5px lg */
+
   --spectrum-stepper-border-radius-reset: 0;
   --spectrum-stepper-border-size-reset: 0;
 
-  --spectrum-stepper-icon-nudge-top: var(--spectrum-global-dimension-size-10);
-  --spectrum-stepper-icon-nudge: var(--spectrum-global-dimension-size-25);
+  --spectrum-stepper-icon-nudge-start: 1px; /* 1px - could this be == the component border width? Check Express */
+  /* was var(--spectrum-global-dimension-size-10); */
+  /* was 1px */
 
-  --spectrum-stepper-quiet-width: var(--spectrum-global-dimension-size-600);
-  --spectrum-stepper-button-offset: calc(var(--spectrum-stepper-button-width) / 2 - var(--spectrum-alias-ui-icon-chevron-size-75) / 2);
+  --spectrum-stepper-icon-nudge-end: 2px; /* 2px - could this be == the component border width? Check Express */
+  /* was var(--spectrum-global-dimension-size-25); */
+  /* was 2px */
+
+  --spectrum-stepper-quiet-width: var(--spectrum-component-height-300); /* matches previous width token */
+
   --spectrum-stepper-quiet-button-width: calc(var(--spectrum-stepper-button-width) - var(--spectrum-stepper-button-offset));
+
+
+  /* New tokens */
+  --spectrum-stepper-animation-duration: var(--spectrum-animation-duration-100);
+  --spectrum-stepper-border-radius: var(--spectrum-corner-radius-100); /* was 6px 8px */
+  --spectrum-stepper-buttons-height: var(--spectrum-component-height-100);
+
+  /* new colors */
+  --spectrum-stepper-border-color: var(--spectrum-stepper-border-color-default);
 }
 
 .spectrum-Stepper {
@@ -37,8 +65,9 @@ governing permissions and limitations under the License.
 
   inline-size: var(--spectrum-stepper-width);
   line-height: 0;
-  border-radius: var(--spectrum-alias-border-radius-regular);
-  transition: border-color var(--spectrum-global-animation-duration-100) ease-in-out, box-shadow var(--spectrum-global-animation-duration-100) ease-in-out;
+  border-radius: var(--spectrum-stepper-border-radius); /* --spectrum-global-dimension-size-75 = 6px 8px */
+  transition: border-color var(--spectrum-stepper-animation-duration) ease-in-out, box-shadow var(--spectrum-stepper-animation-duration) ease-in-out;
+  /* 130ms */
 }
 .spectrum-Stepper::before {
   content: '';
@@ -46,11 +75,13 @@ governing permissions and limitations under the License.
 
 .spectrum-Stepper-buttons {
   display: block;
+  box-sizing: border-box;
   border-start-start-radius: 0;
-  border-start-end-radius: var(--spectrum-alias-border-radius-regular);
-  border-end-end-radius: var(--spectrum-alias-border-radius-regular);
+  border-start-end-radius: var(--spectrum-stepper-border-radius); /* --spectrum-global-dimension-size-75  = 6px 8px */
+  border-end-end-radius: var(--spectrum-stepper-border-radius);
   border-end-start-radius: 0;
-  transition: box-shadow var(--spectrum-global-animation-duration-100) ease-in-out;
+  transition: box-shadow var(--spectrum-stepper-animation-duration) ease-in-out;
+  block-size: var(--spectrum-stepper-buttons-height);
 }
 
 .spectrum-Stepper-stepUp,
@@ -59,8 +90,16 @@ governing permissions and limitations under the License.
   display: flex;
   box-sizing: border-box;
 
-  block-size: var(--spectrum-stepper-button-height);
-  inline-size: var(--spectrum-stepper-button-width);
+  /* remove middle border from button height */
+  block-size: calc((var(--spectrum-stepper-buttons-height) / 2)) - var(--spectrum-stepper-border-size));
+  block-size: calc((var(--spectrum-stepper-buttons-height) - var(--spectrum-stepper-border-size)) / 2);
+
+  block-size: calc((var(--spectrum-stepper-buttons-height) / 2) - (var(--spectrum-stepper-border-size) / 2));
+  block-size: calc(var(--spectrum-stepper-buttons-height) / 2);
+
+  /* remove left border width from button width */
+  inline-size: calc(var(--spectrum-stepper-button-width) - var(--spectrum-stepper-border-size));
+
   min-inline-size: 0;
 
   padding-inline-start: var(--spectrum-stepper-button-padding);
@@ -68,6 +107,8 @@ governing permissions and limitations under the License.
 
   /* Avoid margin added by adjacent buttons */
   margin: 0 !important;
+
+  border-color: var(--spectrum-stepper-border-color);
 
   border-width: var(--spectrum-stepper-border-size);
   border-inline-start-width: var(--spectrum-stepper-border-size-reset);
@@ -85,14 +126,13 @@ governing permissions and limitations under the License.
   border-block-end: none;
   border-end-end-radius: var(--spectrum-stepper-border-radius-reset);
 
-  padding-block-start: var(--spectrum-stepper-icon-nudge-top);
+  padding-block-start: var(--spectrum-stepper-icon-nudge-start);
 }
 
 .spectrum-Stepper-stepDown {
-  /*border-block-start: none;*/
   border-start-end-radius: var(--spectrum-stepper-border-radius-reset);
 
-  padding-block-end: var(--spectrum-stepper-icon-nudge);
+  padding-block-end: var(--spectrum-stepper-icon-nudge-end);
 }
 
 .spectrum-Stepper-textfield {
@@ -132,12 +172,180 @@ governing permissions and limitations under the License.
     justify-content: flex-end;
 
     /* More hitarea */
-    &:after {
+    &::after {
       content: '';
       position: absolute;
       block-size: 100%;
       inline-size: var(--spectrum-stepper-button-offset);
       inset-inline-end: calc(var(--spectrum-stepper-button-offset) * -1);
+    }
+  }
+}
+
+
+
+/* Variant colors - WIP placeholders - bring in colors from textfield */
+
+.spectrum-Stepper {
+  &:hover:not(.is-disabled):not(.is-invalid):not(.is-focused):not(.is-keyboardFocused) {
+    .spectrum-Stepper-stepUp,
+    .spectrum-Stepper-stepDown,
+    .spectrum-Stepper-input {
+      border-color: var(--spectrum-stepper-border-color);
+    }
+  }
+
+  &.is-focused {
+    border-color: cyan; /* WIP placeholder */
+
+    .spectrum-Stepper-stepUp,
+    .spectrum-Stepper-stepDown {
+      border-color:  cyan; /* WIP placeholder */
+    }
+
+    .spectrum-Stepper-input {
+      border-color:  cyan; /* WIP placeholder */
+      box-shadow: none;
+    }
+
+    &.is-invalid {
+      border-color: red;
+
+      .spectrum-Stepper-stepUp,
+      .spectrum-Stepper-stepDown {
+        border-color: red;
+      }
+
+      .spectrum-Stepper-input {
+        border-color: red;
+      }
+    }
+  }
+
+  &.is-keyboardFocused {
+    box-shadow: 0 0 0 1px magenta;
+
+    .spectrum-Stepper-input,
+    .spectrum-Stepper-buttons {
+      box-shadow: 0 0 0 1px magenta;
+    }
+
+    .spectrum-Stepper-input,
+    .spectrum-Stepper-stepUp,
+    .spectrum-Stepper-stepDown {
+      border-color: magenta;
+    }
+
+    &.is-invalid {
+      box-shadow: 0 0 0 1px magenta;
+
+      .spectrum-Stepper-stepUp,
+      .spectrum-Stepper-stepDown {
+        border-color: magenta;
+      }
+      .spectrum-Stepper-buttons {
+        box-shadow: 0 0 0 1px magenta;
+      }
+    }
+  }
+
+  &.is-invalid {
+    .spectrum-Stepper-stepUp,
+    .spectrum-Stepper-stepDown {
+      border-color: red;
+    }
+
+    .spectrum-Stepper-input {
+      border-color: red;
+    }
+
+    &.is-keyboardFocused {
+      .spectrum-Stepper-input {
+        border-color: red;
+        box-shadow: 0 0 0 1px red;
+      }
+
+      .spectrum-Stepper-buttons {
+        box-shadow: 0 0 0 1px red;
+      }
+    }
+  }
+
+  &.is-disabled {
+    .spectrum-Stepper-stepUp,
+    .spectrum-Stepper-stepDown {
+      border-color: gray;
+    }
+  }
+}
+
+.spectrum-Stepper-stepUp,
+.spectrum-Stepper-stepDown {
+
+  &:disabled {
+    border-color: gray;
+  }
+}
+
+.spectrum-Stepper--quiet {
+  &.is-disabled {
+    .spectrum-Stepper-stepUp,
+    .spectrum-Stepper-stepDown {
+      border-color: pink;
+    }
+  }
+
+  .spectrum-Stepper-stepUp,
+  .spectrum-Stepper-stepDown {
+    border-color: pink;
+
+    &:disabled {
+      border-color: pink;
+    }
+  }
+
+  .spectrum-Stepper-input {
+    box-shadow: none;
+  }
+
+  &.is-invalid {
+    .spectrum-Stepper-input {
+      border-color: red;
+    }
+
+    .spectrum-Stepper-stepDown {
+      border-color: red;
+    }
+  }
+
+  &.is-keyboardFocused,
+  &.is-focused {
+    box-shadow: none;
+
+    .spectrum-Stepper-buttons,
+    .spectrum-Stepper-input {
+      box-shadow: 0 1px 0 0 purple;;
+    }
+
+    .spectrum-Stepper-stepDown {
+      border-color: purple;
+    }
+
+    &.is-invalid {
+      box-shadow: none;
+
+      .spectrum-Stepper-input,
+      .spectrum-Stepper-buttons {
+        box-shadow: 0 1px 0 0 purple;;
+      }
+
+      .spectrum-Stepper-input {
+        border-color: purple;
+      }
+
+      .spectrum-Stepper-stepDown {
+        border-color: purple;
+      }
     }
   }
 }
