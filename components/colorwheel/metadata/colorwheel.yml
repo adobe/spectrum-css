@@ -6,10 +6,11 @@ description: |
   - Set the value of the ColorHandle component to the selected color
   - Set the `value` attribute of `.spectrum-ColorWheel-value` to the currently selected color (i.e. `hsl(326, 100%, 50%)`)
   - Add `.is-dragged` when the handle is being dragged
+  - to display with ColorArea inside of ColorWheel, add ColorArea to `spectrum-ColorWheel-colorarea-container` with ColorArea `style="width:100%; height: 100%"`
 sections:
   - name: Migration Guide
     description: |
-      Colorwheel no longer displays a canvas variant.
+     - Colorwheel no longer displays a canvas variant.
 examples:
   - id: color-wheel
     name: Standard
