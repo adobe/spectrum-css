@@ -1,14 +1,15 @@
 name: Color Wheel
 status: Verified
 SpectrumSiteSlug: https://spectrum.adobe.com/page/color-wheel/
+description: |
+  - For a given rotation on the wheel, `X`, the `.- spectrum-ColorHandle` should be moved by applying the style property `transform: translate(${85 * Math.cos(X)}px, ${85 * Math.sin(X)}px)` for desktop and `transform: translate(${105 * Math.cos(X)}px, ${105 * Math.sin(X)}px)` for mobile.
+  - Set the value of the ColorHandle component to the selected color
+  - Set the `value` attribute of `.spectrum-ColorWheel-value` to the currently selected color (i.e. `hsl(326, 100%, 50%)`)
+  - Add `.is-dragged` when the handle is being dragged
 sections:
   - name: Migration Guide
     description: |
-      Colorwheel Canvas variant removed as part of token migration work.
-      For a given rotation on the wheel, `X`, the `.spectrum-ColorHandle` should be moved by applying the style property `transform: translate(${67.5 * Math.cos(X)}px, ${67.5 * Math.sin(X)}px)`
-      Set the value of the ColorHandle component to the selected color
-      Set the `value` attribute of `.spectrum-ColorWheel-value` to the currently selected color (i.e. `hsl(326, 100%, 50%)`)
-      Add `.is-dragged` when the handle is being dragged
+      Colorwheel no longer displays a canvas variant.
 examples:
   - id: color-wheel
     name: Standard
