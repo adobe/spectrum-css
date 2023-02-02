@@ -245,7 +245,6 @@ exports.update = async () => {
   await require("./tasks/updateDNA")()
   await build()
 }
-build()
 exports.clean = clean
 exports.default = build
 exports.build =

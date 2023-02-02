@@ -133,10 +133,10 @@ function copyPackages() {
     `${dirs.components}/*/package.json`,
     `${dirs.components}/*/dist/**`,
     `!${dirs.components}/*/dist/docs/**`,
-  ].reduce(async (acc, pattern) => acc.concat(await fg(pattern)), [])
+  ]
 
   // Iterate over the array of file paths
-  files.forEach((file) => {
+  fg.sync(files).forEach((file) => {
     // Read the contents of the file
     const contents = fs.readFileSync(file)
 

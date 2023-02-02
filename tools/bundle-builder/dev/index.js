@@ -51,7 +51,7 @@ function watchWithinPackages(globContent, task, files) {
   // Code to log the start of the watch goes here
   logger.debug(`Watching ${globContent}, will run ${task} and stream ${files}`)
   let changedFile = null
-  const watcher = chokidar.watch(glob, {
+  const watcher = chokidar.watch(globContent, {
     // Otherwise we get infinite loops because chokidar gets all crazy with symlinked deps
     followSymlinks: false,
   }, (done) => {

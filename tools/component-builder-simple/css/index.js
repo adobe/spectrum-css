@@ -125,10 +125,10 @@ async function buildCSS() {
     "themes/spectrum.css", // spectrum comes first
     "themes/*.css",
   ]
-
+  const allCss = fg.sync(cssFiles)
   // Read the contents of all CSS files
   const cssContents = await Promise.all(
-    cssFiles.map((file) => fs.promises.readFile(file, "utf-8"))
+    allCss.map((file) => fs.promises.readFile(file, "utf-8"))
   )
 
   // Concatenate the contents of all CSS files
