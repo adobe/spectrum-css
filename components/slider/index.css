@@ -113,16 +113,19 @@ governing permissions and limitations under the License.
   inline-size: calc(100% - calc(var(--mod-slider-controls-margin, var(--spectrum-slider-controls-margin))) * 2);
   margin-inline-start: var(--mod-slider-controls-margin, var(--spectrum-slider-controls-margin));
   margin-block-end: var(--mod-slider-bottom-to-handle, var(--spectrum-slider-bottom-to-handle));
-  block-size: var(--mod-slider-control-height, var(--spectrum-slider-control-height));
-  block-size: var(--mod-slider-control-height, var(--spectrum-slider-control-height));
+
+  /* At the moment of February 2023 we need to double the control-height size to 32px to ensure the correct height.
+    An update to the tokens in the works to reflect this change. */
+  block-size: calc(2 * var(--mod-slider-control-height, var(--spectrum-slider-control-height)));
+  /* block-size: var(--mod-slider-control-height, var(--spectrum-slider-control-height)); */
   vertical-align: top;
 }
 
-/* Sliders with ticks + tick mark labels require more space */
+/* Sliders with ticks + tick mark labels require more margin-block-end.
+ As of February 2023 we do not have tokens yet tokens for Ramp and Tick variants, 
+ using control-height here instead.  */
 .spectrum-Slider--tick {
-  margin-block-end: calc(2 * var(--mod-slider-control-height, var(--spectrum-slider-control-height)));
-  .spectrum-Slider-controls {
-  }
+  margin-block-end: var(--mod-slider-control-height, var(--spectrum-slider-control-height));
 }
 
 .spectrum-Slider-track,
@@ -357,6 +360,10 @@ governing permissions and limitations under the License.
   font-size: var(--mod-font-size-75, var(--spectrum-font-size-75));
   margin-block-end: var(--mod-component-bottom-to-text-75, var(--spectrum-component-bottom-to-text-75));
 
+ /* February 2023: custom scaled tokens for label margin block end 
+  that will be replaced with an updated token for Slider component-bottom-to-text-75 */
+
+  margin-block-end: var(--mod-spectrum-slider-label-margin-block-end, var(--spectrum-slider-label-margin-block-end));
   line-height: var(--mod-line-height-100, var(--spectrum-line-height-100));
 
   /* international support */
