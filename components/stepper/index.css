@@ -12,25 +12,38 @@ governing permissions and limitations under the License.
 
 
 .spectrum-Stepper {
+   /**** TODO - ask Design to evaluate these widths ****/
+  --spectrum-stepper-width-medium: 72px; /* replaces --spectrum-global-dimension-size-900 */
+  --spectrum-stepper-width-large: 90px; /* replaces --spectrum-global-dimension-size-900 */
+  --spectrum-stepper-icon-width-medium: 10px; /* placeholder for --spectrum-alias-ui-icon-chevron-size-75 */
+  --spectrum-stepper-icon-width-large: 12px; /* placeholder for --spectrum-alias-ui-icon-chevron-size-75 */
 
-  /* TODO - ask Design to evaluate these widths */
+  /* set defaults */
+  --spectrum-stepper-width: var(--spectrum-stepper-width-medium);
+  --spectrum-stepper-icon-width: var(--spectrum-stepper-icon-width-medium);
+
+  /* override per size */
+  /* this is necessary to mimmic the size-responsive tokens which were already present */
   .spectrum--medium {
     & {
-      --spectrum-stepper-width: 72px; /* replaces --spectrum-global-dimension-size-900 */
-      --spectrum-stepper-icon-width: 10px; /* placeholder for --spectrum-alias-ui-icon-chevron-size-75 */
+      --spectrum-stepper-width: var(--spectrum-stepper-width-medium);
+      --spectrum-stepper-icon-width: var(--spectrum-stepper-icon-width-medium);
     }
   }
 
   .spectrum--large {
     & {
-      --spectrum-stepper-width: 90px; /* replaces --spectrum-global-dimension-size-900 */
-      --spectrum-stepper-icon-width: 12px; /* placeholder for --spectrum-alias-ui-icon-chevron-size-75 */
+      --spectrum-stepper-width: var(--spectrum-stepper-width-large);
+      --spectrum-stepper-icon-width: var(--spectrum-stepper-icon-width-large);
     }
   }
-
-  --spectrum-stepper-button-offset: calc(var(--spectrum-stepper-button-width) / 2 - var(--spectrum-stepper-icon-width) / 2); /* TODO - reevaluate when icons are migrated */
+  /**** end TODO ****/
 
   --spectrum-stepper-button-width: var(--spectrum-component-height-75); /* this height token matches the previous width token */
+
+ /* quiet variant */
+  --spectrum-stepper-quiet-width: var(--spectrum-component-height-300); /* matches previous width token */
+  --spectrum-stepper-quiet-button-width: calc(var(--spectrum-stepper-button-width) - var(--spectrum-stepper-button-offset));
 
   --spectrum-stepper-button-padding: var(--spectrum-component-edge-to-visual-50); /* 6px md + 7px lg - previously 6px md + 7.5px lg */
 
@@ -45,23 +58,27 @@ governing permissions and limitations under the License.
   /* was var(--spectrum-global-dimension-size-25); */
   /* was 2px */
 
-  --spectrum-stepper-quiet-width: var(--spectrum-component-height-300); /* matches previous width token */
 
-  --spectrum-stepper-quiet-button-width: calc(var(--spectrum-stepper-button-width) - var(--spectrum-stepper-button-offset));
+  /* this is for the :after hit area element */
+  --spectrum-stepper-button-offset: calc(var(--spectrum-stepper-button-width) / 2 - var(--spectrum-stepper-icon-width) / 2); /* TODO - reevaluate when icons are migrated */
+    /* chevron = --spectrum-global-dimension-static-size-125 and --spectrum-global-dimension-static-size-150 = 10px and 12px */
+  /* button width of 23px / 29px divided by 2 = 11.5px and 14.5px */
+  /* chevron size of 10px and 12px divided by 2 = 5px and 6px */
+  /* 11.5px minus 5px = 6.5px */
+  /* 14.5px minus 6px = 8.5px */
 
 
-  /* New tokens */
+  /* New tokens - to match textfield */
   --spectrum-stepper-animation-duration: var(--spectrum-animation-duration-100);
-  --spectrum-stepper-border-radius: var(--spectrum-corner-radius-100); /* was 6px 8px */
-  --spectrum-stepper-buttons-height: var(--spectrum-component-height-100);
+  --spectrum-stepper-border-radius: var(--spectrum-corner-radius-100);
+  --spectrum-stepper-buttons-height: var(--spectrum-component-height-100); /* from textfield height */
 
   /* focus indicator */
   --spectrum-stepper-focus-indicator-width: var(--spectrum-focus-indicator-thickness);
   --spectrum-stepper-focus-indicator-gap: var(--spectrum-focus-indicator-gap);
 
-  /* new colors */
-    /* Disabled Colors */
-  --spectrum-stepper-border-color-disabled: var(--spectrum-disabled-border-color);
+  /* Disabled Colors */
+  --spectrum-stepper-border-color-quiet-disabled: var(--spectrum-disabled-border-color);
 
   /* Invalid Colors */
   --spectrum-stepper-border-color-invalid-default: var(--spectrum-negative-border-color-default);
@@ -348,7 +365,7 @@ governing permissions and limitations under the License.
   &.is-disabled {
     .spectrum-Stepper-stepUp,
     .spectrum-Stepper-stepDown {
-      border-color: var(--spectrum-stepper-border-color-disabled);
+      border-color: transparent;
     }
   }
 }
@@ -357,7 +374,7 @@ governing permissions and limitations under the License.
 .spectrum-Stepper-stepDown {
 
   &:disabled {
-    border-color: var(--spectrum-stepper-border-color-disabled);
+    border-color: transparent;
   }
 }
 
@@ -365,7 +382,7 @@ governing permissions and limitations under the License.
   &.is-disabled {
     .spectrum-Stepper-stepUp,
     .spectrum-Stepper-stepDown {
-      border-color: var(--spectrum-stepper-border-color-disabled);
+      border-color: var(--spectrum-stepper-border-color-quiet-disabled);
     }
   }
 
@@ -374,7 +391,7 @@ governing permissions and limitations under the License.
     border-color: var(--spectrum-stepper-border-color);
 
     &:disabled {
-      border-color: var(--spectrum-stepper-border-color-disabled);
+      border-color: var(--spectrum-stepper-border-color-quiet-disabled);
     }
   }
 
@@ -417,7 +434,7 @@ governing permissions and limitations under the License.
     &::after {
       border-width: 0 0 var(--mod-stepper-focus-indicator-width, var(--spectrum-stepper-focus-indicator-width)) 0;
       border-radius: 0;
-      inline-size: var(--mod-stepper-width, var(--spectrum-stepper-width));
+      inline-size: 100%;
       block-size: calc(100% + var(--mod-stepper-focus-indicator-gap, var(--spectrum-stepper-focus-indicator-gap)));
       margin-inline-start: 0;
       margin-block-start: 0;
