@@ -38,8 +38,8 @@ governing permissions and limitations under the License.
 /********* WHCM *********/
 @media (forced-colors: active) {
   .spectrum-ColorWheel {
-    --highcontrast-colorwheel-border-color-disabled : GrayText;
-    --highcontrast-colorwheel-fill-color-disabled : Canvas;
+    --highcontrast-colorwheel-border-color-disabled: GrayText;
+    --highcontrast-colorwheel-fill-color-disabled: Canvas;
   }
   .spectrum-ColorWheel {
     forced-color-adjust: none;
@@ -85,9 +85,12 @@ governing permissions and limitations under the License.
 
   &.is-disabled {
     pointer-events: none;
+    .spectrum-ColorWheel-innerCircle,
     .spectrum-ColorWheel-outerCircle {
-      fill: var(--highcontrast-colorwheel-fill-color-disabled, var(--mod-colorwheel-fill-color-doisabled, var(--spectrum-colorwheel-fill-color-disabled)));
       stroke: var(--highcontrast-colorwheel-border-color-disabled, var(--mod-colorwheel-border-color, var(--spectrum-colorwheel-border-color)));
+    }
+    .spectrum-ColorWheel-outerCircle {
+      fill: var(--highcontrast-colorwheel-fill-color-disabled, var(--mod-colorwheel-fill-color-disabled, var(--spectrum-colorwheel-fill-color-disabled)));
     }
     /* hides all the little colored bits */
     .spectrum-ColorWheel-segment {
