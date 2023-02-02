@@ -12,15 +12,12 @@ governing permissions and limitations under the License.
 
 .spectrum-ColorWheel {
   --spectrum-colorwheel-height: var(--spectrum-colorwheel-width);
-
   --spectrum-colorwheel-border-color:   var(--spectrum-transparent-black-200);
   --spectrum-colorwheel-border-width: var(--spectrum-border-width-100);
   --spectrum-colorwheel-fill-color-disabled: var(--spectrum-disabled-background-color);
-
+  --spectrum-colorwheel-track-width: var(--spectrum-color-control-track-width);
   --spectrum-colorwheel-colorarea-margin: var(--spectrum-color-wheel-color-area-margin);
   --spectrum-colorhandle-size: 16px; /* TODO replace with new token for ColorHandle, placeholder for old token var(--spectrum-colorhandle-size) */
-
-  --spectrum-colorwheel-track-width: var(--spectrum-color-control-track-width);
 
   .spectrum--large & {
     --spectrum-colorwheel-radius: 90px;
@@ -35,7 +32,7 @@ governing permissions and limitations under the License.
   }
 }
 
-/********* WHCM *********/
+/* Windows High Contrast */
 @media (forced-colors: active) {
   .spectrum-ColorWheel {
     --highcontrast-colorwheel-border-color-disabled: GrayText;
@@ -116,7 +113,6 @@ governing permissions and limitations under the License.
 }
 
 .spectrum-ColorWheel-colorarea-container{
-  display: inline-block;
   height: auto;
   width: 100%;
   margin: var(--mod-colorwheel-colorarea-margin, var(--spectrum-colorwheel-colorarea-margin));
