@@ -12,8 +12,8 @@ governing permissions and limitations under the License.
 
 .spectrum-ProgressBar {
   /* Static tokens */
-  --spectrum-progressbar-animation-ease-in-out-indeterminate: cubic-bezier(.45, 0, .40, 1);
-  --spectrum-progressbar-animation-duration-indeterminate: 1000ms;
+  --spectrum-progressbar-animation-ease-in-out-indeterminate: var(--spectrum-animation-ease-in-out);
+  --spectrum-progressbar-animation-duration-indeterminate: var(--spectrum-animation-duration-2000);
   --spectrum-progressbar-corner-radius: var(--spectrum-corner-radius-100);
 
   --spectrum-progressbar-fill-size-indeterminate: 70%;
