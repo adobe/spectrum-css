@@ -3,6 +3,18 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+<a name="3.0.2"></a>
+## 3.0.2
+🗓 2023-02-02 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/progressbar@3.0.1...@spectrum-css/progressbar@3.0.2)
+
+### 🐛 Bug fixes
+
+* **progressbar:** typo in --mod-progressbar-label-and-value-white variable ([#1599](https://github.com/adobe/spectrum-css/issues/1599)) ([a7c5892](https://github.com/adobe/spectrum-css/commit/a7c5892))
+
+
+
+
+
 <a name="3.0.1"></a>
 ## 3.0.1
 🗓 2023-02-02 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/progressbar@3.0.0...@spectrum-css/progressbar@3.0.1)
