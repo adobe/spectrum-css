@@ -54,7 +54,7 @@ governing permissions and limitations under the License.
 }
 
 .spectrum-Slider {
-  --spectrum-slider-cjk-line-height: var(--spectrum-line-height-cjk-100);
+  --spectrum-slider-cjk-line-height: var(--spectrum-cjk-line-height-100);
 
   --spectrum-slider-min-size: var(--spectrum-spacing-900);
   --spectrum-slider-height-size: var(--spectrum-component-height-100);
@@ -113,6 +113,7 @@ governing permissions and limitations under the License.
   inline-size: calc(100% - calc(var(--mod-slider-controls-margin, var(--spectrum-slider-controls-margin))) * 2);
   margin-inline-start: var(--mod-slider-controls-margin, var(--spectrum-slider-controls-margin));
   margin-block-end: var(--mod-slider-bottom-to-handle, var(--spectrum-slider-bottom-to-handle));
+  block-size: var(--mod-slider-control-height, var(--spectrum-slider-control-height));
   block-size: var(--mod-slider-control-height, var(--spectrum-slider-control-height));
   vertical-align: top;
 }
