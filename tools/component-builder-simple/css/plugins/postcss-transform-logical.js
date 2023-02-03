@@ -13,10 +13,19 @@ const postcss = require('postcss');
 const { parse } = require('postcss-values-parser');
 
 const selectorParser = require('postcss-selector-parser');
-const addDir = selectors => {
+const addRTL = selectors => {
   selectors.each(selector => {
-    let dirPseudo = selectorParser.pseudo({value: ':dir(rtl)'});
-    selector.append(dirPseudo);
+    let dirAttribute = selectorParser.attribute({attribute: 'dir="rtl"'});
+    selector.prepend(selectorParser.string({ value: " " }));
+    selector.prepend(dirAttribute);
+  });
+};
+
+const addLTR = selectors => {
+  selectors.each(selector => {
+    let dirAttribute = selectorParser.attribute({attribute: 'dir="ltr"'});
+    selector.prepend(selectorParser.string({ value: " " }));
+    selector.prepend(dirAttribute);
   });
 };
 
@@ -56,11 +65,13 @@ module.exports = postcss.plugin('postcss-transform-logical', function (opts) {
             if (rotationNode !== null) {
               // Ignore 0 deg initial rotations for LTR; this means we meant for it to be standard rotation for LTR
               if (parseInt(originalRotation, 10) !== 0) {
-                let ltrRule = postcss.parse(`${rule.selector}:dir(ltr) { transform: ${value}; }`);
+                let ltrSelector = selectorParser(addLTR).processSync(rule.selector);
+                let ltrRule = postcss.parse(`${ltrSelector} { transform: ${value}; }`);
                 root.insertBefore(rule, ltrRule);
 
                 // Use the same rotation, but flip horizontal
-                let rtlRule = postcss.parse(`${rule.selector}:dir(rtl) { transform: ${matrix} ${value}; }`);
+                let rtlSelector = selectorParser(addRTL).processSync(rule.selector);
+                let rtlRule = postcss.parse(`${rtlSelector} { transform: ${matrix} ${value}; }`);
                 root.insertBefore(rule, rtlRule);
               }
               else {
@@ -68,7 +79,7 @@ module.exports = postcss.plugin('postcss-transform-logical', function (opts) {
                 rotationNode.remove();
 
                 // Add direction to all matching selectors
-                let newSelector = selectorParser(addDir).processSync(rule.selector);
+                let newSelector = selectorParser(addRTL).processSync(rule.selector);
 
                 // Just flip horizontal
                 let rtlRule = postcss.parse(`${newSelector} { transform: ${matrix} ${value}; }`);
