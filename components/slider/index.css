@@ -27,6 +27,7 @@ governing permissions and limitations under the License.
   --spectrum-slider-bottom-to-handle: var(--spectrum-slider-bottom-to-handle-small);
   --spectrum-slider-handle-border-radius: var(--spectrum-corner-radius-200);
   --spectrum-slider-handle-border-width-down: var(--spectrum-slider-handle-border-width-down-small);
+  --spectrum-slider-label-margin-block-end: var(--spectrum-slider-label-margin-block-end-small);
 }
 
 .spectrum-Slider--sizeM {
@@ -35,6 +36,7 @@ governing permissions and limitations under the License.
   --spectrum-slider-bottom-to-handle: var(--spectrum-slider-bottom-to-handle-medium);
   --spectrum-slider-handle-border-radius: var(--spectrum-corner-radius-200);
   --spectrum-slider-handle-border-width-down: var(--spectrum-slider-handle-border-width-down-medium);
+  --spectrum-slider-label-margin-block-end: var(--spectrum-slider-label-margin-block-end-medium);
 }
 
 .spectrum-Slider--sizeL {
@@ -43,6 +45,7 @@ governing permissions and limitations under the License.
   --spectrum-slider-bottom-to-handle: var(--spectrum-slider-bottom-to-handle-large);
   --spectrum-slider-handle-border-radius: calc(var(--spectrum-corner-radius-200) * 4);
   --spectrum-slider-handle-border-width-down: var(--spectrum-slider-handle-border-width-down-large);
+  --spectrum-slider-label-margin-block-end: var(--spectrum-slider-label-margin-block-end-large);
 }
 
 .spectrum-Slider--sizeXL {
@@ -51,6 +54,7 @@ governing permissions and limitations under the License.
   --spectrum-slider-bottom-to-handle: var(--spectrum-slider-bottom-to-handle-extra-large);
   --spectrum-slider-handle-border-radius: calc(var(--spectrum-corner-radius-200) * 4);
   --spectrum-slider-handle-border-width-down: var(--spectrum-slider-handle-border-width-down-extra-large);
+  --spectrum-slider-label-margin-block-end: var(--spectrum-slider-label-margin-block-end-extra-large);
 }
 
 .spectrum-Slider {
@@ -353,18 +357,27 @@ governing permissions and limitations under the License.
 .spectrum-Slider-labelContainer {
   display: flex;
   position: relative;
-
   inline-size: auto;
 
   padding-block-start: var(--mod-component-top-to-text-75, var(--spectrum-component-top-to-text-75));
   font-size: var(--mod-font-size-75, var(--spectrum-font-size-75));
-  margin-block-end: var(--mod-component-bottom-to-text-75, var(--spectrum-component-bottom-to-text-75));
-
- /* February 2023: custom scaled tokens for label margin block end 
-  that will be replaced with an updated token for Slider component-bottom-to-text-75 */
-
-  margin-block-end: var(--mod-spectrum-slider-label-margin-block-end, var(--spectrum-slider-label-margin-block-end));
   line-height: var(--mod-line-height-100, var(--spectrum-line-height-100));
+
+  /* margin between label and slider controls are based on the baseline of the label,
+    calculating the pixel difference for an accurate margin end */
+  --slider-label-baseline-margin: calc(
+    var(--spectrum-line-height-100) *  var(--spectrum-font-size-75)
+    - var(--spectrum-font-size-75)
+  );
+
+ /* February 2023: custom t-shirt sized token slider-label-margin-block-end for label margin block end 
+  that will be replaced with updated tokens for Slider component-bottom-to-text-75 */
+  margin-block-end: 
+    calc(
+       -1 * var(--mod-spectrum-slider-label-margin-block-end, var(--spectrum-slider-label-margin-block-end)) 
+       - var(--mod-label-baseline-margin, var(--slider-label-baseline-margin))
+    );
+
 
   /* international support */
   &:lang(ja),
@@ -465,9 +478,6 @@ governing permissions and limitations under the License.
       inset-inline-end: 0;
     }
   }
-
-
-
   
 }
 

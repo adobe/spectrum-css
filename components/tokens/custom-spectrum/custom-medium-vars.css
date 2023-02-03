@@ -46,4 +46,8 @@ governing permissions and limitations under the License.
 
   --spectrum-rating-icon-spacing: var(--spectrum-spacing-75);
   --spectrum-slider-label-margin-block-end: 8px;
+  --spectrum-slider-label-margin-block-end-small: -5px;
+  --spectrum-slider-label-margin-block-end-medium: -8px;
+  --spectrum-slider-label-margin-block-end-large: -11px;
+  --spectrum-slider-label-margin-block-end-extra-large: -14px;
 }
