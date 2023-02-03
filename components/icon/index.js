@@ -164,13 +164,14 @@ const buildIcons = async function() {
 
 const build = async function() {
   try {
-    await buildIcons();
-    await tasks.buildCSS();
+    await Promise.all([
+    buildIcons(),
+    tasks.buildCSS()
+    ])
   } catch (err) {
     console.error(err);
   }
 }
-build()
 
 exports.updateIcons = updateIcons;
 exports.build = exports.buildLite = exports.buildHeavy = exports.buildMedium = build;

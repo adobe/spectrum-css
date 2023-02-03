@@ -15,7 +15,6 @@ const fs = require("fs")
 const postcssReal = require("postcss")
 const fsp = require("fs").promises
 const { parse } = require("postcss-values-parser")
-const async = require("async")
 const fg = require("fast-glob")
 const processorsFunction = require("./processors").getProcessors
 const processors = processorsFunction()
@@ -102,77 +101,86 @@ function getTokensDefinedInCSS(root) {
  */
 async function getCoreTokens() {
   const fetchOptions = {
-    paths: [
-      process.cwd(),
-      path.join(process.cwd(), '../../')
-    ]
-  };
+    paths: [process.cwd(), path.join(process.cwd(), "../../")],
+  }
   /* Resolve core tokens first from the current working directory, or if not found, from the root of the monorepo */
-  const coreTokensFile = require.resolve('@spectrum-css/tokens', fetchOptions);
-  const coreTokensPkg = require.resolve('@spectrum-css/tokens/package.json', fetchOptions);
-  if (coreTokensPkg) console.log('Core tokens version:', await fsp.readFile(coreTokensPkg, 'utf8').then(JSON.parse).then(pkg => pkg.version));
-  let contents = await fsp.readFile(coreTokensFile, 'utf8');
-  let root = postcssReal.parse(contents);
-  return getTokensDefinedInCSS(root);
+  const coreTokensFile = require.resolve("@spectrum-css/tokens", fetchOptions)
+  const coreTokensPkg = require.resolve(
+    "@spectrum-css/tokens/package.json",
+    fetchOptions
+  )
+  if (coreTokensPkg)
+    console.log(
+      "Core tokens version:",
+      await fsp
+        .readFile(coreTokensPkg, "utf8")
+        .then(JSON.parse)
+        .then((pkg) => pkg.version)
+    )
+  let contents = await fsp.readFile(coreTokensFile, "utf8")
+  let root = postcssReal.parse(contents)
+  return getTokensDefinedInCSS(root)
 }
 
 /**
  * @desctiption method to build css files
  */
 async function buildCSS() {
-  const cssFiles = [
-    "index.css",
-    "themes/spectrum.css", // spectrum comes first
-    "themes/*.css",
-  ]
+  const cssFiles = [ 'index.css',
+  'themes/spectrum.css', // spectrum comes first
+  'themes/*.css']
   try {
-    const allCss = fg.sync(cssFiles)
+    const allCss = await fg.sync(cssFiles)
     // Read the contents of all CSS files
     const cssContents = await Promise.all(
       allCss.map((file) => fs.promises.readFile(file, "utf-8"))
     )
-  
+
     // Concatenate the contents of all CSS files
     const css = cssContents.join("\n")
-  
+
     // Process the CSS using postcss
     const processedCss = await postcssReal(processors).process(css, {
       from: "./index.css",
     })
-  
+
     // Write the processed CSS to a file
     await fs.promises.writeFile("dist/index.css", processedCss.css)
     console.log("********** build css done *********")
   } catch (e) {
     console.error(e)
   }
-  
 }
 
 async function buildCSSWithoutThemes() {
-  const cssFiles = [
-    "index.css",
-    "themes/spectrum.css", // spectrum comes first
-    "themes/*.css",
-  ]
+  const indexFile = ["index.css"];
+  const themeFiles = ['themes/spectrum.css', 'themes/*.css'];
+  let themeFileList = [];
 
-  // Read the contents of all CSS files
-  const cssContents = await Promise.all(
-    cssFiles.map((file) => fs.promises.readFile(file, "utf-8"))
-  )
+  try {
+    // Check if the themes folder exists
+    const isThemesFolderExists = await fs.promises.stat("themes").catch(() => false);
+    if (isThemesFolderExists) {
+      themeFileList = await fg.sync(themeFiles);
+    }
 
-  // Concatenate the contents of all CSS files
-  const css = cssContents.join("\n")
+    // Get the list of all CSS files
+    const files = [...indexFile, ...themeFileList];
+    const cssContents = await Promise.all(files.map(file => fs.promises.readFile(file, "utf-8")));
+    const css = cssContents.join("\n");
 
-  // Process the CSS using postcss
-  const processors = processorsFunction(false, { noFlatVariables: true })
-  const processedCss = await postcssReal(processors).process(css, {
-    from: "./index.css",
-  })
+    // Process the CSS using postcss
+    const processors = processorsFunction(false, { noFlatVariables: true });
+    const processedCss = await postcssReal(processors).process(css, { from: "./index.css" });
+    await fs.promises.mkdir(path.join("dist/themes"), { recursive: true });
 
-  // Write the processed CSS to a file
-  await fs.promises.writeFile("dist/index-base.css", processedCss.css)
+    // Write the processed CSS to a file
+    await fs.promises.writeFile("dist/index-base.css", processedCss.css);
+  } catch (e) {
+    console.error(e);
+  }
 }
+
 
 /**
  * @description take all the theme files and create index theme at the root
@@ -182,41 +190,64 @@ async function buildCSSThemeIndex() {
     "themes/spectrum.css", // spectrum comes first
     "themes/*.css",
   ]
+  try {
+    const isThemesFolderExists = await fs.promises
+      .stat("themes")
+      .catch(() => false)
+    if (isThemesFolderExists) {
+      const allCss = await fg.sync(cssFiles)
+      // Read the contents of all CSS files
+      const cssContents = await Promise.all(
+        allCss.map((file) => fs.promises.readFile(file, "utf-8"))
+      )
 
-  // Read the contents of all CSS files
-  const cssContents = await Promise.all(
-    cssFiles.map((file) => fs.promises.readFile(file, "utf-8"))
-  )
+      // Concatenate the contents of all CSS files
+      const css = cssContents.join("\n")
 
-  // Concatenate the contents of all CSS files
-  const css = cssContents.join("\n")
+      // Process the CSS using postcss
+      const processors = processorsFunction(true, { noSelectors: true })
+      const processedCss = await postcssReal(processors).process(css)
+      await fs.promises.mkdir(path.join("dist/themes"), { recursive: true });
 
-  // Process the CSS using postcss
-  const processors = processorsFunction(true, { noSelectors: true })
-  const processedCss = await postcssReal(processors).process(css)
-
-  // Write the processed CSS to a file
-  await fs.promises.writeFile("dist/index-theme.css", processedCss.css)
+      // Write the processed CSS to a file
+      await fs.promises.writeFile("dist/index-theme.css", processedCss.css)
+    }
+  } catch (e) {
+    console.error(e)
+  }
 }
 
 async function buildCSSThemes() {
   // Get a list of all CSS files in the themes directory
-  const cssFiles = await fs.promises.readdir("themes/")
+  // Check if the themes folder exists
+  try {
+    const isThemesFolderExists = await fs.promises
+      .stat("themes")
+      .catch(() => false)
+    if (isThemesFolderExists) {
+      const cssFiles = await fs.promises.readdir("themes/")
 
-  // Process each CSS file
-  for (const file of cssFiles) {
-    // Read the contents of the CSS file
-    const css = await fs.promises.readFile(path.join("themes/", file), "utf-8")
+      // Process each CSS file
+      for (const file of cssFiles) {
+        // Read the contents of the CSS file
+        const css = await fs.promises.readFile(
+          path.join("themes/", file),
+          "utf-8"
+        )
 
-    // Process the CSS using postcss
-    const processors = processorsFunction(true, { noSelectors: true })
-    const processedCss = await postcssReal(processors).process(css)
-
-    // Write the processed CSS to a file in the dist/themes directory
-    await fs.promises.writeFile(
-      path.join("dist/themes/", file),
-      processedCss.css
-    )
+        // Process the CSS using postcss
+        const processors = processorsFunction(true, { noSelectors: true })
+        const processedCss = await postcssReal(processors).process(css)
+        await fs.promises.mkdir(path.join("dist/themes"), { recursive: true });
+        // Write the processed CSS to a file in the dist/themes directory
+        await fs.promises.writeFile(
+          path.join("dist/themes/", file),
+          processedCss.css
+        )
+      }
+    }
+  } catch (e) {
+    console.error(e)
   }
 }
 
@@ -224,24 +255,30 @@ async function buildCSSThemes() {
   Special case for express: it needs Spectrum base vars and needs to override them
 */
 async function buildExpressTheme() {
-  // Read the contents of the index-theme.css file
-  const css = await fs.promises.readFile("dist/index-theme.css", "utf-8")
+  try {
+    // Read the contents of the index-theme.css file
+    const css = await fs.promises.readFile("dist/index-theme.css", "utf-8")
 
-  // Process the CSS using postcss
-  const processors = processorsFunction(true).concat(
-    require("postcss-combininator")
-  )
-  const processedCss = await postcssReal(processors).process(css)
+    // Process the CSS using postcss
+    const processors = processorsFunction(true).concat(
+      require("postcss-combininator")
+    )
+    const processedCss = await postcssReal(processors).process(css)
 
-  // Write the processed CSS to a file named express.css in the dist/themes directory
-  await fs.promises.writeFile("dist/themes/express.css", processedCss.css)
+    // Write the processed CSS to a file named express.css in the dist/themes directory
+    await fs.promises.mkdir(path.join("dist/themes"), { recursive: true });
+
+    await fs.promises.writeFile("dist/themes/express.css", processedCss.css)
+  } catch (e) {
+    console.error(e)
+  }
 }
 
 let coreTokens = null
 async function checkCSS(globFile) {
   // Read the contents of all CSS files specified by the glob
   try {
-    const cssFiles = await fg(globFile);
+    const cssFiles = await fg.sync(globFile)
     const cssContents = await Promise.all(
       cssFiles.map((file) => fs.promises.readFile(file, "utf-8"))
     )
@@ -305,14 +342,17 @@ function checkBuiltCSS() {
 exports.buildCSS = async function () {
   try {
     await checkSourceCSS()
-    await Promise.all([buildCSS(), buildCSSWithoutThemes()])
     await Promise.all([
-      buildCSSThemes(),
-      buildCSSThemeIndex(),
-      buildExpressTheme(),
+      buildCSS(),
+      buildCSSWithoutThemes(),
+      (async () => {
+        await buildCSSThemes()
+        await buildCSSThemeIndex()
+        await buildExpressTheme()
+      })(),
     ])
     await checkBuiltCSS()
-  } catch (err) {
-    console.error("Error in buildCSS: " + err)
+  } catch (e) {
+    console.error(e)
   }
 }

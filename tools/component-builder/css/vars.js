@@ -19,8 +19,9 @@ const fs = require("fs")
 const varUtils = require("./lib/varUtils")
 
 async function bakeVars() {
-  const pkg = JSON.parse(await fs.promises.readFile(path.join("package.json")))
-  const pkgName = pkg.name.split("/").pop()
+  try {
+    const pkg = JSON.parse(await fs.promises.readFile(path.join("package.json")))
+    const pkgName = pkg.name.split("/").pop()
 
   return new Promise((resolve, reject) => {
     fs.readFile("dist/index-vars.css", "utf-8", async (err, filePath) => {
@@ -71,6 +72,10 @@ async function bakeVars() {
     }
     })
   })
+  } catch (e) {
+    console.error("Error in bakeVars " + e)
+  }
+  
 }
 
 exports.bakeVars = bakeVars

@@ -133,10 +133,13 @@ async function copyPackages() {
       ${dirs.components}/*/dist/**,
       !${dirs.components}/*/dist/docs/**`,
   ])
-
-  for (const filePath of files) {
-    const newFilePath = filePath.replace("/dist", "")
-    await fs.copy(filePath, path.join("dist/components/", newFilePath))
+  try {
+    for (const filePath of files) {
+      const newFilePath = filePath.replace("/dist", "")
+      await fs.copy(filePath, path.join("dist/components/", newFilePath))
+    }
+  } catch (e) {
+    console.error("Eror in copyPackages" + e)
   }
 }
 

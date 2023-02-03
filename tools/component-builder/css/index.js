@@ -14,7 +14,7 @@ const postcss = require("postcss")
 const processors = require("./processors").processors
 // const legacyBuild = require('./legacyBuild');
 const vars = require("./vars")
-
+const path = require('path');
 // Read in all variables used
 // Read in all vars from recent DNA
 // Include definitions if they refer to a variable, static if not
@@ -25,40 +25,48 @@ async function buildIndexVars() {
     // Allow missing skin.css
     const validFiles = files.filter((file) => fs.existsSync(file))
     const contents = validFiles.map((file) => fs.readFileSync(file, "utf8"))
-    postcss(processors)
-      .process(contents.join(""), { from: undefined })
-      .then((result) => {
-        fs.writeFileSync(path.join("dist", "index-vars.css"), result.css)
-        console.log("File saved successfully")
-        vars.bakeVars()
-      })
-      .catch((err) => {
-        console.error("An error occurred while processing CSS:", err)
-      })
+    try {
+      const result = await postcss(processors).process(contents.join(""), { from: undefined });
+      await fs.promises.writeFile(path.join("dist", "index-vars.css"), result.css);
+      console.log("File saved successfully");
+      } catch (error) {
+      console.error("An error occurred while processing CSS:", error);
+    }
   } catch (e) {
     console.error(e)
   }
 }
 
 const buildVars = async function () {
-  await buildIndexVars()
-  await vars.bakeVars()
+  try {
+    await buildIndexVars()
+  } catch (e) {
+    console.error("Error in buildIndexVars " + e)
+  }
+  try {
+    await vars.bakeVars()
+  } catch (e) {
+    console.error("Error in buildVars " + e)
+  }
 }
 
 exports.buildIndexVars = buildIndexVars
 exports.buildVars = buildVars
 
-exports.buildCSS = async () => {
+exports.buildCSS = async function () {
   try {
     await buildVars()
-    let css = ""
-    try {
-      css = await fs.promises.readFile("dist/index-vars.css", "utf-8")
-    } catch (e) {
-      console.error(`Error reading index-vars.css: ${e}`)
-    }
-    await fs.promises.writeFile("dist/index.css", css)
-  } catch (err) {
-    console.error("Error in build " + err)
+
+    return new Promise((resolve, reject) => {
+      fs.copyFile("dist/index-vars.css", "dist/index.css", (error) => {
+        if (error) {
+          reject(error)
+        } else {
+          resolve()
+        }
+      })
+    })
+  } catch (e) {
+    console.error(e)
   }
 }
