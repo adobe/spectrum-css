@@ -12,7 +12,7 @@ governing permissions and limitations under the License.
 
 const fg = require("fast-glob")
 const del = require("del")
-const path = require('path')
+const path = require("path")
 const fs = require("fs")
 const async = require("async")
 const concat = require("concat-stream")
@@ -127,31 +127,17 @@ function buildDepenenciesOfCommons() {
   return subrunner.runTaskOnPackages("buildLite", dependentComponents)
 }
 
-function copyPackages() {
-  // Get array of file paths matching the glob pattern
-  const files = [
-    `${dirs.components}/*/package.json`,
-    `${dirs.components}/*/dist/**`,
-    `!${dirs.components}/*/dist/docs/**`,
-  ]
+async function copyPackages() {
+  const files = await fg.sync([
+      `${dirs.components}/*/package.json,
+      ${dirs.components}/*/dist/**,
+      !${dirs.components}/*/dist/docs/**`,
+  ])
 
-  // Iterate over the array of file paths
-  fg.sync(files).forEach((file) => {
-    // Read the contents of the file
-    const contents = fs.readFileSync(file)
-
-    // Modify the file path to remove the '/dist' part of the dirname
-    const newFile = file.replace("/dist", "")
-
-    // Create the destination directory if it doesn't exist
-    const destDir = path.dirname(newFile)
-    if (!fs.existsSync(destDir)) {
-      fs.mkdirSync(destDir, { recursive: true })
-    }
-
-    // Write the file to the destination
-    fs.writeFileSync(newFile, contents)
-  })
+  for (const filePath of files) {
+    const newFilePath = filePath.replace("/dist", "")
+    await fs.copy(filePath, path.join("dist/components/", newFilePath))
+  }
 }
 
 async function buildIfTopLevel() {

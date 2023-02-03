@@ -20,14 +20,21 @@ const vars = require("./vars")
 // Include definitions if they refer to a variable, static if not
 
 async function buildIndexVars() {
-  const files = ["index.css", "skin.css"].filter((file) => fs.existsSync(file))
+  const files = ["index.css", "skin.css"]
   try {
-    const result = await postcss(processors).process(
-      files.map((file) => fs.readFileSync(file, "utf-8")).join(""),
-      { from: undefined }
-    )
-
-    fs.writeFileSync(path.join("dist", "index-vars.css"), result.css)
+    // Allow missing skin.css
+    const validFiles = files.filter((file) => fs.existsSync(file))
+    const contents = validFiles.map((file) => fs.readFileSync(file, "utf8"))
+    postcss(processors)
+      .process(contents.join(""), { from: undefined })
+      .then((result) => {
+        fs.writeFileSync(path.join("dist", "index-vars.css"), result.css)
+        console.log("File saved successfully")
+        vars.bakeVars()
+      })
+      .catch((err) => {
+        console.error("An error occurred while processing CSS:", err)
+      })
   } catch (e) {
     console.error(e)
   }

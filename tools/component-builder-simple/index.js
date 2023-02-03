@@ -12,20 +12,23 @@ governing permissions and limitations under the License.
 const fs = require('fs')
 const del = require('del');
 const css = require('./css');
+const path = require("path");
 
 function clean() {
   return del('dist/*');
 }
 
-const srcPath = 'dist/index.css';
-const destPath = 'dist/index-vars.css';
+async function copyIndex() {
+  const indexCSS = fs.readFileSync(path.join('dist', 'index.css'), 'utf8');
+  fs.writeFileSync(path.join('dist', 'index-vars.css'), indexCSS);
+}
+
 
 const build = async () => {
   try {
       await clean();
       await css.buildCSS();
-      const data = await fs.readFile(srcPath, 'utf8');
-      await fs.writeFile(destPath, data, 'utf8');
+      await copyIndex()
   } catch (err) {
       console.error("Error in component buildersimple " + err);
   }

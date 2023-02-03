@@ -13,8 +13,6 @@ governing permissions and limitations under the License.
 const fs = require("fs")
 const del = require("del")
 const path = require("path")
-const async = require("async")
-const glob = require("glob")
 const fg = require("fast-glob")
 
 function clean() {

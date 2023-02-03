@@ -125,22 +125,28 @@ async function buildCSS() {
     "themes/spectrum.css", // spectrum comes first
     "themes/*.css",
   ]
-  const allCss = fg.sync(cssFiles)
-  // Read the contents of all CSS files
-  const cssContents = await Promise.all(
-    allCss.map((file) => fs.promises.readFile(file, "utf-8"))
-  )
-
-  // Concatenate the contents of all CSS files
-  const css = cssContents.join("\n")
-
-  // Process the CSS using postcss
-  const processedCss = await postcssReal(processors).process(css, {
-    from: "./index.css",
-  })
-
-  // Write the processed CSS to a file
-  await fs.promises.writeFile("dist/index.css", processedCss.css)
+  try {
+    const allCss = fg.sync(cssFiles)
+    // Read the contents of all CSS files
+    const cssContents = await Promise.all(
+      allCss.map((file) => fs.promises.readFile(file, "utf-8"))
+    )
+  
+    // Concatenate the contents of all CSS files
+    const css = cssContents.join("\n")
+  
+    // Process the CSS using postcss
+    const processedCss = await postcssReal(processors).process(css, {
+      from: "./index.css",
+    })
+  
+    // Write the processed CSS to a file
+    await fs.promises.writeFile("dist/index.css", processedCss.css)
+    console.log("********** build css done *********")
+  } catch (e) {
+    console.error(e)
+  }
+  
 }
 
 async function buildCSSWithoutThemes() {
