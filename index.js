@@ -20,7 +20,7 @@ const glob = require("glob")
 const del = require("del")
 const builder = require("./tools/bundle-builder")
 const test = require("./tools/test-builder")
-const site = require("./site/index.cjs")
+const site = require("./site/index.js")
 const subrunner = require("./tools/bundle-builder/subrunner")
 
 Object.assign(exports, builder)
