@@ -17,8 +17,7 @@ const replace = require('replace-in-file');
 const sort = require('sort-stream');
 const svgcombiner = require('svgcombiner');
 const svgstore = require('svgstore');
-const async = require('async')
-
+const fs = require("fs")
 
 async function clean() {
   const del = await import('del');
@@ -69,26 +68,23 @@ function sanitizeIcons() {
  * @description This code will read all the files in the medium and large directories, transform the data in the files using the sort and svgcombiner functions,
  * and write the modified versions to the
  */
-function generateCombinedIcons() {
-  glob('{medium,large}/*.svg', (err, files) => {
-    if (err) {
-      console.error(err);
-      return;
-    }
-    fs.createReadStream(files)
-      .pipe(sort())
-      .pipe(svgcombiner({
-        processName(filePath) {
-          // Clean filename
-          return path.basename(filePath, path.extname(filePath)).replace(/S_UI(.*?)_.*/, '$1');
-        },
-        processClass(filePath) {
-          // Return the last directory
-          return 'spectrum-UIIcon--' + path.dirname(filePath).split(path.sep).pop();
-        }
-      }))
-      .pipe(fs.createWriteStream('combined/'))
+ function generateCombinedIcons() {
+  const sizes = ['medium', 'large'];
+  let svgString = '';
+  sizes.forEach(size => {
+    const files = glob.sync(`${size}/*.svg`).map(filePath => {
+      return {
+        path: filePath,
+        name: path.basename(filePath, path.extname(filePath)).replace(/S_UI(.*?)_.*/, '$1'),
+        class: 'spectrum-UIIcon--' + size
+      };
+    });
+    files.forEach(file => {
+      svgString += `<symbol id="${file.name}" class="${file.class}" viewBox="0 0 24 24">${fs.readFileSync(file.path, 'utf-8')}</symbol>\n`;
+    });
   });
+  const sprite = '<svg xmlns="http://www.w3.org/2000/svg">\n' + svgString + '</svg>';
+  fs.writeFileSync(`combined/combined-icons.svg`, sprite);
 }
 
 // Only ran by Adobe
@@ -107,22 +103,21 @@ const tasks = require('@spectrum-css/component-builder');
  * and write the modified versions to the dist directory.
  * @author Rajdeep
  */
-function generateSVGSprite() {
-  glob('combined/*.svg', (err, files) => {
-    if (err) {
-      console.error(err);
-      return;
-    }
-    fs.createReadStream(files)
-      .pipe(rename((filePath) => {
-        filePath.basename = 'spectrum-css-icon-' + filePath.basename;
-      }))
-      .pipe(svgstore({
-        inlineSvg: true
-      }))
-      .pipe(rename('spectrum-css-icons.svg'))
-      .pipe(fs.createWriteStream('dist/'))
+ function generateSVGSprite() {
+  const files = glob.sync(`combined/*.svg`).map(filePath => {
+    return {
+      path: filePath,
+      name: 'spectrum-css-icon-' + path.basename(filePath)
+    };
   });
+  let svgString = '';
+  files.forEach(file => {
+    svgString += fs.readFileSync(file.path, 'utf-8');
+  });
+  const sprite = '<svg xmlns="http://www.w3.org/2000/svg">\n' +
+    files.map(file => `<symbol id="${file.name}" viewBox="0 0 24 24">${fs.readFileSync(file.path, 'utf-8')}</symbol>`).join('\n') +
+    '\n</svg>';
+  fs.writeFileSync(`dist/spectrum-css-icons.svg`, sprite);
 }
 
 /**
@@ -133,26 +128,24 @@ function generateSVGSprite() {
  * transforms the data in the files using the rename and svgstore functions, and writes 
  * the modified versions to the dist directory
  * @param {*} size 
- * @author Rajdeepx`` 
+ * @author Rajdeep
  */
-function getSVGSpriteTask(size) {
-  return (callback) => {
-    glob(`${size}/*.svg`, (err, files) => {
-      if (err) {
-        console.error(err);
-        return;
-      }
-      fs.createReadStream(files)
-        .pipe(rename((filePath) => {
-          filePath.basename = 'spectrum-css-icon-' + filePath.basename.replace(/S_UI(.*?)_.*/, '$1');
-        }))
-        .pipe(svgstore({
-          inlineSvg: true
-        }))
-        .pipe(rename(`spectrum-css-icons-${size}.svg`))
-        .pipe(fs.createWriteStream('dist/'))
-        .on('finish', callback);
+ function getSVGSpriteTask(size) {
+  return function generateSVGSprite() {
+    const files = glob.sync(`${size}/*.svg`).map(filePath => {
+      return {
+        path: filePath,
+        name: 'spectrum-css-icon-' + path.basename(filePath).replace(/S_UI(.*?)_.*/, '$1')
+      };
     });
+    let svgString = '';
+    files.forEach(file => {
+      svgString += fs.readFileSync(file.path, 'utf-8');
+    });
+    const sprite = '<svg xmlns="http://www.w3.org/2000/svg">\n' +
+      files.map(file => `<symbol id="${file.name}" viewBox="0 0 24 24">${fs.readFileSync(file.path, 'utf-8')}</symbol>`).join('\n') +
+      '\n</svg>';
+    fs.writeFileSync(`dist/spectrum-css-icons-${size}.svg`, sprite);
   };
 }
 
@@ -177,7 +170,7 @@ const build = async function() {
     console.error(err);
   }
 }
-
+build()
 
 exports.updateIcons = updateIcons;
 exports.build = exports.buildLite = exports.buildHeavy = exports.buildMedium = build;
