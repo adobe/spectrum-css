@@ -403,6 +403,17 @@ governing permissions and limitations under the License.
   margin-inline-start: var(--mod-slider-label-margin-start, var(--spectrum-slider-label-margin-start));
 }
 
+
+/* setting tick marks in relation to label */
+
+.spectrum-Slider-controls:has(.spectrum-Slider-ticks) {
+  margin-block-start:
+    calc(
+      var(--spectrum-text-to-visual-75)
+      - var(--mod-slider-tick-mark-height, var(--spectrum-slider-tick-mark-height)) / 2 
+      - var(--mod-slider-track-thickness, var(--spectrum-slider-track-thickness)) / 2
+    );
+}
 /* Slider misses core-tokens for tick variant */
 .spectrum-Slider-ticks {
   display: flex;
@@ -410,8 +421,7 @@ governing permissions and limitations under the License.
 
   z-index: 0;
 
-  margin-inline: var(--mod-slider-track-margin-offset, var(--spectrum-slider-track-margin-offset)) ;
-  margin-block-start: calc(var(--spectrum-slider-height-size) / 2 - var(--spectrum-slider-tick-mark-height) / 2);
+  margin-inline: var(--mod-slider-track-margin-offset, var(--spectrum-slider-track-margin-offset));
 
   /* missing core-token for handle fill-color */
   &~.spectrum-Slider-handleContainer {
@@ -420,11 +430,35 @@ governing permissions and limitations under the License.
     }
   }
 }
+ 
+/* setting tick mark labels below track */
+.spectrum-Slider-tick:has(.spectrum-Slider-tickLabel) {
+  top: calc(
+    var(--mod-slider-tick-mark-height, var(--spectrum-slider-tick-mark-height)) / 2 
+    - var(--mod-slider-track-thickness, var(--spectrum-slider-track-thickness)) / 2
+  ); 
+
+  .spectrum-Slider-tickLabel {
+    margin-block-start: 
+      calc(
+        var(--mod-slider-tick-mark-height, var(--spectrum-slider-tick-mark-height)) / 2 
+        + var(--mod-slider-track-thickness, var(--spectrum-slider-track-thickness)) / 2
+        + var(--spectrum-text-to-visual-75)
+      )
+    }
+  } 
 
 .spectrum-Slider-tick {
   position: relative;
 
   inline-size: var(--mod-slider-tick-mark-width, var(--spectrum-slider-tick-mark-width));
+
+  /* tick marks are centered half based on slider track thickness and tick height  */
+  top: calc(
+    var(--mod-slider-tick-mark-height, var(--spectrum-slider-tick-mark-height)) / 2 
+    - var(--mod-slider-track-thickness, var(--spectrum-slider-track-thickness)) / 2
+    ); 
+
 
   &:after {
     display: block;
@@ -442,10 +476,7 @@ governing permissions and limitations under the License.
     display: flex;
     align-items: center;
     justify-content: center;
-
-    margin-block: calc(var(--mod-text-to-visual-75, var(--spectrum-text-to-visual-75)) + var(--mod-slider-tick-mark-height, var(--spectrum-slider-tick-mark-height))) 0;
-
-    margin-inline: calc(var(--mod-slider-label-margin-start, var(--spectrum-slider-label-margin-start))) * -1) calc(var(--mod-slider-label-margin-start, var(--spectrum-slider-label-margin-start)) * -1);
+  
 
     font-size: var(--mod-font-size-75, var(--spectrum-font-size-75));
     line-height: var(--mod-line-height-100, var(--spectrum-line-height-100));
@@ -477,7 +508,6 @@ governing permissions and limitations under the License.
       inset-inline-end: 0;
     }
   }
-  
 }
 
 
@@ -498,9 +528,8 @@ governing permissions and limitations under the License.
   inline-size: calc(100% + var(--spectrum-slider-handle-size));
 
   position: absolute;
-  inset-block-start: calc(var(--mod-slider-control-height, var(--spectrum-slider-control-height)) / 2 - 1px);
+  inset-block-start: 0;
 
-  /* margin-left: calc(var(--spectrum-slider-handle-size) / 2 * -1); */
   margin-inline-start: calc(var(--spectrum-slider-handle-size) / 2 * -1);
 }
 
