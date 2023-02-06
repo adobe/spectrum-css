@@ -3,6 +3,24 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+<a name="6.0.0"></a>
+# 6.0.0
+🗓 2023-02-06 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/avatar@5.0.27...@spectrum-css/avatar@6.0.0)
+
+* refactor(avatar)!: use spectrum tokens (#1565) ([8db2337](https://github.com/adobe/spectrum-css/commit/8db2337)), closes [#1565](https://github.com/adobe/spectrum-css/issues/1565)
+
+
+### 🛑 BREAKING CHANGES
+
+* migrates Avatar to new tokens system
+
+Co-authored-by: Patrick Fulton <pfulton@adobe.com>
+Co-authored-by: Bernhard Schmidt <bschmidt@adobe.com>
+
+
+
+
+
 <a name="5.0.27"></a>
 ## 5.0.27
 🗓 2023-02-06 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/avatar@5.0.26...@spectrum-css/avatar@5.0.27)
