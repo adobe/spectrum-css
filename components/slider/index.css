@@ -405,15 +405,26 @@ governing permissions and limitations under the License.
 
 
 /* setting tick marks in relation to label */
+.spectrum-Slider--tick {
+  .spectrum-Slider-controls {
+    margin-block-start:
+      calc(
+        var(--spectrum-text-to-visual-75)
+        - var(--mod-slider-tick-mark-height, var(--spectrum-slider-tick-mark-height)) / 2
+        - var(--mod-slider-track-thickness, var(--spectrum-slider-track-thickness)) / 2
+      );
+  }
 
-.spectrum-Slider-controls:has(.spectrum-Slider-ticks) {
-  margin-block-start:
-    calc(
-      var(--spectrum-text-to-visual-75)
-      - var(--mod-slider-tick-mark-height, var(--spectrum-slider-tick-mark-height)) / 2
-      - var(--mod-slider-track-thickness, var(--spectrum-slider-track-thickness)) / 2
-    );
+  .spectrum-Slider-tickLabel {
+    margin-block-start:
+      calc(
+        var(--mod-slider-tick-mark-height, var(--spectrum-slider-tick-mark-height)) / 2
+        + var(--mod-slider-track-thickness, var(--spectrum-slider-track-thickness)) / 2
+        + var(--spectrum-text-to-visual-75)
+      );
+  }
 }
+
 /* Slider misses core-tokens for tick variant */
 .spectrum-Slider-ticks {
   display: flex;
@@ -430,23 +441,6 @@ governing permissions and limitations under the License.
     }
   }
 }
-
-/* setting tick mark labels below track */
-.spectrum-Slider-tick:has(.spectrum-Slider-tickLabel) {
-  top: calc(
-    var(--mod-slider-tick-mark-height, var(--spectrum-slider-tick-mark-height)) / 2
-    - var(--mod-slider-track-thickness, var(--spectrum-slider-track-thickness)) / 2
-  );
-
-  .spectrum-Slider-tickLabel {
-    margin-block-start:
-      calc(
-        var(--mod-slider-tick-mark-height, var(--spectrum-slider-tick-mark-height)) / 2
-        + var(--mod-slider-track-thickness, var(--spectrum-slider-track-thickness)) / 2
-        + var(--spectrum-text-to-visual-75)
-      )
-    }
-  }
 
 .spectrum-Slider-tick {
   position: relative;
