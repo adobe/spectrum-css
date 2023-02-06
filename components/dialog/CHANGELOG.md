@@ -3,6 +3,16 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+<a name="6.0.27"></a>
+## 6.0.27
+🗓 2023-02-06 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/dialog@6.0.26...@spectrum-css/dialog@6.0.27)
+
+**Note:** Version bump only for package @spectrum-css/dialog
+
+
+
+
+
 <a name="6.0.26"></a>
 ## 6.0.26
 🗓 2023-02-01 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/dialog@6.0.25...@spectrum-css/dialog@6.0.26)
