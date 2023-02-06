@@ -249,7 +249,6 @@ governing permissions and limitations under the License.
   position: absolute;
   inset-inline-start: var(--spectrum-slider-track-margin-offset, var(--spectrum-slider-track-margin-offset));
   inset-inline-end: var(--spectrum-slider-track-margin-offset, var(--spectrum-slider-track-margin-offset));
-  inset-block-start: var(--mod-slider-ramp-track-height, var(--spectrum-slider-ramp-track-height)) / 2);
 
   svg {
     inline-size: 100%;
