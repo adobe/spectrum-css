@@ -125,7 +125,7 @@ governing permissions and limitations under the License.
 }
 
 /* Sliders with ticks + tick mark labels require more margin-block-end.
- As of February 2023 we do not have tokens yet tokens for Ramp and Tick variants, 
+ As of February 2023 we do not have tokens yet tokens for Ramp and Tick variants,
  using control-height here instead.  */
 .spectrum-Slider--tick {
   margin-block-end: var(--mod-slider-control-height, var(--spectrum-slider-control-height));
@@ -272,7 +272,7 @@ governing permissions and limitations under the License.
   inline-size: var(--mod-slider-handle-size, var(--spectrum-slider-handle-size));
   block-size: var(--mod-slider-handle-size, var(--spectrum-slider-handle-size));
 
-  
+
   inset-block-start: calc(
     var(--spectrum-slider-control-height) / 2 - var(--spectrum-slider-bottom-to-handle)
     + var(--mod-slider-margin-top-offset, var(--spectrum-slider-margin-top-offset))
@@ -369,11 +369,11 @@ governing permissions and limitations under the License.
     - var(--spectrum-font-size-75)
   );
 
- /* February 2023: custom t-shirt sized token slider-label-margin-block-end for label margin block end 
+ /* February 2023: custom t-shirt sized token slider-label-margin-block-end for label margin block end
   that will be replaced with updated tokens for Slider component-bottom-to-text-75 */
-  margin-block-end: 
+  margin-block-end:
     calc(
-       -1 * var(--mod-spectrum-slider-label-margin-block-end, var(--spectrum-slider-label-margin-block-end)) 
+       -1 * var(--mod-spectrum-slider-label-margin-block-end, var(--spectrum-slider-label-margin-block-end))
        - var(--mod-label-baseline-margin, var(--slider-label-baseline-margin))
     );
 
@@ -410,7 +410,7 @@ governing permissions and limitations under the License.
   margin-block-start:
     calc(
       var(--spectrum-text-to-visual-75)
-      - var(--mod-slider-tick-mark-height, var(--spectrum-slider-tick-mark-height)) / 2 
+      - var(--mod-slider-tick-mark-height, var(--spectrum-slider-tick-mark-height)) / 2
       - var(--mod-slider-track-thickness, var(--spectrum-slider-track-thickness)) / 2
     );
 }
@@ -430,23 +430,23 @@ governing permissions and limitations under the License.
     }
   }
 }
- 
+
 /* setting tick mark labels below track */
 .spectrum-Slider-tick:has(.spectrum-Slider-tickLabel) {
   top: calc(
-    var(--mod-slider-tick-mark-height, var(--spectrum-slider-tick-mark-height)) / 2 
+    var(--mod-slider-tick-mark-height, var(--spectrum-slider-tick-mark-height)) / 2
     - var(--mod-slider-track-thickness, var(--spectrum-slider-track-thickness)) / 2
-  ); 
+  );
 
   .spectrum-Slider-tickLabel {
-    margin-block-start: 
+    margin-block-start:
       calc(
-        var(--mod-slider-tick-mark-height, var(--spectrum-slider-tick-mark-height)) / 2 
+        var(--mod-slider-tick-mark-height, var(--spectrum-slider-tick-mark-height)) / 2
         + var(--mod-slider-track-thickness, var(--spectrum-slider-track-thickness)) / 2
         + var(--spectrum-text-to-visual-75)
       )
     }
-  } 
+  }
 
 .spectrum-Slider-tick {
   position: relative;
@@ -455,9 +455,9 @@ governing permissions and limitations under the License.
 
   /* tick marks are centered half based on slider track thickness and tick height  */
   top: calc(
-    var(--mod-slider-tick-mark-height, var(--spectrum-slider-tick-mark-height)) / 2 
+    var(--mod-slider-tick-mark-height, var(--spectrum-slider-tick-mark-height)) / 2
     - var(--mod-slider-track-thickness, var(--spectrum-slider-track-thickness)) / 2
-    ); 
+    );
 
 
   &:after {
@@ -476,7 +476,7 @@ governing permissions and limitations under the License.
     display: flex;
     align-items: center;
     justify-content: center;
-  
+
 
     font-size: var(--mod-font-size-75, var(--spectrum-font-size-75));
     line-height: var(--mod-line-height-100, var(--spectrum-line-height-100));
@@ -518,6 +518,10 @@ governing permissions and limitations under the License.
     .spectrum-Slider-handle {
       cursor: default;
       pointer-events: none;
+    }
+
+    .spectrum-Slider-tickLabel {
+      color: var(--highcontrast-slider-label-text-color-disabled, var(--mod-slider-label-text-color-disabled, var(--spectrum-slider-label-text-color-disabled)));
     }
   }
 }
