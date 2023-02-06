@@ -622,8 +622,8 @@ governing permissions and limitations under the License.
 
 .spectrum-Slider-handle {
   &.is-dragged {
-    border-color: var(--highcontrast-slider-handle-border-color-down, var(--mod-slider-handle-border-color-down), var(--spectrum-slider-handle-border-color-down)));
-    background: var(--highcontrast-slider-handle-background-color, var(--mod-slider-handle-background-color), var(--spectrum-slider-handle-background-color)));
+    border-color: var(--highcontrast-slider-handle-border-color-down, var(--mod-slider-handle-border-color-down, var(--spectrum-slider-handle-border-color-down)));
+    background: var(--highcontrast-slider-handle-background-color, var(--mod-slider-handle-background-color, var(--spectrum-slider-handle-background-color)));
   }
 }
 
@@ -632,7 +632,7 @@ governing permissions and limitations under the License.
   .spectrum-Slider-track {
     &:not(:first-of-type):not(:last-of-type) {
       &:before {
-        background: var(--highcontrast-slider-track-fill-color, var(--mod-slider-track-fill-color), var(--spectrum-slider-track-fill-color)));
+        background: var(--highcontrast-slider-track-fill-color, var(--mod-slider-track-fill-color, var(--spectrum-slider-track-fill-color)));
       }
     }
   }
