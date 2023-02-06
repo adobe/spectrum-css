@@ -3,6 +3,21 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+<a name="2.0.0"></a>
+# 2.0.0
+🗓 2023-02-06 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/picker@1.2.21...@spectrum-css/picker@2.0.0)
+
+* refactor(picker)!: use spectrum tokens (#1528) ([7cdbad2](https://github.com/adobe/spectrum-css/commit/7cdbad2)), closes [#1528](https://github.com/adobe/spectrum-css/issues/1528)
+
+
+### 🛑 BREAKING CHANGES
+
+* migrates Picker to new tokens system
+
+
+
+
+
 <a name="1.2.21"></a>
 ## 1.2.21
 🗓 2023-02-06 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/picker@1.2.20...@spectrum-css/picker@1.2.21)
