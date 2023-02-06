@@ -16,7 +16,6 @@ export const Template = ({
   try {
     // Load styles for this component
     import(/* webpackPrefetch: true */ "../index.css");
-    import(/* webpackPrefetch: true */ "../skin.css");
   } catch (e) {
     console.warn(e);
   }
