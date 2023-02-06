@@ -10,19 +10,21 @@ OF ANY KIND, either express or implied. See the License for the specific languag
 governing permissions and limitations under the License.
 */
 
+/*** TODO - Stepper was migrated using placeholder tokens, reevaluate when complete design specs are available ***/
+/*** This migration combines existing Stepper styles with minimal new design instructions ***/
 
 .spectrum-Stepper {
-   /**** TODO - ask Design to evaluate these widths ****/
-  --spectrum-stepper-width-medium: 72px; /* replaces --spectrum-global-dimension-size-900 */
-  --spectrum-stepper-width-large: 90px; /* replaces --spectrum-global-dimension-size-900 */
+   /**** TODO - this section contains placeholder widths ****/
+  --spectrum-stepper-width-medium: 72px; /* placeholder for --spectrum-global-dimension-size-900 */
+  --spectrum-stepper-width-large: 90px; /* placeholder for --spectrum-global-dimension-size-900 */
   --spectrum-stepper-icon-width-medium: 10px; /* placeholder for --spectrum-alias-ui-icon-chevron-size-75 */
   --spectrum-stepper-icon-width-large: 12px; /* placeholder for --spectrum-alias-ui-icon-chevron-size-75 */
 
-  /* set defaults */
+  /* set defaults to medium theme */
   --spectrum-stepper-width: var(--spectrum-stepper-width-medium);
   --spectrum-stepper-icon-width: var(--spectrum-stepper-icon-width-medium);
 
-  /* override per size */
+  /* override per theme size to match old token --spectrum-global-dimension-size-900 */
   /* this is necessary to mimmic the size-responsive tokens which were already present */
   .spectrum--medium {
     & {
@@ -37,30 +39,23 @@ governing permissions and limitations under the License.
       --spectrum-stepper-icon-width: var(--spectrum-stepper-icon-width-large);
     }
   }
-  /**** end TODO ****/
+  /**** END placeholder widths ****/
 
-  --spectrum-stepper-button-width: var(--spectrum-component-height-75); /* this height token matches the previous width token */
 
- /* quiet variant */
-  --spectrum-stepper-quiet-width: var(--spectrum-component-height-300); /* matches previous width token */
-  --spectrum-stepper-quiet-button-width: calc(var(--spectrum-stepper-button-width) - var(--spectrum-stepper-button-offset));
+  --spectrum-stepper-button-width: var(--spectrum-component-height-75); /* this height token matches the previous WIDTH token */
 
   --spectrum-stepper-button-padding: var(--spectrum-component-edge-to-visual-50); /* 6px md + 7px lg - previously 6px md + 7.5px lg */
 
   --spectrum-stepper-border-radius-reset: 0;
   --spectrum-stepper-border-size-reset: 0;
 
-  --spectrum-stepper-icon-nudge-start: 1px; /* 1px - could this be == the component border width? Check Express */
-  /* was var(--spectrum-global-dimension-size-10); */
-  /* was 1px */
-
-  --spectrum-stepper-icon-nudge-end: 2px; /* 2px - could this be == the component border width? Check Express */
-  /* was var(--spectrum-global-dimension-size-25); */
-  /* was 2px */
+  /*** Button Icons - appears to adjust position ***/
+  --spectrum-stepper-icon-nudge-start: 1px; /* placeholder - was var(--spectrum-global-dimension-size-10) - 1px */
+  --spectrum-stepper-icon-nudge-end: 2px; /* placeholder -was var(--spectrum-global-dimension-size-25) - 2px */
 
 
-  /* this is for the :after hit area element */
-  --spectrum-stepper-button-offset: calc(var(--spectrum-stepper-button-width) / 2 - var(--spectrum-stepper-icon-width) / 2); /* TODO - reevaluate when icons are migrated */
+ /*** :AFTER - this is for the :after element labeled below as hit area, but used as focus indicator in ActionButton ***/
+  --spectrum-stepper-button-offset: calc(var(--spectrum-stepper-button-width) / 2 - var(--spectrum-stepper-icon-width) / 2);
     /* chevron = --spectrum-global-dimension-static-size-125 and --spectrum-global-dimension-static-size-150 = 10px and 12px */
   /* button width of 23px / 29px divided by 2 = 11.5px and 14.5px */
   /* chevron size of 10px and 12px divided by 2 = 5px and 6px */
@@ -68,26 +63,30 @@ governing permissions and limitations under the License.
   /* 14.5px minus 6px = 8.5px */
 
 
-  /* New tokens - to match textfield */
+  /*** New added tokens begin here - chosen to match textfield - reevaluate when fully migrating Stepper ***/
   --spectrum-stepper-animation-duration: var(--spectrum-animation-duration-100);
   --spectrum-stepper-border-radius: var(--spectrum-corner-radius-100);
   --spectrum-stepper-buttons-height: var(--spectrum-component-height-100); /* from textfield height */
 
-  /* focus indicator */
-  --spectrum-stepper-focus-indicator-width: var(--spectrum-focus-indicator-thickness);
-  --spectrum-stepper-focus-indicator-gap: var(--spectrum-focus-indicator-gap);
+ /*** Quiet Variant ***/
+  --spectrum-stepper-quiet-width: var(--spectrum-component-height-300); /* matches previous width token */
+  --spectrum-stepper-quiet-button-width: calc(var(--spectrum-stepper-button-width) - var(--spectrum-stepper-button-offset));
 
-  /* Disabled Colors */
+  /*** Disabled Colors ***/
   --spectrum-stepper-border-color-quiet-disabled: var(--spectrum-disabled-border-color);
 
-  /* Invalid Colors */
+  /*** Invalid Colors ***/
   --spectrum-stepper-border-color-invalid-default: var(--spectrum-negative-border-color-default);
   --spectrum-stepper-border-color-invalid-hover: var(--spectrum-negative-border-color-hover);
   --spectrum-stepper-border-color-invalid-focus: var(--spectrum-negative-border-color-focus);
   --spectrum-stepper-border-color-invalid-focus-hover: var(--spectrum-negative-border-color-focus-hover);
   --spectrum-stepper-border-color-invalid-keyboard-focus: var(--spectrum-negative-border-color-key-focus);
 
-  /* Focus Indicator Color */
+  /*** Focus Indicator ***/
+  --spectrum-stepper-focus-indicator-width: var(--spectrum-focus-indicator-thickness);
+  --spectrum-stepper-focus-indicator-gap: var(--spectrum-focus-indicator-gap);
+
+  /*** Focus Indicator Color ***/
   --spectrum-stepper-focus-indicator-color: var(--spectrum-focus-indicator-color);
 }
 
@@ -95,6 +94,22 @@ governing permissions and limitations under the License.
 /********* WHCM *********/
 @media (forced-colors: active) {
   .spectrum-Stepper {
+    --highcontrast-stepper-border-color: CanvasText;
+    --highcontrast-stepper-border-color-hover: Highlight;
+    --highcontrast-stepper-border-color-focus: Highlight;
+    --highcontrast-stepper-border-color-focus-hover: Highlight;
+    --highcontrast-stepper-border-color-keyboard-focus: Highlight;
+
+    /*** Disabled Colors ***/
+    --highcontrast-stepper-border-color-quiet-disabled: GrayText;
+
+    /*** Invalid Colors ***/
+    --highcontrast-stepper-border-color-invalid-default: Highlight;
+    --highcontrast-stepper-border-color-invalid-hover: Highlight;
+    --highcontrast-stepper-border-color-invalid-focus: Highlight;
+    --highcontrast-stepper-border-color-invalid-focus-hover: Highlight;
+    --highcontrast-stepper-border-color-invalid-keyboard-focus: Highlight;
+
     --highcontrast-stepper-focus-indicator-color: CanvasText;
   }
 }
@@ -104,10 +119,10 @@ governing permissions and limitations under the License.
   flex-direction: row;
   flex-wrap: nowrap;
 
-  inline-size: var(--spectrum-stepper-width);
+  inline-size: var(--mod-stepper-width, var(--spectrum-stepper-width));
   line-height: 0;
-  border-radius: var(--spectrum-stepper-border-radius); /* --spectrum-global-dimension-size-75 = 6px 8px */
-  transition: border-color var(--spectrum-stepper-animation-duration) ease-in-out;
+  border-radius: var(--mod-stepper-border-radius, var(--spectrum-stepper-border-radius)); /* --spectrum-global-dimension-size-75 = 6px 8px */
+  transition: border-color var(--mod-stepper-animation-duration, var(--spectrum-stepper-animation-duration)) ease-in-out;
 }
 .spectrum-Stepper::before {
   content: '';
@@ -117,10 +132,10 @@ governing permissions and limitations under the License.
   display: block;
   box-sizing: border-box;
   border-start-start-radius: 0;
-  border-start-end-radius: var(--spectrum-stepper-border-radius); /* --spectrum-global-dimension-size-75  = 6px 8px */
-  border-end-end-radius: var(--spectrum-stepper-border-radius);
+  border-start-end-radius: var(--mod-stepper-border-radius, var(--spectrum-stepper-border-radius)); /* --spectrum-global-dimension-size-75  = 6px 8px */
+  border-end-end-radius: var(--mod-stepper-border-radius, var(--spectrum-stepper-border-radius));
   border-end-start-radius: 0;
-  block-size: var(--spectrum-stepper-buttons-height);
+  block-size: var(--mod-stepper-buttons-height, var(--spectrum-stepper-buttons-height));
 }
 
 .spectrum-Stepper-stepUp,
@@ -130,30 +145,30 @@ governing permissions and limitations under the License.
   box-sizing: border-box;
 
   /* remove middle border from button height */
-  block-size: calc((var(--spectrum-stepper-buttons-height) / 2)) - var(--spectrum-stepper-border-width));
-  block-size: calc((var(--spectrum-stepper-buttons-height) - var(--spectrum-stepper-border-width)) / 2);
+  block-size: calc((var(--mod-stepper-buttons-height, var(--spectrum-stepper-buttons-height)) / 2)) - var(--mod-stepper-border-width, var(--spectrum-stepper-border-width)));
+  block-size: calc((var(--mod-stepper-buttons-height, var(--spectrum-stepper-buttons-height)) - var(--mod-stepper-border-width, var(--spectrum-stepper-border-width))) / 2);
 
-  block-size: calc((var(--spectrum-stepper-buttons-height) / 2) - (var(--spectrum-stepper-border-width) / 2));
-  block-size: calc(var(--spectrum-stepper-buttons-height) / 2);
+  block-size: calc((var(--mod-stepper-buttons-height, var(--spectrum-stepper-buttons-height)) / 2) - (var(--mod-stepper-border-width, var(--spectrum-stepper-border-width)) / 2));
+  block-size: calc(var(--mod-stepper-buttons-height, var(--spectrum-stepper-buttons-height)) / 2);
 
   /* remove left border width from button width */
-  inline-size: calc(var(--spectrum-stepper-button-width) - var(--spectrum-stepper-border-width));
+  inline-size: calc(var(--mod-stepper-button-width, var(--spectrum-stepper-button-width)) - var(--mod-stepper-border-width, var(--spectrum-stepper-border-width)));
 
   min-inline-size: 0;
 
-  padding-inline-start: var(--spectrum-stepper-button-padding);
-  padding-inline-end: var(--spectrum-stepper-button-padding);
+  padding-inline-start: var(--mod-stepper-button-padding, var(--spectrum-stepper-button-padding));
+  padding-inline-end: var(--mod-stepper-button-padding, var(--spectrum-stepper-button-padding));
 
   /* Avoid margin added by adjacent buttons */
   margin: 0;
 
-  border-color: var(--spectrum-stepper-border-color);
+  border-color: var(--highcontrast-stepper-border-color, var(--mod-stepper-border-color, var(--spectrum-stepper-border-color)));
 
-  border-width: var(--spectrum-stepper-border-width);
-  border-inline-start-width: var(--spectrum-stepper-border-size-reset);
+  border-width: var(--mod-stepper-border-width, var(--spectrum-stepper-border-width));
+  border-inline-start-width: var(--mod-stepper-border-size-reset, var(--spectrum-stepper-border-size-reset));
 
-  border-start-start-radius: var(--spectrum-stepper-border-radius-reset);
-  border-end-start-radius: var(--spectrum-stepper-border-radius-reset);
+  border-start-start-radius: var(--mod-stepper-border-radius-reset, var(--spectrum-stepper-border-radius-reset));
+  border-end-start-radius: var(--mod-stepper-border-radius-reset, var(--spectrum-stepper-border-radius-reset));
 
   .spectrum-Icon {
     opacity: 1;
@@ -162,15 +177,15 @@ governing permissions and limitations under the License.
 
 .spectrum-Stepper-stepUp {
   border-block-end: none;
-  border-end-end-radius: var(--spectrum-stepper-border-radius-reset);
+  border-end-end-radius: var(--mod-stepper-border-radius-reset, var(--spectrum-stepper-border-radius-reset));
 
-  padding-block-start: var(--spectrum-stepper-icon-nudge-start);
+  padding-block-start: var(--mod-stepper-icon-nudge-start, var(--spectrum-stepper-icon-nudge-start));
 }
 
 .spectrum-Stepper-stepDown {
-  border-start-end-radius: var(--spectrum-stepper-border-radius-reset);
+  border-start-end-radius: var(--mod-stepper-border-radius-reset, var(--spectrum-stepper-border-radius-reset));
 
-  padding-block-end: var(--spectrum-stepper-icon-nudge-end);
+  padding-block-end: var(--mod-stepper-icon-nudge-end, var(--spectrum-stepper-icon-nudge-end));
 }
 
 .spectrum-Stepper-textfield {
@@ -180,8 +195,8 @@ governing permissions and limitations under the License.
 
 .spectrum-Stepper-input {
   min-inline-size: 0;
-  border-start-end-radius: var(--spectrum-stepper-border-radius-reset);
-  border-end-end-radius: var(--spectrum-stepper-border-radius-reset);
+  border-start-end-radius: var(--mod-stepper-border-radius-reset, var(--spectrum-stepper-border-radius-reset));
+  border-end-end-radius: var(--mod-stepper-border-radius-reset, var(--spectrum-stepper-border-radius-reset));
 }
 
 .spectrum-Stepper-textfield {
@@ -189,22 +204,22 @@ governing permissions and limitations under the License.
 }
 
 .spectrum-Stepper--quiet {
-  border-radius: var(--spectrum-stepper-border-radius-reset);
-  inline-size: var(--spectrum-stepper-quiet-width);
+  border-radius: var(--mod-stepper-border-radius-reset, var(--spectrum-stepper-border-radius-reset));
+  inline-size: var(--mod-stepper-quiet-width, var(--spectrum-stepper-quiet-width));
 
   .spectrum-Stepper-buttons {
-    border-radius: var(--spectrum-stepper-border-radius-reset);
+    border-radius: var(--mod-stepper-border-radius-reset, var(--spectrum-stepper-border-radius-reset));
   }
 
   .spectrum-Stepper-stepUp,
   .spectrum-Stepper-stepDown {
-    inline-size: var(--spectrum-stepper-quiet-button-width);
+    inline-size: var(--mod-stepper-quiet-button-width, var(--spectrum-stepper-quiet-button-width));
     min-inline-size: 0;
 
-    border-inline-end-width: var(--spectrum-stepper-border-size-reset);
+    border-inline-end-width: var(--mod-stepper-border-size-reset, var(--spectrum-stepper-border-size-reset));
     border-block-start: none;
     border-inline-start: none;
-    border-radius: var(--spectrum-stepper-border-radius-reset);
+    border-radius: var(--mod-stepper-border-radius-reset, var(--spectrum-stepper-border-radius-reset));
 
     padding-inline-end: 0;
     justify-content: flex-end;
@@ -214,8 +229,8 @@ governing permissions and limitations under the License.
       content: '';
       position: absolute;
       block-size: 100%;
-      inline-size: var(--spectrum-stepper-button-offset);
-      inset-inline-end: calc(var(--spectrum-stepper-button-offset) * -1);
+      inline-size: var(--mod-stepper-button-offset, var(--spectrum-stepper-button-offset));
+      inset-inline-end: calc(var(--mod-stepper-button-offset, var(--spectrum-stepper-button-offset)) * -1);
     }
   }
 }
@@ -260,41 +275,41 @@ governing permissions and limitations under the License.
     .spectrum-Stepper-stepUp,
     .spectrum-Stepper-stepDown,
     .spectrum-Stepper-input {
-      border-color: var(--spectrum-stepper-border-color-hover);
+      border-color: var(--highcontrast-stepper-border-color-hover, var(--mod-stepper-border-color-hover, var(--spectrum-stepper-border-color-hover)));
     }
   }
 
   &.is-focused {
-    border-color: var(--spectrum-stepper-border-color-focus);
+    border-color: var(--highcontrast-stepper-border-color-focus, var(--mod-stepper-border-color-focus, var(--spectrum-stepper-border-color-focus)));
 
     .spectrum-Stepper-stepUp,
     .spectrum-Stepper-stepDown {
-      border-color: var(--spectrum-stepper-border-color-focus);
+      border-color: var(--highcontrast-stepper-border-color-focus, var(--mod-stepper-border-color-focus, var(--spectrum-stepper-border-color-focus)));
     }
 
     .spectrum-Stepper-input {
-      border-color: var(--spectrum-stepper-border-color-focus);
+      border-color: var(--highcontrast-stepper-border-color-focus, var(--mod-stepper-border-color-focus, var(--spectrum-stepper-border-color-focus)));
     }
 
     &:hover {
-      border-color: var(--spectrum-stepper-border-color-focus-hover);
+      border-color: var(--highcontrast-stepper-border-color-focus-hover, var(--mod-stepper-border-color-focus-hover, var(--spectrum-stepper-border-color-focus-hover)));
 
       .spectrum-Stepper-stepUp,
       .spectrum-Stepper-stepDown {
-        border-color: var(--spectrum-stepper-border-color-focus-hover);
+        border-color: var(--highcontrast-stepper-border-color-focus-hover, var(--mod-stepper-border-color-focus-hover, var(--spectrum-stepper-border-color-focus-hover)));
       }
     }
 
     &.is-invalid {
-      border-color: var(--spectrum-stepper-border-color-invalid-focus);
+      border-color: var(--highcontrast-stepper-border-color-invalid-focus, var(--mod-stepper-border-color-invalid-focus, var(--spectrum-stepper-border-color-invalid-focus)));
 
       .spectrum-Stepper-stepUp,
       .spectrum-Stepper-stepDown {
-        border-color: var(--spectrum-stepper-border-color-invalid-focus);
+        border-color: var(--highcontrast-stepper-border-color-invalid-focus, var(--mod-stepper-border-color-invalid-focus, var(--spectrum-stepper-border-color-invalid-focus)));
       }
 
       .spectrum-Stepper-input {
-        border-color: var(--spectrum-stepper-border-color-invalid-focus);
+        border-color: var(--highcontrast-stepper-border-color-invalid-focus, var(--mod-stepper-border-color-invalid-focus, var(--spectrum-stepper-border-color-invalid-focus)));
       }
     }
   }
@@ -310,14 +325,14 @@ governing permissions and limitations under the License.
     .spectrum-Stepper-input,
     .spectrum-Stepper-stepUp,
     .spectrum-Stepper-stepDown {
-      border-color: var(--spectrum-stepper-border-color-keyboard-focus);
+      border-color: var(--highcontrast-stepper-border-color-keyboard-focus, var(--mod-stepper-border-color-keyboard-focus, var(--spectrum-stepper-border-color-keyboard-focus)));
     }
 
     &.is-invalid {
 
       .spectrum-Stepper-stepUp,
       .spectrum-Stepper-stepDown {
-        border-color: var(--spectrum-stepper-border-color-invalid-keyboard-focus);
+        border-color: var(--highcontrast-stepper-border-color-invalid-keyboard-focus, var(--mod-stepper-border-color-invalid-keyboard-focus, var(--spectrum-stepper-border-color-invalid-keyboard-focus)));
       }
     }
   }
@@ -325,39 +340,39 @@ governing permissions and limitations under the License.
   &.is-invalid {
     .spectrum-Stepper-stepUp,
     .spectrum-Stepper-stepDown {
-      border-color: var(--spectrum-stepper-border-color-invalid-default);
+      border-color: var(--highcontrast-stepper-border-color-invalid-default, var(--mod-stepper-border-color-invalid-default, var(--spectrum-stepper-border-color-invalid-default)));
     }
 
     .spectrum-Stepper-input {
-      border-color: var(--spectrum-stepper-border-color-invalid-default);
+      border-color: var(--highcontrast-stepper-border-color-invalid-default, var(--mod-stepper-border-color-invalid-default, var(--spectrum-stepper-border-color-invalid-default)));
     }
 
     &:hover {
-      border-color: var(--spectrum-stepper-border-color-invalid-hover);
+      border-color: var(--highcontrast-stepper-border-color-invalid-hover, var(--mod-stepper-border-color-invalid-hover, var(--spectrum-stepper-border-color-invalid-hover)));
 
       .spectrum-Stepper-stepUp,
       .spectrum-Stepper-stepDown {
-        border-color: var(--spectrum-stepper-border-color-invalid-hover);
+        border-color: var(--highcontrast-stepper-border-color-invalid-hover, var(--mod-stepper-border-color-invalid-hover, var(--spectrum-stepper-border-color-invalid-hover)));
       }
     }
 
     &.is-focused {
       .spectrum-Stepper-stepUp,
       .spectrum-Stepper-stepDown {
-        border-color: var(--spectrum-stepper-border-color-invalid-focus);
+        border-color: var(--highcontrast-stepper-border-color-invalid-focus, var(--mod-stepper-border-color-invalid-focus, var(--spectrum-stepper-border-color-invalid-focus)));
       }
 
       &:hover {
         .spectrum-Stepper-stepUp,
         .spectrum-Stepper-stepDown {
-          border-color: var(--spectrum-stepper-border-color-invalid-focus-hover);
+          border-color: var(--highcontrast-stepper-border-color-invalid-focus-hover, var(--mod-stepper-border-color-invalid-focus-hover, var(--spectrum-stepper-border-color-invalid-focus-hover)));
         }
       }
     }
 
     &.is-keyboardFocused {
       .spectrum-Stepper-input {
-        border-color: var(--spectrum-stepper-border-color-invalid-keyboard-focus);
+        border-color: var(--highcontrast-stepper-border-color-invalid-keyboard-focus, var(--mod-stepper-border-color-invalid-keyboard-focus, var(--spectrum-stepper-border-color-invalid-keyboard-focus)));
       }
     }
   }
@@ -382,50 +397,50 @@ governing permissions and limitations under the License.
   &.is-disabled {
     .spectrum-Stepper-stepUp,
     .spectrum-Stepper-stepDown {
-      border-color: var(--spectrum-stepper-border-color-quiet-disabled);
+      border-color: var(--highcontrast-stepper-border-color-quiet-disabled, var(--mod-stepper-border-color-quiet-disabled, var(--spectrum-stepper-border-color-quiet-disabled)));
     }
   }
 
   .spectrum-Stepper-stepUp,
   .spectrum-Stepper-stepDown {
-    border-color: var(--spectrum-stepper-border-color);
+    border-color: var(--highcontrast-stepper-border-color, var(--mod-stepper-border-color, var(--spectrum-stepper-border-color)));
 
     &:disabled {
-      border-color: var(--spectrum-stepper-border-color-quiet-disabled);
+      border-color: var(--highcontrast-stepper-border-color-quiet-disabled, var(--mod-stepper-border-color-quiet-disabled, var(--spectrum-stepper-border-color-quiet-disabled)));
     }
   }
 
   &.is-invalid {
     .spectrum-Stepper-input {
-      border-color: var(--spectrum-stepper-border-color-invalid-default);
+      border-color: var(--highcontrast-stepper-border-color-invalid-default, var(--mod-stepper-border-color-invalid-default, var(--spectrum-stepper-border-color-invalid-default)));
     }
 
     .spectrum-Stepper-stepDown {
-      border-color: var(--spectrum-stepper-border-color-invalid-default);
+      border-color: var(--highcontrast-stepper-border-color-invalid-default, var(--mod-stepper-border-color-invalid-default, var(--spectrum-stepper-border-color-invalid-default)));
     }
   }
 
   &.is-focused {
     .spectrum-Stepper-stepDown {
-      border-color: var(--spectrum-stepper-border-color-focus);
+      border-color: var(--highcontrast-stepper-border-color-focus, var(--mod-stepper-border-color-focus, var(--spectrum-stepper-border-color-focus)));
     }
 
     &:hover {
-      border-color: var(--spectrum-stepper-border-color-focus-hover);
+      border-color: var(--highcontrast-stepper-border-color-focus-hover, var(--mod-stepper-border-color-focus-hover, var(--spectrum-stepper-border-color-focus-hover)));
 
       .spectrum-Stepper-stepUp,
       .spectrum-Stepper-stepDown {
-        border-color: var(--spectrum-stepper-border-color-focus-hover);
+        border-color: var(--highcontrast-stepper-border-color-focus-hover, var(--mod-stepper-border-color-focus-hover, var(--spectrum-stepper-border-color-focus-hover)));
       }
     }
 
     &.is-invalid {
       .spectrum-Stepper-input {
-        border-color: var(--spectrum-stepper-border-color-focus);
+        border-color: var(--highcontrast-stepper-border-color-focus, var(--mod-stepper-border-color-focus, var(--spectrum-stepper-border-color-focus)));
       }
 
       .spectrum-Stepper-stepDown {
-        border-color: var(--spectrum-stepper-border-color-focus);
+        border-color: var(--highcontrast-stepper-border-color-focus, var(--mod-stepper-border-color-focus, var(--spectrum-stepper-border-color-focus)));
       }
     }
   }
@@ -441,16 +456,16 @@ governing permissions and limitations under the License.
     }
 
     .spectrum-Stepper-stepDown {
-      border-color: var(--spectrum-stepper-border-color-keyboard-focus);
+      border-color: var(--highcontrast-stepper-border-color-keyboard-focus, var(--mod-stepper-border-color-keyboard-focus, var(--spectrum-stepper-border-color-keyboard-focus)));
     }
 
     &.is-invalid {
       .spectrum-Stepper-input {
-        border-color: var(--spectrum-stepper-border-color-invalid-keyboard-focus);
+        border-color: var(--highcontrast-stepper-border-color-invalid-keyboard-focus, var(--mod-stepper-border-color-invalid-keyboard-focus, var(--spectrum-stepper-border-color-invalid-keyboard-focus)));
       }
 
       .spectrum-Stepper-stepDown {
-        border-color: var(--spectrum-stepper-border-color-invalid-keyboard-focus);
+        border-color: var(--highcontrast-stepper-border-color-invalid-keyboard-focus, var(--mod-stepper-border-color-invalid-keyboard-focus, var(--spectrum-stepper-border-color-invalid-keyboard-focus)));
       }
     }
   }
