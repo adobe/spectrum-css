@@ -5,10 +5,11 @@ import { classMap } from 'lit-html/directives/class-map.js';
 import { Template as Icon } from "@spectrum-css/icon/stories/template.js"
 import { Template as Button } from "@spectrum-css/button/stories/template.js"
 
+// import "../dist/index-vars.css";
 import "../index.css";
 
 export const Template = ({
-  rootClass = "spectrum-InlineAlert",
+  rootClass = "spectrum-InLineAlert",
   customClasses = [],
   headerText,
   text,
@@ -45,7 +46,8 @@ export const Template = ({
     html`
       ${Icon({
         ...globals,
-        iconName
+        iconName,
+        customClasses: [`${rootClass}-icon`],
       })}
     ` : '';
 

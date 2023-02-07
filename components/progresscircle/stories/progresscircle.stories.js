@@ -16,8 +16,8 @@ export default {
       options: ["small", "medium", "large"],
       control: "select"
     },
-    isDeterminate: {
-      name: "Determinate",
+    isIndeterminate: {
+      name: "Indeterminate",
       type: { name: "boolean" },
       table: {
         type: { summary: "boolean" },
@@ -25,20 +25,21 @@ export default {
       },
       control: "boolean",
     },
-    staticColor: {
-      name: "StaticColor",
-      type: { name: "string" },
+    overBackground: {
+      name: "Over Background",
+      type: { name: "boolean" },
       table: {
-        type: { summary: "string" },
+        type: { summary: "boolean" },
         category: "Advanced",
       },
-      options: ["white"],
-      control: "select",
+      control: "boolean",
     },
   },
   args: {
     rootClass: "spectrum-ProgressCircle",
     size: "medium",
+    isIndeterminate: false,
+    overBackground: false,
   },
   parameters: {
     actions: {

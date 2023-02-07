@@ -10,7 +10,8 @@ export const Template = ({
   rootClass = "spectrum-ProgressCircle",
   customClasses = [],
   size = "medium",
-  staticColor,
+  overBackground = false,
+  isIndeterminate = false,
   ...globals
 }) => {
   const { express } = globals;
@@ -22,11 +23,12 @@ export const Template = ({
     console.warn(e);
   }
 
-  return html`
+  const componentMarkup = html`
     <div class=${classMap({
       [rootClass]: true,
       [`${rootClass}--${size}`]: typeof size !== "undefined",
-      [`${rootClass}--static${capitalize(lowerCase(staticColor))}`]: typeof staticColor !== "undefined",
+      [`${rootClass}--indeterminate`]: isIndeterminate,
+      [`${rootClass}--staticWhite`]: overBackground,
       ...customClasses.reduce((a, c) => ({ ...a, [c]: true }), {}),
     })}>
       <div class="spectrum-ProgressCircle-track"></div>
@@ -43,4 +45,12 @@ export const Template = ({
       </div>
     </div>
   `;
+
+  const decoratedMarkup = html`
+    <div style="background-color: #0F797D;">
+      ${componentMarkup}
+    </div>
+  `;
+
+  return overBackground ? decoratedMarkup : componentMarkup;
 }
