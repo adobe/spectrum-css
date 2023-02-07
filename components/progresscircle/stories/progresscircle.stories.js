@@ -25,14 +25,14 @@ export default {
       },
       control: "boolean",
     },
-    staticColor: {
-      name: "StaticColor",
+    overBackground: {
+      name: "Over Background",
       type: { name: "string" },
       table: {
         type: { summary: "string" },
         category: "Advanced",
       },
-      options: ["white"],
+      options: ["default", "over background"],
       control: "select",
     },
   },
