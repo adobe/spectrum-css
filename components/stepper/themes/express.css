@@ -14,8 +14,11 @@ governing permissions and limitations under the License.
   /* @todo remove this when stepper is migrated; this ensures stepper buttons inherit border color and width */
   .spectrum-Stepper {
     --spectrum-stepper-border-width: var(--spectrum-border-width-200);
-    --spectrum-stepper-middle-border-width: 0;
+
+    /* replace middle border with flex row gap */
+    --spectrum-stepper-button-middle-border-width: 0;
     --spectrum-stepper-button-gap: var(--spectrum-border-width-200);
+
     --spectrum-stepper-border-size-reset: 0;
 
     --spectrum-stepper-border-color: var(--spectrum-gray-400);
@@ -24,9 +27,9 @@ governing permissions and limitations under the License.
     --spectrum-stepper-border-color-focus-hover: var(--spectrum-gray-900);
     --spectrum-stepper-border-color-keyboard-focus: var(--spectrum-gray-900);
 
-    --spectrum-stepper-background-color-default: var(--spectrum-gray-200);
-    --spectrum-stepper-background-color-hover: var(--spectrum-gray-300);
-    --spectrum-stepper-background-color-active: var(--spectrum-gray-400);
-    --spectrum-stepper-background-color-keyboard-focus: var(--spectrum-gray-300);
+    --spectrum-stepper-button-background-color-default: var(--spectrum-gray-200);
+    --spectrum-stepper-button-background-color-hover: var(--spectrum-gray-300);
+    --spectrum-stepper-button-background-color-focus: var(--spectrum-gray-400);
+    --spectrum-stepper-button-background-color-keyboard-focus: var(--spectrum-gray-300);
   }
 }
