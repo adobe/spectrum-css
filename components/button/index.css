@@ -50,9 +50,7 @@ governing permissions and limitations under the License.
   --spectrum-button-height: var(--spectrum-component-height-100);
 
   --spectrum-button-font-size: var(--spectrum-font-size-100);
-
-
-
+  
   --spectrum-button-edge-to-visual: calc(var(--spectrum-component-pill-edge-to-visual-100) - var(--spectrum-button-border-width));
   --spectrum-button-edge-to-text: calc(var(--spectrum-component-pill-edge-to-text-100) - var(--spectrum-button-border-width));
   --spectrum-button-padding-label-to-icon: var(--spectrum-text-to-visual-100);
@@ -91,67 +89,38 @@ governing permissions and limitations under the License.
 
 }
 
-
 .spectrum-Button {
   @inherit: %spectrum-BaseButton;
   @inherit: %spectrum-ButtonWithFocusRing;
 
-
   border-radius: var(--mod-button-border-radius, var(--spectrum-button-border-radius));
   border-width: var(--mod-button-border-width, var(--spectrum-button-border-width));
   border-style: solid;
-  block-size: auto;
-  height: var(--mod-button-height, var(--spectrum-button-height));
-
-  min-width: var(--mod-button-min-width, var(--spectrum-button-min-width));
-  min-block-size: var(--mod-button-min-width, var(--spectrum-button-min-width));
-  position: relative;
-
-
-  padding-block-start: 0;
-  padding-block-end: 0;
-
-  position: relative;
-
-  min-inline-size: var(--mod-button-min-width, var(--spectrum-button-min-width));
-  min-block-size: var(--mod-spectrum-button-height, var(--spectrum-button-height));
-
-  height: var(--mod-button-height, var(--spectrum-button-height));
-  border-radius: var(--mod-button-border-radius, var(--spectrum-button-border-radius));
-  border-width: var(--mod-button-border-width, var(--spectrum-button-border-width));
-  /* Start with text-only padding */
-  padding-inline-start: var(--mod-button-edge-to-visual, var(--spectrum-button-edge-to-visual));
-  padding-inline-end: var(--mod-button-edge-to-text, var(--spectrum-button-edge-to-text));
-
-
   font-size: var(--mod-button-font-size, var(--spectrum-button-font-size));
   font-weight: var(--mod-bold-font-weight, var(--spectrum-bold-font-weight));
+  gap: var(--spectrum-button-padding-label-to-icon);
+  height: var(--mod-button-height, var(--spectrum-button-height));
+  min-inline-size: var(--mod-button-min-width, var(--spectrum-button-min-width));
+  min-block-size: var(--mod-spectrum-button-height, var(--spectrum-button-height));
+  /* Start with text-only padding */
+  padding-inline: var(--mod-button-edge-to-text, var(--spectrum-button-edge-to-text));
+  position: relative;
+  
+  /* let staticColor variants inherit their color */
+  color: inherit;
 
   &:hover,
   &:active {
     box-shadow: none;
   }
 
-  /* let staticColor variants inherit their color */
-  color: inherit;
-
   .spectrum-Icon {
-    inset-inline-end: calc(var(--mod-spectrum-button-edge-to-visual, var(--spectrum-button-edge-to-visual)) - var(--mod-button-border-width, var(--spectrum-button-border-width)));
-    inset-block-end: calc(var(--mod-spectrum-button-edge-to-visual, var(--spectrum-button-edge-to-visual)) - var(--mod-button-border-width, var(--spectrum-button-border-width)));
+    margin-inline-start: calc(
+        var(--spectrum-button-edge-to-visual) - 
+        var(--spectrum-button-edge-to-text)
+    );
     color: inherit;
   }
-
-  .spectrum-Icon+.spectrum-Button-label {
-    /* Have gap on on the left */
-    padding-inline-start: var(--mod-button-padding-label-to-icon, var(--spectrum-button-padding-label-to-icon));
-
-    /*
-      Have no padding on the right (it's built into the element)
-      This will fail if --spectrum-button-primary-fill-textonly-padding-right !== --spectrum-button-padding-right
-    */
-    padding-inline-end: 0;
-  }
-
 
   /* correct focus-ring radius for t-shirt sizing */
   &:after {
@@ -167,10 +136,15 @@ a.spectrum-Button {
   @inherit: %spectrum-ButtonLabel;
   padding-block-start: var(--mod-button-padding-label-top, var(--spectrum-button-padding-label-top));
   padding-block-end: var(--mod-button-padding-label-bottom, var(--spectrum-button-padding-label-bottom));
+  white-space: nowrap;
+  line-height: calc(
+      var(--mod-button-height, var(--spectrum-button-height)) -
+      var(--mod-button-padding-label-top, var(--spectrum-button-padding-label-top)) - 
+      var(--mod-button-padding-label-bottom, var(--spectrum-button-padding-label-bottom))
+  );
 }
 
 .spectrum-Button {
-
   &:focus-ring,
   &.is-focused {
     &:after {
