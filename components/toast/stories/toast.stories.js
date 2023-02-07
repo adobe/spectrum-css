@@ -1,4 +1,3 @@
-// More on default export: https://storybook.js.org/docs/web-components/writing-stories/introduction#default-export
 // More on args: https://storybook.js.org/docs/web-components/writing-stories/args
 
 // Uncomment if you plan to include an icon
@@ -36,7 +35,7 @@ export default {
       name: "Hidden",
       type: { name: "boolean" },
       table: {
-        category: "Component",
+        category: "State",
         type: { summary: "boolean" },
       },
       control: "boolean",

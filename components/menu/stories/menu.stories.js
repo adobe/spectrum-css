@@ -12,7 +12,7 @@ export default {
       type: { name: "boolean" },
       table: {
         type: { summary: "boolean" },
-        category: "Component",
+        category: "State",
       },
       control: "boolean",
     },
@@ -21,7 +21,7 @@ export default {
       type: { name: "boolean" },
       table: {
         type: { summary: "boolean" },
-        category: "Component",
+        category: "State",
       },
       control: "boolean",
     },

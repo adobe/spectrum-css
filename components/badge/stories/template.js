@@ -4,6 +4,8 @@ import { ifDefined } from "lit-html/directives/if-defined.js";
 
 import { Template as Icon } from "@spectrum-css/icon/stories/template.js";
 
+import "../index.css";
+
 export const Template = ({
   rootClass = "spectrum-Badge",
   size = "m",
@@ -14,13 +16,12 @@ export const Template = ({
   customColor,
   customLayout,
   customClasses = [],
+  id,
   ...globals
 }) => {
   const { express } = globals;
 
   try {
-    // Load styles for this component
-    import(/* webpackPrefetch: true */ "../index.css");
     if (!express) import(/* webpackPrefetch: true */ "../themes/spectrum.css");
     else import(/* webpackPrefetch: true */ "../themes/express.css");
   } catch (e) {
@@ -46,7 +47,7 @@ export const Template = ({
         [`${rootClass}--${customLayout}`]: typeof customLayout !== "undefined",
         ...customClasses.reduce((a, c) => ({ ...a, [c]: true }), {}),
       })}
-      id=${ifDefined(globals.id)}>
+      id=${ifDefined(id)}>
       ${iconMarkup}
       ${!hideLabel || (!label && !variant)
         ? html`<div class="${rootClass}-label">${label ?? variant}</div>`

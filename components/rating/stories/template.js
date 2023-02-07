@@ -6,21 +6,17 @@ import { ifDefined } from "lit-html/directives/if-defined.js";
 // Uncomment if you plan to include an icon
 import { Template as Icon } from "@spectrum-css/icon/stories/template.js";
 
+import "../index.css";
+import "../skin.css";
+
 export const Template = ({
   rootClass = "spectrum-Rating",
   size = "m",
   max = 5,
   customClasses = [],
-  ...globals
+  id,
+  // ...globals
 }) => {
-  try {
-    // Load styles for this component
-    import(/* webpackPrefetch: true */ "../index.css");
-    import(/* webpackPrefetch: true */ "../skin.css");
-  } catch (e) {
-    console.warn(e);
-  }
-
   return html`
     <div
       class=${classMap({
@@ -28,7 +24,7 @@ export const Template = ({
         [`${rootClass}--size${size?.toUpperCase()}`]: typeof size !== "undefined",
         ...customClasses.reduce((a, c) => ({ ...a, [c]: true }), {}),
       })}
-      id=${ifDefined(globals.id)}>
+      id=${ifDefined(id)}>
       <input
         class="${rootClass}-input"
         type="range"
