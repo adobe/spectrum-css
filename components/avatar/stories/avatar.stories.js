@@ -1,6 +1,7 @@
 // Import the component markup template
 import { Template } from "./template";
 
+
 import ava from "./example-ava.jpg";
 
 export default {
@@ -42,7 +43,7 @@ export default {
       type: { name: "boolean" },
       table: {
         type: { summary: "boolean" },
-        category: "Component",
+        category: "State",
       },
       control: "boolean",
     },

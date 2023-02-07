@@ -4,20 +4,16 @@ import { ifDefined } from "lit-html/directives/if-defined.js";
 
 import { Template as Icon } from "@spectrum-css/icon/stories/template.js";
 
+import "../index.css";
+import "../skin.css";
+
 export const Template = ({
   rootClass = "spectrum-Table",
   size = "m",
   customClasses = [],
-  ...globals
+  id,
+  // ...globals
 }) => {
-  try {
-    // Load styles for this component
-    import(/* webpackPrefetch: true */ "../index.css");
-    import(/* webpackPrefetch: true */ "../skin.css");
-  } catch (e) {
-    console.warn(e);
-  }
-
   return html`
     <table
       class=${classMap({
@@ -25,7 +21,7 @@ export const Template = ({
         [`${rootClass}--size${size?.toUpperCase()}`]: typeof size !== "undefined",
         ...customClasses.reduce((a, c) => ({ ...a, [c]: true }), {}),
       })}
-      id=${ifDefined(globals.id)}>
+      id=${ifDefined(id)}>
       <thead class="${rootClass}-head">
         <tr>
           <th

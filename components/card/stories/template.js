@@ -10,6 +10,9 @@ import { Template as Checkbox } from "@spectrum-css/checkbox/stories/template.js
 import { Template as Asset } from "@spectrum-css/asset/stories/template.js";
 import { Template as Icon } from "@spectrum-css/icon/stories/template.js";
 
+import '../index.css';
+import '../skin.css';
+
 export const Template = ({
   rootClass = "spectrum-Card",
   size = "m",
@@ -33,13 +36,7 @@ export const Template = ({
   role,
   ...globals
 }) => {
-  try {
-    // Load styles for this component
-    import(/* webpackPrefetch: true */ "../index.css");
-    import(/* webpackPrefetch: true */ "../skin.css");
-  } catch (e) {
-    console.warn(e);
-  }
+  const [_, updateArgs] = useArgs();
 
   return html`
     <div
@@ -109,7 +106,6 @@ export const Template = ({
         }),
       ],
       onclick: () => {
-        const [_, updateArgs] = useArgs();
         updateArgs({ isSelected: !isSelected });
       },
       customClasses: [`${rootClass}-quickActions`],

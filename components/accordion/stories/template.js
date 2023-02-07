@@ -5,10 +5,14 @@ import { ifDefined } from "lit-html/directives/if-defined.js";
 
 import { Template as Icon } from "@spectrum-css/icon/stories/template.js";
 
+import '../index.css';
+import '../skin.css';
+
 export const AccordionItem = ({
   heading,
   content,
   rootClass = "spectrum-Accordion-item",
+  id,
   idx = 0,
   isDisabled = false,
   isOpen = false,
@@ -22,7 +26,7 @@ export const AccordionItem = ({
         "is-open": isOpen,
         "is-disabled": isDisabled,
       })}
-      id=${ifDefined(globals.id)}
+      id=${ifDefined(id)}
       role="presentation"
       @click=${(evt) => {
         if (isDisabled || !evt || !evt.target) return;
@@ -69,18 +73,11 @@ export const AccordionItem = ({
 export const Template = ({
   rootClass = "spectrum-Accordion",
   items,
+  id,
   customClasses = [],
   ...globals
 }) => {
   if (!items || !items.size) return html``;
-
-  try {
-    // Load styles for this component
-    import(/* webpackPrefetch: true */ "../index.css");
-    import(/* webpackPrefetch: true */ "../skin.css");
-  } catch (e) {
-    console.warn(e);
-  }
 
   return html`
     <div
@@ -88,7 +85,7 @@ export const Template = ({
         [rootClass]: true,
         ...customClasses.reduce((a, c) => ({ ...a, [c]: true }), {}),
       })}"
-      id=${ifDefined(globals.id)}
+      id=${ifDefined(id)}
       role="region">
       ${repeat(Array.from(items.keys()), (heading, idx) => {
         const item = items.get(heading);

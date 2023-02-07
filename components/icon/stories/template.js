@@ -5,6 +5,8 @@ import { classMap } from "lit-html/directives/class-map.js";
 
 import { fetchIconSVG } from "./utilities.js";
 
+import "../index.css";
+
 /**
  * @typedef { keyof import("./icon.stories").default.args } IconArgs
  * @typedef { IconArgs & { scale: string, useRef: boolean, setName: 'workflow' | 'ui' } } IconProps
@@ -19,6 +21,7 @@ export const Template = ({
   size = "m",
   iconName,
   fill,
+  id,
   customClasses = [],
   useRef = false,
   setName = "workflow",
@@ -51,12 +54,6 @@ export const Template = ({
 
   if (foundSet) setName = foundSet;
 
-  try {
-    import(/* webpackPrefetch: true */ "../index.css");
-  } catch (e) {
-    console.warn(e);
-  }
-
   const classList = {
     [rootClass]: true,
     [`spectrum-UIIcon-${iconName}`]: !!(setName === "ui"),
@@ -78,7 +75,7 @@ export const Template = ({
           .map(([k]) => k)
           .join(" ")}"${
           inlineStyle ? ` style="${inlineStyle}"` : ""
-        } focusable="false" aria-hidden="true" role="img" $1>`
+        } focusable="false" aria-hidden="true" role="img" width="10" $1>`
       )
     )}`;
   }
@@ -105,7 +102,7 @@ export const Template = ({
 
   return html` <svg
     class=${classMap(classList)}
-    id=${ifDefined(globals.id)}
+    id=${ifDefined(id)}
     style=${ifDefined(inlineStyle)}
     focusable="false"
     aria-hidden="true"

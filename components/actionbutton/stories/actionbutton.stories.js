@@ -1,6 +1,7 @@
 // Import the component markup template
 import { Template } from "./template";
 
+
 import { default as IconStories } from "@spectrum-css/icon/stories/icon.stories.js";
 
 export default {
@@ -107,7 +108,7 @@ export default {
   },
   parameters: {
     actions: {
-      handles: ['click button:not([disabled])'],
+      handles: ['click .spectrum-ActionButton:not([disabled])'],
     },
     status: {
       type: process.env.MIGRATED_PACKAGES.includes("actionbutton")
