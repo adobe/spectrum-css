@@ -3,7 +3,7 @@ import { Template } from "./template";
 
 export default {
   title: "Progresscircle",
-  description: "The Progresscircle component is...",
+  description: "Progress circles show the progression of a system operation such as downloading, uploading, processing, etc. in a visual way. They can represent determinate or indeterminate progress.",
   component: "Progresscircle",
   argTypes: {
     size: {
@@ -13,13 +13,32 @@ export default {
         type: { summary: "string" },
         category: "Component",
       },
-      options: ["s", "m", "l", "xl"],
+      options: ["small", "medium", "large"],
       control: "select"
+    },
+    isDeterminate: {
+      name: "Determinate",
+      type: { name: "boolean" },
+      table: {
+        type: { summary: "boolean" },
+        category: "State",
+      },
+      control: "boolean",
+    },
+    staticColor: {
+      name: "StaticColor",
+      type: { name: "string" },
+      table: {
+        type: { summary: "string" },
+        category: "Advanced",
+      },
+      options: ["white"],
+      control: "select",
     },
   },
   args: {
-    rootClass: "spectrum-",
-    size: "m",
+    rootClass: "spectrum-ProgressCircle",
+    size: "medium",
   },
   parameters: {
     actions: {
