@@ -297,7 +297,7 @@ function getProcessors(keepVars = false, notNested = true, secondNotNested = tru
     require('postcss-dir-pseudo-class')(),
     require('./plugins/postcss-custom-properties-passthrough')(),
     require('postcss-calc'),
-    // keepVars ? require('./plugins/postcss-custom-properties-mapping') : null,
+    keepVars ? require('./plugins/postcss-custom-properties-mapping') : null,
     notNested ? require('./plugins/postcss-notnested')({ replace: '.spectrum' }) : null,
     require('postcss-svg'),
     require('postcss-functions')({

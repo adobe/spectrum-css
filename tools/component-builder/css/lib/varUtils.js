@@ -150,8 +150,7 @@ ${varNames.map((varName) => `  ${varName}: ${vars[varName]};`).join('\n')}
   return '';
 }
 
-function getAllVars() {
-  return new Promise((resolve, reject) => {
+async function getAllVars() {
     const filePatterns = [
       `${varDir}/css/themes/*.css`,
       `${varDir}/css/scales/*.css`,
@@ -160,49 +159,41 @@ function getAllVars() {
       `${varDir}custom.css`,
     ]
 
-    fg(filePatterns, (error, files) => {
-      if (error) {
-        reject(error)
-      }
+    const files = await fg(filePatterns)
+    let contents = "";
+    for (const file of files) {
+      contents += await fs.promises.readFile(file, "utf-8");
+    }
+    variableList = getVarValues(contents)
+    await fs.promises.writeFile("everything.css", contents);
 
-      let variableList = []
+  return variableList;
 
-      files.forEach((file) => {
-        const contents = fs.readFileSync(file, "utf8")
-        variableList = getVarValues(contents)
-      })
-
-      fs.writeFileSync("everything.css", variableList.join(""))
-      resolve(variableList)
-    })
-  })
 }
 
 /**
  * @description get all components vars
- * @returns 
+ * @returns
  */
-function getAllComponentVars() {
-  return new Promise((resolve, reject) => {
-    const filePatterns = [
-      `${varDir}/css/components/*.css`,
-      `${varDir}/css/globals/*.css`,
-      `${varDir}/custom.css`
-    ]
+ async function getAllComponentVars() {
+  let variableList;
 
-    fg(filePatterns, (error, files) => {
-      if (error) {
-        reject(error)
-      }
-      let variableList = [];
-      files.forEach((file) => {
-        const contents = fs.readFileSync(file, "utf8")
-        variableList = getVarValues(contents);
-      })
-      fs.writeFileSync("everything.css", variableList.join(""))
-      resolve(variableList)
-    })
-  });
+  const files = await fg([
+    `${varDir}/css/components/*.css`,
+    `${varDir}/css/globals/*.css`,
+    `${varDir}/custom.css`
+  ]);
+
+  let contents = "";
+  for (const file of files) {
+    contents += await fs.promises.readFile(file, "utf-8");
+  }
+
+  variableList = getVarValues(contents);
+
+  await fs.promises.writeFile("everything.css", contents);
+
+  return variableList;
 }
 
 exports.getAllComponentVars = getAllComponentVars;

@@ -19,7 +19,7 @@ const ext = require("replace-ext")
 const lunr = require("lunr")
 const npmFetch = require("npm-registry-fetch")
 const nunjucks = require("nunjucks")
-const glob = require("glob")
+const fg = require("fast-glob")
 const logger = require("../lib/logger")
 const dirs = require("../lib/dirs")
 const depUtils = require("../lib/depUtils")
@@ -169,10 +169,7 @@ async function buildDocs_forDep(dep) {
     cb(null, file)
   }
 
-  glob(files, { allowEmpty: true }, (err, matches) => {
-    if (err) {
-      // Handle the error
-    } else {
+  const matches =  await fg(files)
       // eslint-disable-next-line no-restricted-syntax
       for (const file of matches) {
         fs.createReadStream(file)
@@ -181,8 +178,6 @@ async function buildDocs_forDep(dep) {
           .pipe(through.obj(compileNunJucks))
           .pipe(fs.createWriteStream(`dist/docs/${path.basename(file)}`))
       }
-    }
-  })
 }
 
 // Combined
@@ -192,85 +187,65 @@ async function buildDocs_individualPackages() {
   return Promise.all(dependencies.map(buildDocs_forDep))
 }
 
-async function buildSite_generateIndex() {
-  const metadataFiles = await fg([
+function buildSite_generateIndex() {
+  return fg.sync([
     `${dirs.components}/*/metadata.yml`,
-    `${dirs.components}/*/metadata/*.yml`,
+    `${dirs.components}/*/metadata/*.yml`
   ])
-  (metadataFiles || []).forEach((file) => {
-    // read the contents of the file
-    const docs = []
-    const store = {}
-    let latestFile = null
-    // eslint-disable-next-line no-shadow
-    function readYML(file, enc, cb) {
-      let componentData
+  .then(files => {
+    let docs = [];
+    let store = {};
+    let latestFile = null;
+    
+    files.forEach(file => {
+      let componentData;
       try {
-        componentData = yaml.safeLoad(String(file.contents))
+        componentData = yaml.safeLoad(fs.readFileSync(file, 'utf-8'));
       } catch (err) {
-        return cb(err)
+        throw err;
       }
 
-      const componentName = file.dirname
-        .replace("/metadata", "")
-        .split("/")
-        .pop()
+      var componentName = path.dirname(file).replace('/metadata', '').split(path.sep).pop();
 
-      if (path.basename(file.basename) === "metadata.yml") {
-        file.basename = componentName
+      if (path.basename(file) === 'metadata.yml') {
+        file = componentName;
       }
 
-      const fileName = ext(file.basename, ".html")
+      var fileName = path.basename(file, '.yml') + '.html';
 
       docs.push({
         href: fileName,
         name: componentData.name,
-        description: componentData.description,
-      })
+        description: componentData.description
+      });
 
       store[fileName] = {
         href: fileName,
         name: componentData.name,
         component: componentName,
-        description: componentData.description,
-      }
+        description: componentData.description
+      };
 
-      latestFile = file
+      latestFile = file;
+    });
 
-      cb()
-    }
+    let indexFile = path.join('dist/docs/', 'index.json');
+    let index = lunr(function() {
+      this.ref('href');
+      this.field('name', { boost: 10 });
+      this.field('description');
 
-    function endStream(cb) {
-      const indexFile = latestFile.clone({ contents: false })
-      indexFile.path = path.join(latestFile.base, "index.json")
+      docs.forEach(function(doc) {
+        this.add(doc);
+      }, this);
+    });
 
-      const index = lunr(function () {
-        this.ref("href")
-        this.field("name", { boost: 10 })
-        this.field("description")
+    fs.writeFileSync(indexFile, JSON.stringify(index));
 
-        docs.forEach(function (doc) {
-          this.add(doc)
-        }, this)
-      })
-
-      // Note: could merge main index here using technique from https://www.garysieling.com/blog/building-a-full-text-index-in-javascript
-
-      indexFile.contents = Buffer.from(JSON.stringify(index))
-      this.push(indexFile)
-
-      const storeFile = latestFile.clone({ contents: false })
-      storeFile.path = path.join(latestFile.base, "store.json")
-      storeFile.contents = Buffer.from(JSON.stringify(store))
-      this.push(storeFile)
-
-      cb()
-    }
-
-    const transformedContents = through.obj(readYML, endStream)
-    fs.writeFileSync(`dist/docs/${file}`, transformedContents)
-  })
-}
+    let storeFile = path.join('dist/docs/', 'store.json');
+    fs.writeFileSync(storeFile, JSON.stringify(store));
+  });
+};
 
 /**
  * @description This will loop through each file in the metadataFiles array,
@@ -279,15 +254,16 @@ async function buildSite_generateIndex() {
  * ransformations on the contents, and then add an entry to the nav array for each file.
  * Finally, the nav array is sorted and assigned to the templateData.nav property.
  */
-async function buildSite_getData() {
-  const nav = []
-  const metadataFiles = await fg([
-    `${dirs.components}/*/metadata.yml`,
-    `${dirs.components}/*/metadata/*.yml`,
-  ])
-  metadataFiles.forEach((file) => {
+function buildSite_getData() {
+  let nav = []
+  fg.sync([`${dirs.components}/*/metadata.yml,${dirs.components}/*/metadata/*.yml`,
+  ]).forEach(function (file) {
     let componentData
-    const componentName = file.replace("/metadata", "").split("/").pop()
+    var componentName = path
+      .dirname(file)
+      .replace("/metadata", "")
+      .split("/")
+      .pop()
     try {
       componentData = yaml.safeLoad(fs.readFileSync(file, "utf8"))
     } catch (safeloadError) {
@@ -298,9 +274,11 @@ async function buildSite_getData() {
       throw safeloadError
     }
 
-    const fileName =
-      path.basename(file) === "metadata.yml" ? componentName : `${file}.html`
+    if (path.basename(file) === "metadata.yml") {
+      file = componentName
+    }
 
+    var fileName = ext(path.basename(file), ".html")
     nav.push({
       name: componentData.name,
       component: componentName,
@@ -311,7 +289,9 @@ async function buildSite_getData() {
     })
   })
 
-  templateData.nav = nav.sort((a, b) => (a.name <= b.name ? -1 : 1))
+  templateData.nav = nav.sort(function (a, b) {
+    return a.name <= b.name ? -1 : 1
+  })
 }
 
 function buildSite_copyResources() {
@@ -330,8 +310,8 @@ function buildSite_copyFreshResources() {
  * the transformed contents to a new file in the dist/docs/
  * directory using the fs module's writeFileSync method.
  */
-function buildSite_html() {
-  const siteFiles = glob.sync(`${dirs.site}/*.njk`)
+async function buildSite_html() {
+  const siteFiles = await fg.sync(`${dirs.site}/*.njk`)
 
   siteFiles.forEach((file) => {
     const fileContents = fs.readFileSync(file, "utf8")
