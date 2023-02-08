@@ -5,7 +5,6 @@ import { classMap } from "lit-html/directives/class-map.js";
 import { Template as Icon } from '@spectrum-css/icon/stories/template.js';
 
 import '../index.css';
-import '../skin.css';
 
 export const Template = ({
   rootClass = "spectrum-Textfield",
