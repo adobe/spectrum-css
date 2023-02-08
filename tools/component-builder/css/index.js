@@ -15,18 +15,26 @@ const processors = require("./processors").processors
 // const legacyBuild = require('./legacyBuild');
 const vars = require("./vars")
 const path = require('path');
+const fg = require("fast-glob")
 // Read in all variables used
 // Read in all vars from recent DNA
 // Include definitions if they refer to a variable, static if not
 
 async function buildIndexVars() {
-  const files = ["index.css", "skin.css"]
+  const files = await fg([
+    "index.css",
+    "skin.css"
+  ], {
+    ignore: ["skin.css"],
+  });
   try {
     // Allow missing skin.css
-    const validFiles = files.filter((file) => fs.existsSync(file))
-    const contents = validFiles.map((file) => fs.readFileSync(file, "utf8"))
+    let contents = "";
+    for (const file of files) {
+      contents += await fs.promises.readFile(file, "utf-8");
+    }
     try {
-      const result = await postcss(processors).process(contents.join(""), { from: undefined });
+      const result = await postcss(processors).process(contents, { from: undefined });
       await fs.promises.writeFile(path.join("dist", "index-vars.css"), result.css);
       console.log("File saved successfully");
       } catch (error) {
