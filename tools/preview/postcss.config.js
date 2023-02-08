@@ -17,7 +17,11 @@ module.exports = (ctx) => {
         if (Object.keys(devDependencies).includes('@spectrum-css/component-builder')) {
             plugins.push(...legacyBuilder.processors);
         } else {
-            plugins.push(...simpleBuilder.processors);
+            if (ctx.file.split("/").includes("themes")) {
+                plugins.push(...simpleBuilder.getProcessors(true, { noSelectors: false }));
+            } else {
+                plugins.push(...simpleBuilder.getProcessors());
+            }
         }
     }
 
@@ -31,9 +35,5 @@ module.exports = (ctx) => {
         ];
     }
 
-    return {
-        plugins: [
-            ...plugins
-        ],
-    };
+    return { plugins };
 };

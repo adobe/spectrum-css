@@ -16,6 +16,14 @@ const CSSSetsFormatter = require('style-dictionary-sets').CSSSetsFormatter;
 const NameKebabTransfom = require('style-dictionary-sets').NameKebabTransfom;
 const AttributeSetsTransform = require('style-dictionary-sets').AttributeSetsTransform;
 
+/** 
+ * @note This references the package.json because we want the root folder and
+ * not a nested folder which might be returned if the `main` property
+ * in the package.json is present.
+ */
+const tokensPath = require.resolve('@adobe/spectrum-tokens/package.json');
+const tokensDir = path.dirname(tokensPath);
+
 StyleDictionary.registerTransform(NameKebabTransfom);
 StyleDictionary.registerTransform(AttributeSetsTransform);
 StyleDictionary.registerFormat(CSSSetsFormatter);
@@ -126,9 +134,8 @@ const generateGlobalSetConfig = (setName) => {
   }
 }
 
-const tokenGlob = path.dirname(require.resolve('@adobe/spectrum-tokens')) + '/src/**/*.json';
 module.exports = {
-  source: [tokenGlob],
+  source: [`${tokensDir}/src/*.json`],
   platforms: {
     CSS: {
       buildPath: 'dist/css/',

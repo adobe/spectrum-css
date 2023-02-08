@@ -10,6 +10,7 @@ module.exports = {
     '../../components/*/stories/*.stories.js',
   ],
   rootDir: '../../',
+  port: process.env.PORT || 6006,
   staticDirs: ['./assets'],
   addons: [
     {

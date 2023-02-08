@@ -10,79 +10,122 @@ OF ANY KIND, either express or implied. See the License for the specific languag
 governing permissions and limitations under the License.
 */
 
-@import "../vars/css/scales/spectrum-large.css";
-@import "../vars/css/scales/spectrum-medium.css";
-@import "../commons/basebutton.css";
-@import "../vars/css/components/spectrum-button.css";
+@import "../commons/basebutton-coretokens.css";
 
-@import "./skin.css";
+/* default for all buttons */
+.spectrum-Button {
+  --spectrum-button-animation-duration: var(--spectrum-animation-duration-100);
+  --spectrum-button-border-radius: var(--spectrum-corner-radius-100);
+  --spectrum-button-border-width: var(--spectrum-border-width-200);
+
+  --spectrum-button-focus-ring-gap: var(--spectrum-focus-indicator-gap);
+  --spectrum-button-focus-ring-border-radius: calc(var(--spectrum-button-border-radius) + var(--spectrum-button-focus-ring-gap));
+
+  --spectrum-button-focus-ring-gap: var(--spectrum-focus-indicator-gap);
+  --spectrum-button-focus-ring-thickness: var(--spectrum-focus-indicator-thickness);
+  --spectrum-button-focus-indicator-color: var(--spectrum-focus-indicator-color);
+  --spectrum-button-focus-ring-border-radius: calc(var(--spectrum-button-border-radius) + var(--spectrum-button-focus-ring-gap));
+}
+
 
 .spectrum-Button--sizeS {
-  @remapvars {
-    find: /--spectrum-button(.*)-s-/;
-    filter: color;
-    replace: --spectrum-button$1-;
-  }
-  /* adjust padding above and below button label to compensate for line height rendering differences in css */
-  --spectrum-button-primary-fill-textonly-text-padding-top: calc(var(--spectrum-button-s-primary-fill-textonly-text-padding-top) -1px);
+  --spectrum-button-min-width: calc(var(--spectrum-component-height-75) * var(--spectrum-button-minimum-width-multiplier));
+
+  --spectrum-button-border-radius: var(--spectrum-component-pill-edge-to-text-75);
+  --spectrum-button-height: var(--spectrum-component-height-75);
+
+  --spectrum-button-font-size: var(--spectrum-font-size-75);
+
+  --spectrum-button-edge-to-visual: calc(var(--spectrum-component-pill-edge-to-visual-75) - var(--spectrum-button-border-width));
+  --spectrum-button-edge-to-text: calc(var(--spectrum-component-pill-edge-to-text-75) - var(--spectrum-button-border-width));
+  --spectrum-button-padding-label-to-icon: var(--spectrum-text-to-visual-75);
+  --spectrum-button-padding-label-top: var(--spectrum-component-top-to-text-75);
+  --spectrum-button-padding-label-bottom: var(--spectrum-component-bottom-to-text-75);
 }
 
 .spectrum-Button--sizeM {
-  @remapvars {
-    find: /--spectrum-button(.*)-m-/;
-    filter: color;
-    replace: --spectrum-button$1-;
-  }
-  /* adjust padding above and below button label to compensate for line height rendering differences in css */
-  --spectrum-button-primary-fill-textonly-text-padding-bottom: calc(var(--spectrum-button-m-primary-fill-textonly-text-padding-bottom) -1px);
+  --spectrum-button-min-width: calc(var(--spectrum-component-height-100) * var(--spectrum-button-minimum-width-multiplier));
+
+  --spectrum-button-border-radius: var(--spectrum-component-pill-edge-to-text-100);
+  --spectrum-button-height: var(--spectrum-component-height-100);
+
+  --spectrum-button-font-size: var(--spectrum-font-size-100);
+
+
+
+  --spectrum-button-edge-to-visual: calc(var(--spectrum-component-pill-edge-to-visual-100) - var(--spectrum-button-border-width));
+  --spectrum-button-edge-to-text: calc(var(--spectrum-component-pill-edge-to-text-100) - var(--spectrum-button-border-width));
+  --spectrum-button-padding-label-to-icon: var(--spectrum-text-to-visual-100);
+  --spectrum-button-padding-label-top: var(--spectrum-component-top-to-text-100);
+  --spectrum-button-padding-label-bottom: var(--spectrum-component-bottom-to-text-100);
 }
 
 .spectrum-Button--sizeL {
-  @remapvars {
-    find: /--spectrum-button(.*)-l-/;
-    filter: color;
-    replace: --spectrum-button$1-;
-  }
+  --spectrum-button-min-width: calc(var(--spectrum-component-height-200) * var(--spectrum-button-minimum-width-multiplier));
+
+  --spectrum-button-border-radius: var(--spectrum-component-pill-edge-to-text-200);
+  --spectrum-button-height: var(--spectrum-component-height-200);
+
+  --spectrum-button-font-size: var(--spectrum-font-size-200);
+
+  --spectrum-button-edge-to-visual: calc(var(--spectrum-component-pill-edge-to-visual-200) - var(--spectrum-button-border-width));
+  --spectrum-button-edge-to-text: calc(var(--spectrum-component-pill-edge-to-text-200) - var(--spectrum-button-border-width));
+  --spectrum-button-padding-label-to-icon: var(--spectrum-text-to-visual-200);
+  --spectrum-button-padding-label-top: var(--spectrum-component-top-to-text-200);
+  --spectrum-button-padding-label-bottom: var(--spectrum-component-bottom-to-text-200);
 }
 
 .spectrum-Button--sizeXL {
-  @remapvars {
-    find: /--spectrum-button(.*)-xl-/;
-    filter: color;
-    replace: --spectrum-button$1-;
-  }
-  /* adjust padding above and below button label to compensate for line height rendering differences in css */
-  --spectrum-button-primary-fill-textonly-text-padding-bottom: calc(var(--spectrum-button-xl-primary-fill-textonly-text-padding-bottom) -1px);
+  --spectrum-button-min-width: calc(var(--spectrum-component-height-300) * var(--spectrum-button-minimum-width-multiplier));
+
+  --spectrum-button-border-radius: var(--spectrum-component-pill-edge-to-text-300);
+  --spectrum-button-height: var(--spectrum-component-height-300);
+
+  --spectrum-button-font-size: var(--spectrum-font-size-300);
+
+  --spectrum-button-edge-to-visual: calc(var(--spectrum-component-pill-edge-to-visual-300) - var(--spectrum-button-border-width));
+  --spectrum-button-edge-to-text: calc(var(--spectrum-component-pill-edge-to-text-300) - var(--spectrum-button-border-width));
+  --spectrum-button-padding-label-to-icon: var(--spectrum-text-to-visual-300);
+  --spectrum-button-padding-label-top: var(--spectrum-component-top-to-text-300);
+  --spectrum-button-padding-label-bottom: var(--spectrum-component-bottom-to-text-300);
+
 }
 
-.spectrum-Button {
-  /* Adjustments for inset/outset padding in DNA */
-  --spectrum-button-primary-fill-padding-left-adjusted: calc(var(--spectrum-button-primary-fill-texticon-padding-left) - var(--spectrum-button-primary-fill-texticon-border-size));
-  --spectrum-button-primary-fill-padding-right-adjusted: calc(var(--spectrum-button-primary-fill-texticon-padding-right) - var(--spectrum-button-primary-fill-texticon-border-size));
-  --spectrum-button-primary-fill-textonly-padding-left-adjusted: calc(var(--spectrum-button-primary-fill-textonly-padding-left) - var(--spectrum-button-primary-fill-texticon-border-size));
-  --spectrum-button-primary-fill-textonly-padding-right-adjusted: calc(var(--spectrum-button-primary-fill-textonly-padding-right) - var(--spectrum-button-primary-fill-texticon-border-size));
-}
 
 .spectrum-Button {
   @inherit: %spectrum-BaseButton;
   @inherit: %spectrum-ButtonWithFocusRing;
 
-  border-width: var(--spectrum-button-primary-fill-texticon-border-size);
-  border-style: solid;
-  border-radius: var(--spectrum-button-primary-fill-texticon-border-radius);
 
-  min-block-size: var(--spectrum-button-primary-fill-textonly-height);
+  border-radius: var(--mod-button-border-radius, var(--spectrum-button-border-radius));
+  border-width: var(--mod-button-border-width, var(--spectrum-button-border-width));
+  border-style: solid;
   block-size: auto;
-  min-inline-size: var(--spectrum-button-primary-fill-textonly-min-width);
+  height: var(--mod-button-height, var(--spectrum-button-height));
+
+  min-width: var(--mod-button-min-width, var(--spectrum-button-min-width));
+  min-block-size: var(--mod-button-min-width, var(--spectrum-button-min-width));
+  position: relative;
+
 
   padding-block-start: 0;
   padding-block-end: 0;
 
-  /* Start with text-only padding */
-  padding-inline: var(--spectrum-button-primary-fill-textonly-padding-left-adjusted) var(--spectrum-button-primary-fill-textonly-padding-right-adjusted);
+  position: relative;
 
-  font-size: var(--spectrum-button-primary-fill-texticon-text-size);
-  font-weight: var(--spectrum-button-primary-fill-texticon-text-font-weight);
+  min-inline-size: var(--mod-button-min-width, var(--spectrum-button-min-width));
+  min-block-size: var(--mod-spectrum-button-height, var(--spectrum-button-height));
+
+  height: var(--mod-button-height, var(--spectrum-button-height));
+  border-radius: var(--mod-button-border-radius, var(--spectrum-button-border-radius));
+  border-width: var(--mod-button-border-width, var(--spectrum-button-border-width));
+  /* Start with text-only padding */
+  padding-inline-start: var(--mod-button-edge-to-visual, var(--spectrum-button-edge-to-visual));
+  padding-inline-end: var(--mod-button-edge-to-text, var(--spectrum-button-edge-to-text));
+
+
+  font-size: var(--mod-button-font-size, var(--spectrum-button-font-size));
+  font-weight: var(--mod-bold-font-weight, var(--spectrum-bold-font-weight));
 
   &:hover,
   &:active {
@@ -93,15 +136,14 @@ governing permissions and limitations under the License.
   color: inherit;
 
   .spectrum-Icon {
-    @inherit: %spectrum-ButtonIcon;
-
-    /* Scoot over, assuming we have both icon and text */
-    margin-inline-start: calc(-1 * (var(--spectrum-button-primary-fill-textonly-padding-left-adjusted) - var(--spectrum-button-primary-fill-padding-left-adjusted)));
+    inset-inline-end: calc(var(--mod-spectrum-button-edge-to-visual, var(--spectrum-button-edge-to-visual)) - var(--mod-button-border-width, var(--spectrum-button-border-width)));
+    inset-block-end: calc(var(--mod-spectrum-button-edge-to-visual, var(--spectrum-button-edge-to-visual)) - var(--mod-button-border-width, var(--spectrum-button-border-width)));
+    color: inherit;
   }
 
-  .spectrum-Icon + .spectrum-Button-label {
+  .spectrum-Icon+.spectrum-Button-label {
     /* Have gap on on the left */
-    padding-inline-start: var(--spectrum-button-primary-fill-texticon-icon-gap);
+    padding-inline-start: var(--mod-button-padding-label-to-icon, var(--spectrum-button-padding-label-to-icon));
 
     /*
       Have no padding on the right (it's built into the element)
@@ -110,11 +152,10 @@ governing permissions and limitations under the License.
     padding-inline-end: 0;
   }
 
-  --spectrum-button-focus-ring-color: var(--spectrum-button-m-primary-fill-texticon-focus-ring-color-key-focus);
 
   /* correct focus-ring radius for t-shirt sizing */
   &:after {
-    border-radius: calc(var(--spectrum-button-primary-fill-texticon-border-radius) + var(--spectrum-alias-focus-ring-gap));
+    border-radius: calc(var(--mod-button-border-radius, var(--spectrum-button-border-radius)) + var(--mod-focus-indicator-gap, var(--spectrum-focus-indicator-gap)));
   }
 }
 
@@ -124,26 +165,127 @@ a.spectrum-Button {
 
 .spectrum-Button-label {
   @inherit: %spectrum-ButtonLabel;
-
-  line-height: var(--spectrum-button-primary-fill-texticon-text-line-height);
-  padding-block-start: calc(var(--spectrum-button-primary-fill-textonly-text-padding-top) - var(--spectrum-button-primary-fill-textonly-border-size));
-  padding-block-end: calc(var(--spectrum-button-primary-fill-textonly-text-padding-bottom) - var(--spectrum-button-primary-fill-textonly-border-size));
+  padding-block-start: var(--mod-button-padding-label-top, var(--spectrum-button-padding-label-top));
+  padding-block-end: var(--mod-button-padding-label-bottom, var(--spectrum-button-padding-label-bottom));
 }
 
 .spectrum-Button {
+
   &:focus-ring,
   &.is-focused {
     &:after {
-      box-shadow: 0 0 0 var(--spectrum-button-primary-fill-texticon-focus-ring-size) var(--spectrum-button-focus-ring-color);
+      box-shadow: 0 0 0 var(--mod-button-focus-ring-thickness, var(--spectrum-button-focus-ring-thickness)) var(--mod-button-focus-ring-color, var(--spectrum-button-focus-indicator-color));
     }
   }
 }
 
+
+/* special cases for focus-ring */
+.spectrum-Button {
+  transition: border-color var(--mod-button-animation-duration, var(--spectrum-button-animation-duration)) ease-in-out;
+
+  &:after {
+    position: absolute;
+    inset: 0;
+
+    margin: calc((var(--mod-button-focus-ring-gap, var(--spectrum-button-focus-ring-gap)) + var(--mod-button-border-width, var(--spectrum-button-border-width))) * -1);
+
+    border-radius: var(--mod-button-focus-ring-border-radius, var(--spectrum-button-focus-ring-border-radius));
+
+    transition: box-shadow var(--mod-button-animation-duration, var(--spectrum-button-animation-duration)) ease-in-out;
+
+    pointer-events: none;
+    content: '';
+  }
+
+  &:focus-ring {
+    /* kill the default ring */
+    box-shadow: none;
+
+    &:after {
+      box-shadow: 0 0 0 var(--mod-button-focus-ring-thickness, var(--spectrum-button-focus-ring-thickness)) var(--highcontrast-button-focus-ring-color, var(--mod-button-focus-ring-color,
+            var(--mod-button-focus-ring-color, var(--spectrum-button-focus-indicator-color))));
+    }
+  }
+}
+
+/* Core Token Theming */
+/* former skin.css, applied / copied from actionbutton/index.css  */
+
+.spectrum-Button {
+  @inherit: %spectrum-BaseButton;
+
+  background-color: var(--highcontrast-button-background-color-default, var(--mod-button-background-color-default, var(--spectrum-button-background-color-default)));
+  border-color: var(--highcontrast-button-border-color-default, var(--mod-button-border-color-default, var(--spectrum-button-border-color-default)));
+  color: var(--highcontrast-button-content-color-default, var(--mod-button-content-color-default, var(--spectrum-button-content-color-default)));
+
+  &:hover {
+    background-color: var(--highcontrast-button-background-color-hover, var(--mod-button-background-color-hover, var(--spectrum-button-background-color-hover)));
+    border-color: var(--highcontrast-button-border-color-hover, var(--mod-button-border-color-hover, var(--spectrum-button-border-color-hover)));
+    color: var(--highcontrast-button-content-color-hover, var(--mod-button-content-color-hover, var(--spectrum-button-content-color-hover)));
+  }
+
+  &:focus-ring {
+    background-color: var(--highcontrast-button-background-color-focus, var(--mod-button-background-color-focus, var(--spectrum-button-background-color-focus)));
+    border-color: var(--highcontrast-button-border-color-focus, var(--mod-button-border-color-focus, var(--spectrum-button-border-color-focus)));
+    color: var(--highcontrast-button-content-color-focus, var(--mod-button-content-color-focus, var(--spectrum-button-content-color-focus)));
+  }
+
+  &:active {
+    background-color: var(--highcontrast-button-background-color-down, var(--mod-button-background-color-down, var(--spectrum-button-background-color-down)));
+    border-color: var(--highcontrast-button-border-color-down, var(--mod-button-border-color-down, var(--spectrum-button-border-color-down)));
+    color: var(--highcontrast-button-content-color-down, var(--mod-button-content-color-down, var(--spectrum-button-content-color-down)));
+  }
+
+  &:disabled,
+  &.is-disabled {
+    background-color: var(--highcontrast-button-background-color-disabled, var(--mod-button-background-color-disabled, var(--spectrum-button-background-color-disabled)));
+    border-color: var(--highcontrast-button-border-color-disabled, var(--mod-button-border-color-disabled, var(--spectrum-button-border-color-disabled)));
+    color: var(--highcontrast-button-content-color-disabled, var(--mod-button-content-color-disabled, var(--spectrum-button-content-color-disabled)));
+  }
+}
+
+/* windows high contrast mode over-writes for accent variant */
+@media (forced-colors: active) {
+  .spectrum-Button {
+    &:focus-ring {
+      &:after {
+        forced-color-adjust: none;
+        box-shadow: 0 0 0 var(--mod-button-focus-ring-thickness, var(--spectrum-button-focus-ring-thickness)) ButtonTExt;
+      }
+    }
+
+    &.spectrum-Button--accent {
+      &.spectrum-Button--fill {
+        background-color: ButtonText;
+        color: ButtonFace;
+        
+        &:disabled,
+        &.is-disabled {
+          background-color: ButtonFace;
+          color: GrayText;
+        }
+
+        /* simplified for a lot of state for high contrast mode */
+        &:active,
+        &:hover,
+        &:focus-ring,
+        &.is-focused {
+          background-color: Highlight;
+        }
+        .spectrum-Button-label {
+          forced-color-adjust: none;
+        }
+      }
+    }
+  }
+}
+
+/* static variants */
 .spectrum-Button--staticWhite {
-  --spectrum-button-focus-ring-color: var(--spectrum-button-m-primary-fill-white-texticon-focus-ring-color-key-focus);
+  --spectrum-button-focus-indicator-color: var(--mod-static-black-focus-indicator-color, var(--spectrum-static-black-focus-indicator-color));
 }
 
 .spectrum-Button--staticBlack {
-  --spectrum-button-focus-ring-color: var(--spectrum-button-m-primary-fill-black-texticon-focus-ring-color-key-focus);
+  --spectrum-button-focus-indicator-color: var(--mod-static-black-focus-indicator-color, var(--spectrum-static-black-focus-indicator-color));
 }
-

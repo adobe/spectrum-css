@@ -18,35 +18,35 @@ governing permissions and limitations under the License.
   --spectrum-breadcrumbs-block-size-multiline: var(--spectrum-breadcrumbs-height-multiline);
 
   /* text regular */
-  --spectrum-breadcrumbs-line-height: var(--spectrum-line-height-small);
+  --spectrum-breadcrumbs-line-height: var(--spectrum-line-height-100);
   --spectrum-breadcrumbs-font-size: var(--spectrum-font-size-200);
-  --spectrum-breadcrumbs-font-family: var(--spectrum-font-family-base); /* placeholder for --spectrum-font-family-default */
-  --spectrum-breadcrumbs-font-weight: var(--spectrum-font-weight-regular); /* placeholder for --spectrum-font-regular */
+  --spectrum-breadcrumbs-font-family: var(--spectrum-sans-font-family-stack);
+  --spectrum-breadcrumbs-font-weight: var(--spectrum-regular-font-weight);
 
   /* text regular active item */
   --spectrum-breadcrumbs-font-size-current: var(--spectrum-font-size-200);
-  --spectrum-breadcrumbs-font-family-current: var(--spectrum-font-family-base); /* placeholder for --spectrum-font-family-default */
-  --spectrum-breadcrumbs-font-weight-current: var(--spectrum-font-weight-bold); /* placeholder for --spectrum-font-bold */
+  --spectrum-breadcrumbs-font-family-current: var(--spectrum-sans-font-family-stack);
+  --spectrum-breadcrumbs-font-weight-current: var(--spectrum-bold-font-weight);
 
   /* text compact */
   --spectrum-breadcrumbs-font-size-compact: var(--spectrum-font-size-100);
-  --spectrum-breadcrumbs-font-family-compact: var(--spectrum-font-family-base); /* placeholder for --spectrum-font-family-default */
-  --spectrum-breadcrumbs-font-weight-compact: var(--spectrum-font-weight-regular); /* placeholder for --spectrum-font-regular */
+  --spectrum-breadcrumbs-font-family-compact: var(--spectrum-sans-font-family-stack);
+  --spectrum-breadcrumbs-font-weight-compact: var(--spectrum-regular-font-weight);
 
   /* text compact active item */
   --spectrum-breadcrumbs-font-size-compact-current: var(--spectrum-font-size-100);
-  --spectrum-breadcrumbs-font-family-compact-current: var(--spectrum-font-family-base); /* placeholder for --spectrum-font-family-default */
-  --spectrum-breadcrumbs-font-weight-compact-current: var(--spectrum-font-weight-bold); /* placeholder for --spectrum-font-bold */
+  --spectrum-breadcrumbs-font-family-compact-current: var(--spectrum-sans-font-family-stack);
+  --spectrum-breadcrumbs-font-weight-compact-current: var(--spectrum-bold-font-weight);
 
   /* text multiline */
   --spectrum-breadcrumbs-font-size-multiline: var(--spectrum-font-size-75);
-  --spectrum-breadcrumbs-font-family-multiline: var(--spectrum-font-family-base); /* placeholder for --spectrum-font-family-default */
-  --spectrum-breadcrumbs-font-weight-multiline: var(--spectrum-font-weight-regular); /* placeholder for --spectrum-font-regular */
+  --spectrum-breadcrumbs-font-family-multiline: var(--spectrum-sans-font-family-stack);
+  --spectrum-breadcrumbs-font-weight-multiline: var(--spectrum-regular-font-weight);
 
   /* text multiline active item */
   --spectrum-breadcrumbs-font-size-multiline-current: var(--spectrum-font-size-300);
-  --spectrum-breadcrumbs-font-family-multiline-current: var(--spectrum-font-family-base); /* placeholder for --spectrum-font-family-default */
-  --spectrum-breadcrumbs-font-weight-multiline-current: var(--spectrum-font-weight-bold); /* placeholder for --spectrum-font-bold */
+  --spectrum-breadcrumbs-font-family-multiline-current: var(--spectrum-sans-font-family-stack);
+  --spectrum-breadcrumbs-font-weight-multiline-current: var(--spectrum-bold-font-weight);
 
   /* hover, active, focus underline */
   --spectrum-breadcrumbs-text-decoration-thickness: var(--spectrum-text-underline-thickness);

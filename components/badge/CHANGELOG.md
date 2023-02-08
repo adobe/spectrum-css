@@ -3,6 +3,41 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+<a name="3.0.1"></a>
+## 3.0.1
+🗓 2023-02-06 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/badge@3.0.0...@spectrum-css/badge@3.0.1)
+
+**Note:** Version bump only for package @spectrum-css/badge
+
+
+
+
+
+<a name="3.0.0"></a>
+# 3.0.0
+🗓 2023-02-01 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/badge@2.0.9...@spectrum-css/badge@3.0.0)
+
+* chore(tokens)!: use latest dependency & fix build error (#1591) ([f2532e7](https://github.com/adobe/spectrum-css/commit/f2532e7)), closes [#1591](https://github.com/adobe/spectrum-css/issues/1591)
+
+
+### 🛑 BREAKING CHANGES
+
+* uses latest `@adobe/spectrum-tokens` dependency which includes token renames
+
+
+
+
+
+<a name="2.0.9"></a>
+## 2.0.9
+🗓 2023-02-01 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/badge@2.0.8...@spectrum-css/badge@2.0.9)
+
+**Note:** Version bump only for package @spectrum-css/badge
+
+
+
+
+
 <a name="2.0.8"></a>
 ## 2.0.8
 🗓 2023-01-27 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/badge@2.0.7...@spectrum-css/badge@2.0.8)

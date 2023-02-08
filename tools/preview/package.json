@@ -1,6 +1,6 @@
 {
   "name": "@spectrum-css/preview",
-  "version": "1.0.8",
+  "version": "2.0.1",
   "description": "A Spectrum CSS preview",
   "license": "Apache-2.0",
   "author": "Adobe",
@@ -8,19 +8,19 @@
   "main": "main.js",
   "scripts": {
     "build": "build-storybook --config-dir .",
-    "start": "WATCH_MODE=true start-storybook -p 6006 --config-dir ."
+    "start": "WATCH_MODE=true start-storybook --config-dir ."
   },
   "dependencies": {
     "@adobe/spectrum-css-workflow-icons": "^1.2.1",
     "@spectrum-css/expressvars": "^2.0.3",
-    "@spectrum-css/icon": "^3.0.29",
+    "@spectrum-css/icon": "^3.0.32",
     "@spectrum-css/tokens": "^4.0.0",
     "@spectrum-css/vars": "^8.0.3"
   },
   "devDependencies": {
     "@babel/core": "^7.20.5",
     "@etchteam/storybook-addon-status": "^4.2.2",
-    "@spectrum-css/component-builder": "^3.2.4",
+    "@spectrum-css/component-builder": "^4.0.1",
     "@storybook/addon-a11y": "^6.5.15",
     "@storybook/addon-actions": "^6.5.15",
     "@storybook/addon-docs": "^6.5.15",
@@ -34,6 +34,7 @@
     "@storybook/web-components": "^6.5.15",
     "@whitespace/storybook-addon-html": "^5.1.1",
     "lit-html": "^2.5.0",
+    "lodash-es": "^4.17.21",
     "npm-run-all": "^4.1.5",
     "postcss": "^7.0.36",
     "postcss-class-prefix": "^0.3.0",

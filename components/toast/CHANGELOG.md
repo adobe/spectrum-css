@@ -3,6 +3,41 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+<a name="9.0.1"></a>
+## 9.0.1
+🗓 2023-02-06 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/toast@9.0.0...@spectrum-css/toast@9.0.1)
+
+**Note:** Version bump only for package @spectrum-css/toast
+
+
+
+
+
+<a name="9.0.0"></a>
+# 9.0.0
+🗓 2023-02-01 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/toast@8.0.15...@spectrum-css/toast@9.0.0)
+
+* chore(tokens)!: use latest dependency & fix build error (#1591) ([f2532e7](https://github.com/adobe/spectrum-css/commit/f2532e7)), closes [#1591](https://github.com/adobe/spectrum-css/issues/1591)
+
+
+### 🛑 BREAKING CHANGES
+
+* uses latest `@adobe/spectrum-tokens` dependency which includes token renames
+
+
+
+
+
+<a name="8.0.15"></a>
+## 8.0.15
+🗓 2023-02-01 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/toast@8.0.14...@spectrum-css/toast@8.0.15)
+
+**Note:** Version bump only for package @spectrum-css/toast
+
+
+
+
+
 <a name="8.0.14"></a>
 ## 8.0.14
 🗓 2023-01-27 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/toast@8.0.13...@spectrum-css/toast@8.0.14)
