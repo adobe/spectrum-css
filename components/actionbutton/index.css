@@ -137,10 +137,11 @@ governing permissions and limitations under the License.
 
   border-radius: var(--mod-actionbutton-border-radius, var(--spectrum-actionbutton-border-radius));
   border-width: var(--mod-actionbutton-border-width, var(--spectrum-actionbutton-border-width));
+  
+  gap: calc(var(--spectrum-actionbutton-text-to-visual) + (var(--spectrum-actionbutton-edge-to-text) - var(--spectrum-actionbutton-edge-to-visual-only)));
 
   /* Start with text-only padding */
-  padding-inline-start: var(--mod-actionbutton-edge-to-text, var(--spectrum-actionbutton-edge-to-text));
-  padding-inline-end: var(--mod-actionbutton-edge-to-text, var(--spectrum-actionbutton-edge-to-text));
+  padding-inline: var(--mod-actionbutton-edge-to-text, var(--spectrum-actionbutton-edge-to-text));
 
   background-color: var(--highcontrast-actionbutton-background-color-default, var(--mod-actionbutton-background-color-default, var(--spectrum-actionbutton-background-color-default)));
   border-color: var(--highcontrast-actionbutton-border-color-default, var(--mod-actionbutton-border-color-default, var(--spectrum-actionbutton-border-color-default)));
@@ -183,26 +184,25 @@ a.spectrum-ActionButton {
   height: var(--mod-actionbutton-icon-size, var(--spectrum-actionbutton-icon-size));
 
   /* adjust icon positioning to match UI kit */
-  margin-inline-start: calc(-1 * (var(--mod-actionbutton-edge-to-text, var(--spectrum-actionbutton-edge-to-text)) - var(--mod-actionbutton-edge-to-visual, var(--spectrum-actionbutton-edge-to-visual))));
+  margin-inline-start: calc(
+    var(--mod-actionbutton-edge-to-visual, var(--spectrum-actionbutton-edge-to-visual)) -
+        var(--mod-actionbutton-edge-to-text, var(--spectrum-actionbutton-edge-to-text))
+  );
+  margin-inline-end: calc(
+      var(--mod-actionbutton-edge-to-visual-only, var(--spectrum-actionbutton-edge-to-visual-only)) -
+          var(--mod-actionbutton-edge-to-text, var(--spectrum-actionbutton-edge-to-text))
+  );
 
   color: inherit;
-
-  & + .spectrum-ActionButton-label {
-    /* Have gap on on the left */
-    padding-inline-start: var(--mod-actionbutton-text-to-visual, var(--spectrum-actionbutton-text-to-visual));
-
-    /* Have no padding on the right (it's built into the element) */
-    padding-inline-end: 0;
-  }
-
-  padding-inline-start: calc(-1 * (var(--mod-actionbutton-edge-to-text, var(--spectrum-actionbutton-edge-to-text)) - var(--mod-actionbutton-edge-to-visual, var(--spectrum-actionbutton-edge-to-visual))));
 }
 
 .spectrum-ActionButton-hold + .spectrum-ActionButton-icon,
 .spectrum-ActionButton-icon:only-child {
-  /* Use icon-only padding, subtracted from the default text-only padding */
-  margin-inline-start: calc(-1 * (var(--mod-actionbutton-edge-to-text, var(--spectrum-actionbutton-edge-to-text)) - var(--mod-actionbutton-edge-to-visual-only, var(--spectrum-actionbutton-edge-to-visual-only))));
-  margin-inline-end: calc(-1 * (var(--mod-actionbutton-edge-to-text, var(--spectrum-actionbutton-edge-to-text)) - var(--mod-actionbutton-edge-to-visual-only, var(--spectrum-actionbutton-edge-to-visual-only))));
+  /* Augment the margin correction for the icon only scenario */
+  margin-inline-start: calc(
+      var(--spectrum-actionbutton-edge-to-visual-only, var(--spectrum-actionbutton-edge-to-visual-only)) -
+          var(--spectrum-actionbutton-edge-to-text, var(--spectrum-actionbutton-edge-to-text))
+  );
 }
 
 .spectrum-ActionButton-label {
