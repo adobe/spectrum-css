@@ -29,6 +29,8 @@ governing permissions and limitations under the License.
     --spectrum-colorwheel-radius: 85px;
     --spectrum-colorwheel-width: 192px; /* TODO replace, placeholder for incoming color-wheel-width token */
     --spectrum-colorwheel-minimum-width: 175px; /* TODO replace, placeholder for incoming color-wheel-minimum-width token */
+    --radius: 96px;
+    --spectrum-colorwheel-path: "M var(--radius) 96 m -96 0 a 96 96 0 1 0 192 0 a 96 96 0 1 0 -192 0.2 M 96 96 m -70 0 a 70 70 0 1 0 140 0 a 70 70 0 1 0 -140 0";
   }
 }
 
@@ -141,4 +143,19 @@ governing permissions and limitations under the License.
 .spectrum-ColorWheel-handle {
   left: 50%;
   top: 50%;
+}
+.wheel {
+  position: absolute;
+  background: conic-gradient(from 90deg, red, rgb(255, 128, 0), rgb(255, 255, 0), rgb(128, 255, 0), rgb(0, 255, 0), rgb(0, 255, 128), rgb(0, 255, 255), rgb(0, 128, 255), rgb(0, 0, 255), rgb(128, 0, 255), rgb(255, 0, 255), rgb(255, 0, 128), red);
+  height: 100%;
+  width: 100%;
+  /* clip-path: path(evenodd, var(--spectrum-ColorWheel-path) var(--spectrum-ColorWheel-path2)); */
+}
+
+.wheel-border{
+  position: relative;
+  background-color: black;
+  width:192px;
+  height: 192px;
+  clip-path: path(evenodd, var(--spectrum-colorwheel-path));
 }
