@@ -350,6 +350,15 @@ governing permissions and limitations under the License.
       background-color: transparent;
     }
 
+    /* quiet hover */
+    &:hover {
+      .spectrum-Stepper-buttons,
+      .spectrum-Stepper-stepUp,
+      .spectrum-Stepper-stepDown {
+        background-color: transparent;
+      }
+    }
+
     /* quiet disabled */
     &.is-disabled {
       .spectrum-Stepper-input,
