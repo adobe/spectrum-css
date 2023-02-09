@@ -12,6 +12,7 @@ governing permissions and limitations under the License.
 @container (--system: express) {
   .spectrum-Picker {
     --spectrum-picker-border-size: 0;
+    --spectrum-picker-focus-indicator-adjusted: calc(1px / 2);
 
     --spectrum-picker-background-color-default: var(--spectrum-gray-200);
     --spectrum-picker-background-color-default-open: var(--spectrum-gray-300);
