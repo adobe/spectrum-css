@@ -22,7 +22,6 @@ const nunjucks = require("nunjucks")
 const logger = require("../lib/logger")
 const dirs = require("../lib/dirs")
 const depUtils = require("../lib/depUtils")
-const copyResources = require("../lib/copyUtils")
 
 // adding nunjucks
 
@@ -63,17 +62,24 @@ async function buildDocs_forDep(dep) {
 
   const metadata = JSON.parse(
     await fs.promises.readFile(
-      path.join(dirs.components, "vars", "dist", "spectrum-metadata.json")
+      path.join(
+        dirs.topLevelComponents,
+        "vars",
+        "dist",
+        "spectrum-metadata.json"
+      )
     )
   )
 
   const dependencyOrder = await depUtils.getPackageDependencyOrder(
-    path.join(dirs.components, dep)
+    path.join(dirs.topLevelComponents, dep)
   )
 
-  const dirName = `${dirs.components}/${dep}`
+  const dirName = `${dirs.topLevelComponents}/${dep}`
 
-  console.debug(`Will build docs for package in ${dirs.components}/${dep}`)
+  console.debug(
+    `Will build docs for package in ${dirs.topLevelComponents}/${dep}`
+  )
   // This code uses the glob function to select the files based on the given patterns,
   // and the through2 module to create a stream that processes the data.
   // The transform function is called for each file in the stream,
@@ -88,7 +94,9 @@ async function buildDocs_forDep(dep) {
     componentDeps.push(dep)
 
     const pkg = JSON.parse(
-      await fsp.readFile(path.join(dirs.components, dep, "package.json"))
+      await fsp.readFile(
+        path.join(dirs.topLevelComponents, dep, "package.json")
+      )
     )
 
     let docsDeps = minimumDeps.concat(componentDeps)
@@ -168,83 +176,99 @@ async function buildDocs_forDep(dep) {
     cb(null, file)
   }
 
-  const matches =  await fg(files)
-      // eslint-disable-next-line no-restricted-syntax
-      for (const file of matches) {
-        fs.createReadStream(file)
-          .pipe(through.obj(transform))
-          .pipe(fs.createWriteStream(file.replace("metadata", dep)))
-          .pipe(through.obj(compileNunJucks))
-          .pipe(fs.createWriteStream(`dist/docs/${path.basename(file)}`))
-      }
+  const matches = await fg(files)
+  // eslint-disable-next-line no-restricted-syntax
+  for (const file of matches) {
+    fs.createReadStream(file)
+      .pipe(through.obj(transform))
+      .pipe(fs.createWriteStream(file.replace("metadata", dep)))
+      .pipe(through.obj(compileNunJucks))
+      .pipe(fs.createWriteStream(`dist/docs/${path.basename(file)}`))
+  }
 }
 
 // Combined
 async function buildDocs_individualPackages() {
-  const dependencies = await depUtils.getFolderDependencyOrder(dirs.components)
+  const dependencies = await depUtils.getFolderDependencyOrder(
+    dirs.topLevelComponents
+  )
 
   return Promise.all(dependencies.map(buildDocs_forDep))
 }
 
-function buildSite_generateIndex() {
-  return fg.sync([
-    `${dirs.components}/*/metadata.yml`,
-    `${dirs.components}/*/metadata/*.yml`
+// working
+async function buildSite_generateIndex() {
+  const components = await fg([
+    `${dirs.topLevelComponents}/*/metadata.yml`,
+    `${dirs.topLevelComponents}/*/metadata/*.yml`
   ])
-  .then(files => {
-    let docs = [];
-    let store = {};
-    let latestFile = null;
-    
-    files.forEach(file => {
-      let componentData;
-      try {
-        componentData = yaml.safeLoad(fs.readFileSync(file, 'utf-8'));
-      } catch (err) {
-        throw err;
-      }
 
-      var componentName = path.dirname(file).replace('/metadata', '').split(path.sep).pop();
+  let docs = [];
+  let store = {};
+  let latestFile = null;
 
-      if (path.basename(file) === 'metadata.yml') {
-        file = componentName;
-      }
+  components.forEach(component => {
+    const file = fs.readFileSync(component);
+    let componentData;
+    try {
+      componentData = yaml.safeLoad(String(file));
+    } catch (err) {
+      throw err;
+    }
 
-      var fileName = path.basename(file, '.yml') + '.html';
+    const componentName = path.dirname(component).replace('/metadata', '').split('/').pop();
 
-      docs.push({
-        href: fileName,
-        name: componentData.name,
-        description: componentData.description
-      });
+    if (path.basename(component) === 'metadata.yml') {
+      component.basename = componentName;
+    }
 
-      store[fileName] = {
-        href: fileName,
-        name: componentData.name,
-        component: componentName,
-        description: componentData.description
-      };
+    const fileName = ext(path.basename(component), '.html');
 
-      latestFile = file;
+    docs.push({
+      href: fileName,
+      name: componentData.name,
+      description: componentData.description
     });
 
-    let indexFile = path.join('dist/docs/', 'index.json');
-    let index = lunr(function() {
-      this.ref('href');
-      this.field('name', { boost: 10 });
-      this.field('description');
+    store[fileName] = {
+      href: fileName,
+      name: componentData.name,
+      component: componentName,
+      description: componentData.description
+    };
 
-      docs.forEach(function(doc) {
-        this.add(doc);
-      }, this);
-    });
-
-    fs.writeFileSync(indexFile, JSON.stringify(index));
-
-    let storeFile = path.join('dist/docs/', 'store.json');
-    fs.writeFileSync(storeFile, JSON.stringify(store));
+    latestFile = file;
   });
-};
+
+  let dest =  'dist/docs/'
+  if (!fs.existsSync(dest)) {
+    fs.mkdirSync(dest, { recursive: true })
+  }
+  let indexFile = {
+    path: path.join(dest, 'index.json'),
+    contents: Buffer.from(
+      JSON.stringify(
+        lunr(function() {
+          this.ref('href');
+          this.field('name', { boost: 10 });
+          this.field('description');
+  
+          docs.forEach(function(doc) {
+            this.add(doc);
+          }, this);
+        })
+      )
+    )
+  };
+
+  let storeFile = {
+    path: path.join(dest, 'store.json'),
+    contents: Buffer.from(JSON.stringify(store))
+  };
+
+  fs.writeFileSync(indexFile.path, indexFile.contents);
+  fs.writeFileSync(storeFile.path, storeFile.contents);
+}
 
 /**
  * @description This will loop through each file in the metadataFiles array,
@@ -253,10 +277,13 @@ function buildSite_generateIndex() {
  * ransformations on the contents, and then add an entry to the nav array for each file.
  * Finally, the nav array is sorted and assigned to the templateData.nav property.
  */
-function buildSite_getData() {
+async function buildSite_getData() {
   let nav = []
-  fg.sync([`${dirs.components}/*/metadata.yml,${dirs.components}/*/metadata/*.yml`,
-  ]).forEach(function (file) {
+  const files = await fg([
+    `${dirs.topLevelComponents}/*/metadata.yml, ${dirs.topLevelComponents}/*/metadata/*.yml`,
+  ])
+
+  files.forEach(function (file) {
     let componentData
     var componentName = path
       .dirname(file)
@@ -293,12 +320,70 @@ function buildSite_getData() {
   })
 }
 
+// copy all the resources from site/dist to dist/docs
 function buildSite_copyResources() {
-  copyResources(`${dirs.site}/dist/**`, "dist/docs")
-}
+  const resourcesPath = `${dirs.site}/dist/`
+  const distPath = path.join(path.dirname(__dirname), "..", "..", "dist/docs/")
+  try {
+    const copyFile = (src, dest) => {
+      const destFile = path.join(dest, path.basename(src))
+      fs.copyFileSync(src, destFile)
+    }
 
+    const walk = (dir, dest) => {
+      fs.readdirSync(dir).forEach((file) => {
+        const filePath = path.join(dir, file)
+        const destDir = path.join(dest, file)
+        if (fs.statSync(filePath).isDirectory()) {
+          if (!fs.existsSync(destDir)) {
+            fs.mkdirSync(destDir)
+          }
+          walk(filePath, destDir)
+        } else {
+          copyFile(filePath, dest)
+        }
+      })
+    }
+
+    if (!fs.existsSync(distPath)) {
+      fs.mkdirSync(distPath, { recursive: true })
+    }
+    walk(resourcesPath, distPath)
+  } catch (e) {
+    console.error("Error in buildSite_Resournces " + e)
+  }
+}
 function buildSite_copyFreshResources() {
-  copyResources(`${dirs.site}/resources/**`, "dist/docs")
+  const resourcesPath = `${dirs.site}/resources/`
+  const distPath = path.join(path.dirname(__dirname), "..", "..", "dist/docs/")
+  try {
+    const copyFile = (src, dest) => {
+      const destFile = path.join(dest, path.basename(src))
+      fs.copyFileSync(src, destFile)
+    }
+
+    const walk = (dir, dest) => {
+      fs.readdirSync(dir).forEach((file) => {
+        const filePath = path.join(dir, file)
+        const destDir = path.join(dest, file)
+        if (fs.statSync(filePath).isDirectory()) {
+          if (!fs.existsSync(destDir)) {
+            fs.mkdirSync(destDir)
+          }
+          walk(filePath, destDir)
+        } else {
+          copyFile(filePath, dest)
+        }
+      })
+    }
+
+    if (!fs.existsSync(distPath)) {
+      fs.mkdirSync(distPath, { recursive: true })
+    }
+    walk(resourcesPath, distPath)
+  } catch (e) {
+    console.error("Error in buildSite_Resournces " + e)
+  }
 }
 
 /**
@@ -310,8 +395,10 @@ function buildSite_copyFreshResources() {
  * directory using the fs module's writeFileSync method.
  */
 async function buildSite_html() {
-  const siteFiles = await fg.sync(`${dirs.site}/*.njk`)
-
+  const siteFiles = await fg(`${dirs.site}/content/_includes/**/*.njk`, {
+    extend: ["njk"],
+  })
+  const distPath = "dist/docs/"
   siteFiles.forEach((file) => {
     const fileContents = fs.readFileSync(file, "utf8")
     const data = {
@@ -326,9 +413,11 @@ async function buildSite_html() {
       "site/templates",
       fileContents
     )
-
+    if (!fs.existsSync(distPath)) {
+      fs.mkdirSync(distPath, { recursive: true })
+    }
     fs.writeFileSync(
-      `dist/docs/${path.basename(file, ".njk")}.html`,
+      `${distPath}${path.basename(file, ".njk")}.html`,
       transformedContents
     )
   })

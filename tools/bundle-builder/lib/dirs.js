@@ -17,7 +17,7 @@ exports.siteResources = path.resolve(__dirname, '..', 'node_modules', '@spectrum
 exports.topLevel = path.resolve(exports.builder, '..', '..');
 exports.isTopLevel = (process.cwd() === exports.topLevel);
 exports.site = path.resolve(exports.topLevel, 'site');
-
+exports.topLevelComponents =  path.join(exports.topLevel, 'components');
 if (exports.isTopLevel) {
   exports.components = path.join(exports.topLevel, 'components');
 }
