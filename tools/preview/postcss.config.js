@@ -1,5 +1,6 @@
 const { resolve, relative, basename } = require('path');
 const { existsSync } = require('fs');
+const warnCleaner = require('postcss-warn-cleaner')
 
 const simpleBuilder = require('@spectrum-css/component-builder-simple/css/processors.js');
 const legacyBuilder = require('@spectrum-css/component-builder/css/processors.js');
@@ -34,6 +35,11 @@ module.exports = (ctx) => {
               })
         ];
     }
+
+    // For storybook, add a tool to suppress autoprefixer warnings
+    plugins.push(warnCleaner({
+        ignoreFiles: '**/*.css'
+    }));
 
     return { plugins };
 };

@@ -48,7 +48,7 @@ export const Template = ({
     : { icon: undefined, setName };
 
   if (!useRef && !icon) {
-    console.warn(`Icon ${iconName} not found.`);
+    console.warn(`Icon: ${iconName} not found.`);
     return html``;
   }
 

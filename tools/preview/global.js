@@ -12,7 +12,7 @@ window.addEventListener('DOMContentLoaded', () => {
         }, 3000);
 
         const tk = document.createElement("script");
-        const d = false;
+        let d = false;
 
         // Always load over https
         tk.src = 'https://use.typekit.net/' + kitId + '.js'

@@ -14,7 +14,7 @@ export const Template = ({
   const [, updateArgs] = useArgs();
 
   if (!items.length) {
-    console.warn("Action menu requires items be passed in to render.");
+    console.warn("ActionMenu: requires items be passed in to render.");
     return html``;
   }
 
