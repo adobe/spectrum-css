@@ -24,7 +24,7 @@ governing permissions and limitations under the License.
 .spectrum-Picker {
   /* font */
   --spectrum-picker-font-size: var(--spectrum-font-size-100);
-  --spectrum-picker-placeholder-font-style-default: italic;
+  --spectrum-picker-placeholder-font-style-default: normal;
   --spectrum-picker-placeholder-cjk-font-style: normal;
   --spectrum-picker-placeholder-font-style: var(--spectrum-picker-placeholder-font-style-default);
 
