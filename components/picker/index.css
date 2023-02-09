@@ -88,9 +88,7 @@ governing permissions and limitations under the License.
   --spectrum-picker-icon-color-disabled: var(--spectrum-disabled-content-color);
 
   /* special cases for focus indicator */
-  --spectrum-focus-indicator-gap: 2px;
   --spectrum-picker-focus-indicator-gap: var(--spectrum-focus-indicator-gap);
-  --spectrum-focus-indicator-thickness: 2px;
   --spectrum-picker-focus-indicator-thickness: var(--spectrum-focus-indicator-thickness);
   --spectrum-picker-focus-indicator-color: var(--spectrum-focus-indicator-color);
 }
@@ -234,26 +232,27 @@ governing permissions and limitations under the License.
     right: 0;
     bottom: 0;
     top: 0;
-    margin: calc(
-      (var(--mod-picker-focus-indicator-gap, var(--spectrum-picker-focus-indicator-gap)) +
-       var(--mod-picker-border-width, var(--spectrum-picker-border-width)) *
-       -1)
-    );
     inline-size: calc(
       100% +
       (var(--mod-picker-focus-indicator-gap, var(--spectrum-picker-focus-indicator-gap)) * 2) +
-      (var(--mod-picker-border-width, var(--spectrum-picker-border-width)) *2)
+      (var(--spectrum-border-width-100) * 2)
     );
     block-size: calc(
       100% +
       (var(--mod-picker-focus-indicator-gap, var(--spectrum-picker-focus-indicator-gap)) * 2) +
-      (var(--mod-picker-border-width, var(--spectrum-picker-border-width) * 2))
+      (var(--spectrum-border-width-100) * 2))
     );
-    margin: auto;
+    margin-block: calc(
+      (var(--mod-picker-focus-indicator-gap, var(--spectrum-picker-focus-indicator-gap)) +
+       var(--mod-picker-focus-indicator-thickness, var(--spectrum-picker-focus-indicator-thickness)) +
+       var(--spectrum-border-width-100)) *
+      -1
+    );
+    margin-inline-end: auto;
     margin-inline-start: calc(
       (var(--mod-picker-focus-indicator-gap, var(--spectrum-picker-focus-indicator-gap)) +
        var(--mod-picker-focus-indicator-thickness, var(--spectrum-picker-focus-indicator-thickness)) +
-       var(--mod-picker-border-size, var(--spectrum-picker-border-size))) *
+       var(--spectrum-border-width-100)) *
       -1
     );
     border-style: solid;
@@ -262,7 +261,7 @@ governing permissions and limitations under the License.
     border-radius: calc(
       var(--mod-picker-border-radius, var(--spectrum-picker-border-radius)) +
       var(--mod-picker-focus-indicator-gap, var(--spectrum-picker-focus-indicator-gap)) +
-      var(--mod-picker-border-width, var(--spectrum-picker-border-width))
+      var(--spectrum-border-width-100)
     );
   }
 
