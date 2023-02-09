@@ -432,6 +432,7 @@ function copySiteWorkflowIcons() {
   const destinationPath = "dist/docs/img/"
 
   fs.copyFileSync(sourcePath, `${destinationPath}/spectrum-icons.svg`)
+  console.log("copySiteWorkflowIcons done")
 }
 
 // build all the site pages
@@ -458,7 +459,6 @@ exports.buildSite = async () => {
  * buildDocs_individualPackages, buildSite_copyResources, and copySiteWorkflowIcons
  * functions in parallel. The callback function will be invoked
  * when all of the tasks in the series have completed.
- * @param {*} callback
  */
 async function buildDocs() {
   try {
