@@ -20,17 +20,17 @@ governing permissions and limitations under the License.
   --spectrum-colorhandle-size: 16px; /* TODO replace with new token for ColorHandle, placeholder for old token var(--spectrum-colorhandle-size) */
 
   .spectrum--large & {
-    --spectrum-colorwheel-radius: 90px;
     --spectrum-colorwheel-width: 240px; /* TODO replace, placeholder for incoming color-wheel-width token */
     --spectrum-colorwheel-minimum-width: 219px; /* placeholder for incoming color-wheel-minimum-width token */
+    --spectrum-colorwheel-path: "M 119 119 m -119 0 a 119 119 0 1 0 238 0 a 119 119 0 1 0 -238 0.2 M 119 119 m -90 0 a 90 90 0 1 0 180 0 a 90 90 0 1 0 -180 0";
+    --spectrum-colorwheel-path-borders: "M 120 120 m -120 0 a 120 120 0 1 0 240 0 a 120 120 0 1 0 -240 0.2 M 120 120 m -89 0 a 89 89 0 1 0 178 0 a 89 89 0 1 0 -178 0";
   }
 
   .spectrum--medium & {
-    --spectrum-colorwheel-radius: 85px;
     --spectrum-colorwheel-width: 192px; /* TODO replace, placeholder for incoming color-wheel-width token */
     --spectrum-colorwheel-minimum-width: 175px; /* TODO replace, placeholder for incoming color-wheel-minimum-width token */
-    --radius: 96px;
-    --spectrum-colorwheel-path: "M var(--radius) 96 m -96 0 a 96 96 0 1 0 192 0 a 96 96 0 1 0 -192 0.2 M 96 96 m -70 0 a 70 70 0 1 0 140 0 a 70 70 0 1 0 -140 0";
+    --spectrum-colorwheel-path: "M 95 95 m -95 0 a 95 95 0 1 0 190 0 a 95 95 0 1 0 -190 0.2 M 95 95 m -70 0 a 70 70 0 1 0 140 0 a 70 70 0 1 0 -140 0";
+    --spectrum-colorwheel-path-borders: "M 96 96 m -96 0 a 96 96 0 1 0 192 0 a 96 96 0 1 0 -192 0.2 M 96 96 m -69 0 a 69 69 0 1 0 138 0 a 69 69 0 1 0 -138 0";
   }
 }
 
@@ -120,21 +120,6 @@ governing permissions and limitations under the License.
   margin: var(--mod-colorwheel-colorarea-margin, var(--spectrum-colorwheel-colorarea-margin));
 }
 
-.spectrum-ColorWheel-wheel {
-  position: relative;
-  z-index: 1;
-}
-
-.spectrum-ColorWheel-outerCircle,
-.spectrum-ColorWheel-innerCircle {
-  fill: transparent;
-  stroke: var(--mod-colorwheel-border-color, var(--spectrum-colorwheel-border-color));
-  stroke-width: var(--mod-colorwheel-border-width, var(--spectrum-colorwheel-border-width));
-}
-
-.spectrum-ColorWheel-track-width {
-  r: calc(var(--spectrum-colorwheel-radius) - var(--mod-colorwheel-track-width, var(--spectrum-colorwheel-track-width)));
-}
 
 .spectrum-ColorWheel-slider {
   @extend %spectrum-ColorControl-hiddenField;
@@ -144,15 +129,49 @@ governing permissions and limitations under the License.
   left: 50%;
   top: 50%;
 }
-.wheel {
-  position: absolute;
-  background: conic-gradient(from 90deg, red, rgb(255, 128, 0), rgb(255, 255, 0), rgb(128, 255, 0), rgb(0, 255, 0), rgb(0, 255, 128), rgb(0, 255, 255), rgb(0, 128, 255), rgb(0, 0, 255), rgb(128, 0, 255), rgb(255, 0, 255), rgb(255, 0, 128), red);
-  height: 100%;
-  width: 100%;
-  /* clip-path: path(evenodd, var(--spectrum-ColorWheel-path) var(--spectrum-ColorWheel-path2)); */
+
+/* to access token values and caluclate path without hardcoding
+const wheel = document.querySelector(".spectrum-ColorWheel-wheel")
+getComputedStyle(wheel).getPropertyValue('--track-width') */
+
+/* hack: make sure we don't complain about these variables being unused*/
+.🤫 {
+  width: var(--track-width);
+  border-width: var(--border-width);
+
 }
 
-.wheel-border{
+/* div with clip path set 1px off from the spectrum-ColorWheel-wheel */
+.spectrum-ColorWheel-border{
+  position: relative;
+  background-color: var(--spectrum-colorwheel-border-color);
+  width: var(--spectrum-colorwheel-width);
+  height: var(--spectrum-colorwheel-height);
+  clip-path: path(evenodd, var(--spectrum-colorwheel-path-borders));
+}
+
+/* includes token values to be used in calculating the clip-path path  */
+.spectrum-ColorWheel-wheel{
+  position: absolute;
+  background: conic-gradient(from 90deg, red, rgb(255, 128, 0), rgb(255, 255, 0), rgb(128, 255, 0), rgb(0, 255, 0), rgb(0, 255, 128), rgb(0, 255, 255), rgb(0, 128, 255), rgb(0, 0, 255), rgb(128, 0, 255), rgb(255, 0, 255), rgb(255, 0, 128), red);
+  top: 1px;
+  left: 1px;
+  right: 1px;
+  bottom: 1px;
+  width: 100%;
+  height: 100%;
+  clip-path: path(evenodd, var(--spectrum-colorwheel-path));
+
+  --track-width: var(--spectrum-colorwheel-track-width);
+  --border-width: var(--spectrum-colorwheel-border-width);
+
+  &.is-disabled {
+    pointer-events: none;
+    background: var(--highcontrast-colorwheel-fill-color-disabled, var(--mod-colorwheel-fill-color-disabled, var(--spectrum-colorwheel-fill-color-disabled)));
+  }
+
+}
+
   position: relative;
   background-color: black;
   width:192px;
