@@ -5,6 +5,15 @@ import {
   withReducedMotionWrapper
 } from './decorators/index.js';
 
+// https://github.com/storybookjs/storybook-addon-console
+import '@storybook/addon-console';
+import { setConsoleOptions } from '@storybook/addon-console';
+
+const panelExclude = setConsoleOptions({}).panelExclude || [];
+setConsoleOptions({
+  panelExclude: [...panelExclude, /deprecated/, /TypeError/],
+});
+
 import '@spectrum-css/vars/css/globals/index.css';
 import '@spectrum-css/expressvars/css/globals/index.css';
 
@@ -136,7 +145,7 @@ export const argTypes = {
       name: "Class name",
       type: { name: "string", required: true },
       table: { disable: true },
-      control: { readonly: true }
+      control: 'text'
     },
     customClasses: {
       name: "Custom classes",

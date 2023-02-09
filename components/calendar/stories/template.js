@@ -64,7 +64,7 @@ export const Template = ({
     let lastSelectedDatetime = lastSelectedDate ? lastSelectedDate.getTime() : lastSelectedDate;
     if (lastSelectedDatetime && selectedDatetime && lastSelectedDatetime < selectedDatetime) {
       lastSelectedDatetime = undefined;
-      console.warn("Last selected date must occur after the selected date");
+      console.warn("Calendar: last selected date must occur after the selected date.");
     }
 
     const displayedMonth = displayedDate.getMonth();

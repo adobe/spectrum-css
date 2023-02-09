@@ -12,7 +12,7 @@ export const Template = ({
   ...globals
 }) => {
   if (!label) {
-    console.warn("Please provide a label for the field label");
+    console.warn("FieldLabel: please provide a label for the field label.");
     return html``;
   }
 

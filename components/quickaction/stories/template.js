@@ -20,7 +20,7 @@ export const Template = ({
   ...globals
 }) => {
   if (!content.length) {
-    console.warn("Quick actions require content be passed in to render.");
+    console.warn("QuickActions: requires content be passed in to render.");
     return html``;
   }
 
