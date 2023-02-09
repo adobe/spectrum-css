@@ -33,8 +33,6 @@
     "buildDocs": "node index.js buildDocs",
     "releaseBundles": "node index.js releaseBundles",
     "prepareAll": "node index.js prepare",
-
-
     "dev:docs": "gulp dev && NODE_ENV=development BROWSERSYNC_OPEN=true yarn workspace @spectrum-css/documentation run build --serve",
     "build:docs": "yarn workspace @spectrum-css/documentation build",
     "build": "run-s build:site build:preview # preview cannot be built until the component assets are finished",
@@ -71,6 +69,7 @@
     "@commitlint/cli": "^8.3.3",
     "@commitlint/config-conventional": "^8.3.3",
     "del": "^5.1.0",
+    "fs-extra": "^11.1.0",
     "gh-pages": "^3.0.0",
     "glob": "^8.0.3",
     "gulp": "^4.0.0",

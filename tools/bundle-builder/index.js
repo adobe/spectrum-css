@@ -24,6 +24,7 @@ const dev = require("./dev")
 const subrunner = require("./subrunner")
 const release = require("./release")
 const vars = require("./vars")
+const fs_extra = require('fs-extra');
 
 let dependencyOrder = null;
 
@@ -128,18 +129,18 @@ function buildDepenenciesOfCommons() {
 }
 
 async function copyPackages() {
-  const files = await fg.sync([
-      `${dirs.components}/*/package.json,
-      ${dirs.components}/*/dist/**,
-      !${dirs.components}/*/dist/docs/**`,
-  ])
-  try {
-    for (const filePath of files) {
-      const newFilePath = filePath.replace("/dist", "")
-      await fs.copy(filePath, path.join("dist/components/", newFilePath))
-    }
-  } catch (e) {
-    console.error("Eror in copyPackages" + e)
+  const filePaths = await fg([
+    `${dirs.topLevelComponents}/*/package.json`,
+    `${dirs.topLevelComponents}/*/dist/**`,
+    `!${dirs.topLevelComponents}/*/dist/docs/**`
+  ]);
+
+  for (const filePath of filePaths) {
+    const parts = filePath.split('/');
+    const newFilePath = parts.slice(parts.indexOf('components')).join('/');
+    const finalDestination = `dist/${newFilePath}`;
+
+    await fs_extra.copy(filePath, finalDestination);
   }
 }
 
