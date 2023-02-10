@@ -74,7 +74,7 @@ governing permissions and limitations under the License.
   display: block;
   min-width: var(--mod-colorwheel-minimum-width, var(--spectrum-colorwheel-minimum-width));
   width: var(--mod-colorwheel-width, var(--spectrum-colorwheel-width));
-  height: var(--spectrum-colorwheel-height);
+  height: var(--mod-colorwheel-height, var(--spectrum-colorwheel-height));
   user-select: none;
   cursor: default;
 
@@ -142,8 +142,8 @@ getComputedStyle(wheel).getPropertyValue('--track-width') */
 .spectrum-ColorWheel-border{
   position: relative;
   background-color: var(--spectrum-colorwheel-border-color);
-  width: var(--spectrum-colorwheel-width);
-  height: var(--spectrum-colorwheel-height);
+  width: var(--mod-colorwheel-width, var(--spectrum-colorwheel-width));
+  height: var(--mod-colorwheel-height, var(--spectrum-colorwheel-height));
   clip-path: path(evenodd, var(--spectrum-colorwheel-path-borders));
 
   &.is-disabled{
@@ -161,8 +161,8 @@ getComputedStyle(wheel).getPropertyValue('--track-width') */
   height: 100%;
   clip-path: path(evenodd, var(--spectrum-colorwheel-path));
 
-  --track-width: var(--spectrum-colorwheel-track-width);
-  --border-width: var(--spectrum-colorwheel-border-width);
+  --track-width: var(--mod-colorwheel-track-width, var(--spectrum-colorwheel-track-width));
+  --border-width: var(--mod-colorwheel-border-width, var(--spectrum-colorwheel-border-width));
 
   &.is-disabled {
     pointer-events: none;
