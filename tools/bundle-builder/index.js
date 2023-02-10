@@ -14,7 +14,6 @@ const fg = require("fast-glob")
 const del = require("del")
 const path = require("path")
 const fs = require("fs")
-const async = require("async")
 const concat = require("concat-stream")
 const depUtils = require("./lib/depUtils")
 const exec = require("./lib/exec")
@@ -130,17 +129,27 @@ function buildDepenenciesOfCommons() {
 
 async function copyPackages() {
   const filePaths = await fg([
-    `${dirs.topLevelComponents}/*/package.json`,
-    `${dirs.topLevelComponents}/*/dist/**`,
-    `!${dirs.topLevelComponents}/*/dist/docs/**`
-  ]);
+    `${dirs.components}/*/package.json`,
+    `${dirs.components}/*/dist/**`,
+    `!${dirs.components}/*/dist/docs/**`,
+  ])
 
   for (const filePath of filePaths) {
-    const parts = filePath.split('/');
-    const newFilePath = parts.slice(parts.indexOf('components')).join('/');
-    const finalDestination = `dist/${newFilePath}`;
+    if (filePath.includes(`dist/`)) {
+      const parts = filePath.split("/");
+      const indexOfDist = parts.indexOf("dist");
+      if (indexOfDist !== -1) {
+        parts.splice(indexOfDist, 1);
+      }
+      const finalDestination = [parts.slice(0, parts.indexOf("components")), 'dist', parts.slice(parts.indexOf("components"))].flat().join("/");
+      await fs_extra.copy(filePath, finalDestination)
+    } else {
+      const parts = filePath.split("/")
+      const newFilePath = parts.slice(parts.indexOf("components")).join("/")
+      const finalDestination = `dist/${newFilePath}`
 
-    await fs_extra.copy(filePath, finalDestination);
+      await fs_extra.copy(filePath, finalDestination)
+    }
   }
 }
 

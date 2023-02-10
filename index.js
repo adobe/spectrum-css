@@ -12,7 +12,6 @@ governing permissions and limitations under the License.
 
 const through = require("through2")
 const fs = require("fs")
-const async = require("async")
 const path = require("path")
 const fsp = require("fs").promises
 const semver = require("semver")
