@@ -22,7 +22,6 @@ governing permissions and limitations under the License.
   .spectrum--medium & {
     --spectrum-colorwheel-width: 192px; /* TODO replace with incoming color-wheel-width token */
     --spectrum-colorwheel-minimum-width: 175px; /* TODO replace with incoming color-wheel-minimum-width token */
-
     --spectrum-colorwheel-path: "M 95 95 m -95 0 a 95 95 0 1 0 190 0 a 95 95 0 1 0 -190 0.2 M 95 95 m -71 0 a 71 71 0 1 0 142 0 a 71 71 0 1 0 -142 0";
     --spectrum-colorwheel-path-borders: "M 96 96 m -96 0 a 96 96 0 1 0 192 0 a 96 96 0 1 0 -192 0.2 M 96 96 m -70 0 a 70 70 0 1 0 140 0 a 70 70 0 1 0 -140 0";
     --spectrum-colorwheel-colorarea-container-size: 98.9px;
@@ -123,10 +122,10 @@ governing permissions and limitations under the License.
   top: 50%;
 }
 
-/* div with clip path set the border-width (1px) off from the spectrum-ColorWheel-wheel */
+/* clip path set border-width wider than than spectrum-colorwheel-wheel to create "border"*/
 .spectrum-ColorWheel-border{
   position: relative;
-  background-color: var(--spectrum-colorwheel-border-color);
+  background-color: var(--mod-colorwheel-border-color, var(--spectrum-colorwheel-border-color));
   width: var(--mod-colorwheel-width, var(--spectrum-colorwheel-width));
   height: var(--mod-colorwheel-height, var(--spectrum-colorwheel-height));
   clip-path: path(evenodd, var(--spectrum-colorwheel-path-borders));
@@ -142,7 +141,7 @@ governing permissions and limitations under the License.
   border-width: var(--border-width);
 }
 
-/* includes token values, track-width and border-width to be accessed with JS in calculating the clip-path path and colorarea-container size */
+/* --track-width and --border-width to be used with JS in calculating the clip-path paths and colorarea-container size */
 .spectrum-ColorWheel-wheel{
   position: absolute;
   background: conic-gradient(from 90deg, red, rgb(255, 128, 0), rgb(255, 255, 0), rgb(128, 255, 0), rgb(0, 255, 0), rgb(0, 255, 128), rgb(0, 255, 255), rgb(0, 128, 255), rgb(0, 0, 255), rgb(128, 0, 255), rgb(255, 0, 255), rgb(255, 0, 128), red);
@@ -159,5 +158,4 @@ governing permissions and limitations under the License.
     pointer-events: none;
     background: var(--highcontrast-colorwheel-fill-color-disabled, var(--mod-colorwheel-fill-color-disabled, var(--spectrum-colorwheel-fill-color-disabled)));
   }
-
 }
