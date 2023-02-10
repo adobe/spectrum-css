@@ -9,7 +9,6 @@ the License is distributed on an "AS IS" BASIS, WITHOUT WARRANTIES OR REPRESENTA
 OF ANY KIND, either express or implied. See the License for the specific language
 governing permissions and limitations under the License.
 */
-
 .spectrum-ColorWheel {
   --spectrum-colorwheel-height: var(--spectrum-colorwheel-width);
   --spectrum-colorwheel-border-color:   var(--spectrum-transparent-black-200);
@@ -18,14 +17,14 @@ governing permissions and limitations under the License.
   --spectrum-colorwheel-track-width: var(--spectrum-color-control-track-width);
   --spectrum-colorwheel-colorarea-margin: var(--spectrum-color-wheel-color-area-margin);
   --spectrum-colorhandle-size: 16px; /* TODO replace with new token for ColorHandle, placeholder for old token var(--spectrum-colorhandle-size) */
-  --spectrum-colorwheel-colorhandle-position: calc((var(--spectrum-colorwheel-width)/2) - (var(--spectrum-colorwheel-track-width) /2));
+  --spectrum-colorwheel-colorhandle-position: calc((var(--spectrum-colorwheel-width) / 2) - (var(--spectrum-colorwheel-track-width) / 2) - 1px);
 
   .spectrum--medium & {
     --spectrum-colorwheel-width: 192px; /* TODO replace with incoming color-wheel-width token */
     --spectrum-colorwheel-minimum-width: 175px; /* TODO replace with incoming color-wheel-minimum-width token */
 
-    --spectrum-colorwheel-path: "M 95 95 m -95 0 a 95 95 0 1 0 190 0 a 95 95 0 1 0 -190 0.2 M 95 95 m -70 0 a 70 70 0 1 0 140 0 a 70 70 0 1 0 -140 0";
-    --spectrum-colorwheel-path-borders: "M 96 96 m -96 0 a 96 96 0 1 0 192 0 a 96 96 0 1 0 -192 0.2 M 96 96 m -69 0 a 69 69 0 1 0 138 0 a 69 69 0 1 0 -138 0";
+    --spectrum-colorwheel-path: "M 95 95 m -95 0 a 95 95 0 1 0 190 0 a 95 95 0 1 0 -190 0.2 M 95 95 m -71 0 a 71 71 0 1 0 142 0 a 71 71 0 1 0 -142 0";
+    --spectrum-colorwheel-path-borders: "M 96 96 m -96 0 a 96 96 0 1 0 192 0 a 96 96 0 1 0 -192 0.2 M 96 96 m -70 0 a 70 70 0 1 0 140 0 a 70 70 0 1 0 -140 0";
     --spectrum-colorwheel-colorarea-container-size: 98.9px;
   }
 
@@ -114,7 +113,6 @@ governing permissions and limitations under the License.
   margin: var(--mod-colorwheel-colorarea-margin, var(--spectrum-colorwheel-colorarea-margin));
 }
 
-
 .spectrum-ColorWheel-slider {
   @extend %spectrum-ColorControl-hiddenField;
 }
@@ -124,19 +122,6 @@ governing permissions and limitations under the License.
   left: 50%;
   top: 50%;
 }
-
-/* to access token values and caluclate path without hardcoding
-const wheel = document.querySelector(".spectrum-ColorWheel-wheel")
-getComputedStyle(wheel).getPropertyValue('--track-width') */
-
-/* hack: make sure we don't complain about these variables being unused*/
-.🤫 {
-  width: var(--track-width);
-  border-width: var(--border-width);
-}
-
-
-/* const clipPath = `path(evenodd, "M ${radius} ${radius} m -${radius} 0 a ${radius} ${radius} 0 1 0 ${diameter} 0 a ${radius} ${radius} 0 1 0 -${diameter} 0 M ${radius} ${radius} m -${innerRadius} 0 a ${innerRadius} ${innerRadius} 0 1 0 ${innerDiameter} 0 a ${innerRadius} ${innerRadius} 0 1 0 -${innerDiameter} 0")`; */
 
 /* div with clip path set the border-width (1px) off from the spectrum-ColorWheel-wheel */
 .spectrum-ColorWheel-border{
@@ -151,7 +136,13 @@ getComputedStyle(wheel).getPropertyValue('--track-width') */
   }
 }
 
-/* includes token values to be used in calculating the clip-path path  */
+/* hack: make sure we don't complain about these variables being unused*/
+.🤫 {
+  width: var(--track-width);
+  border-width: var(--border-width);
+}
+
+/* includes token values, track-width and border-width to be accessed with JS in calculating the clip-path path and colorarea-container size */
 .spectrum-ColorWheel-wheel{
   position: absolute;
   background: conic-gradient(from 90deg, red, rgb(255, 128, 0), rgb(255, 255, 0), rgb(128, 255, 0), rgb(0, 255, 0), rgb(0, 255, 128), rgb(0, 255, 255), rgb(0, 128, 255), rgb(0, 0, 255), rgb(128, 0, 255), rgb(255, 0, 255), rgb(255, 0, 128), red);
