@@ -11,7 +11,7 @@ governing permissions and limitations under the License.
 */
 .spectrum-ColorWheel {
   --spectrum-colorwheel-height: var(--spectrum-colorwheel-width);
-  --spectrum-colorwheel-border-color:   var(--spectrum-transparent-black-200);
+  --spectrum-colorwheel-border-color: var(--spectrum-transparent-black-200);
   --spectrum-colorwheel-border-width: var(--spectrum-border-width-100);
   --spectrum-colorwheel-fill-color-disabled: var(--spectrum-disabled-background-color);
   --spectrum-colorwheel-track-width: var(--spectrum-color-control-track-width);
@@ -122,7 +122,7 @@ governing permissions and limitations under the License.
   top: 50%;
 }
 
-/* clip path set border-width wider than than spectrum-colorwheel-wheel to create "border"*/
+/* clip path set border-width wider than than spectrum-colorwheel-wheel to create appreance of a border*/
 .spectrum-ColorWheel-border{
   position: relative;
   background-color: var(--mod-colorwheel-border-color, var(--spectrum-colorwheel-border-color));
@@ -141,7 +141,7 @@ governing permissions and limitations under the License.
   border-width: var(--border-width);
 }
 
-/* --track-width and --border-width to be used with JS in calculating the clip-path paths and colorarea-container size */
+/* --track-width and --border-width to be used with JS in calculating the clip-path paths and colorarea-container-size */
 .spectrum-ColorWheel-wheel{
   position: absolute;
   background: conic-gradient(from 90deg, red, rgb(255, 128, 0), rgb(255, 255, 0), rgb(128, 255, 0), rgb(0, 255, 0), rgb(0, 255, 128), rgb(0, 255, 255), rgb(0, 128, 255), rgb(0, 0, 255), rgb(128, 0, 255), rgb(255, 0, 255), rgb(255, 0, 128), red);

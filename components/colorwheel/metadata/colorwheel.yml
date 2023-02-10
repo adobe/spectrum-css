@@ -2,11 +2,12 @@ name: Color Wheel
 status: Verified
 SpectrumSiteSlug: https://spectrum.adobe.com/page/color-wheel/
 description: |
-  - For a given rotation on the wheel, `X`, the `.- spectrum-ColorHandle` should be moved by applying the style property `transform: translate(${85 * Math.cos(X)}px, ${85 * Math.sin(X)}px)` for desktop and `transform: translate(${105 * Math.cos(X)}px, ${105 * Math.sin(X)}px)` for mobile.
-  - Set the value of the ColorHandle component to the selected color
+  - For a given rotation on the wheel, `X`, the `.spectrum-ColorHandle` should be moved by applying the style property `transform: translate(${Y * Math.cos(X)}px, ${Y * Math.sin(X)}px)`, where Y is  ((radius -  `.spectrum-colorwheel-track-width`) / 2) - `.spectrum-colorwheel-border-width`)
   - Set the `value` attribute of `.spectrum-ColorWheel-value` to the currently selected color (i.e. `hsl(326, 100%, 50%)`)
   - Add `.is-dragged` when the handle is being dragged
-  - to display with ColorArea inside of ColorWheel, add ColorArea to `spectrum-ColorWheel-colorarea-container` with ColorArea `style="width:100%; height: 100%"`
+  - To display with ColorArea inside of ColorWheel, add ColorArea to `spectrum-ColorWheel-colorarea-container` with `style="width:100%; height: 100%"`
+  - `.spectrum-colorwheel-colorarea-container-size` is hard coded to position the ColorArea within the ColorWheel using `.spectrum-color-wheel-color-area-margin`. Using JS container size can be calcaulted with `Math.sqrt(2 * R * R)`, where R is the innerRadius as calcaulted for the clip paths
+  - `.spectrum-colorwheel-path`, `.spectrum-colorwheel-path-borders` and `.spectrum-colorwheel-colorarea-container` are hard coded in CSS and include token values in custom CSS variables so they can be accessed with JS to and used to calcualte these values, `const wheel = document.querySelector(".spectrum-ColorWheel-wheel") getComputedStyle(wheel).getPropertyValue('--track-width'))`
 sections:
   - name: Migration Guide
     description: |
