@@ -17,6 +17,9 @@ examples:
     name: Standard
     markup: |
       <div class="spectrum-ColorWheel">
+        <div class="spectrum-ColorWheel-internal">
+          <div class="spectrum-ColorWheel-colorarea-container"></div>
+        </div>
         <div class="spectrum-ColorWheel-border">
           <div class="spectrum-ColorWheel-wheel"></div>
         </div>
@@ -35,6 +38,9 @@ examples:
     name: Disabled
     markup: |
       <div class="spectrum-ColorWheel is-disabled">
+        <div class="spectrum-ColorWheel-internal">
+          <div class="spectrum-ColorWheel-colorarea-container"></div>
+        </div>
         <div class="spectrum-ColorWheel-border is-disabled">
           <div class="spectrum-ColorWheel-wheel is-disabled"></div>
         </div>
