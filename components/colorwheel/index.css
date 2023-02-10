@@ -152,6 +152,10 @@ getComputedStyle(wheel).getPropertyValue('--track-width') */
   width: var(--spectrum-colorwheel-width);
   height: var(--spectrum-colorwheel-height);
   clip-path: path(evenodd, var(--spectrum-colorwheel-path-borders));
+
+  &.is-disabled{
+    background-color: var(--highcontrast-colorwheel-border-color-disabled, var(--spectrum-colorwheel-border-color));
+  }
 }
 
 /* includes token values to be used in calculating the clip-path path  */
