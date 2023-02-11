@@ -57,150 +57,138 @@ const templateData = {
 }
 
 async function buildDocs_forDep(dep) {
-  // Drop package org
-  dep = dep.split("/").pop()
+  try {
+ 
+  // // Drop package org
+  dep = dep.split('/').pop();
 
-  const metadata = JSON.parse(
-    await fs.promises.readFile(
-      path.join(
-        dirs.topLevelComponents,
-        "vars",
-        "dist",
-        "spectrum-metadata.json"
-      )
-    )
-  )
+  let metadata = JSON.parse(await fsp.readFile(path.join(dirs.components, 'vars', 'dist', 'spectrum-metadata.json')));
 
-  const dependencyOrder = await depUtils.getPackageDependencyOrder(
-    path.join(dirs.topLevelComponents, dep)
-  )
+  let dependencyOrder = await depUtils.getPackageDependencyOrder(path.join(dirs.components, dep));
 
-  const dirName = `${dirs.topLevelComponents}/${dep}`
+  let dirName = `${dirs.components}/${dep}`;
+  
+  const componentDeps = dependencyOrder.map(dep => dep.split('/').pop());
+  componentDeps.push(dep);
+  
+  const pkg = JSON.parse(await fsp.readFile(path.join(dirs.components, dep, 'package.json')));
 
-  console.debug(
-    `Will build docs for package in ${dirs.topLevelComponents}/${dep}`
-  )
-  // This code uses the glob function to select the files based on the given patterns,
-  // and the through2 module to create a stream that processes the data.
-  // The transform function is called for each file in the stream,
-  // and performs the necessary transformation on the file data.
+  let docsDeps = minimumDeps.concat(componentDeps);
+  docsDeps = docsDeps.filter((dep, i) => docsDeps.indexOf(dep) === i);
 
-  // The code loops over the matches array and creates a read stream for each file,
-  // pipes the data through the transform stream, and writes the transformed data to a new file.
-  const files = [`${dirName}/metadata.yml`, `${dirName}/metadata/*.yml`]
-
-  async function transform(file, enc, callback) {
-    const componentDeps = dependencyOrder.map((dep) => dep.split("/").pop())
-    componentDeps.push(dep)
-
-    const pkg = JSON.parse(
-      await fsp.readFile(
-        path.join(dirs.topLevelComponents, dep, "package.json")
-      )
-    )
-
-    let docsDeps = minimumDeps.concat(componentDeps)
-    docsDeps = docsDeps.filter((dep, i) => docsDeps.indexOf(dep) === i)
-
-    let date
-    try {
-      const data = await npmFetch.json(pkg.name)
-      date = data.time[pkg.version]
-      date = new Date(date).toLocaleDateString("en-US", {
-        year: "numeric",
-        month: "long",
-        day: "numeric",
-      })
-    } catch (err) {
-      date = "Unreleased"
-      logger.error(
-        `Could not determine date of release for ${pkg.name}@${pkg.version}`
-      )
-    }
-
-    const transformedFile = Object.assign(
-      {},
-      {
-        util: require(`${dirs.site}/util`),
-        dnaVars: metadata,
-      },
-      templateData,
-      {
-        pageURL: `${path.basename(file.basename, ".yml")}.html`,
-        dependencyOrder: docsDeps,
-        releaseDate: date,
-        pkg: pkg,
-      }
-    )
-
-    callback(null, transformedFile)
+ 
+  try {
+    let date;
+    const data = require(`${pkg.name}/package.json`);
+    date = new Date(data.time[pkg.version]).toLocaleDateString('en-US', {
+      year: 'numeric',
+      month: 'long',
+      day: 'numeric'
+    });
+  } catch (err) {
+   date = 'Unreleased';
+   console.error(`Could not determine date of release for ${pkg.name}@${pkg.version}`);
   }
-  // eslint-disable-next-line consistent-return
-  function compileNunJucks(file, enc, cb) {
-    let component
-    const componentName = file.dirname.replace("/metadata", "").split("/").pop()
-    try {
-      component = yaml.safeLoad(String(file.contents))
-    } catch (safeloadError) {
-      logger.error(
-        "Uh, oh... during buildDocs_forDep, yaml loading failed for".yellow,
-        componentName.red
-      )
-      throw safeloadError
-    }
 
-    if (!component.id) {
-      if (file.basename === "metadata.yml") {
-        // Use the component's name
-        component.id = dep
+  const siteData = {}
+  try {
+    const files = await fg([
+      `${dirName}/metadata.yml`,
+      `${dirName}/metadata/*.yml`
+    ]);
+    let file = {}
+    files.forEach(filePath => {
+      let component;
+      const componentName = filePath.replace('/metadata', '').split('/').pop();
+      file.basename = path.basename(filePath)
+      try {
+        component = yaml.safeLoad(fs.readFileSync(filePath, 'utf-8'));
+      } catch (safeloadError) {
+        console.error('Uh, oh... yaml loading failed for', componentName);
+        throw safeloadError;
+      }
+      file.path = path.basename(filePath)
+      file.data = component
+      if (!component.id) {
+        if (file.basename === 'metadata.yml') {
+          // Use the component's name
+          component.id = dep;
+        } else {
+          // Use the example file name
+          component.id = path.basename(file.basename, '.yml');
+        }
+      }
+      try {
+       require(`${dirs.site}/util`).populateDNAInfo(component, metadata);
+      } catch (e) {
+        console.error(e)
+      }
+      
+  
+      // Arrange examples for processing
+      var examples;
+      if (!component.examples) {
+        // Only one top-level example
+        examples = [component];
       } else {
-        // Use the example file name
-        component.id = path.basename(file.basename, ".yml")
+        // Multiple child examples
+        examples = component.examples;
       }
-    }
-    let templateData = Object.assign(
-      {},
-      { component: component },
-      file.data || {}
-    )
-
-    file.path = ext(file.path, ".html")
-
-    try {
-      const templatePath = `${dirs.site}/templates/siteComponent.njk`
-      const compiled = nunjucks.render(templatePath, templateData)
-      file.contents = Buffer.from(compiled)
-    } catch (err) {
-      return cb(err)
-    }
-    cb(null, file)
+  
+      if (!Array.isArray(examples)) {
+        examples = Object.values(examples);
+      }
+  
+      examples.forEach(example => {
+        if (example.dnaStatus === 'Deprecated' || example.cssStatus === 'Deprecated') {
+          example.status = 'Deprecated';
+        } else if (example.cssStatus === 'Verified' || example.dnaStatus === 'Canon') {
+          example.status = 'Verified';
+        } else {
+          example.status = 'Contribution';
+        }
+      });
+  
+      const dnaStatusTranslation = {
+        'Canon': 'Verified',
+        'Precursor': 'Contribution'
+      };
+  
+      file.path = ext(file.path, '.html');
+      try {
+        const compiled = nunjucks.render(`${dirs.site}/content/_includes/siteComponent.njk`, {
+          ...siteData || {},
+          component,
+          status: dnaStatusTranslation[component.dnaStatus] || component.dnaStatus,
+        });
+    
+        fs.writeFileSync(`dist/docs/${path.basename(filePath, '.yml')}.html`, compiled);
+      } catch (e) {
+        console.error(e)
+      }
+      
+    });
+  } catch (e) {
+    console.error(" NO metadata.yml or metadata folder found in " + dep)
   }
-
-  const matches = await fg(files)
-  // eslint-disable-next-line no-restricted-syntax
-  for (const file of matches) {
-    fs.createReadStream(file)
-      .pipe(through.obj(transform))
-      .pipe(fs.createWriteStream(file.replace("metadata", dep)))
-      .pipe(through.obj(compileNunJucks))
-      .pipe(fs.createWriteStream(`dist/docs/${path.basename(file)}`))
-  }
+} catch (e) {
+  console.error(e + dep)
+}
 }
 
 // Combined
 async function buildDocs_individualPackages() {
   const dependencies = await depUtils.getFolderDependencyOrder(
-    dirs.topLevelComponents
+    dirs.components
   )
-
   return Promise.all(dependencies.map(buildDocs_forDep))
 }
 
 // working
 async function buildSite_generateIndex() {
   const components = await fg([
-    `${dirs.topLevelComponents}/*/metadata.yml`,
-    `${dirs.topLevelComponents}/*/metadata/*.yml`
+    `${dirs.components}/*/metadata.yml`,
+    `${dirs.components}/*/metadata/*.yml`
   ])
 
   let docs = [];
@@ -280,7 +268,7 @@ async function buildSite_generateIndex() {
 async function buildSite_getData() {
   let nav = []
   const files = await fg([
-    `${dirs.topLevelComponents}/*/metadata.yml, ${dirs.topLevelComponents}/*/metadata/*.yml`,
+    `${dirs.components}/*/metadata.yml, ${dirs.components}/*/metadata/*.yml`,
   ])
 
   files.forEach(function (file) {
@@ -478,7 +466,7 @@ async function buildDocs() {
 async function build() {
   try {
     await buildSite_getData()
-    await Promise.all([buildDocs(), buildSite_html()])
+    await Promise.all([buildDocs()])
   } catch (e) {
     console.log("Error in builder-builder docs " + e)
   }
