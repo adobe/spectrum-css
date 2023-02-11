@@ -62,35 +62,40 @@ async function buildDocs_forDep(dep) {
   // // Drop package org
   dep = dep.split('/').pop();
 
-  let metadata = JSON.parse(await fsp.readFile(path.join(dirs.components, 'vars', 'dist', 'spectrum-metadata.json')));
+  let metadata = JSON.parse(await fs.readFileSync(path.join(dirs.components, 'vars', 'dist', 'spectrum-metadata.json')));
 
   let dependencyOrder = await depUtils.getPackageDependencyOrder(path.join(dirs.components, dep));
 
   let dirName = `${dirs.components}/${dep}`;
   
-  const componentDeps = dependencyOrder.map(dep => dep.split('/').pop());
+  const componentDeps = dependencyOrder.map((dep) => dep.split('/').pop());
   componentDeps.push(dep);
   
-  const pkg = JSON.parse(await fsp.readFile(path.join(dirs.components, dep, 'package.json')));
+  const pkg = JSON.parse(await fs.readFileSync(path.join(dirs.components, dep, 'package.json')));
 
   let docsDeps = minimumDeps.concat(componentDeps);
   docsDeps = docsDeps.filter((dep, i) => docsDeps.indexOf(dep) === i);
 
- 
-  try {
-    let date;
-    const data = require(`${pkg.name}/package.json`);
-    date = new Date(data.time[pkg.version]).toLocaleDateString('en-US', {
-      year: 'numeric',
-      month: 'long',
-      day: 'numeric'
-    });
-  } catch (err) {
-   date = 'Unreleased';
-   console.error(`Could not determine date of release for ${pkg.name}@${pkg.version}`);
-  }
+  let date;
+        try {
+          const data = await npmFetch.json(pkg.name);
+          date = data.time[pkg.version];
+          date = new Date(date).toLocaleDateString('en-US', { year: 'numeric', month: 'long', day: 'numeric' });
+        }
+        catch (err) {
+          date = 'Unreleased';
+          logger.error(`Could not determine date of release for ${pkg.name}@${pkg.version}`);
+        }
 
-  const siteData = {}
+  const siteData = Object.assign({}, {
+    util: require(`${dirs.site}/util`),
+    dnaVars: metadata
+  }, templateData, {
+    pageURL: path.basename(dep, '.yml') + '.html',
+    dependencyOrder: docsDeps,
+    releaseDate: date,
+    pkg: pkg
+  });
   try {
     const files = await fg([
       `${dirName}/metadata.yml`,
@@ -119,7 +124,7 @@ async function buildDocs_forDep(dep) {
         }
       }
       try {
-       require(`${dirs.site}/util`).populateDNAInfo(component, metadata);
+        require(`${dirs.site}/util`).populateDNAInfo(component, metadata);
       } catch (e) {
         console.error(e)
       }
