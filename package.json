@@ -21,7 +21,7 @@
     "url": "https://github.com/adobe/spectrum-css/issues"
   },
   "scripts": {
-    "devAll": "node index.js dev",
+    "devAll": "node index.js dev && yarn dev:docs",
     "prebuild": "gulp -LL",
     "build": "run-s build:site build:preview # preview cannot be built until the component assets are finished",
     "build:clean": "run-s clean build",
@@ -34,9 +34,8 @@
     "clean": "gulp clean",
     "predev": "gulp buildLite",
     "dev": "run-p dev:*",
-    "dev:components": "gulp watch",
-    "predev:docs": "gulp buildDocs",
-    "dev:docs": "yarn workspace @spectrum-css/documentation run dev",
+    "dev:components": "node index.js watch-relaunch",
+    "dev:docs": "yarn workspace @spectrum-css/documentation dev",
     "new": "yarn workspace @spectrum-css/generator new",
     "precommit": "lint-staged",
     "prepare": "husky install",

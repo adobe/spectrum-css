@@ -245,7 +245,7 @@ if (process.cwd() === dirs.topLevel) {
   devTask = async () => {
     try {
       await buildLite()
-      await dev.watch()
+     // await dev.watch()
     } catch (error) {
       console.error(error);
     }
