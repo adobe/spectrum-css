@@ -43,11 +43,11 @@ export default {
       },
     },
     isDisabled: {
-      name: "IsDisabled",
+      name: "Disabled",
       type: { name: "boolean" },
       table: {
         type: { summary: "boolean" },
-        category: "Advanced",
+        category: "State",
       },
       control: "boolean",
     },

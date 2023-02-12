@@ -6,6 +6,8 @@ import { upperCase, lowerCase, capitalize } from "lodash-es";
 
 import { Template as Icon } from "@spectrum-css/icon/stories/template.js";
 
+import "../index.css";
+
 export const Template = ({
   rootClass = "spectrum-CloseButton",
   size = "m",
@@ -13,13 +15,13 @@ export const Template = ({
   staticColor,
   isDisabled = false,
   customClasses = [],
+  id,
+  onclick,
   ...globals
 }) => {
   const { express } = globals;
 
   try {
-    // Load styles for this component
-    import(/* webpackPrefetch: true */ "../index.css");
     if (!express) import(/* webpackPrefetch: true */ "../themes/spectrum.css");
     else import(/* webpackPrefetch: true */ "../themes/express.css");
   } catch (e) {
@@ -48,12 +50,13 @@ export const Template = ({
           typeof staticColor !== "undefined",
         ...customClasses.reduce((a, c) => ({ ...a, [c]: true }), {}),
       })}
-      id=${ifDefined(globals.id)}
+      id=${ifDefined(id)}
       label=${ifDefined(label)}
-      ?disabled=${isDisabled}>
+      ?disabled=${isDisabled}
+      @click=${ifDefined(onclick)}>
       ${Icon({
-        iconName,
         ...globals,
+        iconName,
         customClasses: [`${rootClass}-UIIcon`],
         setName: "ui",
       })}

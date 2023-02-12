@@ -12,7 +12,7 @@ export default {
       type: { name: "string", required: true },
       table: {
         type: { summary: "string" },
-        category: "Component",
+        category: "Content",
       },
       control: "url",
     },
@@ -21,7 +21,7 @@ export default {
       type: { name: "string", required: true },
       table: {
         type: { summary: "string" },
-        category: "Component",
+        category: "Content",
       },
       control: "text",
     },

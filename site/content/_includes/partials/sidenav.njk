@@ -6,7 +6,7 @@
             <nav>
                 <ul class="spectrum-SideNav spectrum-SideNav--multiLevel">
                     <li class="spectrum-SideNav-item">
-                        <a class="spectrum-SideNav-itemLink js-fastLoad" href="/get-started">Get started</a>
+                        <a class="spectrum-SideNav-itemLink js-fastLoad" href="get-started.html">Get started</a>
                     </li>
                     <li class="spectrum-SideNav-item">
                         <a class="spectrum-SideNav-itemLink" href="https://github.com/adobe/spectrum-css" target="_blank" rel="noopener">GitHub</a>
@@ -14,15 +14,13 @@
                     <li class="spectrum-SideNav-item">
                         <a class="spectrum-SideNav-itemLink" href="#">Components</a>
                         <ul class="spectrum-SideNav spectrum-SideNav--multiLevel">
-                            {% asyncEach component in template() %}
-                            {% if not component.hide %}
+                            {% for component in template() | await if not hide %}
                                 <li class="spectrum-SideNav-item {{ 'is-selected' if (pageURL === component.href) }}">
-                                    <a href="/docs/{{component.href}}" class="spectrum-SideNav-itemLink {{ 'js-fastLoad' if component.fastLoad === true }}">
+                                    <a href="/docs/{{ component.href }}" class="spectrum-SideNav-itemLink {{ 'js-fastLoad' if component.fastLoad === true }}">
                                         {{ component.name }}
                                     </a>
                                 </li>
-                            {% endif %}
-                            {% endeach %}
+                            {% endfor %}
                         </ul>
                     </li>
                 </ul>
@@ -30,7 +28,10 @@
             <nav class="spectrum-Site-bottomNav">
                 <ul class="spectrum-SideNav">
                     <li class="spectrum-SideNav-item">
-                        <a class="spectrum-SideNav-itemLink" href="https://spectrum.adobe.com" target="_blank" rel="noopener">Spectrum</a>
+                        <a class="spectrum-SideNav-itemLink" href="https://spectrum.adobe.com">Spectrum</a>
+                    </li>
+                    <li class="spectrum-SideNav-item">
+                        <a class="spectrum-SideNav-itemLink" href="/preview">Component preview</a>
                     </li>
                 </ul>
             </nav>

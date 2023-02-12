@@ -1,8 +1,6 @@
 {% if not process.env.VRT %}
     <div class="spectrum-Site-footerContainer">
-        <hr class="spectrum-Divider spectrum-Divider--small"/>
+        <hr class="spectrum-Divider spectrum-Divider--small" hidden/>
         <div id="footer_global"></div>
-       {% include "./adobe-globalnav.js" %}
-        <script src="//wwwimages2.adobe.com/etc/beagle/public/globalnav/adobe-globalnav/latest/adobe-globalnav.min.js"></script>
     </div>
 {% endif %}

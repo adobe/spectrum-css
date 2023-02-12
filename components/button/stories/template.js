@@ -6,8 +6,11 @@ import { lowerCase, capitalize } from "lodash-es";
 
 import { Template as Icon } from "@spectrum-css/icon/stories/template.js";
 
+import "../index.css";
+
 export const Template = ({
   rootClass = "spectrum-Button",
+  id,
   customClasses = [],
   size = "m",
   label,
@@ -22,9 +25,6 @@ export const Template = ({
 }) => {
   const { express } = globals;
   try {
-    // Load styles for this component
-    import(/* webpackPrefetch: true */ "../index.css");
-
     if (express) import(/* webpackPrefetch: true */ "../themes/express.css");
     else import(/* webpackPrefetch: true */ "../themes/spectrum.css");
   } catch (e) {
@@ -42,7 +42,7 @@ export const Template = ({
         [`${rootClass}--static${capitalize(lowerCase(staticColor))}`]: typeof staticColor !== "undefined",
         ...customClasses.reduce((a, c) => ({ ...a, [c]: true }), {}),
       })}
-      id=${ifDefined(globals.id)}
+      id=${ifDefined(id)}
       ?disabled=${isDisabled}>
       ${icon
         ? Icon({

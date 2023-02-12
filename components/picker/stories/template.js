@@ -8,6 +8,8 @@ import { Template as Icon } from "@spectrum-css/icon/stories/template.js";
 import { Template as Popover } from "@spectrum-css/popover/stories/template.js";
 import { Template as Menu } from "@spectrum-css/menu/stories/template.js";
 
+import "../index.css";
+
 export const Template = ({
   rootClass = "spectrum-Picker",
   size = "m",
@@ -22,12 +24,7 @@ export const Template = ({
   id,
   ...globals
 }) => {
-  try {
-    // Load styles for this component
-    import(/* webpackPrefetch: true */ "../index.css");
-  } catch (e) {
-    console.warn(e);
-  }
+  const [_, updateArgs] = useArgs();
 
   return html`
     <button
@@ -44,7 +41,6 @@ export const Template = ({
       id=${ifDefined(id)}
       aria-haspopup="listbox"
       @click=${() => {
-        const [_, updateArgs] = useArgs();
         updateArgs({ isOpen: !isOpen });
       }}
     >

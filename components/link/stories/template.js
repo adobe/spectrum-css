@@ -4,6 +4,8 @@ import { ifDefined } from "lit-html/directives/if-defined.js";
 
 import { lowerCase, capitalize } from "lodash-es";
 
+import "../index.css";
+
 export const Template = ({
   rootClass = "spectrum-Link",
   size = "m",
@@ -12,14 +14,13 @@ export const Template = ({
   variant,
   staticColor,
   isQuiet = false,
+  id,
   customClasses = [],
   ...globals
 }) => {
   const { express } = globals;
 
   try {
-    // Load styles for this component
-    import(/* webpackPrefetch: true */ "../index.css");
     if (!express) import(/* webpackPrefetch: true */ "../themes/spectrum.css");
     else import(/* webpackPrefetch: true */ "../themes/express.css");
   } catch (e) {
@@ -30,15 +31,13 @@ export const Template = ({
     <a
       class=${classMap({
         [rootClass]: true,
-        [`${rootClass}--size${size?.toUpperCase()}`]:
-          typeof size !== "undefined",
         [`${rootClass}--quiet`]: isQuiet,
         [`${rootClass}--${variant}`]: typeof variant !== "undefined",
         [`${rootClass}--static${capitalize(lowerCase(staticColor))}`]:
           typeof staticColor !== "undefined",
         ...customClasses.reduce((a, c) => ({ ...a, [c]: true }), {}),
       })}
-      id=${ifDefined(globals.id)}
+      id=${ifDefined(id)}
       href=${ifDefined(url)}
     >
       ${text}

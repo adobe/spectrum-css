@@ -25,37 +25,36 @@ const depUtils = require("../lib/depUtils")
 
 // adding nunjucks
 
-const minimumDeps = [
-  "icon",
-  "statuslight",
-  "link",
-  "page",
-  "site",
-  "typography",
-  "tooltip",
-  "sidenav",
-  "actionbutton",
-  "button",
-  "textfield",
-  "clearbutton",
-  "search",
-  "menu",
-  "fieldlabel",
-  "picker",
-  "popover",
-  "underlay",
-  "card",
-  "divider",
-  "illustratedmessage",
-  "accordion",
-  "table",
-]
+let minimumDeps = [
+  'icon',
+  'statuslight',
+  'link',
+  'page',
+  'site',
+  'typography',
+  'tooltip',
+  'sidenav',
+  'actionbutton',
+  'button',
+  'textfield',
+  'clearbutton',
+  'search',
+  'menu',
+  'fieldlabel',
+  'picker',
+  'popover',
+  'underlay',
+  'card',
+  'divider',
+  'illustratedmessage',
+  'accordion',
+  'table'
+];
 
-const templateData = {
+let templateData = {
   nav: [],
-  pkg: JSON.parse(fs.readFileSync("package.json", "utf8")),
-}
-
+  pkg: JSON.parse(fs.readFileSync('package.json', 'utf8'))
+};
 async function buildDocs_forDep(dep) {
   try {
  
@@ -64,7 +63,8 @@ async function buildDocs_forDep(dep) {
 
   let metadata = JSON.parse(await fs.readFileSync(path.join(dirs.components, 'vars', 'dist', 'spectrum-metadata.json')));
 
-  let dependencyOrder = await depUtils.getPackageDependencyOrder(path.join(dirs.components, dep));
+  const package = path.dirname(require.resolve(`@spectrum-css/${dep}/package.json`));
+  const dependencyOrder = await depUtils.getPackageDependencyOrder(package);
 
   let dirName = `${dirs.components}/${dep}`;
   

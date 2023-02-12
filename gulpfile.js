@@ -1,17 +1,18 @@
-const gulp = require('gulp');
-const builder = require('./tools/bundle-builder');
-const site = require('./site/gulpfile.js');
-const subrunner = require('./tools/bundle-builder/subrunner');
-const through = require('through2');
-const replace = require('gulp-replace');
-const rimraf = require('rimraf')
-
-Object.assign(exports, builder);
-Object.assign(exports, site);
 
 const path = require('path');
 const fsp = require('fs').promises;
+
+const builder = require('./tools/bundle-builder');
+const subrunner = require('./tools/bundle-builder/subrunner');
+
+const gulp = require('gulp');
+const replace = require('gulp-replace');
+
+const through = require('through2');
+const del = require('del');
 const semver = require('semver');
+
+Object.assign(exports, builder);
 
 async function readPackage(component) {
   try {
@@ -171,16 +172,16 @@ async function prepareSite_clean() {
   console.log("done");
 }
 
+function prepareSite_docs() {
+  return gulp.src('dist/docs/**/*')
+    .pipe(replace('../components/', 'components/'))
+    .pipe(gulp.dest('dist-site/'));
+}
+
 function prepareSite_components() {
   return gulp.src('dist/components/**/*', {
     base: 'dist'
   })
-    .pipe(gulp.dest('dist-site/'));
-}
-
-function prepareSite_docs() {
-  return gulp.src('dist/docs/**/*')
-    .pipe(replace('../components/', 'components/'))
     .pipe(gulp.dest('dist-site/'));
 }
 
@@ -204,23 +205,11 @@ exports.version = gulp.series(
   builder.build
 );
 
-exports.dev = gulp.series(
-  exports.copySiteResources,
-  exports.dev
-);
-
-exports.devHeavy = gulp.series(
-  exports.copySiteResources,
-  exports.devHeavy
-);
-
-// exports['watch-relaunch'] = function() {
-//   process.env['BROWSERSYNC_OPEN'] = true;
-//   exports.watch();
-// }
+exports['watch-relaunch'] = function() {
+  process.env['BROWSERSYNC_OPEN'] = true;
+  exports.watch();
+}
 
 exports.buildDocs = builder.buildDocs;
 
 exports.releaseBundles = releaseBundles;
-
-exports.prepare = site.copySiteResources;

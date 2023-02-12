@@ -8,6 +8,9 @@ import { action } from "@storybook/addon-actions";
 
 import { Template as ActionButton } from '../../actionbutton/stories/template.js';
 
+import '../index.css';
+import '../skin.css';
+
 export const Template = ({
   rootClass = "spectrum-Calendar",
   month = new Date().toLocaleString("default", { month: "long" }),
@@ -18,18 +21,11 @@ export const Template = ({
   isDisabled = false,
   useDOWAbbrev = false,
   customClasses = [],
+  id,
   ...globals
 }, ctx) => {
   const { lang } = ctx.globals;
   const displayedDate = new Date(`${month} 1, ${year}`);
-
-  try {
-    // Load styles for this component
-    import(/* webpackPrefetch: true */ "../index.css");
-    import(/* webpackPrefetch: true */ "../skin.css");
-  } catch (e) {
-    console.warn(e);
-  }
 
   const [_, updateArgs] = useArgs();
   const DOW = [
@@ -138,7 +134,7 @@ export const Template = ({
         [`${rootClass}--padded`]: padded,
         ...customClasses.reduce((a, c) => ({ ...a, [c]: true }), {}),
       })}
-      id=${ifDefined(globals.id)}>
+      id=${ifDefined(id)}>
       <div class="${rootClass}-header">
         <div
           class="${rootClass}-title"
@@ -149,6 +145,7 @@ export const Template = ({
           ${displayedDate.toLocaleString(lang, { month: "long", year: "numeric" })}
         </div>
         ${ActionButton({
+          ...globals,
           label: 'Previous',
           hideLabel: true,
           isQuiet: true,
@@ -163,6 +160,7 @@ export const Template = ({
           }
         })}
         ${ActionButton({
+          ...globals,
           label: 'Next',
           hideLabel: true,
           isQuiet: true,

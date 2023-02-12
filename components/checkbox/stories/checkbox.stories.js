@@ -27,11 +27,11 @@ export default {
       control: { type: "text" },
     },
     isChecked: {
-      name: "Is checked",
+      name: "Checked",
       type: { name: "boolean" },
       table: {
         type: { summary: "boolean" },
-        category: "Component",
+        category: "State",
       },
       control: { type: "boolean" },
     },

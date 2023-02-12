@@ -1,6 +1,7 @@
 // Import the component markup template
 import { Template } from "./template";
 
+
 import ava from "./example-ava.jpg";
 
 export default {

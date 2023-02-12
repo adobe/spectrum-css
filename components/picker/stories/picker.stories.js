@@ -1,6 +1,7 @@
 // Import the component markup template
 import { Template } from "./template";
 
+
 import { default as MenuStories } from "@spectrum-css/menu/stories/menu.stories.js";
 
 export default {
@@ -69,7 +70,7 @@ export default {
       type: { name: "boolean" },
       table: {
         type: { summary: "boolean" },
-        category: "Component",
+        category: "State",
       },
       control: "boolean",
     },

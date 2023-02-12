@@ -13,7 +13,7 @@ governing permissions and limitations under the License.
 const path = require('path');
 
 exports.builder = path.resolve(__dirname, '..');
-exports.siteResources = path.resolve(__dirname, '..', 'node_modules', '@spectrum-css', 'site');
+exports.siteResources = path.dirname(require.resolve('@spectrum-css/documentation'));
 exports.topLevel = path.resolve(exports.builder, '..', '..');
 exports.isTopLevel = (process.cwd() === exports.topLevel);
 exports.site = path.resolve(exports.topLevel, 'site');

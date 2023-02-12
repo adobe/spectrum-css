@@ -3,6 +3,7 @@ import path from "path";
 // Import the component markup template
 import { Template } from "./template";
 
+
 // Imports an array of all icon names in the workflow set
 import iconOpts from "@adobe/spectrum-css-workflow-icons";
 // import workflowIcons from '@adobe/spectrum-css-workflow-icons/dist/spectrum-icons.svg';

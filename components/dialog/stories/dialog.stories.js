@@ -37,11 +37,21 @@ export default {
       },
       control: "boolean",
     },
+    isOpen: {
+      name: "Open",
+      type: { name: "boolean" },
+      table: {
+        type: { summary: "boolean" },
+        category: "State",
+      },
+      control: "boolean",
+    },
   },
   args: {
     rootClass: "spectrum-Dialog",
     isDismissable: true,
     showModal: false,
+    isOpen: true,
   },
   parameters: {
     actions: {

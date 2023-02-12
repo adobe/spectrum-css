@@ -4,6 +4,8 @@ import { ifDefined } from "lit-html/directives/if-defined.js";
 
 import { Template as Icon } from "@spectrum-css/icon/stories/template.js";
 
+import "../index.css";
+
 // More on component templates: https://storybook.js.org/docs/web-components/writing-stories/introduction#using-args
 export const Template = ({
   rootClass = "spectrum-HelpText",
@@ -12,14 +14,13 @@ export const Template = ({
   hideIcon = false,
   text,
   variant,
+  id,
   customClasses = [],
   ...globals
 }) => {
   const { express } = globals;
 
   try {
-    // Load styles for this component
-    import(/* webpackPrefetch: true */ "../index.css");
     if (!express) import(/* webpackPrefetch: true */ "../themes/spectrum.css");
     else import(/* webpackPrefetch: true */ "../themes/express.css");
   } catch (e) {
@@ -35,7 +36,7 @@ export const Template = ({
         [`${rootClass}--${variant}`]: typeof variant !== "undefined",
         ...customClasses.reduce((a, c) => ({ ...a, [c]: true }), {}),
       })}
-      id=${ifDefined(globals.id)}>
+      id=${ifDefined(id)}>
       ${!hideIcon
         ? Icon({
             iconName: "Alert",

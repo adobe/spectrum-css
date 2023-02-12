@@ -1,6 +1,7 @@
 // Import the component markup template
 import { Template } from "./template";
 
+
 import { Default as Menu } from "../../menu/stories/menu.stories.js";
 
 export default {
@@ -14,6 +15,7 @@ export default {
       name: "Open",
       type: { name: "boolean" },
       table: {
+        disable: true,
         type: { summary: "boolean" },
         category: "State",
       },
@@ -43,7 +45,7 @@ export default {
   args: {
     rootClass: "spectrum-Popover",
     isOpen: true,
-    withTip: true,
+    withTip: false,
     position: "top",
   },
   parameters: {
