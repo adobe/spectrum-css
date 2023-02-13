@@ -15,7 +15,7 @@ export const Template = ({
   return html`
     <div class=${classMap({
       [rootClass]: true,
-      [`${className}--size${size.toUpperCase()}`]: true,
+      [`${rootClass}--size${size.toUpperCase()}`]: true,
       ...customClasses.reduce((a, c) => ({ ...a, [c]: true }), {}),
     })} id=${ifDefined(id)}>
       <!-- Component mark-up goes here -->
