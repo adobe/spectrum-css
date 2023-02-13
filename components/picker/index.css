@@ -24,9 +24,7 @@ governing permissions and limitations under the License.
 .spectrum-Picker {
   /* font */
   --spectrum-picker-font-size: var(--spectrum-font-size-100);
-  --spectrum-picker-placeholder-font-style-default: normal;
-  --spectrum-picker-placeholder-cjk-font-style: normal;
-  --spectrum-picker-placeholder-font-style: var(--spectrum-picker-placeholder-font-style-default);
+  --spectrum-picker-placeholder-font-style: normal;
 
   /* height and width */
   --spectrum-picker-min-inline-size: var(--spectrum-picker-minimum-width-multiplier);
@@ -45,12 +43,6 @@ governing permissions and limitations under the License.
   --spectrum-picker-spacing-icon-to-disclosure-icon: var(--spectrum-picker-visual-to-disclosure-icon-medium);
   --spectrum-picker-spacing-label-to-picker: var(--spectrum-field-label-to-component);
   --spectrum-picker-spacing-label-to-picker-quiet: var(--spectrum-field-label-to-component-quiet-medium);
-
-  &:lang(ja),
-  &:lang(zh),
-  &:lang(ko) {
-    --spectrum-picker-placeholder-font-style: var(--spectrum-picker-placeholder-cjk-font-style);
-  }
 
   & + .spectrum-Popover--bottom.is-open {
     --spectrum-picker-spacing-picker-to-popover: var(--spectrum-component-to-menu-medium);
@@ -187,7 +179,6 @@ governing permissions and limitations under the License.
     &.is-focused {
       forced-color-adjust: none;
       outline: 0;
-      box-shadow: 0 0 0 var(--highcontrast-picker-focus-indicator-color, var(--mod-picker-focus-indicator-color, var(--spectrum-picker-focus-indicator-color)));
     }
   }
 }
@@ -199,6 +190,8 @@ governing permissions and limitations under the License.
   display: flex;
   justify-content: center;
   align-items: center;
+
+  position: relative;
 
   /* Truncate if menu options make us too wide */
   max-inline-size: 100%;
@@ -228,12 +221,19 @@ governing permissions and limitations under the License.
     pointer-events: none;
     content: '';
     position: absolute;
-    margin: calc(
-      (
-        var(--mod-picker-focus-indicator-gap, var(--spectrum-picker-focus-indicator-gap)) +
-        var(--mod-picker-focus-indicator-adjusted, var(--spectrum-picker-focus-indicator-adjusted)) +
-        var(--mod-picker-focus-indicator-thickness, var(--spectrum-picker-focus-indicator-thickness))
-      ) * -1);
+    block-size: calc(100% + (var(--mod-picker-focus-indicator-gap, var(--spectrum-picker-focus-indicator-gap)) * 2)
+                    + (var(--mod-picker-border-width, var(--spectrum-picker-border-width)) * 2));
+
+    inline-size: calc(100% + (var(--mod-picker-focus-indicator-gap, var(--spectrum-picker-focus-indicator-gap)) * 2)
+                    + (var(--mod-picker-border-width, var(--spectrum-picker-border-width)) * 2));
+
+    margin-block-start: calc((var(--mod-picker-focus-indicator-gap, var(--spectrum-picker-focus-indicator-gap))
+                            + var(--mod-picker-focus-indicator-thickness, var(--spectrum-picker-focus-indicator-thickness))
+                            + var(--mod-picker-border-width, var(--spectrum-picker-border-width))) * -1);
+
+    margin-inline-start: calc((var(--mod-picker-focus-indicator-gap, var(--spectrum-picker-focus-indicator-gap))
+                            + var(--mod-picker-focus-indicator-thickness, var(--spectrum-picker-focus-indicator-thickness))
+                            + var(--mod-picker-border-width, var(--spectrum-picker-border-width))) * -1);
     left: 0;
     right: 0;
     bottom: 0;
@@ -493,7 +493,6 @@ governing permissions and limitations under the License.
     &::after {
       border: none;
       border-radius: 0;
-      box-shadow: 0 var(--mod-picker-focus-indicator-thickness, var(--spectrum-picker-focus-indicator-thickness)) 0 0 var(--highcontrast-picker-focus-indicator-color, var(--mod-picker-focus-indicator-color, var(--spectrum-picker-focus-indicator-color)));
       margin: calc((var(--mod-picker-focus-indicator-gap, var(--spectrum-picker-focus-indicator-gap)) + var(--mod-picker-border-width, var(--spectrum-picker-border-width))) * -1) 0;
     }
   }
@@ -501,26 +500,6 @@ governing permissions and limitations under the License.
   &:active,
   &.is-open {
     background-color: transparent;
-
-    &:focus-ring,
-    &:focus-visible,
-    &.is-focused {
-      &::after {
-        box-shadow: none;
-      }
-    }
-  }
-
-  &.is-invalid:not(.is-open) {
-    &:focus-ring,
-    &:focus-visible,
-    &.is-focused {
-      box-shadow: none;
-
-      &::after {
-        box-shadow: 0 var(--mod-picker-focus-indicator-thickness, var(--spectrum-picker-focus-indicator-thickness)) 0 0 var(--highcontrast-picker-focus-indicator-color, var(--mod-picker-focus-indicator-color, var(--spectrum-picker-focus-indicator-color)));
-      }
-    }
   }
 
   &:disabled,
