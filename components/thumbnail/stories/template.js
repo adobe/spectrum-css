@@ -29,7 +29,7 @@ export const Template = ({
         ...customClasses.reduce((a, c) => ({ ...a, [c]: true }), {}),
       })}
       id=${ifDefined(id)}
-      @click=${ifDefined(onclick)}
+      @click=${onclick}
     >
       ${imageURL
         ? html`<img
