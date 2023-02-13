@@ -1,7 +1,7 @@
 import { html } from 'lit-html';
 import { classMap } from 'lit-html/directives/class-map.js';
 import { repeat } from 'lit-html/directives/repeat.js';
-// import { ifDefined } from 'lit-html/directives/if-definedjs';
+// import { ifDefined } from 'lit-html/directives/if-defined.js';
 
 import { Template as ActionButton } from '@spectrum-css/actionbutton/stories/template.js';
 
