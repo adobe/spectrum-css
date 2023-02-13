@@ -273,7 +273,7 @@ async function buildSite_generateIndex() {
 async function buildSite_getData() {
   let nav = []
   const files = await fg([
-    `${dirs.components}/*/metadata.yml, ${dirs.components}/*/metadata/*.yml`,
+    `${dirs.components}/*/metadata.yml`, `${dirs.components}/*/metadata/*.yml`,
   ])
 
   files.forEach(function (file) {
