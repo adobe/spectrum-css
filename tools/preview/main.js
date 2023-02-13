@@ -84,7 +84,7 @@ module.exports = {
         rules: [
           ...storybookRules,
           {
-            test: /^\/.*\.{ico,jpg,jpeg,png,gif,webp}$/i,
+            test: /^\w+\.{ico,jpg,jpeg,png,gif,webp}$/i,
             use: [{
               loader: "file-loader",
               options: {

@@ -51,7 +51,7 @@ export default {
     rootClass: "spectrum-Thumbnail",
     size: "l",
     isCover: false,
-    imageURL: "/example-card-landscape.png",
+    imageURL: "example-card-landscape.png",
     altText: "Landscape with mountains and lake",
   },
   parameters: {

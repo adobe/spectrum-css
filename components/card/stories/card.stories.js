@@ -189,7 +189,7 @@ Default.argTypes = {
 };
 Default.args = {
   title: "Card title",
-  image: "/example-card-portrait.png",
+  image: "example-card-portrait.png",
   subtitle: "jpg",
   footer: [ html`Footer` ],
 };
@@ -203,7 +203,7 @@ Quiet.argTypes = {
 };
 Quiet.args = {
   title: "Name",
-  image: "/example-card-square.png",
+  image: "example-card-square.png",
   subtitle: "jpg",
   description: "10/15/18",
   isQuiet: true,

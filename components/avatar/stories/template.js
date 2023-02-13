@@ -6,7 +6,7 @@ import "../index.css";
 
 export const Template = ({
   rootClass = "spectrum-Avatar",
-  image = "/example-ava.png",
+  image = "example-ava.png",
   altText,
   isDisabled = false,
   size = "700",

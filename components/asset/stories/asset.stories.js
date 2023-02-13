@@ -54,5 +54,5 @@ ImageAsset.argTypes = {
   scale: { table: { disable: true } },
 };
 ImageAsset.args = {
-  image: "/example-ava.png",
+  image: "example-ava.png",
 };
