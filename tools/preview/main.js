@@ -11,7 +11,7 @@ module.exports = {
   ],
   rootDir: '../../',
   port: process.env.PORT || 6006,
-  staticDirs: ['./assets'],
+  staticDirs: ['../../assets'],
   addons: [
     {
       name: '@storybook/addon-essentials',
@@ -83,6 +83,17 @@ module.exports = {
         ...config.module ?? [],
         rules: [
           ...storybookRules,
+          {
+            test: /^\w+\.{ico,jpg,jpeg,png,gif,webp}$/i,
+            use: [{
+              loader: "file-loader",
+              options: {
+                outputPath: (url, resourcePath, context) => {
+                  return `assets/images/${url.replace(/_\//g, '')}`;
+                },
+              },
+            }]
+          },
           {
             test: /\.css$/i,
             sideEffects: true,

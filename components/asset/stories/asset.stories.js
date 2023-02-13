@@ -1,9 +1,6 @@
 // Import the component markup template
 import { Template } from "./template";
 
-
-import ava from "./example-ava.jpg";
-
 export default {
   title: "Asset",
   description:
@@ -57,5 +54,5 @@ ImageAsset.argTypes = {
   scale: { table: { disable: true } },
 };
 ImageAsset.args = {
-  image: ava,
+  image: "example-ava.png",
 };

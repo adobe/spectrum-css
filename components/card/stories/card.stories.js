@@ -3,11 +3,6 @@ import { html } from "lit-html";
 // Import the component markup template
 import { Template } from "./template";
 
-
-import landscape from "./example-card-landscape.jpeg";
-import portrait from "./example-card-portrait.jpg";
-import square from "./example-card-square.png";
-
 import { default as ActionButton } from "@spectrum-css/actionbutton/stories/actionbutton.stories.js";
 import { default as QuickAction } from "@spectrum-css/quickaction/stories/quickaction.stories.js";
 import { default as Checkbox } from "@spectrum-css/checkbox/stories/checkbox.stories.js";
@@ -194,7 +189,7 @@ Default.argTypes = {
 };
 Default.args = {
   title: "Card title",
-  image: portrait,
+  image: "example-card-portrait.png",
   subtitle: "jpg",
   footer: [ html`Footer` ],
 };
@@ -208,7 +203,7 @@ Quiet.argTypes = {
 };
 Quiet.args = {
   title: "Name",
-  image: square,
+  image: "example-card-square.png",
   subtitle: "jpg",
   description: "10/15/18",
   isQuiet: true,

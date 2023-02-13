@@ -4,8 +4,6 @@ import { Template } from "./template";
 
 import { default as IconStories } from "@spectrum-css/icon/stories/icon.stories.js";
 
-import avatar from "@spectrum-css/avatar/stories/example-ava.jpg";
-
 export default {
   title: "Tag",
   description:
@@ -94,7 +92,7 @@ export default {
     rootClass: "spectrum-Tag",
     size: "m",
     label: "Tag label",
-    avatarUrl: avatar,
+    avatarUrl: "example-ava.png",
     isSelected: false,
     isDisabled: false,
     isInvalid: false,

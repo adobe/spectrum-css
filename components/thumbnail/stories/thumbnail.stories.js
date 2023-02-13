@@ -1,9 +1,6 @@
 // Import the component markup template
 import { Template } from "./template";
 
-
-import landscape from "./example-card-landscape.jpeg";
-
 export default {
   title: "Thumbnail",
   description:
@@ -54,7 +51,7 @@ export default {
     rootClass: "spectrum-Thumbnail",
     size: "l",
     isCover: false,
-    imageURL: landscape,
+    imageURL: "example-card-landscape.png",
     altText: "Landscape with mountains and lake",
   },
   parameters: {
