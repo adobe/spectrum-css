@@ -1,6 +1,6 @@
 import { html } from 'lit-html';
 import { classMap } from 'lit-html/directives/class-map.js';
-// import { ifDefined } from 'lit-html/directives/if-definedjs';
+// import { ifDefined } from 'lit-html/directives/if-defined.js';
 
 import { Template as Popover } from '@spectrum-css/popover/stories/template.js';
 import { Template as CloseButton } from '@spectrum-css/closebutton/stories/template.js';
