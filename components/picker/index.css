@@ -493,6 +493,7 @@ governing permissions and limitations under the License.
     &::after {
       border: none;
       border-radius: 0;
+      box-shadow: 0 var(--mod-picker-focus-indicator-thickness, var(--spectrum-picker-focus-indicator-thickness)) 0 0 var(--highcontrast-picker-focus-indicator-color, var(--mod-picker-focus-indicator-color, var(--spectrum-picker-focus-indicator-color)));
       margin: calc((var(--mod-picker-focus-indicator-gap, var(--spectrum-picker-focus-indicator-gap)) + var(--mod-picker-border-width, var(--spectrum-picker-border-width))) * -1) 0;
     }
   }
