@@ -1,23 +1,24 @@
+/*
+Copyright 2023 Adobe. All rights reserved.
+This file is licensed to you under the Apache License, Version 2.0 (the "License");
+you may not use this file except in compliance with the License. You may obtain a copy
+of the License at http://www.apache.org/licenses/LICENSE-2.0
+Unless required by applicable law or agreed to in writing, software distributed under
+the License is distributed on an "AS IS" BASIS, WITHOUT WARRANTIES OR REPRESENTATIONS
+OF ANY KIND, either express or implied. See the License for the specific language
+governing permissions and limitations under the License.
+*/
 .spectrum-ColorLoupe {
   /* size is the same on desktop and mobile */
-  --spectrum-colorloupe-width-adjusted: calc(
-    var(--spectrum-colorloupe-width) +
-      var(--spectrum-global-dimension-static-size-100) /* room for shadow */
-  );
-  --spectrum-colorloupe-height-adjusted: calc(
-    var(--spectrum-colorloupe-height) +
-      var(--spectrum-global-dimension-static-size-100) /* room for shadow */
-  );
+  --spectrum-colorloupe-width-adjusted: 48px; /* calc(var(--spectrum-colorloupe-width) + var(--spectrum-global-dimension-static-size-100) // room for shadow /); */
+  --spectrum-colorloupe-height-adjusted:  64px; /* calc(var(--spectrum-colorloupe-height) + var(--spectrum-global-dimension-static-size-100) // room for shadow //); */
 
   /* Distance between the loupe and the handle */
-  --spectrum-colorloupe-offset: var(
-    --spectrum-global-dimension-static-size-200
-  );
+  --spectrum-colorloupe-offset: 12px; /* var(--spectrum-global-dimension-static-size-200); */
 
   /* How much to animate up to the offset distance */
-  --spectrum-colorloupe-animation-distance: var(
-    --spectrum-global-dimension-static-size-100
-  );
+  --spectrum-colorloupe-animation-distance: 6px; /* var(--spectrum-global-dimension-static-size-100); */
+  --spectrum-colorloupe-outer-border-size: var(--spectrum-color-loupe-outer-border-width);
 }
 
 .spectrum-ColorLoupe {
@@ -44,10 +45,10 @@
   stroke-width: var(--spectrum-colorloupe-outer-border-size);
 }
 
-.spectrum-ColorLoupe-express {
+/* .spectrum-ColorLoupe-express {
   display: var(--spectrum-colorloupe-express-visibility);
 }
 
 .spectrum-ColorLoupe-spectrum {
   display: var(--spectrum-colorloupe-spectrum-visibility);
-}
+} */
