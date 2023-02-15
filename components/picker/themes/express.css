@@ -11,8 +11,7 @@ governing permissions and limitations under the License.
 
 @container (--system: express) {
   .spectrum-Picker {
-    --spectrum-picker-border-size: 0;
-    /* --spectrum-picker-focus-indicator-adjusted: 0.5px; */
+    --spectrum-picker-border-size: var(--spectrum-border-width-100);
 
     --spectrum-picker-background-color-default: var(--spectrum-gray-200);
     --spectrum-picker-background-color-default-open: var(--spectrum-gray-300);
@@ -20,5 +19,12 @@ governing permissions and limitations under the License.
     --spectrum-picker-background-color-hover-open: var(--spectrum-gray-300);
     --spectrum-picker-background-color-active: var(--spectrum-gray-400);
     --spectrum-picker-background-color-key-focus: var(--spectrum-gray-300);
+
+    --spectrum-picker-border-color-default: transparent;
+    --spectrum-picker-border-color-default-open: transparent;
+    --spectrum-picker-border-color-hover: transparent;
+    --spectrum-picker-border-color-hover-open: transparent;
+    --spectrum-picker-border-color-active: transparent;
+    --spectrum-picker-border-color-key-focus: transparent;
   }
 }
