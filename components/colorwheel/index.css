@@ -49,19 +49,20 @@ governing permissions and limitations under the License.
 
 %spectrum-ColorControl-handle--focused {
   /* Bigger colorhandle when focused */
-  width: calc(var(--spectrum-colorhandle-size) * 2);
-  height: calc(var(--spectrum-colorhandle-size) * 2);
+  inline-size: calc(var(--spectrum-colorhandle-size) * 2);
+  block-size: calc(var(--spectrum-colorhandle-size) * 2);
 
-  margin-left: calc(-1 * var(--spectrum-colorhandle-size));
-  margin-top: calc(-1 * var(--spectrum-colorhandle-size));
+  margin-inline-start: calc(-1 * var(--spectrum-colorhandle-size));
+  margin-block-start: calc(-1 * var(--spectrum-colorhandle-size));
 }
 
 %spectrum-ColorControl-hiddenField {
   opacity: 0;
   position: absolute;
-  top: 0; left: 0;
-  width: 100%;
-  height: 100%;
+  inset-block-start: 0;
+  inset-inline-start: 0;
+  inline-size: 100%;
+  block-size: 100%;
   z-index: 0;
   margin: 0;
   pointer-events: none;
@@ -70,9 +71,9 @@ governing permissions and limitations under the License.
 .spectrum-ColorWheel {
   position: relative;
   display: block;
-  min-width: var(--mod-colorwheel-minimum-width, var(--spectrum-colorwheel-minimum-width));
-  width: var(--mod-colorwheel-width, var(--spectrum-colorwheel-width));
-  height: var(--mod-colorwheel-height, var(--spectrum-colorwheel-height));
+  min-inline-size: var(--mod-colorwheel-minimum-width, var(--spectrum-colorwheel-minimum-width));
+  inline-size: var(--mod-colorwheel-width, var(--spectrum-colorwheel-width));
+  block-size: var(--mod-colorwheel-height, var(--spectrum-colorwheel-height));
   user-select: none;
   cursor: default;
 
@@ -97,18 +98,18 @@ governing permissions and limitations under the License.
 .spectrum-ColorWheel-internal{
   display: flex;
   position: absolute;
-  left: 0;
-  right: 0;
-  top: 0;
-  bottom: 0;
-  width: var(--spectrum-colorwheel-colorarea-container-size);
-  height: var(--spectrum-colorwheel-colorarea-container-size);
+  inset-inline-start: 0;
+  inset-inline-end: 0;
+  inset-block-start: 0;
+  inset-block-end: 0;
+  inline-size: var(--mod-colorwheel-colorarea-container-size, var(--spectrum-colorwheel-colorarea-container-size));
+  block-size: var(--mod-colorwheel-colorarea-container-size, var(--spectrum-colorwheel-colorarea-container-size));
   margin: auto;
 }
 
 .spectrum-ColorWheel-colorarea-container{
-  height: auto;
-  width: 100%;
+  block-size: auto;
+  inline-size: 100%;
   margin: var(--mod-colorwheel-colorarea-margin, var(--spectrum-colorwheel-colorarea-margin));
 }
 
@@ -117,21 +118,21 @@ governing permissions and limitations under the License.
 }
 
 .spectrum-ColorWheel-handle {
-  transform: translate(var(--spectrum-colorwheel-colorhandle-position), 0);
-  left: 50%;
-  top: 50%;
+  transform: translate(var(--mod-colorwheel-colorhandle-position, var(--spectrum-colorwheel-colorhandle-position)), 0);
+  inset-inline-start: 50%;
+  inset-block-start: 50%;
 }
 
 /* clip path set border-width wider than than spectrum-colorwheel-wheel to create appreance of a border*/
 .spectrum-ColorWheel-border{
   position: relative;
   background-color: var(--mod-colorwheel-border-color, var(--spectrum-colorwheel-border-color));
-  width: var(--mod-colorwheel-width, var(--spectrum-colorwheel-width));
-  height: var(--mod-colorwheel-height, var(--spectrum-colorwheel-height));
-  clip-path: path(evenodd, var(--spectrum-colorwheel-path-borders));
+  inline-size: var(--mod-colorwheel-width, var(--spectrum-colorwheel-width));
+  block-size: var(--mod-colorwheel-height, var(--spectrum-colorwheel-height));
+  clip-path: path(evenodd, var(--mod-colorwheel-path-borders, var(--spectrum-colorwheel-path-borders)));
 
   &.is-disabled{
-    background-color: var(--highcontrast-colorwheel-border-color-disabled, var(--spectrum-colorwheel-border-color));
+    background-color: var(--highcontrast-colorwheel-border-color-disabled, var(--mod-colorwheel-border-color, var(--spectrum-colorwheel-border-color)));
   }
 }
 
@@ -145,11 +146,11 @@ governing permissions and limitations under the License.
 .spectrum-ColorWheel-wheel{
   position: absolute;
   background: conic-gradient(from 90deg, red, rgb(255, 128, 0), rgb(255, 255, 0), rgb(128, 255, 0), rgb(0, 255, 0), rgb(0, 255, 128), rgb(0, 255, 255), rgb(0, 128, 255), rgb(0, 0, 255), rgb(128, 0, 255), rgb(255, 0, 255), rgb(255, 0, 128), red);
-  top: 1px;
-  left: 1px;
-  width: 100%;
-  height: 100%;
-  clip-path: path(evenodd, var(--spectrum-colorwheel-path));
+  inset-block-start: 1px;
+  inset-inline-start: 1px;
+  inline-size: 100%;
+  block-size: 100%;
+  clip-path: path(evenodd, var(--mod-colorwheel-path, var(--spectrum-colorwheel-path)));
 
   --track-width: var(--mod-colorwheel-track-width, var(--spectrum-colorwheel-track-width));
   --border-width: var(--mod-colorwheel-border-width, var(--spectrum-colorwheel-border-width));
