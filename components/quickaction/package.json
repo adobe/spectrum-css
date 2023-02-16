@@ -17,8 +17,8 @@
     "build": "gulp"
   },
   "peerDependencies": {
-    "@spectrum-css/actionbutton": "^1.1.13",
-    "@spectrum-css/checkbox": "^3.1.1",
+    "@spectrum-css/actionbutton": "^1.0.0 || ^2.0.0 || ^3.0.0",
+    "@spectrum-css/checkbox": "^3.0.0 || ^4.0.0 || ^5.0.0 || ^6.0.0",
     "@spectrum-css/vars": "^8.0.0"
   },
   "devDependencies": {
