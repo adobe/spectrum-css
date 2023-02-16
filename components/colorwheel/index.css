@@ -132,7 +132,7 @@ governing permissions and limitations under the License.
   clip-path: path(evenodd, var(--mod-colorwheel-path-borders, var(--spectrum-colorwheel-path-borders)));
 
   &.is-disabled{
-    background-color: var(--highcontrast-colorwheel-border-color-disabled, var(--mod-colorwheel-border-color, var(--spectrum-colorwheel-border-color)));
+    background-color: var(--highcontrast-colorwheel-border-color-disabled, var(--mod-colorwheel-fill-color-disabled, var(--spectrum-colorwheel-fill-color-disabled)));
   }
 }
 
