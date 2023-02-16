@@ -6,7 +6,6 @@ Spectrum CSS provides a standard CSS implementation of the Spectrum design langu
 1. [Where is the JavaScript?](#where-is-the-javascript)
 1. [Using Spectrum CSS](#using-spectrum-css)
 1. [Contributing](#contributing)
-1. [Testing](#testing)
 1. [Releasing](#releasing)
 
 ## Show me a demo
@@ -346,15 +345,6 @@ The following tasks are available:
 Note: `yarn dev` will run `gulp dev` above but trigger browsersync to open the documentation URL. You can set `BROWSERSYNC_OPEN=true` to change dev and watch to always open the URL.
 
 You can set a new port for `watch` by setting `BROWSERSYNC_PORT=<port number>`, e.g. `export BROWSERSYNC_PORT=9000; gulp watch` to set the port to `9000`.
-
-## Testing
-
-Visual regression testing is documented in more detail inside the [tests package](tests/README.md).
-
-The following scripts are available for testing:
-
-* `yarn test` - Run all the visual regression tests.
-* `yarn test button` - Run test for `button` component only.
 
 ___
 

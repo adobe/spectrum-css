@@ -46,8 +46,7 @@
   },
   "workspaces": [
     "components/*",
-    "tools/*",
-    "tests"
+    "tools/*"
   ],
   "devDependencies": {
     "@adobe/focus-ring-polyfill": "^0.1.5",
