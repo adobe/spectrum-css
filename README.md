@@ -39,8 +39,6 @@ npm install @spectrum-css/vars @spectrum-css/typography @spectrum-css/page @spec
 
 Installed components will be available in the `node_modules/@spectrum-css/` folder.
 
-If you are an existing user of Spectrum CSS and rely on the previous bundle package format, see the [legacy usage documentation](README-legacy.md) for details.
-
 ### Using components
 
 Spectrum CSS components have build output that uses CSS custom properties to change themes and scales. Start by including the base set of variables:
@@ -259,14 +257,13 @@ module.exports = {
 
 ## Contributing
 
-Check out the [contributing guidelines](.github/CONTRIBUTING.md) for quick start information, and head over to the [component documentation](components/README.md) and [bundle documentation](bundles/README.md) for more information.
+Check out the [contributing guidelines](.github/CONTRIBUTING.md) for quick start information, and head over to the [component documentation](components/README.md) for more.
 
 ### Building
 
 Run the following commands:
 
 ```shell
-yarn global add gulp-cli
 yarn install
 yarn start
 ```
@@ -382,16 +379,6 @@ After performing a release, run the following command to release the website:
 ```shell
 npm run release:site
 ```
-
-### Releasing bundles
-
-Bundles are released with a separate command, intended to be ran after individual components are released. To release bundles, simply run:
-
-```shell
-npm run release:bundles
-```
-
-Version numbers for dependencies and then bundle itself will be updated automatically, a changelog generated, the package published, and the documentation site deployed.
 
 ### Publishing prereleases
 

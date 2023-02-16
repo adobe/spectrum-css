@@ -25,7 +25,7 @@ site/
 │       └── typekit.js - Typekit that knows how to choose large/small kits based on the language attribute
 └── templates
     ├── individualComponent.pug - template to build individual component packages
-    └── siteComponent.pug - template to build docs for components in bundles
+    └── siteComponent.pug - template to build docs for components
 ```
 
 ## Architecture
