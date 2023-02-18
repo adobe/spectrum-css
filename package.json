@@ -39,6 +39,7 @@
     "release:bundles": "gulp releaseBundles",
     "release:site": "gulp prepareSite && gh-pages -d dist-site/ -f -e .",
     "start": "NODE_ENV=development yarn workspace @spectrum-css/preview start",
+    "docs:mod": "node scripts/mod-extractor.js",
     "test": "VRT=true run-p dev \"test:run {1}\" --",
     "test:run": "yarn workspace @spectrum-css/test run test",
     "version:build": "SCOPES=($(lerna changed)) && IFS=, SCOPE=\"${SCOPES[*]}\" && [[ \"${#SCOPES[@]}\" -gt 1 ]] && SCOPE=\"{${SCOPE}}\"; lerna run --stream --scope \"${SCOPE}\" --ignore \"@spectrum-css/{*-builder*,preview,generator,site}\" build",
