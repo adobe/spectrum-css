@@ -11,7 +11,9 @@
 --mod-toast-spacing-icon-to-text
 --mod-toast-text-and-icon-color
 --mod-toast-spacing-top-edge-to-text
+--mod-toast-spacing-block-start
 --mod-toast-spacing-bottom-edge-to-text
+--mod-toast-spacing-block-end
 --mod-toast-spacing-text-to-action-button-horizontal
 --mod-toast-line-height
 --mod-toast-line-height-cjk
@@ -19,6 +21,4 @@
 --mod-toast-spacing-bottom-edge-to-divider
 --mod-toast-divider-color
 --mod-toast-spacing-close-button
---mod-toast-spacing-block-start
---mod-toast-spacing-block-end
 --mod-toast-spacing-text-and-action-button-to-divider

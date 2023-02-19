@@ -13,10 +13,21 @@ const fs = require("fs");
 const path = require("path");
 const readline = require("readline");
 
-const regex = /--mod-(.+?)(?:-(.+?))*,(?:\s|$)/;
+const pattern = "--mod-";
 const rootDir = path.join(__dirname, "..", "components");
 const fileExtension = ".css";
 const writePath = "metadata/mods.md";
+
+function extract(line, index) {
+    let modVariable = "";
+    for(let i = index; i < line.length; i++) {
+        if (line[i] == ")" || line[i] == "," || line[i] == " ") {
+            break;
+        }
+        modVariable += line[i];
+    }
+    return modVariable;
+}
 
 function writeToFile(file) {
     const directoryName = path.dirname(file);
@@ -26,14 +37,13 @@ function writeToFile(file) {
     });
     var result  = new Set();
     readInterface.on("line", function(line) {
-        const match = regex.exec(line);
-        if (match) {
-            var param = match[0].slice(0, -1);
-            var str = param;
-            if (param.endsWith(",")) {
-                str = param.slice(0, -1);
-            }
-            result.add(str);
+        let index = line.indexOf(pattern);
+        while(index != -1) {
+            let modVariable = extract(line, index);
+            result.add(modVariable);
+            index = line.indexOf(pattern, index + 1);
+        }   
+        if (result.size) {
             const resultArray = [...result];
             fs.writeFile(`${directoryName}/${writePath}`, resultArray.join("\n"), (err) => {
             });
@@ -41,27 +51,20 @@ function writeToFile(file) {
     });
 }
 
-function searchFilesForString(rootDir, searchStr, extension) {
-    const files = fs.readdirSync(rootDir);
+function searchFilesForString(dir, pattern, extension) {
+    const files = fs.readdirSync(dir);
     for(let i = 0; i < files.length; i++) {
-        const dir = path.join(rootDir, files[i]);
-        if (!fs.statSync(dir).isDirectory()) {
-            continue;
-        }
-        fs.readdir(dir, function(err, files) {
-            if (err) {
-                console.warn(err);
-                return;
+        const file = path.join(dir, files[i]);
+
+        if (fs.statSync(file).isDirectory()) {
+            searchFilesForString(file, pattern, extension);
+        } else {
+            if (path.extname(file) === extension) {
+                writeToFile(file);
             }
-            files.forEach(function (file) {
-                let readFile = path.join(dir, file);
-                if (path.extname(readFile) === extension) {
-                    writeToFile(readFile);
-                } 
-            });
-        });
+        }
     }
 }
 
-searchFilesForString(rootDir, regex, fileExtension);
+searchFilesForString(rootDir, pattern, fileExtension);
 

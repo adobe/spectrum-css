@@ -13,5 +13,6 @@
 --mod-animation-duration-100
 --mod-swatch-checkerboard-size
 --mod-swatch-border-thickness
+--mod-swatch-border-color
 --mod-swatch-disabled-icon-color
 --mod-swatch-icon-border-color

@@ -9,13 +9,14 @@
 --mod-bold-font-weight
 --mod-spectrum-button-edge-to-visual
 --mod-button-padding-label-to-icon
+--mod-focus-indicator-gap
 --mod-button-padding-label-top
 --mod-button-padding-label-bottom
 --mod-button-focus-ring-thickness
+--mod-button-focus-ring-color
 --mod-button-animation-duration
 --mod-button-focus-ring-gap
 --mod-button-focus-ring-border-radius
---mod-button-focus-ring-color
 --mod-button-background-color-default
 --mod-button-border-color-default
 --mod-button-content-color-default

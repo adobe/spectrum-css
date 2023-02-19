@@ -8,8 +8,9 @@
 --mod-switch-font-size
 --mod-line-height-100
 --mod-animation-duration-200
---mod-animation-duration-100
 --mod-switch-control-height
+--mod-switch-spacing-top-to-control
+--mod-animation-duration-100
 --mod-border-width-200
 --mod-switch-background-color
 --mod-switch-handle-background-color

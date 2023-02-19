@@ -4,6 +4,9 @@
 --mod-actionbar-popover-border-color
 --mod-actionbar-popover-background-color
 --mod-actionbar-shadow-horizontal
+--mod-actionbar-shadow-vertical
+--mod-actionbar-shadow-blur
+--mod-actionbar-shadow-color
 --mod-actionbar-spacing-close-button-start
 --mod-actionbar-spacing-close-button-end
 --mod-actionbar-spacing-close-button-top

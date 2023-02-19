@@ -19,10 +19,13 @@
 --mod-actionbutton-border-color-disabled
 --mod-actionbutton-content-color-disabled
 --mod-actionbutton-icon-size
+--mod-actionbutton-edge-to-visual
 --mod-actionbutton-text-to-visual
+--mod-actionbutton-edge-to-visual-only
 --mod-actionbutton-font-size
 --mod-actionbutton-edge-to-hold-icon
 --mod-actionbutton-animation-duration
 --mod-actionbutton-focus-indicator-gap
 --mod-actionbutton-focus-indicator-border-radius
 --mod-actionbutton-focus-indicator-thickness
+--mod-actionbutton-focus-indicator-color

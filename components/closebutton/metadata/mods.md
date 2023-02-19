@@ -2,6 +2,7 @@
 --mod-closebutton-focus-indicator-color
 --mod-closebutton-focus-indicator-gap
 --mod-closebutton-animation-duration
+--mod-closebutton-animation-duraction
 --mod-closebutton-height
 --mod-closebutton-width
 --mod-closebutton-border-radius
