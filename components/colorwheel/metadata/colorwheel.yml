@@ -18,7 +18,7 @@ examples:
     name: Standard
     markup: |
       <div class="spectrum-ColorWheel">
-        <div class="spectrum-ColorWheel-internal">
+        <div class="spectrum-ColorWheel-inner">
           <div class="spectrum-ColorWheel-colorarea-container"></div>
         </div>
         <div class="spectrum-ColorWheel-border">
@@ -39,7 +39,7 @@ examples:
     name: Disabled
     markup: |
       <div class="spectrum-ColorWheel is-disabled">
-        <div class="spectrum-ColorWheel-internal">
+        <div class="spectrum-ColorWheel-inner">
           <div class="spectrum-ColorWheel-colorarea-container"></div>
         </div>
         <div class="spectrum-ColorWheel-border is-disabled">
@@ -60,7 +60,7 @@ examples:
     name: Standard with ColorArea
     markup: |
       <div class="spectrum-ColorWheel">
-        <div class="spectrum-ColorWheel-internal">
+        <div class="spectrum-ColorWheel-inner">
           <div class="spectrum-ColorWheel-colorarea-container">
             <div class="spectrum-ColorArea" style="width: 70.1%; height: 70.1%">
               <div class="spectrum-ColorArea-gradient" style="background: linear-gradient(to top, black 0%, rgba(0, 0, 0, 0) 100%), linear-gradient(to right, white 0%, rgba(0, 0, 0, 0) 100%), rgb(255, 0, 0);"></div>
