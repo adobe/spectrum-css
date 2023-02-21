@@ -71,12 +71,6 @@
     "through2": "^3.0.1",
     "yargs": "^17.6.2"
   },
-  "husky": {
-    "hooks": {
-      "commit-msg": "commitlint -E HUSKY_GIT_PARAMS",
-      "pre-commit": "lint-staged"
-    }
-  },
   "lint-staged": {
     "components/*/package.json": [
       "yarn lint:components",
