@@ -3,6 +3,18 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+<a name="7.1.0"></a>
+# 7.1.0
+🗓 2023-02-21 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/tokens@7.0.0...@spectrum-css/tokens@7.1.0)
+
+### ✨ Features
+
+* **tokens:** use full v12 release ([#1624](https://github.com/adobe/spectrum-css/issues/1624)) ([b921bb2](https://github.com/adobe/spectrum-css/commit/b921bb2))
+
+
+
+
+
 <a name="7.0.0"></a>
 # 7.0.0
 🗓 2023-02-01 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/tokens@6.3.0...@spectrum-css/tokens@7.0.0)

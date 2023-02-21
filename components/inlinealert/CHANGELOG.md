@@ -3,6 +3,18 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+<a name="6.0.2"></a>
+## 6.0.2
+🗓 2023-02-21 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/inlinealert@6.0.1...@spectrum-css/inlinealert@6.0.2)
+
+### 🐛 Bug fixes
+
+* **inlinealert:** correct spectrum theme capitalization ([#1615](https://github.com/adobe/spectrum-css/issues/1615)) ([8659820](https://github.com/adobe/spectrum-css/commit/8659820))
+
+
+
+
+
 <a name="6.0.1"></a>
 ## 6.0.1
 🗓 2023-02-06 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/inlinealert@6.0.0...@spectrum-css/inlinealert@6.0.1)
