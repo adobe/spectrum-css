@@ -38,7 +38,7 @@ governing permissions and limitations under the License.
   }
 }
 
-/* Windows High Contrast */
+/* Windows High Contrast Mode */
 @media (forced-colors: active) {
   .spectrum-ColorWheel {
     --highcontrast-colorwheel-border-color-disabled: GrayText;
@@ -47,27 +47,6 @@ governing permissions and limitations under the License.
   .spectrum-ColorWheel {
     forced-color-adjust: none;
   }
-}
-
-%spectrum-ColorControl-handle--focused {
-  /* Bigger colorhandle when focused */
-  inline-size: calc(var(--spectrum-colorhandle-size) * 2);
-  block-size: calc(var(--spectrum-colorhandle-size) * 2);
-
-  margin-inline-start: calc(-1 * var(--spectrum-colorhandle-size));
-  margin-block-start: calc(-1 * var(--spectrum-colorhandle-size));
-}
-
-%spectrum-ColorControl-hiddenField {
-  opacity: 0;
-  position: absolute;
-  inset-block-start: 0;
-  inset-inline-start: 0;
-  inline-size: 100%;
-  block-size: 100%;
-  z-index: 0;
-  margin: 0;
-  pointer-events: none;
 }
 
 .spectrum-ColorWheel {
@@ -83,7 +62,11 @@ governing permissions and limitations under the License.
     z-index: 2;
 
     .spectrum-ColorWheel-handle {
-      @extend %spectrum-ColorControl-handle--focused;
+      inline-size: calc(var(--spectrum-colorhandle-size) * 2);
+      block-size: calc(var(--spectrum-colorhandle-size) * 2);
+
+      margin-inline-start: calc(-1 * var(--spectrum-colorhandle-size));
+      margin-block-start: calc(-1 * var(--spectrum-colorhandle-size));
     }
   }
 
@@ -119,7 +102,15 @@ governing permissions and limitations under the License.
 }
 
 .spectrum-ColorWheel-slider {
-  @extend %spectrum-ColorControl-hiddenField;
+  opacity: 0;
+  position: absolute;
+  inset-block-start: 0;
+  inset-inline-start: 0;
+  inline-size: 100%;
+  block-size: 100%;
+  z-index: 0;
+  margin: 0;
+  pointer-events: none;
 }
 
 .spectrum-ColorWheel-handle {
@@ -143,7 +134,7 @@ governing permissions and limitations under the License.
   block-size: var(--mod-colorwheel-height, var(--spectrum-colorwheel-height));
   clip-path: path(evenodd, var(--mod-colorwheel-path-borders, var(--spectrum-colorwheel-path-borders)));
 
-  &.is-disabled{
+  &.is-disabled {
     background-color: var(--highcontrast-colorwheel-border-color-disabled, var(--mod-colorwheel-fill-color-disabled, var(--spectrum-colorwheel-fill-color-disabled)));
   }
 }
