@@ -123,9 +123,16 @@ governing permissions and limitations under the License.
 }
 
 .spectrum-ColorWheel-handle {
-  transform: translate(var(--mod-colorwheel-colorhandle-position, var(--spectrum-colorwheel-colorhandle-position)), 0);
-  top: 50%;
-  left: 50%;
+  transform: translate(var(--spectrum-colorwheel-colorhandle-position), 0);
+  inset-block-start: 50%;
+
+  [dir="ltr"] & {
+    inset-inline-start: 50%;
+  }
+
+  [dir="rtl"] & {
+    inset-inline-end: 50%;
+  }
 }
 
 /* clip path set border-width wider than than spectrum-colorwheel-wheel to create appreance of a border*/
