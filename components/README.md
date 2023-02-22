@@ -9,9 +9,13 @@ Components are released on npm as `@spectrum-css/$COMPONENT`, where `$COMPONENT`
 Each component has the following files:
 
 * `index.css` - The scale-specific styles for the component: dimensions, layout, etc (these change between scales)
+* `metadata/*.yml` - The markup examples and documentation for the component; also makes additional examples possible that appear separately in the site navigation.
+* `themes/*.css` - The theme-specific styles for the component.
+* `stories/*.stories.js` and `stories/template.js` - The storybook assets for rendering components in the Storybook tool and eventually to be used for visual regression testing.
+
+The following asset will only be seen in legacy components that have not yet migrated to the new tokens system:
+
 * `skin.css` - The theme-specific styles for the component: colors, box-shadows, etc (these change between color stops)
-* `docs.yml` - The markup examples and documentation for the component, appearing as a single entry in the site navigation
-* `docs/*.yml` - Additional examples that appear separately in the site navigation
 
 See [documentation generation](/tools/bundle-builder/docs/README.md) documentation for more information on the properties available within the `.yml` files.
 
@@ -19,9 +23,7 @@ See [documentation generation](/tools/bundle-builder/docs/README.md) documentati
 
 1. Run `gulp dev` in the root of the project to begin developing.
 2. Edit `components/$COMPONENT/index.css` and `components/$COMPONENT/skin.css` with dimensions and color properties respectively. The documentation will live reload with your changes.
-3. Edit the markup examples within `components/$COMPONENT/docs.yml` and `components/$COMPONENT/docs/*.yml` accordingly. The documentation will live reload with your changes.
-
-**Note:** If you add dependencies in a component's `package.json`, be sure to re-run `npm run bootstrap` so they are linked appropriately.
+3. Edit the markup examples within `components/$COMPONENT/metadata/*.yml`. The documentation will live reload with your changes.
 
 ## Adding a new component
 
@@ -82,6 +84,6 @@ The release will error out if:
 
 ## Releasing components
 
-Any change to a component or a component's dependencies results in a release of that component and all associated bundles. Component releases cannot be done ala carte and must be done from the top-level, managed by lerna.
+Any change to a component or a component's dependencies results in a release of that component and all components dependent on that asset. Component releases cannot be done ala carte and must be done from the top-level, managed by lerna.
 
 See [Releasing](/README.md#Releasing) for more information.

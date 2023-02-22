@@ -36,7 +36,6 @@
     "prerelease": "yarn version:build",
     "release": "lerna publish",
     "release:beta-from-package": "yarn release from-package --conventional-prerelease --preid beta --pre-dist-tag beta --no-private",
-    "release:bundles": "gulp releaseBundles",
     "release:site": "gulp prepareSite && gh-pages -d dist-site/ -f -e .",
     "start": "NODE_ENV=development yarn workspace @spectrum-css/preview start",
     "docs:mod": "node tasks/mod-extractor.js",
