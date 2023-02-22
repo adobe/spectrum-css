@@ -1,2 +1,4 @@
---mod-buttongroup-spacing-horizontal
---mod-buttongroup-spacing-vertical
+| Modifiable Custom Properties |
+| --- |
+|`--mod-buttongroup-spacing-horizontal`|
+|`--mod-buttongroup-spacing-vertical`|

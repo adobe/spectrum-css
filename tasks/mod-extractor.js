@@ -45,8 +45,10 @@ function writeToFile(file) {
         }   
         if (result.size) {
             const resultArray = [...result];
-            fs.writeFile(`${directoryName}/${writePath}`, resultArray.join("\n"), (err) => {
-            });
+            const formattedResults = resultArray.map((result) => `|\`${result}\`|`);
+            const tableHeader = `| Modifiable Custom Properties |\n| --- |`;
+            formattedResults.unshift(tableHeader);
+            fs.writeFile(`${directoryName}/${writePath}`, formattedResults.join('\n'), (err) => {});
         }
     });
 }
