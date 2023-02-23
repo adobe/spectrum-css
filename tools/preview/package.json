@@ -8,7 +8,8 @@
   "main": "main.js",
   "scripts": {
     "build": "build-storybook --config-dir .",
-    "start": "WATCH_MODE=true start-storybook --config-dir ."
+    "start": "WATCH_MODE=true start-storybook --config-dir .",
+    "test:chromatic": "chromatic --project-token $(grep CHROMATIC_PROJECT_TOKEN ../../.env | cut -d '=' -f2)"
   },
   "dependencies": {
     "@adobe/spectrum-css-workflow-icons": "^1.2.1",
