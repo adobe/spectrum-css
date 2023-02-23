@@ -1,21 +1,23 @@
 // Import the component markup template
+// stories is where the stories will be written
 import { Template } from "./template";
+import { default as ColorHandle } from "@spectrum-css/colorhandle"
+// how do I handle dependent components
 
 export default {
-  title: "Colorarea",
+  title: "Color area",
   description: "The Colorarea component is...",
   component: "Colorarea",
   argTypes: {
-    size: {
-      name: "Size",
-      type: { name: "string", required: true },
-      table: {
-        type: { summary: "string" },
-        category: "Component",
-      },
-      options: ["s", "m", "l", "xl"],
-      control: "select"
-    },
+    // isDisabled: {
+    //   name: "Disabled",
+    //   type: { name: "boolean" },
+    //   table: {
+    //     type: { summary: "boolean" },
+    //     category: "State",
+    //   },
+    //   control: "boolean",
+    // },
   },
   args: {
     rootClass: "spectrum-",
