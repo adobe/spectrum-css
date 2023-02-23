@@ -1,10 +1,9 @@
 {
   "name": "@spectrum-css/fieldgroup",
-  "version": "4.0.16",
+  "version": "4.0.15",
   "description": "The Spectrum CSS fieldgroup component",
   "license": "Apache-2.0",
-  "author": "Adobe",
-  "homepage": "https://opensource.adobe.com/spectrum-css/fieldgroup",
+  "homepage": "https://opensource.adobe.com/spectrum-css/",
   "repository": {
     "type": "git",
     "url": "https://github.com/adobe/spectrum-css.git",
@@ -15,23 +14,22 @@
   },
   "main": "dist/index-vars.css",
   "scripts": {
-    "build": "gulp"
+    "build": "node index.js"
   },
   "peerDependencies": {
-    "@spectrum-css/checkbox": "^5.0.0 || ^6.0.0",
-    "@spectrum-css/helptext": "^3.0.0 || ^4.0.0",
-    "@spectrum-css/icon": "^3.0.0",
-    "@spectrum-css/radio": "^6.0.0 || ^7.0.0",
-    "@spectrum-css/tokens": "^7.0.0"
+    "@spectrum-css/checkbox": "^5.0.0",
+    "@spectrum-css/helptext": "^3.0.0",
+    "@spectrum-css/icon": "^3.0.21",
+    "@spectrum-css/radio": "^6.0.0",
+    "@spectrum-css/tokens": "^6.0.0"
   },
   "devDependencies": {
-    "@spectrum-css/checkbox": "^6.0.2",
-    "@spectrum-css/component-builder-simple": "^2.0.5",
-    "@spectrum-css/helptext": "^4.0.2",
-    "@spectrum-css/icon": "^3.0.33",
-    "@spectrum-css/radio": "^7.0.2",
-    "@spectrum-css/tokens": "^7.1.0",
-    "gulp": "^4.0.0"
+    "@spectrum-css/checkbox": "^6.0.1",
+    "@spectrum-css/component-builder-simple": "^2.0.4",
+    "@spectrum-css/helptext": "^4.0.1",
+    "@spectrum-css/icon": "^3.0.32",
+    "@spectrum-css/radio": "^7.0.1",
+    "@spectrum-css/tokens": "^7.0.0"
   },
   "publishConfig": {
     "access": "public"

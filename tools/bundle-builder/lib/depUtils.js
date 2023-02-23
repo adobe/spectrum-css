@@ -75,8 +75,8 @@ async function solveDependencies(packages) {
 */
 async function getPackageDependencyOrder(packageDir) {
   let { name, dependencies } = await getDependencies(packageDir);
-
-  return solveDependencies(dependencies.map((dep) => path.join(path.dirname(require.resolve(dep)), '..')));
+  // changed since require.resolve not able to find icon
+  return solveDependencies(dependencies.map((dep) => path.join(process.cwd(), 'components', dep.replace('@spectrum-css/', ''))));
 }
 
 /*

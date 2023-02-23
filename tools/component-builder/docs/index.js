@@ -1,5 +1,5 @@
 /*
-Copyright 2019 Adobe. All rights reserved.
+Copyright 2022 Adobe. All rights reserved.
 This file is licensed to you under the Apache License, Version 2.0 (the "License");
 you may not use this file except in compliance with the License. You may obtain a copy
 of the License at http://www.apache.org/licenses/LICENSE-2.0
@@ -9,137 +9,195 @@ the License is distributed on an "AS IS" BASIS, WITHOUT WARRANTIES OR REPRESENTA
 OF ANY KIND, either express or implied. See the License for the specific language
 governing permissions and limitations under the License.
 */
-const gulp = require('gulp');
-const fsp = require('fs').promises;
-const path = require('path');
-const pug = require('pug');
-const data = require('gulp-data');
-const rename = require('gulp-rename');
-const yaml = require('js-yaml');
-const merge = require('merge-stream');
-const through = require('through2');
-const ext = require('replace-ext');
+const fsp = require("fs").promises
+const path = require("path")
+const yaml = require("js-yaml")
 
-const sitePath = path.join(__dirname, '..', '..', '..', 'site');
-const util = require(`${sitePath}/util`);
+const nunjucks = require("nunjucks")
+const async = require("async")
+
+const sitePath = path.join(__dirname, "..", "..", "..", "site")
+const util = require(`${sitePath}/util`)
 
 async function readJSONFile(filepath) {
-  return JSON.parse(await fsp.readFile(filepath));
+  return JSON.parse(await fsp.readFile(filepath))
 }
 
-async function getDependencies(packagePath = '') {
-  let package = await readJSONFile(path.join(packagePath, 'package.json'));
+async function getDependencies(packagePath = "") {
+  let package = await readJSONFile(path.join(packagePath, "package.json"))
 
-  let dependencies = [];
+  let dependencies = []
 
   if (package.devDependencies) {
-    dependencies = Object.keys(package.devDependencies);
+    dependencies = Object.keys(package.devDependencies)
 
     dependencies = dependencies
       .filter((dep) => {
         return (
-          dep.indexOf('@spectrum-css') === 0 &&
-          dep !== '@spectrum-css/bundle-builder' &&
-          dep !== '@spectrum-css/component-builder' &&
-          dep !== '@spectrum-css/component-builder-simple'
-        );
+          dep.indexOf("@spectrum-css") === 0 &&
+          dep !== "@spectrum-css/bundle-builder" &&
+          dep !== "@spectrum-css/component-builder" &&
+          dep !== "@spectrum-css/component-builder-simple"
+        )
       })
-      .map((dep) => dep.split('/').pop());
+      .map((dep) => dep.split("/").pop())
   }
 
-  return dependencies;
+  return dependencies
 }
 
-function buildDocs_html() {
-  return new Promise(async (resolve, reject) => {
-    let dependencies;
-    let package;
-    try {
-      package = await readJSONFile('package.json');
-      dependencies = await getDependencies();
-    }
-    catch(err) {
-      return reject(err);
-    }
+async function buildDocs_html() {
+  let dependencies
+  let package
+  try {
+    package = await readJSONFile("package.json")
+    dependencies = await getDependencies()
+  } catch (err) {
+    console.error("Error in component builder docs " + err)
+    return
+  }
 
-    let packageName = package.name.split('/').pop();
+  let packageName = package.name.split("/").pop()
 
-    let dnaVars = readJSONFile(path.join(path.dirname(require.resolve('@spectrum-css/vars')), '..', 'dist', 'spectrum-metadata.json'));
-
-    gulp.src(
-      [
-        'metadata.yml',
-        'metadata/*.yml'
-      ], {
-        allowEmpty: true
-      }
+  let dnaVars = readJSONFile(
+    path.join(
+      path.dirname(require.resolve("@spectrum-css/vars")),
+      "..",
+      "dist",
+      "spectrum-metadata.json"
     )
-      .pipe(rename(function(file) {
-        if (file.basename === 'docs' || file.basename === packageName) {
-          file.basename = 'index';
-        }
-      }))
-      .pipe(data(function() {
-        return {
-          dependencies: dependencies,
-          dnaVars: dnaVars,
-          pkg: package,
-          util: util
-        };
-      }))
-      .pipe(through.obj(function compilePug(file, enc, cb) {
-          let data = Object.assign({}, { component: yaml.safeLoad(String(file.contents)) }, file.data || {});
+  )
 
-          file.path = ext(file.path, '.html');
+  let filePaths = ["metadata.yml", "metadata/*.yml"]
 
-          try {
-            const templatePath = `${sitePath}/templates/individualComponent.pug`;
-            let compiled = pug.renderFile(templatePath, data);
-            file.contents = Buffer.from(compiled);
-          } catch (e) {
-            return cb(e);
+  // Set up Nunjucks compiler
+  const nunjucksCompiler = nunjucks.configure(sitePath + "/templates", {
+    autoescape: false,
+  })
+
+  // Read and process each file
+  filePaths.forEach((filePath) => {
+    fs.readFile(filePath, "utf8", (err, contents) => {
+      if (err) {
+        console.error("Error in component builder docs " + err)
+        return
+      }
+
+      // Rename file if necessary
+      let file = path.parse(filePath)
+      if (file.basename === "docs" || file.basename === packageName) {
+        file.basename = "index"
+      }
+
+      // Set data for Nunjucks rendering
+      let data = {
+        dependencies: dependencies,
+        dnaVars: dnaVars,
+        pkg: package,
+        util: util,
+        component: yaml.safeLoad(contents),
+      }
+
+      // Render template
+      try {
+        const templatePath = `${sitePath}/templates/individualComponent.njk`
+        let compiled = nunjucksCompiler.render(templatePath, data)
+
+        // Write rendered HTML to file
+        fs.writeFile(
+          path.join("dist/docs/", file.name + ".html"),
+          compiled,
+          (err) => {
+            if (err) {
+              console.error("Error in component builder docs " + err)
+            }
           }
-          cb(null, file);
-        })
-      )
-      .pipe(gulp.dest('dist/docs/'))
-      .on('end', resolve)
-      .on('error', reject);
-  });
+        )
+      } catch (e) {
+        console.error("Error in component builder docs " + e)
+      }
+    })
+  })
 }
 
 function buildDocs_resources() {
-  return gulp.src(`${sitePath}/dist/**`)
-    .pipe(gulp.dest('dist/docs/'));
+  // Read all files in the source directory
+  fs.readdir(`${sitePath}/dist/`, (err, fileNames) => {
+    if (err) {
+      console.error("Error in component builder docs " + err)
+      return
+    }
+
+    // Process each file
+    fileNames.forEach((fileName) => {
+      // Read file contents
+      fs.readFile(`${sitePath}/dist/${fileName}`, (err, contents) => {
+        if (err) {
+          console.error("Error in component builder docs " + err)
+          return
+        }
+
+        // Write file contents to the destination directory
+        fs.writeFile(path.join("dist/docs/", fileName), contents, (err) => {
+          if (err) {
+            console.error("Error in component builder docs " + err)
+          }
+        })
+      })
+    })
+  })
 }
 
-function buildDocs_copyDeps() {
-  return new Promise(async (resolve, reject) => {
-    let dependencies;
-    try {
-      dependencies = await getDependencies();
-    }
-    catch(err) {
-      return reject(err);
-    }
+async function buildDocs_copyDeps() {
+  let dependencies
+  try {
+    dependencies = await getDependencies()
+  } catch (err) {
+    console.error("Error in component builder docs " + err)
+    return
+  }
 
-    function copyDep(dep) {
-      return gulp.src(`node_modules/@spectrum-css/${dep}/dist/*`)
-        .pipe(gulp.dest(`dist/docs/dependencies/@spectrum-css/${dep}/`));
-    }
+  dependencies.forEach((dep) => {
+    // Get a list of file paths that match the pattern
+    let filePaths = glob.sync(`node_modules/@spectrum-css/${dep}/dist/*`)
 
-    return merge.apply(merge, dependencies.map(copyDep))
-      .resume()
-      .on('end', resolve)
-      .on('error', reject);
-  });
+    filePaths.forEach((filePath) => {
+      // Read the file contents
+      fs.readFile(filePath, (err, contents) => {
+        if (err) {
+          console.error("Error in component builder docs " + err)
+          return
+        }
+
+        // Write the file contents to the destination directory
+        fs.writeFile(
+          path.join(
+            "dist/docs/dependencies/@spectrum-css/",
+            dep,
+            path.basename(filePath)
+          ),
+          contents,
+          (err) => {
+            if (err) {
+              console.error("Error in component builder docs " + err)
+            }
+          }
+        )
+      })
+    })
+  })
 }
 
-let buildDocs = gulp.parallel(
-  buildDocs_resources,
-  buildDocs_copyDeps,
-  buildDocs_html
-);
+let buildDocs = async function() {
+  await Promise.all([
+    buildDocs_resources(),
+    buildDocs_copyDeps(),
+    buildDocs_html()
+  ])
+};
 
 exports.buildDocs = buildDocs;
-exports.buildDocs_html = gulp.series(buildDocs_html);
+
+exports.buildDocs_html = async function() {
+  await buildDocs_html()
+};

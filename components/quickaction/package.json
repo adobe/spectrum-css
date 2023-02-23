@@ -1,10 +1,9 @@
 {
   "name": "@spectrum-css/quickaction",
-  "version": "3.0.35",
+  "version": "3.0.34",
   "description": "The Spectrum CSS quickaction component",
   "license": "Apache-2.0",
-  "author": "Adobe",
-  "homepage": "https://opensource.adobe.com/spectrum-css/quickaction",
+  "homepage": "https://opensource.adobe.com/spectrum-css/",
   "repository": {
     "type": "git",
     "url": "https://github.com/adobe/spectrum-css.git",
@@ -15,19 +14,18 @@
   },
   "main": "dist/index-vars.css",
   "scripts": {
-    "build": "gulp"
+    "build": "node index.js"
   },
   "peerDependencies": {
-    "@spectrum-css/actionbutton": "^1.0.0 || ^2.0.0 || ^3.0.0",
-    "@spectrum-css/checkbox": "^3.0.0 || ^4.0.0 || ^5.0.0 || ^6.0.0",
+    "@spectrum-css/actionbutton": "^1.1.13",
+    "@spectrum-css/checkbox": "^3.1.1",
     "@spectrum-css/vars": "^8.0.0"
   },
   "devDependencies": {
     "@spectrum-css/actionbutton": "^1.1.14",
     "@spectrum-css/checkbox": "^3.1.3",
-    "@spectrum-css/component-builder": "^4.0.2",
-    "@spectrum-css/vars": "^8.0.4",
-    "gulp": "^4.0.0"
+    "@spectrum-css/component-builder": "^4.0.1",
+    "@spectrum-css/vars": "^8.0.3"
   },
   "publishConfig": {
     "access": "public"

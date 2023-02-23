@@ -1,10 +1,9 @@
 {
   "name": "@spectrum-css/page",
-  "version": "5.0.18",
+  "version": "5.0.17",
   "description": "The Spectrum CSS page component",
   "license": "Apache-2.0",
-  "author": "Adobe",
-  "homepage": "https://opensource.adobe.com/spectrum-css/page",
+  "homepage": "https://opensource.adobe.com/spectrum-css/",
   "repository": {
     "type": "git",
     "url": "https://github.com/adobe/spectrum-css.git",
@@ -15,15 +14,14 @@
   },
   "main": "dist/index-vars.css",
   "scripts": {
-    "build": "gulp"
+    "build": "node index.js"
   },
   "dependencies": {
-    "@spectrum-css/vars": "^8.0.4"
+    "@spectrum-css/vars": "^8.0.3"
   },
   "devDependencies": {
-    "@spectrum-css/component-builder": "^4.0.2",
-    "@spectrum-css/vars": "^4.0.0",
-    "gulp": "^4.0.0"
+    "@spectrum-css/component-builder": "^4.0.1",
+    "@spectrum-css/vars": "^4.0.0"
   },
   "publishConfig": {
     "access": "public"

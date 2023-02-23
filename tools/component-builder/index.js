@@ -10,48 +10,68 @@ OF ANY KIND, either express or implied. See the License for the specific languag
 governing permissions and limitations under the License.
 */
 
-const gulp = require('gulp');
-const del = require('del');
+const del = require("del")
 
-const css = require('./css');
-const docs = require('./docs');
+const css = require("./css")
+const docs = require("./docs")
 
-function clean() {
-  return del('dist/*');
+async function clean() {
+  return del("dist/*")
 }
 
-const build = gulp.series(
-  clean,
-  gulp.parallel(
-    css.buildVars,
-    docs.buildDocs
-  )
-);
+const build = async () => {
+  await clean()
+  await Promise.all([css.buildVars(), docs.buildDocs()])
+}
 
-const buildLite = gulp.series(
-  clean,
-  css.buildIndexVars
-);
+const buildLite = async () => {
+  return new Promise((resolve, reject) => {
+    Promise.all([
+      clean(),
+      css.buildIndexVars() // done till here
+    ]).then(() => {
+      resolve();
+    }).catch(err => {
+      reject(err);
+    });
+  });
+}
 
-const buildMedium = gulp.series(
-  clean,
-  css.buildVars
-);
+const buildMedium = async () => {
+  return new Promise((resolve, reject) => {
+    Promise.all([
+      clean(),
+      css.buildVars()
+    ]).then(() => {
+      resolve();
+    }).catch(err => {
+      reject(err);
+    });
+  });
+}
 
-const buildHeavy = gulp.series(
-  clean,
-  css.buildCSS
-);
+const buildHeavy = async () => {
+  return new Promise((resolve, reject) => {
+    Promise.all([
+      clean(),
+      css.buildCSS()
+    ]).then(() => {
+      resolve();
+    }).catch(err => {
+      reject(err);
+    });
+  });
+}
 
-exports.default = build;
-exports.build = build;
-exports.buildLite = buildLite;
-exports.buildMedium = buildMedium;
-exports.buildHeavy = buildHeavy;
-exports.clean = clean;
+exports.default = build
+exports.build = build
+exports.buildLite = buildLite
+exports.buildMedium = buildMedium
+exports.buildHeavy = buildHeavy
+exports.clean = clean
 
-exports.buildCSS = css.buildCSS;
-exports.buildVars = css.buildVars;
+exports.buildCSS = css.buildCSS
+exports.buildVars = css.buildVars
 
-exports.buildDocs = docs.buildDocs;
-exports.buildDocs_html = docs.buildDocs_html;
+exports.buildDocs = docs.buildDocs
+exports.buildDocs_html = docs.buildDocs_html

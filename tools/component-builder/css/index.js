@@ -1,5 +1,5 @@
 /*
-Copyright 2019 Adobe. All rights reserved.
+Copyright 2022 Adobe. All rights reserved.
 This file is licensed to you under the Apache License, Version 2.0 (the "License");
 you may not use this file except in compliance with the License. You may obtain a copy
 of the License at http://www.apache.org/licenses/LICENSE-2.0
@@ -9,57 +9,70 @@ the License is distributed on an "AS IS" BASIS, WITHOUT WARRANTIES OR REPRESENTA
 OF ANY KIND, either express or implied. See the License for the specific language
 governing permissions and limitations under the License.
 */
-
-const gulp = require('gulp');
-const postcss = require('gulp-postcss');
-const concat = require('gulp-concat');
-const processors = require('./processors').processors;
-const rename = require('gulp-rename');
-
-const legacyBuild = require('./legacyBuild');
-const vars = require('./vars');
-
+const fs = require("fs")
+const postcss = require("postcss")
+const processors = require("./processors").processors
+// const legacyBuild = require('./legacyBuild');
+const vars = require("./vars")
+const path = require('path');
+const fg = require("fast-glob")
 // Read in all variables used
 // Read in all vars from recent DNA
 // Include definitions if they refer to a variable, static if not
 
-function buildIndexVars() {
-  return gulp.src([
-    'index.css',
-    'skin.css'
-  ], {
-    allowEmpty: true // Allow missing skin.css
-  })
-    .pipe(concat('index-vars.css'))
-    .pipe(postcss(processors))
-    .pipe(gulp.dest('dist/'));
+async function buildIndexVars() {
+  const files = await fg([
+    "index.css",
+    "skin.css"
+  ]);
+  try {
+    // Allow missing skin.css
+    let contents = "";
+    for (const file of files) {
+      contents += await fs.promises.readFile(file, "utf-8");
+    }
+    try {
+      const result = await postcss(processors).process(contents, { from: 'index.css' });
+      await fs.promises.writeFile(path.join("dist", "index-vars.css"), result.css);
+      console.log("File saved successfully");
+      } catch (error) {
+      console.error("An error occurred while processing CSS:", error);
+    }
+  } catch (e) {
+    console.error(e)
+  }
 }
 
-let buildVars = gulp.series(
-  buildIndexVars,
-  vars.bakeVars
-);
-
-exports.buildIndexVars = buildIndexVars;
-exports.buildVars = buildVars;
-
-exports.buildCSS = gulp.series(
-  buildVars,
-  function copyIndex() {
-    // Just copy index.vars as index.css to maintain backwards compat
-    return gulp.src('dist/index-vars.css')
-      .pipe(rename((file) => {
-        file.basename = 'index';
-      }))
-      .pipe(gulp.dest('dist/'))
+const buildVars = async function () {
+  try {
+    await buildIndexVars()
+  } catch (e) {
+    console.error("Error in buildIndexVars " + e)
   }
-  /*
-  ,gulp.parallel(
-    legacyBuild.buildDiff,
-    legacyBuild.buildMedium,
-    legacyBuild.buildLarge,
-    legacyBuild.buildSingleStops,
-    legacyBuild.buildMultiStops
-  )
-  */
-);
+  try {
+    await vars.bakeVars()
+  } catch (e) {
+    console.error("Error in buildVars " + e)
+  }
+}
+
+exports.buildIndexVars = buildIndexVars
+exports.buildVars = buildVars
+
+exports.buildCSS = async function () {
+  try {
+    await buildVars()
+
+    return new Promise((resolve, reject) => {
+      fs.copyFile("dist/index-vars.css", "dist/index.css", (error) => {
+        if (error) {
+          reject(error)
+        } else {
+          resolve()
+        }
+      })
+    })
+  } catch (e) {
+    console.error(e)
+  }
+}

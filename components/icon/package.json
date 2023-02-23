@@ -1,9 +1,8 @@
 {
   "name": "@spectrum-css/icon",
-  "version": "3.0.33",
+  "version": "3.0.32",
   "description": "The Spectrum CSS icon component",
   "license": "Apache-2.0",
-  "author": "Adobe",
   "homepage": "https://opensource.adobe.com/spectrum-css/",
   "repository": {
     "type": "git",
@@ -15,23 +14,19 @@
   },
   "main": "dist/index-vars.css",
   "scripts": {
-    "build": "gulp",
-    "update": "gulp updateIcons"
+    "build": "node index.js",
+    "update": "node updateIcons.js"
   },
   "peerDependencies": {
     "@spectrum-css/vars": "^8.0.0"
   },
   "devDependencies": {
-    "@spectrum-css/component-builder": "^4.0.2",
-    "@spectrum-css/vars": "^8.0.4",
-    "gulp": "^4.0.0",
-    "gulp-rename": "^1.4.0",
-    "gulp-replace": "^1.0.0",
-    "gulp-sort": "^2.0.0",
-    "gulp-svgcombiner": "^1.0.1",
-    "gulp-svgmin": "^2.1.0",
-    "gulp-svgstore": "^7.0.1",
-    "vinyl-paths": "^3.0.1"
+    "@spectrum-css/component-builder": "^4.0.1",
+    "@spectrum-css/vars": "^8.0.3",
+    "vinyl-paths": "^3.0.1",
+    "svgstore": "3.0.1",
+    "svgcombiner": "1.0.1",
+    "svgo":"3.0.2"
   },
   "publishConfig": {
     "access": "public"

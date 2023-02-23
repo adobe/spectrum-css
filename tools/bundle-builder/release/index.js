@@ -1,5 +1,5 @@
 /*
-Copyright 2019 Adobe. All rights reserved.
+Copyright 2022 Adobe. All rights reserved.
 This file is licensed to you under the Apache License, Version 2.0 (the "License");
 you may not use this file except in compliance with the License. You may obtain a copy
 of the License at http://www.apache.org/licenses/LICENSE-2.0
@@ -8,107 +8,172 @@ the License is distributed on an "AS IS" BASIS, WITHOUT WARRANTIES OR REPRESENTA
 OF ANY KIND, either express or implied. See the License for the specific language
 governing permissions and limitations under the License.
 */
+const fs = require('fs')
 
-const fsp = require('fs').promises;
-const gulp = require('gulp');
-const logger = require('gulplog');
-const del = require('del');
+const del = require("del")
+const exec = require("../lib/exec")
+const dirs = require("../lib/dirs")
+const logger = require('../lib/logger')
+const updateDeps = require("./updateDeps")
 
-const exec = require('../lib/exec');
-const dirs = require('../lib/dirs');
 
+/**
+ * @description delete icons and var folders
+ * @returns 
+ */
 function releaseBackwardsCompatCleanup() {
   return del([
     // Don't bother deleting dist/icons, we want it in gh-pages output
-    'icons',
-    'vars'
-  ]);
-};
+    "icons",
+    "vars",
+  ])
+}
 
-let releaseBackwardsCompat = gulp.parallel(
-  gulp.series(
-    releaseBackwardsCompatCleanup,
+const releaseBackwardsCompat = async () => {
+  await releaseBackwardsCompatCleanup()
 
-    gulp.parallel(
-      function releaseBackwardsCompat_copyUIIcons() {
-        return gulp.src(
-          `${dirs.components}/icon/{medium,large,combined}/**`
-        )
-          .pipe(gulp.dest('icons/'));
-      },
-      function releaseBackwardsCompat_copyUIIconSprites() {
-        return gulp.src(
-          `${dirs.components}/icon/dist/spectrum-css-icons*.svg`
-        )
-          .pipe(gulp.dest('dist/icons/'));
-      },
-      function releaseBackwardsCompat_copyRootVars() {
-        return gulp.src(
-          `${dirs.components}/vars/dist/*`
-        )
-          .pipe(gulp.dest('vars/'));
-      },
-      function releaseBackwardsCompat_copyDistVars() {
-        return gulp.src(
-          `${dirs.components}/vars/dist/*`
-        )
-          .pipe(gulp.dest('dist/vars/'));
-      }
-    )
-  )
-);
+  await Promise.all([
+    new Promise((resolve, reject) => {
+      fs.readdir(
+        `${dirs.components}/icon/{medium,large,combined}`,
+        (err, fileNames) => {
+          if (err) {
+            reject(err)
+            return
+          }
+
+          fileNames.forEach((fileName) => {
+            fs.copyFile(
+              `${dirs.components}/icon/{medium,large,combined}/${fileName}`,
+              `icons/${fileName}`,
+              (err) => {
+                if (err) {
+                  reject(err)
+                }
+              }
+            )
+          })
+
+          resolve()
+        }
+      )
+    }),
+    new Promise((resolve, reject) => {
+      fs.readdir(`${dirs.components}/icon/dist`, (err, fileNames) => {
+        if (err) {
+          reject(err)
+          return
+        }
+
+        fileNames.forEach((fileName) => {
+          if (fileName.startsWith("spectrum-css-icons")) {
+            fs.copyFile(
+              `${dirs.components}/icon/dist/${fileName}`,
+              `dist/icons/${fileName}`,
+              (err) => {
+                if (err) {
+                  reject(err)
+                }
+              }
+            )
+          }
+        })
+
+        resolve()
+      })
+    }),
+    new Promise((resolve, reject) => {
+      fs.readdir(`${dirs.components}/vars/dist`, (err, fileNames) => {
+        if (err) {
+          reject(err)
+          return
+        }
+
+        fileNames.forEach((fileName) => {
+          fs.copyFile(
+            `${dirs.components}/vars/dist/${fileName}`,
+            `vars/${fileName}`,
+            (err) => {
+              if (err) {
+                reject(err)
+              }
+            }
+          )
+        })
+        resolve()
+      })
+    }),
+    new Promise((resolve, reject) => {
+      fs.readdir(`${dirs.components}/vars/dist`, (err, fileNames) => {
+        if (err) {
+          reject(err)
+          return
+        }
+
+        fileNames.forEach((fileName) => {
+          fs.copyFile(
+            `${dirs.components}/vars/dist/${fileName}`,
+            `dist/vars/${fileName}`,
+            (err) => {
+              if (err) {
+                reject(err)
+              }
+            }
+          )
+        })
+        resolve()
+      })
+    }),
+  ])
+}
 
 let stashRequired = false;
 let releaseVersion = null;
-let ghPages = gulp.series(
-  async function getVersion(cb) {
-    let pkg = JSON.parse(await fsp.readFile(`${process.cwd()}/package.json`));
+
+const ghPages = async function() {
+  try {
+    // Get the version number from package.json
+    const pkg = JSON.parse(await fs.readFile(`${process.cwd()}/package.json`));
     releaseVersion = pkg.version;
-  },
-  // Stash changes (package.json is modified by Lerna)
-  function checkStatus(cb) {
+
+    // Check if the directory is clean
     logger.debug('Checking if directory is clean...');
-    exec.command(`git diff --name-only`, function(err, stdout, stderr) {
-      if (stdout) {
-        logger.debug('Directory dirty, stashing...');
-        stashRequired = true;
-        exec.command('git stash', cb, { pipe: false });
-      }
-      else {
-        logger.debug('Directory clean, continuing...');
-        cb(err);
-      }
-    }, { pipe: false });
-  },
-  exec.task('checkoutPages', `git checkout gh-pages`),
-  exec.task('pullPages', 'git pull'),
-  function copyPages(cb) {
-    exec.command(`cp -r dist ${dirs.topLevel}/${releaseVersion}`, cb);
-  },
-  // todo: update gh-pages index files if not alpha release
-  function addPages(cb) {
-    exec.command(`git add ${dirs.topLevel}/${releaseVersion}`, cb);
-  },
-  function commitPages(cb) {
-    exec.command(`git commit -q -m "Deploy version ${releaseVersion}"`, cb);
-  },
-  exec.task('pushPages', 'git push'),
-  // Go back to the previous branch
-  exec.task('checkoutBranch', 'git checkout -'),
-  // Pop changes to get Lerna's modification back
-  function popStash(cb) {
+    const { stdout } = await exec.command(`git diff --name-only`);
+    if (stdout) {
+      logger.debug('Directory dirty, stashing...');
+      stashRequired = true;
+      await exec.command('git stash');
+    } else {
+      logger.debug('Directory clean, continuing...');
+    }
+
+    // Checkout the gh-pages branch
+    await exec.command('git checkout gh-pages');
+    await exec.command('git pull');
+
+    // Copy the contents of the dist folder to the versioned directory
+    await exec.command(`cp -r dist ${dirs.topLevel}/${releaseVersion}`);
+
+    // todo: update gh-pages index files if not alpha release
+    await exec.command(`git add ${dirs.topLevel}/${releaseVersion}`);
+    await exec.command(`git commit -q -m "Deploy version ${releaseVersion}"`);
+    await exec.command('git push');
+
+    // Go back to the previous branch
+    await exec.command('git checkout -');
+
+    // Pop changes to get Lerna's modification back
     if (stashRequired) {
-      exec.command(`git stash pop`, cb, { pipe: false });
+      await exec.command(`git stash pop`);
     }
-    else {
-      cb();
-    }
+  } catch (err) {
+    // Handle any errors that may have occurred
+    console.error("Error in release " + err);
   }
-);
+};
 
-const updateDeps = require('./updateDeps');
-Object.assign(exports, updateDeps);
+Object.assign(exports, updateDeps)
 
-exports.ghPages = ghPages;
-exports.releaseBackwardsCompat = releaseBackwardsCompat;
-exports.releaseBackwardsCompatCleanup = releaseBackwardsCompatCleanup;
+exports.ghPages = ghPages
+exports.releaseBackwardsCompat = releaseBackwardsCompat
+exports.releaseBackwardsCompatCleanup = releaseBackwardsCompatCleanup

@@ -21,7 +21,6 @@ loadIcons('img/spectrum-icons.svg');
 function toggleMarkupVisibility(event) {
   event.preventDefault();
   var exampleMarkup = event.target.closest('.spectrum-CSSExample-markup');
-  var style = window.getComputedStyle(exampleMarkup);
   var isOpen = exampleMarkup.classList.contains('is-open');
   event.target.innerHTML = isOpen ? 'Show markup' : 'Hide markup';
   exampleMarkup.classList.toggle('is-open');

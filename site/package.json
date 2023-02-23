@@ -1,0 +1,33 @@
+{
+  "name": "@spectrum-css/documentation",
+  "version": "1.0.0",
+  "description": "Documentation site workspace",
+  "license": "Apache-2.0",
+  "author": "Adobe",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/adobe/spectrum-css.git",
+    "directory": "site/"
+  },
+  "bugs": {
+    "url": "https://github.com/adobe/spectrum-css/issues"
+  },
+  "main": ".eleventy.js",
+  "scripts": {
+    "clean": "rimraf ../dist/docs/{css,img,js}",
+    "build": "eleventy --config=.eleventy.js",
+    "dev": "eleventy --config=.eleventy.js --serve --watch"
+  },
+  "devDependencies": {
+    "@adobe/focus-ring-polyfill": "^0.1.5",
+    "@11ty/eleventy": "^1.0.2",
+    "@11ty/eleventy-plugin-syntaxhighlight": "^4.2.0",
+    "loadicons": "^1.0.0",
+    "lunr": "^2.3.6",
+    "fast-glob": "^3.2.0",
+    "js-yaml": "^3.13.1",
+    "prismjs": "^1.23.0",
+    "markdown-it": "^12.3.2",
+    "markdown-it-anchor": "^8.6.5"
+  }
+}

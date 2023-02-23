@@ -1,10 +1,9 @@
 {
   "name": "@spectrum-css/toast",
-  "version": "9.0.2",
+  "version": "9.0.1",
   "description": "The Spectrum CSS toast component",
   "license": "Apache-2.0",
-  "author": "Adobe",
-  "homepage": "https://opensource.adobe.com/spectrum-css/toast",
+  "homepage": "https://opensource.adobe.com/spectrum-css/",
   "repository": {
     "type": "git",
     "url": "https://github.com/adobe/spectrum-css.git",
@@ -15,21 +14,20 @@
   },
   "main": "dist/index-vars.css",
   "scripts": {
-    "build": "gulp"
+    "build": "node index.js"
   },
   "peerDependencies": {
-    "@spectrum-css/button": "^6.0.0 || ^7.0.0 || ^8.0.0 || ^9.0.0",
+    "@spectrum-css/button": "^6.0.0",
     "@spectrum-css/closebutton": "^3.0.0",
-    "@spectrum-css/icon": "^3.0.0",
-    "@spectrum-css/tokens": "^7.0.0"
+    "@spectrum-css/icon": "^3.0.13",
+    "@spectrum-css/tokens": "^6.0.0"
   },
   "devDependencies": {
     "@spectrum-css/button": "^6.0.21",
-    "@spectrum-css/closebutton": "^3.0.14",
-    "@spectrum-css/component-builder-simple": "^2.0.5",
-    "@spectrum-css/icon": "^3.0.33",
-    "@spectrum-css/tokens": "^7.1.0",
-    "gulp": "^4.0.0"
+    "@spectrum-css/closebutton": "^3.0.13",
+    "@spectrum-css/component-builder-simple": "^2.0.4",
+    "@spectrum-css/icon": "^3.0.32",
+    "@spectrum-css/tokens": "^7.0.0"
   },
   "publishConfig": {
     "access": "public"

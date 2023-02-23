@@ -1,10 +1,9 @@
 {
   "name": "@spectrum-css/actiongroup",
-  "version": "3.0.15",
+  "version": "3.0.14",
   "description": "The Spectrum CSS actiongroup component",
   "license": "Apache-2.0",
-  "author": "Adobe",
-  "homepage": "https://opensource.adobe.com/spectrum-css/actiongroup",
+  "homepage": "https://opensource.adobe.com/spectrum-css/",
   "repository": {
     "type": "git",
     "url": "https://github.com/adobe/spectrum-css.git",
@@ -15,18 +14,17 @@
   },
   "main": "dist/index-vars.css",
   "scripts": {
-    "build": "gulp"
+    "build": "node index.js"
   },
   "peerDependencies": {
     "@spectrum-css/actionbutton": "^3.0.0",
-    "@spectrum-css/tokens": "^7.0.0"
+    "@spectrum-css/tokens": "^6.0.0"
   },
   "devDependencies": {
-    "@spectrum-css/actionbutton": "^3.0.14",
-    "@spectrum-css/component-builder-simple": "^2.0.5",
-    "@spectrum-css/icon": "^3.0.33",
-    "@spectrum-css/tokens": "^7.1.0",
-    "gulp": "^4.0.0"
+    "@spectrum-css/actionbutton": "^3.0.13",
+    "@spectrum-css/component-builder-simple": "^2.0.4",
+    "@spectrum-css/icon": "^3.0.32",
+    "@spectrum-css/tokens": "^7.0.0"
   },
   "publishConfig": {
     "access": "public"

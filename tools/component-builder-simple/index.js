@@ -9,28 +9,30 @@ the License is distributed on an "AS IS" BASIS, WITHOUT WARRANTIES OR REPRESENTA
 OF ANY KIND, either express or implied. See the License for the specific language
 governing permissions and limitations under the License.
 */
-
-const gulp = require('gulp');
-const rename = require('gulp-rename');
+const fs = require('fs')
 const del = require('del');
 const css = require('./css');
+const path = require("path");
 
 function clean() {
   return del('dist/*');
 }
 
-const build = gulp.series(
-  clean,
-  css.buildCSS,
-  function copyIndex() {
-    // Just copy index.vars as index.css to maintain backwards compat
-    return gulp.src('dist/index.css')
-      .pipe(rename((file) => {
-        file.basename = 'index-vars';
-      }))
-      .pipe(gulp.dest('dist/'))
+async function copyIndex() {
+  const indexCSS = fs.readFileSync(path.join('dist', 'index.css'), 'utf8');
+  fs.writeFileSync(path.join('dist', 'index-vars.css'), indexCSS);
+}
+
+
+const build = async () => {
+  try {
+      await clean();
+      await css.buildCSS();
+      await copyIndex()
+  } catch (err) {
+      console.error("Error in component buildersimple " + err);
   }
-);
+}
 
 exports.default = build;
 exports.build = build;

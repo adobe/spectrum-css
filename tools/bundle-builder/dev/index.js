@@ -1,5 +1,5 @@
 /*
-Copyright 2019 Adobe. All rights reserved.
+Copyright 2022 Adobe. All rights reserved.
 This file is licensed to you under the Apache License, Version 2.0 (the "License");
 you may not use this file except in compliance with the License. You may obtain a copy
 of the License at http://www.apache.org/licenses/LICENSE-2.0
@@ -10,61 +10,57 @@ OF ANY KIND, either express or implied. See the License for the specific languag
 governing permissions and limitations under the License.
 */
 
-const gulp = require('gulp');
-const logger = require('gulplog');
-const browserSync = require('browser-sync');
-const path = require('path');
-const dirs = require('../lib/dirs');
-
-const docs = require('../docs');
-const subrunner = require('../subrunner');
-const bundleBuilder = require('../index.js');
-
+const fs = require("fs")
+const browserSync = require("browser-sync")
+const path = require("path")
+const glob = require("glob")
+const chokidar = require("chokidar")
+const async = require("async")
+const logger = require("../lib/logger")
+const dirs = require("../lib/dirs")
+const docs = require("../docs")
+const subrunner = require("../subrunner")
+const bundleBuilder = require("../index.js")
 
 function serve() {
-
-  let PORT = 3000;
+  let PORT = 3000
 
   if (process.env.BROWSERSYNC_PORT) {
-    PORT = process.env.BROWSERSYNC_PORT;
-    logger.info(`Setting '${PORT} as port for browsersync, which hopefully is valid`);
+    PORT = process.env.BROWSERSYNC_PORT
+    logger.info(`Setting '${PORT} as port for browsersync, which hopefully is valid`)
   }
 
-  if (process.env.BROWSERSYNC_OPEN === 'true') {
-    logger.info('New browser instance will open');
+  if (process.env.BROWSERSYNC_OPEN === "true") {
+    logger.info("New browser instance will open")
   }
 
   browserSync({
-    startPath: 'docs/index.html',
+    startPath: "docs/index.html",
     server: `${process.cwd()}/dist/`,
-    notify: process.env.BROWSERSYNC_NOTIFY === 'true' ? true : false,
-    open: process.env.BROWSERSYNC_OPEN === 'true' ? true : false,
-    port: PORT
-  });
+    notify: process.env.BROWSERSYNC_NOTIFY === "true",
+    open: process.env.BROWSERSYNC_OPEN === "true",
+    port: PORT,
+  })
 }
 
 function getPackageFromPath(filePath) {
-  return filePath.match(`${dirs.components}\/(.*?)\/`)[1];
+  return filePath.match(`${dirs.components}/(.*?)/`)[1]
 }
 
-/*
-  Watch for changes to globs matching files within packages, execute task for that package, and copy/inject specified files
-*/
-function watchWithinPackages(glob, task, files) {
-  logger.debug(`Watching ${glob}, will run ${task} and stream ${files}`);
-
-  let watcher = gulp.watch(glob, {
+function watchWithinPackages(globContent, task, files) {
+  // Code to log the start of the watch goes here
+  logger.debug(`Watching ${globContent}, will run ${task} and stream ${files}`)
+  let changedFile = null
+  const watcher = chokidar.watch(globContent, {
     // Otherwise we get infinite loops because chokidar gets all crazy with symlinked deps
-    followSymlinks: false
-  }, function handleChanged(done) {
+    followSymlinks: false,
+  }, (done) => {
     if (!changedFile) {
       done();
       return;
     }
-
-    let packageName = getPackageFromPath(changedFile);
-    let packageDir = path.join(dirs.components, packageName);
-
+    const packageName = getPackageFromPath(changedFile);
+    const packageDir = path.join(dirs.components, packageName);
     if (typeof task === 'function') {
       task(changedFile, packageName, (err) => {
         done(err);
@@ -77,150 +73,199 @@ function watchWithinPackages(glob, task, files) {
           changedFile = null;
           return done(err);
         }
-
         // Copy files
-        gulp.src(`${dirs.components}/${packageName}/dist/${files}`)
-          .pipe(gulp.dest(`dist/components/${packageName}/`))
-          .on('end', () => {
+        fs.copyFile(`${dirs.components}/${packageName}/dist/${files}`, 
+          `dist/components/${packageName}/`,
+          (error) => {
+            if (error) {
+              changedFile = null;
+              return done(err);
+            }
             logger.debug(`Injecting files from ${packageName}/:\n  ${files}`);
 
             // Inject
-            gulp.src(`dist/components/${packageName}/${files}`)
-              .pipe(browserSync.stream());
-
+            browserSync.reload();
             changedFile = null;
-
-            done();
-          })
-          .on('error', (err) => {
-            changedFile = null;
-
-            done(err);
+            done();         
           });
       });
     }
   });
 
-  let changedFile = null;
-  watcher.on('change', (filePath) => {
-    logger.debug(`Got change for ${filePath}`);
+  watcher.on("change", (filePath) => {
+    logger.debug(`Got change for ${filePath}`)
 
     if (changedFile === null) {
-      changedFile = filePath;
+      changedFile = filePath
     }
-  });
+  })
 }
 
 function reload(cb) {
-  browserSync.reload();
+  browserSync.reload()
   if (cb) {
-    cb();
+    cb()
   }
 }
 
 function watchSite() {
-  gulp.watch(
-    `${dirs.site}/*.pug`,
-    gulp.series(
-      docs.buildSite_pages,
-      reload
-    )
-  );
+  // *.njk
+  const pattern1 = path.join(dirs.site, "*.njk")
+  glob(pattern1, (error, files) => {
+    if (error) {
+      console.error("Error in bundle_builder dev " + error)
+      return
+    }
 
-  gulp.watch(
-    `${dirs.site}/includes/*.pug`,
-    gulp.series(
-      gulp.parallel(
-        docs.buildSite_html,
-        docs.buildDocs
-      ),
-      reload
-    )
-  );
+    files.forEach((file) => {
+      chokidar.watch(file, async (eventType) => {
+        if (eventType === "change") {
+          try {
+            await docs.buildSite_pages()
+            await reload()
+          } catch (e) {
+            console.err(e)
+          }
+        }
+      })
+    })
+  })
 
-  gulp.watch(
-    [
-      `${dirs.site}/templates/siteComponent.pug`,
-      `${dirs.site}/util.js`
-    ],
-    gulp.series(
-      gulp.parallel(
-        docs.buildDocs
-      ),
-      reload
-    )
-  );
+  // inlucdes/*.njk
+  const pattern2 = path.join(dirs.site, "includes/*.njk")
+  glob(pattern2, (error, files) => {
+    if (error) {
+      console.error("Error in bundle_builder dev " + error)
+      return
+    }
 
-  gulp.watch(
-    [
-      `${dirs.site}/resources/css/*.css`,
-      `${dirs.site}/resources/js/*.js`
-    ],
-    gulp.series(
-      docs.buildSite_copyFreshResources,
-      function injectSiteResources() {
-        return gulp.src([
-          'dist/docs/css/**/*.css',
-          'dist/docs/js/**/*.js'
-        ])
-          .pipe(browserSync.stream());
+    files.forEach((file) => {
+      chokidar.watch(file, async (eventType) => {
+        if (eventType === "change") {
+          try {
+            await Promise.all([
+              docs.buildSite_html(),
+              docs.buildDocs()
+            ])
+            await reload();
+          } catch (e) {
+            console.error(e)
+          }
+        }
+      })
+    })
+  })
+
+  // templates/siteComponent.njk
+  const templates = [
+    path.join(dirs.site, "templates", "siteComponent.njk"),
+    path.join(dirs.site, "util.js"),
+  ]
+  templates.forEach((template) => {
+    chokidar.watch(template, async (eventType) => {
+      if (eventType === "change") {
+        try {
+          await Promise.all([
+            docs.buildDocs()
+          ])
+          await reload()
+        } catch (e) {
+          console.error(e)
+        }        
       }
-    )
-  );
+    })
+  })
+
+  const patterns = [
+    path.join(dirs.site, "resources", "css", "*.css"),
+    path.join(dirs.site, "resources", "js", "*.js"),
+  ]
+
+  patterns.forEach((pattern) => {
+    glob(pattern, (error, files) => {
+      if (error) {
+        console.error("Error in bundle_builder dev " + error)
+        return
+      }
+
+      files.forEach((file) => {
+        chokidar.watch(file, async (eventType) => {
+          if (eventType === "change") {
+            try {
+              await docs.buildSite_copyFreshResources();
+              async function injectSiteResources() {
+                const cssFiles = fs.readdirSync(path.join('dist', 'docs', 'css')).filter((fl) => fl.endsWith('.css'));
+                const jsFiles = fs.readdirSync(path.join('dist', 'docs', 'js')).filter((fl) => fl.endsWith('.js'));
+                const allFiles = [...cssFiles, ...jsFiles];
+                allFiles.forEach((fl) => {
+                  browserSync.stream(path.join('dist', 'docs', fl));
+                });
+              }
+            } catch (e) {
+              console.error(e)
+            }
+          }
+        })
+      })
+    })
+  })
 }
 
-function watchCommons() {  
-  gulp.watch(
-    [`${dirs.components}/commons/*.css`], 
-    gulp.series(bundleBuilder.buildDepenenciesOfCommons, bundleBuilder.copyPackages, reload)
-  );
+function watchCommons() {
+  chokidar.watch(`${dirs.components}/commons/*.css`, async (eventType) => {
+    if (eventType === "change") {
+      try {
+        await bundleBuilder.buildDepenenciesOfCommons();
+        await bundleBuilder.copyPackages();
+        await reload()
+      } catch (e) {
+        console.error(e)
+      }
+    }
+  })
 }
 
 function watch() {
-  serve();
+  serve()
 
-  watchCommons();
+  watchCommons()
 
   watchWithinPackages(`${dirs.components}/tokens/custom-*/*.css`, 'rebuildCustoms', '*.css');
 
   watchWithinPackages(`${dirs.components}/*/{index,skin}.css`, 'buildMedium', '*.css');
   watchWithinPackages(`${dirs.components}/*/themes/{spectrum,express}.css`, 'buildMedium', '*.css');
 
-
   watchWithinPackages(
     [
       `${dirs.components}/*/metadata/*.yml`,
-      `${dirs.components}/*/metadata.yml`
+      `${dirs.components}/*/metadata.yml`,
     ],
-    (changedFile, package, done) => {
-      // Do this as gulp tasks to avoid premature stream termination
+    (changedFile, packageContent, done) => {
       try {
-        let result = gulp.series(
+        let result = async.series(
           // Get data first so nav builds
-          function buildSite_getData() {
-            logger.debug(`Building nav data for ${package}`);
+          () => {
+            logger.debug(`Building nav data for ${packageContent}`)
             return docs.buildSite_getData()
           },
-          function buildDocs_forDep() {
-            logger.debug(`Building docs for ${package}`);
-            return docs.buildDocs_forDep(package)
+          () => {
+            logger.debug(`Building docs for ${packageContent}`)
+            return docs.buildDocs_forDep(packageContent)
           }
-          )();
+        )()
         // this catches yaml parsing errors
-        // should stop the series from running 
-        } catch (error) {
-          done(error);
-        } finally {
-          // we have to do this 
-          // or gulp will get wedged by the error
-          done();
-          reload();
-        }
+        // should stop the series from running
+      } catch (error) {
+        done(error)
+      } finally {
+        // we have to do this
+        done()
+        reload()
+      }
     }
-  );
-    
-  watchSite();
+  )
 
+  watchSite()
 }
 
-exports.watch = watch;
+exports.watch = watch
