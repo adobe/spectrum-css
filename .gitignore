@@ -9,6 +9,8 @@ npm-debug.log*
 .idea
 lerna-debug.log
 yarn-error.log
+.env
+build-storybook.log
 
 # Storybook build output
 tools/preview/storybook-static
