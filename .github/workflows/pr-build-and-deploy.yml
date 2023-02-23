@@ -5,36 +5,61 @@ on:
     branches:
       - 'main'
   pull_request:
+    types:
+      - opened
+      - reopened
+      - synchronize
+      - ready_for_review
 
 jobs:
   build:
     runs-on: ubuntu-latest
-
     steps:
-      - name: Check out code
+      - name: 'Check out code'
         uses: actions/checkout@v3
-      - name: Use Node LTS version
+      - name: 'Use Node LTS version'
         uses: actions/setup-node@v3
         with:
           node-version: 16.15.0
-      - name: Install dependencies
+      - name: 'Install dependencies'
         run: yarn install
-      - name: Build everything
+      - name: 'Build everything'
         run: yarn build
-      - name: Deploy to Netlify
-        uses: nwtgck/actions-netlify@v1.2.3
-        with:
-          publish-dir: 'dist'
-          production-branch: 'main'
-          production-deploy: false
-          netlify-config-path: ./netlify.toml
-          github-token: ${{ secrets.GITHUB_TOKEN }}
-          deploy-message: ${{ github.event.pull_request.title }}
-          enable-pull-request-comment: true
-          enable-commit-comment: false
-          overwrites-pull-request-comment: true
-          alias: pr-${{ github.event.number }}
-        env:
-          NETLIFY_AUTH_TOKEN: ${{ secrets.NETLIFY_AUTH_TOKEN_GH_ACTIONS_DEPLOY }}
-          NETLIFY_SITE_ID: ${{ secrets.NETLIFY_SITE_ID }}
-        timeout-minutes: 10
+  deploy:
+    - name: 'Deploy to Netlify'
+      needs: build
+      runs-on: ubuntu-latest
+      uses: nwtgck/actions-netlify@v1.2.3
+      with:
+        publish-dir: 'dist'
+        production-branch: 'main'
+        production-deploy: false
+        netlify-config-path: ./netlify.toml
+        github-token: ${{ secrets.GITHUB_TOKEN }}
+        deploy-message: ${{ github.event.pull_request.title }}
+        enable-pull-request-comment: true
+        enable-commit-comment: false
+        overwrites-pull-request-comment: true
+        alias: pr-${{ github.event.number }}
+      env:
+        NETLIFY_AUTH_TOKEN: ${{ secrets.NETLIFY_AUTH_TOKEN_GH_ACTIONS_DEPLOY }}
+        NETLIFY_SITE_ID: ${{ secrets.NETLIFY_SITE_ID }}
+      timeout-minutes: 10
+  chromatic-deployment:
+    - name: 'Deploy to Chromatic'
+      needs: build
+      runs-on: ubuntu-latest
+      steps:
+        - name: 'Check out code'
+          uses: actions/checkout@v3
+          with:
+            fetch-depth: 0 # 👈 Required for Chromatic to retrieve git history
+          run: yarn
+        - name: 'Publish Storybook to Chromatic'
+          uses: chromaui/action@v1
+          with:
+            projectToken: ${{ secrets.CHROMATIC_PROJECT_TOKEN }}
+
+
+
+  
