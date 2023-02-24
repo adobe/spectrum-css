@@ -6,20 +6,20 @@ export default {
   description: "The Color handle component is...",
   component: "Colorhandle",
   argTypes: {
-    size: {
-      name: "Size",
-      type: { name: "string", required: true },
+    isDisabled: {
+      name: "Disabled",
+      type: { name: "boolean" },
       table: {
-        type: { summary: "string" },
-        category: "Component",
+        type: { summary: "boolean" },
+        category: "State",
       },
-      options: ["s", "m", "l", "xl"],
-      control: "select"
+      control: "boolean"
     },
   },
   args: {
-    rootClass: "spectrum-",
+    rootClass: "spectrum-ColorHandle",
     size: "m",
+    isDisabled: false,
   },
   parameters: {
     actions: {
