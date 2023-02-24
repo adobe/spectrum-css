@@ -49,5 +49,5 @@ jobs:
       - name: Publish to Chromatic
         uses: chromaui/action@v1
         with:
-          storybookBuildDir: ./dist/preview
+          storybookBuildDir: dist/preview
           projectToken: ${{ secrets.CHROMATIC_PROJECT_TOKEN }}
