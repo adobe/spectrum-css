@@ -4,22 +4,22 @@ import { Template } from "./template";
 export default {
   title: "Breadcrumb",
   description: "The Breadcrumb component is...",
-  component: "Breadcrumb",
+  component: "Breadcrumbs",
   argTypes: {
-    size: {
-      name: "Size",
-      type: { name: "string", required: true },
+    items: { table: { disable: true } },
+    variant: {
+      name: "Variants",
+      type: { name: "string" },
       table: {
         type: { summary: "string" },
         category: "Component",
       },
-      options: ["s", "m", "l", "xl"],
-      control: "select"
+      options: ["compact", "multiline"],
+      control: "inline-radio",
     },
   },
   args: {
-    rootClass: "spectrum-",
-    size: "m",
+    rootClass: "spectrum-Breadcrumbs",
   },
   parameters: {
     actions: {
@@ -32,4 +32,29 @@ export default {
 };
 
 export const Default = Template.bind({});
-Default.args = {};
+Default.args = {
+  items: [{
+    label: "Nav root",
+    isDragged: true,
+  }, {
+    label: "Trend",
+    isDisabled: true,
+  }, {
+    label: "January 2019 Assets",
+  }],
+};
+
+export const NestedMultiline = Template.bind({});
+NestedMultiline.args = {
+  items: [{
+    label: "Nav root",
+  }, {
+    icon: "FolderOpen",
+    isDisabled: true,
+  }, {
+    label: "Trend",
+  }, {
+    label: "January 2019 Assets",
+  }],
+  variant: "multiline",
+};
