@@ -22,9 +22,27 @@ export default {
       type: { name: "string" },
       table: {
         type: { summary: "string" },
-        category: "Component",
+        category: "Content",
       },
       control: { type: "text" },
+    },
+    isEmphasized: {
+      name: "Emphasized styling",
+      type: { name: "boolean" },
+      table: {
+        type: { summary: "boolean" },
+        category: "Component",
+      },
+      control: { type: "boolean" },
+    },
+    isDisabled: {
+      name: "Disabled",
+      type: { name: "boolean" },
+      table: {
+        type: { summary: "boolean" },
+        category: "State",
+      },
+      control: "boolean",
     },
     isChecked: {
       name: "Checked",
@@ -41,6 +59,8 @@ export default {
     size: "m",
     label: "Checkbox",
     isChecked: false,
+    isDisabled: false,
+    isEmphasized: false,
   },
   parameters: {
     actions: {

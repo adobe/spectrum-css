@@ -1,7 +1,7 @@
 import { html } from 'lit-html';
 import { classMap } from 'lit-html/directives/class-map.js';
-import { Template as ColorHandle } from "@spectrum-css/colorhandle/stories/template.js";
 
+import { Template as ColorHandle } from "@spectrum-css/colorhandle/stories/template.js";
 
 import '../index.css';
 import '../skin.css';
