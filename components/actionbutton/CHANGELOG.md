@@ -3,6 +3,18 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+<a name="3.0.15"></a>
+## 3.0.15
+🗓 2023-02-24 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/actionbutton@3.0.14...@spectrum-css/actionbutton@3.0.15)
+
+### 🐛 Bug fixes
+
+* **actionbutton:** fix variable used in documentation ([#1630](https://github.com/adobe/spectrum-css/issues/1630)) ([348f263](https://github.com/adobe/spectrum-css/commit/348f263))
+
+
+
+
+
 <a name="3.0.14"></a>
 ## 3.0.14
 🗓 2023-02-21 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/actionbutton@3.0.13...@spectrum-css/actionbutton@3.0.14)

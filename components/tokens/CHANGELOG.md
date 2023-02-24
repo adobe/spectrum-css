@@ -3,6 +3,18 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+<a name="7.2.0"></a>
+# 7.2.0
+🗓 2023-02-24 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/tokens@7.1.0...@spectrum-css/tokens@7.2.0)
+
+### ✨ Features
+
+* **tokens:** adds colorwheel and colorhandle custom tokens ([#1634](https://github.com/adobe/spectrum-css/issues/1634)) ([e55c35d](https://github.com/adobe/spectrum-css/commit/e55c35d))
+
+
+
+
+
 <a name="7.1.0"></a>
 # 7.1.0
 🗓 2023-02-21 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/tokens@7.0.0...@spectrum-css/tokens@7.1.0)
