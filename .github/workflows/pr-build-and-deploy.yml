@@ -49,4 +49,5 @@ jobs:
         uses: chromaui/action@v1
         with:
           buildScriptName: 'build:preview'
+          storybookBuildDir: ./dist/preview
           projectToken: ${{ secrets.CHROMATIC_PROJECT_TOKEN }}
