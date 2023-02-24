@@ -44,8 +44,12 @@ jobs:
     steps:
       - name: Check out code
         uses: actions/checkout@v1
+      - name: Use Node LTS version
+        uses: actions/setup-node@v3
+        with:
+          node-version: 16.15.0
       - name: Install dependencies
-        run: yarn
+        run: yarn install
       - name: Build Storybook
         run: yarn build
       - name: Publish to Chromatic
