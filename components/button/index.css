@@ -103,6 +103,7 @@ governing permissions and limitations under the License.
   min-inline-size: var(--mod-button-min-width, var(--spectrum-button-min-width));
   min-block-size: var(--mod-spectrum-button-height, var(--spectrum-button-height));
   /* Start with text-only padding */
+  padding-block: 0;
   padding-inline: var(--mod-button-edge-to-text, var(--spectrum-button-edge-to-text));
   position: relative;
   
