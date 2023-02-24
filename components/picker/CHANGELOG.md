@@ -3,6 +3,18 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+<a name="2.0.3"></a>
+## 2.0.3
+🗓 2023-02-24 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/picker@2.0.2...@spectrum-css/picker@2.0.3)
+
+### 🐛 Bug fixes
+
+* **picker:** resolve font-style, focus-ring, border issues ([#1618](https://github.com/adobe/spectrum-css/issues/1618)) ([c8f7c3b](https://github.com/adobe/spectrum-css/commit/c8f7c3b))
+
+
+
+
+
 <a name="2.0.2"></a>
 ## 2.0.2
 🗓 2023-02-24 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/picker@2.0.1...@spectrum-css/picker@2.0.2)
