@@ -9,6 +9,7 @@ import '../index.css';
 export const Template = ({
   rootClass = "spectrum-ColorArea",
   customClasses = [],
+  isDisabled = false,
   size = "m",
   // ...globals
 }) => {
@@ -16,10 +17,9 @@ export const Template = ({
     <div class=${classMap({
     [rootClass]: true,
     [`${rootClass}--size${size?.toUpperCase()}`]: typeof size !== "undefined",
-    // 'is-disabled': isDisabled,
+    'is-disabled': isDisabled,
     ...customClasses.reduce((a, c) => ({ ...a, [c]: true }), {}),
-  })}>
-  <div class="spectrum-ColorArea">
+  })} ?disabled=${isDisabled}}>
   <div class="spectrum-ColorArea-gradient" style="background: linear-gradient(to top, black 0%, rgba(0, 0, 0, 0) 100%), linear-gradient(to right, white 0%, rgba(0, 0, 0, 0) 100%), rgb(255, 0, 0);"></div>
 
   <div class="spectrum-ColorHandle spectrum-ColorArea-handle">
@@ -34,7 +34,6 @@ export const Template = ({
 
   <input type="range" class="spectrum-ColorArea-slider" name="x" aria-label="saturation and value" min="0" max="1" step="0.01">
   <input type="range" class="spectrum-ColorArea-slider" name="y" aria-label="saturation and value" min="0" max="1" step="0.01">
-</div>
   </div>
   `;
 }

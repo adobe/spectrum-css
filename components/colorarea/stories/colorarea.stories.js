@@ -9,19 +9,29 @@ export default {
   description: "The Colorarea component is...",
   component: "Colorarea",
   argTypes: {
-    // isDisabled: {
-    //   name: "Disabled",
-    //   type: { name: "boolean" },
-    //   table: {
-    //     type: { summary: "boolean" },
-    //     category: "State",
-    //   },
-    //   control: "boolean",
-    // },
+    isDisabled: {
+      name: "Disabled",
+      type: { name: "boolean" },
+      table: {
+        type: { summary: "boolean" },
+        category: "State",
+      },
+      control: "boolean"
+    },
+    isStyled: {
+      name: "styled",
+      type: { name: "boolean" },
+      table: {
+        type: { summary: "boolean" },
+        category: "State",
+      },
+      control: "boolean"
+    },
   },
   args: {
-    rootClass: "spectrum-",
+    rootClass: "spectrum-ColorArea",
     size: "m",
+    isDisabled: false,
   },
   parameters: {
     actions: {
