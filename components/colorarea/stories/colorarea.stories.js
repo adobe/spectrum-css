@@ -18,19 +18,9 @@ export default {
       },
       control: "boolean"
     },
-    isStyled: {
-      name: "styled",
-      type: { name: "boolean" },
-      table: {
-        type: { summary: "boolean" },
-        category: "State",
-      },
-      control: "boolean"
-    },
   },
   args: {
     rootClass: "spectrum-ColorArea",
-    size: "m",
     isDisabled: false,
   },
   parameters: {
@@ -45,3 +35,9 @@ export default {
 
 export const Default = Template.bind({});
 Default.args = {};
+
+export const CustomSize = Template.bind({});
+CustomSize.args = {
+  customSize: "height: 80px; width: 80px;",
+  handlePosition: "transform: translate(80px, 0px);"
+};
