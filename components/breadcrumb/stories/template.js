@@ -2,12 +2,16 @@ import { html } from 'lit-html';
 import { classMap } from 'lit-html/directives/class-map.js';
 // import { ifDefined } from 'lit-html/directives/if-defined.js';
 
+import { Template as Icon } from '@spectrum-css/icon/stories/template.js';
+import { Template as ActionButton } from '@spectrum-css/actionbutton/stories/template.js';
+
 import "../index.css";
 
 export const Template = ({
-  rootClass = "spectrum-Breadcrumb",
+  rootClass = "spectrum-Breadcrumbs",
   customClasses = [],
-  size = "m",
+  items = [],
+  variant,
   ...globals
 }) => {
   const { express } = globals;
@@ -20,10 +24,40 @@ export const Template = ({
   }
 
   return html`
-    <div class=${classMap({
+  <nav>
+    <ul class=${classMap({
     [rootClass]: true,
-    [`${rootClass}--size${size?.toUpperCase()}`]: typeof size !== "undefined",
+    [`${rootClass}--${variant}`]: typeof variant !== "undefined",
     ...customClasses.reduce((a, c) => ({ ...a, [c]: true }), {}),
-  })}></div>
+  })}>
+      ${items.map((item, idx, arr) => {
+        const { label, isDisabled, isDragged, icon } = item;
+        return html`
+          <li class=${classMap({
+            [`${rootClass}-item`]: true,
+            'is-disabled': isDisabled,
+            'is-dragged': isDragged,
+          })}>
+            ${icon ? ActionButton({
+              ...globals,
+              icon,
+              isDisabled,
+              isQuiet: true,
+              customIconClasses: [`${rootClass}-folder`],
+              size: "m",
+            }) : idx !== arr.length - 1 ?
+              html`<div class="${rootClass}-itemLink" role="link" tabindex="0">${label}</div>` :
+              html`<a class="${rootClass}-itemLink" aria-current="page">${label}</a>`
+            }
+            ${idx !== arr.length - 1 ? Icon({
+              ...globals,
+              iconName: "ChevronRight100",
+              setName: "ui",
+              customClasses: [`${rootClass}-itemSeparator`],
+            }) : ''}
+          </li>`;
+      })}
+    </ul>
+  </nav>
   `;
 }
