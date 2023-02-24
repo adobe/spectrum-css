@@ -16,7 +16,6 @@ export default {
       options: ["s", "m", "l", "xl"],
       control: "select"
     },
-<<<<<<< HEAD
     vertical: {
       name: "Vertical layout",
       type: { name: "boolean" },
@@ -32,12 +31,6 @@ export default {
     rootClass: "spectrum-ButtonGroup",
     size: "m",
     vertical: false,
-=======
-  },
-  args: {
-    rootClass: "spectrum-",
-    size: "m",
->>>>>>> 3d21aa7eb (chore: generate new storybook assets)
   },
   parameters: {
     actions: {
@@ -50,7 +43,6 @@ export default {
 };
 
 export const Default = Template.bind({});
-<<<<<<< HEAD
 Default.args = {
   items: [{
     variant: "secondary",
@@ -84,6 +76,3 @@ Vertical.args = {
     label: "Rate now"
   }]
 };
-=======
-Default.args = {};
->>>>>>> 3d21aa7eb (chore: generate new storybook assets)
