@@ -41,6 +41,7 @@ jobs:
         timeout-minutes: 10
   chromatic:
     runs-on: ubuntu-latest
+    needs: build-and-deploy
     steps:
       - uses: actions/checkout@v1
       - name: Install dependencies
@@ -48,6 +49,5 @@ jobs:
       - name: Publish to Chromatic
         uses: chromaui/action@v1
         with:
-          buildScriptName: 'build:preview'
           storybookBuildDir: ./dist/preview
           projectToken: ${{ secrets.CHROMATIC_PROJECT_TOKEN }}
