@@ -21,6 +21,7 @@ export const Template = ({
   hideLabel = false,
   staticColor,
   customClasses = [],
+  customIconClasses = [],
   onclick,
   id,
   role,
@@ -65,7 +66,7 @@ export const Template = ({
         ? Icon({
             ...globals,
             iconName: icon,
-            customClasses: [`${rootClass}-icon`],
+            customClasses: [`${rootClass}-icon`, ...customIconClasses],
           })
         : ""}
       ${label && !hideLabel ? html`<span class="${rootClass}-label">${label}</span>` : ""}
