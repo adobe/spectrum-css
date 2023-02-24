@@ -1,12 +1,9 @@
 | Modifiable Custom Properties |
 | --- |
 |`--mod-picker-border-width`|
-|`--mod-picker-focus-indicator-color`|
 |`--mod-picker-min-inline-size`|
 |`--mod-picker-block-size`|
-|`--mod-picker-spacing-label-to-picker`|
 |`--mod-picker-spacing-edge-to-text`|
-|`--mod-spectrum-picker-border-width`|
 |`--mod-picker-border-radius`|
 |`--mod-picker-animation-duration`|
 |`--mod-picker-font-color-default`|
@@ -14,7 +11,7 @@
 |`--mod-picker-border-color-default`|
 |`--mod-picker-focus-indicator-gap`|
 |`--mod-picker-focus-indicator-thickness`|
-|`--mod-picker-border-size`|
+|`--mod-picker-focus-indicator-color`|
 |`--mod-picker-font-color-hover`|
 |`--mod-picker-background-color-hover`|
 |`--mod-picker-border-color-hover`|
@@ -29,6 +26,8 @@
 |`--mod-picker-background-color-default-open`|
 |`--mod-picker-border-default-open`|
 |`--mod-picker-font-color-hover-open`|
+|`--mod-picker-background-color-hover-open`|
+|`--mod-picker-border-color-hover-open`|
 |`--mod-picker-icon-color-hover-open`|
 |`--mod-picker-icon-color-default-open`|
 |`--mod-picker-border-color-error-default`|
@@ -43,6 +42,7 @@
 |`--mod-picker-font-color-disabled`|
 |`--mod-picker-spacing-text-to-icon`|
 |`--mod-picker-font-size`|
+|`--mod-picker-font-weight`|
 |`--mod-picker-placeholder-font-style`|
 |`--mod-picker-spacing-icon-to-disclosure-icon`|
 |`--mod-picker-icon-color-default`|
