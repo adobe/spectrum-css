@@ -16,10 +16,21 @@ export default {
       options: ["s", "m", "l", "xl"],
       control: "select"
     },
+    vertical: {
+      name: "Vertical layout",
+      type: { name: "boolean" },
+      table: {
+        type: { summary: "boolean" },
+        category: "Component",
+      },
+      control: "boolean"
+    },
+    items: { table: { disable: true } },
   },
   args: {
-    rootClass: "spectrum-",
+    rootClass: "spectrum-ButtonGroup",
     size: "m",
+    vertical: false,
   },
   parameters: {
     actions: {
@@ -32,4 +43,36 @@ export default {
 };
 
 export const Default = Template.bind({});
-Default.args = {};
+Default.args = {
+  items: [{
+    variant: "secondary",
+    treatment: "outline",
+    label: "No, thanks"
+  }, {
+    variant: "secondary",
+    treatment: "outline",
+    label: "Remind me later"
+  }, {
+    variant: "primary",
+    treatment: "fill",
+    label: "Rate now"
+  }]
+};
+
+export const Vertical = Template.bind({});
+Vertical.args = {
+  vertical: true,
+  items: [{
+    variant: "secondary",
+    treatment: "outline",
+    label: "No, thanks"
+  }, {
+    variant: "secondary",
+    treatment: "outline",
+    label: "Remind me later"
+  }, {
+    variant: "primary",
+    treatment: "fill",
+    label: "Rate now"
+  }]
+};
