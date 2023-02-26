@@ -10,6 +10,7 @@ import { Template as Icon } from "@spectrum-css/icon/stories/template.js";
 import "../index.css";
 
 export const Template = ({
+  id,
   rootClass = "spectrum-PickerButton",
   size = "m",
   label,
@@ -22,6 +23,7 @@ export const Template = ({
   isInvalid = false,
   isQuiet = false,
   customClasses = [],
+  isRounded = false,
   customStyles = {},
   id,
   ...globals
@@ -47,6 +49,7 @@ export const Template = ({
         [rootClass]: true,
         [`${rootClass}--uiicononly`]: !label,
         [`${rootClass}--${position}`]: typeof position !== "undefined",
+        [`${rootClass}--rounded`]: isRounded,
         [`${rootClass}--size${size?.toUpperCase()}`]: typeof size !== "undefined",
         'is-disabled': isDisabled,
         'is-focused': isFocused,
