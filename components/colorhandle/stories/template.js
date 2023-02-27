@@ -8,7 +8,7 @@ export const Template = ({
   rootClass = "spectrum-ColorHandle",
   customClasses = [],
   isDisabled = false,
-  isFocused= false,
+  isFocused = false,
   colorHandleStyle = "--spectrum-picked-color: rgba(255, 0, 0, 0.5); position: absolute; top: 50%; left: 50%;"
   // ...globals
 }) => {

@@ -6,6 +6,8 @@ export default {
   description: "The Color area component allows users to visually select two properties of a color simultaneously. It's commonly used together with a color slider or color wheel.",
   component: "ColorArea",
   argTypes: {
+    customSize: { table: { disable: true } },
+    handlePosition: { table: { disable: true } },
     isDisabled: {
       name: "Disabled",
       type: { name: "boolean" },
@@ -44,6 +46,6 @@ Default.args = {};
 
 export const CustomSize = Template.bind({});
 CustomSize.args = {
-  customSize: "height: 80px; width: 80px;",
+  customSize: "--mod-colorarea-height: 80px; --mod-colorarea-width: 80px;",
   handlePosition: "transform: translate(80px, 0px);"
 };

@@ -11,7 +11,7 @@ export const Template = ({
   rootClass = "spectrum-ColorArea",
   customClasses = [],
   isDisabled = false,
-  isFocused= false,
+  isFocused = false,
   customSize,
   handlePosition = handlePosition !== undefined ? handlePosition : "",
   colorHandleStyle = "--spectrum-picked-color: rgb(255, 0, 0);" + handlePosition,
