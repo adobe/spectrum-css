@@ -1,21 +1,35 @@
 import { html } from 'lit-html';
-import { classMap } from 'lit-html/directives/class-map.js';
-// import { ifDefined } from 'lit-html/directives/if-defined.js';
+import { useArgs } from '@storybook/client-api';
+
+import { Template as ActionButton } from "@spectrum-css/actionbutton/stories/template.js";
 
 import '../index.css';
-import '../skin.css';
 
 export const Template = ({
   rootClass = "spectrum-CycleButton",
   customClasses = [],
   size = "m",
-  // ...globals
+  initialIcon = "Play",
+  selectedIcon = "Pause",
+  ...globals
 }) => {
+  var icon = initialIcon;
+
+  const [, updateArgs] = useArgs();
+  const handleClick = () => {
+    const icon = initialIcon + '';
+    updateArgs({ initialIcon: selectedIcon });
+    updateArgs({ selectedIcon: icon });
+  }
+
   return html`
-    <div class=${classMap({
-      [rootClass]: true,
-      [`${rootClass}--size${size?.toUpperCase()}`]: typeof size !== "undefined",
-      ...customClasses.reduce((a, c) => ({ ...a, [c]: true }), {}),
-  })}></div>
+    ${ActionButton({ 
+      ...globals, 
+      customClasses: [rootClass], 
+      isQuiet: true,
+      size,
+      icon: icon,
+      onclick: handleClick
+    })}
   `;
 }
