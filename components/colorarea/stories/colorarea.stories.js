@@ -1,8 +1,5 @@
 // Import the component markup template
-// stories is where the stories will be written
 import { Template } from "./template";
-import { default as ColorHandle } from "@spectrum-css/colorhandle"
-// how do I handle dependent components
 
 export default {
   title: "Color area",
