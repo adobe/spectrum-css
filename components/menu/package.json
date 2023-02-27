@@ -1,6 +1,6 @@
 {
   "name": "@spectrum-css/menu",
-  "version": "5.0.0-beta.1",
+  "version": "5.0.0-beta.2",
   "description": "The Spectrum CSS menu component",
   "license": "Apache-2.0",
   "author": "Adobe",
@@ -13,20 +13,20 @@
   "bugs": {
     "url": "https://github.com/adobe/spectrum-css/issues"
   },
-  "main": "dist/index-vars.css",
+  "main": "dist/index.css",
   "scripts": {
     "build": "gulp"
   },
   "peerDependencies": {
-    "@spectrum-css/divider": "2.0.1",
-    "@spectrum-css/icon": "^3.0.21",
-    "@spectrum-css/tokens": "^5.0.0"
+    "@spectrum-css/divider": "^2.0.14",
+    "@spectrum-css/icon": "^3.0.33",
+    "@spectrum-css/tokens": "^7.2.0"
   },
   "devDependencies": {
-    "@spectrum-css/component-builder-simple": "^2.0.0",
-    "@spectrum-css/divider": "2.0.1",
-    "@spectrum-css/icon": "^3.0.23",
-    "@spectrum-css/tokens": "^5.0.0",
+    "@spectrum-css/component-builder-simple": "^2.0.5",
+    "@spectrum-css/divider": "^2.0.14",
+    "@spectrum-css/icon": "^3.0.33",
+    "@spectrum-css/tokens": "^7.2.0",
     "gulp": "^4.0.0"
   },
   "publishConfig": {
