@@ -12,8 +12,8 @@ export const Template = ({
   customClasses = [],
   isDisabled = false,
   customSize,
-  handlePosition,
-  style = "--spectrum-picked-color: rgb(255, 0, 0);" + handlePosition,
+  handlePosition = handlePosition !== undefined ? handlePosition : "",
+  colorHandleStyle = "--spectrum-picked-color: rgb(255, 0, 0);" + handlePosition,
   // ...globals
 }) => {
   return html`
@@ -26,7 +26,7 @@ export const Template = ({
   ${ ColorHandle({
     isDisabled,
     customClasses: [`${rootClass}-handle`],
-    style
+    colorHandleStyle
     })
    }
   <input type="range" class="spectrum-ColorArea-slider" name="x" aria-label="saturation and value" min="0" max="1" step="0.01">

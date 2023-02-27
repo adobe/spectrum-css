@@ -3,8 +3,8 @@ import { Template } from "./template";
 
 export default {
   title: "Color area",
-  description: "The Colorarea component allows users to visually select two properties of a color simultaneously. It's commonly used together with a color slider or color wheel.",
-  component: "Colorarea",
+  description: "The Color area component allows users to visually select two properties of a color simultaneously. It's commonly used together with a color slider or color wheel.",
+  component: "ColorArea",
   argTypes: {
     isDisabled: {
       name: "Disabled",
