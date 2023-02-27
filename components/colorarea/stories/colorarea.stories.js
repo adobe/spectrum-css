@@ -46,6 +46,6 @@ Default.args = {};
 
 export const CustomSize = Template.bind({});
 CustomSize.args = {
-  customSize: "--mod-colorarea-height: 80px; --mod-colorarea-width: 80px;",
-  handlePosition: "transform: translate(80px, 0px);"
+  customWidth: "80px",
+  customHeight: "80px"
 };
