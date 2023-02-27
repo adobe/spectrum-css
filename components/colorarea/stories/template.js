@@ -15,7 +15,7 @@ export const Template = ({
   customSize,
   handlePosition = handlePosition !== undefined ? handlePosition : "",
   colorHandleStyle = "--spectrum-picked-color: rgb(255, 0, 0);" + handlePosition,
-  // ...globals
+  ...globals
 }) => {
   return html`
     <div class=${classMap({
@@ -29,6 +29,7 @@ export const Template = ({
   style=${ifDefined(customSize)}>
   <div class="spectrum-ColorArea-gradient" style="background: linear-gradient(to top, black 0%, rgba(0, 0, 0, 0) 100%), linear-gradient(to right, white 0%, rgba(0, 0, 0, 0) 100%), rgb(255, 0, 0);"></div>
     ${ ColorHandle({
+      ...globals,
       isDisabled,
       customClasses: [`${rootClass}-handle`],
       colorHandleStyle
