@@ -6,7 +6,7 @@ import { default as IconStories } from "../../icon/stories/icon.stories.js";
 export default {
   title: "Cycle Button",
   description: "The Cycle button component is an action button that cycles through two different icons, a play that then changes to a pause, for example.",
-  component: "Cyclebutton",
+  component: "CycleButton",
   argTypes: {
     size: {
       name: "Size",

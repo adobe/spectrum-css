@@ -9,7 +9,6 @@ import "@spectrum-css/actionbutton/index.css"
 import "@spectrum-css/actionbutton/themes/spectrum.css"
 import "@spectrum-css/actionbutton/themes/express.css"
 
-
 export const Template = ({
   rootClass = "spectrum-CycleButton",
   customClasses = [],
