@@ -2,9 +2,9 @@
 import { Template } from "./template";
 
 export default {
-  title: "Inlinealert",
+  title: "In-line Alert",
   description: "In-line alerts display a non-modal message associated with objects in a view. These are often used in form validation, providing a place to aggregate feedback related to multiple fields.",
-  component: "Inlinealert",
+  component: "InLineAlert",
   argTypes: {
     headerText: {
       name: "Header Text",
@@ -12,7 +12,7 @@ export default {
       table: {
         type: { summary: "string" },
         disable: false,
-        category: "Component",
+        category: "Content",
       },
       control: { type: "text" },
     },
@@ -27,7 +27,7 @@ export default {
       control: { type: "text" },
     },
     variant: {
-      name: "In-line alert variants",
+      name: "Variants",
       type: { name: "string" },
       table: {
         type: { summary: "string" },

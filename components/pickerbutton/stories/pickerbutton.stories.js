@@ -30,7 +30,7 @@ export default {
       type: { name: "boolean" },
       table: {
         type: { summary: "boolean" },
-        category: "Component",
+        category: "State",
       },
       control: "boolean",
     },
@@ -48,7 +48,7 @@ export default {
       type: { name: "boolean" },
       table: {
         type: { summary: "boolean" },
-        category: "Component",
+        category: "State",
       },
       control: "boolean",
     },
@@ -89,6 +89,7 @@ export default {
     isInvalid: false,
     isQuiet: false,
     isDisabled: false,
+    position: "right",
   },
   parameters: {
     actions: {
