@@ -5,9 +5,10 @@ import { classMap } from 'lit-html/directives/class-map.js';
 import { Template as Icon } from "@spectrum-css/icon/stories/template.js"
 
 import '../index.css';
-import '../skin.css';
-
 import "@spectrum-css/actionbutton/index.css"
+import "@spectrum-css/actionbutton/themes/spectrum.css"
+import "@spectrum-css/actionbutton/themes/express.css"
+
 
 export const Template = ({
   rootClass = "spectrum-CycleButton",
@@ -22,8 +23,8 @@ export const Template = ({
   return html`
     <button class=${classMap({
       "spectrum-ActionButton": true, 
-      [`spectrum-ActionButton--size${size?.toUpperCase()}`]: typeof size !== "undefined",
       "spectrum-ActionButton--quiet": true,
+      [`spectrum-ActionButton--size${size?.toUpperCase()}`]: typeof size !== "undefined",
       [rootClass]: true,
       ...customClasses.reduce((a, c) => ({ ...a, [c]: true }), {}),
     })} 
