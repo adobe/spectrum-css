@@ -10,11 +10,84 @@ OF ANY KIND, either express or implied. See the License for the specific languag
 governing permissions and limitations under the License.
 */
 
-.spectrum-Rating {
-  --spectrum-icon-star-height: var(--spectrum-global-dimension-size-225);
-  --spectrum-icon-star-width: var(--spectrum-global-dimension-size-225);
+.🤫 {
+  /* hack: make sure we don't complain about this color being undefined */
+  --spectrum-picked-color: 0;
 }
 
+/* Swatch tokens */
+.spectrum-Rating {
+  /* Placeholder tokens */
+  --spectrum-rating-focus-indicator-border-radius: 8px;
+  --spectrum-rating-icon-border-color: rgba(0, 0, 0, 0.51);
+
+  /* Size */
+  --spectrum-rating-size: var(--spectrum-workflow-icon-size-100);
+  --spectrum-rating-border-radius: var(--spectrum-corner-radius-100);
+  --spectrum-swatch-border-thickness: var(--spectrum-border-width-100);
+  --spectrum-swatch-border-thickness-selected: var(--spectrum-border-width-200);
+  --spectrum-swatch-slash-thickness: var(--spectrum-swatch-slash-thickness-small);
+  --spectrum-rating-focus-indicator-thickness: var(--spectrum-focus-indicator-thickness);
+  --spectrum-rating-focus-indicator-gap: var(--spectrum-focus-indicator-gap);
+
+  /* Color */
+  --spectrum-swatch-border-color-selected: var(--spectrum-gray-900);
+  --spectrum-swatch-inner-border-color-selected: var(--spectrum-gray-50);
+  --spectrum-swatch-disabled-icon-border-color: var(--spectrum-swatch-disabled-icon-border-color);
+  --spectrum-swatch-disabled-icon-color: var(--spectrum-white);
+  --spectrum-swatch-dash-icon-color: var(--spectrum-gray-800);
+  --spectrum-swatch-slash-icon-color: var(--spectrum-red-900);
+  --spectrum-rating-focus-indicator-color: var(--spectrum-focus-indicator-color);
+}
+
+/* Spacing (between icons) */
+.spectrum--medium {
+  --spectrum-rating-spacing: var(--spectrum-spacing-75);
+}
+
+.spectrum--large {
+  --spectrum-rating-spacing: var(--spectrum-spacing-100);
+}
+
+/* Light theme placeholder tokens */
+.spectrum--light {
+  --spectrum-swatch-border-color: rgba(0, 0, 0, 0.51);
+}
+
+/* Dark and Darkest theme placeholder tokens */
+.spectrum--dark,
+.spectrum--darkest {
+  --spectrum-swatch-border-color: rgba(255, 255, 255, 0.51);
+}
+
+/* Regular (Default) */
+.spectrum-Rating {
+  gap: var(--mod-rating-spacing, var(--spectrum-rating-spacing));
+}
+
+/* Windows high contrast mode */
+@media (forced-colors: active) {
+  .spectrum-Rating {
+    --highcontrast-swatch-disabled-icon-color: GrayText;
+    --highcontrast-rating-focus-indicator-color:  Highlight;
+    --highcontrast-swatch-background-color-selected: Background;
+    --highcontrast-swatch-border-color-selected: Highlight;
+    --highcontrast-swatch-border-color: ButtonText;
+    --highcontrast-swatch-fill-foreground-color: ButtonText;
+
+    .spectrum-Rating-fill {
+      forced-color-adjust: none;
+    }
+
+    &.is-disabled {
+      .spectrum-Rating-fill {
+        forced-color-adjust: auto;
+      }
+    }
+  }
+}
+
+/* Rating styles */
 /* A solid star */
 %spectrum-Rating-filledStar {
   .spectrum-Rating-starActive {
@@ -26,37 +99,12 @@ governing permissions and limitations under the License.
 }
 
 /* A star with an outline only */
-%spectrum-Rating-strokedStar {
+.spectrum-Rating-strokedStar {
   .spectrum-Rating-starActive {
     display: none;
   }
   .spectrum-Rating-starInactive {
     display: block;
-  }
-}
-
-.spectrum-Rating {
-  position: relative;
-  display: inline-flex;
-  flex: 0 0 auto;
-
-  inline-size: calc(var(--spectrum-rating-icon-width) * var(--spectrum-rating-icon-count));
-
-  border-radius: var(--spectrum-rating-border-radius);
-
-  cursor: pointer;
-
-  &.is-disabled,
-  &.is-readOnly {
-    cursor: default;
-    pointer-events: none;
-  }
-
-  /* When the entire component is hovered, show all solid icons */
-  &:hover {
-    .spectrum-Rating-icon {
-      @extend %spectrum-Rating-filledStar;
-    }
   }
 }
 
@@ -70,21 +118,28 @@ governing permissions and limitations under the License.
   pointer-events: none;
 }
 
+.spectrum-Rating-starActive,
+.spectrum-Rating-starInactive {
+  inline-size: var(--mod-rating-size, var(--spectrum-rating-size));
+  block-size: var(--mod-rating-size, var(--spectrum-rating-size));
+  margin: 0 auto;
+}
+
 .spectrum-Rating-icon {
   position: relative;
   background-size: contain;
   background-repeat: no-repeat;
-  inline-size: var(--spectrum-rating-icon-width);
-  block-size: var(--spectrum-icon-star-height);
-  padding: var(--spectrum-rating-icon-padding-y) 0;
+  inline-size: var(--mod-rating-size, var(--spectrum-rating-size));
+  block-size:var(--mod-rating-size, var(--spectrum-rating-size));
+  /*padding: var(--spectrum-rating-icon-padding-y) 0;*/
 
-  @extend %spectrum-Rating-strokedStar;
+  @extend .spectrum-Rating-strokedStar;
 
   &.is-selected {
     @extend %spectrum-Rating-filledStar;
   }
-
-  &.is-currentValue {
+  
+  /*&.is-currentValue {
     &:after {
       border-radius: var(--spectrum-rating-indicator-border-radius);
       content: '';
@@ -94,17 +149,290 @@ governing permissions and limitations under the License.
       inset-inline-start: calc((var(--spectrum-rating-icon-width) - var(--spectrum-rating-indicator-width)) / 2);
       inset-inline-end: calc((var(--spectrum-rating-icon-width) - var(--spectrum-rating-indicator-width)) / 2);
     }
-  }
+  }*/
 
   /* All stars following the hovered star */
-  &:hover ~ .spectrum-Rating-icon {
-    @extend %spectrum-Rating-strokedStar;
+  /*&:hover ~ .spectrum-Rating-icon {
+    @extend spectrum-Rating-strokedStar;
+  }*/
+}
+
+.spectrum-Rating {
+  position: relative;
+  display: inline-flex;
+  flex: 0 0 auto;
+
+  inline-size: calc(var(--mod-rating-size, var(--spectrum-rating-size)) * 5);
+
+  border-radius: var(--mod-rating-border-radius, var(--spectrum-rating-border-radius));
+
+  cursor: pointer;
+  
+  &.is-disabled,
+  &.is-readOnly {
+    cursor: default;
+    pointer-events: none;
+  }
+
+  &,
+  &:before {
+    border-radius: var(--mod-rating-border-radius, var(--spectrum-rating-border-radius));
+  }
+
+  &.is-selected {
+    @extend %spectrum-Rating-filledStar;
+  }
+  &.is-selected {
+    background-color: var(--highcontrast-swatch-background-color-selected, var(--mod-swatch-inner-border-color-selected, var(--spectrum-swatch-inner-border-color-selected)));
+    .spectrum-Rating-fill {
+      clip-path: polygon(
+        calc(var(--mod-swatch-border-thickness-selected, var(--spectrum-swatch-border-thickness-selected)) * 2)
+        calc(var(--mod-swatch-border-thickness-selected, var(--spectrum-swatch-border-thickness-selected)) * 2),
+        calc(100% - var(--mod-swatch-border-thickness-selected, var(--spectrum-swatch-border-thickness-selected)) * 2)
+        calc(var(--mod-swatch-border-thickness-selected, var(--spectrum-swatch-border-thickness-selected)) * 2),
+        calc(100% - var(--mod-swatch-border-thickness-selected, var(--spectrum-swatch-border-thickness-selected)) * 2)
+        calc(100% - var(--mod-swatch-border-thickness-selected, var(--spectrum-swatch-border-thickness-selected)) * 2),
+        calc(var(--mod-swatch-border-thickness-selected, var(--spectrum-swatch-border-thickness-selected)) * 2)
+        calc(100% - var(--mod-swatch-border-thickness-selected, var(--spectrum-swatch-border-thickness-selected)) * 2));
+
+      /* no border radius when selected */
+      border-radius: 0;
+
+      &:before {
+        border-radius: 0;
+        box-shadow: none;
+      }
+    }
+
+    &:before {
+      opacity: 1;
+    }
+  }
+
+  /* Swatch fill: Image, Gradient, SVG */
+  &.is-image {
+    .spectrum-Rating-fill {
+      &::before {
+        background-color: transparent;
+      }
+    }
+  }
+
+  &.is-mixedValue {
+    .spectrum-Rating-fill {
+      background: var(--spectrum-picked-color, transparent);
+    }
+
+    .spectrum-Rating-mixedValueIcon {
+      color: var(--spectrum-swatch-dash-icon-color);
+      visibility: visible;
+    }
+  }
+
+  /* Swatch fill: Not fill with Slash */
+  &.is-nothing {
+    .spectrum-Rating-fill {
+      background-color: var(--spectrum-picked-color, transparent);
+      background-image: none;
+
+      &:after {
+        height: var(--mod-swatch-slash-thickness, var(--spectrum-swatch-slash-thickness));
+        content: '';
+        position: absolute;
+        transform: rotate(-45deg);
+        width: 200%; /* just needs to be bigger than a swatch */
+        background: var(--highcontrast-swatch-fill-foreground-color, var(--mod-swatch-slash-icon-color, var(--spectrum-swatch-slash-icon-color)));
+      }
+    }
+
+    &.spectrum-Rating--rectangle {
+      .spectrum-Rating-fill {
+        &:after {
+          transform: rotate(-25deg);
+        }
+      }
+    }
+  }
+
+  &[disabled],
+  &.is-disabled {
+    .spectrum-Rating-disabledIcon {
+      visibility: visible;
+    }
+  }
+
+  /* selection indicator */
+  &:before {
+    content: '';
+    position: absolute;
+    inset: 0;
+
+    border-width: var(--mod-swatch-border-thickness-selected, var(--spectrum-swatch-border-thickness-selected));
+    border-style: solid;
+    border-color: var(--highcontrast-swatch-border-color-selected, var(--mod-swatch-border-color-selected, var(--spectrum-swatch-border-color-selected)));
+
+    opacity: 0;
+
+    pointer-events: none;
+  }
+
+  /* focus-ring */
+  &:after {
+    content: '';
+    position: absolute;
+    inset: calc(-2 * var(--mod-rating-focus-indicator-gap, var(--spectrum-rating-focus-indicator-gap)));
+
+    opacity: 0;
+
+    border-width: var(--mod-rating-focus-indicator-thickness, var(--spectrum-rating-focus-indicator-thickness));
+    border-style: solid;
+    border-color: var(--highcontrast-rating-focus-indicator-color, var(--mod-rating-focus-indicator-color, var(--spectrum-rating-focus-indicator-color)));
+    border-radius: var(--mod-rating-focus-indicator-border-radius, var(--spectrum-rating-focus-indicator-border-radius));
+
+    transition: opacity var(--mod-animation-duration-100, var(--spectrum-animation-duration-100)) ease-in-out;
+  }
+
+  &:focus-visible {
+    &:after {
+      opacity: 1;
+    }
   }
 }
 
-.spectrum-Rating-starActive,
-.spectrum-Rating-starInactive {
-  inline-size: var(--spectrum-icon-star-width);
-  block-size: var(--spectrum-icon-star-height);
-  margin: 0 auto;
+.spectrum-Rating-fill {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  width: 100%;
+  height: 100%;
+  box-sizing: border-box;
+
+  position: relative;
+
+  overflow: hidden;
+
+  border-radius: var(--mod-rating-border-radius, var(--spectrum-rating-border-radius));
+
+
+  /* Checkerboard fill */
+  /* Static checkerboard properties */
+  --spectrum-swatch-checkerboard-size: 8px;
+  --spectrum-swatch-checkerboard-background-offset: 0px;
+  --spectrum-swatch-checkerboard-dark-color: rgb(217, 217, 217);
+  --spectrum-swatch-checkerboard-light-color: rgb(255, 255, 255);
+
+  background-color: var(--spectrum-swatch-checkerboard-light-color);
+
+  background-size:
+    calc(var(--mod-swatch-checkerboard-size, var(--spectrum-swatch-checkerboard-size)) * 2)
+    calc(var(--mod-swatch-checkerboard-size, var(--spectrum-swatch-checkerboard-size)) * 2);
+
+  background-position:
+    var(--spectrum-swatch-checkerboard-background-offset) var(--spectrum-swatch-checkerboard-background-offset),
+    var(--spectrum-swatch-checkerboard-background-offset) calc(var(--mod-swatch-checkerboard-size, var(--spectrum-swatch-checkerboard-size)) + var(--spectrum-swatch-checkerboard-background-offset)),
+    calc(var(--mod-swatch-checkerboard-size, var(--spectrum-swatch-checkerboard-size)) + var(--spectrum-swatch-checkerboard-background-offset)) calc(-1 * var(--mod-swatch-checkerboard-size, var(--spectrum-swatch-checkerboard-size)) + var(--spectrum-swatch-checkerboard-background-offset)),
+    calc(-1 * var(--mod-swatch-checkerboard-size, var(--spectrum-swatch-checkerboard-size)) + var(--spectrum-swatch-checkerboard-background-offset)) var(--spectrum-swatch-checkerboard-background-offset);
+
+  /* Add a half-percent to fix diagonal line issue in Chrome on non-retina displays */
+  background-image:
+    linear-gradient(-45deg, transparent 75.5%, var(--spectrum-swatch-checkerboard-dark-color) 75.5%),
+    linear-gradient(45deg, transparent 75.5%, var(--spectrum-swatch-checkerboard-dark-color) 75.5%),
+    linear-gradient(-45deg, var(--spectrum-swatch-checkerboard-dark-color) 25.5%, transparent 25.5%),
+    linear-gradient(45deg, var(--spectrum-swatch-checkerboard-dark-color) 25.5%, transparent 25.5%);
+
+  /* Swatch fill: Default */
+  &:before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    z-index: 0;
+
+    background-color: var(--spectrum-picked-color, transparent);
+
+    /* Swatch border */
+    box-shadow: inset 0 0 0 var(--mod-swatch-border-thickness, var(--spectrum-swatch-border-thickness)) var(--highcontrast-swatch-border-color, var(--mod-swatch-border-color, var(--spectrum-swatch-border-color)));
+    border-radius: var(--mod-rating-border-radius, var(--spectrum-rating-border-radius));
+  }
+}
+
+/* Variant: No border */
+.spectrum-Rating--noBorder {
+  .spectrum-Rating-fill {
+    &:before {
+      box-shadow: none;
+      background-color: var(--spectrum-picked-color, transparent);
+    }
+  }
+}
+
+.spectrum-Rating-mixedValueIcon {
+  visibility: hidden;
+  pointer-events: none;
+
+  color: var(--spectrum-picked-color, transparent);
+}
+
+.spectrum-Rating-disabledIcon {
+  position: relative;
+  z-index: 2;
+
+  visibility: hidden;
+  pointer-events: none;
+
+  color: var(--highcontrast-swatch-disabled-icon-color, var(--mod-swatch-disabled-icon-color, var(--spectrum-swatch-disabled-icon-color)));
+  stroke: var(--highcontrast-swatch-disabled-icon-color, var(--mod-swatch-disabled-icon-color, var(--spectrum-swatch-disabled-icon-color)));
+
+  /* Icon fill color */
+  path:first-child {
+    fill: var(--highcontrast-swatch-disabled-icon-color, var(--mod-swatch-disabled-icon-color, var(--spectrum-swatch-disabled-icon-color)));
+  }
+
+  /* Icon outline color - does not need a highcontrast token because the icon fill color provides contrast. */
+  path:last-child {
+    fill: var(--mod-rating-icon-border-color, var(--spectrum-rating-icon-border-color));
+  }
+}
+
+
+/* Variant: Rounding - None */
+.spectrum-Rating--roundingNone {
+  &,
+  &:before,
+  &:after,
+  .spectrum-Rating-fill,
+  .spectrum-Rating-fill:before,
+  &.is-selected .spectrum-Rating-fill,
+  &.is-selected .spectrum-Rating-fill:before {
+    border-radius: 0;
+  }
+}
+
+/* Variant: Rounding - Full */
+.spectrum-Rating--roundingFull {
+  &:not(.spectrum-Rating--rectangle) {
+    &,
+    &:before,
+    &:after,
+    .spectrum-Rating-fill,
+    .spectrum-Rating-fill:before,
+    &.is-selected .spectrum-Rating-fill,
+    &.is-selected .spectrum-Rating-fill:before {
+      border-radius: 100%;
+    }
+
+    &.is-selected .spectrum-Rating-fill {
+      clip-path: circle(calc(50% - (var(--mod-swatch-border-thickness-selected, var(--spectrum-swatch-border-thickness-selected)) * 2)) at 50% 50%);
+    }
+  }
+}
+
+.spectrum-Rating-image {
+  object-fit: contain;
+
+  width: 100%;
+  height: 100%;
+
+  transition: width var(--mod-animation-duration-100, var(--spectrum-animation-duration-100)) ease-in-out,
+              height var(--mod-animation-duration-100, var(--spectrum-animation-duration-100)) ease-in-out;
 }
