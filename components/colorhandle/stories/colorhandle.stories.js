@@ -3,7 +3,7 @@ import { Template } from "./template";
 
 export default {
   title: "Color handle",
-  description: "The Color handle component is...",
+  description: "The Color Handle component is used with ColorArea, ColorSlider and ColorWheel as the color selector",
   component: "Colorhandle",
   argTypes: {
     isDisabled: {
