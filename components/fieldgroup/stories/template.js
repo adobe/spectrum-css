@@ -2,11 +2,9 @@ import { html } from 'lit-html';
 import { classMap } from 'lit-html/directives/class-map.js';
 import { repeat } from 'lit-html/directives/repeat.js';
 
-
 import { Template as FieldLabel } from "@spectrum-css/fieldlabel/stories/template.js";
 import { Template as Radio } from "@spectrum-css/radio/stories/template.js";
 import { Template as Checkbox } from "@spectrum-css/checkbox/stories/template.js";
-
 
 import "../index.css";
 
@@ -16,6 +14,7 @@ export const Template = ({
   layout,
   labelPosition,
   inputType = "radio",
+  isInvalid,
   items,
   ...globals
 }) => {
@@ -40,6 +39,7 @@ export const Template = ({
         size: "m",
         label: "Field Group Label",
         alignment: labelPosition === "side" ?? "right",
+        style: { "min-width": "70px" }
       })}
 
       <div class="${rootClass}InputLayout">

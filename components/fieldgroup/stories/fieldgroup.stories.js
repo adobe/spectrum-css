@@ -1,5 +1,7 @@
 // Import the component markup template
 import { Template } from "./template";
+import { default as Checkbox } from "@spectrum-css/checkbox/stories/checkbox.stories.js";
+import { default as Radio } from "@spectrum-css/radio/stories/radio.stories.js";
 
 export default {
   title: "Field group",
@@ -36,45 +38,18 @@ export default {
       options: ["radio", "checkbox"],
       control: "select"
     },
-    isInvalid: {
-      name: "Invalid",
-      type: { name: "boolean" },
-      table: {
-        type: { summary: "boolean" },
-        category: "State",
-      },
-      control: "boolean",
-    },
-    isRequired: {
-      name: "Required",
-      type: { name: "boolean" },
-      table: {
-        type: { summary: "boolean" },
-        category: "State",
-      },
-      control: "boolean",
-    },
-    isReadOnly: {
-      name: "Read-Only",
-      type: { name: "boolean" },
-      table: {
-        type: { summary: "boolean" },
-        category: "State",
-      },
-      control: "boolean",
-    },
   },
   args: {
     rootClass: "spectrum-FieldGroup",
     layout: "vertical",
     labelPosition: "top",
-    isInvalid: false,
-    isRequired: false,
-    isReadOnly: false
   },
   parameters: {
     actions: {
-      handles: []
+      handles: [
+        ...Checkbox.parameters.actions.handles,
+        ...Radio.parameters.actions.handles,
+      ]
     },
     status: {
       type: process.env.MIGRATED_PACKAGES.includes('fieldgroup') ? 'migrated' : undefined
