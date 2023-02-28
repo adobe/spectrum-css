@@ -14,7 +14,6 @@ export const Template = ({
   layout,
   labelPosition,
   inputType = "radio",
-  isInvalid,
   items,
   ...globals
 }) => {
