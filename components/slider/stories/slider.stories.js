@@ -7,6 +7,7 @@ export default {
     "A slider allows users to quickly select a value within a range. They should be used when the upper and lower bounds to the range are invariable.",
   component: "Slider",
   argTypes: {
+    reducedMotion: { table: { disable: true } },
     label: {
       name: "Label",
       type: { name: "string" },
@@ -43,7 +44,7 @@ export default {
       },
       control: { type: "number" },
     },
-    value: { table: { disable: true } },
+    values: { table: { disable: true } },
     isDisabled: {
       name: "Disabled",
       type: { name: "boolean" },
@@ -74,15 +75,59 @@ export default {
       },
       control: "boolean",
     },
-    variant: {
-      name: "Styling options",
+    isRamp: {
+      name: "Ramp style",
+      type: { name: "boolean" },
+      table: {
+        type: { summary: "boolean" },
+        category: "Component",
+      },
+      control: "boolean",
+    },
+    isRange: {
+      name: "Range",
+      type: { name: "boolean" },
+      table: {
+        type: { summary: "boolean" },
+        category: "Component",
+      },
+      control: "boolean",
+    },
+    isFilled: {
+      name: "Filled",
+      type: { name: "boolean" },
+      table: {
+        type: { summary: "boolean" },
+        category: "Component",
+      },
+      control: "boolean",
+    },
+    fillColor: {
+      name: "Fill color",
       type: { name: "string" },
       table: {
         type: { summary: "string" },
         category: "Component",
       },
-      options: ["filled", "ramp", "range", "tick", "default"],
-      control: "inline-radio",
+      control: "color",
+    },
+    showTicks: {
+      name: "Show tick marks",
+      type: { name: "boolean" },
+      table: {
+        type: { summary: "boolean" },
+        category: "Component",
+      },
+      control: "boolean",
+    },
+    showOffset: {
+      name: "Show offset",
+      type: { name: "boolean" },
+      table: {
+        type: { summary: "boolean" },
+        category: "Component",
+      },
+      control: "boolean",
     },
   },
   args: {
@@ -90,7 +135,11 @@ export default {
     isDisabled: false,
     isFocused: false,
     isDragged: false,
-    variant: "default",
+    isRamp: false,
+    isRange: false,
+    showOffset: false,
+    showTicks: false,
+    isFilled: false,
   },
   parameters: {
     actions: {
@@ -106,40 +155,59 @@ export default {
 
 export const Default = Template.bind({});
 Default.args = {
+  label: "Slider Label",
   min: 10,
   max: 20,
-  value: 14,
+  values: [14],
   step: 2,
+  showOffset: false,
+};
+Default.argTypes = {
+  isRange: { table: { disable: true } },
+  isRamp: { table: { disable: true } },
 };
 
 export const Filled = Template.bind({});
 Filled.args = {
   ...Default.args,
-  variant: "filled",
+  isFilled: true,
+};
+
+export const FilledOffset = Template.bind({});
+FilledOffset.args = {
+  ...Default.args,
+  min: 0,
+  showOffset: true,
 };
 
 export const Ramp = Template.bind({});
 Ramp.args = {
   ...Default.args,
-  variant: "ramp",
+  isRamp: true,
+};
+Ramp.argTypes = {
+  fillColor: { table: { disable: true } },
 };
 
 export const Range = Template.bind({});
 Range.args = {
   ...Default.args,
   label: "Slider Label",
-  variant: "range",
-  value: [14, 16],
+  isRange: true,
+  values: [14, 16],
 };
 
 export const Tick = Template.bind({});
 Tick.args = {
   ...Default.args,
-  variant: "tick",
+  showTicks: true,
 };
 
 export const Disabled = Template.bind({});
 Disabled.args = {
   ...Default.args,
   isDisabled: true,
+};
+Disabled.argTypes = {
+  fillColor: { table: { disable: true } },
 };
