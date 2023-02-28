@@ -31,7 +31,6 @@ export const Template = ({
     'is-focused': isFocused,
     ...customClasses.reduce((a, c) => ({ ...a, [c]: true }), {}),
   })}
-  // if component isDisabled, return undefined else isFocused
   ?disabled=${isDisabled}
   ?focused=${isFocused}
   style=${ifDefined(handleCustomSize(customWidth, customHeight))}>
