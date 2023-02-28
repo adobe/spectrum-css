@@ -4,7 +4,6 @@ import { repeat } from 'lit-html/directives/repeat.js';
 
 import { Template as FieldLabel } from "@spectrum-css/fieldlabel/stories/template.js";
 import { Template as Radio } from "@spectrum-css/radio/stories/template.js";
-import { Template as Checkbox } from "@spectrum-css/checkbox/stories/template.js";
 
 import "../index.css";
 
@@ -13,7 +12,7 @@ export const Template = ({
   customClasses = [],
   layout,
   labelPosition,
-  inputType = "radio",
+  isInvalid,
   items,
   ...globals
 }) => {
@@ -38,28 +37,16 @@ export const Template = ({
         size: "m",
         label: "Field Group Label",
         alignment: labelPosition === "side" ?? "right",
-        style: { "min-width": "70px" }
       })}
 
       <div class="${rootClass}InputLayout">
-        ${inputType === "radio" ? 
-          repeat(items, (item) => item.id, (item) => {
+          ${repeat(items, (item) => item.id, (item) => {
             return Radio({
               ...globals,
               ...item,
               customClasses: [`${rootClass}-item`]
             })
-          })
-          : ""}
-        ${inputType === "checkbox" ? 
-          repeat(items, (item) => item.id, (item) => {
-            return Checkbox({
-              ...globals,
-              ...item,
-              customClasses: [`${rootClass}-item`]
-            })
-          })
-        : ""}
+          })}
       </div>
     </div>
   `;
