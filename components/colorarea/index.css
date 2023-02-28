@@ -17,7 +17,6 @@ governing permissions and limitations under the License.
   --spectrum-colorarea-width: var(--spectrum-color-area-width);
   --spectrum-colorarea-min-width: var(--spectrum-color-area-minimum-width);
   --spectrum-colorarea-min-height: var(--spectrum-color-area-minimum-height);
-  --spectrum-colorhandle-size: 16px; /* TODO replace with new token for ColorHandle, placeholder for old token var(--spectrum-colorhandle-size) */
 }
 
 /* Windows High Contrast Mode */
@@ -54,11 +53,11 @@ governing permissions and limitations under the License.
   &.is-focused {
     z-index: 2;
     .spectrum-ColorArea-handle {
-      inline-size: calc(var(--spectrum-colorhandle-size) * 2);
-      block-size: calc(var(--spectrum-colorhandle-size) * 2);
+      inline-size: calc(var(--spectrum-color-handle-size) * 2);
+      block-size: calc(var(--spectrum-color-handle-size) * 2);
 
-      margin-inline-start: calc(-1 * var(--spectrum-colorhandle-size));
-      margin-block-start: calc(-1 * var(--spectrum-colorhandle-size));
+      margin-inline-start: calc(-1 * var(--spectrum-color-handle-size));
+      margin-block-start: calc(-1 * var(--spectrum-color-handle-size));
     }
   }
 
