@@ -3,6 +3,21 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+<a name="2.0.0"></a>
+# 2.0.0
+🗓 2023-02-28 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/colorarea@1.0.30...@spectrum-css/colorarea@2.0.0)
+
+* feat(colorarea)!: migrate to core tokens (#1623) ([9b3d6fa](https://github.com/adobe/spectrum-css/commit/9b3d6fa)), closes [#1623](https://github.com/adobe/spectrum-css/issues/1623)
+
+
+### 🛑 BREAKING CHANGES
+
+* migrates ColorArea to core tokens
+
+
+
+
+
 <a name="1.0.30"></a>
 ## 1.0.30
 🗓 2023-02-21 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/colorarea@1.0.29...@spectrum-css/colorarea@1.0.30)
