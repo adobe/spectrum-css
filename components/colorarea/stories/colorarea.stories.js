@@ -25,7 +25,8 @@ export default {
         type: { summary: "boolean" },
         category: "State",
       },
-      control: "boolean"
+      control: "boolean",
+      if: { arg: 'isDisabled', truthy: false }
     },
   },
   args: {
