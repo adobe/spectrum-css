@@ -10,7 +10,7 @@ export const Template = ({
   customClasses = [],
   size = "m",
   label,
-  alignment,
+  alignment = "left",
   isDisabled,
   isRequired,
   ...globals

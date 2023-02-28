@@ -27,7 +27,7 @@ export default {
     },
     alignment: {
       name: "Alignment",
-      type: { name: "string", required: true },
+      type: { name: "string" },
       table: {
         type: { summary: "string" },
         category: "Component",
