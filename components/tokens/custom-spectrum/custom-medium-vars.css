@@ -28,4 +28,19 @@ governing permissions and limitations under the License.
 
   /* TODO: --spectrum-color-handle-size will need to be removed here once it's defined in @adobe/spectrum-tokens */
   --spectrum-color-handle-size: 16px;
+
+  --spectrum-menu-item-selectable-edge-to-text-not-selected-small: 28px;
+  --spectrum-menu-item-selectable-edge-to-text-not-selected-medium: 32px;
+  --spectrum-menu-item-selectable-edge-to-text-not-selected-large: 38px;
+  --spectrum-menu-item-selectable-edge-to-text-not-selected-extra-large: 45px;
+
+  --spectrum-menu-item-checkmark-height-small: 10px;
+  --spectrum-menu-item-checkmark-height-medium: 10px;
+  --spectrum-menu-item-checkmark-height-large: 12px;
+  --spectrum-menu-item-checkmark-height-extra-large: 14px;
+
+  --spectrum-menu-item-checkmark-width-small: 10px;
+  --spectrum-menu-item-checkmark-width-medium: 10px;
+  --spectrum-menu-item-checkmark-width-large: 12px;
+  --spectrum-menu-item-checkmark-width-extra-large: 14px;
 }
