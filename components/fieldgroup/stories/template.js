@@ -1,13 +1,22 @@
 import { html } from 'lit-html';
 import { classMap } from 'lit-html/directives/class-map.js';
-// import { ifDefined } from 'lit-html/directives/if-defined.js';
+import { repeat } from 'lit-html/directives/repeat.js';
+
+
+import { Template as FieldLabel } from "@spectrum-css/fieldlabel/stories/template.js";
+import { Template as Radio } from "@spectrum-css/radio/stories/template.js";
+import { Template as Checkbox } from "@spectrum-css/checkbox/stories/template.js";
+
 
 import "../index.css";
 
 export const Template = ({
   rootClass = "spectrum-FieldGroup",
   customClasses = [],
-  size = "m",
+  layout,
+  labelPosition,
+  inputType = "radio",
+  items,
   ...globals
 }) => {
   const { express } = globals;
@@ -22,8 +31,37 @@ export const Template = ({
   return html`
     <div class=${classMap({
       [rootClass]: true,
-      [`${rootClass}--size${size?.toUpperCase()}`]: typeof size !== "undefined",
+      [`${rootClass}--${labelPosition}label`]: typeof labelPosition !== "undefined",
+      [`${rootClass}--${layout}`]: typeof layout !== "undefined",
       ...customClasses.reduce((a, c) => ({ ...a, [c]: true }), {}),
-  })}></div>
+    })}>
+      ${FieldLabel({
+        ...globals,
+        size: "m",
+        label: "Field Group Label",
+        alignment: labelPosition === "side" ?? "right",
+      })}
+
+      <div class="${rootClass}InputLayout">
+        ${inputType === "radio" ? 
+          repeat(items, (item) => item.id, (item) => {
+            return Radio({
+              ...globals,
+              ...item,
+              customClasses: [`${rootClass}-item`]
+            })
+          })
+          : ""}
+        ${inputType === "checkbox" ? 
+          repeat(items, (item) => item.id, (item) => {
+            return Checkbox({
+              ...globals,
+              ...item,
+              customClasses: [`${rootClass}-item`]
+            })
+          })
+        : ""}
+      </div>
+    </div>
   `;
 }
