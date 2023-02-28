@@ -3,6 +3,18 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+<a name="7.3.0"></a>
+# 7.3.0
+🗓 2023-02-28 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/tokens@7.2.0...@spectrum-css/tokens@7.3.0)
+
+### ✨ Features
+
+* **tokens:** adds menu scale and theme tokens ([#1641](https://github.com/adobe/spectrum-css/issues/1641)) ([f477c60](https://github.com/adobe/spectrum-css/commit/f477c60))
+
+
+
+
+
 <a name="7.2.0"></a>
 # 7.2.0
 🗓 2023-02-24 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/tokens@7.1.0...@spectrum-css/tokens@7.2.0)

@@ -3,6 +3,16 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+<a name="3.4.34"></a>
+## 3.4.34
+🗓 2023-02-28 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/searchwithin@3.4.33...@spectrum-css/searchwithin@3.4.34)
+
+**Note:** Version bump only for package @spectrum-css/searchwithin
+
+
+
+
+
 <a name="3.4.33"></a>
 ## 3.4.33
 🗓 2023-02-24 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/searchwithin@3.4.32...@spectrum-css/searchwithin@3.4.33)
