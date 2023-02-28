@@ -1,6 +1,6 @@
 import { html } from 'lit-html';
 import { classMap } from 'lit-html/directives/class-map.js';
-// import { ifDefined } from 'lit-html/directives/if-defined.js';
+import { styleMap } from 'lit-html/directives/style-map.js';
 
 import '../index.css';
 import '../skin.css';
@@ -8,14 +8,21 @@ import '../skin.css';
 export const Template = ({
   rootClass = "spectrum-DropIndicator",
   customClasses = [],
-  size = "m",
-  // ...globals
+  direction = "vertical",
+  size = "300px",
 }) => {
+  const styles = {
+    "block-size": direction == 'vertical' ? size : "",
+    "inline-size": direction == 'horizontal' ? size : "",
+  };
+
   return html`
     <div class=${classMap({
       [rootClass]: true,
-      [`${rootClass}--size${size?.toUpperCase()}`]: typeof size !== "undefined",
+      [`${rootClass}--${direction}`]: typeof direction !== "undefined",
     ...customClasses.reduce((a, c) => ({ ...a, [c]: true }), {}),
-  })}></div>
+    })} 
+    style=${styleMap(styles)}>
+    </div>
   `;
 }
