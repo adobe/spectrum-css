@@ -1,5 +1,5 @@
 /*
-Copyright 2022 Adobe. All rights reserved.
+Copyright 2023 Adobe. All rights reserved.
 This file is licensed to you under the Apache License, Version 2.0 (the "License");
 you may not use this file except in compliance with the License. You may obtain a copy
 of the License at http://www.apache.org/licenses/LICENSE-2.0
@@ -16,15 +16,15 @@ governing permissions and limitations under the License.
       --spectrum-button-background-color-hover: var(--spectrum-gray-300);
       --spectrum-button-background-color-down: var(--spectrum-gray-400);
       --spectrum-button-background-color-focus: var(--spectrum-gray-300);
-  
+
       --spectrum-button-border-color-default: transparent;
       --spectrum-button-border-color-hover: transparent;
       --spectrum-button-border-color-down: transparent;
       --spectrum-button-border-color-focus: transparent;
-  
+
       --spectrum-button-background-color-disabled: var(--spectrum-disabled-background-color);
       --spectrum-button-border-color-disabled: transparent;
-  
+
       &.is-selected {
         --spectrum-button-background-color-default: var(--spectrum-neutral-background-color-default);
         --spectrum-button-background-color-hover: var(--spectrum-neutral-background-color-hover);
@@ -33,4 +33,3 @@ governing permissions and limitations under the License.
       }
     }
   }
-  
