@@ -6,20 +6,71 @@ export default {
   description: "The Field group component is...",
   component: "Fieldgroup",
   argTypes: {
-    size: {
-      name: "Size",
+    layout: {
+      name: "Layout",
       type: { name: "string", required: true },
       table: {
         type: { summary: "string" },
         category: "Component",
       },
-      options: ["s", "m", "l", "xl"],
+      options: ["vertical", "horizontal"],
       control: "select"
+    },
+    labelPosition: {
+      name: "Label Position",
+      type: { name: "string" },
+      table: {
+        type: { summary: "string" },
+        category: "Component",
+      },
+      options: ["top", "side"],
+      control: "select"
+    },
+    inputType: {
+      name: "Input Type",
+      type: { name: "string" },
+      table: {
+        type: { summary: "string" },
+        category: "Component",
+      },
+      options: ["radio", "checkbox"],
+      control: "select"
+    },
+    isInvalid: {
+      name: "Invalid",
+      type: { name: "boolean" },
+      table: {
+        type: { summary: "boolean" },
+        category: "State",
+      },
+      control: "boolean",
+    },
+    isRequired: {
+      name: "Required",
+      type: { name: "boolean" },
+      table: {
+        type: { summary: "boolean" },
+        category: "State",
+      },
+      control: "boolean",
+    },
+    isReadOnly: {
+      name: "Read-Only",
+      type: { name: "boolean" },
+      table: {
+        type: { summary: "boolean" },
+        category: "State",
+      },
+      control: "boolean",
     },
   },
   args: {
-    rootClass: "spectrum-",
-    size: "m",
+    rootClass: "spectrum-FieldGroup",
+    layout: "vertical",
+    labelPosition: "top",
+    isInvalid: false,
+    isRequired: false,
+    isReadOnly: false
   },
   parameters: {
     actions: {
@@ -32,4 +83,25 @@ export default {
 };
 
 export const Default = Template.bind({});
-Default.args = {};
+Default.args = {
+  inputType: "radio",
+  items: [{
+    id: "1",
+    label: "Radio 1",
+  },{
+    id: "2",
+    label: "Radio 2",
+  }]
+};
+
+export const Checkboxes = Template.bind({});
+Checkboxes.args = {
+  inputType: "checkbox",
+  items: [{
+    id: "1",
+    label: "Checkbox 1",
+  },{
+    id: "2",
+    label: "Checkbox 2",
+  }]
+};
