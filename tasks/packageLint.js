@@ -156,7 +156,7 @@ async function checkPeerDependencies(peerDependencies, devDependencies, verbose 
             }
 
             const newPeerDepVer = semver.coerce('^' + devDepVer.toString()?.replace(/-\d+$/, '')?.split('.')?.shift());
-            packageJSON.peerDependencies[dependency] = `>=${newPeerDepVer.toString()}`;
+            peerDependencies[dependency] = `>=${newPeerDepVer.toString()}`;
             updated = true;
             report.push(`    ✔ Updated ${dependency} to >=${newPeerDepVer.toString()}`);
         } else {
@@ -165,7 +165,7 @@ async function checkPeerDependencies(peerDependencies, devDependencies, verbose 
             }
 
             const newDevDepVer = semver.coerce('^' + peerDepVer.toString().replace(/-\d+$/, ''));
-            packageJSON.devDependencies[dependency] = `^${newDevDepVer.toString()}`;
+            devDependencies[dependency] = `^${newDevDepVer.toString()}`;
             updated = true;
             report.push(`    ✔ Updated ${dependency} to ^${newDevDepVer}`);
         }
