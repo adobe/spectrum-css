@@ -33,18 +33,20 @@ export const Template = ({
     <label class=${classMap({
       [rootClass]: true,
       [`${rootClass}--size${size?.toUpperCase()}`]: typeof size !== "undefined",
-      [`${rootClass}--${alignment}`]: typeof align !== "undefined",
+      [`${rootClass}--${alignment}`]: typeof alignment !== "undefined",
       "is-disabled": isDisabled,
       ...customClasses.reduce((a, c) => ({ ...a, [c]: true }), {}),
-  })}>
-    ${label}
-    ${isRequired ?
-      Icon({
-        ...globals,
-        iconName: "Asterisk100",
-        customClasses: [`${rootClass}-UIIcon`],
-      })
-    : ""}
-  </label>
+    })}
+      style="width: 72px;"
+    >
+      ${label}
+      ${isRequired ?
+        Icon({
+          ...globals,
+          iconName: "Asterisk100",
+          customClasses: [`${rootClass}-UIIcon`],
+        })
+      : ""}
+    </label>
   `;
 }
