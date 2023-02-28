@@ -13,7 +13,7 @@ export default {
       type: { name: "string" },
       table: {
         type: { summary: "string" },
-        category: "Component",
+        category: "Content",
       },
       control: { type: "text" },
     },
@@ -22,7 +22,7 @@ export default {
       type: { name: "number" },
       table: {
         type: { summary: "number" },
-        category: "Component",
+        category: "Content",
       },
       control: { type: "number" },
     },
@@ -31,7 +31,7 @@ export default {
       type: { name: "number" },
       table: {
         type: { summary: "number" },
-        category: "Component",
+        category: "Content",
       },
       control: { type: "number" },
     },
@@ -40,67 +40,19 @@ export default {
       type: { name: "number" },
       table: {
         type: { summary: "number" },
-        category: "Component",
+        category: "Content",
       },
       control: { type: "number" },
     },
-    values: { table: { disable: true } },
-    isDisabled: {
-      name: "Disabled",
-      type: { name: "boolean" },
+    variant: {
+      name: "Styling variants",
+      type: { name: "string" },
       table: {
-        type: { summary: "boolean" },
-        category: "State",
-        disable: true
-      },
-      control: "boolean",
-    },
-    isFocused: {
-      name: "Focused",
-      type: { name: "boolean" },
-      table: {
-        type: { summary: "boolean" },
-        category: "State",
-        disable: true
-      },
-      control: "boolean",
-    },
-    isDragged: {
-      name: "Dragged",
-      type: { name: "boolean" },
-      table: {
-        type: { summary: "boolean" },
-        category: "State",
-        disable: true,
-      },
-      control: "boolean",
-    },
-    isRamp: {
-      name: "Ramp style",
-      type: { name: "boolean" },
-      table: {
-        type: { summary: "boolean" },
+        type: { summary: "string" },
         category: "Component",
       },
-      control: "boolean",
-    },
-    isRange: {
-      name: "Range",
-      type: { name: "boolean" },
-      table: {
-        type: { summary: "boolean" },
-        category: "Component",
-      },
-      control: "boolean",
-    },
-    isFilled: {
-      name: "Filled",
-      type: { name: "boolean" },
-      table: {
-        type: { summary: "boolean" },
-        category: "Component",
-      },
-      control: "boolean",
+      control: "select",
+      options: ["ramp", "offset", "filled"],
     },
     fillColor: {
       name: "Fill color",
@@ -110,6 +62,7 @@ export default {
         category: "Component",
       },
       control: "color",
+      if: { arg: 'variant', neq: 'ramp' },
     },
     showTicks: {
       name: "Show tick marks",
@@ -119,27 +72,34 @@ export default {
         category: "Component",
       },
       control: "boolean",
+      if: { arg: 'variant', neq: 'ramp' }
     },
-    showOffset: {
-      name: "Show offset",
+    isDisabled: {
+      name: "Disabled",
       type: { name: "boolean" },
       table: {
         type: { summary: "boolean" },
-        category: "Component",
+        category: "State",
       },
       control: "boolean",
     },
+    isFocused: {
+      name: "Focused",
+      type: { name: "boolean" },
+      table: {
+        type: { summary: "boolean" },
+        category: "State",
+      },
+      control: "boolean",
+      if: { arg: 'isDisabled', truthy: false }
+    },
+    values: { table: { disable: true } },
   },
   args: {
     rootClass: "spectrum-Slider",
     isDisabled: false,
     isFocused: false,
-    isDragged: false,
-    isRamp: false,
-    isRange: false,
-    showOffset: false,
     showTicks: false,
-    isFilled: false,
   },
   parameters: {
     actions: {
@@ -155,51 +115,42 @@ export default {
 
 export const Default = Template.bind({});
 Default.args = {
-  label: "Slider Label",
+  label: "Slider label",
   min: 10,
   max: 20,
   values: [14],
   step: 2,
-  showOffset: false,
-};
-Default.argTypes = {
-  isRange: { table: { disable: true } },
-  isRamp: { table: { disable: true } },
 };
 
 export const Filled = Template.bind({});
 Filled.args = {
   ...Default.args,
-  isFilled: true,
+  variant: 'filled',
 };
 
 export const FilledOffset = Template.bind({});
 FilledOffset.args = {
   ...Default.args,
   min: 0,
-  showOffset: true,
+  variant: 'offset',
 };
 
 export const Ramp = Template.bind({});
 Ramp.args = {
   ...Default.args,
-  isRamp: true,
-};
-Ramp.argTypes = {
-  fillColor: { table: { disable: true } },
+  variant: "ramp",
 };
 
 export const Range = Template.bind({});
 Range.args = {
   ...Default.args,
-  label: "Slider Label",
-  isRange: true,
   values: [14, 16],
 };
 
 export const Tick = Template.bind({});
 Tick.args = {
   ...Default.args,
+  label: undefined,
   showTicks: true,
 };
 
@@ -207,7 +158,4 @@ export const Disabled = Template.bind({});
 Disabled.args = {
   ...Default.args,
   isDisabled: true,
-};
-Disabled.argTypes = {
-  fillColor: { table: { disable: true } },
 };
