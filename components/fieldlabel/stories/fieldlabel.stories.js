@@ -75,3 +75,10 @@ export const Default = Template.bind({});
 Default.args = {
   label: "Label",
 };
+
+export const RightAligned = Template.bind({});
+RightAligned.args = {
+  label: "Label",
+  alignment: "right",
+  style: "width: 72px;"
+};

@@ -1,5 +1,7 @@
 import { html } from 'lit-html';
 import { classMap } from 'lit-html/directives/class-map.js';
+import { styleMap } from 'lit-html/directives/style-map.js';
+import { ifDefined } from "lit-html/directives/if-defined.js";
 
 import { Template as Icon } from "@spectrum-css/icon/stories/template.js";
 
@@ -13,6 +15,7 @@ export const Template = ({
   alignment = "left",
   isDisabled,
   isRequired,
+  style = { width: "72px" },
   ...globals
 }) => {
   if (!label) {
@@ -37,7 +40,7 @@ export const Template = ({
       "is-disabled": isDisabled,
       ...customClasses.reduce((a, c) => ({ ...a, [c]: true }), {}),
     })}
-      style="width: 72px;"
+      style=${ifDefined(style)}
     >
       ${label}
       ${isRequired ?
