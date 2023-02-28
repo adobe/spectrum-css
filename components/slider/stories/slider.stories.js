@@ -120,6 +120,11 @@ Default.args = {
   max: 20,
   values: [14],
   step: 2,
+  showOffset: false,
+};
+Default.argTypes = {
+  isRange: { table: { disable: true } },
+  isRamp: { table: { disable: true } },
 };
 
 export const Filled = Template.bind({});
@@ -138,7 +143,10 @@ FilledOffset.args = {
 export const Ramp = Template.bind({});
 Ramp.args = {
   ...Default.args,
-  variant: "ramp",
+  isRamp: true,
+};
+Ramp.argTypes = {
+  fillColor: { table: { disable: true } },
 };
 
 export const Range = Template.bind({});
@@ -158,4 +166,7 @@ export const Disabled = Template.bind({});
 Disabled.args = {
   ...Default.args,
   isDisabled: true,
+};
+Disabled.argTypes = {
+  fillColor: { table: { disable: true } },
 };
