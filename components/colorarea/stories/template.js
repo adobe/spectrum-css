@@ -1,8 +1,8 @@
-// template is where the component markup with go
 import { html } from 'lit-html';
 import { classMap } from 'lit-html/directives/class-map.js';
 import { ifDefined } from 'lit-html/directives/if-defined.js';
 import { Template as ColorHandle } from "@spectrum-css/colorhandle/stories/template.js";
+
 
 import '../index.css';
 
@@ -13,7 +13,6 @@ export const Template = ({
   isFocused = false,
   customWidth,
   customHeight,
-  customSize,
   handlePosition = "transform: translate(" + customWidth + ",  0px);",
   colorHandleStyle = "--spectrum-picked-color: rgb(255, 0, 0);" + handlePosition,
   ...globals
@@ -32,6 +31,7 @@ export const Template = ({
     'is-focused': isFocused,
     ...customClasses.reduce((a, c) => ({ ...a, [c]: true }), {}),
   })}
+  // if component isDisabled, return undefined else isFocused
   ?disabled=${isDisabled}
   ?focused=${isFocused}
   style=${ifDefined(handleCustomSize(customWidth, customHeight))}>
@@ -48,5 +48,3 @@ export const Template = ({
   </div>
   `;
 }
-
-// customWidth: "--mod-colorarea-height: 80px; --mod-colorarea-width: 80px;",
