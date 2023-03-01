@@ -3,23 +3,12 @@ import { Template } from "./template";
 
 export default {
   title: "Color loupe",
-  description: "The Color loupe component is...",
+  description: "The Color loupe component shows the output color that would otherwise be covered by a cursor, stylus, or finger during color selection.",
   component: "Colorloupe",
-  argTypes: {
-    size: {
-      name: "Size",
-      type: { name: "string", required: true },
-      table: {
-        type: { summary: "string" },
-        category: "Component",
-      },
-      options: ["s", "m", "l", "xl"],
-      control: "select"
-    },
-  },
+  argTypes: {},
   args: {
-    rootClass: "spectrum-",
-    size: "m",
+    rootClass: "spectrum-ColorLoupe",
+    isOpen: true
   },
   parameters: {
     actions: {
