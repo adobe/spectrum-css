@@ -35,7 +35,7 @@ export const Template = ({
   ?focused=${isFocused}
   style=${ifDefined(handleCustomSize(customWidth, customHeight))}>
   <div class="spectrum-ColorArea-gradient" style="background: linear-gradient(to top, black 0%, rgba(0, 0, 0, 0) 100%), linear-gradient(to right, white 0%, rgba(0, 0, 0, 0) 100%), rgb(255, 0, 0);"></div>
-    ${ ColorHandle({
+    ${ColorHandle({
       ...globals,
       isDisabled,
       customClasses: [`${rootClass}-handle`],

@@ -27,7 +27,7 @@ export const Template = ({
   <div class="${rootClass}-border ${isDisabled ? 'is-disabled' : ""}">
     <div class="${rootClass}-wheel ${isDisabled ? 'is-disabled' : ""}"></div>
   </div>
-  ${ ColorHandle({
+  ${ColorHandle({
     ...globals,
     isDisabled,
     customClasses: [`${rootClass}-handle`],
