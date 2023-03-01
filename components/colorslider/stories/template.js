@@ -8,14 +8,25 @@ import '../skin.css';
 export const Template = ({
   rootClass = "spectrum-ColorSlider",
   customClasses = [],
-  size = "m",
   // ...globals
 }) => {
   return html`
     <div class=${classMap({
       [rootClass]: true,
-      [`${rootClass}--size${size?.toUpperCase()}`]: typeof size !== "undefined",
       ...customClasses.reduce((a, c) => ({ ...a, [c]: true }), {}),
-  })}></div>
+  })}>
+  <div class="spectrum-ColorSlider-checkerboard" role="presentation">
+    <div class="spectrum-ColorSlider-gradient" role="presentation" style="background: linear-gradient(to right, rgb(255, 0, 0) 0%, rgb(255, 255, 0) 17%, rgb(0, 255, 0) 33%, rgb(0, 255, 255) 50%, rgb(0, 0, 255) 67%, rgb(255, 0, 255) 83%, rgb(255, 0, 0) 100%);"></div>
+  </div>
+
+  <div class="spectrum-ColorHandle spectrum-ColorSlider-handle" style="--spectrum-picked-color: rgb(255, 0, 0)">
+    <div class="spectrum-ColorHandle-color"></div>
+    <svg class="spectrum-ColorLoupe">
+      <!-- use ColorLoupe markup here -->
+    </svg>
+  </div>
+
+  <input type="range" class="spectrum-ColorSlider-slider" min="0" max="100" step="1">
+  </div>
   `;
 }
