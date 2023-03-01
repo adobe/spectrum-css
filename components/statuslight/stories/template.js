@@ -7,6 +7,8 @@ import "../index.css";
 export const Template = ({
   rootClass = "spectrum-StatusLight",
   size = "m",
+  variant = "info",
+  label,
   ...globals
 }) => {
   const { express } = globals;
@@ -22,6 +24,7 @@ export const Template = ({
     <div class=${classMap({
     [rootClass]: true,
     [`${rootClass}--size${size?.toUpperCase()}`]: typeof size !== "undefined",
-  })}></div>
+    [`${rootClass}--${variant}`]: typeof variant !== "undefined",
+  })}>${label}</div>
   `;
 }
