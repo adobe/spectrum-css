@@ -27,21 +27,21 @@ export default {
       options: ["top", "side"],
       control: "select"
     },
-    inputType: {
-      name: "Input Type",
-      type: { name: "string" },
+    isInvalid: {
+      name: "Invalid",
+      type: { name: "boolean" },
       table: {
-        type: { summary: "string" },
-        category: "Component",
+        type: { summary: "boolean" },
+        category: "State",
       },
-      options: ["radio", "checkbox"],
-      control: "select"
+      control: "boolean",
     },
   },
   args: {
     rootClass: "spectrum-FieldGroup",
     layout: "vertical",
     labelPosition: "top",
+    isInvalid: false
   },
   parameters: {
     actions: {

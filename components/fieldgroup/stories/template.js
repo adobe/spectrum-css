@@ -4,6 +4,7 @@ import { repeat } from 'lit-html/directives/repeat.js';
 
 import { Template as FieldLabel } from "@spectrum-css/fieldlabel/stories/template.js";
 import { Template as Radio } from "@spectrum-css/radio/stories/template.js";
+import { Template as HelpText } from "@spectrum-css/helptext/stories/template.js";
 
 import "../index.css";
 
@@ -46,6 +47,13 @@ export const Template = ({
               ...item,
               customClasses: [`${rootClass}-item`]
             })
+          })}
+
+          ${HelpText({
+            ...globals,
+            size: "m",
+            text: "Select an option",
+            variant: isInvalid ? "negative" : "neutral"
           })}
       </div>
     </div>
