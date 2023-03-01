@@ -1,6 +1,6 @@
 import { html } from 'lit-html';
 import { classMap } from 'lit-html/directives/class-map.js';
-// import { ifDefined } from 'lit-html/directives/if-defined.js';
+import { Template as ColorHandle } from "@spectrum-css/colorhandle/stories/template.js";
 
 import '../index.css';
 
@@ -9,7 +9,8 @@ export const Template = ({
   customClasses = [],
   isDisabled = false,
   isFocused = false,
-  // ...globals
+  colorHandleStyle = "--spectrum-picked-color: rgb(255, 0, 0);",
+  ...globals
 }) => {
   return html`
     <div class=${classMap({
@@ -26,6 +27,13 @@ export const Template = ({
   <div class="${rootClass}-borders ${isDisabled ? 'is-disabled' : ""}">
     <div class="${rootClass}-wheel ${isDisabled ? 'is-disabled' : ""}"></div>
   </div>
+  ${ ColorHandle({
+    ...globals,
+    isDisabled,
+    customClasses: [`${rootClass}-handle`],
+    colorHandleStyle
+    })
+  }
   <input type="range" class="${rootClass}-slider" aria-label="hue" min="0" max="360" step="">
   </div>
   </div>
