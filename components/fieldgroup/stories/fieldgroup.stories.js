@@ -55,9 +55,21 @@ export default {
   }
 };
 
-export const Default = Template.bind({});
-Default.args = {
-  inputType: "radio",
+export const Vertical = Template.bind({});
+Vertical.args = {
+  layout: "vertical",
+  items: [{
+    id: "1",
+    label: "Radio 1",
+  },{
+    id: "2",
+    label: "Radio 2",
+  }]
+};
+
+export const Horizontal = Template.bind({});
+Horizontal.args = {
+  layout: "horizontal",
   items: [{
     id: "1",
     label: "Radio 1",
