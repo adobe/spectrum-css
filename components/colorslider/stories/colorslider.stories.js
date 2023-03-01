@@ -6,6 +6,7 @@ export default {
   description: "The Color slider component lets users visually change an individual channel of a color..",
   component: "Colorslider",
   argTypes: {
+    vertical: { table: { disable: true } },
     isDisabled: {
       name: "Disabled",
       type: { name: "boolean" },
@@ -43,3 +44,8 @@ export default {
 
 export const Default = Template.bind({});
 Default.args = {};
+
+export const Vertical = Template.bind({});
+Vertical.args = {
+  vertical: true
+}
