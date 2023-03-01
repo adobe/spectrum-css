@@ -10,6 +10,15 @@ export default {
   component: "Picker",
   argTypes: {
     content: { table: { disable: true } },
+    icon: {
+      name: "Icon",
+      type: { name: "string", required: false },
+      table: {
+        type: { summary: "string" },
+        category: "Component"
+      },
+      options: ["menu", ""]
+    },
     size: {
       name: "Size",
       type: { name: "string", required: true },
@@ -65,8 +74,17 @@ export default {
       },
       control: "boolean",
     },
+    isValid: {
+      name: "Valid",
+      type: { name: "boolean" },
+      table: {
+        type: { summary: "boolean" },
+        category: "State",
+      },
+      control: "boolean",
+    },
     isInvalid: {
-      name: "Invalid styling",
+      name: "Invalid",
       type: { name: "boolean" },
       table: {
         type: { summary: "boolean" },
@@ -84,6 +102,7 @@ export default {
     isQuiet: false,
     isOpen: true,
     isInvalid: false,
+    isValid: false,
   },
   parameters: {
     actions: {

@@ -1,5 +1,6 @@
 import { html } from "lit-html";
 import { classMap } from "lit-html/directives/class-map.js";
+import { styleMap } from "lit-html/directives/style-map.js";
 import { ifDefined } from "lit-html/directives/if-defined.js";
 
 import "../index.css";
@@ -12,6 +13,7 @@ export const Template = ({
   position,
   customClasses = [],
   id,
+  customStyles = {},
   content = [],
   ...globals
 }) => {
@@ -34,6 +36,7 @@ export const Template = ({
         [`${rootClass}--${position}`]: typeof position !== "undefined",
         ...customClasses.reduce((a, c) => ({ ...a, [c]: true }), {}),
       })}
+      style=${ifDefined(styleMap(customStyles))}
       role="presentation"
       id=${ifDefined(id)}>
       ${content}
