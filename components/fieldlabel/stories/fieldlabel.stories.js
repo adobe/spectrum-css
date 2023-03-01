@@ -80,5 +80,5 @@ export const RightAligned = Template.bind({});
 RightAligned.args = {
   label: "Label",
   alignment: "right",
-  style: "width: 72px;"
+  style: { width: "72px" }
 };

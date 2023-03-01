@@ -15,7 +15,7 @@ export const Template = ({
   alignment = "left",
   isDisabled,
   isRequired,
-  style = { width: "72px" },
+  style = {},
   ...globals
 }) => {
   if (!label) {
@@ -40,7 +40,7 @@ export const Template = ({
       "is-disabled": isDisabled,
       ...customClasses.reduce((a, c) => ({ ...a, [c]: true }), {}),
     })}
-      style=${ifDefined(style)}
+      style=${ifDefined(styleMap(style))}
     >
       ${label}
       ${isRequired ?
