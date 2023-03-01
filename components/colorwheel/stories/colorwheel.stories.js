@@ -6,20 +6,30 @@ export default {
   description: "The Color wheel component lets users visually change an individual channel of a color on a circular track.",
   component: "ColorWheel",
   argTypes: {
-    size: {
-      name: "Size",
-      type: { name: "string", required: true },
+    isDisabled: {
+      name: "Disabled",
+      type: { name: "boolean" },
       table: {
-        type: { summary: "string" },
-        category: "Component",
+        type: { summary: "boolean" },
+        category: "State",
       },
-      options: ["s", "m", "l", "xl"],
-      control: "select"
+      control: "boolean"
+    },
+    isFocused: {
+      name: "Focused",
+      type: { name: "boolean" },
+      table: {
+        type: { summary: "boolean" },
+        category: "State",
+      },
+      control: "boolean",
+      if: { arg: 'isDisabled', truthy: false }
     },
   },
   args: {
-    rootClass: "spectrum-",
-    size: "m",
+    rootClass: "spectrum-ColorWheel",
+    isDisabled: false,
+    isFocused: false,
   },
   parameters: {
     actions: {
