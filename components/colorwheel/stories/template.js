@@ -24,7 +24,7 @@ export const Template = ({
   <div class="${rootClass}-inner">
     <div class="${rootClass}-colorarea-container"></div>
   </div>
-  <div class="${rootClass}-borders ${isDisabled ? 'is-disabled' : ""}">
+  <div class="${rootClass}-border ${isDisabled ? 'is-disabled' : ""}">
     <div class="${rootClass}-wheel ${isDisabled ? 'is-disabled' : ""}"></div>
   </div>
   ${ ColorHandle({
