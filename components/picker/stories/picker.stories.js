@@ -9,7 +9,7 @@ export default {
   description: "A picker outlines a set of options for a user.",
   component: "Picker",
   argTypes: {
-    content: { table: { disable: true } },
+    popoverContent: { table: { disable: true } },
     icon: {
       name: "Icon",
       type: { name: "string", required: false },
@@ -118,7 +118,7 @@ export default {
 
 export const Default = Template.bind({});
 Default.args = {
-  content: [
+  popoverContent: [
     MenuStories.Default,
   ]
 };

@@ -8,7 +8,6 @@ import { Template as Picker } from '../../picker/stories/template.js';
 import "../index.css";
 import "../skin.css";
 
-// More on component templates: https://storybook.js.org/docs/web-components/writing-stories/introduction#using-args
 export const Template = ({
   rootClass = "spectrum-InputGroup",
   id,
@@ -43,6 +42,7 @@ export const Template = ({
       })}
       ${Picker({
         ...globals,
+        rootClass: "spectrum-PickerButton",
         customClasses: [`${rootClass}-button`],
         customPopoverStyles: {
           position: 'absolute',

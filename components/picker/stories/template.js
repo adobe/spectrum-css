@@ -15,7 +15,6 @@ export const Template = ({
   rootClass = "spectrum-Picker",
   size = "m",
   label,
-  content,
   position,
   icon = "menu",
   isDisabled = false,
@@ -27,6 +26,7 @@ export const Template = ({
   customClasses = [],
   customStyles = {},
   customPopoverStyles = {},
+  popoverContent = [],
   id,
   ...globals
 }) => {
@@ -84,7 +84,7 @@ export const Template = ({
       withTip: false,
       position: 'bottom',
       isQuiet,
-      content: [
+      content: popoverContent ?? [
         Menu({
           ...globals,
           role: "listbox",
