@@ -37,7 +37,7 @@ export const Template = ({
         ...globals,
         size: "m",
         label: "Field Group Label",
-        alignment: labelPosition === "side" ?? "right",
+        alignment: labelPosition === "side" ? "right" : "top"
       })}
 
       <div class="${rootClass}InputLayout">
