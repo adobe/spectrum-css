@@ -3,7 +3,7 @@ import { Template } from "./template";
 
 export default {
   title: "Field label",
-  description: "The Field label component is...",
+  description: "The Field label component is used along with inputs to display a label for that input.",
   component: "Fieldlabel",
   argTypes: {
     size: {
@@ -25,10 +25,41 @@ export default {
       },
       control: { type: "text" },
     },
+    alignment: {
+      name: "Alignment",
+      type: { name: "string" },
+      table: {
+        type: { summary: "string" },
+        category: "Component",
+      },
+      options: ["left", "right"],
+      control: "select"
+    },
+    isDisabled: {
+      name: "Disabled",
+      type: { name: "boolean" },
+      table: {
+        type: { summary: "boolean" },
+        category: "State",
+      },
+      control: "boolean",
+    },
+    isRequired: {
+      name: "Required",
+      type: { name: "boolean" },
+      table: {
+        type: { summary: "boolean" },
+        category: "State",
+      },
+      control: "boolean",
+    },
   },
   args: {
     rootClass: "spectrum-FieldLabel",
     size: "m",
+    alignment: "left",
+    isDisabled: false,
+    isRequired: false
   },
   parameters: {
     actions: {
@@ -43,4 +74,11 @@ export default {
 export const Default = Template.bind({});
 Default.args = {
   label: "Label",
+};
+
+export const RightAligned = Template.bind({});
+RightAligned.args = {
+  label: "Label",
+  alignment: "right",
+  style: { width: "72px" }
 };

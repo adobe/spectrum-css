@@ -1,13 +1,20 @@
 import { html } from 'lit-html';
 import { classMap } from 'lit-html/directives/class-map.js';
-// import { ifDefined } from 'lit-html/directives/if-defined.js';
+import { repeat } from 'lit-html/directives/repeat.js';
+
+import { Template as FieldLabel } from "@spectrum-css/fieldlabel/stories/template.js";
+import { Template as Radio } from "@spectrum-css/radio/stories/template.js";
+import { Template as HelpText } from "@spectrum-css/helptext/stories/template.js";
 
 import "../index.css";
 
 export const Template = ({
   rootClass = "spectrum-FieldGroup",
   customClasses = [],
-  size = "m",
+  layout,
+  labelPosition,
+  isInvalid,
+  items,
   ...globals
 }) => {
   const { express } = globals;
@@ -22,8 +29,33 @@ export const Template = ({
   return html`
     <div class=${classMap({
       [rootClass]: true,
-      [`${rootClass}--size${size?.toUpperCase()}`]: typeof size !== "undefined",
+      [`${rootClass}--${labelPosition}label`]: typeof labelPosition !== "undefined",
+      [`${rootClass}--${layout}`]: typeof layout !== "undefined",
       ...customClasses.reduce((a, c) => ({ ...a, [c]: true }), {}),
-  })}></div>
+    })}>
+      ${FieldLabel({
+        ...globals,
+        size: "m",
+        label: "Field Group Label",
+        alignment: labelPosition === "side" ? "right" : "top"
+      })}
+
+      <div class="${rootClass}InputLayout">
+          ${repeat(items, (item) => item.id, (item) => {
+            return Radio({
+              ...globals,
+              ...item,
+              customClasses: [`${rootClass}-item`]
+            })
+          })}
+
+          ${HelpText({
+            ...globals,
+            size: "m",
+            text: "Select an option",
+            variant: isInvalid ? "negative" : "neutral"
+          })}
+      </div>
+    </div>
   `;
 }
