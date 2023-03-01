@@ -13,6 +13,16 @@ export const Template = ({
   customClasses = [],
   customInputClasses = [],
   customIconClasses = [],
+  isInvalid = false,
+  isValid = false,
+  multiline = false,
+  isQuiet = false,
+  isFocused = false,
+  isDisabled = false,
+  isRequired = false,
+  isReadOnly = false,
+  isKeyboardFocused = false,
+  pattern,
   placeholder,
   name,
   icon,
@@ -21,24 +31,54 @@ export const Template = ({
   autocomplete = true,
   ...globals
 }) => {
+  if (isInvalid) icon = "Alert";
+  else if (isValid) {
+    icon = "Checkmark100";
+    switch (size) {
+      case "s":
+        icon = "Checkmark75";
+        break;
+      case "l":
+        icon = "Checkmark200";
+        break;
+      case "xl":
+        icon = "Checkmark300";
+        break;
+    }
+  }
+
   return html`
     <div class=${classMap({
       [rootClass]: true,
       [`${rootClass}--size${size?.toUpperCase()}`]: typeof size !== "undefined",
+      [`${rootClass}--multiline`]: multiline,
+      [`${rootClass}--quiet`]: isQuiet,
+      'is-invalid': isInvalid,
+      'is-valid': isValid,
+      'is-focused': isFocused,
+      'is-keyboardFocused': isFocused,
+      'is-disabled': isDisabled,
       ...customClasses.reduce((a, c) => ({ ...a, [c]: true }), {}),
     })}>
       ${icon ? Icon({
         ...globals,
         size,
         iconName: icon,
-        customClasses: [`${rootClass}-icon`, ...customIconClasses],
+        customClasses: [
+          isInvalid || isValid ? `${rootClass}-validationIcon` : `${rootClass}-icon`,
+          ...customIconClasses,
+        ],
       }) : ""}
       <input
         type=${ifDefined(type)}
         placeholder=${ifDefined(placeholder)}
-        name=${name}
+        name=${ifDefined(name)}
         value=${ifDefined(value)}
         autocomplete=${autocomplete ? undefined : "off"}
+        ?required=${isRequired}
+        ?disabled=${isDisabled}
+        readonly=${ifDefined(isReadOnly ? "readonly" : undefined)}
+        pattern=${ifDefined(pattern)}
         class=${classMap({
           [`${rootClass}-input`]: true,
           ...customInputClasses.reduce((a, c) => ({ ...a, [c]: true }), {}),
