@@ -2,14 +2,12 @@ import { html } from 'lit-html';
 import { classMap } from 'lit-html/directives/class-map.js';
 // import { ifDefined } from 'lit-html/directives/if-definedjs';
 
-import { lowerCase, capitalize } from "lodash-es";
-
 import "../index.css";
 
 export const Template = ({
   rootClass = "spectrum-ProgressCircle",
   customClasses = [],
-  size = "medium",
+  size = "m",
   overBackground = false,
   isIndeterminate = false,
   ...globals
@@ -23,10 +21,22 @@ export const Template = ({
     console.warn(e);
   }
 
+  let sizeClassName = "medium";
+  switch(size) {
+    case "s":
+      sizeClassName = "small";
+      break;
+    case "l":
+      sizeClassName = "large";
+      break;
+    default:
+      sizeClassName = "medium";
+  }
+
   const componentMarkup = html`
     <div class=${classMap({
       [rootClass]: true,
-      [`${rootClass}--${size}`]: typeof size !== "undefined",
+      [`${rootClass}--${sizeClassName}`]: typeof size !== "undefined",
       [`${rootClass}--indeterminate`]: isIndeterminate,
       [`${rootClass}--staticWhite`]: overBackground,
       ...customClasses.reduce((a, c) => ({ ...a, [c]: true }), {}),

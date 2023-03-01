@@ -35,13 +35,23 @@ export default {
       },
       options: ["neutral", "info", "positive", "notice", "negative", "closable"],
       control: "select"
-    }
+    },
+    isClosable: {
+      name: "Closable",
+      type: { name: "boolean" },
+      table: {
+        type: { summary: "boolean" },
+        category: "Advanced",
+      },
+      control: "boolean",
+    },
   },
   args: {
     rootClass: "spectrum-InLineAlert",
     headerText: "in-line alert header",
     text: "This is an alert.",
     variant: "neutral",
+    isClosable: false,
   },
   parameters: {
     actions: {

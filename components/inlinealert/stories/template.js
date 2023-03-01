@@ -5,7 +5,6 @@ import { classMap } from 'lit-html/directives/class-map.js';
 import { Template as Icon } from "@spectrum-css/icon/stories/template.js"
 import { Template as Button } from "@spectrum-css/button/stories/template.js"
 
-// import "../dist/index-vars.css";
 import "../index.css";
 
 export const Template = ({
@@ -14,6 +13,7 @@ export const Template = ({
   headerText,
   text,
   variant="neutral",
+  isClosable = false,
   ...globals
 }) => {
   const { express } = globals;
@@ -51,7 +51,7 @@ export const Template = ({
       })}
     ` : '';
 
-  const closableMarkup = variant === 'closable' ? 
+  const closableMarkup = isClosable ? 
     html`
       <div class="spectrum-InLineAlert-footer">
         ${Button({

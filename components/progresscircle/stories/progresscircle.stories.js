@@ -13,7 +13,7 @@ export default {
         type: { summary: "string" },
         category: "Component",
       },
-      options: ["small", "medium", "large"],
+      options: ["s", "m", "l"],
       control: "select"
     },
     isIndeterminate: {
@@ -37,7 +37,7 @@ export default {
   },
   args: {
     rootClass: "spectrum-ProgressCircle",
-    size: "medium",
+    size: "m",
     isIndeterminate: false,
     overBackground: false,
   },
