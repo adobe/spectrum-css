@@ -23,7 +23,6 @@ export const Template = ({
       'is-focused': isFocused,
       ...customClasses.reduce((a, c) => ({ ...a, [c]: true }), {}),
   })}
-  ${vertical}
   ${isDisabled}
   ${isFocused}>
   <div class="${rootClass}-checkerboard" role="presentation">
