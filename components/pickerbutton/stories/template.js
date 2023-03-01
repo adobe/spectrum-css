@@ -25,7 +25,6 @@ export const Template = ({
   customClasses = [],
   isRounded = false,
   customStyles = {},
-  id,
   ...globals
 }) => {
   const [_, updateArgs] = useArgs();
