@@ -3,7 +3,6 @@ import { classMap } from 'lit-html/directives/class-map.js';
 import { ifDefined } from 'lit-html/directives/if-defined.js';
 import { Template as ColorHandle } from "@spectrum-css/colorhandle/stories/template.js";
 
-
 import '../index.css';
 
 export const Template = ({
@@ -14,7 +13,10 @@ export const Template = ({
   customWidth,
   customHeight,
   handlePosition = "transform: translate(" + customWidth + ",  0px);",
-  colorHandleStyle = "--spectrum-picked-color: rgb(255, 0, 0);" + handlePosition,
+  colorHandleStyle = {
+    '--spectrum-picked-color': 'rgba(255, 0, 0)',
+    handlePosition,
+  },
   ...globals
 }) => {
 
