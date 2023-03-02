@@ -89,6 +89,7 @@ FilesSelectable.args = {
         isBranch: true,
         isSelectable: false,
         isSelected: false,
+        isNavigated: true,
         image: "example-ava.png",
       }]
     },

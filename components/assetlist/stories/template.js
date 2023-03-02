@@ -16,6 +16,7 @@ export const AssetListItem = ({
   image,
   iconName,
   label,
+  isNavigated = false,
   isSelectable = false,
   isSelected = false,
   isBranch = false,
@@ -28,6 +29,7 @@ export const AssetListItem = ({
         'is-selectable': isSelectable,
         'is-selected': isSelected,
         'is-branch': isBranch,
+        'is-navigated': isNavigated,
       })}
       @click=${onclick}
       tabindex="0">
