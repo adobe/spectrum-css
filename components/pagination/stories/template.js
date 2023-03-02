@@ -24,14 +24,14 @@ export const Template = ({
     return html`
       <nav class=${classMap({
         [rootClass]: true,
-        [`${rootClass}--${variant}`]: typeof variant !== "undefined",
+        [`${rootClass}--explicit`]: true,
         ...customClasses.reduce((a, c) => ({ ...a, [c]: true }), {}),
       })}
       >
         ${ActionButton({
           size,
           isQuiet: true,
-          icon: "ChevronLeft100",
+          iconName: "ChevronLeft100",
           customClasses: [`${rootClass}-prevButton`]
         })}
         ${Textfield({
@@ -42,7 +42,7 @@ export const Template = ({
         ${ActionButton({
           size,
           isQuiet: true,
-          icon: "ChevronRight100",
+          iconName: "ChevronRight100",
           customClasses: [`${rootClass}-nextButton`]
         })}
       </nav>
@@ -56,12 +56,12 @@ export const Template = ({
     })}
     >
       ${Button({
+        ...globals,
         size,
         variant: "primary",
         treatment: "outline",
         label: "Prev",
-        customClasses: [`${rootClass}-prevButton`],
-        ...globals
+        customClasses: [`${rootClass}-prevButton`]
       })}
       ${repeat(items, (item) => item.id, (item) => {
         if (typeof item === "object") {
@@ -74,12 +74,12 @@ export const Template = ({
       })}
 
       ${Button({
+        ...globals,
         size,
         variant: "primary",
         treatment: "outline",
         label: "Next",
-        customClasses: [`${rootClass}-nextButton`],
-        ...globals
+        customClasses: [`${rootClass}-nextButton`]
       })}
     </nav>
   `;
