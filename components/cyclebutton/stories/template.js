@@ -11,25 +11,24 @@ export const Template = ({
   size = "m",
   initialIcon = "Play",
   selectedIcon = "Pause",
+  isDisabled = false,
+  onclick,
   ...globals
 }) => {
-  var icon = initialIcon;
+  const [{ selectedIcon: icon }, updateArgs] = useArgs();
 
-  const [, updateArgs] = useArgs();
-  const handleClick = () => {
-    const icon = initialIcon + '';
-    updateArgs({ initialIcon: selectedIcon });
-    updateArgs({ selectedIcon: icon });
-  }
+  return ActionButton({
+    ...globals,
+    customClasses: [rootClass],
+    isQuiet: true,
+    isDisabled,
+    size,
+    iconName: initialIcon,
+    onclick: onclick ?? function() {
+      if (isDisabled) return;
 
-  return html`
-    ${ActionButton({ 
-      ...globals, 
-      customClasses: [rootClass], 
-      isQuiet: true,
-      size,
-      icon: icon,
-      onclick: handleClick
-    })}
-  `;
+      updateArgs({ initialIcon: selectedIcon });
+      updateArgs({ selectedIcon: icon });
+    },
+  });
 }

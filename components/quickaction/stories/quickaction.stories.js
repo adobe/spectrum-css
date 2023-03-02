@@ -57,13 +57,13 @@ export const Default = Template.bind({});
 Default.args = {
   content: [
     {
-      icon: "Edit",
+      iconName: "Edit",
     },
     {
-      icon: "Copy",
+      iconName: "Copy",
     },
     {
-      icon: "Delete",
+      iconName: "Delete",
     },
   ],
 };

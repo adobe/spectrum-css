@@ -1,6 +1,7 @@
 import { html } from "lit-html";
 import { classMap } from "lit-html/directives/class-map.js";
 import { ifDefined } from "lit-html/directives/if-defined.js";
+import { when } from "lit-html/directives/when.js";
 
 import { Template as Icon } from "@spectrum-css/icon/stories/template.js";
 
@@ -10,7 +11,7 @@ export const Template = ({
   rootClass = "spectrum-Badge",
   size = "m",
   label,
-  icon,
+  iconName,
   hideLabel = false,
   variant = "neutral",
   customColor,
@@ -28,15 +29,6 @@ export const Template = ({
     console.warn(e);
   }
 
-  const iconMarkup = icon ? Icon({
-    ...globals,
-    iconName: icon,
-    customClasses: [
-      ...(hideLabel ? [`${rootClass}-icon--no-label`] : []),
-      `${rootClass}-icon`,
-    ],
-  }) : "";
-
   return html`
     <div
       class=${classMap({
@@ -48,10 +40,17 @@ export const Template = ({
         ...customClasses.reduce((a, c) => ({ ...a, [c]: true }), {}),
       })}
       id=${ifDefined(id)}>
-      ${iconMarkup}
-      ${!hideLabel || (!label && !variant)
-        ? html`<div class="${rootClass}-label">${label ?? variant}</div>`
-        : ""}
+      ${when(iconName, () => Icon({
+        ...globals,
+        iconName,
+        customClasses: [
+          ...(hideLabel ? [`${rootClass}-icon--no-label`] : []),
+          `${rootClass}-icon`,
+        ],
+      }))}
+      ${when(!hideLabel || (!label && !variant),
+        () => html`<div class="${rootClass}-label">${label ?? variant}</div>`
+      )}
     </div>
   `;
 };

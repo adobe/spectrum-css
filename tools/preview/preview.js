@@ -2,7 +2,8 @@ import {
   withContextWrapper,
   withTextDirectionWrapper,
   withLanguageWrapper,
-  withReducedMotionWrapper
+  withReducedMotionWrapper,
+  withSizingWrapper,
 } from './decorators/index.js';
 
 // https://github.com/storybookjs/storybook-addon-console
@@ -34,10 +35,11 @@ import '@spectrum-css/vars/css/scales/spectrum-large.css';
 import '@spectrum-css/expressvars/css/scales/spectrum-medium.css';
 import '@spectrum-css/expressvars/css/scales/spectrum-large.css';
 
-import '@spectrum-css/tokens/dist/index.css';
+import '@spectrum-css/tokens';
 
 // Loading typography on every page because it's a useful utility
 import '@spectrum-css/typography';
+import '@spectrum-css/site';
 
 import './global.js';
 
@@ -217,5 +219,5 @@ export const decorators = [
   withTextDirectionWrapper,
   withLanguageWrapper,
   withReducedMotionWrapper,
-  withContextWrapper
+  withContextWrapper,
 ];

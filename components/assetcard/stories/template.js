@@ -1,6 +1,7 @@
 import { html } from 'lit-html';
 import { classMap } from 'lit-html/directives/class-map.js';
 import { ifDefined } from 'lit-html/directives/if-defined.js';
+import { when } from "lit-html/directives/when.js";
 
 import { useArgs } from "@storybook/client-api";
 
@@ -53,22 +54,22 @@ export const Template = ({
         <img class="${rootClass}-asset" src="${image ?? exampleImage}" />
         <div class="${rootClass}-selectionOverlay"></div>
       </div>
-      ${title ? html`<div class="${rootClass}-header">
-        ${title ? html`<div class="${rootClass}-title">${title}</div>` : ''}
-        ${headerContent ? html`<div class="${rootClass}-headerContent">${headerContent}</div>` : ''}
-      </div>` : ''}
-      ${content ? html`<div class="${rootClass}-content">${content}</div>` : ''}
+      ${when(title, () => html`<div class="${rootClass}-header">
+        ${when(title, () => html`<div class="${rootClass}-title">${title}</div>`)}
+        ${when(headerContent, () => html`<div class="${rootClass}-headerContent">${headerContent}</div>`)}
+      </div>`)}
+      ${when(content, () => html`<div class="${rootClass}-content">${content}</div>`)}
       <div class="${rootClass}-selectionIndicator">
-        ${selection === "checkbox" ?
-          Checkbox({
+        ${when(selection === "checkbox",
+          () => Checkbox({
             ...globals,
             size: "m",
             isEmphasized: true,
             isChecked: isSelected,
             customClasses: [`${rootClass}-checkbox`],
-          }) : html`
-          <div class="${rootClass}-selectionOrder">1</div>
-        `}
+          }),
+          () => html`<div class="${rootClass}-selectionOrder">1</div>`
+        )}
       </div>
     </div>
   `;
