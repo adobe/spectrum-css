@@ -12,9 +12,13 @@ export const Template = ({
   style = "--spectrum-picked-color: rgba(255, 0, 0, 0.5); position: absolute; top: 25%; left: 50%;",
   darkColor = "rgb(217, 217, 217)",
   lightColor = "rgb(255, 255, 255)",
+  isExpress = false,
   customClasses = [],
-  // ...globals
+  ...globals
 }) => {
+
+  if(globals.express) isExpress = true
+
   return html`
     <svg class=${classMap({
     [rootClass]: true,
@@ -171,7 +175,7 @@ export const Template = ({
           </filter>
         </defs>
 
-        <g transform="translate(4 4)" class="${rootClass}-spectrum">
+        <g transform="translate(4 4)" class="${rootClass}-spectrum" style=${isExpress ? "display: none;": "display: block;"}>
           <g clip-path="url(#spectrum-loupe-clip)">
             <g transform="translate(-353.999 -289)">
               <use xlink:href="#loupe-checkerboard" />
@@ -183,7 +187,7 @@ export const Template = ({
           <path class="${rootClass}-outer" d="M24,2A21.98,21.98,0,0,0,2,24c0,6.2,4,14.794,11.568,24.853A144.233,144.233,0,0,0,24,61.132,144.085,144.085,0,0,0,34.4,48.893C41.99,38.816,46,30.209,46,24A21.98,21.98,0,0,0,24,2m0-2A24,24,0,0,1,48,24c0,16.255-24,40-24,40S0,40.255,0,24A24,24,0,0,1,24,0Z"/>
         </g>
 
-        <g transform="translate(-290 -235)" class="${rootClass}-express">
+        <g transform="translate(-290 -235)" class="${rootClass}-express" style=${isExpress ? "display: block;": "display: none;"}>
           <g transform="translate(-58 -45)" clip-path="url(#express-checkerboard-loupe-clip)">
             <use xlink:href="#loupe-checkerboard" />
           </g>
