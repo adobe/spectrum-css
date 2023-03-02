@@ -5,7 +5,7 @@ import { default as ActionButton } from '@spectrum-css/actionbutton/stories/acti
 
 export default {
   title: "Pagination",
-  description: "The Field group component is...",
+  description: "The Pagination component displays numbered buttons or an input field to allow for navigation",
   component: "Pagination",
   argTypes: {
     size: {
