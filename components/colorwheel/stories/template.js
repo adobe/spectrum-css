@@ -9,7 +9,9 @@ export const Template = ({
   customClasses = [],
   isDisabled = false,
   isFocused = false,
-  colorHandleStyle = "--spectrum-picked-color: rgb(255, 0, 0);",
+  colorHandleStyle = {
+    '--spectrum-picked-color': 'rgb(255, 0, 0);',
+  },
   ...globals
 }) => {
   return html`
@@ -18,9 +20,7 @@ export const Template = ({
       'is-disabled': isDisabled,
       'is-focused': isFocused,
       ...customClasses.reduce((a, c) => ({ ...a, [c]: true }), {}),
-  })}
-  ${isDisabled}
-  ${isFocused}>
+  })}>
   <div class="${rootClass}-inner">
     <div class="${rootClass}-colorarea-container"></div>
   </div>
