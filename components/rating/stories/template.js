@@ -15,7 +15,7 @@ export const Template = ({
   max = 5,
   customClasses = [],
   id,
-  // ...globals
+  ...globals
 }) => {
   return html`
     <div
@@ -38,16 +38,16 @@ export const Template = ({
         () => html`
           <span class="${rootClass}-icon">
             ${Icon({
+              ...globals,
               iconName: "Star",
               size,
               customClasses: [`${rootClass}-starActive`],
-              setName: "workflow",
             })}
             ${Icon({
+              ...globals,
               iconName: "StarOutline",
               size,
               customClasses: [`${rootClass}-starInactive`],
-              setName: "workflow",
             })}
           </span>
         `

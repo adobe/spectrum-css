@@ -5,8 +5,8 @@ import { default as ActionButton } from "@spectrum-css/actionbutton/stories/acti
 
 export default {
   title: "Action group",
-  description: "The Action group component is...",
-  component: "Actiongroup",
+  description: "The Action group component is a collection of action buttons.",
+  component: "ActionGroup",
   argTypes: {
     areQuiet: ActionButton.argTypes.isQuiet,
     areEmphasized: ActionButton.argTypes.isEmphasized,
@@ -75,10 +75,13 @@ export default {
 export const Default = Template.bind({});
 Default.args = {
   content: [{
+    iconName: "Edit",
     label: "Edit",
   },{
+    iconName: "Copy",
     label: "Copy",
   }, {
+    iconName: "Delete",
     label: "Delete",
     isSelected: true,
   }]

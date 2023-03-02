@@ -15,7 +15,8 @@ export const Template = ({
   size = "m",
   label,
   position,
-  icon = "menu",
+  iconType = "ui",
+  iconName = "ChevronDown200",
   isDisabled = false,
   isFocused = false,
   isOpen = false,
@@ -25,54 +26,45 @@ export const Template = ({
   customClasses = [],
   isRounded = false,
   customStyles = {},
+  onclick,
   ...globals
 }) => {
   const [_, updateArgs] = useArgs();
-
-  let iconName = "ChevronDown100";
-  switch (size) {
-    case "s":
-      iconName = "ChevronDown75";
-      break;
-    case "l":
-      iconName = "ChevronDown200";
-      break;
-    case "xl":
-      iconName = "ChevronDown300";
-      break;
-  }
 
   return html`
     <button
       class=${classMap({
         [rootClass]: true,
-        [`${rootClass}--uiicononly`]: !label,
+        [`${rootClass}--textuiicon`]: label && iconType === "ui",
+        [`${rootClass}--uiicononly`]: !label && iconType === "ui",
+        [`${rootClass}--texticon`]: label && iconType !== "ui",
+        [`${rootClass}--icononly`]: !label && iconType !== "ui",
         [`${rootClass}--${position}`]: typeof position !== "undefined",
         [`${rootClass}--rounded`]: isRounded,
         [`${rootClass}--size${size?.toUpperCase()}`]: typeof size !== "undefined",
         'is-disabled': isDisabled,
         'is-focused': isFocused,
         'is-open': isOpen && !isDisabled,
-        'is-invalid': isInvalid,
-        'is-valid': isValid,
+        'is-invalid': isInvalid && !isDisabled,
+        'is-valid': isValid && !isDisabled,
         [`${rootClass}--quiet`]: isQuiet,
         ...customClasses.reduce((a, c) => ({ ...a, [c]: true }), {}),
       })}
       style=${ifDefined(styleMap(customStyles))}
       id=${ifDefined(id)}
       aria-haspopup="listbox"
-      @click=${() => {
+      @click=${onclick ?? function () {
+        if (isDisabled) return;
         updateArgs({ isOpen: !isOpen });
       }}
     >
-      ${label ? html`<span class="${rootClass}-label is-placeholder">${label}</span>`: ''}
-      <!-- @todo when does this wrapper get added -->
       <div class="${rootClass}-fill">
+        ${label ? html`<span class="${rootClass}-label is-placeholder">${label}</span>`: ''}
         ${Icon({
           ...globals,
-          iconName,
+          iconName: iconName ?? "ChevronDown200",
           size,
-          customClasses: [ `${rootClass}-UIIcon`], //`${rootClass}-menuIcon`
+          customClasses: [ iconType === "ui" ? `${rootClass}-UIIcon` : `${rootClass}-menuIcon` ],
         })}
       </div>
     </button>

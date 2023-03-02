@@ -53,7 +53,6 @@ export const AccordionItem = ({
           customClasses: [
             `${rootClass}Indicator`,
           ],
-          setName: "ui",
           ...globals,
         })}
       </h3>

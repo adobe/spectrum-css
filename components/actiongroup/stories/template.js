@@ -1,7 +1,5 @@
 import { html } from 'lit-html';
 import { classMap } from 'lit-html/directives/class-map.js';
-import { repeat } from 'lit-html/directives/repeat.js';
-// import { ifDefined } from 'lit-html/directives/if-defined.js';
 
 import { Template as ActionButton } from '@spectrum-css/actionbutton/stories/template.js';
 
@@ -16,7 +14,7 @@ export const Template = ({
   compact = false,
   justified = false,
   staticColors,
-  content,
+  content = [],
   customClasses = [],
   ...globals
 }) => {
@@ -39,17 +37,23 @@ export const Template = ({
       [`${rootClass}--justified`]: justified,
       ...customClasses.reduce((a, c) => ({ ...a, [c]: true }), {}),
     })}>
-      ${repeat(content, (item) => item.id, (item) => {
-        if (typeof item === "object") {
-          return ActionButton({
-            ...globals,
-            ...item,
-            isQuiet: areQuiet || item.isQuiet,
-            isEmphasized: areEmphasized || item.isEmphasized,
-            staticColor: staticColors || item.staticColor,
-            customClasses: [`${rootClass}-item`],
-          })
-        } else return item;
+      ${content.map((item) => {
+        switch (typeof item) {
+          case "object":
+            return ActionButton({
+              ...globals,
+              size,
+              iconName: item.iconName,
+              isQuiet: areQuiet || item.isQuiet,
+              isEmphasized: areEmphasized || item.isEmphasized,
+              staticColor: staticColors ?? item.staticColor,
+              customClasses: [`${rootClass}-item`],
+            });
+          case "function":
+            return item({ ...globals, size });
+          default:
+            return item;
+        }
       })}
     </div>
   `;

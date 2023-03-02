@@ -1,7 +1,6 @@
 // Import the component markup template
 import { Template } from "./template";
 
-
 import { default as IconStories } from "@spectrum-css/icon/stories/icon.stories.js";
 
 export default {
@@ -19,10 +18,10 @@ export default {
       options: ["s", "m", "l"],
       control: "select"
     },
-    icon:
-      IconStories && IconStories.argTypes && IconStories.argTypes.iconName
-        ? IconStories.argTypes.iconName
-        : {},
+    iconName: {
+      ...IconStories?.argTypes?.iconName ?? {},
+      if: false,
+    },
     avatarUrl: {
       name: "Avatar image",
       type: { name: "string" },

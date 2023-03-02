@@ -1,7 +1,7 @@
 // Import the component markup template
 import { Template } from "./template";
 
-import { default as IconStories } from "../../icon/stories/icon.stories.js";
+import { default as IconStories } from "@spectrum-css/icon/stories/icon.stories.js";
 import { default as ActionButtonStories } from "@spectrum-css/actionbutton/stories/actionbutton.stories.js";
 
 export default {
@@ -9,35 +9,20 @@ export default {
   description: "The Cycle button component is an action button that cycles through two different icons, a play that then changes to a pause, for example.",
   component: "CycleButton",
   argTypes: {
-    size: ActionButtonStories.argTypes.size,
+    size: ActionButtonStories?.argTypes?.size ?? {},
     initialIcon: {
+      ...IconStories?.argTypes?.iconName ?? {},
       name: "Initial icon",
       type: { name: "string", required: true },
-      options: 
-        IconStories && IconStories.argTypes && IconStories.argTypes.iconName
-          ? IconStories.argTypes.iconName.options
-          : {},
-      control: { type: "select" },
-      table: {
-        type: { summary: "string" },
-        category: "Component",
-      },
+      if: false,
     },
     selectedIcon: {
+      ...IconStories?.argTypes?.iconName ?? {},
       name: "Selected icon",
-      type: { name: "string", required: true },
-      options: 
-        IconStories && IconStories.argTypes && IconStories.argTypes.iconName
-          ? IconStories.argTypes.iconName.options
-          : {},
-      control: { type: "select" },
-      table: {
-        type: { summary: "string" },
-        category: "Component",
-      },
+      if: false,
     },
-    isSelected: ActionButtonStories.argTypes.isSelected,
-    isDisabled: ActionButtonStories.argTypes.isDisabled,
+    isSelected: ActionButtonStories?.argTypes?.isSelected ?? {},
+    isDisabled: ActionButtonStories?.argTypes?.isDisabled ?? {},
   },
   args: {
     rootClass: "spectrum-CycleButton",
@@ -47,7 +32,9 @@ export default {
   },
   parameters: {
     actions: {
-      handles: [ ...ActionButtonStories.parameters.actions.handles ],
+      handles: [
+        ...ActionButtonStories?.parameters?.actions?.handles ?? [],
+      ],
     },
     status: {
       type: process.env.MIGRATED_PACKAGES.includes('cyclebutton') ? 'migrated' : undefined

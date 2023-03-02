@@ -1,6 +1,6 @@
 import { html } from 'lit-html';
 import { classMap } from 'lit-html/directives/class-map.js';
-// import { ifDefined } from 'lit-html/directives/if-defined.js';
+import { when } from 'lit-html/directives/when.js';
 
 import { Template as Icon } from "@spectrum-css/icon/stories/template.js"
 
@@ -12,21 +12,11 @@ export const Template = ({
   size = "m",
   position = "start",
   quiet,
-  icon = "Add",
+  iconName = "Add",
   isDisabled,
   isInvalid,
   ...globals
 }) => {
-
-  const iconMarkup = typeof icon !== 'undefined' ?
-    html`
-      ${Icon({
-        ...globals,
-        iconName: icon,
-        customClasses: [`${rootClass}-icon`],
-      })}
-    ` : '';
-  
   return html`
     <button class=${classMap({
       [rootClass]: true,
@@ -37,7 +27,11 @@ export const Template = ({
       ...customClasses.reduce((a, c) => ({ ...a, [c]: true }), {}),
   })} ?disabled=${isDisabled} aria-haspopup="listbox">
     <div class="${rootClass}-fill">
-      ${iconMarkup}
+      ${when(iconName, () => Icon({
+        ...globals,
+        iconName,
+        customClasses: [`${rootClass}-icon`],
+      }))}
     </div>
   </button>
   `;

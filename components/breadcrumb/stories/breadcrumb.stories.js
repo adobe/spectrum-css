@@ -49,7 +49,7 @@ NestedMultiline.args = {
   items: [{
     label: "Nav root",
   }, {
-    icon: "FolderOpen",
+    iconName: "FolderOpen",
     isDisabled: true,
   }, {
     label: "Trend",

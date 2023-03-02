@@ -1,7 +1,7 @@
 // Import the component markup template
 import { Template } from "./template";
 
-import { default as IconStories } from "../../icon/stories/icon.stories.js";
+import { default as IconStories } from "@spectrum-css/icon/stories/icon.stories.js";
 
 export default {
   title: "Infield button",
@@ -37,10 +37,10 @@ export default {
       options: ["left", "right"],
       control: "select"
     },
-    icon:
-      IconStories && IconStories.argTypes && IconStories.argTypes.iconName
-        ? IconStories.argTypes.iconName
-        : {},
+    iconName: {
+      ...IconStories?.argTypes?.iconName ?? {},
+      if: false,
+    },
     isDisabled: {
       name: "Disabled",
       type: { name: "boolean" },
@@ -64,7 +64,7 @@ export default {
     rootClass: "spectrum-InfieldButton",
     size: "m",
     position: "left",
-    icon: "Add"
+    iconName: "Add"
   },
   parameters: {
     actions: {

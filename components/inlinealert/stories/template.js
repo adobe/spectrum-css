@@ -51,14 +51,14 @@ export const Template = ({
       })}
     ` : '';
 
-  const closableMarkup = isClosable ? 
+  const closableMarkup = isClosable ?
     html`
       <div class="spectrum-InLineAlert-footer">
         ${Button({
           ...globals,
           treatment: 'outline',
           variant: 'primary',
-          icon: false,
+          iconName: false,
           hideLabel: false,
           label: 'Ok',
         })}

@@ -6,7 +6,7 @@ import { default as Checkbox } from "@spectrum-css/checkbox/stories/checkbox.sto
 export default {
   title: "Asset card",
   description: "The asset card component allows users to select and manage assets and their metadata in a grid.",
-  component: "Assetcard",
+  component: "AssetCard",
   argTypes: {
     image: {
       name: "Image",
@@ -53,6 +53,7 @@ export default {
       table: {
         type: { summary: "string" },
         category: "Component",
+        disable: true,
       },
       options: ["checkbox", "highlight", "ordered"],
       control: "select",

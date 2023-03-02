@@ -17,6 +17,10 @@ export const Template = ({
   content = [],
   ...globals
 }) => {
+  if (content.length === 0) {
+    console.warn("Popover: No content provided.");
+  }
+
   const { express } = globals;
 
   try {
@@ -39,7 +43,7 @@ export const Template = ({
       style=${ifDefined(styleMap(customStyles))}
       role="presentation"
       id=${ifDefined(id)}>
-      ${content}
+      ${content.map(c => typeof c === 'function' ? c({}) : c)}
       ${withTip ?
         position && ['top', 'bottom'].some(e => position.startsWith(e)) ?
           html`<svg class="${rootClass}-tip" viewBox="0 -0.5 16 9" width="10"><path class="${rootClass}-tip-triangle" d="M-1,-1 8,8 17,-1"></svg>` :
