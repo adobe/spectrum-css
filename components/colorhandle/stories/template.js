@@ -12,7 +12,9 @@ export const Template = ({
   isFocused = false,
   colorHandleStyle = {
     '--spectrum-picked-color': 'rgba(255, 0, 0, 0.5)',
-    position: 'absolute; top: 50%; left: 50%;'
+    position: 'absolute',
+    top: '50%',
+    left: '50%',
   },
 
   // ...globals

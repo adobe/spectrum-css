@@ -21,7 +21,7 @@ export const Template = ({
   return html`
     <div class=${classMap({
       [rootClass]: true,
-      'spectrum-ColorSlider--vertical': vertical,
+      [`${rootClass}--vertical`]: vertical,
       'is-disabled': isDisabled,
       'is-focused': isFocused,
       ...customClasses.reduce((a, c) => ({ ...a, [c]: true }), {}),
