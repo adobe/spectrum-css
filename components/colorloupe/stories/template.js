@@ -9,6 +9,8 @@ export const Template = ({
   rootClass = "spectrum-ColorLoupe",
   isOpen,
   style = "--spectrum-picked-color: rgba(255, 0, 0, 0.5); position: absolute; top: 25%; left: 50%;",
+  darkColor = "rgb(217, 217, 217)",
+  lightColor = "rgb(255, 255, 255)",
   customClasses = [],
   // ...globals
 }) => {
@@ -18,7 +20,7 @@ export const Template = ({
     'is-open': isOpen,
     ...customClasses.reduce((a, c) => ({ ...a, [c]: true }), {}),
   })}
-  ?isOpen=${isOpen}
+  ${isOpen}
   style=${style}>
         <defs>
           <path id="spectrum-inner-loupe" class="${rootClass}-inner" d="M24,0A24,24,0,0,1,48,24c0,16.255-24,40-24,40S0,40.255,0,24A24,24,0,0,1,24,0Z" />
@@ -27,124 +29,124 @@ export const Template = ({
           <g id="loupe-checkerboard">
             <g transform="translate(338 285)">
               <g transform="translate(-338 -285)">
-                <rect width="8" height="8" transform="translate(338 285)" fill="var(--spectrum-colorcontrol-checkerboard-dark-color)" />
-                <rect width="8" height="8" transform="translate(338 293)" fill="var(--spectrum-colorcontrol-checkerboard-light-color)" />
-                <rect width="8" height="8" transform="translate(346 285)" fill="var(--spectrum-colorcontrol-checkerboard-light-color)" />
-                <rect width="8" height="8" transform="translate(346 293)" fill="var(--spectrum-colorcontrol-checkerboard-dark-color)" />
+                <rect width="8" height="8" transform="translate(338 285)" fill=${darkColor} />
+                <rect width="8" height="8" transform="translate(338 293)" fill=${lightColor} />
+                <rect width="8" height="8" transform="translate(346 285)" fill=${lightColor} />
+                <rect width="8" height="8" transform="translate(346 293)" fill=${darkColor} />
               </g>
               <g transform="translate(-322 -285)">
-                <rect width="8" height="8" transform="translate(338 285)" fill="var(--spectrum-colorcontrol-checkerboard-dark-color)" />
-                <rect width="8" height="8" transform="translate(338 293)" fill="var(--spectrum-colorcontrol-checkerboard-light-color)" />
-                <rect width="8" height="8" transform="translate(346 285)" fill="var(--spectrum-colorcontrol-checkerboard-light-color)" />
-                <rect width="8" height="8" transform="translate(346 293)" fill="var(--spectrum-colorcontrol-checkerboard-dark-color)" />
+                <rect width="8" height="8" transform="translate(338 285)" fill=${darkColor} />
+                <rect width="8" height="8" transform="translate(338 293)" fill=${lightColor} />
+                <rect width="8" height="8" transform="translate(346 285)" fill=${lightColor} />
+                <rect width="8" height="8" transform="translate(346 293)" fill=${darkColor} />
               </g>
               <g transform="translate(-306 -285)">
-                <rect width="8" height="8" transform="translate(338 285)" fill="var(--spectrum-colorcontrol-checkerboard-dark-color)" />
-                <rect width="8" height="8" transform="translate(338 293)" fill="var(--spectrum-colorcontrol-checkerboard-light-color)" />
-                <rect width="8" height="8" transform="translate(346 285)" fill="var(--spectrum-colorcontrol-checkerboard-light-color)" />
-                <rect width="8" height="8" transform="translate(346 293)" fill="var(--spectrum-colorcontrol-checkerboard-dark-color)" />
+                <rect width="8" height="8" transform="translate(338 285)" fill=${darkColor} />
+                <rect width="8" height="8" transform="translate(338 293)" fill=${lightColor} />
+                <rect width="8" height="8" transform="translate(346 285)" fill=${lightColor} />
+                <rect width="8" height="8" transform="translate(346 293)" fill=${darkColor} />
               </g>
               <g transform="translate(-290 -285)">
-                <rect width="8" height="8" transform="translate(338 285)" fill="var(--spectrum-colorcontrol-checkerboard-dark-color)" />
-                <rect width="8" height="8" transform="translate(338 293)" fill="var(--spectrum-colorcontrol-checkerboard-light-color)" />
-                <rect width="8" height="8" transform="translate(346 285)" fill="var(--spectrum-colorcontrol-checkerboard-light-color)" />
-                <rect width="8" height="8" transform="translate(346 293)" fill="var(--spectrum-colorcontrol-checkerboard-dark-color)" />
+                <rect width="8" height="8" transform="translate(338 285)" fill=${darkColor} />
+                <rect width="8" height="8" transform="translate(338 293)" fill=${lightColor} />
+                <rect width="8" height="8" transform="translate(346 285)" fill=${lightColor} />
+                <rect width="8" height="8" transform="translate(346 293)" fill=${darkColor} />
               </g>
               <g transform="translate(-338 -269)">
-                <rect width="8" height="8" transform="translate(338 285)" fill="var(--spectrum-colorcontrol-checkerboard-dark-color)" />
-                <rect width="8" height="8" transform="translate(338 293)" fill="var(--spectrum-colorcontrol-checkerboard-light-color)" />
-                <rect width="8" height="8" transform="translate(346 285)" fill="var(--spectrum-colorcontrol-checkerboard-light-color)" />
-                <rect width="8" height="8" transform="translate(346 293)" fill="var(--spectrum-colorcontrol-checkerboard-dark-color)" />
+                <rect width="8" height="8" transform="translate(338 285)" fill=${darkColor} />
+                <rect width="8" height="8" transform="translate(338 293)" fill=${lightColor} />
+                <rect width="8" height="8" transform="translate(346 285)" fill=${lightColor} />
+                <rect width="8" height="8" transform="translate(346 293)" fill=${darkColor} />
               </g>
               <g transform="translate(-322 -269)">
-                <rect width="8" height="8" transform="translate(338 285)" fill="var(--spectrum-colorcontrol-checkerboard-dark-color)" />
-                <rect width="8" height="8" transform="translate(338 293)" fill="var(--spectrum-colorcontrol-checkerboard-light-color)" />
-                <rect width="8" height="8" transform="translate(346 285)" fill="var(--spectrum-colorcontrol-checkerboard-light-color)" />
-                <rect width="8" height="8" transform="translate(346 293)" fill="var(--spectrum-colorcontrol-checkerboard-dark-color)" />
+                <rect width="8" height="8" transform="translate(338 285)" fill=${darkColor} />
+                <rect width="8" height="8" transform="translate(338 293)" fill=${lightColor} />
+                <rect width="8" height="8" transform="translate(346 285)" fill=${lightColor} />
+                <rect width="8" height="8" transform="translate(346 293)" fill=${darkColor} />
               </g>
               <g transform="translate(-306 -269)">
-                <rect width="8" height="8" transform="translate(338 285)" fill="var(--spectrum-colorcontrol-checkerboard-dark-color)" />
-                <rect width="8" height="8" transform="translate(338 293)" fill="var(--spectrum-colorcontrol-checkerboard-light-color)" />
-                <rect width="8" height="8" transform="translate(346 285)" fill="var(--spectrum-colorcontrol-checkerboard-light-color)" />
-                <rect width="8" height="8" transform="translate(346 293)" fill="var(--spectrum-colorcontrol-checkerboard-dark-color)" />
+                <rect width="8" height="8" transform="translate(338 285)" fill=${darkColor} />
+                <rect width="8" height="8" transform="translate(338 293)" fill=${lightColor} />
+                <rect width="8" height="8" transform="translate(346 285)" fill=${lightColor} />
+                <rect width="8" height="8" transform="translate(346 293)" fill=${darkColor} />
               </g>
               <g transform="translate(-290 -269)">
-                <rect width="8" height="8" transform="translate(338 285)" fill="var(--spectrum-colorcontrol-checkerboard-dark-color)" />
-                <rect width="8" height="8" transform="translate(338 293)" fill="var(--spectrum-colorcontrol-checkerboard-light-color)" />
-                <rect width="8" height="8" transform="translate(346 285)" fill="var(--spectrum-colorcontrol-checkerboard-light-color)" />
-                <rect width="8" height="8" transform="translate(346 293)" fill="var(--spectrum-colorcontrol-checkerboard-dark-color)" />
+                <rect width="8" height="8" transform="translate(338 285)" fill=${darkColor} />
+                <rect width="8" height="8" transform="translate(338 293)" fill=${lightColor} />
+                <rect width="8" height="8" transform="translate(346 285)" fill=${lightColor} />
+                <rect width="8" height="8" transform="translate(346 293)" fill=${darkColor} />
               </g>
               <g transform="translate(-338 -253)">
-                <rect width="8" height="8" transform="translate(338 285)" fill="var(--spectrum-colorcontrol-checkerboard-dark-color)" />
-                <rect width="8" height="8" transform="translate(338 293)" fill="var(--spectrum-colorcontrol-checkerboard-light-color)" />
-                <rect width="8" height="8" transform="translate(346 285)" fill="var(--spectrum-colorcontrol-checkerboard-light-color)" />
-                <rect width="8" height="8" transform="translate(346 293)" fill="var(--spectrum-colorcontrol-checkerboard-dark-color)" />
+                <rect width="8" height="8" transform="translate(338 285)" fill=${darkColor} />
+                <rect width="8" height="8" transform="translate(338 293)" fill=${lightColor} />
+                <rect width="8" height="8" transform="translate(346 285)" fill=${lightColor} />
+                <rect width="8" height="8" transform="translate(346 293)" fill=${darkColor} />
               </g>
               <g transform="translate(-322 -253)">
-                <rect width="8" height="8" transform="translate(338 285)" fill="var(--spectrum-colorcontrol-checkerboard-dark-color)" />
-                <rect width="8" height="8" transform="translate(338 293)" fill="var(--spectrum-colorcontrol-checkerboard-light-color)" />
-                <rect width="8" height="8" transform="translate(346 285)" fill="var(--spectrum-colorcontrol-checkerboard-light-color)" />
-                <rect width="8" height="8" transform="translate(346 293)" fill="var(--spectrum-colorcontrol-checkerboard-dark-color)" />
+                <rect width="8" height="8" transform="translate(338 285)" fill=${darkColor} />
+                <rect width="8" height="8" transform="translate(338 293)" fill=${lightColor} />
+                <rect width="8" height="8" transform="translate(346 285)" fill=${lightColor} />
+                <rect width="8" height="8" transform="translate(346 293)" fill=${darkColor} />
               </g>
               <g transform="translate(-306 -253)">
-                <rect width="8" height="8" transform="translate(338 285)" fill="var(--spectrum-colorcontrol-checkerboard-dark-color)" />
-                <rect width="8" height="8" transform="translate(338 293)" fill="var(--spectrum-colorcontrol-checkerboard-light-color)" />
-                <rect width="8" height="8" transform="translate(346 285)" fill="var(--spectrum-colorcontrol-checkerboard-light-color)" />
-                <rect width="8" height="8" transform="translate(346 293)" fill="var(--spectrum-colorcontrol-checkerboard-dark-color)" />
+                <rect width="8" height="8" transform="translate(338 285)" fill=${darkColor} />
+                <rect width="8" height="8" transform="translate(338 293)" fill=${lightColor} />
+                <rect width="8" height="8" transform="translate(346 285)" fill=${lightColor} />
+                <rect width="8" height="8" transform="translate(346 293)" fill=${darkColor} />
               </g>
               <g transform="translate(-290 -253)">
-                <rect width="8" height="8" transform="translate(338 285)" fill="var(--spectrum-colorcontrol-checkerboard-dark-color)" />
-                <rect width="8" height="8" transform="translate(338 293)" fill="var(--spectrum-colorcontrol-checkerboard-light-color)" />
-                <rect width="8" height="8" transform="translate(346 285)" fill="var(--spectrum-colorcontrol-checkerboard-light-color)" />
-                <rect width="8" height="8" transform="translate(346 293)" fill="var(--spectrum-colorcontrol-checkerboard-dark-color)" />
+                <rect width="8" height="8" transform="translate(338 285)" fill=${darkColor} />
+                <rect width="8" height="8" transform="translate(338 293)" fill=${lightColor} />
+                <rect width="8" height="8" transform="translate(346 285)" fill=${lightColor} />
+                <rect width="8" height="8" transform="translate(346 293)" fill=${darkColor} />
               </g>
               <g transform="translate(-338 -237)">
-                <rect width="8" height="8" transform="translate(338 285)" fill="var(--spectrum-colorcontrol-checkerboard-dark-color)" />
-                <rect width="8" height="8" transform="translate(338 293)" fill="var(--spectrum-colorcontrol-checkerboard-light-color)" />
-                <rect width="8" height="8" transform="translate(346 285)" fill="var(--spectrum-colorcontrol-checkerboard-light-color)" />
-                <rect width="8" height="8" transform="translate(346 293)" fill="var(--spectrum-colorcontrol-checkerboard-dark-color)" />
+                <rect width="8" height="8" transform="translate(338 285)" fill=${darkColor} />
+                <rect width="8" height="8" transform="translate(338 293)" fill=${lightColor} />
+                <rect width="8" height="8" transform="translate(346 285)" fill=${lightColor} />
+                <rect width="8" height="8" transform="translate(346 293)" fill=${darkColor} />
               </g>
               <g transform="translate(-322 -237)">
-                <rect width="8" height="8" transform="translate(338 285)" fill="var(--spectrum-colorcontrol-checkerboard-dark-color)" />
-                <rect width="8" height="8" transform="translate(338 293)" fill="var(--spectrum-colorcontrol-checkerboard-light-color)" />
-                <rect width="8" height="8" transform="translate(346 285)" fill="var(--spectrum-colorcontrol-checkerboard-light-color)" />
-                <rect width="8" height="8" transform="translate(346 293)" fill="var(--spectrum-colorcontrol-checkerboard-dark-color)" />
+                <rect width="8" height="8" transform="translate(338 285)" fill=${darkColor} />
+                <rect width="8" height="8" transform="translate(338 293)" fill=${lightColor} />
+                <rect width="8" height="8" transform="translate(346 285)" fill=${lightColor} />
+                <rect width="8" height="8" transform="translate(346 293)" fill=${darkColor} />
               </g>
               <g transform="translate(-306 -237)">
-                <rect width="8" height="8" transform="translate(338 285)" fill="var(--spectrum-colorcontrol-checkerboard-dark-color)" />
-                <rect width="8" height="8" transform="translate(338 293)" fill="var(--spectrum-colorcontrol-checkerboard-light-color)" />
-                <rect width="8" height="8" transform="translate(346 285)" fill="var(--spectrum-colorcontrol-checkerboard-light-color)" />
-                <rect width="8" height="8" transform="translate(346 293)" fill="var(--spectrum-colorcontrol-checkerboard-dark-color)" />
+                <rect width="8" height="8" transform="translate(338 285)" fill=${darkColor} />
+                <rect width="8" height="8" transform="translate(338 293)" fill=${lightColor} />
+                <rect width="8" height="8" transform="translate(346 285)" fill=${lightColor} />
+                <rect width="8" height="8" transform="translate(346 293)" fill=${darkColor} />
               </g>
               <g transform="translate(-290 -237)">
-                <rect width="8" height="8" transform="translate(338 285)" fill="var(--spectrum-colorcontrol-checkerboard-dark-color)" />
-                <rect width="8" height="8" transform="translate(338 293)" fill="var(--spectrum-colorcontrol-checkerboard-light-color)" />
-                <rect width="8" height="8" transform="translate(346 285)" fill="var(--spectrum-colorcontrol-checkerboard-light-color)" />
-                <rect width="8" height="8" transform="translate(346 293)" fill="var(--spectrum-colorcontrol-checkerboard-dark-color)" />
+                <rect width="8" height="8" transform="translate(338 285)" fill=${darkColor} />
+                <rect width="8" height="8" transform="translate(338 293)" fill=${lightColor} />
+                <rect width="8" height="8" transform="translate(346 285)" fill=${lightColor} />
+                <rect width="8" height="8" transform="translate(346 293)" fill=${darkColor} />
               </g>
               <g transform="translate(-338 -221)">
-                <rect width="8" height="8" transform="translate(338 285)" fill="var(--spectrum-colorcontrol-checkerboard-dark-color)" />
-                <rect width="8" height="8" transform="translate(338 293)" fill="var(--spectrum-colorcontrol-checkerboard-light-color)" />
-                <rect width="8" height="8" transform="translate(346 285)" fill="var(--spectrum-colorcontrol-checkerboard-light-color)" />
-                <rect width="8" height="8" transform="translate(346 293)" fill="var(--spectrum-colorcontrol-checkerboard-dark-color)" />
+                <rect width="8" height="8" transform="translate(338 285)" fill=${darkColor} />
+                <rect width="8" height="8" transform="translate(338 293)" fill=${lightColor} />
+                <rect width="8" height="8" transform="translate(346 285)" fill=${lightColor} />
+                <rect width="8" height="8" transform="translate(346 293)" fill=${darkColor} />
               </g>
               <g transform="translate(-322 -221)">
-                <rect width="8" height="8" transform="translate(338 285)" fill="var(--spectrum-colorcontrol-checkerboard-dark-color)" />
-                <rect width="8" height="8" transform="translate(338 293)" fill="var(--spectrum-colorcontrol-checkerboard-light-color)" />
-                <rect width="8" height="8" transform="translate(346 285)" fill="var(--spectrum-colorcontrol-checkerboard-light-color)" />
-                <rect width="8" height="8" transform="translate(346 293)" fill="var(--spectrum-colorcontrol-checkerboard-dark-color)" />
+                <rect width="8" height="8" transform="translate(338 285)" fill=${darkColor} />
+                <rect width="8" height="8" transform="translate(338 293)" fill=${lightColor} />
+                <rect width="8" height="8" transform="translate(346 285)" fill=${lightColor} />
+                <rect width="8" height="8" transform="translate(346 293)" fill=${darkColor} />
               </g>
               <g transform="translate(-306 -221)">
-                <rect width="8" height="8" transform="translate(338 285)" fill="var(--spectrum-colorcontrol-checkerboard-dark-color)" />
-                <rect width="8" height="8" transform="translate(338 293)" fill="var(--spectrum-colorcontrol-checkerboard-light-color)" />
-                <rect width="8" height="8" transform="translate(346 285)" fill="var(--spectrum-colorcontrol-checkerboard-light-color)" />
-                <rect width="8" height="8" transform="translate(346 293)" fill="var(--spectrum-colorcontrol-checkerboard-dark-color)" />
+                <rect width="8" height="8" transform="translate(338 285)" fill=${darkColor} />
+                <rect width="8" height="8" transform="translate(338 293)" fill=${lightColor} />
+                <rect width="8" height="8" transform="translate(346 285)" fill=${lightColor} />
+                <rect width="8" height="8" transform="translate(346 293)" fill=${darkColor} />
               </g>
               <g transform="translate(-290 -221)">
-                <rect width="8" height="8" transform="translate(338 285)" fill="var(--spectrum-colorcontrol-checkerboard-dark-color)" />
-                <rect width="8" height="8" transform="translate(338 293)" fill="var(--spectrum-colorcontrol-checkerboard-light-color)" />
-                <rect width="8" height="8" transform="translate(346 285)" fill="var(--spectrum-colorcontrol-checkerboard-light-color)" />
-                <rect width="8" height="8" transform="translate(346 293)" fill="var(--spectrum-colorcontrol-checkerboard-dark-color)" />
+                <rect width="8" height="8" transform="translate(338 285)" fill=${darkColor} />
+                <rect width="8" height="8" transform="translate(338 293)" fill=${lightColor} />
+                <rect width="8" height="8" transform="translate(346 285)" fill=${lightColor} />
+                <rect width="8" height="8" transform="translate(346 293)" fill=${darkColor} />
               </g>
             </g>
           </g>
