@@ -1,5 +1,9 @@
 import { useEffect } from '@storybook/client-api';
 
+/**
+ * @type import('@storybook/csf').DecoratorFunction<import('@storybook/web-components').WebComponentsFramework>
+ * @description Global properties added to each component; determines what stylesheets are loaded
+ **/
 export const withContextWrapper = (StoryFn, context) => {
   const { args, argTypes } = context;
 
@@ -27,7 +31,7 @@ export const withContextWrapper = (StoryFn, context) => {
     for (const c of colors) {
       document.body.classList.toggle(`spectrum--${c}`, c === color);
     }
-  
+
     for (const s of scales) {
       document.body.classList.toggle(`spectrum--${s}`, s === scale);
     }

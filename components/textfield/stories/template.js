@@ -25,27 +25,15 @@ export const Template = ({
   pattern,
   placeholder,
   name,
-  icon,
+  iconName,
   value,
   type = "text",
   autocomplete = true,
   ...globals
 }) => {
-  if (isInvalid) icon = "Alert";
-  else if (isValid) {
-    icon = "Checkmark100";
-    switch (size) {
-      case "s":
-        icon = "Checkmark75";
-        break;
-      case "l":
-        icon = "Checkmark200";
-        break;
-      case "xl":
-        icon = "Checkmark300";
-        break;
-    }
-  }
+
+  if (isInvalid) iconName = "Alert";
+  else if (isValid) iconName = "Checkmark";
 
   return html`
     <div class=${classMap({
@@ -60,10 +48,10 @@ export const Template = ({
       'is-disabled': isDisabled,
       ...customClasses.reduce((a, c) => ({ ...a, [c]: true }), {}),
     })}>
-      ${icon ? Icon({
+      ${iconName ? Icon({
         ...globals,
         size,
-        iconName: icon,
+        iconName,
         customClasses: [
           isInvalid || isValid ? `${rootClass}-validationIcon` : `${rootClass}-icon`,
           ...customIconClasses,

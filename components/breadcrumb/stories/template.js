@@ -1,6 +1,6 @@
 import { html } from 'lit-html';
 import { classMap } from 'lit-html/directives/class-map.js';
-// import { ifDefined } from 'lit-html/directives/if-defined.js';
+import { when } from "lit-html/directives/when.js";
 
 import { Template as Icon } from '@spectrum-css/icon/stories/template.js';
 import { Template as ActionButton } from '@spectrum-css/actionbutton/stories/template.js';
@@ -31,30 +31,34 @@ export const Template = ({
     ...customClasses.reduce((a, c) => ({ ...a, [c]: true }), {}),
   })}>
       ${items.map((item, idx, arr) => {
-        const { label, isDisabled, isDragged, icon } = item;
+        const { label, isDisabled, isDragged, iconName } = item;
         return html`
           <li class=${classMap({
             [`${rootClass}-item`]: true,
             'is-disabled': isDisabled,
             'is-dragged': isDragged,
           })}>
-            ${icon ? ActionButton({
-              ...globals,
-              icon,
-              isDisabled,
-              isQuiet: true,
-              customIconClasses: [`${rootClass}-folder`],
-              size: "m",
-            }) : idx !== arr.length - 1 ?
-              html`<div class="${rootClass}-itemLink" role="link" tabindex="0">${label}</div>` :
-              html`<a class="${rootClass}-itemLink" aria-current="page">${label}</a>`
-            }
-            ${idx !== arr.length - 1 ? Icon({
+            ${when(
+              iconName,
+              () => ActionButton({
+                ...globals,
+                iconName,
+                isDisabled,
+                isQuiet: true,
+                customIconClasses: [`${rootClass}-folder`],
+                size: "m",
+              }),
+              () => when(
+                idx !== arr.length - 1,
+                () => html`<div class="${rootClass}-itemLink" role="link" tabindex="0">${label}</div>`,
+                () => html`<a class="${rootClass}-itemLink" aria-current="page">${label}</a>`
+              )
+            )}
+            ${when(idx !== arr.length - 1, () => Icon({
               ...globals,
               iconName: "ChevronRight100",
-              setName: "ui",
               customClasses: [`${rootClass}-itemSeparator`],
-            }) : ''}
+            }))}
           </li>`;
       })}
     </ul>

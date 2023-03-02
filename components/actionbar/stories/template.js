@@ -60,13 +60,13 @@ export const Template = ({
             areQuiet: true,
             staticColors: isEmphasized ? "white" : undefined,
             content: [{
-              icon: "Edit",
+              iconName: "Edit",
               label: "Edit",
             }, {
-              icon: "Copy",
+              iconName: "Copy",
               label: "Copy",
             }, {
-              icon: "Delete",
+              iconName: "Delete",
               label: "Delete",
             }]
           }),

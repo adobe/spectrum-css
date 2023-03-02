@@ -2,7 +2,7 @@
 import { Template } from "./template";
 
 
-import { Template as Dialog } from "../../dialog/stories/template.js";
+import { Template as Dialog } from "@spectrum-css/dialog/stories/template.js";
 
 export default {
   title: "Tray",

@@ -1,6 +1,7 @@
 import { html } from "lit-html";
 import { classMap } from "lit-html/directives/class-map.js";
 import { ifDefined } from "lit-html/directives/if-defined.js";
+import { when } from "lit-html/directives/when.js";
 
 import { lowerCase, capitalize } from "lodash-es";
 
@@ -15,7 +16,7 @@ export const Template = ({
   size = "m",
   label,
   hideLabel = false,
-  icon,
+  iconName,
   variant,
   staticColor,
   treatment,
@@ -44,16 +45,10 @@ export const Template = ({
       })}
       id=${ifDefined(id)}
       ?disabled=${isDisabled}>
-      ${icon
-        ? Icon({
-            ...globals,
-            iconName: icon,
-            customClasses: [`${rootClass}-UIIcon`],
-          })
-        : ""}
-      ${label && !hideLabel
-        ? html`<span class=${`${rootClass}-label`}>${label}</span>`
-        : ""}
+      ${when(iconName, () => Icon({ ...globals, iconName, customClasses: [`${rootClass}-UIIcon`] }))}
+      ${when(label && !hideLabel,
+        () => html`<span class=${`${rootClass}-label`}>${label}</span>`
+      )}
     </button>
   `;
 };

@@ -61,7 +61,7 @@ export default {
       },
       control: "boolean"
     },
-    icon: {
+    iconName: {
       table: { disable: true },
     },
     isDisabled: {

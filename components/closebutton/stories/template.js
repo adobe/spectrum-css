@@ -28,19 +28,6 @@ export const Template = ({
     console.warn(e);
   }
 
-  let iconName = "Cross100";
-  switch (size) {
-    case "s":
-      iconName = "Cross75";
-      break;
-    case "l":
-      iconName = "Cross200";
-      break;
-    case "xl":
-      iconName = "Cross300";
-      break;
-  }
-
   return html`
     <button
       class=${classMap({
@@ -53,12 +40,11 @@ export const Template = ({
       id=${ifDefined(id)}
       label=${ifDefined(label)}
       ?disabled=${isDisabled}
-      @click=${ifDefined(onclick)}>
+      @click=${onclick}>
       ${Icon({
         ...globals,
-        iconName,
+        iconName: "Cross100",
         customClasses: [`${rootClass}-UIIcon`],
-        setName: "ui",
       })}
     </button>
   `;

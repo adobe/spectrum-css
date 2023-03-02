@@ -1,6 +1,7 @@
 import { html } from "lit-html";
 import { classMap } from "lit-html/directives/class-map.js";
 import { ifDefined } from "lit-html/directives/if-defined.js";
+import { when } from "lit-html/directives/when.js";
 
 import { useArgs } from "@storybook/client-api";
 
@@ -58,19 +59,17 @@ export const Template = ({
       />
       <span class="${rootClass}-box">
         ${Icon({
-          iconName: "Checkmark100",
           ...globals,
+          iconName: "Checkmark100",
           customClasses: [`${rootClass}-checkmark`],
-          setName: "ui",
         })}
         ${Icon({
-          iconName: "Dash100",
           ...globals,
+          iconName: "Dash100",
           customClasses: [`${rootClass}-partialCheckmark`],
-          setName: "ui",
         })}
       </span>
-      ${label ? html`<span class="${rootClass}-label">${label}</span>` : ""}
+      ${when(label, () => html`<span class="${rootClass}-label">${label}</span>`)}
     </label>
   `;
 };
