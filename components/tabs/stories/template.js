@@ -15,10 +15,13 @@ export const Template = ({
   density,
   isQuiet,
   isEmphasized,
+  isCompact,
   items,
   style = {
     "--spectrum-tabs-textonly-tabitem-selection-indicator-background-color-selected": "#000",
-    "width": "35px"
+    "--spectrum-tabs-quiet-textonly-tabitem-selection-indicator-background-color-selected": "#000",
+    "--spectrum-tabs-emphasized-texticon-tabitem-text-color-selected": "rgb(27,127,245)",
+    "--spectrum-tabs-emphasized-texticon-tabitem-selection-indicator-background-color-selected": "rgb(27,127,245)",
   },
   ...globals
 }) => {
@@ -29,8 +32,10 @@ export const Template = ({
       [`${rootClass}--${orientation}`]: typeof orientation !== "undefined",
       [`${rootClass}--quiet`]: isQuiet,
       [`${rootClass}--emphasized`]: isEmphasized,
+      [`${rootClass}--compact`]: isCompact,
       ...customClasses.reduce((a, c) => ({ ...a, [c]: true }), {}),
-    })}>
+    })} 
+    style=${ifDefined(styleMap(style))}>
     ${repeat(items, (item) => item.id, (item) => {
       if (typeof item === "object") {
         return html`
@@ -43,7 +48,7 @@ export const Template = ({
         `
       } else return item;
     })}
-      <div class="${rootClass}-selectionIndicator" style=${ifDefined(styleMap(style))}></div>
+      <div class="${rootClass}-selectionIndicator" style="width: 35px"></div>
     </div>
   `;
 }
