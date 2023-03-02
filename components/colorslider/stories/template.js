@@ -22,9 +22,7 @@ export const Template = ({
       'is-disabled': isDisabled,
       'is-focused': isFocused,
       ...customClasses.reduce((a, c) => ({ ...a, [c]: true }), {}),
-  })}
-  ${isDisabled}
-  ${isFocused}>
+  })}>
   <div class="${rootClass}-checkerboard" role="presentation">
     <div class="${rootClass}-gradient" role="presentation" style="background: linear-gradient(to ${vertical ? 'bottom' :
 'right'}, rgb(255, 0, 0) 0%, rgb(255, 255, 0) 17%, rgb(0, 255, 0) 33%, rgb(0, 255, 255) 50%, rgb(0, 0, 255) 67%, rgb(255, 0, 255) 83%, rgb(255, 0, 0) 100%);"></div>

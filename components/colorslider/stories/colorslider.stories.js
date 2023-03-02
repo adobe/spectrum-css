@@ -3,8 +3,8 @@ import { Template } from "./template";
 
 export default {
   title: "Color slider",
-  description: "The Color slider component lets users visually change an individual channel of a color..",
-  component: "Colorslider",
+  description: "The Color slider component lets users visually change an individual channel of a color.",
+  component: "ColorSlider",
   argTypes: {
     vertical: { table: { disable: true } },
     isDisabled: {
