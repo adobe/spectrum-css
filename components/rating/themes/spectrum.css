@@ -11,5 +11,19 @@ governing permissions and limitations under the License.
 
 @container (--system: spectrum) {
   .spectrum-rating {
+    --spectrum-rating-icon-color-default: var(--spectrum-gray-75);
+    --spectrum-rating-icon-color-hover: var(--spectrum-gray-50);
+    --spectrum-rating-icon-color-down: var(--spectrum-gray-200);
+    --spectrum-rating-icon-color-key-focus: var(--spectrum-gray-50);
+    /* Outline */
+    /*--spectrum-rating-outline-icon-color-default: var(--spectrum-gray-75);
+    --spectrum-rating-outline-icon-color-hover: var(--spectrum-gray-50);
+    --spectrum-rating-outline-icon-color-down: var(--spectrum-gray-200);
+    --spectrum-rating-outline-icon-color-key-focus: var(--spectrum-gray-50);*/
+    /* Indicator */
+    /*--spectrum-rating-indicator-color-default: var(--spectrum-gray-75);
+    --spectrum-rating-indicator-color-hover: var(--spectrum-gray-50);
+    --spectrum-rating-indicator-color-down: var(--spectrum-gray-200);
+    --spectrum-rating-indicator-color-key-focus: var(--spectrum-gray-50);*/
   }
 }
