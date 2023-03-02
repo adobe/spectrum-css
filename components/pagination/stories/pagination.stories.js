@@ -1,6 +1,8 @@
 // Import the component markup template
 import { Template } from "./template";
 
+import { default as ActionButton } from '@spectrum-css/actionbutton/stories/actionbutton.stories';
+
 export default {
   title: "Pagination",
   description: "The Field group component is...",
@@ -17,14 +19,7 @@ export default {
       control: "select"
     },
     variant: {
-      name: "Variant",
-      type: { name: "string" },
-      table: {
-        type: { summary: "string" },
-        category: "Component",
-      },
-      options: ["listing", "explicit"],
-      control: "inline-radio",
+      table: { disable: true }
     }
   },
   args: {
@@ -34,7 +29,9 @@ export default {
   },
   parameters: {
     actions: {
-      handles: []
+      handles: [
+        ...ActionButton.parameters.actions.handles,
+      ]
     },
     status: {
       type: process.env.MIGRATED_PACKAGES.includes('pagination') ? 'migrated' : undefined
@@ -43,4 +40,29 @@ export default {
 };
 
 export const Default = Template.bind({});
-Default.args = {};
+Default.args = {
+  items: [
+    {
+      id: 1,
+      label: "1",
+      isSelected: true
+    },
+    {
+      id: 2,
+      label: "2",
+    },
+    {
+      id: 3,
+      label: "...",
+    },
+    {
+      id: 10,
+      label: "10",
+    },
+  ]
+};
+
+export const Explicit = Template.bind({});
+Explicit.args = {
+  variant: "explicit"
+};
