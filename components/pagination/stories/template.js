@@ -1,8 +1,11 @@
 import { html } from "lit-html";
 import { classMap } from "lit-html/directives/class-map.js";
-import { ifDefined } from "lit-html/directives/if-defined.js";
+import { repeat } from 'lit-html/directives/repeat.js';
 
 import { Template as Button } from "@spectrum-css/button/stories/template.js";
+import { Template as ActionButton } from "@spectrum-css/actionbutton/stories/template.js";
+import { Template as Textfield } from "@spectrum-css/textfield/stories/template.js";
+
 
 import '../index.css';
 import '../skin.css';
@@ -13,18 +16,73 @@ export const Template = ({
   size = "m",
   customClasses = [],
   variant,
+  items,
   ...globals
 }) => {
 
-  return html`
-    <nav
-      class=${classMap({
+  if (variant === 'explicit') {
+    return html`
+      <nav class=${classMap({
         [rootClass]: true,
-        [`${rootClass}--size${size?.toUpperCase()}`]: typeof size !== "undefined",
         [`${rootClass}--${variant}`]: typeof variant !== "undefined",
         ...customClasses.reduce((a, c) => ({ ...a, [c]: true }), {}),
       })}
       >
+        ${ActionButton({
+          size,
+          isQuiet: true,
+          icon: "ChevronLeft100",
+          customClasses: [`${rootClass}-prevButton`]
+        })}
+        ${Textfield({
+          value: "1",
+          customClasses: [`${rootClass}-textfield`]
+        })}
+        <span class="spectrum-Body--secondary ${rootClass}-counter">of 89 pages</span>
+        ${ActionButton({
+          size,
+          isQuiet: true,
+          icon: "ChevronRight100",
+          customClasses: [`${rootClass}-nextButton`]
+        })}
+      </nav>
+    `;
+  }
+  return html`
+    <nav class=${classMap({
+      [rootClass]: true,
+      [`${rootClass}--${variant}`]: typeof variant !== "undefined",
+      ...customClasses.reduce((a, c) => ({ ...a, [c]: true }), {}),
+    })}
+    >
+      ${Button({
+        size,
+        variant: "primary",
+        treatment: "outline",
+        label: "Prev",
+        customClasses: [`${rootClass}-prevButton`],
+        ...globals
+      })}
+      ${repeat(items, (item) => item.id, (item) => {
+        if (typeof item === "object") {
+          return ActionButton({
+            ...globals,
+            ...item,
+            isQuiet: true,
+          })
+        } else return item;
+      })}
+
+      ${Button({
+        size,
+        variant: "primary",
+        treatment: "outline",
+        label: "Next",
+        customClasses: [`${rootClass}-nextButton`],
+        ...globals
+      })}
     </nav>
   `;
+
+ 
 };
