@@ -102,7 +102,7 @@ export const Template = ({
 
   const classList = {
     [rootClass]: true,
-    [`spectrum-UIIcon-${iconName}`]: !!(setName === "ui"),
+    [`spectrum-UIIcon-${idKey}`]: !!(setName === "ui"),
     [`${rootClass}--${scale}`]: !!(setName === "ui" && scale),
     [`${rootClass}--size${size?.toUpperCase()}`]: !!(
       (!setName || setName === "workflow") &&

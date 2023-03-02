@@ -5,8 +5,6 @@ import { when } from "lit-html/directives/when.js";
 
 import { useArgs } from "@storybook/client-api";
 
-import { useArgs } from "@storybook/client-api";
-
 import { Template as Icon } from "@spectrum-css/icon/stories/template.js";
 
 import "../index.css";

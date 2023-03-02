@@ -4,8 +4,6 @@ import { when } from 'lit-html/directives/when.js';
 
 import { Template as Icon } from "@spectrum-css/icon/stories/template.js"
 
-import { Template as Icon } from "@spectrum-css/icon/stories/template.js"
-
 import "../index.css";
 
 export const Template = ({
@@ -19,16 +17,6 @@ export const Template = ({
   isInvalid,
   ...globals
 }) => {
-
-  const iconMarkup = typeof icon !== 'undefined' ?
-    html`
-      ${Icon({
-        ...globals,
-        iconName: icon,
-        customClasses: [`${rootClass}-icon`],
-      })}
-    ` : '';
-  
   return html`
     <button class=${classMap({
       [rootClass]: true,

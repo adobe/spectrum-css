@@ -54,7 +54,6 @@ export const Template = ({
         <img class="${rootClass}-asset" src="${image ?? exampleImage}" />
         <div class="${rootClass}-selectionOverlay"></div>
       </div>
-<<<<<<< HEAD
       ${when(title, () => html`<div class="${rootClass}-header">
         ${when(title, () => html`<div class="${rootClass}-title">${title}</div>`)}
         ${when(headerContent, () => html`<div class="${rootClass}-headerContent">${headerContent}</div>`)}
@@ -63,30 +62,14 @@ export const Template = ({
       <div class="${rootClass}-selectionIndicator">
         ${when(selection === "checkbox",
           () => Checkbox({
-=======
-      ${title ? html`<div class="${rootClass}-header">
-        ${title ? html`<div class="${rootClass}-title">${title}</div>` : ''}
-        ${headerContent ? html`<div class="${rootClass}-headerContent">${headerContent}</div>` : ''}
-      </div>` : ''}
-      ${content ? html`<div class="${rootClass}-content">${content}</div>` : ''}
-      <div class="${rootClass}-selectionIndicator">
-        ${selection === "checkbox" ?
-          Checkbox({
->>>>>>> 3d21aa7eb (chore: generate new storybook assets)
             ...globals,
             size: "m",
             isEmphasized: true,
             isChecked: isSelected,
             customClasses: [`${rootClass}-checkbox`],
-<<<<<<< HEAD
           }),
           () => html`<div class="${rootClass}-selectionOrder">1</div>`
         )}
-=======
-          }) : html`
-          <div class="${rootClass}-selectionOrder">1</div>
-        `}
->>>>>>> 3d21aa7eb (chore: generate new storybook assets)
       </div>
     </div>
   `;
