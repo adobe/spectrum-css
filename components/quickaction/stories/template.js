@@ -41,7 +41,7 @@ export const Template = ({
         })}"
         id=${ifDefined(id)}>
         ${content.map((c) => {
-          if (typeof c === "object" && c.icon || c.label) {
+          if (typeof c === "object" && c.iconName || c.label) {
             return ActionButton({ ...globals, ...c, isQuiet: true });
           } else return c;
         })}

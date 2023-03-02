@@ -1,6 +1,6 @@
 import { html } from 'lit-html';
 import { classMap } from 'lit-html/directives/class-map.js';
-import { repeat } from 'lit-html/directives/repeat.js';
+import { when } from "lit-html/directives/when.js";
 import { ifDefined } from 'lit-html/directives/if-defined.js';
 
 import { useArgs } from "@storybook/client-api";
@@ -37,19 +37,18 @@ export const AssetListItem = ({
         isChecked: isSelected,
         customClasses: [`${rootClass}Selector`],
       })}
-      ${image ? html`<img src=${image ?? exampleImage} class="${rootClass}Thumbnail">` : ''}
-      ${iconName ? Icon({
+      ${when(image, () => html`<img src=${image ?? exampleImage} class="${rootClass}Thumbnail">`)}
+      ${when(iconName, () => Icon({
         iconName,
         customClasses: [`${rootClass}Thumbnail`],
         ...globals,
-      }) : ''}
-      ${label ? html`<span class="${rootClass}Label">${label}</span>`: ''}
-      ${isBranch ? Icon({
+      }))}
+      ${when(label, () => html`<span class="${rootClass}Label">${label}</span>`)}
+      ${when(isBranch, () => Icon({
         iconName: "ChevronRight100",
         customClasses: [`${rootClass}ChildIndicator`],
-        setName: "ui",
         ...globals,
-      }) : ''}
+      }))}
     </li>`;
 };
 

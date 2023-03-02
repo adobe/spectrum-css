@@ -3,60 +3,108 @@ import { ifDefined } from "lit-html/directives/if-defined.js";
 import { unsafeHTML } from "lit-html/directives/unsafe-html.js";
 import { classMap } from "lit-html/directives/class-map.js";
 
-import { fetchIconSVG } from "./utilities.js";
+import { fetchIconSVG, workflowIcons, uiIcons } from "./utilities.js";
 
 import "../index.css";
 
 /**
- * @typedef { keyof import("./icon.stories").default.args } IconArgs
+ * @typedef { keyof import("./icon.stories.js").default.args } IconArgs
  * @typedef { IconArgs & { scale: string, useRef: boolean, setName: 'workflow' | 'ui' } } IconProps
  */
 
 /**
  * Template for rendering an icon
- * @type {(IconProps) => import('lit-html').TemplateResult<1>}
+ * @description Icon template that renders an icon based on the provided icon name and set name.
+ * @param {IconProps} props
+ * @param {string} props.rootClass
+ * @param {"s"|"m"|"l"|"xl"} props.size
+ * @param {"ui"|"workflow"} props.setName
+ * @param {string} props.iconName
+ * @param {string} props.fill
+ * @param {string} props.id
+ * @param {string[]} props.customClasses
+ * @param {boolean} props.useRef
+ * @returns {import('lit-html').TemplateResult<1>}
  */
 export const Template = ({
   rootClass = "spectrum-Icon",
   size = "m",
+  setName,
   iconName,
   fill,
   id,
   customClasses = [],
   useRef = false,
-  setName = "workflow",
   ...globals
 }) => {
+  const { scale } = globals;
+
   if (!iconName) {
     console.warn(
-      "Could not render a result because no icon name was provided to the icon template."
+      "Icon: Could not render a result because no icon name was provided to the icon template."
     );
     return html``;
   }
 
-  const { scale } = globals;
-
   let idKey = iconName;
-  if (['Chevron', 'Arrow'].some(c => iconName.startsWith(c)) && ['Right', 'Left', 'Down', 'Up'].some(c => iconName.includes(c))) {
-    idKey = iconName.replace(/(Right|Left|Down|Up)/, '');
+  /** If a descriptor like Right, Left, Down, or Up is present for the Chevron or the Arrow, use that only for the class and not the icon fetch */
+  if (uiIcons.some(c => idKey.startsWith(c)) && ['Right', 'Left', 'Down', 'Up'].some(c => idKey.includes(c))) {
+    idKey = idKey.replace(/(Right|Left|Down|Up)/, '');
+  }
+
+  /** Reformat the icon scale to match the provided sizing */
+  if(idKey.match(/\d{2,3}$/) || (uiIcons.includes(idKey) && !idKey.endsWith('Gripper'))) {
+    let sizeVal;
+    switch(size) {
+      case 'xs':
+      case 's':
+        sizeVal = '75';
+        break;
+      case 'l':
+        sizeVal = '200';
+        break;
+      case 'xl':
+      case 'xxl':
+        sizeVal = '300';
+        break;
+      default:
+        sizeVal = '100';
+        break;
+    }
+
+    if (sizeVal) {
+      const clean = idKey.replace(/\d{2,3}$/, '');
+      idKey = `${clean}${sizeVal}`;
+    }
+  }
+
+  if (workflowIcons.includes(idKey)) {
+    setName = "workflow";
+  } else if (uiIcons.includes(idKey.replace(/\d{2,3}$/, ''))) {
+    setName = "ui";
+  } else if (!setName) {
+    console.warn(
+      `Icon: Could not determine the icon set for the provided icon name: ${idKey}.`
+    );
+    return html``;
   }
 
   let inlineStyle;
   if (fill) inlineStyle = `color: ${fill}`;
-  let { icon, setName: foundSet } = !useRef
-    ? fetchIconSVG({ iconName: idKey, setName, ...globals })
-    : { icon: undefined, setName };
+  let icon;
 
-  if (!useRef && !icon) {
-    console.warn(`Icon: ${iconName} not found.`);
-    return html``;
+  if (!useRef) {
+    icon = fetchIconSVG({ iconName: idKey, setName, ...globals });
+
+    if (!icon) {
+      console.warn(`Icon: ${idKey} not found.`);
+      return html``;
+    }
   }
-
-  if (foundSet) setName = foundSet;
 
   const classList = {
     [rootClass]: true,
-    [`spectrum-UIIcon-${iconName}`]: !!(setName === "ui"),
+    [`spectrum-UIIcon-${idKey}`]: !!(setName === "ui"),
     [`${rootClass}--${scale}`]: !!(setName === "ui" && scale),
     [`${rootClass}--size${size?.toUpperCase()}`]: !!(
       (!setName || setName === "workflow") &&
@@ -82,12 +130,12 @@ export const Template = ({
 
   // Otherwise, we need to render a reference to the icon
 
-  // ui ID: #spectrum-css-icon-${iconName}
-  // workflow ID: #spectrum-icon-(18|24)-${iconName}
+  // ui ID: #spectrum-css-icon-${idKey}
+  // workflow ID: #spectrum-icon-(18|24)-${idKey}
   const iconID =
     setName !== "workflow"
       ? `spectrum-css-icon-${idKey}`
-      : `spectrum-icon-${scale !== "medium" ? `24` : `18`}-${iconName}`;
+      : `spectrum-icon-${scale !== "medium" ? `24` : `18`}-${idKey}`;
 
   try {
     import(
@@ -106,10 +154,10 @@ export const Template = ({
     style=${ifDefined(inlineStyle)}
     focusable="false"
     aria-hidden="true"
-    aria-labelledby=${iconName}
+    aria-labelledby=${idKey}
     role="img"
   >
-    <title id=${iconName}>${iconName.replace(/([A-Z])/g, " $1").trim()}</title>
+    <title id=${idKey}>${idKey.replace(/([A-Z])/g, " $1").trim()}</title>
     <use xlink:href="#${iconID}" href="#${iconID}" />
   </svg>`;
 };

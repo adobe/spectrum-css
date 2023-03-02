@@ -14,19 +14,6 @@ export const Template = ({
   variant,
   ...globals
 }) => {
-  let iconName = "Cross100";
-  switch (size) {
-    case "s":
-      iconName = "Cross75";
-      break;
-    case "l":
-      iconName = "Cross200";
-      break;
-    case "xl":
-      iconName = "Cross300";
-      break;
-  }
-
   return html`
     <button type="reset" class=${classMap({
       [rootClass]: true,
@@ -39,9 +26,8 @@ export const Template = ({
       <div class="${rootClass}-fill">
         ${Icon({
           ...globals,
-          iconName,
+          iconName: "Cross100",
           customClasses: [`${rootClass}-icon`],
-          setName: "ui",
         })}
       </div>
     </button>

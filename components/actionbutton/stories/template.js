@@ -1,6 +1,7 @@
 import { html } from "lit-html";
 import { classMap } from "lit-html/directives/class-map.js";
 import { ifDefined } from "lit-html/directives/if-defined.js";
+import { when } from "lit-html/directives/when.js";
 
 import { lowerCase, capitalize } from "lodash-es";
 
@@ -11,7 +12,7 @@ import "../index.css";
 export const Template = ({
   rootClass = "spectrum-ActionButton",
   size = "m",
-  icon,
+  iconName,
   label,
   isQuiet = false,
   isSelected = false,
@@ -54,22 +55,11 @@ export const Template = ({
       id=${ifDefined(id)}
       role=${ifDefined(role)}
       ?disabled=${isDisabled}
-      @click=${ifDefined(onclick)}
+      @click=${onclick}
     >
-      ${hasPopup ? Icon({
-        ...globals,
-        iconName: size === 'xs' ? 'CornerTriangle50' : size === 's' ? 'CornerTriangle75' : size === 'l' ? 'CornerTriangle200' : size === 'xl' ? 'CornerTriangle300' : 'CornerTriangle100',
-        customClasses: [`${rootClass}-hold`],
-        setName: 'ui',
-      }) : ""}
-      ${icon
-        ? Icon({
-            ...globals,
-            iconName: icon,
-            customClasses: [`${rootClass}-icon`, ...customIconClasses],
-          })
-        : ""}
-      ${label && !hideLabel ? html`<span class="${rootClass}-label">${label}</span>` : ""}
+      ${when(hasPopup, () => Icon({ ...globals, iconName: 'CornerTriangle100', customClasses: [`${rootClass}-hold`] }))}
+      ${when(iconName, () => Icon({ ...globals, iconName, customClasses: [`${rootClass}-icon`, ...customIconClasses] }))}
+      ${when(label && !hideLabel, () => html`<span class="${rootClass}-label">${label}</span>`)}
     </button>
   `;
 };

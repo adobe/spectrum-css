@@ -1,108 +1,34 @@
-import { Template as CloseButton } from "../../closebutton/stories/template.js";
-import { Template } from "./template.js";
+import path from "path";
 
-export const fetchIconSVG = ({ iconName, setName, ...globals }) => {
+// Imports an array of all icon names in the workflow set
+import iconOpts from "@adobe/spectrum-css-workflow-icons";
+
+export const workflowIcons = (iconOpts || []).map((icon) => path.basename(icon, ".svg"));
+export const uiIcons = ["Arrow", "Asterisk", "Checkmark", "Chevron", "CornerTriangle", "Cross", "Dash", "SingleGripper", "DoubleGripper", "TripleGripper"];
+
+export const fetchIconSVG = ({
+  iconName,
+  setName = "workflow",
+  ...globals
+}) => {
+  if (!iconName) return;
+
   const { scale } = globals;
   let icon;
 
   // Check adobe workflow icons first
-  if (!setName || setName === "workflow") {
+  if (setName === "workflow") {
     try {
-      icon = require(`!!raw-loader!@adobe/spectrum-css-workflow-icons/dist/${
-        scale !== "medium" ? `24` : `18`
-      }/${iconName}.svg`);
-    } catch (e) {
-      console.warn(e);
-    }
-
-    if (icon && icon.default) {
-      return {
-        icon: icon.default,
-        setName: "workflow",
-      };
-    }
+      icon = require(`!!raw-loader!@adobe/spectrum-css-workflow-icons/dist/${scale !== "medium" ? `24` : `18`}/${iconName}.svg`);
+      if (icon) return icon.default ?? icon;
+    } catch (e) {}
   }
 
   // Check the ui kit for icon set if not yet found
   try {
-    icon = require(`!!raw-loader!@spectrum-css/icon/${
-      scale ? scale : "medium"
-    }/${iconName}.svg`);
-  } catch (e) {
-    console.warn(e);
-  }
-
-  if (icon && icon.default) {
-    return {
-      icon: icon.default,
-      setName: "ui",
-    };
-  }
+    icon = require(`!!raw-loader!@spectrum-css/icon/${scale ? scale : "medium"}/${iconName}.svg`);
+    if (icon) return icon.default ?? icon;
+  } catch (e) {}
 
   return;
-};
-
-export const successToast = ({ scale }) => html` <div
-  class="spectrum-Toast spectrum-Toast--positive"
-  id="success"
-  hidden
->
-  ${Template({
-    iconName: "CheckmarkCircle",
-    size: "s",
-    scale,
-    customClasses: ["spectrum-Toast-typeIcon"],
-    useRef: true,
-    setName: "workflow",
-  })}
-  <div class="spectrum-Toast-body">
-    <div class="spectrum-Toast-content">Icon filename copied to clipboard.</div>
-  </div>
-  <div class="spectrum-Toast-buttons">
-    ${CloseButton({
-      scale,
-      size: "m",
-      staticColor: "white",
-      onClick: () => {
-        toggleToast("failure", false);
-      },
-    })}
-  </div>
-</div>`;
-
-export const failToast = ({ scale }) => html` <div
-  class="spectrum-Toast spectrum-Toast--negative"
-  id="failure"
-  hidden
->
-  ${Template({
-    iconName: "Alert",
-    size: "s",
-    scale,
-    customClasses: ["spectrum-Toast-typeIcon"],
-    useRef: true,
-    setName: "workflow",
-  })}
-  <div class="spectrum-Toast-body">
-    <div class="spectrum-Toast-content">
-      Failed to copy icon filename to clipboard.
-    </div>
-  </div>
-  <div class="spectrum-Toast-buttons">
-    ${CloseButton({
-      scale,
-      size: "m",
-      staticColor: "white",
-      onClick: () => {
-        toggleToast("failure", false);
-      },
-    })}
-  </div>
-</div>`;
-
-export const toggleToast = (id, open = true) => {
-  const toast = document.querySelector(`#${id}`);
-  if (!toast) return;
-  if (open) toast.removeAttribute("hidden");
-  else toast.setAttribute("hidden", "");
 };
