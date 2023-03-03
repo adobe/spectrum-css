@@ -29,6 +29,7 @@ export const Template = ({
   value,
   type = "text",
   autocomplete = true,
+  onclick,
   ...globals
 }) => {
 
@@ -47,7 +48,8 @@ export const Template = ({
       'is-keyboardFocused': isFocused,
       'is-disabled': isDisabled,
       ...customClasses.reduce((a, c) => ({ ...a, [c]: true }), {}),
-    })}>
+    })}
+      @click=${onclick}>
       ${iconName ? Icon({
         ...globals,
         size,

@@ -80,7 +80,7 @@ export default {
 export const Default = Template.bind({});
 Default.args = {
   content: [
-    Menu.bind({
+    Menu({
       role: "listbox",
       subrole: "option",
       isSelectable: true,
