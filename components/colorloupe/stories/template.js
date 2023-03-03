@@ -1,6 +1,6 @@
 import { html } from 'lit-html';
 import { classMap } from 'lit-html/directives/class-map.js';
-// import { ifDefined } from 'lit-html/directives/if-defined.js';
+import { styleMap } from 'lit-html/directives/style-map.js';
 
 import '../index.css';
 import '../skin.css';
@@ -9,9 +9,12 @@ import '../../expressvars/custom.css';
 export const Template = ({
   rootClass = "spectrum-ColorLoupe",
   isOpen,
-  style = "--spectrum-picked-color: rgba(255, 0, 0, 0.5); position: absolute; top: 25%; left: 50%;",
-  darkColor = "rgb(217, 217, 217)",
-  lightColor = "rgb(255, 255, 255)",
+  styles = {
+    '--spectrum-picked-color': 'RGBA(255, 0, 0, 0.5)',
+    position: 'absolute',
+    top: '25%',
+    left: '50%',
+  },
   isExpress = false,
   customClasses = [],
   ...globals
@@ -26,7 +29,7 @@ export const Template = ({
     ...customClasses.reduce((a, c) => ({ ...a, [c]: true }), {}),
   })}
   ${isOpen}
-  style=${style}>
+  style=${styleMap(styles)}>
         <defs>
           <path id="spectrum-inner-loupe" class="${rootClass}-inner" d="M24,0A24,24,0,0,1,48,24c0,16.255-24,40-24,40S0,40.255,0,24A24,24,0,0,1,24,0Z" />
           <path id="express-inner-loupe" class="${rootClass}-inner" d="M-14330.692,18055.742A15.922,15.922,0,0,1-14334,18046a16,16,0,0,1,16-16,16,16,0,0,1,16,16,15.925,15.925,0,0,1-3.166,9.555c-.009.016-.018.029-.028.045-2.577,4.033-12.77,14.4-12.77,14.4S-14328.027,18059.484-14330.692,18055.742Z" />
