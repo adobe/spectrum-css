@@ -7,6 +7,7 @@ export default {
   component: "Tabs",
   argTypes: {
     items: { table: { disable: true }},
+    selectorWidth: { table: { disable: true }},
     size: {
       name: "Size",
       type: { name: "string", required: true },
@@ -25,16 +26,6 @@ export default {
         category: "Component",
       },
       options: ["horizontal", "vertical"],
-      control: "inline-radio",
-    },
-    density: {
-      name: "Density",
-      type: { name: "string" },
-      table: {
-        type: { summary: "string" },
-        category: "Component",
-      },
-      options: ["regular", "compact"],
       control: "inline-radio",
     },
     isQuiet: {
@@ -70,7 +61,6 @@ export default {
     rootClass: "spectrum-Tabs",
     size: "m",
     orientation: "horizontal",
-    density: "regular",
     isQuiet: false,
     isEmphasized: false,
     isCompact: false,
@@ -85,8 +75,11 @@ export default {
   }
 };
 
-export const Default = Template.bind({});
-Default.args = {
+export const Horizontal = Template.bind({});
+Horizontal.args = {
+  selectorStyle: {
+    "width": "35px",
+  },   
   items: [
     {
       id: "tab-1",
@@ -103,3 +96,102 @@ Default.args = {
     }
   ]
 };
+
+export const HorizontalWithIcon = Template.bind({});
+HorizontalWithIcon.args = {
+  selectorStyle: {
+    "width": "60px",
+  },   
+  items: [
+    {
+      id: "tab-1",
+      label: "Tab 1",
+      icon: "Folder",
+      isSelected: true
+    },
+    {
+      id: "tab-2",
+      label: "Tab 2",
+      icon: "Image"
+    },
+    {
+      id: "tab-3",
+      label: "Tab 3",
+      icon: "Document"
+    }
+  ]
+};
+
+export const HorizontalIconOnly = Template.bind({});
+HorizontalIconOnly.args = {
+  selectorStyle: {
+    "width": "20px",
+  }, 
+  items: [
+    {
+      id: "tab-1",
+      icon: "Folder",
+      isSelected: true
+    },
+    {
+      id: "tab-2",
+      icon: "Image"
+    },
+    {
+      id: "tab-3",
+      icon: "Document"
+    }
+  ]
+};
+
+export const Vertical = Template.bind({});
+Vertical.args = {
+  orientation: "vertical",
+  selectorStyle: {
+    "height": "46px",
+    "top": "0"
+  }, 
+  items: [
+    {
+      id: "tab-1",
+      label: "Tab 1",
+      isSelected: true
+    },
+    {
+      id: "tab-2",
+      label: "Tab 2",
+    },
+    {
+      id: "tab-3",
+      label: "Tab 3",
+    }
+  ]
+};
+
+export const VerticalWithIcon = Template.bind({});
+VerticalWithIcon.args = {
+  orientation: "vertical",
+  selectorStyle: {
+    "height": "46px",
+    "top": "0"
+  }, 
+  items: [
+    {
+      id: "tab-1",
+      label: "Tab 1",
+      icon: "Folder",
+      isSelected: true
+    },
+    {
+      id: "tab-2",
+      label: "Tab 2",
+      icon: "Image"
+    },
+    {
+      id: "tab-3",
+      label: "Tab 3",
+      icon: "Document"
+    }
+  ]
+};
+

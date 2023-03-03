@@ -4,6 +4,8 @@ import { styleMap } from 'lit-html/directives/style-map.js';
 import { repeat } from 'lit-html/directives/repeat.js';
 import { ifDefined } from 'lit-html/directives/if-defined.js';
 
+import { Template as Icon } from "@spectrum-css/icon/stories/template.js";
+
 import "../index.css";
 import "../skin.css";
 
@@ -12,16 +14,17 @@ export const Template = ({
   customClasses = [],
   size = "m",
   orientation = "horizontal",
-  density,
   isQuiet,
   isEmphasized,
   isCompact,
   items,
+  selectorStyle,
   style = {
-    "--spectrum-tabs-textonly-tabitem-selection-indicator-background-color-selected": "#000",
-    "--spectrum-tabs-quiet-textonly-tabitem-selection-indicator-background-color-selected": "#000",
+    "--spectrum-tabs-textonly-tabitem-selection-indicator-background-color-selected": "rgb(0,0,0)",
+    "--spectrum-tabs-quiet-textonly-tabitem-selection-indicator-background-color-selected": "rgb(0,0,0)",
     "--spectrum-tabs-emphasized-texticon-tabitem-text-color-selected": "rgb(27,127,245)",
     "--spectrum-tabs-emphasized-texticon-tabitem-selection-indicator-background-color-selected": "rgb(27,127,245)",
+    "--spectrum-tabs-textonly-divider-background-color": "rgba(225,225,225,0.8)"
   },
   ...globals
 }) => {
@@ -43,12 +46,21 @@ export const Template = ({
             [`${rootClass}-item`]: true,
             "is-selected": item.isSelected
           })} tabindex="0">
-          <span class="${rootClass}-itemLabel">${item.label}</span>
+          ${item.icon ? 
+            Icon({
+              ...globals,
+              iconName: item.icon,
+              size
+            })
+          : ""}
+          ${item.label ? 
+            html`<span class="${rootClass}-itemLabel">${item.label}</span>`
+          : ""}
           </div>
         `
       } else return item;
     })}
-      <div class="${rootClass}-selectionIndicator" style="width: 35px"></div>
+      <div class="${rootClass}-selectionIndicator" style=${ifDefined(styleMap(selectorStyle))}></div>
     </div>
   `;
 }
