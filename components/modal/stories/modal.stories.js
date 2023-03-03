@@ -3,23 +3,37 @@ import { Template } from "./template";
 
 export default {
   title: "Modal",
-  description: "The Modal component is...",
+  description: "A modal component used primarily by Dialog.",
   component: "Modal",
   argTypes: {
-    size: {
-      name: "Size",
-      type: { name: "string", required: true },
+    isOpen: {
+      description: "Whether the modal is open (visible).",
+      defaultValue: true,
+      table: {
+        type: { summary: "boolean" },
+        category: "State",
+        defaultValue: { summary: "true" },
+      },
+      control: "boolean",
+    },
+    variant: {
+      description: "Controls how the modal fills the available space. <ul><li>\"responsive\" will fill the screen on small viewports.</li><li>\"fullscreen\" will fill almost all of the available screen space.</li><li>\"fullscreenTakeover\" will fill all of the available screen space.</li></ul>",
+      defaultValue: undefined,
       table: {
         type: { summary: "string" },
         category: "Component",
+        defaultValue: { summary: "undefined" },
       },
-      options: ["s", "m", "l", "xl"],
-      control: "select"
-    },
+      options: ["responsive", "fullscreen", "fullscreenTakeover"],
+      control: {
+        type: "select",
+      }
+    }
   },
   args: {
-    rootClass: "spectrum-",
-    size: "m",
+    isOpen: true,
+    variant: undefined,
+    rootClass: "spectrum-Modal",
   },
   parameters: {
     actions: {
