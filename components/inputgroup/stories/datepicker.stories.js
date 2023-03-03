@@ -1,7 +1,9 @@
 // Import the component markup template
 import { Template } from "./template";
 
-import { Default as Calendar } from '@spectrum-css/calendar/stories/calendar.stories.js';
+import { default as CalendarStories } from '@spectrum-css/calendar/stories/calendar.stories.js';
+
+const ignoreProps = ['rootClass', 'isDisabled'];
 
 // @todo add support for date *range*
 export default {
@@ -9,6 +11,10 @@ export default {
   description: "A date picker uses the input group component to display a field with a button next to it. The button opens a calendar that allows users to select a date.",
   component: "InputGroup",
   argTypes: {
+    ...Object.entries(CalendarStories.argTypes).reduce((acc, [key,]) => {
+      if (ignoreProps.includes(key)) return acc;
+      return { ...acc, [key]: { table: { disable: true } } };
+    }, {}),
     isOpen: {
       name: "Open",
       type: { name: "boolean" },
@@ -90,7 +96,9 @@ export default {
   },
   parameters: {
     actions: {
-      handles: []
+      handles: [
+        ...CalendarStories.parameters.actions.handles ?? [],
+      ]
     },
     status: {
       type: process.env.MIGRATED_PACKAGES.includes('inputgroup') ? 'migrated' : undefined
@@ -100,7 +108,8 @@ export default {
 
 export const Default = Template.bind({});
 Default.args = {
-  content: [
-    Calendar
-  ]
+  month: "March",
+  selectedDay: 1,
+  year: 2023,
+  content: [{}]
 };
