@@ -53,7 +53,7 @@ export const Template = ({
   }
 
   /** Reformat the icon scale to match the provided sizing */
-  if(idKey.match(/\d{2,3}$/) || (uiIcons.includes(idKey) && !idKey.endsWith('Gripper'))) {
+  if(uiIcons.includes(idKey) && !idKey.endsWith('Gripper') && idKey.match(/^(?!\d).*\d{2,3}$/)) {
     let sizeVal;
     switch(size) {
       case 'xs':
