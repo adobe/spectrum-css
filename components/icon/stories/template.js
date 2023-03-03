@@ -72,10 +72,8 @@ export const Template = ({
         break;
     }
 
-    if (sizeVal) {
-      const clean = idKey.replace(/\d{2,3}$/, '');
-      idKey = `${clean}${sizeVal}`;
-    }
+    idKey = idKey.replace(/\d{2,3}$/, sizeVal);
+    iconName = iconName.replace(/\d{2,3}$/, sizeVal);
   }
 
   if (workflowIcons.includes(idKey)) {
@@ -104,7 +102,7 @@ export const Template = ({
 
   const classList = {
     [rootClass]: true,
-    [`spectrum-UIIcon-${idKey}`]: !!(setName === "ui"),
+    [`spectrum-UIIcon-${iconName}`]: !!(setName === "ui"),
     [`${rootClass}--${scale}`]: !!(setName === "ui" && scale),
     [`${rootClass}--size${size?.toUpperCase()}`]: !!(
       (!setName || setName === "workflow") &&

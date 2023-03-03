@@ -2,9 +2,14 @@ import { html } from 'lit-html';
 import { classMap } from 'lit-html/directives/class-map.js';
 import { ifDefined } from 'lit-html/directives/if-defined.js';
 
+import { Template as Menu } from '@spectrum-css/menu/stories/template.js';
+import { Template as Calendar } from '@spectrum-css/calendar/stories/template.js';
+
 import { Template as TextField } from '@spectrum-css/textfield/stories/template.js';
 import { Template as Popover } from '@spectrum-css/popover/stories/template.js';
 import { Template as PickerButton } from '@spectrum-css/pickerbutton/stories/template.js';
+
+import { useArgs, useGlobals } from "@storybook/client-api";
 
 import "../index.css";
 import "../skin.css";
@@ -24,11 +29,16 @@ export const Template = ({
   readOnly = false,
   ...globals
 }) => {
+  const [_, updateArgs] = useArgs();
+  const [{lang}] = useGlobals();
+
+  const isDatePicker = variant === "datepicker";
+
   return html`
     <div
       class=${classMap({
         [rootClass]: true,
-        ['spectrum-Datepicker']: variant === "datepicker",
+        ['spectrum-Datepicker']: isDatePicker,
         'is-open': !isDisabled && isOpen,
         [`${rootClass}--quiet`]: isQuiet,
         'is-invalid': !isDisabled && isInvalid,
@@ -53,15 +63,19 @@ export const Template = ({
           isInvalid,
           customClasses: [`${rootClass}-textfield`],
           customInputClasses: [`${rootClass}-input`],
-          placeholder: 'Choose a date',
+          placeholder: variant === 'datetime' ? 'Choose a date' : 'Type here',
           name: 'field',
+          value: globals.selectedDay ? new Date(globals.selectedDay).toLocaleDateString(lang) : undefined,
+          onclick: function () {
+            if (!isOpen) updateArgs({ isOpen: true });
+          }
         }),
         PickerButton({
           ...globals,
           customClasses: [`${rootClass}-button`],
           size: 'm',
           iconType: 'workflow',
-          iconName: 'Calendar',
+          iconName: isDatePicker ? 'Calendar' : 'ChevronDown200',
           isQuiet,
           // @todo this is not added to the button on the website; need to make sure it's not a bug
           // isOpen,
@@ -69,6 +83,9 @@ export const Template = ({
           isValid,
           isDisabled,
           position: 'right',
+          onclick: function () {
+            updateArgs({ isOpen: !isOpen });
+          }
         }),
         Popover({
           ...globals,
@@ -80,9 +97,25 @@ export const Template = ({
             position: 'absolute',
             top: '100%',
             left: '0',
-            width: variant !== "datepicker" ? '100%' : undefined,
+            width: !isDatePicker ? '100%' : undefined,
           } : {},
-          content,
+          content: isDatePicker ? [
+            Calendar(globals)
+          ] : [
+            Menu({
+              ...globals,
+              items: [{
+                label: 'Ballard'
+              },{
+                label: 'Fremont'
+              }, {
+                label: 'Greenwood'
+              }, {
+                label: 'United States of America',
+                isDisabled: true,
+              }]
+            })
+          ]
         }),
       ]}
     </div>
