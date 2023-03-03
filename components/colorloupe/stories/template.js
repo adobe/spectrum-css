@@ -25,7 +25,6 @@ export const Template = ({
     'is-open': isOpen,
     ...customClasses.reduce((a, c) => ({ ...a, [c]: true }), {}),
   })}
-  ${isOpen}
   style=${styleMap(styles)}>
         <defs>
           <path id="spectrum-inner-loupe" class="${rootClass}-inner" d="M24,0A24,24,0,0,1,48,24c0,16.255-24,40-24,40S0,40.255,0,24A24,24,0,0,1,24,0Z" />
