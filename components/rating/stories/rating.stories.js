@@ -7,6 +7,15 @@ export default {
     "A rating element is used to display or collect a user's rating of an item as represented by a number of stars.",
   component: "Rating",
   argTypes: {
+    isEmphasized: {
+      name: "Emphasized styling",
+      type: { name: "boolean" },
+      table: {
+        type: { summary: "boolean" },
+        category: "Component",
+      },
+      control: "boolean",
+    },
   },
   args: {
     rootClass: "spectrum-Rating",

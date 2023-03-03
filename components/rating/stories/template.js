@@ -7,12 +7,12 @@ import { ifDefined } from "lit-html/directives/if-defined.js";
 import { Template as Icon } from "@spectrum-css/icon/stories/template.js";
 
 import "../index.css";
-import "../skin.css";
 
 export const Template = ({
   rootClass = "spectrum-Rating",
   size = "m",
   max = 5,
+  isEmphasized = false,
   customClasses = [],
   id,
   ...globals
@@ -22,6 +22,7 @@ export const Template = ({
       class=${classMap({
         [rootClass]: true,
         [`${rootClass}--size${size?.toUpperCase()}`]: typeof size !== "undefined",
+        [`${rootClass}--emphasized`]: isEmphasized,
         ...customClasses.reduce((a, c) => ({ ...a, [c]: true }), {}),
       })}
       id=${ifDefined(id)}>

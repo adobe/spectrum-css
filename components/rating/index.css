@@ -29,30 +29,11 @@ governing permissions and limitations under the License.
   /* Indicator spacing */
   --spectrum-rating-indicator-spacing: var(--spectrum-rating-indicator-to-icon);
   /* Colors */
-  --spectrum-rating-icon-color-default: var(--spectrum-neutral-subdued-content-color-default);
-  --spectrum-rating-icon-color-hover: var(--spectrum-neutral-subdued-content-color-hover);
-  --spectrum-rating-icon-color-down: var(--spectrum-neutral-subdued-content-color-down);
-  --spectrum-rating-icon-color-key-focus: var(--spectrum-neutral-subdued-content-color-key-focus);
-  /* Outline */
-  /*--spectrum-rating-outline-icon-color-default: var(--spectrum-neutral-subdued-content-color-default);
-  --spectrum-rating-outline-icon-color-hover: var(--spectrum-neutral-subdued-content-color-hover);
-  --spectrum-rating-outline-icon-color-down: var(--spectrum-neutral-subdued-content-color-down);
-  --spectrum-rating-outline-icon-color-key-focus: var(--spectrum-neutral-subdued-content-color-key-focus);*/
-  /* Indicator */
-  /*--spectrum-rating-indicator-color-default: var(--spectrum-neutral-subdued-content-color-default);
-  --spectrum-rating-indicator-color-hover: var(--spectrum-neutral-subdued-content-color-hover);
-  --spectrum-rating-indicator-color-down: var(--spectrum-neutral-subdued-content-color-down);
-  --spectrum-rating-indicator-color-key-focus: var(--spectrum-neutral-subdued-content-color-key-focus);*/
   /* selected + emphasized */
   --spectrum-rating-emphasized-icon-color-default: var(--spectrum-accent-content-color-default);
   --spectrum-rating-emphasized-icon-color-hover: var(--spectrum-accent-content-color-hover);
   --spectrum-rating-emphasized-icon-color-down: var(--spectrum-accent-content-color-down);
   --spectrum-rating-emphasized-icon-color-key-focus: var(--spectrum-accent-content-color-key-focus);
-  /* Indicator emphasized */
-  /*--spectrum-rating-indicator-emphasized-content-color-default: var(--spectrum-accent-content-color-default);
-  --spectrum-rating-indicator-emphasized-content-color-hover: var(--spectrum-accent-content-color-hover);
-  --spectrum-rating-indicator-emphasized-content-color-down: var(--spectrum-accent-content-color-down);
-  --spectrum-rating-indicator-emphasized-content-color-key-focus: var(--spectrum-accent-content-color-key-focus);*/
   /* Disabled */
   --spectrum-rating-icon-color-disabled: var(--spectrum-rating-icon-color-disabled);
   --spectrum-rating-icon-count: var(--spectrum-rating-icon-count);
@@ -81,11 +62,11 @@ governing permissions and limitations under the License.
   display: inline-flex;
   flex: 0 0 auto;
 
-  inline-size: calc((var(--mod-rating-icon-width, var(--spectrum-rating-icon-width)) + var(--mod-rating-icon-spacing, var(--spectrum-rating-icon-spacing))) * var(--mod-rating-icon-count, var(--spectrum-rating-icon-count)));
+  inline-size: calc((var(--mod-rating-icon-width, var(--spectrum-rating-icon-width))) * var(--mod-rating-icon-count, var(--spectrum-rating-icon-count)));
 
   border-radius: var(--mod-rating-border-radius, var(--spectrum-rating-border-radius));
 
-  /*size: var(--mod-rating-workflow-icon-size, var(--spectrum-rating-workflow-icon-size));*/
+  block-size: var(--mod-rating-icon-height, var(--spectrum-rating-icon-height));
 
   cursor: pointer;
 
@@ -123,9 +104,10 @@ governing permissions and limitations under the License.
   background-size: contain;
   background-repeat: no-repeat;
   inline-size: var(--mod-rating-icon-width, var(--spectrum-rating-icon-width));
-  /* TODO */
-  /*block-size: var(--mod-rating-icon-height, var(--spectrum-icon-star-height));*/
-  padding: var(--mod-rating-icon-spacing-vertical-top, var(--spectrum-rating-icon-spacing-vertical-top));
+  block-size: var(--mod-rating-icon-height, var(--spectrum-rating-icon-height));
+  padding: var(--mod-rating-icon-spacing, var(--spectrum-rating-icon-spacing));
+  padding-top: var(--mod-rating-icon-spacing-vertical-top, var(--spectrum-rating-icon-spacing-vertical-top));
+  padding-bottom: var(--mod-rating-icon-spacing-vertical-top, var(--spectrum-rating-icon-spacing-vertical-top));
 
   .spectrum-Rating-starActive {
     display: none;
@@ -182,12 +164,9 @@ governing permissions and limitations under the License.
 
 .spectrum-Rating-starActive,
 .spectrum-Rating-starInactive {
-  inline-size: var(--mod-rating-icon-width, var(--spectrum-rating-icon-width));
-  block-size: var(--mod-rating-icon-height, var(--spectrum-rating-icon-height));
   margin: 0 auto;
 }
 
-/* Skin */
 .spectrum-Rating {
   &.is-focused {
     box-shadow: 0 0 0 0
@@ -240,13 +219,13 @@ governing permissions and limitations under the License.
     color: var(--mod-rating-emphasized-icon-color-default, var(--spectrum-rating-emphasized-icon-color-default));
 
     &.is-selected {
-      color: var(--mod-rating-emphasized-icon-color-key-focus, var(-spectrum-rating-emphasized-icon-color-key-focus));
+      color: var(--mod-rating-emphasized-icon-color-key-focus, var(--spectrum-rating-emphasized-icon-color-key-focus));
     }
 
     &:hover {
       /* All stars following the hovered star */
       & ~ .spectrum-Rating-icon {
-        color: var(--mod-rating-emphasized-icon-color-key-focus, var(--spectrum-rating-emphasized-icon-color-key-focus));
+        color: var(--mod-rating-emphasized-icon-color-down, var(--spectrum-rating-emphasized-icon-color-down));
       }
     }
   }
