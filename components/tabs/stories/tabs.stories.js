@@ -7,7 +7,7 @@ export default {
   component: "Tabs",
   argTypes: {
     items: { table: { disable: true }},
-    selectorWidth: { table: { disable: true }},
+    selectorStyle: { table: { disable: true }},
     size: {
       name: "Size",
       type: { name: "string", required: true },
