@@ -60,6 +60,13 @@ export const Template = ({
       ${hasClearButton ? ClearButton({
         ...globals,
         customClasses: [`${rootClass}-clearButton`],
+        onclick: (evt) => {
+          const el = evt.target;
+          if (!el) return;
+
+          const wrapper = el.closest(rootClass);
+          wrapper.parentNode.removeChild(wrapper);
+        }
       }) : ""}
     </div>
   `;
