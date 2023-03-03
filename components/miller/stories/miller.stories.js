@@ -6,6 +6,7 @@ export default {
   description: "Miller columns are a browsing/visualization technique that can be applied to tree structures. The columns allow for multiple levels of the hierarchy to be open at once and provide a visual representation of the current location.",
   component: "Miller",
   argTypes: {
+    columns: { table: { disable: true } }
   },
   args: {
     rootClass: "spectrum-MillerColumns",

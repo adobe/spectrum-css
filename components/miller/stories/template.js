@@ -12,7 +12,10 @@ export const Template = ({
   columns,
   ...globals
 }) => {
-  if (!columns) return html``;
+  if (!columns) {
+    console.warn('MillerColumns: Column data is required for rendering.');
+    return html``;
+  }
 
   return html`
     <div
@@ -25,8 +28,8 @@ export const Template = ({
         return html`
           <div class="${rootClass}-item">
             ${AssetList({
-              items,
               ...globals,
+              items,
             })}
           </div>
         `;
