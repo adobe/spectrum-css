@@ -20,7 +20,7 @@ export default {
       name: "Label",
       table: {
         type: { summary: "string" },
-        category: "Component",
+        category: "Content",
       },
       control: "text",
     },

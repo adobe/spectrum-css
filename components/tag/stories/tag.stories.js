@@ -36,7 +36,7 @@ export default {
       type: { name: "string" },
       table: {
         type: { summary: "string" },
-        category: "Component",
+        category: "Content",
       },
       control: { type: "text" },
     },
