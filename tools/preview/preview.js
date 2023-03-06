@@ -3,7 +3,7 @@ import {
   withTextDirectionWrapper,
   withLanguageWrapper,
   withReducedMotionWrapper,
-  withSizingWrapper,
+  // withSizingWrapper,
 } from './decorators/index.js';
 
 // https://github.com/storybookjs/storybook-addon-console
@@ -16,7 +16,6 @@ setConsoleOptions({
 });
 
 import '@spectrum-css/vars/css/globals/index.css';
-import '@spectrum-css/vars/custom.css';
 import '@spectrum-css/vars/css/components/index.css';
 
 import '@spectrum-css/vars/css/scales/spectrum-medium.css';
@@ -25,9 +24,9 @@ import '@spectrum-css/vars/css/scales/spectrum-large.css';
 import '@spectrum-css/vars/css/themes/spectrum-light.css';
 import '@spectrum-css/vars/css/themes/spectrum-dark.css';
 import '@spectrum-css/vars/css/themes/spectrum-darkest.css';
+import '@spectrum-css/vars/custom.css';
 
 import '@spectrum-css/expressvars/css/globals/index.css';
-import '@spectrum-css/expressvars/custom.css';
 import '@spectrum-css/expressvars/css/components/index.css';
 
 import '@spectrum-css/expressvars/css/themes/spectrum-light.css';
@@ -36,6 +35,7 @@ import '@spectrum-css/expressvars/css/themes/spectrum-darkest.css';
 
 import '@spectrum-css/expressvars/css/scales/spectrum-medium.css';
 import '@spectrum-css/expressvars/css/scales/spectrum-large.css';
+import '@spectrum-css/expressvars/custom.css';
 
 import '@spectrum-css/tokens';
 
