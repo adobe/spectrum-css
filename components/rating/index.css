@@ -34,7 +34,7 @@ governing permissions and limitations under the License.
   --spectrum-rating-emphasized-icon-color-down: var(--spectrum-accent-content-color-down);
   --spectrum-rating-emphasized-icon-color-key-focus: var(--spectrum-accent-content-color-key-focus);
   /* Disabled */
-  --spectrum-rating-icon-color-disabled: var(--spectrum-rating-icon-color-disabled);
+  --spectrum-rating-icon-color-disabled: var(--spectrum-disabled-content-color);
   --spectrum-rating-icon-count: var(--spectrum-rating-icon-count);
 }
 
@@ -50,9 +50,9 @@ governing permissions and limitations under the License.
 @media (forced-colors: active) {
   .spectrum-Rating {
     &.is-focused {
-      outline: 1px solid var(--mod-rating-focus-indicator-color, var(--spectrum-rating-focus-indicator-color));
+      outline: 1px solid CanvasText;
     }
-    --spectrum-rating-icon-color-disabled: GrayText;
+    --highcontrast-rating-icon-color-disabled: GrayText;
   }
 }
 
@@ -214,7 +214,7 @@ governing permissions and limitations under the License.
 
 .spectrum-Rating--emphasized {
   .spectrum-Rating-icon {
-    color: var(--mod-rating-emphasized-icon-color-default, var(--spectrum-rating-emphasized-icon-color-default));
+    color: var(--mod-rating-icon-color-default, var(--spectrum-rating-icon-color-default));
 
     &.is-selected {
       color: var(--mod-rating-emphasized-icon-color-key-focus, var(--spectrum-rating-emphasized-icon-color-key-focus));
@@ -236,6 +236,9 @@ governing permissions and limitations under the License.
       &:hover {
         /* The icon that's actually hovered is darker */
         color: var(--mod-rating-emphasized-icon-color-hover, var(--spectrum-rating-emphasized-icon-color-hover));
+        & ~ .spectrum-Rating-icon {
+          color: var(--mod-rating-icon-color-default, var(--spectrum-rating-icon-color-default));
+        }
       }
 
       &:active {
@@ -249,7 +252,7 @@ governing permissions and limitations under the License.
 .spectrum-Rating {
   &.is-disabled {
     .spectrum-Rating-icon {
-      color: var(--mod-rating-icon-color-disabled, var(--spectrum-rating-icon-color-disabled));
+      color: var(--highcontrast-rating-icon-color-disabled, var(--mod-rating-icon-color-disabled, var(--spectrum-rating-icon-color-disabled)));
 
       &.is-selected {
         color: var(--mod-rating-icon-color-disabled, var(--spectrum-rating-icon-color-disabled));
