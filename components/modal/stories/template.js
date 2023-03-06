@@ -9,6 +9,7 @@ export const Template = ({
   customClasses = [],
   isOpen = true,
   variant,
+  content = [],
   ...globals
 }) => {
   return html`
@@ -18,7 +19,7 @@ export const Template = ({
           [`${rootClass}--${variant}`]: typeof variant !== "undefined",
           'is-open': isOpen,
           ...customClasses.reduce((a, c) => ({ ...a, [c]: true }), {}),
-      })}>This is a modal. Don't use it like this; get yourself a Modal.</div>
+      })}>${content}</div>
     </div>
   `;
 }

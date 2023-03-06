@@ -24,7 +24,10 @@ export default {
       control: {
         type: "select",
       }
-    }
+    },
+    content: { 
+      table: { disable: true }
+    },
   },
   args: {
     isOpen: true,
@@ -41,4 +44,8 @@ export default {
 };
 
 export const Default = Template.bind({});
-Default.args = {};
+Default.args = {
+  content: [
+    "This is a modal. Don't use it like this; get yourself a Modal.",
+  ],
+};
