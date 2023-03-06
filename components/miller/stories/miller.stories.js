@@ -2,24 +2,14 @@
 import { Template } from "./template";
 
 export default {
-  title: "Miller",
-  description: "The Miller component is...",
+  title: "Miller Columns",
+  description: "Miller columns are a browsing/visualization technique that can be applied to tree structures. The columns allow for multiple levels of the hierarchy to be open at once and provide a visual representation of the current location.",
   component: "Miller",
   argTypes: {
-    size: {
-      name: "Size",
-      type: { name: "string", required: true },
-      table: {
-        type: { summary: "string" },
-        category: "Component",
-      },
-      options: ["s", "m", "l", "xl"],
-      control: "select"
-    },
+    columns: { table: { disable: true } }
   },
   args: {
-    rootClass: "spectrum-",
-    size: "m",
+    rootClass: "spectrum-MillerColumns",
   },
   parameters: {
     actions: {
@@ -31,5 +21,99 @@ export default {
   }
 };
 
-export const Default = Template.bind({});
-Default.args = {};
+export const BranchesSelectable = Template.bind({});
+BranchesSelectable.args = {
+  columns: [
+    {
+      items: [{
+        label: "Folder 1",
+        isBranch: true,
+        isSelectable: true,
+        isSelected: false,
+      },
+      {
+        label: "Folder 2",
+        isBranch: true,
+        isSelectable: true,
+        isSelected: true,
+      },
+      {
+        label: "Folder 3",
+        isBranch: true,
+        isSelectable: true,
+        isSelected: false,
+        image: "example-ava.png",
+      }]
+    },
+    {
+      items: [{
+        label: "Folder 2.1",
+        isBranch: true,
+        isSelectable: true,
+        isSelected: false,
+      },
+      {
+        label: "File 2.1",
+        isBranch: true,
+        isSelectable: true,
+        isSelected: true,
+      },
+      {
+        label: "File 2.2",
+        isBranch: true,
+        isSelectable: true,
+        isSelected: true,
+        image: "example-ava.png",
+      }]
+    },
+  ]
+};
+
+export const FilesSelectable = Template.bind({});
+FilesSelectable.args = {
+  columns: [
+    {
+      items: [{
+        label: "File 1",
+        isBranch: true,
+        isSelectable: false,
+        isSelected: false,
+      },
+      {
+        label: "File 2",
+        isBranch: false,
+        isSelectable: false,
+        isSelected: false,
+      },
+      {
+        label: "File 3",
+        isBranch: true,
+        isSelectable: false,
+        isSelected: false,
+        isNavigated: true,
+        image: "example-ava.png",
+      }]
+    },
+    {
+      items: [{
+        label: "File 2.1",
+        isBranch: true,
+        isSelectable: false,
+        isSelected: false,
+      },
+      {
+        label: "File 2.2",
+        isBranch: false,
+        isSelectable: false,
+        isSelected: false,
+      },
+      {
+        label: "File 2.3",
+        isBranch: false,
+        isSelectable: false,
+        isSelected: true,
+        image: "example-ava.png",
+      }]
+    },
+  ]
+};

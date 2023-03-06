@@ -41,5 +41,12 @@ Default.args = {
     isSelectable: true,
     isBranch: true,
     isSelected: true,
+  }, {
+    iconName: "Folder",
+    label: "Downloads",
+    isSelectable: true,
+    isBranch: true,
+    isSelected: false,
+    isNavigated: true,
   }],
 };
