@@ -3,23 +3,23 @@ import { Template } from "./template";
 
 export default {
   title: "Logic button",
-  description: "The Logic button component is...",
+  description: "A LogicButton displays an operator within a boolean logic sequence.",
   component: "Logicbutton",
   argTypes: {
-    size: {
-      name: "Size",
-      type: { name: "string", required: true },
+    variant: {
+      name: "Varient",
+      type: { name: "string" },
       table: {
         type: { summary: "string" },
         category: "Component",
       },
-      options: ["s", "m", "l", "xl"],
-      control: "select"
+      options: ["and", "or"],
+      control: "inline-radio",
     },
   },
   args: {
-    rootClass: "spectrum-",
-    size: "m",
+    rootClass: "spectrum-LogicButton",
+    variant: "and",
   },
   parameters: {
     actions: {
@@ -32,4 +32,7 @@ export default {
 };
 
 export const Default = Template.bind({});
-Default.args = {};
+Default.args = {
+  variant: "and"
+};
+
