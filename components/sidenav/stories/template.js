@@ -17,7 +17,6 @@ export const SideNavItem = ({
   isDisabled,
   id,
   icon,
-  category,
   customClasses = [],
   ...globals
 }) => {
@@ -72,6 +71,7 @@ export const Template = ({
                 <ul class=${rootClass} aria-labelledby=${ifDefined(item.category) ? `${item.id}-heading` : ""}>
                   ${repeat(item.subitems, (item) => item.id, (item) => {
                     return SideNavItem({
+                      ...globals,
                       ...item
                     })
                   })}
@@ -80,6 +80,7 @@ export const Template = ({
             `
           } else {
             return SideNavItem({
+              ...globals,
               ...item
             })
           }
