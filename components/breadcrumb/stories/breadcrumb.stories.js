@@ -2,8 +2,8 @@
 import { Template } from "./template";
 
 export default {
-  title: "Breadcrumb",
-  description: "The Breadcrumb component is...",
+  title: "Breadcrumbs",
+  description: "Breadcrumbs show hierarchy and navigational context for a user’s location within an app.",
   component: "Breadcrumbs",
   argTypes: {
     items: { table: { disable: true } },
