@@ -6,8 +6,6 @@ export default {
   description: "The Color area component allows users to visually select two properties of a color simultaneously. It's commonly used together with a color slider or color wheel.",
   component: "ColorArea",
   argTypes: {
-    customWidth: { table: { disable: true } },
-    customHeight: { table: { disable: true } },
     handlePosition: { table: { disable: true } },
     isDisabled: {
       name: "Disabled",

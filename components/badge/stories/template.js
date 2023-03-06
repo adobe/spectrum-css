@@ -14,8 +14,8 @@ export const Template = ({
   iconName,
   hideLabel = false,
   variant = "neutral",
-  customColor,
-  customLayout,
+  color,
+  layout,
   customClasses = [],
   id,
   ...globals
@@ -35,8 +35,8 @@ export const Template = ({
         [rootClass]: true,
         [`${rootClass}--size${size?.toUpperCase()}`]: typeof size !== "undefined",
         [`${rootClass}--${variant}`]: typeof variant !== "undefined",
-        [`${rootClass}--${customColor}`]: typeof customColor !== "undefined",
-        [`${rootClass}--${customLayout}`]: typeof customLayout !== "undefined",
+        [`${rootClass}--${color}`]: typeof color !== "undefined",
+        [`${rootClass}--${layout}`]: typeof layout !== "undefined",
         ...customClasses.reduce((a, c) => ({ ...a, [c]: true }), {}),
       })}
       id=${ifDefined(id)}>

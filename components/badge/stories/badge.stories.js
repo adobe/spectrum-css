@@ -52,8 +52,8 @@ export default {
       },
       control: "boolean",
     },
-    customColor: {
-      name: "Custom color",
+    color: {
+      name: "Color",
       type: { name: "string" },
       table: {
         type: { summary: "string" },
@@ -62,8 +62,8 @@ export default {
       options: ["black-text"],
       control: "select",
     },
-    customLayout: {
-      name: "Custom layout",
+    layout: {
+      name: "Layout",
       type: { name: "string" },
       table: {
         type: { summary: "string" },

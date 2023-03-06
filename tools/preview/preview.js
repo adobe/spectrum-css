@@ -3,7 +3,7 @@ import {
   withTextDirectionWrapper,
   withLanguageWrapper,
   withReducedMotionWrapper,
-  withSizingWrapper,
+  // withSizingWrapper,
 } from './decorators/index.js';
 
 // https://github.com/storybookjs/storybook-addon-console
@@ -15,29 +15,25 @@ setConsoleOptions({
   panelExclude: [...panelExclude, /deprecated/, /TypeError/],
 });
 
-import '@spectrum-css/vars/css/globals/index.css';
-import '@spectrum-css/vars/custom.css';
-import '@spectrum-css/vars/css/components/index.css';
+import '@spectrum-css/tokens';
 
-import '@spectrum-css/vars/css/scales/spectrum-medium.css';
-import '@spectrum-css/vars/css/scales/spectrum-large.css';
-
-import '@spectrum-css/vars/css/themes/spectrum-light.css';
-import '@spectrum-css/vars/css/themes/spectrum-dark.css';
-import '@spectrum-css/vars/css/themes/spectrum-darkest.css';
+import'@spectrum-css/vars/css/globals/index.css';
+import'@spectrum-css/vars/custom.css';
+import'@spectrum-css/vars/css/components/index.css';
+import'@spectrum-css/vars/css/themes/spectrum-light.css';
+import'@spectrum-css/vars/css/themes/spectrum-dark.css';
+import'@spectrum-css/vars/css/themes/spectrum-darkest.css';
+import'@spectrum-css/vars/css/scales/spectrum-medium.css';
+import'@spectrum-css/vars/css/scales/spectrum-large.css';
 
 import '@spectrum-css/expressvars/css/globals/index.css';
-import '@spectrum-css/expressvars/custom.css';
-import '@spectrum-css/expressvars/css/components/index.css';
-
-import '@spectrum-css/expressvars/css/themes/spectrum-light.css';
-import '@spectrum-css/expressvars/css/themes/spectrum-dark.css';
-import '@spectrum-css/expressvars/css/themes/spectrum-darkest.css';
-
-import '@spectrum-css/expressvars/css/scales/spectrum-medium.css';
-import '@spectrum-css/expressvars/css/scales/spectrum-large.css';
-
-import '@spectrum-css/tokens';
+import'@spectrum-css/expressvars/custom.css';
+import'@spectrum-css/expressvars/css/components/index.css';
+import'@spectrum-css/expressvars/css/themes/spectrum-light.css';
+import'@spectrum-css/expressvars/css/themes/spectrum-dark.css';
+import'@spectrum-css/expressvars/css/themes/spectrum-darkest.css';
+import'@spectrum-css/expressvars/css/scales/spectrum-medium.css';
+import'@spectrum-css/expressvars/css/scales/spectrum-large.css';
 
 // Loading typography on every page because it's a useful utility
 import '@spectrum-css/typography';
@@ -157,6 +153,12 @@ export const argTypes = {
       table: { disable: true },
       control: 'object',
     },
+    customStyles: {
+      name: "Custom styles",
+      type: { name: "string", required: false },
+      table: { disable: true },
+      control: 'object',
+    },
     id: {
       name: "Element ID",
       type: { name: "string", required: false },
@@ -184,6 +186,7 @@ export const parameters = {
     expanded: true,
     hideNoControlsWarning: true,
     sort: 'requiredFirst',
+    exclude:/^custom(\w+)/g,
   },
   html: {
     root: '#root-inner',
