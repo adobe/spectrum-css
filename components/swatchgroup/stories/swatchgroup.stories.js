@@ -39,6 +39,10 @@ export default {
     swatches: {
       name: "Swatches",
       table: { disable: true }
+    },
+    containerWidth: {
+      name: "Container width",
+      table: { disable: true }
     }
   },
   args: {
@@ -137,7 +141,8 @@ export default {
         g: "71",
         b: "144",
       },
-    ]
+    ],
+    containerWidth: "250px",
   },
   parameters: {
     actions: {
