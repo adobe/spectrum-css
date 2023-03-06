@@ -28,7 +28,6 @@ import '@spectrum-css/expressvars/dist/spectrum-medium.css';
 import '@spectrum-css/expressvars/dist/spectrum-large.css';
 
 import '@spectrum-css/expressvars/css/globals/index.css';
-import '@spectrum-css/expressvars/custom.css';
 import '@spectrum-css/expressvars/css/components/index.css';
 
 import '@spectrum-css/expressvars/css/themes/spectrum-light.css';
