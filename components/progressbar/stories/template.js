@@ -1,12 +1,19 @@
 import { html } from 'lit-html';
 import { classMap } from 'lit-html/directives/class-map.js';
-// import { ifDefined } from 'lit-html/directives/if-defined.js';
+import { Template as FieldLabel } from '@spectrum-css/fieldlabel/stories/template.js';
+import { ifDefined } from 'lit-html/directives/if-defined.js';
+import { styleMap } from 'lit-html/directives/style-map.js';
 
 import "../index.css";
 
 export const Template = ({
   rootClass = "spectrum-ProgressBar",
   customClasses = [],
+  labelPosition,
+  customWidth = customWidth ? customWidth : "",
+  styles  = {
+    "width": customWidth
+  },
   size = "m",
   ...globals
 }) => {
@@ -22,11 +29,15 @@ export const Template = ({
   return html`
     <div class=${classMap({
       [rootClass]: true,
+      [`${rootClass}--${labelPosition}Label`]: typeof labelPosition !== "undefined",
       [`${rootClass}--size${size?.toUpperCase()}`]: typeof size !== "undefined",
       ...customClasses.reduce((a, c) => ({ ...a, [c]: true }), {}),
-      })} value="50" role="progressbar" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100">
-      <div class="spectrum-FieldLabel spectrum-FieldLabel--sizeM spectrum-ProgressBar-label">Loading</div>
-      <div class="spectrum-FieldLabel spectrum-FieldLabel--sizeM spectrum-ProgressBar-percentage">50%</div>
+      })}
+      style=${styleMap(styles)}
+      value="50" role="progressbar" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100"
+      >
+      <div class="spectrum-FieldLabel spectrum-FieldLabel--size${size} spectrum-ProgressBar-label">Loading</div>
+      <div class="spectrum-FieldLabel spectrum-FieldLabel--size${size} spectrum-ProgressBar-percentage">50%</div>
       <div class="${rootClass}-track">
         <div class="${rootClass}-fill" style="width: 50%;"></div>
       </div>
