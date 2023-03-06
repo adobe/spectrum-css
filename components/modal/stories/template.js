@@ -8,7 +8,7 @@ export const Template = ({
   rootClass = "spectrum-Modal",
   customClasses = [],
   isOpen = true,
-  variant = undefined,
+  variant,
   ...globals
 }) => {
   return html`
