@@ -1,8 +1,9 @@
 import { html } from 'lit-html';
 import { classMap } from 'lit-html/directives/class-map.js';
 import { repeat } from 'lit-html/directives/repeat.js';
+import { ifDefined } from "lit-html/directives/if-defined.js";
 
-// import { ifDefined } from 'lit-html/directives/if-defined.js';
+import { Template as Icon } from "@spectrum-css/icon/stories/template.js";
 
 import "../index.css";
 import "../skin.css";
@@ -15,15 +16,28 @@ export const SideNavItem = ({
   isSelected,
   isDisabled,
   id,
-  customClasses
+  icon,
+  category,
+  customClasses = [],
+  ...globals
 }) => {
   return html`
     <li id=${id} class=${classMap({
       [`${rootClass}-item`]: true,
       "is-selected": isSelected,
       "is-disabled": isDisabled,
+      ...customClasses.reduce((a, c) => ({ ...a, [c]: true }), {}),
     })}>
-      <a href=${link} class="${rootClass}-itemLink">${title}</a>
+      <a href=${link} class="${rootClass}-itemLink">
+        ${icon ? 
+          Icon({
+            ...globals,
+            iconName: icon,
+            customClasses: [`${rootClass}-itemIcon`]
+          })
+        : ""}
+        ${title}
+      </a>
     </li>
   `
 }
@@ -50,8 +64,12 @@ export const Template = ({
                 "is-selected": item.isSelected,
                 "is-disabled": item.isDisabled,
               })}>
-                <a href=${item.link} class="${rootClass}-itemLink">${item.title}</a>
-                <ul class=${rootClass}>
+              ${item.category ? 
+                html`<h2 class="${rootClass}-heading" id="${item.id}-heading">${item.category}</h2>`
+                : 
+                html`<a href=${item.link} class="${rootClass}-itemLink">${item.title}</a>`
+              }
+                <ul class=${rootClass} aria-labelledby=${ifDefined(item.category) ? `${item.id}-heading` : ""}>
                   ${repeat(item.subitems, (item) => item.id, (item) => {
                     return SideNavItem({
                       ...item
