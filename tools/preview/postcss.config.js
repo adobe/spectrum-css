@@ -30,7 +30,7 @@ module.exports = (ctx) => {
         plugins = [
             require('postcss-import')(),
             require('postcss-selector-replace')({
-                before: [':root'],
+                before: [/(:root|.spectrum)/],
                 after: [`${isExpress ? `.spectrum--express` : ''}${modifier ? `.spectrum--${modifier}` : ''}${!isExpress && !modifier ? `.spectrum` : ''}`]
               })
         ];

@@ -15,27 +15,23 @@ setConsoleOptions({
   panelExclude: [...panelExclude, /deprecated/, /TypeError/],
 });
 
-import '@spectrum-css/vars/css/globals/index.css';
-import '@spectrum-css/vars/css/components/index.css';
+import '@spectrum-css/vars/dist/spectrum-medium.css';
+import '@spectrum-css/vars/dist/spectrum-large.css';
 
-import '@spectrum-css/vars/css/scales/spectrum-medium.css';
-import '@spectrum-css/vars/css/scales/spectrum-large.css';
+import '@spectrum-css/vars/dist/spectrum-light.css';
+import '@spectrum-css/vars/dist/spectrum-dark.css';
+import '@spectrum-css/vars/dist/spectrum-darkest.css';
 
-import '@spectrum-css/vars/css/themes/spectrum-light.css';
-import '@spectrum-css/vars/css/themes/spectrum-dark.css';
-import '@spectrum-css/vars/css/themes/spectrum-darkest.css';
-import '@spectrum-css/vars/custom.css';
+import '@spectrum-css/vars/dist/spectrum-global.css';
 
-import '@spectrum-css/expressvars/css/globals/index.css';
-import '@spectrum-css/expressvars/css/components/index.css';
+import '@spectrum-css/expressvars/dist/spectrum-medium.css';
+import '@spectrum-css/expressvars/dist/spectrum-large.css';
 
-import '@spectrum-css/expressvars/css/themes/spectrum-light.css';
-import '@spectrum-css/expressvars/css/themes/spectrum-dark.css';
-import '@spectrum-css/expressvars/css/themes/spectrum-darkest.css';
+import '@spectrum-css/expressvars/dist/spectrum-light.css';
+import '@spectrum-css/expressvars/dist/spectrum-dark.css';
+import '@spectrum-css/expressvars/dist/spectrum-darkest.css';
 
-import '@spectrum-css/expressvars/css/scales/spectrum-medium.css';
-import '@spectrum-css/expressvars/css/scales/spectrum-large.css';
-import '@spectrum-css/expressvars/custom.css';
+import '@spectrum-css/expressvars/dist/spectrum-global.css';
 
 import '@spectrum-css/tokens';
 
