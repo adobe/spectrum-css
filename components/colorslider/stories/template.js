@@ -12,7 +12,6 @@ export const Template = ({
   isDisabled = false,
   isFocused = false,
   vertical,
-  style = {},
   colorHandleStyle = {
     '--spectrum-picked-color': 'rgba(255, 0, 0)',
   },

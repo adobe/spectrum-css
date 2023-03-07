@@ -26,8 +26,6 @@ export const Template = ({
     'is-focused': isFocused,
     ...customClasses.reduce((a, c) => ({ ...a, [c]: true }), {}),
   })}
-  ?disabled=${isDisabled}
-  ?focused=${isFocused}
   style=${styleMap(colorHandleStyle)}>
       <div class="${rootClass}-color"></div>
     </div>
