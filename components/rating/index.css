@@ -64,8 +64,6 @@ governing permissions and limitations under the License.
   inline-size: calc((var(--mod-rating-icon-width, var(--spectrum-rating-icon-width)) + var(--mod-rating-icon-spacing, var(--spectrum-rating-icon-spacing))) * var(--mod-rating-icon-count, var(--spectrum-rating-icon-count)));
   border-radius: var(--mod-rating-border-radius, var(--spectrum-rating-border-radius));
 
-  block-size: var(--mod-rating-icon-height, var(--spectrum-rating-icon-height));
-
   cursor: pointer;
 
   &.is-disabled,
@@ -167,8 +165,9 @@ governing permissions and limitations under the License.
 
 .spectrum-Rating {
   &.is-focused {
-    box-shadow: 0 0 0 0
-      var(--mod-rating-focus-indicator-color, var(--spectrum-rating-focus-indicator-color));
+
+    box-shadow: 0 0 0 var(--mod-rating-focus-indicator-thickness, var(--spectrum-rating-focus-indicator-thickness)) var(--mod-rating-focus-indicator-color, var(--spectrum-rating-focus-indicator-color));
+
   }
 
   &:hover {
