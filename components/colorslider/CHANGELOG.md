@@ -3,6 +3,16 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+<a name="2.0.18"></a>
+## 2.0.18
+🗓 2023-03-07 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/colorslider@2.0.17...@spectrum-css/colorslider@2.0.18)
+
+**Note:** Version bump only for package @spectrum-css/colorslider
+
+
+
+
+
 <a name="2.0.17"></a>
 ## 2.0.17
 🗓 2023-02-28 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/colorslider@2.0.16...@spectrum-css/colorslider@2.0.17)

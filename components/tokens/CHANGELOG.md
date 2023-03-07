@@ -3,6 +3,18 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+<a name="7.5.0"></a>
+# 7.5.0
+🗓 2023-03-07 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/tokens@7.4.0...@spectrum-css/tokens@7.5.0)
+
+### ✨ Features
+
+* **tokens:** add medium, large tokens for rating-icon-spacing ([#1664](https://github.com/adobe/spectrum-css/issues/1664)) ([955b2b3](https://github.com/adobe/spectrum-css/commit/955b2b3))
+
+
+
+
+
 <a name="7.4.0"></a>
 # 7.4.0
 🗓 2023-03-01 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/tokens@7.3.0...@spectrum-css/tokens@7.4.0)
