@@ -2,7 +2,7 @@
 import { Template } from "./template";
 
 
-import { default as IconStories } from "../../icon/stories/icon.stories.js";
+import { default as IconStories } from "@spectrum-css/icon/stories/icon.stories.js";
 
 export default {
   title: "Badge",
@@ -25,14 +25,14 @@ export default {
       type: { name: "string" },
       table: {
         type: { summary: "string" },
-        category: "Component",
+        category: "Content",
       },
       control: "text",
     },
-    icon:
-      IconStories && IconStories.argTypes && IconStories.argTypes.iconName
-        ? IconStories.argTypes.iconName
-        : {},
+    iconName: {
+      ...IconStories?.argTypes?.iconName ?? {},
+      if: false,
+    },
     variant: {
       name: "Background color variants",
       type: { name: "string" },
@@ -81,7 +81,7 @@ export default {
   args: {
     rootClass: "spectrum-Badge",
     size: "m",
-    icon: "Info",
+    iconName: "Info",
     label: "Badge",
     variant: "neutral",
     hideLabel: false,

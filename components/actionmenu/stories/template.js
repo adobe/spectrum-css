@@ -7,6 +7,7 @@ import { Template as Menu } from '@spectrum-css/menu/stories/template.js';
 import { useArgs } from "@storybook/client-api";
 
 export const Template = ({
+  customClasses = [],
   items = [],
   isOpen = true,
   ...globals
@@ -18,13 +19,27 @@ export const Template = ({
     return html``;
   }
 
-  return html`
-    ${ActionButton({ ...globals, size: "m", isQuiet: true, isSelected: isOpen, label: "More Actions", icon: "More", onclick: () => {
-      updateArgs({ isOpen: !isOpen });
-    } })}
-    <br/>
-    ${Popover({ ...globals, position: "bottom", isOpen, content: [
-      Menu({ ...globals, items })
-    ] })}
-  `;
+  return [
+    ActionButton({
+      ...globals,
+      size: "m",
+      isQuiet: true,
+      isSelected: isOpen,
+      label: "More Actions",
+      iconName: "More",
+      customClasses,
+      onclick: function () {
+        updateArgs({ isOpen: !isOpen });
+      }
+    }),
+    html`<br/>`,
+    Popover({
+      ...globals,
+      position: "bottom",
+      isOpen,
+      content: [
+        Menu({ ...globals, items })
+      ]
+    }),
+  ];
 }

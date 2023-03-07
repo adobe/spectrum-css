@@ -13,32 +13,62 @@ export const Template = ({
   customClasses = [],
   customInputClasses = [],
   customIconClasses = [],
+  isInvalid = false,
+  isValid = false,
+  multiline = false,
+  isQuiet = false,
+  isFocused = false,
+  isDisabled = false,
+  isRequired = false,
+  isReadOnly = false,
+  isKeyboardFocused = false,
+  pattern,
   placeholder,
   name,
-  icon,
+  iconName,
   value,
   type = "text",
   autocomplete = true,
+  onclick,
   ...globals
 }) => {
+
+  if (isInvalid) iconName = "Alert";
+  else if (isValid) iconName = "Checkmark";
+
   return html`
     <div class=${classMap({
       [rootClass]: true,
       [`${rootClass}--size${size?.toUpperCase()}`]: typeof size !== "undefined",
+      [`${rootClass}--multiline`]: multiline,
+      [`${rootClass}--quiet`]: isQuiet,
+      'is-invalid': isInvalid,
+      'is-valid': isValid,
+      'is-focused': isFocused,
+      'is-keyboardFocused': isFocused,
+      'is-disabled': isDisabled,
       ...customClasses.reduce((a, c) => ({ ...a, [c]: true }), {}),
-    })}>
-      ${icon ? Icon({
+    })}
+      @click=${onclick}>
+      ${iconName ? Icon({
         ...globals,
         size,
-        iconName: icon,
-        customClasses: [`${rootClass}-icon`, ...customIconClasses],
+        iconName,
+        customClasses: [
+          isInvalid || isValid ? `${rootClass}-validationIcon` : `${rootClass}-icon`,
+          ...customIconClasses,
+        ],
       }) : ""}
       <input
         type=${ifDefined(type)}
         placeholder=${ifDefined(placeholder)}
-        name=${name}
+        name=${ifDefined(name)}
         value=${ifDefined(value)}
         autocomplete=${autocomplete ? undefined : "off"}
+        ?required=${isRequired}
+        ?disabled=${isDisabled}
+        readonly=${ifDefined(isReadOnly ? "readonly" : undefined)}
+        pattern=${ifDefined(pattern)}
         class=${classMap({
           [`${rootClass}-input`]: true,
           ...customInputClasses.reduce((a, c) => ({ ...a, [c]: true }), {}),

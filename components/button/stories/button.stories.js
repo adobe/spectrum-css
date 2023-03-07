@@ -2,7 +2,7 @@
 import { Template } from "./template";
 
 
-import { default as IconStories } from "../../icon/stories/icon.stories.js";
+import { default as IconStories } from "@spectrum-css/icon/stories/icon.stories.js";
 
 export default {
   title: "Button",
@@ -25,14 +25,14 @@ export default {
       type: { name: "string" },
       table: {
         type: { summary: "string" },
-        category: "Component",
+        category: "Content",
       },
       control: { type: "text" },
     },
-    icon:
-      IconStories && IconStories.argTypes && IconStories.argTypes.iconName
-        ? IconStories.argTypes.iconName
-        : {},
+    iconName: {
+      ...IconStories?.argTypes?.iconName ?? {},
+      if: false,
+    },
     hideLabel: {
       name: "Hide label",
       type: { name: "boolean" },
@@ -120,12 +120,12 @@ Default.args = {};
 export const OutlineWithIcon = Template.bind({});
 OutlineWithIcon.args = {
   treatment: "outline",
-  icon: "Edit",
+  iconName: "Edit",
 };
 
 export const DisabledIconOnly = Template.bind({});
 DisabledIconOnly.args = {
   hideLabel: true,
   isDisabled: true,
-  icon: "Actions",
+  iconName: "Actions",
 };

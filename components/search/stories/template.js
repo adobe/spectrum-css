@@ -24,7 +24,7 @@ export const Template = ({
         ...globals,
         isDisabled,
         customClasses: [`${rootClass}-textfield`],
-        icon: "Magnify",
+        iconName: "Magnify",
         type: "search",
         placeholder: "Search",
         name: "search",

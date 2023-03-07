@@ -1,6 +1,9 @@
 import { html } from "lit-html";
 import { classMap } from "lit-html/directives/class-map.js";
 import { ifDefined } from "lit-html/directives/if-defined.js";
+import { when } from "lit-html/directives/when.js";
+
+import { useArgs } from "@storybook/client-api";
 
 import { Template as Icon } from "@spectrum-css/icon/stories/template.js";
 
@@ -11,12 +14,16 @@ export const Template = ({
   size = "m",
   label,
   isChecked = false,
+  isEmphasized = false,
+  isDisabled = false,
   title,
   value,
   id,
   customClasses = [],
   ...globals
 }) => {
+  const [_, updateArgs] = useArgs();
+
   const { express } = globals;
 
   try {
@@ -31,32 +38,38 @@ export const Template = ({
       class=${classMap({
         [rootClass]: true,
         [`${rootClass}--size${size?.toUpperCase()}`]: typeof size !== "undefined",
+        [`${rootClass}--emphasized`]: isEmphasized,
+        [`is-disabled`]: isDisabled,
         ...customClasses.reduce((a, c) => ({ ...a, [c]: true }), {}),
       })}
-      id=${ifDefined(id)}>
+      id=${ifDefined(id)}
+      >
       <input
         type="checkbox"
         class="${rootClass}-input"
         ?checked=${isChecked}
+        ?disabled=${isDisabled}
         title=${ifDefined(label || title)}
         value=${ifDefined(value)}
+        @change=${() => {
+          if (isDisabled) return;
+          updateArgs({ isChecked: !isChecked });
+        }}
         id=${id}
       />
       <span class="${rootClass}-box">
         ${Icon({
-          iconName: "Checkmark100",
           ...globals,
+          iconName: "Checkmark100",
           customClasses: [`${rootClass}-checkmark`],
-          setName: "ui",
         })}
         ${Icon({
-          iconName: "Dash100",
           ...globals,
+          iconName: "Dash100",
           customClasses: [`${rootClass}-partialCheckmark`],
-          setName: "ui",
         })}
       </span>
-      ${label ? html`<span class="${rootClass}-label">${label}</span>` : ""}
+      ${when(label, () => html`<span class="${rootClass}-label">${label}</span>`)}
     </label>
   `;
 };

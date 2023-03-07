@@ -7,13 +7,17 @@
   "homepage": "https://opensource.adobe.com/spectrum-css/preview",
   "main": "main.js",
   "scripts": {
+    "prebuild": "yarn build:core",
     "build": "build-storybook --config-dir .",
+    "build:core": "lerna run --stream --scope \"@spectrum-css/{vars,expressvars,tokens,icon,typography,site}\" build",
+    "prestart": "yarn build:core",
     "start": "WATCH_MODE=true start-storybook --config-dir ."
   },
   "dependencies": {
     "@adobe/spectrum-css-workflow-icons": "^1.2.1",
     "@spectrum-css/expressvars": "^2.0.4",
     "@spectrum-css/icon": "^3.0.33",
+    "@spectrum-css/site": "^3.0.8",
     "@spectrum-css/tokens": "^7.5.0",
     "@spectrum-css/vars": "^8.0.4"
   },
@@ -40,6 +44,7 @@
     "postcss": "^7.0.36",
     "postcss-class-prefix": "^0.3.0",
     "postcss-loader": "^4.0.0",
+    "postcss-prefix-selector": "^1.16.0",
     "postcss-selector-replace": "^1.0.2",
     "postcss-warn-cleaner": "^0.1.9",
     "prettier": "^2.8.1",

@@ -1,6 +1,7 @@
 import { html } from "lit-html";
 import { classMap } from "lit-html/directives/class-map.js";
 import { ifDefined } from "lit-html/directives/if-defined.js";
+import { when } from "lit-html/directives/when.js";
 
 import { useArgs } from "@storybook/client-api";
 
@@ -53,63 +54,79 @@ export const Template = ({
       tabindex="0"
       role=${ifDefined(image || showAsset ? "figure" : isGrid ? "rowheader" : role)}
     >
-      ${image || showAsset ?
-        (showAsset || (isGallery && image) ? html`
-          <div class="spectrum-Card-preview">
-            ${!isHorizontal ? Asset({
-              ...globals,
-              image,
-              preset: !image ? showAsset : undefined,
-            }) : Icon({
-              ...globals,
-              size: "xxl",
-              iconName: showAsset === "folder" ? "File" : "Document",
-            })}
-          </div>` : html`
-          <div class="${rootClass}-coverPhoto" style="background-image: url(${image})"></div>`
-          ) :
-        ''}
-      ${title || subtitle ? html`
-        <div class="${rootClass}-body">
-          ${title || hasActions ? html`
-            <div class="${rootClass}-header">
-              ${title ? html`
-                <div class="${rootClass}-title spectrum-Heading spectrum-Heading--sizeXS">${title}</div>` : ''}
-              ${hasActions && !isHorizontal ? html`
-                <div class="${rootClass}-actionButton">
-                  ${ActionButton({
-                    ...globals,
-                    icon: "More",
-                    variant: "overBackground",
-                    isQuiet: true
-                  })}
-                </div>` : ''}
-            </div>` : ''}
-          ${subtitle || description ? html`
-            <div class="${rootClass}-content">
-              ${subtitle ? html`<div class="${rootClass}-subtitle spectrum-Detail spectrum-Detail--sizeS">
-                ${subtitle}
-              </div>` : ''}
-              ${description ? html`<div class="spectrum-Card-description">${description}</div>` : ''}
-            </div>` : ''}
-        </div>` : ''}
-    ${footer ? html`
-      <div class="${rootClass}-footer">${footer}</div>`: ''}
-    ${hasQuickAction && !isHorizontal ? QuickAction({
-      ...globals,
-      noOverlay: true,
-      content: [
-        Checkbox({
+      ${when(
+        image || showAsset,
+        () => when(
+          showAsset || (isGallery && image),
+          () => html`
+            <div class="spectrum-Card-preview">
+              ${when(
+                !isHorizontal,
+                () => Asset({
+                  ...globals,
+                  image,
+                  preset: !image ? showAsset : undefined,
+                }),
+                () => Icon({
+                  ...globals,
+                  size: "xxl",
+                  iconName: showAsset === "folder" ? "File" : "Document",
+                })
+              )}
+            </div>`,
+          () => html`<div class="${rootClass}-coverPhoto" style="background-image: url(${image})"></div>`
+        )
+      )}
+      ${when(
+        title || subtitle,
+        () => html`
+          <div class="${rootClass}-body">
+            ${when(
+              title || hasActions,
+              () => html`
+                <div class="${rootClass}-header">
+                ${when(title, () => html`<div class="${rootClass}-title spectrum-Heading spectrum-Heading--sizeXS">${title}</div>`)}
+                ${when(hasActions && !isHorizontal,
+                  () => html`
+                    <div class="${rootClass}-actionButton">
+                      ${ActionButton({
+                        ...globals,
+                        iconName: "More",
+                        variant: "overBackground",
+                        isQuiet: true
+                      })}
+                    </div>`
+                )}
+                </div>`
+            )}
+            ${when(
+              subtitle || description,
+              () => html`
+              <div class="${rootClass}-content">
+                ${when(subtitle, () => html`<div class="${rootClass}-subtitle spectrum-Detail spectrum-Detail--sizeS">${subtitle}</div>`)}
+                ${when(description, () => html`<div class="${rootClass}-description">${description}</div>`)}
+              </div>`
+            )}
+          </div>`
+      )}
+      ${when(footer, () => html`<div class="${rootClass}-footer">${footer}</div>`)}
+      ${when(
+        hasQuickAction && !isHorizontal,
+        () => QuickAction({
           ...globals,
-          isChecked: false,
-          title: "Select",
-        }),
-      ],
-      onclick: () => {
-        updateArgs({ isSelected: !isSelected });
-      },
-      customClasses: [`${rootClass}-quickActions`],
-    }) : ''}
-  </div>
-  `;
+          noOverlay: true,
+          content: [
+            Checkbox({
+              ...globals,
+              isChecked: false,
+              title: "Select",
+            }),
+          ],
+          onclick: () => {
+            updateArgs({ isSelected: !isSelected });
+          },
+          customClasses: [`${rootClass}-quickActions`],
+        })
+      )}
+    </div>`;
 };

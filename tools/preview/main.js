@@ -10,7 +10,6 @@ module.exports = {
     '../../components/*/stories/*.stories.js',
   ],
   rootDir: '../../',
-  port: process.env.PORT || 6006,
   staticDirs: ['../../assets'],
   addons: [
     {
@@ -97,7 +96,6 @@ module.exports = {
           {
             test: /\.css$/i,
             sideEffects: true,
-            exclude: [/node_modules/, /\/dist\//],
             use: [{
               loader: "style-loader",
               options: {
@@ -124,30 +122,6 @@ module.exports = {
                 postcssOptions: {
                   config: resolve(__dirname, 'postcss.config.js'),
                 },
-              },
-            }],
-          },
-          {
-            test: /\.css$/i,
-            include: [/node_modules/, /\/dist\//],
-            sideEffects: true,
-            use: [{
-              loader: "style-loader",
-              options: {
-                injectType: "linkTag",
-                attributes: {
-                  "data-source": "raw"
-                }
-              }
-            },
-            {
-              loader: "file-loader",
-              options: {
-                name: '[path][name].[ext][query]',
-                outputPath: (url, resourcePath, context) => {
-                  return `assets/css/${url.replace(/_\//g, '')}`;
-                },
-                esModule: false,
               },
             }],
           },
