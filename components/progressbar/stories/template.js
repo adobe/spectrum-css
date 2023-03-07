@@ -10,9 +10,22 @@ export const Template = ({
   rootClass = "spectrum-ProgressBar",
   customClasses = [],
   labelPosition,
-  customWidth = customWidth ? customWidth : "",
+  backgroundColor,
+  staticWhite,
+  customWidth,
+  indeterminate,
   styles  = {
-    "width": customWidth
+    width: customWidth ? customWidth : "",
+    backgroundColor: backgroundColor ? backgroundColor : "",
+  },
+  staticWhiteStyles = {
+    backgroundColor: 'rgb(15, 121, 125)',
+    width: '400px',
+    height: '200px',
+    display: 'flex',
+    flexDirection: 'column',
+    alignItems: 'center',
+    justifyContent: 'space-around',
   },
   size = "m",
   ...globals
@@ -27,19 +40,23 @@ export const Template = ({
   }
 
   return html`
+  <div style="${staticWhite ? styleMap(staticWhiteStyles) : ""}">
     <div class=${classMap({
-      [rootClass]: true,
-      [`${rootClass}--${labelPosition}Label`]: typeof labelPosition !== "undefined",
-      [`${rootClass}--size${size?.toUpperCase()}`]: typeof size !== "undefined",
-      ...customClasses.reduce((a, c) => ({ ...a, [c]: true }), {}),
-      })}
-      style=${styleMap(styles)}
-      value="50" role="progressbar" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100"
-      >
-      <div class="spectrum-FieldLabel spectrum-FieldLabel--size${size} spectrum-ProgressBar-label">Loading</div>
-      <div class="spectrum-FieldLabel spectrum-FieldLabel--size${size} spectrum-ProgressBar-percentage">50%</div>
-      <div class="${rootClass}-track">
-        <div class="${rootClass}-fill" style="width: 50%;"></div>
+        [rootClass]: true,
+        [`${rootClass}--${labelPosition}Label`]: typeof labelPosition !== "undefined",
+        [`${rootClass}--${staticWhite}`]: typeof staticWhite !== "undefined",
+        [`${rootClass}--${indeterminate}`]: typeof indeterminate !== "undefined",
+        [`${rootClass}--size${size?.toUpperCase()}`]: typeof size !== "undefined",
+        ...customClasses.reduce((a, c) => ({ ...a, [c]: true }), {}),
+        })}
+        style=${styleMap(styles)}
+        value="50" role="progressbar" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100"
+        >
+        <div class="spectrum-FieldLabel spectrum-FieldLabel--size${size} spectrum-ProgressBar-label">Loading</div>
+        <div class="spectrum-FieldLabel spectrum-FieldLabel--size${size} spectrum-ProgressBar-percentage">50%</div>
+        <div class="${rootClass}-track">
+          <div class="${rootClass}-fill" style="width: 50%;"></div>
+        </div>
       </div>
     </div>
   `;

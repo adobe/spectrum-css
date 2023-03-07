@@ -7,6 +7,8 @@ export default {
   component: "ProgressBar",
   argTypes: {
     customWidth: { table: { disable: true } },
+    staticWhite: { table: { disable: true } },
+    indeterminate: { table: { disable: true } },
     size: {
       name: "Size",
       type: { name: "string", required: true },
@@ -46,7 +48,18 @@ export default {
 export const Default = Template.bind({});
 Default.args = {};
 
-export const customWidth = Template.bind({});
-customWidth.args = {
+export const CustomWidth = Template.bind({});
+CustomWidth.args = {
   customWidth: '500px'
+};
+
+export const Indeterminate = Template.bind({});
+Indeterminate.args = {
+  indeterminate: 'indeterminate'
+};
+
+export const StaticWhite = Template.bind({});
+StaticWhite.args = {
+  backgroundColor: 'rgb(15, 121, 125)',
+  staticWhite: 'staticWhite',
 };
