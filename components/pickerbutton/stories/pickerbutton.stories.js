@@ -112,7 +112,7 @@ export default {
         category: "Component",
       },
       options: ["right", "left"],
-      control: "select"
+      control: "inline-radio"
     },
   },
   args: {
@@ -126,7 +126,6 @@ export default {
     isQuiet: false,
     isDisabled: false,
     isFocused: false,
-    position: "right",
     iconType: "ui",
     iconName: "ChevronDown200",
   },
