@@ -7,19 +7,14 @@ import "../skin.css";
 export const Template = ({
   rootClass = "spectrum-Well",
   customClasses = [],
-  size = "m",
-  // ...globals
+  content = []
 }) => {
   return html`
     <span class=${classMap({
       [rootClass]: true,
       ...customClasses.reduce((a, c) => ({ ...a, [c]: true }), {}),
     })}>
-      <em>Well done is better than well said.</em>
-      <br>
-      <strong>Benjamin Franklin</strong>
-      <br><br>
-      Well said Ben!
+      ${content}
     </span>
   `;
 }
