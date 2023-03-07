@@ -3,23 +3,43 @@ import { Template } from "./template";
 
 export default {
   title: "Logic button",
-  description: "The Logic button component is...",
+  description: "A LogicButton displays an operator within a boolean logic sequence.",
   component: "Logicbutton",
   argTypes: {
-    size: {
-      name: "Size",
-      type: { name: "string", required: true },
+    variant: {
+      name: "Variant",
+      type: { name: "string" },
       table: {
         type: { summary: "string" },
         category: "Component",
       },
-      options: ["s", "m", "l", "xl"],
-      control: "select"
+      options: ["and", "or"],
+      control: "inline-radio",
+    },
+    isDisabled: {
+      name: "Disabled",
+      type: { name: "boolean" },
+      table: {
+        type: { summary: "boolean" },
+        category: "State",
+      },
+      control: "boolean",
+    },
+    isFocused: {
+      name: "Focused",
+      type: { name: "boolean" },
+      table: {
+        type: { summary: "boolean" },
+        category: "State",
+      },
+      control: "boolean",
     },
   },
   args: {
-    rootClass: "spectrum-",
-    size: "m",
+    rootClass: "spectrum-LogicButton",
+    variant: "and",
+    isDisabled: false,
+    isFocused: false
   },
   parameters: {
     actions: {
@@ -33,3 +53,4 @@ export default {
 
 export const Default = Template.bind({});
 Default.args = {};
+
