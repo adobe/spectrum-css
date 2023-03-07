@@ -54,14 +54,14 @@ export const Template = ({
           ...globals,
           size: `${size}`,
           label: "Loading",
-          alignment: labelPosition === "side" ? "right" : "top",
+          alignment: "",
           customClasses: [`${rootClass}-label`]
         })}
         ${FieldLabel({
           ...globals,
           size: `${size}`,
           label: indeterminate ? "" : "50%",
-          alignment: labelPosition === "side" ? "right" : "top",
+          alignment: "",
           customClasses: [`${rootClass}-percentage`]
         })}
         <div class="${rootClass}-track">
