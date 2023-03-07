@@ -28,7 +28,6 @@ export default {
   },
   args: {
     rootClass: "spectrum-ColorHandle",
-    size: "m",
     isDisabled: false,
     isFocused: false,
   },
