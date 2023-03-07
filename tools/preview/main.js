@@ -149,6 +149,25 @@ module.exports = {
                 },
                 esModule: false,
               },
+            },
+            {
+              loader: "postcss-loader",
+              options: {
+                implementation: require("postcss"),
+                postcssOptions: (ctx) => {
+                  const componentPath = resolve(__dirname, '../../components');
+                  const folderName = relative(componentPath, ctx.file).split('/')[0];
+                  const isExpress = folderName === 'expressvars';
+                  return {
+                    plugins: [
+                      require('postcss-selector-replace')({
+                        before: [/\.spectrum/],
+                        after: [isExpress ? `.spectrum--express` : ''],
+                      }),
+                    ],
+                  };
+                },
+              },
             }],
           },
           {
