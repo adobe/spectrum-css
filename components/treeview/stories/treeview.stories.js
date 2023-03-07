@@ -3,7 +3,7 @@ import { Template } from "./template";
 
 export default {
   title: "Treeview",
-  description: "The Treeview component is...",
+  description: "The typical usage of a treeview involves nesting a .spectrum-Treeview element within the .spectrum-TreeView-item parent element.",
   component: "Treeview",
   argTypes: {
     size: {
@@ -16,9 +16,18 @@ export default {
       options: ["s", "m", "l", "xl"],
       control: "select"
     },
+    isQuiet: {
+      name: "Quiet",
+      type: { name: "boolean" },
+      table: {
+        type: { summary: "boolean" },
+        category: "State",
+      },
+      control: "boolean",
+    },
   },
   args: {
-    rootClass: "spectrum-",
+    rootClass: "spectrum-TreeView",
     size: "m",
   },
   parameters: {
@@ -32,4 +41,53 @@ export default {
 };
 
 export const Default = Template.bind({});
-Default.args = {};
+Default.args = {
+  items: [
+    {
+      id: "label1",
+      label: "Label 1",
+      link: "#"
+    },
+    {
+      id: "group1",
+      label: "Group 1",
+      link: "#",
+      items: [
+        {
+          id: "label2",
+          label: "Label 2",
+          link: "#"
+        },
+        {
+          id: "label3",
+          label: "Label 3",
+          link: "#"
+        },
+      ]
+    },
+    {
+      id: "group2",
+      label: "Group 2",
+      link: "#",
+      items: [
+        {
+          id: "label3",
+          label: "Label 3",
+          link: "#"
+        },
+        {
+          id: "group3",
+          label: "Group 3",
+          link: "#",
+          items: [
+            {
+              id: "label4",
+              label: "Label 4",
+              link: "#"
+            },
+          ]
+        },
+      ]
+    }
+  ]
+};
