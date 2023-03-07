@@ -3,7 +3,7 @@ import { Template } from "./template";
 
 export default {
   title: "Progress bar",
-  description: "The Progressbar component shows the progression of a system operation such as downloading, uploading, processing, etc. in a visual way. It can represent determinate or indeterminate progress.",
+  description: "The Progress bar component shows the progression of a system operation such as downloading, uploading, processing, etc. in a visual way.",
   component: "ProgressBar",
   argTypes: {
     customWidth: { table: { disable: true } },

@@ -16,10 +16,9 @@ export const Template = ({
   indeterminate,
   styles  = {
     width: customWidth ? customWidth : "",
-    backgroundColor: backgroundColor ? backgroundColor : "",
   },
   staticWhiteStyles = {
-    backgroundColor: 'rgb(15, 121, 125)',
+    backgroundColor: backgroundColor,
     width: '400px',
     height: '200px',
     display: 'flex',
@@ -43,17 +42,28 @@ export const Template = ({
   <div style="${staticWhite ? styleMap(staticWhiteStyles) : ""}">
     <div class=${classMap({
         [rootClass]: true,
+        [`${rootClass}--size${size?.toUpperCase()}`]: typeof size !== "undefined",
         [`${rootClass}--${labelPosition}Label`]: typeof labelPosition !== "undefined",
         [`${rootClass}--${staticWhite}`]: typeof staticWhite !== "undefined",
         [`${rootClass}--${indeterminate}`]: typeof indeterminate !== "undefined",
-        [`${rootClass}--size${size?.toUpperCase()}`]: typeof size !== "undefined",
         ...customClasses.reduce((a, c) => ({ ...a, [c]: true }), {}),
         })}
         style=${styleMap(styles)}
-        value="50" role="progressbar" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100"
-        >
-        <div class="spectrum-FieldLabel spectrum-FieldLabel--size${size} spectrum-ProgressBar-label">Loading</div>
-        <div class="spectrum-FieldLabel spectrum-FieldLabel--size${size} spectrum-ProgressBar-percentage">50%</div>
+        value="50" role="progressbar" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100">
+        ${FieldLabel({
+          ...globals,
+          size: `${size}`,
+          label: "Loading",
+          alignment: labelPosition === "side" ? "right" : "top",
+          customClasses: [`${rootClass}-label`]
+        })}
+        ${FieldLabel({
+          ...globals,
+          size: `${size}`,
+          label: indeterminate ? "" : "50%",
+          alignment: labelPosition === "side" ? "right" : "top",
+          customClasses: [`${rootClass}-percentage`]
+        })}
         <div class="${rootClass}-track">
           <div class="${rootClass}-fill" style="width: 50%;"></div>
         </div>
