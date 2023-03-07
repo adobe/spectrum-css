@@ -18,7 +18,7 @@ Assuming you have some CSS defined that uses fallback variables:
 }
 
 .component {
-  background-color: var(--custom-background-color, var(--component-background-color));
+  background-color: var(--mod-background-color, var(--component-background-color));
 }
 ```
 

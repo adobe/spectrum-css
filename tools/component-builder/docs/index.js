@@ -40,7 +40,8 @@ async function getDependencies(packagePath = '') {
         return (
           dep.indexOf('@spectrum-css') === 0 &&
           dep !== '@spectrum-css/bundle-builder' &&
-          dep !== '@spectrum-css/component-builder'
+          dep !== '@spectrum-css/component-builder' &&
+          dep !== '@spectrum-css/component-builder-simple'
         );
       })
       .map((dep) => dep.split('/').pop());

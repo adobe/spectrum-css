@@ -29,7 +29,8 @@ async function getDependencies(package) {
     dependencies = Object.keys(pkg.devDependencies).filter((dep) => {
       return dep.indexOf('@spectrum-css') === 0 &&
         dep !== '@spectrum-css/bundle-builder' &&
-        dep !== '@spectrum-css/component-builder';
+        dep !== '@spectrum-css/component-builder' &&
+        dep !== '@spectrum-css/component-builder-simple';
     });
   }
 
@@ -95,6 +96,11 @@ async function getFolderDependencyOrder(packagesDir) {
 
    // Nobody relies on it, so it gets clipped, weird
    solution.push('@spectrum-css/expressvars');
+
+   // Build tokens first
+   // This is because not every package relies on tokens, but the builder needs tokens to bake vars
+   solution = solution.filter(p => p !== '@spectrum-css/tokens');
+   solution.unshift('@spectrum-css/tokens');
 
    return solution;
  }

@@ -3,6 +3,165 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+<a name="5.0.12"></a>
+## 5.0.12
+🗓 2023-02-21 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/inputgroup@5.0.11...@spectrum-css/inputgroup@5.0.12)
+
+**Note:** Version bump only for package @spectrum-css/inputgroup
+
+
+
+
+
+<a name="5.0.11"></a>
+## 5.0.11
+🗓 2023-02-06 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/inputgroup@5.0.10...@spectrum-css/inputgroup@5.0.11)
+
+**Note:** Version bump only for package @spectrum-css/inputgroup
+
+
+
+
+
+<a name="5.0.10"></a>
+## 5.0.10
+🗓 2023-02-01 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/inputgroup@5.0.9...@spectrum-css/inputgroup@5.0.10)
+
+**Note:** Version bump only for package @spectrum-css/inputgroup
+
+
+
+
+
+<a name="5.0.9"></a>
+## 5.0.9
+🗓 2023-02-01 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/inputgroup@5.0.8...@spectrum-css/inputgroup@5.0.9)
+
+**Note:** Version bump only for package @spectrum-css/inputgroup
+
+
+
+
+
+<a name="5.0.8"></a>
+## 5.0.8
+🗓 2023-01-27 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/inputgroup@5.0.7...@spectrum-css/inputgroup@5.0.8)
+
+**Note:** Version bump only for package @spectrum-css/inputgroup
+
+
+
+
+
+<a name="5.0.7"></a>
+## 5.0.7
+🗓 2023-01-25 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/inputgroup@5.0.6...@spectrum-css/inputgroup@5.0.7)
+
+**Note:** Version bump only for package @spectrum-css/inputgroup
+
+
+
+
+
+<a name="5.0.6"></a>
+## 5.0.6
+🗓 2023-01-18 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/inputgroup@5.0.4...@spectrum-css/inputgroup@5.0.6)
+
+**Note:** Version bump only for package @spectrum-css/inputgroup
+
+
+
+
+
+<a name="5.0.5"></a>
+## 5.0.5
+🗓 2023-01-13 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/inputgroup@5.0.4...@spectrum-css/inputgroup@5.0.5)
+
+**Note:** Version bump only for package @spectrum-css/inputgroup
+
+
+
+
+
+<a name="5.0.4"></a>
+## 5.0.4
+🗓 2022-12-16 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/inputgroup@5.0.3...@spectrum-css/inputgroup@5.0.4)
+
+**Note:** Version bump only for package @spectrum-css/inputgroup
+
+
+
+
+
+<a name="5.0.3"></a>
+## 5.0.3
+🗓 2022-12-08 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/inputgroup@5.0.2...@spectrum-css/inputgroup@5.0.3)
+
+### 🐛 Bug fixes
+
+* **inputgroup:** using inline-end for rtl support (CSS-168) ([#1560](https://github.com/adobe/spectrum-css/issues/1560)) ([bc2f424](https://github.com/adobe/spectrum-css/commit/bc2f424))
+
+
+
+
+
+<a name="5.0.2"></a>
+## 5.0.2
+🗓 2022-11-11 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/inputgroup@5.0.1...@spectrum-css/inputgroup@5.0.2)
+
+**Note:** Version bump only for package @spectrum-css/inputgroup
+
+
+
+
+
+<a name="5.0.1"></a>
+## 5.0.1
+🗓 2022-11-10 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/inputgroup@5.0.0...@spectrum-css/inputgroup@5.0.1)
+
+**Note:** Version bump only for package @spectrum-css/inputgroup
+
+
+
+
+
+<a name="5.0.0"></a>
+# 5.0.0
+🗓 2022-10-25 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/inputgroup@4.0.22...@spectrum-css/inputgroup@5.0.0)
+
+* refactor(infieldbutton,inputgroup,pickerbutton)!: drop loudness api ([c97d40e](https://github.com/adobe/spectrum-css/commit/c97d40e))
+* refactor(pickerbutton)!: replace medium loudness with quiet ([6e87687](https://github.com/adobe/spectrum-css/commit/6e87687))
+
+
+### 🛑 BREAKING CHANGES
+
+* remove high loudness selectors from pickerbutton, apply quiet background color from inputgroup, change loudness api to quiet for infieldbutton
+* replaces `medium` loudness with `quiet`
+
+
+
+
+
+<a name="4.0.22"></a>
+## 4.0.22
+🗓 2022-06-29 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/inputgroup@4.0.21...@spectrum-css/inputgroup@4.0.22)
+
+**Note:** Version bump only for package @spectrum-css/inputgroup
+
+
+
+
+
+<a name="4.0.21"></a>
+## 4.0.21
+🗓 2022-06-16 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/inputgroup@4.0.19...@spectrum-css/inputgroup@4.0.21)
+
+**Note:** Version bump only for package @spectrum-css/inputgroup
+
+
+
+
+
 <a name="4.0.20"></a>
 ## 4.0.20
 🗓 2022-06-08 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/inputgroup@4.0.19...@spectrum-css/inputgroup@4.0.20)

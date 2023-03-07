@@ -1,22 +1,30 @@
 name: Breadcrumbs
 SpectrumSiteSlug: https://spectrum.adobe.com/page/breadcrumbs/
+sections:
+- name: Custom Properties API
+  description: |
+    This component can be modified via its `--mod-*` prefixed custom properties. A list of those prefixed custom properties can be found <a href="https://github.com/adobe/spectrum-css/tree/main/components/breadcrumb/metadata/mods.md">here</a>.
+- name: Migration Guide
+  description: |
+    ### New Action Button markup
+    Action Button requires `.spectrum-ActionButton-icon` class on icons nested inside of Action Button.
 examples:
   - id: breadcrumb
     name: Standard
     status: Verified
     markup: |
       <nav>
-        <ul class="spectrum-Breadcrumbs spectrum-Breadcrumbs--sizeL">
+        <ul class="spectrum-Breadcrumbs">
           <li class="spectrum-Breadcrumbs-item">
             <div class="spectrum-Breadcrumbs-itemLink" role="link" tabindex="0">Nav Root</div>
-            <svg class="spectrum-Icon spectrum-UIIcon-ChevronRight75 spectrum-Breadcrumbs-itemSeparator" focusable="false" aria-hidden="true">
-              <use xlink:href="#spectrum-css-icon-Chevron75" />
+            <svg class="spectrum-Icon spectrum-UIIcon-ChevronRight100 spectrum-Breadcrumbs-itemSeparator" focusable="false" aria-hidden="true">
+              <use xlink:href="#spectrum-css-icon-Chevron100" />
             </svg>
           </li>
           <li class="spectrum-Breadcrumbs-item">
             <div class="spectrum-Breadcrumbs-itemLink" role="link" tabindex="0">Trend</div>
-            <svg class="spectrum-Icon spectrum-UIIcon-ChevronRight75 spectrum-Breadcrumbs-itemSeparator" focusable="false" aria-hidden="true">
-              <use xlink:href="#spectrum-css-icon-Chevron75" />
+            <svg class="spectrum-Icon spectrum-UIIcon-ChevronRight100 spectrum-Breadcrumbs-itemSeparator" focusable="false" aria-hidden="true">
+              <use xlink:href="#spectrum-css-icon-Chevron100" />
             </svg>
           </li>
           <li class="spectrum-Breadcrumbs-item">
@@ -29,17 +37,17 @@ examples:
     status: Verified
     markup: |
       <nav>
-        <ul class="spectrum-Breadcrumbs spectrum-Breadcrumbs--sizeL">
+        <ul class="spectrum-Breadcrumbs">
           <li class="spectrum-Breadcrumbs-item">
             <div class="spectrum-Breadcrumbs-itemLink" role="link" tabindex="0">Nav Root</div>
-            <svg class="spectrum-Icon spectrum-UIIcon-ChevronRight75 spectrum-Breadcrumbs-itemSeparator" focusable="false" aria-hidden="true">
-              <use xlink:href="#spectrum-css-icon-Chevron75" />
+            <svg class="spectrum-Icon spectrum-UIIcon-ChevronRight100 spectrum-Breadcrumbs-itemSeparator" focusable="false" aria-hidden="true">
+              <use xlink:href="#spectrum-css-icon-Chevron100" />
             </svg>
           </li>
           <li class="spectrum-Breadcrumbs-item is-dragged">
             <div class="spectrum-Breadcrumbs-itemLink" role="link" tabindex="0">Trend</div>
-            <svg class="spectrum-Icon spectrum-UIIcon-ChevronRight75 spectrum-Breadcrumbs-itemSeparator" focusable="false" aria-hidden="true">
-              <use xlink:href="#spectrum-css-icon-Chevron75" />
+            <svg class="spectrum-Icon spectrum-UIIcon-ChevronRight100 spectrum-Breadcrumbs-itemSeparator" focusable="false" aria-hidden="true">
+              <use xlink:href="#spectrum-css-icon-Chevron100" />
             </svg>
           </li>
           <li class="spectrum-Breadcrumbs-item">
@@ -52,27 +60,27 @@ examples:
     status: Verified
     markup: |
       <nav>
-        <ul class="spectrum-Breadcrumbs spectrum-Breadcrumbs--sizeL">
+        <ul class="spectrum-Breadcrumbs">
           <li class="spectrum-Breadcrumbs-item">
             <button class="spectrum-ActionButton spectrum-ActionButton--sizeM spectrum-ActionButton--quiet">
-              <svg class="spectrum-Icon spectrum-Icon--sizeM spectrum-Breadcrumbs-folder" focusable="false" aria-hidden="true">
+              <svg class="spectrum-Icon spectrum-Icon--sizeM spectrum-ActionButton-icon spectrum-Breadcrumbs-folder" focusable="false" aria-hidden="true">
                 <use xlink:href="#spectrum-icon-18-FolderOpen" />
               </svg>
             </button>
-            <svg class="spectrum-Icon spectrum-UIIcon-ChevronRight75 spectrum-Breadcrumbs-itemSeparator" focusable="false" aria-hidden="true">
-              <use xlink:href="#spectrum-css-icon-Chevron75" />
+            <svg class="spectrum-Icon spectrum-UIIcon-ChevronRight100 spectrum-Breadcrumbs-itemSeparator" focusable="false" aria-hidden="true">
+              <use xlink:href="#spectrum-css-icon-Chevron100" />
             </svg>
           </li>
           <li class="spectrum-Breadcrumbs-item">
             <div class="spectrum-Breadcrumbs-itemLink" role="link" tabindex="0">Sub Item</div>
-            <svg class="spectrum-Icon spectrum-UIIcon-ChevronRight75 spectrum-Breadcrumbs-itemSeparator" focusable="false" aria-hidden="true">
-              <use xlink:href="#spectrum-css-icon-Chevron75" />
+            <svg class="spectrum-Icon spectrum-UIIcon-ChevronRight100 spectrum-Breadcrumbs-itemSeparator" focusable="false" aria-hidden="true">
+              <use xlink:href="#spectrum-css-icon-Chevron100" />
             </svg>
           </li>
           <li class="spectrum-Breadcrumbs-item">
             <div class="spectrum-Breadcrumbs-itemLink" role="link" tabindex="0">Trend</div>
-            <svg class="spectrum-Icon spectrum-UIIcon-ChevronRight75 spectrum-Breadcrumbs-itemSeparator" focusable="false" aria-hidden="true">
-              <use xlink:href="#spectrum-css-icon-Chevron75" />
+            <svg class="spectrum-Icon spectrum-UIIcon-ChevronRight100 spectrum-Breadcrumbs-itemSeparator" focusable="false" aria-hidden="true">
+              <use xlink:href="#spectrum-css-icon-Chevron100" />
             </svg>
           </li>
           <li class="spectrum-Breadcrumbs-item">
@@ -85,27 +93,27 @@ examples:
     status: Verified
     markup: |
       <nav>
-        <ul class="spectrum-Breadcrumbs spectrum-Breadcrumbs--sizeL">
+        <ul class="spectrum-Breadcrumbs">
           <li class="spectrum-Breadcrumbs-item">
             <div class="spectrum-Breadcrumbs-itemLink" role="link" tabindex="0">Nav Root</div>
-            <svg class="spectrum-Icon spectrum-UIIcon-ChevronRight75 spectrum-Breadcrumbs-itemSeparator" focusable="false" aria-hidden="true">
-              <use xlink:href="#spectrum-css-icon-Chevron75" />
+            <svg class="spectrum-Icon spectrum-UIIcon-ChevronRight100 spectrum-Breadcrumbs-itemSeparator" focusable="false" aria-hidden="true">
+              <use xlink:href="#spectrum-css-icon-Chevron100" />
             </svg>
           </li>
           <li class="spectrum-Breadcrumbs-item">
             <button class="spectrum-ActionButton spectrum-ActionButton--sizeM spectrum-ActionButton--quiet">
-              <svg class="spectrum-Icon spectrum-Icon--sizeM spectrum-Breadcrumbs-folder" focusable="false" aria-hidden="true">
+              <svg class="spectrum-Icon spectrum-Icon--sizeM spectrum-ActionButton-icon spectrum-Breadcrumbs-folder" focusable="false" aria-hidden="true">
                 <use xlink:href="#spectrum-icon-18-FolderOpen" />
               </svg>
             </button>
-            <svg class="spectrum-Icon spectrum-UIIcon-ChevronRight75 spectrum-Breadcrumbs-itemSeparator" focusable="false" aria-hidden="true">
-              <use xlink:href="#spectrum-css-icon-Chevron75" />
+            <svg class="spectrum-Icon spectrum-UIIcon-ChevronRight100 spectrum-Breadcrumbs-itemSeparator" focusable="false" aria-hidden="true">
+              <use xlink:href="#spectrum-css-icon-Chevron100" />
             </svg>
           </li>
           <li class="spectrum-Breadcrumbs-item">
             <div class="spectrum-Breadcrumbs-itemLink" role="link" tabindex="0">Trend</div>
-            <svg class="spectrum-Icon spectrum-UIIcon-ChevronRight75 spectrum-Breadcrumbs-itemSeparator" focusable="false" aria-hidden="true">
-              <use xlink:href="#spectrum-css-icon-Chevron75" />
+            <svg class="spectrum-Icon spectrum-UIIcon-ChevronRight100 spectrum-Breadcrumbs-itemSeparator" focusable="false" aria-hidden="true">
+              <use xlink:href="#spectrum-css-icon-Chevron100" />
             </svg>
           </li>
           <li class="spectrum-Breadcrumbs-item">
@@ -118,17 +126,17 @@ examples:
     status: Verified
     markup: |
       <nav>
-        <ul class="spectrum-Breadcrumbs spectrum-Breadcrumbs--sizeS spectrum-Breadcrumbs--multiline">
+        <ul class="spectrum-Breadcrumbs spectrum-Breadcrumbs--multiline">
           <li class="spectrum-Breadcrumbs-item">
             <a class="spectrum-Breadcrumbs-itemLink" href="#">Nav Root</a>
-            <svg class="spectrum-Icon spectrum-UIIcon-ChevronRight75 spectrum-Breadcrumbs-itemSeparator" focusable="false" aria-hidden="true">
-              <use xlink:href="#spectrum-css-icon-Chevron75" />
+            <svg class="spectrum-Icon spectrum-UIIcon-ChevronRight100 spectrum-Breadcrumbs-itemSeparator" focusable="false" aria-hidden="true">
+              <use xlink:href="#spectrum-css-icon-Chevron100" />
             </svg>
           </li>
           <li class="spectrum-Breadcrumbs-item">
             <a class="spectrum-Breadcrumbs-itemLink" role="link" tabindex="0">Trendy</a>
-            <svg class="spectrum-Icon spectrum-UIIcon-ChevronRight75 spectrum-Breadcrumbs-itemSeparator" focusable="false" aria-hidden="true">
-              <use xlink:href="#spectrum-css-icon-Chevron75" />
+            <svg class="spectrum-Icon spectrum-UIIcon-ChevronRight100 spectrum-Breadcrumbs-itemSeparator" focusable="false" aria-hidden="true">
+              <use xlink:href="#spectrum-css-icon-Chevron100" />
             </svg>
           </li>
           <li class="spectrum-Breadcrumbs-item">
@@ -141,17 +149,17 @@ examples:
     status: Verified
     markup: |
       <nav>
-        <ul class="spectrum-Breadcrumbs spectrum-Breadcrumbs--sizeS spectrum-Breadcrumbs--multiline">
+        <ul class="spectrum-Breadcrumbs spectrum-Breadcrumbs--multiline">
           <li class="spectrum-Breadcrumbs-item">
             <a class="spectrum-Breadcrumbs-itemLink" href="#">Nav Root</a>
-            <svg class="spectrum-Icon spectrum-UIIcon-ChevronRight75 spectrum-Breadcrumbs-itemSeparator" focusable="false" aria-hidden="true">
-              <use xlink:href="#spectrum-css-icon-Chevron75" />
+            <svg class="spectrum-Icon spectrum-UIIcon-ChevronRight100 spectrum-Breadcrumbs-itemSeparator" focusable="false" aria-hidden="true">
+              <use xlink:href="#spectrum-css-icon-Chevron100" />
             </svg>
           </li>
           <li class="spectrum-Breadcrumbs-item is-dragged">
             <a class="spectrum-Breadcrumbs-itemLink" role="link" tabindex="0">Trendy</a>
-            <svg class="spectrum-Icon spectrum-UIIcon-ChevronRight75 spectrum-Breadcrumbs-itemSeparator" focusable="false" aria-hidden="true">
-              <use xlink:href="#spectrum-css-icon-Chevron75" />
+            <svg class="spectrum-Icon spectrum-UIIcon-ChevronRight100 spectrum-Breadcrumbs-itemSeparator" focusable="false" aria-hidden="true">
+              <use xlink:href="#spectrum-css-icon-Chevron100" />
             </svg>
           </li>
           <li class="spectrum-Breadcrumbs-item">
@@ -164,27 +172,27 @@ examples:
     status: Verified
     markup: |
       <nav>
-        <ul class="spectrum-Breadcrumbs spectrum-Breadcrumbs--sizeS spectrum-Breadcrumbs--multiline">
+        <ul class="spectrum-Breadcrumbs spectrum-Breadcrumbs--multiline">
           <li class="spectrum-Breadcrumbs-item">
             <button class="spectrum-ActionButton spectrum-ActionButton--sizeM spectrum-ActionButton--quiet">
-              <svg class="spectrum-Icon spectrum-Icon--sizeM spectrum-Breadcrumbs-folder" focusable="false" aria-hidden="true">
+              <svg class="spectrum-Icon spectrum-Icon--sizeM spectrum-ActionButton-icon spectrum-Breadcrumbs-folder" focusable="false" aria-hidden="true">
                 <use xlink:href="#spectrum-icon-18-FolderOpen" />
               </svg>
             </button>
-            <svg class="spectrum-Icon spectrum-UIIcon-ChevronRight75 spectrum-Breadcrumbs-itemSeparator" focusable="false" aria-hidden="true">
-              <use xlink:href="#spectrum-css-icon-Chevron75" />
+            <svg class="spectrum-Icon spectrum-UIIcon-ChevronRight100 spectrum-Breadcrumbs-itemSeparator" focusable="false" aria-hidden="true">
+              <use xlink:href="#spectrum-css-icon-Chevron100" />
             </svg>
           </li>
           <li class="spectrum-Breadcrumbs-item">
             <a class="spectrum-Breadcrumbs-itemLink" href="#">Sub Item</a>
-            <svg class="spectrum-Icon spectrum-UIIcon-ChevronRight75 spectrum-Breadcrumbs-itemSeparator" focusable="false" aria-hidden="true">
-              <use xlink:href="#spectrum-css-icon-Chevron75" />
+            <svg class="spectrum-Icon spectrum-UIIcon-ChevronRight100 spectrum-Breadcrumbs-itemSeparator" focusable="false" aria-hidden="true">
+              <use xlink:href="#spectrum-css-icon-Chevron100" />
             </svg>
           </li>
           <li class="spectrum-Breadcrumbs-item">
             <a class="spectrum-Breadcrumbs-itemLink" role="link" tabindex="0">Trendy</a>
-            <svg class="spectrum-Icon spectrum-UIIcon-ChevronRight75 spectrum-Breadcrumbs-itemSeparator" focusable="false" aria-hidden="true">
-              <use xlink:href="#spectrum-css-icon-Chevron75" />
+            <svg class="spectrum-Icon spectrum-UIIcon-ChevronRight100 spectrum-Breadcrumbs-itemSeparator" focusable="false" aria-hidden="true">
+              <use xlink:href="#spectrum-css-icon-Chevron100" />
             </svg>
           </li>
           <li class="spectrum-Breadcrumbs-item">
@@ -197,27 +205,27 @@ examples:
     status: Verified
     markup: |
       <nav>
-        <ul class="spectrum-Breadcrumbs spectrum-Breadcrumbs--sizeS spectrum-Breadcrumbs--multiline">
+        <ul class="spectrum-Breadcrumbs spectrum-Breadcrumbs--multiline">
           <li class="spectrum-Breadcrumbs-item">
             <a class="spectrum-Breadcrumbs-itemLink" href="#">Nav Root</a>
-            <svg class="spectrum-Icon spectrum-UIIcon-ChevronRight75 spectrum-Breadcrumbs-itemSeparator" focusable="false" aria-hidden="true">
-              <use xlink:href="#spectrum-css-icon-Chevron75" />
+            <svg class="spectrum-Icon spectrum-UIIcon-ChevronRight100 spectrum-Breadcrumbs-itemSeparator" focusable="false" aria-hidden="true">
+              <use xlink:href="#spectrum-css-icon-Chevron100" />
             </svg>
           </li>
           <li class="spectrum-Breadcrumbs-item">
             <button class="spectrum-ActionButton spectrum-ActionButton--sizeM spectrum-ActionButton--quiet">
-              <svg class="spectrum-Icon spectrum-Icon--sizeM spectrum-Breadcrumbs-folder" focusable="false" aria-hidden="true">
+              <svg class="spectrum-Icon spectrum-Icon--sizeM spectrum-ActionButton-icon spectrum-Breadcrumbs-folder" focusable="false" aria-hidden="true">
                 <use xlink:href="#spectrum-icon-18-FolderOpen" />
               </svg>
             </button>
-            <svg class="spectrum-Icon spectrum-UIIcon-ChevronRight75 spectrum-Breadcrumbs-itemSeparator" focusable="false" aria-hidden="true">
-              <use xlink:href="#spectrum-css-icon-Chevron75" />
+            <svg class="spectrum-Icon spectrum-UIIcon-ChevronRight100 spectrum-Breadcrumbs-itemSeparator" focusable="false" aria-hidden="true">
+              <use xlink:href="#spectrum-css-icon-Chevron100" />
             </svg>
           </li>
           <li class="spectrum-Breadcrumbs-item">
             <a class="spectrum-Breadcrumbs-itemLink" role="link" tabindex="0">Trendy</a>
-            <svg class="spectrum-Icon spectrum-UIIcon-ChevronRight75 spectrum-Breadcrumbs-itemSeparator" focusable="false" aria-hidden="true">
-              <use xlink:href="#spectrum-css-icon-Chevron75" />
+            <svg class="spectrum-Icon spectrum-UIIcon-ChevronRight100 spectrum-Breadcrumbs-itemSeparator" focusable="false" aria-hidden="true">
+              <use xlink:href="#spectrum-css-icon-Chevron100" />
             </svg>
           </li>
           <li class="spectrum-Breadcrumbs-item">
@@ -230,17 +238,17 @@ examples:
     status: Verified
     markup: |
       <nav>
-        <ul class="spectrum-Breadcrumbs spectrum-Breadcrumbs--sizeM">
+        <ul class="spectrum-Breadcrumbs spectrum-Breadcrumbs--compact">
           <li class="spectrum-Breadcrumbs-item">
             <a class="spectrum-Breadcrumbs-itemLink" href="#">Nav Root</a>
-            <svg class="spectrum-Icon spectrum-UIIcon-ChevronRight75 spectrum-Breadcrumbs-itemSeparator" focusable="false" aria-hidden="true">
-              <use xlink:href="#spectrum-css-icon-Chevron75" />
+            <svg class="spectrum-Icon spectrum-UIIcon-ChevronRight100 spectrum-Breadcrumbs-itemSeparator" focusable="false" aria-hidden="true">
+              <use xlink:href="#spectrum-css-icon-Chevron100" />
             </svg>
           </li>
           <li class="spectrum-Breadcrumbs-item">
             <a class="spectrum-Breadcrumbs-itemLink" role="link" tabindex="0">Trendy</a>
-            <svg class="spectrum-Icon spectrum-UIIcon-ChevronRight75 spectrum-Breadcrumbs-itemSeparator" focusable="false" aria-hidden="true">
-              <use xlink:href="#spectrum-css-icon-Chevron75" />
+            <svg class="spectrum-Icon spectrum-UIIcon-ChevronRight100 spectrum-Breadcrumbs-itemSeparator" focusable="false" aria-hidden="true">
+              <use xlink:href="#spectrum-css-icon-Chevron100" />
             </svg>
           </li>
           <li class="spectrum-Breadcrumbs-item">
@@ -253,27 +261,27 @@ examples:
     status: Verified
     markup: |
       <nav>
-        <ul class="spectrum-Breadcrumbs spectrum-Breadcrumbs--sizeM">
+        <ul class="spectrum-Breadcrumbs spectrum-Breadcrumbs--compact">
           <li class="spectrum-Breadcrumbs-item">
             <button class="spectrum-ActionButton spectrum-ActionButton--sizeM spectrum-ActionButton--quiet">
-              <svg class="spectrum-Icon spectrum-Icon--sizeM spectrum-Breadcrumbs-folder" focusable="false" aria-hidden="true">
+              <svg class="spectrum-Icon spectrum-Icon--sizeM spectrum-ActionButton-icon spectrum-Breadcrumbs-folder" focusable="false" aria-hidden="true">
                 <use xlink:href="#spectrum-icon-18-FolderOpen" />
               </svg>
             </button>
-            <svg class="spectrum-Icon spectrum-UIIcon-ChevronRight75 spectrum-Breadcrumbs-itemSeparator" focusable="false" aria-hidden="true">
-              <use xlink:href="#spectrum-css-icon-Chevron75" />
+            <svg class="spectrum-Icon spectrum-UIIcon-ChevronRight100 spectrum-Breadcrumbs-itemSeparator" focusable="false" aria-hidden="true">
+              <use xlink:href="#spectrum-css-icon-Chevron100" />
             </svg>
           </li>
           <li class="spectrum-Breadcrumbs-item">
             <a class="spectrum-Breadcrumbs-itemLink" href="#">Sub Item</a>
-            <svg class="spectrum-Icon spectrum-UIIcon-ChevronRight75 spectrum-Breadcrumbs-itemSeparator" focusable="false" aria-hidden="true">
-              <use xlink:href="#spectrum-css-icon-Chevron75" />
+            <svg class="spectrum-Icon spectrum-UIIcon-ChevronRight100 spectrum-Breadcrumbs-itemSeparator" focusable="false" aria-hidden="true">
+              <use xlink:href="#spectrum-css-icon-Chevron100" />
             </svg>
           </li>
           <li class="spectrum-Breadcrumbs-item">
             <a class="spectrum-Breadcrumbs-itemLink" role="link" tabindex="0">Trendy</a>
-            <svg class="spectrum-Icon spectrum-UIIcon-ChevronRight75 spectrum-Breadcrumbs-itemSeparator" focusable="false" aria-hidden="true">
-              <use xlink:href="#spectrum-css-icon-Chevron75" />
+            <svg class="spectrum-Icon spectrum-UIIcon-ChevronRight100 spectrum-Breadcrumbs-itemSeparator" focusable="false" aria-hidden="true">
+              <use xlink:href="#spectrum-css-icon-Chevron100" />
             </svg>
           </li>
           <li class="spectrum-Breadcrumbs-item">
@@ -286,27 +294,27 @@ examples:
     status: Verified
     markup: |
       <nav>
-        <ul class="spectrum-Breadcrumbs spectrum-Breadcrumbs--sizeM">
+        <ul class="spectrum-Breadcrumbs spectrum-Breadcrumbs--compact">
           <li class="spectrum-Breadcrumbs-item">
             <a class="spectrum-Breadcrumbs-itemLink" href="#">Nav Root</a>
-            <svg class="spectrum-Icon spectrum-UIIcon-ChevronRight75 spectrum-Breadcrumbs-itemSeparator" focusable="false" aria-hidden="true">
-              <use xlink:href="#spectrum-css-icon-Chevron75" />
+            <svg class="spectrum-Icon spectrum-UIIcon-ChevronRight100 spectrum-Breadcrumbs-itemSeparator" focusable="false" aria-hidden="true">
+              <use xlink:href="#spectrum-css-icon-Chevron100" />
             </svg>
           </li>
           <li class="spectrum-Breadcrumbs-item">
             <button class="spectrum-ActionButton spectrum-ActionButton--sizeM spectrum-ActionButton--quiet">
-              <svg class="spectrum-Icon spectrum-Icon--sizeM spectrum-Breadcrumbs-folder" focusable="false" aria-hidden="true">
+              <svg class="spectrum-Icon spectrum-Icon--sizeM spectrum-ActionButton-icon spectrum-Breadcrumbs-folder" focusable="false" aria-hidden="true">
                 <use xlink:href="#spectrum-icon-18-FolderOpen" />
               </svg>
             </button>
-            <svg class="spectrum-Icon spectrum-UIIcon-ChevronRight75 spectrum-Breadcrumbs-itemSeparator" focusable="false" aria-hidden="true">
-              <use xlink:href="#spectrum-css-icon-Chevron75" />
+            <svg class="spectrum-Icon spectrum-UIIcon-ChevronRight100 spectrum-Breadcrumbs-itemSeparator" focusable="false" aria-hidden="true">
+              <use xlink:href="#spectrum-css-icon-Chevron100" />
             </svg>
           </li>
           <li class="spectrum-Breadcrumbs-item">
             <a class="spectrum-Breadcrumbs-itemLink" role="link" tabindex="0">Trendy</a>
-            <svg class="spectrum-Icon spectrum-UIIcon-ChevronRight75 spectrum-Breadcrumbs-itemSeparator" focusable="false" aria-hidden="true">
-              <use xlink:href="#spectrum-css-icon-Chevron75" />
+            <svg class="spectrum-Icon spectrum-UIIcon-ChevronRight100 spectrum-Breadcrumbs-itemSeparator" focusable="false" aria-hidden="true">
+              <use xlink:href="#spectrum-css-icon-Chevron100" />
             </svg>
           </li>
           <li class="spectrum-Breadcrumbs-item">
@@ -319,17 +327,17 @@ examples:
     status: Verified
     markup: |
       <nav>
-        <ul class="spectrum-Breadcrumbs spectrum-Breadcrumbs--sizeL">
+        <ul class="spectrum-Breadcrumbs">
           <li class="spectrum-Breadcrumbs-item">
             <div class="spectrum-Breadcrumbs-itemLink" role="link" tabindex="0">Nav Root</div>
-            <svg class="spectrum-Icon spectrum-UIIcon-ChevronRight75 spectrum-Breadcrumbs-itemSeparator" focusable="false" aria-hidden="true">
-              <use xlink:href="#spectrum-css-icon-Chevron75" />
+            <svg class="spectrum-Icon spectrum-UIIcon-ChevronRight100 spectrum-Breadcrumbs-itemSeparator" focusable="false" aria-hidden="true">
+              <use xlink:href="#spectrum-css-icon-Chevron100" />
             </svg>
           </li>
           <li class="spectrum-Breadcrumbs-item">
             <div class="spectrum-Breadcrumbs-itemLink is-disabled" role="link" aria-disabled="true">Trend</div>
-            <svg class="spectrum-Icon spectrum-UIIcon-ChevronRight75 spectrum-Breadcrumbs-itemSeparator" focusable="false" aria-hidden="true">
-              <use xlink:href="#spectrum-css-icon-Chevron75" />
+            <svg class="spectrum-Icon spectrum-UIIcon-ChevronRight100 spectrum-Breadcrumbs-itemSeparator" focusable="false" aria-hidden="true">
+              <use xlink:href="#spectrum-css-icon-Chevron100" />
             </svg>
           </li>
           <li class="spectrum-Breadcrumbs-item">
@@ -338,27 +346,27 @@ examples:
         </ul>
       </nav>
       <nav>
-        <ul class="spectrum-Breadcrumbs spectrum-Breadcrumbs--sizeM">
+        <ul class="spectrum-Breadcrumbs">
           <li class="spectrum-Breadcrumbs-item">
             <a class="spectrum-Breadcrumbs-itemLink" href="#">Nav Root</a>
-            <svg class="spectrum-Icon spectrum-UIIcon-ChevronRight75 spectrum-Breadcrumbs-itemSeparator" focusable="false" aria-hidden="true">
-              <use xlink:href="#spectrum-css-icon-Chevron75" />
+            <svg class="spectrum-Icon spectrum-UIIcon-ChevronRight100 spectrum-Breadcrumbs-itemSeparator" focusable="false" aria-hidden="true">
+              <use xlink:href="#spectrum-css-icon-Chevron100" />
             </svg>
           </li>
           <li class="spectrum-Breadcrumbs-item">
             <button class="spectrum-ActionButton spectrum-ActionButton--sizeM spectrum-ActionButton--quiet" disabled>
-              <svg class="spectrum-Icon spectrum-Icon--sizeM spectrum-Breadcrumbs-folder" focusable="false" aria-hidden="true">
+              <svg class="spectrum-Icon spectrum-Icon--sizeM spectrum-ActionButton-icon spectrum-Breadcrumbs-folder" focusable="false" aria-hidden="true">
                 <use xlink:href="#spectrum-icon-18-FolderOpen" />
               </svg>
             </button>
-            <svg class="spectrum-Icon spectrum-UIIcon-ChevronRight75 spectrum-Breadcrumbs-itemSeparator" focusable="false" aria-hidden="true">
-              <use xlink:href="#spectrum-css-icon-Chevron75" />
+            <svg class="spectrum-Icon spectrum-UIIcon-ChevronRight100 spectrum-Breadcrumbs-itemSeparator" focusable="false" aria-hidden="true">
+              <use xlink:href="#spectrum-css-icon-Chevron100" />
             </svg>
           </li>
           <li class="spectrum-Breadcrumbs-item">
             <a class="spectrum-Breadcrumbs-itemLink" role="link" tabindex="0">Trendy</a>
-            <svg class="spectrum-Icon spectrum-UIIcon-ChevronRight75 spectrum-Breadcrumbs-itemSeparator" focusable="false" aria-hidden="true">
-              <use xlink:href="#spectrum-css-icon-Chevron75" />
+            <svg class="spectrum-Icon spectrum-UIIcon-ChevronRight100 spectrum-Breadcrumbs-itemSeparator" focusable="false" aria-hidden="true">
+              <use xlink:href="#spectrum-css-icon-Chevron100" />
             </svg>
           </li>
           <li class="spectrum-Breadcrumbs-item">

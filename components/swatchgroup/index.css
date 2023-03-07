@@ -11,20 +11,30 @@ governing permissions and limitations under the License.
 */
 
 .spectrum-SwatchGroup {
+  --spectrum-swatchgroup-spacing-compact: var(--spectrum-spacing-50);
+  --spectrum-swatchgroup-spacing-regular: var(--spectrum-spacing-75);
+  --spectrum-swatchgroup-spacing-spacious: var(--spectrum-spacing-100);
+}
+
+.spectrum-SwatchGroup {
   display: inline-flex;
   flex-direction: row;
   flex-wrap: wrap;
   align-items: flex-start;
   justify-content: flex-start;
-
-  /* regular density is default */
-  gap: var(--spectrum-global-dimension-size-50);
 }
 
+/* Regular (Default) */
+.spectrum-SwatchGroup {
+  gap: var(--mod-swatchgroup-spacing-regular, var(--spectrum-swatchgroup-spacing-regular));
+}
+
+/* Compact*/
 .spectrum-SwatchGroup--compact {
-  gap: var(--spectrum-global-dimension-size-25);
+  gap: var(--mod-swatchgroup-spacing-compact, var(--spectrum-swatchgroup-spacing-compact));
 }
 
+/* Spacious */
 .spectrum-SwatchGroup--spacious {
-  gap: var(--spectrum-global-dimension-size-100);
+  gap: var(--mod-swatchgroup-spacing-spacious, var(--spectrum-swatchgroup-spacing-spacious));
 }

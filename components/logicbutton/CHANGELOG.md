@@ -3,6 +3,96 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+<a name="1.2.19"></a>
+## 1.2.19
+🗓 2023-02-21 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/logicbutton@1.2.18...@spectrum-css/logicbutton@1.2.19)
+
+**Note:** Version bump only for package @spectrum-css/logicbutton
+
+
+
+
+
+<a name="1.2.18"></a>
+## 1.2.18
+🗓 2023-02-06 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/logicbutton@1.2.17...@spectrum-css/logicbutton@1.2.18)
+
+**Note:** Version bump only for package @spectrum-css/logicbutton
+
+
+
+
+
+<a name="1.2.17"></a>
+## 1.2.17
+🗓 2023-02-01 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/logicbutton@1.2.16...@spectrum-css/logicbutton@1.2.17)
+
+**Note:** Version bump only for package @spectrum-css/logicbutton
+
+
+
+
+
+<a name="1.2.16"></a>
+## 1.2.16
+🗓 2023-01-27 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/logicbutton@1.2.15...@spectrum-css/logicbutton@1.2.16)
+
+**Note:** Version bump only for package @spectrum-css/logicbutton
+
+
+
+
+
+<a name="1.2.15"></a>
+## 1.2.15
+🗓 2023-01-25 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/logicbutton@1.2.14...@spectrum-css/logicbutton@1.2.15)
+
+**Note:** Version bump only for package @spectrum-css/logicbutton
+
+
+
+
+
+<a name="1.2.14"></a>
+## 1.2.14
+🗓 2023-01-18 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/logicbutton@1.2.12...@spectrum-css/logicbutton@1.2.14)
+
+**Note:** Version bump only for package @spectrum-css/logicbutton
+
+
+
+
+
+<a name="1.2.13"></a>
+## 1.2.13
+🗓 2023-01-13 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/logicbutton@1.2.12...@spectrum-css/logicbutton@1.2.13)
+
+**Note:** Version bump only for package @spectrum-css/logicbutton
+
+
+
+
+
+<a name="1.2.12"></a>
+## 1.2.12
+🗓 2022-11-11 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/logicbutton@1.2.11...@spectrum-css/logicbutton@1.2.12)
+
+**Note:** Version bump only for package @spectrum-css/logicbutton
+
+
+
+
+
+<a name="1.2.11"></a>
+## 1.2.11
+🗓 2022-06-16 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/logicbutton@1.2.10...@spectrum-css/logicbutton@1.2.11)
+
+**Note:** Version bump only for package @spectrum-css/logicbutton
+
+
+
+
+
 <a name="1.2.10"></a>
 ## 1.2.10
 🗓 2022-06-07 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/logicbutton@1.2.9...@spectrum-css/logicbutton@1.2.10)

@@ -21,6 +21,7 @@ const yaml = require('js-yaml');
 const through = require('through2');
 const ext = require('replace-ext');
 const logger = require('gulplog');
+const colors = require('colors');
 const lunr = require('lunr');
 
 const dirs = require('../lib/dirs');
@@ -117,7 +118,15 @@ async function buildDocs_forDep(dep) {
         });
       }))
       .pipe(through.obj(function compilePug(file, enc, cb) {
-        let component = yaml.safeLoad(String(file.contents));
+        let component;
+        var componentName = file.dirname.replace('/metadata', '').split('/').pop();
+        try {
+          component = yaml.safeLoad(String(file.contents));
+        } catch (safeloadError) {
+          logger.error('Uh, oh... during buildDocs_forDep, yaml loading failed for'.yellow, componentName.red);
+          throw safeloadError;
+        }
+
         if (!component.id) {
           if (file.basename === 'metadata.yml') {
             // Use the component's name
@@ -237,13 +246,13 @@ function buildSite_getData() {
   ])
   .pipe(through.obj(function readYML(file, enc, cb) {
     let componentData;
+    var componentName = file.dirname.replace('/metadata', '').split('/').pop();
     try {
       componentData = yaml.safeLoad(String(file.contents));
-    } catch (err) {
-      return cb(err);
-    }
-
-    var componentName = file.dirname.replace('/metadata', '').split('/').pop();
+    } catch (safeloadError) {
+      logger.error('Uh, oh... during buildDocs_getData, yaml loading failed for'.yellow, componentName.red);
+      throw safeloadError;
+    } 
 
     if (path.basename(file.basename) === 'metadata.yml') {
       file.basename = componentName;

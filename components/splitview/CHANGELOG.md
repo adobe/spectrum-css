@@ -3,6 +3,96 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+<a name="3.0.30"></a>
+## 3.0.30
+🗓 2023-02-21 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/splitview@3.0.29...@spectrum-css/splitview@3.0.30)
+
+**Note:** Version bump only for package @spectrum-css/splitview
+
+
+
+
+
+<a name="3.0.29"></a>
+## 3.0.29
+🗓 2023-02-06 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/splitview@3.0.28...@spectrum-css/splitview@3.0.29)
+
+**Note:** Version bump only for package @spectrum-css/splitview
+
+
+
+
+
+<a name="3.0.28"></a>
+## 3.0.28
+🗓 2023-02-01 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/splitview@3.0.27...@spectrum-css/splitview@3.0.28)
+
+**Note:** Version bump only for package @spectrum-css/splitview
+
+
+
+
+
+<a name="3.0.27"></a>
+## 3.0.27
+🗓 2023-01-27 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/splitview@3.0.26...@spectrum-css/splitview@3.0.27)
+
+**Note:** Version bump only for package @spectrum-css/splitview
+
+
+
+
+
+<a name="3.0.26"></a>
+## 3.0.26
+🗓 2023-01-25 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/splitview@3.0.25...@spectrum-css/splitview@3.0.26)
+
+**Note:** Version bump only for package @spectrum-css/splitview
+
+
+
+
+
+<a name="3.0.25"></a>
+## 3.0.25
+🗓 2023-01-18 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/splitview@3.0.23...@spectrum-css/splitview@3.0.25)
+
+**Note:** Version bump only for package @spectrum-css/splitview
+
+
+
+
+
+<a name="3.0.24"></a>
+## 3.0.24
+🗓 2023-01-13 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/splitview@3.0.23...@spectrum-css/splitview@3.0.24)
+
+**Note:** Version bump only for package @spectrum-css/splitview
+
+
+
+
+
+<a name="3.0.23"></a>
+## 3.0.23
+🗓 2022-11-11 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/splitview@3.0.22...@spectrum-css/splitview@3.0.23)
+
+**Note:** Version bump only for package @spectrum-css/splitview
+
+
+
+
+
+<a name="3.0.22"></a>
+## 3.0.22
+🗓 2022-06-16 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/splitview@3.0.21...@spectrum-css/splitview@3.0.22)
+
+**Note:** Version bump only for package @spectrum-css/splitview
+
+
+
+
+
 <a name="3.0.21"></a>
 ## 3.0.21
 🗓 2022-06-07 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/splitview@3.0.20...@spectrum-css/splitview@3.0.21)

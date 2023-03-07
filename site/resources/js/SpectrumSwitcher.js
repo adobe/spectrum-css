@@ -54,7 +54,6 @@ SpectrumSwitcher.Scales = [
 ];
 
 SpectrumSwitcher.ColorStops = [
-  'lightest',
   'light',
   'dark',
   'darkest'
@@ -76,10 +75,9 @@ SpectrumSwitcher.VarsVersionKeys = {
 };
 
 SpectrumSwitcher.ThemeKeys = {
-  '1': 'lightest',
-  '2': 'light',
-  '3': 'dark',
-  '4': 'darkest',
+  '1': 'light',
+  '2': 'dark',
+  '3': 'darkest',
 };
 
 SpectrumSwitcher.ScaleKeys = {
@@ -147,6 +145,14 @@ Object.defineProperty(SpectrumSwitcher.prototype, 'varsVersion', {
         sheet.setAttribute('href', sheet.href.replaceAll(expressName, defaultName));
       }
     });
+
+    if (varsVersion === 'express') {
+      document.documentElement.classList.add('spectrum--express');
+    }
+    else {
+      document.documentElement.classList.remove('spectrum--express');
+    }
+
     this._varsVersion = varsVersion;
   },
   get: function() {

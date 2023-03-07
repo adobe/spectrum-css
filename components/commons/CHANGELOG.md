@@ -3,6 +3,120 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+<a name="7.0.1"></a>
+## 7.0.1
+🗓 2023-02-21 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/commons@7.0.0...@spectrum-css/commons@7.0.1)
+
+**Note:** Version bump only for package @spectrum-css/commons
+
+
+
+
+
+<a name="7.0.0"></a>
+# 7.0.0
+🗓 2023-02-01 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/commons@6.0.0...@spectrum-css/commons@7.0.0)
+
+* chore(tokens)!: use latest dependency & fix build error (#1591) ([f2532e7](https://github.com/adobe/spectrum-css/commit/f2532e7)), closes [#1591](https://github.com/adobe/spectrum-css/issues/1591)
+
+
+### 🛑 BREAKING CHANGES
+
+* uses latest `@adobe/spectrum-tokens` dependency which includes token renames
+
+
+
+
+
+<a name="6.0.0"></a>
+# 6.0.0
+🗓 2023-02-01 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/commons@4.0.2...@spectrum-css/commons@6.0.0)
+
+* feat(button)!: migrating button to core-tokens (CSS-97) (#1479) ([0640be0](https://github.com/adobe/spectrum-css/commit/0640be0)), closes [#1479](https://github.com/adobe/spectrum-css/issues/1479)
+
+
+### 🛑 BREAKING CHANGES
+
+* migrates the Button to core tokens
+
+
+
+
+
+<a name="5.0.0"></a>
+# 5.0.0
+🗓 2023-01-31 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/commons@5.0.0-beta.0...@spectrum-css/commons@5.0.0)
+
+* feat(button)!: migrating button to core-tokens (CSS-97) (#1479) ([0640be0](https://github.com/adobe/spectrum-css/commit/0640be0)), closes [#1479](https://github.com/adobe/spectrum-css/issues/1479)
+
+### 🛑 BREAKING CHANGES
+
+* migrates the Button to core tokens
+
+
+
+
+
+<a name="4.1.0-beta.0"></a>
+# 4.1.0-beta.0
+🗓 2023-01-26 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/commons@4.0.2...@spectrum-css/commons@4.1.0-beta.0)
+
+### ✨ Features
+
+* migrating to core tokens v5.0.0 ([6e640ba](https://github.com/adobe/spectrum-css/commit/6e640ba))
+
+
+
+
+
+<a name="4.0.2"></a>
+## 4.0.2
+🗓 2023-01-18 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/commons@4.0.0...@spectrum-css/commons@4.0.2)
+
+**Note:** Version bump only for package @spectrum-css/commons
+
+
+
+
+
+<a name="4.0.1"></a>
+## 4.0.1
+🗓 2023-01-13 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/commons@4.0.0...@spectrum-css/commons@4.0.1)
+
+**Note:** Version bump only for package @spectrum-css/commons
+
+
+
+
+
+<a name="4.0.0"></a>
+# 4.0.0
+🗓 2022-11-10 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/commons@3.0.6...@spectrum-css/commons@4.0.0)
+
+* refactor(popover)!: migrate to core tokens (#1509) ([011e486](https://github.com/adobe/spectrum-css/commit/011e486)), closes [#1509](https://github.com/adobe/spectrum-css/issues/1509)
+
+
+### 🛑 BREAKING CHANGES
+
+* migrates popover to core tokens
+
+Co-authored-by: Garth Braithwaite <garthdb@gmail.com>
+Co-authored-by: Patrick Fulton <pfulton@adobe.com>
+
+
+
+
+
+<a name="3.0.6"></a>
+## 3.0.6
+🗓 2022-06-16 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/commons@3.0.5...@spectrum-css/commons@3.0.6)
+
+**Note:** Version bump only for package @spectrum-css/commons
+
+
+
+
+
 <a name="3.0.5"></a>
 ## 3.0.5
 🗓 2022-01-05 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/commons@3.0.3-alpha.0...@spectrum-css/commons@3.0.5)

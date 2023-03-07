@@ -1,9 +1,10 @@
 {
   "name": "@spectrum-css/dialog",
-  "version": "6.0.13",
+  "version": "6.0.28",
   "description": "The Spectrum CSS dialog component",
   "license": "Apache-2.0",
-  "main": "dist/index-vars.css",
+  "author": "Adobe",
+  "homepage": "https://opensource.adobe.com/spectrum-css/dialog",
   "repository": {
     "type": "git",
     "url": "https://github.com/adobe/spectrum-css.git",
@@ -12,33 +13,33 @@
   "bugs": {
     "url": "https://github.com/adobe/spectrum-css/issues"
   },
+  "main": "dist/index-vars.css",
   "scripts": {
     "build": "gulp"
   },
   "peerDependencies": {
-    "@spectrum-css/button": "^6.0.1",
-    "@spectrum-css/buttongroup": "^5.0.1",
-    "@spectrum-css/closebutton": "^1.2.1",
-    "@spectrum-css/divider": "^1.0.14",
-    "@spectrum-css/icon": "^3.0.13",
-    "@spectrum-css/modal": "^3.0.12",
-    "@spectrum-css/underlay": "^2.0.21",
+    "@spectrum-css/button": "^6.0.0 || ^7.0.0 || ^8.0.0 || ^9.0.0",
+    "@spectrum-css/buttongroup": "^5.0.0 || ^6.0.0",
+    "@spectrum-css/closebutton": "^1.0.0 || ^2.0.0 || ^3.0.0",
+    "@spectrum-css/divider": "^1.0.0 || ^2.0.0",
+    "@spectrum-css/icon": "^3.0.0",
+    "@spectrum-css/modal": "^3.0.0",
+    "@spectrum-css/underlay": "^2.0.0",
     "@spectrum-css/vars": "^8.0.0"
   },
   "devDependencies": {
-    "@spectrum-css/button": "^6.0.12",
-    "@spectrum-css/buttongroup": "^5.0.12",
-    "@spectrum-css/closebutton": "^1.2.11",
-    "@spectrum-css/component-builder": "^3.1.2",
-    "@spectrum-css/divider": "^1.0.26",
-    "@spectrum-css/icon": "^3.0.22",
-    "@spectrum-css/modal": "^3.0.22",
-    "@spectrum-css/underlay": "^2.0.30",
-    "@spectrum-css/vars": "^8.0.0",
+    "@spectrum-css/button": "^6.0.21",
+    "@spectrum-css/buttongroup": "^5.0.13",
+    "@spectrum-css/closebutton": "^1.2.13",
+    "@spectrum-css/component-builder": "^4.0.2",
+    "@spectrum-css/divider": "^1.0.27",
+    "@spectrum-css/icon": "^3.0.33",
+    "@spectrum-css/modal": "^3.0.31",
+    "@spectrum-css/underlay": "^2.0.39",
+    "@spectrum-css/vars": "^8.0.4",
     "gulp": "^4.0.0"
   },
   "publishConfig": {
     "access": "public"
-  },
-  "homepage": "https://opensource.adobe.com/spectrum-css/"
+  }
 }

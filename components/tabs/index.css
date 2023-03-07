@@ -163,8 +163,6 @@ governing permissions and limitations under the License.
 .spectrum-Tabs--horizontal {
   align-items: center;
 
-  border-block-end: var(--spectrum-tabs-quiet-textonly-divider-size) solid;
-
   .spectrum-Tabs-item {
     vertical-align: top;
 
@@ -178,8 +176,6 @@ governing permissions and limitations under the License.
     position: absolute;
     inset-block-end: 0;
     block-size: var(--spectrum-tabs-quiet-textonly-divider-size);
-
-    inset-block-end: calc(-1 * var(--spectrum-tabs-quiet-textonly-divider-size));
   }
 
 
@@ -200,7 +196,6 @@ governing permissions and limitations under the License.
   display: inline-flex;
   flex-direction: column;
   padding: 0;
-  border-inline-start: var(--spectrum-tabs-quiet-textonly-divider-size) solid;
 
   .spectrum-Tabs-item {
     block-size: var(--spectrum-tabs-vertical-textonly-tabitem-height);
@@ -240,7 +235,5 @@ governing permissions and limitations under the License.
     position: absolute;
     inset-inline-start: 0px;
     inline-size: var(--spectrum-tabs-quiet-textonly-divider-size);
-
-    inset-inline-start: calc(-1 * var(--spectrum-tabs-quiet-textonly-divider-size));
   }
 }

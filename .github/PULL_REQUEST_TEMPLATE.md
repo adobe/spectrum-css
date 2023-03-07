@@ -22,5 +22,6 @@
 - [ ] If my change impacts other components, I have tested to make sure they don't break.
 - [ ] If my change impacts documentation, I have updated the documentation accordingly.
 - [ ] I have read the [CONTRIBUTING document](/.github/CONTRIBUTING.md).
+- [ ] I have tested these changes in Windows High Contrast mode.
 <!-- If this pull request isn't ready, add any remaining tasks here -->
 - [ ] This pull request is ready to merge.

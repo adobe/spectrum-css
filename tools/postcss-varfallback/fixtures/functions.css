@@ -4,5 +4,5 @@
 }
 
 .component {
-  width: calc(var(--custom-width, var(--component-width)) - var(--custom-border-width, var(--component-border-width)));
+  width: calc(var(--mod-width, var(--component-width)) - var(--mod-border-width, var(--component-border-width)));
 }

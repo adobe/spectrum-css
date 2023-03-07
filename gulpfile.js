@@ -1,6 +1,5 @@
 const gulp = require('gulp');
 const builder = require('./tools/bundle-builder');
-const test = require('./tools/test-builder');
 const site = require('./site/gulpfile.js');
 const subrunner = require('./tools/bundle-builder/subrunner');
 const through = require('through2');
@@ -8,7 +7,6 @@ const replace = require('gulp-replace');
 const del = require('del');
 
 Object.assign(exports, builder);
-Object.assign(exports, test);
 Object.assign(exports, site);
 
 const path = require('path');
@@ -61,16 +59,6 @@ async function checkPeerDependencies() {
       await writePackage(component, package);
     }
   }));
-};
-
-async function releaseBundles() {
-  let bundlesDir = './bundles';
-
-  let bundles = (await fsp.readdir(bundlesDir, { withFileTypes: true }))
-    .filter((dirent) => dirent.isDirectory() || dirent.isSymbolicLink())
-    .map((dirent) => path.join(process.cwd(), bundlesDir, dirent.name));
-
-  await subrunner.runTaskOnPackages('release', bundles);
 };
 
 function graduatePeerDeps() {
@@ -215,8 +203,11 @@ exports.devHeavy = gulp.series(
   exports.devHeavy
 );
 
-exports.buildDocs = builder.buildDocs;
+exports['watch-relaunch'] = function() {
+  process.env['BROWSERSYNC_OPEN'] = true;
+  exports.watch();
+}
 
-exports.releaseBundles = releaseBundles;
+exports.buildDocs = builder.buildDocs;
 
 exports.prepare = site.copySiteResources;

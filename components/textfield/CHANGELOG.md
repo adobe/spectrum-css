@@ -3,6 +3,118 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+<a name="3.2.14"></a>
+## 3.2.14
+🗓 2023-02-21 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/textfield@3.2.13...@spectrum-css/textfield@3.2.14)
+
+**Note:** Version bump only for package @spectrum-css/textfield
+
+
+
+
+
+<a name="3.2.13"></a>
+## 3.2.13
+🗓 2023-02-06 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/textfield@3.2.12...@spectrum-css/textfield@3.2.13)
+
+**Note:** Version bump only for package @spectrum-css/textfield
+
+
+
+
+
+<a name="3.2.12"></a>
+## 3.2.12
+🗓 2023-02-01 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/textfield@3.2.11...@spectrum-css/textfield@3.2.12)
+
+**Note:** Version bump only for package @spectrum-css/textfield
+
+
+
+
+
+<a name="3.2.11"></a>
+## 3.2.11
+🗓 2023-02-01 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/textfield@3.2.10...@spectrum-css/textfield@3.2.11)
+
+### 🐛 Bug fixes
+
+* **textfield,picker:** restore missing vars ([#1607](https://github.com/adobe/spectrum-css/issues/1607)) ([45f36f6](https://github.com/adobe/spectrum-css/commit/45f36f6))
+
+
+
+
+
+<a name="3.2.10"></a>
+## 3.2.10
+🗓 2023-01-27 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/textfield@3.2.9...@spectrum-css/textfield@3.2.10)
+
+**Note:** Version bump only for package @spectrum-css/textfield
+
+
+
+
+
+<a name="3.2.9"></a>
+## 3.2.9
+🗓 2023-01-25 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/textfield@3.2.8...@spectrum-css/textfield@3.2.9)
+
+**Note:** Version bump only for package @spectrum-css/textfield
+
+
+
+
+
+<a name="3.2.8"></a>
+## 3.2.8
+🗓 2023-01-18 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/textfield@3.2.6...@spectrum-css/textfield@3.2.8)
+
+**Note:** Version bump only for package @spectrum-css/textfield
+
+
+
+
+
+<a name="3.2.7"></a>
+## 3.2.7
+🗓 2023-01-13 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/textfield@3.2.6...@spectrum-css/textfield@3.2.7)
+
+**Note:** Version bump only for package @spectrum-css/textfield
+
+
+
+
+
+<a name="3.2.6"></a>
+## 3.2.6
+🗓 2022-11-11 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/textfield@3.2.5...@spectrum-css/textfield@3.2.6)
+
+**Note:** Version bump only for package @spectrum-css/textfield
+
+
+
+
+
+<a name="3.2.5"></a>
+## 3.2.5
+🗓 2022-11-10 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/textfield@3.2.4...@spectrum-css/textfield@3.2.5)
+
+**Note:** Version bump only for package @spectrum-css/textfield
+
+
+
+
+
+<a name="3.2.4"></a>
+## 3.2.4
+🗓 2022-06-16 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/textfield@3.2.3...@spectrum-css/textfield@3.2.4)
+
+**Note:** Version bump only for package @spectrum-css/textfield
+
+
+
+
+
 <a name="3.2.3"></a>
 ## 3.2.3
 🗓 2022-06-07 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/textfield@3.2.2...@spectrum-css/textfield@3.2.3)

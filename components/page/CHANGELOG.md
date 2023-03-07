@@ -3,6 +3,86 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+<a name="5.0.18"></a>
+## 5.0.18
+🗓 2023-02-21 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/page@5.0.17...@spectrum-css/page@5.0.18)
+
+**Note:** Version bump only for package @spectrum-css/page
+
+
+
+
+
+<a name="5.0.17"></a>
+## 5.0.17
+🗓 2023-02-06 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/page@5.0.16...@spectrum-css/page@5.0.17)
+
+**Note:** Version bump only for package @spectrum-css/page
+
+
+
+
+
+<a name="5.0.16"></a>
+## 5.0.16
+🗓 2023-02-01 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/page@5.0.15...@spectrum-css/page@5.0.16)
+
+**Note:** Version bump only for package @spectrum-css/page
+
+
+
+
+
+<a name="5.0.15"></a>
+## 5.0.15
+🗓 2023-01-25 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/page@5.0.14...@spectrum-css/page@5.0.15)
+
+**Note:** Version bump only for package @spectrum-css/page
+
+
+
+
+
+<a name="5.0.14"></a>
+## 5.0.14
+🗓 2023-01-18 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/page@5.0.12...@spectrum-css/page@5.0.14)
+
+**Note:** Version bump only for package @spectrum-css/page
+
+
+
+
+
+<a name="5.0.13"></a>
+## 5.0.13
+🗓 2023-01-13 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/page@5.0.12...@spectrum-css/page@5.0.13)
+
+**Note:** Version bump only for package @spectrum-css/page
+
+
+
+
+
+<a name="5.0.12"></a>
+## 5.0.12
+🗓 2022-11-11 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/page@5.0.11...@spectrum-css/page@5.0.12)
+
+**Note:** Version bump only for package @spectrum-css/page
+
+
+
+
+
+<a name="5.0.11"></a>
+## 5.0.11
+🗓 2022-06-16 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/page@5.0.10...@spectrum-css/page@5.0.11)
+
+**Note:** Version bump only for package @spectrum-css/page
+
+
+
+
+
 <a name="5.0.10"></a>
 ## 5.0.10
 🗓 2022-06-07 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/page@5.0.9...@spectrum-css/page@5.0.10)

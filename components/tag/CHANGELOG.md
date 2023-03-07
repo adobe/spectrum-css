@@ -3,6 +3,198 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+<a name="5.0.5"></a>
+## 5.0.5
+🗓 2023-03-01 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/tag@5.0.4...@spectrum-css/tag@5.0.5)
+
+**Note:** Version bump only for package @spectrum-css/tag
+
+
+
+
+
+<a name="5.0.4"></a>
+## 5.0.4
+🗓 2023-02-28 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/tag@5.0.3...@spectrum-css/tag@5.0.4)
+
+**Note:** Version bump only for package @spectrum-css/tag
+
+
+
+
+
+<a name="5.0.3"></a>
+## 5.0.3
+🗓 2023-02-24 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/tag@5.0.2...@spectrum-css/tag@5.0.3)
+
+**Note:** Version bump only for package @spectrum-css/tag
+
+
+
+
+
+<a name="5.0.2"></a>
+## 5.0.2
+🗓 2023-02-21 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/tag@5.0.1...@spectrum-css/tag@5.0.2)
+
+**Note:** Version bump only for package @spectrum-css/tag
+
+
+
+
+
+<a name="5.0.1"></a>
+## 5.0.1
+🗓 2023-02-06 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/tag@5.0.0...@spectrum-css/tag@5.0.1)
+
+**Note:** Version bump only for package @spectrum-css/tag
+
+
+
+
+
+<a name="5.0.0"></a>
+# 5.0.0
+🗓 2023-02-01 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/tag@4.0.9...@spectrum-css/tag@5.0.0)
+
+* chore(tokens)!: use latest dependency & fix build error (#1591) ([f2532e7](https://github.com/adobe/spectrum-css/commit/f2532e7)), closes [#1591](https://github.com/adobe/spectrum-css/issues/1591)
+
+
+### 🛑 BREAKING CHANGES
+
+* uses latest `@adobe/spectrum-tokens` dependency which includes token renames
+
+
+
+
+
+<a name="4.0.9"></a>
+## 4.0.9
+🗓 2023-02-01 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/tag@4.0.8...@spectrum-css/tag@4.0.9)
+
+**Note:** Version bump only for package @spectrum-css/tag
+
+
+
+
+
+<a name="4.0.8"></a>
+## 4.0.8
+🗓 2023-01-27 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/tag@4.0.7...@spectrum-css/tag@4.0.8)
+
+**Note:** Version bump only for package @spectrum-css/tag
+
+
+
+
+
+<a name="4.0.7"></a>
+## 4.0.7
+🗓 2023-01-25 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/tag@4.0.6...@spectrum-css/tag@4.0.7)
+
+**Note:** Version bump only for package @spectrum-css/tag
+
+
+
+
+
+<a name="4.0.6"></a>
+## 4.0.6
+🗓 2023-01-18 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/tag@4.0.4...@spectrum-css/tag@4.0.6)
+
+**Note:** Version bump only for package @spectrum-css/tag
+
+
+
+
+
+<a name="4.0.5"></a>
+## 4.0.5
+🗓 2023-01-13 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/tag@4.0.4...@spectrum-css/tag@4.0.5)
+
+**Note:** Version bump only for package @spectrum-css/tag
+
+
+
+
+
+<a name="4.0.4"></a>
+## 4.0.4
+🗓 2023-01-05 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/tag@4.0.3...@spectrum-css/tag@4.0.4)
+
+**Note:** Version bump only for package @spectrum-css/tag
+
+
+
+
+
+<a name="4.0.3"></a>
+## 4.0.3
+🗓 2022-12-16 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/tag@4.0.2...@spectrum-css/tag@4.0.3)
+
+**Note:** Version bump only for package @spectrum-css/tag
+
+
+
+
+
+<a name="4.0.2"></a>
+## 4.0.2
+🗓 2022-12-15 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/tag@4.0.1...@spectrum-css/tag@4.0.2)
+
+**Note:** Version bump only for package @spectrum-css/tag
+
+
+
+
+
+<a name="4.0.1"></a>
+## 4.0.1
+🗓 2022-12-09 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/tag@4.0.0...@spectrum-css/tag@4.0.1)
+
+**Note:** Version bump only for package @spectrum-css/tag
+
+
+
+
+
+<a name="4.0.0"></a>
+# 4.0.0
+🗓 2022-12-08 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/tag@3.3.15...@spectrum-css/tag@4.0.0)
+
+* refactor(tag)!: migrate to core tokens (#1520) ([a9612d1](https://github.com/adobe/spectrum-css/commit/a9612d1)), closes [#1520](https://github.com/adobe/spectrum-css/issues/1520)
+
+
+### 🛑 BREAKING CHANGES
+
+* migrates tag to core tokens
+
+Co-authored-by: Patrick Fulton <pfulton@adobe.com>
+
+
+
+
+
+<a name="3.3.15"></a>
+## 3.3.15
+🗓 2022-11-11 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/tag@3.3.14...@spectrum-css/tag@3.3.15)
+
+**Note:** Version bump only for package @spectrum-css/tag
+
+
+
+
+
+<a name="3.3.14"></a>
+## 3.3.14
+🗓 2022-06-16 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/tag@3.3.13...@spectrum-css/tag@3.3.14)
+
+**Note:** Version bump only for package @spectrum-css/tag
+
+
+
+
+
 <a name="3.3.13"></a>
 ## 3.3.13
 🗓 2022-06-07 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/tag@3.3.12...@spectrum-css/tag@3.3.13)

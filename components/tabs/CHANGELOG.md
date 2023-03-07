@@ -3,6 +3,148 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+<a name="3.2.30"></a>
+## 3.2.30
+🗓 2023-02-21 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/tabs@3.2.29...@spectrum-css/tabs@3.2.30)
+
+**Note:** Version bump only for package @spectrum-css/tabs
+
+
+
+
+
+<a name="3.2.29"></a>
+## 3.2.29
+🗓 2023-02-06 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/tabs@3.2.28...@spectrum-css/tabs@3.2.29)
+
+**Note:** Version bump only for package @spectrum-css/tabs
+
+
+
+
+
+<a name="3.2.28"></a>
+## 3.2.28
+🗓 2023-02-01 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/tabs@3.2.27...@spectrum-css/tabs@3.2.28)
+
+**Note:** Version bump only for package @spectrum-css/tabs
+
+
+
+
+
+<a name="3.2.27"></a>
+## 3.2.27
+🗓 2023-02-01 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/tabs@3.2.26...@spectrum-css/tabs@3.2.27)
+
+**Note:** Version bump only for package @spectrum-css/tabs
+
+
+
+
+
+<a name="3.2.26"></a>
+## 3.2.26
+🗓 2023-01-27 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/tabs@3.2.25...@spectrum-css/tabs@3.2.26)
+
+**Note:** Version bump only for package @spectrum-css/tabs
+
+
+
+
+
+<a name="3.2.25"></a>
+## 3.2.25
+🗓 2023-01-25 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/tabs@3.2.24...@spectrum-css/tabs@3.2.25)
+
+**Note:** Version bump only for package @spectrum-css/tabs
+
+
+
+
+
+<a name="3.2.24"></a>
+## 3.2.24
+🗓 2023-01-18 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/tabs@3.2.22...@spectrum-css/tabs@3.2.24)
+
+**Note:** Version bump only for package @spectrum-css/tabs
+
+
+
+
+
+<a name="3.2.23"></a>
+## 3.2.23
+🗓 2023-01-13 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/tabs@3.2.22...@spectrum-css/tabs@3.2.23)
+
+**Note:** Version bump only for package @spectrum-css/tabs
+
+
+
+
+
+<a name="3.2.22"></a>
+## 3.2.22
+🗓 2022-12-16 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/tabs@3.2.21...@spectrum-css/tabs@3.2.22)
+
+**Note:** Version bump only for package @spectrum-css/tabs
+
+
+
+
+
+<a name="3.2.21"></a>
+## 3.2.21
+🗓 2022-11-11 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/tabs@3.2.20...@spectrum-css/tabs@3.2.21)
+
+**Note:** Version bump only for package @spectrum-css/tabs
+
+
+
+
+
+<a name="3.2.20"></a>
+## 3.2.20
+🗓 2022-10-06 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/tabs@3.2.19...@spectrum-css/tabs@3.2.20)
+
+### 🐛 Bug fixes
+
+* **tabs:** selection indicator scroll overflow border ([#1513](https://github.com/adobe/spectrum-css/issues/1513)) ([3f740ad](https://github.com/adobe/spectrum-css/commit/3f740ad))
+
+
+
+
+
+<a name="3.2.19"></a>
+## 3.2.19
+🗓 2022-07-25 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/tabs@3.2.18...@spectrum-css/tabs@3.2.19)
+
+**Note:** Version bump only for package @spectrum-css/tabs
+
+
+
+
+
+<a name="3.2.18"></a>
+## 3.2.18
+🗓 2022-06-29 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/tabs@3.2.17...@spectrum-css/tabs@3.2.18)
+
+**Note:** Version bump only for package @spectrum-css/tabs
+
+
+
+
+
+<a name="3.2.17"></a>
+## 3.2.17
+🗓 2022-06-16 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/tabs@3.2.15...@spectrum-css/tabs@3.2.17)
+
+**Note:** Version bump only for package @spectrum-css/tabs
+
+
+
+
+
 <a name="3.2.16"></a>
 ## 3.2.16
 🗓 2022-06-08 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/tabs@3.2.15...@spectrum-css/tabs@3.2.16)

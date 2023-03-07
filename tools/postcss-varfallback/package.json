@@ -1,13 +1,14 @@
 {
+  "private": true,
   "name": "postcss-varfallback",
-  "version": "1.1.2",
+  "version": "1.1.3",
   "description": "Use the fallback value of any var reference",
+  "license": "Apache-2.0",
+  "author": "Adobe",
   "main": "index.js",
   "scripts": {
     "test": "ava"
   },
-  "author": "Larry Davis <lazdnet@gmail.com>",
-  "license": "BSD-2-Clause",
   "dependencies": {
     "postcss": "^7.0.36",
     "postcss-value-parser": "^4.1.0"

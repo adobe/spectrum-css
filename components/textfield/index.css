@@ -44,6 +44,8 @@ governing permissions and limitations under the License.
   /* padding is incorrectly named in DNA, should drop text */
   --spectrum-textarea-padding-top: var(--spectrum-textarea-text-padding-top);
   --spectrum-textarea-padding-bottom: var(--spectrum-textarea-text-padding-bottom);
+
+  --spectrum-textfield-texticon-padding-left: var(--spectrum-alias-item-workflow-padding-left-m);
 }
 
 /* hack: define var so it's not reported as undefined */

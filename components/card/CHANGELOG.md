@@ -3,6 +3,133 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+<a name="5.0.11"></a>
+## 5.0.11
+🗓 2023-02-21 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/card@5.0.10...@spectrum-css/card@5.0.11)
+
+**Note:** Version bump only for package @spectrum-css/card
+
+
+
+
+
+<a name="5.0.10"></a>
+## 5.0.10
+🗓 2023-02-06 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/card@5.0.9...@spectrum-css/card@5.0.10)
+
+**Note:** Version bump only for package @spectrum-css/card
+
+
+
+
+
+<a name="5.0.9"></a>
+## 5.0.9
+🗓 2023-02-01 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/card@5.0.8...@spectrum-css/card@5.0.9)
+
+**Note:** Version bump only for package @spectrum-css/card
+
+
+
+
+
+<a name="5.0.8"></a>
+## 5.0.8
+🗓 2023-02-01 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/card@5.0.7...@spectrum-css/card@5.0.8)
+
+**Note:** Version bump only for package @spectrum-css/card
+
+
+
+
+
+<a name="5.0.7"></a>
+## 5.0.7
+🗓 2023-01-27 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/card@5.0.6...@spectrum-css/card@5.0.7)
+
+**Note:** Version bump only for package @spectrum-css/card
+
+
+
+
+
+<a name="5.0.6"></a>
+## 5.0.6
+🗓 2023-01-25 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/card@5.0.5...@spectrum-css/card@5.0.6)
+
+**Note:** Version bump only for package @spectrum-css/card
+
+
+
+
+
+<a name="5.0.5"></a>
+## 5.0.5
+🗓 2023-01-18 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/card@5.0.3...@spectrum-css/card@5.0.5)
+
+**Note:** Version bump only for package @spectrum-css/card
+
+
+
+
+
+<a name="5.0.4"></a>
+## 5.0.4
+🗓 2023-01-13 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/card@5.0.3...@spectrum-css/card@5.0.4)
+
+**Note:** Version bump only for package @spectrum-css/card
+
+
+
+
+
+<a name="5.0.3"></a>
+## 5.0.3
+🗓 2022-12-16 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/card@5.0.2...@spectrum-css/card@5.0.3)
+
+**Note:** Version bump only for package @spectrum-css/card
+
+
+
+
+
+<a name="5.0.2"></a>
+## 5.0.2
+🗓 2022-11-11 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/card@5.0.1...@spectrum-css/card@5.0.2)
+
+**Note:** Version bump only for package @spectrum-css/card
+
+
+
+
+
+<a name="5.0.1"></a>
+## 5.0.1
+🗓 2022-10-04 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/card@5.0.0...@spectrum-css/card@5.0.1)
+
+### 🐛 Bug fixes
+
+* **card:** increase content area height when necessary ([9c19416](https://github.com/adobe/spectrum-css/commit/9c19416))
+
+
+
+
+
+<a name="5.0.0"></a>
+# 5.0.0
+🗓 2022-06-16 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/card@4.0.22...@spectrum-css/card@5.0.0)
+
+* feat!: updating to latest ActionButton with new markup ([3eef405](https://github.com/adobe/spectrum-css/commit/3eef405))
+
+
+### 🛑 BREAKING CHANGES
+
+* ActionButton changes icon markup
+
+
+
+
+
 <a name="4.0.22"></a>
 ## 4.0.22
 🗓 2022-06-07 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/card@4.0.21...@spectrum-css/card@4.0.22)

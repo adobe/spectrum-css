@@ -1,9 +1,10 @@
 {
   "name": "@spectrum-css/taggroup",
-  "version": "3.3.13",
+  "version": "3.3.24",
   "description": "The Spectrum CSS tags component",
   "license": "Apache-2.0",
-  "main": "dist/index-vars.css",
+  "author": "Adobe",
+  "homepage": "https://opensource.adobe.com/spectrum-css/taggroup",
   "repository": {
     "type": "git",
     "url": "https://github.com/adobe/spectrum-css.git",
@@ -12,25 +13,25 @@
   "bugs": {
     "url": "https://github.com/adobe/spectrum-css/issues"
   },
+  "main": "dist/index-vars.css",
   "scripts": {
     "build": "gulp"
   },
   "peerDependencies": {
-    "@spectrum-css/clearbutton": "^1.2.10",
-    "@spectrum-css/tag": "^3.3.12",
+    "@spectrum-css/clearbutton": "^1.0.0",
+    "@spectrum-css/tag": "^3.0.0 || ^4.0.0 || ^5.0.0",
     "@spectrum-css/vars": "^8.0.0"
   },
   "devDependencies": {
-    "@spectrum-css/avatar": "^5.0.18",
-    "@spectrum-css/clearbutton": "^1.2.11",
-    "@spectrum-css/component-builder": "^3.1.2",
-    "@spectrum-css/icon": "^3.0.22",
-    "@spectrum-css/tag": "^3.3.13",
-    "@spectrum-css/vars": "^8.0.0",
+    "@spectrum-css/avatar": "^5.0.27",
+    "@spectrum-css/clearbutton": "^1.2.20",
+    "@spectrum-css/component-builder": "^4.0.2",
+    "@spectrum-css/icon": "^3.0.33",
+    "@spectrum-css/tag": "^3.3.15",
+    "@spectrum-css/vars": "^8.0.4",
     "gulp": "^4.0.0"
   },
   "publishConfig": {
     "access": "public"
-  },
-  "homepage": "https://opensource.adobe.com/spectrum-css/"
+  }
 }

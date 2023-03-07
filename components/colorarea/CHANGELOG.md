@@ -3,6 +3,121 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+<a name="2.0.1"></a>
+## 2.0.1
+🗓 2023-03-01 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/colorarea@2.0.0...@spectrum-css/colorarea@2.0.1)
+
+**Note:** Version bump only for package @spectrum-css/colorarea
+
+
+
+
+
+<a name="2.0.0"></a>
+# 2.0.0
+🗓 2023-02-28 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/colorarea@1.0.30...@spectrum-css/colorarea@2.0.0)
+
+* feat(colorarea)!: migrate to core tokens (#1623) ([9b3d6fa](https://github.com/adobe/spectrum-css/commit/9b3d6fa)), closes [#1623](https://github.com/adobe/spectrum-css/issues/1623)
+
+
+### 🛑 BREAKING CHANGES
+
+* migrates ColorArea to core tokens
+
+
+
+
+
+<a name="1.0.30"></a>
+## 1.0.30
+🗓 2023-02-21 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/colorarea@1.0.29...@spectrum-css/colorarea@1.0.30)
+
+**Note:** Version bump only for package @spectrum-css/colorarea
+
+
+
+
+
+<a name="1.0.29"></a>
+## 1.0.29
+🗓 2023-02-06 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/colorarea@1.0.28...@spectrum-css/colorarea@1.0.29)
+
+**Note:** Version bump only for package @spectrum-css/colorarea
+
+
+
+
+
+<a name="1.0.28"></a>
+## 1.0.28
+🗓 2023-02-01 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/colorarea@1.0.27...@spectrum-css/colorarea@1.0.28)
+
+**Note:** Version bump only for package @spectrum-css/colorarea
+
+
+
+
+
+<a name="1.0.27"></a>
+## 1.0.27
+🗓 2023-01-27 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/colorarea@1.0.26...@spectrum-css/colorarea@1.0.27)
+
+**Note:** Version bump only for package @spectrum-css/colorarea
+
+
+
+
+
+<a name="1.0.26"></a>
+## 1.0.26
+🗓 2023-01-25 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/colorarea@1.0.25...@spectrum-css/colorarea@1.0.26)
+
+**Note:** Version bump only for package @spectrum-css/colorarea
+
+
+
+
+
+<a name="1.0.25"></a>
+## 1.0.25
+🗓 2023-01-18 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/colorarea@1.0.23...@spectrum-css/colorarea@1.0.25)
+
+**Note:** Version bump only for package @spectrum-css/colorarea
+
+
+
+
+
+<a name="1.0.24"></a>
+## 1.0.24
+🗓 2023-01-13 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/colorarea@1.0.23...@spectrum-css/colorarea@1.0.24)
+
+**Note:** Version bump only for package @spectrum-css/colorarea
+
+
+
+
+
+<a name="1.0.23"></a>
+## 1.0.23
+🗓 2022-11-11 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/colorarea@1.0.22...@spectrum-css/colorarea@1.0.23)
+
+**Note:** Version bump only for package @spectrum-css/colorarea
+
+
+
+
+
+<a name="1.0.22"></a>
+## 1.0.22
+🗓 2022-06-16 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/colorarea@1.0.21...@spectrum-css/colorarea@1.0.22)
+
+**Note:** Version bump only for package @spectrum-css/colorarea
+
+
+
+
+
 <a name="1.0.21"></a>
 ## 1.0.21
 🗓 2022-06-07 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/colorarea@1.0.20...@spectrum-css/colorarea@1.0.21)

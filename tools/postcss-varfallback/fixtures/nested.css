@@ -4,5 +4,5 @@
 }
 
 .component {
-  background-color: var(--custom-background-color, var(--component-background-color, var(--color-blue)));
+  background-color: var(--mod-background-color, var(--component-background-color, var(--color-blue)));
 }

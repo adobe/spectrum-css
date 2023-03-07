@@ -3,6 +3,145 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+<a name="2.0.10"></a>
+## 2.0.10
+🗓 2023-02-21 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/pickerbutton@2.0.9...@spectrum-css/pickerbutton@2.0.10)
+
+**Note:** Version bump only for package @spectrum-css/pickerbutton
+
+
+
+
+
+<a name="2.0.9"></a>
+## 2.0.9
+🗓 2023-02-06 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/pickerbutton@2.0.8...@spectrum-css/pickerbutton@2.0.9)
+
+**Note:** Version bump only for package @spectrum-css/pickerbutton
+
+
+
+
+
+<a name="2.0.8"></a>
+## 2.0.8
+🗓 2023-02-01 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/pickerbutton@2.0.7...@spectrum-css/pickerbutton@2.0.8)
+
+**Note:** Version bump only for package @spectrum-css/pickerbutton
+
+
+
+
+
+<a name="2.0.7"></a>
+## 2.0.7
+🗓 2023-02-01 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/pickerbutton@2.0.6...@spectrum-css/pickerbutton@2.0.7)
+
+**Note:** Version bump only for package @spectrum-css/pickerbutton
+
+
+
+
+
+<a name="2.0.6"></a>
+## 2.0.6
+🗓 2023-01-27 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/pickerbutton@2.0.5...@spectrum-css/pickerbutton@2.0.6)
+
+**Note:** Version bump only for package @spectrum-css/pickerbutton
+
+
+
+
+
+<a name="2.0.5"></a>
+## 2.0.5
+🗓 2023-01-25 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/pickerbutton@2.0.4...@spectrum-css/pickerbutton@2.0.5)
+
+**Note:** Version bump only for package @spectrum-css/pickerbutton
+
+
+
+
+
+<a name="2.0.4"></a>
+## 2.0.4
+🗓 2023-01-18 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/pickerbutton@2.0.2...@spectrum-css/pickerbutton@2.0.4)
+
+**Note:** Version bump only for package @spectrum-css/pickerbutton
+
+
+
+
+
+<a name="2.0.3"></a>
+## 2.0.3
+🗓 2023-01-13 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/pickerbutton@2.0.2...@spectrum-css/pickerbutton@2.0.3)
+
+**Note:** Version bump only for package @spectrum-css/pickerbutton
+
+
+
+
+
+<a name="2.0.2"></a>
+## 2.0.2
+🗓 2022-12-16 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/pickerbutton@2.0.1...@spectrum-css/pickerbutton@2.0.2)
+
+**Note:** Version bump only for package @spectrum-css/pickerbutton
+
+
+
+
+
+<a name="2.0.1"></a>
+## 2.0.1
+🗓 2022-11-11 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/pickerbutton@2.0.0...@spectrum-css/pickerbutton@2.0.1)
+
+**Note:** Version bump only for package @spectrum-css/pickerbutton
+
+
+
+
+
+<a name="2.0.0"></a>
+# 2.0.0
+🗓 2022-10-25 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/pickerbutton@1.1.22...@spectrum-css/pickerbutton@2.0.0)
+
+* refactor(infieldbutton,inputgroup,pickerbutton)!: drop loudness api ([c97d40e](https://github.com/adobe/spectrum-css/commit/c97d40e))
+* refactor(pickerbutton)!: replace medium loudness with quiet ([6e87687](https://github.com/adobe/spectrum-css/commit/6e87687))
+* refactor(pickerbutton)!: remove loudness levels ([3fc182a](https://github.com/adobe/spectrum-css/commit/3fc182a))
+
+
+### 🛑 BREAKING CHANGES
+
+* remove high loudness selectors from pickerbutton, apply quiet background color from inputgroup, change loudness api to quiet for infieldbutton
+* replaces `medium` loudness with `quiet`
+* refactor spectrum-PickerButton--high to use base spectrum-PickerButton styles
+
+
+
+
+
+<a name="1.1.22"></a>
+## 1.1.22
+🗓 2022-06-29 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/pickerbutton@1.1.21...@spectrum-css/pickerbutton@1.1.22)
+
+**Note:** Version bump only for package @spectrum-css/pickerbutton
+
+
+
+
+
+<a name="1.1.21"></a>
+## 1.1.21
+🗓 2022-06-16 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/pickerbutton@1.1.19...@spectrum-css/pickerbutton@1.1.21)
+
+**Note:** Version bump only for package @spectrum-css/pickerbutton
+
+
+
+
+
 <a name="1.1.20"></a>
 ## 1.1.20
 🗓 2022-06-08 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/pickerbutton@1.1.19...@spectrum-css/pickerbutton@1.1.20)

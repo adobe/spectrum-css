@@ -3,6 +3,265 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+<a name="6.0.6"></a>
+## 6.0.6
+🗓 2023-03-01 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/actionbar@6.0.5...@spectrum-css/actionbar@6.0.6)
+
+**Note:** Version bump only for package @spectrum-css/actionbar
+
+
+
+
+
+<a name="6.0.5"></a>
+## 6.0.5
+🗓 2023-02-28 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/actionbar@6.0.4...@spectrum-css/actionbar@6.0.5)
+
+**Note:** Version bump only for package @spectrum-css/actionbar
+
+
+
+
+
+<a name="6.0.4"></a>
+## 6.0.4
+🗓 2023-02-24 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/actionbar@6.0.3...@spectrum-css/actionbar@6.0.4)
+
+**Note:** Version bump only for package @spectrum-css/actionbar
+
+
+
+
+
+<a name="6.0.3"></a>
+## 6.0.3
+🗓 2023-02-24 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/actionbar@6.0.2...@spectrum-css/actionbar@6.0.3)
+
+**Note:** Version bump only for package @spectrum-css/actionbar
+
+
+
+
+
+<a name="6.0.2"></a>
+## 6.0.2
+🗓 2023-02-21 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/actionbar@6.0.1...@spectrum-css/actionbar@6.0.2)
+
+**Note:** Version bump only for package @spectrum-css/actionbar
+
+
+
+
+
+<a name="6.0.1"></a>
+## 6.0.1
+🗓 2023-02-06 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/actionbar@6.0.0...@spectrum-css/actionbar@6.0.1)
+
+**Note:** Version bump only for package @spectrum-css/actionbar
+
+
+
+
+
+<a name="6.0.0"></a>
+# 6.0.0
+🗓 2023-02-01 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/actionbar@5.0.14...@spectrum-css/actionbar@6.0.0)
+
+* chore(tokens)!: use latest dependency & fix build error (#1591) ([f2532e7](https://github.com/adobe/spectrum-css/commit/f2532e7)), closes [#1591](https://github.com/adobe/spectrum-css/issues/1591)
+
+
+### 🛑 BREAKING CHANGES
+
+* uses latest `@adobe/spectrum-tokens` dependency which includes token renames
+
+
+
+
+
+<a name="5.0.14"></a>
+## 5.0.14
+🗓 2023-02-01 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/actionbar@5.0.13...@spectrum-css/actionbar@5.0.14)
+
+**Note:** Version bump only for package @spectrum-css/actionbar
+
+
+
+
+
+<a name="5.0.13"></a>
+## 5.0.13
+🗓 2023-01-27 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/actionbar@5.0.12...@spectrum-css/actionbar@5.0.13)
+
+**Note:** Version bump only for package @spectrum-css/actionbar
+
+
+
+
+
+<a name="5.0.12"></a>
+## 5.0.12
+🗓 2023-01-25 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/actionbar@5.0.11...@spectrum-css/actionbar@5.0.12)
+
+**Note:** Version bump only for package @spectrum-css/actionbar
+
+
+
+
+
+<a name="5.0.11"></a>
+## 5.0.11
+🗓 2023-01-18 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/actionbar@5.0.9...@spectrum-css/actionbar@5.0.11)
+
+**Note:** Version bump only for package @spectrum-css/actionbar
+
+
+
+
+
+<a name="5.0.10"></a>
+## 5.0.10
+🗓 2023-01-13 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/actionbar@5.0.9...@spectrum-css/actionbar@5.0.10)
+
+**Note:** Version bump only for package @spectrum-css/actionbar
+
+
+
+
+
+<a name="5.0.9"></a>
+## 5.0.9
+🗓 2023-01-05 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/actionbar@5.0.8...@spectrum-css/actionbar@5.0.9)
+
+**Note:** Version bump only for package @spectrum-css/actionbar
+
+
+
+
+
+<a name="5.0.8"></a>
+## 5.0.8
+🗓 2022-12-16 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/actionbar@5.0.7...@spectrum-css/actionbar@5.0.8)
+
+**Note:** Version bump only for package @spectrum-css/actionbar
+
+
+
+
+
+<a name="5.0.7"></a>
+## 5.0.7
+🗓 2022-12-16 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/actionbar@5.0.6...@spectrum-css/actionbar@5.0.7)
+
+**Note:** Version bump only for package @spectrum-css/actionbar
+
+
+
+
+
+<a name="5.0.6"></a>
+## 5.0.6
+🗓 2022-12-15 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/actionbar@5.0.5...@spectrum-css/actionbar@5.0.6)
+
+**Note:** Version bump only for package @spectrum-css/actionbar
+
+
+
+
+
+<a name="5.0.5"></a>
+## 5.0.5
+🗓 2022-12-14 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/actionbar@5.0.4...@spectrum-css/actionbar@5.0.5)
+
+**Note:** Version bump only for package @spectrum-css/actionbar
+
+
+
+
+
+<a name="5.0.4"></a>
+## 5.0.4
+🗓 2022-12-09 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/actionbar@5.0.3...@spectrum-css/actionbar@5.0.4)
+
+**Note:** Version bump only for package @spectrum-css/actionbar
+
+
+
+
+
+<a name="5.0.3"></a>
+## 5.0.3
+🗓 2022-11-29 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/actionbar@5.0.2...@spectrum-css/actionbar@5.0.3)
+
+### 🐛 Bug fixes
+
+* resolve missing tokens errors due to name changes ([#1555](https://github.com/adobe/spectrum-css/issues/1555)) ([ddae027](https://github.com/adobe/spectrum-css/commit/ddae027))
+
+
+
+
+
+<a name="5.0.2"></a>
+## 5.0.2
+🗓 2022-11-11 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/actionbar@5.0.1...@spectrum-css/actionbar@5.0.2)
+
+**Note:** Version bump only for package @spectrum-css/actionbar
+
+
+
+
+
+<a name="5.0.1"></a>
+## 5.0.1
+🗓 2022-11-10 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/actionbar@5.0.0...@spectrum-css/actionbar@5.0.1)
+
+**Note:** Version bump only for package @spectrum-css/actionbar
+
+
+
+
+
+<a name="5.0.0"></a>
+# 5.0.0
+🗓 2022-11-01 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/actionbar@4.0.1...@spectrum-css/actionbar@5.0.0)
+
+* refactor(actionbar)!: migrate to core tokens (#1512) ([f0be21c](https://github.com/adobe/spectrum-css/commit/f0be21c)), closes [#1512](https://github.com/adobe/spectrum-css/issues/1512)
+
+
+### 🛑 BREAKING CHANGES
+
+* migrates ActionBar to core tokens
+
+Co-authored-by: Patrick Fulton <pfulton@adobe.com>
+
+
+
+
+
+<a name="4.0.1"></a>
+## 4.0.1
+🗓 2022-06-29 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/actionbar@4.0.0...@spectrum-css/actionbar@4.0.1)
+
+**Note:** Version bump only for package @spectrum-css/actionbar
+
+
+
+
+
+<a name="4.0.0"></a>
+# 4.0.0
+🗓 2022-06-16 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/actionbar@3.0.28...@spectrum-css/actionbar@4.0.0)
+
+* feat!: update Action Bar to use latest Action Button ([c3f0866](https://github.com/adobe/spectrum-css/commit/c3f0866))
+
+
+### 🛑 BREAKING CHANGES
+
+* updated Action Button markup
+
+
+
+
+
 <a name="3.0.29"></a>
 ## 3.0.29
 🗓 2022-06-08 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/actionbar@3.0.28...@spectrum-css/actionbar@3.0.29)

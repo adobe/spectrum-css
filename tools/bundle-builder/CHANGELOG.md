@@ -3,6 +3,88 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+<a name="3.4.4"></a>
+## 3.4.4
+🗓 2023-01-25 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/bundle-builder@3.4.3...@spectrum-css/bundle-builder@3.4.4)
+
+**Note:** Version bump only for package @spectrum-css/bundle-builder
+
+
+
+
+
+<a name="3.4.3"></a>
+## 3.4.3
+🗓 2023-01-18 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/bundle-builder@3.4.1...@spectrum-css/bundle-builder@3.4.3)
+
+**Note:** Version bump only for package @spectrum-css/bundle-builder
+
+
+
+
+
+<a name="3.4.2"></a>
+## 3.4.2
+🗓 2023-01-13 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/bundle-builder@3.4.1...@spectrum-css/bundle-builder@3.4.2)
+
+**Note:** Version bump only for package @spectrum-css/bundle-builder
+
+
+
+
+
+<a name="3.4.1"></a>
+## 3.4.1
+🗓 2023-01-13 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/bundle-builder@3.4.0...@spectrum-css/bundle-builder@3.4.1)
+
+**Note:** Version bump only for package @spectrum-css/bundle-builder
+
+
+
+
+
+<a name="3.4.0"></a>
+# 3.4.0
+🗓 2022-09-12 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/bundle-builder@3.3.1...@spectrum-css/bundle-builder@3.4.0)
+
+### ✨ Features
+
+* adding port customiztion  and re-launch for watch ([5c7aeef](https://github.com/adobe/spectrum-css/commit/5c7aeef))
+* watch covers components/commons ([5d1b682](https://github.com/adobe/spectrum-css/commit/5d1b682))
+
+
+### 🐛 Bug fixes
+
+* dev hanging on yaml error and dev opening browser tabs ([fbfc622](https://github.com/adobe/spectrum-css/commit/fbfc622))
+* made browser open message more perfect ([dad62eb](https://github.com/adobe/spectrum-css/commit/dad62eb))
+
+
+
+
+
+<a name="3.3.1"></a>
+## 3.3.1
+🗓 2022-07-22 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/bundle-builder@3.3.0...@spectrum-css/bundle-builder@3.3.1)
+
+**Note:** Version bump only for package @spectrum-css/bundle-builder
+
+
+
+
+
+<a name="3.3.0"></a>
+# 3.3.0
+🗓 2022-06-16 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/bundle-builder@3.2.0...@spectrum-css/bundle-builder@3.3.0)
+
+### ✨ Features
+
+* add core tokens ([d0a07a1](https://github.com/adobe/spectrum-css/commit/d0a07a1))
+* add simple component builder ([535126b](https://github.com/adobe/spectrum-css/commit/535126b))
+
+
+
+
+
 <a name="3.2.0"></a>
 # 3.2.0
 🗓 2022-01-05 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/bundle-builder@3.0.4...@spectrum-css/bundle-builder@3.2.0)

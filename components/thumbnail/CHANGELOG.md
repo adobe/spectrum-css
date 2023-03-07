@@ -3,6 +3,106 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+<a name="2.0.26"></a>
+## 2.0.26
+🗓 2023-02-21 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/thumbnail@2.0.25...@spectrum-css/thumbnail@2.0.26)
+
+**Note:** Version bump only for package @spectrum-css/thumbnail
+
+
+
+
+
+<a name="2.0.25"></a>
+## 2.0.25
+🗓 2023-02-06 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/thumbnail@2.0.24...@spectrum-css/thumbnail@2.0.25)
+
+**Note:** Version bump only for package @spectrum-css/thumbnail
+
+
+
+
+
+<a name="2.0.24"></a>
+## 2.0.24
+🗓 2023-02-01 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/thumbnail@2.0.23...@spectrum-css/thumbnail@2.0.24)
+
+**Note:** Version bump only for package @spectrum-css/thumbnail
+
+
+
+
+
+<a name="2.0.23"></a>
+## 2.0.23
+🗓 2023-02-01 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/thumbnail@2.0.22...@spectrum-css/thumbnail@2.0.23)
+
+**Note:** Version bump only for package @spectrum-css/thumbnail
+
+
+
+
+
+<a name="2.0.22"></a>
+## 2.0.22
+🗓 2023-01-27 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/thumbnail@2.0.21...@spectrum-css/thumbnail@2.0.22)
+
+**Note:** Version bump only for package @spectrum-css/thumbnail
+
+
+
+
+
+<a name="2.0.21"></a>
+## 2.0.21
+🗓 2023-01-25 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/thumbnail@2.0.20...@spectrum-css/thumbnail@2.0.21)
+
+**Note:** Version bump only for package @spectrum-css/thumbnail
+
+
+
+
+
+<a name="2.0.20"></a>
+## 2.0.20
+🗓 2023-01-18 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/thumbnail@2.0.18...@spectrum-css/thumbnail@2.0.20)
+
+**Note:** Version bump only for package @spectrum-css/thumbnail
+
+
+
+
+
+<a name="2.0.19"></a>
+## 2.0.19
+🗓 2023-01-13 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/thumbnail@2.0.18...@spectrum-css/thumbnail@2.0.19)
+
+**Note:** Version bump only for package @spectrum-css/thumbnail
+
+
+
+
+
+<a name="2.0.18"></a>
+## 2.0.18
+🗓 2022-11-11 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/thumbnail@2.0.17...@spectrum-css/thumbnail@2.0.18)
+
+**Note:** Version bump only for package @spectrum-css/thumbnail
+
+
+
+
+
+<a name="2.0.17"></a>
+## 2.0.17
+🗓 2022-06-16 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/thumbnail@2.0.16...@spectrum-css/thumbnail@2.0.17)
+
+**Note:** Version bump only for package @spectrum-css/thumbnail
+
+
+
+
+
 <a name="2.0.16"></a>
 ## 2.0.16
 🗓 2022-06-07 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/thumbnail@2.0.15...@spectrum-css/thumbnail@2.0.16)

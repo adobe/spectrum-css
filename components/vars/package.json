@@ -1,12 +1,10 @@
 {
   "name": "@spectrum-css/vars",
-  "version": "8.0.0",
+  "version": "8.0.4",
   "description": "The Spectrum CSS vars package",
   "license": "Apache-2.0",
-  "main": "dist/spectrum-metadata.json",
-  "scripts": {
-    "update": "gulp update"
-  },
+  "author": "Adobe",
+  "homepage": "https://opensource.adobe.com/spectrum-css/",
   "repository": {
     "type": "git",
     "url": "https://github.com/adobe/spectrum-css.git",
@@ -14,6 +12,11 @@
   },
   "bugs": {
     "url": "https://github.com/adobe/spectrum-css/issues"
+  },
+  "main": "dist/spectrum-metadata.json",
+  "scripts": {
+    "build": "gulp build",
+    "update": "gulp update"
   },
   "devDependencies": {
     "del": "^5.0.0",
@@ -27,6 +30,5 @@
   },
   "publishConfig": {
     "access": "public"
-  },
-  "homepage": "https://opensource.adobe.com/spectrum-css/"
+  }
 }

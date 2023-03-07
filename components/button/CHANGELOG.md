@@ -3,6 +3,206 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+<a name="9.0.5"></a>
+## 9.0.5
+🗓 2023-03-01 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/button@9.0.4...@spectrum-css/button@9.0.5)
+
+**Note:** Version bump only for package @spectrum-css/button
+
+
+
+
+
+<a name="9.0.4"></a>
+## 9.0.4
+🗓 2023-02-28 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/button@9.0.3...@spectrum-css/button@9.0.4)
+
+**Note:** Version bump only for package @spectrum-css/button
+
+
+
+
+
+<a name="9.0.3"></a>
+## 9.0.3
+🗓 2023-02-24 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/button@9.0.2...@spectrum-css/button@9.0.3)
+
+**Note:** Version bump only for package @spectrum-css/button
+
+
+
+
+
+<a name="9.0.2"></a>
+## 9.0.2
+🗓 2023-02-21 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/button@9.0.1...@spectrum-css/button@9.0.2)
+
+**Note:** Version bump only for package @spectrum-css/button
+
+
+
+
+
+<a name="9.0.1"></a>
+## 9.0.1
+🗓 2023-02-06 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/button@9.0.0...@spectrum-css/button@9.0.1)
+
+**Note:** Version bump only for package @spectrum-css/button
+
+
+
+
+
+<a name="9.0.0"></a>
+# 9.0.0
+🗓 2023-02-01 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/button@8.0.0...@spectrum-css/button@9.0.0)
+
+* chore(tokens)!: use latest dependency & fix build error (#1591) ([f2532e7](https://github.com/adobe/spectrum-css/commit/f2532e7)), closes [#1591](https://github.com/adobe/spectrum-css/issues/1591)
+
+
+### 🛑 BREAKING CHANGES
+
+* uses latest `@adobe/spectrum-tokens` dependency which includes token renames
+
+
+
+
+
+<a name="8.0.0"></a>
+# 8.0.0
+🗓 2023-02-01 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/button@6.0.21...@spectrum-css/button@8.0.0)
+
+* feat(button)!: migrating button to core-tokens (CSS-97) (#1479) ([0640be0](https://github.com/adobe/spectrum-css/commit/0640be0)), closes [#1479](https://github.com/adobe/spectrum-css/issues/1479)
+
+
+### 🛑 BREAKING CHANGES
+
+* migrates the Button to core tokens
+
+
+
+
+
+<a name="7.0.0"></a>
+# 7.0.0
+🗓 2023-01-31 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/button@7.0.0-beta.6...@spectrum-css/button@7.0.0)
+
+* feat(button)!: migrating button to core-tokens (CSS-97) (#1479) ([0640be0](https://github.com/adobe/spectrum-css/commit/0640be0)), closes [#1479](https://github.com/adobe/spectrum-css/issues/1479)
+
+
+### 🛑 BREAKING CHANGES
+
+* migrates the Button to core tokens
+
+
+
+
+
+<a name="7.0.0-beta.5"></a>
+# 7.0.0-beta.5
+🗓 2023-01-26 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/button@6.0.20...@spectrum-css/button@7.0.0-beta.5)
+
+### ✨ Features
+
+* **button!:** core token migration for button ([28786ab](https://github.com/adobe/spectrum-css/commit/28786ab))
+* fix label padding ([9f1517a](https://github.com/adobe/spectrum-css/commit/9f1517a))
+* logical padding ([bc7bb10](https://github.com/adobe/spectrum-css/commit/bc7bb10))
+* migrating to core tokens v5.0.0 ([6e640ba](https://github.com/adobe/spectrum-css/commit/6e640ba))
+
+
+
+
+
+<a name="6.0.21"></a>
+## 6.0.21
+🗓 2023-01-27 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/button@6.0.20...@spectrum-css/button@6.0.21)
+
+**Note:** Version bump only for package @spectrum-css/button
+
+
+
+
+
+<a name="6.0.20"></a>
+## 6.0.20
+🗓 2023-01-25 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/button@6.0.19...@spectrum-css/button@6.0.20)
+
+**Note:** Version bump only for package @spectrum-css/button
+
+
+
+
+
+<a name="6.0.19"></a>
+## 6.0.19
+🗓 2023-01-18 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/button@6.0.17...@spectrum-css/button@6.0.19)
+
+**Note:** Version bump only for package @spectrum-css/button
+
+
+
+
+
+<a name="6.0.18"></a>
+## 6.0.18
+🗓 2023-01-13 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/button@6.0.17...@spectrum-css/button@6.0.18)
+
+**Note:** Version bump only for package @spectrum-css/button
+
+
+
+
+
+<a name="6.0.17"></a>
+## 6.0.17
+🗓 2022-12-16 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/button@6.0.16...@spectrum-css/button@6.0.17)
+
+**Note:** Version bump only for package @spectrum-css/button
+
+
+
+
+
+<a name="6.0.16"></a>
+## 6.0.16
+🗓 2022-12-14 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/button@6.0.14...@spectrum-css/button@6.0.16)
+
+**Note:** Version bump only for package @spectrum-css/button
+
+
+
+
+
+<a name="6.0.15"></a>
+## 6.0.15
+🗓 2022-12-13 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/button@6.0.14...@spectrum-css/button@6.0.15)
+
+**Note:** Version bump only for package @spectrum-css/button
+
+
+
+
+
+<a name="6.0.14"></a>
+## 6.0.14
+🗓 2022-11-11 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/button@6.0.13...@spectrum-css/button@6.0.14)
+
+**Note:** Version bump only for package @spectrum-css/button
+
+
+
+
+
+<a name="6.0.13"></a>
+## 6.0.13
+🗓 2022-06-16 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/button@6.0.12...@spectrum-css/button@6.0.13)
+
+**Note:** Version bump only for package @spectrum-css/button
+
+
+
+
+
 <a name="6.0.12"></a>
 ## 6.0.12
 🗓 2022-06-07 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/button@6.0.11...@spectrum-css/button@6.0.12)

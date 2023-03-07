@@ -3,6 +3,99 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+<a name="4.0.2"></a>
+## 4.0.2
+🗓 2023-02-21 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/component-builder@4.0.1...@spectrum-css/component-builder@4.0.2)
+
+**Note:** Version bump only for package @spectrum-css/component-builder
+
+
+
+
+
+<a name="4.0.1"></a>
+## 4.0.1
+🗓 2023-02-06 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/component-builder@4.0.0...@spectrum-css/component-builder@4.0.1)
+
+### 🐛 Bug fixes
+
+* correct RTL issues with SideNav and ActionButton ([#1611](https://github.com/adobe/spectrum-css/issues/1611)) ([54f7093](https://github.com/adobe/spectrum-css/commit/54f7093))
+
+
+
+
+
+<a name="4.0.0"></a>
+# 4.0.0
+🗓 2023-02-01 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/component-builder@3.2.4...@spectrum-css/component-builder@4.0.0)
+
+* chore(tokens)!: use latest dependency & fix build error (#1591) ([f2532e7](https://github.com/adobe/spectrum-css/commit/f2532e7)), closes [#1591](https://github.com/adobe/spectrum-css/issues/1591)
+
+
+### 🛑 BREAKING CHANGES
+
+* uses latest `@adobe/spectrum-tokens` dependency which includes token renames
+
+
+
+
+
+<a name="3.2.4"></a>
+## 3.2.4
+🗓 2023-01-25 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/component-builder@3.2.3...@spectrum-css/component-builder@3.2.4)
+
+**Note:** Version bump only for package @spectrum-css/component-builder
+
+
+
+
+
+<a name="3.2.3"></a>
+## 3.2.3
+🗓 2023-01-18 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/component-builder@3.2.1...@spectrum-css/component-builder@3.2.3)
+
+**Note:** Version bump only for package @spectrum-css/component-builder
+
+
+
+
+
+<a name="3.2.2"></a>
+## 3.2.2
+🗓 2023-01-13 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/component-builder@3.2.1...@spectrum-css/component-builder@3.2.2)
+
+**Note:** Version bump only for package @spectrum-css/component-builder
+
+
+
+
+
+<a name="3.2.1"></a>
+## 3.2.1
+🗓 2022-11-11 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/component-builder@3.2.0...@spectrum-css/component-builder@3.2.1)
+
+### 🐛 Bug fixes
+
+* add missing dependency ([#1427](https://github.com/adobe/spectrum-css/issues/1427)) ([e00de80](https://github.com/adobe/spectrum-css/commit/e00de80))
+
+
+
+
+
+<a name="3.2.0"></a>
+# 3.2.0
+🗓 2022-06-16 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/component-builder@3.1.2...@spectrum-css/component-builder@3.2.0)
+
+### ✨ Features
+
+* add core tokens ([f603e16](https://github.com/adobe/spectrum-css/commit/f603e16))
+* add core tokens ([d0a07a1](https://github.com/adobe/spectrum-css/commit/d0a07a1))
+* add simple component builder ([535126b](https://github.com/adobe/spectrum-css/commit/535126b))
+
+
+
+
+
 <a name="3.1.2"></a>
 ## 3.1.2
 🗓 2022-06-07 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/component-builder@3.1.1...@spectrum-css/component-builder@3.1.2)

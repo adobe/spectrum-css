@@ -3,6 +3,162 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+<a name="3.0.11"></a>
+## 3.0.11
+🗓 2023-03-01 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/switch@3.0.10...@spectrum-css/switch@3.0.11)
+
+**Note:** Version bump only for package @spectrum-css/switch
+
+
+
+
+
+<a name="3.0.10"></a>
+## 3.0.10
+🗓 2023-02-28 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/switch@3.0.9...@spectrum-css/switch@3.0.10)
+
+**Note:** Version bump only for package @spectrum-css/switch
+
+
+
+
+
+<a name="3.0.9"></a>
+## 3.0.9
+🗓 2023-02-24 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/switch@3.0.8...@spectrum-css/switch@3.0.9)
+
+**Note:** Version bump only for package @spectrum-css/switch
+
+
+
+
+
+<a name="3.0.8"></a>
+## 3.0.8
+🗓 2023-02-21 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/switch@3.0.7...@spectrum-css/switch@3.0.8)
+
+**Note:** Version bump only for package @spectrum-css/switch
+
+
+
+
+
+<a name="3.0.7"></a>
+## 3.0.7
+🗓 2023-02-06 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/switch@3.0.6...@spectrum-css/switch@3.0.7)
+
+**Note:** Version bump only for package @spectrum-css/switch
+
+
+
+
+
+<a name="3.0.6"></a>
+## 3.0.6
+🗓 2023-02-01 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/switch@3.0.5...@spectrum-css/switch@3.0.6)
+
+**Note:** Version bump only for package @spectrum-css/switch
+
+
+
+
+
+<a name="3.0.5"></a>
+## 3.0.5
+🗓 2023-02-01 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/switch@3.0.4...@spectrum-css/switch@3.0.5)
+
+**Note:** Version bump only for package @spectrum-css/switch
+
+
+
+
+
+<a name="3.0.4"></a>
+## 3.0.4
+🗓 2023-01-27 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/switch@3.0.3...@spectrum-css/switch@3.0.4)
+
+**Note:** Version bump only for package @spectrum-css/switch
+
+
+
+
+
+<a name="3.0.3"></a>
+## 3.0.3
+🗓 2023-01-25 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/switch@3.0.2...@spectrum-css/switch@3.0.3)
+
+**Note:** Version bump only for package @spectrum-css/switch
+
+
+
+
+
+<a name="3.0.2"></a>
+## 3.0.2
+🗓 2023-01-18 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/switch@3.0.0...@spectrum-css/switch@3.0.2)
+
+**Note:** Version bump only for package @spectrum-css/switch
+
+
+
+
+
+<a name="3.0.1"></a>
+## 3.0.1
+🗓 2023-01-13 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/switch@3.0.0...@spectrum-css/switch@3.0.1)
+
+**Note:** Version bump only for package @spectrum-css/switch
+
+
+
+
+
+<a name="3.0.0"></a>
+# 3.0.0
+🗓 2022-10-13 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/switch@2.0.0...@spectrum-css/switch@3.0.0)
+
+* refactor(switch)!: remap core token aliases & rename aliases ([165bbb6](https://github.com/adobe/spectrum-css/commit/165bbb6))
+
+
+### 🛑 BREAKING CHANGES
+
+* remaps existing aliases to new/renamed core token values
+
+* `--spectrum-focus-ring-thickness` renamed to `--spectrum-focus-indicator-thickness`
+* `--spectrum-focus-ring-gap` renamed to `--spectrum-focus-indicator-gap`
+* `--spectrum-focus-ring-color` renamed to `--spectrum-focus-indicator-color`
+
+
+
+
+
+<a name="2.0.0"></a>
+# 2.0.0
+🗓 2022-09-16 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/switch@1.0.23...@spectrum-css/switch@2.0.0)
+
+* feat(switch)!: migrating switch to core-tokens (CSS-42, CSS-100) (#1496) ([aab46c3](https://github.com/adobe/spectrum-css/commit/aab46c3)), closes [#1496](https://github.com/adobe/spectrum-css/issues/1496)
+
+
+### 🛑 BREAKING CHANGES
+
+* migrates Switch to core tokens
+
+Also, adds t-shirt sizes
+
+
+
+
+
+<a name="1.0.23"></a>
+## 1.0.23
+🗓 2022-06-16 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/switch@1.0.22...@spectrum-css/switch@1.0.23)
+
+**Note:** Version bump only for package @spectrum-css/switch
+
+
+
+
+
 <a name="1.0.22"></a>
 ## 1.0.22
 🗓 2022-06-07 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/switch@1.0.21...@spectrum-css/switch@1.0.22)
