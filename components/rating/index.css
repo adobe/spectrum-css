@@ -38,14 +38,6 @@ governing permissions and limitations under the License.
   --spectrum-rating-icon-count: var(--spectrum-rating-icon-count);
 }
 
-/* Spacing (between icons) */
-.spectrum--medium {
-  --spectrum-rating-icon-spacing: var(--spectrum-spacing-75);
-}
-
-.spectrum--large {
-  --spectrum-rating-icon-spacing: var(--spectrum-spacing-100);
-}
 
 @media (forced-colors: active) {
   .spectrum-Rating {
