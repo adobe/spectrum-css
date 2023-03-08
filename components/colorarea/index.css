@@ -74,8 +74,11 @@ governing permissions and limitations under the License.
 
 .spectrum-ColorArea-handle {
   transform: translate(calc(var(--mod-colorarea-width, var(--spectrum-colorarea-width)) - var(--spectrum-colorarea-border-width)), 0);
-  top: 0;
-  left: 0;
+  inset-block-start: 0;
+
+  [dir="rtl"] & {
+    inset-inline-end: 0;
+  }
 }
 
 .spectrum-ColorArea-gradient {

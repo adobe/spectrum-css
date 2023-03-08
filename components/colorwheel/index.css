@@ -109,6 +109,19 @@ governing permissions and limitations under the License.
   }
 }
 
+.spectrum-ColorWheel-ColorArea-handle {
+  inset-block-start: 0;
+
+  [dir="ltr"] & {
+    inset-inline-end: 0;
+  }
+
+  [dir="rtl"] & {
+    inset-inline-start: 0;
+  }
+
+}
+
 /* clip path set border-width wider than than spectrum-colorwheel-wheel to create appreance of a border*/
 .spectrum-ColorWheel-border {
   position: relative;
