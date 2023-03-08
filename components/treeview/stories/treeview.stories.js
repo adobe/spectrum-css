@@ -7,6 +7,7 @@ export default {
   component: "Treeview",
   argTypes: {
     items: { table: { disable: true } },
+    variant: { table: { disable: true }},
     size: {
       name: "Size",
       type: { name: "string", required: true },
@@ -161,6 +162,7 @@ FoldersAndFiles.args = {
 
 export const Thumbnails = Template.bind({});
 Thumbnails.args = {
+  variant: "thumbnail",
   items: [
     {
       id: "group1",
@@ -168,7 +170,7 @@ Thumbnails.args = {
       link: "#",
       isOpen: true,
       thumbnail: {
-        imageURL: "img/thumbnail.png",
+        imageURL: "/thumbnail.png",
         altText: "Woman crouching"
       },
       items: [
@@ -177,7 +179,7 @@ Thumbnails.args = {
           label: "Label 2",
           link: "#",
           thumbnail: {
-            imageURL: "img/thumbnail.png",
+            imageURL: "/thumbnail.png",
             altText: "Woman crouching"
           }
         },
@@ -186,7 +188,7 @@ Thumbnails.args = {
           label: "Label 3",
           link: "#",
           thumbnail: {
-            imageURL: "img/flowers.png",
+            imageURL: "/flowers.png",
             altText: "Flowers"
           }
         },

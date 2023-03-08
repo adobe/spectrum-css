@@ -94,6 +94,7 @@ export const Template = ({
   rootClass = "spectrum-TreeView",
   customClasses = [],
   size = "m",
+  variant,
   isQuiet,
   items,
   ...globals
@@ -103,6 +104,7 @@ export const Template = ({
     <ul class=${classMap({
       [rootClass]: true,
       [`${rootClass}--size${size?.toUpperCase()}`]: typeof size !== "undefined",
+      [`${rootClass}--${variant}`]: typeof variant !== "undefined",
       [`${rootClass}--quiet`]: isQuiet,
         ...customClasses.reduce((a, c) => ({ ...a, [c]: true }), {}),
   })}>
