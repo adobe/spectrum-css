@@ -23,6 +23,7 @@ governing permissions and limitations under the License.
   --spectrum-rating-icon-spacing-vertical-top: var(--spectrum-component-top-to-workflow-icon-100);
   /* Indicator width */
   --spectrum-rating-indicator-width: var(--spectrum-rating-indicator-width);
+  --spectrum-rating-indicator-border-radius: var(--spectrum-corner-radius-75);
   /* Indicator height */
   --spectrum-rating-indicator-height: var(--spectrum-border-width-200);
   /* Indicator spacing */
@@ -115,7 +116,7 @@ governing permissions and limitations under the License.
 
   &.is-currentValue {
     &:after {
-      border-radius: var(--mod-rating-border-radius, var(--spectrum-rating-border-radius));
+      border-radius: var(--mod-rating-indicator-border-radius, var(--spectrum-rating-indicator-border-radius));
       content: '';
       block-size: var(--mod-rating-indicator-height, var(--spectrum-rating-indicator-height));
       position: absolute;
@@ -251,3 +252,4 @@ governing permissions and limitations under the License.
     }
   }
 }
+
