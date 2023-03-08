@@ -47,8 +47,8 @@ export const Template = ({
         customInputClasses: [`${rootClass}-input`],
       })}
       <span class="${rootClass}-buttons">
-        ${ActionButton({ ...globals, customClasses: [`${rootClass}-stepUp`], icon: 'ChevronUp75', isDisabled, isQuiet })}
-        ${ActionButton({ ...globals, customClasses: [`${rootClass}-stepDown`], icon: 'ChevronDown75', isDisabled, isQuiet })}
+        ${ActionButton({ ...globals, customClasses: [`${rootClass}-stepUp`], iconName: 'ChevronUp75', isDisabled, isQuiet })}
+        ${ActionButton({ ...globals, customClasses: [`${rootClass}-stepDown`], iconName: 'ChevronDown75', isDisabled, isQuiet })}
       </span>
     </div>
   `;
