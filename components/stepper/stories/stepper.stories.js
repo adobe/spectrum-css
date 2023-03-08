@@ -8,7 +8,7 @@ export default {
   component: "Stepper",
   argTypes: {
     isQuiet: {
-      name: "Quiet styling",
+      name: "Quiet",
       type: { name: "boolean" },
       table: {
         type: { summary: "boolean" },

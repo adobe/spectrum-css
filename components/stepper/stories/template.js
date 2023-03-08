@@ -1,5 +1,6 @@
 import { html } from "lit-html";
 import { classMap } from "lit-html/directives/class-map.js";
+import { styleMap } from "lit-html/directives/style-map.js";
 import { ifDefined } from "lit-html/directives/if-defined.js";
 
 import { Template as Textfield } from "@spectrum-css/textfield/stories/template.js";
@@ -17,6 +18,9 @@ export const Template = ({
   isDisabled = false,
   customClasses = [],
   id,
+  style = {
+    "--mod-actionbutton-icon-size": "10px"
+  },
   ...globals
 }) => {
   return html`
@@ -28,19 +32,23 @@ export const Template = ({
       'is-invalid': isInvalid,
       'is-disabled': isDisabled,
       ...customClasses.reduce((a, c) => ({ ...a, [c]: true }), {}),
-    })} id=${ifDefined(id)}>
+    })} id=${ifDefined(id)}
+    style=${ifDefined(styleMap(style))}
+    >
       ${Textfield({
         ...globals,
         placeholder: "100",
         min: "-2",
         max: "2",
         step: "0.5",
+        isDisabled,
+        isQuiet,
         customClasses: [`${rootClass}-textfield`],
         customInputClasses: [`${rootClass}-input`],
       })}
       <span class="${rootClass}-buttons">
-        ${ActionButton({ ...globals, customClasses: [`${rootClass}-stepUp`], iconName: 'ChevronUp75', isDisabled })}
-        ${ActionButton({ ...globals, customClasses: [`${rootClass}-stepDown`], iconName: 'ChevronDown75', isDisabled })}
+        ${ActionButton({ ...globals, customClasses: [`${rootClass}-stepUp`], iconName: 'ChevronUp75', isDisabled, isQuiet })}
+        ${ActionButton({ ...globals, customClasses: [`${rootClass}-stepDown`], iconName: 'ChevronDown75', isDisabled, isQuiet })}
       </span>
     </div>
   `;
