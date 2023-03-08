@@ -17,7 +17,6 @@ governing permissions and limitations under the License.
   /* Focus ring */
   --spectrum-rating-border-radius: var(--spectrum-corner-radius-100);
   --spectrum-rating-focus-indicator-thickness: var(--spectrum-focus-indicator-thickness);
-  --spectrum-rating-focus-indicator-gap: var(--spectrum-focus-indicator-gap);
   --spectrum-rating-focus-indicator-color: var(--spectrum-focus-indicator-color);
   /* Spacing (top/bottom edge to icon) */
   --spectrum-rating-icon-spacing-vertical-top: var(--spectrum-component-top-to-workflow-icon-100);
@@ -119,10 +118,11 @@ governing permissions and limitations under the License.
       border-radius: var(--mod-rating-indicator-border-radius, var(--spectrum-rating-indicator-border-radius));
       content: '';
       block-size: var(--mod-rating-indicator-height, var(--spectrum-rating-indicator-height));
+      inset-inline: var(--mod-rating-indicator-spacing, var(--spectrum-rating-indicator-spacing));
+      
+      /* position the indicator relative to the element's total bottom size (including bottom padding) */
+      inset-block-end: calc(var(--mod-rating-icon-spacing-vertical-top, var(--spectrum-rating-icon-spacing-vertical-top)) - var(--mod-rating-indicator-spacing, var(--spectrum-rating-indicator-spacing)));
       position: absolute;
-      inset-block-end: var(--mod-rating-indicator-spacing, var(--spectrum-rating-indicator-spacing));
-      inset-inline-start: calc((var(--mod-rating-icon-width, var(--spectrum-rating-icon-width)) - var(--mod-rating-indicator-width, var(--spectrum-rating-indicator-width))) / 2);
-      inset-inline-end: calc((var(--mod-rating-icon-width, var(--spectrum-rating-icon-width)) - var(--mod-rating-indicator-width, var(--spectrum-rating-indicator-width))) / 2);
     }
   }
 
@@ -135,20 +135,6 @@ governing permissions and limitations under the License.
       display: block;
     }
   }
-
-  /* focus-ring */
-  &:after {
-    content: '';
-    position: absolute;
-    inset: calc(-2 * var(--mod-rating-focus-indicator-gap, var(--spectrum-rating-focus-indicator-gap)));
-
-    opacity: 0;
-
-    border-width: var(--mod-rating-focus-indicator-thickness, var(--spectrum-rating-focus-indicator-thickness));
-    border-style: solid;
-    border-color: var(--mod-rating-focus-indicator-color, var(--spectrum-rating-focus-indicator-color));
-    border-radius: var(--mod-rating-border-radius, var(--spectrum-rating-border-radius));
-  }
 }
 
 .spectrum-Rating-starActive,
@@ -158,9 +144,7 @@ governing permissions and limitations under the License.
 
 .spectrum-Rating {
   &.is-focused {
-
     box-shadow: 0 0 0 var(--mod-rating-focus-indicator-thickness, var(--spectrum-rating-focus-indicator-thickness)) var(--mod-rating-focus-indicator-color, var(--spectrum-rating-focus-indicator-color));
-
   }
 
   &:hover {
