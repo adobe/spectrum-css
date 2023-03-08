@@ -1,9 +1,9 @@
 import { html } from 'lit-html';
 import { classMap } from 'lit-html/directives/class-map.js';
 import { repeat } from 'lit-html/directives/repeat.js';
-import { useArgs } from '@storybook/client-api';
 
 import { Template as Icon } from "@spectrum-css/icon/stories/template.js";
+import { Template as Thumbnail } from "@spectrum-css/thumbnail/stories/template.js";
 
 import "../index.css";
 import "../skin.css";
@@ -11,18 +11,27 @@ import "../skin.css";
 export const TreeViewItem = ({
   rootClass = "spectrum-TreeView",
   size = "m",
+  type,
+  id,
   link,
   label,
   isSelected,
   isDisabled,
-  id,
-  icon,
   isOpen,
-  customClasses = [],
+  isDropTarget,
+  icon,
+  thumbnail,
   items,
-  onclick,
+  customClasses = [],
   ...globals
 }) => {
+  if (type === "heading") {
+    return html`
+      <div class="${rootClass}-heading">
+        <span class="${rootClass}-itemLabel">${label}</span>
+      </div>
+    `
+  }
 
   return html`
     <li id=${id} class=${classMap({
@@ -30,21 +39,26 @@ export const TreeViewItem = ({
       "is-selected": isSelected,
       "is-disabled": isDisabled,
       "is-open": isOpen,
+      "is-drop-target": isDropTarget,
       ...customClasses.reduce((a, c) => ({ ...a, [c]: true }), {}),
     })}>
-    ${typeof items !== "undefined" ?
-      html`<a href=${link} class="${rootClass}-itemLink" 
-        onclick=${onclick ?? function() {
-          if (isDisabled) return;
-
+      <a href=${link} class="${rootClass}-itemLink" 
+        @click=${onclick ?? function(evt) {
+          if (isDisabled || !evt || !evt.target || typeof items === "undefined") return;
+          evt.preventDefault();
+          const closest = evt.target.closest(`.${rootClass}-item`);
+          if (!closest) return;
+          closest.classList.toggle("is-open");
         }}
       >
-        ${Icon({
+      ${typeof items !== "undefined" ?
+        Icon({
           ...globals,
           size,
           iconName: "Chevron100",
           customClasses: [`${rootClass}-itemIndicator`]
-        })}
+        })
+      : "" }
         ${icon ? 
           Icon({
             ...globals,
@@ -53,30 +67,25 @@ export const TreeViewItem = ({
             customClasses: [`${rootClass}-itemIcon`]
           })
         : ""}
+        ${thumbnail ? 
+          Thumbnail({
+            ...globals,
+            ...thumbnail,
+            size: "s",
+            customClasses: [`${rootClass}-itemThumbnail`]
+          })
+        : ""}
         <span class="${rootClass}-itemLabel">${label}</span>
       </a>
-        ${Template({
+      ${typeof items !== "undefined" ?
+        Template({
           ...globals,
           items: items,
           size,
           rootClass: "spectrum-TreeView",
           customClasses: ['is-opened']
-        })}
-      `
-    : 
-      html`<a href=${link} class="${rootClass}-itemLink">
-        ${icon ? 
-          Icon({
-            ...globals,
-            size,
-            iconName: icon,
-            customClasses: [`${rootClass}-itemIcon`]
-          })
-        : ""}
-        <span class="${rootClass}-itemLabel">${label}</span>
-      </a>
-      `
-    }
+        })
+      : ""}
     </li>
   `
 }

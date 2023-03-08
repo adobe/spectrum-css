@@ -6,6 +6,7 @@ export default {
   description: "The typical usage of a treeview involves nesting a .spectrum-Treeview element within the .spectrum-TreeView-item parent element.",
   component: "Treeview",
   argTypes: {
+    items: { table: { disable: true } },
     size: {
       name: "Size",
       type: { name: "string", required: true },
@@ -59,7 +60,8 @@ Default.args = {
         {
           id: "label2",
           label: "Label 2",
-          link: "#"
+          link: "#",
+          isDisabled: true
         },
         {
           id: "label3",
@@ -92,5 +94,148 @@ Default.args = {
         },
       ]
     }
+  ]
+};
+
+export const FoldersAndFiles = Template.bind({});
+FoldersAndFiles.args = {
+  items: [
+    {
+      id: "label1",
+      label: "Label 1",
+      link: "#",
+      icon: "Document",
+    },
+    {
+      id: "group1",
+      label: "Group 1",
+      link: "#",
+      isOpen: true,
+      isSelected: true,
+      icon: "Folder",
+      items: [
+        {
+          id: "label2",
+          label: "Label 2",
+          link: "#",
+          icon: "Document",
+        },
+        {
+          id: "label3",
+          label: "Label 3",
+          link: "#",
+          icon: "Document",
+        },
+      ]
+    },
+    {
+      id: "group2",
+      label: "Group 2",
+      link: "#",
+      icon: "Folder",
+      items: [
+        {
+          id: "label3",
+          label: "Label 3",
+          link: "#",
+          icon: "Document",
+        },
+        {
+          id: "group3",
+          label: "Group 3",
+          link: "#",
+          icon: "Folder",
+          items: [
+            {
+              id: "label4",
+              label: "Label 4",
+              link: "#",
+              icon: "Document",
+            },
+          ]
+        },
+      ]
+    }
+  ]
+};
+
+export const Thumbnails = Template.bind({});
+Thumbnails.args = {
+  items: [
+    {
+      id: "group1",
+      label: "Group 1",
+      link: "#",
+      isOpen: true,
+      thumbnail: {
+        imageURL: "img/thumbnail.png",
+        altText: "Woman crouching"
+      },
+      items: [
+        {
+          id: "label2",
+          label: "Label 2",
+          link: "#",
+          thumbnail: {
+            imageURL: "img/thumbnail.png",
+            altText: "Woman crouching"
+          }
+        },
+        {
+          id: "label3",
+          label: "Label 3",
+          link: "#",
+          thumbnail: {
+            imageURL: "img/flowers.png",
+            altText: "Flowers"
+          }
+        },
+      ]
+    },
+  ]
+};
+
+export const WithSections = Template.bind({});
+WithSections.args = {
+  items: [
+    {
+      type: "heading",
+      label: "Section 1",
+    },
+    {
+      id: "group1",
+      label: "Group 1",
+      link: "#",
+      isOpen: true,
+      items: [
+        {
+          id: "label2",
+          label: "Label 2",
+          link: "#",
+        },
+        {
+          id: "label3",
+          label: "Label 3",
+          link: "#",
+        },
+      ]
+    },
+  ]
+};
+
+export const WithDropTarget = Template.bind({});
+WithDropTarget.args = {
+  items: [
+    {
+      id: "label2",
+      label: "Label 2",
+      link: "#",
+      isDropTarget: true
+    },
+    {
+      id: "label3",
+      label: "Label 3",
+      link: "#",
+    },
   ]
 };
