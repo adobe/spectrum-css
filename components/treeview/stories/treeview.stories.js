@@ -29,10 +29,11 @@ export default {
   args: {
     rootClass: "spectrum-TreeView",
     size: "m",
+    isQuiet: false
   },
   parameters: {
     actions: {
-      handles: []
+      handles: ["click .spectrum-TreeView-itemLink"],
     },
     status: {
       type: process.env.MIGRATED_PACKAGES.includes('treeview') ? 'migrated' : undefined
@@ -46,12 +47,14 @@ Default.args = {
     {
       id: "label1",
       label: "Label 1",
-      link: "#"
+      link: "#",
+      isSelected: true,
     },
     {
       id: "group1",
       label: "Group 1",
       link: "#",
+      isOpen: true,
       items: [
         {
           id: "label2",
