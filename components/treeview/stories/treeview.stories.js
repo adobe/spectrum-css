@@ -22,7 +22,7 @@ export default {
       type: { name: "boolean" },
       table: {
         type: { summary: "boolean" },
-        category: "State",
+        category: "Component",
       },
       control: "boolean",
     },
