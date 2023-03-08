@@ -38,13 +38,34 @@ governing permissions and limitations under the License.
   --spectrum-rating-icon-count: var(--spectrum-rating-icon-count);
 }
 
+.spectrum-Rating {
+  &.is-focused {
+    box-shadow: 0 0 0 var(--mod-rating-focus-indicator-thickness, var(--spectrum-rating-focus-indicator-thickness)) var(--highcontrast-rating-focus-indicator-color, var(--mod-rating-focus-indicator-color, var(--spectrum-rating-focus-indicator-color)));
+  }
 
-@media (forced-colors: active) {
-  .spectrum-Rating {
-    &.is-focused {
-      outline: 1px solid CanvasText;
+  &:hover {
+    .spectrum-Rating-icon {
+      /* Make all stars colored when the component is hovered */
+      color: var(--highcontrast-rating-icon-color-default, var(--mod-rating-icon-color-default, var(--spectrum-rating-icon-color-default)));
+
+      &:hover {
+        /* The icon that's actually hovered is darker */
+        color: var(--highcontrast-rating-icon-color-hover, var(--mod-rating-icon-color-hover, var(--spectrum-rating-icon-color-hover)));
+      }
+
+      &:active {
+        /* The icon that's actually hovered is darker */
+        color: var(--highcontrast-rating-icon-color-down, var(--mod-rating-icon-color-down, var(--spectrum-rating-icon-color-down)));
+      }
+
+      /* Show which star is currently selected */
+      &.is-currentValue {
+        &:after {
+          /* Match the color of the star */
+          background: currentColor;
+        }
+      }
     }
-    --highcontrast-rating-icon-color-disabled: GrayText;
   }
 }
 
@@ -144,22 +165,22 @@ governing permissions and limitations under the License.
 
 .spectrum-Rating {
   &.is-focused {
-    box-shadow: 0 0 0 var(--mod-rating-focus-indicator-thickness, var(--spectrum-rating-focus-indicator-thickness)) var(--mod-rating-focus-indicator-color, var(--spectrum-rating-focus-indicator-color));
+    box-shadow: 0 0 0 var(--mod-rating-focus-indicator-thickness, var(--spectrum-rating-focus-indicator-thickness)) var(--highcontrast-rating-focus-indicator-color, var(--mod-rating-focus-indicator-color, var(--spectrum-rating-focus-indicator-color)));
   }
 
   &:hover {
     .spectrum-Rating-icon {
       /* Make all stars colored when the component is hovered */
-      color: var(--mod-rating-icon-color-default, var(--spectrum-rating-icon-color-default));
+      color: var(--highcontrast-rating-icon-color-default, var(--mod-rating-icon-color-default, var(--spectrum-rating-icon-color-default)));
 
       &:hover {
         /* The icon that's actually hovered is darker */
-        color: var(--mod-rating-icon-color-hover, var(--spectrum-rating-icon-color-hover));
+        color: var(--highcontrast-rating-icon-color-hover, var(--mod-rating-icon-color-hover, var(--spectrum-rating-icon-color-hover)));
       }
 
       &:active {
         /* The icon that's actually hovered is darker */
-        color: var(--mod-rating-icon-color-down, var(--spectrum-rating-icon-color-down));
+        color: var(--highcontrast-rating-icon-color-down, var(--mod-rating-icon-color-down, var(--spectrum-rating-icon-color-down)));
       }
 
       /* Show which star is currently selected */
@@ -174,32 +195,32 @@ governing permissions and limitations under the License.
 }
 
 .spectrum-Rating-icon {
-  color: var(--mod-rating-icon-color-default, var(--spectrum-rating-icon-color-default));
+  color: var(--highcontrast-rating-icon-color-default, var(--mod-rating-icon-color-default, var(--spectrum-rating-icon-color-default)));
 
   &.is-selected {
-    color: var(--mod-rating-icon-color-key-focus, var(--spectrum-rating-icon-color-key-focus));
+    color: var(--highcontrast-rating-icon-color-key-focus, var(--mod-rating-icon-color-key-focus, var(--spectrum-rating-icon-color-key-focus)));
   }
 
   &:hover {
     /* All stars following the hovered star */
     & ~ .spectrum-Rating-icon {
-      color: var(--mod-rating-icon-color-default, var(--spectrum-rating-icon-color-default));
+      color: var(--highcontrast-rating-icon-color-default, var(--mod-rating-icon-color-default, var(--spectrum-rating-icon-color-default)));
     }
   }
 }
 
 .spectrum-Rating--emphasized {
   .spectrum-Rating-icon {
-    color: var(--mod-rating-icon-color-default, var(--spectrum-rating-icon-color-default));
+    color: var(--highcontrast-rating-icon-color-default, var(--mod-rating-icon-color-default, var(--spectrum-rating-icon-color-default)));
 
     &.is-selected {
-      color: var(--mod-rating-emphasized-icon-color-key-focus, var(--spectrum-rating-emphasized-icon-color-key-focus));
+      color: var(--highcontrast-rating-emphasized-icon-color-key-focus, var(--mod-rating-emphasized-icon-color-key-focus, var(--spectrum-rating-emphasized-icon-color-key-focus)));
     }
 
     &:hover {
       /* All stars following the hovered star */
       & ~ .spectrum-Rating-icon {
-        color: var(--mod-rating-emphasized-icon-color-down, var(--spectrum-rating-emphasized-icon-color-down));
+        color: var(--highcontrast-rating-emphasized-icon-color-down, var(--mod-rating-emphasized-icon-color-down, var(--spectrum-rating-emphasized-icon-color-down)));
       }
     }
   }
@@ -207,18 +228,18 @@ governing permissions and limitations under the License.
   &:hover {
     .spectrum-Rating-icon {
       /* Make all stars selected when the component is hovered */
-      color: var(--mod-rating-emphasized-icon-color-default, var(--spectrum-rating-emphasized-icon-color-default));
+      color: var(--highcontrast-rating-emphasized-icon-color-default, var(--mod-rating-emphasized-icon-color-default, var(--spectrum-rating-emphasized-icon-color-default)));
 
       &:hover {
         /* The icon that's actually hovered is darker */
-        color: var(--mod-rating-emphasized-icon-color-hover, var(--spectrum-rating-emphasized-icon-color-hover));
+        color: var(--highcontrast-rating-emphasized-icon-color-hover, var(--mod-rating-emphasized-icon-color-hover, var(--spectrum-rating-emphasized-icon-color-hover)));
         & ~ .spectrum-Rating-icon {
-          color: var(--mod-rating-icon-color-default, var(--spectrum-rating-icon-color-default));
+          color: var(--highcontrast-rating-icon-color-default, var(--mod-rating-icon-color-default, var(--spectrum-rating-icon-color-default)));
         }
       }
 
       &:active {
-        color: var(--mod-rating-emphasized-icon-color-down, var(--spectrum-rating-emphasized-icon-color-down));
+        color: var(--highcontrast-rating-emphasized-icon-color-down, var(--mod-rating-emphasized-icon-color-down, var(--spectrum-rating-emphasized-icon-color-down)));
       }
     }
   }
@@ -231,9 +252,31 @@ governing permissions and limitations under the License.
       color: var(--highcontrast-rating-icon-color-disabled, var(--mod-rating-icon-color-disabled, var(--spectrum-rating-icon-color-disabled)));
 
       &.is-selected {
-        color: var(--mod-rating-icon-color-disabled, var(--spectrum-rating-icon-color-disabled));
+        color: var(--highcontrast-rating-icon-color-disabled, var(--mod-rating-icon-color-disabled, var(--spectrum-rating-icon-color-disabled)));
       }
     }
   }
 }
 
+@media (forced-colors: active) {
+  .spectrum-Rating {
+    --highcontrast-rating-icon-color-key-focus: CanvasText;
+    --highcontrast-rating-icon-color-disabled: GrayText;
+    --highcontrast-rating-emphasized-icon-color-default: Highlight;
+    --highcontrast-rating-emphasized-icon-color-hover: Highlight;
+    --highcontrast-rating-emphasized-icon-color-down: Highlight;
+    --highcontrast-rating-emphasized-icon-color-key-focus: Highlight;
+
+    &.is-focused {
+      outline: 1px solid CanvasText;
+    }
+
+    &:hover .spectrum-Rating-icon.is-currentValue:after {
+      background-color: var(--highcontrast-rating-icon-color-key-focus);
+    }
+
+    &--emphasized:hover .spectrum-Rating-icon.is-currentValue:after {
+      background-color: var(--highcontrast-rating-emphasized-icon-color-default);
+    }
+  }
+}
