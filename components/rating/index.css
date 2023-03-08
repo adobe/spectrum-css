@@ -32,7 +32,6 @@ governing permissions and limitations under the License.
   --spectrum-rating-emphasized-icon-color-default: var(--spectrum-accent-content-color-default);
   --spectrum-rating-emphasized-icon-color-hover: var(--spectrum-accent-content-color-hover);
   --spectrum-rating-emphasized-icon-color-down: var(--spectrum-accent-content-color-down);
-  --spectrum-rating-emphasized-icon-color-key-focus: var(--spectrum-accent-content-color-key-focus);
   /* Disabled */
   --spectrum-rating-icon-color-disabled: var(--spectrum-disabled-content-color);
   --spectrum-rating-icon-count: var(--spectrum-rating-icon-count);
@@ -198,7 +197,7 @@ governing permissions and limitations under the License.
   color: var(--highcontrast-rating-icon-color-default, var(--mod-rating-icon-color-default, var(--spectrum-rating-icon-color-default)));
 
   &.is-selected {
-    color: var(--highcontrast-rating-icon-color-key-focus, var(--mod-rating-icon-color-key-focus, var(--spectrum-rating-icon-color-key-focus)));
+    color: var(--highcontrast-rating-icon-color-default, var(--mod-rating-icon-color-default, var(--spectrum-rating-icon-color-default)));
   }
 
   &:hover {
@@ -212,9 +211,9 @@ governing permissions and limitations under the License.
 .spectrum-Rating--emphasized {
   .spectrum-Rating-icon {
     color: var(--highcontrast-rating-icon-color-default, var(--mod-rating-icon-color-default, var(--spectrum-rating-icon-color-default)));
-
+    
     &.is-selected {
-      color: var(--highcontrast-rating-emphasized-icon-color-key-focus, var(--mod-rating-emphasized-icon-color-key-focus, var(--spectrum-rating-emphasized-icon-color-key-focus)));
+      color: var(--highcontrast-rating-emphasized-icon-color-default, var(--mod-rating-emphasized-icon-color-default, var(--spectrum-rating-emphasized-icon-color-default)));
     }
 
     &:hover {
@@ -265,7 +264,6 @@ governing permissions and limitations under the License.
     --highcontrast-rating-emphasized-icon-color-default: Highlight;
     --highcontrast-rating-emphasized-icon-color-hover: Highlight;
     --highcontrast-rating-emphasized-icon-color-down: Highlight;
-    --highcontrast-rating-emphasized-icon-color-key-focus: Highlight;
 
     &.is-focused {
       outline: 1px solid CanvasText;
