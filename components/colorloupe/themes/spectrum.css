@@ -11,6 +11,7 @@ governing permissions and limitations under the License.
 
 @container (--system: spectrum) {
   .spectrum-ColorWheel {
-
+    --spectrum-colorloupe-express-visibility: none;
+    --spectrum-colorloupe-spectrum-visibility: block;
   }
 }

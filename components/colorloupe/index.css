@@ -55,11 +55,11 @@ governing permissions and limitations under the License.
 }
 
 .spectrum-ColorLoupe-express {
-  display: none;
+  display: var(--spectrum-colorloupe-express-visibility);
 }
 
 .spectrum-ColorLoupe-spectrum {
-  display: block;
+  display: var(--spectrum-colorloupe-spectrum-visibility);
 }
 
 
