@@ -12,36 +12,12 @@ governing permissions and limitations under the License.
 
 const gulp = require('gulp');
 const logger = require('gulplog');
-const browserSync = require('browser-sync');
 const path = require('path');
 const dirs = require('../lib/dirs');
 
 const docs = require('../docs');
 const subrunner = require('../subrunner');
 const bundleBuilder = require('../index.js');
-
-
-function serve() {
-
-  let PORT = 3000;
-
-  if (process.env.BROWSERSYNC_PORT) {
-    PORT = process.env.BROWSERSYNC_PORT;
-    logger.info(`Setting '${PORT} as port for browsersync, which hopefully is valid`);
-  }
-
-  if (process.env.BROWSERSYNC_OPEN === 'true') {
-    logger.info('New browser instance will open');
-  }
-
-  browserSync({
-    startPath: 'docs/index.html',
-    server: `${process.cwd()}/dist/`,
-    notify: process.env.BROWSERSYNC_NOTIFY === 'true' ? true : false,
-    open: process.env.BROWSERSYNC_OPEN === 'true' ? true : false,
-    port: PORT
-  });
-}
 
 function getPackageFromPath(filePath) {
   return filePath.match(`${dirs.components}\/(.*?)\/`)[1];
@@ -83,13 +59,7 @@ function watchWithinPackages(glob, task, files) {
           .pipe(gulp.dest(`dist/components/${packageName}/`))
           .on('end', () => {
             logger.debug(`Injecting files from ${packageName}/:\n  ${files}`);
-
-            // Inject
-            gulp.src(`dist/components/${packageName}/${files}`)
-              .pipe(browserSync.stream());
-
             changedFile = null;
-
             done();
           })
           .on('error', (err) => {
@@ -111,60 +81,33 @@ function watchWithinPackages(glob, task, files) {
   });
 }
 
-function reload(cb) {
-  browserSync.reload();
-  if (cb) {
-    cb();
-  }
-}
-
 function watchSite() {
   gulp.watch(
-    `${dirs.site}/*.pug`,
+    `${dirs.site}/*.njk`,
     gulp.series(
       docs.buildSite_pages,
-      reload
     )
   );
 
   gulp.watch(
-    `${dirs.site}/includes/*.pug`,
+    `${dirs.site}/includes/*.njk`,
     gulp.series(
       gulp.parallel(
         docs.buildSite_html,
         docs.buildDocs
       ),
-      reload
     )
   );
 
   gulp.watch(
     [
-      `${dirs.site}/templates/siteComponent.pug`,
+      `${dirs.site}/content/_includes/siteComponent.njk`,
       `${dirs.site}/util.js`
     ],
     gulp.series(
       gulp.parallel(
         docs.buildDocs
       ),
-      reload
-    )
-  );
-
-  gulp.watch(
-    [
-      `${dirs.site}/resources/css/*.css`,
-      `${dirs.site}/resources/js/*.js`
-    ],
-    gulp.series(
-      docs.buildSite_copyFreshResources,
-      function injectSiteResources() {
-        return gulp.src([
-          'dist/docs/css/**/*.css',
-          'dist/docs/js/**/*.js'
-        ])
-          .pipe(browserSync.stream());
-      }
     )
   );
 }
@@ -172,13 +115,11 @@ function watchSite() {
 function watchCommons() {
   gulp.watch(
     [`${dirs.components}/commons/*.css`],
-    gulp.series(bundleBuilder.buildDepenenciesOfCommons, bundleBuilder.copyPackages, reload)
+    gulp.series(bundleBuilder.buildDepenenciesOfCommons, bundleBuilder.copyPackages)
   );
 }
 
 function watch() {
-  serve();
-
   watchCommons();
 
   watchWithinPackages(`${dirs.components}/tokens/custom-*/*.css`, 'rebuildCustoms', '*.css');
@@ -214,7 +155,6 @@ function watch() {
           // we have to do this
           // or gulp will get wedged by the error
           done();
-          reload();
         }
     }
   );

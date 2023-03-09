@@ -27,7 +27,11 @@ const vars = require('./vars');
 
 function clean() {
   let globs = [
-    'dist/*',
+    'dist/components',
+    'dist/docs/*.html',
+    'dist/docs/*.json',
+    '!dist/docs/get-started.html',
+    '!dist/docs/index.html',
     '!dist/preview'
   ];
 
@@ -204,7 +208,6 @@ else {
     clean,
     gulp.parallel(
       docs.build,
-
       copyPackages
     ),
     dev.watch

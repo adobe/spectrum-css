@@ -1,3 +1,7 @@
+<link
+    rel="stylesheet"
+    type="text/css"
+    href="//wwwimages2.adobe.com/etc/beagle/public/globalnav/adobe-globalnav/latest/adobe-globalnav.min.css"/>
 <script>
 window.adobeGlobalnavConfig = {
   locale: 'en',
@@ -42,6 +46,9 @@ window.adobeGlobalnavConfig = {
           css.appendChild(document.createTextNode(styles));
 
       document.getElementsByTagName("head")[0].appendChild(css);
+
+      // Reveal the divider after the global nav has loaded
+      document.querySelector('.spectrum-Site-footerContainer').removeAttribute('hidden');
     }
   }
 }
