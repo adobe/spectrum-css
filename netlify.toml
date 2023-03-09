@@ -1,3 +1,41 @@
+[build]
+  publish = "dist/"
+  command = "yarn build"
+
 [[redirects]]
   from = "/"
   to = "/docs/"
+
+# Other projects use the default /storybook/ pathing;
+# this remaps this to our /preview/ path.
+# Why? Using preview decouples us from the tool.
+[[redirects]]
+  from = "/storybook/"
+  to = "/preview/"
+
+[[redirects]]
+  from = "/preview"
+  to = "/preview/"
+
+[[redirects]]
+  from = "/docs/*"
+  to = "/docs/:splat.html"
+
+# If skip_processing = true, all other settings are ignored
+[build.processing]
+  skip_processing = false
+[build.processing.css]
+  bundle = true
+  minify = true
+[build.processing.js]
+  bundle = true
+  minify = true
+[build.processing.html]
+  pretty_urls = true
+[build.processing.images]
+  compress = true
+
+# Skip all post processing in deploy previews,
+# ignoring any other settings
+[context.deploy-preview.processing]
+  skip_processing = true
