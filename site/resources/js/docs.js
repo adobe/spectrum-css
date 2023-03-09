@@ -14,14 +14,13 @@ governing permissions and limitations under the License.
 
 'use strict';
 
-loadIcons('../components/icon/spectrum-css-icons.svg');
+loadIcons('img/spectrum-css-icons.svg');
 loadIcons('img/spectrum-icons.svg');
 
 // Show and hide code samples
 function toggleMarkupVisibility(event) {
   event.preventDefault();
   var exampleMarkup = event.target.closest('.spectrum-CSSExample-markup');
-  var style = window.getComputedStyle(exampleMarkup);
   var isOpen = exampleMarkup.classList.contains('is-open');
   event.target.innerHTML = isOpen ? 'Show markup' : 'Hide markup';
   exampleMarkup.classList.toggle('is-open');

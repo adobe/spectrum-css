@@ -1,0 +1,24 @@
+{% extends './home.njk' %}
+{% block content %}
+<article class="spectrum-CSSComponent">
+    <header id="{{ component.slug }}" class="spectrum-CSSComponent-heading">
+        <h1 class="spectrum-CSSComponent-title spectrum-Heading spectrum-Heading--sizeXXXL spectrum-Heading--serif">
+            <a href="#{{ component.slug }}" class="spectrum-BigSubtleLink">{{ component.name }}</a>
+        </h1>
+        <p class="spectrum-CSSComponent-version spectrum-Body spectrum-Body--sizeS">Version {{ pkg.version }}</p>
+    </header>
+    {% if component.description %}
+        <section class="spectrum-CSSComponent-description spectrum-Body spectrum-Body--sizeL">{{ component.description | markdown }}</section>
+    {% endif %}
+    {% for example in examples %}
+        <article class="spectrum-CSSExample">
+            {% if example != component %}
+                <header id="{{ example.slug }}">
+                    <h3>{{ example.name }}</h3>
+                </header>
+            {% endif %}
+            {{ example.markup | safe }}
+        </article>
+    {% endfor %}
+</article>
+{% endblock %}
