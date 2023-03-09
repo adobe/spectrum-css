@@ -315,17 +315,16 @@ governing permissions and limitations under the License.
   margin: 0 var(--spectrum-csscomponent-statuscontainer-margin-x);
 }
 
-.spectrum-CSSComponent-detailsTable th {
+.spectrum-Table:first-of-type {
+  margin-block-start: var(--spectrum-csscomponent-detailstable-margin-top);
+  margin-block-end: var(--spectrum-csscomponent-detailstable-margin-bottom);
+}
+
+.spectrum-Table:first-of-type th {
   text-align: left;
   block-size: var(--spectrum-global-dimension-size-350);
   font-weight: var(--spectrum-global-font-weight-regular);
   padding-inline-end: var(--spectrum-csscomponent-detailstable-padding-x);
-}
-
-.spectrum-CSSComponent-detailsTable {
-  border-spacing: 0;
-  margin-block-start: var(--spectrum-csscomponent-detailstable-margin-top);
-  margin-block-end: var(--spectrum-csscomponent-detailstable-margin-bottom);
 }
 
 .spectrum-CSSComponent-sectionHeading {

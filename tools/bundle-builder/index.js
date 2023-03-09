@@ -19,22 +19,13 @@ const depUtils = require('./lib/depUtils');
 const exec = require('./lib/exec');
 const dirs = require('./lib/dirs');
 
-const docs = require('./docs');
 const dev = require('./dev');
 const subrunner = require('./subrunner');
 const release = require('./release');
 const vars = require('./vars');
 
 function clean() {
-  let globs = [
-    'dist/components',
-    'dist/docs/*.html',
-    'dist/docs/*.json',
-    '!dist/docs/get-started.html',
-    '!dist/docs/index.html',
-    '!dist/preview'
-  ];
-
+  const globs = [];
   // Don't delete the dist folder inside of installed packages
   if (process.cwd() === dirs.topLevel) {
     globs.push(`${dirs.components}/*/dist/*`);
@@ -127,7 +118,6 @@ function copyPackages() {
   return gulp.src([
     `${dirs.components}/*/package.json`,
     `${dirs.components}/*/dist/**`,
-    `!${dirs.components}/*/dist/docs/**`
   ])
     .pipe(rename(function(file) {
       file.dirname = file.dirname.replace('/dist', '');
@@ -137,7 +127,6 @@ function copyPackages() {
 
 function buildIfTopLevel() {
   let builtTasks = gulp.parallel(
-    docs.build,
     buildCombined,
     buildStandalone,
     copyPackages
@@ -166,10 +155,7 @@ let buildLite = gulp.series(
   function buildComponentsLite() {
     return subrunner.runTaskOnAllComponents('buildLite');
   },
-  gulp.parallel(
-    docs.build,
-    copyPackages
-  )
+  copyPackages
 );
 
 let buildMedium = gulp.series(
@@ -177,10 +163,7 @@ let buildMedium = gulp.series(
   function buildComponentsLite() {
     return subrunner.runTaskOnAllComponents('buildMedium');
   },
-  gulp.parallel(
-    docs.build,
-    copyPackages
-  )
+  copyPackages
 );
 
 let buildHeavy = gulp.series(
@@ -188,10 +171,7 @@ let buildHeavy = gulp.series(
   function buildComponentsLite() {
     return subrunner.runTaskOnAllComponents('buildHeavy');
   },
-  gulp.parallel(
-    docs.build,
-    copyPackages
-  )
+  copyPackages
 );
 
 let devTask;
@@ -205,11 +185,7 @@ if (process.cwd() === dirs.topLevel) {
 else {
   // Otherwise, just start watching
   devTask = gulp.series(
-    clean,
-    gulp.parallel(
-      docs.build,
-      copyPackages
-    ),
+    copyPackages,
     dev.watch
   );
 }
@@ -244,7 +220,6 @@ exports.buildComponents = subrunner.buildComponents;
 exports.buildCombined = buildCombined;
 exports.buildStandalone = buildStandalone;
 exports.buildLite = buildLite;
-exports.buildDocs = docs.buildDocs;
 exports.buildDepenenciesOfCommons = buildDepenenciesOfCommons;
 exports.copyPackages = copyPackages;
 exports.dev = devTask;

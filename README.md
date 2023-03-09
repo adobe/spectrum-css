@@ -367,7 +367,7 @@ Version numbers are automatically determined, changelogs generated, and packages
 After performing a release, run the following command to release the website:
 
 ```shell
-npm run release:site
+npm run release:docs
 ```
 
 ### Publishing prereleases

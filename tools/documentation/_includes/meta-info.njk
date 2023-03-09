@@ -1,0 +1,69 @@
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<meta name="description" content="The CSS implementation of Adobe's Spectrum design system"/>
+<meta charset="utf-8"/>
+<link rel="icon" type="image/png" href="favicon.png"/>
+
+<link rel="stylesheet" type="text/css" href="/components/vars/spectrum-global.css"/>
+<link rel="stylesheet" type="text/css" href="/components/vars/spectrum-darkest.css"/>
+<link rel="stylesheet" type="text/css" href="/components/vars/spectrum-dark.css"/>
+<link rel="stylesheet" type="text/css" href="/components/vars/spectrum-light.css"/>
+<link rel="stylesheet" type="text/css" href="/components/vars/spectrum-medium.css"/>
+<link rel="stylesheet" type="text/css" href="/components/vars/spectrum-large.css"/>
+<link rel="stylesheet" type="text/css" href="/components/tokens/index.css"/>
+
+{% for dep in [
+  'accordion',
+  'actionbutton',
+  'button',
+  'card',
+  'clearbutton',
+  'divider',
+  'fieldlabel',
+  'icon',
+  'illustratedmessage',
+  'link',
+  'menu',
+  'page',
+  'picker',
+  'popover',
+  'search',
+  'sidenav',
+  'site',
+  'statuslight',
+  'table',
+  'textfield',
+  'tooltip',
+  'typography',
+  'underlay'
+] %}
+  <link rel="stylesheet" type="text/css" href='/components/{{ dep }}/index-vars.css' data-dependency={{ dep }} />
+{% endfor %}
+
+<link rel="stylesheet" type="text/css" href="/docs/css/site.css"/>
+<link rel="stylesheet" type="text/css" href="/docs/css/docs.css"/>
+
+{# prism css #}
+  {# <link rel="stylesheet" type="text/css" href="css/prism/prism.css" data-prism="data-prism"/> #}
+  <link href="https://unpkg.com/prismjs@1.20.0/themes/prism.css" rel="stylesheet">
+  {# <link href="https://unpkg.com/prismjs@1.20.0/themes/prism-dark.css" rel="stylesheet"> #}
+
+{% if not process.env.VRT %}
+    <link
+        rel="stylesheet"
+        type="text/css"
+        href="//wwwimages2.adobe.com/etc/beagle/public/globalnav/adobe-globalnav/latest/adobe-globalnav.min.css"/>
+{% endif %}
+
+<script src="/docs/js/loadicons/index.js"></script>
+<script src="/docs/js/focus-ring-polyfill/index.js"></script>
+<script src="/docs/js/lunr/lunr.js"></script>
+
+<script src="/docs/js/typekit.js"></script>
+<script src="/docs/js/SpectrumSwitcher.js"></script>
+<script src="/docs/js/Search.js"></script>
+<script src="/docs/js/site.js"></script>
+<script src="/docs/js/docs.js"></script>
+<script src="/docs/js/enhancement.js"></script>
+
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@mdi/font@6.5.95/css/materialdesignicons.min.css" crossorigin="anonymous" referrerpolicy="no-referrer" />
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Primer/19.1.1/tooltips.min.css" crossorigin="anonymous" referrerpolicy="no-referrer" />

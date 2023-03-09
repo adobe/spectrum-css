@@ -37,6 +37,15 @@ export const Template = ({
   },
   ...globals
 }) => {
+  function setFocus(textfield, input, focused) {
+    const focusClass = input.classList.contains('focus-ring') ? 'is-keyboardFocused' : 'is-focused';
+    if (focused) {
+        textfield.classList.add(focusClass);
+    } else {
+        textfield.classList.remove('is-keyboardFocused');
+        textfield.classList.remove('is-focused');
+    }
+  }
 
   if (isInvalid) iconName = "Alert";
   else if (isValid) iconName = "Checkmark";
@@ -57,7 +66,18 @@ export const Template = ({
       ...customClasses.reduce((a, c) => ({ ...a, [c]: true }), {}),
     })}
       style=${ifDefined(styleMap(styles))}
-      @click=${onclick}>
+      @click=${onclick}
+      @focusin=${(e) => {
+        const textfield = e.target.closest(`.${rootClass}`);
+        if (!textfield) return;
+        setFocus(textfield, e.target, true);
+      }}
+      @focusout=${(e) => {
+        const textfield = e.target.closest(`.${rootClass}`);
+        if (!textfield) return;
+        setFocus(textfield, e.target, false);
+      }}
+    >
       ${iconName ? Icon({
         ...globals,
         size,

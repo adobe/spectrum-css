@@ -15,7 +15,6 @@ const logger = require('gulplog');
 const path = require('path');
 const dirs = require('../lib/dirs');
 
-const docs = require('../docs');
 const subrunner = require('../subrunner');
 const bundleBuilder = require('../index.js');
 
@@ -81,37 +80,6 @@ function watchWithinPackages(glob, task, files) {
   });
 }
 
-function watchSite() {
-  gulp.watch(
-    `${dirs.site}/*.njk`,
-    gulp.series(
-      docs.buildSite_pages,
-    )
-  );
-
-  gulp.watch(
-    `${dirs.site}/includes/*.njk`,
-    gulp.series(
-      gulp.parallel(
-        docs.buildSite_html,
-        docs.buildDocs
-      ),
-    )
-  );
-
-  gulp.watch(
-    [
-      `${dirs.site}/content/_includes/siteComponent.njk`,
-      `${dirs.site}/util.js`
-    ],
-    gulp.series(
-      gulp.parallel(
-        docs.buildDocs
-      ),
-    )
-  );
-}
-
 function watchCommons() {
   gulp.watch(
     [`${dirs.components}/commons/*.css`],
@@ -121,46 +89,9 @@ function watchCommons() {
 
 function watch() {
   watchCommons();
-
   watchWithinPackages(`${dirs.components}/tokens/custom-*/*.css`, 'rebuildCustoms', '*.css');
-
   watchWithinPackages(`${dirs.components}/*/{index,skin}.css`, 'buildMedium', '*.css');
   watchWithinPackages(`${dirs.components}/*/themes/{spectrum,express}.css`, 'buildMedium', '*.css');
-
-
-  watchWithinPackages(
-    [
-      `${dirs.components}/*/metadata/*.yml`,
-      `${dirs.components}/*/metadata.yml`
-    ],
-    (changedFile, package, done) => {
-      // Do this as gulp tasks to avoid premature stream termination
-      try {
-        let result = gulp.series(
-          // Get data first so nav builds
-          function buildSite_getData() {
-            logger.debug(`Building nav data for ${package}`);
-            return docs.buildSite_getData()
-          },
-          function buildDocs_forDep() {
-            logger.debug(`Building docs for ${package}`);
-            return docs.buildDocs_forDep(package)
-          }
-          )();
-        // this catches yaml parsing errors
-        // should stop the series from running
-        } catch (error) {
-          done(error);
-        } finally {
-          // we have to do this
-          // or gulp will get wedged by the error
-          done();
-        }
-    }
-  );
-
-  watchSite();
-
 }
 
 exports.watch = watch;
