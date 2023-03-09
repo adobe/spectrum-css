@@ -33,7 +33,7 @@ Each component is released on npm as a separate, individually versioned package 
 To get started, install the following components:
 
 ```shell
-npm install @spectrum-css/vars @spectrum-css/typography @spectrum-css/page @spectrum-css/icon @spectrum-css/button
+yarn install @spectrum-css/vars @spectrum-css/typography @spectrum-css/page @spectrum-css/icon @spectrum-css/button
 ```
 
 Installed components will be available in the `node_modules/@spectrum-css/` folder.
@@ -186,8 +186,10 @@ You've created an `index.css` that imports a few components, a scale, and a colo
 To build an more optimized bundle, you can employ a few simple PostCSS plugins. First, install them:
 
 ```shell
-npm i postcss-import postcss-varfallback postcss-dropunusedvars cssnano --save-dev
+yarn add -D postcss-import postcss-varfallback postcss-dropunusedvars cssnano
 ```
+
+<!-- @todo link to the external repositories where these postcss plugins now live: varfallback and dropunusedvars -->
 
 Next, create a `postcss.config.js`:
 
@@ -213,6 +215,8 @@ postcss -o dist/index.min.css index.css
 If you need an even smaller bundle, you can employ a tool such as [PurifyCSS](https://github.com/purifycss/purifycss) to strip unused CSS classes from the output.
 
 ### Customizing Spectrum CSS
+
+<!-- @todo link to the external repositories where these postcss plugins now live: transformselectors -->
 
 You can employ `postcss-transformselectors` to change the classnames Spectrum CSS uses. For instance, you may want to use bare `h1`/`h2`/`h3` instead of `.spectrum-Heading.spectrum-Heading--size*`.
 
@@ -279,7 +283,7 @@ To spin up the local development environment ([Storybook](https://storybook.js.o
 
 Building the project will build and launch the project documentation site in your browser automatically.
 
-See [site generation](site/README.md) and [documentation generation](tools/bundle-builder/docs/README.md) for more information.
+See [site generation](tools/documentation/README.md) for more information.
 
 #### Generating and deploying external documentation site
 
@@ -330,21 +334,11 @@ Instructions for updating tokens from [Spectrum DNA](https://git.corp.adobe.com/
 
 The following tasks are available:
 
-* `gulp build` - Performs a build of all components and the top level package
-* `gulp buildComponents` - Performs a build of all components
-* `gulp dev` - Performs a lite build (custom properties only), runs browsersync and serves the documentation on the default port (3000), then starts watching components and website files
-* `gulp clean` - Cleans all output files for the project and all components
-* `gulp watch` - Assuming a build has already been performed, re-starts starts watching components and website files. Presumes a browser is already open to your locally served docs
-* `gulp watch-relaunch` - Restarts watch and opens a new browser for the docs URL
-* `gulp buildCombined` - Builds the combined output files (`dist/spectrum-*.css`)
-* `gulp buildStandalone` - Builds the standalone output files (`dist/standalone/spectrum-*.css`)
-* `gulp release` - Performs a release of the top-level package
-* `gulp packageLint` - Lint the `package.json` file for each component in the monorepo
-* `gulp readmeLint` - Generate a generic `README.md` file for each component in the monorepo
-
-Note: `yarn dev` will run `gulp dev` above but trigger browsersync to open the documentation URL. You can set `BROWSERSYNC_OPEN=true` to change dev and watch to always open the URL.
-
-You can set a new port for `watch` by setting `BROWSERSYNC_PORT=<port number>`, e.g. `export BROWSERSYNC_PORT=9000; gulp watch` to set the port to `9000`.
+* `yarn build:all` - Performs a build of all components, documentation site, and storybook
+* `yarn build` - Performs a build of all components
+* `yarn dev` - Performs a component build, runs storybook, and serves the documentation on the default port (3000), then starts watching components and website files
+* `yarn clean` - Cleans all output files for the project and all components
+* `yarn watch` - Assuming a build has already been performed, re-starts starts watching components and website files. Presumes a browser is already open to your locally served docs
 
 ___
 
@@ -357,7 +351,7 @@ Releasing individual components is handled by Lerna. When any component or its d
 To release everything that has changed, simply run:
 
 ```shell
-npm run release
+yarn release
 ```
 
 Version numbers are automatically determined, changelogs generated, and packages published.
@@ -367,7 +361,7 @@ Version numbers are automatically determined, changelogs generated, and packages
 After performing a release, run the following command to release the website:
 
 ```shell
-npm run release:site
+yarn release:docs
 ```
 
 ### Publishing prereleases
