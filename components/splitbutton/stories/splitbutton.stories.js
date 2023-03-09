@@ -34,11 +34,21 @@ export default {
       control: "select"
     },
     iconName: { table: { disable: true } },
+    label: {
+      name: "Label",
+      type: { name: "string" },
+      table: {
+        type: { summary: "string" },
+        category: "Content",
+      },
+      control: { type: "text" },
+    },
   },
   args: {
     rootClass: "spectrum-SplitButton",
     size: "m",
     position: "right",
+    label: "Split Button"
   },
   parameters: {
     actions: {

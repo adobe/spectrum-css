@@ -12,6 +12,7 @@ export const Template = ({
   variant = "cta",
   iconName = "ChevronDown100",
   position = "right",
+  label = "Split Button",
   ...globals
 }) => {
 
@@ -26,7 +27,7 @@ export const Template = ({
         variant,
         size: "m",
         iconName: position === "right" ? undefined : iconName,
-        label: position === "right" ? "Split Button" : undefined,
+        label: position === "right" ? label : undefined,
         hideLabel: position === "right" ? false : true,
         customClasses: position === "right" ? ["spectrum-SplitButton-action"] : ["spectrum-SplitButton-trigger"],
       })}
@@ -35,7 +36,7 @@ export const Template = ({
         variant,
         size: "m",
         iconName: position === "right" ? iconName : undefined,
-        label: position === "right" ? undefined : "Split Button",
+        label: position === "right" ? undefined : label,
         hideLabel: position === "right" ? true : false,
         customClasses: position === "right" ? ["spectrum-SplitButton-trigger"] : ["spectrum-SplitButton-action"],
       })}
