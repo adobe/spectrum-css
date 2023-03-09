@@ -10,15 +10,20 @@ governing permissions and limitations under the License.
 */
 .spectrum-ColorLoupe {
   /* size is the same on desktop and mobile */
-  --spectrum-colorloupe-width-adjusted: 60px; /* calc(var(--spectrum-colorloupe-width) + var(--spectrum-global-dimension-static-size-100) // room for shadow /); */
-  --spectrum-colorloupe-height-adjusted:  80px; /* calc(var(--spectrum-colorloupe-height) + var(--spectrum-global-dimension-static-size-100) // room for shadow //); */
+  --spectrum-colorloupe-width-adjusted: calc(var(--spectrum-color-loupe-width) + var(--spectrum-color-loupe-drop-shadow-blur)); /* adds room for shadow */
+  --spectrum-colorloupe-height-adjusted: calc(var(--spectrum-color-loupe-height) + var(--spectrum-color-loupe-drop-shadow-blur)); /* adds room for shadow */
 
   /* Distance between the loupe and the handle */
-  --spectrum-colorloupe-offset: 12px; /* var(--spectrum-global-dimension-static-size-200); */
+  --spectrum-colorloupe-offset: var(--spectrum-color-loupe-bottom-to-color-handle);
 
   /* How much to animate up to the offset distance */
-  --spectrum-colorloupe-animation-distance: 6px; /* var(--spectrum-global-dimension-static-size-100); */
+  --spectrum-colorloupe-animation-distance: 8px; /* var(--spectrum-global-dimension-static-size-100); */
   --spectrum-colorloupe-outer-border-size: var(--spectrum-color-loupe-outer-border-width);
+
+  --spectrum-colorloupe-drop-shadow-x: var(--spectrum-drop-shadow-x);
+  --spectrum-colorloupe-drop-shadow-y: var(--spectrum-color-loupe-drop-shadow-y);
+  --spectrum-colorloupe-drop-shadow-blur: var(--spectrum-drop-shadow-blur);
+  --spectrum-colorloupe-drop-shadow-color: var(--spectrum-drop-shadow-color);
 }
 
 .spectrum-ColorLoupe {
@@ -35,13 +40,20 @@ governing permissions and limitations under the License.
 
   pointer-events: none;
 
+  filter:drop-shadow(
+    var(--spectrum-colorloupe-drop-shadow-x)
+    var(--spectrum-colorloupe-drop-shadow-y)
+    var(--spectrum-colorloupe-drop-shadow-blur)
+    var(--spectrum-colorloupe-drop-shadow-color)
+  );
+
   &.is-open {
     transform: translate(0, 0);
     opacity: 1;
   }
 }
 
-.spectrum-ColorLoupe-outer {
+.spectrum-ColorLoupe-outer-border {
   fill: white;
   stroke: var(--spectrum-colorloupe-outer-border-color);
   stroke-width: var(--spectrum-colorloupe-outer-border-size);
