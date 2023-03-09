@@ -25,7 +25,7 @@ export const Template = ({
       ${Button({
         ...globals,
         variant,
-        size: "m",
+        size,
         iconName: position === "right" ? undefined : iconName,
         label: position === "right" ? label : undefined,
         hideLabel: position === "right" ? false : true,
@@ -34,7 +34,7 @@ export const Template = ({
       ${Button({
         ...globals,
         variant,
-        size: "m",
+        size,
         iconName: position === "right" ? iconName : undefined,
         label: position === "right" ? undefined : label,
         hideLabel: position === "right" ? true : false,

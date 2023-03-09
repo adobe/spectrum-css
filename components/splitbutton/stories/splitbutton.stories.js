@@ -9,11 +9,8 @@ export default {
     size: {
       name: "Size",
       type: { name: "string", required: true },
-      table: {
-        type: { summary: "string" },
-        category: "Component",
-      },
-      options: ["s", "m", "l", "xl"],
+      table: { disable: true },
+      options: ["m"],
       control: "select"
     },
     variant: {
