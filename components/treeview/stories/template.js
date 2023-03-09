@@ -42,7 +42,7 @@ export const TreeViewItem = ({
       "is-drop-target": isDropTarget,
       ...customClasses.reduce((a, c) => ({ ...a, [c]: true }), {}),
     })}>
-      <a href=${link} class="${rootClass}-itemLink" 
+      <a href=${link} target="_self" class="${rootClass}-itemLink" 
         @click=${onclick ?? function(evt) {
           if (isDisabled || !evt || !evt.target || typeof items === "undefined") return;
           evt.preventDefault();
