@@ -10,8 +10,8 @@ governing permissions and limitations under the License.
 */
 .spectrum-ColorLoupe {
   /* size is the same on desktop and mobile */
-  --spectrum-colorloupe-width-adjusted: 48px; /* calc(var(--spectrum-colorloupe-width) + var(--spectrum-global-dimension-static-size-100) // room for shadow /); */
-  --spectrum-colorloupe-height-adjusted:  64px; /* calc(var(--spectrum-colorloupe-height) + var(--spectrum-global-dimension-static-size-100) // room for shadow //); */
+  --spectrum-colorloupe-width-adjusted: 60px; /* calc(var(--spectrum-colorloupe-width) + var(--spectrum-global-dimension-static-size-100) // room for shadow /); */
+  --spectrum-colorloupe-height-adjusted:  80px; /* calc(var(--spectrum-colorloupe-height) + var(--spectrum-global-dimension-static-size-100) // room for shadow //); */
 
   /* Distance between the loupe and the handle */
   --spectrum-colorloupe-offset: 12px; /* var(--spectrum-global-dimension-static-size-200); */
@@ -42,13 +42,36 @@ governing permissions and limitations under the License.
 }
 
 .spectrum-ColorLoupe-outer {
+  fill: white;
+  stroke: var(--spectrum-colorloupe-outer-border-color);
   stroke-width: var(--spectrum-colorloupe-outer-border-size);
 }
 
-/* .spectrum-ColorLoupe-express {
-  display: var(--spectrum-colorloupe-express-visibility);
+
+.spectrum-ColorLoupe-inner {
+  fill: var(--spectrum-picked-color);
+  stroke: var(--spectrum-colorloupe-outer-stroke-color);
+  stroke-width: var(--spectrum-colorloupe-outer-stroke-width);
+}
+
+.spectrum-ColorLoupe-express {
+  display: none;
 }
 
 .spectrum-ColorLoupe-spectrum {
-  display: var(--spectrum-colorloupe-spectrum-visibility);
-} */
+  display: block;
+}
+
+
+/* hack: make sure we don't complain about this color being undefined */
+.🤫 {
+  --spectrum-picked-color: 0;
+  --spectrum-colorloupe-outer-stroke-width: 0;
+  --spectrum-colorloupe-outer-stroke-color: 0;
+}
+
+@media (forced-colors: active) {
+  .spectrum-ColorLoupe {
+    --spectrum-colorloupe-outer-border-color: CanvasText;
+  }
+}
