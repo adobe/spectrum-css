@@ -17,13 +17,19 @@ governing permissions and limitations under the License.
   --spectrum-colorloupe-offset: var(--spectrum-color-loupe-bottom-to-color-handle);
 
   /* How much to animate up to the offset distance */
-  --spectrum-colorloupe-animation-distance: 8px; /* var(--spectrum-global-dimension-static-size-100); */
-  --spectrum-colorloupe-outer-border-size: var(--spectrum-color-loupe-outer-border-width);
+  --spectrum-colorloupe-animation-distance: 8px; /* TODO: replace with animation token */
+  /* --spectrum-colorloupe-outer-border-size: var(--spectrum-color-loupe-outer-border-width); */
 
   --spectrum-colorloupe-drop-shadow-x: var(--spectrum-drop-shadow-x);
   --spectrum-colorloupe-drop-shadow-y: var(--spectrum-color-loupe-drop-shadow-y);
   --spectrum-colorloupe-drop-shadow-blur: var(--spectrum-drop-shadow-blur);
   --spectrum-colorloupe-drop-shadow-color: var(--spectrum-drop-shadow-color);
+
+  /* borders */
+  --spectrum-colorloupe-outer-border-width: var(--spectrum-colorloupe-outer-border-width);
+  --spectrum-colorloupe-inner-border-width: var(--spectrum-colorloupe-inner-border-width);
+  --spectrum-colorloupe-outer-border-color: var(--spectrum-color-loupe-outer-border);
+  --spectrum-colorloupe-inner-border-color: var(--spectrum-color-loupe-inner-border);
 }
 
 .spectrum-ColorLoupe {
@@ -53,17 +59,18 @@ governing permissions and limitations under the License.
   }
 }
 
+/* this is the white border and lays over top the inner*/
 .spectrum-ColorLoupe-outer-border {
   fill: white;
   stroke: var(--spectrum-colorloupe-outer-border-color);
-  stroke-width: var(--spectrum-colorloupe-outer-border-size);
+  stroke-width: var(--spectrum-colorloupe-outer-border-color);
 }
 
-
+/* This is the guts the red checkerboard part,*/
 .spectrum-ColorLoupe-inner {
   fill: var(--spectrum-picked-color);
-  stroke: var(--spectrum-colorloupe-outer-stroke-color);
-  stroke-width: var(--spectrum-colorloupe-outer-stroke-width);
+  stroke: var(--spectrum-colorloupe-inner-border-color);
+  stroke-width: var(--spectrum-colorloupe-inner-border-width);
 }
 
 .spectrum-ColorLoupe-express {
@@ -78,8 +85,8 @@ governing permissions and limitations under the License.
 /* hack: make sure we don't complain about this color being undefined */
 .🤫 {
   --spectrum-picked-color: 0;
-  --spectrum-colorloupe-outer-stroke-width: 0;
-  --spectrum-colorloupe-outer-stroke-color: 0;
+  /* --spectrum-colorloupe-outer-stroke-width: 0; */
+  /* --spectrum-colorloupe-outer-stroke-color: 0; */
 }
 
 @media (forced-colors: active) {
