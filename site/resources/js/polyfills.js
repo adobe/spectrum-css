@@ -56,13 +56,13 @@ if (typeof window.CustomEvent !== 'function') {
     let component = link.getAttribute('data-dependency');
 
     let links = [
-      createLink('../components/' + component + '/index.css', component),
-      createLink('../components/' + component + '/index-diff.css', component),
+      createLink('/components/' + component + '/index.css', component),
+      createLink('/components/' + component + '/index-diff.css', component),
     ];
 
     if (component !== 'icons') {
       links = links.concat(stops.map(function(stop) {
-        return createLink('../components/' + component + '/multiStops/' + stop + '.css', component);
+        return createLink('/components/' + component + '/multiStops/' + stop + '.css', component);
       }));
     }
 

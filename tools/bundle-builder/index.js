@@ -25,8 +25,15 @@ const subrunner = require('./subrunner');
 const release = require('./release');
 const vars = require('./vars');
 
-async function clean() {
-  let globs = ['dist/*', '!dist/preview'];
+function clean() {
+  let globs = [
+    'dist/components',
+    'dist/docs/*.html',
+    'dist/docs/*.json',
+    '!dist/docs/get-started.html',
+    '!dist/docs/index.html',
+    '!dist/preview'
+  ];
 
   // Don't delete the dist folder inside of installed packages
   if (process.cwd() === dirs.topLevel) {
