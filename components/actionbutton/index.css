@@ -1,5 +1,5 @@
 /*
-Copyright 2019 Adobe. All rights reserved.
+Copyright 2023 Adobe. All rights reserved.
 This file is licensed to you under the Apache License, Version 2.0 (the "License");
 you may not use this file except in compliance with the License. You may obtain a copy
 of the License at http://www.apache.org/licenses/LICENSE-2.0
@@ -181,7 +181,7 @@ a.spectrum-ActionButton {
 
   width: var(--mod-actionbutton-icon-size, var(--spectrum-actionbutton-icon-size));
   height: var(--mod-actionbutton-icon-size, var(--spectrum-actionbutton-icon-size));
-  
+
   /* adjust icon positioning to match UI kit */
   margin-inline-start: calc(-1 * (var(--mod-actionbutton-edge-to-text, var(--spectrum-actionbutton-edge-to-text)) - var(--mod-actionbutton-edge-to-visual, var(--spectrum-actionbutton-edge-to-visual))));
 

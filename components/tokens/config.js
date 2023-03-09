@@ -1,5 +1,5 @@
 /*
-Copyright 2022 Adobe. All rights reserved.
+Copyright 2023 Adobe. All rights reserved.
 This file is licensed to you under the Apache License, Version 2.0 (the 'License');
 you may not use this file except in compliance with the License. You may obtain a copy
 of the License at http://www.apache.org/licenses/LICENSE-2.0
@@ -16,7 +16,7 @@ const CSSSetsFormatter = require('style-dictionary-sets').CSSSetsFormatter;
 const NameKebabTransfom = require('style-dictionary-sets').NameKebabTransfom;
 const AttributeSetsTransform = require('style-dictionary-sets').AttributeSetsTransform;
 
-/** 
+/**
  * @note This references the package.json because we want the root folder and
  * not a nested folder which might be returned if the `main` property
  * in the package.json is present.

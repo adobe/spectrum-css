@@ -1,5 +1,5 @@
 /*
-Copyright 2019 Adobe. All rights reserved.
+Copyright 2023 Adobe. All rights reserved.
 This file is licensed to you under the Apache License, Version 2.0 (the "License");
 you may not use this file except in compliance with the License. You may obtain a copy
 of the License at http://www.apache.org/licenses/LICENSE-2.0
@@ -440,11 +440,11 @@ governing permissions and limitations under the License.
 
   border-radius: var(--spectrum-cssexample-border-radius) var(--spectrum-cssexample-border-radius) 0 0;
 
-  &:has(> .spectrum-CSSExample-example-staticWhite) { 
+  &:has(> .spectrum-CSSExample-example-staticWhite) {
     background-color: var(--spectrum-docs-static-white-background-color);
     border-color: var(--spectrum-docs-static-white-background-color);
   }
-  &:has(> .spectrum-CSSExample-example-staticBlack) { 
+  &:has(> .spectrum-CSSExample-example-staticBlack) {
     background-color: var(--spectrum-docs-static-black-background-color);
     border-color: var(--spectrum-docs-static-black-background-color);
   }
