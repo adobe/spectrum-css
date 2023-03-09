@@ -106,7 +106,7 @@ Object.defineProperty(SpectrumSwitcher.prototype, 'theme', {
           prismDarkLink.setAttribute('rel', 'stylesheet');
           prismDarkLink.setAttribute('data-prism-dark', '');
           prismDarkLink.setAttribute('type', 'text/css');
-          prismDarkLink.setAttribute('href', 'css/prism/prism-dark.css');
+          prismDarkLink.setAttribute('href', 'css/prism/prism-dark.min.css');
         }
 
         prismLink.parentElement.insertBefore(prismDarkLink, prismLink.nextElementSibling);
