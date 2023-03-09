@@ -2,7 +2,7 @@
 import { Template } from "./template";
 
 export default {
-  title: "Treeview",
+  title: "Tree View",
   description: "The typical usage of a treeview involves nesting a .spectrum-Treeview element within the .spectrum-TreeView-item parent element.",
   component: "Treeview",
   argTypes: {
@@ -90,6 +90,12 @@ Default.args = {
               id: "label4",
               label: "Label 4",
               link: "#"
+            },
+            {
+              id: "group4",
+              label: "Group 4 (Empty)",
+              link: "#",
+              items: []
             },
           ]
         },
@@ -221,6 +227,15 @@ WithSections.args = {
           link: "#",
         },
       ]
+    },
+    {
+      type: "heading",
+      label: "Section 2",
+    },
+    {
+      id: "label4",
+      label: "Label 4",
+      link: "#",
     },
   ]
 };
