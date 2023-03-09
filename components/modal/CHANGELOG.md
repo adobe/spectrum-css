@@ -3,6 +3,16 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+<a name="3.0.32"></a>
+## 3.0.32
+🗓 2023-03-09 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/modal@3.0.31...@spectrum-css/modal@3.0.32)
+
+**Note:** Version bump only for package @spectrum-css/modal
+
+
+
+
+
 <a name="3.0.31"></a>
 ## 3.0.31
 🗓 2023-02-21 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/modal@3.0.30...@spectrum-css/modal@3.0.31)

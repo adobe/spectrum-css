@@ -3,6 +3,16 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+<a name="4.0.30"></a>
+## 4.0.30
+🗓 2023-03-09 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/table@4.0.29...@spectrum-css/table@4.0.30)
+
+**Note:** Version bump only for package @spectrum-css/table
+
+
+
+
+
 <a name="4.0.29"></a>
 ## 4.0.29
 🗓 2023-02-21 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/table@4.0.28...@spectrum-css/table@4.0.29)
