@@ -61,6 +61,16 @@ export default {
       },
       control: "boolean"
     },
+    grows: {
+      name: "Grows",
+      type: { name: "boolean" },
+      table: {
+        type: { summary: "boolean" },
+        category: "Component",
+      },
+      control: "boolean",
+      if: { arg: "multiline", truthy: true }
+    },
     iconName: {
       table: { disable: true },
     },
@@ -112,6 +122,7 @@ export default {
     isFocused: false,
     isKeyboardFocused: false,
     multiline: false,
+    grows: false,
     isQuiet: false,
   },
   parameters: {
@@ -128,3 +139,10 @@ export default {
 
 export const Default = Template.bind({});
 Default.args = {};
+
+export const TextArea = Template.bind({});
+TextArea.args = {
+  multiline: true,
+  grows: true,
+  value: "Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt."
+};

@@ -1,6 +1,7 @@
 import { html } from "lit-html";
 import { ifDefined } from "lit-html/directives/if-defined.js";
 import { classMap } from "lit-html/directives/class-map.js";
+import { styleMap } from "lit-html/directives/style-map.js";
 
 import { Template as Icon } from '@spectrum-css/icon/stories/template.js';
 
@@ -15,6 +16,7 @@ export const Template = ({
   isInvalid = false,
   isValid = false,
   multiline = false,
+  grows = false,
   isQuiet = false,
   isFocused = false,
   isDisabled = false,
@@ -29,6 +31,9 @@ export const Template = ({
   type = "text",
   autocomplete = true,
   onclick,
+  styles = {
+    "--spectrum-textfield-border-color": "rgb(0,0,0)"
+  },
   ...globals
 }) => {
 
@@ -40,6 +45,7 @@ export const Template = ({
       [rootClass]: true,
       [`${rootClass}--size${size?.toUpperCase()}`]: typeof size !== "undefined",
       [`${rootClass}--multiline`]: multiline,
+      [`${rootClass}--grows`]: grows,
       [`${rootClass}--quiet`]: isQuiet,
       'is-invalid': isInvalid,
       'is-valid': isValid,
@@ -48,6 +54,7 @@ export const Template = ({
       'is-disabled': isDisabled,
       ...customClasses.reduce((a, c) => ({ ...a, [c]: true }), {}),
     })}
+      style=${ifDefined(styleMap(styles))}
       @click=${onclick}>
       ${iconName ? Icon({
         ...globals,
@@ -58,6 +65,25 @@ export const Template = ({
           ...customIconClasses,
         ],
       }) : ""}
+      ${multiline ?
+        html`
+        ${grows ? html`<div id="sizer">${ifDefined(value)}</div>` : ""}
+        <textarea
+        placeholder=${ifDefined(placeholder)}
+        name=${ifDefined(name)}
+        .value=${ifDefined(value)}
+        autocomplete=${autocomplete ? undefined : "off"}
+        ?required=${isRequired}
+        ?disabled=${isDisabled}
+        readonly=${ifDefined(isReadOnly ? "readonly" : undefined)}
+        pattern=${ifDefined(pattern)}
+        class=${classMap({
+          [`${rootClass}-input`]: true,
+          ...customInputClasses.reduce((a, c) => ({ ...a, [c]: true }), {}),
+        })}
+        />`
+      :
+      html`
       <input
         type=${ifDefined(type)}
         placeholder=${ifDefined(placeholder)}
@@ -72,7 +98,8 @@ export const Template = ({
           [`${rootClass}-input`]: true,
           ...customInputClasses.reduce((a, c) => ({ ...a, [c]: true }), {}),
         })}
-      />
+      />`
+      }
     </div>
   `;
 };
