@@ -560,7 +560,8 @@ governing permissions and limitations under the License.
   }
 }
 
-.spectrum-Stepper-input {
+/* Only remove input border if stepper is visible */
+.spectrum-Stepper:not(.hide-stepper) .spectrum-Stepper-input {
   min-inline-size: 0;
   border-start-end-radius: 0;
   border-end-end-radius: 0;

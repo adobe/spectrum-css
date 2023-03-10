@@ -16,6 +16,7 @@ export const Template = ({
   isKeyboardFocused = false,
   isInvalid = false,
   isDisabled = false,
+  hideStepper = false,
   customClasses = [],
   id,
   style = {
@@ -31,13 +32,14 @@ export const Template = ({
       'is-keyboardFocused': isKeyboardFocused,
       'is-invalid': isInvalid,
       'is-disabled': isDisabled,
+      'hide-stepper': hideStepper,
       ...customClasses.reduce((a, c) => ({ ...a, [c]: true }), {}),
     })} id=${ifDefined(id)}
     style=${ifDefined(styleMap(style))}
     >
       ${Textfield({
         ...globals,
-        placeholder: "100",
+        placeholder: "1",
         min: "-2",
         max: "2",
         step: "0.5",
@@ -46,10 +48,12 @@ export const Template = ({
         customClasses: [`${rootClass}-textfield`],
         customInputClasses: [`${rootClass}-input`],
       })}
-      <span class="${rootClass}-buttons">
+      ${hideStepper ? "" :
+      html`<span class="${rootClass}-buttons">
         ${ActionButton({ ...globals, customClasses: [`${rootClass}-stepUp`], iconName: 'ChevronUp75', isDisabled, isQuiet })}
         ${ActionButton({ ...globals, customClasses: [`${rootClass}-stepDown`], iconName: 'ChevronDown75', isDisabled, isQuiet })}
-      </span>
+      </span>`
+      }
     </div>
   `;
 };

@@ -16,6 +16,15 @@ export default {
       },
       control: "boolean",
     },
+    hideStepper: {
+      name: "Hide Stepper",
+      type: { name: "boolean" },
+      table: {
+        type: { summary: "boolean" },
+        category: "State",
+      },
+      control: "boolean",
+    },
     isDisabled: {
       name: "Disabled",
       type: { name: "boolean" },
@@ -74,4 +83,9 @@ export default {
 };
 
 export const Default = Template.bind({});
-Default.args = {};
+Default.args = {}
+
+export const HideStepper = Template.bind({});
+HideStepper.args = {
+  hideStepper: true
+};
