@@ -51,7 +51,7 @@ export const Template = ({
       'is-invalid': isInvalid,
       'is-valid': isValid,
       'is-focused': isFocused,
-      'is-keyboardFocused': isFocused,
+      'is-keyboardFocused': isKeyboardFocused,
       'is-disabled': isDisabled,
       ...customClasses.reduce((a, c) => ({ ...a, [c]: true }), {}),
     })}
