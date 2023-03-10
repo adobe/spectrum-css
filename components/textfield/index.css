@@ -356,6 +356,10 @@ governing permissions and limitations under the License.
 
     color: var(--highcontrast-textfield-text-color-default, var(--mod-textfield-text-color-default, var(--spectrum-textfield-text-color-default)));
 
+    &.spectrum-Search-icon {
+      right: auto;
+    }
+    
     .spectrum-Textfield.is-disabled & {
       color: var(--highcontrast-textfield-text-color-disabled, var(--mod-textfield-text-color-disabled, var(--spectrum-textfield-text-color-disabled)));
     }
