@@ -85,7 +85,7 @@ examples:
     markup: |
       <div class="spectrum-Textfield spectrum-Textfield--sizeS">
         <label for="textfield-sm" class="spectrum-FieldLabel spectrum-FieldLabel--sizeS">Password</label>
-        <span id="character-count-1" class="spectrum-Textfield-character-count">50</span>
+        <span id="character-count-1" class="spectrum-Textfield-characterCount">50</span>
         <input id="textfield-sm" type="text" name="field" value="" class="spectrum-Textfield-input" pattern=".{8,}" aria-describedby="helptext-1 character-count-1">
         <div class="spectrum-HelpText spectrum-HelpText--sizeS spectrum-HelpText--neutral">
           <div id="helptext-size-small" class="spectrum-HelpText-text">Create a password with at least 8 characters.</div>
@@ -94,7 +94,7 @@ examples:
 
       <div class="spectrum-Textfield spectrum-Textfield--sizeM">
         <label for="textfield-md" class="spectrum-FieldLabel spectrum-FieldLabel--sizeM">Password</label>
-        <span id="character-count-2" class="spectrum-Textfield-character-count">50</span>
+        <span id="character-count-2" class="spectrum-Textfield-characterCount">50</span>
         <input id="textfield-m" type="text" name="field" value="" class="spectrum-Textfield-input" pattern=".{8,}" aria-describedby="helptext-2 character-count-2">
         <div class="spectrum-HelpText spectrum-HelpText--sizeM spectrum-HelpText--neutral">
           <div class="spectrum-HelpText-text">Create a password with at least 8 characters.</div>
@@ -103,7 +103,7 @@ examples:
 
       <div class="spectrum-Textfield spectrum-Textfield--sizeL">
         <label for="textfield-l" class="spectrum-FieldLabel spectrum-FieldLabel--sizeL">Password</label>
-        <span id="character-count-3" class="spectrum-Textfield-character-count">50</span>
+        <span id="character-count-3" class="spectrum-Textfield-characterCount">50</span>
         <input id="textfield-l" type="text" name="field" value="" class="spectrum-Textfield-input" pattern=".{8,}" aria-describedby="helptext-3 character-count-3">
         <div class="spectrum-HelpText spectrum-HelpText--sizeL spectrum-HelpText--neutral">
           <div class="spectrum-HelpText-text">Create a password with at least 8 characters.</div>
@@ -112,7 +112,7 @@ examples:
 
       <div class="spectrum-Textfield spectrum-Textfield--sizeXL">
         <label for="textfield-xl" class="spectrum-FieldLabel spectrum-FieldLabel--sizeXL">Password</label>
-        <span id="character-count-4" class="spectrum-Textfield-character-count">50</span>
+        <span id="character-count-4" class="spectrum-Textfield-characterCount">50</span>
         <input id="textfield-xl" type="text" name="field" value="" class="spectrum-Textfield-input" pattern=".{8,}" aria-describedby="helptext-4 character-count-4">
          <div class="spectrum-HelpText spectrum-HelpText--sizeXL spectrum-HelpText--neutral">
           <div class="spectrum-HelpText-text">Create a password with at least 8 characters.</div>
@@ -135,16 +135,16 @@ examples:
     markup: |
       <div class="spectrum-Textfield">
         <label for="textfield-1" class="spectrum-FieldLabel spectrum-FieldLabel--sizeM">Enter your name</label>
-        <span id="character-count-6" class="spectrum-Textfield-character-count">50</span>
+        <span id="character-count-6" class="spectrum-Textfield-characterCount">50</span>
         <input id="textfield-1" type="text" name="field" value="Lisa Wilson" class="spectrum-Textfield-input" pattern="[\w\s]+" aria-describedby="helptext-6 character-count-6">
       </div>
 
   - id: textfield-sidelabel
     name: Textfield with Side Label
     markup: |
-      <div class="spectrum-Textfield spectrum-Textfield--sidelabel">
+      <div class="spectrum-Textfield spectrum-Textfield--sideLabel">
         <label for="textfield-md-sidelabel" class="spectrum-FieldLabel spectrum-FieldLabel--sizeM">Password</label>
-        <span id="character-count-7" class="spectrum-Textfield-character-count">50</span>
+        <span id="character-count-7" class="spectrum-Textfield-characterCount">50</span>
         <input id="textfield-md-sidelabel" type="text" name="field" value="" class="spectrum-Textfield-input" pattern=".{8,}" aria-describedby="helptext-7 character-count-7">
         <div class="spectrum-HelpText spectrum-HelpText--sizeM spectrum-HelpText--neutral">
           <div class="spectrum-HelpText-text">Create a password with at least 8 characters.</div>
