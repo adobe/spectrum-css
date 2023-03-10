@@ -140,11 +140,6 @@ export default {
 export const Default = Template.bind({});
 Default.args = {};
 
-export const WithIcon = Template.bind({});
-WithIcon.args = {
-  iconName: "Magnify"
-};
-
 export const TextArea = Template.bind({});
 TextArea.args = {
   multiline: true,
