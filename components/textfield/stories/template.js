@@ -32,7 +32,8 @@ export const Template = ({
   autocomplete = true,
   onclick,
   styles = {
-    "--spectrum-textfield-border-color": "rgb(0,0,0)"
+    "--spectrum-textfield-border-color": "rgb(0,0,0)",
+    "--spectrum-textfield-border-width": "1px"
   },
   ...globals
 }) => {
@@ -67,7 +68,6 @@ export const Template = ({
       }) : ""}
       ${multiline ?
         html`
-        ${grows ? html`<div id="sizer">${ifDefined(value)}</div>` : ""}
         <textarea
         placeholder=${ifDefined(placeholder)}
         name=${ifDefined(name)}
