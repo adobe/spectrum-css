@@ -458,7 +458,7 @@ governing permissions and limitations under the License.
 }
 
 /********* Child Element - Character Count *********/
-.spectrum-Textfield-character-count {
+.spectrum-Textfield-characterCount {
   display: inline-flex;
   align-items: flex-end;
   justify-content: flex-end;
@@ -728,7 +728,7 @@ governing permissions and limitations under the License.
 }
 
 /*** Layout Variant - Side Label ***/
-.spectrum-Textfield--sidelabel {
+.spectrum-Textfield--sideLabel {
   grid-template-columns: auto auto auto;
   grid-template-rows: auto auto;
 
@@ -744,7 +744,7 @@ governing permissions and limitations under the License.
     grid-column: 1/span 1;
   }
 
-  .spectrum-Textfield-character-count {
+  .spectrum-Textfield-characterCount {
     align-items: flex-start;
     margin-block-start: var(--mod-textfield-character-count-spacing-block-side, var(--spectrum-textfield-character-count-spacing-block-side));
     margin-inline-start: var(--mod-textfield-character-count-spacing-inline-side, var(--spectrum-textfield-character-count-spacing-inline-side));
