@@ -66,9 +66,9 @@ governing permissions and limitations under the License.
 }
 
 .spectrum-ColorLoupe-outer-border {
-  fill: white;
+  fill: none;
   stroke: var(--spectrum-colorloupe-outer-border-color);
-  stroke-width: var(--spectrum-colorloupe-outer-border-width);
+  stroke-width: calc(var(--spectrum-colorloupe-outer-border-width) + var(--spectrum-colorloupe-inner-border-width));
 }
 
 .spectrum-ColorLoupe-express {
