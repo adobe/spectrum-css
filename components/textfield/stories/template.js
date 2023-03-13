@@ -53,6 +53,7 @@ export const Template = ({
       'is-focused': isFocused,
       'is-keyboardFocused': isKeyboardFocused,
       'is-disabled': isDisabled,
+      'is-readOnly': isReadOnly,
       ...customClasses.reduce((a, c) => ({ ...a, [c]: true }), {}),
     })}
       style=${ifDefined(styleMap(styles))}
@@ -75,7 +76,7 @@ export const Template = ({
         autocomplete=${autocomplete ? undefined : "off"}
         ?required=${isRequired}
         ?disabled=${isDisabled}
-        readonly=${ifDefined(isReadOnly ? "readonly" : undefined)}
+        ?readonly=${ifDefined(isReadOnly)}
         pattern=${ifDefined(pattern)}
         class=${classMap({
           [`${rootClass}-input`]: true,
