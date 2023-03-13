@@ -137,17 +137,15 @@ governing permissions and limitations under the License.
 
 .spectrum-Accordion-item {
   &.is-open {
-    > .spectrum-Accordion-itemHeading {
-      > .spectrum-Accordion-itemIndicator {
-        transform: logical rotate(90deg);
-      }
-    }
-
-    > .spectrum-Accordion-itemIndicator {
+    & > .spectrum-Accordion-itemHeading > .spectrum-Accordion-itemIndicator {
       transform: logical rotate(90deg);
     }
 
-    > .spectrum-Accordion-itemHeader::after {
+    & > .spectrum-Accordion-itemIndicator {
+      transform: logical rotate(90deg);
+    }
+
+    & > .spectrum-Accordion-itemHeader::after {
       /* No bottom border when open, so be less tall */
       block-size: calc(
         100% -
@@ -155,13 +153,13 @@ governing permissions and limitations under the License.
       );
     }
 
-    > .spectrum-Accordion-itemContent {
+    & > .spectrum-Accordion-itemContent {
       display: block;
     }
   }
 
   &.is-disabled {
-    .spectrum-Accordion-itemHeader {
+    & .spectrum-Accordion-itemHeader {
       cursor: default;
     }
   }

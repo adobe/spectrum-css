@@ -191,7 +191,7 @@ governing permissions and limitations under the License.
     font-size: var(--mod-breadcrumbs-font-size-compact, var(--spectrum-breadcrumbs-font-size-compact));
     font-weight: var(--mod-breadcrumbs-font-weight-compact, var(--spectrum-breadcrumbs-font-weight-compact));
 
-    > .spectrum-ActionButton {
+    & > .spectrum-ActionButton {
       margin-block: var(--mod-breadcrumbs-action-button-spacing-block-compact, var(--spectrum-breadcrumbs-action-button-spacing-block-compact));
     }
   }
@@ -206,7 +206,7 @@ governing permissions and limitations under the License.
       inline-size: 100%;
     }
 
-    > .spectrum-ActionButton {
+    & > .spectrum-ActionButton {
       margin-block-start: var(--mod-breadcrumbs-action-button-spacing-block-multiline, var(--spectrum-breadcrumbs-action-button-spacing-block-multiline));
       margin-block-end: var(--mod-breadcrumbs-action-button-spacing-block-between-multiline, var(--spectrum-breadcrumbs-action-button-spacing-block-between-multiline));
     }
@@ -217,7 +217,7 @@ governing permissions and limitations under the License.
     font-size: var(--mod-breadcrumbs-font-size-current, var(--spectrum-breadcrumbs-font-size-current));
     font-weight: var(--mod-breadcrumbs-font-weight-current, var(--spectrum-breadcrumbs-font-weight-current));
 
-    .spectrum-Breadcrumbs-itemSeparator {
+    & .spectrum-Breadcrumbs-itemSeparator {
       display: none;
     }
   }
@@ -233,13 +233,13 @@ governing permissions and limitations under the License.
     font-size: var(--mod-breadcrumbs-font-size-multiline-current, var(--spectrum-breadcrumbs-font-size-multiline-current));
     font-weight: var(--mod-breadcrumbs-font-weight-multiline-current, var(--spectrum-breadcrumbs-font-weight-multiline-current));
 
-    .spectrum-Breadcrumbs-itemLink {
+    & .spectrum-Breadcrumbs-itemLink {
       margin-block-start: 0;
       margin-block-end: var(--mod-breadcrumbs-text-spacing-block-end-multiline, var(--spectrum-breadcrumbs-text-spacing-block-end-multiline));
     }
   }
 
-  > .spectrum-ActionButton {
+  & > .spectrum-ActionButton {
     margin-inline: var(--mod-breadcrumbs-action-button-spacing-inline, var(--spectrum-breadcrumbs-action-button-spacing-inline));
     margin-block: var(--mod-breadcrumbs-action-button-spacing-block, var(--spectrum-breadcrumbs-action-button-spacing-block));
 
@@ -250,11 +250,9 @@ governing permissions and limitations under the License.
     }
   }
 
-  &:first-of-type {
-    /* if folder icon is first item */
-    > .spectrum-ActionButton {
-      margin-inline-start: var(--mod-breadcrumbs-action-button-spacing-inline-start, var(--spectrum-breadcrumbs-action-button-spacing-inline-start));
-    }
+  /* if folder icon is first item */
+  &:first-of-type > .spectrum-ActionButton {
+    margin-inline-start: var(--mod-breadcrumbs-action-button-spacing-inline-start, var(--spectrum-breadcrumbs-action-button-spacing-inline-start));
   }
 }
 

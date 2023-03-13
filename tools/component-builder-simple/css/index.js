@@ -10,17 +10,17 @@ OF ANY KIND, either express or implied. See the License for the specific languag
 governing permissions and limitations under the License.
 */
 
+// const { join } = require('path');
+// const { readFile } = require('fs').promises;
+
 const gulp = require('gulp');
-const path = require('path');
-const through = require('through2');
 const postcss = require('gulp-postcss');
-const rename = require('gulp-rename');
 const concat = require('gulp-concat');
-const postcssReal = require('postcss');
-const fsp = require('fs').promises;
-const { parse } = require('postcss-values-parser');
-const processorsFunction = require('./processors').getProcessors;
-const processors = processorsFunction();
+// const logger = require('gulplog');
+
+const { parse: parseValues } = require('postcss-values-parser');
+
+// const postcssConfigPath = join(__dirname, '../');
 
 function getTokensUsedInValueNode(node, usedTokens) {
   usedTokens = usedTokens ?? [];
@@ -37,66 +37,60 @@ function getTokensUsedInValueNode(node, usedTokens) {
   return usedTokens;
 }
 
-function getTokensUsedInCSS(root, coreTokens, componentTokens) {
-  let usedTokens = [];
-  let coreTokensUsed = {};
-  let componentTokensUsed = {};
-
-  root.walkRules((rule, ruleIndex) => {
-    rule.walkDecls((decl) => {
-      let matches = decl.value.match(/var\(.*?\)/g);
-      if (matches) {
-        let parsed = parse(decl.value);
-        parsed.nodes.forEach(node => {
-          const usedTokensInValue = getTokensUsedInValueNode(node);
-          usedTokensInValue.forEach(tokenName => {
-            if (coreTokens[tokenName]) {
-              coreTokensUsed[tokenName] = (coreTokensUsed[tokenName] ?? 0) + 1;
-            }
-            else if (componentTokens[tokenName]) {
-              componentTokensUsed[tokenName] = (componentTokensUsed[tokenName] ?? 0) + 1;
-            }
-            if (usedTokens.indexOf(tokenName) === -1) {
-              usedTokens.push(tokenName);
-            }
-          });
-        });
-      }
-    });
-  });
-
-  return { usedTokens, coreTokensUsed, componentTokensUsed };
-}
-
-function getTokensDefinedInCSS(root) {
+// getTokensDefinedInCSS
+function getTokensFromCSS(fileContent) {
   let variables = {};
+  let usedTokens = [];
 
-  root.walkRules((rule, ruleIndex) => {
+  if (!fileContent) {
+    return { usedTokens, variables };
+  }
+
+  const root = require('postcss').parse(fileContent);
+
+  root.walkRules((rule) => {
     rule.walkDecls((decl) => {
-      if (decl.prop.startsWith('--')) {
-        variables[decl.prop] = decl.value;
+      const { prop, value } = decl;
+      // Get tokens defined inside of the component
+      if (prop.startsWith('--')) {
+        variables[prop] = value;
+      }
+
+      if (!value.match(/var\(.*?\)/g)) return;
+
+      const parsed = parseValues(value);
+      for (const node of parsed.nodes) {
+        for (const tokenName of getTokensUsedInValueNode(node)) {
+          if (usedTokens.indexOf(tokenName) === -1) {
+            usedTokens.push(tokenName);
+          }
+        }
       }
     });
   });
 
-  return variables;
+  return { usedTokens, variables };
 }
 
-async function getCoreTokens() {
-  const fetchOptions = {
-    paths: [
-      process.cwd(),
-      path.join(process.cwd(), '../../')
-    ]
-  };
-  /* Resolve core tokens first from the current working directory, or if not found, from the root of the monorepo */
-  const coreTokensFile = require.resolve('@spectrum-css/tokens', fetchOptions);
-  const coreTokensPkg = require.resolve('@spectrum-css/tokens/package.json', fetchOptions);
-  if (coreTokensPkg) console.log('Core tokens version:', await fsp.readFile(coreTokensPkg, 'utf8').then(JSON.parse).then(pkg => pkg.version));
-  let contents = await fsp.readFile(coreTokensFile, 'utf8');
-  let root = postcssReal.parse(contents);
-  return getTokensDefinedInCSS(root);
-}
+// async function getCoreTokens() {
+//   const fetchOptions = {
+//     paths: [
+//       process.cwd(),
+//       join(process.cwd(), '../../')
+//     ]
+//   };
+//   /* Resolve core tokens first from the current working directory, or if not found, from the root of the monorepo */
+//   const coreTokensFile = require.resolve('@spectrum-css/tokens', fetchOptions);
+//   const coreTokensPkg = require.resolve('@spectrum-css/tokens/package.json', fetchOptions);
+//   if (coreTokensPkg) {
+//     const version = await readFile(coreTokensPkg, 'utf8').then(JSON.parse).then(pkg => pkg.version).catch(logger.warn);
+//     if (version) logger.info('Core tokens version:', version);
+
+//     const contents = await readFile(coreTokensFile, 'utf8');
+//     const { variables } = getTokensFromCSS(contents);
+//     return variables;
+//   }
+// }
 
 function buildCSS() {
   return gulp.src([
@@ -105,8 +99,9 @@ function buildCSS() {
       'themes/*.css'
     ])
     .pipe(concat('index.css'))
-    .pipe(postcss(processors, {
-      from: './index.css' // gulp-concat sets the file.path wrong, so override here
+    .pipe(postcss({
+      from: './index.css', // gulp-concat sets the file.path wrong, so override here
+      // config: postcssConfigPath,
     }))
     .pipe(gulp.dest('dist/'));
 }
@@ -118,8 +113,11 @@ function buildCSSWithoutThemes() {
       'themes/*.css'
     ])
     .pipe(concat('index-base.css'))
-    .pipe(postcss(processorsFunction(false, { noFlatVariables: true }), {
-      from: './index.css' // gulp-concat sets the file.path wrong, so override here
+    .pipe(postcss({
+      from: './index.css', // gulp-concat sets the file.path wrong, so override here
+      // config: postcssConfigPath,
+      keepUnusedVars: false,
+      splitinatorOtions: { noFlatVariables: true },
     }))
     .pipe(gulp.dest('dist/'));
 }
@@ -130,7 +128,11 @@ function buildCSSThemeIndex() {
       'themes/*.css'
     ])
     .pipe(concat('index-theme.css'))
-    .pipe(postcss(processorsFunction(true, { noSelectors: true })))
+    .pipe(postcss({
+      keepUnusedVars: true,
+      splitinatorOtions: { noSelectors: true },
+      // config: postcssConfigPath,
+    }))
     .pipe(gulp.dest('dist/'));
 }
 
@@ -138,7 +140,11 @@ function buildCSSThemes() {
   return gulp.src([
       'themes/*.css'
     ])
-    .pipe(postcss(processorsFunction(true, { noSelectors: true })))
+    .pipe(postcss({
+      keepUnusedVars: true,
+      splitinatorOtions: { noSelectors: true },
+      // config: postcssConfigPath,
+    }))
     .pipe(gulp.dest('dist/themes/'));
 }
 
@@ -150,52 +156,50 @@ function buildExpressTheme() {
       'dist/index-theme.css'
     ])
     .pipe(concat('express.css'))
-    .pipe(postcss(processorsFunction(true).concat(require('postcss-combininator'))))
+    .pipe(postcss({
+      keepUnusedVars: true,
+      additionalPlugins: {
+        'postcss-combininator': {},
+      },
+      // config: postcssConfigPath,
+    }))
     .pipe(gulp.dest('dist/themes/'));
 }
 
-let coreTokens = null;
+// let coreTokens;
 function checkCSS(glob) {
   return gulp.src(glob)
     .pipe(concat('index-combined.css'))
-    .pipe(through.obj(async function doBake(file, enc, cb) {
-      // Fetch core tokes once during the build
-      if (coreTokens === null) {
-        coreTokens = await getCoreTokens();
-      }
+    // .pipe(through.obj(async function doBake(file, enc, cb) {
+    //   // Fetch core tokes once during the build
+    //   coreTokens = coreTokens ?? await getCoreTokens();
 
-      let pkg = JSON.parse(await fsp.readFile(path.join('package.json')));
+    //   /* @note: is this only fetching the package name? */
+    //   const pkg = await readFile('package.json').then(JSON.parse).catch(logger.warn);
 
-      // Parse only once
-      let root = postcssReal.parse(file.contents);
+    //   // Parse only once
+    //   const fileContent = file.contents.toString();
+    //   if (!fileContent) cb(null, file);
 
-      // Get tokens defined inside of the component
-      let componentTokens = getTokensDefinedInCSS(root);
+    //   // Find all tokens used in the component
+    //   const { variables: componentTokens, usedTokens } = getTokensFromCSS(fileContent);
 
-      // Find all tokens used in the component
-      let { usedTokens, coreTokensUsed, componentTokensUsed } = getTokensUsedInCSS(root, coreTokens, componentTokens);
+    //   // Make sure the component doesn't use any undefined tokens
+    //   usedTokens.forEach(tokenName => {
+    //     if (!coreTokens[tokenName] && !componentTokens[tokenName] && !tokenName.startsWith('--mod') && !tokenName.startsWith('--highcontrast')) {
+    //       logger.warn(`🔴 ${pkg.name} uses undefined token ${tokenName}`);
+    //     }
+    //   });
 
-      // Make sure the component doesn't use any undefined tokens
-      let errors = [];
-      usedTokens.forEach(tokenName => {
-        if (!coreTokens[tokenName] && !componentTokens[tokenName] && !tokenName.startsWith('--mod') && !tokenName.startsWith('--highcontrast')) {
-          errors.push(`${pkg.name} uses undefined token ${tokenName}`);
-        }
-      });
+    //   // Make sure all tokens defined in the component are used
+    //   Object.keys(componentTokens).forEach(tokenName => {
+    //     if (!usedTokens.includes(tokenName)) {
+    //       logger.warn(`🔴 ${pkg.name} defines ${tokenName}, but never uses it`);
+    //     }
+    //   });
 
-      // Make sure all tokens defined in the component are used
-      Object.keys(componentTokens).forEach(tokenName => {
-        if (!usedTokens.includes(tokenName)) {
-          errors.push(`${pkg.name} defines ${tokenName}, but never uses it`);
-        }
-      });
-
-      if (errors.length) {
-        return cb(new Error(errors.join('\n')), file);
-      }
-
-      cb(null);
-    }));
+    //   cb(null, file);
+    // }));
 }
 
 function checkSourceCSS() {

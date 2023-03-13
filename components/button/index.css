@@ -144,7 +144,7 @@ a.spectrum-Button {
 
 .spectrum-Button {
   &:focus-ring,
-  &.is-focused {
+  &:focus-within {
     &:after {
       box-shadow: 0 0 0 var(--mod-button-focus-ring-thickness, var(--spectrum-button-focus-ring-thickness)) var(--mod-button-focus-ring-color, var(--spectrum-button-focus-indicator-color));
     }
@@ -208,8 +208,7 @@ a.spectrum-Button {
     color: var(--highcontrast-button-content-color-down, var(--mod-button-content-color-down, var(--spectrum-button-content-color-down)));
   }
 
-  &:disabled,
-  &.is-disabled {
+  &:disabled {
     background-color: var(--highcontrast-button-background-color-disabled, var(--mod-button-background-color-disabled, var(--spectrum-button-background-color-disabled)));
     border-color: var(--highcontrast-button-border-color-disabled, var(--mod-button-border-color-disabled, var(--spectrum-button-border-color-disabled)));
     color: var(--highcontrast-button-content-color-disabled, var(--mod-button-content-color-disabled, var(--spectrum-button-content-color-disabled)));
@@ -219,34 +218,30 @@ a.spectrum-Button {
 /* windows high contrast mode over-writes for accent variant */
 @media (forced-colors: active) {
   .spectrum-Button {
-    &:focus-ring {
-      &:after {
-        forced-color-adjust: none;
-        box-shadow: 0 0 0 var(--mod-button-focus-ring-thickness, var(--spectrum-button-focus-ring-thickness)) ButtonText;
-      }
+    &:focus-ring::after {
+      forced-color-adjust: none;
+      box-shadow: 0 0 0 var(--mod-button-focus-ring-thickness, var(--spectrum-button-focus-ring-thickness)) ButtonTExt;
     }
 
-    &.spectrum-Button--accent {
-      &.spectrum-Button--fill {
-        background-color: ButtonText;
-        color: ButtonFace;
+    &.spectrum-Button--accent.spectrum-Button--fill {
+      background-color: ButtonText;
+      color: ButtonFace;
 
-        &:disabled,
-        &.is-disabled {
-          background-color: ButtonFace;
-          color: GrayText;
-        }
+      &:disabled {
+        background-color: ButtonFace;
+        color: GrayText;
+      }
 
-        /* simplified for a lot of state for high contrast mode */
-        &:active,
-        &:hover,
-        &:focus-ring,
-        &.is-focused {
-          background-color: Highlight;
-        }
-        .spectrum-Button-label {
-          forced-color-adjust: none;
-        }
+      /* simplified for a lot of state for high contrast mode */
+      &:active,
+      &:hover,
+      &:focus-ring,
+      &:focus-within {
+        background-color: Highlight;
+      }
+
+      .spectrum-Button-label {
+        forced-color-adjust: none;
       }
     }
   }

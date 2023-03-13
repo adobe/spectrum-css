@@ -70,12 +70,12 @@ governing permissions and limitations under the License.
   overflow: hidden;
 
   &.is-open {
-    > .spectrum-TreeView-itemLink > .spectrum-TreeView-itemIndicator {
+    & > .spectrum-TreeView-itemLink > .spectrum-TreeView-itemIndicator {
       /* Rotate the chevron */
       transform: logical rotate(90deg);
     }
 
-    > .spectrum-TreeView {
+    & > .spectrum-TreeView {
       /* Open the treeview */
       block-size: auto;
       visibility: visible;
@@ -158,19 +158,18 @@ governing permissions and limitations under the License.
 }
 
 .spectrum-TreeView--standalone {
-  .spectrum-TreeView-itemLink {
-    &:before {
-      border-radius: var(--spectrum-treeview-item-border-radius);
-      border-width: var(--spectrum-treeview-item-border-size);
-    }
+  & .spectrum-TreeView-itemLink:before {
+    border-radius: var(--spectrum-treeview-item-border-radius);
+    border-width: var(--spectrum-treeview-item-border-size);
   }
 }
 
 .spectrum-TreeView--thumbnail {
-  .spectrum-TreeView-itemThumbnail {
+  & .spectrum-TreeView-itemThumbnail {
     margin-inline-end: var(--spectrum-treeview-s-item-icon-gap);
   }
-  .spectrum-TreeView-itemLink {
+
+  & .spectrum-TreeView-itemLink {
     box-sizing: content-box;
     block-size: var(--spectrum-treeview-item-affordance-size);
     padding-block-start: var(--spectrum-treeview-item-text-padding-top);
@@ -219,44 +218,10 @@ governing permissions and limitations under the License.
   visibility: hidden;
 }
 
-.spectrum-TreeView-item--indent1 {
-  padding-inline-start: var(--spectrum-treeview-item-indentation);
-}
-
-.spectrum-TreeView-item--indent2 {
-  padding-inline-start: calc(2 * var(--spectrum-treeview-item-indentation));
-}
-
-.spectrum-TreeView-item--indent3 {
-  padding-inline-start: calc(3 * var(--spectrum-treeview-item-indentation));
-}
-
-.spectrum-TreeView-item--indent4 {
-  padding-inline-start: calc(4 * var(--spectrum-treeview-item-indentation));
-}
-
-.spectrum-TreeView-item--indent5 {
-  padding-inline-start: calc(5 * var(--spectrum-treeview-item-indentation));
-}
-
-.spectrum-TreeView-item--indent6 {
-  padding-inline-start: calc(6 * var(--spectrum-treeview-item-indentation));
-}
-
-.spectrum-TreeView-item--indent7 {
-  padding-inline-start: calc(7 * var(--spectrum-treeview-item-indentation));
-}
-
-.spectrum-TreeView-item--indent8 {
-  padding-inline-start: calc(8 * var(--spectrum-treeview-item-indentation));
-}
-
-.spectrum-TreeView-item--indent9 {
-  padding-inline-start: calc(9 * var(--spectrum-treeview-item-indentation));
-}
-
-.spectrum-TreeView-item--indent10 {
-  padding-inline-start: calc(10 * var(--spectrum-treeview-item-indentation));
+@each $size in 1, 2, 3, 4, 5, 6, 7, 8, 9, 10 {
+  .spectrum-TreeView-item--indent$(size) {
+    padding-inline-start: calc($(size) * var(--spectrum-treeview-item-indentation));
+  }
 }
 
 .spectrum-TreeView-heading {

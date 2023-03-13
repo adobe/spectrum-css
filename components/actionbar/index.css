@@ -62,10 +62,8 @@ governing permissions and limitations under the License.
     --highcontrast-actionbar-popover-border-color: CanvasText;
   }
 
-  .spectrum-ActionBar--emphasized {
-    .spectrum-ActionBar-popover {
-      --highcontrast-actionbar-popover-border-color: CanvasText;
-    }
+  .spectrum-ActionBar--emphasized .spectrum-ActionBar-popover {
+    --highcontrast-actionbar-popover-border-color: CanvasText;
   }
 }
 
@@ -92,7 +90,7 @@ governing permissions and limitations under the License.
     opacity: 1;
   }
 
-  .spectrum-ActionBar-popover {
+  & .spectrum-ActionBar-popover {
     /* popover is ActionBar height */
     block-size: var(--mod-actionbar-height, var(--spectrum-actionbar-height));
     box-sizing: border-box;
@@ -119,7 +117,7 @@ governing permissions and limitations under the License.
   }
 
   /* close button */
-  .spectrum-CloseButton {
+  & .spectrum-CloseButton {
     margin-inline-start: var(--mod-actionbar-spacing-close-button-start, var(--spectrum-actionbar-spacing-close-button-start));
     margin-inline-end: var(--mod-actionbar-spacing-close-button-end, var(--spectrum-actionbar-spacing-close-button-end));
     margin-block-start: var(--mod-actionbar-spacing-close-button-top, var(--spectrum-actionbar-spacing-close-button-top));
@@ -127,7 +125,7 @@ governing permissions and limitations under the License.
   }
 
   /* item counter */
-  .spectrum-FieldLabel {
+  & .spectrum-FieldLabel {
     margin-inline-end: var(--mod-actionbar-spacing-item-counter-end, var(--spectrum-actionbar-spacing-item-counter-end));
     margin-block-start: var(--mod-actionbar-spacing-item-counter-top, var(--spectrum-actionbar-spacing-item-counter-top));
 
@@ -147,7 +145,7 @@ governing permissions and limitations under the License.
   }
 
   /* action group */
-  .spectrum-ActionGroup {
+  & .spectrum-ActionGroup {
     margin-inline-end: var(--mod-actionbar-spacing-action-group-end, var(--spectrum-actionbar-spacing-action-group-end));
     margin-block-start: var(--mod-actionbar-spacing-action-group-top, var(--spectrum-actionbar-spacing-action-group-top));
     /* align to end by default */
@@ -156,7 +154,7 @@ governing permissions and limitations under the License.
 }
 
 .spectrum-ActionBar--emphasized {
-  .spectrum-ActionBar-popover {
+  & .spectrum-ActionBar-popover {
     filter: none;
     background-color: var(--mod-actionbar-emphasized-background-color, var(--spectrum-actionbar-emphasized-background-color));
     /* border transparent instead of none so WHCM will have visible border */
@@ -164,7 +162,7 @@ governing permissions and limitations under the License.
   }
 
   /* ensure text is legible on emphasized background */
-  .spectrum-FieldLabel {
+  & .spectrum-FieldLabel {
     color: var(--mod-actionbar-emphasized-item-counter-color, var(--spectrum-actionbar-emphasized-item-counter-color));
   }
 }
@@ -180,8 +178,6 @@ governing permissions and limitations under the License.
 }
 
 /* flexible width */
-.spectrum-ActionBar--flexible {
-  .spectrum-ActionBar-popover {
-    inline-size: auto;
-  }
+.spectrum-ActionBar--flexible .spectrum-ActionBar-popover {
+  inline-size: auto;
 }

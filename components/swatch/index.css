@@ -328,12 +328,12 @@ governing permissions and limitations under the License.
   stroke: var(--highcontrast-swatch-disabled-icon-color, var(--mod-swatch-disabled-icon-color, var(--spectrum-swatch-disabled-icon-color)));
 
   /* Icon fill color */
-  path:first-child {
+  & path:first-child {
     fill: var(--highcontrast-swatch-disabled-icon-color, var(--mod-swatch-disabled-icon-color, var(--spectrum-swatch-disabled-icon-color)));
   }
 
   /* Icon outline color - does not need a highcontrast token because the icon fill color provides contrast. */
-  path:last-child {
+  & path:last-child {
     fill: var(--mod-swatch-icon-border-color, var(--spectrum-swatch-icon-border-color));
   }
 }

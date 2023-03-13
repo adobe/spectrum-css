@@ -10,8 +10,8 @@ OF ANY KIND, either express or implied. See the License for the specific languag
 governing permissions and limitations under the License.
 */
 
-@import "../vars/css/scales/spectrum-large.css";
-@import "../vars/css/scales/spectrum-medium.css";
+/* @import "../vars/css/scales/spectrum-large.css";
+@import "../vars/css/scales/spectrum-medium.css"; */
 @import "../commons/basebutton.css";
 @import "../vars/css/components/spectrum-clearbutton.css";
 
@@ -26,7 +26,7 @@ governing permissions and limitations under the License.
 
   border: none;
 
-  > .spectrum-Icon {
+  & > .spectrum-Icon {
     /* @safari10 Workaround for https://bugs.webkit.org/show_bug.cgi?id=169700 */
     margin-block: 0;
     margin-inline: auto;
@@ -172,7 +172,7 @@ governing permissions and limitations under the License.
 
 @media screen and (-ms-high-contrast: active), (-ms-high-contrast: none) {
   .spectrum-ClearButton {
-    > .spectrum-Icon {
+    & > .spectrum-Icon {
       /* @ie11 Workaround for regression caused by fix for https://bugs.webkit.org/show_bug.cgi?id=169700 */
       margin: 0;
     }

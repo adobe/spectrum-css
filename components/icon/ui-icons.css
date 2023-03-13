@@ -31,19 +31,19 @@ governing permissions and limitations under the License.
 
 /* Hide UI icons on browsers that implement SVG 2 correctly (Firefox 56+) */
 .spectrum--large {
-  x--ui-icon-large-display: block;
-  x--ui-icon-medium-display: none;
+  --ui-icon-large-display: block;
+  --ui-icon-medium-display: none;
 }
 .spectrum--medium {
-  x--ui-icon-medium-display: block;
-  x--ui-icon-large-display: none;
+  --ui-icon-medium-display: block;
+  --ui-icon-large-display: none;
 }
 
 .spectrum-UIIcon--large {
-  display: xvar(--ui-icon-large-display);
+  display: var(--ui-icon-large-display);
 }
 .spectrum-UIIcon--medium {
-  display: xvar(--ui-icon-medium-display);
+  display: var(--ui-icon-medium-display);
 }
 
 %spectrum-UIIcon--rotation90 {

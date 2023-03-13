@@ -25,49 +25,11 @@ governing permissions and limitations under the License.
   --spectrum-avatar-color-opacity-disabled: var(--spectrum-avatar-opacity-disabled);
 }
 
-.spectrum-Avatar--size50 {
-  --spectrum-avatar-inline-size: var(--spectrum-avatar-size-50);
-  --spectrum-avatar-block-size: var(--spectrum-avatar-size-50)
-}
-
-.spectrum-Avatar--size75 {
-  --spectrum-avatar-inline-size: var(--spectrum-avatar-size-75);
-  --spectrum-avatar-block-size: var(--spectrum-avatar-size-75)
-}
-
-.spectrum-Avatar--size100 {
-  --spectrum-avatar-inline-size: var(--spectrum-avatar-size-100);
-  --spectrum-avatar-block-size: var(--spectrum-avatar-size-100)
-}
-
-.spectrum-Avatar--size200 {
-  --spectrum-avatar-inline-size: var(--spectrum-avatar-size-200);
-  --spectrum-avatar-block-size: var(--spectrum-avatar-size-200)
-}
-
-.spectrum-Avatar--size300 {
-  --spectrum-avatar-inline-size: var(--spectrum-avatar-size-300);
-  --spectrum-avatar-block-size: var(--spectrum-avatar-size-300)
-}
-
-.spectrum-Avatar--size400 {
-  --spectrum-avatar-inline-size: var(--spectrum-avatar-size-400);
-  --spectrum-avatar-block-size: var(--spectrum-avatar-size-400)
-}
-
-.spectrum-Avatar--size500 {
-  --spectrum-avatar-inline-size: var(--spectrum-avatar-size-500);
-  --spectrum-avatar-block-size: var(--spectrum-avatar-size-500)
-}
-
-.spectrum-Avatar--size600 {
-  --spectrum-avatar-inline-size: var(--spectrum-avatar-size-600);
-  --spectrum-avatar-block-size: var(--spectrum-avatar-size-600)
-}
-
-.spectrum-Avatar--size700 {
-  --spectrum-avatar-inline-size: var(--spectrum-avatar-size-700);
-  --spectrum-avatar-block-size: var(--spectrum-avatar-size-700)
+@each $size in 50, 75, 100, 200, 300, 400, 500, 600, 700 {
+  .spectrum-Avatar--size$(size) {
+    --spectrum-avatar-inline-size: var(--spectrum-avatar-size-$(size));
+    --spectrum-avatar-block-size: var(--spectrum-avatar-size-$(size));
+  }
 }
 
 @media (forced-colors: active) {

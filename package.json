@@ -30,6 +30,7 @@
     "ci-all": "yarn build",
     "clean": "gulp clean",
     "dev": "NODE_ENV=development BROWSERSYNC_OPEN=true gulp dev",
+    "docs:mod": "node tasks/mod-extractor.js",
     "lint:components": "node ./tasks/packageLint.js",
     "new": "yarn workspace @spectrum-css/generator new",
     "precommit": "lint-staged",
@@ -39,7 +40,6 @@
     "release:beta-from-package": "yarn release from-package --conventional-prerelease --preid beta --pre-dist-tag beta --no-private",
     "release:site": "gulp prepareSite && gh-pages -d dist-site/ -f -e .",
     "start": "NODE_ENV=development yarn workspace @spectrum-css/preview start",
-    "docs:mod": "node tasks/mod-extractor.js",
     "test": "VRT=true run-p dev \"test:run {1}\" --",
     "test:run": "yarn workspace @spectrum-css/test run test",
     "version:build": "SCOPES=($(lerna changed)) && IFS=, SCOPE=\"${SCOPES[*]}\" && [[ \"${#SCOPES[@]}\" -gt 1 ]] && SCOPE=\"{${SCOPE}}\"; lerna run --stream --scope \"${SCOPE}\" --ignore \"@spectrum-css/{*-builder*,preview,generator,site}\" build",
@@ -47,7 +47,8 @@
   },
   "workspaces": [
     "components/*",
-    "tools/*"
+    "tools/*",
+    "plugins/*"
   ],
   "devDependencies": {
     "@adobe/focus-ring-polyfill": "^0.1.5",

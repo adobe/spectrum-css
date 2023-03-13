@@ -179,11 +179,11 @@ governing permissions and limitations under the License.
 }
 
 .spectrum-Slider--range {
-  .spectrum-Slider-value {
+  & .spectrum-Slider-value {
     user-select: text;
   }
 
-  .spectrum-Slider-track {
+  & .spectrum-Slider-track {
     &:before {
       border-start-start-radius: 0;
       border-end-start-radius: 0;
@@ -237,7 +237,7 @@ governing permissions and limitations under the License.
   inset-inline-end: var(--spectrum-slider-track-margin-offset);
   inset-block-start: calc(var(--spectrum-slider-ramp-track-height) / 2);
 
-  svg {
+  & svg {
     inline-size: 100%;
     block-size: 100%;
 
@@ -401,7 +401,7 @@ governing permissions and limitations under the License.
     border-radius: var(--spectrum-slider-tick-mark-border-radius);
   }
 
-  .spectrum-Slider-tickLabel {
+  & .spectrum-Slider-tickLabel {
     display: flex;
     align-items: center;
     justify-content: center;
@@ -416,7 +416,7 @@ governing permissions and limitations under the License.
 
   &:first-of-type,
   &:last-of-type {
-    .spectrum-Slider-tickLabel {
+    & .spectrum-Slider-tickLabel {
       display: block;
       position: absolute;
       margin-inline: 0;
@@ -426,7 +426,8 @@ governing permissions and limitations under the License.
   &:first-of-type {
     /* fix off-by-one alignment */
     inset-inline-start: calc(var(--spectrum-slider-tick-mark-width) / -2);
-    .spectrum-Slider-tickLabel {
+
+    & .spectrum-Slider-tickLabel {
       inset-inline-start: 0;
     }
   }
@@ -434,21 +435,20 @@ governing permissions and limitations under the License.
   &:last-of-type {
     /* fix off-by-one alignment */
     inset-inline-end: calc(var(--spectrum-slider-tick-mark-width) / -2);
-    .spectrum-Slider-tickLabel {
+
+    & .spectrum-Slider-tickLabel {
       inset-inline-end: 0;
     }
   }
 }
 
 
-.spectrum-Slider {
-  &.is-disabled {
-    cursor: default;
+.spectrum-Slider.is-disabled {
+  cursor: default;
 
-    .spectrum-Slider-handle {
-      cursor: default;
-      pointer-events: none;
-    }
+  & .spectrum-Slider-handle {
+    cursor: default;
+    pointer-events: none;
   }
 }
 

@@ -121,7 +121,7 @@ async function buildDocs_forDep(dep) {
         let component;
         var componentName = file.dirname.replace('/metadata', '').split('/').pop();
         try {
-          component = yaml.safeLoad(String(file.contents));
+          component = yaml.load(String(file.contents));
         } catch (safeloadError) {
           logger.error('Uh, oh... during buildDocs_forDep, yaml loading failed for'.yellow, componentName.red);
           throw safeloadError;
@@ -175,7 +175,7 @@ function buildSite_generateIndex() {
     function readYML(file, enc, cb) {
       let componentData;
       try {
-        componentData = yaml.safeLoad(String(file.contents));
+        componentData = yaml.load(String(file.contents));
       } catch (err) {
         return cb(err);
       }
@@ -248,7 +248,7 @@ function buildSite_getData() {
     let componentData;
     var componentName = file.dirname.replace('/metadata', '').split('/').pop();
     try {
-      componentData = yaml.safeLoad(String(file.contents));
+      componentData = yaml.load(String(file.contents));
     } catch (safeloadError) {
       logger.error('Uh, oh... during buildDocs_getData, yaml loading failed for'.yellow, componentName.red);
       throw safeloadError;

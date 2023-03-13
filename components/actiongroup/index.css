@@ -46,14 +46,12 @@ governing permissions and limitations under the License.
   flex-wrap: wrap;
   gap: var(--mod-actiongroup-horizontal-spacing-regular, var(--spectrum-actiongroup-horizontal-spacing-regular));
 
-  .spectrum-ActionGroup-item {
+  & .spectrum-ActionGroup-item {
     flex-shrink: 0;
   }
 
-  &:not(.spectrum-ActionGroup--vertical)&:not(.spectrum-ActionGroup--compact) {
-    .spectrum-ActionGroup-item {
-      flex-shrink: 0;
-    }
+  &:not(.spectrum-ActionGroup--vertical)&:not(.spectrum-ActionGroup--compact) .spectrum-ActionGroup-item {
+    flex-shrink: 0;
   }
 }
 
@@ -69,7 +67,7 @@ governing permissions and limitations under the License.
   &:not(.spectrum-ActionGroup--quiet) {
     flex-wrap: nowrap;
 
-    .spectrum-ActionGroup-item {
+    & .spectrum-ActionGroup-item {
       position: relative;
       border-radius: var(--mod-actiongroup-border-radius-reset, var(--spectrum-actiongroup-border-radius-reset));
       z-index: 0;
@@ -109,7 +107,7 @@ governing permissions and limitations under the License.
       }
 
 
-      .spectrum-ActionButton-label {
+      & .spectrum-ActionButton-label {
         inline-size: auto;
       }
     }
@@ -117,7 +115,7 @@ governing permissions and limitations under the License.
     &.spectrum-ActionGroup--vertical {
       gap: var(--mod-actiongroup-gap-size-compact, var(--spectrum-actiongroup-gap-size-compact));
 
-      .spectrum-ActionGroup-item {
+      & .spectrum-ActionGroup-item {
         border-radius: var(--mod-actiongroup-border-radius-reset, var(--spectrum-actiongroup-border-radius-reset));
 
         &:first-child {

@@ -37,24 +37,16 @@ governing permissions and limitations under the License.
   color: var(--spectrum-slider-m-label-text-color);
 }
 
-.spectrum-Slider--filled {
-  .spectrum-Slider-track:first-child {
-    &::before {
-      background: var(--spectrum-slider-m-track-fill-color);
-    }
-  }
+.spectrum-Slider--filled .spectrum-Slider-track:first-child::before {
+  background: var(--spectrum-slider-m-track-fill-color);
 }
 
-.spectrum-Slider-fill {
-  &::before {
-    background: var(--spectrum-slider-m-track-fill-color);
-  }
+.spectrum-Slider-fill::before {
+  background: var(--spectrum-slider-m-track-fill-color);
 }
 
-.spectrum-Slider-ramp {
-  path {
-    fill: var(--spectrum-slider-m-track-color);
-  }
+.spectrum-Slider-ramp path {
+  fill: var(--spectrum-slider-m-track-color);
 }
 
 .spectrum-Slider-handle {
@@ -80,102 +72,67 @@ governing permissions and limitations under the License.
   }
 }
 
-
-.spectrum-Slider--ramp {
-  .spectrum-Slider-handle {
-    /* We can't draw this one correctly without this hack : ( */
-    box-shadow: 0 0 0 var(--spectrum-slider-m-handle-gap) var(--spectrum-alias-background-color-default);
-  }
+.spectrum-Slider--ramp .spectrum-Slider-handle {
+  /* We can't draw this one correctly without this hack : ( */
+  box-shadow: 0 0 0 var(--spectrum-slider-m-handle-gap) var(--spectrum-alias-background-color-default);
 }
 
 .spectrum-Slider-input {
   background: transparent;
 }
 
-.spectrum-Slider-tick {
-  &:after {
-    background-color: var(--spectrum-slider-m-tick-mark-color);
-  }
+.spectrum-Slider-tick::after {
+  background-color: var(--spectrum-slider-m-tick-mark-color);
 }
 
-
-.spectrum-Slider-handle {
-  &.is-dragged {
-    border-color: var(--spectrum-slider-m-handle-border-color-down);
-    background: var(--spectrum-slider-m-handle-background-color);
-  }
+.spectrum-Slider-handle.is-dragged {
+  border-color: var(--spectrum-slider-m-handle-border-color-down);
+  background: var(--spectrum-slider-m-handle-background-color);
 }
 
-.spectrum-Slider--range {
-  .spectrum-Slider-track {
-    &:not(:first-of-type):not(:last-of-type) {
-      &:before {
-        background: var(--spectrum-slider-m-track-fill-color);
-      }
-    }
-  }
+.spectrum-Slider--range .spectrum-Slider-track:not(:first-of-type):not(:last-of-type)::before {
+  background: var(--spectrum-slider-m-track-fill-color);
 }
 
+.spectrum-Slider.is-disabled {
+  & .spectrum-Slider-labelContainer {
+    color: var(--spectrum-slider-m-label-text-color-disabled);
+  }
 
-.spectrum-Slider {
-  &.is-disabled {
-    .spectrum-Slider-labelContainer {
-      color: var(--spectrum-slider-m-label-text-color-disabled);
-    }
+  & .spectrum-Slider-handle {
+    border-color: var(--spectrum-slider-m-handle-border-color-disabled);
+    background: var(--spectrum-alias-background-color-default);
 
-    .spectrum-Slider-handle {
+    &:hover,
+    &:active {
       border-color: var(--spectrum-slider-m-handle-border-color-disabled);
-      background: var(--spectrum-alias-background-color-default);
-
-      &:hover,
-      &:active {
-        border-color: var(--spectrum-slider-m-handle-border-color-disabled);
-        background: var(--spectrum-slider-m-handle-background-color);
-      }
-    }
-    .spectrum-Slider-track {
-      &::before {
-        background: var(--spectrum-slider-m-track-color-disabled);
-      }
-    }
-    &.spectrum-Slider--filled {
-      .spectrum-Slider-track:first-child {
-        &::before {
-          background: var(--spectrum-slider-m-track-fill-color-disabled);
-        }
-      }
-    }
-    .spectrum-Slider-fill {
-      &::before {
-        background: var(--spectrum-slider-m-track-fill-color-disabled);
-      }
-    }
-
-    .spectrum-Slider-ramp {
-      path {
-        fill: var(--spectrum-slider-ramp-track-color-disabled);
-      }
-    }
-
-
-    &.spectrum-Slider--range {
-      .spectrum-Slider-track {
-        &:not(:first-of-type):not(:last-of-type) {
-          &:before {
-            background: var(--spectrum-slider-m-track-fill-color-disabled);
-          }
-        }
-      }
+      background: var(--spectrum-slider-m-handle-background-color);
     }
   }
+
+  & .spectrum-Slider-track::before {
+    background: var(--spectrum-slider-m-track-color-disabled);
+  }
+
+  &.spectrum-Slider--filled .spectrum-Slider-track:first-child::before {
+    background: var(--spectrum-slider-m-track-fill-color-disabled);
+  }
+
+  .spectrum-Slider-fill::before {
+    background: var(--spectrum-slider-m-track-fill-color-disabled);
+  }
+
+  .spectrum-Slider-ramp path {
+    fill: var(--spectrum-slider-ramp-track-color-disabled);
+  }
+
+  &.spectrum-Slider--range .spectrum-Slider-track:not(:first-of-type):not(:last-of-type)::before {
+    background: var(--spectrum-slider-m-track-fill-color-disabled);
+  }
 }
+
 @media (forced-colors: active) {
   .spectrum-Slider {
-    .spectrum-Slider-handle {
-      &:before {
-        forced-color-adjust: none;
-      }
-    }
     --spectrum-slider-m-handle-border-color-key-focus: Highlight;
     --spectrum-alias-background-color-default: ButtonFace;
     --spectrum-alias-focus-color: ButtonText;
@@ -196,11 +153,14 @@ governing permissions and limitations under the License.
     --spectrum-slider-m-track-fill-color: ButtonText;
     --spectrum-slider-m-track-fill-color-disabled: GrayText;
     --spectrum-slider-ramp-track-color-disabled: GrayText;
-  }
-  .spectrum-Slider--ramp {
-    .spectrum-Slider-handle {
-      /* We can't draw this one correctly without this hack : ( */
+
+    .spectrum-Slider-handle::before {
       forced-color-adjust: none;
     }
+  }
+
+  .spectrum-Slider--ramp .spectrum-Slider-handle {
+    /* We can't draw this one correctly without this hack : ( */
+    forced-color-adjust: none;
   }
 }

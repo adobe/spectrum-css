@@ -11,7 +11,7 @@ governing permissions and limitations under the License.
 */
 
 const gulp = require('gulp');
-const postcss = require('postcss');
+const { parse } = require('postcss');
 const concat = require('gulp-concat');
 const through = require('through2');
 const fsp = require('fs').promises;
@@ -20,7 +20,7 @@ const path = require('path');
 
 function getVarsFromCSS(css) {
   let variableList = [];
-  let root = postcss.parse(css);
+  let root = parse(css);
 
   root.walkRules((rule, ruleIndex) => {
     rule.walkDecls((decl) => {
@@ -40,7 +40,7 @@ function getVarsFromCSS(css) {
 
 function getVarsDefinedInCSS(css) {
   let variableList = [];
-  let root = postcss.parse(css);
+  let root = parse(css);
 
   root.walkRules((rule, ruleIndex) => {
     rule.walkDecls((decl) => {
@@ -56,7 +56,7 @@ function getVarsDefinedInCSS(css) {
 }
 
 function getVarValues(css) {
-  let root = postcss.parse(css);
+  let root = parse(css);
   let variables = {};
 
   root.walkRules((rule, ruleIndex) => {
@@ -69,7 +69,7 @@ function getVarValues(css) {
 }
 
 function getClassNames(contents, pkgName) {
-  let root = postcss.parse(contents);
+  let root = parse(contents);
   let classNames = [];
 
   function addClassname(className) {
@@ -105,8 +105,7 @@ function getClassNames(contents, pkgName) {
   });
 
   if (classNames.length === 0) {
-    logger.error(`Could not find classNames for ${pkgName}, assuming no classNames`);
-    classNames.push('');
+    logger.debug(`Could not find classNames for ${pkgName}, assuming no classNames`);
   }
 
   logger.debug(`Found classNames ${classNames.join(', ')} for ${pkgName}`);
@@ -127,9 +126,9 @@ function resolveValue(value, vars) {
 const varDir = path.join(path.dirname(require.resolve('@spectrum-css/vars', {
   paths: [process.cwd(), path.join(process.cwd(), '../../')]
 })), '..');
-const coreTokensFile = require.resolve('@spectrum-css/tokens', {
-  paths: [process.cwd(), path.join(process.cwd(), '../../')]
-});
+// const coreTokensFile = require.resolve('@spectrum-css/tokens', {
+//   paths: [process.cwd(), path.join(process.cwd(), '../../')]
+// });
 
 async function readDNAVariables(file) {
   let css = await fsp.readFile(path.join(varDir, 'css', file));
@@ -160,7 +159,7 @@ function getAllVars() {
       `${varDir}/css/components/*.css`,
       `${varDir}/css/globals/*.css`,
       `${varDir}/custom.css`,
-      coreTokensFile
+      // coreTokensFile
     ])
       .pipe(concat('everything.css'))
       .pipe(through.obj(function getAllVars(file, enc, cb) {

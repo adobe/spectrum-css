@@ -186,7 +186,7 @@ You've created an `index.css` that imports a few components, a scale, and a colo
 To build an more optimized bundle, you can employ a few simple PostCSS plugins. First, install them:
 
 ```shell
-npm i postcss-import postcss-varfallback postcss-dropunusedvars cssnano --save-dev
+npm i postcss-import postcss-var-fallback postcss-dropunusedvars cssnano --save-dev
 ```
 
 Next, create a `postcss.config.js`:
@@ -195,7 +195,7 @@ Next, create a `postcss.config.js`:
 module.exports = {
   plugins: [
     require('postcss-import'),
-    require('postcss-varfallback'),
+    require('postcss-var-fallback'),
     require('postcss-dropunusedvars'),
     require('cssnano')
   ],

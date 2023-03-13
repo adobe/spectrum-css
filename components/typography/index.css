@@ -12,6 +12,8 @@ governing permissions and limitations under the License.
 
 @import "font.css";
 
+@use postcss-mixins;
+
 /**
  Support for Typography
 
@@ -53,13 +55,13 @@ governing permissions and limitations under the License.
   font-family: var(--spectrum-heading-m-text-font-family);
   font-weight: var(--spectrum-heading-m-text-font-weight);
 
-  em,
-  .spectrum-Heading-emphasized {
+  & em,
+  & .spectrum-Heading-emphasized {
     font-style: var(--spectrum-heading-m-emphasized-text-font-style);
   }
 
-  strong,
-  .spectrum-Heading-strong {
+  & strong,
+  & .spectrum-Heading-strong {
     font-weight: var(--spectrum-heading-m-strong-text-font-weight);
   }
 }
@@ -71,13 +73,13 @@ governing permissions and limitations under the License.
 .spectrum-Heading--heavy {
   font-weight: var(--spectrum-heading-m-heavy-text-font-weight);
 
-  em,
-  .spectrum-Heading-emphasized {
+  & em,
+  & .spectrum-Heading-emphasized {
     font-style: var(--spectrum-heading-m-heavy-emphasized-text-font-style);
   }
 
-  strong,
-  .spectrum-Heading-strong {
+  & strong,
+  & .spectrum-Heading-strong {
     font-weight: var(--spectrum-heading-m-heavy-strong-text-font-weight);
   }
 }
@@ -85,13 +87,13 @@ governing permissions and limitations under the License.
 .spectrum-Heading--light {
   font-weight: var(--spectrum-heading-m-light-emphasized-text-font-weight);
 
-  em,
-  .spectrum-Heading-emphasized {
+  & em,
+  & .spectrum-Heading-emphasized {
     font-style: var(--spectrum-heading-m-light-emphasized-text-font-style);
   }
 
-  strong,
-  .spectrum-Heading-strong {
+  & strong,
+  & .spectrum-Heading-strong {
     font-weight: var(--spectrum-heading-m-light-strong-text-font-weight);
   }
 }
@@ -115,13 +117,13 @@ governing permissions and limitations under the License.
 .spectrum-Body {
   font-family: var(--spectrum-body-m-text-font-family);
 
-  strong,
-  .spectrum-Body-strong {
+  & strong,
+  & .spectrum-Body-strong {
     font-weight: var(--spectrum-body-m-strong-text-font-weight);
   }
 
-  em,
-  .spectrum-Body-emphasized {
+  & em,
+  & .spectrum-Body-emphasized {
     font-style: var(--spectrum-body-m-emphasized-text-font-style);
   }
 }
@@ -135,13 +137,13 @@ governing permissions and limitations under the License.
 .spectrum-Detail {
   font-family: var(--spectrum-heading-m-text-font-family);
 
-  strong,
-  .spectrum-Detail-strong {
+  & strong,
+  & .spectrum-Detail-strong {
     font-weight: var(--spectrum-detail-m-strong-text-font-weight);
   }
 
-  em,
-  .spectrum-Detail-emphasized {
+  & em,
+  & .spectrum-Detail-emphasized {
     font-style: var(--spectrum-detail-m-emphasized-text-font-style);
   }
 }
@@ -176,13 +178,13 @@ governing permissions and limitations under the License.
 .spectrum-Code {
   font-family: var(--spectrum-heading-m-text-font-family);
 
-  strong,
-  .spectrum-Code-strong {
+  & strong,
+  & .spectrum-Code-strong {
     font-weight: var(--spectrum-code-m-strong-text-font-weight);
   }
 
-  em,
-  .spectrum-Code-emphasized {
+  & em,
+  & .spectrum-Code-emphasized {
     font-style: var(--spectrum-code-m-emphasized-text-font-style);
   }
 }
@@ -264,11 +266,11 @@ governing permissions and limitations under the License.
     @mixin typographyTShirtSizes .spectrum-Heading--sizeXXS, heading-han-XXS {
     }
 
-    .spectrum-Heading--heavy {
+    & .spectrum-Heading--heavy {
       font-weight: var(--spectrum-heading-han-m-text-font-weight);
 
-      em,
-      .spectrum-Heading--emphasized {
+      & em,
+      & .spectrum-Heading--emphasized {
         font-style: var(
           --spectrum-heading-han-heavy-m-emphasized-text-font-style
         );
@@ -277,18 +279,18 @@ governing permissions and limitations under the License.
         );
       }
 
-      strong,
-      .spectrum-Heading--strong {
+      & strong,
+      & .spectrum-Heading--strong {
         font-style: var(--spectrum-heading-m-heavy-strong-text-font-style);
         font-weight: var(--spectrum-heading-m-heavy-strong-text-font-weight);
       }
     }
 
-    .spectrum-Heading--light {
+    & .spectrum-Heading--light {
       font-weight: var(--spectrum-heading-han-m-text-font-weight);
 
-      em,
-      .spectrum-Heading--emphasized {
+      & em,
+      & .spectrum-Heading--emphasized {
         font-style: var(
           --spectrum-heading-han-m-light-emphasized-text-font-style
         );
@@ -297,8 +299,8 @@ governing permissions and limitations under the License.
         );
       }
 
-      strong,
-      .spectrum-Heading--strong {
+      & strong,
+      & .spectrum-Heading--strong {
         font-style: var(--spectrum-heading-han-m-light-strong-text-font-style);
         font-weight: var(
           --spectrum-heading-han-m-light-strong-text-font-weight
@@ -330,19 +332,19 @@ governing permissions and limitations under the License.
     @mixin typographyTShirtSizes .spectrum-Detail--sizeS, detail-han-s {
     }
 
-    .spectrum-Detail--light {
+    & .spectrum-Detail--light {
       font-weight: var(--spectrum-detail-han-m-text-font-weight);
 
-      em,
-      .spectrum-Detail--emphasized {
+      & em,
+      & .spectrum-Detail--emphasized {
         font-style: var(--spectrum-detail-han-m-light-emphasized-text-font-style);
         font-weight: var(
           --spectrum-detail-han-m-light-emphasized-text-font-weight
         );
       }
 
-      strong,
-      .spectrum-Detail--strong {
+      & strong,
+      & .spectrum-Detail--strong {
         font-style: var(--spectrum-detail-han-m-light-strong-text-font-style);
         font-weight: var(--spectrum-detail-han-m-light-strong-text-font-weight);
       }

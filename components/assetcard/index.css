@@ -49,31 +49,20 @@ governing permissions and limitations under the License.
   width: var(--spectrum-assetcard-asset-size);
 
   cursor: pointer;
-
-  &:hover {
-    .spectrum-AssetCard-assetContainer {
-      &:after {
-        border-color: var(--spectrum-assetcard-border-color-hover);
-      }
-    }
-  }
-
-  &:active {
-    .spectrum-AssetCard-assetContainer {
-      &:after {
-        border-color: var(--spectrum-assetcard-border-color-down);
-      }
-    }
-  }
-
   outline: none;
+
+  &:hover .spectrum-AssetCard-assetContainer:after {
+    border-color: var(--spectrum-assetcard-border-color-hover);
+  }
+
+  &:active .spectrum-AssetCard-assetContainer:after {
+    border-color: var(--spectrum-assetcard-border-color-down);
+  }
 
   &.is-focused,
   &:focus-ring {
-    .spectrum-AssetCard-assetContainer {
-      &:before {
-        opacity: 1;
-      }
+    & .spectrum-AssetCard-assetContainer:before {
+      opacity: 1;
     }
   }
 }
@@ -278,53 +267,39 @@ governing permissions and limitations under the License.
   /* drop target looks identical to selected */
   &.is-drop-target,
   &.is-selected {
-    .spectrum-AssetCard-assetContainer {
-      &:after {
-        border-color: var(--spectrum-assetcard-border-color-selected);
-      }
+    & .spectrum-AssetCard-assetContainer:after {
+      border-color: var(--spectrum-assetcard-border-color-selected);
     }
 
-    .spectrum-AssetCard-selectionOverlay {
+    & .spectrum-AssetCard-selectionOverlay {
       background-color: var(--spectrum-assetcard-overlay-background-color);
     }
 
-    &:hover {
-      .spectrum-AssetCard-assetContainer {
-        &:after {
-          border-color: var(--spectrum-assetcard-border-color-selected-hover);
-        }
-      }
+    &:hover .spectrum-AssetCard-assetContainer:after {
+      border-color: var(--spectrum-assetcard-border-color-selected-hover);
     }
 
-    &:active {
-      .spectrum-AssetCard-assetContainer {
-        &:after {
-          border-color: var(--spectrum-assetcard-border-color-selected-down);
-        }
-      }
+    &:active .spectrum-AssetCard-assetContainer:after {
+      border-color: var(--spectrum-assetcard-border-color-selected-down);
     }
   }
 }
 
 /* highlight */
-.spectrum-AssetCard--highlightSelection {
-  &.is-selected {
-    .spectrum-AssetCard-asset {
-      width: 90%;
-      height: 90%;
+.spectrum-AssetCard--highlightSelection.is-selected .spectrum-AssetCard-asset {
+  width: 90%;
+  height: 90%;
 
-      /* no radius, otherwise square assets get rounded */
-      border-radius: 0;
-    }
-  }
+  /* no radius, otherwise square assets get rounded */
+  border-radius: 0;
 }
 
 /* with a checkbox */
 .spectrum-AssetCard--checkboxSelection {
-  .spectrum-AssetCard-selectionIndicator {
+  & .spectrum-AssetCard-selectionIndicator {
     background-color: var(--spectrum-assetcard-selectionindicator-background-color-default);
 
-    .spectrum-AssetCard-selectionOrder {
+    & .spectrum-AssetCard-selectionOrder {
       display: none;
     }
   }
@@ -333,7 +308,7 @@ governing permissions and limitations under the License.
   &.is-selected,
   &:focus,
   &:hover {
-    .spectrum-AssetCard-selectionIndicator {
+    & .spectrum-AssetCard-selectionIndicator {
       visibility: visible;
       opacity: 1;
       pointer-events: all;
@@ -343,19 +318,17 @@ governing permissions and limitations under the License.
 
 /* with the little order flag that shows the selection order */
 .spectrum-AssetCard--orderedSelection {
-  .spectrum-AssetCard-selectionIndicator {
+  & .spectrum-AssetCard-selectionIndicator {
     background-color: var(--spectrum-assetcard-selectionindicator-background-color-ordered);
 
-    .spectrum-AssetCard-checkbox {
+    & .spectrum-AssetCard-checkbox {
       display: none;
     }
   }
 
-  &.is-selected {
-    .spectrum-AssetCard-selectionIndicator {
-      visibility: visible;
-      opacity: 1;
-      pointer-events: all;
-    }
+  &.is-selected .spectrum-AssetCard-selectionIndicator {
+    visibility: visible;
+    opacity: 1;
+    pointer-events: all;
   }
 }

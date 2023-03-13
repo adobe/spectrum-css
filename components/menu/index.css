@@ -72,14 +72,14 @@ governing permissions and limitations under the License.
 
   overflow: auto;
 
-  > .spectrum-Menu-sectionHeading {
+  & > .spectrum-Menu-sectionHeading {
     /* Support headings as LI */
     margin-block-start: var(--spectrum-menu-margin-x);
     margin-block-end: var(--spectrum-menu-margin-x);
   }
 
   &.is-selectable {
-    .spectrum-Menu-item {
+    & .spectrum-Menu-item {
       padding-inline-end: var(--spectrum-listitem-texticon-selectable-padding-right);
 
       &.is-selected {
@@ -90,7 +90,8 @@ governing permissions and limitations under the License.
       }
     }
   }
-  .spectrum-Menu-divider {
+
+  & .spectrum-Menu-divider {
     overflow: visible;
 
     inline-size: auto;
@@ -140,20 +141,20 @@ governing permissions and limitations under the License.
         var(--spectrum-popover-border-size)
     );
 
-    .spectrum-Menu-checkmark {
+    & .spectrum-Menu-checkmark {
       display: block;
     }
   }
 
-  .spectrum-Icon,
-  .spectrum-Menu-itemIcon {
+  & .spectrum-Icon,
+  & .spectrum-Menu-itemIcon {
     /* Don't get smaller, you're an icon! */
     flex-shrink: 0;
     align-self: flex-start;
   }
 
-  .spectrum-Icon + .spectrum-Menu-itemLabel,
-  .spectrum-Menu-itemIcon + .spectrum-Menu-itemLabel {
+  & .spectrum-Icon + .spectrum-Menu-itemLabel,
+  & .spectrum-Menu-itemIcon + .spectrum-Menu-itemLabel {
     margin-inline-start: var(--spectrum-listitem-texticon-icon-gap);
 
     inline-size: calc(

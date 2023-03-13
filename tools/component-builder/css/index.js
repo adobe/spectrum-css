@@ -10,13 +10,13 @@ OF ANY KIND, either express or implied. See the License for the specific languag
 governing permissions and limitations under the License.
 */
 
+const path = require('path');
+
 const gulp = require('gulp');
 const postcss = require('gulp-postcss');
 const concat = require('gulp-concat');
-const processors = require('./processors').processors;
 const rename = require('gulp-rename');
 
-const legacyBuild = require('./legacyBuild');
 const vars = require('./vars');
 
 // Read in all variables used
@@ -31,7 +31,9 @@ function buildIndexVars() {
     allowEmpty: true // Allow missing skin.css
   })
     .pipe(concat('index-vars.css'))
-    .pipe(postcss(processors))
+    .pipe(postcss({
+      config: path.join(__dirname, '../')
+    }))
     .pipe(gulp.dest('dist/'));
 }
 
@@ -53,13 +55,4 @@ exports.buildCSS = gulp.series(
       }))
       .pipe(gulp.dest('dist/'))
   }
-  /*
-  ,gulp.parallel(
-    legacyBuild.buildDiff,
-    legacyBuild.buildMedium,
-    legacyBuild.buildLarge,
-    legacyBuild.buildSingleStops,
-    legacyBuild.buildMultiStops
-  )
-  */
 );

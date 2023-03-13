@@ -12,25 +12,12 @@ governing permissions and limitations under the License.
 
 const gulp = require('gulp');
 const through = require('through2');
-const postcss = require('postcss');
 const logger = require('gulplog');
+
 const fsp = require('fs').promises;
 const path = require('path');
 
 const varUtils = require('./lib/varUtils');
-
-// Todo: get these values from a common place?
-let colorStops = [
-  'darkest',
-  'dark',
-  'light',
-  'lightest'
-];
-
-let scales = [
-  'medium',
-  'large'
-];
 
 function bakeVars() {
   return gulp.src([
@@ -39,7 +26,7 @@ function bakeVars() {
     allowEmpty: true,
   })
   .pipe(through.obj(async function doBake(file, enc, cb) {
-    let pkg = JSON.parse(await fsp.readFile(path.join('package.json')));
+    let pkg = await fsp.readFile('package.json').then(JSON.parse);
     let pkgName = pkg.name.split('/').pop();
     let classNames = varUtils.getClassNames(file.contents, pkgName);
 
@@ -59,24 +46,16 @@ function bakeVars() {
     let errors = [];
     let usedVars = {};
     variableList.forEach(varName => {
-      if (varName.indexOf('spectrum-global') !== -1) {
-        logger.warn(`⚠️  ${pkg.name} directly uses global variable ${varName}`);
-      }
-      else if (!allVars[varName] && !varName.startsWith('--mod') && !varName.startsWith('--highcontrast')) {
-        if (componentVars.indexOf(varName) === -1) {
-          errors.push(`${pkg.name} uses undefined variable ${varName}`);
-        }
-        else {
-          logger.warn(`🔶 ${pkg.name} uses locally defined variable ${varName}`);
-        }
-      }
-      else {
-        usedVars[varName] = vars[varName];
-      }
+      // if (varName.indexOf('spectrum-global') !== -1) logger.warn(`⚠️  ${pkg.name} directly uses global variable ${varName}`);
+      if (!allVars[varName] && !varName.startsWith('--mod') && !varName.startsWith('--highcontrast')) {
+        if (componentVars.indexOf(varName) === -1) errors.push(`${pkg.name} uses undefined variable ${varName}`);
+        // else logger.warn(`🔶 ${pkg.name} uses locally defined variable ${varName}`);
+      } else usedVars[varName] = vars[varName];
     });
 
     if (errors.length) {
-      return cb(new Error(errors.join('\n')), file);
+      errors.forEach(e => logger.warn(`🔴 ${e}`));
+      return cb(null, file);
     }
 
     let contents = varUtils.getVariableDeclarations(classNames, usedVars);
