@@ -26,10 +26,10 @@ governing permissions and limitations under the License.
   --spectrum-colorloupe-drop-shadow-color: var(--spectrum-drop-shadow-color);
 
   /* borders */
-  --spectrum-colorloupe-outer-border-width: var(--spectrum-colorloupe-outer-border-width);
-  --spectrum-colorloupe-inner-border-width: var(--spectrum-colorloupe-inner-border-width);
+  --spectrum-colorloupe-outer-border-width: var(--spectrum-color-loupe-outer-border-width);
+  --spectrum-colorloupe-inner-border-width: var(--spectrum-color-loupe-inner-border-width);
   --spectrum-colorloupe-outer-border-color: var(--spectrum-color-loupe-outer-border);
-  --spectrum-colorloupe-inner-border-color: var(--spectrum-color-loupe-inner-border);
+  --spectrum-colorloupe-inner-border-color:  var(--spectrum-color-loupe-inner-border);
 }
 
 .spectrum-ColorLoupe {
@@ -59,18 +59,16 @@ governing permissions and limitations under the License.
   }
 }
 
-/* this is the white border and lays over top the inner*/
-.spectrum-ColorLoupe-outer-border {
-  fill: white;
-  stroke: var(--spectrum-colorloupe-outer-border-color);
-  stroke-width: var(--spectrum-colorloupe-outer-border-color);
-}
-
-/* This is the guts the red checkerboard part,*/
-.spectrum-ColorLoupe-inner {
+.spectrum-ColorLoupe-inner-border {
   fill: var(--spectrum-picked-color);
   stroke: var(--spectrum-colorloupe-inner-border-color);
   stroke-width: var(--spectrum-colorloupe-inner-border-width);
+}
+
+.spectrum-ColorLoupe-outer-border {
+  fill: white;
+  stroke: var(--spectrum-colorloupe-outer-border-color);
+  stroke-width: var(--spectrum-colorloupe-outer-border-width);
 }
 
 .spectrum-ColorLoupe-express {
