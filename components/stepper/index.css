@@ -170,7 +170,8 @@ governing permissions and limitations under the License.
 
 
   /*** Focused ***/
-  &.is-focused {
+  &.is-focused,
+  &:has(input:focus) {
     .spectrum-Stepper-input,
     .spectrum-Stepper-buttons,
     .spectrum-Stepper-stepUp,
@@ -206,7 +207,8 @@ governing permissions and limitations under the License.
 
 
   /*** Keyboard Focused ***/
-  &.is-keyboardFocused {
+  &.is-keyboardFocused,
+  &:focus-visible {
 
     /* keyboard focus indicator is visible */
     &::after {
@@ -239,7 +241,8 @@ governing permissions and limitations under the License.
 
 
   /*** Invalid ***/
-  &.is-invalid {
+  &.is-invalid,
+  &:has(input:invalid) {
     .spectrum-Stepper-input,
     .spectrum-Stepper-buttons,
     .spectrum-Stepper-stepUp,
@@ -290,7 +293,8 @@ governing permissions and limitations under the License.
 
 
   /*** Disabled ***/
-  &.is-disabled {
+  &.is-disabled,
+  &:has(input:disabled) {
     .spectrum-Stepper-input,
     .spectrum-Stepper-buttons,
     .spectrum-Stepper-stepUp,
