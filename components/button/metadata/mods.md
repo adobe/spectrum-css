@@ -2,15 +2,13 @@
 | --- |
 |`--mod-button-border-radius`|
 |`--mod-button-border-width`|
-|`--mod-button-height`|
-|`--mod-button-min-width`|
-|`--mod-spectrum-button-height`|
-|`--mod-button-edge-to-visual`|
-|`--mod-button-edge-to-text`|
 |`--mod-button-font-size`|
 |`--mod-bold-font-weight`|
-|`--mod-spectrum-button-edge-to-visual`|
 |`--mod-button-padding-label-to-icon`|
+|`--mod-button-height`|
+|`--mod-button-min-width`|
+|`--mod-button-edge-to-text`|
+|`--mod-button-edge-to-visual`|
 |`--mod-focus-indicator-gap`|
 |`--mod-button-padding-label-top`|
 |`--mod-button-padding-label-bottom`|
