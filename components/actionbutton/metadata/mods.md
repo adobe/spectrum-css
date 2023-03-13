@@ -4,7 +4,9 @@
 |`--mod-actionbutton-height`|
 |`--mod-actionbutton-border-radius`|
 |`--mod-actionbutton-border-width`|
+|`--mod-actionbutton-text-to-visual`|
 |`--mod-actionbutton-edge-to-text`|
+|`--mod-actionbutton-edge-to-visual-only`|
 |`--mod-actionbutton-background-color-default`|
 |`--mod-actionbutton-border-color-default`|
 |`--mod-actionbutton-content-color-default`|
@@ -22,8 +24,6 @@
 |`--mod-actionbutton-content-color-disabled`|
 |`--mod-actionbutton-icon-size`|
 |`--mod-actionbutton-edge-to-visual`|
-|`--mod-actionbutton-text-to-visual`|
-|`--mod-actionbutton-edge-to-visual-only`|
 |`--mod-actionbutton-font-size`|
 |`--mod-actionbutton-edge-to-hold-icon`|
 |`--mod-actionbutton-animation-duration`|
