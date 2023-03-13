@@ -1,6 +1,6 @@
 {
   "name": "@spectrum-css/preview",
-  "version": "2.0.7",
+  "version": "2.0.8",
   "description": "A Spectrum CSS preview",
   "license": "Apache-2.0",
   "author": "Adobe",
@@ -15,16 +15,16 @@
   },
   "dependencies": {
     "@adobe/spectrum-css-workflow-icons": "^1.2.1",
-    "@spectrum-css/expressvars": "^2.0.5",
-    "@spectrum-css/icon": "^3.0.34",
-    "@spectrum-css/site": "^3.0.8",
-    "@spectrum-css/tokens": "^7.5.0",
-    "@spectrum-css/vars": "^8.0.4"
+    "@spectrum-css/expressvars": "^2.0.6",
+    "@spectrum-css/icon": "^3.0.35",
+    "@spectrum-css/site": "^3.0.9",
+    "@spectrum-css/tokens": "^7.5.1",
+    "@spectrum-css/vars": "^8.0.5"
   },
   "devDependencies": {
     "@babel/core": "^7.20.5",
     "@etchteam/storybook-addon-status": "^4.2.2",
-    "@spectrum-css/component-builder": "^4.0.2",
+    "@spectrum-css/component-builder": "^4.0.3",
     "@storybook/addon-a11y": "^6.5.15",
     "@storybook/addon-actions": "^6.5.15",
     "@storybook/addon-console": "^1.2.3",

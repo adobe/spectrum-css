@@ -3,6 +3,16 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+<a name="7.5.1"></a>
+## 7.5.1
+🗓 2023-03-13 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/tokens@7.5.0...@spectrum-css/tokens@7.5.1)
+
+**Note:** Version bump only for package @spectrum-css/tokens
+
+
+
+
+
 <a name="7.5.0"></a>
 # 7.5.0
 🗓 2023-03-07 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/tokens@7.4.0...@spectrum-css/tokens@7.5.0)
