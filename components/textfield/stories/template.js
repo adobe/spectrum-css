@@ -76,7 +76,7 @@ export const Template = ({
         autocomplete=${autocomplete ? undefined : "off"}
         ?required=${isRequired}
         ?disabled=${isDisabled}
-        readonly=${ifDefined(isReadOnly ? "readonly" : undefined)}
+        ?readonly=${ifDefined(isReadOnly)}
         pattern=${ifDefined(pattern)}
         class=${classMap({
           [`${rootClass}-input`]: true,

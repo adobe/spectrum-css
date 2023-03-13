@@ -240,7 +240,8 @@ governing permissions and limitations under the License.
 
 
     &.is-focused,
-    &.is-keyboardFocused {
+    &.is-keyboardFocused,
+    &:focus, &:focus-within {
       /* focus indicator is focused state */
       &::after {
         forced-color-adjust: none;
@@ -314,7 +315,8 @@ governing permissions and limitations under the License.
     grid-column: 1 / span 2;
   }
 
-  &.is-keyboardFocused {
+  &.is-keyboardFocused,
+  &:focus-within {
     /* focus indicator is focused state */
     &::after {
       border-color: var(--highcontrast-textfield-focus-indicator-color, var(--mod-textfield-focus-indicator-color, var(--spectrum-textfield-focus-indicator-color)));
@@ -372,7 +374,8 @@ governing permissions and limitations under the License.
       color: var(--highcontrast-textfield-text-color-disabled, var(--mod-textfield-text-color-disabled, var(--spectrum-textfield-text-color-disabled)));
     }
 
-    .spectrum-Textfield.is-readOnly & {
+    .spectrum-Textfield.is-readOnly &,
+    &:has(+ input:read-only) {
       color: var(--highcontrast-textfield-text-color-readonly, var(--mod-textfield-text-color-readonly, var(--spectrum-textfield-text-color-readonly)));
     }
   }
@@ -411,8 +414,8 @@ governing permissions and limitations under the License.
     color: var(--highcontrast-textfield-icon-color-invalid, var(--mod-textfield-icon-color-invalid, var(--spectrum-textfield-icon-color-invalid)));
   }
 
-  .is-disabled &,
-  .is-readOnly & {
+  .spectrum-Textfield.is-disabled &,
+  .spectrum-Textfield.is-readOnly & {
     /* Disabled validation icons are transparent */
     color: transparent;
   }
