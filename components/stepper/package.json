@@ -1,6 +1,6 @@
 {
   "name": "@spectrum-css/stepper",
-  "version": "4.0.0-beta.1",
+  "version": "4.0.0-beta.2",
   "description": "The Spectrum CSS stepper component",
   "license": "Apache-2.0",
   "author": "Adobe",
@@ -18,17 +18,17 @@
     "build": "gulp"
   },
   "peerDependencies": {
-    "@spectrum-css/actionbutton": "^3.0.13",
+    "@spectrum-css/actionbutton": "^3.0.20",
     "@spectrum-css/icon": "^3.0.22",
     "@spectrum-css/textfield": "^4.0.0-beta.4",
-    "@spectrum-css/tokens": "^7.0.0"
+    "@spectrum-css/tokens": "^7.5.1"
   },
   "devDependencies": {
-    "@spectrum-css/actionbutton": "^3.0.13",
+    "@spectrum-css/actionbutton": "^3.0.20",
     "@spectrum-css/component-builder-simple": "^2.0.0",
     "@spectrum-css/icon": "^3.0.22",
-    "@spectrum-css/textfield": "^4.0.0-beta.4",
-    "@spectrum-css/tokens": "^7.0.0",
+    "@spectrum-css/textfield": "^4.0.0-beta.5",
+    "@spectrum-css/tokens": "^7.5.1",
     "gulp": "^4.0.0"
   },
   "publishConfig": {
