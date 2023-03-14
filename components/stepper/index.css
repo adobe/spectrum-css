@@ -170,8 +170,7 @@ governing permissions and limitations under the License.
 
 
   /*** Focused ***/
-  &.is-focused,
-  &:has(input:focus) {
+  &.is-focused {
     .spectrum-Stepper-input,
     .spectrum-Stepper-buttons,
     .spectrum-Stepper-stepUp,
@@ -229,8 +228,7 @@ governing permissions and limitations under the License.
     }
 
     /* keyboard focused invalid */
-    &.is-invalid,
-    &:has(input:invalid) {
+    &.is-invalid {
       .spectrum-Stepper-input,
       .spectrum-Stepper-buttons,
       .spectrum-Stepper-stepUp,
@@ -242,8 +240,7 @@ governing permissions and limitations under the License.
 
 
   /*** Invalid ***/
-  &.is-invalid,
-  &:has(input:invalid) {
+  &.is-invalid {
     .spectrum-Stepper-input,
     .spectrum-Stepper-buttons,
     .spectrum-Stepper-stepUp,
@@ -294,8 +291,7 @@ governing permissions and limitations under the License.
 
 
   /*** Disabled ***/
-  &.is-disabled,
-  &:has(input:disabled) {
+  &.is-disabled {
     .spectrum-Stepper-input,
     .spectrum-Stepper-buttons,
     .spectrum-Stepper-stepUp,

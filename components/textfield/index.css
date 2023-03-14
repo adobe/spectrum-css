@@ -374,8 +374,7 @@ governing permissions and limitations under the License.
       color: var(--highcontrast-textfield-text-color-disabled, var(--mod-textfield-text-color-disabled, var(--spectrum-textfield-text-color-disabled)));
     }
 
-    .spectrum-Textfield.is-readOnly &,
-    &:has(+ input:read-only) {
+    .spectrum-Textfield.is-readOnly & {
       color: var(--highcontrast-textfield-text-color-readonly, var(--mod-textfield-text-color-readonly, var(--spectrum-textfield-text-color-readonly)));
     }
   }
