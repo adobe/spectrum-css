@@ -229,7 +229,8 @@ governing permissions and limitations under the License.
     }
 
     /* keyboard focused invalid */
-    &.is-invalid {
+    &.is-invalid,
+    &:has(input:invalid) {
       .spectrum-Stepper-input,
       .spectrum-Stepper-buttons,
       .spectrum-Stepper-stepUp,
