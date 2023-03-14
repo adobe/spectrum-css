@@ -444,6 +444,7 @@ governing permissions and limitations under the License.
     margin-block-end: var(--mod-textfield-label-spacing-block, var(--spectrum-textfield-label-spacing-block));
     grid-row: 1;
     grid-column: 1 / span 1;
+    padding-left: calc(var(--mod-textfield-corner-radius, var(--spectrum-textfield-corner-radius)) / 2);
   }
 
   .spectrum-Textfield--quiet & {
@@ -461,6 +462,7 @@ governing permissions and limitations under the License.
     margin-block-start: var(--mod-textfield-helptext-spacing-block, var(--spectrum-textfield-helptext-spacing-block));
     grid-row: 3;
     grid-column: 1 / span 2;
+    padding-left: calc(var(--mod-textfield-corner-radius, var(--spectrum-textfield-corner-radius)) / 2);
   }
 }
 
@@ -478,6 +480,8 @@ governing permissions and limitations under the License.
   font-weight: var(--mod-textfield-character-count-font-weight, var(--spectrum-textfield-character-count-font-weight));
   grid-row: 1;
   grid-column: 2 / span 1;
+  padding-right: calc(var(--mod-textfield-corner-radius, var(--spectrum-textfield-corner-radius)) / 2);
+
 
   .spectrum-Textfield--quiet & {
     margin-block-end: var(--mod-textfield-character-count-spacing-block-quiet, var(--spectrum-textfield-character-count-spacing-block-quiet));
