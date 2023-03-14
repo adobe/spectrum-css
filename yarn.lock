@@ -2421,16 +2421,6 @@
   dependencies:
     "@spectrum-css/vars" "^8.0.0"
 
-"@spectrum-css/fieldgroup@^3.1.4":
-  version "3.1.4"
-  resolved "https://registry.yarnpkg.com/@spectrum-css/fieldgroup/-/fieldgroup-3.1.4.tgz#aede57bda56c41310d262774a8805eefc89ddf74"
-  integrity sha512-ynqkD1OWicCEW7hgYQWzJUrUih+guJHjDtPbTKYhCbnxPqi6aifKmLstBehCgs4iG4+YfGDdZTppW64A3o5foQ==
-
-"@spectrum-css/helptext@^3.0.0":
-  version "3.0.13"
-  resolved "https://registry.yarnpkg.com/@spectrum-css/helptext/-/helptext-3.0.13.tgz#bb3ef6d2a66a528f9956fd2cef61d3e1ca844159"
-  integrity sha512-DZesxo+DboeljfeSdMxylorfyPKisNiod4hPybHBqbYm0bs+CGuEOsXhayTzK34Xfsh19kkDQieM62rANkhUCQ==
-
 "@spectrum-css/link@^3.1.23":
   version "3.1.23"
   resolved "https://registry.yarnpkg.com/@spectrum-css/link/-/link-3.1.23.tgz#9d9ff64c41366edbfdb19d04a5deec88bf2ea8fd"
@@ -2446,30 +2436,20 @@
   resolved "https://registry.yarnpkg.com/@spectrum-css/popover/-/popover-5.0.18.tgz#4e8d1b15b0f96ff3c19a6642ebae7937e99723a4"
   integrity sha512-MpdlGjj6Y03l65UUiww8ulc6t6xImQFsIAqzDIuvtH+8BPEM4IbizJFGa6LEEvkMhHiwRF1s94LDg3d+q3ZmvA==
 
-"@spectrum-css/spectrum-css-vr-test-assets-essential@^1.0.46":
-  version "1.0.46"
-  resolved "https://registry.yarnpkg.com/@spectrum-css/spectrum-css-vr-test-assets-essential/-/spectrum-css-vr-test-assets-essential-1.0.46.tgz#8a8c9007003f5c7c1501b3a0ecb721f751f9f68b"
-  integrity sha512-09KcehdKIxpVTxmC3bkaCGiLwbxakFNZIirGQlwryu0qnuu1uzst+ELnZdh0s/O2akfmo43PRbaKiIL0x23NQg==
-
-"@spectrum-css/stepper@^3.0.36":
-  version "3.0.36"
-  resolved "https://registry.yarnpkg.com/@spectrum-css/stepper/-/stepper-3.0.36.tgz#53c01728fa397235116dad8761f0d0413c3e57e6"
-  integrity sha512-xFXa2xeZ/S0aGJ81hEkpnC1P808rcvPVaeRtGDi6Zji0+wSvIKTEPS6qHmVU8dZDcjONsJw1qHTDeE9o0g0prA==
+"@spectrum-css/stepper@^3.0.39":
+  version "3.0.39"
+  resolved "https://registry.yarnpkg.com/@spectrum-css/stepper/-/stepper-3.0.39.tgz#659f1a0fe34a672167214f58b359b22f3ac1d017"
+  integrity sha512-dvxWwhisutJmqijzWOQczVKcT0gPWHRc6HrSkPxmwYdQlJy/sweM2ZI2d6pjmwRL95gMgPGr2xugxQEDBRsb7g==
 
 "@spectrum-css/tag@^3.3.15":
   version "3.3.15"
   resolved "https://registry.yarnpkg.com/@spectrum-css/tag/-/tag-3.3.15.tgz#971184fd8cb977b85a529f808313851863123278"
   integrity sha512-pF6Wh61Z7hmAy20twIlpjdDuivYj6UPtWIzK7giyJKr/qcn20BjVN2ChIeFB1N+vBamJdLsuQOewv4AJ3+LZ2Q==
 
-"@spectrum-css/textfield@^3.2.13":
-  version "3.2.13"
-  resolved "https://registry.yarnpkg.com/@spectrum-css/textfield/-/textfield-3.2.13.tgz#01888b0353b934591ec1177e5f4351e34c74b591"
-  integrity sha512-K26LC+rINXbGhS2nF0FJDfA7Qe1qq7QbnQqURxeN/GUV1vaRbdVTPBtezyc2D1tGNwszELHTsDI8dGWWidpcLQ==
-
-"@spectrum-css/tokens@^4.0.0":
-  version "4.0.0"
-  resolved "https://registry.yarnpkg.com/@spectrum-css/tokens/-/tokens-4.0.0.tgz#581b858225aae05b9b784db1aa0e257c3e9c53cf"
-  integrity sha512-lDUDbc1BocZR5q9pKpLvFicb7v8Owjhm0mxd+JPk+sVHXHC/u37PEZf7R0QBzl3D/13fNqurtV9DhlPjrhDm0g==
+"@spectrum-css/textfield@^3.2.16":
+  version "3.2.16"
+  resolved "https://registry.yarnpkg.com/@spectrum-css/textfield/-/textfield-3.2.16.tgz#17cc6d41e6540ab3cc28b9ef9aa3dc2e0161264d"
+  integrity sha512-Ohiq+FIjzwxU/q5i8cgtJQn6Y24h7y1zvxA2L1v53ja40cJKzvAJSYjGVjyuOnLSftt//2xKza6AwPyJJmGEiA==
 
 "@spectrum-css/tooltip@^3.1.20":
   version "3.1.20"
