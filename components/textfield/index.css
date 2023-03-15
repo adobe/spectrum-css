@@ -380,6 +380,13 @@ governing permissions and limitations under the License.
   }
 }
 
+.spectrum-Textfield-validationIcon.spectrum-Search-icon {
+  .spectrum-Textfield.is-disabled &,
+  .spectrum-Textfield.is-readOnly & {
+    color: var(--highcontrast-textfield-text-color-disabled, var(--mod-textfield-text-color-disabled, var(--spectrum-textfield-text-color-disabled)));
+  }
+}
+
 /********* Child Element - Validation Icons - ⚠️ ✅ *********/
 .spectrum-Textfield-validationIcon {
   /* specify validation class or web components will apply this to all icons */
@@ -787,7 +794,13 @@ governing permissions and limitations under the License.
   }
 
   &.spectrum-Textfield--grows {
-    grid-row: 1 / auto;
+    .spectrum-Textfield-input {
+      grid-row: 1 / auto;
+    }
+    &::after {
+      grid-area: unset;
+      min-block-size: calc(var(--mod-text-area-min-block-size, var(--spectrum-text-area-min-block-size)) + var(--mod-textfield-focus-indicator-gap, var(--spectrum-textfield-focus-indicator-gap)) * 2);
+    }
   }
 
   &.spectrum-Textfield--quiet {
