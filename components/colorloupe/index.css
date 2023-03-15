@@ -9,7 +9,6 @@ OF ANY KIND, either express or implied. See the License for the specific languag
 governing permissions and limitations under the License.
 */
 .spectrum-ColorLoupe {
-  /* size is the same on desktop and mobile */
   --spectrum-colorloupe-width: var(--spectrum-color-loupe-width);
   --spectrum-colorloupe-height: var(--spectrum-color-loupe-height);
 
@@ -18,14 +17,12 @@ governing permissions and limitations under the License.
 
   /* How much to animate up to the offset distance */
   --spectrum-colorloupe-animation-distance: 8px; /* TODO: replace with animation token */
-  /* --spectrum-colorloupe-outer-border-size: var(--spectrum-color-loupe-outer-border-width); */
 
   --spectrum-colorloupe-drop-shadow-x: var(--spectrum-drop-shadow-x);
   --spectrum-colorloupe-drop-shadow-y: var(--spectrum-color-loupe-drop-shadow-y);
   --spectrum-colorloupe-drop-shadow-blur: var(--spectrum-drop-shadow-blur);
   --spectrum-colorloupe-drop-shadow-color: var(--spectrum-drop-shadow-color);
 
-  /* borders */
   --spectrum-colorloupe-outer-border-width: var(--spectrum-color-loupe-outer-border-width);
   --spectrum-colorloupe-inner-border-width: 1px; /* TODO: replace with update token for color-loupe-inner-border-width */
   --spectrum-colorloupe-outer-border-color: var(--spectrum-color-loupe-outer-border);
