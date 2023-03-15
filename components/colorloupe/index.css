@@ -10,11 +10,11 @@ governing permissions and limitations under the License.
 */
 .spectrum-ColorLoupe {
   /* size is the same on desktop and mobile */
-  --spectrum-colorloupe-width-adjusted: calc(var(--spectrum-color-loupe-width) + var(--spectrum-color-loupe-drop-shadow-blur)); /* adds room for shadow */
-  --spectrum-colorloupe-height-adjusted: calc(var(--spectrum-color-loupe-height) + var(--spectrum-color-loupe-drop-shadow-blur)); /* adds room for shadow */
+  --spectrum-colorloupe-width: var(--spectrum-color-loupe-width);
+  --spectrum-colorloupe-height: var(--spectrum-color-loupe-height);
 
   /* Distance between the loupe and the handle */
-  --spectrum-colorloupe-offset: var(--spectrum-color-loupe-bottom-to-color-handle);
+  --spectrum-colorloupe-offset: 24px; /* var(--spectrum-color-loupe-bottom-to-color-handle); */
 
   /* How much to animate up to the offset distance */
   --spectrum-colorloupe-animation-distance: 8px; /* TODO: replace with animation token */
@@ -27,21 +27,21 @@ governing permissions and limitations under the License.
 
   /* borders */
   --spectrum-colorloupe-outer-border-width: var(--spectrum-color-loupe-outer-border-width);
-  --spectrum-colorloupe-inner-border-width: var(--spectrum-color-loupe-inner-border-width);
+  --spectrum-colorloupe-inner-border-width: 1px; /* TODO: replace with update token for color-loupe-inner-border-width */
   --spectrum-colorloupe-outer-border-color: var(--spectrum-color-loupe-outer-border);
-  --spectrum-colorloupe-inner-border-color:  var(--spectrum-color-loupe-inner-border);
+  --spectrum-colorloupe-inner-border-color: var(--spectrum-color-loupe-inner-border);
 }
 
 .spectrum-ColorLoupe {
-  width: var(--spectrum-colorloupe-width-adjusted);
-  height: var(--spectrum-colorloupe-height-adjusted);
+  inline-size: var(--spectrum-colorloupe-width);
+  block-size: var(--spectrum-colorloupe-height);
 
   position: absolute;
   transform: translate(0, var(--spectrum-colorloupe-animation-distance));
   opacity: 0;
   transform-origin: bottom center;
-  bottom: calc(50% + var(--spectrum-colorloupe-offset));
-  left: calc(50% - calc(var(--spectrum-colorloupe-width-adjusted) / 2));
+  inset-block-end: calc(50% + var(--spectrum-colorloupe-offset));
+  inset-inline: calc(50% - calc(52px / 2));
   transition: transform 100ms ease-in-out, opacity 125ms ease-in-out;
 
   pointer-events: none;
