@@ -1,12 +1,12 @@
 name: Color Loupe
 status: Verified
-SpectrumSiteSlug: https://spectrum.adobe.com/page/color-area/
+SpectrumSiteSlug: https://spectrum.adobe.com/page/color-loupe/
 description: |
   - Set the `--spectrum-picked-color` custom property to the CSS color value you want to show
   - Apply `.is-open` to display the loupe
   - Color Loupe does not have a disabled style; do not show it when the handle its attached to is disabled.
 examples:
-  - id: color-area
+  - id: color-loupe
     name: Standard
     demoClassName: spectrum-CSSExample-example--spacious
     markup: |
@@ -18,7 +18,6 @@ examples:
             <use xlink:href="#spectrum-inner-loupe" fill="black" />
           </mask>
           <path id="express-inner-loupe" d="M3.10091 24.4551C1.08495 21.8029 -0.00540694 18.5477 2.01617e-05 15.2C2.01617e-05 11.1687 1.58059 7.30182 4.39363 4.45127C7.20669 1.60071 11.0218 0 15 0C18.9783 0 22.7933 1.60071 25.6064 4.45127C28.4195 7.30182 30 11.1687 30 15.2C30.0052 18.4713 28.9637 21.656 27.0319 24.277C27.0234 24.2922 27.0147 24.3044 27.0053 24.3196C24.5894 28.151 15.0339 38 15.0339 38C15.0339 38 5.59935 28.01 3.10091 24.4551Z" transform="translate(2, 2)" />
-          <mask id="spectrum-mask-loupe" />
           <mask id="express-mask-loupe">
             <rect x="0" y="0" height="100" width="100" fill="black"/>
             <use xlink:href="#express-inner-loupe" fill="white" />
@@ -170,7 +169,6 @@ examples:
           <g>
             <use xlink:href="#spectrum-inner-loupe" class="spectrum-ColorLoupe-inner-border" />
             <use xlink:href="#spectrum-inner-loupe" mask="url(#spectrum-mask-loupe)" class="spectrum-ColorLoupe-outer-border" />
-
           </g>
         </g>
 
