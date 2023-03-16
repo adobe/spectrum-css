@@ -21,6 +21,22 @@ export default {
       options: ["s", "m", "l", "xl"],
       control: "select"
     },
+    title: {
+      name: "Title",
+      type: { name: "string", required: true },
+      table: {
+        type: { summary: "string" },
+        category: "Content",
+      },
+    },
+    body: {
+      name: "Body",
+      type: { name: "string", required: true },
+      table: {
+        type: { summary: "string" },
+        category: "Content",
+      },
+    },
     iconName: {
       ...IconStories?.argTypes?.iconName ?? {},
       if: false,
@@ -43,4 +59,7 @@ export default {
 };
 
 export const Default = Template.bind({});
-Default.args = {};
+Default.args = {
+  title: "Permission required",
+  body: "Your admin must grant you permission before you can create a segment."
+};
