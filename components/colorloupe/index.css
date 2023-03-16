@@ -76,12 +76,21 @@ governing permissions and limitations under the License.
   display: var(--spectrum-colorloupe-spectrum-visibility);
 }
 
+.spectrum-colorloupe-express-loupe {
+  clip-path: var(--spectrum-colorloupe-express-loupe);
+}
+
+.spectrum-colorloupe-express-m-borders {
+  display: var(--spectrum-colorloupe-express-m-border);
+}
+
+.spectrum-colorloupe-express-l-borders {
+  display: var(--spectrum-colorloupe-express-l-border);
+}
 
 /* hack: make sure we don't complain about this color being undefined */
 .🤫 {
   --spectrum-picked-color: 0;
-  /* --spectrum-colorloupe-outer-stroke-width: 0; */
-  /* --spectrum-colorloupe-outer-stroke-color: 0; */
 }
 
 @media (forced-colors: active) {
