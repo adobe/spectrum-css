@@ -10,9 +10,11 @@
     "prebuild": "yarn build:core",
     "build": "build-storybook --config-dir .",
     "build:core": "lerna run --stream --scope \"@spectrum-css/{vars,expressvars,tokens,icon,typography,site}\" build",
+    "new": "yarn workspace @spectrum-css/generator new story",
     "prestart": "yarn build:core",
     "start": "WATCH_MODE=true start-storybook --config-dir .",
-    "test:chromatic": "chromatic --project-token $(grep CHROMATIC_PROJECT_TOKEN ../../.env | cut -d '=' -f2)"
+    "test": "chromatic --build-script-name build --junit-report",
+    "test:scope": "yarn test --only-story-names"
   },
   "dependencies": {
     "@adobe/spectrum-css-workflow-icons": "^1.2.1",
@@ -40,7 +42,7 @@
     "@storybook/web-components": "^6.5.15",
     "@whitespace/storybook-addon-html": "^5.1.1",
     "chromatic": "^6.17.1",
-    "lit-html": "^2.5.0",
+    "lit-html": "^2.6.1",
     "lodash-es": "^4.17.21",
     "npm-run-all": "^4.1.5",
     "postcss": "^7.0.36",

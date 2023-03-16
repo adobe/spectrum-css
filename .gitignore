@@ -17,3 +17,7 @@ yarn-error.log
 # Storybook build output
 tools/preview/storybook-static
 build-storybook.log
+
+# Chromatic
+chromatic-build-*.xml
+chromatic-diagnostics*.json

@@ -40,9 +40,8 @@
     "release:beta-from-package": "yarn release from-package --conventional-prerelease --preid beta --pre-dist-tag beta --no-private",
     "release:site": "gulp prepareSite && gh-pages -d dist-site/ -f -e .",
     "start": "NODE_ENV=development yarn workspace @spectrum-css/preview start",
-    "test": "VRT=true run-p dev \"test:run {1}\" --",
-    "test:run": "yarn workspace @spectrum-css/test run test",
-    "test:visual": "yarn workspace @spectrum-css/preview test:chromatic",
+    "test": "yarn workspace @spectrum-css/preview test",
+    "test:scope": "yarn workspace @spectrum-css/preview test:scope",
     "version:build": "SCOPES=($(lerna changed)) && IFS=, SCOPE=\"${SCOPES[*]}\" && [[ \"${#SCOPES[@]}\" -gt 1 ]] && SCOPE=\"{${SCOPE}}\"; lerna run --stream --scope \"${SCOPE}\" --ignore \"@spectrum-css/{*-builder*,preview,generator,site}\" build",
     "watch": "gulp watch"
   },
