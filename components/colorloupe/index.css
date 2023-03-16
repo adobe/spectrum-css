@@ -30,23 +30,23 @@ governing permissions and limitations under the License.
 }
 
 .spectrum-ColorLoupe {
-  inline-size: var(--spectrum-colorloupe-width);
-  block-size: var(--spectrum-colorloupe-height);
+  inline-size: var(--mod-colorloupe-width, var(--spectrum-colorloupe-width));
+  block-size: var(--mod-colorloupe-height, var(--spectrum-colorloupe-height));
 
   position: absolute;
-  transform: translate(0, var(--spectrum-colorloupe-animation-distance));
+  transform: translate(0, var(--mod-colorloupe-animation-distance, var(--spectrum-colorloupe-animation-distance)));
   opacity: 0;
   transform-origin: bottom center;
-  inset-block-end: calc(var(--spectrum-colorhandle-size) + var(--spectrum-colorloupe-offset));
-  inset-inline: calc(40% - calc(var(--spectrum-colorloupe-width) / 2));
+  inset-block-end: calc(var(--spectrum-colorhandle-size) + var(--mod-colorloupe-offset, var(--spectrum-colorloupe-offset)));
+  inset-inline: calc(40% - calc(var(--mod-colorloupe-width, var(--spectrum-colorloupe-width)) / 2));
   transition: transform 100ms ease-in-out, opacity 125ms ease-in-out;
   pointer-events: none;
 
   filter:drop-shadow(
-    var(--spectrum-colorloupe-drop-shadow-x)
-    var(--spectrum-colorloupe-drop-shadow-y)
-    var(--spectrum-colorloupe-drop-shadow-blur)
-    var(--spectrum-colorloupe-drop-shadow-color)
+    var(--mod-colorloupe-drop-shadow-x, var(--spectrum-colorloupe-drop-shadow-x))
+    var(--mod-colorloupe-drop-shadow-y, var(--spectrum-colorloupe-drop-shadow-y))
+    var(--mod-colorloupe-drop-shadow-blur, var(--spectrum-colorloupe-drop-shadow-blur))
+    var(--mod-colorloupe-drop-shadow-color, var(--spectrum-colorloupe-drop-shadow-color))
   );
 
   &.is-open {
@@ -57,14 +57,14 @@ governing permissions and limitations under the License.
 
 .spectrum-ColorLoupe-inner-border {
   fill: var(--spectrum-picked-color);
-  stroke: var(--spectrum-colorloupe-inner-border-color);
-  stroke-width: var(--spectrum-colorloupe-inner-border-width);
+  stroke: var(--mod-colorloupe-inner-border-color, var(--spectrum-colorloupe-inner-border-color));
+  stroke-width: var(--mod-colorloupe-inner-border-width, var(--spectrum-colorloupe-inner-border-width));
 }
 
 .spectrum-ColorLoupe-outer-border {
   fill: none;
-  stroke: var(--spectrum-colorloupe-outer-border-color);
-  stroke-width: calc(var(--spectrum-colorloupe-outer-border-width) + var(--spectrum-colorloupe-inner-border-width));
+  stroke: var(--mod-colorloupe-outer-border-color, var(--spectrum-colorloupe-outer-border-color));
+  stroke-width: calc(var(--highcontrast-colorloupe-outer-border-color, var(--mod-colorloupe-outer-border-width, var(--spectrum-colorloupe-outer-border-width))) + var(--mod-colorloupe-inner-border-width ,var(--spectrum-colorloupe-inner-border-width)));
 }
 
 .spectrum-ColorLoupe-spectrum {
@@ -94,6 +94,6 @@ governing permissions and limitations under the License.
 
 @media (forced-colors: active) {
   .spectrum-ColorLoupe {
-    --spectrum-colorloupe-outer-border-color: CanvasText;
+    --highcontrast-colorloupe-outer-border-color: CanvasText;
   }
 }
