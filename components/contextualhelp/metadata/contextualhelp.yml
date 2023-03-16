@@ -2,24 +2,27 @@ name: Contextual Help
 status: Verified
 SpectrumSiteSlug: https://spectrum.adobe.com/page/contextual-help/
 examples:
-  - id: contextualhelp-sizing
-    name: Sizing
+  - id: contextualhelp-variants
+    name: Variants
     markup: |
       <div class="spectrum-Examples">
         <div class="spectrum-Examples-item">
-          <h4 class="spectrum-Heading spectrum-Heading--sizeXS spectrum-Examples-itemHeading">S</h4>
-          <!-- Component mark-up goes here -->
-        </div>
-        <div class="spectrum-Examples-item">
-          <h4 class="spectrum-Heading spectrum-Heading--sizeXS spectrum-Examples-itemHeading">M</h4>
-          <!-- Component mark-up goes here -->
-        </div>
-        <div class="spectrum-Examples-item">
-          <h4 class="spectrum-Heading spectrum-Heading--sizeXS spectrum-Examples-itemHeading">L</h4>
-          <!-- Component mark-up goes here -->
-        </div>
-        <div class="spectrum-Examples-item">
-          <h4 class="spectrum-Heading spectrum-Heading--sizeXS spectrum-Examples-itemHeading">XL</h4>
-          <!-- Component mark-up goes here -->
+          <div class="spectrum-ContextualHelp">
+            <button class="spectrum-ActionButton spectrum-ActionButton--sizeXS spectrum-ContextualHelp-button">
+              <svg class="spectrum-Icon spectrum-Icon--sizeM spectrum-ActionButton-icon" focusable="false" aria-hidden="true">
+                <use xlink:href="#spectrum-icon-18-Info" />
+              </svg>
+            </button>
+            <div class="spectrum-Popover spectrum-Popover--top is-open" role="presentation">
+              <section class="spectrum-Dialog spectrum-Dialog--small" role="dialog" tabindex="-1" aria-modal="true">
+                <div class="spectrum-Dialog-grid" style="display: grid;">
+                  <h2 class="spectrum-Dialog-heading spectrum-Dialog-heading--noHeader">Popover Title</h2>
+                  <hr class="spectrum-Divider spectrum-Divider--sizeM spectrum-Divider--horizontal spectrum-Dialog-divider">
+                  <section class="spectrum-Dialog-content">Cupcake ipsum dolor sit amet jelly beans. Chocolate jelly caramels. Icing soufflé chupa chups donut cheesecake. Jelly-o chocolate cake sweet roll cake danish candy biscuit halvah.</section>
+                </div>
+              </section>
+            </div>
+            <div class="dummy-spacing" style="position: relative; height: 248px; min-width: 400px; max-width: 50%;"></div>
+          </div>
         </div>
       </div>

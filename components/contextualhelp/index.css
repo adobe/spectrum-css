@@ -13,12 +13,8 @@ governing permissions and limitations under the License.
 .spectrum-ContextualHelp {
   /* Variables defined here */
   /* --spectrum-contextualhelp-... */
+  --spectrum-contextual-help-minimum-width: var(--spectrum-contextual-help-minimum-width);
 
-  &:lang(ja),
-  &:lang(zh),
-  &:lang(ko) {
-    --spectrum-contextualhelp-line-height-cjk: var(--spectrum-cjk-line-height-100);
-  }
 }
 
 .spectrum-ContextualHelp--sizeS {}
@@ -28,7 +24,7 @@ governing permissions and limitations under the License.
 
 @media (forced-colors: active) {
   .spectrum-ContextualHelp {
-    --highcontrast-contextualhelp-content-color-default: CanvasText;
+    //--highcontrast-contextualhelp-content-color-default: CanvasText;
 
     forced-color-adjust: none;
   }
@@ -36,5 +32,5 @@ governing permissions and limitations under the License.
 
 .spectrum-ContextualHelp {
   /* Properties defined here */
-  color: var(--highcontrast-contextualhelp-content-color-default, var(--mod-contextualhelp-content-color-default, var(--spectrum-contextualhelp-content-color-default)));
+  min-inline-size: var(--mod-spectrum-contextual-help-minimum-width, var(--spectrum-contextual-help-minimum-width));
 }
