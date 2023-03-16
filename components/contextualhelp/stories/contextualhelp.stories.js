@@ -1,6 +1,8 @@
 // Import the component markup template
 import { Template } from "./template";
 
+import { default as IconStories } from "@spectrum-css/icon/stories/icon.stories.js";
+
 // More on default export: https://storybook.js.org/docs/web-components/writing-stories/introduction#default-export
 export default {
   title: "Contextual Help",
@@ -19,11 +21,16 @@ export default {
       options: ["s", "m", "l", "xl"],
       control: "select"
     },
+    iconName: {
+      ...IconStories?.argTypes?.iconName ?? {},
+      if: false,
+    },
   },
   // More on args: https://storybook.js.org/docs/web-components/writing-stories/args
   args: {
     rootClass: "spectrum-ContextualHelp",
-    size: "m",
+    size: "xs",
+    iconName: "Info"
   },
   parameters: {
     actions: {
