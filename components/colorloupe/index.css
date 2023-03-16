@@ -13,10 +13,10 @@ governing permissions and limitations under the License.
   --spectrum-colorloupe-height: var(--spectrum-color-loupe-height);
 
   /* Distance between the loupe and the handle */
-  --spectrum-colorloupe-offset: 24px; /* var(--spectrum-color-loupe-bottom-to-color-handle); */
+  --spectrum-colorloupe-offset: var(--spectrum-color-loupe-bottom-to-color-handle);
 
   /* How much to animate up to the offset distance */
-  --spectrum-colorloupe-animation-distance: 8px; /* TODO: replace with animation token */
+  --spectrum-colorloupe-animation-distance: 8px; /* TODO: replace with forthcoming animation token */
 
   --spectrum-colorloupe-drop-shadow-x: var(--spectrum-drop-shadow-x);
   --spectrum-colorloupe-drop-shadow-y: var(--spectrum-color-loupe-drop-shadow-y);
@@ -27,6 +27,7 @@ governing permissions and limitations under the License.
   --spectrum-colorloupe-inner-border-width: 1px; /* TODO: replace with update token for color-loupe-inner-border-width */
   --spectrum-colorloupe-outer-border-color: var(--spectrum-color-loupe-outer-border);
   --spectrum-colorloupe-inner-border-color: var(--spectrum-color-loupe-inner-border);
+  /* --colorhandle-height: 24px; */
 }
 
 .spectrum-ColorLoupe {
@@ -37,10 +38,9 @@ governing permissions and limitations under the License.
   transform: translate(0, var(--spectrum-colorloupe-animation-distance));
   opacity: 0;
   transform-origin: bottom center;
-  inset-block-end: calc(50% + var(--spectrum-colorloupe-offset));
-  inset-inline: calc(50% - calc(52px / 2));
+  inset-block-end: calc(var(--spectrum-colorhandle-size) + var(--spectrum-colorloupe-offset));
+  inset-inline: -19px; /* get to -19px with tokens*/
   transition: transform 100ms ease-in-out, opacity 125ms ease-in-out;
-
   pointer-events: none;
 
   filter:drop-shadow(
@@ -68,12 +68,12 @@ governing permissions and limitations under the License.
   stroke-width: calc(var(--spectrum-colorloupe-outer-border-width) + var(--spectrum-colorloupe-inner-border-width));
 }
 
-.spectrum-ColorLoupe-express {
-  display: var(--spectrum-colorloupe-express-visibility);
-}
-
 .spectrum-ColorLoupe-spectrum {
   display: var(--spectrum-colorloupe-spectrum-visibility);
+}
+
+.spectrum-ColorLoupe-express {
+  display: var(--spectrum-colorloupe-express-visibility);
 }
 
 .spectrum-colorloupe-express-loupe {
