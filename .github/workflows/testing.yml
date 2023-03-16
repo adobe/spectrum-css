@@ -27,6 +27,7 @@ jobs:
         with:
           projectToken: ${{ secrets.CHROMATIC_PROJECT_TOKEN }}
           dryRun: true
+          buildScriptName: "test"
           storybookBaseDir: tools/preview
           exitOnceUploaded: true
           onlyChanged: true
