@@ -71,7 +71,7 @@ governing permissions and limitations under the License.
 
  /*** Quiet Variant ***/
   --spectrum-stepper-quiet-width: var(--spectrum-component-height-300); /* matches previous width token */
-  --spectrum-stepper-quiet-button-width: calc(var(--spectrum-stepper-button-width) - var(--spectrum-stepper-button-offset));
+  --spectrum-stepper-quiet-button-width: var(--spectrum-stepper-button-width);
 
   /*** Disabled Colors ***/
   --spectrum-stepper-border-color-disabled: var(--spectrum-disabled-background-color);
