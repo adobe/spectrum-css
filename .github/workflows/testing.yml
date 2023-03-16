@@ -9,7 +9,8 @@ on:
 
 jobs:
   build:
-    if: github.event.label.name === "run_vrt"
+    if: contains(github.event.pull_request.labels.*.name, 'run_vrt')
+    
     runs-on: ubuntu-latest
 
     steps:
@@ -32,7 +33,7 @@ jobs:
           traceChanged: true
           diagnostics: true
           # forces a pass but doesn't run
-          skip: true #${{ github.event.pull_request.draft == true }}
+          skip: ${{ contains(github.event.pull_request.labels.*.name, 'skip_vrt') }}
       - uses: actions/upload-artifact@v2
         if: always()
         with:
