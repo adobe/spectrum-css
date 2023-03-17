@@ -4,6 +4,8 @@ import { ifDefined } from 'lit-html/directives/if-defined.js';
 
 import { Template as ActionButton } from "@spectrum-css/actionbutton/stories/template.js";
 import { Template as Popover } from "@spectrum-css/popover/stories/template.js";
+import { Template as Link } from "@spectrum-css/link/stories/template.js";
+
 
 import "../index.css";
 
@@ -15,6 +17,7 @@ export const Template = ({
   iconName,
   title,
   body,
+  link,
   customClasses = [],
   ...globals
 }) => {
@@ -27,14 +30,16 @@ export const Template = ({
       ${ActionButton({
         ...globals,
         size,
-        iconName
+        iconName,
+        customClasses: [`${rootClass}-button`]
       })}
       ${Popover({
         content: [
-          html`<div class='${rootClass}--Heading'>${title}</div>`,
-          html`<div class='${rootClass}--Body'>${body}</div>`
-        ]
-
+          title ? html`<h2 class="${rootClass}-Heading">${title}</h2>` : "",
+          body ? html`<p class="${rootClass}-Body">${body}</p>` : "",
+          link ? Link({ text: link.text, url: link.url }) : ""
+        ],
+        customClasses: [`${rootClass}-popover`]
       })}
     </div>
   `;
