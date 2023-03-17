@@ -2,8 +2,7 @@
 import { Template } from "./template";
 import { html } from "lit-html";
 
-import { default as IconStories } from "@spectrum-css/icon/stories/icon.stories.js";
-import { Default as Dialog } from "@spectrum-css/dialog/stories/dialog.stories.js";
+import { default as ActionButtonStories } from "@spectrum-css/actionbutton/stories/actionbutton.stories.js";
 
 // More on default export: https://storybook.js.org/docs/web-components/writing-stories/introduction#default-export
 export default {
@@ -39,16 +38,20 @@ export default {
       options: ["Info", "Help"],
       control: "select"
     },
+    popoverPlacement: { table: { disable: true }},
+    link: { table: { disable: true }}
   },
   // More on args: https://storybook.js.org/docs/web-components/writing-stories/args
   args: {
     rootClass: "spectrum-ContextualHelp",
-    size: "xs",
-    iconName: "Info"
+    iconName: "Info",
+    popoverPlacement: "bottom-start"
   },
   parameters: {
     actions: {
-      handles: []
+      handles: [
+        ...ActionButtonStories?.parameters?.actions?.handles ?? [],
+      ]
     },
     status: {
       type: process.env.MIGRATED_PACKAGES.includes('contextualhelp') ? 'migrated' : undefined

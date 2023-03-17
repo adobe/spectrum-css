@@ -11,9 +11,21 @@ governing permissions and limitations under the License.
 */
 
 .spectrum-ContextualHelp {
-  /* Variables defined here */
-  /* --spectrum-contextualhelp-... */
+  /* Layout Variables */
   --spectrum-contextual-help-minimum-width: var(--spectrum-contextual-help-minimum-width);
+  --spectrum-contextual-help-padding: var(--spectrum-spacing-400);
+  --spectrum-contextual-help-content-spacing: var(--spectrum-spacing-100);
+  --spectrum-contextual-help-link-spacing: var(--spectrum-spacing-300);
+
+  /* Typography Variables */
+  --spectrum-contextual-help-title-size: var(--spectrum-contextual-help-title-size);
+
+
+
+  /* Mobile styling */
+  @media screen and (max-width: 700px) {
+    --spectrum-contextual-help-content-spacing: var(--spectrum-spacing-200);
+  }
 
 }
 
@@ -31,6 +43,32 @@ governing permissions and limitations under the License.
 }
 
 .spectrum-ContextualHelp {
-  /* Properties defined here */
+  position: relative;
   min-inline-size: var(--mod-spectrum-contextual-help-minimum-width, var(--spectrum-contextual-help-minimum-width));
 }
+
+.spectrum-ContextualHelp-button {
+  display: block;
+}
+
+.spectrum-ContextualHelp-popover {
+  padding-block: var(--mod-spectrum-contextual-help-padding, var(--spectrum-contextual-help-padding));
+  padding-inline: var(--mod-spectrum-contextual-help-padding, var(--spectrum-contextual-help-padding));
+  font-size: var(--mod-spectrum-contextual-help-body-size, var(--spectrum-contextual-help-body-size));
+
+
+  h2, p {
+    margin: 0;
+  }
+
+  h2 {
+    margin-block-end: var(--mod-spectrum-contextual-help-content-spacing, var(--spectrum-contextual-help-content-spacing));
+    font-size: var(--mod-spectrum-contextual-help-title-size, var(--spectrum-contextual-help-title-size));
+  }
+}
+
+.spectrum-ContextualHelp-link {
+  margin-block-start: var(--mod-spectrum-contextual-help-link-spacing, var(--spectrum-contextual-help-link-spacing));
+}
+
+

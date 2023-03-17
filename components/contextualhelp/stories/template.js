@@ -12,24 +12,23 @@ import "../index.css";
 // More on component templates: https://storybook.js.org/docs/web-components/writing-stories/introduction#using-args
 export const Template = ({
   rootClass = "spectrum-ContextualHelp",
-  size,
   id,
   iconName,
   title,
   body,
   link,
+  popoverPlacement,
   customClasses = [],
   ...globals
 }) => {
   return html`
     <div class=${classMap({
       [rootClass]: true,
-      [`${rootClass}--size${size.toUpperCase()}`]: true,
       ...customClasses.reduce((a, c) => ({ ...a, [c]: true }), {}),
     })} id=${ifDefined(id)}>
       ${ActionButton({
         ...globals,
-        size,
+        size: "xs",
         iconName,
         customClasses: [`${rootClass}-button`]
       })}
@@ -37,9 +36,9 @@ export const Template = ({
         content: [
           title ? html`<h2 class="${rootClass}-Heading">${title}</h2>` : "",
           body ? html`<p class="${rootClass}-Body">${body}</p>` : "",
-          link ? Link({ text: link.text, url: link.url }) : ""
+          link ? Link({ text: link.text, url: link.url, customClasses: [`${rootClass}-link`]}) : ""
         ],
-        customClasses: [`${rootClass}-popover`]
+        customClasses: [`spectrum-Popover--${popoverPlacement}`, `${rootClass}-popover`]
       })}
     </div>
   `;
