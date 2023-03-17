@@ -63,7 +63,4 @@ governing permissions and limitations under the License.
 .spectrum-PickerButton-icon {
   /* don't be small, ever */
   flex-shrink: 0;
-
-  /* remove margin used for centering */
-  margin: 0 !important;
 }
