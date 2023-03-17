@@ -26,7 +26,7 @@ Storybook leverages webpack for bundling and we have updated it with the followi
   import { Template as Icon } from "@spectrum-css/icon/stories/template.js";
   ```
 
-- Component CSS can be loaded in a story using the package name rather than the directory path (the local version is used as the path is automatically resolved).
+- CSS for other components can be loaded in a story using the package name (rather than the directory path), i.e. `@spectrum-css/toast` vs. `../toast/index.css`. The local version of the package is used regardless but the webpack settings will resolve the pathing for you.
 
   ```js
   import { html } from "lit-html";
@@ -131,7 +131,7 @@ argTypes: {
 },
 ```
 
-#### Examples
+#### Commonly used argTypes
 
 ```js
 image: {
