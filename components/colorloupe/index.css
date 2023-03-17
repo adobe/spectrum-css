@@ -12,10 +12,7 @@ governing permissions and limitations under the License.
   --spectrum-colorloupe-width: var(--spectrum-color-loupe-width);
   --spectrum-colorloupe-height: var(--spectrum-color-loupe-height);
 
-  /* Distance between the loupe and the handle */
   --spectrum-colorloupe-offset: var(--spectrum-color-loupe-bottom-to-color-handle);
-
-  /* How much to animate up to the offset distance */
   --spectrum-colorloupe-animation-distance: 8px; /* TODO: replace with forthcoming animation token */
 
   --spectrum-colorloupe-drop-shadow-x: var(--spectrum-drop-shadow-x);
@@ -24,7 +21,7 @@ governing permissions and limitations under the License.
   --spectrum-colorloupe-drop-shadow-color: var(--spectrum-drop-shadow-color);
 
   --spectrum-colorloupe-outer-border-width: var(--spectrum-color-loupe-outer-border-width);
-  --spectrum-colorloupe-inner-border-width: 1px; /* TODO: replace with update token for color-loupe-inner-border-width */
+  --spectrum-colorloupe-inner-border-width: 1px; /* TODO: replace with updated token for color-loupe-inner-border-width */
   --spectrum-colorloupe-outer-border-color: var(--spectrum-color-loupe-outer-border);
   --spectrum-colorloupe-inner-border-color: var(--spectrum-color-loupe-inner-border);
 }
@@ -63,8 +60,8 @@ governing permissions and limitations under the License.
 
 .spectrum-ColorLoupe-outer-border {
   fill: none;
-  stroke: var(--mod-colorloupe-outer-border-color, var(--spectrum-colorloupe-outer-border-color));
-  stroke-width: calc(var(--highcontrast-colorloupe-outer-border-color, var(--mod-colorloupe-outer-border-width, var(--spectrum-colorloupe-outer-border-width))) + var(--mod-colorloupe-inner-border-width ,var(--spectrum-colorloupe-inner-border-width)));
+  stroke: var(--highcontrast-colorloupe-outer-border-color, var(--mod-colorloupe-outer-border-color, var(--spectrum-colorloupe-outer-border-color)));
+  stroke-width: calc(var(--mod-colorloupe-outer-border-width, var(--spectrum-colorloupe-outer-border-width)) + var(--mod-colorloupe-inner-border-width ,var(--spectrum-colorloupe-inner-border-width)));
 }
 
 .spectrum-ColorLoupe-spectrum {
@@ -75,6 +72,7 @@ governing permissions and limitations under the License.
   display: var(--spectrum-colorloupe-express-visibility);
 }
 
+/* these methods handle switching clip path and mask used for express mobile(l) and express desktop(m) */
 .spectrum-colorloupe-express-loupe {
   clip-path: var(--spectrum-colorloupe-express-loupe);
 }
