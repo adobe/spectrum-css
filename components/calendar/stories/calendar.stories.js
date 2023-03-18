@@ -3,7 +3,6 @@ import { Template } from "./template";
 
 import { default as ActionButtonStories } from '@spectrum-css/actionbutton/stories/actionbutton.stories.js';
 
-const today = new Date();
 const months = [...Array(12).keys()].map((key) =>
   new Date(0, key).toLocaleString("en", { month: "long" })
 );
@@ -105,9 +104,9 @@ export default {
 
 export const Default = Template.bind({});
 Default.args = {
-  month: months[today.getMonth()],
-  selectedDay: today,
-  year: today.getFullYear(),
+  month: months[6],
+  selectedDay: new Date(2023, 6, 3),
+  year: 2023,
 };
 
 export const RangeSelection = Template.bind({});

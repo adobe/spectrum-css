@@ -6,6 +6,7 @@ dist-site
 
 temp
 .npmrc*
+.env
 .tmp
 npm-debug.log*
 .DS_Store
@@ -15,3 +16,8 @@ yarn-error.log
 
 # Storybook build output
 tools/preview/storybook-static
+build-storybook.log
+
+# Chromatic
+chromatic-build-*.xml
+chromatic-diagnostics*.json
