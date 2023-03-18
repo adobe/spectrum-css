@@ -1,6 +1,7 @@
 import { html } from "lit-html";
 import { classMap } from "lit-html/directives/class-map.js";
 import { ifDefined } from "lit-html/directives/if-defined.js";
+import { when } from "lit-html/directives/when.js";
 
 import '../index.css';
 import '../skin.css';
@@ -52,10 +53,13 @@ export const Template = ({
         handle.style.transform = 'rotate(' + deg + 'deg' + ')';
         input.value = Math.round(percent * 0.01 * (input.max - input.min) + input.min);
       }}>
-      ${label ? html`<div class="${rootClass}-labelContainer">
-        <label id="dialLabel" class="${rootClass}-label" for="labeledDial">${label}</label>
-        <div class="${rootClass}-value" role="textbox" aria-readonly="true" aria-labelledby="dialLabel">${min}</div>
-      </div>` : ""}
+      ${when(
+        label,
+        () => html`<div class="${rootClass}-labelContainer">
+          <label id="dialLabel" class="${rootClass}-label" for="labeledDial">${label}</label>
+          <div class="${rootClass}-value" role="textbox" aria-readonly="true" aria-labelledby="dialLabel">${min}</div>
+        </div>`
+      )}
       <div class="${rootClass}-controls">
         <div class="${rootClass}-handle" tabindex="0">
           <input

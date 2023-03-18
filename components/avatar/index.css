@@ -107,10 +107,10 @@ governing permissions and limitations under the License.
     position: absolute;
     inset-block-start: calc((var(--mod-avatar-focus-indicator-gap, var(--spectrum-avatar-focus-indicator-gap)) + var(--mod-avatar-focus-indicator-thickness, var(--spectrum-avatar-focus-indicator-thickness))) * -1);
     inset-inline-start: calc((var(--mod-avatar-focus-indicator-gap, var(--spectrum-avatar-focus-indicator-gap)) + var(--mod-avatar-focus-indicator-thickness, var(--spectrum-avatar-focus-indicator-thickness))) * -1);
-  
+
     inline-size: calc(var(--mod-avatar-inline-size, var(--spectrum-avatar-inline-size)) + (var(--mod-avatar-focus-indicator-gap, var(--spectrum-avatar-focus-indicator-gap)) * 2));
     block-size: calc(var(--mod-avatar-inline-size, var(--spectrum-avatar-inline-size)) + (var(--mod-avatar-focus-indicator-gap, var(--spectrum-avatar-focus-indicator-gap)) * 2));
-  
+
     border-style: solid;
     border-width: var(--mod-avatar-focus-indicator-thickness, var(--spectrum-avatar-focus-indicator-thickness));
     border-color: var(--highcontrast-avatar-focus-indicator-color, var(--mod-avatar-focus-indicator-color, var(--spectrum-avatar-focus-indicator-color)));

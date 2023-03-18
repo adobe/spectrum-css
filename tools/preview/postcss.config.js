@@ -10,10 +10,27 @@ module.exports = (ctx) => {
     const componentPath = resolve(__dirname, '../../components');
     const folderName = relative(componentPath, ctx.file).split('/')[0];
     const pkgPath = resolve(componentPath, folderName, 'package.json');
-    const isExpress = folderName === 'expressvars';
-    const modifier = basename(ctx.file, '.css').startsWith('spectrum') ? basename(ctx.file, '.css').replace('spectrum-', '') : '';
 
-    if (existsSync(pkgPath)) {
+    if (['expressvars', 'vars', 'tokens'].includes(folderName)) {
+        const isExpress = folderName === 'expressvars';
+        const modifier = basename(ctx.file, '.css').startsWith('spectrum') ? basename(ctx.file, '.css').replace('spectrum-', '').replace('global', '') : '';
+
+        plugins = [
+            require('postcss-import')(),
+            require('postcss-selector-replace')({
+                before: [':root'],
+                after: [`${isExpress ? '.spectrum--express' : ''}${modifier ? `.spectrum--${modifier}` : ''}${!isExpress && !modifier ? '.spectrum' : ''}`]
+            }),
+            ...isExpress ? [require('postcss-prefix-selector')({
+                prefix: '.spectrum--express',
+                transform(_prefix, selector, prefixedSelector) {
+                    if (selector.startsWith('.spectrum--express')) return selector;
+                    /* Smoosh the selectors together b/c they co-exist */
+                    return prefixedSelector.replace(' ', '');
+                }
+            })] : [],
+        ];
+    } else if (existsSync(pkgPath)) {
         const { devDependencies } = require(pkgPath);
         if (Object.keys(devDependencies).includes('@spectrum-css/component-builder')) {
             plugins.push(...legacyBuilder.processors);
@@ -24,16 +41,6 @@ module.exports = (ctx) => {
                 plugins.push(...simpleBuilder.getProcessors());
             }
         }
-    }
-
-    if (['expressvars', 'vars', 'tokens'].includes(folderName)) {
-        plugins = [
-            require('postcss-import')(),
-            require('postcss-selector-replace')({
-                before: [':root'],
-                after: [`${isExpress ? `.spectrum--express` : ''}${modifier ? `.spectrum--${modifier}` : ''}${!isExpress && !modifier ? `.spectrum` : ''}`]
-              })
-        ];
     }
 
     // For storybook, add a tool to suppress autoprefixer warnings

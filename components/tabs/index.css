@@ -1,5 +1,5 @@
 /*
-Copyright 2019 Adobe. All rights reserved.
+Copyright 2023 Adobe. All rights reserved.
 This file is licensed to you under the Apache License, Version 2.0 (the "License");
 you may not use this file except in compliance with the License. You may obtain a copy
 of the License at http://www.apache.org/licenses/LICENSE-2.0
@@ -110,7 +110,7 @@ governing permissions and limitations under the License.
 
     inset-inline-start: calc(-1 * var(--spectrum-tabs-textonly-tabitem-focus-ring-padding-x));
     inset-inline-end: calc(-1 * var(--spectrum-tabs-textonly-tabitem-focus-ring-padding-x));
-    
+
     border: var(--spectrum-tabs-textonly-tabitem-focus-ring-size) solid transparent;
     border-radius: var(--spectrum-tabs-textonly-tabitem-focus-ring-border-radius);
 
@@ -141,7 +141,7 @@ governing permissions and limitations under the License.
 
   /* Be below the tab */
   z-index: 0;
-  
+
   transition: transform var(--spectrum-tabs-texticon-tabitem-selection-indicator-animation-duration) var(--spectrum-tabs-texticon-tabitem-selection-indicator-animation-ease);
   transform-origin: top left;
 
@@ -202,7 +202,7 @@ governing permissions and limitations under the License.
     line-height: var(--spectrum-tabs-vertical-textonly-tabitem-height);
     padding-block: 0;
     padding-inline: var(--spectrum-tabs-quiet-textonly-tabitem-focus-ring-padding-x);
-    
+
     margin-block-end: var(--spectrum-tabs-vertical-textonly-tabitem-gap);
     margin-inline-start: calc(var(--spectrum-tabs-vertical-textonly-tabitem-gap) / 2);
 

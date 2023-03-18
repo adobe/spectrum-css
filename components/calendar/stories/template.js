@@ -3,10 +3,10 @@ import { classMap } from "lit-html/directives/class-map.js";
 import { repeat } from "lit-html/directives/repeat.js";
 import { ifDefined } from "lit-html/directives/if-defined.js";
 
-import { useArgs } from "@storybook/client-api";
+import { useArgs, useGlobals } from "@storybook/client-api";
 import { action } from "@storybook/addon-actions";
 
-import { Template as ActionButton } from '../../actionbutton/stories/template.js';
+import { Template as ActionButton } from '@spectrum-css/actionbutton/stories/template.js';
 
 import '../index.css';
 import '../skin.css';
@@ -20,14 +20,21 @@ export const Template = ({
   padded,
   isDisabled = false,
   useDOWAbbrev = false,
+  buttonSize = "s",
   customClasses = [],
+  onDateClick,
+  previousHandler,
+  nextHandler,
   id,
   ...globals
-}, ctx) => {
-  const { lang } = ctx.globals;
-  const displayedDate = new Date(`${month} 1, ${year}`);
-
+}) => {
   const [_, updateArgs] = useArgs();
+  const [{ lang }] = useGlobals();
+
+  const displayedDate = new Date(`${month} 1, ${year}`);
+  const displayedMonth = displayedDate.getMonth();
+  const displayedYear = displayedDate.getFullYear();
+
   const DOW = [
     "Sunday",
     "Monday",
@@ -51,24 +58,40 @@ export const Template = ({
     return date.toLocaleString(lang, { month: format });
   };
 
-  const generateMonthArray = ({ displayedDate, selectedDate, lastSelectedDate }) => {
+  /**
+   * @typedef {{ date: Date, dateClassList: import('lit-html').ClassInfo, isSelected: boolean, isToday: boolean, isOutsideMonth: boolean }} DateMetadata
+   **/
+
+  /**
+   *
+   * @param {object} config
+   * @param {Date} config.selectedDate
+   * @param {Date} config.lastSelectedDate
+   * @returns {DateMetadata[]}
+   */
+  const generateMonthArray = ({ selectedDate, lastSelectedDate }) => {
     /* Fetch a clean (time-free) version of today's date */
     const today = new Date();
     today.setHours(0, 0, 0, 0);
     const todayDatetime = today.getTime();
 
-    selectedDate && selectedDate.setHours(0, 0, 0, 0);
-    const selectedDatetime = selectedDate ? selectedDate.getTime() : selectedDate;
+    let selectedDatetime;
+    let lastSelectedDatetime
 
-    lastSelectedDate && lastSelectedDate.setHours(0, 0, 0, 0);
-    let lastSelectedDatetime = lastSelectedDate ? lastSelectedDate.getTime() : lastSelectedDate;
+    if (selectedDate && typeof selectedDate.setHours === 'function') {
+      selectedDate.setHours(0, 0, 0, 0);
+      selectedDatetime = selectedDate ? selectedDate.getTime() : selectedDate;
+    }
+
+    if (lastSelectedDate && typeof lastSelectedDate.setHours === 'function') {
+      lastSelectedDate.setHours(0, 0, 0, 0);
+      lastSelectedDatetime = lastSelectedDate ? lastSelectedDate.getTime() : lastSelectedDate;
+    }
+
     if (lastSelectedDatetime && selectedDatetime && lastSelectedDatetime < selectedDatetime) {
       lastSelectedDatetime = undefined;
       console.warn("Calendar: last selected date must occur after the selected date.");
     }
-
-    const displayedMonth = displayedDate.getMonth();
-    const displayedYear = displayedDate.getFullYear();
 
     const lastDateInMonth = new Date(displayedYear, displayedMonth + 1, 0).getDate();
     const firstDOWInMonth = new Date(displayedYear, displayedMonth, 1).getDay(); // 0 = Sunday
@@ -97,35 +120,62 @@ export const Template = ({
         const thisDatetime = thisDate.getTime();
 
         /* Compare the rendered date against the clean date stamp for today */
-        const isToday = thisDatetime === todayDatetime;
-        const isInRange = thisDatetime >= selectedDatetime && thisDatetime <= lastSelectedDatetime;
-        const isRangeStart = isInRange && thisDatetime === selectedDatetime;
-        const isRangeEnd = isInRange && thisDatetime === lastSelectedDatetime;
-        const isFocused = (selectedDate && isSelected) || isToday;
-        const isSelected = (selectedDate && selectedDatetime === thisDatetime) || isToday || isInRange;
+        const isToday = !!(thisDatetime === todayDatetime);
+        const isInRange = !!(thisDatetime && selectedDatetime && lastSelectedDatetime && thisDatetime >= selectedDatetime && thisDatetime <= lastSelectedDatetime);
+        const isSelected = !!((selectedDate && selectedDatetime === thisDatetime) || isInRange);
 
         return ({
           date: thisDate,
-          dateClassList: {
-            [`${rootClass}-date`]: true,
-            "is-outsideMonth": isOutsideMonth,
-            "is-today": isToday,
-            "is-focused": isFocused,
-            "is-range-selection": isInRange,
-            // "is-range-start": isRangeStart, @todo
-            // "is-range-end": isRangeEnd, @todo
-            "is-selected": isSelected,
-            "is-selection-start": isRangeStart,
-            "is-selection-end": isRangeEnd,
-            "is-disabled": isOutsideMonth || isDisabled,
-          },
           isSelected,
           isToday,
           isOutsideMonth,
+          isInRange,
+          isRangeStart: !!(isInRange && thisDatetime === selectedDatetime),
+          isRangeEnd: !!(isInRange && thisDatetime === lastSelectedDatetime),
         });
       })
     );
   };
+
+  if (!onDateClick || typeof onDateClick !== 'function') {
+    /**
+     * @param {DateMetadata} thisDay
+     * @param {Event} evt
+     * @returns {void}
+     */
+    onDateClick = (thisDay, evt) => {
+      if (!thisDay || thisDay.isDisabled || !thisDay.date) return;
+
+      updateArgs({ selectedDay: thisDay.date });
+      action(`click .${rootClass}-date`)(evt);
+    };
+  }
+
+  if (!previousHandler || typeof previousHandler !== 'function') {
+    previousHandler = ({displayedMonth, displayedYear}) => {
+      if (typeof displayedMonth === "undefined" || typeof displayedYear === "undefined") {
+        console.warn(`Calendar: No month or year could be determined.`);
+        return;
+      }
+      return updateArgs({
+        month: getMonthName(displayedMonth < 1 ? 12 : displayedMonth),
+        year: displayedMonth === 0 ? displayedYear - 1 : displayedYear,
+      });
+    };
+  }
+
+  if (!nextHandler || typeof nextHandler !== 'function') {
+    nextHandler = ({ displayedMonth, displayedYear }) => {
+      if (typeof displayedMonth === "undefined" || typeof displayedYear === "undefined") {
+        console.warn(`Calendar: No month or year could be determined.`);
+        return;
+      }
+      return updateArgs({
+        month: getMonthName(displayedMonth > 10 ? 1 : displayedMonth + 2),
+        year: displayedMonth === 11 ? displayedYear + 1 : displayedYear,
+      });
+    };
+  }
 
   return html`
     <div
@@ -150,14 +200,10 @@ export const Template = ({
           hideLabel: true,
           isQuiet: true,
           isDisabled,
-          icon: 'ChevronLeft100',
+          size: buttonSize,
+          iconName: 'ChevronLeft100',
           customClasses: [`${rootClass}-prevMonth`],
-          onclick: (evt) => {
-            const m = displayedDate.getMonth();
-            if (m === 0) year = year - 1;
-            const prevMonth = m < 1 ? 12 : m;
-            updateArgs({ month: getMonthName(prevMonth), year });
-          }
+          onclick: previousHandler.bind(null, { displayedMonth, displayedYear })
         })}
         ${ActionButton({
           ...globals,
@@ -165,14 +211,10 @@ export const Template = ({
           hideLabel: true,
           isQuiet: true,
           isDisabled,
-          icon: 'ChevronRight100',
+          size: buttonSize,
+          iconName: 'ChevronRight100',
           customClasses: [`${rootClass}-nextMonth`],
-          onclick: (evt) => {
-            const m = displayedDate.getMonth();
-            if (m === 11) year = year + 1;
-            const nextMonth = m > 10 ? 1 : m + 2;
-            updateArgs({ month: getMonthName(nextMonth), year });
-          }
+          onclick: nextHandler.bind(null, { displayedMonth, displayedYear })
         })}
       </div>
       <div
@@ -197,7 +239,6 @@ export const Template = ({
             </tr>
           </thead>
           <tbody role="presentation">${repeat(generateMonthArray({
-            displayedDate,
             selectedDate: selectedDay,
             lastSelectedDate: lastDay
           }), (thisWeek) => html`
@@ -207,18 +248,26 @@ export const Template = ({
                 class="${rootClass}-tableCell"
                 tabindex=${!thisDay.isOutsideMonth ? "-1" : ""}
                 aria-disabled=${thisDay.isOutsideMonth || thisDay.isDisabled ? "true" : "false"}
-                aria-selected=${thisDay.isSelected ? "true" : "false"}
+                aria-selected=${thisDay.isSelected === true ? "true" : "false"}
                 aria-invalid="false"
                 title="${thisDay.date.toLocaleDateString(lang, printTitleFormat)}"
               >
                 <span
                   role="presentation"
-                  class=${classMap(thisDay.dateClassList)}
-                  @click=${(evt) => {
-                    if (thisDay.isDisabled) return;
-                    updateArgs({ selectedDay: thisDay.date });
-                    action("select")(evt);
-                  }}
+                  class=${classMap({
+                    [`${rootClass}-date`]: true,
+                    "is-outsideMonth": thisDay.isOutsideMonth,
+                    "is-today": thisDay.isToday,
+                    "is-focused": thisDay.isSelected,
+                    "is-range-selection": thisDay.isInRange,
+                    // "is-range-start": thisDay.isRangeStart, @todo
+                    // "is-range-end": thisDay.isRangeEnd, @todo
+                    "is-selected": thisDay.isSelected,
+                    "is-selection-start": thisDay.isRangeStart,
+                    "is-selection-end": thisDay.isRangeEnd,
+                    "is-disabled": thisDay.isOutsideMonth || thisDay.isDisabled,
+                  })}
+                  @click=${onDateClick.bind(null, thisDay)}
                   >${thisDay.date.getDate()}</span>
               </td>`)}
             </tr>`)}

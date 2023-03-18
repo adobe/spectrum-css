@@ -42,7 +42,7 @@ function writeToFile(file) {
             let modVariable = extract(line, index);
             result.add(modVariable);
             index = line.indexOf(pattern, index + 1);
-        }   
+        }
         if (result.size) {
             const resultArray = [...result];
             const formattedResults = resultArray.map((result) => `|\`${result}\`|`);
@@ -69,4 +69,3 @@ function searchFilesForString(dir, pattern, extension) {
 }
 
 searchFilesForString(rootDir, pattern, fileExtension);
-

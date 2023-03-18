@@ -3,6 +3,51 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+<a name="2.0.1"></a>
+## 2.0.1
+🗓 2023-03-13 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/colorwheel@2.0.0...@spectrum-css/colorwheel@2.0.1)
+
+**Note:** Version bump only for package @spectrum-css/colorwheel
+
+
+
+
+
+<a name="2.0.0"></a>
+# 2.0.0
+🗓 2023-03-09 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/colorwheel@1.0.32...@spectrum-css/colorwheel@2.0.0)
+
+* feat(colorwheel)!: migrate to core tokens (#1619) ([f07028d](https://github.com/adobe/spectrum-css/commit/f07028d)), closes [#1619](https://github.com/adobe/spectrum-css/issues/1619)
+
+
+### 🛑 BREAKING CHANGES
+
+* migrates ColorWheel to use `@adobe/spectrum-tokens`
+
+
+
+
+
+<a name="1.0.32"></a>
+## 1.0.32
+🗓 2023-03-07 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/colorwheel@1.0.31...@spectrum-css/colorwheel@1.0.32)
+
+**Note:** Version bump only for package @spectrum-css/colorwheel
+
+
+
+
+
+<a name="1.0.31"></a>
+## 1.0.31
+🗓 2023-02-28 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/colorwheel@1.0.30...@spectrum-css/colorwheel@1.0.31)
+
+**Note:** Version bump only for package @spectrum-css/colorwheel
+
+
+
+
+
 <a name="1.0.30"></a>
 ## 1.0.30
 🗓 2023-02-21 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/colorwheel@1.0.29...@spectrum-css/colorwheel@1.0.30)

@@ -1,5 +1,5 @@
 /*
-Copyright 2019 Adobe. All rights reserved.
+Copyright 2023 Adobe. All rights reserved.
 This file is licensed to you under the Apache License, Version 2.0 (the "License");
 you may not use this file except in compliance with the License. You may obtain a copy
 of the License at http://www.apache.org/licenses/LICENSE-2.0
@@ -169,9 +169,9 @@ function watchSite() {
   );
 }
 
-function watchCommons() {  
+function watchCommons() {
   gulp.watch(
-    [`${dirs.components}/commons/*.css`], 
+    [`${dirs.components}/commons/*.css`],
     gulp.series(bundleBuilder.buildDepenenciesOfCommons, bundleBuilder.copyPackages, reload)
   );
 }
@@ -207,18 +207,18 @@ function watch() {
           }
           )();
         // this catches yaml parsing errors
-        // should stop the series from running 
+        // should stop the series from running
         } catch (error) {
           done(error);
         } finally {
-          // we have to do this 
+          // we have to do this
           // or gulp will get wedged by the error
           done();
           reload();
         }
     }
   );
-    
+
   watchSite();
 
 }

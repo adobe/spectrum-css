@@ -76,8 +76,8 @@ MenuWithSections.args = {
       heading: "Section Heading",
       idx: 2,
       items: [
-        { label: "Edit", icon: "Edit" },
-        { label: "Copy", icon: "Copy", isDisabled: true },
+        { label: "Edit", iconName: "Edit" },
+        { label: "Copy", iconName: "Copy", isDisabled: true },
       ],
       isDisabled: true,
     },

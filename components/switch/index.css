@@ -1,5 +1,5 @@
 /*
-Copyright 2022 Adobe. All rights reserved.
+Copyright 2023 Adobe. All rights reserved.
 This file is licensed to you under the Apache License, Version 2.0 (the "License");
 you may not use this file except in compliance with the License. You may obtain a copy
 of the License at http://www.apache.org/licenses/LICENSE-2.0
@@ -23,7 +23,7 @@ governing permissions and limitations under the License.
 
   --spectrum-switch-focus-indicator-thickness: var(--mod-focus-indicator-thickness, var(--spectrum-focus-indicator-thickness));
   --spectrum-switch-focus-indicator-color: var(--spectrum-focus-indicator-color);
-  
+
   --spectrum-switch-handle-background-color: var(--spectrum-gray-75);
   --spectrum-switch-handle-border-color-disabled: var(--spectrum-gray-400);
 }
@@ -33,7 +33,7 @@ governing permissions and limitations under the License.
 }
 
 .spectrum-Switch.spectrum-Switch--emphasized {
-  /* 
+  /*
     Selector specificity needed to beat the cascade, post-build.
     The `spectrum` & `express` theme vars get appended below this in the dist file
     & the higher specificity here will override.
@@ -263,12 +263,12 @@ governing permissions and limitations under the License.
     &[disabled] {
       & + .spectrum-Switch-switch {
         background-color: var(--highcontrast-switch-background-color-disabled, var(--mod-switch-background-color-disabled, var(--spectrum-switch-background-color-disabled)));
-        
+
         &:before {
           border-color: var(--highcontrast-switch-handle-border-color-disabled, var(--mod-switch-handle-border-color-disabled, var(--spectrum-switch-handle-border-color-disabled)));
         }
       }
-      
+
       & ~ .spectrum-Switch-label {
         color: var(--highcontrast-switch-label-color-disabled, var(--mod-switch-label-color-disabled, var(--spectrum-switch-label-color-disabled)));
       }
@@ -277,16 +277,16 @@ governing permissions and limitations under the License.
       &:checked {
         & + .spectrum-Switch-switch {
           background-color: var(--highcontrast-switch-background-color-selected-disabled, var(--mod-switch-background-color-selected-disabled, var(--spectrum-switch-background-color-selected-disabled)));
-          
+
           &:before {
             border-color: var(--highcontrast-switch-handle-border-color-disabled, var(--mod-switch-handle-border-color-disabled, var(--spectrum-switch-handle-border-color-disabled)));
           }
         }
-        
+
         & ~ .spectrum-Switch-label {
           color: var(--highcontrast-switch-label-color-disabled, var(--mod-switch-label-color-disabled, var(--spectrum-switch-label-color-disabled)));
         }
-      } 
+      }
     }
   }
 }
@@ -321,7 +321,7 @@ governing permissions and limitations under the License.
   .spectrum-Switch-input:focus-ring {
     & + .spectrum-Switch-switch {
       &:after {
-        box-shadow: 
+        box-shadow:
           0 0 0
           var(--mod-switch-focus-indicator-thickness, var(--spectrum-switch-focus-indicator-thickness))
           var(--highcontrast-switch-focus-indicator-color, var(--mod-switch-focus-indicator-color, var(--spectrum-switch-focus-indicator-color)));
@@ -365,12 +365,12 @@ governing permissions and limitations under the License.
   &[disabled] {
     & + .spectrum-Switch-switch {
       background-color: var(--highcontrast-switch-background-color-disabled, var(--mod-switch-background-color-disabled, var(--spectrum-switch-background-color-disabled)));
-      
+
       &:before {
         border-color: var(--highcontrast-switch-handle-border-color-disabled, var(--mod-switch-handle-border-color-disabled, var(--spectrum-switch-handle-border-color-disabled)));
       }
     }
-    
+
     & ~ .spectrum-Switch-label {
       color: var(--highcontrast-switch-label-color-disabled, var(--mod-switch-label-color-disabled, var(--spectrum-switch-label-color-disabled)));
     }
@@ -379,12 +379,12 @@ governing permissions and limitations under the License.
     &:checked {
       & + .spectrum-Switch-switch {
         background-color: var(--highcontrast-switch-background-color-selected-disabled, var(--mod-switch-background-color-selected-disabled, var(--spectrum-switch-background-color-selected-disabled)));
-        
+
         &:before {
           border-color: var(--highcontrast-switch-handle-border-color-disabled, var(--mod-switch-handle-border-color-disabled, var(--spectrum-switch-handle-border-color-disabled)));
         }
       }
-      
+
       & ~ .spectrum-Switch-label {
         color: var(--highcontrast-switch-label-color-disabled, var(--mod-switch-label-color-disabled, var(--spectrum-switch-label-color-disabled)));
       }
@@ -402,9 +402,9 @@ governing permissions and limitations under the License.
     --highcontrast-switch-label-color-down: ButtonText;
     --highcontrast-switch-label-color-focus: ButtonText;
     --highcontrast-switch-label-color-disabled: GrayText;
-    
+
     --highcontrast-switch-handle-background-color: ButtonFace;
-    
+
     --highcontrast-switch-handle-border-color-default: ButtonText;
     --highcontrast-switch-handle-border-color-hover: Highlight;
     --highcontrast-switch-handle-border-color-down: Highlight;
@@ -422,7 +422,7 @@ governing permissions and limitations under the License.
     --highcontrast-switch-background-color-selected-down: Highlight;
     --highcontrast-switch-background-color-selected-focus: Highlight;
     --highcontrast-switch-background-color-selected-disabled: Highlight;
-    
+
     /* disable hover as well */
     --highcontrast-switch-handle-border-color-hover: Highlight;
     --highcontrast-switch-handle-border-color-down: Highlight;

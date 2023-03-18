@@ -3,6 +3,56 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+<a name="4.0.8"></a>
+## 4.0.8
+🗓 2023-03-13 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/helptext@4.0.7...@spectrum-css/helptext@4.0.8)
+
+**Note:** Version bump only for package @spectrum-css/helptext
+
+
+
+
+
+<a name="4.0.7"></a>
+## 4.0.7
+🗓 2023-03-09 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/helptext@4.0.6...@spectrum-css/helptext@4.0.7)
+
+**Note:** Version bump only for package @spectrum-css/helptext
+
+
+
+
+
+<a name="4.0.6"></a>
+## 4.0.6
+🗓 2023-03-07 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/helptext@4.0.5...@spectrum-css/helptext@4.0.6)
+
+**Note:** Version bump only for package @spectrum-css/helptext
+
+
+
+
+
+<a name="4.0.5"></a>
+## 4.0.5
+🗓 2023-03-01 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/helptext@4.0.4...@spectrum-css/helptext@4.0.5)
+
+**Note:** Version bump only for package @spectrum-css/helptext
+
+
+
+
+
+<a name="4.0.4"></a>
+## 4.0.4
+🗓 2023-02-28 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/helptext@4.0.3...@spectrum-css/helptext@4.0.4)
+
+**Note:** Version bump only for package @spectrum-css/helptext
+
+
+
+
+
 <a name="4.0.3"></a>
 ## 4.0.3
 🗓 2023-02-24 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/helptext@4.0.2...@spectrum-css/helptext@4.0.3)

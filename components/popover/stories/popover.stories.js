@@ -2,7 +2,7 @@
 import { Template } from "./template";
 
 
-import { Default as Menu } from "../../menu/stories/menu.stories.js";
+import { Default as Menu } from "@spectrum-css/menu/stories/menu.stories.js";
 
 export default {
   title: "Popover",
@@ -66,19 +66,19 @@ Default.args = {
     Menu({
       items: [
         {
-          icon: "Edit",
+          iconName: "Edit",
           label: "Edit",
         },
         {
-          icon: "Copy",
+          iconName: "Copy",
           label: "Copy",
         },
         {
-          icon: "Move",
+          iconName: "Move",
           label: "Move",
         },
         {
-          icon: "Delete",
+          iconName: "Delete",
           label: "Delete",
         },
       ],

@@ -3,6 +3,53 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+<a name="4.0.0-beta.4"></a>
+# 4.0.0-beta.4
+🗓 2023-03-16 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/stepper@3.0.39...@spectrum-css/stepper@4.0.0-beta.4)
+
+### ✨ Features
+
+* **stepper:** add hideStepper control to fix border styling issue ([ba2f078](https://github.com/adobe/spectrum-css/commit/ba2f078))
+* **stepper:** adjustment to quiet focus and placeholder tokens ([05a95ae](https://github.com/adobe/spectrum-css/commit/05a95ae))
+* **stepper:** colors for variants and states ([699bc5e](https://github.com/adobe/spectrum-css/commit/699bc5e))
+* **stepper:** design revisions ([b31d264](https://github.com/adobe/spectrum-css/commit/b31d264))
+* **stepper:** refactor for readability and variant cascade ([a5cfd00](https://github.com/adobe/spectrum-css/commit/a5cfd00))
+* **stepper:** windows high contrast mode overrides ([290fa58](https://github.com/adobe/spectrum-css/commit/290fa58))
+
+
+### 🐛 Bug fixes
+
+* **stepper, textfield:** revert use of has ([c26c64f](https://github.com/adobe/spectrum-css/commit/c26c64f))
+* **stepper:** button border radii correction ([be2e210](https://github.com/adobe/spectrum-css/commit/be2e210))
+* **stepper:** correct button width for SWC VRTs ([94f2fd4](https://github.com/adobe/spectrum-css/commit/94f2fd4))
+* **stepper:** fix quiet stepper button width ([1d06567](https://github.com/adobe/spectrum-css/commit/1d06567))
+* **stepper:** quiet hover background ([920b500](https://github.com/adobe/spectrum-css/commit/920b500))
+* **stepper:** refactor button border radii and inset ([df24935](https://github.com/adobe/spectrum-css/commit/df24935))
+
+
+
+
+
+<a name="3.0.39"></a>
+## 3.0.39
+🗓 2023-03-13 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/stepper@3.0.38...@spectrum-css/stepper@3.0.39)
+
+**Note:** Version bump only for package @spectrum-css/stepper
+
+
+
+
+
+<a name="3.0.38"></a>
+## 3.0.38
+🗓 2023-03-09 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/stepper@3.0.37...@spectrum-css/stepper@3.0.38)
+
+**Note:** Version bump only for package @spectrum-css/stepper
+
+
+
+
+
 <a name="3.0.37"></a>
 ## 3.0.37
 🗓 2023-02-21 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/stepper@3.0.36...@spectrum-css/stepper@3.0.37)

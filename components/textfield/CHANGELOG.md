@@ -3,6 +3,118 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+<a name="4.0.0-beta.7"></a>
+# 4.0.0-beta.7
+🗓 2023-03-16 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/textfield@3.2.16...@spectrum-css/textfield@4.0.0-beta.7)
+
+### ✨ Features
+
+* add TextArea story and grows control ([c5ba477](https://github.com/adobe/spectrum-css/commit/c5ba477))
+* **textarea:** auto resize solution ([47e4ff6](https://github.com/adobe/spectrum-css/commit/47e4ff6))
+* **textarea:** implemented tokens for text area ([d9cfec0](https://github.com/adobe/spectrum-css/commit/d9cfec0))
+* **textarea:** quiet variant height WIP ([41cf1f6](https://github.com/adobe/spectrum-css/commit/41cf1f6))
+* **textarea:** update text area yml ([882ddfd](https://github.com/adobe/spectrum-css/commit/882ddfd))
+* **textarea:** wip token migration ([4a4ba7a](https://github.com/adobe/spectrum-css/commit/4a4ba7a))
+* **textfield:** add aria markup for character count ([beed486](https://github.com/adobe/spectrum-css/commit/beed486))
+* **textfield:** add default icon alignment for search icon ([e17cca4](https://github.com/adobe/spectrum-css/commit/e17cca4))
+* **textfield:** corrections and markup updates ([c06e899](https://github.com/adobe/spectrum-css/commit/c06e899))
+* **textfield:** final tokens populated ([a1a6d5b](https://github.com/adobe/spectrum-css/commit/a1a6d5b))
+* **textfield:** focus and dependency corrections ([9a5ecab](https://github.com/adobe/spectrum-css/commit/9a5ecab))
+* **textfield:** focus hover state ([ac96ce6](https://github.com/adobe/spectrum-css/commit/ac96ce6))
+* **textfield:** focus indicator ([4c07923](https://github.com/adobe/spectrum-css/commit/4c07923))
+* **textfield:** grid layout ([ba6b689](https://github.com/adobe/spectrum-css/commit/ba6b689))
+* **textfield:** organizing variants ([68f9b5e](https://github.com/adobe/spectrum-css/commit/68f9b5e))
+* **textfield:** refactor for readability of variants ([43014e9](https://github.com/adobe/spectrum-css/commit/43014e9))
+* **textfield:** refinement of focus states ([0cec4c8](https://github.com/adobe/spectrum-css/commit/0cec4c8))
+* **textfield:** reorganizing states and variants ([f440bf5](https://github.com/adobe/spectrum-css/commit/f440bf5))
+* **textfield:** resolving errors ([9f53dc7](https://github.com/adobe/spectrum-css/commit/9f53dc7))
+* **textfield:** rework focus states and nesting ([bca4ac2](https://github.com/adobe/spectrum-css/commit/bca4ac2))
+* **textfield:** rework markup and focus indicator WIP ([142a7f9](https://github.com/adobe/spectrum-css/commit/142a7f9))
+* **textfield:** token migration WIP ([3b67a12](https://github.com/adobe/spectrum-css/commit/3b67a12))
+* **textfield:** WHCM and tidying ([fe3ac52](https://github.com/adobe/spectrum-css/commit/fe3ac52))
+* **textfield:** WHCM setup WIP ([feb62af](https://github.com/adobe/spectrum-css/commit/feb62af))
+* **textfield:** windows high contrast mode ([e30149c](https://github.com/adobe/spectrum-css/commit/e30149c))
+
+
+### 🐛 Bug fixes
+
+* **stepper, textfield:** revert use of has ([c26c64f](https://github.com/adobe/spectrum-css/commit/c26c64f))
+* **textarea:** simplified multiline t-shirt styles and markup ([5e63c63](https://github.com/adobe/spectrum-css/commit/5e63c63))
+* **textfield:** add spacing around label and character count ([65acf5c](https://github.com/adobe/spectrum-css/commit/65acf5c))
+* **textfield:** add style to prevent search icon from breaking ([954125f](https://github.com/adobe/spectrum-css/commit/954125f))
+* **textfield:** add width to input ([56d7c0e](https://github.com/adobe/spectrum-css/commit/56d7c0e))
+* **textfield:** added missing WHCM refs to token stacks ([820ac89](https://github.com/adobe/spectrum-css/commit/820ac89))
+* **textfield:** apply width to parent instead of input wrapper ([645127c](https://github.com/adobe/spectrum-css/commit/645127c))
+* **textfield:** changed icon margins to inset ([957b42e](https://github.com/adobe/spectrum-css/commit/957b42e))
+* **textfield:** cleanup placeholder tokens for clarity ([ee30c04](https://github.com/adobe/spectrum-css/commit/ee30c04))
+* **textfield:** correct input patterns ([38a14cb](https://github.com/adobe/spectrum-css/commit/38a14cb))
+* **textfield:** correct invisible focus indicator ([bbd6f57](https://github.com/adobe/spectrum-css/commit/bbd6f57))
+* **textfield:** correct WHCM focus indicator reference ([ded46d4](https://github.com/adobe/spectrum-css/commit/ded46d4))
+* **textfield:** default placeholder font size ([943d9d0](https://github.com/adobe/spectrum-css/commit/943d9d0))
+* **textfield:** disabled safari value text color ([323f434](https://github.com/adobe/spectrum-css/commit/323f434))
+* **textfield:** ensure long side label does not impact helptext ([fbce894](https://github.com/adobe/spectrum-css/commit/fbce894))
+* **textfield:** ensure placeholder has correct font styles ([39a5ca7](https://github.com/adobe/spectrum-css/commit/39a5ca7))
+* **textfield:** ensure stepper inherits correct border styles ([91b5dfa](https://github.com/adobe/spectrum-css/commit/91b5dfa))
+* **textfield:** establish textfield animation token ([102d6af](https://github.com/adobe/spectrum-css/commit/102d6af))
+* **textfield:** fix focus and grows for textfield and textarea ([6f02a4d](https://github.com/adobe/spectrum-css/commit/6f02a4d))
+* **textfield:** fix issue with readonly styles not working ([740b1b1](https://github.com/adobe/spectrum-css/commit/740b1b1))
+* **textfield:** fix storybook keyboard focused typo ([ba471d3](https://github.com/adobe/spectrum-css/commit/ba471d3))
+* **textfield:** focus border invalid correction ([6ff801d](https://github.com/adobe/spectrum-css/commit/6ff801d))
+* **textfield:** focus hover colors ([ffe9415](https://github.com/adobe/spectrum-css/commit/ffe9415))
+* **textfield:** grid adjustments for label and character count ([1c6cc9e](https://github.com/adobe/spectrum-css/commit/1c6cc9e))
+* **textfield:** icon class name ([3e5bad7](https://github.com/adobe/spectrum-css/commit/3e5bad7))
+* **textfield:** icon color defaults ([3b21957](https://github.com/adobe/spectrum-css/commit/3b21957))
+* **textfield:** mitigate search icon misalignment in swc ([a88e152](https://github.com/adobe/spectrum-css/commit/a88e152))
+* **textfield:** mitigate validation icon within combobox ([d7fb96e](https://github.com/adobe/spectrum-css/commit/d7fb96e))
+* **textfield:** mitigation of search icon alignment issues ([7adb664](https://github.com/adobe/spectrum-css/commit/7adb664))
+* **textfield:** point placeholder font token to existing custom token ([bbc1b2c](https://github.com/adobe/spectrum-css/commit/bbc1b2c))
+* **textfield:** quiet and quiet focus corrections ([c0a6bb8](https://github.com/adobe/spectrum-css/commit/c0a6bb8))
+* **textfield:** quiet focus indicator position correction ([d0fff11](https://github.com/adobe/spectrum-css/commit/d0fff11))
+* **textfield:** quiet textarea no resize ([e2782fa](https://github.com/adobe/spectrum-css/commit/e2782fa))
+* **textfield:** refactor to avoid additional markup ([062019f](https://github.com/adobe/spectrum-css/commit/062019f))
+* **textfield:** remove skin.css import from storyfile ([c268381](https://github.com/adobe/spectrum-css/commit/c268381))
+* **textfield:** restored font placeholder tokens ([f59a3c0](https://github.com/adobe/spectrum-css/commit/f59a3c0))
+* **textfield:** search icon align and text overflow ([f292fc8](https://github.com/adobe/spectrum-css/commit/f292fc8))
+* **textfield:** textarea inherits resize ([86691cb](https://github.com/adobe/spectrum-css/commit/86691cb))
+* **textfield:** tokens and express border ([160452a](https://github.com/adobe/spectrum-css/commit/160452a))
+* **textfield:** update example text to match helptext ([ee9e4d2](https://github.com/adobe/spectrum-css/commit/ee9e4d2))
+* **textfield:** update express border width per design update ([2b726b8](https://github.com/adobe/spectrum-css/commit/2b726b8))
+* **textfield:** WHCM corrections ([df1577f](https://github.com/adobe/spectrum-css/commit/df1577f))
+* **textfield:** WHCM corrections - focus states ([9a1d627](https://github.com/adobe/spectrum-css/commit/9a1d627))
+* **textfield:** whcm decouple input color and placeholder text color ([8e16a5b](https://github.com/adobe/spectrum-css/commit/8e16a5b))
+
+
+* feat(textfield)!: initial migration with placeholder tokens ([b8bb223](https://github.com/adobe/spectrum-css/commit/b8bb223))
+
+
+### 🛑 BREAKING CHANGES
+
+* migrates textfield to spectrum tokens
+
+
+
+
+
+<a name="3.2.16"></a>
+## 3.2.16
+🗓 2023-03-13 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/textfield@3.2.15...@spectrum-css/textfield@3.2.16)
+
+**Note:** Version bump only for package @spectrum-css/textfield
+
+
+
+
+
+<a name="3.2.15"></a>
+## 3.2.15
+🗓 2023-03-09 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/textfield@3.2.14...@spectrum-css/textfield@3.2.15)
+
+**Note:** Version bump only for package @spectrum-css/textfield
+
+
+
+
+
 <a name="3.2.14"></a>
 ## 3.2.14
 🗓 2023-02-21 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/textfield@3.2.13...@spectrum-css/textfield@3.2.14)

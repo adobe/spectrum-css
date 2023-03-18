@@ -1,8 +1,12 @@
 dist
 dist-site
-node_modules
+
+# Recommended update re:https://docs.netlify.com/integrations/frameworks/eleventy/
+**/node_modules/**
+
 temp
 .npmrc*
+.env
 .tmp
 npm-debug.log*
 .DS_Store
@@ -14,3 +18,8 @@ build-storybook.log
 
 # Storybook build output
 tools/preview/storybook-static
+build-storybook.log
+
+# Chromatic
+chromatic-build-*.xml
+chromatic-diagnostics*.json

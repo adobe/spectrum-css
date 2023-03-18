@@ -2,7 +2,8 @@ import {
   withContextWrapper,
   withTextDirectionWrapper,
   withLanguageWrapper,
-  withReducedMotionWrapper
+  withReducedMotionWrapper,
+  // withSizingWrapper,
 } from './decorators/index.js';
 
 // https://github.com/storybookjs/storybook-addon-console
@@ -14,30 +15,29 @@ setConsoleOptions({
   panelExclude: [...panelExclude, /deprecated/, /TypeError/],
 });
 
-import '@spectrum-css/vars/css/globals/index.css';
-import '@spectrum-css/expressvars/css/globals/index.css';
+import '@spectrum-css/vars/dist/spectrum-medium.css';
+import '@spectrum-css/vars/dist/spectrum-large.css';
 
-import '@spectrum-css/vars/css/components/index.css';
-import '@spectrum-css/expressvars/css/components/index.css';
+import '@spectrum-css/vars/dist/spectrum-light.css';
+import '@spectrum-css/vars/dist/spectrum-dark.css';
+import '@spectrum-css/vars/dist/spectrum-darkest.css';
 
-import '@spectrum-css/vars/css/themes/spectrum-light.css';
-import '@spectrum-css/vars/css/themes/spectrum-dark.css';
-import '@spectrum-css/vars/css/themes/spectrum-darkest.css';
+import '@spectrum-css/vars/dist/spectrum-global.css';
 
-import '@spectrum-css/expressvars/css/themes/spectrum-light.css';
-import '@spectrum-css/expressvars/css/themes/spectrum-dark.css';
-import '@spectrum-css/expressvars/css/themes/spectrum-darkest.css';
+import '@spectrum-css/expressvars/dist/spectrum-medium.css';
+import '@spectrum-css/expressvars/dist/spectrum-large.css';
 
-import '@spectrum-css/vars/css/scales/spectrum-medium.css';
-import '@spectrum-css/vars/css/scales/spectrum-large.css';
+import '@spectrum-css/expressvars/dist/spectrum-light.css';
+import '@spectrum-css/expressvars/dist/spectrum-dark.css';
+import '@spectrum-css/expressvars/dist/spectrum-darkest.css';
 
-import '@spectrum-css/expressvars/css/scales/spectrum-medium.css';
-import '@spectrum-css/expressvars/css/scales/spectrum-large.css';
+import '@spectrum-css/expressvars/dist/spectrum-global.css';
 
-import '@spectrum-css/tokens/dist/index.css';
+import '@spectrum-css/tokens';
 
 // Loading typography on every page because it's a useful utility
 import '@spectrum-css/typography';
+import '@spectrum-css/site';
 
 import './global.js';
 
@@ -217,5 +217,5 @@ export const decorators = [
   withTextDirectionWrapper,
   withLanguageWrapper,
   withReducedMotionWrapper,
-  withContextWrapper
+  withContextWrapper,
 ];

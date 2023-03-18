@@ -12,7 +12,7 @@ import "../index.css";
 export const Template = ({
   rootClass = "spectrum-Tag",
   size = "m",
-  icon,
+  iconName,
   avatarUrl,
   label,
   isSelected = false,
@@ -46,20 +46,27 @@ export const Template = ({
       })}
       id=${ifDefined(id)}
       tabindex="0">
-      ${avatarUrl && !icon ? Avatar({
+      ${avatarUrl && !iconName ? Avatar({
         ...globals,
         image: avatarUrl,
         size: '50',
       }) : ""}
-      ${icon ? Icon({
+      ${iconName ? Icon({
         ...globals,
-        iconName: icon,
+        iconName,
         customClasses: [`${rootClass}s-itemIcon`],
       }) : ""}
       <span class="${rootClass}s-itemLabel">${label}</span>
       ${hasClearButton ? ClearButton({
         ...globals,
         customClasses: [`${rootClass}-clearButton`],
+        onclick: (evt) => {
+          const el = evt.target;
+          if (!el) return;
+
+          const wrapper = el.closest(rootClass);
+          wrapper.parentNode.removeChild(wrapper);
+        }
       }) : ""}
     </div>
   `;

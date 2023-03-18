@@ -12,7 +12,7 @@ import "../skin.css";
 export const MenuItem = ({
   rootClass,
   label,
-  icon,
+  iconName,
   isHighlighted = false,
   isActive = false,
   isSelected = false,
@@ -37,19 +37,12 @@ export const MenuItem = ({
       aria-selected=${isSelected ? "true" : "false"}
       aria-disabled=${isDisabled ? "true" : "false"}
       tabindex=${ifDefined(!isDisabled ? "0" : undefined)}>
-      ${icon
-        ? Icon({
-            iconName: icon,
-            ...globals,
-            customClasses: [`${rootClass}Icon`],
-          })
-        : ""}
+      ${iconName ? Icon({ ...globals, iconName, customClasses: [`${rootClass}Icon`] }) : ""}
       <span class="${rootClass}Label">${label}</span>
       ${isChecked
         ? Icon({
-            iconName: "Checkmark100",
             ...globals,
-            setName: "ui",
+            iconName: "Checkmark100",
             customClasses: ["spectrum-Menu-checkmark", `${rootClass}Icon`],
           })
         : ""}
@@ -114,13 +107,12 @@ export const Submenu = ({
         ? html`<span class="${rootClass}Label">${label}</span>`
         : ""}
       ${Icon({
+        ...globals,
         iconName: "ChevronRight100",
         customClasses: [
           "spectrum-Menu-chevron",
           `${rootClass}Icon`,
         ],
-        setName: "ui",
-        ...globals,
       })}
       ${Template({ ...globals, items })}
     </li>

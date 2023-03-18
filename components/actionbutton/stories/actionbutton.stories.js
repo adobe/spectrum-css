@@ -1,7 +1,6 @@
 // Import the component markup template
 import { Template } from "./template";
 
-
 import { default as IconStories } from "@spectrum-css/icon/stories/icon.stories.js";
 
 export default {
@@ -19,16 +18,16 @@ export default {
       options: ["xs", "s", "m", "l", "xl"],
       control: "select"
     },
-    icon:
-      IconStories && IconStories.argTypes && IconStories.argTypes.iconName
-        ? IconStories.argTypes.iconName
-        : {},
+    iconName: {
+      ...IconStories?.argTypes?.iconName ?? {},
+      if: false,
+    },
     label: {
       name: "Label",
       type: { name: "string" },
       table: {
         type: { summary: "string" },
-        category: "Component",
+        category: "Content",
       },
       control: { type: "text" },
     },
@@ -101,7 +100,7 @@ export default {
   args: {
     rootClass: "spectrum-ActionButton",
     size: "m",
-    icon: "More",
+    iconName: "More",
     isQuiet: false,
     isEmphasized: false,
     hasPopup: false,

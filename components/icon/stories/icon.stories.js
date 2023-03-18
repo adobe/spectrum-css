@@ -1,13 +1,7 @@
-import path from "path";
-
 // Import the component markup template
 import { Template } from "./template";
 
-
-// Imports an array of all icon names in the workflow set
-import iconOpts from "@adobe/spectrum-css-workflow-icons";
-// import workflowIcons from '@adobe/spectrum-css-workflow-icons/dist/spectrum-icons.svg';
-// import '../dist/spectrum-css-icons.svg';
+import { workflowIcons, uiIcons } from "./utilities.js";
 
 export default {
   title: "Icon",
@@ -28,15 +22,37 @@ export default {
       options: ["s", "m", "l", "xl", "xxl"],
       control: "select"
     },
-    iconName: {
-      name: "Workflow icons",
+    setName: {
+      name: "Icon set",
       type: { name: "string", required: true },
-      options: iconOpts.map((icon) => path.basename(icon, ".svg")),
-      control: { type: "select" },
       table: {
         type: { summary: "string" },
-        category: "Component",
+        category: "Content",
       },
+      options: ["ui", "workflow"],
+      control: "inline-radio"
+    },
+    iconName: {
+      name: "Workflow icons",
+      type: { name: "string" },
+      table: {
+        type: { summary: "string" },
+        category: "Content",
+      },
+      options: workflowIcons,
+      control: "select",
+      if: { arg: 'setName', eq: 'workflow' },
+    },
+    uiIconName: {
+      name: "UI icons",
+      type: { name: "string" },
+      table: {
+        type: { summary: "string" },
+        category: "Content",
+      },
+      options: uiIcons,
+      control: "select",
+      if: { arg: 'setName', eq: 'ui' },
     },
     fill: {
       name: "Fill color",
@@ -47,9 +63,11 @@ export default {
       },
       control: "color",
     },
+    useRef: { table: { disable: true } },
   },
   args: {
     rootClass: "spectrum-Icon",
+    setName: "workflow",
     iconName: "ABC",
     size: "xl",
   },
@@ -62,5 +80,9 @@ export default {
   },
 };
 
-export const Default = Template.bind({});
+export const Default = (args) => Template({
+  ...args,
+  iconName: args.iconName ?? args.uiIconName,
+  setName: args.setName ?? (args.uiIconName ? "ui" : "workflow"),
+});
 Default.args = {};

@@ -1,8 +1,8 @@
 // Import the component markup template
 import { Template } from "./template";
 
+import { default as ActionButtonStories } from '@spectrum-css/actionbutton/stories/actionbutton.stories.js';
 
-const today = new Date();
 const months = [...Array(12).keys()].map((key) =>
   new Date(0, key).toLocaleString("en", { month: "long" })
 );
@@ -12,7 +12,6 @@ export default {
   description: "Calendars display a grid of days in one or more months and allow users to select a single date.",
   component: "Calendar",
   argTypes: {
-    express: { table: { disable: true } },
     reducedMotion: { table: { disable: true } },
     month: {
       name: "Month",
@@ -80,14 +79,21 @@ export default {
       },
       control: "boolean",
     },
+    buttonSize: ActionButtonStories.argTypes.size ?? { table: { disable: true } },
   },
   args: {
     rootClass: "spectrum-Calendar",
     padded: false,
     isDisabled: false,
     useDOWAbbrev: false,
+    buttonSize: ActionButtonStories.args.size,
   },
   parameters: {
+    actions: {
+      handles: [
+        ...ActionButtonStories.parameters.actions.handles ?? [],
+      ],
+    },
     status: {
       type: process.env.MIGRATED_PACKAGES.includes("calendar")
         ? "migrated"
@@ -98,9 +104,9 @@ export default {
 
 export const Default = Template.bind({});
 Default.args = {
-  month: months[today.getMonth()],
-  selectedDay: today,
-  year: today.getFullYear(),
+  month: months[6],
+  selectedDay: new Date(2023, 6, 3),
+  year: 2023,
 };
 
 export const RangeSelection = Template.bind({});

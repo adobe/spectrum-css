@@ -3,6 +3,36 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+<a name="5.0.15-beta.0"></a>
+## 5.0.15-beta.0
+🗓 2023-03-16 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/inputgroup@5.0.14...@spectrum-css/inputgroup@5.0.15-beta.0)
+
+**Note:** Version bump only for package @spectrum-css/inputgroup
+
+
+
+
+
+<a name="5.0.14"></a>
+## 5.0.14
+🗓 2023-03-13 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/inputgroup@5.0.13...@spectrum-css/inputgroup@5.0.14)
+
+**Note:** Version bump only for package @spectrum-css/inputgroup
+
+
+
+
+
+<a name="5.0.13"></a>
+## 5.0.13
+🗓 2023-03-09 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/inputgroup@5.0.12...@spectrum-css/inputgroup@5.0.13)
+
+**Note:** Version bump only for package @spectrum-css/inputgroup
+
+
+
+
+
 <a name="5.0.12"></a>
 ## 5.0.12
 🗓 2023-02-21 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/inputgroup@5.0.11...@spectrum-css/inputgroup@5.0.12)

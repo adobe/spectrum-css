@@ -1,5 +1,5 @@
 import { spawn } from 'child_process';
-import { readdirSync, readFileSync } from 'fs';
+import { existsSync, readdirSync, readFileSync } from 'fs';
 import { readFile } from 'fs/promises';
 import { resolve } from 'path';
 
@@ -41,15 +41,20 @@ export default async (plop) => {
 	});
 
 	function getExistingMarkupExample(metadataPath, name, plop) {
-		const className = plop.renderString('spectrum-{{ pascalCase name }}', { name });
+		if (existsSync(`${metadataPath}/${name}.yml`) === false) return;
+
 		const r = readFileSync(`${metadataPath}/${name}.yml`, { encoding: 'utf8' });
 		const result = yaml.load(r);
+		if (!result) return;
 
 		const examples = result.examples || [];
 		if (examples.length === 0 || !examples[0].markup) return;
 
 		const $ = cheerio.load(examples[0].markup);
+
+		const className = plop.renderString('spectrum-{{ pascalCase name }}', { name });
 		const $example = $(`.${className}`);
+
 		if (!$example) return;
 
 		return $example.first().toString();

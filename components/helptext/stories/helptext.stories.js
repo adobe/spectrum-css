@@ -29,7 +29,7 @@ export default {
       control: "inline-radio",
     },
     hideIcon: {
-      name: "HideIcon",
+      name: "Hide icon",
       type: { name: "boolean" },
       description: "Only applicable if treatment is negative.",
       table: {
@@ -37,10 +37,8 @@ export default {
         disable: false,
         category: "Advanced",
       },
-      control: {
-        type: "boolean",
-        if: { arg: "treatment", eq: "negative" },
-      },
+      control: "boolean",
+      if: { arg: "treatment", eq: "negative" },
     },
     isDisabled: {
       name: "Disabled",
