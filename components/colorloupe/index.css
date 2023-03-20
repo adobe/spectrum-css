@@ -17,8 +17,8 @@ governing permissions and limitations under the License.
 
   --spectrum-colorloupe-drop-shadow-x: var(--spectrum-drop-shadow-x);
   --spectrum-colorloupe-drop-shadow-y: var(--spectrum-color-loupe-drop-shadow-y);
-  --spectrum-colorloupe-drop-shadow-blur: var(--spectrum-drop-shadow-blur);
-  --spectrum-colorloupe-drop-shadow-color: var(--spectrum-drop-shadow-color);
+  --spectrum-colorloupe-drop-shadow-blur: var(--spectrum-color-loupe-drop-shadow-blur);
+  --spectrum-colorloupe-drop-shadow-color: var(--spectrum-color-loupe-drop-shadow-color);
 
   --spectrum-colorloupe-outer-border-width: var(--spectrum-color-loupe-outer-border-width);
   --spectrum-colorloupe-inner-border-width: 1px; /* TODO: replace with updated token for color-loupe-inner-border-width */
