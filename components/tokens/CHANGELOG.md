@@ -3,6 +3,18 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+<a name="7.6.0"></a>
+# 7.6.0
+🗓 2023-03-21 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/tokens@7.5.1...@spectrum-css/tokens@7.6.0)
+
+### ✨ Features
+
+* **tokens:** updates accordion, colorhandle, coachmark, menuitem tokens ([#1678](https://github.com/adobe/spectrum-css/issues/1678)) ([d480489](https://github.com/adobe/spectrum-css/commit/d480489))
+
+
+
+
+
 <a name="7.5.1"></a>
 ## 7.5.1
 🗓 2023-03-13 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/tokens@7.5.0...@spectrum-css/tokens@7.5.1)
