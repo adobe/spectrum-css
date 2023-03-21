@@ -36,6 +36,8 @@ module.exports = {
 		"@storybook/addon-interactions",
 		// https://www.chromatic.com/docs/visual-testing-addon/
 		"@chromaui/addon-visual-tests",
+		// https://storybook.js.org/addons/storybook-addon-designs
+    	"storybook-addon-designs",
 	],
 	core: {
 		disableTelemetry: true,

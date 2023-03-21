@@ -38,6 +38,11 @@ export default {
 				? "migrated"
 				: undefined,
 		},
+    // Getting the Figma link: https://help.figma.com/hc/en-us/articles/360045003494-Storybook-and-Figma
+    // design: {
+    //   type: "figma",
+    //   url: "https://www.figma.com/file/LKQ4FJ4bTnCSjedbRpk931/Sample-File",
+    // },
 	},
 };
 
