@@ -173,11 +173,19 @@ function prepareSite_docs() {
     .pipe(gulp.dest('dist-site/'));
 }
 
+function prepareSite_storybook() {
+  return gulp.src('dist/preview/**/*', {
+    base: 'dist'
+  })
+    .pipe(gulp.dest('dist-site/'));
+}
+
 const prepareSite = gulp.series(
   prepareSite_clean,
   gulp.parallel(
     prepareSite_docs,
-    prepareSite_components
+    prepareSite_components,
+    prepareSite_storybook,
   )
 );
 

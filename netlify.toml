@@ -10,16 +10,12 @@
 # this remaps this to our /preview/ path.
 # Why? Using preview decouples us from the tool.
 [[redirects]]
-  from = "/storybook/"
-  to = "/preview/"
+  from = "/storybook/*"
+  to = "/preview/:splat"
 
 [[redirects]]
-  from = "/preview"
-  to = "/preview/"
-
-[[redirects]]
-  from = "/docs/*"
-  to = "/docs/:splat.html"
+  from = "/docs/preview/*"
+  to = "/preview/:splat"
 
 # If skip_processing = true, all other settings are ignored
 [build.processing]
@@ -37,5 +33,5 @@
 
 # Skip all post processing in deploy previews,
 # ignoring any other settings
-[context.deploy-preview.processing]
-  skip_processing = true
+# [context.deploy-preview.processing]
+#  skip_processing = true
