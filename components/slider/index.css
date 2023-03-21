@@ -10,63 +10,95 @@ OF ANY KIND, either express or implied. See the License for the specific languag
 governing permissions and limitations under the License.
 */
 
-@import "../vars/css/components/spectrum-slider.css";
 
+
+/* missing tokens for variant with Tick, also need t-shirt sizing */
+.spectrum--medium {
+  --spectrum-slider-tick-mark-height: 10px;
+  /* --spectrum-global-dimension-size-125 */
+  --spectrum-slider-tick-mark-width: 2px;
+  /* --spectrum-global-dimension-size-25: */
+  --spectrum-slider-tick-mark-border-radius: 2px;
+  /* --spectrum-global-dimension-size-25 2px for Spectrum,   --spectrum-global-dimension-size-10 1px for Express */
+  --spectrum-slider-ramp-track-height: 16px;
+  /* dimension-size-200 */
+}
+
+.spectrum--large {
+  --spectrum-slider-tick-mark-height: 13px;
+  --spectrum-slider-tick-mark-width: 2px;
+  --spectrum-slider-tick-mark-border-radius: 2px;
+  --spectrum-slider-ramp-track-height: 20px;
+  /* dimension-size-200 */
+}
+
+.spectrum-Slider--sizeS {
+
+  --spectrum-slider-handle-size: var(--mod-slider-handle-size-small, var(--spectrum-slider-handle-size-small));
+  --spectrum-slider-control-height: var(--mod-slider-control-height-small, var(--spectrum-slider-control-height-small));
+  --spectrum-slider-bottom-to-handle: var(--mod-slider-bottom-to-handle-small, var(--spectrum-slider-bottom-to-handle-small));
+  --spectrum-slider-handle-border-radius: var(--mod-corner-radius-200, var(--spectrum-corner-radius-200));
+}
+
+.spectrum-Slider--sizeM {
+
+  --spectrum-slider-handle-size: var(--mod-slider-handle-size-medium, var(--spectrum-slider-handle-size-medium));
+  --spectrum-slider-control-height: var(--mod-slider-control-height-medium, var(--spectrum-slider-control-height-medium));
+  --spectrum-slider-bottom-to-handle: var(--mod-slider-bottom-to-handle-medium, var(--spectrum-slider-bottom-to-handle-medium));
+  --spectrum-slider-handle-border-radius: var(--mod-corner-radius-200, var(--spectrum-corner-radius-200));
+}
+
+.spectrum-Slider--sizeL {
+
+  --spectrum-slider-handle-size: var(--mod-slider-handle-size-large, var(--spectrum-slider-handle-size-large));
+  --spectrum-slider-control-height: var(--mod-slider-control-height-large, var(--spectrum-slider-control-height-large));
+  --spectrum-slider-bottom-to-handle: var(--mod-slider-bottom-to-handle-large, var(--spectrum-slider-bottom-to-handle-large));
+  --spectrum-slider-handle-border-radius: calc(var(--mod-corner-radius-200, var(--spectrum-corner-radius-200)) * 2);
+
+
+}
+
+.spectrum-Slider--sizeXL {
+
+  --spectrum-slider-handle-size: var(--mod-slider-handle-size-extra-large, var(--spectrum-slider-handle-size-extra-large));
+  --spectrum-slider-control-height: var(--mod-slider-control-height-extra-large, var(--spectrum-slider-control-height-extra-large));
+  --spectrum-slider-bottom-to-handle: var(--mod-slider-bottom-to-handle-extra-large, var(--spectrum-slider-bottom-to-handle-extra-large));
+  --spectrum-slider-handle-border-radius: calc(var(--mod-corner-radius-200, var(--spectrum-corner-radius-200)) * 4);
+
+}
 .spectrum-Slider {
-  @remapvars {
-    find: --spectrum-slider-m-;
-    replace: --spectrum-slider-;
-  }
-  @remapvars {
-    find: --spectrum-slider-tick-m-;
-    replace: --spectrum-slider-tick-;
-  }
+  --spectrum-slider-cjk-line-height: var(--mod-cjk-line-height-100, var(--spectrum-cjk-line-height-100));
 
-  /* todo: this is 0px in DNA, which seems wrong */
-  --spectrum-slider-label-gap-y: var(--spectrum-global-dimension-size-85);
+  --spectrum-slider-min-size: var(--mod-spacing-900, var(--spectrum-spacing-900));
+  --spectrum-slider-height-size: var(--mod-component-height-200, var(--spectrum-component-height-200));
 
-  --spectrum-slider-controls-margin: calc(
-    var(--spectrum-slider-handle-width) / 2
-  );
-  --spectrum-slider-track-margin-offset: calc(
-    var(--spectrum-slider-controls-margin) * -1
-  );
+  --spectrum-slider-track-corner-radius: var(--mod-corner-radius-75, var(--spectrum-corner-radius-75));
+  --spectrum-slider-label-margin-start: var(--mod-spacing-300, var(--spectrum-spacing-300));
+  --spectrum-slider-handle-border-width-down: var(--mod-border-width-200, var(--spectrum-border-width-200));
+  --spectrum-slider-handle-margin-left: calc(var(--mod-slider-handle-size, var(--spectrum-slider-handle-size)) / -2);
+  --spectrum-slider-controls-margin: calc(var(--mod-slider-handle-size, var(--spectrum-slider-handle-size)) / 2);
+  --spectrum-slider-track-margin-offset: calc(var(--mod-slider-controls-margin, var(--spectrum-slider-controls-margin)) * -1);
+  --spectrum-slider-track-middle-handleoffset: calc(var(--mod-slider-handle-gap, var(--spectrum-slider-handle-gap)) + calc(var(--mod-slider-handle-size, var(--spectrum-slider-handle-size)) / 2));
+   --spectrum-slider-input-top-size: calc(var(--mod-slider-handle-size, var(--spectrum-slider-handle-size))  / -2 / 4);
 
-  --spectrum-slider-handle-margin-top: calc(
-    var(--spectrum-slider-handle-width) / -2
-  );
-  --spectrum-slider-handle-margin-left: calc(
-    var(--spectrum-slider-handle-width) / -2
-  );
 
-  --spectrum-slider-track-handleoffset: var(--spectrum-slider-handle-gap);
-  --spectrum-slider-track-middle-handleoffset: calc(
-    var(--spectrum-slider-handle-gap) +
-      calc(var(--spectrum-slider-handle-width) / 2)
-  );
+  /* aka 80px */
+  /* colors */
+  --spectrum-slider-track-color-disabled: var(--highcontrast-disabled-background-color, var(--mod-disabled-background-color, var(--spectrum-disabled-background-color)));
+  --spectrum-slider-track-fill-color-disabled: var(--highcontrast-disabled-background-color, var(--mod-disabled-background-color, var(--spectrum-disabled-background-color)));
+  --spectrum-slider-handle-border-color-disabled: var(--highcontrast-disabled-border-color, var(--mod-disabled-border-color, var(--spectrum-disabled-border-color)));
+  --spectrum-slider-label-text-color: var(--highcontrast-neutral-content-color-default, var(--mod-neutral-content-color-default, var(--spectrum-neutral-content-color-default)));
+  --spectrum-slider-label-text-color-disabled: var(--highcontrast-disabled-content-color, var(--mod-disabled-content-color, var(--spectrum-disabled-content-color)));
 
-  --spectrum-slider-input-top: calc(
-    var(--spectrum-slider-handle-margin-top) / 4
-  );
-  --spectrum-slider-input-left: calc(
-    var(--spectrum-slider-handle-margin-left) / 4
-  );
+  --spectrum-slider-ramp-handle-border-color-active: var(--highcontrast-gray-100, , var(--mod-gray-100, var(--spectrum-gray-100)));
 
-  --spectrum-slider-color-min-height: auto;
-  --spectrum-slider-color-track-padding: 0;
-  --spectrum-slider-color-track-top: 0;
-  --spectrum-slider-color-track-margin-top: 0;
-  --spectrum-slider-color-track-margin-left: 0;
-  --spectrum-slider-color-track-margin-right: 0;
-  --spectrum-slider-color-handle-top: 50%;
+
+  /* values */
+  --spectrum-slider-input-left: calc(var(--mod-slider-handle-margin-left, var(--spectrum-slider-handle-margin-left)) / 4);
+  --spectrum-slider-track-handleoffset: var(--mod-slider-handle-gap, var(--spectrum-slider-handle-gap));
 
   --spectrum-slider-ramp-margin-top: 0;
   --spectrum-slider-range-track-reset: 0;
-  --spectrum-slider-label-margin-bottom: -3px;
-  --spectrum-slider-label-gap-x: var(--spectrum-alias-item-control-gap-m);
-  --spectrum-slider-label-text-line-height: var(
-    --spectrum-global-font-line-height-small
-  );
 }
 
 .spectrum-Slider {
@@ -75,8 +107,8 @@ governing permissions and limitations under the License.
   /* Don't let z-index'd child elements float above other things on the page */
   z-index: 1;
   display: block;
-  min-block-size: var(--spectrum-slider-height);
-  min-inline-size: var(--spectrum-slider-min-width);
+  min-block-size: var(--mod-slider-height-size, var(--spectrum-slider-height-size));
+  min-inline-size: var(--mod-slider-min-size, var(--spectrum-slider-min-size));
 
   user-select: none;
 }
@@ -89,25 +121,25 @@ governing permissions and limitations under the License.
   z-index: auto;
 
   /* These calculations prevent the track from spilling outside of the control */
-  inline-size: calc(100% - calc(var(--spectrum-slider-controls-margin) * 2));
-  margin-inline-start: var(--spectrum-slider-controls-margin);
-  min-block-size: var(--spectrum-slider-height);
+  inline-size: calc(100% - calc(var(--mod-slider-controls-margin, var(--spectrum-slider-controls-margin))) * 2);
+  margin-inline-start: var(--mod-slider-controls-margin, var(--spectrum-slider-controls-margin));
+  min-block-size: var(--mod-slider-height-size, var(--spectrum-slider-height-size));
 
   vertical-align: top;
 }
 
 .spectrum-Slider-track,
 .spectrum-Slider-fill {
-  block-size: var(--spectrum-slider-track-height);
+  block-size: var(--mod-slider-track-thickness, var(--spectrum-slider-track-thickness));
   box-sizing: border-box;
 
   position: absolute;
   z-index: 1;
-  inset-block-start: calc(var(--spectrum-slider-height) / 2);
+  inset-block-start: calc(var(--mod-slider-height-size, var(--spectrum-slider-height-size))/ 2);
   inset-inline-start: 0;
   inset-inline-end: auto;
 
-  margin-block-start: calc(var(--spectrum-slider-track-height) / -2);
+  margin-block-start: calc(var(--mod-slider-control-height, var(--spectrum-slider-control-height)) / -2);
 
   pointer-events: none;
 }
@@ -115,8 +147,8 @@ governing permissions and limitations under the License.
 .spectrum-Slider-track,
 .spectrum-Slider-fill {
   padding-block: 0;
-  padding-inline: 0 var(--spectrum-slider-track-handleoffset);
-  margin-inline-start: var(--spectrum-slider-track-margin-offset);
+  padding-inline: 0 var(--mod-slider-handle-gap, var(--spectrum-slider-handle-gap));
+  margin-inline-start: var(--mod-slider-track-margin-offset, var(--spectrum-slider-track-margin-offset));
 
   &:before {
     content: "";
@@ -133,9 +165,8 @@ governing permissions and limitations under the License.
 .spectrum-Slider-track {
   &:first-of-type {
     &:before {
-      border-start-start-radius: var(--spectrum-slider-track-border-radius);
-      border-end-start-radius: var(--spectrum-slider-track-border-radius);
-      border-start-end-radius: 0;
+      border-start-start-radius: var(--mod-slider-track-corner-radius, var(--spectrum-slider-track-corner-radius));
+      border-end-start-radius: var(--mod-slider-track-corner-radius, var(--spectrum-slider-track-corner-radius))) border-start-end-radius: 0;
       border-end-end-radius: 0;
     }
   }
@@ -144,38 +175,43 @@ governing permissions and limitations under the License.
     &:before {
       border-start-start-radius: 0;
       border-end-start-radius: 0;
-      border-start-end-radius: var(--spectrum-slider-track-border-radius);
-      border-end-end-radius: var(--spectrum-slider-track-border-radius);
+      border-start-start-radius: var(--mod-slider-track-corner-radius, var(--spectrum-slider-track-corner-radius));
+      border-end-start-radius: var(--mod-slider-track-corner-radius, var(--spectrum-slider-track-corner-radius));
     }
   }
 }
 
-.spectrum-Slider-track ~ .spectrum-Slider-track {
+.spectrum-Slider-track~.spectrum-Slider-track {
   inset-inline-start: auto;
-  inset-inline-end: var(--spectrum-slider-range-track-reset);
+  inset-inline-end: var(--mod-slider-range-track-reset,  var(--spectrum-slider-range-track-reset));
   padding-block: 0;
-  padding-inline: var(--spectrum-slider-track-handleoffset) 0;
-  margin-inline-start: var(--spectrum-slider-range-track-reset);
-  margin-inline-end: var(--spectrum-slider-track-margin-offset);
+  padding-inline: var(--mod-slider-track-handleoffset, var(--spectrum-slider-track-handleoffset)) 0;
+  margin-inline-start: var(--mod-slider-range-track-reset, var(--spectrum-slider-range-track-reset));
+  margin-inline-end: var(--mod-slider-track-margin-offset, var(--spectrum-slider-track-margin-offset));
+}
+
+
+/* over-write for Range, without the LTR RTL post-css hack */
+.spectrum-Slider--range {
+  .spectrum-Slider-track~.spectrum-Slider-track {
+    padding-inline: var(--mod-slider-track-middle-handleoffset, var(--spectrum-slider-track-middle-handleoffset)) var(--mod-slider-track-middle-handleoffset, var(--spectrum-slider-track-middle-handleoffset));
+    inset-inline-start: auto;
+    inset-inline-end: auto;
+    margin-inline: var(--mod-slider-range-track-reset, var(--spectrum-slider-range-track-reset));
+
+  }
+
 }
 
 .spectrum-Slider-fill {
   margin-inline-start: 0;
   padding-block: 0;
-  padding-inline: calc(
-      var(--spectrum-slider-controls-margin) +
-        var(--spectrum-slider-track-handleoffset)
-    )
-    0;
+  padding-inline: calc(var(--mod-slider-controls-margin, var(--spectrum-slider-controls-margin)) + var(--spectrum-slider-handle-gap, var(--spectrum-slider-handle-gap))) 0;
 }
 
 .spectrum-Slider-fill--right {
   padding-block: 0;
-  padding-inline: 0
-    calc(
-      var(--spectrum-slider-controls-margin) +
-        var(--spectrum-slider-track-handleoffset)
-    );
+  padding-inline: 0 calc(var(--mod-slider-controls-margin, var(--spectrum-slider-controls-margin)) + var(--spectrum-slider-handle-gap, var(--spectrum-slider-handle-gap)));
 }
 
 .spectrum-Slider--range {
@@ -192,35 +228,28 @@ governing permissions and limitations under the License.
     }
 
     &:first-of-type {
-      padding-inline: 0 var(--spectrum-slider-track-handleoffset);
-      inset-inline-start: var(--spectrum-slider-range-track-reset);
+      padding-inline: 0 var(--mod-slider-track-handleoffset, var(--spectrum-slider-track-handleoffset));
+      inset-inline-start: var(--mod-slider-range-track-reset, var(--spectrum-slider-range-track-reset));
       inset-inline-end: auto;
-      margin-inline-start: var(--spectrum-slider-track-margin-offset);
+      margin-inline-start: var(--mod-slider-track-margin-offset, var(--spectrum-slider-track-margin-offset));
+
       &:before {
-        border-start-start-radius: var(--spectrum-slider-m-track-border-radius);
-        border-end-start-radius: var(--spectrum-slider-m-track-border-radius);
+        border-start-start-radius: var(--mod-slider-track-corner-radius, var(--spectrum-slider-track-corner-radius));
+        border-end-start-radius: var(--mod-slider-track-corner-radius, var(--spectrum-slider-track-corner-radius));
         border-start-end-radius: 0;
         border-end-end-radius: 0;
       }
     }
 
-    /* Force specificity otherwise the ~ rules above override */
-    &:dir(ltr),
-    &:dir(rtl) {
-      padding-inline: var(--spectrum-slider-track-middle-handleoffset)
-        var(--spectrum-slider-track-middle-handleoffset);
-      inset-inline-start: auto;
-      inset-inline-end: auto;
-      margin-inline: var(--spectrum-slider-range-track-reset);
-    }
     &:last-of-type {
-      padding-inline: var(--spectrum-slider-track-handleoffset) 0;
+      padding-inline: ar(--spectrum-slider-track-handleoffset) 0;
       inset-inline-start: auto;
-      inset-inline-end: var(--spectrum-slider-range-track-reset);
-      margin-inline-end: var(--spectrum-slider-track-margin-offset);
+      inset-inline-end: var(--mod-slider-range-track-reset, var(--spectrum-slider-range-track-reset));
+      margin-inline-end: var(--mod-slider-track-margin-offset, var(--spectrum-slider-track-margin-offset));
+
       &:before {
-        border-start-end-radius: var(--spectrum-slider-m-track-border-radius);
-        border-end-end-radius: var(--spectrum-slider-m-track-border-radius);
+        border-start-end-radius: var(--mod-slider-track-corner-radius, var(--spectrum-slider-track-corner-radius));
+        border-end-end-radius: var(--mod-slider-track-corner-radius, var(--spectrum-slider-track-corner-radius));
         border-start-start-radius: 0;
         border-end-start-radius: 0;
       }
@@ -229,13 +258,13 @@ governing permissions and limitations under the License.
 }
 
 .spectrum-Slider-ramp {
-  margin-block-start: var(--spectrum-slider-ramp-margin-top);
-  block-size: var(--spectrum-slider-ramp-track-height);
+  margin-block-start: var(--spectrum-slider-ramp-margin-top, var(--spectrum-slider-ramp-margin-top));
+  block-size: var(--spectrum-slider-ramp-track-height, var(--spectrum-slider-ramp-track-height));
 
   position: absolute;
-  inset-inline-start: var(--spectrum-slider-track-margin-offset);
-  inset-inline-end: var(--spectrum-slider-track-margin-offset);
-  inset-block-start: calc(var(--spectrum-slider-ramp-track-height) / 2);
+  inset-inline-start: var(--spectrum-slider-track-margin-offset, var(--spectrum-slider-track-margin-offset));
+  inset-inline-end: var(--spectrum-slider-track-margin-offset, var(--spectrum-slider-track-margin-offset));
+  inset-block-start: var(--mod-slider-ramp-track-height, var(--spectrum-slider-ramp-track-height)) / 2);
 
   svg {
     inline-size: 100%;
@@ -244,36 +273,43 @@ governing permissions and limitations under the License.
     /* Flip the ramp automatically for RTL */
     transform: logical rotate(0deg);
   }
+
+  &+.spectrum-Slider-handle {
+    margin-block: calc(var(--mod-slider-bottom-to-handle, var(--spectrum-slider-bottom-to-handle)) * -1 -5px + var(--mod-slider-margin-top-offset, var(--spectrum-slider-margin-top-offset))) 0;
+  }
+
 }
 
 .spectrum-Slider-handle {
   position: absolute;
   inset-inline-start: 0;
-  inset-block-start: calc(var(--spectrum-slider-height) / 2);
+  inset-block-start: calc(var(--mod-slider-height-size, var(--spectrum-slider-height-size)) / 2);
+  inset-block-start: calc(var(--mod-component-bottom-to-text-75, var(--spectrum-component-bottom-to-text-75))  + var(--mod-slider-control-height, var(--spectrum-slider-control-height)) / 2);
   z-index: 2;
 
   display: inline-block;
   box-sizing: border-box;
 
-  inline-size: var(--spectrum-slider-handle-width);
-  block-size: var(--spectrum-slider-handle-height);
 
-  margin-block: var(--spectrum-slider-handle-margin-top) 0;
-  margin-inline: calc(var(--spectrum-slider-handle-width) / -2) 0;
+  inline-size: var(--mod-slider-handle-size, var(--spectrum-slider-handle-size));
+  block-size: var(--mod-slider-handle-size, var(--spectrum-slider-handle-size));
 
-  border-width: var(--spectrum-slider-handle-border-size);
+
+  margin-block: calc(var(--mod-slider-bottom-to-handle, var(--spectrum-slider-bottom-to-handle)) * -1 + var(--mod-slider-margin-top-offset, var(--spectrum-slider-margin-top-offset))) 0;
+  margin-inline: calc(var(--mod-slider-handle-size, var(--spectrum-slider-handle-size)) / -2) 0;
+  border-width: var(--mod-border-width-200, var(--spectrum-border-width-200));
   border-style: solid;
 
-  border-radius: var(--spectrum-slider-handle-border-radius);
+  border-radius: var(--mod-slider-handle-border-radius, var(--spectrum-slider-handle-border-radius));
 
-  transition: border-width var(--spectrum-slider-animation-duration) ease-in-out;
+  transition: border-width var(--mod-animation-duration-100, var(--spectrum-animation-duration-100)) ease-in-out;
 
   outline: none;
 
   &:active,
   &.is-focused,
   &.is-dragged {
-    border-width: var(--spectrum-slider-handle-border-size);
+    border-width: var(--mod-slider-handle-border-width-down, var(--spectrum-slider-handle-border-width-down));
   }
 
   &:active,
@@ -290,13 +326,12 @@ governing permissions and limitations under the License.
     left: 50%;
     top: 50%;
 
-    transition: box-shadow var(--spectrum-global-animation-duration-100)
-        ease-out,
-      width var(--spectrum-global-animation-duration-100) ease-out,
-      height var(--spectrum-global-animation-duration-100) ease-out;
+    transition: box-shadow var(--mod-animation-duration-100, var(--spectrum-animation-duration-100)) ease-out,
+      width var(--mod-animation-duration-100, var(--spectrum-animation-duration-100)) ease-out,
+      height var(--mod-animation-duration-100, var(--spectrum-animation-duration-100)) ease-out;
 
-    width: var(--spectrum-slider-handle-width);
-    height: var(--spectrum-slider-handle-height);
+    width: var(--mod-slider-handle-size, var(--spectrum-slider-handle-size));
+    height: var(--mod-slider-handle-size, var(--spectrum-slider-handle-size));
 
     transform: translate(-50%, -50%);
 
@@ -305,14 +340,8 @@ governing permissions and limitations under the License.
 
   &.is-focused {
     &:before {
-      width: calc(
-        var(--spectrum-slider-handle-width) +
-          var(--spectrum-alias-focus-ring-gap) * 2
-      );
-      height: calc(
-        var(--spectrum-slider-handle-height) +
-          var(--spectrum-alias-focus-ring-gap) * 2
-      );
+      width: calc(var(--mod-slider-handle-size, var(--spectrum-slider-handle-size)) + var(--mod-focus-indicator-gap, var(--spectrum-focus-indicator-gap)) * 2);
+      height: calc(var(--mod-slider-handle-size, var(--spectrum-slider-handle-size)) + var(--mod-focus-indicator-gap, var(--spectrum-focus-indicator-gap)) * 2);
     }
   }
 }
@@ -321,12 +350,13 @@ governing permissions and limitations under the License.
   /*  Remove the margin for input in Firefox and Safari. */
   margin: 0;
 
-  inline-size: var(--spectrum-slider-handle-width);
-  block-size: var(--spectrum-slider-handle-height);
+  inline-size: var(--mod-slider-handle-size, var(--spectrum-slider-handle-size));
+  block-size: var(--mod-slider-handle-size, var(--spectrum-slider-handle-size));
   padding: 0;
   position: absolute;
-  inset-block-start: var(--spectrum-slider-input-top);
-  inset-inline-start: var(--spectrum-slider-input-left);
+
+  inset-block-start: var(--mod-slider-input-top-size, var(--spectrum-slider-input-top-size));
+  inset-inline-start: var(--mod-slider-input-left, var(--spectrum-slider-input-left));
   overflow: hidden;
   opacity: 0.000001;
   cursor: default;
@@ -345,11 +375,18 @@ governing permissions and limitations under the License.
 
   inline-size: auto;
 
-  padding-block-start: var(--spectrum-fieldlabel-m-padding-top);
+  padding-block-start: var(--mod-component-top-to-text-75, var(--spectrum-component-top-to-text-75));
+  font-size: var(--mod-font-size-75, var(--spectrum-font-size-75));
+  margin-block-end: var(--mod-component-bottom-to-text-75, var(--spectrum-component-bottom-to-text-75));
 
-  font-size: var(--spectrum-slider-label-text-size);
-  line-height: var(--spectrum-slider-label-text-line-height);
-  margin-block-end: var(--spectrum-slider-label-margin-bottom);
+  line-height: var(--mod-line-height-100, var(--spectrum-line-height-100));
+
+  /* international support */
+  &:lang(ja),
+  &:lang(zh),
+  &:lang(ko) {
+    line-height: var(--mod-slider-cjk-line-height, var(--spectrum-slider-cjk-line-height));
+  }
 }
 
 .spectrum-Slider-label {
@@ -366,39 +403,35 @@ governing permissions and limitations under the License.
 }
 
 .spectrum-Slider-value {
-  margin-inline-start: var(--spectrum-slider-label-gap-x);
+  margin-inline-start: var(--mod-slider-label-margin-start, var(--spectrum-slider-label-margin-start));
 }
 
+/* Slider misses core-tokens for tick */
 .spectrum-Slider-ticks {
   display: flex;
   justify-content: space-between;
 
   z-index: 0;
 
-  margin: 0 var(--spectrum-slider-track-margin-offset);
-  margin-block-start: calc(
-    var(--spectrum-slider-tick-mark-height) +
-    1px
-  );
+  margin: 0 var(--mod-slider-track-margin-offset, var(--spectrum-slider-track-margin-offset));
+  margin-block-start: calc(var(--mod-slider-tick-mark-height, var(--spectrum-slider-tick-mark-height)) -2px);
 }
 
 .spectrum-Slider-tick {
   position: relative;
 
-  inline-size: var(--spectrum-slider-tick-mark-width);
+  inline-size: var(--mod-slider-tick-mark-width, var(--spectrum-slider-tick-mark-width));
 
   &:after {
     display: block;
     position: absolute;
     inset-block-start: 0;
-    inset-inline-start: calc(
-      50% - calc(var(--spectrum-slider-tick-mark-width) / 2)
-    );
+    inset-inline-start: calc(50% - calc(var(--mod-slider-tick-mark-width, var(--spectrum-slider-tick-mark-width)) / 2));
     content: "";
-    inline-size: var(--spectrum-slider-tick-mark-width);
-    block-size: var(--spectrum-slider-tick-mark-height);
+    inline-size: var(--mod-slider-tick-mark-width, var(--spectrum-slider-tick-mark-width));
+    block-size: var(--mod-slider-tick-mark-height, var(--spectrum-slider-tick-mark-height));
 
-    border-radius: var(--spectrum-slider-tick-mark-border-radius);
+    border-radius: var(--mod-slider-tick-mark-border-radius, var(--spectrum-slider-tick-mark-border-radius));
   }
 
   .spectrum-Slider-tickLabel {
@@ -406,12 +439,12 @@ governing permissions and limitations under the License.
     align-items: center;
     justify-content: center;
 
-    margin-block: calc(var(--spectrum-slider-label-gap-y) + var(--spectrum-slider-tick-mark-height)) 0;
-    margin-inline: calc(var(--spectrum-slider-label-gap-x) * -1)
-      calc(var(--spectrum-slider-label-gap-x) * -1);
+    margin-block: calc(var(--mod-text-to-visual-75, var(--spectrum-text-to-visual-75)) + var(--mod-slider-tick-mark-height, var(--spectrum-slider-tick-mark-height))) 0;
 
-    font-size: var(--spectrum-slider-label-text-size);
-    line-height: var(--spectrum-slider-label-text-line-height);
+    margin-inline: calc(var(--mod-slider-label-margin-start, var(--spectrum-slider-label-margin-start))) * -1) calc(var(--mod-slider-label-margin-start, var(--spectrum-slider-label-margin-start)) * -1);
+
+    font-size: var(--mod-font-size-75, var(--spectrum-font-size-75));
+    line-height: var(--mod-line-height-100, var(--spectrum-line-height-100));
   }
 
   &:first-of-type,
@@ -425,7 +458,8 @@ governing permissions and limitations under the License.
 
   &:first-of-type {
     /* fix off-by-one alignment */
-    inset-inline-start: calc(var(--spectrum-slider-tick-mark-width) / -2);
+    inset-inline-start: calc(var(--mod-slider-tick-mark-width, var(--spectrum-slider-tick-mark-width)) / -2);
+
     .spectrum-Slider-tickLabel {
       inset-inline-start: 0;
     }
@@ -433,7 +467,8 @@ governing permissions and limitations under the License.
 
   &:last-of-type {
     /* fix off-by-one alignment */
-    inset-inline-end: calc(var(--spectrum-slider-tick-mark-width) / -2);
+    inset-inline-end: calc(var(--mod-slider-tick-mark-width, var(--spectrum-slider-tick-mark-width)) / -2);
+
     .spectrum-Slider-tickLabel {
       inset-inline-end: 0;
     }
@@ -455,17 +490,215 @@ governing permissions and limitations under the License.
 /* backwards compatibility: these are not required, but they make the handle go to the edegs and align right */
 .spectrum-Slider-handleContainer,
 .spectrum-Slider-trackContainer {
-  width: calc(100% + var(--spectrum-slider-handle-width));
+  width: calc(100% + var(--mod-slider-handle-size, var(--spectrum-slider-handle-size)));
 
   position: absolute;
-  top: calc(var(--spectrum-slider-track-height) / 2 - 1px);
+  top: calc(var(--mod-slider-control-height, var(--spectrum-slider-control-height)) / 2 - 1px);
 
-  margin-left: calc(var(--spectrum-slider-handle-width) / 2 * -1);
+  margin-left: calc(var(--mod-slider-handle-size, var(--spectrum-slider-handle-size)))/ 2 * -1);
 }
 
 .spectrum-Slider-trackContainer {
-  height: var(--spectrum-slider-height);
+  height: var(--mod-slider-height-size, var(--spectrum-slider-height-size));
+  height: var(--mod-component-height-200, var(--spectrum-component-height-200));
 
   /* stop edges from peeking out */
   overflow: hidden;
+}
+
+
+.spectrum-Slider-track {
+  &::before {
+    background: var(--highcontrast-slider-track-color, var(--mod-slider-track-color, var(--spectrum-slider-track-color)));
+  }
+}
+
+
+.spectrum-Slider-labelContainer {
+  color: var(--highcontrast-slider-label-text-color, var(--mod-slider-label-text-color, var(--spectrum-slider-label-text-color)));
+}
+
+
+.spectrum-Slider--filled {
+  .spectrum-Slider-track:first-child {
+    &::before {
+      background: var(--highcontrast-slider-track-fill-color, var(--mod-slider-track-fill-color, var(--spectrum-slider-track-fill-color)));
+    }
+  }
+}
+
+.spectrum-Slider-fill {
+  &::before {
+    background: var(--highcontrast-slider-track-fill-color, var(--mod-slider-track-fill-color, var(--spectrum-slider-track-fill-color)));
+  }
+}
+
+.spectrum-Slider-ramp {
+  path {
+    fill: var(--highcontrast-slider-ramp-track-color, var(--mod-slider-ramp-track-color, var(--spectrum-slider-ramp-track-color)));
+  }
+}
+
+.spectrum-Slider-handle {
+  border-color: var(--highcontrast-slider-handle-border-color, var(--mod-slider-handle-border-color, var(--spectrum-slider-handle-border-color)));
+  background: var(--highcontrast-slider-handle-background-color, var(--mod-slider-handle-background-color, var(--spectrum-slider-handle-background-color)));
+
+  &:hover {
+    border-color: var(--highcontrast-slider-handle-border-color-hover, var(--mod-slider-handle-border-color-hover, var(--spectrum-slider-handle-border-color-hover)));
+  }
+
+  &.is-focused {
+    border-color: var(--highcontrast-slider-handle-border-color-key-focus, var(--mod-slider-handle-border-color-key-focus, var(--spectrum-slider-handle-border-color-key-focus)));
+
+    &:before {
+      box-shadow: 0 0 0 var(--spectrum-focus-indicator-thickness) var(--highcontrast-slider-handle-focus-ring-color-key-focus, var(--mod-slider-handle-focus-ring-color-key-focus, var(--spectrum-slider-handle-focus-ring-color-key-focus)));
+    }
+  }
+
+  &:active,
+  &.is-dragged {
+    border-color: var(--highcontrast-slider-handle-border-color-down, var(--mod-slider-handle-border-color-down, var(--spectrum-slider-handle-border-color-down)));
+  }
+}
+
+
+.spectrum-Slider--ramp {
+  .spectrum-Slider-handle {
+    box-shadow: 0 0 0 var(--spectrum-slider-handle-gap) var(--highcontrast-slider-ramp-handle-border-color-active, var(--mod-slider-ramp-handle-border-color-active, var(--spectrum-slider-ramp-handle-border-color-active)));
+  }
+}
+
+.spectrum-Slider-input {
+  background: transparent;
+}
+
+.spectrum-Slider-tick {
+  &:after {
+    background-color: var(--highcontrast-slider-tick-mark-color, var(--mod-slider-tick-mark-color, var(--spectrum-slider-tick-mark-color)));
+  }
+}
+
+.spectrum-Slider-handle {
+  &.is-dragged {
+    border-color: var(--highcontrast-slider-handle-border-color-down, var(--mod-slider-handle-border-color-down), var(--spectrum-slider-handle-border-color-down)));
+    background: var(--highcontrast-slider-handle-background-color, var(--mod-slider-handle-background-color), var(--spectrum-slider-handle-background-color)));
+  }
+}
+
+
+.spectrum-Slider--range {
+  .spectrum-Slider-track {
+    &:not(:first-of-type):not(:last-of-type) {
+      &:before {
+        background: var(--highcontrast-slider-track-fill-color, var(--mod-slider-track-fill-color), var(--spectrum-slider-track-fill-color)));
+      }
+    }
+  }
+}
+
+
+.spectrum-Slider {
+  &.is-disabled {
+    .spectrum-Slider-labelContainer {
+      color: var(--highcontrast-slider-label-text-color-disabled, var(--mod-slider-label-text-color-disabled, var(--spectrum-slider-label-text-color-disabled)));
+    }
+
+    .spectrum-Slider-handle {
+      border-color: var(--highcontrast-slider-handle-border-color-disabled, var(--mod-slider-handle-border-color-disabled, var(--spectrum-slider-handle-border-color-disabled)));
+      background: var(--highcontrast-slider-handle-disabled-background-color, var(--mod-slider-handle-disabled-background-color, var(--spectrum-slider-handle-disabled-background-color)));
+
+      &:hover,
+      &:active {
+        border-color: var(--highcontrast-disabled-border-color, var(--mod-disabled-border-color, var(--spectrum-disabled-border-color)));
+        background: var(--highcontrast-slider-handle-background-color-disabled, var(--mod-slider-handle-background-color-disabled, var(--spectrum-slider-handle-background-color-disabled)));
+      }
+    }
+
+    .spectrum-Slider-track {
+      &::before {
+        background: var(--highcontrast-slider-track-color-disabled, var(--mod-slider-track-color-disabled, var(--spectrum-slider-track-color-disabled)));
+      }
+    }
+
+    &.spectrum-Slider--filled {
+      .spectrum-Slider-track:first-child {
+        &::before {
+          background: var(--highcontrast-slider-track-fill-color-disabled, var(--mod-slider-track-fill-color-disabled, var(--spectrum-slider-track-fill-color-disabled)));
+        }
+      }
+    }
+
+    .spectrum-Slider-fill {
+      &::before {
+        background: var(--highcontrast-slider-track-fill-color-disabled, var(--mod-slider-track-fill-color-disabled, var(--spectrum-slider-track-fill-color-disabled)));
+      }
+    }
+
+    .spectrum-Slider-ramp {
+      path {
+        fill: var(--highcontrast-slider-ramp-track-color-disabled, var(--mod-slider-ramp-track-color-disabled, var(--spectrum-slider-ramp-track-color-disabled)));
+      }
+    }
+
+    .spectrum-Slider-tick {
+      &:after {
+        background-color: var(--highcontrast-slider-tick-mark-color-disabled, var(--mod-slider-tick-mark-color-disabled, var(--spectrum-slider-tick-mark-color-disabled)));
+      }
+    }
+
+    &.spectrum-Slider--range {
+      .spectrum-Slider-track {
+        &:not(:first-of-type):not(:last-of-type) {
+          &:before {
+            background: var(--highcontrast-slider-track-color-disabled, var(--mod-slider-track-color-disabled, var(--spectrum-slider-track-color-disabled)));
+          }
+        }
+      }
+    }
+  }
+}
+
+
+@media (forced-colors: active) {
+  .spectrum-Slider {
+    .spectrum-Slider-handle {
+      &:before {
+        forced-color-adjust: none;
+      }
+    }
+
+    --spectrum-slider-track-color: ButtonText;
+    --spectrum-slider-track-fill-color: ButtonText;
+    --spectrum-slider-ramp-track-color: ButtonText;
+    --spectrum-slider-ramp-track-color-disabled: GrayText;
+
+    --spectrum-slider-handle-background-color: ButtonFace;
+    --spectrum-slider-handle-background-color-disabled: GrayText;
+    --spectrum-slider-handle-border-color: ButtonText;
+    --spectrum-slider-handle-disabled-background-color: GrayText;
+
+    --spectrum-slider-tick-mark-color: ButtonText;
+    --spectrum-slider-tick-mark-color-disabled: GrayText;
+
+    --spectrum-slider-handle-border-color-hover: Highlight;
+    --spectrum-slider-handle-border-color-down: Highlight;
+    --spectrum-slider-handle-border-color-key-focus: Highlight;
+    --spectrum-slider-handle-focus-ring-color-key-focus: Highlight;
+
+    --spectrum-slider-track-color-disabled: GrayText;
+    --spectrum-slider-track-fill-color-disabled: GrayText;
+
+    --spectrum-slider-handle-border-color-disabled: GrayText;
+
+    --spectrum-slider-label-text-color: CanvasText;
+    --spectrum-slider-label-text-color-disabled: GrayText;
+
+    --spectrum-slider-ramp-handle-border-color-active: ButtonText;
+
+    .spectrum-Slider--ramp {
+      .spectrum-Slider-handle {
+        forced-color-adjust: none;
+      }
+    }
+  }
 }
