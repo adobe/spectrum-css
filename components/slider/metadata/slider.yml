@@ -39,6 +39,7 @@ examples:
     markup: |
       <div class="spectrum-Examples">
         <div class="spectrum-Examples-item" style="width: 200px">
+          <h4 class="spectrum-Heading spectrum-Heading--sizeXS spectrum-Examples-itemHeading">S</h4>
           <div class="spectrum-Slider spectrum-Slider--sizeS">
             <div class="spectrum-Slider-controls">
               <div class="spectrum-Slider-track"></div>
@@ -60,7 +61,8 @@ examples:
         </div>
 
         <div class="spectrum-Examples-item" style="width: 200px">
-          <div class="spectrum-Slider spectrum-Slider--sizeM spectrum-Slider--sizeM">
+          <h4 class="spectrum-Heading spectrum-Heading--sizeXS spectrum-Examples-itemHeading">M</h4>
+          <div class="spectrum-Slider spectrum-Slider--sizeM">
             <div class="spectrum-Slider-controls">
               <div class="spectrum-Slider-track"></div>
               <div class="spectrum-Slider-handle" style="left: 40%;">
@@ -81,7 +83,8 @@ examples:
         </div>
 
         <div class="spectrum-Examples-item" style="width: 200px">
-          <div class="spectrum-Slider spectrum-Slider--sizeM spectrum-Slider--sizeL">
+          <h4 class="spectrum-Heading spectrum-Heading--sizeXS spectrum-Examples-itemHeading">L</h4>
+          <div class="spectrum-Slider spectrum-Slider--sizeL">
             <div class="spectrum-Slider-controls">
               <div class="spectrum-Slider-track"></div>
               <div class="spectrum-Slider-handle" style="left: 40%;">
@@ -90,7 +93,7 @@ examples:
               <div class="spectrum-Slider-track"></div>
             </div>
           </div>
-          <div class="spectrum-Slider spectrum-Slider--sizeM is-disabled  spectrum-Slider--sizeL">
+          <div class="spectrum-Slider is-disabled spectrum-Slider--sizeL">
             <div class="spectrum-Slider-controls">
               <div class="spectrum-Slider-track"></div>
               <div class="spectrum-Slider-handle" style="left: 40%;">
@@ -102,7 +105,8 @@ examples:
         </div>
         
         <div class="spectrum-Examples-item" style="width: 200px">
-          <div class="spectrum-Slider spectrum-Slider--sizeM spectrum-Slider--sizeXL">
+          <h4 class="spectrum-Heading spectrum-Heading--sizeXS spectrum-Examples-itemHeading">XL</h4>
+          <div class="spectrum-Slider spectrum-Slider--sizeXL">
             <div class="spectrum-Slider-controls">
               <div class="spectrum-Slider-track"></div>
               <div class="spectrum-Slider-handle" style="left: 40%;">
@@ -111,7 +115,7 @@ examples:
               <div class="spectrum-Slider-track"></div>
             </div>
           </div>
-          <div class="spectrum-Slider spectrum-Slider--sizeM is-disabled spectrum-Slider--sizeXL">
+          <div class="spectrum-Slider is-disabled spectrum-Slider--sizeXL">
             <div class="spectrum-Slider-controls">
               <div class="spectrum-Slider-track"></div>
               <div class="spectrum-Slider-handle" style="left: 40%;">
