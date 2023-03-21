@@ -15,6 +15,7 @@ const StyleDictionary = require('style-dictionary');
 const CSSSetsFormatter = require('style-dictionary-sets').CSSSetsFormatter;
 const NameKebabTransfom = require('style-dictionary-sets').NameKebabTransfom;
 const AttributeSetsTransform = require('style-dictionary-sets').AttributeSetsTransform;
+const CSSOpenTypeTransform = require('style-dictionary-sets').CSSOpenTypeTransform;
 
 /**
  * @note This references the package.json because we want the root folder and
@@ -26,6 +27,7 @@ const tokensDir = path.dirname(tokensPath);
 
 StyleDictionary.registerTransform(NameKebabTransfom);
 StyleDictionary.registerTransform(AttributeSetsTransform);
+StyleDictionary.registerTransform(CSSOpenTypeTransform);
 StyleDictionary.registerFormat(CSSSetsFormatter);
 
 const systemNames = ['express', 'spectrum', 'wireframe'];
@@ -139,7 +141,7 @@ module.exports = {
   platforms: {
     CSS: {
       buildPath: 'dist/css/',
-      transforms: [AttributeSetsTransform.name, NameKebabTransfom.name],
+      transforms: [AttributeSetsTransform.name, NameKebabTransfom.name, CSSOpenTypeTransform.name],
       prefix: 'spectrum',
       files: [
         {
