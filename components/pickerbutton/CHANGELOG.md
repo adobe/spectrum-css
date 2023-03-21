@@ -3,6 +3,31 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+<a name="3.0.0"></a>
+# 3.0.0
+🗓 2023-03-21 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/pickerbutton@2.0.12...@spectrum-css/pickerbutton@3.0.0)
+
+* refactor(textfield)!: migrate spectrum tokens (#1544) ([1723f01](https://github.com/adobe/spectrum-css/commit/1723f01)), closes [#1544](https://github.com/adobe/spectrum-css/issues/1544)
+
+
+### 🛑 BREAKING CHANGES
+
+* migrates textfield to spectrum tokens
+
+- Updates to latest tokens package
+- WHCM added
+- Focus state and dependency fixes
+- Leveraging CSS grid for help text placement and character count
+* removes placeholder from stepper inputs
+
+* feat(stepper): add hideStepper control to fix border styling issue
+* refactor(stepper): adding native pseudo class styles
+* refactor(stepper): add support for invalid textfield styling
+
+
+
+
+
 <a name="2.0.13-beta.0"></a>
 ## 2.0.13-beta.0
 🗓 2023-03-16 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/pickerbutton@2.0.12...@spectrum-css/pickerbutton@2.0.13-beta.0)
