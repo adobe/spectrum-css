@@ -6,7 +6,6 @@ import { ifDefined } from "lit-html/directives/if-defined.js";
 import { useArgs, useGlobals } from "@storybook/client-api";
 
 import "../index.css";
-import "../skin.css";
 
 export const Template = ({
   rootClass = "spectrum-Slider",
@@ -16,7 +15,7 @@ export const Template = ({
   step = 2,
   values = [],
   variant,
-  fillColor,
+  fillColor = "rgb(213, 213, 213)",
   showTicks = false,
   isDisabled = false,
   isFocused = false,
@@ -107,10 +106,10 @@ export const Template = ({
         ...customClasses.reduce((a, c) => ({ ...a, [c]: true }), {}),
       })}
       id=${ifDefined(id)}
-      style=${ifDefined(styleMap({
+      style=${styleMap({
         maxWidth: `var(--spectrum-global-dimension-size-3000)`,
-        ['--spectrum-slider-m-track-fill-color']: fillColor,
-      }))}
+        ['--spectrum-slider-track-color']: fillColor,
+      })}
       role=${ifDefined(values.length > 1 ? "group" : undefined)}
       aria-labelledby=${ifDefined(label && id ? `${id}-label` : undefined)}>
 
