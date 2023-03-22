@@ -31,11 +31,6 @@ governing permissions and limitations under the License.
 
 }
 
-.spectrum-ContextualHelp--sizeS {}
-.spectrum-ContextualHelp--sizeM {}
-.spectrum-ContextualHelp--sizeL {}
-.spectrum-ContextualHelp--sizeXL {}
-
 .spectrum-ContextualHelp {
   position: relative;
   min-inline-size: var(--mod-spectrum-contextual-help-minimum-width, var(--spectrum-contextual-help-minimum-width));
