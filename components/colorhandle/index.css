@@ -36,7 +36,7 @@ governing permissions and limitations under the License.
 
   /* for opacity checkerboard background */
   --spectrum-colorhandle-checkerboard-dark-color: var(--spectrum-opacity-checkerboard-square-dark);
-  --spectrum-colorhandle--checkerboard-light-color: var(--spectrum-opacity-checkerboard-square-light);
+  --spectrum-colorhandle-checkerboard-light-color: var(--spectrum-opacity-checkerboard-square-light);
   --spectrum-colorhandle-checkerboard-size: var(--spectrum-opacity-checkerboard-square-size);
 
   --spectrum-colorhandle-border-color-disabled: var(--spectrum-disabled-content-color);
@@ -48,36 +48,39 @@ governing permissions and limitations under the License.
   position: absolute;
   z-index: 1; /* Be above */
   box-sizing: border-box;
-  width: var(--spectrum-colorhandle-size);
-  height: var(--spectrum-colorhandle-size);
+  width: var(--mod-colorhandle-size, var(--spectrum-colorhandle-size));
+  height: var(--mod-colorhandle-size, var(--spectrum-colorhandle-size));
 
-  margin-left: calc(-1 * calc(var(--spectrum-colorhandle-size) / 2));
-  margin-top: calc(-1 * calc(var(--spectrum-colorhandle-size) / 2));
+  margin-left: calc(-1 * calc(var(--mod-colorhandle-size, var(--spectrum-colorhandle-size)) / 2));
+  margin-top: calc(-1 * calc(var(--mod-colorhandle-size, var(--spectrum-colorhandle-size)) / 2));
 
-  border-width: var(--spectrum-colorhandle-border-width);
-  border-color: var(--highcontrast-colorhandle-border-color, var(--spectrum-colorhandle-border-color));
+  border-width: var(--mod-colorhandle-border-width, var(--spectrum-colorhandle-border-width));
+  border-color: var(--highcontrast-colorhandle-border-color, var(--mod-colorhandle-border-color, var(--spectrum-colorhandle-border-color)));
   border-style: solid;
 
-  box-shadow: 0 0 0 var(--spectrum-colorhandle-outer-border-width) var(--spectrum-colorhandle-outer-border-color);
+  box-shadow:
+    0 0 0
+    var(--mod-colorhandle-outer-border-width, var(--spectrum-colorhandle-outer-border-width))
+    var(--mod-colorhandle-outer-border-color, var(--spectrum-colorhandle-outer-border-color));
 
   filter:drop-shadow(
-    var(--spectrum-colorhandle-drop-shadow-x)
-    var(--spectrum-colorhandle-drop-shadow-y)
-    var(--spectrum-colorhandle-drop-shadow-blur)
-    var(--spectrum-colorhandle-drop-shadow-color)
+    var(--mod-colorhandle-drop-shadow-x, var(--spectrum-colorhandle-drop-shadow-x))
+    var(--mod-colorhandle-drop-shadow-y, var(--spectrum-colorhandle-drop-shadow-y))
+    var(--mod-colorhandle-drop-shadow-blur, var(--spectrum-colorhandle-drop-shadow-blur))
+    var(--mod-colorhandle-drop-shadow-color, var(--spectrum-colorhandle-drop-shadow-color))
   );
 
   background:
-    repeating-conic-gradient(var(--spectrum-colorhandle-checkerboard-dark-color) 0% 25%, var(--spectrum-colorhandle--checkerboard-light-color) 0% 50%)
-    50% / calc(var(--spectrum-colorhandle-checkerboard-size) * 2) calc(var(--spectrum-colorhandle-checkerboard-size) * 2);
+    repeating-conic-gradient(var(--mod-colorhandle-checkerboard-dark-color, var(--spectrum-colorhandle-checkerboard-dark-color)) 0% 25%, var(--mod-colorhandle-checkerboard-light-color, var(--spectrum-colorhandle-checkerboard-light-color)) 0% 50%)
+    50% / calc(var(--mod-colorhandle-checkerboard-size, var(--spectrum-colorhandle-checkerboard-size)) * 2) calc(var(--mod-colorhandle-checkerboard-size, var(--spectrum-colorhandle-checkerboard-size)) * 2);
 
   /* Add a half-percent to fix diagonal line issue in Chrome on non-retina displays */
   transition:
-    width var(--spectrum-colorhandle-animation-duration) var(--spectrum-colorhandle-animation-easing),
-    height var(--spectrum-colorhandle-animation-duration) var(--spectrum-colorhandle-animation-easing),
-    border-width var(--spectrum-colorhandle-animation-duration) var(--spectrum-colorhandle-animation-easing),
-    margin-left var(--spectrum-colorhandle-animation-duration) var(--spectrum-colorhandle-animation-easing),
-    margin-top var(--spectrum-colorhandle-animation-duration) var(--spectrum-colorhandle-animation-easing);
+    width var(--mod-colorhandle-animation-duration, var(--spectrum-colorhandle-animation-duration)) var(--mod-colorhandle-animation-easing, var(--spectrum-colorhandle-animation-easing)),
+    height var(--mod-colorhandle-animation-duration, var(--spectrum-colorhandle-animation-duration))  var(--mod-colorhandle-animation-easing, var(--spectrum-colorhandle-animation-easing)),
+    border-width var(--mod-colorhandle-animation-duration, var(--spectrum-colorhandle-animation-duration))  var(--mod-colorhandle-animation-easing, var(--spectrum-colorhandle-animation-easing)),
+    margin-left var(--mod-colorhandle-animation-duration, var(--spectrum-colorhandle-animation-duration))  var(--mod-colorhandle-animation-easing, var(--spectrum-colorhandle-animation-easing)),
+    margin-top var(--mod-colorhandle-animation-duration, var(--spectrum-colorhandle-animation-duration))  var(--mod-colorhandle-animation-easing, var(--spectrum-colorhandle-animation-easing));
 
   &,
   &:after {
@@ -86,29 +89,29 @@ governing permissions and limitations under the License.
 
   &:after {
     content: '';
-    left: calc(50% - calc(var(--spectrum-colorhandle-hitarea-size) / 2));
-    top: calc(50% - calc(var(--spectrum-colorhandle-hitarea-size) / 2));
+    left: calc(50% - calc(var(--mod-colorhandle-hitarea-size, var(--spectrum-colorhandle-hitarea-size)) / 2));
+    top: calc(50% - calc(var(--mod-colorhandle-hitarea-size, var(--spectrum-colorhandle-hitarea-size)) / 2));
     position: absolute;
     display: block;
-    width: var(--spectrum-colorhandle-hitarea-size);
-    height: var(--spectrum-colorhandle-hitarea-size);
+    width: var(--mod-colorhandle-hitarea-size, var(--spectrum-colorhandle-hitarea-size));
+    height: var(--mod-colorhandle-hitarea-size, var(--spectrum-colorhandle-hitarea-size));
   }
 
   &.is-focused,
   &.focus-ring {
       /* Bigger handle when focused */
-      width: var(--spectrum-colorhandle-focused-size);
-      height: var(--spectrum-colorhandle-focused-size);
+      width: var(--mod-colorhandle-focused-size, var(--spectrum-colorhandle-focused-size));
+      height: var(--mod-colorhandle-focused-size, var(--spectrum-colorhandle-focused-size));
 
-      margin-left: calc(-1 * var(--spectrum-colorhandle-size));
-      margin-top: calc(-1 * var(--spectrum-colorhandle-size));
+      margin-left: calc(-1 * var(--mod-colorhandle-size, var(--spectrum-colorhandle-size)));
+      margin-top: calc(-1 * var(--mod-colorhandle-size, var(--spectrum-colorhandle-size)));
       outline: none;
   }
 
   &.is-disabled {
     pointer-events: none;
-    border-color: var(--highcontrast-colorhandle-border-color-disabled, var(--spectrum-colorhandle-border-color-disabled));
-    background: var(--highcontrast-colorhandle-fill-color-disabled, var(--spectrum-colorhandle-fill-color-disabled));
+    border-color: var(--highcontrast-colorhandle-border-color-disabled, var(--mod-colorhandle-border-color-disabled, var(--spectrum-colorhandle-border-color-disabled)));
+    background: var(--highcontrast-colorhandle-fill-color-disabled, var(--mod-colorhandle-fill-color-disabled, var(--spectrum-colorhandle-fill-color-disabled)));
     box-shadow: none;
     .spectrum-ColorHandle-inner {
       display: none;
@@ -120,7 +123,7 @@ governing permissions and limitations under the License.
   border-radius: 100%;
   width: 100%;
   height: 100%;
-  box-shadow: inset 0 0 0 var(--spectrum-colorhandle-inner-border-width) var(--spectrum-colorhandle-inner-border-color);
+  box-shadow: inset 0 0 0 var(--mod-colorhandle-inner-border-width, var(--spectrum-colorhandle-inner-border-width)) var(--mod-colorhandle-inner-border-color, var(--spectrum-colorhandle-inner-border-color));
   background-color: var(--spectrum-picked-color);
 }
 
