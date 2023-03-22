@@ -9,47 +9,38 @@ OF ANY KIND, either express or implied. See the License for the specific languag
 governing permissions and limitations under the License.
 */
 .spectrum-ColorHandle {
-  --spectrum-colorhandle-checkerboard-size: 8px; /* var(--spectrum-global-dimension-static-size-100); */
-  --spectrum-colorhandle-animation-duration: 130ms; /* var(--spectrum-global-animation-duration-100); */
-  --spectrum-colorhandle-animation-easing: ease-in-out;
-  --spectrum-colorhandle-hitarea-size: 24px; /*  var(--spectrum-global-dimension-size-300); */
-
-
   --spectrum-colorhandle-size: var(--spectrum-color-handle-size); /* does this need to be global? */
   --spectrum-colorhandle-focused-size: var(--spectrum-color-handle-size-key-focus);
-  --spectrum-global-dimension-static-size-200: 16px;
-  --spectrum-colorhandle-background-offset: -2px;
-  --spectrum-colorhandle-checkerboard-size: 8px;
 
+  --spectrum-colorhandle-hitarea-size: var(--spectrum-color-control-track-width);
 
+  --spectrum-colorhandle-animation-duration: 130ms; /* TODO replace with animation tokens */
+  --spectrum-colorhandle-animation-easing: ease-in-out; /* TODO replace with animation tokens */
 
-  /* outer border box shadow on the colorhandle */
-  --spectrum-colorhandle-outer-shadow-blur: var(--spectrum-color-handle-drop-shadow-blur);
-  --spectrum-colorhandle-outer-shadow-color: rgba(0, 0, 0, 0.42); /*TODO replace with tokens and RGBA function color-handle-outer-border-color +  color-handle-outer-border-opacity */
+  /* outer border as box shadow on the colorhandle */
+  --spectrum-colorhandle-outer-border-color: rgba(0, 0, 0, 0.42); /*TODO replace with tokens and RGBA function color-handle-outer-border-color +  color-handle-outer-border-opacity */
   --spectrum-colorhandle-outer-border-width: var(--spectrum-color-handle-outer-border-width);
 
-  /* inner border inset boxshadow on the colorhandle-color */
+  /* inner border as inset boxshadow on the colorhandle-color */
   --spectrum-colorhandle-inner-border-color: rgba(0, 0, 0, 0.42); /*TODO replace with tokens and RGBA function color-handle-inner-border-color + color-handle-inner-border-opacity */
   --spectrum-colorhandle-inner-border-width: var(--spectrum-color-handle-inner-border-width);
 
-  /* primary border border on color handle*/
+  /* primary border border on color handle */
   --spectrum-colorhandle-border-width: var(--spectrum-color-handle-border-width);
   --spectrum-colorhandle-border-color: var(--spectrum-white);
 
+  /* component shadow, only present with express */
   --spectrum-colorhandle-drop-shadow-x: var(--spectrum-color-handle-drop-shadow-x);
   --spectrum-colorhandle-drop-shadow-y: var(--spectrum-color-handle-drop-shadow-y);
   --spectrum-colorhandle-drop-shadow-blur: var(--spectrum-color-handle-drop-shadow-blur);
   --spectrum-colorhandle-drop-shadow-color: var(--spectrum-color-handle-drop-shadow-color);
 
+  --spectrum-colorcontrol-checkerboard-dark-color: var(--spectrum-opacity-checkerboard-square-dark);
+  --spectrum-colorcontrol-checkerboard-light-color: var(--spectrum-opacity-checkerboard-square-light);
 
-
-  --spectrum-colorcontrol-checkerboard-dark-color: rgb(217, 217, 217);
-
-  --spectrum-colorhandle-inner-border-color-disabled: var(--spectrum-disabled-content-color);
+  --spectrum-colorhandle-border-color-disabled: var(--spectrum-disabled-content-color);
   --spectrum-colorhandle-fill-color-disabled: var(--spectrum-disabled-background-color);
-
-
-
+  --spectrum-colorhandle-checkerboard-size: var(--spectrum-opacity-checkerboard-square-size);
 }
 
 .spectrum-ColorHandle {
@@ -67,11 +58,8 @@ governing permissions and limitations under the License.
   border-color: var(--spectrum-colorhandle-border-color);
   border-style: solid;
 
-  box-shadow: 0 0 var(--spectrum-colorhandle-outer-shadow-blur) var(--spectrum-colorhandle-outer-border-width) var(--spectrum-colorhandle-outer-shadow-color);
+  box-shadow: 0 0 0 var(--spectrum-colorhandle-outer-border-width) var(--spectrum-colorhandle-outer-border-color);
 
-  background-color: white; /* var(--spectrum-colorcontrol-checkerboard-light-color); */
-
-  /* only present when viewed as express */
   filter:drop-shadow(
     var(--spectrum-colorhandle-drop-shadow-x)
     var(--spectrum-colorhandle-drop-shadow-y)
@@ -79,21 +67,11 @@ governing permissions and limitations under the License.
     var(--spectrum-colorhandle-drop-shadow-color)
   );
 
-  background-size:
-    var(--spectrum-global-dimension-static-size-200)
-    var(--spectrum-global-dimension-static-size-200);
-  background-position:
-    var(--spectrum-colorhandle-background-offset) var(--spectrum-colorhandle-background-offset),
-    var(--spectrum-colorhandle-background-offset) calc(var(--spectrum-colorhandle-checkerboard-size) + var(--spectrum-colorhandle-background-offset)),
-    calc(var(--spectrum-colorhandle-checkerboard-size) + var(--spectrum-colorhandle-background-offset)) calc(-1 * var(--spectrum-colorhandle-checkerboard-size) + var(--spectrum-colorhandle-background-offset)),
-    calc(-1 * var(--spectrum-colorhandle-checkerboard-size) + var(--spectrum-colorhandle-background-offset)) var(--spectrum-colorhandle-background-offset);
-  /* Add a half-percent to fix diagonal line issue in Chrome on non-retina displays */
-  background-image:
-    linear-gradient(-45deg, transparent 75.5%, var(--spectrum-colorcontrol-checkerboard-dark-color) 75.5%),
-    linear-gradient(45deg, transparent 75.5%, var(--spectrum-colorcontrol-checkerboard-dark-color) 75.5%),
-    linear-gradient(-45deg, var(--spectrum-colorcontrol-checkerboard-dark-color) 25.5%, transparent 25.5%),
-    linear-gradient(45deg, var(--spectrum-colorcontrol-checkerboard-dark-color) 25.5%, transparent 25.5%);
+  background:
+    repeating-conic-gradient(var(--spectrum-colorcontrol-checkerboard-dark-color) 0% 25%, var(--spectrum-colorcontrol-checkerboard-light-color) 0% 50%)
+    50% / calc(var(--spectrum-colorhandle-checkerboard-size) * 2) calc(var(--spectrum-colorhandle-checkerboard-size) * 2);
 
+  /* Add a half-percent to fix diagonal line issue in Chrome on non-retina displays */
   transition:
     width var(--spectrum-colorhandle-animation-duration) var(--spectrum-colorhandle-animation-easing),
     height var(--spectrum-colorhandle-animation-duration) var(--spectrum-colorhandle-animation-easing),
@@ -128,7 +106,7 @@ governing permissions and limitations under the License.
 
   &.is-disabled {
     pointer-events: none;
-    border-color: var(--spectrum-colorhandle-inner-border-color-disabled);
+    border-color: var(--spectrum-colorhandle-border-color-disabled);
     background: var(--spectrum-colorhandle-fill-color-disabled);
     box-shadow: none;
     .spectrum-ColorHandle-inner {
@@ -152,7 +130,7 @@ governing permissions and limitations under the License.
 
 @media (forced-colors: active) {
   .spectrum-ColorHandle {
-    --spectrum-colorhandle-inner-border-color-disabled : GrayText;
+    --spectrum-colorhandle-border-color-disabled : GrayText;
     --spectrum-colorhandle-fill-color-disabled: Canvas;
     --spectrum-colorhandle-inner-border-color: CanvasText;
   }
