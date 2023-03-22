@@ -12,7 +12,6 @@ governing permissions and limitations under the License.
 
 .spectrum-ContextualHelp {
   /* Layout Variables */
-  --spectrum-contextual-help-minimum-width: var(--spectrum-contextual-help-minimum-width);
   --spectrum-contextual-help-padding: var(--spectrum-spacing-400);
   --spectrum-contextual-help-content-spacing: var(--spectrum-spacing-100);
   --spectrum-contextual-help-link-spacing: var(--spectrum-spacing-300);
@@ -22,13 +21,10 @@ governing permissions and limitations under the License.
   --spectrum-contextual-help-title-size: var(--spectrum-heading-size-xs);
   --spectrum-contextual-help-body-size: var(--spectrum-body-size-s);
 
-
-
   /* Mobile styling */
-  @media screen and (max-width: 700px) {
+  .spectrum--large & {
     --spectrum-contextual-help-content-spacing: var(--spectrum-spacing-200);
   }
-
 }
 
 .spectrum-ContextualHelp {
@@ -46,11 +42,11 @@ governing permissions and limitations under the License.
   font-size: var(--mod-spectrum-contextual-help-body-size, var(--spectrum-contextual-help-body-size));
 
 
-  h2, p {
+  .spectrum-ContextualHelp-heading, .spectrum-ContextualHelp-body {
     margin: 0;
   }
 
-  h2 {
+  .spectrum-ContextualHelp-heading {
     margin-block-end: var(--mod-spectrum-contextual-help-content-spacing, var(--spectrum-contextual-help-content-spacing));
     font-size: var(--mod-spectrum-contextual-help-title-size, var(--spectrum-contextual-help-title-size));
   }
