@@ -9,13 +9,12 @@ OF ANY KIND, either express or implied. See the License for the specific languag
 governing permissions and limitations under the License.
 */
 .spectrum-ColorHandle {
-  --spectrum-colorhandle-size: var(--spectrum-color-handle-size); /* does this need to be global? */
+  --spectrum-colorhandle-size: var(--spectrum-color-handle-size);
   --spectrum-colorhandle-focused-size: var(--spectrum-color-handle-size-key-focus);
-
   --spectrum-colorhandle-hitarea-size: var(--spectrum-color-control-track-width);
 
-  --spectrum-colorhandle-animation-duration: 130ms; /* TODO replace with animation tokens */
-  --spectrum-colorhandle-animation-easing: ease-in-out; /* TODO replace with animation tokens */
+  --spectrum-colorhandle-animation-duration: 130ms;
+  --spectrum-colorhandle-animation-easing: ease-in-out;
 
   /* outer border as box shadow on the colorhandle */
   --spectrum-colorhandle-outer-border-color: rgba(0, 0, 0, 0.42); /*TODO replace with tokens and RGBA function color-handle-outer-border-color +  color-handle-outer-border-opacity */
@@ -35,12 +34,13 @@ governing permissions and limitations under the License.
   --spectrum-colorhandle-drop-shadow-blur: var(--spectrum-color-handle-drop-shadow-blur);
   --spectrum-colorhandle-drop-shadow-color: var(--spectrum-color-handle-drop-shadow-color);
 
-  --spectrum-colorcontrol-checkerboard-dark-color: var(--spectrum-opacity-checkerboard-square-dark);
-  --spectrum-colorcontrol-checkerboard-light-color: var(--spectrum-opacity-checkerboard-square-light);
+  /* for opacity checkerboard background */
+  --spectrum-colorhandle-checkerboard-dark-color: var(--spectrum-opacity-checkerboard-square-dark);
+  --spectrum-colorhandle--checkerboard-light-color: var(--spectrum-opacity-checkerboard-square-light);
+  --spectrum-colorhandle-checkerboard-size: var(--spectrum-opacity-checkerboard-square-size);
 
   --spectrum-colorhandle-border-color-disabled: var(--spectrum-disabled-content-color);
   --spectrum-colorhandle-fill-color-disabled: var(--spectrum-disabled-background-color);
-  --spectrum-colorhandle-checkerboard-size: var(--spectrum-opacity-checkerboard-square-size);
 }
 
 .spectrum-ColorHandle {
@@ -68,7 +68,7 @@ governing permissions and limitations under the License.
   );
 
   background:
-    repeating-conic-gradient(var(--spectrum-colorcontrol-checkerboard-dark-color) 0% 25%, var(--spectrum-colorcontrol-checkerboard-light-color) 0% 50%)
+    repeating-conic-gradient(var(--spectrum-colorhandle-checkerboard-dark-color) 0% 25%, var(--spectrum-colorhandle--checkerboard-light-color) 0% 50%)
     50% / calc(var(--spectrum-colorhandle-checkerboard-size) * 2) calc(var(--spectrum-colorhandle-checkerboard-size) * 2);
 
   /* Add a half-percent to fix diagonal line issue in Chrome on non-retina displays */
@@ -102,6 +102,7 @@ governing permissions and limitations under the License.
 
       margin-left: calc(-1 * var(--spectrum-colorhandle-focused-size));
       margin-top: calc(-1 * var(--spectrum-colorhandle-focused-size));
+      outline: none;
   }
 
   &.is-disabled {
