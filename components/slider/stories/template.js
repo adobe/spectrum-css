@@ -20,6 +20,7 @@ export const Template = ({
   isDisabled = false,
   isFocused = false,
   customClasses = [],
+  style = {},
   id,
   // ...globals
 }) => {
@@ -51,6 +52,7 @@ export const Template = ({
         style=${ifDefined(styleMap({
           [rtl ? 'right' : 'left']: position ? `${position}%` : undefined,
           width: width ? `${width}%` : undefined,
+          ...style
         }))}
       ></div>`;
   };

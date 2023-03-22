@@ -159,3 +159,12 @@ Disabled.args = {
   ...Default.args,
   isDisabled: true,
 };
+
+export const Gradient = Template.bind({});
+Gradient.args = {
+  ...Default.args,
+  style: {
+    "--spectrum-slider-track-color": "linear-gradient(to right, red, green 100%)",
+    "--spectrum-slider-track-color-rtl": "linear-gradient(to left, red, green 100%)"
+  }
+}
