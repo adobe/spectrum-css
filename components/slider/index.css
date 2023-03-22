@@ -129,7 +129,7 @@ governing permissions and limitations under the License.
   vertical-align: top;
 }
 
-/* Sliders with ticks + tick mark labels require more margin-block-end.
+/* TODO: Sliders with ticks + tick mark labels require more margin-block-end.
  As of February 2023 we do not have tokens yet tokens for Ramp and Tick variants,
  using control-height here instead.  */
 .spectrum-Slider--tick {
@@ -366,13 +366,6 @@ governing permissions and limitations under the License.
   font-size: var(--mod-spectrum-slider-font-size, var(--spectrum-slider-font-size));
   line-height: var(--mod-line-height-100, var(--spectrum-line-height-100));
 
-  /* margin between label and slider controls are based on the baseline of the label,
-    calculating the pixel difference for an accurate margin end */
-  /* --slider-label-baseline-margin: calc(
-    var(--spectrum-line-height-100) *  var(--spectrum-font-size-75)
-    - var(--spectrum-font-size-75)
-  ); */
-
   margin-block-start: var(--mod-spectrum-slider-label-top-to-text, var(--spectrum-slider-label-top-to-text));
   margin-block-end: var(--mod-spectrum-slider-label-bottom-to-text, var(--spectrum-slider-label-bottom-to-text));
 
@@ -424,7 +417,7 @@ governing permissions and limitations under the License.
   }
 }
 
-/* Slider misses core-tokens for tick variant */
+/* TODO: missing core-tokens for tick variant */
 .spectrum-Slider-ticks {
   display: flex;
   justify-content: space-between;
@@ -433,7 +426,7 @@ governing permissions and limitations under the License.
 
   margin-inline: var(--mod-slider-track-margin-offset, var(--spectrum-slider-track-margin-offset));
 
-  /* missing core-token for handle fill-color */
+  /* TODO: missing core-token for handle fill-color */
   &~.spectrum-Slider-handleContainer {
     .spectrum-Slider-handle {
       background: var(--mod-slider-ticks-handle-background-color, var(--spectrum-slider-ticks-handle-background-color));
@@ -597,7 +590,7 @@ governing permissions and limitations under the License.
   .spectrum-Slider-handle {
     box-shadow: 0 0 0 var(--spectrum-slider-handle-gap) var(--highcontrast-slider-ramp-handle-border-color-active, var(--mod-sectrum-slider-ramp-handle-border-color-active, var(--spectrum-slider-ramp-handle-border-color-active)));
 
-    /* currently in tokens v5.0.0 the background-color for the handle are not yet defined */
+    /* TODO: currently in tokens v5.0.0 the background-color for the handle are not yet defined */
     background: var(--mod-slider-ramp-handle-background-color, var(--spectrum-slider-ramp-handle-background-color));
 
     @media (forced-colors: active) {
