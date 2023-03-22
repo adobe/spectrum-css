@@ -26,6 +26,9 @@ export const Template = ({
       [rootClass]: true,
       ...customClasses.reduce((a, c) => ({ ...a, [c]: true }), {}),
     })} id=${ifDefined(id)}>
+      ${popoverPlacement.includes("top") ? 
+        html`<div class="dummy-spacing" style="position: relative; height: 125px;"></div> `
+      : ""}
       ${ActionButton({
         ...globals,
         size: "xs",
@@ -34,12 +37,15 @@ export const Template = ({
       })}
       ${Popover({
         content: [
-          title ? html`<h2 class="${rootClass}-Heading">${title}</h2>` : "",
-          body ? html`<p class="${rootClass}-Body">${body}</p>` : "",
+          title ? html`<h2 class="${rootClass}-heading">${title}</h2>` : "",
+          body ? html`<p class="${rootClass}-body">${body}</p>` : "",
           link ? Link({ text: link.text, url: link.url, customClasses: [`${rootClass}-link`]}) : ""
         ],
-        customClasses: [`spectrum-Popover--${popoverPlacement}`, `${rootClass}-popover`]
+        position: popoverPlacement,
+        customClasses: [`${rootClass}-popover`],
+        customStyles: {"top": "25px"}
       })}
+      
     </div>
   `;
 }

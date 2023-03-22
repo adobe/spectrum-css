@@ -1,13 +1,12 @@
 // Import the component markup template
 import { Template } from "./template";
-import { html } from "lit-html";
 
 import { default as ActionButtonStories } from "@spectrum-css/actionbutton/stories/actionbutton.stories.js";
 
 // More on default export: https://storybook.js.org/docs/web-components/writing-stories/introduction#default-export
 export default {
   title: "Contextual Help",
-  description: "The Contextual Help component is...",
+  description: "Contextual Help shows a user extra information in relation to another component or view.",
   component: "ContextualHelp",
   argTypes: {
     title: {
@@ -38,7 +37,23 @@ export default {
       options: ["Info", "Help"],
       control: "select"
     },
-    popoverPlacement: { table: { disable: true }},
+    popoverPlacement: {
+      name: "Popover Placement",
+      type: { name: "string", required: true },
+      defaultValue: "bottom-start",
+      table: {
+        type: { summary: "string" },
+        category: "Component",
+        defaultValue: { summary: "Info" }
+      },
+      options: ["top", "top-left", "top-right", "top-start", "top-end",
+        "bottom", "bottom-left", "bottom-right", "bottom-start", "bottom-end", 
+        "left", "left-top", "left-bottom",
+        "start", "start-top", "start-bottom",
+        "right", "right-top", "right-bottom", 
+        "end", "end-top", "end-bottom"],
+      control: "select"
+    },
     link: { table: { disable: true }}
   },
   // More on args: https://storybook.js.org/docs/web-components/writing-stories/args
@@ -73,4 +88,11 @@ WithLink.args = {
     text: "Learn about permissions",
     url: "#",
   }
+};
+
+export const TopPopover = Template.bind({});
+TopPopover.args = {
+  popoverPlacement: "top",
+  title: "Permission required",
+  body: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
 };
