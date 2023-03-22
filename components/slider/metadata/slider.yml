@@ -12,6 +12,9 @@ sections:
 
       ### Use class `is-dragged` instead of `u-isGrabbing`
       On `spectrum-Slider-handle` when dragging, use `is-dragged` instead of `u-isGrabbing`.
+
+      ### Three Handles is included in the `range` variant
+      When using a slider with three handles, classify it as a `range` variant to apply correct styling
 examples:
   - id: slider
     name: Standard
