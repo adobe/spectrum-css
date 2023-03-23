@@ -11,8 +11,7 @@ import { Template as Checkbox } from "@spectrum-css/checkbox/stories/template.js
 import { Template as Asset } from "@spectrum-css/asset/stories/template.js";
 import { Template as Icon } from "@spectrum-css/icon/stories/template.js";
 
-import "../index.css";
-import "../skin.css";
+import '../index.css';
 
 export const Template = ({
 	rootClass = "spectrum-Card",
