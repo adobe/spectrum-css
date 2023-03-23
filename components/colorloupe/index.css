@@ -85,7 +85,7 @@ governing permissions and limitations under the License.
   display: var(--spectrum-colorloupe-express-l-border);
 }
 
-/* hack: make sure we don't complain about this color being undefined */
+/* hack: so it doesn't get flagged as unused, --spectrum-picked-color is a user defined value thus is not defined by styles */
 .🤫 {
   --spectrum-picked-color: 0;
 }

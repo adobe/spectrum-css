@@ -1,4 +1,4 @@
-import { html } from 'lit-html';
+import { svg } from 'lit-html';
 import { classMap } from 'lit-html/directives/class-map.js';
 import { styleMap } from 'lit-html/directives/style-map.js';
 
@@ -19,7 +19,7 @@ export const Template = ({
 }) => {
   const { express } = globals;
 
-  return html`
+  return svg`
     <svg class=${classMap({
     [rootClass]: true,
     'is-open': isOpen,
