@@ -4,7 +4,6 @@ import { unsafeSVG } from 'lit-html/directives/unsafe-svg.js';
 import { when } from "lit-html/directives/when.js";
 
 import '../index.css';
-import '../skin.css';
 
 import illustration from '!raw-loader!./illustration.svg';
 
