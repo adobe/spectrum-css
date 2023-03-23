@@ -5,8 +5,8 @@ import { Template } from "./template";
 import { Template as Link } from "@spectrum-css/link/stories/template.js";
 
 export default {
-  title: "Illustrated message",
-  description: "The illustrated message component is used for status and errors.",
+  title: "Illustrated Message",
+  description: "The illustrated message component is used for status and errors. It is also used inside the Drop Zone component.",
   component: "IllustratedMessage",
   argTypes: {
     heading: {
