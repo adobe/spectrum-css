@@ -13,7 +13,7 @@ governing permissions and limitations under the License.
   --spectrum-colorhandle-focused-size: var(--spectrum-color-handle-size-key-focus);
   --spectrum-colorhandle-hitarea-size: var(--spectrum-color-control-track-width);
 
-  --spectrum-colorhandle-animation-duration: 130ms;
+  --spectrum-colorhandle-animation-duration: 130ms; /* TODO replace with animation tokens */
   --spectrum-colorhandle-animation-easing: ease-in-out;
 
   /* outer border as box shadow on the colorhandle */
