@@ -25,17 +25,6 @@ export default {
         disable: true,
       },
     },
-    variant: {
-      name: "Variants",
-      type: { name: "string" },
-      table: {
-        type: { summary: "string" },
-        category: "Component",
-        disable: true,
-      },
-      options: ["cta"],
-      control: "radio",
-    },
   },
   args: {
     rootClass: "spectrum-IllustratedMessage",
@@ -62,5 +51,4 @@ CTA.args = {
   ...Default.args,
   heading: "Drag and drop your file",
   description: html`${Link({ url: '#', text: 'Select a file' })} from your computer.`,
-  variant: "cta",
 };

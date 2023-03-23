@@ -9,7 +9,6 @@ import illustration from '!raw-loader!./illustration.svg';
 
 export const Template = ({
   rootClass = "spectrum-IllustratedMessage",
-  variant = "cta",
   heading,
   description,
   customClasses = [],
@@ -18,7 +17,6 @@ export const Template = ({
   return html`
     <div class=${classMap({
       [rootClass]: true,
-      [`${rootClass}--${variant}`]: typeof variant !== "undefined",
       ...customClasses.reduce((a, c) => ({ ...a, [c]: true }), {}),
   })}>
     ${unsafeSVG(illustration)}

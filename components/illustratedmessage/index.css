@@ -94,9 +94,3 @@ governing permissions and limitations under the License.
   margin-block-start: var(--mod-illustrated-message-heading-to-description, var(--spectrum-illustrated-message-heading-to-description));
   margin-block-end: 0;
 }
-
-.spectrum-IllustratedMessage--cta {
-  .spectrum-IllustratedMessage-description {
-    font-style: var(--mod-illustrated-message-description-font-style, var(--spectrum-illustrated-message-description-font-style));
-  }
-}
