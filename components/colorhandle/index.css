@@ -89,8 +89,8 @@ governing permissions and limitations under the License.
 
   &:after {
     content: '';
-    left: calc(50% - calc(var(--mod-colorhandle-hitarea-size, var(--spectrum-colorhandle-hitarea-size)) / 2));
-    top: calc(50% - calc(var(--mod-colorhandle-hitarea-size, var(--spectrum-colorhandle-hitarea-size)) / 2));
+    inset-inline: calc(50% - calc(var(--mod-colorhandle-hitarea-size, var(--spectrum-colorhandle-hitarea-size)) / 2));
+    inset-block: calc(50% - calc(var(--mod-colorhandle-hitarea-size, var(--spectrum-colorhandle-hitarea-size)) / 2));
     position: absolute;
     display: block;
     width: var(--mod-colorhandle-hitarea-size, var(--spectrum-colorhandle-hitarea-size));
