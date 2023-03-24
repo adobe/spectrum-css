@@ -121,6 +121,10 @@ governing permissions and limitations under the License.
   [dir="rtl"] & {
     inset-inline-start: 0;
   }
+  &.is-focused,
+  &.focus-ring {
+    transform: none;
+  }
 
 }
 

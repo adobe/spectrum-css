@@ -103,8 +103,8 @@ governing permissions and limitations under the License.
       width: var(--mod-colorhandle-focused-size, var(--spectrum-colorhandle-focused-size));
       height: var(--mod-colorhandle-focused-size, var(--spectrum-colorhandle-focused-size));
 
-      margin-left: calc(-1 * var(--mod-colorhandle-size, var(--spectrum-colorhandle-size)));
-      margin-top: calc(-1 * var(--mod-colorhandle-size, var(--spectrum-colorhandle-size)));
+      margin-inline: calc(-1 * var(--mod-colorhandle-size, var(--spectrum-colorhandle-size)));
+      margin-block: calc(-1 * var(--mod-colorhandle-size, var(--spectrum-colorhandle-size)));
       outline: none;
   }
 
