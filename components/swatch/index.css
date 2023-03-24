@@ -264,8 +264,6 @@ governing permissions and limitations under the License.
   --spectrum-swatch-checkerboard-dark-color: var(--spectrum-opacity-checkerboard-square-dark);
   --spectrum-swatch-checkerboard-light-color: var(--spectrum-opacity-checkerboard-square-light);
 
-  background-color: var(--spectrum-swatch-checkerboard-light-color);
-
   background:
     repeating-conic-gradient(var(--spectrum-swatch-checkerboard-light-color) 0% 25%, var(--spectrum-swatch-checkerboard-dark-color) 0% 50%)
     left top / calc(var(--spectrum-swatch-checkerboard-size) * 2 ) calc(var(--spectrum-swatch-checkerboard-size) * 2 );
