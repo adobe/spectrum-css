@@ -1,0 +1,22 @@
+{
+  "private": true,
+  "name": "postcss-licensing",
+  "version": "1.0.0",
+  "description": "Prepends licensing information to CSS files",
+  "license": "Apache-2.0",
+  "author": "Adobe",
+  "main": "index.js",
+  "scripts": {
+    "test": "ava"
+  },
+  "peerDependencies": {
+    "postcss": "^7.0.0 || ^8.0.0"
+  },
+  "devDependencies": {
+    "ava": "^3.15.0",
+    "postcss": "^8.2.1"
+  },
+  "publishConfig": {
+    "access": "public"
+  }
+}

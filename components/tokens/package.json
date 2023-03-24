@@ -16,13 +16,27 @@
   "main": "dist/index.css",
   "scripts": {
     "prebuild": "rimraf dist/*",
-    "build": "style-dictionary build",
-    "postbuild": "gulp rebuildCustoms"
+    "build": "npm-run-all -p build:tokens copy:* -s css:prepare format:results",
+    "build:tokens": "style-dictionary build --config style-dictionary.config.js",
+    "clean:empty": "find dist -type f -empty -delete",
+    "copy:express": "postcss --dir dist/css/express/ custom-express/*.css",
+    "copy:spectrum": "postcss --dir dist/css/spectrum/ custom-spectrum/*.css",
+    "css:prepare": "cat -s dist/css/{global,medium,large,light,dark,darkest}-vars.css dist/css/{spectrum,express}/{global,medium,large}-vars.css dist/css/{spectrum,express}/custom-vars.css dist/css/{spectrum,express}/custom-{medium,large,light,dark,darkest}-vars.css | postcss -o dist/index.css",
+    "format:results": "prettier --no-config --no-error-on-unmatched-pattern --ignore-unknown --loglevel silent --write dist/"
   },
   "devDependencies": {
-    "@adobe/spectrum-tokens": "12.1.1",
-    "gulp": "^4.0.0",
-    "gulp-concat": "^2.6.1",
+    "@adobe/spectrum-tokens": "12.1.0",
+    "npm-run-all": "^4.1.5",
+    "postcss": "^8.4.21",
+    "postcss-cli": "^10.1.0",
+    "postcss-combine-duplicated-selectors": "^10.0.3",
+    "postcss-discard-comments": "^5.1.2",
+    "postcss-discard-empty": "^5.1.1",
+    "postcss-licensing": "^1.0.0",
+    "postcss-merge-rules": "^5.1.4",
+    "postcss-rgb-mapping": "^1.0.0",
+    "postcss-sorting": "^8.0.2",
+    "prettier": "^2.8.7",
     "rimraf": "^4.1.1",
     "style-dictionary": "^3.7.0",
     "style-dictionary-sets": "^2.0.2"

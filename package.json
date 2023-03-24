@@ -20,10 +20,10 @@
     "url": "https://github.com/adobe/spectrum-css/issues"
   },
   "scripts": {
-    "build": "run-s build:site build:preview # preview cannot be built until the component assets are finished",
+    "build": "run-s build:site build:preview",
     "build:clean": "run-s clean build",
     "build:components": "lerna run --stream --scope \"@spectrum-css/*\" --ignore \"@spectrum-css/{*-builder*,preview,generator,site}\" build",
-    "build:preview": "yarn workspace @spectrum-css/preview build",
+    "build:preview": "yarn workspace @spectrum-css/preview build:storybook",
     "postbuild:preview": "rimraf dist/preview && mv tools/preview/storybook-static dist/preview",
     "build:site": "gulp -LL",
     "check:peerDeps": "node ./tasks/checkPeerDependencies.js ./components",
@@ -34,7 +34,7 @@
     "lint:components": "node ./tasks/packageLint.js",
     "new": "yarn workspace @spectrum-css/generator new",
     "precommit": "lint-staged",
-    "prepare": "husky install && gulp prepare",
+    "prepare": "husky install",
     "prerelease": "yarn version:build",
     "release": "lerna publish",
     "release:beta-from-package": "yarn release from-package --conventional-prerelease --preid beta --pre-dist-tag beta --no-private",

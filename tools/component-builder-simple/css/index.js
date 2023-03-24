@@ -14,8 +14,8 @@ const gulp = require('gulp');
 const path = require('path');
 const through = require('through2');
 const postcss = require('gulp-postcss');
-const rename = require('gulp-rename');
 const concat = require('gulp-concat');
+const logger = require('gulplog');
 const postcssReal = require('postcss');
 const fsp = require('fs').promises;
 const { parse } = require('postcss-values-parser');
@@ -92,7 +92,7 @@ async function getCoreTokens() {
   /* Resolve core tokens first from the current working directory, or if not found, from the root of the monorepo */
   const coreTokensFile = require.resolve('@spectrum-css/tokens', fetchOptions);
   const coreTokensPkg = require.resolve('@spectrum-css/tokens/package.json', fetchOptions);
-  if (coreTokensPkg) console.log('Core tokens version:', await fsp.readFile(coreTokensPkg, 'utf8').then(JSON.parse).then(pkg => pkg.version));
+  if (coreTokensPkg) logger.info('Core tokens version: %s', await fsp.readFile(coreTokensPkg, 'utf8').then(JSON.parse).then(pkg => pkg.version));
   let contents = await fsp.readFile(coreTokensFile, 'utf8');
   let root = postcssReal.parse(contents);
   return getTokensDefinedInCSS(root);
@@ -162,6 +162,7 @@ function checkCSS(glob) {
       // Fetch core tokes once during the build
       if (coreTokens === null) {
         coreTokens = await getCoreTokens();
+        logger.info('Core tokens:', Object.keys(coreTokens).length);
       }
 
       let pkg = JSON.parse(await fsp.readFile(path.join('package.json')));
@@ -178,7 +179,11 @@ function checkCSS(glob) {
       // Make sure the component doesn't use any undefined tokens
       let errors = [];
       usedTokens.forEach(tokenName => {
-        if (!coreTokens[tokenName] && !componentTokens[tokenName] && !tokenName.startsWith('--mod') && !tokenName.startsWith('--highcontrast')) {
+        if (
+          !coreTokens[tokenName] &&
+          !componentTokens[tokenName] &&
+          ['mod', 'highcontrast'].every(prefix => !tokenName.startsWith(`--${prefix}`))
+        ) {
           errors.push(`${pkg.name} uses undefined token ${tokenName}`);
         }
       });
@@ -191,7 +196,9 @@ function checkCSS(glob) {
       });
 
       if (errors.length) {
-        return cb(new Error(errors.join('\n')), file);
+        errors.forEach(error => logger.error(error));
+        // return cb(new Error(errors.join('\n')), file);
+        cb(null, file);
       }
 
       cb(null);

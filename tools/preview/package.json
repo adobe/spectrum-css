@@ -7,9 +7,9 @@
   "homepage": "https://opensource.adobe.com/spectrum-css/preview",
   "main": "main.js",
   "scripts": {
-    "prebuild": "yarn build:core",
-    "build": "build-storybook --config-dir .",
-    "build:core": "lerna run --stream --scope \"@spectrum-css/{vars,expressvars,tokens,icon,typography,site}\" build",
+    "build": "run-s build:core build:storybook",
+    "build:core": "lerna run --stream --scope \"@spectrum-css/{vars,expressvars,tokens,icon,typography,site}\" --include-dependencies build",
+    "build:storybook": "build-storybook --config-dir .",
     "new": "yarn workspace @spectrum-css/generator new story",
     "prestart": "yarn build:core",
     "start": "WATCH_MODE=true start-storybook --config-dir .",
