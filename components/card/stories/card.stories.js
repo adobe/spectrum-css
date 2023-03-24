@@ -202,11 +202,12 @@ Quiet.argTypes = {
 	isHorizontal: { table: { disable: true } },
 };
 Quiet.args = {
-	title: "Name",
-	image: "example-card-square.png",
-	subtitle: "jpg",
-	description: "10/15/18",
-	isQuiet: true,
+  title: "Name",
+  showAsset: "image",
+  image: "example-ava@2x.jpg",
+  subtitle: "jpg",
+  description: "10/15/18",
+  isQuiet: true,
 };
 
 export const QuietFile = Template.bind({});
