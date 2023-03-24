@@ -29,14 +29,14 @@ governing permissions and limitations under the License.
   --spectrum-card-border-color-selected: var(--spectrum-blue-700);
 
   /* Typography */
-  --spectrum-card-title-font-family: var(--spectrum-heading-sans-serif-font-family);
+  /* --spectrum-card-title-font-family: var(--spectrum-heading-sans-serif-font-family); */
   --spectrum-card-title-font-size: var(--spectrum-heading-size-xxs);
   --spectrum-card-title-font-weight: var(--spectrum-heading-sans-serif-font-weight);
   --spectrum-card-title-font-style: var(--spectrum-heading-sans-serif-font-style);
   --spectrum-card-title-line-height: var(--spectrum-heading-line-height);
   --spectrum-card-title-color: var(--spectrum-heading-color);
 
-  --spectrum-card-body-font-family: var(--spectrum-body-sans-serif-font-family);
+  /* --spectrum-card-body-font-family: var(--spectrum-body-sans-serif-font-family); */
   --spectrum-card-body-font-size: var(--spectrum-body-size-s);
   --spectrum-card-body-font-weight: var(--spectrum-body-sans-serif-font-weight);
   --spectrum-card-body-font-style: var(--spectrum-body-sans-serif-font-style);
@@ -48,7 +48,7 @@ governing permissions and limitations under the License.
   --spectrum-card-checkbox-size: var(--spectrum-card-selection-background-size);
   --spectrum-card-checkbox-border-radius: var(--spectrum-corner-radius-100);
   --spectrum-card-checkbox-background-color: var(--spectrum-card-selection-background-color);
-  --spectrum-card-checkbox-background-color-opacity: var(--spectrum-card-selection-background-color-opacity); /* Not using this yet */ 
+  /* --spectrum-card-checkbox-background-color-opacity: var(--spectrum-card-selection-background-color-opacity); Not using this yet  */
   --spectrum-card-checkbox-drop-shadow-color: var(--spectrum-drop-shadow-color);
   --spectrum-card-checkbox-drop-shadow-x: var(--spectrum-drop-shadow-x);
   --spectrum-card-checkbox-drop-shadow-y: var(--spectrum-drop-shadow-y);
@@ -141,7 +141,7 @@ governing permissions and limitations under the License.
   &.is-drop-target {
     border-color: var(--highcontrast-card-border-color-selected, var(--mod-card-border-color-selected, var(--spectrum-card-border-color-selected)));
     box-shadow: 0 0 0 1px var(--highcontrast-card-border-color-selected, var(--mod-card-border-color-selected, var(--spectrum-card-border-color-selected)));
-    background-color: var(--spectrum-alias-highlight-selected);/* TODO need token */
+    background-color: var(--mod-card-quiet-background-color, var(--spectrum-card-quiet-background-color));
   }
 
   &.is-focused,
@@ -190,16 +190,18 @@ governing permissions and limitations under the License.
   align-items: center;
   justify-content: center;
 
-  border-block-end: var(--spectrum-card-coverphoto-border-bottom-size) solid transparent;/* TODO need token */
+  border-block-end: var(--mod-card-border-width, var(--spectrum-card-border-width)) solid transparent;
+  /* border-block-end: var(--spectrum-card-coverphoto-border-bottom-size) solid transparent;TODO need token */
   border-top-left-radius: var(--mod-card-corner-radius, var(--spectrum-card-corner-radius));
-  border-top-right-radius: var(--mod-card-corner-radius, var(---spectrum-card-corner-radius));
+  border-top-right-radius: var(--mod-card-corner-radius, var(--spectrum-card-corner-radius));
   border-bottom-right-radius: 0;
   border-bottom-left-radius: 0;
 
   background-size: cover;
   background-position: center center;
-  background-color: var(--spectrum-card-m-coverphoto-background-color); /* TODO */
-  border-block-end-color: var(--spectrum-card-m-coverphoto-border-color); /* TODO need token */
+  background-color: var(--mod-card-quiet-background-color, var(--spectrum-card-quiet-background-color));
+  /* background-color: var(--spectrum-card-m-coverphoto-background-color); TODO need token */
+  border-block-end-color: var(--mod-card-border-color, var(--spectrum-card-border-color));
 }
 
 .spectrum-Card-body {
@@ -218,12 +220,12 @@ governing permissions and limitations under the License.
 }
 
 .spectrum-Card-header {
-  block-size: var(--spectrum-card-body-header-height);/* TODO need token */
+  block-size: 18px; /*var(--spectrum-card-body-header-height);/* TODO need token */
 }
 
 .spectrum-Card-content {
   display: flex;
-  min-block-size: var(--spectrum-card-body-content-min-height);/* TODO need token */
+  min-block-size: 14px; /* var(--spectrum-card-body-content-min-height);/* TODO need token */
   margin-block-start: var(--mod-card-content-margin-top, var(--spectrum-card-content-margin-top));
 }
 
@@ -237,17 +239,17 @@ governing permissions and limitations under the License.
   font-weight: var(--mod-card-title-font-weight, var(--spectrum-card-title-font-weight));
   font-style: var(--mod-card-title-font-style, var(--spectrum-card-title-font-style));
   line-height: var(--mod-card-title-line-height, var(--spectrum-card-title-line-height));
-  color: var(--highcontrast-card-title-font-color, var(--mod-card-title-font-color, var(--spectrum-card-title-font-color)));
+  color: var(--highcontrast-card-title-font-color, var(--mod-card-title-font-color, var(--spectrum-card-title-color)));
 }
 
 .spectrum-Card-subtitle {
-  padding-inline-end: var(--spectrum-card-subtitle-padding-right);/* TODO need token */
-  color: var(--highcontrast-card-title-font-color, var(--mod-card-title-font-color, var(--spectrum-card-title-font-color))); /* TODO need token for subtitle color */
+  padding-inline-end: 8px; /*var(--spectrum-card-subtitle-padding-right);/* TODO need token */
+  color: var(--highcontrast-card-title-color, var(--mod-card-title-color, var(--spectrum-card-title-color))); /* TODO need token for subtitle color */
 }
 
 .spectrum-Card-subtitle + .spectrum-Card-description:before {
   content: "•";
-  padding-inline-end: var(--spectrum-card-subtitle-padding-right);/* TODO need token */
+  padding-inline-end: 8px; /* var(--spectrum-card-subtitle-padding-right);/* TODO need token */
 }
 
 .spectrum-Card-description {
@@ -255,6 +257,7 @@ governing permissions and limitations under the License.
   font-size: var(--mod-card-body-font-size, var(--spectrum-card-body-font-size));
   font-weight: var(--mod-card-body-font-weight, var(--spectrum-card-body-font-weight));
   font-style: var(--mod-card-body-font-style, var(--spectrum-card-body-font-style));
+  line-height: var(--mod-card-body-line-height, var(--spectrum-card-body-line-height));
   color: var(--highcontrast-card-body-font-color, var(--mod-card-body-font-color, var(--spectrum-card-body-font-color)));
 }
 
@@ -302,11 +305,11 @@ governing permissions and limitations under the License.
     background-color: var(--mod-card-quiet-background-color, var(--spectrum-card-quiet-background-color));
     inline-size: 100%;
     flex: 1;
-    padding: var(--spectrum-card-quiet-preview-padding);/* TODO need token */
+    padding: 20px; /* var(--spectrum-card-quiet-preview-padding);/* TODO need token */
     margin: 0 auto;
     box-sizing: border-box;
     position: relative;
-    transition: background-color var(--spectrum-global-animation-duration-100);/* TODO need token */
+    /*transition: background-color var(--spectrum-global-animation-duration-100);/* TODO need token */
     overflow: visible;
     
 
@@ -321,14 +324,14 @@ governing permissions and limitations under the License.
       block-size: 100%;
       box-sizing: border-box;
       border-radius: inherit;
-      border: var(--spectrum-card-quiet-border-size) solid transparent;/* TODO */
+      border: var(--mod-card-border-width, var(--spectrum-card-border-width)) solid transparent;
     }
   }
 
   &:hover {
     border-color: transparent;
     .spectrum-Card-preview {
-      background-color: var(--spectrum-card-m-quiet-preview-background-color-hover); /* TODO need token */
+      background-color: var(--mod-card-quiet-background-color, var(--spectrum-card-quiet-background-color)); /* var(--spectrum-card-m-quiet-preview-background-color-hover); TODO need token */
     }
   }
 
@@ -351,18 +354,19 @@ governing permissions and limitations under the License.
 
     .spectrum-Card-preview {
       transition: none;
-      background-color: var(--spectrum-alias-highlight-selected); /* TODO */
+      background-color: var(--mod-card-quiet-background-color, var(--spectrum-card-quiet-background-color));
 
       &:before {
         border-color: var(--mod-card-focus-indicator-color, var(--spectrum-card-focus-indicator-color));
-        box-shadow: 0 0 0 1px var(--mod-card-focus-indicator-color, var(---spectrum-card-focus-indicator-color));
+        box-shadow: 0 0 0 1px var(--mod-card-focus-indicator-color, var(--spectrum-card-focus-indicator-color));
       }
     }
   }
 
   .spectrum-Asset-folderBackground,
   .spectrum-Asset-fileBackground {
-    fill: var(--spectrum-alias-highlight-selected); /* TODO */
+    fill: var(--mod-card-quiet-background-color, var(--spectrum-card-quiet-background-color));
+
   }
   .spectrum-Asset-folderOutline,
   .spectrum-Asset-fileOutline {
@@ -370,7 +374,7 @@ governing permissions and limitations under the License.
   }
 
   .spectrum-Card-header {
-    block-size: var(--spectrum-card-quiet-body-header-height);/* TODO need token  */
+    block-size: 18px; /* var(--spectrum-card-quiet-body-header-height); TODO need token  */
     margin-block-start: var(--mod-card-quiet-header-margin-top, var(--spectrum-card-quiet-header-margin-top)); 
   }
 
@@ -402,7 +406,7 @@ governing permissions and limitations under the License.
 
     border-inline-end: var(--mod-card-border-width, var(--spectrum-card-border-width)) solid transparent;
 
-    padding: var(--spectrum-global-dimension-size-175);/* TODO */
+    padding: 14px; /* var(--spectrum-global-dimension-size-175); TODO need token */
     background-color: var(--mod-card-quiet-background-color, var(--spectrum-card-quiet-background-color));
 
     border-color: var(--mod-card-border-color, var(--spectrum-card-border-color));
@@ -425,7 +429,7 @@ governing permissions and limitations under the License.
     flex-direction: column;
 
     padding-block: 0;
-    padding-inline: var(--spectrum-global-dimension-size-200);/* TODO need token */
+    padding-inline: 16px; /*var(--spectrum-global-dimension-size-200); TODO need token */
   }
 }
 

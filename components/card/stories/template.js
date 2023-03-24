@@ -94,6 +94,7 @@ export const Template = ({
                         ...globals,
                         iconName: "More",
                         variant: "overBackground",
+                        size,
                         isQuiet: true
                       })}
                     </div>`
