@@ -24,7 +24,7 @@ examples:
           </svg>
         </div>
 
-        <input type="range" class="spectrum-ColorSlider-slider" min="0" max="100" step="1">
+        <input type="range" class="spectrum-ColorSlider-slider" min="0" max="100" step="1" tabindex="-1">
       </div>
 
   - id: color-slider
@@ -42,7 +42,7 @@ examples:
           </svg>
         </div>
 
-        <input type="range" class="spectrum-ColorSlider-slider" min="0" max="100" step="1">
+        <input type="range" class="spectrum-ColorSlider-slider" min="0" max="100" step="1" tabindex="-1">
       </div>
 
   - id: color-slider
@@ -60,7 +60,7 @@ examples:
           </svg>
         </div>
 
-        <input type="range" class="spectrum-ColorSlider-slider" min="0" max="100" step="1">
+        <input type="range" class="spectrum-ColorSlider-slider" min="0" max="100" step="1" tabindex="-1">
       </div>
 
   - id: color-slider
@@ -78,7 +78,7 @@ examples:
           </svg>
         </div>
 
-        <input type="range" class="spectrum-ColorSlider-slider" min="0" max="100" step="1">
+        <input type="range" class="spectrum-ColorSlider-slider" min="0" max="100" step="1" tabindex="-1">
       </div>
 
   - id: color-slider
@@ -99,7 +99,7 @@ examples:
           </svg>
         </div>
 
-        <input type="range" class="spectrum-ColorSlider-slider" min="0" max="100" step="1">
+        <input type="range" class="spectrum-ColorSlider-slider" min="0" max="100" step="1" tabindex="-1">
       </div>
       <script>
         var canvas = document.querySelector('canvas.spectrum-ColorSlider-gradient');
@@ -135,7 +135,7 @@ examples:
           </svg>
         </div>
 
-        <input type="range" class="spectrum-ColorSlider-slider" min="0" max="100" step="1">
+        <input type="range" class="spectrum-ColorSlider-slider" min="0" max="100" step="1" tabindex="-1">
       </div>
 
   - id: color-slider
@@ -326,7 +326,7 @@ examples:
           </svg>
         </div>
 
-        <input type="range" class="spectrum-ColorSlider-slider" min="0" max="100" step="1">
+        <input type="range" class="spectrum-ColorSlider-slider" min="0" max="100" step="1" tabindex="-1">
       </div>
 
 
@@ -518,5 +518,5 @@ examples:
           </svg>
         </div>
 
-        <input type="range" class="spectrum-ColorSlider-slider" min="0" max="100" step="1">
+        <input type="range" class="spectrum-ColorSlider-slider" min="0" max="100" step="1" tabindex="-1">
       </div>

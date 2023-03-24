@@ -36,7 +36,7 @@ examples:
             </g>
           </svg>
         </div>
-        <input type="range" class="spectrum-ColorWheel-slider" aria-label="hue" min="0" max="360" step="`">
+        <input type="range" class="spectrum-ColorWheel-slider" aria-label="hue" min="0" max="360" step="`" tabindex="-1">
       </div>
   - id: color-wheel
     name: Disabled
@@ -57,7 +57,7 @@ examples:
             </g>
           </svg>
         </div>
-        <input type="range" class="spectrum-ColorWheel-slider" aria-label="hue" min="0" max="360" step="`">
+        <input type="range" class="spectrum-ColorWheel-slider" aria-label="hue" min="0" max="360" step="`" tabindex="-1">
       </div>
   - id: color-wheel
     name: Standard with ColorArea
@@ -76,8 +76,8 @@ examples:
                   </g>
                 </svg>
               </div>
-            <input type="range" class="spectrum-ColorArea-slider" name="x" aria-label="saturation and value" min="0" max="1" step="0.01">
-            <input type="range" class="spectrum-ColorArea-slider" name="y" aria-label="saturation and value" min="0" max="1" step="0.01">
+            <input type="range" class="spectrum-ColorArea-slider" name="x" aria-label="saturation and value" min="0" max="1" step="0.01" tabindex="-1">
+            <input type="range" class="spectrum-ColorArea-slider" name="y" aria-label="saturation and value" min="0" max="1" step="0.01" tabindex="-1">
           </div>
           </div>
         </div>
@@ -93,5 +93,5 @@ examples:
             </g>
           </svg>
         </div>
-        <input type="range" class="spectrum-ColorWheel-slider" aria-label="hue" min="0" max="360" step="`">
+        <input type="range" class="spectrum-ColorWheel-slider" aria-label="hue" min="0" max="360" step="`" tabindex="-1">
       </div>
