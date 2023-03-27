@@ -64,6 +64,9 @@ governing permissions and limitations under the License.
   --spectrum-card-quiet-background-color: var(--spectrum-background-base-color);
   --spectrum-card-quiet-header-margin-top: var(--spectrum-spacing-100);
   --spectrum-card-quiet-minimum-width: var(--spectrum-card-minimum-width);
+  --spectrum-card-folder-background-color: var(--spectrum-gray-300);
+  --spectrum-card-file-background-color: var(--spectrum-gray-50);
+  --spectrum-card-file-outline: var(--spectrum-gray-500);
 
 
 }
@@ -217,6 +220,8 @@ governing permissions and limitations under the License.
   border-top-right-radius: var(--mod-card-corner-radius, var(--spectrum-card-corner-radius));
   border-bottom-right-radius: 0;
   border-bottom-left-radius: 0;
+  display: flex;
+  align-items: center;
 }
 
 .spectrum-Card-header {
@@ -225,6 +230,7 @@ governing permissions and limitations under the License.
 
 .spectrum-Card-content {
   display: flex;
+  align-items: center;
   min-block-size: 14px; /* var(--spectrum-card-body-content-min-height);/* TODO need token */
   margin-block-start: var(--mod-card-content-margin-top, var(--spectrum-card-content-margin-top));
 }
@@ -363,14 +369,16 @@ governing permissions and limitations under the License.
     }
   }
 
-  .spectrum-Asset-folderBackground,
   .spectrum-Asset-fileBackground {
-    fill: var(--mod-card-quiet-background-color, var(--spectrum-card-quiet-background-color));
-
+    fill: var(--mod-card-file-background-color, var(--spectrum-card-file-background-color));
   }
+  .spectrum-Asset-folderBackground {
+    fill: var(--mod-card-folder-background-color, var(--spectrum-card-folder-background-color));
+  }
+
   .spectrum-Asset-folderOutline,
   .spectrum-Asset-fileOutline {
-    fill: var(--mod-card-focus-indicator-color, var(--spectrum-card-focus-indicator-color));
+    fill: var(--mod-card-file-outline, var(--spectrum-card-file-outline));
   }
 
   .spectrum-Card-header {
