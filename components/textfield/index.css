@@ -83,7 +83,7 @@ governing permissions and limitations under the License.
   --spectrum-textfield-text-color-default: var(--spectrum-neutral-content-color-default);
   --spectrum-textfield-text-color-hover: var(--spectrum-neutral-content-color-hover);
   --spectrum-textfield-text-color-focus: var(--spectrum-neutral-content-color-focus);
-  --spectrum-textfield-text-color-focus-hover: var(-spectrum-neutral-content-color-focus-hover);
+  --spectrum-textfield-text-color-focus-hover: var(--spectrum-neutral-content-color-focus-hover);
   --spectrum-textfield-text-color-keyboard-focus: var(--spectrum-neutral-content-color-key-focus);
 
   /* Read Only Text Color */
@@ -421,8 +421,8 @@ governing permissions and limitations under the License.
     color: var(--highcontrast-textfield-icon-color-invalid, var(--mod-textfield-icon-color-invalid, var(--spectrum-textfield-icon-color-invalid)));
   }
 
-  .spectrum-Textfield.is-disabled &,
-  .spectrum-Textfield.is-readOnly & {
+  .spectrum-Textfield.is-disabled &:not(.spectrum-Search-icon),
+  .spectrum-Textfield.is-readOnly &:not(.spectrum-Search-icon) {
     /* Disabled validation icons are transparent */
     color: transparent;
   }
