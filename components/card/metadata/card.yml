@@ -271,7 +271,7 @@ examples:
     name: Small (quiet)
     description: "A small, quiet card."
     markup: |
-      <div style="width: 112px; height: 136px;">
+      <div style="width: 112px;">
         <div class="spectrum-Card spectrum-Card--sizeS spectrum-Card--quiet" tabindex="0" role="figure">
           <div class="spectrum-Card-preview">
             <div class="spectrum-Asset">
@@ -314,7 +314,7 @@ examples:
     name: "Small (quiet, focused)"
     markup: |
       <div role="grid">
-        <div style="width: 112px; height: 136px; outline: 0;" role="row">
+        <div style="width: 112px; outline: 0;" role="row">
           <div class="spectrum-Card spectrum-Card--sizeS spectrum-Card--quiet is-focused" role="rowheader" tabindex="0">
             <div class="spectrum-Card-preview">
               <div class="spectrum-Asset">
