@@ -3,6 +3,16 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+<a name="3.0.19"></a>
+## 3.0.19
+🗓 2023-03-27 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/swatch@3.0.18...@spectrum-css/swatch@3.0.19)
+
+**Note:** Version bump only for package @spectrum-css/swatch
+
+
+
+
+
 <a name="3.0.18"></a>
 ## 3.0.18
 🗓 2023-03-21 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/swatch@3.0.17...@spectrum-css/swatch@3.0.18)
