@@ -337,13 +337,14 @@ governing permissions and limitations under the License.
       margin-inline-start: 0;
       margin-block-start: 0;
       border-radius: 0;
-      border-color: var(--highcontrast-textfield-focus-indicator-color, var(--mod-textfield-focus-indicator-color, var(--spectrum-textfield-focus-indicator-color)));
     }
-  }
 
-  &--quiet.is-keyboardFocused {
-    &::after {
-      border-width: 0 0 var(--mod-textfield-focus-indicator-width, var(--spectrum-textfield-focus-indicator-width)) 0;
+    &.is-keyboardFocused,
+    &:focus-within {
+      &::after {
+        border-width: 0 0 var(--mod-textfield-focus-indicator-width, var(--spectrum-textfield-focus-indicator-width)) 0;
+        border-color: var(--highcontrast-textfield-focus-indicator-color, var(--mod-textfield-focus-indicator-color, var(--spectrum-textfield-focus-indicator-color)));
+      }
     }
   }
 
@@ -420,8 +421,8 @@ governing permissions and limitations under the License.
     color: var(--highcontrast-textfield-icon-color-invalid, var(--mod-textfield-icon-color-invalid, var(--spectrum-textfield-icon-color-invalid)));
   }
 
-  .spectrum-Textfield.is-disabled &,
-  .spectrum-Textfield.is-readOnly & {
+  .spectrum-Textfield.is-disabled &:not(.spectrum-Search-icon),
+  .spectrum-Textfield.is-readOnly &:not(.spectrum-Search-icon) {
     /* Disabled validation icons are transparent */
     color: transparent;
   }
