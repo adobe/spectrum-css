@@ -97,6 +97,7 @@ governing permissions and limitations under the License.
     height: var(--mod-colorhandle-hitarea-size, var(--spectrum-colorhandle-hitarea-size));
   }
 
+  &:focus,
   &.is-focused,
   &.focus-ring {
       /* Bigger handle when focused */
