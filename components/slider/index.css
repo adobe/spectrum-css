@@ -631,10 +631,6 @@ governing permissions and limitations under the License.
   }
 }
 
-.spectrum-Slider .spectrum-Stepper {
-  margin-block-start: calc(-1 * var(--mod-slider-control-height, var(--spectrum-slider-control-height)) / 2)
-}
-
 .spectrum-Slider {
   &.is-disabled {
     .spectrum-Slider-labelContainer {
