@@ -4,6 +4,7 @@ import { classMap } from "lit-html/directives/class-map.js";
 import { styleMap } from "lit-html/directives/style-map.js";
 
 import { Template as Icon } from '@spectrum-css/icon/stories/template.js';
+import { Template as ProgressCircle } from '@spectrum-css/progresscircle/stories/template.js';
 
 import '../index.css';
 
@@ -13,6 +14,7 @@ export const Template = ({
   customClasses = [],
   customInputClasses = [],
   customIconClasses = [],
+  customProgressCircleClasses = [],
   isInvalid = false,
   isValid = false,
   multiline = false,
@@ -23,6 +25,7 @@ export const Template = ({
   isRequired = false,
   isReadOnly = false,
   isKeyboardFocused = false,
+  isLoading = false,
   pattern,
   placeholder,
   name,
@@ -67,40 +70,44 @@ export const Template = ({
           ...customIconClasses,
         ],
       }) : ""}
-      ${multiline ?
-        html`
-        <textarea
-        placeholder=${ifDefined(placeholder)}
-        name=${ifDefined(name)}
-        .value=${ifDefined(value)}
-        autocomplete=${autocomplete ? undefined : "off"}
-        ?required=${isRequired}
-        ?disabled=${isDisabled}
-        ?readonly=${ifDefined(isReadOnly)}
-        pattern=${ifDefined(pattern)}
-        class=${classMap({
-          [`${rootClass}-input`]: true,
-          ...customInputClasses.reduce((a, c) => ({ ...a, [c]: true }), {}),
-        })}
-        />`
-      :
-      html`
-      <input
-        type=${ifDefined(type)}
-        placeholder=${ifDefined(placeholder)}
-        name=${ifDefined(name)}
-        value=${ifDefined(value)}
-        autocomplete=${autocomplete ? undefined : "off"}
-        ?required=${isRequired}
-        ?disabled=${isDisabled}
-        readonly=${ifDefined(isReadOnly ? "readonly" : undefined)}
-        pattern=${ifDefined(pattern)}
-        class=${classMap({
-          [`${rootClass}-input`]: true,
-          ...customInputClasses.reduce((a, c) => ({ ...a, [c]: true }), {}),
-        })}
-      />`
+      ${multiline 
+        ? html`
+          <textarea
+            placeholder=${ifDefined(placeholder)}
+            name=${ifDefined(name)}
+            .value=${ifDefined(value)}
+            autocomplete=${autocomplete ? undefined : "off"}
+            ?required=${isRequired}
+            ?disabled=${isDisabled}
+            ?readonly=${ifDefined(isReadOnly)}
+            pattern=${ifDefined(pattern)}
+            class=${classMap({
+              [`${rootClass}-input`]: true,
+              ...customInputClasses.reduce((a, c) => ({ ...a, [c]: true }), {}),
+            })}
+          />`
+        : html`
+          <input
+            type=${ifDefined(type)}
+            placeholder=${ifDefined(placeholder)}
+            name=${ifDefined(name)}
+            value=${ifDefined(value)}
+            autocomplete=${autocomplete ? undefined : "off"}
+            ?required=${isRequired}
+            ?disabled=${isDisabled}
+            readonly=${ifDefined(isReadOnly ? "readonly" : undefined)}
+            pattern=${ifDefined(pattern)}
+            class=${classMap({
+              [`${rootClass}-input`]: true,
+              ...customInputClasses.reduce((a, c) => ({ ...a, [c]: true }), {}),
+            })}
+          />`
       }
+      ${isLoading ? ProgressCircle({ 
+        isIndeterminate: true,
+        size: 's',
+        customClasses: customProgressCircleClasses,
+      }) : ""}
     </div>
   `;
 };
