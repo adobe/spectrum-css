@@ -47,7 +47,7 @@ governing permissions and limitations under the License.
   --spectrum-card-actions-spacing: var(--spectrum-spacing-300);
   --spectrum-card-actions-size: var(--spectrum-card-selection-background-size);
   --spectrum-card-actions-border-radius: var(--spectrum-corner-radius-100);
-  --spectrum-card-actions-background-color: var(--spectrum-card-selection-background-color);
+  /* --spectrum-card-actions-background-color: var(--spectrum-card-selection-background-color); */
   /* --spectrum-card-actions-background-color-opacity: var(--spectrum-card-selection-background-color-opacity); Not using this yet  */
   --spectrum-card-actions-drop-shadow-color: var(--spectrum-drop-shadow-color);
   --spectrum-card-actions-drop-shadow-x: var(--spectrum-drop-shadow-x);
@@ -259,9 +259,11 @@ governing permissions and limitations under the License.
   color: var(--highcontrast-card-title-font-color, var(--mod-card-title-font-color, var(--spectrum-card-title-color)));
 }
 
+
 .spectrum-Card-subtitle {
   padding-inline-end: 8px; /*var(--spectrum-card-subtitle-padding-right);/* TODO need token */
   color: var(--highcontrast-card-title-color, var(--mod-card-title-color, var(--spectrum-card-title-color))); /* TODO need token for subtitle color */
+  text-transform: none;
 }
 
 .spectrum-Card-subtitle + .spectrum-Card-description:before {
@@ -301,12 +303,6 @@ governing permissions and limitations under the License.
   justify-content: flex-end;
 }
 
-.spectrum-Card--quiet {
-  .spectrum-Card-preview {
-    min-block-size: var(--mod-card-preview-minimum-height, var(--spectrum-card-preview-minimum-height));/* TODO need quiet specific token */
-  }
-}
-
 .spectrum-Card--quiet,
 .spectrum-Card--gallery {
   block-size: 100%;
@@ -320,6 +316,7 @@ governing permissions and limitations under the License.
   .spectrum-Card-preview {
     border-radius: var(--mod-card-corner-radius, var(--spectrum-card-corner-radius));
     background-color: var(--mod-card-quiet-background-color, var(--spectrum-card-quiet-background-color));
+    min-block-size: var(--mod-card-preview-minimum-height, var(--spectrum-card-preview-minimum-height));/* TODO need quiet specific token */
     inline-size: 100%;
     flex: 1;
     padding: 20px; /* var(--spectrum-card-quiet-preview-padding);/* TODO need token */
