@@ -104,6 +104,15 @@ export default {
       },
       control: "boolean",
     },
+    isKeyboardFocused: {
+      name: "Keyboard Focused",
+      type: { name: "boolean" },
+      table: {
+        type: { summary: "boolean" },
+        category: "State",
+      },
+      control: "boolean",
+    },
     position: {
       name: "Position",
       type: { name: "string" },
@@ -126,6 +135,7 @@ export default {
     isQuiet: false,
     isDisabled: false,
     isFocused: false,
+    isKeyboardFocused: false,
     iconType: "ui",
     iconName: "ChevronDown200",
   },
