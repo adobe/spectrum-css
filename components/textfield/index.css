@@ -421,8 +421,8 @@ governing permissions and limitations under the License.
     color: var(--highcontrast-textfield-icon-color-invalid, var(--mod-textfield-icon-color-invalid, var(--spectrum-textfield-icon-color-invalid)));
   }
 
-  .spectrum-Textfield.is-disabled &:not(.spectrum-Search-icon),
-  .spectrum-Textfield.is-readOnly &:not(.spectrum-Search-icon) {
+  .spectrum-Textfield.is-disabled &,
+  .spectrum-Textfield.is-readOnly & {
     /* Disabled validation icons are transparent */
     color: transparent;
   }
