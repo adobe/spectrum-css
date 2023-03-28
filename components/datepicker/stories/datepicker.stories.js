@@ -7,9 +7,9 @@ const ignoreProps = ['rootClass', 'isDisabled'];
 
 // @todo add support for date *range*
 export default {
-  title: "Date picker",
-  description: "A date picker uses the input group component to display a field with a button next to it. The button opens a calendar that allows users to select a date.",
-  component: "InputGroup",
+  title: "Date Picker",
+  description: "A date picker displays a Text Field input with a button next to it, and can display two Text Fields next to each other for choosing a date range.",
+  component: "DatePicker",
   argTypes: {
     ...Object.entries(CalendarStories.argTypes).reduce((acc, [key,]) => {
       if (ignoreProps.includes(key)) return acc;
@@ -80,12 +80,10 @@ export default {
       },
       control: "boolean",
     },
-    variant: { table: { disable: true } },
     content: { table: { disable: true } },
   },
   args: {
-    rootClass: "spectrum-InputGroup",
-    variant: "datepicker",
+    rootClass: "spectrum-DatePicker",
     isOpen: true,
     isQuiet: false,
     isInvalid: false,
@@ -101,7 +99,7 @@ export default {
       ]
     },
     status: {
-      type: process.env.MIGRATED_PACKAGES.includes('inputgroup') ? 'migrated' : undefined
+      type: process.env.MIGRATED_PACKAGES.includes('datepicker') ? 'migrated' : undefined
     }
   }
 };
