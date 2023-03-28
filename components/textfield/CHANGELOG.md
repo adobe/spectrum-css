@@ -3,6 +3,18 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+<a name="4.0.3"></a>
+## 4.0.3
+🗓 2023-03-28 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/textfield@4.0.2...@spectrum-css/textfield@4.0.3)
+
+### 🐛 Bug fixes
+
+* **textfield:** add search icon exception ([#1690](https://github.com/adobe/spectrum-css/issues/1690)) ([dcdec2d](https://github.com/adobe/spectrum-css/commit/dcdec2d))
+
+
+
+
+
 <a name="4.0.2"></a>
 ## 4.0.2
 🗓 2023-03-27 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/textfield@4.0.1...@spectrum-css/textfield@4.0.2)
