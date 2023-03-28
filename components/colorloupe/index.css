@@ -64,25 +64,25 @@ governing permissions and limitations under the License.
   stroke-width: calc(var(--mod-colorloupe-outer-border-width, var(--spectrum-colorloupe-outer-border-width)) + var(--mod-colorloupe-inner-border-width ,var(--spectrum-colorloupe-inner-border-width)));
 }
 
-.spectrum-ColorLoupe-spectrum {
-  display: var(--spectrum-colorloupe-spectrum-visibility);
+.spectrum-ColorLoupe-primary {
+  display: var(--spectrum-colorloupe-primary-visibility);
 }
 
-.spectrum-ColorLoupe-express {
-  display: var(--spectrum-colorloupe-express-visibility);
+.spectrum-ColorLoupe-secondary {
+  display: var(--spectrum-colorloupe-secondary-visibility);
 }
 
 /* these methods handle switching clip path and mask used for express mobile(l) and express desktop(m) */
-.spectrum-colorloupe-express-loupe {
-  clip-path: var(--spectrum-colorloupe-express-loupe);
+.spectrum-colorloupe-secondary-clip {
+  clip-path: var(--spectrum-colorloupe-secondary-clip);
 }
 
-.spectrum-colorloupe-express-m-borders {
-  display: var(--spectrum-colorloupe-express-m-border);
+.spectrum-colorloupe-secondary-m-borders {
+  display: var(--spectrum-colorloupe-secondary-m-border);
 }
 
-.spectrum-colorloupe-express-l-borders {
-  display: var(--spectrum-colorloupe-express-l-border);
+.spectrum-colorloupe-secondary-l-borders {
+  display: var(--spectrum-colorloupe-secondary-l-border);
 }
 
 /* hack: so it doesn't get flagged as unused, --spectrum-picked-color is a user defined value thus is not defined by styles */

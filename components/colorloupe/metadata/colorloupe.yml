@@ -158,16 +158,16 @@ examples:
           <clipPath id="spectrum-loupe-clip">
             <use xlink:href="#spectrum-loupe-path" />
           </clipPath>
-          <clipPath id="express-loupe-clip-m">
-            <use xlink:href="#express-inner-loupe-m" />
+          <clipPath id="secondary-loupe-clip-m">
+            <use xlink:href="#express-loupe-path-m" />
           </clipPath>
-          <clipPath id="express-loupe-clip-l">
-            <use xlink:href="#express-inner-loupe-l" />
+          <clipPath id="secondary-loupe-clip-l">
+            <use xlink:href="#express-loupe-path-l" />
           </clipPath>
 
         </defs>
 
-        <g class="spectrum-ColorLoupe-spectrum">
+        <g class="spectrum-ColorLoupe-primary">
           <g clip-path="url(#spectrum-loupe-clip)">
             <g transform="translate(-353.999 -289)">
               <use xlink:href="#loupe-checkerboard" />
@@ -179,19 +179,19 @@ examples:
           </g>
         </g>
 
-        <g class="spectrum-ColorLoupe-express" >
-          <g class="spectrum-colorloupe-express-loupe">
+        <g class="spectrum-ColorLoupe-secondary" >
+          <g class="spectrum-colorloupe-secondary-clip">
             <g transform="translate(-353.999 -289)">
               <use xlink:href="#loupe-checkerboard" />
             </g>
           </g>
 
-          <g class="spectrum-colorloupe-express-m-borders">
+          <g class="spectrum-colorloupe-secondary-m-borders">
             <use xlink:href="#express-loupe-path-m" class="spectrum-ColorLoupe-outer-border" />
             <use xlink:href="#express-loupe-path-m"   mask="url(#express-loupe-mask-m)" class="spectrum-ColorLoupe-inner-border" />
           </g>
 
-          <g class="spectrum-colorloupe-express-l-borders">
+          <g class="spectrum-colorloupe-secondary-l-borders">
             <use xlink:href="#express-loupe-path-l" class="spectrum-ColorLoupe-outer-border" />
             <use xlink:href="#express-loupe-path-l"   mask="url(#express-loupe-mask-l)" class="spectrum-ColorLoupe-inner-border" />
           </g>

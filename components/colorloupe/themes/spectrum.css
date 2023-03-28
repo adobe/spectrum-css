@@ -11,7 +11,7 @@ governing permissions and limitations under the License.
 
 @container (--system: spectrum) {
   .spectrum-ColorLoupe {
-    --spectrum-colorloupe-express-visibility: none;
-    --spectrum-colorloupe-spectrum-visibility: block;
+    --spectrum-colorloupe-secondary-visibility: none;
+    --spectrum-colorloupe-primary-visibility: block;
   }
 }
