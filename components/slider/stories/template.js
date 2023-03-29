@@ -22,8 +22,17 @@ export const Template = ({
   customClasses = [],
   style = {},
   id,
-  // ...globals
+  ...globals
 }) => {
+  const { express } = globals;
+
+  try {
+    if (!express) import(/* webpackPrefetch: true */ "../themes/spectrum.css");
+    else import(/* webpackPrefetch: true */ "../themes/express.css");
+  } catch (e) {
+    console.warn(e);
+  }
+  
   const [_, updateArgs] = useArgs();
   const [{ textDirection }] = useGlobals();
 
@@ -52,7 +61,6 @@ export const Template = ({
         style=${ifDefined(styleMap({
           [rtl ? 'right' : 'left']: position ? `${position}%` : undefined,
           width: width ? `${width}%` : undefined,
-          ...style
         }))}
       ></div>`;
   };
@@ -104,6 +112,7 @@ export const Template = ({
         [`${rootClass}--ramp`]: variant === 'ramp',
         [`${rootClass}--range`]: values.length > 1,
         [`${rootClass}--filled`]: variant === "filled",
+        [`${rootClass}--tick`]: showTicks,
         'is-disabled': isDisabled,
         ...customClasses.reduce((a, c) => ({ ...a, [c]: true }), {}),
       })}
@@ -111,6 +120,7 @@ export const Template = ({
       style=${styleMap({
         maxWidth: `var(--spectrum-global-dimension-size-3000)`,
         ['--spectrum-slider-track-color']: fillColor,
+        ...style
       })}
       role=${ifDefined(values.length > 1 ? "group" : undefined)}
       aria-labelledby=${ifDefined(label && id ? `${id}-label` : undefined)}>
