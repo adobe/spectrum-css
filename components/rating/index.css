@@ -6,7 +6,7 @@ of the License at http://www.apache.org/licenses/LICENSE-2.0
 
 Unless required by applicable law or agreed to in writing, software distributed under
 the License is distributed on an "AS IS" BASIS, WITHOUT WARRANTIES OR REPRESENTATIONS
-OF ANY KIND, either express or implied. See the License for the specific language
+OF ANY KIND, either express or implied. See the License for the specific languageac
 governing permissions and limitations under the License.
 */
 
@@ -113,9 +113,7 @@ governing permissions and limitations under the License.
   background-repeat: no-repeat;
   inline-size: var(--mod-rating-icon-width, var(--spectrum-rating-icon-width));
   block-size: var(--mod-rating-icon-height, var(--spectrum-rating-icon-height));
-  padding: var(--mod-rating-icon-spacing, var(--spectrum-rating-icon-spacing));
-  padding-top: var(--mod-rating-icon-spacing-vertical-top, var(--spectrum-rating-icon-spacing-vertical-top));
-  padding-bottom: var(--mod-rating-icon-spacing-vertical-top, var(--spectrum-rating-icon-spacing-vertical-top));
+  padding: calc((var(--mod-rating-icon-spacing, var(--spectrum-rating-icon-spacing)) / 2));
 
   .spectrum-Rating-starActive {
     display: none;
@@ -141,7 +139,7 @@ governing permissions and limitations under the License.
       inset-inline: var(--mod-rating-indicator-spacing, var(--spectrum-rating-indicator-spacing));
       
       /* position the indicator relative to the element's total bottom size (including bottom padding) */
-      inset-block-end: calc(var(--mod-rating-icon-spacing-vertical-top, var(--spectrum-rating-icon-spacing-vertical-top)) - var(--mod-rating-indicator-spacing, var(--spectrum-rating-indicator-spacing)));
+      inset-block-end: calc(var(--mod-rating-icon-spacing-vertical-top, var(--spectrum-rating-icon-spacing-vertical-top)) - 2 * var(--mod-rating-indicator-spacing, var(--spectrum-rating-indicator-spacing)));
       position: absolute;
     }
   }
