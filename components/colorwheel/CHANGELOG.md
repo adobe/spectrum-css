@@ -3,6 +3,18 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+<a name="2.0.4"></a>
+## 2.0.4
+🗓 2023-03-29 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/colorwheel@2.0.3...@spectrum-css/colorwheel@2.0.4)
+
+### 🐛 Bug fixes
+
+* **colorwheel:** move custom properties ([#1689](https://github.com/adobe/spectrum-css/issues/1689)) ([e13e1fa](https://github.com/adobe/spectrum-css/commit/e13e1fa))
+
+
+
+
+
 <a name="2.0.3"></a>
 ## 2.0.3
 🗓 2023-03-27 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/colorwheel@2.0.2...@spectrum-css/colorwheel@2.0.3)
