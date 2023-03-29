@@ -12,7 +12,17 @@ governing permissions and limitations under the License.
 
 .spectrum-InLineAlert {
   /* Font */
-  --spectrum-inlinealert-font-weight: var(--spectrum-bold-font-weight);
+  --spectrum-inlinealert-heading-font-family: var(--spectrum-heading-sans-serif-font-family);
+  --spectrum-inlinealert-heading-font-weight: var(--spectrum-heading-sans-serif-font-weight);
+  --spectrum-inlinealert-heading-font-style: var(--spectrum-heading-sans-serif-font-style);
+  --spectrum-inlinealert-heading-font-size: var(--spectrum-heading-size-xxs);
+  --spectrum-inlinealert-heading-line-height: var(--spectrum-heading-line-height);
+
+  --spectrum-inlinealert-content-font-family: var(--spectrum-body-sans-serif-font-family);
+  --spectrum-inlinealert-content-font-weight: var(--spectrum-body-sans-serif-font-weight);
+  --spectrum-inlinealert-content-font-style: var(--spectrum-body-sans-serif-font-style);
+  --spectrum-inlinealert-content-font-size: var(--spectrum-body-size-s);
+  --spectrum-inlinealert-content-line-height: var(--spectrum-body-line-height);
 
   /* Size*/
   --spectrum-inlinealert-border-width: var(--spectrum-border-width-200);
@@ -77,7 +87,11 @@ governing permissions and limitations under the License.
   /* Minimum space between header and icon */
   gap: var(--mod-inlinealert-spacing-header-to-icon, var(--spectrum-inlinealert-spacing-header-to-icon));
 
-  font-weight: var(--mod-inlinealert-font-weight, var(--spectrum-inlinealert-font-weight));
+  font-weight: var(--mod-inlinealert-heading-font-weight, var(--spectrum-inlinealert-heading-font-weight));
+  font-family: var(--mod-inlinealert-heading-font-family, var(--spectrum-inlinealert-heading-font-family));
+  font-style: var(--mod-inlinealert-heading-font-style, var(--spectrum-inlinealert-heading-font-style));
+  font-size: var(--mod-inlinealert-heading-font-size, var(--spectrum-inlinealert-heading-font-size));
+  line-height: var(--mod-inlinealert-heading-line-height, var(--spectrum-inlinealert-heading-line-height));
   text-transform: none;
 
   min-block-size: var(--mod-inlinealert-header-min-block-size, var(--spectrum-inlinealert-header-min-block-size));
@@ -94,6 +108,12 @@ governing permissions and limitations under the License.
   padding: 0;
 
   word-wrap: break-word;
+
+  font-weight: var(--mod-inlinealert-content-font-weight, var(--spectrum-inlinealert-content-font-weight));
+  font-family: var(--mod-inlinealert-content-font-family, var(--spectrum-inlinealert-content-font-family));
+  font-style: var(--mod-inlinealert-content-font-style, var(--spectrum-inlinealert-content-font-style));
+  font-size: var(--mod-inlinealert-content-font-size, var(--spectrum-inlinealert-content-font-size));
+  line-height: var(--mod-inlinealert-content-line-height, var(--spectrum-inlinealert-content-line-height));
 
   color: var(--highcontrast-inlinealert-content-color, var(--mod-inlinealert-content-color, var(--spectrum-inlinealert-content-color)));
 }
