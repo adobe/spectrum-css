@@ -45,6 +45,13 @@ governing permissions and limitations under the License.
   }
 }
 
+@media (forced-colors: active) {
+  .spectrum-IllustratedMessage {
+    --highcontrast-illustrated-message-illustration-color: CanvasText;
+    --highcontrast-illustrated-message-illustration-accent-color: Highlight;
+  }
+}
+
 .spectrum-IllustratedMessage {
   block-size: 100%;
 
@@ -58,13 +65,13 @@ governing permissions and limitations under the License.
 
 .spectrum-IllustratedMessage-illustration {
   margin-block-end: var(--mod-illustrated-message-title-to-heading, var(--spectrum-illustrated-message-title-to-heading));
-  color: var(--mod-illustrated-message-illustration-color, var(--spectrum-illustrated-message-illustration-color));
+  color: var(--highcontrast-illustrated-message-illustration-color, var(--mod-illustrated-message-illustration-color, var(--spectrum-illustrated-message-illustration-color)));
   fill: currentColor;
   stroke: currentColor;
 }
 
 .spectrum-IllustratedMessage-accent {
-  color: var(--mod-illustrated-message-illustration-accent-color, var(--spectrum-illustrated-message-illustration-accent-color));
+  color: var(--highcontrast-illustrated-message-illustration-accent-color, var(--mod-illustrated-message-illustration-accent-color, var(--spectrum-illustrated-message-illustration-accent-color)));
 }
 
 .spectrum-IllustratedMessage-heading {
