@@ -15,7 +15,7 @@ governing permissions and limitations under the License.
   --spectrum-inlinealert-font-weight: var(--spectrum-bold-font-weight);
 
   /* Size*/
-  --spectrum-inlinealert-border-width: var(--spectrum-border-width-100);
+  --spectrum-inlinealert-border-width: var(--spectrum-border-width-200);
   --spectrum-inlinealert-border-radius: var(--spectrum-corner-radius-100);
   --spectrum-inlinealert-icon-size: var(--spectrum-workflow-icon-size-100);
   --spectrum-inlinealert-min-inline-size: var(--spectrum-in-line-alert-minimum-width);
@@ -27,9 +27,14 @@ governing permissions and limitations under the License.
   --spectrum-inlinealert-spacing-header-content-button: var(--spectrum-spacing-300);
 
   /* Color */
-  --spectrum-inlinealert-background-color: var(--spectrum-gray-50);
-  --spectrum-inlinealert-border-and-icon-color: var(--spectrum-gray-600);
-  --spectrum-inlinealert-header-and-content-color: var(--spectrum-gray-900);
+  --spectrum-inlinealert-background-color: var(--spectrum-background-layer-2-color);
+  --spectrum-inlinealert-border-and-icon-color: var(--spectrum-neutral-visual-color);
+  --spectrum-inlinealert-header-color: var(--spectrum-heading-color);
+  --spectrum-inlinealert-content-color: var(--spectrum-body-color);
+  --spectrum-inlinealert-border-and-icon-color-info: var(--spectrum-informative-visual-color);
+  --spectrum-inlinealert-border-and-icon-color-positive: var(--spectrum-positive-visual-color);
+  --spectrum-inlinealert-border-and-icon-color-notice: var(--spectrum-notice-visual-color);
+  --spectrum-inlinealert-border-and-icon-color-negative: var(--spectrum-negative-visual-color);
 }
 
 .spectrum-InLineAlert {
@@ -54,7 +59,8 @@ governing permissions and limitations under the License.
 @media (forced-colors: active) {
   .spectrum-InLineAlert {
     --highcontrast-inlinealert-background-color: Background;
-    --highcontrast-inlinealert-header-and-content-color: CanvasText;
+    --highcontrast-inlinealert-header-color: CanvasText;
+    --highcontrast-inlinealert-content-color: CanvasText;
     --highcontrast-inlinealert-border-and-icon-color: ButtonBorder;
   }
 }
@@ -76,7 +82,7 @@ governing permissions and limitations under the License.
 
   min-block-size: var(--mod-inlinealert-header-min-block-size, var(--spectrum-inlinealert-header-min-block-size));
 
-  color: var(--highcontrast-inlinealert-header-and-content-color, var(--mod-inlinealert-header-and-content-color, var(--spectrum-inlinealert-header-and-content-color)));
+  color: var(--highcontrast-inlinealert-header-color, var(--mod-inlinealert-header-color, var(--spectrum-inlinealert-header-color)));
 }
 
 .spectrum-InLineAlert-content {
@@ -89,7 +95,7 @@ governing permissions and limitations under the License.
 
   word-wrap: break-word;
 
-  color: var(--highcontrast-inlinealert-header-and-content-color, var(--mod-inlinealert-header-and-content-color, var(--spectrum-inlinealert-header-and-content-color)));
+  color: var(--highcontrast-inlinealert-content-color, var(--mod-inlinealert-content-color, var(--spectrum-inlinealert-content-color)));
 }
 
 .spectrum-InLineAlert-footer {
