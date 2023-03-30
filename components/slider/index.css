@@ -82,6 +82,7 @@ governing permissions and limitations under the License.
   --spectrum-slider-track-fill-thickness: var(--spectrum-slider-track-thickness);
   --spectrum-slider-tick-mark-width: var(--spectrum-border-width-200);
   --spectrum-slider-tick-mark-border-radius: 2px;
+  --spectrum-slider-tick-handle-background-color: var(--spectrum-gray-100);
 
   /* colors */
   --spectrum-slider-track-color-disabled: var(--spectrum-disabled-background-color);
@@ -398,6 +399,9 @@ governing permissions and limitations under the License.
 
 /* setting tick marks in relation to label */
 .spectrum-Slider--tick {
+  .spectrum-Slider-handle {
+    background-color: var(--highcontrast-slider-tick-handle-background-color, var(--mod-slider-tick-handle-background-color, var(--spectrum-slider-tick-handle-background-color)));
+  }
   .spectrum-Slider-controls {
     margin-block-start:
       calc(
