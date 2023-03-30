@@ -125,7 +125,6 @@ governing permissions and limitations under the License.
   inline-size: var(--mod-rating-icon-width, var(--spectrum-rating-icon-width));
   block-size: var(--mod-rating-icon-height, var(--spectrum-rating-icon-height));
   padding-block: var(--mod-rating-icon-spacing-vertical-top, var(--spectrum-rating-icon-spacing-vertical-top));
-  /* padding: calc((var(--mod-rating-icon-spacing, var(--spectrum-rating-icon-spacing)) / 2)); */
 
   .spectrum-Rating-starActive {
     display: none;
@@ -151,7 +150,6 @@ governing permissions and limitations under the License.
       inset-inline: var(--mod-rating-indicator-spacing, var(--spectrum-rating-indicator-spacing));
       
       /* position the indicator relative to the element's total bottom size (including bottom padding) */
-      /* inset-block-end: calc(var(--mod-rating-icon-spacing-vertical-top, var(--spectrum-rating-icon-spacing-vertical-top)) - 2 * var(--mod-rating-indicator-spacing, var(--spectrum-rating-indicator-spacing))); */
       inset-block-end: var(--mod-rating-indicator-spacing, var(--spectrum-rating-indicator-spacing));
       position: absolute;
     }
