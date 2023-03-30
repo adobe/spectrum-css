@@ -24,6 +24,10 @@ governing permissions and limitations under the License.
   --spectrum-colorloupe-inner-border-width: 1px; /* TODO: replace with updated token for color-loupe-inner-border-width */
   --spectrum-colorloupe-outer-border-color: var(--spectrum-color-loupe-outer-border);
   --spectrum-colorloupe-inner-border-color: var(--spectrum-color-loupe-inner-border);
+
+  --spectrum-colorloupe-checkerboard-size: var(--spectrum-opacity-checkerboard-square-size);
+  --spectrum-colorloupe-checkerboard-dark-color: var(--spectrum-opacity-checkerboard-square-dark);
+  --spectrum-colorloupe-checkerboard-light-color: var(--spectrum-opacity-checkerboard-square-light);
 }
 
 .spectrum-ColorLoupe {
@@ -50,6 +54,28 @@ governing permissions and limitations under the License.
     transform: translate(0, 0);
     opacity: 1;
   }
+}
+
+.checkerboard-pattern-rect1 {
+  x: 0;
+  y: 0;
+  width: var(--spectrum-colorloupe-checkerboard-size);
+  height: var(--spectrum-colorloupe-checkerboard-size);
+}
+
+.checkerboard-pattern-rect2 {
+  x: var(--spectrum-colorloupe-checkerboard-size);
+  y: var(--spectrum-colorloupe-checkerboard-size);
+  width: var(--spectrum-colorloupe-checkerboard-size);
+  height: var(--spectrum-colorloupe-checkerboard-size);
+}
+
+.checkerboard-pattern {
+  fill: var(--spectrum-colorloupe-checkerboard-dark-color);
+}
+
+.checkerboard-background {
+  fill: var(--spectrum-colorloupe-checkerboard-light-color);
 }
 
 .spectrum-ColorLoupe-inner-border {
