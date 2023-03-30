@@ -10,6 +10,7 @@ import { Template as QuickAction } from "@spectrum-css/quickaction/stories/templ
 import { Template as Checkbox } from "@spectrum-css/checkbox/stories/template.js";
 import { Template as Asset } from "@spectrum-css/asset/stories/template.js";
 import { Template as Icon } from "@spectrum-css/icon/stories/template.js";
+import { Template as Divider } from "@spectrum-css/divider/stories/template.js";
 
 import '../index.css';
 
@@ -111,7 +112,13 @@ export const Template = ({
             )}
           </div>`
       )}
-      ${when(footer, () => html`<div class="${rootClass}-footer">${footer}</div>`)}
+      ${when(footer, () => html`
+        <div class="${rootClass}-footer">
+          ${Divider({
+            size: 's'
+          })}
+          ${footer}
+        </div>`)}
       ${when(
         hasQuickAction && !isHorizontal,
         () => QuickAction({

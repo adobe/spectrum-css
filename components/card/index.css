@@ -19,7 +19,9 @@ governing permissions and limitations under the License.
   --spectrum-card-title-padding-right: var(--spectrum-spacing-400);
   --spectrum-card-content-margin-top: var(--spectrum-spacing-300);
   --spectrum-card-body-padding-bottom: var(--spectrum-spacing-300);
-  --spectrum-card-footer-padding-top: var(--spectrum-spacing-100);
+  --spectrum-card-divider-margin-bottom: var(--spectrum-spacing-100);
+  --spectrum-card-subtitle-padding-right: var(--spectrum-spacing-100);
+  
 
   /* Border */
   --spectrum-card-border-width: var(--spectrum-border-width-100);
@@ -68,10 +70,15 @@ governing permissions and limitations under the License.
   --spectrum-card-folder-background-color: var(--spectrum-gray-300);
   --spectrum-card-file-background-color: var(--spectrum-gray-50);
   --spectrum-card-file-outline: var(--spectrum-gray-500);
+
+  /* Horizontal */
+  --spectrum-card-horizontal-body-padding: var(--spectrum-spacing-300);
+  --spectrum-card-horizontal-preview-padding: var(--spectrum-spacing-200);
+
 }
 
 .spectrum-Card--sizeS {
-  /* Need less spacing for small cards since we've decreased min-width TODO need token */
+  /* Need less spacing for small cards since we've decreased min-width */
   --spectrum-card-actions-spacing: calc(var(--spectrum-spacing-300) / 2);
 
 }
@@ -197,15 +204,13 @@ governing permissions and limitations under the License.
 }
 
 .spectrum-Card-coverPhoto {
-  block-size: 136px; /* TODO need token var(--spectrum-card-coverphoto-height); */
+  block-size: var(--mod-card-preview-minimum-height, var(--spectrum-card-preview-minimum-height));
   box-sizing: border-box;
 
   display: flex;
   align-items: center;
   justify-content: center;
 
-  border-block-end: var(--mod-card-border-width, var(--spectrum-card-border-width)) solid transparent;
-  /* border-block-end: var(--spectrum-card-coverphoto-border-bottom-size) solid transparent;TODO need token */
   border-top-left-radius: var(--mod-card-corner-radius, var(--spectrum-card-corner-radius));
   border-top-right-radius: var(--mod-card-corner-radius, var(--spectrum-card-corner-radius));
   border-bottom-right-radius: 0;
@@ -213,8 +218,7 @@ governing permissions and limitations under the License.
 
   background-size: cover;
   background-position: center center;
-  background-color: var(--mod-card-quiet-background-color, var(--spectrum-card-quiet-background-color));
-  /* background-color: var(--spectrum-card-m-coverphoto-background-color); TODO need token */
+  background-color: var(--mod-card-background-color, var(--spectrum-card-background-color));
   border-block-end-color: var(--mod-card-border-color, var(--spectrum-card-border-color));
 }
 
@@ -235,14 +239,9 @@ governing permissions and limitations under the License.
   align-items: center;
 }
 
-.spectrum-Card-header {
-  block-size: 18px; /*var(--spectrum-card-body-header-height);/* TODO need token */
-}
-
 .spectrum-Card-content {
   display: flex;
   align-items: center;
-  min-block-size: 14px; /* var(--spectrum-card-body-content-min-height);/* TODO need token */
   margin-block-start: var(--mod-card-content-margin-top, var(--spectrum-card-content-margin-top));
 }
 
@@ -261,14 +260,14 @@ governing permissions and limitations under the License.
 
 
 .spectrum-Card-subtitle {
-  padding-inline-end: 8px; /*var(--spectrum-card-subtitle-padding-right);/* TODO need token */
-  color: var(--highcontrast-card-title-color, var(--mod-card-title-color, var(--spectrum-card-title-color))); /* TODO need token for subtitle color */
+  padding-inline-end: var(--mod-card-subtitle-padding-right, var(--spectrum-card-subtitle-padding-right));
+  color: var(--highcontrast-card-title-color, var(--mod-card-title-color, var(--spectrum-card-title-color)));
   text-transform: none;
 }
 
 .spectrum-Card-subtitle + .spectrum-Card-description:before {
   content: "•";
-  padding-inline-end: 8px; /* var(--spectrum-card-subtitle-padding-right);/* TODO need token */
+  padding-inline-end: var(--mod-card-subtitle-padding-right, var(--spectrum-card-subtitle-padding-right));
 }
 
 .spectrum-Card-description {
@@ -283,17 +282,17 @@ governing permissions and limitations under the License.
 .spectrum-Card-footer {
   margin-inline-start: var(--mod-card-body-spacing, var(--spectrum-card-body-spacing));
   margin-inline-end: var(--mod-card-body-spacing, var(--spectrum-card-body-spacing));
-  padding-block-start: var(--mod-card-footer-padding-top, var(--spectrum-card-footer-padding-top));
   padding-block-end: var(--mod-card-body-spacing, var(--spectrum-card-body-spacing));
 
-  border-block-start: var(--spectrum-card-border-width) solid;/* TODO need a token for this */
-  border-color: var(--spectrum-gray-200); /* TODO need a token for this */
-
+  .spectrum-Divider {
+    margin-block-start: 0;
+    margin-block-end: var(--mod-card-divider-margin-bottom, var(--spectrum-card-divider-margin-bottom));
+  }
 }
 
 .spectrum-Card-header {
   display: flex;
-  align-items: baseline;
+  align-items: center;
 }
 
 .spectrum-Card-actionButton {
@@ -316,10 +315,9 @@ governing permissions and limitations under the License.
   .spectrum-Card-preview {
     border-radius: var(--mod-card-corner-radius, var(--spectrum-card-corner-radius));
     background-color: var(--mod-card-quiet-background-color, var(--spectrum-card-quiet-background-color));
-    min-block-size: var(--mod-card-preview-minimum-height, var(--spectrum-card-preview-minimum-height));/* TODO need quiet specific token */
+    min-block-size: var(--mod-card-preview-minimum-height, var(--spectrum-card-preview-minimum-height));
     inline-size: 100%;
     flex: 1;
-    padding: 20px; /* var(--spectrum-card-quiet-preview-padding);/* TODO need token */
     margin: 0 auto;
     box-sizing: border-box;
     position: relative;
@@ -390,7 +388,6 @@ governing permissions and limitations under the License.
   }
 
   .spectrum-Card-header {
-    block-size: 18px; /* var(--spectrum-card-quiet-body-header-height); TODO need token  */
     margin-block-start: var(--mod-card-quiet-header-margin-top, var(--spectrum-card-quiet-header-margin-top)); 
   }
 
@@ -422,7 +419,7 @@ governing permissions and limitations under the License.
 
     border-inline-end: var(--mod-card-border-width, var(--spectrum-card-border-width)) solid transparent;
 
-    padding: 14px; /* var(--spectrum-global-dimension-size-175); TODO need token */
+    padding: var(--mod-card-horizontal-preview-padding, var(--spectrum-card-horizontal-preview-padding));
     background-color: var(--mod-card-quiet-background-color, var(--spectrum-card-quiet-background-color));
 
     border-color: var(--mod-card-border-color, var(--spectrum-card-border-color));
@@ -445,7 +442,7 @@ governing permissions and limitations under the License.
     flex-direction: column;
 
     padding-block: 0;
-    padding-inline: 16px; /*var(--spectrum-global-dimension-size-200); TODO need token */
+    padding-inline: var(--mod-card-horizontal-body-padding, var(--spectrum-card-horizontal-body-padding));
   }
 }
 
