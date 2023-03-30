@@ -31,14 +31,14 @@ governing permissions and limitations under the License.
   --spectrum-card-border-color-selected: var(--spectrum-blue-700);
 
   /* Typography */
-  /* --spectrum-card-title-font-family: var(--spectrum-heading-sans-serif-font-family); */
+  --spectrum-card-title-font-family: var(--spectrum-sans-font-family-stack); 
   --spectrum-card-title-font-size: var(--spectrum-heading-size-xxs);
   --spectrum-card-title-font-weight: var(--spectrum-heading-sans-serif-font-weight);
   --spectrum-card-title-font-style: var(--spectrum-heading-sans-serif-font-style);
   --spectrum-card-title-line-height: var(--spectrum-heading-line-height);
   --spectrum-card-title-color: var(--spectrum-heading-color);
 
-  /* --spectrum-card-body-font-family: var(--spectrum-body-sans-serif-font-family); */
+  --spectrum-card-body-font-family: var(--spectrum-sans-font-family-stack);
   --spectrum-card-body-font-size: var(--spectrum-body-size-s);
   --spectrum-card-body-font-weight: var(--spectrum-body-sans-serif-font-weight);
   --spectrum-card-body-font-style: var(--spectrum-body-sans-serif-font-style);
@@ -250,7 +250,7 @@ governing permissions and limitations under the License.
   overflow: hidden;
   text-overflow: ellipsis;
   padding-inline-end: var(--mod-card-title-padding-right, var(--spectrum-card-title-padding-right));
-  /*font-family: var(--mod-card-title-font-family, var(--spectrum-card-title-font-family)); TODO this token is not correct */
+  font-family: var(--mod-card-title-font-family, var(--spectrum-card-title-font-family));
   font-size: var(--mod-card-title-font-size, var(--spectrum-card-title-font-size));
   font-weight: var(--mod-card-title-font-weight, var(--spectrum-card-title-font-weight));
   font-style: var(--mod-card-title-font-style, var(--spectrum-card-title-font-style));
@@ -271,7 +271,7 @@ governing permissions and limitations under the License.
 }
 
 .spectrum-Card-description {
-  /*font-family: var(--mod-card-body-font-family, var(--spectrum-card-body-font-family)); TODO this token is not correct */
+  font-family: var(--mod-card-body-font-family, var(--spectrum-card-body-font-family));
   font-size: var(--mod-card-body-font-size, var(--spectrum-card-body-font-size));
   font-weight: var(--mod-card-body-font-weight, var(--spectrum-card-body-font-weight));
   font-style: var(--mod-card-body-font-style, var(--spectrum-card-body-font-style));
