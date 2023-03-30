@@ -2,7 +2,7 @@ import { Template } from './template.js';
 
 export default {
   title: "Search",
-  description: "The search component delivers a single input field with a \"reset\" button and mangifying glass icon which serves up a search UI.",
+  description: "This component contains a single input field with both a magnifying glass icon and a \"reset\" button displayed within it.",
   component: "Search",
   argTypes: {
     isQuiet: {
