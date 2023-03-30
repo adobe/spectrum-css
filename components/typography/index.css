@@ -15,8 +15,8 @@ governing permissions and limitations under the License.
   --spectrum-font-family-ar: myriad-arabic, adobe-clean, 'Source Sans Pro', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Ubuntu, 'Trebuchet MS', 'Lucida Grande', sans-serif;
   --spectrum-font-family-he: myriad-hebrew, adobe-clean, 'Source Sans Pro', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Ubuntu, 'Trebuchet MS', 'Lucida Grande', sans-serif;
 
-  --spectrum-font-family: var(--spectrum-font-family-default);
-  --spectrum-font-style: var(--spectrum-font-style-default);
+  --spectrum-font-family: var(--spectrum-default-font-family);
+  --spectrum-font-style: var(--spectrum-default-font-style);
   --spectrum-font-size: var(--spectrum-font-size-100);
 
   font-family: var(--spectrum-font-family);
@@ -129,9 +129,9 @@ governing permissions and limitations under the License.
   --spectrum-heading-font-weight-cjk-heavy-strong-emphasized: var(--spectrum-heading-cjk-heavy-strong-emphasized-font-weight);
 
   --spectrum-heading-line-height: var(--spectrum-heading-line-height);
-  --spectrum-heading-line-height-cjk: var(--spectrum-heading-line-height-cjk);
+  --spectrum-heading-line-height-cjk: var(--spectrum-heading-cjk-line-height);
 
-  --spectrum-heading-letter-spacing-cjk: var(--spectrum-letter-spacing-cjk);
+  --spectrum-heading-letter-spacing-cjk: var(--spectrum-cjk-letter-spacing);
 
   --spectrum-heading-margin-start: var(--spectrum-heading-margin-top-multiplier);
   --spectrum-heading-margin-end: var(--spectrum-heading-margin-bottom-multiplier);
@@ -229,6 +229,11 @@ governing permissions and limitations under the License.
       font-weight: var(--mod-heading-font-weight-cjk-strong-emphasized, var(--spectrum-heading-font-weight-cjk-strong-emphasized));
     }
   }
+}
+
+/* Add margin to heading if inside Typography component */
+.spectrum-Typography {
+  
 }
 
 /* Heading - Heavy */
@@ -383,9 +388,9 @@ governing permissions and limitations under the License.
   --spectrum-body-font-weight-cjk-strong-emphasized: var(--spectrum-body-cjk-strong-emphasized-font-weight);
 
   --spectrum-body-line-height: var(--spectrum-body-line-height);
-  --spectrum-body-cjk-line-height: var(--spectrum-body-line-height-cjk);
+  --spectrum-body-cjk-line-height: var(--spectrum-body-cjk-line-height);
 
-  --spectrum-body-cjk-letter-spacing: var(--spectrum-letter-spacing-cjk);
+  --spectrum-body-cjk-letter-spacing: var(--spectrum-cjk-letter-spacing);
 
   --spectrum-body-margin: var(--spectrum-body-margin-multiplier);
 
@@ -541,11 +546,11 @@ governing permissions and limitations under the License.
   --spectrum-detail-font-weight-cjk-light-strong-emphasized: var(--spectrum-detail-cjk-light-strong-emphasized-font-weight);
 
   --spectrum-detail-line-height-default: var(--spectrum-detail-line-height);
-  --spectrum-detail-cjk-line-height: var(--spectrum-detail-line-height-cjk);
+  --spectrum-detail-cjk-line-height: var(--spectrum-detail-cjk-line-height);
 
   --spectrum-detail-letter-spacing-default: var(--spectrum-detail-letter-spacing);
 
-  --spectrum-detail-margin-start: var(--spectrum-detail-margin-top-mulitplier);
+  --spectrum-detail-margin-start: var(--spectrum-detail-margin-top-multiplier);
   --spectrum-detail-margin-end: var(--spectrum-detail-margin-bottom-multiplier);
 
   --spectrum-detail-font-color: var(--spectrum-gray-900);
@@ -721,9 +726,9 @@ governing permissions and limitations under the License.
   --spectrum-code-font-weight-cjk-strong-emphasized: var(--spectrum-code-cjk-strong-emphasized-font-weight);
 
   --spectrum-code-line-height: var(--spectrum-code-line-height);
-  --spectrum-code-cjk-line-height: var(--spectrum-code-line-height-cjk);
+  --spectrum-code-cjk-line-height: var(--spectrum-code-cjk-line-height);
 
-  --spectrum-code-cjk-letter-spacing: var(--spectrum-letter-spacing-cjk);
+  --spectrum-code-cjk-letter-spacing: var(--spectrum-cjk-letter-spacing);
 
   --spectrum-code-font-color: var(--spectrum-gray-800);
 }
