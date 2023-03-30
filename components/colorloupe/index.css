@@ -61,7 +61,7 @@ governing permissions and limitations under the License.
 .spectrum-ColorLoupe-outer-border {
   fill: none;
   stroke: var(--highcontrast-colorloupe-outer-border-color, var(--mod-colorloupe-outer-border-color, var(--spectrum-colorloupe-outer-border-color)));
-  stroke-width: calc(var(--mod-colorloupe-outer-border-width, var(--spectrum-colorloupe-outer-border-width)) + var(--mod-colorloupe-inner-border-width ,var(--spectrum-colorloupe-inner-border-width)));
+  stroke-width: var(--mod-colorloupe-outer-border-width, var(--spectrum-colorloupe-outer-border-width));
 }
 
 /* hack: so it doesn't get flagged as unused, --spectrum-picked-color is a user defined value thus is not defined by styles */
