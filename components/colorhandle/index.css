@@ -28,12 +28,6 @@ governing permissions and limitations under the License.
   --spectrum-colorhandle-border-width: var(--spectrum-color-handle-border-width);
   --spectrum-colorhandle-border-color: var(--spectrum-white);
 
-  /* component shadow, only present with express */
-  --spectrum-colorhandle-drop-shadow-x: var(--spectrum-color-handle-drop-shadow-x);
-  --spectrum-colorhandle-drop-shadow-y: var(--spectrum-color-handle-drop-shadow-y);
-  --spectrum-colorhandle-drop-shadow-blur: var(--spectrum-color-handle-drop-shadow-blur);
-  --spectrum-colorhandle-drop-shadow-color: var(--spectrum-color-handle-drop-shadow-color);
-
   /* for opacity checkerboard background */
   --spectrum-colorhandle-checkerboard-dark-color: var(--spectrum-opacity-checkerboard-square-dark);
   --spectrum-colorhandle-checkerboard-light-color: var(--spectrum-opacity-checkerboard-square-light);
@@ -62,13 +56,6 @@ governing permissions and limitations under the License.
     0 0 0
     var(--mod-colorhandle-outer-border-width, var(--spectrum-colorhandle-outer-border-width))
     var(--mod-colorhandle-outer-border-color, var(--spectrum-colorhandle-outer-border-color));
-
-  filter:drop-shadow(
-    var(--mod-colorhandle-drop-shadow-x, var(--spectrum-colorhandle-drop-shadow-x))
-    var(--mod-colorhandle-drop-shadow-y, var(--spectrum-colorhandle-drop-shadow-y))
-    var(--mod-colorhandle-drop-shadow-blur, var(--spectrum-colorhandle-drop-shadow-blur))
-    var(--mod-colorhandle-drop-shadow-color, var(--spectrum-colorhandle-drop-shadow-color))
-  );
 
   background:
     repeating-conic-gradient(var(--mod-colorhandle-checkerboard-dark-color, var(--spectrum-colorhandle-checkerboard-dark-color)) 0% 25%, var(--mod-colorhandle-checkerboard-light-color, var(--spectrum-colorhandle-checkerboard-light-color)) 0% 50%)
