@@ -3,6 +3,21 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+<a name="7.0.0"></a>
+# 7.0.0
+🗓 2023-03-31 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/inlinealert@6.0.11...@spectrum-css/inlinealert@7.0.0)
+
+* feat(inlinealert)!: updates tokens (#1695) ([e2960f4](https://github.com/adobe/spectrum-css/commit/e2960f4)), closes [#1695](https://github.com/adobe/spectrum-css/issues/1695)
+
+
+### 🛑 BREAKING CHANGES
+
+* migrates In-Line Alert to the new tokens system.
+
+
+
+
+
 <a name="6.0.11"></a>
 ## 6.0.11
 🗓 2023-03-31 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/inlinealert@6.0.10...@spectrum-css/inlinealert@6.0.11)
