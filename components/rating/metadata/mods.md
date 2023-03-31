@@ -5,6 +5,7 @@
 |`--mod-rating-icon-color-default`|
 |`--mod-rating-icon-color-hover`|
 |`--mod-rating-icon-color-down`|
+|`--mod-rating-icon-gap`|
 |`--mod-rating-icon-width`|
 |`--mod-rating-icon-spacing`|
 |`--mod-rating-icon-count`|
@@ -15,6 +16,6 @@
 |`--mod-rating-indicator-height`|
 |`--mod-rating-indicator-spacing`|
 |`--mod-rating-emphasized-icon-color-default`|
-|`--mod-rating-emphasized-icon-color-down`|
 |`--mod-rating-emphasized-icon-color-hover`|
+|`--mod-rating-emphasized-icon-color-down`|
 |`--mod-rating-icon-color-disabled`|
