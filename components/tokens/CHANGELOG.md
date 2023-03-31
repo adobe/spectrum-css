@@ -3,6 +3,18 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+<a name="7.7.0"></a>
+# 7.7.0
+🗓 2023-03-31 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/tokens@7.6.1...@spectrum-css/tokens@7.7.0)
+
+### ✨ Features
+
+* **tokens:** add open type conversion to style-dictionary ([7a423aa](https://github.com/adobe/spectrum-css/commit/7a423aa))
+
+
+
+
+
 <a name="7.6.1"></a>
 ## 7.6.1
 🗓 2023-03-27 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/tokens@7.6.0...@spectrum-css/tokens@7.6.1)
