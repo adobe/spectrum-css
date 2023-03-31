@@ -1,7 +1,6 @@
 const gulp = require('gulp');
 const builder = require('./tools/bundle-builder');
 const site = require('./site/gulpfile.js');
-const subrunner = require('./tools/bundle-builder/subrunner');
 const through = require('through2');
 const replace = require('gulp-replace');
 const del = require('del');
@@ -22,44 +21,6 @@ async function readPackage(component) {
     throw new Error(`Error while parsing JSON: for ${component}: ${err}`);
   }
 }
-
-async function writePackage(component, package) {
-  return await fsp.writeFile(path.join(component, 'package.json'), JSON.stringify(package, null, 2));
-}
-
-async function checkPeerDependencies() {
-  let packagesDir = './components';
-
-  let components = (await fsp.readdir(packagesDir, { withFileTypes: true }))
-    .filter((dirent) => dirent.isDirectory() || dirent.isSymbolicLink())
-    .map((dirent) => path.join(packagesDir, dirent.name));
-
-  await Promise.all(components.map(async (component) => {
-    let package = await readPackage(component);
-
-    if (package.peerDependencies) {
-      Object.keys(package.peerDependencies).forEach((dependency) => {
-        let devDepVer = package.devDependencies[dependency].replace('^', '');
-        let peerDepVer = package.peerDependencies[dependency];
-        if (devDepVer) {
-          if (!semver.satisfies(devDepVer, peerDepVer)) {
-            console.error(`${component} has out of date peerDependencies ${dependency} (found ${devDepVer}, does not satisfy ${peerDepVer})`);
-
-            // Set a new peer dependency, stripping the beta version number
-            let newPeerDepVer = '^' + devDepVer.replace(/-\d+$/, '');
-            package.peerDependencies[dependency] = newPeerDepVer
-            console.error(`  Updated ${dependency} to ${newPeerDepVer}`);
-          }
-        }
-        else {
-          throw new Error(`${component} has ${dependency} in peerDependencies, but not devDependencies!`);
-        }
-      });
-
-      await writePackage(component, package);
-    }
-  }));
-};
 
 function graduatePeerDeps() {
   function isPrerelease(version) {

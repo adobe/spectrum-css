@@ -28,9 +28,7 @@ jobs:
         uses: chromaui/action@v1
         with:
           projectToken: ${{ secrets.CHROMATIC_PROJECT_TOKEN }}
-          buildScriptName: "build"
-          workingDir: tools/preview
-          storybookBaseDir: tools/preview
+          buildScriptName: build:preview
           storybookConfigDir: tools/preview
           exitOnceUploaded: true
           onlyChanged: true
