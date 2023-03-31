@@ -123,9 +123,9 @@ governing permissions and limitations under the License.
 @media (forced-colors: active) {
   .spectrum-ColorHandle {
     forced-color-adjust: none;
-  &.is-disabled {
-    --highcontrast-colorhandle-border-color-disabled : GrayText;
-    --highcontrast-colorhandle-fill-color-disabled: Canvas;
+    &.is-disabled {
+      --highcontrast-colorhandle-border-color-disabled : GrayText;
+      --highcontrast-colorhandle-fill-color-disabled: Canvas;
+    }
   }
-}
 }
