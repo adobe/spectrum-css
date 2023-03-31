@@ -40,41 +40,12 @@ governing permissions and limitations under the License.
   --spectrum-heading-serif-font-family: var(--spectrum-serif-font-family-stack);
   --spectrum-heading-cjk-font-family: var(--spectrum-cjk-font-family-stack);
 
-
-  --spectrum-heading-font-style-serif-emphasized: var(--spectrum-heading-sans-serif-emphasized-font-style);
-  --spectrum-heading-font-weight-serif-emphasized: var(--spectrum-heading-sans-serif-emphasized-font-weight);
-
-  --spectrum-heading-font-style-sans-serif-strong-emphasized: var(--spectrum-heading-sans-serif-strong-emphasized-font-style);
-  --spectrum-heading-font-weight-sans-serif-strong-emphasized: var(--spectrum-heading-sans-serif-strong-emphasized-font-weight);
-
-  --spectrum-heading-font-style-serif-strong: var(--spectrum-heading-serif-strong-font-style);
-  --spectrum-heading-font-weight-serif-strong: var(--spectrum-heading-serif-strong-font-weight);
-
-  --spectrum-heading-font-style-cjk-strong-emphasized: var(--spectrum-heading-cjk-strong-emphasized-font-style);
-  --spectrum-heading-font-weight-cjk-strong-emphasized: var(--spectrum-heading-cjk-strong-emphasized-font-weight);
-
-  --spectrum-heading-font-style-serif-light-emphasized: var(--spectrum-heading-serif-light-font-style);
-
-  --spectrum-heading-font-style-cjk-light-strong-emphasized: var(--spectrum-heading-cjk-light-strong-emphasized-font-style);
-  --spectrum-heading-font-weight-cjk-light-strong-emphasized: var(--spectrum-heading-cjk-light-strong-emphasized-font-weight);
-
-  --spectrum-heading-font-style-sans-serif-heavy-strong-emphasized: var(--spectrum-heading-sans-serif-heavy-strong-emphasized-font-style);
-  --spectrum-heading-font-weight-sans-serif-heavy-strong-emphasized: var(--spectrum-heading-sans-serif-heavy-strong-emphasized-font-weight);
-
-  --spectrum-heading-font-style-serif-strong: var(--spectrum-heading-serif-strong-font-style);
-
-  --spectrum-heading-font-style-cjk-heavy-strong-emphasized: var(--spectrum-heading-cjk-heavy-strong-emphasized-font-style);
-  --spectrum-heading-font-weight-cjk-heavy-strong-emphasized: var(--spectrum-heading-cjk-heavy-strong-emphasized-font-weight);
-
-  --spectrum-heading-line-height: var(--spectrum-heading-line-height);
-  --spectrum-heading-line-height-cjk: var(--spectrum-heading-cjk-line-height);
-
-  --spectrum-heading-letter-spacing-cjk: var(--spectrum-cjk-letter-spacing);
+  --spectrum-heading-cjk-letter-spacing: var(--spectrum-cjk-letter-spacing);
 
   --spectrum-heading-margin-start: var(--spectrum-heading-margin-top-multiplier);
   --spectrum-heading-margin-end: var(--spectrum-heading-margin-bottom-multiplier);
 
-  --spectrum-heading-font-color: var(--spectrum-gray-900);
+  --spectrum-heading-font-color: var(--spectrum-heading-color);
 }
 
 /* Windows high contrast mode */
@@ -87,27 +58,35 @@ governing permissions and limitations under the License.
 /* Heading t-shirt sizes */
 .spectrum-Heading--sizeXXS {
   --spectrum-heading-font-size: var(--spectrum-heading-size-xxs);
+  --spectrum-heading-cjk-font-size: var(--spectrum-heading-cjk-size-xxs);
 }
 .spectrum-Heading--sizeXS {
   --spectrum-heading-font-size: var(--spectrum-heading-size-xs);
+  --spectrum-heading-cjk-font-size: var(--spectrum-heading-cjk-size-xs);
 }
 .spectrum-Heading--sizeS {
   --spectrum-heading-font-size: var(--spectrum-heading-size-s);
+  --spectrum-heading-cjk-font-size: var(--spectrum-heading-cjk-size-s);
 }
 .spectrum-Heading--sizeM {
   --spectrum-heading-font-size: var(--spectrum-heading-size-m);
+  --spectrum-heading-cjk-font-size: var(--spectrum-heading-cjk-size-m);
 }
 .spectrum-Heading--sizeL {
   --spectrum-heading-font-size: var(--spectrum-heading-size-l);
+  --spectrum-heading-cjk-font-size: var(--spectrum-heading-cjk-size-l);
 }
 .spectrum-Heading--sizeXL {
   --spectrum-heading-font-size: var(--spectrum-heading-size-xl);
+  --spectrum-heading-cjk-font-size: var(--spectrum-heading-cjk-size-xl);
 }
 .spectrum-Heading--sizeXXL {
   --spectrum-heading-font-size: var(--spectrum-heading-size-xxl);
+  --spectrum-heading-cjk-font-size: var(--spectrum-heading-cjk-size-xxl);
 }
 .spectrum-Heading--sizeXXXL {
   --spectrum-heading-font-size: var(--spectrum-heading-size-xxxl);
+  --spectrum-heading-cjk-font-size: var(--spectrum-heading-cjk-size-xxxl);
 }
 
 /* Heading styles */
@@ -148,9 +127,10 @@ governing permissions and limitations under the License.
     font-family: var(--mod-heading-cjk-font-family, var(--spectrum-heading-cjk-font-family));
     font-style: var(--mod-heading-cjk-font-style, var(--spectrum-heading-cjk-font-style));
     font-weight: var(--mod-heading-cjk-font-weight, var(--spectrum-heading-cjk-font-weight));
+    font-size: var(--mod-heading-cjk-font-size, var(--spectrum-heading-cjk-font-size));
 
-    line-height: var(--mod-heading-line-height-cjk, var(--spectrum-heading-line-height-cjk));
-    letter-spacing: var(--mod-heading-letter-spacing-cjk, var(--spectrum-heading-letter-spacing-cjk));
+    line-height: var(--mod-heading-cjk-line-height, var(--spectrum-heading-cjk-line-height));
+    letter-spacing: var(--mod-heading-cjk-letter-spacing, var(--spectrum-heading-cjk-letter-spacing));
 
     em,
     .spectrum-Heading-emphasized {
@@ -193,8 +173,8 @@ governing permissions and limitations under the License.
   .spectrum-Heading-strong.spectrum-Heading-emphasized,
   strong em,
   em strong {
-    font-style: var(--mod-heading-font-style-sans-serif-heavy-strong-emphasized, var(--spectrum-heading-font-style-sans-serif-heavy-strong-emphasized));
-    font-weight: var(--mod-heading-font-weight-sans-serif-heavy-strong-emphasized, var(--spectrum-heading-font-weight-sans-serif-heavy-strong-emphasized));
+    font-style: var(--mod-heading-sans-serif-heavy-strong-emphasized-font-style, var(--spectrum-heading-sans-serif-heavy-strong-emphasized-font-style));
+    font-weight: var(--mod-heading-sans-serif-heavy-strong-emphasized-font-weight, var(--spectrum-heading-sans-serif-heavy-strong-emphasized-font-weight));
   }
 
   &:lang(zh),
@@ -218,8 +198,8 @@ governing permissions and limitations under the License.
     .spectrum-Heading-strong.spectrum-Heading-emphasized,
     strong em,
     em strong {
-      font-style: var(--mod-heading-font-style-cjk-heavy-strong-emphasized, var(--spectrum-heading-font-style-cjk-heavy-strong-emphasized));
-      font-weight: var(--mod-heading-font-weight-cjk-heavy-strong-emphasized, var(--spectrum-heading-font-weight-cjk-heavy-strong-emphasized));
+      font-style: var(--mod-heading-cjk-heavy-strong-emphasized-font-style, var(--spectrum-heading-cjk-heavy-strong-emphasized-font-style));
+      font-weight: var(--mod-heading-cjk-heavy-strong-emphasized-font-weight, var(--spectrum-heading-cjk-heavy-strong-emphasized-font-weight));
     }
   }
 }
@@ -277,7 +257,7 @@ governing permissions and limitations under the License.
 
 /* Heading - Serif */
 .spectrum-Heading--serif {
-  font-family: var(--mod-heading-font-family-serif, var(--spectrum-heading-font-family-serif));
+  font-family: var(--mod-heading-serif-font-family, var(--spectrum-heading-serif-font-family));
   font-style: var(--mod-heading-serif-font-style, var(--spectrum-heading-serif-font-style));
   font-weight: var(--mod-heading-serif-font-weight, var(--spectrum-heading-serif-font-weight));
 
@@ -316,6 +296,13 @@ governing permissions and limitations under the License.
   .spectrum-Heading-emphasized {
     font-style: var(--mod-heading-serif-heavy-emphasized-font-style, var(--spectrum-heading-serif-heavy-emphasized-font-style));
     font-weight: var(--mod-heading-serif-heavy-emphasized-font-weight, var(--spectrum-heading-serif-heavy-emphasized-font-weight));
+  }
+
+  .spectrum-Heading-strong.spectrum-Heading-emphasized,
+  strong em,
+  em strong {
+    font-style: var(--mod-heading-serif-heavy-strong-emphasized-font-style, var(--spectrum-heading-serif-heavy-strong-emphasized-font-style));
+    font-weight: var(--mod-heading-serif-heavy-strong-emphasized-font-weight, var(--spectrum-heading-serif-heavy-strong-emphasized-font-weight));
   }
 }
 
