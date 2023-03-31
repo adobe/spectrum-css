@@ -10,21 +10,81 @@ OF ANY KIND, either express or implied. See the License for the specific languag
 governing permissions and limitations under the License.
 */
 
-@import "../vars/css/components/spectrum-search.css";
-
 .spectrum-Search {
-  --spectrum-search-quiet-button-offset: calc(var(--spectrum-actionbutton-m-texticon-min-width) / 2 - var(--spectrum-alias-ui-icon-cross-size-100) / 2); /* TODO this seems more complicated than necessary */
+  /* Size / Spacing */
+  --spectrum-search-inline-size: var(--spectrum-field-width);
+  --spectrum-search-block-size: var(--spectrum-component-height-100);
+  --spectrum-search-min-inline-size: calc(var(--spectrum-search-field-minimum-width-multiplier) * var(--spectrum-search-block-size));
+  --spectrum-search-icon-size: var(--spectrum-workflow-icon-size-100);
+
+  --spectrum-search-edge-to-visual: var(--spectrum-component-edge-to-visual-100);
+  --spectrum-search-edge-to-text: var(--spectrum-component-edge-to-text-100);
+  --spectrum-search-text-to-icon: var(--spectrum-text-to-visual-100);
+
+  /* Border */
+  --spectrum-search-border-radius: var(--spectrum-corner-radius-100);
+  --spectrum-search-border-width: var(--spectrum-border-width-100);
+}
+
+.spectrum-Search--sizeS {
+  --spectrum-search-block-size: var(--spectrum-component-height-75);
+  --spectrum-search-icon-size: var(--spectrum-workflow-icon-size-75);
+
+  --spectrum-search-edge-to-visual: var(--spectrum-component-edge-to-visual-75);
+  --spectrum-search-edge-to-text: var(--spectrum-component-edge-to-text-75);
+  --spectrum-search-text-to-icon: var(--spectrum-text-to-visual-75);
+}
+
+.spectrum-Search--sizeM {
+  --spectrum-search-block-size: var(--spectrum-component-height-100);
+  --spectrum-search-icon-size: var(--spectrum-workflow-icon-size-100);
+
+  --spectrum-search-edge-to-visual: var(--spectrum-component-edge-to-visual-100);
+  --spectrum-search-edge-to-text: var(--spectrum-component-edge-to-text-100);
+  --spectrum-search-text-to-icon: var(--spectrum-text-to-visual-100);
+}
+
+.spectrum-Search--sizeL {
+  --spectrum-search-block-size: var(--spectrum-component-height-200);
+  --spectrum-search-icon-size: var(--spectrum-workflow-icon-size-200);
+
+  --spectrum-search-edge-to-visual: var(--spectrum-component-edge-to-visual-200);
+  --spectrum-search-edge-to-text: var(--spectrum-component-edge-to-text-200);
+  --spectrum-search-text-to-icon: var(--spectrum-text-to-visual-200);
+}
+
+.spectrum-Search--sizeXL {
+  --spectrum-search-block-size: var(--spectrum-component-height-300);
+  --spectrum-search-icon-size: var(--spectrum-workflow-icon-size-300);
+
+  --spectrum-search-edge-to-visual: var(--spectrum-component-edge-to-visual-300);
+  --spectrum-search-edge-to-text: var(--spectrum-component-edge-to-text-300);
+  --spectrum-search-text-to-icon: var(--spectrum-text-to-visual-300);
+}
+
+.spectrum-Search--quiet {
+  --spectrum-search-quiet-button-offset: calc(
+    (var(--mod-search-block-size, var(--spectrum-search-block-size)) / 2) - 
+    (var(--mod-workflow-icon-size-100, var(--spectrum-workflow-icon-size-100)) / 2)
+  );
+  --spectrum-search-border-radius: 0;
 }
 
 .spectrum-Search {
   display: inline-block;
   position: relative;
+  inline-size: var(--mod-search-inline-size, var(--spectrum-search-inline-size));
+  min-inline-size: var(--mod-search-min-inline-size, var(--spectrum-search-min-inline-size));
 }
 
 .spectrum-Search-clearButton {
   position: absolute;
   inset-inline-end: 0;
   inset-block-start: 0;
+}
+
+.spectrum-Search-textfield {
+  inline-size: 100%;
 }
 
 .spectrum-Search-input {
@@ -41,43 +101,36 @@ governing permissions and limitations under the License.
     -webkit-appearance: none;
   }
 
-  border-radius: var(--spectrum-alias-search-border-radius);
+  border-radius: var(--mod-search-border-radius, var(--spectrum-search-border-radius));
+  border-width: var(--mod-search-border-width, var(--spectrum-search-border-width));
 }
 
+/* Focus Indicator (Ring) */
 .spectrum-Search-textfield {
   &:after {
-    border-radius: var(--spectrum-alias-search-border-radius);
+    border-radius: var(--mod-search-border-radius, var(--spectrum-search-border-radius));
   }
 }
 
+/* Standard / Default */
 .spectrum-Search:not(.spectrum-Search--quiet) {
   .spectrum-Search-icon {
-    /* todo: when we add t-shirt sizing, this will be wrong ❤️ */
-    inset-inline-start: var(--spectrum-alias-search-padding-left-m);
+    inset-inline-start: var(--mod-search-edge-to-visual, var(--spectrum-search-edge-to-visual));
   }
+
   .spectrum-Search-input {
-    /* todo: when we add t-shirt sizing, this will be wrong ❤️ */
     padding-inline-start: calc(
-      var(--spectrum-alias-search-padding-left-m) +
-        var(--spectrum-alias-workflow-icon-size-m) +
-        var(--spectrum-textfield-m-texticon-icon-gap) -
-        var(--spectrum-textfield-m-texticon-border-size)
+      var(--mod-search-edge-to-visual, var(--spectrum-search-edge-to-visual)) +
+      var(--mod-search-icon-size, var(--spectrum-search-icon-size)) +
+      var(--mod-search-text-to-icon, var(--spectrum-search-text-to-icon))
     );
+    padding-inline-end: var(--mod-search-edge-to-text, var(--spectrum-search-edge-to-text));
   }
 }
 
+/* Quiet Variant (no visible background) */
 .spectrum-Search--quiet {
   .spectrum-Search-clearButton {
-    transform: translateX(var(--spectrum-search-quiet-button-offset));
-  }
-
-  .spectrum-Search-input {
-    border-radius: var(--spectrum-alias-search-border-radius-quiet);
-  }
-
-  .spectrum-Search-textfield {
-    &:after {
-      border-radius: var(--spectrum-alias-search-border-radius-quiet);
-    }
+    transform: translateX(var(--mod-search-quiet-button-offset, var(--spectrum-search-quiet-button-offset)));
   }
 }
