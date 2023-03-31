@@ -10,7 +10,7 @@ on:
 jobs:
   build:
     if: contains(github.event.pull_request.labels.*.name, 'run_vrt')
-    
+
     runs-on: ubuntu-latest
 
     steps:
@@ -28,9 +28,10 @@ jobs:
         uses: chromaui/action@v1
         with:
           projectToken: ${{ secrets.CHROMATIC_PROJECT_TOKEN }}
-          dryRun: true
-          buildScriptName: "test"
+          buildScriptName: "build"
+          workingDir: tools/preview
           storybookBaseDir: tools/preview
+          storybookConfigDir: tools/preview
           exitOnceUploaded: true
           onlyChanged: true
           traceChanged: true
