@@ -13,7 +13,7 @@ governing permissions and limitations under the License.
   --spectrum-colorhandle-focused-size: var(--spectrum-color-handle-size-key-focus);
   --spectrum-colorhandle-hitarea-size: var(--spectrum-color-control-track-width);
 
-  --spectrum-colorhandle-animation-duration: var(--spectrum-animation-duration-100);
+  --spectrum-colorhandle-animation-duration: 3s;
   --spectrum-colorhandle-animation-easing: ease-in-out;
 
   /* outer border as box shadow on the colorhandle */
@@ -42,11 +42,11 @@ governing permissions and limitations under the License.
   position: absolute;
   z-index: 1; /* Be above */
   box-sizing: border-box;
-  width: var(--mod-colorhandle-size, var(--spectrum-colorhandle-size));
-  height: var(--mod-colorhandle-size, var(--spectrum-colorhandle-size));
+  inline-size: var(--mod-colorhandle-size, var(--spectrum-colorhandle-size));
+  block-size: var(--mod-colorhandle-size, var(--spectrum-colorhandle-size));
 
-  margin-left: calc(-1 * calc(var(--mod-colorhandle-size, var(--spectrum-colorhandle-size)) / 2));
-  margin-top: calc(-1 * calc(var(--mod-colorhandle-size, var(--spectrum-colorhandle-size)) / 2));
+  margin-inline-start: calc(-1 * calc(var(--mod-colorhandle-size, var(--spectrum-colorhandle-size)) / 2));
+  margin-block-start: calc(-1 * calc(var(--mod-colorhandle-size, var(--spectrum-colorhandle-size)) / 2));
 
   border-width: var(--mod-colorhandle-border-width, var(--spectrum-colorhandle-border-width));
   border-color: var(--highcontrast-colorhandle-border-color, var(--mod-colorhandle-border-color, var(--spectrum-colorhandle-border-color)));
@@ -80,16 +80,16 @@ governing permissions and limitations under the License.
     inset-block: calc(50% - calc(var(--mod-colorhandle-hitarea-size, var(--spectrum-colorhandle-hitarea-size)) / 2));
     position: absolute;
     display: block;
-    width: var(--mod-colorhandle-hitarea-size, var(--spectrum-colorhandle-hitarea-size));
-    height: var(--mod-colorhandle-hitarea-size, var(--spectrum-colorhandle-hitarea-size));
+    inline-size: var(--mod-colorhandle-hitarea-size, var(--spectrum-colorhandle-hitarea-size));
+    block-size: var(--mod-colorhandle-hitarea-size, var(--spectrum-colorhandle-hitarea-size));
   }
 
   &:focus,
   &.is-focused,
   &.focus-ring {
       /* Bigger handle when focused */
-      width: var(--mod-colorhandle-focused-size, var(--spectrum-colorhandle-focused-size));
-      height: var(--mod-colorhandle-focused-size, var(--spectrum-colorhandle-focused-size));
+      inline-size: var(--mod-colorhandle-focused-size, var(--spectrum-colorhandle-focused-size));
+      block-size: var(--mod-colorhandle-focused-size, var(--spectrum-colorhandle-focused-size));
 
       margin-inline: calc(-1 * var(--mod-colorhandle-size, var(--spectrum-colorhandle-size)));
       margin-block: calc(-1 * var(--mod-colorhandle-size, var(--spectrum-colorhandle-size)));
@@ -109,8 +109,8 @@ governing permissions and limitations under the License.
 
 .spectrum-ColorHandle-inner {
   border-radius: 100%;
-  width: 100%;
-  height: 100%;
+  inline-size: 100%;
+  block-size: 100%;
   box-shadow: inset 0 0 0 var(--mod-colorhandle-inner-border-width, var(--spectrum-colorhandle-inner-border-width)) var(--mod-colorhandle-inner-border-color, var(--spectrum-colorhandle-inner-border-color));
   background-color: var(--spectrum-picked-color);
 }
