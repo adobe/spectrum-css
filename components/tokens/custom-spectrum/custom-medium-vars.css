@@ -28,6 +28,7 @@ governing permissions and limitations under the License.
 
   /* TODO: --spectrum-color-handle-size will need to be removed here once it's defined in @adobe/spectrum-tokens */
   --spectrum-color-handle-size: 16px;
+  --spectrum-colorloupe-checkerboard-fill: url(#checkerboard-primary);
 
   --spectrum-menu-item-selectable-edge-to-text-not-selected-small: 28px;
   --spectrum-menu-item-selectable-edge-to-text-not-selected-medium: 32px;

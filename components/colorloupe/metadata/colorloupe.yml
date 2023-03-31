@@ -17,9 +17,13 @@ examples:
             <rect x="0" y="0" height="100" width="100" fill="white"/>
             <use xlink:href="#path" fill="black" />
           </mask>
-          <pattern id="checkerboard" patternUnits="userSpaceOnUse" width="16" height="16" class="checkerboard-pattern">
-            <rect class="checkerboard-pattern-rect1" />
-            <rect class="checkerboard-pattern-rect2" />
+          <pattern id="checkerboard-primary" patternUnits="userSpaceOnUse" width="16" height="16" class="checkerboard-pattern">
+            <rect x="0" y="0" width="8" height="8" />
+            <rect x="8" y="8" width="8" height="8" />
+          </pattern>
+          <pattern id="checkerboard-secondary" patternUnits="userSpaceOnUse" width="20" height="20" class="checkerboard-pattern">
+            <rect x="0" y="0" width="10" height="10" />
+            <rect x="10" y="10" width="10" height="10" />
           </pattern>
           <clipPath id="loupe-clip">
             <use xlink:href="#loupe-path" />
@@ -31,7 +35,7 @@ examples:
           </g>
           <g>
             <use xlink:href="#loupe-path" class="checkerboard-background" />
-            <use xlink:href="#loupe-path" fill="url(#checkerboard)"/>
+            <use xlink:href="#loupe-path" class="checkerboard-fill" />
             <use xlink:href="#loupe-path" class="spectrum-ColorLoupe-inner-border" />
             <use xlink:href="#loupe-path" mask="url(#loupe-mask)" class="spectrum-ColorLoupe-outer-border" />
           </g>
