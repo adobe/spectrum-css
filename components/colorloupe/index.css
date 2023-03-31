@@ -25,7 +25,6 @@ governing permissions and limitations under the License.
   --spectrum-colorloupe-outer-border-color: var(--spectrum-color-loupe-outer-border);
   --spectrum-colorloupe-inner-border-color: var(--spectrum-color-loupe-inner-border);
 
-  /* --spectrum-colorloupe-checkerboard-size: var(--spectrum-opacity-checkerboard-square-size); */
   --spectrum-colorloupe-checkerboard-dark-color: var(--spectrum-opacity-checkerboard-square-dark);
   --spectrum-colorloupe-checkerboard-light-color: var(--spectrum-opacity-checkerboard-square-light);
 }
@@ -67,20 +66,6 @@ governing permissions and limitations under the License.
   stroke: var(--highcontrast-colorloupe-outer-border-color, var(--mod-colorloupe-outer-border-color, var(--spectrum-colorloupe-outer-border-color)));
   stroke-width: var(--mod-colorloupe-outer-border-width, var(--spectrum-colorloupe-outer-border-width));
 }
-/*
-.checkerboard-pattern-square-1 {
-  x: 0;
-  y: 0;
-  width: var(--spectrum-colorloupe-checkerboard-size);
-  height: var(--spectrum-colorloupe-checkerboard-size);
-}
-
-.checkerboard-pattern-square-2 {
-  x: var(--spectrum-colorloupe-checkerboard-size);
-  y: var(--spectrum-colorloupe-checkerboard-size);
-  width: var(--spectrum-colorloupe-checkerboard-size);
-  height: var(--spectrum-colorloupe-checkerboard-size);
-} */
 
 .checkerboard-pattern {
   fill: var(--spectrum-colorloupe-checkerboard-dark-color);
