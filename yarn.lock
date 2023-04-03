@@ -7279,6 +7279,11 @@ easy-extender@^2.3.4:
   dependencies:
     lodash "^4.17.10"
 
+easy-transform-stream@^1.0.0:
+  version "1.0.0"
+  resolved "https://registry.yarnpkg.com/easy-transform-stream/-/easy-transform-stream-1.0.0.tgz#bdc34218421e981a6fb9cc68b442dae0cd09d728"
+  integrity sha512-kIEXvPNtqUQ/lrgkULIP0/l2m88Ahlk2ySZhmuLdRidXBIEPyHuDgDt04b9DvnCy+nIQDjpygVft+Op3PZFUQg==
+
 eazy-logger@^4.0.1:
   version "4.0.1"
   resolved "https://registry.yarnpkg.com/eazy-logger/-/eazy-logger-4.0.1.tgz#2e9fe487fb14ed6ac20d5f01d90dff377d403041"
@@ -17266,12 +17271,12 @@ vinyl-fs@^3.0.0:
     vinyl "^2.0.0"
     vinyl-sourcemap "^1.1.0"
 
-vinyl-paths@^3.0.1:
-  version "3.0.1"
-  resolved "https://registry.yarnpkg.com/vinyl-paths/-/vinyl-paths-3.0.1.tgz#16b42404e21ebddfb75954863f553af3345d56b5"
-  integrity sha512-fpjimhur1emSbJSvy5dJjDklCFEh2LvQRSHPzMQlYFjPrdFMHAyzSe1fiLzykoqg9X2tqH8evhsOUDNT55a0sw==
+vinyl-paths@^5.0.0:
+  version "5.0.0"
+  resolved "https://registry.yarnpkg.com/vinyl-paths/-/vinyl-paths-5.0.0.tgz#fc59c79e61479daa371e22553cd0d82ee3027a66"
+  integrity sha512-mlclGXHx/ZWInRh92Ti/qaJAZSDmfXL9TsUVs5z8mKueiS76GtVaZYD2vEtm4RePAt69vGZGHKe5d790CPcd1g==
   dependencies:
-    through2 "^3.0.1"
+    easy-transform-stream "^1.0.0"
 
 vinyl-sourcemap@^1.1.0:
   version "1.1.0"
