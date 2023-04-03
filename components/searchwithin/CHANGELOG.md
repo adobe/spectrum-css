@@ -3,6 +3,23 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+<a name="4.0.0"></a>
+# 4.0.0
+🗓 2023-04-03 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/searchwithin@3.4.41...@spectrum-css/searchwithin@4.0.0)
+
+* fix(tokens)!: rgb transform to split out rgb values from css attributes (#1590) ([b714db4](https://github.com/adobe/spectrum-css/commit/b714db4)), closes [#1590](https://github.com/adobe/spectrum-css/issues/1590)
+
+
+### 🛑 BREAKING CHANGES
+
+* transforms color tokens to split out their `rgb` values
+
+Co-authored-by: castastrophe <castastrophe@users.noreply.github.com>
+
+
+
+
+
 <a name="3.4.41"></a>
 ## 3.4.41
 🗓 2023-03-31 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/searchwithin@3.4.40...@spectrum-css/searchwithin@3.4.41)

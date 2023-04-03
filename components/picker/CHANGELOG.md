@@ -3,6 +3,23 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+<a name="3.0.0"></a>
+# 3.0.0
+🗓 2023-04-03 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/picker@2.0.11...@spectrum-css/picker@3.0.0)
+
+* fix(tokens)!: rgb transform to split out rgb values from css attributes (#1590) ([b714db4](https://github.com/adobe/spectrum-css/commit/b714db4)), closes [#1590](https://github.com/adobe/spectrum-css/issues/1590)
+
+
+### 🛑 BREAKING CHANGES
+
+* transforms color tokens to split out their `rgb` values
+
+Co-authored-by: castastrophe <castastrophe@users.noreply.github.com>
+
+
+
+
+
 <a name="2.0.11"></a>
 ## 2.0.11
 🗓 2023-03-31 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/picker@2.0.10...@spectrum-css/picker@2.0.11)
