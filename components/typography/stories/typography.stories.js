@@ -45,7 +45,8 @@ export default {
         category: "Component"
       },
       options: ["serif", "sans-serif"],
-      control: "inline-radio"
+      control: "inline-radio",
+      if: { arg: "semantics", neq: "code" } 
     },
     content: { table: { disable: true } },
   },
@@ -107,6 +108,7 @@ Heading.args = {
 export const Body = Template.bind({});
 Body.argTypes = {
   size: {
+    name: "Size",
     options: ["xs", "s", "m", "l", "xl", "xxl", "xxxl"],
   },
 };
@@ -118,6 +120,7 @@ Body.args = {
 export const Detail = Template.bind({});
 Detail.argTypes = {
   size: {
+    name: "Size",
     options: ["s", "m", "l", "xl"],
   },
   weight: {
@@ -139,6 +142,7 @@ Detail.args = {
 export const Code = Template.bind({});
 Code.argTypes = {
   size: {
+    name: "Size",
     options: ["xs", "s", "m", "l", "xl"],
   },
 };
