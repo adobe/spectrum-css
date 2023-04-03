@@ -50,20 +50,6 @@ governing permissions and limitations under the License.
   border-radius: var(--mod-colorarea-border-radius, var(--spectrum-colorarea-border-radius));
   border: var(--mod-colorarea-border-width, var(--spectrum-colorarea-border-width)) solid var(--highcontrast-colorarea-border-color, var(--mod-colorarea-border-color, var(--spectrum-colorarea-border-color)));
 
-  &:focus,
-  &.is-focused,
-  &.focus-ring {
-    .spectrum-ColorArea-handle {
-      /* Bigger handle when focused */
-      inline-size: var(--spectrum-color-handle-size-key-focus);
-      block-size: var(--spectrum-color-handle-size-key-focus);
-
-      margin-inline: calc(-1 * var(--spectrum-color-handle-size));
-      margin-block: calc(-1 * var(--spectrum-color-handle-size));
-      outline: none;
-    }
-  }
-
   &.is-disabled {
     pointer-events: none;
     background: var(--highcontrast-colorarea-fill-color-disabled, var(--mod-colorarea-disabled-background-color, var(--spectrum-colorarea-disabled-background-color)));
