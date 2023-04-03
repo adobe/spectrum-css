@@ -68,9 +68,13 @@ function runComponentTask(packageDir, task, callback) {
   Run a task on every component in dependency order
 */
 async function runTaskOnAllComponents(task) {
-  let components = await depUtils.getFolderDependencyOrder(dirs.components);
-
-  components = components.map(component => path.join(dirs.components, component.split('/').pop()));
+  const components = await depUtils.getFolderDependencyOrder(dirs.components).then(result =>
+    result
+      // Remove tokens from the list of components, it only builds when installed or the version is updated
+      .filter(component => ['@spectrum-css/tokens', '@spectrum-css/vars', '@spectrum-css/expressvars'].every(c => c !== component))
+      // Turn the package names into a path to the component directory
+      .map(component => path.dirname(require.resolve(`${component}/package.json`)))
+  ).catch(console.error);
 
   return runTaskOnPackages(task, components);
 }

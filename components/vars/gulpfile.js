@@ -10,25 +10,12 @@ OF ANY KIND, either express or implied. See the License for the specific languag
 governing permissions and limitations under the License.
 */
 
-const gulp = require('gulp');
-const logger = require('gulplog');
-const fs = require('fs');
-const concat = require('gulp-concat');
-const replace = require('gulp-replace');
-const del = require('del');
 const path = require('path');
 
-function clean() {
-  return del('dist/*');
-}
-
-function prepareBuild(cb) {
-  var dir = 'dist';
-  if (!fs.existsSync(dir)){
-    fs.mkdirSync(dir);
-  }
-  cb();
-}
+const gulp = require('gulp');
+const concat = require('gulp-concat');
+const replace = require('gulp-replace');
+const insert = require('gulp-insert');
 
 function copyGlobals() {
   return gulp.src([
@@ -41,7 +28,7 @@ function copyGlobals() {
 }
 
 function copySources() {
-  let classMap = {
+  const classMap = {
     'spectrum-darkest.css': '.spectrum--darkest',
     'spectrum-dark.css': '.spectrum--dark',
     'spectrum-light.css': '.spectrum--light',
@@ -54,13 +41,11 @@ function copySources() {
       'css/themes/*.css',
       'css/scales/*.css'
     ])
-    .pipe(replace(':root', function (match){
+    .pipe(replace(':root', function () {
       return classMap[path.basename(this.file.path)];
     }))
     .pipe(gulp.dest('dist/'));
 }
-
-const insert = require('gulp-insert');
 
 function concatGlobalsFinal() {
   return gulp.src([
@@ -69,7 +54,7 @@ function concatGlobalsFinal() {
     'dist/globals/spectrum-colorAliases.css',
     'custom.css'
   ])
-    .pipe(replace(/{/, function(match) {
+    .pipe(replace(/{/, function () {
       if (this.file.path.match('Aliases.css')) {
         return `{\n  /* ${path.basename(this.file.path)} */`;
       }
@@ -86,7 +71,7 @@ function concatGlobalsTemp() {
     '!css/globals/spectrum-dimensionAliases.css',
     '!css/globals/spectrum-colorAliases.css'
   ])
-    .pipe(replace(/:root {/, function(match) {
+    .pipe(replace(/:root {/, function() {
       return `  /* ${path.basename(this.file.path)} */`;
     }))
     .pipe(replace(/}/, ''))
@@ -97,30 +82,26 @@ function concatGlobalsTemp() {
 }
 
 function processColorAliases() {
-  var colorStops = [
-    'darkest',
-    'dark',
-    'light',
-    'lightest'
-  ];
-
   return gulp.src([
     'css/globals/spectrum-colorAliases.css'
   ])
-    .pipe(replace(/:root/, colorStops.map(stop => `.spectrum--${stop}`).join(',\n')))
+    .pipe(replace(/:root/, [
+      'darkest',
+      'dark',
+      'light',
+      'lightest'
+    ].map(stop => `.spectrum--${stop}`).join(',\n')))
     .pipe(gulp.dest('dist/globals/'));
 }
 
 function processDimensionAliases() {
-  var scales = [
-    'medium',
-    'large'
-  ];
-
   return gulp.src([
     'css/globals/spectrum-dimensionAliases.css'
   ])
-    .pipe(replace(/:root/, scales.map(scale => `.spectrum--${scale}`).join(',\n')))
+    .pipe(replace(/:root/, [
+      'medium',
+      'large'
+    ].map(scale => `.spectrum--${scale}`).join(',\n')))
     .pipe(gulp.dest('dist/globals/'));
 }
 
@@ -138,9 +119,7 @@ function copyMetadata() {
     .pipe(gulp.dest('dist/'));
 }
 
-let build = gulp.series(
-  clean,
-  prepareBuild,
+const build = gulp.series(
   gulp.parallel(
     copyMetadata,
     copyGlobals,
@@ -153,11 +132,7 @@ let build = gulp.series(
   concatGlobalsFinal
 );
 
-exports.update = gulp.series(
-  require('./tasks/updateDNA').updateDNA,
-  build
-);
+exports.update = require('./tasks/updateDNA').updateDNA;
 
-exports.clean = clean;
 exports.default = build;
 exports.build = exports.buildLite = exports.buildHeavy = exports.buildMedium = build;

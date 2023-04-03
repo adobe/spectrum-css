@@ -25,19 +25,18 @@ const subrunner = require('./subrunner');
 const release = require('./release');
 const vars = require('./vars');
 
-function clean() {
-  let globs = [
-    'dist/*',
-    '!dist/preview'
-  ];
+async function clean() {
+  let globs = ['dist/*', '!dist/preview'];
 
   // Don't delete the dist folder inside of installed packages
   if (process.cwd() === dirs.topLevel) {
-    globs.push(`${dirs.components}/*/dist/*`);
+    globs.push(`${dirs.components}/!(tokens|*vars)/dist/*`);
   }
 
   return del(globs);
 }
+
+const buildDocs = gulp.parallel(docs.build, copyPackages);
 
 // Combined
 function concatPackageFiles(taskName, input, output, directory) {
@@ -133,10 +132,9 @@ function copyPackages() {
 
 function buildIfTopLevel() {
   let builtTasks = gulp.parallel(
-    docs.build,
     buildCombined,
     buildStandalone,
-    copyPackages
+    buildDocs
   );
 
   if (process.cwd() === dirs.topLevel) {
@@ -162,10 +160,7 @@ let buildLite = gulp.series(
   function buildComponentsLite() {
     return subrunner.runTaskOnAllComponents('buildLite');
   },
-  gulp.parallel(
-    docs.build,
-    copyPackages
-  )
+  buildDocs
 );
 
 let buildMedium = gulp.series(
@@ -173,10 +168,7 @@ let buildMedium = gulp.series(
   function buildComponentsLite() {
     return subrunner.runTaskOnAllComponents('buildMedium');
   },
-  gulp.parallel(
-    docs.build,
-    copyPackages
-  )
+  buildDocs
 );
 
 let buildHeavy = gulp.series(
@@ -184,10 +176,7 @@ let buildHeavy = gulp.series(
   function buildComponentsLite() {
     return subrunner.runTaskOnAllComponents('buildHeavy');
   },
-  gulp.parallel(
-    docs.build,
-    copyPackages
-  )
+  buildDocs
 );
 
 let devTask;
@@ -197,16 +186,11 @@ if (process.cwd() === dirs.topLevel) {
     buildLite,
     dev.watch
   );
-}
-else {
+} else {
   // Otherwise, just start watching
   devTask = gulp.series(
     clean,
-    gulp.parallel(
-      docs.build,
-
-      copyPackages
-    ),
+    buildDocs,
     dev.watch
   );
 }
@@ -241,7 +225,10 @@ exports.buildComponents = subrunner.buildComponents;
 exports.buildCombined = buildCombined;
 exports.buildStandalone = buildStandalone;
 exports.buildLite = buildLite;
-exports.buildDocs = docs.buildDocs;
+exports.buildDocs = gulp.series(
+  buildDocs,
+  docs.buildDocs
+);
 exports.buildDepenenciesOfCommons = buildDepenenciesOfCommons;
 exports.copyPackages = copyPackages;
 exports.dev = devTask;
