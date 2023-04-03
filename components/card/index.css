@@ -49,8 +49,9 @@ governing permissions and limitations under the License.
   --spectrum-card-actions-spacing: var(--spectrum-spacing-300);
   --spectrum-card-actions-size: var(--spectrum-card-selection-background-size);
   --spectrum-card-actions-border-radius: var(--spectrum-corner-radius-100);
-  /* --spectrum-card-actions-background-color: var(--spectrum-card-selection-background-color); */
-  /* --spectrum-card-actions-background-color-opacity: var(--spectrum-card-selection-background-color-opacity); Not using this yet  */
+  /* TODO update to --spectrum-card-selection-background-color token once an RGB stripped value is available */
+  --spectrum-card-actions-background-color-rgb: var(--spectrum-gray-100-rgb);
+  --spectrum-card-actions-background-color-opacity: var(--spectrum-card-selection-background-color-opacity);
   --spectrum-card-actions-drop-shadow-color: var(--spectrum-drop-shadow-color);
   --spectrum-card-actions-drop-shadow-x: var(--spectrum-drop-shadow-x);
   --spectrum-card-actions-drop-shadow-y: var(--spectrum-drop-shadow-y);
@@ -184,6 +185,7 @@ governing permissions and limitations under the License.
   inline-size: var(--mod-card-actions-size, var(--spectrum-card-actions-size));
   block-size: var(--mod-card-actions-size, var(--spectrum-card-actions-size));
   border-radius: var(--mod-card-actions-border-radius, var(--spectrum-card-actions-border-radius));
+  background-color: rgba(var(--mod-card-actions-background-color-rgb, var(--spectrum-card-actions-background-color-rgb)), var(--mod-card-actions-background-color-opacity, var(--spectrum-card-actions-background-color-opacity)));
 
 
   /* hack to work around #124 */
