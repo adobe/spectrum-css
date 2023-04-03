@@ -88,7 +88,7 @@ function buildDocs_html() {
         };
       }))
       .pipe(through.obj(function compilePug(file, enc, cb) {
-          let data = Object.assign({}, { component: yaml.safeLoad(String(file.contents)) }, file.data || {});
+          let data = Object.assign({}, { component: yaml.load(String(file.contents)) }, file.data || {});
 
           file.path = ext(file.path, '.html');
 
