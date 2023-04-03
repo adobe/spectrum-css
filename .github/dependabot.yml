@@ -22,6 +22,10 @@ updates:
       - dependency-name: "@storybook/*"
         versions: ["7.x"]
       - dependency-name: "@spectrum-css/*"
+      # Ignore postcss versions until build migration complete
+      - dependency-name: "postcss*"
+      # Ignore gulp versions until build migration complete
+      - dependency-name: "gulp*"
 
   - package-ecosystem: "github-actions"
     directory: "/"
