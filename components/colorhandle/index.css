@@ -63,11 +63,11 @@ governing permissions and limitations under the License.
 
   /* Add a half-percent to fix diagonal line issue in Chrome on non-retina displays */
   transition:
-    width var(--mod-colorhandle-animation-duration, var(--spectrum-colorhandle-animation-duration)) var(--mod-colorhandle-animation-easing, var(--spectrum-colorhandle-animation-easing)),
-    height var(--mod-colorhandle-animation-duration, var(--spectrum-colorhandle-animation-duration))  var(--mod-colorhandle-animation-easing, var(--spectrum-colorhandle-animation-easing)),
+    inline-size var(--mod-colorhandle-animation-duration, var(--spectrum-colorhandle-animation-duration)) var(--mod-colorhandle-animation-easing, var(--spectrum-colorhandle-animation-easing)),
+    block-size var(--mod-colorhandle-animation-duration, var(--spectrum-colorhandle-animation-duration))  var(--mod-colorhandle-animation-easing, var(--spectrum-colorhandle-animation-easing)),
     border-width var(--mod-colorhandle-animation-duration, var(--spectrum-colorhandle-animation-duration))  var(--mod-colorhandle-animation-easing, var(--spectrum-colorhandle-animation-easing)),
-    margin-left var(--mod-colorhandle-animation-duration, var(--spectrum-colorhandle-animation-duration))  var(--mod-colorhandle-animation-easing, var(--spectrum-colorhandle-animation-easing)),
-    margin-top var(--mod-colorhandle-animation-duration, var(--spectrum-colorhandle-animation-duration))  var(--mod-colorhandle-animation-easing, var(--spectrum-colorhandle-animation-easing));
+    margin-inline var(--mod-colorhandle-animation-duration, var(--spectrum-colorhandle-animation-duration))  var(--mod-colorhandle-animation-easing, var(--spectrum-colorhandle-animation-easing)),
+    margin-block var(--mod-colorhandle-animation-duration, var(--spectrum-colorhandle-animation-duration))  var(--mod-colorhandle-animation-easing, var(--spectrum-colorhandle-animation-easing));
 
   &,
   &:after {
