@@ -2509,6 +2509,11 @@
   resolved "https://registry.yarnpkg.com/@spectrum-css/tooltip/-/tooltip-3.1.20.tgz#c3b6cf274be3ed552f86534f1fede7169827dc83"
   integrity sha512-37knTGAjj4GE22M3MQrLa4PyecEc07xOZIle9igfRohXUwHv6ZIyoqy2/cQfmBkeGP6iGEzy8oKJp4nbBKZGsQ==
 
+"@spectrum-css/vars@^8.0.0":
+  version "8.0.5"
+  resolved "https://registry.yarnpkg.com/@spectrum-css/vars/-/vars-8.0.5.tgz#b7d5bf77b6fd05a3ba4d174cc094a7c1c86b0c0d"
+  integrity sha512-62FAqSmAj1LJd+TxEAh7dP6K+AF8gZtvgNiesUEg1ep/hyzefRD9gbtRlMH5O6DGeOlxOByRBaIbDFYPzwSfsw==
+
 "@storybook/addon-a11y@^6.5.15":
   version "6.5.16"
   resolved "https://registry.yarnpkg.com/@storybook/addon-a11y/-/addon-a11y-6.5.16.tgz#9288a6c1d111fa4ec501d213100ffff91757d3fc"
@@ -3949,7 +3954,7 @@ JSONStream@^1.0.4:
     jsonparse "^1.2.0"
     through ">=2.2.7 <3"
 
-abab@^2.0.5:
+abab@^2.0.6:
   version "2.0.6"
   resolved "https://registry.yarnpkg.com/abab/-/abab-2.0.6.tgz#41b80f2c871d19686216b82309231cfd3cb3d291"
   integrity sha512-j2afSsaIENvHZN2B8GOpF566vZ5WVk5opAiMTvWgaQT8DkbOqsTfvNAvHoRGU2zzP8cPoqys+xHTRDWW8L+/BA==
@@ -9631,7 +9636,7 @@ iconv-lite@0.4.24, iconv-lite@^0.4.24:
   dependencies:
     safer-buffer ">= 2.1.2 < 3"
 
-iconv-lite@^0.6.2:
+iconv-lite@^0.6.2, iconv-lite@^0.6.3:
   version "0.6.3"
   resolved "https://registry.yarnpkg.com/iconv-lite/-/iconv-lite-0.6.3.tgz#a52f80bf38da1952eb5c681790719871a1a72501"
   integrity sha512-4fCk79wshMdzMp2rH06qWrJE4iolqLhCUH+OiuIgU++RB0+94NlDL81atO7GX55uUKueo0txHNtvEyI6D7WdMw==
@@ -15851,17 +15856,14 @@ source-map-js@^1.0.2:
   resolved "https://registry.yarnpkg.com/source-map-js/-/source-map-js-1.0.2.tgz#adbc361d9c62df380125e7f161f71c826f1e490c"
   integrity sha512-R0XvVJ9WusLiqTCEiGCmICCMplcCkIwwR11mOSD9CR5u+IXYdiseeEuXCVAjS54zqwkLcPNnmU4OeJ6tUrWhDw==
 
-source-map-loader@^1.0.0:
-  version "1.1.3"
-  resolved "https://registry.yarnpkg.com/source-map-loader/-/source-map-loader-1.1.3.tgz#7dbc2fe7ea09d3e43c51fd9fc478b7f016c1f820"
-  integrity sha512-6YHeF+XzDOrT/ycFJNI53cgEsp/tHTMl37hi7uVyqFAlTXW109JazaQCkbc+jjoL2637qkH1amLi+JzrIpt5lA==
+source-map-loader@^4.0.1:
+  version "4.0.1"
+  resolved "https://registry.yarnpkg.com/source-map-loader/-/source-map-loader-4.0.1.tgz#72f00d05f5d1f90f80974eda781cbd7107c125f2"
+  integrity sha512-oqXpzDIByKONVY8g1NUPOTQhe0UTU5bWUl32GSkqK2LjJj0HmwTMVKxcUip0RgAYhY1mqgOxjbQM48a0mmeNfA==
   dependencies:
-    abab "^2.0.5"
-    iconv-lite "^0.6.2"
-    loader-utils "^2.0.0"
-    schema-utils "^3.0.0"
-    source-map "^0.6.1"
-    whatwg-mimetype "^2.3.0"
+    abab "^2.0.6"
+    iconv-lite "^0.6.3"
+    source-map-js "^1.0.2"
 
 source-map-resolve@^0.5.0:
   version "0.5.3"
@@ -17764,11 +17766,6 @@ well-known-symbols@^2.0.0:
   version "2.0.0"
   resolved "https://registry.yarnpkg.com/well-known-symbols/-/well-known-symbols-2.0.0.tgz#e9c7c07dbd132b7b84212c8174391ec1f9871ba5"
   integrity sha512-ZMjC3ho+KXo0BfJb7JgtQ5IBuvnShdlACNkKkdsqBmYw3bPAaJfPeYUo6tLUaT5tG/Gkh7xkpBhKRQ9e7pyg9Q==
-
-whatwg-mimetype@^2.3.0:
-  version "2.3.0"
-  resolved "https://registry.yarnpkg.com/whatwg-mimetype/-/whatwg-mimetype-2.3.0.tgz#3d4b1e0312d2079879f826aff18dbeeca5960fbf"
-  integrity sha512-M4yMwr6mAnQz76TbJm914+gPpB/nCwvZbJU28cUD6dR004SAxDLOOSUaB1JDRqLtaOV/vi0IC5lEAGFgrjGv/g==
 
 whatwg-url@^5.0.0:
   version "5.0.0"
