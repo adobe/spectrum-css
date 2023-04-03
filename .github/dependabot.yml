@@ -13,8 +13,8 @@ updates:
     rebase-strategy: "auto"
     versioning-strategy: "increase"
     ignore:
-      - "@spectrum-css/*"
-      
+      - dependency-name: "@spectrum-css/*"
+
   - package-ecosystem: "github-actions"
     directory: "/"
     schedule:
