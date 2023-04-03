@@ -17,12 +17,9 @@ governing permissions and limitations under the License.
   --spectrum-search-min-inline-size: calc(var(--spectrum-search-field-minimum-width-multiplier) * var(--spectrum-search-block-size));
   --spectrum-search-icon-size: var(--spectrum-workflow-icon-size-100);
 
-  --spectrum-search-edge-to-visual: var(--spectrum-component-edge-to-visual-100);
-  --spectrum-search-edge-to-text: var(--spectrum-component-edge-to-text-100);
   --spectrum-search-text-to-icon: var(--spectrum-text-to-visual-100);
+  --spectrum-search-to-help-text: var(--spectrum-help-text-to-component);
 
-  /* Border */
-  --spectrum-search-border-radius: var(--spectrum-corner-radius-100);
   --spectrum-search-border-width: var(--spectrum-border-width-100);
 
   /* Focus Indicator */
@@ -35,8 +32,6 @@ governing permissions and limitations under the License.
   --spectrum-search-block-size: var(--spectrum-component-height-75);
   --spectrum-search-icon-size: var(--spectrum-workflow-icon-size-75);
 
-  --spectrum-search-edge-to-visual: var(--spectrum-component-edge-to-visual-75);
-  --spectrum-search-edge-to-text: var(--spectrum-component-edge-to-text-75);
   --spectrum-search-text-to-icon: var(--spectrum-text-to-visual-75);
 }
 
@@ -44,8 +39,6 @@ governing permissions and limitations under the License.
   --spectrum-search-block-size: var(--spectrum-component-height-100);
   --spectrum-search-icon-size: var(--spectrum-workflow-icon-size-100);
 
-  --spectrum-search-edge-to-visual: var(--spectrum-component-edge-to-visual-100);
-  --spectrum-search-edge-to-text: var(--spectrum-component-edge-to-text-100);
   --spectrum-search-text-to-icon: var(--spectrum-text-to-visual-100);
 }
 
@@ -53,8 +46,6 @@ governing permissions and limitations under the License.
   --spectrum-search-block-size: var(--spectrum-component-height-200);
   --spectrum-search-icon-size: var(--spectrum-workflow-icon-size-200);
 
-  --spectrum-search-edge-to-visual: var(--spectrum-component-edge-to-visual-200);
-  --spectrum-search-edge-to-text: var(--spectrum-component-edge-to-text-200);
   --spectrum-search-text-to-icon: var(--spectrum-text-to-visual-200);
 }
 
@@ -62,8 +53,6 @@ governing permissions and limitations under the License.
   --spectrum-search-block-size: var(--spectrum-component-height-300);
   --spectrum-search-icon-size: var(--spectrum-workflow-icon-size-300);
 
-  --spectrum-search-edge-to-visual: var(--spectrum-component-edge-to-visual-300);
-  --spectrum-search-edge-to-text: var(--spectrum-component-edge-to-text-300);
   --spectrum-search-text-to-icon: var(--spectrum-text-to-visual-300);
 }
 
@@ -80,6 +69,10 @@ governing permissions and limitations under the License.
   position: relative;
   inline-size: var(--mod-search-inline-size, var(--spectrum-search-inline-size));
   min-inline-size: var(--mod-search-min-inline-size, var(--spectrum-search-min-inline-size));
+
+  .spectrum-HelpText {
+    margin-block-start: var(--mod-search-to-help-text, var(--spectrum-search-to-help-text));
+  }
 }
 
 .spectrum-Search-clearButton {
@@ -106,6 +99,7 @@ governing permissions and limitations under the License.
     -webkit-appearance: none;
   }
 
+  block-size: var(--mod-search-block-size, var(--spectrum-search-block-size));
   border-radius: var(--mod-search-border-radius, var(--spectrum-search-border-radius));
   border-width: var(--mod-search-border-width, var(--spectrum-search-border-width));
 }
