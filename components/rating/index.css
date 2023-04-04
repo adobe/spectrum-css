@@ -31,13 +31,12 @@ governing permissions and limitations under the License.
   --spectrum-rating-indicator-border-radius: var(--spectrum-corner-radius-75);
   /* Indicator height */
   --spectrum-rating-indicator-height: var(--spectrum-border-width-200);
-  /* Indicator spacing */
-  --spectrum-rating-indicator-spacing: var(--spectrum-rating-indicator-to-icon);
   /* Colors */
   /* selected + emphasized */
   --spectrum-rating-emphasized-icon-color-default: var(--spectrum-accent-content-color-default);
   --spectrum-rating-emphasized-icon-color-hover: var(--spectrum-accent-content-color-hover);
   --spectrum-rating-emphasized-icon-color-down: var(--spectrum-accent-content-color-down);
+  --spectrum-rating-emphasized-icon-color-key-focus: var(--spectrum-accent-content-color-key-focus);
 
   /* Disabled */
   --spectrum-rating-icon-color-disabled: var(--spectrum-disabled-content-color);
@@ -47,6 +46,10 @@ governing permissions and limitations under the License.
 .spectrum-Rating {
   &.is-focused {
     box-shadow: 0 0 0 var(--mod-rating-focus-indicator-thickness, var(--spectrum-rating-focus-indicator-thickness)) var(--highcontrast-rating-focus-indicator-color, var(--mod-rating-focus-indicator-color, var(--spectrum-rating-focus-indicator-color)));
+
+    .spectrum-Rating-icon.is-selected {
+      color: var(--highcontrast-rating-icon-color-key-focus, var(--mod-rating-icon-color-key-focus, var(--spectrum-rating-icon-color-key-focus)));
+    }
   }
 
   &:hover {
@@ -141,10 +144,6 @@ governing permissions and limitations under the License.
     }
   }
 
-  .temp {
-    inset-block-end: calc(var(--mod-rating-indicator-spacing, var(--spectrum-rating-indicator-spacing)) + var(--mod-rating-focus-indicator-gap, var(--spectrum-rating-focus-indicator-gap)));
-  }
-
   &.is-currentValue {
     &:after {
       border-radius: var(--mod-rating-indicator-border-radius, var(--spectrum-rating-indicator-border-radius));
@@ -190,6 +189,12 @@ governing permissions and limitations under the License.
 }
 
 .spectrum-Rating--emphasized {
+  &.is-focused {
+    .spectrum-Rating-icon.is-selected {
+      color: var(--highcontrast-rating-emphasized-icon-color-key-focus, var(--mod-rating-emphasized-icon-color-key-focus, var(--spectrum-rating-emphasized-icon-color-key-focus)));
+    }
+  }
+
   .spectrum-Rating-icon {
     color: var(--highcontrast-rating-icon-color-default, var(--mod-rating-icon-color-default, var(--spectrum-rating-icon-color-default)));
     
