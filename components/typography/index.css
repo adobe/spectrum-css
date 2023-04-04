@@ -42,10 +42,11 @@ governing permissions and limitations under the License.
 
   --spectrum-heading-cjk-letter-spacing: var(--spectrum-cjk-letter-spacing);
 
-  --spectrum-heading-margin-start: var(--spectrum-heading-margin-top-multiplier);
-  --spectrum-heading-margin-end: var(--spectrum-heading-margin-bottom-multiplier);
-
   --spectrum-heading-font-color: var(--spectrum-heading-color);
+
+  --spectrum-heading-margin-start: calc(var(--mod-heading-font-size, var(--spectrum-heading-font-size)) * var(--spectrum-heading-margin-top-multiplier));
+  --spectrum-heading-margin-end: calc(var(--mod-heading-font-size, var(--spectrum-heading-font-size)) * var(--spectrum-heading-margin-bottom-multiplier));
+
 }
 
 /* Windows high contrast mode */
@@ -341,7 +342,7 @@ governing permissions and limitations under the License.
 
   --spectrum-body-cjk-letter-spacing: var(--spectrum-cjk-letter-spacing);
 
-  --spectrum-body-margin: var(--spectrum-body-margin-multiplier);
+  --spectrum-body-margin: calc(var(--mod-body-font-size, var(--spectrum-body-font-size)) * var(--spectrum-body-margin-multiplier));
 
   --spectrum-body-font-color: var(--spectrum-body-color);
 }
@@ -388,7 +389,7 @@ governing permissions and limitations under the License.
 
   line-height: var(--mod-body-line-height, var(--spectrum-body-line-height));
 
-  margin-block: var(--mod-body-margin, var(--spectrum-body-margin));
+  margin-block-end: var(--mod-body-margin, var(--spectrum-body-margin));
 
   strong,
   .spectrum-Body-strong {
@@ -474,8 +475,8 @@ governing permissions and limitations under the License.
   --spectrum-detail-serif-font-family: var(--spectrum-serif-font-family-stack);
   --spectrum-detail-cjk-font-family: var(--spectrum-cjk-font-family-stack);
 
-  --spectrum-detail-margin-start: var(--spectrum-detail-margin-top-multiplier);
-  --spectrum-detail-margin-end: var(--spectrum-detail-margin-bottom-multiplier);
+  --spectrum-detail-margin-start: calc(var(--mod-detail-font-size, var(--spectrum-detail-font-size)) * var(--spectrum-detail-margin-top-multiplier));
+  --spectrum-detail-margin-end: calc(var(--mod-detail-font-size, var(--spectrum-detail-font-size)) * var(--spectrum-detail-margin-bottom-multiplier));
 
   --spectrum-detail-font-color: var(--spectrum-detail-color);
 }
@@ -511,11 +512,12 @@ governing permissions and limitations under the License.
   color: var(--highcontrast-detail-font-color, var(--mod-detail-font-color, var(--spectrum-detail-font-color)));
 
   line-height: var(--mod-detail-line-height, var(--spectrum-detail-line-height));
-
   letter-spacing: var(--mod-detail-letter-spacing, var(--spectrum-detail-letter-spacing));
-
   text-transform: uppercase;
 
+  margin-block-start: var(--mod-detail-margin-start, var(--spectrum-detail-margin-start));
+  margin-block-end: var(--mod-detail-margin-end, var(--spectrum-detail-margin-end));
+  
   strong,
   .spectrum-Detail-strong {
     font-style: var(--mod-detail-sans-serif-strong-font-style, var(--spectrum-detail-sans-serif-strong-font-style));
@@ -594,9 +596,6 @@ governing permissions and limitations under the License.
 .spectrum-Detail--light {
   font-style: var(--mod-detail-sans-serif-light-font-style, var(--spectrum-detail-sans-serif-light-font-style));
   font-weight: var(--spectrum-detail-sans-serif-light-font-weight, var(--spectrum-detail-sans-serif-light-font-weight));
-
-  margin-block-start: var(--mod-detail-margin-start, var(--spectrum-detail-margin-start));
-  margin-block-end: var(--mod-detail-margin-end, var(--spectrum-detail-margin-end));
 
   strong,
   .spectrum-Detail-strong {
