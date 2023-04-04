@@ -9,8 +9,8 @@ OF ANY KIND, either express or implied. See the License for the specific languag
 governing permissions and limitations under the License.
 */
 .spectrum-ColorHandle {
-  --spectrum-colorhandle-size: var(--spectrum-color-handle-size);
-  --spectrum-colorhandle-focused-size: var(--spectrum-color-handle-size-key-focus);
+  --spectrum-colorhandle-size: var(--spectrum-color-handle-size-interim); /* TODO: this uses custom token, replace with updated --spectrum-color-handle-size token */
+  --spectrum-colorhandle-focused-size: var(--spectrum-color-handle-size-key-focus-interim); /* TODO: this uses custom token, replace with updated --spectrum-color-handle-size-key-focus token */
   --spectrum-colorhandle-hitarea-size: var(--spectrum-color-control-track-width);
 
   --spectrum-colorhandle-animation-duration: var(--spectrum-animation-duration-100);
