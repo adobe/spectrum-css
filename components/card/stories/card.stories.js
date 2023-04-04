@@ -106,12 +106,7 @@ export default {
     },
     hasQuickAction: {
       name: "Quick action",
-      type: { name: "boolean" },
-      table: {
-        type: { summary: "boolean" },
-        category: "Component",
-      },
-      control: "boolean",
+      table: { disable: true },
     },
     showAsset: {
       name: "Show asset",
