@@ -213,10 +213,10 @@ governing permissions and limitations under the License.
   align-items: center;
   justify-content: center;
 
-  border-top-left-radius: var(--mod-card-corner-radius, var(--spectrum-card-corner-radius));
-  border-top-right-radius: var(--mod-card-corner-radius, var(--spectrum-card-corner-radius));
-  border-bottom-right-radius: 0;
-  border-bottom-left-radius: 0;
+  border-start-start-radius: var(--mod-card-corner-radius, var(--spectrum-card-corner-radius));
+  border-start-end-radius: var(--mod-card-corner-radius, var(--spectrum-card-corner-radius));
+  border-end-end-radius: 0;
+  border-end-start-radius: 0;
 
   background-size: cover;
   background-position: center center;
@@ -233,10 +233,10 @@ governing permissions and limitations under the License.
 
 .spectrum-Card-preview {
   overflow: hidden;
-  border-top-left-radius: var(--mod-card-corner-radius, var(--spectrum-card-corner-radius));
-  border-top-right-radius: var(--mod-card-corner-radius, var(--spectrum-card-corner-radius));
-  border-bottom-right-radius: 0;
-  border-bottom-left-radius: 0;
+  border-start-start-radius: var(--mod-card-corner-radius, var(--spectrum-card-corner-radius));
+  border-start-end-radius: var(--mod-card-corner-radius, var(--spectrum-card-corner-radius));
+  border-end-end-radius: 0;
+  border-end-start-radius: 0;
   display: flex;
   align-items: center;
 }
