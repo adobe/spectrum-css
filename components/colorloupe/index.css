@@ -67,15 +67,18 @@ governing permissions and limitations under the License.
   stroke-width: var(--mod-colorloupe-outer-border-width, var(--spectrum-colorloupe-outer-border-width));
 }
 
-.checkerboard-pattern {
+/* The checkerboard classes use opacity checkerboard tokens for dark and light color.
+ The opacity-checkerboard-square-size token was not able to be used witin the SVG pattern and instead colorloupe.yml is using two different patterns toggled by --spectrum-colorloupe-checkerboard-fill */
+
+.spectrum-ColorLoupe-checkerboard-pattern {
   fill: var(--spectrum-colorloupe-checkerboard-dark-color);
 }
 
-.checkerboard-background {
+.spectrum-ColorLoupe-checkerboard-background {
   fill: var(--spectrum-colorloupe-checkerboard-light-color);
 }
 
-.checkerboard-fill {
+.spectrum-ColorLoupe-checkerboard-fill {
   fill: var(--spectrum-colorloupe-checkerboard-fill);
 }
 
