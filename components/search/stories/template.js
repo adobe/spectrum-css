@@ -5,7 +5,6 @@ import { Template as ClearButton } from '@spectrum-css/clearbutton/stories/templ
 import { Template as TextField } from '@spectrum-css/textfield/stories/template.js';
 
 import '../index.css';
-import '../skin.css';
 
 export const Template = ({
   rootClass = "spectrum-Search",
@@ -14,6 +13,15 @@ export const Template = ({
   isQuiet = false,
   ...globals
 }) => {
+  const { express } = globals;
+
+  try {
+    if (!express) import(/* webpackPrefetch: true */ "../themes/spectrum.css");
+    else import(/* webpackPrefetch: true */ "../themes/express.css");
+  } catch (e) {
+    console.warn(e);
+  }
+
   return html`
     <form class=${classMap({
       [rootClass]: true,
@@ -23,6 +31,7 @@ export const Template = ({
       ${TextField({
         ...globals,
         isDisabled,
+        isQuiet,
         customClasses: [`${rootClass}-textfield`],
         iconName: "Magnify",
         type: "search",

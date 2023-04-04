@@ -18,21 +18,25 @@ governing permissions and limitations under the License.
     }
 
     .spectrum-Search--sizeS {
+        --spectrum-search-border-radius: var(--spectrum-corner-radius-100);
         --spectrum-search-edge-to-visual: var(--spectrum-component-edge-to-visual-75);
         --spectrum-search-edge-to-text: var(--spectrum-component-edge-to-text-75);
     }
 
     .spectrum-Search--sizeM {
+        --spectrum-search-border-radius: var(--spectrum-corner-radius-100);
         --spectrum-search-edge-to-visual: var(--spectrum-component-edge-to-visual-100);
         --spectrum-search-edge-to-text: var(--spectrum-component-edge-to-text-100);
     }
 
     .spectrum-Search--sizeL {
+        --spectrum-search-border-radius: var(--spectrum-corner-radius-100);
         --spectrum-search-edge-to-visual: var(--spectrum-component-edge-to-visual-200);
         --spectrum-search-edge-to-text: var(--spectrum-component-edge-to-text-200);
     }
 
     .spectrum-Search--sizeXL {
+        --spectrum-search-border-radius: var(--spectrum-corner-radius-100);
         --spectrum-search-edge-to-visual: var(--spectrum-component-edge-to-visual-300);
         --spectrum-search-edge-to-text: var(--spectrum-component-edge-to-text-300);
     }

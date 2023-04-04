@@ -26,33 +26,48 @@ governing permissions and limitations under the License.
   --spectrum-search-focus-indicator-thickness: var(--spectrum-focus-indicator-thickness);
   --spectrum-search-focus-indicator-gap: var(--spectrum-focus-indicator-gap);
   --spectrum-search-focus-indicator-color: var(--spectrum-focus-indicator-color);
+
+  /* Font / Color */
+  --spectrum-search-font-family: var(--spectrum-sans-font-family-stack);
+  --spectrum-search-font-weight: var(--spectrum-regular-font-weight);
+  --spectrum-search-font-style: var(--spectrum-default-font-style);
+  --spectrum-search-line-height: var(--spectrum-line-height-100);
+
+  --spectrum-search-color-default: var(--spectrum-neutral-content-color-default);
+  --spectrum-search-color-hover: var(--spectrum-neutral-content-color-hover);
+  --spectrum-search-color-focus: var(--spectrum-neutral-content-color-focus);
+  --spectrum-search-color-focus-hover: var(--spectrum-neutral-content-color-focus-hover);
+  --spectrum-search-color-key-focus: var(--spectrum-neutral-content-color-key-focus);
+
+  /* Disabled */
+  --spectrum-search-color-disabled: var(--spectrum-disabled-content-color);
+  /* @todo */
+
+  /* Background and Border Color */
+  /* @todo */
 }
 
 .spectrum-Search--sizeS {
   --spectrum-search-block-size: var(--spectrum-component-height-75);
   --spectrum-search-icon-size: var(--spectrum-workflow-icon-size-75);
-
   --spectrum-search-text-to-icon: var(--spectrum-text-to-visual-75);
 }
 
 .spectrum-Search--sizeM {
   --spectrum-search-block-size: var(--spectrum-component-height-100);
   --spectrum-search-icon-size: var(--spectrum-workflow-icon-size-100);
-
   --spectrum-search-text-to-icon: var(--spectrum-text-to-visual-100);
 }
 
 .spectrum-Search--sizeL {
   --spectrum-search-block-size: var(--spectrum-component-height-200);
   --spectrum-search-icon-size: var(--spectrum-workflow-icon-size-200);
-
   --spectrum-search-text-to-icon: var(--spectrum-text-to-visual-200);
 }
 
 .spectrum-Search--sizeXL {
   --spectrum-search-block-size: var(--spectrum-component-height-300);
   --spectrum-search-icon-size: var(--spectrum-workflow-icon-size-300);
-
   --spectrum-search-text-to-icon: var(--spectrum-text-to-visual-300);
 }
 
@@ -85,6 +100,31 @@ governing permissions and limitations under the License.
   inline-size: 100%;
 }
 
+.spectrum-Search-icon {
+  color: var(--spectrum-search-color-default);
+
+  .spectrum-Search-textfield:hover & {
+    color: var(--mod-search-color-hover, var(--spectrum-search-color-hover));
+  }
+
+  .spectrum-Search-textfield.is-focused & {
+    color: var(--mod-search-color-focus, var(--spectrum-search-color-focus));
+  }
+
+  .spectrum-Search-textfield.is-focused:hover & {
+    color: var(--mod-search-color-focus-hover, var(--spectrum-search-color-focus-hover));
+  }
+
+  .spectrum-Search-textfield.is-keyboardFocused & {
+    color: var(--mod-search-color-key-focus, var(--spectrum-search-color-key-focus));
+  }
+
+  .spectrum-Search-textfield.is-disabled &,
+  .spectrum-Search-textfield.is-disabled:hover & {
+    color: var(--mod-search-color-disabled, var(--spectrum-search-color-disabled));
+  }
+}
+
 .spectrum-Search-input {
   /* Correct the odd appearance of input[type="search"] in Chrome and Safari.*/
   /* Without this, it gets overridden by .spectrum-Textfield */
@@ -102,12 +142,76 @@ governing permissions and limitations under the License.
   block-size: var(--mod-search-block-size, var(--spectrum-search-block-size));
   border-radius: var(--mod-search-border-radius, var(--spectrum-search-border-radius));
   border-width: var(--mod-search-border-width, var(--spectrum-search-border-width));
+
+  font-family: var(--mod-search-font-family, var(--spectrum-search-font-family));
+  font-weight: var(--mod-search-font-weight, var(--spectrum-search-font-weight));
+  font-style: var(--mod-search-font-style, var(--spectrum-search-font-style));
+  line-height: var(--mod-search-line-height, var(--spectrum-search-line-height));
+
+  color: var(--mod-search-color-default, var(--spectrum-search-color-default));
+
+  &::placeholder {
+    color: var(--mod-search-color-default, var(--spectrum-search-color-default));
+  }
+
+  /* Hover */
+  .spectrum-Search-textfield:hover &,
+  &:hover {
+    color: var(--mod-search-color-hover, var(--spectrum-search-color-hover));
+
+    &::placeholder {
+      color: var(--mod-search-color-hover, var(--spectrum-search-color-hover));
+    }
+  }
+
+  /* Focus */
+  .spectrum-Search-textfield.is-focused &,
+  &:focus {
+    color: var(--mod-search-color-focus, var(--spectrum-search-color-focus));
+
+    &::placeholder {
+      color: var(--mod-search-color-focus, var(--spectrum-search-color-focus));
+    }
+
+    &:hover {
+      color: var(--mod-search-color-focus-hover, var(--spectrum-search-color-focus-hover));
+
+      &::placeholder {
+        color: var(--mod-search-color-focus-hover, var(--spectrum-search-color-focus-hover));
+      }
+    }
+  }
+
+  /* Keyboard Focus */
+  .spectrum-Search-textfield.is-keyboardFocused &,
+  &:focus-visible {
+    color: var(--mod-search-color-key-focus, var(--spectrum-search-color-key-focus));
+
+    &::placeholder {
+      color: var(--mod-search-color-key-focus, var(--spectrum-search-color-key-focus));
+    }
+  }
+
+  /* Disabled */
+  .spectrum-Search-textfield.is-disabled &,
+  .spectrum-Search-textfield.is-disabled:hover &,
+  &:disabled {
+    color: var(--mod-search-color-disabled, var(--spectrum-search-color-disabled));
+
+    &::placeholder {
+      color: var(--mod-search-color-disabled, var(--spectrum-search-color-disabled));
+    }
+  }
 }
 
 /* Focus Indicator (Ring) */
 .spectrum-Search:not(.spectrum-Search--quiet) .spectrum-Search-textfield {
   &::after {
-    border-radius: var(--mod-search-border-radius, var(--spectrum-search-border-radius));
+    border-radius: calc(
+      var(--mod-search-border-radius, var(--spectrum-search-border-radius)) + 
+      var(--mod-search-border-width, var(--spectrum-search-border-width)) +
+      var(--mod-search-focus-indicator-gap, var(--spectrum-search-focus-indicator-gap))
+    );
     block-size: calc(100% + (var(--mod-search-focus-indicator-gap, var(--spectrum-search-focus-indicator-gap)) * 2));
     inline-size: calc(100% + (var(--mod-search-focus-indicator-gap, var(--spectrum-search-focus-indicator-gap)) * 2));
     margin-block-start: calc(
