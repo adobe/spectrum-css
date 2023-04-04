@@ -396,6 +396,11 @@ governing permissions and limitations under the License.
   .spectrum-Card-body {
     padding: 0;
   }
+  
+  .spectrum-Card-footer {
+    margin-inline-end: 0;
+    margin-inline-start: 0;
+  }
 }
 
 .spectrum-Card--horizontal {
