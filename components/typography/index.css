@@ -97,10 +97,6 @@ governing permissions and limitations under the License.
   font-weight: var(--mod-heading-sans-serif-font-weight, var(--spectrum-heading-sans-serif-font-weight));
   font-size: var(--mod-heading-font-size, var(--spectrum-heading-font-size));
   color: var(--highcontrast-heading-font-color, var(--mod-heading-font-color, var(--spectrum-heading-font-color)));
-
-  margin-block-start: var(--mod-heading-margin-start, var(--spectrum-heading-margin-start));
-  margin-block-end: var(--mod-heading-margin-end, var(--spectrum-heading-margin-end));
-
   line-height: var(--mod-heading-line-height, var(--spectrum-heading-line-height));
 
   strong,
@@ -332,7 +328,13 @@ governing permissions and limitations under the License.
   }
 }
 
-/* Typography - Body */
+/* Add margin when inside a Typography component */
+.spectrum-Typography .spectrum-Heading {
+  margin-block-start: var(--mod-heading-margin-start, var(--spectrum-heading-margin-start));
+  margin-block-end: var(--mod-heading-margin-end, var(--spectrum-heading-margin-end));
+}
+
+/* Body */
 
 /* Body tokens */
 .spectrum-Body {
@@ -388,8 +390,6 @@ governing permissions and limitations under the License.
   color: var(--highcontrast-body-font-color, var(--mod-body-font-color, var(--spectrum-body-font-color)));
 
   line-height: var(--mod-body-line-height, var(--spectrum-body-line-height));
-
-  margin-block-end: var(--mod-body-margin, var(--spectrum-body-margin));
 
   strong,
   .spectrum-Body-strong {
@@ -467,6 +467,11 @@ governing permissions and limitations under the License.
   }
 }
 
+/* Add margin when inside a Typography component */
+.spectrum-Typography .spectrum-Body {
+  margin-block-end: var(--mod-body-margin, var(--spectrum-body-margin));
+}
+
 /* Detail */
 
 /* Detail tokens */
@@ -515,9 +520,6 @@ governing permissions and limitations under the License.
   letter-spacing: var(--mod-detail-letter-spacing, var(--spectrum-detail-letter-spacing));
   text-transform: uppercase;
 
-  margin-block-start: var(--mod-detail-margin-start, var(--spectrum-detail-margin-start));
-  margin-block-end: var(--mod-detail-margin-end, var(--spectrum-detail-margin-end));
-  
   strong,
   .spectrum-Detail-strong {
     font-style: var(--mod-detail-sans-serif-strong-font-style, var(--spectrum-detail-sans-serif-strong-font-style));
@@ -530,9 +532,9 @@ governing permissions and limitations under the License.
     font-weight: var(--mod-detail-sans-serif-emphasized-font-weight, var(--spectrum-detail-sans-serif-emphasized-font-weight));
   }
 
- .spectrum-Detail-strong.spectrum-Detail-emphasized,
- em strong,
- strong em {
+  .spectrum-Detail-strong.spectrum-Detail-emphasized,
+  em strong,
+  strong em {
     font-style: var(--mod-detail-sans-serif-strong-emphasized-font-style, var(--spectrum-detail-sans-serif-strong-emphasized-font-style));
     font-weight: var(--mod-detail-sans-serif-strong-emphasized-font-weight, var(--spectrum-detail-sans-serif-strong-emphasized-font-weight));
   }
@@ -663,6 +665,12 @@ governing permissions and limitations under the License.
     font-style: var(--mod-detail-serif-light-strong-emphasized-font-style, var(--spectrum-detail-serif-light-strong-emphasized-font-style));
     font-weight: var(--mod-detail-serif-light-strong-emphasized-font-weight, var(--spectrum-detail-serif-light-strong-emphasized-font-weight));
   }
+}
+
+/* Add margin when inside a Typography component */
+.spectrum-Typography .spectrum-Detail {
+  margin-block-start: var(--mod-detail-margin-start, var(--spectrum-detail-margin-start));
+  margin-block-end: var(--mod-detail-margin-end, var(--spectrum-detail-margin-end));
 }
 
 /* Code */
