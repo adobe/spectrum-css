@@ -77,6 +77,9 @@
     "through2": "^3.0.1",
     "yargs": "^17.6.2"
   },
+  "engines": {
+    "node": ">=14.0.0 <18"
+  },
   "lint-staged": {
     "components/*/package.json": [
       "yarn lint:components",
