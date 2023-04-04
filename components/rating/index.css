@@ -25,10 +25,9 @@ governing permissions and limitations under the License.
   --spectrum-rating-border-radius: var(--spectrum-corner-radius-100);
   --spectrum-rating-focus-indicator-thickness: var(--spectrum-focus-indicator-thickness);
   --spectrum-rating-focus-indicator-color: var(--spectrum-focus-indicator-color);
+  --spectrum-rating-focus-indicator-gap: var(--spectrum-focus-indicator-gap);
   /* Spacing (top/bottom edge to icon) */
   --spectrum-rating-icon-spacing-vertical-top: var(--spectrum-component-top-to-workflow-icon-100);
-  /* Indicator width */
-  --spectrum-rating-indicator-width: var(--spectrum-rating-indicator-width);
   --spectrum-rating-indicator-border-radius: var(--spectrum-corner-radius-75);
   /* Indicator height */
   --spectrum-rating-indicator-height: var(--spectrum-border-width-200);
@@ -85,7 +84,7 @@ governing permissions and limitations under the License.
   inline-size: calc((var(--mod-rating-icon-width, var(--spectrum-rating-icon-width)) + var(--mod-rating-icon-spacing, var(--spectrum-rating-icon-spacing))) * var(--mod-rating-icon-count, var(--spectrum-rating-icon-count)));
   border-radius: var(--mod-rating-border-radius, var(--spectrum-rating-border-radius));
 
-  padding-inline: var(--mod-rating-icon-gap, var(--spectrum-rating-icon-gap));
+  padding-inline: calc(var(--mod-rating-icon-gap, var(--spectrum-rating-icon-gap)) + var(--mod-rating-focus-indicator-gap, var(--spectrum-rating-focus-indicator-gap)));
 
   cursor: pointer;
 
@@ -124,7 +123,7 @@ governing permissions and limitations under the License.
   background-repeat: no-repeat;
   inline-size: var(--mod-rating-icon-width, var(--spectrum-rating-icon-width));
   block-size: var(--mod-rating-icon-height, var(--spectrum-rating-icon-height));
-  padding-block: var(--mod-rating-icon-spacing-vertical-top, var(--spectrum-rating-icon-spacing-vertical-top));
+  padding-block: calc(var(--mod-rating-icon-spacing-vertical-top, var(--spectrum-rating-icon-spacing-vertical-top)) + var(--mod-rating-focus-indicator-gap, var(--spectrum-rating-focus-indicator-gap)));
 
   .spectrum-Rating-starActive {
     display: none;
@@ -142,15 +141,19 @@ governing permissions and limitations under the License.
     }
   }
 
+  .temp {
+    inset-block-end: calc(var(--mod-rating-indicator-spacing, var(--spectrum-rating-indicator-spacing)) + var(--mod-rating-focus-indicator-gap, var(--spectrum-rating-focus-indicator-gap)));
+  }
+
   &.is-currentValue {
     &:after {
       border-radius: var(--mod-rating-indicator-border-radius, var(--spectrum-rating-indicator-border-radius));
       content: '';
       block-size: var(--mod-rating-indicator-height, var(--spectrum-rating-indicator-height));
-      inset-inline: var(--mod-rating-indicator-spacing, var(--spectrum-rating-indicator-spacing));
+      inline-size: var(--spectrum-rating-indicator-width);
       
       /* position the indicator relative to the element's total bottom size (including bottom padding) */
-      inset-block-end: var(--mod-rating-indicator-spacing, var(--spectrum-rating-indicator-spacing));
+      inset-block-end: calc((var(--mod-rating-focus-indicator-gap, var(--spectrum-rating-focus-indicator-gap)) * 2) - 1px);
       position: absolute;
     }
   }
