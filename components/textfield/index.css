@@ -206,50 +206,6 @@ governing permissions and limitations under the License.
   --spectrum-text-area-min-block-size-quiet: var(--spectrum-component-height-300);
 }
 
-/********* WHCM *********/
-@media (forced-colors: active) {
-  .spectrum-Textfield {
-    --highcontrast-textfield-border-color-hover: Highlight;
-    --highcontrast-textfield-border-color-focus: Highlight;
-    --highcontrast-textfield-border-color-keyboard-focus: Highlight;
-    --highcontrast-textfield-focus-indicator-color: CanvasText;
-
-    --highcontrast-textfield-border-color-invalid-default: Highlight;
-    --highcontrast-textfield-border-color-invalid-hover: Highlight;
-    --highcontrast-textfield-border-color-invalid-focus: Highlight;
-    --highcontrast-textfield-border-color-invalid-keyboard-focus: Highlight;
-
-    --highcontrast-textfield-text-color-valid: CanvasText;
-    --highcontrast-textfield-text-color-invalid: CanvasText;
-
-    .spectrum-Textfield-input {
-      --highcontrast-textfield-text-color-default: CanvasText;
-      --highcontrast-textfield-text-color-hover: CanvasText;
-      --highcontrast-textfield-text-color-keyboard-focus: CanvasText;
-      --highcontrast-textfield-text-color-disabled: GrayText;
-      --highcontrast-textfield-text-color-readonly: CanvasText;
-
-      &::placeholder {
-        --highcontrast-textfield-text-color-default: GrayText;
-        --highcontrast-textfield-text-color-hover: GrayText;
-        --highcontrast-textfield-text-color-keyboard-focus: GrayText;
-        --highcontrast-textfield-text-color-disabled: GrayText;
-        --highcontrast-textfield-text-color-readonly: CanvasText;
-      }
-    }
-
-
-    &.is-focused,
-    &.is-keyboardFocused,
-    &:focus, &:focus-within {
-      /* focus indicator is focused state */
-      &::after {
-        forced-color-adjust: none;
-      }
-    }
-  }
-}
-
 /********* TEXT FIELD and TEXT AREA Outer Wrapper *********/
 .spectrum-Textfield {
   position: relative;
@@ -330,7 +286,7 @@ governing permissions and limitations under the License.
     }
   }
 
-  &--quiet {
+  &.spectrum-Textfield--quiet {
     &::after {
       inline-size: 100%;
       block-size: calc(100% + var(--mod-textfield-focus-indicator-gap, var(--spectrum-textfield-focus-indicator-gap)));
@@ -810,6 +766,53 @@ governing permissions and limitations under the License.
       /* Treat all quiet inputs and text areas the same */
       resize: none;
       overflow-y: hidden;
+    }
+  }
+}
+
+/********* WHCM *********/
+@media (forced-colors: active) {
+  .spectrum-Textfield {
+    --highcontrast-textfield-border-color-hover: Highlight;
+    --highcontrast-textfield-border-color-focus: Highlight;
+    --highcontrast-textfield-border-color-keyboard-focus: Highlight;
+    --highcontrast-textfield-focus-indicator-color: Highlight;
+
+    --highcontrast-textfield-border-color-invalid-default: Highlight;
+    --highcontrast-textfield-border-color-invalid-hover: Highlight;
+    --highcontrast-textfield-border-color-invalid-focus: Highlight;
+    --highcontrast-textfield-border-color-invalid-keyboard-focus: Highlight;
+
+    --highcontrast-textfield-text-color-valid: CanvasText;
+    --highcontrast-textfield-text-color-invalid: CanvasText;
+
+    .spectrum-Textfield-input {
+      --highcontrast-textfield-text-color-default: CanvasText;
+      --highcontrast-textfield-text-color-hover: CanvasText;
+      --highcontrast-textfield-text-color-keyboard-focus: CanvasText;
+      --highcontrast-textfield-text-color-disabled: GrayText;
+      --highcontrast-textfield-text-color-readonly: CanvasText;
+
+      &::placeholder {
+        --highcontrast-textfield-text-color-default: GrayText;
+        --highcontrast-textfield-text-color-hover: GrayText;
+        --highcontrast-textfield-text-color-keyboard-focus: GrayText;
+        --highcontrast-textfield-text-color-disabled: GrayText;
+        --highcontrast-textfield-text-color-readonly: CanvasText;
+      }
+    }
+
+    &::after {
+      block-size: calc(100% - var(--mod-textfield-focus-indicator-width, var(--spectrum-textfield-focus-indicator-width)) * 2);
+      inline-size: calc(100% - var(--mod-textfield-focus-indicator-width, var(--spectrum-textfield-focus-indicator-width)) * 2);
+      margin-block-start: 0;
+      margin-inline-start: 0;
+    }
+  }
+  .spectrum-Textfield--quiet {
+    &::after {
+      block-size: calc(100% - var(--mod-textfield-focus-indicator-width, var(--spectrum-textfield-focus-indicator-width)));
+      inline-size: calc(100% - var(--mod-textfield-focus-indicator-width, var(--spectrum-textfield-focus-indicator-width)));
     }
   }
 }
