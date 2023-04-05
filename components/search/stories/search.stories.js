@@ -5,6 +5,16 @@ export default {
   description: "This component contains a single input field with both a magnifying glass icon and a \"reset\" button displayed within it.",
   component: "Search",
   argTypes: {
+    size: {
+      name: "Size",
+      type: { name: "string", required: true },
+      table: {
+        type: { summary: "string" },
+        category: "Component",
+      },
+      options: ["s", "m", "l", "xl"],
+      control: "select"
+    },
     isQuiet: {
       name: "Quiet styling",
       type: { name: "boolean" },

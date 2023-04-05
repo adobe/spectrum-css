@@ -11,6 +11,7 @@ export const Template = ({
   customClasses = [],
   isDisabled = false,
   isQuiet = false,
+  size,
   ...globals
 }) => {
   const { express } = globals;
@@ -25,6 +26,7 @@ export const Template = ({
   return html`
     <form class=${classMap({
       [rootClass]: true,
+      [`${rootClass}--size${size?.toUpperCase()}`]: typeof size !== "undefined",
       [`${rootClass}--quiet`]: isQuiet,
       ...customClasses.reduce((a, c) => ({ ...a, [c]: true }), {}),
     })}>
@@ -32,6 +34,7 @@ export const Template = ({
         ...globals,
         isDisabled,
         isQuiet,
+        size,
         customClasses: [`${rootClass}-textfield`],
         iconName: "Magnify",
         type: "search",
@@ -44,6 +47,7 @@ export const Template = ({
       ${ClearButton({
         ...globals,
         isDisabled,
+        size,
         customClasses: [`${rootClass}-clearButton`],
       })}
     </form>
