@@ -163,7 +163,7 @@ examples:
   - id: search-standard-sizes
     name: Standard Sizes
     markup: |
-      <div class="spectrum-Examples" style="justify-content: space-evenly;">
+      <div class="spectrum-Examples">
         <div class="spectrum-Examples-item">
           <h4 class="spectrum-Heading spectrum-Heading--sizeXS spectrum-Examples-itemHeading">Small</h4>
 
@@ -190,13 +190,13 @@ examples:
           <h4 class="spectrum-Heading spectrum-Heading--sizeXS spectrum-Examples-itemHeading">Medium</h4>
 
           <form class="spectrum-Search spectrum-Search--sizeM">
-            <div class="spectrum-Textfield spectrum-Textfield--M spectrum-Search-textfield">
+            <div class="spectrum-Textfield spectrum-Textfield--sizeM spectrum-Search-textfield">
               <svg class="spectrum-Icon spectrum-Icon--sizeM spectrum-Textfield-icon spectrum-Search-icon" focusable="false" aria-hidden="true">
                 <use xlink:href="#spectrum-icon-18-Magnify" />
               </svg>
               <input type="search" placeholder="Search" name="search" value="" class="spectrum-Textfield-input spectrum-Search-input" autocomplete="off">
             </div>
-            <div class="spectrum-HelpText spectrum-HelpText--sizeS spectrum-HelpText--neutral">
+            <div class="spectrum-HelpText spectrum-HelpText--sizeM spectrum-HelpText--neutral">
               <div id="helptext-1" class="spectrum-HelpText-text">Example help text. Lorem ipsum dolor sit amet.</div>
             </div>
             <button type="reset" class="spectrum-ClearButton spectrum-ClearButton--sizeM spectrum-Search-clearButton">
