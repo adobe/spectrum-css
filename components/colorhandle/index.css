@@ -17,11 +17,11 @@ governing permissions and limitations under the License.
   --spectrum-colorhandle-animation-easing: ease-in-out;
 
   /* outer border as box shadow on the colorhandle */
-  --spectrum-colorhandle-outer-border-color: rgba(0, 0, 0, 0.42); /*TODO replace with tokens and RGBA function color-handle-outer-border-color +  color-handle-outer-border-opacity */
+  --spectrum-colorhandle-outer-border-color: rgba(var(--spectrum-black-rgb), var(--spectrum-color-handle-inner-border-opacity)); /*TODO replace --spectrum-black-rgb with color-handle-outer-border-color  */
   --spectrum-colorhandle-outer-border-width: var(--spectrum-color-handle-outer-border-width);
 
   /* inner border as inset boxshadow on the colorhandle-inner */
-  --spectrum-colorhandle-inner-border-color: rgba(0, 0, 0, 0.42); /*TODO replace with tokens and RGBA function color-handle-inner-border-color + color-handle-inner-border-opacity */
+  --spectrum-colorhandle-inner-border-color: rgba(var(--spectrum-black-rgb), var(--spectrum-color-handle-inner-border-opacity)); /*TODO replace --spectrum-black-rgb with color-handle-inner-border-color  */
   --spectrum-colorhandle-inner-border-width: var(--spectrum-color-handle-inner-border-width);
 
   /* primary border on color handle */
