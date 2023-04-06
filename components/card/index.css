@@ -81,23 +81,6 @@ governing permissions and limitations under the License.
 .spectrum-Card--sizeS {
   /* Need less spacing for small cards since we've decreased min-width */
   --spectrum-card-actions-spacing: calc(var(--spectrum-spacing-300) / 2);
-
-}
-
-.spectrum-Card--sizeS {
-  @remapvars {
-    find: /--spectrum-card(.*)-s-/;
-    filter: color;
-    replace: --spectrum-card$1-;
-  }
-}
-
-.spectrum-Card--sizeM {
-  @remapvars {
-    find: /--spectrum-card(.*)-m-/;
-    filter: color;
-    replace: --spectrum-card$1-;
-  }
 }
 
 .spectrum-Card {
@@ -121,9 +104,9 @@ governing permissions and limitations under the License.
     block-size: calc(100% + (var(--mod-card-focus-indicator-gap, var(--spectrum-card-focus-indicator-gap)) * 2));
     inline-size: calc(100% + (var(--mod-card-focus-indicator-gap, var(--spectrum-card-focus-indicator-gap)) * 2));
     position: absolute;
-    left: 0;
-    right: 0;
-    top: 0;
+    inset-inline-start: 0;
+    inset-inline-end: 0;
+    inset-block-start: 0;
     border-style: solid;
     border-color: transparent;
     border-width: 0;
@@ -323,7 +306,7 @@ governing permissions and limitations under the License.
     margin: 0 auto;
     box-sizing: border-box;
     position: relative;
-    /*transition: background-color var(--spectrum-global-animation-duration-100);/* TODO need token */
+    transition: background-color var(var(--spectrum-animation-duration-100););
     overflow: visible;
     
 
