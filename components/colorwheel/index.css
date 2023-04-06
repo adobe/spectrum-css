@@ -100,9 +100,7 @@ governing permissions and limitations under the License.
 
 .spectrum-ColorWheel-ColorArea-handle {
   inset-block-start: 0;
-  [dir="ltr"] & {
-    inset-inline-end: calc(var(--spectrum-color-handle-size) / -2);
-  }
+  inset-inline-end: 0;
 
   [dir="rtl"] & {
     inset-inline-start: 0;
