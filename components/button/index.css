@@ -37,6 +37,7 @@ governing permissions and limitations under the License.
   --spectrum-button-font-size: var(--spectrum-font-size-75);
 
   --spectrum-button-edge-to-visual: calc(var(--spectrum-component-pill-edge-to-visual-75) - var(--spectrum-button-border-width));
+  --spectrum-button-edge-to-visual-only: var(--spectrum-component-pill-edge-to-visual-only-75);
   --spectrum-button-edge-to-text: calc(var(--spectrum-component-pill-edge-to-text-75) - var(--spectrum-button-border-width));
   --spectrum-button-padding-label-to-icon: var(--spectrum-text-to-visual-75);
   --spectrum-button-padding-label-top: var(--spectrum-component-top-to-text-75);
@@ -52,6 +53,7 @@ governing permissions and limitations under the License.
   --spectrum-button-font-size: var(--spectrum-font-size-100);
   
   --spectrum-button-edge-to-visual: calc(var(--spectrum-component-pill-edge-to-visual-100) - var(--spectrum-button-border-width));
+  --spectrum-button-edge-to-visual-only: var(--spectrum-component-pill-edge-to-visual-only-100);
   --spectrum-button-edge-to-text: calc(var(--spectrum-component-pill-edge-to-text-100) - var(--spectrum-button-border-width));
   --spectrum-button-padding-label-to-icon: var(--spectrum-text-to-visual-100);
   --spectrum-button-padding-label-top: var(--spectrum-component-top-to-text-100);
@@ -67,6 +69,7 @@ governing permissions and limitations under the License.
   --spectrum-button-font-size: var(--spectrum-font-size-200);
 
   --spectrum-button-edge-to-visual: calc(var(--spectrum-component-pill-edge-to-visual-200) - var(--spectrum-button-border-width));
+  --spectrum-button-edge-to-visual-only: var(--spectrum-component-pill-edge-to-visual-only-200);
   --spectrum-button-edge-to-text: calc(var(--spectrum-component-pill-edge-to-text-200) - var(--spectrum-button-border-width));
   --spectrum-button-padding-label-to-icon: var(--spectrum-text-to-visual-200);
   --spectrum-button-padding-label-top: var(--spectrum-component-top-to-text-200);
@@ -82,6 +85,7 @@ governing permissions and limitations under the License.
   --spectrum-button-font-size: var(--spectrum-font-size-300);
 
   --spectrum-button-edge-to-visual: calc(var(--spectrum-component-pill-edge-to-visual-300) - var(--spectrum-button-border-width));
+  --spectrum-button-edge-to-visual-only: var(--spectrum-component-pill-edge-to-visual-only-300);
   --spectrum-button-edge-to-text: calc(var(--spectrum-component-pill-edge-to-text-300) - var(--spectrum-button-border-width));
   --spectrum-button-padding-label-to-icon: var(--spectrum-text-to-visual-300);
   --spectrum-button-padding-label-top: var(--spectrum-component-top-to-text-300);
@@ -126,6 +130,11 @@ governing permissions and limitations under the License.
   /* correct focus-ring radius for t-shirt sizing */
   &:after {
     border-radius: calc(var(--mod-button-border-radius, var(--spectrum-button-border-radius)) + var(--mod-focus-indicator-gap, var(--spectrum-focus-indicator-gap)));
+  }
+
+  &.spectrum-Button--hideLabel {
+    min-inline-size: unset;
+    padding-inline: var(--mod-button-edge-to-visual-only, var(--spectrum-button-edge-to-visual-only));
   }
 }
 
