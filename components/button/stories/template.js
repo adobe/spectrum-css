@@ -40,6 +40,7 @@ export const Template = ({
         [`${rootClass}--size${size?.toUpperCase()}`]: typeof size !== "undefined",
         [`${rootClass}--${variant}`]: typeof variant !== "undefined",
         [`${rootClass}--${treatment}`]: typeof treatment !== "undefined",
+        [`${rootClass}--hideLabel`]: hideLabel,
         [`${rootClass}--static${capitalize(lowerCase(staticColor))}`]: typeof staticColor !== "undefined",
         ...customClasses.reduce((a, c) => ({ ...a, [c]: true }), {}),
       })}

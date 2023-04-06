@@ -117,15 +117,20 @@ export default {
 export const Default = Template.bind({});
 Default.args = {};
 
+export const IconOnly = Template.bind({});
+IconOnly.args = {
+  hideLabel: true,
+  iconName: "Edit",
+};
+
 export const OutlineWithIcon = Template.bind({});
 OutlineWithIcon.args = {
   treatment: "outline",
   iconName: "Edit",
 };
 
-export const DisabledIconOnly = Template.bind({});
-DisabledIconOnly.args = {
-  hideLabel: true,
+export const Disabled = Template.bind({});
+Disabled.args = {
   isDisabled: true,
   iconName: "Actions",
 };
