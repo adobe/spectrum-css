@@ -1,6 +1,6 @@
 {
   "name": "@spectrum-css/picker",
-  "version": "3.0.1",
+  "version": "3.0.2",
   "description": "The Spectrum CSS picker component",
   "license": "Apache-2.0",
   "author": "Adobe",
@@ -25,12 +25,12 @@
   },
   "devDependencies": {
     "@spectrum-css/component-builder-simple": "^2.0.7",
-    "@spectrum-css/helptext": "^4.0.13",
+    "@spectrum-css/helptext": "^4.0.14",
     "@spectrum-css/icon": "^3.0.36",
     "@spectrum-css/menu": "^4.0.17",
-    "@spectrum-css/popover": "^6.0.28",
-    "@spectrum-css/progresscircle": "^2.0.24",
-    "@spectrum-css/tokens": "^8.0.1",
+    "@spectrum-css/popover": "^6.0.29",
+    "@spectrum-css/progresscircle": "^2.0.25",
+    "@spectrum-css/tokens": "^8.0.2",
     "gulp": "^4.0.0"
   },
   "publishConfig": {
