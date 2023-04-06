@@ -38,7 +38,8 @@ governing permissions and limitations under the License.
   opacity: 0;
   transform-origin: bottom center;
   inset-block-end: calc(var(--spectrum-color-handle-size) + var(--mod-colorloupe-offset, var(--spectrum-colorloupe-offset)));
-  inset-inline: calc(40% - calc(var(--spectrum-colorloupe-width)) / 2);
+  inset-inline-end: calc(50% - (var(--spectrum-colorloupe-width) / 2) + 1px);
+
   transition: transform 100ms ease-in-out, opacity 125ms ease-in-out;
   pointer-events: none;
 
@@ -48,6 +49,10 @@ governing permissions and limitations under the License.
     var(--mod-colorloupe-drop-shadow-blur, var(--spectrum-colorloupe-drop-shadow-blur))
     var(--mod-colorloupe-drop-shadow-color, var(--spectrum-colorloupe-drop-shadow-color))
   );
+
+  [dir="rtl"] & {
+    inset-inline-end: calc(50% - (var(--spectrum-colorloupe-width) / 2) - 1px);;
+  }
 
   &.is-open {
     transform: translate(0, 0);
