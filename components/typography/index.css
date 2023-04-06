@@ -317,7 +317,7 @@ governing permissions and limitations under the License.
   strong,
   .spectrum-Heading-strong {
     font-style: var(--mod-heading-serif-light-strong-font-style, var(--spectrum-heading-serif-light-strong-font-style));
-    font-weight: var(--mod-heading-serif-light-strong-font-weight var(--spectrum-heading-serif-light-strong-font-weight));
+    font-weight: var(--mod-heading-serif-light-strong-font-weight, var(--spectrum-heading-serif-light-strong-font-weight));
   }
 
   .spectrum-Heading-strong.spectrum-Heading-emphasized,
