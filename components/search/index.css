@@ -23,8 +23,6 @@ governing permissions and limitations under the License.
   --spectrum-search-top-to-text: var(--spectrum-component-top-to-text-100);
   --spectrum-search-bottom-to-text: var(--spectrum-component-bottom-to-text-100);
 
-  --spectrum-search-border-width: var(--spectrum-border-width-100);
-
   /* Focus Indicator */
   --spectrum-search-focus-indicator-thickness: var(--spectrum-focus-indicator-thickness);
   --spectrum-search-focus-indicator-gap: var(--spectrum-focus-indicator-gap);
@@ -42,13 +40,14 @@ governing permissions and limitations under the License.
   --spectrum-search-color-focus-hover: var(--spectrum-neutral-content-color-focus-hover);
   --spectrum-search-color-key-focus: var(--spectrum-neutral-content-color-key-focus);
 
+  /* Background and Border */
+  --spectrum-search-border-width: var(--spectrum-border-width-100);
+  --spectrum-search-background-color: var(--spectrum-gray-50);
+
   /* Disabled */
   --spectrum-search-color-disabled: var(--spectrum-disabled-content-color);
   --spectrum-search-background-color-disabled: var(--spectrum-disabled-background-color);
   --spectrum-search-border-color-disabled: var(--spectrum-disabled-border-color);
-
-  /* Background and Border Color */
-  --spectrum-search-background-color: var(--spectrum-gray-50);
 }
 
 .spectrum-Search--sizeS {
@@ -84,6 +83,31 @@ governing permissions and limitations under the License.
   --spectrum-search-background-color-disabled: transparent;
 }
 
+@media (forced-colors: active) {
+  .spectrum-Search-textfield {
+    --highcontrast-search-background-color: Field;
+    --highcontrast-search-background-color-disabled: Field;
+
+    --highcontrast-search-border-color-default: FieldText;
+    --highcontrast-search-border-color-hover: Highlight;
+    --highcontrast-search-border-color-focus: FieldText;
+    --highcontrast-search-border-color-focus-hover: Highlight;
+    --highcontrast-search-border-color-disabled: GrayText;
+
+    --highcontrast-search-focus-indicator-color: Highlight;
+
+    --highcontrast-search-color-default: FieldText;
+    --highcontrast-search-color-hover: FieldText;
+    --highcontrast-search-color-focus: FieldText;
+    --highcontrast-search-color-focus-hover: FieldText;
+    --highcontrast-search-color-disabled: GrayText;
+  }
+
+  .spectrum-Search .spectrum-Search-clearButton .spectrum-ClearButton-fill {
+    background: transparent;
+  }
+}
+
 .spectrum-Search {
   display: inline-block;
   position: relative;
@@ -99,6 +123,7 @@ governing permissions and limitations under the License.
   position: absolute;
   inset-inline-end: 0;
   inset-block-start: 0;
+  border-radius: var(--spectrum-search-border-radius);
 }
 
 .spectrum-Search-textfield {
@@ -106,27 +131,27 @@ governing permissions and limitations under the License.
 }
 
 .spectrum-Search-icon {
-  color: var(--spectrum-search-color-default);
+  color: var(--highcontrast-search-color-default, var(--mod-search-color-default, var(--spectrum-search-color-default)));
 
   .spectrum-Search-textfield:hover & {
-    color: var(--mod-search-color-hover, var(--spectrum-search-color-hover));
+    color: var(--highcontrast-search-color-hover, var(--mod-search-color-hover, var(--spectrum-search-color-hover)));
   }
 
   .spectrum-Search-textfield.is-focused & {
-    color: var(--mod-search-color-focus, var(--spectrum-search-color-focus));
+    color: var(--highcontrast-search-color-focus, var(--mod-search-color-focus, var(--spectrum-search-color-focus)));
   }
 
   .spectrum-Search-textfield.is-focused:hover & {
-    color: var(--mod-search-color-focus-hover, var(--spectrum-search-color-focus-hover));
+    color: var(--highcontrast-search-color-focus-hover, var(--mod-search-color-focus-hover, var(--spectrum-search-color-focus-hover)));
   }
 
   .spectrum-Search-textfield.is-keyboardFocused & {
-    color: var(--mod-search-color-key-focus, var(--spectrum-search-color-key-focus));
+    color: var(--highcontrast-search-color-focus, var(--mod-search-color-key-focus, var(--spectrum-search-color-key-focus)));
   }
 
   .spectrum-Search-textfield.is-disabled &,
   .spectrum-Search-textfield.is-disabled:hover & {
-    color: var(--mod-search-color-disabled, var(--spectrum-search-color-disabled));
+    color: var(--highcontrast-search-color-disabled, var(--mod-search-color-disabled, var(--spectrum-search-color-disabled)));
   }
 }
 
@@ -144,6 +169,8 @@ governing permissions and limitations under the License.
     -webkit-appearance: none;
   }
 
+  backface-visibility: hidden;
+
   block-size: var(--mod-search-block-size, var(--spectrum-search-block-size));
   padding-block-start: var(--mod-search-top-to-text, var(--spectrum-search-top-to-text));
   padding-block-end: var(--mod-search-bottom-to-text, var(--spectrum-search-bottom-to-text));
@@ -156,41 +183,41 @@ governing permissions and limitations under the License.
   font-style: var(--mod-search-font-style, var(--spectrum-search-font-style));
   line-height: var(--mod-search-line-height, var(--spectrum-search-line-height));
 
-  background-color: var(--mod-search-background-color, var(--spectrum-search-background-color));
-  border-color: var(--mod-search-border-color-default, var(--spectrum-search-border-color-default));
-  color: var(--mod-search-color-default, var(--spectrum-search-color-default));
+  background-color: var(--highcontrast-search-background-color, var(--mod-search-background-color, var(--spectrum-search-background-color)));
+  border-color: var(--highcontrast-search-border-color-default, var(--mod-search-border-color-default, var(--spectrum-search-border-color-default)));
+  color: var(--highcontrast-search-color-default, var(--mod-search-color-default, var(--spectrum-search-color-default)));
 
   &::placeholder {
-    color: var(--mod-search-color-default, var(--spectrum-search-color-default));
+    color: var(--highcontrast-search-color-default, var(--mod-search-color-default, var(--spectrum-search-color-default)));
   }
 
   /* Hover */
   .spectrum-Search-textfield:hover &,
   &:hover {
-    color: var(--mod-search-color-hover, var(--spectrum-search-color-hover));
-    border-color: var(--mod-search-border-color-hover, var(--spectrum-search-border-color-hover));
+    color: var(--highcontrast-search-color-hover, var(--mod-search-color-hover, var(--spectrum-search-color-hover)));
+    border-color: var(--highcontrast-search-border-color-hover, var(--mod-search-border-color-hover, var(--spectrum-search-border-color-hover)));
 
     &::placeholder {
-      color: var(--mod-search-color-hover, var(--spectrum-search-color-hover));
+      color: var(--highcontrast-search-color-hover, var(--mod-search-color-hover, var(--spectrum-search-color-hover)));
     }
   }
 
   /* Focus */
   .spectrum-Search-textfield.is-focused &,
   &:focus {
-    color: var(--mod-search-color-focus, var(--spectrum-search-color-focus));
-    border-color: var(--mod-search-border-color-focus, var(--spectrum-search-border-color-focus));
+    color: var(--highcontrast-search-color-focus, var(--mod-search-color-focus, var(--spectrum-search-color-focus)));
+    border-color: var(--highcontrast-search-border-color-focus, var(--mod-search-border-color-focus, var(--spectrum-search-border-color-focus)));
 
     &::placeholder {
-      color: var(--mod-search-color-focus, var(--spectrum-search-color-focus));
+      color: var(--highcontrast-search-color-focus, var(--mod-search-color-focus, var(--spectrum-search-color-focus)));
     }
 
     &:hover {
-      color: var(--mod-search-color-focus-hover, var(--spectrum-search-color-focus-hover));
-      border-color: var(--mod-search-border-color-focus-hover, var(--spectrum-search-border-color-focus-hover));
+      color: var(--highcontrast-search-color-focus-hover, var(--mod-search-color-focus-hover, var(--spectrum-search-color-focus-hover)));
+      border-color: var(--highcontrast-search-border-color-focus-hover, var(--mod-search-border-color-focus-hover, var(--spectrum-search-border-color-focus-hover)));
 
       &::placeholder {
-        color: var(--mod-search-color-focus-hover, var(--spectrum-search-color-focus-hover));
+        color: var(--highcontrast-search-color-focus-hover, var(--mod-search-color-focus-hover, var(--spectrum-search-color-focus-hover)));
       }
     }
   }
@@ -198,11 +225,11 @@ governing permissions and limitations under the License.
   /* Keyboard Focus */
   .spectrum-Search-textfield.is-keyboardFocused &,
   &:focus-visible {
-    color: var(--mod-search-color-key-focus, var(--spectrum-search-color-key-focus));
-    border-color: var(--mod-search-border-color-key-focus, var(--spectrum-search-border-color-key-focus));
+    color: var(--highcontrast-search-color-focus, var(--mod-search-color-key-focus, var(--spectrum-search-color-key-focus)));
+    border-color: var(--highcontrast-search-border-color-focus, var(--mod-search-border-color-key-focus, var(--spectrum-search-border-color-key-focus)));
 
     &::placeholder {
-      color: var(--mod-search-color-key-focus, var(--spectrum-search-color-key-focus));
+      color: var(--highcontrast-search-color-focus, var(--mod-search-color-key-focus, var(--spectrum-search-color-key-focus)));
     }
   }
 
@@ -210,12 +237,12 @@ governing permissions and limitations under the License.
   .spectrum-Search-textfield.is-disabled &,
   .spectrum-Search-textfield.is-disabled:hover &,
   &:disabled {
-    color: var(--mod-search-color-disabled, var(--spectrum-search-color-disabled));
-    background-color: var(--mod-search-background-color-disabled, var(--spectrum-search-background-color-disabled));
-    border-color: var(--mod-search-border-color-disabled, var(--spectrum-search-border-color-disabled));
+    color: var(--highcontrast-search-color-disabled, var(--mod-search-color-disabled, var(--spectrum-search-color-disabled)));
+    background-color: var(--highcontrast-search-background-color-disabled, var(--mod-search-background-color-disabled, var(--spectrum-search-background-color-disabled)));
+    border-color: var(--highcontrast-search-border-color-disabled, var(--mod-search-border-color-disabled, var(--spectrum-search-border-color-disabled)));
 
     &::placeholder {
-      color: var(--mod-search-color-disabled, var(--spectrum-search-color-disabled));
+      color: var(--highcontrast-search-color-disabled, var(--mod-search-color-disabled, var(--spectrum-search-color-disabled)));
     }
   }
 }
@@ -246,7 +273,7 @@ governing permissions and limitations under the License.
   &:focus-within {
     &::after {
       border-width: var(--mod-search-focus-indicator-thickness, var(--spectrum-search-focus-indicator-thickness));
-      border-color: var(--highcontrast-textfield-focus-indicator-color, var(--mod-search-focus-indicator-color, var(--spectrum-search-focus-indicator-color)));
+      border-color: var(--highcontrast-search-focus-indicator-color, var(--mod-search-focus-indicator-color, var(--spectrum-search-focus-indicator-color)));
     }
   }
 }
@@ -304,7 +331,7 @@ governing permissions and limitations under the License.
     &:focus-within {
       &::after {
         border-bottom-width: var(--mod-search-focus-indicator-thickness, var(--spectrum-search-focus-indicator-thickness));
-        border-color: var(--highcontrast-textfield-focus-indicator-color, var(--mod-search-focus-indicator-color, var(--spectrum-search-focus-indicator-color)));
+        border-color: var(--highcontrast-search-focus-indicator-color, var(--mod-search-focus-indicator-color, var(--spectrum-search-focus-indicator-color)));
       }
     }
   }
