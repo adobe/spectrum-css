@@ -16,7 +16,6 @@ import '../index.css';
 
 export const Template = ({
   rootClass = "spectrum-Card",
-  size = "m",
   image,
   title,
   subtitle,
@@ -49,7 +48,6 @@ export const Template = ({
         [`${rootClass}--quiet`]: isQuiet,
         [`${rootClass}--gallery`]: isGallery,
         [`${rootClass}--horizontal`]: isHorizontal,
-        [`${rootClass}--size${size?.toUpperCase()}`]: typeof size !== "undefined",
         ...customClasses.reduce((a, c) => ({ ...a, [c]: true }), {}),
       })}
       id=${ifDefined(id)}
@@ -95,7 +93,7 @@ export const Template = ({
                         ...globals,
                         iconName: "More",
                         variant: "overBackground",
-                        size,
+                        size: "m",
                         isQuiet: true
                       })}
                     </div>`

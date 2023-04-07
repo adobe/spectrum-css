@@ -78,11 +78,6 @@ governing permissions and limitations under the License.
 
 }
 
-.spectrum-Card--sizeS {
-  /* Need less spacing for small cards since we've decreased min-width */
-  --spectrum-card-actions-spacing: calc(var(--spectrum-spacing-300) / 2);
-}
-
 .spectrum-Card {
   position: relative;
 
@@ -306,7 +301,7 @@ governing permissions and limitations under the License.
     margin: 0 auto;
     box-sizing: border-box;
     position: relative;
-    transition: background-color var(var(--spectrum-animation-duration-100););
+    transition: background-color var(--mod-animation-duration-100, var(--spectrum-animation-duration-100));
     overflow: visible;
     
 
@@ -383,6 +378,8 @@ governing permissions and limitations under the License.
   .spectrum-Card-footer {
     margin-inline-end: 0;
     margin-inline-start: 0;
+    /* Give some spacing between the body and footer if footer is present */
+    margin-block-start: var(--mod-card-divider-margin-bottom, var(--spectrum-card-divider-margin-bottom)); 
   }
 }
 

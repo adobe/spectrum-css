@@ -13,16 +13,6 @@ export default {
     "A card represents a rectangular space to contain text or images. Cards are typically used to encapsulate units of a data set, such as a gallery of image/caption pairs.",
   component: "Card",
   argTypes: {
-    size: {
-      name: "Size",
-      type: { name: "string", required: true },
-      table: {
-        type: { summary: "string" },
-        category: "Component",
-      },
-      options: ["s", "m"],
-      control: "select"
-    },
     image: {
       name: "Image",
       type: { name: "string" },
@@ -149,7 +139,6 @@ export default {
   },
   args: {
     rootClass: "spectrum-Card",
-    size: "m",
     isSelected: false,
     isFocused: false,
     isQuiet: false,
