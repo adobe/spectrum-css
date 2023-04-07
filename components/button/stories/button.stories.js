@@ -99,60 +99,33 @@ export default {
   },
 };
 
-const CustomButton = (args) => {
-  return (
-    html`<div>
-      ${Template(args)}
-      ${Template({
-        ...args,
-        treatment: 'outline'
-      })}
-      ${Template({
-        ...args,
-        iconName: args.iconName ?? 'Edit'
-      })}
-      ${Template({
-        ...args,
-        hideLabel: true,
-        iconName: args.iconName ?? 'Edit'
-      })}
-    </div>`
-  )
-}
-
-export const Accent = CustomButton.bind({});
+export const Accent = Template.bind({});
 Accent.args = {
   variant: "accent"
 };
 
-export const Negative = CustomButton.bind({});
+export const Negative = Template.bind({});
 Negative.args = {
   variant: "negative",
   iconName: "Delete"
 };
 
-export const Primary = CustomButton.bind({});
+export const Primary = Template.bind({});
 Primary.args = {
   variant: "primary"
 };
 
-export const Secondary = CustomButton.bind({});
+export const Secondary = Template.bind({});
 Secondary.args = {
   variant: "secondary"
 };
 
-export const StaticColorWhite = CustomButton.bind({});
+export const StaticColorWhite = Template.bind({});
 StaticColorWhite.args = {
   staticColor: "white"
 };
 
-export const StaticColorBlack = CustomButton.bind({});
+export const StaticColorBlack = Template.bind({});
 StaticColorBlack.args = {
   staticColor: "black"
-};
-
-export const Disabled = CustomButton.bind({});
-Disabled.args = {
-  isDisabled: true,
-  iconName: "Actions",
 };

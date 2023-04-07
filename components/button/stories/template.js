@@ -40,7 +40,38 @@ export const Template = ({
         [`${rootClass}--size${size?.toUpperCase()}`]: typeof size !== "undefined",
         [`${rootClass}--${variant}`]: typeof variant !== "undefined",
         [`${rootClass}--${treatment}`]: typeof treatment !== "undefined",
-        [`${rootClass}--iconOnly`]: hideLabel,
+        [`${rootClass}--static${capitalize(lowerCase(staticColor))}`]: typeof staticColor !== "undefined",
+        ...customClasses.reduce((a, c) => ({ ...a, [c]: true }), {}),
+      })}
+      id=${ifDefined(id)}
+      ?disabled=${isDisabled}>
+      ${when(label && !hideLabel,
+        () => html`<span class=${`${rootClass}-label`}>${label}</span>`
+      )}
+    </button>
+    <button
+      class=${classMap({
+        [rootClass]: true,
+        "is-open": isOpen,
+        [`${rootClass}--outline`]: true,
+        [`${rootClass}--size${size?.toUpperCase()}`]: typeof size !== "undefined",
+        [`${rootClass}--${variant}`]: typeof variant !== "undefined",
+        [`${rootClass}--static${capitalize(lowerCase(staticColor))}`]: typeof staticColor !== "undefined",
+        ...customClasses.reduce((a, c) => ({ ...a, [c]: true }), {}),
+      })}
+      id=${ifDefined(id)}
+      ?disabled=${isDisabled}>
+      ${when(label && !hideLabel,
+        () => html`<span class=${`${rootClass}-label`}>${label}</span>`
+      )}
+    </button>
+    <button
+      class=${classMap({
+        [rootClass]: true,
+        "is-open": isOpen,
+        [`${rootClass}--size${size?.toUpperCase()}`]: typeof size !== "undefined",
+        [`${rootClass}--${variant}`]: typeof variant !== "undefined",
+        [`${rootClass}--${treatment}`]: typeof treatment !== "undefined",
         [`${rootClass}--static${capitalize(lowerCase(staticColor))}`]: typeof staticColor !== "undefined",
         [`${rootClass}--iconOnly`]: hideLabel,
         ...customClasses.reduce((a, c) => ({ ...a, [c]: true }), {}),
@@ -51,6 +82,21 @@ export const Template = ({
       ${when(label && !hideLabel,
         () => html`<span class=${`${rootClass}-label`}>${label}</span>`
       )}
+    </button>
+    <button
+      class=${classMap({
+        [rootClass]: true,
+        "is-open": isOpen,
+        [`${rootClass}--iconOnly`]: true,
+        [`${rootClass}--size${size?.toUpperCase()}`]: typeof size !== "undefined",
+        [`${rootClass}--${variant}`]: typeof variant !== "undefined",
+        [`${rootClass}--${treatment}`]: typeof treatment !== "undefined",
+        [`${rootClass}--static${capitalize(lowerCase(staticColor))}`]: typeof staticColor !== "undefined",
+        ...customClasses.reduce((a, c) => ({ ...a, [c]: true }), {}),
+      })}
+      id=${ifDefined(id)}
+      ?disabled=${isDisabled}>
+      ${when(iconName, () => Icon({ ...globals, iconName, customClasses: [`${rootClass}-UIIcon`] }))}
     </button>
   `;
 };
