@@ -34,15 +34,8 @@ export default {
       if: false,
     },
     hideLabel: {
-      name: "Hide label",
-      type: { name: "boolean" },
       table: {
-        type: { summary: "boolean" },
-        category: "Component",
-      },
-      control: {
-        type: "boolean",
-        if: { arg: 'icon', truthy: true }
+        disable: true
       },
     },
     variant: {
@@ -83,16 +76,7 @@ export default {
       },
       options: ["white", "black"],
       control: "select",
-    },
-    justified: {
-      name: "Justified",
-      type: { name: "boolean" },
-      table: {
-        type: { summary: "boolean" },
-        category: "Advanced",
-      },
-      control: "boolean",
-    },
+    }
   },
   args: {
     rootClass: "spectrum-Button",
@@ -114,19 +98,35 @@ export default {
   },
 };
 
-export const Default = Template.bind({});
-Default.args = {};
-
-export const IconOnly = Template.bind({});
-IconOnly.args = {
-  hideLabel: true,
-  iconName: "Edit",
+export const Accent = Template.bind({});
+Accent.args = {
+  variant: "accent"
 };
 
-export const OutlineWithIcon = Template.bind({});
-OutlineWithIcon.args = {
-  treatment: "outline",
-  iconName: "Edit",
+export const Negative = Template.bind({});
+Negative.args = {
+  variant: "negative",
+  iconName: "Delete"
+};
+
+export const Primary = Template.bind({});
+Primary.args = {
+  variant: "primary"
+};
+
+export const Secondary = Template.bind({});
+Secondary.args = {
+  variant: "secondary"
+};
+
+export const StaticColorWhite = Template.bind({});
+StaticColorWhite.args = {
+  staticColor: "white"
+};
+
+export const StaticColorBlack = Template.bind({});
+StaticColorBlack.args = {
+  staticColor: "black"
 };
 
 export const Disabled = Template.bind({});
