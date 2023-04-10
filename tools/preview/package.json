@@ -9,8 +9,8 @@
   "scripts": {
     "build": "yarn storybook",
     "new": "yarn workspace @spectrum-css/generator new story",
-    "start": "WATCH_MODE=true start-storybook --config-dir .",
-    "storybook": "build-storybook --config-dir .",
+    "start": "WATCH_MODE=true start-storybook --quiet --config-dir .",
+    "storybook": "build-storybook --quiet --config-dir .",
     "test": "chromatic --build-script-name build --junit-report",
     "test:scope": "yarn test --only-story-names"
   },
