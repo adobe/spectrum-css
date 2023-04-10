@@ -169,8 +169,6 @@ governing permissions and limitations under the License.
     -webkit-appearance: none;
   }
 
-  backface-visibility: hidden;
-
   block-size: var(--mod-search-block-size, var(--spectrum-search-block-size));
   padding-block-start: var(--mod-search-top-to-text, var(--spectrum-search-top-to-text));
   padding-block-end: var(--mod-search-bottom-to-text, var(--spectrum-search-bottom-to-text));
