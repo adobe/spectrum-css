@@ -58,7 +58,7 @@ governing permissions and limitations under the License.
     var(--mod-colorhandle-outer-border-color, var(--spectrum-colorhandle-outer-border-color));
 
   background:
-    repeating-conic-gradient(var(--mod-colorhandle-checkerboard-dark-color, var(--spectrum-colorhandle-checkerboard-dark-color)) 0% 25%, var(--mod-colorhandle-checkerboard-light-color, var(--spectrum-colorhandle-checkerboard-light-color)) 0% 50%)
+    repeating-conic-gradient(var(--mod-colorhandle-checkerboard-light-color, var(--spectrum-colorhandle-checkerboard-light-color)) 0% 25%, var(--mod-colorhandle-checkerboard-dark-color, var(--spectrum-colorhandle-checkerboard-dark-color)) 0% 50%)
     50% / calc(var(--mod-colorhandle-checkerboard-size, var(--spectrum-colorhandle-checkerboard-size)) * 2) calc(var(--mod-colorhandle-checkerboard-size, var(--spectrum-colorhandle-checkerboard-size)) * 2);
 
   /* Add a half-percent to fix diagonal line issue in Chrome on non-retina displays */
