@@ -19,21 +19,8 @@ governing permissions and limitations under the License.
 // Load Stepper functionality from components/stepper/metadata/enhancement.js
 // Load Picker functionality from components/picker/metadata/enhancement.js
 // Load Treeview functionality from components/treeview/metadata/enhancement.js
+// Load Accordion functionality from components/accordion/metadata/enhancement.js
 
-
-
-// Accordion
-window.addEventListener('click', function(event) {
-  let heading = event.target.closest('.spectrum-Accordion-itemHeading');
-  if (heading) {
-    let item = event.target.closest('.spectrum-Accordion-item');
-    let isDisabled = item.classList.contains('is-disabled');
-    if (!isDisabled) {
-      item.classList.toggle('is-open');
-      event.preventDefault();
-    }
-  }
-});
 
 // Cyclebutton
 window.addEventListener('click', function(event) {
