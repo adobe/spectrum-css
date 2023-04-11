@@ -131,7 +131,7 @@ governing permissions and limitations under the License.
 
   &.spectrum-Button--iconOnly {
     min-inline-size: unset;
-    padding: var(--mod-button-edge-to-visual-only, var(--spectrum-button-edge-to-visual-only));
+    padding: calc(var(--mod-button-edge-to-visual-only, var(--spectrum-button-edge-to-visual-only)) - var(--mod-button-border-width, var(--spectrum-button-border-width)));
     border-radius: 50%;
 
     .spectrum-Icon {
