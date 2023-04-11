@@ -15,58 +15,8 @@ governing permissions and limitations under the License.
 // Load rating functionality from components/rating/metadata/enhancement.js
 // Load textfield functionality from components/textfield/metadata/enhancement.js
 
-// Inputgroup
-(function() {
-  function setFocus(inputgroup, focused, event) {
-    var textfields = inputgroup.querySelectorAll('.spectrum-Textfield');
-    var inputs = inputgroup.querySelectorAll('.spectrum-InputGroup-input');
-    var input = inputs[0];
-    var focusClass = event.target.classList.contains('focus-ring') ? 'is-keyboardFocused' : 'is-focused';
-    var pickerButton = inputgroup.querySelector('.spectrum-PickerButton');
-    if (focused) {
-      inputgroup.classList.add(focusClass);
-      if (pickerButton) pickerButton.classList.add(focusClass);
-      if (event.target.tagName !== 'INPUT') {
-        input.focus();
-      }
+// Load Inputgroup functionality from components/Inputgroup/metadata/enhancement.js
 
-      Array.prototype.forEach.call(textfields, (textfield) => {
-        textfield.classList.add(focusClass);
-      });
-    } else {
-      if (pickerButton) pickerButton.classList.remove('is-keyboardFocused');
-      if (pickerButton) pickerButton.classList.remove('is-focused');
-      inputgroup.classList.remove('is-keyboardFocused');
-      inputgroup.classList.remove('is-focused');
-
-      Array.prototype.forEach.call(textfields, (textfield) => {
-        textfield.classList.remove('is-focused');
-        textfield.classList.remove('is-keyboardFocused');
-      });
-    }
-  }
-
-  document.addEventListener('focusin', function(event) {
-    var inputgroup = event.target.closest('.spectrum-InputGroup');
-
-    if (event.target.closest('.spectrum-Menu')) {
-      // Don't mess with focus on menuitems
-      return;
-    }
-
-    if (inputgroup) {
-      setFocus(inputgroup, true, event);
-    }
-  });
-
-  document.addEventListener('focusout', function(event) {
-    var inputgroup = event.target.closest('.spectrum-InputGroup');
-
-    if (inputgroup) {
-      setFocus(inputgroup, false, event);
-    }
-  });
-}());
 
 // Stepper
 (function() {
