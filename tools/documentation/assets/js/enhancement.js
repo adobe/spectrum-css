@@ -18,18 +18,8 @@ governing permissions and limitations under the License.
 // Load Inputgroup functionality from components/Inputgroup/metadata/enhancement.js
 // Load Stepper functionality from components/stepper/metadata/enhancement.js
 // Load Picker functionality from components/picker/metadata/enhancement.js
+// Load Treeview functionality from components/treeview/metadata/enhancement.js
 
-// Treeview
-function furthest(el, selector) {
-  var lastMatch = null;
-  while (el) {
-    if (el.matches && el.matches(selector)) {
-      lastMatch = el;
-    }
-    el = el.parentNode;
-  }
-  return lastMatch;
-}
 
 window.addEventListener('click', function(event) {
   var treeviewItem = event.target.closest('.spectrum-TreeView-item');
