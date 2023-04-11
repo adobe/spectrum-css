@@ -23,36 +23,8 @@ governing permissions and limitations under the License.
 // Load Cyclebutton functionality from components/cyclebutton/metadata/enhancement.js
 // Load Sliders functionality from components/slider/metadata/enhancement.js
 // Load Dial functionality from components/dial/metadata/enhancement.js
+// Load Dialog functionality from components/dialog/metadata/enhancement.js
 
-//Dialog
-function openDialog(dialog, withOverlay) {
-  if (withOverlay !== false) {
-    document.getElementById('spectrum-underlay').classList.add('is-open');
-  }
-
-  dialog.classList.add('is-open');
-
-  // Support wrapped dialogs
-  var innerDialog = dialog.querySelector('.spectrum-Modal');
-  if (innerDialog) {
-    innerDialog.classList.add('is-open');
-  }
-}
-
-function closeDialog(dialog) {
-  document.getElementById('spectrum-underlay').classList.remove('is-open');
-  dialog.classList.remove('is-open');
-
-  // Support wrapped dialogs
-  var innerDialog = dialog.querySelector('.spectrum-Modal');
-  if (innerDialog) {
-    innerDialog.classList.remove('is-open');
-  }
-
-  setTimeout(function() {
-    dialog.classList.remove('spectrum-CSSExample-dialog');
-  }, 130);
-}
 
 function animateCircleLoaders() {
   var value = 0;
