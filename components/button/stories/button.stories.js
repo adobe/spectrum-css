@@ -102,9 +102,13 @@ export default {
 const CustomButton = (args) => {
   return (
     html`<div>
-      ${Template(args)}
       ${Template({
         ...args,
+        iconName: undefined,
+      })}
+      ${Template({
+        ...args,
+        iconName: undefined,
         treatment: 'outline'
       })}
       ${Template({
