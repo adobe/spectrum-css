@@ -3,6 +3,92 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+<a name="4.1.5"></a>
+## 4.1.5
+🗓 2023-04-06 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/textfield@4.1.3...@spectrum-css/textfield@4.1.5)
+
+**Note:** Version bump only for package @spectrum-css/textfield
+
+
+
+
+
+<a name="4.1.4"></a>
+## 4.1.4
+🗓 2023-04-04 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/textfield@4.1.3...@spectrum-css/textfield@4.1.4)
+
+**Note:** Version bump only for package @spectrum-css/textfield
+
+
+
+
+
+<a name="4.1.3"></a>
+## 4.1.3
+🗓 2023-04-03 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/textfield@4.1.2...@spectrum-css/textfield@4.1.3)
+
+**Note:** Version bump only for package @spectrum-css/textfield
+
+
+
+
+
+<a name="4.1.2"></a>
+## 4.1.2
+🗓 2023-03-31 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/textfield@4.1.1...@spectrum-css/textfield@4.1.2)
+
+**Note:** Version bump only for package @spectrum-css/textfield
+
+
+
+
+
+<a name="4.1.1"></a>
+## 4.1.1
+🗓 2023-03-30 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/textfield@4.1.0...@spectrum-css/textfield@4.1.1)
+
+**Note:** Version bump only for package @spectrum-css/textfield
+
+
+
+
+
+<a name="4.1.0"></a>
+# 4.1.0
+🗓 2023-03-28 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/textfield@4.0.3...@spectrum-css/textfield@4.1.0)
+
+### ✨ Features
+
+* **textfield:** remove custom search icon styles ([cc72eca](https://github.com/adobe/spectrum-css/commit/cc72eca))
+
+
+
+
+
+<a name="4.0.3"></a>
+## 4.0.3
+🗓 2023-03-28 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/textfield@4.0.2...@spectrum-css/textfield@4.0.3)
+
+### 🐛 Bug fixes
+
+* **textfield:** add search icon exception ([#1690](https://github.com/adobe/spectrum-css/issues/1690)) ([dcdec2d](https://github.com/adobe/spectrum-css/commit/dcdec2d))
+
+
+
+
+
+<a name="4.0.2"></a>
+## 4.0.2
+🗓 2023-03-27 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/textfield@4.0.1...@spectrum-css/textfield@4.0.2)
+
+### 🐛 Bug fixes
+
+* **textfield:** quiet focus indicator on click ([#1685](https://github.com/adobe/spectrum-css/issues/1685)) ([51263fb](https://github.com/adobe/spectrum-css/commit/51263fb))
+
+
+
+
+
 <a name="4.0.1"></a>
 ## 4.0.1
 🗓 2023-03-21 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/textfield@4.0.0...@spectrum-css/textfield@4.0.1)

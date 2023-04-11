@@ -3,6 +3,67 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+<a name="8.0.2"></a>
+## 8.0.2
+🗓 2023-04-06 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/tokens@8.0.0...@spectrum-css/tokens@8.0.2)
+
+**Note:** Version bump only for package @spectrum-css/tokens
+
+
+
+
+
+<a name="8.0.1"></a>
+## 8.0.1
+🗓 2023-04-04 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/tokens@8.0.0...@spectrum-css/tokens@8.0.1)
+
+**Note:** Version bump only for package @spectrum-css/tokens
+
+
+
+
+
+<a name="8.0.0"></a>
+# 8.0.0
+🗓 2023-04-03 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/tokens@7.7.0...@spectrum-css/tokens@8.0.0)
+
+* fix(tokens)!: rgb transform to split out rgb values from css attributes (#1590) ([b714db4](https://github.com/adobe/spectrum-css/commit/b714db4)), closes [#1590](https://github.com/adobe/spectrum-css/issues/1590)
+
+
+### 🛑 BREAKING CHANGES
+
+* transforms color tokens to split out their `rgb` values
+
+Co-authored-by: castastrophe <castastrophe@users.noreply.github.com>
+
+
+
+
+
+<a name="7.7.0"></a>
+# 7.7.0
+🗓 2023-03-31 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/tokens@7.6.1...@spectrum-css/tokens@7.7.0)
+
+### ✨ Features
+
+* **tokens:** add open type conversion to style-dictionary ([7a423aa](https://github.com/adobe/spectrum-css/commit/7a423aa))
+
+
+
+
+
+<a name="7.6.1"></a>
+## 7.6.1
+🗓 2023-03-27 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/tokens@7.6.0...@spectrum-css/tokens@7.6.1)
+
+### 🐛 Bug fixes
+
+* **tokens:** add 'px' to zero length value for combobox ([#1683](https://github.com/adobe/spectrum-css/issues/1683)) ([f17c67e](https://github.com/adobe/spectrum-css/commit/f17c67e))
+
+
+
+
+
 <a name="7.6.0"></a>
 # 7.6.0
 🗓 2023-03-21 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/tokens@7.5.1...@spectrum-css/tokens@7.6.0)

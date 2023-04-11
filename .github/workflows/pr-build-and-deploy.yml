@@ -1,4 +1,4 @@
-name: Build & Deploy Pull Requests
+name: Build and deploy preview
 
 on:
   push:
@@ -16,13 +16,13 @@ jobs:
       - name: Use Node LTS version
         uses: actions/setup-node@v3
         with:
-          node-version: 16.15.0
+          node-version: 16
       - name: Install dependencies
         run: yarn install
       - name: Build everything
-        run: yarn build
+        run: yarn build:all
       - name: Deploy to Netlify
-        uses: nwtgck/actions-netlify@v1.2.3
+        uses: nwtgck/actions-netlify@v2
         with:
           publish-dir: 'dist'
           production-branch: 'main'

@@ -83,7 +83,7 @@ governing permissions and limitations under the License.
   --spectrum-textfield-text-color-default: var(--spectrum-neutral-content-color-default);
   --spectrum-textfield-text-color-hover: var(--spectrum-neutral-content-color-hover);
   --spectrum-textfield-text-color-focus: var(--spectrum-neutral-content-color-focus);
-  --spectrum-textfield-text-color-focus-hover: var(-spectrum-neutral-content-color-focus-hover);
+  --spectrum-textfield-text-color-focus-hover: var(--spectrum-neutral-content-color-focus-hover);
   --spectrum-textfield-text-color-keyboard-focus: var(--spectrum-neutral-content-color-key-focus);
 
   /* Read Only Text Color */

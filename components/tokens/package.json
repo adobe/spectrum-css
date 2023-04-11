@@ -1,6 +1,6 @@
 {
   "name": "@spectrum-css/tokens",
-  "version": "7.6.0",
+  "version": "8.0.2",
   "description": "The Spectrum CSS tokens package",
   "license": "Apache-2.0",
   "author": "Adobe",
@@ -16,16 +16,33 @@
   "main": "dist/index.css",
   "scripts": {
     "prebuild": "rimraf dist/*",
-    "build": "style-dictionary build",
-    "postbuild": "gulp rebuildCustoms"
+    "build": "run-s convert:tokens css:prepare format:results clean:empty",
+    "build:tokens": "style-dictionary build --config style-dictionary.config.js && postcss --replace dist/css/*.css",
+    "clean:empty": "find dist -type f -empty -delete",
+    "concat:dist": "concat-cli -f dist/css/*.css dist/css/**/*.css -o dist/index.css",
+    "convert:tokens": "run-p build:tokens copy:*",
+    "copy:express": "postcss --dir dist/css/express/ custom-express/*.css",
+    "copy:spectrum": "postcss --dir dist/css/spectrum/ custom-spectrum/*.css",
+    "css:prepare": "yarn concat:dist && postcss --replace dist/index.css",
+    "format:results": "prettier --no-config --no-error-on-unmatched-pattern --ignore-unknown --loglevel silent --write dist/"
   },
   "devDependencies": {
-    "@adobe/spectrum-tokens": "12.1.1",
-    "gulp": "^4.0.0",
-    "gulp-concat": "^2.6.1",
-    "rimraf": "^4.1.1",
-    "style-dictionary": "^3.7.0",
-    "style-dictionary-sets": "^2.0.2"
+    "@adobe/spectrum-tokens": "12.1.2",
+    "concat-cli": "^4.0.0",
+    "npm-run-all": "^4.1.5",
+    "postcss": "^8.4.21",
+    "postcss-cli": "^10.1.0",
+    "postcss-combine-duplicated-selectors": "^10.0.3",
+    "postcss-discard-comments": "^6.0.0",
+    "postcss-discard-empty": "^6.0.0",
+    "postcss-licensing": "^1.0.1",
+    "postcss-merge-rules": "^6.0.0",
+    "postcss-rgb-mapping": "^1.0.1",
+    "postcss-sorting": "^8.0.2",
+    "prettier": "^2.8.7",
+    "rimraf": "^4.4.1",
+    "style-dictionary": "^3.7.2",
+    "style-dictionary-sets": "^2.2.0"
   },
   "publishConfig": {
     "access": "public"

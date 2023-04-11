@@ -10,8 +10,8 @@ OF ANY KIND, either express or implied. See the License for the specific languag
 governing permissions and limitations under the License.
 */
 
-.spectrum-InputGroup--quiet {
-  .spectrum-InputGroup-button {
+.spectrum-DatePicker--quiet {
+  .spectrum-DatePicker-button {
     &,
     &:hover,
     &:focus,
@@ -40,19 +40,20 @@ governing permissions and limitations under the License.
   }
 
   &:hover:not(.is-focused):not(.is-keyboardFocused):not(.is-disabled) {
-    .spectrum-InputGroup-input,
-    .spectrum-InputGroup-button {
+    .spectrum-DatePicker-input,
+    .spectrum-DatePicker-button {
       border-color: var(--spectrum-textfield-m-quiet-texticon-border-color-hover);
     }
   }
 
   &.is-invalid {
-    .spectrum-InputGroup-input,
-    .spectrum-InputGroup-button {
+    .spectrum-DatePicker-input,
+    .spectrum-DatePicker-button {
       border-color: var(--spectrum-textfield-m-quiet-texticon-border-color-invalid);
     }
   }
 }
-.spectrum-InputGroup.is-disabled .spectrum-Datepicker-rangeDash{
+
+.spectrum-DatePicker.is-disabled .spectrum-DatePicker-rangeDash {
   color: var(--spectrum-alias-text-color-disabled);
 }

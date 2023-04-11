@@ -33,7 +33,7 @@ export default {
         type: { summary: "string" },
         category: "Component",
       },
-      options: ["neutral", "info", "positive", "notice", "negative", "closable"],
+      options: ["neutral", "info", "positive", "notice", "negative"],
       control: "select"
     },
     isClosable: {

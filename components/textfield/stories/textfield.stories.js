@@ -101,6 +101,16 @@ export default {
       },
       control: "boolean",
     },
+    isLoading: {
+      name: "Loading",
+      type: { name: "boolean" },
+      table: {
+        disable: true,
+        type: { summary: "boolean" },
+        category: "State",
+      },
+      control: "boolean"
+    },
     pattern: {
       name: "Pattern",
       type: { name: "string" },
@@ -121,6 +131,7 @@ export default {
     isReadOnly: false,
     isFocused: false,
     isKeyboardFocused: false,
+    isLoading: false,
     multiline: false,
     grows: false,
     isQuiet: false,

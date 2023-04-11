@@ -6,6 +6,9 @@
   --spectrum-colorslider-handle-hitarea-height: var(
     --spectrum-global-dimension-size-300
   );
+  --spectrum-colorslider-checkerboard-size: var(--spectrum-opacity-checkerboard-square-size);
+  --spectrum-colorslider-checkerboard-dark-color: var(--spectrum-opacity-checkerboard-square-dark);
+  --spectrum-colorslider-checkerboard-light-color: var(--spectrum-opacity-checkerboard-square-light);
 }
 
 %spectrum-ColorControl-handle--focused {
@@ -77,12 +80,9 @@
 }
 
 .spectrum-ColorSlider-checkerboard {
-  background-size: var(--spectrum-global-dimension-static-size-200)
-    var(--spectrum-global-dimension-static-size-200);
-  background-position: 0 0, 0 var(--spectrum-global-dimension-static-size-100),
-    var(--spectrum-global-dimension-static-size-100)
-      calc(-1 * var(--spectrum-global-dimension-static-size-100)),
-    calc(-1 * var(--spectrum-global-dimension-static-size-100)) 0;
+  background:
+    repeating-conic-gradient(var(--spectrum-colorslider-checkerboard-light-color) 0% 25%, var(--spectrum-colorslider-checkerboard-dark-color) 0% 50%)
+    left top / calc(var(--spectrum-colorslider-checkerboard-size) * 2 ) calc(var(--spectrum-colorslider-checkerboard-size) * 2 );
 
   /* the floating inset box shadow must be a separate element since <canvas> won't take it */
   &:before {

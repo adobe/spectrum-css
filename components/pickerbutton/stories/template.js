@@ -19,6 +19,7 @@ export const Template = ({
   iconName = "ChevronDown200",
   isDisabled = false,
   isFocused = false,
+  isKeyboardFocused = false,
   isOpen = false,
   isValid = false,
   isInvalid = false,
@@ -44,6 +45,7 @@ export const Template = ({
         [`${rootClass}--size${size?.toUpperCase()}`]: typeof size !== "undefined",
         'is-disabled': isDisabled,
         'is-focused': isFocused,
+        'is-keyboardFocused': isKeyboardFocused,
         'is-open': isOpen && !isDisabled,
         'is-invalid': isInvalid && !isDisabled,
         'is-valid': isValid && !isDisabled,
@@ -53,6 +55,7 @@ export const Template = ({
       style=${ifDefined(styleMap(customStyles))}
       id=${ifDefined(id)}
       aria-haspopup="listbox"
+      ?disabled=${isDisabled}
       @click=${onclick ?? function () {
         if (isDisabled) return;
         updateArgs({ isOpen: !isOpen });

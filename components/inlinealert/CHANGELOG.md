@@ -3,6 +3,81 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+<a name="7.0.4"></a>
+## 7.0.4
+🗓 2023-04-10 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/inlinealert@7.0.3...@spectrum-css/inlinealert@7.0.4)
+
+**Note:** Version bump only for package @spectrum-css/inlinealert
+
+
+
+
+
+<a name="7.0.3"></a>
+## 7.0.3
+🗓 2023-04-06 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/inlinealert@7.0.1...@spectrum-css/inlinealert@7.0.3)
+
+**Note:** Version bump only for package @spectrum-css/inlinealert
+
+
+
+
+
+<a name="7.0.2"></a>
+## 7.0.2
+🗓 2023-04-04 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/inlinealert@7.0.1...@spectrum-css/inlinealert@7.0.2)
+
+**Note:** Version bump only for package @spectrum-css/inlinealert
+
+
+
+
+
+<a name="7.0.1"></a>
+## 7.0.1
+🗓 2023-04-03 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/inlinealert@7.0.0...@spectrum-css/inlinealert@7.0.1)
+
+**Note:** Version bump only for package @spectrum-css/inlinealert
+
+
+
+
+
+<a name="7.0.0"></a>
+# 7.0.0
+🗓 2023-03-31 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/inlinealert@6.0.11...@spectrum-css/inlinealert@7.0.0)
+
+* feat(inlinealert)!: updates tokens (#1695) ([e2960f4](https://github.com/adobe/spectrum-css/commit/e2960f4)), closes [#1695](https://github.com/adobe/spectrum-css/issues/1695)
+
+
+### 🛑 BREAKING CHANGES
+
+* migrates In-Line Alert to the new tokens system.
+
+
+
+
+
+<a name="6.0.11"></a>
+## 6.0.11
+🗓 2023-03-31 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/inlinealert@6.0.10...@spectrum-css/inlinealert@6.0.11)
+
+**Note:** Version bump only for package @spectrum-css/inlinealert
+
+
+
+
+
+<a name="6.0.10"></a>
+## 6.0.10
+🗓 2023-03-27 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/inlinealert@6.0.9...@spectrum-css/inlinealert@6.0.10)
+
+**Note:** Version bump only for package @spectrum-css/inlinealert
+
+
+
+
+
 <a name="6.0.9"></a>
 ## 6.0.9
 🗓 2023-03-21 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/inlinealert@6.0.8...@spectrum-css/inlinealert@6.0.9)

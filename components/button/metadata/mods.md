@@ -5,11 +5,12 @@
 |`--mod-button-font-size`|
 |`--mod-bold-font-weight`|
 |`--mod-button-padding-label-to-icon`|
-|`--mod-button-height`|
 |`--mod-button-min-width`|
+|`--mod-button-height`|
 |`--mod-button-edge-to-text`|
 |`--mod-button-edge-to-visual`|
 |`--mod-focus-indicator-gap`|
+|`--mod-button-edge-to-visual-only`|
 |`--mod-button-padding-label-top`|
 |`--mod-button-padding-label-bottom`|
 |`--mod-button-focus-ring-thickness`|

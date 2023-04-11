@@ -10,7 +10,7 @@ on:
 jobs:
   build:
     if: contains(github.event.pull_request.labels.*.name, 'run_vrt')
-    
+
     runs-on: ubuntu-latest
 
     steps:
@@ -21,23 +21,22 @@ jobs:
       - name: Use Node LTS version
         uses: actions/setup-node@v3
         with:
-          node-version: 16.15.0
+          node-version: 16
       - name: Install dependencies
         run: yarn install
       - name: Publish to Chromatic
         uses: chromaui/action@v1
         with:
           projectToken: ${{ secrets.CHROMATIC_PROJECT_TOKEN }}
-          dryRun: true
-          buildScriptName: "test"
-          storybookBaseDir: tools/preview
+          buildScriptName: build:preview
+          storybookConfigDir: tools/preview
           exitOnceUploaded: true
           onlyChanged: true
           traceChanged: true
           diagnostics: true
           # forces a pass but doesn't run
           skip: ${{ contains(github.event.pull_request.labels.*.name, 'skip_vrt') }}
-      - uses: actions/upload-artifact@v2
+      - uses: actions/upload-artifact@v3
         if: always()
         with:
           name: chromatic-build-artifacts-${{ github.run_id }}

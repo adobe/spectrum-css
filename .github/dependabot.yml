@@ -1,0 +1,35 @@
+version: 2
+updates:
+  - package-ecosystem: "npm"
+    directory: "/"
+    schedule:
+      interval: "weekly"
+    labels:
+      - "skip_vrt"
+      - "dependencies"
+    assignees:
+      - "castastrophe"
+    reviewers:
+      - "castastrophe"
+    commit-message:
+      prefix: "chore"
+      include: "scope"
+    open-pull-requests-limit: 10
+    rebase-strategy: "auto"
+    versioning-strategy: "increase"
+    ignore:
+      # Not yet upgrading to @storybook 7.x [#CSS-450]
+      - dependency-name: "@storybook/*"
+        versions: ["7.x"]
+      - dependency-name: "@spectrum-css/*"
+      # Ignore postcss versions until build migration complete
+      - dependency-name: "postcss*"
+      # Ignore gulp versions until build migration complete
+      - dependency-name: "gulp*"
+
+  - package-ecosystem: "github-actions"
+    directory: "/"
+    schedule:
+      interval: "monthly"
+    reviewers:
+      - "castastrophe"

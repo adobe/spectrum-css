@@ -4,10 +4,20 @@ import { Template } from "./template";
 import { Template as Menu } from '@spectrum-css/menu/stories/template.js';
 
 export default {
-  title: "Combo box",
-  description: "Combo boxes combine a text entry with a picker menu, allowing users to filter longer lists to only the selections matching a query.",
-  component: "InputGroup",
+  title: "Combobox",
+  description: "Comboboxes combine a text entry with a picker menu, allowing users to filter longer lists to only the selections matching a query.",
+  component: "Combobox",
   argTypes: {
+    size: {
+      name: "Size",
+      type: { name: "string", required: true },
+      table: {
+        type: { summary: "string" },
+        category: "Component",
+      },
+      options: ["s", "m", "l", "xl"],
+      control: "select"
+    },
     isOpen: {
       name: "Open",
       type: { name: "boolean" },
@@ -30,6 +40,7 @@ export default {
       name: "Valid",
       type: { name: "boolean" },
       table: {
+        disable: true,
         type: { summary: "boolean" },
         category: "State",
       },
@@ -46,6 +57,33 @@ export default {
       control: "boolean",
       if: { arg: 'isValid', truthy: false },
     },
+    isFocused: {
+      name: "Focused",
+      type: { name: "boolean" },
+      table: {
+        type: { summary: "boolean" },
+        category: "State",
+      },
+      control: "boolean",
+    },
+    isKeyboardFocused: {
+      name: "Keyboard Focused",
+      type: { name: "boolean" },
+      table: {
+        type: { summary: "boolean" },
+        category: "State",
+      },
+      control: "boolean",
+    },
+    isLoading: {
+      name: "Loading",
+      type: { name: "boolean" },
+      table: {
+        type: { summary: "boolean" },
+        category: "State",
+      },
+      control: "boolean",
+    },
     isDisabled: {
       name: "Disabled",
       type: { name: "boolean" },
@@ -55,16 +93,18 @@ export default {
       },
       control: "boolean",
     },
-    variant: { table: { disable: true } },
     content: { table: { disable: true } },
   },
   args: {
-    rootClass: "spectrum-InputGroup",
-    variant: "combobox",
+    rootClass: "spectrum-Combobox",
+    size: "m",
     isOpen: true,
     isQuiet: false,
     isInvalid: false,
     isValid: false,
+    isFocused: false,
+    isKeyboardFocused: false,
+    isLoading: false,
     isDisabled: false,
   },
   parameters: {
@@ -72,7 +112,7 @@ export default {
       handles: []
     },
     status: {
-      type: process.env.MIGRATED_PACKAGES.includes('inputgroup') ? 'migrated' : undefined
+      type: process.env.MIGRATED_PACKAGES.includes('combobox') ? 'migrated' : undefined
     }
   }
 };
