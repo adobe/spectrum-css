@@ -20,57 +20,7 @@ governing permissions and limitations under the License.
 // Load Picker functionality from components/picker/metadata/enhancement.js
 // Load Treeview functionality from components/treeview/metadata/enhancement.js
 // Load Accordion functionality from components/accordion/metadata/enhancement.js
-
-
-// Cyclebutton
-window.addEventListener('click', function(event) {
-  var button = event.target.closest('.spectrum-CycleButton');
-  if (button) {
-    var icons = button.querySelectorAll('.spectrum-Icon');
-    var currentIcon = button.querySelector('.spectrum-Icon.is-selected');
-    var currentIconIndex = Array.prototype.slice.call(icons).indexOf(currentIcon);
-    if (currentIcon) {
-      currentIcon.classList.remove('is-selected');
-
-      var newIndex = currentIconIndex + 1 < icons.length ? currentIconIndex + 1 : 0;
-      icons[newIndex].classList.add('is-selected');
-    }
-  }
-});
-
-// Display InputGroup focus style
-function toggleInputGroupFocus(event) {
-  var classList = event.target.classList;
-  var closestSelector;
-  // target within InputGroup
-  if (!classList) return;
-  if (classList.contains('spectrum-InputGroup-input') ||
-    classList.contains('spectrum-ActionButton spectrum-ActionButton--sizeM')) {
-    closestSelector = '.spectrum-InputGroup';
-  }
-  // target within a Slider
-  else if (classList.contains('spectrum-Slider-input')) {
-    closestSelector = '.spectrum-Slider-handle';
-  } else {
-    return;
-  }
-  var func = event.type === 'focus' ? 'add' : 'remove';
-  var closestElement = event.target.closest(closestSelector);
-  if (closestElement) {
-    closestElement.classList[func]('is-focused');
-  }
-}
-
-document.addEventListener('focus', toggleInputGroupFocus, true);
-document.addEventListener('blur', toggleInputGroupFocus, true);
-
-function isRTL() {
-  return document.documentElement.getAttribute('dir') === 'rtl';
-}
-
-function toggleRTL(left, right) {
-  return isRTL() ? right : left;
-}
+// Load Cyclebutton functionality from components/cyclebutton/metadata/enhancement.js
 
 // Sliders
 function makeDoubleSlider(slider) {
