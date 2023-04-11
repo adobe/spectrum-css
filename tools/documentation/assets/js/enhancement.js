@@ -16,36 +16,10 @@ governing permissions and limitations under the License.
 // Load textfield functionality from components/textfield/metadata/enhancement.js
 
 // Load Inputgroup functionality from components/Inputgroup/metadata/enhancement.js
+// Load Stepper functionality from components/stepper/metadata/enhancement.js
 
 
-// Stepper
-(function() {
-  function setFocus(stepper, input, focused) {
-    var focusClass = input.classList.contains('focus-ring') ? 'is-keyboardFocused' : 'is-focused';
-    if (focused) {
-      stepper.classList.add(focusClass);
-    } else {
-      stepper.classList.remove('is-keyboardFocused');
-      stepper.classList.remove('is-focused');
-    }
-  }
 
-  document.addEventListener('focusin', function(event) {
-    var stepper = event.target.closest('.spectrum-Stepper');
-
-    if (stepper) {
-      setFocus(stepper, event.target, true);
-    }
-  });
-
-  document.addEventListener('focusout', function(event) {
-    var stepper = event.target.closest('.spectrum-Stepper');
-
-    if (stepper) {
-      setFocus(stepper, event.target, false);
-    }
-  });
-}());
 
 // Picker
 (function() {
