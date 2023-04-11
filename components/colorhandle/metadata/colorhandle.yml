@@ -9,7 +9,7 @@ examples:
     name: Standard
     demoClassName: spectrum-CSSExample-example--spacious
     markup: |
-      <div class="spectrum-ColorHandle" tabindex="0" style="--spectrum-picked-color: rgba(255, 0, 0, 0.5); position: absolute; inset-block: 50%; inset-inline: 50%;">
+      <div class="spectrum-ColorHandle" style="--spectrum-picked-color: rgba(255, 0, 0, 0.5); position: absolute; inset-block: 50%; inset-inline: 50%;">
         <div class="spectrum-ColorHandle-inner"></div>
       </div>
   - id: color-area
@@ -23,7 +23,7 @@ examples:
     name: Open
     demoClassName: spectrum-CSSExample-example--spacious
     markup: |
-      <div class="spectrum-ColorHandle" tabindex="0" style="--spectrum-picked-color: rgba(255, 0, 0, 0.5); position: absolute; inset-block: 75%; inset-inline: 50%">
+      <div class="spectrum-ColorHandle" style="--spectrum-picked-color: rgba(255, 0, 0, 0.5); position: absolute; inset-block: 75%; inset-inline: 50%">
         <div class="spectrum-ColorHandle-inner"></div>
         <svg class="spectrum-ColorLoupe is-open">
           <defs>
