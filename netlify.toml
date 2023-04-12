@@ -17,10 +17,6 @@
   from = "/preview"
   to = "/preview/"
 
-[[redirects]]
-  from = "/docs/*"
-  to = "/docs/:splat.html"
-
 # If skip_processing = true, all other settings are ignored
 [build.processing]
   skip_processing = false

@@ -18,11 +18,11 @@
     "build": "gulp"
   },
   "dependencies": {
-    "@spectrum-css/vars": "^9.0.0"
+    "@spectrum-css/vars": "*"
   },
   "devDependencies": {
-    "@spectrum-css/component-builder": "^4.0.4",
-    "@spectrum-css/vars": "^4.0.0",
+    "@spectrum-css/component-builder": "*",
+    "@spectrum-css/vars": "*",
     "gulp": "^4.0.0"
   },
   "publishConfig": {

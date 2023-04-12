@@ -22,10 +22,10 @@
     "@spectrum-css/vars": ">=9.0.0"
   },
   "devDependencies": {
-    "@spectrum-css/component-builder": "^4.0.4",
-    "@spectrum-css/icon": "^3.0.36",
-    "@spectrum-css/thumbnail": "^2.0.28",
-    "@spectrum-css/vars": "^9.0.0",
+    "@spectrum-css/component-builder": "*",
+    "@spectrum-css/icon": "*",
+    "@spectrum-css/thumbnail": "*",
+    "@spectrum-css/vars": "*",
     "gulp": "^4.0.0"
   },
   "publishConfig": {
