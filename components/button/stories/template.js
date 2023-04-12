@@ -16,7 +16,7 @@ export const Template = ({
   size = "m",
   label,
   hideLabel = false,
-  iconName = "Edit",
+  iconName,
   variant,
   staticColor,
   treatment,
