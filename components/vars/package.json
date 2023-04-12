@@ -34,5 +34,19 @@
   },
   "publishConfig": {
     "access": "public"
+  },
+  "nx": {
+    "targets": {
+      "build": {
+        "inputs": [
+          "{workspaceRoot}/*.css",
+          "{workspaceRoot}/css",
+          "{workspaceRoot}/json"
+        ]
+      }
+    },
+    "includedScripts": [
+      "build"
+    ]
   }
 }

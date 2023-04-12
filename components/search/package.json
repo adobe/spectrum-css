@@ -24,11 +24,11 @@
     "@spectrum-css/vars": ">=9.0.0"
   },
   "devDependencies": {
-    "@spectrum-css/clearbutton": "^1.2.23",
-    "@spectrum-css/component-builder": "^4.0.4",
-    "@spectrum-css/icon": "^3.0.36",
-    "@spectrum-css/textfield": "^3.2.16",
-    "@spectrum-css/vars": "^9.0.0",
+    "@spectrum-css/clearbutton": "*",
+    "@spectrum-css/component-builder": "*",
+    "@spectrum-css/icon": "*",
+    "@spectrum-css/textfield": "*",
+    "@spectrum-css/vars": "*",
     "gulp": "^4.0.0"
   },
   "publishConfig": {

@@ -269,7 +269,9 @@ yarn start
 
 Your `dist/` folder should now have a local copy of the Spectrum CSS docs and minimal CSS files, and your browser should be open with the project's preview site. Editing any of the `.css` or the `.stories.js` files in `components/*` will update the project documentation and live reload in your browser.
 
-**Important:** Ensure you have Node.js > 10.10 installed or the build system will not run. Node.js > 12.x is preferred.
+**Important:** Ensure you have Node.js > 14 installed or the build system will not run. Node.js > 16.x is preferred.
+
+This project is leveraging caching from [Nx](https://nx.dev/) to speed up the build process. If you are seeing unexpected results, you can clear the cache by running `yarn nx clean` or `yarn nx run-many --target clean --all`.
 
 To spin up the local development environment ([Storybook](https://storybook.js.org/docs/web-components/get-started/introduction)) without first building the components, use: `SKIP_BUILD=true yarn start` as `yarn start` alone will start from a clean build.
 

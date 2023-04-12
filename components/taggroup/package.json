@@ -23,12 +23,12 @@
     "@spectrum-css/vars": ">=9.0.0"
   },
   "devDependencies": {
-    "@spectrum-css/avatar": "^5.0.27",
-    "@spectrum-css/clearbutton": "^1.2.23",
-    "@spectrum-css/component-builder": "^4.0.4",
-    "@spectrum-css/icon": "^3.0.36",
-    "@spectrum-css/tag": "^3.3.15",
-    "@spectrum-css/vars": "^9.0.0",
+    "@spectrum-css/avatar": "*",
+    "@spectrum-css/clearbutton": "*",
+    "@spectrum-css/component-builder": "*",
+    "@spectrum-css/icon": "*",
+    "@spectrum-css/tag": "*",
+    "@spectrum-css/vars": "*",
     "gulp": "^4.0.0"
   },
   "publishConfig": {
