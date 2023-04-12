@@ -5,15 +5,23 @@ import { ifDefined } from "lit-html/directives/if-defined.js";
 import { Template as Icon } from "@spectrum-css/icon/stories/template.js";
 
 import "../index.css";
-import "../skin.css";
 
 export const Template = ({
   rootClass = "spectrum-Table",
   size = "m",
   customClasses = [],
   id,
-  // ...globals
+  ...globals
 }) => {
+  const { express } = globals;
+
+  try {
+    if (!express) import(/* webpackPrefetch: true */ "../themes/spectrum.css");
+    else import(/* webpackPrefetch: true */ "../themes/express.css");
+  } catch (e) {
+    console.warn(e);
+  }
+
   return html`
     <table
       class=${classMap({
