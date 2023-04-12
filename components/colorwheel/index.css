@@ -43,6 +43,13 @@ governing permissions and limitations under the License.
 
   &.is-focused {
     z-index: 2;
+    .spectrum-ColorWheel-handle {
+      inline-size: calc(var(--spectrum-color-handle-size) * 2);
+      block-size: calc(var(--spectrum-color-handle-size) * 2);
+
+      margin-inline-start: calc(-1 * var(--spectrum-color-handle-size));
+      margin-block-start: calc(-1 * var(--spectrum-color-handle-size));
+    }
   }
 
   /* --track-width and --border-width to be used with JS in calculating the clip-path paths and colorarea-container-size */
