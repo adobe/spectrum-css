@@ -16,7 +16,7 @@ export const Template = ({
   size = "m",
   label,
   hideLabel = false,
-  iconName,
+  iconName = "Edit",
   variant,
   staticColor,
   treatment,
@@ -41,6 +41,7 @@ export const Template = ({
         [`${rootClass}--${variant}`]: typeof variant !== "undefined",
         [`${rootClass}--${treatment}`]: typeof treatment !== "undefined",
         [`${rootClass}--static${capitalize(lowerCase(staticColor))}`]: typeof staticColor !== "undefined",
+        [`${rootClass}--iconOnly`]: hideLabel,
         ...customClasses.reduce((a, c) => ({ ...a, [c]: true }), {}),
       })}
       id=${ifDefined(id)}

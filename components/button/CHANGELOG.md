@@ -3,6 +3,30 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+<a name="9.1.1"></a>
+## 9.1.1
+🗓 2023-04-11 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/button@9.1.0...@spectrum-css/button@9.1.1)
+
+### 🐛 Bug fixes
+
+* **button:** icon only spacing ([#1768](https://github.com/adobe/spectrum-css/issues/1768)) ([dc33b04](https://github.com/adobe/spectrum-css/commit/dc33b04))
+
+
+
+
+
+<a name="9.1.0"></a>
+# 9.1.0
+🗓 2023-04-10 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/button@9.0.14...@spectrum-css/button@9.1.0)
+
+### ✨ Features
+
+* **button:** add icon only variant ([#1755](https://github.com/adobe/spectrum-css/issues/1755)) ([ec34d58](https://github.com/adobe/spectrum-css/commit/ec34d58))
+
+
+
+
+
 <a name="9.0.14"></a>
 ## 9.0.14
 🗓 2023-04-06 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/button@9.0.12...@spectrum-css/button@9.0.14)

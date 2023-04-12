@@ -3,6 +3,28 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+<a name="3.0.4"></a>
+## 3.0.4
+🗓 2023-04-11 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/preview@3.0.3...@spectrum-css/preview@3.0.4)
+
+### 🐛 Bug fixes
+
+* **preview:** storybook precompilation task ([#1764](https://github.com/adobe/spectrum-css/issues/1764)) ([c06e0a5](https://github.com/adobe/spectrum-css/commit/c06e0a5))
+
+
+
+
+
+<a name="3.0.3"></a>
+## 3.0.3
+🗓 2023-04-10 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/preview@3.0.2...@spectrum-css/preview@3.0.3)
+
+**Note:** Version bump only for package @spectrum-css/preview
+
+
+
+
+
 <a name="3.0.2"></a>
 ## 3.0.2
 🗓 2023-04-06 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/preview@3.0.0...@spectrum-css/preview@3.0.2)
