@@ -10,8 +10,17 @@ OF ANY KIND, either express or implied. See the License for the specific languag
 governing permissions and limitations under the License.
 */
 
-function getProcessors(keepUnusedVars = false, splitinatorOptions = {}) {
-  return [
+/** @type import('postcss-load-config').ConfigFn */
+module.exports = ({
+  // cwd, parser, stringifier, syntax, from, to,
+  env = 'development',
+  map = 'inline',
+  keepUnusedVars = false,
+  splitinatorOptions = {},
+  additionalPlugins = [],
+}) => ({
+  map: env === 'development' ? map : false,
+  plugins: [
     require('postcss-import'),
     require('postcss-nested'),
     require('postcss-splitinator')({
@@ -40,9 +49,7 @@ function getProcessors(keepUnusedVars = false, splitinatorOptions = {}) {
         'last 2 Safari versions',
         'last 2 iOS versions'
       ]
-    })
-  ].filter(Boolean);
-}
-
-exports.getProcessors = getProcessors;
-exports.processors = getProcessors();
+    }),
+    ...additionalPlugins,
+  ].filter(Boolean)
+});

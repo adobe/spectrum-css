@@ -16,6 +16,8 @@
   "main": "dist/index-vars.css",
   "scripts": {
     "build": "gulp",
+    "clean": "rimraf dist",
+    "preupdate": "rimraf combined",
     "update": "gulp updateIcons"
   },
   "peerDependencies": {
@@ -23,7 +25,6 @@
   },
   "devDependencies": {
     "@spectrum-css/component-builder": "*",
-    "@spectrum-css/vars": "^9.0.2",
     "gulp": "^4.0.0",
     "gulp-rename": "^1.4.0",
     "gulp-replace": "^1.0.0",
@@ -31,6 +32,7 @@
     "gulp-svgcombiner": "^1.0.1",
     "gulp-svgmin": "^2.1.0",
     "gulp-svgstore": "^7.0.1",
+    "rimraf": "^5.0.0",
     "vinyl-paths": "^3.0.1"
   },
   "publishConfig": {

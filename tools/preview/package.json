@@ -8,24 +8,23 @@
   "main": "main.js",
   "scripts": {
     "build": "yarn storybook",
+    "clean": "rimraf storybook-static",
     "new": "yarn workspace @spectrum-css/generator new story",
-    "start": "WATCH_MODE=true start-storybook --quiet --config-dir .",
+    "start": "start-storybook --quiet --config-dir . --port 9001",
     "storybook": "build-storybook --quiet --config-dir .",
     "test": "chromatic --build-script-name build --junit-report",
-    "test:scope": "yarn test --only-story-names"
+    "test:scope": "yarn test --only-story-names",
+    "watch": "WATCH_MODE=true"
   },
   "dependencies": {
     "@adobe/spectrum-css-workflow-icons": "^1.2.1",
-    "@spectrum-css/expressvars": "^3.0.2",
-    "@spectrum-css/icon": "^3.0.38",
-    "@spectrum-css/site": "^3.0.12",
-    "@spectrum-css/tokens": "^8.0.4",
-    "@spectrum-css/vars": "^9.0.2"
+    "@spectrum-css/expressvars": "*",
+    "@spectrum-css/tokens": "*",
+    "@spectrum-css/vars": "*"
   },
   "devDependencies": {
     "@babel/core": "^7.20.5",
     "@etchteam/storybook-addon-status": "^4.2.2",
-    "@spectrum-css/component-builder": "*",
     "@storybook/addon-a11y": "^6.5.15",
     "@storybook/addon-actions": "^6.5.15",
     "@storybook/addon-console": "^1.2.3",
@@ -77,12 +76,15 @@
     },
     "implicitDependencies": [
       "@spectrum-css/*",
+      "!@spectrum-css/documentation",
       "!@spectrum-css/generator"
     ],
     "includedScripts": [
       "test",
       "storybook",
-      "build"
+      "build",
+      "watch",
+      "start"
     ]
   }
 }

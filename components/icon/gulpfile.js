@@ -9,28 +9,19 @@ the License is distributed on an "AS IS" BASIS, WITHOUT WARRANTIES OR REPRESENTA
 OF ANY KIND, either express or implied. See the License for the specific language
 governing permissions and limitations under the License.
 */
+const path = require('path');
+
 const gulp = require('gulp');
 const rename = require('gulp-rename');
-const path = require('path');
-const svgmin = require('gulp-svgmin');
 const replace = require('gulp-replace');
-const sort = require('gulp-sort');
-const svgcombiner = require('gulp-svgcombiner');
-const svgstore = require('gulp-svgstore');
-const del = require('del');
-const vinylPaths = require('vinyl-paths');
 
-function clean() {
-  return del([
-    'combined/**'
-  ]);
-}
+const { build } = require('@spectrum-css/component-builder');
 
 function sanitizeIcons() {
   return gulp.src('{medium,large}/*.svg')
     .pipe(replace(/<defs>[\s\S]*?<\/defs>/m, ''))
     .pipe(replace(/<rect[\s\S]*?\/>/m, ''))
-    .pipe(svgmin({
+    .pipe(require('gulp-svgmin')({
       plugins: [
         {
           removeAttrs: {
@@ -44,15 +35,15 @@ function sanitizeIcons() {
         { collapseGroups: true }
       ]
     }))
-    .pipe(vinylPaths(del)) // delete the original file
+    .pipe(require('vinyl-paths')(require('rimraf'))) // delete the original file
     .pipe(rename(path => path.basename = path.basename.split('_').pop().replace('Size', '')))
     .pipe(gulp.dest('./'));
 }
 
 function generateCombinedIcons() {
   return gulp.src('{medium,large}/*.svg')
-    .pipe(sort())
-    .pipe(svgcombiner({
+    .pipe(require('gulp-sort')())
+    .pipe(require('gulp-svgcombiner')({
       processName: function(filePath) {
         // Clean filename
         return path.basename(filePath, path.extname(filePath)).replace(/S_UI(.*?)_.*/, '$1');
@@ -65,21 +56,12 @@ function generateCombinedIcons() {
     .pipe(gulp.dest('combined/'));
 }
 
-// Only ran by Adobe
-const updateIcons = gulp.series(
-  clean,
-  sanitizeIcons,
-  generateCombinedIcons
-);
-
-const tasks = require('@spectrum-css/component-builder');
-
 function generateSVGSprite() {
   return gulp.src('combined/*.svg')
     .pipe(rename(function(filePath) {
       filePath.basename = 'spectrum-css-icon-' + filePath.basename;
     }))
-    .pipe(svgstore({
+    .pipe(require('gulp-svgstore')({
       inlineSvg: true
     }))
     .pipe(rename('spectrum-css-icons.svg'))
@@ -92,7 +74,7 @@ function getSVGSpriteTask(size) {
       .pipe(rename(function(filePath) {
         filePath.basename = 'spectrum-css-icon-' + filePath.basename.replace(/S_UI(.*?)_.*/, '$1');
       }))
-      .pipe(svgstore({
+      .pipe(require('gulp-svgstore')({
         inlineSvg: true
       }))
       .pipe(rename(`spectrum-css-icons-${size}.svg`))
@@ -109,11 +91,14 @@ const buildIcons = gulp.parallel(
   generateSVGSprite
 );
 
-const build = gulp.parallel(
-  buildIcons,
-  tasks.buildCSS
+exports.updateIcons = gulp.series(
+  sanitizeIcons,
+  generateCombinedIcons
 );
 
-exports.updateIcons = updateIcons;
-exports.build = exports.buildLite = exports.buildHeavy = exports.buildMedium = build;
-exports.default = build;
+exports.build = exports.buildLite = exports.buildHeavy = exports.buildMedium = gulp.parallel(
+  buildIcons,
+  build
+);
+
+exports.default = this.build;

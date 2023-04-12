@@ -15,11 +15,13 @@
   },
   "main": "dist/spectrum-metadata.json",
   "scripts": {
-    "build": "yarn clean && gulp build",
+    "prebuild": "yarn clean",
+    "build": "gulp build",
     "clean": "rimraf dist/*",
     "copy:metadata": "cp json/spectrum-metadata.json dist/",
-    "dna:clean": "rimraf css/* js/*",
-    "dna:update": "yarn dna:clean && gulp update && yarn build"
+    "predna:update": "rimraf css/* js/*",
+    "dna:update": "gulp update",
+    "postdna:update": "yarn build"
   },
   "devDependencies": {
     "@adobe/spectrum-tokens-deprecated": "^11.8.0",

@@ -15,7 +15,9 @@
   },
   "main": "dist/index-vars.css",
   "scripts": {
-    "build": "gulp"
+    "build": "gulp",
+    "postbuild": "node ${LERNA_ROOT_PATH:-../../}/tasks/mod-extractor.js",
+    "clean": "rimraf dist"
   },
   "peerDependencies": {
     "@spectrum-css/pickerbutton": "^2.0.0 || ^3.0.0",
@@ -30,7 +32,8 @@
     "@spectrum-css/progresscircle": "^2.0.27",
     "@spectrum-css/textfield": "^4.1.7",
     "@spectrum-css/tokens": "^8.0.4",
-    "gulp": "^4.0.0"
+    "gulp": "^4.0.0",
+    "rimraf": "^5.0.0"
   },
   "publishConfig": {
     "access": "public"

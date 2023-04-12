@@ -15,7 +15,9 @@
   },
   "main": "dist/index-vars.css",
   "scripts": {
-    "build": "gulp"
+    "build": "gulp",
+    "postbuild": "node ${LERNA_ROOT_PATH:-../../}/tasks/mod-extractor.js",
+    "clean": "rimraf dist"
   },
   "peerDependencies": {
     "@spectrum-css/icon": "^3.0.0",
@@ -25,7 +27,8 @@
     "@spectrum-css/component-builder": "*",
     "@spectrum-css/icon": "^3.0.38",
     "@spectrum-css/vars": "^9.0.2",
-    "gulp": "^4.0.0"
+    "gulp": "^4.0.0",
+    "rimraf": "^5.0.0"
   },
   "publishConfig": {
     "access": "public"

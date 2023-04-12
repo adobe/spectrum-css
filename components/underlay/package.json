@@ -15,7 +15,8 @@
   },
   "main": "dist/index-vars.css",
   "scripts": {
-    "build": "gulp"
+    "build": "gulp",
+    "clean": "rimraf dist"
   },
   "peerDependencies": {
     "@spectrum-css/vars": ">=9.0.0"
@@ -23,7 +24,8 @@
   "devDependencies": {
     "@spectrum-css/component-builder": "*",
     "@spectrum-css/vars": "^9.0.2",
-    "gulp": "^4.0.0"
+    "gulp": "^4.0.0",
+    "rimraf": "^5.0.0"
   },
   "publishConfig": {
     "access": "public"

@@ -10,10 +10,12 @@ governing permissions and limitations under the License.
 */
 
 const path = require('path');
-const fsp = require('fs').promises;
+const fs = require('fs');
+const fsp = fs.promises;
 
 const fg = require('fast-glob');
 const semver = require('semver');
+const chalk = require('chalk');
 
 const yargs = require('yargs');
 const { hideBin } = require('yargs/helpers');
@@ -21,20 +23,23 @@ const { hideBin } = require('yargs/helpers');
 const rootDir = process.cwd();
 
 const rootPkg = require(path.join(rootDir, 'package.json'));
-const expectedHomepage = (name) => `${rootPkg.homepage}${name && !rootPkg.homepage.endsWith('/') ? `/${name}` : name}`;
+const expectedHomepage = (name) => `${rootPkg.homepage}${name && !rootPkg.homepage?.endsWith('/') ? `/${name}` : name}`;
 
 /**
  * Validate peer deps for components; escapes before running lerna if they are not valid.
  **/
-async function main(dirs = [`${path.join(rootDir, 'components')}/*`], verbose = false) {
+async function main(dirs = [`${path.join(rootDir, 'components')}/*/`], verbose = false) {
     const promises = [];
-    for (const pkg of await fg(dirs.map(d => path.dirname(d)), {
+    for (const pkg of await fg(dirs, {
         onlyDirectories: true,
     })) {
         const report = [];
         let updated = false;
         const packagePath = path.join(pkg, 'package.json');
-        const packageJSON = await fsp.readFile(packagePath).then(JSON.parse);
+        const packageJSON = await fsp.readFile(packagePath)
+            .then(JSON.parse)
+            .catch((err) => Promise.reject(`Error parsing ${path.relative(rootDir, pkg)}\n${err}`));
+
         if (!packageJSON) {
             console.error(`Unable to read package.json for ${packagePath}`);
             continue;
@@ -118,16 +123,14 @@ async function main(dirs = [`${path.join(rootDir, 'components')}/*`], verbose = 
                 }
             });
         }
-
         if (!updated) continue;
 
-        report.map(r => console.log(r));
-        promises.push(fsp.writeFile(packagePath, JSON.stringify(packageJSON, null, 2)));
-    }
-
-    if (promises.length === 0) {
-        console.log(`👍 All package.json metadata validated.`);
-        process.exit(0);
+        promises.push(
+            fsp.writeFile(packagePath, JSON.stringify(packageJSON, null, 2)).then(() => {
+                report.map(r => console.log(r));
+                return report;
+            }).catch(console.error)
+        );
     }
 
     return await Promise.all(promises);
@@ -152,22 +155,22 @@ async function checkPeerDependencies(peerDependencies, devDependencies, verbose 
         const peerDepVer = semver.coerce(peerDependencies[dependency]);
         if (semver.gt(devDepVer, peerDepVer)) {
             if (verbose) {
-                report.push(`    ⚠️ Out of date peerDependencies ${dependency}: devDependency ${devDepVer.toString()} is greater than ${peerDepVer.toString()}`);
+                report.push(`    ${chalk.red('⚠️')} Out of date peerDependencies ${dependency}: devDependency ${devDepVer.toString()} is greater than ${peerDepVer.toString()}`);
             }
 
             const newPeerDepVer = semver.coerce('^' + devDepVer.toString()?.replace(/-\d+$/, '')?.split('.')?.shift());
             peerDependencies[dependency] = `>=${newPeerDepVer.toString()}`;
             updated = true;
-            report.push(`    ✔ Updated ${dependency} to >=${newPeerDepVer.toString()}`);
+            report.push(`    ${chalk.green('✔')} Updated ${dependency} to >=${newPeerDepVer.toString()}`);
         } else {
             if (verbose) {
-                report.push(`    ⚠️ Out of date peerDependencies ${dependency}: devDependency ${devDepVer.toString()} is less than ${peerDepVer.toString()}`);
+                report.push(`    ${chalk.red('⚠️')} Out of date peerDependencies ${dependency}: devDependency ${devDepVer.toString()} is less than ${peerDepVer.toString()}`);
             }
 
             const newDevDepVer = semver.coerce('^' + peerDepVer.toString().replace(/-\d+$/, ''));
             devDependencies[dependency] = `^${newDevDepVer.toString()}`;
             updated = true;
-            report.push(`    ✔ Updated ${dependency} to ^${newDevDepVer}`);
+            report.push(`    ${chalk.green('✔')} Updated ${dependency} to ^${newDevDepVer}`);
         }
     }
 
@@ -181,7 +184,27 @@ const { _, verbose = false } = yargs(hideBin(process.argv))
     .alias('v', 'verbose')
     .argv;
 
-main(_, verbose).catch((err) => {
+const promises = _.map(async (input) => {
+    if (input.startsWith('@spectrum-css')) {
+        input = input.replace('@spectrum-css', path.join(__dirname, '../components'));
+    }
+
+    if (!fs.existsSync(input)) return Promise.resolve();
+    return main(_, verbose);
+});
+
+Promise.all(promises).then((results) => {
+    if (!results) return;
+
+    results.forEach((result) => {
+        if (!result || result.length <= 1) return;
+        result.forEach((r) => {
+            if (r) console.log(r);
+        });
+    });
+
+    process.exit(0);
+}).catch((err) => {
     console.error(err);
     process.exit(1);
 });

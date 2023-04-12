@@ -11,7 +11,7 @@ governing permissions and limitations under the License.
 */
 var postcss = require('postcss');
 var valueParser = require('postcss-value-parser');
-let varUtils = require('../lib/varUtils.js');
+let varUtils = require('../varUtils.js');
 
 // match custom property inclusions
 const customPropertiesRegExp = /(^|[^\w-])var\([\W\w]+\)/;

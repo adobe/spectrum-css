@@ -1,0 +1,68 @@
+{
+  "name": "@spectrum-css/documentation",
+  "version": "1.0.0",
+  "description": "Spectrum CSS's documentation tooling.",
+  "license": "Apache-2.0",
+  "author": "Adobe",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/adobe/spectrum-css.git",
+    "directory": "site"
+  },
+  "bugs": {
+    "url": "https://github.com/adobe/spectrum-css/issues"
+  },
+  "main": "gulpfile.js",
+  "scripts": {
+    "build": "yarn setup && gulp",
+    "build:components": "lerna run --include-dependencies --scope \"@spectrum-css/*\" --ignore \"@spectrum-css/{*-builder*,preview,generator,documentation}\" build",
+    "clean": "rimraf dist && mkdir -p dist/{components,img,js,css}",
+    "copy:components": "lerna exec --include-dependencies --scope \"@spectrum-css/*\" --ignore \"@spectrum-css/{*-builder*,preview,generator,documentation}\" -- '([[ -f package.json ]] && [[ -d dist ]]) && mkdir -p ${LERNA_ROOT_PATH}/site/dist/components/${LERNA_PACKAGE_NAME:14}/ && cp -R package.json dist/*.css ${LERNA_ROOT_PATH}/site/dist/components/${LERNA_PACKAGE_NAME:14}/ || exit 0'",
+    "copy:resources": "cp -r resources/** dist/ && gulp copyUtilities",
+    "dev": "npm-run-all build -p watch start",
+    "setup": "npm-run-all clean -p build:components -s copy:resources copy:components",
+    "start": "http-server -p 3000 -i -o index.html ./dist -P http://localhost:9001",
+    "watch": "lerna watch --include-dependencies --scope \"@spectrum-css/*\" --ignore \"@spectrum-css/{*-builder*,preview,generator}\" -- lerna run build --scope \\$LERNA_PACKAGE_NAME --include-dependents"
+  },
+  "devDependencies": {
+    "@adobe/focus-ring-polyfill": "^0.1.5",
+    "gulp": "^4.0.0",
+    "gulp-data": "^1.3.1",
+    "gulp-pug": "^4.0.1",
+    "gulp-rename": "^1.4.0",
+    "http-server": "^14.1.1",
+    "js-yaml": "^4.1.0",
+    "loadicons": "^1.0.0",
+    "lunr": "^2.3.9",
+    "markdown-it": "^12.0.6",
+    "npm-run-all": "^4.1.5",
+    "prismjs": "^1.29.0",
+    "replace-ext": "^1.0.0",
+    "rimraf": "^4.4.1",
+    "through2": "^4.0.2"
+  },
+  "nx": {
+    "targets": {
+      "build": {
+        "dependsOn": [
+          "^build"
+        ],
+        "inputs": [
+          "{workspaceRoot}/includes",
+          "{workspaceRoot}/resources",
+          "{workspaceRoot}/templates",
+          "{workspaceRoot}/*.js",
+          "{workspaceRoot}/*.pug"
+        ],
+        "outputs": [
+          "{workspaceRoot}/dist",
+          "{projectRoot}/dist"
+        ]
+      }
+    },
+    "implicitDependencies": [
+      "@spectrum-css/*",
+      "!@spectrum-css/generator"
+    ]
+  }
+}
