@@ -37,7 +37,6 @@ governing permissions and limitations under the License.
   }
 }
 
-
 .spectrum-ColorArea {
   position: relative;
   display: inline-block;
@@ -58,17 +57,6 @@ governing permissions and limitations under the License.
 
     .spectrum-ColorArea-gradient {
       display: none;
-    }
-  }
-
-  &.is-focused {
-    z-index: 2;
-    .spectrum-ColorArea-handle {
-      inline-size: calc(var(--spectrum-color-handle-size) * 2);
-      block-size: calc(var(--spectrum-color-handle-size) * 2);
-
-      margin-inline-start: calc(-1 * var(--spectrum-color-handle-size));
-      margin-block-start: calc(-1 * var(--spectrum-color-handle-size));
     }
   }
 }
