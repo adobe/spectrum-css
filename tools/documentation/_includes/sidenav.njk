@@ -1,6 +1,6 @@
 {% macro renderNavListItem(entry) -%}
-  <li class="spectrum-SideNav-item">
-    <a href="{{ entry.url }}" class="spectrum-SideNav-itemLink {{ 'is-selected' if entry.url == page.url }}">{{ entry.title }}</a>
+  <li class="spectrum-SideNav-item {{ 'is-selected' if entry.url == page.url }}">
+    <a href="{{ entry.url }}" class="spectrum-SideNav-itemLink">{{ entry.title }}</a>
     {%- if entry.children.length -%}
     <ul class="spectrum-SideNav spectrum-SideNav--multiLevel">
         {%- for child in entry.children %}{{ renderNavListItem(child) }}{% endfor -%}
