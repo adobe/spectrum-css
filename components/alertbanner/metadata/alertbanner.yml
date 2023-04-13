@@ -9,11 +9,28 @@ sections:
       ### Popover Dependency
       Action Bar requires Popover, which is nested within Action Bar. Action Bar background, border, and corner radius are applied to the nested Popover component and can be overriden by Action Bar.
 examples:
-  - id: actionbar
-    name: Standard
+  - id: alertbanner
+    name: Neutral
     description: Standard Alert Banners
     markup: |
       <div class="spectrum-AlertBanner is-open">
        <p>Alert Banner</p>
+       <div class="spectrum-Divider spectrum-Divider--sizeM spectrum-Divider--vertical" style="height: auto; align-self: stretch;"></div>
       </div>
+  - id: alertbanner
+    name: Informative
+    description: Standard Alert Banners
+    markup: |
+      <div class="spectrum-AlertBanner spectrum-AlertBanner-informative is-open">
+       <p>Alert Banner</p>
+      </div>
+  - id: alertbanner
+    name: Negative
+    description: Standard Alert Banners
+    markup: |
+      <div class="spectrum-AlertBanner spectrum-AlertBanner-negative is-open">
+       <p>Alert Banner</p>
+      </div>
+
+
 
