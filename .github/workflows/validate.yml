@@ -1,0 +1,42 @@
+name: Validate build scripts
+
+on:
+  push:
+    branches:
+      - 'main'
+    paths:
+      - 'package.json'
+      - '**/package.json'
+      - '**/gulpfile.js'
+      - 'tasks/**'
+  pull_request:
+    paths:
+      - 'package.json'
+      - '**/package.json'
+      - '**/gulpfile.js'
+      - 'tasks/**'
+
+defaults:
+  run:
+    shell: bash
+
+jobs:
+      validate:
+        name: Validate package scripts
+        strategy:
+          matrix:
+           version: [14, 16, 18]
+           os: [ ubuntu-latest, windows-latest, macos-latest ]
+        runs-on: ${{ matrix.os }}
+
+        steps:
+          - name: Check out code
+            uses: actions/checkout@v3
+          - name: Use Node LTS version
+            uses: actions/setup-node@v3
+            with:
+              node-version: ${{ matrix.version }}
+          - name: Install dependencies
+            run: yarn install
+          - name: Validate package scripts
+            run: yarn test:scripts
