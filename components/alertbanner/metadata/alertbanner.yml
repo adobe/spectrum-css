@@ -1,0 +1,19 @@
+name: Alert Banner
+description: Alert banners show pressing and high-signal messages, such as system alerts. They're meant to be noticed and prompt users to take action.
+sections:
+  - name: Custom Properties API
+    description: |
+      This component can be modified via its `--mod-*` prefixed custom properties. A list of those prefixed custom properties can be found <a href="https://github.com/adobe/spectrum-css/tree/main/components/actionbar/metadata/mods.md">here</a>.
+  - name: Migration Guide
+    description: |
+      ### Popover Dependency
+      Action Bar requires Popover, which is nested within Action Bar. Action Bar background, border, and corner radius are applied to the nested Popover component and can be overriden by Action Bar.
+examples:
+  - id: actionbar
+    name: Standard
+    description: Standard Alert Banners
+    markup: |
+      <div class="spectrum-AlertBanner is-open">
+       <p>Alert Banner</p>
+      </div>
+
