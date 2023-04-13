@@ -15,9 +15,7 @@ layout: layout.njk
         {% include "sidenav.njk" %}
         <div class="spectrum-Site-mainContent">
             <div class="spectrum-Site-mainContainer">
-                <div class="spectrum-Site-page spectrum-Typography">
-                    {{ content | safe }}
-                </div>
+                {{ content | safe }}
             </div>
             {% if not process.env.VRT -%}
                 <div class="spectrum-Site-footerContainer">
