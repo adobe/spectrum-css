@@ -78,49 +78,7 @@ window.addEventListener("keydown", function (event) {
   }
 })
 
-function setPickerValue(picker, value, label) {
-  var menu = picker.nextElementSibling.querySelector(".spectrum-Menu")
-  var menuItem = menu.querySelector(
-    '.spectrum-Menu-item[value="' + value + '"]'
-  )
 
-  if (menuItem) {
-    var selectedMenuItem = menu.querySelector(".spectrum-Menu-item.is-selected")
-    if (selectedMenuItem) {
-      selectedMenuItem.classList.remove("is-selected")
-      selectedMenuItem.removeAttribute("aria-selected")
-    }
-
-    menuItem.classList.add("is-selected")
-    menuItem.setAttribute("aria-selected", "true")
-
-    if (!label) {
-      var menuLabel = menuItem.querySelector(".spectrum-Menu-itemLabel")
-      if (menuLabel) {
-        label = menuLabel.innerHTML
-      }
-    }
-  }
-
-  picker.setAttribute("value", value)
-  var fieldButton = picker
-  if (fieldButton && label) {
-    var pickerLabel = fieldButton.querySelector(".spectrum-Picker-label")
-    if (pickerLabel) {
-      pickerLabel.innerHTML = label
-    }
-  }
-
-  var event = new CustomEvent("change", {
-    bubbles: true,
-    detail: {
-      label: label,
-      value: value,
-    },
-  })
-
-  picker.dispatchEvent(event)
-}
 
 function getPickerForMenu(menuOrMenuItem) {
   var popover = menuOrMenuItem.closest(".spectrum-Popover")
@@ -183,5 +141,3 @@ window.addEventListener("click", function (event) {
     }
   }
 })
-
-window.setPickerValue = setPickerValue

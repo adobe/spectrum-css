@@ -9,19 +9,56 @@ the License is distributed on an "AS IS" BASIS, WITHOUT WARRANTIES OR REPRESENTA
 OF ANY KIND, either express or implied. See the License for the specific language
 governing permissions and limitations under the License.
 */
-//TODO will remove this file once these are all tested
 
-// Load switch functionality from components/switch/metadata/enhancement.js
-// Load asset card functionality from components/assetcard/metadata/enhancement.js
-// Load rating functionality from components/rating/metadata/enhancement.js
-// Load textfield functionality from components/textfield/metadata/enhancement.js
+/**
+ * @description global method for picker which is required for every component ui
+ * @param {*} picker 
+ * @param {*} value 
+ * @param {*} label 
+ */
+function setPickerValue(picker, value, label) {
+    var menu = picker.nextElementSibling.querySelector(".spectrum-Menu")
+    var menuItem = menu.querySelector(
+      '.spectrum-Menu-item[value="' + value + '"]'
+    )
+  
+    if (menuItem) {
+      var selectedMenuItem = menu.querySelector(".spectrum-Menu-item.is-selected")
+      if (selectedMenuItem) {
+        selectedMenuItem.classList.remove("is-selected")
+        selectedMenuItem.removeAttribute("aria-selected")
+      }
+  
+      menuItem.classList.add("is-selected")
+      menuItem.setAttribute("aria-selected", "true")
+  
+      if (!label) {
+        var menuLabel = menuItem.querySelector(".spectrum-Menu-itemLabel")
+        if (menuLabel) {
+          label = menuLabel.innerHTML
+        }
+      }
+    }
+  
+    picker.setAttribute("value", value)
+    var fieldButton = picker
+    if (fieldButton && label) {
+      var pickerLabel = fieldButton.querySelector(".spectrum-Picker-label")
+      if (pickerLabel) {
+        pickerLabel.innerHTML = label
+      }
+    }
+  
+    var event = new CustomEvent("change", {
+      bubbles: true,
+      detail: {
+        label: label,
+        value: value,
+      },
+    })
+  
+    picker.dispatchEvent(event)
+  }
 
-// Load Inputgroup functionality from components/Inputgroup/metadata/enhancement.js
-// Load Stepper functionality from components/stepper/metadata/enhancement.js
-// Load Picker functionality from components/picker/metadata/enhancement.js
-// Load Treeview functionality from components/treeview/metadata/enhancement.js
-// Load Accordion functionality from components/accordion/metadata/enhancement.js
-// Load Cyclebutton functionality from components/cyclebutton/metadata/enhancement.js
-// Load Sliders functionality from components/slider/metadata/enhancement.js
-// Load Dial functionality from components/dial/metadata/enhancement.js
-// Load Dialog functionality from components/dialog/metadata/enhancement.js
+
+  window.setPickerValue = setPickerValue
