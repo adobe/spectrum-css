@@ -22,7 +22,7 @@
   },
   "scripts": {
     "build": "yarn build:components",
-    "build:all": "run-s build:components build:preview mv:preview",
+    "build:all": "run-s build:components build:site build:preview mv:preview",
     "build:clean": "run-s clean:components build",
     "build:components": "lerna run --include-dependencies --scope \"${SCOPE:-${npm_package_config_scope}}\" --ignore \"${npm_package_config_ignore}\" build",
     "postbuild:components": "yarn docs:mod",

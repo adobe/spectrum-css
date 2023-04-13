@@ -31,9 +31,7 @@ function makeDial(dial) {
 function enhanceAll() {
   Array.prototype.forEach.call(
     document.querySelectorAll(".spectrum-Dial"),
-    function (dial) {
-      makeDial(dial)
-    }
+    makeDial(dial)
   )
 }
 
