@@ -15,33 +15,33 @@ eleventyComputed:
     parent: "Components"
 ---
 
-<article class="spectrum-CSSComponent">
+<article>
     {% include "context-switcher.njk" %}
     <header id="{{ component.name | slugify }}" class="spectrum-CSSComponent-heading">
         <h1 class="spectrum-CSSComponent-title spectrum-Heading spectrum-Heading--sizeXXXL spectrum-Heading--serif">
             <a href="#{{ component.name | slugify }}" class="spectrum-BigSubtleLink">{% if component.title %}{{ component.title }}{% else %}{{ component.name }}{% endif %}</a>
         </h1>
     </header>
-    <table class="spectrum-CSSComponent-detailsTable">
+    <table class="spectrum-Table spectrum-Table--sizeM spectrum-Table--quiet">
         <tbody>
         {% if component.status -%}
-            <tr>
-                <th class="spectrum-Body--secondary">Component status</th>
-                <td >
+            <tr class="spectrum-Table-row">
+                <th class="spectrum-Table-headCell">Component status</th>
+                <td class="spectrum-Table-cell">
                     <span class="spectrum-StatusLight spectrum-StatusLight--sizeM spectrum-StatusLight--{{ component.status | statusLightVariant }}">{{ component.status }}</span>
                 </td>
             </tr>
         {%- endif %}
         {% if component.releaseDate -%}
-            <tr>
-                <th class="spectrum-Body--secondary">Last released</th>
-                <td >{{ component.releaseDate }}</td>
+            <tr class="spectrum-Table-row">
+                <th class="spectrum-Table-headCell">Last released</th>
+                <td class="spectrum-Table-cell">{{ component.releaseDate }}</td>
             </tr>
         {%- endif %}
         {% if component.version -%}
-            <tr>
-                <th class="spectrum-Body--secondary">Current version</th>
-                <td><bdo dir="ltr">{{ component.packageName }}@{{ component.version }}</bdo></td>
+            <tr class="spectrum-Table-row">
+                <th class="spectrum-Table-headCell">Current version</th>
+                <td class="spectrum-Table-cell"><bdo dir="ltr">{{ component.packageName }}@{{ component.version }}</bdo></td>
             </tr>
         {%- endif %}
         </tbody>
