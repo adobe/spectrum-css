@@ -1,6 +1,6 @@
 <a class="spectrum-Card spectrum-Card--sizeS spectrum-Card--horizontal" href="{{ card.href }}">
     <div class="spectrum-Card-preview spectrum-CSSComponent-resource--{{ card.type | slugify }}">
-        {{ card.logo }}
+        {{ card.svg | safe }}
     </div>
     <div class="spectrum-Card-body">
         <div class="spectrum-Card-header">
