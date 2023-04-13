@@ -123,13 +123,13 @@ function loadJSON(url, callback) {
 }
 
 Search.prototype.loadStore = function() {
-  loadJSON('./store.json', function(err, object) {
+  loadJSON('../store.json', function(err, object) {
     this.store = object;
   }.bind(this));
 }
 
 Search.prototype.loadIndex = function() {
-  loadJSON('./index.json', function(err, object) {
+  loadJSON('../index.json', function(err, object) {
     this.index = lunr.Index.load(object);
   }.bind(this));
 }
