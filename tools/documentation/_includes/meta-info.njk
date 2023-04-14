@@ -11,31 +11,7 @@
 <link rel="stylesheet" type="text/css" href="/components/vars/spectrum-large.css"/>
 <link rel="stylesheet" type="text/css" href="/components/tokens/index.css"/>
 
-{% for dep in [
-  'accordion',
-  'actionbutton',
-  'button',
-  'card',
-  'clearbutton',
-  'divider',
-  'fieldlabel',
-  'icon',
-  'illustratedmessage',
-  'link',
-  'menu',
-  'page',
-  'picker',
-  'popover',
-  'search',
-  'sidenav',
-  'site',
-  'statuslight',
-  'table',
-  'textfield',
-  'tooltip',
-  'typography',
-  'underlay'
-] %}
+{% for dep in components %}
   <link rel="stylesheet" type="text/css" href='/components/{{ dep }}/index-vars.css' data-dependency={{ dep }} />
 {% endfor %}
 

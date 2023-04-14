@@ -71,7 +71,10 @@ module.exports = (config) => {
     return 'neutral';
   });
   config.addFilter('log', value => { console.log(value) });
-
+  config.addFilter('modifyImageSrc', function(value) {
+    // Replace all img src URLs starting with "img/" with "../img/"
+    return value.replace(/src="(?!http)([^"]*)"/g, 'src="../$1"');
+  });
     /** --------- PASSTHROUGHS --------- */
   config.addPassthroughCopy({
     'assets/favicon.png': 'docs/favicon.png',
