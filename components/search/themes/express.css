@@ -46,11 +46,5 @@ governing permissions and limitations under the License.
         --spectrum-search-edge-to-text: var(--spectrum-component-pill-edge-to-text-300);
         --spectrum-search-edge-to-visual: var(--spectrum-component-pill-edge-to-visual-300);
     }
-
-    .spectrum-Search--quiet {
-        --spectrum-search-border-radius: 0;
-        --spectrum-search-edge-to-text: var(--spectrum-field-edge-to-visual-quiet);
-        --spectrum-search-edge-to-visual: var(--spectrum-field-edge-to-visual-quiet);
-    }
 }
 

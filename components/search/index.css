@@ -81,6 +81,13 @@ governing permissions and limitations under the License.
   );
   --spectrum-search-background-color: transparent;
   --spectrum-search-background-color-disabled: transparent;
+
+  /* Added specificity, otherwise they are overridden by system specific themes. */
+  &.spectrum-Search {
+    --spectrum-search-border-radius: 0;
+    --spectrum-search-edge-to-text: var(--spectrum-field-edge-to-visual-quiet);
+    --spectrum-search-edge-to-visual: var(--spectrum-field-edge-to-visual-quiet);
+  }
 }
 
 @media (forced-colors: active) {
