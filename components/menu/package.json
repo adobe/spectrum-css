@@ -1,6 +1,6 @@
 {
   "name": "@spectrum-css/menu",
-  "version": "4.0.17",
+  "version": "4.0.18",
   "description": "The Spectrum CSS menu component",
   "license": "Apache-2.0",
   "author": "Adobe",
@@ -24,9 +24,9 @@
   },
   "devDependencies": {
     "@spectrum-css/component-builder": "*",
-    "@spectrum-css/divider": "*",
-    "@spectrum-css/icon": "*",
-    "@spectrum-css/vars": "*",
+    "@spectrum-css/divider": "^2.0.26",
+    "@spectrum-css/icon": "^3.0.37",
+    "@spectrum-css/vars": "^9.0.1",
     "gulp": "^4.0.0"
   },
   "publishConfig": {

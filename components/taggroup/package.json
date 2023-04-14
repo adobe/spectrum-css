@@ -1,6 +1,6 @@
 {
   "name": "@spectrum-css/taggroup",
-  "version": "3.3.27",
+  "version": "3.3.28",
   "description": "The Spectrum CSS tags component",
   "license": "Apache-2.0",
   "author": "Adobe",
@@ -23,12 +23,12 @@
     "@spectrum-css/vars": ">=9.0.0"
   },
   "devDependencies": {
-    "@spectrum-css/avatar": "*",
-    "@spectrum-css/clearbutton": "*",
+    "@spectrum-css/avatar": "^6.0.13",
+    "@spectrum-css/clearbutton": "^1.2.24",
     "@spectrum-css/component-builder": "*",
-    "@spectrum-css/icon": "*",
-    "@spectrum-css/tag": "*",
-    "@spectrum-css/vars": "*",
+    "@spectrum-css/icon": "^3.0.37",
+    "@spectrum-css/tag": "^5.0.15",
+    "@spectrum-css/vars": "^9.0.1",
     "gulp": "^4.0.0"
   },
   "publishConfig": {

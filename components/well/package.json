@@ -1,6 +1,6 @@
 {
   "name": "@spectrum-css/well",
-  "version": "3.0.33",
+  "version": "3.0.34",
   "description": "The Spectrum CSS well component",
   "license": "Apache-2.0",
   "author": "Adobe",
@@ -22,7 +22,7 @@
   },
   "devDependencies": {
     "@spectrum-css/component-builder": "*",
-    "@spectrum-css/vars": "*",
+    "@spectrum-css/vars": "^9.0.1",
     "gulp": "^4.0.0"
   },
   "publishConfig": {

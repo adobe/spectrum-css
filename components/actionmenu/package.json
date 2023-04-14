@@ -1,6 +1,6 @@
 {
   "name": "@spectrum-css/actionmenu",
-  "version": "4.0.14",
+  "version": "4.0.15",
   "description": "The Spectrum CSS actionmenu component",
   "license": "Apache-2.0",
   "author": "Adobe",
@@ -25,12 +25,12 @@
     "@spectrum-css/vars": ">=9.0.0"
   },
   "devDependencies": {
-    "@spectrum-css/actionbutton": "*",
+    "@spectrum-css/actionbutton": "^3.0.27",
     "@spectrum-css/component-builder": "*",
-    "@spectrum-css/icon": "*",
-    "@spectrum-css/menu": "*",
-    "@spectrum-css/popover": "*",
-    "@spectrum-css/vars": "*",
+    "@spectrum-css/icon": "^3.0.37",
+    "@spectrum-css/menu": "^4.0.18",
+    "@spectrum-css/popover": "^6.0.30",
+    "@spectrum-css/vars": "^9.0.1",
     "gulp": "^4.0.0"
   },
   "publishConfig": {

@@ -3,6 +3,16 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+<a name="1.0.37"></a>
+## 1.0.37
+🗓 2023-04-14 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/dial@1.0.36...@spectrum-css/dial@1.0.37)
+
+**Note:** Version bump only for package @spectrum-css/dial
+
+
+
+
+
 <a name="1.0.36"></a>
 ## 1.0.36
 🗓 2023-04-03 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/dial@1.0.35...@spectrum-css/dial@1.0.36)

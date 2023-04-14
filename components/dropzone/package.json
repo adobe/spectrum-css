@@ -1,6 +1,6 @@
 {
   "name": "@spectrum-css/dropzone",
-  "version": "3.0.37",
+  "version": "3.0.38",
   "description": "The Spectrum CSS dropzone component",
   "license": "Apache-2.0",
   "author": "Adobe",
@@ -24,9 +24,9 @@
   },
   "devDependencies": {
     "@spectrum-css/component-builder": "*",
-    "@spectrum-css/illustratedmessage": "*",
-    "@spectrum-css/link": "*",
-    "@spectrum-css/vars": "*",
+    "@spectrum-css/illustratedmessage": "^4.0.18",
+    "@spectrum-css/link": "^4.0.26",
+    "@spectrum-css/vars": "^9.0.1",
     "gulp": "^4.0.0"
   },
   "publishConfig": {

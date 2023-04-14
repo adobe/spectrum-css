@@ -3,6 +3,16 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+<a name="6.0.16"></a>
+## 6.0.16
+🗓 2023-04-14 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/fieldlabel@6.0.15...@spectrum-css/fieldlabel@6.0.16)
+
+**Note:** Version bump only for package @spectrum-css/fieldlabel
+
+
+
+
+
 <a name="6.0.15"></a>
 ## 6.0.15
 🗓 2023-04-06 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/fieldlabel@6.0.13...@spectrum-css/fieldlabel@6.0.15)
