@@ -1,4 +1,4 @@
-name: Visual regression testing
+name: Testing
 
 on:
   pull_request:
@@ -8,7 +8,8 @@ on:
     #   - 'tools/preview/**/*'
 
 jobs:
-  build:
+  vrt:
+    name: Visual regression testing
     if: contains(github.event.pull_request.labels.*.name, 'run_vrt')
 
     runs-on: ubuntu-latest
@@ -24,11 +25,13 @@ jobs:
           node-version: 16
       - name: Install dependencies
         run: yarn install
+      - name: Build components
+        run: yarn build
       - name: Publish to Chromatic
         uses: chromaui/action@v1
         with:
           projectToken: ${{ secrets.CHROMATIC_PROJECT_TOKEN }}
-          buildScriptName: build:preview
+          buildScriptName: ci:preview
           storybookConfigDir: tools/preview
           exitOnceUploaded: true
           onlyChanged: true
