@@ -139,6 +139,10 @@ governing permissions and limitations under the License.
   .spectrum-ClearButton-fill {
     border-radius: var(--mod-search-border-radius, var(--spectrum-search-border-radius));
   }
+
+  .spectrum-Search.is-disabled & {
+    display: none;
+  }
 }
 
 .spectrum-Search-textfield {
