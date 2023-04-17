@@ -14,10 +14,10 @@ governing permissions and limitations under the License.
 
 'use strict';
 
-const isComponentIndex = /^\/docs\/[\w-]+\/$/.test(location.pathname);
+const isComponentIndexExist = /^\/docs\/[\w-]+\/$/.test(location.pathname);
 
 loadIcons('../../components/icon/spectrum-css-icons.svg');
-if(isComponentIndex){
+if(isComponentIndexExist){
   loadIcons('../img/spectrum-icons.svg');
 } else {
   loadIcons('img/spectrum-icons.svg');
