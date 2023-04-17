@@ -101,22 +101,28 @@ export default {
 
 const CustomButton = (args) => {
   return (
-    html`<div>
-      ${Template(args)}
-      ${Template({
-        ...args,
-        treatment: 'outline'
-      })}
-      ${Template({
-        ...args,
-        iconName: args.iconName ?? 'Edit'
-      })}
-      ${Template({
-        ...args,
-        hideLabel: true,
-        iconName: args.iconName ?? 'Edit'
-      })}
-    </div>`
+    html`
+      <div style="padding: 1rem; ${(args.staticColor && args.backgroundColor) ? `background-color: ${args.backgroundColor}` : ""}">
+        ${Template({
+          ...args,
+          iconName: undefined,
+        })}
+        ${Template({
+          ...args,
+          iconName: undefined,
+          treatment: 'outline'
+        })}
+        ${Template({
+          ...args,
+          iconName: args.iconName ?? 'Edit'
+        })}
+        ${Template({
+          ...args,
+          hideLabel: true,
+          iconName: args.iconName ?? 'Edit'
+        })}
+      </div>
+    `
   )
 }
 
@@ -143,11 +149,13 @@ Secondary.args = {
 
 export const StaticColorWhite = CustomButton.bind({});
 StaticColorWhite.args = {
+  backgroundColor: 'rgb(15, 121, 125)',
   staticColor: "white"
 };
 
 export const StaticColorBlack = CustomButton.bind({});
 StaticColorBlack.args = {
+  backgroundColor: 'rgb(181, 209, 211)',
   staticColor: "black"
 };
 

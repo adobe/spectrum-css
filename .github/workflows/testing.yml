@@ -1,15 +1,17 @@
-name: Visual regression testing
+name: Testing
 
 on:
   pull_request:
-    types: [labeled]
-    # paths:
-    #   - 'components/**/*'
-    #   - 'tools/preview/**/*'
+    types: [opened, synchronize, reopened, labeled, unlabeled]
+    paths:
+      - 'components/**/*'
+      - 'tools/**/*'
 
 jobs:
-  build:
-    if: contains(github.event.pull_request.labels.*.name, 'run_vrt')
+  vrt:
+    name: Visual regression testing
+    # Run VRT only if the PR is not a draft and has the label 'run_vrt' and does not have the label 'skip_vrt'
+    if: contains(github.event.pull_request.labels.*.name, 'run_vrt') && !contains(github.event.pull_request.labels.*.name, 'skip_vrt') && github.event.pull_request.draft == false
 
     runs-on: ubuntu-latest
 
@@ -24,22 +26,28 @@ jobs:
           node-version: 16
       - name: Install dependencies
         run: yarn install
+      - name: Build components
+        run: yarn build:components
       - name: Publish to Chromatic
         uses: chromaui/action@v1
         with:
           projectToken: ${{ secrets.CHROMATIC_PROJECT_TOKEN }}
-          buildScriptName: build:preview
+          buildScriptName: ci:storybook
           storybookConfigDir: tools/preview
           exitOnceUploaded: true
           onlyChanged: true
           traceChanged: true
           diagnostics: true
-          # forces a pass but doesn't run
-          skip: ${{ contains(github.event.pull_request.labels.*.name, 'skip_vrt') }}
-      - uses: actions/upload-artifact@v3
+      - name: Remove labels
+        uses: mondeja/remove-labels-gh-action@v1
+        with:
+          token: ${{ secrets.GITHUB_TOKEN }}
+          labels: 'run_vrt'
+      - name: Upload logs
+        uses: actions/upload-artifact@v3
         if: always()
         with:
           name: chromatic-build-artifacts-${{ github.run_id }}
           path: |
-            tools/preview/chromatic-diagnostics.json
-            **/build-storybook.log
+            chromatic-diagnostics.json
+            build-storybook.log

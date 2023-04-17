@@ -1,6 +1,6 @@
 {
   "name": "@spectrum-css/tokens",
-  "version": "8.0.2",
+  "version": "8.1.0",
   "description": "The Spectrum CSS tokens package",
   "license": "Apache-2.0",
   "author": "Adobe",
@@ -27,7 +27,7 @@
     "format:results": "prettier --no-config --no-error-on-unmatched-pattern --ignore-unknown --loglevel silent --write dist/"
   },
   "devDependencies": {
-    "@adobe/spectrum-tokens": "12.1.2",
+    "@adobe/spectrum-tokens": "12.2.0",
     "concat-cli": "^4.0.0",
     "npm-run-all": "^4.1.5",
     "postcss": "^8.4.21",
@@ -40,11 +40,27 @@
     "postcss-rgb-mapping": "^1.0.1",
     "postcss-sorting": "^8.0.2",
     "prettier": "^2.8.7",
-    "rimraf": "^4.4.1",
+    "rimraf": "^5.0.0",
     "style-dictionary": "^3.7.2",
     "style-dictionary-sets": "^2.2.0"
   },
   "publishConfig": {
     "access": "public"
+  },
+  "nx": {
+    "targets": {
+      "build": {
+        "inputs": [
+          "{workspaceRoot}/postcss.config.js",
+          "{workspaceRoot}/style-dictionary.config.js",
+          "{workspaceRoot}/utilities/style-dictionary.utils.js",
+          "{workspaceRoot}/custom-express/*.css",
+          "{workspaceRoot}/custom-spectrum/*.css"
+        ]
+      }
+    },
+    "includedScripts": [
+      "build"
+    ]
   }
 }
