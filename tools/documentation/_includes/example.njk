@@ -26,7 +26,7 @@
   {% if example.markup -%}
     <section class="spectrum-CSSExample-container">
       <div class="spectrum-CSSExample-example">
-        {{ example.markup | modifyImageSrc | safe }}
+        {{ example.markup | safe }}
       </div>
       <div class="spectrum-CSSExample-markup">
         {% if example.markup.split('\n').length > 2 %}
