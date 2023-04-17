@@ -1,6 +1,6 @@
 {
   "name": "@spectrum-css/colorhandle",
-  "version": "4.0.0-beta.0",
+  "version": "4.0.0-beta.1",
   "description": "The Spectrum CSS Color Handle component",
   "license": "Apache-2.0",
   "author": "Adobe",
@@ -18,11 +18,11 @@
     "build": "gulp"
   },
   "peerDependencies": {
-    "@spectrum-css/colorloupe": "^3.0.0-beta.0",
+    "@spectrum-css/colorloupe": "^3.0.0-beta.1",
     "@spectrum-css/tokens": "^8.0.2"
   },
   "devDependencies": {
-    "@spectrum-css/colorloupe": "^3.0.0-beta.0",
+    "@spectrum-css/colorloupe": "^3.0.0-beta.1",
     "@spectrum-css/component-builder-simple": "^2.0.0",
     "@spectrum-css/tokens": "^8.0.2",
     "gulp": "^4.0.0"

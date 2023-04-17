@@ -5,8 +5,8 @@
 |`--mod-colorhandle-border-color`|
 |`--mod-colorhandle-outer-border-width`|
 |`--mod-colorhandle-outer-border-color`|
-|`--mod-colorhandle-checkerboard-dark-color`|
 |`--mod-colorhandle-checkerboard-light-color`|
+|`--mod-colorhandle-checkerboard-dark-color`|
 |`--mod-colorhandle-checkerboard-size`|
 |`--mod-colorhandle-animation-duration`|
 |`--mod-colorhandle-animation-easing`|
