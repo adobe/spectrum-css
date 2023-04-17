@@ -3,6 +3,18 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+<a name="8.1.0"></a>
+# 8.1.0
+🗓 2023-04-17 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/tokens@8.0.4...@spectrum-css/tokens@8.1.0)
+
+### ✨ Features
+
+* **tokens:** bring in latest tokens (field, picker) ([#1776](https://github.com/adobe/spectrum-css/issues/1776)) ([19c7474](https://github.com/adobe/spectrum-css/commit/19c7474))
+
+
+
+
+
 <a name="8.0.4"></a>
 ## 8.0.4
 🗓 2023-04-17 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/tokens@8.0.2...@spectrum-css/tokens@8.0.4)
