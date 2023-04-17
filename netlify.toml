@@ -17,6 +17,14 @@
   from = "/preview"
   to = "/preview/"
 
+[[redirects]]
+  from = "/docs/*/store.json"
+  to = "/docs/store.json"
+
+[[redirects]]
+  from = "/docs/*/index.json"
+  to = "/docs/index.json"
+
 # [[redirects]]
 #   from = "/docs/*"
 #   to = "/docs/:splat.html"

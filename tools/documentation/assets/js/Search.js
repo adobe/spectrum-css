@@ -122,19 +122,14 @@ function loadJSON(url, callback) {
   req.send();
 }
 
-function isComponentIndex() {
-  return /^\/docs\/[\w-]+\/$/.test(location.pathname);
-}
 Search.prototype.loadStore = function() {
-  var storePath = isComponentIndex() ? '../store.json' : 'store.json';
-  loadJSON(storePath, function(err, object) {
+  loadJSON('./store.json', function(err, object) {
     this.store = object;
   }.bind(this));
 }
 
 Search.prototype.loadIndex = function() {
-  var indexPath = isComponentIndex() ? '../index.json' : 'index.json';
-  loadJSON(indexPath, function(err, object) {
+  loadJSON('./index.json', function(err, object) {
     this.index = lunr.Index.load(object);
   }.bind(this));
 }
