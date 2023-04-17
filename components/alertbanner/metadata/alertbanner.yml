@@ -4,33 +4,108 @@ sections:
   - name: Custom Properties API
     description: |
       This component can be modified via its `--mod-*` prefixed custom properties. A list of those prefixed custom properties can be found <a href="https://github.com/adobe/spectrum-css/tree/main/components/actionbar/metadata/mods.md">here</a>.
-  - name: Migration Guide
-    description: |
-      ### Popover Dependency
-      Action Bar requires Popover, which is nested within Action Bar. Action Bar background, border, and corner radius are applied to the nested Popover component and can be overriden by Action Bar.
 examples:
   - id: alertbanner
     name: Neutral
     description: Standard Alert Banners
     markup: |
-      <div class="spectrum-AlertBanner is-open">
-       <p>Alert Banner</p>
-       <div class="spectrum-Divider spectrum-Divider--sizeM spectrum-Divider--vertical" style="height: auto; align-self: stretch;"></div>
+      <div class="spectrum-Examples--vertical">
+        <div class="spectrum-AlertBanner is-open">
+          <div class="spectrum-AlertBanner-start">
+            <p class="spectrum-AlertBanner-text">Your trial has expired</p>
+          </div>
+          <div class="spectrum-AlertBanner-end">
+            <div class="spectrum-Divider spectrum-Divider--sizeM spectrum-Divider--vertical spectrum-AlertBanner-divider" style="height: auto; align-self: stretch;"></div>
+            <button class="spectrum-CloseButton spectrum-CloseButton--sizeM spectrum-AlertBanner-close-button" style="--mod-closebutton-icon-color-default: white;">
+              <svg class="spectrum-CloseButton-UIIcon spectrum-Icon spectrum-UIIcon-Cross100 " focusable="false" aria-hidden="true">
+                <use xlink:href="#spectrum-css-icon-Cross100" />
+              </svg>
+            </button>
+          </div>
+        </div>
+        <br>
+        <br>
+        <div class="spectrum-AlertBanner is-open">
+          <div class="spectrum-AlertBanner-start">
+            <p class="spectrum-AlertBanner-text">Your trial has expired</p>
+          </div>
+          <div class="spectrum-AlertBanner-end">
+            <button class="spectrum-Button spectrum-Button--outline spectrum-Button--staticWhite spectrum-Button--sizeM spectrum-AlertBanner-action-button">
+              <span class="spectrum-Button-label">Action</span>
+            </button>
+            <div class="spectrum-Divider spectrum-Divider--sizeM spectrum-Divider--vertical spectrum-AlertBanner-divider" style="height: auto; align-self: stretch;"></div>
+            <button class="spectrum-CloseButton spectrum-CloseButton--sizeM spectrum-AlertBanner-close-button" style="--mod-closebutton-icon-color-default: white;">
+              <svg class="spectrum-CloseButton-UIIcon spectrum-Icon spectrum-UIIcon-Cross100 " focusable="false" aria-hidden="true">
+                <use xlink:href="#spectrum-css-icon-Cross100" />
+              </svg>
+            </button>
+          </div>
+        </div>
+        <br>
+        <br>
+        <div class="spectrum-AlertBanner is-open">
+          <div class="spectrum-AlertBanner-start">
+            <p class="spectrum-AlertBanner-text">Your trial has expired. Please purchase to continue. Your work has been saved and is ready for you to open again once you have purchased the software.</p>
+          </div>
+          <div class="spectrum-AlertBanner-end">
+            <button class="spectrum-Button spectrum-Button--outline spectrum-Button--staticWhite spectrum-Button--sizeM spectrum-AlertBanner-action-button">
+              <span class="spectrum-Button-label">Action</span>
+            </button>
+            <div class="spectrum-Divider spectrum-Divider--sizeM spectrum-Divider--vertical spectrum-AlertBanner-divider" style="height: auto; align-self: stretch;"></div>
+            <button class="spectrum-CloseButton spectrum-CloseButton--sizeM spectrum-AlertBanner-close-button" style="--mod-closebutton-icon-color-default: white;">
+              <svg class="spectrum-CloseButton-UIIcon spectrum-Icon spectrum-UIIcon-Cross100 " focusable="false" aria-hidden="true">
+                <use xlink:href="#spectrum-css-icon-Cross100" />
+              </svg>
+            </button>
+          </div>
+        </div>
       </div>
   - id: alertbanner
     name: Informative
-    description: Standard Alert Banners
+    description: Informative Alert Banners
     markup: |
-      <div class="spectrum-AlertBanner spectrum-AlertBanner-informative is-open">
-       <p>Alert Banner</p>
-      </div>
+        <div class="spectrum-AlertBanner spectrum-AlertBanner-informative is-open">
+          <div class="spectrum-AlertBanner-start">
+            <svg class="spectrum-Icon spectrum-UIIcon-Info100 spectrum-AlertBanner-icon" focusable="false" aria-hidden="true">
+              <use xlink:href="#spectrum-icon-18-Info" />
+            </svg>
+            <p class="spectrum-AlertBanner-text">Your trial will expire in 3 days</p>
+          </div>
+          <div class="spectrum-AlertBanner-end">
+            <button class="spectrum-Button spectrum-Button--outline spectrum-Button--staticWhite spectrum-Button--sizeM spectrum-AlertBanner-action-button">
+              <span class="spectrum-Button-label">Purchase</span>
+            </button>
+            <div class="spectrum-Divider spectrum-Divider--sizeM spectrum-Divider--vertical spectrum-AlertBanner-divider" style="height: auto; align-self: stretch;"></div>
+            <button class="spectrum-CloseButton spectrum-CloseButton--sizeM spectrum-AlertBanner-close-button" style="--mod-closebutton-icon-color-default: white;">
+              <svg class="spectrum-CloseButton-UIIcon spectrum-Icon spectrum-UIIcon-Cross100 " focusable="false" aria-hidden="true">
+                <use xlink:href="#spectrum-css-icon-Cross100" />
+              </svg>
+            </button>
+          </div>
+        </div>
   - id: alertbanner
     name: Negative
-    description: Standard Alert Banners
+    description: Negative Alert Banners
     markup: |
-      <div class="spectrum-AlertBanner spectrum-AlertBanner-negative is-open">
-       <p>Alert Banner</p>
-      </div>
+        <div class="spectrum-AlertBanner spectrum-AlertBanner-negative is-open">
+          <div class="spectrum-AlertBanner-start">
+            <svg class="spectrum-Icon spectrum-UIIcon-Alert100 spectrum-AlertBanner-icon" focusable="false" aria-hidden="true">
+              <use xlink:href="#spectrum-icon-18-Alert" />
+            </svg>
+            <p class="spectrum-AlertBanner-text">Connection interupted. Check your network to continue.</p>
+          </div>
+          <div class="spectrum-AlertBanner-end">
+            <button class="spectrum-Button spectrum-Button--outline spectrum-Button--staticWhite spectrum-Button--sizeM spectrum-AlertBanner-action-button">
+              <span class="spectrum-Button-label">Try Again</span>
+            </button>
+            <div class="spectrum-Divider spectrum-Divider--sizeM spectrum-Divider--vertical spectrum-AlertBanner-divider" style="height: auto; align-self: stretch;"></div>
+            <button class="spectrum-CloseButton spectrum-CloseButton--sizeM spectrum-AlertBanner-close-button" style="--mod-closebutton-icon-color-default: white;">
+              <svg class="spectrum-CloseButton-UIIcon spectrum-Icon spectrum-UIIcon-Cross100 " focusable="false" aria-hidden="true">
+                <use xlink:href="#spectrum-css-icon-Cross100" />
+              </svg>
+            </button>
+          </div>
+        </div>
 
 
 
