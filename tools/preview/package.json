@@ -1,6 +1,6 @@
 {
   "name": "@spectrum-css/preview",
-  "version": "3.0.2",
+  "version": "3.0.4",
   "description": "A Spectrum CSS preview",
   "license": "Apache-2.0",
   "author": "Adobe",
@@ -9,8 +9,8 @@
   "scripts": {
     "build": "yarn storybook",
     "new": "yarn workspace @spectrum-css/generator new story",
-    "start": "WATCH_MODE=true start-storybook --config-dir .",
-    "storybook": "build-storybook --config-dir .",
+    "start": "WATCH_MODE=true start-storybook --quiet --config-dir .",
+    "storybook": "build-storybook --quiet --config-dir .",
     "test": "chromatic --build-script-name build --junit-report",
     "test:scope": "yarn test --only-story-names"
   },
@@ -39,7 +39,7 @@
     "@storybook/theming": "^6.5.15",
     "@storybook/web-components": "^6.5.15",
     "@whitespace/storybook-addon-html": "^5.1.1",
-    "chromatic": "^6.17.2",
+    "chromatic": "^6.17.3",
     "lit-html": "^2.7.2",
     "lodash-es": "^4.17.21",
     "npm-run-all": "^4.1.5",

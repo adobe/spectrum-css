@@ -1,6 +1,7 @@
+import { html } from "lit-html";
+
 // Import the component markup template
 import { Template } from "./template";
-
 
 import { default as IconStories } from "@spectrum-css/icon/stories/icon.stories.js";
 
@@ -34,15 +35,8 @@ export default {
       if: false,
     },
     hideLabel: {
-      name: "Hide label",
-      type: { name: "boolean" },
       table: {
-        type: { summary: "boolean" },
-        category: "Component",
-      },
-      control: {
-        type: "boolean",
-        if: { arg: 'icon', truthy: true }
+        disable: true
       },
     },
     variant: {
@@ -83,16 +77,7 @@ export default {
       },
       options: ["white", "black"],
       control: "select",
-    },
-    justified: {
-      name: "Justified",
-      type: { name: "boolean" },
-      table: {
-        type: { summary: "boolean" },
-        category: "Advanced",
-      },
-      control: "boolean",
-    },
+    }
   },
   args: {
     rootClass: "spectrum-Button",
@@ -114,18 +99,68 @@ export default {
   },
 };
 
-export const Default = Template.bind({});
-Default.args = {};
+const CustomButton = (args) => {
+  return (
+    html`
+      <div style="padding: 1rem; ${(args.staticColor && args.backgroundColor) ? `background-color: ${args.backgroundColor}` : ""}">
+        ${Template({
+          ...args,
+          iconName: undefined,
+        })}
+        ${Template({
+          ...args,
+          iconName: undefined,
+          treatment: 'outline'
+        })}
+        ${Template({
+          ...args,
+          iconName: args.iconName ?? 'Edit'
+        })}
+        ${Template({
+          ...args,
+          hideLabel: true,
+          iconName: args.iconName ?? 'Edit'
+        })}
+      </div>
+    `
+  )
+}
 
-export const OutlineWithIcon = Template.bind({});
-OutlineWithIcon.args = {
-  treatment: "outline",
-  iconName: "Edit",
+export const Accent = CustomButton.bind({});
+Accent.args = {
+  variant: "accent"
 };
 
-export const DisabledIconOnly = Template.bind({});
-DisabledIconOnly.args = {
-  hideLabel: true,
+export const Negative = CustomButton.bind({});
+Negative.args = {
+  variant: "negative",
+  iconName: "Delete"
+};
+
+export const Primary = CustomButton.bind({});
+Primary.args = {
+  variant: "primary"
+};
+
+export const Secondary = CustomButton.bind({});
+Secondary.args = {
+  variant: "secondary"
+};
+
+export const StaticColorWhite = CustomButton.bind({});
+StaticColorWhite.args = {
+  backgroundColor: 'rgb(15, 121, 125)',
+  staticColor: "white"
+};
+
+export const StaticColorBlack = CustomButton.bind({});
+StaticColorBlack.args = {
+  backgroundColor: 'rgb(181, 209, 211)',
+  staticColor: "black"
+};
+
+export const Disabled = CustomButton.bind({});
+Disabled.args = {
   isDisabled: true,
   iconName: "Actions",
 };
