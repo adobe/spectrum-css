@@ -14,14 +14,8 @@ governing permissions and limitations under the License.
 
 'use strict';
 
-const isComponentIndexExist = /^\/docs\/[\w-]+\/$/.test(location.pathname);
-
 loadIcons('../../components/icon/spectrum-css-icons.svg');
-if(isComponentIndexExist){
-  loadIcons('../img/spectrum-icons.svg');
-} else {
-  loadIcons('img/spectrum-icons.svg');
-}
+loadIcons('img/spectrum-icons.svg');
 
 // Show and hide code samples
 function toggleMarkupVisibility(event) {

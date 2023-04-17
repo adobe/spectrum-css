@@ -22,6 +22,10 @@
   to = "/docs/store.json"
 
 [[redirects]]
+  from = "/docs/*/img/spectrum-icons.svg"
+  to = "/docs/img/spectrum-icons.svg"
+
+[[redirects]]
   from = "/docs/*/index.json"
   to = "/docs/index.json"
 
