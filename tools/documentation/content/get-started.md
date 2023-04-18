@@ -100,7 +100,7 @@ eleventyNavigation:
     <img
       class="spectrum-CenteredImage"
       alt="Screenshot of the rendered CTA button in a browser window"
-      src="img/button-screen-shot.png"/>
+      src="../img/button-screen-shot.png"/>
     <header id="contribute">
       <h2 class="spectrum-Heading spectrum-Heading--sizeM">
         <a class="spectrum-BigSubtleLink" href="#contribute">Contribute to Spectrum CSS</a>
