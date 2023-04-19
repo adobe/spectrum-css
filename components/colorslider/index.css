@@ -11,15 +11,6 @@
   --spectrum-colorslider-checkerboard-light-color: var(--spectrum-opacity-checkerboard-square-light);
 }
 
-%spectrum-ColorControl-handle--focused {
-  /* Bigger handle when focused */
-  width: calc(var(--spectrum-colorhandle-size) * 2);
-  height: calc(var(--spectrum-colorhandle-size) * 2);
-
-  margin-left: calc(-1 * var(--spectrum-colorhandle-size));
-  margin-top: calc(-1 * var(--spectrum-colorhandle-size));
-}
-
 %spectrum-ColorControl-hiddenField {
   opacity: 0;
   position: absolute;
@@ -45,10 +36,6 @@
 
   &.is-focused {
     z-index: 2;
-
-    .spectrum-ColorSlider-handle {
-      @extend %spectrum-ColorControl-handle--focused;
-    }
   }
 
   &.is-disabled {
