@@ -18,7 +18,7 @@ export default {
     },
   },
   args: {
-    rootClass: "spectrum-DropZone",
+    rootClass: "spectrum-Dropzone",
     isDragged: false,
   },
   parameters: {
