@@ -23,7 +23,6 @@ governing permissions and limitations under the License.
   --spectrum-floating-action-button-focus-ring-gap: var(--spectrum-focus-indicator-gap);
   --spectrum-floating-action-button-focus-ring-color: var(--spectrum-focus-indicator-color);
 
-
   --spectrum-floating-action-button-background-color: var(--spectrum-accent-background-color-default);
   --spectrum-floating-action-button-background-color-hover: var(--spectrum-accent-background-color-hover);
   --spectrum-floating-action-button-background-color-down: var(--spectrum-accent-background-color-down);
@@ -32,7 +31,6 @@ governing permissions and limitations under the License.
   --spectrum-floating-action-button-icon-color-hover: var(--spectrum-white);
   --spectrum-floating-action-button-icon-color-down: var(--spectrum-white);
   --spectrum-floating-action-button-icon-color-key-focus: var(--spectrum-white);
-
 
   &--secondary {
     --spectrum-floating-action-button-background-color: var(--spectrum-background-layer-2-color);
@@ -93,7 +91,6 @@ governing permissions and limitations under the License.
       inset: 0;
       margin: calc(-1 * var(--mod-floating-action-button-focus-ring-gap, var(--spectrum-floating-action-button-focus-ring-gap)));
       box-shadow: 0 0 0 var(--mod-floating-action-button-focus-ring-width, var(--spectrum-floating-action-button-focus-ring-width)) var(--highcontrast-floating-action-button-focus-ring-color, var(--mod-afloating-action-button-focus-ring-color, var(--spectrum-floating-action-button-focus-ring-color)));
-
       border-radius: 50%;
       pointer-events: none;
       content: '';
@@ -106,7 +103,6 @@ governing permissions and limitations under the License.
   inline-size: var(--mod-floating-action-button-icon-size, var(--spectrum-floating-action-button-icon-size));
   fill: var(--highcontrast-floating-action-button-icon-color, var(--mod-floating-action-button-icon-color, var(--spectrum-floating-action-button-icon-color)));
 }
-
 
 @media (forced-colors: active) {
   .spectrum-FloatingActionButton {
@@ -125,7 +121,6 @@ governing permissions and limitations under the License.
     --highcontrast-floating-action-button-icon-color-hover: ButtonFace;
     --highcontrast-floating-action-button-icon-color-down: ButtonFace;
     --highcontrast-floating-action-button-icon-color-key-focus: ButtonFace;
-
 
   }
 }
