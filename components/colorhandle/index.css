@@ -84,7 +84,6 @@ governing permissions and limitations under the License.
     block-size: var(--mod-colorhandle-hitarea-size, var(--spectrum-colorhandle-hitarea-size));
   }
 
-  &:focus,
   &.is-focused,
   &.focus-ring {
       /* Bigger handle when focused */
