@@ -3,36 +3,6 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
-<a name="5.0.29"></a>
-## 5.0.29
-🗓 2023-04-17 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/coachmark@5.0.28...@spectrum-css/coachmark@5.0.29)
-
-**Note:** Version bump only for package @spectrum-css/coachmark
-
-
-
-
-
-<a name="5.0.28"></a>
-## 5.0.28
-🗓 2023-04-17 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/coachmark@5.0.26...@spectrum-css/coachmark@5.0.28)
-
-**Note:** Version bump only for package @spectrum-css/coachmark
-
-
-
-
-
-<a name="5.0.27"></a>
-## 5.0.27
-🗓 2023-04-14 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/coachmark@5.0.26...@spectrum-css/coachmark@5.0.27)
-
-**Note:** Version bump only for package @spectrum-css/coachmark
-
-
-
-
-
 <a name="5.0.26"></a>
 ## 5.0.26
 🗓 2023-04-03 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/coachmark@5.0.25...@spectrum-css/coachmark@5.0.26)

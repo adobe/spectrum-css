@@ -3,6 +3,7 @@ import { classMap } from 'lit-html/directives/class-map.js';
 import { styleMap } from 'lit-html/directives/style-map.js';
 
 import '../index.css';
+import '../skin.css';
 
 export const Template = ({
   rootClass = "spectrum-ColorHandle",
@@ -26,7 +27,7 @@ export const Template = ({
     ...customClasses.reduce((a, c) => ({ ...a, [c]: true }), {}),
   })}
   style=${styleMap(colorHandleStyle)}>
-      <div class="${rootClass}-inner"></div>
+      <div class="${rootClass}-color"></div>
     </div>
   </div>
   `;

@@ -23,6 +23,5 @@
 - [ ] If my change impacts documentation, I have updated the documentation accordingly.
 - [ ] I have read the [CONTRIBUTING document](/.github/CONTRIBUTING.md).
 - [ ] I have tested these changes in Windows High Contrast mode.
-- [ ] I have updated any relevant storybook stories and templates. 
 <!-- If this pull request isn't ready, add any remaining tasks here -->
 - [ ] This pull request is ready to merge.

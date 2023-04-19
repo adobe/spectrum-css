@@ -8,7 +8,7 @@ sections:
       ### A div wrapper is required for avatar
       ```
       <div class="spectrum-Avatar spectrum-Avatar--size50 spectrum-Tag-avatar">
-        <img class="spectrum-Avatar-image" src="img/example-ava.jpg" alt="Avatar">
+        <img class="spectrum-Avatar-image" src="/img/example-ava.jpg" alt="Avatar">
       </div>
       ```
       ### Change avatar icon size to small
@@ -34,19 +34,19 @@ examples:
       <div class= "spectrum-TagGroup" role="list" aria-label="Tags">
         <div class="spectrum-Tag spectrum-Tag--sizeS spectrum-TagGroup-item" role="listitem" tabindex="0">
           <div class="spectrum-Avatar spectrum-Avatar--size50 spectrum-Tag-avatar">
-            <img class="spectrum-Avatar-image" src="img/example-ava.jpg" alt="Avatar">
+            <img class="spectrum-Avatar-image" src="/img/example-ava.jpg" alt="Avatar">
           </div>
           <span class="spectrum-Tag-label">Shantanu</span>
         </div>
         <div class="spectrum-Tag spectrum-Tag--sizeS spectrum-TagGroup-item is-invalid" role="listitem" tabindex="0">
           <div class="spectrum-Avatar spectrum-Avatar--size50 spectrum-Tag-avatar">
-            <img class="spectrum-Avatar-image" src="img/example-ava.jpg" alt="Avatar">
+            <img class="spectrum-Avatar-image" src="/img/example-ava.jpg" alt="Avatar">
           </div>
           <span class="spectrum-Tag-label">Shantanu</span>
         </div>
         <div class="spectrum-Tag spectrum-Tag--sizeS spectrum-TagGroup-item is-disabled" role="listitem">
           <div class="spectrum-Avatar spectrum-Avatar--size50 spectrum-Tag-avatar">
-            <img class="spectrum-Avatar-image" src="img/example-ava.jpg" alt="Avatar">
+            <img class="spectrum-Avatar-image" src="/img/example-ava.jpg" alt="Avatar">
           </div>
           <span class="spectrum-Tag-label">Shantanu</span>
         </div>
@@ -116,7 +116,7 @@ examples:
       <div class= "spectrum-TagGroup" role="list" aria-label="Tags">
         <div class="spectrum-Tag spectrum-Tag--sizeS spectrum-TagGroup-item spectrum-Tag--removable" role="listitem" tabindex="0">
           <div class="spectrum-Avatar spectrum-Avatar--size50 spectrum-Tag-avatar">
-            <img class="spectrum-Avatar-image" src="img/example-ava.jpg" alt="Avatar">
+            <img class="spectrum-Avatar-image" src="/img/example-ava.jpg" alt="Avatar">
           </div>
           <span class="spectrum-Tag-label">Shantanu</span>
           <button class="spectrum-ClearButton spectrum-ClearButton--sizeS" aria-label="Remove tag 2" tabindex="-1">
@@ -129,7 +129,7 @@ examples:
         </div>
         <div class="spectrum-Tag spectrum-Tag--sizeS spectrum-TagGroup-item spectrum-Tag--removable is-invalid" role="listitem" tabindex="0">
           <div class="spectrum-Avatar spectrum-Avatar--size50 spectrum-Tag-avatar">
-            <img class="spectrum-Avatar-image" src="img/example-ava.jpg" alt="Avatar">
+            <img class="spectrum-Avatar-image" src="/img/example-ava.jpg" alt="Avatar">
           </div>
           <span class="spectrum-Tag-label">Shantanu</span>
           <button class="spectrum-ClearButton spectrum-ClearButton--sizeS" aria-label="Remove tag 2" tabindex="-1">
@@ -142,7 +142,7 @@ examples:
         </div>
         <div class="spectrum-Tag spectrum-Tag--sizeS spectrum-Tag--removable is-disabled" role="listitem">
           <div class="spectrum-Avatar spectrum-Avatar--size50 spectrum-Tag-avatar">
-            <img class="spectrum-Avatar-image" src="img/example-ava.jpg" alt="Avatar">
+            <img class="spectrum-Avatar-image" src="/img/example-ava.jpg" alt="Avatar">
           </div>
           <span class="spectrum-Tag-label">Shantanu</span>
           <button class="spectrum-ClearButton spectrum-ClearButton--sizeS" aria-label="Remove tag 3" tabindex="-1" disabled>

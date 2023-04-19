@@ -3,41 +3,6 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
-<a name="3.0.0"></a>
-# 3.0.0
-🗓 2023-04-19 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/colorloupe@2.0.20...@spectrum-css/colorloupe@3.0.0)
-
-* feat(colorloupe, colorhandle)!: migrate to core tokens (#1753) ([c72f147](https://github.com/adobe/spectrum-css/commit/c72f147)), closes [#1753](https://github.com/adobe/spectrum-css/issues/1753)
-
-
-### 🛑 BREAKING CHANGES
-
-* migrates both the ColorLoupe and ColorHandle components to `@adobe/spectrum-tokens`
-
-
-
-
-
-<a name="2.0.20"></a>
-## 2.0.20
-🗓 2023-04-17 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/colorloupe@2.0.18...@spectrum-css/colorloupe@2.0.20)
-
-**Note:** Version bump only for package @spectrum-css/colorloupe
-
-
-
-
-
-<a name="2.0.19"></a>
-## 2.0.19
-🗓 2023-04-14 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/colorloupe@2.0.18...@spectrum-css/colorloupe@2.0.19)
-
-**Note:** Version bump only for package @spectrum-css/colorloupe
-
-
-
-
-
 <a name="2.0.18"></a>
 ## 2.0.18
 🗓 2023-04-03 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/colorloupe@2.0.17...@spectrum-css/colorloupe@2.0.18)

@@ -3,57 +3,6 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
-<a name="5.0.1"></a>
-## 5.0.1
-🗓 2023-04-17 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/typography@5.0.0...@spectrum-css/typography@5.0.1)
-
-**Note:** Version bump only for package @spectrum-css/typography
-
-
-
-
-
-<a name="5.0.0"></a>
-# 5.0.0
-🗓 2023-04-17 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/typography@4.0.30...@spectrum-css/typography@5.0.0)
-
-* refactor(typography)!: use core tokens  (#1557) ([f7fb606](https://github.com/adobe/spectrum-css/commit/f7fb606)), closes [#1557](https://github.com/adobe/spectrum-css/issues/1557)
-
-
-### 🛑 BREAKING CHANGES
-
-* migrates the Typography component to use `@adobe/spectrum-tokens`
-
-Additionally:
-- update heading tokens
-- add body tokens
-- add core tokens
-- add detail tokens
-- add `cjk` heading tokens
-- add themes files
-- heading t-shirt sizes
-- move spectrum-Body color to index.css
-- remove skin.css
-- update heading tokens
-  - sans-serif-heading-light
-  - serif-heading-light
-  - heading
-  - heading-heavy
-
-
-
-
-
-<a name="4.0.31"></a>
-## 4.0.31
-🗓 2023-04-14 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/typography@4.0.30...@spectrum-css/typography@4.0.31)
-
-**Note:** Version bump only for package @spectrum-css/typography
-
-
-
-
-
 <a name="4.0.30"></a>
 ## 4.0.30
 🗓 2023-04-03 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/typography@4.0.29...@spectrum-css/typography@4.0.30)

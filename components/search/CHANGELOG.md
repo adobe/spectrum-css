@@ -3,36 +3,6 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
-<a name="5.0.3"></a>
-## 5.0.3
-🗓 2023-04-17 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/search@5.0.2...@spectrum-css/search@5.0.3)
-
-**Note:** Version bump only for package @spectrum-css/search
-
-
-
-
-
-<a name="5.0.2"></a>
-## 5.0.2
-🗓 2023-04-17 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/search@5.0.0...@spectrum-css/search@5.0.2)
-
-**Note:** Version bump only for package @spectrum-css/search
-
-
-
-
-
-<a name="5.0.1"></a>
-## 5.0.1
-🗓 2023-04-14 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/search@5.0.0...@spectrum-css/search@5.0.1)
-
-**Note:** Version bump only for package @spectrum-css/search
-
-
-
-
-
 <a name="5.0.0"></a>
 # 5.0.0
 🗓 2023-04-03 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/search@4.2.25...@spectrum-css/search@5.0.0)

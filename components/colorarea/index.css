@@ -50,6 +50,17 @@ governing permissions and limitations under the License.
   border-radius: var(--mod-colorarea-border-radius, var(--spectrum-colorarea-border-radius));
   border: var(--mod-colorarea-border-width, var(--spectrum-colorarea-border-width)) solid var(--highcontrast-colorarea-border-color, var(--mod-colorarea-border-color, var(--spectrum-colorarea-border-color)));
 
+  &.is-focused {
+    z-index: 2;
+    .spectrum-ColorArea-handle {
+      inline-size: calc(var(--spectrum-color-handle-size) * 2);
+      block-size: calc(var(--spectrum-color-handle-size) * 2);
+
+      margin-inline-start: calc(-1 * var(--spectrum-color-handle-size));
+      margin-block-start: calc(-1 * var(--spectrum-color-handle-size));
+    }
+  }
+
   &.is-disabled {
     pointer-events: none;
     background: var(--highcontrast-colorarea-fill-color-disabled, var(--mod-colorarea-disabled-background-color, var(--spectrum-colorarea-disabled-background-color)));

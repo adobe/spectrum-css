@@ -3,40 +3,6 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
-<a name="3.0.5"></a>
-## 3.0.5
-🗓 2023-04-17 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/picker@3.0.4...@spectrum-css/picker@3.0.5)
-
-**Note:** Version bump only for package @spectrum-css/picker
-
-
-
-
-
-<a name="3.0.4"></a>
-## 3.0.4
-🗓 2023-04-17 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/picker@3.0.2...@spectrum-css/picker@3.0.4)
-
-### 🐛 Bug fixes
-
-* **picker:** update border colors ([#1763](https://github.com/adobe/spectrum-css/issues/1763)) ([8932811](https://github.com/adobe/spectrum-css/commit/8932811))
-
-
-
-
-
-<a name="3.0.3"></a>
-## 3.0.3
-🗓 2023-04-14 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/picker@3.0.2...@spectrum-css/picker@3.0.3)
-
-### 🐛 Bug fixes
-
-* **picker:** update border colors ([#1763](https://github.com/adobe/spectrum-css/issues/1763)) ([8932811](https://github.com/adobe/spectrum-css/commit/8932811))
-
-
-
-
-
 <a name="3.0.2"></a>
 ## 3.0.2
 🗓 2023-04-06 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/picker@3.0.0...@spectrum-css/picker@3.0.2)

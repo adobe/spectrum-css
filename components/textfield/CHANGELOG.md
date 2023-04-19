@@ -3,36 +3,6 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
-<a name="4.1.8"></a>
-## 4.1.8
-🗓 2023-04-17 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/textfield@4.1.7...@spectrum-css/textfield@4.1.8)
-
-**Note:** Version bump only for package @spectrum-css/textfield
-
-
-
-
-
-<a name="4.1.7"></a>
-## 4.1.7
-🗓 2023-04-17 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/textfield@4.1.5...@spectrum-css/textfield@4.1.7)
-
-**Note:** Version bump only for package @spectrum-css/textfield
-
-
-
-
-
-<a name="4.1.6"></a>
-## 4.1.6
-🗓 2023-04-14 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/textfield@4.1.5...@spectrum-css/textfield@4.1.6)
-
-**Note:** Version bump only for package @spectrum-css/textfield
-
-
-
-
-
 <a name="4.1.5"></a>
 ## 4.1.5
 🗓 2023-04-06 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/textfield@4.1.3...@spectrum-css/textfield@4.1.5)

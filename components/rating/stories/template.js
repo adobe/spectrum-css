@@ -13,10 +13,25 @@ export const Template = ({
   rootClass = "spectrum-Rating",
   size = "m",
   max = 5,
+  isReadOnly = false,
   customClasses = [],
   id,
   ...globals
 }) => {
+  function setFocus(rating, focused) {
+    rating.classList[focused ? 'add' : 'remove']('is-focused');
+  }
+
+  function setValue(rating, value) {
+    const input = rating.querySelector(`.${rootClass}-input`);
+    input.value = value;
+
+    rating.querySelectorAll(`.${rootClass}-icon`)?.forEach((el, idx) => {
+        el.classList[idx <= value - 1 ? 'add' : 'remove']('is-selected');
+        el.classList[idx === value - 1 ? 'add' : 'remove']('is-currentValue');
+    });
+  }
+
   return html`
     <div
       class=${classMap({
@@ -24,7 +39,18 @@ export const Template = ({
         [`${rootClass}--size${size?.toUpperCase()}`]: typeof size !== "undefined",
         ...customClasses.reduce((a, c) => ({ ...a, [c]: true }), {}),
       })}
-      id=${ifDefined(id)}>
+      id=${ifDefined(id)}
+      @focusin=${(e) => {
+        const rating = ended.target.closest(`.${rootClass}`);
+        if (!rating) return;
+        setFocus(rating, true);
+      }}
+      @focusout=${(e) => {
+        const rating = e.target.closest(`.${rootClass}`);
+        if (!rating) return;
+        setFocus(rating, false);
+      }}
+    >
       <input
         class="${rootClass}-input"
         type="range"
@@ -32,11 +58,33 @@ export const Template = ({
         max=${max}
         value="0"
         aria-label="Rating"
+        ?readonly=${isReadOnly}
+        @change=${(e) => {
+          const rating = e.target.closest(`.${rootClass}`);
+          const input = rating.closest(`.${rootClass}-input`);
+          if (!input) return;
+          if (input.hasAttribute('readonly')) {
+            e.preventDefault();
+            input.value = e.defaultValue;
+          } else {
+            const value = parseInt(input.value, 10);
+            setValue(rating, value);
+          }
+        }}
       />
       ${repeat(
         Array(max).fill(0),
         () => html`
-          <span class="${rootClass}-icon">
+          <span
+            class="${rootClass}-icon"
+            @click=${(e) => {
+              const icon = e.target.closest(`.${rootClass}-icon`);
+              if (!icon) return;
+              const rating = e.target.closest(`.${rootClass}`);
+              const value = Array.prototype.indexOf.call(rating.querySelectorAll('.spectrum-Rating-icon'), icon) + 1;
+              setValue(rating, value);
+            }}
+          >
             ${Icon({
               ...globals,
               iconName: "Star",
