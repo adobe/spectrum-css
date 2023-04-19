@@ -101,7 +101,7 @@ governing permissions and limitations under the License.
   }
 }
 
-.spectrum-FloatingActionButton-icon {
+.spectrum-Icon.spectrum-FloatingActionButton-icon {
   block-size: var(--mod-floating-action-button-icon-size, var(--spectrum-floating-action-button-icon-size));
   inline-size: var(--mod-floating-action-button-icon-size, var(--spectrum-floating-action-button-icon-size));
   fill: var(--highcontrast-floating-action-button-icon-color, var(--mod-floating-action-button-icon-color, var(--spectrum-floating-action-button-icon-color)));
