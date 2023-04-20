@@ -3,16 +3,17 @@ description: Alert banners show pressing and high-signal messages, such as syste
 sections:
   - name: Custom Properties API
     description: |
-      This component can be modified via its `--mod-*` prefixed custom properties. A list of those prefixed custom properties can be found <a href="https://github.com/adobe/spectrum-css/tree/main/components/actionbar/metadata/mods.md">here</a>.
+      This component can be modified via its `--mod-*` prefixed custom properties. A list of those prefixed custom properties can be found <a href="https://github.com/adobe/spectrum-css/tree/main/components/alertbanner/metadata/mods.md">here</a>.
 examples:
   - id: alertbanner
     name: Neutral
     description: Standard Alert Banners
     markup: |
-      <div class="spectrum-Examples--vertical">
         <div class="spectrum-AlertBanner is-open">
           <div class="spectrum-AlertBanner-start">
-            <p class="spectrum-AlertBanner-text">Your trial has expired</p>
+            <div class="spectrum-AlertBanner-icon-text">
+              <p class="spectrum-AlertBanner-text">Your trial has expired</p>
+            </div>
           </div>
           <div class="spectrum-AlertBanner-end">
             <div class="spectrum-Divider spectrum-Divider--sizeM spectrum-Divider--vertical spectrum-AlertBanner-divider" style="height: auto; align-self: stretch;"></div>
@@ -27,12 +28,14 @@ examples:
         <br>
         <div class="spectrum-AlertBanner is-open">
           <div class="spectrum-AlertBanner-start">
-            <p class="spectrum-AlertBanner-text">Your trial has expired</p>
-          </div>
-          <div class="spectrum-AlertBanner-end">
+            <div class="spectrum-AlertBanner-icon-text">
+              <p class="spectrum-AlertBanner-text">Your trial has expired</p>
+            </div>
             <button class="spectrum-Button spectrum-Button--outline spectrum-Button--staticWhite spectrum-Button--sizeM spectrum-AlertBanner-action-button">
               <span class="spectrum-Button-label">Action</span>
             </button>
+          </div>
+          <div class="spectrum-AlertBanner-end">
             <div class="spectrum-Divider spectrum-Divider--sizeM spectrum-Divider--vertical spectrum-AlertBanner-divider" style="height: auto; align-self: stretch;"></div>
             <button class="spectrum-CloseButton spectrum-CloseButton--sizeM spectrum-AlertBanner-close-button" style="--mod-closebutton-icon-color-default: white;">
               <svg class="spectrum-CloseButton-UIIcon spectrum-Icon spectrum-UIIcon-Cross100 " focusable="false" aria-hidden="true">
@@ -45,12 +48,15 @@ examples:
         <br>
         <div class="spectrum-AlertBanner is-open">
           <div class="spectrum-AlertBanner-start">
-            <p class="spectrum-AlertBanner-text">Your trial has expired. Please purchase to continue. Your work has been saved and is ready for you to open again once you have purchased the software.</p>
-          </div>
-          <div class="spectrum-AlertBanner-end">
+            <div class="spectrum-AlertBanner-icon-text">
+              <p class="spectrum-AlertBanner-text">Your trial has expired. Please purchase to continue. Your work has been saved and is ready for you to open again after purchase.</p>
+            </div>
             <button class="spectrum-Button spectrum-Button--outline spectrum-Button--staticWhite spectrum-Button--sizeM spectrum-AlertBanner-action-button">
               <span class="spectrum-Button-label">Action</span>
             </button>
+          </div>
+          <div class="spectrum-AlertBanner-end">
+
             <div class="spectrum-Divider spectrum-Divider--sizeM spectrum-Divider--vertical spectrum-AlertBanner-divider" style="height: auto; align-self: stretch;"></div>
             <button class="spectrum-CloseButton spectrum-CloseButton--sizeM spectrum-AlertBanner-close-button" style="--mod-closebutton-icon-color-default: white;">
               <svg class="spectrum-CloseButton-UIIcon spectrum-Icon spectrum-UIIcon-Cross100 " focusable="false" aria-hidden="true">
@@ -59,22 +65,24 @@ examples:
             </button>
           </div>
         </div>
-      </div>
   - id: alertbanner
     name: Informative
     description: Informative Alert Banners
     markup: |
         <div class="spectrum-AlertBanner spectrum-AlertBanner-informative is-open">
           <div class="spectrum-AlertBanner-start">
-            <svg class="spectrum-Icon spectrum-UIIcon-Info100 spectrum-AlertBanner-icon" focusable="false" aria-hidden="true">
-              <use xlink:href="#spectrum-icon-18-Info" />
-            </svg>
-            <p class="spectrum-AlertBanner-text">Your trial will expire in 3 days</p>
+            <div class="spectrum-AlertBanner-icon-text">
+              <svg class="spectrum-Icon spectrum-UIIcon-Info100 spectrum-AlertBanner-icon" focusable="false" aria-hidden="true">
+                <use xlink:href="#spectrum-icon-18-Info" />
+              </svg>
+              <p class="spectrum-AlertBanner-text">Your trial will expire in 3 days </p>
+            </div>
+            <button class="spectrum-Button spectrum-Button--outline spectrum-Button--staticWhite spectrum-Button--sizeM spectrum-AlertBanner-action-button">
+              <span class="spectrum-Button-label">Action</span>
+            </button>
           </div>
           <div class="spectrum-AlertBanner-end">
-            <button class="spectrum-Button spectrum-Button--outline spectrum-Button--staticWhite spectrum-Button--sizeM spectrum-AlertBanner-action-button">
-              <span class="spectrum-Button-label">Purchase</span>
-            </button>
+
             <div class="spectrum-Divider spectrum-Divider--sizeM spectrum-Divider--vertical spectrum-AlertBanner-divider" style="height: auto; align-self: stretch;"></div>
             <button class="spectrum-CloseButton spectrum-CloseButton--sizeM spectrum-AlertBanner-close-button" style="--mod-closebutton-icon-color-default: white;">
               <svg class="spectrum-CloseButton-UIIcon spectrum-Icon spectrum-UIIcon-Cross100 " focusable="false" aria-hidden="true">
@@ -89,10 +97,12 @@ examples:
     markup: |
         <div class="spectrum-AlertBanner spectrum-AlertBanner-negative is-open">
           <div class="spectrum-AlertBanner-start">
-            <svg class="spectrum-Icon spectrum-UIIcon-Alert100 spectrum-AlertBanner-icon" focusable="false" aria-hidden="true">
-              <use xlink:href="#spectrum-icon-18-Alert" />
-            </svg>
-            <p class="spectrum-AlertBanner-text">Connection interupted. Check your network to continue.</p>
+            <div class="spectrum-AlertBanner-icon-text">
+              <svg class="spectrum-Icon spectrum-UIIcon-Alert100 spectrum-AlertBanner-icon" focusable="false" aria-hidden="true">
+                <use xlink:href="#spectrum-icon-18-Alert" />
+              </svg>
+              <p class="spectrum-AlertBanner-text">Connection interupted. Check your network to continue.</p>
+            </div>
           </div>
           <div class="spectrum-AlertBanner-end">
             <button class="spectrum-Button spectrum-Button--outline spectrum-Button--staticWhite spectrum-Button--sizeM spectrum-AlertBanner-action-button">
@@ -106,6 +116,3 @@ examples:
             </button>
           </div>
         </div>
-
-
-
