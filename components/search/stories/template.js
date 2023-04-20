@@ -28,6 +28,7 @@ export const Template = ({
       [rootClass]: true,
       [`${rootClass}--size${size?.toUpperCase()}`]: typeof size !== "undefined",
       [`${rootClass}--quiet`]: isQuiet,
+      'is-disabled': isDisabled,
       ...customClasses.reduce((a, c) => ({ ...a, [c]: true }), {}),
     })}>
       ${TextField({
