@@ -43,14 +43,6 @@ governing permissions and limitations under the License.
 
   &.is-focused {
     z-index: 2;
-
-    .spectrum-ColorWheel-handle {
-      inline-size: calc(var(--spectrum-color-handle-size) * 2);
-      block-size: calc(var(--spectrum-color-handle-size) * 2);
-
-      margin-inline-start: calc(-1 * var(--spectrum-color-handle-size));
-      margin-block-start: calc(-1 * var(--spectrum-color-handle-size));
-    }
   }
 
   /* --track-width and --border-width to be used with JS in calculating the clip-path paths and colorarea-container-size */
@@ -103,25 +95,16 @@ governing permissions and limitations under the License.
 .spectrum-ColorWheel-handle {
   transform: translate(var(--spectrum-colorwheel-colorhandle-position), 0);
   inset-block-start: 50%;
-
-  [dir="ltr"] & {
-    inset-inline-start: 50%;
-  }
-
-  [dir="rtl"] & {
-    inset-inline-end: 50%;
-  }
+  inset-inline: 50%
 }
 
 .spectrum-ColorWheel-ColorArea-handle {
-  [dir="ltr"] & {
-    inset-inline-end: 0;
-  }
+  inset-block-start: 0;
+  inset-inline-end: 0;
 
   [dir="rtl"] & {
     inset-inline-start: 0;
   }
-
 }
 
 /* a clip-path set border-width wider than than spectrum-colorwheel-wheel to create the appreance of a border*/

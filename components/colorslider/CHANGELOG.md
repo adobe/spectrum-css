@@ -3,6 +3,21 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+<a name="3.0.0"></a>
+# 3.0.0
+🗓 2023-04-19 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/colorslider@2.0.24...@spectrum-css/colorslider@3.0.0)
+
+* feat(colorloupe, colorhandle)!: migrate to core tokens (#1753) ([c72f147](https://github.com/adobe/spectrum-css/commit/c72f147)), closes [#1753](https://github.com/adobe/spectrum-css/issues/1753)
+
+
+### 🛑 BREAKING CHANGES
+
+* migrates both the ColorLoupe and ColorHandle components to `@adobe/spectrum-tokens`
+
+
+
+
+
 <a name="2.0.24"></a>
 ## 2.0.24
 🗓 2023-04-17 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/colorslider@2.0.22...@spectrum-css/colorslider@2.0.24)

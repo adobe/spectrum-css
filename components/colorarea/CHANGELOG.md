@@ -3,6 +3,31 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+<a name="4.0.1"></a>
+## 4.0.1
+🗓 2023-04-20 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/colorarea@4.0.0...@spectrum-css/colorarea@4.0.1)
+
+**Note:** Version bump only for package @spectrum-css/colorarea
+
+
+
+
+
+<a name="4.0.0"></a>
+# 4.0.0
+🗓 2023-04-19 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/colorarea@3.0.10...@spectrum-css/colorarea@4.0.0)
+
+* feat(colorloupe, colorhandle)!: migrate to core tokens (#1753) ([c72f147](https://github.com/adobe/spectrum-css/commit/c72f147)), closes [#1753](https://github.com/adobe/spectrum-css/issues/1753)
+
+
+### 🛑 BREAKING CHANGES
+
+* migrates both the ColorLoupe and ColorHandle components to `@adobe/spectrum-tokens`
+
+
+
+
+
 <a name="3.0.10"></a>
 ## 3.0.10
 🗓 2023-04-17 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/colorarea@3.0.9...@spectrum-css/colorarea@3.0.10)

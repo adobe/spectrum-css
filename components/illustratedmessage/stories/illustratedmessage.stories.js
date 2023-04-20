@@ -5,10 +5,19 @@ import { Template } from "./template";
 import { Template as Link } from "@spectrum-css/link/stories/template.js";
 
 export default {
-  title: "Illustrated message",
-  description: "The illustrated message component is used for status and errors.",
+  title: "Illustrated Message",
+  description: "The Illustrated Message component is used for status and errors. It is also used for call to actions, such as within the Drop Zone component.",
   component: "IllustratedMessage",
   argTypes: {
+    useAccentColor: {
+      name: "Illustration Accent Color",
+      type: { name: "boolean" },
+      table: {
+        type: { summary: "boolean" },
+        category: "Component",
+      },
+      control: "boolean",
+    },
     heading: {
       name: "Heading",
       type: { name: "string" },
@@ -24,17 +33,6 @@ export default {
         category: "Content",
         disable: true,
       },
-    },
-    variant: {
-      name: "Variants",
-      type: { name: "string" },
-      table: {
-        type: { summary: "string" },
-        category: "Component",
-        disable: true,
-      },
-      options: ["cta"],
-      control: "radio",
     },
   },
   args: {
@@ -54,13 +52,14 @@ export const Default = Template.bind({});
 Default.args = {
   heading: "Error 404: Page not found",
   description: "This page isn't available. Try checking the URL or visit a different page.",
+  useAccentColor: false,
 };
 
-export const CTA = Template.bind({});
-CTA.description = "The illustrated message component is used for instruction/call-to-action.";
-CTA.args = {
+export const AccentColor = Template.bind({});
+AccentColor.description = "An accent color class can be used on elements of the illustration SVG.";
+AccentColor.args = {
   ...Default.args,
   heading: "Drag and drop your file",
   description: html`${Link({ url: '#', text: 'Select a file' })} from your computer.`,
-  variant: "cta",
+  useAccentColor: true,
 };

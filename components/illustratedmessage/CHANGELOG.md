@@ -3,6 +3,34 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+<a name="5.0.1"></a>
+## 5.0.1
+🗓 2023-04-20 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/illustratedmessage@5.0.0...@spectrum-css/illustratedmessage@5.0.1)
+
+**Note:** Version bump only for package @spectrum-css/illustratedmessage
+
+
+
+
+
+<a name="5.0.0"></a>
+# 5.0.0
+🗓 2023-04-20 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/illustratedmessage@4.0.19...@spectrum-css/illustratedmessage@5.0.0)
+
+* feat(illustratedmessage)!: core tokens migration (#1699) ([3e937a0](https://github.com/adobe/spectrum-css/commit/3e937a0)), closes [#1699](https://github.com/adobe/spectrum-css/issues/1699)
+
+
+### 🛑 BREAKING CHANGES
+
+* migrates IllustratedMessage to core tokens
+
+* Adds migration guide section to docs with a note about the removal of the CTA variant class.
+* Adds high-contrast mode support
+
+
+
+
+
 <a name="4.0.19"></a>
 ## 4.0.19
 🗓 2023-04-17 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/illustratedmessage@4.0.17...@spectrum-css/illustratedmessage@4.0.19)
