@@ -1,6 +1,6 @@
 {
   "name": "@spectrum-css/swatchgroup",
-  "version": "2.0.29",
+  "version": "2.0.30",
   "description": "The Spectrum CSS Color swatch group component",
   "license": "Apache-2.0",
   "author": "Adobe",
@@ -23,8 +23,8 @@
   },
   "devDependencies": {
     "@spectrum-css/component-builder-simple": "*",
-    "@spectrum-css/swatch": "^4.0.5",
-    "@spectrum-css/tokens": "^8.1.0",
+    "@spectrum-css/swatch": "^4.0.6",
+    "@spectrum-css/tokens": "^8.1.1",
     "gulp": "^4.0.0"
   },
   "publishConfig": {
