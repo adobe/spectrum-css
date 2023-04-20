@@ -16,8 +16,8 @@ governing permissions and limitations under the License.
   --spectrum-floating-action-button-padding: var(--spectrum-component-pill-edge-to-visual-only-200);
   --spectrum-floating-action-button-margin: var(--spectrum-spacing-200);
   --spectrum-floating-action-button-drop-shadow-x: var(--spectrum-drop-shadow-x);
-  --spectrum-floating-action-button-drop-shadow-y: var(--spectrum-drop-shadow-y);
-  --spectrum-floating-action-button-drop-shadow-color: var(--spectrum-transparent-black-300);
+  --spectrum-floating-action-button-drop-shadow-y: 4px; /* TODO: waiting for token */
+  --spectrum-floating-action-button-drop-shadow-color: var(--spectrum-transparent-black-300); /* TODO: waiting for token */
 
   --spectrum-floating-action-button-focus-ring-width: var(--spectrum-focus-indicator-thickness);
   --spectrum-floating-action-button-focus-ring-gap: var(--spectrum-focus-indicator-gap);
