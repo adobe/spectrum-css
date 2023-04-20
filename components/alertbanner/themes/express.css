@@ -11,5 +11,11 @@ governing permissions and limitations under the License.
 */
 
 @container (--system: express) {
-
+  .spectrum-AlertBanner {
+    --spectrum-alert-banner-divider-to-close: var(--spectrum-spacing-200);
+    --spectrum-alert-banner-edge-to-divider: var(--spectrum-spacing-200);
+    --spectrum-alert-banner-edge-to-button: var(--spectrum-spacing-200);
+    --spectrum-alert-banner-netural-background: var(--spectrum-neutral-background-color-default);
+    /* --spectrum-alert-banner-text-to-button-vertical: var(--spectrum-spacing-200); */
+  }
 }

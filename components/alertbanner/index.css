@@ -21,16 +21,11 @@ governing permissions and limitations under the License.
   --spectrum-alert-banner-start-spacing: var(--spectrum-spacing-300);
   --spectrum-alert-banner-text-to-button-horizontal: var(--spectrum-spacing-300);
   --spectrum-alert-banner-text-to-divider: var(--spectrum-spacing-300);
-  --spectrum-alert-banner-divider-to-close: var(--spectrum-spacing-100); /* needs mobile varient spacing-200 */
-  --spectrum-alert-banner-edge-to-divider: var(--spectrum-spacing-100); /* needs mobile varient spacing-200 */
   --spectrum-alert-banner-top-icon: var(--spectrum-alert-banner-top-to-workflow-icon);
   --spectrum-alert-banner-top-text: var(--spectrum-alert-banner-top-to-text);
   --spectrum-alert-banner-bottom-text: var(--spectrum-alert-banner-bottom-to-text);
-   --spectrum-alert-banner-edge-to-button: var(--spectrum-spacing-100); /* needs mobile varient spacing-200 */
-  /* --spectrum-alert-banner-text-to-button-vertical: var(--spectrum-spacing-100);  needs mobile varient spacing-200 */
 
   /* colors */
-  --spectrum-alert-banner-netural-background: var(--spectrum-neutral-subdued-background-color-default); /* needs express variant neutral-background-color-default */
   --spectrum-alert-banner-informative-background: var(--spectrum-informative-background-color-default);
   --spectrum-alert-banner-negative-background: var(--spectrum-negative-background-color-default);
   --spetrum-alert-banner-font-color: var(--spectrum-white);
