@@ -111,7 +111,7 @@ governing permissions and limitations under the License.
     --highcontrast-search-color-hover: FieldText;
     --highcontrast-search-color-focus: FieldText;
     --highcontrast-search-color-focus-hover: FieldText;
-    --highcontrast-search-color-disabled: GrayText;  
+    --highcontrast-search-color-disabled: GrayText;
   }
 
   .spectrum-Search .spectrum-Search-clearButton {
@@ -197,8 +197,14 @@ governing permissions and limitations under the License.
   }
 
   block-size: var(--mod-search-block-size, var(--spectrum-search-block-size));
-  padding-block-start: var(--mod-search-top-to-text, var(--spectrum-search-top-to-text));
-  padding-block-end: var(--mod-search-bottom-to-text, var(--spectrum-search-bottom-to-text));
+  padding-block-start: calc(
+    var(--mod-search-top-to-text, var(--spectrum-search-top-to-text)) - 
+    var(--mod-search-border-width, var(--spectrum-search-border-width))
+  );
+  padding-block-end: calc(
+    var(--mod-search-bottom-to-text, var(--spectrum-search-bottom-to-text)) - 
+    var(--mod-search-border-width, var(--spectrum-search-border-width))
+  );
 
   border-radius: var(--mod-search-border-radius, var(--spectrum-search-border-radius));
   border-width: var(--mod-search-border-width, var(--spectrum-search-border-width));
@@ -311,15 +317,22 @@ governing permissions and limitations under the License.
 
   .spectrum-Search-input {
     padding-inline-start: calc(
-      var(--mod-search-edge-to-visual, var(--spectrum-search-edge-to-visual)) +
+      var(--mod-search-edge-to-visual, var(--spectrum-search-edge-to-visual)) - 
+      var(--mod-search-border-width, var(--spectrum-search-border-width)) +
       var(--mod-search-icon-size, var(--spectrum-search-icon-size)) +
       var(--mod-search-text-to-icon, var(--spectrum-search-text-to-icon))
     );
-    padding-inline-end: var(--mod-search-button-inline-size, var(--spectrum-search-button-inline-size));
+    padding-inline-end: calc(
+      var(--mod-search-button-inline-size, var(--spectrum-search-button-inline-size)) -
+      var(--mod-search-border-width, var(--spectrum-search-border-width))
+    );
   }
 
   &:not(:has(.spectrum-Search-clearButton)) .spectrum-Search-input {
-    padding-inline-end: var(--mod-search-edge-to-text, var(--spectrum-search-edge-to-text));
+    padding-inline-end: calc(
+      var(--mod-search-edge-to-text, var(--spectrum-search-edge-to-text)) -
+      var(--mod-search-border-width, var(--spectrum-search-border-width))
+    );
   }
 }
 
