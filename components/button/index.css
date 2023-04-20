@@ -39,8 +39,8 @@ governing permissions and limitations under the License.
   --spectrum-button-edge-to-visual-only: var(--spectrum-component-pill-edge-to-visual-only-75);
   --spectrum-button-edge-to-text: calc(var(--spectrum-component-pill-edge-to-text-75) - var(--spectrum-button-border-width));
   --spectrum-button-padding-label-to-icon: var(--spectrum-text-to-visual-75);
-  --spectrum-button-padding-label-top: var(--spectrum-component-top-to-text-75);
-  --spectrum-button-padding-label-bottom: var(--spectrum-component-bottom-to-text-75);
+  --spectrum-button-top-to-text: var(--spectrum-button-top-to-text-small);
+  --spectrum-button-bottom-to-text: var(--spectrum-button-bottom-to-text-small);
 }
 
 .spectrum-Button--sizeM {
@@ -55,8 +55,8 @@ governing permissions and limitations under the License.
   --spectrum-button-edge-to-visual-only: var(--spectrum-component-pill-edge-to-visual-only-100);
   --spectrum-button-edge-to-text: calc(var(--spectrum-component-pill-edge-to-text-100) - var(--spectrum-button-border-width));
   --spectrum-button-padding-label-to-icon: var(--spectrum-text-to-visual-100);
-  --spectrum-button-padding-label-top: var(--spectrum-component-top-to-text-100);
-  --spectrum-button-padding-label-bottom: var(--spectrum-component-bottom-to-text-100);
+  --spectrum-button-top-to-text: var(--spectrum-button-top-to-text-medium);
+  --spectrum-button-bottom-to-text: var(--spectrum-button-bottom-to-text-medium);
 }
 
 .spectrum-Button--sizeL {
@@ -71,8 +71,8 @@ governing permissions and limitations under the License.
   --spectrum-button-edge-to-visual-only: var(--spectrum-component-pill-edge-to-visual-only-200);
   --spectrum-button-edge-to-text: calc(var(--spectrum-component-pill-edge-to-text-200) - var(--spectrum-button-border-width));
   --spectrum-button-padding-label-to-icon: var(--spectrum-text-to-visual-200);
-  --spectrum-button-padding-label-top: var(--spectrum-component-top-to-text-200);
-  --spectrum-button-padding-label-bottom: var(--spectrum-component-bottom-to-text-200);
+  --spectrum-button-top-to-text: var(--spectrum-button-top-to-text-large);
+  --spectrum-button-bottom-to-text: var(--spectrum-button-bottom-to-text-large);
 }
 
 .spectrum-Button--sizeXL {
@@ -87,8 +87,8 @@ governing permissions and limitations under the License.
   --spectrum-button-edge-to-visual-only: var(--spectrum-component-pill-edge-to-visual-only-300);
   --spectrum-button-edge-to-text: calc(var(--spectrum-component-pill-edge-to-text-300) - var(--spectrum-button-border-width));
   --spectrum-button-padding-label-to-icon: var(--spectrum-text-to-visual-300);
-  --spectrum-button-padding-label-top: var(--spectrum-component-top-to-text-300);
-  --spectrum-button-padding-label-bottom: var(--spectrum-component-bottom-to-text-300);
+  --spectrum-button-top-to-text: var(--spectrum-button-top-to-text-extra-large);
+  --spectrum-button-bottom-to-text: var(--spectrum-button-bottom-to-text-extra-large);
 
 }
 
@@ -151,8 +151,8 @@ a.spectrum-Button {
 
 .spectrum-Button-label {
   @inherit: %spectrum-ButtonLabel;
-  padding-block-start: calc(var(--mod-button-padding-label-top, var(--spectrum-button-padding-label-top)) - var(--mod-button-border-width, var(--spectrum-button-border-width)));
-  padding-block-end: calc(var(--mod-button-padding-label-bottom, var(--spectrum-button-padding-label-bottom)) - var(--mod-button-border-width, var(--spectrum-button-border-width)));
+  padding-block-start: calc(var(--mod-button-top-to-text, var(--spectrum-button-top-to-text)) - var(--mod-button-border-width, var(--spectrum-button-border-width)));
+  padding-block-end: calc(var(--mod-button-bottom-to-text, var(--spectrum-button-bottom-to-text)) - var(--mod-button-border-width, var(--spectrum-button-border-width)));
   white-space: nowrap;
   line-height: var(--mod-button-line-height, var(--spectrum-button-line-height));
   align-self: start;
