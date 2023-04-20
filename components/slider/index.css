@@ -14,7 +14,7 @@ governing permissions and limitations under the License.
 .spectrum-Slider {
   /* default sizing, matches t-shirt size M */
   --spectrum-slider-handle-size: var(--spectrum-slider-handle-size-medium);
-  --spectrum-slider-control-height: var(--spectrum-slider-control-height-medium);
+  --spectrum-slider-control-height: var(--spectrum-component-height-100);
   --spectrum-slider-bottom-to-handle: var(--spectrum-slider-bottom-to-handle-medium);
   --spectrum-slider-handle-border-radius: var(--spectrum-corner-radius-200);
   --spectrum-slider-handle-border-width-down: var(--spectrum-slider-handle-border-width-down-medium);
@@ -24,7 +24,7 @@ governing permissions and limitations under the License.
 .spectrum-Slider--sizeS {
   --spectrum-slider-font-size: var(--spectrum-font-size-75);
   --spectrum-slider-handle-size: var(--spectrum-slider-handle-size-small);
-  --spectrum-slider-control-height: var(--spectrum-slider-control-height-small);
+  --spectrum-slider-control-height: var(--spectrum-component-height-75);
   --spectrum-slider-bottom-to-handle: var(--spectrum-slider-bottom-to-handle-small);
   --spectrum-slider-handle-border-radius: var(--spectrum-corner-radius-200);
   --spectrum-slider-handle-border-width-down: var(--spectrum-slider-handle-border-width-down-small);
@@ -35,7 +35,7 @@ governing permissions and limitations under the License.
 .spectrum-Slider--sizeM {
   --spectrum-slider-font-size: var(--spectrum-font-size-75);
   --spectrum-slider-handle-size: var(--spectrum-slider-handle-size-medium);
-  --spectrum-slider-control-height: var(--spectrum-slider-control-height-medium);
+  --spectrum-slider-control-height: var(--spectrum-component-height-100);
   --spectrum-slider-bottom-to-handle: var(--spectrum-slider-bottom-to-handle-medium);
   --spectrum-slider-handle-border-radius: var(--spectrum-corner-radius-200);
   --spectrum-slider-handle-border-width-down: var(--spectrum-slider-handle-border-width-down-medium);
@@ -46,7 +46,7 @@ governing permissions and limitations under the License.
 .spectrum-Slider--sizeL {
   --spectrum-slider-font-size: var(--spectrum-font-size-100);
   --spectrum-slider-handle-size: var(--spectrum-slider-handle-size-large);
-  --spectrum-slider-control-height: var(--spectrum-slider-control-height-large);
+  --spectrum-slider-control-height: var(--spectrum-component-height-200);
   --spectrum-slider-bottom-to-handle: var(--spectrum-slider-bottom-to-handle-large);
   --spectrum-slider-handle-border-radius: calc(var(--spectrum-corner-radius-200) * 4);
   --spectrum-slider-handle-border-width-down: var(--spectrum-slider-handle-border-width-down-large);
@@ -57,7 +57,7 @@ governing permissions and limitations under the License.
 .spectrum-Slider--sizeXL {
   --spectrum-slider-font-size: var(--spectrum-font-size-200);
   --spectrum-slider-handle-size: var(--spectrum-slider-handle-size-extra-large);
-  --spectrum-slider-control-height: var(--spectrum-slider-control-height-extra-large);
+  --spectrum-slider-control-height: var(--spectrum-component-height-300);
   --spectrum-slider-bottom-to-handle: var(--spectrum-slider-bottom-to-handle-extra-large);
   --spectrum-slider-handle-border-radius: calc(var(--spectrum-corner-radius-200) * 4);
   --spectrum-slider-handle-border-width-down: var(--spectrum-slider-handle-border-width-down-extra-large);
@@ -69,7 +69,6 @@ governing permissions and limitations under the License.
   --spectrum-slider-cjk-line-height: var(--spectrum-cjk-line-height-100);
 
   --spectrum-slider-min-size: var(--spectrum-spacing-900);
-  --spectrum-slider-height-size: var(--spectrum-component-height-100);
 
   --spectrum-slider-track-corner-radius: var(--spectrum-corner-radius-75);
   --spectrum-slider-label-margin-start: var(--spectrum-spacing-300);
@@ -108,7 +107,6 @@ governing permissions and limitations under the License.
   /* Don't let z-index'd child elements float above other things on the page */
   z-index: 1;
   display: block;
-  min-block-size: var(--mod-slider-height-size, var(--spectrum-slider-height-size));
   min-inline-size: var(--mod-slider-min-size, var(--spectrum-slider-min-size));
 
   user-select: none;
@@ -144,12 +142,9 @@ governing permissions and limitations under the License.
 
   position: absolute;
   z-index: 1;
-  inset-block-start: calc(var(--mod-slider-height-size, var(--spectrum-slider-height-size))/ 2);
+  inset-block-start: calc(var(--mod-slider-control-height, var(--spectrum-slider-control-height))/ 2);
   inset-inline-start: 0;
   inset-inline-end: auto;
-
-  margin-block-start: calc(var(--mod-slider-control-height, var(--spectrum-slider-control-height)) / -2);
-
   pointer-events: none;
 
   padding-block: 0;
@@ -249,8 +244,8 @@ governing permissions and limitations under the License.
 }
 
 .spectrum-Slider-ramp {
-  margin-block-start: var(--spectrum-slider-ramp-margin-top, var(--spectrum-slider-ramp-margin-top));
-  block-size: var(--spectrum-slider-ramp-track-height, var(--spectrum-slider-ramp-track-height));
+  margin-block-start: calc(var(--mod-slider-ramp-track-height, var(--spectrum-slider-ramp-track-height)) / 2);
+  block-size: var(--mod-slider-ramp-track-height, var(--spectrum-slider-ramp-track-height));
 
   position: absolute;
   inset-inline-start: var(--spectrum-slider-track-margin-offset, var(--spectrum-slider-track-margin-offset));
@@ -414,9 +409,7 @@ governing permissions and limitations under the License.
   .spectrum-Slider-tickLabel {
     margin-block-start:
       calc(
-        var(--mod-slider-tick-mark-height, var(--spectrum-slider-tick-mark-height)) / 2
-        + var(--mod-slider-track-thickness, var(--spectrum-slider-track-thickness)) / 2
-        + var(--spectrum-text-to-visual-75)
+        var(--mod-slider-tick-mark-height, var(--spectrum-slider-tick-mark-height)) + var(--spectrum-text-to-visual-75)
       );
   }
 }
@@ -443,10 +436,9 @@ governing permissions and limitations under the License.
 
   inline-size: var(--mod-slider-tick-mark-width, var(--spectrum-slider-tick-mark-width));
 
-  /* tick marks are centered half based on slider track thickness and tick height  */
-  top: calc(
+  /* tick marks are centered half based on slider control height and tick height  */
+  inset-block-start: calc(var(--mod-slider-track-thickness, var(--spectrum-slider-control-height)) / 2 -
     var(--mod-slider-tick-mark-height, var(--spectrum-slider-tick-mark-height)) / 2
-    - var(--mod-slider-track-thickness, var(--spectrum-slider-track-thickness)) / 2
     );
 
 
@@ -528,7 +520,7 @@ governing permissions and limitations under the License.
 }
 
 .spectrum-Slider-trackContainer {
-  block-size: var(--mod-slider-height-size, var(--spectrum-slider-height-size));
+  block-size: var(--mod-slider-control-height, var(--spectrum-slider-control-height));
 
   /* stop edges from peeking out */
   overflow: hidden;
