@@ -86,7 +86,6 @@ governing permissions and limitations under the License.
   /* Added specificity, otherwise they are overridden by system specific themes. */
   &.spectrum-Search {
     --spectrum-search-border-radius: 0;
-    --spectrum-search-edge-to-text: var(--spectrum-field-edge-to-visual-quiet);
     --spectrum-search-edge-to-visual: var(--spectrum-field-edge-to-visual-quiet);
   }
 }
@@ -327,13 +326,6 @@ governing permissions and limitations under the License.
       var(--mod-search-border-width, var(--spectrum-search-border-width))
     );
   }
-
-  &:not(:has(.spectrum-Search-clearButton)) .spectrum-Search-input {
-    padding-inline-end: calc(
-      var(--mod-search-edge-to-text, var(--spectrum-search-edge-to-text)) -
-      var(--mod-search-border-width, var(--spectrum-search-border-width))
-    );
-  }
 }
 
 /* Quiet Variant (no visible background) */
@@ -353,10 +345,6 @@ governing permissions and limitations under the License.
       var(--mod-search-button-inline-size, var(--spectrum-search-button-inline-size)) - 
       var(--mod-search-quiet-button-offset, var(--spectrum-search-quiet-button-offset))
     );
-  }
-
-  &:not(:has(.spectrum-Search-clearButton)) .spectrum-Search-input {
-    padding-inline-end: var(--mod-search-edge-to-text, var(--spectrum-search-edge-to-text));
   }
 
   /* Focus Indicator (Underline) */

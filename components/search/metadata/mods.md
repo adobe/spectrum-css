@@ -34,5 +34,4 @@
 |`--mod-search-icon-size`|
 |`--mod-search-text-to-icon`|
 |`--mod-search-button-inline-size`|
-|`--mod-search-edge-to-text`|
 |`--mod-search-quiet-button-offset`|
