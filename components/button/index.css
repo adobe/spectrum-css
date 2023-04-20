@@ -17,7 +17,7 @@ governing permissions and limitations under the License.
   --spectrum-button-animation-duration: var(--spectrum-animation-duration-100);
   --spectrum-button-border-radius: var(--spectrum-corner-radius-100);
   --spectrum-button-border-width: var(--spectrum-border-width-200);
-  --spectrum-button-line-height: var(--spectrum-line-height-100);
+  --spectrum-button-line-height: 1.2; /* Hack to keep buttons at 32px */
 
   --spectrum-button-focus-ring-gap: var(--spectrum-focus-indicator-gap);
   --spectrum-button-focus-ring-border-radius: calc(var(--spectrum-button-border-radius) + var(--spectrum-button-focus-ring-gap));
@@ -137,7 +137,6 @@ governing permissions and limitations under the License.
 
     .spectrum-Icon {
       margin-inline-start: 0;
-      height: calc(var(--spectrum-button-line-height) * var(--spectrum-button-font-size));
     }
 
     &:after {
