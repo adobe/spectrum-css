@@ -10,41 +10,88 @@ OF ANY KIND, either express or implied. See the License for the specific languag
 governing permissions and limitations under the License.
 */
 
-const gulp = require("gulp");
+const fsp = require("fs").promises;
 const path = require("path");
 
-function buildSite_resources() {
-	return gulp
-		.src(path.join(__dirname, "resources/**"))
-		.pipe(gulp.dest(path.join(__dirname, "../dist/")));
+const gulp = require("gulp");
+const pug = require("pug");
+const rename = require("gulp-rename");
+const yaml = require("js-yaml");
+const through = require("through2");
+const ext = require("replace-ext");
+
+const distPath = path.join(__dirname, "dist/");
+
+async function fetchDependencies({ devDependencies }) {
+	const dependencies = new Set();
+	if (!devDependencies) return dependencies;
+	Object.keys(devDependencies).forEach((dep) => {
+		if (dep.startsWith("@spectrum-css") && !dep.includes("builder")) {
+			const name = dep.split("/")?.pop();
+			if (name) dependencies.add(name);
+		}
+	});
+
+	return dependencies;
 }
 
-function buildSite_loadicons() {
-	return gulp
-		.src(require.resolve("loadicons"))
-		.pipe(gulp.dest(path.join(__dirname, "../dist/js/loadicons/")));
-}
+exports.buildDocs = gulp.parallel(
+	function buildDocs_resources() {
+		return gulp
+			.src(`dist/**`)
+			.pipe(gulp.dest(path.join(distPath, "docs/components/", packageName)));
+	},
+	function buildDocs_html() {
+		return new Promise(async (resolve, reject) => {
+			const pkg = require("package.json");
+			const dependencies = await fetchDependencies(pkg);
+			const packageName = pkg?.name?.split("/")?.pop();
 
-function buildSite_focusPolyfill() {
-	return gulp
-		.src(require.resolve("@adobe/focus-ring-polyfill"))
-		.pipe(gulp.dest(path.join(__dirname, "../dist/js/focus-ring-polyfill/")));
-}
+			const dnaVars = await fsp
+				.readFile(require.resolve("@spectrum-css/vars"))
+				.then(JSON.parse);
 
-function buildSite_lunr() {
-	return gulp
-		.src(require.resolve("lunr"))
-		.pipe(gulp.dest(path.join(__dirname, "../dist/js/lunr/")));
-}
+			gulp
+				.src(["metadata.yml", "metadata/*.yml"], { allowEmpty: true })
+				.pipe(
+					rename((file) => {
+						file.basename = packageName;
+					})
+				)
+				.pipe(
+					data(() => ({
+						dependencies: dependencies,
+						dnaVars: dnaVars,
+						pkg: package,
+						util: util,
+					}))
+				)
+				.pipe(
+					through.obj(function compilePug(file, enc, cb) {
+						let data = Object.assign(
+							{},
+							{ component: yaml.load(String(file.contents)) },
+							file.data || {}
+						);
 
-function buildSite_prism() {
-	return gulp
-		.src([
-			`${path.dirname(require.resolve("prismjs"))}/themes/prism.css`,
-			`${path.dirname(require.resolve("prismjs"))}/themes/prism-dark.css`,
-		])
-		.pipe(gulp.dest(path.join(__dirname, "../dist/css/prism/")));
-}
+						file.path = ext(file.path, ".html");
+
+						try {
+							const templatePath = `${sitePath}/templates/individualComponent.pug`;
+							let compiled = pug.renderFile(templatePath, data);
+							file.contents = Buffer.from(compiled);
+						} catch (e) {
+							return cb(e);
+						}
+						cb(null, file);
+					})
+				)
+				.pipe(gulp.dest(path.join(__dirname, "../../../dist/")))
+				.on("end", resolve)
+				.on("error", reject);
+		});
+	}
+);
 
 exports.copySiteResources = gulp.parallel(
 	buildSite_resources,

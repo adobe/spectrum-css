@@ -14,21 +14,17 @@
     "url": "https://github.com/adobe/spectrum-css/issues"
   },
   "main": "dist/index-vars.css",
-  "scripts": {
-    "build": "gulp"
-  },
+
   "peerDependencies": {
     "@spectrum-css/menu": ">=4",
     "@spectrum-css/picker": ">=3",
     "@spectrum-css/vars": ">=9"
   },
   "devDependencies": {
-    "@spectrum-css/component-builder": "^4.0.12",
     "@spectrum-css/icon": "^3.0.48",
     "@spectrum-css/menu": "^4.0.42",
     "@spectrum-css/picker": "^4.0.15",
-    "@spectrum-css/vars": "^9.0.8",
-    "gulp": "^4.0.0"
+    "@spectrum-css/vars": "^9.0.8"
   },
   "publishConfig": {
     "access": "public"

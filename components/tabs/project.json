@@ -1,0 +1,27 @@
+{
+	"schema": "../../node_modules/nx/schemas/project-schema.json",
+	"tags": ["component"],
+	"namedInputs": {
+		"styles": [
+			"{workspaceRoot}/index.css",
+			"{workspaceRoot}/skin.css",
+			"{workspaceRoot}/themes/spectrum.css",
+			"{workspaceRoot}/themes/express.css"
+		]
+	},
+	"targets": {
+		"clean": {
+			"inputs": ["{workspaceRoot}/dist"],
+			"outputs": []
+		},
+		"build": {
+			"dependsOn": ["^build"],
+			"inputs": ["styles"],
+			"outputs": ["{workspaceRoot}/dist"]
+		},
+		"start": {
+			"dependsOn": ["^build"]
+		}
+	},
+	"includedScripts": ["build", "start"]
+}

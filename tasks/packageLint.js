@@ -12,8 +12,12 @@ governing permissions and limitations under the License.
 const path = require("path");
 const fsp = require("fs").promises;
 
+<<<<<<< HEAD
 const fg = require("fast-glob");
 const semver = require("semver");
+=======
+const fg = require('fast-glob');
+>>>>>>> d31d89e45 (chore: cleaning up build tasks)
 
 const yargs = require("yargs");
 const { hideBin } = require("yargs/helpers");
@@ -135,6 +139,7 @@ async function main(
 			updated = true;
 		}
 
+<<<<<<< HEAD
 		const peerDepsCheck = await checkPeerDependencies(
 			peerDependencies,
 			devDependencies,
@@ -150,6 +155,9 @@ async function main(
 		}
 
 		if (!updated) continue;
+=======
+        if (!updated) continue;
+>>>>>>> d31d89e45 (chore: cleaning up build tasks)
 
 		report.map((r) => console.log(r));
 		promises.push(
@@ -162,6 +170,7 @@ async function main(
 		process.exit(0);
 	}
 
+<<<<<<< HEAD
 	return await Promise.all(promises);
 }
 
@@ -228,6 +237,11 @@ const { _, verbose = false } = yargs(hideBin(process.argv)).alias(
 	"v",
 	"verbose"
 ).argv;
+=======
+const { _, verbose = false } = yargs(hideBin(process.argv))
+    .alias('v', 'verbose')
+    .argv;
+>>>>>>> d31d89e45 (chore: cleaning up build tasks)
 
 main(_, verbose).catch((err) => {
 	console.error(err);

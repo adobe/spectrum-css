@@ -1,17 +1,8 @@
-const gulp = require("gulp");
-const builder = require("./tools/bundle-builder");
-const site = require("./site/gulpfile.js");
+Object.assign(exports, require("./tools/bundle-builder"));
+Object.assign(exports, require("./site/gulpfile.js"));
 
-Object.assign(exports, builder);
-Object.assign(exports, site);
-
-exports.dev = gulp.series(exports.copySiteResources, exports.dev);
-
-exports.devHeavy = gulp.series(exports.copySiteResources, exports.devHeavy);
-
-exports["watch-relaunch"] = function () {
-	process.env["BROWSERSYNC_OPEN"] = true;
-	exports.watch();
-};
-
-exports.buildDocs = gulp.series(builder.buildDocs, site.copySiteResources);
+exports.dev = require("gulp").series(exports.dev, exports.copySiteResources);
+exports.buildDocs = require("gulp").parallel(
+	exports.buildDocs,
+	exports.copySiteResources
+);

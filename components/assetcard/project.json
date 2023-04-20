@@ -1,0 +1,22 @@
+{
+	"schema": "../../node_modules/nx/schemas/project-schema.json",
+	"tags": ["component", "legacy"],
+	"namedInputs": {
+		"styles": ["{workspaceRoot}/index.css"]
+	},
+	"targets": {
+		"clean": {
+			"inputs": ["{workspaceRoot}/dist"],
+			"outputs": []
+		},
+		"build": {
+			"dependsOn": ["^build"],
+			"inputs": ["styles"],
+			"outputs": ["{workspaceRoot}/dist"]
+		},
+		"start": {
+			"dependsOn": ["^build"]
+		}
+	},
+	"includedScripts": ["build", "start"]
+}

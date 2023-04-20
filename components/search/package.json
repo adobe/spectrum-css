@@ -14,9 +14,7 @@
     "url": "https://github.com/adobe/spectrum-css/issues"
   },
   "main": "dist/index-vars.css",
-  "scripts": {
-    "build": "gulp"
-  },
+
   "peerDependencies": {
     "@spectrum-css/clearbutton": ">=1",
     "@spectrum-css/icon": ">=3",
@@ -25,11 +23,9 @@
   },
   "devDependencies": {
     "@spectrum-css/clearbutton": "^1.2.35",
-    "@spectrum-css/component-builder-simple": "^2.0.15",
     "@spectrum-css/icon": "^3.0.48",
     "@spectrum-css/textfield": "^6.0.2",
-    "@spectrum-css/tokens": "^10.2.0",
-    "gulp": "^4.0.0"
+    "@spectrum-css/tokens": "^10.2.0"
   },
   "publishConfig": {
     "access": "public"

@@ -14,9 +14,7 @@
     "url": "https://github.com/adobe/spectrum-css/issues"
   },
   "main": "dist/index-vars.css",
-  "scripts": {
-    "build": "gulp"
-  },
+
   "peerDependencies": {
     "@spectrum-css/colorhandle": ">=5.0.0",
     "@spectrum-css/tokens": ">=10.0.0"
@@ -24,9 +22,7 @@
   "devDependencies": {
     "@spectrum-css/colorarea": "^4.0.21",
     "@spectrum-css/colorhandle": "^5.0.9",
-    "@spectrum-css/component-builder-simple": "^2.0.15",
-    "@spectrum-css/tokens": "^10.2.0",
-    "gulp": "^4.0.0"
+    "@spectrum-css/tokens": "^10.2.0"
   },
   "publishConfig": {
     "access": "public"
