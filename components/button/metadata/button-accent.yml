@@ -44,7 +44,7 @@ examples:
           </button>
 
           <button class="spectrum-Button spectrum-Button--fill spectrum-Button--accent spectrum-Button--sizeS">
-            <svg class="spectrum-Icon spectrum-Icon--sizeS" focusable="false" aria-hidden="true" aria-label="Edit">
+            <svg class="spectrum-Icon spectrum-Icon--sizeS" focusable="false" aria-hidden="true">
               <use xlink:href="#spectrum-icon-18-Edit" />
             </svg>
             <span class="spectrum-Button-label">Edit</span>
@@ -64,7 +64,7 @@ examples:
           </button>
 
           <button class="spectrum-Button spectrum-Button--fill spectrum-Button--accent spectrum-Button--sizeM">
-            <svg class="spectrum-Icon spectrum-Icon--sizeM" focusable="false" aria-hidden="true" aria-label="Edit">
+            <svg class="spectrum-Icon spectrum-Icon--sizeM" focusable="false" aria-hidden="true">
               <use xlink:href="#spectrum-icon-18-Edit" />
             </svg>
             <span class="spectrum-Button-label">Edit</span>
