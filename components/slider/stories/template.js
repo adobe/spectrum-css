@@ -113,6 +113,7 @@ export const Template = ({
     <div
       class=${classMap({
         [rootClass]: true,
+        [`${rootClass}--size${size?.toUpperCase()}`]: typeof size !== "undefined",
         [`${rootClass}--ramp`]: variant === 'ramp',
         [`${rootClass}--range`]: values.length > 1,
         [`${rootClass}--filled`]: variant === "filled",
@@ -134,6 +135,7 @@ export const Template = ({
         html`<div class="${rootClass}-labelContainer" role=${ifDefined(values.length > 1 ? "presentation" : undefined)}>
         ${FieldLabel({
           ...globals,
+          size,
           label,
           id: id ? `${id}-label` : undefined,
           forInput: id ? `${id}-1` : undefined,
