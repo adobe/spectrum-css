@@ -363,7 +363,6 @@ governing permissions and limitations under the License.
   position: relative;
   inline-size: auto;
 
-  padding-block-start: var(--mod-component-top-to-text-75, var(--spectrum-component-top-to-text-75));
   font-size: var(--mod-slider-font-size, var(--spectrum-slider-font-size));
   line-height: var(--mod-line-height-100, var(--spectrum-line-height-100));
 
@@ -383,7 +382,7 @@ governing permissions and limitations under the License.
   padding-inline-start: 0;
   padding-block-start: 0;
   flex-grow: 1;
-  font-size: var(--mod-spectrum-slider-font-size, var(--spectrum-slider-font-size));
+  font-size: var(--mod-slider-font-size, var(--spectrum-slider-font-size));
 }
 
 .spectrum-Slider-value {
