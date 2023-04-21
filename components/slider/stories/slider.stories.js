@@ -8,6 +8,16 @@ export default {
   component: "Slider",
   argTypes: {
     reducedMotion: { table: { disable: true } },
+    size: {
+      name: "Size",
+      type: { name: "string", required: true },
+      table: {
+        type: { summary: "string" },
+        category: "Component",
+      },
+      options: ["s", "m", "l", "xl"],
+      control: "select"
+    },
     label: {
       name: "Label",
       type: { name: "string" },
@@ -116,10 +126,12 @@ export default {
 export const Default = Template.bind({});
 Default.args = {
   label: "Slider label",
+  size: "m",
   min: 10,
   max: 20,
   values: [14],
   step: 2,
+  id: 'spectrum-Slider'
 };
 
 export const Filled = Template.bind({});

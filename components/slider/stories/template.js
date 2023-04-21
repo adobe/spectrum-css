@@ -5,10 +5,14 @@ import { ifDefined } from "lit-html/directives/if-defined.js";
 
 import { useArgs, useGlobals } from "@storybook/client-api";
 
+import { Template as FieldLabel } from "@spectrum-css/fieldlabel/stories/template.js";
+
+
 import "../index.css";
 
 export const Template = ({
   rootClass = "spectrum-Slider",
+  size,
   label,
   min = 0,
   max = 10,
@@ -91,7 +95,7 @@ export const Template = ({
         }))}>
         <input
           type="range"
-          id=${ifDefined(id ? `${id}-${idx + 1}` : undefined)}
+          id=${ifDefined(id ? `${id}-input-${idx + 1}` : undefined)}
           class="${rootClass}-input"
           value=${ifDefined(value)}
           step=${ifDefined(step)}
@@ -126,10 +130,17 @@ export const Template = ({
       aria-labelledby=${ifDefined(label && id ? `${id}-label` : undefined)}>
 
       <!-- Label region -->
-      ${label ? html`<div class="${rootClass}-labelContainer" role=${ifDefined(values.length > 1 ? "presentation" : undefined)}>
-        <label class="${rootClass}-label" id=${ifDefined(id ? `${id}-label` : undefined)} for=${ifDefined(id ? `${id}-${i + 1}` : undefined)}>${label}</label>
+      ${label ? 
+        html`<div class="${rootClass}-labelContainer" role=${ifDefined(values.length > 1 ? "presentation" : undefined)}>
+        ${FieldLabel({
+          ...globals,
+          label,
+          id: id ? `${id}-label` : undefined,
+          forInput: id ? `${id}-1` : undefined,
+          customClasses: [`${rootClass}-label`]
+        })}
         ${values.length ? html`<div class="${rootClass}-value" role="textbox" aria-readonly="true" aria-labelledby=${ifDefined(id && label ? `${id}-label` : undefined)}>${values[0]}${values.length > 1 ? ` - ${values[1]}` : ''}</div>`: ''}
-      </div>`: ''}
+      </div>`:  ''}
 
       <!-- Slider controls -->
       <div class="${rootClass}-controls" role=${ifDefined(isRamp ? "presentation" : undefined)}>
