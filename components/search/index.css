@@ -92,13 +92,12 @@ governing permissions and limitations under the License.
 
 @media (forced-colors: active) {
   .spectrum-Search .spectrum-Search-textfield {
-    --highcontrast-search-background-color: Field;
-    --highcontrast-search-background-color-disabled: Field;
+    --highcontrast-search-background-color: Canvas;
+    --highcontrast-search-background-color-disabled: Canvas;
 
-    --highcontrast-search-border-color-default: FieldText;
+    --highcontrast-search-border-color-default: CanvasText;
     --highcontrast-search-border-color-hover: Highlight;
-    --highcontrast-search-border-color-focus: FieldText;
-    --highcontrast-search-border-color-focus-hover: Highlight;
+    --highcontrast-search-border-color-focus: CanvasText;
     --highcontrast-search-border-color-disabled: GrayText;
 
     --highcontrast-search-focus-indicator-color: Highlight;
@@ -106,10 +105,9 @@ governing permissions and limitations under the License.
 
   .spectrum-Search .spectrum-Search-textfield,
   .spectrum-Search .spectrum-Search-textfield .spectrum-Search-input {
-    --highcontrast-search-color-default: FieldText;
-    --highcontrast-search-color-hover: FieldText;
-    --highcontrast-search-color-focus: FieldText;
-    --highcontrast-search-color-focus-hover: FieldText;
+    --highcontrast-search-color-default: CanvasText;
+    --highcontrast-search-color-hover: CanvasText;
+    --highcontrast-search-color-focus: CanvasText;
     --highcontrast-search-color-disabled: GrayText;
   }
 
@@ -168,7 +166,7 @@ governing permissions and limitations under the License.
   }
 
   .spectrum-Search-textfield.is-focused:hover & {
-    color: var(--highcontrast-search-color-focus-hover, var(--mod-search-color-focus-hover, var(--spectrum-search-color-focus-hover)));
+    color: var(--highcontrast-search-color-focus, var(--mod-search-color-focus-hover, var(--spectrum-search-color-focus-hover)));
   }
 
   .spectrum-Search-textfield.is-keyboardFocused & {
@@ -243,11 +241,11 @@ governing permissions and limitations under the License.
     }
 
     &:hover {
-      color: var(--highcontrast-search-color-focus-hover, var(--mod-search-color-focus-hover, var(--spectrum-search-color-focus-hover)));
-      border-color: var(--highcontrast-search-border-color-focus-hover, var(--mod-search-border-color-focus-hover, var(--spectrum-search-border-color-focus-hover)));
+      color: var(--highcontrast-search-color-focus, var(--mod-search-color-focus-hover, var(--spectrum-search-color-focus-hover)));
+      border-color: var(--highcontrast-search-border-color-focus, var(--mod-search-border-color-focus-hover, var(--spectrum-search-border-color-focus-hover)));
 
       &::placeholder {
-        color: var(--highcontrast-search-color-focus-hover, var(--mod-search-color-focus-hover, var(--spectrum-search-color-focus-hover)));
+        color: var(--highcontrast-search-color-focus, var(--mod-search-color-focus-hover, var(--spectrum-search-color-focus-hover)));
       }
     }
   }
@@ -345,6 +343,7 @@ governing permissions and limitations under the License.
       var(--mod-search-button-inline-size, var(--spectrum-search-button-inline-size)) - 
       var(--mod-search-quiet-button-offset, var(--spectrum-search-quiet-button-offset))
     );
+    padding-block-start: var(--mod-search-top-to-text, var(--spectrum-search-top-to-text));
   }
 
   /* Focus Indicator (Underline) */
