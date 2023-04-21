@@ -30,7 +30,7 @@ governing permissions and limitations under the License.
   --spectrum-slider-handle-border-width-down: var(--spectrum-slider-handle-border-width-down-small);
   --spectrum-slider-label-bottom-to-text: var(--spectrum-component-bottom-to-text-75);
   --spectrum-slider-label-top-to-text: var(--spectrum-component-top-to-text-75);
-  --spectrum-slider-control-to-field-label: -5px; /* var(--spectrum-slider-control-to-field-label-small) */
+  --spectrum-slider-control-to-field-label: var(--spectrum-slider-control-to-field-label-small);
 }
 
 .spectrum-Slider--sizeM {
@@ -42,7 +42,7 @@ governing permissions and limitations under the License.
   --spectrum-slider-handle-border-width-down: var(--spectrum-slider-handle-border-width-down-medium);
   --spectrum-slider-label-bottom-to-text: var(--spectrum-component-bottom-to-text-75);
   --spectrum-slider-label-top-to-text: var(--spectrum-component-top-to-text-75);
-  --spectrum-slider-control-to-field-label: -8px; /* var(--spectrum-slider-control-to-field-label-medium) */
+  --spectrum-slider-control-to-field-label: var(--spectrum-slider-control-to-field-label-medium);
 
 }
 
@@ -55,7 +55,7 @@ governing permissions and limitations under the License.
   --spectrum-slider-handle-border-width-down: var(--spectrum-slider-handle-border-width-down-large);
   --spectrum-slider-label-bottom-to-text: var(--spectrum-component-bottom-to-text-100);
   --spectrum-slider-label-top-to-text: var(--spectrum-component-top-to-text-100);
-  --spectrum-slider-control-to-field-label: -11px; /* var(--spectrum-slider-control-to-field-label-large) */
+  --spectrum-slider-control-to-field-label: var(--spectrum-slider-control-to-field-label-large);
 }
 
 .spectrum-Slider--sizeXL {
@@ -67,7 +67,7 @@ governing permissions and limitations under the License.
   --spectrum-slider-handle-border-width-down: var(--spectrum-slider-handle-border-width-down-extra-large);
   --spectrum-slider-label-bottom-to-text: var(--spectrum-component-bottom-to-text-200);
   --spectrum-slider-label-top-to-text: var(--spectrum-component-top-to-text-200);
-  --spectrum-slider-control-to-field-label: -14px; /* var(--spectrum-slider-control-to-field-label-extra-large) */
+  --spectrum-slider-control-to-field-label: var(--spectrum-slider-control-to-field-label-extra-large);
 
 }
 
@@ -364,10 +364,11 @@ governing permissions and limitations under the License.
   inline-size: auto;
 
   padding-block-start: var(--mod-component-top-to-text-75, var(--spectrum-component-top-to-text-75));
-  font-size: var(--mod-spectrum-slider-font-size, var(--spectrum-slider-font-size));
+  font-size: var(--mod-slider-font-size, var(--spectrum-slider-font-size));
   line-height: var(--mod-line-height-100, var(--spectrum-line-height-100));
 
-  margin-block-start: var(--mod-spectrum-slider-label-top-to-text, var(--spectrum-slider-label-top-to-text));
+  margin-block-start: var(--mod-slider-label-top-to-text, var(--spectrum-slider-label-top-to-text));
+  margin-block-end: calc(-1 * var(--mod-slider-control-to-field-label, var(--spectrum-slider-control-to-field-label)));
 
 
   /* international support */
@@ -380,7 +381,7 @@ governing permissions and limitations under the License.
 
 .spectrum-Slider-label {
   padding-inline-start: 0;
-  padding-block: 0;
+  padding-block-start: 0;
   flex-grow: 1;
   font-size: var(--mod-spectrum-slider-font-size, var(--spectrum-slider-font-size));
 }

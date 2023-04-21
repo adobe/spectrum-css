@@ -137,6 +137,7 @@ export const Template = ({
           ...globals,
           size,
           label,
+          isDisabled,
           id: id ? `${id}-label` : undefined,
           forInput: id ? `${id}-1` : undefined,
           customClasses: [`${rootClass}-label`]
