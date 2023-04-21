@@ -28,7 +28,6 @@ governing permissions and limitations under the License.
   --spectrum-slider-bottom-to-handle: var(--spectrum-slider-bottom-to-handle-small);
   --spectrum-slider-handle-border-radius: var(--spectrum-corner-radius-200);
   --spectrum-slider-handle-border-width-down: var(--spectrum-slider-handle-border-width-down-small);
-  --spectrum-slider-label-bottom-to-text: var(--spectrum-component-bottom-to-text-75);
   --spectrum-slider-label-top-to-text: var(--spectrum-component-top-to-text-75);
   --spectrum-slider-control-to-field-label: var(--spectrum-slider-control-to-field-label-small);
 }
@@ -40,7 +39,6 @@ governing permissions and limitations under the License.
   --spectrum-slider-bottom-to-handle: var(--spectrum-slider-bottom-to-handle-medium);
   --spectrum-slider-handle-border-radius: var(--spectrum-corner-radius-200);
   --spectrum-slider-handle-border-width-down: var(--spectrum-slider-handle-border-width-down-medium);
-  --spectrum-slider-label-bottom-to-text: var(--spectrum-component-bottom-to-text-75);
   --spectrum-slider-label-top-to-text: var(--spectrum-component-top-to-text-75);
   --spectrum-slider-control-to-field-label: var(--spectrum-slider-control-to-field-label-medium);
 
@@ -53,7 +51,6 @@ governing permissions and limitations under the License.
   --spectrum-slider-bottom-to-handle: var(--spectrum-slider-bottom-to-handle-large);
   --spectrum-slider-handle-border-radius: calc(var(--spectrum-corner-radius-200) * 4);
   --spectrum-slider-handle-border-width-down: var(--spectrum-slider-handle-border-width-down-large);
-  --spectrum-slider-label-bottom-to-text: var(--spectrum-component-bottom-to-text-100);
   --spectrum-slider-label-top-to-text: var(--spectrum-component-top-to-text-100);
   --spectrum-slider-control-to-field-label: var(--spectrum-slider-control-to-field-label-large);
 }
@@ -65,7 +62,6 @@ governing permissions and limitations under the License.
   --spectrum-slider-bottom-to-handle: var(--spectrum-slider-bottom-to-handle-extra-large);
   --spectrum-slider-handle-border-radius: calc(var(--spectrum-corner-radius-200) * 4);
   --spectrum-slider-handle-border-width-down: var(--spectrum-slider-handle-border-width-down-extra-large);
-  --spectrum-slider-label-bottom-to-text: var(--spectrum-component-bottom-to-text-200);
   --spectrum-slider-label-top-to-text: var(--spectrum-component-top-to-text-200);
   --spectrum-slider-control-to-field-label: var(--spectrum-slider-control-to-field-label-extra-large);
 
