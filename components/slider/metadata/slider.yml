@@ -45,7 +45,7 @@ examples:
           <h4 class="spectrum-Heading spectrum-Heading--sizeXS spectrum-Examples-itemHeading">S</h4>
           <div class="spectrum-Slider spectrum-Slider--sizeS">
             <div class="spectrum-Slider-labelContainer">
-              <label class="spectrum-Slider-label" id="spectrum-Slider-label-8" for="spectrum-Slider-input-8">Slider Label</label>
+              <label class="spectrum-FieldLabel spectrum-FieldLabel--sizeS spectrum-Slider-label" id="spectrum-Slider-label-8" for="spectrum-Slider-input-8">Slider Label</label>
               <div class="spectrum-Slider-value" role="textbox" aria-readonly="true" aria-labelledby="spectrum-Slider-label-8">14</div>
             </div>
             <div class="spectrum-Slider-controls">
@@ -71,7 +71,7 @@ examples:
           <h4 class="spectrum-Heading spectrum-Heading--sizeXS spectrum-Examples-itemHeading">M</h4>
           <div class="spectrum-Slider spectrum-Slider--sizeM">
             <div class="spectrum-Slider-labelContainer">
-              <label class="spectrum-Slider-label" id="spectrum-Slider-label-8" for="spectrum-Slider-input-8">Slider Label</label>
+              <label class="spectrum-FieldLabel spectrum-FieldLabel--sizeM spectrum-Slider-label" id="spectrum-Slider-label-8" for="spectrum-Slider-input-8">Slider Label</label>
               <div class="spectrum-Slider-value" role="textbox" aria-readonly="true" aria-labelledby="spectrum-Slider-label-8">14</div>
             </div>
             <div class="spectrum-Slider-controls">
@@ -97,7 +97,7 @@ examples:
           <h4 class="spectrum-Heading spectrum-Heading--sizeXS spectrum-Examples-itemHeading">L</h4>
           <div class="spectrum-Slider spectrum-Slider--sizeL">
             <div class="spectrum-Slider-labelContainer">
-              <label class="spectrum-Slider-label" id="spectrum-Slider-label-8" for="spectrum-Slider-input-8">Slider Label</label>
+              <label class="spectrum-FieldLabel spectrum-FieldLabel--sizeL spectrum-Slider-label" id="spectrum-Slider-label-8" for="spectrum-Slider-input-8">Slider Label</label>
               <div class="spectrum-Slider-value" role="textbox" aria-readonly="true" aria-labelledby="spectrum-Slider-label-8">14</div>
             </div>
             <div class="spectrum-Slider-controls">
@@ -123,7 +123,7 @@ examples:
           <h4 class="spectrum-Heading spectrum-Heading--sizeXS spectrum-Examples-itemHeading">XL</h4>
           <div class="spectrum-Slider spectrum-Slider--sizeXL">
             <div class="spectrum-Slider-labelContainer">
-              <label class="spectrum-Slider-label" id="spectrum-Slider-label-8" for="spectrum-Slider-input-8">Slider Label</label>
+              <label class="spectrum-FieldLabel spectrum-FieldLabel--sizeXL spectrum-Slider-label" id="spectrum-Slider-label-8" for="spectrum-Slider-input-8">Slider Label</label>
               <div class="spectrum-Slider-value" role="textbox" aria-readonly="true" aria-labelledby="spectrum-Slider-label-8">14</div>
             </div>
             <div class="spectrum-Slider-controls">
@@ -150,7 +150,7 @@ examples:
     markup: |
       <div class="spectrum-Slider spectrum-Slider--sizeM spectrum-Slider--sizeM">
         <div class="spectrum-Slider-labelContainer">
-          <label class="spectrum-Slider-label" id="spectrum-Slider-label-8" for="spectrum-Slider-input-8">Slider Label</label>
+          <label class="spectrum-FieldLabel spectrum-FieldLabel--sizeM spectrum-Slider-label" id="spectrum-Slider-label-8" for="spectrum-Slider-input-8">Slider Label</label>
           <div class="spectrum-Slider-value" role="textbox" aria-readonly="true" aria-labelledby="spectrum-Slider-label-8">14</div>
         </div>
         <div class="spectrum-Slider-controls">
@@ -163,7 +163,7 @@ examples:
       </div>
       <div class="spectrum-Slider spectrum-Slider--sizeM is-disabled">
         <div class="spectrum-Slider-labelContainer">
-          <label class="spectrum-Slider-label" id="spectrum-Slider-label-9" for="spectrum-Slider-input-9">Slider Label - Disabled</label>
+          <label class="spectrum-FieldLabel spectrum-FieldLabel--sizeM spectrum-Slider-label" id="spectrum-Slider-label-9" for="spectrum-Slider-input-9">Slider Label - Disabled</label>
           <div class="spectrum-Slider-value" role="textbox" aria-readonly="true" aria-labelledby="spectrum-Slider-label-9">14</div>
         </div>
         <div class="spectrum-Slider-controls">
@@ -210,7 +210,7 @@ examples:
     markup: |
       <div class="spectrum-Slider spectrum-Slider--sizeM spectrum-Slider--sizeM">
         <div class="spectrum-Slider-labelContainer">
-          <label class="spectrum-Slider-label" id="spectrum-Slider-label-18" for="spectrum-Slider-input-18">Slider Label</label>
+          <label class="spectrum-FieldLabel spectrum-FieldLabel--sizeM spectrum-Slider-label" id="spectrum-Slider-label-18" for="spectrum-Slider-input-18">Slider Label</label>
           <div class="spectrum-Slider-value" role="textbox" aria-readonly="true" aria-labelledby="spectrum-Slider-label-18">14</div>
         </div>
         <div class="spectrum-Slider-controls">
@@ -238,7 +238,7 @@ examples:
       </div>
       <div class="spectrum-Slider spectrum-Slider--sizeM is-disabled">
         <div class="spectrum-Slider-labelContainer">
-          <label class="spectrum-Slider-label" id="spectrum-Slider-label-19" for="spectrum-Slider-input-19">Slider Label</label>
+          <label class="spectrum-FieldLabel spectrum-FieldLabel--sizeM spectrum-Slider-label" id="spectrum-Slider-label-19" for="spectrum-Slider-input-19">Slider Label</label>
           <div class="spectrum-Slider-value" role="textbox" aria-readonly="true" aria-labelledby="spectrum-Slider-label-19">14</div>
         </div>
         <div class="spectrum-Slider-controls">
@@ -256,7 +256,7 @@ examples:
     markup: |
       <div class="spectrum-Slider spectrum-Slider--sizeM spectrum-Slider--range" role="group" aria-labelledby="spectrum-Slider-label-4">
         <div class="spectrum-Slider-labelContainer" role="presentation">
-          <label class="spectrum-Slider-label" id="spectrum-Slider-label-4" for="spectrum-Slider-input-4-0">Slider Label</label>
+          <label class="spectrum-FieldLabel spectrum-FieldLabel--sizeM spectrum-Slider-label" id="spectrum-Slider-label-4" for="spectrum-Slider-input-4-0">Slider Label</label>
           <div class="spectrum-Slider-value" role="textbox" aria-readonly="true" aria-labelledby="spectrum-Slider-label-4">14 - 48</div>
         </div>
         <div class="spectrum-Slider-controls" role="presentation">
@@ -274,7 +274,7 @@ examples:
 
       <div class="spectrum-Slider spectrum-Slider--sizeM spectrum-Slider--range is-disabled" role="group" aria-labelledby="spectrum-Slider-label-5">
         <div class="spectrum-Slider-labelContainer" role="presentation">
-          <label class="spectrum-Slider-label" id="spectrum-Slider-label-5" for="spectrum-Slider-input-5-0">Slider Label - Disabled</label>
+          <label class="spectrum-FieldLabel spectrum-FieldLabel--sizeM spectrum-Slider-label" id="spectrum-Slider-label-5" for="spectrum-Slider-input-5-0">Slider Label - Disabled</label>
           <div class="spectrum-Slider-value" role="textbox" aria-readonly="true" aria-labelledby="spectrum-Slider-label-5">14 - 48</div>
         </div>
         <div class="spectrum-Slider-controls" role="presentation">
@@ -295,7 +295,7 @@ examples:
     markup: |
       <div class="spectrum-Slider spectrum-Slider--sizeM spectrum-Slider--tick">
         <div class="spectrum-Slider-labelContainer">
-          <label class="spectrum-Slider-label" id="spectrum-Slider-label-14" for="spectrum-Slider-input-14">Slider Label</label>
+          <label class="spectrum-FieldLabel spectrum-FieldLabel--sizeM spectrum-Slider-label" id="spectrum-Slider-label-14" for="spectrum-Slider-input-14">Slider Label</label>
           <div class="spectrum-Slider-value" role="textbox" aria-readonly="true" aria-labelledby="spectrum-Slider-label-14">14</div>
         </div>
         <div class="spectrum-Slider-controls">
@@ -319,7 +319,7 @@ examples:
       </div>
       <div class="spectrum-Slider spectrum-Slider--sizeM spectrum-Slider--tick is-disabled">
         <div class="spectrum-Slider-labelContainer">
-          <label class="spectrum-Slider-label" id="spectrum-Slider-label-15" for="spectrum-Slider-input-15">Slider Label - Disabled</label>
+          <label class="spectrum-FieldLabel spectrum-FieldLabel--sizeM spectrum-Slider-label" id="spectrum-Slider-label-15" for="spectrum-Slider-input-15">Slider Label - Disabled</label>
           <div class="spectrum-Slider-value" role="textbox" aria-readonly="true" aria-labelledby="spectrum-Slider-label-15">14</div>
         </div>
         <div class="spectrum-Slider-controls">
@@ -347,7 +347,7 @@ examples:
     markup: |
       <div class="spectrum-Slider spectrum-Slider--sizeM spectrum-Slider--tick">
         <div class="spectrum-Slider-labelContainer">
-          <label class="spectrum-Slider-label" id="spectrum-Slider-label-12" for="spectrum-Slider-input-12">Slider Label</label>
+          <label class="spectrum-FieldLabel spectrum-FieldLabel--sizeM spectrum-Slider-label" id="spectrum-Slider-label-12" for="spectrum-Slider-input-12">Slider Label</label>
           <div class="spectrum-Slider-value" role="textbox" aria-readonly="true" aria-labelledby="spectrum-Slider-label-12">14</div>
         </div>
         <div class="spectrum-Slider-controls">
@@ -385,7 +385,7 @@ examples:
 
       <div class="spectrum-Slider spectrum-Slider--sizeM spectrum-Slider--tick is-disabled">
         <div class="spectrum-Slider-labelContainer">
-          <label class="spectrum-Slider-label" id="spectrum-Slider-label-13" for="spectrum-Slider-input-13">Slider Label - Disabled</label>
+          <label class="spectrum-FieldLabel spectrum-FieldLabel--sizeM spectrum-Slider-label" id="spectrum-Slider-label-13" for="spectrum-Slider-input-13">Slider Label - Disabled</label>
           <div class="spectrum-Slider-value" role="textbox" aria-readonly="true" aria-labelledby="spectrum-Slider-label-13">14</div>
         </div>
         <div class="spectrum-Slider-controls">
@@ -425,7 +425,7 @@ examples:
     markup: |
       <div class="spectrum-Slider spectrum-Slider--sizeM spectrum-Slider--ramp">
         <div class="spectrum-Slider-labelContainer">
-          <label class="spectrum-Slider-label" id="spectrum-Slider-label-10" for="spectrum-Slider-input-10">Slider Label</label>
+          <label class="spectrum-FieldLabel spectrum-FieldLabel--sizeM spectrum-Slider-label" id="spectrum-Slider-label-10" for="spectrum-Slider-input-10">Slider Label</label>
           <div class="spectrum-Slider-value" role="textbox" aria-readonly="true" aria-labelledby="spectrum-Slider-label-10">14</div>
         </div>
         <div class="spectrum-Slider-controls">
@@ -441,7 +441,7 @@ examples:
       </div>
       <div class="spectrum-Slider spectrum-Slider--sizeM spectrum-Slider--ramp is-disabled">
         <div class="spectrum-Slider-labelContainer">
-          <label class="spectrum-Slider-label" id="spectrum-Slider-label-11" for="spectrum-Slider-input-11">Slider Label - Disabled</label>
+          <label class="spectrum-FieldLabel spectrum-FieldLabel--sizeM spectrum-Slider-label" id="spectrum-Slider-label-11" for="spectrum-Slider-input-11">Slider Label - Disabled</label>
           <div class="spectrum-Slider-value" role="textbox" aria-readonly="true" aria-labelledby="spectrum-Slider-label-11">14</div>
         </div>
         <div class="spectrum-Slider-controls">
