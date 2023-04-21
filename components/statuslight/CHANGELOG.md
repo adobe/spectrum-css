@@ -3,6 +3,16 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+<a name="6.0.19"></a>
+## 6.0.19
+🗓 2023-04-21 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/statuslight@6.0.18...@spectrum-css/statuslight@6.0.19)
+
+**Note:** Version bump only for package @spectrum-css/statuslight
+
+
+
+
+
 <a name="6.0.18"></a>
 ## 6.0.18
 🗓 2023-04-20 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/statuslight@6.0.17...@spectrum-css/statuslight@6.0.18)

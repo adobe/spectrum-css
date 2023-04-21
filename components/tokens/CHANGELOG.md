@@ -3,6 +3,26 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+<a name="9.0.0"></a>
+# 9.0.0
+🗓 2023-04-21 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/tokens@8.1.1...@spectrum-css/tokens@9.0.0)
+
+* chore(tokens)!: use v12.6.0 release of @adobe/spectrum-tokens ([419aa49](https://github.com/adobe/spectrum-css/commit/419aa49))
+
+
+### 🛑 BREAKING CHANGES
+
+* updates to `@adobe/spectrum-tokens@12.6.0`.
+
+* Includes additions and deprecations from `12.5.0`
+* https://github.com/adobe/spectrum-tokens/releases/tag/%40adobe%2Fspectrum-tokens%4012.5.0
+* Includes additions, updates, and deprecations from `12.6.0`
+* https://github.com/adobe/spectrum-tokens/releases/tag/%40adobe%2Fspectrum-tokens%4012.6.0
+
+
+
+
+
 <a name="8.1.1"></a>
 ## 8.1.1
 🗓 2023-04-20 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/tokens@8.1.0...@spectrum-css/tokens@8.1.1)
