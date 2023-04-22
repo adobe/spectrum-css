@@ -1,5 +1,6 @@
 import { html } from "lit-html";
 import { unsafeHTML } from "lit-html/directives/unsafe-html.js";
+import { styleMap } from "lit-html/directives/style-map.js"
 
 import "../index.css";
 
@@ -8,6 +9,7 @@ export const Template = ({
   size = "m",
   tag = "hr",
   customClasses = [],
+  customStyles = {},
   ...globals
 }) => {
   const { express } = globals;
@@ -27,7 +29,8 @@ export const Template = ({
         ...customClasses.reduce((a, c) => ({ ...a, [c]: true }), {}),
       })
         .map(([c, isC]) => (isC ? c : ""))
-        .join(" ")}"${globals.id ? ` id="${globals.id}"` : ""} role="separator"></${tag}>`
+        .join(" ")}"${globals.id ? ` id="${globals.id}"` : ""} role="separator
+        style=${styleMap(customStyles)}"></${tag}>`
     )}
   `;
 };

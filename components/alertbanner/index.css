@@ -14,7 +14,7 @@ governing permissions and limitations under the License.
   --spectrum-alert-banner-size: var(--spectrum-alert-banner-width);
   --spectrum-alert-banner-font-size: var(--spectrum-font-size-100);
 
-  --spectrum-AlertBanner-icon-size: var(--spectrum-workflow-icon-size-100);
+  --spectrum-alert-banner-icon-size: var(--spectrum-workflow-icon-size-100);
 
   /* spacing */
   --spectrum-alert-banner-icon-to-text: var(--spectrum-text-to-visual-300);
@@ -61,8 +61,8 @@ governing permissions and limitations under the License.
 }
 
 .spectrum-AlertBanner-icon {
-  inline-size: var(--spectrum-AlertBanner-icon-size);
-  block-size: var(--spectrum-AlertBanner-icon-size);
+  inline-size: var(--spectrum-alert-banner-icon-size);
+  block-size: var(--spectrum-alert-banner-icon-size);
   margin-block-start: var(--spectrum-alert-banner-top-icon);
   margin-inline-end: var(--spectrum-alert-banner-icon-to-text);
 }

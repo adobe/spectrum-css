@@ -57,7 +57,7 @@ examples:
           </div>
           <div class="spectrum-AlertBanner-end">
 
-            <div class="spectrum-Divider spectrum-Divider--sizeM spectrum-Divider--vertical spectrum-AlertBanner-divider" style="height: auto; align-self: stretch; --mod-divider-background-color: var(--spectrum-white)""></div>
+            <div class="spectrum-Divider spectrum-Divider--sizeM spectrum-Divider--vertical spectrum-AlertBanner-divider" style="height: auto; align-self: stretch; --mod-divider-background-color: var(--spectrum-white)"></div>
             <button class="spectrum-CloseButton spectrum-CloseButton--sizeM spectrum-AlertBanner-close-button" style="--mod-closebutton-icon-color-default: var(--spectrum-white);">
               <svg class="spectrum-CloseButton-UIIcon spectrum-Icon spectrum-UIIcon-Cross100 " focusable="false" aria-hidden="true">
                 <use xlink:href="#spectrum-css-icon-Cross100" />
@@ -103,11 +103,12 @@ examples:
               </svg>
               <p class="spectrum-AlertBanner-text">Connection interupted. Check your network to continue.</p>
             </div>
-          </div>
-          <div class="spectrum-AlertBanner-end">
             <button class="spectrum-Button spectrum-Button--outline spectrum-Button--staticWhite spectrum-Button--sizeM spectrum-AlertBanner-action-button">
               <span class="spectrum-Button-label">Try Again</span>
             </button>
+          </div>
+          <div class="spectrum-AlertBanner-end">
+
             <div class="spectrum-Divider spectrum-Divider--sizeM spectrum-Divider--vertical spectrum-AlertBanner-divider" style="height: auto; align-self: stretch; --mod-divider-background-color: var(--spectrum-white)"></div>
             <button class="spectrum-CloseButton spectrum-CloseButton--sizeM spectrum-AlertBanner-close-button" style="--mod-closebutton-icon-color-default: var(--spectrum-white);"">
               <svg class="spectrum-CloseButton-UIIcon spectrum-Icon spectrum-UIIcon-Cross100 " focusable="false" aria-hidden="true">
