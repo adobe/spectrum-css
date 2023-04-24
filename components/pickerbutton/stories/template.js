@@ -34,6 +34,21 @@ export const Template = ({
 }) => {
   const [_, updateArgs] = useArgs();
 
+  switch(size){
+    case 's':
+      iconName = 'ChevronDown75';
+      break;
+    case 'm':
+      iconName = 'ChevronDown100';
+      break;
+    case 'xl':
+      iconName = 'ChevronDown300';
+      break;
+    default:
+      iconName = 'ChevronDown200';
+  }
+
+
   return html`
     <button
       class=${classMap({

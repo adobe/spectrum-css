@@ -147,7 +147,6 @@ export default {
     isKeyboardFocused: false,
     isLoading: false,
     iconType: "ui",
-    iconName: "ChevronDown200",
   },
   parameters: {
     actions: {
