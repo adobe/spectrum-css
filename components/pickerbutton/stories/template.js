@@ -6,6 +6,7 @@ import { ifDefined } from 'lit-html/directives/if-defined.js';
 import { useArgs } from "@storybook/client-api";
 
 import { Template as Icon } from "@spectrum-css/icon/stories/template.js";
+import { Template as ProgressCircle } from "@spectrum-css/progresscircle/stories/template.js";
 
 import "../index.css";
 
@@ -24,6 +25,7 @@ export const Template = ({
   isValid = false,
   isInvalid = false,
   isQuiet = false,
+  isLoading = false,
   customClasses = [],
   isRounded = false,
   customStyles = {},
@@ -49,6 +51,7 @@ export const Template = ({
         'is-open': isOpen && !isDisabled,
         'is-invalid': isInvalid && !isDisabled,
         'is-valid': isValid && !isDisabled,
+        'is-loading': isLoading,
         [`${rootClass}--quiet`]: isQuiet,
         ...customClasses.reduce((a, c) => ({ ...a, [c]: true }), {}),
       })}
@@ -63,6 +66,10 @@ export const Template = ({
     >
       <div class="${rootClass}-fill">
         ${placeholder ? html`<span class="${rootClass}-label is-placeholder">${placeholder}</span>`: ''}
+        ${isLoading ? ProgressCircle({ 
+          isIndeterminate: true,
+          size: 's',
+        }) : ""}
         ${Icon({
           ...globals,
           iconName: iconName ?? "ChevronDown200",

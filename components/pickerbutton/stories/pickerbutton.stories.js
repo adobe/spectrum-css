@@ -113,6 +113,15 @@ export default {
       },
       control: "boolean",
     },
+    isLoading: {
+      name: "Loading",
+      type: { name: "boolean" },
+      table: {
+        type: { summary: "boolean" },
+        category: "State",
+      },
+      control: "boolean",
+    },
     position: {
       name: "Position",
       type: { name: "string" },
@@ -136,6 +145,7 @@ export default {
     isDisabled: false,
     isFocused: false,
     isKeyboardFocused: false,
+    isLoading: false,
     iconType: "ui",
     iconName: "ChevronDown200",
   },

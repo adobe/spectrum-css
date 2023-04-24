@@ -19,12 +19,22 @@ export default {
       },
       control: { type: "text" },
     },
+    isLoading: {
+      name: "Loading",
+      type: { name: "boolean" },
+      table: {
+        type: { summary: "boolean" },
+        category: "State",
+      },
+      control: "boolean",
+    },
     content: { table: { disable: true } },
   },
   args: {
     ...PickerButtonStories.args,
     rootClass: "spectrum-Picker",
     label: "Country",
+    isLoading: false,
   },
   parameters: {
     actions: {
@@ -48,6 +58,14 @@ Default.args = {
 export const Quiet = Template.bind({});
 Quiet.args = {
   isQuiet: true,
+  content: [
+    MenuStories(MenuStories.args),
+  ]
+};
+
+export const Loading = Template.bind({});
+Loading.args = {
+  isLoading: true,
   content: [
     MenuStories(MenuStories.args),
   ]
