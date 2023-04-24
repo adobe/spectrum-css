@@ -26,13 +26,12 @@ governing permissions and limitations under the License.
   --spectrum-picker-font-size: var(--spectrum-font-size-100);
   --spectrum-picker-font-weight: var(--spectrum-regular-font-weight);
   --spectrum-picker-placeholder-font-style: var(--spectrum-default-font-style);
+  --spectrum-picker-line-height: var(--spectrum-line-height-100);
 
-  /* height and width */
-  --spectrum-picker-min-inline-size: var(--spectrum-picker-minimum-width-multiplier);
+  /* height */
   --spectrum-picker-block-size: var(--spectrum-component-height-100);
 
   /* border */
-  --spectrum-picker-border-width: var(--spectrum-border-width-100);
   --spectrum-picker-border-radius: var(--spectrum-corner-radius-100);
 
   /* spacing */
@@ -92,7 +91,7 @@ governing permissions and limitations under the License.
   --spectrum-picker-spacing-text-to-alert-icon-inline-start: var(--spectrum-field-text-to-alert-icon-small);
   --spectrum-picker-spacing-icon-to-disclosure-icon: var(--spectrum-picker-visual-to-disclosure-icon-small);
   --spectrum-picker-spacing-label-to-picker-quiet: var(--spectrum-field-label-to-component-quiet-small);
-
+  --spectrum-picker-spacing-top-to-text: var(--spectrum-component-top-to-text-75);
 
   & + .spectrum-Popover--bottom.is-open {
     --spectrum-picker-spacing-picker-to-popover: var(--spectrum-component-to-menu-small);
@@ -189,9 +188,9 @@ governing permissions and limitations under the License.
   /* Layout */
   display: flex;
 
-  /* Truncate if menu options make us too wide */
+  /* Minimum width is 2 times the height */
   max-inline-size: 100%;
-  min-inline-size: var(--mod-picker-min-inline-size, var(--spectrum-picker-min-inline-size));
+  min-inline-size: calc(var(--spectrum-picker-minimum-width-multiplier) * var(--mod-picker-block-size, var(--spectrum-picker-block-size)));
   block-size: var(--mod-picker-block-size, var(--spectrum-picker-block-size));
   padding-block: 0;
 
@@ -393,14 +392,12 @@ governing permissions and limitations under the License.
   white-space: nowrap;
   overflow: hidden;
 
-  block-size: calc(
-    var(--mod-picker-block-size, var(--spectrum-picker-block-size)) - calc(var(--mod-picker-border-width, var(--spectrum-picker-border-width)) * 2)
-  );
   line-height: calc(
     var(--mod-picker-block-size, var(--spectrum-picker-block-size)) - calc(var(--mod-picker-border-width, var(--spectrum-picker-border-width)) * 2)
   );
 
   font-size: var(--mod-picker-font-size, var(--spectrum-picker-font-size));
+  line-height: var(--mod-picker-line-height, var(--spectrum-picker-line-height));
 
   text-overflow: ellipsis;
   text-align: start;

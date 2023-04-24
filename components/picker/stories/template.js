@@ -35,7 +35,8 @@ export const Template = ({
       ...globals,
       size,
       label,
-      isDisabled
+      isDisabled,
+      alignment: top
     }),
     PickerButton({
       ...globals,
