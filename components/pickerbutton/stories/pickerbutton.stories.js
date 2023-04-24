@@ -32,8 +32,8 @@ export default {
       ...Icon.argTypes.iconName,
       if: { arg: 'iconType', eq: 'ui' },
     },
-    label: {
-      name: "Label",
+    placeholder: {
+      name: "Placeholder",
       type: { name: "string" },
       table: {
         type: { summary: "string" },
@@ -126,7 +126,7 @@ export default {
   },
   args: {
     rootClass: "spectrum-PickerButton",
-    label: "Select a Country",
+    placeholder: "Select a Country",
     size: "m",
     isOpen: false,
     isRounded: false,

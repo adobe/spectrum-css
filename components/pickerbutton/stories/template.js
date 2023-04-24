@@ -13,7 +13,7 @@ export const Template = ({
   id,
   rootClass = "spectrum-PickerButton",
   size = "m",
-  label,
+  placeholder,
   position,
   iconType = "ui",
   iconName = "ChevronDown200",
@@ -36,10 +36,10 @@ export const Template = ({
     <button
       class=${classMap({
         [rootClass]: true,
-        [`${rootClass}--textuiicon`]: label && iconType === "ui",
-        [`${rootClass}--uiicononly`]: !label && iconType === "ui",
-        [`${rootClass}--texticon`]: label && iconType !== "ui",
-        [`${rootClass}--icononly`]: !label && iconType !== "ui",
+        [`${rootClass}--textuiicon`]: placeholder && iconType === "ui",
+        [`${rootClass}--uiicononly`]: !placeholder && iconType === "ui",
+        [`${rootClass}--texticon`]: placeholder && iconType !== "ui",
+        [`${rootClass}--icononly`]: !placeholder && iconType !== "ui",
         [`${rootClass}--${position}`]: typeof position !== "undefined",
         [`${rootClass}--rounded`]: isRounded,
         [`${rootClass}--size${size?.toUpperCase()}`]: typeof size !== "undefined",
@@ -62,7 +62,7 @@ export const Template = ({
       }}
     >
       <div class="${rootClass}-fill">
-        ${label ? html`<span class="${rootClass}-label is-placeholder">${label}</span>`: ''}
+        ${placeholder ? html`<span class="${rootClass}-label is-placeholder">${placeholder}</span>`: ''}
         ${Icon({
           ...globals,
           iconName: iconName ?? "ChevronDown200",

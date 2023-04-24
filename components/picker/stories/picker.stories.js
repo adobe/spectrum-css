@@ -10,12 +10,21 @@ export default {
   component: "Picker",
   argTypes: {
     ...PickerButtonStories.argTypes,
+    label: {
+      name: "Label",
+      type: { name: "string" },
+      table: {
+        type: { summary: "string" },
+        category: "Content",
+      },
+      control: { type: "text" },
+    },
     content: { table: { disable: true } },
   },
   args: {
     ...PickerButtonStories.args,
     rootClass: "spectrum-Picker",
-    label: "Select a Country",
+    label: "Country",
   },
   parameters: {
     actions: {
@@ -31,6 +40,14 @@ export default {
 
 export const Default = Template.bind({});
 Default.args = {
+  content: [
+    MenuStories(MenuStories.args),
+  ]
+};
+
+export const Quiet = Template.bind({});
+Quiet.args = {
+  isQuiet: true,
   content: [
     MenuStories(MenuStories.args),
   ]
