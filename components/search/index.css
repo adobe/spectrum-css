@@ -280,7 +280,7 @@ governing permissions and limitations under the License.
   &::after {
     border-radius: calc(
       var(--mod-search-border-radius, var(--spectrum-search-border-radius)) + 
-      var(--mod-search-border-width, var(--spectrum-search-border-width)) +
+      var(--mod-search-focus-indicator-thickness, var(--spectrum-search-focus-indicator-thickness)) +
       var(--mod-search-focus-indicator-gap, var(--spectrum-search-focus-indicator-gap))
     );
     block-size: calc(100% + (var(--mod-search-focus-indicator-gap, var(--spectrum-search-focus-indicator-gap)) * 2));
