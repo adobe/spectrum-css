@@ -78,8 +78,6 @@ governing permissions and limitations under the License.
   --spectrum-combobox-spacing-block-end-edge-to-text: var(--spectrum-component-bottom-to-text-75);
   --spectrum-combobox-spacing-inline-start-edge-to-text: var(--spectrum-component-edge-to-text-75);
   --spectrum-combobox-spacing-inline-end-edge-to-text: var(--spectrum-component-edge-to-text-75);
-
-  --spectrum-combobox-border-radius: var(--spectrum-corner-radius-75);
 }
 
 .spectrum-Combobox--sizeM {
@@ -95,8 +93,6 @@ governing permissions and limitations under the License.
   --spectrum-combobox-spacing-block-end-edge-to-text: var(--spectrum-component-bottom-to-text-100);
   --spectrum-combobox-spacing-inline-start-edge-to-text: var(--spectrum-component-edge-to-text-100);
   --spectrum-combobox-spacing-inline-end-edge-to-text: var(--spectrum-component-edge-to-text-100);
-
-  --spectrum-combobox-border-radius: var(--spectrum-corner-radius-100);
 }
 
 .spectrum-Combobox--sizeL {
@@ -112,8 +108,6 @@ governing permissions and limitations under the License.
   --spectrum-combobox-spacing-block-end-edge-to-text: var(--spectrum-component-bottom-to-text-200);
   --spectrum-combobox-spacing-inline-start-edge-to-text: var(--spectrum-component-edge-to-text-200);
   --spectrum-combobox-spacing-inline-end-edge-to-text: var(--spectrum-component-edge-to-text-200);
-
-  --spectrum-combobox-border-radius: var(--spectrum-corner-radius-100);
 }
 
 .spectrum-Combobox--sizeXL {
@@ -129,8 +123,6 @@ governing permissions and limitations under the License.
   --spectrum-combobox-spacing-block-end-edge-to-text: var(--spectrum-component-bottom-to-text-300);
   --spectrum-combobox-spacing-inline-start-edge-to-text: var(--spectrum-component-edge-to-text-300);
   --spectrum-combobox-spacing-inline-end-edge-to-text: var(--spectrum-component-edge-to-text-300);
-
-  --spectrum-combobox-border-radius: var(--spectrum-corner-radius-200);
 }
 
 .spectrum-Combobox--quiet {
