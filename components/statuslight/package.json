@@ -1,6 +1,6 @@
 {
   "name": "@spectrum-css/statuslight",
-  "version": "6.0.20",
+  "version": "6.0.21",
   "description": "The Spectrum CSS statuslight component",
   "license": "Apache-2.0",
   "author": "Adobe",
@@ -21,8 +21,8 @@
     "@spectrum-css/tokens": ">=8 <=9"
   },
   "devDependencies": {
-    "@spectrum-css/component-builder": "*",
-    "@spectrum-css/tokens": "^9.0.1",
+    "@spectrum-css/component-builder": "^4.0.5",
+    "@spectrum-css/tokens": "^9.0.2",
     "gulp": "^4.0.0"
   },
   "publishConfig": {

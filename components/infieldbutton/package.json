@@ -1,6 +1,6 @@
 {
   "name": "@spectrum-css/infieldbutton",
-  "version": "2.0.15",
+  "version": "2.0.16",
   "description": "The Spectrum CSS infield button component",
   "license": "Apache-2.0",
   "author": "Adobe",
@@ -21,9 +21,9 @@
     "@spectrum-css/vars": ">=9"
   },
   "devDependencies": {
-    "@spectrum-css/component-builder": "*",
-    "@spectrum-css/icon": "^3.0.38",
-    "@spectrum-css/vars": "^9.0.2",
+    "@spectrum-css/component-builder": "^4.0.5",
+    "@spectrum-css/icon": "^3.0.39",
+    "@spectrum-css/vars": "^9.0.3",
     "gulp": "^4.0.0"
   },
   "publishConfig": {

@@ -1,6 +1,6 @@
 {
   "name": "@spectrum-css/progressbar",
-  "version": "3.0.24",
+  "version": "3.0.25",
   "description": "The Spectrum CSS progress bar component",
   "license": "Apache-2.0",
   "author": "Adobe",
@@ -22,9 +22,9 @@
     "@spectrum-css/tokens": ">=8 <=9"
   },
   "devDependencies": {
-    "@spectrum-css/component-builder-simple": "*",
-    "@spectrum-css/fieldlabel": "^6.0.22",
-    "@spectrum-css/tokens": "^9.0.1",
+    "@spectrum-css/component-builder-simple": "^2.0.8",
+    "@spectrum-css/fieldlabel": "^6.0.23",
+    "@spectrum-css/tokens": "^9.0.2",
     "gulp": "^4.0.0"
   },
   "publishConfig": {

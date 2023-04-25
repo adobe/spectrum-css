@@ -1,6 +1,6 @@
 {
   "name": "@spectrum-css/component-builder-simple",
-  "version": "2.0.7",
+  "version": "2.0.8",
   "description": "The Spectrum CSS simple component builder",
   "license": "Apache-2.0",
   "repository": {
@@ -20,7 +20,7 @@
     "gulp-rename": "^1.4.0",
     "postcss": "^7.0.36",
     "postcss-calc": "^6.0.0",
-    "postcss-combininator": "^1.0.0",
+    "postcss-combininator": "^1.0.1",
     "postcss-discard-comments": "^4.0.0",
     "postcss-discard-empty": "^4.0.1",
     "postcss-dropdupedvars": "^1.1.2",
@@ -30,7 +30,7 @@
     "postcss-inherit": "^4.0.3",
     "postcss-nested": "^3.0.0",
     "postcss-selector-parser": "^6.0.2",
-    "postcss-splitinator": "^1.0.0",
+    "postcss-splitinator": "^1.0.1",
     "postcss-values-parser": "^3.1.1",
     "through2": "^3.0.1"
   },

@@ -3,6 +3,16 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+<a name="6.0.21"></a>
+## 6.0.21
+🗓 2023-04-25 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/checkbox@6.0.20...@spectrum-css/checkbox@6.0.21)
+
+**Note:** Version bump only for package @spectrum-css/checkbox
+
+
+
+
+
 <a name="6.0.20"></a>
 ## 6.0.20
 🗓 2023-04-25 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/checkbox@6.0.19...@spectrum-css/checkbox@6.0.20)
