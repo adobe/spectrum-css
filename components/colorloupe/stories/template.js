@@ -9,16 +9,12 @@ export const Template = ({
   isOpen,
   styles = {
     '--spectrum-picked-color': 'RGBA(255, 0, 0, 0.5)',
-    position: 'absolute',
-    'inset-block-start': '25%',
-    'inset-inline-start': '50%',
-    overflow: "visible"
+    'inset-block-start': '5px',
+    'inset-inline-start': '5px',
   },
   customClasses = [],
-  ...globals
+  // ...globals
 }) => {
-  const { express } = globals;
-
   return svg`
     <svg class=${classMap({
     [rootClass]: true,

@@ -13,7 +13,7 @@ export const Template = ({
   isOpen = false,
   textOnly = false,
   position,
-  noOverlay = false,
+  // noOverlay = false,
   content = [],
   id,
   customClasses = [],
@@ -29,7 +29,6 @@ export const Template = ({
   }
 
   return html`
-    ${!noOverlay ? html`<div class="${rootClass}-overlay" style="padding: 40px;">` : ''}
       <div
         class="${classMap({
           [rootClass]: true,
@@ -46,6 +45,5 @@ export const Template = ({
           } else return c;
         })}
       </div>
-    ${!noOverlay ? html`</div>` : ''}
   `;
 };
