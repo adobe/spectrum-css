@@ -1,11 +1,11 @@
 | Modifiable Custom Properties |
 | --- |
+|`--mod-combobox-block-size`|
+|`--mod-combobox-icon-size`|
 |`--mod-combobox-inline-size`|
 |`--mod-combobox-min-inline-size`|
-|`--mod-combobox-block-size`|
 |`--mod-combobox-spacing-label-to-combobox`|
 |`--mod-combobox-border-radius`|
-|`--mod-combobox-border-width`|
 |`--mod-combobox-spacing-edge-to-menu`|
 |`--mod-combobox-spacing-inline-icon-to-button`|
 |`--mod-combobox-button-width`|
@@ -13,6 +13,7 @@
 |`--mod-combobox-block-spacing-edge-to-alert`|
 |`--mod-combobox-button-inline-offset`|
 |`--mod-combobox-font-color-default`|
+|`--mod-combobox-border-width`|
 |`--mod-combobox-border-color-default`|
 |`--mod-combobox-font-color-focus`|
 |`--mod-combobox-border-color-focus`|
@@ -32,9 +33,10 @@
 |`--mod-combobox-focus-indicator-gap`|
 |`--mod-combobox-focus-indicator-thickness`|
 |`--mod-combobox-focus-indicator-color`|
-|`--mod-combobox-spacing-block-start-edge-to-textfield`|
-|`--mod-combobox-spacing-block-end-edge-to-textfield`|
-|`--mod-combobox-spacing-inline-start-edge-to-textfield`|
+|`--mod-combobox-spacing-block-start-edge-to-text`|
+|`--mod-combobox-spacing-block-end-edge-to-text`|
+|`--mod-combobox-spacing-inline-start-edge-to-text`|
+|`--mod-combobox-spacing-inline-end-edge-to-text`|
 |`--mod-combobox-background-color-default`|
 |`--mod-combobox-font-size`|
 |`--mod-combobox-font-family`|
@@ -46,9 +48,5 @@
 |`--mod-combobox-background-color-focus`|
 |`--mod-combobox-background-color-focus-hover`|
 |`--mod-combobox-background-color-key-focus`|
-|`--mod-combobox-icon-size`|
-|`--mod-spectrum-combobox-spacing-inline-end-edge-to-text`|
 |`--mod-combobox-alert-icon-color`|
-|`--mod-combobox-spacing-block-start-to-border`|
-|`--mod-combobox-spacing-inline-start-to-textfield`|
 |`--mod-combobox-border-color-disabled`|
