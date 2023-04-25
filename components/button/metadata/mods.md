@@ -11,8 +11,9 @@
 |`--mod-button-edge-to-visual`|
 |`--mod-focus-indicator-gap`|
 |`--mod-button-edge-to-visual-only`|
-|`--mod-button-padding-label-top`|
-|`--mod-button-padding-label-bottom`|
+|`--mod-button-top-to-text`|
+|`--mod-button-bottom-to-text`|
+|`--mod-button-line-height`|
 |`--mod-button-focus-ring-thickness`|
 |`--mod-button-focus-ring-color`|
 |`--mod-button-animation-duration`|
