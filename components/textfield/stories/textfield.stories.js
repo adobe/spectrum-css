@@ -120,6 +120,11 @@ export default {
       },
       control: "text"
     },
+    value: {
+      table: {
+        disable: true,
+      },
+    },
   },
   args: {
     rootClass: "spectrum-Textfield",
