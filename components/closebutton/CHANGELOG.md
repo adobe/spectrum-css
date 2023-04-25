@@ -3,6 +3,16 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+<a name="3.0.32"></a>
+## 3.0.32
+🗓 2023-04-25 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/closebutton@3.0.31...@spectrum-css/closebutton@3.0.32)
+
+**Note:** Version bump only for package @spectrum-css/closebutton
+
+
+
+
+
 <a name="3.0.31"></a>
 ## 3.0.31
 🗓 2023-04-21 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/closebutton@3.0.30...@spectrum-css/closebutton@3.0.31)
