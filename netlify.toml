@@ -2,10 +2,6 @@
   publish = "dist/"
   command = "yarn build"
 
-[[redirects]]
-  from = "/"
-  to = "/docs/"
-
 # Other projects use the default /storybook/ pathing;
 # this remaps this to our /preview/ path.
 # Why? Using preview decouples us from the tool.
@@ -14,8 +10,8 @@
   to = "/preview/"
 
 [[redirects]]
-  from = "/preview"
-  to = "/preview/"
+  from = "/components/*.html"
+  to = "/components/:splat/"
 
 # If skip_processing = true, all other settings are ignored
 [build.processing]
