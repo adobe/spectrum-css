@@ -3,6 +3,19 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+<a name="4.1.12"></a>
+## 4.1.12
+🗓 2023-04-25 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/textfield@4.1.11...@spectrum-css/textfield@4.1.12)
+
+### 🐛 Bug fixes
+
+* **textfield:** fix WHCM focus color ([3b23557](https://github.com/adobe/spectrum-css/commit/3b23557))
+* **textfield:** update WHCM focus border colors ([392c16e](https://github.com/adobe/spectrum-css/commit/392c16e))
+
+
+
+
+
 <a name="4.1.11"></a>
 ## 4.1.11
 🗓 2023-04-25 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/textfield@4.1.10...@spectrum-css/textfield@4.1.11)
