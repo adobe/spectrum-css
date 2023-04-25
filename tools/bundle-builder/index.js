@@ -1,4 +1,4 @@
-/*
+/*!
 Copyright 2023 Adobe. All rights reserved.
 This file is licensed to you under the Apache License, Version 2.0 (the "License");
 you may not use this file except in compliance with the License. You may obtain a copy
@@ -16,13 +16,11 @@ const concat = require('gulp-concat');
 const rename = require('gulp-rename');
 
 const depUtils = require('./lib/depUtils');
-const exec = require('./lib/exec');
 const dirs = require('./lib/dirs');
 
 const docs = require('./docs');
 const dev = require('./dev');
 const subrunner = require('./subrunner');
-const release = require('./release');
 const vars = require('./vars');
 
 async function clean() {
@@ -35,8 +33,6 @@ async function clean() {
 
   return del(globs);
 }
-
-const buildDocs = gulp.parallel(docs.build, copyPackages);
 
 // Combined
 function concatPackageFiles(taskName, input, output, directory) {
@@ -130,6 +126,8 @@ function copyPackages() {
     .pipe(gulp.dest('dist/components/'));
 }
 
+const buildDocs = gulp.parallel(docs.build, copyPackages);
+
 function buildIfTopLevel() {
   let builtTasks = gulp.parallel(
     buildCombined,
@@ -202,24 +200,7 @@ exports.devHeavy = gulp.series(
 
 exports.copyVars = vars.copyVars;
 
-exports.prePack = gulp.series(
-  build,
-  release.releaseBackwardsCompat
-);
-
-exports.release = gulp.series(
-  release.updateAndTagRelease,
-  exec.task('yarnInstall', 'yarn install --frozen-lockfile'),
-  build,
-  exec.task('npmPublish', 'npm publish'),
-  exec.task('gitPush', 'git push')
-);
-
-exports.generateChangelog = release.generateChangelog;
 exports.buildUniqueVars = vars.buildUnique;
-
-exports.ghPages = release.ghPages;
-exports.postPublish = release.releaseBackwardsCompatCleanup;
 
 exports.buildComponents = subrunner.buildComponents;
 exports.buildCombined = buildCombined;
@@ -236,5 +217,3 @@ exports.clean = clean;
 exports.build = build;
 exports.watch = dev.watch;
 exports.default = buildMedium;
-
-exports.updateAndTagRelease = release.updateAndTagRelease;

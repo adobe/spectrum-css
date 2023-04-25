@@ -18,8 +18,8 @@
     "build": "gulp"
   },
   "peerDependencies": {
-    "@spectrum-css/colorhandle": ">=4",
-    "@spectrum-css/tokens": ">=9"
+    "@spectrum-css/colorhandle": ">=3 <=4",
+    "@spectrum-css/tokens": ">=8 <=9"
   },
   "devDependencies": {
     "@spectrum-css/colorhandle": "^4.0.4",

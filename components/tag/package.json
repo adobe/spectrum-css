@@ -18,8 +18,8 @@
     "build": "gulp"
   },
   "peerDependencies": {
-    "@spectrum-css/clearbutton": "^1.0.0",
-    "@spectrum-css/tokens": ">=8.0.0"
+    "@spectrum-css/clearbutton": ">=1",
+    "@spectrum-css/tokens": ">=8 <=9"
   },
   "devDependencies": {
     "@spectrum-css/avatar": "^6.0.18",

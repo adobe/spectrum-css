@@ -4,7 +4,6 @@
   "description": "The Spectrum CSS {{ folderName }} component",
   "license": "Apache-2.0",
   "author": "Adobe",
-  "contributors": [],
   "homepage": "https://opensource.adobe.com/spectrum-css/",
   "repository": {
     "type": "git",
@@ -16,16 +15,18 @@
   },
   "main": "dist/index-vars.css",
   "scripts": {
+    "clean": "rimraf dist",
     "build": "gulp",
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "watch": "gulp watch"
+    "test": "nx test:scope @spectrum-css/preview {{ folderName }}"
   },
   "peerDependencies": {
-    "{{ tokens.name }}": ">= {{ parse tokens.version '.' 0 1 }}"
+    "{{ tokens.name }}": ">={{ parse tokens.version '.' 0 1 }}"
   },
   "devDependencies": {
     "{{ builder.name }}": "^{{ builder.version }}",
     "{{ tokens.name }}": "^{{ tokens.version }}",
+    "nx": "{{ pkg.devDependencies.nx }}",
+    "rimraf": "{{ pkg.devDependencies.rimraf }}",
     "gulp": "{{ pkg.devDependencies.gulp }}"
   },
   "publishConfig": {

@@ -18,16 +18,16 @@
     "build": "gulp"
   },
   "peerDependencies": {
-    "@spectrum-css/checkbox": "^3.0.0 || ^4.0.0 || ^5.0.0 || ^6.0.0",
-    "@spectrum-css/icon": "^3.0.0",
-    "@spectrum-css/typography": "^4.0.0",
-    "@spectrum-css/vars": ">=9.0.0"
+    "@spectrum-css/checkbox": ">=3 <=6",
+    "@spectrum-css/icon": ">=3",
+    "@spectrum-css/typography": ">=4 <=5",
+    "@spectrum-css/vars": ">=9"
   },
   "devDependencies": {
     "@spectrum-css/checkbox": "^6.0.20",
     "@spectrum-css/component-builder": "*",
     "@spectrum-css/icon": "^3.0.38",
-    "@spectrum-css/typography": "^4.0.31",
+    "@spectrum-css/typography": "^5.0.5",
     "@spectrum-css/vars": "^9.0.2",
     "gulp": "^4.0.0"
   },

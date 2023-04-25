@@ -18,8 +18,8 @@
     "build": "gulp"
   },
   "peerDependencies": {
-    "@spectrum-css/swatch": ">=4.0.0",
-    "@spectrum-css/tokens": ">=8.0.0"
+    "@spectrum-css/swatch": ">=4",
+    "@spectrum-css/tokens": ">=8"
   },
   "devDependencies": {
     "@spectrum-css/component-builder-simple": "*",
