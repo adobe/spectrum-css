@@ -2,6 +2,7 @@ import { html } from "lit-html";
 import { ifDefined } from "lit-html/directives/if-defined.js";
 import { classMap } from "lit-html/directives/class-map.js";
 import { styleMap } from "lit-html/directives/style-map.js";
+import { useArgs } from "@storybook/client-api";
 
 import { Template as Icon } from '@spectrum-css/icon/stories/template.js';
 import { Template as ProgressCircle } from '@spectrum-css/progresscircle/stories/template.js';
@@ -40,6 +41,7 @@ export const Template = ({
   },
   ...globals
 }) => {
+  const [, updateArgs] = useArgs();
 
   if (isInvalid) iconName = "Alert";
   else if (isValid) iconName = "Checkmark";
@@ -60,17 +62,26 @@ export const Template = ({
       ...customClasses.reduce((a, c) => ({ ...a, [c]: true }), {}),
     })}
       style=${ifDefined(styleMap(styles))}
-      @click=${onclick}>
+      @click=${onclick}
+      @focusin=${(e) => {
+        const focusClass = e.target?.classList?.contains('focus-ring') ? { isKeyboardFocused: true } : { isFocused: true };
+        updateArgs(focusClass);
+      }}
+      @focusout=${(e) => {
+        const focusClass = e.target?.classList?.contains('focus-ring') ? { isKeyboardFocused: false } : { isFocused: false };
+        updateArgs(focusClass);
+      }}
+    >
       ${iconName ? Icon({
         ...globals,
         size,
         iconName,
         customClasses: [
-          isInvalid || isValid ? `${rootClass}-validationIcon` : `${rootClass}-icon`,
+          !!(isInvalid || isValid) ? `${rootClass}-validationIcon` : `${rootClass}-icon`,
           ...customIconClasses,
         ],
       }) : ""}
-      ${multiline 
+      ${multiline
         ? html`
           <textarea
             placeholder=${ifDefined(placeholder)}
@@ -103,7 +114,7 @@ export const Template = ({
             })}
           />`
       }
-      ${isLoading ? ProgressCircle({ 
+      ${isLoading ? ProgressCircle({
         isIndeterminate: true,
         size: 's',
         customClasses: customProgressCircleClasses,
