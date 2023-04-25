@@ -3,6 +3,39 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+<a name="10.0.0"></a>
+# 10.0.0
+🗓 2023-04-25 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/button@9.1.6...@spectrum-css/button@10.0.0)
+
+* fix(button)!: height and accessibility fixes (#1794) ([132576a](https://github.com/adobe/spectrum-css/commit/132576a)), closes [#1794](https://github.com/adobe/spectrum-css/issues/1794)
+
+
+### 🛑 BREAKING CHANGES
+
+* removes: `--mod-button-padding-label-top` & `--mod-button-padding-label-bottom`. Use: `--mod-button-top-to-text`& `--mod-button-bottom-to-text` instead.
+
+Additional changes:
+* fix(button): update aria-labels for icon only variant
+* fix(button): remove unneeded isOpen attribute
+* fix(button): override icon size for icon only
+* fix(button): update line height
+* fix(button): update button padding with custom tokens
+* fix(button): remove unneeded aria-labels
+
+
+
+
+
+<a name="9.1.6"></a>
+## 9.1.6
+🗓 2023-04-21 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/button@9.1.5...@spectrum-css/button@9.1.6)
+
+**Note:** Version bump only for package @spectrum-css/button
+
+
+
+
+
 <a name="9.1.5"></a>
 ## 9.1.5
 🗓 2023-04-20 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/button@9.1.4...@spectrum-css/button@9.1.5)

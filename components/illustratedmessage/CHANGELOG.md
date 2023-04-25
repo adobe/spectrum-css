@@ -3,6 +3,36 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+<a name="5.0.4"></a>
+## 5.0.4
+🗓 2023-04-25 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/illustratedmessage@5.0.3...@spectrum-css/illustratedmessage@5.0.4)
+
+**Note:** Version bump only for package @spectrum-css/illustratedmessage
+
+
+
+
+
+<a name="5.0.3"></a>
+## 5.0.3
+🗓 2023-04-24 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/illustratedmessage@5.0.2...@spectrum-css/illustratedmessage@5.0.3)
+
+**Note:** Version bump only for package @spectrum-css/illustratedmessage
+
+
+
+
+
+<a name="5.0.2"></a>
+## 5.0.2
+🗓 2023-04-21 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/illustratedmessage@5.0.1...@spectrum-css/illustratedmessage@5.0.2)
+
+**Note:** Version bump only for package @spectrum-css/illustratedmessage
+
+
+
+
+
 <a name="5.0.1"></a>
 ## 5.0.1
 🗓 2023-04-20 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/illustratedmessage@5.0.0...@spectrum-css/illustratedmessage@5.0.1)

@@ -98,6 +98,8 @@ governing permissions and limitations under the License.
   font-size: var(--mod-heading-font-size, var(--spectrum-heading-font-size));
   color: var(--highcontrast-heading-font-color, var(--mod-heading-font-color, var(--spectrum-heading-font-color)));
   line-height: var(--mod-heading-line-height, var(--spectrum-heading-line-height));
+  margin-block-start: 0;
+  margin-block-end: 0;
 
   strong,
   .spectrum-Heading-strong {
@@ -388,6 +390,8 @@ governing permissions and limitations under the License.
   font-weight: var(--mod-body-sans-serif-font-weight, var(--spectrum-body-sans-serif-font-weight));
   font-size: var(--mod-body-font-size, var(--spectrum-body-font-size));
   color: var(--highcontrast-body-font-color, var(--mod-body-font-color, var(--spectrum-body-font-color)));
+  margin-block-start: 0;
+  margin-block-end: 0;
 
   line-height: var(--mod-body-line-height, var(--spectrum-body-line-height));
 
@@ -513,6 +517,8 @@ governing permissions and limitations under the License.
   font-style: var(--mod-detail-sans-serif-font-style, var(--spectrum-detail-sans-serif-font-style));
   font-weight: var(--mod-detail-sans-serif-font-weight, var(--spectrum-detail-sans-serif-font-weight));
   font-size: var(--mod-detail-font-size, var(--spectrum-detail-font-size));
+  margin-block-start: 0;
+  margin-block-end: 0;
 
   color: var(--highcontrast-detail-font-color, var(--mod-detail-font-color, var(--spectrum-detail-font-color)));
 
@@ -718,6 +724,8 @@ governing permissions and limitations under the License.
   font-style: var(--mod-code-font-style, var(--spectrum-code-font-style));
   font-weight: var(--mod-code-font-weight, var(--spectrum-code-font-weight));
   font-size: var(--mod-code-font-size, var(--spectrum-code-font-size));
+  margin-block-start: 0;
+  margin-block-end: 0;
 
   line-height: var(--mod-code-line-height, var(--spectrum-code-line-height));
 

@@ -1,6 +1,6 @@
 {
   "name": "@spectrum-css/preview",
-  "version": "3.0.8",
+  "version": "3.0.10",
   "description": "A Spectrum CSS preview",
   "license": "Apache-2.0",
   "author": "Adobe",
@@ -19,7 +19,7 @@
     "@spectrum-css/expressvars": "^3.0.2",
     "@spectrum-css/icon": "^3.0.38",
     "@spectrum-css/site": "^3.0.12",
-    "@spectrum-css/tokens": "^8.1.1",
+    "@spectrum-css/tokens": "^9.0.1",
     "@spectrum-css/vars": "^9.0.2"
   },
   "devDependencies": {
@@ -49,7 +49,7 @@
     "postcss-prefix-selector": "^1.16.0",
     "postcss-selector-replace": "^1.0.2",
     "postcss-warn-cleaner": "^0.1.9",
-    "prettier": "^2.8.1",
+    "prettier": "^2.8.8",
     "raw-loader": "^4.0.2",
     "react": "^17.0.0",
     "react-dom": "^17.0.0",
