@@ -28,10 +28,6 @@ export default {
       },
       control: { type: "text" },
     },
-    iconName: {
-      ...IconStories?.argTypes?.iconName ?? {},
-      if: false,
-    },
     placeholder: {
       name: "Placeholder",
       type: { name: "string" },
@@ -99,10 +95,15 @@ export default {
   },
   args: {
     rootClass: "spectrum-Picker",
+    size: "m",
     label: "Country",
     placeholder: "Select a country",
-    iconName: "ChevronDown100",
+    isQuiet: false,
     isLoading: false,
+    isDisabled: false,
+    isFocused: false,
+    isInvalid: false,
+    isOpen: true
   },
   parameters: {
     actions: {

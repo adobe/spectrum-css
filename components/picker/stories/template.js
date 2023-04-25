@@ -5,6 +5,7 @@ import { classMap } from "lit-html/directives/class-map.js";
 import { Template as FieldLabel } from "@spectrum-css/fieldlabel/stories/template.js";
 import { Template as Icon } from "@spectrum-css/icon/stories/template.js";
 import { Template as Popover } from "@spectrum-css/popover/stories/template.js";
+import { Template as ProgressCircle } from "@spectrum-css/progresscircle/stories/template.js";
 
 import "../index.css";
 
@@ -15,7 +16,6 @@ export const Template = ({
   labelPosition = "top",
   placeholder,
   helpText,
-  iconName,
   isQuiet = false,
   isFocused = false,
   isOpen = true,
@@ -32,18 +32,19 @@ export const Template = ({
 }) => {
   const [_, updateArgs] = useArgs();
 
+  let iconName = "ChevronDown200";
   switch(size){
-    case 's':
-      iconName = 'ChevronDown75';
+    case "s":
+      iconName = "ChevronDown75";
       break;
-    case 'm':
-      iconName = 'ChevronDown100';
+    case "m":
+      iconName = "ChevronDown100";
       break;
     case 'xl':
-      iconName = 'ChevronDown300';
+      iconName = "ChevronDown300";
       break;
     default:
-      iconName = 'ChevronDown200';
+      iconName = "ChevronDown200";
   }
 
   return html`
@@ -70,6 +71,12 @@ export const Template = ({
       aria-haspopup="listbox"
     >
       <span class="${rootClass}-label is-placeholder">${placeholder}</span>
+      ${isLoading ? 
+        ProgressCircle({
+          size: "s",
+          isIndeterminate: true
+        })
+      : ""}
       ${Icon({
         ...globals,
         iconName,
