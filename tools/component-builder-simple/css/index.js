@@ -1,4 +1,4 @@
-/*
+/*!
 Copyright 2023 Adobe. All rights reserved.
 This file is licensed to you under the Apache License, Version 2.0 (the "License");
 you may not use this file except in compliance with the License. You may obtain a copy
@@ -14,7 +14,6 @@ const gulp = require('gulp');
 const path = require('path');
 const through = require('through2');
 const postcss = require('gulp-postcss');
-const rename = require('gulp-rename');
 const concat = require('gulp-concat');
 const postcssReal = require('postcss');
 const fsp = require('fs').promises;
@@ -91,8 +90,6 @@ async function getCoreTokens() {
   };
   /* Resolve core tokens first from the current working directory, or if not found, from the root of the monorepo */
   const coreTokensFile = require.resolve('@spectrum-css/tokens', fetchOptions);
-  const coreTokensPkg = require.resolve('@spectrum-css/tokens/package.json', fetchOptions);
-  if (coreTokensPkg) console.log('Core tokens version:', await fsp.readFile(coreTokensPkg, 'utf8').then(JSON.parse).then(pkg => pkg.version));
   let contents = await fsp.readFile(coreTokensFile, 'utf8');
   let root = postcssReal.parse(contents);
   return getTokensDefinedInCSS(root);
@@ -173,7 +170,7 @@ function checkCSS(glob) {
       let componentTokens = getTokensDefinedInCSS(root);
 
       // Find all tokens used in the component
-      let { usedTokens, coreTokensUsed, componentTokensUsed } = getTokensUsedInCSS(root, coreTokens, componentTokens);
+      let { usedTokens } = getTokensUsedInCSS(root, coreTokens, componentTokens);
 
       // Make sure the component doesn't use any undefined tokens
       let errors = [];

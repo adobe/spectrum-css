@@ -1,4 +1,4 @@
-/*
+/*!
 Copyright 2023 Adobe. All rights reserved.
 This file is licensed to you under the Apache License, Version 2.0 (the "License");
 you may not use this file except in compliance with the License. You may obtain a copy
@@ -16,7 +16,6 @@ const concat = require('gulp-concat');
 const processors = require('./processors').processors;
 const rename = require('gulp-rename');
 
-const legacyBuild = require('./legacyBuild');
 const vars = require('./vars');
 
 // Read in all variables used
@@ -53,13 +52,4 @@ exports.buildCSS = gulp.series(
       }))
       .pipe(gulp.dest('dist/'))
   }
-  /*
-  ,gulp.parallel(
-    legacyBuild.buildDiff,
-    legacyBuild.buildMedium,
-    legacyBuild.buildLarge,
-    legacyBuild.buildSingleStops,
-    legacyBuild.buildMultiStops
-  )
-  */
 );

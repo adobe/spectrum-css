@@ -18,11 +18,11 @@
     "build": "gulp"
   },
   "peerDependencies": {
-    "@spectrum-css/checkbox": "^5.0.0 || ^6.0.0",
-    "@spectrum-css/helptext": "^3.0.0 || ^4.0.0",
-    "@spectrum-css/icon": "^3.0.0",
-    "@spectrum-css/radio": "^6.0.0 || ^7.0.0",
-    "@spectrum-css/tokens": ">=8.0.0"
+    "@spectrum-css/checkbox": ">=5 <=6",
+    "@spectrum-css/helptext": ">=3 <=4",
+    "@spectrum-css/icon": ">=3",
+    "@spectrum-css/radio": ">=6 <=7",
+    "@spectrum-css/tokens": ">=8 <=9"
   },
   "devDependencies": {
     "@spectrum-css/checkbox": "^6.0.20",

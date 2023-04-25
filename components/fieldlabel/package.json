@@ -18,8 +18,8 @@
     "build": "gulp"
   },
   "peerDependencies": {
-    "@spectrum-css/icon": "^3.0.0",
-    "@spectrum-css/tokens": ">=8.0.0"
+    "@spectrum-css/icon": ">=3",
+    "@spectrum-css/tokens": ">=8 <=9"
   },
   "devDependencies": {
     "@spectrum-css/checkbox": "^6.0.20",

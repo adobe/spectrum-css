@@ -18,9 +18,9 @@
     "build": "gulp"
   },
   "peerDependencies": {
-    "@spectrum-css/clearbutton": "^1.0.0",
-    "@spectrum-css/tag": "^3.0.0 || ^4.0.0 || ^5.0.0",
-    "@spectrum-css/vars": ">=9.0.0"
+    "@spectrum-css/clearbutton": ">=1",
+    "@spectrum-css/tag": ">=3 <=5",
+    "@spectrum-css/vars": ">=9"
   },
   "devDependencies": {
     "@spectrum-css/avatar": "^6.0.18",

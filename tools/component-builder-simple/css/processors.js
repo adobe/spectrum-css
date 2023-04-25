@@ -1,4 +1,4 @@
-/*
+/*!
 Copyright 2023 Adobe. All rights reserved.
 This file is licensed to you under the Apache License, Version 2.0 (the "License");
 you may not use this file except in compliance with the License. You may obtain a copy
@@ -27,20 +27,12 @@ function getProcessors(keepUnusedVars = false, splitinatorOptions = {}) {
     require('./plugins/postcss-transform-logical')(),
     require('./plugins/postcss-custom-properties-passthrough')(),
     require('postcss-calc'),
-    require('./plugins/postcss-strip-comments')({ preserveTopdoc: false }),
     !keepUnusedVars && require('postcss-dropunusedvars'),
     require('postcss-dropdupedvars'),
     require('postcss-focus-ring'),
     require('postcss-discard-empty'),
-    require('autoprefixer')({
-      'browsers': [
-        'last 2 Edge versions',
-        'last 2 Chrome versions',
-        'last 2 Firefox versions',
-        'last 2 Safari versions',
-        'last 2 iOS versions'
-      ]
-    })
+    require('postcss-discard-comments')({removeAllButFirst: true}),
+    require('autoprefixer')({}),
   ].filter(Boolean);
 }
 

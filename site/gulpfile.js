@@ -1,4 +1,4 @@
-/*
+/*!
 Copyright 2023 Adobe. All rights reserved.
 This file is licensed to you under the Apache License, Version 2.0 (the "License");
 you may not use this file except in compliance with the License. You may obtain a copy
@@ -41,12 +41,10 @@ function buildSite_prism() {
     .pipe(gulp.dest(path.join(__dirname, 'dist/css/prism/')));
 }
 
-let copySiteResources = gulp.parallel(
+exports.copySiteResources = gulp.parallel(
   buildSite_resources,
   buildSite_loadicons,
   buildSite_focusPolyfill,
   buildSite_lunr,
   buildSite_prism
 );
-
-exports.copySiteResources = copySiteResources;

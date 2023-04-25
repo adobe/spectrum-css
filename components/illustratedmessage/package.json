@@ -18,8 +18,8 @@
     "build": "gulp"
   },
   "peerDependencies": {
-    "@spectrum-css/tokens": ">=8.0.0",
-    "@spectrum-css/typography": "^5.0.1"
+    "@spectrum-css/tokens": ">=8 <=9",
+    "@spectrum-css/typography": ">=5"
   },
   "devDependencies": {
     "@spectrum-css/component-builder-simple": "^2.0.0",

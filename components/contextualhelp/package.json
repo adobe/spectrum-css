@@ -21,9 +21,9 @@
     "watch": "gulp watch"
   },
   "peerDependencies": {
-    "@spectrum-css/actionbutton": "^3.0.0",
-    "@spectrum-css/popover": "^6.0.0",
-    "@spectrum-css/tokens": ">= 7"
+    "@spectrum-css/actionbutton": ">=3",
+    "@spectrum-css/popover": ">=6",
+    "@spectrum-css/tokens": ">=7 <=9"
   },
   "devDependencies": {
     "@spectrum-css/actionbutton": "^3.0.32",

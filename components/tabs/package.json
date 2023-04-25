@@ -18,9 +18,9 @@
     "build": "gulp"
   },
   "peerDependencies": {
-    "@spectrum-css/menu": "^4.0.0",
-    "@spectrum-css/picker": ">=3.0.0",
-    "@spectrum-css/vars": ">=9.0.0"
+    "@spectrum-css/menu": ">=4",
+    "@spectrum-css/picker": ">=3",
+    "@spectrum-css/vars": ">=9"
   },
   "devDependencies": {
     "@spectrum-css/component-builder": "*",

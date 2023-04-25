@@ -1,4 +1,4 @@
-/*
+/*!
 Copyright 2023 Adobe. All rights reserved.
 This file is licensed to you under the Apache License, Version 2.0 (the "License");
 you may not use this file except in compliance with the License. You may obtain a copy
@@ -208,7 +208,7 @@ governing permissions and limitations under the License.
     var(--mod-combobox-button-width, var(--spectrum-combobox-button-width))
   );
   inset-block-start: var(--mod-combobox-block-spacing-edge-to-progress-circle, var(--spectrum-combobox-block-spacing-edge-to-progress-circle));
-  inset-block-end: var(--mod-combobox-block-spacing-edge-to-alert, var(--spectrum-combobox-block-spacing-edge-to-alert)); 
+  inset-block-end: var(--mod-combobox-block-spacing-edge-to-alert, var(--spectrum-combobox-block-spacing-edge-to-alert));
 
   [dir="rtl"] & {
     inset-inline-end: inherit;
@@ -356,7 +356,7 @@ governing permissions and limitations under the License.
   background-color: var(--highcontrast-combobox-background-color, var(--mod-combobox-background-color-default, var(--spectrum-combobox-background-color-default)));
   border-color: var(--highcontrast-combobox-border-color, var(--mod-combobox-border-color-default, var(--spectrum-combobox-border-color-default)));
   backface-visibility: hidden;
-  
+
   font-size: var(--mod-combobox-font-size, var(--spectrum-combobox-font-size));
   font-family: var(--mod-combobox-font-family, var(--spectrum-combobox-font-family));
   font-weight: var(--mod-combobox-font-weight, var(--spectrum-combobox-font-weight));

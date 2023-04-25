@@ -18,11 +18,11 @@
     "build": "gulp"
   },
   "peerDependencies": {
-    "@spectrum-css/clearbutton": "^1.0.0",
-    "@spectrum-css/icon": "^3.0.0",
-    "@spectrum-css/picker": ">=3.0.0",
-    "@spectrum-css/textfield": "^3.0.0 || ^4.0.0",
-    "@spectrum-css/vars": ">=9.0.0"
+    "@spectrum-css/clearbutton": ">=1",
+    "@spectrum-css/icon": ">=3",
+    "@spectrum-css/picker": ">=3",
+    "@spectrum-css/textfield": ">=3 <=4",
+    "@spectrum-css/vars": ">=9"
   },
   "devDependencies": {
     "@spectrum-css/clearbutton": "^1.2.25",
