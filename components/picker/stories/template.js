@@ -36,13 +36,14 @@ export const Template = ({
       size,
       label,
       isDisabled,
-      alignment: top
+      alignment: "top"
     }),
     PickerButton({
       ...globals,
       rootClass,
       placeholder,
       iconName,
+      iconType: "workflow",
       position,
       size,
       isDisabled,

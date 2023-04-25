@@ -477,7 +477,7 @@ governing permissions and limitations under the License.
   background-color: transparent;
 
   .spectrum-Picker-menuIcon {
-    margin-inline-end: var(--spectrum-picker-spacing-edge-to-disclosure-icon-quiet);
+    margin-inline-end: var(--mod-picker-spacing-edge-to-disclosure-icon-quiet, var(--spectrum-picker-spacing-edge-to-disclosure-icon-quiet));
   }
 
   &::after {
