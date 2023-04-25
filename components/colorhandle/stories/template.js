@@ -11,18 +11,14 @@ export const Template = ({
   isFocused = false,
   colorHandleStyle = {
     '--spectrum-picked-color': 'rgba(255, 0, 0, 0.5)',
-    position: 'absolute',
-    top: '50%',
-    left: '50%',
   },
-
   // ...globals
 }) => {
   return html`
   <div class=${classMap({
     [rootClass]: true,
     'is-disabled': isDisabled,
-    'is-focused': isFocused,
+    'is-focused': !isDisabled && isFocused,
     ...customClasses.reduce((a, c) => ({ ...a, [c]: true }), {}),
   })}
   style=${styleMap(colorHandleStyle)}>
