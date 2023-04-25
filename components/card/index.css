@@ -61,7 +61,6 @@ governing permissions and limitations under the License.
   --spectrum-card-focus-indicator-gap: var(--spectrum-focus-indicator-gap);
   --spectrum-card-focus-indicator-color: var(--spectrum-focus-indicator-color);
   --spectrum-card-focus-indicator-width: var(--spectrum-focus-indicator-thickness);
-  --spectrum-card-focus-indicator-corner-radius: var(--spectrum-corner-radius-100);
 
   /* Quiet */
   --spectrum-card-quiet-background-color: var(--spectrum-background-base-color);
@@ -105,7 +104,9 @@ governing permissions and limitations under the License.
     border-style: solid;
     border-color: transparent;
     border-width: 0;
-    border-radius: var(--mod-card-focus-indicator-corner-radius, var(--spectrum-card-focus-indicator-corner-radius));
+    border-radius: calc(var(--mod-card-corner-radius, var(--spectrum-card-corner-radius))
+      + var(--mod-card-focus-indicator-gap, var(--spectrum-card-focus-indicator-gap))
+      + var(--mod-card-focus-indicator-width, var(--spectrum-card-focus-indicator-width)));
     margin-block-start: calc((var(--mod-card-focus-indicator-gap, var(--spectrum-card-focus-indicator-gap))
                         + var(--mod-card-focus-indicator-width, var(--spectrum-card-focus-indicator-width)))
                         * -1);
@@ -281,6 +282,7 @@ governing permissions and limitations under the License.
   align-self: center;
   display: flex;
   justify-content: flex-end;
+  z-index: 1;
 }
 
 .spectrum-Card--quiet,
