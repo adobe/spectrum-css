@@ -4,7 +4,7 @@ import { Template } from "./template";
 export default {
 	title: "Components/Swatch",
 	description:
-		"A swatch shows a small sample of a fill—such as a color, gradient, texture, or material—that is intended to be applied to an object.",
+		"A swatch shows a small sample of a fill-such as a color, gradient, texture, or material—that is intended to be applied to an object.",
 	component: "Swatch",
 	argTypes: {
 		size: {
@@ -17,20 +17,40 @@ export default {
 			options: ["xs", "s", "m", "l",],
 			control: "select",
 		},
-	},
-	args: {
-		rootClass: "spectrum-Swatch",
-	},
-	parameters: {
-		actions: {
-			handles: [],
+		isDisabled: {
+			name: "Disabled",
+			type: { name: "boolean" },
+			table: {
+				type: { summary: "boolean" },
+				category: "State",
+			},
+			control: "boolean",
 		},
-		status: {
-			type: process.env.MIGRATED_PACKAGES.includes("swatch")
-				? "migrated"
-				: undefined,
+		isSelected: {
+			name: "Selected",
+			type: { name: "boolean" },
+			table: {
+				type: { summary: "boolean" },
+				category: "State",
+			},
+			control: "boolean",
 		},
-	},
+  },
+  args: {
+    rootClass: "spectrum-Swatch",
+    isSelected: false,
+    isDisabled: false,
+  },
+  parameters: {
+    actions: {
+      handles: [],
+    },
+    status: {
+      type: process.env.MIGRATED_PACKAGES.includes("swatch")
+        ? "migrated"
+        : "legacy",
+    },
+  },
 };
 
 export const Default = Template.bind({});
