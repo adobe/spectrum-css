@@ -32,8 +32,8 @@ export default {
       ...Icon.argTypes.iconName,
       if: { arg: 'iconType', eq: 'ui' },
     },
-    placeholder: {
-      name: "Placeholder",
+    label: {
+      name: "Label",
       type: { name: "string" },
       table: {
         type: { summary: "string" },
@@ -113,15 +113,6 @@ export default {
       },
       control: "boolean",
     },
-    isLoading: {
-      name: "Loading",
-      type: { name: "boolean" },
-      table: {
-        type: { summary: "boolean" },
-        category: "State",
-      },
-      control: "boolean",
-    },
     position: {
       name: "Position",
       type: { name: "string" },
@@ -135,7 +126,7 @@ export default {
   },
   args: {
     rootClass: "spectrum-PickerButton",
-    placeholder: "Select a Country",
+    label: "Select a Country",
     size: "m",
     isOpen: false,
     isRounded: false,
@@ -145,8 +136,8 @@ export default {
     isDisabled: false,
     isFocused: false,
     isKeyboardFocused: false,
-    isLoading: false,
     iconType: "ui",
+    iconName: "ChevronDown200",
   },
   parameters: {
     actions: {
