@@ -103,7 +103,7 @@ export default {
     isDisabled: false,
     isFocused: false,
     isInvalid: false,
-    isOpen: true
+    isOpen: false
   },
   parameters: {
     actions: {
@@ -119,6 +119,14 @@ export default {
 
 export const Default = Template.bind({});
 Default.args = {
+  content: [
+    MenuStories(MenuStories.args),
+  ]
+};
+
+export const Open = Template.bind({});
+Open.args = {
+  isOpen: true,
   content: [
     MenuStories(MenuStories.args),
   ]

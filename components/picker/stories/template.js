@@ -18,7 +18,7 @@ export const Template = ({
   helpText,
   isQuiet = false,
   isFocused = false,
-  isOpen = true,
+  isOpen = false,
   isInvalid = false,
   isLoading = false,
   isDisabled = false,
@@ -31,6 +31,14 @@ export const Template = ({
   ...globals
 }) => {
   const [_, updateArgs] = useArgs();
+  
+  const { express } = globals;
+  try {
+    if (!express) import(/* webpackPrefetch: true */ "../themes/spectrum.css");
+    else import(/* webpackPrefetch: true */ "../themes/express.css");
+  } catch (e) {
+    console.warn(e);
+  }
 
   let iconName = "ChevronDown200";
   switch(size){
@@ -75,6 +83,13 @@ export const Template = ({
         ProgressCircle({
           size: "s",
           isIndeterminate: true
+        })
+      : ""}
+      ${isInvalid && !isLoading ? 
+        Icon({
+          ...globals,
+          iconName: "Alert",
+          customClasses: [`${rootClass}-validationIcon`]
         })
       : ""}
       ${Icon({
