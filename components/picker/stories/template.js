@@ -6,6 +6,7 @@ import { Template as FieldLabel } from "@spectrum-css/fieldlabel/stories/templat
 import { Template as Icon } from "@spectrum-css/icon/stories/template.js";
 import { Template as Popover } from "@spectrum-css/popover/stories/template.js";
 import { Template as ProgressCircle } from "@spectrum-css/progresscircle/stories/template.js";
+import { Template as HelpText } from "@spectrum-css/helptext/stories/template.js";
 
 import "../index.css";
 
@@ -77,6 +78,9 @@ export const Template = ({
       })}
       ?disabled=${isDisabled}
       aria-haspopup="listbox"
+      @click=${(e) => {
+        updateArgs({ isOpen: !isOpen });
+      }}
     >
       <span class="${rootClass}-label is-placeholder">${placeholder}</span>
       ${isLoading ? 
@@ -98,6 +102,13 @@ export const Template = ({
         customClasses: [`${rootClass}-menuIcon`]
       })}
     </button>
+    ${helpText ? 
+      HelpText({
+        text: helpText,
+        variant: isInvalid ? "negative" : "neutral",
+        hideIcon: true
+      })
+    : ""}
     ${Popover({
       ...globals,
       isOpen: isOpen && !isDisabled,

@@ -147,3 +147,12 @@ Loading.args = {
     MenuStories(MenuStories.args),
   ]
 };
+
+export const Invalid = Template.bind({});
+Invalid.args = {
+  helpText: "Please select a country",
+  isInvalid: true,
+  content: [
+    MenuStories(MenuStories.args),
+  ]
+};
