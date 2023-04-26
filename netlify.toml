@@ -9,6 +9,10 @@
   from = "/storybook/"
   to = "/preview/"
 
+[[redirects]]
+  from = "/components/*.html"
+  to = "/components/:splat/"
+
 # If skip_processing = true, all other settings are ignored
 [build.processing]
   skip_processing = false

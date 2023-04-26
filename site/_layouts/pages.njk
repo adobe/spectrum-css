@@ -1,0 +1,45 @@
+---
+layout: layout.njk
+---
+{% block head %}
+    {% for dep in ['actionbutton', 'icon', 'underlay', 'divider'] %}
+    <link rel="stylesheet" type="text/css" href='/components/{{ dep }}/index-vars.css' data-dependency={{ dep }} />
+    {% endfor %}
+{% endblock %}
+
+{% block content %}
+<div class="spectrum-Site">
+    <button tabindex="1" class="spectrum-ActionButton spectrum-ActionButton--sizeL skip-to-content-link" href="#main">
+        Skip to content
+    </button>
+    <div class="spectrum-Site-overlay" id="site-overlay"></div>
+    <div class="spectrum-Site-header">
+        <button class="spectrum-ActionButton spectrum-ActionButton--sizeM spectrum-ActionButton--quiet" is-selected="is-selected" id="site-menu">
+            <svg class="spectrum-Icon spectrum-Icon--sizeM" focusable="false" aria-hidden="true" aria-label="Show Menu">
+                <use xlink:href="#spectrum-icon-18-ShowMenu"></use>
+            </svg>
+        </button>
+    </div>
+    <div class="spectrum-Site-content">
+        {% include "sidenav.njk" %}
+        <div class="spectrum-Site-mainContent">
+            <div class="spectrum-Site-mainContainer">
+                <div class="spectrum-Site-page" id="main">
+                    {{ content | safe }}
+                </div>
+            </div>
+            {% if not process.env.VRT -%}
+                <div class="spectrum-Site-footerContainer">
+                    <hr class="spectrum-Divider spectrum-Divider--small" hidden/>
+                    <div id="footer_global"></div>
+                </div>
+            {%- endif %}
+        </div>
+    </div>
+</div>
+{% endblock %}
+
+{% block foot %}
+    <div class="spectrum-Underlay" id="spectrum-underlay"></div>
+    <script>{{ component.renderScripts | safe }}</script>
+{% endblock %}

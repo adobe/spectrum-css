@@ -17,9 +17,10 @@
   "scripts": {
     "build": "yarn clean && gulp build",
     "clean": "rimraf dist/*",
-    "copy:metadata": "cp json/spectrum-metadata.json dist/",
-    "dna:clean": "rimraf css/* js/*",
-    "dna:update": "yarn dna:clean && gulp update && yarn build"
+    "copy": "cp json/spectrum-metadata.json dist/",
+    "preupdate": "rimraf css/* js/*",
+    "update": "gulp update",
+    "postupdate": "yarn build"
   },
   "devDependencies": {
     "@adobe/spectrum-tokens-deprecated": "^11.8.0",
@@ -46,7 +47,9 @@
       }
     },
     "includedScripts": [
-      "build"
+      "build",
+      "clean",
+      "update"
     ]
   }
 }

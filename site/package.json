@@ -1,0 +1,118 @@
+{
+  "name": "@spectrum-css/documentation",
+  "version": "1.0.0",
+  "description": "Spectrum CSS's documentation site.",
+  "license": "Apache-2.0",
+  "author": "Adobe",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/adobe/spectrum-css.git",
+    "directory": "site"
+  },
+  "bugs": {
+    "url": "https://github.com/adobe/spectrum-css/issues"
+  },
+  "main": ".eleventy.js",
+  "scripts": {
+    "build": "eleventy",
+    "clean": "rimraf dist",
+    "dev": "NODE_ENV=development yarn start",
+    "start": "eleventy --serve"
+  },
+  "optionalDependencies": {
+    "@spectrum-css/preview": "^3.0.12"
+  },
+  "devDependencies": {
+    "@11ty/eleventy": "^2.0.1",
+    "@11ty/eleventy-dev-server": "^1.0.4",
+    "@11ty/eleventy-navigation": "^0.3.5",
+    "@11ty/eleventy-plugin-bundle": "^1.0.4",
+    "@11ty/eleventy-plugin-directory-output": "^1.0.1",
+    "@11ty/eleventy-plugin-syntaxhighlight": "^5.0.0",
+    "@adobe/focus-ring-polyfill": "^0.1.5",
+    "eleventy-plugin-code-clipboard": "^0.1.0",
+    "eleventy-plugin-error-overlay": "^1.0.0",
+    "fast-glob": "^3.2.12",
+    "js-yaml": "^4.1.0",
+    "loadicons": "^1.0.0",
+    "lunr": "^2.3.9",
+    "markdown-it": "^13.0.1",
+    "markdown-it-anchor": "^8.6.7",
+    "markdown-it-attrs": "^4.1.6",
+    "markdown-it-container": "^3.0.0",
+    "npm-run-all": "^4.1.5",
+    "nunjucks": "^3.2.4",
+    "postcss": "^8.4.23",
+    "prismjs": "^1.29.0",
+    "rimraf": "^5.0.0"
+  },
+  "nx": {
+    "targets": {
+      "build": {
+        "dependsOn": [
+          "^build"
+        ],
+        "inputs": [
+          "{workspaceRoot}/_data",
+          "{workspaceRoot}/_includes",
+          "{workspaceRoot}/_layouts",
+          "{workspaceRoot}/assets",
+          "{workspaceRoot}/content",
+          "{workspaceRoot}/scripts",
+          "{workspaceRoot}/.eleventy.js",
+          "{projectRoot}/package.json",
+          "{projectRoot}/tools/component-builder/index.js",
+          "{projectRoot}/tools/component-builder-simple/index.js"
+        ],
+        "outputs": [
+          "{workspaceRoot}/dist"
+        ]
+      },
+      "dev": {
+        "dependsOn": [
+          "^build"
+        ],
+        "inputs": [
+          "{workspaceRoot}/_data",
+          "{workspaceRoot}/_includes",
+          "{workspaceRoot}/_layouts",
+          "{workspaceRoot}/assets",
+          "{workspaceRoot}/content",
+          "{workspaceRoot}/scripts",
+          "{workspaceRoot}/.eleventy.js"
+        ],
+        "outputs": [
+          "{workspaceRoot}/dist"
+        ]
+      },
+      "start": {
+        "dependsOn": [
+          "^build"
+        ],
+        "inputs": [
+          "{workspaceRoot}/_data",
+          "{workspaceRoot}/_includes",
+          "{workspaceRoot}/_layouts",
+          "{workspaceRoot}/assets",
+          "{workspaceRoot}/content",
+          "{workspaceRoot}/scripts",
+          "{workspaceRoot}/.eleventy.js"
+        ],
+        "outputs": [
+          "{workspaceRoot}/dist"
+        ]
+      }
+    },
+    "implicitDependencies": [
+      "@spectrum-css/*",
+      "@spectrum-css/preview",
+      "!@spectrum-css/generator"
+    ],
+    "includedScripts": [
+      "build",
+      "dev",
+      "clean",
+      "start"
+    ]
+  }
+}

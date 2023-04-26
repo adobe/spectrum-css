@@ -1,4 +1,4 @@
-/*!
+/*
 Copyright 2023 Adobe. All rights reserved.
 This file is licensed to you under the Apache License, Version 2.0 (the "License");
 you may not use this file except in compliance with the License. You may obtain a copy
@@ -10,25 +10,26 @@ OF ANY KIND, either express or implied. See the License for the specific languag
 governing permissions and limitations under the License.
 */
 
-const gulp = require('gulp');
-const rename = require('gulp-rename');
-const css = require('./css');
+class Store {
+   data() {
+     return {
+       permalink: "store.json",
+       eleventyExcludeFromCollections: "true",
+     };
+   }
 
-const build = gulp.series(
-  css.buildCSS,
-  function copyIndex() {
-    // Just copy index.vars as index.css to maintain backwards compat
-    return gulp.src('dist/index.css')
-      .pipe(rename((file) => {
-        file.basename = 'index-vars';
-      }))
-      .pipe(gulp.dest('dist/'))
-  }
-);
+    render({ collections }) {
+      const stores = {};
+      for (const { data } of collections.component) {
+        stores[data.component.permalink] = {
+            href: data.component.permalink,
+            name: data.title,
+            component: data.component.name,
+            description: data.component.description,
+         };
+      }
+      return JSON.stringify(stores);
+    }
+ }
 
-exports.default = build;
-exports.build = build;
-exports.buildLite = build;
-exports.buildMedium = build;
-exports.buildHeavy = build;
-exports.buildCSS = build;
+ module.exports = Store;

@@ -4,7 +4,6 @@ const rename = require('gulp-rename');
 const concat = require('gulp-concat');
 const through = require('through2');
 const postcss = require('postcss');
-const fsp = require('fs').promises;
 const dirs = require('../lib/dirs.js');
 
 // Uhg share this with component-builder
@@ -160,7 +159,6 @@ const expressVarDir = path.join(dirs.components, 'expressvars', 'dist');
      .pipe(gulp.dest('dist/expressvars/'))
 }
 
-const coreTokensDir = path.join(dirs.components, 'tokens', 'dist');
 function copyCoreTokens() {
   return gulp.src(path.join(varDir, '**/*.css'))
     .pipe(gulp.dest('dist/tokens/'))
