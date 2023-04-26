@@ -37,7 +37,6 @@ import '@spectrum-css/tokens';
 
 // Loading typography on every page because it's a useful utility
 import '@spectrum-css/typography';
-import '@spectrum-css/site';
 
 import './global.js';
 

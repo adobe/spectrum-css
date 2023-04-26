@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html lang="en-US" dir="ltr">
+    <head>
+        <title>{{ title }}{% if title %} | {% endif %}Spectrum CSS</title>
+        {% include 'meta-info.njk' %}
+        {% block head %}{% endblock %}
+    </head>
+    <body class="spectrum spectrum--light spectrum--medium">
+        {% block content %}
+            {{ content | safe }}
+        {% endblock %}
+        {% block foot %}{% endblock %}
+        {% initClipboardJS %}
+    </body>
+</html>
