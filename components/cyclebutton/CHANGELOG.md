@@ -3,6 +3,16 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+<a name="3.0.49"></a>
+## 3.0.49
+🗓 2023-04-26 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/cyclebutton@3.0.48...@spectrum-css/cyclebutton@3.0.49)
+
+**Note:** Version bump only for package @spectrum-css/cyclebutton
+
+
+
+
+
 <a name="3.0.48"></a>
 ## 3.0.48
 🗓 2023-04-25 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/cyclebutton@3.0.46...@spectrum-css/cyclebutton@3.0.48)

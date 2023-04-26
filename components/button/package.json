@@ -1,6 +1,6 @@
 {
   "name": "@spectrum-css/button",
-  "version": "10.0.2",
+  "version": "10.0.3",
   "description": "The Spectrum CSS button component",
   "license": "Apache-2.0",
   "author": "Adobe",
@@ -21,9 +21,9 @@
     "@spectrum-css/tokens": ">=8 <=9"
   },
   "devDependencies": {
-    "@spectrum-css/component-builder-simple": "^2.0.9",
-    "@spectrum-css/icon": "^3.0.40",
-    "@spectrum-css/tokens": "^9.0.3",
+    "@spectrum-css/component-builder-simple": "^2.0.10",
+    "@spectrum-css/icon": "^3.0.41",
+    "@spectrum-css/tokens": "^9.0.4",
     "gulp": "^4.0.0"
   },
   "publishConfig": {

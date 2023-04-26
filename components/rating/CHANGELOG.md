@@ -3,6 +3,16 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+<a name="3.0.42"></a>
+## 3.0.42
+🗓 2023-04-26 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/rating@3.0.41...@spectrum-css/rating@3.0.42)
+
+**Note:** Version bump only for package @spectrum-css/rating
+
+
+
+
+
 <a name="3.0.41"></a>
 ## 3.0.41
 🗓 2023-04-25 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/rating@3.0.39...@spectrum-css/rating@3.0.41)

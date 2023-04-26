@@ -3,6 +3,16 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+<a name="3.0.38"></a>
+## 3.0.38
+🗓 2023-04-26 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/splitview@3.0.37...@spectrum-css/splitview@3.0.38)
+
+**Note:** Version bump only for package @spectrum-css/splitview
+
+
+
+
+
 <a name="3.0.37"></a>
 ## 3.0.37
 🗓 2023-04-25 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/splitview@3.0.35...@spectrum-css/splitview@3.0.37)
