@@ -1,0 +1,52 @@
+{% block head %}
+    {% for dep in [
+    'statuslight',
+    'typography',
+    ] %}
+    <link rel="stylesheet" type="text/css" href='/components/{{ dep }}/index-vars.css' data-dependency={{ dep }} />
+    {% endfor %}
+{% endblock %}
+
+<article class="spectrum-CSSExample">
+  {% if example.name != component.name %}
+    <h3 id="{{ example.name | slugify }}" class="spectrum-CSSExample-heading spectrum-Heading spectrum-Heading--sizeS">
+      <a href="#{{ example.name | slugify }}" class="spectrum-CSSComponent-link">{{example.name}}</a>
+      {% if example.status -%}
+        <span class="spectrum-StatusLight spectrum-StatusLight--sizeM spectrum-CSSExample-status spectrum-StatusLight--{{ example.status | statusLightVariant }}">
+          {{ example.status }}
+        </span>
+      {%- endif %}
+    </h3>
+  {%- endif %}
+  {% if example.description -%}
+    <div class="spectrum-Typography">
+      <section class="spectrum-CSSExample-description spectrum-Body spectrum-Body--sizeM">
+        {{ example.description | markdownify | safe }}
+      </section>
+    </div>
+  {%- endif %}
+  {% if example.details -%}
+    <div class="spectrum-Typography">
+      <section class="spectrum-CSSExample-description spectrum-Body spectrum-Body--sizeM">
+        {{ example.details | markdownify | safe }}
+      </section>
+    </div>
+  {%- endif %}
+  {% if example.markup -%}
+    <section class="spectrum-CSSExample-container">
+      <div class="spectrum-CSSExample-example">
+        {{ example.markup | safe }}
+      </div>
+      <div class="spectrum-CSSExample-markup">
+        {% if example.markup.split('\n').length > 2 %}
+          <a href="#" class="js-markup-toggle spectrum-CSSExample-markupToggle spectrum-Link">Show markup</a>
+        {% endif %}
+        <bdo dir="ltr">
+          <pre class="spectrum-Code spectrum-Code--sizeXS">
+            <code class="language-markup">{% highlight "html" %}{{ example.markup | safe }}{% endhighlight %}</code>
+          </pre>
+        </bdo>
+      </div>
+    </section>
+  {% endif %}
+</article>

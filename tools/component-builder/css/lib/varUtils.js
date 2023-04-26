@@ -78,8 +78,8 @@ function getClassNames(contents, pkgName) {
     }
   }
 
-  let result = root.walkRules((rule, ruleIndex) => {
-    let selector = rule.selectors[0];
+  root.walkRules((rule, ruleIndex) => {
+    let className;
 
     if (pkgName === 'page') {
       className = '';
