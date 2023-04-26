@@ -44,11 +44,32 @@ governing permissions and limitations under the License.
 
 }
 
+@media (forced-colors: active) {
+  .spectrum-FloatingActionButton {
+
+    &:after {
+      /* make sure focus-ring renders */
+      forced-color-adjust: none;
+    }
+
+    --highcontrast-floating-action-button-background-color: ButtonText;
+    --highcontrast-floating-action-button-background-color-hover: Highlight;
+    --highcontrast-floating-action-button-background-color-down: Highlight;
+    --highcontrast-floating-action-button-background-color-key-focus: Highlight;
+
+    --highcontrast-floating-action-button-icon-color: ButtonFace;
+    --highcontrast-floating-action-button-icon-color-hover: ButtonFace;
+    --highcontrast-floating-action-button-icon-color-down: ButtonFace;
+    --highcontrast-floating-action-button-icon-color-key-focus: ButtonFace;
+
+  }
+}
+
 .spectrum-FloatingActionButton {
   cursor: pointer;
   block-size: var(--mod-floating-action-button-size, var(--spectrum-floating-action-button-size));
   inline-size: var(--mod-floating-action-button-size, var(--spectrum-floating-action-button-size));
-  border-radius: 50%;
+  border-radius: var(--mod-floating-action-button-border-radius, 50%);
   padding-inline: var(--mod-floating-action-button-padding, var(--spectrum-floating-action-button-padding));
   padding-block: var(--mod-floating-action-button-padding, var(--spectrum-floating-action-button-padding));
   margin-inline-end: var(--mod-floating-action-button-margin, var(--spectrum-floating-action-button-margin));
@@ -80,7 +101,8 @@ governing permissions and limitations under the License.
   &:focus, 
   &:focus-within {
     background-color: var(--highcontrast-floating-action-button-background-color-key-focus, var(--mod-floating-action-button-background-color-key-focus, var(--spectrum-floating-action-button-background-color-key-focus)));
-
+    outline: 0;
+    
     .spectrum-FloatingActionButton-icon {
       fill: var(--highcontrast-floating-action-button-icon-color-key-focus, var(--mod-floating-action-button-icon-color-key-focus, var(--spectrum-floating-action-button-icon-color-key-focus)));
     }
@@ -90,7 +112,7 @@ governing permissions and limitations under the License.
       inset: 0;
       margin: calc(-1 * var(--mod-floating-action-button-focus-ring-gap, var(--spectrum-floating-action-button-focus-ring-gap)));
       box-shadow: 0 0 0 var(--mod-floating-action-button-focus-ring-width, var(--spectrum-floating-action-button-focus-ring-width)) var(--highcontrast-floating-action-button-focus-ring-color, var(--mod-afloating-action-button-focus-ring-color, var(--spectrum-floating-action-button-focus-ring-color)));
-      border-radius: 50%;
+      border-radius: var(--mod-floating-action-button-border-radius, 50%);
       pointer-events: none;
       content: '';
     }
@@ -101,25 +123,4 @@ governing permissions and limitations under the License.
   block-size: var(--mod-floating-action-button-icon-size, var(--spectrum-floating-action-button-icon-size));
   inline-size: var(--mod-floating-action-button-icon-size, var(--spectrum-floating-action-button-icon-size));
   fill: var(--highcontrast-floating-action-button-icon-color, var(--mod-floating-action-button-icon-color, var(--spectrum-floating-action-button-icon-color)));
-}
-
-@media (forced-colors: active) {
-  .spectrum-FloatingActionButton {
-
-    &:after {
-      /* make sure focus-ring renders */
-      forced-color-adjust: none;
-    }
-
-    --highcontrast-floating-action-button-background-color: CanvasText;
-    --highcontrast-floating-action-button-background-color-hover: Highlight;
-    --highcontrast-floating-action-button-background-color-down: Highlight;
-    --highcontrast-floating-action-button-background-color-key-focus: Highlight;
-
-    --highcontrast-floating-action-button-icon-color: ButtonFace;
-    --highcontrast-floating-action-button-icon-color-hover: ButtonFace;
-    --highcontrast-floating-action-button-icon-color-down: ButtonFace;
-    --highcontrast-floating-action-button-icon-color-key-focus: ButtonFace;
-
-  }
 }
