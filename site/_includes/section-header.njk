@@ -1,0 +1,23 @@
+{% block head %}
+    {% for dep in ['divider', 'typography'] %}
+    <link rel="stylesheet" type="text/css" href='/components/{{ dep }}/index-vars.css' data-dependency={{ dep }} />
+    {% endfor %}
+{% endblock %}
+
+<header class="spectrum-CSSComponent-sectionHeading" id="{{ section.id | slugify }}">
+  <h2 class="spectrum-Heading spectrum-Heading--sizeM">
+    <a href="#{{ section.name | slugify }}" class="spectrum-BigSubtleLink">
+      {{section.name}}
+    </a>
+  </h2>
+  <hr class="spectrum-Divider spectrum-Divider--large"/>
+  {% if section.description -%}
+    <div class="spectrum-Typography">
+      <section class="spectrum-CSSExample-description">
+        <div class="spectrum-Body spectrum-Body--sizeM">
+          {{ section.description | markdownify | safe }}
+        </div>
+      </section>
+    </div>
+  {% endif %}
+</header>

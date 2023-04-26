@@ -1,0 +1,94 @@
+{% block head %}
+    {% for dep in ['sidenav', 'typography', 'textfield', 'search', 'icon', 'clearbutton', 'popover', 'menu', 'illustratedmessage'] %}
+    <link rel="stylesheet" type="text/css" href='/components/{{ dep }}/index-vars.css' data-dependency={{ dep }} />
+    {% endfor %}
+{% endblock %}
+
+{% macro renderNavListItem(entry) -%}
+  <li class="spectrum-SideNav-item {{ 'is-selected' if entry.url == page.url }}">
+    <a href="{{ entry.url }}" class="spectrum-SideNav-itemLink">
+      {%- if entry.isExternal -%}
+      <svg class="spectrum-Icon spectrum-Icon--sizeS spectrum-SideNav-itemIcon" focusable="false" aria-hidden="true">
+        <use xlink:href="#spectrum-icon-18-LinkOutLight" />
+      </svg>
+      {%- endif -%}
+      {{ entry.title }}
+    </a>
+    {%- if entry.children.length -%}
+    <ul class="spectrum-SideNav spectrum-SideNav--multiLevel">
+        {%- for child in entry.children %}{{ renderNavListItem(child) }}{% endfor -%}
+    </ul>
+    {%- endif -%}
+  </li>
+{%- endmacro %}
+
+<div class="spectrum-Site-sideBar" id="site-sidebar">
+  <a class="spectrum-Site-sideBarHeader" href="/">
+    {% include "logo.njk" %}
+    <h2 class="spectrum-Site-title spectrum-Heading spectrum-Heading--sizeM">Spectrum CSS</h2>
+  </a>
+
+  <div id="site-search">
+    <div class="spectrum-Site-search" role="search">
+      <form class="spectrum-Search js-form" role="combobox" aria-expanded="false" aria-owns="search-results-listbox" aria-haspopup="listbox">
+        <div class="spectrum-Textfield spectrum-Search-textfield">
+          <svg class="spectrum-Icon spectrum-Icon--sizeM spectrum-Textfield-icon spectrum-Search-icon" focusable="false" aria-hidden="true">
+            <use xlink:href="#spectrum-icon-18-Magnify"></use>
+          </svg>
+          <input type="search" placeholder="Search" name="search" value="" class="spectrum-Textfield-input spectrum-Search-input js-input" autocomplete="off">
+        </div>
+        <button type="reset" value="Reset" class="spectrum-ClearButton spectrum-ClearButton--sizeM spectrum-Search-clearButton js-clearButton" tabindex="-1" hidden="">
+          <div class="spectrum-ClearButton-fill">
+            <svg class="spectrum-ClearButton-icon spectrum-Icon spectrum-UIIcon-Cross100" focusable="false" aria-hidden="true">
+              <use xlink:href="#spectrum-css-icon-Cross100"></use>
+            </svg>
+          </div>
+        </button>
+      </form>
+      <div class="spectrum-Popover spectrum-Site-searchResults js-popover">
+        <ul class="spectrum-Menu js-searchResults" id="search-results-listbox" role="listbox" aria-label="Search">
+        </ul>
+        <div class="spectrum-IllustratedMessage spectrum-Site-noSearchResults js-searchError">
+          <div class="spectrum-IllustratedMessage spectrum-Site-noSearchResults">
+            <h2 class="spectrum-Heading spectrum-Heading--pageTitle spectrum-IllustratedMessage-heading">No results found</h2>
+            <p class="spectrum-Body--secondary spectrum-IllustratedMessage-description"><em>Try another search term.</em></p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="u-scrollable spectrum-Site-nav">
+    <nav>
+        <ul class="spectrum-SideNav spectrum-SideNav--multiLevel">
+          {% for entry in collections.all | eleventyNavigation -%}
+            {{ renderNavListItem(entry) }}
+          {%- endfor %}
+        </ul>
+    </nav>
+    <nav class="spectrum-Site-bottomNav">
+      <ul class="spectrum-SideNav">
+        <li class="spectrum-SideNav-item">
+          <a class="spectrum-SideNav-itemLink" href="https://spectrum.adobe.com" rel="noopener">
+            <svg class="spectrum-Icon spectrum-Icon--sizeS spectrum-SideNav-itemIcon" focusable="false" aria-hidden="true">
+              <use xlink:href="#spectrum-icon-18-LinkOutLight" />
+            </svg>
+            Spectrum
+          </a>
+        </li>
+        <li class="spectrum-SideNav-item">
+          <a class="spectrum-SideNav-itemLink" href="../preview" rel="noopener">Component preview</a>
+        </li>
+        <li class="spectrum-SideNav-item">
+          <a class="spectrum-SideNav-itemLink" href="https://opensource.adobe.com/spectrum-web-components/" rel="noopener">
+            <svg class="spectrum-Icon spectrum-Icon--sizeS spectrum-SideNav-itemIcon" focusable="false" aria-hidden="true">
+              <use xlink:href="#spectrum-icon-18-LinkOutLight" />
+            </svg>
+            Spectrum web components
+          </a>
+        </li>
+      </ul>
+    </nav>
+  </div>
+
+</div>

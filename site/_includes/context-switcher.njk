@@ -1,0 +1,146 @@
+
+{% for dep in ['fieldlabel', 'icon', 'link', 'menu', 'picker', 'popover', 'statuslight', 'typography'] %}
+<link rel="stylesheet" type="text/css" href='/components/{{ dep }}/index-vars.css' data-dependency={{ dep }} />
+{% endfor %}
+
+<div class="spectrum-CSSComponent-switcher">
+    <div class="spectrum-CSS-switcherContainer">
+        <label class="spectrum-FieldLabel spectrum-FieldLabel--left spectrum-FieldLabel--sizeM" for="switcher-theme">Theme</label>
+        <button class="spectrum-Picker spectrum-Picker--sizeM spectrum-Picker--quiet" aria-haspopup="true" id="switcher-theme">
+            <span class="spectrum-Picker-label">Light</span>
+            <svg class="spectrum-Icon spectrum-UIIcon-ChevronDown100 spectrum-Picker-menuIcon" focusable="false" aria-hidden="true">
+                <use xlink:href="#spectrum-css-icon-Chevron100"></use>
+            </svg>
+        </button>
+        <div class="spectrum-Popover spectrum-Popover--bottom spectrum-Picker-popover spectrum-Picker-popover--quiet">
+            <ul class="spectrum-Menu" role="listbox">
+                <li class="spectrum-Menu-item is-selected" role="option" tabindex="0" value="light">
+                    <span class="spectrum-Menu-itemLabel">Light</span>
+                    <svg
+                        class="spectrum-Icon spectrum-UIIcon-Checkmark100 spectrum-Menu-checkmark spectrum-Menu-itemIcon"
+                        focusable="false"
+                        aria-hidden="true">
+                        <use xlink:href="#spectrum-css-icon-Checkmark100"></use>
+                    </svg>
+                </li>
+                <li class="spectrum-Menu-item" role="option" tabindex="0" value="dark">
+                    <span class="spectrum-Menu-itemLabel">Dark</span>
+                    <svg
+                        class="spectrum-Icon spectrum-UIIcon-Checkmark100 spectrum-Menu-checkmark spectrum-Menu-itemIcon"
+                        focusable="false"
+                        aria-hidden="true">
+                        <use xlink:href="#spectrum-css-icon-Checkmark100"></use>
+                    </svg>
+                </li>
+                <li class="spectrum-Menu-item" role="option" tabindex="0" value="darkest">
+                    <span class="spectrum-Menu-itemLabel">Darkest</span>
+                    <svg
+                        class="spectrum-Icon spectrum-UIIcon-Checkmark100 spectrum-Menu-checkmark spectrum-Menu-itemIcon"
+                        focusable="false"
+                        aria-hidden="true">
+                        <use xlink:href="#spectrum-css-icon-Checkmark100"></use>
+                    </svg>
+                </li>
+            </ul>
+        </div>
+    </div>
+    <div class="spectrum-CSS-switcherContainer">
+        <label class="spectrum-FieldLabel spectrum-FieldLabel--left spectrum-FieldLabel--sizeM" for="switcher-scale">Scale</label>
+        <button class="spectrum-Picker spectrum-Picker--sizeM spectrum-Picker--quiet" aria-haspopup="true" id="switcher-scale">
+            <span class="spectrum-Picker-label">Medium</span>
+            <svg class="spectrum-Icon spectrum-UIIcon-ChevronDown100 spectrum-Picker-menuIcon" focusable="false" aria-hidden="true">
+                <use xlink:href="#spectrum-css-icon-Chevron100"></use>
+            </svg>
+        </button>
+        <div class="spectrum-Popover spectrum-Popover--bottom spectrum-Picker-popover spectrum-Picker-popover--quiet">
+            <ul class="spectrum-Menu" role="listbox">
+                <li class="spectrum-Menu-item is-selected" role="option" aria-selected="true" tabindex="0" value="medium">
+                    <span class="spectrum-Menu-itemLabel">Medium</span>
+                    <svg
+                        class="spectrum-Icon spectrum-UIIcon-Checkmark100 spectrum-Menu-checkmark spectrum-Menu-itemIcon"
+                        focusable="false"
+                        aria-hidden="true">
+                        <use xlink:href="#spectrum-css-icon-Checkmark100"></use>
+                    </svg>
+                </li>
+                <li class="spectrum-Menu-item" role="option" tabindex="0" value="large">
+                    <span class="spectrum-Menu-itemLabel">Large</span>
+                    <svg
+                        class="spectrum-Icon spectrum-UIIcon-Checkmark100 spectrum-Menu-checkmark spectrum-Menu-itemIcon"
+                        focusable="false"
+                        aria-hidden="true">
+                        <use xlink:href="#spectrum-css-icon-Checkmark100"></use>
+                    </svg>
+                </li>
+            </ul>
+        </div>
+    </div>
+    <div class="spectrum-CSS-switcherContainer">
+        <label class="spectrum-FieldLabel spectrum-FieldLabel--left spectrum-FieldLabel--sizeM" for="switcher-theme">Direction</label>
+        <button
+            class="spectrum-Picker spectrum-Picker--sizeM spectrum-Picker--quiet"
+            aria-haspopup="true"
+            id="switcher-direction">
+            <span class="spectrum-Picker-label">LTR</span>
+            <svg class="spectrum-Icon spectrum-UIIcon-ChevronDown100 spectrum-Picker-menuIcon" focusable="false" aria-hidden="true">
+                <use xlink:href="#spectrum-css-icon-Chevron100"></use>
+            </svg>
+        </button>
+        <div class="spectrum-Popover spectrum-Popover--bottom spectrum-Picker-popover spectrum-Picker-popover--quiet">
+            <ul class="spectrum-Menu" role="listbox">
+                <li class="spectrum-Menu-item is-selected" role="option" aria-selected="true" tabindex="0" value="ltr">
+                    <span class="spectrum-Menu-itemLabel">LTR</span>
+                    <svg
+                        class="spectrum-Icon spectrum-UIIcon-Checkmark100 spectrum-Menu-checkmark spectrum-Menu-itemIcon"
+                        focusable="false"
+                        aria-hidden="true">
+                        <use xlink:href="#spectrum-css-icon-Checkmark100"></use>
+                    </svg>
+                </li>
+                <li class="spectrum-Menu-item" role="option" tabindex="0" value="rtl">
+                    <span class="spectrum-Menu-itemLabel">RTL</span>
+                    <svg
+                        class="spectrum-Icon spectrum-UIIcon-Checkmark100 spectrum-Menu-checkmark spectrum-Menu-itemIcon"
+                        focusable="false"
+                        aria-hidden="true">
+                        <use xlink:href="#spectrum-css-icon-Checkmark100"></use>
+                    </svg>
+                </li>
+            </ul>
+        </div>
+    </div>
+    <div class="spectrum-CSS-switcherContainer">
+        <label class="spectrum-FieldLabel spectrum-FieldLabel--left spectrum-FieldLabel--sizeM" for="switcher-theme">Vars Version</label>
+        <button
+            class="spectrum-Picker spectrum-Picker--sizeM spectrum-Picker--quiet"
+            aria-haspopup="true"
+            id="switcher-vars-version">
+            <span class="spectrum-Picker-label">Default</span>
+            <svg class="spectrum-Icon spectrum-UIIcon-ChevronDown100 spectrum-Picker-menuIcon" focusable="false" aria-hidden="true">
+                <use xlink:href="#spectrum-css-icon-Chevron100"></use>
+            </svg>
+        </button>
+        <div class="spectrum-Popover spectrum-Popover--bottom spectrum-Picker-popover spectrum-Picker-popover--quiet">
+            <ul class="spectrum-Menu" role="listbox">
+                <li class="spectrum-Menu-item is-selected" role="option" aria-selected="true" tabindex="0" value="default">
+                    <span class="spectrum-Menu-itemLabel">Default</span>
+                    <svg
+                        class="spectrum-Icon spectrum-UIIcon-Checkmark100 spectrum-Menu-checkmark spectrum-Menu-itemIcon"
+                        focusable="false"
+                        aria-hidden="true">
+                        <use xlink:href="#spectrum-css-icon-Checkmark100"></use>
+                    </svg>
+                </li>
+                <li class="spectrum-Menu-item" role="option" tabindex="0" value="express">
+                    <span class="spectrum-Menu-itemLabel">Express</span>
+                    <svg
+                        class="spectrum-Icon spectrum-UIIcon-Checkmark100 spectrum-Menu-checkmark spectrum-Menu-itemIcon"
+                        focusable="false"
+                        aria-hidden="true">
+                        <use xlink:href="#spectrum-css-icon-Checkmark100"></use>
+                    </svg>
+                </li>
+            </ul>
+        </div>
+    </div>
+</div>

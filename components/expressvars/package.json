@@ -15,11 +15,12 @@
   },
   "main": "dist/spectrum-metadata.json",
   "scripts": {
-    "build": "yarn clean && gulp build",
+    "build": "gulp build",
     "clean": "rimraf dist/*",
-    "copy:metadata": "cp json/spectrum-metadata.json dist/",
-    "dna:clean": "rimraf css/* js/*",
-    "dna:update": "yarn dna:clean && gulp update && yarn build"
+    "copy": "cp json/spectrum-metadata.json dist/",
+    "preupdate": "rimraf css/* js/*",
+    "update": "gulp update",
+    "postupdate": "yarn build"
   },
   "devDependencies": {
     "@adobe/spectrum-express-tokens-deprecated": "^1.0.0-beta.35",
@@ -46,7 +47,9 @@
       }
     },
     "includedScripts": [
-      "build"
+      "build",
+      "clean",
+      "update"
     ]
   }
 }
