@@ -249,17 +249,6 @@ governing permissions and limitations under the License.
     );
   }
 
-  &:focus-ring,
-  &:focus-visible {
-    /* Remove native outline */
-    outline: none;
-
-    /* Focus ring */
-    &::after {
-      border-color: var(--highcontrast-picker-focus-indicator-color, var(--mod-picker-focus-indicator-color, var(--spectrum-picker-focus-indicator-color)));
-    }
-  }
-
   &:hover {
     color: var(--highcontrast-picker-font-color-default, var(--mod-picker-font-color-hover, (--spectrum-picker-font-color-hover)));
     background-color: var(--highcontrast-picker-background-color-default, var(--mod-picker-background-color-hover, var(--spectrum-picker-background-color-hover)));
@@ -288,15 +277,24 @@ governing permissions and limitations under the License.
   &:focus-visible,
   &:focus-ring,
   &.is-focused {
+    outline: none;
     background-color: var(--highcontrast-picker-background-color-default, var(--mod-picker-background-color-key-focus, var(--spectrum-picker-background-color-key-focus)));
-
     border-color: var(--highcontrast-picker-border-color-key-focus, var(--mod-picker-border-color-key-focus, var(--spectrum-picker-border-color-key-focus)));
     border-width: var(--mod-picker-border-width, var(--spectrum-picker-border-width));
 
     color: var(--highcontrast-picker-font-color-key-focus, var(--mod-picker-font-color-key-focus, var(--spectrum-picker-font-color-key-focus)));
 
+    /* Focus ring */
+    &::after {
+      border-color: var(--highcontrast-picker-focus-indicator-color, var(--mod-picker-focus-indicator-color, var(--spectrum-picker-focus-indicator-color)));
+    }
+
     &.is-placeholder {
       color: var(--highcontrast-picker-font-color-key-focus, var(--mod-picker-font-color-key-focus, var(--spectrum-picker-font-color-key-focus)));
+    }
+
+    .spectrum-Picker-menuIcon {
+      color: var(--highcontrast-picker-icon-color-key-focus, var(--mod-picker-icon-color-key-focus, var(--spectrum-picker-icon-color-key-focus)));
     }
   }
 
@@ -304,6 +302,7 @@ governing permissions and limitations under the License.
     color: var(--highcontrast-picker-font-color-default-open, var(--mod-picker-font-color-default-open, var(--spectrum-picker-font-color-default-open)));
     background-color: var(--highcontrast-picker-background-default-open, var(--mod-picker-background-color-default-open, var(--spectrum-picker-background-color-default-open)));
     border-color: var(--highcontrast-picker-border-color-default-open, var(--mod-picker-border-default-open, var(--spectrum-picker-border-color-default-open)));
+    
     &:hover {
       color: var(--highcontrast-picker-font-color-default, var(--mod-picker-font-color-hover-open, var(--spectrum-picker-font-color-hover-open)));
       background-color: var(--highcontrast-picker-background-color-hover-open, var(--mod-picker-background-color-hover-open, var(--spectrum-picker-background-color-hover-open)));
@@ -329,7 +328,6 @@ governing permissions and limitations under the License.
     &:hover {
       border-color: var(--highcontrast-picker-border-color-error-hover, var(--mod-picker-border-color-error-hover, var(--spectrum-picker-border-color-error-hover)));
     }
-
 
     &:active {
       border-color: var(--highcontrast-picker-border-color-error-active, var(--mod-picker-border-color-error-active, var(--spectrum-picker-border-color-error-active)));
@@ -441,11 +439,6 @@ governing permissions and limitations under the License.
   margin-block: var(--mod-picker-spacing-top-to-disclosure-icon, var(--spectrum-picker-spacing-top-to-disclosure-icon));
 
   color: var(--highcontrast-picker-icon-color-default, var(--mod-picker-icon-color-default, var(--spectrum-picker-icon-color-default)));
-
-  &:focus-ring,
-  &:focus-visible {
-    color: var(--highcontrast-picker-icon-color-key-focus, var(--mod-picker-icon-color-key-focus, var(--spectrum-picker-icon-color-key-focus)));
-  }
 
   &:active {
     color: var(--highcontrast-picker-icon-color-default, var(--mod-picker-icon-color-active, var(--spectrum-picker-icon-color-active)));

@@ -156,3 +156,12 @@ Invalid.args = {
     MenuStories(MenuStories.args),
   ]
 };
+
+export const Focused = Template.bind({});
+Focused.args = {
+  helpText: "Please select a country",
+  isFocused: true,
+  content: [
+    MenuStories(MenuStories.args),
+  ]
+};

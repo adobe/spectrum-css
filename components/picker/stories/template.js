@@ -74,6 +74,7 @@ export const Template = ({
         [`is-invalid`]: isInvalid,
         [`is-open`]: isOpen,
         [`is-loading`]: isLoading,
+        [`is-focused`]: isFocused,
         ...customClasses.reduce((a, c) => ({ ...a, [c]: true }), {}),
       })}
       ?disabled=${isDisabled}
