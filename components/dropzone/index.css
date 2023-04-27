@@ -12,6 +12,7 @@ governing permissions and limitations under the License.
 
 .spectrum-Dropzone {
   text-align: center;
+  border-color: var(--spectrum-dropzone-border-color);
   border-width: var(--spectrum-dropzone-border-width);
   border-radius: var(--spectrum-dropzone-border-radius);
   padding: var(--spectrum-dropzone-padding);
@@ -19,13 +20,39 @@ governing permissions and limitations under the License.
 
   &.is-dragged {
     border-style: solid;
+    border-color: var(--spectrum-dropzone-border-color-selected-hover);
+    background-color: var(--spectrum-dropzone-background-color-selected-hover);
+
+    .spectrum-IllustratedMessage-illustration {
+      color: var(--spectrum-global-color-blue-400);
+    }
   }
 
   &:focus {
     outline: 0;
     border-style: dashed;
-    &.focus-ring {
-      border-style: solid;
+    border-color: var(--spectrum-dropzone-border-color);
+
+    &:focus {
+      .spectrum-IllustratedMessage-illustration {
+        color: var(--spectrum-global-color-static-gray-500);
+      }
+      &.focus-ring {
+        border-style: solid;
+        border-color: var(--spectrum-dropzone-border-color-selected-hover);
+      }
+      &.is-dragged.focus-ring {
+        .spectrum-IllustratedMessage-illustration {
+          color: var(--spectrum-global-color-blue-400);
+        }
+      }
     }
   }
+}
+
+.spectrum-Dropzone {
+
+  
+
+  
 }
