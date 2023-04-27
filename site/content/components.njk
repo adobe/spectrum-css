@@ -23,9 +23,12 @@ eleventyComputed:
     parent: "Components"
 ---
 
-{% for dep in component.dependencies %}
-<link rel="stylesheet" type="text/css" href='/components/{{ dep }}/index-vars.css' data-dependency={{ dep }} />
-{% endfor %}
+{% if component.dependencies %}
+  {% for dep in component.dependencies %}
+  <link rel="stylesheet" type="text/css" href='/components/{{ dep }}/index-vars.css' data-dependency={{ dep }} />
+  {% endfor %}
+{% endif %}
+
 <link rel="stylesheet" href="/components/{{ component.name | slugify }}/index-vars.css">
 
 <article id="main">
