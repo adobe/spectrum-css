@@ -33,7 +33,7 @@ examples:
     markup: |
       <div class="spectrum-ActionBar is-open">
         <div class="spectrum-Popover spectrum-ActionBar-popover is-open">
-          <button class="spectrum-CloseButton spectrum-CloseButton--sizeM">
+          <button class="spectrum-CloseButton spectrum-CloseButton--sizeM" aria-label="Clear selection">
             <svg class="spectrum-CloseButton-UIIcon spectrum-Icon spectrum-UIIcon-Cross100" focusable="false" aria-hidden="true">
               <use xlink:href="#spectrum-css-icon-Cross100" />
             </svg>
@@ -58,7 +58,7 @@ examples:
 
       <div class="spectrum-ActionBar is-open">
         <div class="spectrum-Popover spectrum-ActionBar-popover is-open">
-          <button class="spectrum-CloseButton spectrum-CloseButton--sizeM">
+          <button class="spectrum-CloseButton spectrum-CloseButton--sizeM" aria-label="Clear selection">
             <svg class="spectrum-CloseButton-UIIcon spectrum-Icon spectrum-UIIcon-Cross100" focusable="false" aria-hidden="true">
               <use xlink:href="#spectrum-css-icon-Cross100" />
             </svg>
@@ -92,7 +92,7 @@ examples:
 
       <div class="spectrum-ActionBar is-open">
         <div class="spectrum-Popover spectrum-ActionBar-popover is-open">
-          <button class="spectrum-CloseButton spectrum-CloseButton--sizeM">
+          <button class="spectrum-CloseButton spectrum-CloseButton--sizeM" aria-label="Clear selection">
             <svg class="spectrum-CloseButton-UIIcon spectrum-Icon spectrum-UIIcon-Cross100" focusable="false" aria-hidden="true">
               <use xlink:href="#spectrum-css-icon-Cross100" />
             </svg>
@@ -127,7 +127,7 @@ examples:
     markup: |
       <div class="spectrum-ActionBar spectrum-ActionBar--emphasized is-open">
         <div class="spectrum-Popover spectrum-ActionBar-popover is-open">
-          <button class="spectrum-CloseButton spectrum-CloseButton--sizeM spectrum-CloseButton--staticWhite">
+          <button class="spectrum-CloseButton spectrum-CloseButton--sizeM spectrum-CloseButton--staticWhite" aria-label="Clear selection">
             <svg class="spectrum-CloseButton-UIIcon spectrum-Icon spectrum-UIIcon-Cross100" focusable="false" aria-hidden="true">
               <use xlink:href="#spectrum-css-icon-Cross100" />
             </svg>
@@ -186,7 +186,7 @@ examples:
 
       <div class="spectrum-ActionBar spectrum-ActionBar--emphasized is-open">
         <div class="spectrum-Popover spectrum-ActionBar-popover is-open">
-          <button class="spectrum-CloseButton spectrum-CloseButton--sizeM spectrum-CloseButton--staticWhite">
+          <button class="spectrum-CloseButton spectrum-CloseButton--sizeM spectrum-CloseButton--staticWhite" aria-label="Clear selection">
             <svg class="spectrum-CloseButton-UIIcon spectrum-Icon spectrum-UIIcon-Cross100" focusable="false" aria-hidden="true">
               <use xlink:href="#spectrum-css-icon-Cross100" />
             </svg>
@@ -221,7 +221,7 @@ examples:
     markup: |
       <div class="spectrum-ActionBar spectrum-ActionBar--flexible is-open">
         <div class="spectrum-Popover spectrum-ActionBar-popover is-open">
-          <button class="spectrum-CloseButton spectrum-CloseButton--sizeM">
+          <button class="spectrum-CloseButton spectrum-CloseButton--sizeM" aria-label="Clear selection">
             <svg class="spectrum-CloseButton-UIIcon spectrum-Icon spectrum-UIIcon-Cross100" focusable="false" aria-hidden="true">
               <use xlink:href="#spectrum-css-icon-Cross100" />
             </svg>
@@ -417,7 +417,7 @@ examples:
 
           <div class="spectrum-ActionBar spectrum-ActionBar--sticky is-open">
             <div class="spectrum-Popover spectrum-ActionBar-popover is-open">
-              <button class="spectrum-CloseButton spectrum-CloseButton--sizeM">
+              <button class="spectrum-CloseButton spectrum-CloseButton--sizeM" aria-label="Clear selection">
                 <svg class="spectrum-CloseButton-UIIcon spectrum-Icon spectrum-UIIcon-Cross100" focusable="false" aria-hidden="true">
                   <use xlink:href="#spectrum-css-icon-Cross100" />
                 </svg>
