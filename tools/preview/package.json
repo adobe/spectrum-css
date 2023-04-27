@@ -8,6 +8,7 @@
   "main": "main.js",
   "scripts": {
     "build": "yarn storybook",
+    "clean": "rimraf storybook-static",
     "new": "yarn workspace @spectrum-css/generator new story",
     "start": "WATCH_MODE=true start-storybook --quiet --config-dir .",
     "storybook": "build-storybook --quiet --config-dir .",
@@ -54,6 +55,7 @@
     "react": "^17.0.0",
     "react-dom": "^17.0.0",
     "react-syntax-highlighter": "^15.5.0",
+    "rimraf": "^5.0.0",
     "source-map-loader": "^1.0.0",
     "webpack": "^4.46.0"
   },
@@ -73,6 +75,11 @@
         "outputs": [
           "{workspaceRoot}/storybook-static"
         ]
+      },
+      "clean": {
+        "inputs": [
+          "{workspaceRoot}/storybook-static"
+        ]
       }
     },
     "implicitDependencies": [
@@ -80,6 +87,7 @@
       "!@spectrum-css/generator"
     ],
     "includedScripts": [
+      "clean",
       "test",
       "test:scope",
       "storybook",
