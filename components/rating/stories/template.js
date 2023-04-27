@@ -35,10 +35,10 @@ export const Template = ({
       })}
       id=${ifDefined(id)}
       @focusin=${() => {
-        updateArgs({ isFocused: !isFocused });
+        updateArgs({ isFocused: true });
       }}
       @focusout=${() => {
-        updateArgs({ isFocused: !isFocused });
+        updateArgs({ isFocused: false });
       }}
     >
       <input
@@ -71,7 +71,7 @@ export const Template = ({
               'is-currentValue': !isDisabled && !isReadOnly && idx === value - 1,
             })}
             @click=${(e) => {
-              updateArgs({ value: idx +1 });
+              updateArgs({ value: idx + 1, isFocused: true });
             }}
           >
             ${Icon({
