@@ -1,6 +1,7 @@
 | Modifiable Custom Properties |
 | --- |
 |`--mod-floating-action-button-size`|
+|`--mod-floating-action-button-border-radius`|
 |`--mod-floating-action-button-padding`|
 |`--mod-floating-action-button-margin`|
 |`--mod-floating-action-button-drop-shadow-x`|
