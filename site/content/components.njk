@@ -118,4 +118,4 @@ eleventyComputed:
     {% endif %}
 </article>
 
-<script src="/components/{{ component.name | slugify }}/enhancement.js"></script>
+<script src="/components/{{ component.name | replace(' ', '') | lower | slugify }}/enhancement.js"></script>
