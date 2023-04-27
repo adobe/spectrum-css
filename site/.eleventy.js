@@ -48,7 +48,13 @@ module.exports = (config) => {
     open: true,
     showAllHosts: true,
   });
-
+  config.addFilter("addTypographyClass", function(url) {
+    if (url.includes("components/")) {
+      return "";
+    } else {
+      return "spectrum-Typography";
+    }
+  });
   /** --------- LIBRARY SETTINGS --------- */
   config.addNunjucksGlobal('WATCH_MODE', process.env.WATCH_MODE);
   const md = fetchMarkdownRules();
