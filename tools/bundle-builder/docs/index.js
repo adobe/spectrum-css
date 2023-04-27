@@ -149,7 +149,7 @@ async function buildDocs_forDep(dep) {
         }
         cb(null, file);
       }))
-      .pipe(gulp.dest('dist/docs/'))
+      .pipe(gulp.dest('dist/'))
       .on('end', resolve)
       .on('error', reject);
   });
@@ -234,7 +234,7 @@ function buildSite_generateIndex() {
 
     return through.obj(readYML, endStream);
   }())
-  .pipe(gulp.dest('dist/docs/'));
+  .pipe(gulp.dest('dist/'));
 };
 
 function buildSite_getData() {
@@ -278,12 +278,12 @@ function buildSite_getData() {
 
 function buildSite_copyResources() {
   return gulp.src(`${dirs.site}/dist/**`)
-    .pipe(gulp.dest('dist/docs/'));
+    .pipe(gulp.dest('dist/'));
 }
 
 function buildSite_copyFreshResources() {
   return gulp.src(`${dirs.site}/resources/**`)
-    .pipe(gulp.dest('dist/docs/'));
+    .pipe(gulp.dest('dist/'));
 }
 
 function buildSite_html() {
@@ -298,12 +298,12 @@ function buildSite_html() {
     .pipe(pug({
       locals: templateData
     }))
-    .pipe(gulp.dest('dist/docs/'));
+    .pipe(gulp.dest('dist/'));
 }
 
 function copySiteWorkflowIcons() {
   return gulp.src(path.join(path.dirname(require.resolve('@adobe/spectrum-css-workflow-icons')), 'spectrum-icons.svg'))
-    .pipe(gulp.dest('dist/docs/img/'));
+    .pipe(gulp.dest('dist/img/'));
 }
 
 let buildSite_pages = gulp.series(

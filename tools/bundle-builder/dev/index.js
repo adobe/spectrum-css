@@ -160,8 +160,8 @@ function watchSite() {
       docs.buildSite_copyFreshResources,
       function injectSiteResources() {
         return gulp.src([
-          'dist/docs/css/**/*.css',
-          'dist/docs/js/**/*.js'
+          'dist/css/**/*.css',
+          'dist/js/**/*.js'
         ])
           .pipe(browserSync.stream());
       }
