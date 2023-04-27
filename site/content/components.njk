@@ -16,6 +16,8 @@ eleventyComputed:
     - table
     - statuslight
     - icon
+    - site
+    - closebutton
     - ...component.dependencies
     - "{{ component.name }}"
   eleventyNavigation:
@@ -29,7 +31,7 @@ eleventyComputed:
   {% endfor %}
 {% endif %}
 
-<link rel="stylesheet" href="/components/{{ component.name | slugify }}/index-vars.css">
+<link rel="stylesheet" href="/components/{{ component.name | replace(' ', '') | lower | slugify }}/index-vars.css">
 
 <article id="main">
     {% include "context-switcher.njk" %}
