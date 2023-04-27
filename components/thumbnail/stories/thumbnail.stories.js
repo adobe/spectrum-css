@@ -15,7 +15,7 @@ export default {
         type: { summary: "string" },
         category: "Component",
       },
-      options: ["xxs", "xs", "s", "m", "l"],
+      options: ["50", "75", "100", "200", "300", "400", "500", "600", "700", "800", "900", "1000"],
       control: "select",
     },
     imageURL: {
@@ -38,7 +38,17 @@ export default {
       control: "text",
     },
     isCover: {
-      name: "Thumbnail should cover the container",
+      name: "Cover",
+      description: "Images will maintain their aspect ratio while filling the entire content box.",
+      type: { name: "boolean" },
+      table: {
+        type: { summary: "boolean" },
+        category: "Component",
+      },
+      control: "boolean",
+    },
+    isDisabled: {
+      name: "Disabled",
       type: { name: "boolean" },
       table: {
         type: { summary: "boolean" },
@@ -49,8 +59,9 @@ export default {
   },
   args: {
     rootClass: "spectrum-Thumbnail",
-    size: "l",
+    size: "500",
     isCover: false,
+    isDisabled: false,
     imageURL: "example-card-landscape.png",
     altText: "Landscape with mountains and lake",
   },
@@ -68,3 +79,15 @@ export default {
 
 export const Default = Template.bind({});
 Default.args = {};
+
+
+export const Layer = Template.bind({});
+Layer.args = {
+  isLayer: true,
+  isSelected: false
+};
+
+export const WithBackground = Template.bind({});
+WithBackground .args = {
+  backgroundColor: 'orange'
+};
