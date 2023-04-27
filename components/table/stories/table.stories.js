@@ -14,12 +14,32 @@ export default {
         category: "Component",
       },
       options: ["s", "m"],
-      control: "select"
+      control: "select",
+    },
+    density: {
+      name: "Density",
+      table: {
+        type: { summary: "string" },
+        category: "Component",
+      },
+      options: ["standard", "compact", "spacious"],
+      control: "select",
+    },
+    isQuiet: {
+      name: "Quiet styling",
+      type: { name: "boolean" },
+      table: {
+        type: { summary: "boolean" },
+        category: "Component",
+      },
+      control: "boolean",
     },
   },
   args: {
     rootClass: "spectrum-Table",
     size: "m",
+    density: "standard",
+    isQuiet: false,
   },
   parameters: {
     actions: {

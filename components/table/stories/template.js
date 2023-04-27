@@ -9,6 +9,8 @@ import "../index.css";
 export const Template = ({
   rootClass = "spectrum-Table",
   size = "m",
+  density = "standard",
+  isQuiet = false,
   customClasses = [],
   id,
   ...globals
@@ -27,6 +29,8 @@ export const Template = ({
       class=${classMap({
         [rootClass]: true,
         [`${rootClass}--size${size?.toUpperCase()}`]: typeof size !== "undefined",
+        [`${rootClass}--${density}`]: density !== "standard",
+        [`${rootClass}--quiet`]: isQuiet,
         ...customClasses.reduce((a, c) => ({ ...a, [c]: true }), {}),
       })}
       id=${ifDefined(id)}>
