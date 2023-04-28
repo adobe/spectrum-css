@@ -17,18 +17,32 @@ governing permissions and limitations under the License.
 
   --spectrum-drop-zone-border-width: var(--spectrum-border-width-200);
   --spectrum-drop-zone-corner-radius: var(--spectrum-corner-radius-100);
+  --spectrum-drop-zone-border-color: var(--spectrum-gray-300);
 
-  --spectrum-drop-zone-heading-font-family: var(--spectrum-heading-sans-serif-font-family);
+  --spectrum-drop-zone-heading-font-family: var(--spectrum-sans-font-family-stack);
   --spectrum-drop-zone-heading-font-weight: var(--spectrum-heading-sans-serif-font-weight);
   --spectrum-drop-zone-heading-font-style: var(--spectrum-heading-sans-serif-font-style);
   --spectrum-drop-zone-heading-font-size: var(--spectrum-drop-zone-title-size);
   --spectrum-drop-zone-heading-line-height: var(--spectrum-heading-line-height);
+  --spectrum-drop-zone-heading-color: var(--spectrum-heading-color);
 
-  --spectrum-drop-zone-body-font-family: var(--spectrum-body-sans-serif-font-family);
+  --spectrum-drop-zone-body-font-family: var(--spectrum-sans-font-family-stack);
   --spectrum-drop-zone-body-font-weight: var(--spectrum-body-sans-serif-font-weight);
   --spectrum-drop-zone-body-font-style: var(--spectrum-body-sans-serif-font-style);
   --spectrum-drop-zone-body-font-size: var(--spectrum-drop-zone-body-size);
   --spectrum-drop-zone-body-line-height: var(--spectrum-body-line-height);
+  --spectrum-drop-zone-body-color: var(--spectrum-body-color);
+
+
+  /* These need to be updated but rgba values aren't present since they reference other variables 
+  The references are about 4 levels deep with this one and they're different for light/dark and spectrum/express */
+  --spectrum-drop-zone-background-color: var(--spectrum-drop-zone-background-color);
+
+  --spectrum-drop-zone-border-color-hover: var(--spectrum-accent-visual-color);
+  --spectrum-drop-zone-illustration-color: var(--spectrum-neutral-visual-color);
+  --spectrum-drop-zone-illustration-color-hover: var(--spectrum-accent-visual-color);
+
+
 
 
   /* cjk language support */
@@ -44,7 +58,7 @@ governing permissions and limitations under the License.
   inline-size: var(--mod-drop-zone-width, var(--spectrum-drop-zone-width));
   padding: var(--mod-drop-zone-padding, var(--spectrum-drop-zone-padding));
   text-align: center;
-  border-color: var(--spectrum-dropzone-border-color);
+  border-color: var(--spectrum-drop-zone-border-color, var(--spectrum-drop-zone-border-color));
   border-width: var(--mod-drop-zone-border-width, var(--spectrum-drop-zone-border-width));
   border-radius: var(--mod-drop-zone-corner-radius, var(--spectrum-drop-zone-corner-radius));
   border-style: dashed;
@@ -54,6 +68,7 @@ governing permissions and limitations under the License.
   }
 
   .spectrum-IllustratedMessage-illustration {
+    color: var(--spectrum-drop-zone-illustration-color);
     margin-block-end: var(--mod-drop-zone-illustration-to-heading, var(--spectrum-drop-zone-illustration-to-heading));
   }
 
@@ -64,6 +79,7 @@ governing permissions and limitations under the License.
     font-style: var(--mod-drop-zone-heading-font-style, var(--spectrum-drop-zone-heading-font-style));
     font-size: var(--mod-drop-zone-heading-font-size, var(--spectrum-drop-zone-heading-font-size));
     line-height: var(--mod-drop-zone-heading-line-height, var(--spectrum-drop-zone-heading-line-height));
+    color: var(--mod-drop-zone-heading-color, var(--spectrum-drop-zone-heading-color));
   }
 
   .spectrum-IllustratedMessage-description {
@@ -72,36 +88,23 @@ governing permissions and limitations under the License.
     font-style: var(--mod-drop-zone-body-font-style, var(--spectrum-drop-zone-body-font-style));
     font-size: var(--mod-drop-zone-body-font-size, var(--spectrum-drop-zone-body-font-size));
     line-height: var(--mod-drop-zone-body-line-height, var(--spectrum-drop-zone-body-line-height));
+    color: var(--mod-drop-zone-body-color, var(--spectrum-drop-zone-body-color));
   }
 
   &.is-dragged {
     border-style: solid;
-    border-color: var(--spectrum-dropzone-border-color-selected-hover);
-    background-color: var(--spectrum-dropzone-background-color-selected-hover);
+    border-color: var(--mod-drop-zone-border-color-hover, var(--spectrum-drop-zone-border-color-hover));
+    background-color: var(--spectrum-drop-zone-background-color);
 
     .spectrum-IllustratedMessage-illustration {
-      color: var(--spectrum-global-color-blue-400);
+      color: var(--mod-drop-zone-illustration-color-hover, var(--spectrum-drop-zone-illustration-color-hover));
     }
   }
 
-  &:focus {
+  &:focus,
+  &:focus-within {
     outline: 0;
-    border-style: dashed;
-    border-color: var(--spectrum-dropzone-border-color);
-
-    &:focus {
-      .spectrum-IllustratedMessage-illustration {
-        color: var(--spectrum-global-color-static-gray-500);
-      }
-      &.focus-ring {
-        border-style: solid;
-        border-color: var(--spectrum-dropzone-border-color-selected-hover);
-      }
-      &.is-dragged.focus-ring {
-        .spectrum-IllustratedMessage-illustration {
-          color: var(--spectrum-global-color-blue-400);
-        }
-      }
-    }
+    border-style: solid;
+    border-color: var(--mod-drop-zone-border-color-hover, var(--spectrum-drop-zone-border-color-hover));
   }
 }
