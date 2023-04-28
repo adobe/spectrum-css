@@ -35,7 +35,7 @@ function serve() {
   }
 
   browserSync({
-    startPath: 'docs/index.html',
+    startPath: 'index.html',
     server: `${process.cwd()}/dist/`,
     notify: process.env.BROWSERSYNC_NOTIFY === 'true' ? true : false,
     open: process.env.BROWSERSYNC_OPEN === 'true' ? true : false,
