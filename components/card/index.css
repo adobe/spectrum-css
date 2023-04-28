@@ -93,34 +93,15 @@ governing permissions and limitations under the License.
 
   text-decoration: none;
 
-  &::after {
-    content: '';
-    block-size: calc(100% + (var(--mod-card-focus-indicator-gap, var(--spectrum-card-focus-indicator-gap)) * 2));
-    inline-size: calc(100% + (var(--mod-card-focus-indicator-gap, var(--spectrum-card-focus-indicator-gap)) * 2));
-    position: absolute;
-    inset-inline-start: 0;
-    inset-inline-end: 0;
-    inset-block-start: 0;
-    border-style: solid;
-    border-color: transparent;
-    border-width: 0;
-    border-radius: calc(var(--mod-card-corner-radius, var(--spectrum-card-corner-radius))
-      + var(--mod-card-focus-indicator-gap, var(--spectrum-card-focus-indicator-gap))
-      + var(--mod-card-focus-indicator-width, var(--spectrum-card-focus-indicator-width)));
-    margin-block-start: calc((var(--mod-card-focus-indicator-gap, var(--spectrum-card-focus-indicator-gap))
-                        + var(--mod-card-focus-indicator-width, var(--spectrum-card-focus-indicator-width)))
-                        * -1);
-    margin-inline-start: calc((var(--mod-card-focus-indicator-gap, var(--spectrum-card-focus-indicator-gap))
-                        + var(--mod-card-focus-indicator-width, var(--spectrum-card-focus-indicator-width)))
-                        * -1);
-  }
-
   &:focus, 
   &.is-focused {
     outline: none;
-    &::after {
-      border-width: var(--mod-card-focus-indicator-width, var(--spectrum-card-focus-indicator-width));
-      border-color: var(--mod-card-focus-indicator-color, var(--spectrum-card-focus-indicator-color));
+
+    .spectrum-Card-coverPhoto, .spectrum-Card-preview {
+      &::after {
+        border-width: var(--mod-card-focus-indicator-width, var(--spectrum-card-focus-indicator-width));
+        border-color: var(--mod-card-focus-indicator-color, var(--spectrum-card-focus-indicator-color));
+      }
     }
   }
 
@@ -150,6 +131,30 @@ governing permissions and limitations under the License.
       opacity: 1;
       pointer-events: all;
     }
+  }
+}
+
+.spectrum-Card-coverPhoto, .spectrum-Card-preview {
+  &::after {
+    content: '';
+    block-size: calc(100% + (var(--mod-card-focus-indicator-gap, var(--spectrum-card-focus-indicator-gap)) * 2));
+    inline-size: calc(100% + (var(--mod-card-focus-indicator-gap, var(--spectrum-card-focus-indicator-gap)) * 2));
+    position: absolute;
+    inset-inline-start: 0;
+    inset-inline-end: 0;
+    inset-block-start: 0;
+    border-style: solid;
+    border-color: transparent;
+    border-width: 0;
+    border-radius: calc(var(--mod-card-corner-radius, var(--spectrum-card-corner-radius))
+      + var(--mod-card-focus-indicator-gap, var(--spectrum-card-focus-indicator-gap))
+      + var(--mod-card-focus-indicator-width, var(--spectrum-card-focus-indicator-width)));
+    margin-block-start: calc((var(--mod-card-focus-indicator-gap, var(--spectrum-card-focus-indicator-gap))
+                        + var(--mod-card-focus-indicator-width, var(--spectrum-card-focus-indicator-width)))
+                        * -1);
+    margin-inline-start: calc((var(--mod-card-focus-indicator-gap, var(--spectrum-card-focus-indicator-gap))
+                        + var(--mod-card-focus-indicator-width, var(--spectrum-card-focus-indicator-width)))
+                        * -1);
   }
 }
 
@@ -185,6 +190,7 @@ governing permissions and limitations under the License.
 }
 
 .spectrum-Card-coverPhoto {
+  position: relative;
   block-size: var(--mod-card-preview-minimum-height, var(--spectrum-card-preview-minimum-height));
   box-sizing: border-box;
 
