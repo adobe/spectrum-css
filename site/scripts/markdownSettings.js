@@ -44,7 +44,7 @@ module.exports = function fetchMarkdownRules() {
 
   md.use(require('markdown-it-attrs'));
   md.use(mdAnchor, {
-    level: [2, 4],
+    level: [2, 3, 4],
     permalink: mdAnchor.permalink.headerLink({ safariReaderFix: true }),
     permalinkClass: 'spectrum-BigSubtleLink',
     permalinkHref: (slug, state) => {
