@@ -1,0 +1,39 @@
+<header class="spectrum-CSSComponent-sectionHeading" id="{{ section.name | slugify }}">
+  <h2 class="spectrum-Heading spectrum-Heading--sizeM">
+    <a href="#{{ section.name | slugify }}" class="spectrum-BigSubtleLink">
+      {{section.name}}
+    </a>
+  </h2>
+  <hr class="spectrum-Divider spectrum-Divider--large"/>
+</header>
+{% if section.description -%}
+    <div class="spectrum-Typography">
+      <section class="spectrum-CSSsection-description spectrum-Body spectrum-Body--sizeM">
+        {{ section.description | markdownify | safe }}
+      </section>
+    </div>
+  {%- endif %}
+  {% if section.details -%}
+    <div class="spectrum-Typography">
+      <section class="spectrum-CSSsection-description spectrum-Body spectrum-Body--sizeM">
+        {{ section.details | markdownify | safe }}
+      </section>
+    </div>
+  {%- endif %}
+  {% if section.markup -%}
+    <section class="spectrum-CSSsection-container">
+      <div class="spectrum-CSSsection-section">
+        {{ section.markup | safe }}
+      </div>
+      <div class="spectrum-CSSsection-markup">
+        {% if section.markup.split('\n').length > 2 %}
+          <a href="#" class="js-markup-toggle spectrum-CSSsection-markupToggle spectrum-Link">Show markup</a>
+        {% endif %}
+        <bdo dir="ltr">
+          <pre class="spectrum-Code spectrum-Code--sizeXS">
+            <code class="language-markup">{% highlight "html" %}{{ section.markup | safe }}{% endhighlight %}</code>
+          </pre>
+        </bdo>
+      </div>
+    </section>
+  {% endif %}

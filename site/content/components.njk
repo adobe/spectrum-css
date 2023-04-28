@@ -116,6 +116,12 @@ eleventyComputed:
             </tbody>
         </table>
     {% endif %}
+    {% if component.sections %}
+        {% set section = { name: '', id: '' } %}
+        {% for section in component.sections %}
+            {% include "section.njk" %}
+        {% endfor %}
+    {% endif %}
 </article>
 
 <script src="/components/{{ component.name | replace(' ', '') | lower | slugify }}/enhancement.js"></script>
