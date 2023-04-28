@@ -5,12 +5,12 @@
 |`--mod-card-corner-radius`|
 |`--mod-card-border-color`|
 |`--mod-spectrum-card-background-color`|
+|`--mod-card-focus-indicator-gap`|
 |`--mod-card-focus-indicator-width`|
 |`--mod-card-focus-indicator-color`|
 |`--mod-card-border-color-hover`|
 |`--mod-card-border-color-selected`|
 |`--mod-card-quiet-background-color`|
-|`--mod-card-focus-indicator-gap`|
 |`--mod-card-actions-drop-shadow-x`|
 |`--mod-card-actions-drop-shadow-y`|
 |`--mod-card-actions-drop-shadow-blur`|

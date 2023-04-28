@@ -93,16 +93,37 @@ governing permissions and limitations under the License.
 
   text-decoration: none;
 
+  &::after {
+    content: '';
+    block-size: calc(100% + (var(--mod-card-focus-indicator-gap, var(--spectrum-card-focus-indicator-gap)) * 2));
+    inline-size: calc(100% + (var(--mod-card-focus-indicator-gap, var(--spectrum-card-focus-indicator-gap)) * 2));
+    position: absolute;
+    inset-inline-start: 0;
+    inset-inline-end: 0;
+    inset-block-start: 0;
+    border-style: solid;
+    border-color: transparent;
+    border-width: 0;
+    border-radius: calc(var(--mod-card-corner-radius, var(--spectrum-card-corner-radius))
+      + var(--mod-card-focus-indicator-gap, var(--spectrum-card-focus-indicator-gap))
+      + var(--mod-card-focus-indicator-width, var(--spectrum-card-focus-indicator-width)));
+    margin-block-start: calc((var(--mod-card-focus-indicator-gap, var(--spectrum-card-focus-indicator-gap))
+                        + var(--mod-card-focus-indicator-width, var(--spectrum-card-focus-indicator-width)))
+                        * -1);
+    margin-inline-start: calc((var(--mod-card-focus-indicator-gap, var(--spectrum-card-focus-indicator-gap))
+                        + var(--mod-card-focus-indicator-width, var(--spectrum-card-focus-indicator-width)))
+                        * -1);
+  }
+
   &:focus, 
   &.is-focused {
     outline: none;
 
-    .spectrum-Card-coverPhoto, .spectrum-Card-preview {
-      &::after {
-        border-width: var(--mod-card-focus-indicator-width, var(--spectrum-card-focus-indicator-width));
-        border-color: var(--mod-card-focus-indicator-color, var(--spectrum-card-focus-indicator-color));
-      }
+    &::after {
+      border-width: var(--mod-card-focus-indicator-width, var(--spectrum-card-focus-indicator-width));
+      border-color: var(--mod-card-focus-indicator-color, var(--spectrum-card-focus-indicator-color));
     }
+    
   }
 
   &:hover {
@@ -131,30 +152,6 @@ governing permissions and limitations under the License.
       opacity: 1;
       pointer-events: all;
     }
-  }
-}
-
-.spectrum-Card-coverPhoto, .spectrum-Card-preview {
-  &::after {
-    content: '';
-    block-size: calc(100% + (var(--mod-card-focus-indicator-gap, var(--spectrum-card-focus-indicator-gap)) * 2));
-    inline-size: calc(100% + (var(--mod-card-focus-indicator-gap, var(--spectrum-card-focus-indicator-gap)) * 2));
-    position: absolute;
-    inset-inline-start: 0;
-    inset-inline-end: 0;
-    inset-block-start: 0;
-    border-style: solid;
-    border-color: transparent;
-    border-width: 0;
-    border-radius: calc(var(--mod-card-corner-radius, var(--spectrum-card-corner-radius))
-      + var(--mod-card-focus-indicator-gap, var(--spectrum-card-focus-indicator-gap))
-      + var(--mod-card-focus-indicator-width, var(--spectrum-card-focus-indicator-width)));
-    margin-block-start: calc((var(--mod-card-focus-indicator-gap, var(--spectrum-card-focus-indicator-gap))
-                        + var(--mod-card-focus-indicator-width, var(--spectrum-card-focus-indicator-width)))
-                        * -1);
-    margin-inline-start: calc((var(--mod-card-focus-indicator-gap, var(--spectrum-card-focus-indicator-gap))
-                        + var(--mod-card-focus-indicator-width, var(--spectrum-card-focus-indicator-width)))
-                        * -1);
   }
 }
 
@@ -291,6 +288,21 @@ governing permissions and limitations under the License.
   z-index: 1;
 }
 
+.spectrum-Card--quiet {
+  &:focus,
+  &.is-focused {
+    &::after {
+      border-width: 0;
+    }
+    .spectrum-Card-preview {
+      &:before {
+        border-width: var(--mod-card-focus-indicator-width, var(--spectrum-card-focus-indicator-width));
+        border-color: var(--mod-card-focus-indicator-color, var(--spectrum-card-focus-indicator-color));
+      }
+    }
+  }
+}     
+
 .spectrum-Card--quiet,
 .spectrum-Card--gallery {
   block-size: 100%;
@@ -318,14 +330,24 @@ governing permissions and limitations under the License.
      * affect the layout of the content within the preview. */
     &:before {
       content: '';
+      block-size: calc(100% + var(--mod-card-focus-indicator-gap, var(--spectrum-card-focus-indicator-gap)) * 2);
+      inline-size: calc(100% + var(--mod-card-focus-indicator-gap, var(--spectrum-card-focus-indicator-gap)) * 2);
       position: absolute;
-      inset-block-start: 0;
       inset-inline-start: 0;
-      inline-size: 100%;
-      block-size: 100%;
-      box-sizing: border-box;
-      border-radius: inherit;
-      border: var(--mod-card-border-width, var(--spectrum-card-border-width)) solid transparent;
+      inset-inline-end: 0;
+      inset-block-start: 0;
+      border-style: solid;
+      border-color: transparent;
+      border-width: 0;
+      border-radius: calc(var(--mod-card-corner-radius, var(--spectrum-card-corner-radius))
+        + var(--mod-card-focus-indicator-gap, var(--spectrum-card-focus-indicator-gap))
+        + var(--mod-card-focus-indicator-width, var(--spectrum-card-focus-indicator-width)));
+      margin-block-start: calc((var(--mod-card-focus-indicator-gap, var(--spectrum-card-focus-indicator-gap))
+                          + var(--mod-card-focus-indicator-width, var(--spectrum-card-focus-indicator-width)))
+                          * -1);
+      margin-inline-start: calc((var(--mod-card-focus-indicator-gap, var(--spectrum-card-focus-indicator-gap))
+                          + var(--mod-card-focus-indicator-width, var(--spectrum-card-focus-indicator-width)))
+                          * -1);
     }
   }
 
@@ -333,18 +355,6 @@ governing permissions and limitations under the License.
     border-color: transparent;
     .spectrum-Card-preview {
       background-color: var(--mod-card-quiet-background-color-hover, var(--spectrum-card-quiet-background-color-hover));
-    }
-  }
-
-  &.is-selected,
-  &:focus-ring {
-    border-color: transparent;
-    box-shadow: none;
-    .spectrum-Card-preview {
-      &:before {
-        border-color: var(--mod-card-focus-indicator-color, var(--spectrum-card-focus-indicator-color));
-        box-shadow: 0 0 0 1px var(--mod-card-focus-indicator-color, var(--spectrum-card-focus-indicator-color));
-      }
     }
   }
 
