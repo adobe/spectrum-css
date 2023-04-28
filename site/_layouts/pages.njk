@@ -24,7 +24,7 @@ layout: layout.njk
         {% include "sidenav.njk" %}
         <div class="spectrum-Site-mainContent">
             <div class="spectrum-Site-mainContainer">
-                <div class="spectrum-Site-page" id="main">
+                <div class="spectrum-Site-page {{ page.url | addTypographyClass }}" id="main">
                     {{ content | safe }}
                 </div>
             </div>
