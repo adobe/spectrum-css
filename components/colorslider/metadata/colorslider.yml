@@ -1,6 +1,9 @@
 name: Color Slider
 status: Verified
 SpectrumSiteSlug: https://spectrum.adobe.com/page/color-slider/
+SWC:
+  url: https://opensource.adobe.com/spectrum-web-components/components/color-slider/
+  tag: sp-color-slider
 description: |
   - Set the value of the ColorHandle component to the selected color
   - The `.spectrum-ColorHandle` should be moved with the `transform: translateX(x)` style property as the slider is dragged
@@ -138,7 +141,7 @@ examples:
 
   - id: color-slider
     name: Full example
-    demoClassName: spectrum-CSSExample-example--spacious
+    demoClassName: site-Example-preview--spacious
     markup: |
       <div class="spectrum-ColorSlider" style="position: relative; top: 80px;">
         <div class="spectrum-ColorSlider-checkerboard" role="presentation">
@@ -181,7 +184,7 @@ examples:
 
   - id: color-slider
     name: Full example (alpha)
-    demoClassName: spectrum-CSSExample-example--spacious
+    demoClassName: site-Example-preview--spacious
     markup: |
       <div class="spectrum-ColorSlider" style="position: relative; top: 80px;">
         <div class="spectrum-ColorSlider-checkerboard" role="presentation">

@@ -5,6 +5,8 @@ description: |
 
   In addition, the previous deprecated Typogaphy implementations ([legacy](typography-legacy.html), [depreacted](typography-deprecated.html)) are still shipped, but their usage is discouraged.
 SpectrumSiteSlug: https://spectrum.adobe.com/page/typography/
+SWC:
+  url: https://opensource.adobe.com/spectrum-web-components/tools/styles/#typography
 examplesHeading: Components
 examples:
   - id: heading-m
@@ -95,9 +97,9 @@ sections:
       | `~.spectrum-Body3~`    | `.spectrum-Body.spectrum-Body--sizeM`    |
       | `~.spectrum-Body4~`    | `.spectrum-Body.spectrum-Body--sizeS`    |
       | `~.spectrum-Body5~`    | `.spectrum-Body.spectrum-Body--sizeXS`   |
-  
-  
-  
+
+
+
       ### Detail
 
       | Deprecated Classname     | New Classname                                     |

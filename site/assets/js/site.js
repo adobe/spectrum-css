@@ -9,8 +9,42 @@ the License is distributed on an "AS IS" BASIS, WITHOUT WARRANTIES OR REPRESENTA
 OF ANY KIND, either express or implied. See the License for the specific language
 governing permissions and limitations under the License.
 */
-/* eslint-disable no-unused-vars */
-/* global document, window, Element, loadIcons, URLSearchParams */
+
+const SP_THEME_COLOR_KEY = 'theme:color';
+const SP_THEME_SCALE_KEY = 'theme:scale';
+const SP_THEME_CONTEXT_KEY = 'theme:context';
+const SP_THEME_DIR_KEY = 'theme:dir';
+
+const COLOR_FALLBACK = matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light';
+const SCALE_FALLBACK = matchMedia('(max-width: 700px) and (hover: none) and (pointer: coarse), (max-height: 700px) and (hover: none) and (pointer: coarse)').matches ? 'large' : 'medium';
+const CONTEXT_FALLBACK = 'spectrum';
+
+const DIR_FALLBACK = 'ltr';
+const DEFAULT_COLOR = (
+    window.localStorage
+        ? localStorage.getItem(SP_THEME_COLOR_KEY) || COLOR_FALLBACK
+        : COLOR_FALLBACK
+);
+const DEFAULT_SCALE = (
+    window.localStorage
+        ? localStorage.getItem(SP_THEME_SCALE_KEY) || SCALE_FALLBACK
+        : SCALE_FALLBACK
+);
+const DEFAULT_THEME = (
+    window.localStorage
+        ? localStorage.getItem(SP_THEME_CONTEXT_KEY) || CONTEXT_FALLBACK
+        : CONTEXT_FALLBACK
+);
+const DEFAULT_DIR = (
+    window.localStorage
+        ? localStorage.getItem(SP_THEME_DIR_KEY) || DIR_FALLBACK
+        : DIR_FALLBACK
+);
+
+matchMedia('screen and (max-width: 960px)').addEventListener('change', (event) => {
+  if (!event.matches) return;
+  // @todo display nav content when this is false; otherwise show the drawer
+});
 
 function setPickerValue(picker, value, label) {
   const menu = picker.nextElementSibling.querySelector(".spectrum-Menu");

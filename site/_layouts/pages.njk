@@ -1,38 +1,40 @@
 ---
 layout: layout.njk
+dependencies:
+    - actionbutton
+    - icon
+    - underlay
+    - divider
+    - sidenav
 ---
-{% block head %}
-    {% for dep in ['actionbutton', 'icon', 'underlay', 'divider'] %}
-    <link rel="stylesheet" type="text/css" href='/components/{{ dep }}/index-vars.css' data-dependency={{ dep }} />
-    {% endfor %}
-{% endblock %}
 
 {% block content %}
-<div class="spectrum-Site">
-    <button tabindex="1" class="spectrum-ActionButton spectrum-ActionButton--sizeL skip-to-content-link" href="#main">
-        Skip to content
-    </button>
-    <div class="spectrum-Site-overlay" id="site-overlay"></div>
-    <div class="spectrum-Site-header">
+<button tabindex="-1" class="spectrum-ActionButton spectrum-ActionButton--sizeL site-SkipToContent-link" href="#main">
+    Skip to content
+</button>
+<div class="site">
+    <div class="site-Overlay" id="site-Overlay"></div>
+    <div class="site-Header">
         <button class="spectrum-ActionButton spectrum-ActionButton--sizeM spectrum-ActionButton--quiet" is-selected="is-selected" id="site-menu">
             <svg class="spectrum-Icon spectrum-Icon--sizeM" focusable="false" aria-hidden="true" aria-label="Show Menu">
                 <use xlink:href="#spectrum-icon-18-ShowMenu"></use>
             </svg>
         </button>
     </div>
-    <div class="spectrum-Site-content">
+    <div class="site-Content">
         {% include "sidenav.njk" %}
-        <div class="spectrum-Site-mainContent">
-            <div class="spectrum-Site-mainContainer">
-                <div class="spectrum-Site-page" id="main">
+        <div class="site-Main-content">
+            {% include "context-switcher.njk" %}
+            <div class="site-Main-container">
+                <div class="site-Page" id="main">
                     {{ content | safe }}
                 </div>
             </div>
             {% if not process.env.VRT -%}
-                <div class="spectrum-Site-footerContainer">
-                    <hr class="spectrum-Divider spectrum-Divider--small" hidden/>
-                    <div id="footer_global"></div>
-                </div>
+            <div class="site-Footer-container">
+                <hr class="spectrum-Divider spectrum-Divider--small" hidden/>
+                <div id="footer_global"></div>
+            </div>
             {%- endif %}
         </div>
     </div>
@@ -41,5 +43,4 @@ layout: layout.njk
 
 {% block foot %}
     <div class="spectrum-Underlay" id="spectrum-underlay"></div>
-    <script>{{ component.renderScripts | safe }}</script>
 {% endblock %}

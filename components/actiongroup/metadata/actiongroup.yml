@@ -1,5 +1,8 @@
 name: Action Group
 SpectrumSiteSlug: https://spectrum.adobe.com/page/action-group/
+SWC:
+  url: https://opensource.adobe.com/spectrum-web-components/components/action-group/
+  tag: sp-action-group
 sections:
 - name: Custom Properties API
   description: |
@@ -423,6 +426,3 @@ examples:
           </div>
         </div>
       </div>
-
-
-

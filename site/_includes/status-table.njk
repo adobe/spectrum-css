@@ -1,0 +1,36 @@
+{% css "component" %}
+    @import url("/components/table/index-vars.css");
+    @import url("/components/statuslight/index-vars.css");
+{% endcss %}
+
+<table class="spectrum-Table spectrum-Table--sizeM spectrum-Table--quiet">
+    <tbody>
+    {% if component.status -%}
+        <tr class="spectrum-Table-row">
+            <th class="spectrum-Table-headCell">Component status</th>
+            <td class="spectrum-Table-cell">
+                <span class="spectrum-StatusLight spectrum-StatusLight--sizeM spectrum-StatusLight--{{ component.status | getStatusLight }}">{{ component.status }}</span>
+            </td>
+        </tr>
+    {%- endif %}
+    {% if component.releaseDate -%}
+        <tr class="spectrum-Table-row">
+            <th class="spectrum-Table-headCell">Last released</th>
+            <td class="spectrum-Table-cell">{{ component.releaseDate }}</td>
+        </tr>
+    {%- endif %}
+    {% if component.packageName -%}
+        <tr class="spectrum-Table-row">
+            <th class="spectrum-Table-headCell">Current version</th>
+            <td class="spectrum-Table-cell"><bdo dir="ltr">{% if component.packageName %}{{ component.packageName }}@{% endif %}{% if component.version %}{{ component.version }}{% endif %}</bdo></td>
+        </tr>
+    {%- endif %}
+    </tbody>
+    <tfoot class="spectrum-Table-foot">
+        <tr class="spectrum-Table-row">
+            <td class="spectrum-Table-cell spectrum-Table-cell--alignCenter" colspan="2">
+                <span class="spectrum-StatusLight spectrum-StatusLight--sizeM spectrum-StatusLight--{% if component.migrated %}positive{% else %}negative{% endif %}">{% if component.migrated %}Migrated{% else %}Not yet migrated{% endif %} to @adobe/spectrum-tokens</span>
+            </td>
+        </tr>
+    </tfoot>
+</table>

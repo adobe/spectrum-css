@@ -1,5 +1,8 @@
 name: Switch
 SpectrumSiteSlug: https://spectrum.adobe.com/page/switch/
+SWC:
+  url: https://opensource.adobe.com/spectrum-web-components/components/switch/
+  tag: sp-switch
 sections:
   - name: Custom Properties API
     description: |
@@ -9,7 +12,7 @@ sections:
         ### Component renamed
         Toggle is now known as Switch. Replace all `.spectrum-ToggleSwitch*` classnames with `.spectrum-Switch*`.
         ### T-shirt sizing
-        Switch now supports t-shirt sizing and requires that you specify the size by adding a .spectrum-Switch--size* class. The default size is "medium". 
+        Switch now supports t-shirt sizing and requires that you specify the size by adding a .spectrum-Switch--size* class. The default size is "medium".
         ### Quiet and emphasized
         Spectrum has chosen the variant previously known as `quiet` to be the default and has added an `emphasized` variant with the same styles as the previous default.
         If you were using the `quiet` variant, the `.spectrum-Switch--quiet` class is no longer required and can be removed.

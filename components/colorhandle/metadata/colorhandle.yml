@@ -1,27 +1,30 @@
 name: Color Handle
 status: Verified
 SpectrumSiteSlug: https://spectrum.adobe.com/page/color-area/
+SWC:
+  url: https://opensource.adobe.com/spectrum-web-components/components/color-handle/
+  tag: sp-color-handle
 description: |
   - Set the `--spectrum-picked-color` custom property to the CSS color value you want to show
   - Apply `.is-open` to `.spectrum-ColorLoupe` display the loupe
 examples:
   - id: color-area
     name: Standard
-    demoClassName: spectrum-CSSExample-example--spacious
+    demoClassName: site-Example-preview--spacious
     markup: |
       <div class="spectrum-ColorHandle" style="--spectrum-picked-color: rgba(255, 0, 0, 0.5); position: absolute; inset-block: 50%; inset-inline: 50%;">
         <div class="spectrum-ColorHandle-inner"></div>
       </div>
   - id: color-area
     name: Disabled
-    demoClassName: spectrum-CSSExample-example--spacious
+    demoClassName: site-Example-preview--spacious
     markup: |
       <div class="spectrum-ColorHandle is-disabled" style="--spectrum-picked-color: rgba(255, 0, 0, 0.5); position: absolute; inset-block: 50%; inset-inline: 50%">
         <div class="spectrum-ColorHandle-inner"></div>
       </div>
   - id: color-area
     name: Open
-    demoClassName: spectrum-CSSExample-example--spacious
+    demoClassName: site-Example-preview--spacious
     markup: |
       <div class="spectrum-ColorHandle" style="--spectrum-picked-color: rgba(255, 0, 0, 0.5); position: absolute; inset-block: 75%; inset-inline: 50%">
         <div class="spectrum-ColorHandle-inner"></div>

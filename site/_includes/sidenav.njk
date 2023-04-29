@@ -1,9 +1,3 @@
-{% block head %}
-    {% for dep in ['sidenav', 'typography', 'textfield', 'search', 'icon', 'clearbutton', 'popover', 'menu', 'illustratedmessage'] %}
-    <link rel="stylesheet" type="text/css" href='/components/{{ dep }}/index-vars.css' data-dependency={{ dep }} />
-    {% endfor %}
-{% endblock %}
-
 {% macro renderNavListItem(entry) -%}
   <li class="spectrum-SideNav-item {{ 'is-selected' if entry.url == page.url }}">
     <a href="{{ entry.url }}" class="spectrum-SideNav-itemLink">
@@ -22,14 +16,26 @@
   </li>
 {%- endmacro %}
 
-<div class="spectrum-Site-sideBar" id="site-sidebar">
-  <a class="spectrum-Site-sideBarHeader" href="/">
+{% css "component" %}
+    @import url("/components/typography/index-vars.css");
+    @import url("/components/search/index-vars.css");
+    @import url("/components/textfield/index-vars.css");
+    @import url("/components/icon/index-vars.css");
+    @import url("/components/clearbutton/index-vars.css");
+    @import url("/components/popover/index-vars.css");
+    @import url("/components/menu/index-vars.css");
+    @import url("/components/illustratedmessage/index-vars.css");
+    @import url("/components/sidenav/index-vars.css");
+{% endcss %}
+
+<div class="site-SideBar" id="site-sidebar">
+  <a class="site-SideBar-header" href="/">
     {% include "logo.njk" %}
-    <h2 class="spectrum-Site-title spectrum-Heading spectrum-Heading--sizeM">Spectrum CSS</h2>
+    <h2 class="site-title spectrum-Heading spectrum-Heading--sizeM">Spectrum CSS</h2>
   </a>
 
-  <div id="site-search">
-    <div class="spectrum-Site-search" role="search">
+  <div id="site-Search">
+    <div class="site-Search" role="search">
       <form class="spectrum-Search js-form" role="combobox" aria-expanded="false" aria-owns="search-results-listbox" aria-haspopup="listbox">
         <div class="spectrum-Textfield spectrum-Search-textfield">
           <svg class="spectrum-Icon spectrum-Icon--sizeM spectrum-Textfield-icon spectrum-Search-icon" focusable="false" aria-hidden="true">
@@ -45,11 +51,11 @@
           </div>
         </button>
       </form>
-      <div class="spectrum-Popover spectrum-Site-searchResults js-popover">
+      <div class="spectrum-Popover site-Search-results js-popover">
         <ul class="spectrum-Menu js-searchResults" id="search-results-listbox" role="listbox" aria-label="Search">
         </ul>
-        <div class="spectrum-IllustratedMessage spectrum-Site-noSearchResults js-searchError">
-          <div class="spectrum-IllustratedMessage spectrum-Site-noSearchResults">
+        <div class="spectrum-IllustratedMessage site-Search-results--none js-searchError">
+          <div class="spectrum-IllustratedMessage site-Search-results--none">
             <h2 class="spectrum-Heading spectrum-Heading--pageTitle spectrum-IllustratedMessage-heading">No results found</h2>
             <p class="spectrum-Body--secondary spectrum-IllustratedMessage-description"><em>Try another search term.</em></p>
           </div>
@@ -58,7 +64,7 @@
     </div>
   </div>
 
-  <div class="u-scrollable spectrum-Site-nav">
+  <div class="is-scrollable site-Nav">
     <nav>
         <ul class="spectrum-SideNav spectrum-SideNav--multiLevel">
           {% for entry in collections.all | eleventyNavigation -%}
@@ -66,7 +72,7 @@
           {%- endfor %}
         </ul>
     </nav>
-    <nav class="spectrum-Site-bottomNav">
+    <nav class="site-Nav-bottom">
       <ul class="spectrum-SideNav">
         <li class="spectrum-SideNav-item">
           <a class="spectrum-SideNav-itemLink" href="https://spectrum.adobe.com" rel="noopener">
@@ -75,9 +81,6 @@
             </svg>
             Spectrum
           </a>
-        </li>
-        <li class="spectrum-SideNav-item">
-          <a class="spectrum-SideNav-itemLink" href="../preview" rel="noopener">Component preview</a>
         </li>
         <li class="spectrum-SideNav-item">
           <a class="spectrum-SideNav-itemLink" href="https://opensource.adobe.com/spectrum-web-components/" rel="noopener">

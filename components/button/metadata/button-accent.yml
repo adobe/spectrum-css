@@ -2,6 +2,9 @@ name: Button - Accent
 status: Verified
 description: The call to action button communicates strong emphasis and is reserved for encouraging critical actions.
 SpectrumSiteSlug: https://spectrum.adobe.com/page/button/#Call-to-action-variant
+SWC:
+  url: https://opensource.adobe.com/spectrum-web-components/components/button/
+  tag: sp-button
 sections:
   - name: Custom Properties API
     description: |
@@ -20,7 +23,7 @@ sections:
 
       ### T-shirt sizing
       Button now supports t-shirt sizing and requires that you specify the size of button by adding a `.spectrum-Button--size*` class.
-      
+
       ### Change workflow icon size
 
       Previously, all Buttons used `.spectrum-Icon--sizeS`. This has changed:

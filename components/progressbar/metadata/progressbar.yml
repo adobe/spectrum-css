@@ -1,5 +1,8 @@
 name: Progress bar
 SpectrumSiteSlug: https://spectrum.adobe.com/page/progress-bar/
+SWC:
+  url: https://opensource.adobe.com/spectrum-web-components/components/progress-bar/
+  tag: sp-progress-bar
 status: Verified
 id: progressbar-m
 sections:
@@ -149,4 +152,3 @@ examples:
           <div class="spectrum-ProgressBar-fill" style="width: 50%;"></div>
         </div>
       </div>
-

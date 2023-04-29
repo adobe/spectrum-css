@@ -10,27 +10,38 @@ OF ANY KIND, either express or implied. See the License for the specific languag
 governing permissions and limitations under the License.
 */
 
-module.exports = function fetchMarkdownRules() {
+module.exports = () => {
   const mdContainer = require('markdown-it-container');
   const mdAnchor = require('markdown-it-anchor');
 
-  function containerBuilder(md, keyword, openTemplate, closeTemplate) {
+  /**
+   * @param {import('markdown-it').MarkdownIt} md
+   * @param {string} keyword
+   * @param {{ tag?: string, classNames?: string[] }} options
+   * @return {ReturnType<import('markdown-it-container')>}
+   */
+  function containerBuilder(md, keyword, { tag = 'div', classNames = [] } = {}) {
+    if (!keyword) throw new Error('keyword is required for containerBuilder');
+    if (!tag) tag = keyword;
+
     const matchString = `^${keyword}(.*)$`;
     return {
       validate: function (params) {
         return params.trim().match(matchString, 'g');
       },
-      render: function (tokens, idx) {
-        const matches = tokens[idx]?.info?.trim()?.match(matchString, 'g');
+      render: function (tokens, idx, _options, self) {
+        const token = tokens[idx];
+        if (!token) return;
+
+        const matches = token.info?.trim()?.match(matchString, 'g');
         if (!matches || matches.length < 2) return;
+        matches.shift();
 
-        const [_, content] = matches;
-
-        if (tokens[idx].nesting === 1) {
-          if (typeof openTemplate === 'function') return openTemplate(md.render(content));
-          else return openTemplate + md.render(content);
-        } else if (typeof closeTemplate === 'function') return closeTemplate();
-        else return closeTemplate;
+        if (tokens[idx].nesting === 1)
+          return `<${tag ?? 'div'}${classNames ? ` class="${classNames.join(' ')}"` : ''}>
+  ${md.render((matches.join('')))}
+`;
+        else return `</${tag ?? 'div'}>\n`;
       }
     };
   }
@@ -46,7 +57,7 @@ module.exports = function fetchMarkdownRules() {
   md.use(mdAnchor, {
     level: [2, 3, 4],
     permalink: mdAnchor.permalink.headerLink({ safariReaderFix: true }),
-    permalinkClass: 'spectrum-BigSubtleLink',
+    permalinkClass: 'spectrum-Link',
     permalinkHref: (slug, state) => {
       const { page } = state.env;
       const { url } = page;
@@ -54,9 +65,11 @@ module.exports = function fetchMarkdownRules() {
     },
     permalinkAttrs: () => ({ 'aria-label': '§' }),
   });
-  md.use(mdContainer, 'section', containerBuilder(md, 'section', (content) => `<section>\n${content}\n`, () => `</section>\n`));
-  md.use(mdContainer, 'header', containerBuilder(md, 'header', (content) => `<header>\n${content}\n`, () => `</header>\n`));
-  md.use(mdContainer, 'article', containerBuilder(md, 'article', (content) => `<article>\n${content}\n`, () => `</article>\n`));
+  md.use(mdContainer, 'section', containerBuilder(md, 'section'));
+  md.use(mdContainer, 'header', containerBuilder(md, 'header'));
+  md.use(mdContainer, 'article', containerBuilder(md, 'article'));
+  md.use(mdContainer, 'grid', containerBuilder(md, 'grid', { classNames: ['spectrum-HomeCards'] }));
+
   md.use(require("eleventy-plugin-code-clipboard").markdownItCopyButton);
 
   md.renderer.rules.link_open = (tokens, idx, options, env, self) => {
@@ -152,10 +165,10 @@ module.exports = function fetchMarkdownRules() {
       let aIndex = tokens[idx].attrIndex('class');
       if (aIndex < 0) {
         // add class
-        tokens[idx].attrPush(['class', 'spectrum-CSSExample-oldAPI']);
+        tokens[idx].attrPush(['class', 'site-Example-oldAPI']);
       } else {
         // append class
-        tokens[idx].attrs[aIndex][1] = `${tokens[idx].attrs[aIndex][1]} spectrum-CSSExample-oldAPI`;
+        tokens[idx].attrs[aIndex][1] = `${tokens[idx].attrs[aIndex][1]} site-Example-oldAPI`;
       }
 
       token.content = token.content.slice(1, -1);

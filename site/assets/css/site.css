@@ -1,54 +1,9 @@
-@import url("https://cdnjs.cloudflare.com/ajax/libs/Primer/19.1.1/tooltips.min.css");
+/* @todo use the updated builder to process the docs site CSS too */
 
+/* Component customizations specific to the documentation site */
 :root {
-  --spectrum-site-background-color: var(--spectrum-global-color-gray-75);
-
-  --spectrum-site-header-height: var(--spectrum-global-dimension-size-600);
-  --spectrum-site-header-padding: var(--spectrum-global-dimension-size-100);
-  --spectrum-site-header-border-color: var(--spectrum-global-color-gray-300);
-  --spectrum-site-header-background-color: var(--spectrum-site-content-background-color);
-
-  --spectrum-site-sidebar-background-color: var(--spectrum-site-background-color);
-
-  --spectrum-site-content-background-color: var(--spectrum-global-color-gray-50);
-
-  --spectrum-site-overlay-background-entry-animation-delay: 0ms;
-  --spectrum-site-overlay-background-exit-animation-delay: 0ms;
-  --spectrum-site-overlay-background-entry-animation-duration: var(--spectrum-global-animation-duration-200, 160ms);
-  --spectrum-site-overlay-background-exit-animation-duration: var(--spectrum-global-animation-duration-200, 160ms);
-  --spectrum-site-overlay-background-exit-animation-easing: ease-out;
-  --spectrum-site-overlay-background-entry-animation-easing: ease-in;
-  --spectrum-site-overlay-underlay-background-color: rgba(0, 0, 0, 0.2);
-
-  --spectrum-site-scrollbar-track-color: var(--spectrum-site-background-color);
-  --spectrum-site-scrollbar-thumb-color: var(--spectrum-global-color-gray-400);
-
-  --spectrum-csscomponent-margin: var(--spectrum-global-dimension-size-500);
-  --spectrum-csscomponent-padding: var(--spectrum-global-dimension-size-700);
-  --spectrum-csscomponent-max-width: 1080px;
-  --spectrum-csscomponent-sectionheading-margin-top: var(--spectrum-global-dimension-size-600);
-  --spectrum-csscomponent-sectionheading-margin-bottom: var(--spectrum-global-dimension-size-400);
-  --spectrum-csscomponent-heading-margin-bottom: var(--spectrum-global-dimension-size-500);
-  --spectrum-csscomponent-description-margin-bottom: var(--spectrum-global-dimension-size-600);
-  --spectrum-csscomponent-description-margin-top: var(--spectrum-global-dimension-size-300);
-  --spectrum-csscomponent-statuscontainer-margin-x: var(--spectrum-global-dimension-size-200);
-  --spectrum-csscomponent-detailstable-padding-x: var(--spectrum-global-dimension-size-300);
-  --spectrum-csscomponent-detailstable-margin-top: var(--spectrum-global-dimension-size-500);
-  --spectrum-csscomponent-detailstable-margin-bottom: var(--spectrum-global-dimension-size-450);
-
-  --spectrum-cssexample-border-radius: var(--spectrum-global-dimension-size-50);
-  --spectrum-cssexample-border-color: var(--spectrum-global-color-gray-100);
-  --spectrum-cssexample-margin-bottom: var(--spectrum-global-dimension-size-800);
-  --spectrum-cssexample-min-height: 0;
-  --spectrum-cssexample-heading-margin-bottom: var(--spectrum-global-dimension-size-100);
-  --spectrum-cssexample-markup-background-color: var(--spectrum-global-color-gray-75);
-  --spectrum-cssexample-markup-height: var(--spectrum-global-dimension-size-2400);
-  --spectrum-cssexample-markup-padding-x: var(--spectrum-global-dimension-size-225);
-  --spectrum-cssexample-markup-padding-y: var(--spectrum-global-dimension-size-125);
-  --spectrum-cssexample-markup-toggle-padding-x: var(--spectrum-global-dimension-size-300);
-  --spectrum-cssexample-markup-toggle-padding-y: var(--spectrum-global-dimension-size-300);
-  --spectrum-cssexample-padding-x: var(--spectrum-global-dimension-size-500);
-  --spectrum-cssexample-padding-y: var(--spectrum-global-dimension-size-400);
+  /* Limit slider widths */
+  --spectrum-slider-min-width: var(--spectrum-global-dimension-size-3000);
 }
 
 body,
@@ -64,7 +19,36 @@ body {
   display: none !important;
 }
 
-.skip-to-content-link {
+pre {
+  margin: 0;
+  padding: 0;
+  border: none;
+  background: transparent;
+}
+
+pre.html {
+  margin: 0;
+  white-space: pre-wrap; /* css-3 */
+}
+
+code[class*="language-"],
+pre[class*="language-"] {
+  text-shadow: none;
+  font-size: inherit;
+}
+
+.site {
+  max-height: 100vh;
+  overflow: hidden;
+}
+
+.site,
+.site-Header,
+.site-Main-container {
+  background-color: var(--spectrum-global-color-gray-50);
+}
+
+.site-SkipToContent-link {
   background: #e77e23;
   height: 30px;
   left: 50%;
@@ -74,123 +58,61 @@ body {
   transition: transform 0.3s;
 }
 
-.skip-to-content-link:focus {
+.site-SkipToContent-link:focus {
   transform: translateY(0%);
 }
 
-.spectrum-Site {
-  --spectrum-site-background-color: var(--spectrum-global-color-gray-75);
-
-  --spectrum-site-header-height: var(--spectrum-global-dimension-size-600);
-  --spectrum-site-header-padding: var(--spectrum-global-dimension-size-100);
-  --spectrum-site-header-border-color: var(--spectrum-global-color-gray-300);
-  --spectrum-site-header-background-color: var(--spectrum-site-content-background-color);
-
-  --spectrum-site-sidebar-background-color: var(--spectrum-site-background-color);
-
-  --spectrum-site-content-background-color: var(--spectrum-global-color-gray-50);
-
-  --spectrum-site-overlay-background-entry-animation-delay: 0ms;
-  --spectrum-site-overlay-background-exit-animation-delay: 0ms;
-  --spectrum-site-overlay-background-entry-animation-duration: var(--spectrum-global-animation-duration-200, 160ms);
-  --spectrum-site-overlay-background-exit-animation-duration: var(--spectrum-global-animation-duration-200, 160ms);
-  --spectrum-site-overlay-background-exit-animation-easing: ease-out;
-  --spectrum-site-overlay-background-entry-animation-easing: ease-in;
-  --spectrum-site-overlay-underlay-background-color: rgba(0, 0, 0, 0.2);
-
-  --spectrum-site-scrollbar-track-color: var(--spectrum-site-background-color);
-  --spectrum-site-scrollbar-thumb-color: var(--spectrum-global-color-gray-400);
-
-  --spectrum-csscomponent-margin: var(--spectrum-global-dimension-size-500);
-  --spectrum-csscomponent-padding: var(--spectrum-global-dimension-size-700);
-  --spectrum-csscomponent-max-width: 1080px;
-  --spectrum-csscomponent-sectionheading-margin-top: var(--spectrum-global-dimension-size-600);
-  --spectrum-csscomponent-sectionheading-margin-bottom: var(--spectrum-global-dimension-size-400);
-  --spectrum-csscomponent-heading-margin-bottom: var(--spectrum-global-dimension-size-500);
-  --spectrum-csscomponent-description-margin-bottom: var(--spectrum-global-dimension-size-600);
-  --spectrum-csscomponent-description-margin-top: var(--spectrum-global-dimension-size-300);
-  --spectrum-csscomponent-statuscontainer-margin-x: var(--spectrum-global-dimension-size-200);
-  --spectrum-csscomponent-detailstable-padding-x: var(--spectrum-global-dimension-size-300);
-  --spectrum-csscomponent-detailstable-margin-top: var(--spectrum-global-dimension-size-500);
-  --spectrum-csscomponent-detailstable-margin-bottom: var(--spectrum-global-dimension-size-450);
-
-  --spectrum-cssexample-border-radius: var(--spectrum-global-dimension-size-50);
-  --spectrum-cssexample-border-color: var(--spectrum-global-color-gray-100);
-  --spectrum-cssexample-margin-bottom: var(--spectrum-global-dimension-size-800);
-  --spectrum-cssexample-min-height: 0;
-  --spectrum-cssexample-heading-margin-bottom: var(--spectrum-global-dimension-size-100);
-  --spectrum-cssexample-markup-background-color: var(--spectrum-global-color-gray-75);
-  --spectrum-cssexample-markup-height: var(--spectrum-global-dimension-size-2400);
-  --spectrum-cssexample-markup-padding-x: var(--spectrum-global-dimension-size-225);
-  --spectrum-cssexample-markup-padding-y: var(--spectrum-global-dimension-size-125);
-  --spectrum-cssexample-markup-toggle-padding-x: var(--spectrum-global-dimension-size-300);
-  --spectrum-cssexample-markup-toggle-padding-y: var(--spectrum-global-dimension-size-300);
-  --spectrum-cssexample-padding-x: var(--spectrum-global-dimension-size-500);
-  --spectrum-cssexample-padding-y: var(--spectrum-global-dimension-size-400);
-
-  height: 100%;
-  display: -ms-flexbox;
-  display: flex;
-  -ms-flex-direction: column;
-      flex-direction: column;
-      background-color: var(--spectrum-site-content-background-color);
-}
-
-.spectrum-Site-header {
+.site-Header {
   display: none;
   box-sizing: border-box;
-  height: var(--spectrum-site-header-height);
-  padding: var(--spectrum-site-header-padding);
+  height: var(--spectrum-global-dimension-size-600);
+  padding: var(--spectrum-global-dimension-size-100);
   border-bottom-width: 1px;
   border-bottom-style: solid;
-  border-bottom-color: var(--spectrum-site-header-border-color);
-  background-color: var(--spectrum-site-header-background-color);
+  border-bottom-color: var(--spectrum-global-color-gray-300);
 }
 
-.spectrum-Site-sideBar {
-  display: -ms-flexbox;
+.site-SideBar,
+.site-Content {
+  height: 100%;
+  max-height: 100vh;
+}
+
+.site-SideBar {
+  background-color: var(--spectrum-global-color-gray-75);
   display: flex;
-  -ms-flex-direction: column;
-      flex-direction: column;
-  -ms-flex-positive: 0;
-      flex-grow: 0;
-  -ms-flex-negative: 0;
-      flex-shrink: 0;
-  max-width: 100%;
+  flex-direction: column;
+  flex-grow: 0;
+  flex-shrink: 0;
+  max-width: 100vw;
   transition: none;
-  background-color: var(--spectrum-site-sidebar-background-color);
+  overflow-y: auto;
 }
 
-.spectrum-Site-sideBarHeader {
-  -ms-flex-positive: 0;
-      flex-grow: 0;
-  -ms-flex-negative: 0;
-      flex-shrink: 0;
-  display: -ms-flexbox;
+.site-SideBar-header {
+  flex-grow: 0;
+  flex-shrink: 0;
   display: flex;
-  -ms-flex-direction: row;
-      flex-direction: row;
-  -ms-flex-align: center;
-      align-items: center;
+  flex-direction: row;
+  align-items: center;
 
   padding: var(--spectrum-global-dimension-size-350) var(--spectrum-global-dimension-size-300);
-
   text-decoration: none;
 }
 
-.spectrum-Site-sideBarHeader:focus {
+.site-SideBar-header:focus {
   outline: none;
 }
 
-.spectrum-Site-sideBarHeader:focus h2 {
+.site-SideBar-header:focus h2 {
   text-decoration: underline;
 }
 
-.spectrum-Site-search {
+.site-Search {
   padding: 0 var(--spectrum-global-dimension-size-300) var(--spectrum-global-dimension-size-300) var(--spectrum-global-dimension-size-300);
 }
 
-.spectrum-Site-searchResults {
+.site-Search-results {
   left: -100%;
   top: -100%;
   max-height: calc(90vh - 120px);
@@ -200,78 +122,74 @@ body {
   overflow-y: auto;
 }
 
-.spectrum-Site-searchResults:dir("rtl") {
+.site-Search-results:dir("rtl") {
   right: -100%;
 }
 
-.spectrum-Site-noSearchResults {
+.site-Search-results--none {
   padding: var(--spectrum-global-dimension-size-400) var(--spectrum-global-dimension-size-400) var(--spectrum-global-dimension-size-400);
 }
 
-.spectrum-Site-logo {
+.site-Logo {
   color: #FA0F00 !important;
+  fill: #FA0F00 !important;
   margin-right: var(--spectrum-global-dimension-size-200);
 }
 
-.spectrum-Site-logo:dir("rtl") {
+.site-Logo:dir("rtl") {
   margin-left: var(--spectrum-global-dimension-size-200);
 }
 
-.spectrum--medium .spectrum-Site-logo {
-    height: 32px;
-  }
+.spectrum--medium .site-Logo {
+  height: 32px;
+}
 
-.spectrum--large .spectrum-Site-logo {
-    height: 40px;
-  }
+.spectrum--large .site-Logo {
+  height: 40px;
+}
 
-.spectrum-Site-nav {
-  -ms-flex-positive: 1;
-      flex-grow: 1;
-
+.site-Nav {
+  flex-grow: 1;
   padding: 0px var(--spectrum-global-dimension-static-size-300, 24px) var(--spectrum-global-dimension-static-size-500, 40px);
 }
 
-.spectrum-Site-bottomNav {
+.site-Nav-bottom {
   margin-top: var(--spectrum-global-dimension-static-size-1000, 80px);
 }
 
-.spectrum-Site-content {
-  display: -ms-flexbox;
+.site-Content {
   display: flex;
-  -ms-flex-direction: row;
-      flex-direction: row;
-  max-height: 100%;
-  height: 100%;
+  flex-direction: row;
 }
 
-.spectrum-Site-page {
-  padding: 40px 52px 24px 52px;
+.site-Page,
+.site-Hero,
+.site-Footer-container,
+.site-Component {
   max-width: 1080px;
   margin: auto;
+}
+
+.site-Page {
+  padding: 40px 52px 24px 52px;
   box-sizing: border-box;
 }
 
-.spectrum-Site-hero {
-  max-width: 1080px;
-  margin: auto;
-}
-
-.spectrum-Site-heroHeading {
+.site-Hero-heading {
   margin-bottom: 16px;
 }
 
-.spectrum-Site-heroHeading .spectrum-Heading {
+.site-Hero-heading .spectrum-Heading {
   margin-top: 0 !important;
 }
 
-.spectrum-Site-heroImage,
-.spectrum-Site-heroImage:dir("rtl") {
+.site-Hero-image,
+.site-Hero-image:dir("rtl") {
   margin-left: auto;
   margin-right: auto;
 }
 
-.spectrum-Site-heroImage {
+.site-Hero-image {
   display: block;
   max-width: 100%;
   margin-top: var(--spectrum-global-dimension-size-700);
@@ -279,35 +197,39 @@ body {
   border-radius: var(--spectrum-alias-border-radius-regular, var(--spectrum-global-dimension-size-50));
 }
 
-.spectrum-Site-mainContent {
-  -ms-flex-positive: 1;
-      flex-grow: 1;
+.site-Main-content {
+  flex-grow: 1;
   border-top: none;
   border-bottom: none;
   overflow-y: auto;
+  display: flex;
+  flex-flow: column nowrap;
 }
 
-.spectrum-Site-footerContainer {
-  max-width: var(--spectrum-csscomponent-max-width);
-  margin: var(--spectrum-csscomponent-margin) auto;
-  padding: 0 var(--spectrum-csscomponent-padding);
+.site-Main-container {
+  flex-grow: 1;
+}
+
+.site-Footer-container {
+  margin-block: var(--spectrum-global-dimension-size-500);
+  padding: 0 var(--spectrum-global-dimension-size-700);
 }
 
 /** -- OVERLAY -- **/
-.spectrum-Site-overlay,
-.spectrum-Site-overlay:dir("rtl") {
+.site-Overlay,
+.site-Overlay:dir("rtl") {
   right: 0;
 }
 
-.spectrum-Site-overlay:dir("rtl"),
-.spectrum-Site-overlay {
+.site-Overlay:dir("rtl"),
+.site-Overlay {
   left: 0;
 }
 
 // @todo should extend %spectrum-overlay
 // need to add postcss processing for this to work
-.spectrum-Site-overlay {
-  --spectrum-overlay-animation-distance: var(--spectrum-picker-m-texticon-popover-offset-y);
+.site-Overlay {
+  --overlay-animation-distance: var(--spectrum-picker-m-texticon-popover-offset-y);
 
   /* display: none; */
   visibility: hidden;
@@ -316,7 +238,7 @@ body {
               opacity var(--spectrum-global-animation-duration-100) ease-in-out,
               visibility 0ms linear var(--spectrum-global-animation-duration-100);
 
-  background: var(--spectrum-site-overlay-underlay-background-color);
+  background: rgba(0, 0, 0, .2);
   pointer-events: none;
   /* position: fixed;
   top: 0;
@@ -325,62 +247,44 @@ body {
   overflow: hidden; */
 }
 
-.spectrum-CSSComponent {
-  max-width: var(--spectrum-csscomponent-max-width);
-  margin: var(--spectrum-csscomponent-margin) auto;
-  padding: 0 var(--spectrum-csscomponent-padding);
+.site-Component {
+  margin-block: var(--spectrum-global-dimension-size-500);
+  padding: 0 var(--spectrum-global-dimension-size-700);
 }
 
-.spectrum-CSSComponent-heading {
-  margin-bottom: var(--spectrum-csscomponent-heading-margin-bottom);
-
-  display: -ms-flexbox;
-
+.site-Component-header {
+  margin-bottom: var(--spectrum-global-dimension-size-500);
   display: flex;
-  -ms-flex-direction: row;
-      flex-direction: row;
-  -ms-flex-align: center;
-      align-items: center;
-  -ms-flex-pack: justify;
-      justify-content: space-between;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
 }
 
-.spectrum-CSSComponent-link {
-  display: -ms-flexbox;
+.site-Example > .spectrum-Heading > a {
   display: flex;
-  -ms-flex-align: center;
-      align-items: center;
+  align-items: center;
   color: inherit;
   text-decoration: none;
   outline: none;
 }
 
-.spectrum-CSSComponent-link.focus-ring,
-.spectrum-CSSComponent-link:hover {
+.site-Example > .spectrum-Heading > a.focus-ring,
+.site-Example > .spectrum-Heading > a:focus,
+.site-Example > .spectrum-Heading > a:hover {
   text-decoration: underline;
 }
 
-.spectrum-CSSComponent-statusContainer {
-  -ms-flex-item-align: center;
-      -ms-grid-row-align: center;
-      align-self: center;
-  -ms-flex-positive: 1;
-      flex-grow: 1;
-  vertical-align: bottom;
-  margin: 0 var(--spectrum-csscomponent-statuscontainer-margin-x);
-}
-
 .spectrum-Table:first-of-type {
-  margin-top: var(--spectrum-csscomponent-detailstable-margin-top);
-  margin-bottom: var(--spectrum-csscomponent-detailstable-margin-bottom);
+  margin-top: var(--spectrum-global-dimension-size-500);
+  margin-bottom: var(--spectrum-global-dimension-size-450);
 }
 
 .spectrum-Table:first-of-type th {
-  padding-right: var(--spectrum-csscomponent-detailstable-padding-x);
+  padding-right: var(--spectrum-global-dimension-size-300);
 }
 
 .spectrum-Table:first-of-type th:dir("rtl") {
-  padding-left: var(--spectrum-csscomponent-detailstable-padding-x);
+  padding-left: var(--spectrum-global-dimension-size-300);
 }
 
 .spectrum-Table:first-of-type th {
@@ -389,195 +293,170 @@ body {
   font-weight: var(--spectrum-global-font-weight-regular, 400);
 }
 
-.spectrum-CSSComponent-sectionHeading {
-  margin-top: var(--spectrum-csscomponent-sectionheading-margin-top);
-  margin-bottom: var(--spectrum-csscomponent-sectionheading-margin-bottom);
+.site-Section-header {
+  margin-top: var(--spectrum-global-dimension-size-600);
+  margin-bottom: var(--spectrum-global-dimension-size-400);
 }
 
-.spectrum-CSSExample-status,
-.spectrum-CSSComponent-status {
+.site-Example .spectrum-StatusLight,
+.site-Content {
   padding: 0 !important;
   min-height: 0 !important;
 }
 
-.spectrum-CSSComponent-status::before {
+.site-Component .spectrum-StatusLight::before {
   margin-left: 0 !important;
 }
 
-.spectrum-CSSComponent-status:dir("rtl")::before {
+.site-Component .spectrum-StatusLight:dir("rtl")::before {
   margin-right: 0 !important;
 }
 
-.spectrum-CSSExample-status {
+.site-Example .spectrum-StatusLight {
   margin-left: var(--spectrum-global-dimension-size-200);
 }
 
-.spectrum-CSSExample-status:dir("rtl") {
+.site-Example .spectrum-StatusLight:dir("rtl") {
   margin-right: var(--spectrum-global-dimension-size-200);
 }
 
-.spectrum-CSSComponent-version {
-  -ms-flex-positive: 1;
-      flex-grow: 1;
+.site-Component-version {
+  flex-grow: 1;
   text-align: right;
 }
 
-.spectrum-CSSComponent-description {
-  margin-top: var(--spectrum-csscomponent-description-margin-top);
-  margin-bottom: var(--spectrum-csscomponent-description-margin-bottom);
+.site-Example .spectrum-Body {
+  margin-top: var(--spectrum-global-dimension-size-300);
+  margin-bottom: var(--spectrum-global-dimension-size-600);
 }
 
-.spectrum-CSSComponent-resources {
-  display: -ms-flexbox;
+.site-Component-resources {
   display: flex;
-  -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
-  -ms-flex-direction: row;
-      flex-direction: row;
+  flex-wrap: wrap;
+  flex-direction: row;
   margin-bottom: var(--spectrum-global-dimension-size-700);
 }
 
-.spectrum-CSSComponent-resources .spectrum-Card {
+.site-Component-resources .spectrum-Card {
   margin-right: var(--spectrum-global-dimension-size-300);
-}
-
-.spectrum-CSSComponent-resources .spectrum-Card:dir("rtl") {
-  margin-left: var(--spectrum-global-dimension-size-300);
-}
-
-.spectrum-CSSComponent-resources .spectrum-Card {
   margin-bottom: var(--spectrum-global-dimension-size-300);
 }
 
-.spectrum--dark .spectrum-CSSComponent-resource--github, .spectrum--darkest .spectrum-CSSComponent-resource--github {
+.site-Component-resources .spectrum-Card:dir("rtl") {
+  margin-left: var(--spectrum-global-dimension-size-300);
+}
+
+
+.spectrum-Card[type="github"] {
+  background-color: rgba(0, 0, 0, 0.1) !important;
+  color: black;
+}
+
+.spectrum--dark .spectrum-Card[type="github"],
+.spectrum--darkest .spectrum-Card[type="github"] {
     background-color: rgba(245, 245, 245, 0.1) !important;
     color: rgb(245, 245, 245);
   }
 
-.spectrum-CSSComponent-resource--npm {
+.spectrum-Card[type="npm"] {
   background-color: rgba(203, 56, 55, 0.1) !important;
 }
 
-.spectrum-CSSComponent-cardImage {
-  text-decoration: none;
+.spectrum-Card[type="adobe"] {
+  color: #FA0F00 !important;
+  background-color: var(--spectrum-global-color-gray-100) !important;
 }
 
-.spectrum-CSSComponent-switcher {
-  display: -ms-flexbox;
+.site-Switcher {
   display: flex;
-  -ms-flex-direction: row;
-      flex-direction: row;
-  -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
-  -ms-flex-pack: end;
-      justify-content: flex-end;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: flex-end;
 }
 
-.spectrum-CSS-switcherContainer {
+.site-Switcher-container {
   margin-left: var(--spectrum-global-dimension-size-400);
-}
-
-.spectrum-CSS-switcherContainer:dir("rtl") {
-  margin-right: var(--spectrum-global-dimension-size-400);
-}
-
-.spectrum-CSS-switcherContainer {
   white-space: nowrap;
 }
 
-.spectrum-CSSExample {
-  margin-bottom: var(--spectrum-cssexample-margin-bottom);
+.site-Switcher-container:dir("rtl") {
+  margin-right: var(--spectrum-global-dimension-size-400);
 }
 
-.spectrum-CSSExample-container {
+.site-Example {
+  margin-bottom: var(--spectrum-global-dimension-size-800);
+}
+
+.site-Example-container {
   position: relative;
-
-  display: -ms-flexbox;
-
   display: flex;
-  -ms-flex-direction: column;
-      flex-direction: column;
-
-  border-radius: var(--spectrum-cssexample-border-radius);
+  flex-direction: column;
+  border-radius: var(--spectrum-global-dimension-size-50);
 }
 
-.spectrum-CSSExample-heading {
-  display: -ms-flexbox;
+.site-Example > .spectrum-Heading:first-child {
   display: flex;
-  -ms-flex-direction: row;
-      flex-direction: row;
-  -ms-flex-align: center;
-      align-items: center;
-  margin-bottom: var(--spectrum-cssexample-heading-margin-bottom) !important;
+  flex-direction: row;
+  align-items: center;
+  margin-bottom: var(--spectrum-global-dimension-size-100) !important;
 }
 
-.spectrum-CSSExample-example,
-.spectrum-CSSExample-markup {
+.site-Example-preview,
+.site-Example-markup {
   box-sizing: border-box;
 }
 
-.spectrum-CSSExample-example {
-  -ms-flex: 1 0 auto;
-      flex: 1 0 auto;
-  min-height: var(--spectrum-cssexample-min-height);
-  padding: var(--spectrum-cssexample-padding-y) var(--spectrum-cssexample-padding-x);
-  border-radius: var(--spectrum-cssexample-border-radius) var(--spectrum-cssexample-border-radius) 0 0;
+.site-Example-preview {
+  flex: 1 0 auto;
+  min-height: 0;
+  padding: var(--spectrum-global-dimension-size-400) var(--spectrum-global-dimension-size-500);
+  border-radius: var(--spectrum-global-dimension-size-50) var(--spectrum-global-dimension-size-50) 0 0;
   background-color: var(--spectrum-alias-background-color-default, var(--spectrum-global-color-gray-100));
 }
 
-.spectrum-CSSExample-example:has(> .spectrum-CSSExample-example-staticWhite) {
-    background-color: var(--spectrum-docs-static-white-background-color);
-    border-color: var(--spectrum-docs-static-white-background-color);
-  }
-
-.spectrum-CSSExample-example:has(> .spectrum-CSSExample-example-staticBlack) {
-    background-color: var(--spectrum-docs-static-black-background-color);
-    border-color: var(--spectrum-docs-static-black-background-color);
-  }
-
-.spectrum-CSSExample-markup {
+.site-Example-markup {
   position: relative;
   max-width: 100%;
-  max-height: var(--spectrum-cssexample-markup-height);
-  padding: var(--spectrum-cssexample-markup-padding-y) var(--spectrum-cssexample-markup-padding-x);
-  border-radius: 0 0 var(--spectrum-cssexample-border-radius) var(--spectrum-cssexample-border-radius);
+  max-height: var(--spectrum-global-dimension-size-2400);
+  padding: var(--spectrum-global-dimension-size-125) var(--spectrum-global-dimension-size-225);
+  border-radius: 0 0 var(--spectrum-global-dimension-size-50) var(--spectrum-global-dimension-size-50);
   overflow: hidden;
-  border-top: 1px solid var(--spectrum-cssexample-border-color);
-  background: var(--spectrum-cssexample-markup-background-color);
+  border-top: 1px solid var(--spectrum-global-color-gray-100);
+  background: var(--spectrum-global-color-gray-75);
 }
 
-.spectrum-CSSExample-markup.is-open {
+.site-Example-markup.is-open {
   max-height: 100%;
   padding-bottom: var(--spectrum-global-dimension-size-700);
 }
 
-.spectrum-CSSExample-markup.is-open .spectrum-CSSExample-markupToggle::before {
+.site-Example-markup.is-open .site-Example-markupToggle::before {
   display: none;
 }
 
-.spectrum-CSSExample-markupToggle + pre {
+.site-Example-markupToggle + pre {
   padding-bottom: var(--spectrum-global-dimension-size-100);
 }
 
-.spectrum-CSSExample-example--spacious {
+.site-Example-preview--spacious {
   position: relative;
   height: 150px;
 }
 
-.spectrum-CSSExample-example--overlay {
+.site-Example-preview--overlay {
   position: relative;
   min-height: var(--spectrum-global-dimension-size-800);
   background: rgba(0,0,0,0.4);
   color: rgba(0,0,0,0.4);
 }
 
-.spectrum-CSSExample-dialog,
-.spectrum-CSSExample-dialog:dir("rtl") {
+.site-Example-dialog,
+.site-Example-dialog:dir("rtl") {
   margin-left: auto;
   margin-right: auto;
 }
 
-.spectrum-CSSExample-dialog {
+.site-Example-dialog {
   position: relative !important;
   transform: none !important;
   width: auto !important;
@@ -588,25 +467,20 @@ body {
   left: 0;
 }
 
-.spectrum-CSSExample-dialog:dir("rtl") {
+.site-Example-dialog:dir("rtl") {
   right: 0;
 }
 
 .spectrum-Examples {
-  display: -ms-flexbox;
   display: flex;
-  -ms-flex-direction: row;
-      flex-direction: row;
-  -ms-flex-pack: justify;
-      justify-content: space-between;
+  flex-direction: row;
+  justify-content: space-between;
   gap: 6px;
-  -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
+  flex-wrap: wrap;
 }
 
 .spectrum-Examples--vertical {
-  -ms-flex-direction: column;
-      flex-direction: column;
+  flex-direction: column;
 }
 
 .spectrum-Examples-item .spectrum-Examples-itemHeading {
@@ -614,61 +488,58 @@ body {
 }
 
 .spectrum-Examples-itemGroup {
-  display: -ms-flexbox;
   display: flex;
-  -ms-flex-direction: row;
-      flex-direction: row;
-  -ms-flex-pack: justify;
-      justify-content: space-between;
-  -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
+  flex-direction: row;
+  justify-content: space-between;
+  flex-wrap: wrap;
   gap: 6px;
 }
 
-.spectrum-Button.spectrum-CSSExample-overlayShowButton {
+/* todo: this only appears in dialog at the moment */
+.spectrum-Button.site-Example--overlay.show-button {
   left: 50%;
 }
 
-.spectrum-Button.spectrum-CSSExample-overlayShowButton:dir("rtl") {
+.spectrum-Button.site-Example--overlay.show-button:dir("rtl") {
   right: 50%;
 }
 
-.spectrum-Button.spectrum-CSSExample-overlayShowButton {
+.spectrum-Button.site-Example--overlay.show-button {
   position: absolute;
   top: 50%;
   transform: translate(-50%, -50%);
 }
 
-.spectrum-CSSExample-markup pre code {
+.site-Example-markup pre code {
   white-space: pre-wrap;
 }
 
-.spectrum-CSSExample-markupToggle,
-.spectrum-CSSExample-markupToggle:dir("rtl") {
+.site-Example-markupToggle,
+.site-Example-markupToggle:dir("rtl") {
   left: 0;
   right: 0;
 }
 
-.spectrum-CSSExample-markupToggle {
+.site-Example-markupToggle {
   position: absolute;
   z-index: 0;
   bottom: 0;
   box-sizing: border-box;
-  padding: var(--spectrum-cssexample-markup-toggle-padding-y) var(--spectrum-cssexample-markup-toggle-padding-x);
+  padding: var(--spectrum-global-dimension-size-300) var(--spectrum-global-dimension-size-300);
   font-size: var(--spectrum-global-dimension-font-size-150);
   text-align: left;
   z-index: 1;
-  background: var(--spectrum-cssexample-markup-background-color);
+  background: var(--spectrum-global-color-gray-75);
 }
 
-.spectrum-CenteredImage {
+.spectrum-Image--centered {
   width: 100%;
   max-width: 720px;
   margin: auto;
   display: block;
 }
 
-.spectrum-CodeBlock {
+.site-CodeBlock {
   border-width: var(--spectrum-alias-border-size-thin, var(--spectrum-global-dimension-static-size-10));
   border-style: solid;
   border-radius: var(--spectrum-global-dimension-size-50);
@@ -678,20 +549,20 @@ body {
   background-color: var(--spectrum-global-color-gray-75);
 }
 
-.spectrum-HomeCards {
-  display: -ms-grid;
+.site-Gallery {
   display: grid;
-  -ms-grid-columns: (minmax(380px, 1fr))[auto-fit];
-      grid-template-columns: repeat(auto-fit, minmax(380px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(380px, 1fr));
   grid-gap: 1rem;
   margin: var(--spectrum-global-dimension-size-700) 0;
 }
 
+.site-Gallery:last-child {
+  margin-bottom: 0;
+}
+
 .spectrum-HomeCard {
-  display: -ms-flexbox;
   display: flex;
-  -ms-flex-align: start;
-      align-items: flex-start;
+  align-items: flex-start;
   margin-bottom: var(--spectrum-global-dimension-size-350);
   padding: 0 var(--spectrum-global-dimension-size-250);
 }
@@ -699,119 +570,118 @@ body {
 .spectrum-HomeCard-image {
   width: var(--spectrum-global-dimension-size-1250);
   margin-right: var(--spectrum-global-dimension-size-250);
-  -ms-flex: 0 0 auto;
-      flex: 0 0 auto;
+  flex: 0 0 auto;
 }
 
 .spectrum-HomeCard-content {
-  -ms-flex: 1 1 auto;
-      flex: 1 1 auto;
+  flex: 1 1 auto;
 }
 
-.u-scrollable {
+.is-scrollable {
   overflow-x: hidden;
   overflow-y: auto;
 
   -webkit-overflow-scrolling: touch;
 }
 
-.u-scrollable::-webkit-scrollbar {
+.is-scrollable::-webkit-scrollbar {
   width: 10px;
   height: 10px;
 }
 
-.u-scrollable::-webkit-scrollbar-thumb {
+.is-scrollable::-webkit-scrollbar-thumb {
   border-radius: 8px;
   width: 8px;
   height: 8px;
   border-top: 2px solid rgba(0, 0, 0, 0);
   border-bottom: 2px solid rgba(0, 0, 0, 0);
   background-clip: padding-box;
-  background-color: var(--spectrum-site-scrollbar-track-color);
+  background-color: var(--spectrum-global-color-gray-75);
 }
 
-.spectrum-Site-mainContainer {
-  background: var(--spectrum-site-content-background-color);
+.is-scrollable::-webkit-scrollbar-track,
+.is-scrollable::-webkit-scrollbar-track-piece {
+  background: var(--spectrum-global-color-gray-75);
 }
 
-.spectrum-CSSComponent-resource--github {
-  background-color: rgba(0, 0, 0, 0.1) !important;
-  color: black;
+.is-scrollable:hover::-webkit-scrollbar-thumb {
+  background-color: var(--spectrum-global-color-gray-400);
 }
 
-.spectrum-CSSComponent-resource--adobe {
-  color: #FA0F00 !important;
-  background-color: var(--spectrum-global-color-gray-100) !important;
-}
-
-.u-scrollable::-webkit-scrollbar-track,
-.u-scrollable::-webkit-scrollbar-track-piece {
-  background: var(--spectrum-site-scrollbar-track-color);
-}
-
-.u-scrollable:hover::-webkit-scrollbar-thumb {
-  background-color: var(--spectrum-site-scrollbar-thumb-color);
-}
-
-.spectrum-CSSExample-markup.is-open .spectrum-CSSExample-markupToggle {
+.site-Example-markup.is-open .site-Example-markupToggle {
   background-color: transparent;
 }
 
-.spectrum-CSSExample-oldAPI {
-  color: var(--spectrum-semantic-negative-text-color-small, var(--spectrum-global-color-red-600));
+.spectrum-Heading > a {
+  display: block;
+  text-decoration: none;
+  color: inherit;
+  outline: none;
+  /* vertical-align: middle; (does nothing with display block) */
 }
 
+.spectrum-Heading > a.focus-ring,
+.spectrum-Heading > a:focus,
+.spectrum-Heading > a:hover {
+  text-decoration: underline;
+}
+
+/* For documentation beautification only - DO NOT COPY */
+.dummy-spacing {
+  height: var(--spectrum-global-dimension-size-2400);
+}
+
+
 @media screen and (max-width: 960px) {
-  .spectrum-CSSComponent {
+  .site-Component {
     padding: 0 var(--spectrum-global-dimension-size-250);
     margin: var(--spectrum-global-dimension-size-100) auto;
   }
 
-  .spectrum-CSSComponent-description {
+  .site-Component-description {
     margin-bottom: var(--spectrum-global-dimension-size-150);
   }
 
-  .spectrum-CSSExample {
+  .site-Example {
     margin-bottom: var(--spectrum-global-dimension-size-200);
   }
 
-  .spectrum-CSSExample-example {
+  .site-Example-preview {
     padding: var(--spectrum-global-dimension-size-200) var(--spectrum-global-dimension-size-200);
   }
 
-  .spectrum-CSSComponent-header {
+  .site-Component-header {
     margin-bottom: var(--spectrum-global-dimension-size-150);
   }
 
-  .spectrum-CSSComponent-statusContainer,
-  .spectrum-CSSComponent-version {
+  .site-Component-version {
     display: none;
   }
-  .spectrum-CSSComponent-title {
+  .site-Component > .site-Component-header .spectrum-Heading {
     font-size: var(--spectrum-global-dimension-font-size-700);
   }
 
-  .spectrum-Site-content {
+  .site-Content {
     max-height: calc(100% - 48px);
   }
 
-  .spectrum-Site-overlay {
+  .site-Overlay {
     display: block;
     visibility: visible;
-    transition: opacity var(--spectrum-site-overlay-background-exit-animation-duration) var(--spectrum-site-overlay-background-exit-animation-easing) var(--spectrum-site-overlay-background-exit-animation-delay),
-                visibility 0ms linear calc(var(--spectrum-site-overlay-background-exit-animation-delay) + var(--spectrum-site-overlay-background-exit-animation-duration));
+    transition: opacity var(--spectrum-global-animation-duration-200, 160ms) ease-out 0ms,
+                visibility 0ms linear calc(0ms + var(--spectrum-global-animation-duration-200, 160ms));
   }
 
   // @todo: extend %spectrum-overlay--open
-  .spectrum-Site-overlay.is-open {
+  .site-Overlay.is-open {
     visibility: visible;
     opacity: 1;
     transition-delay: 0ms;
     pointer-events: auto;
-    /* transition: opacity var(--spectrum-site-overlay-background-entry-animation-duration) var(--spectrum-site-overlay-background-entry-animation-easing) var(--spectrum-site-overlay-background-entry-animation-delay); */
+    /* transition: opacity var(--spectrum-global-animation-duration-200, 160ms) ease-in 0ms; */
   }
 
-  .spectrum-Site-sideBar {
+  .site-SideBar {
     right: 100%;
     position: fixed;
     top: 0;
@@ -822,33 +692,33 @@ body {
     transition: transform var(--spectrum-global-animation-duration-200, 160ms) ease-in-out;
   }
 
-  .spectrum-Site-sideBar:dir("rtl") {
+  .site-SideBar:dir("rtl") {
     left: 100%;
   }
 
-  .spectrum-Site-sideBar.is-open {
+  .site-SideBar.is-open {
     transform: translateX(100%);
   }
 
-  .spectrum-Site-header {
+  .site-Header {
     display: block;
   }
 
-  .spectrum-Site-page {
+  .site-Page {
     padding-left: var(--spectrum-global-dimension-size-300);
     padding-right: var(--spectrum-global-dimension-size-300);
   }
 
-  .spectrum-Site-page:dir("rtl") {
+  .site-Page:dir("rtl") {
     padding-right: var(--spectrum-global-dimension-size-300);
     padding-left: var(--spectrum-global-dimension-size-300);
   }
 
-  .spectrum-Site-hero {
+  .site-Hero {
     max-width: 100%;
   }
 
-  .spectrum-Site-heroHeading h1.spectrum-Heading1--display {
+  .site-Hero-heading .spectrum-Heading1--display {
     font-size: var(--spectrum-global-dimension-font-size-900);
   }
 }

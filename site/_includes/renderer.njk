@@ -1,0 +1,12 @@
+<script type="module">
+    import { render, html } from 'https://unpkg.com/lit-html/lit-html.js';
+    import template from '{{ templateSource }}';
+
+
+    window.addEventListener("DOMContentLoaded", () => {
+        const container = document.querySelector("{{ containerSelector }}");
+        const rendered = template({{ args | jsonify }});
+        if (!container) return;
+        render(rendered, container);
+    });
+</script>

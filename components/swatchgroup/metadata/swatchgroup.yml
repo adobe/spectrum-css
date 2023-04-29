@@ -1,6 +1,9 @@
 name: Swatch Group
 status: Verified
 SpectrumSiteSlug: https://spectrum.adobe.com/page/swatchgroup/
+SWC:
+  url: https://opensource.adobe.com/spectrum-web-components/components/swatch-group/
+  tag: sp-swatch-group
 description: |
   - Grouped swatches must use the `.spectrum-Swatch--roundingNone` class to help minimize the Hermann grid illusion
   - Swatches with a color that have a contrast ratio of less than 3:1 should have `.spectrum-Swatch--lightBorder` class, otherwise, it should have the `.spectrum-Swatch--noBorder` class

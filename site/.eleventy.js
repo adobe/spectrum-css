@@ -1,47 +1,42 @@
 /*
 Copyright 2023 Adobe. All rights reserved.
-This file is licensed to you under the Apache License, Version 2.0 (the "License");
+This file is licensed to you under the Apache License, Version 2.0 (the 'License');
 you may not use this file except in compliance with the License. You may obtain a copy
 of the License at http://www.apache.org/licenses/LICENSE-2.0
 
 Unless required by applicable law or agreed to in writing, software distributed under
-the License is distributed on an "AS IS" BASIS, WITHOUT WARRANTIES OR REPRESENTATIONS
+the License is distributed on an 'AS IS' BASIS, WITHOUT WARRANTIES OR REPRESENTATIONS
 OF ANY KIND, either express or implied. See the License for the specific language
 governing permissions and limitations under the License.
 */
 
 const { readdirSync } = require('fs');
-const { join, dirname } = require("path");
+const { join, dirname } = require('path');
 
-const fetchMarkdownRules = require('./scripts/markdownSettings.js');
+const { EleventyRenderPlugin } = require('@11ty/eleventy');
+
 /**
  * @type import('@11ty/eleventy').EleventyConfig
 */
 module.exports = (config) => {
-  /** --------- List of component folder names --------- */
-  const componentDir = join(__dirname, "../components");
-  const components = readdirSync(componentDir, {
-    withFileTypes: true,
-  }).filter((d) => d.isDirectory()).map((c) => c.name);
-  config.addGlobalData('componentDir', componentDir);
-  config.addGlobalData('components', components);
-
   /** --------- PLUGINS --------- */
+  config.addPlugin(EleventyRenderPlugin);
   config.addPlugin(require('@11ty/eleventy-navigation'));
   config.addPlugin(require('eleventy-plugin-error-overlay')); // Shows error name, message, and fancy stacktrace
-  config.addPlugin(require("@11ty/eleventy-plugin-bundle"));
-  config.addPlugin(require("@11ty/eleventy-plugin-directory-output"), {});
+  config.addPlugin(require('@11ty/eleventy-plugin-bundle'));
+  config.addPlugin(require('@11ty/eleventy-plugin-directory-output'), {});
   config.addPlugin(require('@11ty/eleventy-plugin-syntaxhighlight'), {
     init: function ({ Prism }) {
       Prism.languages['html-live'] = Prism.languages.html;
       Prism.languages['html-no-demo'] = Prism.languages.html;
     },
   });
-  config.addPlugin(require("eleventy-plugin-code-clipboard"));
+  config.addPlugin(require('eleventy-plugin-code-clipboard'));
 
   /** --------- CONFIG --------- */
   config.setUseGitIgnore(false);
-  config.setWatchThrottleWaitTime(100);
+  config.setDataDeepMerge(true);
+  config.setWatchThrottleWaitTime(0);
   config.setServerOptions({
     port: process.env.BROWSERSYNC_PORT || 8080,
     notify: true,
@@ -51,13 +46,15 @@ module.exports = (config) => {
 
   /** --------- LIBRARY SETTINGS --------- */
   config.addNunjucksGlobal('WATCH_MODE', process.env.WATCH_MODE);
-  const md = fetchMarkdownRules();
-
+  const md = require('./.markdown.config.js')();
   config.setLibrary('md', md);
+
   /** --------- FILTERS --------- */
   config.addFilter('markdownify', (value) => md.render(value));
   config.addFilter('jsonify', (value) => JSON.stringify(value, null, 2));
-  config.addFilter('statusLightVariant', (status) => {
+
+  config.addFilter('dedupe', (value) => [...new Set(value)].filter(Boolean));
+  config.addFilter('getStatusLight', (status) => {
     if (!status) return 'neutral';
     if (status === 'Deprecated') return 'negative';
     if (['Beta Contribution', 'Contribution', 'Unverified'].includes(status)) return 'notice';
@@ -65,6 +62,12 @@ module.exports = (config) => {
     return 'neutral';
   });
   config.addFilter('log', value => { console.log(value) });
+
+  /** --------- List of component folder names --------- */
+  const componentDir = join(__dirname, '../components');
+  const components = readdirSync(componentDir, {
+    withFileTypes: true,
+  }).filter((d) => d.isDirectory()).map((c) => c.name);
 
     /** --------- PASSTHROUGHS --------- */
   config.addPassthroughCopy({
@@ -82,6 +85,7 @@ module.exports = (config) => {
       acc[`${componentDir}/${c}/dist/*`] = `components/${c}`;
       acc[`${componentDir}/${c}/package.json`] = `components/${c}/package.json`;
       acc[`${componentDir}/${c}/metadata/enhancement.js`] = `components/${c}/enhancement.js`;
+      acc[`${componentDir}/${c}/stories/template.js`] = `components/${c}/template.js`;
       return acc;
     }, {}),
   });

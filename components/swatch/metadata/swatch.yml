@@ -1,6 +1,9 @@
 name: Swatch
 status: Verified
 SpectrumSiteSlug: https://spectrum.adobe.com/page/swatch/
+SWC:
+  url: https://opensource.adobe.com/spectrum-web-components/components/swatch/
+  tag: sp-swatch
 description: |
   - Set `--spectrum-picked-color` to customize the swatch fill background color.
 sections:

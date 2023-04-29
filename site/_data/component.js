@@ -10,16 +10,171 @@ OF ANY KIND, either express or implied. See the License for the specific languag
 governing permissions and limitations under the License.
 */
 
-const { existsSync } = require("fs");
-const { readFile } = require("fs").promises;
-const { join, basename } = require("path");
+const fs = require("fs");
+const fsp = fs.promises;
+const path = require("path");
 
+const postcss = require('postcss');
+const valueParser = require('postcss-value-parser');
 const yaml = require("js-yaml");
 const fg = require("fast-glob");
+const npmFetch = require('npm-registry-fetch');
 
-const getMetadata = require('../scripts/getMetadata.js');
-const fetchCustomProps = require('../scripts/fetchCustomProps.js');
-const { getReleaseDate, isComponentPackage, isMigrated } = require('../scripts/utilities.js');
+/**
+ * Fetches the custom property details from provided CSS content;
+ * content is broken down into 4 sets: mods, internal, a11y, and other
+ * @param {import('path').PathLike} filepath - the filepath to the CSS content
+ * @param {{ [key: string]: string | RegExp }} bucketConfig - the configuration for the buckets
+ * @returns {Promise<{ [key: string]: Map<string, { value: [], source: any }[]> }>}
+ */
+async function fetchCustomProps(filepath, bucketConfig = {}) {
+  /* If no filepath is provided, return */
+  if (!fs.existsSync(filepath)) {
+    return Promise.resolve({});
+  }
+
+  /* If no bucket config is provided, return */
+  if (typeof bucketConfig !== 'object' || Object.keys(bucketConfig).length === 0) {
+    return Promise.resolve({});
+  }
+
+  /* Read the file */
+  const content = await fsp.readFile(filepath, "utf8").catch((err) => Promise.reject(err));
+
+  /* Initialize the return object */
+  const ret = {};
+  /**
+   * Iterate over the provided bucket config to determine
+   * how to sort properties found in the content
+   */
+  for (const [bucketName, regex] of Object.entries(bucketConfig)) {
+    /**
+     * Using a map ensures values are not repeated
+     * key of the map is the property name matching provided regex
+     **/
+    ret[bucketName] = new Map();
+
+    /** @todo: this is where we should capture maybe a comment and fallback values for the table */
+    postcss.parse(content).walkRules((rule) => {
+      rule.walkDecls((decl) => {
+        /* Only 1 varstack per var function */
+        let varstack;
+        let foundMatch = false;
+
+        // If the property matches the regex, it should always be first in the stack.
+        if (decl.prop.match(regex)) {
+          foundMatch = true;
+          varstack = [decl.prop];
+        }
+
+        // Next we walk the assigned value to find any fallbacks.
+        const processVarStack = (node, foundMatch) => {
+          if (!node || node.type !== 'function' || node.value !== 'var') {
+            /* If we've already found the root var, capture the fallbacks */
+            if (foundMatch) varstack.push(decl.value);
+            return;
+          }
+        };
+        valueParser(decl.value).walk(node => {
+          processVarStack(node, foundMatch);
+
+          /* If no root var found and this is a var function, let's peruse it's children */
+          /* We're only checking the first node in the var function b/c the rest are fallbacks */
+          console.log(node.nodes);
+          const firstNode = node.nodes.shift();
+          if (firstNode && firstNode.value) {
+            if (!foundMatch && firstNode.value.match(regex)) {
+              foundMatch = true;
+              varstack = [firstNode.value];
+            } else if (foundMatch) {
+              varstack.push(firstNode.value);
+            }
+          }
+        });
+
+        // } else if (decl.value.match(/var\(--.*?\)/)) {
+        //   // If the property name doesn't match the regex, check the value for a varstack.
+        //   valueParser(decl.value).walk(node => {
+        //     if (!node || node.type !== 'function' || node.value !== 'var') return false;
+        //     /* Only 1 varstack per var function */
+        //     varstack = [];
+        //     const firstNode = node.nodes.shift();
+        //     if (!foundMatch && firstNode && firstNode.value && firstNode.value.match(regex)) {
+        //       foundMatch = true;
+        //       varstack.push(firstNode.value);
+        //     } else if (foundMatch && firstNode && firstNode.value) {
+        //       varstack.push(firstNode.value);
+        //     }
+        //   });
+        // }
+
+        if (!varstack || !varstack.length) return;
+
+        const first = varstack.shift();
+        if (!first || typeof first !== 'string' || !first.match(regex)) return;
+
+        ret[bucketName].set(first, { value: [...new Set(varstack)].sort(), source: rule.selector });
+      });
+    });
+  }
+
+  return Promise.resolve(ret);
+}
+
+function fetchMetadata(metadata) {
+  /* Component data required to fetch vars metadata */
+  if (!metadata || !metadata.id || !metadata.name) return metadata;
+  const { id, name, dnaStatus, cssStatus, status, examples = [] } = metadata;
+
+  // const quiet = typeof process.env.VERBOSE === undefined || process.env.VERBOSE?.toLowerCase() !== 'true' ? true : false;
+  const varsMetadata = require('@spectrum-css/vars') ?? {};
+  const cleanId = id.replace('-', '');
+  const idParts = id.split('-');
+
+  /* Iterate over metadata keys and filter out component-specific properties */
+  const dnaComponent = Object.keys(varsMetadata).filter(varKey =>
+      varKey.startsWith(`spectrum-${cleanId}`) ||
+      varKey.startsWith(`spectrum-${idParts[0]}`)
+    ).reduce((acc, varKey) => {
+      /* Attempt to capture name, status, version */
+      let key = varKey.match(`spectrum-${cleanId}(?:-[s|m|l|xl])?-(name|status|version)`)?.[1];
+      if (!key) key = varKey.match(`spectrum-${cleanId}(?:-\\w+)*-(name|status|version)`)?.[1];
+      if (!key) key = varKey.match(`spectrum-${idParts[0]}(?:-[s|m|l|xl])?${idParts[1] ? `-${idParts[1]}`: ``}(?:-\\w+)*-(name|status|version)`)?.[1];
+      if (!key) return acc;
+
+      acc[key] = varsMetadata[varKey];
+      return acc;
+    }, {}) ?? {
+      name,
+      status: dnaStatus ?? 'Contribution'
+    };
+
+  return {
+    ...metadata,
+    title: metadata.title ?? dnaComponent.name,
+    cssStatus: status ?? 'Unverified',
+    status: status ?? 'Contribution',
+    examples: examples.map((example, idx) => {
+      if (!example.id) example.id = `${name}${idx}`;
+
+      /* All examples are verified if the outer component is verified */
+      if (!example.status && status === 'Verified')
+        example.status = 'Verified';
+
+      if (dnaStatus === 'Deprecated' || cssStatus === 'Deprecated') {
+        example.status = 'Deprecated';
+      } else if (dnaStatus === 'Canon' || cssStatus === 'Verified') {
+        example.status = 'Verified';
+      }
+
+      // The example is canon if the component is Canon and Verified
+      if (dnaStatus === 'Canon' && status === 'Verified')
+        example.dnaStatus = 'Canon';
+
+      return example ?? {};
+    }),
+  };
+}
 
 /**
  * This type defines what information is available in the object passed
@@ -48,91 +203,136 @@ const { getReleaseDate, isComponentPackage, isMigrated } = require('../scripts/u
  * @property {object[]} PageMetadata.examples -
  */
 
-// was: buildDocs_forDep/buildDocs_individualPackages
-module.exports = async (configData) => {
-  /** @type PageMetadata[] */
-  const pages = [];
-  const cwd = configData.componentDir;
+async function fetchRenderData(cwd) {
+  if (!cwd) return {};
 
-  for await (const name of fg.stream('*', {
-    cwd,
-    onlyDirectories: true,
-  })) {
-    const path = join(cwd, name);
-    const { name: packageName, devDependencies = {}, version } = await readFile(join(path, 'package.json'), "utf8").then(JSON.parse).catch(console.warn);
-    if (!packageName || !version) continue;
+  const folderName = cwd.split(path.sep).pop();
+  if (['expressvars', 'tokens', 'vars'].some(pkg => folderName === pkg)) return {};
 
-    const promises = [];
-    const cssVariables = {};
-    for await (const file of fg.stream('dist/*.css', {
-      cwd: path,
-      onlyFiles: true,
-      absolute: true,
-    })) {
-      const content = await readFile(file, "utf8").catch(console.warn);
-      if (!content) continue;
+  /* Fetch package data for the package */
+  const packageJSON = await fsp.readFile(path.join(cwd, 'package.json'), "utf8")
+    .then(JSON.parse)
+    .catch(() => Promise.reject(`No package.json found in ${cwd}`));
 
-      /* Grep the CSS assets for custom properties */
-      promises.push(fetchCustomProps(content));
-    }
-
-    await Promise.all(promises).then(props => {
-      /* Add custom properties to object by category */
-      Object.entries(props).forEach(([, obj]) => {
-        Object.entries(obj).forEach(([key, value]) => {
-          if (!cssVariables[key]) cssVariables[key] = value;
-          else cssVariables[key].push(...value);
+    const storyPath = path.join(cwd, `stories/${folderName}.stories.js`);
+    const storybook = {};
+    if (fs.existsSync(storyPath)) {
+      /**
+       * @todo: There is a more optimal way to do this however
+       * it requires the entire repo be using es6 modules.
+       **/
+      const story = await fsp.readFile(storyPath, "utf8");
+      if (story) {
+        [...story.matchAll(/(?<key>title|description)\:\s*\"(?<data>[\w|\d|\s]+)\"/gs)].forEach(({ groups } = {}) => {
+          if (groups && groups.key && groups.data) {
+            storybook[groups.key] = groups.data;
+          }
         });
+      }
+    }
+
+  const version = packageJSON.version;
+  const releaseDate = await npmFetch.json(packageJSON.name).then((data) => {
+      if (!data || !data.time) return 'Unreleased';
+      const datetime = data.time[version] ?? data.time.latest;
+      if (!datetime) return 'Unreleased';
+      return new Date(datetime).toLocaleDateString('en-US', { year: 'numeric', month: 'long', day: 'numeric' });
+    }).catch(() => 'Unreleased');
+
+  const cssTokens = await fg('dist/*.css', { cwd, absolute: true })
+    .then(async files => await Promise.all(
+      files.map(async file =>
+        /* Grep the CSS assets for custom properties */
+        fetchCustomProps(file, {
+          mods: /^--mod-/,
+          internal: /^--spectrum-(?!global|alias)-/,
+          globals: /^--spectrum-(global|alias)-/,
+          a11y: /^--highcontrast-/,
+          other: /^--(?!system|mod|spectrum-(global|alias|\w+))-/
+        })
+      )
+    ));
+
+  const cssVariables = cssTokens.reduce((variables, tokens) => {
+    /* Deep merge maps */
+    Object.entries(tokens).forEach(([key, typeSet]) => {
+      console.log(`--- ${key} ---\n`);
+      [...typeSet.keys()].forEach((customProp) => {
+        console.log(customProp, typeSet.get(customProp));
+        if (!variables[key]) variables[key] = [customProp];
+        else if (!variables[key].includes(customProp)) variables[key].push(customProp);
       });
-    }).catch(console.warn);
+    });
 
-    const dependencies = Object.keys(devDependencies).filter(isComponentPackage);
+    return variables;
+  }, {});
 
-    // Load template.js from stories folder if it exists
-    let renderer;
-    const renderTemplatePath = join(path, 'stories/template.js');
-    if (existsSync(renderTemplatePath)) {
-      renderer = await readFile(renderTemplatePath, "utf8").catch(console.warn);
-    }
+  const isMigrated = (dependencies) =>
+    !!(dependencies && (dependencies["@spectrum-css/component-builder-simple"] || dependencies["@spectrum-css/tokens"]));
 
-    /** This loop will extract all the contents of js files under metadata folder in each component */
-    let renderScripts = '';
-    for await (const file of fg.stream('metadata/*.js', { cwd: path, onlyFiles: true, absolute: true })) {
-        if (existsSync(file)) {
-            const data = await readFile(file, "utf8").catch(console.warn);
-            renderScripts += data + '\n'; // Append the contents with a newline
-        }
-    }
-    /** This loop determines how many pages are published to the site */
-    for await (const file of fg.stream('metadata/*.yml', { cwd: path, onlyFiles: true, absolute: true })) {
-      let fileName = basename(file, '.yml');
+  const dependencies = Object.keys(packageJSON.devDependencies ?? {})
+    .filter(packageName => {
+      return packageName.startsWith('@spectrum-css') && !packageName.includes('-builder') && !['vars', 'tokens'].includes(packageName);
+    })
+    .map(name => name.replace(/^@spectrum-css\//, ''));
+
+  /** @todo: Should these be rendered as tabs instead of separate pages? */
+  const subsections = await fg('metadata/*.yml', { cwd, absolute: true });
+  if (!subsections || subsections.length === 0) return {};
+
+  const variants = await Promise.all(
+    subsections.map(async (file) => {
+      const fileBasename = path.basename(file, '.yml');
+
+      /** @todo: this type should match the schema for component examples */
       /** @type {object} */
-      const pageData = await readFile(file, "utf8").then(yaml.load).catch(console.warn);
-      if (!pageData) continue;
+      const data = await fsp.readFile(file, "utf8")
+        .then(yaml.load)
+        .catch(() => Promise.reject(`Error parsing ${file}`));
 
-      pageData.id = (pageData.id ?? fileName ?? name)?.toLowerCase()?.trim();
-      const metadata = getMetadata(pageData) || {};
-
-      fileName = fileName.replace(/-/, '/');
-      /** One page created for every yaml file in the metadata folder */
-      pages.push({
-        name, packageName, version, path,
-        dependencies,
-        cssVariables,
-        migrated: isMigrated(devDependencies),
-        permalink: `components/${fileName}/`,
-        releaseDate: await getReleaseDate(packageName, version),
-        ...metadata,
-        renderer,
-        renderScripts,
-        eleventyNavigation: {
-          title: metadata.title,
-          key: metadata.name,
-          parent: "Components"
-        },
+      const metadata = fetchMetadata({
+        id: (data.id ?? fileBasename ?? folderName)?.toLowerCase().trim(),
+        ...data,
       });
-    }
-  }
 
-  return pages;
+      if (Object.keys(metadata).length > 0) {
+        return metadata;
+      }
+    })
+  );
+
+  return {
+    id: folderName,
+    title: storybook?.title ?? folderName.split('-').pop().trim(),
+    description: storybook.description ?? '',
+    folderName,
+    path: cwd,
+    packageName: packageJSON.name,
+    version,
+    releaseDate,
+    dependencies: [...new Set([...dependencies, 'tabs', 'typography', 'divider', 'table', 'icon', 'card', 'statuslight', 'link'])],
+    cssVariables,
+    layout: 'details.njk',
+    tags: [ 'component' ],
+    migrated: isMigrated(packageJSON.devDependencies),
+    variants,
+  }
+}
+
+/** @return PageMetadata[] */
+module.exports = async () => {
+  /* This iterates over all the component packages */
+  const folders = await fg('*', {
+    cwd: path.join(__dirname, '../../components'),
+    onlyDirectories: true,
+    absolute: true
+  });
+
+  return await Promise.all(folders.map(async f => {
+    const d = await fetchRenderData(f);
+    if (Object.keys(d).length === 0) return;
+    return d;
+  })).then((data) => {
+    return data.filter(Boolean);
+  }).catch(console.error);
 };

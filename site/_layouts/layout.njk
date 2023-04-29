@@ -1,15 +1,33 @@
 <!DOCTYPE html>
 <html lang="en-US" dir="ltr">
     <head>
-        <title>{{ title }}{% if title %} | {% endif %}Spectrum CSS</title>
+        <title>{{ title }}{% if title %} | {% endif %}{{ site.name }}</title>
         {% include 'meta-info.njk' %}
+        {% include 'stylesheets.njk' %}
         {% block head %}{% endblock %}
     </head>
     <body class="spectrum spectrum--light spectrum--medium">
-        {% block content %}
-            {{ content | safe }}
-        {% endblock %}
+        {% block content %}{{ content | safe }}{% endblock %}
         {% block foot %}{% endblock %}
+
+        {# todo: https://github.com/11ty/eleventy-plugin-bundle/#svg-icon-library #}
+        {% js "tools" %}
+            import "/js/lunr/lunr.js";
+            import "/js/loadicons/index.js";
+            import "/js/focus-ring-polyfill/index.js";
+        {% endjs %}
+
+        {% js "site" %}
+            import "/js/typekit.js";
+            import "/js/Search.js";
+            import "/js/site.js";
+            import "/js/docs.js";
+        {% endjs %}
+
         {% initClipboardJS %}
+
+        <script type="module" src="{% getBundleFileUrl "js", "tools" %}"></script>
+        <script type="module" src="{% getBundleFileUrl "js", "site" %}"></script>
+        <script type="module" src="{% getBundleFileUrl "js", "component" %}"></script>
     </body>
 </html>

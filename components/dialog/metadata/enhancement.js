@@ -21,6 +21,6 @@ function closeDialog(dialog) {
   innerDialog.classList.remove("is-open")
 
   setTimeout(function () {
-    dialog.classList.remove("spectrum-CSSExample-dialog")
+    dialog.classList.remove("site-Example-dialog")
   }, 130)
 }

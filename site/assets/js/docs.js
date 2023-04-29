@@ -20,7 +20,7 @@ loadIcons('/img/spectrum-icons.svg');
 // Show and hide code samples
 function toggleMarkupVisibility(event) {
   event.preventDefault();
-  var exampleMarkup = event.target.closest('.spectrum-CSSExample-markup');
+  var exampleMarkup = event.target.closest('.site-Example-markup');
   var isOpen = exampleMarkup.classList.contains('is-open');
   event.target.innerHTML = isOpen ? 'Show markup' : 'Hide markup';
   exampleMarkup.classList.toggle('is-open');

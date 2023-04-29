@@ -2,6 +2,9 @@ name: Button - Primary
 status: Verified
 description: The primary button is used for medium emphasis.
 SpectrumSiteSlug: https://spectrum.adobe.com/page/button/#Primary
+SWC:
+  url: https://opensource.adobe.com/spectrum-web-components/components/button/
+  tag: sp-button
 sections:
   - name: Custom Properties API
     description: |
@@ -201,7 +204,7 @@ examples:
             </svg>
             <span class="spectrum-Button-label">Edit</span>
           </button>
-          
+
           <button class="spectrum-Button spectrum-Button--outline spectrum-Button--primary spectrum-Button--sizeL spectrum-Button--iconOnly" aria-label="Edit">
             <svg class="spectrum-Icon spectrum-Icon--sizeL" focusable="false" aria-hidden="true">
               <use xlink:href="#spectrum-icon-18-Edit" />

@@ -1,5 +1,5 @@
 <a class="spectrum-Card spectrum-Card--sizeS spectrum-Card--horizontal" href="{{ card.href }}">
-    <div class="spectrum-Card-preview spectrum-CSSComponent-resource--{{ card.type | slugify }}">
+    <div class="spectrum-Card-preview"{% if card.type %} type="{{ card.type | slugify }}"{% endif %}>
         {{ card.svg | safe }}
     </div>
     <div class="spectrum-Card-body">
@@ -7,7 +7,7 @@
             <div class="spectrum-Card-title spectrum-Heading spectrum-Heading--sizeXS">{{ card.cta }}</div>
         </div>
         <div class="spectrum-Card-content">
-            <div class="spectrum-Card-subtitle spectrum-Detail spectrum-Detail--sizeS">{{ card.type }}</div>
+            <div class="spectrum-Card-subtitle spectrum-Detail spectrum-Detail--sizeS">{{ card.subtitle if card.subtitle else card.type }}</div>
         </div>
     </div>
 </a>

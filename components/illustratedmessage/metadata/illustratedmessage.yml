@@ -1,6 +1,9 @@
 name: Illustrated Message
 description: The Illustrated Message displays an illustration along with a heading and description. Optionally, part of the illustration can use an accent color. It can be used for status and errors, or as a call to action. For example, the Drop Zone component makes use of Illustrated Message as an area to drag and drop files.
 SpectrumSiteSlug: https://spectrum.adobe.com/page/informational-illustrations/
+SWC:
+  url: https://opensource.adobe.com/spectrum-web-components/components/illustrated-message/
+  tag: sp-illustrated-message
 sections:
   - name: Migration Guide
     description: |

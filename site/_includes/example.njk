@@ -1,52 +1,52 @@
-{% block head %}
-    {% for dep in [
-    'statuslight',
-    'typography',
-    ] %}
-    <link rel="stylesheet" type="text/css" href='/components/{{ dep }}/index-vars.css' data-dependency={{ dep }} />
-    {% endfor %}
-{% endblock %}
-
-<article class="spectrum-CSSExample">
-  {% if example.name != component.name %}
-    <h3 id="{{ example.name | slugify }}" class="spectrum-CSSExample-heading spectrum-Heading spectrum-Heading--sizeS">
-      <a href="#{{ example.name | slugify }}" class="spectrum-CSSComponent-link">{{example.name}}</a>
+<article class="site-Example">
+  {% if example.id != component.id %}
+    <h3 id="{{ example.id | slugify }}" class="spectrum-Heading spectrum-Heading--sizeS">
+      <a href="#{{ example.id | slugify }}">{{ example.title }}</a>
       {% if example.status -%}
-        <span class="spectrum-StatusLight spectrum-StatusLight--sizeM spectrum-CSSExample-status spectrum-StatusLight--{{ example.status | statusLightVariant }}">
+        <span class="spectrum-StatusLight spectrum-StatusLight--sizeM spectrum-StatusLight--{{ example.status | getStatusLight }}">
           {{ example.status }}
         </span>
       {%- endif %}
     </h3>
   {%- endif %}
-  {% if example.description -%}
-    <div class="spectrum-Typography">
-      <section class="spectrum-CSSExample-description spectrum-Body spectrum-Body--sizeM">
+
+  {% if example.description or example.details -%}
+    <div class="spectrum-Body spectrum-Body--sizeM">
+      {% if example.description -%}
         {{ example.description | markdownify | safe }}
-      </section>
-    </div>
-  {%- endif %}
-  {% if example.details -%}
-    <div class="spectrum-Typography">
-      <section class="spectrum-CSSExample-description spectrum-Body spectrum-Body--sizeM">
+      {%- endif %}
+      {% if example.details -%}
         {{ example.details | markdownify | safe }}
-      </section>
+      {%- endif %}
     </div>
   {%- endif %}
-  {% if example.markup -%}
-    <section class="spectrum-CSSExample-container">
-      <div class="spectrum-CSSExample-example">
-        {{ example.markup | safe }}
-      </div>
-      <div class="spectrum-CSSExample-markup">
-        {% if example.markup.split('\n').length > 2 %}
-          <a href="#" class="js-markup-toggle spectrum-CSSExample-markupToggle spectrum-Link">Show markup</a>
+
+  {% if example.markup or example.args -%}
+    <div class="site-Example-container" id="{{ example.id | slugify }}">
+      {% set markup %}
+        {% if example.markup -%}{{ example.markup | safe }}{% endif %}
+        {% if example.args %}
+            {% set args = example.args %}
+            {% set containerSelector = example.id | slugify + "-markup" %}
+            {% set templateSource = "/components/{{ component.folderName }}/template.js" %}
+            <div id="{{ containerSelector }}"></div>
+            {% include "renderer.njk" %}
         {% endif %}
-        <bdo dir="ltr">
-          <pre class="spectrum-Code spectrum-Code--sizeXS">
-            <code class="language-markup">{% highlight "html" %}{{ example.markup | safe }}{% endhighlight %}</code>
-          </pre>
-        </bdo>
-      </div>
-    </section>
+      {% endset %}
+      {% if example.markup -%}
+        <div class="site-Example-preview">
+          {{ markup | safe }}
+        </div>
+        <div class="site-Example-markup">
+          {% if markup.split('\n').length > 2 %}
+            <a href="#" class="js-markup-toggle site-Example-markupToggle spectrum-Link">Show markup</a>
+          {% endif %}
+          <bdo dir="ltr">
+            <pre class="spectrum-Code spectrum-Code--sizeXS">
+              <code class="language-markup">{% highlight "html" %}{{ markup | safe }}{% endhighlight %}</code>
+            </pre>
+          </bdo>
+        </div>
+    </div>
   {% endif %}
 </article>

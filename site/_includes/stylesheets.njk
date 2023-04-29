@@ -1,0 +1,42 @@
+<link rel="preconnect" href="https://use.typekit.net">
+<link rel="dns-prefetch" href="https://use.typekit.net">
+
+{% css "tools" %}
+  @import url("https://unpkg.com/prismjs@1.20.0/themes/prism.css");
+  @import url("https://unpkg.com/prismjs@1.20.0/themes/prism-dark.css") media (prefers-color-scheme: dark);
+  @import url("https://cdn.jsdelivr.net/npm/@mdi/font@6.5.95/css/materialdesignicons.min.css");
+  @import url("https://cdnjs.cloudflare.com/ajax/libs/Primer/19.1.1/tooltips.min.css");
+{% endcss %}
+
+{% if not process.env.VRT %}
+  {% css "tools" %}
+    @import url("https://wwwimages2.adobe.com/etc/beagle/public/globalnav/adobe-globalnav/latest/adobe-globalnav.min.css");
+  {% endcss %}
+{% endif %}
+
+{% css "tokens" %}
+  @import url("/components/vars/spectrum-global.css");
+  @import url("/components/vars/spectrum-light.css");
+  @import url("/components/vars/spectrum-dark.css");
+  @import url("/components/vars/spectrum-darkest.css");
+  @import url("/components/vars/spectrum-medium.css");
+  @import url("/components/vars/spectrum-large.css");
+  @import url("/components/tokens/index.css");
+{% endcss %}
+
+{% css "site" %}
+  @import url("/css/site.css");
+{% endcss %}
+
+{% css "component" %}
+  {% for packageName in dependencies | dedupe %}
+    @import url("/components/{{ packageName }}/index-vars.css");
+  {% endfor %}
+{% endcss %}
+
+<!-- Preloaded typography assets and token data for smoother page load -->
+<link rel="preload" type="text/css" as="style" href="{% getBundleFileUrl "css", "tools" %}" crossorigin="anonymous" referrerpolicy="no-referrer" />
+<link rel="preload" type="text/css" as="style" href="{% getBundleFileUrl "css", "tokens" %}">
+
+<link rel="stylesheet" type="text/css" href="{% getBundleFileUrl "css", "site" %}"/>
+<link rel="stylesheet" type="text/css" href="{% getBundleFileUrl "css", "component" %}">

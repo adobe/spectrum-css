@@ -20,11 +20,14 @@ class Store {
 
     render({ collections }) {
       const stores = {};
-      for (const { data } of collections.component) {
+      for (const { data } of collections.component ?? []) {
+        const componentData = data.component;
+        console.log(componentData);
+        if (!data.component.permalink) continue;
         stores[data.component.permalink] = {
             href: data.component.permalink,
             name: data.title,
-            component: data.component.name,
+            component: data.component.packageName,
             description: data.component.description,
          };
       }

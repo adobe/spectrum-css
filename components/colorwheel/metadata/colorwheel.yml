@@ -1,6 +1,9 @@
 name: Color Wheel
 status: Verified
 SpectrumSiteSlug: https://spectrum.adobe.com/page/color-wheel/
+SWC:
+  url: https://opensource.adobe.com/spectrum-web-components/components/color-wheel/
+  tag: sp-color-wheel
 description: |
   - For a given rotation on the wheel, `X`, the `.spectrum-ColorHandle` should be moved by applying the style property `transform: translate(${Y * Math.cos(X)}px, ${Y * Math.sin(X)}px)`, where Y is  ((radius -  `.spectrum-colorwheel-track-width`) / 2))
   - Set the `value` attribute of `.spectrum-ColorWheel-value` to the currently selected color (i.e. `hsl(326, 100%, 50%)`)

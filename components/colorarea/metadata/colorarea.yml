@@ -1,6 +1,9 @@
 name: Color Area
 status: Verified
 SpectrumSiteSlug: https://spectrum.adobe.com/page/color-area/
+SWC:
+  url: https://opensource.adobe.com/spectrum-web-components/components/color-area/
+  tag: sp-color-area
 description: |
   - The `.spectrum-ColorHandle` should be moved with the `transform: translate(x, y)` style property as the sliders are dragged
   - Set the `background` style property of `.spectrum-ColorArea-gradient` to the gradient of the colors to be selected

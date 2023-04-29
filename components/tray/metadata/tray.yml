@@ -1,4 +1,7 @@
 name: Tray
+SWC:
+  url: https://opensource.adobe.com/spectrum-web-components/components/tray/
+  tag: sp-tray
 description: |
   Tray Dialogs are typically used to portray information on mobile device or
   smaller screens.
@@ -11,7 +14,7 @@ examples:
   - id: tray
     name: Tray
     markup: |
-        <div class="spectrum-Tray-wrapper spectrum-CSSExample-dialog" style="background: rgba(0,0,0,0.4);">
+        <div class="spectrum-Tray-wrapper site-Example-dialog" style="background: rgba(0,0,0,0.4);">
           <div class="spectrum-Modal spectrum-Tray is-open spectrum-Tray">
             <section class="spectrum-Dialog spectrum-Dialog--large" role="dialog" tabindex="-1" aria-modal="true">
               <div class="spectrum-Dialog-grid">

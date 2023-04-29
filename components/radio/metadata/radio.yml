@@ -1,6 +1,9 @@
 name: Radio
 status: Verified
 SpectrumSiteSlug: https://spectrum.adobe.com/page/radio-button/
+SWC:
+  url: https://opensource.adobe.com/spectrum-web-components/components/radio/
+  tag: sp-radio
 description: |
   - Radio buttons allow users to select a single option from a list of mutually exclusive options. All possible options are exposed up front for users to compare.
   - Invalid radio buttons are signified by alert [HelpText](helptext.html) and [Icon](icon.html) included in [FieldGroup](fieldgroup.html).

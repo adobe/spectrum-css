@@ -2,23 +2,22 @@
 layout: pages.njk
 permalink: index.html
 eleventyExcludeFromCollections: true
+dependencies:
+    - typography
+    - link
 ---
 
-{% block head %}
-    {% for dep in ['typography', 'link'] %}
-    <link rel="stylesheet" type="text/css" href='/components/{{ dep }}/index-vars.css' data-dependency={{ dep }} />
-    {% endfor %}
-{% endblock %}
-
-{% block content %}
 <div class="spectrum-Typography">
-    <div class="spectrum-Site-hero">
-        <div class="spectrum-Site-heroHeading">
+    <div class="site-Hero">
+        <div class="site-Hero-heading">
             <h1 class="spectrum-Heading spectrum-Heading--sizeXXXL spectrum-Heading--serif">Spectrum CSS</h1>
         </div>
         <p class="spectrum-Body spectrum-Body--sizeXL">Spectrum CSS is an open-source implementation of Spectrum, Adobe's design system. It includes components and resources to make applications more cohesive.</p>
-        <img alt="Spectrum CSS Hero image" src="/img/spectrum-css_illustration_desktop@2x.png?w=976&amp;h=446" srcset="/img/spectrum-css_illustration_desktop@2x.png 2x" class="spectrum-Site-heroImage"/>
-        <div class="spectrum-HomeCards">
+            {# todo: should this be using asset? #}
+        <img alt="Spectrum CSS Hero image" src="/img/spectrum-css_illustration_desktop@2x.png?w=976&amp;h=446" srcset="/img/spectrum-css_illustration_desktop@2x.png 2x" class="site-Hero-image"/>
+        {# todo: update to use the grid include #}
+        <div class="site-Gallery">
+            {# todo: should these be using spectrum-Card to render? #}
             <div class="spectrum-HomeCard">
                 <img class="spectrum-HomeCard-image" src="/img/illustration_documentation.svg" alt="Documentation illustation"/>
                 <div class="spectrum-HomeCard-content">
@@ -56,4 +55,3 @@ eleventyExcludeFromCollections: true
         </div>
     </div>
 </div>
-{% endblock %}

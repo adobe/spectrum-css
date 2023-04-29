@@ -2,6 +2,8 @@ name: Typography (Internationalized)
 fastLoad: false
 description: Internationalized typography examples. Note that, for these examples to work correctly, your Typekit needs to include the appropriate Han fonts.
 SpectrumSiteSlug: https://spectrum.adobe.com/page/typography/
+SWC:
+  url: https://opensource.adobe.com/spectrum-web-components/tools/styles/#typography
 status: Verified
 id: heading-han-m
 examples:
@@ -269,4 +271,3 @@ examples:
         pre tags for
         goodness</code></pre>
       </div>
-

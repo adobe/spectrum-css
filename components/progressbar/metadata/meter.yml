@@ -8,6 +8,9 @@ description: |
   | `.spectrum-ProgressBar--sizeS`  | `.spectrum-Meter--sizeS`    |
   | `.spectrum-ProgressBar--sizeL`  | `.spectrum-Meter--sizeL`    |
 SpectrumSiteSlug: https://spectrum.adobe.com/page/meter/
+SWC:
+  url: https://opensource.adobe.com/spectrum-web-components/components/meter/
+  tag: sp-meter
 sections:
   - name: Custom Properties API
     description: |
@@ -98,7 +101,7 @@ examples:
         </div>
       </div>
   - id: meter-negative
-    name: Negative 
+    name: Negative
     markup: |
       <div style="margin: 20px 0;">
         <div class="spectrum-ProgressBar spectrum-Meter--sizeL is-negative" value="90" role="progressbar" aria-valuenow="90" aria-valuemin="0" aria-valuemax="100">

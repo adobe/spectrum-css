@@ -3,13 +3,13 @@ body {
     font-size: 10px;
 }
 
-nav .spectrum-Site-logo {
+nav .site-Logo {
     margin-inline-end: var(--spectrum-global-dimension-size-200);
     color: #FA0F00;
     block-size: 32px;
 }
-  
-.spectrum--large nav .spectrum-Site-logo {
+
+.spectrum--large nav .site-Logo {
     block-size: 40px;
 }
 
@@ -103,17 +103,17 @@ select:focus,
     padding-inline: 11px;
     padding-block: 4px;
     margin: 0;
-  
+
     /* background-color: transparent !important; */
     border-color: transparent !important;
     color: rgb(34,34,34) !important;
     font-weight: 300;
-  
+
     transition: background 130ms ease-out,
       border-color 130ms ease-out,
       color 130ms ease-out,
       box-shadow 130ms ease-out;
-  
+
     line-height: 1.3;
 }
 

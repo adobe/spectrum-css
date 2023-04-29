@@ -1,10 +1,16 @@
+{% css "component" %}
+    @import url("/components/fieldlabel/index-vars.css");
+    @import url("/components/link/index-vars.css");
+    @import url("/components/icon/index-vars.css");
+    @import url("/components/menu/index-vars.css");
+    @import url("/components/picker/index-vars.css");
+    @import url("/components/popover/index-vars.css");
+    @import url("/components/statuslight/index-vars.css");
+    @import url("/components/typography/index-vars.css");
+{% endcss %}
 
-{% for dep in ['fieldlabel', 'icon', 'link', 'menu', 'picker', 'popover', 'statuslight', 'typography'] %}
-<link rel="stylesheet" type="text/css" href='/components/{{ dep }}/index-vars.css' data-dependency={{ dep }} />
-{% endfor %}
-
-<div class="spectrum-CSSComponent-switcher">
-    <div class="spectrum-CSS-switcherContainer">
+<div class="site-Switcher">
+    <div class="site-Switcher-container">
         <label class="spectrum-FieldLabel spectrum-FieldLabel--left spectrum-FieldLabel--sizeM" for="switcher-theme">Theme</label>
         <button class="spectrum-Picker spectrum-Picker--sizeM spectrum-Picker--quiet" aria-haspopup="true" id="switcher-theme">
             <span class="spectrum-Picker-label">Light</span>
@@ -44,7 +50,7 @@
             </ul>
         </div>
     </div>
-    <div class="spectrum-CSS-switcherContainer">
+    <div class="site-Switcher-container">
         <label class="spectrum-FieldLabel spectrum-FieldLabel--left spectrum-FieldLabel--sizeM" for="switcher-scale">Scale</label>
         <button class="spectrum-Picker spectrum-Picker--sizeM spectrum-Picker--quiet" aria-haspopup="true" id="switcher-scale">
             <span class="spectrum-Picker-label">Medium</span>
@@ -75,7 +81,7 @@
             </ul>
         </div>
     </div>
-    <div class="spectrum-CSS-switcherContainer">
+    <div class="site-Switcher-container">
         <label class="spectrum-FieldLabel spectrum-FieldLabel--left spectrum-FieldLabel--sizeM" for="switcher-theme">Direction</label>
         <button
             class="spectrum-Picker spectrum-Picker--sizeM spectrum-Picker--quiet"
@@ -109,7 +115,7 @@
             </ul>
         </div>
     </div>
-    <div class="spectrum-CSS-switcherContainer">
+    <div class="site-Switcher-container">
         <label class="spectrum-FieldLabel spectrum-FieldLabel--left spectrum-FieldLabel--sizeM" for="switcher-theme">Vars Version</label>
         <button
             class="spectrum-Picker spectrum-Picker--sizeM spectrum-Picker--quiet"

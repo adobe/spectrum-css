@@ -34,6 +34,7 @@
     "eleventy-plugin-error-overlay": "^1.0.0",
     "fast-glob": "^3.2.12",
     "js-yaml": "^4.1.0",
+    "lit-html": "^2.7.3",
     "loadicons": "^1.0.0",
     "lunr": "^2.3.9",
     "markdown-it": "^13.0.1",
@@ -43,13 +44,20 @@
     "npm-run-all": "^4.1.5",
     "nunjucks": "^3.2.4",
     "postcss": "^8.4.23",
+    "postcss-value-parser": "^4.2.0",
     "prismjs": "^1.29.0",
     "rimraf": "^5.0.0"
   },
   "nx": {
     "targets": {
+      "clean": {
+        "inputs": [
+          "{workspaceRoot}/dist"
+        ]
+      },
       "build": {
         "dependsOn": [
+          "clean",
           "^build"
         ],
         "inputs": [
@@ -90,12 +98,12 @@
           "^build"
         ],
         "inputs": [
-          "{workspaceRoot}/_data",
-          "{workspaceRoot}/_includes",
-          "{workspaceRoot}/_layouts",
-          "{workspaceRoot}/assets",
-          "{workspaceRoot}/content",
-          "{workspaceRoot}/scripts",
+          "{workspaceRoot}/_data/*",
+          "{workspaceRoot}/_includes/*",
+          "{workspaceRoot}/_layouts/*",
+          "{workspaceRoot}/assets/*",
+          "{workspaceRoot}/content/*",
+          "{workspaceRoot}/scripts/*",
           "{workspaceRoot}/.eleventy.js"
         ],
         "outputs": [

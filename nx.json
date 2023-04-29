@@ -16,7 +16,8 @@
     "build": {
       "dependsOn": ["^build"],
       "inputs": [
-        "{workspaceRoot}/*.css"
+        "{workspaceRoot}/*.css",
+        "!{workspaceRoot}/stories/*.js"
       ],
       "outputs": [
         "{workspaceRoot}/dist"

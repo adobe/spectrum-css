@@ -21,11 +21,11 @@ class Lunr {
    }
 
    render({ collections }) {
-      const pages = collections.component
+      const pages = (collections.component ?? [])
          .map(({ data }) => ({
-            href: data.component.permalink,
-            name: data.title,
-            description: data.component.description,
+            href: data?.component?.permalink,
+            name: data?.title,
+            description: data?.component?.description,
          }));
       const index = lunr(function() {
          this.ref('href');
