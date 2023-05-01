@@ -13,7 +13,7 @@ export default {
         type: { summary: "string" },
         category: "Component",
       },
-      options: ["s", "m"],
+      options: ["s", "m", "l", "xl"],
       control: "select",
     },
     density: {
@@ -34,12 +34,25 @@ export default {
       },
       control: "boolean",
     },
+    isEmphasized: {
+      name: "Emphasized",
+      type: { name: "boolean" },
+      table: {
+        type: { summary: "boolean" },
+        category: "Component",
+      },
+      control: "boolean",
+    },
+    rowItems: {
+      table: { disable: true }
+    },
   },
   args: {
     rootClass: "spectrum-Table",
     size: "m",
     density: "standard",
     isQuiet: false,
+    isEmphasized: true,
   },
   parameters: {
     actions: {
@@ -54,4 +67,84 @@ export default {
 };
 
 export const Default = Template.bind({});
-Default.args = {};
+Default.args = {
+  rowItems: [
+    {
+      cellContent: "Table Row Alpha",
+    },
+    {
+      cellContent: "Table Row Bravo",
+    },
+    {
+      cellContent: "Table Row Charlie",
+      isSelected: true,
+    },
+    {
+      cellContent: "Table Row Delta",
+    },
+    {
+      cellContent: "Example Summary Row",
+      isSummaryRow: true,
+    },
+  ]
+};
+
+export const MultiSelect = Template.bind({});
+MultiSelect.storyName = "Multi-select";
+MultiSelect.args = {
+  rowItems: [
+    {
+      cellContent: "Table Row Alpha",
+      showCheckbox: true,
+    },
+    {
+      cellContent: "Table Row Bravo",
+      showCheckbox: true,
+      isSelected: true,
+    },
+    {
+      cellContent: "Table Row Charlie",
+      showCheckbox: true,
+      isSelected: true,
+    },
+    {
+      cellContent: "Table Row Delta",
+      showCheckbox: true,
+      isSelected: true,
+    },
+    {
+      cellContent: "Table Row Echo",
+      showCheckbox: true,
+      isSelected: true,
+    },
+  ]
+};
+
+export const SectionHeader = Template.bind({});
+SectionHeader.args = {
+  rowItems: [
+    {
+      cellContent: "Example Section Header",
+      isSectionHeader: true,
+    },
+    {
+      cellContent: "Table Row Alpha",
+    },
+    {
+      cellContent: "Table Row Bravo",
+    },
+    {
+      cellContent: "Table Row Charlie",
+    },
+    {
+      cellContent: "Another Section Header",
+      isSectionHeader: true,
+    },
+    {
+      cellContent: "Table Row Delta",
+    },
+    {
+      cellContent: "Table Row Echo",
+    },
+  ]
+};
