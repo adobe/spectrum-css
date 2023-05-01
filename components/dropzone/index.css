@@ -43,6 +43,21 @@ governing permissions and limitations under the License.
   --spectrum-drop-zone-illustration-color-hover: var(--spectrum-accent-visual-color);
 
 
+  /* Filled styles */
+  --spectrum-drop-zone-content-height: var(--spectrum-component-height-300);
+  --spectrum-drop-zone-content-max-width: var(--spectrum-drop-zone-content-maximum-width);
+  --spectrum-drop-zone-content-edge-to-text: var(--spectrum-component-edge-to-text-300);
+  --spectrum-drop-zone-content-top-to-text: var(--spectrum-component-top-to-text-300);
+  --spectrum-drop-zone-content-bottom-to-text: var(--spectrum-component-bottom-to-text-300);
+
+  --spectrum-drop-zone-content-font-family: var(--spectrum-sans-font-family-stack);
+  --spectrum-drop-zone-content-font-weight: var(--spectrum-bold-font-weight);
+  --spectrum-drop-zone-content-font-style: var(--spectrum-default-font-style);
+  --spectrum-drop-zone-content-font-size: var(--spectrum-font-size-300);
+  --spectrum-drop-zone-content-line-height: var(--spectrum-line-height-100);
+
+  --spectrum-drop-zone-content-background-color: var(--spectrum-accent-visual-color);
+  --spectrum-drop-zone-content-color: var(--spectrum-white);
 
 
   /* cjk language support */
@@ -62,6 +77,7 @@ governing permissions and limitations under the License.
   border-width: var(--mod-drop-zone-border-width, var(--spectrum-drop-zone-border-width));
   border-radius: var(--mod-drop-zone-corner-radius, var(--spectrum-drop-zone-corner-radius));
   border-style: dashed;
+  background-size: cover;
 
   &::after {
     content: "";
@@ -108,6 +124,12 @@ governing permissions and limitations under the License.
     }
   }
 
+  &.is-filled {
+    .spectrum-IllustratedMessage {
+      display: none;
+    }
+  }
+
   &:focus,
   &:focus-within {
     outline: 0;
@@ -115,3 +137,40 @@ governing permissions and limitations under the License.
     border-color: var(--mod-drop-zone-border-color-hover, var(--spectrum-drop-zone-border-color-hover));
   }
 }
+
+.spectrum-Dropzone-content {
+  display: none;
+  height: 100%;
+  align-items: center;
+  justify-content: center;
+
+  .spectrum-Dropzone.is-filled.is-dragged & {
+    display: flex;
+  }
+}
+
+.spectrum-Dropzone-button {
+  box-sizing: border-box;
+  border: none;
+  block-size: var(--mod-drop-zone-content-height, var(--spectrum-drop-zone-content-height));
+  max-inline-size: var(--mod-drop-zone-content-max-width, var(--spectrum-drop-zone-content-max-width));
+  padding-inline: var(--mod-drop-zone-content-edge-to-text, var(--spectrum-drop-zone-content-edge-to-text));
+  padding-block-start: var(--mod-drop-zone-content-top-to-text, var(--spectrum-drop-zone-content-top-to-text));
+  padding-block-end: var(--mod-drop-zone-content-bottom-to-text, var(--spectrum-drop-zone-content-bottom-to-text));
+  background-color: var(--mod-drop-zone-content-background-color, var(--spectrum-drop-zone-content-background-color));
+
+  &:hover, &:focus {
+    background-color: var(--mod-drop-zone-content-background-color, var(--spectrum-drop-zone-content-background-color));
+  }
+
+  .spectrum-ActionButton-label {
+    font-family: var(--mod-drop-zone-content-font-family, var(--spectrum-drop-zone-content-font-family));
+    font-weight: var(--mod-drop-zone-content-font-weight, var(--spectrum-drop-zone-content-font-weight));
+    font-style: var(--mod-drop-zone-content-font-style, var(--spectrum-drop-zone-content-font-style));
+    font-size: var(--mod-drop-zone-content-font-size, var(--spectrum-drop-zone-content-font-size));
+    line-height: var(--mod-drop-zone-content-line-height, var(--spectrum-drop-zone-content-line-height));
+    color: var(--mod-drop-zone-content-color, var(--spectrum-drop-zone-content-color));
+  }
+}
+
+

@@ -21,3 +21,15 @@
 |`--mod-drop-zone-body-color`|
 |`--mod-drop-zone-border-color-hover`|
 |`--mod-drop-zone-illustration-color-hover`|
+|`--mod-drop-zone-content-height`|
+|`--mod-drop-zone-content-max-width`|
+|`--mod-drop-zone-content-edge-to-text`|
+|`--mod-drop-zone-content-top-to-text`|
+|`--mod-drop-zone-content-bottom-to-text`|
+|`--mod-drop-zone-content-background-color`|
+|`--mod-drop-zone-content-font-family`|
+|`--mod-drop-zone-content-font-weight`|
+|`--mod-drop-zone-content-font-style`|
+|`--mod-drop-zone-content-font-size`|
+|`--mod-drop-zone-content-line-height`|
+|`--mod-drop-zone-content-color`|
