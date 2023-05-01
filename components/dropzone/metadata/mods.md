@@ -1,0 +1,23 @@
+| Modifiable Custom Properties |
+| --- |
+|`--mod-drop-zone-width`|
+|`--mod-drop-zone-padding`|
+|`--mod-drop-zone-border-width`|
+|`--mod-drop-zone-corner-radius`|
+|`--mod-drop-zone-content-maximum-width`|
+|`--mod-drop-zone-illustration-to-heading`|
+|`--mod-drop-zone-heading-to-body`|
+|`--mod-drop-zone-heading-font-family`|
+|`--mod-drop-zone-heading-font-weight`|
+|`--mod-drop-zone-heading-font-style`|
+|`--mod-drop-zone-heading-font-size`|
+|`--mod-drop-zone-heading-line-height`|
+|`--mod-drop-zone-heading-color`|
+|`--mod-drop-zone-body-font-family`|
+|`--mod-drop-zone-body-font-weight`|
+|`--mod-drop-zone-body-font-style`|
+|`--mod-drop-zone-body-font-size`|
+|`--mod-drop-zone-body-line-height`|
+|`--mod-drop-zone-body-color`|
+|`--mod-drop-zone-border-color-hover`|
+|`--mod-drop-zone-illustration-color-hover`|
