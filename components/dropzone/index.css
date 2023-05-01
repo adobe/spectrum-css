@@ -63,6 +63,13 @@ governing permissions and limitations under the License.
   border-radius: var(--mod-drop-zone-corner-radius, var(--spectrum-drop-zone-corner-radius));
   border-style: dashed;
 
+  &::after {
+    content: "";
+    block-size: 100%;
+    inline-size: 100%;
+    background-image: url("data:image/svg+xml;utf8,<svg><circle cx='55' cy='55' r='50'/></svg>");
+  }
+
   .spectrum-IllustratedMessage {
     max-block-size: var(--mod-drop-zone-content-maximum-width, var(--spectrum-drop-zone-content-maximum-width));
   }
