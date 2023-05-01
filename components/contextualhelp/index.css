@@ -17,9 +17,8 @@ governing permissions and limitations under the License.
   --spectrum-contextual-help-link-spacing: var(--spectrum-spacing-300);
 
   /* Typography Variables */
-  /* TODO: these need to be changed to the contextual-help tokens when available */
-  --spectrum-contextual-help-heading-size: var(--spectrum-heading-size-xs);
-  --spectrum-contextual-help-body-size: var(--spectrum-body-size-s);
+  --spectrum-contextual-help-heading-size: var(--spectrum-contextual-help-title-size);
+  --spectrum-contextual-help-body-size: var(--spectrum-contextual-help-body-size);
   --spectrum-contextual-help-heading-color: var(--spectrum-heading-color);
   --spectrum-contextual-help-body-color: var(--spectrum-body-color);
 
