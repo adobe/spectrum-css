@@ -16,7 +16,7 @@ governing permissions and limitations under the License.
   --spectrum-accordion-item-height: var(--spectrum-component-height-200);
   --spectrum-accordion-item-width: var(--spectrum-accordion-minimum-width);
   /*--spectrum-accordion-disclosure-indicator-height: var(--spectrum-component-height-100);*/
-  /*--spectrum-accordion-disclosure-indicator-to-text-space: var(--spectrum-accordion-disclosure-indicator-to-text);*/
+  --spectrum-accordion-disclosure-indicator-to-text-space: var(--spectrum-component-height-50);
   /*--spectrum-accordion-edge-to-disclosure-indicator-space: var(--spectrum-accordion-edge-to-disclosure-indicator);*/
   /*--spectrum-accordion-edge-to-text-space: var(-spectrum-accordion-edge-to-text);*/
   /*--spectrum-accordion-top-to-text-compact: var(--spectrum-accordion-top-to-text-compact-medium);*/
@@ -79,7 +79,7 @@ governing permissions and limitations under the License.
   /*--spectrum-accordion-bottom-to-text-compact: var(--spectrum-accordion-bottom-to-text-compact-small);*/
   /*--spectrum-accordion-bottom-to-text-regular: var(--spectrum-accordion-bottom-to-text-regular-small);*/
   /*--spectrum-accordion-bottom-to-text-space: var(--spectrum-accordion-bottom-to-text-spacious-small);*/
-  /*--spectrum-accordion-component-edge-to-text: var(--spectrum-component-edge-to-text-50);*/
+  --spectrum-accordion-component-edge-to-text: var(--spectrum-component-edge-to-text-50);
   --spectrum-accordion-text-label-font-size: var(--spectrum-font-size-200);
   --spectrum-accordion-text-body-font-size: var(--spectrum-body-size-xs);
 }
@@ -93,7 +93,7 @@ governing permissions and limitations under the License.
   /*--spectrum-accordion-bottom-to-text-compact: var(--spectrum-accordion-bottom-to-text-compact-medium);*/
   /*--spectrum-accordion-bottom-to-text-regular: var(--spectrum-accordion-bottom-to-text-regular-medium);*/
   /*--spectrum-accordion-bottom-to-text-space: var(--spectrum-accordion-bottom-to-text-spacious-medium);*/
-  /*--spectrum-accordion-component-edge-to-text: var(--spectrum-component-edge-to-text-75);*/
+  --spectrum-accordion-component-edge-to-text: var(--spectrum-component-edge-to-text-75);
   --spectrum-accordion-text-label-font-size: var(--spectrum-font-size-300);
   --spectrum-accordion-text-body-font-size: var(--spectrum-body-size-s);
 }
@@ -107,7 +107,7 @@ governing permissions and limitations under the License.
   /*--spectrum-accordion-bottom-to-text-compact: var(--spectrum-accordion-bottom-to-text-compact-large);*/
   /*--spectrum-accordion-bottom-to-text-regular: var(--spectrum-accordion-bottom-to-text-regular-large);*/
   /*--spectrum-accordion-bottom-to-text-space: var(--spectrum-accordion-bottom-to-text-spacious-large);*/
-  /*--spectrum-accordion-component-edge-to-text: var(--spectrum-component-edge-to-text-100);*/
+  --spectrum-accordion-component-edge-to-text: var(--spectrum-component-edge-to-text-100);
   --spectrum-accordion-text-label-font-size: var(--spectrum-font-size-500);
   --spectrum-accordion-text-body-font-size: var(--spectrum-body-size-m);
 }
@@ -121,7 +121,7 @@ governing permissions and limitations under the License.
   /*--spectrum-accordion-bottom-to-text-compact: var(--spectrum-accordion-bottom-to-text-compact-extra-large);*/
   /*--spectrum-accordion-bottom-to-text-regular: var(--spectrum-accordion-bottom-to-text-regular-extra-large);*/
   /*--spectrum-accordion-bottom-to-text-space: var(--spectrum-accordion-bottom-to-text-spacious-extra-large);*/
-  /*--spectrum-accordion-component-edge-to-text: var(--spectrum-component-edge-to-text-200);*/
+  --spectrum-accordion-component-edge-to-text: var(--spectrum-component-edge-to-text-200);
   --spectrum-accordion-text-label-font-size: var(--spectrum-font-size-700);
   --spectrum-accordion-text-body-font-size: var(--spectrum-body-size-l);
 }
@@ -150,11 +150,11 @@ governing permissions and limitations under the License.
   display: block;
   position: absolute;
   /*inset-inline-start: var(--spectrum-accordion-item-padding-x);*/
-  inset-block-start: 5px; /*var(--mod-accordion-disclosure-indicator-height, var(--spectrum-accordion-disclosure-indicator-height)); /*calc(
+  inset-block-start: 10px; /*var(--mod-accordion-disclosure-indicator-height, var(--spectrum-accordion-disclosure-indicator-height)); /*calc(
     50% -
     var(--mod-accordion-disclosure-indicator-height, var(--spectrum-accordion-disclosure-indicator-height)) / 2
   );*/
-
+  /*height: calc(var(--mod-accordion-disclosure-indicator-height, var(--spectrum-accordion-disclosure-indicator-height)));*/
 }
 
 .spectrum-Accordion-item {
@@ -195,8 +195,8 @@ governing permissions and limitations under the License.
       var(--mod-accordion-disclosure-indicator-height, var(--spectrum-accordion-disclosure-indicator-height)) + var(--mod-accordion-focus-indicator-gap, var(--spectrum-accordion-focus-indicator-gap))
       +
       var(--mod-accordion-text-label-line-height, var(--spectrum-accordion-text-label-line-height)));*/
-  padding-inline-start: 15px;
-  padding-top: 15px;
+  padding-inline-start: var(--mod-accordion-disclosure-indicator-to-text-space, var(--spectrum-accordion-disclosure-indicator-to-text-space));
+  /*padding-top: 5px;*/
   /*var(--mod-accordion-top-to-text-compact, var(--spectrum-accordion-top-to-text-compact));*/
   /*padding-inline-end: var(--spectrum-accordion-item-padding-x);*/
   padding-bottom: 5px;
