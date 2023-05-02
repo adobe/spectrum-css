@@ -81,7 +81,7 @@ governing permissions and limitations under the License.
   /*--spectrum-accordion-bottom-to-text-space: var(--spectrum-accordion-bottom-to-text-spacious-small);*/
   /*--spectrum-accordion-component-edge-to-text: var(--spectrum-component-edge-to-text-50);*/
   --spectrum-accordion-text-label-font-size: var(--spectrum-font-size-200);
-  /*--spectrum-accordion-text-body-font-size: var(--spectrum-body-size-xs);*/
+  --spectrum-accordion-text-body-font-size: var(--spectrum-body-size-xs);
 }
 
 .spectrum-Accordion--sizeM {
@@ -95,7 +95,7 @@ governing permissions and limitations under the License.
   /*--spectrum-accordion-bottom-to-text-space: var(--spectrum-accordion-bottom-to-text-spacious-medium);*/
   /*--spectrum-accordion-component-edge-to-text: var(--spectrum-component-edge-to-text-75);*/
   --spectrum-accordion-text-label-font-size: var(--spectrum-font-size-300);
-  /*--spectrum-accordion-text-body-font-size: var(--spectrum-body-size-s);*/
+  --spectrum-accordion-text-body-font-size: var(--spectrum-body-size-s);
 }
 
 .spectrum-Accordion--sizeL {
@@ -109,7 +109,7 @@ governing permissions and limitations under the License.
   /*--spectrum-accordion-bottom-to-text-space: var(--spectrum-accordion-bottom-to-text-spacious-large);*/
   /*--spectrum-accordion-component-edge-to-text: var(--spectrum-component-edge-to-text-100);*/
   --spectrum-accordion-text-label-font-size: var(--spectrum-font-size-500);
-  /*--spectrum-accordion-text-body-font-size: var(--spectrum-body-size-m);*/
+  --spectrum-accordion-text-body-font-size: var(--spectrum-body-size-m);
 }
 
 .spectrum-Accordion--sizeXL {
@@ -123,7 +123,7 @@ governing permissions and limitations under the License.
   /*--spectrum-accordion-bottom-to-text-space: var(--spectrum-accordion-bottom-to-text-spacious-extra-large);*/
   /*--spectrum-accordion-component-edge-to-text: var(--spectrum-component-edge-to-text-200);*/
   --spectrum-accordion-text-label-font-size: var(--spectrum-font-size-700);
-  /*--spectrum-accordion-text-body-font-size: var(--spectrum-body-size-l);*/
+  --spectrum-accordion-text-body-font-size: var(--spectrum-body-size-l);
 }
 
 .spectrum-Accordion {
