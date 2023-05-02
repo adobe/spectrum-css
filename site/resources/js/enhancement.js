@@ -15,7 +15,6 @@ governing permissions and limitations under the License.
 
   document.addEventListener('DOMContentLoaded', function(event) {
     const dropzones = document.querySelectorAll('.spectrum-Dropzone');
-    console.log(dropzones);
    
     dropzones.forEach(function(item) {
       item.addEventListener("dragover", function(event) {
