@@ -1,9 +1,8 @@
-// Import the component markup template
 import { Template } from "./template";
 
 export default {
   title: "Alert banner",
-  description: "The Alert banner component is...",
+  description: "The Alert banner show pressing and high-signal messages, such as system alerts. They’re meant to be noticed and prompt users to take action.",
   component: "AlertBanner",
   argTypes: {
     isOpen: {
@@ -15,26 +14,36 @@ export default {
       },
       control: "boolean",
     },
-    content: { table: { disable: false } },
-    isDismissable: {
-      name: "Dismissable",
-      type: { name: "boolean" },
+    text: {
+      name: "Text",
+      type: { name: "string", required: true },
       table: {
-        type: { summary: "boolean" },
+        type: { summary: "string" },
+        disable: false,
         category: "Component",
       },
-      control: "boolean",
+      control: { type: "text" },
+    },
+    variant: {
+      name: "Background color variants",
+      type: { name: "string" },
+      table: {
+        type: { summary: "string" },
+        category: "Component",
+      },
+      options: ["neutral", "informative", "negative"],
+      control: "radio",
     },
   },
   args: {
     rootClass: "spectrum-AlertBanner",
     isOpen: true,
-    isEmphasized: false,
-    isSticky: false,
-    isFixed: false,
-    isFlexible: false,
+    text: "Your trial has expired. Please purchase to continue. Your work has been saved and is ready for you to open again after purchase."
   },
   parameters: {
+    actions: {
+      handles: ["click .spectrum-AlertBanner button"],
+    },
     status: {
       type: process.env.MIGRATED_PACKAGES.includes('alertbanner') ? 'migrated' : undefined
     }
