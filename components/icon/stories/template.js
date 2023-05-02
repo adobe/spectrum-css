@@ -19,7 +19,7 @@ import "../index.css";
  * @param {string} props.rootClass
  * @param {"s"|"m"|"l"|"xl"} props.size
  * @param {"ui"|"workflow"} props.setName
- * @param {string} props.iconName
+ * @param {string} props.iconName - Icon name with or without the icon scale number appended. Names with the scale (e.g. 75, 100) will replace it based upon the value of 'size'.
  * @param {string} props.fill
  * @param {string} props.id
  * @param {string[]} props.customClasses
@@ -47,13 +47,16 @@ export const Template = ({
   }
 
   let idKey = iconName;
-  /** If a descriptor like Right, Left, Down, or Up is present for the Chevron or the Arrow, use that only for the class and not the icon fetch */
+
+  // If a descriptor like Right, Left, Down, or Up is present for the Chevron or the
+  // Arrow, use that only for the class and not the icon fetch.
   if (uiIcons.some(c => idKey.startsWith(c)) && ['Right', 'Left', 'Down', 'Up'].some(c => idKey.includes(c))) {
     idKey = idKey.replace(/(Right|Left|Down|Up)/, '');
   }
 
-  /** Reformat the icon scale to match the provided sizing */
-  if(uiIcons.includes(idKey) && !idKey.endsWith('Gripper') && idKey.match(/^(?!\d).*\d{2,3}$/)) {
+  // If the icon name includes its scale, reformat it to match the provided sizing.
+  // E.g. with a size of "s", the icon name "Checkmark100" would become "Checkmark75".
+  if (idKey.match(/^(?!\d).*\d{2,3}$/) && uiIcons.includes(idKey.replace(/\d{2,3}$/, '')) && !idKey.endsWith('Gripper')) {
     let sizeVal;
     switch(size) {
       case 'xs':
@@ -76,6 +79,7 @@ export const Template = ({
     iconName = iconName.replace(/\d{2,3}$/, sizeVal);
   }
 
+  // Determine which icon set contains this icon.
   if (workflowIcons.includes(idKey)) {
     setName = "workflow";
   } else if (uiIcons.includes(idKey.replace(/\d{2,3}$/, ''))) {
