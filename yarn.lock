@@ -12362,13 +12362,13 @@ npm-registry-fetch@^13.0.0, npm-registry-fetch@^13.0.1:
     npm-package-arg "^9.0.1"
     proc-log "^2.0.0"
 
-npm-registry-fetch@^14.0.0, npm-registry-fetch@^14.0.3, npm-registry-fetch@^14.0.4:
-  version "14.0.4"
-  resolved "https://registry.yarnpkg.com/npm-registry-fetch/-/npm-registry-fetch-14.0.4.tgz#43dfa55ce7c0d0c545d625c7a916bab5b95f7038"
-  integrity sha512-pMS2DRkwg+M44ct65zrN/Cr9IHK1+n6weuefAo6Er4lc+/8YBCU0Czq04H3ZiSigluh7pb2rMM5JpgcytctB+Q==
+npm-registry-fetch@^14.0.0, npm-registry-fetch@^14.0.3, npm-registry-fetch@^14.0.5:
+  version "14.0.5"
+  resolved "https://registry.yarnpkg.com/npm-registry-fetch/-/npm-registry-fetch-14.0.5.tgz#fe7169957ba4986a4853a650278ee02e568d115d"
+  integrity sha512-kIDMIo4aBm6xg7jOttupWZamsZRkAqMqwqqbVXnUqstY5+tapvv6bkH/qMR76jdgV+YljEUCyWx3hRYMrJiAgA==
   dependencies:
     make-fetch-happen "^11.0.0"
-    minipass "^4.0.0"
+    minipass "^5.0.0"
     minipass-fetch "^3.0.0"
     minipass-json-stream "^1.0.1"
     minizlib "^2.1.2"
