@@ -67,33 +67,34 @@ export const AccordionItem = ({
 };
 
 export const Template = ({
-	rootClass = "spectrum-Accordion",
-	items,
-	id,
-	customClasses = [],
-	...globals
+  rootClass = "spectrum-Accordion",
+  size = "m",
+  items,
+  id,
+  customClasses = [],
+  ...globals
 }) => {
 	if (!items || !items.size) return html``;
 
-	return html`
-		<div
-			class="${classMap({
-				[rootClass]: true,
-				...customClasses.reduce((a, c) => ({ ...a, [c]: true }), {}),
-			})}"
-			id=${ifDefined(id)}
-			role="region"
-		>
-			${repeat(Array.from(items.keys()), (heading, idx) => {
-				const item = items.get(heading);
-				return AccordionItem({
-					rootClass: `${rootClass}-item`,
-					heading,
-					idx,
-					...item,
-					...globals,
-				});
-			})}
-		</div>
-	`;
+  return html`
+    <div
+      class="${classMap({
+        [rootClass]: true,
+        [`${rootClass}--size${size?.toUpperCase()}`]: typeof size !== "undefined",
+        ...customClasses.reduce((a, c) => ({ ...a, [c]: true }), {}),
+      })}"
+      id=${ifDefined(id)}
+      role="region">
+      ${repeat(Array.from(items.keys()), (heading, idx) => {
+        const item = items.get(heading);
+        return AccordionItem({
+          rootClass: `${rootClass}-item`,
+          heading,
+          idx,
+          ...item,
+          ...globals,
+        });
+      })}
+    </div>
+  `;
 };

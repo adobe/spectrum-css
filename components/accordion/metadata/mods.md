@@ -6,7 +6,9 @@
 |`--mod-accordion-disclosure-indicator-to-text-space`|
 |`--mod-accordion-focus-indicator-gap`|
 |`--mod-accordion-text-label-line-height`|
+|`--mod-accordion-top-to-text-compact`|
 |`--mod-accordion-component-edge-to-text`|
+|`--mod-accordion-text-height-cjk`|
 |`--mod-accordion-text-label-font-size`|
 |`--mod-accordion-text-label-font-weight`|
 |`--mod-accordion-text-label-font-style`|
