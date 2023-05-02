@@ -17,7 +17,7 @@ examples:
           </div>
           <div class="spectrum-AlertBanner-end">
             <div class="spectrum-Divider spectrum-Divider--sizeM spectrum-Divider--vertical spectrum-AlertBanner-divider" style="height: auto; align-self: stretch; --mod-divider-background-color: var(--spectrum-white)"></div>
-            <button class="spectrum-CloseButton spectrum-CloseButton--sizeM spectrum-AlertBanner-close-button" style="--mod-closebutton-icon-color-default: var(--spectrum-white);">
+            <button class="spectrum-CloseButton spectrum-CloseButton--sizeM spectrum-AlertBanner-close-button" style="--mod-closebutton-icon-color-default: var(--spectrum-white);" aria-label="close">
               <svg class="spectrum-CloseButton-UIIcon spectrum-Icon spectrum-UIIcon-Cross100 " focusable="false" aria-hidden="true">
                 <use xlink:href="#spectrum-css-icon-Cross100" />
               </svg>
@@ -37,7 +37,7 @@ examples:
           </div>
           <div class="spectrum-AlertBanner-end">
             <div class="spectrum-Divider spectrum-Divider--sizeM spectrum-Divider--vertical spectrum-AlertBanner-divider" style="height: auto; align-self: stretch; --mod-divider-background-color: var(--spectrum-white)"></div>
-            <button class="spectrum-CloseButton spectrum-CloseButton--sizeM spectrum-AlertBanner-close-button" style="--mod-closebutton-icon-color-default: var(--spectrum-white);">
+            <button class="spectrum-CloseButton spectrum-CloseButton--sizeM spectrum-AlertBanner-close-button" style="--mod-closebutton-icon-color-default: var(--spectrum-white);" aria-label="close">
               <svg class="spectrum-CloseButton-UIIcon spectrum-Icon spectrum-UIIcon-Cross100 " focusable="false" aria-hidden="true">
                 <use xlink:href="#spectrum-css-icon-Cross100" />
               </svg>
@@ -58,7 +58,7 @@ examples:
           <div class="spectrum-AlertBanner-end">
 
             <div class="spectrum-Divider spectrum-Divider--sizeM spectrum-Divider--vertical spectrum-AlertBanner-divider" style="height: auto; align-self: stretch; --mod-divider-background-color: var(--spectrum-white)"></div>
-            <button class="spectrum-CloseButton spectrum-CloseButton--sizeM spectrum-AlertBanner-close-button" style="--mod-closebutton-icon-color-default: var(--spectrum-white);">
+            <button class="spectrum-CloseButton spectrum-CloseButton--sizeM spectrum-AlertBanner-close-button" style="--mod-closebutton-icon-color-default: var(--spectrum-white);" aria-label="close">
               <svg class="spectrum-CloseButton-UIIcon spectrum-Icon spectrum-UIIcon-Cross100 " focusable="false" aria-hidden="true">
                 <use xlink:href="#spectrum-css-icon-Cross100" />
               </svg>
@@ -84,7 +84,7 @@ examples:
           <div class="spectrum-AlertBanner-end">
 
             <div class="spectrum-Divider spectrum-Divider--sizeM spectrum-Divider--vertical spectrum-AlertBanner-divider" style="height: auto; align-self: stretch; --mod-divider-background-color: var(--spectrum-white)"></div>
-            <button class="spectrum-CloseButton spectrum-CloseButton--sizeM spectrum-AlertBanner-close-button" style="--mod-closebutton-icon-color-default: var(--spectrum-white);">
+            <button class="spectrum-CloseButton spectrum-CloseButton--sizeM spectrum-AlertBanner-close-button" style="--mod-closebutton-icon-color-default: var(--spectrum-white);" aria-label="close" >
               <svg class="spectrum-CloseButton-UIIcon spectrum-Icon spectrum-UIIcon-Cross100 " focusable="false" aria-hidden="true">
                 <use xlink:href="#spectrum-css-icon-Cross100" />
               </svg>
@@ -110,7 +110,7 @@ examples:
           <div class="spectrum-AlertBanner-end">
 
             <div class="spectrum-Divider spectrum-Divider--sizeM spectrum-Divider--vertical spectrum-AlertBanner-divider" style="height: auto; align-self: stretch; --mod-divider-background-color: var(--spectrum-white)"></div>
-            <button class="spectrum-CloseButton spectrum-CloseButton--sizeM spectrum-AlertBanner-close-button" style="--mod-closebutton-icon-color-default: var(--spectrum-white);"">
+            <button class="spectrum-CloseButton spectrum-CloseButton--sizeM spectrum-AlertBanner-close-button" style="--mod-closebutton-icon-color-default: var(--spectrum-white);" aria-label="close">
               <svg class="spectrum-CloseButton-UIIcon spectrum-Icon spectrum-UIIcon-Cross100 " focusable="false" aria-hidden="true">
                 <use xlink:href="#spectrum-css-icon-Cross100" />
               </svg>
