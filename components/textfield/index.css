@@ -262,9 +262,11 @@ governing permissions and limitations under the License.
     border-style: solid;
     border-color: transparent;
     border-width: 0;
-    border-radius: calc(var(--mod-textfield-corner-radius, var(--spectrum-textfield-corner-radius))
-                        + var(--mod-textfield-border-width, var(--spectrum-textfield-border-width))
-                        + var(--mod-textfield-focus-indicator-gap, var(--spectrum-textfield-focus-indicator-gap)));
+    border-radius: calc(
+      var(--mod-textfield-corner-radius, var(--spectrum-textfield-corner-radius)) + 
+      var(--mod-textfield-focus-indicator-gap, var(--spectrum-textfield-focus-indicator-gap)) +
+      var(--mod-textfield-focus-indicator-width, var(--spectrum-textfield-focus-indicator-width))
+    );
 
     /* place in same cell: input, focus indicator, and grows sizer */
     grid-row: 2 / span 1;
@@ -459,9 +461,9 @@ governing permissions and limitations under the License.
   inline-size: 100%;
   min-inline-size: var(--mod-textfield-min-width, var(--spectrum-textfield-min-width));
   block-size: var(--mod-textfield-height, var(--spectrum-textfield-height));
-  padding-block-start: var(--mod-textfield-spacing-block-start, var(--spectrum-textfield-spacing-block-start));
-  padding-block-end: var(--mod-textfield-spacing-block-end, var(--spectrum-textfield-spacing-block-end));
-  padding-inline: var(--mod-textfield-spacing-inline, var(--spectrum-textfield-spacing-inline));
+  padding-block-start: calc(var(--mod-textfield-spacing-block-start, var(--spectrum-textfield-spacing-block-start)) - var(--mod-textfield-border-width, var(--spectrum-textfield-border-width)));
+  padding-block-end: calc(var(--mod-textfield-spacing-block-end, var(--spectrum-textfield-spacing-block-end)) - var(--mod-textfield-border-width, var(--spectrum-textfield-border-width)));
+  padding-inline: calc(var(--mod-textfield-spacing-inline, var(--spectrum-textfield-spacing-inline)) - var(--mod-textfield-border-width, var(--spectrum-textfield-border-width)));
   /* Use padding instead of text-indent because text-indent does not left align the text in Edge browser  */
   text-indent: 0;
   vertical-align: top; /* used to align them correctly in forms. */
@@ -663,8 +665,11 @@ governing permissions and limitations under the License.
   .spectrum-Textfield--quiet & {
     border-block-start-width: 0;
     border-inline-width: 0;
+  
     margin-block-end: var(--mod-textfield-spacing-block-quiet, var(--spectrum-textfield-spacing-block-quiet));
+    padding-block-start: var(--mod-textfield-spacing-block-start, var(--spectrum-textfield-spacing-block-start));
     padding-inline: var(--mod-textfield-spacing-inline-quiet, var(--spectrum-textfield-spacing-inline-quiet));
+
     background-color: transparent;
     border-radius: 0;
 
