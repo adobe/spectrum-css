@@ -3,6 +3,16 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+<a name="3.1.11"></a>
+## 3.1.11
+🗓 2023-05-02 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/calendar@3.1.10...@spectrum-css/calendar@3.1.11)
+
+**Note:** Version bump only for package @spectrum-css/calendar
+
+
+
+
+
 <a name="3.1.10"></a>
 ## 3.1.10
 🗓 2023-04-26 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/calendar@3.1.9...@spectrum-css/calendar@3.1.10)
