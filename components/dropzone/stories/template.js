@@ -4,13 +4,14 @@ import { ifDefined } from "lit-html/directives/if-defined.js";
 
 import { AccentColor as IllustratedMessageStory } from "@spectrum-css/illustratedmessage/stories/illustratedmessage.stories.js";
 import { Template as IllustratedMessage } from '@spectrum-css/illustratedmessage/stories/template.js';
-import { Template as Link } from "@spectrum-css/link/stories/template.js";
+import { Template as ActionButton } from "@spectrum-css/actionbutton/stories/template.js";
 
 import '../index.css';
 
 export const Template = ({
   rootClass = "spectrum-Dropzone",
   isDragged = false,
+  isFilled = false,
   customClasses = [],
   id,
   ...globals
@@ -20,6 +21,7 @@ export const Template = ({
       class=${classMap({
         [rootClass]: true,
         'is-dragged': isDragged,
+        'is-filled': isFilled,
         ...customClasses.reduce((a, c) => ({ ...a, [c]: true }), {}),
       })}
       id=${ifDefined(id)}
@@ -31,6 +33,11 @@ export const Template = ({
         ...globals,
         heading: IllustratedMessageStory.args.heading,
         description: IllustratedMessageStory.args.description,
+      })}
+
+      ${ActionButton({
+        label: "Drop file to replace",
+        customClasses: [`${rootClass}-button`]
       })}
     </div>
   `;
