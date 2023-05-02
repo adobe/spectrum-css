@@ -357,7 +357,6 @@ class SpectrumSwitcher {
 
   set theme(theme) {
     // If they match, do nothing
-    if (theme === this._theme) return;
 
     ['light', 'dark', 'darkest'].forEach((otherTheme) => {
       this._rootEl.classList.remove(`spectrum--${otherTheme}`);
@@ -365,7 +364,7 @@ class SpectrumSwitcher {
 
     this._rootEl.classList.add(`spectrum--${theme}`);
 
-    updateCodeBlocks(theme);
+    this.updateCodeBlocks(theme);
 
     this._theme = theme;
   };
