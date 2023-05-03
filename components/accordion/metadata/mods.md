@@ -5,11 +5,9 @@
 |`--mod-accordion-item-width`|
 |`--mod-accordion-item-header-top-to-text-space`|
 |`--mod-accordion-item-header-bottom-to-text-space`|
-|`--mod-accordion-focus-indicator-gap`|
-|`--mod-accordion-item-header-line-height`|
 |`--mod-accordion-disclosure-indicator-to-text-space`|
-|`--mod-accordion-top-to-text-compact`|
 |`--mod-accordion-component-edge-to-text`|
+|`--mod-accordion-item-header-line-height`|
 |`--mod-accordion-text-height-cjk`|
 |`--mod-accordion-item-header-font-size`|
 |`--mod-accordion-item-header-font-weight`|

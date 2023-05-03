@@ -147,16 +147,7 @@ governing permissions and limitations under the License.
   box-sizing: border-box;
   padding-block:  var(--mod-accordion-item-header-top-to-text-space, var(--spectrum-accordion-item-header-top-to-text-space)) var(--mod-accordion-item-header-bottom-to-text-space, var(--spectrum-accordion-item-header-bottom-to-text-space));
 
-  /* using icon-height instead of icon-width for space with rotating the icon */
-  /*padding-inline-start: calc(
-      var(--mod-accordion-disclosure-indicator-height, var(--spectrum-accordion-disclosure-indicator-height)) + var(--mod-accordion-focus-indicator-gap, var(--spectrum-accordion-focus-indicator-gap))
-      +
-      var(--mod-accordion-item-header-line-height, var(--spectrum-accordion-item-header-line-height)));*/
   padding-inline-start: var(--mod-accordion-disclosure-indicator-to-text-space, var(--spectrum-accordion-disclosure-indicator-to-text-space));
-  /*var(--mod-accordion-top-to-text-compact, var(--spectrum-accordion-top-to-text-compact));*/
-  /*padding-inline-end: var(--spectrum-accordion-item-padding-x);*/
-  padding-inline-end: 0px;
-  margin: 0;
 
   min-block-size: calc(
     100% -
