@@ -50,6 +50,13 @@ governing permissions and limitations under the License.
   --spectrum-table-row-background-color: var(--spectrum-gray-50);
   --spectrum-table-row-text-color: var(--spectrum-neutral-content-color-default);
 
+  /* ----- *
+  @todo Refactor or remove these 3 properties once the RGB stripped value is available. */
+  --spectrum-table-selected-row-background-color: rgba(var(--spectrum-blue-900), var(--spectrum-table-selected-row-background-opacity));
+  --spectrum-table-selected-row-background-color-non-emphasized: rgba(var(--spectrum-gray-700-rgb), var(--spectrum-table-selected-row-background-opacity-non-emphasized));
+  --spectrum-table-row-hover-color: rgba(var(--spectrum-gray-900-rgb), var(--spectrum-table-row-hover-opacity));
+  /* ----- */
+
   --spectrum-table-icon-color: var(--spectrum-neutral-subdued-content-color-default);
 
   /* Row Selection */
@@ -67,6 +74,9 @@ governing permissions and limitations under the License.
   /* Summary Row and Section Header Row */
   --spectrum-table-summary-row-font-weight: var(--spectrum-bold-font-weight);
   --spectrum-table-summary-row-background-color: var(--spectrum-gray-200);
+
+  --spectrum-table-section-header-block-start-spacing: var(--spectrum-component-top-to-text-100);
+  --spectrum-table-section-header-block-end-spacing: var(--spectrum-component-bottom-to-text-100);
 
   --spectrum-table-section-header-font-weight: var(--spectrum-bold-font-weight);
   --spectrum-table-section-header-background-color: var(--spectrum-gray-200);
@@ -95,6 +105,10 @@ governing permissions and limitations under the License.
   /* Row Selection */
   --spectrum-table-header-checkbox-block-spacing: var(--spectrum-table-header-row-checkbox-to-top-small);
   --spectrum-table-row-checkbox-block-spacing: var(--spectrum-table-row-checkbox-to-top-small-regular);
+
+  /* Summary Row and Section Header Row */
+  --spectrum-table-section-header-block-start-spacing: var(--spectrum-component-top-to-text-75);
+  --spectrum-table-section-header-block-end-spacing: var(--spectrum-component-bottom-to-text-75);
 }
 
 .spectrum-Table--sizeM {
@@ -115,6 +129,10 @@ governing permissions and limitations under the License.
   /* Row Selection */
   --spectrum-table-header-checkbox-block-spacing: var(--spectrum-table-header-row-checkbox-to-top-medium);
   --spectrum-table-row-checkbox-block-spacing: var(--spectrum-table-row-checkbox-to-top-medium-regular);
+
+  /* Summary Row and Section Header Row */
+  --spectrum-table-section-header-block-start-spacing: var(--spectrum-component-top-to-text-100);
+  --spectrum-table-section-header-block-end-spacing: var(--spectrum-component-bottom-to-text-100);
 }
 
 .spectrum-Table--sizeL {
@@ -135,6 +153,10 @@ governing permissions and limitations under the License.
   /* Row Selection */
   --spectrum-table-header-checkbox-block-spacing: var(--spectrum-table-header-row-checkbox-to-top-large);
   --spectrum-table-row-checkbox-block-spacing: var(--spectrum-table-row-checkbox-to-top-large-regular);
+
+  /* Summary Row and Section Header Row */
+  --spectrum-table-section-header-block-start-spacing: var(--spectrum-component-top-to-text-200);
+  --spectrum-table-section-header-block-end-spacing: var(--spectrum-component-bottom-to-text-200);
 }
 
 .spectrum-Table--sizeXL {
@@ -155,6 +177,10 @@ governing permissions and limitations under the License.
   /* Row Selection */
   --spectrum-table-header-checkbox-block-spacing: var(--spectrum-table-header-row-checkbox-to-top-extra-large);
   --spectrum-table-row-checkbox-block-spacing: var(--spectrum-table-row-checkbox-to-top-extra-large-regular);
+
+  /* Summary Row and Section Header Row */
+  --spectrum-table-section-header-block-start-spacing: var(--spectrum-component-top-to-text-300);
+  --spectrum-table-section-header-block-end-spacing: var(--spectrum-component-bottom-to-text-300);
 }
 
 /********* VARIANTS *********/
@@ -260,8 +286,8 @@ governing permissions and limitations under the License.
 }
 
 .spectrum-Table--quiet {
-  --spectrum-table-border-radius: 0;
-  --spectrum-table-outer-border-inline-width: 0;
+  --spectrum-table-border-radius: 0px;
+  --spectrum-table-outer-border-inline-width: 0px;
   --spectrum-table-header-background-color: var(--spectrum-transparent-white-100);
   --spectrum-table-row-background-color: var(--spectrum-transparent-white-100);
   --spectrum-table-drop-target-box-shadow-spread: var(--mod-table-focus-indicator-thickness, var(--spectrum-table-focus-indicator-thickness));
@@ -606,7 +632,11 @@ tbody.spectrum-Table-body {
   }
 }
 
-.spectrum-Table-summaryRow {
+.spectrum-Table > .spectrum-Table-body > .spectrum-Table-row:last-of-type {
+  border-block-end-style: none;
+}
+
+.spectrum-Table-row--summary {
   background-color: var(--mod-table-summary-row-background-color, var(--spectrum-table-summary-row-background-color));
 
   .spectrum-Table-cell {
@@ -621,11 +651,15 @@ tbody.spectrum-Table-body {
   }
 }
 
-.spectrum-Table-sectionHeader {
+.spectrum-Table-row--sectionHeader {
   background-color: var(--mod-table-section-header-background-color, var(--spectrum-table-section-header-background-color));
 
   .spectrum-Table-cell {
     font-weight: var(--mod-table-section-header-font-weight, var(--spectrum-table-section-header-font-weight));
+    text-align: start;
+
+    padding-block-start: var(--mod-table-section-header-block-start-spacing, var(--spectrum-table-section-header-block-start-spacing));
+    padding-block-end: var(--mod-table-section-header-block-end-spacing, var(--spectrum-table-section-header-block-end-spacing));
 
     /* Make unique section header mods available to these default row styles: */
     font-size: var(--mod-table-section-header-font-size, var(--spectrum-table-row-font-size));
@@ -634,10 +668,6 @@ tbody.spectrum-Table-body {
     line-height: var(--mod-table-section-header-line-height, var(--spectrum-table-row-line-height));
     color: var(--mod-table-section-header-text-color, var(--spectrum-table-row-text-color));
   }
-}
-
-.spectrum-Table > .spectrum-Table-body > .spectrum-Table-row:last-of-type {
-  border-block-end-style: none;
 }
 
 .spectrum-Table-checkboxCell {

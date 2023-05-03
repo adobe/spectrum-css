@@ -698,10 +698,121 @@ examples:
             <td class="spectrum-Table-cell" tabindex="0">7</td>
             <td class="spectrum-Table-cell" tabindex="0">1308</td>
           </tr>
-          <tr class="spectrum-Table-row spectrum-Table-summaryRow">
+          <tr class="spectrum-Table-row spectrum-Table-row--summary">
             <td class="spectrum-Table-cell" tabindex="0">Summary</td>
-            <td class="spectrum-Table-cell" tabindex="0">41</td>
-            <td class="spectrum-Table-cell" tabindex="0">6554</td>
+            <td class="spectrum-Table-cell" tabindex="0">48</td>
+            <td class="spectrum-Table-cell" tabindex="0">7862</td>
+          </tr>
+        </tbody>
+      </table>
+  - id: table-section-header-row
+    name: Section Header Row
+    description: "Tables can style one or more rows as section headers."
+    markup: |
+      <table class="spectrum-Table spectrum-Table--sizeM spectrum-Table--emphasized">
+        <thead class="spectrum-Table-head">
+          <tr>
+            <th class="spectrum-Table-headCell is-sortable is-sorted-desc" aria-sort="descending" tabindex="0">
+              Column Title
+              <svg class="spectrum-Icon spectrum-UIIcon-ArrowDown100 spectrum-Table-sortedIcon" focusable="false" aria-hidden="true">
+                <use xlink:href="#spectrum-css-icon-Arrow100" />
+              </svg>
+            </th>
+            <th class="spectrum-Table-headCell is-sortable" aria-sort="none">
+              Column Title
+              <svg class="spectrum-Icon spectrum-UIIcon-ArrowDown100 spectrum-Table-sortedIcon" focusable="false" aria-hidden="true">
+                <use xlink:href="#spectrum-css-icon-Arrow100" />
+              </svg>
+            </th>
+            <th class="spectrum-Table-headCell">Column Title</th>
+          </tr>
+        </thead>
+        <tbody class="spectrum-Table-body">
+          <tr class="spectrum-Table-row spectrum-Table-row--sectionHeader">
+            <th class="spectrum-Table-cell" colspan="3" scope="col">Section header</th>
+          </tr>
+          <tr class="spectrum-Table-row">
+            <td class="spectrum-Table-cell">Row Item Alpha</td>
+            <td class="spectrum-Table-cell">Row Item Alpha</td>
+            <td class="spectrum-Table-cell">Row Item Alpha</td>
+          </tr>
+          <tr class="spectrum-Table-row">
+            <td class="spectrum-Table-cell">Row Item Alpha</td>
+            <td class="spectrum-Table-cell">Row Item Alpha</td>
+            <td class="spectrum-Table-cell">Row Item Alpha</td>
+          </tr>
+          <tr class="spectrum-Table-row">
+            <td class="spectrum-Table-cell">Row Item Bravo</td>
+            <td class="spectrum-Table-cell">Row Item Bravo</td>
+            <td class="spectrum-Table-cell">Row Item Bravo</td>
+          </tr>
+          <tr class="spectrum-Table-row spectrum-Table-row--sectionHeader">
+            <th class="spectrum-Table-cell" colspan="3" scope="col">Another section header for the table</th>
+          </tr>
+          <tr class="spectrum-Table-row">
+            <td class="spectrum-Table-cell">Row Item Delta</td>
+            <td class="spectrum-Table-cell">Row Item Delta</td>
+            <td class="spectrum-Table-cell">Row Item Delta</td>
+          </tr>
+          <tr class="spectrum-Table-row">
+            <td class="spectrum-Table-cell">Row Item Echo</td>
+            <td class="spectrum-Table-cell">Row Item Echo</td>
+            <td class="spectrum-Table-cell">Row Item Echo</td>
+          </tr>
+        </tbody>
+      </table>
+  - id: table-section-header-row-quiet
+    name: Section Header Row (Quiet)
+    markup: |
+      <table class="spectrum-Table spectrum-Table--sizeM spectrum-Table--emphasized spectrum-Table--quiet">
+        <thead class="spectrum-Table-head">
+          <tr>
+            <th class="spectrum-Table-headCell is-sortable is-sorted-desc" aria-sort="descending" tabindex="0">
+              Column Title
+              <svg class="spectrum-Icon spectrum-UIIcon-ArrowDown100 spectrum-Table-sortedIcon" focusable="false" aria-hidden="true">
+                <use xlink:href="#spectrum-css-icon-Arrow100" />
+              </svg>
+            </th>
+            <th class="spectrum-Table-headCell is-sortable" aria-sort="none">
+              Column Title
+              <svg class="spectrum-Icon spectrum-UIIcon-ArrowDown100 spectrum-Table-sortedIcon" focusable="false" aria-hidden="true">
+                <use xlink:href="#spectrum-css-icon-Arrow100" />
+              </svg>
+            </th>
+            <th class="spectrum-Table-headCell">Column Title</th>
+          </tr>
+        </thead>
+        <tbody class="spectrum-Table-body">
+          <tr class="spectrum-Table-row spectrum-Table-row--sectionHeader">
+            <th class="spectrum-Table-cell" colspan="3" scope="col">Section header</th>
+          </tr>
+          <tr class="spectrum-Table-row">
+            <td class="spectrum-Table-cell">Row Item Alpha</td>
+            <td class="spectrum-Table-cell">Row Item Alpha</td>
+            <td class="spectrum-Table-cell">Row Item Alpha</td>
+          </tr>
+          <tr class="spectrum-Table-row">
+            <td class="spectrum-Table-cell">Row Item Alpha</td>
+            <td class="spectrum-Table-cell">Row Item Alpha</td>
+            <td class="spectrum-Table-cell">Row Item Alpha</td>
+          </tr>
+          <tr class="spectrum-Table-row">
+            <td class="spectrum-Table-cell">Row Item Bravo</td>
+            <td class="spectrum-Table-cell">Row Item Bravo</td>
+            <td class="spectrum-Table-cell">Row Item Bravo</td>
+          </tr>
+          <tr class="spectrum-Table-row spectrum-Table-row--sectionHeader">
+            <th class="spectrum-Table-cell" colspan="3" scope="col">Another section header for the table</th>
+          </tr>
+          <tr class="spectrum-Table-row">
+            <td class="spectrum-Table-cell">Row Item Delta</td>
+            <td class="spectrum-Table-cell">Row Item Delta</td>
+            <td class="spectrum-Table-cell">Row Item Delta</td>
+          </tr>
+          <tr class="spectrum-Table-row">
+            <td class="spectrum-Table-cell">Row Item Echo</td>
+            <td class="spectrum-Table-cell">Row Item Echo</td>
+            <td class="spectrum-Table-cell">Row Item Echo</td>
           </tr>
         </tbody>
       </table>
