@@ -24,8 +24,8 @@ examples:
             </button>
           </div>
         </div>
-        <br>
-        <br>
+        <div class="dummy-spacing" style="block-size: 2.5rem;"></div>
+
         <div class="spectrum-AlertBanner is-open">
           <div class="spectrum-AlertBanner-start">
             <div class="spectrum-AlertBanner-icon-text">
@@ -44,8 +44,8 @@ examples:
             </button>
           </div>
         </div>
-        <br>
-        <br>
+        <div class="dummy-spacing" style="block-size: 2.5rem;"></div>
+
         <div class="spectrum-AlertBanner is-open">
           <div class="spectrum-AlertBanner-start">
             <div class="spectrum-AlertBanner-icon-text">
@@ -56,7 +56,6 @@ examples:
             </button>
           </div>
           <div class="spectrum-AlertBanner-end">
-
             <div class="spectrum-Divider spectrum-Divider--sizeM spectrum-Divider--vertical spectrum-AlertBanner-divider" style="height: auto; align-self: stretch; --mod-divider-background-color: var(--spectrum-white)"></div>
             <button class="spectrum-CloseButton spectrum-CloseButton--sizeM spectrum-AlertBanner-close-button" style="--mod-closebutton-icon-color-default: var(--spectrum-white);" aria-label="close">
               <svg class="spectrum-CloseButton-UIIcon spectrum-Icon spectrum-UIIcon-Cross100 " focusable="false" aria-hidden="true">
@@ -82,7 +81,6 @@ examples:
             </button>
           </div>
           <div class="spectrum-AlertBanner-end">
-
             <div class="spectrum-Divider spectrum-Divider--sizeM spectrum-Divider--vertical spectrum-AlertBanner-divider" style="height: auto; align-self: stretch; --mod-divider-background-color: var(--spectrum-white)"></div>
             <button class="spectrum-CloseButton spectrum-CloseButton--sizeM spectrum-AlertBanner-close-button" style="--mod-closebutton-icon-color-default: var(--spectrum-white);" aria-label="close" >
               <svg class="spectrum-CloseButton-UIIcon spectrum-Icon spectrum-UIIcon-Cross100 " focusable="false" aria-hidden="true">
@@ -108,7 +106,6 @@ examples:
             </button>
           </div>
           <div class="spectrum-AlertBanner-end">
-
             <div class="spectrum-Divider spectrum-Divider--sizeM spectrum-Divider--vertical spectrum-AlertBanner-divider" style="height: auto; align-self: stretch; --mod-divider-background-color: var(--spectrum-white)"></div>
             <button class="spectrum-CloseButton spectrum-CloseButton--sizeM spectrum-AlertBanner-close-button" style="--mod-closebutton-icon-color-default: var(--spectrum-white);" aria-label="close">
               <svg class="spectrum-CloseButton-UIIcon spectrum-Icon spectrum-UIIcon-Cross100 " focusable="false" aria-hidden="true">

@@ -53,7 +53,7 @@ governing permissions and limitations under the License.
 
 .spectrum-AlertBanner-close-button {
   margin-inline: var(--spectrum-alert-banner-divider-to-close);
-  color: white;
+  color: var(--spectrum-white);
 }
 
 .spectrum-AlertBanner-divider {
@@ -81,8 +81,7 @@ governing permissions and limitations under the License.
 }
 
 .spectrum-AlertBanner-action-button {
-  margin-block-start: var(--spectrum-alert-banner-edge-to-button);
-  margin-block-end: var(--spectrum-alert-banner-edge-to-button);
+  margin-block: var(--spectrum-alert-banner-edge-to-button);
   margin-inline-end: var(--spectrum-alert-banner-text-to-divider);
   margin-left: auto;
 }
