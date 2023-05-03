@@ -8,62 +8,66 @@ import { Template as Icon } from "@spectrum-css/icon/stories/template.js";
 import '../index.css';
 
 export const AccordionItem = ({
-	heading,
-	content,
-	rootClass = "spectrum-Accordion-item",
-	id,
-	idx = 0,
-	isDisabled = false,
-	isOpen = false,
-	// customClasses = [],
-	...globals
+  heading,
+  content,
+  rootClass = "spectrum-Accordion-item",
+  id,
+  idx = 0,
+  isDisabled = false,
+  isOpen = false,
+  iconSize = "m",
+  // customClasses = [],
+  ...globals
 }) => {
-	return html`
-		<div
-			class=${classMap({
-				[rootClass]: true,
-				"is-open": isOpen,
-				"is-disabled": isDisabled,
-			})}
-			id=${ifDefined(id)}
-			role="presentation"
-			@click=${(evt) => {
-				if (isDisabled || !evt || !evt.target) return;
-				const closest = evt.target.closest(`.${rootClass}`);
-				if (!closest) return;
-				closest.classList.toggle("is-open");
-			}}
-		>
-			<!-- WAI-ARIA 1.1: Item header is a <button> wrapped within a <h3> element, rather than a <div> element with role="tab" -->
-			<h3 class="${rootClass}Heading">
-				<!-- WAI-ARIA 1.1: Item header <button> uses aria-expanded attribute to indicate expanded state. -->
-				<button
-					class="${rootClass}Header"
-					type="button"
-					?disabled=${isDisabled}
-					id="spectrum-accordion-item-${idx}-header"
-					aria-controls="spectrum-accordion-item-${idx}-content"
-					aria-expanded="${open ? "true" : "false"}"
-				>
-					${heading}
-				</button>
-				${Icon({
-					iconName: "ChevronRight100",
-					customClasses: [`${rootClass}Indicator`],
-					...globals,
-				})}
-			</h3>
-			<!-- WAI-ARIA 1.1: Item content role changed from "tabpanel" to "region" -->
-			<div
-				class="${rootClass}Content"
-				role="region"
-				id="spectrum-accordion-item-${idx}-content"
-				aria-labelledby="spectrum-accordion-item-${idx}-header"
-			>
-				${content}
-			</div>
-		</div>
-	`;
+  return html`
+    <div
+      class=${classMap({
+        [rootClass]: true,
+        "is-open": isOpen,
+        "is-disabled": isDisabled,
+      })}
+      id=${ifDefined(id)}
+      role="presentation"
+      @click=${(evt) => {
+        if (isDisabled || !evt || !evt.target) return;
+        const closest = evt.target.closest(`.${rootClass}`);
+        if (!closest) return;
+        closest.classList.toggle("is-open");
+      }}
+    >
+      <!-- WAI-ARIA 1.1: Item header is a <button> wrapped within a <h3> element, rather than a <div> element with role="tab" -->
+      <h3 class="${rootClass}Heading">
+        <!-- WAI-ARIA 1.1: Item header <button> uses aria-expanded attribute to indicate expanded state. -->
+        <button
+          class="${rootClass}Header"
+          type="button"
+          ?disabled=${isDisabled}
+          id="spectrum-accordion-item-${idx}-header"
+          aria-controls="spectrum-accordion-item-${idx}-content"
+          aria-expanded="${open ? "true" : "false"}"
+        >
+          ${heading}
+        </button>
+        ${Icon({
+          iconName: "ChevronRight100",
+          size: `${iconSize}`,
+          customClasses: [
+            `${rootClass}Indicator`,
+          ],
+          ...globals,
+        })}
+      </h3>
+      <!-- WAI-ARIA 1.1: Item content role changed from "tabpanel" to "region" -->
+      <div
+        class="${rootClass}Content"
+        role="region"
+        id="spectrum-accordion-item-${idx}-content"
+        aria-labelledby="spectrum-accordion-item-${idx}-header"
+      >
+        ${content}
+      </div>
+    </div>
+  `;
 };
 
 export const Template = ({
@@ -93,6 +97,7 @@ export const Template = ({
           rootClass: `${rootClass}-item`,
           heading,
           idx,
+          iconSize: `${size}`,
           ...item,
           ...globals,
         });
