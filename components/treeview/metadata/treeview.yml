@@ -311,7 +311,9 @@ examples:
             <li class="spectrum-TreeView-item">
               <a class="spectrum-TreeView-itemLink" href="#">
                 <div class="spectrum-Thumbnail spectrum-Thumbnail--size500 spectrum-TreeView-itemThumbnail">
-                  <img class="spectrum-Thumbnail-image" src="img/flowers.png" alt="Flowers">
+                  <div class="spectrum-Thumbnail-image-wrapper">
+                    <img class="spectrum-Thumbnail-image" src="img/flowers.png" alt="Flowers">
+                  </div>
                 </div>
                 <span class="spectrum-TreeView-itemLabel">Flowers</span>
               </a>
@@ -319,7 +321,9 @@ examples:
             <li class="spectrum-TreeView-item">
               <a class="spectrum-TreeView-itemLink" href="#">
                 <div class="spectrum-Thumbnail spectrum-Thumbnail--size500 spectrum-TreeView-itemThumbnail">
-                  <img class="spectrum-Thumbnail-image" src="img/thumbnail.png" alt="Woman crouching">
+                  <div class="spectrum-Thumbnail-image-wrapper">
+                    <img class="spectrum-Thumbnail-image" src="img/thumbnail.png" alt="Woman crouching">
+                  </div>
                 </div>
                 <span class="spectrum-TreeView-itemLabel">Figure</span>
               </a>
