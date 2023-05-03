@@ -20,7 +20,10 @@
 |`--mod-drop-zone-body-line-height`|
 |`--mod-drop-zone-body-color`|
 |`--mod-drop-zone-border-color-hover`|
+|`--mod-drop-zone-background-color`|
+|`--mod-drop-zone-background-color-opacity`|
 |`--mod-drop-zone-illustration-color-hover`|
+|`--mod-drop-zone-background-color-opacity-filled`|
 |`--mod-drop-zone-content-height`|
 |`--mod-drop-zone-content-max-width`|
 |`--mod-drop-zone-content-edge-to-text`|

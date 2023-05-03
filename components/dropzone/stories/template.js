@@ -35,10 +35,12 @@ export const Template = ({
         description: IllustratedMessageStory.args.description,
       })}
 
-      ${ActionButton({
-        label: "Drop file to replace",
-        customClasses: [`${rootClass}-button`]
-      })}
+      <div class="${rootClass}-content">
+        ${ActionButton({
+          label: "Drop file to replace",
+          customClasses: [`${rootClass}-button`]
+        })}
+      </div>
     </div>
   `;
 };

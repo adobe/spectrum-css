@@ -34,10 +34,9 @@ governing permissions and limitations under the License.
   --spectrum-drop-zone-body-color: var(--spectrum-body-color);
 
 
-  /* These need to be updated but rgba values aren't present since they reference other variables 
-  The references are about 4 levels deep with this one and they're different for light/dark and spectrum/express */
-  --spectrum-drop-zone-background-color: var(--spectrum-drop-zone-background-color);
-
+  /* These need to be updated when we have support for recursive rgb values
+  --spectrum-drop-zone-background-color-rgb is a custom token */
+  --spectrum-drop-zone-background-color: var(--spectrum-drop-zone-background-color-rgb);
   --spectrum-drop-zone-border-color-hover: var(--spectrum-accent-visual-color);
   --spectrum-drop-zone-illustration-color: var(--spectrum-neutral-visual-color);
   --spectrum-drop-zone-illustration-color-hover: var(--spectrum-accent-visual-color);
@@ -70,6 +69,7 @@ governing permissions and limitations under the License.
 }
 
 .spectrum-Dropzone {
+  position: relative;
   inline-size: var(--mod-drop-zone-width, var(--spectrum-drop-zone-width));
   padding: var(--mod-drop-zone-padding, var(--spectrum-drop-zone-padding));
   text-align: center;
@@ -83,7 +83,9 @@ governing permissions and limitations under the License.
     content: "";
     block-size: 100%;
     inline-size: 100%;
-    background-image: url("data:image/svg+xml;utf8,<svg><circle cx='55' cy='55' r='50'/></svg>");
+    position: absolute;
+    inset-inline-start: 0;
+    inset-block-start: 0;
   }
 
   .spectrum-IllustratedMessage {
@@ -119,7 +121,10 @@ governing permissions and limitations under the License.
   &.is-dragged {
     border-style: solid;
     border-color: var(--mod-drop-zone-border-color-hover, var(--spectrum-drop-zone-border-color-hover));
-    background-color: var(--spectrum-drop-zone-background-color);
+
+    &::after {
+      background-color: rgba(var(--mod-drop-zone-background-color, var(--spectrum-drop-zone-background-color)), var(--mod-drop-zone-background-color-opacity, var(--spectrum-drop-zone-background-color-opacity)));
+    }
 
     .spectrum-IllustratedMessage-illustration {
       color: var(--mod-drop-zone-illustration-color-hover, var(--spectrum-drop-zone-illustration-color-hover));
@@ -129,6 +134,12 @@ governing permissions and limitations under the License.
   &.is-filled {
     .spectrum-IllustratedMessage {
       display: none;
+    }
+  }
+
+  &.is-filled.is-dragged {
+    &::after {
+      background-color: rgba(var(--mod-drop-zone-background-color, var(--spectrum-drop-zone-background-color)), var(--mod-drop-zone-background-color-opacity-filled, var(--spectrum-drop-zone-background-color-opacity-filled)));
     }
   }
 
@@ -145,6 +156,8 @@ governing permissions and limitations under the License.
   height: 100%;
   align-items: center;
   justify-content: center;
+  position: relative;
+  z-index: 10;
 
   .spectrum-Dropzone.is-filled.is-dragged & {
     display: flex;
