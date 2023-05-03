@@ -11,7 +11,7 @@ governing permissions and limitations under the License.
 */
 
 .spectrum-Thumbnail {
-  --spectrum-thumbnail-size: var(--spectrum-thumbnail-size-100);
+  --spectrum-thumbnail-size: var(--spectrum-thumbnail-size-500);
 
   --spectrum-thumbnail-border-radius: var(--spectrum-corner-radius-75);
   --spectrum-thumbnail-border-width: var(--spectrum-border-width-100);
@@ -89,6 +89,7 @@ governing permissions and limitations under the License.
   position: relative;
   margin: 0;
   padding: 0;
+  display: block;
 
   inline-size: var(--mod-thumbnail-size, var(--spectrum-thumbnail-size));
   block-size: var(--mod-thumbnail-size, var(--spectrum-thumbnail-size));
@@ -160,13 +161,16 @@ governing permissions and limitations under the License.
 }
 
 .spectrum-Thumbnail-layer-inner {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
   inline-size: calc(var(--spectrum-thumbnail-size) - ((var(--mod-thumbnail-layer-border-width-inner, var(--spectrum-thumbnail-layer-border-width-inner)))) * 2);
   block-size: calc(var(--spectrum-thumbnail-size) - ((var(--mod-thumbnail-layer-border-width-inner, var(--spectrum-thumbnail-layer-border-width-inner)))) * 2);
+
   outline: solid;
   outline-color: var(--mod-thumbnail-layer-border-color-inner, var(--spectrum-thumbnail-layer-border-color-inner));
   outline-width: calc(var(--mod-thumbnail-layer-border-width-inner, var(--spectrum-thumbnail-layer-border-width-inner)) - var(--mod-thumbnail-layer-border-width-outer, var(--spectrum-thumbnail-layer-border-width-outer)));
-  display: flex;
-  align-items: center;
 }
 
 .spectrum-Thumbnail-image-wrapper {

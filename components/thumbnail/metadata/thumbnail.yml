@@ -15,7 +15,7 @@ examples:
   - id: thumbnail-image
     name: Thumbnail
     markup: |
-      <div class="spectrum-Thumbnail spectrum-Thumbnail--size500">
+      <div class="spectrum-Thumbnail spectrum-Thumbnail--size700">
         <div class="spectrum-Thumbnail-image-wrapper">
           <img class="spectrum-Thumbnail-image"src="img/example-ava.jpg" alt="women resting head in hands">
         </div>
@@ -23,7 +23,7 @@ examples:
   - id: thumbnail-focus
     name: Thumbnail (focused)
     markup: |
-      <div class="spectrum-Thumbnail spectrum-Thumbnail--size500 is-focused">
+      <div class="spectrum-Thumbnail spectrum-Thumbnail--size700 is-focused">
         <div class="spectrum-Thumbnail-image-wrapper">
           <img class="spectrum-Thumbnail-image" src="img/example-ava.jpg" alt="Woman crouching">
         </div>
@@ -32,7 +32,7 @@ examples:
     name: Thumbnail (disabled)
     description: Thumbnail should only be displayed as disabled if the entire componet is also disabled.
     markup: |
-      <div class="spectrum-Thumbnail spectrum-Thumbnail--size500 is-disabled">
+      <div class="spectrum-Thumbnail spectrum-Thumbnail--size700 is-disabled">
         <div class="spectrum-Thumbnail-image-wrapper">
           <img class="spectrum-Thumbnail-image" src="img/thumbnail.png" alt="Woman crouching">
         </div>
@@ -41,7 +41,7 @@ examples:
     name: Thumbnail (landscape image)
     description: Landscape images will fill horizontally and have space above and below.
     markup: |
-      <div class="spectrum-Thumbnail spectrum-Thumbnail--size500">
+      <div class="spectrum-Thumbnail spectrum-Thumbnail--size700">
         <div class="spectrum-Thumbnail-image-wrapper">
           <img class="spectrum-Thumbnail-image" src="img/example-card-landscape.jpeg" alt="Landscape with mountains and lake">
         </div>
@@ -50,7 +50,7 @@ examples:
     name: Thumbnail (portrait image)
     description: Portrait images will fill vertically and have space on either side.
     markup: |
-      <div class="spectrum-Thumbnail spectrum-Thumbnail--size500">
+      <div class="spectrum-Thumbnail spectrum-Thumbnail--size700">
         <div class="spectrum-Thumbnail-image-wrapper">
           <img class="spectrum-Thumbnail-image" src="img/example-card-portrait.jpg" alt="Eiffel Tower at night">
         </div>
@@ -59,7 +59,7 @@ examples:
     name: Thumbnail (layer)
     description: When used in layer management (such as the Compact or Detail Layers panels)
     markup: |
-      <div class="spectrum-Thumbnail spectrum-Thumbnail-layer spectrum-Thumbnail--size500">
+      <div class="spectrum-Thumbnail spectrum-Thumbnail-layer spectrum-Thumbnail--size700">
         <div class="spectrum-Thumbnail-layer-inner">
           <img class="spectrum-Thumbnail-image" src="img/example-ava.jpg" alt="women resting head in hands"></div>
       </div>
@@ -67,7 +67,7 @@ examples:
     name: Thumbnail (layer, selected)
     description: The thumbnail is given a thick blue border to indicate its selection when used in layer management.
     markup: |
-      <div class="spectrum-Thumbnail spectrum-Thumbnail-layer spectrum-Thumbnail--size500 is-selected">
+      <div class="spectrum-Thumbnail spectrum-Thumbnail-layer spectrum-Thumbnail--size700 is-selected">
         <div class="spectrum-Thumbnail-layer-inner">
           <img class="spectrum-Thumbnail-image" src="img/thumbnail.png" alt="Woman crouching">
         </div>
@@ -76,7 +76,7 @@ examples:
     name: Thumbnail Cover (landscape image)
     description: Images will maintain their aspect ratio while filling the entire content box.
     markup: |
-      <div class="spectrum-Thumbnail spectrum-Thumbnail--cover spectrum-Thumbnail--size500">
+      <div class="spectrum-Thumbnail spectrum-Thumbnail--cover spectrum-Thumbnail--size700">
         <div class="spectrum-Thumbnail-image-wrapper">
           <img class="spectrum-Thumbnail-image" src="img/example-card-landscape.jpeg" alt="Landscape with mountains and lake">
         </div>
@@ -85,7 +85,7 @@ examples:
     name: Thumbnail (image against background)
     description: Thumbnail supports transparent images with a background (color or image) behind it.
     markup: |
-      <div class="spectrum-Thumbnail spectrum-Thumbnail--size500">
+      <div class="spectrum-Thumbnail spectrum-Thumbnail--size700">
         <div class="spectrum-Thumbnail-background" style="background-color: orange"></div>
         <div class="spectrum-Thumbnail-image-wrapper">
           <img class="spectrum-Thumbnail-image" src="img/thumbnail.png" alt="Woman crouching">
