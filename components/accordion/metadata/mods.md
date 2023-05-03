@@ -8,7 +8,7 @@
 |`--mod-accordion-disclosure-indicator-to-text-space`|
 |`--mod-accordion-component-edge-to-text`|
 |`--mod-accordion-item-header-line-height`|
-|`--mod-accordion-text-height-cjk`|
+|`--mod-accordion-item-header-line-height-cjk`|
 |`--mod-accordion-item-header-font-size`|
 |`--mod-accordion-item-header-font-weight`|
 |`--mod-accordion-item-header-font-style`|
@@ -20,6 +20,8 @@
 |`--mod-accordion-item-content-font-style`|
 |`--mod-accordion-item-content-font-size`|
 |`--mod-accordion-item-content-font`|
+|`--mod-accordion-item-content-line-height`|
+|`--mod-accordion-item-content-line-height-cjk`|
 |`--mod-accordion-divider-color`|
 |`--mod-accordion-item-header-color-default`|
 |`--mod-accordion-item-header-color-hover`|

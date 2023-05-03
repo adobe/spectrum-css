@@ -36,15 +36,19 @@ governing permissions and limitations under the License.
   &:lang(ja),
   &:lang(zh),
   &:lang(ko) {
-    --spectrum-accordion-text-height-cjk: var(--spectrum-cjk-line-height-100);
+    --spectrum-accordion-item-header-line-height-cjk: var(--spectrum-cjk-line-height-100);
   }
   /* Text body */
   --spectrum-accordion-item-content-font: var(--spectrum-body-sans-serif-font-family);
   --spectrum-accordion-item-content-font-weight: var(--spectrum-body-sans-serif-font-weight);
   --spectrum-accordion-item-content-font-style: var(--spectrum-body-sans-serif-font-style);
   --spectrum-accordion-item-content-font-size: var(--spectrum-body-size-s);
-  /*--spectrum-accordion-item-content-line-height: var(--spectrum-line-height-100);*/
-  /*--spectrum-accordion-item-content-line-height-cjk: var(--spectrum-cjk-line-height-100);*/
+  --spectrum-accordion-item-content-line-height: var(--spectrum-line-height-100);
+  &:lang(ja),
+  &:lang(zh),
+  &:lang(ko) {
+    --spectrum-accordion-item-content-line-height-cjk: var(--spectrum-cjk-line-height-100);
+  }
   /* Colors */
   /*--spectrum-accordion-background-color: var(--spectrum-gray-900);*/
   /*--spectrum-accordion-background-color-default: var(--spectrum-background-opacity-default);*/
@@ -52,7 +56,7 @@ governing permissions and limitations under the License.
   /*--spectrum-accordion-background-color-down: var(--spectrum-background-opacity-down);*;
   /*--spectrum-accordion-background-color-key-focus: var(--spectrum-background-opacity-key-focus);*/
   /*--spectrum-accordion-background-disabled-color: var(--spectrum-transparent);*/
-  /* Label and chevron */
+  /* Label */
   --spectrum-accordion-item-header-color-default: var(--spectrum-neutral-content-color-default);
   --spectrum-accordion-item-header-color-hover: var(--spectrum-neutral-content-color-hover);
   /*--spectrum-accordion-item-header-color-down: var(--spectrum-neutral-content-color-down);*/
@@ -158,7 +162,7 @@ governing permissions and limitations under the License.
   &:lang(ja),
   &:lang(zh),
   &:lang(ko) {
-    line-height: var(--mod-accordion-text-height-cjk, var(--spectrum-accordion-text-height-cjk));
+    line-height: var(--mod-accordion-item-header-line-height-cjk, var(--spectrum-accordion-item-header-line-height-cjk));
   }
   text-transform: uppercase;
 
@@ -186,10 +190,6 @@ governing permissions and limitations under the License.
 
       position: absolute;
       inset-inline-start: 0;
-      /*inset-block-start: calc(-1 * var(--spectrum-accordion-item-border-size));
-      inset-block-end: calc(-1 * var(--spectrum-accordion-item-border-size));
-
-      inline-size: var(--spectrum-accordion-item-border-left-size);*/
     }
   }
 }
@@ -264,6 +264,13 @@ governing permissions and limitations under the License.
   font-style: var(--mod-accordion-item-content-font-style, var(--spectrum-accordion-item-content-font-style));
   font-size: var(--mod-accordion-item-content-font-size, var(--spectrum-accordion-item-content-font-size));
   font-family: var(--mod-accordion-item-content-font, var(--spectrum-accordion-item-content-font));
+  line-height: var(--mod-accordion-item-content-line-height, var(--spectrum-accordion-item-content-line-height));
+  /* cjk language support */
+  &:lang(ja),
+  &:lang(zh),
+  &:lang(ko) {
+    line-height: var(--mod-accordion-item-content-line-height-cjk, var(--spectrum-accordion-item-content-line-height-cjk));
+  }
 }
 
 .spectrum-Accordion-item {
