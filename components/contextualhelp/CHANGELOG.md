@@ -3,6 +3,28 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+<a name="2.0.0"></a>
+# 2.0.0
+🗓 2023-05-02 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/contextualhelp@1.0.13...@spectrum-css/contextualhelp@2.0.0)
+
+* fix(contextualhelp)!: dark mode font color (#1817) ([4e103f1](https://github.com/adobe/spectrum-css/commit/4e103f1)), closes [#1817](https://github.com/adobe/spectrum-css/issues/1817)
+
+
+### 🛑 BREAKING CHANGES
+
+* removes `--mod-spectrum-contextual-help-title-size`
+
+
+* fix(contextualhelp): add Heading and Body classes - add spectrum-Heading and spectrum-Body classes to get global colors
+* fix(contextualhelp): add tokens for font color
+* fix(contextualhelp): remove unneeded clases and update tokens - remove spectrum-Heading and spectrum-Body classes - update tokens to new contextual help specific ones
+* fix(contextualhelp): fix button display
+* chore(contextualhelp): remove Heading and Body classes from story
+
+
+
+
+
 <a name="1.0.13"></a>
 ## 1.0.13
 🗓 2023-04-26 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/contextualhelp@1.0.12...@spectrum-css/contextualhelp@1.0.13)

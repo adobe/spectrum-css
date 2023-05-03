@@ -1,6 +1,6 @@
 {
   "name": "@spectrum-css/searchwithin",
-  "version": "4.0.12",
+  "version": "4.0.13",
   "description": "The Spectrum CSS searchwithin component",
   "license": "Apache-2.0",
   "author": "Adobe",
@@ -21,15 +21,15 @@
     "@spectrum-css/clearbutton": ">=1",
     "@spectrum-css/icon": ">=3",
     "@spectrum-css/picker": ">=3",
-    "@spectrum-css/textfield": ">=3 <=4",
+    "@spectrum-css/textfield": ">=5.0.0",
     "@spectrum-css/vars": ">=9"
   },
   "devDependencies": {
-    "@spectrum-css/clearbutton": "^1.2.28",
-    "@spectrum-css/component-builder": "^4.0.7",
-    "@spectrum-css/icon": "^3.0.41",
-    "@spectrum-css/picker": "^3.0.11",
-    "@spectrum-css/textfield": "^4.1.15",
+    "@spectrum-css/clearbutton": "^1.2.29",
+    "@spectrum-css/component-builder": "^4.0.8",
+    "@spectrum-css/icon": "^3.0.42",
+    "@spectrum-css/picker": "^3.0.12",
+    "@spectrum-css/textfield": "^5.0.0",
     "@spectrum-css/vars": "^9.0.5",
     "gulp": "^4.0.0"
   },

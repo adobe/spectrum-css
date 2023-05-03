@@ -1,6 +1,6 @@
 {
   "name": "@spectrum-css/preview",
-  "version": "3.0.13",
+  "version": "3.0.14",
   "description": "A Spectrum CSS preview",
   "license": "Apache-2.0",
   "author": "Adobe",
@@ -8,6 +8,7 @@
   "main": "main.js",
   "scripts": {
     "build": "yarn storybook",
+    "clean": "rimraf storybook-static",
     "new": "yarn workspace @spectrum-css/generator new story",
     "start": "WATCH_MODE=true start-storybook --quiet --config-dir .",
     "storybook": "build-storybook --quiet --config-dir .",
@@ -17,13 +18,13 @@
   "dependencies": {
     "@adobe/spectrum-css-workflow-icons": "^1.2.1",
     "@spectrum-css/expressvars": "^3.0.5",
-    "@spectrum-css/tokens": "^9.0.4",
+    "@spectrum-css/tokens": "^9.1.0",
     "@spectrum-css/vars": "^9.0.5"
   },
   "devDependencies": {
     "@babel/core": "^7.20.5",
     "@etchteam/storybook-addon-status": "^4.2.2",
-    "@spectrum-css/component-builder": "^4.0.7",
+    "@spectrum-css/component-builder": "^4.0.8",
     "@storybook/addon-a11y": "^6.5.15",
     "@storybook/addon-actions": "^6.5.15",
     "@storybook/addon-console": "^1.2.3",
@@ -38,7 +39,7 @@
     "@storybook/web-components": "^6.5.15",
     "@whitespace/storybook-addon-html": "^5.1.1",
     "chromatic": "^6.17.3",
-    "lit-html": "^2.7.2",
+    "lit-html": "^2.7.3",
     "lodash-es": "^4.17.21",
     "npm-run-all": "^4.1.5",
     "postcss": "^7.0.36",
@@ -53,6 +54,7 @@
     "react": "^17.0.0",
     "react-dom": "^17.0.0",
     "react-syntax-highlighter": "^15.5.0",
+    "rimraf": "^5.0.0",
     "source-map-loader": "^1.0.0",
     "webpack": "^4.46.0"
   },
@@ -70,6 +72,11 @@
           "{projectRoot}/components/*/dist"
         ],
         "outputs": [
+          "{workspaceRoot}/storybook-static"
+        ]
+      },
+      "clean": {
+        "inputs": [
           "{workspaceRoot}/storybook-static"
         ]
       },
@@ -107,6 +114,7 @@
       "!@spectrum-css/documentation"
     ],
     "includedScripts": [
+      "clean",
       "test",
       "test:scope",
       "storybook",

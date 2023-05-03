@@ -48,9 +48,9 @@ function concatPackageFiles(taskName, input, output, directory) {
   return func;
 }
 
-var dependencyOrder = null;
 async function getDependencyOrder(done) {
   dependencyOrder = await depUtils.getFolderDependencyOrder(dirs.components);
+  done();
 }
 
 let buildCombined = gulp.series(
@@ -100,20 +100,17 @@ function buildIfTopLevel() {
 }
 
 let build = gulp.series(
-  clean,
   buildIfTopLevel(),
   vars.copyVars
 );
 
 let buildLite = gulp.series(
-  clean,
   function buildComponentsLite() {
     return subrunner.runTaskOnAllComponents('buildLite');
   }
 );
 
 let buildMedium = gulp.series(
-  clean,
   function buildComponentsLite() {
     return subrunner.runTaskOnAllComponents('buildMedium');
   }
@@ -126,6 +123,5 @@ exports.buildCombined = buildCombined;
 exports.buildStandalone = buildStandalone;
 exports.buildLite = buildLite;
 
-exports.clean = clean;
 exports.build = build;
 exports.default = buildMedium;
