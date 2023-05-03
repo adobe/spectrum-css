@@ -16,4 +16,7 @@ governing permissions and limitations under the License.
   --spectrum-menu-item-background-color-hover: var(--spectrum-transparent-white-200);
   --spectrum-menu-item-background-color-down: var(--spectrum-transparent-white-200);
   --spectrum-menu-item-background-color-key-focus: var(--spectrum-transparent-white-200);
-}
+
+    /* Drop Zone background color rgb */
+    --spectrum-drop-zone-background-color-rgb: var( --spectrum-blue-900-rgb); /* var(--spectrum-accent-color-900);*/
+  }

@@ -3,6 +3,58 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+<a name="5.0.0"></a>
+# 5.0.0
+🗓 2023-05-02 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/textfield@4.1.15...@spectrum-css/textfield@5.0.0)
+
+* fix(textfield, combobox)!: adjust padding calculations (#1803) ([09c1bdc](https://github.com/adobe/spectrum-css/commit/09c1bdc)), closes [#1803](https://github.com/adobe/spectrum-css/issues/1803)
+
+
+### 🛑 BREAKING CHANGES
+
+* removes `--mod-combobox-icon-size`, `--mod-combobox-spacing-block-start-to-border`, `--mod-combobox-spacing-inline-start-to-textfield`, `--mod-combobox-spacing-block-start-edge-to-textfield`, `--mod-combobox-spacing-block-end-edge-to-textfield`, and `--mod-combobox-spacing-inline-start-edge-to-textfield`.
+
+Additionally:
+* fix: exclude border width from padding with text inputs + more fixes
+
+- Textfield and Combobox: exclude border width from padding calculations
+  because most of the to-edge tokens include the border, and the values
+  were 1px larger than they should have been.
+- Textfield and Combobox: fix corner radius of focus indicator when
+  using a larger border radius (e.g. try setting a --mod border width
+  of 5px; the calculation adding the border width was incorrect)
+- Combobox: adjust styles so custom property for border width is
+  correctly overriding everything from its sub-components. Previously
+  using --mod-combobox-border-width had no effect.
+- Combobox: simplify/remove some custom properties related to those
+  fixes and quiet variant.
+
+* fix(combobox): border-radius should not increase for t-shirt sizes
+
+Per design feedback, the border-radius value should not be increasing
+for these t-shirt sizes.
+
+* fix(combobox): calculate the button x-offset on quiet
+
+Use a corrected calculation of the x-offset for the picker button on the
+quiet variant. Based on design feedback for the component: "The point is
+to line up the chevron icon with the end of the component so those
+elements are flushed".
+
+* fix(combobox): mods update after changes
+
+Regenerate mods after fixes that have removed and renamed some
+properties.
+
+* feat(textfield): add 'size' control to storybook
+
+Add "t-shirt" size control to Textfield stories. The arg was already
+there, but it was missing a control for testing.
+
+
+
+
+
 <a name="4.1.15"></a>
 ## 4.1.15
 🗓 2023-04-26 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/textfield@4.1.14...@spectrum-css/textfield@4.1.15)

@@ -3,6 +3,16 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+<a name="7.0.15"></a>
+## 7.0.15
+🗓 2023-05-02 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/inlinealert@7.0.14...@spectrum-css/inlinealert@7.0.15)
+
+**Note:** Version bump only for package @spectrum-css/inlinealert
+
+
+
+
+
 <a name="7.0.14"></a>
 ## 7.0.14
 🗓 2023-04-26 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/inlinealert@7.0.13...@spectrum-css/inlinealert@7.0.14)

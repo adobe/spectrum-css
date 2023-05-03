@@ -46,6 +46,7 @@
     "new": "nx run @spectrum-css/generator:new",
     "precommit": "lint-staged",
     "prepare": "husky install",
+    "prepare:site": "run-s clean:docs build:all",
     "prerelease": "yarn version:build",
     "release": "lerna publish",
     "release:beta-from-package": "yarn release from-package --conventional-prerelease --preid beta --pre-dist-tag beta --no-private",
@@ -73,13 +74,13 @@
     "gh-pages": "^5.0.0",
     "husky": "^8.0.3",
     "lerna": "^6.6.1",
-    "lint-staged": "^13.2.1",
+    "lint-staged": "^13.2.2",
     "npm-run-all": "^4.1.5",
     "nx": "^15.9.2",
     "prettier-package-json": "^2.8.0",
     "rimraf": "^5.0.0",
     "semver": "^7.5.0",
-    "yargs": "^17.7.1"
+    "yargs": "^17.7.2"
   },
   "engines": {
     "node": ">=14.0.0 <18"
