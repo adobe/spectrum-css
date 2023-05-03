@@ -18,10 +18,21 @@ export default {
       options: ["s", "m", "l", "xl"],
       control: "select"
     },
+    layout: {
+      name: "Layout",
+      type: { name: "string", required: true },
+      table: {
+        type: { summary: "string" },
+        category: "Component",
+      },
+      options: ["compact", "regular", "spacious"],
+      control: "select"
+    },
   },
   args: {
     rootClass: "spectrum-Accordion",
     size: "m",
+    layout: "regular",
   },
   parameters: {
     actions: {
