@@ -1,6 +1,5 @@
-[...document.querySelectorAll(".spectrum-Accordion")].map(accordion => {
-  if (!accordion) return;
-  accordion.click((event) => {
+;[...document.querySelectorAll(".spectrum-Accordion")].forEach((accordion) => {
+  accordion.addEventListener("click", (event) => {
     let heading = event.target.closest(".spectrum-Accordion-itemHeading")
     if (!heading) return
 
@@ -10,5 +9,5 @@
       item.classList.toggle("is-open")
       event.preventDefault()
     }
-  });
-});
+  })
+})
