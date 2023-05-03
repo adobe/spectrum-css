@@ -1,7 +1,7 @@
 | Modifiable Custom Properties |
 | --- |
-|`--mod-accordion-item-height`|
 |`--mod-accordion-disclosure-indicator-height`|
+|`--mod-accordion-item-height`|
 |`--mod-accordion-item-width`|
 |`--mod-accordion-item-header-top-to-text-space`|
 |`--mod-accordion-item-header-bottom-to-text-space`|
