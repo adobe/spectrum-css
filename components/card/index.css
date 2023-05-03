@@ -18,8 +18,8 @@ governing permissions and limitations under the License.
   --spectrum-card-title-padding-top: var(--spectrum-spacing-300);
   --spectrum-card-title-padding-right: var(--spectrum-spacing-400);
   --spectrum-card-content-margin-top: var(--spectrum-spacing-300);
-  --spectrum-card-body-padding-bottom: var(--spectrum-spacing-300);
-  --spectrum-card-divider-margin-bottom: var(--spectrum-spacing-100);
+  --spectrum-card-content-margin-bottom: var(--spectrum-spacing-300);
+  --spectrum-card-footer-margin-top: var(--spectrum-spacing-100);
   --spectrum-card-subtitle-padding-right: var(--spectrum-spacing-100);
   
 
@@ -205,11 +205,18 @@ governing permissions and limitations under the License.
   border-block-end-color: var(--mod-card-border-color, var(--spectrum-card-border-color));
 }
 
+.spectrum-Card .spectrum-Divider {
+  margin: 0;
+}
+
+.spectrum-Card-content {
+  margin-block-end: var(--mod-card-content-margin-bottom, var(--spectrum-card-content-margin-bottom));
+}
+
 .spectrum-Card-body {
   padding-block-start: var(--mod-card-title-padding-top, var(--spectrum-card-title-padding-top));
-  padding-inline-end: var(--mod-card-body-spacing, var(--spectrum-card-body-spacing));
-  padding-inline-start: var(--mod-card-body-spacing, var(--spectrum-card-body-spacing));
-  padding-block-end: var(--mod-card-body-padding-bottom, var(--spectrum-card-body-padding-bottom));
+  padding-inline-end: calc(var(--mod-card-body-spacing, var(--spectrum-card-body-spacing)) - var(--mod-card-border-width, var(--spectrum-card-border-width)));
+  padding-inline-start: calc(var(--mod-card-body-spacing, var(--spectrum-card-body-spacing)) - var(--mod-card-border-width, var(--spectrum-card-border-width)));
 }
 
 .spectrum-Card-preview {
@@ -263,15 +270,12 @@ governing permissions and limitations under the License.
 }
 
 .spectrum-Card-footer {
+  margin-block-start: var(--mod-card-footer-margin-top, var(--spectrum-card-footer-margin-top));
   margin-inline-start: var(--mod-card-body-spacing, var(--spectrum-card-body-spacing));
   margin-inline-end: var(--mod-card-body-spacing, var(--spectrum-card-body-spacing));
   padding-block-end: var(--mod-card-body-spacing, var(--spectrum-card-body-spacing));
   color: var(--highcontrast-card-body-font-color, var(--mod-card-body-font-color, var(--spectrum-card-body-font-color)));
-
-  .spectrum-Divider {
-    margin-block-start: 0;
-    margin-block-end: var(--mod-card-divider-margin-bottom, var(--spectrum-card-divider-margin-bottom));
-  }
+  line-height: var(--mod-card-body-line-height, var(--spectrum-card-body-line-height));
 }
 
 .spectrum-Card-header {
@@ -396,8 +400,6 @@ governing permissions and limitations under the License.
   .spectrum-Card-footer {
     margin-inline-end: 0;
     margin-inline-start: 0;
-    /* Give some spacing between the body and footer if footer is present */
-    margin-block-start: var(--mod-card-divider-margin-bottom, var(--spectrum-card-divider-margin-bottom)); 
   }
 }
 

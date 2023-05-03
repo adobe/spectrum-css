@@ -21,6 +21,7 @@ examples:
       <div style="width: 208px;">
         <div class="spectrum-Card spectrum-Card--sizeM" tabindex="0" role="figure">
           <div class="spectrum-Card-coverPhoto" style="background-image: url(img/example-card-portrait.jpg)"></div>
+          <hr class="spectrum-Divider spectrum-Divider--sizeS spectrum-Card-divider">
           <div class="spectrum-Card-body">
             <div class="spectrum-Card-header">
               <div class="spectrum-Card-title spectrum-Heading spectrum-Heading--sizeXS">Card Title</div>
@@ -35,9 +36,9 @@ examples:
             <div class="spectrum-Card-content">
               <div class="spectrum-Card-description">Optional description; should be kept to one or two lines</div>
             </div>
+            <hr class="spectrum-Divider spectrum-Divider--sizeS">
           </div>
           <div class="spectrum-Card-footer">
-            <hr class="spectrum-Divider spectrum-Divider--sizeS">
             Footer
           </div>
           <div class="spectrum-QuickActions spectrum-Card-quickActions">
@@ -63,6 +64,7 @@ examples:
         <div style="width: 208px; outline: 0;" role="row">
           <div class="spectrum-Card spectrum-Card--sizeM is-focused" role="rowheader" tabindex="0">
             <div class="spectrum-Card-coverPhoto" style="background-image: url(img/example-card-portrait.jpg)"></div>
+            <hr class="spectrum-Divider spectrum-Divider--sizeS spectrum-Card-divider">
             <div class="spectrum-Card-body">
               <div class="spectrum-Card-header">
                 <div class="spectrum-Card-title spectrum-Heading spectrum-Heading--sizeXS">Card Title</div>
@@ -77,9 +79,9 @@ examples:
               <div class="spectrum-Card-content">
                 <div class="spectrum-Card-description">Optional description; should be kept to one or two lines</div>
               </div>
+              <hr class="spectrum-Divider spectrum-Divider--sizeS">
             </div>
             <div class="spectrum-Card-footer">
-              <hr class="spectrum-Divider spectrum-Divider--sizeS">
               Footer
             </div>
             <div class="spectrum-QuickActions spectrum-Card-quickActions">
