@@ -176,8 +176,8 @@ governing permissions and limitations under the License.
 }
 
 .spectrum-Card-quickActions {
-  inset-inline-start: var(--mod-card-actions-spacing, var(--spectrum-card-actions-spacing));
-  inset-block-start: var(--mod-card-actions-spacing, var(--spectrum-card-actions-spacing));
+  inset-inline-start: calc(var(--mod-card-actions-spacing, var(--spectrum-card-actions-spacing)) - var(--mod-card-border-width, var(--spectrum-card-border-width)));
+  inset-block-start: calc(var(--mod-card-actions-spacing, var(--spectrum-card-actions-spacing)) - var(--mod-card-border-width, var(--spectrum-card-border-width)));
 }
 
 .spectrum-Card-actions {
@@ -273,7 +273,7 @@ governing permissions and limitations under the License.
   margin-block-start: var(--mod-card-footer-margin-top, var(--spectrum-card-footer-margin-top));
   margin-inline-start: var(--mod-card-body-spacing, var(--spectrum-card-body-spacing));
   margin-inline-end: var(--mod-card-body-spacing, var(--spectrum-card-body-spacing));
-  padding-block-end: var(--mod-card-body-spacing, var(--spectrum-card-body-spacing));
+  padding-block-end: calc(var(--mod-card-body-spacing, var(--spectrum-card-body-spacing)) - var(--mod-card-border-width, var(--spectrum-card-border-width)));
   color: var(--highcontrast-card-body-font-color, var(--mod-card-body-font-color, var(--spectrum-card-body-font-color)));
   line-height: var(--mod-card-body-line-height, var(--spectrum-card-body-line-height));
 }
@@ -389,7 +389,7 @@ governing permissions and limitations under the License.
     fill: var(--mod-card-file-outline, var(--spectrum-card-file-outline));
   }
 
-  .spectrum-Card-header {
+  .spectrum-Card-body {
     margin-block-start: var(--mod-card-quiet-header-margin-top, var(--spectrum-card-quiet-header-margin-top)); 
   }
 
