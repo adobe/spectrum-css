@@ -12,7 +12,6 @@ governing permissions and limitations under the License.
 @container (--system: express) {
     .spectrum-Slider {
 
-        --spectrum-slider-margin-top-offset: -6px;
         --spectrum-slider-track-color: var(--spectrum-gray-200);
         --spectrum-slider-track-fill-color: var(--spectrum-gray-600);
         --spectrum-slider-ramp-track-color: var(--spectrum-gray-300);

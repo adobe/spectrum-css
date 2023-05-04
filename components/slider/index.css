@@ -143,7 +143,7 @@ governing permissions and limitations under the License.
 
   position: absolute;
   z-index: 1;
-  inset-block-start: calc(var(--mod-slider-control-height, var(--spectrum-slider-control-height))/ 2);
+  inset-block-start: calc(var(--mod-slider-control-height, var(--spectrum-slider-control-height)) / 2 - var(--mod-slider-track-fill-thickness, var(--spectrum-slider-track-fill-thickness)) / 2);
   inset-inline-start: 0;
   inset-inline-end: auto;
   pointer-events: none;
@@ -275,8 +275,7 @@ governing permissions and limitations under the License.
 
 
   inset-block-start: calc(
-    var(--spectrum-slider-control-height) / 2 - var(--spectrum-slider-bottom-to-handle)
-    + var(--mod-slider-margin-top-offset, var(--spectrum-slider-margin-top-offset))
+    var(--mod-slider-control-height, var(--spectrum-slider-control-height)) / 2 - var(--mod-slider-handle-size, var(--spectrum-slider-handle-size)) / 2
   );
   margin-block: 0;
 

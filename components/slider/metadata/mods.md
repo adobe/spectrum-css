@@ -13,7 +13,6 @@
 |`--mod-slider-track-middle-handleoffset`|
 |`--mod-slider-ramp-track-height`|
 |`--mod-slider-handle-size`|
-|`--mod-slider-margin-top-offset`|
 |`--mod-slider-handle-border-width`|
 |`--mod-slider-handle-border-radius`|
 |`--mod-animation-duration-100`|
