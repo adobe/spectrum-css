@@ -52,7 +52,7 @@ governing permissions and limitations under the License.
 
   /* ----- *
   @todo Refactor or remove these 3 properties once the RGB stripped value is available. */
-  --spectrum-table-selected-row-background-color: rgba(var(--spectrum-blue-900), var(--spectrum-table-selected-row-background-opacity));
+  --spectrum-table-selected-row-background-color: rgba(var(--spectrum-blue-900-rgb), var(--spectrum-table-selected-row-background-opacity));
   --spectrum-table-selected-row-background-color-non-emphasized: rgba(var(--spectrum-gray-700-rgb), var(--spectrum-table-selected-row-background-opacity-non-emphasized));
   --spectrum-table-row-hover-color: rgba(var(--spectrum-gray-900-rgb), var(--spectrum-table-row-hover-opacity));
   /* ----- */
@@ -328,7 +328,7 @@ governing permissions and limitations under the License.
 
   border-radius: var(--mod-table-border-radius, var(--spectrum-table-border-radius));
   transition: color var(--mod-table-transition-duration, var(--spectrum-table-transition-duration)) ease-in-out;
-  cursor: default;
+  cursor: initial;
   outline: 0;
 
   .spectrum-Table-sortedIcon,
@@ -653,6 +653,7 @@ tbody.spectrum-Table-body {
 
 .spectrum-Table-row--sectionHeader {
   background-color: var(--mod-table-section-header-background-color, var(--spectrum-table-section-header-background-color));
+  cursor: initial;
 
   .spectrum-Table-cell {
     font-weight: var(--mod-table-section-header-font-weight, var(--spectrum-table-section-header-font-weight));
@@ -667,6 +668,10 @@ tbody.spectrum-Table-body {
     font-style: var(--mod-table-section-header-font-style, var(--spectrum-table-row-font-style));
     line-height: var(--mod-table-section-header-line-height, var(--spectrum-table-row-line-height));
     color: var(--mod-table-section-header-text-color, var(--spectrum-table-row-text-color));
+  }
+
+  &:hover {
+    background-color: var(--mod-table-section-header-background-color, var(--spectrum-table-section-header-background-color));
   }
 }
 
