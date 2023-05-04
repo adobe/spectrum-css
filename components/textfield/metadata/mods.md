@@ -4,7 +4,6 @@
 |`--mod-textfield-focus-indicator-gap`|
 |`--mod-textfield-focus-indicator-width`|
 |`--mod-textfield-corner-radius`|
-|`--mod-textfield-border-width`|
 |`--mod-textfield-focus-indicator-color`|
 |`--mod-textfield-text-color-default`|
 |`--mod-textfield-text-color-disabled`|
@@ -32,6 +31,7 @@
 |`--mod-textfield-min-width`|
 |`--mod-textfield-height`|
 |`--mod-textfield-spacing-block-start`|
+|`--mod-textfield-border-width`|
 |`--mod-textfield-spacing-block-end`|
 |`--mod-textfield-spacing-inline`|
 |`--mod-textfield-background-color`|
