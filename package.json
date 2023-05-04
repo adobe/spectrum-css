@@ -39,7 +39,7 @@
     "dev": "NODE_ENV=development BROWSERSYNC_OPEN=true gulp dev",
     "docs:mod": "node tasks/mod-extractor.js",
     "lint:components": "node ./tasks/packageLint.js",
-    "mv:preview": "rimraf dist/preview && mv tools/preview/storybook-static dist/preview",
+    "mv:preview": "rimraf dist/preview && mkdir dist/preview && mv tools/preview/storybook-static dist/preview",
     "new": "nx run @spectrum-css/generator:new",
     "precommit": "lint-staged",
     "prepare": "husky install",
