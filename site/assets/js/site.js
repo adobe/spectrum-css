@@ -365,7 +365,7 @@ class SpectrumSwitcher {
 
     this._rootEl.classList.add(`spectrum--${theme}`);
 
-    updateCodeBlocks(theme);
+    this.updateCodeBlocks(theme);
 
     this._theme = theme;
   };
