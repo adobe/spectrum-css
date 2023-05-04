@@ -37,6 +37,7 @@ export const Template = ({
           typeof staticColor !== "undefined",
         ...customClasses.reduce((a, c) => ({ ...a, [c]: true }), {}),
       })}
+      aria-label="close"
       id=${ifDefined(id)}
       label=${ifDefined(label)}
       ?disabled=${isDisabled}

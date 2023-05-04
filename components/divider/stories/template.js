@@ -13,7 +13,8 @@ export const Template = ({
   vertical = false,
   customClasses = [],
   verticalStyle = {
-    "height": "20px",
+    "min-height": "20px",
+    "height": 'auto',
     "align-self": "stretch"
   },
   ...globals
