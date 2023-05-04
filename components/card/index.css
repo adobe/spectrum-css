@@ -438,6 +438,10 @@ governing permissions and limitations under the License.
     block-size: auto;
   }
 
+  .spectrum-Card-content {
+    margin-block-end: 0;
+  }
+
   .spectrum-Card-title {
     padding-inline-end: 0;
   }

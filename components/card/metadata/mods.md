@@ -22,9 +22,9 @@
 |`--mod-card-actions-spacing`|
 |`--mod-card-preview-minimum-height`|
 |`--mod-card-background-color`|
+|`--mod-card-content-margin-bottom`|
 |`--mod-card-title-padding-top`|
 |`--mod-card-body-spacing`|
-|`--mod-card-body-padding-bottom`|
 |`--mod-card-content-margin-top`|
 |`--mod-card-title-padding-right`|
 |`--mod-card-title-font-family`|
@@ -41,7 +41,7 @@
 |`--mod-card-body-font-style`|
 |`--mod-card-body-line-height`|
 |`--mod-card-body-font-color`|
-|`--mod-card-divider-margin-bottom`|
+|`--mod-card-footer-margin-top`|
 |`--mod-card-quiet-minimum-width`|
 |`--mod-animation-duration-100`|
 |`--mod-card-quiet-background-color-hover`|
