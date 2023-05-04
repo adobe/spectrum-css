@@ -103,6 +103,7 @@ module.exports = async (configData) => {
             renderScripts += data + '\n'; // Append the contents with a newline
         }
     }
+    
     /** This loop determines how many pages are published to the site */
     for await (const file of fg.stream('metadata/*.yml', { cwd: path, onlyFiles: true, absolute: true })) {
       let fileName = basename(file, '.yml');
