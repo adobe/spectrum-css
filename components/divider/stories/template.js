@@ -12,7 +12,7 @@ export const Template = ({
   staticColor,
   vertical = false,
   customClasses = [],
-  style = {
+  verticalStyle = {
     "height": "20px",
     "align-self": "stretch"
   },
@@ -26,7 +26,7 @@ export const Template = ({
   } catch (e) {
     console.warn(e);
   }
-// needs to be hr or div
+
 if (tag === "hr") {
   return html`
     <hr
@@ -41,8 +41,7 @@ if (tag === "hr") {
       style=${vertical === true ? (styleMap(style)) : ""}
       role="separator"
       >
-    </hr>
-    `
+    </hr>`
 } else {
   return html`
     <div
@@ -54,7 +53,7 @@ if (tag === "hr") {
           typeof staticColor !== "undefined",
         ...customClasses.reduce((a, c) => ({ ...a, [c]: true }), {}),
       })}
-      style=${vertical === true ? (styleMap(style)) : ""}
+      style=${vertical === true ? (styleMap(verticalStyle)) : ""}
       role="separator"
       >
     </div>`
