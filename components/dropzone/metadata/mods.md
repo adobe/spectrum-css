@@ -5,6 +5,7 @@
 |`--mod-drop-zone-border-width`|
 |`--mod-drop-zone-corner-radius`|
 |`--mod-drop-zone-content-maximum-width`|
+|`--mod-drop-zone-illustration-color`|
 |`--mod-drop-zone-illustration-to-heading`|
 |`--mod-drop-zone-heading-to-body`|
 |`--mod-drop-zone-heading-font-family`|
