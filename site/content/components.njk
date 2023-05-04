@@ -16,7 +16,7 @@ eleventyComputed:
     - table
     - statuslight
     - icon
-    - ...component.dependencies
+    - closebutton
     - "{{ component.name }}"
   eleventyNavigation:
     key: "{{ component.name }}"
@@ -110,6 +110,12 @@ eleventyComputed:
             {%- endfor %}
             </tbody>
         </table>
+    {% endif %}
+    {% if component.sections %}
+        {% set section = { name: '', id: '' } %}
+        {% for section in component.sections %}
+            {% include "section.njk" %}
+        {% endfor %}
     {% endif %}
 </article>
 

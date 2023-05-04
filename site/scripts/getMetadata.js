@@ -10,7 +10,7 @@ OF ANY KIND, either express or implied. See the License for the specific languag
 governing permissions and limitations under the License.
 */
 
-module.exports = ({ id, name, description, dnaStatus, cssStatus, status, examples = [] }) => {
+module.exports = ({ id, name, description, dnaStatus, cssStatus, status, examples = [], sections = []}) => {
   if (!id || !name) {
     console.error(new Error('Component data required to fetch vars metadata'));
     return;
@@ -88,5 +88,6 @@ module.exports = ({ id, name, description, dnaStatus, cssStatus, status, example
     dnaStatus,
     status: status ?? 'Contribution',
     examples: parsedExamples,
+    sections
   };
 };

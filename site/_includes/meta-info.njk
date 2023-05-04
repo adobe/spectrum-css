@@ -34,7 +34,6 @@
         href="//wwwimages2.adobe.com/etc/beagle/public/globalnav/adobe-globalnav/latest/adobe-globalnav.min.css"/>
 {% endif %}
 
-<script>{{ component.renderScripts | safe }}</script>
 <script src="/js/loadicons/index.js"></script>
 <script src="/js/focus-ring-polyfill/index.js"></script>
 <script src="/js/lunr/lunr.js"></script>
@@ -43,10 +42,6 @@
 <script src="/js/Search.js"></script>
 <script src="/js/site.js"></script>
 <script src="/js/docs.js"></script>
-
-{% for dep in dependencies %}
-  <script src="/components/{{ dep }}/enhancement.js" data-dependency={{ dep }}></script>
-{% endfor %}
 
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@mdi/font@6.5.95/css/materialdesignicons.min.css" crossorigin="anonymous" referrerpolicy="no-referrer" />
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Primer/19.1.1/tooltips.min.css" crossorigin="anonymous" referrerpolicy="no-referrer" />
