@@ -3,6 +3,36 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+<a name="4.0.0"></a>
+# 4.0.0
+🗓 2023-05-04 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/picker@3.0.12...@spectrum-css/picker@4.0.0)
+
+* fix(picker)!: update spacing tokens and storybook (#1804) ([1097b23](https://github.com/adobe/spectrum-css/commit/1097b23)), closes [#1804](https://github.com/adobe/spectrum-css/issues/1804)
+
+
+### 🛑 BREAKING CHANGES
+
+* removes `--mod-picker-min-inline-size`
+
+Additionally:
+* chore(picker,pickerbutton): update stories - update stories to include label
+* chore(picker,pickerbutton): add loading state to stories
+* chore(picker): update icon size in stories
+* chore(picker): fixing label padding for story
+* style(picker): update spacing tokens
+* feat(picker): update spacing tokens
+* chore(picker): update storybook to match docs
+* fix(pickerbutton): undo changes to pickerbutton
+* chore(picker): get defaults set for storybook
+* chore(picker): updating stories to include express specific styling - adding express and spectrum specific styling to storybook - fixing loading spacing
+* chore(picker): update storybook - add invalid story - add click functionality
+* chore(picker): add focused story and fix icon focus color
+* docs(picker): update mods file
+
+
+
+
+
 <a name="3.0.12"></a>
 ## 3.0.12
 🗓 2023-05-02 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/picker@3.0.11...@spectrum-css/picker@3.0.12)
