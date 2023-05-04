@@ -31,7 +31,12 @@ governing permissions and limitations under the License.
 }
 
 .spectrum-AlertBanner {
-  display: flex;
+  display: none;
+
+  &.is-open {
+    display: flex;
+  }
+
   justify-content: space-between;
   inline-size: var(--mod-alert-banner-size, var(--spectrum-alert-banner-size));
   min-block-size: var(--mod-alert-banner-min-height, var(--spectrum-alert-banner-min-height));
