@@ -64,6 +64,9 @@ export default {
         : undefined,
     },
   },
+  // decorators: [
+  //   (StoryFn) => { return html`<div>${StoryFn()}</div>`; }
+  // ]
 };
 
 export const Default = Template.bind({});
@@ -83,7 +86,7 @@ Default.args = {
       cellContent: "Table Row Delta",
     },
     {
-      cellContent: "Example Summary Row",
+      cellContent: "Summary Row",
       isSummaryRow: true,
     },
   ]
@@ -110,12 +113,10 @@ MultiSelect.args = {
     {
       cellContent: "Table Row Delta",
       showCheckbox: true,
-      isSelected: true,
     },
     {
       cellContent: "Table Row Echo",
       showCheckbox: true,
-      isSelected: true,
     },
   ]
 };
@@ -124,7 +125,7 @@ export const SectionHeader = Template.bind({});
 SectionHeader.args = {
   rowItems: [
     {
-      cellContent: "Example Section Header",
+      cellContent: "Section Header",
       isSectionHeader: true,
     },
     {
