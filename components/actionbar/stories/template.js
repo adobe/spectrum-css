@@ -47,6 +47,7 @@ export const Template = ({
         content: [
           CloseButton({
             ...globals,
+            label: "Clear selection",
             staticColor: isEmphasized ? "white" : undefined,
           }),
           FieldLabel({

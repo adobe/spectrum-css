@@ -17,20 +17,16 @@ eleventyComputed:
     - statuslight
     - icon
     - closebutton
-    - ...component.dependencies
     - "{{ component.name }}"
   eleventyNavigation:
     key: "{{ component.name }}"
     parent: "Components"
 ---
 
-{% if component.dependencies %}
-  {% for dep in component.dependencies %}
-  <link rel="stylesheet" type="text/css" href='/components/{{ dep }}/index-vars.css' data-dependency={{ dep }} />
-  {% endfor %}
-{% endif %}
-
-<link rel="stylesheet" href="/components/{{ component.name | replace(' ', '') | lower | slugify }}/index-vars.css">
+{% for dep in component.dependencies %}
+<link rel="stylesheet" type="text/css" href='/components/{{ dep }}/index-vars.css' data-dependency={{ dep }} />
+{% endfor %}
+<link rel="stylesheet" href="/components/{{ component.name | slugify }}/index-vars.css">
 
 <article id="main">
     {% include "context-switcher.njk" %}
@@ -123,4 +119,4 @@ eleventyComputed:
     {% endif %}
 </article>
 
-<script src="/components/{{ component.name | replace(' ', '') | lower | slugify }}/enhancement.js"></script>
+<script src="/components/{{ component.name | slugify }}/enhancement.js"></script>

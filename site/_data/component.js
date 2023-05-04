@@ -95,6 +95,15 @@ module.exports = async (configData) => {
       renderer = await readFile(renderTemplatePath, "utf8").catch(console.warn);
     }
 
+    /** This loop will extract all the contents of js files under metadata folder in each component */
+    let renderScripts = '';
+    for await (const file of fg.stream('metadata/*.js', { cwd: path, onlyFiles: true, absolute: true })) {
+        if (existsSync(file)) {
+            const data = await readFile(file, "utf8").catch(console.warn);
+            renderScripts += data + '\n'; // Append the contents with a newline
+        }
+    }
+    
     /** This loop determines how many pages are published to the site */
     for await (const file of fg.stream('metadata/*.yml', { cwd: path, onlyFiles: true, absolute: true })) {
       let fileName = basename(file, '.yml');
@@ -116,6 +125,7 @@ module.exports = async (configData) => {
         releaseDate: await getReleaseDate(packageName, version),
         ...metadata,
         renderer,
+        renderScripts,
         eleventyNavigation: {
           title: metadata.title,
           key: metadata.name,
