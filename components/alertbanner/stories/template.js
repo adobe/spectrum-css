@@ -28,7 +28,7 @@ export const Template = ({
   const iconName =
   variant === "negative"
     ? "Alert"
-    : variant === "informative"
+    : variant === "info"
     ? "Info"
     : "";
 
@@ -36,11 +36,11 @@ export const Template = ({
   <div class=${classMap({
     [rootClass]: true,
     'is-open': isOpen,
-    [`${rootClass}-${variant}`]: typeof variant !== "undefined",
+    [`${rootClass}--${variant}`]: typeof variant !== "undefined",
     ...customClasses.reduce((a, c) => ({ ...a, [c]: true }), {}),
   })}>
-    <div class="spectrum-AlertBanner-start">
-      <div class="spectrum-AlertBanner-icon-text">
+    <div class="spectrum-AlertBanner-body">
+      <div class="spectrum-AlertBanner-content">
         ${iconName ? Icon({
           ...globals,
           iconName,
@@ -61,13 +61,12 @@ export const Template = ({
     <div class="spectrum-AlertBanner-end">
     ${Divider({
       vertical: true,
-      size: 'm',
-      customClasses: [`${rootClass}-divider`, `${rootClass}--vertical`],
+      size: 's',
+      customClasses: [`${rootClass}-divider`, `${rootClass}--vertical`, `${rootClass}-divider--staticWhite`],
       tag: 'div',
       style: {
         "height": "auto",
         "align-self": "stretch",
-        "--mod-divider-background-color": "var(--spectrum-white)",
     },
     ...globals,
     })}

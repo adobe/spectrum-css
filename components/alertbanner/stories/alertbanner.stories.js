@@ -31,13 +31,14 @@ export default {
         type: { summary: "string" },
         category: "Component",
       },
-      options: ["neutral", "informative", "negative"],
+      options: ["neutral", "info", "negative"],
       control: "radio",
     },
   },
   args: {
     rootClass: "spectrum-AlertBanner",
     isOpen: true,
+    variant: "neutral",
     text: "Your trial has expired. Please purchase to continue. Your work has been saved and is ready for you to open again after purchase."
   },
   parameters: {

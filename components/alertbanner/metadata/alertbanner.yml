@@ -10,8 +10,8 @@ examples:
     description: Standard Alert Banners
     markup: |
         <div class="spectrum-AlertBanner is-open">
-          <div class="spectrum-AlertBanner-start">
-            <div class="spectrum-AlertBanner-icon-text">
+          <div class="spectrum-AlertBanner-body">
+            <div class="spectrum-AlertBanner-content">
               <p class="spectrum-AlertBanner-text">Your trial has expired</p>
             </div>
           </div>
@@ -27,8 +27,8 @@ examples:
         <div class="dummy-spacing" style="block-size: 2.5rem;"></div>
 
         <div class="spectrum-AlertBanner is-open">
-          <div class="spectrum-AlertBanner-start">
-            <div class="spectrum-AlertBanner-icon-text">
+          <div class="spectrum-AlertBanner-body">
+            <div class="spectrum-AlertBanner-content">
               <p class="spectrum-AlertBanner-text">Your trial has expired</p>
             </div>
             <button class="spectrum-Button spectrum-Button--outline spectrum-Button--staticWhite spectrum-Button--sizeM spectrum-AlertBanner-action-button">
@@ -47,8 +47,8 @@ examples:
         <div class="dummy-spacing" style="block-size: 2.5rem;"></div>
 
         <div class="spectrum-AlertBanner is-open">
-          <div class="spectrum-AlertBanner-start">
-            <div class="spectrum-AlertBanner-icon-text">
+          <div class="spectrum-AlertBanner-body">
+            <div class="spectrum-AlertBanner-content">
               <p class="spectrum-AlertBanner-text">Your trial has expired. Please purchase to continue. Your work has been saved and is ready for you to open again after purchase.</p>
             </div>
             <button class="spectrum-Button spectrum-Button--outline spectrum-Button--staticWhite spectrum-Button--sizeM spectrum-AlertBanner-action-button">
@@ -68,9 +68,9 @@ examples:
     name: Informative
     description: Informative Alert Banners
     markup: |
-        <div class="spectrum-AlertBanner spectrum-AlertBanner-informative is-open">
-          <div class="spectrum-AlertBanner-start">
-            <div class="spectrum-AlertBanner-icon-text">
+        <div class="spectrum-AlertBanner spectrum-AlertBanner--info is-open">
+          <div class="spectrum-AlertBanner-body">
+            <div class="spectrum-AlertBanner-content">
               <svg class="spectrum-Icon spectrum-UIIcon-Info100 spectrum-AlertBanner-icon" focusable="false" aria-hidden="true">
                 <use xlink:href="#spectrum-icon-18-Info" />
               </svg>
@@ -93,9 +93,9 @@ examples:
     name: Negative
     description: Negative Alert Banners
     markup: |
-        <div class="spectrum-AlertBanner spectrum-AlertBanner-negative is-open">
-          <div class="spectrum-AlertBanner-start">
-            <div class="spectrum-AlertBanner-icon-text">
+        <div class="spectrum-AlertBanner spectrum-AlertBanner--negative is-open">
+          <div class="spectrum-AlertBanner-body">
+            <div class="spectrum-AlertBanner-content">
               <svg class="spectrum-Icon spectrum-UIIcon-Alert100 spectrum-AlertBanner-icon" focusable="false" aria-hidden="true">
                 <use xlink:href="#spectrum-icon-18-Alert" />
               </svg>
