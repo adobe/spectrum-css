@@ -461,7 +461,6 @@ governing permissions and limitations under the License.
   display: flex;
   flex-direction: column;
   justify-content: center;
-  align-itmes: flex-end;
   /* allow express buttons to have a gap the size of the stepper border */
   row-gap: var(--mod-stepper-button-gap, var(--spectrum-stepper-button-gap));
 
