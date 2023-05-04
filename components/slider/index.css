@@ -15,7 +15,6 @@ governing permissions and limitations under the License.
   /* default sizing, matches t-shirt size M */
   --spectrum-slider-handle-size: var(--spectrum-slider-handle-size-medium);
   --spectrum-slider-control-height: var(--spectrum-component-height-100);
-  --spectrum-slider-bottom-to-handle: var(--spectrum-slider-bottom-to-handle-medium);
   --spectrum-slider-handle-border-radius: var(--spectrum-corner-radius-200);
   --spectrum-slider-handle-border-width-down: var(--spectrum-slider-handle-border-width-down-medium);
 }
@@ -25,7 +24,6 @@ governing permissions and limitations under the License.
   --spectrum-slider-font-size: var(--spectrum-font-size-75);
   --spectrum-slider-handle-size: var(--spectrum-slider-handle-size-small);
   --spectrum-slider-control-height: var(--spectrum-component-height-75);
-  --spectrum-slider-bottom-to-handle: var(--spectrum-slider-bottom-to-handle-small);
   --spectrum-slider-handle-border-radius: var(--spectrum-corner-radius-200);
   --spectrum-slider-handle-border-width-down: var(--spectrum-slider-handle-border-width-down-small);
   --spectrum-slider-label-top-to-text: var(--spectrum-component-top-to-text-75);
@@ -36,7 +34,6 @@ governing permissions and limitations under the License.
   --spectrum-slider-font-size: var(--spectrum-font-size-75);
   --spectrum-slider-handle-size: var(--spectrum-slider-handle-size-medium);
   --spectrum-slider-control-height: var(--spectrum-component-height-100);
-  --spectrum-slider-bottom-to-handle: var(--spectrum-slider-bottom-to-handle-medium);
   --spectrum-slider-handle-border-radius: var(--spectrum-corner-radius-200);
   --spectrum-slider-handle-border-width-down: var(--spectrum-slider-handle-border-width-down-medium);
   --spectrum-slider-label-top-to-text: var(--spectrum-component-top-to-text-75);
@@ -48,7 +45,6 @@ governing permissions and limitations under the License.
   --spectrum-slider-font-size: var(--spectrum-font-size-100);
   --spectrum-slider-handle-size: var(--spectrum-slider-handle-size-large);
   --spectrum-slider-control-height: var(--spectrum-component-height-200);
-  --spectrum-slider-bottom-to-handle: var(--spectrum-slider-bottom-to-handle-large);
   --spectrum-slider-handle-border-radius: calc(var(--spectrum-corner-radius-200) * 4);
   --spectrum-slider-handle-border-width-down: var(--spectrum-slider-handle-border-width-down-large);
   --spectrum-slider-label-top-to-text: var(--spectrum-component-top-to-text-100);
@@ -59,7 +55,6 @@ governing permissions and limitations under the License.
   --spectrum-slider-font-size: var(--spectrum-font-size-200);
   --spectrum-slider-handle-size: var(--spectrum-slider-handle-size-extra-large);
   --spectrum-slider-control-height: var(--spectrum-component-height-300);
-  --spectrum-slider-bottom-to-handle: var(--spectrum-slider-bottom-to-handle-extra-large);
   --spectrum-slider-handle-border-radius: calc(var(--spectrum-corner-radius-200) * 4);
   --spectrum-slider-handle-border-width-down: var(--spectrum-slider-handle-border-width-down-extra-large);
   --spectrum-slider-label-top-to-text: var(--spectrum-component-top-to-text-200);
@@ -123,7 +118,6 @@ governing permissions and limitations under the License.
   /* These calculations prevent the track from spilling outside of the control */
   inline-size: calc(100% - calc(var(--mod-slider-controls-margin, var(--spectrum-slider-controls-margin))) * 2);
   margin-inline-start: var(--mod-slider-controls-margin, var(--spectrum-slider-controls-margin));
-  margin-block-end: var(--mod-slider-bottom-to-handle, var(--spectrum-slider-bottom-to-handle));
 
   block-size: var(--mod-slider-control-height, var(--spectrum-slider-control-height));
   vertical-align: top;
@@ -264,22 +258,17 @@ governing permissions and limitations under the License.
 .spectrum-Slider-handle {
   position: absolute;
   inset-inline-start: 0;
-
   z-index: 2;
-
   display: inline-block;
   box-sizing: border-box;
 
   inline-size: var(--mod-slider-handle-size, var(--spectrum-slider-handle-size));
   block-size: var(--mod-slider-handle-size, var(--spectrum-slider-handle-size));
 
-
   inset-block-start: calc(
     var(--mod-slider-control-height, var(--spectrum-slider-control-height)) / 2 - var(--mod-slider-handle-size, var(--spectrum-slider-handle-size)) / 2
   );
   margin-block: 0;
-
-  margin-block-end: var(--mod-slider-bottom-to-handle, var(--spectrum-slider-bottom-to-handle));
   margin-inline: calc(var(--mod-slider-handle-size, var(--spectrum-slider-handle-size)) / -2) 0;
   border-width: var(--mod-slider-handle-border-width, var(--spectrum-slider-handle-border-width));
   border-style: solid;
