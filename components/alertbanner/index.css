@@ -96,3 +96,13 @@ governing permissions and limitations under the License.
   display: flex;
   flex-wrap: no-wrap;
 }
+
+@media (forced-colors: active) {
+  .spectrum-AlertBanner {
+    /* Border is visible in high contrast mode */
+    --highcontrast-alert-banner-border-color: ButtonText;
+    --spectrum-alert-banner-border-width: var(--spectrum-border-width-100);
+
+    border: var(--mod-alert-banner-border-width, var(--spectrum-alert-banner-border-width)) solid var(--highcontrast-alert-banner-border-color, transparent);
+  }
+}
