@@ -18,6 +18,12 @@ code[class*="language-"], pre[class*="language-"] {
   font-size: inherit;
 }
 
+.spectrum-Code.spectrum-Code--sizeXS code[class*="language-"] .language-html {
+  background: transparent;
+  padding: 0;
+  margin: 0;
+}
+
 .spectrum-BigSubtleLink {
   display: block;
   text-decoration: none;

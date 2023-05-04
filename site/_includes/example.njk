@@ -1,12 +1,3 @@
-{% block head %}
-    {% for dep in [
-    'statuslight',
-    'typography',
-    ] %}
-    <link rel="stylesheet" type="text/css" href='/components/{{ dep }}/index-vars.css' data-dependency={{ dep }} />
-    {% endfor %}
-{% endblock %}
-
 <article class="spectrum-CSSExample">
   {% if example.name != component.name %}
     <h3 id="{{ example.name | slugify }}" class="spectrum-CSSExample-heading spectrum-Heading spectrum-Heading--sizeS">
