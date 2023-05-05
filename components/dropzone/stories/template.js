@@ -9,7 +9,7 @@ import { Template as ActionButton } from "@spectrum-css/actionbutton/stories/tem
 import '../index.css';
 
 export const Template = ({
-  rootClass = "spectrum-Dropzone",
+  rootClass = "spectrum-DropZone",
   isDragged = false,
   isFilled = false,
   customClasses = [],

@@ -13,8 +13,8 @@ governing permissions and limitations under the License.
 // Dropzone
 (function() {
 
-  document.addEventListener('DOMContentLoaded', function(event) {
-    const dropzones = document.querySelectorAll('.spectrum-Dropzone');
+  document.addEventListener('DOMContentLoaded', function() {
+    const dropzones = document.querySelectorAll('.spectrum-DropZone');
    
     dropzones.forEach(function(item) {
       item.addEventListener("dragover", function(event) {
@@ -24,11 +24,11 @@ governing permissions and limitations under the License.
         false
       );
       
-      item.addEventListener('dragenter', function(event) {
+      item.addEventListener('dragenter', function() {
         item.classList.add("is-dragged");
       });
   
-      item.addEventListener('dragleave', function(event) {
+      item.addEventListener('dragleave', function() {
         item.classList.remove("is-dragged");
       });
 
