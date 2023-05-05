@@ -18,9 +18,9 @@
     "build": "gulp"
   },
   "peerDependencies": {
-    "@spectrum-css/closebutton": "^3.0.0",
-    "@spectrum-css/divider": "^2.0.25",
-    "@spectrum-css/icon": "^3.0.0",
+    "@spectrum-css/closebutton": ">=3",
+    "@spectrum-css/divider": ">=2.0.25",
+    "@spectrum-css/icon": ">=3",
     "@spectrum-css/tokens": ">=8.0.2"
   },
   "devDependencies": {

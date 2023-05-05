@@ -27,7 +27,7 @@ governing permissions and limitations under the License.
   /* colors */
   --spectrum-alert-banner-informative-background: var(--spectrum-informative-background-color-default);
   --spectrum-alert-banner-negative-background: var(--spectrum-negative-background-color-default);
-  --spetrum-alert-banner-font-color: var(--spectrum-white);
+  --spectrum-alert-banner-font-color: var(--spectrum-white);
 }
 
 .spectrum-AlertBanner {
@@ -42,7 +42,7 @@ governing permissions and limitations under the License.
   min-block-size: var(--mod-alert-banner-min-height, var(--spectrum-alert-banner-min-height));
 
   font-size: var(--mod-alert-banner-font-size, var(--spectrum-alert-banner-font-size));
-  color: var(--mod-alert-banner-font-color, var(--spetrum-alert-banner-font-color));
+  color: var(--mod-alert-banner-font-color, var(--spectrum-alert-banner-font-color));
 
   background-color: var(--mod-alert-banner-netural-background, var(--spectrum-alert-banner-netural-background));
 
@@ -53,11 +53,28 @@ governing permissions and limitations under the License.
   &--negative {
     background-color: var(--mod-alert-banner-negative-background, var(--spectrum-alert-banner-negative-background));
   }
+
+  .spectrum-Divider--vertical {
+    margin-block: var(--mod-alert-banner-edge-to-divider, var(--spectrum-alert-banner-edge-to-divider));
+    height: auto;
+    align-self: stretch;
+  }
+
+  .spectrum-Button {
+    margin-block: var(--mod-alert-banner-edge-to-button, var(--spectrum-alert-banner-edge-to-button));
+    margin-inline-end: var(--mod-alert-banner-text-to-divider, var(--spectrum-alert-banner-text-to-divider));
+    margin-inline-start: auto;
+  }
+
+  .spectrum-CloseButton {
+    margin-inline: var(--mod-alert-banner-close-button-spacing, var(--spectrum-alert-banner-close-button-spacing));
+  }
 }
 
 .spectrum-AlertBanner-body {
   width: 100%;
   display: flex;
+  gap: calc(8px - var(--spectrum-alert-banner-edge-to-button));
   flex-wrap: wrap;
   align-items: center;
   margin-inline-start: var(--mod-alert-banner-start-edge, var(--spectrum-alert-banner-start-edge));
@@ -65,7 +82,6 @@ governing permissions and limitations under the License.
 
 .spectrum-AlertBanner-content {
   display: flex;
-  flex-wrap: no-wrap;
 }
 
 .spectrum-AlertBanner-end {
@@ -84,20 +100,6 @@ governing permissions and limitations under the License.
   margin-block-start: var(--mod-alert-banner-top-text, var(--spectrum-alert-banner-top-text));
   margin-block-end: var(--mod-alert-banner-bottom-text, var(--spectrum-alert-banner-bottom-text));
   margin-inline-end: var(--mod-alert-banner-text-to-button-horizontal, var(--spectrum-alert-banner-text-to-button-horizontal));
-}
-
-.spectrum-AlertBanner-action-button {
-  margin-block: var(--mod-alert-banner-edge-to-button, var(--spectrum-alert-banner-edge-to-button));
-  margin-inline-end: var(--mod-alert-banner-text-to-divider, var(--spectrum-alert-banner-text-to-divider));
-  margin-inline-start: auto;
-}
-
-.spectrum-AlertBanner-divider {
-  margin-block: var(--mod-alert-banner-edge-to-divider, var(--spectrum-alert-banner-edge-to-divider));
-}
-
-.spectrum-AlertBanner-close-button {
-  margin-inline: var(--mod-alert-banner-close-button-spacing, var(--spectrum-alert-banner-close-button-spacing));
 }
 
 @media (forced-colors: active) {

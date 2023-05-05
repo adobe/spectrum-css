@@ -7,6 +7,10 @@
 |`--mod-alert-banner-netural-background`|
 |`--mod-alert-banner-informative-background`|
 |`--mod-alert-banner-negative-background`|
+|`--mod-alert-banner-edge-to-divider`|
+|`--mod-alert-banner-edge-to-button`|
+|`--mod-alert-banner-text-to-divider`|
+|`--mod-alert-banner-close-button-spacing`|
 |`--mod-alert-banner-start-edge`|
 |`--mod-alert-banner-icon-size`|
 |`--mod-alert-banner-top-icon`|
@@ -14,8 +18,4 @@
 |`--mod-alert-banner-top-text`|
 |`--mod-alert-banner-bottom-text`|
 |`--mod-alert-banner-text-to-button-horizontal`|
-|`--mod-alert-banner-edge-to-button`|
-|`--mod-alert-banner-text-to-divider`|
-|`--mod-alert-banner-edge-to-divider`|
-|`--mod-alert-banner-close-button-spacing`|
 |`--mod-alert-banner-border-width`|
