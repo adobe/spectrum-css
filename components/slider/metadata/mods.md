@@ -2,7 +2,6 @@
 | --- |
 |`--mod-slider-min-size`|
 |`--mod-slider-controls-margin`|
-|`--mod-slider-bottom-to-handle`|
 |`--mod-slider-control-height`|
 |`--mod-slider-track-fill-thickness`|
 |`--mod-slider-handle-gap`|
@@ -23,7 +22,6 @@
 |`--mod-slider-font-size`|
 |`--mod-line-height-100`|
 |`--mod-slider-label-top-to-text`|
-|`--mod-slider-control-to-field-label`|
 |`--mod-slider-cjk-line-height`|
 |`--mod-slider-label-margin-start`|
 |`--mod-slider-tick-handle-background-color`|

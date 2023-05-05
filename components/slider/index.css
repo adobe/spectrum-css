@@ -13,10 +13,12 @@ governing permissions and limitations under the License.
 
 .spectrum-Slider {
   /* default sizing, matches t-shirt size M */
+  --spectrum-slider-font-size: var(--spectrum-font-size-75);
   --spectrum-slider-handle-size: var(--spectrum-slider-handle-size-medium);
   --spectrum-slider-control-height: var(--spectrum-component-height-100);
   --spectrum-slider-handle-border-radius: var(--spectrum-corner-radius-200);
   --spectrum-slider-handle-border-width-down: var(--spectrum-slider-handle-border-width-down-medium);
+  --spectrum-slider-label-top-to-text: var(--spectrum-component-top-to-text-75);
 }
 
 
