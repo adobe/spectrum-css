@@ -26,6 +26,7 @@ governing permissions and limitations under the License.
   --spectrum-alert-banner-close-button-spacing: var(--spectrum-spacing-100);
   --spectrum-alert-banner-edge-to-divider: var(--spectrum-spacing-100);
   --spectrum-alert-banner-edge-to-button: var(--spectrum-spacing-100);
+  --spectrum-alert-banner-text-to-button-vertical: var(--spectrum-spacing-100);
 
   /* colors */
   --spectrum-alert-banner-informative-background: var(--spectrum-informative-background-color-default);
@@ -36,6 +37,7 @@ governing permissions and limitations under the License.
     --spectrum-alert-banner-close-button-spacing: var(--spectrum-spacing-200);
     --spectrum-alert-banner-edge-to-divider: var(--spectrum-spacing-200);
     --spectrum-alert-banner-edge-to-button: var(--spectrum-spacing-200);
+    --spectrum-alert-banner-text-to-button-vertical: var(--spectrum-spacing-200);
   }
 }
 
@@ -83,7 +85,7 @@ governing permissions and limitations under the License.
 .spectrum-AlertBanner-body {
   width: 100%;
   display: flex;
-  gap: calc(8px - var(--spectrum-alert-banner-edge-to-button));
+  gap: calc(var(--spectrum-alert-banner-text-to-button-vertical) - var(--spectrum-alert-banner-edge-to-button));
   flex-wrap: wrap;
   align-items: center;
   margin-inline-start: var(--mod-alert-banner-start-edge, var(--spectrum-alert-banner-start-edge));
