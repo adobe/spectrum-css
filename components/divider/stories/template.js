@@ -39,7 +39,7 @@ if (tag === "hr") {
           typeof staticColor !== "undefined",
         ...customClasses.reduce((a, c) => ({ ...a, [c]: true }), {}),
       })}
-      style=${vertical === true ? (styleMap(style)) : ""}
+      style=${vertical === true ? (styleMap(verticalStyle)) : ""}
       role="separator"
       >
     </hr>`

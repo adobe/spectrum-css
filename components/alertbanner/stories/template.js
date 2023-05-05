@@ -10,7 +10,7 @@ import { Template as Icon } from '@spectrum-css/icon/stories/template.js';
 import '../index.css';
 
 export const Template = ({
-  rootClass = "spectrum-AlertBanner",
+  rootClass = "${rootClass}",
   isOpen = true,
   text,
   variant,
@@ -39,8 +39,8 @@ export const Template = ({
     [`${rootClass}--${variant}`]: typeof variant !== "undefined",
     ...customClasses.reduce((a, c) => ({ ...a, [c]: true }), {}),
   })}>
-    <div class="spectrum-AlertBanner-body">
-      <div class="spectrum-AlertBanner-content">
+    <div class="${rootClass}-body">
+      <div class="${rootClass}-content">
         ${iconName ? Icon({
           ...globals,
           iconName,
@@ -48,23 +48,21 @@ export const Template = ({
             `${rootClass}-icon`,
           ],
         }) : ""}
-        <p class="spectrum-AlertBanner-text">${text}</p>
+        <p class="${rootClass}-text">${text}</p>
       </div>
       ${Button({
         size: 'm',
         variant: "staticWhite",
         treatment: "outline",
         label: 'Action',
-        customClasses: [`${rootClass}-action-button`]
       })}
     </div>
-    <div class="spectrum-AlertBanner-end">
+    <div class="${rootClass}-end">
     ${Divider({
       vertical: true,
       size: 's',
-      customClasses: [`${rootClass}-divider`, `${rootClass}--vertical`, `${rootClass}-divider--staticWhite`],
       tag: 'div',
-      style: {
+      verticalStyle: {
         "height": "auto",
         "align-self": "stretch",
     },
@@ -74,7 +72,6 @@ export const Template = ({
       ...globals,
       size: "m",
       staticColor: "white",
-      customClasses: [`${rootClass}-close-button`],
       onclick,
     })}
     </div>
