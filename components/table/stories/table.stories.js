@@ -43,6 +43,16 @@ export default {
       },
       control: "boolean",
     },
+    useDivs: {
+      name: "Use Divs for Markup",
+      description: "Use 'div' elements for all of the table markup instead of the 'table' element.",
+      type: { name: "boolean" },
+      table: {
+        type: { summary: "boolean" },
+        category: "Component",
+      },
+      control: "boolean",
+    },
     rowItems: {
       table: { disable: true }
     },
@@ -53,6 +63,7 @@ export default {
     density: "standard",
     isQuiet: false,
     isEmphasized: true,
+    useDivs: false,
   },
   parameters: {
     actions: {

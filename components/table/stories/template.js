@@ -17,36 +17,69 @@ export const TableRowItem = ({
   isSummaryRow = false,
   isSectionHeader = false,
   tableIsEmphasized = true,
+  useDivs = false,
   customClasses = [],
   size = "m",
 }) => {
-  return html`
-    <tr
-      class=${classMap({
-        [`${rootClass}-row`]: true,
-        [`${rootClass}-row--summary`]: isSummaryRow,
-        [`${rootClass}-row--sectionHeader`]: isSectionHeader,
-        [`is-selected`]: isSelected,
-        ...customClasses.reduce((a, c) => ({ ...a, [c]: true }), {})
-      })}
-    >
-      ${when(showCheckbox, () => html`
-        <td class="spectrum-Table-cell spectrum-Table-checkboxCell">
-          ${Checkbox({
-            size,
-            isEmphasized: tableIsEmphasized,
-            isChecked: isSelected,
-            customClasses: [`${rootClass}-checkbox`],
-          })}
-        </td>`
-      )}
-      <td class="${rootClass}-cell" tabindex="0" colspan=${ifDefined(isSectionHeader ? '3' : undefined)}>${cellContent}</td>
-      ${when(!isSectionHeader, () => html`
-        <td class="${rootClass}-cell" tabindex="0">${cellContent}</td>
-        <td class="${rootClass}-cell" tabindex="0">${cellContent}</td>`
-      )}
-    </tr>
-  `;
+  if (!useDivs){
+    return html`
+      <tr
+        class=${classMap({
+          [`${rootClass}-row`]: true,
+          [`${rootClass}-row--summary`]: isSummaryRow,
+          [`${rootClass}-row--sectionHeader`]: isSectionHeader,
+          [`is-selected`]: isSelected,
+          ...customClasses.reduce((a, c) => ({ ...a, [c]: true }), {})
+        })}
+      >
+        ${when(showCheckbox, () => html`
+          <td class="spectrum-Table-cell spectrum-Table-checkboxCell">
+            ${Checkbox({
+              size,
+              isEmphasized: tableIsEmphasized,
+              isChecked: isSelected,
+              customClasses: [`${rootClass}-checkbox`],
+            })}
+          </td>`
+        )}
+        <td class="${rootClass}-cell" tabindex="0" colspan=${ifDefined(isSectionHeader ? '3' : undefined)}>${cellContent}</td>
+        ${when(!isSectionHeader, () => html`
+          <td class="${rootClass}-cell" tabindex="0">${cellContent}</td>
+          <td class="${rootClass}-cell" tabindex="0">${cellContent}</td>`
+        )}
+      </tr>
+    `;
+  } else {
+    return html`
+      <div
+        role="row"
+        class=${classMap({
+          [`${rootClass}-row`]: true,
+          [`${rootClass}-row--summary`]: isSummaryRow,
+          [`${rootClass}-row--sectionHeader`]: isSectionHeader,
+          [`is-selected`]: isSelected,
+          ...customClasses.reduce((a, c) => ({ ...a, [c]: true }), {})
+        })}
+        style="display: flex"
+      >
+        ${when(showCheckbox, () => html`
+          <div class="spectrum-Table-cell spectrum-Table-checkboxCell" role="gridcell" style="flex: 1">
+            ${Checkbox({
+              size,
+              isEmphasized: tableIsEmphasized,
+              isChecked: isSelected,
+              customClasses: [`${rootClass}-checkbox`],
+            })}
+          </div>`
+        )}
+        <div class="${rootClass}-cell" role="gridcell" tabindex="0" style="flex: 1" colspan=${ifDefined(isSectionHeader ? '3' : undefined)}>${cellContent}</div>
+        ${when(!isSectionHeader, () => html`
+          <div class="${rootClass}-cell" role="gridcell" tabindex="0" style="flex: 1">${cellContent}</div>
+          <div class="${rootClass}-cell" role="gridcell" tabindex="0" style="flex: 1">${cellContent}</div>`
+        )}
+      </div>
+    `;
+  }
 }
 
 export const Template = ({
@@ -55,6 +88,7 @@ export const Template = ({
   density = "standard",
   isQuiet = false,
   isEmphasized = true,
+  useDivs = false,
   rowItems = [],
   customClasses = [],
   id,
@@ -70,21 +104,94 @@ export const Template = ({
     console.warn(e);
   }
 
-  return html`
-    <table
-      class=${classMap({
-        [rootClass]: true,
-        [`${rootClass}--size${size?.toUpperCase()}`]: typeof size !== "undefined",
-        [`${rootClass}--${density}`]: density !== "standard",
-        [`${rootClass}--quiet`]: isQuiet,
-        [`${rootClass}--emphasized`]: isEmphasized,
-        ...customClasses.reduce((a, c) => ({ ...a, [c]: true }), {})
-      })}
-      id=${ifDefined(id)}>
-      <thead class="${rootClass}-head">
-        <tr>
+  if (!useDivs){
+    return html`
+      <table
+        class=${classMap({
+          [rootClass]: true,
+          [`${rootClass}--size${size?.toUpperCase()}`]: typeof size !== "undefined",
+          [`${rootClass}--${density}`]: density !== "standard",
+          [`${rootClass}--quiet`]: isQuiet,
+          [`${rootClass}--emphasized`]: isEmphasized,
+          ...customClasses.reduce((a, c) => ({ ...a, [c]: true }), {})
+        })}
+        id=${ifDefined(id)}>
+        <thead class="${rootClass}-head">
+          <tr>
+            ${when(rowItems.some(item => item.showCheckbox === true), () => html`
+              <th class="spectrum-Table-headCell spectrum-Table-checkboxCell">
+                ${Checkbox({
+                  size,
+                  isEmphasized: isEmphasized,
+                  isChecked: false,
+                  isIndeterminate: true,
+                  customClasses: [`${rootClass}-checkbox`],
+                })}
+              </th>`
+            )}
+            <th
+              class="${rootClass}-headCell is-sortable is-sorted-desc"
+              aria-sort="descending"
+              tabindex="0"
+            >
+              ${Icon({
+                iconName: "ArrowDown100",
+                size,
+                customClasses: [`${rootClass}-sortedIcon`],
+              })}
+              <span>Column Title</span>
+              ${Icon({
+                iconName: "ChevronDown100",
+                size,
+                customClasses: [`${rootClass}-menuIcon`],
+              })}
+            </th>
+            <th class="${rootClass}-headCell is-sortable" aria-sort="none">
+              ${Icon({
+                iconName: "ArrowDown100",
+                size,
+                customClasses: [`${rootClass}-sortedIcon`],
+              })}
+              <span>Column Title</span>
+            </th>
+            <th class="${rootClass}-headCell">Column Title</th>
+          </tr>
+        </thead>
+        <tbody class="${rootClass}-body">
+          ${rowItems.map((item) =>
+            TableRowItem({
+              rootClass,
+              size,
+              useDivs,
+              tableIsEmphasized: isEmphasized,
+              ...item
+            })
+          )}
+        </tbody>
+      </table>
+    `;
+  } else {
+    return html`
+      <div
+        role="grid"
+        class=${classMap({
+          [rootClass]: true,
+          [`${rootClass}--size${size?.toUpperCase()}`]: typeof size !== "undefined",
+          [`${rootClass}--${density}`]: density !== "standard",
+          [`${rootClass}--quiet`]: isQuiet,
+          [`${rootClass}--emphasized`]: isEmphasized,
+          ...customClasses.reduce((a, c) => ({ ...a, [c]: true }), {})
+        })}
+        id=${ifDefined(id)}
+        style="max-width: 600px"
+      >
+        <div class="${rootClass}-head" style="display: flex" role="row">
           ${when(rowItems.some(item => item.showCheckbox === true), () => html`
-            <th class="spectrum-Table-headCell spectrum-Table-checkboxCell">
+            <div 
+              class="spectrum-Table-headCell spectrum-Table-checkboxCell" 
+              role="columnheader" 
+              style="flex: 1"
+            >
               ${Checkbox({
                 size,
                 isEmphasized: isEmphasized,
@@ -92,41 +199,58 @@ export const Template = ({
                 isIndeterminate: true,
                 customClasses: [`${rootClass}-checkbox`],
               })}
-            </th>`
+            </div>`
           )}
-          <th
+          <div
             class="${rootClass}-headCell is-sortable is-sorted-desc"
             aria-sort="descending"
             tabindex="0"
+            role="columnheader"
+            style="flex: 1"
           >
             ${Icon({
               iconName: "ArrowDown100",
               size,
               customClasses: [`${rootClass}-sortedIcon`],
             })}
-            Column Title
-          </th>
-          <th class="${rootClass}-headCell is-sortable" aria-sort="none">
+            <span>Column Title</span>
+            ${Icon({
+              iconName: "ChevronDown100",
+              size,
+              customClasses: [`${rootClass}-menuIcon`],
+            })}
+          </div>
+          <div 
+            class="${rootClass}-headCell is-sortable" 
+            aria-sort="none" 
+            role="columnheader" 
+            style="flex: 1"
+          >
             ${Icon({
               iconName: "ArrowDown100",
               size,
               customClasses: [`${rootClass}-sortedIcon`],
             })}
-            Column Title
-          </th>
-          <th class="${rootClass}-headCell">Column Title</th>
-        </tr>
-      </thead>
-      <tbody class="${rootClass}-body">
-        ${rowItems.map((item) =>
-          TableRowItem({
-            rootClass,
-            size,
-            tableIsEmphasized: isEmphasized,
-            ...item
-          })
-        )}
-      </tbody>
-    </table>
-  `;
+            <span>Column Title</span>
+          </div>
+          <div 
+            class="${rootClass}-headCell"
+            role="columnheader"
+            style="flex: 1"
+          >Column Title</div>
+        </div>
+        <div class="${rootClass}-body" role="rowgroup">
+          ${rowItems.map((item) =>
+            TableRowItem({
+              rootClass,
+              size,
+              useDivs,
+              tableIsEmphasized: isEmphasized,
+              ...item
+            })
+          )}
+        </div>
+      </div>
+    `;
+  }
 };
