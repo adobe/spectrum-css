@@ -60,8 +60,6 @@ governing permissions and limitations under the License.
   --spectrum-table-icon-color: var(--spectrum-neutral-subdued-content-color-default);
 
   /* Row Selection */
-  --spectrum-table-checkbox-to-text: var(--spectrum-table-checkbox-to-text);
-
   --spectrum-table-header-checkbox-block-spacing: var(--spectrum-table-header-row-checkbox-to-top-medium);
   --spectrum-table-row-checkbox-block-spacing: var(--spectrum-table-row-checkbox-to-top-medium-regular);
 
@@ -677,10 +675,12 @@ tbody.spectrum-Table-body {
 }
 
 .spectrum-Table-checkboxCell {
+  /* Note: the calc subtraction is because the --spectrum-table-checkbox-to-text spacing includes start padding in adjacent cell. */
   padding-inline-end: calc(
     var(--mod-table-checkbox-to-text, var(--spectrum-table-checkbox-to-text)) - 
     var(--mod-table-edge-to-content, var(--spectrum-table-edge-to-content))
   );
+
   /* have to eliminate vertical padding to allow proper vertical alignment */
   padding-block-start: 0px;
   padding-block-end: 0px;
