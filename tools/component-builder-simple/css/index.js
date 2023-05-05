@@ -180,12 +180,13 @@ function checkCSS(glob) {
         }
       });
 
+      // 2023-05-10: Should remove this to allow for more cascading values to influence nested components
       // Make sure all tokens defined in the component are used
-      Object.keys(componentTokens).forEach(tokenName => {
-        if (!usedTokens.includes(tokenName)) {
-          errors.push(`${pkg.name} defines ${tokenName}, but never uses it`);
-        }
-      });
+      // Object.keys(componentTokens).forEach(tokenName => {
+      //   if (!usedTokens.includes(tokenName)) {
+      //     errors.push(`${pkg.name} defines ${tokenName}, but never uses it`);
+      //   }
+      // });
 
       if (errors.length) {
         return cb(new Error(errors.join('\n')), file);

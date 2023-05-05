@@ -25,6 +25,7 @@
 |`--mod-actionbutton-icon-size`|
 |`--mod-actionbutton-edge-to-visual`|
 |`--mod-actionbutton-font-size`|
+|`--mod-actionbutton-label-color`|
 |`--mod-actionbutton-edge-to-hold-icon`|
 |`--mod-actionbutton-animation-duration`|
 |`--mod-actionbutton-focus-indicator-gap`|
