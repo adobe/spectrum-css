@@ -15,6 +15,7 @@ export const Template = ({
   label,
   isChecked = false,
   isEmphasized = false,
+  isIndeterminate = false,
   isDisabled = false,
   title,
   value,
@@ -39,6 +40,7 @@ export const Template = ({
         [rootClass]: true,
         [`${rootClass}--size${size?.toUpperCase()}`]: typeof size !== "undefined",
         [`${rootClass}--emphasized`]: isEmphasized,
+        [`is-indeterminate`]: isIndeterminate,
         [`is-disabled`]: isDisabled,
         ...customClasses.reduce((a, c) => ({ ...a, [c]: true }), {}),
       })}
