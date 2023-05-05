@@ -1,6 +1,8 @@
 | Modifiable Custom Properties |
 | --- |
 |`--mod-drop-zone-background-color`|
+|`--mod-drop-zone-border-style:`|
+|`--mod-drop-zone-background-color:`|
 |`--mod-drop-zone-background-color-opacity`|
 |`--mod-drop-zone-body-color`|
 |`--mod-drop-zone-body-font-family`|
