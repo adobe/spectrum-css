@@ -303,7 +303,8 @@ governing permissions and limitations under the License.
 .spectrum-Table-sortedIcon {
   display: none;
   vertical-align: baseline;
-  margin-inline-start: var(--mod-table-icon-to-text, var(--spectrum-table-icon-to-text));
+  margin-inline-start: var(--mod-table-sort-icon-inline-start-spacing, 0);
+  margin-inline-end: var(--mod-table-sort-icon-inline-end-spacing, var(--mod-table-icon-to-text, var(--spectrum-table-icon-to-text)));
   transition: transform var(--mod-table-transition-duration, var(--spectrum-table-transition-duration)) ease-in-out;
 }
 

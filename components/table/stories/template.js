@@ -89,6 +89,7 @@ export const Template = ({
                 size,
                 isEmphasized: isEmphasized,
                 isChecked: false,
+                isIndeterminate: true,
                 customClasses: [`${rootClass}-checkbox`],
               })}
             </th>`
@@ -98,20 +99,20 @@ export const Template = ({
             aria-sort="descending"
             tabindex="0"
           >
-            Column Title
             ${Icon({
               iconName: "ArrowDown100",
               size,
               customClasses: [`${rootClass}-sortedIcon`],
             })}
+            Column Title
           </th>
           <th class="${rootClass}-headCell is-sortable" aria-sort="none">
-            Column Title
             ${Icon({
               iconName: "ArrowDown100",
               size,
               customClasses: [`${rootClass}-sortedIcon`],
             })}
+            Column Title
           </th>
           <th class="${rootClass}-headCell">Column Title</th>
         </tr>
