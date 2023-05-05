@@ -23,11 +23,20 @@ governing permissions and limitations under the License.
   --spectrum-alert-banner-top-icon: var(--spectrum-alert-banner-top-to-workflow-icon);
   --spectrum-alert-banner-top-text: var(--spectrum-alert-banner-top-to-text);
   --spectrum-alert-banner-bottom-text: var(--spectrum-alert-banner-bottom-to-text);
+  --spectrum-alert-banner-close-button-spacing: var(--spectrum-spacing-100);
+  --spectrum-alert-banner-edge-to-divider: var(--spectrum-spacing-100);
+  --spectrum-alert-banner-edge-to-button: var(--spectrum-spacing-100);
 
   /* colors */
   --spectrum-alert-banner-informative-background: var(--spectrum-informative-background-color-default);
   --spectrum-alert-banner-negative-background: var(--spectrum-negative-background-color-default);
   --spectrum-alert-banner-font-color: var(--spectrum-white);
+
+  .spectrum--large & {
+    --spectrum-alert-banner-close-button-spacing: var(--spectrum-spacing-200);
+    --spectrum-alert-banner-edge-to-divider: var(--spectrum-spacing-200);
+    --spectrum-alert-banner-edge-to-button: var(--spectrum-spacing-200);
+  }
 }
 
 .spectrum-AlertBanner {
