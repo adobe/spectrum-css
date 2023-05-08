@@ -85,6 +85,7 @@ governing permissions and limitations under the License.
 .spectrum-AlertBanner-body {
   width: 100%;
   display: flex;
+  /* --mod-* for alert-banner-text-to-button-vertical will only accept values larger than alert-banner-edge-to-bottom, as gap only recognizes positive values */
   gap: calc(var(--spectrum-alert-banner-text-to-button-vertical) - var(--spectrum-alert-banner-edge-to-button));
   flex-wrap: wrap;
   align-items: center;
