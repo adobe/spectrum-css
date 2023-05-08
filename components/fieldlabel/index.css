@@ -11,6 +11,7 @@ governing permissions and limitations under the License.
 */
 
 .spectrum-FieldLabel {
+  --spectrum-fieldlabel-min-height: var(--spectrum-component-height-75);
   --spectrum-fieldlabel-color: var(--spectrum-neutral-subdued-content-color-default);
 
   --spectrum-field-label-top-to-asterisk: var(--spectrum-field-label-top-to-asterisk-medium);
@@ -22,6 +23,7 @@ governing permissions and limitations under the License.
 }
 
 .spectrum-FieldLabel--sizeS {
+  --spectrum-fieldlabel-min-height: var(--spectrum-component-height-75);
   --spectrum-fieldlabel-top-to-text: var(--spectrum-component-top-to-text-75);
   --spectrum-fieldlabel-bottom-to-text: var(--spectrum-component-bottom-to-text-75);
   --spectrum-fieldlabel-font-size: var(--spectrum-font-size-75);
@@ -34,6 +36,7 @@ governing permissions and limitations under the License.
 }
 
 .spectrum-FieldLabel--sizeM {
+  --spectrum-fieldlabel-min-height: var(--spectrum-component-height-75);
   --spectrum-fieldlabel-top-to-text: var(--spectrum-component-top-to-text-75);
   --spectrum-fieldlabel-bottom-to-text: var(--spectrum-component-bottom-to-text-75);
   --spectrum-fieldlabel-font-size: var(--spectrum-font-size-75);
@@ -46,6 +49,7 @@ governing permissions and limitations under the License.
 }
 
 .spectrum-FieldLabel--sizeL {
+  --spectrum-fieldlabel-min-height: var(--spectrum-component-height-100);
   --spectrum-fieldlabel-top-to-text: var(--spectrum-component-top-to-text-100);
   --spectrum-fieldlabel-bottom-to-text: var(--spectrum-component-bottom-to-text-100);
   --spectrum-fieldlabel-font-size: var(--spectrum-font-size-100);
@@ -58,6 +62,7 @@ governing permissions and limitations under the License.
 }
 
 .spectrum-FieldLabel--sizeXL {
+  --spectrum-fieldlabel-min-height: var(--spectrum-component-height-200);
   --spectrum-fieldlabel-top-to-text: var(--spectrum-component-top-to-text-200);
   --spectrum-fieldlabel-bottom-to-text: var(--spectrum-component-bottom-to-text-200);
   --spectrum-fieldlabel-font-size: var(--spectrum-font-size-200);
@@ -71,8 +76,8 @@ governing permissions and limitations under the License.
 
 .spectrum-FieldLabel {
   display: block;
-
   box-sizing: border-box;
+  min-block-size: var(--mod-fieldlabel-min-height, var(--spectrum-fieldlabel-min-height));
 
   padding-block: var(--spectrum-fieldlabel-top-to-text) var(--spectrum-fieldlabel-bottom-to-text);
   padding-inline: 0;
