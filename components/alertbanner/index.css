@@ -108,6 +108,7 @@ governing permissions and limitations under the License.
   block-size: var(--mod-alert-banner-icon-size, var(--spectrum-alert-banner-icon-size));
   margin-block-start: var(--mod-alert-banner-top-icon, var(--spectrum-alert-banner-top-icon));
   margin-inline-end: var(--mod-alert-banner-icon-to-text, var(--spectrum-alert-banner-icon-to-text));
+  flex-shrink: 0;
 }
 
 .spectrum-AlertBanner-text {
