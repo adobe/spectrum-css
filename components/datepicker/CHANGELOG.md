@@ -3,6 +3,16 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+<a name="1.0.15"></a>
+## 1.0.15
+🗓 2023-05-08 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/datepicker@1.0.14...@spectrum-css/datepicker@1.0.15)
+
+**Note:** Version bump only for package @spectrum-css/datepicker
+
+
+
+
+
 <a name="1.0.14"></a>
 ## 1.0.14
 🗓 2023-05-04 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/datepicker@1.0.13...@spectrum-css/datepicker@1.0.14)
