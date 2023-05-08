@@ -24,7 +24,9 @@
 |`--mod-accordion-item-content-line-height-cjk`|
 |`--mod-accordion-divider-color`|
 |`--mod-accordion-item-header-color-default`|
+|`--mod-accordion-corner-radius`|
 |`--mod-accordion-item-header-color-hover`|
 |`--mod-accordion-background-color-hover`|
-|`--mod-accordion-item-header-color-key-focus`|
+|`--mod-accordion-focus-indicator-thickness`|
+|`--mod-accordion-focus-indicator-color`|
 |`--mod-accordion-item-header-disabled-color`|
