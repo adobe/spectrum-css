@@ -10,41 +10,144 @@ OF ANY KIND, either express or implied. See the License for the specific languag
 governing permissions and limitations under the License.
 */
 
-@import "../vars/css/components/spectrum-tabs.css";
 @import "../vars/css/scales/spectrum-large.css";
 @import "../vars/css/scales/spectrum-medium.css";
 
-.spectrum-Tabs--sizeS {
-  @remapvars {
-    find: /--spectrum-tabs-s-(.*)/;
-    replace: --spectrum-tabs-$1;
-  }
+.spectrum-Tabs {
+  /* Default is Medium sizing */
+  --spectrum-tabs-item-height: var(--spectrum-tab-item-height-medium);
+  --spectrum-tabs-item-horizontal-spacing: var(--spectrum-tab-item-to-tab-item-horizontal-medium);
+  --spectrum-tabs-item-vertical-spacing: var(--spectrum-tab-item-to-tab-item-vertical-medium);
+  --spectrum-tabs-start-to-edge-vertical: var(--spectrum-tab-item-start-to-edge-medium);
+  --spectrum-tabs-top-to-text: var(--spectrum-tab-item-top-to-text-medium);
+  --spectrum-tabs-bottom-to-text: var(--spectrum-tab-item-top-to-text-medium);
+
+  --spectrum-tabs-icon-size: var(--spectrum-workflow-icon-size-75);
+  --spectrum-tabs-icon-to-text: var(--spectrum-text-to-visual-100);
+  --spectrum-tabs-top-to-icon: var(--spectrum-tab-item-top-to-workflow-icon-medium);
+
+  --spectrum-tabs-selection-indicator-color: var(--neutral-subdued-content-color-default);
+  --spectrum-tabs-selection-indicator-color-selected: var(--neutral-subdued-content-color-selected);
+  --spectrum-tabs-selection-indicator-color-hover: var(--neutral-subdued-content-color-hover);
+  --spectrum-tabs-selection-indicator-key-focus: var(--neutral-subdued-content-color-key-focus);
+
+  --spectrum-tabs-font-family: var(--spectrum-default-font-family);
+  --spectrum-tabs-font-style: var(--spectrum-default-font-style);
+  --spectrum-tabs-font-size: var(--spectrum-font-size-100);
+  --spectrum-tabs-line-height: var(--spectrum-line-height-100);
+
+
+  /* Focus Indicator */
+  --spectrum-tabs-focus-indicator-width: var(--spectrum-focus-indicator-thickness);
+  --spectrum-tabs-focus-indicator-border-radius: var(--spectrum-corner-radius-100);
+  --spectrum-tabs-focus-indicator-gap: var(--spectrum-tab-item-focus-indicator-gap-medium);
+
+  
+  /* Quiet */
+  --spectrum-tabs-start-to-edge-quiet: var(--spectrum-tab-item-start-to-edge-quiet);
+
+  --spectrum-tabs-list-background-direction: top;
+  --spectrum-tabs-textonly-divider-background-color: var(--spectrum-tabs-quiet-textonly-divider-background-color);
+  --spectrum-tabs-selection-indicator-background-color-selected: var(--spectrum-tabs-textonly-tabitem-selection-indicator-background-color-selected);
 }
 
-.spectrum-Tabs--sizeM {
-  @remapvars {
-    find: /--spectrum-tabs-m-(.*)/;
-    replace: --spectrum-tabs-$1;
-  }
+.spectrum-Tabs--sizeS {
+  --spectrum-tabs-item-height: var(--spectrum-tab-item-height-small);
+  --spectrum-tabs-item-horizontal-spacing: var(--spectrum-tab-item-to-tab-item-horizontal-small);
+  --spectrum-tabs-item-vertical-spacing: var(--spectrum-tab-item-to-tab-item-vertical-small);
+  --spectrum-tabs-start-to-edge-vertical: var(--spectrum-tab-item-start-to-edge-small);
+  --spectrum-tabs-top-to-text: var(--spectrum-tab-item-top-to-text-small);
+  --spectrum-tabs-bottom-to-text: var(--spectrum-tab-item-top-to-text-small);
+
+  --spectrum-tabs-icon-size: var(--spectrum-workflow-icon-size-50);
+  --spectrum-tabs-icon-to-text: var(--spectrum-text-to-visual-75);
+  --spectrum-tabs-top-to-icon: var(--spectrum-tab-item-top-to-workflow-icon-small);
+
+  --spectrum-tabs-focus-indicator-gap: var(--spectrum-tab-item-focus-indicator-gap-small);
+  --spectrum-tabs-font-size: var(--spectrum-font-size-75);
+
 }
 
 .spectrum-Tabs--sizeL {
-  @remapvars {
-    find: /--spectrum-tabs-l-(.*)/;
-    replace: --spectrum-tabs-$1;
-  }
+  --spectrum-tabs-item-height: var(--spectrum-tab-item-height-large);
+  --spectrum-tabs-item-horizontal-spacing: var(--spectrum-tab-item-to-tab-item-horizontal-large);
+  --spectrum-tabs-item-vertical-spacing: var(--spectrum-tab-item-to-tab-item-vertical-large);
+  --spectrum-tabs-start-to-edge-vertical: var(--spectrum-tab-item-start-to-edge-large);
+  --spectrum-tabs-top-to-text: var(--spectrum-tab-item-top-to-text-large);
+  --spectrum-tabs-bottom-to-text: var(--spectrum-tab-item-top-to-text-large);
+
+  --spectrum-tabs-icon-size: var(--spectrum-workflow-icon-size-100);
+  --spectrum-tabs-icon-to-text: var(--spectrum-text-to-visual-200);
+  --spectrum-tabs-top-to-icon: var(--spectrum-tab-item-top-to-workflow-icon-large);
+
+  --spectrum-tabs-focus-indicator-gap: var(--spectrum-tab-item-focus-indicator-gap-large);
+  --spectrum-tabs-font-size: var(--spectrum-font-size-200);
+
 }
 
 .spectrum-Tabs--sizeXL {
-  @remapvars {
-    find: /--spectrum-tabs-xl-(.*)/;
-    replace: --spectrum-tabs-$1;
+  --spectrum-tabs-item-height: var(--spectrum-tab-item-height-extra-large);
+  --spectrum-tabs-item-horizontal-spacing: var(--spectrum-tab-item-to-tab-item-horizontal-extra-large);
+  --spectrum-tabs-item-vertical-spacing: var(--spectrum-tab-item-to-tab-item-vertical-extra-large);
+  --spectrum-tabs-start-to-edge-vertical: var(--spectrum-tab-item-start-to-edge-extra-large);
+  --spectrum-tabs-top-to-text: var(--spectrum-tab-item-top-to-text-extra-large);
+  --spectrum-tabs-bottom-to-text: var(--spectrum-tab-item-top-to-text-extra-large);
+
+  --spectrum-tabs-icon-size: var(--spectrum-workflow-icon-size-200);
+  --spectrum-tabs-icon-to-text: var(--spectrum-text-to-visual-300);
+  --spectrum-tabs-top-to-icon: var(--spectrum-tab-item-top-to-workflow-icon-extra-large);
+
+  --spectrum-tabs-focus-indicator-gap: var(--spectrum-tab-item-focus-indicator-gap-extra-large);
+  --spectrum-tabs-font-size: var(--spectrum-font-size-300);
+
+}
+
+.spectrum-Tabs--emphasized {
+  --spectrum-tabs-textonly-divider-background-color: var(--spectrum-tabs-emphasized-textonly-divider-background-color);
+
+  --spectrum-tabs-selection-indicator-color: var(--accent-content-color-default);
+  --spectrum-tabs-selection-indicator-color-selected: var(--accent-content-color-selected);
+  --spectrum-tabs-selection-indicator-color-hover: var(--accent-content-color-hover);
+  --spectrum-tabs-selection-indicator-key-focus: var(--accent-content-color-key-focus);
+}
+
+.spectrum-Tabs--vertical {
+  --spectrum-tabs-list-background-direction: right;
+}
+
+.spectrum-Tabs--compact {
+  --spectrum-tabs-item-height: var(--spectrum-tab-item-compact-height-medium);
+  --spectrum-tabs-top-to-text: var(--spectrum-tab-item-top-to-text-compact-medium);
+  --spectrum-tabs-bottom-to-text: var(--spectrum-tab-item-top-to-text-compact-medium);
+  --spectrum-tabs-top-to-icon: var(--spectrum-tab-item-top-to-workflow-icon-compact-medium);
+
+
+  &.spectrum-Tabs--sizeS {
+    --spectrum-tabs-item-height: var(--spectrum-tab-item-compact-height-small);
+    --spectrum-tabs-top-to-text: var(--spectrum-tab-item-top-to-text-compact-small);
+    --spectrum-tabs-bottom-to-text: var(--spectrum-tab-item-top-to-text-compact-small);
+    --spectrum-tabs-top-to-icon: var(--spectrum-tab-item-top-to-workflow-icon-compact-small);
+
+  }
+
+  &.spectrum-Tabs--sizeL {
+    --spectrum-tabs-item-height: var(--spectrum-tab-item-compact-height-large);
+    --spectrum-tabs-top-to-text: var(--spectrum-tab-item-top-to-text-compact-large);
+    --spectrum-tabs-bottom-to-text: var(--spectrum-tab-item-top-to-text-compact-large);
+    --spectrum-tabs-top-to-icon: var(--spectrum-tab-item-top-to-workflow-icon-compact-large);
+
+  }
+
+  &.spectrum-Tabs--sizeXL {
+    --spectrum-tabs-item-height: var(--spectrum-tab-item-compact-height-extra-large);
+    --spectrum-tabs-top-to-text: var(--spectrum-tab-item-top-to-text-compact-extra-large);
+    --spectrum-tabs-bottom-to-text: var(--spectrum-tab-item-top-to-text-compact-extra-large);
+    --spectrum-tabs-top-to-icon: var(--spectrum-tab-item-top-to-workflow-icon-compact-extra-large);
+
   }
 }
 
-.spectrum-Tabs {
-  --spectrum-tabs-compact-item-height: calc(var(--spectrum-tabs-compact-textonly-height) - var(--spectrum-tabs-compact-textonly-divider-size));
-}
+
 
 .spectrum-Tabs {
   display: flex;
@@ -58,16 +161,22 @@ governing permissions and limitations under the License.
 
   /* Friends should align to the top of the tabs */
   vertical-align: top;
+
+  /* background: linear-gradient(
+    to var(--spectrum-tabs-list-background-direction),
+    var(--spectrum-tabs-textonly-divider-background-color) 0 var(--spectrum-tabs-quiet-textonly-divider-size),
+    transparent var(--spectrum-tabs-quiet-textonly-divider-size)
+  ); */
 }
 
 .spectrum-Tabs-item {
   /* Contain the focus ring */
   position: relative;
-
   box-sizing: border-box;
 
-  block-size: var(--spectrum-tabs-quiet-textonly-tabitem-height);
-  line-height: var(--spectrum-tabs-quiet-textonly-tabitem-height);
+  block-size: var(--mod-tabs-item-height, var(--spectrum-tabs-item-height));
+  padding-block-start: var(--mod-tabs-top-to-text, var(--spectrum-tabs-top-to-text));
+  padding-block-end: var(--mod-tabs-bottom-to-text, var(--spectrum-tabs-bottom-to-text));
 
   /* Float above the tab line */
   z-index: 1;
@@ -75,26 +184,20 @@ governing permissions and limitations under the License.
   text-decoration: none;
   white-space: nowrap;
 
+  color: var(--spectrum-tabs-textonly-tabitem-text-color);
+
   transition: color var(--spectrum-tabs-texticon-tabitem-selection-indicator-animation-duration) ease-out;
   cursor: pointer;
   outline: none;
 
-  &.is-disabled {
-    cursor: default;
-
-    .spectrum-Tabs-itemLabel {
-      cursor: default;
-    }
-  }
-
   .spectrum-Icon {
     /* Vertical centering */
-    block-size: var(--spectrum-tabs-quiet-textonly-tabitem-height);
+    block-size: var(--mod-tabs-icon-size, var(--spectrum-tabs-icon-size));
+    color: var(--spectrum-tabs-textonly-tabitem-icon-color);
+    margin-block-start: var(--mod-tabs-top-to-icon, var(--spectrum-tabs-top-to-icon));
 
     & + .spectrum-Tabs-itemLabel {
-      /* icons are inexplicably offset by 3px. Subtract this value from the icon-gap
-         to correct the gap in CSS */
-      margin-inline-start: calc(var(--spectrum-tabs-quiet-textonly-tabitem-icon-gap) - var(--spectrum-global-dimension-size-40));
+      margin-inline-start: var(--mod-tabs-icon-to-text, var(--spectrum-tabs-icon-to-text));
     }
   }
 
@@ -108,13 +211,54 @@ governing permissions and limitations under the License.
     block-size: var(--spectrum-tabs-textonly-tabitem-focus-ring-height);
     margin-block-start: calc(var(--spectrum-tabs-textonly-tabitem-focus-ring-height) / -2);
 
-    inset-inline-start: calc(-1 * var(--spectrum-tabs-textonly-tabitem-focus-ring-padding-x));
-    inset-inline-end: calc(-1 * var(--spectrum-tabs-textonly-tabitem-focus-ring-padding-x));
+    inset-inline-start: calc(-1 * var(--mod-tabs-focus-indicator-gap, var(--spectrum-tabs-focus-indicator-gap)));
+    inset-inline-end: calc(-1 * var(--mod-tabs-focus-indicator-gap, var(--spectrum-tabs-focus-indicator-gap)));
 
-    border: var(--spectrum-tabs-textonly-tabitem-focus-ring-size) solid transparent;
-    border-radius: var(--spectrum-tabs-textonly-tabitem-focus-ring-border-radius);
+    border: var(--mod-tabs-focus-indicator-width, var(--spectrum-tabs-focus-indicator-width)) solid transparent;
+    border-radius: var(--mod-tabs-focus-indicator-border-radius, var(--spectrum-tabs-focus-indicator-border-radius));
 
     pointer-events: none;
+  }
+
+  &:hover {
+    color: var(--spectrum-tabs-textonly-tabitem-text-color-hover);
+
+    .spectrum-Icon {
+      color: var(--spectrum-tabs-textonly-tabitem-icon-color-hover)
+    }
+  }
+
+  &.is-selected {
+    color: var(--spectrum-tabs-textonly-tabitem-text-color-selected);
+
+    .spectrum-Icon {
+      color: var(--spectrum-tabs-textonly-tabitem-icon-color-selected);
+    }
+  }
+
+  &.is-disabled {
+    cursor: default;
+    color: var(--spectrum-tabs-textonly-tabitem-text-color-disabled);
+
+    .spectrum-Tabs-itemLabel {
+      cursor: default;
+    }
+
+    .spectrum-Icon {
+      color: var(--spectrum-tabs-textonly-tabitem-icon-color-disabled)
+    }
+  }
+
+  &:focus-within {
+    color: var(--spectrum-tabs-textonly-tabitem-text-color-selected-key-focus);
+
+    &::before {
+      border-color: var(--spectrum-tabs-textonly-tabitem-focus-ring-border-color-key-focus);
+    }
+
+    .spectrum-Icon {
+      color: var(--spectrum-tabs-textonly-tabitem-icon-color-selected-key-focus)
+    }
   }
 }
 
@@ -123,8 +267,11 @@ governing permissions and limitations under the License.
   vertical-align: top;
   display: inline-block;
 
-  font-size: var(--spectrum-tabs-texticon-tabitem-text-size);
-  font-weight: var(--spectrum-tabs-textonly-tabitem-text-font-weight);
+  font-family: var(--mod-tabs-font-family, var(--spectrum-tabs-font-family));
+  font-style: var(--mod-tabs-font-style, var(--spectrum-tabs-font-style));
+  font-size: var(--mod-tabs-font-weight, var(--spectrum-tabs-font-size));
+  font-weight: var(--mod-tabs-font-weight, var(--spectrum-tabs-font-weight));
+  line-height: var(--mod-tabs-line-height, var(--spectrum-tabs-line-height));
 
   /* support links */
   text-decoration: none;
@@ -138,6 +285,7 @@ governing permissions and limitations under the License.
 .spectrum-Tabs-selectionIndicator {
   position: absolute;
   inset-inline-start: 0;
+  background-color: var(--mod-tabs-selection-indicator-color, var(--spectrum-tabs-selection-indicator-color));
 
   /* Be below the tab */
   z-index: 0;
@@ -148,18 +296,6 @@ governing permissions and limitations under the License.
   border-radius: var(--spectrum-tabs-textonly-divider-border-radius);
 }
 
-.spectrum-Tabs--compact {
-  .spectrum-Tabs-item {
-    block-size: var(--spectrum-tabs-compact-item-height);
-    line-height: var(--spectrum-tabs-compact-item-height);
-
-    .spectrum-Icon {
-      /* Vertical centering */
-      block-size: var(--spectrum-tabs-compact-item-height);
-    }
-  }
-}
-
 .spectrum-Tabs--horizontal {
   align-items: center;
 
@@ -168,7 +304,7 @@ governing permissions and limitations under the License.
 
     /* Target anything since React likes to add lots of happy <div>s around all things */
     & + *:not(.spectrum-Tabs-selectionIndicator) {
-      margin-inline-start: var(--spectrum-tabs-textonly-tabitem-margin-right);
+      margin-inline-start: var(--mod-tabs-item-horizontal-spacing, var(--spectrum-tabs-item-horizontal-spacing));
     }
   }
 
@@ -182,7 +318,6 @@ governing permissions and limitations under the License.
   &.spectrum-Tabs--compact {
     /* The ActionButton is taller than the tabs, so don't push tabs around */
     box-sizing: content-box;
-    block-size: var(--spectrum-tabs-compact-item-height);
     align-items: end;
   }
 }
@@ -190,6 +325,35 @@ governing permissions and limitations under the License.
 /* Quiet tabs should not extend all the way across the screen as their line doesn't */
 .spectrum-Tabs--quiet {
   display: inline-flex;
+  border-block-end-color: var(--spectrum-tabs-quiet-textonly-divider-background-color);
+  padding-inline-start: var(--mod-tabs-start-to-edge-quiet, var(--spectrum-tabs-start-to-edge-quiet));
+
+  .spectrum-Tabs-selectionIndicator {
+    padding-inline-start: var(--mod-tabs-start-to-item-quiet, var(--spectrum-tabs-start-to-item-quiet));
+    background-color: var(--spectrum-tabs-quiet-textonly-tabitem-selection-indicator-background-color-selected);
+  }
+
+  &.spectrum-Tabs--emphasized {
+    .spectrum-Tabs-selectionIndicator {
+      background-color: var(--spectrum-tabs-emphasized-texticon-tabitem-selection-indicator-background-color-selected);
+    }
+  }
+}
+
+.spectrum-Tabs--emphasized {
+  .spectrum-Tabs-selectionIndicator {
+    background-color: var(--spectrum-tabs-selection-indicator-background-color-selected-emphasized);
+  }
+
+  .spectrum-Tabs-item {
+    &.is-selected {
+      color: var(--spectrum-tabs-emphasized-texticon-tabitem-text-color-selected);
+
+      .spectrum-Icon {
+        color: var(--spectrum-tabs-emphasized-texticon-tabitem-icon-color-selected);
+      }
+    }
+  }
 }
 
 .spectrum-Tabs--vertical {
@@ -198,13 +362,12 @@ governing permissions and limitations under the License.
   padding: 0;
 
   .spectrum-Tabs-item {
-    block-size: var(--spectrum-tabs-vertical-textonly-tabitem-height);
     line-height: var(--spectrum-tabs-vertical-textonly-tabitem-height);
     padding-block: 0;
     padding-inline: var(--spectrum-tabs-quiet-textonly-tabitem-focus-ring-padding-x);
 
-    margin-block-end: var(--spectrum-tabs-vertical-textonly-tabitem-gap);
-    margin-inline-start: calc(var(--spectrum-tabs-vertical-textonly-tabitem-gap) / 2);
+    margin-block-end: var(--mod-tabs-item-vertical-spacing, var(--spectrum-tabs-item-vertical-spacing));
+    margin-inline-start: var(--mod-tabs-start-to-edge-vertical, var(--spectrum-tabs-start-to-edge-vertical));
 
     &::before {
       /* padding is included in click area of tab items, so only need to offset by the size of the focus ring's border */
@@ -218,11 +381,15 @@ governing permissions and limitations under the License.
     line-height: var(--spectrum-tabs-vertical-textonly-tabitem-height);
   }
 
+  .spectrum-Tabs-selectionIndicator {
+    position: absolute;
+    inset-inline-start: 0px;
+    inline-size: var(--spectrum-tabs-quiet-textonly-divider-size);
+  }
+
   &.spectrum-Tabs--compact {
     .spectrum-Tabs-item {
       block-size: var(--spectrum-tabs-compact-vertical-textonly-tabitem-height);
-      line-height: var(--spectrum-tabs-compact-vertical-textonly-tabitem-height);
-      margin-block-end: var(--spectrum-tabs-compact-vertical-textonly-tabitem-gap);
 
       .spectrum-Icon {
         /* Vertical centering */
@@ -231,9 +398,114 @@ governing permissions and limitations under the License.
     }
   }
 
-  .spectrum-Tabs-selectionIndicator {
-    position: absolute;
-    inset-inline-start: 0px;
-    inline-size: var(--spectrum-tabs-quiet-textonly-divider-size);
+  &.spectrum-Tabs--quiet,
+  &.spectrum-Tabs--compact {
+    .spectrum-Tabs-selectionIndicator {
+      background-color: var(--spectrum-tabs-vertical-textonly-tabitem-selection-indicator-background-color-selected);
+    }
+  }
+
+  &.spectrum-Tabs--emphasized {
+    .spectrum-Tabs-selectionIndicator {
+      background-color: var(--spectrum-tabs-emphasized-texticon-tabitem-selection-indicator-background-color-selected);
+    }
+  } 
+}
+
+@media (forced-colors: active) {
+  .spectrum-Tabs {
+    --spectrum-tabs-emphasized-texticon-tabitem-icon-color-selected: HighlightText;
+    --spectrum-tabs-emphasized-texticon-tabitem-selection-indicator-background-color-selected: Highlight;
+    --spectrum-tabs-emphasized-texticon-tabitem-text-color-selected: HighlightText;
+    --spectrum-tabs-emphasized-textonly-divider-background-color: transparent;
+    --spectrum-tabs-emphasized-textonly-tabitem-icon-color-selected: HighlightText;
+    --spectrum-tabs-quiet-textonly-divider-background-color: transparent;
+    --spectrum-tabs-quiet-textonly-tabitem-selection-indicator-background-color-selected: Highlight;
+    --spectrum-tabs-quiet-textonly-tabitem-selection-indicator-background-color: transparent;
+    --spectrum-tabs-textonly-divider-background-color: transparent;
+    --spectrum-tabs-textonly-tabitem-focus-ring-border-color-key-focus: ButtonText;
+    --spectrum-tabs-textonly-tabitem-icon-color-disabled: GrayText;
+    --spectrum-tabs-textonly-tabitem-icon-color-hover: ButtonText;
+    --spectrum-tabs-textonly-tabitem-icon-color-selected-key-focus: ButtonText;
+    --spectrum-tabs-textonly-tabitem-icon-color-selected: HighlightText;
+    --spectrum-tabs-textonly-tabitem-selection-indicator-background-color-selected: Highlight;
+    --spectrum-tabs-textonly-tabitem-text-color-disabled: GrayText;
+    --spectrum-tabs-textonly-tabitem-text-color-hover: ButtonText;
+    --spectrum-tabs-textonly-tabitem-text-color-selected-key-focus: ButtonText;
+    --spectrum-tabs-textonly-tabitem-text-color-selected: HighlightText;
+    --spectrum-tabs-textonly-tabitem-text-color: ButtonText;
+    --spectrum-tabs-vertical-quiet-textonly-divider-background-color: transparent;
+    --spectrum-tabs-vertical-rule-color: transparent;
+    --spectrum-tabs-vertical-textonly-divider-background-color: transparent;
+    --spectrum-tabs-vertical-textonly-tabitem-selection-indicator-background-color-selected: Highlight;
+    forced-color-adjust: none;
+
+    .spectrum-Tabs-item {
+      &:before {
+        background-color: ButtonFace;
+      }
+
+      .spectrum-Icon {
+        z-index: 1;
+        position: relative;
+      }
+
+      .spectrum-Tabs-itemLabel {
+        position: relative;
+        z-index: 1;
+      }
+    }
+
+    .is-selected {
+      color: HighlightText;
+
+      .spectrum-Icon {
+        color: HighlightText;
+      }
+
+      &:before {
+        background-color: Highlight;
+        color: HighlightText;
+      }
+
+      .spectrum-Tabs-itemLabel {
+        color: HighlightText;
+      }
+    }
+
+    &.spectrum-Tabs--emphasized {
+      .spectrum-Tabs-item {
+        &:before {
+          background-color: ButtonFace;
+        }
+
+        .spectrum-Icon {
+          z-index: 1;
+          position: relative;
+        }
+
+        .spectrum-Tabs-itemLabel {
+          position: relative;
+          z-index: 1;
+        }
+      }
+
+      .is-selected {
+        color: HighlightText;
+
+        .spectrum-Icon {
+          color: HighlightText;
+        }
+
+        &:before {
+          background-color: Highlight;
+          color: HighlightText;
+        }
+
+        .spectrum-Tabs-itemLabel {
+          color: HighlightText;
+        }
+      }
+    }
   }
 }
