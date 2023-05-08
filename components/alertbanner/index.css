@@ -79,6 +79,8 @@ governing permissions and limitations under the License.
 
   .spectrum-CloseButton {
     margin-inline: var(--mod-alert-banner-close-button-spacing, var(--spectrum-alert-banner-close-button-spacing));
+    margin-block-start: var(--mod-alert-banner-close-button-spacing, var(--spectrum-alert-banner-close-button-spacing));
+    align-self: flex-start;
   }
 }
 
