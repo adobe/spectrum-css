@@ -10,13 +10,6 @@ OF ANY KIND, either express or implied. See the License for the specific languag
 governing permissions and limitations under the License.
 */
 
-.spectrum--medium {
-  --spectrum-rating-icon-gap: var(--spectrum-spacing-75);
-}
-.spectrum--large {
-  --spectrum-rating-icon-gap: var(--spectrum-spacing-100);
-}
-
 .spectrum-Rating {
   /* Icon */
   --spectrum-rating-icon-height: var(--spectrum-workflow-icon-size-100);
@@ -47,8 +40,12 @@ governing permissions and limitations under the License.
   &.is-focused {
     box-shadow: 0 0 0 var(--mod-rating-focus-indicator-thickness, var(--spectrum-rating-focus-indicator-thickness)) var(--highcontrast-rating-focus-indicator-color, var(--mod-rating-focus-indicator-color, var(--spectrum-rating-focus-indicator-color)));
 
-    .spectrum-Rating-icon.is-selected {
+    .spectrum-Rating-icon {
       color: var(--highcontrast-rating-icon-color-key-focus, var(--mod-rating-icon-color-key-focus, var(--spectrum-rating-icon-color-key-focus)));
+
+      &.is-selected {
+        color: var(--highcontrast-rating-icon-color-key-focus, var(--mod-rating-icon-color-key-focus, var(--spectrum-rating-icon-color-key-focus)));
+      }
     }
   }
 
@@ -82,12 +79,12 @@ governing permissions and limitations under the License.
   display: inline-flex;
   flex: 0 0 auto;
 
-  gap: var(--mod-rating-icon-gap, var(--spectrum-rating-icon-gap));
+  gap: var(--mod-rating-icon-spacing, var(--spectrum-rating-icon-spacing));
 
   inline-size: calc((var(--mod-rating-icon-width, var(--spectrum-rating-icon-width)) + var(--mod-rating-icon-spacing, var(--spectrum-rating-icon-spacing))) * var(--mod-rating-icon-count, var(--spectrum-rating-icon-count)));
   border-radius: var(--mod-rating-border-radius, var(--spectrum-rating-border-radius));
 
-  padding-inline: calc(var(--mod-rating-icon-gap, var(--spectrum-rating-icon-gap)) + var(--mod-rating-focus-indicator-gap, var(--spectrum-rating-focus-indicator-gap)));
+  padding-inline: calc((var(--mod-rating-icon-spacing, var(--spectrum-rating-icon-spacing)) + var(--mod-rating-focus-indicator-gap, var(--spectrum-rating-focus-indicator-gap))) - 1.5px);
 
   cursor: pointer;
 
