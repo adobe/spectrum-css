@@ -3,7 +3,7 @@ SpectrumSiteSlug: https://spectrum.adobe.com/page/alertdialog/
 examples:
   - id: alertdialog
     name: Confirmation
-    demoClassName: spectrum-CSSExample-example spectrum-CSSExample-example--overlay
+    demoClassName: spectrum-CSSExample-example--overlay
     markup: |
       <button class="spectrum-Button spectrum-Button--sizeM spectrum-Button--outline spectrum-Button--staticWhite spectrum-CSSExample-overlayShowButton" onclick="openDialog(this.nextElementSibling)"><span class="spectrum-Button-label">Open Alert Confirmation Dialog</span></button>
       <div class="spectrum-Modal-wrapper spectrum-CSSExample-dialog">
@@ -85,7 +85,12 @@ examples:
         <div class="spectrum-Modal is-open" style="--mod" data-testid="modal">
           <section class="spectrum-AlertDialog spectrum-AlertDialog--error" role="alertdialog" tabindex="-1" aria-modal="true">
             <div class="spectrum-AlertDialog-grid">
-              <h1 class="spectrum-AlertDialog-heading">Unverified format</h1>
+              <div class="spectrum-AlertDialog-header">
+                <h1 class="spectrum-AlertDialog-heading">Unverified format</h1>
+                  <svg class="spectrum-Icon spectrum-Icon--sizeM spectrum-AlertDialog-icon" style="color:  #E46F00;" focusable="false" aria-hidden="true">
+                    <use xlink:href="#spectrum-icon-18-Alert" />
+                  </svg>
+              </div>
               <hr class="spectrum-Divider spectrum-Divider--sizeM spectrum-Divider--horizontal">
               <section class="spectrum-AlertDialog-content">This format has not been verified and may not be viewable for some users. Do you want to continue publishing?</section>
               <div class="spectrum-ButtonGroup">
@@ -107,7 +112,13 @@ examples:
         <div class="spectrum-Modal is-open" style="--mod" data-testid="modal">
           <section class="spectrum-AlertDialog spectrum-AlertDialog--destructive" role="alertdialog" tabindex="-1" aria-modal="true">
             <div class="spectrum-AlertDialog-grid">
-              <h1 class="spectrum-AlertDialog-heading">Delete 3 documents?</h1>
+              <div class="spectrum-AlertDialog-header">
+                <h1 class="spectrum-AlertDialog-heading">Delete 3 documents?</h1>
+                  <svg class="spectrum-Icon spectrum-AlertDialog-icon" style="color: #EA3829;" focusable="false" aria-hidden="true">
+                    <use xlink:href="#spectrum-icon-18-Alert" />
+                  </svg>
+              </div>
+
               <hr class="spectrum-Divider spectrum-Divider--sizeM spectrum-Divider--horizontal">
               <section class="spectrum-AlertDialog-content">Are you sure you want to delete the 3 selected documents?</section>
               <div class="spectrum-ButtonGroup">

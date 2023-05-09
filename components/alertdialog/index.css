@@ -13,7 +13,7 @@ governing permissions and limitations under the License.
 .spectrum-AlertDialog {
   --spectrum-alert-dialog-min-width: var(--spectrum-alert-dialog-minimum-width);
   --spectrum-alert-dialog-max-width: var(--spectrum-alert-dialog-maximum-width);
-  /*--spectrum-alert-dialog-icon-size: var(--spectrum-workflow-icon-size-100); */
+  --spectrum-alert-dialog-icon-size: var(--spectrum-workflow-icon-size-100);
 
 
   /* typography  There is a known bug here that I need to fix around font family*/
@@ -33,17 +33,22 @@ governing permissions and limitations under the License.
 
 
   /* spacing */
-  --spectrum-alert-dialog-padding: var(--spectrum-spacing-500);  /* needs mobile variant  in themes */
+  --spectrum-alert-dialog-padding: var(--spectrum-spacing-500);
   --spectrum-alert-dialog-corder-radius: var(--spectrum-corner-radius-100);
   --spectrum-alert-dialog-title-to-divider: var(--spectrum-spacing-200);
   --spectrum-alert-dialog-divider-to-description: var(--spectrum-spacing-200);
-  --spectrum-alert-dialog-description-to-buttons: var(--spectrum-spacing-700); /* needs mobile variant  in themes */
-  /* --spectrum-alert-dialog-title-to-icon: var(--spectrum-spacing-400); */
+  --spectrum-alert-dialog-description-to-buttons: var(--spectrum-spacing-700);
+  --spectrum-alert-dialog-title-to-icon: var(--spectrum-spacing-400);
 
   /* color */
   --spectrum-alert-dialog-background-color: var(--spectrum-gray-100);
-  /* --spectrum-alert-dialog-overly-color: var(--spectrum-overlay-color);
+  /* can I even target this?? --spectrum-alert-dialog-overly-color: var(--spectrum-overlay-color);
   --spectrum-alert-dialog-overlay-opacity: var(--spectrum-overlay-opacity); */
+  .spectrum--large {
+    --spectrum-alert-dialog-padding: var(--spectrum-spacing-400);
+    --spectrum-alert-dialog-description-to-buttons: var(--spectrum-spacing-600);
+  }
+
 }
 
 .spectrum-AlertDialog {
@@ -70,6 +75,12 @@ governing permissions and limitations under the License.
   }
 }
 
+.spectrum-AlertDialog-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+}
+
 .spectrum-AlertDialog-heading{
   font-family: var(--spectrum-alert-dialog-title-font-family);
   font-weight: var(--spectrum-alert-dialog-title-font-weight);
@@ -93,13 +104,19 @@ governing permissions and limitations under the License.
   margin-block-end: var(--spectrum-alert-dialog-description-to-buttons);
 }
 
-.🤫 {
-  border-radius: var(--spectrum-alert-dialog-corder-radius);
+.spectrum-AlertDialog-icon {
+  /* is this working as intended with the icon component? */
+  inline-size: var(--spectrum-alert-dialog-icon-size);
+  block-size: var(--spectrum-alert-dialog-icon-size);
+
+  margin-inline-start: var(--spectrum-alert-dialog-title-to-icon);
 }
 
 
 
-
+.🤫 {
+  border-radius: var(--spectrum-alert-dialog-corder-radius);
+}
 
 @media (forced-colors: active) {
   .spectrum-AlertDialog {
