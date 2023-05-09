@@ -20,11 +20,24 @@
     "test": "nx test:scope @spectrum-css/preview alertdialog"
   },
   "peerDependencies": {
-    "@spectrum-css/tokens": ">=9"
+    "@spectrum-css/button": ">=10",
+    "@spectrum-css/buttongroup": ">=5 <=6",
+    "@spectrum-css/divider": ">=1 <=2",
+    "@spectrum-css/icon": ">=3",
+    "@spectrum-css/modal": ">=3",
+    "@spectrum-css/tokens": ">=9",
+    "@spectrum-css/underlay": ">=2"
   },
   "devDependencies": {
+    "@spectrum-css/button": "^10.0.5",
+    "@spectrum-css/buttongroup": "^6.0.40",
     "@spectrum-css/component-builder-simple": "^2.0.10",
+    "@spectrum-css/divider": "^2.0.36",
+    "@spectrum-css/icon": "^3.0.42",
+    "@spectrum-css/modal": "^3.0.40",
+    "@spectrum-css/popover": "^6.0.40",
     "@spectrum-css/tokens": "^9.2.0",
+    "@spectrum-css/underlay": "^2.0.47",
     "gulp": "^4.0.0",
     "nx": "^16.0.3",
     "rimraf": "^5.0.0"

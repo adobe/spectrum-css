@@ -10,31 +10,99 @@ OF ANY KIND, either express or implied. See the License for the specific languag
 governing permissions and limitations under the License.
 */
 
-.spectrum-Alertdialog {
-  /* Variables defined here */
-  /* --spectrum-alertdialog-... */
+.spectrum-AlertDialog {
+  --spectrum-alert-dialog-min-width: var(--spectrum-alert-dialog-minimum-width);
+  --spectrum-alert-dialog-max-width: var(--spectrum-alert-dialog-maximum-width);
+  /*--spectrum-alert-dialog-icon-size: var(--spectrum-workflow-icon-size-100); */
 
-  &:lang(ja),
-  &:lang(zh),
-  &:lang(ko) {
-    --spectrum-alertdialog-line-height-cjk: var(--spectrum-cjk-line-height-100);
+
+  /* typography  There is a known bug here that I need to fix around font family*/
+   --spectrum-alert-dialog-title-font-family: var(--spectrum-heading-sans-serif-font-family);
+  --spectrum-alert-dialog-title-font-weight: var(--spectrum-heading-sans-serif-font-weight);
+  --spectrum-alert-dialog-title-font-style: var(--spectrum-heading-sans-serif-font-style);
+  --spectrum-alert-dialog-title-font-size: var(--spectrum-alert-dialog-title-size);
+  --spectrum-alert-dialog-title-line-height: var(--spectrum-heading-line-height);
+  --spectrum-alert-dialog-title-color: var(--spectrum-heading-color);
+
+  --spectrum-alert-dialog-body-font-family: var(--spectrum-body-sans-serif-font-family);
+  --spectrum-alert-dialog-body-font-weight: var(--spectrum-body-sans-serif-font-weight);
+  --spectrum-alert-dialog-body-font-style: var(--spectrum-body-sans-serif-font-style);
+  --spectrum-alert-dialog-body-font-size: var(--spectrum-alert-dialog-description-size);
+  --spectrum-alert-dialog-body-line-height: var(--spectrum-line-height-100);
+  --spectrum-alert-dialog-body-color: var(--spectrum-body-color);
+
+
+  /* spacing */
+  --spectrum-alert-dialog-padding: var(--spectrum-spacing-500);  /* needs mobile variant  in themes */
+  --spectrum-alert-dialog-corder-radius: var(--spectrum-corner-radius-100);
+  --spectrum-alert-dialog-title-to-divider: var(--spectrum-spacing-200);
+  --spectrum-alert-dialog-divider-to-description: var(--spectrum-spacing-200);
+  --spectrum-alert-dialog-description-to-buttons: var(--spectrum-spacing-700); /* needs mobile variant  in themes */
+  /* --spectrum-alert-dialog-title-to-icon: var(--spectrum-spacing-400); */
+
+  /* color */
+  --spectrum-alert-dialog-background-color: var(--spectrum-gray-100);
+  /* --spectrum-alert-dialog-overly-color: var(--spectrum-overlay-color);
+  --spectrum-alert-dialog-overlay-opacity: var(--spectrum-overlay-opacity); */
+}
+
+.spectrum-AlertDialog {
+  /* Be a flexbox to allow a full sized content area that scrolls */
+  display: flex;
+
+  /* Allow 100% width, taking into account padding */
+  box-sizing: border-box;
+
+  /* Be no bigger than max-width, but also be 90% if the viewport is smaller than max-width */
+  inline-size: fit-content;
+  min-inline-size: var(--spectrum-alert-dialog-min-width);
+  max-inline-size: var(--spectrum-alert-dialog-max-width);
+
+  max-height: inherit;
+  outline: none;
+  padding: var(--spectrum-alert-dialog-padding);
+
+  .spectrum-Modal{
+    background: var(--spectrum-alert-dialog-background-color);
+  }
+  .spectrum-ButtonGroup{
+    justify-content: flex-end;
   }
 }
 
-.spectrum-Alertdialog--sizeS {}
-.spectrum-Alertdialog--sizeM {}
-.spectrum-Alertdialog--sizeL {}
-.spectrum-Alertdialog--sizeXL {}
+.spectrum-AlertDialog-heading{
+  font-family: var(--spectrum-alert-dialog-title-font-family);
+  font-weight: var(--spectrum-alert-dialog-title-font-weight);
+  font-style: var(--spectrum-alert-dialog-title-font-style);
+  font-size: var(--spectrum-alert-dialog-title-font-size);
+  line-height: var(--spectrum-alert-dialog-title-line-height);
+  color: var(--spectrum-alert-dialog-title-color);
+  margin: 0;
+  margin-block-end: var(--spectrum-alert-dialog-title-to-divider);
+}
+
+.spectrum-AlertDialog-content{
+  font-family: var(--spectrum-alert-dialog-body-font-family);
+  font-weight: var(--spectrum-alert-dialog-body-font-weight);
+  font-style: var(--spectrum-alert-dialog-body-font-style);
+  font-size: var(--spectrum-alert-dialog-body-font-size);
+  line-height: var(--spectrum-alert-dialog-body-line-height);
+  color: var(--spectrum-alert-dialog-body-color);
+  margin: 0;
+  margin-block-start: var(--spectrum-alert-dialog-divider-to-description);
+  margin-block-end: var(--spectrum-alert-dialog-description-to-buttons);
+}
+
+.🤫 {
+  border-radius: var(--spectrum-alert-dialog-corder-radius);
+}
+
+
+
+
 
 @media (forced-colors: active) {
-  .spectrum-Alertdialog {
-    --highcontrast-alertdialog-content-color-default: CanvasText;
-
-    forced-color-adjust: none;
+  .spectrum-AlertDialog {
+    border: solid;
   }
-}
-
-.spectrum-Alertdialog {
-  /* Properties defined here */
-  color: var(--highcontrast-alertdialog-content-color-default, var(--mod-alertdialog-content-color-default, var(--spectrum-alertdialog-content-color-default)));
 }
