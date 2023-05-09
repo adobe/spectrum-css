@@ -10,88 +10,188 @@ OF ANY KIND, either express or implied. See the License for the specific languag
 governing permissions and limitations under the License.
 */
 
-@import "../vars/css/components/spectrum-thumbnail.css";
+.spectrum-Thumbnail {
+  --spectrum-thumbnail-size: var(--spectrum-thumbnail-size-500);
+
+  --spectrum-thumbnail-border-radius: var(--spectrum-corner-radius-75);
+  --spectrum-thumbnail-border-width: var(--spectrum-border-width-100);
+  --spectrum-thumbnail-border-color-rgb: var(--spectrum-gray-800-rgb); /* TODO: using nested value for rgba() replace with --spectrum-thumbnail-border-color */
+  --spectrum-thumbnail-border-color-opacity: var(--spectrum-thumbnail-border-opacity);
+
+  --spectrum-thumbnail-layer-border-width-inner: var(--spectrum-border-width-400);
+  --spectrum-thumbnail-layer-border-color-inner: var(--spectrum-white);
+  --spectrum-thumbnail-layer-border-width-outer: var(--spectrum-border-width-100);
+  --spectrum-thumbnail-layer-border-color-outer: var(--spectrum-gray-500);
+
+  --spectrum-thumbnail-border-width-selected: var(--spectrum-border-width-200);
+  --spectrum-thumbnail-border-color-selected: var(--spectrum-accent-color-800);
+
+  --spectrum-thumbnail-focus-indicator-thickness: var(--spectrum-focus-indicator-thickness);
+  --spectrum-thumbnail-focus-indicator-gap: var(--spectrum-focus-indicator-gap);
+  --spectrum-thumbnail-focus-indicator-color: var(--spectrum-focus-indicator-color);
+
+  --spectrum-thumbnail-color-opacity-disabled: var(--spectrum-thumbnail-opacity-disabled);
+
+  --spectrum-thumbnail-checkerboard-size: var(--spectrum-opacity-checkerboard-square-size);
+  --spectrum-thumbnail-checkerboard-dark-color: var(--spectrum-opacity-checkerboard-square-dark);
+  --spectrum-thumbnail-checkerboard-light-color: var(--spectrum-opacity-checkerboard-square-light)
+}
+
+.spectrum-Thumbnail--size50 {
+  --spectrum-thumbnail-size: var(--spectrum-thumbnail-size-50);
+}
+
+.spectrum-Thumbnail--size75 {
+  --spectrum-thumbnail-size: var(--spectrum-thumbnail-size-75);
+}
+
+.spectrum-Thumbnail--size100 {
+  --spectrum-thumbnail-size: var(--spectrum-thumbnail-size-100);
+}
+
+.spectrum-Thumbnail--size200 {
+  --spectrum-thumbnail-size: var(--spectrum-thumbnail-size-200);
+}
+
+.spectrum-Thumbnail--size300 {
+  --spectrum-thumbnail-size: var(--spectrum-thumbnail-size-300);
+}
+
+.spectrum-Thumbnail--size400 {
+  --spectrum-thumbnail-size: var(--spectrum-thumbnail-size-400);
+}
+
+.spectrum-Thumbnail--size500 {
+  --spectrum-thumbnail-size: var(--spectrum-thumbnail-size-500);
+}
+
+.spectrum-Thumbnail--size600 {
+  --spectrum-thumbnail-size: var(--spectrum-thumbnail-size-600);
+}
+
+.spectrum-Thumbnail--size700 {
+  --spectrum-thumbnail-size: var(--spectrum-thumbnail-size-700);
+}
+
+.spectrum-Thumbnail--size800 {
+  --spectrum-thumbnail-size: var(--spectrum-thumbnail-size-800);
+}
+
+.spectrum-Thumbnail--size900 {
+  --spectrum-thumbnail-size: var(--spectrum-thumbnail-size-900);
+}
+
+.spectrum-Thumbnail--size1000 {
+  --spectrum-thumbnail-size: var(--spectrum-thumbnail-size-1000);
+}
 
 .spectrum-Thumbnail {
   position: relative;
   margin: 0;
   padding: 0;
+  display: block;
 
-  display: flex;
-  align-items: center;
-  justify-content: center;
+  inline-size: var(--mod-thumbnail-size, var(--spectrum-thumbnail-size));
+  block-size: var(--mod-thumbnail-size, var(--spectrum-thumbnail-size));
 
-  width: var(--spectrum-thumbnail-width);
-  height: var(--spectrum-thumbnail-height);
-
-  border-radius: var(--spectrum-thumbnail-border-radius);
-
-  /* Friends should align to the top of the tabs */
-  vertical-align: top;
-
-  overflow: hidden;
-
-  background-size: var(--spectrum-global-dimension-static-size-200) var(--spectrum-global-dimension-static-size-200);
-
-  background-position: 0 0, 0 var(--spectrum-global-dimension-static-size-100), var(--spectrum-global-dimension-static-size-100) calc(-1 * var(--spectrum-global-dimension-static-size-100)), calc(-1 * var(--spectrum-global-dimension-static-size-100)) 0;
-
-  z-index: 0;
+  border-radius: var(--mod-thumbnail-border-radius, var(--spectrum-thumbnail-border-radius));
+  background:
+    repeating-conic-gradient(var(--mod-thumbnail-checkerboard-light-color, var(--spectrum-thumbnail-checkerboard-light-color)) 0% 25%, var(--mod-thumbnail-checkerboard-dark-color, var(--spectrum-thumbnail-checkerboard-dark-color)) 0% 50%)
+    left top / calc(var(--mod-thumbnail-checkerboard-size, var(--spectrum-thumbnail-checkerboard-size)) * 2) calc(var(--mod-thumbnail-checkerboard-size, var(--spectrum-thumbnail-checkerboard-size)) * 2);
 
   &:before {
     content: '';
     z-index: 2;
     position: absolute;
-    width: 100%;
-    height: 100%;
-    border-radius: var(--spectrum-thumbnail-border-radius);
+    inline-size: 100%;
+    block-size: 100%;
+    border-radius: var(--mod-thumbnail-border-radius, var(--spectrum-thumbnail-border-radius));
+    box-shadow: inset 0 0 0 var(--mod-thumbnail-border-width, var(--spectrum-thumbnail-border-width))  rgba(var(--mod-thumbnail-border-color-rgb, var(--spectrum-thumbnail-border-color-rgb)),  var(--mod-thumbnail-border-color-opacity, var(--spectrum-thumbnail-border-color-opacity)));
+  }
+
+  &.is-disabled {
+    opacity: var(--mod-thumbnail-color-opacity-disabled, var(--spectrum-thumbnail-color-opacity-disabled));
+  }
+
+  &.is-focused,
+  &:focus-ring {
+    overflow: visible;
+    &:after {
+      content: "";
+      border-style: solid;
+      border-width: var(--mod-thumbnail-focus-indicator-thickness, var(--spectrum-thumbnail-focus-indicator-thickness));
+      border-color: var(--highcontrast-thumbnail-focus-indicator-color, var(--mod-thumbnail-focus-indicator-color, var(--spectrum-thumbnail-focus-indicator-color)));
+      border-radius: var(--mod-thumbnail-border-radius, var(--spectrum-thumbnail-border-radius));
+      position: absolute;
+      inset-inline-start: calc((var(--mod-thumbnail-focus-indicator-gap, var(--spectrum-thumbnail-focus-indicator-gap)) + var(--mod-thumbnail-focus-indicator-thickness, var(--spectrum-thumbnail-focus-indicator-thickness))) * -1);
+      inset-inline-end:  calc((var(--mod-thumbnail-focus-indicator-gap, var(--spectrum-thumbnail-focus-indicator-gap)) + var(--mod-thumbnail-focus-indicator-thickness, var(--spectrum-thumbnail-focus-indicator-thickness))) * -1);
+      inset-block-end:  calc((var(--mod-thumbnail-focus-indicator-gap, var(--spectrum-thumbnail-focus-indicator-gap)) + var(--mod-thumbnail-focus-indicator-thickness, var(--spectrum-thumbnail-focus-indicator-thickness))) * -1);
+      inset-block-start:  calc((var(--mod-thumbnail-focus-indicator-gap, var(--spectrum-thumbnail-focus-indicator-gap)) + var(--mod-thumbnail-focus-indicator-thickness, var(--spectrum-thumbnail-focus-indicator-thickness))) * -1);
+    }
+    .spectrum-Thumbnail-image-wrapper {
+      overflow: hidden;
+      border-radius: var(--mod-thumbnail-border-radius, var(--spectrum-thumbnail-border-radius));
+    }
+  }
+
+  /* Friends should align to the top of the tabs */
+  vertical-align: top;
+  overflow: hidden;
+  z-index: 0;
+}
+
+.spectrum-Thumbnail-layer {
+  border: var(--mod-thumbnail-layer-border-width-outer, var(--spectrum-thumbnail-layer-border-width-outer)) solid var(--mod-thumbnail-layer-border-color-outer, var(--spectrum-thumbnail-layer-border-color-outer));
+  box-sizing: border-box;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  &:before {
+    content: none;
+  }
+
+  &.is-selected {
+    outline: solid;
+    outline-color: var(--highcontrast-thumbnail-border-color-selected, var(--mod-thumbnail-border-color-selected, var(--spectrum-thumbnail-border-color-selected)));
+    outline-width: var(--mod-thumbnail-border-width-selected, var(--spectrum-thumbnail-border-width-selected));
+    outline-offset: calc(var(--mod-thumbnail-border-width-selected, var(--spectrum-thumbnail-border-width-selected)) - var(--mod-thumbnail-layer-border-width-inner, var(--spectrum-thumbnail-layer-border-width-inner)))
   }
 }
 
-.spectrum-Thumbnail--sizeXXS {
-  @remapvars {
-    find: /--spectrum-thumbnail(.*)-xxs-/;
-    replace: --spectrum-thumbnail$1-;
-  }
+.spectrum-Thumbnail-layer-inner {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  inline-size: calc(var(--spectrum-thumbnail-size) - ((var(--mod-thumbnail-layer-border-width-inner, var(--spectrum-thumbnail-layer-border-width-inner)))) * 2);
+  block-size: calc(var(--spectrum-thumbnail-size) - ((var(--mod-thumbnail-layer-border-width-inner, var(--spectrum-thumbnail-layer-border-width-inner)))) * 2);
+
+  outline: solid;
+  outline-color: var(--mod-thumbnail-layer-border-color-inner, var(--spectrum-thumbnail-layer-border-color-inner));
+  outline-width: calc(var(--mod-thumbnail-layer-border-width-inner, var(--spectrum-thumbnail-layer-border-width-inner)) - var(--mod-thumbnail-layer-border-width-outer, var(--spectrum-thumbnail-layer-border-width-outer)));
 }
 
-.spectrum-Thumbnail--sizeXS {
-  @remapvars {
-    find: /--spectrum-thumbnail(.*)-xs-/;
-    replace: --spectrum-thumbnail$1-;
-  }
-}
-
-.spectrum-Thumbnail--sizeS {
-  @remapvars {
-    find: /--spectrum-thumbnail(.*)-s-/;
-    replace: --spectrum-thumbnail$1-;
-  }
-}
-
-.spectrum-Thumbnail--sizeM {
-  @remapvars {
-    find: /--spectrum-thumbnail(.*)-m-/;
-    replace: --spectrum-thumbnail$1-;
-  }
-}
-
-.spectrum-Thumbnail--sizeL {
-  @remapvars {
-    find: /--spectrum-thumbnail(.*)-l-/;
-    replace: --spectrum-thumbnail$1-;
-  }
+.spectrum-Thumbnail-image-wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  inline-size: 100%;
+  block-size: 100%;
 }
 
 .spectrum-Thumbnail-image {
-  max-height: 100%;
-  max-width: 100%;
+  position: relative;
+  max-block-size: 100%;
+  max-inline-size: 100%;
   z-index: 1;
 }
 
 .spectrum-Thumbnail--cover {
   .spectrum-Thumbnail-image {
-    height: 100%;
-    width: 100%;
+    block-size: 100%;
+    inline-size: 100%;
     object-fit: cover;
     object-position: center;
   }
@@ -100,12 +200,23 @@ governing permissions and limitations under the License.
 .spectrum-Thumbnail-background {
   position: absolute;
   z-index: 0;
-  left: 0;
-  top: 0;
-  right: 0;
-  bottom: 0;
-  height: 100%;
-  width: 100%;
+  inset-inline-start: 0;
+  inset-block-start: 0;
+  inset-inline-end: 0;
+  inset-block-end: 0;
+  block-size: 100%;
+  inline-size: 100%;
   background-size: cover;
   background-position: center center;
+  border-radius: var(--mod-thumbnail-border-radius, var(--spectrum-thumbnail-border-radius));
+}
+
+/* Windows High Contrast Mode */
+@media (forced-colors: active) {
+  .is-selected {
+    --highcontrast-thumbnail-border-color-selected: SelectedItem;
+  }
+  .is-focused {
+    --highcontrast-thumbnail-focus-indicator-color: Highlight;
+  }
 }
