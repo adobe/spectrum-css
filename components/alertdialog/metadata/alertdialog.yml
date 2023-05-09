@@ -62,7 +62,7 @@ examples:
             <div class="spectrum-AlertDialog-grid">
               <h1 class="spectrum-AlertDialog-heading">Unverified format</h1>
               <hr class="spectrum-Divider spectrum-Divider--sizeM spectrum-Divider--horizontal">
-              <section class="spectrum-AlertDialog-content">Smart filters are nondestructive and will preserve your original images.</section>
+              <section class="spectrum-AlertDialog-content">This format has not been verified and may not be viewable for some users. Do you want to continue publishing?</section>
               <div class="spectrum-ButtonGroup">
                 <button class="spectrum-Button spectrum-Button--sizeM spectrum-Button--outline spectrum-Button--secondary spectrum-ButtonGroup-item" type="button" onclick="closeDialog(this.closest('.spectrum-Modal-wrapper'))">
                   <span class="spectrum-Button-label">Cancel</span>
@@ -75,21 +75,52 @@ examples:
           </section>
         </div>
       </div>
-  - id: alertdialog
   - id: alertdialog-error
     name: Error
     demoClassName: spectrum-CSSExample-example--overlay
     markup: |
-      <div class="spectrum-AlertDialog spectrum-AlertDialog--error">
+      <button class="spectrum-Button spectrum-Button--sizeM spectrum-Button--outline spectrum-Button--staticWhite spectrum-CSSExample-overlayShowButton" onclick="openDialog(this.nextElementSibling)"><span class="spectrum-Button-label">Open Alert Confirmation AlertDialog</span></button>
 
+      <div class="spectrum-Modal-wrapper spectrum-CSSExample-dialog">
+        <div class="spectrum-Modal is-open" style="--mod" data-testid="modal">
+          <section class="spectrum-AlertDialog spectrum-AlertDialog--error" role="alertdialog" tabindex="-1" aria-modal="true">
+            <div class="spectrum-AlertDialog-grid">
+              <h1 class="spectrum-AlertDialog-heading">Unverified format</h1>
+              <hr class="spectrum-Divider spectrum-Divider--sizeM spectrum-Divider--horizontal">
+              <section class="spectrum-AlertDialog-content">This format has not been verified and may not be viewable for some users. Do you want to continue publishing?</section>
+              <div class="spectrum-ButtonGroup">
+                <button class="spectrum-Button spectrum-Button--sizeM spectrum-Button--outline spectrum-Button--primary spectrum-ButtonGroup-item" type="button" onclick="closeDialog(this.closest('.spectrum-Modal-wrapper'))">
+                  <span class="spectrum-Button-label">Continue</span>
+                </button>
+              </div>
+            </div>
+          </section>
+        </div>
       </div>
   - id: alertdialog-destructive
     name: Destructive
     demoClassName: spectrum-CSSExample-example--overlay
     markup: |
-      <div class="spectrum-AlertDialog spectrum-AlertDialog-destructive">
+      <button class="spectrum-Button spectrum-Button--sizeM spectrum-Button--outline spectrum-Button--staticWhite spectrum-CSSExample-overlayShowButton" onclick="openDialog(this.nextElementSibling)"><span class="spectrum-Button-label">Open Alert Confirmation AlertDialog</span></button>
 
+      <div class="spectrum-Modal-wrapper spectrum-CSSExample-dialog">
+        <div class="spectrum-Modal is-open" style="--mod" data-testid="modal">
+          <section class="spectrum-AlertDialog spectrum-AlertDialog--destructive" role="alertdialog" tabindex="-1" aria-modal="true">
+            <div class="spectrum-AlertDialog-grid">
+              <h1 class="spectrum-AlertDialog-heading">Delete 3 documents?</h1>
+              <hr class="spectrum-Divider spectrum-Divider--sizeM spectrum-Divider--horizontal">
+              <section class="spectrum-AlertDialog-content">Are you sure you want to delete the 3 selected documents?</section>
+              <div class="spectrum-ButtonGroup">
+                <button class="spectrum-Button spectrum-Button--sizeM spectrum-Button--outline spectrum-Button--secondary spectrum-ButtonGroup-item" type="button" onclick="closeDialog(this.closest('.spectrum-Modal-wrapper'))">
+                  <span class="spectrum-Button-label">Cancel</span>
+                </button>
+                <button class="spectrum-Button spectrum-Button--sizeM spectrum-Button--fill spectrum-Button--negative spectrum-ButtonGroup-item" type="button" onclick="closeDialog(this.closest('.spectrum-Modal-wrapper'))">
+                  <span class="spectrum-Button-label">Delete</span>
+                </button>
+              </div>
+            </div>
+          </section>
+        </div>
       </div>
-
 
 
