@@ -1,38 +1,35 @@
 | Modifiable Custom Properties |
 | --- |
-| `--mod-stepper-animation-duration` |
-| `--mod-stepper-background-color` |
-| `--mod-stepper-border-color` |
-| `--mod-stepper-border-color-disabled` |
-| `--mod-stepper-border-color-focus` |
-| `--mod-stepper-border-color-focus-hover` |
-| `--mod-stepper-border-color-hover` |
-| `--mod-stepper-border-color-invalid-default` |
-| `--mod-stepper-border-color-invalid-focus` |
-| `--mod-stepper-border-color-invalid-focus-hover` |
-| `--mod-stepper-border-color-invalid-hover` |
-| `--mod-stepper-border-color-invalid-keyboard-focus` |
-| `--mod-stepper-border-color-keyboard-focus` |
-| `--mod-stepper-border-color-quiet-disabled` |
-| `--mod-stepper-border-radius` |
-| `--mod-stepper-border-size-reset` |
-| `--mod-stepper-border-width` |
-| `--mod-stepper-button-background-color-default` |
-| `--mod-stepper-button-background-color-focus` |
-| `--mod-stepper-button-background-color-hover` |
-| `--mod-stepper-button-background-color-keyboard-focus` |
-| `--mod-stepper-button-border-radius` |
-| `--mod-stepper-button-gap` |
-| `--mod-stepper-button-middle-border-width` |
-| `--mod-stepper-button-offset` |
-| `--mod-stepper-button-padding` |
-| `--mod-stepper-button-width` |
-| `--mod-stepper-buttons-height` |
-| `--mod-stepper-focus-indicator-color` |
-| `--mod-stepper-focus-indicator-gap` |
-| `--mod-stepper-focus-indicator-width` |
-| `--mod-stepper-icon-nudge-end` |
-| `--mod-stepper-icon-nudge-start` |
-| `--mod-stepper-quiet-button-width` |
-| `--mod-stepper-quiet-width` |
-| `--mod-stepper-width` |
+|`--mod-stepper-width`|
+|`--mod-stepper-border-radius`|
+|`--mod-stepper-focus-indicator-gap`|
+|`--mod-stepper-border-width`|
+|`--mod-stepper-focus-indicator-width`|
+|`--mod-stepper-border-color-hover`|
+|`--mod-stepper-border-color-focus`|
+|`--mod-stepper-button-background-color-focus`|
+|`--mod-stepper-border-color-focus-hover`|
+|`--mod-stepper-border-color-invalid-focus`|
+|`--mod-stepper-focus-indicator-color`|
+|`--mod-stepper-border-color-keyboard-focus`|
+|`--mod-stepper-button-background-color-keyboard-focus`|
+|`--mod-stepper-border-color-invalid-keyboard-focus`|
+|`--mod-stepper-border-color-invalid-default`|
+|`--mod-stepper-border-color-invalid-hover`|
+|`--mod-stepper-border-color-invalid-focus-hover`|
+|`--mod-stepper-border-color-disabled`|
+|`--mod-stepper-quiet-width`|
+|`--mod-stepper-quiet-button-width`|
+|`--mod-stepper-button-offset`|
+|`--mod-stepper-border-color-quiet-disabled`|
+|`--mod-stepper-button-gap`|
+|`--mod-stepper-buttons-height`|
+|`--mod-stepper-button-padding`|
+|`--mod-stepper-border-color`|
+|`--mod-stepper-button-background-color-default`|
+|`--mod-stepper-animation-duration`|
+|`--mod-stepper-button-background-color-hover`|
+|`--mod-stepper-icon-nudge-start`|
+|`--mod-stepper-button-border-radius-reset`|
+|`--mod-stepper-button-middle-border-width`|
+|`--mod-stepper-icon-nudge-end`|
