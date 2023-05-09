@@ -3,6 +3,21 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+<a name="3.0.0"></a>
+# 3.0.0
+🗓 2023-05-09 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/thumbnail@2.0.34...@spectrum-css/thumbnail@3.0.0)
+
+* feat(thumbnail)!: migrate to spectrum-tokens (#1568) ([9d4ec09](https://github.com/adobe/spectrum-css/commit/9d4ec09)), closes [#1568](https://github.com/adobe/spectrum-css/issues/1568)
+
+
+### 🛑 BREAKING CHANGES
+
+* migrates the Thumbnail component to the `@adobe/spectrum-tokens` package.
+
+
+
+
+
 <a name="2.0.34"></a>
 ## 2.0.34
 🗓 2023-05-02 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/thumbnail@2.0.33...@spectrum-css/thumbnail@2.0.34)
