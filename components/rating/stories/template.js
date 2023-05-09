@@ -84,6 +84,11 @@ export const Template = ({
             ${Icon({
               ...globals,
               iconName: "StarOutline",
+              customClasses: [`${rootClass}-starActive`],
+            })}
+            ${Icon({
+              ...globals,
+              iconName: "StarOutline",
               customClasses: [`${rootClass}-starInactive`],
             })}
           </span>
