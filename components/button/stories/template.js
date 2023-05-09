@@ -21,6 +21,8 @@ export const Template = ({
   staticColor,
   treatment,
   isDisabled = false,
+  ariaExpanded,
+  ariaControls,
   ...globals
 }) => {
   const { express } = globals;
@@ -44,7 +46,10 @@ export const Template = ({
       })}
       id=${ifDefined(id)}
       ?disabled=${isDisabled}
-      aria-label=${hideLabel ? iconName : undefined}>
+      aria-label=${hideLabel ? iconName : undefined}
+      aria-expanded=${ifDefined(ariaExpanded?.toString())}
+      aria-controls=${ifDefined(ariaControls)}
+    >
       ${when(iconName, () => Icon({ ...globals, iconName, size }))}
       ${when(label && !hideLabel,
         () => html`<span class=${`${rootClass}-label`}>${label}</span>`

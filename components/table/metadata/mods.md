@@ -56,3 +56,7 @@
 |`--mod-table-checkbox-cell-vertical-align`|
 |`--mod-table-row-checkbox-block-spacing`|
 |`--mod-table-header-checkbox-block-spacing`|
+|`--mod-table-disclosure-icon-size`|
+|`--mod-table-collapsible-disclosure-inline-spacing`|
+|`--mod-table-min-row-height`|
+|`--mod-table-collapsible-icon-animation-duration`|

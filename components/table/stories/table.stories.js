@@ -112,7 +112,11 @@ MultiSelect.args = {
       showCheckbox: true,
     },
     {
-      cellContent: "Table Row Bravo",
+      cellContent: [
+        "Table Row Bravo. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+        "Bravo",
+        "Table Row Bravo. Lorem ipsum dolor sit amet.",
+      ],
       showCheckbox: true,
       isSelected: true,
     },
@@ -157,6 +161,64 @@ SectionHeader.args = {
     },
     {
       cellContent: "Table Row Echo",
+    },
+  ]
+};
+
+export const Collapsible = Template.bind({});
+Collapsible.args = {
+  rowItems: [
+    {
+      cellContent: "Table Row Alpha",
+      isCollapsible: true,
+      isExpanded: true,
+      tier: 0,
+      ariaControls: "table-cr-bravo table-cr-delta",
+    },
+    {
+      cellContent: "Table Row Bravo. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt.",
+      isCollapsible: true,
+      tier: 1,
+      ariaControls: "table-cr-charlie",
+      id: "table-cr-bravo",
+    },
+    {
+      cellContent: [
+        "Table Row Charlie",
+        "Default Not Visible",
+        "Default Not Visible",
+      ],
+      isCollapsible: true,
+      isHidden: true,
+      tier: 2,
+      id: "table-cr-charlie",
+    },
+    {
+      cellContent: "Table Row Delta",
+      isSelected: true,
+      isCollapsible: true,
+      isExpanded: true,
+      tier: 1,
+      ariaControls: "table-cr-echo table-cr-foxtrot",
+      id: "table-cr-delta",
+    },
+    {
+      cellContent: "Table Row Echo",
+      tier: 2,
+      isLastTier: true,
+      isCollapsible: true,
+      id: "table-cr-echo",
+    },
+    {
+      cellContent: "Table Row Foxtrot",
+      tier: 2,
+      isLastTier: true,
+      isCollapsible: true,
+      id: "table-cr-foxtrot",
+    },
+    {
+      cellContent: "Summary Row",
+      isSummaryRow: true,
     },
   ]
 };

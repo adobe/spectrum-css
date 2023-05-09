@@ -79,7 +79,12 @@ governing permissions and limitations under the License.
   --spectrum-table-section-header-font-weight: var(--spectrum-bold-font-weight);
   --spectrum-table-section-header-background-color: var(--spectrum-gray-200);
 
-  /* @todo Collapsible */
+  /* Collapsible */
+  --spectrum-table-collapsible-tier-indent: var(--spectrum-spacing-300);
+  --spectrum-table-collapsible-disclosure-inline-spacing: 0px;
+  --spectrum-table-disclosure-icon-size: var(--spectrum-component-height-100);
+  --spectrum-table-collapsible-icon-animation-duration: var(--spectrum-animation-duration-100);
+
   /* @todo Thumbnails */
 }
 
@@ -107,6 +112,9 @@ governing permissions and limitations under the License.
   /* Summary Row and Section Header Row */
   --spectrum-table-section-header-block-start-spacing: var(--spectrum-component-top-to-text-75);
   --spectrum-table-section-header-block-end-spacing: var(--spectrum-component-bottom-to-text-75);
+
+  /* Collapsible */
+  --spectrum-table-disclosure-icon-size: var(--spectrum-component-height-75);
 }
 
 .spectrum-Table--sizeM {
@@ -131,6 +139,9 @@ governing permissions and limitations under the License.
   /* Summary Row and Section Header Row */
   --spectrum-table-section-header-block-start-spacing: var(--spectrum-component-top-to-text-100);
   --spectrum-table-section-header-block-end-spacing: var(--spectrum-component-bottom-to-text-100);
+
+  /* Collapsible */
+  --spectrum-table-disclosure-icon-size: var(--spectrum-component-height-100);
 }
 
 .spectrum-Table--sizeL {
@@ -155,6 +166,9 @@ governing permissions and limitations under the License.
   /* Summary Row and Section Header Row */
   --spectrum-table-section-header-block-start-spacing: var(--spectrum-component-top-to-text-200);
   --spectrum-table-section-header-block-end-spacing: var(--spectrum-component-bottom-to-text-200);
+
+  /* Collapsible */
+  --spectrum-table-disclosure-icon-size: var(--spectrum-component-height-200);
 }
 
 .spectrum-Table--sizeXL {
@@ -179,6 +193,9 @@ governing permissions and limitations under the License.
   /* Summary Row and Section Header Row */
   --spectrum-table-section-header-block-start-spacing: var(--spectrum-component-top-to-text-300);
   --spectrum-table-section-header-block-end-spacing: var(--spectrum-component-bottom-to-text-300);
+
+  /* Collapsible */
+  --spectrum-table-disclosure-icon-size: var(--spectrum-component-height-300);
 }
 
 /********* VARIANTS *********/
@@ -697,4 +714,105 @@ tbody.spectrum-Table-body {
 
 .spectrum-Table-checkbox {
   vertical-align: super;
+}
+
+
+/* Using Div Markup */
+div.spectrum-Table-row,
+div.spectrum-Table-head {
+  display: flex;
+}
+
+div.spectrum-Table-headCell,
+div.spectrum-Table-cell {
+  flex: 1;
+}
+
+div.spectrum-Table-checkboxCell {
+  flex-grow: 0;
+}
+
+
+/********* COLLAPSIBLE *********/
+.spectrum-Table-row {
+  --spectrum-table-row-tier: 0;
+  &[data-tier="1"] { --spectrum-table-row-tier: 1; }
+  &[data-tier="2"] { --spectrum-table-row-tier: 2; }
+  &[data-tier="3"] { --spectrum-table-row-tier: 3; }
+  &[data-tier="4"] { --spectrum-table-row-tier: 4; }
+  &[data-tier="5"] { --spectrum-table-row-tier: 5; }
+  &[data-tier="6"] { --spectrum-table-row-tier: 6; }
+}
+
+.spectrum-Table-row--collapsible {
+  .spectrum-Table-checkboxCell {
+    padding-inline-end: 0px;
+  }
+
+  &.is-last-tier {
+    .spectrum-Table-cell--collapsible {
+      /* Last tier rows need additional space as wide as the disclosure icon, to be indented from previous tier. */
+      padding-inline-start: calc(
+        (var(--spectrum-table-row-tier) * var(--spectrum-table-collapsible-tier-indent)) +
+        var(--mod-table-disclosure-icon-size, var(--spectrum-table-disclosure-icon-size)) +
+        (var(--mod-table-collapsible-disclosure-inline-spacing, var(--spectrum-table-collapsible-disclosure-inline-spacing)) * 2)
+      );
+    }
+    .spectrum-Table-disclosureIcon {
+      display: none;
+    }
+  }
+
+  .spectrum-Table-disclosureIcon {
+    margin-inline: var(--mod-table-collapsible-disclosure-inline-spacing, var(--spectrum-table-collapsible-disclosure-inline-spacing));
+    margin-block-start: max(0px, calc(
+        (var(--mod-table-min-row-height, var(--spectrum-table-min-row-height)) - 
+         var(--mod-table-disclosure-icon-size, var(--spectrum-table-disclosure-icon-size))) 
+        / 2
+      )
+    );
+  }
+
+  &[hidden]{
+    display: none;
+  }
+}
+
+.spectrum-Table-cell--collapsible {
+  padding-inline-start: calc(var(--spectrum-table-row-tier) * var(--spectrum-table-collapsible-tier-indent));
+  padding-block: 0px;
+}
+
+.spectrum-Table-collapseInner {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  justify-content: flex-start;
+  align-items: flex-start;
+
+  .spectrum-Table-cellContent {
+    padding-block: var(--mod-table-row-top-to-text, var(--spectrum-table-row-top-to-text)) var(--mod-table-row-bottom-to-text, var(--spectrum-table-row-bottom-to-text));
+  }
+}
+
+.spectrum-Table-disclosureIcon {
+  height: var(--mod-table-disclosure-icon-size, var(--spectrum-table-disclosure-icon-size));
+  flex-basis: var(--mod-table-disclosure-icon-size, var(--spectrum-table-disclosure-icon-size));
+  flex-grow: 0;
+  flex-shrink: 0;
+  transition: transform ease var(--mod-table-collapsible-icon-animation-duration, var(--spectrum-table-collapsible-icon-animation-duration));
+
+  &[aria-expanded="true"]{
+    transform: logical rotate(90deg);
+  }
+
+  &.spectrum-Button--iconOnly {
+    border-radius: 0;
+    background: transparent;
+    border-color: transparent;
+
+    &:after {
+      border-radius: 0;
+    }
+  }
 }

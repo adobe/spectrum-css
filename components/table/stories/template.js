@@ -6,6 +6,7 @@ import { repeat } from "lit-html/directives/repeat.js";
 
 import { Template as Icon } from "@spectrum-css/icon/stories/template.js";
 import { Template as Checkbox } from '@spectrum-css/checkbox/stories/template.js';
+import { Template as Button } from '@spectrum-css/button/stories/template.js';
 
 import "../index.css";
 
@@ -17,9 +18,16 @@ export const TableRowItem = ({
   isSummaryRow = false,
   isSectionHeader = false,
   tableIsEmphasized = true,
+  isCollapsible = false,
+  isExpanded = false,
+  isHidden = false,
+  tier,
+  isLastTier = false,
   useDivs = false,
+  ariaControls,
   customClasses = [],
   size = "m",
+  id
 }) => {
   if (!useDivs){
     return html`
@@ -28,9 +36,15 @@ export const TableRowItem = ({
           [`${rootClass}-row`]: true,
           [`${rootClass}-row--summary`]: isSummaryRow,
           [`${rootClass}-row--sectionHeader`]: isSectionHeader,
-          [`is-selected`]: isSelected,
+          [`${rootClass}-row--collapsible`]: isCollapsible,
+          ['is-selected']: isSelected,
+          ['is-expanded']: isExpanded,
+          ['is-last-tier']: isLastTier,
           ...customClasses.reduce((a, c) => ({ ...a, [c]: true }), {})
         })}
+        id=${ifDefined(id)}
+        data-tier=${ifDefined(tier)}
+        ?hidden=${isHidden}
       >
         ${when(showCheckbox, () => html`
           <td class="spectrum-Table-cell spectrum-Table-checkboxCell">
@@ -42,10 +56,26 @@ export const TableRowItem = ({
             })}
           </td>`
         )}
-        <td class="${rootClass}-cell" tabindex="0" colspan=${ifDefined(isSectionHeader ? '3' : undefined)}>${cellContent}</td>
+        ${isCollapsible 
+          ? html`<td class="${rootClass}-cell ${rootClass}-cell--collapsible" tabindex="0">
+                  <div class="${rootClass}-collapseInner">
+                    ${when(!isLastTier, () => Button({
+                        size,
+                        iconName: "ChevronRight100",
+                        hideLabel: true,
+                        customClasses: [`${rootClass}-disclosureIcon`],
+                        ariaExpanded: isExpanded,
+                        ariaControls,
+                      })
+                    )}
+                    <div class="${rootClass}-cellContent">${Array.isArray(cellContent) ? cellContent[0] : cellContent}</div>
+                  </div>
+                 </td>`
+          : html`<td class="${rootClass}-cell" tabindex="0" colspan=${ifDefined(isSectionHeader ? '3' : undefined)}>${Array.isArray(cellContent) ? cellContent[0] : cellContent}</td>`
+        }
         ${when(!isSectionHeader, () => html`
-          <td class="${rootClass}-cell" tabindex="0">${cellContent}</td>
-          <td class="${rootClass}-cell" tabindex="0">${cellContent}</td>`
+          <td class="${rootClass}-cell" tabindex="0">${Array.isArray(cellContent) ? cellContent[1] : cellContent}</td>
+          <td class="${rootClass}-cell" tabindex="0">${Array.isArray(cellContent) ? cellContent[2] : cellContent}</td>`
         )}
       </tr>
     `;
@@ -60,10 +90,9 @@ export const TableRowItem = ({
           [`is-selected`]: isSelected,
           ...customClasses.reduce((a, c) => ({ ...a, [c]: true }), {})
         })}
-        style="display: flex"
       >
         ${when(showCheckbox, () => html`
-          <div class="spectrum-Table-cell spectrum-Table-checkboxCell" role="gridcell" style="flex: 1">
+          <div class="spectrum-Table-cell spectrum-Table-checkboxCell" role="gridcell">
             ${Checkbox({
               size,
               isEmphasized: tableIsEmphasized,
@@ -72,10 +101,10 @@ export const TableRowItem = ({
             })}
           </div>`
         )}
-        <div class="${rootClass}-cell" role="gridcell" tabindex="0" style="flex: 1" colspan=${ifDefined(isSectionHeader ? '3' : undefined)}>${cellContent}</div>
+        <div class="${rootClass}-cell" role="gridcell" tabindex="0" colspan=${ifDefined(isSectionHeader ? '3' : undefined)}>${cellContent}</div>
         ${when(!isSectionHeader, () => html`
-          <div class="${rootClass}-cell" role="gridcell" tabindex="0" style="flex: 1">${cellContent}</div>
-          <div class="${rootClass}-cell" role="gridcell" tabindex="0" style="flex: 1">${cellContent}</div>`
+          <div class="${rootClass}-cell" role="gridcell" tabindex="0">${cellContent}</div>
+          <div class="${rootClass}-cell" role="gridcell" tabindex="0">${cellContent}</div>`
         )}
       </div>
     `;
@@ -115,7 +144,9 @@ export const Template = ({
           [`${rootClass}--emphasized`]: isEmphasized,
           ...customClasses.reduce((a, c) => ({ ...a, [c]: true }), {})
         })}
-        id=${ifDefined(id)}>
+        id=${ifDefined(id)}
+        style="max-width: 800px;"
+      >
         <thead class="${rootClass}-head">
           <tr>
             ${when(rowItems.some(item => item.showCheckbox === true), () => html`
@@ -183,14 +214,13 @@ export const Template = ({
           ...customClasses.reduce((a, c) => ({ ...a, [c]: true }), {})
         })}
         id=${ifDefined(id)}
-        style="max-width: 600px"
+        style="max-width: 800px"
       >
-        <div class="${rootClass}-head" style="display: flex" role="row">
+        <div class="${rootClass}-head" role="row">
           ${when(rowItems.some(item => item.showCheckbox === true), () => html`
             <div 
               class="spectrum-Table-headCell spectrum-Table-checkboxCell" 
               role="columnheader" 
-              style="flex: 1"
             >
               ${Checkbox({
                 size,
@@ -206,7 +236,6 @@ export const Template = ({
             aria-sort="descending"
             tabindex="0"
             role="columnheader"
-            style="flex: 1"
           >
             ${Icon({
               iconName: "ArrowDown100",
@@ -224,7 +253,6 @@ export const Template = ({
             class="${rootClass}-headCell is-sortable" 
             aria-sort="none" 
             role="columnheader" 
-            style="flex: 1"
           >
             ${Icon({
               iconName: "ArrowDown100",
@@ -236,7 +264,6 @@ export const Template = ({
           <div 
             class="${rootClass}-headCell"
             role="columnheader"
-            style="flex: 1"
           >Column Title</div>
         </div>
         <div class="${rootClass}-body" role="rowgroup">
