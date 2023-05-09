@@ -513,7 +513,7 @@ governing permissions and limitations under the License.
   padding-block-start: var(--mod-stepper-icon-nudge-start, var(--spectrum-stepper-icon-nudge-start));
   padding-block-end: 0;
 
-  border-start-start-radius: var(--mod-stepper-button-border-radius-reset, var(--spectrum-stepper-button-border-radius-reset));
+  border-start-start-radius: var(--spectrum-stepper-button-border-radius-reset);
   border-start-end-radius: var(--mod-stepper-border-radius, var(--spectrum-stepper-border-radius));
   border-end-start-radius: var(--spectrum-stepper-button-border-radius-reset);
   border-end-end-radius: var(--spectrum-stepper-button-border-radius-reset);
@@ -527,7 +527,7 @@ governing permissions and limitations under the License.
 
   border-start-start-radius: var(--spectrum-stepper-button-border-radius-reset);
   border-start-end-radius: var(--spectrum-stepper-button-border-radius-reset);
-  border-end-start-radius: var(--mod-stepper-button-border-radius-reset, var(--spectrum-stepper-button-border-radius-reset));
+  border-end-start-radius: var(--spectrum-stepper-button-border-radius-reset);
   border-end-end-radius: var(--mod-stepper-border-radius, var(--spectrum-stepper-border-radius));
 }
 

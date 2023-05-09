@@ -30,6 +30,5 @@
 |`--mod-stepper-animation-duration`|
 |`--mod-stepper-button-background-color-hover`|
 |`--mod-stepper-icon-nudge-start`|
-|`--mod-stepper-button-border-radius-reset`|
 |`--mod-stepper-button-middle-border-width`|
 |`--mod-stepper-icon-nudge-end`|
