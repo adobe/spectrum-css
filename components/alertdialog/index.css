@@ -16,15 +16,15 @@ governing permissions and limitations under the License.
   --spectrum-alert-dialog-icon-size: var(--spectrum-workflow-icon-size-100);
 
 
-  /* typography  There is a known bug here that I need to fix around font family*/
-   --spectrum-alert-dialog-title-font-family: var(--spectrum-heading-sans-serif-font-family);
+  /* typography */
+   --spectrum-alert-dialog-title-font-family: var(--spectrum-sans-font-family-stack);
   --spectrum-alert-dialog-title-font-weight: var(--spectrum-heading-sans-serif-font-weight);
   --spectrum-alert-dialog-title-font-style: var(--spectrum-heading-sans-serif-font-style);
   --spectrum-alert-dialog-title-font-size: var(--spectrum-alert-dialog-title-size);
   --spectrum-alert-dialog-title-line-height: var(--spectrum-heading-line-height);
   --spectrum-alert-dialog-title-color: var(--spectrum-heading-color);
 
-  --spectrum-alert-dialog-body-font-family: var(--spectrum-body-sans-serif-font-family);
+  --spectrum-alert-dialog-body-font-family: var(--spectrum-sans-font-family-stack);
   --spectrum-alert-dialog-body-font-weight: var(--spectrum-body-sans-serif-font-weight);
   --spectrum-alert-dialog-body-font-style: var(--spectrum-body-sans-serif-font-style);
   --spectrum-alert-dialog-body-font-size: var(--spectrum-alert-dialog-description-size);
