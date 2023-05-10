@@ -18,6 +18,15 @@ export default {
       options: ["s", "m", "l", "xl"],
       control: "select"
     },
+    isDisabled: {
+      name: "Disabled",
+      type: { name: "boolean" },
+      table: {
+        type: { summary: "boolean" },
+        category: "State",
+      },
+      control: "boolean",
+    },
     density: {
       name: "Density",
       type: { name: "string", required: true },

@@ -32,3 +32,4 @@
 |`--mod-accordion-background-color-key-focus`|
 |`--mod-accordion-background-color-down`|
 |`--mod-accordion-item-header-disabled-color`|
+|`--mod-accordion-item-content-disabled-color`|

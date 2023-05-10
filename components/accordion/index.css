@@ -61,6 +61,7 @@ governing permissions and limitations under the License.
   /*--spectrum-accordion-item-header-color-down: var(--spectrum-neutral-content-color-down);*/
   /*--spectrum-accordion-item-header-color-key-focus: var(--spectrum-neutral-content-color-key-focus);*/
   --spectrum-accordion-item-header-disabled-color: var(--spectrum-disabled-content-color);
+  --spectrum-accordion-item-content-disabled-color: var(--spectrum-disabled-content-color);
   /* Body */
   --spectrum-accordion-item-content-color: var(--spectrum-body-color);
   /* Focus indicator */
@@ -307,6 +308,9 @@ governing permissions and limitations under the License.
     + .spectrum-Accordion-itemIndicator {
       color: var(--mod-accordion-item-header-disabled-color, var(--spectrum-accordion-item-header-disabled-color));
     }
+  }
+  .spectrum-Accordion-itemContent {
+      color: var(--mod-accordion-item-content-disabled-color, var(--spectrum-accordion-item-content-disabled-color));
   }
 }
 
