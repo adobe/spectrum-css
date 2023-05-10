@@ -30,6 +30,8 @@
 |`--mod-accordion-focus-indicator-thickness`|
 |`--mod-accordion-focus-indicator-color`|
 |`--mod-accordion-background-color-key-focus`|
+|`--mod-accordion-item-header-color-key-focus`|
 |`--mod-accordion-background-color-down`|
+|`--mod-accordion-item-header-color-down`|
 |`--mod-accordion-item-header-disabled-color`|
 |`--mod-accordion-item-content-disabled-color`|
