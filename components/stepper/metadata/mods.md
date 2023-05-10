@@ -24,11 +24,11 @@
 |`--mod-stepper-border-color-quiet-disabled`|
 |`--mod-stepper-button-gap`|
 |`--mod-stepper-buttons-height`|
-|`--mod-stepper-button-padding`|
 |`--mod-stepper-border-color`|
-|`--mod-stepper-button-background-color-default`|
 |`--mod-stepper-animation-duration`|
+|`--mod-stepper-button-width`|
+|`--mod-stepper-button-padding`|
+|`--mod-stepper-button-background-color-default`|
 |`--mod-stepper-button-background-color-hover`|
 |`--mod-stepper-icon-nudge-start`|
-|`--mod-stepper-button-middle-border-width`|
 |`--mod-stepper-icon-nudge-end`|
