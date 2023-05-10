@@ -18,8 +18,8 @@ export default {
       options: ["s", "m", "l", "xl"],
       control: "select"
     },
-    layout: {
-      name: "Layout",
+    density: {
+      name: "Density",
       type: { name: "string", required: true },
       table: {
         type: { summary: "string" },
@@ -32,7 +32,7 @@ export default {
   args: {
     rootClass: "spectrum-Accordion",
     size: "m",
-    layout: "regular",
+    density: "regular",
   },
   parameters: {
     actions: {
