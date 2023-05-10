@@ -3,6 +3,7 @@ SpectrumSiteSlug: https://spectrum.adobe.com/page/alertdialog/
 examples:
   - id: alertdialog
     name: Confirmation
+    description: This is the default variant for alert dialogs. Use a confirmation variant for asking a user to confirm a choice.
     demoClassName: spectrum-CSSExample-example--overlay
     markup: |
       <button class="spectrum-Button spectrum-Button--sizeM spectrum-Button--outline spectrum-Button--staticWhite spectrum-CSSExample-overlayShowButton" onclick="openDialog(this.nextElementSibling)"><span class="spectrum-Button-label">Open Alert Confirmation Dialog</span></button>
@@ -25,8 +26,9 @@ examples:
           </section>
         </div>
       </div>
-  - id: alertdialog
+  - id: alertdialog-information
     name: Information
+    description: Information alert dialogs communicate important information that a user needs to acknowledge. Before using this kind of alert dialog, make sure it's the appropriate communication channel for the message instead of a toast or a more lightweight messaging option.
     demoClassName: spectrum-CSSExample-example--overlay
     markup: |
       <button class="spectrum-Button spectrum-Button--sizeM spectrum-Button--outline spectrum-Button--staticWhite spectrum-CSSExample-overlayShowButton" onclick="openDialog(this.nextElementSibling)"><span class="spectrum-Button-label">Open Alert Confirmation AlertDialog</span></button>
@@ -50,8 +52,9 @@ examples:
           </section>
         </div>
       </div>
-  - id: alertdialog
+  - id: alertdialog-warning
     name: Warning
+    description: Warning alert dialogs communicate important information to users in relation to an issue that needs to be acknowledged, but does not block the user from moving forward.
     demoClassName: spectrum-CSSExample-example--overlay
     markup: |
       <button class="spectrum-Button spectrum-Button--sizeM spectrum-Button--outline spectrum-Button--staticWhite spectrum-CSSExample-overlayShowButton" onclick="openDialog(this.nextElementSibling)"><span class="spectrum-Button-label">Open Alert Confirmation AlertDialog</span></button>
@@ -77,6 +80,7 @@ examples:
       </div>
   - id: alertdialog-error
     name: Error
+    description: Error alert dialogs communicate critical information about an issue that a user needs to acknowledge.
     demoClassName: spectrum-CSSExample-example--overlay
     markup: |
       <button class="spectrum-Button spectrum-Button--sizeM spectrum-Button--outline spectrum-Button--staticWhite spectrum-CSSExample-overlayShowButton" onclick="openDialog(this.nextElementSibling)"><span class="spectrum-Button-label">Open Alert Confirmation AlertDialog</span></button>
@@ -107,6 +111,7 @@ examples:
       </div>
   - id: alertdialog-destructive
     name: Destructive
+    description: Destructive alert dialogs are for when a user needs to confirm an action that will impact their data or experience in a potentially negative way, such as deleting files or contacts.
     demoClassName: spectrum-CSSExample-example--overlay
     markup: |
       <button class="spectrum-Button spectrum-Button--sizeM spectrum-Button--outline spectrum-Button--staticWhite spectrum-CSSExample-overlayShowButton" onclick="openDialog(this.nextElementSibling)"><span class="spectrum-Button-label">Open Alert Confirmation AlertDialog</span></button>
