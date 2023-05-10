@@ -250,7 +250,7 @@ governing permissions and limitations under the License.
   }
 
   &:hover {
-    color: var(--highcontrast-picker-font-color-default, var(--mod-picker-font-color-hover, (--spectrum-picker-font-color-hover)));
+    color: var(--highcontrast-picker-font-color-default, var(--mod-picker-font-color-hover, var(--spectrum-picker-font-color-hover)));
     background-color: var(--highcontrast-picker-background-color-default, var(--mod-picker-background-color-hover, var(--spectrum-picker-background-color-hover)));
     border-color: var(--highcontrast-picker-border-color-default, var(--mod-picker-border-color-hover, var(--spectrum-picker-border-color-hover)));
 
