@@ -58,8 +58,9 @@ governing permissions and limitations under the License.
   /* Label */
   --spectrum-accordion-item-header-color-default: var(--spectrum-neutral-content-color-default);
   --spectrum-accordion-item-header-color-hover: var(--spectrum-neutral-content-color-hover);
-  /*--spectrum-accordion-item-header-color-down: var(--spectrum-neutral-content-color-down);*/
-  /*--spectrum-accordion-item-header-color-key-focus: var(--spectrum-neutral-content-color-key-focus);*/
+  --spectrum-accordion-item-header-color-down: var(--spectrum-neutral-content-color-down);
+  --spectrum-accordion-item-header-color-key-focus: var(--spectrum-neutral-content-color-key-focus);
+  
   --spectrum-accordion-item-header-disabled-color: var(--spectrum-disabled-content-color);
   --spectrum-accordion-item-content-disabled-color: var(--spectrum-disabled-content-color);
   /* Body */
@@ -278,10 +279,12 @@ governing permissions and limitations under the License.
   &:focus-visible {
       box-shadow: 0 0 0 var(--mod-accordion-focus-indicator-thickness, var(--spectrum-accordion-focus-indicator-thickness)) var(--mod-accordion-focus-indicator-color, var(--spectrum-accordion-focus-indicator-color));
       background-color: var(--mod-accordion-background-color-key-focus, var(--spectrum-accordion-background-color-key-focus));
+      color: var(--mod-accordion-item-header-color-key-focus, var(--spectrum-accordion-item-header-color-key-focus));
   }
 
   &:active {
     background-color: var(--mod-accordion-background-color-down, var(--spectrum-accordion-background-color-down));
+    color: var(--mod-accordion-item-header-color-down, var(--spectrum-accordion-item-header-color-down));
   }
 
 }
