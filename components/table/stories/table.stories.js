@@ -222,3 +222,69 @@ Collapsible.args = {
     },
   ]
 };
+
+export const CollapsibleMultiSelect = Template.bind({});
+CollapsibleMultiSelect.storyName = "Collapsible Multi-select";
+CollapsibleMultiSelect.args = {
+  rowItems: [
+    {
+      showCheckbox: true,
+      cellContent: "Table Row Alpha",
+      isCollapsible: true,
+      isExpanded: true,
+      tier: 0,
+      ariaControls: "table-cr-bravo table-cr-delta",
+    },
+    {
+      showCheckbox: true,
+      cellContent: "Table Row Bravo. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt.",
+      isCollapsible: true,
+      tier: 1,
+      ariaControls: "table-cr-charlie",
+      id: "table-cr-bravo",
+    },
+    {
+      showCheckbox: true,
+      cellContent: [
+        "Table Row Charlie",
+        "Default Not Visible",
+        "Default Not Visible",
+      ],
+      isCollapsible: true,
+      isHidden: true,
+      tier: 2,
+      id: "table-cr-charlie",
+    },
+    {
+      showCheckbox: true,
+      cellContent: "Table Row Delta",
+      isSelected: true,
+      isCollapsible: true,
+      isExpanded: true,
+      tier: 1,
+      ariaControls: "table-cr-echo table-cr-foxtrot",
+      id: "table-cr-delta",
+    },
+    {
+      showCheckbox: true,
+      cellContent: "Table Row Echo",
+      tier: 2,
+      isLastTier: true,
+      isCollapsible: true,
+      id: "table-cr-echo",
+    },
+    {
+      showCheckbox: true,
+      cellContent: "Table Row Foxtrot",
+      tier: 2,
+      isLastTier: true,
+      isCollapsible: true,
+      id: "table-cr-foxtrot",
+    },
+    {
+      showCheckbox: true,
+      cellContent: "Summary Row",
+      isSummaryRow: true,
+    },
+  ]
+};
