@@ -102,6 +102,11 @@ governing permissions and limitations under the License.
   margin: 0;
   margin-block-start: var(--spectrum-alert-dialog-divider-to-description);
   margin-block-end: var(--spectrum-alert-dialog-description-to-buttons);
+
+  overflow-y: auto;
+  /* TODO replace with token */
+  max-height: 50vh;
+
 }
 
 .spectrum-AlertDialog-icon {
