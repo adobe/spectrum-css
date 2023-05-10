@@ -7,6 +7,15 @@ export default {
     "A rating element is used to display or collect a user's rating of an item as represented by a number of stars.",
   component: "Rating",
   argTypes: {
+    isEmphasized: {
+      name: "Emphasized styling",
+      type: { name: "boolean" },
+      table: {
+        type: { summary: "boolean" },
+        category: "Component",
+      },
+      control: "boolean",
+    },
     isFocused: {
       name: "Focused",
       type: { name: "boolean" },
@@ -16,15 +25,6 @@ export default {
         disable: true,
       },
       control: "boolean"
-    },
-    isEmphasized: {
-      name: "Emphasized styling",
-      type: { name: "boolean" },
-      table: {
-        type: { summary: "boolean" },
-        category: "Component",
-      },
-      control: "boolean",
     },
     isDisabled: {
       name: "Disabled",
@@ -85,7 +85,23 @@ export default {
 export const Default = Template.bind({});
 Default.args = {};
 
+export const ReadOnly = Template.bind({});
+ReadOnly.args = {
+  isReadOnly: true
+};
+
 export const Emphasized = Template.bind({});
 Emphasized.args = {
   isEmphasized: true
+};
+
+export const ReadOnlyEmphasized = Template.bind({});
+ReadOnlyEmphasized.args = {
+  isEmphasized: true,
+  isReadOnly: true
+};
+
+export const Disabled = Template.bind({});
+Disabled.args = {
+  isDisabled: true
 };

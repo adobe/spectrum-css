@@ -16,7 +16,7 @@ export const Template = ({
   value = 0,
   isReadOnly = false,
   isFocused = false,
-  isDisabled = false,
+  isDisabled = true,
   isEmphasized = false,
   customClasses = [],
   id,
@@ -61,6 +61,7 @@ export const Template = ({
         @change=${(e) => {
           const rating = e.target.closest(`.${rootClass}`);
           if (!rating) return;
+          
           const input = rating.closest(`.${rootClass}-input`);
           if (!input) return;
           if (!isReadOnly && !isDisabled) {
@@ -83,7 +84,7 @@ export const Template = ({
           >
             ${Icon({
               ...globals,
-              iconName: "StarOutline",
+              iconName: "Star",
               customClasses: [`${rootClass}-starActive`],
             })}
             ${Icon({
