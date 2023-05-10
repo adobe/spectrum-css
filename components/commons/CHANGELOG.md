@@ -3,6 +3,16 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+<a name="7.0.6"></a>
+## 7.0.6
+🗓 2023-05-10 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/commons@7.0.5...@spectrum-css/commons@7.0.6)
+
+**Note:** Version bump only for package @spectrum-css/commons
+
+
+
+
+
 <a name="7.0.5"></a>
 ## 7.0.5
 🗓 2023-04-26 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/commons@7.0.4...@spectrum-css/commons@7.0.5)
