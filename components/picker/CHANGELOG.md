@@ -3,6 +3,18 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+<a name="4.0.2"></a>
+## 4.0.2
+🗓 2023-05-10 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/picker@4.0.1...@spectrum-css/picker@4.0.2)
+
+### 🐛 Bug fixes
+
+* **picker:** resolve missing var keyword ([#1857](https://github.com/adobe/spectrum-css/issues/1857)) ([1d85f90](https://github.com/adobe/spectrum-css/commit/1d85f90)), closes [#1852](https://github.com/adobe/spectrum-css/issues/1852)
+
+
+
+
+
 <a name="4.0.1"></a>
 ## 4.0.1
 🗓 2023-05-08 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/picker@4.0.0...@spectrum-css/picker@4.0.1)
