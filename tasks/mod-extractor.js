@@ -10,62 +10,64 @@ governing permissions and limitations under the License.
 */
 
 const fs = require("fs");
+const fsp = fs.promises;
 const path = require("path");
-const readline = require("readline");
+const fg = require("fast-glob");
 
-const pattern = "--mod-";
-const rootDir = path.join(__dirname, "..", "components");
-const fileExtension = ".css";
-const writePath = "metadata/mods.md";
+async function main(dir = path.join(__dirname, "../components")) {
+    /* Loop over the directories in the components folder and find all the first-level css files */
+    for(const filepath of await fg('*/*.css', {
+        cwd: dir,
+        absolute: true,
+        /* Skip the vars and tokens files */
+        ignore: ['**/node_modules/**', '**/dist/**', '**/metadata/**', '**/*vars/*.css', '**/tokens/*.css'],
+        onlyFiles: true
+    })) {
+        /* This regex will find all the custom properties that start with --mod- */
+        /* and are defined inside a var() function */
+        const regex = /var\((--mod-(?:\w|-)+)/g;
 
-function extract(line, index) {
-    let modVariable = "";
-    for(let i = index; i < line.length; i++) {
-        if (line[i] == ")" || line[i] == "," || line[i] == " ") {
-            break;
-        }
-        modVariable += line[i];
+        /* Read the file and find all the matches */
+        const matches = await fsp.readFile(filepath, 'utf-8').then((content) => {
+            // assign the matches to an array through the spread operator and map the results to the first capture group
+            return [...content.matchAll(regex)].map((match) => match[1]);
+        }).catch((err) => {
+            console.log(err);
+        });
+
+        // If there are no matches, skip this file and continue to the next one
+        if (!matches || matches.length === 0) continue;
+
+        /* Remove duplicates using a Set and sort the results (default is alphabetical) */
+        const found = [...new Set(matches)].sort();
+        /* -- Markdown Output -- */
+        /* Output as a markdown table in the metadata folder for site rendering */
+        let destPath = `${path.dirname(filepath)}/metadata`;
+        // If the metadata folder doesn't exist, create it
+        if (!fs.existsSync(destPath)) fs.mkdirSync(destPath);
+
+        let formattedResults = [
+            '| Modifiable Custom Properties |\n| --- |',
+            ...found.map((result) => `| \`${result}\` |`),
+        ];
+
+        // Write the results to a markdown file in the metadata folder
+        await fsp.writeFile(`${destPath}/mods.md`, formattedResults.join('\n'), (err) => {
+            if (err) throw err;
+        });
+
+        /* -- JSON Output -- */
+        destPath = `${path.dirname(filepath)}/dist`;
+        // If the dist folder doesn't exist yet, create it
+        if (!fs.existsSync(destPath)) fs.mkdirSync(destPath);
+
+        formattedResults = JSON.stringify({ mods: found }, null, 2);
+
+        // Write the JSON output to the dist folder
+        await fsp.writeFile(`${destPath}/mods.json`, formattedResults, (err) => {
+            if (err) throw err;
+        });
     }
-    return modVariable;
 }
 
-function writeToFile(file) {
-    const directoryName = path.dirname(file);
-    const readInterface = readline.createInterface({
-        input: fs.createReadStream(file),
-        console:false
-    });
-    var result  = new Set();
-    readInterface.on("line", function(line) {
-        let index = line.indexOf(pattern);
-        while(index != -1) {
-            let modVariable = extract(line, index);
-            result.add(modVariable);
-            index = line.indexOf(pattern, index + 1);
-        }
-        if (result.size) {
-            const resultArray = [...result];
-            const formattedResults = resultArray.map((result) => `|\`${result}\`|`);
-            const tableHeader = `| Modifiable Custom Properties |\n| --- |`;
-            formattedResults.unshift(tableHeader);
-            fs.writeFile(`${directoryName}/${writePath}`, formattedResults.join('\n'), (err) => {});
-        }
-    });
-}
-
-function searchFilesForString(dir, pattern, extension) {
-    const files = fs.readdirSync(dir);
-    for(let i = 0; i < files.length; i++) {
-        const file = path.join(dir, files[i]);
-
-        if (fs.statSync(file).isDirectory()) {
-            searchFilesForString(file, pattern, extension);
-        } else {
-            if (path.extname(file) === extension) {
-                writeToFile(file);
-            }
-        }
-    }
-}
-
-searchFilesForString(rootDir, pattern, fileExtension);
+main();
