@@ -18,7 +18,7 @@ export default {
       options: ["s", "m", "l", "xl"],
       control: "select"
     },
-    isDisabled: {
+    disableAll: {
       name: "Disabled",
       type: { name: "boolean" },
       table: {

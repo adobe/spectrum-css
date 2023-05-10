@@ -16,6 +16,7 @@ export const AccordionItem = ({
   isDisabled = false,
   isOpen = false,
   iconSize = "m",
+  disableAll = false,
   // customClasses = [],
   ...globals
 }) => {
@@ -24,7 +25,7 @@ export const AccordionItem = ({
       class=${classMap({
         [rootClass]: true,
         "is-open": isOpen,
-        "is-disabled": isDisabled,
+        "is-disabled": isDisabled || disableAll,
       })}
       id=${ifDefined(id)}
       role="presentation"
@@ -41,7 +42,7 @@ export const AccordionItem = ({
         <button
           class="${rootClass}Header"
           type="button"
-          ?disabled=${isDisabled}
+          ?disabled=${isDisabled || disableAll}
           id="spectrum-accordion-item-${idx}-header"
           aria-controls="spectrum-accordion-item-${idx}-content"
           aria-expanded="${open ? "true" : "false"}"
