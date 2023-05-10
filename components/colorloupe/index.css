@@ -9,10 +9,10 @@ OF ANY KIND, either express or implied. See the License for the specific languag
 governing permissions and limitations under the License.
 */
 .spectrum-ColorLoupe {
-  --spectrum-colorloupe-width: 48px; /* TODO replace with new token for var(--spectrum-color-loupe-width); */
-  --spectrum-colorloupe-height: 64px; /* TODO replace with new token for var(--spectrum-color-loupe-height); */
+  --spectrum-colorloupe-width: var(--spectrum-color-loupe-width);
+  --spectrum-colorloupe-height: var(--spectrum-color-loupe-height);
 
-  --spectrum-colorloupe-offset: 12px; /* TODO: replace with updated var(--spectrum-color-loupe-bottom-to-color-handle); */
+  --spectrum-colorloupe-offset: var(--spectrum-color-loupe-bottom-to-color-handle);
   --spectrum-colorloupe-animation-distance: 8px; /* TODO: replace with forthcoming animation token */
 
   --spectrum-colorloupe-drop-shadow-x: var(--spectrum-drop-shadow-x);
@@ -21,7 +21,7 @@ governing permissions and limitations under the License.
   --spectrum-colorloupe-drop-shadow-color: var(--spectrum-color-loupe-drop-shadow-color);
 
   --spectrum-colorloupe-outer-border-width: var(--spectrum-color-loupe-outer-border-width);
-  --spectrum-colorloupe-inner-border-width: 1px; /* TODO: replace with updated token for color-loupe-inner-border-width */
+  --spectrum-colorloupe-inner-border-width: var(--spectrum-color-loupe-inner-border-width);
   --spectrum-colorloupe-outer-border-color: var(--spectrum-color-loupe-outer-border);
   --spectrum-colorloupe-inner-border-color: var(--spectrum-color-loupe-inner-border);
 
@@ -37,7 +37,7 @@ governing permissions and limitations under the License.
   transform: translate(0, var(--mod-colorloupe-animation-distance, var(--spectrum-colorloupe-animation-distance)));
   opacity: 0;
   transform-origin: bottom center;
-  inset-block-end: calc((var(--spectrum-color-handle-size-interim) - var(--spectrum-color-handle-outer-border-width)) + var(--mod-colorloupe-offset, var(--spectrum-colorloupe-offset)));
+  inset-block-end: calc((var(--spectrum-color-handle-size) - var(--spectrum-color-handle-outer-border-width)) + var(--mod-colorloupe-offset, var(--spectrum-colorloupe-offset)));
   inset-inline-end: calc(50% - (var(--spectrum-colorloupe-width) / 2) + 1px);
 
   transition: transform 100ms ease-in-out, opacity 125ms ease-in-out;

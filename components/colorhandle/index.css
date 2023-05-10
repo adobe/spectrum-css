@@ -9,19 +9,19 @@ OF ANY KIND, either express or implied. See the License for the specific languag
 governing permissions and limitations under the License.
 */
 .spectrum-ColorHandle {
-  --spectrum-colorhandle-size: var(--spectrum-color-handle-size-interim); /* TODO: this uses custom token, replace with updated --spectrum-color-handle-size token */
-  --spectrum-colorhandle-focused-size: var(--spectrum-color-handle-size-key-focus-interim); /* TODO: this uses custom token, replace with updated --spectrum-color-handle-size-key-focus token */
+  --spectrum-colorhandle-size: var(--spectrum-color-handle-size);
+  --spectrum-colorhandle-focused-size: var(--spectrum-color-handle-size-key-focus);
   --spectrum-colorhandle-hitarea-size: var(--spectrum-color-control-track-width);
 
   --spectrum-colorhandle-animation-duration: var(--spectrum-animation-duration-100);
   --spectrum-colorhandle-animation-easing: ease-in-out;
 
   /* outer border as box shadow on the colorhandle */
-  --spectrum-colorhandle-outer-border-color: rgba(var(--spectrum-black-rgb), 0.42); /*TODO replace --spectrum-black-rgb with color-handle-outer-border-color and  color-handle-inner-border-opacity once express value is removed */
+  --spectrum-colorhandle-outer-border-color: rgba(var(--spectrum-black-rgb), var(--spectrum-color-handle-outer-border-opacity)); /* TODO replace --spectrum-black-rgb with color-handle-outer-border-color when supported by RGBA */
   --spectrum-colorhandle-outer-border-width: var(--spectrum-color-handle-outer-border-width);
 
   /* inner border as inset boxshadow on the colorhandle-inner */
-  --spectrum-colorhandle-inner-border-color: rgba(var(--spectrum-black-rgb), 0.42); /*TODO replace --spectrum-black-rgb with color-handle-inner-border-color and color-handle-inner-border-opacity once express value is removed */
+  --spectrum-colorhandle-inner-border-color: rgba(var(--spectrum-black-rgb), var(--spectrum-color-handle-inner-border-opacity)); /* TODO replace --spectrum-black-rgb with color-handle-inner-border-color when supported by RGBA */
   --spectrum-colorhandle-inner-border-width: var(--spectrum-color-handle-inner-border-width);
 
   /* primary border on color handle */
