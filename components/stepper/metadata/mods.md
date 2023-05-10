@@ -15,15 +15,12 @@
 | `--mod-stepper-border-color-keyboard-focus` |
 | `--mod-stepper-border-color-quiet-disabled` |
 | `--mod-stepper-border-radius` |
-| `--mod-stepper-border-size-reset` |
 | `--mod-stepper-border-width` |
 | `--mod-stepper-button-background-color-default` |
 | `--mod-stepper-button-background-color-focus` |
 | `--mod-stepper-button-background-color-hover` |
 | `--mod-stepper-button-background-color-keyboard-focus` |
-| `--mod-stepper-button-border-radius` |
 | `--mod-stepper-button-gap` |
-| `--mod-stepper-button-middle-border-width` |
 | `--mod-stepper-button-offset` |
 | `--mod-stepper-button-padding` |
 | `--mod-stepper-button-width` |

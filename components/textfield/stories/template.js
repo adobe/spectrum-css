@@ -35,13 +35,18 @@ export const Template = ({
   type = "text",
   autocomplete = true,
   onclick,
-  styles = {
-    "--spectrum-textfield-border-color": "rgb(0,0,0)",
-    "--spectrum-textfield-border-width": "1px"
-  },
+  styles = {},
   ...globals
 }) => {
   const [, updateArgs] = useArgs();
+  const { express } = globals;
+
+  try {
+    if (!express) import(/* webpackPrefetch: true */ "../themes/spectrum.css");
+    else import(/* webpackPrefetch: true */ "../themes/express.css");
+  } catch (e) {
+    console.warn(e);
+  }
 
   if (isInvalid) iconName = "Alert";
   else if (isValid) iconName = "Checkmark";
