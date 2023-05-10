@@ -63,7 +63,13 @@ examples:
         <div class="spectrum-Modal is-open" style="--mod" data-testid="modal">
           <section class="spectrum-AlertDialog spectrum-AlertDialog--warning" role="alertdialog" tabindex="-1" aria-modal="true">
             <div class="spectrum-AlertDialog-grid">
+            <div class="spectrum-AlertDialog-header">
               <h1 class="spectrum-AlertDialog-heading">Unverified format</h1>
+              <svg class="spectrum-Icon spectrum-AlertDialog-icon" focusable="false" aria-hidden="true">
+                <use xlink:href="#spectrum-icon-18-Alert" />
+              </svg>
+            </div>
+
               <hr class="spectrum-Divider spectrum-Divider--sizeM spectrum-Divider--horizontal">
               <section class="spectrum-AlertDialog-content">This format has not been verified and may not be viewable for some users. Do you want to continue publishing?</section>
               <div class="spectrum-ButtonGroup">
@@ -122,9 +128,7 @@ examples:
             <div class="spectrum-AlertDialog-grid">
               <div class="spectrum-AlertDialog-header">
                 <h1 class="spectrum-AlertDialog-heading">Delete 3 documents?</h1>
-                  <svg class="spectrum-Icon spectrum-AlertDialog-icon" focusable="false" aria-hidden="true">
-                    <use xlink:href="#spectrum-icon-18-Alert" />
-                  </svg>
+
               </div>
 
               <hr class="spectrum-Divider spectrum-Divider--sizeM spectrum-Divider--horizontal">
