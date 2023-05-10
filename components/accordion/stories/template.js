@@ -50,7 +50,7 @@ export const AccordionItem = ({
         </button>
         ${Icon({
           iconName: "ChevronRight100",
-          size: `${iconSize}`,
+          size: iconSize,
           customClasses: [
             `${rootClass}Indicator`,
           ],
@@ -73,7 +73,7 @@ export const AccordionItem = ({
 export const Template = ({
   rootClass = "spectrum-Accordion",
   size = "m",
-  layout = "regular",
+  density = "regular",
   items,
   id,
   customClasses = [],
@@ -86,7 +86,7 @@ export const Template = ({
       class="${classMap({
         [rootClass]: true,
         [`${rootClass}--size${size?.toUpperCase()}`]: typeof size !== "undefined",
-        [`${rootClass}-${layout}--size${size?.toUpperCase()}`]: typeof layout !== "undefined",
+        [`${rootClass}-${density}--size${size?.toUpperCase()}`]: typeof density !== "undefined",
         ...customClasses.reduce((a, c) => ({ ...a, [c]: true }), {}),
       })}"
       id=${ifDefined(id)}
