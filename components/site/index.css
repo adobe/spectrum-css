@@ -530,7 +530,7 @@ governing permissions and limitations under the License.
 
 .spectrum-Button.spectrum-CSSExample-overlayShowButton {
   position: absolute;
-  inset-inline-start: 50%;
+  inset-inline: 50%;
   inset-block-start: 50%;
   transform: translate(-50%, -50%);
 }
