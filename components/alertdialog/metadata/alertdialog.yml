@@ -8,7 +8,7 @@ examples:
     markup: |
       <button class="spectrum-Button spectrum-Button--sizeM spectrum-Button--outline spectrum-Button--staticWhite spectrum-CSSExample-overlayShowButton" onclick="openDialog(this.nextElementSibling)"><span class="spectrum-Button-label">Open Alert Confirmation Dialog</span></button>
       <div class="spectrum-Modal-wrapper spectrum-CSSExample-dialog">
-        <div class="spectrum-Modal is-open" style="--mod-dialog-confirm-border-radius: var(--spectrum-alert-dialog-corder-radius)" data-testid="modal">
+        <div class="spectrum-Modal is-open" data-testid="modal">
           <section class="spectrum-AlertDialog spectrum-AlertDialog--confirmation" role="alertdialog" tabindex="-1" aria-modal="true">
             <div class="spectrum-AlertDialog-grid">
               <h1 class="spectrum-AlertDialog-heading">Enable Smart Filters?</h1>
@@ -34,7 +34,7 @@ examples:
       <button class="spectrum-Button spectrum-Button--sizeM spectrum-Button--outline spectrum-Button--staticWhite spectrum-CSSExample-overlayShowButton" onclick="openDialog(this.nextElementSibling)"><span class="spectrum-Button-label">Open Alert Confirmation AlertDialog</span></button>
 
       <div class="spectrum-Modal-wrapper spectrum-CSSExample-dialog">
-        <div class="spectrum-Modal is-open" style="--mod" data-testid="modal">
+        <div class="spectrum-Modal is-open" data-testid="modal">
           <section class="spectrum-AlertDialog spectrum-AlertDialog--information" role="alertdialog" tabindex="-1" aria-modal="true">
             <div class="spectrum-AlertDialog-grid">
               <h1 class="spectrum-AlertDialog-heading">Connect to wifi</h1>
@@ -60,7 +60,7 @@ examples:
       <button class="spectrum-Button spectrum-Button--sizeM spectrum-Button--outline spectrum-Button--staticWhite spectrum-CSSExample-overlayShowButton" onclick="openDialog(this.nextElementSibling)"><span class="spectrum-Button-label">Open Alert Confirmation AlertDialog</span></button>
 
       <div class="spectrum-Modal-wrapper spectrum-CSSExample-dialog">
-        <div class="spectrum-Modal is-open" style="--mod" data-testid="modal">
+        <div class="spectrum-Modal is-open" data-testid="modal">
           <section class="spectrum-AlertDialog spectrum-AlertDialog--warning" role="alertdialog" tabindex="-1" aria-modal="true">
             <div class="spectrum-AlertDialog-grid">
             <div class="spectrum-AlertDialog-header">
@@ -92,8 +92,8 @@ examples:
       <button class="spectrum-Button spectrum-Button--sizeM spectrum-Button--outline spectrum-Button--staticWhite spectrum-CSSExample-overlayShowButton" onclick="openDialog(this.nextElementSibling)"><span class="spectrum-Button-label">Open Alert Confirmation AlertDialog</span></button>
 
       <div class="spectrum-Modal-wrapper spectrum-CSSExample-dialog">
-        <div class="spectrum-Modal is-open" style="--mod" data-testid="modal">
-          <section class="spectrum-AlertDialog spectrum-AlertDialog--error" role="alertdialog" tabindex="-1" aria-modal="true">
+        <div class="spectrum-Modal spectrum-AlertDialog-modal is-open" data-testid="modal">
+          <section class="spectrum-AlertDialog spectrum-AlertDialog--error"  role="alertdialog" tabindex="-1" aria-modal="true">
             <div class="spectrum-AlertDialog-grid">
               <div class="spectrum-AlertDialog-header">
                 <h1 class="spectrum-AlertDialog-heading">Unverified format</h1>
@@ -123,7 +123,7 @@ examples:
       <button class="spectrum-Button spectrum-Button--sizeM spectrum-Button--outline spectrum-Button--staticWhite spectrum-CSSExample-overlayShowButton" onclick="openDialog(this.nextElementSibling)"><span class="spectrum-Button-label">Open Alert Confirmation AlertDialog</span></button>
 
       <div class="spectrum-Modal-wrapper spectrum-CSSExample-dialog">
-        <div class="spectrum-Modal is-open" style="--mod" data-testid="modal">
+        <div class="spectrum-Modal is-open" data-testid="modal">
           <section class="spectrum-AlertDialog spectrum-AlertDialog--destructive" role="alertdialog" tabindex="-1" aria-modal="true">
             <div class="spectrum-AlertDialog-grid">
               <div class="spectrum-AlertDialog-header">
@@ -153,7 +153,7 @@ examples:
       <button class="spectrum-Button spectrum-Button--sizeM spectrum-Button--outline spectrum-Button--staticWhite spectrum-CSSExample-overlayShowButton" onclick="openDialog(this.nextElementSibling)"><span class="spectrum-Button-label">Open Alert Confirmation AlertDialog</span></button>
 
       <div class="spectrum-Modal-wrapper spectrum-CSSExample-dialog">
-        <div class="spectrum-Modal is-open" style="--mod" data-testid="modal">
+        <div class="spectrum-Modal is-open" data-testid="modal">
           <section class="spectrum-AlertDialog spectrum-AlertDialog--information" role="alertdialog" tabindex="-1" aria-modal="true">
             <div class="spectrum-AlertDialog-grid">
               <h1 class="spectrum-AlertDialog-heading">Rate this app</h1>
@@ -181,7 +181,7 @@ examples:
       <button class="spectrum-Button spectrum-Button--sizeM spectrum-Button--outline spectrum-Button--staticWhite spectrum-CSSExample-overlayShowButton" onclick="openDialog(this.nextElementSibling)"><span class="spectrum-Button-label">Open Alert Confirmation AlertDialog</span></button>
 
       <div class="spectrum-Modal-wrapper spectrum-CSSExample-dialog">
-        <div class="spectrum-Modal is-open" style="--mod" data-testid="modal">
+        <div class="spectrum-Modal is-open" data-testid="modal">
           <section class="spectrum-AlertDialog spectrum-AlertDialog--information" role="alertdialog" tabindex="-1" aria-modal="true">
             <div class="spectrum-AlertDialog-grid">
               <h1 class="spectrum-AlertDialog-heading">Lorem Ipsum</h1>

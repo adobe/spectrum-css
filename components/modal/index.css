@@ -20,6 +20,7 @@ governing permissions and limitations under the License.
 
   /* Distance between top and bottom of dialog and edge of window for fullscreen dialog */
   --spectrum-dialog-fullscreen-margin: 32px;
+  /* NEEDS TOKEN FROM ALERT DIALOG */
   --spectrum-dialog-max-height: 90vh;
 }
 
@@ -71,10 +72,11 @@ governing permissions and limitations under the License.
   /* Appear above underlay */
   z-index: 2;
 
-  /* Don't be bigger than the screen */
+  /*  NEEDS ALERT DIALOG TOKEN Don't be bigger than the screen */
   max-height: var(--spectrum-dialog-max-height);
 
-  border-radius: var(--spectrum-dialog-confirm-border-radius);
+  /* NEEDS ALERT DIALOG TOKEN */
+  border-radius: var(--spectrum-corner-radius-100);
   overflow: hidden;
   outline: none; /* Firefox shows outline */
   pointer-events: auto;
