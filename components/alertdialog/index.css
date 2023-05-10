@@ -52,13 +52,8 @@ governing permissions and limitations under the License.
 }
 
 .spectrum-AlertDialog {
-  /* Be a flexbox to allow a full sized content area that scrolls */
   display: flex;
-
-  /* Allow 100% width, taking into account padding */
   box-sizing: border-box;
-
-  /* Be no bigger than max-width, but also be 90% if the viewport is smaller than max-width */
   inline-size: fit-content;
   min-inline-size: var(--spectrum-alert-dialog-min-width);
   max-inline-size: var(--spectrum-alert-dialog-max-width);
@@ -72,6 +67,16 @@ governing permissions and limitations under the License.
   }
   .spectrum-ButtonGroup{
     justify-content: flex-end;
+  }
+  &--error{
+    .spectrum-AlertDialog-icon {
+      color:  #E46F00;
+    }
+  }
+  &--destructive {
+    .spectrum-AlertDialog-icon {
+      color: #EA3829;
+    }
   }
 }
 
