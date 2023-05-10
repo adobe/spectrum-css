@@ -675,8 +675,14 @@ tbody.spectrum-Table-body {
     font-weight: var(--mod-table-section-header-font-weight, var(--spectrum-table-section-header-font-weight));
     text-align: start;
 
-    padding-block-start: var(--mod-table-section-header-block-start-spacing, var(--spectrum-table-section-header-block-start-spacing));
-    padding-block-end: var(--mod-table-section-header-block-end-spacing, var(--spectrum-table-section-header-block-end-spacing));
+    padding-block-start: calc(
+      var(--mod-table-section-header-block-start-spacing, var(--spectrum-table-section-header-block-start-spacing)) -
+      var(--mod-table-border-width, var(--spectrum-table-border-width))
+    );
+    padding-block-end: calc(
+      var(--mod-table-section-header-block-end-spacing, var(--spectrum-table-section-header-block-end-spacing)) -
+      var(--mod-table-border-width, var(--spectrum-table-border-width))
+    );
 
     /* Make unique section header mods available to these default row styles: */
     font-size: var(--mod-table-section-header-font-size, var(--spectrum-table-row-font-size));
