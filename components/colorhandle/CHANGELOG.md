@@ -3,6 +3,16 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+<a name="5.0.1"></a>
+## 5.0.1
+🗓 2023-05-11 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/colorhandle@5.0.0...@spectrum-css/colorhandle@5.0.1)
+
+**Note:** Version bump only for package @spectrum-css/colorhandle
+
+
+
+
+
 <a name="5.0.0"></a>
 # 5.0.0
 🗓 2023-05-10 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/colorhandle@4.0.11...@spectrum-css/colorhandle@5.0.0)
