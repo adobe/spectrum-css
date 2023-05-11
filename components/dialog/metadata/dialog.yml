@@ -1,6 +1,10 @@
 name: Dialog
 description: 'In order to avoid blurry Dialogs, wrap them in `<div class="spectrum-Dialog-wrapper">` and apply `.is-open` to both the Wrapper and the Dialog at the same time. See [this example](#dialog-wrapped) for a working demonstration.'
 SpectrumSiteSlug: https://spectrum.adobe.com/page/dialog/
+sections:
+  - name: Migration Guide
+    description: |
+      - canvas alert variants have been removed from dialog into their own compoments, alert dialog.
 examples:
   - id: dialog
     name: Dialog - Small

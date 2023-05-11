@@ -1,5 +1,9 @@
 name: Alert Dialog
 SpectrumSiteSlug: https://spectrum.adobe.com/page/alertdialog/
+sections:
+  - name: Custom Properties API
+    description: |
+      This component can be modified via its `--mod-*` prefixed custom properties. A list of those prefixed custom properties can be found <a href="https://github.com/adobe/spectrum-css/tree/main/components/alertdialog/metadata/mods.md">here</a>.
 examples:
   - id: alertdialog
     name: Confirmation
@@ -12,7 +16,7 @@ examples:
           <section class="spectrum-AlertDialog spectrum-AlertDialog--confirmation" role="alertdialog" tabindex="-1" aria-modal="true">
             <div class="spectrum-AlertDialog-grid">
               <h1 class="spectrum-AlertDialog-heading">Enable Smart Filters?</h1>
-              <hr class="spectrum-Divider spectrum-Divider--sizeM spectrum-Divider--horizontal spectrum-AlertDialog-divider">
+              <div class="spectrum-Divider spectrum-Divider--sizeM spectrum-Divider--horizontal"></div>
               <section class="spectrum-AlertDialog-content">Smart filters are nondestructive and will preserve your original images.</section>
               <div class="spectrum-ButtonGroup">
                 <button class="spectrum-Button spectrum-Button--sizeM spectrum-Button--outline spectrum-Button--secondary spectrum-ButtonGroup-item" type="button" onclick="closeDialog(this.closest('.spectrum-Modal-wrapper'))">
@@ -38,7 +42,7 @@ examples:
           <section class="spectrum-AlertDialog spectrum-AlertDialog--information" role="alertdialog" tabindex="-1" aria-modal="true">
             <div class="spectrum-AlertDialog-grid">
               <h1 class="spectrum-AlertDialog-heading">Connect to wifi</h1>
-              <hr class="spectrum-Divider spectrum-Divider--sizeM spectrum-Divider--horizontal">
+              <div class="spectrum-Divider spectrum-Divider--sizeM spectrum-Divider--horizontal"></div>
               <section class="spectrum-AlertDialog-content">Please connect to wifi to sync your projects or go to Settings to change your prefernces.</section>
               <div class="spectrum-ButtonGroup">
                 <button class="spectrum-Button spectrum-Button--sizeM spectrum-Button--outline spectrum-Button--secondary spectrum-ButtonGroup-item" type="button" onclick="closeDialog(this.closest('.spectrum-Modal-wrapper'))">
@@ -70,7 +74,7 @@ examples:
               </svg>
             </div>
 
-              <hr class="spectrum-Divider spectrum-Divider--sizeM spectrum-Divider--horizontal">
+              <div class="spectrum-Divider spectrum-Divider--sizeM spectrum-Divider--horizontal"></div>
               <section class="spectrum-AlertDialog-content">This format has not been verified and may not be viewable for some users. Do you want to continue publishing?</section>
               <div class="spectrum-ButtonGroup">
                 <button class="spectrum-Button spectrum-Button--sizeM spectrum-Button--outline spectrum-Button--secondary spectrum-ButtonGroup-item" type="button" onclick="closeDialog(this.closest('.spectrum-Modal-wrapper'))">
@@ -101,7 +105,7 @@ examples:
                     <use xlink:href="#spectrum-icon-18-Alert" />
                   </svg>
               </div>
-              <hr class="spectrum-Divider spectrum-Divider--sizeM spectrum-Divider--horizontal">
+              <div class="spectrum-Divider spectrum-Divider--sizeM spectrum-Divider--horizontal"></div>
               <section class="spectrum-AlertDialog-content">An error occured while sharing your project. Please verify the email address and try again.</section>
               <div class="spectrum-ButtonGroup">
                 <button class="spectrum-Button spectrum-Button--sizeM spectrum-Button--outline spectrum-Button--primary spectrum-ButtonGroup-item" type="button" onclick="closeDialog(this.closest('.spectrum-Modal-wrapper'))">
@@ -125,10 +129,9 @@ examples:
             <div class="spectrum-AlertDialog-grid">
               <div class="spectrum-AlertDialog-header">
                 <h1 class="spectrum-AlertDialog-heading">Delete 3 documents?</h1>
-
               </div>
 
-              <hr class="spectrum-Divider spectrum-Divider--sizeM spectrum-Divider--horizontal">
+              <div class="spectrum-Divider spectrum-Divider--sizeM spectrum-Divider--horizontal"></div>
               <section class="spectrum-AlertDialog-content">Are you sure you want to delete the 3 selected documents?</section>
               <div class="spectrum-ButtonGroup">
                 <button class="spectrum-Button spectrum-Button--sizeM spectrum-Button--outline spectrum-Button--secondary spectrum-ButtonGroup-item" type="button" onclick="closeDialog(this.closest('.spectrum-Modal-wrapper'))">
@@ -154,7 +157,7 @@ examples:
           <section class="spectrum-AlertDialog spectrum-AlertDialog--information" role="alertdialog" tabindex="-1" aria-modal="true">
             <div class="spectrum-AlertDialog-grid">
               <h1 class="spectrum-AlertDialog-heading">Rate this app</h1>
-              <hr class="spectrum-Divider spectrum-Divider--sizeM spectrum-Divider--horizontal">
+              <div class="spectrum-Divider spectrum-Divider--sizeM spectrum-Divider--horizontal"></div>
               <section class="spectrum-AlertDialog-content">If you enjoy our app, would you mind taking a moment to rate it?</section>
               <div class="spectrum-ButtonGroup">
                 <button class="spectrum-Button spectrum-Button--sizeM spectrum-Button--outline spectrum-Button--secondary spectrum-ButtonGroup-item" type="button" onclick="closeDialog(this.closest('.spectrum-Modal-wrapper'))">
@@ -182,7 +185,7 @@ examples:
           <section class="spectrum-AlertDialog spectrum-AlertDialog--information" role="alertdialog" tabindex="-1" aria-modal="true">
             <div class="spectrum-AlertDialog-grid">
               <h1 class="spectrum-AlertDialog-heading">Lorem Ipsum</h1>
-              <hr class="spectrum-Divider spectrum-Divider--sizeM spectrum-Divider--horizontal">
+              <div class="spectrum-Divider spectrum-Divider--sizeM spectrum-Divider--horizontal"></div>
               <section class="spectrum-AlertDialog-content">
                 <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse ultrices est eu lacus interdum, vitae volutpat tortor laoreet. Phasellus consectetur erat quis massa congue, vel placerat ipsum hendrerit. Aenean eleifend augue quam, quis blandit lacus pretium eget. Aliquam aliquam fermentum nunc, sed dictum metus varius in. Suspendisse in nisl libero. Nulla egestas massa eget lectus ullamcorper placerat. Vivamus cursus, nunc quis pharetra auctor, eros mi tempus elit, sit amet placerat ipsum velit ut dolor. Nam sit amet eleifend erat. Duis sollicitudin orci sit amet tellus tincidunt, vel lobortis risus pellentesque. Integer viverra urna elementum metus dignissim placerat. Nulla posuere eros ipsum. Pellentesque viverra urna justo, eu ultricies nisl fermentum et. Vivamus tristique porttitor dictum. Vestibulum faucibus hendrerit urna vitae eleifend.</p>
                 <p>Aliquam suscipit ipsum et nulla bibendum imperdiet. Sed euismod est id mauris pretium, ut fringilla est facilisis. Sed tempus dignissim dui non condimentum. Nam et felis mauris. Proin tempus imperdiet neque, ac sagittis urna posuere et. Interdum et malesuada fames ac ante ipsum primis in faucibus. Cras pulvinar justo metus, sed porttitor tortor porta vel. Cras ultrices lectus non orci dictum auctor. Praesent quis augue vel tortor finibus ultricies at aliquet purus. Fusce eget convallis risus. Proin imperdiet urna ligula, at scelerisque eros vestibulum ut. Proin imperdiet ultricies turpis, eu vestibulum metus congue ut. Etiam commodo hendrerit diam, at luctus leo. Donec vitae erat id enim semper posuere. Nullam blandit condimentum lacus ac laoreet.
