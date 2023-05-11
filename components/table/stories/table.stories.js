@@ -53,6 +53,16 @@ export default {
       },
       control: "boolean",
     },
+    showThumbnails: {
+      name: "Show Thumbnails in cell content.",
+      description: "Uses the Thumbnail component at the start of the first column's cells.",
+      type: { name: "boolean" },
+      table: {
+        type: { summary: "boolean" },
+        category: "Component",
+      },
+      control: "boolean",
+    },
     rowItems: {
       table: { disable: true }
     },
@@ -64,6 +74,7 @@ export default {
     isQuiet: false,
     isEmphasized: true,
     useDivs: false,
+    showThumbnails: false,
   },
   parameters: {
     actions: {
@@ -174,6 +185,7 @@ Collapsible.args = {
       isExpanded: true,
       tier: 0,
       ariaControls: "table-cr-bravo table-cr-delta",
+      id: "table-cr-alpha",
     },
     {
       cellContent: "Table Row Bravo. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt.",
@@ -234,6 +246,7 @@ CollapsibleMultiSelect.args = {
       isExpanded: true,
       tier: 0,
       ariaControls: "table-cr-bravo table-cr-delta",
+      id: "table-cr-alpha",
     },
     {
       showCheckbox: true,
@@ -283,6 +296,46 @@ CollapsibleMultiSelect.args = {
     },
     {
       showCheckbox: true,
+      cellContent: "Summary Row",
+      isSummaryRow: true,
+    },
+  ]
+};
+
+export const Thumbnails = Template.bind({});
+Thumbnails.args = {
+  showThumbnails: true,
+  rowItems: [
+    {
+      cellContent: "Table Row Alpha",
+      isCollapsible: true,
+      isExpanded: true,
+      tier: 0,
+      ariaControls: "table-cr-bravo",
+      id: "table-cr-alpha",
+    },
+    {
+      cellContent: "Table Row Bravo. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt.",
+      isCollapsible: true,
+      tier: 1,
+      ariaControls: "table-cr-charlie",
+      id: "table-cr-bravo",
+    },
+    {
+      cellContent: "Table Row Charlie",
+      tier: 2,
+      isLastTier: true,
+      isCollapsible: true,
+      id: "table-cr-charlie",
+    },
+    {
+      cellContent: "Table Row Delta",
+      tier: 2,
+      isLastTier: true,
+      isCollapsible: true,
+      id: "table-cr-delta",
+    },
+    {
       cellContent: "Summary Row",
       isSummaryRow: true,
     },

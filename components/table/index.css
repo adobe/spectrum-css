@@ -79,13 +79,13 @@ governing permissions and limitations under the License.
   --spectrum-table-section-header-font-weight: var(--spectrum-bold-font-weight);
   --spectrum-table-section-header-background-color: var(--spectrum-gray-200);
 
-  /* Collapsible */
+  /* Collapsible and Thumbnails */
   --spectrum-table-collapsible-tier-indent: var(--spectrum-spacing-300);
   --spectrum-table-collapsible-disclosure-inline-spacing: 0px;
   --spectrum-table-disclosure-icon-size: var(--spectrum-component-height-100);
   --spectrum-table-collapsible-icon-animation-duration: var(--spectrum-animation-duration-100);
 
-  /* @todo Thumbnails */
+  --spectrum-table-thumbnail-to-text: var(--spectrum-text-to-visual-100);
 }
 
 /********* T-SHIRT SIZES (Regular Density) *********/
@@ -113,8 +113,9 @@ governing permissions and limitations under the License.
   --spectrum-table-section-header-block-start-spacing: var(--spectrum-component-top-to-text-75);
   --spectrum-table-section-header-block-end-spacing: var(--spectrum-component-bottom-to-text-75);
 
-  /* Collapsible */
+  /* Collapsible and Thumbnails */
   --spectrum-table-disclosure-icon-size: var(--spectrum-component-height-75);
+  --spectrum-table-thumbnail-to-text: var(--spectrum-text-to-visual-100);
 }
 
 .spectrum-Table--sizeM {
@@ -140,8 +141,9 @@ governing permissions and limitations under the License.
   --spectrum-table-section-header-block-start-spacing: var(--spectrum-component-top-to-text-100);
   --spectrum-table-section-header-block-end-spacing: var(--spectrum-component-bottom-to-text-100);
 
-  /* Collapsible */
+  /* Collapsible and Thumbnails */
   --spectrum-table-disclosure-icon-size: var(--spectrum-component-height-100);
+  --spectrum-table-thumbnail-to-text: var(--spectrum-text-to-visual-100);
 }
 
 .spectrum-Table--sizeL {
@@ -167,8 +169,9 @@ governing permissions and limitations under the License.
   --spectrum-table-section-header-block-start-spacing: var(--spectrum-component-top-to-text-200);
   --spectrum-table-section-header-block-end-spacing: var(--spectrum-component-bottom-to-text-200);
 
-  /* Collapsible */
+  /* Collapsible and Thumbnails */
   --spectrum-table-disclosure-icon-size: var(--spectrum-component-height-200);
+  --spectrum-table-thumbnail-to-text: var(--spectrum-text-to-visual-200);
 }
 
 .spectrum-Table--sizeXL {
@@ -194,8 +197,9 @@ governing permissions and limitations under the License.
   --spectrum-table-section-header-block-start-spacing: var(--spectrum-component-top-to-text-300);
   --spectrum-table-section-header-block-end-spacing: var(--spectrum-component-bottom-to-text-300);
 
-  /* Collapsible */
+  /* Collapsible and Thumbnails */
   --spectrum-table-disclosure-icon-size: var(--spectrum-component-height-300);
+  --spectrum-table-thumbnail-to-text: var(--spectrum-text-to-visual-300);
 }
 
 /********* VARIANTS *********/
@@ -362,33 +366,6 @@ governing permissions and limitations under the License.
     .spectrum-Table-menuIcon {
       color: var(--mod-table-icon-color, var(--spectrum-table-icon-color));
     }
-
-    /*
-    &:hover {
-      color: var(--spectrum-table-m-regular-header-text-color-hover);
-
-      .spectrum-Table-sortedIcon {
-        color: var(--spectrum-table-m-regular-header-sort-icon-color-hover);
-      }
-    }
-
-    &:focus-ring,
-    &.is-focused {
-      color: var(--spectrum-table-m-regular-header-text-color-key-focus);
-
-      .spectrum-Table-sortedIcon {
-        color: var(--spectrum-table-m-regular-header-sort-icon-color-key-focus);
-      }
-    }
-
-    &:active {
-      color: var(--spectrum-table-m-regular-header-text-color-down);
-
-      .spectrum-Table-sortedIcon {
-        color: var(--spectrum-table-m-regular-header-sort-icon-color-down);
-      }
-    }
-    */
   }
 
   /* Is Sorted */
@@ -621,6 +598,7 @@ tbody.spectrum-Table-body {
   &.is-selected {
     background-color: var(--mod-table-selected-row-background-color-non-emphasized, var(--spectrum-table-selected-row-background-color-non-emphasized));
 
+    /* @todo There may be a new token added for this background color. */
     /*
     &:hover {
       background-color: var(--mod-table-selected-row-background-color, var(--spectrum-table-selected-row-background-color));

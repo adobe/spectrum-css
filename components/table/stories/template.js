@@ -2,11 +2,11 @@ import { html } from "lit-html";
 import { classMap } from "lit-html/directives/class-map.js";
 import { when } from "lit-html/directives/when.js";
 import { ifDefined } from "lit-html/directives/if-defined.js";
-import { repeat } from "lit-html/directives/repeat.js";
 
 import { Template as Icon } from "@spectrum-css/icon/stories/template.js";
 import { Template as Checkbox } from '@spectrum-css/checkbox/stories/template.js';
 import { Template as Button } from '@spectrum-css/button/stories/template.js';
+import { Template as Thumbnail } from '@spectrum-css/thumbnail/stories/template.js';
 
 import "../index.css";
 
@@ -24,12 +24,28 @@ export const TableRowItem = ({
   tier,
   isLastTier = false,
   useDivs = false,
+  showThumbnails = false,
   ariaControls,
   customClasses = [],
   size = "m",
   id
 }) => {
+  // Content for a table cell. 
+  // Passed in cellContent arg can be string that will be repeated, or an array. 
+  const getCellContent = (col) => {
+    const content = Array.isArray(cellContent) ? cellContent[col] : cellContent;
+    if (showThumbnails) {
+      return html`
+        ${Thumbnail({ size: "xs" })}
+        <span>${content}</span>
+      `;
+    } else {
+      return content;
+    }
+  }
+
   if (!useDivs){
+    // <TABLE> Markup
     return html`
       <tr
         class=${classMap({
@@ -68,18 +84,19 @@ export const TableRowItem = ({
                         ariaControls,
                       })
                     )}
-                    <div class="${rootClass}-cellContent">${Array.isArray(cellContent) ? cellContent[0] : cellContent}</div>
+                    <div class="${rootClass}-cellContent">${getCellContent(0)}</div>
                   </div>
                  </td>`
-          : html`<td class="${rootClass}-cell" tabindex="0" colspan=${ifDefined(isSectionHeader ? '3' : undefined)}>${Array.isArray(cellContent) ? cellContent[0] : cellContent}</td>`
+          : html`<td class="${rootClass}-cell" tabindex="0" colspan=${ifDefined(isSectionHeader ? '3' : undefined)}>${getCellContent(0)}</td>`
         }
         ${when(!isSectionHeader, () => html`
-          <td class="${rootClass}-cell" tabindex="0">${Array.isArray(cellContent) ? cellContent[1] : cellContent}</td>
-          <td class="${rootClass}-cell" tabindex="0">${Array.isArray(cellContent) ? cellContent[2] : cellContent}</td>`
+          <td class="${rootClass}-cell" tabindex="0">${getCellContent(1)}</td>
+          <td class="${rootClass}-cell" tabindex="0">${getCellContent(2)}</td>`
         )}
       </tr>
     `;
   } else {
+    // <DIV> Markup
     return html`
       <div
         role="row"
@@ -118,6 +135,7 @@ export const Template = ({
   isQuiet = false,
   isEmphasized = true,
   useDivs = false,
+  showThumbnails = false,
   rowItems = [],
   customClasses = [],
   id,
@@ -134,6 +152,7 @@ export const Template = ({
   }
 
   if (!useDivs){
+    // <TABLE> Markup
     return html`
       <table
         class=${classMap({
@@ -194,6 +213,7 @@ export const Template = ({
               rootClass,
               size,
               useDivs,
+              showThumbnails,
               tableIsEmphasized: isEmphasized,
               ...item
             })
@@ -202,6 +222,7 @@ export const Template = ({
       </table>
     `;
   } else {
+    // <DIV> Markup
     return html`
       <div
         role="grid"
