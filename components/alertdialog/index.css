@@ -18,7 +18,6 @@ governing permissions and limitations under the License.
   /* color */
   --spectrum-alert-dialog-warning-icon-color: var(--spectrum-notice-visual-color);
   --spectrum-alert-dialog-error-icon-color: var(--spectrum-negative-visual-color);
-  --spectrum-alert-dialog-background-color: var(--spectrum-gray-100);
 
   /* typography */
    --spectrum-alert-dialog-title-font-family: var(--spectrum-sans-font-family-stack);
@@ -59,11 +58,7 @@ governing permissions and limitations under the License.
   outline: none;
   padding: var(--spectrum-alert-dialog-padding);
 
-  .spectrum-Modal{
-    background: var(--spectrum-alert-dialog-background-color);
-  }
-
-  .spectrum-ButtonGroup{
+  .spectrum-ButtonGroup {
     justify-content: flex-end;
   }
 
@@ -86,7 +81,7 @@ governing permissions and limitations under the License.
   align-items: baseline;
 }
 
-.spectrum-AlertDialog-heading{
+.spectrum-AlertDialog-heading {
   font-family: var(--spectrum-alert-dialog-title-font-family);
   font-weight: var(--spectrum-alert-dialog-title-font-weight);
   font-style: var(--spectrum-alert-dialog-title-font-style);
@@ -97,7 +92,7 @@ governing permissions and limitations under the License.
   margin-block-end: var(--spectrum-alert-dialog-title-to-divider);
 }
 
-.spectrum-AlertDialog-content{
+.spectrum-AlertDialog-content {
   font-family: var(--spectrum-alert-dialog-body-font-family);
   font-weight: var(--spectrum-alert-dialog-body-font-weight);
   font-style: var(--spectrum-alert-dialog-body-font-style);
