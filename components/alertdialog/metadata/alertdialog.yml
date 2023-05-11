@@ -6,7 +6,7 @@ examples:
     description: This is the default variant for alert dialogs. Use a confirmation variant for asking a user to confirm a choice.
     demoClassName: spectrum-CSSExample-example--overlay
     markup: |
-      <button class="spectrum-Button spectrum-Button--sizeM spectrum-Button--outline spectrum-Button--staticWhite spectrum-CSSExample-overlayShowButton" onclick="openDialog(this.nextElementSibling)"><span class="spectrum-Button-label">Open Alert Confirmation Dialog</span></button>
+      <button class="spectrum-Button spectrum-Button--sizeM spectrum-Button--outline spectrum-Button--staticWhite spectrum-CSSExample-overlayShowButton" onclick="openDialog(this.nextElementSibling)"><span class="spectrum-Button-label">Open Alert Dialog</span></button>
       <div class="spectrum-Modal-wrapper spectrum-CSSExample-dialog">
         <div class="spectrum-Modal is-open" data-testid="modal">
           <section class="spectrum-AlertDialog spectrum-AlertDialog--confirmation" role="alertdialog" tabindex="-1" aria-modal="true">
@@ -31,7 +31,7 @@ examples:
     description: Information alert dialogs communicate important information that a user needs to acknowledge. Before using this kind of alert dialog, make sure it's the appropriate communication channel for the message instead of a toast or a more lightweight messaging option.
     demoClassName: spectrum-CSSExample-example--overlay
     markup: |
-      <button class="spectrum-Button spectrum-Button--sizeM spectrum-Button--outline spectrum-Button--staticWhite spectrum-CSSExample-overlayShowButton" onclick="openDialog(this.nextElementSibling)"><span class="spectrum-Button-label">Open Alert Confirmation AlertDialog</span></button>
+      <button class="spectrum-Button spectrum-Button--sizeM spectrum-Button--outline spectrum-Button--staticWhite spectrum-CSSExample-overlayShowButton" onclick="openDialog(this.nextElementSibling)"><span class="spectrum-Button-label">Open Alert Dialog</span></button>
 
       <div class="spectrum-Modal-wrapper spectrum-CSSExample-dialog">
         <div class="spectrum-Modal is-open" data-testid="modal">
@@ -57,7 +57,7 @@ examples:
     description: Warning alert dialogs communicate important information to users in relation to an issue that needs to be acknowledged, but does not block the user from moving forward.
     demoClassName: spectrum-CSSExample-example--overlay
     markup: |
-      <button class="spectrum-Button spectrum-Button--sizeM spectrum-Button--outline spectrum-Button--staticWhite spectrum-CSSExample-overlayShowButton" onclick="openDialog(this.nextElementSibling)"><span class="spectrum-Button-label">Open Alert Confirmation AlertDialog</span></button>
+      <button class="spectrum-Button spectrum-Button--sizeM spectrum-Button--outline spectrum-Button--staticWhite spectrum-CSSExample-overlayShowButton" onclick="openDialog(this.nextElementSibling)"><span class="spectrum-Button-label">Open Alert Dialog</span></button>
 
       <div class="spectrum-Modal-wrapper spectrum-CSSExample-dialog">
         <div class="spectrum-Modal is-open" data-testid="modal">
@@ -89,24 +89,21 @@ examples:
     description: Error alert dialogs communicate critical information about an issue that a user needs to acknowledge.
     demoClassName: spectrum-CSSExample-example--overlay
     markup: |
-      <button class="spectrum-Button spectrum-Button--sizeM spectrum-Button--outline spectrum-Button--staticWhite spectrum-CSSExample-overlayShowButton" onclick="openDialog(this.nextElementSibling)"><span class="spectrum-Button-label">Open Alert Confirmation AlertDialog</span></button>
+      <button class="spectrum-Button spectrum-Button--sizeM spectrum-Button--outline spectrum-Button--staticWhite spectrum-CSSExample-overlayShowButton" onclick="openDialog(this.nextElementSibling)"><span class="spectrum-Button-label">Open Alert Dialog</span></button>
 
       <div class="spectrum-Modal-wrapper spectrum-CSSExample-dialog">
         <div class="spectrum-Modal spectrum-AlertDialog-modal is-open" data-testid="modal">
           <section class="spectrum-AlertDialog spectrum-AlertDialog--error"  role="alertdialog" tabindex="-1" aria-modal="true">
             <div class="spectrum-AlertDialog-grid">
               <div class="spectrum-AlertDialog-header">
-                <h1 class="spectrum-AlertDialog-heading">Unverified format</h1>
+                <h1 class="spectrum-AlertDialog-heading">Unable to share</h1>
                   <svg class="spectrum-Icon spectrum-Icon--sizeM spectrum-AlertDialog-icon" focusable="false" aria-hidden="true">
                     <use xlink:href="#spectrum-icon-18-Alert" />
                   </svg>
               </div>
               <hr class="spectrum-Divider spectrum-Divider--sizeM spectrum-Divider--horizontal">
-              <section class="spectrum-AlertDialog-content">This format has not been verified and may not be viewable for some users. Do you want to continue publishing?</section>
+              <section class="spectrum-AlertDialog-content">An error occured while sharing your project. Please verify the email address and try again.</section>
               <div class="spectrum-ButtonGroup">
-                <button class="spectrum-Button spectrum-Button--sizeM spectrum-Button--outline spectrum-Button--secondary spectrum-ButtonGroup-item" type="button" onclick="closeDialog(this.closest('.spectrum-Modal-wrapper'))">
-                  <span class="spectrum-Button-label">Cancel</span>
-                </button>
                 <button class="spectrum-Button spectrum-Button--sizeM spectrum-Button--outline spectrum-Button--primary spectrum-ButtonGroup-item" type="button" onclick="closeDialog(this.closest('.spectrum-Modal-wrapper'))">
                   <span class="spectrum-Button-label">Continue</span>
                 </button>
@@ -120,7 +117,7 @@ examples:
     description: Destructive alert dialogs are for when a user needs to confirm an action that will impact their data or experience in a potentially negative way, such as deleting files or contacts.
     demoClassName: spectrum-CSSExample-example--overlay
     markup: |
-      <button class="spectrum-Button spectrum-Button--sizeM spectrum-Button--outline spectrum-Button--staticWhite spectrum-CSSExample-overlayShowButton" onclick="openDialog(this.nextElementSibling)"><span class="spectrum-Button-label">Open Alert Confirmation AlertDialog</span></button>
+      <button class="spectrum-Button spectrum-Button--sizeM spectrum-Button--outline spectrum-Button--staticWhite spectrum-CSSExample-overlayShowButton" onclick="openDialog(this.nextElementSibling)"><span class="spectrum-Button-label">Open Alert Dialog</span></button>
 
       <div class="spectrum-Modal-wrapper spectrum-CSSExample-dialog">
         <div class="spectrum-Modal is-open" data-testid="modal">
@@ -150,7 +147,7 @@ examples:
     description: An alert dialog can have a total of 3 buttons if the secondary outline button label is defined.
     demoClassName: spectrum-CSSExample-example--overlay
     markup: |
-      <button class="spectrum-Button spectrum-Button--sizeM spectrum-Button--outline spectrum-Button--staticWhite spectrum-CSSExample-overlayShowButton" onclick="openDialog(this.nextElementSibling)"><span class="spectrum-Button-label">Open Alert Confirmation AlertDialog</span></button>
+      <button class="spectrum-Button spectrum-Button--sizeM spectrum-Button--outline spectrum-Button--staticWhite spectrum-CSSExample-overlayShowButton" onclick="openDialog(this.nextElementSibling)"><span class="spectrum-Button-label">Open Alert Dialog</span></button>
 
       <div class="spectrum-Modal-wrapper spectrum-CSSExample-dialog">
         <div class="spectrum-Modal is-open" data-testid="modal">
@@ -178,7 +175,7 @@ examples:
     name: Scroll
     demoClassName: spectrum-CSSExample-example--overlay
     markup: |
-      <button class="spectrum-Button spectrum-Button--sizeM spectrum-Button--outline spectrum-Button--staticWhite spectrum-CSSExample-overlayShowButton" onclick="openDialog(this.nextElementSibling)"><span class="spectrum-Button-label">Open Alert Confirmation AlertDialog</span></button>
+      <button class="spectrum-Button spectrum-Button--sizeM spectrum-Button--outline spectrum-Button--staticWhite spectrum-CSSExample-overlayShowButton" onclick="openDialog(this.nextElementSibling)"><span class="spectrum-Button-label">Open Alert Dialog</span></button>
 
       <div class="spectrum-Modal-wrapper spectrum-CSSExample-dialog">
         <div class="spectrum-Modal is-open" data-testid="modal">
