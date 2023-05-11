@@ -37,6 +37,10 @@
 |`--mod-drop-zone-body-line-height`|
 |`--mod-illustrated-message-description-color:`|
 |`--mod-drop-zone-body-color`|
+|`--mod-actionbutton-font-size:`|
+|`--mod-drop-zone-content-font-size`|
+|`--mod-actionbutton-label-color:`|
+|`--mod-drop-zone-content-color`|
 |`--mod-drop-zone-width`|
 |`--mod-drop-zone-padding`|
 |`--mod-drop-zone-border-width`|
@@ -52,10 +56,6 @@
 |`--mod-illustrated-message-display:`|
 |`--mod-drop-zone-content-display:`|
 |`--mod-drop-zone-content-display`|
-|`--mod-actionbutton-font-size:`|
-|`--mod-drop-zone-content-font-size`|
-|`--mod-actionbutton-label-color:`|
-|`--mod-drop-zone-content-color`|
 |`--mod-drop-zone-content-height`|
 |`--mod-drop-zone-content-max-width`|
 |`--mod-drop-zone-content-edge-to-text`|
