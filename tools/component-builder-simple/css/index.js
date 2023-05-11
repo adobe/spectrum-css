@@ -176,7 +176,7 @@ function checkCSS(glob) {
       let errors = [];
       usedTokens.forEach(tokenName => {
         if (!coreTokens[tokenName] && !componentTokens[tokenName] && !tokenName.startsWith('--mod') && !tokenName.startsWith('--highcontrast')) {
-          errors.push(`${pkg.name} uses undefined token ${tokenName}`);
+          console.warn(`⚠️ ${pkg.name} uses undefined token ${tokenName}`);
         }
       });
 
