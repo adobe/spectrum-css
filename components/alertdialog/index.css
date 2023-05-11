@@ -14,6 +14,10 @@ governing permissions and limitations under the License.
   --spectrum-alert-dialog-min-width: var(--spectrum-alert-dialog-minimum-width);
   --spectrum-alert-dialog-max-width: var(--spectrum-alert-dialog-maximum-width);
   --spectrum-alert-dialog-icon-size: var(--spectrum-workflow-icon-size-100);
+
+  /* color */
+  --spectrum-alert-dialog-warning-icon-color: var(--spectrum-notice-visual-color);
+  --spectrum-alert-dialog-error-icon-color: var(--spectrum-negative-visual-color);
   --spectrum-alert-dialog-background-color: var(--spectrum-gray-100);
 
   /* typography */
@@ -65,13 +69,13 @@ governing permissions and limitations under the License.
 
   &--warning {
     .spectrum-AlertDialog-icon {
-      color: #E46F00;
+      color: var(--spectrum-alert-dialog-warning-icon-color);
     }
   }
 
   &--error{
     .spectrum-AlertDialog-icon {
-      color: #EA3829;
+      color: var(--spectrum-alert-dialog-error-icon-color);
     }
   }
 }

@@ -24,18 +24,11 @@ export const Template = ({
   ...globals
 }) => {
 
-  const iconColor =
-  variant === "error"
-    ? "red"
-    : variant === "warning"
-    ? "orange"
-    : "";
-
   const Dialog = html`
     <div
       class=${classMap({
         [rootClass]: true,
-        [`${rootClass}-${variant}`]: true,
+        [`${rootClass}--${variant}`]: true,
         ...customClasses.reduce((a, c) => ({ ...a, [c]: true }), {}),
       })}
       id=${ifDefined(id)}
@@ -50,7 +43,6 @@ export const Template = ({
           size: 'm',
           iconName: "Alert",
           customClasses: [`${rootClass}-icon`],
-          fill: iconColor,
           ...globals,
         })) }
       </div>

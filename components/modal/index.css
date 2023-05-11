@@ -20,7 +20,6 @@ governing permissions and limitations under the License.
 
   /* Distance between top and bottom of dialog and edge of window for fullscreen dialog */
   --spectrum-dialog-fullscreen-margin: 32px;
-  /* NEEDS TOKEN FROM ALERT DIALOG */
   --spectrum-dialog-max-height: 90vh;
 }
 
@@ -72,7 +71,7 @@ governing permissions and limitations under the License.
   /* Appear above underlay */
   z-index: 2;
 
-  /*  NEEDS ALERT DIALOG TOKEN Don't be bigger than the screen */
+  /* Don't be bigger than the screen */
   max-height: var(--spectrum-dialog-max-height);
 
   /* NEEDS ALERT DIALOG TOKEN */
