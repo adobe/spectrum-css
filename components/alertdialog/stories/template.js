@@ -35,10 +35,11 @@ export const Template = ({
       role="dialog"
       tabindex="-1"
       aria-modal="true"
+      aria-labelledby="dialog_label"
     >
       <div class="${rootClass}-grid">
       <div class="spectrum-AlertDialog-header">
-        <h1 class="${rootClass}-heading">${heading}</h1>
+        <h1 class="${rootClass}-heading" id="dialog_label">${heading}</h1>
         ${when(icon, () => Icon({
           size: 'm',
           iconName: "Alert",
