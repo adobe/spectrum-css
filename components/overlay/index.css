@@ -9,7 +9,7 @@ OF ANY KIND, either express or implied. See the License for the specific languag
 governing permissions and limitations under the License.
 */
 
-%spectrum-overlay {
+.spectrum-overlay {
   --spectrum-overlay-animation-distance: var(--spectrum-picker-m-texticon-popover-offset-y);
 
   visibility: hidden;
@@ -23,7 +23,7 @@ governing permissions and limitations under the License.
   pointer-events: none;
 }
 
-%spectrum-overlay--open {
+.spectrum-overlay--open {
   visibility: visible;
 
   opacity: 1;
@@ -33,18 +33,18 @@ governing permissions and limitations under the License.
   pointer-events: auto;
 }
 
-%spectrum-overlay--bottom--open {
+.spectrum-overlay--bottom--open {
   transform: translateY(var(--spectrum-overlay-animation-distance));
 }
 
-%spectrum-overlay--top--open {
+.spectrum-overlay--top--open {
   transform: translateY(calc(-1 * var(--spectrum-overlay-animation-distance)));
 }
 
-%spectrum-overlay--right--open {
+.spectrum-overlay--right--open {
   transform: translateX(var(--spectrum-overlay-animation-distance));
 }
 
-%spectrum-overlay--left--open {
+.spectrum-overlay--left--open {
   transform: translateX(calc(-1 * var(--spectrum-overlay-animation-distance)));
 }
