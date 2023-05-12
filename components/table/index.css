@@ -28,7 +28,8 @@ governing permissions and limitations under the License.
 
   --spectrum-table-icon-to-text: var(--spectrum-text-to-visual-100);
 
-  --spectrum-table-cell-vertical-align: top;
+  --spectrum-table-default-vertical-align: top;
+  --spectrum-table-header-vertical-align: middle;
   --spectrum-table-checkbox-cell-vertical-align: middle;
 
   /* Typography */
@@ -65,7 +66,6 @@ governing permissions and limitations under the License.
 
   --spectrum-table-focus-indicator-thickness: var(--spectrum-focus-indicator-thickness);
   --spectrum-table-focus-indicator-color: var(--spectrum-focus-indicator-color);
-  --spectrum-table-drop-target-box-shadow-spread: max(0px, calc(var(--mod-table-focus-indicator-thickness, var(--spectrum-table-focus-indicator-thickness)) - var(--mod-table-border-width, var(--spectrum-table-border-width))));
 
   --spectrum-table-transition-duration: var(--spectrum-animation-duration-100);
 
@@ -323,7 +323,6 @@ governing permissions and limitations under the License.
   --spectrum-table-outer-border-inline-width: 0px;
   --spectrum-table-header-background-color: var(--spectrum-transparent-white-100);
   --spectrum-table-row-background-color: var(--spectrum-transparent-white-100);
-  --spectrum-table-drop-target-box-shadow-spread: var(--mod-table-focus-indicator-thickness, var(--spectrum-table-focus-indicator-thickness));
 }
 
 /********* REGULAR / DEFAULT *********/
@@ -349,6 +348,7 @@ governing permissions and limitations under the License.
 .spectrum-Table-headCell {
   box-sizing: border-box;
   text-align: start;
+  vertical-align: var(--mod-table-header-vertical-align, var(--spectrum-table-header-vertical-align));
 
   font-family: var(--mod-table-header-font-family, var(--spectrum-table-row-font-family));
   font-size: var(--mod-table-header-font-size, var(--spectrum-table-row-font-size));
@@ -405,52 +405,31 @@ governing permissions and limitations under the License.
   text-align: end;
 }
 
-/* Placeholder selector for shared drop target overlay. */
-%drop-target {
-  &::before {
-    content: '';
-    position: absolute;
-    inset-block-start: 0;
-    inset-inline-start: 0;
-    inset-block-end: 0;
-    inset-inline-end: 0;
-    z-index: 1;
-  }
-}
-
 .spectrum-Table-body {
   position: relative;
   overflow: auto;
-  vertical-align: var(--mod-table-cell-vertical-align, var(--spectrum-table-cell-vertical-align));
 
-  /* Outside border when using div elements instead of table. */
-  border-inline-width: var(--mod-table-outer-border-inline-width, var(--spectrum-table-outer-border-inline-width));
-  border-block-width: var(--mod-table-border-width, var(--spectrum-table-border-width));
-
+  border: none;
   border-radius: var(--mod-table-border-radius, var(--spectrum-table-border-radius));
-  border-style: solid;
-  border-color: var(--mod-table-border-color, var(--spectrum-table-border-color));
-
   background-color: var(--mod-table-row-background-color, var(--spectrum-table-row-background-color));
 
   &.is-drop-target {
-    @inherit: %drop-target;
-
-    /* Additional box-shadow border on the outside of the regular border. */
-    box-shadow: 0 0 0 var(--mod-table-drop-target-box-shadow-spread, var(--spectrum-table-drop-target-box-shadow-spread)) var(--mod-table-focus-indicator-color, var(--spectrum-table-focus-indicator-color));
-
-    &::before {
-      background-color: var(--mod-table-selected-row-background-color, var(--spectrum-table-selected-row-background-color));
-    }
+    outline-width: var(--mod-table-focus-indicator-thickness, var(--spectrum-table-focus-indicator-thickness));
+    outline-style: solid;
+    outline-color: var(--mod-table-focus-indicator-color, var(--spectrum-table-focus-indicator-color));
+    outline-offset: calc(-1 * var(--mod-table-border-width, var(--spectrum-table-border-width)));
   }
 }
 
-/* Outside border when using table element, and row divider lines. */
-tbody.spectrum-Table-body {
-  border: none;
-
+/* Outside border, and row divider lines. */
+.spectrum-Table-body {
   .spectrum-Table-row {
     border-block-start: none;
+  }
+
+  &.is-drop-target {
+    /* Make sure negative offset outline is not covered by borders. */
+    --mod-table-border-color: transparent;
   }
 
   .spectrum-Table-cell {
@@ -490,15 +469,9 @@ tbody.spectrum-Table-body {
 }
 
 .spectrum-Table:not(.spectrum-Table--quiet) {
+  /* The tbody tag doesn't allow setting a border or border-radius. To make them work, border styles are 
+     instead applied to the individual cells around the outside, while using border-collapse: separate. */
   .spectrum-Table-body {
-    &.is-drop-target {
-      --spectrum-table-border-color: var(--mod-table-focus-indicator-color, var(--spectrum-table-focus-indicator-color));
-    }
-  }
-
-  /* The tbody tag doesn't allow setting a border or border-radius when using "border-collapse: separate". 
-     To make them work, border styles are instead applied to the individual cells around the outside. */
-  tbody.spectrum-Table-body {
     .spectrum-Table-row:first-child .spectrum-Table-cell:first-child {
       border-start-start-radius: var(--mod-table-border-radius, var(--spectrum-table-border-radius));
     }
@@ -522,6 +495,7 @@ tbody.spectrum-Table-body {
   font-size: var(--mod-table-row-font-size, var(--spectrum-table-row-font-size));
   font-weight: var(--mod-table-row-font-weight, var(--spectrum-table-row-font-weight));
   line-height: var(--mod-table-row-line-height, var(--spectrum-table-row-line-height));
+  vertical-align: var(--mod-table-default-vertical-align, var(--spectrum-table-default-vertical-align));
 
   padding-block: var(--mod-table-row-top-to-text, var(--spectrum-table-row-top-to-text)) var(--mod-table-row-bottom-to-text, var(--spectrum-table-row-bottom-to-text));
   padding-inline: calc(
@@ -630,12 +604,21 @@ tbody.spectrum-Table-body {
     }
   }
 
-  &.is-drop-target {
-    @inherit: %drop-target;
+  &.is-drop-target,
+  .spectrum-Table-body.is-drop-target & {
+    background-color: var(--mod-table-selected-row-background-color, var(--spectrum-table-selected-row-background-color));
+  }
 
-    &::before {
-      box-shadow: inset 0 0 0 var(--mod-table-focus-indicator-thickness, var(--spectrum-table-focus-indicator-thickness)) var(--mod-table-focus-indicator-color, var(--spectrum-table-focus-indicator-color));
-      background-color: var(--mod-table-selected-row-background-color, var(--spectrum-table-selected-row-background-color));
+  &.is-drop-target {
+    outline-width: var(--mod-table-focus-indicator-thickness, var(--spectrum-table-focus-indicator-thickness));
+    outline-style: solid;
+    outline-color: var(--mod-table-focus-indicator-color, var(--spectrum-table-focus-indicator-color));
+    outline-offset: calc(-1 * var(--mod-table-focus-indicator-thickness, var(--spectrum-table-focus-indicator-thickness)));
+
+    /* Make sure negative offset outline is not covered by borders. */
+    --mod-table-border-color: transparent;
+    .spectrum-Table-cell {
+      border-top-color: var(--mod-table-focus-indicator-color, var(--spectrum-table-focus-indicator-color));
     }
   }
 }
@@ -714,22 +697,29 @@ tbody.spectrum-Table-body {
   vertical-align: super;
 }
 
+/********* DIVS *********/
+/* Markup that uses divs instead of <table> elements. */
+div.spectrum-Table {
+  display: table;
+}
 
-/* Using Div Markup */
-div.spectrum-Table-row,
 div.spectrum-Table-head {
-  display: flex;
+  display: table-header-group;
 }
 
-div.spectrum-Table-headCell,
-div.spectrum-Table-cell {
-  flex: 1;
+div.spectrum-Table-body {
+  display: table-row-group;
 }
 
-div.spectrum-Table-checkboxCell {
-  flex-grow: 0;
+div.spectrum-Table-row,
+div.spectrum-Table-head div[role="row"] {
+  display: table-row;
 }
 
+div.spectrum-Table-cell,
+div.spectrum-Table-headCell {
+  display: table-cell;
+}
 
 /********* COLLAPSIBLE *********/
 .spectrum-Table-row {

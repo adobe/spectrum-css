@@ -25,6 +25,7 @@ export const TableRowItem = ({
   isLastTier = false,
   useDivs = false,
   showThumbnails = false,
+  isDropTarget = false,
   ariaControls,
   customClasses = [],
   size = "m",
@@ -66,6 +67,7 @@ export const TableRowItem = ({
         ['is-selected']: isSelected,
         ['is-expanded']: isExpanded,
         ['is-last-tier']: isLastTier,
+        ['is-drop-target']: isDropTarget,
         ...customClasses.reduce((a, c) => ({ ...a, [c]: true }), {})
       })}
       role=${useDivs ? "row" : nothing}
@@ -75,7 +77,7 @@ export const TableRowItem = ({
     >
       ${when(showCheckbox, () => html`
         <${cellTag}
-          role=${useDivs ? "gridcell" : nothing}
+          role=${useDivs ? "cell" : nothing}
           class="spectrum-Table-cell spectrum-Table-checkboxCell"
         >
           ${Checkbox({
@@ -89,7 +91,7 @@ export const TableRowItem = ({
 
       ${isCollapsible 
         ? html`<${cellTag}
-                  role=${useDivs ? "gridcell" : nothing}
+                  role=${useDivs ? "cell" : nothing}
                   class=${classMap({
                     [`${rootClass}-cell`]: true,
                     [`${rootClass}-cell--collapsible`]: true,
@@ -115,7 +117,7 @@ export const TableRowItem = ({
               </${cellTag}>`
 
         : html`<${cellTag}
-                  role=${useDivs ? "gridcell" : nothing}
+                  role=${useDivs ? "cell" : nothing}
                   class=${classMap({
                     [`${rootClass}-cell`]: true,
                     [`${rootClass}-cell--thumbnail`]: useThumbnail,
@@ -126,7 +128,7 @@ export const TableRowItem = ({
 
       ${when(!isSectionHeader, () => html`
         <${cellTag}
-          role=${useDivs ? "gridcell" : nothing}
+          role=${useDivs ? "cell" : nothing}
           class=${classMap({
             [`${rootClass}-cell`]: true,
             [`${rootClass}-cell--thumbnail`]: useThumbnail,
@@ -134,7 +136,7 @@ export const TableRowItem = ({
           tabindex="0">${getCellContent(1)}</${cellTag}>
 
         <${cellTag}
-          role=${useDivs ? "gridcell" : nothing}
+          role=${useDivs ? "cell" : nothing}
           class=${classMap({
             [`${rootClass}-cell`]: true,
           })}
@@ -172,11 +174,12 @@ export const Template = ({
   const tableTag = useDivs ? literal`div` : literal`table`;
   const theadTag = useDivs ? literal`div` : literal`thead`;
   const tbodyTag = useDivs ? literal`div` : literal`tbody`;
+  const rowTag = useDivs ? literal`div` : literal`tr`;
   const thTag = useDivs ? literal`div` : literal`th`;
 
   return html`
     <${tableTag}
-      role=${useDivs ? "grid" : nothing}
+      role=${useDivs ? "table" : nothing}
       class=${classMap({
         [rootClass]: true,
         [`${rootClass}--size${size?.toUpperCase()}`]: typeof size !== "undefined",
@@ -188,8 +191,8 @@ export const Template = ({
       id=${ifDefined(id)}
       style="max-width: 800px;"
     >
-      <${theadTag} class="${rootClass}-head" role=${useDivs ? "row" : nothing}>
-        ${!useDivs ? literal`<tr>` : ''}
+      <${theadTag} class="${rootClass}-head" role=${useDivs ? "rowgroup" : nothing}>
+        <${rowTag} role=${useDivs ? "row" : nothing}>
           ${when(rowItems.some(item => item.showCheckbox === true), () => html`
             <${thTag}
               class="spectrum-Table-headCell spectrum-Table-checkboxCell" 
@@ -237,7 +240,7 @@ export const Template = ({
           <${thTag}
             class="${rootClass}-headCell"
             role=${useDivs ? "columnheader" : nothing}>Column Title</${thTag}>
-        ${!useDivs ? literal`</tr>` : ''}
+        </${rowTag}>
       </${theadTag}>
       <${tbodyTag}
         class=${classMap({

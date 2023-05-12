@@ -387,3 +387,38 @@ ThumbnailsCollapsible.args = {
     },
   ]
 };
+
+export const RowDropzone = Template.bind({});
+RowDropzone.parameters = {
+  docs: {
+    description: {
+      story: 'In addition to the overall table, individual rows can be designated as a drop target. Only one dropzone row should show at a time, but this example sets multiple at different parts of the table to test that they all display the same.',
+    },
+  },
+};
+RowDropzone.args = {
+  rowItems: [
+    {
+      cellContent: "Table Row Alpha",
+      isDropTarget: true,
+    },
+    {
+      cellContent: "Table Row Bravo",
+    },
+    {
+      cellContent: "Table Row Charlie",
+      isSelected: true,
+      isDropTarget: true,
+    },
+    {
+      cellContent: "Table Row Delta",
+    },
+    {
+      cellContent: "Table Row Echo",
+    },
+    {
+      cellContent: "Table Row Foxtrot",
+      isDropTarget: true,
+    },
+  ]
+};
