@@ -54,12 +54,21 @@ export default {
       control: "boolean",
     },
     showThumbnails: {
-      name: "Show Thumbnails in cell content.",
+      name: "Show Thumbnails in Content",
       description: "Uses the Thumbnail component at the start of the first column's cells.",
       type: { name: "boolean" },
       table: {
         type: { summary: "boolean" },
         category: "Component",
+      },
+      control: "boolean",
+    },
+    isDropTarget: {
+      name: "Dropzone (Drop Target)",
+      type: { name: "boolean" },
+      table: {
+        type: { summary: "boolean" },
+        category: "State",
       },
       control: "boolean",
     },
@@ -75,6 +84,7 @@ export default {
     isEmphasized: true,
     useDivs: false,
     showThumbnails: false,
+    isDropTarget: false,
   },
   parameters: {
     actions: {
@@ -86,9 +96,6 @@ export default {
         : undefined,
     },
   },
-  // decorators: [
-  //   (StoryFn) => { return html`<div>${StoryFn()}</div>`; }
-  // ]
 };
 
 export const Default = Template.bind({});
@@ -119,7 +126,11 @@ MultiSelect.storyName = "Multi-select";
 MultiSelect.args = {
   rowItems: [
     {
-      cellContent: "Table Row Alpha",
+      cellContent: [
+        "Table Row Alpha",
+        "Alpha",
+        "Table Row Alpha",
+      ],
       showCheckbox: true,
     },
     {
@@ -304,6 +315,41 @@ CollapsibleMultiSelect.args = {
 
 export const Thumbnails = Template.bind({});
 Thumbnails.args = {
+  showThumbnails: true,
+  rowItems: [
+    {
+      cellContent: [
+        "Table Row Alpha",
+        "Test",
+        "2",
+      ]
+    },
+    {
+      cellContent: [
+        "Table Row Bravo",
+        "Test",
+        "28",
+      ]
+    },
+    {
+      cellContent: [
+        "Table Row Charlie. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt.",
+        "Test",
+        "23",
+      ]
+    },
+    {
+      cellContent: [
+        "Table Row Delta",
+        "Test",
+        "7",
+      ]
+    },
+  ]
+};
+
+export const ThumbnailsCollapsible = Template.bind({});
+ThumbnailsCollapsible.args = {
   showThumbnails: true,
   rowItems: [
     {

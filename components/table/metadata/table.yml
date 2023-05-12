@@ -973,7 +973,7 @@ examples:
       </div>
   - id: table-collapsible
     name: Collapsible Rows
-    description: "In a table with collapsible rows, all child items must have columns that match the parent items. See the Guidelines for more info on using collapsible rows."
+    description: "In a table with collapsible rows, all child items must have columns that match the parent items. See the Guidelines for more info on how and when to use collapsible rows."
     markup: |
       <table class="spectrum-Table spectrum-Table--sizeM spectrum-Table--emphasized">
         <thead class="spectrum-Table-head">
@@ -1007,7 +1007,7 @@ examples:
                     <use xlink:href="#spectrum-css-icon-Chevron100" />
                   </svg>
                 </button>
-                <div class="spectrum-Table-cellContent">Row Item Alpha</span>
+                <div class="spectrum-Table-collapseContent">Row Item Alpha</span>
               </div>
             </td>
             <td class="spectrum-Table-cell" tabindex="0">Row Item Alpha</td>
@@ -1026,7 +1026,7 @@ examples:
                     <use xlink:href="#spectrum-css-icon-Chevron100" />
                   </svg>
                 </button>
-                <div class="spectrum-Table-cellContent">Row Item Bravo</span>
+                <div class="spectrum-Table-collapseContent">Row Item Bravo</span>
               </div>
             </td>
             <td class="spectrum-Table-cell" tabindex="0">Row Item Bravo</td>
@@ -1035,7 +1035,7 @@ examples:
           <tr class="spectrum-Table-row spectrum-Table-row--collapsible" data-tier="2" id="table-cr-charlie" hidden>
             <td class="spectrum-Table-cell" tabindex="0">
               <div class="spectrum-Table-collapseInner">
-                <div class="spectrum-Table-cellContent">Row Item Charlie</span>
+                <div class="spectrum-Table-collapseContent">Row Item Charlie</span>
               </div>
             </td>
             <td class="spectrum-Table-cell" tabindex="0">Row Item Charlie</td>
@@ -1054,7 +1054,7 @@ examples:
                     <use xlink:href="#spectrum-css-icon-Chevron100" />
                   </svg>
                 </button>
-                <div class="spectrum-Table-cellContent">Row Item Delta</div>
+                <div class="spectrum-Table-collapseContent">Row Item Delta</div>
               </div>
             </td>
             <td class="spectrum-Table-cell" tabindex="0">Row Item Delta</td>
@@ -1063,7 +1063,7 @@ examples:
           <tr class="spectrum-Table-row spectrum-Table-row--collapsible is-last-tier" aria-expanded="true" data-tier="2" id="table-cr-echo">
             <td class="spectrum-Table-cell spectrum-Table-cell--collapsible" tabindex="0">
               <div class="spectrum-Table-collapseInner">
-                <div class="spectrum-Table-cellContent">Row Item Echo</div>
+                <div class="spectrum-Table-collapseContent">Row Item Echo</div>
               </div>
             </td>
             <td class="spectrum-Table-cell" tabindex="0">Row Item Echo</td>
@@ -1072,11 +1072,87 @@ examples:
           <tr class="spectrum-Table-row spectrum-Table-row--collapsible is-last-tier" aria-expanded="true" data-tier="2" id="table-cr-foxtrot">
             <td class="spectrum-Table-cell spectrum-Table-cell--collapsible" tabindex="0">
               <div class="spectrum-Table-collapseInner">
-                <div class="spectrum-Table-cellContent">Row Item Foxtrot</div>
+                <div class="spectrum-Table-collapseContent">Row Item Foxtrot</div>
               </div>
             </td>
             <td class="spectrum-Table-cell" tabindex="0">Row Item Foxtrot</td>
             <td class="spectrum-Table-cell" tabindex="0">Row Item Foxtrot</td>
+          </tr>
+        </tbody>
+      </table>
+  - id: table-thumbnails
+    name: Thumbnails
+    description: "Thumbnails can be used in the table content, with some additional markup and classes for alignment. This variant can also be combined with collapsible rows."
+    markup: |
+      <table class="spectrum-Table spectrum-Table--sizeM spectrum-Table--emphasized">
+        <thead class="spectrum-Table-head">
+          <tr>
+            <th class="spectrum-Table-headCell is-sortable is-sorted-desc" aria-sort="descending" tabindex="0">
+              <svg class="spectrum-Icon spectrum-UIIcon-ArrowDown100 spectrum-Table-sortedIcon" focusable="false" aria-hidden="true">
+                <use xlink:href="#spectrum-css-icon-Arrow100" />
+              </svg>
+              <span>Animals</span>
+            </th>
+            <th class="spectrum-Table-headCell is-sortable" aria-sort="none">
+              <svg class="spectrum-Icon spectrum-UIIcon-ArrowDown100 spectrum-Table-sortedIcon" focusable="false" aria-hidden="true">
+                <use xlink:href="#spectrum-css-icon-Arrow100" />
+              </svg>
+              <span>Number</span>
+            </th>
+          </tr>
+        </thead>
+        <tbody class="spectrum-Table-body">
+          <tr class="spectrum-Table-row">
+            <td class="spectrum-Table-cell spectrum-Table-cell--thumbnail" tabindex="0">
+              <div class="spectrum-Table-thumbnailInner">
+                <div class="spectrum-Thumbnail spectrum-Thumbnail--cover spectrum-Thumbnail--size300">
+                  <div class="spectrum-Thumbnail-image-wrapper">
+                    <img class="spectrum-Thumbnail-image" src="img/flowers.png" alt="Placeholder image">
+                  </div>
+                </div>
+                <div class="spectrum-Table-thumbnailContent">Birds</div>
+              </div>
+            </td>
+            <td class="spectrum-Table-cell" tabindex="0">2</td>
+          </tr>
+          <tr class="spectrum-Table-row">
+            <td class="spectrum-Table-cell spectrum-Table-cell--thumbnail" tabindex="0">
+              <div class="spectrum-Table-thumbnailInner">
+                <div class="spectrum-Thumbnail spectrum-Thumbnail--cover spectrum-Thumbnail--size300">
+                  <div class="spectrum-Thumbnail-image-wrapper">
+                    <img class="spectrum-Thumbnail-image" src="img/flowers.png" alt="Placeholder image">
+                  </div>
+                </div>
+                <div class="spectrum-Table-thumbnailContent">Ducks</div>
+              </div>
+            </td>
+            <td class="spectrum-Table-cell" tabindex="0">23</td>
+          </tr>
+          <tr class="spectrum-Table-row">
+            <td class="spectrum-Table-cell spectrum-Table-cell--thumbnail" tabindex="0">
+              <div class="spectrum-Table-thumbnailInner">
+                <div class="spectrum-Thumbnail spectrum-Thumbnail--cover spectrum-Thumbnail--size300">
+                  <div class="spectrum-Thumbnail-image-wrapper">
+                    <img class="spectrum-Thumbnail-image" src="img/flowers.png" alt="Placeholder image">
+                  </div>
+                </div>
+                <div class="spectrum-Table-thumbnailContent">Goats</div>
+              </div>
+            </td>
+            <td class="spectrum-Table-cell" tabindex="0">7</td>
+          </tr>
+          <tr class="spectrum-Table-row">
+            <td class="spectrum-Table-cell spectrum-Table-cell--thumbnail" tabindex="0">
+              <div class="spectrum-Table-thumbnailInner">
+                <div class="spectrum-Thumbnail spectrum-Thumbnail--cover spectrum-Thumbnail--size300">
+                  <div class="spectrum-Thumbnail-image-wrapper">
+                    <img class="spectrum-Thumbnail-image" src="img/flowers.png" alt="Placeholder image">
+                  </div>
+                </div>
+                <div class="spectrum-Table-thumbnailContent">Rabbits</div>
+              </div>
+            </td>
+            <td class="spectrum-Table-cell" tabindex="0">18</td>
           </tr>
         </tbody>
       </table>
@@ -1085,46 +1161,46 @@ examples:
     description: Tables that accept dropped content.
     markup: |
       <div class="spectrum-Table spectrum-Table--sizeM spectrum-Table--emphasized" role="grid">
-        <div class="spectrum-Table-head" style="display: flex" role="row">
-          <div class="spectrum-Table-headCell is-sortable is-sorted-desc" style="flex: 1" role="columnheader" aria-sort="descending" tabindex="0">
+        <div class="spectrum-Table-head" role="row">
+          <div class="spectrum-Table-headCell is-sortable is-sorted-desc" role="columnheader" aria-sort="descending" tabindex="0">
             <svg class="spectrum-Icon spectrum-UIIcon-ArrowDown100 spectrum-Table-sortedIcon" focusable="false" aria-hidden="true">
               <use xlink:href="#spectrum-css-icon-Arrow100" />
             </svg>
             <span>Column Title</span>
           </div>
-          <div class="spectrum-Table-headCell is-sortable" style="flex: 1" role="columnheader" aria-sort="none" tabindex="0">
+          <div class="spectrum-Table-headCell is-sortable" role="columnheader" aria-sort="none" tabindex="0">
             <svg class="spectrum-Icon spectrum-UIIcon-ArrowDown100 spectrum-Table-sortedIcon" focusable="false" aria-hidden="true">
               <use xlink:href="#spectrum-css-icon-Arrow100" />
             </svg>
             <span>Column Title</span>
           </div>
-          <div class="spectrum-Table-headCell" style="flex: 1" role="columnheader">Column Title</div>
+          <div class="spectrum-Table-headCell" role="columnheader">Column Title</div>
         </div>
         <div class="spectrum-Table-body is-drop-target" style="height: 120px" role="rowgroup">
-          <div class="spectrum-Table-row" style="display: flex" role="row">
-            <div class="spectrum-Table-cell" style="flex: 1" role="gridcell">Row Item Alpha</div>
-            <div class="spectrum-Table-cell" style="flex: 1" role="gridcell">Row Item Alpha</div>
-            <div class="spectrum-Table-cell" style="flex: 1" role="gridcell">Row Item Alpha</div>
+          <div class="spectrum-Table-row" role="row">
+            <div class="spectrum-Table-cell" role="gridcell">Row Item Alpha</div>
+            <div class="spectrum-Table-cell" role="gridcell">Row Item Alpha</div>
+            <div class="spectrum-Table-cell" role="gridcell">Row Item Alpha</div>
           </div>
-          <div class="spectrum-Table-row" style="display: flex" role="row">
-            <div class="spectrum-Table-cell" style="flex: 1" role="gridcell">Row Item Bravo</div>
-            <div class="spectrum-Table-cell" style="flex: 1" role="gridcell">Row Item Bravo</div>
-            <div class="spectrum-Table-cell" style="flex: 1" role="gridcell">Row Item Bravo</div>
+          <div class="spectrum-Table-row" role="row">
+            <div class="spectrum-Table-cell" role="gridcell">Row Item Bravo</div>
+            <div class="spectrum-Table-cell" role="gridcell">Row Item Bravo</div>
+            <div class="spectrum-Table-cell" role="gridcell">Row Item Bravo</div>
           </div>
-          <div class="spectrum-Table-row" style="display: flex" role="row">
-            <div class="spectrum-Table-cell" style="flex: 1" role="gridcell">Row Item Charlie</div>
-            <div class="spectrum-Table-cell" style="flex: 1" role="gridcell">Row Item Charlie</div>
-            <div class="spectrum-Table-cell" style="flex: 1" role="gridcell">Row Item Charlie</div>
+          <div class="spectrum-Table-row" role="row">
+            <div class="spectrum-Table-cell" role="gridcell">Row Item Charlie</div>
+            <div class="spectrum-Table-cell" role="gridcell">Row Item Charlie</div>
+            <div class="spectrum-Table-cell" role="gridcell">Row Item Charlie</div>
           </div>
-          <div class="spectrum-Table-row" style="display: flex" role="row">
-            <div class="spectrum-Table-cell" style="flex: 1" role="gridcell">Row Item Delta</div>
-            <div class="spectrum-Table-cell" style="flex: 1" role="gridcell">Row Item Delta</div>
-            <div class="spectrum-Table-cell" style="flex: 1" role="gridcell">Row Item Delta</div>
+          <div class="spectrum-Table-row" role="row">
+            <div class="spectrum-Table-cell" role="gridcell">Row Item Delta</div>
+            <div class="spectrum-Table-cell" role="gridcell">Row Item Delta</div>
+            <div class="spectrum-Table-cell" role="gridcell">Row Item Delta</div>
           </div>
-          <div class="spectrum-Table-row" style="display: flex" role="row">
-            <div class="spectrum-Table-cell" style="flex: 1" role="gridcell">Row Item Echo</div>
-            <div class="spectrum-Table-cell" style="flex: 1" role="gridcell">Row Item Echo</div>
-            <div class="spectrum-Table-cell" style="flex: 1" role="gridcell">Row Item Echo</div>
+          <div class="spectrum-Table-row" role="row">
+            <div class="spectrum-Table-cell" role="gridcell">Row Item Echo</div>
+            <div class="spectrum-Table-cell" role="gridcell">Row Item Echo</div>
+            <div class="spectrum-Table-cell" role="gridcell">Row Item Echo</div>
           </div>
         </div>
       </div>
@@ -1177,98 +1253,51 @@ examples:
           </tr>
         </tbody>
       </table>
-  - id: table-body-dropzone-quiet
-    name: Body Dropzone with Divs (Quiet)
-    markup: |
-      <div class="spectrum-Table spectrum-Table--sizeM spectrum-Table--emphasized spectrum-Table--quiet" role="grid">
-        <div class="spectrum-Table-head" style="display: flex" role="row">
-          <div class="spectrum-Table-headCell is-sortable is-sorted-desc" style="flex: 1" role="columnheader" aria-sort="descending" tabindex="0">
-            <svg class="spectrum-Icon spectrum-UIIcon-ArrowDown100 spectrum-Table-sortedIcon" focusable="false" aria-hidden="true">
-              <use xlink:href="#spectrum-css-icon-Arrow100" />
-            </svg>
-            <span>Column Title</span>
-          </div>
-          <div class="spectrum-Table-headCell is-sortable" style="flex: 1" role="columnheader" aria-sort="none" tabindex="0">
-            <svg class="spectrum-Icon spectrum-UIIcon-ArrowDown100 spectrum-Table-sortedIcon" focusable="false" aria-hidden="true">
-              <use xlink:href="#spectrum-css-icon-Arrow100" />
-            </svg>
-            <span>Column Title</span>
-          </div>
-          <div class="spectrum-Table-headCell" style="flex: 1" role="columnheader">Column Title</div>
-        </div>
-        <div class="spectrum-Table-body is-drop-target" style="height: 120px" role="rowgroup">
-          <div class="spectrum-Table-row" style="display: flex" role="row">
-            <div class="spectrum-Table-cell" style="flex: 1" role="gridcell">Row Item Alpha</div>
-            <div class="spectrum-Table-cell" style="flex: 1" role="gridcell">Row Item Alpha</div>
-            <div class="spectrum-Table-cell" style="flex: 1" role="gridcell">Row Item Alpha</div>
-          </div>
-          <div class="spectrum-Table-row" style="display: flex" role="row">
-            <div class="spectrum-Table-cell" style="flex: 1" role="gridcell">Row Item Bravo</div>
-            <div class="spectrum-Table-cell" style="flex: 1" role="gridcell">Row Item Bravo</div>
-            <div class="spectrum-Table-cell" style="flex: 1" role="gridcell">Row Item Bravo</div>
-          </div>
-          <div class="spectrum-Table-row" style="display: flex" role="row">
-            <div class="spectrum-Table-cell" style="flex: 1" role="gridcell">Row Item Charlie</div>
-            <div class="spectrum-Table-cell" style="flex: 1" role="gridcell">Row Item Charlie</div>
-            <div class="spectrum-Table-cell" style="flex: 1" role="gridcell">Row Item Charlie</div>
-          </div>
-          <div class="spectrum-Table-row" style="display: flex" role="row">
-            <div class="spectrum-Table-cell" style="flex: 1" role="gridcell">Row Item Delta</div>
-            <div class="spectrum-Table-cell" style="flex: 1" role="gridcell">Row Item Delta</div>
-            <div class="spectrum-Table-cell" style="flex: 1" role="gridcell">Row Item Delta</div>
-          </div>
-          <div class="spectrum-Table-row" style="display: flex" role="row">
-            <div class="spectrum-Table-cell" style="flex: 1" role="gridcell">Row Item Echo</div>
-            <div class="spectrum-Table-cell" style="flex: 1" role="gridcell">Row Item Echo</div>
-            <div class="spectrum-Table-cell" style="flex: 1" role="gridcell">Row Item Echo</div>
-          </div>
-        </div>
-      </div>
   - id: table-row-dropzone
     name: Row Dropzone
     description: Rows that accept dropped content.
     markup: |
       <div class="spectrum-Table spectrum-Table--sizeM spectrum-Table--emphasized" role="grid">
-        <div class="spectrum-Table-head" style="display: flex" role="row">
-          <div class="spectrum-Table-headCell is-sortable is-sorted-desc" style="flex: 1" role="columnheader" aria-sort="descending" tabindex="0">
+        <div class="spectrum-Table-head" role="row">
+          <div class="spectrum-Table-headCell is-sortable is-sorted-desc" role="columnheader" aria-sort="descending" tabindex="0">
             <svg class="spectrum-Icon spectrum-UIIcon-ArrowDown100 spectrum-Table-sortedIcon" focusable="false" aria-hidden="true">
               <use xlink:href="#spectrum-css-icon-Arrow100" />
             </svg>
             <span>Column Title</span>
           </div>
-          <div class="spectrum-Table-headCell is-sortable" style="flex: 1" role="columnheader" aria-sort="none" tabindex="0">
+          <div class="spectrum-Table-headCell is-sortable" role="columnheader" aria-sort="none" tabindex="0">
             <svg class="spectrum-Icon spectrum-UIIcon-ArrowDown100 spectrum-Table-sortedIcon" focusable="false" aria-hidden="true">
               <use xlink:href="#spectrum-css-icon-Arrow100" />
             </svg>
             <span>Column Title</span>
           </div>
-          <div class="spectrum-Table-headCell" style="flex: 1" role="columnheader">Column Title</div>
+          <div class="spectrum-Table-headCell" role="columnheader">Column Title</div>
         </div>
         <div class="spectrum-Table-body" style="height: 120px" role="rowgroup">
-          <div class="spectrum-Table-row" style="display: flex" role="row">
-            <div class="spectrum-Table-cell" style="flex: 1" role="gridcell">Row Item Alpha</div>
-            <div class="spectrum-Table-cell" style="flex: 1" role="gridcell">Row Item Alpha</div>
-            <div class="spectrum-Table-cell" style="flex: 1" role="gridcell">Row Item Alpha</div>
+          <div class="spectrum-Table-row" role="row">
+            <div class="spectrum-Table-cell" role="gridcell">Row Item Alpha</div>
+            <div class="spectrum-Table-cell" role="gridcell">Row Item Alpha</div>
+            <div class="spectrum-Table-cell" role="gridcell">Row Item Alpha</div>
           </div>
-          <div class="spectrum-Table-row is-drop-target" style="display: flex" role="row">
-            <div class="spectrum-Table-cell" style="flex: 1" role="gridcell">Row Item Bravo</div>
-            <div class="spectrum-Table-cell" style="flex: 1" role="gridcell">Row Item Bravo</div>
-            <div class="spectrum-Table-cell" style="flex: 1" role="gridcell">Row Item Bravo</div>
+          <div class="spectrum-Table-row is-drop-target" role="row">
+            <div class="spectrum-Table-cell" role="gridcell">Row Item Bravo</div>
+            <div class="spectrum-Table-cell" role="gridcell">Row Item Bravo</div>
+            <div class="spectrum-Table-cell" role="gridcell">Row Item Bravo</div>
           </div>
-          <div class="spectrum-Table-row" style="display: flex" role="row">
-            <div class="spectrum-Table-cell" style="flex: 1" role="gridcell">Row Item Charlie</div>
-            <div class="spectrum-Table-cell" style="flex: 1" role="gridcell">Row Item Charlie</div>
-            <div class="spectrum-Table-cell" style="flex: 1" role="gridcell">Row Item Charlie</div>
+          <div class="spectrum-Table-row" role="row">
+            <div class="spectrum-Table-cell" role="gridcell">Row Item Charlie</div>
+            <div class="spectrum-Table-cell" role="gridcell">Row Item Charlie</div>
+            <div class="spectrum-Table-cell" role="gridcell">Row Item Charlie</div>
           </div>
-          <div class="spectrum-Table-row" style="display: flex" role="row">
-            <div class="spectrum-Table-cell" style="flex: 1" role="gridcell">Row Item Delta</div>
-            <div class="spectrum-Table-cell" style="flex: 1" role="gridcell">Row Item Delta</div>
-            <div class="spectrum-Table-cell" style="flex: 1" role="gridcell">Row Item Delta</div>
+          <div class="spectrum-Table-row" role="row">
+            <div class="spectrum-Table-cell" role="gridcell">Row Item Delta</div>
+            <div class="spectrum-Table-cell" role="gridcell">Row Item Delta</div>
+            <div class="spectrum-Table-cell" role="gridcell">Row Item Delta</div>
           </div>
-          <div class="spectrum-Table-row" style="display: flex" role="row">
-            <div class="spectrum-Table-cell" style="flex: 1" role="gridcell">Row Item Echo</div>
-            <div class="spectrum-Table-cell" style="flex: 1" role="gridcell">Row Item Echo</div>
-            <div class="spectrum-Table-cell" style="flex: 1" role="gridcell">Row Item Echo</div>
+          <div class="spectrum-Table-row" role="row">
+            <div class="spectrum-Table-cell" role="gridcell">Row Item Echo</div>
+            <div class="spectrum-Table-cell" role="gridcell">Row Item Echo</div>
+            <div class="spectrum-Table-cell" role="gridcell">Row Item Echo</div>
           </div>
         </div>
       </div>
@@ -1276,46 +1305,46 @@ examples:
     name: Row Dropzone (Quiet)
     markup: |
       <div class="spectrum-Table spectrum-Table--sizeM spectrum-Table--emphasized spectrum-Table--quiet" role="grid">
-        <div class="spectrum-Table-head" style="display: flex" role="row">
-          <div class="spectrum-Table-headCell is-sortable is-sorted-desc" style="flex: 1" role="columnheader" aria-sort="descending" tabindex="0">
+        <div class="spectrum-Table-head" role="row">
+          <div class="spectrum-Table-headCell is-sortable is-sorted-desc" role="columnheader" aria-sort="descending" tabindex="0">
             <svg class="spectrum-Icon spectrum-UIIcon-ArrowDown100 spectrum-Table-sortedIcon" focusable="false" aria-hidden="true">
               <use xlink:href="#spectrum-css-icon-Arrow100" />
             </svg>
             <span>Column Title</span>
           </div>
-          <div class="spectrum-Table-headCell is-sortable" style="flex: 1" role="columnheader" aria-sort="none" tabindex="0">
+          <div class="spectrum-Table-headCell is-sortable" role="columnheader" aria-sort="none" tabindex="0">
             <svg class="spectrum-Icon spectrum-UIIcon-ArrowDown100 spectrum-Table-sortedIcon" focusable="false" aria-hidden="true">
               <use xlink:href="#spectrum-css-icon-Arrow100" />
             </svg>
             <span>Column Title</span>
           </div>
-          <div class="spectrum-Table-headCell" style="flex: 1" role="columnheader">Column Title</div>
+          <div class="spectrum-Table-headCell" role="columnheader">Column Title</div>
         </div>
         <div class="spectrum-Table-body" style="height: 120px" role="rowgroup">
-          <div class="spectrum-Table-row" style="display: flex" role="row">
-            <div class="spectrum-Table-cell" style="flex: 1" role="gridcell">Row Item Alpha</div>
-            <div class="spectrum-Table-cell" style="flex: 1" role="gridcell">Row Item Alpha</div>
-            <div class="spectrum-Table-cell" style="flex: 1" role="gridcell">Row Item Alpha</div>
+          <div class="spectrum-Table-row" role="row">
+            <div class="spectrum-Table-cell" role="gridcell">Row Item Alpha</div>
+            <div class="spectrum-Table-cell" role="gridcell">Row Item Alpha</div>
+            <div class="spectrum-Table-cell" role="gridcell">Row Item Alpha</div>
           </div>
-          <div class="spectrum-Table-row is-drop-target" style="display: flex" role="row">
-            <div class="spectrum-Table-cell" style="flex: 1" role="gridcell">Row Item Bravo</div>
-            <div class="spectrum-Table-cell" style="flex: 1" role="gridcell">Row Item Bravo</div>
-            <div class="spectrum-Table-cell" style="flex: 1" role="gridcell">Row Item Bravo</div>
+          <div class="spectrum-Table-row is-drop-target" role="row">
+            <div class="spectrum-Table-cell" role="gridcell">Row Item Bravo</div>
+            <div class="spectrum-Table-cell" role="gridcell">Row Item Bravo</div>
+            <div class="spectrum-Table-cell" role="gridcell">Row Item Bravo</div>
           </div>
-          <div class="spectrum-Table-row" style="display: flex" role="row">
-            <div class="spectrum-Table-cell" style="flex: 1" role="gridcell">Row Item Charlie</div>
-            <div class="spectrum-Table-cell" style="flex: 1" role="gridcell">Row Item Charlie</div>
-            <div class="spectrum-Table-cell" style="flex: 1" role="gridcell">Row Item Charlie</div>
+          <div class="spectrum-Table-row" role="row">
+            <div class="spectrum-Table-cell" role="gridcell">Row Item Charlie</div>
+            <div class="spectrum-Table-cell" role="gridcell">Row Item Charlie</div>
+            <div class="spectrum-Table-cell" role="gridcell">Row Item Charlie</div>
           </div>
-          <div class="spectrum-Table-row" style="display: flex" role="row">
-            <div class="spectrum-Table-cell" style="flex: 1" role="gridcell">Row Item Delta</div>
-            <div class="spectrum-Table-cell" style="flex: 1" role="gridcell">Row Item Delta</div>
-            <div class="spectrum-Table-cell" style="flex: 1" role="gridcell">Row Item Delta</div>
+          <div class="spectrum-Table-row" role="row">
+            <div class="spectrum-Table-cell" role="gridcell">Row Item Delta</div>
+            <div class="spectrum-Table-cell" role="gridcell">Row Item Delta</div>
+            <div class="spectrum-Table-cell" role="gridcell">Row Item Delta</div>
           </div>
-          <div class="spectrum-Table-row" style="display: flex" role="row">
-            <div class="spectrum-Table-cell" style="flex: 1" role="gridcell">Row Item Echo</div>
-            <div class="spectrum-Table-cell" style="flex: 1" role="gridcell">Row Item Echo</div>
-            <div class="spectrum-Table-cell" style="flex: 1" role="gridcell">Row Item Echo</div>
+          <div class="spectrum-Table-row" role="row">
+            <div class="spectrum-Table-cell" role="gridcell">Row Item Echo</div>
+            <div class="spectrum-Table-cell" role="gridcell">Row Item Echo</div>
+            <div class="spectrum-Table-cell" role="gridcell">Row Item Echo</div>
           </div>
         </div>
       </div>

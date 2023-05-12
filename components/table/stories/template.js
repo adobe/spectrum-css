@@ -1,4 +1,4 @@
-import { html } from "lit-html";
+import { html, literal, nothing } from 'lit-html/static.js';
 import { classMap } from "lit-html/directives/class-map.js";
 import { when } from "lit-html/directives/when.js";
 import { ifDefined } from "lit-html/directives/if-defined.js";
@@ -30,102 +30,118 @@ export const TableRowItem = ({
   size = "m",
   id
 }) => {
+  const useThumbnail = showThumbnails && !isSummaryRow && !isSectionHeader;
+
+  // Use Table tags or Div tags. 
+  // Note: Lit must use the 'literal' function for dynamic tags to work.
+  const rowTag = useDivs ? literal`div` : literal`tr`;
+  const cellTag = useDivs ? literal`div` : literal`td`;
+
   // Content for a table cell. 
-  // Passed in cellContent arg can be string that will be repeated, or an array. 
-  const getCellContent = (col) => {
-    const content = Array.isArray(cellContent) ? cellContent[col] : cellContent;
-    if (showThumbnails) {
+  const getCellContent = (columnIndex) => {
+    const content = Array.isArray(cellContent) ? cellContent[columnIndex] : cellContent;
+    if (useThumbnail && columnIndex < 2) {
       return html`
-        ${Thumbnail({ size: "xs" })}
-        <span>${content}</span>
+        <div class="spectrum-Table-thumbnailInner">
+          ${Thumbnail({
+            size: "300",
+            imageURL: "example-card-landscape.png",
+            isCover: true,
+          })}
+          <div class="spectrum-Table-thumbnailContent">${content}</div>
+        </div>
       `;
     } else {
       return content;
     }
   }
 
-  if (!useDivs){
-    // <TABLE> Markup
-    return html`
-      <tr
-        class=${classMap({
-          [`${rootClass}-row`]: true,
-          [`${rootClass}-row--summary`]: isSummaryRow,
-          [`${rootClass}-row--sectionHeader`]: isSectionHeader,
-          [`${rootClass}-row--collapsible`]: isCollapsible,
-          ['is-selected']: isSelected,
-          ['is-expanded']: isExpanded,
-          ['is-last-tier']: isLastTier,
-          ...customClasses.reduce((a, c) => ({ ...a, [c]: true }), {})
-        })}
-        id=${ifDefined(id)}
-        data-tier=${ifDefined(tier)}
-        ?hidden=${isHidden}
-      >
-        ${when(showCheckbox, () => html`
-          <td class="spectrum-Table-cell spectrum-Table-checkboxCell">
-            ${Checkbox({
-              size,
-              isEmphasized: tableIsEmphasized,
-              isChecked: isSelected,
-              customClasses: [`${rootClass}-checkbox`],
-            })}
-          </td>`
-        )}
-        ${isCollapsible 
-          ? html`<td class="${rootClass}-cell ${rootClass}-cell--collapsible" tabindex="0">
-                  <div class="${rootClass}-collapseInner">
-                    ${when(!isLastTier, () => Button({
-                        size,
-                        iconName: "ChevronRight100",
-                        hideLabel: true,
-                        customClasses: [`${rootClass}-disclosureIcon`],
-                        ariaExpanded: isExpanded,
-                        ariaControls,
-                      })
-                    )}
-                    <div class="${rootClass}-cellContent">${getCellContent(0)}</div>
-                  </div>
-                 </td>`
-          : html`<td class="${rootClass}-cell" tabindex="0" colspan=${ifDefined(isSectionHeader ? '3' : undefined)}>${getCellContent(0)}</td>`
-        }
-        ${when(!isSectionHeader, () => html`
-          <td class="${rootClass}-cell" tabindex="0">${getCellContent(1)}</td>
-          <td class="${rootClass}-cell" tabindex="0">${getCellContent(2)}</td>`
-        )}
-      </tr>
-    `;
-  } else {
-    // <DIV> Markup
-    return html`
-      <div
-        role="row"
-        class=${classMap({
-          [`${rootClass}-row`]: true,
-          [`${rootClass}-row--summary`]: isSummaryRow,
-          [`${rootClass}-row--sectionHeader`]: isSectionHeader,
-          [`is-selected`]: isSelected,
-          ...customClasses.reduce((a, c) => ({ ...a, [c]: true }), {})
-        })}
-      >
-        ${when(showCheckbox, () => html`
-          <div class="spectrum-Table-cell spectrum-Table-checkboxCell" role="gridcell">
-            ${Checkbox({
-              size,
-              isEmphasized: tableIsEmphasized,
-              isChecked: isSelected,
-              customClasses: [`${rootClass}-checkbox`],
-            })}
-          </div>`
-        )}
-        <div class="${rootClass}-cell" role="gridcell" tabindex="0" colspan=${ifDefined(isSectionHeader ? '3' : undefined)}>${cellContent}</div>
-        ${when(!isSectionHeader, () => html`
-          <div class="${rootClass}-cell" role="gridcell" tabindex="0">${cellContent}</div>
-          <div class="${rootClass}-cell" role="gridcell" tabindex="0">${cellContent}</div>`
-        )}
-      </div>
-    `;
-  }
+  return html`
+    <${rowTag}
+      class=${classMap({
+        [`${rootClass}-row`]: true,
+        [`${rootClass}-row--summary`]: isSummaryRow,
+        [`${rootClass}-row--sectionHeader`]: isSectionHeader,
+        [`${rootClass}-row--collapsible`]: isCollapsible,
+        ['is-selected']: isSelected,
+        ['is-expanded']: isExpanded,
+        ['is-last-tier']: isLastTier,
+        ...customClasses.reduce((a, c) => ({ ...a, [c]: true }), {})
+      })}
+      role=${useDivs ? "row" : nothing}
+      id=${ifDefined(id)}
+      data-tier=${ifDefined(tier)}
+      ?hidden=${isHidden}
+    >
+      ${when(showCheckbox, () => html`
+        <${cellTag}
+          role=${useDivs ? "gridcell" : nothing}
+          class="spectrum-Table-cell spectrum-Table-checkboxCell"
+        >
+          ${Checkbox({
+            size,
+            isEmphasized: tableIsEmphasized,
+            isChecked: isSelected,
+            customClasses: [`${rootClass}-checkbox`],
+          })}
+        </${cellTag}>`
+      )}
+
+      ${isCollapsible 
+        ? html`<${cellTag}
+                  role=${useDivs ? "gridcell" : nothing}
+                  class=${classMap({
+                    [`${rootClass}-cell`]: true,
+                    [`${rootClass}-cell--collapsible`]: true,
+                    [`${rootClass}-cell--thumbnail`]: useThumbnail,
+                  })}
+                  tabindex="0"
+                >
+                <div class="${rootClass}-collapseInner">
+                  ${when(!isLastTier, () => Button({
+                      size,
+                      iconName: "ChevronRight100",
+                      hideLabel: true,
+                      customClasses: [`${rootClass}-disclosureIcon`],
+                      ariaExpanded: isExpanded,
+                      ariaControls,
+                    })
+                  )}
+                  ${ useThumbnail 
+                    ? getCellContent(0) 
+                    : html`<div class="${rootClass}-collapseContent">${getCellContent(0)}</div>`
+                  }
+                </div>
+              </${cellTag}>`
+
+        : html`<${cellTag}
+                  role=${useDivs ? "gridcell" : nothing}
+                  class=${classMap({
+                    [`${rootClass}-cell`]: true,
+                    [`${rootClass}-cell--thumbnail`]: useThumbnail,
+                  })}
+                  tabindex="0" 
+                  colspan=${ifDefined(isSectionHeader ? '3' : undefined)}>${getCellContent(0)}</${cellTag}>`
+      }
+
+      ${when(!isSectionHeader, () => html`
+        <${cellTag}
+          role=${useDivs ? "gridcell" : nothing}
+          class=${classMap({
+            [`${rootClass}-cell`]: true,
+            [`${rootClass}-cell--thumbnail`]: useThumbnail,
+          })}
+          tabindex="0">${getCellContent(1)}</${cellTag}>
+
+        <${cellTag}
+          role=${useDivs ? "gridcell" : nothing}
+          class=${classMap({
+            [`${rootClass}-cell`]: true,
+          })}
+          tabindex="0">${getCellContent(2)}</${cellTag}>`
+      )}
+    </${rowTag}>
+  `;
 }
 
 export const Template = ({
@@ -136,6 +152,7 @@ export const Template = ({
   isEmphasized = true,
   useDivs = false,
   showThumbnails = false,
+  isDropTarget = false,
   rowItems = [],
   customClasses = [],
   id,
@@ -151,97 +168,32 @@ export const Template = ({
     console.warn(e);
   }
 
-  if (!useDivs){
-    // <TABLE> Markup
-    return html`
-      <table
-        class=${classMap({
-          [rootClass]: true,
-          [`${rootClass}--size${size?.toUpperCase()}`]: typeof size !== "undefined",
-          [`${rootClass}--${density}`]: density !== "standard",
-          [`${rootClass}--quiet`]: isQuiet,
-          [`${rootClass}--emphasized`]: isEmphasized,
-          ...customClasses.reduce((a, c) => ({ ...a, [c]: true }), {})
-        })}
-        id=${ifDefined(id)}
-        style="max-width: 800px;"
-      >
-        <thead class="${rootClass}-head">
-          <tr>
-            ${when(rowItems.some(item => item.showCheckbox === true), () => html`
-              <th class="spectrum-Table-headCell spectrum-Table-checkboxCell">
-                ${Checkbox({
-                  size,
-                  isEmphasized: isEmphasized,
-                  isChecked: false,
-                  isIndeterminate: true,
-                  customClasses: [`${rootClass}-checkbox`],
-                })}
-              </th>`
-            )}
-            <th
-              class="${rootClass}-headCell is-sortable is-sorted-desc"
-              aria-sort="descending"
-              tabindex="0"
-            >
-              ${Icon({
-                iconName: "ArrowDown100",
-                size,
-                customClasses: [`${rootClass}-sortedIcon`],
-              })}
-              <span>Column Title</span>
-              ${Icon({
-                iconName: "ChevronDown100",
-                size,
-                customClasses: [`${rootClass}-menuIcon`],
-              })}
-            </th>
-            <th class="${rootClass}-headCell is-sortable" aria-sort="none">
-              ${Icon({
-                iconName: "ArrowDown100",
-                size,
-                customClasses: [`${rootClass}-sortedIcon`],
-              })}
-              <span>Column Title</span>
-            </th>
-            <th class="${rootClass}-headCell">Column Title</th>
-          </tr>
-        </thead>
-        <tbody class="${rootClass}-body">
-          ${rowItems.map((item) =>
-            TableRowItem({
-              rootClass,
-              size,
-              useDivs,
-              showThumbnails,
-              tableIsEmphasized: isEmphasized,
-              ...item
-            })
-          )}
-        </tbody>
-      </table>
-    `;
-  } else {
-    // <DIV> Markup
-    return html`
-      <div
-        role="grid"
-        class=${classMap({
-          [rootClass]: true,
-          [`${rootClass}--size${size?.toUpperCase()}`]: typeof size !== "undefined",
-          [`${rootClass}--${density}`]: density !== "standard",
-          [`${rootClass}--quiet`]: isQuiet,
-          [`${rootClass}--emphasized`]: isEmphasized,
-          ...customClasses.reduce((a, c) => ({ ...a, [c]: true }), {})
-        })}
-        id=${ifDefined(id)}
-        style="max-width: 800px"
-      >
-        <div class="${rootClass}-head" role="row">
+  // Use Table tags or Div tags. 
+  const tableTag = useDivs ? literal`div` : literal`table`;
+  const theadTag = useDivs ? literal`div` : literal`thead`;
+  const tbodyTag = useDivs ? literal`div` : literal`tbody`;
+  const thTag = useDivs ? literal`div` : literal`th`;
+
+  return html`
+    <${tableTag}
+      role=${useDivs ? "grid" : nothing}
+      class=${classMap({
+        [rootClass]: true,
+        [`${rootClass}--size${size?.toUpperCase()}`]: typeof size !== "undefined",
+        [`${rootClass}--${density}`]: density !== "standard",
+        [`${rootClass}--quiet`]: isQuiet,
+        [`${rootClass}--emphasized`]: isEmphasized,
+        ...customClasses.reduce((a, c) => ({ ...a, [c]: true }), {})
+      })}
+      id=${ifDefined(id)}
+      style="max-width: 800px;"
+    >
+      <${theadTag} class="${rootClass}-head" role=${useDivs ? "row" : nothing}>
+        ${!useDivs ? literal`<tr>` : ''}
           ${when(rowItems.some(item => item.showCheckbox === true), () => html`
-            <div 
+            <${thTag}
               class="spectrum-Table-headCell spectrum-Table-checkboxCell" 
-              role="columnheader" 
+              role=${useDivs ? "columnheader" : nothing}
             >
               ${Checkbox({
                 size,
@@ -250,13 +202,13 @@ export const Template = ({
                 isIndeterminate: true,
                 customClasses: [`${rootClass}-checkbox`],
               })}
-            </div>`
+            </${thTag}>`
           )}
-          <div
+          <${thTag}
             class="${rootClass}-headCell is-sortable is-sorted-desc"
+            role=${useDivs ? "columnheader" : nothing}
             aria-sort="descending"
             tabindex="0"
-            role="columnheader"
           >
             ${Icon({
               iconName: "ArrowDown100",
@@ -269,11 +221,11 @@ export const Template = ({
               size,
               customClasses: [`${rootClass}-menuIcon`],
             })}
-          </div>
-          <div 
-            class="${rootClass}-headCell is-sortable" 
-            aria-sort="none" 
-            role="columnheader" 
+          </${thTag}>
+          <${thTag}
+            class="${rootClass}-headCell is-sortable"
+            role=${useDivs ? "columnheader" : nothing}
+            aria-sort="none"
           >
             ${Icon({
               iconName: "ArrowDown100",
@@ -281,24 +233,30 @@ export const Template = ({
               customClasses: [`${rootClass}-sortedIcon`],
             })}
             <span>Column Title</span>
-          </div>
-          <div 
+          </${thTag}>
+          <${thTag}
             class="${rootClass}-headCell"
-            role="columnheader"
-          >Column Title</div>
-        </div>
-        <div class="${rootClass}-body" role="rowgroup">
-          ${rowItems.map((item) =>
-            TableRowItem({
-              rootClass,
-              size,
-              useDivs,
-              tableIsEmphasized: isEmphasized,
-              ...item
-            })
-          )}
-        </div>
-      </div>
-    `;
-  }
+            role=${useDivs ? "columnheader" : nothing}>Column Title</${thTag}>
+        ${!useDivs ? literal`</tr>` : ''}
+      </${theadTag}>
+      <${tbodyTag}
+        class=${classMap({
+          [`${rootClass}-body`]: true,
+          ['is-drop-target']: isDropTarget,
+        })}
+        role=${useDivs ? "rowgroup" : nothing}
+      >
+        ${rowItems.map((item) =>
+          TableRowItem({
+            rootClass,
+            size,
+            useDivs,
+            showThumbnails,
+            tableIsEmphasized: isEmphasized,
+            ...item
+          })
+        )}
+      </${tbodyTag}>
+    </${tableTag}>
+  `;
 };

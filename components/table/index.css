@@ -86,6 +86,8 @@ governing permissions and limitations under the License.
   --spectrum-table-collapsible-icon-animation-duration: var(--spectrum-animation-duration-100);
 
   --spectrum-table-thumbnail-to-text: var(--spectrum-text-to-visual-100);
+  --spectrum-table-thumbnail-block-spacing: var(--spectrum-table-thumbnail-to-top-minimum-medium);
+  --spectrum-table-thumbnail-size: var(--spectrum-thumbnail-size-300);
 }
 
 /********* T-SHIRT SIZES (Regular Density) *********/
@@ -115,7 +117,10 @@ governing permissions and limitations under the License.
 
   /* Collapsible and Thumbnails */
   --spectrum-table-disclosure-icon-size: var(--spectrum-component-height-75);
+
+  --spectrum-table-thumbnail-block-spacing: var(--spectrum-table-thumbnail-to-top-minimum-small);
   --spectrum-table-thumbnail-to-text: var(--spectrum-text-to-visual-100);
+  --spectrum-table-thumbnail-size: var(--spectrum-thumbnail-size-200);
 }
 
 .spectrum-Table--sizeM {
@@ -143,7 +148,10 @@ governing permissions and limitations under the License.
 
   /* Collapsible and Thumbnails */
   --spectrum-table-disclosure-icon-size: var(--spectrum-component-height-100);
+
+  --spectrum-table-thumbnail-block-spacing: var(--spectrum-table-thumbnail-to-top-minimum-medium);
   --spectrum-table-thumbnail-to-text: var(--spectrum-text-to-visual-100);
+  --spectrum-table-thumbnail-size: var(--spectrum-thumbnail-size-300);
 }
 
 .spectrum-Table--sizeL {
@@ -171,7 +179,10 @@ governing permissions and limitations under the License.
 
   /* Collapsible and Thumbnails */
   --spectrum-table-disclosure-icon-size: var(--spectrum-component-height-200);
+
+  --spectrum-table-thumbnail-block-spacing: var(--spectrum-table-thumbnail-to-top-minimum-large);
   --spectrum-table-thumbnail-to-text: var(--spectrum-text-to-visual-200);
+  --spectrum-table-thumbnail-size: var(--spectrum-thumbnail-size-500);
 }
 
 .spectrum-Table--sizeXL {
@@ -199,7 +210,10 @@ governing permissions and limitations under the License.
 
   /* Collapsible and Thumbnails */
   --spectrum-table-disclosure-icon-size: var(--spectrum-component-height-300);
+
+  --spectrum-table-thumbnail-block-spacing: var(--spectrum-table-thumbnail-to-top-minimum-extra-large);
   --spectrum-table-thumbnail-to-text: var(--spectrum-text-to-visual-300);
+  --spectrum-table-thumbnail-size: var(--spectrum-thumbnail-size-700);
 }
 
 /********* VARIANTS *********/
@@ -774,7 +788,7 @@ div.spectrum-Table-checkboxCell {
   justify-content: flex-start;
   align-items: flex-start;
 
-  .spectrum-Table-cellContent {
+  .spectrum-Table-collapseContent {
     padding-block: var(--mod-table-row-top-to-text, var(--spectrum-table-row-top-to-text)) var(--mod-table-row-bottom-to-text, var(--spectrum-table-row-bottom-to-text));
   }
 }
@@ -799,4 +813,46 @@ div.spectrum-Table-checkboxCell {
       border-radius: 0;
     }
   }
+}
+
+/********* THUMBNAILS *********/
+.spectrum-Table-cell--thumbnail {
+  padding-block: 0px;
+}
+
+.spectrum-Table-thumbnailInner {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  justify-content: flex-start;
+  align-items: flex-start;
+  
+  --table-disclosure-size-vs-thumbnail-excess: max(0px, calc(
+    (var(--mod-table-disclosure-icon-size, var(--spectrum-table-disclosure-icon-size)) - var(--mod-table-thumbnail-size, var(--spectrum-table-thumbnail-size))) / 2
+  ));
+  padding-block: calc(
+    var(--mod-table-thumbnail-block-spacing, var(--spectrum-table-thumbnail-block-spacing)) +
+    var(--table-disclosure-size-vs-thumbnail-excess)
+  );
+
+  .spectrum-Thumbnail {
+    --mod-thumbnail-size: var(--mod-table-thumbnail-size, var(--spectrum-table-thumbnail-size));
+    
+    flex-grow: 0;
+    flex-shrink: 0;
+    margin-right: var(--mod-table-thumbnail-to-text, var(--spectrum-table-thumbnail-to-text)); 
+    line-height: var(--mod-table-row-line-height, var(--spectrum-table-row-line-height));
+  }
+
+  .spectrum-Table-thumbnailContent {
+    padding-block: max(0px, calc(
+      (var(--mod-table-thumbnail-size, var(--spectrum-table-thumbnail-size)) -
+       (var(--mod-table-row-line-height, var(--spectrum-table-row-line-height)) * var(--mod-table-header-font-size, var(--spectrum-table-row-font-size)))
+      ) / 2
+    ));
+  }
+}
+
+.hush {
+  width: var(--mod-thumbnail-size);
 }
