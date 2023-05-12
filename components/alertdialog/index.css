@@ -53,14 +53,9 @@ governing permissions and limitations under the License.
   inline-size: fit-content;
   min-inline-size: var(--mod-alert-dialog-min-width, var(--spectrum-alert-dialog-min-width));
   max-inline-size: var(--mod-alert-dialog-max-width, var(--spectrum-alert-dialog-max-width));
-
   max-height: inherit;
   outline: none;
   padding: var(--mod-alert-dialog-padding, var(--spectrum-alert-dialog-padding));
-
-  .spectrum-ButtonGroup {
-    justify-content: flex-end;
-  }
 
   &--warning {
     .spectrum-AlertDialog-icon {
@@ -116,6 +111,10 @@ governing permissions and limitations under the License.
   block-size: var(--mod-alert-dialog-icon-size, var(--spectrum-alert-dialog-icon-size));
 
   margin-inline-start: var(--mod-alert-dialog-title-to-icon, var(--spectrum-alert-dialog-title-to-icon));
+}
+
+.spectrum-ButtonGroup-alert-dialog {
+  justify-content: flex-end;
 }
 
 @media (forced-colors: active) {

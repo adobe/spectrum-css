@@ -18,7 +18,7 @@ examples:
               <h1 class="spectrum-AlertDialog-heading" id="dialog_label">Enable Smart Filters?</h1>
               <div class="spectrum-Divider spectrum-Divider--sizeM spectrum-Divider--horizontal"></div>
               <section class="spectrum-AlertDialog-content">Smart filters are nondestructive and will preserve your original images.</section>
-              <div class="spectrum-ButtonGroup">
+              <div class="spectrum-ButtonGroup spectrum-ButtonGroup-alert-dialog">
                 <button class="spectrum-Button spectrum-Button--sizeM spectrum-Button--outline spectrum-Button--secondary spectrum-ButtonGroup-item" type="button" onclick="closeDialog(this.closest('.spectrum-Modal-wrapper'))">
                   <span class="spectrum-Button-label">Cancel</span>
                 </button>
@@ -44,7 +44,7 @@ examples:
               <h1 class="spectrum-AlertDialog-heading" id="dialog_label">Connect to wifi</h1>
               <div class="spectrum-Divider spectrum-Divider--sizeM spectrum-Divider--horizontal"></div>
               <section class="spectrum-AlertDialog-content">Please connect to wifi to sync your projects or go to Settings to change your prefernces.</section>
-              <div class="spectrum-ButtonGroup">
+              <div class="spectrum-ButtonGroup spectrum-ButtonGroup-alert-dialog">
                 <button class="spectrum-Button spectrum-Button--sizeM spectrum-Button--outline spectrum-Button--secondary spectrum-ButtonGroup-item" type="button" onclick="closeDialog(this.closest('.spectrum-Modal-wrapper'))">
                   <span class="spectrum-Button-label">Cancel</span>
                 </button>
@@ -76,7 +76,7 @@ examples:
 
               <div class="spectrum-Divider spectrum-Divider--sizeM spectrum-Divider--horizontal"></div>
               <section class="spectrum-AlertDialog-content">This format has not been verified and may not be viewable for some users. Do you want to continue publishing?</section>
-              <div class="spectrum-ButtonGroup">
+              <div class="spectrum-ButtonGroup spectrum-ButtonGroup-alert-dialog">
                 <button class="spectrum-Button spectrum-Button--sizeM spectrum-Button--outline spectrum-Button--secondary spectrum-ButtonGroup-item" type="button" onclick="closeDialog(this.closest('.spectrum-Modal-wrapper'))">
                   <span class="spectrum-Button-label">Cancel</span>
                 </button>
@@ -107,7 +107,7 @@ examples:
               </div>
               <div class="spectrum-Divider spectrum-Divider--sizeM spectrum-Divider--horizontal"></div>
               <section class="spectrum-AlertDialog-content">An error occured while sharing your project. Please verify the email address and try again.</section>
-              <div class="spectrum-ButtonGroup">
+              <div class="spectrum-ButtonGroup spectrum-ButtonGroup-alert-dialog">
                 <button class="spectrum-Button spectrum-Button--sizeM spectrum-Button--outline spectrum-Button--primary spectrum-ButtonGroup-item" type="button" onclick="closeDialog(this.closest('.spectrum-Modal-wrapper'))">
                   <span class="spectrum-Button-label">Continue</span>
                 </button>
@@ -133,7 +133,7 @@ examples:
 
               <div class="spectrum-Divider spectrum-Divider--sizeM spectrum-Divider--horizontal"></div>
               <section class="spectrum-AlertDialog-content">Are you sure you want to delete the 3 selected documents?</section>
-              <div class="spectrum-ButtonGroup">
+              <div class="spectrum-ButtonGroup spectrum-ButtonGroup-alert-dialog">
                 <button class="spectrum-Button spectrum-Button--sizeM spectrum-Button--outline spectrum-Button--secondary spectrum-ButtonGroup-item" type="button" onclick="closeDialog(this.closest('.spectrum-Modal-wrapper'))">
                   <span class="spectrum-Button-label">Cancel</span>
                 </button>
@@ -159,7 +159,7 @@ examples:
               <h1 class="spectrum-AlertDialog-heading" id="dialog_label">Rate this app</h1>
               <div class="spectrum-Divider spectrum-Divider--sizeM spectrum-Divider--horizontal"></div>
               <section class="spectrum-AlertDialog-content">If you enjoy our app, would you mind taking a moment to rate it?</section>
-              <div class="spectrum-ButtonGroup">
+              <div class="spectrum-ButtonGroup spectrum-ButtonGroup-alert-dialog">
                 <button class="spectrum-Button spectrum-Button--sizeM spectrum-Button--outline spectrum-Button--secondary spectrum-ButtonGroup-item" type="button" onclick="closeDialog(this.closest('.spectrum-Modal-wrapper'))">
                   <span class="spectrum-Button-label">No, thanks</span>
                 </button>
@@ -192,7 +192,7 @@ examples:
                 <p>Suspendisse aliquet erat id maximus porttitor. Quisque auctor dolor ac gravida tincidunt. Proin vitae dignissim elit. Ut a neque nisi. Nullam fermentum, neque ac pulvinar laoreet, augue nisi hendrerit ligula, a dapibus magna urna ac leo. Vivamus augue ex, aliquet sed sagittis vel, vulputate ac leo. Quisque ac euismod magna. Maecenas auctor nisl a sagittis dapibus. Donec semper lorem magna, ac commodo neque imperdiet id. Curabitur in luctus lorem, sed fringilla magna. Pellentesque ac urna eleifend, porttitor ex pharetra, congue purus. Vestibulum aliquam finibus urna sed egestas.</p>
                 <p>Curabitur justo enim, pretium ut nulla vitae, hendrerit vehicula orci. Duis vel odio sed nunc accumsan vestibulum in ac felis. Nam ultrices eleifend lorem at viverra. Fusce dictum ligula dui, at mattis augue elementum id. Pellentesque non risus augue. Nulla porta laoreet erat sed pulvinar. Proin rutrum facilisis interdum. Integer orci odio, tincidunt et egestas a, ullamcorper dapibus sapien.</p>
               </section>
-              <div class="spectrum-ButtonGroup">
+              <div class="spectrum-ButtonGroup spectrum-ButtonGroup-alert-dialog">
                 <button class="spectrum-Button spectrum-Button--sizeM spectrum-Button--outline spectrum-Button--secondary spectrum-ButtonGroup-item" type="button" onclick="closeDialog(this.closest('.spectrum-Modal-wrapper'))">
                   <span class="spectrum-Button-label">Cancel</span>
                 </button>
