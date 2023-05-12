@@ -15,7 +15,7 @@ export const Template = ({
   isOpen = true,
   showModal = false,
   heading = true,
-  content = [],
+  content = true,
   customClasses = [],
   buttons,
   variant,
@@ -54,7 +54,8 @@ export const Template = ({
           })}
       <section class="${rootClass}-content">${content}</section>
       ${ButtonGroup({
-          items: buttons
+          items: buttons,
+          customClasses: ["spectrum-ButtonGroup-alert-dialog"]
         })
       }
       </div>

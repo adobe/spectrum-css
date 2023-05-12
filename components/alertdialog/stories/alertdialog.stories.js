@@ -18,18 +18,17 @@ export default {
       },
       control: { type: "text" },
     },
-    content: { table: { disable: true } },
-    showModal: {
-      name: "Wrap the alert dialog in a modal",
-      type: { name: "boolean" },
+    content: {
+      name: "Content",
+      type: { name: "string" },
       table: {
-        type: { summary: "boolean" },
+        type: { summary: "string" },
         category: "Component",
       },
-      control: "boolean",
+      control: { type: "text" },
     },
-    secondaryButton: {
-      name: 'Display 3rd button',
+    showModal: {
+      name: "Wrap the alert dialog in a modal",
       type: { name: "boolean" },
       table: {
         type: { summary: "boolean" },
@@ -46,16 +45,16 @@ export default {
       },
       control: "boolean",
     },
+    variant: { table: { disable: true } },
   },
   args: {
     rootClass: "spectrum-AlertDialog",
     showModal: false,
     isOpen: true,
-    secondaryButton: false,
   },
   parameters: {
     actions: {
-      handles: [],
+      handles: ["click .spectrum-AlertDialog button"],
     },
     status: {
       type: process.env.MIGRATED_PACKAGES.includes("alertdialog")
@@ -69,7 +68,7 @@ export const Default = Template.bind({});
 Default.args = {
   variant: 'confirmation',
   heading: "Enable Smart Filters?",
-  showModal: true,
+  showModal: false,
   buttons: [{
     variant: "secondary",
     treatment: "outline",
@@ -80,36 +79,35 @@ Default.args = {
     label: "Enable",
     variant: "accent"
   }],
-  content: [
-   'Smart filters are nondestructive and will preserve your original images.',
-  ],
+  content: 'Smart filters are nondestructive and will preserve your original images.',
 };
 
 export const Information = Template.bind({});
 Information.args = {
   variant: 'information',
-  heading: "Connect to wifi",
-  showModal: true,
+  heading: "Rate this app",
+  showModal: false,
   buttons: [{
     variant: "secondary",
     treatment: "outline",
-    label: "Cancel"
+    label: "No, thanks"
+  },{
+    variant: "secondary",
+    treatment: "outline",
+    label: "Remind me later"
   }, {
     variant: "primary",
     treatment: "outline",
-    label: "Continue",
-    variant: "primary"
+    label: "Rate now",
   }],
-  content: [
-    'Please connect to wifi to sync your projects or go to Settings to change your prefernces.',
-  ],
+  content: 'If you enjoy our app, would you mind taking a moment to rate it?',
 };
 
 export const Warning = Template.bind({});
 Warning.args = {
   variant: 'warning',
   heading: "Unverified format",
-  showModal: true,
+  showModal: false,
   icon: true,
   buttons: [{
     variant: "secondary",
@@ -121,16 +119,14 @@ Warning.args = {
     label: "Continue",
     variant: "primary"
   }],
-  content: [
-    'This format has not been verified and may not be viewable for some users. Do you want to continue publishing?',
-  ],
+  content: 'This format has not been verified and may not be viewable for some users. Do you want to continue publishing?',
 };
 
 export const Error = Template.bind({});
 Error.args = {
   variant: 'error',
   heading: "Unable to share",
-  showModal: true,
+  showModal: false,
   icon: true,
   buttons: [{
     variant: "secondary",
@@ -142,16 +138,15 @@ Error.args = {
     label: "Continue",
     variant: "primary"
   }],
-  content: [
-    'An error occured while sharing your project. Please verify the email address and try again.',
-  ],
+  content: 'An error occured while sharing your project. Please verify the email address and try again.',
+
 };
 
 export const Destructive = Template.bind({});
 Destructive.args = {
   variant: 'destructive',
   heading: "Delete 3 documents?",
-  showModal: true,
+  showModal: false,
   buttons: [{
     variant: "secondary",
     treatment: "outline",
@@ -162,8 +157,6 @@ Destructive.args = {
     label: "Delete",
     variant: "negative"
   }],
-  content: [
-    'Are you sure you want to delete the 3 selected documents?',
-  ],
+  content: 'Are you sure you want to delete the 3 selected documents?',
 };
 

@@ -63,7 +63,7 @@ governing permissions and limitations under the License.
     }
   }
 
-  &--error{
+  &--error {
     .spectrum-AlertDialog-icon {
       color: var(--mod-alert-dialog-error-icon-color, var(--spectrum-alert-dialog-error-icon-color));
     }
