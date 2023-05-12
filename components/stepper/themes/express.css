@@ -15,6 +15,7 @@ governing permissions and limitations under the License.
   .spectrum-Stepper {
     --spectrum-stepper-border-width: var(--spectrum-border-width-200); /* express stepper has border */
     --spectrum-stepper-button-border-width-reset: 0; /* express buttons have no inline start border */
+    --spectrum-stepper-button-icon-nudge: calc(-1 * var(--spectrum-border-width-200));
 
     --spectrum-stepper-button-gap-reset: var(--spectrum-border-width-200); /* express buttons have middle gap */
     --spectrum-stepper-button-border-radius-reset: calc(var(--spectrum-corner-radius-100) - (var(--spectrum-border-width-200) * 2));

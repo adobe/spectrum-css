@@ -499,7 +499,7 @@ governing permissions and limitations under the License.
   .spectrum-Icon {
     opacity: 1;
     margin: 0px;
-    margin-inline-start: calc(-1 * var(--spectrum-stepper-border-radius) / 2)
+    margin-inline-start: var(--spectrum-stepper-button-icon-nudge);
   }
 
   /*** Action Buttons Hover ***/
