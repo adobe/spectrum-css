@@ -131,31 +131,6 @@ governing permissions and limitations under the License.
   line-height: 0;
   border-radius: var(--mod-stepper-border-radius, var(--spectrum-stepper-border-radius)); /* --spectrum-global-dimension-size-75 = 6px 8px */
 
-  /*** Focus Indicator - Unfocused Base Styles ***/
-  &::after {
-    block-size: calc(100% + (var(--mod-stepper-focus-indicator-gap, var(--spectrum-stepper-focus-indicator-gap)) * 2));
-    inline-size: calc(100% + (var(--mod-stepper-focus-indicator-gap, var(--spectrum-stepper-focus-indicator-gap)) * 2));
-    position: absolute;
-    left: 0;
-    right: 0;
-    top: 0;
-    pointer-events: none;
-    content: '';
-    border-style: solid;
-    border-color: transparent;
-    border-width: 0;
-    border-radius: calc(var(--mod-stepper-border-radius, var(--spectrum-stepper-border-radius))
-                        + var(--mod-stepper-border-width, var(--spectrum-stepper-border-width))
-                        + var(--mod-stepper-focus-indicator-gap, var(--spectrum-stepper-focus-indicator-gap)));
-
-    margin-block-start: calc((var(--mod-stepper-focus-indicator-gap, var(--spectrum-stepper-focus-indicator-gap))
-                              + var(--mod-stepper-focus-indicator-width, var(--spectrum-stepper-focus-indicator-width)))
-                              * -1);
-    margin-inline-start: calc((var(--mod-stepper-focus-indicator-gap, var(--spectrum-stepper-focus-indicator-gap))
-                              + var(--mod-stepper-focus-indicator-width, var(--spectrum-stepper-focus-indicator-width)))
-                              * -1);
-  }
-
   /*** Hover ***/
   &:hover:not(.is-disabled):not(.is-invalid):not(.is-focused):not(.is-keyboardFocused) {
     .spectrum-Stepper-buttons,
@@ -169,6 +144,9 @@ governing permissions and limitations under the License.
 
   /*** Focused ***/
   &.is-focused {
+    .spectrum-Stepper-input {
+      outline: none;
+    }
     .spectrum-Stepper-input,
     .spectrum-Stepper-buttons,
     .spectrum-Stepper-stepUp,
@@ -208,11 +186,14 @@ governing permissions and limitations under the License.
   &:focus-visible {
 
     /* keyboard focus indicator is visible */
-    &::after {
-      border-color: var(--highcontrast-stepper-focus-indicator-color, var(--mod-stepper-focus-indicator-color, var(--spectrum-stepper-focus-indicator-color)));
-      border-width: var(--mod-stepper-focus-indicator-width, var(--spectrum-stepper-focus-indicator-width));
-    }
+    outline: var(--mod-stepper-focus-indicator-width, var(--spectrum-stepper-focus-indicator-width)) solid;
+    outline-color: var(--highcontrast-stepper-focus-indicator-color, var(--mod-stepper-focus-indicator-color, var(--spectrum-stepper-focus-indicator-color)));
+    outline-offset: var(--mod-stepper-focus-indicator-gap, var(--spectrum-stepper-focus-indicator-gap));
 
+    .spectrum-Stepper-input {
+      outline: none;
+    }
+    
     .spectrum-Stepper-input,
     .spectrum-Stepper-buttons,
     .spectrum-Stepper-stepUp,
@@ -313,6 +294,15 @@ governing permissions and limitations under the License.
     /* quiet corners not rounded */
     border-radius: 0;
     inline-size: var(--mod-stepper-quiet-width, var(--spectrum-stepper-quiet-width));
+
+    &::after {
+      content: '';
+      position: absolute;
+      bottom: calc(-1 * var(--mod-stepper-focus-indicator-gap, var(--spectrum-stepper-focus-indicator-gap)) * 2);
+      left: 0;
+      inline-size: 100%;
+      block-size: var(--mod-stepper-focus-indicator-width, var(--spectrum-stepper-focus-indicator-width));
+    }
 
     .spectrum-Stepper-buttons {
       border-radius: 0;
@@ -420,14 +410,11 @@ governing permissions and limitations under the License.
     /* quiet keyboard focused */
     &.is-keyboardFocused {
 
+      outline: none;
+
       /* quiet focus indicator only on bottom border */
       &::after {
-        border-width: 0 0 var(--mod-stepper-focus-indicator-width, var(--spectrum-stepper-focus-indicator-width)) 0;
-        border-radius: 0;
-        inline-size: 100%;
-        block-size: calc(100% + var(--mod-stepper-focus-indicator-gap, var(--spectrum-stepper-focus-indicator-gap)));
-        margin-inline-start: 0;
-        margin-block-start: 0;
+        background-color: var(--highcontrast-stepper-focus-indicator-color, var(--mod-stepper-focus-indicator-color, var(--spectrum-stepper-focus-indicator-color)));
       }
 
       .spectrum-Stepper-stepUp,
@@ -553,11 +540,6 @@ governing permissions and limitations under the License.
   flex: 1;
   inline-size: auto;
   min-inline-size: 0;
-
-  /* remove textfield focus indicator so we don't have two of them */
-  &::after {
-    display: none;
-  }
 }
 
 .spectrum-Stepper-input {
