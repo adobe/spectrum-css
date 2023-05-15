@@ -71,6 +71,72 @@ governing permissions and limitations under the License.
   --spectrum-accordion-divider-color: var(--spectrum-gray-300);
 }
 
+.spectrum-Accordion--compact {
+  &.spectrum-Accordion--sizeS {
+    --spectrum-accordion-item-header-top-to-text-space: var(--spectrum-accordion-top-to-text-compact-small);
+    --spectrum-accordion-item-header-bottom-to-text-space: var(--spectrum-accordion-bottom-to-text-compact-small);
+  }
+
+  &.spectrum-Accordion--sizeM {
+    --spectrum-accordion-item-header-top-to-text-space: var(--spectrum-accordion-top-to-text-compact-medium);
+    --spectrum-accordion-item-header-bottom-to-text-space: var(--spectrum-accordion-bottom-to-text-compact-medium);
+  }
+
+  &.spectrum-Accordion--sizeL {
+    --spectrum-accordion-item-header-top-to-text-space: var(--spectrum-accordion-top-to-text-compact-large);
+    --spectrum-accordion-item-header-bottom-to-text-space: var(--spectrum-accordion-bottom-to-text-compact-large);
+  }
+
+  &.spectrum-Accordion--sizeXL {
+    --spectrum-accordion-item-header-top-to-text-space: var(--spectrum-accordion-top-to-text-compact-extra-large);
+    --spectrum-accordion-item-header-bottom-to-text-space: var(--spectrum-accordion-bottom-to-text-compact-extra-large);
+  }
+}
+
+.spectrum-Accordion--regular {
+  &.spectrum-Accordion--sizeS {
+    --spectrum-accordion-item-header-top-to-text-space: var(--spectrum-accordion-top-to-text-regular-small);
+    --spectrum-accordion-item-header-bottom-to-text-space: var(--spectrum-accordion-bottom-to-text-regular-small);
+  }
+
+  &.spectrum-Accordion--sizeM {
+    --spectrum-accordion-item-header-top-to-text-space: var(--spectrum-accordion-top-to-text-regular-medium);
+    --spectrum-accordion-item-header-bottom-to-text-space: var(--spectrum-accordion-bottom-to-text-regular-medium);
+  }
+
+  &.spectrum-Accordion--sizeL {
+    --spectrum-accordion-item-header-top-to-text-space: var(--spectrum-accordion-top-to-text-regular-large);
+    --spectrum-accordion-item-header-bottom-to-text-space: var(--spectrum-accordion-bottom-to-text-regular-large);
+  }
+
+  &.spectrum-Accordion--sizeXL {
+    --spectrum-accordion-item-header-top-to-text-space: var(--spectrum-accordion-top-to-text-regular-extra-large);
+    --spectrum-accordion-item-header-bottom-to-text-space: var(--spectrum-accordion-bottom-to-text-regular-extra-large);
+  }
+}
+
+.spectrum-Accordion--spacious {
+  &.spectrum-Accordion--sizeS {
+    --spectrum-accordion-item-header-top-to-text-space: var(--spectrum-accordion-small-top-to-text-spacious);
+    --spectrum-accordion-item-header-bottom-to-text-space: var(--spectrum-accordion-bottom-to-text-spacious-small);
+  }
+
+  &.spectrum-Accordion--sizeM {
+    --spectrum-accordion-item-header-top-to-text-space: var(--spectrum-accordion-top-to-text-spacious-medium);
+    --spectrum-accordion-item-header-bottom-to-text-space: var(--spectrum-accordion-bottom-to-text-spacious-medium);
+  }
+
+  &.spectrum-Accordion--sizeL {
+    --spectrum-accordion-item-header-top-to-text-space: var(--spectrum-accordion-top-to-text-spacious-large);
+    --spectrum-accordion-item-header-bottom-to-text-space: var(--spectrum-accordion-bottom-to-text-spacious-large);
+  }
+
+  &.spectrum-Accordion--sizeXL {
+    --spectrum-accordion-item-header-top-to-text-space: var(--spectrum-accordion-top-to-text-spacious-extra-large);
+    --spectrum-accordion-item-header-bottom-to-text-space: var(--spectrum-accordion-bottom-to-text-spacious-extra-large);
+  }
+}
+
 .spectrum-Accordion--sizeS {
   --spectrum-accordion-item-height: var(--spectrum-component-height-100);
   --spectrum-accordion-disclosure-indicator-height: var(--spectrum-component-height-75);
@@ -173,73 +239,12 @@ governing permissions and limitations under the License.
 	&:focus {
 		outline: none;
 
-		&::after {
-			content: "";
-
+    &::after {
+      content: "";
       position: absolute;
       inset-inline-start: 0;
     }
   }
-}
-
-.spectrum-Accordion-compact--sizeS {
-  --spectrum-accordion-item-header-top-to-text-space: var(--spectrum-accordion-top-to-text-compact-small);
-  --spectrum-accordion-item-header-bottom-to-text-space: var(--spectrum-accordion-bottom-to-text-compact-small);
-}
-
-.spectrum-Accordion-compact--sizeM {
-  --spectrum-accordion-item-header-top-to-text-space: var(--spectrum-accordion-top-to-text-compact-medium);
-  --spectrum-accordion-item-header-bottom-to-text-space: var(--spectrum-accordion-bottom-to-text-compact-medium);
-}
-
-.spectrum-Accordion-compact--sizeL {
-  --spectrum-accordion-item-header-top-to-text-space: var(--spectrum-accordion-top-to-text-compact-large);
-  --spectrum-accordion-item-header-bottom-to-text-space: var(--spectrum-accordion-bottom-to-text-compact-large);
-}
-
-.spectrum-Accordion-compact--sizeXL {
-  --spectrum-accordion-item-header-top-to-text-space: var(--spectrum-accordion-top-to-text-compact-extra-large);
-  --spectrum-accordion-item-header-bottom-to-text-space: var(--spectrum-accordion-bottom-to-text-compact-extra-large);
-}
-
-.spectrum-Accordion-regular--sizeS {
-  --spectrum-accordion-item-header-top-to-text-space: var(--spectrum-accordion-top-to-text-regular-small);
-  --spectrum-accordion-item-header-bottom-to-text-space: var(--spectrum-accordion-bottom-to-text-regular-small);
-}
-
-.spectrum-Accordion-regular--sizeM {
-  --spectrum-accordion-item-header-top-to-text-space: var(--spectrum-accordion-top-to-text-regular-medium);
-  --spectrum-accordion-item-header-bottom-to-text-space: var(--spectrum-accordion-bottom-to-text-regular-medium);
-}
-
-.spectrum-Accordion-regular--sizeL {
-  --spectrum-accordion-item-header-top-to-text-space: var(--spectrum-accordion-top-to-text-regular-large);
-  --spectrum-accordion-item-header-bottom-to-text-space: var(--spectrum-accordion-bottom-to-text-regular-large);
-}
-
-.spectrum-Accordion-regular--sizeXL {
-  --spectrum-accordion-item-header-top-to-text-space: var(--spectrum-accordion-top-to-text-regular-extra-large);
-  --spectrum-accordion-item-header-bottom-to-text-space: var(--spectrum-accordion-bottom-to-text-regular-extra-large);
-}
-
-.spectrum-Accordion-spacious--sizeS {
-  --spectrum-accordion-item-header-top-to-text-space: var(--spectrum-accordion-small-top-to-text-spacious);
-  --spectrum-accordion-item-header-bottom-to-text-space: var(--spectrum-accordion-bottom-to-text-spacious-small);
-}
-
-.spectrum-Accordion-spacious--sizeM {
-  --spectrum-accordion-item-header-top-to-text-space: var(--spectrum-accordion-top-to-text-spacious-medium);
-  --spectrum-accordion-item-header-bottom-to-text-space: var(--spectrum-accordion-bottom-to-text-spacious-medium);
-}
-
-.spectrum-Accordion-spacious--sizeL {
-  --spectrum-accordion-item-header-top-to-text-space: var(--spectrum-accordion-top-to-text-spacious-large);
-  --spectrum-accordion-item-header-bottom-to-text-space: var(--spectrum-accordion-bottom-to-text-spacious-large);
-}
-
-.spectrum-Accordion-spacious--sizeXL {
-  --spectrum-accordion-item-header-top-to-text-space: var(--spectrum-accordion-top-to-text-spacious-extra-large);
-  --spectrum-accordion-item-header-bottom-to-text-space: var(--spectrum-accordion-bottom-to-text-spacious-extra-large);
 }
 
 .spectrum-Accordion-itemContent {
@@ -265,7 +270,6 @@ governing permissions and limitations under the License.
 
 .spectrum-Accordion-itemHeader {
   color: var(--mod-accordion-item-header-color-default, var(--spectrum-accordion-item-header-color-default));
-  border-radius: var(--mod-accordion-corner-radius, var(--spectrum-accordion-corner-radius));
   background-color: var(--mod-accordion-background-color-default, var(--spectrum-accordion-background-color-default));
 
   &:hover {
@@ -277,9 +281,10 @@ governing permissions and limitations under the License.
   }
 
   &:focus-visible {
-      box-shadow: 0 0 0 var(--mod-accordion-focus-indicator-thickness, var(--spectrum-accordion-focus-indicator-thickness)) var(--mod-accordion-focus-indicator-color, var(--spectrum-accordion-focus-indicator-color));
-      background-color: var(--mod-accordion-background-color-key-focus, var(--spectrum-accordion-background-color-key-focus));
-      color: var(--mod-accordion-item-header-color-key-focus, var(--spectrum-accordion-item-header-color-key-focus));
+    border-radius: var(--mod-accordion-corner-radius, var(--spectrum-accordion-corner-radius));
+    box-shadow: 0 0 0 var(--mod-accordion-focus-indicator-thickness, var(--spectrum-accordion-focus-indicator-thickness)) var(--mod-accordion-focus-indicator-color, var(--spectrum-accordion-focus-indicator-color));
+    background-color: var(--mod-accordion-background-color-key-focus, var(--spectrum-accordion-background-color-key-focus));
+    color: var(--mod-accordion-item-header-color-key-focus, var(--spectrum-accordion-item-header-color-key-focus));
   }
 
   &:active {
@@ -312,6 +317,7 @@ governing permissions and limitations under the License.
       color: var(--mod-accordion-item-header-disabled-color, var(--spectrum-accordion-item-header-disabled-color));
     }
   }
+
   .spectrum-Accordion-itemContent {
       color: var(--mod-accordion-item-content-disabled-color, var(--spectrum-accordion-item-content-disabled-color));
   }

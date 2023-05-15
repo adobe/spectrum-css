@@ -23,10 +23,10 @@
 |`--mod-accordion-divider-color`|
 |`--mod-accordion-divider-thickness`|
 |`--mod-accordion-item-header-color-default`|
-|`--mod-accordion-corner-radius`|
 |`--mod-accordion-background-color-default`|
 |`--mod-accordion-item-header-color-hover`|
 |`--mod-accordion-background-color-hover`|
+|`--mod-accordion-corner-radius`|
 |`--mod-accordion-focus-indicator-thickness`|
 |`--mod-accordion-focus-indicator-color`|
 |`--mod-accordion-background-color-key-focus`|
