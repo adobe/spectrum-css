@@ -2,6 +2,7 @@
 | --- |
 |`--mod-drop-zone-background-color`|
 |`--mod-drop-zone-border-style:`|
+|`--mod-drop-zone-border-style--dragged`|
 |`--mod-drop-zone-background-color:`|
 |`--mod-drop-zone-background-color-opacity`|
 |`--mod-drop-zone-body-color`|
