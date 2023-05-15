@@ -1,53 +1,51 @@
 | Modifiable Custom Properties |
 | --- |
-|`--mod-card-minimum-width`|
-|`--mod-card-border-width`|
-|`--mod-card-corner-radius`|
-|`--mod-card-border-color`|
-|`--mod-spectrum-card-background-color`|
-|`--mod-card-focus-indicator-gap`|
-|`--mod-card-focus-indicator-width`|
-|`--mod-card-focus-indicator-color`|
-|`--mod-card-border-color-hover`|
-|`--mod-card-border-color-selected`|
-|`--mod-card-quiet-background-color`|
-|`--mod-card-actions-drop-shadow-x`|
-|`--mod-card-actions-drop-shadow-y`|
-|`--mod-card-actions-drop-shadow-blur`|
-|`--mod-card-actions-drop-shadow-color`|
-|`--mod-card-actions-size`|
-|`--mod-card-actions-border-radius`|
-|`--mod-card-actions-background-color-rgb`|
-|`--mod-card-actions-background-color-opacity`|
-|`--mod-card-actions-spacing`|
-|`--mod-card-preview-minimum-height`|
-|`--mod-card-background-color`|
-|`--mod-card-content-margin-bottom`|
-|`--mod-card-title-padding-top`|
-|`--mod-card-body-spacing`|
-|`--mod-card-content-margin-top`|
-|`--mod-card-title-padding-right`|
-|`--mod-card-title-font-family`|
-|`--mod-card-title-font-size`|
-|`--mod-card-title-font-weight`|
-|`--mod-card-title-font-style`|
-|`--mod-card-title-line-height`|
-|`--mod-card-title-font-color`|
-|`--mod-card-subtitle-padding-right`|
-|`--mod-card-title-color`|
-|`--mod-card-body-font-family`|
-|`--mod-card-body-font-size`|
-|`--mod-card-body-font-weight`|
-|`--mod-card-body-font-style`|
-|`--mod-card-body-line-height`|
-|`--mod-card-body-font-color`|
-|`--mod-card-footer-margin-top`|
-|`--mod-card-quiet-minimum-width`|
-|`--mod-animation-duration-100`|
-|`--mod-card-quiet-background-color-hover`|
-|`--mod-card-file-background-color`|
-|`--mod-card-folder-background-color`|
-|`--mod-card-file-outline`|
-|`--mod-card-quiet-header-margin-top`|
-|`--mod-card-horizontal-preview-padding`|
-|`--mod-card-horizontal-body-padding`|
+| `--mod-animation-duration-100` |
+| `--mod-card-actions-background-color-opacity` |
+| `--mod-card-actions-background-color-rgb` |
+| `--mod-card-actions-border-radius` |
+| `--mod-card-actions-drop-shadow-blur` |
+| `--mod-card-actions-drop-shadow-color` |
+| `--mod-card-actions-drop-shadow-x` |
+| `--mod-card-actions-drop-shadow-y` |
+| `--mod-card-actions-size` |
+| `--mod-card-actions-spacing` |
+| `--mod-card-background-color` |
+| `--mod-card-background-color-hover` |
+| `--mod-card-body-font-color` |
+| `--mod-card-body-font-family` |
+| `--mod-card-body-font-size` |
+| `--mod-card-body-font-style` |
+| `--mod-card-body-font-weight` |
+| `--mod-card-body-line-height` |
+| `--mod-card-body-spacing` |
+| `--mod-card-border-color` |
+| `--mod-card-border-color-hover` |
+| `--mod-card-border-color-selected` |
+| `--mod-card-border-width` |
+| `--mod-card-content-margin-bottom` |
+| `--mod-card-content-margin-top` |
+| `--mod-card-corner-radius` |
+| `--mod-card-file-background-color` |
+| `--mod-card-file-outline` |
+| `--mod-card-focus-indicator-color` |
+| `--mod-card-focus-indicator-gap` |
+| `--mod-card-focus-indicator-width` |
+| `--mod-card-folder-background-color` |
+| `--mod-card-footer-margin-top` |
+| `--mod-card-header-margin-top` |
+| `--mod-card-horizontal-body-padding` |
+| `--mod-card-horizontal-preview-padding` |
+| `--mod-card-minimum-width` |
+| `--mod-card-preview-minimum-height` |
+| `--mod-card-subtitle-padding-right` |
+| `--mod-card-title-color` |
+| `--mod-card-title-font-color` |
+| `--mod-card-title-font-family` |
+| `--mod-card-title-font-size` |
+| `--mod-card-title-font-style` |
+| `--mod-card-title-font-weight` |
+| `--mod-card-title-line-height` |
+| `--mod-card-title-padding-right` |
+| `--mod-card-title-padding-top` |
+| `--mod-spectrum-card-background-color` |
