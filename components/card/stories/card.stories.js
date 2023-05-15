@@ -177,6 +177,20 @@ Default.args = {
   description: "Optional description that should be one or two lines",
   footer: [ html`Footer` ],
 };
+export const Selected = Template.bind({});
+Selected.argTypes = {
+  isGallery: { table: { disable: true } },
+  isGrid: { table: { disable: true } },
+  isDropTarget: { table: { disable: true } },
+  isHorizontal: { table: { disable: true } },
+};
+Selected.args = {
+  title: "Card title",
+  image: "example-card-portrait.png",
+  description: "Optional description that should be one or two lines",
+  footer: [ html`Footer` ],
+  isSelected: true
+}
 
 export const Quiet = Template.bind({});
 Quiet.argTypes = {

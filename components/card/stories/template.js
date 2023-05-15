@@ -125,7 +125,7 @@ export const Template = ({
           content: [
             Checkbox({
               ...globals,
-              isChecked: false,
+              isChecked: isSelected,
               title: "Select",
             }),
           ],

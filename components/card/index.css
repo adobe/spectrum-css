@@ -17,7 +17,7 @@ governing permissions and limitations under the License.
   --spectrum-card-body-spacing: var(--spectrum-spacing-400);
   --spectrum-card-title-padding-top: var(--spectrum-spacing-300);
   --spectrum-card-title-padding-right: var(--spectrum-spacing-400);
-  --spectrum-card-content-margin-top: var(--spectrum-spacing-300);
+  --spectrum-card-content-margin-top: var(--spectrum-spacing-100);
   --spectrum-card-content-margin-bottom: var(--spectrum-spacing-300);
   --spectrum-card-footer-margin-top: var(--spectrum-spacing-100);
   --spectrum-card-subtitle-padding-right: var(--spectrum-spacing-100);
@@ -84,6 +84,8 @@ governing permissions and limitations under the License.
   flex-direction: column;
 
   box-sizing: border-box;
+  /* This should use the --spectrum-card-default-width token when added */
+  inline-size: 200px;
   min-inline-size: var(--mod-card-minimum-width, var(--spectrum-card-minimum-width));
 
   border: var(--mod-card-border-width, var(--spectrum-card-border-width)) solid transparent;
