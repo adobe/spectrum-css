@@ -10,7 +10,7 @@ OF ANY KIND, either express or implied. See the License for the specific languag
 governing permissions and limitations under the License.
 */
 
-function getProcessors(keepUnusedVars = false, splitinatorOptions = {}) {
+function getProcessors(splitinatorOptions = {}) {
   return [
     require('postcss-import'),
     require('postcss-nested'),
@@ -27,12 +27,12 @@ function getProcessors(keepUnusedVars = false, splitinatorOptions = {}) {
     require('./plugins/postcss-transform-logical')(),
     require('./plugins/postcss-custom-properties-passthrough')(),
     require('postcss-calc'),
-    !keepUnusedVars && require('postcss-dropunusedvars'),
+    require('postcss-dropunusedvars')({ fix: false }),
     require('postcss-dropdupedvars'),
     require('postcss-focus-ring'),
     require('postcss-discard-empty'),
     require('postcss-discard-comments')({removeAllButFirst: true}),
-    require('autoprefixer')({}),
+    require('autoprefixer')({})
   ].filter(Boolean);
 }
 

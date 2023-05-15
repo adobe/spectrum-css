@@ -6,10 +6,9 @@ function getUsedVars(root) {
   const usedInProps = [];
   const variableRelationships = {};
 
-  root.walkRules((rule, ruleIndex) => {
+  root.walkRules((rule) => {
     rule.walkDecls((decl) => {
       const usedInDecl = [];
-
       const isVar = decl.prop.startsWith('--');
       const matches = decl.value.match(/var\(.*?\)/g);
       if (matches) {
@@ -50,47 +49,54 @@ function dropUnused(root, {
   usedAnywhere,
   usedInProps,
   variableRelationships
-}) {
-  root.walkRules((rule, ruleIndex) => {
+}, fix = true) {
+  root.walkRules((rule) => {
     rule.walkDecls((decl) => {
-      if (decl.prop.startsWith('--')) {
-        const varName = decl.prop;
-        // Definitely drop it if it's never used
-        if (!usedAnywhere.includes(varName)) {
-          decl.remove();
-        }
-        else if (!usedInProps.includes(varName)) {
-          // Drop a variable if everything that references it has been removed
-          let relatedVars = variableRelationships[varName];
-          if (relatedVars && relatedVars.length) {
-            let keep = false;
-            // Check if everything that references this variable has been removed
-            for (let relatedVar of relatedVars) {
-              if (usedAnywhere.includes(relatedVar)) {
-                keep = true;
-                break;
-              }
-            }
-            if (!keep) {
-              decl.remove();
-            }
-          }
+      if (!decl.prop.startsWith('--')) return;
+
+      const varName = decl.prop;
+
+      // Note if it seems like this variable is unused
+      if (!usedAnywhere.includes(varName)) {
+        if (!fix) decl.warn(root.toResult(), 'Possible unused variable definition', {
+          word: varName,
+          index: decl.sourceIndex,
+        });
+        else decl.remove();
+
+        return;
+      }
+
+      if (!usedInProps.includes(varName)) {
+        // Drop a variable if everything that references it has been removed
+        const relatedVars = variableRelationships[varName];
+
+        if (!relatedVars || relatedVars.length === 0) return;
+
+        // Check if everything that references this variable has been removed
+        const keep = Object.entries(relatedVars).reduce((keep, [,relatedVar]) => {
+          if (usedAnywhere.includes(relatedVar)) return true;
+          else return keep;
+        }, false);
+
+        if (keep) return;
+
+        if (fix) decl.remove();
+        else {
+          decl.warn(root.toResult(), 'Possible unused variable definition', {
+            word: varName,
+            index: decl.sourceIndex,
+          });
         }
       }
     });
   });
 }
 
-function process(root) {
-  // Find all used variables
-  const variableUsage = getUsedVars(root);
-
-  // Drop unused variable definitions
-  dropUnused(root, variableUsage);
-}
-
-module.exports = postcss.plugin('postcss-dropunusedvars', function() {
-  return (root, result) => {
-    process(root);
+module.exports = postcss.plugin('postcss-dropunusedvars', function(options = {}) {
+  return (root) => {
+    const fix = options.fix ?? true;
+    // Drop unused variable definitions
+    dropUnused(root, getUsedVars(root), fix);
   }
 });
