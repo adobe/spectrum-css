@@ -87,7 +87,7 @@ export const Template = ({
       class="${classMap({
         [rootClass]: true,
         [`${rootClass}--size${size?.toUpperCase()}`]: typeof size !== "undefined",
-        [`${rootClass}-${density}--size${size?.toUpperCase()}`]: typeof density !== "undefined",
+        [`${rootClass}--${density}`]: typeof density !== "undefined",
         ...customClasses.reduce((a, c) => ({ ...a, [c]: true }), {}),
       })}"
       id=${ifDefined(id)}
