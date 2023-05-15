@@ -11,6 +11,8 @@ governing permissions and limitations under the License.
 */
 
 const gulp = require('gulp');
+const logger = require('gulplog');
+const colors = require('colors');
 const path = require('path');
 const through = require('through2');
 const postcss = require('gulp-postcss');
@@ -173,23 +175,21 @@ function checkCSS(glob) {
       let { usedTokens } = getTokensUsedInCSS(root, coreTokens, componentTokens);
 
       // Make sure the component doesn't use any undefined tokens
-      let errors = [];
       usedTokens.forEach(tokenName => {
         if (!coreTokens[tokenName] && !componentTokens[tokenName] && !tokenName.startsWith('--mod') && !tokenName.startsWith('--highcontrast')) {
-          console.warn(`⚠️ ${pkg.name} uses undefined token ${tokenName}`);
+          tokenName = `${tokenName}`.cyan;
+          logger.warn(`${'◆'.yellow}  ${pkg.name} uses ${'undefined'.underline} token ${tokenName}`);
         }
       });
 
+      // 2023-05-10: Should remove this to allow for more cascading values to influence nested components
       // Make sure all tokens defined in the component are used
       Object.keys(componentTokens).forEach(tokenName => {
         if (!usedTokens.includes(tokenName)) {
-          errors.push(`${pkg.name} defines ${tokenName}, but never uses it`);
+          tokenName = `${tokenName}`.cyan;
+          logger.warn(`${'◆'.yellow}  ${pkg.name} defines ${tokenName}, but does not use it ${'internally'.italic}`);
         }
       });
-
-      if (errors.length) {
-        return cb(new Error(errors.join('\n')), file);
-      }
 
       cb(null);
     }));

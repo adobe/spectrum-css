@@ -82,12 +82,8 @@ governing permissions and limitations under the License.
   );
 
   /* todo: when we add t-shirt sizing, this will be wrong ❤️ */
+  /* Passthrough textfield styling */
   --spectrum-textfield-icon-inline-end-override: calc(var(--spectrum-alias-infieldbutton-full-height-m) + var(--spectrum-global-dimension-size-100));
-}
-
-/* hack: use var so it doesn't disappear */
-.🤫 {
-  width: var(--spectrum-textfield-icon-inline-end-override);
 }
 
 .spectrum-DatePicker {
@@ -114,10 +110,12 @@ governing permissions and limitations under the License.
 }
 
 .spectrum-DatePicker--quiet {
+  /* todo: when we add t-shirt sizing, this will be wrong ❤️ */
+  /* Passthrough textfield styling */
+  --spectrum-textfield-icon-inline-end-override: var(--spectrum-alias-infieldbutton-full-height-m);
+
   border-radius: var(--spectrum-combobox-quiet-fieldbutton-border-radius);
 
-  /* todo: when we add t-shirt sizing, this will be wrong ❤️ */
-  --spectrum-textfield-icon-inline-end-override: var(--spectrum-alias-infieldbutton-full-height-m);
 
   .spectrum-DatePicker-button {
     inline-size: auto;

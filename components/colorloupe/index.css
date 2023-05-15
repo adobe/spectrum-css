@@ -61,6 +61,7 @@ governing permissions and limitations under the License.
 }
 
 .spectrum-ColorLoupe-inner-border {
+  /* Undefined variable allows custom stylesheet or JS to pass the value to this element */
   fill: var(--spectrum-picked-color);
   stroke: var(--mod-colorloupe-inner-border-color, var(--spectrum-colorloupe-inner-border-color));
   stroke-width: var(--mod-colorloupe-inner-border-width, var(--spectrum-colorloupe-inner-border-width));
@@ -85,11 +86,6 @@ governing permissions and limitations under the License.
 
 .spectrum-ColorLoupe-checkerboard-fill {
   fill: var(--spectrum-colorloupe-checkerboard-fill);
-}
-
-/* hack: so it doesn't get flagged as unused, --spectrum-picked-color is a user defined value thus is not defined by styles */
-.🤫 {
-  --spectrum-picked-color: 0;
 }
 
 @media (forced-colors: active) {

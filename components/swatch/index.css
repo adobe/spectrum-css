@@ -10,11 +10,6 @@ OF ANY KIND, either express or implied. See the License for the specific languag
 governing permissions and limitations under the License.
 */
 
-.🤫 {
-  /* hack: make sure we don't complain about this color being undefined */
-  --spectrum-picked-color: 0;
-}
-
 /* Swatch tokens */
 .spectrum-Swatch {
   /* Placeholder tokens */
@@ -164,6 +159,7 @@ governing permissions and limitations under the License.
 
   &.is-mixedValue {
     .spectrum-Swatch-fill {
+      /* Undefined variable allows custom stylesheet or JS to pass the value to this element */
       background: var(--spectrum-picked-color, transparent);
     }
 
@@ -176,6 +172,7 @@ governing permissions and limitations under the License.
   /* Swatch fill: Not fill with Slash */
   &.is-nothing {
     .spectrum-Swatch-fill {
+      /* Undefined variable allows custom stylesheet or JS to pass the value to this element */
       background-color: var(--spectrum-picked-color, transparent);
       background-image: none;
 
@@ -275,6 +272,7 @@ governing permissions and limitations under the License.
     inset: 0;
     z-index: 0;
 
+    /* Undefined variable allows custom stylesheet or JS to pass the value to this element */
     background-color: var(--spectrum-picked-color, transparent);
 
     /* Swatch border */
@@ -288,6 +286,7 @@ governing permissions and limitations under the License.
   .spectrum-Swatch-fill {
     &:before {
       box-shadow: none;
+      /* Undefined variable allows custom stylesheet or JS to pass the value to this element */
       background-color: var(--spectrum-picked-color, transparent);
     }
   }
@@ -296,7 +295,7 @@ governing permissions and limitations under the License.
 .spectrum-Swatch-mixedValueIcon {
   visibility: hidden;
   pointer-events: none;
-
+  /* Undefined variable allows custom stylesheet or JS to pass the value to this element */
   color: var(--spectrum-picked-color, transparent);
 }
 
