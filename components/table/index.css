@@ -417,7 +417,6 @@ governing permissions and limitations under the License.
     outline-width: var(--mod-table-focus-indicator-thickness, var(--spectrum-table-focus-indicator-thickness));
     outline-style: solid;
     outline-color: var(--mod-table-focus-indicator-color, var(--spectrum-table-focus-indicator-color));
-    outline-offset: calc(-1 * var(--mod-table-border-width, var(--spectrum-table-border-width)));
   }
 }
 

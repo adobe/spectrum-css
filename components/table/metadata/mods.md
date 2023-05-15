@@ -4,14 +4,13 @@
 | `--mod-table-border-radius` |
 | `--mod-table-border-width` |
 | `--mod-table-cell-inline-space` |
-| `--mod-table-cell-vertical-align` |
 | `--mod-table-checkbox-cell-vertical-align` |
 | `--mod-table-checkbox-to-text` |
 | `--mod-table-collapsible-disclosure-inline-spacing` |
 | `--mod-table-collapsible-icon-animation-duration` |
+| `--mod-table-default-vertical-align` |
 | `--mod-table-disclosure-icon-size` |
 | `--mod-table-divider-color` |
-| `--mod-table-drop-target-box-shadow-spread` |
 | `--mod-table-edge-to-content` |
 | `--mod-table-focus-indicator-color` |
 | `--mod-table-focus-indicator-thickness` |
@@ -25,6 +24,7 @@
 | `--mod-table-header-text-color` |
 | `--mod-table-header-text-transform` |
 | `--mod-table-header-top-to-text` |
+| `--mod-table-header-vertical-align` |
 | `--mod-table-icon-color` |
 | `--mod-table-icon-to-text` |
 | `--mod-table-min-header-height` |
