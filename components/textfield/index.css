@@ -253,10 +253,8 @@ governing permissions and limitations under the License.
     }
 
     &.is-keyboardFocused,
-    &:focus-visible {
-      .spectrum-Textfield-input {
-        outline: none;
-      }
+    &:focus-visible,
+    &:focus-within {
       &::after {
         background-color: var(--highcontrast-textfield-focus-indicator-color, var(--mod-textfield-focus-indicator-color, var(--spectrum-textfield-focus-indicator-color))); 
       }
@@ -624,6 +622,7 @@ governing permissions and limitations under the License.
 
   /****** Input - Quiet 🤫 ******/
   .spectrum-Textfield--quiet & {
+    outline: none;
     border-block-start-width: 0;
     border-inline-width: 0;
   
