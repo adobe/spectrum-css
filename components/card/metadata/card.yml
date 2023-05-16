@@ -186,6 +186,90 @@ examples:
           </div>
         </div>
       </div>
+  - id: card-quiet-selected
+    name: Quiet (selected)
+    markup: |
+      <div style="width: 208px; height: 264px;">
+        <div class="spectrum-Card spectrum-Card--sizeM spectrum-Card--quiet is-selected" tabindex="0" role="figure">
+          <div class="spectrum-Card-preview">
+            <div class="spectrum-Asset">
+              <img class="spectrum-Asset-image" src="img/example-ava.jpg" style="max-width: 75%; max-height: 75%; object-fit: contain;">
+            </div>
+          </div>
+          <div class="spectrum-Card-body">
+            <div class="spectrum-Card-header">
+              <div class="spectrum-Card-title spectrum-Heading spectrum-Heading--sizeXS">Name</div>
+              <div class="spectrum-Card-actionButton">
+                <div style="display: inline-block;">
+                  <button aria-haspopup="true" class="spectrum-ActionButton spectrum-ActionButton--sizeM spectrum-ActionButton--quiet">
+                    <svg class="spectrum-Icon spectrum-Icon--sizeM spectrum-ActionButton-icon" focusable="false" aria-hidden="true">
+                      <use xlink:href="#spectrum-icon-18-More" />
+                    </svg>
+                  </button>
+                </div>
+              </div>
+            </div>
+            <div class="spectrum-Card-content">
+              <div class="spectrum-Card-description">10/15/18</div>
+            </div>
+          </div>
+          <div class="spectrum-QuickActions spectrum-Card-quickActions">
+            <div class="spectrum-Checkbox spectrum-Checkbox--sizeM">
+              <input type="checkbox" class="spectrum-Checkbox-input" title="Select" checked>
+              <span class="spectrum-Checkbox-box">
+                <svg class="spectrum-Icon spectrum-UIIcon-Checkmark100 spectrum-Checkbox-checkmark" focusable="false" aria-hidden="true">
+                  <use xlink:href="#spectrum-css-icon-Checkmark100" />
+                </svg>
+                <svg class="spectrum-Icon spectrum-UIIcon-Dash100 spectrum-Checkbox-partialCheckmark" focusable="false" aria-hidden="true">
+                  <use xlink:href="#spectrum-css-icon-Dash100" />
+                </svg>
+              </span>
+            </div>
+          </div>
+        </div>
+      </div>
+  - id: card-quiet-focused
+    name: Quiet (focused)
+    markup: |
+      <div style="width: 208px; height: 264px;">
+        <div class="spectrum-Card spectrum-Card--sizeM spectrum-Card--quiet is-focused" tabindex="0" role="figure">
+          <div class="spectrum-Card-preview">
+            <div class="spectrum-Asset">
+              <img class="spectrum-Asset-image" src="img/example-ava.jpg" style="max-width: 75%; max-height: 75%; object-fit: contain;">
+            </div>
+          </div>
+          <div class="spectrum-Card-body">
+            <div class="spectrum-Card-header">
+              <div class="spectrum-Card-title spectrum-Heading spectrum-Heading--sizeXS">Name</div>
+              <div class="spectrum-Card-actionButton">
+                <div style="display: inline-block;">
+                  <button aria-haspopup="true" class="spectrum-ActionButton spectrum-ActionButton--sizeM spectrum-ActionButton--quiet">
+                    <svg class="spectrum-Icon spectrum-Icon--sizeM spectrum-ActionButton-icon" focusable="false" aria-hidden="true">
+                      <use xlink:href="#spectrum-icon-18-More" />
+                    </svg>
+                  </button>
+                </div>
+              </div>
+            </div>
+            <div class="spectrum-Card-content">
+              <div class="spectrum-Card-description">10/15/18</div>
+            </div>
+          </div>
+          <div class="spectrum-QuickActions spectrum-Card-quickActions">
+            <div class="spectrum-Checkbox spectrum-Checkbox--sizeM">
+              <input type="checkbox" class="spectrum-Checkbox-input" title="Select">
+              <span class="spectrum-Checkbox-box">
+                <svg class="spectrum-Icon spectrum-UIIcon-Checkmark100 spectrum-Checkbox-checkmark" focusable="false" aria-hidden="true">
+                  <use xlink:href="#spectrum-css-icon-Checkmark100" />
+                </svg>
+                <svg class="spectrum-Icon spectrum-UIIcon-Dash100 spectrum-Checkbox-partialCheckmark" focusable="false" aria-hidden="true">
+                  <use xlink:href="#spectrum-css-icon-Dash100" />
+                </svg>
+              </span>
+            </div>
+          </div>
+        </div>
+      </div>
   - id: card-quiet
     name: Quiet (file)
     description: A quiet card for a file asset.
