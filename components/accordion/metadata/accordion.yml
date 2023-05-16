@@ -11,7 +11,7 @@ sections:
       Accordion now supports t-shirt sizing and requires that you specify the size by adding a `.spectrum-Accordion--size*` class.
 
       ### Density
-      Accordion now supports density and requires that you specify one of the density type `.spectrum-Accordion--compact` `.spectrum-Accordion--regular` `.spectrum-Accordion--spacious` class.
+      Accordion now supports density and requires that you specify one of the density type `compact` `regular` `spacious`.
 
 examples:
   - id: accordion
@@ -210,7 +210,7 @@ examples:
     name: Regular - S
     markup: |
       <!-- WAI-ARIA 1.1: Accordion container role changed from "tablist" to "region" -->
-      <div class="spectrum-Accordion spectrum-Accordion--regular spectrum-Accordion--sizeS" role="region">
+      <div class="spectrum-Accordion spectrum-Accordion--sizeS" role="region">
         <div class="spectrum-Accordion-item is-open" role="presentation">
 
           <!-- WAI-ARIA 1.1: Item header is a <button> wrapped within a <h3> element, rather than a <div> element with role="tab" -->
@@ -258,7 +258,7 @@ examples:
     name: Regular - M
     markup: |
       <!-- WAI-ARIA 1.1: Accordion container role changed from "tablist" to "region" -->
-      <div class="spectrum-Accordion spectrum-Accordion--regular spectrum-Accordion--sizeM" role="region">
+      <div class="spectrum-Accordion spectrum-Accordion--sizeM" role="region">
         <div class="spectrum-Accordion-item is-open" role="presentation">
 
           <!-- WAI-ARIA 1.1: Item header is a <button> wrapped within a <h3> element, rather than a <div> element with role="tab" -->
@@ -306,7 +306,7 @@ examples:
     name: Regular - L
     markup: |
       <!-- WAI-ARIA 1.1: Accordion container role changed from "tablist" to "region" -->
-      <div class="spectrum-Accordion spectrum-Accordion--regular spectrum-Accordion--sizeL" role="region">
+      <div class="spectrum-Accordion spectrum-Accordion--sizeL" role="region">
         <div class="spectrum-Accordion-item is-open" role="presentation">
 
           <!-- WAI-ARIA 1.1: Item header is a <button> wrapped within a <h3> element, rather than a <div> element with role="tab" -->
@@ -354,7 +354,7 @@ examples:
     name: Regular - XL
     markup: |
       <!-- WAI-ARIA 1.1: Accordion container role changed from "tablist" to "region" -->
-      <div class="spectrum-Accordion spectrum-Accordion--regular spectrum-Accordion--sizeXL" role="region">
+      <div class="spectrum-Accordion spectrum-Accordion--sizeXL" role="region">
         <div class="spectrum-Accordion-item is-open" role="presentation">
 
           <!-- WAI-ARIA 1.1: Item header is a <button> wrapped within a <h3> element, rather than a <div> element with role="tab" -->
