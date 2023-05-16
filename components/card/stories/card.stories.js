@@ -31,24 +31,6 @@ export default {
       },
       control: "boolean",
     },
-    isGallery: {
-      name: "Gallery styling",
-      type: { name: "boolean" },
-      table: {
-        type: { summary: "boolean" },
-        category: "Advanced",
-      },
-      control: "boolean",
-    },
-    isGrid: {
-      name: "Grid layout",
-      type: { name: "boolean" },
-      table: {
-        type: { summary: "boolean" },
-        category: "Advanced",
-      },
-      control: "boolean",
-    },
     isSelected: {
       name: "Selected",
       type: { name: "boolean" },
@@ -66,24 +48,6 @@ export default {
         category: "State",
       },
       control: "boolean"
-    },
-    isHorizontal: {
-      name: "Horizontal",
-      type: { name: "boolean" },
-      table: {
-        type: { summary: "boolean" },
-        category: "Component",
-      },
-      control: "boolean"
-    },
-    isDropTarget: {
-      name: "Drop target",
-      type: { name: "boolean" },
-      table: {
-        type: { summary: "boolean" },
-        category: "Advanced",
-      },
-      control: "boolean",
     },
     hasActions: {
       name: "Card actions",
@@ -117,15 +81,6 @@ export default {
       },
       control: { type: "text" },
     },
-    // subtitle: {
-    //   name: "Subtitle",
-    //   type: { name: "string" },
-    //   table: {
-    //     type: { summary: "string" },
-    //     category: "Content",
-    //   },
-    //   control: { type: "text" },
-    // },
     description: {
       name: "Description",
       type: { name: "string" },
@@ -136,6 +91,10 @@ export default {
       control: { type: "text" },
     },
     footer: { table: { disable: true } },
+    isGallery: { table: { disable: true } },
+    isGrid: { table: { disable: true } },
+    isHorizontal: { table: { disable: true } },
+    isDropTarget: { table: { disable: true } },
   },
   args: {
     rootClass: "spectrum-Card",
@@ -164,41 +123,27 @@ export default {
   },
 };
 
+const defaultArgs = {
+  title: "Card title",
+  image: "example-card-portrait.png",
+  description: "Optional description that should be one or two lines",
+  footer: [ html`Footer` ],
+}
+
 export const Default = Template.bind({});
-Default.argTypes = {
-	isGallery: { table: { disable: true } },
-	isGrid: { table: { disable: true } },
-	isDropTarget: { table: { disable: true } },
-	isHorizontal: { table: { disable: true } },
-};
-Default.args = {
-  title: "Card title",
-  image: "example-card-portrait.png",
-  description: "Optional description that should be one or two lines",
-  footer: [ html`Footer` ],
-};
+Default.args = defaultArgs;
 export const Selected = Template.bind({});
-Selected.argTypes = {
-  isGallery: { table: { disable: true } },
-  isGrid: { table: { disable: true } },
-  isDropTarget: { table: { disable: true } },
-  isHorizontal: { table: { disable: true } },
-};
 Selected.args = {
-  title: "Card title",
-  image: "example-card-portrait.png",
-  description: "Optional description that should be one or two lines",
-  footer: [ html`Footer` ],
+  ...defaultArgs,
   isSelected: true
+}
+export const Focused = Template.bind({});
+Focused.args = {
+  ...defaultArgs,
+  isFocused: true
 }
 
 export const Quiet = Template.bind({});
-Quiet.argTypes = {
-	isGallery: { table: { disable: true } },
-	isGrid: { table: { disable: true } },
-	isDropTarget: { table: { disable: true } },
-	isHorizontal: { table: { disable: true } },
-};
 Quiet.args = {
   title: "Name",
   showAsset: "image",
@@ -209,12 +154,6 @@ Quiet.args = {
 
 export const QuietFile = Template.bind({});
 QuietFile.storyName = "Quiet (file)";
-QuietFile.argTypes = {
-	isGallery: { table: { disable: true } },
-	isGrid: { table: { disable: true } },
-	isDropTarget: { table: { disable: true } },
-	isHorizontal: { table: { disable: true } },
-};
 QuietFile.args = {
   title: "FileName",
   description: "PDF",
@@ -224,11 +163,8 @@ QuietFile.args = {
 
 export const Horizontal = Template.bind({});
 Horizontal.argTypes = {
-	hasActions: { table: { disable: true } },
-	hasQuickAction: { table: { disable: true } },
-	isGallery: { table: { disable: true } },
-	isGrid: { table: { disable: true } },
-	isDropTarget: { table: { disable: true } },
+  hasActions: { table: { disable: true } },
+  hasQuickAction: { table: { disable: true } },
 };
 Horizontal.args = {
   title: "Card title",
