@@ -15,7 +15,7 @@ export const Template = ({
   text,
   variant,
   customClasses = [],
-...globals
+  ...globals
 }) => {
   const { express } = globals;
 
@@ -62,10 +62,6 @@ export const Template = ({
       vertical: true,
       size: 's',
       tag: 'div',
-      verticalStyle: {
-        "height": "auto",
-        "align-self": "stretch",
-    },
     ...globals,
     })}
     ${CloseButton({

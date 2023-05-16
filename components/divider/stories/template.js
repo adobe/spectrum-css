@@ -12,11 +12,6 @@ export const Template = ({
   staticColor,
   vertical = false,
   customClasses = [],
-  verticalStyle = {
-    "min-height": "20px",
-    "height": 'auto',
-    "align-self": "stretch"
-  },
   ...globals
 }) => {
   const { express } = globals;
@@ -39,7 +34,7 @@ if (tag === "hr") {
           typeof staticColor !== "undefined",
         ...customClasses.reduce((a, c) => ({ ...a, [c]: true }), {}),
       })}
-      style=${vertical === true ? (styleMap(verticalStyle)) : ""}
+      style=${vertical === true ? "min-height: 20px; height: auto; align-self: stretch" : ""}
       role="separator"
       >
     </hr>`
@@ -54,7 +49,7 @@ if (tag === "hr") {
           typeof staticColor !== "undefined",
         ...customClasses.reduce((a, c) => ({ ...a, [c]: true }), {}),
       })}
-      style=${vertical === true ? (styleMap(verticalStyle)) : ""}
+      style=${vertical === true ? "min-height: 20px; height: auto; align-self: stretch" : ""}
       role="separator"
       >
     </div>`
