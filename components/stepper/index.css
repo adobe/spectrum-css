@@ -298,7 +298,7 @@ governing permissions and limitations under the License.
     &::after {
       content: '';
       position: absolute;
-      bottom: calc(-1 * var(--mod-stepper-focus-indicator-gap, var(--spectrum-stepper-focus-indicator-gap)) * 2);
+      bottom: calc(-1 * (var(--mod-stepper-focus-indicator-gap, var(--spectrum-stepper-focus-indicator-gap)) + var(--mod-stepper-focus-indicator-width, var(--spectrum-stepper-focus-indicator-width))));
       left: 0;
       inline-size: 100%;
       block-size: var(--mod-stepper-focus-indicator-width, var(--spectrum-stepper-focus-indicator-width));
