@@ -158,13 +158,11 @@ examples:
             <div class="spectrum-Card-header">
               <div class="spectrum-Card-title spectrum-Heading spectrum-Heading--sizeXS">Name</div>
               <div class="spectrum-Card-actionButton">
-                <div style="display: inline-block;">
-                  <button aria-haspopup="true" class="spectrum-ActionButton spectrum-ActionButton--sizeM spectrum-ActionButton--quiet">
-                    <svg class="spectrum-Icon spectrum-Icon--sizeM spectrum-ActionButton-icon" focusable="false" aria-hidden="true">
-                      <use xlink:href="#spectrum-icon-18-More" />
-                    </svg>
-                  </button>
-                </div>
+                <button aria-haspopup="true" class="spectrum-ActionButton spectrum-ActionButton--sizeM spectrum-ActionButton--quiet">
+                  <svg class="spectrum-Icon spectrum-Icon--sizeM spectrum-ActionButton-icon" focusable="false" aria-hidden="true">
+                    <use xlink:href="#spectrum-icon-18-More" />
+                  </svg>
+                </button>
               </div>
             </div>
             <div class="spectrum-Card-content">
@@ -200,13 +198,11 @@ examples:
             <div class="spectrum-Card-header">
               <div class="spectrum-Card-title spectrum-Heading spectrum-Heading--sizeXS">Name</div>
               <div class="spectrum-Card-actionButton">
-                <div style="display: inline-block;">
-                  <button aria-haspopup="true" class="spectrum-ActionButton spectrum-ActionButton--sizeM spectrum-ActionButton--quiet">
-                    <svg class="spectrum-Icon spectrum-Icon--sizeM spectrum-ActionButton-icon" focusable="false" aria-hidden="true">
-                      <use xlink:href="#spectrum-icon-18-More" />
-                    </svg>
-                  </button>
-                </div>
+                <button aria-haspopup="true" class="spectrum-ActionButton spectrum-ActionButton--sizeM spectrum-ActionButton--quiet">
+                  <svg class="spectrum-Icon spectrum-Icon--sizeM spectrum-ActionButton-icon" focusable="false" aria-hidden="true">
+                    <use xlink:href="#spectrum-icon-18-More" />
+                  </svg>
+                </button>
               </div>
             </div>
             <div class="spectrum-Card-content">
@@ -242,13 +238,11 @@ examples:
             <div class="spectrum-Card-header">
               <div class="spectrum-Card-title spectrum-Heading spectrum-Heading--sizeXS">Name</div>
               <div class="spectrum-Card-actionButton">
-                <div style="display: inline-block;">
-                  <button aria-haspopup="true" class="spectrum-ActionButton spectrum-ActionButton--sizeM spectrum-ActionButton--quiet">
-                    <svg class="spectrum-Icon spectrum-Icon--sizeM spectrum-ActionButton-icon" focusable="false" aria-hidden="true">
-                      <use xlink:href="#spectrum-icon-18-More" />
-                    </svg>
-                  </button>
-                </div>
+                <button aria-haspopup="true" class="spectrum-ActionButton spectrum-ActionButton--sizeM spectrum-ActionButton--quiet">
+                  <svg class="spectrum-Icon spectrum-Icon--sizeM spectrum-ActionButton-icon" focusable="false" aria-hidden="true">
+                    <use xlink:href="#spectrum-icon-18-More" />
+                  </svg>
+                </button>
               </div>
             </div>
             <div class="spectrum-Card-content">
@@ -270,7 +264,7 @@ examples:
           </div>
         </div>
       </div>
-  - id: card-quiet
+  - id: card-quiet-file
     name: Quiet (file)
     description: A quiet card for a file asset.
     markup: |
@@ -307,7 +301,7 @@ examples:
           </div>
         </div>
       </div>
-  - id: card-quiet
+  - id: card-quiet-folder
     name: Quiet (folder)
     description: A quiet card for a folder asset.
     markup: |
@@ -340,6 +334,27 @@ examples:
                   <use xlink:href="#spectrum-css-icon-Dash100" />
                 </svg>
               </span>
+            </div>
+          </div>
+        </div>
+      </div>
+  - id: card-horizontal
+    name: Horizontal
+    description: A card with a horizontal layout.
+    markup: |
+      <div style="width: 208px;">
+        <div class="spectrum-Card spectrum-Card--horizontal" tabindex="0" role="figure">
+          <div class="spectrum-Card-preview">
+            <svg class="spectrum-Icon spectrum-Icon--sizeXXL" aria-hidden="true" focusable="false">
+              <use xlink:href="#spectrum-icon-18-FileTxt" />
+            </svg>
+          </div>
+          <div class="spectrum-Card-body">
+            <div class="spectrum-Card-header">
+              <div class="spectrum-Card-title spectrum-Heading spectrum-Heading--sizeXS">FileName</div>
+            </div>
+            <div class="spectrum-Card-content">
+              <div class="spectrum-Card-description">PDF</div>
             </div>
           </div>
         </div>
