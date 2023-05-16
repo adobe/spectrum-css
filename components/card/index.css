@@ -83,6 +83,18 @@ governing permissions and limitations under the License.
   --spectrum-card-horizontal-body-padding: var(--spectrum-spacing-300);
   --spectrum-card-horizontal-preview-padding: var(--spectrum-spacing-200);
 
+  /* TODO: These are placeholder until recursive RGB is available */
+  .spectrum-light &,
+  .spectrum-lightest & {
+    --spectrum-card-selected-background-color-rgb: var(--spectrum-blue-900);
+  }
+  .spectrum-dark & {
+    --spectrum-card-selected-background-color-rgb: var(--spectrum-blue-500-rgb);
+  }
+  .spectrum-darkest & {
+    --spectrum-card-selected-background-color-rgb: var(--spectrum-blue-600-rgb);
+  }
+
 }
 
 .spectrum-Card {
@@ -141,7 +153,6 @@ governing permissions and limitations under the License.
 
   &.is-selected {
     border-color: var(--highcontrast-card-border-color-selected, var(--mod-card-border-color-selected, var(--spectrum-card-border-color-selected)));
-    box-shadow: 0 0 0 1px var(--highcontrast-card-border-color-selected, var(--mod-card-border-color-selected, var(--spectrum-card-border-color-selected)));
   }
 
   &.is-drop-target {
