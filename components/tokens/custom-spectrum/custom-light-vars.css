@@ -20,4 +20,7 @@ governing permissions and limitations under the License.
 
   /* Drop Zone background color rgb */
   --spectrum-drop-zone-background-color-rgb: var( --spectrum-blue-800-rgb); /* var(--spectrum-accent-color-800);*/
+
+  /* Card Selected color rgb */
+  --spectrum-card-selected-background-color-rgb: var(--spectrum-blue-900) /* var(--spectrum-informative-color-900); */
 }
