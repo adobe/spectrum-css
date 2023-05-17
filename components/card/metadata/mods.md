@@ -37,7 +37,6 @@
 | `--mod-card-selected-background-color-rgb` |
 | `--mod-card-selected-background-opacity` |
 | `--mod-card-subtitle-padding-right` |
-| `--mod-card-title-color` |
 | `--mod-card-title-font-color` |
 | `--mod-card-title-font-family` |
 | `--mod-card-title-font-size` |
