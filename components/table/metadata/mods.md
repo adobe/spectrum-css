@@ -4,7 +4,6 @@
 | `--mod-table-border-radius` |
 | `--mod-table-border-width` |
 | `--mod-table-cell-inline-space` |
-| `--mod-table-checkbox-cell-vertical-align` |
 | `--mod-table-checkbox-to-text` |
 | `--mod-table-collapsible-disclosure-inline-spacing` |
 | `--mod-table-collapsible-icon-animation-duration` |

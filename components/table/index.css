@@ -30,7 +30,6 @@ governing permissions and limitations under the License.
 
   --spectrum-table-default-vertical-align: top;
   --spectrum-table-header-vertical-align: middle;
-  --spectrum-table-checkbox-cell-vertical-align: middle;
 
   /* Typography */
   --spectrum-table-header-font-weight: var(--spectrum-bold-font-weight);
@@ -588,6 +587,17 @@ governing permissions and limitations under the License.
   transition: background-color var(--mod-table-transition-duration, var(--spectrum-table-transition-duration)) ease-in-out;
   cursor: pointer;
 
+  &:first-child {
+    /* Ensure that 'outline' will match the border-radius, when used on rows. */
+    border-start-start-radius: var(--mod-table-border-radius, var(--spectrum-table-border-radius));
+    border-start-end-radius: var(--mod-table-border-radius, var(--spectrum-table-border-radius));
+  }
+
+  &:last-child {
+    border-end-start-radius: var(--mod-table-border-radius, var(--spectrum-table-border-radius));
+    border-end-end-radius: var(--mod-table-border-radius, var(--spectrum-table-border-radius));
+  }
+
   &:hover {
     background-color: var(--mod-table-row-hover-color, var(--spectrum-table-row-hover-color));
   }
@@ -607,18 +617,6 @@ governing permissions and limitations under the License.
 
   &.is-selected {
     background-color: var(--highcontrast-table-selected-row-background-color, var(--mod-table-selected-row-background-color-non-emphasized, var(--spectrum-table-selected-row-background-color-non-emphasized)));
-
-    /* @todo There may be a new token added for this background color. */
-    /*
-    &:hover {
-      background-color: var(--highcontrast-table-selected-row-background-color, var(--mod-table-selected-row-background-color-hover, var(--spectrum-table-selected-row-background-color-hover)));
-    }
-
-    &:focus-visible,
-    &.is-focused {
-      background-color: var(--highcontrast-table-selected-row-background-color, var(--mod-table-selected-row-background-color-hover, var(--spectrum-table-selected-row-background-color-hover)));
-    }
-    */
 
     .spectrum-Table.spectrum-Table--emphasized &,
     &.spectrum-Table-row--emphasized {
@@ -701,23 +699,21 @@ governing permissions and limitations under the License.
     var(--mod-table-checkbox-to-text, var(--spectrum-table-checkbox-to-text)) - 
     var(--mod-table-edge-to-content, var(--spectrum-table-edge-to-content))
   );
-
-  /* have to eliminate vertical padding to allow proper vertical alignment */
-  padding-block-start: 0px;
-  padding-block-end: 0px;
-  vertical-align: var(--mod-table-checkbox-cell-vertical-align, var(--spectrum-table-checkbox-cell-vertical-align));
-
-  .spectrum-Table-cell & .spectrum-Checkbox-box {
-    margin-block: var(--mod-table-row-checkbox-block-spacing, var(--spectrum-table-row-checkbox-block-spacing));
+  
+  .spectrum-Checkbox {
+    min-block-size: initial;
+    .spectrum-Checkbox-box {
+      margin: 0;
+    }
   }
 
-  .spectrum-Table-headCell & .spectrum-Checkbox-box {
-    margin-block: var(--mod-table-header-checkbox-block-spacing, var(--spectrum-table-header-checkbox-block-spacing));
+  &.spectrum-Table-cell {
+    padding-block: var(--mod-table-row-checkbox-block-spacing, var(--spectrum-table-row-checkbox-block-spacing));
   }
-}
 
-.spectrum-Table-checkbox {
-  vertical-align: super;
+  &.spectrum-Table-headCell {
+    padding-block: var(--mod-table-header-checkbox-block-spacing, var(--spectrum-table-header-checkbox-block-spacing));
+  }
 }
 
 /********* DIVS *********/
