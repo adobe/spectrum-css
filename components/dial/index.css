@@ -209,3 +209,95 @@ governing permissions and limitations under the License.
     }
   }
 }
+
+
+.spectrum-Dial {
+  --spectrum-dial-label-text-color: var(--spectrum-alias-label-text-color);
+  --spectrum-dial-label-text-color-disabled: var(
+    --spectrum-alias-label-text-color
+  );
+  --spectrum-dial-handle-border-color-disabled: var(
+    --spectrum-alias-icon-color-disabled
+  );
+}
+
+.spectrum-Dial-labelContainer {
+  color: var(--spectrum-dial-label-text-color);
+}
+
+.spectrum-Dial-handle {
+  box-shadow: none;
+  border-color: var(--spectrum-dial-small-handle-marker-color);
+
+  &:before {
+    display: none;
+  }
+
+  &::after {
+    background-color: var(--spectrum-dial-handle-marker-color);
+  }
+
+  &:hover {
+    border-color: var(--spectrum-dial-border-color-hover);
+    &::after {
+      background-color: var(--spectrum-dial-handle-marker-color-hover);
+    }
+  }
+
+  &.is-focused {
+    background-color: var(--spectrum-dial-handle-marker-color-key-focus);
+
+    border-color: var(--spectrum-dial-handle-marker-color-key-focus);
+
+    &::after {
+      background-color: var(--spectrum-dial-handle-marker-color-key-focus);
+    }
+  }
+
+  &:active,
+  &.is-dragged {
+    background-color: var(--spectrum-dial-border-color-hover);
+    border-color: var(--spectrum-dial-border-color-hover);
+
+    &::after {
+      background-color: var(--spectrum-dial-handle-marker-color-key-focus);
+    }
+  }
+}
+
+.spectrum-Dial-controls {
+  &::before,
+  &::after {
+    background-color: var(--spectrum-dial-min-max-tick-color);
+  }
+}
+
+.spectrum-Dial {
+  &.is-disabled {
+    .spectrum-Dial-labelContainer {
+      color: var(--spectrum-dial-label-text-color-disabled);
+    }
+    .spectrum-Dial-controls {
+      &::after,
+      &::before {
+        background-color: var(--spectrum-dial-handle-border-color-disabled);
+      }
+    }
+    .spectrum-Dial-handle {
+      border-color: var(--spectrum-dial-handle-border-color-disabled);
+      background: var(--spectrum-alias-background-color-default);
+
+      &:hover,
+      &:active {
+        border-color: var(--spectrum-dial-handle-border-color-disabled);
+        background: var(--spectrum-dial-handle-border-color-disabled);
+      }
+
+      &::after,
+      &::before {
+        background-color: var(--spectrum-dial-handle-border-color-disabled);
+      }
+    }
+  }
+}
+
