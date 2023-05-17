@@ -185,7 +185,7 @@ governing permissions and limitations under the License.
 
   --spectrum-table-thumbnail-block-spacing: var(--spectrum-table-thumbnail-to-top-minimum-large);
   --spectrum-table-thumbnail-to-text: var(--spectrum-text-to-visual-200);
-  --spectrum-table-thumbnail-size: var(--spectrum-thumbnail-size-500);
+  --spectrum-table-thumbnail-size: var(--spectrum-thumbnail-size-400);
 }
 
 .spectrum-Table--sizeXL {
@@ -216,7 +216,7 @@ governing permissions and limitations under the License.
 
   --spectrum-table-thumbnail-block-spacing: var(--spectrum-table-thumbnail-to-top-minimum-extra-large);
   --spectrum-table-thumbnail-to-text: var(--spectrum-text-to-visual-300);
-  --spectrum-table-thumbnail-size: var(--spectrum-thumbnail-size-700);
+  --spectrum-table-thumbnail-size: var(--spectrum-thumbnail-size-500);
 }
 
 /********* VARIANTS *********/
@@ -341,21 +341,36 @@ governing permissions and limitations under the License.
   .spectrum-Table-body.is-drop-target .spectrum-Table-row {
     color: SelectedItemText;
 
+    /* Ensure negative offset outline contrasts on top of SelectedItem background. */
+    --highcontrast-table-cell-focus-indicator-color: SelectedItemText;
+    --highcontrast-table-cell-focus-extra-offset: 1px;
+
     .spectrum-Table-checkbox .spectrum-Checkbox-box::before {
       outline: SelectedItemText 1px solid;
     }
 
     .spectrum-Table-cell {
       forced-color-adjust: none;
-      --spectrum-table-divider-color: SelectedItemText;
+      --spectrum-table-divider-color: CanvasText;
+      --spectrum-table-border-color: CanvasText;
       background-color: transparent;
       color: SelectedItemText;
+    }
+  }
+
+  /*
+  .spectrum-Table-row.is-selected,
+  .spectrum-Table-row.is-drop-target {
+    & + .spectrum-Table-row.is-selected,
+    & + .spectrum-Table-row.is-drop-target {
+      --spectrum-table-divider-color: SelectedItemText;
     }
   }
 
   .spectrum-Table-row.is-drop-target + .spectrum-Table-row .spectrum-Table-cell {
     border-top-color: var(--highcontrast-table-focus-indicator-color);
   }
+  */
 }
 
 /********* REGULAR / DEFAULT *********/
@@ -548,46 +563,21 @@ governing permissions and limitations under the License.
 .spectrum-Table-headCell {
   position: relative;
 
-  &:focus-ring,
+  &:focus-visible,
   &.is-focused {
-    outline: none;
-
-    &::before {
-      content: '';
-
-      /* Float above border */
-      z-index: 1;
-      position: absolute;
-
-      inset-block-start: 0;
-      inset-inline-end: 0;
-      inset-block-end: 0;
-      inset-inline-start: 0;
-
-      border-radius: max(0px, calc(var(--mod-table-border-radius, var(--spectrum-table-border-radius)) - 1px));
-      box-shadow: inset 0 0 0 var(--mod-table-focus-indicator-thickness, var(--spectrum-table-focus-indicator-thickness)) var(--highcontrast-table-focus-indicator-color, var(--mod-table-focus-indicator-color, var(--spectrum-table-focus-indicator-color)));
-    }
-  }
-}
-
-.spectrum-Table-headCell {
-  &:focus-ring,
-  &.is-focused {
-    &::before {
-      inset-block-start: var(--mod-table-border-width, var(--spectrum-table-border-width));
-      inset-inline-end: var(--mod-table-border-width, var(--spectrum-table-border-width));
-      inset-block-end: var(--mod-table-border-width, var(--spectrum-table-border-width));
-      inset-inline-start: var(--mod-table-border-width, var(--spectrum-table-border-width));
-    }
+    outline-width: var(--mod-table-focus-indicator-thickness, var(--spectrum-table-focus-indicator-thickness));
+    outline-style: solid;
+    outline-color: var(--highcontrast-table-cell-focus-indicator-color, var(--highcontrast-table-focus-indicator-color, var(--mod-table-focus-indicator-color, var(--spectrum-table-focus-indicator-color))));
+    outline-offset: calc(
+      (-1 * var(--mod-table-focus-indicator-thickness, var(--spectrum-table-focus-indicator-thickness))) -
+      var(--highcontrast-table-cell-focus-extra-offset, 0px)
+    );
   }
 }
 
 /* Cells that display a column divider (vertical border). */
 .spectrum-Table-cell--divider {
-  border-inline-end:
-    var(--mod-table-border-width, var(--spectrum-table-border-width))
-    solid
-    var(--mod-table-divider-color, var(--spectrum-table-divider-color));
+  border-inline-end: var(--mod-table-border-width, var(--spectrum-table-border-width)) solidvar(--mod-table-divider-color, var(--spectrum-table-divider-color));
 }
 
 .spectrum-Table-row {
@@ -606,7 +596,7 @@ governing permissions and limitations under the License.
     outline: 0;
   }
 
-  &:focus-ring,
+  &:focus-visible,
   &.is-focused {
     background-color: var(--mod-table-row-hover-color, var(--spectrum-table-row-hover-color));
   }
@@ -624,7 +614,7 @@ governing permissions and limitations under the License.
       background-color: var(--highcontrast-table-selected-row-background-color, var(--mod-table-selected-row-background-color-hover, var(--spectrum-table-selected-row-background-color-hover)));
     }
 
-    &:focus-ring,
+    &:focus-visible,
     &.is-focused {
       background-color: var(--highcontrast-table-selected-row-background-color, var(--mod-table-selected-row-background-color-hover, var(--spectrum-table-selected-row-background-color-hover)));
     }
@@ -816,24 +806,32 @@ div.spectrum-Table-headCell {
   }
 }
 
-.spectrum-Table-disclosureIcon {
+.spectrum-Table-disclosureIcon.spectrum-Table-disclosureIcon {
   height: var(--mod-table-disclosure-icon-size, var(--spectrum-table-disclosure-icon-size));
   flex-basis: var(--mod-table-disclosure-icon-size, var(--spectrum-table-disclosure-icon-size));
   flex-grow: 0;
   flex-shrink: 0;
   transition: transform ease var(--mod-table-collapsible-icon-animation-duration, var(--spectrum-table-collapsible-icon-animation-duration));
 
+  border-radius: 0;
+  background: transparent;
+  border: 0;
+
   &[aria-expanded="true"]{
     transform: logical rotate(90deg);
   }
 
-  &.spectrum-Button--iconOnly {
-    border: 0;
-    background: transparent;
+  &::after {
+    display: none;
+  }
 
-    &:after {
-      border-radius: 0;
-    }
+  &:focus-visible {
+    outline-width: var(--mod-table-focus-indicator-thickness, var(--spectrum-table-focus-indicator-thickness));
+    outline-style: solid;
+    outline-color: var(--highcontrast-table-focus-indicator-color, var(--mod-table-focus-indicator-color, var(--spectrum-table-focus-indicator-color)));
+    outline-offset: calc(
+      (-1 * var(--mod-table-focus-indicator-thickness, var(--spectrum-table-focus-indicator-thickness))) - 2px
+    );
   }
 }
 
