@@ -27,15 +27,6 @@ export default {
       },
       control: { type: "text" },
     },
-    showModal: {
-      name: "Wrap the alert dialog in a modal",
-      type: { name: "boolean" },
-      table: {
-        type: { summary: "boolean" },
-        category: "Component",
-      },
-      control: "boolean",
-    },
     isOpen: {
       name: "Open",
       type: { name: "boolean" },
@@ -49,12 +40,24 @@ export default {
   },
   args: {
     rootClass: "spectrum-AlertDialog",
-    showModal: false,
     isOpen: true,
   },
   parameters: {
     actions: {
       handles: ["click .spectrum-AlertDialog button"],
+    },
+    backgrounds: {
+      default: 'overlay',
+      values: [
+        {
+          name: 'gray-100',
+          value: '#f8f8f8',
+        },
+        {
+          name: 'overlay',
+          value: '#a3a3a3',
+        }
+      ]
     },
     status: {
       type: process.env.MIGRATED_PACKAGES.includes("alertdialog")
@@ -68,7 +71,6 @@ export const Default = Template.bind({});
 Default.args = {
   variant: 'confirmation',
   heading: "Enable Smart Filters?",
-  showModal: false,
   buttons: [{
     variant: "secondary",
     treatment: "outline",
@@ -86,7 +88,6 @@ export const Information = Template.bind({});
 Information.args = {
   variant: 'information',
   heading: "Rate this app",
-  showModal: false,
   buttons: [{
     variant: "secondary",
     treatment: "outline",
@@ -107,7 +108,6 @@ export const Warning = Template.bind({});
 Warning.args = {
   variant: 'warning',
   heading: "Unverified format",
-  showModal: false,
   icon: true,
   buttons: [{
     variant: "secondary",
@@ -126,7 +126,6 @@ export const Error = Template.bind({});
 Error.args = {
   variant: 'error',
   heading: "Unable to share",
-  showModal: false,
   icon: true,
   buttons: [{
     variant: "secondary",
@@ -146,7 +145,6 @@ export const Destructive = Template.bind({});
 Destructive.args = {
   variant: 'destructive',
   heading: "Delete 3 documents?",
-  showModal: false,
   buttons: [{
     variant: "secondary",
     treatment: "outline",

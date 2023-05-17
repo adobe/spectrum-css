@@ -2,10 +2,12 @@ import { html } from "lit-html";
 import { classMap } from "lit-html/directives/class-map.js";
 import { ifDefined } from "lit-html/directives/if-defined.js";
 import { when } from 'lit-html/directives/when.js';
+import { useArgs } from "@storybook/client-api";
 
 import { Template as Modal } from '@spectrum-css/modal/stories/template.js';
 import { Template as Divider } from "@spectrum-css/divider/stories/template.js";
 import { Template as ButtonGroup } from "@spectrum-css/buttongroup/stories/template.js";
+import { Template as Button } from '@spectrum-css/button/stories/template.js';
 import { Template as Icon } from "@spectrum-css/icon/stories/template.js";
 
 import '../index.css';
@@ -19,10 +21,12 @@ export const Template = ({
   customClasses = [],
   buttons,
   variant,
+  onclick,
   icon = false,
   id,
   ...globals
 }) => {
+  const [_, updateArgs] = useArgs();
 
   const Dialog = html`
     <div
@@ -55,20 +59,31 @@ export const Template = ({
       <section class="${rootClass}-content">${content}</section>
       ${ButtonGroup({
           items: buttons,
-          customClasses: ["spectrum-ButtonGroup-alert-dialog"]
+          onclick: () => {
+            updateArgs({ isOpen: !isOpen });
+          },
         })
       }
       </div>
     </div>
   `;
 
-  if (showModal) {
-    return Modal({
-          ...globals,
-          isOpen,
-          content: Dialog,
-        });
-  } else {
-    return Dialog;
+  return  html`
+    ${Button({
+      ...globals,
+      size: "m",
+      variant: "staticWhite",
+      label: "Open Alert Dialog",
+      treatment: "outline",
+      customClasses: ['spectrum-CSSExample-overlayShowButton'],
+      onclick: () => {
+        updateArgs({ isOpen: !isOpen });
+      },
+    })}
+    ${Modal({
+      ...globals,
+      isOpen,
+      content: Dialog,
+    })}
+      `
   }
-};
