@@ -1,6 +1,5 @@
 | Modifiable Custom Properties |
 | --- |
-| `--mod-alert-banner-border-width` |
 | `--mod-alert-banner-bottom-text` |
 | `--mod-alert-banner-close-button-spacing` |
 | `--mod-alert-banner-edge-to-button` |
@@ -16,6 +15,7 @@
 | `--mod-alert-banner-size` |
 | `--mod-alert-banner-start-edge` |
 | `--mod-alert-banner-text-to-button-horizontal` |
+| `--mod-alert-banner-text-to-button-vertical` |
 | `--mod-alert-banner-text-to-divider` |
 | `--mod-alert-banner-top-icon` |
 | `--mod-alert-banner-top-text` |

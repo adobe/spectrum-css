@@ -72,7 +72,7 @@ governing permissions and limitations under the License.
   width: 100%;
   display: flex;
   /* --mod-* for alert-banner-text-to-button-vertical will only accept values larger than alert-banner-edge-to-bottom, as gap only recognizes positive values */
-  gap: max(calc(var(--spectrum-alert-banner-text-to-button-vertical) - var(--spectrum-alert-banner-edge-to-button)), 0px);
+  gap: max(calc(var(--mod-alert-banner-text-to-button-vertical, var(--spectrum-alert-banner-text-to-button-vertical)) - var(--mod-alert-banner-edge-to-button, var(--spectrum-alert-banner-edge-to-button))), 0px);
   flex-wrap: wrap;
   align-items: center;
   margin-inline-start: var(--mod-alert-banner-start-edge, var(--spectrum-alert-banner-start-edge));
