@@ -137,7 +137,8 @@ governing permissions and limitations under the License.
   pointer-events: none;
 
   padding-block: 0;
-  padding-inline: 0 var(--mod-slider-handle-gap, var(--spectrum-slider-handle-gap));
+  padding-inline-start: 0;
+  padding-inline-end: var(--mod-slider-handle-gap, var(--spectrum-slider-handle-gap));
   margin-inline-start: var(--mod-slider-track-margin-offset, var(--spectrum-slider-track-margin-offset));
 
   &:before {
@@ -169,11 +170,12 @@ governing permissions and limitations under the License.
   }
 }
 
-.spectrum-Slider-track~.spectrum-Slider-track {
+.spectrum-Slider-track ~ .spectrum-Slider-track {
   inset-inline-start: auto;
   inset-inline-end: var(--mod-slider-range-track-reset, var(--spectrum-slider-range-track-reset));
   padding-block: 0;
-  padding-inline: var(--mod-slider-track-handleoffset, var(--spectrum-slider-track-handleoffset)) 0;
+  padding-inline-start: var(--mod-slider-track-handleoffset, var(--spectrum-slider-track-handleoffset));
+  padding-inline-end: 0;
   margin-inline-start: var(--mod-slider-range-track-reset, var(--spectrum-slider-range-track-reset));
   margin-inline-end: var(--mod-slider-track-margin-offset, var(--spectrum-slider-track-margin-offset));
 }
@@ -181,10 +183,9 @@ governing permissions and limitations under the License.
 
 /* over-write for Range, without the LTR RTL post-css hack */
 .spectrum-Slider--range {
-  .spectrum-Slider-track~.spectrum-Slider-track {
+  .spectrum-Slider-track ~ .spectrum-Slider-track {
     padding-inline: var(--mod-slider-track-middle-handleoffset, var(--spectrum-slider-track-middle-handleoffset)) var(--mod-slider-track-middle-handleoffset, var(--spectrum-slider-track-middle-handleoffset));
-    inset-inline-start: auto;
-    inset-inline-end: auto;
+    inset-inline: auto;
     margin-inline: var(--mod-slider-range-track-reset, var(--spectrum-slider-range-track-reset));
   }
 }
@@ -192,12 +193,14 @@ governing permissions and limitations under the License.
 .spectrum-Slider-fill {
   margin-inline-start: 0;
   padding-block: 0;
-  padding-inline: calc(var(--mod-slider-controls-margin, var(--spectrum-slider-controls-margin)) + var(--spectrum-slider-handle-gap, var(--spectrum-slider-handle-gap))) 0;
+  padding-inline-start: calc(var(--mod-slider-controls-margin, var(--spectrum-slider-controls-margin)) + var(--spectrum-slider-handle-gap, var(--spectrum-slider-handle-gap)));
+  padding-inline-end: 0;
 }
 
 .spectrum-Slider-fill--right {
   padding-block: 0;
-  padding-inline: 0 calc(var(--mod-slider-controls-margin, var(--spectrum-slider-controls-margin)) + var(--spectrum-slider-handle-gap, var(--spectrum-slider-handle-gap)));
+  padding-inline-start: 0;
+  padding-inline-end: calc(var(--mod-slider-controls-margin, var(--spectrum-slider-controls-margin)) + var(--spectrum-slider-handle-gap, var(--spectrum-slider-handle-gap)));
 }
 
 .spectrum-Slider--range {
@@ -207,7 +210,8 @@ governing permissions and limitations under the License.
 
   .spectrum-Slider-track {
     &:first-of-type {
-      padding-inline: 0 var(--mod-slider-track-handleoffset, var(--spectrum-slider-track-handleoffset));
+      padding-inline-start: 0;
+      padding-inline-end: var(--mod-slider-track-handleoffset, var(--spectrum-slider-track-handleoffset));
       inset-inline-start: var(--mod-slider-range-track-reset, var(--spectrum-slider-range-track-reset));
       inset-inline-end: auto;
       margin-inline-start: var(--mod-slider-track-margin-offset, var(--spectrum-slider-track-margin-offset));
@@ -219,7 +223,8 @@ governing permissions and limitations under the License.
     }
 
     &:last-of-type {
-      padding-inline: var(--spectrum-slider-track-handleoffset) 0;
+      padding-inline-start: var(--spectrum-slider-track-handleoffset);
+      padding-inline-end: 0;
       inset-inline-start: auto;
       inset-inline-end: var(--mod-slider-range-track-reset, var(--spectrum-slider-range-track-reset));
       margin-inline-end: var(--mod-slider-track-margin-offset, var(--spectrum-slider-track-margin-offset));
@@ -567,8 +572,6 @@ governing permissions and limitations under the License.
 .spectrum-Slider--ramp {
   .spectrum-Slider-handle {
     box-shadow: 0 0 0 var(--spectrum-slider-handle-gap) var(--highcontrast-slider-ramp-handle-border-color-active, var(--mod-sectrum-slider-ramp-handle-border-color-active, var(--spectrum-slider-ramp-handle-border-color-active)));
-
-    /* TODO: currently in tokens v5.0.0 the background-color for the handle are not yet defined */
     background: var(--mod-slider-ramp-handle-background-color, var(--spectrum-slider-ramp-handle-background-color));
 
     @media (forced-colors: active) {
