@@ -33,7 +33,7 @@ governing permissions and limitations under the License.
   --spectrum-card-title-font-weight: var(--spectrum-heading-sans-serif-font-weight);
   --spectrum-card-title-font-style: var(--spectrum-heading-sans-serif-font-style);
   --spectrum-card-title-line-height: var(--spectrum-heading-line-height);
-  --spectrum-card-title-color: var(--spectrum-heading-color);
+  --spectrum-card-title-font-color: var(--spectrum-heading-color);
 
   --spectrum-card-body-font-family: var(--spectrum-sans-font-family-stack);
   --spectrum-card-body-font-size: var(--spectrum-body-size-s);
@@ -257,6 +257,7 @@ governing permissions and limitations under the License.
   border-end-start-radius: 0;
   display: flex;
   align-items: center;
+  color: var(--highcontrast-card-body-font-color, var(--mod-card-body-font-color, var(--spectrum-card-body-font-color)));
 }
 
 .spectrum-Card-title {
@@ -269,12 +270,12 @@ governing permissions and limitations under the License.
   font-weight: var(--mod-card-title-font-weight, var(--spectrum-card-title-font-weight));
   font-style: var(--mod-card-title-font-style, var(--spectrum-card-title-font-style));
   line-height: var(--mod-card-title-line-height, var(--spectrum-card-title-line-height));
-  color: var(--highcontrast-card-title-font-color, var(--mod-card-title-font-color, var(--spectrum-card-title-color)));
+  color: var(--highcontrast-card-title-font-color, var(--mod-card-title-font-color, var(--spectrum-card-title-font-color)));
 }
 
 .spectrum-Card-subtitle {
   padding-inline-end: var(--mod-card-subtitle-padding-right, var(--spectrum-card-subtitle-padding-right));
-  color: var(--highcontrast-card-title-color, var(--mod-card-title-color, var(--spectrum-card-title-color)));
+  color: var(--highcontrast-card-title-font-color, var(--mod-card-title-font-color, var(--spectrum-card-title-font-color)));
   text-transform: none;
 }
 

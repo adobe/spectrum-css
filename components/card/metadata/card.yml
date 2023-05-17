@@ -59,7 +59,6 @@ examples:
   - id: card
     name: Standard (focused)
     markup: |
-      <h2>Focused Card item within a grid</h2>
       <div role="grid">
         <div style="width: 208px; outline: 0;" role="row">
           <div class="spectrum-Card spectrum-Card--sizeM is-focused" role="rowheader" tabindex="0">
@@ -345,7 +344,7 @@ examples:
       <div style="width: 208px;">
         <div class="spectrum-Card spectrum-Card--horizontal" tabindex="0" role="figure">
           <div class="spectrum-Card-preview">
-            <svg class="spectrum-Icon spectrum-Icon--sizeXXL" aria-hidden="true" focusable="false">
+            <svg class="spectrum-Icon spectrum-Icon--sizeXXL" aria-hidden="true" focusable="false" role="img">
               <use xlink:href="#spectrum-icon-18-FileTxt" />
             </svg>
           </div>
