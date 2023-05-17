@@ -355,20 +355,6 @@ governing permissions and limitations under the License.
       color: SelectedItemText;
     }
   }
-
-  /*
-  .spectrum-Table-row.is-selected,
-  .spectrum-Table-row.is-drop-target {
-    & + .spectrum-Table-row.is-selected,
-    & + .spectrum-Table-row.is-drop-target {
-      --spectrum-table-divider-color: SelectedItemText;
-    }
-  }
-
-  .spectrum-Table-row.is-drop-target + .spectrum-Table-row .spectrum-Table-cell {
-    border-top-color: var(--highcontrast-table-focus-indicator-color);
-  }
-  */
 }
 
 /********* REGULAR / DEFAULT *********/
