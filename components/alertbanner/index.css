@@ -47,16 +47,13 @@ governing permissions and limitations under the License.
 
 .spectrum-AlertBanner {
   display: none;
-
-
   justify-content: space-between;
   inline-size: var(--mod-alert-banner-size, var(--spectrum-alert-banner-size));
   min-block-size: var(--mod-alert-banner-min-height, var(--spectrum-alert-banner-min-height));
-
   font-size: var(--mod-alert-banner-font-size, var(--spectrum-alert-banner-font-size));
   color: var(--mod-alert-banner-font-color, var(--spectrum-alert-banner-font-color));
-
   background-color: var(--mod-alert-banner-netural-background, var(--spectrum-alert-banner-netural-background));
+  border: var(--highcontrast-alert-banner-border-width, 0px) solid var(--highcontrast-alert-banner-border-color, transparent);
 
   &.is-open {
     display: flex;
@@ -75,7 +72,7 @@ governing permissions and limitations under the License.
   width: 100%;
   display: flex;
   /* --mod-* for alert-banner-text-to-button-vertical will only accept values larger than alert-banner-edge-to-bottom, as gap only recognizes positive values */
-  gap: calc(var(--spectrum-alert-banner-text-to-button-vertical) - var(--spectrum-alert-banner-edge-to-button));
+  gap: max(calc(var(--spectrum-alert-banner-text-to-button-vertical) - var(--spectrum-alert-banner-edge-to-button)), 0px);
   flex-wrap: wrap;
   align-items: center;
   margin-inline-start: var(--mod-alert-banner-start-edge, var(--spectrum-alert-banner-start-edge));
@@ -106,10 +103,7 @@ governing permissions and limitations under the License.
 
 @media (forced-colors: active) {
   .spectrum-AlertBanner {
-    /* Border is visible in high contrast mode */
-    --highcontrast-alert-banner-border-color: ButtonText;
-    --spectrum-alert-banner-border-width: var(--spectrum-border-width-100);
-
-    border: var(--mod-alert-banner-border-width, var(--spectrum-alert-banner-border-width)) solid var(--highcontrast-alert-banner-border-color, transparent);
+    --highcontrast-alert-banner-border-color: CanvasText;
+    --highcontrast-alert-banner-border-width: var(--spectrum-border-width-100);
   }
 }

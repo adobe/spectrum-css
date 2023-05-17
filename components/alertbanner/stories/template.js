@@ -10,7 +10,7 @@ import { Template as Icon } from '@spectrum-css/icon/stories/template.js';
 import '../index.css';
 
 export const Template = ({
-  rootClass = "${rootClass}",
+  rootClass = 'spectrum-AlertBanner',
   isOpen = true,
   text,
   variant,
