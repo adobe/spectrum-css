@@ -3,6 +3,16 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+<a name="2.0.6"></a>
+## 2.0.6
+🗓 2023-05-17 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/contextualhelp@2.0.5...@spectrum-css/contextualhelp@2.0.6)
+
+**Note:** Version bump only for package @spectrum-css/contextualhelp
+
+
+
+
+
 <a name="2.0.5"></a>
 ## 2.0.5
 🗓 2023-05-11 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/contextualhelp@2.0.4...@spectrum-css/contextualhelp@2.0.5)
