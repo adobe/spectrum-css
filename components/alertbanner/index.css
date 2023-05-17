@@ -48,9 +48,6 @@ governing permissions and limitations under the License.
 .spectrum-AlertBanner {
   display: none;
 
-  &.is-open {
-    display: flex;
-  }
 
   justify-content: space-between;
   inline-size: var(--mod-alert-banner-size, var(--spectrum-alert-banner-size));
@@ -60,6 +57,10 @@ governing permissions and limitations under the License.
   color: var(--mod-alert-banner-font-color, var(--spectrum-alert-banner-font-color));
 
   background-color: var(--mod-alert-banner-netural-background, var(--spectrum-alert-banner-netural-background));
+
+  &.is-open {
+    display: flex;
+  }
 
   &--info {
     background-color: var(--mod-alert-banner-informative-background, var(--spectrum-alert-banner-informative-background));
