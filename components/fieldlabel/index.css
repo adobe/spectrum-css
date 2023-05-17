@@ -160,10 +160,10 @@ governing permissions and limitations under the License.
 .spectrum-FieldLabel,
 .spectrum-Form-itemLabel {
   &.is-disabled {
-    color: var(--mod-disabled-content-color, var(--spectrum-disabled-content-color));
+    color: var(--highcontrast-disabled-content-color, var(--mod-disabled-content-color, var(--spectrum-disabled-content-color)));
 
     .spectrum-FieldLabel-requiredIcon {
-      color: var(--mod-disabled-content-color, var(--spectrum-disabled-content-color));
+      color: var(--highcontrast-disabled-content-color, var(--mod-disabled-content-color, var(--spectrum-disabled-content-color)));
     }
   }
 }
@@ -184,5 +184,12 @@ governing permissions and limitations under the License.
     &+.spectrum-Form-item {
       margin-block-start: var(--mod-field-label-top-to-asterisk, var(--spectrum-field-label-top-to-asterisk));
     }
+  }
+}
+
+/********* WHCM *********/
+@media (forced-colors: active) {
+  .spectrum-FieldLabel {
+    --highcontrast-disabled-content-color: GrayText;
   }
 }
