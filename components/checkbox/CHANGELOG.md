@@ -3,6 +3,18 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+<a name="6.0.32"></a>
+## 6.0.32
+🗓 2023-05-18 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/checkbox@6.0.31...@spectrum-css/checkbox@6.0.32)
+
+### 🐛 Bug fixes
+
+* **checkbox:** rename misspelled mod and add missing mods ([#1882](https://github.com/adobe/spectrum-css/issues/1882)) ([624527a](https://github.com/adobe/spectrum-css/commit/624527a))
+
+
+
+
+
 <a name="6.0.31"></a>
 ## 6.0.31
 🗓 2023-05-18 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/checkbox@6.0.30...@spectrum-css/checkbox@6.0.31)
