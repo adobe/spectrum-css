@@ -11,5 +11,7 @@ governing permissions and limitations under the License.
 */
 
 @container (--system: express) {
-  --spectrum-tabs-font-weight: var(--spectrum-bold-font-weight);
+  .spectrum-Tabs {
+    --spectrum-tabs-font-weight: var(--spectrum-bold-font-weight);
+  }
 }

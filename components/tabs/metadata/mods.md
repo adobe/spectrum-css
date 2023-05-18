@@ -1,0 +1,21 @@
+| Modifiable Custom Properties |
+| --- |
+| `--mod-tabs-bottom-to-text` |
+| `--mod-tabs-focus-indicator-border-radius` |
+| `--mod-tabs-focus-indicator-gap` |
+| `--mod-tabs-focus-indicator-width` |
+| `--mod-tabs-font-family` |
+| `--mod-tabs-font-style` |
+| `--mod-tabs-font-weight` |
+| `--mod-tabs-icon-size` |
+| `--mod-tabs-icon-to-text` |
+| `--mod-tabs-item-height` |
+| `--mod-tabs-item-horizontal-spacing` |
+| `--mod-tabs-item-vertical-spacing` |
+| `--mod-tabs-line-height` |
+| `--mod-tabs-selection-indicator-color` |
+| `--mod-tabs-start-to-edge-quiet` |
+| `--mod-tabs-start-to-edge-vertical` |
+| `--mod-tabs-start-to-item-quiet` |
+| `--mod-tabs-top-to-icon` |
+| `--mod-tabs-top-to-text` |

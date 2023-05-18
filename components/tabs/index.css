@@ -10,9 +10,6 @@ OF ANY KIND, either express or implied. See the License for the specific languag
 governing permissions and limitations under the License.
 */
 
-@import "../vars/css/scales/spectrum-large.css";
-@import "../vars/css/scales/spectrum-medium.css";
-
 .spectrum-Tabs {
   /* Default is Medium sizing */
   --spectrum-tabs-item-height: var(--spectrum-tab-item-height-medium);
@@ -184,7 +181,7 @@ governing permissions and limitations under the License.
   text-decoration: none;
   white-space: nowrap;
 
-  color: var(--spectrum-tabs-textonly-tabitem-text-color);
+  color: var(--mod-tabs-selection-indicator-color, var(--spectrum-tabs-selection-indicator-color));
 
   transition: color var(--spectrum-tabs-texticon-tabitem-selection-indicator-animation-duration) ease-out;
   cursor: pointer;
