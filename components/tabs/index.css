@@ -23,12 +23,12 @@ governing permissions and limitations under the License.
   --spectrum-tabs-icon-to-text: var(--spectrum-text-to-visual-100);
   --spectrum-tabs-top-to-icon: var(--spectrum-tab-item-top-to-workflow-icon-medium);
 
-  --spectrum-tabs-selection-indicator-color: var(--neutral-subdued-content-color-default);
-  --spectrum-tabs-selection-indicator-color-selected: var(--neutral-subdued-content-color-selected);
-  --spectrum-tabs-selection-indicator-color-hover: var(--neutral-subdued-content-color-hover);
-  --spectrum-tabs-selection-indicator-key-focus: var(--neutral-subdued-content-color-key-focus);
+  --spectrum-tabs-color: var(--neutral-subdued-content-color-default);
+  --spectrum-tabs-color-selected: var(--neutral-subdued-content-color-selected);
+  --spectrum-tabs-color-hover: var(--neutral-subdued-content-color-hover);
+  --spectrum-tabs-color-key-focus: var(--neutral-subdued-content-color-key-focus);
 
-  --spectrum-tabs-font-family: var(--spectrum-default-font-family);
+  --spectrum-tabs-font-family: var(--spectrum-sans-font-family-stack);
   --spectrum-tabs-font-style: var(--spectrum-default-font-style);
   --spectrum-tabs-font-size: var(--spectrum-font-size-100);
   --spectrum-tabs-line-height: var(--spectrum-line-height-100);
@@ -44,7 +44,8 @@ governing permissions and limitations under the License.
   --spectrum-tabs-start-to-edge-quiet: var(--spectrum-tab-item-start-to-edge-quiet);
 
   --spectrum-tabs-list-background-direction: top;
-  --spectrum-tabs-textonly-divider-background-color: var(--spectrum-tabs-quiet-textonly-divider-background-color);
+  --spectrum-tabs-divider-background-color: var(--spectrum-gray-300);
+  --spectrum-tabs-divider-size: var(--spectrum-border-width-200);
   --spectrum-tabs-selection-indicator-background-color-selected: var(--spectrum-tabs-textonly-tabitem-selection-indicator-background-color-selected);
 }
 
@@ -102,10 +103,10 @@ governing permissions and limitations under the License.
 .spectrum-Tabs--emphasized {
   --spectrum-tabs-textonly-divider-background-color: var(--spectrum-tabs-emphasized-textonly-divider-background-color);
 
-  --spectrum-tabs-selection-indicator-color: var(--accent-content-color-default);
-  --spectrum-tabs-selection-indicator-color-selected: var(--accent-content-color-selected);
-  --spectrum-tabs-selection-indicator-color-hover: var(--accent-content-color-hover);
-  --spectrum-tabs-selection-indicator-key-focus: var(--accent-content-color-key-focus);
+  --spectrum-tabs-color: var(--accent-content-color-default);
+  --spectrum-tabs-color-selected: var(--accent-content-color-selected);
+  --spectrum-tabs-color-hover: var(--accent-content-color-hover);
+  --spectrum-tabs-color-key-focus: var(--accent-content-color-key-focus);
 }
 
 .spectrum-Tabs--vertical {
@@ -159,11 +160,12 @@ governing permissions and limitations under the License.
   /* Friends should align to the top of the tabs */
   vertical-align: top;
 
-  /* background: linear-gradient(
-    to var(--spectrum-tabs-list-background-direction),
-    var(--spectrum-tabs-textonly-divider-background-color) 0 var(--spectrum-tabs-quiet-textonly-divider-size),
-    transparent var(--spectrum-tabs-quiet-textonly-divider-size)
-  ); */
+  background: linear-gradient(
+    to var(--mod-tabs-list-background-direction, var(--spectrum-tabs-list-background-direction)),
+    var(--mod-tabs-divider-background-color, var(--spectrum-tabs-divider-background-color)) 0 var(--mod-tabs-divider-size, var(--spectrum-tabs-divider-size)),
+    transparent var(--mod-tabs-divider-size, var(--spectrum-tabs-divider-size))
+  );
+
 }
 
 .spectrum-Tabs-item {
@@ -181,7 +183,7 @@ governing permissions and limitations under the License.
   text-decoration: none;
   white-space: nowrap;
 
-  color: var(--mod-tabs-selection-indicator-color, var(--spectrum-tabs-selection-indicator-color));
+  color: var(--mod-tabs-color, var(--spectrum-tabs-color));
 
   transition: color var(--spectrum-tabs-texticon-tabitem-selection-indicator-animation-duration) ease-out;
   cursor: pointer;
