@@ -99,7 +99,7 @@ governing permissions and limitations under the License.
     repeating-conic-gradient(var(--mod-thumbnail-checkerboard-light-color, var(--spectrum-thumbnail-checkerboard-light-color)) 0% 25%, var(--mod-thumbnail-checkerboard-dark-color, var(--spectrum-thumbnail-checkerboard-dark-color)) 0% 50%)
     left top / calc(var(--mod-thumbnail-checkerboard-size, var(--spectrum-thumbnail-checkerboard-size)) * 2) calc(var(--mod-thumbnail-checkerboard-size, var(--spectrum-thumbnail-checkerboard-size)) * 2);
 
-  &:before {
+  &::before {
     content: '';
     z-index: 2;
     position: absolute;
@@ -116,7 +116,7 @@ governing permissions and limitations under the License.
   &.is-focused,
   &:focus-ring {
     overflow: visible;
-    &:after {
+    &::after {
       content: "";
       border-style: solid;
       border-width: var(--mod-thumbnail-focus-indicator-thickness, var(--spectrum-thumbnail-focus-indicator-thickness));
@@ -148,12 +148,12 @@ governing permissions and limitations under the License.
   align-items: center;
   justify-content: center;
 
-  &:before {
+  &::before {
     content: none;
   }
 
   &.is-selected {
-    outline: solid;
+    outline-style: solid;
     outline-color: var(--highcontrast-thumbnail-border-color-selected, var(--mod-thumbnail-border-color-selected, var(--spectrum-thumbnail-border-color-selected)));
     outline-width: var(--mod-thumbnail-border-width-selected, var(--spectrum-thumbnail-border-width-selected));
     outline-offset: calc(var(--mod-thumbnail-border-width-selected, var(--spectrum-thumbnail-border-width-selected)) - var(--mod-thumbnail-layer-border-width-inner, var(--spectrum-thumbnail-layer-border-width-inner)))
@@ -168,7 +168,7 @@ governing permissions and limitations under the License.
   inline-size: calc(var(--spectrum-thumbnail-size) - ((var(--mod-thumbnail-layer-border-width-inner, var(--spectrum-thumbnail-layer-border-width-inner)))) * 2);
   block-size: calc(var(--spectrum-thumbnail-size) - ((var(--mod-thumbnail-layer-border-width-inner, var(--spectrum-thumbnail-layer-border-width-inner)))) * 2);
 
-  outline: solid;
+  outline-style: solid;
   outline-color: var(--mod-thumbnail-layer-border-color-inner, var(--spectrum-thumbnail-layer-border-color-inner));
   outline-width: calc(var(--mod-thumbnail-layer-border-width-inner, var(--spectrum-thumbnail-layer-border-width-inner)) - var(--mod-thumbnail-layer-border-width-outer, var(--spectrum-thumbnail-layer-border-width-outer)));
 }
@@ -213,10 +213,19 @@ governing permissions and limitations under the License.
 
 /* Windows High Contrast Mode */
 @media (forced-colors: active) {
-  .is-selected {
-    --highcontrast-thumbnail-border-color-selected: SelectedItem;
-  }
-  .is-focused {
-    --highcontrast-thumbnail-focus-indicator-color: Highlight;
+  .spectrum-Thumbnail {
+    &.is-selected {
+      --highcontrast-thumbnail-border-color-selected: SelectedItem;
+    }
+
+    &.is-focused {
+      --highcontrast-thumbnail-focus-indicator-color: Highlight;
+    }
+
+    &::before {
+      /* Replacement for box-shadow. */
+      outline: CanvasText solid var(--mod-thumbnail-border-width, var(--spectrum-thumbnail-border-width));
+      outline-offset: calc(-1 * var(--mod-thumbnail-border-width, var(--spectrum-thumbnail-border-width)));
+    }
   }
 }
