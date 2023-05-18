@@ -8,6 +8,16 @@ export default {
   component: "Slider",
   argTypes: {
     reducedMotion: { table: { disable: true } },
+    size: {
+      name: "Size",
+      type: { name: "string", required: true },
+      table: {
+        type: { summary: "string" },
+        category: "Component",
+      },
+      options: ["s", "m", "l", "xl"],
+      control: "select"
+    },
     label: {
       name: "Label",
       type: { name: "string" },
@@ -116,10 +126,12 @@ export default {
 export const Default = Template.bind({});
 Default.args = {
   label: "Slider label",
+  size: "m",
   min: 10,
   max: 20,
   values: [14],
   step: 2,
+  id: 'spectrum-Slider'
 };
 
 export const Filled = Template.bind({});
@@ -159,3 +171,12 @@ Disabled.args = {
   ...Default.args,
   isDisabled: true,
 };
+
+export const Gradient = Template.bind({});
+Gradient.args = {
+  ...Default.args,
+  style: {
+    "--spectrum-slider-track-color": "linear-gradient(to right, red, green 100%)",
+    "--spectrum-slider-track-color-rtl": "linear-gradient(to left, red, green 100%)"
+  }
+}
