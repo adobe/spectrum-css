@@ -46,19 +46,6 @@ export default {
     actions: {
       handles: ["click .spectrum-AlertDialog button"],
     },
-    backgrounds: {
-      default: 'overlay',
-      values: [
-        {
-          name: 'gray-100',
-          value: '#f8f8f8',
-        },
-        {
-          name: 'overlay',
-          value: '#a3a3a3',
-        }
-      ]
-    },
     status: {
       type: process.env.MIGRATED_PACKAGES.includes("alertdialog")
         ? "migrated"

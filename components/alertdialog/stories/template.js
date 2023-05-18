@@ -4,6 +4,7 @@ import { ifDefined } from "lit-html/directives/if-defined.js";
 import { when } from 'lit-html/directives/when.js';
 import { useArgs } from "@storybook/client-api";
 
+import { Template as Underlay } from '@spectrum-css/underlay/stories/template.js';
 import { Template as Modal } from '@spectrum-css/modal/stories/template.js';
 import { Template as Divider } from "@spectrum-css/divider/stories/template.js";
 import { Template as ButtonGroup } from "@spectrum-css/buttongroup/stories/template.js";
@@ -69,11 +70,15 @@ export const Template = ({
   `;
 
   return  html`
+    ${Underlay({
+      ...globals,
+      isOpen,
+    })}
     ${Button({
       ...globals,
       size: "m",
-      variant: "staticWhite",
-      label: "Open Alert Dialog",
+      variant: "secondary",
+      label: "Click to open Alert Dialog",
       treatment: "outline",
       customClasses: ['spectrum-CSSExample-overlayShowButton'],
       onclick: () => {
