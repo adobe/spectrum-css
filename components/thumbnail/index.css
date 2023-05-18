@@ -214,6 +214,8 @@ governing permissions and limitations under the License.
 /* Windows High Contrast Mode */
 @media (forced-colors: active) {
   .spectrum-Thumbnail {
+    background-color: Canvas;
+
     &.is-selected {
       --highcontrast-thumbnail-border-color-selected: SelectedItem;
     }
