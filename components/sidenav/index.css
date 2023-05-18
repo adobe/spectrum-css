@@ -11,6 +11,7 @@ governing permissions and limitations under the License.
 */
 
 .spectrum-SideNav {
+  --spectrum-sidenav-focus-ring-size: var(--spectrum-focus-indicator-thickness);
   /* layout */
   --spectrum-sidenav-min-height: var(--spectrum-component-height-100);
   --spectrum-sidenav-width: var(--spectrum-side-navigation-width);
@@ -23,11 +24,12 @@ governing permissions and limitations under the License.
 
   /* color */
   --spectrum-sidenav-header-color: var(--spectrum-gray-900);
+  --spectrum-sidenav-item-text-color-selected: var(--spectrum-gray-200);
   /* is spectrum-transparent an actual token??? */
-  --spectrum-sidenav-disabled-color: var(--spectrum-transparent);
+  /* --spectrum-sidenav-disabled-color: transparent;
   --spectrum-sidenav-label-and-icon-disabled-color: var(--spectrum-disabled-content-color);
   --spectrum-sidenav-focus-indicator-color: var(--spectrum-focus-indicator-color);
-  --spectrum-sidenav-item-background-default: var(--spectrum-transparent);
+  --spectrum-sidenav-item-background-default: transparent;
   --spectrum-sidenav-item-background-hover: var(--spectrum-gray-200);
   --spectrum-sidenav-item-background-down: var(--spectrum-gray-300);
   --spectrum-sidenav-item-background-key-focus: var(--spectrum-gray-200);
@@ -38,7 +40,7 @@ governing permissions and limitations under the License.
   --spectrum-sidenav-label-and-icon-default: var(--spectrum-neutral-content-color-default);
   --spectrum-sidenav-label-and-icon-hover: var(--spectrum-neutral-content-color-hover);
   --spectrum-sidenav-label-and-icon-down: var(--spectrum-neutral-content-color-down);
-  --spectrum-sidenav-label-and-icon-key-focus: var(--spectrum-neutral-content-color-key-focus);
+  --spectrum-sidenav-label-and-icon-key-focus: var(--spectrum-neutral-content-color-key-focus); */
   /* WHY ARE THESE THE SAME? --spectrum-sidenav-label-and-icon-default-selected: var(--spectrum-neutral-content-color-default);
   --spectrum-sidenav-label-and-icon-hover-selected: var(--spectrum-neutral-content-color-hover);
   --spectrum-sidenav-label-and-icon-down-selected: var(--spectrum-neutral-content-color-down);
@@ -47,10 +49,13 @@ governing permissions and limitations under the License.
 
 
   /* typography */
-  --spectrum-sidenav-text-font-family: var(--spectrum-sans-serif-font-family);
+  --spectrum-sidenav-text-font-family: var(--spectrum-sans-serif-font-family-stack);
   --spectrum-sidenav-text-font-weight: var(--spectrum-regular-font-weight);
   --spectrum-sidenav-text-font-style: var(--spectrum-default-font-style);
+  --spectrum-sidenav-medium-font-size: var(--spectrum-font-size-200);
 
+  --spectrum-sidenav-header-line-height: var(--spectrum-line-height-100); /* ToDo */
+  /* --spectrum-sidenav-header-medium-font-size: var(--spectrum-font-size-200); */
 }
 
 .spectrum-SideNav {
@@ -68,21 +73,21 @@ governing permissions and limitations under the License.
   &.is-selected {
     > .spectrum-SideNav-itemLink {
       color: var(--spectrum-sidenav-item-text-color-selected);
-      background-color: var(--spectrum-sidenav-item-background-color-selected);
+      background-color: var(--spectrum-gray-900); /* needs token */
     }
   }
 
-  .is-active {
+  /* .is-active {
     > .spectrum-SideNav-itemLink {
       background-color: var(--spectrum-sidenav-item-background-color-down);
     }
-  }
+  } */
 
   &.is-disabled {
     /* Disable all children */
     .spectrum-SideNav-itemLink {
-      background-color: var(--spectrum-sidenav-item-background-color-disabled);
-      color: var(--spectrum-sidenav-item-text-color-disabled);
+      background-color: transparent; /* needs token */
+      color: var(--spectrum-gray-500); /* needs token */
 
       cursor: default;
       pointer-events: none;
@@ -109,7 +114,7 @@ governing permissions and limitations under the License.
 
 
   font-family: var(--spectrum-sidenav-text-font-family);
-  font-size: var(--spectrum-sidenav-item-text-size);
+  font-size: var(--spectrum-sidenav-medium-font-size);
   font-weight: var(--spectrum-sidenav-text-font-weight);
   font-style: var(--spectrum-sidenav-text-font-style);
   text-decoration: none;
@@ -119,8 +124,8 @@ governing permissions and limitations under the License.
 
   cursor: pointer;
 
-  transition: background-color var(--spectrum-global-animation-duration-100) ease-out,
-    color var(--spectrum-global-animation-duration-100) ease-out;
+  transition: background-color var(--spectrum-animation-duration-100) ease-out,
+    color var(--spectrum-animation-duration-100) ease-out;
 
   &:focus {
     outline: none;
@@ -132,10 +137,10 @@ governing permissions and limitations under the License.
     inset: 0;
     pointer-events: none;
 
-    border: var(--spectrum-alias-focus-ring-size) solid transparent;
-    border-radius: var(--spectrum-sidenav-item-border-radius);
+    border: var(--spectrum-sidenav-focus-ring-size) solid transparent;
+    /* border-radius: var(--spectrum-sidenav-item-border-radius); */
 
-    transition: border var(--spectrum-global-animation-duration-100) ease-out;
+    transition: border var(--spectrum-animation-duration-100) ease-out;
   }
 
   .spectrum-SideNav-itemIcon {
@@ -144,53 +149,52 @@ governing permissions and limitations under the License.
     flex-shrink: 0;
     margin-inline-end: var(--spectrum-sidenav-icon-spacing);
   }
-  background-color: var(--spectrum-sidenav-item-background-color);
-  color: var(--spectrum-sidenav-item-text-color);
+  background-color: transparent; /* needs token */
+  color: var(--spectrum-gray-800); /* needs token */
 
   &:hover {
-    background-color: var(--spectrum-sidenav-item-background-color-hover);
-    color: var(--spectrum-sidenav-item-text-color-hover);
+    background-color: rgba(255,255,255,0.07); /* needs token */
+    color: var(--spectrum-gray-900); /* needs token */
   }
 
-  &:active {
+  /* &:active {
     background-color: var(--spectrum-sidenav-item-background-color-down);
-  }
+  } */
 
   &:focus-ring {
-    background-color: var(--spectrum-sidenav-item-background-color-key-focus);
-    color: var(--spectrum-sidenav-item-text-color-key-focus);
+    /* background-color: var(--spectrum-sidenav-item-background-color-key-focus); */
+    /* color: var(--spectrum-sidenav-item-text-color-key-focus); */
 
     &::before {
-      border-color: var(--spectrum-sidenav-item-border-color-key-focus);
+      /* border-color: var(--spectrum-sidenav-item-border-color-key-focus); */
     }
   }
 }
 
 .spectrum-SideNav-heading {
-  block-size: var(--spectrum-sidenav-heading-height);
-  line-height: var(--spectrum-sidenav-heading-height);
+  line-height: var(--spectrum-sidenav-header-line-height:);
 
-  margin-block-start: var(--spectrum-sidenav-heading-gap-top);
+  margin-block-start: 16px; /* needs tokens var(--spectrum-sidenav-heading-gap-top); */
   margin-inline-end: 0;
-  margin-block-end: var(--spectrum-sidenav-heading-gap-bottom);
+  margin-block-end: 4px; /* needs token var(--spectrum-sidenav-heading-gap-bottom); */
   margin-inline-start: 0;
   padding-block: 0;
-  padding-inline: var(--spectrum-sidenav-heading-padding-x);
+  padding-inline: 12px; /* needs token var(--spectrum-sidenav-heading-padding-x); */
 
-  border-radius: var(--spectrum-sidenav-heading-border-radius);
+  border-radius: 4px; /* needs token var(--spectrum-sidenav-heading-border-radius); */
 
   color: var(--spectrum-sidenav-header-color);
-  font-size: var(--spectrum-sidenav-heading-text-size);
-  font-weight: var(--spectrum-sidenav-heading-text-font-weight);
+  font-size: 11px; /* needs token var(--spectrum-sidenav-heading-text-size); */
+  font-weight: 500; /* needs token var(--spectrum-sidenav-heading-text-font-weight); */
   font-style: normal;
-  letter-spacing: var(--spectrum-sidenav-heading-text-letter-spacing);
+  letter-spacing:  0.06em; /* needs token var(--spectrum-sidenav-heading-text-letter-spacing); */
 
   text-transform: uppercase;
 }
 
 .spectrum-SideNav--multiLevel {
   .spectrum-SideNav-itemLink {
-    font-weight: var(--spectrum-sidenav-multilevel-main-item-font-weight);
+    font-weight: 700; /* tokens needed var(--spectrum-sidenav-multilevel-main-item-font-weight); */
   }
 
   .spectrum-SideNav {
@@ -198,19 +202,19 @@ governing permissions and limitations under the License.
     padding: 0;
 
     .spectrum-SideNav-itemLink {
-      font-weight: var(--spectrum-sidenav-item-text-font-weight);
+      font-weight: 400; /* needs token var(--spectrum-sidenav-item-text-font-weight); */
 
       /* needs token var(--spectrum-sidenav-item-padding-x) */
-      padding-inline-start: calc(
-        var(--spectrum-sidenav-multilevel-item-margin-left) +
+      padding-inline-start:  /* needs token */  calc(
+        12px +
           12px
       );
     }
      /* needs token var(--spectrum-sidenav-item-padding-x) */
     .spectrum-SideNav {
       .spectrum-SideNav-itemLink {
-        padding-inline-start: calc(
-          var(--spectrum-sidenav-multilevel-item-margin-left) +
+        padding-inline-start:  /* needs token */  calc(
+          12px +
             12px
         );
       }
@@ -221,7 +225,7 @@ governing permissions and limitations under the License.
 @media (forced-colors: active) {
   .spectrum-SideNav-item {
     forced-color-adjust: none;
-    --spectrum-sidenav-item-text-color-selected: HighlightText;
+    /* --spectrum-sidenav-item-text-color-selected: HighlightText;
     --spectrum-sidenav-item-background-color-selected: Highlight;
     --spectrum-sidenav-item-background-color-down: Highlight;
     --spectrum-sidenav-item-background-color-disabled: ButtonFace;
@@ -234,7 +238,7 @@ governing permissions and limitations under the License.
     --spectrum-sidenav-item-background-color-key-focus: ButtonFace;
     --spectrum-sidenav-item-text-color-key-focus: ButtonText;
     --spectrum-sidenav-item-border-color-key-focus: ButtonText;
-    --spectrum-sidenav-header-text-color: ButtonText;
+    --spectrum-sidenav-header-text-color: ButtonText; */
   }
 }
 
