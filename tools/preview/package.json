@@ -10,7 +10,7 @@
     "build": "yarn storybook",
     "clean": "rimraf storybook-static",
     "new": "yarn workspace @spectrum-css/generator new story",
-    "start": "WATCH_MODE=true start-storybook --quiet --config-dir .",
+    "start": "WATCH_MODE=true storybook dev --quiet --config-dir .",
     "storybook": "storybook build --quiet --config-dir .",
     "test": "chromatic --build-script-name build --junit-report",
     "test:scope": "yarn test --only-story-names"
@@ -39,6 +39,7 @@
     "@storybook/core-events": "^7.0.12",
     "@storybook/theming": "^7.0.12",
     "@storybook/web-components": "^7.0.12",
+    "@storybook/web-components-webpack5": "^7.0.12",
     "@whitespace/storybook-addon-html": "^5.1.4",
     "chromatic": "^6.17.4",
     "lit-html": "^2.7.4",
@@ -57,7 +58,8 @@
     "react-syntax-highlighter": "^15.5.0",
     "rimraf": "^5.0.0",
     "source-map-loader": "^1.0.0",
-    "webpack": "^4.46.0"
+    "storybook": "^7.0.12",
+    "webpack": "^5.83.1"
   },
   "nx": {
     "targets": {

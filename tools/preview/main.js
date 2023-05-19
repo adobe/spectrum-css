@@ -1,9 +1,11 @@
 const { resolve } = require('path');
 const { readdirSync } = require('fs');
-
 const componentsPath = resolve(__dirname, '../../components');
-const componentPkgs = readdirSync(componentsPath, { withFileTypes: true }).filter(dirent => dirent.isDirectory()).map(dirent => dirent.name);
-
+const componentPkgs = readdirSync(componentsPath, {
+  withFileTypes: true,
+})
+  .filter((dirent) => dirent.isDirectory())
+  .map((dirent) => dirent.name)
 module.exports = {
   stories: [
     '../../components/*/stories/*.stories.md',
@@ -16,9 +18,12 @@ module.exports = {
       name: '@storybook/addon-essentials',
       // Supported booleans: actions, controls, docs, toolbars, measure, outline.
       options: {
-        viewport: false, // Don't need viewports b/c the medium/large contexts are used to support scaling.
-        backgrounds: false, // Don't need backgrounds b/c this is handled by the color contexts.
-        configureJSX: true, // Enables JSX support in MDX for projects that aren't configured to handle the format.
+        viewport: false,
+        // Don't need viewports b/c the medium/large contexts are used to support scaling.
+        backgrounds: false,
+        // Don't need backgrounds b/c this is handled by the color contexts.
+        configureJSX: true,
+        // Enables JSX support in MDX for projects that aren't configured to handle the format.
         transcludeMarkdown: true, // Support markdown in MDX files.
       }
     },
@@ -30,12 +35,15 @@ module.exports = {
     '@etchteam/storybook-addon-status',
   ],
   env: {
-    MIGRATED_PACKAGES: componentPkgs.filter(dir => {
-      const pkg = require(resolve(componentsPath, dir, 'package.json'));
-      if (pkg.devDependencies && pkg.devDependencies['@spectrum-css/component-builder-simple']) {
-        return true;
+    MIGRATED_PACKAGES: componentPkgs.filter((dir) => {
+      const pkg = require(resolve(componentsPath, dir, 'package.json'))
+      if (
+        pkg.devDependencies &&
+        pkg.devDependencies['@spectrum-css/component-builder-simple']
+      ) {
+        return true
       }
-      return false;
+      return false
     }),
   },
   core: {
@@ -50,96 +58,99 @@ module.exports = {
     },
   },
   webpackFinal: function (config) {
-    let storybookRules = config && config.module && config.module.rules ?
-      config.module.rules
-        .filter(rule => !(rule.test && rule.test.toString().includes('css'))) : [];
-
+    let storybookRules =
+      config && config.module && config.module.rules
+        ? config.module.rules.filter(
+          (rule) => !(rule.test && rule.test.toString().includes('css'))
+        )
+        : []
     return {
       ...config,
       stats: {
         /* Suppress autoprefixer warnings from storybook build */
-        warningsFilter: [
-          /autoprefixer: /,
-        ]
+        warningsFilter: [/autoprefixer: /],
       },
       /* Add support for root node_modules imports */
       resolve: {
-        ...config.resolve ? config.resolve : {},
+        ...(config.resolve ? config.resolve : {}),
         modules: [
-          ...config.resolve ? config.resolve.modules : [],
+          ...(config.resolve ? config.resolve.modules : []),
           resolve(__dirname, '../../node_modules'),
         ],
         alias: {
-          ...config.resolve ? config.resolve.alias : {},
+          ...(config.resolve ? config.resolve.alias : {}),
           ...componentPkgs.reduce((pkgs, dir) => {
-            const pkg = require(resolve(componentsPath, dir, 'package.json'));
-            pkgs[pkg.name] = resolve(componentsPath, dir);
-            return pkgs;
+            const pkg = require(resolve(componentsPath, dir, 'package.json'))
+            pkgs[pkg.name] = resolve(componentsPath, dir)
+            return pkgs
           }, {}),
-        }
+        },
       },
       module: {
-        ...config.module ?? [],
+        ...(config.module ?? []),
         rules: [
           ...storybookRules,
           {
             test: /^\w+\.{ico,jpg,jpeg,png,gif,webp}$/i,
-            use: [{
-              loader: "file-loader",
-              options: {
-                outputPath: (url, resourcePath, context) => {
-                  return `assets/images/${url.replace(/_\//g, '')}`;
+            use: [
+              {
+                loader: 'file-loader',
+                options: {
+                  outputPath: (url, resourcePath, context) => {
+                    return `assets/images/${url.replace(/_\//g, '')}`
+                  },
                 },
               },
-            }]
+            ],
           },
           {
             test: /\.css$/i,
             sideEffects: true,
-            use: [{
-              loader: "style-loader",
-              options: {
-                injectType: "linkTag",
-                attributes: {
-                  "data-source": "processed"
-                }
-              }
-            },
-            {
-              loader: "file-loader",
-              options: {
-                name: '[path][name].[ext][query]',
-                outputPath: (url, resourcePath, context) => {
-                  return `assets/css/${url.replace(/_\//g, '')}`;
-                },
-                esModule: false,
-              },
-            },
-            {
-              loader: "postcss-loader",
-              options: {
-                implementation: require("postcss"),
-                postcssOptions: {
-                  config: resolve(__dirname, 'postcss.config.js'),
+            use: [
+              {
+                loader: 'style-loader',
+                options: {
+                  injectType: 'linkTag',
+                  attributes: {
+                    'data-source': 'processed',
+                  },
                 },
               },
-            }],
+              {
+                loader: 'file-loader',
+                options: {
+                  name: '[path][name].[ext][query]',
+                  outputPath: (url, resourcePath, context) => {
+                    return `assets/css/${url.replace(/_\//g, '')}`
+                  },
+                  esModule: false,
+                },
+              },
+              {
+                loader: 'postcss-loader',
+                options: {
+                  implementation: require('postcss'),
+                  postcssOptions: {
+                    config: resolve(__dirname, 'postcss.config.js'),
+                  },
+                },
+              },
+            ],
           },
           {
             test: /\.js$/,
-            enforce: "pre",
-            use: ["source-map-loader"],
-          },
-          /* Raw SVG loader */
+            enforce: 'pre',
+            use: ['source-map-loader'],
+          } /* Raw SVG loader */,
           {
             test: /\.svg$/i,
             loader: 'raw-loader',
           },
-        ]
-      }
-    };
+        ],
+      },
+    }
   },
-  framework: '@storybook/web-components',
+  framework: { name: '@storybook/web-components-webpack5' },
   features: {
     postcss: false,
     /* Code splitting flag; load stories on-demand */
@@ -160,4 +171,7 @@ module.exports = {
   //     expanded: false,
   //   },
   // },
-};
+  docs: {
+    autodocs: true,
+  },
+}
