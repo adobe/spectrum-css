@@ -12,7 +12,9 @@ export const Template = ({
   customClasses = [],
   size = "m",
   label,
-  alignment = "left",
+  id,
+  forInput,
+  alignment,
   isDisabled,
   isRequired,
   style = {},
@@ -41,6 +43,8 @@ export const Template = ({
       ...customClasses.reduce((a, c) => ({ ...a, [c]: true }), {}),
     })}
       style=${ifDefined(styleMap(style))}
+      id=${ifDefined(id)}
+      for=${ifDefined(forInput)}
     >
       ${label}
       ${isRequired ?

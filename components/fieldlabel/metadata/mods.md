@@ -7,6 +7,7 @@
 | `--mod-fieldlabel-font-weight` |
 | `--mod-fieldlabel-line-height` |
 | `--mod-fieldlabel-line-height-cjk` |
+| `--mod-fieldlabel-min-height` |
 | `--mod-fieldlabel-side-padding-right` |
 | `--mod-fieldlabel-side-padding-top` |
 | `--mod-spacing-300` |

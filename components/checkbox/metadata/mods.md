@@ -13,6 +13,7 @@
 | `--mod-checkbox-control-color-down` |
 | `--mod-checkbox-control-color-focus` |
 | `--mod-checkbox-control-color-hover` |
+| `--mod-checkbox-control-corner-radius` |
 | `--mod-checkbox-control-invalid-color-down` |
 | `--mod-checkbox-control-selected-color-default` |
 | `--mod-checkbox-control-selected-color-down` |
@@ -26,6 +27,7 @@
 | `--mod-checkbox-focus-indicator-gap` |
 | `--mod-checkbox-focus-indicator-thinkness` |
 | `--mod-checkbox-font-size` |
+| `--mod-checkbox-height` |
 | `--mod-checkbox-invalid-color-default` |
 | `--mod-checkbox-invalid-color-focus` |
 | `--mod-checkbox-invalid-color-hover` |
@@ -35,5 +37,4 @@
 | `--mod-checkbox-spacing` |
 | `--mod-checkbox-text-to-control` |
 | `--mod-checkbox-top-to-text` |
-| `--mod-checkox-height` |
 | `--mod-focus-indicator-thickness` |
