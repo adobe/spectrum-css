@@ -226,7 +226,7 @@ governing permissions and limitations under the License.
   }
 
   &.is-selected {
-    color: var(--mod-tabs-color-selected, var(--spectrum-tabs-color-selected));
+    color: var(--highcontrast-tabs-color-selected, var(--mod-tabs-color-selected, var(--spectrum-tabs-color-selected)));
   }
 
   &.is-disabled {
@@ -242,7 +242,7 @@ governing permissions and limitations under the License.
     color: var(--mod-tabs-color-key-focus, var(--spectrum-tabs-color-key-focus));
 
     &::before {
-      border-color: var(--mod-tabs-focus-indicator-color, var(--spectrum-tabs-focus-indicator-color));
+      border-color: var(--highcontrast-tabs-focus-indicator-color, var(--mod-tabs-focus-indicator-color, var(--spectrum-tabs-focus-indicator-color)));
     }
   }
 }
@@ -317,7 +317,7 @@ governing permissions and limitations under the License.
 
   .spectrum-Tabs-selectionIndicator {
     padding-inline-start: var(--mod-tabs-start-to-item-quiet, var(--spectrum-tabs-start-to-item-quiet));
-    background-color: var(--mod-tabs-color-selected, var(--spectrum-tabs-color-selected));
+    background-color: var(--highcontrast-tabs-color-selected, var(--mod-tabs-color-selected, var(--spectrum-tabs-color-selected)));
   }
 }
 
@@ -351,16 +351,21 @@ governing permissions and limitations under the License.
 
 @media (forced-colors: active) {
   .spectrum-Tabs {
-    --spectrum-tabs-emphasized-texticon-tabitem-icon-color-selected: HighlightText;
-    --spectrum-tabs-emphasized-texticon-tabitem-selection-indicator-background-color-selected: Highlight;
-    --spectrum-tabs-emphasized-texticon-tabitem-text-color-selected: HighlightText;
-    --spectrum-tabs-emphasized-textonly-divider-background-color: transparent;
-    --spectrum-tabs-emphasized-textonly-tabitem-icon-color-selected: HighlightText;
-    --spectrum-tabs-quiet-textonly-divider-background-color: transparent;
-    --spectrum-tabs-quiet-textonly-tabitem-selection-indicator-background-color-selected: Highlight;
-    --spectrum-tabs-quiet-textonly-tabitem-selection-indicator-background-color: transparent;
-    --spectrum-tabs-textonly-divider-background-color: transparent;
-    --spectrum-tabs-textonly-tabitem-focus-ring-border-color-key-focus: ButtonText;
+    --highcontrast-tabs-divider-background-color: transparent;
+    --highcontrast-tabs-focus-indicator-color: CanvasText;
+    --highcontrast-tabs-focus-indicator-background-color: Highlight;
+
+
+    &--emphasized {
+      --highcontrast-tabs-color-selected: HighlightText;
+    }
+
+    &--quiet {
+      --spectrum-tabs-quiet-textonly-divider-background-color: transparent;
+      --spectrum-tabs-quiet-textonly-tabitem-selection-indicator-background-color-selected: Highlight;
+      --spectrum-tabs-quiet-textonly-tabitem-selection-indicator-background-color: transparent;
+    }
+    
     --spectrum-tabs-textonly-tabitem-icon-color-disabled: GrayText;
     --spectrum-tabs-textonly-tabitem-icon-color-hover: ButtonText;
     --spectrum-tabs-textonly-tabitem-icon-color-selected-key-focus: ButtonText;
@@ -375,12 +380,12 @@ governing permissions and limitations under the License.
     --spectrum-tabs-vertical-rule-color: transparent;
     --spectrum-tabs-vertical-textonly-divider-background-color: transparent;
     --spectrum-tabs-vertical-textonly-tabitem-selection-indicator-background-color-selected: Highlight;
+
+    /* Prevents black box behind text on Highlight background */
     forced-color-adjust: none;
 
     .spectrum-Tabs-item {
-      &:before {
-        background-color: ButtonFace;
-      }
+
 
       .spectrum-Icon {
         z-index: 1;
@@ -396,14 +401,14 @@ governing permissions and limitations under the License.
     .is-selected {
       color: HighlightText;
 
+      &::before {
+        background-color: var(--highcontrast-tabs-focus-indicator-background-color);
+      }
+
       .spectrum-Icon {
         color: HighlightText;
       }
-
-      &:before {
-        background-color: Highlight;
-        color: HighlightText;
-      }
+      
 
       .spectrum-Tabs-itemLabel {
         color: HighlightText;
