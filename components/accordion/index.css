@@ -16,7 +16,7 @@ governing permissions and limitations under the License.
   --spectrum-accordion-item-height: var(--spectrum-component-height-200);
   --spectrum-accordion-item-width: var(--spectrum-accordion-minimum-width);
   --spectrum-accordion-disclosure-indicator-height: var(--spectrum-component-height-100);
-  --spectrum-accordion-disclosure-indicator-to-text-space: var(--spectrum-component-height-50);
+  --spectrum-accordion-disclosure-indicator-to-text-space: var( --spectrum-accordion-disclosure-indicator-to-text);
   /*--spectrum-accordion-edge-to-disclosure-indicator-space: var(--spectrum-accordion-edge-to-disclosure-indicator);*/
   /*--spectrum-accordion-edge-to-text-space: var(--spectrum-accordion-edge-to-text);*/
   --spectrum-accordion-item-header-top-to-text-space: var(--spectrum-accordion-top-to-text-regular-medium);
@@ -206,6 +206,14 @@ governing permissions and limitations under the License.
 	box-sizing: border-box;
 }
 
+.spectrum-Accordion-iconContainer {
+  width: var(--mod-accordion-disclosure-indicator-height, var(--spectrum-accordion-disclosure-indicator-height));
+  height: var(--mod-accordion-disclosure-indicator-height, var(--spectrum-accordion-disclosure-indicator-height));
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
 .spectrum-Accordion-itemHeader {
   position: relative;
   display: flex;
@@ -215,7 +223,10 @@ governing permissions and limitations under the License.
   box-sizing: border-box;
   padding-block:  var(--mod-accordion-item-header-top-to-text-space, var(--spectrum-accordion-item-header-top-to-text-space)) var(--mod-accordion-item-header-bottom-to-text-space, var(--spectrum-accordion-item-header-bottom-to-text-space));
 
-  padding-inline-start: calc(var(--mod-accordion-disclosure-indicator-to-text-space, var(--spectrum-accordion-disclosure-indicator-to-text-space)) + (var(--mod-accordion-disclosure-indicator-height, var(--spectrum-accordion-disclosure-indicator-height)) / 2));
+  padding-inline-start: calc(
+    var(--mod-accordion-disclosure-indicator-to-text-space, var(--spectrum-accordion-disclosure-indicator-to-text-space)) + 
+    var(--mod-accordion-disclosure-indicator-height, var(--spectrum-accordion-disclosure-indicator-height))
+  );
 
   min-block-size: calc(
     100% -
@@ -328,14 +339,18 @@ governing permissions and limitations under the License.
 .spectrum-Accordion-item {
   &.is-open {
     > .spectrum-Accordion-itemHeading {
+      > .spectrum-Accordion-item-iconContainer {
+        > .spectrum-Accordion-itemIndicator {
+          transform: logical rotate(90deg);
+        }
+      }
+    }
+
+    > .spectrum-Accordion-item-iconContainer {
       > .spectrum-Accordion-itemIndicator {
         transform: logical rotate(90deg);
       }
     }
-
-		> .spectrum-Accordion-itemIndicator {
-			transform: logical rotate(90deg);
-		}
 
     > .spectrum-Accordion-itemContent {
       display: block;

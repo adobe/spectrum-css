@@ -22,10 +22,10 @@ examples:
         <div class="spectrum-Accordion-item is-open" role="presentation">
 
           <!-- WAI-ARIA 1.1: Item header is a <button> wrapped within a <h3> element, rather than a <div> element with role="tab" -->
-          <h3 class="spectrum-Accordion-itemHeading">
+          <h3 class="spectrum-Accordion-itemHeading spectrum-Accordion-item-iconContainer">
             <!-- WAI-ARIA 1.1: Item header <button> uses aria-expanded attribute to indicate expanded state. -->
             <button class="spectrum-Accordion-itemHeader" type="button" id="spectrum-accordion-item-0-header" aria-controls="spectrum-accordion-item-0-content" aria-expanded="true">Recent</button>
-            <svg class="spectrum-Icon spectrum-UIIcon-ChevronRight75 spectrum-Accordion-itemIndicator" focusable="false" aria-hidden="true">
+            <svg class="spectrum-Icon spectrum-UIIcon-ChevronRight75 spectrum-Accordion-itemIndicator " focusable="false" aria-hidden="true">
               <use xlink:href="#spectrum-css-icon-Chevron75" />
             </svg>
           </h3>
@@ -34,7 +34,7 @@ examples:
           <div class="spectrum-Accordion-itemContent" role="region" id="spectrum-accordion-item-0-content" aria-labelledby="spectrum-accordion-item-0-header">Item 1</div>
         </div>
         <div class="spectrum-Accordion-item is-disabled" role="presentation">
-          <h3 class="spectrum-Accordion-itemHeading">
+          <h3 class="spectrum-Accordion-itemHeading spectrum-Accordion-item-iconContainer">
             <button class="spectrum-Accordion-itemHeader" type="button" disabled id="spectrum-accordion-item-1-header" aria-controls="spectrum-accordion-item-1-content" aria-expanded="false">Architecture</button>
             <svg class="spectrum-Icon spectrum-UIIcon-ChevronRight75 spectrum-Accordion-itemIndicator" focusable="false" aria-hidden="true">
               <use xlink:href="#spectrum-css-icon-Chevron75" />
@@ -43,7 +43,7 @@ examples:
           <div class="spectrum-Accordion-itemContent" role="region" id="spectrum-accordion-item-1-content" aria-labelledby="spectrum-accordion-item-1-header">Item 2</div>
         </div>
         <div class="spectrum-Accordion-item" role="presentation">
-          <h3 class="spectrum-Accordion-itemHeading">
+          <h3 class="spectrum-Accordion-itemHeading spectrum-Accordion-item-iconContainer">
             <button class="spectrum-Accordion-itemHeader" type="button" id="spectrum-accordion-item-2-header" aria-controls="spectrum-accordion-item-2-content" aria-expanded="false">Nature</button>
             <svg class="spectrum-Icon spectrum-UIIcon-ChevronRight75 spectrum-Accordion-itemIndicator" focusable="false" aria-hidden="true">
               <use xlink:href="#spectrum-css-icon-Chevron75" />
@@ -52,7 +52,7 @@ examples:
           <div class="spectrum-Accordion-itemContent" role="region" id="spectrum-accordion-item-2-content" aria-labelledby="spectrum-accordion-item-2-header">Item 3</div>
         </div>
         <div class="spectrum-Accordion-item" role="presentation">
-          <h3 class="spectrum-Accordion-itemHeading">
+          <h3 class="spectrum-Accordion-itemHeading spectrum-Accordion-item-iconContainer">
             <button class="spectrum-Accordion-itemHeader" type="button" id="spectrum-accordion-item-3-header" aria-controls="spectrum-accordion-item-3-content" aria-expanded="false">Really Long Accordion Item According to Our Predictions</button>
             <svg class="spectrum-Icon spectrum-UIIcon-ChevronRight75 spectrum-Accordion-itemIndicator" focusable="false" aria-hidden="true">
               <use xlink:href="#spectrum-css-icon-Chevron75" />
@@ -70,7 +70,7 @@ examples:
         <div class="spectrum-Accordion-item is-open" role="presentation">
 
           <!-- WAI-ARIA 1.1: Item header is a <button> wrapped within a <h3> element, rather than a <div> element with role="tab" -->
-          <h3 class="spectrum-Accordion-itemHeading">
+          <h3 class="spectrum-Accordion-itemHeading spectrum-Accordion-item-iconContainer">
             <!-- WAI-ARIA 1.1: Item header <button> uses aria-expanded attribute to indicate expanded state. -->
             <button class="spectrum-Accordion-itemHeader" type="button" id="spectrum-accordion-item-0-header" aria-controls="spectrum-accordion-item-0-content" aria-expanded="true">Recent</button>
             <svg class="spectrum-Icon spectrum-UIIcon-ChevronRight100 spectrum-Accordion-itemIndicator" focusable="false" aria-hidden="true">
@@ -82,7 +82,7 @@ examples:
           <div class="spectrum-Accordion-itemContent" role="region" id="spectrum-accordion-item-0-content" aria-labelledby="spectrum-accordion-item-0-header">Item 1</div>
         </div>
         <div class="spectrum-Accordion-item is-disabled" role="presentation">
-          <h3 class="spectrum-Accordion-itemHeading">
+          <h3 class="spectrum-Accordion-itemHeading spectrum-Accordion-item-iconContainer">
             <button class="spectrum-Accordion-itemHeader" type="button" disabled id="spectrum-accordion-item-1-header" aria-controls="spectrum-accordion-item-1-content" aria-expanded="false">Architecture</button>
             <svg class="spectrum-Icon spectrum-UIIcon-ChevronRight100 spectrum-Accordion-itemIndicator" focusable="false" aria-hidden="true">
               <use xlink:href="#spectrum-css-icon-Chevron100" />
@@ -91,7 +91,7 @@ examples:
           <div class="spectrum-Accordion-itemContent" role="region" id="spectrum-accordion-item-1-content" aria-labelledby="spectrum-accordion-item-1-header">Item 2</div>
         </div>
         <div class="spectrum-Accordion-item" role="presentation">
-          <h3 class="spectrum-Accordion-itemHeading">
+          <h3 class="spectrum-Accordion-itemHeading spectrum-Accordion-item-iconContainer">
             <button class="spectrum-Accordion-itemHeader" type="button" id="spectrum-accordion-item-2-header" aria-controls="spectrum-accordion-item-2-content" aria-expanded="false">Nature</button>
             <svg class="spectrum-Icon spectrum-UIIcon-ChevronRight100 spectrum-Accordion-itemIndicator" focusable="false" aria-hidden="true">
               <use xlink:href="#spectrum-css-icon-Chevron100" />
@@ -100,7 +100,7 @@ examples:
           <div class="spectrum-Accordion-itemContent" role="region" id="spectrum-accordion-item-2-content" aria-labelledby="spectrum-accordion-item-2-header">Item 3</div>
         </div>
         <div class="spectrum-Accordion-item" role="presentation">
-          <h3 class="spectrum-Accordion-itemHeading">
+          <h3 class="spectrum-Accordion-itemHeading spectrum-Accordion-item-iconContainer">
             <button class="spectrum-Accordion-itemHeader" type="button" id="spectrum-accordion-item-3-header" aria-controls="spectrum-accordion-item-3-content" aria-expanded="false">Really Long Accordion Item According to Our Predictions</button>
             <svg class="spectrum-Icon spectrum-UIIcon-ChevronRight100 spectrum-Accordion-itemIndicator" focusable="false" aria-hidden="true">
               <use xlink:href="#spectrum-css-icon-Chevron100" />
@@ -118,7 +118,7 @@ examples:
         <div class="spectrum-Accordion-item is-open" role="presentation">
 
           <!-- WAI-ARIA 1.1: Item header is a <button> wrapped within a <h3> element, rather than a <div> element with role="tab" -->
-          <h3 class="spectrum-Accordion-itemHeading">
+          <h3 class="spectrum-Accordion-itemHeading spectrum-Accordion-item-iconContainer">
             <!-- WAI-ARIA 1.1: Item header <button> uses aria-expanded attribute to indicate expanded state. -->
             <button class="spectrum-Accordion-itemHeader" type="button" id="spectrum-accordion-item-0-header" aria-controls="spectrum-accordion-item-0-content" aria-expanded="true">Recent</button>
             <svg class="spectrum-Icon spectrum-UIIcon-ChevronRight200 spectrum-Accordion-itemIndicator" focusable="false" aria-hidden="true">
@@ -130,7 +130,7 @@ examples:
           <div class="spectrum-Accordion-itemContent" role="region" id="spectrum-accordion-item-0-content" aria-labelledby="spectrum-accordion-item-0-header">Item 1</div>
         </div>
         <div class="spectrum-Accordion-item is-disabled" role="presentation">
-          <h3 class="spectrum-Accordion-itemHeading">
+          <h3 class="spectrum-Accordion-itemHeading spectrum-Accordion-item-iconContainer">
             <button class="spectrum-Accordion-itemHeader" type="button" disabled id="spectrum-accordion-item-1-header" aria-controls="spectrum-accordion-item-1-content" aria-expanded="false">Architecture</button>
             <svg class="spectrum-Icon spectrum-UIIcon-ChevronRight200 spectrum-Accordion-itemIndicator" focusable="false" aria-hidden="true">
               <use xlink:href="#spectrum-css-icon-Chevron200" />
@@ -139,7 +139,7 @@ examples:
           <div class="spectrum-Accordion-itemContent" role="region" id="spectrum-accordion-item-1-content" aria-labelledby="spectrum-accordion-item-1-header">Item 2</div>
         </div>
         <div class="spectrum-Accordion-item" role="presentation">
-          <h3 class="spectrum-Accordion-itemHeading">
+          <h3 class="spectrum-Accordion-itemHeading spectrum-Accordion-item-iconContainer">
             <button class="spectrum-Accordion-itemHeader" type="button" id="spectrum-accordion-item-2-header" aria-controls="spectrum-accordion-item-2-content" aria-expanded="false">Nature</button>
             <svg class="spectrum-Icon spectrum-UIIcon-ChevronRight200 spectrum-Accordion-itemIndicator" focusable="false" aria-hidden="true">
               <use xlink:href="#spectrum-css-icon-Chevron200" />
@@ -148,7 +148,7 @@ examples:
           <div class="spectrum-Accordion-itemContent" role="region" id="spectrum-accordion-item-2-content" aria-labelledby="spectrum-accordion-item-2-header">Item 3</div>
         </div>
         <div class="spectrum-Accordion-item" role="presentation">
-          <h3 class="spectrum-Accordion-itemHeading">
+          <h3 class="spectrum-Accordion-itemHeading spectrum-Accordion-item-iconContainer">
             <button class="spectrum-Accordion-itemHeader" type="button" id="spectrum-accordion-item-3-header" aria-controls="spectrum-accordion-item-3-content" aria-expanded="false">Really Long Accordion Item According to Our Predictions</button>
             <svg class="spectrum-Icon spectrum-UIIcon-ChevronRight200 spectrum-Accordion-itemIndicator" focusable="false" aria-hidden="true">
               <use xlink:href="#spectrum-css-icon-Chevron200" />
@@ -166,7 +166,7 @@ examples:
         <div class="spectrum-Accordion-item is-open" role="presentation">
 
           <!-- WAI-ARIA 1.1: Item header is a <button> wrapped within a <h3> element, rather than a <div> element with role="tab" -->
-          <h3 class="spectrum-Accordion-itemHeading">
+          <h3 class="spectrum-Accordion-itemHeading spectrum-Accordion-item-iconContainer">
             <!-- WAI-ARIA 1.1: Item header <button> uses aria-expanded attribute to indicate expanded state. -->
             <button class="spectrum-Accordion-itemHeader" type="button" id="spectrum-accordion-item-0-header" aria-controls="spectrum-accordion-item-0-content" aria-expanded="true">Recent</button>
             <svg class="spectrum-Icon spectrum-UIIcon-ChevronRight300 spectrum-Accordion-itemIndicator" focusable="false" aria-hidden="true">
@@ -178,7 +178,7 @@ examples:
           <div class="spectrum-Accordion-itemContent" role="region" id="spectrum-accordion-item-0-content" aria-labelledby="spectrum-accordion-item-0-header">Item 1</div>
         </div>
         <div class="spectrum-Accordion-item is-disabled" role="presentation">
-          <h3 class="spectrum-Accordion-itemHeading">
+          <h3 class="spectrum-Accordion-itemHeading spectrum-Accordion-item-iconContainer">
             <button class="spectrum-Accordion-itemHeader" type="button" disabled id="spectrum-accordion-item-1-header" aria-controls="spectrum-accordion-item-1-content" aria-expanded="false">Architecture</button>
             <svg class="spectrum-Icon spectrum-UIIcon-ChevronRight300 spectrum-Accordion-itemIndicator" focusable="false" aria-hidden="true">
               <use xlink:href="#spectrum-css-icon-Chevron300" />
@@ -187,7 +187,7 @@ examples:
           <div class="spectrum-Accordion-itemContent" role="region" id="spectrum-accordion-item-1-content" aria-labelledby="spectrum-accordion-item-1-header">Item 2</div>
         </div>
         <div class="spectrum-Accordion-item" role="presentation">
-          <h3 class="spectrum-Accordion-itemHeading">
+          <h3 class="spectrum-Accordion-itemHeading spectrum-Accordion-item-iconContainer">
             <button class="spectrum-Accordion-itemHeader" type="button" id="spectrum-accordion-item-2-header" aria-controls="spectrum-accordion-item-2-content" aria-expanded="false">Nature</button>
             <svg class="spectrum-Icon spectrum-UIIcon-ChevronRight300 spectrum-Accordion-itemIndicator" focusable="false" aria-hidden="true">
               <use xlink:href="#spectrum-css-icon-Chevron300" />
@@ -196,7 +196,7 @@ examples:
           <div class="spectrum-Accordion-itemContent" role="region" id="spectrum-accordion-item-2-content" aria-labelledby="spectrum-accordion-item-2-header">Item 3</div>
         </div>
         <div class="spectrum-Accordion-item" role="presentation">
-          <h3 class="spectrum-Accordion-itemHeading">
+          <h3 class="spectrum-Accordion-itemHeading spectrum-Accordion-item-iconContainer">
             <button class="spectrum-Accordion-itemHeader" type="button" id="spectrum-accordion-item-3-header" aria-controls="spectrum-accordion-item-3-content" aria-expanded="false">Really Long Accordion Item According to Our Predictions</button>
             <svg class="spectrum-Icon spectrum-UIIcon-ChevronRight300 spectrum-Accordion-itemIndicator" focusable="false" aria-hidden="true">
               <use xlink:href="#spectrum-css-icon-Chevron300" />
@@ -214,7 +214,7 @@ examples:
         <div class="spectrum-Accordion-item is-open" role="presentation">
 
           <!-- WAI-ARIA 1.1: Item header is a <button> wrapped within a <h3> element, rather than a <div> element with role="tab" -->
-          <h3 class="spectrum-Accordion-itemHeading">
+          <h3 class="spectrum-Accordion-itemHeading spectrum-Accordion-item-iconContainer">
             <!-- WAI-ARIA 1.1: Item header <button> uses aria-expanded attribute to indicate expanded state. -->
             <button class="spectrum-Accordion-itemHeader" type="button" id="spectrum-accordion-item-0-header" aria-controls="spectrum-accordion-item-0-content" aria-expanded="true">Recent</button>
             <svg class="spectrum-Icon spectrum-UIIcon-ChevronRight75 spectrum-Accordion-itemIndicator" focusable="false" aria-hidden="true">
@@ -226,7 +226,7 @@ examples:
           <div class="spectrum-Accordion-itemContent" role="region" id="spectrum-accordion-item-0-content" aria-labelledby="spectrum-accordion-item-0-header">Item 1</div>
         </div>
         <div class="spectrum-Accordion-item is-disabled" role="presentation">
-          <h3 class="spectrum-Accordion-itemHeading">
+          <h3 class="spectrum-Accordion-itemHeading spectrum-Accordion-item-iconContainer">
             <button class="spectrum-Accordion-itemHeader" type="button" disabled id="spectrum-accordion-item-1-header" aria-controls="spectrum-accordion-item-1-content" aria-expanded="false">Architecture</button>
             <svg class="spectrum-Icon spectrum-UIIcon-ChevronRight75 spectrum-Accordion-itemIndicator" focusable="false" aria-hidden="true">
               <use xlink:href="#spectrum-css-icon-Chevron75" />
@@ -235,7 +235,7 @@ examples:
           <div class="spectrum-Accordion-itemContent" role="region" id="spectrum-accordion-item-1-content" aria-labelledby="spectrum-accordion-item-1-header">Item 2</div>
         </div>
         <div class="spectrum-Accordion-item" role="presentation">
-          <h3 class="spectrum-Accordion-itemHeading">
+          <h3 class="spectrum-Accordion-itemHeading spectrum-Accordion-item-iconContainer">
             <button class="spectrum-Accordion-itemHeader" type="button" id="spectrum-accordion-item-2-header" aria-controls="spectrum-accordion-item-2-content" aria-expanded="false">Nature</button>
             <svg class="spectrum-Icon spectrum-UIIcon-ChevronRight75 spectrum-Accordion-itemIndicator" focusable="false" aria-hidden="true">
               <use xlink:href="#spectrum-css-icon-Chevron75" />
@@ -244,7 +244,7 @@ examples:
           <div class="spectrum-Accordion-itemContent" role="region" id="spectrum-accordion-item-2-content" aria-labelledby="spectrum-accordion-item-2-header">Item 3</div>
         </div>
         <div class="spectrum-Accordion-item" role="presentation">
-          <h3 class="spectrum-Accordion-itemHeading">
+          <h3 class="spectrum-Accordion-itemHeading spectrum-Accordion-item-iconContainer">
             <button class="spectrum-Accordion-itemHeader" type="button" id="spectrum-accordion-item-3-header" aria-controls="spectrum-accordion-item-3-content" aria-expanded="false">Really Long Accordion Item According to Our Predictions</button>
             <svg class="spectrum-Icon spectrum-UIIcon-ChevronRight75 spectrum-Accordion-itemIndicator" focusable="false" aria-hidden="true">
               <use xlink:href="#spectrum-css-icon-Chevron75" />
@@ -262,7 +262,7 @@ examples:
         <div class="spectrum-Accordion-item is-open" role="presentation">
 
           <!-- WAI-ARIA 1.1: Item header is a <button> wrapped within a <h3> element, rather than a <div> element with role="tab" -->
-          <h3 class="spectrum-Accordion-itemHeading">
+          <h3 class="spectrum-Accordion-itemHeading spectrum-Accordion-item-iconContainer">
             <!-- WAI-ARIA 1.1: Item header <button> uses aria-expanded attribute to indicate expanded state. -->
             <button class="spectrum-Accordion-itemHeader" type="button" id="spectrum-accordion-item-0-header" aria-controls="spectrum-accordion-item-0-content" aria-expanded="true">Recent</button>
             <svg class="spectrum-Icon spectrum-UIIcon-ChevronRight100 spectrum-Accordion-itemIndicator" focusable="false" aria-hidden="true">
@@ -274,7 +274,7 @@ examples:
           <div class="spectrum-Accordion-itemContent" role="region" id="spectrum-accordion-item-0-content" aria-labelledby="spectrum-accordion-item-0-header">Item 1</div>
         </div>
         <div class="spectrum-Accordion-item is-disabled" role="presentation">
-          <h3 class="spectrum-Accordion-itemHeading">
+          <h3 class="spectrum-Accordion-itemHeading spectrum-Accordion-item-iconContainer">
             <button class="spectrum-Accordion-itemHeader" type="button" disabled id="spectrum-accordion-item-1-header" aria-controls="spectrum-accordion-item-1-content" aria-expanded="false">Architecture</button>
             <svg class="spectrum-Icon spectrum-UIIcon-ChevronRight100 spectrum-Accordion-itemIndicator" focusable="false" aria-hidden="true">
               <use xlink:href="#spectrum-css-icon-Chevron100" />
@@ -283,7 +283,7 @@ examples:
           <div class="spectrum-Accordion-itemContent" role="region" id="spectrum-accordion-item-1-content" aria-labelledby="spectrum-accordion-item-1-header">Item 2</div>
         </div>
         <div class="spectrum-Accordion-item" role="presentation">
-          <h3 class="spectrum-Accordion-itemHeading">
+          <h3 class="spectrum-Accordion-itemHeading spectrum-Accordion-item-iconContainer">
             <button class="spectrum-Accordion-itemHeader" type="button" id="spectrum-accordion-item-2-header" aria-controls="spectrum-accordion-item-2-content" aria-expanded="false">Nature</button>
             <svg class="spectrum-Icon spectrum-UIIcon-ChevronRight100 spectrum-Accordion-itemIndicator" focusable="false" aria-hidden="true">
               <use xlink:href="#spectrum-css-icon-Chevron100" />
@@ -292,7 +292,7 @@ examples:
           <div class="spectrum-Accordion-itemContent" role="region" id="spectrum-accordion-item-2-content" aria-labelledby="spectrum-accordion-item-2-header">Item 3</div>
         </div>
         <div class="spectrum-Accordion-item" role="presentation">
-          <h3 class="spectrum-Accordion-itemHeading">
+          <h3 class="spectrum-Accordion-itemHeading spectrum-Accordion-item-iconContainer">
             <button class="spectrum-Accordion-itemHeader" type="button" id="spectrum-accordion-item-3-header" aria-controls="spectrum-accordion-item-3-content" aria-expanded="false">Really Long Accordion Item According to Our Predictions</button>
             <svg class="spectrum-Icon spectrum-UIIcon-ChevronRight100 spectrum-Accordion-itemIndicator" focusable="false" aria-hidden="true">
               <use xlink:href="#spectrum-css-icon-Chevron100" />
@@ -310,7 +310,7 @@ examples:
         <div class="spectrum-Accordion-item is-open" role="presentation">
 
           <!-- WAI-ARIA 1.1: Item header is a <button> wrapped within a <h3> element, rather than a <div> element with role="tab" -->
-          <h3 class="spectrum-Accordion-itemHeading">
+          <h3 class="spectrum-Accordion-itemHeading spectrum-Accordion-item-iconContainer">
             <!-- WAI-ARIA 1.1: Item header <button> uses aria-expanded attribute to indicate expanded state. -->
             <button class="spectrum-Accordion-itemHeader" type="button" id="spectrum-accordion-item-0-header" aria-controls="spectrum-accordion-item-0-content" aria-expanded="true">Recent</button>
             <svg class="spectrum-Icon spectrum-UIIcon-ChevronRight200 spectrum-Accordion-itemIndicator" focusable="false" aria-hidden="true">
@@ -322,7 +322,7 @@ examples:
           <div class="spectrum-Accordion-itemContent" role="region" id="spectrum-accordion-item-0-content" aria-labelledby="spectrum-accordion-item-0-header">Item 1</div>
         </div>
         <div class="spectrum-Accordion-item is-disabled" role="presentation">
-          <h3 class="spectrum-Accordion-itemHeading">
+          <h3 class="spectrum-Accordion-itemHeading spectrum-Accordion-item-iconContainer">
             <button class="spectrum-Accordion-itemHeader" type="button" disabled id="spectrum-accordion-item-1-header" aria-controls="spectrum-accordion-item-1-content" aria-expanded="false">Architecture</button>
             <svg class="spectrum-Icon spectrum-UIIcon-ChevronRight200 spectrum-Accordion-itemIndicator" focusable="false" aria-hidden="true">
               <use xlink:href="#spectrum-css-icon-Chevron200" />
@@ -331,7 +331,7 @@ examples:
           <div class="spectrum-Accordion-itemContent" role="region" id="spectrum-accordion-item-1-content" aria-labelledby="spectrum-accordion-item-1-header">Item 2</div>
         </div>
         <div class="spectrum-Accordion-item" role="presentation">
-          <h3 class="spectrum-Accordion-itemHeading">
+          <h3 class="spectrum-Accordion-itemHeading spectrum-Accordion-item-iconContainer">
             <button class="spectrum-Accordion-itemHeader" type="button" id="spectrum-accordion-item-2-header" aria-controls="spectrum-accordion-item-2-content" aria-expanded="false">Nature</button>
             <svg class="spectrum-Icon spectrum-UIIcon-ChevronRight200 spectrum-Accordion-itemIndicator" focusable="false" aria-hidden="true">
               <use xlink:href="#spectrum-css-icon-Chevron200" />
@@ -340,7 +340,7 @@ examples:
           <div class="spectrum-Accordion-itemContent" role="region" id="spectrum-accordion-item-2-content" aria-labelledby="spectrum-accordion-item-2-header">Item 3</div>
         </div>
         <div class="spectrum-Accordion-item" role="presentation">
-          <h3 class="spectrum-Accordion-itemHeading">
+          <h3 class="spectrum-Accordion-itemHeading spectrum-Accordion-item-iconContainer">
             <button class="spectrum-Accordion-itemHeader" type="button" id="spectrum-accordion-item-3-header" aria-controls="spectrum-accordion-item-3-content" aria-expanded="false">Really Long Accordion Item According to Our Predictions</button>
             <svg class="spectrum-Icon spectrum-UIIcon-ChevronRight200 spectrum-Accordion-itemIndicator" focusable="false" aria-hidden="true">
               <use xlink:href="#spectrum-css-icon-Chevron200" />
@@ -358,7 +358,7 @@ examples:
         <div class="spectrum-Accordion-item is-open" role="presentation">
 
           <!-- WAI-ARIA 1.1: Item header is a <button> wrapped within a <h3> element, rather than a <div> element with role="tab" -->
-          <h3 class="spectrum-Accordion-itemHeading">
+          <h3 class="spectrum-Accordion-itemHeading spectrum-Accordion-item-iconContainer">
             <!-- WAI-ARIA 1.1: Item header <button> uses aria-expanded attribute to indicate expanded state. -->
             <button class="spectrum-Accordion-itemHeader" type="button" id="spectrum-accordion-item-0-header" aria-controls="spectrum-accordion-item-0-content" aria-expanded="true">Recent</button>
             <svg class="spectrum-Icon spectrum-UIIcon-ChevronRight300 spectrum-Accordion-itemIndicator" focusable="false" aria-hidden="true">
@@ -370,7 +370,7 @@ examples:
           <div class="spectrum-Accordion-itemContent" role="region" id="spectrum-accordion-item-0-content" aria-labelledby="spectrum-accordion-item-0-header">Item 1</div>
         </div>
         <div class="spectrum-Accordion-item is-disabled" role="presentation">
-          <h3 class="spectrum-Accordion-itemHeading">
+          <h3 class="spectrum-Accordion-itemHeading spectrum-Accordion-item-iconContainer">
             <button class="spectrum-Accordion-itemHeader" type="button" disabled id="spectrum-accordion-item-1-header" aria-controls="spectrum-accordion-item-1-content" aria-expanded="false">Architecture</button>
             <svg class="spectrum-Icon spectrum-UIIcon-ChevronRight300 spectrum-Accordion-itemIndicator" focusable="false" aria-hidden="true">
               <use xlink:href="#spectrum-css-icon-Chevron300" />
@@ -379,7 +379,7 @@ examples:
           <div class="spectrum-Accordion-itemContent" role="region" id="spectrum-accordion-item-1-content" aria-labelledby="spectrum-accordion-item-1-header">Item 2</div>
         </div>
         <div class="spectrum-Accordion-item" role="presentation">
-          <h3 class="spectrum-Accordion-itemHeading">
+          <h3 class="spectrum-Accordion-itemHeading spectrum-Accordion-item-iconContainer">
             <button class="spectrum-Accordion-itemHeader" type="button" id="spectrum-accordion-item-2-header" aria-controls="spectrum-accordion-item-2-content" aria-expanded="false">Nature</button>
             <svg class="spectrum-Icon spectrum-UIIcon-ChevronRight300 spectrum-Accordion-itemIndicator" focusable="false" aria-hidden="true">
               <use xlink:href="#spectrum-css-icon-Chevron300" />
@@ -388,7 +388,7 @@ examples:
           <div class="spectrum-Accordion-itemContent" role="region" id="spectrum-accordion-item-2-content" aria-labelledby="spectrum-accordion-item-2-header">Item 3</div>
         </div>
         <div class="spectrum-Accordion-item" role="presentation">
-          <h3 class="spectrum-Accordion-itemHeading">
+          <h3 class="spectrum-Accordion-itemHeading spectrum-Accordion-item-iconContainer">
             <button class="spectrum-Accordion-itemHeader" type="button" id="spectrum-accordion-item-3-header" aria-controls="spectrum-accordion-item-3-content" aria-expanded="false">Really Long Accordion Item According to Our Predictions</button>
             <svg class="spectrum-Icon spectrum-UIIcon-ChevronRight300 spectrum-Accordion-itemIndicator" focusable="false" aria-hidden="true">
               <use xlink:href="#spectrum-css-icon-Chevron300" />
@@ -406,7 +406,7 @@ examples:
         <div class="spectrum-Accordion-item is-open" role="presentation">
 
           <!-- WAI-ARIA 1.1: Item header is a <button> wrapped within a <h3> element, rather than a <div> element with role="tab" -->
-          <h3 class="spectrum-Accordion-itemHeading">
+          <h3 class="spectrum-Accordion-itemHeading spectrum-Accordion-item-iconContainer">
             <!-- WAI-ARIA 1.1: Item header <button> uses aria-expanded attribute to indicate expanded state. -->
             <button class="spectrum-Accordion-itemHeader" type="button" id="spectrum-accordion-item-0-header" aria-controls="spectrum-accordion-item-0-content" aria-expanded="true">Recent</button>
             <svg class="spectrum-Icon spectrum-UIIcon-ChevronRight75 spectrum-Accordion-itemIndicator" focusable="false" aria-hidden="true">
@@ -418,7 +418,7 @@ examples:
           <div class="spectrum-Accordion-itemContent" role="region" id="spectrum-accordion-item-0-content" aria-labelledby="spectrum-accordion-item-0-header">Item 1</div>
         </div>
         <div class="spectrum-Accordion-item is-disabled" role="presentation">
-          <h3 class="spectrum-Accordion-itemHeading">
+          <h3 class="spectrum-Accordion-itemHeading spectrum-Accordion-item-iconContainer">
             <button class="spectrum-Accordion-itemHeader" type="button" disabled id="spectrum-accordion-item-1-header" aria-controls="spectrum-accordion-item-1-content" aria-expanded="false">Architecture</button>
             <svg class="spectrum-Icon spectrum-UIIcon-ChevronRight75 spectrum-Accordion-itemIndicator" focusable="false" aria-hidden="true">
               <use xlink:href="#spectrum-css-icon-Chevron75" />
@@ -427,7 +427,7 @@ examples:
           <div class="spectrum-Accordion-itemContent" role="region" id="spectrum-accordion-item-1-content" aria-labelledby="spectrum-accordion-item-1-header">Item 2</div>
         </div>
         <div class="spectrum-Accordion-item" role="presentation">
-          <h3 class="spectrum-Accordion-itemHeading">
+          <h3 class="spectrum-Accordion-itemHeading spectrum-Accordion-item-iconContainer">
             <button class="spectrum-Accordion-itemHeader" type="button" id="spectrum-accordion-item-2-header" aria-controls="spectrum-accordion-item-2-content" aria-expanded="false">Nature</button>
             <svg class="spectrum-Icon spectrum-UIIcon-ChevronRight75 spectrum-Accordion-itemIndicator" focusable="false" aria-hidden="true">
               <use xlink:href="#spectrum-css-icon-Chevron75" />
@@ -436,7 +436,7 @@ examples:
           <div class="spectrum-Accordion-itemContent" role="region" id="spectrum-accordion-item-2-content" aria-labelledby="spectrum-accordion-item-2-header">Item 3</div>
         </div>
         <div class="spectrum-Accordion-item" role="presentation">
-          <h3 class="spectrum-Accordion-itemHeading">
+          <h3 class="spectrum-Accordion-itemHeading spectrum-Accordion-item-iconContainer">
             <button class="spectrum-Accordion-itemHeader" type="button" id="spectrum-accordion-item-3-header" aria-controls="spectrum-accordion-item-3-content" aria-expanded="false">Really Long Accordion Item According to Our Predictions</button>
             <svg class="spectrum-Icon spectrum-UIIcon-ChevronRight75 spectrum-Accordion-itemIndicator" focusable="false" aria-hidden="true">
               <use xlink:href="#spectrum-css-icon-Chevron75" />
@@ -454,7 +454,7 @@ examples:
         <div class="spectrum-Accordion-item is-open" role="presentation">
 
           <!-- WAI-ARIA 1.1: Item header is a <button> wrapped within a <h3> element, rather than a <div> element with role="tab" -->
-          <h3 class="spectrum-Accordion-itemHeading">
+          <h3 class="spectrum-Accordion-itemHeading spectrum-Accordion-item-iconContainer">
             <!-- WAI-ARIA 1.1: Item header <button> uses aria-expanded attribute to indicate expanded state. -->
             <button class="spectrum-Accordion-itemHeader" type="button" id="spectrum-accordion-item-0-header" aria-controls="spectrum-accordion-item-0-content" aria-expanded="true">Recent</button>
             <svg class="spectrum-Icon spectrum-UIIcon-ChevronRight100 spectrum-Accordion-itemIndicator" focusable="false" aria-hidden="true">
@@ -466,7 +466,7 @@ examples:
           <div class="spectrum-Accordion-itemContent" role="region" id="spectrum-accordion-item-0-content" aria-labelledby="spectrum-accordion-item-0-header">Item 1</div>
         </div>
         <div class="spectrum-Accordion-item is-disabled" role="presentation">
-          <h3 class="spectrum-Accordion-itemHeading">
+          <h3 class="spectrum-Accordion-itemHeading spectrum-Accordion-item-iconContainer">
             <button class="spectrum-Accordion-itemHeader" type="button" disabled id="spectrum-accordion-item-1-header" aria-controls="spectrum-accordion-item-1-content" aria-expanded="false">Architecture</button>
             <svg class="spectrum-Icon spectrum-UIIcon-ChevronRight100 spectrum-Accordion-itemIndicator" focusable="false" aria-hidden="true">
               <use xlink:href="#spectrum-css-icon-Chevron100" />
@@ -475,7 +475,7 @@ examples:
           <div class="spectrum-Accordion-itemContent" role="region" id="spectrum-accordion-item-1-content" aria-labelledby="spectrum-accordion-item-1-header">Item 2</div>
         </div>
         <div class="spectrum-Accordion-item" role="presentation">
-          <h3 class="spectrum-Accordion-itemHeading">
+          <h3 class="spectrum-Accordion-itemHeading spectrum-Accordion-item-iconContainer">
             <button class="spectrum-Accordion-itemHeader" type="button" id="spectrum-accordion-item-2-header" aria-controls="spectrum-accordion-item-2-content" aria-expanded="false">Nature</button>
             <svg class="spectrum-Icon spectrum-UIIcon-ChevronRight100 spectrum-Accordion-itemIndicator" focusable="false" aria-hidden="true">
               <use xlink:href="#spectrum-css-icon-Chevron100" />
@@ -484,7 +484,7 @@ examples:
           <div class="spectrum-Accordion-itemContent" role="region" id="spectrum-accordion-item-2-content" aria-labelledby="spectrum-accordion-item-2-header">Item 3</div>
         </div>
         <div class="spectrum-Accordion-item" role="presentation">
-          <h3 class="spectrum-Accordion-itemHeading">
+          <h3 class="spectrum-Accordion-itemHeading spectrum-Accordion-item-iconContainer">
             <button class="spectrum-Accordion-itemHeader" type="button" id="spectrum-accordion-item-3-header" aria-controls="spectrum-accordion-item-3-content" aria-expanded="false">Really Long Accordion Item According to Our Predictions</button>
             <svg class="spectrum-Icon spectrum-UIIcon-ChevronRight100 spectrum-Accordion-itemIndicator" focusable="false" aria-hidden="true">
               <use xlink:href="#spectrum-css-icon-Chevron100" />
@@ -502,7 +502,7 @@ examples:
         <div class="spectrum-Accordion-item is-open" role="presentation">
 
           <!-- WAI-ARIA 1.1: Item header is a <button> wrapped within a <h3> element, rather than a <div> element with role="tab" -->
-          <h3 class="spectrum-Accordion-itemHeading">
+          <h3 class="spectrum-Accordion-itemHeading spectrum-Accordion-item-iconContainer">
             <!-- WAI-ARIA 1.1: Item header <button> uses aria-expanded attribute to indicate expanded state. -->
             <button class="spectrum-Accordion-itemHeader" type="button" id="spectrum-accordion-item-0-header" aria-controls="spectrum-accordion-item-0-content" aria-expanded="true">Recent</button>
             <svg class="spectrum-Icon spectrum-UIIcon-ChevronRight200 spectrum-Accordion-itemIndicator" focusable="false" aria-hidden="true">
@@ -514,7 +514,7 @@ examples:
           <div class="spectrum-Accordion-itemContent" role="region" id="spectrum-accordion-item-0-content" aria-labelledby="spectrum-accordion-item-0-header">Item 1</div>
         </div>
         <div class="spectrum-Accordion-item is-disabled" role="presentation">
-          <h3 class="spectrum-Accordion-itemHeading">
+          <h3 class="spectrum-Accordion-itemHeading spectrum-Accordion-item-iconContainer">
             <button class="spectrum-Accordion-itemHeader" type="button" disabled id="spectrum-accordion-item-1-header" aria-controls="spectrum-accordion-item-1-content" aria-expanded="false">Architecture</button>
             <svg class="spectrum-Icon spectrum-UIIcon-ChevronRight200 spectrum-Accordion-itemIndicator" focusable="false" aria-hidden="true">
               <use xlink:href="#spectrum-css-icon-Chevron200" />
@@ -523,7 +523,7 @@ examples:
           <div class="spectrum-Accordion-itemContent" role="region" id="spectrum-accordion-item-1-content" aria-labelledby="spectrum-accordion-item-1-header">Item 2</div>
         </div>
         <div class="spectrum-Accordion-item" role="presentation">
-          <h3 class="spectrum-Accordion-itemHeading">
+          <h3 class="spectrum-Accordion-itemHeading spectrum-Accordion-item-iconContainer">
             <button class="spectrum-Accordion-itemHeader" type="button" id="spectrum-accordion-item-2-header" aria-controls="spectrum-accordion-item-2-content" aria-expanded="false">Nature</button>
             <svg class="spectrum-Icon spectrum-UIIcon-ChevronRight200 spectrum-Accordion-itemIndicator" focusable="false" aria-hidden="true">
               <use xlink:href="#spectrum-css-icon-Chevron200" />
@@ -532,7 +532,7 @@ examples:
           <div class="spectrum-Accordion-itemContent" role="region" id="spectrum-accordion-item-2-content" aria-labelledby="spectrum-accordion-item-2-header">Item 3</div>
         </div>
         <div class="spectrum-Accordion-item" role="presentation">
-          <h3 class="spectrum-Accordion-itemHeading">
+          <h3 class="spectrum-Accordion-itemHeading spectrum-Accordion-item-iconContainer">
             <button class="spectrum-Accordion-itemHeader" type="button" id="spectrum-accordion-item-3-header" aria-controls="spectrum-accordion-item-3-content" aria-expanded="false">Really Long Accordion Item According to Our Predictions</button>
             <svg class="spectrum-Icon spectrum-UIIcon-ChevronRight200 spectrum-Accordion-itemIndicator" focusable="false" aria-hidden="true">
               <use xlink:href="#spectrum-css-icon-Chevron200" />
@@ -550,7 +550,7 @@ examples:
         <div class="spectrum-Accordion-item is-open" role="presentation">
 
           <!-- WAI-ARIA 1.1: Item header is a <button> wrapped within a <h3> element, rather than a <div> element with role="tab" -->
-          <h3 class="spectrum-Accordion-itemHeading">
+          <h3 class="spectrum-Accordion-itemHeading spectrum-Accordion-item-iconContainer">
             <!-- WAI-ARIA 1.1: Item header <button> uses aria-expanded attribute to indicate expanded state. -->
             <button class="spectrum-Accordion-itemHeader" type="button" id="spectrum-accordion-item-0-header" aria-controls="spectrum-accordion-item-0-content" aria-expanded="true">Recent</button>
             <svg class="spectrum-Icon spectrum-UIIcon-ChevronRight300 spectrum-Accordion-itemIndicator" focusable="false" aria-hidden="true">
@@ -562,7 +562,7 @@ examples:
           <div class="spectrum-Accordion-itemContent" role="region" id="spectrum-accordion-item-0-content" aria-labelledby="spectrum-accordion-item-0-header">Item 1</div>
         </div>
         <div class="spectrum-Accordion-item is-disabled" role="presentation">
-          <h3 class="spectrum-Accordion-itemHeading">
+          <h3 class="spectrum-Accordion-itemHeading spectrum-Accordion-item-iconContainer">
             <button class="spectrum-Accordion-itemHeader" type="button" disabled id="spectrum-accordion-item-1-header" aria-controls="spectrum-accordion-item-1-content" aria-expanded="false">Architecture</button>
             <svg class="spectrum-Icon spectrum-UIIcon-ChevronRight300 spectrum-Accordion-itemIndicator" focusable="false" aria-hidden="true">
               <use xlink:href="#spectrum-css-icon-Chevron300" />
@@ -571,7 +571,7 @@ examples:
           <div class="spectrum-Accordion-itemContent" role="region" id="spectrum-accordion-item-1-content" aria-labelledby="spectrum-accordion-item-1-header">Item 2</div>
         </div>
         <div class="spectrum-Accordion-item" role="presentation">
-          <h3 class="spectrum-Accordion-itemHeading">
+          <h3 class="spectrum-Accordion-itemHeading spectrum-Accordion-item-iconContainer">
             <button class="spectrum-Accordion-itemHeader" type="button" id="spectrum-accordion-item-2-header" aria-controls="spectrum-accordion-item-2-content" aria-expanded="false">Nature</button>
             <svg class="spectrum-Icon spectrum-UIIcon-ChevronRight300 spectrum-Accordion-itemIndicator" focusable="false" aria-hidden="true">
               <use xlink:href="#spectrum-css-icon-Chevron300" />
@@ -580,7 +580,7 @@ examples:
           <div class="spectrum-Accordion-itemContent" role="region" id="spectrum-accordion-item-2-content" aria-labelledby="spectrum-accordion-item-2-header">Item 3</div>
         </div>
         <div class="spectrum-Accordion-item" role="presentation">
-          <h3 class="spectrum-Accordion-itemHeading">
+          <h3 class="spectrum-Accordion-itemHeading spectrum-Accordion-item-iconContainer">
             <button class="spectrum-Accordion-itemHeader" type="button" id="spectrum-accordion-item-3-header" aria-controls="spectrum-accordion-item-3-content" aria-expanded="false">Really Long Accordion Item According to Our Predictions</button>
             <svg class="spectrum-Icon spectrum-UIIcon-ChevronRight300 spectrum-Accordion-itemIndicator" focusable="false" aria-hidden="true">
               <use xlink:href="#spectrum-css-icon-Chevron300" />
