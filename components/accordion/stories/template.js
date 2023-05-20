@@ -49,6 +49,7 @@ export const AccordionItem = ({
         >
           ${heading}
         </button>
+        <span class="${rootClass}-iconContainer">
         ${Icon({
           iconName: "ChevronRight100",
           size: iconSize,
@@ -57,6 +58,7 @@ export const AccordionItem = ({
           ],
           ...globals,
         })}
+        </span>
       </h3>
       <!-- WAI-ARIA 1.1: Item content role changed from "tabpanel" to "region" -->
       <div
