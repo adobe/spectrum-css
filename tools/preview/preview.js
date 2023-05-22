@@ -44,41 +44,42 @@ import './global.js';
 // Rendered as controls; these properties are assigned
 //      to the document root element
 // @todo: resolve errors on 'name' and 'title' in console
-export const globalTypes = {
-  textDirection: {
-    title: 'Text Direction',
-    description: 'Direction of the content flow',
-    showName: true,
-    defaultValue: 'ltr',
-    toolbar: {
+export default {
+  globalTypes: {
+    textDirection: {
+      title: 'Text Direction',
+      description: 'Direction of the content flow',
+      showName: true,
+      defaultValue: 'ltr',
+      toolbar: {
         items: [
-            { value: 'ltr', title: 'ltr', right: 'left to right' },
-            { value: 'rtl', title: 'rtl', right: 'right to left' },
+          { value: 'ltr', title: 'ltr', right: 'left to right' },
+          { value: 'rtl', title: 'rtl', right: 'right to left' },
         ],
         dynamicTitle: true,
+      },
     },
-  },
-  lang: {
-    title: 'Language',
-    showName: true,
-    icon: 'globe',
-    description: 'Language of the content',
-    defaultValue: 'en-US',
-    toolbar: {
+    lang: {
+      title: 'Language',
+      showName: true,
+      icon: 'globe',
+      description: 'Language of the content',
+      defaultValue: 'en-US',
+      toolbar: {
         items: [
-            { value: 'en-US', title: '🇺🇸', right: 'English (US)' },
-            { value: 'ja', title: '🇯🇵', right: 'Japanese' },
-            { value: 'ko', title: '🇰🇷', right: '한국어' },
-            { value: 'zh', title: '🇨🇳', right: '中文' },
+          { value: 'en-US', title: '🇺🇸', right: 'English (US)' },
+          { value: 'ja', title: '🇯🇵', right: 'Japanese' },
+          { value: 'ko', title: '🇰🇷', right: '한국어' },
+          { value: 'zh', title: '🇨🇳', right: '中文' },
         ],
         dynamicTitle: true,
+      },
     },
   },
-};
 
-// Global properties added to each component;
-//      determines what stylesheets are loaded
-export const argTypes = {
+  // Global properties added to each component;
+  //      determines what stylesheets are loaded
+  argTypes: {
     color: {
       name: 'Color',
       description: 'Controls the color context of the component.',
@@ -95,7 +96,7 @@ export const argTypes = {
           light: 'Light (default)',
           dark: 'Dark',
           darkest: 'Darkest',
-        }
+        },
       },
     },
     scale: {
@@ -109,11 +110,11 @@ export const argTypes = {
       type: { required: true },
       options: ['medium', 'large'],
       control: {
-          type: 'radio',
-          labels: {
-              medium: 'Medium (default)',
-              large: 'Large',
-          },
+        type: 'radio',
+        labels: {
+          medium: 'Medium (default)',
+          large: 'Large',
+        },
       },
     },
     // @todo https://jira.corp.adobe.com/browse/CSS-314
@@ -142,80 +143,81 @@ export const argTypes = {
     },
     /* None of these should show up in the args table but are necessary for rendering the templates */
     rootClass: {
-      name: "Class name",
-      type: { name: "string", required: true },
+      name: 'Class name',
+      type: { name: 'string', required: true },
       table: { disable: true },
-      control: 'text'
+      control: 'text',
     },
     customClasses: {
-      name: "Custom classes",
-      type: { name: "string", required: false },
+      name: 'Custom classes',
+      type: { name: 'string', required: false },
       table: { disable: true },
       control: 'object',
     },
     id: {
-      name: "Element ID",
-      type: { name: "string", required: false },
+      name: 'Element ID',
+      type: { name: 'string', required: false },
       table: { disable: true },
       control: 'text',
-    }
-};
+    },
+  },
 
-export const args = {
+  args: {
     color: 'light',
     scale: 'medium',
     reducedMotion: false,
     express: false,
     customClasses: [],
-};
+  },
 
-export const parameters = {
-  layout: 'padded', // Valid: 'centered' | 'fullscreen' | 'padded' | 'none';
-  showNav: true,
-  showPanel: true,
-  panelPosition: 'bottom',
-  isToolShown: false,
-  isFullscreen: false,
-  controls: {
-    expanded: true,
-    hideNoControlsWarning: true,
-    sort: 'requiredFirst',
-  },
-  html: {
-    root: '#root-inner',
-    removeComments: true,
-    prettier: {
-      tabWidth: 4,
-      useTabs: false,
-      htmlWhitespaceSensitivity: 'ignore',
+  parameters: {
+    layout: 'padded', // Valid: 'centered' | 'fullscreen' | 'padded' | 'none';
+    showNav: true,
+    showPanel: true,
+    panelPosition: 'bottom',
+    isToolShown: false,
+    isFullscreen: false,
+    controls: {
+      expanded: true,
+      hideNoControlsWarning: true,
+      sort: 'requiredFirst',
     },
-    highlighter: {
-      showLineNumbers: true,
-      wrapLines: true,
+    html: {
+      root: '#root-inner',
+      removeComments: true,
+      prettier: {
+        tabWidth: 4,
+        useTabs: false,
+        htmlWhitespaceSensitivity: 'ignore',
+      },
+      highlighter: {
+        showLineNumbers: true,
+        wrapLines: true,
+      },
     },
-  },
-  docs: {
-    inlineStories: true,
-    source: {
+    docs: {
+      inlineStories: true,
+      source: {
         type: 'dynamic',
         language: 'html',
+      },
+      iframeHeight: '200px',
     },
-    iframeHeight: '200px',
-  },
-  status: {
-    statuses: {
-      migrated: {
-        background: '#f0f0f0',
-        color: '#444',
-        description: 'Migrated to the latest tokens.',
+    status: {
+      statuses: {
+        migrated: {
+          background: '#f0f0f0',
+          color: '#444',
+          description: 'Migrated to the latest tokens.',
+        },
       },
     },
   },
-};
 
-export const decorators = [
-  withTextDirectionWrapper,
-  withLanguageWrapper,
-  withReducedMotionWrapper,
-  withContextWrapper,
-];
+  decorators: [
+    withTextDirectionWrapper,
+    withLanguageWrapper,
+    withReducedMotionWrapper,
+    withContextWrapper,
+  ]
+}
