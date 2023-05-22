@@ -21,6 +21,7 @@ governing permissions and limitations under the License.
   /* Distance between top and bottom of dialog and edge of window for fullscreen dialog */
   --spectrum-dialog-fullscreen-margin: 32px;
   --spectrum-dialog-max-height: 90vh;
+  --spectrum-dialog-max-width: 90vw;
 }
 
 /* Used to position the modal */
@@ -72,7 +73,8 @@ governing permissions and limitations under the License.
   z-index: 2;
 
   /* Don't be bigger than the screen */
-  max-height: var(--spectrum-dialog-max-height);
+  max-block-size: var(--spectrum-dialog-max-height);
+  max-inline-size: var(--spectrum-dialog-max-width);
 
   border-radius: var(--spectrum-corner-radius-100);
   overflow: hidden;
