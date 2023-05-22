@@ -84,12 +84,6 @@ governing permissions and limitations under the License.
   --spectrum-search-text-to-icon: var(--spectrum-text-to-visual-75);
 }
 
-.spectrum-Search--sizeM {
-  --spectrum-search-block-size: var(--spectrum-component-height-100);
-  --spectrum-search-icon-size: var(--spectrum-workflow-icon-size-100);
-  --spectrum-search-text-to-icon: var(--spectrum-text-to-visual-100);
-}
-
 .spectrum-Search--sizeL {
   --spectrum-search-block-size: var(--spectrum-component-height-200);
   --spectrum-search-icon-size: var(--spectrum-workflow-icon-size-200);
