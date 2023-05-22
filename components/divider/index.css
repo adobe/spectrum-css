@@ -122,5 +122,9 @@ governing permissions and limitations under the License.
     block-size: 100%;
     inline-size: var(--mod-divider-thickness,
                     var(--spectrum-divider-thickness));
+
+    margin-block: var(--mod-divider-vertical-margin);
+    height: var(--mod-divider-vertical-height);
+    align-self: var(--mod-divider-vertical-align);
   }
 }
