@@ -283,6 +283,12 @@ governing permissions and limitations under the License.
     + .spectrum-Accordion-itemIndicator {
       color: var(--mod-accordion-item-header-color-hover, var(--spectrum-accordion-item-header-color-hover));
     }
+
+    + .spectrum-Accordion-item-iconContainer {
+      .spectrum-Accordion-itemIndicator {
+        color: var(--mod-accordion-item-header-color-hover, var(--spectrum-accordion-item-header-color-hover));
+      }
+    }
   }
 
   &:focus-visible {
@@ -319,6 +325,12 @@ governing permissions and limitations under the License.
 
     + .spectrum-Accordion-itemIndicator {
       color: var(--mod-accordion-item-header-disabled-color, var(--spectrum-accordion-item-header-disabled-color));
+    }
+
+    + .spectrum-Accordion-item-iconContainer {
+      .spectrum-Accordion-itemIndicator {
+        color: var(--mod-accordion-item-header-disabled-color, var(--spectrum-accordion-item-header-disabled-color));
+      }
     }
   }
 
