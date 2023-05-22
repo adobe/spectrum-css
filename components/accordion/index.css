@@ -39,7 +39,7 @@ governing permissions and limitations under the License.
     --spectrum-accordion-item-header-line-height: var(--spectrum-cjk-line-height-100);
   }
   /* Text body */
-  --spectrum-accordion-item-content-font: var(--spectrum-body-sans-serif-font-family);
+  --spectrum-accordion-item-content-font: var(-spectrum-sans-font-family-stack);
   --spectrum-accordion-item-content-font-weight: var(--spectrum-body-sans-serif-font-weight);
   --spectrum-accordion-item-content-font-style: var(--spectrum-body-sans-serif-font-style);
   --spectrum-accordion-item-content-font-size: var(--spectrum-body-size-s);
