@@ -39,6 +39,8 @@ governing permissions and limitations under the License.
   --spectrum-tabs-focus-indicator-border-radius: var(--spectrum-corner-radius-100);
   --spectrum-tabs-focus-indicator-gap: var(--spectrum-tab-item-focus-indicator-gap-medium);
   --spectrum-tabs-focus-indicator-color: var(--spectrum-focus-indicator-color);
+  --spectrum-tabs-selection-indicator-color: var(--spectrum-neutral-subdued-content-color-default);
+
 
   --spectrum-tabs-list-background-direction: top;
   --spectrum-tabs-divider-background-color: var(--spectrum-gray-300);
@@ -167,7 +169,8 @@ governing permissions and limitations under the License.
 
   background: linear-gradient(
     to var(--mod-tabs-list-background-direction, var(--spectrum-tabs-list-background-direction)),
-    var(--mod-tabs-divider-background-color, var(--spectrum-tabs-divider-background-color)) 0 var(--mod-tabs-divider-size, var(--spectrum-tabs-divider-size)),
+    var(--highcontrast-tabs-divider-background-color, var(--mod-tabs-divider-background-color, var(--spectrum-tabs-divider-background-color))) 
+    0 var(--mod-tabs-divider-size, var(--spectrum-tabs-divider-size)),
     transparent var(--mod-tabs-divider-size, var(--spectrum-tabs-divider-size))
   );
 
@@ -186,7 +189,7 @@ governing permissions and limitations under the License.
   text-decoration: none;
   white-space: nowrap;
 
-  color: var(--mod-tabs-color, var(--spectrum-tabs-color));
+  color: var(--highcontrast-tabs-color, var(--mod-tabs-color, var(--spectrum-tabs-color)));
 
   transition: color var(--mod-tabs-animation-duration, var(--spectrum-tabs-animation-duration)) ease-out;
   cursor: pointer;
@@ -222,7 +225,7 @@ governing permissions and limitations under the License.
   }
 
   &:hover {
-    color: var(--mod-tabs-color-hover, var(--spectrum-tabs-color-hover));
+    color: var(--highcontrast-tabs-color-hover, var(--mod-tabs-color-hover, var(--spectrum-tabs-color-hover)));
   }
 
   &.is-selected {
@@ -239,7 +242,7 @@ governing permissions and limitations under the License.
   }
 
   &:focus-within {
-    color: var(--mod-tabs-color-key-focus, var(--spectrum-tabs-color-key-focus));
+    color: var(--highcontrast-tabs-color-key-focus, var(--mod-tabs-color-key-focus, var(--spectrum-tabs-color-key-focus)));
 
     &::before {
       border-color: var(--highcontrast-tabs-focus-indicator-color, var(--mod-tabs-focus-indicator-color, var(--spectrum-tabs-focus-indicator-color)));
@@ -272,7 +275,7 @@ governing permissions and limitations under the License.
 .spectrum-Tabs-selectionIndicator {
   position: absolute;
   inset-inline-start: 0;
-  background-color: var(--mod-tabs-color, var(--spectrum-tabs-color));
+  background-color: var(--highcontrast-tabs-selection-indicator-color, var(--mod-tabs-selection-indicator-color, var(--spectrum-tabs-selection-indicator-color)));
 
   /* Be below the tab */
   z-index: 0;
@@ -317,7 +320,6 @@ governing permissions and limitations under the License.
 
   .spectrum-Tabs-selectionIndicator {
     padding-inline-start: var(--mod-tabs-start-to-item-quiet, var(--spectrum-tabs-start-to-item-quiet));
-    background-color: var(--highcontrast-tabs-color-selected, var(--mod-tabs-color-selected, var(--spectrum-tabs-color-selected)));
   }
 }
 
@@ -352,41 +354,23 @@ governing permissions and limitations under the License.
 @media (forced-colors: active) {
   .spectrum-Tabs {
     --highcontrast-tabs-divider-background-color: transparent;
+    --highcontrast-tabs-selection-indicator-color: Highlight;
     --highcontrast-tabs-focus-indicator-color: CanvasText;
     --highcontrast-tabs-focus-indicator-background-color: Highlight;
 
+    --highcontrast-tabs-color: ButtonText;
+    --highcontrast-tabs-color-hover: ButtonText;
+    --highcontrast-tabs-color-selected: HighlightText;
+    --highcontrast-tabs-color-key-focus: ButtonText;
 
-    &--emphasized {
-      --highcontrast-tabs-color-selected: HighlightText;
+    &--compact {
+      --highcontrast-tabs-selection-indicator-color: transparent;
     }
-
-    &--quiet {
-      --spectrum-tabs-quiet-textonly-divider-background-color: transparent;
-      --spectrum-tabs-quiet-textonly-tabitem-selection-indicator-background-color-selected: Highlight;
-      --spectrum-tabs-quiet-textonly-tabitem-selection-indicator-background-color: transparent;
-    }
-    
-    --spectrum-tabs-textonly-tabitem-icon-color-disabled: GrayText;
-    --spectrum-tabs-textonly-tabitem-icon-color-hover: ButtonText;
-    --spectrum-tabs-textonly-tabitem-icon-color-selected-key-focus: ButtonText;
-    --spectrum-tabs-textonly-tabitem-icon-color-selected: HighlightText;
-    --spectrum-tabs-textonly-tabitem-selection-indicator-background-color-selected: Highlight;
-    --spectrum-tabs-textonly-tabitem-text-color-disabled: GrayText;
-    --spectrum-tabs-textonly-tabitem-text-color-hover: ButtonText;
-    --spectrum-tabs-textonly-tabitem-text-color-selected-key-focus: ButtonText;
-    --spectrum-tabs-textonly-tabitem-text-color-selected: HighlightText;
-    --spectrum-tabs-textonly-tabitem-text-color: ButtonText;
-    --spectrum-tabs-vertical-quiet-textonly-divider-background-color: transparent;
-    --spectrum-tabs-vertical-rule-color: transparent;
-    --spectrum-tabs-vertical-textonly-divider-background-color: transparent;
-    --spectrum-tabs-vertical-textonly-tabitem-selection-indicator-background-color-selected: Highlight;
 
     /* Prevents black box behind text on Highlight background */
     forced-color-adjust: none;
 
     .spectrum-Tabs-item {
-
-
       .spectrum-Icon {
         z-index: 1;
         position: relative;
@@ -399,54 +383,13 @@ governing permissions and limitations under the License.
     }
 
     .is-selected {
-      color: HighlightText;
 
       &::before {
         background-color: var(--highcontrast-tabs-focus-indicator-background-color);
       }
 
-      .spectrum-Icon {
-        color: HighlightText;
-      }
-      
-
-      .spectrum-Tabs-itemLabel {
-        color: HighlightText;
-      }
-    }
-
-    &.spectrum-Tabs--emphasized {
-      .spectrum-Tabs-item {
-        &:before {
-          background-color: ButtonFace;
-        }
-
-        .spectrum-Icon {
-          z-index: 1;
-          position: relative;
-        }
-
-        .spectrum-Tabs-itemLabel {
-          position: relative;
-          z-index: 1;
-        }
-      }
-
-      .is-selected {
-        color: HighlightText;
-
-        .spectrum-Icon {
-          color: HighlightText;
-        }
-
-        &:before {
-          background-color: Highlight;
-          color: HighlightText;
-        }
-
-        .spectrum-Tabs-itemLabel {
-          color: HighlightText;
-        }
+      &:focus-within {
+        color: var(--highcontrast-tabs-color-selected);
       }
     }
   }
