@@ -261,9 +261,6 @@ governing permissions and limitations under the License.
 }
 
 .spectrum-Card-title {
-  white-space: nowrap;
-  overflow: hidden;
-  text-overflow: ellipsis;
   padding-inline-end: var(--mod-card-title-padding-right, var(--spectrum-card-title-padding-right));
   font-family: var(--mod-card-title-font-family, var(--spectrum-card-title-font-family));
   font-size: var(--mod-card-title-font-size, var(--spectrum-card-title-font-size));
