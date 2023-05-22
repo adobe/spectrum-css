@@ -145,13 +145,14 @@ module.exports = {
   framework: {
     name: '@storybook/web-components-webpack5',
     options: {
+      fastRefresh: true,
       builder: { lazyCompilation: true },
     },
   },
   features: {
     postcss: false,
     /* Code splitting flag; load stories on-demand */
-    storyStoreV7: false,
+    storyStoreV7: true,
     /* Builds stories.json to help with on-demand loading */
     buildStoriesJson: true,
     /* Enables Storybook's modern inline rendering mode */
@@ -166,6 +167,7 @@ module.exports = {
   //   },
   // },
   docs: {
-    autodocs: true,
+    autodocs: true, // see below for alternatives
+    defaultName: 'Docs', // set to change the name of generated docs entries
   },
 }

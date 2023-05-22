@@ -175,7 +175,7 @@ export default {
     showNav: true,
     showPanel: true,
     panelPosition: 'bottom',
-    isToolShown: false,
+    showToolbar: false,
     isFullscreen: false,
     controls: {
       expanded: true,
@@ -196,12 +196,14 @@ export default {
       },
     },
     docs: {
-      inlineStories: true,
+      story : {
+        inline: true,
+        iframeHeight: '200px',
+      },
       source: {
         type: 'dynamic',
         language: 'html',
-      },
-      iframeHeight: '200px',
+      }
     },
     status: {
       statuses: {
@@ -211,7 +213,7 @@ export default {
           description: 'Migrated to the latest tokens.',
         },
       },
-    },
+    }
   },
 
   decorators: [

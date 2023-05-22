@@ -1,4 +1,4 @@
-import { useEffect } from '@storybook/client-api';
+import { useEffect } from '@storybook/preview-api';
 import { html } from 'lit-html';
 
 export { withContextWrapper } from './contextsWrapper.js';

@@ -100,12 +100,12 @@ export const Template = ({
     return new Array(Math.ceil(lastDateInMonth / DOW.length)).fill(0).map((_val, idx) =>
       new Array(DOW.length).fill(0).map((_v, i) => {
         const thisDay = idx * DOW.length + i + 1 - firstDOWInMonth;
+        const isOutsideMonth = displayedDate.getDate() < 1 || displayedDate.getDate() > lastDateInMonth;
         /* Determine if this entry exists within this month or the next or prev month */
         let thisMonth = !isOutsideMonth ? displayedMonth : displayedMonth + (thisDay < 1 ? -1 : 1);
         /* Determine if the displayed date is in this year or the previous one */
         let thisYear = displayedYear;
 
-        const isOutsideMonth = displayedDate.getDate() < 1 || displayedDate.getDate() > lastDateInMonth;
         if (isOutsideMonth) {
           if (thisMonth < 0) {
             thisMonth = 11;
