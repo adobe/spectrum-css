@@ -1,6 +1,6 @@
 {
   "name": "@spectrum-css/searchwithin",
-  "version": "4.0.8",
+  "version": "4.0.22",
   "description": "The Spectrum CSS searchwithin component",
   "license": "Apache-2.0",
   "author": "Adobe",
@@ -18,19 +18,19 @@
     "build": "gulp"
   },
   "peerDependencies": {
-    "@spectrum-css/clearbutton": "^1.0.0",
-    "@spectrum-css/icon": "^3.0.0",
-    "@spectrum-css/picker": ">=3.0.0",
-    "@spectrum-css/textfield": "^3.0.0 || ^4.0.0",
-    "@spectrum-css/vars": ">=9.0.0"
+    "@spectrum-css/clearbutton": ">=1",
+    "@spectrum-css/icon": ">=3",
+    "@spectrum-css/picker": ">=3",
+    "@spectrum-css/textfield": ">=5.0.0",
+    "@spectrum-css/vars": ">=9"
   },
   "devDependencies": {
-    "@spectrum-css/clearbutton": "^1.2.25",
-    "@spectrum-css/component-builder": "*",
-    "@spectrum-css/icon": "^3.0.38",
-    "@spectrum-css/picker": "^3.0.8",
-    "@spectrum-css/textfield": "^4.1.11",
-    "@spectrum-css/vars": "^9.0.2",
+    "@spectrum-css/clearbutton": "^1.2.30",
+    "@spectrum-css/component-builder": "^4.0.9",
+    "@spectrum-css/icon": "^3.0.43",
+    "@spectrum-css/picker": "^4.0.7",
+    "@spectrum-css/textfield": "^5.1.7",
+    "@spectrum-css/vars": "^9.0.5",
     "gulp": "^4.0.0"
   },
   "publishConfig": {

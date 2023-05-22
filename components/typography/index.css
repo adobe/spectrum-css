@@ -1,4 +1,4 @@
-/*
+/*!
 Copyright 2023 Adobe. All rights reserved.
 This file is licensed to you under the Apache License, Version 2.0 (the "License");
 you may not use this file except in compliance with the License. You may obtain a copy
@@ -193,7 +193,7 @@ governing permissions and limitations under the License.
       font-style: var(--mod-heading-cjk-heavy-strong-font-style, var(--spectrum-heading-cjk-heavy-strong-font-style));
       font-weight: var(--mod-heading-cjk-heavy-strong-font-weight, var(--spectrum-heading-cjk-heavy-strong-font-weight));
     }
-  
+
     .spectrum-Heading-strong.spectrum-Heading-emphasized,
     strong em,
     em strong {
@@ -226,7 +226,7 @@ governing permissions and limitations under the License.
     font-style: var(--mod-heading-sans-serif-light-strong-emphasized-font-style, var(--spectrum-heading-sans-serif-light-strong-emphasized-font-style));
     font-weight: var(--mod-heading-sans-serif-light-strong-emphasized-font-weight, var(--spectrum-heading-sans-serif-light-strong-emphasized-font-weight));
   }
-  
+
   &:lang(zh),
   &:lang(ja),
   &:lang(ko) {

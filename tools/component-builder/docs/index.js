@@ -1,4 +1,4 @@
-/*
+/*!
 Copyright 2023 Adobe. All rights reserved.
 This file is licensed to you under the Apache License, Version 2.0 (the "License");
 you may not use this file except in compliance with the License. You may obtain a copy
@@ -16,11 +16,10 @@ const pug = require('pug');
 const data = require('gulp-data');
 const rename = require('gulp-rename');
 const yaml = require('js-yaml');
-const merge = require('merge-stream');
 const through = require('through2');
 const ext = require('replace-ext');
 
-const sitePath = path.join(__dirname, '..', '..', '..', 'site');
+const sitePath = path.join(__dirname, '../../../site');
 const util = require(`${sitePath}/util`);
 
 async function readJSONFile(filepath) {
@@ -66,27 +65,17 @@ function buildDocs_html() {
 
     let dnaVars = readJSONFile(path.join(path.dirname(require.resolve('@spectrum-css/vars')), '..', 'dist', 'spectrum-metadata.json'));
 
-    gulp.src(
-      [
+    gulp.src([
         'metadata.yml',
         'metadata/*.yml'
-      ], {
-        allowEmpty: true
-      }
-    )
-      .pipe(rename(function(file) {
-        if (file.basename === 'docs' || file.basename === packageName) {
-          file.basename = 'index';
-        }
-      }))
-      .pipe(data(function() {
-        return {
-          dependencies: dependencies,
-          dnaVars: dnaVars,
-          pkg: package,
-          util: util
-        };
-      }))
+      ], { allowEmpty: true })
+      .pipe(rename((file) => { file.basename = packageName; }))
+      .pipe(data(() => ({
+        dependencies: dependencies,
+        dnaVars: dnaVars,
+        pkg: package,
+        util: util
+      })))
       .pipe(through.obj(function compilePug(file, enc, cb) {
           let data = Object.assign({}, { component: yaml.load(String(file.contents)) }, file.data || {});
 
@@ -102,44 +91,11 @@ function buildDocs_html() {
           cb(null, file);
         })
       )
-      .pipe(gulp.dest('dist/docs/'))
+      .pipe(gulp.dest(path.join(__dirname, '../../../dist/')))
       .on('end', resolve)
       .on('error', reject);
   });
 }
 
-function buildDocs_resources() {
-  return gulp.src(`${sitePath}/dist/**`)
-    .pipe(gulp.dest('dist/docs/'));
-}
-
-function buildDocs_copyDeps() {
-  return new Promise(async (resolve, reject) => {
-    let dependencies;
-    try {
-      dependencies = await getDependencies();
-    }
-    catch(err) {
-      return reject(err);
-    }
-
-    function copyDep(dep) {
-      return gulp.src(`node_modules/@spectrum-css/${dep}/dist/*`)
-        .pipe(gulp.dest(`dist/docs/dependencies/@spectrum-css/${dep}/`));
-    }
-
-    return merge.apply(merge, dependencies.map(copyDep))
-      .resume()
-      .on('end', resolve)
-      .on('error', reject);
-  });
-}
-
-let buildDocs = gulp.parallel(
-  buildDocs_resources,
-  buildDocs_copyDeps,
-  buildDocs_html
-);
-
-exports.buildDocs = buildDocs;
+exports.buildDocs = buildDocs_html;
 exports.buildDocs_html = gulp.series(buildDocs_html);

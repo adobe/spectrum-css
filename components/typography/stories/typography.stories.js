@@ -1,5 +1,7 @@
 import { Template } from "./template";
 
+import { html } from 'lit-html';
+
 export default {
   title: "Typography",
   description: "Spectrum Typography is broken out into several separate components.",
@@ -46,7 +48,7 @@ export default {
       },
       options: ["serif", "sans-serif"],
       control: "inline-radio",
-      if: { arg: "semantics", neq: "code" } 
+      if: { arg: "semantics", neq: "code" }
     },
     content: { table: { disable: true } },
   },
@@ -87,7 +89,12 @@ Default.args = {
   }],
 };
 
-export const Heading = Template.bind({});
+export const Heading = (args) => {
+  return html`${["xxs", "xs", "s", "m", "l", "xl", "xxl", "xxxl"].reverse().map(size => {
+    return Template({ ...args, content: [size, ' - ', ...args.content, html`<br>`], size });
+  })}`;
+};
+
 Heading.argTypes = {
   weight: {
     name: "Weight",
@@ -99,17 +106,23 @@ Heading.argTypes = {
     options: ["heavy", "light"],
     control: "inline-radio"
   },
+  size: { table: { disable: true } },
 };
 Heading.args = {
   semantics: "heading",
   content: ["Aliquet Mauris Eu"],
 };
 
-export const Body = Template.bind({});
+export const Body = (args) => {
+  return html`${["xs", "s", "m", "l", "xl", "xxl", "xxxl"].reverse().map(size => {
+    return Template({ ...args, content: [size, ' - ', ...args.content, html`<br>`], size });
+  })}`;
+};
 Body.argTypes = {
   size: {
     name: "Size",
     options: ["xs", "s", "m", "l", "xl", "xxl", "xxxl"],
+    table: { disable: true }
   },
 };
 Body.args = {
@@ -117,11 +130,16 @@ Body.args = {
   content: ["Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec eleifend est mollis ligula lobortis, tempus ultricies sapien lacinia. Nulla ut turpis velit. Sed finibus dapibus diam et sollicitudin. Phasellus in ipsum nec ante elementum congue eget in leo. Morbi eleifend justo non rutrum venenatis. Fusce cursus et lectus eu facilisis. Ut laoreet felis in magna dignissim feugiat."],
 };
 
-export const Detail = Template.bind({});
+export const Detail = (args) => {
+  return html`${["s", "m", "l", "xl"].reverse().map(size => {
+    return Template({ ...args, content: [size, ' - ', ...args.content, html`<br>`], size });
+  })}`;
+};
 Detail.argTypes = {
   size: {
     name: "Size",
     options: ["s", "m", "l", "xl"],
+    table: { disable: true },
   },
   weight: {
     name: "Weight",
@@ -139,11 +157,16 @@ Detail.args = {
   content: ["Aliquet Mauris Eu"],
 };
 
-export const Code = Template.bind({});
+export const Code = (args) => {
+  return html`${["xs", "s", "m", "l", "xl"].reverse().map(size => {
+    return Template({ ...args, content: [size, ' - ', ...args.content, html`<br>`], size });
+  })}`;
+};
 Code.argTypes = {
   size: {
     name: "Size",
     options: ["xs", "s", "m", "l", "xl"],
+    table: { disable: true },
   },
 };
 Code.args = {

@@ -5,25 +5,38 @@ import { ifDefined } from "lit-html/directives/if-defined.js";
 
 import { useArgs, useGlobals } from "@storybook/client-api";
 
+import { Template as FieldLabel } from "@spectrum-css/fieldlabel/stories/template.js";
+
+
 import "../index.css";
-import "../skin.css";
 
 export const Template = ({
   rootClass = "spectrum-Slider",
+  size,
   label,
   min = 0,
   max = 10,
   step = 2,
   values = [],
   variant,
-  fillColor,
+  fillColor = "rgb(213, 213, 213)",
   showTicks = false,
   isDisabled = false,
   isFocused = false,
   customClasses = [],
+  style = {},
   id,
-  // ...globals
+  ...globals
 }) => {
+  const { express } = globals;
+
+  try {
+    if (!express) import(/* webpackPrefetch: true */ "../themes/spectrum.css");
+    else import(/* webpackPrefetch: true */ "../themes/express.css");
+  } catch (e) {
+    console.warn(e);
+  }
+  
   const [_, updateArgs] = useArgs();
   const [{ textDirection }] = useGlobals();
 
@@ -82,7 +95,7 @@ export const Template = ({
         }))}>
         <input
           type="range"
-          id=${ifDefined(id ? `${id}-${idx + 1}` : undefined)}
+          id=${ifDefined(id ? `${id}-input-${idx + 1}` : undefined)}
           class="${rootClass}-input"
           value=${ifDefined(value)}
           step=${ifDefined(step)}
@@ -100,25 +113,37 @@ export const Template = ({
     <div
       class=${classMap({
         [rootClass]: true,
+        [`${rootClass}--size${size?.toUpperCase()}`]: typeof size !== "undefined",
         [`${rootClass}--ramp`]: variant === 'ramp',
         [`${rootClass}--range`]: values.length > 1,
         [`${rootClass}--filled`]: variant === "filled",
+        [`${rootClass}--tick`]: showTicks,
         'is-disabled': isDisabled,
         ...customClasses.reduce((a, c) => ({ ...a, [c]: true }), {}),
       })}
       id=${ifDefined(id)}
-      style=${ifDefined(styleMap({
+      style=${styleMap({
         maxWidth: `var(--spectrum-global-dimension-size-3000)`,
-        ['--spectrum-slider-m-track-fill-color']: fillColor,
-      }))}
+        ['--spectrum-slider-track-color']: fillColor,
+        ...style
+      })}
       role=${ifDefined(values.length > 1 ? "group" : undefined)}
       aria-labelledby=${ifDefined(label && id ? `${id}-label` : undefined)}>
 
       <!-- Label region -->
-      ${label ? html`<div class="${rootClass}-labelContainer" role=${ifDefined(values.length > 1 ? "presentation" : undefined)}>
-        <label class="${rootClass}-label" id=${ifDefined(id ? `${id}-label` : undefined)} for=${ifDefined(id ? `${id}-${i + 1}` : undefined)}>${label}</label>
+      ${label ? 
+        html`<div class="${rootClass}-labelContainer" role=${ifDefined(values.length > 1 ? "presentation" : undefined)}>
+        ${FieldLabel({
+          ...globals,
+          size,
+          label,
+          isDisabled,
+          id: id ? `${id}-label` : undefined,
+          forInput: id ? `${id}-1` : undefined,
+          customClasses: [`${rootClass}-label`]
+        })}
         ${values.length ? html`<div class="${rootClass}-value" role="textbox" aria-readonly="true" aria-labelledby=${ifDefined(id && label ? `${id}-label` : undefined)}>${values[0]}${values.length > 1 ? ` - ${values[1]}` : ''}</div>`: ''}
-      </div>`: ''}
+      </div>`:  ''}
 
       <!-- Slider controls -->
       <div class="${rootClass}-controls" role=${ifDefined(isRamp ? "presentation" : undefined)}>

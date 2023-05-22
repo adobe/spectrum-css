@@ -1,4 +1,4 @@
-/*
+/*!
 Copyright 2023 Adobe. All rights reserved.
 This file is licensed to you under the Apache License, Version 2.0 (the "License");
 you may not use this file except in compliance with the License. You may obtain a copy
@@ -56,13 +56,13 @@ if (typeof window.CustomEvent !== 'function') {
     let component = link.getAttribute('data-dependency');
 
     let links = [
-      createLink('../components/' + component + '/index.css', component),
-      createLink('../components/' + component + '/index-diff.css', component),
+      createLink('components/' + component + '/index.css', component),
+      createLink('components/' + component + '/index-diff.css', component),
     ];
 
     if (component !== 'icons') {
       links = links.concat(stops.map(function(stop) {
-        return createLink('../components/' + component + '/multiStops/' + stop + '.css', component);
+        return createLink('components/' + component + '/multiStops/' + stop + '.css', component);
       }));
     }
 

@@ -18,17 +18,17 @@
     "build": "gulp"
   },
   "peerDependencies": {
-    "@spectrum-css/clearbutton": "^1.0.0",
-    "@spectrum-css/icon": "^3.0.0",
-    "@spectrum-css/textfield": "^4.0.0",
-    "@spectrum-css/tokens": ">=8.0.0"
+    "@spectrum-css/clearbutton": ">=1",
+    "@spectrum-css/icon": ">=3",
+    "@spectrum-css/textfield": ">=5.1.7",
+    "@spectrum-css/tokens": ">=10.0.0"
   },
   "devDependencies": {
-    "@spectrum-css/clearbutton": "^1.2.25",
-    "@spectrum-css/component-builder-simple": "^2.0.5",
-    "@spectrum-css/icon": "^3.0.38",
-    "@spectrum-css/textfield": "^4.1.11",
-    "@spectrum-css/tokens": "^8.1.1",
+    "@spectrum-css/clearbutton": "^1.2.30",
+    "@spectrum-css/component-builder-simple": "^2.0.13",
+    "@spectrum-css/icon": "^3.0.43",
+    "@spectrum-css/textfield": "^5.1.7",
+    "@spectrum-css/tokens": "^10.0.0",
     "gulp": "^4.0.0"
   },
   "publishConfig": {

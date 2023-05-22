@@ -1,4 +1,4 @@
-/*
+/*!
 Copyright 2023 Adobe. All rights reserved.
 This file is licensed to you under the Apache License, Version 2.0 (the "License");
 you may not use this file except in compliance with the License. You may obtain a copy
@@ -25,7 +25,6 @@ const colors = require('colors');
 const lunr = require('lunr');
 
 const dirs = require('../lib/dirs');
-const exec = require('../lib/exec');
 const depUtils = require('../lib/depUtils');
 
 const npmFetch = require('npm-registry-fetch');
@@ -150,7 +149,7 @@ async function buildDocs_forDep(dep) {
         }
         cb(null, file);
       }))
-      .pipe(gulp.dest('dist/docs/'))
+      .pipe(gulp.dest('dist/'))
       .on('end', resolve)
       .on('error', reject);
   });
@@ -235,7 +234,7 @@ function buildSite_generateIndex() {
 
     return through.obj(readYML, endStream);
   }())
-  .pipe(gulp.dest('dist/docs/'));
+  .pipe(gulp.dest('dist/'));
 };
 
 function buildSite_getData() {
@@ -279,12 +278,12 @@ function buildSite_getData() {
 
 function buildSite_copyResources() {
   return gulp.src(`${dirs.site}/dist/**`)
-    .pipe(gulp.dest('dist/docs/'));
+    .pipe(gulp.dest('dist/'));
 }
 
 function buildSite_copyFreshResources() {
   return gulp.src(`${dirs.site}/resources/**`)
-    .pipe(gulp.dest('dist/docs/'));
+    .pipe(gulp.dest('dist/'));
 }
 
 function buildSite_html() {
@@ -299,12 +298,12 @@ function buildSite_html() {
     .pipe(pug({
       locals: templateData
     }))
-    .pipe(gulp.dest('dist/docs/'));
+    .pipe(gulp.dest('dist/'));
 }
 
 function copySiteWorkflowIcons() {
   return gulp.src(path.join(path.dirname(require.resolve('@adobe/spectrum-css-workflow-icons')), 'spectrum-icons.svg'))
-    .pipe(gulp.dest('dist/docs/img/'));
+    .pipe(gulp.dest('dist/img/'));
 }
 
 let buildSite_pages = gulp.series(

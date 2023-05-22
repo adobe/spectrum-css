@@ -145,14 +145,14 @@ html(lang='en-US' dir="ltr").spectrum.spectrum--light.spectrum--medium
                   a(href=`#${component.slug}`).spectrum-BigSubtleLink #{component.name}
 
               table.spectrum-CSSComponent-detailsTable
-                tr
+                tr.spectrum-Body
                   th.spectrum-Body--secondary Component status
                   td
                     div(class=`spectrum-StatusLight spectrum-StatusLight--sizeM spectrum-CSSComponent-status spectrum-StatusLight--${util.getStatusLightVariant(component.dnaStatus)}`)= status
-                tr
+                tr.spectrum-Body
                   th.spectrum-Body--secondary Last released
                   td= releaseDate
-                tr
+                tr.spectrum-Body
                   th.spectrum-Body--secondary Current version
                   td
                     bdo(dir="ltr") #{pkg.name}@#{pkg.version}

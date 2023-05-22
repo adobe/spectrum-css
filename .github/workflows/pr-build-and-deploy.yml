@@ -19,8 +19,8 @@ jobs:
           node-version: 16
       - name: Install dependencies
         run: yarn install
-      - name: Build everything
-        run: yarn build:all
+      - name: Build the site and deploy to Netlify
+        run: yarn prepare:site
       - name: Deploy to Netlify
         uses: nwtgck/actions-netlify@v2
         with:

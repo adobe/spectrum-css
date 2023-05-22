@@ -299,25 +299,31 @@ examples:
             <svg class="spectrum-Icon spectrum-UIIcon-ChevronRight100 spectrum-TreeView-itemIndicator" focusable="false" aria-hidden="true">
               <use xlink:href="#spectrum-css-icon-Chevron100" />
             </svg>
-            <div class="spectrum-Thumbnail spectrum-Thumbnail--sizeS spectrum-TreeView-itemThumbnail">
-              <img class="spectrum-Thumbnail-image" src="img/thumbnail.png" alt="Woman crouching">
-              <img class="spectrum-Thumbnail-image" src="img/flowers.png" alt="Flowers">
+            <div class="spectrum-Thumbnail spectrum-Thumbnail--size500 spectrum-TreeView-itemThumbnail">
+              <div class="spectrum-Thumbnail-image-wrapper">
+                <img class="spectrum-Thumbnail-image" src="img/thumbnail.png" alt="Woman crouching">
+                <img class="spectrum-Thumbnail-image" src="img/flowers.png" alt="Flowers">
+              </div>
             </div>
             <span class="spectrum-TreeView-itemLabel">Composition</span>
           </a>
           <ul class="spectrum-TreeView spectrum-TreeView--sizeM">
             <li class="spectrum-TreeView-item">
               <a class="spectrum-TreeView-itemLink" href="#">
-                <div class="spectrum-Thumbnail spectrum-Thumbnail--sizeS spectrum-TreeView-itemThumbnail">
-                  <img class="spectrum-Thumbnail-image" src="img/flowers.png" alt="Flowers">
+                <div class="spectrum-Thumbnail spectrum-Thumbnail--size500 spectrum-TreeView-itemThumbnail">
+                  <div class="spectrum-Thumbnail-image-wrapper">
+                    <img class="spectrum-Thumbnail-image" src="img/flowers.png" alt="Flowers">
+                  </div>
                 </div>
                 <span class="spectrum-TreeView-itemLabel">Flowers</span>
               </a>
             </li>
             <li class="spectrum-TreeView-item">
               <a class="spectrum-TreeView-itemLink" href="#">
-                <div class="spectrum-Thumbnail spectrum-Thumbnail--sizeS spectrum-TreeView-itemThumbnail">
-                  <img class="spectrum-Thumbnail-image" src="img/thumbnail.png" alt="Woman crouching">
+                <div class="spectrum-Thumbnail spectrum-Thumbnail--size500 spectrum-TreeView-itemThumbnail">
+                  <div class="spectrum-Thumbnail-image-wrapper">
+                    <img class="spectrum-Thumbnail-image" src="img/thumbnail.png" alt="Woman crouching">
+                  </div>
                 </div>
                 <span class="spectrum-TreeView-itemLabel">Figure</span>
               </a>
@@ -336,25 +342,31 @@ examples:
             <svg class="spectrum-Icon spectrum-UIIcon-ChevronRight100 spectrum-TreeView-itemIndicator" focusable="false" aria-hidden="true">
               <use xlink:href="#spectrum-css-icon-Chevron100" />
             </svg>
-            <div class="spectrum-Thumbnail spectrum-Thumbnail--sizeS spectrum-TreeView-itemThumbnail">
-              <img class="spectrum-Thumbnail-image" src="img/thumbnail.png" alt="Woman crouching">
-              <img class="spectrum-Thumbnail-image" src="img/flowers.png" alt="Flowers">
+            <div class="spectrum-Thumbnail spectrum-Thumbnail--size500 spectrum-TreeView-itemThumbnail">
+              <div class="spectrum-Thumbnail-image-wrapper">
+                <img class="spectrum-Thumbnail-image" src="img/thumbnail.png" alt="Woman crouching">
+                <img class="spectrum-Thumbnail-image" src="img/flowers.png" alt="Flowers">
+              </div>
             </div>
             <span class="spectrum-TreeView-itemLabel">Composition</span>
           </a>
           <ul class="spectrum-TreeView spectrum-TreeView--sizeM">
             <li class="spectrum-TreeView-item">
               <a class="spectrum-TreeView-itemLink" href="#">
-                <div class="spectrum-Thumbnail spectrum-Thumbnail--sizeS spectrum-TreeView-itemThumbnail">
-                  <img class="spectrum-Thumbnail-image" src="img/flowers.png" alt="Flowers">
+                <div class="spectrum-Thumbnail spectrum-Thumbnail--size500 spectrum-TreeView-itemThumbnail">
+                  <div class="spectrum-Thumbnail-image-wrapper">
+                    <img class="spectrum-Thumbnail-image" src="img/flowers.png" alt="Flowers">
+                  </div>
                 </div>
                 <span class="spectrum-TreeView-itemLabel">Flowers</span>
               </a>
             </li>
             <li class="spectrum-TreeView-item">
               <a class="spectrum-TreeView-itemLink" href="#">
-                <div class="spectrum-Thumbnail spectrum-Thumbnail--sizeS spectrum-TreeView-itemThumbnail">
-                  <img class="spectrum-Thumbnail-image" src="img/thumbnail.png" alt="Woman crouching">
+                <div class="spectrum-Thumbnail spectrum-Thumbnail--size500 spectrum-TreeView-itemThumbnail">
+                  <div class="spectrum-Thumbnail-image-wrapper">
+                    <img class="spectrum-Thumbnail-image" src="img/thumbnail.png" alt="Woman crouching">
+                  </div>
                 </div>
                 <span class="spectrum-TreeView-itemLabel">Figure</span>
               </a>

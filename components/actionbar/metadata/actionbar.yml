@@ -33,7 +33,7 @@ examples:
     markup: |
       <div class="spectrum-ActionBar is-open">
         <div class="spectrum-Popover spectrum-ActionBar-popover is-open">
-          <button class="spectrum-CloseButton spectrum-CloseButton--sizeM">
+          <button class="spectrum-CloseButton spectrum-CloseButton--sizeM" aria-label="Clear selection">
             <svg class="spectrum-CloseButton-UIIcon spectrum-Icon spectrum-UIIcon-Cross100" focusable="false" aria-hidden="true">
               <use xlink:href="#spectrum-css-icon-Cross100" />
             </svg>
@@ -58,7 +58,7 @@ examples:
 
       <div class="spectrum-ActionBar is-open">
         <div class="spectrum-Popover spectrum-ActionBar-popover is-open">
-          <button class="spectrum-CloseButton spectrum-CloseButton--sizeM">
+          <button class="spectrum-CloseButton spectrum-CloseButton--sizeM" aria-label="Clear selection">
             <svg class="spectrum-CloseButton-UIIcon spectrum-Icon spectrum-UIIcon-Cross100" focusable="false" aria-hidden="true">
               <use xlink:href="#spectrum-css-icon-Cross100" />
             </svg>
@@ -68,19 +68,19 @@ examples:
 
           <div class="spectrum-ActionGroup spectrum-ActionGroup--sizeM">
             <button class="spectrum-ActionButton spectrum-ActionButton--sizeM spectrum-ActionButton--quiet spectrum-ActionGroup-item">
-              <svg class="spectrum-Icon spectrum-Icon--sizeM spectrum-ActionButton-icon" focusable="false" aria-hidden="true" aria-label="Edit">
+              <svg class="spectrum-Icon spectrum-Icon--sizeM spectrum-ActionButton-icon" focusable="false" aria-label="Edit" aria-hidden="true">
                 <use xlink:href="#spectrum-icon-18-Edit"></use>
               </svg>
               <span class="spectrum-ActionButton-label">Edit</span>
             </button>
             <button class="spectrum-ActionButton spectrum-ActionButton--sizeM spectrum-ActionButton--quiet spectrum-ActionGroup-item">
-              <svg class="spectrum-Icon spectrum-Icon--sizeM spectrum-ActionButton-icon" focusable="false" aria-hidden="true" aria-label="Copy">
+              <svg class="spectrum-Icon spectrum-Icon--sizeM spectrum-ActionButton-icon" focusable="false" aria-label="Copy" aria-hidden="true">
                 <use xlink:href="#spectrum-icon-18-Copy"></use>
               </svg>
               <span class="spectrum-ActionButton-label">Copy</span>
             </button>
             <button class="spectrum-ActionButton spectrum-ActionButton--sizeM spectrum-ActionButton--quiet spectrum-ActionGroup-item">
-              <svg class="spectrum-Icon spectrum-Icon--sizeM spectrum-ActionButton-icon" focusable="false" aria-hidden="true" aria-label="Delete">
+              <svg class="spectrum-Icon spectrum-Icon--sizeM spectrum-ActionButton-icon" focusable="false" aria-label="Delete" aria-hidden="true">
                 <use xlink:href="#spectrum-icon-18-Delete"></use>
               </svg>
               <span class="spectrum-ActionButton-label">Delete</span>
@@ -92,7 +92,7 @@ examples:
 
       <div class="spectrum-ActionBar is-open">
         <div class="spectrum-Popover spectrum-ActionBar-popover is-open">
-          <button class="spectrum-CloseButton spectrum-CloseButton--sizeM">
+          <button class="spectrum-CloseButton spectrum-CloseButton--sizeM" aria-label="Clear selection">
             <svg class="spectrum-CloseButton-UIIcon spectrum-Icon spectrum-UIIcon-Cross100" focusable="false" aria-hidden="true">
               <use xlink:href="#spectrum-css-icon-Cross100" />
             </svg>
@@ -102,17 +102,17 @@ examples:
 
           <div class="spectrum-ActionGroup spectrum-ActionGroup--sizeM">
             <button class="spectrum-ActionButton spectrum-ActionButton--sizeM spectrum-ActionButton--quiet spectrum-ActionGroup-item">
-              <svg class="spectrum-Icon spectrum-Icon--sizeM spectrum-ActionButton-icon" focusable="false" aria-hidden="true" aria-label="Edit">
+              <svg class="spectrum-Icon spectrum-Icon--sizeM spectrum-ActionButton-icon" focusable="false" aria-label="Edit">
                 <use xlink:href="#spectrum-icon-18-Edit"></use>
               </svg>
             </button>
             <button class="spectrum-ActionButton spectrum-ActionButton--sizeM spectrum-ActionButton--quiet spectrum-ActionGroup-item">
-              <svg class="spectrum-Icon spectrum-Icon--sizeM spectrum-ActionButton-icon" focusable="false" aria-hidden="true" aria-label="Copy">
+              <svg class="spectrum-Icon spectrum-Icon--sizeM spectrum-ActionButton-icon" focusable="false" aria-label="Copy">
                 <use xlink:href="#spectrum-icon-18-Copy"></use>
               </svg>
             </button>
             <button class="spectrum-ActionButton spectrum-ActionButton--sizeM spectrum-ActionButton--quiet spectrum-ActionGroup-item">
-              <svg class="spectrum-Icon spectrum-Icon--sizeM spectrum-ActionButton-icon" focusable="false" aria-hidden="true" aria-label="Delete">
+              <svg class="spectrum-Icon spectrum-Icon--sizeM spectrum-ActionButton-icon" focusable="false" aria-label="Delete">
                 <use xlink:href="#spectrum-icon-18-Delete"></use>
               </svg>
             </button>
@@ -127,7 +127,7 @@ examples:
     markup: |
       <div class="spectrum-ActionBar spectrum-ActionBar--emphasized is-open">
         <div class="spectrum-Popover spectrum-ActionBar-popover is-open">
-          <button class="spectrum-CloseButton spectrum-CloseButton--sizeM spectrum-CloseButton--staticWhite">
+          <button class="spectrum-CloseButton spectrum-CloseButton--sizeM spectrum-CloseButton--staticWhite" aria-label="Clear selection">
             <svg class="spectrum-CloseButton-UIIcon spectrum-Icon spectrum-UIIcon-Cross100" focusable="false" aria-hidden="true">
               <use xlink:href="#spectrum-css-icon-Cross100" />
             </svg>
@@ -152,7 +152,7 @@ examples:
 
       <div class="spectrum-ActionBar spectrum-ActionBar--emphasized is-open">
         <div class="spectrum-Popover spectrum-ActionBar-popover is-open">
-          <button class="spectrum-CloseButton spectrum-CloseButton--sizeM spectrum-CloseButton--staticWhite">
+          <button class="spectrum-CloseButton spectrum-CloseButton--sizeM spectrum-CloseButton--staticWhite" aria-label="Clear selection">
             <svg class="spectrum-CloseButton-UIIcon spectrum-Icon spectrum-UIIcon-Cross100" focusable="false" aria-hidden="true">
               <use xlink:href="#spectrum-css-icon-Cross100" />
             </svg>
@@ -162,19 +162,19 @@ examples:
 
           <div class="spectrum-ActionGroup spectrum-ActionGroup--sizeM">
             <button class="spectrum-ActionButton spectrum-ActionButton--sizeM spectrum-ActionButton--quiet spectrum-ActionButton--staticWhite spectrum-ActionGroup-item">
-              <svg class="spectrum-Icon spectrum-Icon--sizeM spectrum-ActionButton-icon" focusable="false" aria-hidden="true" aria-label="Edit">
+              <svg class="spectrum-Icon spectrum-Icon--sizeM spectrum-ActionButton-icon" focusable="false" aria-label="Edit" aria-hidden="true">
                 <use xlink:href="#spectrum-icon-18-Edit"></use>
               </svg>
               <span class="spectrum-ActionButton-label">Edit</span>
             </button>
             <button class="spectrum-ActionButton spectrum-ActionButton--sizeM spectrum-ActionButton--quiet spectrum-ActionButton--staticWhite spectrum-ActionGroup-item">
-              <svg class="spectrum-Icon spectrum-Icon--sizeM spectrum-ActionButton-icon" focusable="false" aria-hidden="true" aria-label="Copy">
+              <svg class="spectrum-Icon spectrum-Icon--sizeM spectrum-ActionButton-icon" focusable="false" aria-label="Copy" aria-hidden="true">
                 <use xlink:href="#spectrum-icon-18-Copy"></use>
               </svg>
               <span class="spectrum-ActionButton-label">Copy</span>
             </button>
             <button class="spectrum-ActionButton spectrum-ActionButton--sizeM spectrum-ActionButton--quiet spectrum-ActionButton--staticWhite spectrum-ActionGroup-item">
-              <svg class="spectrum-Icon spectrum-Icon--sizeM spectrum-ActionButton-icon" focusable="false" aria-hidden="true" aria-label="Delete">
+              <svg class="spectrum-Icon spectrum-Icon--sizeM spectrum-ActionButton-icon" focusable="false" aria-label="Delete" aria-hidden="true">
                 <use xlink:href="#spectrum-icon-18-Delete"></use>
               </svg>
               <span class="spectrum-ActionButton-label">Delete</span>
@@ -186,7 +186,7 @@ examples:
 
       <div class="spectrum-ActionBar spectrum-ActionBar--emphasized is-open">
         <div class="spectrum-Popover spectrum-ActionBar-popover is-open">
-          <button class="spectrum-CloseButton spectrum-CloseButton--sizeM spectrum-CloseButton--staticWhite">
+          <button class="spectrum-CloseButton spectrum-CloseButton--sizeM spectrum-CloseButton--staticWhite" aria-label="Clear selection">
             <svg class="spectrum-CloseButton-UIIcon spectrum-Icon spectrum-UIIcon-Cross100" focusable="false" aria-hidden="true">
               <use xlink:href="#spectrum-css-icon-Cross100" />
             </svg>
@@ -196,17 +196,17 @@ examples:
 
           <div class="spectrum-ActionGroup spectrum-ActionGroup--sizeM">
             <button class="spectrum-ActionButton spectrum-ActionButton--sizeM spectrum-ActionButton--quiet spectrum-ActionButton--staticWhite spectrum-ActionGroup-item">
-              <svg class="spectrum-Icon spectrum-Icon--sizeM spectrum-ActionButton-icon" focusable="false" aria-hidden="true" aria-label="Edit">
+              <svg class="spectrum-Icon spectrum-Icon--sizeM spectrum-ActionButton-icon" focusable="false" aria-label="Edit">
                 <use xlink:href="#spectrum-icon-18-Edit"></use>
               </svg>
             </button>
             <button class="spectrum-ActionButton spectrum-ActionButton--sizeM spectrum-ActionButton--quiet spectrum-ActionButton--staticWhite spectrum-ActionGroup-item">
-              <svg class="spectrum-Icon spectrum-Icon--sizeM spectrum-ActionButton-icon" focusable="false" aria-hidden="true" aria-label="Copy">
+              <svg class="spectrum-Icon spectrum-Icon--sizeM spectrum-ActionButton-icon" focusable="false" aria-label="Copy">
                 <use xlink:href="#spectrum-icon-18-Copy"></use>
               </svg>
             </button>
             <button class="spectrum-ActionButton spectrum-ActionButton--sizeM spectrum-ActionButton--quiet spectrum-ActionButton--staticWhite spectrum-ActionGroup-item">
-              <svg class="spectrum-Icon spectrum-Icon--sizeM spectrum-ActionButton-icon" focusable="false" aria-hidden="true" aria-label="Delete">
+              <svg class="spectrum-Icon spectrum-Icon--sizeM spectrum-ActionButton-icon" focusable="false" aria-label="Delete">
                 <use xlink:href="#spectrum-icon-18-Delete"></use>
               </svg>
             </button>
@@ -221,7 +221,7 @@ examples:
     markup: |
       <div class="spectrum-ActionBar spectrum-ActionBar--flexible is-open">
         <div class="spectrum-Popover spectrum-ActionBar-popover is-open">
-          <button class="spectrum-CloseButton spectrum-CloseButton--sizeM">
+          <button class="spectrum-CloseButton spectrum-CloseButton--sizeM" aria-label="Clear selection">
             <svg class="spectrum-CloseButton-UIIcon spectrum-Icon spectrum-UIIcon-Cross100" focusable="false" aria-hidden="true">
               <use xlink:href="#spectrum-css-icon-Cross100" />
             </svg>
@@ -231,12 +231,12 @@ examples:
 
           <div class="spectrum-ActionGroup spectrum-ActionGroup--sizeM">
             <button class="spectrum-ActionButton spectrum-ActionButton--sizeM spectrum-ActionButton--quiet spectrum-ActionGroup-item">
-              <svg class="spectrum-Icon spectrum-Icon--sizeM spectrum-ActionButton-icon" focusable="false" aria-hidden="true" aria-label="Edit">
+              <svg class="spectrum-Icon spectrum-Icon--sizeM spectrum-ActionButton-icon" focusable="false" aria-label="Edit">
                 <use xlink:href="#spectrum-icon-18-Edit"></use>
               </svg>
             </button>
             <button class="spectrum-ActionButton spectrum-ActionButton--sizeM spectrum-ActionButton--quiet spectrum-ActionGroup-item">
-              <svg class="spectrum-Icon spectrum-Icon--sizeM spectrum-ActionButton-icon" focusable="false" aria-hidden="true" aria-label="More">
+              <svg class="spectrum-Icon spectrum-Icon--sizeM spectrum-ActionButton-icon" focusable="false" aria-label="More">
                 <use xlink:href="#spectrum-icon-18-More"></use>
               </svg>
             </button>
@@ -417,7 +417,7 @@ examples:
 
           <div class="spectrum-ActionBar spectrum-ActionBar--sticky is-open">
             <div class="spectrum-Popover spectrum-ActionBar-popover is-open">
-              <button class="spectrum-CloseButton spectrum-CloseButton--sizeM">
+              <button class="spectrum-CloseButton spectrum-CloseButton--sizeM" aria-label="Clear selection">
                 <svg class="spectrum-CloseButton-UIIcon spectrum-Icon spectrum-UIIcon-Cross100" focusable="false" aria-hidden="true">
                   <use xlink:href="#spectrum-css-icon-Cross100" />
                 </svg>
@@ -427,19 +427,19 @@ examples:
 
               <div class="spectrum-ActionGroup">
                 <button class="spectrum-ActionButton spectrum-ActionButton--sizeM spectrum-ActionButton--quiet spectrum-ActionGroup-item">
-                  <svg class="spectrum-Icon spectrum-Icon--sizeM spectrum-ActionButton-icon" focusable="false" aria-hidden="true" aria-label="Edit">
+                  <svg class="spectrum-Icon spectrum-Icon--sizeM spectrum-ActionButton-icon" focusable="false" aria-label="Edit" aria-hidden="true">
                     <use xlink:href="#spectrum-icon-18-Edit"></use>
                   </svg>
                   <span class="spectrum-ActionButton-label">Edit</span>
                 </button>
                 <button class="spectrum-ActionButton spectrum-ActionButton--sizeM spectrum-ActionButton--quiet spectrum-ActionGroup-item">
-                  <svg class="spectrum-Icon spectrum-Icon--sizeM spectrum-ActionButton-icon" focusable="false" aria-hidden="true" aria-label="Copy">
+                  <svg class="spectrum-Icon spectrum-Icon--sizeM spectrum-ActionButton-icon" focusable="false" aria-label="Copy" aria-hidden="true">
                     <use xlink:href="#spectrum-icon-18-Copy"></use>
                   </svg>
                   <span class="spectrum-ActionButton-label">Copy</span>
                 </button>
                 <button class="spectrum-ActionButton spectrum-ActionButton--sizeM spectrum-ActionButton--quiet spectrum-ActionGroup-item">
-                  <svg class="spectrum-Icon spectrum-Icon--sizeM spectrum-ActionButton-icon" focusable="false" aria-hidden="true" aria-label="Delete">
+                  <svg class="spectrum-Icon spectrum-Icon--sizeM spectrum-ActionButton-icon" focusable="false" aria-label="Delete" aria-hidden="true">
                     <use xlink:href="#spectrum-icon-18-Delete"></use>
                   </svg>
                   <span class="spectrum-ActionButton-label">Delete</span>

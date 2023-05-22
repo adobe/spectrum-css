@@ -1,4 +1,4 @@
-/*
+/*!
 Copyright 2023 Adobe. All rights reserved.
 This file is licensed to you under the Apache License, Version 2.0 (the "License");
 you may not use this file except in compliance with the License. You may obtain a copy
@@ -43,7 +43,6 @@ governing permissions and limitations under the License.
 
   /*** Button Icons - appears to adjust position ***/
   --spectrum-stepper-icon-nudge-start: 1px; /* placeholder - was var(--spectrum-global-dimension-size-10) - 1px */
-  --spectrum-stepper-icon-nudge-end: 2px; /* placeholder -was var(--spectrum-global-dimension-size-25) - 2px */
 
  /*** :AFTER - this is for the :after element labeled below as hit area, but used as focus indicator in ActionButton ***/
   --spectrum-stepper-button-offset: calc(var(--spectrum-stepper-button-width) / 2 - var(--spectrum-stepper-icon-width) / 2);
@@ -60,10 +59,9 @@ governing permissions and limitations under the License.
   --spectrum-stepper-border-radius: var(--spectrum-corner-radius-100);
 
   /*** Buttons ***/
-  --spectrum-stepper-button-width: var(--spectrum-component-height-75); /* this height token matches the previous WIDTH token */
-  --spectrum-stepper-button-padding: var(--spectrum-component-edge-to-visual-50); /* 6px md + 7px lg - previously 6px md + 7.5px lg */
+  --spectrum-stepper-button-width: calc(var(--spectrum-spacing-400) - var(--spectrum-stepper-border-width) * 2); /* this matches the previous WIDTH token */
+  --spectrum-stepper-button-padding: calc(var(--spectrum-spacing-200) / 2); /* 6px md + 7px lg - previously 6px md + 7.5px lg */
   --spectrum-stepper-button-gap: var(--spectrum-stepper-button-gap-reset);
-  --spectrum-stepper-button-border-radius: var(--spectrum-stepper-button-border-radius-reset);
 
   /* background same as textfield */
   --spectrum-stepper-background-color: var(--spectrum-gray-50);
@@ -100,7 +98,7 @@ governing permissions and limitations under the License.
     --highcontrast-stepper-border-color-hover: Highlight;
     --highcontrast-stepper-border-color-focus: Highlight;
     --highcontrast-stepper-border-color-focus-hover: Highlight;
-    --highcontrast-stepper-border-color-keyboard-focus: Highlight;
+    --highcontrast-stepper-border-color-keyboard-focus: CanvasText;
 
     --highcontrast-stepper-border-color-disabled: GrayText;
     --highcontrast-stepper-border-color-quiet-disabled: GrayText;
@@ -116,7 +114,7 @@ governing permissions and limitations under the License.
     --highcontrast-stepper-button-background-color-focus: Canvas;
     --highcontrast-stepper-button-background-color-keyboard-focus: Canvas;
 
-    --highcontrast-stepper-focus-indicator-color: CanvasText;
+    --highcontrast-stepper-focus-indicator-color: Highlight;
   }
 }
 .x {
@@ -133,31 +131,6 @@ governing permissions and limitations under the License.
   line-height: 0;
   border-radius: var(--mod-stepper-border-radius, var(--spectrum-stepper-border-radius)); /* --spectrum-global-dimension-size-75 = 6px 8px */
 
-  /*** Focus Indicator - Unfocused Base Styles ***/
-  &::after {
-    block-size: calc(100% + (var(--mod-stepper-focus-indicator-gap, var(--spectrum-stepper-focus-indicator-gap)) * 2));
-    inline-size: calc(100% + (var(--mod-stepper-focus-indicator-gap, var(--spectrum-stepper-focus-indicator-gap)) * 2));
-    position: absolute;
-    left: 0;
-    right: 0;
-    top: 0;
-    pointer-events: none;
-    content: '';
-    border-style: solid;
-    border-color: transparent;
-    border-width: 0;
-    border-radius: calc(var(--mod-stepper-border-radius, var(--spectrum-stepper-border-radius))
-                        + var(--mod-stepper-border-width, var(--spectrum-stepper-border-width))
-                        + var(--mod-stepper-focus-indicator-gap, var(--spectrum-stepper-focus-indicator-gap)));
-
-    margin-block-start: calc((var(--mod-stepper-focus-indicator-gap, var(--spectrum-stepper-focus-indicator-gap))
-                              + var(--mod-stepper-focus-indicator-width, var(--spectrum-stepper-focus-indicator-width)))
-                              * -1);
-    margin-inline-start: calc((var(--mod-stepper-focus-indicator-gap, var(--spectrum-stepper-focus-indicator-gap))
-                              + var(--mod-stepper-focus-indicator-width, var(--spectrum-stepper-focus-indicator-width)))
-                              * -1);
-  }
-
   /*** Hover ***/
   &:hover:not(.is-disabled):not(.is-invalid):not(.is-focused):not(.is-keyboardFocused) {
     .spectrum-Stepper-buttons,
@@ -171,6 +144,9 @@ governing permissions and limitations under the License.
 
   /*** Focused ***/
   &.is-focused {
+    .spectrum-Stepper-input {
+      outline: none;
+    }
     .spectrum-Stepper-input,
     .spectrum-Stepper-buttons,
     .spectrum-Stepper-stepUp,
@@ -210,11 +186,14 @@ governing permissions and limitations under the License.
   &:focus-visible {
 
     /* keyboard focus indicator is visible */
-    &::after {
-      border-color: var(--highcontrast-stepper-focus-indicator-color, var(--mod-stepper-focus-indicator-color, var(--spectrum-stepper-focus-indicator-color)));
-      border-width: var(--mod-stepper-focus-indicator-width, var(--spectrum-stepper-focus-indicator-width));
-    }
+    outline: var(--mod-stepper-focus-indicator-width, var(--spectrum-stepper-focus-indicator-width)) solid;
+    outline-color: var(--highcontrast-stepper-focus-indicator-color, var(--mod-stepper-focus-indicator-color, var(--spectrum-stepper-focus-indicator-color)));
+    outline-offset: var(--mod-stepper-focus-indicator-gap, var(--spectrum-stepper-focus-indicator-gap));
 
+    .spectrum-Stepper-input {
+      outline: none;
+    }
+    
     .spectrum-Stepper-input,
     .spectrum-Stepper-buttons,
     .spectrum-Stepper-stepUp,
@@ -316,6 +295,15 @@ governing permissions and limitations under the License.
     border-radius: 0;
     inline-size: var(--mod-stepper-quiet-width, var(--spectrum-stepper-quiet-width));
 
+    &::after {
+      content: '';
+      position: absolute;
+      bottom: calc(-1 * (var(--mod-stepper-focus-indicator-gap, var(--spectrum-stepper-focus-indicator-gap)) + var(--mod-stepper-focus-indicator-width, var(--spectrum-stepper-focus-indicator-width))));
+      left: 0;
+      inline-size: 100%;
+      block-size: var(--mod-stepper-focus-indicator-width, var(--spectrum-stepper-focus-indicator-width));
+    }
+
     .spectrum-Stepper-buttons {
       border-radius: 0;
       border-width: 0 0 var(--mod-stepper-border-width, var(--spectrum-stepper-border-width)) 0;
@@ -328,7 +316,9 @@ governing permissions and limitations under the License.
 
       border-block-start: none;
       border-inline-start: none;
+      border-inline-end: none;
       border-radius: 0;
+      border-width: 0;
 
       padding-inline-end: 0;
       justify-content: flex-end;
@@ -420,14 +410,11 @@ governing permissions and limitations under the License.
     /* quiet keyboard focused */
     &.is-keyboardFocused {
 
+      outline: none;
+
       /* quiet focus indicator only on bottom border */
       &::after {
-        border-width: 0 0 var(--mod-stepper-focus-indicator-width, var(--spectrum-stepper-focus-indicator-width)) 0;
-        border-radius: 0;
-        inline-size: 100%;
-        block-size: calc(100% + var(--mod-stepper-focus-indicator-gap, var(--spectrum-stepper-focus-indicator-gap)));
-        margin-inline-start: 0;
-        margin-block-start: 0;
+        background-color: var(--highcontrast-stepper-focus-indicator-color, var(--mod-stepper-focus-indicator-color, var(--spectrum-stepper-focus-indicator-color)));
       }
 
       .spectrum-Stepper-stepUp,
@@ -461,62 +448,58 @@ governing permissions and limitations under the License.
   display: flex;
   flex-direction: column;
   justify-content: center;
-  align-itmes: flex-end;
   /* allow express buttons to have a gap the size of the stepper border */
   row-gap: var(--mod-stepper-button-gap, var(--spectrum-stepper-button-gap));
-
   overflow: hidden;
+  box-sizing: border-box;
 
   block-size: var(--mod-stepper-buttons-height, var(--spectrum-stepper-buttons-height));
-
   inline-size: var(--mod-stepper-button-width, var(--spectrum-stepper-button-width));
-
-  box-sizing: border-box;
-  border-start-start-radius: 0;
-  border-start-end-radius: var(--mod-stepper-border-radius, var(--spectrum-stepper-border-radius));
-  border-end-end-radius: var(--mod-stepper-border-radius, var(--spectrum-stepper-border-radius));
-  border-end-start-radius: 0;
 
   border-style: solid;
   border-width: var(--mod-stepper-border-width, var(--spectrum-stepper-border-width))
                 var(--mod-stepper-border-width, var(--spectrum-stepper-border-width))
                 var(--mod-stepper-border-width, var(--spectrum-stepper-border-width))
-                var(--mod-stepper-border-size-reset, var(--spectrum-stepper-border-size-reset));
-
+                var(--spectrum-stepper-button-border-width-reset);
   border-color: var(--highcontrast-stepper-border-color, var(--mod-stepper-border-color, var(--spectrum-stepper-border-color)));
-  background-color: var(--highcontrast-stepper-background-color, var(--mod-stepper-background-color, var(--spectrum-stepper-background-color)));
 
+  border-start-start-radius: 0;
+  border-start-end-radius: var(--mod-stepper-border-radius, var(--spectrum-stepper-border-radius));
+  border-end-end-radius: var(--mod-stepper-border-radius, var(--spectrum-stepper-border-radius));
+  border-end-start-radius: 0;
+
+  background-color: var(--highcontrast-stepper-background-color, var(--mod-stepper-background-color, var(--spectrum-stepper-background-color)));
   transition: border-color var(--mod-stepper-animation-duration, var(--spectrum-stepper-animation-duration)) ease-in-out;
+
 }
 
 .spectrum-Stepper-stepUp,
 .spectrum-Stepper-stepDown {
   position: relative;
   display: flex;
-  flex-direction: row;
-  justify-content: center;
   box-sizing: border-box;
   block-size: calc((var(--mod-stepper-buttons-height, var(--spectrum-stepper-buttons-height)) / 2)
                   - (var(--mod-stepper-button-gap, var(--spectrum-stepper-button-gap)) * 2.5));
 
-  inline-size: calc(100% - var(--mod-stepper-button-gap, var(--spectrum-stepper-button-gap)));
+  inline-size: var(--mod-stepper-button-width, var(--spectrum-stepper-button-width));
 
   margin-inline-end: var(--mod-stepper-button-gap, var(--spectrum-stepper-button-gap));
 
   min-inline-size: 0;
 
-  padding-inline: var(--mod-stepper-button-padding, var(--spectrum-stepper-button-padding));
+  padding-inline-start: var(--mod-stepper-button-padding, var(--spectrum-stepper-button-padding));
+  padding-inline-end: var(--mod-stepper-button-padding, var(--spectrum-stepper-button-padding));
 
   /* Avoid margin added by adjacent buttons */
   margin: 0;
 
-  border-color: var(--highcontrast-stepper-border-color, var(--mod-stepper-border-color, var(--spectrum-stepper-border-color)));
   border-width: 0;
-
   background-color: var(--highcontrast-stepper-button-background-color-default, var(--mod-stepper-button-background-color-default, var(--spectrum-stepper-button-background-color-default)));
 
   .spectrum-Icon {
     opacity: 1;
+    margin: 0px;
+    margin-inline-start: var(--spectrum-stepper-button-icon-nudge);
   }
 
   /*** Action Buttons Hover ***/
@@ -533,38 +516,43 @@ governing permissions and limitations under the License.
 
 .spectrum-Stepper-stepUp {
   padding-block-start: var(--mod-stepper-icon-nudge-start, var(--spectrum-stepper-icon-nudge-start));
+  padding-block-end: 0;
 
-  border-start-start-radius: var(--mod-stepper-button-border-radius, var(--spectrum-stepper-button-border-radius));
-  border-start-end-radius: var(--mod-stepper-button-border-radius, var(--spectrum-stepper-button-border-radius));
+ 
+  border-radius: var(--spectrum-stepper-button-border-radius-reset);
   border-end-start-radius: 0;
   border-end-end-radius: 0;
 }
 
 .spectrum-Stepper-stepDown {
-  border-block-start-width: var(--mod-stepper-button-middle-border-width, var(--spectrum-stepper-button-middle-border-width));
-  padding-block-end: var(--mod-stepper-icon-nudge-end, var(--spectrum-stepper-icon-nudge-end));
+  border-block-start-width: 0;
+  padding-block-start: 0;
 
+  border-radius: var(--spectrum-stepper-button-border-radius-reset);
   border-start-start-radius: 0;
   border-start-end-radius: 0;
-  border-end-start-radius: var(--mod-stepper-button-border-radius, var(--spectrum-stepper-button-border-radius));
-  border-end-end-radius: var(--mod-stepper-button-border-radius, var(--spectrum-stepper-button-border-radius));
+  border-block-start-width: var(--spectrum-stepper-button-border-width-reset);
+  border-block-start-color: var(--highcontrast-stepper-border-color, var(--mod-stepper-border-color, var(--spectrum-stepper-border-color)));
+ 
 }
 
 .spectrum-Stepper-textfield {
   flex: 1;
   inline-size: auto;
   min-inline-size: 0;
-
-  /* remove textfield focus indicator so we don't have two of them */
-  &::after {
-    display: none;
-  }
 }
 
-/* Only remove input border if stepper is visible */
-.spectrum-Stepper:not(.hide-stepper) .spectrum-Stepper-input {
+.spectrum-Stepper-input {
   min-inline-size: 0;
   border-start-end-radius: 0;
   border-end-end-radius: 0;
   border-inline-end-width: 0;
+}
+
+
+/* Only remove input border if stepper is visible */
+.spectrum-Stepper.hide-stepper .spectrum-Stepper-input {
+  border-start-end-radius: var(--mod-stepper-border-radius, var(--spectrum-stepper-border-radius));
+  border-end-end-radius: var(--mod-stepper-border-radius, var(--spectrum-stepper-border-radius));
+  border-inline-end-width: var(--mod-stepper-border-width, var(--spectrum-stepper-border-width));
 }

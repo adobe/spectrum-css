@@ -1,6 +1,6 @@
 {
   "name": "@spectrum-css/slider",
-  "version": "3.1.20",
+  "version": "4.0.1",
   "description": "The Spectrum CSS slider component",
   "license": "Apache-2.0",
   "author": "Adobe",
@@ -18,11 +18,13 @@
     "build": "gulp"
   },
   "peerDependencies": {
-    "@spectrum-css/vars": ">=9.0.0"
+    "@spectrum-css/stepper": ">=4",
+    "@spectrum-css/tokens": ">=9 <=10"
   },
   "devDependencies": {
-    "@spectrum-css/component-builder": "*",
-    "@spectrum-css/vars": "^9.0.2",
+    "@spectrum-css/component-builder-simple": "^2.0.11",
+    "@spectrum-css/stepper": "^4.0.29",
+    "@spectrum-css/tokens": "^10.0.0",
     "gulp": "^4.0.0"
   },
   "publishConfig": {

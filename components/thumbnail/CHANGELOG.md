@@ -3,6 +3,111 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+<a name="3.0.5"></a>
+## 3.0.5
+🗓 2023-05-18 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/thumbnail@3.0.4...@spectrum-css/thumbnail@3.0.5)
+
+**Note:** Version bump only for package @spectrum-css/thumbnail
+
+
+
+
+
+<a name="3.0.4"></a>
+## 3.0.4
+🗓 2023-05-17 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/thumbnail@3.0.3...@spectrum-css/thumbnail@3.0.4)
+
+**Note:** Version bump only for package @spectrum-css/thumbnail
+
+
+
+
+
+<a name="3.0.3"></a>
+## 3.0.3
+🗓 2023-05-11 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/thumbnail@3.0.2...@spectrum-css/thumbnail@3.0.3)
+
+**Note:** Version bump only for package @spectrum-css/thumbnail
+
+
+
+
+
+<a name="3.0.2"></a>
+## 3.0.2
+🗓 2023-05-10 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/thumbnail@3.0.1...@spectrum-css/thumbnail@3.0.2)
+
+**Note:** Version bump only for package @spectrum-css/thumbnail
+
+
+
+
+
+<a name="3.0.1"></a>
+## 3.0.1
+🗓 2023-05-10 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/thumbnail@3.0.0...@spectrum-css/thumbnail@3.0.1)
+
+**Note:** Version bump only for package @spectrum-css/thumbnail
+
+
+
+
+
+<a name="3.0.0"></a>
+# 3.0.0
+🗓 2023-05-09 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/thumbnail@2.0.34...@spectrum-css/thumbnail@3.0.0)
+
+* feat(thumbnail)!: migrate to spectrum-tokens (#1568) ([9d4ec09](https://github.com/adobe/spectrum-css/commit/9d4ec09)), closes [#1568](https://github.com/adobe/spectrum-css/issues/1568)
+
+
+### 🛑 BREAKING CHANGES
+
+* migrates the Thumbnail component to the `@adobe/spectrum-tokens` package.
+
+
+
+
+
+<a name="2.0.34"></a>
+## 2.0.34
+🗓 2023-05-02 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/thumbnail@2.0.33...@spectrum-css/thumbnail@2.0.34)
+
+**Note:** Version bump only for package @spectrum-css/thumbnail
+
+
+
+
+
+<a name="2.0.33"></a>
+## 2.0.33
+🗓 2023-04-26 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/thumbnail@2.0.32...@spectrum-css/thumbnail@2.0.33)
+
+**Note:** Version bump only for package @spectrum-css/thumbnail
+
+
+
+
+
+<a name="2.0.32"></a>
+## 2.0.32
+🗓 2023-04-25 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/thumbnail@2.0.30...@spectrum-css/thumbnail@2.0.32)
+
+**Note:** Version bump only for package @spectrum-css/thumbnail
+
+
+
+
+
+<a name="2.0.31"></a>
+## 2.0.31
+🗓 2023-04-25 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/thumbnail@2.0.30...@spectrum-css/thumbnail@2.0.31)
+
+**Note:** Version bump only for package @spectrum-css/thumbnail
+
+
+
+
+
 <a name="2.0.30"></a>
 ## 2.0.30
 🗓 2023-04-17 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/thumbnail@2.0.28...@spectrum-css/thumbnail@2.0.30)

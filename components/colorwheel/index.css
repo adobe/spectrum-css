@@ -1,4 +1,4 @@
-/*
+/*!
 Copyright 2023 Adobe. All rights reserved.
 This file is licensed to you under the Apache License, Version 2.0 (the "License");
 you may not use this file except in compliance with the License. You may obtain a copy
@@ -118,12 +118,6 @@ governing permissions and limitations under the License.
   &.is-disabled {
     background-color: var(--highcontrast-colorwheel-border-color-disabled, var(--mod-colorwheel-fill-color-disabled, var(--spectrum-colorwheel-fill-color-disabled)));
   }
-}
-
-/* hack: make sure we don't complain about these variables being unused*/
-.🤫 {
-  width: var(--track-width);
-  border-width: var(--border-width);
 }
 
 .spectrum-ColorWheel-wheel {

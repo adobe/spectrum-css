@@ -3,6 +3,92 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+<a name="10.0.0"></a>
+# 10.0.0
+🗓 2023-05-10 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/tokens@9.3.0...@spectrum-css/tokens@10.0.0)
+
+* chore(colorhandle, colorloupe, tokens)!: remove custom tokens  (#1826) ([c41af3a](https://github.com/adobe/spectrum-css/commit/c41af3a)), closes [#1826](https://github.com/adobe/spectrum-css/issues/1826)
+
+
+### 🛑 BREAKING CHANGES
+
+* removes several Color-component related tokens from `@spectrum-css/tokens`
+
+* chore(colorhandle): remove custom tokens
+* chore(colorhandle): remove use of custom tokens
+* chore(colorloupe): update tokens for colorloupe
+* chore(colorhandle, colorloupe): remove comments
+
+
+
+
+
+<a name="9.3.0"></a>
+# 9.3.0
+🗓 2023-05-08 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/tokens@9.2.0...@spectrum-css/tokens@9.3.0)
+
+### ✨ Features
+
+* **tokens:** use v12.8.0 of @adobe/spectrum-tokens ([#1843](https://github.com/adobe/spectrum-css/issues/1843)) ([19abf2f](https://github.com/adobe/spectrum-css/commit/19abf2f))
+
+
+
+
+
+<a name="9.2.0"></a>
+# 9.2.0
+🗓 2023-05-04 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/tokens@9.1.0...@spectrum-css/tokens@9.2.0)
+
+### ✨ Features
+
+* **tokens:** update to latest release ([c775889](https://github.com/adobe/spectrum-css/commit/c775889))
+
+
+
+
+
+<a name="9.1.0"></a>
+# 9.1.0
+🗓 2023-05-02 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/tokens@9.0.4...@spectrum-css/tokens@9.1.0)
+
+### ✨ Features
+
+* **tokens:** add custom drop zone rgb background color tokens ([#1834](https://github.com/adobe/spectrum-css/issues/1834)) ([b637006](https://github.com/adobe/spectrum-css/commit/b637006))
+
+
+
+
+
+<a name="9.0.4"></a>
+## 9.0.4
+🗓 2023-04-26 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/tokens@9.0.3...@spectrum-css/tokens@9.0.4)
+
+**Note:** Version bump only for package @spectrum-css/tokens
+
+
+
+
+
+<a name="9.0.3"></a>
+## 9.0.3
+🗓 2023-04-25 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/tokens@9.0.1...@spectrum-css/tokens@9.0.3)
+
+**Note:** Version bump only for package @spectrum-css/tokens
+
+
+
+
+
+<a name="9.0.2"></a>
+## 9.0.2
+🗓 2023-04-25 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/tokens@9.0.1...@spectrum-css/tokens@9.0.2)
+
+**Note:** Version bump only for package @spectrum-css/tokens
+
+
+
+
+
 <a name="9.0.1"></a>
 ## 9.0.1
 🗓 2023-04-25 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/tokens@9.0.0...@spectrum-css/tokens@9.0.1)

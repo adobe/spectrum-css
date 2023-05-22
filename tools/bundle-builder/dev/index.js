@@ -1,4 +1,4 @@
-/*
+/*!
 Copyright 2023 Adobe. All rights reserved.
 This file is licensed to you under the Apache License, Version 2.0 (the "License");
 you may not use this file except in compliance with the License. You may obtain a copy
@@ -35,7 +35,7 @@ function serve() {
   }
 
   browserSync({
-    startPath: 'docs/index.html',
+    startPath: 'index.html',
     server: `${process.cwd()}/dist/`,
     notify: process.env.BROWSERSYNC_NOTIFY === 'true' ? true : false,
     open: process.env.BROWSERSYNC_OPEN === 'true' ? true : false,
@@ -160,8 +160,8 @@ function watchSite() {
       docs.buildSite_copyFreshResources,
       function injectSiteResources() {
         return gulp.src([
-          'dist/docs/css/**/*.css',
-          'dist/docs/js/**/*.js'
+          'dist/css/**/*.css',
+          'dist/js/**/*.js'
         ])
           .pipe(browserSync.stream());
       }

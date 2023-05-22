@@ -28,7 +28,7 @@ export default {
 export const Default = Template.bind({});
 Default.args = {
   items: [{
-    image: "/example-ava.png",
+    image: "example-ava.png",
     label: "Shantanu.jpg",
     isSelectable: true,
   }, {

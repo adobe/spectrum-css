@@ -1,4 +1,4 @@
-/*
+/*!
 Copyright 2023 Adobe. All rights reserved.
 This file is licensed to you under the Apache License, Version 2.0 (the "License");
 you may not use this file except in compliance with the License. You may obtain a copy
@@ -17,9 +17,10 @@ governing permissions and limitations under the License.
   --spectrum-contextual-help-link-spacing: var(--spectrum-spacing-300);
 
   /* Typography Variables */
-  /* TODO: these need to be changed to the contextual-help tokens when available */
-  --spectrum-contextual-help-title-size: var(--spectrum-heading-size-xs);
-  --spectrum-contextual-help-body-size: var(--spectrum-body-size-s);
+  --spectrum-contextual-help-heading-size: var(--spectrum-contextual-help-title-size);
+  --spectrum-contextual-help-body-size: var(--spectrum-contextual-help-body-size);
+  --spectrum-contextual-help-heading-color: var(--spectrum-heading-color);
+  --spectrum-contextual-help-body-color: var(--spectrum-body-color);
 
   /* Mobile styling */
   .spectrum--large & {
@@ -33,13 +34,14 @@ governing permissions and limitations under the License.
 }
 
 .spectrum-ContextualHelp-button {
-  display: block;
+  display: flex;
 }
 
 .spectrum-ContextualHelp-popover {
   padding-block: var(--mod-spectrum-contextual-help-padding, var(--spectrum-contextual-help-padding));
   padding-inline: var(--mod-spectrum-contextual-help-padding, var(--spectrum-contextual-help-padding));
   font-size: var(--mod-spectrum-contextual-help-body-size, var(--spectrum-contextual-help-body-size));
+  color: var(--highcontrast-contextual-help-body-color, var(--mod-contextual-help-body-color, var(--spectrum-contextual-help-body-color)));
 
 
   .spectrum-ContextualHelp-heading, .spectrum-ContextualHelp-body {
@@ -48,7 +50,8 @@ governing permissions and limitations under the License.
 
   .spectrum-ContextualHelp-heading {
     margin-block-end: var(--mod-spectrum-contextual-help-content-spacing, var(--spectrum-contextual-help-content-spacing));
-    font-size: var(--mod-spectrum-contextual-help-title-size, var(--spectrum-contextual-help-title-size));
+    font-size: var(--mod-spectrum-contextual-help-heading-size, var(--spectrum-contextual-help-heading-size));
+    color: var(--highcontrast-contextual-help-heading-color, var(--mod-contextual-help-heading-color, var(--spectrum-contextual-help-heading-color)));
   }
 }
 
@@ -56,4 +59,9 @@ governing permissions and limitations under the License.
   margin-block-start: var(--mod-spectrum-contextual-help-link-spacing, var(--spectrum-contextual-help-link-spacing));
 }
 
-
+@media (forced-colors: active) {
+  .spectrum-ContextualHelp {
+    --highcontrast-contextual-help-heading-color: CanvasText;
+    --highcontrast-contextual-help-body-color: CanvasText;
+  }
+}

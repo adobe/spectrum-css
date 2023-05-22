@@ -1,4 +1,4 @@
-/*
+/*!
 Copyright 2023 Adobe. All rights reserved.
 This file is licensed to you under the Apache License, Version 2.0 (the "License");
 you may not use this file except in compliance with the License. You may obtain a copy
@@ -11,32 +11,18 @@ governing permissions and limitations under the License.
 */
 
 const gulp = require('gulp');
-const del = require('del');
 const concat = require('gulp-concat');
 const rename = require('gulp-rename');
 
 const depUtils = require('./lib/depUtils');
-const exec = require('./lib/exec');
 const dirs = require('./lib/dirs');
 
 const docs = require('./docs');
 const dev = require('./dev');
 const subrunner = require('./subrunner');
-const release = require('./release');
 const vars = require('./vars');
 
-async function clean() {
-  let globs = ['dist/*', '!dist/preview'];
-
-  // Don't delete the dist folder inside of installed packages
-  if (process.cwd() === dirs.topLevel) {
-    globs.push(`${dirs.components}/!(tokens|*vars)/dist/*`);
-  }
-
-  return del(globs);
-}
-
-const buildDocs = gulp.parallel(docs.build, copyPackages);
+var dependencyOrder = null;
 
 // Combined
 function concatPackageFiles(taskName, input, output, directory) {
@@ -67,9 +53,9 @@ function concatPackageFiles(taskName, input, output, directory) {
   return func;
 }
 
-var dependencyOrder = null;
 async function getDependencyOrder(done) {
   dependencyOrder = await depUtils.getFolderDependencyOrder(dirs.components);
+  done();
 }
 
 let buildCombined = gulp.series(
@@ -130,6 +116,8 @@ function copyPackages() {
     .pipe(gulp.dest('dist/components/'));
 }
 
+const buildDocs = gulp.parallel(docs.build, copyPackages);
+
 function buildIfTopLevel() {
   let builtTasks = gulp.parallel(
     buildCombined,
@@ -150,13 +138,11 @@ function buildIfTopLevel() {
 }
 
 let build = gulp.series(
-  clean,
   buildIfTopLevel(),
   vars.copyVars
 );
 
 let buildLite = gulp.series(
-  clean,
   function buildComponentsLite() {
     return subrunner.runTaskOnAllComponents('buildLite');
   },
@@ -164,7 +150,6 @@ let buildLite = gulp.series(
 );
 
 let buildMedium = gulp.series(
-  clean,
   function buildComponentsLite() {
     return subrunner.runTaskOnAllComponents('buildMedium');
   },
@@ -172,7 +157,6 @@ let buildMedium = gulp.series(
 );
 
 let buildHeavy = gulp.series(
-  clean,
   function buildComponentsLite() {
     return subrunner.runTaskOnAllComponents('buildHeavy');
   },
@@ -189,7 +173,6 @@ if (process.cwd() === dirs.topLevel) {
 } else {
   // Otherwise, just start watching
   devTask = gulp.series(
-    clean,
     buildDocs,
     dev.watch
   );
@@ -202,39 +185,16 @@ exports.devHeavy = gulp.series(
 
 exports.copyVars = vars.copyVars;
 
-exports.prePack = gulp.series(
-  build,
-  release.releaseBackwardsCompat
-);
-
-exports.release = gulp.series(
-  release.updateAndTagRelease,
-  exec.task('yarnInstall', 'yarn install --frozen-lockfile'),
-  build,
-  exec.task('npmPublish', 'npm publish'),
-  exec.task('gitPush', 'git push')
-);
-
-exports.generateChangelog = release.generateChangelog;
 exports.buildUniqueVars = vars.buildUnique;
-
-exports.ghPages = release.ghPages;
-exports.postPublish = release.releaseBackwardsCompatCleanup;
 
 exports.buildComponents = subrunner.buildComponents;
 exports.buildCombined = buildCombined;
 exports.buildStandalone = buildStandalone;
 exports.buildLite = buildLite;
-exports.buildDocs = gulp.series(
-  buildDocs,
-  docs.buildDocs
-);
+exports.buildDocs = buildDocs;
 exports.buildDepenenciesOfCommons = buildDepenenciesOfCommons;
 exports.copyPackages = copyPackages;
 exports.dev = devTask;
-exports.clean = clean;
 exports.build = build;
 exports.watch = dev.watch;
 exports.default = buildMedium;
-
-exports.updateAndTagRelease = release.updateAndTagRelease;

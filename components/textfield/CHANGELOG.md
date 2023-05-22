@@ -3,6 +3,187 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+<a name="5.1.7"></a>
+## 5.1.7
+🗓 2023-05-18 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/textfield@5.1.6...@spectrum-css/textfield@5.1.7)
+
+### 🐛 Bug fixes
+
+* **textfield, stepper:** button padding and focus indicator ([#1863](https://github.com/adobe/spectrum-css/issues/1863)) ([7963b85](https://github.com/adobe/spectrum-css/commit/7963b85))
+
+
+
+
+
+<a name="5.1.6"></a>
+## 5.1.6
+🗓 2023-05-18 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/textfield@5.1.5...@spectrum-css/textfield@5.1.6)
+
+**Note:** Version bump only for package @spectrum-css/textfield
+
+
+
+
+
+<a name="5.1.5"></a>
+## 5.1.5
+🗓 2023-05-17 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/textfield@5.1.4...@spectrum-css/textfield@5.1.5)
+
+**Note:** Version bump only for package @spectrum-css/textfield
+
+
+
+
+
+<a name="5.1.4"></a>
+## 5.1.4
+🗓 2023-05-11 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/textfield@5.1.3...@spectrum-css/textfield@5.1.4)
+
+**Note:** Version bump only for package @spectrum-css/textfield
+
+
+
+
+
+<a name="5.1.3"></a>
+## 5.1.3
+🗓 2023-05-10 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/textfield@5.1.2...@spectrum-css/textfield@5.1.3)
+
+**Note:** Version bump only for package @spectrum-css/textfield
+
+
+
+
+
+<a name="5.1.2"></a>
+## 5.1.2
+🗓 2023-05-10 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/textfield@5.1.1...@spectrum-css/textfield@5.1.2)
+
+### 🐛 Bug fixes
+
+* **stepper:** fix stepper button padding and borders ([#1856](https://github.com/adobe/spectrum-css/issues/1856)) ([55f2b08](https://github.com/adobe/spectrum-css/commit/55f2b08))
+
+
+
+
+
+<a name="5.1.1"></a>
+## 5.1.1
+🗓 2023-05-08 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/textfield@5.1.0...@spectrum-css/textfield@5.1.1)
+
+**Note:** Version bump only for package @spectrum-css/textfield
+
+
+
+
+
+<a name="5.1.0"></a>
+# 5.1.0
+🗓 2023-05-04 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/textfield@5.0.0...@spectrum-css/textfield@5.1.0)
+
+### ✨ Features
+
+* **floatingactionbutton:** add new component ([#1793](https://github.com/adobe/spectrum-css/issues/1793)) ([174f438](https://github.com/adobe/spectrum-css/commit/174f438))
+
+
+
+
+
+<a name="5.0.0"></a>
+# 5.0.0
+🗓 2023-05-02 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/textfield@4.1.15...@spectrum-css/textfield@5.0.0)
+
+* fix(textfield, combobox)!: adjust padding calculations (#1803) ([09c1bdc](https://github.com/adobe/spectrum-css/commit/09c1bdc)), closes [#1803](https://github.com/adobe/spectrum-css/issues/1803)
+
+
+### 🛑 BREAKING CHANGES
+
+* removes `--mod-combobox-icon-size`, `--mod-combobox-spacing-block-start-to-border`, `--mod-combobox-spacing-inline-start-to-textfield`, `--mod-combobox-spacing-block-start-edge-to-textfield`, `--mod-combobox-spacing-block-end-edge-to-textfield`, and `--mod-combobox-spacing-inline-start-edge-to-textfield`.
+
+Additionally:
+* fix: exclude border width from padding with text inputs + more fixes
+
+- Textfield and Combobox: exclude border width from padding calculations
+  because most of the to-edge tokens include the border, and the values
+  were 1px larger than they should have been.
+- Textfield and Combobox: fix corner radius of focus indicator when
+  using a larger border radius (e.g. try setting a --mod border width
+  of 5px; the calculation adding the border width was incorrect)
+- Combobox: adjust styles so custom property for border width is
+  correctly overriding everything from its sub-components. Previously
+  using --mod-combobox-border-width had no effect.
+- Combobox: simplify/remove some custom properties related to those
+  fixes and quiet variant.
+
+* fix(combobox): border-radius should not increase for t-shirt sizes
+
+Per design feedback, the border-radius value should not be increasing
+for these t-shirt sizes.
+
+* fix(combobox): calculate the button x-offset on quiet
+
+Use a corrected calculation of the x-offset for the picker button on the
+quiet variant. Based on design feedback for the component: "The point is
+to line up the chevron icon with the end of the component so those
+elements are flushed".
+
+* fix(combobox): mods update after changes
+
+Regenerate mods after fixes that have removed and renamed some
+properties.
+
+* feat(textfield): add 'size' control to storybook
+
+Add "t-shirt" size control to Textfield stories. The arg was already
+there, but it was missing a control for testing.
+
+
+
+
+
+<a name="4.1.15"></a>
+## 4.1.15
+🗓 2023-04-26 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/textfield@4.1.14...@spectrum-css/textfield@4.1.15)
+
+**Note:** Version bump only for package @spectrum-css/textfield
+
+
+
+
+
+<a name="4.1.14"></a>
+## 4.1.14
+🗓 2023-04-25 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/textfield@4.1.12...@spectrum-css/textfield@4.1.14)
+
+**Note:** Version bump only for package @spectrum-css/textfield
+
+
+
+
+
+<a name="4.1.13"></a>
+## 4.1.13
+🗓 2023-04-25 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/textfield@4.1.12...@spectrum-css/textfield@4.1.13)
+
+**Note:** Version bump only for package @spectrum-css/textfield
+
+
+
+
+
+<a name="4.1.12"></a>
+## 4.1.12
+🗓 2023-04-25 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/textfield@4.1.11...@spectrum-css/textfield@4.1.12)
+
+### 🐛 Bug fixes
+
+* **textfield:** fix WHCM focus color ([3b23557](https://github.com/adobe/spectrum-css/commit/3b23557))
+* **textfield:** update WHCM focus border colors ([392c16e](https://github.com/adobe/spectrum-css/commit/392c16e))
+
+
+
+
+
 <a name="4.1.11"></a>
 ## 4.1.11
 🗓 2023-04-25 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/textfield@4.1.10...@spectrum-css/textfield@4.1.11)

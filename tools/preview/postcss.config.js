@@ -36,7 +36,7 @@ module.exports = (ctx) => {
             plugins.push(...legacyBuilder.processors);
         } else {
             if (ctx.file.split("/").includes("themes")) {
-                plugins.push(...simpleBuilder.getProcessors(true, { noSelectors: false }));
+                plugins.push(...simpleBuilder.getProcessors({ noSelectors: false }));
             } else {
                 plugins.push(...simpleBuilder.getProcessors());
             }

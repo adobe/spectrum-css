@@ -49,5 +49,5 @@ jobs:
         with:
           name: chromatic-build-artifacts-${{ github.run_id }}
           path: |
-            chromatic-diagnostics.json
-            build-storybook.log
+            **/chromatic-diagnostics.json
+            **/build-storybook.log

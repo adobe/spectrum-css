@@ -1,6 +1,6 @@
 {
   "name": "@spectrum-css/treeview",
-  "version": "6.0.35",
+  "version": "7.0.1",
   "description": "The Spectrum CSS treeview component",
   "license": "Apache-2.0",
   "author": "Adobe",
@@ -18,14 +18,14 @@
     "build": "gulp"
   },
   "peerDependencies": {
-    "@spectrum-css/icon": "^3.0.0",
-    "@spectrum-css/vars": ">=9.0.0"
+    "@spectrum-css/icon": ">=3",
+    "@spectrum-css/vars": ">=9"
   },
   "devDependencies": {
-    "@spectrum-css/component-builder": "*",
-    "@spectrum-css/icon": "^3.0.38",
-    "@spectrum-css/thumbnail": "^2.0.30",
-    "@spectrum-css/vars": "^9.0.2",
+    "@spectrum-css/component-builder": "^4.0.9",
+    "@spectrum-css/icon": "^3.0.43",
+    "@spectrum-css/thumbnail": "^2.0.34",
+    "@spectrum-css/vars": "^9.0.5",
     "gulp": "^4.0.0"
   },
   "publishConfig": {

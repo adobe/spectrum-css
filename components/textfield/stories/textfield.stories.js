@@ -43,6 +43,16 @@ export default {
       },
       control: "boolean"
     },
+    size: {
+      name: "Size",
+      type: { name: "string", required: true },
+      table: {
+        type: { summary: "string" },
+        category: "Component",
+      },
+      options: ["s", "m", "l", "xl"],
+      control: "select"
+    },
     isQuiet: {
       name: "Quiet styling",
       type: { name: "boolean" },
@@ -120,6 +130,11 @@ export default {
       },
       control: "text"
     },
+    value: {
+      table: {
+        disable: true,
+      },
+    },
   },
   args: {
     rootClass: "spectrum-Textfield",
@@ -132,6 +147,7 @@ export default {
     isFocused: false,
     isKeyboardFocused: false,
     isLoading: false,
+    size: "m",
     multiline: false,
     grows: false,
     isQuiet: false,

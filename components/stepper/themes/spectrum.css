@@ -1,4 +1,4 @@
-/*
+/*!
 Copyright 2023 Adobe. All rights reserved.
 This file is licensed to you under the Apache License, Version 2.0 (the "License");
 you may not use this file except in compliance with the License. You may obtain a copy
@@ -14,9 +14,9 @@ governing permissions and limitations under the License.
   /* @todo remove this when stepper is migrated; this ensures stepper buttons inherit border color and width */
   .spectrum-Stepper {
     --spectrum-stepper-border-width: var(--spectrum-border-width-100); /* spectrum stepper has border */
-    --spectrum-stepper-border-size-reset: var(--spectrum-border-width-100);  /* spectrum buttons have inline start border */
+    --spectrum-stepper-button-border-width-reset: var(--spectrum-border-width-100); /* spectrum stepper has border */
+    --spectrum-stepper-button-icon-nudge: calc(-1 * var(--spectrum-corner-radius-100) / 2);
 
-    --spectrum-stepper-button-middle-border-width: var(--spectrum-border-width-100); /* spectrum buttons have middle border */
     --spectrum-stepper-button-gap-reset: 0px; /* spectrum buttons have no middle gap */
     --spectrum-stepper-button-border-radius-reset: 0px;
 

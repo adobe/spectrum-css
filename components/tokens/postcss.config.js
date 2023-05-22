@@ -35,6 +35,7 @@ module.exports = (ctx) => {
             combineSelectors ? require('postcss-combine-duplicated-selectors')({}) : null,
             /* Remove all duplicate copyrights and add a single one at the top */
             require('postcss-discard-comments')({
+                removeAllButFirst: true,
                 remove: (comment) => {
                     return commentsDenylist.some(str => comment.includes(str)) ||
                         comment.trim() === '';

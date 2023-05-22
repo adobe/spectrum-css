@@ -3,6 +3,116 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+<a name="4.0.42"></a>
+## 4.0.42
+🗓 2023-05-18 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/link@4.0.41...@spectrum-css/link@4.0.42)
+
+**Note:** Version bump only for package @spectrum-css/link
+
+
+
+
+
+<a name="4.0.41"></a>
+## 4.0.41
+🗓 2023-05-17 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/link@4.0.40...@spectrum-css/link@4.0.41)
+
+**Note:** Version bump only for package @spectrum-css/link
+
+
+
+
+
+<a name="4.0.40"></a>
+## 4.0.40
+🗓 2023-05-11 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/link@4.0.39...@spectrum-css/link@4.0.40)
+
+**Note:** Version bump only for package @spectrum-css/link
+
+
+
+
+
+<a name="4.0.39"></a>
+## 4.0.39
+🗓 2023-05-10 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/link@4.0.38...@spectrum-css/link@4.0.39)
+
+**Note:** Version bump only for package @spectrum-css/link
+
+
+
+
+
+<a name="4.0.38"></a>
+## 4.0.38
+🗓 2023-05-10 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/link@4.0.37...@spectrum-css/link@4.0.38)
+
+**Note:** Version bump only for package @spectrum-css/link
+
+
+
+
+
+<a name="4.0.37"></a>
+## 4.0.37
+🗓 2023-05-08 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/link@4.0.36...@spectrum-css/link@4.0.37)
+
+**Note:** Version bump only for package @spectrum-css/link
+
+
+
+
+
+<a name="4.0.36"></a>
+## 4.0.36
+🗓 2023-05-04 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/link@4.0.35...@spectrum-css/link@4.0.36)
+
+**Note:** Version bump only for package @spectrum-css/link
+
+
+
+
+
+<a name="4.0.35"></a>
+## 4.0.35
+🗓 2023-05-02 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/link@4.0.34...@spectrum-css/link@4.0.35)
+
+**Note:** Version bump only for package @spectrum-css/link
+
+
+
+
+
+<a name="4.0.34"></a>
+## 4.0.34
+🗓 2023-04-26 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/link@4.0.33...@spectrum-css/link@4.0.34)
+
+**Note:** Version bump only for package @spectrum-css/link
+
+
+
+
+
+<a name="4.0.33"></a>
+## 4.0.33
+🗓 2023-04-25 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/link@4.0.31...@spectrum-css/link@4.0.33)
+
+**Note:** Version bump only for package @spectrum-css/link
+
+
+
+
+
+<a name="4.0.32"></a>
+## 4.0.32
+🗓 2023-04-25 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/link@4.0.31...@spectrum-css/link@4.0.32)
+
+**Note:** Version bump only for package @spectrum-css/link
+
+
+
+
+
 <a name="4.0.31"></a>
 ## 4.0.31
 🗓 2023-04-25 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/link@4.0.30...@spectrum-css/link@4.0.31)
