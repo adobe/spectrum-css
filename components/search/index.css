@@ -48,6 +48,34 @@ governing permissions and limitations under the License.
   --spectrum-search-color-disabled: var(--spectrum-disabled-content-color);
   --spectrum-search-background-color-disabled: var(--spectrum-disabled-background-color);
   --spectrum-search-border-color-disabled: var(--spectrum-disabled-background-color);
+
+  /* Settings for nested Textfield component. */
+  --mod-textfield-font-family: var(--mod-search-font-family, var(--spectrum-search-font-family));
+  --mod-textfield-font-weight: var(--mod-search-font-weight, var(--spectrum-search-font-weight));
+
+  --mod-textfield-corner-radius: var(--mod-search-border-radius, var(--spectrum-search-border-radius));
+  --mod-textfield-border-width: var(--mod-search-border-width, var(--spectrum-search-border-width));
+
+  --mod-textfield-focus-indicator-gap: var(--mod-search-focus-indicator-gap, var(--spectrum-search-focus-indicator-gap));
+  --mod-textfield-focus-indicator-width: var(--mod-search-focus-indicator-thickness, var(--spectrum-search-focus-indicator-thickness));
+  --mod-textfield-focus-indicator-color: var(--highcontrast-search-focus-indicator-color, var(--mod-search-focus-indicator-color, var(--spectrum-search-focus-indicator-color)));
+
+  --mod-textfield-text-color-default: var(--highcontrast-search-color-default, var(--mod-search-color-default, var(--spectrum-search-color-default)));
+  --mod-textfield-text-color-hover: var(--highcontrast-search-color-hover, var(--mod-search-color-hover, var(--spectrum-search-color-hover)));
+  --mod-textfield-text-color-focus: var(--highcontrast-search-color-focus, var(--mod-search-color-focus, var(--spectrum-search-color-focus)));
+  --mod-textfield-text-color-focus-hover: var(--highcontrast-search-color-focus, var(--mod-search-color-focus-hover, var(--spectrum-search-color-focus-hover)));
+  --mod-textfield-text-color-keyboard-focus: var(--highcontrast-search-color-focus, var(--mod-search-color-key-focus, var(--spectrum-search-color-key-focus)));
+  --mod-textfield-text-color-disabled: var(--highcontrast-search-color-disabled, var(--mod-search-color-disabled, var(--spectrum-search-color-disabled)));
+
+  --mod-textfield-border-color: var(--highcontrast-search-border-color-default, var(--mod-search-border-color-default, var(--spectrum-search-border-color-default)));
+  --mod-textfield-border-color-hover: var(--highcontrast-search-border-color-hover, var(--mod-search-border-color-hover, var(--spectrum-search-border-color-hover)));
+  --mod-textfield-border-color-focus: var(--highcontrast-search-border-color-focus, var(--mod-search-border-color-focus, var(--spectrum-search-border-color-focus)));
+  --mod-textfield-border-color-focus-hover: var(--highcontrast-search-border-color-focus, var(--mod-search-border-color-focus-hover, var(--spectrum-search-border-color-focus-hover)));
+  --mod-textfield-border-color-keyboard-focus: var(--highcontrast-search-border-color-focus, var(--mod-search-border-color-key-focus, var(--spectrum-search-border-color-key-focus)));
+  --mod-textfield-border-color-disabled: var(--highcontrast-search-border-color-disabled, var(--mod-search-border-color-disabled, var(--spectrum-search-border-color-disabled)));
+
+  --mod-textfield-background-color: var(--highcontrast-search-background-color, var(--mod-search-background-color, var(--spectrum-search-background-color)));
+  --mod-textfield-background-color-disabled: var(--highcontrast-search-background-color-disabled, var(--mod-search-background-color-disabled, var(--spectrum-search-background-color-disabled)));
 }
 
 .spectrum-Search--sizeS {
@@ -124,6 +152,7 @@ governing permissions and limitations under the License.
   }
 }
 
+/* Standard / Default */
 .spectrum-Search {
   display: inline-block;
   position: relative;
@@ -184,9 +213,6 @@ governing permissions and limitations under the License.
   /* Without this, it gets overridden by .spectrum-Textfield */
   -webkit-appearance: none;
 
-  /* Correct the outline for input[type="search"] style in Safari. */
-  outline-offset: -2px;
-
   /* Remove the inner padding and cancel buttons for input[type="search"] in Chrome and Safari on macOS. */
   &::-webkit-search-cancel-button,
   &::-webkit-search-decoration {
@@ -203,110 +229,11 @@ governing permissions and limitations under the License.
     var(--mod-search-border-width, var(--spectrum-search-border-width))
   );
 
-  border-radius: var(--mod-search-border-radius, var(--spectrum-search-border-radius));
-  border-width: var(--mod-search-border-width, var(--spectrum-search-border-width));
-
-  font-family: var(--mod-search-font-family, var(--spectrum-search-font-family));
-  font-weight: var(--mod-search-font-weight, var(--spectrum-search-font-weight));
   font-style: var(--mod-search-font-style, var(--spectrum-search-font-style));
   line-height: var(--mod-search-line-height, var(--spectrum-search-line-height));
-
-  background-color: var(--highcontrast-search-background-color, var(--mod-search-background-color, var(--spectrum-search-background-color)));
-  border-color: var(--highcontrast-search-border-color-default, var(--mod-search-border-color-default, var(--spectrum-search-border-color-default)));
-  color: var(--highcontrast-search-color-default, var(--mod-search-color-default, var(--spectrum-search-color-default)));
-
-  &::placeholder {
-    color: var(--highcontrast-search-color-default, var(--mod-search-color-default, var(--spectrum-search-color-default)));
-  }
-
-  /* Hover */
-  .spectrum-Search-textfield:hover &,
-  &:hover {
-    color: var(--highcontrast-search-color-hover, var(--mod-search-color-hover, var(--spectrum-search-color-hover)));
-    border-color: var(--highcontrast-search-border-color-hover, var(--mod-search-border-color-hover, var(--spectrum-search-border-color-hover)));
-
-    &::placeholder {
-      color: var(--highcontrast-search-color-hover, var(--mod-search-color-hover, var(--spectrum-search-color-hover)));
-    }
-  }
-
-  /* Focus */
-  .spectrum-Search-textfield.is-focused &,
-  &:focus {
-    color: var(--highcontrast-search-color-focus, var(--mod-search-color-focus, var(--spectrum-search-color-focus)));
-    border-color: var(--highcontrast-search-border-color-focus, var(--mod-search-border-color-focus, var(--spectrum-search-border-color-focus)));
-
-    &::placeholder {
-      color: var(--highcontrast-search-color-focus, var(--mod-search-color-focus, var(--spectrum-search-color-focus)));
-    }
-
-    &:hover {
-      color: var(--highcontrast-search-color-focus, var(--mod-search-color-focus-hover, var(--spectrum-search-color-focus-hover)));
-      border-color: var(--highcontrast-search-border-color-focus, var(--mod-search-border-color-focus-hover, var(--spectrum-search-border-color-focus-hover)));
-
-      &::placeholder {
-        color: var(--highcontrast-search-color-focus, var(--mod-search-color-focus-hover, var(--spectrum-search-color-focus-hover)));
-      }
-    }
-  }
-
-  /* Keyboard Focus */
-  .spectrum-Search-textfield.is-keyboardFocused &,
-  &:focus-visible {
-    color: var(--highcontrast-search-color-focus, var(--mod-search-color-key-focus, var(--spectrum-search-color-key-focus)));
-    border-color: var(--highcontrast-search-border-color-focus, var(--mod-search-border-color-key-focus, var(--spectrum-search-border-color-key-focus)));
-
-    &::placeholder {
-      color: var(--highcontrast-search-color-focus, var(--mod-search-color-key-focus, var(--spectrum-search-color-key-focus)));
-    }
-  }
-
-  /* Disabled */
-  .spectrum-Search-textfield.is-disabled &,
-  .spectrum-Search-textfield.is-disabled:hover &,
-  &:disabled {
-    color: var(--highcontrast-search-color-disabled, var(--mod-search-color-disabled, var(--spectrum-search-color-disabled)));
-    background-color: var(--highcontrast-search-background-color-disabled, var(--mod-search-background-color-disabled, var(--spectrum-search-background-color-disabled)));
-    border-color: var(--highcontrast-search-border-color-disabled, var(--mod-search-border-color-disabled, var(--spectrum-search-border-color-disabled)));
-
-    &::placeholder {
-      color: var(--highcontrast-search-color-disabled, var(--mod-search-color-disabled, var(--spectrum-search-color-disabled)));
-    }
-  }
 }
 
-/* Focus Indicator (Ring) */
-.spectrum-Search:not(.spectrum-Search--quiet) .spectrum-Search-textfield {
-  &::after {
-    border-radius: calc(
-      var(--mod-search-border-radius, var(--spectrum-search-border-radius)) + 
-      var(--mod-search-focus-indicator-thickness, var(--spectrum-search-focus-indicator-thickness)) +
-      var(--mod-search-focus-indicator-gap, var(--spectrum-search-focus-indicator-gap))
-    );
-    block-size: calc(100% + (var(--mod-search-focus-indicator-gap, var(--spectrum-search-focus-indicator-gap)) * 2));
-    inline-size: calc(100% + (var(--mod-search-focus-indicator-gap, var(--spectrum-search-focus-indicator-gap)) * 2));
-    margin-block-start: calc(
-      (var(--mod-search-focus-indicator-gap, var(--spectrum-search-focus-indicator-gap)) + 
-      var(--mod-search-focus-indicator-thickness, var(--spectrum-search-focus-indicator-thickness)))
-      * -1
-    );
-    margin-inline-start: calc(
-      (var(--mod-search-focus-indicator-gap, var(--spectrum-search-focus-indicator-gap)) + 
-      var(--mod-search-focus-indicator-thickness, var(--spectrum-search-focus-indicator-thickness)))
-      * -1
-    );
-  }
-
-  &.is-keyboardFocused,
-  &:focus-within {
-    &::after {
-      border-width: var(--mod-search-focus-indicator-thickness, var(--spectrum-search-focus-indicator-thickness));
-      border-color: var(--highcontrast-search-focus-indicator-color, var(--mod-search-focus-indicator-color, var(--spectrum-search-focus-indicator-color)));
-    }
-  }
-}
-
-/* Standard / Default */
+/* Standard / Default Only */
 .spectrum-Search:not(.spectrum-Search--quiet) {
   .spectrum-Search-icon {
     inset-inline-start: var(--mod-search-edge-to-visual, var(--spectrum-search-edge-to-visual));
@@ -326,7 +253,7 @@ governing permissions and limitations under the License.
   }
 }
 
-/* Quiet Variant (no visible background) */
+/* Quiet Variant */
 .spectrum-Search--quiet {
   .spectrum-Search-clearButton {
     transform: translateX(var(--mod-search-quiet-button-offset, var(--spectrum-search-quiet-button-offset)));
@@ -344,20 +271,5 @@ governing permissions and limitations under the License.
       var(--mod-search-quiet-button-offset, var(--spectrum-search-quiet-button-offset))
     );
     padding-block-start: var(--mod-search-top-to-text, var(--spectrum-search-top-to-text));
-  }
-
-  /* Focus Indicator (Underline) */
-  .spectrum-Search-textfield {
-    &::after {
-      block-size: calc(100% + var(--mod-search-focus-indicator-gap, var(--spectrum-search-focus-indicator-gap)));
-    }
-  
-    &.is-keyboardFocused,
-    &:focus-within {
-      &::after {
-        border-bottom-width: var(--mod-search-focus-indicator-thickness, var(--spectrum-search-focus-indicator-thickness));
-        border-color: var(--highcontrast-search-focus-indicator-color, var(--mod-search-focus-indicator-color, var(--spectrum-search-focus-indicator-color)));
-      }
-    }
   }
 }
