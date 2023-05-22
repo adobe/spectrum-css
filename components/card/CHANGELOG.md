@@ -3,6 +3,36 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+<a name="5.0.33"></a>
+## 5.0.33
+🗓 2023-05-18 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/card@5.0.32...@spectrum-css/card@5.0.33)
+
+**Note:** Version bump only for package @spectrum-css/card
+
+
+
+
+
+<a name="5.0.32"></a>
+## 5.0.32
+🗓 2023-05-18 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/card@5.0.31...@spectrum-css/card@5.0.32)
+
+**Note:** Version bump only for package @spectrum-css/card
+
+
+
+
+
+<a name="5.0.31"></a>
+## 5.0.31
+🗓 2023-05-17 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/card@5.0.30...@spectrum-css/card@5.0.31)
+
+**Note:** Version bump only for package @spectrum-css/card
+
+
+
+
+
 <a name="5.0.30"></a>
 ## 5.0.30
 🗓 2023-05-11 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/card@5.0.29...@spectrum-css/card@5.0.30)

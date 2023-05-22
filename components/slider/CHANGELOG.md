@@ -3,6 +3,53 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+<a name="4.0.2"></a>
+## 4.0.2
+🗓 2023-05-22 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/slider@4.0.1...@spectrum-css/slider@4.0.2)
+
+**Note:** Version bump only for package @spectrum-css/slider
+
+
+
+
+
+<a name="4.0.1"></a>
+## 4.0.1
+🗓 2023-05-18 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/slider@4.0.0...@spectrum-css/slider@4.0.1)
+
+**Note:** Version bump only for package @spectrum-css/slider
+
+
+
+
+
+<a name="4.0.0"></a>
+# 4.0.0
+🗓 2023-05-18 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/slider@3.1.25...@spectrum-css/slider@4.0.0)
+
+* feat(slider, fieldlabel)!: tokens migration & min-height size adjustments (#1696) ([37724f1](https://github.com/adobe/spectrum-css/commit/37724f1)), closes [#1696](https://github.com/adobe/spectrum-css/issues/1696)
+
+
+### 🛑 BREAKING CHANGES
+
+* migrates Slider to use `@adobe/spectrum-tokens`.
+
+Additionally, this adds some `min-height` custom properties and adjusts the `min-height` in the FieldLabel to accommodate Slider.
+
+
+
+
+
+<a name="3.1.25"></a>
+## 3.1.25
+🗓 2023-05-17 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/slider@3.1.24...@spectrum-css/slider@3.1.25)
+
+**Note:** Version bump only for package @spectrum-css/slider
+
+
+
+
+
 <a name="3.1.24"></a>
 ## 3.1.24
 🗓 2023-05-02 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/slider@3.1.23...@spectrum-css/slider@3.1.24)
