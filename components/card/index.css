@@ -240,13 +240,13 @@ governing permissions and limitations under the License.
   display: flex;
   align-items: center;
   margin-block-start: var(--mod-card-content-margin-top, var(--spectrum-card-content-margin-top));
-  margin-block-end: var(--mod-card-content-margin-bottom, var(--spectrum-card-content-margin-bottom));
 }
 
 .spectrum-Card-body {
   padding-block-start: var(--mod-card-title-padding-top, var(--spectrum-card-title-padding-top));
   padding-inline-end: calc(var(--mod-card-body-spacing, var(--spectrum-card-body-spacing)) - var(--mod-card-border-width, var(--spectrum-card-border-width)));
   padding-inline-start: calc(var(--mod-card-body-spacing, var(--spectrum-card-body-spacing)) - var(--mod-card-border-width, var(--spectrum-card-border-width)));
+  padding-block-end: calc(var(--mod-card-body-spacing, var(--spectrum-card-body-spacing)) - var(--mod-card-border-width, var(--spectrum-card-border-width)));
 }
 
 .spectrum-Card-preview {
@@ -294,12 +294,17 @@ governing permissions and limitations under the License.
 }
 
 .spectrum-Card-footer {
-  margin-block-start: var(--mod-card-footer-margin-top, var(--spectrum-card-footer-margin-top));
+  /* Accommodate for wanting less spacing between body and footer */
+  margin-block-start: calc(-1 * (var(--mod-card-body-spacing, var(--spectrum-card-body-spacing)) - var(--mod-card-content-margin-bottom, var(--spectrum-card-content-margin-bottom))));
   margin-inline-start: var(--mod-card-body-spacing, var(--spectrum-card-body-spacing));
   margin-inline-end: var(--mod-card-body-spacing, var(--spectrum-card-body-spacing));
   padding-block-end: calc(var(--mod-card-body-spacing, var(--spectrum-card-body-spacing)) - var(--mod-card-border-width, var(--spectrum-card-border-width)));
   color: var(--highcontrast-card-body-font-color, var(--mod-card-body-font-color, var(--spectrum-card-body-font-color)));
   line-height: var(--mod-card-body-line-height, var(--spectrum-card-body-line-height));
+
+  .spectrum-Divider {
+    margin-block-end: var(--mod-card-footer-margin-top, var(--spectrum-card-footer-margin-top));
+  }
 }
 
 .spectrum-Card-header {
