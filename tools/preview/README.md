@@ -57,7 +57,7 @@ Storybook leverages webpack for bundling and we have updated it with the followi
   }
   ```
 
-We are leaning on Storybook's `@storybook/web-components` framework configuration as our stories rely on lit-html for dynamic attribute assignment.
+We are leaning on Storybook's `@storybook/web-components-webpack5` framework configuration as our stories rely on lit-html for dynamic attribute assignment.
 
 ## Add-ons
 
