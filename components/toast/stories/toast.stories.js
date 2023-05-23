@@ -5,6 +5,7 @@
 
 // Import the component markup template
 import { Template } from "./template";
+
 export default {
   title: "Toast",
   description:

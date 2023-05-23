@@ -1,6 +1,7 @@
 // Import the component markup template
 import { Template } from "./template";
 import { default as Radio } from "@spectrum-css/radio/stories/radio.stories.js";
+
 export default {
   title: "Field group",
   description: "The Field group component is...",
@@ -51,7 +52,7 @@ export default {
     status: {
       type: process.env.MIGRATED_PACKAGES.includes('fieldgroup') ? 'migrated' : undefined
     }
-  },
+  }
 };
 
 export const Vertical = Template.bind({});

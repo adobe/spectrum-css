@@ -1,5 +1,6 @@
 // Import the component markup template
 import { Template } from "./template";
+
 export default {
   title: "Tree View",
   description: "The typical usage of a treeview involves nesting a .spectrum-Treeview element within the .spectrum-TreeView-item parent element.",
@@ -39,7 +40,7 @@ export default {
     status: {
       type: process.env.MIGRATED_PACKAGES.includes('treeview') ? 'migrated' : undefined
     }
-  },
+  }
 };
 
 export const Default = Template.bind({});

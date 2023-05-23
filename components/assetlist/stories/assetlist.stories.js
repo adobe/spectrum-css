@@ -2,6 +2,7 @@
 import { Template } from "./template";
 
 import { default as Checkbox } from "@spectrum-css/checkbox/stories/checkbox.stories.js";
+
 export default {
   title: "Asset list",
   description: "A selectable list of Assets, often used inside of Miller Columns.",
@@ -21,7 +22,7 @@ export default {
     status: {
       type: process.env.MIGRATED_PACKAGES.includes('assetlist') ? 'migrated' : undefined
     }
-  },
+  }
 };
 
 export const Default = Template.bind({});

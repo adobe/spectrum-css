@@ -3,6 +3,7 @@ import { Template } from "./template";
 
 import { default as TagStories } from "@spectrum-css/tag/stories/tag.stories.js";
 const ignoreProps = ['rootClass', 'hasClearButton', 'label'];
+
 export default {
   title: "Tag group",
   description: "A group of tags.",
@@ -50,7 +51,7 @@ export default {
     status: {
       type: process.env.MIGRATED_PACKAGES.includes('taggroup') ? 'migrated' : undefined
     }
-  },
+  }
 };
 
 export const Default = Template.bind({});

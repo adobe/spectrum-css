@@ -1,5 +1,6 @@
 // Import the component markup template
 import { Template } from "./template";
+
 export default {
   title: "Checkbox",
   description:

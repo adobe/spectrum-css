@@ -2,6 +2,7 @@
 import { Template } from "./template";
 
 import { default as ActionButton } from '@spectrum-css/actionbutton/stories/actionbutton.stories';
+
 export default {
   title: "Pagination",
   description: "The Pagination component displays numbered buttons or an input field to allow for navigation",
@@ -35,7 +36,7 @@ export default {
     status: {
       type: process.env.MIGRATED_PACKAGES.includes('pagination') ? 'migrated' : undefined
     }
-  },
+  }
 };
 
 export const Default = Template.bind({});

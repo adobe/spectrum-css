@@ -2,6 +2,7 @@
 import { Template } from "./template";
 
 import { default as IconStories } from "@spectrum-css/icon/stories/icon.stories.js";
+
 export default {
   title: "Action button",
   description: "The action button component represents an action a user can take.",
