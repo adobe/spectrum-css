@@ -5,7 +5,7 @@
 
 // Import the component markup template
 import { Template } from "./template";
-
+import { withActions } from '@storybook/addon-actions/decorator';
 export default {
   title: "Toast",
   description:
@@ -78,6 +78,7 @@ export default {
         : undefined,
     },
   },
+  decorators: [withActions]
 };
 
 export const Default = Template.bind({});

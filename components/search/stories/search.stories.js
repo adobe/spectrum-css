@@ -1,4 +1,5 @@
 import { Template } from './template.js';
+import { withActions } from '@storybook/addon-actions/decorator';
 
 export default {
   title: "Search",
@@ -37,6 +38,7 @@ export default {
       type: process.env.MIGRATED_PACKAGES.includes('search') ? 'migrated' : undefined
     }
   },
+  decorators: [withActions]
 };
 
 export const Default = Template.bind({});

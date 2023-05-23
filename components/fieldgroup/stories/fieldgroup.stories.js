@@ -1,7 +1,7 @@
 // Import the component markup template
 import { Template } from "./template";
 import { default as Radio } from "@spectrum-css/radio/stories/radio.stories.js";
-
+import { withActions } from '@storybook/addon-actions/decorator';
 export default {
   title: "Field group",
   description: "The Field group component is...",
@@ -52,7 +52,8 @@ export default {
     status: {
       type: process.env.MIGRATED_PACKAGES.includes('fieldgroup') ? 'migrated' : undefined
     }
-  }
+  },
+  decorators: [withActions]
 };
 
 export const Vertical = Template.bind({});

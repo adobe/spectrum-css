@@ -2,7 +2,7 @@
 import { Template } from "./template";
 
 import { default as Checkbox } from "@spectrum-css/checkbox/stories/checkbox.stories.js";
-
+import { withActions } from '@storybook/addon-actions/decorator';
 export default {
   title: "Asset card",
   description: "The asset card component allows users to select and manage assets and their metadata in a grid.",
@@ -104,7 +104,8 @@ export default {
     status: {
       type: process.env.MIGRATED_PACKAGES.includes('assetcard') ? 'migrated' : undefined
     }
-  }
+  },
+  decorators: [withActions]
 };
 
 export const Portrait = Template.bind({});

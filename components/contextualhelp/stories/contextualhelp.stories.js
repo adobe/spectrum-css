@@ -2,7 +2,7 @@
 import { Template } from "./template";
 
 import { default as ActionButtonStories } from "@spectrum-css/actionbutton/stories/actionbutton.stories.js";
-
+import { withActions } from '@storybook/addon-actions/decorator';
 // More on default export: https://storybook.js.org/docs/web-components/writing-stories/introduction#default-export
 export default {
   title: "Contextual Help",
@@ -71,7 +71,8 @@ export default {
     status: {
       type: process.env.MIGRATED_PACKAGES.includes('contextualhelp') ? 'migrated' : undefined
     }
-  }
+  },
+  decorators: [withActions]
 };
 
 export const Default = Template.bind({});

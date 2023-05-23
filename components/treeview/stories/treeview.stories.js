@@ -1,6 +1,6 @@
 // Import the component markup template
 import { Template } from "./template";
-
+import { withActions } from '@storybook/addon-actions/decorator';
 export default {
   title: "Tree View",
   description: "The typical usage of a treeview involves nesting a .spectrum-Treeview element within the .spectrum-TreeView-item parent element.",
@@ -40,7 +40,8 @@ export default {
     status: {
       type: process.env.MIGRATED_PACKAGES.includes('treeview') ? 'migrated' : undefined
     }
-  }
+  },
+  decorators: [withActions]
 };
 
 export const Default = Template.bind({});

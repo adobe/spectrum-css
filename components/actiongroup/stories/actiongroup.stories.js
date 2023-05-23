@@ -2,7 +2,7 @@
 import { Template } from "./template";
 
 import { default as ActionButton } from "@spectrum-css/actionbutton/stories/actionbutton.stories.js";
-
+import { withActions } from '@storybook/addon-actions/decorator';
 export default {
   title: "Action group",
   description: "The Action group component is a collection of action buttons.",
@@ -69,7 +69,8 @@ export default {
     status: {
       type: process.env.MIGRATED_PACKAGES.includes('actiongroup') ? 'migrated' : undefined
     }
-  }
+  },
+  decorators: [withActions]
 };
 
 export const Default = Template.bind({});

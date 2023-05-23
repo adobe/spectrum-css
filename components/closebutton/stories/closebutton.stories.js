@@ -1,6 +1,6 @@
 // Import the component markup template
 import { Template } from "./template";
-
+import { withActions } from '@storybook/addon-actions/decorator';
 export default {
   title: "Close button",
   description: "A button used to close or dismiss components",
@@ -51,6 +51,7 @@ export default {
         : undefined,
     },
   },
+  decorators: [withActions]
 };
 
 export const Default = Template.bind({});
