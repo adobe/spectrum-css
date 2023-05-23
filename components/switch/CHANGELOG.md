@@ -3,6 +3,26 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+<a name="3.0.38"></a>
+## 3.0.38
+🗓 2023-05-23 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/switch@3.0.37...@spectrum-css/switch@3.0.38)
+
+**Note:** Version bump only for package @spectrum-css/switch
+
+
+
+
+
+<a name="3.0.37"></a>
+## 3.0.37
+🗓 2023-05-22 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/switch@3.0.36...@spectrum-css/switch@3.0.37)
+
+**Note:** Version bump only for package @spectrum-css/switch
+
+
+
+
+
 <a name="3.0.36"></a>
 ## 3.0.36
 🗓 2023-05-18 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/switch@3.0.35...@spectrum-css/switch@3.0.36)

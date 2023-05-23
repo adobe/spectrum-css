@@ -163,6 +163,10 @@ a.spectrum-CloseButton {
 
   transition: border-color var(--mod-closebutton-animation-duration, var(--spectrum-closebutton-animation-duration)) ease-in-out;
 
+  margin-inline: var(--mod-closebutton-margin-inline);
+  margin-block-start: var(--mod-closebutton-margin-top);
+  align-self: var(--mod-closebutton-align-self);
+
   &:after {
     pointer-events: none;
     content: '';
