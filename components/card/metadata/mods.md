@@ -26,6 +26,7 @@
 | `--mod-card-content-margin-bottom` |
 | `--mod-card-content-margin-top` |
 | `--mod-card-corner-radius` |
+| `--mod-card-divider-color` |
 | `--mod-card-focus-indicator-color` |
 | `--mod-card-focus-indicator-width` |
 | `--mod-card-footer-margin-top` |

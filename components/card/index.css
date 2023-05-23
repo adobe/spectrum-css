@@ -320,6 +320,11 @@ governing permissions and limitations under the License.
 }
 
 .spectrum-Card--quiet {
+
+  .spectrum-Card-preview {
+    border: var(--mod-card-focus-indicator-width, var(--spectrum-card-focus-indicator-width)) solid transparent;
+  }
+
   &:focus,
   &.is-focused {
     /* Quiet cards only have the focus indicator around the preview */
@@ -327,7 +332,6 @@ governing permissions and limitations under the License.
       border-width: 0;
     }
     .spectrum-Card-preview::after {
-      border-width: var(--mod-card-focus-indicator-width, var(--spectrum-card-focus-indicator-width));
       border-color: var(--mod-card-focus-indicator-color, var(--spectrum-card-focus-indicator-color));
     }
   }
