@@ -3,6 +3,23 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+<a name="6.0.0"></a>
+# 6.0.0
+🗓 2023-05-23 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/illustratedmessage@5.0.18...@spectrum-css/illustratedmessage@6.0.0)
+
+* feat(dropzone)!: migrate tokens (#1831) ([5216021](https://github.com/adobe/spectrum-css/commit/5216021)), closes [#1831](https://github.com/adobe/spectrum-css/issues/1831)
+
+
+### 🛑 BREAKING CHANGES
+
+* migrates DropZone to use `@adobe/spectrum-tokens`.
+
+Also updates IllustratedMessage and ActionButton to share `--mod-` properties.
+
+
+
+
+
 <a name="5.0.18"></a>
 ## 5.0.18
 🗓 2023-05-23 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/illustratedmessage@5.0.17...@spectrum-css/illustratedmessage@5.0.18)
