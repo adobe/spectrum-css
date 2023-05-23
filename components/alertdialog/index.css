@@ -58,15 +58,11 @@ governing permissions and limitations under the License.
   padding: var(--mod-alert-dialog-padding, var(--spectrum-alert-dialog-padding));
 
   &--warning {
-    .spectrum-AlertDialog-icon {
-      color: var(--mod-alert-dialog-warning-icon-color, var(--spectrum-alert-dialog-warning-icon-color));
-    }
+    --mod-icon-color: var(--mod-alert-dialog-warning-icon-color, var(--spectrum-alert-dialog-warning-icon-color));
   }
 
   &--error {
-    .spectrum-AlertDialog-icon {
-      color: var(--mod-alert-dialog-error-icon-color, var(--spectrum-alert-dialog-error-icon-color));
-    }
+    --mod-icon-color: var(--mod-alert-dialog-error-icon-color, var(--spectrum-alert-dialog-error-icon-color));
   }
 }
 

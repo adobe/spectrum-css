@@ -65,7 +65,7 @@ examples:
             <div class="spectrum-AlertDialog-grid">
             <div class="spectrum-AlertDialog-header">
               <h1 class="spectrum-AlertDialog-heading" id="dialog_label">Unverified format</h1>
-              <svg class="spectrum-Icon spectrum-AlertDialog-icon" focusable="false" aria-hidden="true">
+              <svg class="spectrum-Icon" focusable="false" aria-hidden="true">
                 <use xlink:href="#spectrum-icon-18-Alert" />
               </svg>
             </div>
@@ -97,7 +97,7 @@ examples:
             <div class="spectrum-AlertDialog-grid">
               <div class="spectrum-AlertDialog-header">
                 <h1 class="spectrum-AlertDialog-heading">Unable to share</h1>
-                  <svg class="spectrum-Icon spectrum-Icon--sizeM spectrum-AlertDialog-icon" focusable="false" aria-hidden="true">
+                  <svg class="spectrum-Icon" focusable="false" aria-hidden="true">
                     <use xlink:href="#spectrum-icon-18-Alert" />
                   </svg>
               </div>

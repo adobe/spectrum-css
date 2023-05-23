@@ -14,13 +14,14 @@ governing permissions and limitations under the License.
 .spectrum-UIIcon {
   display: inline-block;
 
-  inline-size: var(--mod-icon-inline-size);
-  block-size: var(--mod-icon-block-size);
-  margin-inline-start: var(--mod-icon-margin-left);
-  flex-shrink: var(--mod-icon-flex-shrink);
+  /* pass though custom properies to allow components to style nested icons */
+  inline-size: var(--mod-icon-inline-size, var(--spectrum-icon-size-m));
+  block-size: var(--mod-icon-block-size, var(--spectrum-icon-size-m));
+  margin-inline-start: var(--mod-icon-margin-left, inherit);
+  flex-shrink: var(--mod-icon-flex-shrink, inherit);
 
-  /* Inherit the text color */
-  color: inherit;
+  /* Use custom pass through or inherit the text color */
+  color: var(--mod-icon-color, inherit);
 
   /* Fill should match the current text color */
   fill: currentColor;
