@@ -1,5 +1,6 @@
 | Modifiable Custom Properties |
 | --- |
+| `--mod-illustrated-message-content-maximum-width` |
 | `--mod-illustrated-message-description-color` |
 | `--mod-illustrated-message-description-font-family` |
 | `--mod-illustrated-message-description-font-size` |
@@ -7,10 +8,16 @@
 | `--mod-illustrated-message-description-font-weight` |
 | `--mod-illustrated-message-description-line-height` |
 | `--mod-illustrated-message-description-max-inline-size` |
+| `--mod-illustrated-message-description-pointer-events` |
+| `--mod-illustrated-message-description-position` |
+| `--mod-illustrated-message-description-z-index` |
+| `--mod-illustrated-message-display` |
 | `--mod-illustrated-message-heading-max-inline-size` |
+| `--mod-illustrated-message-heading-to-body` |
 | `--mod-illustrated-message-heading-to-description` |
 | `--mod-illustrated-message-illustration-accent-color` |
 | `--mod-illustrated-message-illustration-color` |
+| `--mod-illustrated-message-pointer-events` |
 | `--mod-illustrated-message-title-color` |
 | `--mod-illustrated-message-title-font-family` |
 | `--mod-illustrated-message-title-font-size` |
