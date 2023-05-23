@@ -210,7 +210,7 @@ a.spectrum-ActionButton {
 
   font-size: var(--mod-actionbutton-font-size, var(--spectrum-actionbutton-font-size));
   white-space: nowrap;
-  color: inherit;
+  color: var(--mod-actionbutton-label-color, inherit);
 
   text-overflow: ellipsis;
   overflow: hidden;

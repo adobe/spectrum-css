@@ -3,6 +3,38 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+<a name="2.1.2"></a>
+## 2.1.2
+🗓 2023-05-23 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/divider@2.1.1...@spectrum-css/divider@2.1.2)
+
+**Note:** Version bump only for package @spectrum-css/divider
+
+
+
+
+
+<a name="2.1.1"></a>
+## 2.1.1
+🗓 2023-05-23 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/divider@2.1.0...@spectrum-css/divider@2.1.1)
+
+**Note:** Version bump only for package @spectrum-css/divider
+
+
+
+
+
+<a name="2.1.0"></a>
+# 2.1.0
+🗓 2023-05-22 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/divider@2.0.42...@spectrum-css/divider@2.1.0)
+
+### ✨ Features
+
+* **alertbanner:** add AlertBanner component  ([#1798](https://github.com/adobe/spectrum-css/issues/1798)) ([1610e7a](https://github.com/adobe/spectrum-css/commit/1610e7a))
+
+
+
+
+
 <a name="2.0.42"></a>
 ## 2.0.42
 🗓 2023-05-18 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/divider@2.0.41...@spectrum-css/divider@2.0.42)

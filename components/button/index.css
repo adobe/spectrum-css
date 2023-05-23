@@ -112,6 +112,10 @@ governing permissions and limitations under the License.
   /* let staticColor variants inherit their color */
   color: inherit;
 
+  margin-block: var(--mod-button-margin-block);
+  margin-inline-end: var(--mod-button-margin-right);
+  margin-inline-start: var(--mod-button-margin-left);
+
   &:hover,
   &:active {
     box-shadow: none;
