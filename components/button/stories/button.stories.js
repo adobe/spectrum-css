@@ -4,7 +4,6 @@ import { html } from "lit-html";
 import { Template } from "./template";
 
 import { default as IconStories } from "@spectrum-css/icon/stories/icon.stories.js";
-import { withActions } from '@storybook/addon-actions/decorator';
 export default {
   title: "Button",
   description:
@@ -97,7 +96,6 @@ export default {
         : undefined,
     },
   },
-  decorators: [withActions]
 };
 
 const CustomButton = (args) => {

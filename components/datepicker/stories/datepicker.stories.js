@@ -2,7 +2,6 @@
 import { Template } from "./template";
 
 import { default as CalendarStories } from '@spectrum-css/calendar/stories/calendar.stories.js';
-import { withActions } from '@storybook/addon-actions/decorator';
 const ignoreProps = ['rootClass', 'isDisabled'];
 
 // @todo add support for date *range*
@@ -102,7 +101,6 @@ export default {
       type: process.env.MIGRATED_PACKAGES.includes('datepicker') ? 'migrated' : undefined
     }
   },
-  decorators: [withActions]
 };
 
 export const Default = Template.bind({});

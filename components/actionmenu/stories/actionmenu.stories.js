@@ -3,7 +3,6 @@ import { Template } from "./template";
 
 import { default as ActionButton } from "@spectrum-css/actionbutton/stories/actionbutton.stories.js";
 import { default as Menu } from "@spectrum-css/menu/stories/menu.stories.js";
-import { withActions } from '@storybook/addon-actions/decorator';
 export default {
   title: "Action menu",
   description: "The Action menu component is an action button with a Popover.",
@@ -34,7 +33,6 @@ export default {
       type: process.env.MIGRATED_PACKAGES.includes('actionmenu') ? 'migrated' : undefined
     }
   },
-  decorators: [withActions]
 };
 
 export const Default = Template.bind({});

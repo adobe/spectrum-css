@@ -5,6 +5,7 @@ import {
   withReducedMotionWrapper,
   // withSizingWrapper,
 } from './decorators/index.js';
+import { withActions } from '@storybook/addon-actions/decorator';
 
 // https://github.com/storybookjs/storybook-addon-console
 import '@storybook/addon-console';
@@ -221,5 +222,6 @@ export default {
     withLanguageWrapper,
     withReducedMotionWrapper,
     withContextWrapper,
+    withActions
   ]
 }

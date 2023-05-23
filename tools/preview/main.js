@@ -34,6 +34,9 @@ module.exports = {
     // https://storybook.js.org/addons/@etchteam/storybook-addon-status
     '@etchteam/storybook-addon-status',
   ],
+  core: {
+    disableTelemetry :true
+  },
   env: {
     MIGRATED_PACKAGES: componentPkgs.filter((dir) => {
       const pkg = require(resolve(componentsPath, dir, 'package.json'))

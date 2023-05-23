@@ -4,7 +4,6 @@ import { Template } from "./template";
 import { default as Popover } from "@spectrum-css/popover/stories/popover.stories.js";
 import { default as CloseButton } from "@spectrum-css/closebutton/stories/closebutton.stories.js";
 import { default as ActionButton } from "@spectrum-css/actionbutton/stories/actionbutton.stories.js";
-import { withActions } from '@storybook/addon-actions/decorator';
 export default {
   title: "Action bar",
   description: "The Action bar component is...",
@@ -76,7 +75,6 @@ export default {
       type: process.env.MIGRATED_PACKAGES.includes('actionbar') ? 'migrated' : undefined
     }
   },
-  decorators: [withActions]
 };
 
 export const Default = Template.bind({});

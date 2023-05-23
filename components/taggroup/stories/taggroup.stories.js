@@ -3,7 +3,6 @@ import { Template } from "./template";
 
 import { default as TagStories } from "@spectrum-css/tag/stories/tag.stories.js";
 const ignoreProps = ['rootClass', 'hasClearButton', 'label'];
-import { withActions } from '@storybook/addon-actions/decorator';
 export default {
   title: "Tag group",
   description: "A group of tags.",
@@ -52,7 +51,6 @@ export default {
       type: process.env.MIGRATED_PACKAGES.includes('taggroup') ? 'migrated' : undefined
     }
   },
-  decorators: [withActions]
 };
 
 export const Default = Template.bind({});

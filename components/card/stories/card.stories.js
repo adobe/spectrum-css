@@ -6,7 +6,6 @@ import { Template } from "./template";
 import { default as ActionButton } from "@spectrum-css/actionbutton/stories/actionbutton.stories.js";
 import { default as QuickAction } from "@spectrum-css/quickaction/stories/quickaction.stories.js";
 import { default as Checkbox } from "@spectrum-css/checkbox/stories/checkbox.stories.js";
-import { withActions } from '@storybook/addon-actions/decorator';
 export default {
   title: "Card",
   description:
@@ -178,7 +177,6 @@ export default {
         : undefined,
     },
   },
-  decorators: [withActions]
 };
 
 export const Default = Template.bind({});

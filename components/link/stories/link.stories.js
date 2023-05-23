@@ -1,6 +1,5 @@
 // Import the component markup template
 import { Template } from "./template";
-import { withActions } from '@storybook/addon-actions/decorator';
 export default {
   title: "Link",
   description:
@@ -71,7 +70,6 @@ export default {
         : undefined,
     },
   },
-  decorators: [withActions]
 };
 
 export const Default = Template.bind({});

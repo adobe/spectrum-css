@@ -2,7 +2,6 @@
 import { Template } from "./template";
 
 import { default as IconStories } from "@spectrum-css/icon/stories/icon.stories.js";
-import { withActions } from '@storybook/addon-actions/decorator';
 export default {
   title: "Action button",
   description: "The action button component represents an action a user can take.",
@@ -115,7 +114,6 @@ export default {
         : undefined,
     },
   },
-  decorators: [withActions]
 };
 
 export const Default = Template.bind({});

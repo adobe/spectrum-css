@@ -2,7 +2,6 @@
 import { Template } from "./template";
 
 import { default as ActionButton } from '@spectrum-css/actionbutton/stories/actionbutton.stories';
-import { withActions } from '@storybook/addon-actions/decorator';
 export default {
   title: "Pagination",
   description: "The Pagination component displays numbered buttons or an input field to allow for navigation",
@@ -37,7 +36,6 @@ export default {
       type: process.env.MIGRATED_PACKAGES.includes('pagination') ? 'migrated' : undefined
     }
   },
-  decorators: [withActions]
 };
 
 export const Default = Template.bind({});

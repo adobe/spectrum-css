@@ -2,7 +2,6 @@
 import { Template } from "./template";
 
 import { default as ActionButtonStories } from '@spectrum-css/actionbutton/stories/actionbutton.stories.js';
-import { withActions } from '@storybook/addon-actions/decorator';
 const months = [...Array(12).keys()].map((key) =>
   new Date(0, key).toLocaleString("en", { month: "long" })
 );
@@ -100,7 +99,6 @@ export default {
         : undefined,
     },
   },
-  decorators: [withActions]
 };
 
 export const Default = Template.bind({});

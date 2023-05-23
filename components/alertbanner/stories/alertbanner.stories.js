@@ -1,5 +1,4 @@
 import { Template } from "./template";
-import { withActions } from '@storybook/addon-actions/decorator';
 export default {
   title: "Alert banner",
   description: "The Alert banner show pressing and high-signal messages, such as system alerts. They’re meant to be noticed and prompt users to take action.",
@@ -49,7 +48,6 @@ export default {
       type: process.env.MIGRATED_PACKAGES.includes('alertbanner') ? 'migrated' : undefined
     }
   },
-  decorators: [withActions]
 };
 
 export const Default = Template.bind({});
