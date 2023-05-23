@@ -8,6 +8,10 @@
 | `--mod-table-checkbox-to-text` |
 | `--mod-table-collapsible-disclosure-inline-spacing` |
 | `--mod-table-collapsible-icon-animation-duration` |
+| `--mod-table-cursor-header-default` |
+| `--mod-table-cursor-header-sortable` |
+| `--mod-table-cursor-row-default` |
+| `--mod-table-cursor-section-header` |
 | `--mod-table-default-vertical-align` |
 | `--mod-table-disclosure-icon-size` |
 | `--mod-table-divider-color` |

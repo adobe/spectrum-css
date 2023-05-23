@@ -344,7 +344,7 @@ governing permissions and limitations under the License.
 
   border-radius: var(--mod-table-border-radius, var(--spectrum-table-border-radius));
   transition: color var(--mod-table-transition-duration, var(--spectrum-table-transition-duration)) ease-in-out;
-  cursor: initial;
+  cursor: var(--mod-table-cursor-header-default, initial);
   outline: 0;
 
   .spectrum-Table-sortedIcon,
@@ -354,7 +354,7 @@ governing permissions and limitations under the License.
 
   /* Sortable Column */
   &.is-sortable {
-    cursor: pointer;
+    cursor: var(--mod-table-cursor-header-sortable, pointer);
 
     .spectrum-Table-sortedIcon,
     .spectrum-Table-menuIcon {
@@ -516,7 +516,7 @@ governing permissions and limitations under the License.
   position: relative;
   background-color: var(--mod-table-row-background-color, var(--spectrum-table-row-background-color));
   transition: background-color var(--mod-table-transition-duration, var(--spectrum-table-transition-duration)) ease-in-out;
-  cursor: pointer;
+  cursor: var(--mod-table-cursor-row-default, pointer);
 
   &:first-child {
     /* Ensure that 'outline' will match the border-radius, when used on rows. */
@@ -592,7 +592,7 @@ governing permissions and limitations under the License.
 
 .spectrum-Table-row--sectionHeader {
   background-color: var(--mod-table-section-header-background-color, var(--spectrum-table-section-header-background-color));
-  cursor: initial;
+  cursor: var(--mod-table-cursor-section-header, initial);
 
   .spectrum-Table-cell {
     font-weight: var(--mod-table-section-header-font-weight, var(--spectrum-table-section-header-font-weight));
