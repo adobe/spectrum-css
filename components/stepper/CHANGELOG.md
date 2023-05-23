@@ -3,6 +3,16 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+<a name="4.0.32"></a>
+## 4.0.32
+🗓 2023-05-23 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/stepper@4.0.31...@spectrum-css/stepper@4.0.32)
+
+**Note:** Version bump only for package @spectrum-css/stepper
+
+
+
+
+
 <a name="4.0.31"></a>
 ## 4.0.31
 🗓 2023-05-22 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/stepper@4.0.30...@spectrum-css/stepper@4.0.31)
