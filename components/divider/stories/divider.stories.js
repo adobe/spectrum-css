@@ -17,6 +17,16 @@ export default {
       options: ["s", "m", "l"],
       control: "select"
     },
+    staticColor: {
+      name: "StaticColor",
+      type: { name: "string" },
+      table: {
+        type: { summary: "string" },
+        category: "Advanced",
+      },
+      options: ["white", "black"],
+      control: "select",
+    },
     vertical: {
       name: "Vertical",
       type: { name: "boolean" },

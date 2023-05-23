@@ -30,6 +30,9 @@
 | `--mod-button-font-size` |
 | `--mod-button-height` |
 | `--mod-button-line-height` |
+| `--mod-button-margin-block` |
+| `--mod-button-margin-left` |
+| `--mod-button-margin-right` |
 | `--mod-button-min-width` |
 | `--mod-button-padding-label-to-icon` |
 | `--mod-button-top-to-text` |
