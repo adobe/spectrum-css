@@ -214,8 +214,8 @@ examples:
     name: Quiet
     description: A quiet card for an image.
     markup: |
-      <div style="width: 208px; height: 264px;">
-        <div class="spectrum-Card spectrum-Card--sizeM spectrum-Card--quiet" tabindex="0" role="figure">
+      <div style="height: 264px;">
+        <div class="spectrum-Card spectrum-Card--sizeM spectrum-Card--quiet" tabindex="0" role="figure" style="width: 200px;">
           <div class="spectrum-Card-preview">
             <div class="spectrum-Asset">
               <img class="spectrum-Asset-image" src="img/example-ava.jpg" style="max-width: 75%; max-height: 75%; object-fit: contain;">
@@ -254,8 +254,8 @@ examples:
   - id: card-quiet-selected
     name: Quiet (selected)
     markup: |
-      <div style="width: 208px; height: 264px;">
-        <div class="spectrum-Card spectrum-Card--sizeM spectrum-Card--quiet is-selected" tabindex="0" role="figure">
+      <div style="height: 264px;">
+        <div class="spectrum-Card spectrum-Card--sizeM spectrum-Card--quiet is-selected" tabindex="0" role="figure" style="width: 200px;">
           <div class="spectrum-Card-preview">
             <div class="spectrum-Asset">
               <img class="spectrum-Asset-image" src="img/example-ava.jpg" style="max-width: 75%; max-height: 75%; object-fit: contain;">
@@ -294,8 +294,8 @@ examples:
   - id: card-quiet-focused
     name: Quiet (focused)
     markup: |
-      <div style="width: 208px; height: 264px;">
-        <div class="spectrum-Card spectrum-Card--sizeM spectrum-Card--quiet is-focused" tabindex="0" role="figure">
+      <div style="height: 264px;">
+        <div class="spectrum-Card spectrum-Card--sizeM spectrum-Card--quiet is-focused" tabindex="0" role="figure" style="width: 200px;">
           <div class="spectrum-Card-preview">
             <div class="spectrum-Asset">
               <img class="spectrum-Asset-image" src="img/example-ava.jpg" style="max-width: 75%; max-height: 75%; object-fit: contain;">
@@ -335,8 +335,8 @@ examples:
     name: Quiet (file)
     description: A quiet card for a file asset.
     markup: |
-      <div style="width: 208px; height: 264px;">
-        <div class="spectrum-Card spectrum-Card--sizeM spectrum-Card--quiet" tabindex="0" role="figure">
+      <div style="height: 264px;">
+        <div class="spectrum-Card spectrum-Card--sizeM spectrum-Card--quiet" tabindex="0" role="figure" style="width: 200px;">
           <div class="spectrum-Card-preview">
             <div class="spectrum-Asset">
               <svg viewBox="0 0 128 128" class="spectrum-Asset-file">
@@ -372,8 +372,8 @@ examples:
     name: Quiet (folder)
     description: A quiet card for a folder asset.
     markup: |
-      <div style="width: 208px; height: 264px;">
-        <div class="spectrum-Card spectrum-Card--sizeM spectrum-Card--quiet" tabindex="0" role="figure">
+      <div style="height: 264px;">
+        <div class="spectrum-Card spectrum-Card--sizeM spectrum-Card--quiet" tabindex="0" role="figure" style="width: 200px;">
           <div class="spectrum-Card-preview">
             <div class="spectrum-Asset">
               <svg viewBox="0 0 32 32" class="spectrum-Asset-folder">
@@ -409,20 +409,18 @@ examples:
     name: Horizontal
     description: A card with a horizontal layout.
     markup: |
-      <div style="width: 208px;">
-        <div class="spectrum-Card spectrum-Card--horizontal" tabindex="0" role="figure">
-          <div class="spectrum-Card-preview">
-            <svg class="spectrum-Icon spectrum-Icon--sizeXXL" aria-hidden="true" focusable="false" role="img">
-              <use xlink:href="#spectrum-icon-18-FileTxt" />
-            </svg>
+      <div class="spectrum-Card spectrum-Card--horizontal" tabindex="0" role="figure">
+        <div class="spectrum-Card-preview">
+          <svg class="spectrum-Icon spectrum-Icon--sizeXXL" aria-hidden="true" focusable="false" role="img">
+            <use xlink:href="#spectrum-icon-18-FileTxt" />
+          </svg>
+        </div>
+        <div class="spectrum-Card-body">
+          <div class="spectrum-Card-header">
+            <div class="spectrum-Card-title spectrum-Heading spectrum-Heading--sizeXS">FileName</div>
           </div>
-          <div class="spectrum-Card-body">
-            <div class="spectrum-Card-header">
-              <div class="spectrum-Card-title spectrum-Heading spectrum-Heading--sizeXS">FileName</div>
-            </div>
-            <div class="spectrum-Card-content">
-              <div class="spectrum-Card-description">PDF</div>
-            </div>
+          <div class="spectrum-Card-content">
+            <div class="spectrum-Card-description">PDF</div>
           </div>
         </div>
       </div>
