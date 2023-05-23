@@ -93,7 +93,6 @@ governing permissions and limitations under the License.
 }
 
 /********* T-SHIRT SIZES (Regular Density) *********/
-
 .spectrum-Table--sizeS {
   /* Size and Spacing */
   --spectrum-table-min-header-height: var(--spectrum-component-height-100);
@@ -188,7 +187,6 @@ governing permissions and limitations under the License.
 }
 
 /********* VARIANTS *********/
-
 .spectrum-Table--compact {
   /* Size and Spacing */
   --spectrum-table-min-row-height: var(--spectrum-table-row-height-medium-compact);
@@ -340,6 +338,9 @@ governing permissions and limitations under the License.
   padding-block: var(--mod-table-header-top-to-text, var(--spectrum-table-header-top-to-text)) var(--mod-table-header-bottom-to-text, var(--spectrum-table-header-bottom-to-text));
   padding-inline: var(--mod-table-cell-inline-space, var(--spectrum-table-cell-inline-space));
 
+  color: var(--mod-table-header-text-color, var(--spectrum-table-header-text-color));
+  background-color: var(--mod-table-header-background-color, var(--spectrum-table-header-background-color));
+
   border-radius: var(--mod-table-border-radius, var(--spectrum-table-border-radius));
   transition: color var(--mod-table-transition-duration, var(--spectrum-table-transition-duration)) ease-in-out;
   cursor: initial;
@@ -352,8 +353,6 @@ governing permissions and limitations under the License.
 
   /* Sortable Column */
   &.is-sortable {
-    color: var(--mod-table-header-text-color, var(--spectrum-table-header-text-color));
-    background-color: var(--mod-table-header-background-color, var(--spectrum-table-header-background-color));
     cursor: pointer;
 
     .spectrum-Table-sortedIcon,
@@ -509,7 +508,7 @@ governing permissions and limitations under the License.
 
 /* Cells that display a column divider (vertical border). */
 .spectrum-Table-cell--divider {
-  border-inline-end: var(--mod-table-border-width, var(--spectrum-table-border-width)) solidvar(--mod-table-divider-color, var(--spectrum-table-divider-color));
+  border-inline-end: var(--mod-table-border-width, var(--spectrum-table-border-width)) solid var(--mod-table-divider-color, var(--spectrum-table-divider-color));
 }
 
 .spectrum-Table-row {
@@ -744,6 +743,8 @@ div.spectrum-Table-headCell {
   background: transparent;
   border: 0;
 
+  transform: logical rotate(0deg);
+
   &[aria-expanded="true"]{
     transform: logical rotate(90deg);
   }
@@ -785,7 +786,7 @@ div.spectrum-Table-headCell {
   .spectrum-Thumbnail {
     flex-grow: 0;
     flex-shrink: 0;
-    margin-right: var(--mod-table-thumbnail-to-text, var(--spectrum-table-thumbnail-to-text)); 
+    margin-inline-end: var(--mod-table-thumbnail-to-text, var(--spectrum-table-thumbnail-to-text)); 
     line-height: var(--mod-table-row-line-height, var(--spectrum-table-row-line-height));
   }
 
