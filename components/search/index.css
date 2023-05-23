@@ -166,27 +166,28 @@ governing permissions and limitations under the License.
 }
 
 .spectrum-Search-icon {
-  color: var(--highcontrast-search-color-default, var(--mod-search-color-default, var(--spectrum-search-color-default)));
+  --spectrum-search-color: var(--highcontrast-search-color-default, var(--mod-search-color-default, var(--spectrum-search-color-default)));
+  color: var(--spectrum-search-color);
 
   .spectrum-Search-textfield:hover & {
-    color: var(--highcontrast-search-color-hover, var(--mod-search-color-hover, var(--spectrum-search-color-hover)));
+    --spectrum-search-color: var(--highcontrast-search-color-hover, var(--mod-search-color-hover, var(--spectrum-search-color-hover)));
   }
 
   .spectrum-Search-textfield.is-focused & {
-    color: var(--highcontrast-search-color-focus, var(--mod-search-color-focus, var(--spectrum-search-color-focus)));
+    --spectrum-search-color: var(--highcontrast-search-color-focus, var(--mod-search-color-focus, var(--spectrum-search-color-focus)));
   }
 
   .spectrum-Search-textfield.is-focused:hover & {
-    color: var(--highcontrast-search-color-focus, var(--mod-search-color-focus-hover, var(--spectrum-search-color-focus-hover)));
+    --spectrum-search-color: var(--highcontrast-search-color-focus, var(--mod-search-color-focus-hover, var(--spectrum-search-color-focus-hover)));
   }
 
   .spectrum-Search-textfield.is-keyboardFocused & {
-    color: var(--highcontrast-search-color-focus, var(--mod-search-color-key-focus, var(--spectrum-search-color-key-focus)));
+    --spectrum-search-color: var(--highcontrast-search-color-focus, var(--mod-search-color-key-focus, var(--spectrum-search-color-key-focus)));
   }
 
   .spectrum-Search-textfield.is-disabled &,
   .spectrum-Search-textfield.is-disabled:hover & {
-    color: var(--highcontrast-search-color-disabled, var(--mod-search-color-disabled, var(--spectrum-search-color-disabled)));
+    --spectrum-search-color: var(--highcontrast-search-color-disabled, var(--mod-search-color-disabled, var(--spectrum-search-color-disabled)));
   }
 }
 
