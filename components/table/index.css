@@ -514,8 +514,6 @@ governing permissions and limitations under the License.
 
 .spectrum-Table-row {
   position: relative;
-  border-block-end: 1px solid var(--mod-table-divider-color, var(--spectrum-table-divider-color));
-
   background-color: var(--mod-table-row-background-color, var(--spectrum-table-row-background-color));
   transition: background-color var(--mod-table-transition-duration, var(--spectrum-table-transition-duration)) ease-in-out;
   cursor: pointer;
@@ -575,10 +573,6 @@ governing permissions and limitations under the License.
       border-top-color: var(--highcontrast-table-focus-indicator-color, var(--mod-table-focus-indicator-color, var(--spectrum-table-focus-indicator-color)));
     }
   }
-}
-
-.spectrum-Table > .spectrum-Table-body > .spectrum-Table-row:last-of-type {
-  border-block-end-style: none;
 }
 
 .spectrum-Table-row--summary {
