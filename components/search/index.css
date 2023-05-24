@@ -166,6 +166,11 @@ governing permissions and limitations under the License.
 }
 
 .spectrum-Search-icon {
+  display: block;
+  position: absolute;
+  inset-block: 0;
+  margin-block: auto;
+  
   --spectrum-search-color: var(--highcontrast-search-color-default, var(--mod-search-color-default, var(--spectrum-search-color-default)));
   color: var(--spectrum-search-color);
 
