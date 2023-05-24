@@ -10,6 +10,36 @@ OF ANY KIND, either express or implied. See the License for the specific languag
 governing permissions and limitations under the License.
 */
 
+// Dropzone
+(function() {
+
+  document.addEventListener('DOMContentLoaded', function() {
+    const dropzones = document.querySelectorAll('.spectrum-DropZone');
+   
+    dropzones.forEach(function(item) {
+      item.addEventListener("dragover", function(event) {
+          // prevent default to allow drop
+          event.preventDefault();
+        },
+        false
+      );
+      
+      item.addEventListener('dragenter', function() {
+        item.classList.add("is-dragged");
+      });
+  
+      item.addEventListener('dragleave', function() {
+        item.classList.remove("is-dragged");
+      });
+
+      item.addEventListener('drop', function(event) {
+        event.preventDefault();
+      });
+    });
+  });
+
+}());
+
 // Swatch
 (function() {
   function setSelected(swatch, selected) {

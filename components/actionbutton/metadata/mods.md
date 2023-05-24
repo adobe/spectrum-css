@@ -29,5 +29,6 @@
 | `--mod-actionbutton-font-size` |
 | `--mod-actionbutton-height` |
 | `--mod-actionbutton-icon-size` |
+| `--mod-actionbutton-label-color` |
 | `--mod-actionbutton-min-width` |
 | `--mod-actionbutton-text-to-visual` |
