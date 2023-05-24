@@ -1,5 +1,7 @@
 import { html } from "lit-html";
-import { unsafeHTML } from "lit-html/directives/unsafe-html.js";
+import { classMap } from "lit-html/directives/class-map.js";
+
+import { upperCase, lowerCase, capitalize } from "lodash-es";
 
 import "../index.css";
 
@@ -7,6 +9,8 @@ export const Template = ({
   rootClass = "spectrum-Divider",
   size = "m",
   tag = "hr",
+  staticColor,
+  vertical = false,
   customClasses = [],
   ...globals
 }) => {
@@ -19,15 +23,35 @@ export const Template = ({
     console.warn(e);
   }
 
+if (tag === "hr") {
   return html`
-    ${unsafeHTML(
-      `<${tag} class="${Object.entries({
+    <hr
+      class=${classMap({
+        [rootClass]: true,
+        [`${rootClass}--size${upperCase(size)}`]: typeof size !== "undefined",
+        [`${rootClass}--vertical`]: vertical === true,
+        [`${rootClass}--static${capitalize(lowerCase(staticColor))}`]:
+          typeof staticColor !== "undefined",
+        ...customClasses.reduce((a, c) => ({ ...a, [c]: true }), {}),
+      })}
+      style=${vertical === true ? "min-height: 20px; height: auto; align-self: stretch" : ""}
+      role="separator"
+      >
+    </hr>`
+} else {
+  return html`
+    <div
+      class=${classMap({
         [rootClass]: true,
         [`${rootClass}--size${size?.toUpperCase()}`]: typeof size !== "undefined",
+        [`${rootClass}--vertical`]: vertical === true,
+        [`${rootClass}--static${capitalize(lowerCase(staticColor))}`]:
+          typeof staticColor !== "undefined",
         ...customClasses.reduce((a, c) => ({ ...a, [c]: true }), {}),
-      })
-        .map(([c, isC]) => (isC ? c : ""))
-        .join(" ")}"${globals.id ? ` id="${globals.id}"` : ""} role="separator"></${tag}>`
-    )}
-  `;
+      })}
+      style=${vertical === true ? "min-height: 20px; height: auto; align-self: stretch" : ""}
+      role="separator"
+      >
+    </div>`
+  }
 };

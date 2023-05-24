@@ -10,6 +10,36 @@ OF ANY KIND, either express or implied. See the License for the specific languag
 governing permissions and limitations under the License.
 */
 
+// Dropzone
+(function() {
+
+  document.addEventListener('DOMContentLoaded', function() {
+    const dropzones = document.querySelectorAll('.spectrum-DropZone');
+   
+    dropzones.forEach(function(item) {
+      item.addEventListener("dragover", function(event) {
+          // prevent default to allow drop
+          event.preventDefault();
+        },
+        false
+      );
+      
+      item.addEventListener('dragenter', function() {
+        item.classList.add("is-dragged");
+      });
+  
+      item.addEventListener('dragleave', function() {
+        item.classList.remove("is-dragged");
+      });
+
+      item.addEventListener('drop', function(event) {
+        event.preventDefault();
+      });
+    });
+  });
+
+}());
+
 // Swatch
 (function() {
   function setSelected(swatch, selected) {
@@ -558,7 +588,7 @@ function makeDoubleSlider(slider) {
     var sliderOffsetLeft = slider.offsetLeft + slider.offsetParent.offsetLeft;
 
     var x = Math.max(Math.min(e.x - sliderOffsetLeft, sliderOffsetWidth), 0);
-    var percent = (x / sliderOffsetWidth) * 100;
+    var percent = Math.round((x / sliderOffsetWidth) * 100);
 
     if (isRTL()) {
       percent = 100 - percent;
@@ -624,6 +654,7 @@ function makeSlider(slider) {
   var handles = slider.querySelectorAll('.spectrum-Slider-handle');
   var handle = handles[0];
   var isColor = slider.classList.contains('spectrum-Slider--color');
+  var value = slider.querySelector('.spectrum-Slider-value');
   var fill = slider.querySelector('.spectrum-Slider-fill');
 
   if (handles.length > 1) {
@@ -655,10 +686,14 @@ function makeSlider(slider) {
     var sliderOffsetLeft = slider.offsetLeft + slider.offsetParent.offsetLeft;
 
     var x = Math.max(Math.min(e.x - sliderOffsetLeft, sliderOffsetWidth), 0);
-    var percent = (x / sliderOffsetWidth) * 100;
+    var percent = Math.round((x / sliderOffsetWidth) * 100);
 
     if (isRTL()) {
       percent = 100 - percent;
+    }
+
+    if (value) {
+      value.innerText = percent;
     }
 
     if (leftTrack && rightTrack && !isColor) {

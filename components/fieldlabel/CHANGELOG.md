@@ -3,6 +3,83 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+<a name="7.0.5"></a>
+## 7.0.5
+🗓 2023-05-23 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/fieldlabel@7.0.4...@spectrum-css/fieldlabel@7.0.5)
+
+**Note:** Version bump only for package @spectrum-css/fieldlabel
+
+
+
+
+
+<a name="7.0.4"></a>
+## 7.0.4
+🗓 2023-05-23 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/fieldlabel@7.0.3...@spectrum-css/fieldlabel@7.0.4)
+
+**Note:** Version bump only for package @spectrum-css/fieldlabel
+
+
+
+
+
+<a name="7.0.3"></a>
+## 7.0.3
+🗓 2023-05-22 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/fieldlabel@7.0.2...@spectrum-css/fieldlabel@7.0.3)
+
+**Note:** Version bump only for package @spectrum-css/fieldlabel
+
+
+
+
+
+<a name="7.0.2"></a>
+## 7.0.2
+🗓 2023-05-22 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/fieldlabel@7.0.1...@spectrum-css/fieldlabel@7.0.2)
+
+**Note:** Version bump only for package @spectrum-css/fieldlabel
+
+
+
+
+
+<a name="7.0.1"></a>
+## 7.0.1
+🗓 2023-05-18 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/fieldlabel@7.0.0...@spectrum-css/fieldlabel@7.0.1)
+
+**Note:** Version bump only for package @spectrum-css/fieldlabel
+
+
+
+
+
+<a name="7.0.0"></a>
+# 7.0.0
+🗓 2023-05-18 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/fieldlabel@6.0.35...@spectrum-css/fieldlabel@7.0.0)
+
+* feat(slider, fieldlabel)!: tokens migration & min-height size adjustments (#1696) ([37724f1](https://github.com/adobe/spectrum-css/commit/37724f1)), closes [#1696](https://github.com/adobe/spectrum-css/issues/1696)
+
+
+### 🛑 BREAKING CHANGES
+
+* migrates Slider to use `@adobe/spectrum-tokens`.
+
+Additionally, this adds some `min-height` custom properties and adjusts the `min-height` in the FieldLabel to accommodate Slider.
+
+
+
+
+
+<a name="6.0.35"></a>
+## 6.0.35
+🗓 2023-05-18 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/fieldlabel@6.0.34...@spectrum-css/fieldlabel@6.0.35)
+
+**Note:** Version bump only for package @spectrum-css/fieldlabel
+
+
+
+
+
 <a name="6.0.34"></a>
 ## 6.0.34
 🗓 2023-05-17 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/fieldlabel@6.0.33...@spectrum-css/fieldlabel@6.0.34)

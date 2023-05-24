@@ -28,7 +28,6 @@
 | `--mod-stepper-focus-indicator-color` |
 | `--mod-stepper-focus-indicator-gap` |
 | `--mod-stepper-focus-indicator-width` |
-| `--mod-stepper-icon-nudge-end` |
 | `--mod-stepper-icon-nudge-start` |
 | `--mod-stepper-quiet-button-width` |
 | `--mod-stepper-quiet-width` |

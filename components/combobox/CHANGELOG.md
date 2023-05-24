@@ -3,6 +3,58 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+<a name="2.0.11"></a>
+## 2.0.11
+🗓 2023-05-23 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/combobox@2.0.10...@spectrum-css/combobox@2.0.11)
+
+**Note:** Version bump only for package @spectrum-css/combobox
+
+
+
+
+
+<a name="2.0.10"></a>
+## 2.0.10
+🗓 2023-05-23 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/combobox@2.0.9...@spectrum-css/combobox@2.0.10)
+
+**Note:** Version bump only for package @spectrum-css/combobox
+
+
+
+
+
+<a name="2.0.9"></a>
+## 2.0.9
+🗓 2023-05-22 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/combobox@2.0.8...@spectrum-css/combobox@2.0.9)
+
+**Note:** Version bump only for package @spectrum-css/combobox
+
+
+
+
+
+<a name="2.0.8"></a>
+## 2.0.8
+🗓 2023-05-18 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/combobox@2.0.7...@spectrum-css/combobox@2.0.8)
+
+### 🐛 Bug fixes
+
+* **textfield, stepper:** button padding and focus indicator ([#1863](https://github.com/adobe/spectrum-css/issues/1863)) ([7963b85](https://github.com/adobe/spectrum-css/commit/7963b85))
+
+
+
+
+
+<a name="2.0.7"></a>
+## 2.0.7
+🗓 2023-05-18 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/combobox@2.0.6...@spectrum-css/combobox@2.0.7)
+
+**Note:** Version bump only for package @spectrum-css/combobox
+
+
+
+
+
 <a name="2.0.6"></a>
 ## 2.0.6
 🗓 2023-05-17 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/combobox@2.0.5...@spectrum-css/combobox@2.0.6)

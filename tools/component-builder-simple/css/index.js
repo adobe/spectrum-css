@@ -43,7 +43,7 @@ function getTokensUsedInCSS(root, coreTokens, componentTokens) {
   let coreTokensUsed = {};
   let componentTokensUsed = {};
 
-  root.walkRules((rule, ruleIndex) => {
+  root.walkRules((rule) => {
     rule.walkDecls((decl) => {
       let matches = decl.value.match(/var\(.*?\)/g);
       if (matches) {
@@ -72,7 +72,7 @@ function getTokensUsedInCSS(root, coreTokens, componentTokens) {
 function getTokensDefinedInCSS(root) {
   let variables = {};
 
-  root.walkRules((rule, ruleIndex) => {
+  root.walkRules((rule) => {
     rule.walkDecls((decl) => {
       if (decl.prop.startsWith('--')) {
         variables[decl.prop] = decl.value;
@@ -117,7 +117,7 @@ function buildCSSWithoutThemes() {
       'themes/*.css'
     ])
     .pipe(concat('index-base.css'))
-    .pipe(postcss(processorsFunction(false, { noFlatVariables: true }), {
+    .pipe(postcss(processorsFunction({ noFlatVariables: true }), {
       from: './index.css' // gulp-concat sets the file.path wrong, so override here
     }))
     .pipe(gulp.dest('dist/'));
@@ -129,7 +129,7 @@ function buildCSSThemeIndex() {
       'themes/*.css'
     ])
     .pipe(concat('index-theme.css'))
-    .pipe(postcss(processorsFunction(true, { noSelectors: true })))
+    .pipe(postcss(processorsFunction({ noSelectors: true })))
     .pipe(gulp.dest('dist/'));
 }
 
@@ -137,7 +137,7 @@ function buildCSSThemes() {
   return gulp.src([
       'themes/*.css'
     ])
-    .pipe(postcss(processorsFunction(true, { noSelectors: true })))
+    .pipe(postcss(processorsFunction({ noSelectors: true })))
     .pipe(gulp.dest('dist/themes/'));
 }
 
@@ -149,7 +149,7 @@ function buildExpressTheme() {
       'dist/index-theme.css'
     ])
     .pipe(concat('express.css'))
-    .pipe(postcss(processorsFunction(true).concat(require('postcss-combininator'))))
+    .pipe(postcss(processorsFunction().concat(require('postcss-combininator'))))
     .pipe(gulp.dest('dist/themes/'));
 }
 

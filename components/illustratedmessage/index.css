@@ -55,12 +55,14 @@ governing permissions and limitations under the License.
 .spectrum-IllustratedMessage {
   block-size: 100%;
 
-  display: flex;
+  display: var(--mod-illustrated-message-display, flex);
   flex-direction: column;
   align-items: center;
   justify-content: center;
 
   text-align: center;
+  pointer-events: var(--mod-illustrated-message-pointer-events);
+  max-inline-size: var(--mod-illustrated-message-content-maximum-width);
 }
 
 .spectrum-IllustratedMessage-illustration {
@@ -88,10 +90,14 @@ governing permissions and limitations under the License.
 
   max-inline-size: var(--mod-illustrated-message-heading-max-inline-size, var(--spectrum-illustrated-message-heading-max-inline-size));
   margin-block-start: 0;
-  margin-block-end: 0;
+  margin-block-end: var(--mod-illustrated-message-heading-to-body, 0);
 }
 
 .spectrum-IllustratedMessage-description {
+  position: var(--mod-illustrated-message-description-position);
+  z-index: var(--mod-illustrated-message-description-z-index);
+  pointer-events: var(--mod-illustrated-message-description-pointer-events);
+
   font-family: var(--mod-illustrated-message-description-font-family, var(--spectrum-illustrated-message-description-font-family));
   font-weight: var(--mod-illustrated-message-description-font-weight, var(--spectrum-illustrated-message-description-font-weight));
   font-style: var(--mod-illustrated-message-description-font-style, var(--spectrum-illustrated-message-description-font-style));
