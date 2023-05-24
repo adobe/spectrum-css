@@ -13,12 +13,14 @@ sections:
         * Add the `spectrum-Heading` and `spectrum-Heading--sizeXS` or `spectrum-Heading--sizeXXS` to the `spectrum-Card-title` element.
       ### Subtitle deprecated 
       For this first Card iteration, the `subtitle` option has been removed.
+      ### Small Card deprecated
+      Card only has one size moving forward and the minimum width has been updated to allow for smaller card widths if needed. There is no longer a need for the `spectrum-Card--sizeM` class on this component.
 examples:
   - id: card
     name: Standard
     description: A standard card with cover photo and footer.
     markup: |
-      <div class="spectrum-Card spectrum-Card--sizeM" tabindex="0" role="figure">
+      <div class="spectrum-Card" tabindex="0" role="figure">
         <div class="spectrum-Card-coverPhoto" style="background-image: url(img/example-card-portrait.jpg)"></div>
         <hr class="spectrum-Divider spectrum-Divider--sizeS spectrum-Card-divider">
         <div class="spectrum-Card-body">
@@ -57,7 +59,7 @@ examples:
     name: Standard (long title)
     description: A standard card with a title that wraps
     markup: |
-      <div class="spectrum-Card spectrum-Card--sizeM" tabindex="0" role="figure" style="width: 275px;">
+      <div class="spectrum-Card" tabindex="0" role="figure" style="width: 275px;">
         <div class="spectrum-Card-coverPhoto" style="background-image: url(img/example-card-portrait.jpg)"></div>
         <hr class="spectrum-Divider spectrum-Divider--sizeS spectrum-Card-divider">
         <div class="spectrum-Card-body">
@@ -96,7 +98,7 @@ examples:
     name: Standard (no image)
     description: A standard card with no photo
     markup: |
-      <div class="spectrum-Card spectrum-Card--sizeM" tabindex="0" role="figure" style="width: 280px">
+      <div class="spectrum-Card" tabindex="0" role="figure" style="width: 280px">
         <div class="spectrum-Card-body">
           <div class="spectrum-Card-header">
             <div class="spectrum-Card-title spectrum-Heading spectrum-Heading--sizeXS">Card Title</div>
@@ -131,7 +133,7 @@ examples:
     markup: |
       <div role="grid">
         <div style="width: 208px; outline: 0;" role="row">
-          <div class="spectrum-Card spectrum-Card--sizeM is-focused" role="rowheader" tabindex="0">
+          <div class="spectrum-Card is-focused" role="rowheader" tabindex="0">
             <div class="spectrum-Card-coverPhoto" style="background-image: url(img/example-card-portrait.jpg)"></div>
             <hr class="spectrum-Divider spectrum-Divider--sizeS spectrum-Card-divider">
             <div class="spectrum-Card-body">
@@ -173,7 +175,7 @@ examples:
     markup: |
       <div role="grid">
         <div style="width: 208px; outline: 0;" role="row">
-          <div class="spectrum-Card spectrum-Card--sizeM is-selected" role="rowheader" tabindex="0">
+          <div class="spectrum-Card is-selected" role="rowheader" tabindex="0">
             <div class="spectrum-Card-coverPhoto" style="background-image: url(img/example-card-portrait.jpg)"></div>
             <hr class="spectrum-Divider spectrum-Divider--sizeS spectrum-Card-divider">
             <div class="spectrum-Card-body">
@@ -215,7 +217,7 @@ examples:
     description: A quiet card for an image.
     markup: |
       <div style="height: 264px;">
-        <div class="spectrum-Card spectrum-Card--sizeM spectrum-Card--quiet" tabindex="0" role="figure" style="width: 200px;">
+        <div class="spectrum-Card spectrum-Card--quiet" tabindex="0" role="figure" style="width: 200px;">
           <div class="spectrum-Card-preview">
             <div class="spectrum-Asset">
               <img class="spectrum-Asset-image" src="img/example-ava.jpg" style="max-width: 75%; max-height: 75%; object-fit: contain;">
@@ -255,7 +257,7 @@ examples:
     name: Quiet (selected)
     markup: |
       <div style="height: 264px;">
-        <div class="spectrum-Card spectrum-Card--sizeM spectrum-Card--quiet is-selected" tabindex="0" role="figure" style="width: 200px;">
+        <div class="spectrum-Card spectrum-Card--quiet is-selected" tabindex="0" role="figure" style="width: 200px;">
           <div class="spectrum-Card-preview">
             <div class="spectrum-Asset">
               <img class="spectrum-Asset-image" src="img/example-ava.jpg" style="max-width: 75%; max-height: 75%; object-fit: contain;">
@@ -295,7 +297,7 @@ examples:
     name: Quiet (focused)
     markup: |
       <div style="height: 264px;">
-        <div class="spectrum-Card spectrum-Card--sizeM spectrum-Card--quiet is-focused" tabindex="0" role="figure" style="width: 200px;">
+        <div class="spectrum-Card spectrum-Card--quiet is-focused" tabindex="0" role="figure" style="width: 200px;">
           <div class="spectrum-Card-preview">
             <div class="spectrum-Asset">
               <img class="spectrum-Asset-image" src="img/example-ava.jpg" style="max-width: 75%; max-height: 75%; object-fit: contain;">
@@ -336,7 +338,7 @@ examples:
     description: A quiet card for a file asset.
     markup: |
       <div style="height: 264px;">
-        <div class="spectrum-Card spectrum-Card--sizeM spectrum-Card--quiet" tabindex="0" role="figure" style="width: 200px;">
+        <div class="spectrum-Card spectrum-Card--quiet" tabindex="0" role="figure" style="width: 200px;">
           <div class="spectrum-Card-preview">
             <div class="spectrum-Asset">
               <svg viewBox="0 0 128 128" class="spectrum-Asset-file">
@@ -373,7 +375,7 @@ examples:
     description: A quiet card for a folder asset.
     markup: |
       <div style="height: 264px;">
-        <div class="spectrum-Card spectrum-Card--sizeM spectrum-Card--quiet" tabindex="0" role="figure" style="width: 200px;">
+        <div class="spectrum-Card spectrum-Card--quiet" tabindex="0" role="figure" style="width: 200px;">
           <div class="spectrum-Card-preview">
             <div class="spectrum-Asset">
               <svg viewBox="0 0 32 32" class="spectrum-Asset-folder">
