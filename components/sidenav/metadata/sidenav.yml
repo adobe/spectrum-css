@@ -17,168 +17,104 @@ examples:
         <ul class="spectrum-SideNav">
           <li class="spectrum-SideNav-item is-selected">
             <a href="#" class="spectrum-SideNav-itemLink" aria-current="page">
-              <span class="spectrum-SideNav-itemLink-text">Section Title 1</span>
+              <span class="spectrum-SideNav-link-label">Section Title 1</span>
             </a>
           </li>
           <li class="spectrum-SideNav-item is-disabled">
             <a class="spectrum-SideNav-itemLink">
-              <span class="spectrum-SideNav-itemLink-text">Section Title 2</span>
+              <span class="spectrum-SideNav-link-label">Section Title 2</span>
             </a>
           </li>
           <li class="spectrum-SideNav-item">
             <a href="#" class="spectrum-SideNav-itemLink">
-              <span class="spectrum-SideNav-itemLink-text">Section Title 3</span>
+              <span class="spectrum-SideNav-link-label">Section Title 3</span>
             </a>
           </li>
           <li class="spectrum-SideNav-item">
             <a href="#" class="spectrum-SideNav-itemLink">
-              <span class="spectrum-SideNav-itemLink-text">Section Title 1</span>
+              <span class="spectrum-SideNav-link-label">Section Title 1</span>
             </a>
           </li>
         </ul>
       </nav>
   - id: sidenav
     name: Multilevel
+    description: When navigation is simple but categorical, use the single .
     markup: |
       <nav>
         <ul class="spectrum-SideNav spectrum-SideNav--multiLevel">
           <li class="spectrum-SideNav-item">
             <a href="#" class="spectrum-SideNav-itemLink">
-              <span class="spectrum-SideNav-itemLink-text"> Section Title 1 for a Multilevel Side Nav</span>
+              <span class="spectrum-SideNav-link-label"> Section Title 1 for a Multilevel Side Nav</span>
             </a>
           </li>
           <li class="spectrum-SideNav-item">
             <a href="#" class="spectrum-SideNav-itemLink">
-              <span class="spectrum-SideNav-itemLink-text"> Section Title 2</span>
+              <span class="spectrum-SideNav-link-label"> Section Title 2</span>
             </a>
             <ul class="spectrum-SideNav">
               <li class="spectrum-SideNav-item">
                 <a href="#" class="spectrum-SideNav-itemLink">
-                  <span class="spectrum-SideNav-itemLink-text"> Section Title 1</span>
+                  <span class="spectrum-SideNav-link-label"> Section Title 1</span>
                 </a>
               </li>
               <li class="spectrum-SideNav-item">
                 <a href="#" class="spectrum-SideNav-itemLink">
-                  <span class="spectrum-SideNav-itemLink-text"> Section Title 2</span>
+                  <span class="spectrum-SideNav-link-label"> Section Title 2</span>
                 </a>
                 <ul class="spectrum-SideNav">
                   <li class="spectrum-SideNav-item">
                     <a href="#" class="spectrum-SideNav-itemLink">
-                      <span class="spectrum-SideNav-itemLink-text"> Section Title 1</span>
+                      <span class="spectrum-SideNav-link-label"> Section Title 1</span>
                     </a>
                   </li>
                   <li class="spectrum-SideNav-item">
                     <a href="#" class="spectrum-SideNav-itemLink">
-                      <span class="spectrum-SideNav-itemLink-text"> Section Title 2</span>
+                      <span class="spectrum-SideNav-link-label"> Section Title 2</span>
                     </a>
                   </li>
                 </ul>
               </li>
               <li class="spectrum-SideNav-item">
                 <a href="#" class="spectrum-SideNav-itemLink">
-                  <span class="spectrum-SideNav-itemLink-text"> Section Title 3</span>
+                  <span class="spectrum-SideNav-link-label"> Section Title 3</span>
                 </a>
               </li>
             </ul>
           </li>
           <li class="spectrum-SideNav-item">
             <a href="#" class="spectrum-SideNav-itemLink">
-              <span class="spectrum-SideNav-itemLink-text"> Section Title 4</span>
+              <span class="spectrum-SideNav-link-label"> Section Title 4</span>
             </a>
           </li>
           <li class="spectrum-SideNav-item">
             <a href="#" class="spectrum-SideNav-itemLink">
-              <span class="spectrum-SideNav-itemLink-text"> Section Title 5</span>
+              <span class="spectrum-SideNav-link-label"> Section Title 5</span>
             </a>
           </li>
           <li class="spectrum-SideNav-item">
             <a href="#" class="spectrum-SideNav-itemLink">
-              <span class="spectrum-SideNav-itemLink-text"> Section Title 6</span>
+              <span class="spectrum-SideNav-link-label"> Section Title 6</span>
             </a>
           </li>
         </ul>
       </nav>
-  - id: sidenav
-    name: Icon
-    markup: |
-      <nav>
-        <ul class="spectrum-SideNav spectrum-SideNav--multiLevel spectrum-SideNav--hasIcon">
-          <li class="spectrum-SideNav-item">
-            <a href="#" class="spectrum-SideNav-itemLink">
-              <svg class="spectrum-Icon spectrum-SideNav-itemIcon" focusable="false" aria-hidden="true">
-                <use xlink:href="#spectrum-icon-18-Star" />
-              </svg>
-              <span class="spectrum-SideNav-itemLink-text"> Section Title 2</span>
-            </a>
-          </li>
-          <li class="spectrum-SideNav-item">
-            <a href="#" class="spectrum-SideNav-itemLink">
-              <svg class="spectrum-Icon spectrum-SideNav-itemIcon" focusable="false" aria-hidden="true">
-                <use xlink:href="#spectrum-icon-18-Star" />
-              </svg>
-              <span class="spectrum-SideNav-itemLink-text"> Section Title 2</span>
-            </a>
-            <ul class="spectrum-SideNav">
-              <li class="spectrum-SideNav-item">
-                <a href="#" class="spectrum-SideNav-itemLink">
-                  <span class="spectrum-SideNav-itemLink-text"> Section Title 1</span>
-                </a>
-              </li>
-              <li class="spectrum-SideNav-item">
-                <a href="#" class="spectrum-SideNav-itemLink">
-                  <span class="spectrum-SideNav-itemLink-text"> Section Title 2</span>
-                </a>
-                <ul class="spectrum-SideNav">
-                  <li class="spectrum-SideNav-item">
-                    <a href="#" class="spectrum-SideNav-itemLink">
-                      <span class="spectrum-SideNav-itemLink-text"> Section Title 1</span>
-                    </a>
-                  </li>
-                  <li class="spectrum-SideNav-item">
-                    <a href="#" class="spectrum-SideNav-itemLink">
-                      <span class="spectrum-SideNav-itemLink-text"> Section Title 2</span>
-                    </a>
-                  </li>
-                </ul>
-              <li class="spectrum-SideNav-item">
-                <a href="#" class="spectrum-SideNav-itemLink">
-                  <span class="spectrum-SideNav-itemLink-text"> Section Title 3</span>
-                </a>
-              </li>
-            </ul>
-          </li>
-          <li class="spectrum-SideNav-item">
-            <a href="#" class="spectrum-SideNav-itemLink">
-              <svg class="spectrum-Icon spectrum-SideNav-itemIcon" focusable="false" aria-hidden="true">
-                <use xlink:href="#spectrum-icon-18-Star" />
-              </svg>
-              <span class="spectrum-SideNav-itemLink-text"> Section Title 4</span>
-            </a>
-          </li>
-          <li class="spectrum-SideNav-item">
-            <a href="#" class="spectrum-SideNav-itemLink">
-              <svg class="spectrum-Icon spectrum-SideNav-itemIcon" focusable="false" aria-hidden="true">
-                <use xlink:href="#spectrum-icon-18-Star" />
-              </svg>
-              <span class="spectrum-SideNav-itemLink-text"> Section Title 5</span>
-            </a>
-          </li>
-        </ul>
-      </nav>
+
   - id: sidenav
     name: Heading
+    description: When navigation is simple but categorical, use the single level side navigation with headers.
     markup: |
       <nav>
         <ul class="spectrum-SideNav">
           <li class="spectrum-SideNav-item is-selected">
             <!-- aria-current denotes current "page" or "location" -->
             <a href="#" class="spectrum-SideNav-itemLink" aria-current="page">
-              <span class="spectrum-SideNav-itemLink-text"> Section 1</span>
+              <span class="spectrum-SideNav-link-label"> Section 1</span>
             </a>
           </li>
           <li class="spectrum-SideNav-item">
             <a href="#" class="spectrum-SideNav-itemLink">
-              <span class="spectrum-SideNav-itemLink-text"> Section 2</span>
+              <span class="spectrum-SideNav-link-label"> Section 2</span>
             </a>
           </li>
           <li class="spectrum-SideNav-item">
@@ -186,12 +122,12 @@ examples:
             <ul class="spectrum-SideNav" aria-labelledby="nav-heading-category-1">
               <li class="spectrum-SideNav-item">
                 <a href="#" class="spectrum-SideNav-itemLink">
-                  <span class="spectrum-SideNav-itemLink-text"> Section 3</span>
+                  <span class="spectrum-SideNav-link-label"> Section 3</span>
                 </a>
               </li>
               <li class="spectrum-SideNav-item">
                 <a href="#" class="spectrum-SideNav-itemLink">
-                  <span class="spectrum-SideNav-itemLink-text"> Section 4</span>
+                  <span class="spectrum-SideNav-link-label"> Section 4</span>
                 </a>
               </li>
             </ul>
@@ -201,20 +137,88 @@ examples:
             <ul class="spectrum-SideNav" aria-labelledby="nav-heading-category-2">
               <li class="spectrum-SideNav-item">
                 <a href="#" class="spectrum-SideNav-itemLink">
-                  <span class="spectrum-SideNav-itemLink-text"> Section 5</span>
+                  <span class="spectrum-SideNav-link-label"> Section 5</span>
                 </a>
               </li>
               <li class="spectrum-SideNav-item">
                 <a href="#" class="spectrum-SideNav-itemLink">
-                  <span class="spectrum-SideNav-itemLink-text"> Section 6</span>
+                  <span class="spectrum-SideNav-link-label"> Section 6</span>
                 </a>
               </li>
               <li class="spectrum-SideNav-item">
                 <a href="#" class="spectrum-SideNav-itemLink">
-                  <span class="spectrum-SideNav-itemLink-text"> Section 7</span>
+                  <span class="spectrum-SideNav-link-label"> Section 7</span>
                 </a>
               </li>
             </ul>
+          </li>
+        </ul>
+      </nav>
+  - id: sidenav
+    name: Icon
+    description: In multi-level side navigation, only the first-level items can have icons. Any sub-level items should always be text-only to ensure clear hierarchy. In cases where the navigation content might be user-generated, stick to text-only navigation items.
+    markup: |
+      <nav>
+        <ul class="spectrum-SideNav spectrum-SideNav--multiLevel spectrum-SideNav--hasIcon">
+          <li class="spectrum-SideNav-item">
+            <a href="#" class="spectrum-SideNav-itemLink">
+              <svg class="spectrum-Icon spectrum-SideNav-itemIcon" focusable="false" aria-hidden="true">
+                <use xlink:href="#spectrum-icon-18-Image" />
+              </svg>
+              <span class="spectrum-SideNav-link-label"> Section Title 2</span>
+            </a>
+          </li>
+          <li class="spectrum-SideNav-item">
+            <a href="#" class="spectrum-SideNav-itemLink">
+              <svg class="spectrum-Icon spectrum-SideNav-itemIcon" focusable="false" aria-hidden="true">
+                <use xlink:href="#spectrum-icon-18-Folder" />
+              </svg>
+              <span class="spectrum-SideNav-link-label"> Section Title 2</span>
+            </a>
+            <ul class="spectrum-SideNav">
+              <li class="spectrum-SideNav-item">
+                <a href="#" class="spectrum-SideNav-itemLink">
+                  <span class="spectrum-SideNav-link-label"> Section Title 1</span>
+                </a>
+              </li>
+              <li class="spectrum-SideNav-item">
+                <a href="#" class="spectrum-SideNav-itemLink">
+                  <span class="spectrum-SideNav-link-label"> Section Title 2</span>
+                </a>
+                <ul class="spectrum-SideNav">
+                  <li class="spectrum-SideNav-item">
+                    <a href="#" class="spectrum-SideNav-itemLink">
+                      <span class="spectrum-SideNav-link-label"> Section Title 1</span>
+                    </a>
+                  </li>
+                  <li class="spectrum-SideNav-item">
+                    <a href="#" class="spectrum-SideNav-itemLink">
+                      <span class="spectrum-SideNav-link-label"> Section Title 2</span>
+                    </a>
+                  </li>
+                </ul>
+              <li class="spectrum-SideNav-item">
+                <a href="#" class="spectrum-SideNav-itemLink">
+                  <span class="spectrum-SideNav-link-label"> Section Title 3</span>
+                </a>
+              </li>
+            </ul>
+          </li>
+          <li class="spectrum-SideNav-item">
+            <a href="#" class="spectrum-SideNav-itemLink">
+              <svg class="spectrum-Icon spectrum-SideNav-itemIcon" focusable="false" aria-hidden="true">
+                <use xlink:href="#spectrum-icon-18-Star" />
+              </svg>
+              <span class="spectrum-SideNav-link-label"> Section Title 4</span>
+            </a>
+          </li>
+          <li class="spectrum-SideNav-item">
+            <a href="#" class="spectrum-SideNav-itemLink">
+              <svg class="spectrum-Icon spectrum-SideNav-itemIcon" focusable="false" aria-hidden="true">
+                <use xlink:href="#spectrum-icon-18-Document" />
+              </svg>
+              <span class="spectrum-SideNav-link-label"> Section Title 5</span>
+            </a>
           </li>
         </ul>
       </nav>

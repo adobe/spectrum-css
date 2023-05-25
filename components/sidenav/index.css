@@ -38,6 +38,9 @@ governing permissions and limitations under the License.
   --spectrum-sidenav-focus-ring-color: var(--spectrum-focus-indicator-color);
 
   /* color - background */
+  --spectrum-sidenav-background-disabled: transparent;
+
+  --spectrum-sidenav-background-default: transparent;
   --spectrum-sidenav-background-hover: var(--spectrum-gray-200);
   --spectrum-sidenav-item-background-down: var(--spectrum-gray-300);
   --spectrum-sidenav-background-key-focus: var(--spectrum-gray-200);
@@ -53,7 +56,7 @@ governing permissions and limitations under the License.
   --spectrum-sidenav-header-font-color: var(--spectrum-gray-900);
   --spectrum-sidenav-header-color: var(--spectrum-gray-900); /* this needs to be named better */
 
-  --spectrum-sidenav-label-and-icon-disabled-color: var(--spectrum-disabled-content-color);
+  --spectrum-sidenav-content-disabled-color: var(--spectrum-disabled-content-color);
 
   --spectrum-sidenav-content-color-default: var(--spectrum-neutral-content-color-default);
   --spectrum-sidenav-content-color-hover: var(--spectrum-neutral-content-color-hover);
@@ -172,18 +175,6 @@ governing permissions and limitations under the License.
   transition: background-color var(--spectrum-animation-duration-100) ease-out,
     color var(--spectrum-animation-duration-100) ease-out;
 
-  &:before {
-    content: '';
-    position: absolute;
-    inset: 0;
-    pointer-events: none;
-
-    border: var(--spectrum-sidenav-focus-ring-size) solid transparent;
-    /* border-radius: var(--spectrum-sidenav-item-border-radius);*/
-
-    transition: border var(--spectrum-animation-duration-100) ease-out;
-  }
-
   /* use passthrough custom props */
   .spectrum-SideNav-itemIcon {
     inline-size: var(--spectrum-sidenav-icon-size);
@@ -193,7 +184,7 @@ governing permissions and limitations under the License.
     margin-block-start: var(--spectrum-sidenav-top-to-icon);
   }
 
-  .spectrum-SideNav-itemLink-text {
+  .spectrum-SideNav-link-label {
     margin-block-start: var(--spectrum-sidenav-top-to-label);
     margin-block-end: var(--spectrum-sidenav-bottom-to-label);
   }
