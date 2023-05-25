@@ -30,11 +30,6 @@ examples:
               <span class="spectrum-SideNav-link-label">Section Title 3</span>
             </a>
           </li>
-          <li class="spectrum-SideNav-item">
-            <a href="#" class="spectrum-SideNav-itemLink">
-              <span class="spectrum-SideNav-link-label">Section Title 1</span>
-            </a>
-          </li>
         </ul>
       </nav>
   - id: sidenav
@@ -212,8 +207,8 @@ examples:
               <span class="spectrum-SideNav-link-label"> Section Title 4</span>
             </a>
           </li>
-          <li class="spectrum-SideNav-item">
-            <a href="#" class="spectrum-SideNav-itemLink">
+          <li class="spectrum-SideNav-item is-disabled">
+            <a class="spectrum-SideNav-itemLink">
               <svg class="spectrum-Icon spectrum-SideNav-itemIcon" focusable="false" aria-hidden="true">
                 <use xlink:href="#spectrum-icon-18-Document" />
               </svg>
