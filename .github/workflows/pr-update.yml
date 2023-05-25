@@ -1,0 +1,16 @@
+name: Update PRs
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  autoupdate:
+    name: Auto-update PRs
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+      - uses: maxkomarychev/pr-updater-action@v1.0.1
+        with:
+          token: ${{ secrets.GITHUB_TOKEN }}
