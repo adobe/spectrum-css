@@ -68,6 +68,14 @@ governing permissions and limitations under the License.
   --spectrum-accordion-focus-indicator-color: var(--spectrum-focus-indicator-color);
   /* Divider */
   --spectrum-accordion-divider-color: var(--spectrum-gray-300);
+  --spectrum-accordion-min-block-size: max(
+  var(--mod-accordion-item-height, var(--spectrum-accordion-item-height)),
+  calc(
+    var(--mod-accordion-item-header-top-to-text-space, var(--spectrum-accordion-item-header-top-to-text-space)) +
+    var(--mod-accordion-item-header-bottom-to-text-space, var(--spectrum-accordion-item-header-bottom-to-text-space)) +
+    (var(--mod-accordion-item-header-font-size, var(--spectrum-accordion-item-header-font-size)) * var(--mod-accordion-item-header-line-height, var(--spectrum-accordion-item-header-line-height)))
+  )
+);
 }
 
 .spectrum-Accordion--compact {
@@ -201,8 +209,9 @@ governing permissions and limitations under the License.
   align-items: center;
   color: var(--mod-accordion-item-header-color-default, var(--spectrum-accordion-item-header-color-default));
   position: absolute;
-  inset-block-start: 0;
-  padding-top: calc(var(--mod-accordion-item-header-top-to-text-space, var(--spectrum-accordion-item-header-top-to-text-space)) - var(--mod-accordion-disclosure-indicator-height, var(--spectrum-accordion-disclosure-indicator-height)) / 10);
+  inset-block-start: max(0px, calc((var(--mod-accordion-min-block-size, 
+    var(--spectrum-accordion-min-block-size)) - var(--mod-accordion-disclosure-indicator-height, var(--spectrum-accordion-disclosure-indicator-height))) / 2)
+  );
 }
 
 .spectrum-Accordion-itemHeader {
@@ -219,10 +228,8 @@ governing permissions and limitations under the License.
     var(--mod-accordion-disclosure-indicator-height, var(--spectrum-accordion-disclosure-indicator-height))
   );
 
-  min-block-size: calc(
-    100% -
-    var(--mod-accordion-component-edge-to-text, var(--spectrum-accordion-component-edge-to-text))
-  );
+  min-block-size: var(--mod-accordion-min-block-size, 
+  var(--spectrum-accordion-min-block-size));
   line-height: var(--mod-accordion-item-header-line-height, var(--spectrum-accordion-item-header-line-height));
 
   text-overflow: ellipsis;
