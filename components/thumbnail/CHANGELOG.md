@@ -3,6 +3,18 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+<a name="3.0.8"></a>
+## 3.0.8
+🗓 2023-05-25 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/thumbnail@3.0.7...@spectrum-css/thumbnail@3.0.8)
+
+### 🐛 Bug fixes
+
+* **thumbnail:** border in high contrast mode ([#1881](https://github.com/adobe/spectrum-css/issues/1881)) ([6b0ba5c](https://github.com/adobe/spectrum-css/commit/6b0ba5c))
+
+
+
+
+
 <a name="3.0.7"></a>
 ## 3.0.7
 🗓 2023-05-23 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/thumbnail@3.0.6...@spectrum-css/thumbnail@3.0.7)
