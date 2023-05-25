@@ -210,7 +210,7 @@ governing permissions and limitations under the License.
 
   &:focus,
   &.focus-ring {
-    ouline-style: solid;
+    outline-style: solid;
     outline-width: var(--spectrum-sidenav-focus-ring-size);
     outline-offset: var(--spectrum-sidenav-focus-ring-gap);
     outline-color: var(--spectrum-sidenav-focus-ring-color);
