@@ -11,6 +11,9 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v3
-      - uses: maxkomarychev/pr-updater-action@v1.0.1
+      - uses: castastrophe/actions-pr-auto-update@v1
         with:
           token: ${{ secrets.GITHUB_TOKEN }}
+          include_drafts: false
+          limit: 50
+          exclude_labels: blocked,wip
