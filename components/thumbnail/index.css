@@ -15,8 +15,8 @@ governing permissions and limitations under the License.
 
   --spectrum-thumbnail-border-radius: var(--spectrum-corner-radius-75);
   --spectrum-thumbnail-border-width: var(--spectrum-border-width-100);
-  --spectrum-thumbnail-border-color-rgb: var(--spectrum-gray-800-rgb); /* TODO: using nested value for rgba() replace with --spectrum-thumbnail-border-color */
-  --spectrum-thumbnail-border-color-opacity: var(--spectrum-thumbnail-border-opacity);
+  /* @todo Refactor with --spectrum-thumbnail-border-color once gray rgb token is no longer necessary to workaround nested rgb color token value using rgba(). */
+  --spectrum-thumbnail-border-color-rgba: rgba(var(--spectrum-gray-800-rgb), var(--spectrum-thumbnail-border-color-opacity));
 
   --spectrum-thumbnail-layer-border-width-inner: var(--spectrum-border-width-400);
   --spectrum-thumbnail-layer-border-color-inner: var(--spectrum-white);
@@ -34,7 +34,7 @@ governing permissions and limitations under the License.
 
   --spectrum-thumbnail-checkerboard-size: var(--spectrum-opacity-checkerboard-square-size);
   --spectrum-thumbnail-checkerboard-dark-color: var(--spectrum-opacity-checkerboard-square-dark);
-  --spectrum-thumbnail-checkerboard-light-color: var(--spectrum-opacity-checkerboard-square-light)
+  --spectrum-thumbnail-checkerboard-light-color: var(--spectrum-opacity-checkerboard-square-light);
 }
 
 .spectrum-Thumbnail--size50 {
@@ -99,14 +99,14 @@ governing permissions and limitations under the License.
     repeating-conic-gradient(var(--mod-thumbnail-checkerboard-light-color, var(--spectrum-thumbnail-checkerboard-light-color)) 0% 25%, var(--mod-thumbnail-checkerboard-dark-color, var(--spectrum-thumbnail-checkerboard-dark-color)) 0% 50%)
     left top / calc(var(--mod-thumbnail-checkerboard-size, var(--spectrum-thumbnail-checkerboard-size)) * 2) calc(var(--mod-thumbnail-checkerboard-size, var(--spectrum-thumbnail-checkerboard-size)) * 2);
 
-  &:before {
+  &::before {
     content: '';
     z-index: 2;
     position: absolute;
     inline-size: 100%;
     block-size: 100%;
     border-radius: var(--mod-thumbnail-border-radius, var(--spectrum-thumbnail-border-radius));
-    box-shadow: inset 0 0 0 var(--mod-thumbnail-border-width, var(--spectrum-thumbnail-border-width))  rgba(var(--mod-thumbnail-border-color-rgb, var(--spectrum-thumbnail-border-color-rgb)),  var(--mod-thumbnail-border-color-opacity, var(--spectrum-thumbnail-border-color-opacity)));
+    box-shadow: inset 0 0 0 var(--mod-thumbnail-border-width, var(--spectrum-thumbnail-border-width)) var(--highcontrast-thumbnail-border-color, var(--mod-thumbnail-border-color, var(--spectrum-thumbnail-border-color-rgba)));
   }
 
   &.is-disabled {
@@ -116,7 +116,7 @@ governing permissions and limitations under the License.
   &.is-focused,
   &:focus-ring {
     overflow: visible;
-    &:after {
+    &::after {
       content: "";
       border-style: solid;
       border-width: var(--mod-thumbnail-focus-indicator-thickness, var(--spectrum-thumbnail-focus-indicator-thickness));
@@ -148,12 +148,12 @@ governing permissions and limitations under the License.
   align-items: center;
   justify-content: center;
 
-  &:before {
+  &::before {
     content: none;
   }
 
   &.is-selected {
-    outline: solid;
+    outline-style: solid;
     outline-color: var(--highcontrast-thumbnail-border-color-selected, var(--mod-thumbnail-border-color-selected, var(--spectrum-thumbnail-border-color-selected)));
     outline-width: var(--mod-thumbnail-border-width-selected, var(--spectrum-thumbnail-border-width-selected));
     outline-offset: calc(var(--mod-thumbnail-border-width-selected, var(--spectrum-thumbnail-border-width-selected)) - var(--mod-thumbnail-layer-border-width-inner, var(--spectrum-thumbnail-layer-border-width-inner)))
@@ -168,7 +168,7 @@ governing permissions and limitations under the License.
   inline-size: calc(var(--spectrum-thumbnail-size) - ((var(--mod-thumbnail-layer-border-width-inner, var(--spectrum-thumbnail-layer-border-width-inner)))) * 2);
   block-size: calc(var(--spectrum-thumbnail-size) - ((var(--mod-thumbnail-layer-border-width-inner, var(--spectrum-thumbnail-layer-border-width-inner)))) * 2);
 
-  outline: solid;
+  outline-style: solid;
   outline-color: var(--mod-thumbnail-layer-border-color-inner, var(--spectrum-thumbnail-layer-border-color-inner));
   outline-width: calc(var(--mod-thumbnail-layer-border-width-inner, var(--spectrum-thumbnail-layer-border-width-inner)) - var(--mod-thumbnail-layer-border-width-outer, var(--spectrum-thumbnail-layer-border-width-outer)));
 }
@@ -213,10 +213,14 @@ governing permissions and limitations under the License.
 
 /* Windows High Contrast Mode */
 @media (forced-colors: active) {
-  .is-selected {
+  .spectrum-Thumbnail {
+    /* Allow checkerboard pattern to be visible. */
+    forced-color-adjust: none;
+
     --highcontrast-thumbnail-border-color-selected: SelectedItem;
-  }
-  .is-focused {
     --highcontrast-thumbnail-focus-indicator-color: Highlight;
+    --highcontrast-thumbnail-border-color: CanvasText;
+    background-color: Canvas;
+    color: CanvasText;
   }
 }

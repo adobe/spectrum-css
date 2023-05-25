@@ -1,7 +1,6 @@
 | Modifiable Custom Properties |
 | --- |
-| `--mod-thumbnail-border-color-opacity` |
-| `--mod-thumbnail-border-color-rgb` |
+| `--mod-thumbnail-border-color` |
 | `--mod-thumbnail-border-color-selected` |
 | `--mod-thumbnail-border-radius` |
 | `--mod-thumbnail-border-width` |
