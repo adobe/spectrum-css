@@ -35,3 +35,4 @@
 | `--mod-accordion-item-header-top-to-text-space` |
 | `--mod-accordion-item-height` |
 | `--mod-accordion-item-width` |
+| `--mod-accordion-min-block-size` |
