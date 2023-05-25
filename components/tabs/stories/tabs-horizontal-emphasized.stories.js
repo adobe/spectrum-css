@@ -3,7 +3,7 @@ import { Template } from "./template";
 import * as Data from "./tabs.mockdata";
 
 export default {
-  title: "Components/Tabs/Horizontal",
+  title: "Components/Tabs/Horizontal/Emphasized",
   description: "Tabs organize content into multiple sections and allow users to navigate between them. The content under the set of tabs should be related and form a coherent unit.",
   component: "Tabs",
   argTypes: {
@@ -54,7 +54,7 @@ export default {
     size: "m",
     orientation: "horizontal",
     isQuiet: false,
-    isEmphasized: false,
+    isEmphasized: true,
     isCompact: false,
   },
   parameters: {
@@ -69,6 +69,7 @@ export default {
 
 export const Default = Template.bind({});
 Default.args = {
+  isEmphasized: true,
   selectorStyle: {
     "width": "35px",
   },   
@@ -77,6 +78,7 @@ Default.args = {
 
 export const WithIcon = Template.bind({});
 WithIcon.args = {
+  isEmphasized: true,
   selectorStyle: {
     "width": "60px",
   },   
@@ -85,8 +87,10 @@ WithIcon.args = {
 
 export const IconOnly = Template.bind({});
 IconOnly.args = {
+  isEmphasized: true,
   selectorStyle: {
     "width": "20px",
   }, 
   items: Data.itemsIconOnly
 };
+

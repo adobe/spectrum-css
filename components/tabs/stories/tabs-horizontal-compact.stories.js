@@ -3,8 +3,8 @@ import { Template } from "./template";
 import * as Data from "./tabs.mockdata";
 
 export default {
-  title: "Components/Tabs/Horizontal",
-  description: "Tabs organize content into multiple sections and allow users to navigate between them. The content under the set of tabs should be related and form a coherent unit.",
+  title: "Components/Tabs/Horizontal/Quiet/Compact",
+  description: "Tabs organize content into multiple sections and allow users to navigate between them. The content under the set of tabs should be related and form a coherent unit. Compact must be used with quiet.",
   component: "Tabs",
   argTypes: {
     items: { table: { disable: true }},
@@ -20,15 +20,7 @@ export default {
       control: "select"
     },
     orientation: { table: { disable: true }},
-    isQuiet: {
-      name: "Quiet",
-      type: { name: "boolean" },
-      table: {
-        type: { summary: "boolean" },
-        category: "State",
-      },
-      control: "boolean",
-    },
+    isQuiet: { table: { disable: true }},
     isEmphasized: {
       name: "Emphasized",
       type: { name: "boolean" },
@@ -38,24 +30,15 @@ export default {
       },
       control: "boolean",
     },
-    isCompact: {
-      name: "Compact",
-      type: { name: "boolean" },
-      table: {
-        type: { summary: "boolean" },
-        category: "State",
-      },
-      control: "boolean",
-      if: { arg: 'isQuiet', truthy: true },
-    },
+    isCompact: { table: { disable: true }},
   },
   args: {
     rootClass: "spectrum-Tabs",
     size: "m",
     orientation: "horizontal",
-    isQuiet: false,
+    isQuiet: true,
     isEmphasized: false,
-    isCompact: false,
+    isCompact: true,
   },
   parameters: {
     actions: {
@@ -69,6 +52,8 @@ export default {
 
 export const Default = Template.bind({});
 Default.args = {
+  isQuiet: true,
+  isCompact: true,
   selectorStyle: {
     "width": "35px",
   },   
@@ -77,6 +62,8 @@ Default.args = {
 
 export const WithIcon = Template.bind({});
 WithIcon.args = {
+  isQuiet: true,
+  isCompact: true,
   selectorStyle: {
     "width": "60px",
   },   
@@ -85,6 +72,41 @@ WithIcon.args = {
 
 export const IconOnly = Template.bind({});
 IconOnly.args = {
+  isQuiet: true,
+  isCompact: true,
+  selectorStyle: {
+    "width": "20px",
+  }, 
+  items: Data.itemsIconOnly
+};
+
+export const CompactEmphasized = Template.bind({});
+CompactEmphasized.args = {
+  isQuiet: true,
+  isCompact: true,
+  isEmphasized: true,
+  selectorStyle: {
+    "width": "35px",
+  }, 
+  items: Data.items
+};
+
+export const CompactEmphasizedWithIcons = Template.bind({});
+CompactEmphasizedWithIcons.args = {
+  isQuiet: true,
+  isCompact: true,
+  isEmphasized: true,
+  selectorStyle: {
+    "width": "60px",
+  }, 
+  items: Data.itemsWithIcons
+};
+
+export const CompactEmphasizedIconOnly = Template.bind({});
+CompactEmphasizedIconOnly.args = {
+  isQuiet: true,
+  isCompact: true,
+  isEmphasized: true,
   selectorStyle: {
     "width": "20px",
   }, 

@@ -9,28 +9,17 @@ import { Template as Icon } from "@spectrum-css/icon/stories/template.js";
 import "../index.css";
 
 export const Template = ({
-	rootClass = "spectrum-Tabs",
-	customClasses = [],
-	size = "m",
-	orientation = "horizontal",
-	isQuiet,
-	isEmphasized,
-	isCompact,
-	items,
-	selectorStyle,
-	style = {
-		"--spectrum-tabs-textonly-tabitem-selection-indicator-background-color-selected":
-			"rgb(0,0,0)",
-		"--spectrum-tabs-quiet-textonly-tabitem-selection-indicator-background-color-selected":
-			"rgb(0,0,0)",
-		"--spectrum-tabs-emphasized-texticon-tabitem-text-color-selected":
-			"rgb(27,127,245)",
-		"--spectrum-tabs-emphasized-texticon-tabitem-selection-indicator-background-color-selected":
-			"rgb(27,127,245)",
-		"--spectrum-tabs-textonly-divider-background-color":
-			"rgba(225,225,225,0.8)",
-	},
-	...globals
+  rootClass = "spectrum-Tabs",
+  customClasses = [],
+  size = "m",
+  orientation = "horizontal",
+  isQuiet,
+  isEmphasized,
+  isCompact,
+  items,
+  selectorStyle = {},
+  style = {},
+  ...globals
 }) => {
 	return html`
 		<div

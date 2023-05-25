@@ -189,6 +189,7 @@ governing permissions and limitations under the License.
   .spectrum-Icon {
     /* Vertical centering */
     block-size: var(--mod-tabs-icon-size, var(--spectrum-tabs-icon-size));
+    inline-size: var(--mod-tabs-icon-size, var(--spectrum-tabs-icon-size));
     margin-block-start: var(--mod-tabs-top-to-icon, var(--spectrum-tabs-top-to-icon));
 
     & + .spectrum-Tabs-itemLabel {

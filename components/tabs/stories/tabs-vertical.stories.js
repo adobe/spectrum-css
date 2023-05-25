@@ -3,7 +3,7 @@ import { Template } from "./template";
 import * as Data from "./tabs.mockdata";
 
 export default {
-  title: "Components/Tabs/Horizontal",
+  title: "Components/Tabs/Vertical",
   description: "Tabs organize content into multiple sections and allow users to navigate between them. The content under the set of tabs should be related and form a coherent unit.",
   component: "Tabs",
   argTypes: {
@@ -69,24 +69,21 @@ export default {
 
 export const Default = Template.bind({});
 Default.args = {
+  orientation: "vertical",
   selectorStyle: {
-    "width": "35px",
-  },   
+    "height": "46px",
+    "top": "0"
+  }, 
   items: Data.items
 };
 
 export const WithIcon = Template.bind({});
 WithIcon.args = {
+  orientation: "vertical",
   selectorStyle: {
-    "width": "60px",
-  },   
+    "height": "46px",
+    "top": "0"
+  }, 
   items: Data.itemsWithIcons
 };
 
-export const IconOnly = Template.bind({});
-IconOnly.args = {
-  selectorStyle: {
-    "width": "20px",
-  }, 
-  items: Data.itemsIconOnly
-};
