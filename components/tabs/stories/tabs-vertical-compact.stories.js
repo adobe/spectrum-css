@@ -3,7 +3,7 @@ import { Template } from "./template";
 import * as Data from "./tabs.mockdata";
 
 export default {
-  title: "Components/Tabs/Vertical",
+  title: "Components/Tabs/Vertical/Compact",
   description: "Tabs organize content into multiple sections and allow users to navigate between them. The content under the set of tabs should be related and form a coherent unit.",
   component: "Tabs",
   argTypes: {
@@ -20,15 +20,7 @@ export default {
       control: "select"
     },
     orientation: { table: { disable: true }},
-    isQuiet: {
-      name: "Quiet",
-      type: { name: "boolean" },
-      table: {
-        type: { summary: "boolean" },
-        category: "State",
-      },
-      control: "boolean",
-    },
+    isQuiet: { table: { disable: true }},
     isEmphasized: {
       name: "Emphasized",
       type: { name: "boolean" },
@@ -38,16 +30,7 @@ export default {
       },
       control: "boolean",
     },
-    isCompact: {
-      name: "Compact",
-      type: { name: "boolean" },
-      table: {
-        type: { summary: "boolean" },
-        category: "State",
-      },
-      control: "boolean",
-      if: { arg: 'isQuiet', truthy: true },
-    },
+    isCompact: { table: { disable: true }},
   },
   args: {
     rootClass: "spectrum-Tabs",
@@ -55,7 +38,7 @@ export default {
     orientation: "vertical",
     isQuiet: false,
     isEmphasized: false,
-    isCompact: false,
+    isCompact: true,
   },
   parameters: {
     actions: {
@@ -70,8 +53,9 @@ export default {
 export const Default = Template.bind({});
 Default.args = {
   orientation: "vertical",
+  isCompact: true,
   selectorStyle: {
-    "height": "46px",
+    "height": "32px",
     "top": "0"
   }, 
   items: Data.items
@@ -80,10 +64,23 @@ Default.args = {
 export const WithIcon = Template.bind({});
 WithIcon.args = {
   orientation: "vertical",
+  isCompact: true,
   selectorStyle: {
-    "height": "46px",
+    "height": "32px",
     "top": "0"
   }, 
   items: Data.itemsWithIcons
+};
+
+export const CompactEmphasized = Template.bind({});
+CompactEmphasized.args = {
+  orientation: "vertical",
+  isCompact: true,
+  isEmphasized: true,
+  selectorStyle: {
+    "height": "32px",
+    "top": "0"
+  }, 
+  items: Data.items
 };
 

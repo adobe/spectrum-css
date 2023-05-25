@@ -3,7 +3,7 @@ import { Template } from "./template";
 import * as Data from "./tabs.mockdata";
 
 export default {
-  title: "Components/Tabs/Vertical",
+  title: "Components/Tabs/Vertical/Emphasized",
   description: "Tabs organize content into multiple sections and allow users to navigate between them. The content under the set of tabs should be related and form a coherent unit.",
   component: "Tabs",
   argTypes: {
@@ -29,15 +29,7 @@ export default {
       },
       control: "boolean",
     },
-    isEmphasized: {
-      name: "Emphasized",
-      type: { name: "boolean" },
-      table: {
-        type: { summary: "boolean" },
-        category: "State",
-      },
-      control: "boolean",
-    },
+    isEmphasized: { table: { disable: true }},
     isCompact: {
       name: "Compact",
       type: { name: "boolean" },
@@ -54,7 +46,7 @@ export default {
     size: "m",
     orientation: "vertical",
     isQuiet: false,
-    isEmphasized: false,
+    isEmphasized: true,
     isCompact: false,
   },
   parameters: {
@@ -70,6 +62,7 @@ export default {
 export const Default = Template.bind({});
 Default.args = {
   orientation: "vertical",
+  isEmphasized: true,
   selectorStyle: {
     "height": "46px",
     "top": "0"
@@ -80,6 +73,7 @@ Default.args = {
 export const WithIcon = Template.bind({});
 WithIcon.args = {
   orientation: "vertical",
+  isEmphasized: true,
   selectorStyle: {
     "height": "46px",
     "top": "0"

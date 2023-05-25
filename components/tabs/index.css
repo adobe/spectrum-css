@@ -50,7 +50,7 @@ governing permissions and limitations under the License.
   --spectrum-tabs-animation-duration: var(--spectrum-animation-duration-100);
   --spectrum-tabs-animation-ease: var(--spectrum-animation-ease-in-out);
   
-  &--quiet {
+  &.spectrum-Tabs--quiet:not(.spectrum-Tabs--vertical) {
     --mod-tabs-start-to-edge: var(--mod-tabs-start-to-edge--quiet, var(--spectrum-tab-item-start-to-edge-quiet));
   }
 }

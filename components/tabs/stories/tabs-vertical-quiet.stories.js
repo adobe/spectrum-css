@@ -3,7 +3,7 @@ import { Template } from "./template";
 import * as Data from "./tabs.mockdata";
 
 export default {
-  title: "Components/Tabs/Vertical",
+  title: "Components/Tabs/Vertical/Quiet",
   description: "Tabs organize content into multiple sections and allow users to navigate between them. The content under the set of tabs should be related and form a coherent unit.",
   component: "Tabs",
   argTypes: {
@@ -20,15 +20,7 @@ export default {
       control: "select"
     },
     orientation: { table: { disable: true }},
-    isQuiet: {
-      name: "Quiet",
-      type: { name: "boolean" },
-      table: {
-        type: { summary: "boolean" },
-        category: "State",
-      },
-      control: "boolean",
-    },
+    isQuiet: { table: { disable: true }},
     isEmphasized: {
       name: "Emphasized",
       type: { name: "boolean" },
@@ -46,14 +38,13 @@ export default {
         category: "State",
       },
       control: "boolean",
-      if: { arg: 'isQuiet', truthy: true },
     },
   },
   args: {
     rootClass: "spectrum-Tabs",
     size: "m",
     orientation: "vertical",
-    isQuiet: false,
+    isQuiet: true,
     isEmphasized: false,
     isCompact: false,
   },
@@ -70,6 +61,7 @@ export default {
 export const Default = Template.bind({});
 Default.args = {
   orientation: "vertical",
+  isQuiet: true,
   selectorStyle: {
     "height": "46px",
     "top": "0"
@@ -80,6 +72,7 @@ Default.args = {
 export const WithIcon = Template.bind({});
 WithIcon.args = {
   orientation: "vertical",
+  isQuiet: true,
   selectorStyle: {
     "height": "46px",
     "top": "0"
