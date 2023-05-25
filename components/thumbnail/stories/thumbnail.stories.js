@@ -84,6 +84,7 @@ export default {
         category: "State",
       },
       control: "boolean",
+      if: { arg: 'isLayer' }
     },
   },
   args: {
