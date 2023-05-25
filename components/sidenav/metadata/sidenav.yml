@@ -1,9 +1,17 @@
 name: Side navigation
 status: Verified
 SpectrumSiteSlug: https://spectrum.adobe.com/page/side-navigation/
+description: |
+  Side navigation lets users navigate the entire content of a product or a section. Make sure to use the right variant for the context and user needs. Don’t mix behavior, styles, or variations together in a single navigation menu.
+sections:
+  - name: Migration Guide
+    description: |
+      Migration Guide
+
 examples:
   - id: sidenav
     name: Standard
+    description: When navigation is simple use the standard or single level navigation.
     markup: |
       <nav>
         <ul class="spectrum-SideNav">
