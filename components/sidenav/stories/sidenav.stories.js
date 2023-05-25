@@ -84,28 +84,42 @@ Multilevel.args = {
 
 export const WithIcon = Template.bind({});
 WithIcon.args = {
-	items: [
-		{
-			id: "1",
-			title: "Section Title 1",
-			link: "#",
-			isSelected: true,
-			icon: "Star",
-		},
-		{
-			id: "2",
-			title: "Section Title 2",
-			link: "#",
-			isDisabled: true,
-			icon: "Star",
-		},
-		{
-			id: "3",
-			title: "Section Title 3",
-			link: "#",
-			icon: "Star",
-		},
-	],
+  variant: "multiLevel",
+  items: [
+    {
+      id: "1",
+      icon: "Image",
+      title: "Section Title 1",
+      link: "#",
+      isSelected: true,
+
+    },
+    {
+      id: "2",
+      icon: "Folder",
+      title: "Section Title 2",
+      link: "#",
+      subitems: [
+        {
+          id: "sub1",
+          title: "Section Title 1",
+          link: "#",
+        },
+        {
+          id: "sub2",
+          title: "Section Title 2",
+          link: "#",
+        },
+      ]
+
+    },
+    {
+      id: "3",
+      title: "Section Title 3",
+      link: "#",
+      icon: "Star"
+    },
+  ]
 };
 
 export const WithHeading = Template.bind({});
