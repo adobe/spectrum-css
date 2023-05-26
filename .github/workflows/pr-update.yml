@@ -19,3 +19,5 @@ jobs:
           include_drafts: false
           limit: 50
           exclude_labels: blocked,wip
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
