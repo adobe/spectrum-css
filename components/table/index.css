@@ -51,10 +51,14 @@ governing permissions and limitations under the License.
   --spectrum-table-row-text-color: var(--spectrum-neutral-content-color-default);
 
   /* ----- *
-  @todo Refactor or remove these 3 properties once the RGB stripped value is available. */
+  @todo Refactor or remove these properties once the RGB stripped value is available. */
   --spectrum-table-selected-row-background-color: rgba(var(--spectrum-blue-900-rgb), var(--spectrum-table-selected-row-background-opacity));
   --spectrum-table-selected-row-background-color-non-emphasized: rgba(var(--spectrum-gray-700-rgb), var(--spectrum-table-selected-row-background-opacity-non-emphasized));
   --spectrum-table-row-hover-color: rgba(var(--spectrum-gray-900-rgb), var(--spectrum-table-row-hover-opacity));
+
+  --spectrum-table-row-active-color: rgba(var(--spectrum-gray-900-rgb), 0.1);  /* WIP: awaiting token for opacity */
+  --spectrum-table-selected-row-background-color-focus: rgba(var(--spectrum-blue-900-rgb), 0.15); /* WIP: awaiting token for opacity */
+  --spectrum-table-selected-row-background-color-non-emphasized-focus: rgba(var(--spectrum-gray-700-rgb), 0.15);  /* WIP: awaiting token for opacity */
   /* ----- */
 
   --spectrum-table-icon-color: var(--spectrum-neutral-subdued-content-color-default);
@@ -543,15 +547,27 @@ governing permissions and limitations under the License.
   }
 
   &:active {
-    background-color: var(--mod-table-row-hover-color, var(--spectrum-table-row-hover-color));
+    background-color: var(--mod-table-row-active-color, var(--spectrum-table-row-active-color));
   }
 
   &.is-selected {
     background-color: var(--highcontrast-table-selected-row-background-color, var(--mod-table-selected-row-background-color-non-emphasized, var(--spectrum-table-selected-row-background-color-non-emphasized)));
 
+    &:hover,
+    &:focus-visible,
+    &.is-focused {
+      background-color: var(--highcontrast-table-selected-row-background-color-non-emphasized-focus, var(--mod-table-selected-row-background-color-non-emphasized-focus, var(--spectrum-table-selected-row-background-color-non-emphasized-focus)));
+    }
+
     .spectrum-Table.spectrum-Table--emphasized &,
     &.spectrum-Table-row--emphasized {
       background-color: var(--highcontrast-table-selected-row-background-color, var(--mod-table-selected-row-background-color, var(--spectrum-table-selected-row-background-color)));
+
+      &:hover,
+      &:focus-visible,
+      &.is-focused {
+        background-color: var(--highcontrast-table-selected-row-background-color-focus, var(--mod-table-selected-row-background-color-focus, var(--spectrum-table-selected-row-background-color-focus)));
+      }
     }
   }
 
