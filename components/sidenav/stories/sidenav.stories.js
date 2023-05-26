@@ -50,36 +50,53 @@ Default.args = {
 
 export const Multilevel = Template.bind({});
 Multilevel.args = {
-	variant: "multiLevel",
-	items: [
-		{
-			id: "1",
-			title: "Section Title 1",
-			link: "#",
-		},
-		{
-			id: "2",
-			title: "Section Title 2",
-			link: "#",
-			subitems: [
-				{
-					id: "sub1",
-					title: "Section Title 1",
-					link: "#",
-				},
-				{
-					id: "sub2",
-					title: "Section Title 2",
-					link: "#",
-				},
-			],
-		},
-		{
-			id: "3",
-			title: "Section Title 3",
-			link: "#",
-		},
-	],
+  variant: "multiLevel",
+  items: [
+    {
+      id: "1",
+      title: "Section Title 1",
+      link: "#",
+    },
+    {
+      id: "2",
+      title: "Section Title 2",
+      link: "#",
+      subitems: [
+        {
+          id: "2.1",
+          title: "Section Title 1",
+          link: "#",
+        },
+        {
+          id: "2.2",
+          title: "Section Title 2",
+          link: "#",
+          secondlevelsubitems: [
+            {
+              id: "3.1",
+              title: "Section Title 1",
+              link: "#",
+            },
+            {
+              id: "3.2",
+              title: "Section Title 2",
+              link: "#",
+            },
+            {
+              id: "3.3",
+              title: "Section Title 3",
+              link: "#",
+            },
+          ]
+        },
+      ]
+    },
+    {
+      id: "3",
+      title: "Section Title 3",
+      link: "#",
+    },
+  ]
 };
 
 export const WithIcon = Template.bind({});
@@ -107,7 +124,7 @@ WithIcon.args = {
         },
         {
           id: "sub2",
-          title: "Section Title 2",
+          title: "Section Title 2 ",
           link: "#",
         },
       ]
