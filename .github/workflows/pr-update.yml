@@ -9,6 +9,9 @@ jobs:
   autoupdate:
     name: Auto-update PRs
     runs-on: ubuntu-latest
+    permissions:
+      contents: read
+      pull-requests: write
     steps:
       - uses: actions/checkout@v3
        # README: https://github.com/castastrophe/actions-pr-auto-update#auto-update-pull-requests
