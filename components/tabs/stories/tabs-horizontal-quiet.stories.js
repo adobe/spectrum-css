@@ -1,54 +1,16 @@
 // Import the component markup template
 import { Template } from "./template";
-import * as Data from "./tabs.mockdata";
+import {
+  argTypes, 
+  horizontalProps, 
+  horizontalWithIconsProps,
+  horizontalIconOnlyProps
+} from "./index.js";
 
 export default {
   title: "Components/Tabs/Horizontal/Quiet",
-  description: "Tabs organize content into multiple sections and allow users to navigate between them. The content under the set of tabs should be related and form a coherent unit.",
   component: "Tabs",
-  argTypes: {
-    items: { table: { disable: true }},
-    selectorStyle: { table: { disable: true }},
-    size: {
-      name: "Size",
-      type: { name: "string", required: true },
-      table: {
-        type: { summary: "string" },
-        category: "Component",
-      },
-      options: ["s", "m", "l", "xl"],
-      control: "select"
-    },
-    orientation: { table: { disable: true }},
-    isQuiet: {
-      name: "Quiet",
-      type: { name: "boolean" },
-      table: {
-        type: { summary: "boolean" },
-        category: "State",
-      },
-      control: "boolean",
-    },
-    isEmphasized: {
-      name: "Emphasized",
-      type: { name: "boolean" },
-      table: {
-        type: { summary: "boolean" },
-        category: "State",
-      },
-      control: "boolean",
-    },
-    isCompact: {
-      name: "Compact",
-      type: { name: "boolean" },
-      table: {
-        type: { summary: "boolean" },
-        category: "State",
-      },
-      control: "boolean",
-      if: { arg: 'isQuiet', truthy: true },
-    },
-  },
+  argTypes: argTypes,
   args: {
     rootClass: "spectrum-Tabs",
     size: "m",
@@ -68,39 +30,17 @@ export default {
 };
 
 export const Default = Template.bind({});
-Default.args = {
-  isQuiet: true,
-  selectorStyle: {
-    "width": "35px",
-  },   
-  items: Data.items
-};
+Default.args = horizontalProps;
 
 export const WithIcon = Template.bind({});
-WithIcon.args = {
-  isQuiet: true,
-  selectorStyle: {
-    "width": "60px",
-  },   
-  items: Data.itemsWithIcons
-};
+WithIcon.args = horizontalWithIconsProps;
 
 export const IconOnly = Template.bind({});
-IconOnly.args = {
-  isQuiet: true,
-  selectorStyle: {
-    "width": "20px",
-  }, 
-  items: Data.itemsIconOnly
-};
+IconOnly.args = horizontalIconOnlyProps;
 
 export const QuietEmphasized = Template.bind({});
 QuietEmphasized.args = {
-  isQuiet: true,
   isEmphasized: true,
-  selectorStyle: {
-    "width": "35px",
-  },   
-  items: Data.items
+  ...horizontalProps
 };
 

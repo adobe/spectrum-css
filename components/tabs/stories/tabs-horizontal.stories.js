@@ -8,7 +8,8 @@ import {
 } from "./index.js";
 
 export default {
-  title: "Components/Tabs/Horizontal/Emphasized",
+  title: "Components/Tabs/Horizontal",
+  description: "Tabs organize content into multiple sections and allow users to navigate between them. The content under the set of tabs should be related and form a coherent unit.",
   component: "Tabs",
   argTypes: argTypes,
   args: {
@@ -16,7 +17,7 @@ export default {
     size: "m",
     orientation: "horizontal",
     isQuiet: false,
-    isEmphasized: true,
+    isEmphasized: false,
     isCompact: false,
   },
   parameters: {
@@ -37,4 +38,3 @@ WithIcon.args = horizontalWithIconsProps;
 
 export const IconOnly = Template.bind({});
 IconOnly.args = horizontalIconOnlyProps;
-

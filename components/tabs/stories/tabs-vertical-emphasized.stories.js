@@ -1,46 +1,16 @@
 // Import the component markup template
 import { Template } from "./template";
-import * as Data from "./tabs.mockdata";
+import {
+  argTypes, 
+  verticalProps, 
+  verticalWithIconsProps,
+} from "./index.js";
 
 export default {
   title: "Components/Tabs/Vertical/Emphasized",
   description: "Tabs organize content into multiple sections and allow users to navigate between them. The content under the set of tabs should be related and form a coherent unit.",
   component: "Tabs",
-  argTypes: {
-    items: { table: { disable: true }},
-    selectorStyle: { table: { disable: true }},
-    size: {
-      name: "Size",
-      type: { name: "string", required: true },
-      table: {
-        type: { summary: "string" },
-        category: "Component",
-      },
-      options: ["s", "m", "l", "xl"],
-      control: "select"
-    },
-    orientation: { table: { disable: true }},
-    isQuiet: {
-      name: "Quiet",
-      type: { name: "boolean" },
-      table: {
-        type: { summary: "boolean" },
-        category: "State",
-      },
-      control: "boolean",
-    },
-    isEmphasized: { table: { disable: true }},
-    isCompact: {
-      name: "Compact",
-      type: { name: "boolean" },
-      table: {
-        type: { summary: "boolean" },
-        category: "State",
-      },
-      control: "boolean",
-      if: { arg: 'isQuiet', truthy: true },
-    },
-  },
+  argTypes: argTypes,
   args: {
     rootClass: "spectrum-Tabs",
     size: "m",
@@ -60,24 +30,8 @@ export default {
 };
 
 export const Default = Template.bind({});
-Default.args = {
-  orientation: "vertical",
-  isEmphasized: true,
-  selectorStyle: {
-    "height": "46px",
-    "top": "0"
-  }, 
-  items: Data.items
-};
+Default.args = verticalProps;
 
 export const WithIcon = Template.bind({});
-WithIcon.args = {
-  orientation: "vertical",
-  isEmphasized: true,
-  selectorStyle: {
-    "height": "46px",
-    "top": "0"
-  }, 
-  items: Data.itemsWithIcons
-};
+WithIcon.args = verticalWithIconsProps;
 
