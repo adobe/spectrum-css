@@ -10,8 +10,10 @@ jobs:
     name: Auto-update PRs
     runs-on: ubuntu-latest
     permissions:
-      contents: read
+      contents: write
       pull-requests: write
+    env:
+      GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
     steps:
       - uses: actions/checkout@v3
        # README: https://github.com/castastrophe/actions-pr-auto-update#auto-update-pull-requests
@@ -22,5 +24,3 @@ jobs:
           include_drafts: false
           limit: 50
           exclude_labels: blocked,wip
-        env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
