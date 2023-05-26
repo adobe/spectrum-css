@@ -12,8 +12,9 @@ jobs:
     steps:
       - uses: actions/checkout@v3
        # README: https://github.com/castastrophe/actions-pr-auto-update#auto-update-pull-requests
-      - uses: castastrophe/actions-pr-auto-update@v1
+      - uses: castastrophe/actions-pr-auto-update@v1.1.0
         with:
+          token: ${{ secrets.GITHUB_TOKEN }}
           # Draft PRs will not be automatically updated by this utility
           include_drafts: false
           limit: 50
