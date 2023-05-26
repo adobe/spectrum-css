@@ -19,7 +19,6 @@
 | `--mod-sidenav-focus-ring-color` |
 | `--mod-sidenav-focus-ring-gap` |
 | `--mod-sidenav-focus-ring-size` |
-| `--mod-sidenav-font-size` |
 | `--mod-sidenav-gap` |
 | `--mod-sidenav-header-color` |
 | `--mod-sidenav-header-font-color` |
@@ -32,7 +31,6 @@
 | `--mod-sidenav-item-background-default-selected` |
 | `--mod-sidenav-item-background-down` |
 | `--mod-sidenav-item-background-down-selected` |
-| `--mod-sidenav-lineheight` |
 | `--mod-sidenav-max-width` |
 | `--mod-sidenav-min-height` |
 | `--mod-sidenav-min-width` |
@@ -41,7 +39,9 @@
 | `--mod-sidenav-start-to-content-with-icon-second-level` |
 | `--mod-sidenav-start-to-content-with-icon-third-level` |
 | `--mod-sidenav-text-font-family` |
+| `--mod-sidenav-text-font-size` |
 | `--mod-sidenav-text-font-style` |
 | `--mod-sidenav-text-font-weight` |
+| `--mod-sidenav-text-lineheight` |
 | `--mod-sidenav-top-to-label` |
 | `--mod-sidenav-width` |
