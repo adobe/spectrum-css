@@ -70,6 +70,9 @@ governing permissions and limitations under the License.
   --spectrum-table-focus-indicator-thickness: var(--spectrum-focus-indicator-thickness);
   --spectrum-table-focus-indicator-color: var(--spectrum-focus-indicator-color);
 
+  --spectrum-table-drop-zone-background-color: rgba(var(--spectrum-drop-zone-background-color-rgb), var(--spectrum-drop-zone-background-color-opacity));
+  --spectrum-table-drop-zone-outline-color: var(--spectrum-accent-visual-color);
+
   --spectrum-table-transition-duration: var(--spectrum-animation-duration-100);
 
   /* Summary Row and Section Header Row */
@@ -400,7 +403,7 @@ governing permissions and limitations under the License.
   &.is-drop-target {
     outline-width: var(--mod-table-focus-indicator-thickness, var(--spectrum-table-focus-indicator-thickness));
     outline-style: solid;
-    outline-color: var(--highcontrast-table-focus-indicator-color, var(--mod-table-focus-indicator-color, var(--spectrum-table-focus-indicator-color)));
+    outline-color: var(--highcontrast-table-focus-indicator-color, var(--mod-table-drop-zone-outline-color, var(--spectrum-table-drop-zone-outline-color)));
   }
 }
 
@@ -573,20 +576,20 @@ governing permissions and limitations under the License.
 
   &.is-drop-target,
   .spectrum-Table-body.is-drop-target & {
-    background-color: var(--highcontrast-table-selected-row-background-color, var(--mod-table-selected-row-background-color, var(--spectrum-table-selected-row-background-color)));
+    background-color: var(--highcontrast-table-selected-row-background-color, var(--mod-table-drop-zone-background-color, var(--spectrum-table-drop-zone-background-color)));
   }
 
   &.is-drop-target {
     outline-width: var(--mod-table-focus-indicator-thickness, var(--spectrum-table-focus-indicator-thickness));
     outline-style: solid;
-    outline-color: var(--highcontrast-table-focus-indicator-color, var(--mod-table-focus-indicator-color, var(--spectrum-table-focus-indicator-color)));
+    outline-color: var(--highcontrast-table-focus-indicator-color, var(--mod-table-drop-zone-outline-color, var(--spectrum-table-drop-zone-outline-color)));
     outline-offset: calc(-1 * var(--mod-table-focus-indicator-thickness, var(--spectrum-table-focus-indicator-thickness)));
 
     /* Make sure negative offset outline is not covered by borders. */
     --mod-table-border-color: var(--highcontrast-table-focus-indicator-color, transparent);
     
     .spectrum-Table-cell {
-      border-top-color: var(--highcontrast-table-focus-indicator-color, var(--mod-table-focus-indicator-color, var(--spectrum-table-focus-indicator-color)));
+      border-top-color: var(--highcontrast-table-focus-indicator-color, var(--mod-table-drop-zone-outline-color, var(--spectrum-table-drop-zone-outline-color)));
     }
   }
 }
