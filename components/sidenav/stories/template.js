@@ -16,12 +16,13 @@ export const Template = ({
   items = [],
   ...globals
 }) => {
+  const hasIcon = !items.map(item => item.icon).includes(undefined)
   return html`
     <nav>
       <ul class=${classMap({
         [rootClass]: true,
         [`${rootClass}--${variant}`]: typeof variant !== "undefined",
-        [`${rootClass}--hasIcon`]: typeof icon !== "undefined",
+        [`${rootClass}--hasIcon`]: hasIcon,
         ...customClasses.reduce((a, c) => ({ ...a, [c]: true }), {}),
       })}>
         ${repeat(items, (item) => item.id, (item) => {
@@ -32,22 +33,23 @@ export const Template = ({
                 "is-selected": item.isSelected,
                 "is-disabled": item.isDisabled,
               })}>
-              ${when(item.category, () =>
+              ${item.category ?
                 html`<h2 class="${rootClass}-heading" id="${item.id}-heading">${item.category}</h2>`
-              )}
-              ${when(item.icon, () =>
+                :
                 html`
                 <a class="${rootClass}-itemLink">
-                  ${Icon({
+                ${when(item.icon, () =>
+                  Icon({
                       ...globals,
                       iconName: item.icon,
                       customClasses: [`${rootClass}-itemIcon`]
                     })
-                  }
+                  )}
                   <span class="${rootClass}-link-label">${item.title}</span>
                 </a>
                 `
-              )}
+              }
+
                 <ul class=${rootClass} aria-labelledby=${ifDefined(item.category) ? `${item.id}-heading` : ""}>
                   ${repeat(item.subitems, (item) => item.id, (item) => {
                     return SideNavItem({

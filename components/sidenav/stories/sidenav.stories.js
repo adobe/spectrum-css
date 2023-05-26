@@ -2,27 +2,24 @@
 import { Template } from "./template";
 
 export default {
-	title: "Components/Side nav",
-	description:
-		"SideNav lets users navigate the entire content of a product or a section. These can be used for a single level or a multi-level navigation.",
-	component: "Sidenav",
-	argTypes: {
-		items: { table: { disable: true } },
-		variant: { table: { disable: true } },
-	},
-	args: {
-		rootClass: "spectrum-SideNav",
-	},
-	parameters: {
-		actions: {
-			handles: [],
-		},
-		status: {
-			type: process.env.MIGRATED_PACKAGES.includes("sidenav")
-				? "migrated"
-				: undefined,
-		},
-	},
+  title: "Components/Side nav",
+  description: "SideNav lets users navigate the entire content of a product or a section. These can be used for a single level or a multi-level navigation.",
+  component: "Sidenav",
+  argTypes: {
+    items: { table: { disable: true }},
+    variant: { table: { disable: true }}
+  },
+  args: {
+    rootClass: "spectrum-SideNav",
+  },
+  parameters: {
+    actions: {
+      handles: []
+    },
+    status: {
+      type: process.env.MIGRATED_PACKAGES.includes('sidenav') ? 'migrated' : undefined
+    }
+  }
 };
 
 export const Default = Template.bind({});
