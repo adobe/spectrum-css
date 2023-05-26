@@ -9,9 +9,7 @@ jobs:
   autoupdate:
     name: Auto-update PRs
     runs-on: ubuntu-latest
-    permissions:
-      contents: write
-      pull-requests: write
+    permissions: write-all
     env:
       GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
     steps:
