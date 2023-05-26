@@ -11,7 +11,7 @@ jobs:
   vrt:
     name: Visual regression testing
     # Run VRT only if the PR is not a draft and has the label 'run_vrt' and does not have the label 'skip_vrt'
-    if: contains(github.event.pull_request.labels.*.name, 'run_vrt') && !contains(github.event.pull_request.labels.*.name, 'skip_vrt') && github.event.pull_request.draft == false
+    if: contains(github.event.pull_request.labels.*.name, 'run_vrt') && github.event.pull_request.draft == false
 
     runs-on: ubuntu-latest
 
@@ -38,6 +38,8 @@ jobs:
           onlyChanged: true
           traceChanged: true
           diagnostics: true
+          # this lets the VRT pass without running it if the PR has the label 'skip_vrt'
+          skip: ${{ contains(github.event.pull_request.labels.*.name, 'skip_vrt') }}
       - name: Remove labels
         uses: mondeja/remove-labels-gh-action@v1
         with:
