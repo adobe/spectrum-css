@@ -85,3 +85,68 @@ Default.args = {
     }),
   ],
 };
+
+export const WithTip = Template.bind({});
+WithTip.args = {
+  withTip: true,
+  content: [
+    Menu({
+      items: [
+        {
+          iconName: "Edit",
+          label: "Edit",
+        },
+        {
+          iconName: "Copy",
+          label: "Copy",
+        },
+        {
+          iconName: "Move",
+          label: "Move",
+        },
+        {
+          iconName: "Delete",
+          label: "Delete",
+        },
+      ],
+    }),
+  ],
+};
+
+export const Nested = Template.bind({});
+Nested.args = {
+  content: [
+    Menu({
+      items: [
+        {
+          iconName: "Edit",
+          label: "Edit",
+        },
+      ],
+    }),
+    Default({
+      content: [
+        Menu({
+          items: [
+            {
+              iconName: "Edit",
+              label: "Edit",
+            },
+            {
+              iconName: "Copy",
+              label: "Copy",
+            },
+            {
+              iconName: "Move",
+              label: "Move",
+            },
+            {
+              iconName: "Delete",
+              label: "Delete",
+            },
+          ],
+        }),
+      ],
+    })
+  ],
+};
