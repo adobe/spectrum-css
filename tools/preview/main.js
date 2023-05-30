@@ -148,8 +148,6 @@ module.exports = {
   framework: {
     name: '@storybook/web-components-webpack5',
     options: {
-      fastRefresh: true,
-      builder: { lazyCompilation: true },
     },
   },
   features: {
