@@ -1,9 +1,10 @@
 name: Update PRs
 
-on:
-  push:
-    branches:
-      - main
+on: workflow_dispatch
+# on:
+#   push:
+#     branches:
+#       - main
 
 jobs:
   autoupdate:
