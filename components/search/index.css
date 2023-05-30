@@ -122,14 +122,10 @@ governing permissions and limitations under the License.
   }
 
   .spectrum-Search .spectrum-Search-clearButton {
-    /* Offset from edges to avoid ButtonFace background color overlap on border. */
-    inset-inline-end: calc(var(--mod-search-border-width, var(--spectrum-search-border-width)) + 1px);
-    inset-block-start: calc(var(--mod-search-border-width, var(--spectrum-search-border-width)) + 1px);
-  
     .spectrum-ClearButton-fill {
-      height: calc(var(--mod-search-block-size, var(--spectrum-search-block-size)) - (2 * var(--mod-search-border-width, var(--spectrum-search-border-width))) - 2px);
-      width: calc(var(--mod-search-block-size, var(--spectrum-search-block-size)) - (2 * var(--mod-search-border-width, var(--spectrum-search-border-width))) - 2px);
-      border-radius: calc(var(--spectrum-search-border-radius) - var(--mod-search-border-width, var(--spectrum-search-border-width)) - 1px);
+      /* Avoid button background color overlapping on border. */
+      forced-color-adjust: none;
+      background-color: transparent;
     }
   }
 }
