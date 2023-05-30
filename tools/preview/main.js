@@ -153,14 +153,10 @@ module.exports = {
     },
   },
   features: {
-    postcss: false,
     /* Code splitting flag; load stories on-demand */
     storyStoreV7: true,
     /* Builds stories.json to help with on-demand loading */
-    buildStoriesJson: true,
-    /* Enables Storybook's modern inline rendering mode */
-    // modernInlineRender: true,
-    // babelModeV7: true,
+    buildStoriesJson: true
   },
   // refs: {
   //   'swc': {
