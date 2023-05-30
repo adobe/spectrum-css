@@ -5,7 +5,6 @@
 | `--mod-tabs-bottom-to-text` |
 | `--mod-tabs-bottom-to-text--compact` |
 | `--mod-tabs-color` |
-| `--mod-tabs-color--emphasized` |
 | `--mod-tabs-color-disabled` |
 | `--mod-tabs-color-hover` |
 | `--mod-tabs-color-hover--emphasized` |
