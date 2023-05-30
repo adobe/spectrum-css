@@ -3,6 +3,18 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+<a name="2.1.3"></a>
+## 2.1.3
+🗓 2023-05-30 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/divider@2.1.2...@spectrum-css/divider@2.1.3)
+
+### 🐛 Bug fixes
+
+* **divider:** whcm color ([#1908](https://github.com/adobe/spectrum-css/issues/1908)) ([c37b5f7](https://github.com/adobe/spectrum-css/commit/c37b5f7))
+
+
+
+
+
 <a name="2.1.2"></a>
 ## 2.1.2
 🗓 2023-05-23 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/divider@2.1.1...@spectrum-css/divider@2.1.2)
