@@ -61,7 +61,12 @@ governing permissions and limitations under the License.
   --spectrum-table-selected-row-background-color-non-emphasized-focus: rgba(var(--spectrum-gray-700-rgb), 0.15);  /* WIP: awaiting token for opacity */
   /* ----- */
 
-  --spectrum-table-icon-color: var(--spectrum-neutral-subdued-content-color-default);
+  --spectrum-table-icon-color: var(--mod-table-icon-color-default, var(--spectrum-neutral-subdued-content-color-default));
+  --spectrum-table-icon-color-hover: var(--spectrum-neutral-subdued-content-color-hover);
+  --spectrum-table-icon-color-active: var(--spectrum-neutral-subdued-content-color-down);
+  --spectrum-table-icon-color-focus: var(--spectrum-neutral-subdued-content-color-focus);
+  --spectrum-table-icon-color-focus-hover: var(--spectrum-neutral-subdued-content-focus-hover);
+  --spectrum-table-icon-color-key-focus: var(--spectrum-neutral-subdued-content-color-key-focus);
 
   /* Row Selection */
   --spectrum-table-header-checkbox-block-spacing: var(--spectrum-table-header-row-checkbox-to-top-medium);
@@ -356,20 +361,34 @@ governing permissions and limitations under the License.
 
   .spectrum-Table-sortedIcon,
   .spectrum-Table-menuIcon {
-    color: var(--mod-table-icon-color, var(--spectrum-table-icon-color));
+    color: var(--spectrum-table-icon-color);
   }
 
-  /* Sortable Column */
   &.is-sortable {
     cursor: var(--mod-table-cursor-header-sortable, pointer);
 
-    .spectrum-Table-sortedIcon,
-    .spectrum-Table-menuIcon {
-      color: var(--mod-table-icon-color, var(--spectrum-table-icon-color));
+    &:hover {
+      --spectrum-table-icon-color: var(--mod-table-icon-color-hover, var(--spectrum-table-icon-color-hover));
+    }
+
+    &:active {
+      --spectrum-table-icon-color: var(--mod-table-icon-color-active, var(--spectrum-table-icon-color-active));
+    }
+
+    &:focus {
+      --spectrum-table-icon-color: var(--mod-table-icon-color-focus, var(--spectrum-table-icon-color-focus));
+    }
+
+    &:focus:hover {
+      --spectrum-table-icon-color: var(--mod-table-icon-color-focus-hover, var(--spectrum-table-icon-color-focus-hover));
+    }
+
+    &:focus-visible,
+    &.is-keyboardFocused {
+      --spectrum-table-icon-color: var(--mod-table-icon-color-key-focus, var(--spectrum-table-icon-color-key-focus));
     }
   }
 
-  /* Is Sorted */
   &.is-sorted-asc,
   &.is-sorted-desc {
     .spectrum-Table-sortedIcon {
@@ -756,6 +775,7 @@ div.spectrum-Table-headCell {
   border-radius: 0;
   background: transparent;
   border: 0;
+  color: var(--spectrum-table-icon-color);
 
   transform: logical rotate(0deg);
 
@@ -767,7 +787,25 @@ div.spectrum-Table-headCell {
     display: none;
   }
 
-  &:focus-visible {
+  &:hover {
+    --spectrum-table-icon-color: var(--mod-table-icon-color-hover, var(--spectrum-table-icon-color-hover));
+  }
+
+  &:active {
+    --spectrum-table-icon-color: var(--mod-table-icon-color-active, var(--spectrum-table-icon-color-active));
+  }
+
+  &:focus {
+    --spectrum-table-icon-color: var(--mod-table-icon-color-focus, var(--spectrum-table-icon-color-focus));
+    &:hover {
+      --spectrum-table-icon-color: var(--mod-table-icon-color-focus-hover, var(--spectrum-table-icon-color-focus-hover));
+    }
+  }
+
+  &:focus-visible,
+  &.is-keyboardFocused {
+    --spectrum-table-icon-color: var(--mod-table-icon-color-key-focus, var(--spectrum-table-icon-color-key-focus));
+
     outline-width: var(--mod-table-focus-indicator-thickness, var(--spectrum-table-focus-indicator-thickness));
     outline-style: solid;
     outline-color: var(--highcontrast-table-focus-indicator-color, var(--mod-table-focus-indicator-color, var(--spectrum-table-focus-indicator-color)));

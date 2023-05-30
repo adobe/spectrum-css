@@ -15,6 +15,8 @@
 | `--mod-table-default-vertical-align` |
 | `--mod-table-disclosure-icon-size` |
 | `--mod-table-divider-color` |
+| `--mod-table-drop-zone-background-color` |
+| `--mod-table-drop-zone-outline-color` |
 | `--mod-table-edge-to-content` |
 | `--mod-table-focus-indicator-color` |
 | `--mod-table-focus-indicator-thickness` |
@@ -30,7 +32,12 @@
 | `--mod-table-header-text-transform` |
 | `--mod-table-header-top-to-text` |
 | `--mod-table-header-vertical-align` |
-| `--mod-table-icon-color` |
+| `--mod-table-icon-color-active` |
+| `--mod-table-icon-color-default` |
+| `--mod-table-icon-color-focus` |
+| `--mod-table-icon-color-focus-hover` |
+| `--mod-table-icon-color-hover` |
+| `--mod-table-icon-color-key-focus` |
 | `--mod-table-icon-to-text` |
 | `--mod-table-min-header-height` |
 | `--mod-table-min-row-height` |
