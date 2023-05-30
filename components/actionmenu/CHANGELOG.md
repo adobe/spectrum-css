@@ -3,6 +3,16 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+<a name="4.0.35"></a>
+## 4.0.35
+🗓 2023-05-30 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/actionmenu@4.0.34...@spectrum-css/actionmenu@4.0.35)
+
+**Note:** Version bump only for package @spectrum-css/actionmenu
+
+
+
+
+
 <a name="4.0.34"></a>
 ## 4.0.34
 🗓 2023-05-23 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/actionmenu@4.0.33...@spectrum-css/actionmenu@4.0.34)
