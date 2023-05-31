@@ -54,14 +54,14 @@ governing permissions and limitations under the License.
   @todo Refactor or remove these properties once the RGB stripped value is available. */
   --spectrum-table-selected-row-background-color: rgba(var(--spectrum-blue-900-rgb), var(--spectrum-table-selected-row-background-opacity));
   --spectrum-table-selected-row-background-color-non-emphasized: rgba(var(--spectrum-gray-700-rgb), var(--spectrum-table-selected-row-background-opacity-non-emphasized));
-  --spectrum-table-row-hover-color: rgba(var(--spectrum-gray-900-rgb), var(--spectrum-table-row-hover-opacity));
+  --spectrum-table-row-background-color-hover: rgba(var(--spectrum-gray-900-rgb), var(--spectrum-table-row-hover-opacity));
 
   --spectrum-table-row-active-color: rgba(var(--spectrum-gray-900-rgb), 0.1);  /* WIP: awaiting token for opacity */
   --spectrum-table-selected-row-background-color-focus: rgba(var(--spectrum-blue-900-rgb), 0.15); /* WIP: awaiting token for opacity */
   --spectrum-table-selected-row-background-color-non-emphasized-focus: rgba(var(--spectrum-gray-700-rgb), 0.15);  /* WIP: awaiting token for opacity */
   /* ----- */
 
-  --spectrum-table-icon-color: var(--mod-table-icon-color-default, var(--spectrum-neutral-subdued-content-color-default));
+  --spectrum-table-icon-color-default: var(--spectrum-neutral-subdued-content-color-default);
   --spectrum-table-icon-color-hover: var(--spectrum-neutral-subdued-content-color-hover);
   --spectrum-table-icon-color-active: var(--spectrum-neutral-subdued-content-color-down);
   --spectrum-table-icon-color-focus: var(--spectrum-neutral-subdued-content-color-focus);
@@ -290,29 +290,53 @@ governing permissions and limitations under the License.
 /********* HIGH CONTRAST *********/
 @media (forced-colors: active) {
   .spectrum-Table {
+    --highcontrast-table-row-background-color: Canvas;
+    --highcontrast-table-row-text-color: CanvasText;
+    --highcontrast-table-divider-color: CanvasText;
+    --highcontrast-table-border-color: CanvasText;
+    --highcontrast-table-icon-color: CanvasText;
+    --highcontrast-table-icon-color-focus: Highlight;
+
     --highcontrast-table-selected-row-background-color: SelectedItem;
+    --highcontrast-table-selected-row-text-color: SelectedItemText;
+    --highcontrast-table-selected-row-text-color-default: SelectedItemText;
+    --highcontrast-table-selected-row-background-color-focus: Highlight;
+    --highcontrast-table-selected-row-text-color-focus: HighlightText;
+    --highcontrast-table-row-background-color-hover: Highlight;
+    --highcontrast-table-row-text-color-hover: HighlightText;
+
+    --highcontrast-table-section-header-text-color: Canvas;
+    --highcontrast-table-section-header-background-color: CanvasText;
+
     --highcontrast-table-focus-indicator-color: Highlight;
+    --highcontrast-table-transition-duration: 0;
+  }
+
+  .spectrum-Table-cell {
+    /* Removes unstylable readability backplate. */
+    forced-color-adjust: none;
+    background-color: transparent;
+  }
+
+  .spectrum-Table-row {
+    &:hover,
+    &:focus-visible,
+    &.is-focused {
+      .spectrum-Table-checkbox .spectrum-Checkbox-box::before {
+        outline: var(--highcontrast-table-row-text-color-hover) 1px solid;
+      }
+    }
   }
 
   .spectrum-Table-row.is-selected,
   .spectrum-Table-row.is-drop-target,
   .spectrum-Table-body.is-drop-target .spectrum-Table-row {
-    color: SelectedItemText;
-
     /* Ensure negative offset outline contrasts on top of SelectedItem background. */
-    --highcontrast-table-cell-focus-indicator-color: SelectedItemText;
+    --highcontrast-table-cell-focus-indicator-color: var(--highcontrast-table-selected-row-text-color);
     --highcontrast-table-cell-focus-extra-offset: 1px;
 
     .spectrum-Table-checkbox .spectrum-Checkbox-box::before {
-      outline: SelectedItemText 1px solid;
-    }
-
-    .spectrum-Table-cell {
-      forced-color-adjust: none;
-      --spectrum-table-divider-color: CanvasText;
-      --spectrum-table-border-color: CanvasText;
-      background-color: transparent;
-      color: SelectedItemText;
+      outline: var(--highcontrast-table-selected-row-text-color) 1px solid;
     }
   }
 }
@@ -328,7 +352,7 @@ governing permissions and limitations under the License.
   vertical-align: baseline;
   margin-inline-start: var(--mod-table-sort-icon-inline-start-spacing, 0);
   margin-inline-end: var(--mod-table-sort-icon-inline-end-spacing, var(--mod-table-icon-to-text, var(--spectrum-table-icon-to-text)));
-  transition: transform var(--mod-table-transition-duration, var(--spectrum-table-transition-duration)) ease-in-out;
+  transition: transform var(--highcontrast-table-transition-duration, var(--mod-table-transition-duration, var(--spectrum-table-transition-duration))) ease-in-out;
 }
 
 .spectrum-Table-menuIcon {
@@ -337,6 +361,8 @@ governing permissions and limitations under the License.
 }
 
 .spectrum-Table-headCell {
+  --spectrum-table-icon-color: var(--highcontrast-table-icon-color, var(--mod-table-icon-color-default, var(--spectrum-table-icon-color-default)));
+
   box-sizing: border-box;
   text-align: start;
   vertical-align: var(--mod-table-header-vertical-align, var(--spectrum-table-header-vertical-align));
@@ -355,7 +381,7 @@ governing permissions and limitations under the License.
   background-color: var(--mod-table-header-background-color, var(--spectrum-table-header-background-color));
 
   border-radius: var(--mod-table-border-radius, var(--spectrum-table-border-radius));
-  transition: color var(--mod-table-transition-duration, var(--spectrum-table-transition-duration)) ease-in-out;
+  transition: color var(--highcontrast-table-transition-duration, var(--mod-table-transition-duration, var(--spectrum-table-transition-duration))) ease-in-out;
   cursor: var(--mod-table-cursor-header-default, initial);
   outline: 0;
 
@@ -368,24 +394,24 @@ governing permissions and limitations under the License.
     cursor: var(--mod-table-cursor-header-sortable, pointer);
 
     &:hover {
-      --spectrum-table-icon-color: var(--mod-table-icon-color-hover, var(--spectrum-table-icon-color-hover));
+      --spectrum-table-icon-color: var(--highcontrast-table-icon-color-focus, var(--mod-table-icon-color-hover, var(--spectrum-table-icon-color-hover)));
     }
 
     &:active {
-      --spectrum-table-icon-color: var(--mod-table-icon-color-active, var(--spectrum-table-icon-color-active));
+      --spectrum-table-icon-color: var(--highcontrast-table-icon-color-focus, var(--mod-table-icon-color-active, var(--spectrum-table-icon-color-active)));
     }
 
     &:focus {
-      --spectrum-table-icon-color: var(--mod-table-icon-color-focus, var(--spectrum-table-icon-color-focus));
+      --spectrum-table-icon-color: var(--highcontrast-table-icon-color-focus, var(--mod-table-icon-color-focus, var(--spectrum-table-icon-color-focus)));
     }
 
     &:focus:hover {
-      --spectrum-table-icon-color: var(--mod-table-icon-color-focus-hover, var(--spectrum-table-icon-color-focus-hover));
+      --spectrum-table-icon-color: var(--highcontrast-table-icon-color-focus, var(--mod-table-icon-color-focus-hover, var(--spectrum-table-icon-color-focus-hover)));
     }
 
     &:focus-visible,
     &.is-keyboardFocused {
-      --spectrum-table-icon-color: var(--mod-table-icon-color-key-focus, var(--spectrum-table-icon-color-key-focus));
+      --spectrum-table-icon-color: var(--highcontrast-table-icon-color-focus, var(--mod-table-icon-color-key-focus, var(--spectrum-table-icon-color-key-focus)));
     }
   }
 
@@ -417,7 +443,7 @@ governing permissions and limitations under the License.
 
   border: none;
   border-radius: var(--mod-table-border-radius, var(--spectrum-table-border-radius));
-  background-color: var(--mod-table-row-background-color, var(--spectrum-table-row-background-color));
+  background-color: var(--highcontrast-table-row-background-color, var(--mod-table-row-background-color, var(--spectrum-table-row-background-color)));
 
   &.is-drop-target {
     outline-width: var(--mod-table-focus-indicator-thickness, var(--spectrum-table-focus-indicator-thickness));
@@ -441,35 +467,35 @@ governing permissions and limitations under the License.
     border-block-start:
       var(--mod-table-border-width, var(--spectrum-table-border-width))
       solid 
-      var(--mod-table-divider-color, var(--spectrum-table-divider-color));
+      var(--highcontrast-table-divider-color, var(--mod-table-divider-color, var(--spectrum-table-divider-color)));
   }
 
   .spectrum-Table-row:first-child .spectrum-Table-cell {
     border-block-start:
       var(--mod-table-border-width, var(--spectrum-table-border-width))
       solid 
-      var(--mod-table-border-color, var(--spectrum-table-border-color));
+      var(--highcontrast-table-border-color, var(--mod-table-border-color, var(--spectrum-table-border-color)));
   }
 
   .spectrum-Table-row .spectrum-Table-cell:first-child {
     border-inline-start: 
       var(--mod-table-outer-border-inline-width, var(--spectrum-table-outer-border-inline-width)) 
       solid 
-      var(--mod-table-border-color, var(--spectrum-table-border-color));
+      var(--highcontrast-table-border-color, var(--mod-table-border-color, var(--spectrum-table-border-color)));
   }
 
   .spectrum-Table-row .spectrum-Table-cell:last-child {
     border-inline-end: 
       var(--mod-table-outer-border-inline-width, var(--spectrum-table-outer-border-inline-width))
       solid
-      var(--mod-table-border-color, var(--spectrum-table-border-color));
+      var(--highcontrast-table-border-color, var(--mod-table-border-color, var(--spectrum-table-border-color)));
   }
 
   .spectrum-Table-row:last-child .spectrum-Table-cell {
     border-block-end:
       var(--mod-table-border-width, var(--spectrum-table-border-width))
       solid 
-      var(--mod-table-border-color, var(--spectrum-table-border-color));
+      var(--highcontrast-table-border-color, var(--mod-table-border-color, var(--spectrum-table-border-color)));
   }
 }
 
@@ -513,7 +539,7 @@ governing permissions and limitations under the License.
     (var(--mod-table-row-top-to-text, var(--spectrum-table-row-top-to-text)) + var(--mod-table-row-bottom-to-text, var(--spectrum-table-row-bottom-to-text)))
   );
 
-  color: var(--mod-table-row-text-color, var(--spectrum-table-row-text-color));
+  color: var(--highcontrast-table-row-text-color, var(--mod-table-row-text-color, var(--spectrum-table-row-text-color)));
 }
 
 /* Focus Indicator (Ring) */
@@ -535,13 +561,13 @@ governing permissions and limitations under the License.
 
 /* Cells that display a column divider (vertical border). */
 .spectrum-Table-cell--divider {
-  border-inline-end: var(--mod-table-border-width, var(--spectrum-table-border-width)) solid var(--mod-table-divider-color, var(--spectrum-table-divider-color));
+  border-inline-end: var(--mod-table-border-width, var(--spectrum-table-border-width)) solid var(--highcontrast-table-divider-color, var(--mod-table-divider-color, var(--spectrum-table-divider-color)));
 }
 
 .spectrum-Table-row {
   position: relative;
-  background-color: var(--mod-table-row-background-color, var(--spectrum-table-row-background-color));
-  transition: background-color var(--mod-table-transition-duration, var(--spectrum-table-transition-duration)) ease-in-out;
+  background-color: var(--highcontrast-table-row-background-color, var(--mod-table-row-background-color, var(--spectrum-table-row-background-color)));
+  transition: background-color var(--highcontrast-table-transition-duration, var(--mod-table-transition-duration, var(--spectrum-table-transition-duration))) ease-in-out;
   cursor: var(--mod-table-cursor-row-default, pointer);
 
   &:first-child {
@@ -555,30 +581,35 @@ governing permissions and limitations under the License.
     border-end-end-radius: var(--mod-table-border-radius, var(--spectrum-table-border-radius));
   }
 
-  &:hover {
-    background-color: var(--mod-table-row-hover-color, var(--spectrum-table-row-hover-color));
-  }
-
   &:focus {
     outline: 0;
   }
 
+  &:hover,
   &:focus-visible,
   &.is-focused {
-    background-color: var(--mod-table-row-hover-color, var(--spectrum-table-row-hover-color));
+    --highcontrast-table-row-text-color: var(--highcontrast-table-row-text-color-hover);
+    --highcontrast-table-icon-color: var(--highcontrast-table-row-text-color-hover);
+    background-color: var(--highcontrast-table-row-background-color-hover, var(--mod-table-row-background-color-hover, var(--spectrum-table-row-background-color-hover)));
   }
 
   &:active {
-    background-color: var(--mod-table-row-active-color, var(--spectrum-table-row-active-color));
+    --highcontrast-table-row-text-color: var(--highcontrast-table-row-text-color-hover);
+    --highcontrast-table-icon-color: var(--highcontrast-table-row-text-color-hover);
+    background-color: var(--highcontrast-table-row-background-color-hover, var(--mod-table-row-active-color, var(--spectrum-table-row-active-color)));
   }
 
   &.is-selected {
+    --highcontrast-table-row-text-color: var(--highcontrast-table-selected-row-text-color);
+    --highcontrast-table-icon-color: var(--highcontrast-table-selected-row-text-color);
     background-color: var(--highcontrast-table-selected-row-background-color, var(--mod-table-selected-row-background-color-non-emphasized, var(--spectrum-table-selected-row-background-color-non-emphasized)));
 
     &:hover,
     &:focus-visible,
     &.is-focused {
-      background-color: var(--highcontrast-table-selected-row-background-color-non-emphasized-focus, var(--mod-table-selected-row-background-color-non-emphasized-focus, var(--spectrum-table-selected-row-background-color-non-emphasized-focus)));
+      --highcontrast-table-row-text-color: var(--highcontrast-table-selected-row-text-color-focus);
+      --highcontrast-table-icon-color: var(--highcontrast-table-selected-row-text-color-focus);
+      background-color: var(--highcontrast-table-selected-row-background-color-focus, var(--mod-table-selected-row-background-color-non-emphasized-focus, var(--spectrum-table-selected-row-background-color-non-emphasized-focus)));
     }
 
     .spectrum-Table.spectrum-Table--emphasized &,
@@ -595,6 +626,8 @@ governing permissions and limitations under the License.
 
   &.is-drop-target,
   .spectrum-Table-body.is-drop-target & {
+    --highcontrast-table-row-text-color: var(--highcontrast-table-selected-row-text-color);
+    --highcontrast-table-icon-color: var(--highcontrast-table-selected-row-text-color);
     background-color: var(--highcontrast-table-selected-row-background-color, var(--mod-table-drop-zone-background-color, var(--spectrum-table-drop-zone-background-color)));
   }
 
@@ -614,7 +647,7 @@ governing permissions and limitations under the License.
 }
 
 .spectrum-Table-row--summary {
-  background-color: var(--mod-table-summary-row-background-color, var(--spectrum-table-summary-row-background-color));
+  background-color: var(--highcontrast-table-row-background-color, var(--mod-table-summary-row-background-color, var(--spectrum-table-summary-row-background-color)));
 
   .spectrum-Table-cell {
     font-weight: var(--mod-table-summary-row-font-weight, var(--spectrum-table-summary-row-font-weight));
@@ -624,12 +657,12 @@ governing permissions and limitations under the License.
     font-family: var(--mod-table-summary-row-font-family, var(--spectrum-table-row-font-family));
     font-style: var(--mod-table-summary-row-font-style, var(--spectrum-table-row-font-style));
     line-height: var(--mod-table-summary-row-line-height, var(--spectrum-table-row-line-height));
-    color: var(--mod-table-summary-row-text-color, var(--spectrum-table-row-text-color));
+    color: var(--highcontrast-table-row-text-color, var(--mod-table-summary-row-text-color, var(--spectrum-table-row-text-color)));
   }
 }
 
 .spectrum-Table-row--sectionHeader {
-  background-color: var(--mod-table-section-header-background-color, var(--spectrum-table-section-header-background-color));
+  background-color: var(--highcontrast-table-section-header-background-color, var(--mod-table-section-header-background-color, var(--spectrum-table-section-header-background-color)));
   cursor: var(--mod-table-cursor-section-header, initial);
 
   .spectrum-Table-cell {
@@ -650,11 +683,12 @@ governing permissions and limitations under the License.
     font-family: var(--mod-table-section-header-font-family, var(--spectrum-table-row-font-family));
     font-style: var(--mod-table-section-header-font-style, var(--spectrum-table-row-font-style));
     line-height: var(--mod-table-section-header-line-height, var(--spectrum-table-row-line-height));
-    color: var(--mod-table-section-header-text-color, var(--spectrum-table-row-text-color));
+    color: var(--highcontrast-table-section-header-text-color, var(--mod-table-section-header-text-color, var(--spectrum-table-row-text-color)));
   }
 
   &:hover {
-    background-color: var(--mod-table-section-header-background-color, var(--spectrum-table-section-header-background-color));
+    --highcontrast-table-row-text-color: var(--highcontrast-table-section-header-text-color);
+    background-color: var(--highcontrast-table-section-header-background-color, var(--mod-table-section-header-background-color, var(--spectrum-table-section-header-background-color)));
   }
 }
 
@@ -766,6 +800,8 @@ div.spectrum-Table-headCell {
 }
 
 .spectrum-Table-disclosureIcon.spectrum-Table-disclosureIcon {
+  --spectrum-table-icon-color: var(--highcontrast-table-icon-color, var(--mod-table-icon-color-default, var(--spectrum-table-icon-color-default)));
+
   height: var(--mod-table-disclosure-icon-size, var(--spectrum-table-disclosure-icon-size));
   flex-basis: var(--mod-table-disclosure-icon-size, var(--spectrum-table-disclosure-icon-size));
   flex-grow: 0;
@@ -788,23 +824,23 @@ div.spectrum-Table-headCell {
   }
 
   &:hover {
-    --spectrum-table-icon-color: var(--mod-table-icon-color-hover, var(--spectrum-table-icon-color-hover));
+    --spectrum-table-icon-color: var(--highcontrast-table-icon-color, var(--mod-table-icon-color-hover, var(--spectrum-table-icon-color-hover)));
   }
 
   &:active {
-    --spectrum-table-icon-color: var(--mod-table-icon-color-active, var(--spectrum-table-icon-color-active));
+    --spectrum-table-icon-color: var(--highcontrast-table-icon-color, var(--mod-table-icon-color-active, var(--spectrum-table-icon-color-active)));
   }
 
   &:focus {
-    --spectrum-table-icon-color: var(--mod-table-icon-color-focus, var(--spectrum-table-icon-color-focus));
+    --spectrum-table-icon-color: var(--highcontrast-table-icon-color, var(--mod-table-icon-color-focus, var(--spectrum-table-icon-color-focus)));
     &:hover {
-      --spectrum-table-icon-color: var(--mod-table-icon-color-focus-hover, var(--spectrum-table-icon-color-focus-hover));
+      --spectrum-table-icon-color: var(--highcontrast-table-icon-color, var(--mod-table-icon-color-focus-hover, var(--spectrum-table-icon-color-focus-hover)));
     }
   }
 
   &:focus-visible,
   &.is-keyboardFocused {
-    --spectrum-table-icon-color: var(--mod-table-icon-color-key-focus, var(--spectrum-table-icon-color-key-focus));
+    --spectrum-table-icon-color: var(--highcontrast-table-icon-color, var(--mod-table-icon-color-key-focus, var(--spectrum-table-icon-color-key-focus)));
 
     outline-width: var(--mod-table-focus-indicator-thickness, var(--spectrum-table-focus-indicator-thickness));
     outline-style: solid;
