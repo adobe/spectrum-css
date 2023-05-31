@@ -15,8 +15,8 @@ governing permissions and limitations under the License.
   display: inline-block;
 
   /* pass though custom properies to allow components to style nested icons */
-  inline-size: var(--mod-icon-inline-size, var(--spectrum-icon-size-m));
-  block-size: var(--mod-icon-block-size, var(--spectrum-icon-size-m));
+  inline-size: var(--mod-icon-inline-size, inherit);
+  block-size: var(--mod-icon-block-size, inherit);
   margin-inline-start: var(--mod-icon-margin-left, inherit);
   flex-shrink: var(--mod-icon-flex-shrink, inherit);
 
