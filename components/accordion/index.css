@@ -32,7 +32,7 @@ governing permissions and limitations under the License.
   --spectrum-accordion-item-header-font-weight: var(--spectrum-bold-font-weight);
   --spectrum-accordion-item-header-font-style: var(--spectrum-default-font-style);
   --spectrum-accordion-item-header-font-size: var(--spectrum-font-size-300);
-  --spectrum-accordion-item-header-line-height: var(--spectrum-line-height-100);
+  --spectrum-accordion-item-header-line-height: 1.25;
   &:lang(ja),
   &:lang(zh),
   &:lang(ko) {
@@ -109,11 +109,13 @@ governing permissions and limitations under the License.
   }
 
   &.spectrum-Accordion--sizeM {
+    --spectrum-accordion-item-header-line-height: 1.278;
     --spectrum-accordion-item-header-top-to-text-space: var(--spectrum-accordion-top-to-text-spacious-medium);
     --spectrum-accordion-item-header-bottom-to-text-space: var(--spectrum-accordion-bottom-to-text-spacious-medium);
   }
 
   &.spectrum-Accordion--sizeL {
+    --spectrum-accordion-item-header-line-height: 1.273;
     --spectrum-accordion-item-header-top-to-text-space: var(--spectrum-accordion-top-to-text-spacious-large);
     --spectrum-accordion-item-header-bottom-to-text-space: var(--spectrum-accordion-bottom-to-text-spacious-large);
   }
