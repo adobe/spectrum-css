@@ -1,6 +1,6 @@
 {
   "name": "@spectrum-css/preview",
-  "version": "3.0.20",
+  "version": "3.0.23",
   "description": "A Spectrum CSS preview",
   "license": "Apache-2.0",
   "author": "Adobe",
@@ -17,14 +17,14 @@
   },
   "dependencies": {
     "@adobe/spectrum-css-workflow-icons": "^1.2.1",
-    "@spectrum-css/expressvars": "^3.0.5",
-    "@spectrum-css/icon": "^3.0.43",
-    "@spectrum-css/site": "^3.0.17",
-    "@spectrum-css/tokens": "^10.0.0",
-    "@spectrum-css/vars": "^9.0.5"
+    "@spectrum-css/expressvars": "^3.0.6",
+    "@spectrum-css/icon": "^3.0.44",
+    "@spectrum-css/site": "^3.0.18",
+    "@spectrum-css/tokens": "^10.1.1",
+    "@spectrum-css/vars": "^9.0.6"
   },
   "devDependencies": {
-    "@babel/core": "^7.21.8",
+    "@babel/core": "^7.22.1",
     "@etchteam/storybook-addon-status": "4.2.2",
     "@spectrum-css/component-builder": "^4.0.9",
     "@storybook/addon-a11y": "^6.5.15",
@@ -55,7 +55,7 @@
     "react": "^17.0.0",
     "react-dom": "^17.0.0",
     "react-syntax-highlighter": "^15.5.0",
-    "rimraf": "^5.0.0",
+    "rimraf": "^5.0.1",
     "source-map-loader": "^1.0.0",
     "webpack": "^4.46.0"
   },

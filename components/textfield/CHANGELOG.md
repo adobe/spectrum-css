@@ -3,6 +3,51 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+<a name="5.1.10"></a>
+## 5.1.10
+🗓 2023-05-30 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/textfield@5.1.9...@spectrum-css/textfield@5.1.10)
+
+### 🐛 Bug fixes
+
+* **textfield:** mod name for keyboard focus color ([4d7f170](https://github.com/adobe/spectrum-css/commit/4d7f170))
+* **textfield:** valid in storybook - display correct icon size ([37ca676](https://github.com/adobe/spectrum-css/commit/37ca676))
+
+
+
+
+
+<a name="5.1.9"></a>
+## 5.1.9
+🗓 2023-05-23 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/textfield@5.1.8...@spectrum-css/textfield@5.1.9)
+
+**Note:** Version bump only for package @spectrum-css/textfield
+
+
+
+
+
+<a name="5.1.8"></a>
+## 5.1.8
+🗓 2023-05-22 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/textfield@5.1.7...@spectrum-css/textfield@5.1.8)
+
+**Note:** Version bump only for package @spectrum-css/textfield
+
+
+
+
+
+<a name="5.1.7"></a>
+## 5.1.7
+🗓 2023-05-18 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/textfield@5.1.6...@spectrum-css/textfield@5.1.7)
+
+### 🐛 Bug fixes
+
+* **textfield, stepper:** button padding and focus indicator ([#1863](https://github.com/adobe/spectrum-css/issues/1863)) ([7963b85](https://github.com/adobe/spectrum-css/commit/7963b85))
+
+
+
+
+
 <a name="5.1.6"></a>
 ## 5.1.6
 🗓 2023-05-18 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/textfield@5.1.5...@spectrum-css/textfield@5.1.6)

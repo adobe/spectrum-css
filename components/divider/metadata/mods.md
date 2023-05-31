@@ -8,3 +8,6 @@
 | `--mod-divider-background-color-small-static-black` |
 | `--mod-divider-background-color-small-static-white` |
 | `--mod-divider-thickness` |
+| `--mod-divider-vertical-align` |
+| `--mod-divider-vertical-height` |
+| `--mod-divider-vertical-margin` |

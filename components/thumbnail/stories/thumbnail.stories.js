@@ -23,7 +23,7 @@ export default {
       type: { name: "string" },
       table: {
         type: { summary: "string" },
-        category: "Component",
+        category: "Content",
       },
       control: { type: "file", accept: ".svg,.png,.jpg,.jpeg,.webc" },
     },
@@ -33,7 +33,17 @@ export default {
       type: { name: "string" },
       table: {
         type: { summary: "string" },
-        category: "Component",
+        category: "Content",
+      },
+      control: "text",
+    },
+    backgroundColor: {
+      name: "Background Color",
+      description: "Optional value for `background-color` style property.",
+      type: { name: "string" },
+      table: {
+        type: { summary: "string" },
+        category: "Content",
       },
       control: "text",
     },
@@ -47,8 +57,9 @@ export default {
       },
       control: "boolean",
     },
-    isDisabled: {
-      name: "Disabled",
+    isLayer: {
+      name: "Layer",
+      description: "When used in layer management (such as the Compact or Detail Layers panels).",
       type: { name: "boolean" },
       table: {
         type: { summary: "boolean" },
@@ -56,12 +67,33 @@ export default {
       },
       control: "boolean",
     },
+    isDisabled: {
+      name: "Disabled",
+      type: { name: "boolean" },
+      table: {
+        type: { summary: "boolean" },
+        category: "State",
+      },
+      control: "boolean",
+    },
+    isSelected: {
+      name: "Selected",
+      type: { name: "boolean" },
+      table: {
+        type: { summary: "boolean" },
+        category: "State",
+      },
+      control: "boolean",
+      if: { arg: 'isLayer' }
+    },
   },
   args: {
     rootClass: "spectrum-Thumbnail",
     size: "500",
     isCover: false,
+    isLayer: false,
     isDisabled: false,
+    isSelected: false,
     imageURL: "example-card-landscape.png",
     altText: "Landscape with mountains and lake",
   },

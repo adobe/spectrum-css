@@ -63,6 +63,11 @@ governing permissions and limitations under the License.
   --spectrum-combobox-border-color-invalid-key-focus: var(--spectrum-negative-border-color-key-focus);
 
   --spectrum-combobox-alert-icon-color: var(--spectrum-negative-visual-color);
+
+  /* Settings for nested Textfield component. */
+  --mod-textfield-focus-indicator-gap: var(--mod-combobox-focus-indicator-gap, var(--spectrum-combobox-focus-indicator-gap));
+  --mod-textfield-focus-indicator-width: var(--mod-combobox-focus-indicator-thickness, var(--spectrum-combobox-focus-indicator-thickness));
+  --mod-textfield-focus-indicator-color: var(--highcontrast-combobox-focus-indicator-color, var(--mod-combobox-focus-indicator-color, var(--spectrum-combobox-focus-indicator-color)));
 }
 
 .spectrum-Combobox--sizeS {
@@ -312,33 +317,6 @@ governing permissions and limitations under the License.
 /* TEXTFIELD (wrapper) */
 .spectrum-Combobox-textfield {
   inline-size: 100%;
-
-  /* Focus Indicator (Ring) */
-  &.is-keyboardFocused,
-  &:focus-within {
-    &::after {
-      block-size: calc(100% + var(--mod-combobox-focus-indicator-gap, var(--spectrum-combobox-focus-indicator-gap)) * 2);
-      inline-size: calc(100% + var(--mod-combobox-focus-indicator-gap, var(--spectrum-combobox-focus-indicator-gap)) * 2);
-      margin-block-start: calc(
-        (var(--mod-combobox-focus-indicator-gap, var(--spectrum-combobox-focus-indicator-gap)) +
-          var(--mod-combobox-focus-indicator-thickness, var(--spectrum-combobox-focus-indicator-thickness)))
-        * -1
-      );
-      margin-inline-start: calc(
-        (var(--mod-combobox-focus-indicator-gap, var(--spectrum-combobox-focus-indicator-gap)) +
-          var(--mod-combobox-focus-indicator-thickness, var(--spectrum-combobox-focus-indicator-thickness)))
-        * -1
-      );
-
-      border-width: var(--mod-combobox-focus-indicator-thickness, var(--spectrum-combobox-focus-indicator-thickness));
-      border-color: var(--highcontrast-combobox-focus-indicator-color, var(--mod-combobox-focus-indicator-color, var(--spectrum-combobox-focus-indicator-color)));
-      border-radius: calc(
-        var(--mod-combobox-border-radius, var(--spectrum-combobox-border-radius)) +
-        var(--mod-combobox-focus-indicator-gap, var(--spectrum-combobox-focus-indicator-gap)) +
-        var(--mod-combobox-focus-indicator-thickness, var(--spectrum-combobox-focus-indicator-thickness))
-      );
-    }
-  }
 }
 
 /* TEXT INPUT */
@@ -511,20 +489,6 @@ governing permissions and limitations under the License.
   }
 
   .spectrum-Combobox-textfield {
-    &.is-keyboardFocused,
-    &:focus-within {
-      /* Focus Indicator (Underline) */
-      &::after {
-        margin: 0;
-        margin-inline-start: 0;
-        inline-size: 100%;
-        block-size: calc(100% + var(--mod-combobox-focus-indicator-gap, var(--spectrum-combobox-focus-indicator-gap)));
-        border-width: 0 0 var(--mod-combobox-focus-indicator-thickness, var(--spectrum-combobox-focus-indicator-thickness)) 0;
-        border-bottom-color: var(--highcontrast-combobox-focus-indicator-color, var(--mod-combobox-focus-indicator-color, var(--spectrum-combobox-focus-indicator-color)));
-        border-radius: 0;
-      }
-    }
-
     &.is-invalid .spectrum-Textfield-validationIcon {
       inset-inline-end: var(--mod-combobox-button-width, var(--spectrum-combobox-button-width));
     }

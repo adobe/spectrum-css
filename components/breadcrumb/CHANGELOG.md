@@ -3,6 +3,36 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+<a name="7.0.34"></a>
+## 7.0.34
+🗓 2023-05-23 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/breadcrumb@7.0.33...@spectrum-css/breadcrumb@7.0.34)
+
+**Note:** Version bump only for package @spectrum-css/breadcrumb
+
+
+
+
+
+<a name="7.0.33"></a>
+## 7.0.33
+🗓 2023-05-23 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/breadcrumb@7.0.32...@spectrum-css/breadcrumb@7.0.33)
+
+**Note:** Version bump only for package @spectrum-css/breadcrumb
+
+
+
+
+
+<a name="7.0.32"></a>
+## 7.0.32
+🗓 2023-05-22 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/breadcrumb@7.0.31...@spectrum-css/breadcrumb@7.0.32)
+
+**Note:** Version bump only for package @spectrum-css/breadcrumb
+
+
+
+
+
 <a name="7.0.31"></a>
 ## 7.0.31
 🗓 2023-05-18 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/breadcrumb@7.0.30...@spectrum-css/breadcrumb@7.0.31)

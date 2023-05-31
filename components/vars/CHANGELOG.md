@@ -3,6 +3,16 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+<a name="9.0.6"></a>
+## 9.0.6
+🗓 2023-05-23 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/vars@9.0.5...@spectrum-css/vars@9.0.6)
+
+**Note:** Version bump only for package @spectrum-css/vars
+
+
+
+
+
 <a name="9.0.5"></a>
 ## 9.0.5
 🗓 2023-04-26 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/vars@9.0.4...@spectrum-css/vars@9.0.5)

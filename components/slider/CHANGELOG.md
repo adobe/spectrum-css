@@ -3,6 +3,66 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+<a name="4.0.6"></a>
+## 4.0.6
+🗓 2023-05-30 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/slider@4.0.5...@spectrum-css/slider@4.0.6)
+
+**Note:** Version bump only for package @spectrum-css/slider
+
+
+
+
+
+<a name="4.0.5"></a>
+## 4.0.5
+🗓 2023-05-23 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/slider@4.0.4...@spectrum-css/slider@4.0.5)
+
+**Note:** Version bump only for package @spectrum-css/slider
+
+
+
+
+
+<a name="4.0.4"></a>
+## 4.0.4
+🗓 2023-05-23 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/slider@4.0.3...@spectrum-css/slider@4.0.4)
+
+**Note:** Version bump only for package @spectrum-css/slider
+
+
+
+
+
+<a name="4.0.3"></a>
+## 4.0.3
+🗓 2023-05-22 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/slider@4.0.2...@spectrum-css/slider@4.0.3)
+
+**Note:** Version bump only for package @spectrum-css/slider
+
+
+
+
+
+<a name="4.0.2"></a>
+## 4.0.2
+🗓 2023-05-22 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/slider@4.0.1...@spectrum-css/slider@4.0.2)
+
+**Note:** Version bump only for package @spectrum-css/slider
+
+
+
+
+
+<a name="4.0.1"></a>
+## 4.0.1
+🗓 2023-05-18 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/slider@4.0.0...@spectrum-css/slider@4.0.1)
+
+**Note:** Version bump only for package @spectrum-css/slider
+
+
+
+
+
 <a name="4.0.0"></a>
 # 4.0.0
 🗓 2023-05-18 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/slider@3.1.25...@spectrum-css/slider@4.0.0)

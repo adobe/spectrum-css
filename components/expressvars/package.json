@@ -1,6 +1,6 @@
 {
   "name": "@spectrum-css/expressvars",
-  "version": "3.0.5",
+  "version": "3.0.6",
   "description": "The Spectrum CSS vars for Express package",
   "license": "Apache-2.0",
   "author": "Adobe",
@@ -29,7 +29,7 @@
     "gulp-replace": "^1.0.0",
     "postcss": "^7.0.36",
     "replace-ext": "^1.0.0",
-    "rimraf": "^5.0.0",
+    "rimraf": "^5.0.1",
     "through2": "^3.0.1"
   },
   "publishConfig": {

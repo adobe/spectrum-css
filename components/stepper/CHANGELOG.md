@@ -3,6 +3,68 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+<a name="4.0.34"></a>
+## 4.0.34
+🗓 2023-05-30 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/stepper@4.0.33...@spectrum-css/stepper@4.0.34)
+
+**Note:** Version bump only for package @spectrum-css/stepper
+
+
+
+
+
+<a name="4.0.33"></a>
+## 4.0.33
+🗓 2023-05-23 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/stepper@4.0.32...@spectrum-css/stepper@4.0.33)
+
+**Note:** Version bump only for package @spectrum-css/stepper
+
+
+
+
+
+<a name="4.0.32"></a>
+## 4.0.32
+🗓 2023-05-23 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/stepper@4.0.31...@spectrum-css/stepper@4.0.32)
+
+**Note:** Version bump only for package @spectrum-css/stepper
+
+
+
+
+
+<a name="4.0.31"></a>
+## 4.0.31
+🗓 2023-05-22 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/stepper@4.0.30...@spectrum-css/stepper@4.0.31)
+
+**Note:** Version bump only for package @spectrum-css/stepper
+
+
+
+
+
+<a name="4.0.30"></a>
+## 4.0.30
+🗓 2023-05-22 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/stepper@4.0.29...@spectrum-css/stepper@4.0.30)
+
+**Note:** Version bump only for package @spectrum-css/stepper
+
+
+
+
+
+<a name="4.0.29"></a>
+## 4.0.29
+🗓 2023-05-18 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/stepper@4.0.28...@spectrum-css/stepper@4.0.29)
+
+### 🐛 Bug fixes
+
+* **textfield, stepper:** button padding and focus indicator ([#1863](https://github.com/adobe/spectrum-css/issues/1863)) ([7963b85](https://github.com/adobe/spectrum-css/commit/7963b85))
+
+
+
+
+
 <a name="4.0.28"></a>
 ## 4.0.28
 🗓 2023-05-18 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/stepper@4.0.27...@spectrum-css/stepper@4.0.28)

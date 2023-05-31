@@ -53,7 +53,10 @@ governing permissions and limitations under the License.
 
 /* windows high contrast mode */
 @media (forced-colors: active) {
-  .spectrum-Divider {
+  .spectrum-Divider,
+  .spectrum-Divider--sizeS,
+  .spectrum-Divider--sizeM,
+  .spectrum-Divider--sizeL {
     --spectrum-divider-background-color: CanvasText;
     --spectrum-divider-background-color-small-static-white: CanvasText;
     --spectrum-divider-background-color-medium-static-white: CanvasText;
@@ -122,5 +125,9 @@ governing permissions and limitations under the License.
     block-size: 100%;
     inline-size: var(--mod-divider-thickness,
                     var(--spectrum-divider-thickness));
+
+    margin-block: var(--mod-divider-vertical-margin);
+    height: var(--mod-divider-vertical-height);
+    align-self: var(--mod-divider-vertical-align);
   }
 }

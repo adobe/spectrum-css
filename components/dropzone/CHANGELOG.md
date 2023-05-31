@@ -3,6 +3,43 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+<a name="5.0.0"></a>
+# 5.0.0
+🗓 2023-05-23 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/dropzone@4.0.16...@spectrum-css/dropzone@5.0.0)
+
+* feat(dropzone)!: migrate tokens (#1831) ([5216021](https://github.com/adobe/spectrum-css/commit/5216021)), closes [#1831](https://github.com/adobe/spectrum-css/issues/1831)
+
+
+### 🛑 BREAKING CHANGES
+
+* migrates DropZone to use `@adobe/spectrum-tokens`.
+
+Also updates IllustratedMessage and ActionButton to share `--mod-` properties.
+
+
+
+
+
+<a name="4.0.16"></a>
+## 4.0.16
+🗓 2023-05-23 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/dropzone@4.0.15...@spectrum-css/dropzone@4.0.16)
+
+**Note:** Version bump only for package @spectrum-css/dropzone
+
+
+
+
+
+<a name="4.0.15"></a>
+## 4.0.15
+🗓 2023-05-22 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/dropzone@4.0.14...@spectrum-css/dropzone@4.0.15)
+
+**Note:** Version bump only for package @spectrum-css/dropzone
+
+
+
+
+
 <a name="4.0.14"></a>
 ## 4.0.14
 🗓 2023-05-18 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/dropzone@4.0.13...@spectrum-css/dropzone@4.0.14)

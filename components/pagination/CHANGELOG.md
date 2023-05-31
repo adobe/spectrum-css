@@ -3,6 +3,56 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+<a name="6.0.23"></a>
+## 6.0.23
+🗓 2023-05-30 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/pagination@6.0.22...@spectrum-css/pagination@6.0.23)
+
+**Note:** Version bump only for package @spectrum-css/pagination
+
+
+
+
+
+<a name="6.0.22"></a>
+## 6.0.22
+🗓 2023-05-23 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/pagination@6.0.21...@spectrum-css/pagination@6.0.22)
+
+**Note:** Version bump only for package @spectrum-css/pagination
+
+
+
+
+
+<a name="6.0.21"></a>
+## 6.0.21
+🗓 2023-05-23 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/pagination@6.0.20...@spectrum-css/pagination@6.0.21)
+
+**Note:** Version bump only for package @spectrum-css/pagination
+
+
+
+
+
+<a name="6.0.20"></a>
+## 6.0.20
+🗓 2023-05-22 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/pagination@6.0.19...@spectrum-css/pagination@6.0.20)
+
+**Note:** Version bump only for package @spectrum-css/pagination
+
+
+
+
+
+<a name="6.0.19"></a>
+## 6.0.19
+🗓 2023-05-18 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/pagination@6.0.18...@spectrum-css/pagination@6.0.19)
+
+**Note:** Version bump only for package @spectrum-css/pagination
+
+
+
+
+
 <a name="6.0.18"></a>
 ## 6.0.18
 🗓 2023-05-18 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/pagination@6.0.17...@spectrum-css/pagination@6.0.18)
