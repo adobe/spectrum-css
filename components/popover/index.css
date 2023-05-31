@@ -49,6 +49,7 @@ governing permissions and limitations under the License.
 }
 
 .spectrum-Popover {
+  --spectrum-popover-filter: drop-shadow(var(--mod-popover-shadow-horizontal, var(--spectrum-popover-shadow-horizontal)) var(--mod-popover-shadow-vertical, var(--spectrum-popover-shadow-vertical)) var(--mod-popover-shadow-blur, var(--spectrum-popover-shadow-blur)) var(--mod-popover-shadow-color, var(--spectrum-popover-shadow-color)));
   @inherit: %spectrum-overlay;
 
   box-sizing: border-box;
@@ -67,7 +68,7 @@ governing permissions and limitations under the License.
   border-width: var(--mod-popover-border-width, var(--spectrum-popover-border-width));
 
   background-color: var(--mod-popover-background-color, var(--spectrum-popover-background-color));
-  filter: drop-shadow(var(--mod-popover-shadow-horizontal, var(--spectrum-popover-shadow-horizontal)) var(--mod-popover-shadow-vertical, var(--spectrum-popover-shadow-vertical)) var(--mod-popover-shadow-blur, var(--spectrum-popover-shadow-blur)) var(--mod-popover-shadow-color, var(--spectrum-popover-shadow-color)));
+  filter: var(--mod-popover-filter, var(--spectrum-popover-filter));
 
   /* default opens and animates upward */
   &.is-open {
@@ -87,6 +88,11 @@ governing permissions and limitations under the License.
       }
     }
   }
+}
+
+/* prevent nested popovers from affecting each others drop shadow filters */
+.spectrum-Popover * {
+  --mod-popover-filter: none;
 }
 
 /* position naming - first position term is popover position, second term is source position */
