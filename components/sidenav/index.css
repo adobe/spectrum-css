@@ -81,6 +81,15 @@ governing permissions and limitations under the License.
   --spectrum-sidenav-header-font-style: var(--spectrum-default-font-style);
   --spectrum-sidenav-header-font-size: var(--spectrum-font-size-200);
   --spectrum-sidenav-header-line-height: var(--spectrum-line-height-100);
+
+  /* passthrough custom properties */
+  --mod-icon-inline-size: var(--spectrum-sidenav-icon-size);
+  --mod-icon-block-size: var(--spectrum-sidenav-icon-size);
+  --mod-icon-flex-shrink: 0;
+  --mod-icon-margin-right: var(--spectrum-sidenav-icon-spacing);
+  --mod-icon-margin-top: var(--spectrum-sidenav-top-to-icon);
+}
+
 }
 
 .spectrum-SideNav {
@@ -168,15 +177,6 @@ governing permissions and limitations under the License.
   &:lang(zh),
   &:lang(ko) {
     --spectrum-sidenav-text-lineheight: var(--spectrum-cjk-line-height-100);
-  }
-
-  /* use passthrough custom props */
-  .spectrum-SideNav-itemIcon {
-    inline-size: var(--spectrum-sidenav-icon-size);
-    block-size: var(--spectrum-sidenav-icon-size);
-    flex-shrink: 0;
-    margin-inline-end: var(--spectrum-sidenav-icon-spacing);
-    margin-block-start: var(--spectrum-sidenav-top-to-icon);
   }
 
   .spectrum-SideNav-link-label {
