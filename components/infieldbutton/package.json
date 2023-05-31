@@ -18,12 +18,12 @@
     "build": "gulp"
   },
   "peerDependencies": {
-    "@spectrum-css/vars": ">=9"
+    "@spectrum-css/tokens": ">=11"
   },
   "devDependencies": {
-    "@spectrum-css/component-builder": "^4.0.12",
+    "@spectrum-css/component-builder-simple": "^2.0.13",
     "@spectrum-css/icon": "^3.0.50",
-    "@spectrum-css/vars": "^9.0.8",
+    "@spectrum-css/tokens": "^11.0.0",
     "gulp": "^4.0.0"
   },
   "publishConfig": {
