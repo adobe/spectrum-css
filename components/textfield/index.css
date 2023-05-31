@@ -415,7 +415,7 @@ governing permissions and limitations under the License.
 
 /********* Child Element - Input *********/
 .spectrum-Textfield-input {
-  line-height: calc(var(--spectrum-textfield-height) - var(--spectrum-textfield-border-width));
+  line-height: var(--spectrum-textfield-height);
   box-sizing: border-box;
   inline-size: 100%;
   min-inline-size: var(--mod-textfield-min-width, var(--spectrum-textfield-min-width));
