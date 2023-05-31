@@ -21,7 +21,7 @@ governing permissions and limitations under the License.
   /* Distance between top and bottom of dialog and edge of window for fullscreen dialog */
   --spectrum-dialog-fullscreen-margin: 32px;
   --spectrum-dialog-max-height: 90vh;
-  --spectrum-dialog-max-width: 90vw;
+  --spectrum-dialog-max-width: 90%;
 }
 
 /* Used to position the modal */
