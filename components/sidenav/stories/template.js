@@ -12,11 +12,11 @@ export const Template = ({
   rootClass = "spectrum-SideNav",
   customClasses = [],
   variant,
-  icon,
+  hasIcon,
+  iconName,
   items = [],
   ...globals
 }) => {
-  const hasIcon = !items.map(item => item.icon).includes(undefined)
   return html`
     <nav>
       <ul class=${classMap({
@@ -33,24 +33,22 @@ export const Template = ({
                 "is-selected": item.isSelected,
                 "is-disabled": item.isDisabled,
               })}>
-              ${item.category ?
-                html`<h2 class="${rootClass}-heading" id="${item.id}-heading">${item.category}</h2>`
+              ${item.heading ?
+                html`<h2 class="${rootClass}-heading" id="${item.id}-heading">${item.heading}</h2>`
                 :
                 html`
                 <a class="${rootClass}-itemLink">
-                ${when(item.icon, () =>
+                ${when(hasIcon, () =>
                   Icon({
                       ...globals,
-                      iconName: item.icon,
-                      customClasses: [`${rootClass}-itemIcon`]
+                      iconName,
                     })
                   )}
                   <span class="${rootClass}-link-label">${item.title}</span>
                 </a>
                 `
               }
-
-                <ul class=${rootClass} aria-labelledby=${ifDefined(item.category) ? `${item.id}-heading` : ""}>
+                <ul class=${rootClass} aria-labelledby=${ifDefined(item.heading) ? `${item.id}-heading` : ""}>
                   ${repeat(item.subitems, (item) => item.id, (item) => {
                     return SideNavItem({
                       ...globals,
@@ -62,6 +60,8 @@ export const Template = ({
             `
           } else {
             return SideNavItem({
+              hasIcon,
+              iconName,
               ...globals,
               ...item
             })
@@ -80,7 +80,8 @@ export const SideNavItem = ({
   isSelected,
   isDisabled,
   id,
-  icon,
+  hasIcon,
+  iconName,
   customClasses = [],
   ...globals
 }) => {
@@ -92,11 +93,10 @@ export const SideNavItem = ({
       ...customClasses.reduce((a, c) => ({ ...a, [c]: true }), {}),
     })}>
       <a href=${link} class="${rootClass}-itemLink">
-        ${icon ?
+        ${hasIcon ?
           Icon({
             ...globals,
-            iconName: icon,
-            customClasses: [`${rootClass}-itemIcon`]
+            iconName,
           })
         : ""}
         <span class="${rootClass}-link-label">${title}</span>
