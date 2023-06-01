@@ -37,18 +37,6 @@
   --spectrum-colorslider-checkerboard-light-color: var(--spectrum-opacity-checkerboard-square-light);
 }
 
-%spectrum-ColorControl-hiddenField {
-  opacity: 0;
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  z-index: 0;
-  margin: 0;
-  pointer-events: none;
-}
-
 .spectrum-ColorSlider {
   position: relative;
   display: block;
@@ -122,5 +110,14 @@
 }
 
 .spectrum-ColorSlider-slider {
-  @extend %spectrum-ColorControl-hiddenField;
+  /* Hides and disables clicks on the default "range" input field: */
+  opacity: 0;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 0;
+  margin: 0;
+  pointer-events: none;
 }
