@@ -19,7 +19,7 @@ examples:
     markup: |
       <div style="width: 208px;">
         <div class="spectrum-Card spectrum-Card--sizeM" tabindex="0" role="figure">
-          <div class="spectrum-Card-coverPhoto" style="background-image: url(img/example-card-portrait.jpg)"></div>
+          <div class="spectrum-Card-coverPhoto" style="background-image: url(img/example-card-portrait.png)"></div>
           <div class="spectrum-Card-body">
             <div class="spectrum-Card-header">
               <div class="spectrum-Card-title spectrum-Heading spectrum-Heading--sizeXS">Card Title</div>
@@ -60,7 +60,7 @@ examples:
       <div role="grid">
         <div style="width: 208px; outline: 0;" role="row">
           <div class="spectrum-Card spectrum-Card--sizeM is-focused" role="rowheader" tabindex="0">
-            <div class="spectrum-Card-coverPhoto" style="background-image: url(img/example-card-portrait.jpg)"></div>
+            <div class="spectrum-Card-coverPhoto" style="background-image: url(img/example-card-portrait.png)"></div>
             <div class="spectrum-Card-body">
               <div class="spectrum-Card-header">
                 <div class="spectrum-Card-title spectrum-Heading spectrum-Heading--sizeXS">Card Title</div>
@@ -103,7 +103,7 @@ examples:
         <div class="spectrum-Card spectrum-Card--sizeM spectrum-Card--quiet" tabindex="0" role="figure">
           <div class="spectrum-Card-preview">
             <div class="spectrum-Asset">
-              <img class="spectrum-Asset-image" src="img/example-ava.jpg" style="max-width: 75%; max-height: 75%; object-fit: contain;">
+              <img class="spectrum-Asset-image" src="img/example-ava.png" style="max-width: 75%; max-height: 75%; object-fit: contain;">
             </div>
           </div>
           <div class="spectrum-Card-body">
@@ -219,7 +219,7 @@ examples:
     markup: |
       <div style="width: 208px;">
         <div class="spectrum-Card spectrum-Card--sizeS" tabindex="0" role="figure">
-          <div class="spectrum-Card-coverPhoto" style="background-image: url(img/example-card-portrait.jpg)"></div>
+          <div class="spectrum-Card-coverPhoto" style="background-image: url(img/example-card-portrait.png)"></div>
           <div class="spectrum-Card-body">
             <div class="spectrum-Card-header">
               <div class="spectrum-Card-title spectrum-Heading spectrum-Heading--sizeXS">Card Title</div>
@@ -275,7 +275,7 @@ examples:
         <div class="spectrum-Card spectrum-Card--sizeS spectrum-Card--quiet" tabindex="0" role="figure">
           <div class="spectrum-Card-preview">
             <div class="spectrum-Asset">
-              <img class="spectrum-Asset-image" src="img/example-ava.jpg" style="max-width: 75%; max-height: 75%; object-fit: contain;">
+              <img class="spectrum-Asset-image" src="img/example-ava.png" style="max-width: 75%; max-height: 75%; object-fit: contain;">
             </div>
           </div>
           <div class="spectrum-Card-body">
@@ -318,7 +318,7 @@ examples:
           <div class="spectrum-Card spectrum-Card--sizeS spectrum-Card--quiet is-focused" role="rowheader" tabindex="0">
             <div class="spectrum-Card-preview">
               <div class="spectrum-Asset">
-                <img class="spectrum-Asset-image" src="img/example-ava.jpg" style="max-width: 75%; max-height: 75%; object-fit: contain;">
+                <img class="spectrum-Asset-image" src="img/example-ava.png" style="max-width: 75%; max-height: 75%; object-fit: contain;">
               </div>
             </div>
             <div class="spectrum-Card-body">

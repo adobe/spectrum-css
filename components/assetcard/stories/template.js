@@ -31,7 +31,7 @@ export const Template = ({
 		return html``;
 	}
 
-	if (exampleImage) exampleImage = `example-card-${exampleImage}.png`;
+	if (exampleImage) exampleImage = `img/example-card-${exampleImage}.png`;
 
 	return html`
 		<div

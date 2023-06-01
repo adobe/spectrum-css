@@ -1,11 +1,13 @@
 const { resolve } = require("path");
 const { readdirSync } = require("fs");
+
 const componentsPath = resolve(__dirname, "../../components");
 const componentPkgs = readdirSync(componentsPath, {
 	withFileTypes: true,
 })
 	.filter((dirent) => dirent.isDirectory())
 	.map((dirent) => dirent.name);
+
 module.exports = {
 	stories: [
 		"../../components/*/stories/*.stories.mdx",
@@ -91,8 +93,8 @@ module.exports = {
 							{
 								loader: "file-loader",
 								options: {
-									outputPath: (url, resourcePath, context) => {
-										return `assets/images/${url.replace(/_\//g, "")}`;
+									outputPath: (url, _resourcePath, _context) => {
+										return `assets/${url.replace(/img/g, "images")}`;
 									},
 								},
 							},
@@ -115,8 +117,8 @@ module.exports = {
 								loader: "file-loader",
 								options: {
 									name: "[path][name].[ext][query]",
-									outputPath: (url, resourcePath, context) => {
-										return `assets/css/${url.replace(/_\//g, "")}`;
+									outputPath: (url, _resourcePath, _context) => {
+										return `assets/css/${url}`;
 									},
 									esModule: false,
 								},

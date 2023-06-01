@@ -19,6 +19,18 @@ function buildSite_resources() {
 		.pipe(gulp.dest(path.join(__dirname, "../dist/")));
 }
 
+function buildSite_assets() {
+	return gulp
+		.src(path.join(__dirname, "../assets/images/**"))
+		.pipe(gulp.dest(path.join(__dirname, "../dist/img/")));
+}
+
+function buildSite_favicons() {
+	return gulp
+		.src(path.join(__dirname, "../assets/favicons/**"))
+		.pipe(gulp.dest(path.join(__dirname, "../dist/")));
+}
+
 function buildSite_loadicons() {
 	return gulp
 		.src(require.resolve("loadicons"))
@@ -48,6 +60,8 @@ function buildSite_prism() {
 
 exports.copySiteResources = gulp.parallel(
 	buildSite_resources,
+	buildSite_assets,
+	buildSite_favicons,
 	buildSite_loadicons,
 	buildSite_focusPolyfill,
 	buildSite_lunr,

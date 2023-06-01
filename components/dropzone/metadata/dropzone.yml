@@ -24,7 +24,7 @@ examples:
   - id: dropzone-filled
     name: Drop Zone (filled, dragged)
     markup: |
-      <div class="spectrum-DropZone is-filled is-dragged" role="region" tabindex="0" style="height: 200px; background-image:url(img/example-card-portrait.jpg)">
+      <div class="spectrum-DropZone is-filled is-dragged" role="region" tabindex="0" style="height: 200px; background-image:url(img/example-card-portrait.png)">
         <div class="spectrum-DropZone-content">
           <button class="spectrum-ActionButton spectrum-DropZone-button">
             <span class="spectrum-ActionButton-label">Drop file to replace</span>

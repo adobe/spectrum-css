@@ -4,7 +4,6 @@ import { repeat } from "lit/directives/repeat.js";
 import { ifDefined } from "lit/directives/if-defined.js";
 
 import { useArgs, useGlobals } from "@storybook/client-api";
-import { action } from "@storybook/addon-actions";
 
 import { Template as ActionButton } from "@spectrum-css/actionbutton/stories/template.js";
 
@@ -178,11 +177,10 @@ export const Template = ({
 		 * @param {Event} evt
 		 * @returns {void}
 		 */
-		onDateClick = (thisDay, evt) => {
+		onDateClick = (thisDay) => {
 			if (!thisDay || thisDay.isDisabled || !thisDay.date) return;
 
 			updateArgs({ selectedDay: thisDay.date });
-			action(`click .${rootClass}-date`)(evt);
 		};
 	}
 

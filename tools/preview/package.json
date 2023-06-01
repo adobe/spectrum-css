@@ -7,11 +7,11 @@
   "homepage": "https://opensource.adobe.com/spectrum-css/preview",
   "main": "main.js",
   "scripts": {
-    "build": "yarn storybook",
+    "build": "storybook build --quiet --config-dir .",
     "clean": "rimraf storybook-static",
-    "new": "yarn workspace @spectrum-css/generator new story",
-    "start": "WATCH_MODE=true storybook dev --quiet --config-dir .",
-    "storybook": "storybook build --quiet --config-dir .",
+    "dev": "storybook dev --quiet --config-dir .",
+    "new": "nx run @spectrum-css/generator:new story",
+    "start": "WATCH_MODE=true yarn dev",
     "test": "chromatic --build-script-name build --junit-report",
     "test:scope": "yarn test --only-story-names"
   },
@@ -67,6 +67,7 @@
     "targets": {
       "build": {
         "dependsOn": [
+          "clean",
           "^build"
         ],
         "inputs": [
@@ -89,13 +90,6 @@
     "implicitDependencies": [
       "@spectrum-css/*",
       "!@spectrum-css/generator"
-    ],
-    "includedScripts": [
-      "clean",
-      "test",
-      "test:scope",
-      "storybook",
-      "build"
     ]
   }
 }

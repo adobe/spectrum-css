@@ -38,9 +38,10 @@ import "@spectrum-css/tokens";
 
 // Loading typography on every page because it's a useful utility
 import "@spectrum-css/typography";
+
 import "@spectrum-css/site";
 
-import "./global.js";
+import "../../assets/scripts/typekit.js";
 
 // Rendered as controls; these properties are assigned
 //      to the document root element
@@ -83,6 +84,7 @@ export const globalTypes = {
 export const argTypes = {
 	color: {
 		name: "Color",
+		title: "Color",
 		description: "Controls the color context of the component.",
 		type: { required: true },
 		table: {
@@ -102,6 +104,7 @@ export const argTypes = {
 	},
 	scale: {
 		name: "Platform scale",
+		title: "Platform scale",
 		description: "Controls the platform scale of the component.",
 		table: {
 			type: { summary: "medium | large" },
@@ -133,6 +136,7 @@ export const argTypes = {
 	},
 	express: {
 		name: "Express",
+		title: "Express",
 		description: "The express theme is a variation of Spectrum.",
 		table: {
 			type: { summary: "boolean" },
@@ -145,18 +149,21 @@ export const argTypes = {
 	/* None of these should show up in the args table but are necessary for rendering the templates */
 	rootClass: {
 		name: "Class name",
+		title: "Class name",
 		type: { name: "string", required: true },
 		table: { disable: true },
 		control: "text",
 	},
 	customClasses: {
 		name: "Custom classes",
+		title: "Custom classes",
 		type: { name: "string", required: false },
 		table: { disable: true },
 		control: "object",
 	},
 	id: {
 		name: "Element ID",
+		title: "Element ID",
 		type: { name: "string", required: false },
 		table: { disable: true },
 		control: "text",

@@ -11,8 +11,17 @@
 	"targetDefaults": {
 		"build": {
 			"dependsOn": ["clean", "^build"],
-			"inputs": ["{workspaceRoot}/*.css"]
+			"inputs": [
+				"{workspaceRoot}/skin.css",
+				"{workspaceRoot}/index.css",
+				"{workspaceRoot}/themes/express.css",
+				"{workspaceRoot}/themes/spectrum.css"
+			],
+			"outputs": ["{workspaceRoot}/dist/*.css"]
+		},
+		"clean": {
+			"inputs": ["{workspaceRoot}/dist"],
+			"outputs": []
 		}
-	},
-	"includedScripts": ["build"]
+	}
 }

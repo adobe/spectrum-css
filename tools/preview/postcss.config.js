@@ -1,15 +1,13 @@
 const { resolve, relative, basename } = require("path");
-const { existsSync } = require("fs");
 const warnCleaner = require("postcss-warn-cleaner");
 
-const simpleBuilder = require("@spectrum-css/component-builder-simple/css/processors.js");
-const legacyBuilder = require("@spectrum-css/component-builder/css/processors.js");
-
 module.exports = (ctx) => {
-	let plugins = [];
+	const plugins = [
+		require("postcss-import")(),
+	];
+
 	const componentPath = resolve(__dirname, "../../components");
 	const folderName = relative(componentPath, ctx.file).split("/")[0];
-	const pkgPath = resolve(componentPath, folderName, "package.json");
 
 	if (["expressvars", "vars", "tokens"].includes(folderName)) {
 		const isExpress = folderName === "expressvars";
@@ -19,8 +17,7 @@ module.exports = (ctx) => {
 					.replace("global", "")
 			: "";
 
-		plugins = [
-			require("postcss-import")(),
+		plugins.push(
 			require("postcss-selector-replace")({
 				before: [":root"],
 				after: [
@@ -41,20 +38,7 @@ module.exports = (ctx) => {
 						}),
 				  ]
 				: []),
-		];
-	} else if (existsSync(pkgPath)) {
-		const { devDependencies } = require(pkgPath);
-		if (
-			Object.keys(devDependencies).includes("@spectrum-css/component-builder")
-		) {
-			plugins.push(...legacyBuilder.processors);
-		} else {
-			if (ctx.file.split("/").includes("themes")) {
-				plugins.push(...simpleBuilder.getProcessors({ noSelectors: false }));
-			} else {
-				plugins.push(...simpleBuilder.getProcessors());
-			}
-		}
+		);
 	}
 
 	// For storybook, add a tool to suppress autoprefixer warnings

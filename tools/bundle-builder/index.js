@@ -209,15 +209,6 @@ let buildHeavy = gulp.series(function buildComponentsLite() {
 	return subrunner.runTaskOnAllComponents("buildHeavy");
 }, buildDocs);
 
-let devTask;
-if (process.cwd() === dirs.topLevel) {
-	// Build all packages if at the top level
-	devTask = gulp.series(buildLite, dev.watch);
-} else {
-	// Otherwise, just start watching
-	devTask = gulp.series(buildDocs, dev.watch);
-}
-
 exports.devHeavy = gulp.series(buildHeavy, dev.watch);
 
 exports.copyVars = vars.copyVars;
@@ -231,7 +222,7 @@ exports.buildLite = buildLite;
 exports.buildDocs = buildDocs;
 exports.buildDepenenciesOfCommons = buildDepenenciesOfCommons;
 exports.copyPackages = copyPackages;
-exports.dev = devTask;
+exports.dev = gulp.series(exports.buildLite, dev.watch);
 exports.build = build;
 exports.watch = dev.watch;
 exports.default = buildMedium;

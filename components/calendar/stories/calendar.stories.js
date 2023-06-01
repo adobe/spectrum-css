@@ -94,7 +94,10 @@ export default {
 	},
 	parameters: {
 		actions: {
-			handles: [...(ActionButtonStories.parameters.actions.handles ?? [])],
+			handles: [
+				...(ActionButtonStories.parameters.actions.handles ?? []),
+				'click .spectrum-Calendar-date'
+			],
 		},
 		status: {
 			type: process.env.MIGRATED_PACKAGES.includes("calendar")
