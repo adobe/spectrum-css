@@ -181,6 +181,14 @@ governing permissions and limitations under the License.
     margin-block-end: var(--mod-sidenav-bottom-to-label, var(--spectrum-sidenav-bottom-to-label));
   }
 
+  .spectrum-Icon {
+    inline-size: var(--spectrum-sidenav-icon-size);
+    block-size: var(--spectrum-sidenav-icon-size);
+    margin-inline-end: var(--spectrum-sidenav-icon-spacing);
+    margin-block-start: var(--spectrum-sidenav-top-to-icon);
+   flex-shrink: 0;
+  }
+
   &:hover {
     background-color: var(--highcontrast-sidenav-background-hover, var(--mod-sidenav-background-hover, var(--spectrum-sidenav-background-hover)));
     color: var(--highcontrast-sidenav-content-color-hover, var(--mod-sidenav-content-color-hover, var(--spectrum-sidenav-content-color-hover)));
