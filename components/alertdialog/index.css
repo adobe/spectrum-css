@@ -20,7 +20,7 @@ governing permissions and limitations under the License.
   --spectrum-alert-dialog-error-icon-color: var(--spectrum-negative-visual-color);
 
   /* typography */
-   --spectrum-alert-dialog-title-font-family: var(--spectrum-sans-font-family-stack);
+  --spectrum-alert-dialog-title-font-family: var(--spectrum-sans-font-family-stack);
   --spectrum-alert-dialog-title-font-weight: var(--spectrum-heading-sans-serif-font-weight);
   --spectrum-alert-dialog-title-font-style: var(--spectrum-heading-sans-serif-font-style);
   --spectrum-alert-dialog-title-font-size: var(--spectrum-alert-dialog-title-size);
@@ -39,7 +39,7 @@ governing permissions and limitations under the License.
   --spectrum-alert-dialog-divider-to-description: var(--spectrum-spacing-300);
   --spectrum-alert-dialog-title-to-icon: var(--spectrum-spacing-300);
 
-  /* mods for nested components */
+  /* mods for nested component */
   --mod-buttongroup-justify-content: flex-end;
 }
 
