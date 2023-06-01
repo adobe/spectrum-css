@@ -12,6 +12,7 @@ export const Template = ({
   isDisabled = false,
   isFocused = false,
   vertical,
+  gradientStops,
   colorHandleStyle = {
     '--spectrum-picked-color': 'rgba(255, 0, 0)',
   },
@@ -26,15 +27,14 @@ export const Template = ({
       ...customClasses.reduce((a, c) => ({ ...a, [c]: true }), {}),
   })}>
   <div class="${rootClass}-checkerboard" role="presentation">
-    <div class="${rootClass}-gradient" role="presentation" style="background: linear-gradient(to ${vertical ? 'bottom' :'right'}, rgb(255, 0, 0) 0%, rgb(255, 255, 0) 17%, rgb(0, 255, 0) 33%, rgb(0, 255, 255) 50%, rgb(0, 0, 255) 67%, rgb(255, 0, 255) 83%, rgb(255, 0, 0) 100%);"></div>
+    <div class="${rootClass}-gradient" role="presentation" style="background: linear-gradient(to ${vertical ? 'bottom' :'right'}, ${gradientStops});"></div>
   </div>
   ${ColorHandle({
     ...globals,
     isDisabled,
     customClasses: [`${rootClass}-handle`],
     colorHandleStyle
-    })
-  }
+  })}
   <input type="range" class="${rootClass}-slider" min="0" max="100" step="1">
   </div>
   `;

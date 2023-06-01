@@ -26,11 +26,18 @@ export default {
       control: "boolean",
       if: { arg: 'isDisabled', truthy: false }
     },
+    gradientStops: {
+      name: "Gradient Stops",
+      description: "The <linear-color-stop> value of the CSS linear-gradient. Can be multiple stops separated by commas.",
+      type: { name: "string" },
+      table: { disable: true },
+    },
   },
   args: {
     rootClass: "spectrum-ColorSlider",
     isDisabled: false,
     isFocused: false,
+    gradientStops: "rgb(255, 255, 0) 17%, rgb(0, 255, 0) 33%, rgb(0, 255, 255) 50%, rgb(0, 0, 255) 67%, rgb(255, 0, 255) 83%, rgb(255, 0, 0) 100%",
   },
   parameters: {
     actions: {
@@ -48,4 +55,9 @@ Default.args = {};
 export const Vertical = Template.bind({});
 Vertical.args = {
   vertical: true
+}
+
+export const Alpha = Template.bind({});
+Alpha.args = {
+  gradientStops: "rgba(0, 0, 0, 1) 0%, rgba(0, 0, 0, 0) 100%"
 }
