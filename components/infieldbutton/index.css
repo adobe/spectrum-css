@@ -398,6 +398,7 @@ governing permissions and limitations under the License.
 
 .spectrum-InfieldButton-icon {
 <<<<<<< HEAD
+<<<<<<< HEAD
 	display: initial;
 
 	/* don't be small, ever */
@@ -411,38 +412,19 @@ governing permissions and limitations under the License.
 	/* don't be small, ever */
 	flex-shrink: 0;
 =======
+=======
+>>>>>>> 3c05f5ec9 (style(infieldbutton): disabled colors and quiet colors)
   display: initial;
 
   /* don't be small, ever */
   flex-shrink: 0;
+<<<<<<< HEAD
 >>>>>>> ebecd1185 (style(infieldbutton!): begin updating css to tokens)
 >>>>>>> c0def263f (style(infieldbutton!): begin updating css to tokens)
 >>>>>>> f01aba123 (style(infieldbutton!): begin updating css to tokens)
+=======
+>>>>>>> 3c05f5ec9 (style(infieldbutton): disabled colors and quiet colors)
 
   /* remove margin used for centering */
   margin: 0 !important;
-}
-
-.spectrum--medium {
-  .spectrum-InfieldButton {
-    &.spectrum-InfieldButton--sizeL {
-      .spectrum-InfieldButton-icon {
-        --spectrum-InfieldButton-Fill-Icon-size: var(--spectrum-global-dimension-static-size-250);
-        block-size: var(--spectrum-global-dimension-static-size-250);
-        inline-size: var(--spectrum-global-dimension-static-size-250);
-      }
-    }
-  }
-}
-
-.spectrum--large {
-  .spectrum-InfieldButton {
-    &.spectrum-InfieldButton--sizeL {
-      .spectrum-InfieldButton-icon {
-        --spectrum-InfieldButton-Fill-Icon-size: var(--spectrum-global-dimension-static-size-300);
-        block-size: var(--spectrum-global-dimension-static-size-300);
-        inline-size: var(--spectrum-global-dimension-static-size-300);
-      }
-    }
-  }
 }
