@@ -158,7 +158,7 @@ examples:
         <ul class="spectrum-SideNav spectrum-SideNav--multiLevel spectrum-SideNav--hasIcon">
           <li class="spectrum-SideNav-item">
             <a href="#" class="spectrum-SideNav-itemLink">
-              <svg class="spectrum-Icon" focusable="false" aria-hidden="true">
+              <svg class="spectrum-Icon spectrum-Icon--sizeM" focusable="false" aria-hidden="true">
                 <use xlink:href="#spectrum-icon-18-Image" />
               </svg>
               <span class="spectrum-SideNav-link-label"> Section Title 2</span>
@@ -166,7 +166,7 @@ examples:
           </li>
           <li class="spectrum-SideNav-item">
             <a href="#" class="spectrum-SideNav-itemLink">
-              <svg class="spectrum-Icon" focusable="false" aria-hidden="true">
+              <svg class="spectrum-Icon spectrum-Icon--sizeM" focusable="false" aria-hidden="true">
                 <use xlink:href="#spectrum-icon-18-Folder" />
               </svg>
               <span class="spectrum-SideNav-link-label"> Section Title 2</span>
@@ -202,7 +202,7 @@ examples:
           </li>
           <li class="spectrum-SideNav-item">
             <a href="#" class="spectrum-SideNav-itemLink">
-              <svg class="spectrum-Icon " focusable="false" aria-hidden="true">
+              <svg class="spectrum-Icon spectrum-Icon--sizeM" focusable="false" aria-hidden="true">
                 <use xlink:href="#spectrum-icon-18-Star" />
               </svg>
               <span class="spectrum-SideNav-link-label"> Section Title 4</span>
@@ -210,7 +210,7 @@ examples:
           </li>
           <li class="spectrum-SideNav-item is-disabled">
             <a class="spectrum-SideNav-itemLink">
-              <svg class="spectrum-Icon " focusable="false" aria-hidden="true">
+              <svg class="spectrum-Icon spectrum-Icon--sizeM" focusable="false" aria-hidden="true">
                 <use xlink:href="#spectrum-icon-18-Document" />
               </svg>
               <span class="spectrum-SideNav-link-label"> Section Title 5</span>
