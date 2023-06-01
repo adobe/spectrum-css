@@ -1,40 +1,34 @@
 .spectrum-ColorSlider {
-
-  /*
-  --spectrum-color-slider-length
-  --spectrum-color-slider-minimum-length
-  --spectrum-color-control-track-width
-  --spectrum-color-slider-border-width
-  --spectrum-color-slider-border-rounding
-*/
-
   /* Size and Spacing */
-  --spectrum-colorslider-label-to-track-spacing: var(--spectrum-component-top-to-text-75);
-  --spectrum-colorslider-handle-margin-block: var(--spectrum-component-top-to-text-75);
+  --spectrum-color-slider-label-to-track-spacing: var(--spectrum-component-top-to-text-75);
+  --spectrum-color-slider-handle-margin-block: var(--spectrum-component-top-to-text-75);
 
-  /* Colors */
-  /*
-  --spectrum-color-slider-border-color
-  --spectrum-color-slider-border-opacity
-*/
-
-/*
-  --spectrum-disabled-content-color
-  --spectrum-disabled-background-color
-*/
+  /* @todo Refactor with --spectrum-color-slider-border-color once gray rgb token is no longer necessary to workaround nested rgb color token value using rgba(). */
+  --spectrum-color-slider-border-color-rgba: rgba(--spectrum-gray-900-rgb, var(--spectrum-color-slider-border-opacity));
   
-  --spectrum-colorslider-handle-hitarea-border-radius: 0%;
-  --spectrum-colorslider-handle-hitarea-width: var(
+  /* Settings for nested Color Handle */
+  --spectrum-color-slider-handle-hitarea-border-radius: 0%;
+  --spectrum-color-slider-handle-hitarea-width: var(
     --spectrum-global-dimension-size-300
   );
-  --spectrum-colorslider-handle-hitarea-height: var(
+  --spectrum-color-slider-handle-hitarea-height: var(
     --spectrum-global-dimension-size-300
   );
 
   /* Checkerboard pattern */
-  --spectrum-colorslider-checkerboard-size: var(--spectrum-opacity-checkerboard-square-size);
-  --spectrum-colorslider-checkerboard-dark-color: var(--spectrum-opacity-checkerboard-square-dark);
-  --spectrum-colorslider-checkerboard-light-color: var(--spectrum-opacity-checkerboard-square-light);
+  --spectrum-color-slider-checkerboard-size: var(--spectrum-opacity-checkerboard-square-size);
+  --spectrum-color-slider-checkerboard-dark-color: var(--spectrum-opacity-checkerboard-square-dark);
+  --spectrum-color-slider-checkerboard-light-color: var(--spectrum-opacity-checkerboard-square-light);
+}
+
+@media (forced-colors: active) {
+  .spectrum-ColorSlider {
+    --highcontrast-color-slider-border-color: GrayText;
+    --highcontrast-disabled-background-color: Canvas;
+  }
+  .spectrum-ColorSlider {
+    forced-color-adjust: none;
+  }
 }
 
 .spectrum-ColorSlider {
@@ -56,6 +50,10 @@
 
   &.is-disabled {
     pointer-events: none;
+
+    .spectrum-ColorSlider-gradient {
+      display: none
+    }
   }
 }
 
@@ -77,47 +75,57 @@
   left: 0;
   top: 50%;
 
-  &:after {
-    border-radius: var(--spectrum-colorslider-handle-hitarea-border-radius);
-    width: var(--spectrum-colorslider-handle-hitarea-width);
-    height: var(--spectrum-colorslider-handle-hitarea-height);
+  &::after {
+    border-radius: var(--mod-color-slider-handle-hitarea-border-radius, var(--spectrum-color-slider-handle-hitarea-border-radius));
+    inline-size: var(--mod-color-slider-handle-hitarea-width, var(--spectrum-color-slider-handle-hitarea-width));
+    block-size: var(--mod-color-slider-handle-hitarea-height, var(--spectrum-color-slider-handle-hitarea-height));
   }
 }
 
 .spectrum-ColorSlider-checkerboard {
   background:
-    repeating-conic-gradient(var(--spectrum-colorslider-checkerboard-light-color) 0% 25%, var(--spectrum-colorslider-checkerboard-dark-color) 0% 50%)
-    left top / calc(var(--spectrum-colorslider-checkerboard-size) * 2 ) calc(var(--spectrum-colorslider-checkerboard-size) * 2 );
+    repeating-conic-gradient(var(--mod-color-slider-checkerboard-light-color, var(--spectrum-color-slider-checkerboard-light-color)) 0% 25%, var(--mod-color-slider-checkerboard-dark-color, var(--spectrum-color-slider-checkerboard-dark-color)) 0% 50%)
+    left top / calc(var(--mod-color-slider-checkerboard-size, var(--spectrum-color-slider-checkerboard-size)) * 2 ) calc(var(--mod-spectrum-color-slider-checkerboard-size, var(--spectrum-color-slider-checkerboard-size)) * 2 );
 
-  /* the floating inset box shadow must be a separate element since <canvas> won't take it */
-  &:before {
+  /* The floating inset box shadow (border) must be a separate element since <canvas> won't take it. */
+  &::before {
     content: "";
     z-index: 1;
     position: absolute;
-    top: 0;
-    left: 0;
-    bottom: 0;
-    right: 0;
-    border-radius: var(--spectrum-colorslider-border-radius);
+    inset: 0;
+    box-shadow: 0 0 0 var(--mod-color-slider-border-width, var(--spectrum-color-slider-border-width)) var(--highcontrast-color-slider-border-color, var(--mod-color-slider-border-color, var(--spectrum-color-slider-border-color-rgba)));
+    border-radius: var(--mod-color-slider-border-rounding, var(--spectrum-color-slider-border-rounding));
+  }
+
+  .spectrum-ColorSlider.is-disabled & {
+    background: var(--highcontrast-disabled-background-color, var(--mod-disabled-background-color, var(--spectrum-disabled-background-color)));
+
+    &::before {
+      border-color: var(--highcontrast-disabled-background-color, var(--mod-disabled-background-color, var(--spectrum-disabled-background-color)));
+    }
   }
 }
 
 .spectrum-ColorSlider-gradient,
 .spectrum-ColorSlider-checkerboard {
-  width: 100%;
-  height: 100%;
-  border-radius: var(--spectrum-colorslider-border-radius);
+  inline-size: 100%;
+  block-size: 100%;
+  border-radius: var(--mod-color-slider-border-rounding, var(--spectrum-color-slider-border-rounding));
 }
 
+/* Visually hidden "range" input field */
 .spectrum-ColorSlider-slider {
-  /* Hides and disables clicks on the default "range" input field: */
   opacity: 0;
   position: absolute;
-  top: 0;
-  left: 0;
+  inset-block-start: 0;
+  inset-inline-start: 0;
   width: 100%;
   height: 100%;
   z-index: 0;
   margin: 0;
   pointer-events: none;
+}
+
+.spectrum-FieldLabel + .spectrum-ColorSlider {
+  margin-block-start: var(--mod-color-slider-label-to-track-spacing, var(--spectrum-color-slider-label-to-track-spacing));
 }

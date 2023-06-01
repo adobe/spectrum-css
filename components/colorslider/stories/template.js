@@ -4,7 +4,6 @@ import { classMap } from 'lit-html/directives/class-map.js';
 import { Template as ColorHandle } from "@spectrum-css/colorhandle/stories/template.js";
 
 import '../index.css';
-import '../skin.css';
 
 export const Template = ({
   rootClass = "spectrum-ColorSlider",
@@ -19,6 +18,7 @@ export const Template = ({
   ...globals
 }) => {
   return html`
+  <label for="textfield-1" class="spectrum-FieldLabel spectrum-FieldLabel--sizeM">Blue test</label>
     <div class=${classMap({
       [rootClass]: true,
       [`${rootClass}--vertical`]: vertical,

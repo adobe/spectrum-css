@@ -8,6 +8,13 @@ description: |
   - Ensure that you the `step` attribute of `.spectrum-ColorSlider-slider` appropriately (i.e. `0.1` for `a`, `s`, `v` or `1` and `h`, `r`, etc)
   - Set the `background` style property of `.spectrum-ColorSlider-gradient` to the gradient of the colors to be selected.
   - Alternatively, provide a `<canvas>` or `<img>` element with the gradient you want to use and apply the `.spectrum-ColorSlider-gradient` class
+sections:
+  - name: Custom Properties API
+    description: |
+      This component can be modified via its `--mod-*` prefixed custom properties. A list of those prefixed custom properties can be found <a href="https://github.com/adobe/spectrum-css/tree/main/components/colorslider/metadata/mods.md">here</a>.
+  - name: Migration Guide
+    description: |
+     - Color Slider examples no longer display a "canvas" variant.
 examples:
   - id: color-slider
     name: Standard
@@ -30,6 +37,7 @@ examples:
   - id: color-slider
     name: Alpha
     markup: |
+      <label class="spectrum-FieldLabel spectrum-FieldLabel--sizeM spectrum-FieldLabel--left">Label</label>
       <div class="spectrum-ColorSlider">
         <div class="spectrum-ColorSlider-checkerboard" role="presentation">
           <div class="spectrum-ColorSlider-gradient" role="presentation" style="background: linear-gradient(to right, rgba(0, 0, 0, 1) 0%, rgba(0, 0, 0, 0) 100%);"></div>
@@ -48,6 +56,7 @@ examples:
   - id: color-slider
     name: Disabled
     markup: |
+      <label class="spectrum-FieldLabel spectrum-FieldLabel--sizeM spectrum-FieldLabel--left is-disabled">Label</label>
       <div class="spectrum-ColorSlider is-disabled">
         <div class="spectrum-ColorSlider-checkerboard" role="presentation">
           <div class="spectrum-ColorSlider-gradient" role="presentation" style="background: linear-gradient(to right, rgb(255, 0, 0) 0%, rgb(255, 255, 0) 17%, rgb(0, 255, 0) 33%, rgb(0, 255, 255) 50%, rgb(0, 0, 255) 67%, rgb(255, 0, 255) 83%, rgb(255, 0, 0) 100%);"></div>
@@ -80,40 +89,6 @@ examples:
 
         <input type="range" class="spectrum-ColorSlider-slider" min="0" max="100" step="1">
       </div>
-
-  - id: color-slider
-    name: Standard (with canvas)
-    markup: |
-      <div class="spectrum-ColorSlider">
-        <div class="spectrum-ColorSlider-checkerboard" role="presentation">
-          <canvas class="spectrum-ColorSlider-gradient" role="presentation"></canvas>
-        </div>
-
-        <div class="spectrum-ColorHandle spectrum-ColorSlider-handle" style="--spectrum-picked-color: #8ED6FF">
-          <div class="spectrum-ColorHandle-inner"></div>
-          <svg class="spectrum-ColorLoupe">
-            <!-- use ColorLoupe markup here -->
-          </svg>
-          </svg>
-        </div>
-
-        <input type="range" class="spectrum-ColorSlider-slider" min="0" max="100" step="1">
-      </div>
-      <script>
-        var canvas = document.querySelector('canvas.spectrum-ColorSlider-gradient');
-        canvas.width = canvas.offsetWidth;
-        canvas.height = canvas.offsetHeight;
-        var context = canvas.getContext('2d');
-        context.rect(0, 0, canvas.width, canvas.height);
-
-        var gradient = context.createLinearGradient(0, 0, canvas.width, canvas.height);
-
-        gradient.addColorStop(0, '#8ED6FF');
-        gradient.addColorStop(1, '#004CB3');
-
-        context.fillStyle = gradient;
-        context.fill();
-      </script>
 
   - id: color-slider
     name: Standard (with image)
@@ -177,7 +152,6 @@ examples:
 
         <input type="range" class="spectrum-ColorSlider-slider" min="0" max="100" step="1">
       </div>
-
 
   - id: color-slider
     name: Full example (alpha)
