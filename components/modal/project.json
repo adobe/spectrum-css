@@ -1,0 +1,21 @@
+{
+	"name": "modal",
+	"tags": ["components"],
+	"targets": {
+		"build": {
+			"dependsOn": ["^build"],
+			"executor": "nx:run-commands",
+			"options": {
+				"cwd": "components/modal",
+				"command": "gulp"
+			}
+		},
+		"clean": {
+			"executor": "nx:run-commands",
+			"options": {
+				"cwd": "components/modal",
+				"command": "rimraf dist"
+			}
+		}
+	}
+}

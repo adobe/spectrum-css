@@ -1,0 +1,21 @@
+{
+	"name": "buttongroup",
+	"tags": ["components"],
+	"targets": {
+		"build": {
+			"dependsOn": ["^build"],
+			"executor": "nx:run-commands",
+			"options": {
+				"cwd": "components/buttongroup",
+				"command": "gulp"
+			}
+		},
+		"clean": {
+			"executor": "nx:run-commands",
+			"options": {
+				"cwd": "components/buttongroup",
+				"command": "rimraf dist"
+			}
+		}
+	}
+}

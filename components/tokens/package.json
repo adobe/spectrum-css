@@ -46,21 +46,5 @@
   },
   "publishConfig": {
     "access": "public"
-  },
-  "nx": {
-    "targets": {
-      "build": {
-        "inputs": [
-          "{workspaceRoot}/postcss.config.js",
-          "{workspaceRoot}/style-dictionary.config.js",
-          "{workspaceRoot}/utilities/style-dictionary.utils.js",
-          "{workspaceRoot}/custom-express/*.css",
-          "{workspaceRoot}/custom-spectrum/*.css"
-        ]
-      }
-    },
-    "includedScripts": [
-      "build"
-    ]
   }
 }

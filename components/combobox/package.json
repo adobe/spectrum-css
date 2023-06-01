@@ -14,9 +14,6 @@
     "url": "https://github.com/adobe/spectrum-css/issues"
   },
   "main": "dist/index-vars.css",
-  "scripts": {
-    "build": "gulp"
-  },
   "peerDependencies": {
     "@spectrum-css/pickerbutton": ">=2 <=3",
     "@spectrum-css/popover": ">=5 <=6",
@@ -29,8 +26,7 @@
     "@spectrum-css/popover": "^6.0.53",
     "@spectrum-css/progresscircle": "^2.0.47",
     "@spectrum-css/textfield": "^6.0.1",
-    "@spectrum-css/tokens": "^10.1.2",
-    "gulp": "^4.0.0"
+    "@spectrum-css/tokens": "^10.1.2"
   },
   "publishConfig": {
     "access": "public"

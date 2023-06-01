@@ -1,15 +1,16 @@
 {
-	"version": "independent",
-	"npmClient": "yarn",
-	"useWorkspaces": true,
-	"noPrivate": true,
-	"command": {
-		"publish": {
-			"conventionalCommits": true,
-			"changelogPreset": "spectrum"
-		},
-		"version": {
-			"message": "chore(release): release"
-		}
-	}
+  "version": "independent",
+  "npmClient": "yarn",
+  "useNx": true,
+  "useWorkspaces": true,
+  "noPrivate": true,
+  "command": {
+    "publish": {
+      "conventionalCommits": true,
+      "changelogPreset": "spectrum"
+    },
+    "version": {
+      "message": "chore(release): release"
+    }
+  }
 }

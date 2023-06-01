@@ -1,0 +1,21 @@
+{
+	"name": "badge",
+	"tags": ["components"],
+	"targets": {
+		"build": {
+			"dependsOn": ["^build"],
+			"executor": "nx:run-commands",
+			"options": {
+				"cwd": "components/badge",
+				"command": "gulp"
+			}
+		},
+		"clean": {
+			"executor": "nx:run-commands",
+			"options": {
+				"cwd": "components/badge",
+				"command": "rimraf dist"
+			}
+		}
+	}
+}

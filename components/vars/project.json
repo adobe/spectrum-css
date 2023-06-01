@@ -1,0 +1,25 @@
+{
+	"name": "vars",
+	"tags": ["tokens", "legacy"],
+	"targets": {
+		"build": {
+			"inputs": [
+				"{workspaceRoot}/*.css",
+				"{workspaceRoot}/css",
+				"{workspaceRoot}/json"
+			],
+			"executor": "nx:run-commands",
+			"options": {
+				"cwd": "components/vars",
+				"command": "gulp build"
+			}
+		},
+		"clean": {
+			"executor": "nx:run-commands",
+			"options": {
+				"cwd": "components/vars",
+				"command": "rimraf dist"
+			}
+		}
+	}
+}

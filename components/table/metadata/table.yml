@@ -1,8 +1,11 @@
-name: Table
-SpectrumSiteSlug: https://spectrum.adobe.com/page/table/
+title: Table
+designLink: https://spectrum.adobe.com/page/table/
+SWC:
+  url: https://opensource.adobe.com/spectrum-web-components/components/table/
+  tag: "sp-table"
 examples:
   - id: table-small
-    name: Size Small
+    title: Size Small
     markup: |
       <table class="spectrum-Table spectrum-Table--sizeS">
         <thead class="spectrum-Table-head">
@@ -51,7 +54,7 @@ examples:
         </tbody>
       </table>
   - id: table-medium
-    name: Size Medium
+    title: Size Medium
     markup: |
       <table class="spectrum-Table spectrum-Table--sizeM">
         <thead class="spectrum-Table-head">
@@ -100,7 +103,7 @@ examples:
         </tbody>
       </table>
   - id: table-compact
-    name: Compact
+    title: Compact
     markup: |
       <table class="spectrum-Table spectrum-Table--sizeM spectrum-Table--compact">
         <thead class="spectrum-Table-head">
@@ -149,7 +152,7 @@ examples:
         </tbody>
       </table>
   - id: table-spacious
-    name: Spacious
+    title: Spacious
     markup: |
       <table class="spectrum-Table spectrum-Table--sizeM spectrum-Table--spacious">
         <thead class="spectrum-Table-head">
@@ -198,7 +201,7 @@ examples:
         </tbody>
       </table>
   - id: table-multi-select
-    name: Multi-select
+    title: Multi-select
     description: The standard multi-select table
     markup: |
       <table class="spectrum-Table spectrum-Table--sizeM">
@@ -318,7 +321,7 @@ examples:
         </tbody>
       </table>
   - id: table-quiet
-    name: Quiet
+    title: Quiet
     description: The quiet table
     markup: |
       <table class="spectrum-Table spectrum-Table--sizeM spectrum-Table--quiet">
@@ -368,7 +371,7 @@ examples:
         </tbody>
       </table>
   - id: table-quiet-multi-select
-    name: Quiet multi-select
+    title: Quiet multi-select
     description: The quiet multi-select table
     markup: |
       <table class="spectrum-Table spectrum-Table--sizeM spectrum-Table--quiet">
@@ -488,7 +491,7 @@ examples:
         </tbody>
       </table>
   - id: table-column-dividers
-    name: Column dividers
+    title: Column dividers
     description: The standard table with column dividers
     markup: |
       <table class="spectrum-Table spectrum-Table--sizeM">
@@ -538,8 +541,8 @@ examples:
         </tbody>
       </table>
   - id: table-divs
-    name: Divs
-    description: A table composed with `<div>` tags.
+    title: Divs
+    description: A table composed with `<div>`{language=html} tags.
     markup: |
       <div class="spectrum-Table spectrum-Table--sizeM" role="grid">
         <div class="spectrum-Table-head" style="display: flex" role="row">
@@ -586,7 +589,7 @@ examples:
         </div>
       </div>
   - id: table-divs-quiet
-    name: Divs (quiet)
+    title: Divs (quiet)
     markup: |
       <div class="spectrum-Table spectrum-Table--sizeM spectrum-Table--quiet" role="grid">
         <div class="spectrum-Table-head" style="display: flex" role="row">
@@ -633,7 +636,7 @@ examples:
         </div>
       </div>
   - id: table-body-dropzone
-    name: Body dropzone
+    title: Body dropzone
     description: Tables that accept dropped content.
     markup: |
       <div class="spectrum-Table spectrum-Table--sizeM" role="grid">
@@ -681,7 +684,7 @@ examples:
         </div>
       </div>
   - id: table-body-dropzone-quiet
-    name: Body dropzone (quiet)
+    title: Body dropzone (quiet)
     markup: |
       <div class="spectrum-Table spectrum-Table--sizeM spectrum-Table--quiet" role="grid">
         <div class="spectrum-Table-head" style="display: flex" role="row">
@@ -728,7 +731,7 @@ examples:
         </div>
       </div>
   - id: table-row-dropzone
-    name: Row dropzone
+    title: Row dropzone
     markup: |
       <div class="spectrum-Table spectrum-Table--sizeM" role="grid">
         <div class="spectrum-Table-head" style="display: flex" role="row">
@@ -775,7 +778,7 @@ examples:
         </div>
       </div>
   - id: table-row-dropzone-quiet
-    name: Row dropzone (quiet)
+    title: Row dropzone (quiet)
     markup: |
       <div class="spectrum-Table spectrum-Table--sizeM spectrum-Table--quiet" role="grid">
         <div class="spectrum-Table-head" style="display: flex" role="row">

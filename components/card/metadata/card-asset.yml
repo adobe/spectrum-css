@@ -1,8 +1,9 @@
-name: Card - asset preview
+title: Asset preview
+parent: Cards
 description: A standard cards with a full-sized asset preview.
-SpectrumSiteSlug: https://spectrum.adobe.com/page/cards/
+designLink: https://spectrum.adobe.com/page/cards/
 sections:
-  - name: Migration Guide
+  - title: Migration guide
     description: |
       ### Use Spectrum Heading for title and Spectrum Detail for subtitle
       To make the card component more flexible, products can have more fine control over the typography by using the Heading and Detail components with their corresponding sizes. To be more consistent with previous card designs you can use the following:
@@ -10,13 +11,13 @@ sections:
         * Add the `spectrum-Detail` and `spectrum-Detail--sizeS` classes to `spectrum-Card-subtitle`.
 examples:
   - id: card-asset
-    name: Standard
+    title: Standard
     markup: |
       <div style="width: 208px;">
         <div class="spectrum-Card spectrum-Card--sizeM" tabindex="0" role="figure">
           <div class="spectrum-Card-preview">
             <div class="spectrum-Asset">
-              <img class="spectrum-Asset-image" src="img/example-card-portrait.jpg" />
+              <img class="spectrum-Asset-image" src="/assets/images/example-card-portrait.png" />
             </div>
           </div>
           <div class="spectrum-Card-body">

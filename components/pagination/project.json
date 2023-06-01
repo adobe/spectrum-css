@@ -1,0 +1,21 @@
+{
+	"name": "pagination",
+	"tags": ["components"],
+	"targets": {
+		"build": {
+			"dependsOn": ["^build"],
+			"executor": "nx:run-commands",
+			"options": {
+				"cwd": "components/pagination",
+				"command": "gulp"
+			}
+		},
+		"clean": {
+			"executor": "nx:run-commands",
+			"options": {
+				"cwd": "components/pagination",
+				"command": "rimraf dist"
+			}
+		}
+	}
+}

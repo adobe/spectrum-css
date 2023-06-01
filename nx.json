@@ -1,18 +1,34 @@
 {
+	"schema": "./node_modules/nx/schemas/nx-schema.json",
 	"npmScope": "@spectrum-css",
+	"cli": {
+		"packageManager": "yarn"
+	},
 	"tasksRunnerOptions": {
 		"default": {
 			"runner": "nx/tasks-runners/default",
 			"options": {
-				"cacheableOperations": ["build"]
+				"cacheableOperations": ["build", "start"]
 			}
 		}
 	},
 	"targetDefaults": {
 		"build": {
-			"dependsOn": ["clean", "^build"],
-			"inputs": ["{workspaceRoot}/*.css"]
+			"dependsOn": ["^build"],
+			"inputs": ["{workspaceRoot}/*.css"],
+			"outputs": ["{workspaceRoot}/dist"]
+		},
+		"clean": {
+			"inputs": ["{workspaceRoot}/dist"]
 		}
 	},
-	"includedScripts": ["build"]
+	"includedScripts": [
+		"clean",
+		"dev",
+		"dev:docs",
+		"build",
+		"start",
+		"watch",
+		"test"
+	]
 }

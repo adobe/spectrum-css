@@ -1,0 +1,21 @@
+{
+	"name": "icon",
+	"tags": ["components"],
+	"targets": {
+		"build": {
+			"dependsOn": ["^build"],
+			"executor": "nx:run-commands",
+			"options": {
+				"cwd": "components/icon",
+				"command": "gulp"
+			}
+		},
+		"clean": {
+			"executor": "nx:run-commands",
+			"options": {
+				"cwd": "components/icon",
+				"command": "rimraf dist"
+			}
+		}
+	}
+}

@@ -1,7 +1,7 @@
 {
   "name": "@spectrum-css/colorarea",
   "version": "4.0.20",
-  "description": "The Spectrum CSS Color Area component",
+  "description": "The Spectrum CSS Color area component",
   "license": "Apache-2.0",
   "author": "Adobe",
   "homepage": "https://opensource.adobe.com/spectrum-css/colorarea",
@@ -14,9 +14,6 @@
     "url": "https://github.com/adobe/spectrum-css/issues"
   },
   "main": "dist/index-vars.css",
-  "scripts": {
-    "build": "gulp"
-  },
   "peerDependencies": {
     "@spectrum-css/colorhandle": ">=5.0.0",
     "@spectrum-css/tokens": ">=10.0.0"
@@ -24,8 +21,7 @@
   "devDependencies": {
     "@spectrum-css/colorhandle": "^5.0.8",
     "@spectrum-css/component-builder-simple": "^2.0.15",
-    "@spectrum-css/tokens": "^10.1.2",
-    "gulp": "^4.0.0"
+    "@spectrum-css/tokens": "^10.1.2"
   },
   "publishConfig": {
     "access": "public"

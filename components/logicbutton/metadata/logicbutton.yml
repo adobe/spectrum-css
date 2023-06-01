@@ -1,14 +1,14 @@
-id: logicbutton-and
-name: Logic button
-description: A LogicButton displays an operator within a boolean logic sequence.
+id: logicbutton
+title: Logic button
+description: A Logic button displays an operator within a boolean logic sequence.
 examples:
   - id: logicbutton-and
-    name: And
+    title: And
     markup: |
       <button class="spectrum-LogicButton spectrum-LogicButton--and">And</button>
       <button class="spectrum-LogicButton spectrum-LogicButton--and" disabled>And</button>
   - id: logicbutton-or
-    name: Or
+    title: Or
     markup: |
       <button class="spectrum-LogicButton spectrum-LogicButton--or">Or</button>
       <button class="spectrum-LogicButton spectrum-LogicButton--or" disabled>Or</button>

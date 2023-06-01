@@ -1,0 +1,21 @@
+{
+	"name": "thumbnail",
+	"tags": ["components"],
+	"targets": {
+		"build": {
+			"dependsOn": ["^build"],
+			"executor": "nx:run-commands",
+			"options": {
+				"cwd": "components/thumbnail",
+				"command": "gulp"
+			}
+		},
+		"clean": {
+			"executor": "nx:run-commands",
+			"options": {
+				"cwd": "components/thumbnail",
+				"command": "rimraf dist"
+			}
+		}
+	}
+}

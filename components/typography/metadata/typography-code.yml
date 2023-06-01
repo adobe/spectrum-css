@@ -1,37 +1,39 @@
-name: Typography code
-id: code-m
+title: Typography code
+id: typography-code
 description: Code is a typography component used for text that represents code.
-SpectrumSiteSlug: https://spectrum.adobe.com/page/code/
+designLink: https://spectrum.adobe.com/page/code/
 examples:
-  - id: code-m
-    name: Typography - Code
+  - id: code
+    title: Code
     status: Verified
     description: Typographic styles for computer code.
+    markup:
+      - title: XS
+        group:
+          - |
+            <code class="spectrum-Code spectrum-Code--sizeXS">CodeXS Text <strong>Strong</strong> <em>Emphasis</em> </code>
+      - title: S
+        group:
+          - |
+            code class="spectrum-Code spectrum-Code--sizeS">CodeS Text <strong>Strong</strong> <em>Emphasis</em> </code>
+      - title: M
+        group:
+          - |
+            <code class="spectrum-Code spectrum-Code--sizeM">CodeM Text <strong>Strong</strong> <em>Emphasis</em> </code>
+      - title: L
+        group:
+          - |
+            <code class="spectrum-Code spectrum-Code--sizeL">CodeL Text <strong>Strong</strong> <em>Emphasis</em> </code>
+      - title: XL
+        group:
+          - |
+            <code class="spectrum-Code spectrum-Code--sizeXL">CodeXL Text <strong>Strong</strong> <em>Emphasis</em> </code>
+  - id: code-linewrap
+    title: Line wrap
     markup: |
-      <code class="spectrum-Code spectrum-Code--sizeXL">CodeXL Text <strong>Strong</strong> <em>Emphasis</em> </code>
-
-      <br>
-
-      <code class="spectrum-Code spectrum-Code--sizeL">CodeL Text <strong>Strong</strong> <em>Emphasis</em> </code>
-
-      <br>
-
-      <code class="spectrum-Code spectrum-Code--sizeM">CodeM Text <strong>Strong</strong> <em>Emphasis</em> </code>
-
-      <br>
-
-      <code class="spectrum-Code spectrum-Code--sizeS">CodeS Text <strong>Strong</strong> <em>Emphasis</em> </code>
-
-      <br>
-
-      <code class="spectrum-Code spectrum-Code--sizeXS">CodeXS Text <strong>Strong</strong> <em>Emphasis</em> </code>
-
-      <br>
-      <br>
-
       <pre><code class="spectrum-Code spectrum-Code--sizeM">CodeM text
-      wrapped in
-      pre tags for
-      multiline
-      goodness
-      </code></pre>
+        wrapped in
+        pre tags for
+        multiline
+        goodness
+        </code></pre>

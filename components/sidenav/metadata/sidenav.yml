@@ -1,9 +1,12 @@
-name: Side navigation
+title: Side navigation
 status: Verified
-SpectrumSiteSlug: https://spectrum.adobe.com/page/side-navigation/
+designLink: https://spectrum.adobe.com/page/side-navigation/
+SWC:
+  url: https://opensource.adobe.com/spectrum-web-components/components/sidenav/
+  tag: "sp-sidenav"
 examples:
   - id: sidenav
-    name: Standard
+    title: Standard
     markup: |
       <nav>
         <ul class="spectrum-SideNav">
@@ -22,7 +25,7 @@ examples:
         </ul>
       </nav>
   - id: sidenav
-    name: Multilevel
+    title: Multilevel
     markup: |
       <nav>
         <ul class="spectrum-SideNav spectrum-SideNav--multiLevel">
@@ -63,7 +66,7 @@ examples:
         </ul>
       </nav>
   - id: sidenav
-    name: Icon
+    title: Icon
     markup: |
       <nav>
         <ul class="spectrum-SideNav">
@@ -95,7 +98,7 @@ examples:
         </ul>
       </nav>
   - id: sidenav
-    name: Heading
+    title: Heading
     markup: |
       <nav>
         <ul class="spectrum-SideNav">

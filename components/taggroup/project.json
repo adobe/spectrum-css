@@ -1,0 +1,21 @@
+{
+	"name": "taggroup",
+	"tags": ["components"],
+	"targets": {
+		"build": {
+			"dependsOn": ["^build"],
+			"executor": "nx:run-commands",
+			"options": {
+				"cwd": "components/taggroup",
+				"command": "gulp"
+			}
+		},
+		"clean": {
+			"executor": "nx:run-commands",
+			"options": {
+				"cwd": "components/taggroup",
+				"command": "rimraf dist"
+			}
+		}
+	}
+}

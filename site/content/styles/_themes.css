@@ -1,0 +1,31 @@
+@import "@spectrum-css/expressvars/dist/spectrum-global.css" (--system: express);
+@import "@spectrum-css/expressvars/dist/spectrum-light.css" screen
+	and(--system: express) and
+	(
+		(prefers-color-scheme: light) or (prefers-color-scheme: no-preference) or
+			(--theme: light)
+	);
+@import "@spectrum-css/expressvars/dist/spectrum-dark.css" screen and
+	(--system: express) and ((prefers-color-scheme: dark) or (--theme: dark));
+@import "@spectrum-css/expressvars/dist/spectrum-darkest.css" screen and
+	(--system: express) and (--theme: darkest);
+@import "@spectrum-css/expressvars/dist/spectrum-medium.css" (--system: express);
+@import "@spectrum-css/expressvars/dist/spectrum-large.css" screen and
+	(--system: express) and (max-width: 961px);
+
+/* --- TOKENS --- */
+@import "@spectrum-css/vars/dist/spectrum-global.css";
+@import "@spectrum-css/vars/dist/spectrum-light.css" screen and
+	(
+		(prefers-color-scheme: light) or (prefers-color-scheme: no-preference) or
+			(--theme: light)
+	);
+@import "@spectrum-css/vars/dist/spectrum-dark.css" screen and
+	((prefers-color-scheme: dark) or (--theme: dark));
+@import "@spectrum-css/vars/dist/spectrum-darkest.css" screen and
+	(--theme: darkest);
+@import "@spectrum-css/vars/dist/spectrum-medium.css";
+@import "@spectrum-css/vars/dist/spectrum-large.css" screen and
+	(max-width: 961px);
+
+@import "@spectrum-css/tokens";

@@ -1,0 +1,21 @@
+{
+	"name": "textfield",
+	"tags": ["components"],
+	"targets": {
+		"build": {
+			"dependsOn": ["^build"],
+			"executor": "nx:run-commands",
+			"options": {
+				"cwd": "components/textfield",
+				"command": "gulp"
+			}
+		},
+		"clean": {
+			"executor": "nx:run-commands",
+			"options": {
+				"cwd": "components/textfield",
+				"command": "rimraf dist"
+			}
+		}
+	}
+}

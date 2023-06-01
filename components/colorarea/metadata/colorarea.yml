@@ -1,6 +1,9 @@
-name: Color area
+title: Color area
 status: Verified
-SpectrumSiteSlug: https://spectrum.adobe.com/page/color-area/
+designLink: https://spectrum.adobe.com/page/color-area/
+SWC:
+  url: https://opensource.adobe.com/spectrum-web-components/components/color-area/
+  tag: "sp-color-area"
 description: |
   - The `.spectrum-ColorHandle` should be moved with the `transform: translate(x, y)` style property as the sliders are dragged
   - Set the `background` style property of `.spectrum-ColorArea-gradient` to the gradient of the colors to be selected
@@ -9,15 +12,12 @@ description: |
   - Set the value of the ColorHandle component to the selected color
   - Marshall focus between the saturation and value sliders according to which keys are pressed (up/down for value, left/right for saturation)
 sections:
-  - name: Custom Properties API
-    description: |
-      This component can be modified via its `--mod-*` prefixed custom properties. A list of those prefixed custom properties can be found <a href="https://github.com/adobe/spectrum-css/tree/main/components/colorarea/metadata/mods.md">here</a>.
-  - name: Migration Guide
+  - title: Migration guide
     description: |
       - canvas variant has been removed
 examples:
   - id: color-area
-    name: Standard
+    title: Standard
     markup: |
       <div class="spectrum-ColorArea">
         <div class="spectrum-ColorArea-gradient" style="background: linear-gradient(to top, black 0%, rgba(0, 0, 0, 0) 100%), linear-gradient(to right, white 0%, rgba(0, 0, 0, 0) 100%), rgb(255, 0, 0);"></div>
@@ -34,7 +34,7 @@ examples:
       </div>
 
   - id: color-area
-    name: Disabled
+    title: Disabled
     markup: |
       <div class="spectrum-ColorArea is-disabled">
         <div class="spectrum-ColorArea-gradient" style="background: linear-gradient(to top, black 0%, rgba(0, 0, 0, 0) 100%), linear-gradient(to right, white 0%, rgba(0, 0, 0, 0) 100%), rgb(255, 0, 0);"></div>
@@ -48,7 +48,7 @@ examples:
       </div>
 
   - id: color-area
-    name: Custom Size
+    title: Custom size
     markup: |
       <div class="spectrum-ColorArea" style="--mod-colorarea-width: 80px; --mod-colorarea-height: 80px">
         <div class="spectrum-ColorArea-gradient" style="background: linear-gradient(to top, black 0%, rgba(0, 0, 0, 0) 100%), linear-gradient(to right, white 0%, rgba(0, 0, 0, 0) 100%), rgb(255, 0, 0);"></div>

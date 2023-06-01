@@ -1,7 +1,10 @@
-name: Menu
-SpectrumSiteSlug: https://spectrum.adobe.com/page/side-navigation/
+title: Menu
+designLink: https://spectrum.adobe.com/page/side-navigation/
+SWC:
+  url: https://opensource.adobe.com/spectrum-web-components/components/menu/
+  tag: "sp-menu"
 section:
-  - name: Migration Guide
+  - title: Migration guide
     description: |
       ### Use divider in Menu
       Add `.spectrum-Divider` and `spectrum-Divider--sizeM` classes to `spectrum-Menu-divider`.
@@ -9,7 +12,7 @@ section:
       Please replace `.spectrum-Icon--sizeS` with `.spectrum-Icon--sizeM`.
 examples:
   - id: selectlist
-    name: Standard
+    title: Standard
     markup: |
       <div style="display: flex; align-items: flex-start; justify-content: space-around;">
 
@@ -107,7 +110,7 @@ examples:
 
       </div>
   - id: selectlist
-    name: Nested
+    title: Nested
     markup: |
       <div style="position: relative; height: 260px;">
 

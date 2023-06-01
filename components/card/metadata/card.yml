@@ -1,10 +1,14 @@
-name: Card
-SpectrumSiteSlug: https://spectrum.adobe.com/page/cards/
+title: Card
+parent: Cards
+designLink: https://spectrum.adobe.com/page/cards/
+SWC:
+  url: https://opensource.adobe.com/spectrum-web-components/components/card/
+  tag: "sp-card"
 sections:
-  - name: Migration Guide
+  - title: Migration guide
     description: |
-      ### New Action Button markup
-      Action Button requires `.spectrum-ActionButton-icon` class on icons nested inside of Action Button.
+      ### New Action button markup
+      Action button requires `.spectrum-ActionButton-icon` class on icons nested inside of Action button.
 
       ### Change workflow icon size to medium
       Please replace `.spectrum-Icon--sizeS` with `.spectrum-Icon--sizeM`.
@@ -14,12 +18,12 @@ sections:
         * Add the `spectrum-Detail` and `spectrum-Detail--sizeS` classes to `spectrum-Card-subtitle`.
 examples:
   - id: card
-    name: Standard
+    title: Standard
     description: A standard card with cover photo and footer.
     markup: |
       <div style="width: 208px;">
         <div class="spectrum-Card spectrum-Card--sizeM" tabindex="0" role="figure">
-          <div class="spectrum-Card-coverPhoto" style="background-image: url(img/example-card-portrait.jpg)"></div>
+          <div class="spectrum-Card-coverPhoto" style="background-image: url(images/example-card-portrait.png)"></div>
           <div class="spectrum-Card-body">
             <div class="spectrum-Card-header">
               <div class="spectrum-Card-title spectrum-Heading spectrum-Heading--sizeXS">Card Title</div>
@@ -54,13 +58,13 @@ examples:
         </div>
       </div>
   - id: card
-    name: Standard (focused)
+    title: Standard (focused)
     markup: |
       <h2>Focused Card item within a grid</h2>
       <div role="grid">
         <div style="width: 208px; outline: 0;" role="row">
           <div class="spectrum-Card spectrum-Card--sizeM is-focused" role="rowheader" tabindex="0">
-            <div class="spectrum-Card-coverPhoto" style="background-image: url(img/example-card-portrait.jpg)"></div>
+            <div class="spectrum-Card-coverPhoto" style="background-image: url(images/example-card-portrait.png)"></div>
             <div class="spectrum-Card-body">
               <div class="spectrum-Card-header">
                 <div class="spectrum-Card-title spectrum-Heading spectrum-Heading--sizeXS">Card Title</div>
@@ -96,14 +100,14 @@ examples:
         </div>
       </div>
   - id: card-quiet
-    name: Quiet
+    title: Quiet
     description: A quiet card for an image.
     markup: |
       <div style="width: 208px; height: 264px;">
         <div class="spectrum-Card spectrum-Card--sizeM spectrum-Card--quiet" tabindex="0" role="figure">
           <div class="spectrum-Card-preview">
             <div class="spectrum-Asset">
-              <img class="spectrum-Asset-image" src="img/example-ava.jpg" style="max-width: 75%; max-height: 75%; object-fit: contain;">
+              <img class="spectrum-Asset-image" src="/assets/images/example-ava.png" style="max-width: 75%; max-height: 75%; object-fit: contain;">
             </div>
           </div>
           <div class="spectrum-Card-body">
@@ -140,7 +144,7 @@ examples:
         </div>
       </div>
   - id: card-quiet
-    name: Quiet (file)
+    title: Quiet (file)
     description: A quiet card for a file asset.
     markup: |
       <div style="width: 208px; height: 264px;">
@@ -177,7 +181,7 @@ examples:
         </div>
       </div>
   - id: card-quiet
-    name: Quiet (folder)
+    title: Quiet (folder)
     description: A quiet card for a folder asset.
     markup: |
       <div style="width: 208px; height: 264px;">
@@ -214,12 +218,12 @@ examples:
         </div>
       </div>
   - id: card-small
-    name: Small
+    title: Small
     description: A small card.
     markup: |
       <div style="width: 208px;">
         <div class="spectrum-Card spectrum-Card--sizeS" tabindex="0" role="figure">
-          <div class="spectrum-Card-coverPhoto" style="background-image: url(img/example-card-portrait.jpg)"></div>
+          <div class="spectrum-Card-coverPhoto" style="background-image: url(images/example-card-portrait.png)"></div>
           <div class="spectrum-Card-body">
             <div class="spectrum-Card-header">
               <div class="spectrum-Card-title spectrum-Heading spectrum-Heading--sizeXS">Card Title</div>
@@ -247,7 +251,7 @@ examples:
         </div>
       </div>
   - id: card-small
-    name: Small (horizontal)
+    title: Small (horizontal)
     description: A small, horizontal card.
     markup: |
       <div style="width: 208px;">
@@ -268,14 +272,14 @@ examples:
         </div>
       </div>
   - id: card-quiet-small
-    name: Small (quiet)
+    title: Small (quiet)
     description: "A small, quiet card."
     markup: |
       <div style="width: 112px; height: 136px;">
         <div class="spectrum-Card spectrum-Card--sizeS spectrum-Card--quiet" tabindex="0" role="figure">
           <div class="spectrum-Card-preview">
             <div class="spectrum-Asset">
-              <img class="spectrum-Asset-image" src="img/example-ava.jpg" style="max-width: 75%; max-height: 75%; object-fit: contain;">
+              <img class="spectrum-Asset-image" src="/assets/images/example-ava.png" style="max-width: 75%; max-height: 75%; object-fit: contain;">
             </div>
           </div>
           <div class="spectrum-Card-body">
@@ -311,14 +315,14 @@ examples:
         </div>
       </div>
   - id: card-quiet-small
-    name: "Small (quiet, focused)"
+    title: "Small (quiet, focused)"
     markup: |
       <div role="grid">
         <div style="width: 112px; height: 136px; outline: 0;" role="row">
           <div class="spectrum-Card spectrum-Card--sizeS spectrum-Card--quiet is-focused" role="rowheader" tabindex="0">
             <div class="spectrum-Card-preview">
               <div class="spectrum-Asset">
-                <img class="spectrum-Asset-image" src="img/example-ava.jpg" style="max-width: 75%; max-height: 75%; object-fit: contain;">
+                <img class="spectrum-Asset-image" src="/assets/images/example-ava.png" style="max-width: 75%; max-height: 75%; object-fit: contain;">
               </div>
             </div>
             <div class="spectrum-Card-body">

@@ -1,0 +1,59 @@
+---
+layout: layout.njk
+---
+
+{% block content %}
+<div class="site">
+    <div class="site-Overlay" id="site-overlay"></div>
+    <div class="site-Header is-sticky">
+        <button class="spectrum-ActionButton spectrum-ActionButton--sizeM spectrum-ActionButton--quiet" id="site-menu">
+            <svg class="spectrum-Icon spectrum-Icon--sizeM" focusable="false" aria-hidden="true" aria-label="Show Menu">
+                <use xlink:href="#spectrum-icon-18-ShowMenu"></use>
+            </svg>
+        </button>
+        <a class="site-Header-branding" href="{{ site.url }}">
+            {% include "svgs/logo.svg" %}
+            <h2 class="spectrum-Heading spectrum-Heading--sizeS">Spectrum CSS</h2>
+        </a>
+    </div>
+    <div class="site-Main">
+        <div class="site-Main-sidebar is-sticky" id="site-sidebar">
+            <a class="site-Main-sidebarHeader" href="{{ site.url }}">
+                {% include "svgs/logo.svg" %}
+                <h2 class="spectrum-Heading spectrum-Heading--sizeM">Spectrum CSS</h2>
+            </a>
+            {% include "search.njk" %}
+            {% set sidenav = { scrollable: true, multiLevel: true, list: collections.all } %}
+            {% include "sidenav.njk" %}
+        </div>
+        <div class="site-Main-container">
+            <main class="site-Main-contentWrapper" id="main">
+                <div class="site-Main-header">
+                    {% include "context-switcher.njk" %}
+                </div>
+                <div class="site-Main-content">
+                    {{ content | safe }}
+                </div>
+                <aside class="site-Main-aside">
+                    <div class="is-sticky">
+                        {{ content | toc | safe }}
+                    </div>
+                </aside>
+                <footer class="site-Main-footer">
+                    {% if not process.env.VRT -%}
+                        {% css "tools" -%}
+                            @import url("https://wwwimages2.adobe.com/etc/beagle/public/globalnav/adobe-globalnav/latest/adobe-globalnav.min.css");
+                        {%- endcss %}
+                        {% js "tools" -%}
+                            import "https://wwwimages2.adobe.com/etc/beagle/public/globalnav/adobe-globalnav/latest/adobe-globalnav.min.js";
+                        {%- endjs %}
+                        <hr class="spectrum-Divider spectrum-Divider--small" hidden/>
+                        <div id="footer_global"></div>
+                    {%- endif %}
+                </footer>
+            </main>
+        </div>
+    </div>
+    <div class="spectrum-Underlay" id="spectrum-underlay"></div>
+</div>
+{% endblock %}

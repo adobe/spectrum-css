@@ -1,0 +1,21 @@
+{
+	"name": "floatingactionbutton",
+	"tags": ["components"],
+	"targets": {
+		"build": {
+			"dependsOn": ["^build"],
+			"executor": "nx:run-commands",
+			"options": {
+				"cwd": "components/floatingactionbutton",
+				"command": "gulp"
+			}
+		},
+		"clean": {
+			"executor": "nx:run-commands",
+			"options": {
+				"cwd": "components/floatingactionbutton",
+				"command": "rimraf dist"
+			}
+		}
+	}
+}

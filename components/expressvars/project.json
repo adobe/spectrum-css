@@ -1,0 +1,25 @@
+{
+	"name": "expressvars",
+	"tags": ["tokens"],
+	"targets": {
+		"build": {
+			"inputs": [
+				"{workspaceRoot}/*.css",
+				"{workspaceRoot}/css",
+				"{workspaceRoot}/json"
+			],
+			"dependsOn": ["^build"],
+			"executor": "nx:run-commands",
+			"options": {
+				"cwd": "components/expressvars",
+				"commands": ["gulp", "cp json/spectrum-metadata.json dist/"]
+			}
+		},
+		"clean": {
+			"executor": "nx:run-commands",
+			"options": {
+				"command": "rimraf dist"
+			}
+		}
+	}
+}

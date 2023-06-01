@@ -1,0 +1,21 @@
+{
+	"name": "colorslider",
+	"tags": ["components"],
+	"targets": {
+		"build": {
+			"dependsOn": ["^build"],
+			"executor": "nx:run-commands",
+			"options": {
+				"cwd": "components/colorslider",
+				"command": "gulp"
+			}
+		},
+		"clean": {
+			"executor": "nx:run-commands",
+			"options": {
+				"cwd": "components/colorslider",
+				"command": "rimraf dist"
+			}
+		}
+	}
+}

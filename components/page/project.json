@@ -1,0 +1,21 @@
+{
+	"name": "page",
+	"tags": ["components"],
+	"targets": {
+		"build": {
+			"dependsOn": ["^build"],
+			"executor": "nx:run-commands",
+			"options": {
+				"cwd": "components/page",
+				"command": "gulp"
+			}
+		},
+		"clean": {
+			"executor": "nx:run-commands",
+			"options": {
+				"cwd": "components/page",
+				"command": "rimraf dist"
+			}
+		}
+	}
+}

@@ -1,8 +1,11 @@
-name: Drop zone
-description: 'A Drop Zone is an area on the screen into a which an object can be dragged and dropped to accomplish a task. For example, a Drop Zone might be used in an upload workflow to enable the user to simply drop a file from their operating system into the Drop Zone, which is a more efficient and intuitive action, rather than utilize the standard "Choose File" dialog.'
+title: Drop zone
+description: 'A Drop zone is an area on the screen into a which an object can be dragged and dropped to accomplish a task. For example, a Drop zone might be used in an upload workflow to enable the user to simply drop a file from their operating system into the Drop zone, which is a more efficient and intuitive action, rather than utilize the standard "Choose File" dialog.'
+SWC:
+  url: https://opensource.adobe.com/spectrum-web-components/components/dropzone/
+  tag: "sp-dropzone"
 examples:
   - id: dropzone
-    name: Drop Zone (default)
+    title: Drop zone (default)
     markup: |
       <div class="spectrum-DropZone" role="region" tabindex="0">
         <div class="spectrum-IllustratedMessage">
@@ -12,7 +15,7 @@ examples:
         </div>
       </div>
   - id: dropzone-dragged
-    name: Drop Zone (dragged)
+    title: Drop zone (dragged)
     markup: |
       <div class="spectrum-DropZone is-dragged" role="region" tabindex="0">
         <div class="spectrum-IllustratedMessage">

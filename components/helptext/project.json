@@ -1,0 +1,21 @@
+{
+	"name": "helptext",
+	"tags": ["components"],
+	"targets": {
+		"build": {
+			"dependsOn": ["^build"],
+			"executor": "nx:run-commands",
+			"options": {
+				"cwd": "components/helptext",
+				"command": "gulp"
+			}
+		},
+		"clean": {
+			"executor": "nx:run-commands",
+			"options": {
+				"cwd": "components/helptext",
+				"command": "rimraf dist"
+			}
+		}
+	}
+}

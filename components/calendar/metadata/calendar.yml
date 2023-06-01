@@ -1,12 +1,12 @@
-name: Calendar
+title: Calendar
 sections:
-  - name: Migration Guide
+  - title: Migration guide
     description: |
       ### Previous/Next Icon size change
       ChevronLeftLarge/ChevronRightLarge was changed to ChevronLeftMedium/ChevronRightMedium.
 examples:
   - id: calendar
-    name: Standard
+    title: Standard
     markup: |
       <div class="spectrum-Calendar">
          <div class="spectrum-Calendar-header">
@@ -96,7 +96,7 @@ examples:
       </div>
 
   - id: calendar
-    name: Standard with calendar day of the week abbreviations
+    title: Standard with calendar day of the week abbreviations
     markup: |
       <div class="spectrum-Calendar">
          <div class="spectrum-Calendar-header">
@@ -186,7 +186,7 @@ examples:
       </div>
 
   - id: calendar
-    name: Disabled
+    title: Disabled
     markup: |
       <div class="spectrum-Calendar">
          <div class="spectrum-Calendar-header">
@@ -275,7 +275,7 @@ examples:
          </div>
       </div>
   - id: calendar
-    name: Focused
+    title: Focused
     markup: |
       <div class="spectrum-Calendar">
          <div class="spectrum-Calendar-header">
@@ -364,7 +364,7 @@ examples:
         </div>
       </div>
   - id: calendar
-    name: Range Selection
+    title: Range Selection
     description: |
       A calendar with a range selected.
       `.is-selection-start` goes on the first day in the selection, and `.is-range-start` goes on the first day of each week or month in the middle of a selection (but not the first day of the selection).

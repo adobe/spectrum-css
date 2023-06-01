@@ -1,8 +1,8 @@
-name: Alert banner
+title: Alert banner
 description: Alert banners show pressing and high-signal messages, such as system alerts. They're meant to be noticed and prompt users to take action.
 examples:
   - id: alertbanner
-    name: Neutral
+    title: Neutral
     description: Standard Alert Banners
     markup: |
       <div class="spectrum-AlertBanner is-open">
@@ -61,7 +61,7 @@ examples:
         </div>
       </div>
   - id: alertbanner
-    name: Informative
+    title: Informative
     description: Informative Alert Banners
     markup: |
       <div class="spectrum-AlertBanner spectrum-AlertBanner--info is-open">
@@ -86,7 +86,7 @@ examples:
         </div>
       </div>
   - id: alertbanner
-    name: Negative
+    title: Negative
     description: Negative Alert Banners
     markup: |
       <div class="spectrum-AlertBanner spectrum-AlertBanner--negative is-open">

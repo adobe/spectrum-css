@@ -1,12 +1,12 @@
-name: Typography (internationalized)
+title: Typography (internationalization)
 fastLoad: false
-description: Internationalized typography examples. Note that, for these examples to work correctly, your Typekit needs to include the appropriate Han fonts.
-SpectrumSiteSlug: https://spectrum.adobe.com/page/typography/
+description: Examples of internationalized typography classes. Note that, for these examples to work, your Typekit needs to include the appropriate Han fonts.
+designLink: https://spectrum.adobe.com/page/typography/
 status: Verified
-id: heading-han-m
+id: typography-internationalization
 examples:
-  - id: heading-m
-    name: Heading
+  - id: heading
+    title: Heading
     status: Verified
     description: Headings for typography.
     markup: |
@@ -63,8 +63,8 @@ examples:
         <h6 class="spectrum-Heading spectrum-Heading--sizeXXS">XXSדגש כותרת <em>XXSמאמר</em> <strong>XXSחזק</strong>.</h6>
       </div>
 
-  - id: heading-heavy-m
-    name: Heading (Heavy)
+  - id: heading-heavy
+    title: Heading (heavy)
     status: Verified
     description: Strong headings for typography.
     markup: |
@@ -101,8 +101,8 @@ examples:
         <h2 class="spectrum-Heading spectrum-Heading--sizeL spectrum-Heading--heavy"> spectrum-Heading--heavy</h2>
       </div>
 
-  - id: heading-light-m
-    name: Heading (Light)
+  - id: heading-light
+    title: Heading (light)
     status: Verified
     description: Light headings for typography.
     markup: |
@@ -139,8 +139,8 @@ examples:
         <p class="spectrum-Heading spectrum-HeadingL--light">Lדגש כותרת <em>Lמאמר</em> <strong>Lחזק</strong>.</p>
       </div>
 
-  - id: body-m
-    name: Body
+  - id: body
+    title: Body
     status: Verified
     description: Default body text sizes.
     markup: |
@@ -192,9 +192,9 @@ examples:
         <p class="spectrum-Body spectrum-Body--sizeXS">XSטקסט גוף הדגשות <em>XSגוף חזק</em> <strong>XSגוף חזק</strong>.</p>
       </div>
 
-  - id: detail-m
+  - id: detail
     status: Verified
-    name: Detail
+    title: Detail
     description: Subheadings for typography.
     markup: |
       <div class="spectrum" lang="en">
@@ -230,8 +230,8 @@ examples:
         <p class="spectrum-Detail spectrum-Detail--sizeS">Sالقسم טקסט גוף הדגשות <em>Sגוף חזק</em> <strong>Sגוף חזק</strong>.</p>
       </div>
 
-  - id: heading-han-m
-    name: Han
+  - id: heading-han
+    title: Han
     status: Verified
     description: Typographic pairings for Adobe Clean Han.
     markup: |
@@ -254,8 +254,8 @@ examples:
         <p class="spectrum-Body spectrum-Body--sizeXS spectrum-Body--serif">見出しとよく対になる本文。</p>
       </div>
 
-  - id: code-m
-    name: Typography - Code
+  - id: code
+    title: Code
     status: Verified
     description: Typographic styles for computer code.
     markup: |

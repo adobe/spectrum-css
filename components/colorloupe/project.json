@@ -1,0 +1,21 @@
+{
+	"name": "colorloupe",
+	"tags": ["components"],
+	"targets": {
+		"build": {
+			"dependsOn": ["^build"],
+			"executor": "nx:run-commands",
+			"options": {
+				"cwd": "components/colorloupe",
+				"command": "gulp"
+			}
+		},
+		"clean": {
+			"executor": "nx:run-commands",
+			"options": {
+				"cwd": "components/colorloupe",
+				"command": "rimraf dist"
+			}
+		}
+	}
+}

@@ -1,6 +1,9 @@
-name: Color slider
+title: Color slider
 status: Verified
-SpectrumSiteSlug: https://spectrum.adobe.com/page/color-slider/
+designLink: https://spectrum.adobe.com/page/color-slider/
+SWC:
+  url: https://opensource.adobe.com/spectrum-web-components/components/color-slider/
+  tag: "sp-color-slider"
 description: |
   - Set the value of the ColorHandle component to the selected color
   - The `.spectrum-ColorHandle` should be moved with the `transform: translateX(x)` style property as the slider is dragged
@@ -10,7 +13,7 @@ description: |
   - Alternatively, provide a `<canvas>` or `<img>` element with the gradient you want to use and apply the `.spectrum-ColorSlider-gradient` class
 examples:
   - id: color-slider
-    name: Standard
+    title: Standard
     markup: |
       <div class="spectrum-ColorSlider">
         <div class="spectrum-ColorSlider-checkerboard" role="presentation">
@@ -28,7 +31,7 @@ examples:
       </div>
 
   - id: color-slider
-    name: Alpha
+    title: Alpha
     markup: |
       <div class="spectrum-ColorSlider">
         <div class="spectrum-ColorSlider-checkerboard" role="presentation">
@@ -46,7 +49,7 @@ examples:
       </div>
 
   - id: color-slider
-    name: Disabled
+    title: Disabled
     markup: |
       <div class="spectrum-ColorSlider is-disabled">
         <div class="spectrum-ColorSlider-checkerboard" role="presentation">
@@ -64,7 +67,7 @@ examples:
       </div>
 
   - id: color-slider
-    name: Vertical
+    title: Vertical
     markup: |
       <div class="spectrum-ColorSlider spectrum-ColorSlider--vertical">
         <div class="spectrum-ColorSlider-checkerboard" role="presentation">
@@ -82,7 +85,7 @@ examples:
       </div>
 
   - id: color-slider
-    name: Standard (with canvas)
+    title: Standard (with canvas)
     markup: |
       <div class="spectrum-ColorSlider">
         <div class="spectrum-ColorSlider-checkerboard" role="presentation">
@@ -116,7 +119,7 @@ examples:
       </script>
 
   - id: color-slider
-    name: Standard (with image)
+    title: Standard (with image)
     markup: |
       <div class="spectrum-ColorSlider">
         <div class="spectrum-ColorSlider-checkerboard" role="presentation">
@@ -137,8 +140,8 @@ examples:
       </div>
 
   - id: color-slider
-    name: Full example
-    demoClassName: spectrum-CSSExample-example--spacious
+    title: Full example
+    demoClasstitle: site-Example-preview--spacious
     markup: |
       <div class="spectrum-ColorSlider" style="position: relative; top: 80px;">
         <div class="spectrum-ColorSlider-checkerboard" role="presentation">
@@ -179,8 +182,8 @@ examples:
       </div>
 
   - id: color-slider
-    name: Full example (alpha)
-    demoClassName: spectrum-CSSExample-example--spacious
+    title: Full example (alpha)
+    demoClasstitle: site-Example-preview--spacious
     markup: |
       <div class="spectrum-ColorSlider" style="position: relative; top: 80px;">
         <div class="spectrum-ColorSlider-checkerboard" role="presentation">

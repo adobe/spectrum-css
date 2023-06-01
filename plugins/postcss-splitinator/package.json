@@ -14,5 +14,29 @@
   },
   "publishConfig": {
     "access": "public"
+  },
+  "nx": {
+    "tags": [
+      "components"
+    ],
+    "targets": {
+      "build": {
+        "dependsOn": [
+          "clean",
+          "^build"
+        ],
+        "executor": "nx:run-commands",
+        "options": {
+          "cwd": "components/accordion",
+          "command": "gulp"
+        }
+      },
+      "clean": {
+        "executor": "nx:run-commands",
+        "options": {
+          "command": "rimraf {workspaceRoot}/dist"
+        }
+      }
+    }
   }
 }

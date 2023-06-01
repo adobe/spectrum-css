@@ -1,14 +1,17 @@
-name: Color loupe
+title: Color loupe
 status: Verified
-SpectrumSiteSlug: https://spectrum.adobe.com/page/color-loupe/
+designLink: https://spectrum.adobe.com/page/color-loupe/
+SWC:
+  url: https://opensource.adobe.com/spectrum-web-components/components/color-loupe/
+  tag: "sp-color-loupe"
 description: |
   - Set the `--spectrum-picked-color` custom property to the CSS color value you want to show
   - Apply `.is-open` to display the loupe
-  - Color Loupe does not have a disabled style; do not show it when the handle its attached to is disabled.
+  - Color loupe does not have a disabled style; do not show it when the handle its attached to is disabled.
 examples:
   - id: color-loupe
-    name: Standard
-    demoClassName: spectrum-CSSExample-example--spacious
+    title: Standard
+    demoClasstitle: site-Example-preview--spacious
     markup: |
       <svg class="spectrum-ColorLoupe is-open" overflow="visible" style="--spectrum-picked-color: rgba(255, 0, 0, 0.5); position: absolute; inset-block-start: 25%; inset-inline-start: 50%;">
         <defs>

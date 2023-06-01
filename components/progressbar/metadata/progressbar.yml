@@ -1,9 +1,12 @@
-name: Progress bar
-SpectrumSiteSlug: https://spectrum.adobe.com/page/progress-bar/
+title: Progress bar
+designLink: https://spectrum.adobe.com/page/progress-bar/
+SWC:
+  url: https://opensource.adobe.com/spectrum-web-components/components/progress-bar/
+  tag: "sp-progress-bar"
 status: Verified
-id: progressbar-m
+id: progressbar
 sections:
-  - name: Migration Guide
+  - title: Migration guide
     description: |
       ### Component renamed
       Bar loader is now known as Progress bar. Replace all `.spectrum-BarLoader*` classnames with `.spectrum-ProgressBar*`.
@@ -14,7 +17,7 @@ sections:
       ### Size classnames changed
       Previous size classnames map as follows:
 
-      | Previous size classname         | New size classname                |
+      | Previous size class name        | New size class name               |
       | ------------------------------- | --------------------------------- |
       | `.spectrum-ProgressBar--small`  | `.spectrum-ProgressBar--sizeS`    |
       | `.spectrum-ProgressBar--large`  | `.spectrum-ProgressBar--sizeM`    |
@@ -23,11 +26,11 @@ sections:
       Progress bar now uses [Field label](fieldlabel.html) for its label and percentage. Add the appropriately sized Field label to match the t-shirt size of the Progress bar.
 examples:
   - id: progressbar-m
-    name: Sizing
+    title: Sizing
     markup: |
-      <div class="spectrum-Examples">
-        <div class="spectrum-Examples-item">
-          <h4 class="spectrum-Heading spectrum-Heading--sizeXS spectrum-Examples-itemHeading">S</h4>
+      <div class="site-Examples">
+        <div class="site-Examples-item">
+          <h4 class="spectrum-Heading spectrum-Heading--sizeXS site-Examples-itemHeading">S</h4>
 
           <div class="spectrum-ProgressBar spectrum-ProgressBar--sizeS" value="50" role="progressbar" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100">
             <div class="spectrum-FieldLabel spectrum-FieldLabel--sizeS spectrum-ProgressBar-label">Loading</div>
@@ -38,8 +41,8 @@ examples:
             <div class="spectrum-ProgressBar-label" hidden=""></div>
           </div>
         </div>
-        <div class="spectrum-Examples-item">
-          <h4 class="spectrum-Heading spectrum-Heading--sizeXS spectrum-Examples-itemHeading">M (default)</h4>
+        <div class="site-Examples-item">
+          <h4 class="spectrum-Heading spectrum-Heading--sizeXS site-Examples-itemHeading">M (default)</h4>
 
           <div class="spectrum-ProgressBar spectrum-ProgressBar--sizeM" value="50" role="progressbar" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100">
             <div class="spectrum-FieldLabel spectrum-FieldLabel--sizeM spectrum-ProgressBar-label">Loading</div>
@@ -51,8 +54,8 @@ examples:
           </div>
         </div>
 
-        <div class="spectrum-Examples-item">
-          <h4 class="spectrum-Heading spectrum-Heading--sizeXS spectrum-Examples-itemHeading">L</h4>
+        <div class="site-Examples-item">
+          <h4 class="spectrum-Heading spectrum-Heading--sizeXS site-Examples-itemHeading">L</h4>
 
           <div class="spectrum-ProgressBar spectrum-ProgressBar--sizeL" value="50" role="progressbar" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100">
             <div class="spectrum-FieldLabel spectrum-FieldLabel--sizeL spectrum-ProgressBar-label">Loading</div>
@@ -64,8 +67,8 @@ examples:
           </div>
         </div>
 
-        <div class="spectrum-Examples-item">
-          <h4 class="spectrum-Heading spectrum-Heading--sizeXS spectrum-Examples-itemHeading">XL</h4>
+        <div class="site-Examples-item">
+          <h4 class="spectrum-Heading spectrum-Heading--sizeXS site-Examples-itemHeading">XL</h4>
 
           <div class="spectrum-ProgressBar spectrum-ProgressBar--sizeXL" value="50" role="progressbar" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100">
             <div class="spectrum-FieldLabel spectrum-FieldLabel--sizeXL spectrum-ProgressBar-label">Loading</div>
@@ -78,7 +81,7 @@ examples:
         </div>
       </div>
   - id: progressbar-m
-    name: Top label (default)
+    title: Top label (default)
     markup: |
       <div class="spectrum-ProgressBar spectrum-ProgressBar--sizeM" value="50" role="progressbar" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100">
         <div class="spectrum-FieldLabel spectrum-FieldLabel--sizeM spectrum-ProgressBar-label">Loading</div>
@@ -88,7 +91,7 @@ examples:
         </div>
       </div>
   - id: progressbar-m
-    name: Side label
+    title: Side label
     markup: |
       <div class="spectrum-ProgressBar spectrum-ProgressBar--sizeM spectrum-ProgressBar--sideLabel" value="50" role="progressbar" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100">
         <div class="spectrum-FieldLabel spectrum-FieldLabel--sizeM spectrum-ProgressBar-label">Loading</div>
@@ -98,7 +101,7 @@ examples:
         </div>
       </div>
   - id: progressbar-static-white
-    name: Static White
+    title: Static White
     markup: |
       <div style="background-color: rgb(15, 121, 125); width: 400px; height: 200px;  display: flex; flex-direction: column; align-items: center; justify-content: space-around;">
 
@@ -112,7 +115,7 @@ examples:
 
       </div>
   - id: progressbar-indeterminate-m
-    name: Indeterminate
+    title: Indeterminate
     markup: |
       <div class="spectrum-ProgressBar spectrum-ProgressBar--sizeM spectrum-ProgressBar--indeterminate">
         <div class="spectrum-ProgressBar-track">
@@ -121,7 +124,7 @@ examples:
         <div class="spectrum-FieldLabel spectrum-FieldLabel--sizeM spectrum-ProgressBar-label" hidden=""></div>
       </div>
   - id: progressbar-indeterminate-m
-    name: Indeterminate (with label)
+    title: Indeterminate (with label)
     markup: |
       <div class="spectrum-ProgressBar spectrum-ProgressBar--sizeM spectrum-ProgressBar--indeterminate">
         <div class="spectrum-FieldLabel spectrum-FieldLabel--sizeM spectrum-ProgressBar-label">Loading</div>
@@ -130,7 +133,7 @@ examples:
         </div>
       </div>
   - id: progressbar-m
-    name: Custom width
+    title: Custom width
     markup: |
       <div class="spectrum-ProgressBar spectrum-ProgressBar--sizeM" value="50" role="progressbar" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100" style="width: 500px;">
         <div class="spectrum-FieldLabel spectrum-FieldLabel--sizeM spectrum-ProgressBar-label">Loading</div>
@@ -140,7 +143,7 @@ examples:
         </div>
       </div>
   - id: progressbar-m
-    name: Custom width (side label)
+    title: Custom width (side label)
     markup: |
       <div class="spectrum-ProgressBar spectrum-ProgressBar--sizeM spectrum-ProgressBar--sideLabel" value="50" role="progressbar" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100" style="width: 500px;">
         <div class="spectrum-FieldLabel spectrum-FieldLabel--sizeM spectrum-ProgressBar-label">Loading</div>

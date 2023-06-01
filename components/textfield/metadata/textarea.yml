@@ -1,14 +1,17 @@
-name: Text area
+title: Text area
 status: Verified
 description: A multi-line text field (aka textarea)
-SpectrumSiteSlug: https://spectrum.adobe.com/page/text-field/
+designLink: https://spectrum.adobe.com/page/text-field/
+SWC:
+  url: https://opensource.adobe.com/spectrum-web-components/components/textarea/
+  tag: "sp-textfield"
 sections:
-  - name: Migration Guide
+  - title: Migration guide
     description: |
       See the [Textfield migration guide](textfield.html#migrationguide) for migration information.
 examples:
   - id: textfield
-    name: Standard Sizes
+    title: Standard Sizes
     markup: |
       <div class="spectrum-Textfield spectrum-Textfield--sizeS spectrum-Textfield--multiline">
         <label for="textfield-s" class="spectrum-FieldLabel spectrum-FieldLabel--sizeS">Password</label>
@@ -47,7 +50,7 @@ examples:
       </div>
 
   - id: textfield-helptext
-    name: Textfield with Help Text
+    title: Textfield with Help Text
     markup: |
       <div class="spectrum-Textfield spectrum-Textfield--multiline">
         <label for="textfield-helptext" class="spectrum-FieldLabel spectrum-FieldLabel--sizeM">Password</label>
@@ -58,7 +61,7 @@ examples:
       </div>
 
   - id: textfield-character-count
-    name: With Character Count
+    title: With Character Count
     markup: |
       <div class="spectrum-Textfield spectrum-Textfield--multiline">
         <label for="textfield-character-count" class="spectrum-FieldLabel spectrum-FieldLabel--sizeM">Enter your name</label>
@@ -67,7 +70,7 @@ examples:
       </div>
 
   - id: textfield-sidelabel
-    name: Textfield with Side Label
+    title: Textfield with Side Label
     markup: |
       <div class="spectrum-Textfield spectrum-Textfield--multiline spectrum-Textfield--sideLabel">
         <label for="textfield-m-sidelabel" class="spectrum-FieldLabel spectrum-FieldLabel--sizeM">Password</label>
@@ -79,7 +82,7 @@ examples:
       </div>
 
   - id: textfield
-    name: Disabled
+    title: Disabled
     markup: |
       <div class="spectrum-Textfield spectrum-Textfield--multiline is-disabled">
         <label for="textarea-disabled" class="spectrum-FieldLabel spectrum-FieldLabel--sizeM">Enter your name</label>
@@ -87,7 +90,7 @@ examples:
       </div>
 
   - id: textfield
-    name: Valid
+    title: Valid
     markup: |
       <div class="spectrum-Textfield spectrum-Textfield--multiline is-valid">
         <label for="textarea-valid" class="spectrum-FieldLabel spectrum-FieldLabel--sizeM">Enter your name</label>
@@ -98,7 +101,7 @@ examples:
       </div>
 
   - id: textfield
-    name: Valid (disabled)
+    title: Valid (disabled)
     markup: |
       <div class="spectrum-Textfield spectrum-Textfield--multiline is-valid is-disabled">
         <label for="textarea-valid-disabled" class="spectrum-FieldLabel spectrum-FieldLabel--sizeM">Enter your name</label>
@@ -109,7 +112,7 @@ examples:
       </div>
 
   - id: textfield
-    name: Invalid
+    title: Invalid
     description: |
       *Spectrum for Adobe Express uses a different icon. Use the `SX_Alert_18_N.svg` icon in the Express workflow icon set.*
     markup: |
@@ -122,7 +125,7 @@ examples:
       </div>
 
   - id: textfield
-    name: Invalid (disabled)
+    title: Invalid (disabled)
     markup: |
       <div class="spectrum-Textfield spectrum-Textfield--multiline is-invalid is-disabled">
         <label for="textarea-invalid-disabled" class="spectrum-FieldLabel spectrum-FieldLabel--sizeM">Enter your name</label>
@@ -133,7 +136,7 @@ examples:
       </div>
 
   - id: textfield
-    name: Focused
+    title: Focused
     markup: |
       <div class="spectrum-Textfield spectrum-Textfield--multiline is-focused">
         <label for="textarea-focused" class="spectrum-FieldLabel spectrum-FieldLabel--sizeM">Enter your name</label>
@@ -141,7 +144,7 @@ examples:
       </div>
 
   - id: textfield
-    name: Keyboard Focused
+    title: Keyboard Focused
     markup: |
       <div class="spectrum-Textfield spectrum-Textfield--multiline is-keyboardFocused">
         <label for="textarea-keyboard-focused" class="spectrum-FieldLabel spectrum-FieldLabel--sizeM">Enter your name</label>
@@ -149,7 +152,7 @@ examples:
       </div>
 
   - id: textfield
-    name: Focused (invalid)
+    title: Focused (invalid)
     description: |
       *Spectrum for Adobe Express uses a different icon. Use the `SX_Alert_18_N.svg` icon in the Express workflow icon set.*
     markup: |
@@ -162,7 +165,7 @@ examples:
       </div>
 
   - id: textfield
-    name: Keyboard Focused (invalid)
+    title: Keyboard Focused (invalid)
     description: |
       *Spectrum for Adobe Express uses a different icon. Use the `SX_Alert_18_N.svg` icon in the Express workflow icon set.*
     markup: |
@@ -175,7 +178,7 @@ examples:
       </div>
 
   - id: textfield-quiet
-    name: Quiet
+    title: Quiet
     markup: |
       <div class="spectrum-Textfield spectrum-Textfield--multiline spectrum-Textfield--quiet">
         <label for="textarea-quiet" class="spectrum-FieldLabel spectrum-FieldLabel--sizeM">Text area</label>
@@ -183,7 +186,7 @@ examples:
       </div>
 
   - id: textfield-quiet
-    name: Quiet Disabled
+    title: Quiet Disabled
     markup: |
       <div class="spectrum-Textfield spectrum-Textfield--multiline spectrum-Textfield--quiet is-disabled">
         <label for="textarea-quiet-disabled" class="spectrum-FieldLabel spectrum-FieldLabel--sizeM">Enter your name</label>
@@ -191,7 +194,7 @@ examples:
       </div>
 
   - id: textfield-quiet
-    name: Quiet Valid
+    title: Quiet Valid
     description: |
       *Spectrum for Adobe Express uses a different icon. Use the `SX_Alert_18_N.svg` icon in the Express workflow icon set.*
     markup: |
@@ -204,7 +207,7 @@ examples:
       </div>
 
   - id: textfield-quiet
-    name: Quiet Valid (disabled)
+    title: Quiet Valid (disabled)
     markup: |
       <div class="spectrum-Textfield spectrum-Textfield--multiline spectrum-Textfield--quiet is-valid is-disabled">
         <label for="textarea-valid-disabled" class="spectrum-FieldLabel spectrum-FieldLabel--sizeM">Enter your name</label>
@@ -215,7 +218,7 @@ examples:
       </div>
 
   - id: textfield-quiet
-    name: Quiet Invalid
+    title: Quiet Invalid
     description: |
       *Spectrum for Adobe Express uses a different icon. Use the `SX_Alert_18_N.svg` icon in the Express workflow icon set.*
     markup: |
@@ -228,7 +231,7 @@ examples:
       </div>
 
   - id: textfield-quiet
-    name: Quiet Invalid (disabled)
+    title: Quiet Invalid (disabled)
     markup: |
       <div class="spectrum-Textfield spectrum-Textfield--multiline spectrum-Textfield--quiet is-invalid is-disabled">
         <label for="textarea-quiet-invalid-disabled" class="spectrum-FieldLabel spectrum-FieldLabel--sizeM">Enter your name</label>
@@ -239,7 +242,7 @@ examples:
       </div>
 
   - id: textfield-quiet
-    name: Quiet Focused
+    title: Quiet Focused
     markup: |
       <div class="spectrum-Textfield spectrum-Textfield--multiline spectrum-Textfield--quiet is-focused">
         <label for="textarea-quiet-focused" class="spectrum-FieldLabel spectrum-FieldLabel--sizeM">Enter your name</label>
@@ -247,7 +250,7 @@ examples:
       </div>
 
   - id: textfield-quiet
-    name: Quiet Keyboard Focused
+    title: Quiet Keyboard Focused
     markup: |
       <div class="spectrum-Textfield spectrum-Textfield--multiline spectrum-Textfield--quiet is-keyboardFocused">
         <label for="textarea-quiet-keyboard-focused" class="spectrum-FieldLabel spectrum-FieldLabel--sizeM">Enter your name</label>
@@ -255,7 +258,7 @@ examples:
       </div>
 
   - id: textfield-quiet
-    name: Quiet Focused (invalid)
+    title: Quiet Focused (invalid)
     description: |
       *Spectrum for Adobe Express uses a different icon. Use the `SX_Alert_18_N.svg` icon in the Express workflow icon set.*
     markup: |
@@ -268,7 +271,7 @@ examples:
       </div>
 
   - id: textfield-quiet
-    name: Quiet Keyboard Focused (invalid)
+    title: Quiet Keyboard Focused (invalid)
     description: |
       *Spectrum for Adobe Express uses a different icon. Use the `SX_Alert_18_N.svg` icon in the Express workflow icon set.*
     markup: |

@@ -1,0 +1,38 @@
+{% macro renderNavListItem(entry, idx) -%}
+  {% set isExternal = r/^http/.test(entry.url) or entry.url == "/preview/index.html" -%}
+  {% set hasChildren = entry.children.length > 0 -%}
+  {% set hasOpenChild = entry.children | find("url", page.url) or entry.url == page.url %}
+  {% set parentTitle %}{% if hasChildren %}{{ entry.children[0].parent | title }}{% else %}{{ entry.title }}{% endif %}{% endset -%}
+  <li class="spectrum-SideNav-item{{ ' is-selected' if entry.url == page.url and not hasChildren }}{{ ' is-expandable' if hasChildren }}{{ ' is-open' if (hasChildren and idx < 1) or hasOpenChild }}{{ ' is-external' if isExternal }}">
+    <a href="{% if entry.url and not hasChildren %}{{ entry.url | url }}{% else %}#{% endif %}" class="spectrum-SideNav-itemLink">
+      {% if hasChildren and idx > 0 -%}{{ parentTitle }}{% else %}{{ entry.title }}{%- endif %}
+      {% if hasChildren and idx >= 0 -%}
+      <svg class="spectrum-Icon spectrum-UIIcon-ChevronRight75" focusable="false" aria-hidden="true">
+        <use xlink:href="#spectrum-css-icon-Chevron75" />
+      </svg>
+      {% elseif isExternal -%}
+      <svg class="spectrum-Icon spectrum-UIIcon-ArrowUp100 spectrum-UIIcon-ArrowUpRight100" focusable="false" aria-hidden="true">
+        <use xlink:href="#spectrum-css-icon-Arrow100" />
+      </svg>
+      {%- endif %}
+    </a>
+    {% if hasChildren -%}
+      <ul class="spectrum-SideNav">
+          {% if entry.url and entry.url !== "#" -%}
+            {{ renderNavListItem({ children: [], url: entry.url, title: entry.title }, idx + 1) }}
+          {%- endif %}
+          {% for child in entry.children -%}
+            {{ renderNavListItem(child, idx + 1) }}
+          {%- endfor %}
+      </ul>
+    {%- endif %}
+  </li>
+{%- endmacro %}
+
+<nav{% if sidenav.scrollable %} class="is-scrollable"{% endif %}>
+    <ul class="spectrum-SideNav spectrum-SideNav--multiLevel">
+      {% for entry in sidenav.list | eleventyNavigation -%}
+        {{ renderNavListItem(entry, 0) }}
+      {%- endfor %}
+    </ul>
+</nav>

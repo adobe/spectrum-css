@@ -1,0 +1,21 @@
+{
+	"name": "logicbutton",
+	"tags": ["components"],
+	"targets": {
+		"build": {
+			"dependsOn": ["^build"],
+			"executor": "nx:run-commands",
+			"options": {
+				"cwd": "components/logicbutton",
+				"command": "gulp"
+			}
+		},
+		"clean": {
+			"executor": "nx:run-commands",
+			"options": {
+				"cwd": "components/logicbutton",
+				"command": "rimraf dist"
+			}
+		}
+	}
+}

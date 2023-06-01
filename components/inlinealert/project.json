@@ -1,0 +1,21 @@
+{
+	"name": "inlinealert",
+	"tags": ["components"],
+	"targets": {
+		"build": {
+			"dependsOn": ["^build"],
+			"executor": "nx:run-commands",
+			"options": {
+				"cwd": "components/inlinealert",
+				"command": "gulp"
+			}
+		},
+		"clean": {
+			"executor": "nx:run-commands",
+			"options": {
+				"cwd": "components/inlinealert",
+				"command": "rimraf dist"
+			}
+		}
+	}
+}

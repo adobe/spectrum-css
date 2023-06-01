@@ -1,4 +1,4 @@
-name: Page
+title: Page
 status: n/a
 description: |
   The outer page container. A parent tag should only have the `.spectrum` class if using a standalone CSS file.
@@ -6,7 +6,7 @@ description: |
   Finally, if scaling to large with the diff strategy, a parent tag should have the `.spectrum--large` class.
 examples:
   - id: page
-    name: Standard
+    title: Standard
     markup: |
       Text here!<br>
       <br><br>

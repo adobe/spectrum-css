@@ -1,16 +1,12 @@
-name: Contextual help
+title: Contextual help
 status: Verified
-SpectrumSiteSlug: https://spectrum.adobe.com/page/contextual-help/
-sections:
-  - name: Custom Properties API
-    description: |
-      This component can be modified via its `--mod-*` prefixed custom properties. A list of those prefixed custom properties can be found <a href="https://github.com/adobe/spectrum-css/tree/main/components/popover/metadata/mods.md">here</a>.
+designLink: https://spectrum.adobe.com/page/contextual-help/
 examples:
   - id: contextualhelp-variants
-    name: Info Icon
+    title: Info Icon
     markup: |
-      <div class="spectrum-Examples">
-        <div class="spectrum-Examples-item">
+      <div class="site-Examples">
+        <div class="site-Examples-item">
           <div class="spectrum-ContextualHelp">
             <button class="spectrum-ActionButton spectrum-ActionButton--sizeXS spectrum-ContextualHelp-button">
               <svg class="spectrum-Icon spectrum-Icon--sizeXS spectrum-ActionButton-icon" focusable="false" aria-hidden="true">
@@ -24,7 +20,7 @@ examples:
             <div class="dummy-spacing" style="position: relative; height: 248px; min-width: 400px; max-width: 50%;"></div>
           </div>
         </div>
-        <div class="spectrum-Examples-item">
+        <div class="site-Examples-item">
           <div class="spectrum-ContextualHelp">
             <div class="spectrum-Popover is-open spectrum-Popover--top spectrum-ContextualHelp-popover" role="presentation">
               <h2 class="spectrum-ContextualHelp-heading">Permission required</h2>
@@ -40,10 +36,10 @@ examples:
         </div>
       </div>
   - id: contextualhelp-variants
-    name: Help Icon
+    title: Help Icon
     markup: |
-      <div class="spectrum-Examples">
-        <div class="spectrum-Examples-item">
+      <div class="site-Examples">
+        <div class="site-Examples-item">
           <div class="spectrum-ContextualHelp">
             <button class="spectrum-ActionButton spectrum-ActionButton--sizeXS spectrum-ContextualHelp-button">
               <svg class="spectrum-Icon spectrum-Icon--sizeXS spectrum-ActionButton-icon" focusable="false" aria-hidden="true">

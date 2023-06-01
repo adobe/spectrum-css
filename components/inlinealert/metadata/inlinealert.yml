@@ -1,19 +1,15 @@
-name: In-line alert
-SpectrumSiteSlug: https://spectrum.adobe.com/page/in-line-alert/
-sections:
-  - name: Custom Properties API
-    description: |
-      This component can be modified via its `--mod-*` prefixed custom properties. A list of those prefixed custom properties can be found <a href="https://github.com/adobe/spectrum-css/tree/main/components/inlinealert/metadata/mods.md">here</a>.
+title: In-line alert
+designLink: https://spectrum.adobe.com/page/in-line-alert/
 examples:
   - id: inlinealert-neutral
-    name: Neutral
+    title: Neutral
     markup: |
       <div class="spectrum-InLineAlert">
         <div class="spectrum-InLineAlert-header">Neutral in-line alert header</div>
         <div class="spectrum-InLineAlert-content">This is an alert.</div>
       </div>
   - id: inlinealert-info
-    name: Informative
+    title: Informative
     description: |
       *Spectrum for Adobe Express uses a different icon. Use the `SX_Info_18_S.svg` icon in the Express workflow icon set.*
     markup: |
@@ -27,7 +23,7 @@ examples:
         <div class="spectrum-InLineAlert-content">This is an alert.</div>
       </div>
   - id: inlinealert-positive
-    name: Positive
+    title: Positive
     description: |
       *Spectrum for Adobe Express uses a different icon. Use the `SX_CheckmarkCircle_18_S.svg` icon in the Express workflow icon set.*
     markup: |
@@ -41,7 +37,7 @@ examples:
         <div class="spectrum-InLineAlert-content">This is an alert.</div>
       </div>
   - id: inlinealert-notice
-    name: Notice
+    title: Notice
     description: |
       *Spectrum for Adobe Express uses a different icon. Use the `SX_Alert_18_S.svg` icon in the Express workflow icon set.*
     markup: |
@@ -55,7 +51,7 @@ examples:
         <div class="spectrum-InLineAlert-content">This is an alert.</div>
       </div>
   - id: inlinealert-negative
-    name: Negative
+    title: Negative
     description: |
       *Spectrum for Adobe Express uses a different icon. Use the `SX_Alert_18_S.svg` icon in the Express workflow icon set.*
     markup: |
@@ -69,7 +65,7 @@ examples:
         <div class="spectrum-InLineAlert-content">This is an alert.</div>
       </div>
   - id: inlinealert-closable
-    name: Closable
+    title: Closable
     dnaStatus: Contribution
     description: |
       An in-line alert with a close button in the footer. Combine this strategy with any variant.

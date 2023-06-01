@@ -1,7 +1,7 @@
-name: Stepper
+title: Stepper
 status: Contribution
 sections:
-  - name: Migration Guide
+  - title: Migration guide
     description: |
       ### New Textfield markup
       Stepper now uses the new Textfield markup. See the [Textfield migration guide](textfield.html#migrationguide) for more information.
@@ -28,7 +28,7 @@ sections:
 
 examples:
   - id: stepper
-    name: Standard
+    title: Standard
     markup: |
       <div class="spectrum-Stepper">
         <div class="spectrum-Textfield spectrum-Stepper-textfield">
@@ -48,7 +48,7 @@ examples:
         </span>
       </div>
   - id: stepper
-    name: Focused
+    title: Focused
     markup: |
       <div class="spectrum-Stepper is-focused">
         <div class="spectrum-Textfield spectrum-Stepper-textfield">
@@ -68,7 +68,7 @@ examples:
         </span>
       </div>
   - id: stepper
-    name: Keyboard Focused
+    title: Keyboard Focused
     markup: |
       <div class="spectrum-Stepper is-keyboardFocused">
         <div class="spectrum-Textfield spectrum-Stepper-textfield">
@@ -88,7 +88,7 @@ examples:
         </span>
       </div>
   - id: stepper
-    name: Invalid
+    title: Invalid
     markup: |
       <div class="spectrum-Stepper is-invalid">
         <div class="spectrum-Textfield spectrum-Stepper-textfield">
@@ -108,7 +108,7 @@ examples:
         </span>
       </div>
   - id: stepper
-    name: Invalid (focused)
+    title: Invalid (focused)
     markup: |
       <div class="spectrum-Stepper is-invalid is-focused">
         <div class="spectrum-Textfield spectrum-Stepper-textfield">
@@ -128,7 +128,7 @@ examples:
         </span>
       </div>
   - id: stepper
-    name: Invalid (keyboard focused)
+    title: Invalid (keyboard focused)
     markup: |
       <div class="spectrum-Stepper is-invalid is-keyboardFocused">
         <div class="spectrum-Textfield spectrum-Stepper-textfield">
@@ -148,7 +148,7 @@ examples:
         </span>
       </div>
   - id: stepper
-    name: Disabled
+    title: Disabled
     markup: |
       <div class="spectrum-Stepper is-disabled">
         <div class="spectrum-Textfield spectrum-Stepper-textfield is-disabled">
@@ -168,7 +168,7 @@ examples:
         </span>
       </div>
   - id: stepper-quiet
-    name: Quiet
+    title: Quiet
     markup: |
       <div class="spectrum-Stepper spectrum-Stepper--quiet">
         <div class="spectrum-Textfield spectrum-Textfield--quiet spectrum-Stepper-textfield">
@@ -188,7 +188,7 @@ examples:
         </span>
       </div>
   - id: stepper-quiet
-    name: Quiet (focused)
+    title: Quiet (focused)
     markup: |
       <div class="spectrum-Stepper spectrum-Stepper--quiet is-focused">
         <div class="spectrum-Textfield spectrum-Textfield--quiet spectrum-Stepper-textfield">
@@ -208,7 +208,7 @@ examples:
         </span>
       </div>
   - id: stepper-quiet
-    name: Quiet (keyboard focused)
+    title: Quiet (keyboard focused)
     markup: |
       <div class="spectrum-Stepper spectrum-Stepper--quiet is-keyboardFocused">
         <div class="spectrum-Textfield spectrum-Textfield--quiet spectrum-Stepper-textfield">
@@ -228,7 +228,7 @@ examples:
         </span>
       </div>
   - id: stepper-quiet
-    name: Quiet (invalid)
+    title: Quiet (invalid)
     markup: |
       <div class="spectrum-Stepper spectrum-Stepper--quiet is-invalid">
         <div class="spectrum-Textfield spectrum-Textfield--quiet spectrum-Stepper-textfield">
@@ -248,7 +248,7 @@ examples:
         </span>
       </div>
   - id: stepper-quiet
-    name: Quiet (invalid, focused)
+    title: Quiet (invalid, focused)
     markup: |
       <div class="spectrum-Stepper spectrum-Stepper--quiet is-invalid is-focused">
         <div class="spectrum-Textfield spectrum-Textfield--quiet spectrum-Stepper-textfield">
@@ -268,7 +268,7 @@ examples:
         </span>
       </div>
   - id: stepper-quiet
-    name: Quiet (invalid, keyboard focused)
+    title: Quiet (invalid, keyboard focused)
     markup: |
       <div class="spectrum-Stepper spectrum-Stepper--quiet is-invalid is-keyboardFocused">
         <div class="spectrum-Textfield spectrum-Textfield--quiet spectrum-Stepper-textfield">
@@ -288,7 +288,7 @@ examples:
         </span>
       </div>
   - id: stepper-quiet
-    name: Quiet (disabled)
+    title: Quiet (disabled)
     markup: |
       <div class="spectrum-Stepper spectrum-Stepper--quiet is-disabled">
         <div class="spectrum-Textfield spectrum-Textfield--quiet spectrum-Stepper-textfield is-disabled">

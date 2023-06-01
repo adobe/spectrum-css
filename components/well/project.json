@@ -1,0 +1,21 @@
+{
+	"name": "well",
+	"tags": ["components"],
+	"targets": {
+		"build": {
+			"dependsOn": ["^build"],
+			"executor": "nx:run-commands",
+			"options": {
+				"cwd": "components/well",
+				"command": "gulp"
+			}
+		},
+		"clean": {
+			"executor": "nx:run-commands",
+			"options": {
+				"cwd": "components/well",
+				"command": "rimraf dist"
+			}
+		}
+	}
+}

@@ -1,8 +1,10 @@
-name: Search
-SpectrumSiteSlug: https://spectrum.adobe.com/page/search-field/
-description: 'This component contains a single input field with both a magnifying glass icon and a clear ("reset") button displayed within it. When making use of this component, the clear button should only be displayed when the input has a value.'
+title: Search
+description: "The searchy, cleary field."
+SWC:
+  url: https://opensource.adobe.com/spectrum-web-components/components/search/
+  tag: "sp-search"
 sections:
-  - name: Migration Guide
+  - title: Migration guide
     description: |
       ### New Textfield markup
       Search now uses the new Textfield markup. See the [Textfield migration guide](textfield.html#migrationguide) for more information.
@@ -24,7 +26,7 @@ sections:
 
 examples:
   - id: search
-    name: Standard
+    title: Standard
     markup: |
       <div class="spectrum-Examples" style="justify-content: space-evenly;">
         <div class="spectrum-Examples-item">
@@ -68,7 +70,7 @@ examples:
       </div>
 
   - id: search-quiet
-    name: Quiet
+    title: Quiet
     markup: |
       <div class="spectrum-Examples" style="justify-content: space-evenly;">
         <div class="spectrum-Examples-item">

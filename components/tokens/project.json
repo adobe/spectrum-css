@@ -1,0 +1,29 @@
+{
+	"name": "accordion",
+	"tags": ["tokens"],
+	"targets": {
+		"build": {
+			"inputs": [
+				"{workspaceRoot}/postcss.config.js",
+				"{workspaceRoot}/style-dictionary.config.js",
+				"{workspaceRoot}/utilities/style-dictionary.utils.js",
+				"{workspaceRoot}/custom-express/*.css",
+				"{workspaceRoot}/custom-spectrum/*.css"
+			],
+			"dependsOn": ["^build"],
+			"executor": "nx:run-commands",
+			"options": {
+				"cwd": "components/tokens",
+				"command": "gulp"
+			}
+		},
+		"clean": {
+			"executor": "nx:run-commands",
+			"options": {
+				"cwd": "components/tokens",
+				"command": "rimraf dist"
+			}
+		}
+	},
+	"includedScripts": ["build"]
+}

@@ -1,0 +1,230 @@
+@import url("https://unpkg.com/prismjs@1.20.0/themes/prism.css") screen and
+	((prefers-color-scheme: light) or (prefers-color-scheme: no-preference));
+@import url("https://unpkg.com/prismjs@1.20.0/themes/prism-dark.css") screen and
+	(prefers-color-scheme: dark);
+@import url("https://cdn.jsdelivr.net/npm/@mdi/font@6.5.95/css/materialdesignicons.min.css");
+@import url("https://cdnjs.cloudflare.com/ajax/libs/Primer/19.1.1/tooltips.min.css");
+
+@import "./_themes.css";
+@import "./_overrides.css";
+@import "./_site.css";
+
+@import "@spectrum-css/commons/basebutton-coretokens.css";
+
+/* Component customizations specific to the documentation site */
+:root {
+	/* Limit slider widths */
+	--spectrum-slider-min-width: var(--spectrum-side-navigation-minimum-width);
+	--site-scroll-offset: var(--spectrum-spacing-600);
+
+	--system: spectrum;
+	--theme: light;
+	--scale: medium;
+}
+
+.spectrum--express {
+	--system: express;
+}
+
+.spectrum--large {
+	--scale: large;
+}
+
+.spectrum--darkest {
+	--theme: darkest;
+}
+
+.spectrum--dark {
+	--theme: dark;
+}
+
+*:not([class]),
+[class^="site-"] {
+	box-sizing: border-box;
+}
+
+html {
+	position: relative;
+	overflow-y: hidden;
+}
+
+body {
+	margin: 0;
+}
+
+[hidden] {
+	display: none !important;
+}
+
+#skip-to-content {
+	left: 50%;
+	top: var(--site-scroll-offset);
+	position: absolute;
+	transform: translateY(-200%);
+	transition: transform var(--spectrum-global-animation-duration-600);
+
+	&:focus {
+		transform: translateY(0%);
+	}
+}
+
+h1 + p {
+	margin-block: var(--spectrum-spacing-600) !important;
+}
+
+:not(p:has(img), img, .site-Logo) + h2:not(:only-child) {
+	margin-block-start: var(--spectrum-global-dimension-size-700) !important;
+}
+
+:not(p:has(img)) + h3:not(:only-child) {
+	margin-block-start: var(--spectrum-global-dimension-size-400) !important;
+}
+
+:not(p:has(img)) + h4:not(:only-child) {
+	margin-block-start: var(--spectrum-global-dimension-size-4300) !important;
+}
+
+h2[id],
+h3[id] {
+	/* This ends up aligning nicely with the search bar in desktop */
+	scroll-margin-top: var(--spectrum-global-dimension-size-600);
+}
+
+:is(h1, h2, h3, h4, h5, h6):not(:has([class])):first-child {
+	margin-block: 0;
+}
+
+pre {
+	margin: 0;
+	padding: 0;
+	border: none;
+	background: transparent;
+}
+
+pre.html {
+	margin: 0;
+	white-space: pre-wrap; /* css-3 */
+}
+
+code[class*="language-"],
+pre[class*="language-"] {
+	text-shadow: none;
+	font-size: inherit;
+}
+
+article,
+section {
+	margin-block: 2rem;
+}
+
+.is-scrollable {
+	overflow-x: hidden;
+	overflow-y: auto;
+
+	-webkit-overflow-scrolling: touch;
+
+	&::-webkit-scrollbar {
+		width: 10px;
+		height: 10px;
+	}
+
+	&::-webkit-scrollbar-thumb {
+		border-radius: var(--spectrum-corner-radius-100);
+		width: 8px;
+		height: 8px;
+		border-top: 2px solid transparent;
+		border-bottom: 2px solid transparent;
+		background-clip: padding-box;
+		background-color: transparent;
+	}
+
+	&::-webkit-scrollbar-track,
+	&::-webkit-scrollbar-track-piece {
+		background-color: rgba(var(--spectrum-gray-50-rgb), 0.4);
+	}
+
+	&:hover::-webkit-scrollbar-thumb {
+		background-color: rgba(var(--spectrum-gray-200-rgb), 0.4);
+	}
+}
+
+.is-sticky {
+	position: -webkit-sticky;
+	position: sticky;
+	top: var(--site-sticky-top);
+}
+
+button.code-copy {
+	all: unset !important;
+
+	position: absolute !important;
+	top: var(--spectrum-spacing-75) !important;
+	right: var(--spectrum-spacing-75) !important;
+	cursor: pointer !important;
+
+	outline: none;
+	opacity: 0.8;
+
+	display: inline-flex;
+	align-items: center;
+	justify-content: center;
+
+	border: none;
+	color: var(--spectrum-neutral-content-color-default);
+	fill: currentColor;
+
+	min-block-size: var(--spectrum-button-height);
+	padding: calc(
+		var(--spectrum-button-edge-to-visual-only) -
+			var(--spectrum-button-border-width)
+	);
+
+	border-radius: calc(
+		var(--mod-button-border-radius, var(--spectrum-button-border-radius)) +
+			var(--mod-focus-indicator-gap, var(--spectrum-focus-indicator-gap))
+	);
+
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+	-webkit-appearance: button;
+
+	font-family: var(
+		--mod-sans-font-family-stack,
+		var(--spectrum-sans-font-family-stack)
+	);
+
+	line-height: var(--mod-line-height-100, var(--spectrum-line-height-100));
+
+	.site-Example-markup & {
+		top: var(--spectrum-spacing-400) !important;
+		right: var(--spectrum-spacing-400) !important;
+	}
+
+	span {
+		display: inline-block;
+		margin-inline-start: calc(
+			var(--mod-button-edge-to-visual, var(--spectrum-button-edge-to-visual)) -
+				var(--mod-button-edge-to-text, var(--spectrum-button-edge-to-text))
+		);
+		background: url(https://api.iconify.design/mdi/content-copy.svg) no-repeat
+			center center / contain;
+		width: 16px;
+		height: 16px;
+	}
+
+	&:hover {
+		color: var(--spectrum-accent-content-color-hover);
+	}
+
+	&:active {
+		color: var(--spectrum-accent-content-color-down);
+	}
+
+	&:focus {
+		border-radius: calc(
+			var(--spectrum-button-border-radius) + var(--spectrum-focus-indicator-gap)
+		) !important;
+		color: var(--spectrum-accent-content-color-key-focus) !important;
+		outline-offset: var(--spectrum-focus-ring-offset) !important;
+	}
+}

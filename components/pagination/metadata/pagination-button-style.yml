@@ -1,7 +1,7 @@
-name: Pagination - button style
+title: Pagination - Button Style
 examples:
   - id: pagination-button
-    name: CTA
+    title: CTA
     markup: |
       <nav class="spectrum-SplitButton spectrum-SplitButton--left">
         <a href="#" class="spectrum-Button spectrum-Button--sizeM spectrum-Button--fill spectrum-Button--accent spectrum-SplitButton-trigger spectrum-Pagination-prevButton">
@@ -17,7 +17,7 @@ examples:
         </a>
       </nav>
   - id: pagination-button
-    name: Primary
+    title: Primary
     markup: |
       <nav class="spectrum-SplitButton spectrum-SplitButton--left">
         <a href="#" class="spectrum-Button spectrum-Button--sizeM spectrum-Button--outline spectrum-Button--primary spectrum-SplitButton-trigger spectrum-Pagination-prevButton">
@@ -33,7 +33,7 @@ examples:
         </a>
       </nav>
   - id: pagination-button
-    name: Secondary
+    title: Secondary
     markup: |
       <nav class="spectrum-SplitButton spectrum-SplitButton--left">
         <a href="#" class="spectrum-Button spectrum-Button--sizeM spectrum-Button--outline spectrum-Button--secondary spectrum-SplitButton-trigger spectrum-Pagination-prevButton">

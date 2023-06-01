@@ -1,0 +1,21 @@
+{
+	"name": "searchwithin",
+	"tags": ["components"],
+	"targets": {
+		"build": {
+			"dependsOn": ["^build"],
+			"executor": "nx:run-commands",
+			"options": {
+				"cwd": "components/searchwithin",
+				"command": "gulp"
+			}
+		},
+		"clean": {
+			"executor": "nx:run-commands",
+			"options": {
+				"cwd": "components/searchwithin",
+				"command": "rimraf dist"
+			}
+		}
+	}
+}

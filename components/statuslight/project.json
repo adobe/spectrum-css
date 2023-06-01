@@ -1,0 +1,21 @@
+{
+	"name": "statuslight",
+	"tags": ["components"],
+	"targets": {
+		"build": {
+			"dependsOn": ["^build"],
+			"executor": "nx:run-commands",
+			"options": {
+				"cwd": "components/statuslight",
+				"command": "gulp"
+			}
+		},
+		"clean": {
+			"executor": "nx:run-commands",
+			"options": {
+				"cwd": "components/statuslight",
+				"command": "rimraf dist"
+			}
+		}
+	}
+}

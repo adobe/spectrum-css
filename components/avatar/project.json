@@ -1,0 +1,21 @@
+{
+	"name": "avatar",
+	"tags": ["components"],
+	"targets": {
+		"build": {
+			"dependsOn": ["^build"],
+			"executor": "nx:run-commands",
+			"options": {
+				"cwd": "components/avatar",
+				"command": "gulp"
+			}
+		},
+		"clean": {
+			"executor": "nx:run-commands",
+			"options": {
+				"cwd": "components/avatar",
+				"command": "rimraf dist"
+			}
+		}
+	}
+}

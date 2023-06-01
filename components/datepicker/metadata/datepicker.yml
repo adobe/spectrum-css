@@ -1,7 +1,7 @@
-name: Date picker
-description: A date picker displays a Text Field input with a button next to it, and can display two Text Fields next to each other for choosing a date range.
+title: Date picker
+description: A date picker displays a Text field input with a button next to it, and can display two Text fields next to each other for choosing a date range.
 sections:
-  - name: Migration Guide
+  - title: Migration guide
     description: |
       ### Component separated from InputGroup
       This component was previously a variant within InputGroup. **InputGroup is now deprecated**.
@@ -26,7 +26,7 @@ sections:
 
 examples:
   - id: datepicker
-    name: Standard
+    title: Standard
     markup: |
       <div aria-disabled="false" aria-invalid="false" class="spectrum-DatePicker spectrum-DatePicker" aria-readonly="false" aria-required="false" aria-haspopup="dialog">
         <div class="spectrum-Textfield spectrum-DatePicker-textfield">
@@ -41,7 +41,7 @@ examples:
         </button>
       </div>
   - id: datepicker-readonly
-    name: Read-only
+    title: Read-only
     markup: |
       <div aria-disabled="false" aria-invalid="false" class="spectrum-DatePicker spectrum-DatePicker" aria-readonly="true" aria-required="false">
         <div class="spectrum-Textfield spectrum-DatePicker-textfield is-readOnly">
@@ -49,7 +49,7 @@ examples:
         </div>
       </div>
   - id: datepicker-quiet
-    name: Quiet
+    title: Quiet
     markup: |
       <div aria-disabled="false" aria-invalid="false" class="spectrum-DatePicker spectrum-DatePicker--quiet spectrum-DatePicker" aria-readonly="false" aria-required="false" aria-haspopup="dialog">
         <div class="spectrum-Textfield spectrum-Textfield--quiet spectrum-DatePicker-textfield">
@@ -64,7 +64,7 @@ examples:
         </button>
       </div>
   - id: datepicker-range
-    name: Range
+    title: Range
     markup: |
       <div aria-invalid="false" class="spectrum-DatePicker spectrum-DatePicker spectrum-DatePicker--range" role="combobox" aria-expanded="false" aria-haspopup="dialog">
         <div class="spectrum-Textfield spectrum-DatePicker-textfield">
@@ -164,7 +164,7 @@ examples:
         </button>
       </div>
   - id: datepicker-range-quiet
-    name: Range (quiet)
+    title: Range (quiet)
     markup: |
       <div class="spectrum-DatePicker spectrum-DatePicker--quiet spectrum-DatePicker spectrum-DatePicker--range" role="combobox" aria-expanded="false" aria-haspopup="dialog">
         <div class="spectrum-Textfield spectrum-Textfield--quiet spectrum-DatePicker-textfield">

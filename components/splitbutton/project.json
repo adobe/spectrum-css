@@ -1,0 +1,21 @@
+{
+	"name": "splitbutton",
+	"tags": ["components"],
+	"targets": {
+		"build": {
+			"dependsOn": ["^build"],
+			"executor": "nx:run-commands",
+			"options": {
+				"cwd": "components/splitbutton",
+				"command": "gulp"
+			}
+		},
+		"clean": {
+			"executor": "nx:run-commands",
+			"options": {
+				"cwd": "components/splitbutton",
+				"command": "rimraf dist"
+			}
+		}
+	}
+}

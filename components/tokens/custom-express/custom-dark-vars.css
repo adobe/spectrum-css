@@ -12,6 +12,6 @@ governing permissions and limitations under the License.
 /* This file contains overrides and additions to core tokens */
 
 .spectrum--express.spectrum--dark {
-  /* Drop Zone background color rgb */
-  --spectrum-drop-zone-background-color-rgb: var( --spectrum-indigo-900-rgb); /* var(--spectrum-accent-color-900);*/
+	/* Drop zone background color rgb */
+	--spectrum-drop-zone-background-color-rgb: var(--spectrum-indigo-900-rgb); /* var(--spectrum-accent-color-900);*/
 }

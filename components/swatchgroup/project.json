@@ -1,0 +1,21 @@
+{
+	"name": "swatchgroup",
+	"tags": ["components"],
+	"targets": {
+		"build": {
+			"dependsOn": ["^build"],
+			"executor": "nx:run-commands",
+			"options": {
+				"cwd": "components/swatchgroup",
+				"command": "gulp"
+			}
+		},
+		"clean": {
+			"executor": "nx:run-commands",
+			"options": {
+				"cwd": "components/swatchgroup",
+				"command": "rimraf dist"
+			}
+		}
+	}
+}

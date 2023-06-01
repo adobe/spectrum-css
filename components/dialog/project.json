@@ -1,0 +1,21 @@
+{
+	"name": "dialog",
+	"tags": ["components"],
+	"targets": {
+		"build": {
+			"dependsOn": ["^build"],
+			"executor": "nx:run-commands",
+			"options": {
+				"cwd": "components/dialog",
+				"command": "gulp"
+			}
+		},
+		"clean": {
+			"executor": "nx:run-commands",
+			"options": {
+				"cwd": "components/dialog",
+				"command": "rimraf dist"
+			}
+		}
+	}
+}

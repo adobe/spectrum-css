@@ -1,0 +1,21 @@
+{
+	"name": "link",
+	"tags": ["components"],
+	"targets": {
+		"build": {
+			"dependsOn": ["^build"],
+			"executor": "nx:run-commands",
+			"options": {
+				"cwd": "components/link",
+				"command": "gulp"
+			}
+		},
+		"clean": {
+			"executor": "nx:run-commands",
+			"options": {
+				"cwd": "components/link",
+				"command": "rimraf dist"
+			}
+		}
+	}
+}

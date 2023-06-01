@@ -1,0 +1,21 @@
+{
+	"name": "switch",
+	"tags": ["components"],
+	"targets": {
+		"build": {
+			"dependsOn": ["^build"],
+			"executor": "nx:run-commands",
+			"options": {
+				"cwd": "components/switch",
+				"command": "gulp"
+			}
+		},
+		"clean": {
+			"executor": "nx:run-commands",
+			"options": {
+				"cwd": "components/switch",
+				"command": "rimraf dist"
+			}
+		}
+	}
+}

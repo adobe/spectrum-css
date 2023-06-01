@@ -1,13 +1,16 @@
-name: Asset
+title: Asset
+SWC:
+  url: https://opensource.adobe.com/spectrum-web-components/components/asset/
+  tag: "sp-asset"
 examples:
   - id: asset
-    name: Image
+    title: Image
     markup: |
       <div class="spectrum-Asset">
-        <img class="spectrum-Asset-image" src="img/example-ava.jpg" style="max-width: 75%; max-height: 75%; object-fit: contain;">
+        <img class="spectrum-Asset-image" src="/assets/images/example-ava.png" style="max-width: 75%; max-height: 75%; object-fit: contain;">
       </div>
   - id: asset
-    name: File
+    title: File
     markup: |
       <div class="spectrum-Asset">
         <svg viewBox="0 0 128 128" class="spectrum-Asset-file">
@@ -16,7 +19,7 @@ examples:
         </svg>
       </div>
   - id: asset
-    name: Folder
+    title: Folder
     markup: |
       <div class="spectrum-Asset">
         <svg viewBox="0 0 32 32" class="spectrum-Asset-folder">

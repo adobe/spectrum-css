@@ -1,0 +1,21 @@
+{
+	"name": "tray",
+	"tags": ["components"],
+	"targets": {
+		"build": {
+			"dependsOn": ["^build"],
+			"executor": "nx:run-commands",
+			"options": {
+				"cwd": "components/tray",
+				"command": "gulp"
+			}
+		},
+		"clean": {
+			"executor": "nx:run-commands",
+			"options": {
+				"cwd": "components/tray",
+				"command": "rimraf dist"
+			}
+		}
+	}
+}

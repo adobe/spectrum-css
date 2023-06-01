@@ -1,0 +1,67 @@
+---
+layout: pages.njk
+---
+
+<article class="site-Component" id="main">
+    {# {% if eleventyNavigation.parent !== "components" -%}
+        {{ eleventyNavigation.key | log }}
+        {% set breadcrumbs = collections.all | eleventyNavigationBreadcrumb(eleventyNavigation.key, { includeSelf: true }) %}
+        {{ breadcrumbs | log }}
+        {% include "breadcrumb.njk" %}
+    {%- endif %} #}
+    <header id="{{ component.id | slugify }}" class="site-Component-header">
+        <h1 class="spectrum-Heading spectrum-Heading--sizeXXXL spectrum-Heading--serif">
+            <a href="#{{ component.id | slugify }}">{{ component.title | capitalize }}</a>
+        </h1>
+    </header>
+
+    <section class="site-Component-meta">
+        {# wrapper div prevents status table from expanding #}
+        <div>{% include 'status-table.njk' %}</div>
+        {% include 'resources.njk' %}
+    </section>
+
+    {% if component.description -%}
+        {% set section = { title: 'Usage notes', id: 'usage', description: component.description, hasEmphasis: true } %}
+        {% include 'section.njk' %}
+    {%- endif %}
+
+    {% if component.examples and component.examples.length > 0 -%}
+        {% if component.examples.length > 1 -%}
+            {% set section = { title: 'Examples', id: 'examples' } %}
+        {%- else -%}
+            {% set section = { title: 'Example', id: 'example' } %}
+        {%- endif %}
+        {% include 'section.njk' %}
+
+        {% for example in component.examples %}
+            {% include "example.njk" %}
+        {% endfor %}
+    {%- endif %}
+
+    {% for section in component.sections %}
+        {% include 'section.njk' %}
+    {% endfor %}
+
+    {% for key, data in component.tokens -%}
+        {# First item in the data array is the row key; second is an object #}
+        {% if key === 'mods' and data and data.length > 0 -%}
+            {% set section = { title: 'Modifiable properties', id: key } %}
+            {% include 'section.njk' %}
+            {% set rows = [] %}
+            {% for token, set in data %}
+                {% for obj in set %}
+                    {% set rows = (rows.concat([[ token, obj.fallback ]])) %}
+                {% endfor %}
+            {% endfor %}
+            {% set table = {
+                headings: [
+                    { content: 'Property name', isSortable: true },
+                    { content: 'Default value' }
+                ],
+                rows: rows
+            } %}
+            {% include 'table.njk' %}
+        {%- endif %}
+    {%- endfor %}
+</article>

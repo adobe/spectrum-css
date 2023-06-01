@@ -1,14 +1,14 @@
-name: Asset card
-SpectrumSiteSlug: https://spectrum.adobe.com/page/cards/
+title: Asset card
+designLink: https://spectrum.adobe.com/page/cards/
 description: |
   - Set the `--spectrum-assetcard-asset-size` custom property to the size you want to display the asset as
 examples:
   - id: assetcard-portrait
-    name: Portrait
+    title: Portrait
     markup: |
       <div class="spectrum-AssetCard spectrum-AssetCard--checkboxSelection" tabindex="0" role="figure">
         <div class="spectrum-AssetCard-assetContainer">
-          <img class="spectrum-AssetCard-asset" src="img/example-card-portrait.jpg" />
+          <img class="spectrum-AssetCard-asset" src="/assets/images/example-card-portrait.png" />
           <div class="spectrum-AssetCard-selectionOverlay"></div>
         </div>
         <div class="spectrum-AssetCard-header">
@@ -34,11 +34,11 @@ examples:
       </div>
 
   - id: assetcard-landscape
-    name: Landscape
+    title: Landscape
     markup: |
       <div class="spectrum-AssetCard spectrum-AssetCard--checkboxSelection" tabindex="0" role="figure">
         <div class="spectrum-AssetCard-assetContainer">
-          <img class="spectrum-AssetCard-asset" src="img/example-card-landscape.jpeg" />
+          <img class="spectrum-AssetCard-asset" src="/assets/images/example-card-landscape.png" />
           <div class="spectrum-AssetCard-selectionOverlay"></div>
         </div>
         <div class="spectrum-AssetCard-header">
@@ -64,11 +64,11 @@ examples:
       </div>
 
   - id: assetcard-square
-    name: Square
+    title: Square
     markup: |
       <div class="spectrum-AssetCard spectrum-AssetCard--checkboxSelection" tabindex="0" role="figure">
         <div class="spectrum-AssetCard-assetContainer">
-          <img class="spectrum-AssetCard-asset" src="img/example-card-square.png" />
+          <img class="spectrum-AssetCard-asset" src="/assets/images/example-card-square.png" />
           <div class="spectrum-AssetCard-selectionOverlay"></div>
         </div>
         <div class="spectrum-AssetCard-header">
@@ -94,13 +94,13 @@ examples:
       </div>
 
   - id: assetcard-optional
-    name: Optional content
+    title: Optional content
     description: |
       The `.spectrum-AssetCard-content` and `.spectrum-AssetCard-headerContent` elements are optional.
     markup: |
       <div class="spectrum-AssetCard spectrum-AssetCard--checkboxSelection" tabindex="0" role="figure">
         <div class="spectrum-AssetCard-assetContainer">
-          <img class="spectrum-AssetCard-asset" src="img/example-card-square.png" />
+          <img class="spectrum-AssetCard-asset" src="/assets/images/example-card-square.png" />
           <div class="spectrum-AssetCard-selectionOverlay"></div>
         </div>
         <div class="spectrum-AssetCard-header">
@@ -123,11 +123,11 @@ examples:
       </div>
 
   - id: assetcard-highlight
-    name: Highlight Selection
+    title: Highlight selection
     markup: |
       <div class="spectrum-AssetCard spectrum-AssetCard--highlightSelection is-selected" tabindex="0" role="figure">
         <div class="spectrum-AssetCard-assetContainer">
-          <img class="spectrum-AssetCard-asset" src="img/example-card-portrait.jpg" />
+          <img class="spectrum-AssetCard-asset" src="/assets/images/example-card-portrait.png" />
           <div class="spectrum-AssetCard-selectionOverlay"></div>
         </div>
         <div class="spectrum-AssetCard-header">
@@ -140,11 +140,11 @@ examples:
       </div>
 
   - id: assetcard-checkbox
-    name: Checkbox Selection
+    title: Checkbox selection
     markup: |
       <div class="spectrum-AssetCard spectrum-AssetCard--checkboxSelection is-selected" tabindex="0" role="figure">
         <div class="spectrum-AssetCard-assetContainer">
-          <img class="spectrum-AssetCard-asset" src="img/example-card-portrait.jpg" />
+          <img class="spectrum-AssetCard-asset" src="/assets/images/example-card-portrait.png" />
           <div class="spectrum-AssetCard-selectionOverlay"></div>
         </div>
         <div class="spectrum-AssetCard-header">
@@ -170,11 +170,11 @@ examples:
       </div>
 
   - id: assetcard-ordered
-    name: Ordered Selection
+    title: Ordered selection
     markup: |
       <div class="spectrum-AssetCard spectrum-AssetCard--orderedSelection is-selected" tabindex="0" role="figure">
         <div class="spectrum-AssetCard-assetContainer">
-          <img class="spectrum-AssetCard-asset" src="img/example-card-portrait.jpg" />
+          <img class="spectrum-AssetCard-asset" src="/assets/images/example-card-portrait.png" />
           <div class="spectrum-AssetCard-selectionOverlay"></div>
         </div>
         <div class="spectrum-AssetCard-header">
@@ -190,11 +190,11 @@ examples:
       </div>
 
   - id: assetcard-ordered
-    name: Drop Target
+    title: Drop target
     markup: |
       <div class="spectrum-AssetCard spectrum-AssetCard--highlightSelection is-drop-target" tabindex="0" role="figure">
         <div class="spectrum-AssetCard-assetContainer">
-          <img class="spectrum-AssetCard-asset" src="img/example-card-portrait.jpg" />
+          <img class="spectrum-AssetCard-asset" src="/assets/images/example-card-portrait.png" />
           <div class="spectrum-AssetCard-selectionOverlay"></div>
         </div>
         <div class="spectrum-AssetCard-header">

@@ -1,22 +1,19 @@
-name: Breadcrumbs
-SpectrumSiteSlug: https://spectrum.adobe.com/page/breadcrumbs/
+title: Breadcrumbs
+designLink: https://spectrum.adobe.com/page/breadcrumbs/
 sections:
-  - name: Custom Properties API
+  - title: Migration guide
     description: |
-      This component can be modified via its `--mod-*` prefixed custom properties. A list of those prefixed custom properties can be found <a href="https://github.com/adobe/spectrum-css/tree/main/components/breadcrumb/metadata/mods.md">here</a>.
-  - name: Migration Guide
-    description: |
-      ### New Action Button markup
-      Action Button requires `.spectrum-ActionButton-icon` class on icons nested inside of Action Button.
+      ### New Action button markup
+      Action button requires `.spectrum-ActionButton-icon` class on icons nested inside of Action button.
 examples:
   - id: breadcrumb
-    name: Standard
+    title: Standard
     status: Verified
     markup: |
       <nav>
         <ul class="spectrum-Breadcrumbs">
           <li class="spectrum-Breadcrumbs-item">
-            <div class="spectrum-Breadcrumbs-itemLink" role="link" tabindex="0">Nav Root</div>
+            <div class="spectrum-Breadcrumbs-itemLink" role="link" tabindex="0">Nav root</div>
             <svg class="spectrum-Icon spectrum-UIIcon-ChevronRight100 spectrum-Breadcrumbs-itemSeparator" focusable="false" aria-hidden="true">
               <use xlink:href="#spectrum-css-icon-Chevron100" />
             </svg>
@@ -28,18 +25,18 @@ examples:
             </svg>
           </li>
           <li class="spectrum-Breadcrumbs-item">
-            <a class="spectrum-Breadcrumbs-itemLink" role="link" aria-current="page">January 2019 Assets</a>
+            <a class="spectrum-Breadcrumbs-itemLink" role="link" aria-current="page">January assets</a>
           </li>
         </ul>
       </nav>
   - id: breadcrumb
-    name: Dragged
+    title: Dragged
     status: Verified
     markup: |
       <nav>
         <ul class="spectrum-Breadcrumbs">
           <li class="spectrum-Breadcrumbs-item">
-            <div class="spectrum-Breadcrumbs-itemLink" role="link" tabindex="0">Nav Root</div>
+            <div class="spectrum-Breadcrumbs-itemLink" role="link" tabindex="0">Nav root</div>
             <svg class="spectrum-Icon spectrum-UIIcon-ChevronRight100 spectrum-Breadcrumbs-itemSeparator" focusable="false" aria-hidden="true">
               <use xlink:href="#spectrum-css-icon-Chevron100" />
             </svg>
@@ -51,12 +48,12 @@ examples:
             </svg>
           </li>
           <li class="spectrum-Breadcrumbs-item">
-            <a class="spectrum-Breadcrumbs-itemLink" role="link" aria-current="page">January 2019 Assets</a>
+            <a class="spectrum-Breadcrumbs-itemLink" role="link" aria-current="page">January assets</a>
           </li>
         </ul>
       </nav>
   - id: breadcrumb
-    name: Nested
+    title: Nested
     status: Verified
     markup: |
       <nav>
@@ -84,18 +81,18 @@ examples:
             </svg>
           </li>
           <li class="spectrum-Breadcrumbs-item">
-            <a class="spectrum-Breadcrumbs-itemLink" role="link" aria-current="page">January 2019 Assets</a>
+            <a class="spectrum-Breadcrumbs-itemLink" role="link" aria-current="page">January assets</a>
           </li>
         </ul>
       </nav>
   - id: breadcrumb
-    name: Nested (root visible)
+    title: Nested (root visible)
     status: Verified
     markup: |
       <nav>
         <ul class="spectrum-Breadcrumbs">
           <li class="spectrum-Breadcrumbs-item">
-            <div class="spectrum-Breadcrumbs-itemLink" role="link" tabindex="0">Nav Root</div>
+            <div class="spectrum-Breadcrumbs-itemLink" role="link" tabindex="0">Nav root</div>
             <svg class="spectrum-Icon spectrum-UIIcon-ChevronRight100 spectrum-Breadcrumbs-itemSeparator" focusable="false" aria-hidden="true">
               <use xlink:href="#spectrum-css-icon-Chevron100" />
             </svg>
@@ -117,18 +114,18 @@ examples:
             </svg>
           </li>
           <li class="spectrum-Breadcrumbs-item">
-            <a class="spectrum-Breadcrumbs-itemLink" role="link" aria-current="page">January 2019 Assets</a>
+            <a class="spectrum-Breadcrumbs-itemLink" role="link" aria-current="page">January assets</a>
           </li>
         </ul>
       </nav>
   - id: breadcrumb-multiline
-    name: Multiline
+    title: Multiline
     status: Verified
     markup: |
       <nav>
         <ul class="spectrum-Breadcrumbs spectrum-Breadcrumbs--multiline">
           <li class="spectrum-Breadcrumbs-item">
-            <a class="spectrum-Breadcrumbs-itemLink" href="#">Nav Root</a>
+            <a class="spectrum-Breadcrumbs-itemLink" href="#">Nav root</a>
             <svg class="spectrum-Icon spectrum-UIIcon-ChevronRight100 spectrum-Breadcrumbs-itemSeparator" focusable="false" aria-hidden="true">
               <use xlink:href="#spectrum-css-icon-Chevron100" />
             </svg>
@@ -140,18 +137,18 @@ examples:
             </svg>
           </li>
           <li class="spectrum-Breadcrumbs-item">
-            <a class="spectrum-Breadcrumbs-itemLink" role="link" aria-current="page">January 2019 Assets</a>
+            <a class="spectrum-Breadcrumbs-itemLink" role="link" aria-current="page">January assets</a>
           </li>
         </ul>
       </nav>
   - id: breadcrumb-multiline
-    name: Multiline (dragged)
+    title: Multiline (dragged)
     status: Verified
     markup: |
       <nav>
         <ul class="spectrum-Breadcrumbs spectrum-Breadcrumbs--multiline">
           <li class="spectrum-Breadcrumbs-item">
-            <a class="spectrum-Breadcrumbs-itemLink" href="#">Nav Root</a>
+            <a class="spectrum-Breadcrumbs-itemLink" href="#">Nav root</a>
             <svg class="spectrum-Icon spectrum-UIIcon-ChevronRight100 spectrum-Breadcrumbs-itemSeparator" focusable="false" aria-hidden="true">
               <use xlink:href="#spectrum-css-icon-Chevron100" />
             </svg>
@@ -163,12 +160,12 @@ examples:
             </svg>
           </li>
           <li class="spectrum-Breadcrumbs-item">
-            <a class="spectrum-Breadcrumbs-itemLink" role="link" aria-current="page">January 2019 Assets</a>
+            <a class="spectrum-Breadcrumbs-itemLink" role="link" aria-current="page">January assets</a>
           </li>
         </ul>
       </nav>
   - id: breadcrumb-multiline
-    name: Multiline Nested
+    title: Multiline nested
     status: Verified
     markup: |
       <nav>
@@ -196,18 +193,18 @@ examples:
             </svg>
           </li>
           <li class="spectrum-Breadcrumbs-item">
-            <a class="spectrum-Breadcrumbs-itemLink" role="link" aria-current="page">January 2019 Assets</a>
+            <a class="spectrum-Breadcrumbs-itemLink" role="link" aria-current="page">January assets</a>
           </li>
         </ul>
       </nav>
   - id: breadcrumb-multiline
-    name: Multiline Nested (root visible)
+    title: Multiline nested (root visible)
     status: Verified
     markup: |
       <nav>
         <ul class="spectrum-Breadcrumbs spectrum-Breadcrumbs--multiline">
           <li class="spectrum-Breadcrumbs-item">
-            <a class="spectrum-Breadcrumbs-itemLink" href="#">Nav Root</a>
+            <a class="spectrum-Breadcrumbs-itemLink" href="#">Nav root</a>
             <svg class="spectrum-Icon spectrum-UIIcon-ChevronRight100 spectrum-Breadcrumbs-itemSeparator" focusable="false" aria-hidden="true">
               <use xlink:href="#spectrum-css-icon-Chevron100" />
             </svg>
@@ -229,18 +226,18 @@ examples:
             </svg>
           </li>
           <li class="spectrum-Breadcrumbs-item">
-            <a class="spectrum-Breadcrumbs-itemLink" role="link" aria-current="page">January 2019 Assets</a>
+            <a class="spectrum-Breadcrumbs-itemLink" role="link" aria-current="page">January assets</a>
           </li>
         </ul>
       </nav>
   - id: breadcrumb-compact
-    name: Compact
+    title: Compact
     status: Verified
     markup: |
       <nav>
         <ul class="spectrum-Breadcrumbs spectrum-Breadcrumbs--compact">
           <li class="spectrum-Breadcrumbs-item">
-            <a class="spectrum-Breadcrumbs-itemLink" href="#">Nav Root</a>
+            <a class="spectrum-Breadcrumbs-itemLink" href="#">Nav root</a>
             <svg class="spectrum-Icon spectrum-UIIcon-ChevronRight100 spectrum-Breadcrumbs-itemSeparator" focusable="false" aria-hidden="true">
               <use xlink:href="#spectrum-css-icon-Chevron100" />
             </svg>
@@ -252,12 +249,12 @@ examples:
             </svg>
           </li>
           <li class="spectrum-Breadcrumbs-item">
-            <a class="spectrum-Breadcrumbs-itemLink" role="link" aria-current="page">January 2019 Assets</a>
+            <a class="spectrum-Breadcrumbs-itemLink" role="link" aria-current="page">January assets</a>
           </li>
         </ul>
       </nav>
   - id: breadcrumb-compact
-    name: Compact Nested
+    title: Compact nested
     status: Verified
     markup: |
       <nav>
@@ -285,18 +282,18 @@ examples:
             </svg>
           </li>
           <li class="spectrum-Breadcrumbs-item">
-            <a class="spectrum-Breadcrumbs-itemLink" role="link" aria-current="page">January 2019 Assets</a>
+            <a class="spectrum-Breadcrumbs-itemLink" role="link" aria-current="page">January assets</a>
           </li>
         </ul>
       </nav>
   - id: breadcrumb-compact
-    name: Compact Nested (root visible)
+    title: Compact nested (root visible)
     status: Verified
     markup: |
       <nav>
         <ul class="spectrum-Breadcrumbs spectrum-Breadcrumbs--compact">
           <li class="spectrum-Breadcrumbs-item">
-            <a class="spectrum-Breadcrumbs-itemLink" href="#">Nav Root</a>
+            <a class="spectrum-Breadcrumbs-itemLink" href="#">Nav root</a>
             <svg class="spectrum-Icon spectrum-UIIcon-ChevronRight100 spectrum-Breadcrumbs-itemSeparator" focusable="false" aria-hidden="true">
               <use xlink:href="#spectrum-css-icon-Chevron100" />
             </svg>
@@ -318,18 +315,18 @@ examples:
             </svg>
           </li>
           <li class="spectrum-Breadcrumbs-item">
-            <a class="spectrum-Breadcrumbs-itemLink" role="link" aria-current="page">January 2019 Assets</a>
+            <a class="spectrum-Breadcrumbs-itemLink" role="link" aria-current="page">January assets</a>
           </li>
         </ul>
       </nav>
   - id: breadcrumb-disabled
-    name: Disabled
+    title: Disabled
     status: Verified
     markup: |
       <nav>
         <ul class="spectrum-Breadcrumbs">
           <li class="spectrum-Breadcrumbs-item">
-            <div class="spectrum-Breadcrumbs-itemLink" role="link" tabindex="0">Nav Root</div>
+            <div class="spectrum-Breadcrumbs-itemLink" role="link" tabindex="0">Nav root</div>
             <svg class="spectrum-Icon spectrum-UIIcon-ChevronRight100 spectrum-Breadcrumbs-itemSeparator" focusable="false" aria-hidden="true">
               <use xlink:href="#spectrum-css-icon-Chevron100" />
             </svg>
@@ -341,14 +338,14 @@ examples:
             </svg>
           </li>
           <li class="spectrum-Breadcrumbs-item">
-            <a class="spectrum-Breadcrumbs-itemLink" role="link" aria-current="page">January 2019 Assets</a>
+            <a class="spectrum-Breadcrumbs-itemLink" role="link" aria-current="page">January assets</a>
           </li>
         </ul>
       </nav>
       <nav>
         <ul class="spectrum-Breadcrumbs">
           <li class="spectrum-Breadcrumbs-item">
-            <a class="spectrum-Breadcrumbs-itemLink" href="#">Nav Root</a>
+            <a class="spectrum-Breadcrumbs-itemLink" href="#">Nav root</a>
             <svg class="spectrum-Icon spectrum-UIIcon-ChevronRight100 spectrum-Breadcrumbs-itemSeparator" focusable="false" aria-hidden="true">
               <use xlink:href="#spectrum-css-icon-Chevron100" />
             </svg>
@@ -370,7 +367,7 @@ examples:
             </svg>
           </li>
           <li class="spectrum-Breadcrumbs-item">
-            <a class="spectrum-Breadcrumbs-itemLink" role="link" aria-current="page">January 2019 Assets</a>
+            <a class="spectrum-Breadcrumbs-itemLink" role="link" aria-current="page">January assets</a>
           </li>
         </ul>
       </nav>

@@ -1,0 +1,21 @@
+{
+	"name": "toast",
+	"tags": ["components"],
+	"targets": {
+		"build": {
+			"dependsOn": ["^build"],
+			"executor": "nx:run-commands",
+			"options": {
+				"cwd": "components/toast",
+				"command": "gulp"
+			}
+		},
+		"clean": {
+			"executor": "nx:run-commands",
+			"options": {
+				"cwd": "components/toast",
+				"command": "rimraf dist"
+			}
+		}
+	}
+}

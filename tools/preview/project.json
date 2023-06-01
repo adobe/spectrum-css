@@ -1,0 +1,50 @@
+{
+	"tags": ["tooling"],
+	"namedInputs": {
+		"core": [
+			"{workspaceRoot}/assets",
+			"{workspaceRoot}/decorators",
+			"{workspaceRoot}/*.js",
+			"{workspaceRoot}/*.html",
+			"{projectRoot}/components/*/dist"
+		],
+		"output": ["{workspaceRoot}/storybook-static"]
+	},
+	"targets": {
+		"build": {
+			"dependsOn": ["^build"],
+			"inputs": ["core"],
+			"outputs": ["output"]
+		},
+		"clean": {
+			"inputs": ["output"]
+		},
+		"start": {
+			"dependsOn": ["^build"],
+			"inputs": ["core"]
+		},
+		"storybook": {
+			"dependsOn": ["^build"],
+			"inputs": ["core"],
+			"outputs": ["output"]
+		},
+		"dev": {
+			"dependsOn": ["^build"],
+			"inputs": ["core"]
+		}
+	},
+	"implicitDependencies": [
+		"@spectrum-css/*",
+		"!@spectrum-css/generator",
+		"!@spectrum-css/documentation"
+	],
+	"includedScripts": [
+		"clean",
+		"build",
+		"storybook",
+		"start",
+		"dev",
+		"test",
+		"test:scope"
+	]
+}

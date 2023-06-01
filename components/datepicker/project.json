@@ -1,0 +1,21 @@
+{
+	"name": "datepicker",
+	"tags": ["components"],
+	"targets": {
+		"build": {
+			"dependsOn": ["^build"],
+			"executor": "nx:run-commands",
+			"options": {
+				"cwd": "components/datepicker",
+				"command": "gulp"
+			}
+		},
+		"clean": {
+			"executor": "nx:run-commands",
+			"options": {
+				"cwd": "components/datepicker",
+				"command": "rimraf dist"
+			}
+		}
+	}
+}

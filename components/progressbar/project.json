@@ -1,0 +1,21 @@
+{
+	"name": "progressbar",
+	"tags": ["components"],
+	"targets": {
+		"build": {
+			"dependsOn": ["^build"],
+			"executor": "nx:run-commands",
+			"options": {
+				"cwd": "components/progressbar",
+				"command": "gulp"
+			}
+		},
+		"clean": {
+			"executor": "nx:run-commands",
+			"options": {
+				"cwd": "components/progressbar",
+				"command": "rimraf dist"
+			}
+		}
+	}
+}

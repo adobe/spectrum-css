@@ -1,0 +1,21 @@
+{
+	"name": "button",
+	"tags": ["components"],
+	"targets": {
+		"build": {
+			"dependsOn": ["^build"],
+			"executor": "nx:run-commands",
+			"options": {
+				"cwd": "components/button",
+				"command": "gulp"
+			}
+		},
+		"clean": {
+			"executor": "nx:run-commands",
+			"options": {
+				"cwd": "components/button",
+				"command": "rimraf dist"
+			}
+		}
+	}
+}
