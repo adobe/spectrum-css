@@ -16,8 +16,7 @@ export const Template = ({
 	const { express } = globals;
 
 	try {
-		if (!express)
-			import(/* webpackPrefetch: true */ "../themes/spectrum.css");
+		if (!express) import(/* webpackPrefetch: true */ "../themes/spectrum.css");
 		else import(/* webpackPrefetch: true */ "../themes/express.css");
 	} catch (e) {
 		console.warn(e);
@@ -40,9 +39,7 @@ export const Template = ({
 				id="radio-0"
 			/>
 			<span class="${rootClass}-button ${rootClass}-button--sizeS"></span>
-			<label
-				class="${rootClass}-label ${rootClass}-label--sizeS"
-				for="radio-0"
+			<label class="${rootClass}-label ${rootClass}-label--sizeS" for="radio-0"
 				>${label}</label
 			>
 		</div>

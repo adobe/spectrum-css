@@ -28,8 +28,7 @@ export const Template = ({
 	const { express } = globals;
 
 	try {
-		if (!express)
-			import(/* webpackPrefetch: true */ "../themes/spectrum.css");
+		if (!express) import(/* webpackPrefetch: true */ "../themes/spectrum.css");
 		else import(/* webpackPrefetch: true */ "../themes/express.css");
 	} catch (e) {
 		console.warn(e);
@@ -41,8 +40,7 @@ export const Template = ({
 				[rootClass]: true,
 				[`${rootClass}--size${size?.toUpperCase()}`]:
 					typeof size !== "undefined",
-				[`${rootClass}--${alignment}`]:
-					typeof alignment !== "undefined",
+				[`${rootClass}--${alignment}`]: typeof alignment !== "undefined",
 				"is-disabled": isDisabled,
 				...customClasses.reduce((a, c) => ({ ...a, [c]: true }), {}),
 			})}

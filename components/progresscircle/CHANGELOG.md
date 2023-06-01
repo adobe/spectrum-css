@@ -361,11 +361,11 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 🗓 2022-10-04 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/progresscircle@1.0.23...@spectrum-css/progresscircle@2.0.0)
 
--   feat(progresscircle)!: migrate to core tokens ([27fdaea](https://github.com/adobe/spectrum-css/commit/27fdaea))
+- feat(progresscircle)!: migrate to core tokens ([27fdaea](https://github.com/adobe/spectrum-css/commit/27fdaea))
 
 ### 🛑 BREAKING CHANGES
 
--   migrates progress circle to core tokens
+- migrates progress circle to core tokens
 
 Co-authored-by: Patrick Fulton <pfulton@adobe.com>
 
@@ -393,7 +393,7 @@ Co-authored-by: Patrick Fulton <pfulton@adobe.com>
 
 ### 🐛 Bug fixes
 
--   progresscircle WHCM ([c24e9d8](https://github.com/adobe/spectrum-css/commit/c24e9d8))
+- progresscircle WHCM ([c24e9d8](https://github.com/adobe/spectrum-css/commit/c24e9d8))
 
 <a name="1.0.20"></a>
 
@@ -475,7 +475,7 @@ Co-authored-by: Patrick Fulton <pfulton@adobe.com>
 
 ### 🐛 Bug fixes
 
--   update peer dependencies ([97810cf](https://github.com/adobe/spectrum-css/commit/97810cf))
+- update peer dependencies ([97810cf](https://github.com/adobe/spectrum-css/commit/97810cf))
 
 <a name="1.0.10"></a>
 
@@ -533,8 +533,8 @@ Co-authored-by: Patrick Fulton <pfulton@adobe.com>
 
 ### 🐛 Bug fixes
 
--   **progresscircle:** force compositing to render in safari ([70c4eff](https://github.com/adobe/spectrum-css/commit/70c4eff))
--   updating version number on vars ([f535b49](https://github.com/adobe/spectrum-css/commit/f535b49))
+- **progresscircle:** force compositing to render in safari ([70c4eff](https://github.com/adobe/spectrum-css/commit/70c4eff))
+- updating version number on vars ([f535b49](https://github.com/adobe/spectrum-css/commit/f535b49))
 
 <a name="1.0.4"></a>
 
@@ -544,8 +544,8 @@ Co-authored-by: Patrick Fulton <pfulton@adobe.com>
 
 ### 🐛 Bug fixes
 
--   **progresscircle:** force compositing to render in safari ([70c4eff](https://github.com/adobe/spectrum-css/commit/70c4eff))
--   updating version number on vars ([f535b49](https://github.com/adobe/spectrum-css/commit/f535b49))
+- **progresscircle:** force compositing to render in safari ([70c4eff](https://github.com/adobe/spectrum-css/commit/70c4eff))
+- updating version number on vars ([f535b49](https://github.com/adobe/spectrum-css/commit/f535b49))
 
 <a name="1.0.3"></a>
 
@@ -555,7 +555,7 @@ Co-authored-by: Patrick Fulton <pfulton@adobe.com>
 
 ### 🐛 Bug fixes
 
--   updating version number on vars ([f535b49](https://github.com/adobe/spectrum-css/commit/f535b49))
+- updating version number on vars ([f535b49](https://github.com/adobe/spectrum-css/commit/f535b49))
 
 <a name="1.0.3-alpha.3"></a>
 
@@ -589,7 +589,7 @@ Co-authored-by: Patrick Fulton <pfulton@adobe.com>
 
 ### 🐛 Bug fixes
 
--   updated progresscircle to use correct t-shirt tokens ([3dbed89](https://github.com/adobe/spectrum-css/commit/3dbed89))
+- updated progresscircle to use correct t-shirt tokens ([3dbed89](https://github.com/adobe/spectrum-css/commit/3dbed89))
 
 <a name="1.0.2"></a>
 
@@ -639,7 +639,7 @@ Co-authored-by: Patrick Fulton <pfulton@adobe.com>
 
 ### 🐛 Bug fixes
 
--   removed more deprecations ([70dd116](https://github.com/adobe/spectrum-css/commit/70dd116))
+- removed more deprecations ([70dd116](https://github.com/adobe/spectrum-css/commit/70dd116))
 
 <a name="3.0.0-beta.2"></a>
 
@@ -665,7 +665,7 @@ Co-authored-by: Patrick Fulton <pfulton@adobe.com>
 
 ### ✨ Features
 
--   make Circle Loader support RTL ([f3be212](https://github.com/adobe/spectrum-css/commit/f3be212))
+- make Circle Loader support RTL ([f3be212](https://github.com/adobe/spectrum-css/commit/f3be212))
 
 <a name="2.0.5"></a>
 
@@ -715,4 +715,4 @@ Co-authored-by: Patrick Fulton <pfulton@adobe.com>
 
 ### ✨ Features
 
--   move to individually versioned packages with Lerna ([#265](https://github.com/adobe/spectrum-css/issues/265)) ([cb7fd4b](https://github.com/adobe/spectrum-css/commit/cb7fd4b)), closes [#231](https://github.com/adobe/spectrum-css/issues/231) [#214](https://github.com/adobe/spectrum-css/issues/214) [#229](https://github.com/adobe/spectrum-css/issues/229) [#240](https://github.com/adobe/spectrum-css/issues/240) [#239](https://github.com/adobe/spectrum-css/issues/239) [#161](https://github.com/adobe/spectrum-css/issues/161) [#242](https://github.com/adobe/spectrum-css/issues/242) [#246](https://github.com/adobe/spectrum-css/issues/246) [#219](https://github.com/adobe/spectrum-css/issues/219) [#235](https://github.com/adobe/spectrum-css/issues/235) [#189](https://github.com/adobe/spectrum-css/issues/189) [#248](https://github.com/adobe/spectrum-css/issues/248) [#232](https://github.com/adobe/spectrum-css/issues/232) [#248](https://github.com/adobe/spectrum-css/issues/248) [#218](https://github.com/adobe/spectrum-css/issues/218) [#237](https://github.com/adobe/spectrum-css/issues/237) [#255](https://github.com/adobe/spectrum-css/issues/255) [#256](https://github.com/adobe/spectrum-css/issues/256) [#258](https://github.com/adobe/spectrum-css/issues/258) [#257](https://github.com/adobe/spectrum-css/issues/257) [#259](https://github.com/adobe/spectrum-css/issues/259)
+- move to individually versioned packages with Lerna ([#265](https://github.com/adobe/spectrum-css/issues/265)) ([cb7fd4b](https://github.com/adobe/spectrum-css/commit/cb7fd4b)), closes [#231](https://github.com/adobe/spectrum-css/issues/231) [#214](https://github.com/adobe/spectrum-css/issues/214) [#229](https://github.com/adobe/spectrum-css/issues/229) [#240](https://github.com/adobe/spectrum-css/issues/240) [#239](https://github.com/adobe/spectrum-css/issues/239) [#161](https://github.com/adobe/spectrum-css/issues/161) [#242](https://github.com/adobe/spectrum-css/issues/242) [#246](https://github.com/adobe/spectrum-css/issues/246) [#219](https://github.com/adobe/spectrum-css/issues/219) [#235](https://github.com/adobe/spectrum-css/issues/235) [#189](https://github.com/adobe/spectrum-css/issues/189) [#248](https://github.com/adobe/spectrum-css/issues/248) [#232](https://github.com/adobe/spectrum-css/issues/232) [#248](https://github.com/adobe/spectrum-css/issues/248) [#218](https://github.com/adobe/spectrum-css/issues/218) [#237](https://github.com/adobe/spectrum-css/issues/237) [#255](https://github.com/adobe/spectrum-css/issues/255) [#256](https://github.com/adobe/spectrum-css/issues/256) [#258](https://github.com/adobe/spectrum-css/issues/258) [#257](https://github.com/adobe/spectrum-css/issues/257) [#259](https://github.com/adobe/spectrum-css/issues/259)

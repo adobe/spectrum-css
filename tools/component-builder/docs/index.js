@@ -71,7 +71,8 @@ function buildDocs_html() {
 			)
 		);
 
-		gulp.src(["metadata.yml", "metadata/*.yml"], { allowEmpty: true })
+		gulp
+			.src(["metadata.yml", "metadata/*.yml"], { allowEmpty: true })
 			.pipe(
 				rename((file) => {
 					file.basename = packageName;

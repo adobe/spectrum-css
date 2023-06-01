@@ -38,10 +38,7 @@ export const Template = ({
 							customClasses: [`${rootClass}-sortedIcon`],
 						})}
 					</th>
-					<th
-						class="${rootClass}-headCell is-sortable"
-						aria-sort="none"
-					>
+					<th class="${rootClass}-headCell is-sortable" aria-sort="none">
 						Column Title
 						${Icon({
 							iconName: "ArrowDown100",
@@ -54,59 +51,29 @@ export const Template = ({
 			</thead>
 			<tbody class="${rootClass}-body">
 				<tr class="${rootClass}-row">
-					<td class="${rootClass}-cell" tabindex="0">
-						Row Item Alpha
-					</td>
-					<td class="${rootClass}-cell" tabindex="0">
-						Row Item Alpha
-					</td>
-					<td class="${rootClass}-cell" tabindex="0">
-						Row Item Alpha
-					</td>
+					<td class="${rootClass}-cell" tabindex="0">Row Item Alpha</td>
+					<td class="${rootClass}-cell" tabindex="0">Row Item Alpha</td>
+					<td class="${rootClass}-cell" tabindex="0">Row Item Alpha</td>
 				</tr>
 				<tr class="${rootClass}-row">
-					<td class="${rootClass}-cell" tabindex="0">
-						Row Item Bravo
-					</td>
-					<td class="${rootClass}-cell" tabindex="0">
-						Row Item Bravo
-					</td>
-					<td class="${rootClass}-cell" tabindex="0">
-						Row Item Bravo
-					</td>
+					<td class="${rootClass}-cell" tabindex="0">Row Item Bravo</td>
+					<td class="${rootClass}-cell" tabindex="0">Row Item Bravo</td>
+					<td class="${rootClass}-cell" tabindex="0">Row Item Bravo</td>
 				</tr>
 				<tr class="${rootClass}-row">
-					<td class="${rootClass}-cell" tabindex="0">
-						Row Item Charlie
-					</td>
-					<td class="${rootClass}-cell" tabindex="0">
-						Row Item Charlie
-					</td>
-					<td class="${rootClass}-cell" tabindex="0">
-						Row Item Charlie
-					</td>
+					<td class="${rootClass}-cell" tabindex="0">Row Item Charlie</td>
+					<td class="${rootClass}-cell" tabindex="0">Row Item Charlie</td>
+					<td class="${rootClass}-cell" tabindex="0">Row Item Charlie</td>
 				</tr>
 				<tr class="${rootClass}-row">
-					<td class="${rootClass}-cell" tabindex="0">
-						Row Item Delta
-					</td>
-					<td class="${rootClass}-cell" tabindex="0">
-						Row Item Delta
-					</td>
-					<td class="${rootClass}-cell" tabindex="0">
-						Row Item Delta
-					</td>
+					<td class="${rootClass}-cell" tabindex="0">Row Item Delta</td>
+					<td class="${rootClass}-cell" tabindex="0">Row Item Delta</td>
+					<td class="${rootClass}-cell" tabindex="0">Row Item Delta</td>
 				</tr>
 				<tr class="${rootClass}-row">
-					<td class="${rootClass}-cell" tabindex="0">
-						Row Item Echo
-					</td>
-					<td class="${rootClass}-cell" tabindex="0">
-						Row Item Echo
-					</td>
-					<td class="${rootClass}-cell" tabindex="0">
-						Row Item Echo
-					</td>
+					<td class="${rootClass}-cell" tabindex="0">Row Item Echo</td>
+					<td class="${rootClass}-cell" tabindex="0">Row Item Echo</td>
+					<td class="${rootClass}-cell" tabindex="0">Row Item Echo</td>
 				</tr>
 			</tbody>
 		</table>

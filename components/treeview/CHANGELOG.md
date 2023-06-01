@@ -25,11 +25,11 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 🗓 2023-05-09 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/treeview@6.0.39...@spectrum-css/treeview@7.0.0)
 
--   feat(thumbnail)!: migrate to spectrum-tokens (#1568) ([9d4ec09](https://github.com/adobe/spectrum-css/commit/9d4ec09)), closes [#1568](https://github.com/adobe/spectrum-css/issues/1568)
+- feat(thumbnail)!: migrate to spectrum-tokens (#1568) ([9d4ec09](https://github.com/adobe/spectrum-css/commit/9d4ec09)), closes [#1568](https://github.com/adobe/spectrum-css/issues/1568)
 
 ### 🛑 BREAKING CHANGES
 
--   migrates the Thumbnail component to the `@adobe/spectrum-tokens` package.
+- migrates the Thumbnail component to the `@adobe/spectrum-tokens` package.
 
 <a name="6.0.39"></a>
 
@@ -303,7 +303,7 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 ### 🐛 Bug fixes
 
--   update peer dependencies ([97810cf](https://github.com/adobe/spectrum-css/commit/97810cf))
+- update peer dependencies ([97810cf](https://github.com/adobe/spectrum-css/commit/97810cf))
 
 <a name="6.0.5"></a>
 
@@ -361,22 +361,22 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 ### 🐛 Bug fixes
 
--   adjusted thumbnail version of treeview; closes [#1276](https://github.com/adobe/spectrum-css/issues/1276) ([e949df5](https://github.com/adobe/spectrum-css/commit/e949df5))
--   adjusted tokens for treeview from DSS ([6d9168a](https://github.com/adobe/spectrum-css/commit/6d9168a))
--   extra closing parenthesis in treeview component ([99772b9](https://github.com/adobe/spectrum-css/commit/99772b9))
--   removed a couple local variables in treeview ([f946e92](https://github.com/adobe/spectrum-css/commit/f946e92))
--   removing local vars in treeview ([1d393f6](https://github.com/adobe/spectrum-css/commit/1d393f6))
--   update vars & add compact, spacious examples ([c50aaf2](https://github.com/adobe/spectrum-css/commit/c50aaf2))
--   update vars & add compact, spacious examples ([dd8caa8](https://github.com/adobe/spectrum-css/commit/dd8caa8))
--   updating latest spectrum-tokens ([d35b957](https://github.com/adobe/spectrum-css/commit/d35b957))
--   updating version number on vars ([f535b49](https://github.com/adobe/spectrum-css/commit/f535b49))
--   use updated tokens & resolve treeview build errors ([67f4112](https://github.com/adobe/spectrum-css/commit/67f4112))
--   use updated tokens & resolve treeview build errors ([c892536](https://github.com/adobe/spectrum-css/commit/c892536))
--   wip, fixed treeview build ([2fc4e66](https://github.com/adobe/spectrum-css/commit/2fc4e66))
+- adjusted thumbnail version of treeview; closes [#1276](https://github.com/adobe/spectrum-css/issues/1276) ([e949df5](https://github.com/adobe/spectrum-css/commit/e949df5))
+- adjusted tokens for treeview from DSS ([6d9168a](https://github.com/adobe/spectrum-css/commit/6d9168a))
+- extra closing parenthesis in treeview component ([99772b9](https://github.com/adobe/spectrum-css/commit/99772b9))
+- removed a couple local variables in treeview ([f946e92](https://github.com/adobe/spectrum-css/commit/f946e92))
+- removing local vars in treeview ([1d393f6](https://github.com/adobe/spectrum-css/commit/1d393f6))
+- update vars & add compact, spacious examples ([c50aaf2](https://github.com/adobe/spectrum-css/commit/c50aaf2))
+- update vars & add compact, spacious examples ([dd8caa8](https://github.com/adobe/spectrum-css/commit/dd8caa8))
+- updating latest spectrum-tokens ([d35b957](https://github.com/adobe/spectrum-css/commit/d35b957))
+- updating version number on vars ([f535b49](https://github.com/adobe/spectrum-css/commit/f535b49))
+- use updated tokens & resolve treeview build errors ([67f4112](https://github.com/adobe/spectrum-css/commit/67f4112))
+- use updated tokens & resolve treeview build errors ([c892536](https://github.com/adobe/spectrum-css/commit/c892536))
+- wip, fixed treeview build ([2fc4e66](https://github.com/adobe/spectrum-css/commit/2fc4e66))
 
 ### 🛑 BREAKING CHANGES
 
--   t-shirt sizes added.
+- t-shirt sizes added.
 
 <a name="5.0.0"></a>
 
@@ -386,22 +386,22 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 ### 🐛 Bug fixes
 
--   adjusted thumbnail version of treeview; closes [#1276](https://github.com/adobe/spectrum-css/issues/1276) ([e949df5](https://github.com/adobe/spectrum-css/commit/e949df5))
--   adjusted tokens for treeview from DSS ([6d9168a](https://github.com/adobe/spectrum-css/commit/6d9168a))
--   extra closing parenthesis in treeview component ([99772b9](https://github.com/adobe/spectrum-css/commit/99772b9))
--   removed a couple local variables in treeview ([f946e92](https://github.com/adobe/spectrum-css/commit/f946e92))
--   removing local vars in treeview ([1d393f6](https://github.com/adobe/spectrum-css/commit/1d393f6))
--   update vars & add compact, spacious examples ([c50aaf2](https://github.com/adobe/spectrum-css/commit/c50aaf2))
--   update vars & add compact, spacious examples ([dd8caa8](https://github.com/adobe/spectrum-css/commit/dd8caa8))
--   updating latest spectrum-tokens ([d35b957](https://github.com/adobe/spectrum-css/commit/d35b957))
--   updating version number on vars ([f535b49](https://github.com/adobe/spectrum-css/commit/f535b49))
--   use updated tokens & resolve treeview build errors ([67f4112](https://github.com/adobe/spectrum-css/commit/67f4112))
--   use updated tokens & resolve treeview build errors ([c892536](https://github.com/adobe/spectrum-css/commit/c892536))
--   wip, fixed treeview build ([2fc4e66](https://github.com/adobe/spectrum-css/commit/2fc4e66))
+- adjusted thumbnail version of treeview; closes [#1276](https://github.com/adobe/spectrum-css/issues/1276) ([e949df5](https://github.com/adobe/spectrum-css/commit/e949df5))
+- adjusted tokens for treeview from DSS ([6d9168a](https://github.com/adobe/spectrum-css/commit/6d9168a))
+- extra closing parenthesis in treeview component ([99772b9](https://github.com/adobe/spectrum-css/commit/99772b9))
+- removed a couple local variables in treeview ([f946e92](https://github.com/adobe/spectrum-css/commit/f946e92))
+- removing local vars in treeview ([1d393f6](https://github.com/adobe/spectrum-css/commit/1d393f6))
+- update vars & add compact, spacious examples ([c50aaf2](https://github.com/adobe/spectrum-css/commit/c50aaf2))
+- update vars & add compact, spacious examples ([dd8caa8](https://github.com/adobe/spectrum-css/commit/dd8caa8))
+- updating latest spectrum-tokens ([d35b957](https://github.com/adobe/spectrum-css/commit/d35b957))
+- updating version number on vars ([f535b49](https://github.com/adobe/spectrum-css/commit/f535b49))
+- use updated tokens & resolve treeview build errors ([67f4112](https://github.com/adobe/spectrum-css/commit/67f4112))
+- use updated tokens & resolve treeview build errors ([c892536](https://github.com/adobe/spectrum-css/commit/c892536))
+- wip, fixed treeview build ([2fc4e66](https://github.com/adobe/spectrum-css/commit/2fc4e66))
 
 ### 🛑 BREAKING CHANGES
 
--   t-shirt sizes added.
+- t-shirt sizes added.
 
 <a name="4.0.0"></a>
 
@@ -411,20 +411,20 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 ### 🐛 Bug fixes
 
--   adjusted tokens for treeview from DSS ([6d9168a](https://github.com/adobe/spectrum-css/commit/6d9168a))
--   removed a couple local variables in treeview ([f946e92](https://github.com/adobe/spectrum-css/commit/f946e92))
--   removing local vars in treeview ([1d393f6](https://github.com/adobe/spectrum-css/commit/1d393f6))
--   update vars & add compact, spacious examples ([c50aaf2](https://github.com/adobe/spectrum-css/commit/c50aaf2))
--   update vars & add compact, spacious examples ([dd8caa8](https://github.com/adobe/spectrum-css/commit/dd8caa8))
--   updating latest spectrum-tokens ([d35b957](https://github.com/adobe/spectrum-css/commit/d35b957))
--   updating version number on vars ([f535b49](https://github.com/adobe/spectrum-css/commit/f535b49))
--   use updated tokens & resolve treeview build errors ([67f4112](https://github.com/adobe/spectrum-css/commit/67f4112))
--   use updated tokens & resolve treeview build errors ([c892536](https://github.com/adobe/spectrum-css/commit/c892536))
--   wip, fixed treeview build ([2fc4e66](https://github.com/adobe/spectrum-css/commit/2fc4e66))
+- adjusted tokens for treeview from DSS ([6d9168a](https://github.com/adobe/spectrum-css/commit/6d9168a))
+- removed a couple local variables in treeview ([f946e92](https://github.com/adobe/spectrum-css/commit/f946e92))
+- removing local vars in treeview ([1d393f6](https://github.com/adobe/spectrum-css/commit/1d393f6))
+- update vars & add compact, spacious examples ([c50aaf2](https://github.com/adobe/spectrum-css/commit/c50aaf2))
+- update vars & add compact, spacious examples ([dd8caa8](https://github.com/adobe/spectrum-css/commit/dd8caa8))
+- updating latest spectrum-tokens ([d35b957](https://github.com/adobe/spectrum-css/commit/d35b957))
+- updating version number on vars ([f535b49](https://github.com/adobe/spectrum-css/commit/f535b49))
+- use updated tokens & resolve treeview build errors ([67f4112](https://github.com/adobe/spectrum-css/commit/67f4112))
+- use updated tokens & resolve treeview build errors ([c892536](https://github.com/adobe/spectrum-css/commit/c892536))
+- wip, fixed treeview build ([2fc4e66](https://github.com/adobe/spectrum-css/commit/2fc4e66))
 
 ### 🛑 BREAKING CHANGES
 
--   t-shirt sizes added.
+- t-shirt sizes added.
 
 <a name="3.0.3-alpha.3"></a>
 
@@ -442,8 +442,8 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 ### 🐛 Bug fixes
 
--   **tree-view:** reduce rule specificity for easier customization ([b998abd](https://github.com/adobe/spectrum-css/commit/b998abd))
--   use renamed aliases ([91f6c04](https://github.com/adobe/spectrum-css/commit/91f6c04))
+- **tree-view:** reduce rule specificity for easier customization ([b998abd](https://github.com/adobe/spectrum-css/commit/b998abd))
+- use renamed aliases ([91f6c04](https://github.com/adobe/spectrum-css/commit/91f6c04))
 
 <a name="3.0.3-alpha.1"></a>
 
@@ -493,7 +493,7 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 ### 🐛 Bug fixes
 
--   update main, resolved conflicts ([d7880a2](https://github.com/adobe/spectrum-css/commit/d7880a2))
+- update main, resolved conflicts ([d7880a2](https://github.com/adobe/spectrum-css/commit/d7880a2))
 
 <a name="3.0.0-beta.5"></a>
 
@@ -511,7 +511,7 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 ### 🐛 Bug fixes
 
--   change workflow icon size to medium for most of the examples ([#962](https://github.com/adobe/spectrum-css/issues/962)) ([db7b8b2](https://github.com/adobe/spectrum-css/commit/db7b8b2))
+- change workflow icon size to medium for most of the examples ([#962](https://github.com/adobe/spectrum-css/issues/962)) ([db7b8b2](https://github.com/adobe/spectrum-css/commit/db7b8b2))
 
 <a name="3.0.0-beta.3"></a>
 
@@ -521,72 +521,72 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 ### 🐛 Bug fixes
 
--   correct Treeview icon/text alignment ([#734](https://github.com/adobe/spectrum-css/issues/734)) ([e62419a](https://github.com/adobe/spectrum-css/commit/e62419a))
+- correct Treeview icon/text alignment ([#734](https://github.com/adobe/spectrum-css/issues/734)) ([e62419a](https://github.com/adobe/spectrum-css/commit/e62419a))
 
 ### 🛑 BREAKING CHANGES
 
--   spectrum-Treeview-icon now required on all non-indicator icons
+- spectrum-Treeview-icon now required on all non-indicator icons
 
--   feat: implement Quiet and Standalone Treeview
+- feat: implement Quiet and Standalone Treeview
 
 WIP: missing text/icon colors for selected items
 
 fix: implement selected/hover states properly
 
--   .is-drop-target and .is-selected must be placed on the .spectrum-TreeView-item element
+- .is-drop-target and .is-selected must be placed on the .spectrum-TreeView-item element
 
--   fix: focus states and selected border-width
+- fix: focus states and selected border-width
 
--   docs: make TreeView expand/collapse and selection behave right
+- docs: make TreeView expand/collapse and selection behave right
 
--   fix: correct naming of icon class
+- fix: correct naming of icon class
 
--   fix: correct nesting of selected items, icon and text colors
+- fix: correct nesting of selected items, icon and text colors
 
--   fix: focus behavior for selected TreeView items
+- fix: focus behavior for selected TreeView items
 
--   docs: single select TreeView items on click, multi-select if shift/cmd
+- docs: single select TreeView items on click, multi-select if shift/cmd
 
--   fix: quiet focus border for Treeview
+- fix: quiet focus border for Treeview
 
--   fix: correct alias references for temporary vars
+- fix: correct alias references for temporary vars
 
--   feat: add Thumbnail component
+- feat: add Thumbnail component
 
--   feat: add layers variant to Treeview
+- feat: add layers variant to Treeview
 
--   fix: change behavior for landscape images for consistency
+- fix: change behavior for landscape images for consistency
 
 show space above and below, fill horizontally
 
--   feat: add background-style cropping for Thumbnails
+- feat: add background-style cropping for Thumbnails
 
--   feat: support layering images on background in Thumbnail
+- feat: support layering images on background in Thumbnail
 
--   fix: properly contain selected/hover boxes
+- fix: properly contain selected/hover boxes
 
--   feat: correct class naming and label truncation in TreeView items
--   .spectrum-TreeView-indicator changed to .spectrum-TreeView-itemIndicator
--   .spectrum-TreeView-icon changed to .spectrum-TreeView-itemIcon
--   .spectrum-TreeView-label required for truncation behavior
+- feat: correct class naming and label truncation in TreeView items
+- .spectrum-TreeView-indicator changed to .spectrum-TreeView-itemIndicator
+- .spectrum-TreeView-icon changed to .spectrum-TreeView-itemIcon
+- .spectrum-TreeView-label required for truncation behavior
 
--   docs: correct widths of TreeView examples
+- docs: correct widths of TreeView examples
 
--   fix: correct selection behavior for Thumbnail Treeview
+- fix: correct selection behavior for Thumbnail Treeview
 
--   fix: rename --layers to --thumbnail
+- fix: rename --layers to --thumbnail
 
--   feat: implement t-shirt sizing for Thumbnail
+- feat: implement t-shirt sizing for Thumbnail
 
--   docs: re-organize TreeView docs, change Layers to Thumbnail
+- docs: re-organize TreeView docs, change Layers to Thumbnail
 
--   test: add VRT scenario for new component Thumbnail
+- test: add VRT scenario for new component Thumbnail
 
--   docs: trivial fix, don't self-close <use>
+- docs: trivial fix, don't self-close <use>
 
--   docs: fixup examples for standalone
+- docs: fixup examples for standalone
 
--   docs: add migration guide
+- docs: add migration guide
 
 Co-authored-by: Jian Liao <jianliao@adobe.com>
 
@@ -598,7 +598,7 @@ Co-authored-by: Jian Liao <jianliao@adobe.com>
 
 ### ✨ Features
 
--   add Treeview heading (via RSP V3) ([#601](https://github.com/adobe/spectrum-css/issues/601)) ([5bd34dc](https://github.com/adobe/spectrum-css/commit/5bd34dc))
+- add Treeview heading (via RSP V3) ([#601](https://github.com/adobe/spectrum-css/issues/601)) ([5bd34dc](https://github.com/adobe/spectrum-css/commit/5bd34dc))
 
 <a name="3.0.0-beta.1"></a>
 
@@ -616,7 +616,7 @@ Co-authored-by: Jian Liao <jianliao@adobe.com>
 
 ### ✨ Features
 
--   make Treeview support RTL ([16f7526](https://github.com/adobe/spectrum-css/commit/16f7526))
+- make Treeview support RTL ([16f7526](https://github.com/adobe/spectrum-css/commit/16f7526))
 
 <a name="2.0.6"></a>
 
@@ -642,7 +642,7 @@ Co-authored-by: Jian Liao <jianliao@adobe.com>
 
 ### 🐛 Bug fixes
 
--   be explicit about Treeview group indicator box model, fixes [#467](https://github.com/adobe/spectrum-css/issues/467) ([32cfd52](https://github.com/adobe/spectrum-css/commit/32cfd52))
+- be explicit about Treeview group indicator box model, fixes [#467](https://github.com/adobe/spectrum-css/issues/467) ([32cfd52](https://github.com/adobe/spectrum-css/commit/32cfd52))
 
 <a name="2.0.3"></a>
 
@@ -676,4 +676,4 @@ Co-authored-by: Jian Liao <jianliao@adobe.com>
 
 ### ✨ Features
 
--   move to individually versioned packages with Lerna ([#265](https://github.com/adobe/spectrum-css/issues/265)) ([cb7fd4b](https://github.com/adobe/spectrum-css/commit/cb7fd4b)), closes [#231](https://github.com/adobe/spectrum-css/issues/231) [#214](https://github.com/adobe/spectrum-css/issues/214) [#229](https://github.com/adobe/spectrum-css/issues/229) [#240](https://github.com/adobe/spectrum-css/issues/240) [#239](https://github.com/adobe/spectrum-css/issues/239) [#161](https://github.com/adobe/spectrum-css/issues/161) [#242](https://github.com/adobe/spectrum-css/issues/242) [#246](https://github.com/adobe/spectrum-css/issues/246) [#219](https://github.com/adobe/spectrum-css/issues/219) [#235](https://github.com/adobe/spectrum-css/issues/235) [#189](https://github.com/adobe/spectrum-css/issues/189) [#248](https://github.com/adobe/spectrum-css/issues/248) [#232](https://github.com/adobe/spectrum-css/issues/232) [#248](https://github.com/adobe/spectrum-css/issues/248) [#218](https://github.com/adobe/spectrum-css/issues/218) [#237](https://github.com/adobe/spectrum-css/issues/237) [#255](https://github.com/adobe/spectrum-css/issues/255) [#256](https://github.com/adobe/spectrum-css/issues/256) [#258](https://github.com/adobe/spectrum-css/issues/258) [#257](https://github.com/adobe/spectrum-css/issues/257) [#259](https://github.com/adobe/spectrum-css/issues/259)
+- move to individually versioned packages with Lerna ([#265](https://github.com/adobe/spectrum-css/issues/265)) ([cb7fd4b](https://github.com/adobe/spectrum-css/commit/cb7fd4b)), closes [#231](https://github.com/adobe/spectrum-css/issues/231) [#214](https://github.com/adobe/spectrum-css/issues/214) [#229](https://github.com/adobe/spectrum-css/issues/229) [#240](https://github.com/adobe/spectrum-css/issues/240) [#239](https://github.com/adobe/spectrum-css/issues/239) [#161](https://github.com/adobe/spectrum-css/issues/161) [#242](https://github.com/adobe/spectrum-css/issues/242) [#246](https://github.com/adobe/spectrum-css/issues/246) [#219](https://github.com/adobe/spectrum-css/issues/219) [#235](https://github.com/adobe/spectrum-css/issues/235) [#189](https://github.com/adobe/spectrum-css/issues/189) [#248](https://github.com/adobe/spectrum-css/issues/248) [#232](https://github.com/adobe/spectrum-css/issues/232) [#248](https://github.com/adobe/spectrum-css/issues/248) [#218](https://github.com/adobe/spectrum-css/issues/218) [#237](https://github.com/adobe/spectrum-css/issues/237) [#255](https://github.com/adobe/spectrum-css/issues/255) [#256](https://github.com/adobe/spectrum-css/issues/256) [#258](https://github.com/adobe/spectrum-css/issues/258) [#257](https://github.com/adobe/spectrum-css/issues/257) [#259](https://github.com/adobe/spectrum-css/issues/259)

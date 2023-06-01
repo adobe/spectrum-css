@@ -299,7 +299,7 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 ### 🐛 Bug fixes
 
--   **tabs:** selection indicator scroll overflow border ([#1513](https://github.com/adobe/spectrum-css/issues/1513)) ([3f740ad](https://github.com/adobe/spectrum-css/commit/3f740ad))
+- **tabs:** selection indicator scroll overflow border ([#1513](https://github.com/adobe/spectrum-css/issues/1513)) ([3f740ad](https://github.com/adobe/spectrum-css/commit/3f740ad))
 
 <a name="3.2.19"></a>
 
@@ -461,11 +461,11 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 ### ✨ Features
 
--   **tabs:** add express theme ([b17dc48](https://github.com/adobe/spectrum-css/commit/b17dc48))
--   **tabs:** adds emphasized variation and proper vars ([3f966f1](https://github.com/adobe/spectrum-css/commit/3f966f1))
--   **tabs:** support WHCM ([5212fd9](https://github.com/adobe/spectrum-css/commit/5212fd9))
--   **tabs:** use correct vars for focusring ([972c82e](https://github.com/adobe/spectrum-css/commit/972c82e))
--   **tabs:** values now reference correct custom props ([e0a859d](https://github.com/adobe/spectrum-css/commit/e0a859d))
+- **tabs:** add express theme ([b17dc48](https://github.com/adobe/spectrum-css/commit/b17dc48))
+- **tabs:** adds emphasized variation and proper vars ([3f966f1](https://github.com/adobe/spectrum-css/commit/3f966f1))
+- **tabs:** support WHCM ([5212fd9](https://github.com/adobe/spectrum-css/commit/5212fd9))
+- **tabs:** use correct vars for focusring ([972c82e](https://github.com/adobe/spectrum-css/commit/972c82e))
+- **tabs:** values now reference correct custom props ([e0a859d](https://github.com/adobe/spectrum-css/commit/e0a859d))
 
 <a name="3.1.9"></a>
 
@@ -475,7 +475,7 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 ### 🐛 Bug fixes
 
--   update peer dependencies ([97810cf](https://github.com/adobe/spectrum-css/commit/97810cf))
+- update peer dependencies ([97810cf](https://github.com/adobe/spectrum-css/commit/97810cf))
 
 <a name="3.1.8"></a>
 
@@ -541,7 +541,7 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 ### 🐛 Bug fixes
 
--   updating version number on vars ([f535b49](https://github.com/adobe/spectrum-css/commit/f535b49))
+- updating version number on vars ([f535b49](https://github.com/adobe/spectrum-css/commit/f535b49))
 
 <a name="3.1.1"></a>
 
@@ -551,7 +551,7 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 ### 🐛 Bug fixes
 
--   updating version number on vars ([f535b49](https://github.com/adobe/spectrum-css/commit/f535b49))
+- updating version number on vars ([f535b49](https://github.com/adobe/spectrum-css/commit/f535b49))
 
 <a name="3.1.0"></a>
 
@@ -561,7 +561,7 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 ### 🐛 Bug fixes
 
--   updating version number on vars ([f535b49](https://github.com/adobe/spectrum-css/commit/f535b49))
+- updating version number on vars ([f535b49](https://github.com/adobe/spectrum-css/commit/f535b49))
 
 <a name="3.1.0-alpha.1"></a>
 
@@ -571,7 +571,7 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 ### 🐛 Bug fixes
 
--   **tabs:** vertically center tab item text in vertical tabs ([c7c0b29](https://github.com/adobe/spectrum-css/commit/c7c0b29))
+- **tabs:** vertically center tab item text in vertical tabs ([c7c0b29](https://github.com/adobe/spectrum-css/commit/c7c0b29))
 
 <a name="3.1.0-alpha.0"></a>
 
@@ -581,12 +581,12 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 ### ✨ Features
 
--   **tabs:** add t-shirt size classes and styles ([4b818f2](https://github.com/adobe/spectrum-css/commit/4b818f2))
+- **tabs:** add t-shirt size classes and styles ([4b818f2](https://github.com/adobe/spectrum-css/commit/4b818f2))
 
 ### 🐛 Bug fixes
 
--   **tabs:** remove improper indentation for horizontal tabs ([79b7a82](https://github.com/adobe/spectrum-css/commit/79b7a82)), closes [#1107](https://github.com/adobe/spectrum-css/issues/1107)
--   switched to dna-7.0 token names ([7e848dc](https://github.com/adobe/spectrum-css/commit/7e848dc))
+- **tabs:** remove improper indentation for horizontal tabs ([79b7a82](https://github.com/adobe/spectrum-css/commit/79b7a82)), closes [#1107](https://github.com/adobe/spectrum-css/issues/1107)
+- switched to dna-7.0 token names ([7e848dc](https://github.com/adobe/spectrum-css/commit/7e848dc))
 
 <a name="3.0.3-alpha.4"></a>
 
@@ -660,21 +660,21 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 ### ✨ Features
 
--   change all instances of .is-selected to .is-open ([e28af42](https://github.com/adobe/spectrum-css/commit/e28af42))
--   replace all FieldButton with ActionButton ([2fcbaaf](https://github.com/adobe/spectrum-css/commit/2fcbaaf))
+- change all instances of .is-selected to .is-open ([e28af42](https://github.com/adobe/spectrum-css/commit/e28af42))
+- replace all FieldButton with ActionButton ([2fcbaaf](https://github.com/adobe/spectrum-css/commit/2fcbaaf))
 
 ### 🐛 Bug fixes
 
--   make Tabs build again ([33d0e97](https://github.com/adobe/spectrum-css/commit/33d0e97))
--   unbreak the build for Tabs ([832949e](https://github.com/adobe/spectrum-css/commit/832949e))
--   update main, resolved conflicts ([d7880a2](https://github.com/adobe/spectrum-css/commit/d7880a2))
--   use new Picker markup ([5cc3797](https://github.com/adobe/spectrum-css/commit/5cc3797))
+- make Tabs build again ([33d0e97](https://github.com/adobe/spectrum-css/commit/33d0e97))
+- unbreak the build for Tabs ([832949e](https://github.com/adobe/spectrum-css/commit/832949e))
+- update main, resolved conflicts ([d7880a2](https://github.com/adobe/spectrum-css/commit/d7880a2))
+- use new Picker markup ([5cc3797](https://github.com/adobe/spectrum-css/commit/5cc3797))
 
 ### 🛑 BREAKING CHANGES
 
--   Use .is-open to indicate the popover is shown, not .is-selected
--   Tabs now uses new Picker markup
--   markup now requires spectrum-ActionButton where all uses of spectrum-FieldButton were
+- Use .is-open to indicate the popover is shown, not .is-selected
+- Tabs now uses new Picker markup
+- markup now requires spectrum-ActionButton where all uses of spectrum-FieldButton were
 
 <a name="3.0.0-beta.5"></a>
 
@@ -692,7 +692,7 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 ### 🐛 Bug fixes
 
--   removed deprecated tokens from tabs and tags ([1e543e4](https://github.com/adobe/spectrum-css/commit/1e543e4))
+- removed deprecated tokens from tabs and tags ([1e543e4](https://github.com/adobe/spectrum-css/commit/1e543e4))
 
 <a name="3.0.0-beta.3"></a>
 
@@ -710,7 +710,7 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 ### ✨ Features
 
--   fix tabs markup, support anchors for labels ([#672](https://github.com/adobe/spectrum-css/issues/672)) ([eb07ee7](https://github.com/adobe/spectrum-css/commit/eb07ee7))
+- fix tabs markup, support anchors for labels ([#672](https://github.com/adobe/spectrum-css/issues/672)) ([eb07ee7](https://github.com/adobe/spectrum-css/commit/eb07ee7))
 
 <a name="3.0.0-beta.1"></a>
 
@@ -728,7 +728,7 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 ### ✨ Features
 
--   make Tabs support RTL ([e39628a](https://github.com/adobe/spectrum-css/commit/e39628a))
+- make Tabs support RTL ([e39628a](https://github.com/adobe/spectrum-css/commit/e39628a))
 
 <a name="2.1.5"></a>
 
@@ -778,7 +778,7 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 ### ✨ Features
 
--   add menu icon class, closes [#202](https://github.com/adobe/spectrum-css/issues/202) ([#331](https://github.com/adobe/spectrum-css/issues/331)) ([169940a](https://github.com/adobe/spectrum-css/commit/169940a))
+- add menu icon class, closes [#202](https://github.com/adobe/spectrum-css/issues/202) ([#331](https://github.com/adobe/spectrum-css/issues/331)) ([169940a](https://github.com/adobe/spectrum-css/commit/169940a))
 
 <a name="2.0.0"></a>
 
@@ -788,4 +788,4 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 ### ✨ Features
 
--   move to individually versioned packages with Lerna ([#265](https://github.com/adobe/spectrum-css/issues/265)) ([cb7fd4b](https://github.com/adobe/spectrum-css/commit/cb7fd4b)), closes [#231](https://github.com/adobe/spectrum-css/issues/231) [#214](https://github.com/adobe/spectrum-css/issues/214) [#229](https://github.com/adobe/spectrum-css/issues/229) [#240](https://github.com/adobe/spectrum-css/issues/240) [#239](https://github.com/adobe/spectrum-css/issues/239) [#161](https://github.com/adobe/spectrum-css/issues/161) [#242](https://github.com/adobe/spectrum-css/issues/242) [#246](https://github.com/adobe/spectrum-css/issues/246) [#219](https://github.com/adobe/spectrum-css/issues/219) [#235](https://github.com/adobe/spectrum-css/issues/235) [#189](https://github.com/adobe/spectrum-css/issues/189) [#248](https://github.com/adobe/spectrum-css/issues/248) [#232](https://github.com/adobe/spectrum-css/issues/232) [#248](https://github.com/adobe/spectrum-css/issues/248) [#218](https://github.com/adobe/spectrum-css/issues/218) [#237](https://github.com/adobe/spectrum-css/issues/237) [#255](https://github.com/adobe/spectrum-css/issues/255) [#256](https://github.com/adobe/spectrum-css/issues/256) [#258](https://github.com/adobe/spectrum-css/issues/258) [#257](https://github.com/adobe/spectrum-css/issues/257) [#259](https://github.com/adobe/spectrum-css/issues/259)
+- move to individually versioned packages with Lerna ([#265](https://github.com/adobe/spectrum-css/issues/265)) ([cb7fd4b](https://github.com/adobe/spectrum-css/commit/cb7fd4b)), closes [#231](https://github.com/adobe/spectrum-css/issues/231) [#214](https://github.com/adobe/spectrum-css/issues/214) [#229](https://github.com/adobe/spectrum-css/issues/229) [#240](https://github.com/adobe/spectrum-css/issues/240) [#239](https://github.com/adobe/spectrum-css/issues/239) [#161](https://github.com/adobe/spectrum-css/issues/161) [#242](https://github.com/adobe/spectrum-css/issues/242) [#246](https://github.com/adobe/spectrum-css/issues/246) [#219](https://github.com/adobe/spectrum-css/issues/219) [#235](https://github.com/adobe/spectrum-css/issues/235) [#189](https://github.com/adobe/spectrum-css/issues/189) [#248](https://github.com/adobe/spectrum-css/issues/248) [#232](https://github.com/adobe/spectrum-css/issues/232) [#248](https://github.com/adobe/spectrum-css/issues/248) [#218](https://github.com/adobe/spectrum-css/issues/218) [#237](https://github.com/adobe/spectrum-css/issues/237) [#255](https://github.com/adobe/spectrum-css/issues/255) [#256](https://github.com/adobe/spectrum-css/issues/256) [#258](https://github.com/adobe/spectrum-css/issues/258) [#257](https://github.com/adobe/spectrum-css/issues/257) [#259](https://github.com/adobe/spectrum-css/issues/259)

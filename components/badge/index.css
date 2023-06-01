@@ -301,10 +301,7 @@ governing permissions and limitations under the License.
 /* label */
 .spectrum-Badge-label {
 	font-size: var(--mod-badge-font-size, var(--spectrum-badge-font-size));
-	line-height: var(
-		--mod-badge-line-height,
-		var(--spectrum-badge-line-height)
-	);
+	line-height: var(--mod-badge-line-height, var(--spectrum-badge-line-height));
 
 	padding-inline-end: var(
 		--mod-badge-label-spacing-horizontal,

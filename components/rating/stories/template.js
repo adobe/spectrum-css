@@ -24,8 +24,7 @@ export const Template = ({
 }) => {
 	const { express } = globals;
 	try {
-		if (express)
-			import(/* webpackPrefetch: true */ "../themes/express.css");
+		if (express) import(/* webpackPrefetch: true */ "../themes/express.css");
 		else import(/* webpackPrefetch: true */ "../themes/spectrum.css");
 	} catch (e) {
 		console.warn(e);

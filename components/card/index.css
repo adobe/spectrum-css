@@ -201,8 +201,7 @@ governing permissions and limitations under the License.
 		box-sizing: border-box;
 		border-radius: var(--spectrum-card-quiet-border-radius);
 		position: relative;
-		transition: background-color
-			var(--spectrum-global-animation-duration-100);
+		transition: background-color var(--spectrum-global-animation-duration-100);
 		overflow: visible;
 
 		/* Use a :before to show the selection outline so that the border doesn't

@@ -43,4 +43,4 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 ### ✨ Features
 
--   split things out, combine things ([3a817bc](https://github.com/adobe/spectrum-css/commit/3a817bc))
+- split things out, combine things ([3a817bc](https://github.com/adobe/spectrum-css/commit/3a817bc))

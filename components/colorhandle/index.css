@@ -74,12 +74,10 @@ governing permissions and limitations under the License.
 	block-size: var(--mod-colorhandle-size, var(--spectrum-colorhandle-size));
 
 	margin-inline: calc(
-		-1 * calc(var(--mod-colorhandle-size, var(--spectrum-colorhandle-size)) /
-					2)
+		-1 * calc(var(--mod-colorhandle-size, var(--spectrum-colorhandle-size)) / 2)
 	);
 	margin-block: calc(
-		-1 * calc(var(--mod-colorhandle-size, var(--spectrum-colorhandle-size)) /
-					2)
+		-1 * calc(var(--mod-colorhandle-size, var(--spectrum-colorhandle-size)) / 2)
 	);
 
 	border-width: var(

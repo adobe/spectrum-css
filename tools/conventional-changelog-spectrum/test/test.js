@@ -43,9 +43,7 @@ betterThanBefore.setups([
 		gitDummyCommit("fix(*): oops");
 	},
 	function () {
-		gitDummyCommit([
-			"feat(awesome): addresses the issue brought up in #133",
-		]);
+		gitDummyCommit(["feat(awesome): addresses the issue brought up in #133"]);
 	},
 	function () {
 		gitDummyCommit(["feat(awesome): fix #88"]);
@@ -110,12 +108,8 @@ describe("angular preset", function () {
 					chunk = chunk.toString();
 
 					expect(chunk).to.include("first build setup");
-					expect(chunk).to.include(
-						"**travis:** add TravisCI pipeline"
-					);
-					expect(chunk).to.include(
-						"**travis:** Continuously integrated."
-					);
+					expect(chunk).to.include("**travis:** add TravisCI pipeline");
+					expect(chunk).to.include("**travis:** Continuously integrated.");
 					expect(chunk).to.include("amazing new module");
 					expect(chunk).to.include("**compile:** avoid a bug");
 					expect(chunk).to.include("make it faster");
@@ -124,9 +118,7 @@ describe("angular preset", function () {
 					);
 					expect(chunk).to.include("New build system.");
 					expect(chunk).to.include("Not backward compatible.");
-					expect(chunk).to.include(
-						"**compile:** The Change is huge."
-					);
+					expect(chunk).to.include("**compile:** The Change is huge.");
 					expect(chunk).to.include("Build System");
 					expect(chunk).to.include("Continuous Integration");
 					expect(chunk).to.include("Features");
@@ -204,9 +196,7 @@ describe("angular preset", function () {
 			.pipe(
 				through(function (chunk) {
 					chunk = chunk.toString();
-					expect(chunk).to.include(
-						"[@bcoe](https://github.com/bcoe)"
-					);
+					expect(chunk).to.include("[@bcoe](https://github.com/bcoe)");
 					done();
 				})
 			);
@@ -390,9 +380,7 @@ describe("angular preset", function () {
 				through(function (chunk) {
 					chunk = chunk.toString();
 
-					expect(chunk).to.include(
-						"(https://github.internal.example.com/dlmr"
-					);
+					expect(chunk).to.include("(https://github.internal.example.com/dlmr");
 					expect(chunk).to.include(
 						"(https://github.internal.example.com/conventional-changelog/internal/compare"
 					);

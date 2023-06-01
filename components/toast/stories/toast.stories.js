@@ -42,8 +42,7 @@ export default {
 		},
 		inlineButtonLabel: {
 			name: "Inline button label",
-			description:
-				"Label for the inline button; if blank, no button is shown",
+			description: "Label for the inline button; if blank, no button is shown",
 			type: { name: "string" },
 			table: {
 				category: "Advanced",

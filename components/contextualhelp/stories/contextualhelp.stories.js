@@ -83,9 +83,7 @@ export default {
 	},
 	parameters: {
 		actions: {
-			handles: [
-				...(ActionButtonStories?.parameters?.actions?.handles ?? []),
-			],
+			handles: [...(ActionButtonStories?.parameters?.actions?.handles ?? [])],
 		},
 		status: {
 			type: process.env.MIGRATED_PACKAGES.includes("contextualhelp")

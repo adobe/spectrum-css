@@ -20,15 +20,9 @@ function getCSSVariableReference(value) {
 		value = value.substr(1);
 
 		// Strip the stop information
-		value = value.replace(
-			/colorStopData\..*?\.colorTokens\./,
-			"global-color."
-		);
+		value = value.replace(/colorStopData\..*?\.colorTokens\./, "global-color.");
 		value = value.replace(/colorStopData\..*?\.colorAliases\./, "alias.");
-		value = value.replace(
-			/colorStopData\..*?\.colorSemantics\./,
-			"semantic."
-		);
+		value = value.replace(/colorStopData\..*?\.colorSemantics\./, "semantic.");
 		// Strip the scale information
 		value = value.replace(
 			/scaleData\..*?\.dimensionTokens\./,
@@ -151,9 +145,7 @@ function calculateOverrides(objects, processValue) {
 			let compareValue = processValue(object[key]);
 
 			// Check if the value is the same the same in all other objects
-			for (let [otherObjectName, otherObject] of Object.entries(
-				objects
-			)) {
+			for (let [otherObjectName, otherObject] of Object.entries(objects)) {
 				let otherValue = otherObject[key];
 				let otherCompareValue = processValue(otherObject[key]);
 
@@ -175,9 +167,7 @@ function calculateOverrides(objects, processValue) {
 
 function generateDNAFiles() {
 	const dnaJSONPath = path.join(
-		path.dirname(
-			require.resolve("@adobe/spectrum-express-tokens-deprecated")
-		),
+		path.dirname(require.resolve("@adobe/spectrum-express-tokens-deprecated")),
 		"..",
 		"dist",
 		"data",
@@ -192,11 +182,7 @@ function generateDNAFiles() {
 					let vinylFile = file.clone({
 						contents: false,
 					});
-					vinylFile.path = path.join(
-						file.base,
-						folder || "",
-						fileName
-					);
+					vinylFile.path = path.join(file.base, folder || "", fileName);
 					vinylFile.contents = Buffer.from(contents);
 					this.push(vinylFile);
 				};
@@ -213,13 +199,8 @@ function generateDNAFiles() {
 							}
 
 							let value = section[key];
-							if (
-								value[0] === "[" &&
-								value[value.length - 1] === "]"
-							) {
-								console.error(
-									`Skipping ${prefix}-${key}, value is an array`
-								);
+							if (value[0] === "[" && value[value.length - 1] === "]") {
+								console.error(`Skipping ${prefix}-${key}, value is an array`);
 								continue;
 							}
 
@@ -233,10 +214,7 @@ function generateDNAFiles() {
 								contents += getCSSVar(
 									prefix,
 									key,
-									`rgb(var(${getCSSVarName(
-										prefix,
-										key
-									)}-rgb))`
+									`rgb(var(${getCSSVarName(prefix, key)}-rgb))`
 								);
 							} else {
 								contents += getCSSVar(prefix, key, value);
@@ -261,14 +239,11 @@ function generateDNAFiles() {
 				};
 
 				// Get the list of stops and scales
-				let stops = Object.keys(dnaData.colorStopData).filter(
-					(stopName) => {
-						return (
-							dnaData.colorStopData[stopName].colorTokens
-								.status !== "Deprecated"
-						);
-					}
-				);
+				let stops = Object.keys(dnaData.colorStopData).filter((stopName) => {
+					return (
+						dnaData.colorStopData[stopName].colorTokens.status !== "Deprecated"
+					);
+				});
 				let scales = Object.keys(dnaData.scaleData);
 				let components = Object.keys(
 					dnaData.components[stops[0]][scales[0]]
@@ -319,13 +294,11 @@ function generateDNAFiles() {
 					let cssVariableName = getCSSVariableReference(value);
 					if (
 						colorVariables[fullName] &&
-						colorVariables[fullName].cssVariableName !==
-							cssVariableName
+						colorVariables[fullName].cssVariableName !== cssVariableName
 					) {
 						// logger.debug(`Found override for ${fullName} (${colorVariables[fullName].cssVariableName} vs ${cssVariableName})`);
-						componentColorOverrides[colorVariables[fullName].name][
-							fullName
-						] = colorVariables[fullName].value;
+						componentColorOverrides[colorVariables[fullName].name][fullName] =
+							colorVariables[fullName].value;
 						componentColorOverrides[stopName][fullName] = value;
 						overriddenTokens[fullName] = true;
 						delete componentVariables[componentName][fullName];
@@ -359,14 +332,12 @@ function generateDNAFiles() {
 					let cssVariableName = getCSSVariableReference(value);
 					if (
 						dimensionVariables[fullName] &&
-						dimensionVariables[fullName].cssVariableName !==
-							cssVariableName
+						dimensionVariables[fullName].cssVariableName !== cssVariableName
 					) {
-						componentDimensionOverrides[
-							dimensionVariables[fullName].name
-						][fullName] = dimensionVariables[fullName].value;
-						componentDimensionOverrides[scaleName][fullName] =
-							value;
+						componentDimensionOverrides[dimensionVariables[fullName].name][
+							fullName
+						] = dimensionVariables[fullName].value;
+						componentDimensionOverrides[scaleName][fullName] = value;
 						overriddenTokens[fullName] = true;
 						delete componentVariables[componentName][fullName];
 					} else if (!overriddenTokens[fullName]) {
@@ -395,17 +366,12 @@ function generateDNAFiles() {
 								let metadataKeyBase =
 									"spectrum-" +
 									componentName +
-									(variantName === "default"
-										? ""
-										: `-${variantName}`);
-								metadata[`${metadataKeyBase}-name`] =
-									variant.name;
+									(variantName === "default" ? "" : `-${variantName}`);
+								metadata[`${metadataKeyBase}-name`] = variant.name;
 								metadata[`${metadataKeyBase}-description`] =
 									variant.description;
-								metadata[`${metadataKeyBase}-status`] =
-									variant.status;
-								metadata[`${metadataKeyBase}-version`] =
-									variant.version;
+								metadata[`${metadataKeyBase}-status`] = variant.status;
+								metadata[`${metadataKeyBase}-version`] = variant.version;
 
 								if (variant.states) {
 									for (let stateName in variant.states) {
@@ -503,11 +469,7 @@ function generateDNAFiles() {
 
 				// Determine alias overrides
 				let [colorAliases] = calculateOverrides(
-					populateObject(
-						dnaData.colorStopData,
-						stops,
-						"colorAliases"
-					),
+					populateObject(dnaData.colorStopData, stops, "colorAliases"),
 					getCSSVariableReference
 				);
 
@@ -527,11 +489,7 @@ function generateDNAFiles() {
 
 				// Determine semantic overrides
 				let [colorSemantics] = calculateOverrides(
-					populateObject(
-						dnaData.colorStopData,
-						stops,
-						"colorSemantics"
-					),
+					populateObject(dnaData.colorStopData, stops, "colorSemantics"),
 					getCSSVariableReference
 				);
 
@@ -546,11 +504,7 @@ function generateDNAFiles() {
 					}
 				}
 
-				generateCSSFile(
-					[colorSemantics],
-					"colorSemantics",
-					"css/globals/"
-				);
+				generateCSSFile([colorSemantics], "colorSemantics", "css/globals/");
 
 				// Write out stops
 				for (let stopName in dnaData.colorStopData) {
@@ -573,11 +527,7 @@ function generateDNAFiles() {
 
 				// Determine dimension alias overrides
 				let [dimensionAliases] = calculateOverrides(
-					populateObject(
-						dnaData.scaleData,
-						scales,
-						"dimensionAliases"
-					),
+					populateObject(dnaData.scaleData, scales, "dimensionAliases"),
 					getCSSVariableReference
 				);
 
@@ -592,11 +542,7 @@ function generateDNAFiles() {
 					}
 				}
 
-				generateCSSFile(
-					[dimensionAliases],
-					"dimensionAliases",
-					"css/globals/"
-				);
+				generateCSSFile([dimensionAliases], "dimensionAliases", "css/globals/");
 
 				// Scales
 				for (let scaleName in dnaData.scaleData) {

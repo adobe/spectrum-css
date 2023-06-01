@@ -281,11 +281,11 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 🗓 2023-02-01 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/breadcrumb@6.0.2...@spectrum-css/breadcrumb@7.0.0)
 
--   chore(tokens)!: use latest dependency & fix build error (#1591) ([f2532e7](https://github.com/adobe/spectrum-css/commit/f2532e7)), closes [#1591](https://github.com/adobe/spectrum-css/issues/1591)
+- chore(tokens)!: use latest dependency & fix build error (#1591) ([f2532e7](https://github.com/adobe/spectrum-css/commit/f2532e7)), closes [#1591](https://github.com/adobe/spectrum-css/issues/1591)
 
 ### 🛑 BREAKING CHANGES
 
--   uses latest `@adobe/spectrum-tokens` dependency which includes token renames
+- uses latest `@adobe/spectrum-tokens` dependency which includes token renames
 
 <a name="6.0.2"></a>
 
@@ -309,11 +309,11 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 🗓 2023-01-27 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/breadcrumb@5.0.5...@spectrum-css/breadcrumb@6.0.0)
 
--   feat(breadcrumb)!: migrate to new tokens system (#1569) ([a46f3c3](https://github.com/adobe/spectrum-css/commit/a46f3c3)), closes [#1569](https://github.com/adobe/spectrum-css/issues/1569)
+- feat(breadcrumb)!: migrate to new tokens system (#1569) ([a46f3c3](https://github.com/adobe/spectrum-css/commit/a46f3c3)), closes [#1569](https://github.com/adobe/spectrum-css/issues/1569)
 
 ### 🛑 BREAKING CHANGES
 
--   migrates the Breadcrumb to the new tokens system
+- migrates the Breadcrumb to the new tokens system
 
 <a name="5.0.5"></a>
 
@@ -361,11 +361,11 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 🗓 2022-06-16 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/breadcrumb@4.0.21...@spectrum-css/breadcrumb@5.0.0)
 
--   feat!: updating to latest ActionButton with new markup ([3eef405](https://github.com/adobe/spectrum-css/commit/3eef405))
+- feat!: updating to latest ActionButton with new markup ([3eef405](https://github.com/adobe/spectrum-css/commit/3eef405))
 
 ### 🛑 BREAKING CHANGES
 
--   ActionButton changes icon markup
+- ActionButton changes icon markup
 
 <a name="4.0.21"></a>
 
@@ -383,7 +383,7 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 ### 🐛 Bug fixes
 
--   breadcrumb WHCM ([40c0900](https://github.com/adobe/spectrum-css/commit/40c0900))
+- breadcrumb WHCM ([40c0900](https://github.com/adobe/spectrum-css/commit/40c0900))
 
 <a name="4.0.19"></a>
 
@@ -457,7 +457,7 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 ### 🐛 Bug fixes
 
--   **breadcrumb:** use flex-start for justify content ([#1369](https://github.com/adobe/spectrum-css/issues/1369)) ([bd6c56c](https://github.com/adobe/spectrum-css/commit/bd6c56c))
+- **breadcrumb:** use flex-start for justify content ([#1369](https://github.com/adobe/spectrum-css/issues/1369)) ([bd6c56c](https://github.com/adobe/spectrum-css/commit/bd6c56c))
 
 <a name="4.0.10"></a>
 
@@ -475,7 +475,7 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 ### 🐛 Bug fixes
 
--   update peer dependencies ([97810cf](https://github.com/adobe/spectrum-css/commit/97810cf))
+- update peer dependencies ([97810cf](https://github.com/adobe/spectrum-css/commit/97810cf))
 
 <a name="4.0.8"></a>
 
@@ -541,7 +541,7 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 ### 🐛 Bug fixes
 
--   updating version number on vars ([f535b49](https://github.com/adobe/spectrum-css/commit/f535b49))
+- updating version number on vars ([f535b49](https://github.com/adobe/spectrum-css/commit/f535b49))
 
 <a name="4.0.1"></a>
 
@@ -551,7 +551,7 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 ### 🐛 Bug fixes
 
--   updating version number on vars ([f535b49](https://github.com/adobe/spectrum-css/commit/f535b49))
+- updating version number on vars ([f535b49](https://github.com/adobe/spectrum-css/commit/f535b49))
 
 <a name="4.0.0"></a>
 
@@ -561,7 +561,7 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 ### 🐛 Bug fixes
 
--   updating version number on vars ([f535b49](https://github.com/adobe/spectrum-css/commit/f535b49))
+- updating version number on vars ([f535b49](https://github.com/adobe/spectrum-css/commit/f535b49))
 
 <a name="4.0.0-alpha.3"></a>
 
@@ -595,15 +595,15 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 ### ✨ Features
 
--   added t-shirt sizes to Breadcrumbs ([a040693](https://github.com/adobe/spectrum-css/commit/a040693))
+- added t-shirt sizes to Breadcrumbs ([a040693](https://github.com/adobe/spectrum-css/commit/a040693))
 
 ### 🐛 Bug fixes
 
--   updated docs for breadcrumb ([85769ea](https://github.com/adobe/spectrum-css/commit/85769ea))
+- updated docs for breadcrumb ([85769ea](https://github.com/adobe/spectrum-css/commit/85769ea))
 
 ### 🛑 BREAKING CHANGES
 
--   a t-shirt size class has to be added to breadcrumb
+- a t-shirt size class has to be added to breadcrumb
 
 <a name="3.0.2"></a>
 
@@ -637,15 +637,15 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 ### ✨ Features
 
--   update to new ActionButton markup ([a86bfc7](https://github.com/adobe/spectrum-css/commit/a86bfc7))
+- update to new ActionButton markup ([a86bfc7](https://github.com/adobe/spectrum-css/commit/a86bfc7))
 
 ### 🐛 Bug fixes
 
--   update main, resolved conflicts ([d7880a2](https://github.com/adobe/spectrum-css/commit/d7880a2))
+- update main, resolved conflicts ([d7880a2](https://github.com/adobe/spectrum-css/commit/d7880a2))
 
 ### 🛑 BREAKING CHANGES
 
--   .spectrum-ActionButton--sizeM now required for all uses
+- .spectrum-ActionButton--sizeM now required for all uses
 
 <a name="3.0.0-beta.5"></a>
 
@@ -663,7 +663,7 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 ### 🐛 Bug fixes
 
--   wip fix more components ([b74dbb8](https://github.com/adobe/spectrum-css/commit/b74dbb8))
+- wip fix more components ([b74dbb8](https://github.com/adobe/spectrum-css/commit/b74dbb8))
 
 <a name="3.0.0-beta.3"></a>
 
@@ -681,12 +681,12 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 ### ✨ Features
 
--   breadcrum component change for rsp@v3 ([3dc2a63](https://github.com/adobe/spectrum-css/commit/3dc2a63))
+- breadcrum component change for rsp@v3 ([3dc2a63](https://github.com/adobe/spectrum-css/commit/3dc2a63))
 
 ### 🐛 Bug fixes
 
--   remove extra CSS leftover from title style breadcrumbs ([8757bc4](https://github.com/adobe/spectrum-css/commit/8757bc4))
--   remove the example for Breadcrumbs title ([06d2b83](https://github.com/adobe/spectrum-css/commit/06d2b83))
+- remove extra CSS leftover from title style breadcrumbs ([8757bc4](https://github.com/adobe/spectrum-css/commit/8757bc4))
+- remove the example for Breadcrumbs title ([06d2b83](https://github.com/adobe/spectrum-css/commit/06d2b83))
 
 <a name="3.0.0-beta.1"></a>
 
@@ -704,7 +704,7 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 ### ✨ Features
 
--   make Breadcrumbs support RTL ([9967d2d](https://github.com/adobe/spectrum-css/commit/9967d2d))
+- make Breadcrumbs support RTL ([9967d2d](https://github.com/adobe/spectrum-css/commit/9967d2d))
 
 <a name="2.0.5"></a>
 
@@ -754,4 +754,4 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 ### ✨ Features
 
--   move to individually versioned packages with Lerna ([#265](https://github.com/adobe/spectrum-css/issues/265)) ([cb7fd4b](https://github.com/adobe/spectrum-css/commit/cb7fd4b)), closes [#231](https://github.com/adobe/spectrum-css/issues/231) [#214](https://github.com/adobe/spectrum-css/issues/214) [#229](https://github.com/adobe/spectrum-css/issues/229) [#240](https://github.com/adobe/spectrum-css/issues/240) [#239](https://github.com/adobe/spectrum-css/issues/239) [#161](https://github.com/adobe/spectrum-css/issues/161) [#242](https://github.com/adobe/spectrum-css/issues/242) [#246](https://github.com/adobe/spectrum-css/issues/246) [#219](https://github.com/adobe/spectrum-css/issues/219) [#235](https://github.com/adobe/spectrum-css/issues/235) [#189](https://github.com/adobe/spectrum-css/issues/189) [#248](https://github.com/adobe/spectrum-css/issues/248) [#232](https://github.com/adobe/spectrum-css/issues/232) [#248](https://github.com/adobe/spectrum-css/issues/248) [#218](https://github.com/adobe/spectrum-css/issues/218) [#237](https://github.com/adobe/spectrum-css/issues/237) [#255](https://github.com/adobe/spectrum-css/issues/255) [#256](https://github.com/adobe/spectrum-css/issues/256) [#258](https://github.com/adobe/spectrum-css/issues/258) [#257](https://github.com/adobe/spectrum-css/issues/257) [#259](https://github.com/adobe/spectrum-css/issues/259)
+- move to individually versioned packages with Lerna ([#265](https://github.com/adobe/spectrum-css/issues/265)) ([cb7fd4b](https://github.com/adobe/spectrum-css/commit/cb7fd4b)), closes [#231](https://github.com/adobe/spectrum-css/issues/231) [#214](https://github.com/adobe/spectrum-css/issues/214) [#229](https://github.com/adobe/spectrum-css/issues/229) [#240](https://github.com/adobe/spectrum-css/issues/240) [#239](https://github.com/adobe/spectrum-css/issues/239) [#161](https://github.com/adobe/spectrum-css/issues/161) [#242](https://github.com/adobe/spectrum-css/issues/242) [#246](https://github.com/adobe/spectrum-css/issues/246) [#219](https://github.com/adobe/spectrum-css/issues/219) [#235](https://github.com/adobe/spectrum-css/issues/235) [#189](https://github.com/adobe/spectrum-css/issues/189) [#248](https://github.com/adobe/spectrum-css/issues/248) [#232](https://github.com/adobe/spectrum-css/issues/232) [#248](https://github.com/adobe/spectrum-css/issues/248) [#218](https://github.com/adobe/spectrum-css/issues/218) [#237](https://github.com/adobe/spectrum-css/issues/237) [#255](https://github.com/adobe/spectrum-css/issues/255) [#256](https://github.com/adobe/spectrum-css/issues/256) [#258](https://github.com/adobe/spectrum-css/issues/258) [#257](https://github.com/adobe/spectrum-css/issues/257) [#259](https://github.com/adobe/spectrum-css/issues/259)

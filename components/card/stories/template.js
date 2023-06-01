@@ -46,8 +46,7 @@ export const Template = ({
 			[`${rootClass}--quiet`]: isQuiet,
 			[`${rootClass}--gallery`]: isGallery,
 			[`${rootClass}--horizontal`]: isHorizontal,
-			[`${rootClass}--size${size?.toUpperCase()}`]:
-				typeof size !== "undefined",
+			[`${rootClass}--size${size?.toUpperCase()}`]: typeof size !== "undefined",
 			...customClasses.reduce((a, c) => ({ ...a, [c]: true }), {}),
 		})}
 		id=${ifDefined(id)}
@@ -72,10 +71,7 @@ export const Template = ({
 							Icon({
 								...globals,
 								size: "xxl",
-								iconName:
-									showAsset === "folder"
-										? "File"
-										: "Document",
+								iconName: showAsset === "folder" ? "File" : "Document",
 							})
 					)}
 				</div>`,
@@ -129,9 +125,7 @@ export const Template = ({
 						${when(
 							description,
 							() =>
-								html`<div class="${rootClass}-description">
-									${description}
-								</div>`
+								html`<div class="${rootClass}-description">${description}</div>`
 						)}
 					</div>`
 				)}

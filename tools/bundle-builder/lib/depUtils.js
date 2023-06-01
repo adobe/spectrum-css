@@ -22,9 +22,7 @@ const depSolver = require("dependency-solver");
   @return {Object} An object mapping the package name to its dependencies, or null if no dependencies
 */
 async function getDependencies(package) {
-	let pkg = JSON.parse(
-		await fsp.readFile(path.join(package, "package.json"))
-	);
+	let pkg = JSON.parse(await fsp.readFile(path.join(package, "package.json")));
 	let dependencies = [];
 
 	if (pkg.devDependencies) {

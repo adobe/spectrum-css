@@ -35,8 +35,7 @@ export const Template = ({
 	const { express } = globals;
 
 	try {
-		if (!express)
-			import(/* webpackPrefetch: true */ "../themes/spectrum.css");
+		if (!express) import(/* webpackPrefetch: true */ "../themes/spectrum.css");
 		else import(/* webpackPrefetch: true */ "../themes/express.css");
 	} catch (e) {
 		console.warn(e);
@@ -76,9 +75,7 @@ export const Template = ({
 					],
 					customInputClasses: [`${rootClass}-input`],
 					isLoading,
-					customProgressCircleClasses: [
-						"spectrum-Combobox-progress-circle",
-					],
+					customProgressCircleClasses: ["spectrum-Combobox-progress-circle"],
 					placeholder: "Type here",
 					name: "field",
 					value: globals.selectedDay

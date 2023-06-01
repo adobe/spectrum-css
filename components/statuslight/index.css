@@ -18,9 +18,7 @@ governing permissions and limitations under the License.
 
 	/* Size */
 	--spectrum-statuslight-height: var(--spectrum-component-height-100);
-	--spectrum-statuslight-dot-size: var(
-		--spectrum-status-light-dot-size-medium
-	);
+	--spectrum-statuslight-dot-size: var(--spectrum-status-light-dot-size-medium);
 	--spectrum-statuslight-line-height: var(--spectrum-line-height-100);
 	--spectrum-statuslight-line-height-cjk: var(--spectrum-cjk-line-height-100);
 
@@ -111,9 +109,7 @@ governing permissions and limitations under the License.
 
 .spectrum-StatusLight--sizeS {
 	--spectrum-statuslight-height: var(--spectrum-component-height-75);
-	--spectrum-statuslight-dot-size: var(
-		--spectrum-status-light-dot-size-small
-	);
+	--spectrum-statuslight-dot-size: var(--spectrum-status-light-dot-size-small);
 
 	--spectrum-statuslight-font-size: var(--spectrum-font-size-75);
 
@@ -133,9 +129,7 @@ governing permissions and limitations under the License.
 
 .spectrum-StatusLight--sizeM {
 	--spectrum-statuslight-height: var(--spectrum-component-height-100);
-	--spectrum-statuslight-dot-size: var(
-		--spectrum-status-light-dot-size-medium
-	);
+	--spectrum-statuslight-dot-size: var(--spectrum-status-light-dot-size-medium);
 
 	--spectrum-statuslight-font-size: var(--spectrum-font-size-100);
 
@@ -155,9 +149,7 @@ governing permissions and limitations under the License.
 
 .spectrum-StatusLight--sizeL {
 	--spectrum-statuslight-height: var(--spectrum-component-height-200);
-	--spectrum-statuslight-dot-size: var(
-		--spectrum-status-light-dot-size-large
-	);
+	--spectrum-statuslight-dot-size: var(--spectrum-status-light-dot-size-large);
 
 	--spectrum-statuslight-font-size: var(--spectrum-font-size-200);
 
@@ -217,10 +209,7 @@ governing permissions and limitations under the License.
 	flex-direction: row;
 	align-items: flex-start;
 
-	min-height: var(
-		--mod-statuslight-height,
-		var(--spectrum-statuslight-height)
-	);
+	min-height: var(--mod-statuslight-height, var(--spectrum-statuslight-height));
 
 	padding-block-start: var(
 		--mod-statuslight-spacing-top-to-label,
@@ -293,9 +282,7 @@ governing permissions and limitations under the License.
 					var(--spectrum-statuslight-spacing-top-to-label)
 				)
 		);
-		margin-block-start: var(
-			--spectrum-statuslight-spacing-computed-top-to-dot
-		);
+		margin-block-start: var(--spectrum-statuslight-spacing-computed-top-to-dot);
 		margin-inline-end: var(
 			--mod-statuslight-spacing-dot-to-label,
 			var(--spectrum-statuslight-spacing-dot-to-label)

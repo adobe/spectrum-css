@@ -74,9 +74,7 @@ export const Template = ({
 					iconName: iconName ?? "ChevronDown200",
 					size,
 					customClasses: [
-						iconType === "ui"
-							? `${rootClass}-UIIcon`
-							: `${rootClass}-menuIcon`,
+						iconType === "ui" ? `${rootClass}-UIIcon` : `${rootClass}-menuIcon`,
 					],
 				})}
 			</div>

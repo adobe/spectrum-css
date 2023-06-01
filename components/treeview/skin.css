@@ -64,9 +64,7 @@ governing permissions and limitations under the License.
 				background-color: var(
 					--spectrum-treeview-item-background-color-selected
 				);
-				border-color: var(
-					--spectrum-treeview-m-item-border-color-key-focus
-				);
+				border-color: var(--spectrum-treeview-m-item-border-color-key-focus);
 			}
 
 			.spectrum-TreeView-itemIcon {
@@ -79,9 +77,7 @@ governing permissions and limitations under the License.
 		> .spectrum-TreeView-itemLink {
 			&:before {
 				background-color: var(--spectrum-alias-highlight-selected);
-				border-color: var(
-					--spectrum-treeview-m-item-border-color-key-focus
-				);
+				border-color: var(--spectrum-treeview-m-item-border-color-key-focus);
 			}
 		}
 	}
@@ -121,9 +117,7 @@ governing permissions and limitations under the License.
 		color: var(--spectrum-treeview-m-item-text-color-hover);
 
 		&:before {
-			background-color: var(
-				--spectrum-treeview-m-item-background-color-hover
-			);
+			background-color: var(--spectrum-treeview-m-item-background-color-hover);
 		}
 
 		.spectrum-TreeView-itemIcon {
@@ -139,9 +133,7 @@ governing permissions and limitations under the License.
 				--spectrum-treeview-m-item-background-color-key-focus
 			);
 
-			border-color: var(
-				--spectrum-treeview-m-item-border-color-key-focus
-			);
+			border-color: var(--spectrum-treeview-m-item-border-color-key-focus);
 		}
 
 		.spectrum-TreeView-itemIcon {

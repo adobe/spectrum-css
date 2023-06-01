@@ -57,11 +57,11 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 🗓 2023-05-18 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/fieldlabel@6.0.35...@spectrum-css/fieldlabel@7.0.0)
 
--   feat(slider, fieldlabel)!: tokens migration & min-height size adjustments (#1696) ([37724f1](https://github.com/adobe/spectrum-css/commit/37724f1)), closes [#1696](https://github.com/adobe/spectrum-css/issues/1696)
+- feat(slider, fieldlabel)!: tokens migration & min-height size adjustments (#1696) ([37724f1](https://github.com/adobe/spectrum-css/commit/37724f1)), closes [#1696](https://github.com/adobe/spectrum-css/issues/1696)
 
 ### 🛑 BREAKING CHANGES
 
--   migrates Slider to use `@adobe/spectrum-tokens`.
+- migrates Slider to use `@adobe/spectrum-tokens`.
 
 Additionally, this adds some `min-height` custom properties and adjusts the `min-height` in the FieldLabel to accommodate Slider.
 
@@ -351,11 +351,11 @@ Additionally, this adds some `min-height` custom properties and adjusts the `min
 
 🗓 2023-02-01 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/fieldlabel@5.0.15...@spectrum-css/fieldlabel@6.0.0)
 
--   chore(tokens)!: use latest dependency & fix build error (#1591) ([f2532e7](https://github.com/adobe/spectrum-css/commit/f2532e7)), closes [#1591](https://github.com/adobe/spectrum-css/issues/1591)
+- chore(tokens)!: use latest dependency & fix build error (#1591) ([f2532e7](https://github.com/adobe/spectrum-css/commit/f2532e7)), closes [#1591](https://github.com/adobe/spectrum-css/issues/1591)
 
 ### 🛑 BREAKING CHANGES
 
--   uses latest `@adobe/spectrum-tokens` dependency which includes token renames
+- uses latest `@adobe/spectrum-tokens` dependency which includes token renames
 
 <a name="5.0.15"></a>
 
@@ -365,7 +365,7 @@ Additionally, this adds some `min-height` custom properties and adjusts the `min
 
 ### 🐛 Bug fixes
 
--   **fieldlabel:** use proper tokens & resolve incorrect gap size ([#1608](https://github.com/adobe/spectrum-css/issues/1608)) ([75d5310](https://github.com/adobe/spectrum-css/commit/75d5310))
+- **fieldlabel:** use proper tokens & resolve incorrect gap size ([#1608](https://github.com/adobe/spectrum-css/issues/1608)) ([75d5310](https://github.com/adobe/spectrum-css/commit/75d5310))
 
 <a name="5.0.14"></a>
 
@@ -431,7 +431,7 @@ Additionally, this adds some `min-height` custom properties and adjusts the `min
 
 ### 🐛 Bug fixes
 
--   **fieldlabel:** add missing color token ([#1563](https://github.com/adobe/spectrum-css/issues/1563)) ([f2d7487](https://github.com/adobe/spectrum-css/commit/f2d7487))
+- **fieldlabel:** add missing color token ([#1563](https://github.com/adobe/spectrum-css/issues/1563)) ([f2d7487](https://github.com/adobe/spectrum-css/commit/f2d7487))
 
 <a name="5.0.6"></a>
 
@@ -449,7 +449,7 @@ Additionally, this adds some `min-height` custom properties and adjusts the `min
 
 ### 🐛 Bug fixes
 
--   resolve missing tokens errors due to name changes ([#1555](https://github.com/adobe/spectrum-css/issues/1555)) ([ddae027](https://github.com/adobe/spectrum-css/commit/ddae027))
+- resolve missing tokens errors due to name changes ([#1555](https://github.com/adobe/spectrum-css/issues/1555)) ([ddae027](https://github.com/adobe/spectrum-css/commit/ddae027))
 
 <a name="5.0.4"></a>
 
@@ -489,11 +489,11 @@ Additionally, this adds some `min-height` custom properties and adjusts the `min
 
 🗓 2022-10-11 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/fieldlabel@4.0.29...@spectrum-css/fieldlabel@5.0.0)
 
--   feat(fieldlabel)!: migrate to core tokens (CSS-102) (#1476) ([45802a6](https://github.com/adobe/spectrum-css/commit/45802a6)), closes [#1476](https://github.com/adobe/spectrum-css/issues/1476)
+- feat(fieldlabel)!: migrate to core tokens (CSS-102) (#1476) ([45802a6](https://github.com/adobe/spectrum-css/commit/45802a6)), closes [#1476](https://github.com/adobe/spectrum-css/issues/1476)
 
 ### 🛑 BREAKING CHANGES
 
--   migrates FieldLabel to core tokens
+- migrates FieldLabel to core tokens
 
 Co-authored-by: Monet Fort <lunarfusion@users.noreply.github.com>
 Co-authored-by: Patrick Fulton <pfulton@users.noreply.github.com>
@@ -666,7 +666,7 @@ Co-authored-by: Patrick Fulton <pfulton@users.noreply.github.com>
 
 ### 🐛 Bug fixes
 
--   update peer dependencies ([97810cf](https://github.com/adobe/spectrum-css/commit/97810cf))
+- update peer dependencies ([97810cf](https://github.com/adobe/spectrum-css/commit/97810cf))
 
 <a name="4.0.8"></a>
 
@@ -732,7 +732,7 @@ Co-authored-by: Patrick Fulton <pfulton@users.noreply.github.com>
 
 ### 🐛 Bug fixes
 
--   updating version number on vars ([f535b49](https://github.com/adobe/spectrum-css/commit/f535b49))
+- updating version number on vars ([f535b49](https://github.com/adobe/spectrum-css/commit/f535b49))
 
 <a name="4.0.1"></a>
 
@@ -742,7 +742,7 @@ Co-authored-by: Patrick Fulton <pfulton@users.noreply.github.com>
 
 ### 🐛 Bug fixes
 
--   updating version number on vars ([f535b49](https://github.com/adobe/spectrum-css/commit/f535b49))
+- updating version number on vars ([f535b49](https://github.com/adobe/spectrum-css/commit/f535b49))
 
 <a name="4.0.0"></a>
 
@@ -752,7 +752,7 @@ Co-authored-by: Patrick Fulton <pfulton@users.noreply.github.com>
 
 ### 🐛 Bug fixes
 
--   updating version number on vars ([f535b49](https://github.com/adobe/spectrum-css/commit/f535b49))
+- updating version number on vars ([f535b49](https://github.com/adobe/spectrum-css/commit/f535b49))
 
 <a name="4.0.0-alpha.4"></a>
 
@@ -794,11 +794,11 @@ Co-authored-by: Patrick Fulton <pfulton@users.noreply.github.com>
 
 ### 🐛 Bug fixes
 
--   adjusted margin on require asterisk ([af15ec8](https://github.com/adobe/spectrum-css/commit/af15ec8))
+- adjusted margin on require asterisk ([af15ec8](https://github.com/adobe/spectrum-css/commit/af15ec8))
 
 ### 🛑 BREAKING CHANGES
 
--   the margin change impacts layout
+- the margin change impacts layout
 
 <a name="3.0.3-alpha.2"></a>
 
@@ -848,12 +848,12 @@ Co-authored-by: Patrick Fulton <pfulton@users.noreply.github.com>
 
 ### ✨ Features
 
--   added t-shirt sizes to checkbox ([f4c59bd](https://github.com/adobe/spectrum-css/commit/f4c59bd)), closes [#951](https://github.com/adobe/spectrum-css/issues/951)
--   added t-shirt sizes to picker ([35bf08f](https://github.com/adobe/spectrum-css/commit/35bf08f)), closes [#940](https://github.com/adobe/spectrum-css/issues/940)
+- added t-shirt sizes to checkbox ([f4c59bd](https://github.com/adobe/spectrum-css/commit/f4c59bd)), closes [#951](https://github.com/adobe/spectrum-css/issues/951)
+- added t-shirt sizes to picker ([35bf08f](https://github.com/adobe/spectrum-css/commit/35bf08f)), closes [#940](https://github.com/adobe/spectrum-css/issues/940)
 
 ### 🛑 BREAKING CHANGES
 
--   a t-shirt size class is now required for checkbox.
+- a t-shirt size class is now required for checkbox.
 
 <a name="3.0.0-beta.7"></a>
 
@@ -863,18 +863,18 @@ Co-authored-by: Patrick Fulton <pfulton@users.noreply.github.com>
 
 ### ✨ Features
 
--   implement t-shirt sizing for Field Label, closes [#943](https://github.com/adobe/spectrum-css/issues/943) ([dda9c38](https://github.com/adobe/spectrum-css/commit/dda9c38))
--   replace all FieldButton with ActionButton ([2fcbaaf](https://github.com/adobe/spectrum-css/commit/2fcbaaf))
+- implement t-shirt sizing for Field Label, closes [#943](https://github.com/adobe/spectrum-css/issues/943) ([dda9c38](https://github.com/adobe/spectrum-css/commit/dda9c38))
+- replace all FieldButton with ActionButton ([2fcbaaf](https://github.com/adobe/spectrum-css/commit/2fcbaaf))
 
 ### 🐛 Bug fixes
 
--   correct margin for Form ([9dcbea8](https://github.com/adobe/spectrum-css/commit/9dcbea8))
--   make FieldLabel build again ([7c44413](https://github.com/adobe/spectrum-css/commit/7c44413))
--   update main, resolved conflicts ([d7880a2](https://github.com/adobe/spectrum-css/commit/d7880a2))
+- correct margin for Form ([9dcbea8](https://github.com/adobe/spectrum-css/commit/9dcbea8))
+- make FieldLabel build again ([7c44413](https://github.com/adobe/spectrum-css/commit/7c44413))
+- update main, resolved conflicts ([d7880a2](https://github.com/adobe/spectrum-css/commit/d7880a2))
 
 ### 🛑 BREAKING CHANGES
 
--   markup now requires spectrum-ActionButton where all uses of spectrum-FieldButton were
+- markup now requires spectrum-ActionButton where all uses of spectrum-FieldButton were
 
 <a name="3.0.0-beta.6"></a>
 
@@ -892,17 +892,17 @@ Co-authored-by: Patrick Fulton <pfulton@users.noreply.github.com>
 
 ### 🐛 Bug fixes
 
--   Checkbox and Radio margins, docs, and typography ([#897](https://github.com/adobe/spectrum-css/issues/897)) ([a089ce0](https://github.com/adobe/spectrum-css/commit/a089ce0)), closes [#243](https://github.com/adobe/spectrum-css/issues/243) [#124](https://github.com/adobe/spectrum-css/issues/124) [#707](https://github.com/adobe/spectrum-css/issues/707) [#243](https://github.com/adobe/spectrum-css/issues/243) [#251](https://github.com/adobe/spectrum-css/issues/251)
--   removed deprecated tokens from searchWithin ([d97b026](https://github.com/adobe/spectrum-css/commit/d97b026))
+- Checkbox and Radio margins, docs, and typography ([#897](https://github.com/adobe/spectrum-css/issues/897)) ([a089ce0](https://github.com/adobe/spectrum-css/commit/a089ce0)), closes [#243](https://github.com/adobe/spectrum-css/issues/243) [#124](https://github.com/adobe/spectrum-css/issues/124) [#707](https://github.com/adobe/spectrum-css/issues/707) [#243](https://github.com/adobe/spectrum-css/issues/243) [#251](https://github.com/adobe/spectrum-css/issues/251)
+- removed deprecated tokens from searchWithin ([d97b026](https://github.com/adobe/spectrum-css/commit/d97b026))
 
 ### 🛑 BREAKING CHANGES
 
--   Checkbox and Radio no longer have margin on their own, must use FieldGroup
+- Checkbox and Radio no longer have margin on their own, must use FieldGroup
 
--   feat: add .spectrum-Example to wrap sub-examples
--   The spectrum-FieldGroup--horizontal is now required for horizontal field groups
+- feat: add .spectrum-Example to wrap sub-examples
+- The spectrum-FieldGroup--horizontal is now required for horizontal field groups
 
--   feat: remove hit area from Radio/Checkbox
+- feat: remove hit area from Radio/Checkbox
 
 <a name="3.0.0-beta.4"></a>
 
@@ -920,7 +920,7 @@ Co-authored-by: Patrick Fulton <pfulton@users.noreply.github.com>
 
 ### 🐛 Bug fixes
 
--   **fieldlabel:** use unique id for each input ([#677](https://github.com/adobe/spectrum-css/issues/677)) ([b617d0e](https://github.com/adobe/spectrum-css/commit/b617d0e))
+- **fieldlabel:** use unique id for each input ([#677](https://github.com/adobe/spectrum-css/issues/677)) ([b617d0e](https://github.com/adobe/spectrum-css/commit/b617d0e))
 
 <a name="3.0.0-beta.2"></a>
 
@@ -938,11 +938,11 @@ Co-authored-by: Patrick Fulton <pfulton@users.noreply.github.com>
 
 ### ✨ Features
 
--   make Form/FieldLabel use new Textfield markup ([bb404fb](https://github.com/adobe/spectrum-css/commit/bb404fb))
+- make Form/FieldLabel use new Textfield markup ([bb404fb](https://github.com/adobe/spectrum-css/commit/bb404fb))
 
 ### 🛑 BREAKING CHANGES
 
--   migrated to next Textfield markup
+- migrated to next Textfield markup
 
 <a name="3.0.0-beta.0"></a>
 
@@ -952,7 +952,7 @@ Co-authored-by: Patrick Fulton <pfulton@users.noreply.github.com>
 
 ### ✨ Features
 
--   make FieldLabel support RTL ([45356eb](https://github.com/adobe/spectrum-css/commit/45356eb))
+- make FieldLabel support RTL ([45356eb](https://github.com/adobe/spectrum-css/commit/45356eb))
 
 <a name="2.0.6"></a>
 
@@ -1010,4 +1010,4 @@ Co-authored-by: Patrick Fulton <pfulton@users.noreply.github.com>
 
 ### ✨ Features
 
--   move to individually versioned packages with Lerna ([#265](https://github.com/adobe/spectrum-css/issues/265)) ([cb7fd4b](https://github.com/adobe/spectrum-css/commit/cb7fd4b)), closes [#231](https://github.com/adobe/spectrum-css/issues/231) [#214](https://github.com/adobe/spectrum-css/issues/214) [#229](https://github.com/adobe/spectrum-css/issues/229) [#240](https://github.com/adobe/spectrum-css/issues/240) [#239](https://github.com/adobe/spectrum-css/issues/239) [#161](https://github.com/adobe/spectrum-css/issues/161) [#242](https://github.com/adobe/spectrum-css/issues/242) [#246](https://github.com/adobe/spectrum-css/issues/246) [#219](https://github.com/adobe/spectrum-css/issues/219) [#235](https://github.com/adobe/spectrum-css/issues/235) [#189](https://github.com/adobe/spectrum-css/issues/189) [#248](https://github.com/adobe/spectrum-css/issues/248) [#232](https://github.com/adobe/spectrum-css/issues/232) [#248](https://github.com/adobe/spectrum-css/issues/248) [#218](https://github.com/adobe/spectrum-css/issues/218) [#237](https://github.com/adobe/spectrum-css/issues/237) [#255](https://github.com/adobe/spectrum-css/issues/255) [#256](https://github.com/adobe/spectrum-css/issues/256) [#258](https://github.com/adobe/spectrum-css/issues/258) [#257](https://github.com/adobe/spectrum-css/issues/257) [#259](https://github.com/adobe/spectrum-css/issues/259)
+- move to individually versioned packages with Lerna ([#265](https://github.com/adobe/spectrum-css/issues/265)) ([cb7fd4b](https://github.com/adobe/spectrum-css/commit/cb7fd4b)), closes [#231](https://github.com/adobe/spectrum-css/issues/231) [#214](https://github.com/adobe/spectrum-css/issues/214) [#229](https://github.com/adobe/spectrum-css/issues/229) [#240](https://github.com/adobe/spectrum-css/issues/240) [#239](https://github.com/adobe/spectrum-css/issues/239) [#161](https://github.com/adobe/spectrum-css/issues/161) [#242](https://github.com/adobe/spectrum-css/issues/242) [#246](https://github.com/adobe/spectrum-css/issues/246) [#219](https://github.com/adobe/spectrum-css/issues/219) [#235](https://github.com/adobe/spectrum-css/issues/235) [#189](https://github.com/adobe/spectrum-css/issues/189) [#248](https://github.com/adobe/spectrum-css/issues/248) [#232](https://github.com/adobe/spectrum-css/issues/232) [#248](https://github.com/adobe/spectrum-css/issues/248) [#218](https://github.com/adobe/spectrum-css/issues/218) [#237](https://github.com/adobe/spectrum-css/issues/237) [#255](https://github.com/adobe/spectrum-css/issues/255) [#256](https://github.com/adobe/spectrum-css/issues/256) [#258](https://github.com/adobe/spectrum-css/issues/258) [#257](https://github.com/adobe/spectrum-css/issues/257) [#259](https://github.com/adobe/spectrum-css/issues/259)

@@ -369,11 +369,11 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 🗓 2022-10-06 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/swatchgroup@1.1.4...@spectrum-css/swatchgroup@2.0.0)
 
--   feat(swatchgroup)!: migrate swatchgroup to core tokens (#1505) ([7a0daf4](https://github.com/adobe/spectrum-css/commit/7a0daf4)), closes [#1505](https://github.com/adobe/spectrum-css/issues/1505)
+- feat(swatchgroup)!: migrate swatchgroup to core tokens (#1505) ([7a0daf4](https://github.com/adobe/spectrum-css/commit/7a0daf4)), closes [#1505](https://github.com/adobe/spectrum-css/issues/1505)
 
 ### 🛑 BREAKING CHANGES
 
--   migrates SwatchGroup to core tokens
+- migrates SwatchGroup to core tokens
 
 Co-authored-by: Patrick Fulton <pfulton@adobe.com>
 
@@ -417,7 +417,7 @@ Co-authored-by: Patrick Fulton <pfulton@adobe.com>
 
 ### ✨ Features
 
--   add docs, let stroke/fill of disabled icon be customizable ([94510d0](https://github.com/adobe/spectrum-css/commit/94510d0))
--   add support for lightBorder, docs for usage in Swatch Group ([cb44131](https://github.com/adobe/spectrum-css/commit/cb44131))
--   implement SwatchGroup ([52a269a](https://github.com/adobe/spectrum-css/commit/52a269a))
--   start on swatch ([4d419c2](https://github.com/adobe/spectrum-css/commit/4d419c2))
+- add docs, let stroke/fill of disabled icon be customizable ([94510d0](https://github.com/adobe/spectrum-css/commit/94510d0))
+- add support for lightBorder, docs for usage in Swatch Group ([cb44131](https://github.com/adobe/spectrum-css/commit/cb44131))
+- implement SwatchGroup ([52a269a](https://github.com/adobe/spectrum-css/commit/52a269a))
+- start on swatch ([4d419c2](https://github.com/adobe/spectrum-css/commit/4d419c2))

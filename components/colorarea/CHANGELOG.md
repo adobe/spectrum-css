@@ -145,11 +145,11 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 🗓 2023-04-19 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/colorarea@3.0.10...@spectrum-css/colorarea@4.0.0)
 
--   feat(colorloupe, colorhandle)!: migrate to core tokens (#1753) ([c72f147](https://github.com/adobe/spectrum-css/commit/c72f147)), closes [#1753](https://github.com/adobe/spectrum-css/issues/1753)
+- feat(colorloupe, colorhandle)!: migrate to core tokens (#1753) ([c72f147](https://github.com/adobe/spectrum-css/commit/c72f147)), closes [#1753](https://github.com/adobe/spectrum-css/issues/1753)
 
 ### 🛑 BREAKING CHANGES
 
--   migrates both the ColorLoupe and ColorHandle components to `@adobe/spectrum-tokens`
+- migrates both the ColorLoupe and ColorHandle components to `@adobe/spectrum-tokens`
 
 <a name="3.0.10"></a>
 
@@ -237,11 +237,11 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 🗓 2023-03-09 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/colorarea@2.0.2...@spectrum-css/colorarea@3.0.0)
 
--   feat(colorwheel)!: migrate to core tokens (#1619) ([f07028d](https://github.com/adobe/spectrum-css/commit/f07028d)), closes [#1619](https://github.com/adobe/spectrum-css/issues/1619)
+- feat(colorwheel)!: migrate to core tokens (#1619) ([f07028d](https://github.com/adobe/spectrum-css/commit/f07028d)), closes [#1619](https://github.com/adobe/spectrum-css/issues/1619)
 
 ### 🛑 BREAKING CHANGES
 
--   migrates ColorWheel to use `@adobe/spectrum-tokens`
+- migrates ColorWheel to use `@adobe/spectrum-tokens`
 
 <a name="2.0.2"></a>
 
@@ -265,11 +265,11 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 🗓 2023-02-28 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/colorarea@1.0.30...@spectrum-css/colorarea@2.0.0)
 
--   feat(colorarea)!: migrate to core tokens (#1623) ([9b3d6fa](https://github.com/adobe/spectrum-css/commit/9b3d6fa)), closes [#1623](https://github.com/adobe/spectrum-css/issues/1623)
+- feat(colorarea)!: migrate to core tokens (#1623) ([9b3d6fa](https://github.com/adobe/spectrum-css/commit/9b3d6fa)), closes [#1623](https://github.com/adobe/spectrum-css/issues/1623)
 
 ### 🛑 BREAKING CHANGES
 
--   migrates ColorArea to core tokens
+- migrates ColorArea to core tokens
 
 <a name="1.0.30"></a>
 
@@ -431,7 +431,7 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 ### 🐛 Bug fixes
 
--   update peer dependencies ([97810cf](https://github.com/adobe/spectrum-css/commit/97810cf))
+- update peer dependencies ([97810cf](https://github.com/adobe/spectrum-css/commit/97810cf))
 
 <a name="1.0.10"></a>
 
@@ -489,8 +489,8 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 ### 🐛 Bug fixes
 
--   updating version number on vars ([f535b49](https://github.com/adobe/spectrum-css/commit/f535b49))
--   use opacity: 0 and appearance: none of form elements ([14c7fcf](https://github.com/adobe/spectrum-css/commit/14c7fcf))
+- updating version number on vars ([f535b49](https://github.com/adobe/spectrum-css/commit/f535b49))
+- use opacity: 0 and appearance: none of form elements ([14c7fcf](https://github.com/adobe/spectrum-css/commit/14c7fcf))
 
 <a name="1.0.4"></a>
 
@@ -500,8 +500,8 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 ### 🐛 Bug fixes
 
--   updating version number on vars ([f535b49](https://github.com/adobe/spectrum-css/commit/f535b49))
--   use opacity: 0 and appearance: none of form elements ([14c7fcf](https://github.com/adobe/spectrum-css/commit/14c7fcf))
+- updating version number on vars ([f535b49](https://github.com/adobe/spectrum-css/commit/f535b49))
+- use opacity: 0 and appearance: none of form elements ([14c7fcf](https://github.com/adobe/spectrum-css/commit/14c7fcf))
 
 <a name="1.0.3"></a>
 
@@ -511,7 +511,7 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 ### 🐛 Bug fixes
 
--   updating version number on vars ([f535b49](https://github.com/adobe/spectrum-css/commit/f535b49))
+- updating version number on vars ([f535b49](https://github.com/adobe/spectrum-css/commit/f535b49))
 
 <a name="1.0.3-alpha.3"></a>
 
@@ -577,7 +577,7 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 ### 🐛 Bug fixes
 
--   support high contrast mode in color components ([d4c05cb](https://github.com/adobe/spectrum-css/commit/d4c05cb))
+- support high contrast mode in color components ([d4c05cb](https://github.com/adobe/spectrum-css/commit/d4c05cb))
 
 <a name="1.0.0-beta.3"></a>
 
@@ -603,4 +603,4 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 ### ✨ Features
 
--   Color Handle/Slider/Area/Wheel ([#673](https://github.com/adobe/spectrum-css/issues/673)) ([bcd2bf1](https://github.com/adobe/spectrum-css/commit/bcd2bf1))
+- Color Handle/Slider/Area/Wheel ([#673](https://github.com/adobe/spectrum-css/issues/673)) ([bcd2bf1](https://github.com/adobe/spectrum-css/commit/bcd2bf1))

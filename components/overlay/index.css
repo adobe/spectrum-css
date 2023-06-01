@@ -41,9 +41,7 @@ governing permissions and limitations under the License.
 }
 
 %spectrum-overlay--top--open {
-	transform: translateY(
-		calc(-1 * var(--spectrum-overlay-animation-distance))
-	);
+	transform: translateY(calc(-1 * var(--spectrum-overlay-animation-distance)));
 }
 
 %spectrum-overlay--right--open {
@@ -51,7 +49,5 @@ governing permissions and limitations under the License.
 }
 
 %spectrum-overlay--left--open {
-	transform: translateX(
-		calc(-1 * var(--spectrum-overlay-animation-distance))
-	);
+	transform: translateX(calc(-1 * var(--spectrum-overlay-animation-distance)));
 }

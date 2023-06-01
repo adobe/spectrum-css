@@ -43,4 +43,4 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 ### ✨ Features
 
--   add postcss-varfallback ([3f1b97f](https://github.com/adobe/spectrum-css/commit/3f1b97f))
+- add postcss-varfallback ([3f1b97f](https://github.com/adobe/spectrum-css/commit/3f1b97f))

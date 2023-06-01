@@ -9,11 +9,11 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 🗓 2023-05-23 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/illustratedmessage@5.0.18...@spectrum-css/illustratedmessage@6.0.0)
 
--   feat(dropzone)!: migrate tokens (#1831) ([5216021](https://github.com/adobe/spectrum-css/commit/5216021)), closes [#1831](https://github.com/adobe/spectrum-css/issues/1831)
+- feat(dropzone)!: migrate tokens (#1831) ([5216021](https://github.com/adobe/spectrum-css/commit/5216021)), closes [#1831](https://github.com/adobe/spectrum-css/issues/1831)
 
 ### 🛑 BREAKING CHANGES
 
--   migrates DropZone to use `@adobe/spectrum-tokens`.
+- migrates DropZone to use `@adobe/spectrum-tokens`.
 
 Also updates IllustratedMessage and ActionButton to share `--mod-` properties.
 
@@ -167,14 +167,14 @@ Also updates IllustratedMessage and ActionButton to share `--mod-` properties.
 
 🗓 2023-04-20 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/illustratedmessage@4.0.19...@spectrum-css/illustratedmessage@5.0.0)
 
--   feat(illustratedmessage)!: core tokens migration (#1699) ([3e937a0](https://github.com/adobe/spectrum-css/commit/3e937a0)), closes [#1699](https://github.com/adobe/spectrum-css/issues/1699)
+- feat(illustratedmessage)!: core tokens migration (#1699) ([3e937a0](https://github.com/adobe/spectrum-css/commit/3e937a0)), closes [#1699](https://github.com/adobe/spectrum-css/issues/1699)
 
 ### 🛑 BREAKING CHANGES
 
--   migrates IllustratedMessage to core tokens
+- migrates IllustratedMessage to core tokens
 
--   Adds migration guide section to docs with a note about the removal of the CTA variant class.
--   Adds high-contrast mode support
+- Adds migration guide section to docs with a note about the removal of the CTA variant class.
+- Adds high-contrast mode support
 
 <a name="4.0.19"></a>
 
@@ -320,7 +320,7 @@ Also updates IllustratedMessage and ActionButton to share `--mod-` properties.
 
 ### 🐛 Bug fixes
 
--   resolving conflicts with main ([71ec2a2](https://github.com/adobe/spectrum-css/commit/71ec2a2))
+- resolving conflicts with main ([71ec2a2](https://github.com/adobe/spectrum-css/commit/71ec2a2))
 
 <a name="4.0.1"></a>
 
@@ -336,11 +336,11 @@ Also updates IllustratedMessage and ActionButton to share `--mod-` properties.
 
 🗓 2022-03-17 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/illustratedmessage@3.0.17...@spectrum-css/illustratedmessage@4.0.0)
 
--   chore(illustratedmessage)!: update colors, weights, sizes ([9f9b730](https://github.com/adobe/spectrum-css/commit/9f9b730)), closes [#1399](https://github.com/adobe/spectrum-css/issues/1399)
+- chore(illustratedmessage)!: update colors, weights, sizes ([9f9b730](https://github.com/adobe/spectrum-css/commit/9f9b730)), closes [#1399](https://github.com/adobe/spectrum-css/issues/1399)
 
 ### 🛑 BREAKING CHANGES
 
--   changes heading font size, body font-style, heading color, and heading font-weight. Also updates docs example to prefer sentence case over title case.
+- changes heading font size, body font-style, heading color, and heading font-weight. Also updates docs example to prefer sentence case over title case.
 
 <a name="3.0.17"></a>
 
@@ -390,7 +390,7 @@ Also updates IllustratedMessage and ActionButton to share `--mod-` properties.
 
 ### 🐛 Bug fixes
 
--   update peer dependencies ([97810cf](https://github.com/adobe/spectrum-css/commit/97810cf))
+- update peer dependencies ([97810cf](https://github.com/adobe/spectrum-css/commit/97810cf))
 
 <a name="3.0.11"></a>
 
@@ -456,7 +456,7 @@ Also updates IllustratedMessage and ActionButton to share `--mod-` properties.
 
 ### 🐛 Bug fixes
 
--   updating version number on vars ([f535b49](https://github.com/adobe/spectrum-css/commit/f535b49))
+- updating version number on vars ([f535b49](https://github.com/adobe/spectrum-css/commit/f535b49))
 
 <a name="3.0.4"></a>
 
@@ -466,7 +466,7 @@ Also updates IllustratedMessage and ActionButton to share `--mod-` properties.
 
 ### 🐛 Bug fixes
 
--   updating version number on vars ([f535b49](https://github.com/adobe/spectrum-css/commit/f535b49))
+- updating version number on vars ([f535b49](https://github.com/adobe/spectrum-css/commit/f535b49))
 
 <a name="3.0.3"></a>
 
@@ -476,7 +476,7 @@ Also updates IllustratedMessage and ActionButton to share `--mod-` properties.
 
 ### 🐛 Bug fixes
 
--   updating version number on vars ([f535b49](https://github.com/adobe/spectrum-css/commit/f535b49))
+- updating version number on vars ([f535b49](https://github.com/adobe/spectrum-css/commit/f535b49))
 
 <a name="3.0.3-alpha.3"></a>
 
@@ -548,11 +548,11 @@ Also updates IllustratedMessage and ActionButton to share `--mod-` properties.
 
 🗓 2020-10-20 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/illustratedmessage@3.0.0-beta.3...@spectrum-css/illustratedmessage@3.0.0-beta.4)
 
--   fix!: updated type sizes to use consistent syntax, related to #972 (#1031) ([1a604c4](https://github.com/adobe/spectrum-css/commit/1a604c4)), closes [#972](https://github.com/adobe/spectrum-css/issues/972) [#1031](https://github.com/adobe/spectrum-css/issues/1031)
+- fix!: updated type sizes to use consistent syntax, related to #972 (#1031) ([1a604c4](https://github.com/adobe/spectrum-css/commit/1a604c4)), closes [#972](https://github.com/adobe/spectrum-css/issues/972) [#1031](https://github.com/adobe/spectrum-css/issues/1031)
 
 ### 🛑 BREAKING CHANGES
 
--   all typography sizing classes now have --size* instead of --*, see migration guides
+- all typography sizing classes now have --size* instead of --*, see migration guides
 
 <a name="3.0.0-beta.3"></a>
 
@@ -586,7 +586,7 @@ Also updates IllustratedMessage and ActionButton to share `--mod-` properties.
 
 ### ✨ Features
 
--   make IllustratedMessage support RTL ([3183eff](https://github.com/adobe/spectrum-css/commit/3183eff))
+- make IllustratedMessage support RTL ([3183eff](https://github.com/adobe/spectrum-css/commit/3183eff))
 
 <a name="2.1.1"></a>
 
@@ -604,7 +604,7 @@ Also updates IllustratedMessage and ActionButton to share `--mod-` properties.
 
 ### ✨ Features
 
--   adding t-shirt sized typography, fixes [#210](https://github.com/adobe/spectrum-css/issues/210), closes [#416](https://github.com/adobe/spectrum-css/issues/416) ([#408](https://github.com/adobe/spectrum-css/issues/408)) ([3921bcb](https://github.com/adobe/spectrum-css/commit/3921bcb)), closes [#523](https://github.com/adobe/spectrum-css/issues/523)
+- adding t-shirt sized typography, fixes [#210](https://github.com/adobe/spectrum-css/issues/210), closes [#416](https://github.com/adobe/spectrum-css/issues/416) ([#408](https://github.com/adobe/spectrum-css/issues/408)) ([3921bcb](https://github.com/adobe/spectrum-css/commit/3921bcb)), closes [#523](https://github.com/adobe/spectrum-css/issues/523)
 
 <a name="2.0.3"></a>
 
@@ -638,4 +638,4 @@ Also updates IllustratedMessage and ActionButton to share `--mod-` properties.
 
 ### ✨ Features
 
--   move to individually versioned packages with Lerna ([#265](https://github.com/adobe/spectrum-css/issues/265)) ([cb7fd4b](https://github.com/adobe/spectrum-css/commit/cb7fd4b)), closes [#231](https://github.com/adobe/spectrum-css/issues/231) [#214](https://github.com/adobe/spectrum-css/issues/214) [#229](https://github.com/adobe/spectrum-css/issues/229) [#240](https://github.com/adobe/spectrum-css/issues/240) [#239](https://github.com/adobe/spectrum-css/issues/239) [#161](https://github.com/adobe/spectrum-css/issues/161) [#242](https://github.com/adobe/spectrum-css/issues/242) [#246](https://github.com/adobe/spectrum-css/issues/246) [#219](https://github.com/adobe/spectrum-css/issues/219) [#235](https://github.com/adobe/spectrum-css/issues/235) [#189](https://github.com/adobe/spectrum-css/issues/189) [#248](https://github.com/adobe/spectrum-css/issues/248) [#232](https://github.com/adobe/spectrum-css/issues/232) [#248](https://github.com/adobe/spectrum-css/issues/248) [#218](https://github.com/adobe/spectrum-css/issues/218) [#237](https://github.com/adobe/spectrum-css/issues/237) [#255](https://github.com/adobe/spectrum-css/issues/255) [#256](https://github.com/adobe/spectrum-css/issues/256) [#258](https://github.com/adobe/spectrum-css/issues/258) [#257](https://github.com/adobe/spectrum-css/issues/257) [#259](https://github.com/adobe/spectrum-css/issues/259)
+- move to individually versioned packages with Lerna ([#265](https://github.com/adobe/spectrum-css/issues/265)) ([cb7fd4b](https://github.com/adobe/spectrum-css/commit/cb7fd4b)), closes [#231](https://github.com/adobe/spectrum-css/issues/231) [#214](https://github.com/adobe/spectrum-css/issues/214) [#229](https://github.com/adobe/spectrum-css/issues/229) [#240](https://github.com/adobe/spectrum-css/issues/240) [#239](https://github.com/adobe/spectrum-css/issues/239) [#161](https://github.com/adobe/spectrum-css/issues/161) [#242](https://github.com/adobe/spectrum-css/issues/242) [#246](https://github.com/adobe/spectrum-css/issues/246) [#219](https://github.com/adobe/spectrum-css/issues/219) [#235](https://github.com/adobe/spectrum-css/issues/235) [#189](https://github.com/adobe/spectrum-css/issues/189) [#248](https://github.com/adobe/spectrum-css/issues/248) [#232](https://github.com/adobe/spectrum-css/issues/232) [#248](https://github.com/adobe/spectrum-css/issues/248) [#218](https://github.com/adobe/spectrum-css/issues/218) [#237](https://github.com/adobe/spectrum-css/issues/237) [#255](https://github.com/adobe/spectrum-css/issues/255) [#256](https://github.com/adobe/spectrum-css/issues/256) [#258](https://github.com/adobe/spectrum-css/issues/258) [#257](https://github.com/adobe/spectrum-css/issues/257) [#259](https://github.com/adobe/spectrum-css/issues/259)

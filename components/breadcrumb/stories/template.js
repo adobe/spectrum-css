@@ -17,8 +17,7 @@ export const Template = ({
 	const { express } = globals;
 
 	try {
-		if (!express)
-			import(/* webpackPrefetch: true */ "../themes/spectrum.css");
+		if (!express) import(/* webpackPrefetch: true */ "../themes/spectrum.css");
 		else import(/* webpackPrefetch: true */ "../themes/express.css");
 	} catch (e) {
 		console.warn(e);
@@ -29,12 +28,8 @@ export const Template = ({
 			<ul
 				class=${classMap({
 					[rootClass]: true,
-					[`${rootClass}--${variant}`]:
-						typeof variant !== "undefined",
-					...customClasses.reduce(
-						(a, c) => ({ ...a, [c]: true }),
-						{}
-					),
+					[`${rootClass}--${variant}`]: typeof variant !== "undefined",
+					...customClasses.reduce((a, c) => ({ ...a, [c]: true }), {}),
 				})}
 			>
 				${items.map((item, idx, arr) => {
@@ -69,9 +64,7 @@ export const Template = ({
 											${label}
 										</div>`,
 									() =>
-										html`<a
-											class="${rootClass}-itemLink"
-											aria-current="page"
+										html`<a class="${rootClass}-itemLink" aria-current="page"
 											>${label}</a
 										>`
 								)

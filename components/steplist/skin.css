@@ -33,9 +33,7 @@ governing permissions and limitations under the License.
 				color: var(--spectrum-steplist-complete-label-text-color);
 			}
 			.spectrum-Steplist-marker {
-				background-color: var(
-					--spectrum-steplist-complete-marker-color
-				);
+				background-color: var(--spectrum-steplist-complete-marker-color);
 			}
 		}
 
@@ -52,9 +50,7 @@ governing permissions and limitations under the License.
 		&.is-complete,
 		&.is-selected {
 			.spectrum-Steplist-segment {
-				border-bottom-color: var(
-					--spectrum-steplist-complete-segment-color
-				);
+				border-bottom-color: var(--spectrum-steplist-complete-segment-color);
 			}
 		}
 	}

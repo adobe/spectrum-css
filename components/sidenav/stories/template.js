@@ -55,12 +55,8 @@ export const Template = ({
 			<ul
 				class=${classMap({
 					[rootClass]: true,
-					[`${rootClass}--${variant}`]:
-						typeof variant !== "undefined",
-					...customClasses.reduce(
-						(a, c) => ({ ...a, [c]: true }),
-						{}
-					),
+					[`${rootClass}--${variant}`]: typeof variant !== "undefined",
+					...customClasses.reduce((a, c) => ({ ...a, [c]: true }), {}),
 				})}
 			>
 				${repeat(
@@ -83,16 +79,12 @@ export const Template = ({
 										  >
 												${item.category}
 										  </h2>`
-										: html`<a
-												href=${item.link}
-												class="${rootClass}-itemLink"
+										: html`<a href=${item.link} class="${rootClass}-itemLink"
 												>${item.title}</a
 										  >`}
 									<ul
 										class=${rootClass}
-										aria-labelledby=${ifDefined(
-											item.category
-										)
+										aria-labelledby=${ifDefined(item.category)
 											? `${item.id}-heading`
 											: ""}
 									>

@@ -43,13 +43,14 @@ function getAllVars() {
 	return new Promise((resolve, reject) => {
 		let variableList;
 
-		gulp.src([
-			`${dirs.components}/vars/css/themes/*.css`,
-			`${dirs.components}/vars/css/scales/*.css`,
-			`${dirs.components}/vars/css/components/*.css`,
-			`${dirs.components}/vars/css/globals/*.css`,
-			`${dirs.components}/tokens/dist/index.css`,
-		])
+		gulp
+			.src([
+				`${dirs.components}/vars/css/themes/*.css`,
+				`${dirs.components}/vars/css/scales/*.css`,
+				`${dirs.components}/vars/css/components/*.css`,
+				`${dirs.components}/vars/css/globals/*.css`,
+				`${dirs.components}/tokens/dist/index.css`,
+			])
 			.pipe(concat("everything.css"))
 			.pipe(
 				through.obj(function getAllVars(file, enc, cb) {
@@ -82,7 +83,8 @@ function getUsedVars() {
 
 		let allVars = await getAllVars();
 
-		gulp.src(`${dirs.components}/*/dist/index-vars.css`)
+		gulp
+			.src(`${dirs.components}/*/dist/index-vars.css`)
 			.pipe(concat("everything.css"))
 			.pipe(
 				through.obj(function getUsedVars(file, enc, cb) {
@@ -122,10 +124,8 @@ function buildUnique() {
 		let variableList = await getUsedVars();
 
 		// For each stop and scale, filter by used variables only
-		gulp.src([
-			path.join(varDir, "*.css"),
-			"!" + path.join(varDir, "index.css"),
-		])
+		gulp
+			.src([path.join(varDir, "*.css"), "!" + path.join(varDir, "index.css")])
 			.pipe(
 				through.obj(function makeUnique(file, enc, cb) {
 					let css = file.contents.toString();

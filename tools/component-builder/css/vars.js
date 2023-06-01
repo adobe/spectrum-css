@@ -26,9 +26,7 @@ function bakeVars() {
 		})
 		.pipe(
 			through.obj(async function doBake(file, enc, cb) {
-				let pkg = JSON.parse(
-					await fsp.readFile(path.join("package.json"))
-				);
+				let pkg = JSON.parse(await fsp.readFile(path.join("package.json")));
 				let pkgName = pkg.name.split("/").pop();
 				let classNames = varUtils.getClassNames(file.contents, pkgName);
 
@@ -51,9 +49,7 @@ function bakeVars() {
 					varName = `${varName}`.cyan;
 					if (varName.indexOf("spectrum-global") !== -1) {
 						logger.warn(
-							`${"◆".red}  ${
-								pkg.name
-							} directly uses global variable ${varName}`
+							`${"◆".red}  ${pkg.name} directly uses global variable ${varName}`
 						);
 					} else if (
 						!allVars[varName] &&
@@ -80,10 +76,7 @@ function bakeVars() {
 					return cb(new Error(errors.join("\n")), file);
 				}
 
-				let contents = varUtils.getVariableDeclarations(
-					classNames,
-					usedVars
-				);
+				let contents = varUtils.getVariableDeclarations(classNames, usedVars);
 				let newFile = file.clone({ contents: false });
 				newFile.path = path.join(file.base, `vars.css`);
 				newFile.contents = Buffer.from(contents);

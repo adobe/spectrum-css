@@ -69,8 +69,7 @@ governing permissions and limitations under the License.
 		border: var(--spectrum-alias-focus-ring-size) solid transparent;
 		border-radius: var(--spectrum-sidenav-item-border-radius);
 
-		transition: border var(--spectrum-global-animation-duration-100)
-			ease-out;
+		transition: border var(--spectrum-global-animation-duration-100) ease-out;
 	}
 
 	.spectrum-SideNav-itemIcon {

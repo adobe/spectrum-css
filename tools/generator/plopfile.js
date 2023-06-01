@@ -83,9 +83,7 @@ export default async (plop) => {
 					if (`${code}` === "0") {
 						resolve(`Successfully installed dependencies.`);
 					} else {
-						reject(
-							`Failed to install dependencies; exit code ${code}.`
-						);
+						reject(`Failed to install dependencies; exit code ${code}.`);
 					}
 				});
 			})
@@ -103,15 +101,10 @@ export default async (plop) => {
 						return "Naming is hard; but it must have a name. You can always change it later.";
 					}
 
-					const name = plop.renderString(
-						"{{ lowerCase (camelCase name) }}",
-						{ name: answer }
-					);
-					if (
-						name &&
-						existingComponents &&
-						existingComponents.includes(name)
-					) {
+					const name = plop.renderString("{{ lowerCase (camelCase name) }}", {
+						name: answer,
+					});
+					if (name && existingComponents && existingComponents.includes(name)) {
 						return "A component with that name already exists. You can always change it later.";
 					}
 
@@ -163,13 +156,9 @@ export default async (plop) => {
 				message: "Select the component you wish to update",
 				source: (_, input = "") =>
 					new Promise((resolve, reject) => {
-						if (existingComponents.length === 0)
-							reject("No components found.");
+						if (existingComponents.length === 0) reject("No components found.");
 						setTimeout(() => {
-							const results = fuzzy.filter(
-								input,
-								existingComponents
-							);
+							const results = fuzzy.filter(input, existingComponents);
 							if (results && results.length > 0)
 								resolve(results.map((r) => r.string));
 						}, Math.random() * 470 + 30);
@@ -178,21 +167,14 @@ export default async (plop) => {
 			},
 		],
 		actions: (data) => {
-			data.name = plop.renderString(
-				"{{ sentenceCase folderName }}",
-				data
-			);
+			data.name = plop.renderString("{{ sentenceCase folderName }}", data);
 			data.description = `The ${data.name} component is...`;
 
 			const metadataPath = plop.renderString(
 				`${srcPath}/{{ folderName }}/metadata`,
 				data
 			);
-			data.example = getExistingMarkupExample(
-				metadataPath,
-				data.name,
-				plop
-			);
+			data.example = getExistingMarkupExample(metadataPath, data.name, plop);
 
 			return [
 				{

@@ -19,7 +19,7 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 ### ✨ Features
 
--   **alertbanner:** add AlertBanner component ([#1798](https://github.com/adobe/spectrum-css/issues/1798)) ([1610e7a](https://github.com/adobe/spectrum-css/commit/1610e7a))
+- **alertbanner:** add AlertBanner component ([#1798](https://github.com/adobe/spectrum-css/issues/1798)) ([1610e7a](https://github.com/adobe/spectrum-css/commit/1610e7a))
 
 <a name="10.0.11"></a>
 
@@ -115,20 +115,20 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 🗓 2023-04-25 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/button@9.1.6...@spectrum-css/button@10.0.0)
 
--   fix(button)!: height and accessibility fixes (#1794) ([132576a](https://github.com/adobe/spectrum-css/commit/132576a)), closes [#1794](https://github.com/adobe/spectrum-css/issues/1794)
+- fix(button)!: height and accessibility fixes (#1794) ([132576a](https://github.com/adobe/spectrum-css/commit/132576a)), closes [#1794](https://github.com/adobe/spectrum-css/issues/1794)
 
 ### 🛑 BREAKING CHANGES
 
--   removes: `--mod-button-padding-label-top` & `--mod-button-padding-label-bottom`. Use: `--mod-button-top-to-text`& `--mod-button-bottom-to-text` instead.
+- removes: `--mod-button-padding-label-top` & `--mod-button-padding-label-bottom`. Use: `--mod-button-top-to-text`& `--mod-button-bottom-to-text` instead.
 
 Additional changes:
 
--   fix(button): update aria-labels for icon only variant
--   fix(button): remove unneeded isOpen attribute
--   fix(button): override icon size for icon only
--   fix(button): update line height
--   fix(button): update button padding with custom tokens
--   fix(button): remove unneeded aria-labels
+- fix(button): update aria-labels for icon only variant
+- fix(button): remove unneeded isOpen attribute
+- fix(button): override icon size for icon only
+- fix(button): update line height
+- fix(button): update button padding with custom tokens
+- fix(button): remove unneeded aria-labels
 
 <a name="9.1.6"></a>
 
@@ -178,7 +178,7 @@ Additional changes:
 
 ### 🐛 Bug fixes
 
--   **button:** icon only spacing ([#1768](https://github.com/adobe/spectrum-css/issues/1768)) ([dc33b04](https://github.com/adobe/spectrum-css/commit/dc33b04))
+- **button:** icon only spacing ([#1768](https://github.com/adobe/spectrum-css/issues/1768)) ([dc33b04](https://github.com/adobe/spectrum-css/commit/dc33b04))
 
 <a name="9.1.0"></a>
 
@@ -188,7 +188,7 @@ Additional changes:
 
 ### ✨ Features
 
--   **button:** add icon only variant ([#1755](https://github.com/adobe/spectrum-css/issues/1755)) ([ec34d58](https://github.com/adobe/spectrum-css/commit/ec34d58))
+- **button:** add icon only variant ([#1755](https://github.com/adobe/spectrum-css/issues/1755)) ([ec34d58](https://github.com/adobe/spectrum-css/commit/ec34d58))
 
 <a name="9.0.14"></a>
 
@@ -308,11 +308,11 @@ Additional changes:
 
 🗓 2023-02-01 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/button@8.0.0...@spectrum-css/button@9.0.0)
 
--   chore(tokens)!: use latest dependency & fix build error (#1591) ([f2532e7](https://github.com/adobe/spectrum-css/commit/f2532e7)), closes [#1591](https://github.com/adobe/spectrum-css/issues/1591)
+- chore(tokens)!: use latest dependency & fix build error (#1591) ([f2532e7](https://github.com/adobe/spectrum-css/commit/f2532e7)), closes [#1591](https://github.com/adobe/spectrum-css/issues/1591)
 
 ### 🛑 BREAKING CHANGES
 
--   uses latest `@adobe/spectrum-tokens` dependency which includes token renames
+- uses latest `@adobe/spectrum-tokens` dependency which includes token renames
 
 <a name="8.0.0"></a>
 
@@ -320,11 +320,11 @@ Additional changes:
 
 🗓 2023-02-01 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/button@6.0.21...@spectrum-css/button@8.0.0)
 
--   feat(button)!: migrating button to core-tokens (CSS-97) (#1479) ([0640be0](https://github.com/adobe/spectrum-css/commit/0640be0)), closes [#1479](https://github.com/adobe/spectrum-css/issues/1479)
+- feat(button)!: migrating button to core-tokens (CSS-97) (#1479) ([0640be0](https://github.com/adobe/spectrum-css/commit/0640be0)), closes [#1479](https://github.com/adobe/spectrum-css/issues/1479)
 
 ### 🛑 BREAKING CHANGES
 
--   migrates the Button to core tokens
+- migrates the Button to core tokens
 
 <a name="7.0.0"></a>
 
@@ -332,11 +332,11 @@ Additional changes:
 
 🗓 2023-01-31 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/button@7.0.0-beta.6...@spectrum-css/button@7.0.0)
 
--   feat(button)!: migrating button to core-tokens (CSS-97) (#1479) ([0640be0](https://github.com/adobe/spectrum-css/commit/0640be0)), closes [#1479](https://github.com/adobe/spectrum-css/issues/1479)
+- feat(button)!: migrating button to core-tokens (CSS-97) (#1479) ([0640be0](https://github.com/adobe/spectrum-css/commit/0640be0)), closes [#1479](https://github.com/adobe/spectrum-css/issues/1479)
 
 ### 🛑 BREAKING CHANGES
 
--   migrates the Button to core tokens
+- migrates the Button to core tokens
 
 <a name="7.0.0-beta.5"></a>
 
@@ -346,10 +346,10 @@ Additional changes:
 
 ### ✨ Features
 
--   **button!:** core token migration for button ([28786ab](https://github.com/adobe/spectrum-css/commit/28786ab))
--   fix label padding ([9f1517a](https://github.com/adobe/spectrum-css/commit/9f1517a))
--   logical padding ([bc7bb10](https://github.com/adobe/spectrum-css/commit/bc7bb10))
--   migrating to core tokens v5.0.0 ([6e640ba](https://github.com/adobe/spectrum-css/commit/6e640ba))
+- **button!:** core token migration for button ([28786ab](https://github.com/adobe/spectrum-css/commit/28786ab))
+- fix label padding ([9f1517a](https://github.com/adobe/spectrum-css/commit/9f1517a))
+- logical padding ([bc7bb10](https://github.com/adobe/spectrum-css/commit/bc7bb10))
+- migrating to core tokens v5.0.0 ([6e640ba](https://github.com/adobe/spectrum-css/commit/6e640ba))
 
 <a name="6.0.21"></a>
 
@@ -439,9 +439,9 @@ Additional changes:
 
 ### 🐛 Bug fixes
 
--   button WHCM ([495c409](https://github.com/adobe/spectrum-css/commit/495c409))
--   button WHCM disabled text ([124f923](https://github.com/adobe/spectrum-css/commit/124f923))
--   remove commented lines from button ([3f857b9](https://github.com/adobe/spectrum-css/commit/3f857b9))
+- button WHCM ([495c409](https://github.com/adobe/spectrum-css/commit/495c409))
+- button WHCM disabled text ([124f923](https://github.com/adobe/spectrum-css/commit/124f923))
+- remove commented lines from button ([3f857b9](https://github.com/adobe/spectrum-css/commit/3f857b9))
 
 <a name="6.0.10"></a>
 
@@ -507,7 +507,7 @@ Additional changes:
 
 ### 🐛 Bug fixes
 
--   correct focus-ring border-radius, fixes [#1378](https://github.com/adobe/spectrum-css/issues/1378) ([df4ea49](https://github.com/adobe/spectrum-css/commit/df4ea49))
+- correct focus-ring border-radius, fixes [#1378](https://github.com/adobe/spectrum-css/issues/1378) ([df4ea49](https://github.com/adobe/spectrum-css/commit/df4ea49))
 
 <a name="6.0.2"></a>
 
@@ -533,20 +533,20 @@ Additional changes:
 
 ### ✨ Features
 
--   add back component-level variables for Button, fix Accent color in Express ([#1342](https://github.com/adobe/spectrum-css/issues/1342)) ([36bf0c3](https://github.com/adobe/spectrum-css/commit/36bf0c3))
--   break out ClearButton and LogicButton into their own packages ([3cc0a5f](https://github.com/adobe/spectrum-css/commit/3cc0a5f))
--   new Button API ([e0ee36c](https://github.com/adobe/spectrum-css/commit/e0ee36c))
+- add back component-level variables for Button, fix Accent color in Express ([#1342](https://github.com/adobe/spectrum-css/issues/1342)) ([36bf0c3](https://github.com/adobe/spectrum-css/commit/36bf0c3))
+- break out ClearButton and LogicButton into their own packages ([3cc0a5f](https://github.com/adobe/spectrum-css/commit/3cc0a5f))
+- new Button API ([e0ee36c](https://github.com/adobe/spectrum-css/commit/e0ee36c))
 
 ### 🐛 Bug fixes
 
--   don't override staticWhite/staticBlack with staticNone ([741c0cf](https://github.com/adobe/spectrum-css/commit/741c0cf))
--   focus-ring color for staticWhite/staticBlack ([52958d9](https://github.com/adobe/spectrum-css/commit/52958d9))
--   unbreak the build ([d595cad](https://github.com/adobe/spectrum-css/commit/d595cad))
--   update peer dependencies ([97810cf](https://github.com/adobe/spectrum-css/commit/97810cf))
+- don't override staticWhite/staticBlack with staticNone ([741c0cf](https://github.com/adobe/spectrum-css/commit/741c0cf))
+- focus-ring color for staticWhite/staticBlack ([52958d9](https://github.com/adobe/spectrum-css/commit/52958d9))
+- unbreak the build ([d595cad](https://github.com/adobe/spectrum-css/commit/d595cad))
+- update peer dependencies ([97810cf](https://github.com/adobe/spectrum-css/commit/97810cf))
 
 ### 🛑 BREAKING CHANGES
 
--   CTA was renamed to Accent, Quiet is gone in favor of outline, and Fill is added
+- CTA was renamed to Accent, Quiet is gone in favor of outline, and Fill is added
 
 <a name="5.0.0"></a>
 
@@ -556,7 +556,7 @@ Additional changes:
 
 ### ✨ Features
 
--   add back component-level variables for Button, fix Accent color in Express ([#1342](https://github.com/adobe/spectrum-css/issues/1342)) ([e8ed59e](https://github.com/adobe/spectrum-css/commit/e8ed59e))
+- add back component-level variables for Button, fix Accent color in Express ([#1342](https://github.com/adobe/spectrum-css/issues/1342)) ([e8ed59e](https://github.com/adobe/spectrum-css/commit/e8ed59e))
 
 <a name="5.0.0-beta.0"></a>
 
@@ -566,18 +566,18 @@ Additional changes:
 
 ### ✨ Features
 
--   break out ClearButton and LogicButton into their own packages ([a2092ab](https://github.com/adobe/spectrum-css/commit/a2092ab))
--   new Button API ([0b9e101](https://github.com/adobe/spectrum-css/commit/0b9e101))
+- break out ClearButton and LogicButton into their own packages ([a2092ab](https://github.com/adobe/spectrum-css/commit/a2092ab))
+- new Button API ([0b9e101](https://github.com/adobe/spectrum-css/commit/0b9e101))
 
 ### 🐛 Bug fixes
 
--   don't override staticWhite/staticBlack with staticNone ([5c72803](https://github.com/adobe/spectrum-css/commit/5c72803))
--   focus-ring color for staticWhite/staticBlack ([f7bdffe](https://github.com/adobe/spectrum-css/commit/f7bdffe))
--   unbreak the build ([123add2](https://github.com/adobe/spectrum-css/commit/123add2))
+- don't override staticWhite/staticBlack with staticNone ([5c72803](https://github.com/adobe/spectrum-css/commit/5c72803))
+- focus-ring color for staticWhite/staticBlack ([f7bdffe](https://github.com/adobe/spectrum-css/commit/f7bdffe))
+- unbreak the build ([123add2](https://github.com/adobe/spectrum-css/commit/123add2))
 
 ### 🛑 BREAKING CHANGES
 
--   CTA was renamed to Accent, Quiet is gone in favor of outline, and Fill is added
+- CTA was renamed to Accent, Quiet is gone in favor of outline, and Fill is added
 
 <a name="4.1.4"></a>
 
@@ -619,13 +619,13 @@ Additional changes:
 
 ### ✨ Features
 
--   make ClearButton build again, unblock CCX ([#1304](https://github.com/adobe/spectrum-css/issues/1304)) ([ae9399a](https://github.com/adobe/spectrum-css/commit/ae9399a))
+- make ClearButton build again, unblock CCX ([#1304](https://github.com/adobe/spectrum-css/issues/1304)) ([ae9399a](https://github.com/adobe/spectrum-css/commit/ae9399a))
 
 ### 🐛 Bug fixes
 
--   refine the focus indicator per spectrum ([094e115](https://github.com/adobe/spectrum-css/commit/094e115))
--   updating version number on vars ([f535b49](https://github.com/adobe/spectrum-css/commit/f535b49))
--   windows HCM ([48bc74e](https://github.com/adobe/spectrum-css/commit/48bc74e))
+- refine the focus indicator per spectrum ([094e115](https://github.com/adobe/spectrum-css/commit/094e115))
+- updating version number on vars ([f535b49](https://github.com/adobe/spectrum-css/commit/f535b49))
+- windows HCM ([48bc74e](https://github.com/adobe/spectrum-css/commit/48bc74e))
 
 <a name="4.0.1"></a>
 
@@ -635,8 +635,8 @@ Additional changes:
 
 ### 🐛 Bug fixes
 
--   refine the focus indicator per spectrum ([094e115](https://github.com/adobe/spectrum-css/commit/094e115))
--   updating version number on vars ([f535b49](https://github.com/adobe/spectrum-css/commit/f535b49))
+- refine the focus indicator per spectrum ([094e115](https://github.com/adobe/spectrum-css/commit/094e115))
+- updating version number on vars ([f535b49](https://github.com/adobe/spectrum-css/commit/f535b49))
 
 <a name="4.0.0"></a>
 
@@ -646,8 +646,8 @@ Additional changes:
 
 ### 🐛 Bug fixes
 
--   refine the focus indicator per spectrum ([094e115](https://github.com/adobe/spectrum-css/commit/094e115))
--   updating version number on vars ([f535b49](https://github.com/adobe/spectrum-css/commit/f535b49))
+- refine the focus indicator per spectrum ([094e115](https://github.com/adobe/spectrum-css/commit/094e115))
+- updating version number on vars ([f535b49](https://github.com/adobe/spectrum-css/commit/f535b49))
 
 <a name="4.0.0-alpha.2"></a>
 
@@ -665,8 +665,8 @@ Additional changes:
 
 ### 🐛 Bug fixes
 
--   adjusted button label padding ([2c8ba8c](https://github.com/adobe/spectrum-css/commit/2c8ba8c))
--   adjusted left padding in button ([fc655a5](https://github.com/adobe/spectrum-css/commit/fc655a5))
+- adjusted button label padding ([2c8ba8c](https://github.com/adobe/spectrum-css/commit/2c8ba8c))
+- adjusted left padding in button ([fc655a5](https://github.com/adobe/spectrum-css/commit/fc655a5))
 
 <a name="4.0.0-alpha.0"></a>
 
@@ -676,13 +676,13 @@ Additional changes:
 
 ### 🐛 Bug fixes
 
--   add missing scale imports for button ([c32a552](https://github.com/adobe/spectrum-css/commit/c32a552))
--   renamed `warning` button variant to `negative` ([1e029eb](https://github.com/adobe/spectrum-css/commit/1e029eb))
+- add missing scale imports for button ([c32a552](https://github.com/adobe/spectrum-css/commit/c32a552))
+- renamed `warning` button variant to `negative` ([1e029eb](https://github.com/adobe/spectrum-css/commit/1e029eb))
 
 ### 🛑 BREAKING CHANGES
 
--   `.spectrum-Button--warning` is now
-    `.spectrum-Button--negative`
+- `.spectrum-Button--warning` is now
+  `.spectrum-Button--negative`
 
 <a name="3.0.3-alpha.0"></a>
 
@@ -692,7 +692,7 @@ Additional changes:
 
 ### 🐛 Bug fixes
 
--   updated focus ring tokens to assume keyboard focus state ([2db4755](https://github.com/adobe/spectrum-css/commit/2db4755))
+- updated focus ring tokens to assume keyboard focus state ([2db4755](https://github.com/adobe/spectrum-css/commit/2db4755))
 
 <a name="3.0.2"></a>
 
@@ -726,27 +726,27 @@ Additional changes:
 
 ### ✨ Features
 
--   button t-shirt sizing ([643c1bf](https://github.com/adobe/spectrum-css/commit/643c1bf))
--   fixup padding ([612dd0c](https://github.com/adobe/spectrum-css/commit/612dd0c))
--   implement t-shirt sizing for Action Button, closes [#936](https://github.com/adobe/spectrum-css/issues/936) ([1a9ecf6](https://github.com/adobe/spectrum-css/commit/1a9ecf6))
--   remove FieldButton, fix Button ([44026f8](https://github.com/adobe/spectrum-css/commit/44026f8))
--   t-shirt sizing for Button, closes [#938](https://github.com/adobe/spectrum-css/issues/938) ([7d9b1d1](https://github.com/adobe/spectrum-css/commit/7d9b1d1))
+- button t-shirt sizing ([643c1bf](https://github.com/adobe/spectrum-css/commit/643c1bf))
+- fixup padding ([612dd0c](https://github.com/adobe/spectrum-css/commit/612dd0c))
+- implement t-shirt sizing for Action Button, closes [#936](https://github.com/adobe/spectrum-css/issues/936) ([1a9ecf6](https://github.com/adobe/spectrum-css/commit/1a9ecf6))
+- remove FieldButton, fix Button ([44026f8](https://github.com/adobe/spectrum-css/commit/44026f8))
+- t-shirt sizing for Button, closes [#938](https://github.com/adobe/spectrum-css/issues/938) ([7d9b1d1](https://github.com/adobe/spectrum-css/commit/7d9b1d1))
 
 ### 🐛 Bug fixes
 
--   add back missing Button focus-ring ([bfe3692](https://github.com/adobe/spectrum-css/commit/bfe3692))
--   correct height of small Button ([2221e0a](https://github.com/adobe/spectrum-css/commit/2221e0a))
--   missing token used by SplitButton ([0828cb1](https://github.com/adobe/spectrum-css/commit/0828cb1))
--   override Button font-weight while we wait for it to be fixed in DNA ([7ffd05a](https://github.com/adobe/spectrum-css/commit/7ffd05a))
--   remove Button font-weight hack ([5261e40](https://github.com/adobe/spectrum-css/commit/5261e40))
--   unbreak the build for SplitButton ([7c98dd5](https://github.com/adobe/spectrum-css/commit/7c98dd5))
--   update main, resolved conflicts ([d7880a2](https://github.com/adobe/spectrum-css/commit/d7880a2))
+- add back missing Button focus-ring ([bfe3692](https://github.com/adobe/spectrum-css/commit/bfe3692))
+- correct height of small Button ([2221e0a](https://github.com/adobe/spectrum-css/commit/2221e0a))
+- missing token used by SplitButton ([0828cb1](https://github.com/adobe/spectrum-css/commit/0828cb1))
+- override Button font-weight while we wait for it to be fixed in DNA ([7ffd05a](https://github.com/adobe/spectrum-css/commit/7ffd05a))
+- remove Button font-weight hack ([5261e40](https://github.com/adobe/spectrum-css/commit/5261e40))
+- unbreak the build for SplitButton ([7c98dd5](https://github.com/adobe/spectrum-css/commit/7c98dd5))
+- update main, resolved conflicts ([d7880a2](https://github.com/adobe/spectrum-css/commit/d7880a2))
 
 ### 🛑 BREAKING CHANGES
 
--   .spectrum-FieldButton has been removed, use .spectrum-ActionButton instead
--   t-shirt size must be added for button to work (i.e. .spectrum-Button--sizeM)
--   .spectrum-ActionButton is no longer part of the button component, use the actionbutton component
+- .spectrum-FieldButton has been removed, use .spectrum-ActionButton instead
+- t-shirt size must be added for button to work (i.e. .spectrum-Button--sizeM)
+- .spectrum-ActionButton is no longer part of the button component, use the actionbutton component
 
 <a name="3.0.0-beta.5"></a>
 
@@ -764,12 +764,12 @@ Additional changes:
 
 ### 🐛 Bug fixes
 
--   actionButton focus-ring active state visual issue [#755](https://github.com/adobe/spectrum-css/issues/755) ([#777](https://github.com/adobe/spectrum-css/issues/777)) ([64af508](https://github.com/adobe/spectrum-css/commit/64af508))
--   fix the issues caused by component rename ([#778](https://github.com/adobe/spectrum-css/issues/778)) ([e1d180c](https://github.com/adobe/spectrum-css/commit/e1d180c))
--   removed deprecated tokens in button ([281027d](https://github.com/adobe/spectrum-css/commit/281027d))
--   resolving conflicts with main ([8cafffa](https://github.com/adobe/spectrum-css/commit/8cafffa))
--   wip fix more components ([b74dbb8](https://github.com/adobe/spectrum-css/commit/b74dbb8))
--   workflow icon size change to medium ([#917](https://github.com/adobe/spectrum-css/issues/917)) ([a609ee6](https://github.com/adobe/spectrum-css/commit/a609ee6))
+- actionButton focus-ring active state visual issue [#755](https://github.com/adobe/spectrum-css/issues/755) ([#777](https://github.com/adobe/spectrum-css/issues/777)) ([64af508](https://github.com/adobe/spectrum-css/commit/64af508))
+- fix the issues caused by component rename ([#778](https://github.com/adobe/spectrum-css/issues/778)) ([e1d180c](https://github.com/adobe/spectrum-css/commit/e1d180c))
+- removed deprecated tokens in button ([281027d](https://github.com/adobe/spectrum-css/commit/281027d))
+- resolving conflicts with main ([8cafffa](https://github.com/adobe/spectrum-css/commit/8cafffa))
+- wip fix more components ([b74dbb8](https://github.com/adobe/spectrum-css/commit/b74dbb8))
+- workflow icon size change to medium ([#917](https://github.com/adobe/spectrum-css/issues/917)) ([a609ee6](https://github.com/adobe/spectrum-css/commit/a609ee6))
 
 <a name="3.0.0-beta.3"></a>
 
@@ -779,7 +779,7 @@ Additional changes:
 
 ### 🐛 Bug fixes
 
--   correct OverBackground ClearButton focus-ring, fixes [#730](https://github.com/adobe/spectrum-css/issues/730) ([#733](https://github.com/adobe/spectrum-css/issues/733)) ([5a34fa4](https://github.com/adobe/spectrum-css/commit/5a34fa4))
+- correct OverBackground ClearButton focus-ring, fixes [#730](https://github.com/adobe/spectrum-css/issues/730) ([#733](https://github.com/adobe/spectrum-css/issues/733)) ([5a34fa4](https://github.com/adobe/spectrum-css/commit/5a34fa4))
 
 <a name="3.0.0-beta.2"></a>
 
@@ -787,23 +787,23 @@ Additional changes:
 
 🗓 2020-05-14 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/button@3.0.0-beta.1...@spectrum-css/button@3.0.0-beta.2)
 
--   Button Breaking Changes (#649) ([abf116b](https://github.com/adobe/spectrum-css/commit/abf116b)), closes [#649](https://github.com/adobe/spectrum-css/issues/649) [#519](https://github.com/adobe/spectrum-css/issues/519) [#620](https://github.com/adobe/spectrum-css/issues/620) [#606](https://github.com/adobe/spectrum-css/issues/606)
+- Button Breaking Changes (#649) ([abf116b](https://github.com/adobe/spectrum-css/commit/abf116b)), closes [#649](https://github.com/adobe/spectrum-css/issues/649) [#519](https://github.com/adobe/spectrum-css/issues/519) [#620](https://github.com/adobe/spectrum-css/issues/620) [#606](https://github.com/adobe/spectrum-css/issues/606)
 
 ### 🛑 BREAKING CHANGES
 
--   Tool button has been removed
+- Tool button has been removed
 
--   fix: interaction on mobile, text select
+- fix: interaction on mobile, text select
 
--   feat: add Emphasized Action Button
+- feat: add Emphasized Action Button
 
--   docs: add exampes for Quiet Emphasized Action Button
+- docs: add exampes for Quiet Emphasized Action Button
 
 fix: correct Quiet Emphasized Action Button
 
--   feat: button group
--   Button group no longer supports Action Button, just normal buttons
--   Margins have been removed from adjacent buttons. Use ButtonGroup instead.
+- feat: button group
+- Button group no longer supports Action Button, just normal buttons
+- Margins have been removed from adjacent buttons. Use ButtonGroup instead.
 
 <a name="3.0.0-beta.1"></a>
 
@@ -821,7 +821,7 @@ fix: correct Quiet Emphasized Action Button
 
 ### ✨ Features
 
--   make Button support RTL ([0f5aa5c](https://github.com/adobe/spectrum-css/commit/0f5aa5c))
+- make Button support RTL ([0f5aa5c](https://github.com/adobe/spectrum-css/commit/0f5aa5c))
 
 <a name="2.2.0"></a>
 
@@ -831,7 +831,7 @@ fix: correct Quiet Emphasized Action Button
 
 ### ✨ Features
 
--   halo focus ring, closes [#112](https://github.com/adobe/spectrum-css/issues/112), closes [#573](https://github.com/adobe/spectrum-css/issues/573) ([#603](https://github.com/adobe/spectrum-css/issues/603)) ([d87e9a5](https://github.com/adobe/spectrum-css/commit/d87e9a5)), closes [#619](https://github.com/adobe/spectrum-css/issues/619)
+- halo focus ring, closes [#112](https://github.com/adobe/spectrum-css/issues/112), closes [#573](https://github.com/adobe/spectrum-css/issues/573) ([#603](https://github.com/adobe/spectrum-css/issues/603)) ([d87e9a5](https://github.com/adobe/spectrum-css/commit/d87e9a5)), closes [#619](https://github.com/adobe/spectrum-css/issues/619)
 
 <a name="2.1.0"></a>
 
@@ -841,11 +841,11 @@ fix: correct Quiet Emphasized Action Button
 
 ### ✨ Features
 
--   adding t-shirt sized typography, fixes [#210](https://github.com/adobe/spectrum-css/issues/210), closes [#416](https://github.com/adobe/spectrum-css/issues/416) ([#408](https://github.com/adobe/spectrum-css/issues/408)) ([3921bcb](https://github.com/adobe/spectrum-css/commit/3921bcb)), closes [#523](https://github.com/adobe/spectrum-css/issues/523)
+- adding t-shirt sized typography, fixes [#210](https://github.com/adobe/spectrum-css/issues/210), closes [#416](https://github.com/adobe/spectrum-css/issues/416) ([#408](https://github.com/adobe/spectrum-css/issues/408)) ([3921bcb](https://github.com/adobe/spectrum-css/commit/3921bcb)), closes [#523](https://github.com/adobe/spectrum-css/issues/523)
 
 ### 🐛 Bug fixes
 
--   adjust Button text alignment, fixes [#516](https://github.com/adobe/spectrum-css/issues/516) ([7f36619](https://github.com/adobe/spectrum-css/commit/7f36619))
+- adjust Button text alignment, fixes [#516](https://github.com/adobe/spectrum-css/issues/516) ([7f36619](https://github.com/adobe/spectrum-css/commit/7f36619))
 
 <a name="2.0.3"></a>
 
@@ -879,4 +879,4 @@ fix: correct Quiet Emphasized Action Button
 
 ### ✨ Features
 
--   move to individually versioned packages with Lerna ([#265](https://github.com/adobe/spectrum-css/issues/265)) ([cb7fd4b](https://github.com/adobe/spectrum-css/commit/cb7fd4b)), closes [#231](https://github.com/adobe/spectrum-css/issues/231) [#214](https://github.com/adobe/spectrum-css/issues/214) [#229](https://github.com/adobe/spectrum-css/issues/229) [#240](https://github.com/adobe/spectrum-css/issues/240) [#239](https://github.com/adobe/spectrum-css/issues/239) [#161](https://github.com/adobe/spectrum-css/issues/161) [#242](https://github.com/adobe/spectrum-css/issues/242) [#246](https://github.com/adobe/spectrum-css/issues/246) [#219](https://github.com/adobe/spectrum-css/issues/219) [#235](https://github.com/adobe/spectrum-css/issues/235) [#189](https://github.com/adobe/spectrum-css/issues/189) [#248](https://github.com/adobe/spectrum-css/issues/248) [#232](https://github.com/adobe/spectrum-css/issues/232) [#248](https://github.com/adobe/spectrum-css/issues/248) [#218](https://github.com/adobe/spectrum-css/issues/218) [#237](https://github.com/adobe/spectrum-css/issues/237) [#255](https://github.com/adobe/spectrum-css/issues/255) [#256](https://github.com/adobe/spectrum-css/issues/256) [#258](https://github.com/adobe/spectrum-css/issues/258) [#257](https://github.com/adobe/spectrum-css/issues/257) [#259](https://github.com/adobe/spectrum-css/issues/259)
+- move to individually versioned packages with Lerna ([#265](https://github.com/adobe/spectrum-css/issues/265)) ([cb7fd4b](https://github.com/adobe/spectrum-css/commit/cb7fd4b)), closes [#231](https://github.com/adobe/spectrum-css/issues/231) [#214](https://github.com/adobe/spectrum-css/issues/214) [#229](https://github.com/adobe/spectrum-css/issues/229) [#240](https://github.com/adobe/spectrum-css/issues/240) [#239](https://github.com/adobe/spectrum-css/issues/239) [#161](https://github.com/adobe/spectrum-css/issues/161) [#242](https://github.com/adobe/spectrum-css/issues/242) [#246](https://github.com/adobe/spectrum-css/issues/246) [#219](https://github.com/adobe/spectrum-css/issues/219) [#235](https://github.com/adobe/spectrum-css/issues/235) [#189](https://github.com/adobe/spectrum-css/issues/189) [#248](https://github.com/adobe/spectrum-css/issues/248) [#232](https://github.com/adobe/spectrum-css/issues/232) [#248](https://github.com/adobe/spectrum-css/issues/248) [#218](https://github.com/adobe/spectrum-css/issues/218) [#237](https://github.com/adobe/spectrum-css/issues/237) [#255](https://github.com/adobe/spectrum-css/issues/255) [#256](https://github.com/adobe/spectrum-css/issues/256) [#258](https://github.com/adobe/spectrum-css/issues/258) [#257](https://github.com/adobe/spectrum-css/issues/257) [#259](https://github.com/adobe/spectrum-css/issues/259)

@@ -58,9 +58,7 @@ governing permissions and limitations under the License.
 	--spectrum-progressbar-fill-color-positive: var(
 		--spectrum-positive-visual-color
 	);
-	--spectrum-progressbar-fill-color-notice: var(
-		--spectrum-notice-visual-color
-	);
+	--spectrum-progressbar-fill-color-notice: var(--spectrum-notice-visual-color);
 	--spectrum-progressbar-fill-color-negative: var(
 		--spectrum-negative-visual-color
 	);
@@ -272,10 +270,7 @@ governing permissions and limitations under the License.
 		transition: width 1s;
 		background: var(
 			--highcontrast-progressbar-fill-color,
-			var(
-				--mod-progressbar-fill-color,
-				var(--spectrum-progressbar-fill-color)
-			)
+			var(--mod-progressbar-fill-color, var(--spectrum-progressbar-fill-color))
 		);
 	}
 

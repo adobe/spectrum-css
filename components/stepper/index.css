@@ -29,9 +29,7 @@ governing permissions and limitations under the License.
 	.spectrum--medium {
 		& {
 			--spectrum-stepper-width: var(--spectrum-stepper-width-medium);
-			--spectrum-stepper-icon-width: var(
-				--spectrum-stepper-icon-width-medium
-			);
+			--spectrum-stepper-icon-width: var(--spectrum-stepper-icon-width-medium);
 			--spectrum-stepper-button-padding: calc(
 				var(--spectrum-spacing-200) / 2
 			); /* 6px md + 7px lg - previously 6px md + 7.5px lg */
@@ -41,9 +39,7 @@ governing permissions and limitations under the License.
 	.spectrum--large {
 		& {
 			--spectrum-stepper-width: var(--spectrum-stepper-width-large);
-			--spectrum-stepper-icon-width: var(
-				--spectrum-stepper-icon-width-large
-			);
+			--spectrum-stepper-icon-width: var(--spectrum-stepper-icon-width-large);
 			--spectrum-stepper-button-padding: calc(
 				var(--spectrum-spacing-100) / 2
 			); /* 6px md + 7px lg - previously 6px md + 7.5px lg */
@@ -66,9 +62,7 @@ governing permissions and limitations under the License.
 	/* 14.5px minus 6px = 8.5px */
 
 	/*** New added tokens begin here - chosen to match textfield - reevaluate when fully migrating Stepper ***/
-	--spectrum-stepper-animation-duration: var(
-		--spectrum-animation-duration-100
-	);
+	--spectrum-stepper-animation-duration: var(--spectrum-animation-duration-100);
 	--spectrum-stepper-buttons-height: var(
 		--spectrum-component-height-100
 	); /* from textfield height */
@@ -296,9 +290,7 @@ governing permissions and limitations under the License.
 				--highcontrast-stepper-button-background-color-keyboard-focus,
 				var(
 					--mod-stepper-button-background-color-keyboard-focus,
-					var(
-						--spectrum-stepper-button-background-color-keyboard-focus
-					)
+					var(--spectrum-stepper-button-background-color-keyboard-focus)
 				)
 			);
 		}
@@ -313,9 +305,7 @@ governing permissions and limitations under the License.
 					--highcontrast-stepper-border-color-invalid-keyboard-focus,
 					var(
 						--mod-stepper-border-color-invalid-keyboard-focus,
-						var(
-							--spectrum-stepper-border-color-invalid-keyboard-focus
-						)
+						var(--spectrum-stepper-border-color-invalid-keyboard-focus)
 					)
 				);
 			}
@@ -378,9 +368,7 @@ governing permissions and limitations under the License.
 						--highcontrast-stepper-border-color-invalid-focus-hover,
 						var(
 							--mod-stepper-border-color-invalid-focus-hover,
-							var(
-								--spectrum-stepper-border-color-invalid-focus-hover
-							)
+							var(--spectrum-stepper-border-color-invalid-focus-hover)
 						)
 					);
 				}
@@ -397,9 +385,7 @@ governing permissions and limitations under the License.
 					--highcontrast-stepper-border-color-invalid-keyboard-focus,
 					var(
 						--mod-stepper-border-color-invalid-keyboard-focus,
-						var(
-							--spectrum-stepper-border-color-invalid-keyboard-focus
-						)
+						var(--spectrum-stepper-border-color-invalid-keyboard-focus)
 					)
 				);
 			}
@@ -464,11 +450,7 @@ governing permissions and limitations under the License.
 		.spectrum-Stepper-buttons {
 			border-radius: 0;
 			border-width: 0 0
-				var(
-					--mod-stepper-border-width,
-					var(--spectrum-stepper-border-width)
-				)
-				0;
+				var(--mod-stepper-border-width, var(--spectrum-stepper-border-width)) 0;
 		}
 
 		.spectrum-Stepper-stepUp,
@@ -650,9 +632,7 @@ governing permissions and limitations under the License.
 						--highcontrast-stepper-border-color-invalid-keyboard-focus,
 						var(
 							--mod-stepper-border-color-invalid-keyboard-focus,
-							var(
-								--spectrum-stepper-border-color-invalid-keyboard-focus
-							)
+							var(--spectrum-stepper-border-color-invalid-keyboard-focus)
 						)
 					);
 				}
@@ -681,8 +661,7 @@ governing permissions and limitations under the License.
 	);
 	inline-size: calc(
 		var(--mod-stepper-button-width, var(--spectrum-stepper-button-width)) +
-			var(--mod-stepper-button-gap, var(--spectrum-stepper-button-gap)) *
-			2
+			var(--mod-stepper-button-gap, var(--spectrum-stepper-button-gap)) * 2
 	);
 	padding-inline-end: var(--spectrum-stepper-button-gap);
 
@@ -737,12 +716,7 @@ governing permissions and limitations under the License.
 						var(--spectrum-stepper-buttons-height)
 					) / 2
 			) -
-			(
-				var(
-						--mod-stepper-button-gap,
-						var(--spectrum-stepper-button-gap)
-					) * 2.5
-			)
+			(var(--mod-stepper-button-gap, var(--spectrum-stepper-button-gap)) * 2.5)
 	);
 
 	inline-size: var(
@@ -815,9 +789,7 @@ governing permissions and limitations under the License.
 	);
 	padding-block-end: 0;
 
-	border-start-start-radius: var(
-		--spectrum-stepper-button-border-radius-reset
-	);
+	border-start-start-radius: var(--spectrum-stepper-button-border-radius-reset);
 	border-start-end-radius: var(--spectrum-stepper-button-border-radius-reset);
 	border-end-start-radius: 0;
 	border-end-end-radius: 0;

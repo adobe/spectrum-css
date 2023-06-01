@@ -399,9 +399,7 @@ a.spectrum-CloseButton {
 					--highcontrast-closebutton-static-background-color-hover,
 					var(
 						--mod-closebutton-static-background-color-hover,
-						var(
-							--spectrum-closebutton-static-background-color-hover
-						)
+						var(--spectrum-closebutton-static-background-color-hover)
 					)
 				);
 
@@ -442,9 +440,7 @@ a.spectrum-CloseButton {
 					--highcontrast-closebutton-static-background-color-focus,
 					var(
 						--mod-closebutton-static-background-color-focus,
-						var(
-							--spectrum-closebutton-static-background-color-focus
-						)
+						var(--spectrum-closebutton-static-background-color-focus)
 					)
 				);
 

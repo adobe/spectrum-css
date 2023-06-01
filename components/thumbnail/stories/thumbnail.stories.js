@@ -52,8 +52,7 @@ export default {
 		},
 		backgroundColor: {
 			name: "Background Color",
-			description:
-				"Optional value for `background-color` style property.",
+			description: "Optional value for `background-color` style property.",
 			type: { name: "string" },
 			table: {
 				type: { summary: "string" },

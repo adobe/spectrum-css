@@ -34,8 +34,7 @@ module.exports = (ctx) => {
 						require("postcss-prefix-selector")({
 							prefix: ".spectrum--express",
 							transform(_prefix, selector, prefixedSelector) {
-								if (selector.startsWith(".spectrum--express"))
-									return selector;
+								if (selector.startsWith(".spectrum--express")) return selector;
 								/* Smoosh the selectors together b/c they co-exist */
 								return prefixedSelector.replace(" ", "");
 							},
@@ -46,16 +45,12 @@ module.exports = (ctx) => {
 	} else if (existsSync(pkgPath)) {
 		const { devDependencies } = require(pkgPath);
 		if (
-			Object.keys(devDependencies).includes(
-				"@spectrum-css/component-builder"
-			)
+			Object.keys(devDependencies).includes("@spectrum-css/component-builder")
 		) {
 			plugins.push(...legacyBuilder.processors);
 		} else {
 			if (ctx.file.split("/").includes("themes")) {
-				plugins.push(
-					...simpleBuilder.getProcessors({ noSelectors: false })
-				);
+				plugins.push(...simpleBuilder.getProcessors({ noSelectors: false }));
 			} else {
 				plugins.push(...simpleBuilder.getProcessors());
 			}

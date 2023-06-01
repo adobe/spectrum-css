@@ -26,10 +26,7 @@ function getName(selector, prop) {
 
 	selector = selector.replace(/is-/g, "");
 
-	let selectorParts = selector
-		.replace(/\s+/g, "")
-		.replace(/,/g, "")
-		.split(".");
+	let selectorParts = selector.replace(/\s+/g, "").replace(/,/g, "").split(".");
 
 	return (
 		"--" +
@@ -53,10 +50,7 @@ function process(root, options = {}) {
 			const rule = postcss.rule({
 				selector: `.${
 					options && typeof options.processIdentifier === "function"
-						? options.processIdentifier(
-								identifierValue,
-								identifierName
-						  )
+						? options.processIdentifier(identifierValue, identifierName)
 						: identifierValue
 				}`,
 				source: container.source,

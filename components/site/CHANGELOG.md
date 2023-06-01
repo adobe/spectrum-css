@@ -153,11 +153,11 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 🗓 2022-09-16 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/site@2.1.13...@spectrum-css/site@3.0.0)
 
--   feat(switch)!: migrating switch to core-tokens (CSS-42, CSS-100) (#1496) ([aab46c3](https://github.com/adobe/spectrum-css/commit/aab46c3)), closes [#1496](https://github.com/adobe/spectrum-css/issues/1496)
+- feat(switch)!: migrating switch to core-tokens (CSS-42, CSS-100) (#1496) ([aab46c3](https://github.com/adobe/spectrum-css/commit/aab46c3)), closes [#1496](https://github.com/adobe/spectrum-css/issues/1496)
 
 ### 🛑 BREAKING CHANGES
 
--   migrates Switch to core tokens
+- migrates Switch to core tokens
 
 Also, adds t-shirt sizes
 
@@ -257,7 +257,7 @@ Also, adds t-shirt sizes
 
 ### 🐛 Bug fixes
 
--   update peer dependencies ([97810cf](https://github.com/adobe/spectrum-css/commit/97810cf))
+- update peer dependencies ([97810cf](https://github.com/adobe/spectrum-css/commit/97810cf))
 
 <a name="2.1.1"></a>
 
@@ -283,7 +283,7 @@ Also, adds t-shirt sizes
 
 ### ✨ Features
 
--   add classes to space examples out ([9182d54](https://github.com/adobe/spectrum-css/commit/9182d54))
+- add classes to space examples out ([9182d54](https://github.com/adobe/spectrum-css/commit/9182d54))
 
 <a name="2.0.9"></a>
 
@@ -325,7 +325,7 @@ Also, adds t-shirt sizes
 
 ### 🐛 Bug fixes
 
--   updating version number on vars ([f535b49](https://github.com/adobe/spectrum-css/commit/f535b49))
+- updating version number on vars ([f535b49](https://github.com/adobe/spectrum-css/commit/f535b49))
 
 <a name="2.0.4"></a>
 
@@ -335,7 +335,7 @@ Also, adds t-shirt sizes
 
 ### 🐛 Bug fixes
 
--   updating version number on vars ([f535b49](https://github.com/adobe/spectrum-css/commit/f535b49))
+- updating version number on vars ([f535b49](https://github.com/adobe/spectrum-css/commit/f535b49))
 
 <a name="2.0.3"></a>
 
@@ -345,7 +345,7 @@ Also, adds t-shirt sizes
 
 ### 🐛 Bug fixes
 
--   updating version number on vars ([f535b49](https://github.com/adobe/spectrum-css/commit/f535b49))
+- updating version number on vars ([f535b49](https://github.com/adobe/spectrum-css/commit/f535b49))
 
 <a name="2.0.3-alpha.3"></a>
 
@@ -363,8 +363,8 @@ Also, adds t-shirt sizes
 
 ### 🐛 Bug fixes
 
--   adjusted example margin-bottom for example item ([b1dbd99](https://github.com/adobe/spectrum-css/commit/b1dbd99))
--   use renamed aliases ([91f6c04](https://github.com/adobe/spectrum-css/commit/91f6c04))
+- adjusted example margin-bottom for example item ([b1dbd99](https://github.com/adobe/spectrum-css/commit/b1dbd99))
+- use renamed aliases ([91f6c04](https://github.com/adobe/spectrum-css/commit/91f6c04))
 
 <a name="2.0.3-alpha.1"></a>
 
@@ -382,7 +382,7 @@ Also, adds t-shirt sizes
 
 ### 🐛 Bug fixes
 
--   taggroup to use more dna tokens ([243aad6](https://github.com/adobe/spectrum-css/commit/243aad6))
+- taggroup to use more dna tokens ([243aad6](https://github.com/adobe/spectrum-css/commit/243aad6))
 
 <a name="2.0.2"></a>
 
@@ -416,7 +416,7 @@ Also, adds t-shirt sizes
 
 ### 🐛 Bug fixes
 
--   update main, resolved conflicts ([d7880a2](https://github.com/adobe/spectrum-css/commit/d7880a2))
+- update main, resolved conflicts ([d7880a2](https://github.com/adobe/spectrum-css/commit/d7880a2))
 
 <a name="2.0.0-beta.5"></a>
 
@@ -434,20 +434,20 @@ Also, adds t-shirt sizes
 
 ### ✨ Features
 
--   RSP V3 Dialog ([#710](https://github.com/adobe/spectrum-css/issues/710)) ([33d6638](https://github.com/adobe/spectrum-css/commit/33d6638)), closes [rsp-v3#517](https://github.com/rsp-v3/issues/517)
+- RSP V3 Dialog ([#710](https://github.com/adobe/spectrum-css/issues/710)) ([33d6638](https://github.com/adobe/spectrum-css/commit/33d6638)), closes [rsp-v3#517](https://github.com/rsp-v3/issues/517)
 
 ### 🐛 Bug fixes
 
--   Checkbox and Radio margins, docs, and typography ([#897](https://github.com/adobe/spectrum-css/issues/897)) ([a089ce0](https://github.com/adobe/spectrum-css/commit/a089ce0)), closes [#243](https://github.com/adobe/spectrum-css/issues/243) [#124](https://github.com/adobe/spectrum-css/issues/124) [#707](https://github.com/adobe/spectrum-css/issues/707) [#243](https://github.com/adobe/spectrum-css/issues/243) [#251](https://github.com/adobe/spectrum-css/issues/251)
+- Checkbox and Radio margins, docs, and typography ([#897](https://github.com/adobe/spectrum-css/issues/897)) ([a089ce0](https://github.com/adobe/spectrum-css/commit/a089ce0)), closes [#243](https://github.com/adobe/spectrum-css/issues/243) [#124](https://github.com/adobe/spectrum-css/issues/124) [#707](https://github.com/adobe/spectrum-css/issues/707) [#243](https://github.com/adobe/spectrum-css/issues/243) [#251](https://github.com/adobe/spectrum-css/issues/251)
 
 ### 🛑 BREAKING CHANGES
 
--   Checkbox and Radio no longer have margin on their own, must use FieldGroup
+- Checkbox and Radio no longer have margin on their own, must use FieldGroup
 
--   feat: add .spectrum-Example to wrap sub-examples
--   The spectrum-FieldGroup--horizontal is now required for horizontal field groups
+- feat: add .spectrum-Example to wrap sub-examples
+- The spectrum-FieldGroup--horizontal is now required for horizontal field groups
 
--   feat: remove hit area from Radio/Checkbox
+- feat: remove hit area from Radio/Checkbox
 
 <a name="2.0.0-beta.3"></a>
 
@@ -465,7 +465,7 @@ Also, adds t-shirt sizes
 
 ### ✨ Features
 
--   Color Handle/Slider/Area/Wheel ([#673](https://github.com/adobe/spectrum-css/issues/673)) ([bcd2bf1](https://github.com/adobe/spectrum-css/commit/bcd2bf1))
+- Color Handle/Slider/Area/Wheel ([#673](https://github.com/adobe/spectrum-css/issues/673)) ([bcd2bf1](https://github.com/adobe/spectrum-css/commit/bcd2bf1))
 
 <a name="2.0.0-beta.1"></a>
 
@@ -483,7 +483,7 @@ Also, adds t-shirt sizes
 
 ### ✨ Features
 
--   make Site layout respect RTL ([77b18df](https://github.com/adobe/spectrum-css/commit/77b18df))
+- make Site layout respect RTL ([77b18df](https://github.com/adobe/spectrum-css/commit/77b18df))
 
 <a name="1.1.1"></a>
 
@@ -501,7 +501,7 @@ Also, adds t-shirt sizes
 
 ### ✨ Features
 
--   adding t-shirt sized typography, fixes [#210](https://github.com/adobe/spectrum-css/issues/210), closes [#416](https://github.com/adobe/spectrum-css/issues/416) ([#408](https://github.com/adobe/spectrum-css/issues/408)) ([3921bcb](https://github.com/adobe/spectrum-css/commit/3921bcb)), closes [#523](https://github.com/adobe/spectrum-css/issues/523)
+- adding t-shirt sized typography, fixes [#210](https://github.com/adobe/spectrum-css/issues/210), closes [#416](https://github.com/adobe/spectrum-css/issues/416) ([#408](https://github.com/adobe/spectrum-css/issues/408)) ([3921bcb](https://github.com/adobe/spectrum-css/commit/3921bcb)), closes [#523](https://github.com/adobe/spectrum-css/issues/523)
 
 <a name="1.0.3"></a>
 
@@ -535,4 +535,4 @@ Also, adds t-shirt sizes
 
 ### ✨ Features
 
--   move to individually versioned packages with Lerna ([#265](https://github.com/adobe/spectrum-css/issues/265)) ([cb7fd4b](https://github.com/adobe/spectrum-css/commit/cb7fd4b)), closes [#231](https://github.com/adobe/spectrum-css/issues/231) [#214](https://github.com/adobe/spectrum-css/issues/214) [#229](https://github.com/adobe/spectrum-css/issues/229) [#240](https://github.com/adobe/spectrum-css/issues/240) [#239](https://github.com/adobe/spectrum-css/issues/239) [#161](https://github.com/adobe/spectrum-css/issues/161) [#242](https://github.com/adobe/spectrum-css/issues/242) [#246](https://github.com/adobe/spectrum-css/issues/246) [#219](https://github.com/adobe/spectrum-css/issues/219) [#235](https://github.com/adobe/spectrum-css/issues/235) [#189](https://github.com/adobe/spectrum-css/issues/189) [#248](https://github.com/adobe/spectrum-css/issues/248) [#232](https://github.com/adobe/spectrum-css/issues/232) [#248](https://github.com/adobe/spectrum-css/issues/248) [#218](https://github.com/adobe/spectrum-css/issues/218) [#237](https://github.com/adobe/spectrum-css/issues/237) [#255](https://github.com/adobe/spectrum-css/issues/255) [#256](https://github.com/adobe/spectrum-css/issues/256) [#258](https://github.com/adobe/spectrum-css/issues/258) [#257](https://github.com/adobe/spectrum-css/issues/257) [#259](https://github.com/adobe/spectrum-css/issues/259)
+- move to individually versioned packages with Lerna ([#265](https://github.com/adobe/spectrum-css/issues/265)) ([cb7fd4b](https://github.com/adobe/spectrum-css/commit/cb7fd4b)), closes [#231](https://github.com/adobe/spectrum-css/issues/231) [#214](https://github.com/adobe/spectrum-css/issues/214) [#229](https://github.com/adobe/spectrum-css/issues/229) [#240](https://github.com/adobe/spectrum-css/issues/240) [#239](https://github.com/adobe/spectrum-css/issues/239) [#161](https://github.com/adobe/spectrum-css/issues/161) [#242](https://github.com/adobe/spectrum-css/issues/242) [#246](https://github.com/adobe/spectrum-css/issues/246) [#219](https://github.com/adobe/spectrum-css/issues/219) [#235](https://github.com/adobe/spectrum-css/issues/235) [#189](https://github.com/adobe/spectrum-css/issues/189) [#248](https://github.com/adobe/spectrum-css/issues/248) [#232](https://github.com/adobe/spectrum-css/issues/232) [#248](https://github.com/adobe/spectrum-css/issues/248) [#218](https://github.com/adobe/spectrum-css/issues/218) [#237](https://github.com/adobe/spectrum-css/issues/237) [#255](https://github.com/adobe/spectrum-css/issues/255) [#256](https://github.com/adobe/spectrum-css/issues/256) [#258](https://github.com/adobe/spectrum-css/issues/258) [#257](https://github.com/adobe/spectrum-css/issues/257) [#259](https://github.com/adobe/spectrum-css/issues/259)

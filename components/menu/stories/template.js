@@ -50,10 +50,7 @@ export const MenuItem = ({
 			? Icon({
 					...globals,
 					iconName: "Checkmark100",
-					customClasses: [
-						"spectrum-Menu-checkmark",
-						`${rootClass}Icon`,
-					],
+					customClasses: ["spectrum-Menu-checkmark", `${rootClass}Icon`],
 			  })
 			: ""}
 	</li>
@@ -153,8 +150,7 @@ export const Template = ({
 						tag: "li",
 						customClasses: [`${rootClass}-divider`],
 					});
-				else if (i.heading)
-					return MenuGroup({ ...i, ...globals, subrole });
+				else if (i.heading) return MenuGroup({ ...i, ...globals, subrole });
 				else if (i.items)
 					return Submenu({
 						...globals,

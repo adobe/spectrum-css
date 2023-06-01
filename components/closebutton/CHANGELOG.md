@@ -19,7 +19,7 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 ### ✨ Features
 
--   **alertbanner:** add AlertBanner component ([#1798](https://github.com/adobe/spectrum-css/issues/1798)) ([1610e7a](https://github.com/adobe/spectrum-css/commit/1610e7a))
+- **alertbanner:** add AlertBanner component ([#1798](https://github.com/adobe/spectrum-css/issues/1798)) ([1610e7a](https://github.com/adobe/spectrum-css/commit/1610e7a))
 
 <a name="3.0.43"></a>
 
@@ -371,17 +371,17 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 🗓 2022-10-13 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/closebutton@2.0.7...@spectrum-css/closebutton@3.0.0)
 
--   refactor(closebutton)!: remap core token aliases & rename aliases ([dc3afde](https://github.com/adobe/spectrum-css/commit/dc3afde))
+- refactor(closebutton)!: remap core token aliases & rename aliases ([dc3afde](https://github.com/adobe/spectrum-css/commit/dc3afde))
 
 ### 🛑 BREAKING CHANGES
 
--   remaps existing aliases to new/renamed core token values
+- remaps existing aliases to new/renamed core token values
 
--   `--spectrum-focus-ring-thickness` renamed to `--spectrum-focus-indicator-thickness`
--   `--spectrum-focus-ring-gap` renamed to `--spectrum-focus-indicator-gap`
--   `--spectrum-focus-ring-color` renamed to `--spectrum-focus-indicator-color`
--   `--spectrum-static-white-focus-ring-color` renamed to `--spectrum-static-white-focus-indicator-color`
--   `--spectrum-static-black-focus-ring-color` renamed to `--spectrum-static-black-focus-indicator-color`
+- `--spectrum-focus-ring-thickness` renamed to `--spectrum-focus-indicator-thickness`
+- `--spectrum-focus-ring-gap` renamed to `--spectrum-focus-indicator-gap`
+- `--spectrum-focus-ring-color` renamed to `--spectrum-focus-indicator-color`
+- `--spectrum-static-white-focus-ring-color` renamed to `--spectrum-static-white-focus-indicator-color`
+- `--spectrum-static-black-focus-ring-color` renamed to `--spectrum-static-black-focus-indicator-color`
 
 <a name="2.0.7"></a>
 
@@ -445,11 +445,11 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 🗓 2022-08-03 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/closebutton@1.2.13...@spectrum-css/closebutton@2.0.0)
 
--   feat(closebutton)!: migrate closebutton to core tokens (CSS-118) (#1477) ([766f9da](https://github.com/adobe/spectrum-css/commit/766f9da)), closes [#1477](https://github.com/adobe/spectrum-css/issues/1477)
+- feat(closebutton)!: migrate closebutton to core tokens (CSS-118) (#1477) ([766f9da](https://github.com/adobe/spectrum-css/commit/766f9da)), closes [#1477](https://github.com/adobe/spectrum-css/issues/1477)
 
 ### 🛑 BREAKING CHANGES
 
--   migrates closebutton to core tokens
+- migrates closebutton to core tokens
 
 Co-authored-by: Patrick Fulton <pfulton@adobe.com>
 
@@ -461,7 +461,7 @@ Co-authored-by: Patrick Fulton <pfulton@adobe.com>
 
 ### 🐛 Bug fixes
 
--   **actionbutton, closebutton, picker:** remove `!important` declarations ([a26c212](https://github.com/adobe/spectrum-css/commit/a26c212))
+- **actionbutton, closebutton, picker:** remove `!important` declarations ([a26c212](https://github.com/adobe/spectrum-css/commit/a26c212))
 
 <a name="1.2.12"></a>
 
@@ -487,7 +487,7 @@ Co-authored-by: Patrick Fulton <pfulton@adobe.com>
 
 ### 🐛 Bug fixes
 
--   closebutton WHCM ([7b61437](https://github.com/adobe/spectrum-css/commit/7b61437))
+- closebutton WHCM ([7b61437](https://github.com/adobe/spectrum-css/commit/7b61437))
 
 <a name="1.2.9"></a>
 
@@ -553,7 +553,7 @@ Co-authored-by: Patrick Fulton <pfulton@adobe.com>
 
 ### 🐛 Bug fixes
 
--   removed some issues from the generated css for close button ([0b3aee3](https://github.com/adobe/spectrum-css/commit/0b3aee3))
+- removed some issues from the generated css for close button ([0b3aee3](https://github.com/adobe/spectrum-css/commit/0b3aee3))
 
 <a name="1.2.1"></a>
 
@@ -571,14 +571,14 @@ Co-authored-by: Patrick Fulton <pfulton@adobe.com>
 
 ### ✨ Features
 
--   add CloseButton ([1e5ac49](https://github.com/adobe/spectrum-css/commit/1e5ac49))
--   updating closebutton api docs ([698aee4](https://github.com/adobe/spectrum-css/commit/698aee4))
+- add CloseButton ([1e5ac49](https://github.com/adobe/spectrum-css/commit/1e5ac49))
+- updating closebutton api docs ([698aee4](https://github.com/adobe/spectrum-css/commit/698aee4))
 
 ### 🐛 Bug fixes
 
--   removing clear button inheritance ([8836489](https://github.com/adobe/spectrum-css/commit/8836489))
--   update peer dependencies ([97810cf](https://github.com/adobe/spectrum-css/commit/97810cf))
--   use latest vars package in closebutton ([57f2200](https://github.com/adobe/spectrum-css/commit/57f2200))
+- removing clear button inheritance ([8836489](https://github.com/adobe/spectrum-css/commit/8836489))
+- update peer dependencies ([97810cf](https://github.com/adobe/spectrum-css/commit/97810cf))
+- use latest vars package in closebutton ([57f2200](https://github.com/adobe/spectrum-css/commit/57f2200))
 
 <a name="1.1.0"></a>
 
@@ -588,10 +588,10 @@ Co-authored-by: Patrick Fulton <pfulton@adobe.com>
 
 ### ✨ Features
 
--   add CloseButton ([ff96b80](https://github.com/adobe/spectrum-css/commit/ff96b80))
--   updating closebutton api docs ([740c39d](https://github.com/adobe/spectrum-css/commit/740c39d))
+- add CloseButton ([ff96b80](https://github.com/adobe/spectrum-css/commit/ff96b80))
+- updating closebutton api docs ([740c39d](https://github.com/adobe/spectrum-css/commit/740c39d))
 
 ### 🐛 Bug fixes
 
--   removing clear button inheritance ([5dc151e](https://github.com/adobe/spectrum-css/commit/5dc151e))
--   use latest vars package in closebutton ([5fa6371](https://github.com/adobe/spectrum-css/commit/5fa6371))
+- removing clear button inheritance ([5dc151e](https://github.com/adobe/spectrum-css/commit/5dc151e))
+- use latest vars package in closebutton ([5fa6371](https://github.com/adobe/spectrum-css/commit/5fa6371))

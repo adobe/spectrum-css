@@ -19,8 +19,7 @@ export const Template = ({
 			class=${classMap({
 				[`${rootClass}Indicator`]: true,
 				[`${rootClass}Indicator--quiet`]: isQuiet,
-				[`${rootClass}Indicator--${variant}`]:
-					typeof variant !== "undefined",
+				[`${rootClass}Indicator--${variant}`]: typeof variant !== "undefined",
 			})}
 			style="display: inline-block;vertical-align: top;"
 		>
@@ -29,16 +28,13 @@ export const Template = ({
 			<div class="${rootClass}Indicator-ring"></div>
 		</div>
 		${withPopover
-			? html`<div
-					class="${rootClass}Popover"
-					style="display: inline-block;"
-			  >
+			? html`<div class="${rootClass}Popover" style="display: inline-block;">
 					<div class="${rootClass}Popover-header">
 						<div class="${rootClass}Popover-title">Zoom in</div>
 					</div>
 					<div class="${rootClass}Popover-content">
-						Switch to the zoom tool then click and drag in the
-						canvas to move your camera forward and backward.
+						Switch to the zoom tool then click and drag in the canvas to move
+						your camera forward and backward.
 					</div>
 					<div class="${rootClass}Popover-footer">
 						${Button({

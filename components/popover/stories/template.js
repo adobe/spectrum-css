@@ -24,8 +24,7 @@ export const Template = ({
 	const { express } = globals;
 
 	try {
-		if (!express)
-			import(/* webpackPrefetch: true */ "../themes/spectrum.css");
+		if (!express) import(/* webpackPrefetch: true */ "../themes/spectrum.css");
 		else import(/* webpackPrefetch: true */ "../themes/express.css");
 	} catch (e) {
 		console.warn(e);
@@ -48,8 +47,7 @@ export const Template = ({
 		>
 			${content.map((c) => (typeof c === "function" ? c({}) : c))}
 			${withTip
-				? position &&
-				  ["top", "bottom"].some((e) => position.startsWith(e))
+				? position && ["top", "bottom"].some((e) => position.startsWith(e))
 					? html`<svg class="${rootClass}-tip" viewBox="0 -0.5 16 9" width="10"><path class="${rootClass}-tip-triangle" d="M-1,-1 8,8 17,-1"></svg>`
 					: html`<svg class="${rootClass}-tip" viewBox="0 -0.5 9 16" width="10"><path class="${rootClass}-tip-triangle" d="M-1,-1 8,8 -1,17"></svg>`
 				: ""}

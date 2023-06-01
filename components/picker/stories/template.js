@@ -35,8 +35,7 @@ export const Template = ({
 
 	const { express } = globals;
 	try {
-		if (!express)
-			import(/* webpackPrefetch: true */ "../themes/spectrum.css");
+		if (!express) import(/* webpackPrefetch: true */ "../themes/spectrum.css");
 		else import(/* webpackPrefetch: true */ "../themes/express.css");
 	} catch (e) {
 		console.warn(e);
@@ -85,9 +84,7 @@ export const Template = ({
 				updateArgs({ isOpen: !isOpen });
 			}}
 		>
-			<span class="${rootClass}-label is-placeholder"
-				>${placeholder}</span
-			>
+			<span class="${rootClass}-label is-placeholder">${placeholder}</span>
 			${isLoading
 				? ProgressCircle({
 						size: "s",

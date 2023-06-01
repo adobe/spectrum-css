@@ -65,9 +65,7 @@ governing permissions and limitations under the License.
 	);
 
 	/* .spectrum-CSSExample */
-	--spectrum-cssexample-border-radius: var(
-		--spectrum-global-dimension-size-50
-	);
+	--spectrum-cssexample-border-radius: var(--spectrum-global-dimension-size-50);
 	--spectrum-cssexample-margin-bottom: var(
 		--spectrum-global-dimension-size-800
 	);
@@ -280,9 +278,7 @@ governing permissions and limitations under the License.
 			visibility 0ms linear
 				calc(
 					var(--spectrum-site-overlay-background-exit-animation-delay) +
-						var(
-							--spectrum-site-overlay-background-exit-animation-duration
-						)
+						var(--spectrum-site-overlay-background-exit-animation-duration)
 				);
 	}
 
@@ -475,9 +471,7 @@ governing permissions and limitations under the License.
 	display: flex;
 	flex-direction: row;
 	align-items: center;
-	margin-block-end: var(
-		--spectrum-cssexample-heading-margin-bottom
-	) !important;
+	margin-block-end: var(--spectrum-cssexample-heading-margin-bottom) !important;
 }
 
 .spectrum-CSSExample-example,

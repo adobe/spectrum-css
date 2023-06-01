@@ -77,13 +77,9 @@ async function main(dir = path.join(__dirname, "../components")) {
 		formattedResults = JSON.stringify({ mods: found }, null, 2);
 
 		// Write the JSON output to the dist folder
-		await fsp.writeFile(
-			`${destPath}/mods.json`,
-			formattedResults,
-			(err) => {
-				if (err) throw err;
-			}
-		);
+		await fsp.writeFile(`${destPath}/mods.json`, formattedResults, (err) => {
+			if (err) throw err;
+		});
 	}
 }
 

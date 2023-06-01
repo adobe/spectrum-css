@@ -52,10 +52,7 @@ export const Template = ({
 			role="figure"
 		>
 			<div class="${rootClass}-assetContainer">
-				<img
-					class="${rootClass}-asset"
-					src="${image ?? exampleImage}"
-				/>
+				<img class="${rootClass}-asset" src="${image ?? exampleImage}" />
 				<div class="${rootClass}-selectionOverlay"></div>
 			</div>
 			${when(
@@ -63,8 +60,7 @@ export const Template = ({
 				() => html`<div class="${rootClass}-header">
 					${when(
 						title,
-						() =>
-							html`<div class="${rootClass}-title">${title}</div>`
+						() => html`<div class="${rootClass}-title">${title}</div>`
 					)}
 					${when(
 						headerContent,

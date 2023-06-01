@@ -193,11 +193,11 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 🗓 2023-04-03 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/pagination@5.0.29...@spectrum-css/pagination@6.0.0)
 
--   fix(tokens)!: rgb transform to split out rgb values from css attributes (#1590) ([b714db4](https://github.com/adobe/spectrum-css/commit/b714db4)), closes [#1590](https://github.com/adobe/spectrum-css/issues/1590)
+- fix(tokens)!: rgb transform to split out rgb values from css attributes (#1590) ([b714db4](https://github.com/adobe/spectrum-css/commit/b714db4)), closes [#1590](https://github.com/adobe/spectrum-css/issues/1590)
 
 ### 🛑 BREAKING CHANGES
 
--   transforms color tokens to split out their `rgb` values
+- transforms color tokens to split out their `rgb` values
 
 Co-authored-by: castastrophe <castastrophe@users.noreply.github.com>
 
@@ -441,15 +441,15 @@ Co-authored-by: castastrophe <castastrophe@users.noreply.github.com>
 
 ### 🐛 Bug fixes
 
--   update peer dependencies ([97810cf](https://github.com/adobe/spectrum-css/commit/97810cf))
+- update peer dependencies ([97810cf](https://github.com/adobe/spectrum-css/commit/97810cf))
 
 ### 📚 Documentation
 
--   use new Button markup ([886b2cb](https://github.com/adobe/spectrum-css/commit/886b2cb))
+- use new Button markup ([886b2cb](https://github.com/adobe/spectrum-css/commit/886b2cb))
 
 ### 🛑 BREAKING CHANGES
 
--   Button markup has changed
+- Button markup has changed
 
 <a name="4.0.0"></a>
 
@@ -467,11 +467,11 @@ Co-authored-by: castastrophe <castastrophe@users.noreply.github.com>
 
 ### 📚 Documentation
 
--   use new Button markup ([629bf05](https://github.com/adobe/spectrum-css/commit/629bf05))
+- use new Button markup ([629bf05](https://github.com/adobe/spectrum-css/commit/629bf05))
 
 ### 🛑 BREAKING CHANGES
 
--   Button markup has changed
+- Button markup has changed
 
 <a name="3.0.11"></a>
 
@@ -537,7 +537,7 @@ Co-authored-by: castastrophe <castastrophe@users.noreply.github.com>
 
 ### 🐛 Bug fixes
 
--   updating version number on vars ([f535b49](https://github.com/adobe/spectrum-css/commit/f535b49))
+- updating version number on vars ([f535b49](https://github.com/adobe/spectrum-css/commit/f535b49))
 
 <a name="3.0.3-alpha.5"></a>
 
@@ -619,14 +619,14 @@ Co-authored-by: castastrophe <castastrophe@users.noreply.github.com>
 
 ### 🐛 Bug fixes
 
--   add missing Action Button dependency ([735a361](https://github.com/adobe/spectrum-css/commit/735a361))
--   update main, resolved conflicts ([d7880a2](https://github.com/adobe/spectrum-css/commit/d7880a2))
--   use new Action Button markup ([0fb0279](https://github.com/adobe/spectrum-css/commit/0fb0279))
--   use new Button markup ([502a1b0](https://github.com/adobe/spectrum-css/commit/502a1b0))
+- add missing Action Button dependency ([735a361](https://github.com/adobe/spectrum-css/commit/735a361))
+- update main, resolved conflicts ([d7880a2](https://github.com/adobe/spectrum-css/commit/d7880a2))
+- use new Action Button markup ([0fb0279](https://github.com/adobe/spectrum-css/commit/0fb0279))
+- use new Button markup ([502a1b0](https://github.com/adobe/spectrum-css/commit/502a1b0))
 
 ### 🛑 BREAKING CHANGES
 
--   markup has changed and now requires new Button markup (.spectrum-Button--sizeM)
+- markup has changed and now requires new Button markup (.spectrum-Button--sizeM)
 
 <a name="3.0.0-beta.6"></a>
 
@@ -660,7 +660,7 @@ Co-authored-by: castastrophe <castastrophe@users.noreply.github.com>
 
 ### 🐛 Bug fixes
 
--   fix the broken examples introduced by textfield refactor ([#642](https://github.com/adobe/spectrum-css/issues/642)) ([65ae75a](https://github.com/adobe/spectrum-css/commit/65ae75a))
+- fix the broken examples introduced by textfield refactor ([#642](https://github.com/adobe/spectrum-css/issues/642)) ([65ae75a](https://github.com/adobe/spectrum-css/commit/65ae75a))
 
 <a name="3.0.0-beta.2"></a>
 
@@ -686,11 +686,11 @@ Co-authored-by: castastrophe <castastrophe@users.noreply.github.com>
 
 ### ✨ Features
 
--   make Pagination support RTL ([7fed6f7](https://github.com/adobe/spectrum-css/commit/7fed6f7))
+- make Pagination support RTL ([7fed6f7](https://github.com/adobe/spectrum-css/commit/7fed6f7))
 
 ### 🛑 BREAKING CHANGES
 
--   spectrum-Pagination-nextButton now required on Pagination Button Style
+- spectrum-Pagination-nextButton now required on Pagination Button Style
 
 <a name="2.0.6"></a>
 
@@ -748,4 +748,4 @@ Co-authored-by: castastrophe <castastrophe@users.noreply.github.com>
 
 ### ✨ Features
 
--   move to individually versioned packages with Lerna ([#265](https://github.com/adobe/spectrum-css/issues/265)) ([cb7fd4b](https://github.com/adobe/spectrum-css/commit/cb7fd4b)), closes [#231](https://github.com/adobe/spectrum-css/issues/231) [#214](https://github.com/adobe/spectrum-css/issues/214) [#229](https://github.com/adobe/spectrum-css/issues/229) [#240](https://github.com/adobe/spectrum-css/issues/240) [#239](https://github.com/adobe/spectrum-css/issues/239) [#161](https://github.com/adobe/spectrum-css/issues/161) [#242](https://github.com/adobe/spectrum-css/issues/242) [#246](https://github.com/adobe/spectrum-css/issues/246) [#219](https://github.com/adobe/spectrum-css/issues/219) [#235](https://github.com/adobe/spectrum-css/issues/235) [#189](https://github.com/adobe/spectrum-css/issues/189) [#248](https://github.com/adobe/spectrum-css/issues/248) [#232](https://github.com/adobe/spectrum-css/issues/232) [#248](https://github.com/adobe/spectrum-css/issues/248) [#218](https://github.com/adobe/spectrum-css/issues/218) [#237](https://github.com/adobe/spectrum-css/issues/237) [#255](https://github.com/adobe/spectrum-css/issues/255) [#256](https://github.com/adobe/spectrum-css/issues/256) [#258](https://github.com/adobe/spectrum-css/issues/258) [#257](https://github.com/adobe/spectrum-css/issues/257) [#259](https://github.com/adobe/spectrum-css/issues/259)
+- move to individually versioned packages with Lerna ([#265](https://github.com/adobe/spectrum-css/issues/265)) ([cb7fd4b](https://github.com/adobe/spectrum-css/commit/cb7fd4b)), closes [#231](https://github.com/adobe/spectrum-css/issues/231) [#214](https://github.com/adobe/spectrum-css/issues/214) [#229](https://github.com/adobe/spectrum-css/issues/229) [#240](https://github.com/adobe/spectrum-css/issues/240) [#239](https://github.com/adobe/spectrum-css/issues/239) [#161](https://github.com/adobe/spectrum-css/issues/161) [#242](https://github.com/adobe/spectrum-css/issues/242) [#246](https://github.com/adobe/spectrum-css/issues/246) [#219](https://github.com/adobe/spectrum-css/issues/219) [#235](https://github.com/adobe/spectrum-css/issues/235) [#189](https://github.com/adobe/spectrum-css/issues/189) [#248](https://github.com/adobe/spectrum-css/issues/248) [#232](https://github.com/adobe/spectrum-css/issues/232) [#248](https://github.com/adobe/spectrum-css/issues/248) [#218](https://github.com/adobe/spectrum-css/issues/218) [#237](https://github.com/adobe/spectrum-css/issues/237) [#255](https://github.com/adobe/spectrum-css/issues/255) [#256](https://github.com/adobe/spectrum-css/issues/256) [#258](https://github.com/adobe/spectrum-css/issues/258) [#257](https://github.com/adobe/spectrum-css/issues/257) [#259](https://github.com/adobe/spectrum-css/issues/259)

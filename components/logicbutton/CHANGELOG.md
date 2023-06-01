@@ -251,13 +251,13 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 ### ✨ Features
 
--   break out ClearButton and LogicButton into their own packages ([3cc0a5f](https://github.com/adobe/spectrum-css/commit/3cc0a5f))
+- break out ClearButton and LogicButton into their own packages ([3cc0a5f](https://github.com/adobe/spectrum-css/commit/3cc0a5f))
 
 ### 🐛 Bug fixes
 
--   logicbutton disabled ([6f4cd25](https://github.com/adobe/spectrum-css/commit/6f4cd25))
--   unbreak the build ([d595cad](https://github.com/adobe/spectrum-css/commit/d595cad))
--   update peer dependencies ([97810cf](https://github.com/adobe/spectrum-css/commit/97810cf))
+- logicbutton disabled ([6f4cd25](https://github.com/adobe/spectrum-css/commit/6f4cd25))
+- unbreak the build ([d595cad](https://github.com/adobe/spectrum-css/commit/d595cad))
+- update peer dependencies ([97810cf](https://github.com/adobe/spectrum-css/commit/97810cf))
 
 <a name="1.1.0"></a>
 
@@ -275,9 +275,9 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 ### ✨ Features
 
--   break out ClearButton and LogicButton into their own packages ([a2092ab](https://github.com/adobe/spectrum-css/commit/a2092ab))
+- break out ClearButton and LogicButton into their own packages ([a2092ab](https://github.com/adobe/spectrum-css/commit/a2092ab))
 
 ### 🐛 Bug fixes
 
--   logicbutton disabled ([164ad01](https://github.com/adobe/spectrum-css/commit/164ad01))
--   unbreak the build ([123add2](https://github.com/adobe/spectrum-css/commit/123add2))
+- logicbutton disabled ([164ad01](https://github.com/adobe/spectrum-css/commit/164ad01))
+- unbreak the build ([123add2](https://github.com/adobe/spectrum-css/commit/123add2))

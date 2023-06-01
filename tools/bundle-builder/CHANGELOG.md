@@ -73,11 +73,11 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 🗓 2023-04-03 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/bundle-builder@3.4.5...@spectrum-css/bundle-builder@4.0.0)
 
--   fix(tokens)!: rgb transform to split out rgb values from css attributes (#1590) ([b714db4](https://github.com/adobe/spectrum-css/commit/b714db4)), closes [#1590](https://github.com/adobe/spectrum-css/issues/1590)
+- fix(tokens)!: rgb transform to split out rgb values from css attributes (#1590) ([b714db4](https://github.com/adobe/spectrum-css/commit/b714db4)), closes [#1590](https://github.com/adobe/spectrum-css/issues/1590)
 
 ### 🛑 BREAKING CHANGES
 
--   transforms color tokens to split out their `rgb` values
+- transforms color tokens to split out their `rgb` values
 
 Co-authored-by: castastrophe <castastrophe@users.noreply.github.com>
 
@@ -129,13 +129,13 @@ Co-authored-by: castastrophe <castastrophe@users.noreply.github.com>
 
 ### ✨ Features
 
--   adding port customiztion and re-launch for watch ([5c7aeef](https://github.com/adobe/spectrum-css/commit/5c7aeef))
--   watch covers components/commons ([5d1b682](https://github.com/adobe/spectrum-css/commit/5d1b682))
+- adding port customiztion and re-launch for watch ([5c7aeef](https://github.com/adobe/spectrum-css/commit/5c7aeef))
+- watch covers components/commons ([5d1b682](https://github.com/adobe/spectrum-css/commit/5d1b682))
 
 ### 🐛 Bug fixes
 
--   dev hanging on yaml error and dev opening browser tabs ([fbfc622](https://github.com/adobe/spectrum-css/commit/fbfc622))
--   made browser open message more perfect ([dad62eb](https://github.com/adobe/spectrum-css/commit/dad62eb))
+- dev hanging on yaml error and dev opening browser tabs ([fbfc622](https://github.com/adobe/spectrum-css/commit/fbfc622))
+- made browser open message more perfect ([dad62eb](https://github.com/adobe/spectrum-css/commit/dad62eb))
 
 <a name="3.3.1"></a>
 
@@ -153,8 +153,8 @@ Co-authored-by: castastrophe <castastrophe@users.noreply.github.com>
 
 ### ✨ Features
 
--   add core tokens ([d0a07a1](https://github.com/adobe/spectrum-css/commit/d0a07a1))
--   add simple component builder ([535126b](https://github.com/adobe/spectrum-css/commit/535126b))
+- add core tokens ([d0a07a1](https://github.com/adobe/spectrum-css/commit/d0a07a1))
+- add simple component builder ([535126b](https://github.com/adobe/spectrum-css/commit/535126b))
 
 <a name="3.2.0"></a>
 
@@ -164,7 +164,7 @@ Co-authored-by: castastrophe <castastrophe@users.noreply.github.com>
 
 ### ✨ Features
 
--   break out ClearButton and LogicButton into their own packages ([3cc0a5f](https://github.com/adobe/spectrum-css/commit/3cc0a5f))
+- break out ClearButton and LogicButton into their own packages ([3cc0a5f](https://github.com/adobe/spectrum-css/commit/3cc0a5f))
 
 <a name="3.1.0"></a>
 
@@ -174,7 +174,7 @@ Co-authored-by: castastrophe <castastrophe@users.noreply.github.com>
 
 ### ✨ Features
 
--   break out ClearButton and LogicButton into their own packages ([a2092ab](https://github.com/adobe/spectrum-css/commit/a2092ab))
+- break out ClearButton and LogicButton into their own packages ([a2092ab](https://github.com/adobe/spectrum-css/commit/a2092ab))
 
 <a name="3.0.4"></a>
 
@@ -184,8 +184,8 @@ Co-authored-by: castastrophe <castastrophe@users.noreply.github.com>
 
 ### 🐛 Bug fixes
 
--   actually fail when you fail ([6a49a99](https://github.com/adobe/spectrum-css/commit/6a49a99))
--   fetch package publish date from npm registry ([71fd187](https://github.com/adobe/spectrum-css/commit/71fd187))
+- actually fail when you fail ([6a49a99](https://github.com/adobe/spectrum-css/commit/6a49a99))
+- fetch package publish date from npm registry ([71fd187](https://github.com/adobe/spectrum-css/commit/71fd187))
 
 <a name="3.0.3"></a>
 
@@ -195,7 +195,7 @@ Co-authored-by: castastrophe <castastrophe@users.noreply.github.com>
 
 ### 🐛 Bug fixes
 
--   fetch package publish date from npm registry ([71fd187](https://github.com/adobe/spectrum-css/commit/71fd187))
+- fetch package publish date from npm registry ([71fd187](https://github.com/adobe/spectrum-css/commit/71fd187))
 
 <a name="3.0.2"></a>
 
@@ -213,7 +213,7 @@ Co-authored-by: castastrophe <castastrophe@users.noreply.github.com>
 
 ### 🐛 Bug fixes
 
--   added expressvars build to release task ([bc447b1](https://github.com/adobe/spectrum-css/commit/bc447b1))
+- added expressvars build to release task ([bc447b1](https://github.com/adobe/spectrum-css/commit/bc447b1))
 
 <a name="3.0.2-alpha.0"></a>
 
@@ -247,17 +247,17 @@ Co-authored-by: castastrophe <castastrophe@users.noreply.github.com>
 
 ### ✨ Features
 
--   disable legacy build in output ([f1ef983](https://github.com/adobe/spectrum-css/commit/f1ef983))
--   error and warning reporting for variable use ([0460d39](https://github.com/adobe/spectrum-css/commit/0460d39))
--   support FORCE=true environment variable to allow broken components ([f725a17](https://github.com/adobe/spectrum-css/commit/f725a17))
+- disable legacy build in output ([f1ef983](https://github.com/adobe/spectrum-css/commit/f1ef983))
+- error and warning reporting for variable use ([0460d39](https://github.com/adobe/spectrum-css/commit/0460d39))
+- support FORCE=true environment variable to allow broken components ([f725a17](https://github.com/adobe/spectrum-css/commit/f725a17))
 
 ### 🐛 Bug fixes
 
--   correct usage of ActionButton in site templates ([be0c83a](https://github.com/adobe/spectrum-css/commit/be0c83a))
+- correct usage of ActionButton in site templates ([be0c83a](https://github.com/adobe/spectrum-css/commit/be0c83a))
 
 ### 🛑 BREAKING CHANGES
 
--   this completely removes legacy build artifacts and IE 11 support
+- this completely removes legacy build artifacts and IE 11 support
 
 <a name="2.0.2-beta.0"></a>
 
@@ -283,12 +283,12 @@ Co-authored-by: castastrophe <castastrophe@users.noreply.github.com>
 
 ### ✨ Features
 
--   remove DecoratedTextfield ([a1017a8](https://github.com/adobe/spectrum-css/commit/a1017a8))
+- remove DecoratedTextfield ([a1017a8](https://github.com/adobe/spectrum-css/commit/a1017a8))
 
 ### 🛑 BREAKING CHANGES
 
--   DecoratedTextfield has been removed in favor of Textfield
-    docs: don't include DecoratedTextfield anymore
+- DecoratedTextfield has been removed in favor of Textfield
+  docs: don't include DecoratedTextfield anymore
 
 <a name="1.1.0"></a>
 
@@ -298,7 +298,7 @@ Co-authored-by: castastrophe <castastrophe@users.noreply.github.com>
 
 ### ✨ Features
 
--   adding t-shirt sized typography, fixes [#210](https://github.com/adobe/spectrum-css/issues/210), closes [#416](https://github.com/adobe/spectrum-css/issues/416) ([#408](https://github.com/adobe/spectrum-css/issues/408)) ([3921bcb](https://github.com/adobe/spectrum-css/commit/3921bcb)), closes [#523](https://github.com/adobe/spectrum-css/issues/523)
+- adding t-shirt sized typography, fixes [#210](https://github.com/adobe/spectrum-css/issues/210), closes [#416](https://github.com/adobe/spectrum-css/issues/416) ([#408](https://github.com/adobe/spectrum-css/issues/408)) ([3921bcb](https://github.com/adobe/spectrum-css/commit/3921bcb)), closes [#523](https://github.com/adobe/spectrum-css/issues/523)
 
 <a name="1.0.1"></a>
 
@@ -308,7 +308,7 @@ Co-authored-by: castastrophe <castastrophe@users.noreply.github.com>
 
 ### 🐛 Bug fixes
 
--   add missing variables to -unique files, closes [#336](https://github.com/adobe/spectrum-css/issues/336) ([3c9337f](https://github.com/adobe/spectrum-css/commit/3c9337f))
+- add missing variables to -unique files, closes [#336](https://github.com/adobe/spectrum-css/issues/336) ([3c9337f](https://github.com/adobe/spectrum-css/commit/3c9337f))
 
 <a name="1.0.0"></a>
 
@@ -318,5 +318,5 @@ Co-authored-by: castastrophe <castastrophe@users.noreply.github.com>
 
 ### ✨ Features
 
--   move to individually versioned packages with Lerna ([#265](https://github.com/adobe/spectrum-css/issues/265)) ([cb7fd4b](https://github.com/adobe/spectrum-css/commit/cb7fd4b)), closes [#231](https://github.com/adobe/spectrum-css/issues/231) [#214](https://github.com/adobe/spectrum-css/issues/214) [#229](https://github.com/adobe/spectrum-css/issues/229) [#240](https://github.com/adobe/spectrum-css/issues/240) [#239](https://github.com/adobe/spectrum-css/issues/239) [#161](https://github.com/adobe/spectrum-css/issues/161) [#242](https://github.com/adobe/spectrum-css/issues/242) [#246](https://github.com/adobe/spectrum-css/issues/246) [#219](https://github.com/adobe/spectrum-css/issues/219) [#235](https://github.com/adobe/spectrum-css/issues/235) [#189](https://github.com/adobe/spectrum-css/issues/189) [#248](https://github.com/adobe/spectrum-css/issues/248) [#232](https://github.com/adobe/spectrum-css/issues/232) [#248](https://github.com/adobe/spectrum-css/issues/248) [#218](https://github.com/adobe/spectrum-css/issues/218) [#237](https://github.com/adobe/spectrum-css/issues/237) [#255](https://github.com/adobe/spectrum-css/issues/255) [#256](https://github.com/adobe/spectrum-css/issues/256) [#258](https://github.com/adobe/spectrum-css/issues/258) [#257](https://github.com/adobe/spectrum-css/issues/257) [#259](https://github.com/adobe/spectrum-css/issues/259)
--   use linked DNA data for CSS variable generation ([0233a53](https://github.com/adobe/spectrum-css/commit/0233a53))
+- move to individually versioned packages with Lerna ([#265](https://github.com/adobe/spectrum-css/issues/265)) ([cb7fd4b](https://github.com/adobe/spectrum-css/commit/cb7fd4b)), closes [#231](https://github.com/adobe/spectrum-css/issues/231) [#214](https://github.com/adobe/spectrum-css/issues/214) [#229](https://github.com/adobe/spectrum-css/issues/229) [#240](https://github.com/adobe/spectrum-css/issues/240) [#239](https://github.com/adobe/spectrum-css/issues/239) [#161](https://github.com/adobe/spectrum-css/issues/161) [#242](https://github.com/adobe/spectrum-css/issues/242) [#246](https://github.com/adobe/spectrum-css/issues/246) [#219](https://github.com/adobe/spectrum-css/issues/219) [#235](https://github.com/adobe/spectrum-css/issues/235) [#189](https://github.com/adobe/spectrum-css/issues/189) [#248](https://github.com/adobe/spectrum-css/issues/248) [#232](https://github.com/adobe/spectrum-css/issues/232) [#248](https://github.com/adobe/spectrum-css/issues/248) [#218](https://github.com/adobe/spectrum-css/issues/218) [#237](https://github.com/adobe/spectrum-css/issues/237) [#255](https://github.com/adobe/spectrum-css/issues/255) [#256](https://github.com/adobe/spectrum-css/issues/256) [#258](https://github.com/adobe/spectrum-css/issues/258) [#257](https://github.com/adobe/spectrum-css/issues/257) [#259](https://github.com/adobe/spectrum-css/issues/259)
+- use linked DNA data for CSS variable generation ([0233a53](https://github.com/adobe/spectrum-css/commit/0233a53))

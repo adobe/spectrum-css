@@ -58,8 +58,7 @@ module.exports = {
 		let storybookRules =
 			config && config.module && config.module.rules
 				? config.module.rules.filter(
-						(rule) =>
-							!(rule.test && rule.test.toString().includes("css"))
+						(rule) => !(rule.test && rule.test.toString().includes("css"))
 				  )
 				: [];
 
@@ -79,11 +78,7 @@ module.exports = {
 				alias: {
 					...(config.resolve ? config.resolve.alias : {}),
 					...componentPkgs.reduce((pkgs, dir) => {
-						const pkg = require(resolve(
-							componentsPath,
-							dir,
-							"package.json"
-						));
+						const pkg = require(resolve(componentsPath, dir, "package.json"));
 						pkgs[pkg.name] = resolve(componentsPath, dir);
 						return pkgs;
 					}, {}),
@@ -99,15 +94,8 @@ module.exports = {
 							{
 								loader: "file-loader",
 								options: {
-									outputPath: (
-										url,
-										resourcePath,
-										context
-									) => {
-										return `assets/images/${url.replace(
-											/_\//g,
-											""
-										)}`;
+									outputPath: (url, resourcePath, context) => {
+										return `assets/images/${url.replace(/_\//g, "")}`;
 									},
 								},
 							},
@@ -130,15 +118,8 @@ module.exports = {
 								loader: "file-loader",
 								options: {
 									name: "[path][name].[ext][query]",
-									outputPath: (
-										url,
-										resourcePath,
-										context
-									) => {
-										return `assets/css/${url.replace(
-											/_\//g,
-											""
-										)}`;
+									outputPath: (url, resourcePath, context) => {
+										return `assets/css/${url.replace(/_\//g, "")}`;
 									},
 									esModule: false,
 								},
@@ -148,10 +129,7 @@ module.exports = {
 								options: {
 									implementation: require("postcss"),
 									postcssOptions: {
-										config: resolve(
-											__dirname,
-											"postcss.config.js"
-										),
+										config: resolve(__dirname, "postcss.config.js"),
 									},
 								},
 							},

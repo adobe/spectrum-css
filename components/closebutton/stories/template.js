@@ -22,8 +22,7 @@ export const Template = ({
 	const { express } = globals;
 
 	try {
-		if (!express)
-			import(/* webpackPrefetch: true */ "../themes/spectrum.css");
+		if (!express) import(/* webpackPrefetch: true */ "../themes/spectrum.css");
 		else import(/* webpackPrefetch: true */ "../themes/express.css");
 	} catch (e) {
 		console.warn(e);
@@ -33,8 +32,7 @@ export const Template = ({
 		<button
 			class=${classMap({
 				[rootClass]: true,
-				[`${rootClass}--size${upperCase(size)}`]:
-					typeof size !== "undefined",
+				[`${rootClass}--size${upperCase(size)}`]: typeof size !== "undefined",
 				[`${rootClass}--static${capitalize(lowerCase(staticColor))}`]:
 					typeof staticColor !== "undefined",
 				...customClasses.reduce((a, c) => ({ ...a, [c]: true }), {}),

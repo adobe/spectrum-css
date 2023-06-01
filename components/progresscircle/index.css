@@ -32,9 +32,7 @@ governing permissions and limitations under the License.
 	);
 
 	/* default size and thickness */
-	--spectrum-progress-circle-size: var(
-		--spectrum-progress-circle-size-medium
-	);
+	--spectrum-progress-circle-size: var(--spectrum-progress-circle-size-medium);
 	--spectrum-progress-circle-thickness: var(
 		--spectrum-progress-circle-thickness-medium
 	);
@@ -51,9 +49,7 @@ governing permissions and limitations under the License.
 }
 
 .spectrum-ProgressCircle--medium {
-	--spectrum-progress-circle-size: var(
-		--spectrum-progress-circle-size-medium
-	);
+	--spectrum-progress-circle-size: var(--spectrum-progress-circle-size-medium);
 	--spectrum-progress-circle-thickness: var(
 		--spectrum-progress-circle-thickness-medium
 	);
@@ -184,9 +180,7 @@ governing permissions and limitations under the License.
 			--highcontrast-progress-circle-fill-border-color-over-background,
 			var(
 				--mod-progress-circle-fill-border-color-over-background,
-				var(
-					--spectrum-progress-circle-fill-border-color-over-background
-				)
+				var(--spectrum-progress-circle-fill-border-color-over-background)
 			)
 		);
 	}

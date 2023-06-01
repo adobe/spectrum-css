@@ -116,9 +116,7 @@ governing permissions and limitations under the License.
 	--spectrum-tag-content-color-emphasized: var(--spectrum-white);
 
 	/* disabled variant content */
-	--spectrum-tag-content-color-disabled: var(
-		--spectrum-disabled-content-color
-	);
+	--spectrum-tag-content-color-disabled: var(--spectrum-disabled-content-color);
 
 	/* ↧↧↧ Fallback defaults in case of no t-shirt size - set to Medium styles ↧↧↧ */
 	/* icon spacing fallback if no t-shirt size */
@@ -138,14 +136,10 @@ governing permissions and limitations under the License.
 	--spectrum-tag-avatar-spacing-block-end: var(
 		--spectrum-tag-top-to-avatar-medium
 	);
-	--spectrum-tag-avatar-spacing-inline-end: var(
-		--spectrum-text-to-visual-100
-	);
+	--spectrum-tag-avatar-spacing-inline-end: var(--spectrum-text-to-visual-100);
 
 	/* label spacing fallback if no t-shirt size */
-	--spectrum-tag-label-spacing-block: var(
-		--spectrum-component-top-to-text-100
-	);
+	--spectrum-tag-label-spacing-block: var(--spectrum-component-top-to-text-100);
 
 	/* clear button inline spacing fallback if no t-shirt size */
 	--spectrum-tag-clear-button-spacing-inline-start: var(
@@ -193,9 +187,7 @@ governing permissions and limitations under the License.
 	);
 	--spectrum-tag-avatar-spacing-inline-end: var(--spectrum-text-to-visual-75);
 
-	--spectrum-tag-label-spacing-block: var(
-		--spectrum-component-top-to-text-75
-	);
+	--spectrum-tag-label-spacing-block: var(--spectrum-component-top-to-text-75);
 
 	/* tokens based on theme and t-shirt size */
 	--spectrum-tag-corner-radius: var(--spectrum-tag-size-small-corner-radius);
@@ -236,13 +228,9 @@ governing permissions and limitations under the License.
 	--spectrum-tag-avatar-spacing-block-end: var(
 		--spectrum-tag-top-to-avatar-medium
 	);
-	--spectrum-tag-avatar-spacing-inline-end: var(
-		--spectrum-text-to-visual-100
-	);
+	--spectrum-tag-avatar-spacing-inline-end: var(--spectrum-text-to-visual-100);
 
-	--spectrum-tag-label-spacing-block: var(
-		--spectrum-component-top-to-text-100
-	);
+	--spectrum-tag-label-spacing-block: var(--spectrum-component-top-to-text-100);
 
 	/* tokens based on theme and t-shirt size */
 	--spectrum-tag-corner-radius: var(--spectrum-tag-size-medium-corner-radius);
@@ -283,13 +271,9 @@ governing permissions and limitations under the License.
 	--spectrum-tag-avatar-spacing-block-end: var(
 		--spectrum-tag-top-to-avatar-large
 	);
-	--spectrum-tag-avatar-spacing-inline-end: var(
-		--spectrum-text-to-visual-200
-	);
+	--spectrum-tag-avatar-spacing-inline-end: var(--spectrum-text-to-visual-200);
 
-	--spectrum-tag-label-spacing-block: var(
-		--spectrum-component-top-to-text-200
-	);
+	--spectrum-tag-label-spacing-block: var(--spectrum-component-top-to-text-200);
 
 	/* tokens based on theme and t-shirt size */
 	--spectrum-tag-corner-radius: var(--spectrum-tag-size-large-corner-radius);
@@ -344,28 +328,16 @@ governing permissions and limitations under the License.
 	user-select: none;
 
 	transition: border-color
-			var(
-				--mod-tag-animation-duration,
-				var(--spectrum-tag-animation-duration)
-			)
+			var(--mod-tag-animation-duration, var(--spectrum-tag-animation-duration))
 			ease-in-out,
 		color
-			var(
-				--mod-tag-animation-duration,
-				var(--spectrum-tag-animation-duration)
-			)
+			var(--mod-tag-animation-duration, var(--spectrum-tag-animation-duration))
 			ease-in-out,
 		box-shadow
-			var(
-				--mod-tag-animation-duration,
-				var(--spectrum-tag-animation-duration)
-			)
+			var(--mod-tag-animation-duration, var(--spectrum-tag-animation-duration))
 			ease-in-out,
 		background-color
-			var(
-				--mod-tag-animation-duration,
-				var(--spectrum-tag-animation-duration)
-			)
+			var(--mod-tag-animation-duration, var(--spectrum-tag-animation-duration))
 			ease-in-out;
 
 	.spectrum-Tags-itemIcon {
@@ -376,15 +348,13 @@ governing permissions and limitations under the License.
 			var(
 					--mod-tag-icon-spacing-block-start,
 					var(--spectrum-tag-icon-spacing-block-start)
-				) -
-				var(--mod-tag-border-width, var(--spectrum-tag-border-width))
+				) - var(--mod-tag-border-width, var(--spectrum-tag-border-width))
 		);
 		margin-block-end: calc(
 			var(
 					--mod-tag-icon-spacing-block-end,
 					var(--spectrum-tag-icon-spacing-block-end)
-				) -
-				var(--mod-tag-border-width, var(--spectrum-tag-border-width))
+				) - var(--mod-tag-border-width, var(--spectrum-tag-border-width))
 		);
 		margin-inline-end: var(
 			--mod-tag-icon-spacing-inline-end,
@@ -397,15 +367,13 @@ governing permissions and limitations under the License.
 			var(
 					--mod-tag-avatar-spacing-block-start,
 					var(--spectrum-tag-avatar-spacing-block-start)
-				) -
-				var(--mod-tag-border-width, var(--spectrum-tag-border-width))
+				) - var(--mod-tag-border-width, var(--spectrum-tag-border-width))
 		);
 		margin-block-end: calc(
 			var(
 					--mod-tag-avatar-spacing-block-end,
 					var(--spectrum-tag-avatar-spacing-block-end)
-				) -
-				var(--mod-tag-border-width, var(--spectrum-tag-border-width))
+				) - var(--mod-tag-border-width, var(--spectrum-tag-border-width))
 		);
 		margin-inline-end: var(
 			--mod-tag-avatar-spacing-inline-end,
@@ -421,15 +389,13 @@ governing permissions and limitations under the License.
 			var(
 					--mod-tag-clear-button-spacing-block,
 					var(--spectrum-tag-clear-button-spacing-block)
-				) -
-				var(--mod-tag-border-width, var(--spectrum-tag-border-width))
+				) - var(--mod-tag-border-width, var(--spectrum-tag-border-width))
 		);
 		padding-block-end: calc(
 			var(
 					--mod-tag-clear-button-spacing-block,
 					var(--spectrum-tag-clear-button-spacing-block)
-				) -
-				var(--mod-tag-border-width, var(--spectrum-tag-border-width))
+				) - var(--mod-tag-border-width, var(--spectrum-tag-border-width))
 		);
 
 		/* move button negative calc to cancel label end margin, then add button start margin */
@@ -451,8 +417,7 @@ governing permissions and limitations under the License.
 			var(
 					--mod-tag-clear-button-spacing-inline-end,
 					var(--spectrum-tag-clear-button-spacing-inline-end)
-				) -
-				var(--mod-tag-border-width, var(--spectrum-tag-border-width))
+				) - var(--mod-tag-border-width, var(--spectrum-tag-border-width))
 		);
 
 		/* ensure clear button is correct color */
@@ -502,8 +467,7 @@ governing permissions and limitations under the License.
 			var(
 					--mod-tag-label-spacing-block,
 					var(--spectrum-tag-label-spacing-block)
-				) -
-				var(--mod-tag-border-width, var(--spectrum-tag-border-width))
+				) - var(--mod-tag-border-width, var(--spectrum-tag-border-width))
 		);
 
 		/* space from label text to end edge */
@@ -511,18 +475,14 @@ governing permissions and limitations under the License.
 			var(
 					--mod-tag-label-spacing-inline-end,
 					var(--spectrum-tag-label-spacing-inline-end)
-				) -
-				var(--mod-tag-border-width, var(--spectrum-tag-border-width))
+				) - var(--mod-tag-border-width, var(--spectrum-tag-border-width))
 		);
 	}
 
 	&:hover {
 		border-color: var(
 			--highcontrast-tag-border-color-hover,
-			var(
-				--mod-tag-border-color-hover,
-				var(--spectrum-tag-border-color-hover)
-			)
+			var(--mod-tag-border-color-hover, var(--spectrum-tag-border-color-hover))
 		);
 		background-color: var(
 			--highcontrast-tag-background-color-hover,
@@ -568,10 +528,7 @@ governing permissions and limitations under the License.
 	&.is-focused {
 		border-color: var(
 			--highcontrast-tag-border-color-focus,
-			var(
-				--mod-tag-border-color-focus,
-				var(--spectrum-tag-border-color-focus)
-			)
+			var(--mod-tag-border-color-focus, var(--spectrum-tag-border-color-focus))
 		);
 		background-color: var(
 			--highcontrast-tag-background-color-focus,
@@ -601,14 +558,8 @@ governing permissions and limitations under the License.
 			/* ensures focus indicator centers if borders or gap change */
 			margin-inline-start: calc(
 				(
-						var(
-								--mod-tag-focus-ring-gap,
-								var(--spectrum-tag-focus-ring-gap)
-							) +
-							var(
-								--mod-tag-border-width,
-								var(--spectrum-tag-border-width)
-							) +
+						var(--mod-tag-focus-ring-gap, var(--spectrum-tag-focus-ring-gap)) +
+							var(--mod-tag-border-width, var(--spectrum-tag-border-width)) +
 							var(
 								--mod-tag-focus-ring-thickness,
 								var(--spectrum-tag-focus-ring-thickness)
@@ -617,14 +568,8 @@ governing permissions and limitations under the License.
 			);
 			margin-block-start: calc(
 				(
-						var(
-								--mod-tag-focus-ring-gap,
-								var(--spectrum-tag-focus-ring-gap)
-							) +
-							var(
-								--mod-tag-border-width,
-								var(--spectrum-tag-border-width)
-							) +
+						var(--mod-tag-focus-ring-gap, var(--spectrum-tag-focus-ring-gap)) +
+							var(--mod-tag-border-width, var(--spectrum-tag-border-width)) +
 							var(
 								--mod-tag-focus-ring-thickness,
 								var(--spectrum-tag-focus-ring-thickness)
@@ -635,51 +580,28 @@ governing permissions and limitations under the License.
 			inline-size: calc(
 				100% +
 					(
-						var(
-								--mod-tag-focus-ring-gap,
-								var(--spectrum-tag-focus-ring-gap)
-							) * 2
+						var(--mod-tag-focus-ring-gap, var(--spectrum-tag-focus-ring-gap)) *
+							2
 					) +
-					(
-						var(
-								--mod-tag-border-width,
-								var(--spectrum-tag-border-width)
-							) * 2
-					)
+					(var(--mod-tag-border-width, var(--spectrum-tag-border-width)) * 2)
 			);
 			block-size: calc(
 				100% +
 					(
-						var(
-								--mod-tag-focus-ring-gap,
-								var(--spectrum-tag-focus-ring-gap)
-							) * 2
+						var(--mod-tag-focus-ring-gap, var(--spectrum-tag-focus-ring-gap)) *
+							2
 					) +
-					(
-						var(
-								--mod-tag-border-width,
-								var(--spectrum-tag-border-width)
-							) * 2
-					)
+					(var(--mod-tag-border-width, var(--spectrum-tag-border-width)) * 2)
 			);
 
 			border-color: var(
 				--highcontrast-tag-focus-ring-color,
-				var(
-					--mod-tag-focus-ring-color,
-					var(--spectrum-tag-focus-ring-color)
-				)
+				var(--mod-tag-focus-ring-color, var(--spectrum-tag-focus-ring-color))
 			);
 			border-radius: calc(
 				var(--mod-tag-corner-radius, var(--spectrum-tag-corner-radius)) +
-					var(
-						--mod-tag-focus-ring-gap,
-						var(--spectrum-tag-focus-ring-gap)
-					) +
-					var(
-						--mod-tag-border-width,
-						var(--spectrum-tag-border-width)
-					)
+					var(--mod-tag-focus-ring-gap, var(--spectrum-tag-focus-ring-gap)) +
+					var(--mod-tag-border-width, var(--spectrum-tag-border-width))
 			);
 			border-width: var(
 				--mod-tag-focus-ring-thickness,

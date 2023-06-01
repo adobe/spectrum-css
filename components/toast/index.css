@@ -36,9 +36,7 @@ governing permissions and limitations under the License.
 	);
 
 	--spectrum-toast-spacing-top-edge-to-divider: var(--spectrum-spacing-100);
-	--spectrum-toast-spacing-bottom-edge-to-divider: var(
-		--spectrum-spacing-100
-	);
+	--spectrum-toast-spacing-bottom-edge-to-divider: var(--spectrum-spacing-100);
 
 	--spectrum-toast-spacing-top-edge-to-icon: var(
 		--spectrum-toast-top-to-workflow-icon
@@ -52,9 +50,7 @@ governing permissions and limitations under the License.
 	--spectrum-toast-spacing-block-start: var(--spectrum-spacing-100);
 	--spectrum-toast-spacing-block-end: var(--spectrum-spacing-100);
 
-	--spectrum-toast-spacing-top-edge-to-text: var(
-		--spectrum-toast-top-to-text
-	);
+	--spectrum-toast-spacing-top-edge-to-text: var(--spectrum-toast-top-to-text);
 	--spectrum-toast-spacing-bottom-edge-to-text: var(
 		--spectrum-toast-bottom-to-text
 	);
@@ -81,10 +77,7 @@ governing permissions and limitations under the License.
 		/* Border is visible in high contrast mode */
 		--highcontrast-toast-border-color: ButtonText;
 
-		border: var(
-				--mod-toast-border-width,
-				var(--spectrum-toast-border-width)
-			)
+		border: var(--mod-toast-border-width, var(--spectrum-toast-border-width))
 			solid var(--highcontrast-toast-border-color, transparent);
 	}
 }
@@ -107,10 +100,7 @@ governing permissions and limitations under the License.
 	);
 
 	font-size: var(--mod-toast-font-size, var(--spectrum-toast-font-size));
-	font-weight: var(
-		--mod-toast-font-weight,
-		var(--spectrum-toast-font-weight)
-	);
+	font-weight: var(--mod-toast-font-weight, var(--spectrum-toast-font-weight));
 
 	-webkit-font-smoothing: antialiased;
 
@@ -180,9 +170,7 @@ governing permissions and limitations under the License.
 					--highcontrast-toast-informative-background-color-default,
 					var(
 						--mod-toast-informative-background-color-default,
-						var(
-							--spectrum-toast-informative-background-color-default
-						)
+						var(--spectrum-toast-informative-background-color-default)
 					)
 				);
 			}
@@ -274,10 +262,7 @@ governing permissions and limitations under the License.
 	);
 	padding-inline-start: 0;
 
-	line-height: var(
-		--mod-toast-line-height,
-		var(--spectrum-toast-line-height)
-	);
+	line-height: var(--mod-toast-line-height, var(--spectrum-toast-line-height));
 
 	text-align: start;
 

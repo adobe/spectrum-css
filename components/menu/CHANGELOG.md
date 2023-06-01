@@ -299,7 +299,7 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 ### 🐛 Bug fixes
 
--   menu WHCM ([feee3be](https://github.com/adobe/spectrum-css/commit/feee3be))
+- menu WHCM ([feee3be](https://github.com/adobe/spectrum-css/commit/feee3be))
 
 <a name="4.0.1"></a>
 
@@ -317,13 +317,13 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 ### 🐛 Bug fixes
 
--   added margin back for dividers in menu ([e4feb9a](https://github.com/adobe/spectrum-css/commit/e4feb9a))
+- added margin back for dividers in menu ([e4feb9a](https://github.com/adobe/spectrum-css/commit/e4feb9a))
 
--   fix!: use divider component in menu, closes #1371 ([5c901f1](https://github.com/adobe/spectrum-css/commit/5c901f1)), closes [#1371](https://github.com/adobe/spectrum-css/issues/1371)
+- fix!: use divider component in menu, closes #1371 ([5c901f1](https://github.com/adobe/spectrum-css/commit/5c901f1)), closes [#1371](https://github.com/adobe/spectrum-css/issues/1371)
 
 ### 🛑 BREAKING CHANGES
 
--   Add `.spectrum-Divider` and `spectrum-Divider--sizeM` classes to `spectrum-Menu-divider`
+- Add `.spectrum-Divider` and `spectrum-Divider--sizeM` classes to `spectrum-Menu-divider`
 
 <a name="3.0.21"></a>
 
@@ -405,7 +405,7 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 ### 🐛 Bug fixes
 
--   update peer dependencies ([97810cf](https://github.com/adobe/spectrum-css/commit/97810cf))
+- update peer dependencies ([97810cf](https://github.com/adobe/spectrum-css/commit/97810cf))
 
 <a name="3.0.11"></a>
 
@@ -479,7 +479,7 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 ### 🐛 Bug fixes
 
--   updating version number on vars ([f535b49](https://github.com/adobe/spectrum-css/commit/f535b49))
+- updating version number on vars ([f535b49](https://github.com/adobe/spectrum-css/commit/f535b49))
 
 <a name="3.0.3-alpha.5"></a>
 
@@ -489,7 +489,7 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 ### 🐛 Bug fixes
 
--   adjust menu item selectable padding again ([034a2df](https://github.com/adobe/spectrum-css/commit/034a2df))
+- adjust menu item selectable padding again ([034a2df](https://github.com/adobe/spectrum-css/commit/034a2df))
 
 <a name="3.0.3-alpha.4"></a>
 
@@ -499,7 +499,7 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 ### 🐛 Bug fixes
 
--   added padding to unselected listitem back ([f167013](https://github.com/adobe/spectrum-css/commit/f167013))
+- added padding to unselected listitem back ([f167013](https://github.com/adobe/spectrum-css/commit/f167013))
 
 <a name="3.0.3-alpha.3"></a>
 
@@ -509,7 +509,7 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 ### 🐛 Bug fixes
 
--   moved menu item selected checkmark back ([1fa03a6](https://github.com/adobe/spectrum-css/commit/1fa03a6))
+- moved menu item selected checkmark back ([1fa03a6](https://github.com/adobe/spectrum-css/commit/1fa03a6))
 
 <a name="3.0.3-alpha.2"></a>
 
@@ -527,7 +527,7 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 ### 🐛 Bug fixes
 
--   import scales since padding-left can change according to scale ([c9f0162](https://github.com/adobe/spectrum-css/commit/c9f0162))
+- import scales since padding-left can change according to scale ([c9f0162](https://github.com/adobe/spectrum-css/commit/c9f0162))
 
 <a name="3.0.3-alpha.0"></a>
 
@@ -537,7 +537,7 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 ### 🐛 Bug fixes
 
--   updated progresscircle to use correct t-shirt tokens ([3dbed89](https://github.com/adobe/spectrum-css/commit/3dbed89))
+- updated progresscircle to use correct t-shirt tokens ([3dbed89](https://github.com/adobe/spectrum-css/commit/3dbed89))
 
 <a name="3.0.2"></a>
 
@@ -571,10 +571,10 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 ### 🐛 Bug fixes
 
--   correct Menu icon gap ([e68bc31](https://github.com/adobe/spectrum-css/commit/e68bc31))
--   correct Menu left padding ([1ea92ac](https://github.com/adobe/spectrum-css/commit/1ea92ac))
--   make Menu work again ([35d1302](https://github.com/adobe/spectrum-css/commit/35d1302))
--   update main, resolved conflicts ([d7880a2](https://github.com/adobe/spectrum-css/commit/d7880a2))
+- correct Menu icon gap ([e68bc31](https://github.com/adobe/spectrum-css/commit/e68bc31))
+- correct Menu left padding ([1ea92ac](https://github.com/adobe/spectrum-css/commit/1ea92ac))
+- make Menu work again ([35d1302](https://github.com/adobe/spectrum-css/commit/35d1302))
+- update main, resolved conflicts ([d7880a2](https://github.com/adobe/spectrum-css/commit/d7880a2))
 
 <a name="3.0.0-beta.4"></a>
 
@@ -592,9 +592,9 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 ### 🐛 Bug fixes
 
--   change workflow icon size to medium for most of the examples ([#962](https://github.com/adobe/spectrum-css/issues/962)) ([db7b8b2](https://github.com/adobe/spectrum-css/commit/db7b8b2))
--   replacing deprecated tokens from menu ([6281862](https://github.com/adobe/spectrum-css/commit/6281862))
--   wip fix more components ([b74dbb8](https://github.com/adobe/spectrum-css/commit/b74dbb8))
+- change workflow icon size to medium for most of the examples ([#962](https://github.com/adobe/spectrum-css/issues/962)) ([db7b8b2](https://github.com/adobe/spectrum-css/commit/db7b8b2))
+- replacing deprecated tokens from menu ([6281862](https://github.com/adobe/spectrum-css/commit/6281862))
+- wip fix more components ([b74dbb8](https://github.com/adobe/spectrum-css/commit/b74dbb8))
 
 <a name="3.0.0-beta.2"></a>
 
@@ -620,7 +620,7 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 ### ✨ Features
 
--   make Menu support RTL ([1d3391b](https://github.com/adobe/spectrum-css/commit/1d3391b))
+- make Menu support RTL ([1d3391b](https://github.com/adobe/spectrum-css/commit/1d3391b))
 
 <a name="2.1.5"></a>
 
@@ -646,7 +646,7 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 ### 🐛 Bug fixes
 
--   make Menu items wrap correctly, fixes [#451](https://github.com/adobe/spectrum-css/issues/451) ([#482](https://github.com/adobe/spectrum-css/issues/482)) ([03208af](https://github.com/adobe/spectrum-css/commit/03208af))
+- make Menu items wrap correctly, fixes [#451](https://github.com/adobe/spectrum-css/issues/451) ([#482](https://github.com/adobe/spectrum-css/issues/482)) ([03208af](https://github.com/adobe/spectrum-css/commit/03208af))
 
 <a name="2.1.2"></a>
 
@@ -656,7 +656,7 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 ### 🐛 Bug fixes
 
--   wrapping on long words in dropdowns, fixes [#451](https://github.com/adobe/spectrum-css/issues/451) ([#452](https://github.com/adobe/spectrum-css/issues/452)) ([8bb2d5b](https://github.com/adobe/spectrum-css/commit/8bb2d5b))
+- wrapping on long words in dropdowns, fixes [#451](https://github.com/adobe/spectrum-css/issues/451) ([#452](https://github.com/adobe/spectrum-css/issues/452)) ([8bb2d5b](https://github.com/adobe/spectrum-css/commit/8bb2d5b))
 
 <a name="2.1.1"></a>
 
@@ -674,7 +674,7 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 ### ✨ Features
 
--   add menu icon class, closes [#202](https://github.com/adobe/spectrum-css/issues/202) ([#331](https://github.com/adobe/spectrum-css/issues/331)) ([169940a](https://github.com/adobe/spectrum-css/commit/169940a))
+- add menu icon class, closes [#202](https://github.com/adobe/spectrum-css/issues/202) ([#331](https://github.com/adobe/spectrum-css/issues/331)) ([169940a](https://github.com/adobe/spectrum-css/commit/169940a))
 
 <a name="2.0.0"></a>
 
@@ -684,4 +684,4 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 ### ✨ Features
 
--   move to individually versioned packages with Lerna ([#265](https://github.com/adobe/spectrum-css/issues/265)) ([cb7fd4b](https://github.com/adobe/spectrum-css/commit/cb7fd4b)), closes [#231](https://github.com/adobe/spectrum-css/issues/231) [#214](https://github.com/adobe/spectrum-css/issues/214) [#229](https://github.com/adobe/spectrum-css/issues/229) [#240](https://github.com/adobe/spectrum-css/issues/240) [#239](https://github.com/adobe/spectrum-css/issues/239) [#161](https://github.com/adobe/spectrum-css/issues/161) [#242](https://github.com/adobe/spectrum-css/issues/242) [#246](https://github.com/adobe/spectrum-css/issues/246) [#219](https://github.com/adobe/spectrum-css/issues/219) [#235](https://github.com/adobe/spectrum-css/issues/235) [#189](https://github.com/adobe/spectrum-css/issues/189) [#248](https://github.com/adobe/spectrum-css/issues/248) [#232](https://github.com/adobe/spectrum-css/issues/232) [#248](https://github.com/adobe/spectrum-css/issues/248) [#218](https://github.com/adobe/spectrum-css/issues/218) [#237](https://github.com/adobe/spectrum-css/issues/237) [#255](https://github.com/adobe/spectrum-css/issues/255) [#256](https://github.com/adobe/spectrum-css/issues/256) [#258](https://github.com/adobe/spectrum-css/issues/258) [#257](https://github.com/adobe/spectrum-css/issues/257) [#259](https://github.com/adobe/spectrum-css/issues/259)
+- move to individually versioned packages with Lerna ([#265](https://github.com/adobe/spectrum-css/issues/265)) ([cb7fd4b](https://github.com/adobe/spectrum-css/commit/cb7fd4b)), closes [#231](https://github.com/adobe/spectrum-css/issues/231) [#214](https://github.com/adobe/spectrum-css/issues/214) [#229](https://github.com/adobe/spectrum-css/issues/229) [#240](https://github.com/adobe/spectrum-css/issues/240) [#239](https://github.com/adobe/spectrum-css/issues/239) [#161](https://github.com/adobe/spectrum-css/issues/161) [#242](https://github.com/adobe/spectrum-css/issues/242) [#246](https://github.com/adobe/spectrum-css/issues/246) [#219](https://github.com/adobe/spectrum-css/issues/219) [#235](https://github.com/adobe/spectrum-css/issues/235) [#189](https://github.com/adobe/spectrum-css/issues/189) [#248](https://github.com/adobe/spectrum-css/issues/248) [#232](https://github.com/adobe/spectrum-css/issues/232) [#248](https://github.com/adobe/spectrum-css/issues/248) [#218](https://github.com/adobe/spectrum-css/issues/218) [#237](https://github.com/adobe/spectrum-css/issues/237) [#255](https://github.com/adobe/spectrum-css/issues/255) [#256](https://github.com/adobe/spectrum-css/issues/256) [#258](https://github.com/adobe/spectrum-css/issues/258) [#257](https://github.com/adobe/spectrum-css/issues/257) [#259](https://github.com/adobe/spectrum-css/issues/259)

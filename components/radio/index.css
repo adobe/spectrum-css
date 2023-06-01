@@ -37,9 +37,7 @@ governing permissions and limitations under the License.
 		--spectrum-focus-indicator-thickness
 	);
 	--spectrum-radio-focus-indicator-gap: var(--spectrum-focus-indicator-gap);
-	--spectrum-radio-focus-indicator-color: var(
-		--spectrum-focus-indicator-color
-	);
+	--spectrum-radio-focus-indicator-color: var(--spectrum-focus-indicator-color);
 
 	/* disabled all themes */
 	--spectrum-radio-disabled-content-color: var(
@@ -65,9 +63,7 @@ governing permissions and limitations under the License.
 
 	/* spacing all themes */
 	--spectrum-radio-text-to-control: var(--spectrum-text-to-control-100);
-	--spectrum-radio-label-top-to-text: var(
-		--spectrum-component-top-to-text-100
-	);
+	--spectrum-radio-label-top-to-text: var(--spectrum-component-top-to-text-100);
 	--spectrum-radio-label-bottom-to-text: var(
 		--spectrum-component-bottom-to-text-100
 	);
@@ -94,9 +90,7 @@ governing permissions and limitations under the License.
 
 	/* default radio spacing for no t-shirt size */
 	--spectrum-radio-text-to-control: var(--spectrum-text-to-control-100);
-	--spectrum-radio-label-top-to-text: var(
-		--spectrum-component-top-to-text-100
-	);
+	--spectrum-radio-label-top-to-text: var(--spectrum-component-top-to-text-100);
 	--spectrum-radio-label-bottom-to-text: var(
 		--spectrum-component-bottom-to-text-100
 	);
@@ -115,9 +109,7 @@ governing permissions and limitations under the License.
 	);
 
 	--spectrum-radio-text-to-control: var(--spectrum-text-to-control-75);
-	--spectrum-radio-label-top-to-text: var(
-		--spectrum-component-top-to-text-75
-	);
+	--spectrum-radio-label-top-to-text: var(--spectrum-component-top-to-text-75);
 	--spectrum-radio-label-bottom-to-text: var(
 		--spectrum-component-bottom-to-text-75
 	);
@@ -135,9 +127,7 @@ governing permissions and limitations under the License.
 	);
 
 	--spectrum-radio-text-to-control: var(--spectrum-text-to-control-100);
-	--spectrum-radio-label-top-to-text: var(
-		--spectrum-component-top-to-text-100
-	);
+	--spectrum-radio-label-top-to-text: var(--spectrum-component-top-to-text-100);
 	--spectrum-radio-label-bottom-to-text: var(
 		--spectrum-component-bottom-to-text-100
 	);
@@ -155,9 +145,7 @@ governing permissions and limitations under the License.
 	);
 
 	--spectrum-radio-text-to-control: var(--spectrum-text-to-control-200);
-	--spectrum-radio-label-top-to-text: var(
-		--spectrum-component-top-to-text-200
-	);
+	--spectrum-radio-label-top-to-text: var(--spectrum-component-top-to-text-200);
 	--spectrum-radio-label-bottom-to-text: var(
 		--spectrum-component-bottom-to-text-200
 	);
@@ -175,9 +163,7 @@ governing permissions and limitations under the License.
 	);
 
 	--spectrum-radio-text-to-control: var(--spectrum-text-to-control-300);
-	--spectrum-radio-label-top-to-text: var(
-		--spectrum-component-top-to-text-300
-	);
+	--spectrum-radio-label-top-to-text: var(--spectrum-component-top-to-text-300);
 	--spectrum-radio-label-bottom-to-text: var(
 		--spectrum-component-bottom-to-text-300
 	);
@@ -510,10 +496,7 @@ governing permissions and limitations under the License.
 	/* Change the font styles in all browsers for input. */
 	font-family: inherit;
 	font-size: 100%;
-	line-height: var(
-		--mod-radio-line-height,
-		var(--spectrum-radio-line-height)
-	);
+	line-height: var(--mod-radio-line-height, var(--spectrum-radio-line-height));
 
 	/* Remove the margin for input in Firefox and Safari. */
 	margin: 0;
@@ -609,10 +592,7 @@ governing permissions and limitations under the License.
 			var(--spectrum-radio-neutral-content-color)
 		)
 	);
-	line-height: var(
-		--mod-radio-line-height,
-		var(--spectrum-radio-line-height)
-	);
+	line-height: var(--mod-radio-line-height, var(--spectrum-radio-line-height));
 
 	transition: color
 		var(

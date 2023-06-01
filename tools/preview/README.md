@@ -2,61 +2,60 @@
 
 The preview tool for Spectrum CSS is driven by [Storybook](https://storybook.js.org), a React-driven development environment that allows for in-depth exploration of components as they are being built.
 
--   `assets`: This folder contains static, unprocessed assets for inclusion in the stories.
--   `decorators`: These assets interpret the arguments provided and apply the necessary stylesheet or markup changes to reflect the desired update.
+- `assets`: This folder contains static, unprocessed assets for inclusion in the stories.
+- `decorators`: These assets interpret the arguments provided and apply the necessary stylesheet or markup changes to reflect the desired update.
 
 **Storybook files:**
 
--   `main.js`
--   `manager.js`
--   `preview.js`
--   `preview-head.html` & `main-head.html`
+- `main.js`
+- `manager.js`
+- `preview.js`
+- `preview-head.html` & `main-head.html`
 
 Storybook leverages webpack for bundling and we have updated it with the following settings (these rules are applied to \*.stories.js assets as well as the template.js files):
 
--   Packages can be loaded from local or root node_modules directories. i.e., in a story:
+- Packages can be loaded from local or root node_modules directories. i.e., in a story:
 
-    ```js
-    import { default as IconStories } from "@spectrum-css/icon/stories/icon.stories.js";
-    ```
+  ```js
+  import { default as IconStories } from "@spectrum-css/icon/stories/icon.stories.js";
+  ```
 
-    or in a template.js file:
+  or in a template.js file:
 
-    ```js
-    import { Template as Icon } from "@spectrum-css/icon/stories/template.js";
-    ```
+  ```js
+  import { Template as Icon } from "@spectrum-css/icon/stories/template.js";
+  ```
 
--   CSS for other components can be loaded in a story using the package name (rather than the directory path), i.e. `@spectrum-css/toast` vs. `../toast/index.css`. The local version of the package is used regardless but the webpack settings will resolve the pathing for you.
+- CSS for other components can be loaded in a story using the package name (rather than the directory path), i.e. `@spectrum-css/toast` vs. `../toast/index.css`. The local version of the package is used regardless but the webpack settings will resolve the pathing for you.
 
-    ```js
-    import { html } from "lit-html";
-    import { classMap } from "lit-html/directives/class-map.js";
-    import { ifDefined } from "lit-html/directives/if-defined.js";
-    ```
+  ```js
+  import { html } from "lit-html";
+  import { classMap } from "lit-html/directives/class-map.js";
+  import { ifDefined } from "lit-html/directives/if-defined.js";
+  ```
 
--   Images can be loaded automatically from the `assets/images` directory at the root of the project.
+- Images can be loaded automatically from the `assets/images` directory at the root of the project.
 
-    ```html
-    <img class="spectrum-Asset-image" src="example-ava.png" />
-    ```
+  ```html
+  <img class="spectrum-Asset-image" src="example-ava.png" />
+  ```
 
--   CSS assets will be run automatically through their respective postcss configurations. This means you do not need to load dist assets into a story. It is recommended you load **local development assets** as they will be correctly compiled on the fly. i.e., in your template.js:
+- CSS assets will be run automatically through their respective postcss configurations. This means you do not need to load dist assets into a story. It is recommended you load **local development assets** as they will be correctly compiled on the fly. i.e., in your template.js:
 
-    ```js
-    import "../index.css";
-    ```
+  ```js
+  import "../index.css";
+  ```
 
--   If you need to load an asset in your template based on storybook configurations, you can do so using dynamic imports and a webpackPrefetch flag (to prevent FOUC). These will follow the same compilation rules as noted above. i.e.,
+- If you need to load an asset in your template based on storybook configurations, you can do so using dynamic imports and a webpackPrefetch flag (to prevent FOUC). These will follow the same compilation rules as noted above. i.e.,
 
-    ```js
-    try {
-    	if (!express)
-    		import(/* webpackPrefetch: true */ "../themes/spectrum.css");
-    	else import(/* webpackPrefetch: true */ "../themes/express.css");
-    } catch (e) {
-    	console.warn(e);
-    }
-    ```
+  ```js
+  try {
+  	if (!express) import(/* webpackPrefetch: true */ "../themes/spectrum.css");
+  	else import(/* webpackPrefetch: true */ "../themes/express.css");
+  } catch (e) {
+  	console.warn(e);
+  }
+  ```
 
 We are leaning on Storybook's `@storybook/web-components` framework configuration as our stories rely on lit-html for dynamic attribute assignment.
 
@@ -64,10 +63,10 @@ We are leaning on Storybook's `@storybook/web-components` framework configuratio
 
 We are leveraging the following add-ons:
 
--   [@storybook/addon-essentials](https://github.com/storybookjs/storybook/tree/main/addons/essentials): configureJSX, transcludeMarkdown (MDX) specifically turned on
--   [@storybook/addon-a11y](https://github.com/storybookjs/storybook/tree/next/code/addons/a11y)
--   [@whitespace/storybook-addon-html](https://www.npmjs.com/package/@whitespace/storybook-addon-html)
--   [@etchteam/storybook-addon-status](https://storybook.js.org/addons/@etchteam/storybook-addon-status)
+- [@storybook/addon-essentials](https://github.com/storybookjs/storybook/tree/main/addons/essentials): configureJSX, transcludeMarkdown (MDX) specifically turned on
+- [@storybook/addon-a11y](https://github.com/storybookjs/storybook/tree/next/code/addons/a11y)
+- [@whitespace/storybook-addon-html](https://www.npmjs.com/package/@whitespace/storybook-addon-html)
+- [@etchteam/storybook-addon-status](https://storybook.js.org/addons/@etchteam/storybook-addon-status)
 
 ## Writing stories
 
@@ -75,8 +74,8 @@ The easiest way to begin writing stories for a new component is to run `yarn new
 
 Inside the component's package folder, you should now see a stories folder containing 2 assets:
 
--   `<foldername>.stories.js`
--   `template.js`
+- `<foldername>.stories.js`
+- `template.js`
 
 You are welcome to add as many separate `stories.js` files as you like in this directory as they will all be loaded automatically when storybook starts.
 
@@ -92,15 +91,15 @@ Arg types define the UI available to the Storybook visitor. Hereforeto called "c
 
 Notes on a few commonly used argTypes:
 
--   If your component does not include any animation, please hide the reducedMotion control to avoid confusion: `reducedMotion: { table: { disable: true } }`
+- If your component does not include any animation, please hide the reducedMotion control to avoid confusion: `reducedMotion: { table: { disable: true } }`
 
 #### Categories
 
--   `Global`: sourced automatically from preview.js. You can turn these off but we do not recommend adding any new controls here that are story-specific.
--   `Component`: controls that relate to the styling of the component; often these will be denoted by classes that include a `--` separator. i.e., `--quiet` or `--multiline`. These can be boolean, select dropdowns, radio buttons, etc. depending on the design rules for their application.
--   `Advanced`: these are controls that match the requirements of a component category but are not recommended to be used; styles designed for specific edge-cases or inoptimal use. i.e., `staticWhite`.
--   `State`: represents the environment in which the component exists - is it focused? open? sticky? These are more commonly applied by interaction than statically sourced from the DOM.
--   `Content`: not specific to the rendering of this component. Text or subcomponents to be rendered inside that region but that is not opinionated. Often this would be represented by a slot in a web component. i.e., labels, content to render inside a dialog or modal.
+- `Global`: sourced automatically from preview.js. You can turn these off but we do not recommend adding any new controls here that are story-specific.
+- `Component`: controls that relate to the styling of the component; often these will be denoted by classes that include a `--` separator. i.e., `--quiet` or `--multiline`. These can be boolean, select dropdowns, radio buttons, etc. depending on the design rules for their application.
+- `Advanced`: these are controls that match the requirements of a component category but are not recommended to be used; styles designed for specific edge-cases or inoptimal use. i.e., `staticWhite`.
+- `State`: represents the environment in which the component exists - is it focused? open? sticky? These are more commonly applied by interaction than statically sourced from the DOM.
+- `Content`: not specific to the rendering of this component. Text or subcomponents to be rendered inside that region but that is not opinionated. Often this would be represented by a slot in a web component. i.e., labels, content to render inside a dialog or modal.
 
 #### Icon dropdowns
 
@@ -222,14 +221,14 @@ Be sure to rename the import to something other than Template as the main export
 
 Every component will have access to a few empty, global inputs to provide consistency in naming for common requirements.
 
--   `rootClass`: this holds the top-level className of the component and should match the value set in the `args` of the stories.js file.
--   `id`: allows users to pass in a custom ID value and should be added to the top-level wrapper of the component.
--   `customClasses` (array): allows passing in additional classes to be applied to the top-level component. This is necessary for nesting templates inside others while allowing the parent to assign context to the child.
--   `...globals`: this spread variable should not be decomposed on import. Instead, add a desctructuring right after instantiation, i.e., `const { express } = globals`. These values map to the globally provided settings and allow you to make rendering choices based on these values.
+- `rootClass`: this holds the top-level className of the component and should match the value set in the `args` of the stories.js file.
+- `id`: allows users to pass in a custom ID value and should be added to the top-level wrapper of the component.
+- `customClasses` (array): allows passing in additional classes to be applied to the top-level component. This is necessary for nesting templates inside others while allowing the parent to assign context to the child.
+- `...globals`: this spread variable should not be decomposed on import. Instead, add a desctructuring right after instantiation, i.e., `const { express } = globals`. These values map to the globally provided settings and allow you to make rendering choices based on these values.
 
 The rest of the variables provided in the Template function's input object will map to the argTypes you defined in your stories.js file.
 
--   [More on component templates](https://storybook.js.org/docs/web-components/writing-stories/introduction#using-args)
+- [More on component templates](https://storybook.js.org/docs/web-components/writing-stories/introduction#using-args)
 
 To help in making a dynamic mark-up template, you can leverage any of the [directives](https://lit.dev/docs/templates/directives/) available in the `lit-html` package. Our most commonly used ones are: `html`, `classMap`, `ifDefined`.
 
@@ -267,8 +266,7 @@ export const Template = ({
 	const { express } = globals;
 
 	try {
-		if (!express)
-			import(/* webpackPrefetch: true */ "../themes/spectrum.css");
+		if (!express) import(/* webpackPrefetch: true */ "../themes/spectrum.css");
 		else import(/* webpackPrefetch: true */ "../themes/express.css");
 	} catch (e) {
 		console.warn(e);
@@ -331,9 +329,9 @@ Check that you have a local `.env` file in your `tools/preview` folder with a `C
 
 From the root of the project, there are 2 commands available for you to run:
 
--   `yarn test`: run chromatic as defined in the preview package
--   `yarn test:scope`: leveraging the `--only-story-names <storypath>` flag under the covers.
-    -   This command only runs a single story or a subset of stories by their name(s). Use the title from the story file's default export as the story path, followed by the desired story names. For example, if selecting all stories from a single story file with a title of `Example/Button`, this would be `Example/Button/*`. Globs are supported via [picomatch](https://www.npmjs.com/package/picomatch#globbing-features). (_note:_ the `--only-story-names` flag can be specified multiple times.)
+- `yarn test`: run chromatic as defined in the preview package
+- `yarn test:scope`: leveraging the `--only-story-names <storypath>` flag under the covers.
+  - This command only runs a single story or a subset of stories by their name(s). Use the title from the story file's default export as the story path, followed by the desired story names. For example, if selecting all stories from a single story file with a title of `Example/Button`, this would be `Example/Button/*`. Globs are supported via [picomatch](https://www.npmjs.com/package/picomatch#globbing-features). (_note:_ the `--only-story-names` flag can be specified multiple times.)
 
 You can pass any supported [chromatic flag](https://www.chromatic.com/docs/cli#chromatic-options) to these commands. Note we are not using TurboSnap so commands specific to that tooling will not work in our project.
 

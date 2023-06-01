@@ -24,11 +24,7 @@ export const Template = ({
 			})}
 			id=${ifDefined(id)}
 		>
-			<img
-				class="${rootClass}-image"
-				src=${image}
-				alt=${ifDefined(altText)}
-			/>
+			<img class="${rootClass}-image" src=${image} alt=${ifDefined(altText)} />
 		</div>
 	`;
 };

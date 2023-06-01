@@ -50,8 +50,7 @@ governing permissions and limitations under the License.
 	display: list-item;
 	margin: 0;
 
-	border-block-end: var(--spectrum-accordion-item-border-size) solid
-		transparent;
+	border-block-end: var(--spectrum-accordion-item-border-size) solid transparent;
 
 	&:first-of-type {
 		border-block-start: var(--spectrum-accordion-item-border-size) solid
@@ -78,8 +77,7 @@ governing permissions and limitations under the License.
 	/* using icon-height instead of icon-width for space with rotating the icon */
 	padding-inline-start: calc(
 		var(--spectrum-accordion-item-padding-x) +
-			var(--spectrum-accordion-icon-height) +
-			var(--spectrum-accordion-icon-gap) +
+			var(--spectrum-accordion-icon-height) + var(--spectrum-accordion-icon-gap) +
 			var(--spectrum-accordion-item-border-left-size)
 	);
 	padding-inline-end: var(--spectrum-accordion-item-padding-x);
@@ -114,12 +112,8 @@ governing permissions and limitations under the License.
 
 			position: absolute;
 			inset-inline-start: 0;
-			inset-block-start: calc(
-				-1 * var(--spectrum-accordion-item-border-size)
-			);
-			inset-block-end: calc(
-				-1 * var(--spectrum-accordion-item-border-size)
-			);
+			inset-block-start: calc(-1 * var(--spectrum-accordion-item-border-size));
+			inset-block-end: calc(-1 * var(--spectrum-accordion-item-border-size));
 
 			inline-size: var(--spectrum-accordion-item-border-left-size);
 		}

@@ -31,8 +31,7 @@ function getUsedVars(root) {
 			// Store every variable referenced by this var
 			if (isVar && usedInDecl.length) {
 				for (let varName of usedInDecl) {
-					variableRelationships[varName] =
-						variableRelationships[varName] || [];
+					variableRelationships[varName] = variableRelationships[varName] || [];
 					variableRelationships[varName].push(decl.prop);
 				}
 			}
@@ -60,14 +59,10 @@ function dropUnused(
 			// Note if it seems like this variable is unused
 			if (!usedAnywhere.includes(varName)) {
 				if (!fix)
-					decl.warn(
-						root.toResult(),
-						"Possible unused variable definition",
-						{
-							word: varName,
-							index: decl.sourceIndex,
-						}
-					);
+					decl.warn(root.toResult(), "Possible unused variable definition", {
+						word: varName,
+						index: decl.sourceIndex,
+					});
 				else decl.remove();
 
 				return;
@@ -92,14 +87,10 @@ function dropUnused(
 
 				if (fix) decl.remove();
 				else {
-					decl.warn(
-						root.toResult(),
-						"Possible unused variable definition",
-						{
-							word: varName,
-							index: decl.sourceIndex,
-						}
-					);
+					decl.warn(root.toResult(), "Possible unused variable definition", {
+						word: varName,
+						index: decl.sourceIndex,
+					});
 				}
 			}
 		});

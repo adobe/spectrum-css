@@ -15,15 +15,9 @@ governing permissions and limitations under the License.
 		--spectrum-switch-background-color-selected-default: var(
 			--spectrum-gray-700
 		);
-		--spectrum-switch-background-color-selected-hover: var(
-			--spectrum-gray-800
-		);
-		--spectrum-switch-background-color-selected-down: var(
-			--spectrum-gray-900
-		);
-		--spectrum-switch-background-color-selected-focus: var(
-			--spectrum-gray-800
-		);
+		--spectrum-switch-background-color-selected-hover: var(--spectrum-gray-800);
+		--spectrum-switch-background-color-selected-down: var(--spectrum-gray-900);
+		--spectrum-switch-background-color-selected-focus: var(--spectrum-gray-800);
 
 		--spectrum-switch-handle-border-color-default: var(--spectrum-gray-600);
 		--spectrum-switch-handle-border-color-hover: var(--spectrum-gray-700);

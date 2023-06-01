@@ -393,11 +393,11 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 🗓 2022-11-10 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/fieldgroup@3.1.4...@spectrum-css/fieldgroup@4.0.0)
 
--   feat(fieldgroup)!: migrate to core tokens (#1486) ([17c4795](https://github.com/adobe/spectrum-css/commit/17c4795)), closes [#1486](https://github.com/adobe/spectrum-css/issues/1486)
+- feat(fieldgroup)!: migrate to core tokens (#1486) ([17c4795](https://github.com/adobe/spectrum-css/commit/17c4795)), closes [#1486](https://github.com/adobe/spectrum-css/issues/1486)
 
 ### 🛑 BREAKING CHANGES
 
--   migrates FieldGroup to core tokens
+- migrates FieldGroup to core tokens
 
 Co-authored-by: Patrick Fulton <pfulton@adobe.com>
 
@@ -441,7 +441,7 @@ Co-authored-by: Patrick Fulton <pfulton@adobe.com>
 
 ### ✨ Features
 
--   **fieldgroup:** add styles for read-only checkbox group ([33d1d20](https://github.com/adobe/spectrum-css/commit/33d1d20))
+- **fieldgroup:** add styles for read-only checkbox group ([33d1d20](https://github.com/adobe/spectrum-css/commit/33d1d20))
 
 <a name="3.0.19"></a>
 
@@ -507,7 +507,7 @@ Co-authored-by: Patrick Fulton <pfulton@adobe.com>
 
 ### 🐛 Bug fixes
 
--   update peer dependencies ([97810cf](https://github.com/adobe/spectrum-css/commit/97810cf))
+- update peer dependencies ([97810cf](https://github.com/adobe/spectrum-css/commit/97810cf))
 
 <a name="3.0.11"></a>
 
@@ -581,7 +581,7 @@ Co-authored-by: Patrick Fulton <pfulton@adobe.com>
 
 ### 🐛 Bug fixes
 
--   updating version number on vars ([f535b49](https://github.com/adobe/spectrum-css/commit/f535b49))
+- updating version number on vars ([f535b49](https://github.com/adobe/spectrum-css/commit/f535b49))
 
 <a name="3.0.3-alpha.3"></a>
 
@@ -639,11 +639,11 @@ Co-authored-by: Patrick Fulton <pfulton@adobe.com>
 
 ### ✨ Features
 
--   added t-shirt sizes to checkbox ([f4c59bd](https://github.com/adobe/spectrum-css/commit/f4c59bd)), closes [#951](https://github.com/adobe/spectrum-css/issues/951)
+- added t-shirt sizes to checkbox ([f4c59bd](https://github.com/adobe/spectrum-css/commit/f4c59bd)), closes [#951](https://github.com/adobe/spectrum-css/issues/951)
 
 ### 🛑 BREAKING CHANGES
 
--   a t-shirt size class is now required for checkbox.
+- a t-shirt size class is now required for checkbox.
 
 <a name="3.0.0-beta.6"></a>
 
@@ -653,8 +653,8 @@ Co-authored-by: Patrick Fulton <pfulton@adobe.com>
 
 ### 🐛 Bug fixes
 
--   support content direction sensitive horizontal spacing, fixes [#1050](https://github.com/adobe/spectrum-css/issues/1050) ([#1055](https://github.com/adobe/spectrum-css/issues/1055)) ([d24c17e](https://github.com/adobe/spectrum-css/commit/d24c17e))
--   update main, resolved conflicts ([d7880a2](https://github.com/adobe/spectrum-css/commit/d7880a2))
+- support content direction sensitive horizontal spacing, fixes [#1050](https://github.com/adobe/spectrum-css/issues/1050) ([#1055](https://github.com/adobe/spectrum-css/issues/1055)) ([d24c17e](https://github.com/adobe/spectrum-css/commit/d24c17e))
+- update main, resolved conflicts ([d7880a2](https://github.com/adobe/spectrum-css/commit/d7880a2))
 
 <a name="3.0.0-beta.5"></a>
 
@@ -672,16 +672,16 @@ Co-authored-by: Patrick Fulton <pfulton@adobe.com>
 
 ### 🐛 Bug fixes
 
--   Checkbox and Radio margins, docs, and typography ([#897](https://github.com/adobe/spectrum-css/issues/897)) ([a089ce0](https://github.com/adobe/spectrum-css/commit/a089ce0)), closes [#243](https://github.com/adobe/spectrum-css/issues/243) [#124](https://github.com/adobe/spectrum-css/issues/124) [#707](https://github.com/adobe/spectrum-css/issues/707) [#243](https://github.com/adobe/spectrum-css/issues/243) [#251](https://github.com/adobe/spectrum-css/issues/251)
+- Checkbox and Radio margins, docs, and typography ([#897](https://github.com/adobe/spectrum-css/issues/897)) ([a089ce0](https://github.com/adobe/spectrum-css/commit/a089ce0)), closes [#243](https://github.com/adobe/spectrum-css/issues/243) [#124](https://github.com/adobe/spectrum-css/issues/124) [#707](https://github.com/adobe/spectrum-css/issues/707) [#243](https://github.com/adobe/spectrum-css/issues/243) [#251](https://github.com/adobe/spectrum-css/issues/251)
 
 ### 🛑 BREAKING CHANGES
 
--   Checkbox and Radio no longer have margin on their own, must use FieldGroup
+- Checkbox and Radio no longer have margin on their own, must use FieldGroup
 
--   feat: add .spectrum-Example to wrap sub-examples
--   The spectrum-FieldGroup--horizontal is now required for horizontal field groups
+- feat: add .spectrum-Example to wrap sub-examples
+- The spectrum-FieldGroup--horizontal is now required for horizontal field groups
 
--   feat: remove hit area from Radio/Checkbox
+- feat: remove hit area from Radio/Checkbox
 
 <a name="3.0.0-beta.3"></a>
 
@@ -771,5 +771,5 @@ Co-authored-by: Patrick Fulton <pfulton@adobe.com>
 
 ### ✨ Features
 
--   let FieldGroup wrap, fixes [#268](https://github.com/adobe/spectrum-css/issues/268) ([#307](https://github.com/adobe/spectrum-css/issues/307)) ([170d964](https://github.com/adobe/spectrum-css/commit/170d964))
--   move to individually versioned packages with Lerna ([#265](https://github.com/adobe/spectrum-css/issues/265)) ([cb7fd4b](https://github.com/adobe/spectrum-css/commit/cb7fd4b)), closes [#231](https://github.com/adobe/spectrum-css/issues/231) [#214](https://github.com/adobe/spectrum-css/issues/214) [#229](https://github.com/adobe/spectrum-css/issues/229) [#240](https://github.com/adobe/spectrum-css/issues/240) [#239](https://github.com/adobe/spectrum-css/issues/239) [#161](https://github.com/adobe/spectrum-css/issues/161) [#242](https://github.com/adobe/spectrum-css/issues/242) [#246](https://github.com/adobe/spectrum-css/issues/246) [#219](https://github.com/adobe/spectrum-css/issues/219) [#235](https://github.com/adobe/spectrum-css/issues/235) [#189](https://github.com/adobe/spectrum-css/issues/189) [#248](https://github.com/adobe/spectrum-css/issues/248) [#232](https://github.com/adobe/spectrum-css/issues/232) [#248](https://github.com/adobe/spectrum-css/issues/248) [#218](https://github.com/adobe/spectrum-css/issues/218) [#237](https://github.com/adobe/spectrum-css/issues/237) [#255](https://github.com/adobe/spectrum-css/issues/255) [#256](https://github.com/adobe/spectrum-css/issues/256) [#258](https://github.com/adobe/spectrum-css/issues/258) [#257](https://github.com/adobe/spectrum-css/issues/257) [#259](https://github.com/adobe/spectrum-css/issues/259)
+- let FieldGroup wrap, fixes [#268](https://github.com/adobe/spectrum-css/issues/268) ([#307](https://github.com/adobe/spectrum-css/issues/307)) ([170d964](https://github.com/adobe/spectrum-css/commit/170d964))
+- move to individually versioned packages with Lerna ([#265](https://github.com/adobe/spectrum-css/issues/265)) ([cb7fd4b](https://github.com/adobe/spectrum-css/commit/cb7fd4b)), closes [#231](https://github.com/adobe/spectrum-css/issues/231) [#214](https://github.com/adobe/spectrum-css/issues/214) [#229](https://github.com/adobe/spectrum-css/issues/229) [#240](https://github.com/adobe/spectrum-css/issues/240) [#239](https://github.com/adobe/spectrum-css/issues/239) [#161](https://github.com/adobe/spectrum-css/issues/161) [#242](https://github.com/adobe/spectrum-css/issues/242) [#246](https://github.com/adobe/spectrum-css/issues/246) [#219](https://github.com/adobe/spectrum-css/issues/219) [#235](https://github.com/adobe/spectrum-css/issues/235) [#189](https://github.com/adobe/spectrum-css/issues/189) [#248](https://github.com/adobe/spectrum-css/issues/248) [#232](https://github.com/adobe/spectrum-css/issues/232) [#248](https://github.com/adobe/spectrum-css/issues/248) [#218](https://github.com/adobe/spectrum-css/issues/218) [#237](https://github.com/adobe/spectrum-css/issues/237) [#255](https://github.com/adobe/spectrum-css/issues/255) [#256](https://github.com/adobe/spectrum-css/issues/256) [#258](https://github.com/adobe/spectrum-css/issues/258) [#257](https://github.com/adobe/spectrum-css/issues/257) [#259](https://github.com/adobe/spectrum-css/issues/259)

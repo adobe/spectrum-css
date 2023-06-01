@@ -77,9 +77,7 @@ governing permissions and limitations under the License.
 	}
 
 	&:focus-ring {
-		color: var(
-			--spectrum-tabs-textonly-tabitem-text-color-selected-key-focus
-		);
+		color: var(--spectrum-tabs-textonly-tabitem-text-color-selected-key-focus);
 
 		&::before {
 			border-color: var(

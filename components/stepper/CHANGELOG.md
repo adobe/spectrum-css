@@ -51,7 +51,7 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 ### 🐛 Bug fixes
 
--   **textfield, stepper:** button padding and focus indicator ([#1863](https://github.com/adobe/spectrum-css/issues/1863)) ([7963b85](https://github.com/adobe/spectrum-css/commit/7963b85))
+- **textfield, stepper:** button padding and focus indicator ([#1863](https://github.com/adobe/spectrum-css/issues/1863)) ([7963b85](https://github.com/adobe/spectrum-css/commit/7963b85))
 
 <a name="4.0.28"></a>
 
@@ -93,7 +93,7 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 ### 🐛 Bug fixes
 
--   **stepper:** fix stepper button padding and borders ([#1856](https://github.com/adobe/spectrum-css/issues/1856)) ([55f2b08](https://github.com/adobe/spectrum-css/commit/55f2b08))
+- **stepper:** fix stepper button padding and borders ([#1856](https://github.com/adobe/spectrum-css/issues/1856)) ([55f2b08](https://github.com/adobe/spectrum-css/commit/55f2b08))
 
 <a name="4.0.23"></a>
 
@@ -111,7 +111,7 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 ### 🐛 Bug fixes
 
--   **stepper:** remove misspelled flex property ([#1840](https://github.com/adobe/spectrum-css/issues/1840)) ([590a0f6](https://github.com/adobe/spectrum-css/commit/590a0f6))
+- **stepper:** remove misspelled flex property ([#1840](https://github.com/adobe/spectrum-css/issues/1840)) ([590a0f6](https://github.com/adobe/spectrum-css/commit/590a0f6))
 
 <a name="4.0.21"></a>
 
@@ -161,7 +161,7 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 ### 🐛 Bug fixes
 
--   **stepper:** fix stepper width ([a67293f](https://github.com/adobe/spectrum-css/commit/a67293f))
+- **stepper:** fix stepper width ([a67293f](https://github.com/adobe/spectrum-css/commit/a67293f))
 
 <a name="4.0.15"></a>
 
@@ -289,22 +289,22 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 🗓 2023-03-21 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/stepper@3.0.39...@spectrum-css/stepper@4.0.0)
 
--   refactor(textfield)!: migrate spectrum tokens (#1544) ([1723f01](https://github.com/adobe/spectrum-css/commit/1723f01)), closes [#1544](https://github.com/adobe/spectrum-css/issues/1544)
+- refactor(textfield)!: migrate spectrum tokens (#1544) ([1723f01](https://github.com/adobe/spectrum-css/commit/1723f01)), closes [#1544](https://github.com/adobe/spectrum-css/issues/1544)
 
 ### 🛑 BREAKING CHANGES
 
--   migrates textfield to spectrum tokens
+- migrates textfield to spectrum tokens
 
-*   Updates to latest tokens package
-*   WHCM added
-*   Focus state and dependency fixes
-*   Leveraging CSS grid for help text placement and character count
+* Updates to latest tokens package
+* WHCM added
+* Focus state and dependency fixes
+* Leveraging CSS grid for help text placement and character count
 
--   removes placeholder from stepper inputs
+- removes placeholder from stepper inputs
 
--   feat(stepper): add hideStepper control to fix border styling issue
--   refactor(stepper): adding native pseudo class styles
--   refactor(stepper): add support for invalid textfield styling
+- feat(stepper): add hideStepper control to fix border styling issue
+- refactor(stepper): adding native pseudo class styles
+- refactor(stepper): add support for invalid textfield styling
 
 <a name="4.0.0-beta.4"></a>
 
@@ -314,21 +314,21 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 ### ✨ Features
 
--   **stepper:** add hideStepper control to fix border styling issue ([ba2f078](https://github.com/adobe/spectrum-css/commit/ba2f078))
--   **stepper:** adjustment to quiet focus and placeholder tokens ([05a95ae](https://github.com/adobe/spectrum-css/commit/05a95ae))
--   **stepper:** colors for variants and states ([699bc5e](https://github.com/adobe/spectrum-css/commit/699bc5e))
--   **stepper:** design revisions ([b31d264](https://github.com/adobe/spectrum-css/commit/b31d264))
--   **stepper:** refactor for readability and variant cascade ([a5cfd00](https://github.com/adobe/spectrum-css/commit/a5cfd00))
--   **stepper:** windows high contrast mode overrides ([290fa58](https://github.com/adobe/spectrum-css/commit/290fa58))
+- **stepper:** add hideStepper control to fix border styling issue ([ba2f078](https://github.com/adobe/spectrum-css/commit/ba2f078))
+- **stepper:** adjustment to quiet focus and placeholder tokens ([05a95ae](https://github.com/adobe/spectrum-css/commit/05a95ae))
+- **stepper:** colors for variants and states ([699bc5e](https://github.com/adobe/spectrum-css/commit/699bc5e))
+- **stepper:** design revisions ([b31d264](https://github.com/adobe/spectrum-css/commit/b31d264))
+- **stepper:** refactor for readability and variant cascade ([a5cfd00](https://github.com/adobe/spectrum-css/commit/a5cfd00))
+- **stepper:** windows high contrast mode overrides ([290fa58](https://github.com/adobe/spectrum-css/commit/290fa58))
 
 ### 🐛 Bug fixes
 
--   **stepper, textfield:** revert use of has ([c26c64f](https://github.com/adobe/spectrum-css/commit/c26c64f))
--   **stepper:** button border radii correction ([be2e210](https://github.com/adobe/spectrum-css/commit/be2e210))
--   **stepper:** correct button width for SWC VRTs ([94f2fd4](https://github.com/adobe/spectrum-css/commit/94f2fd4))
--   **stepper:** fix quiet stepper button width ([1d06567](https://github.com/adobe/spectrum-css/commit/1d06567))
--   **stepper:** quiet hover background ([920b500](https://github.com/adobe/spectrum-css/commit/920b500))
--   **stepper:** refactor button border radii and inset ([df24935](https://github.com/adobe/spectrum-css/commit/df24935))
+- **stepper, textfield:** revert use of has ([c26c64f](https://github.com/adobe/spectrum-css/commit/c26c64f))
+- **stepper:** button border radii correction ([be2e210](https://github.com/adobe/spectrum-css/commit/be2e210))
+- **stepper:** correct button width for SWC VRTs ([94f2fd4](https://github.com/adobe/spectrum-css/commit/94f2fd4))
+- **stepper:** fix quiet stepper button width ([1d06567](https://github.com/adobe/spectrum-css/commit/1d06567))
+- **stepper:** quiet hover background ([920b500](https://github.com/adobe/spectrum-css/commit/920b500))
+- **stepper:** refactor button border radii and inset ([df24935](https://github.com/adobe/spectrum-css/commit/df24935))
 
 <a name="3.0.39"></a>
 
@@ -458,7 +458,7 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 ### 🐛 Bug fixes
 
--   stepper WHCM ([1b1695a](https://github.com/adobe/spectrum-css/commit/1b1695a))
+- stepper WHCM ([1b1695a](https://github.com/adobe/spectrum-css/commit/1b1695a))
 
 <a name="3.0.23"></a>
 
@@ -548,7 +548,7 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 ### 🐛 Bug fixes
 
--   update peer dependencies ([97810cf](https://github.com/adobe/spectrum-css/commit/97810cf))
+- update peer dependencies ([97810cf](https://github.com/adobe/spectrum-css/commit/97810cf))
 
 <a name="3.0.12"></a>
 
@@ -630,7 +630,7 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 ### 🐛 Bug fixes
 
--   updating version number on vars ([f535b49](https://github.com/adobe/spectrum-css/commit/f535b49))
+- updating version number on vars ([f535b49](https://github.com/adobe/spectrum-css/commit/f535b49))
 
 <a name="3.0.3-alpha.5"></a>
 
@@ -712,17 +712,17 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 ### ✨ Features
 
--   replace all FieldButton with ActionButton ([2fcbaaf](https://github.com/adobe/spectrum-css/commit/2fcbaaf))
+- replace all FieldButton with ActionButton ([2fcbaaf](https://github.com/adobe/spectrum-css/commit/2fcbaaf))
 
 ### 🐛 Bug fixes
 
--   correct dependencies for FieldButton -> ActionButton change ([29d69f8](https://github.com/adobe/spectrum-css/commit/29d69f8))
--   make Stepper build again ([afc2ea6](https://github.com/adobe/spectrum-css/commit/afc2ea6))
--   update main, resolved conflicts ([d7880a2](https://github.com/adobe/spectrum-css/commit/d7880a2))
+- correct dependencies for FieldButton -> ActionButton change ([29d69f8](https://github.com/adobe/spectrum-css/commit/29d69f8))
+- make Stepper build again ([afc2ea6](https://github.com/adobe/spectrum-css/commit/afc2ea6))
+- update main, resolved conflicts ([d7880a2](https://github.com/adobe/spectrum-css/commit/d7880a2))
 
 ### 🛑 BREAKING CHANGES
 
--   markup now requires spectrum-ActionButton where all uses of spectrum-FieldButton were
+- markup now requires spectrum-ActionButton where all uses of spectrum-FieldButton were
 
 <a name="3.0.0-beta.6"></a>
 
@@ -772,17 +772,17 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 ### ✨ Features
 
--   make Stepper use new Textfield markup ([724d09a](https://github.com/adobe/spectrum-css/commit/724d09a))
+- make Stepper use new Textfield markup ([724d09a](https://github.com/adobe/spectrum-css/commit/724d09a))
 
 ### 🛑 BREAKING CHANGES
 
--   migrated to next Textfield markup
--   Use FieldButton instead of ActionButton
--   Width decreased
--   .spectrum-Stepper-stepUpIcon and .spectrum-Stepper-stepDownIcon removed
--   Must apply .is-disabled for disabled steppers
--   Must apply .is-focused and .is-keyboardFocused
--   remove support for :invalid
+- migrated to next Textfield markup
+- Use FieldButton instead of ActionButton
+- Width decreased
+- .spectrum-Stepper-stepUpIcon and .spectrum-Stepper-stepDownIcon removed
+- Must apply .is-disabled for disabled steppers
+- Must apply .is-focused and .is-keyboardFocused
+- remove support for :invalid
 
 <a name="3.0.0-beta.0"></a>
 
@@ -792,7 +792,7 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 ### ✨ Features
 
--   make Stepper support RTL ([0de6165](https://github.com/adobe/spectrum-css/commit/0de6165))
+- make Stepper support RTL ([0de6165](https://github.com/adobe/spectrum-css/commit/0de6165))
 
 <a name="2.0.6"></a>
 
@@ -850,4 +850,4 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 ### ✨ Features
 
--   move to individually versioned packages with Lerna ([#265](https://github.com/adobe/spectrum-css/issues/265)) ([cb7fd4b](https://github.com/adobe/spectrum-css/commit/cb7fd4b)), closes [#231](https://github.com/adobe/spectrum-css/issues/231) [#214](https://github.com/adobe/spectrum-css/issues/214) [#229](https://github.com/adobe/spectrum-css/issues/229) [#240](https://github.com/adobe/spectrum-css/issues/240) [#239](https://github.com/adobe/spectrum-css/issues/239) [#161](https://github.com/adobe/spectrum-css/issues/161) [#242](https://github.com/adobe/spectrum-css/issues/242) [#246](https://github.com/adobe/spectrum-css/issues/246) [#219](https://github.com/adobe/spectrum-css/issues/219) [#235](https://github.com/adobe/spectrum-css/issues/235) [#189](https://github.com/adobe/spectrum-css/issues/189) [#248](https://github.com/adobe/spectrum-css/issues/248) [#232](https://github.com/adobe/spectrum-css/issues/232) [#248](https://github.com/adobe/spectrum-css/issues/248) [#218](https://github.com/adobe/spectrum-css/issues/218) [#237](https://github.com/adobe/spectrum-css/issues/237) [#255](https://github.com/adobe/spectrum-css/issues/255) [#256](https://github.com/adobe/spectrum-css/issues/256) [#258](https://github.com/adobe/spectrum-css/issues/258) [#257](https://github.com/adobe/spectrum-css/issues/257) [#259](https://github.com/adobe/spectrum-css/issues/259)
+- move to individually versioned packages with Lerna ([#265](https://github.com/adobe/spectrum-css/issues/265)) ([cb7fd4b](https://github.com/adobe/spectrum-css/commit/cb7fd4b)), closes [#231](https://github.com/adobe/spectrum-css/issues/231) [#214](https://github.com/adobe/spectrum-css/issues/214) [#229](https://github.com/adobe/spectrum-css/issues/229) [#240](https://github.com/adobe/spectrum-css/issues/240) [#239](https://github.com/adobe/spectrum-css/issues/239) [#161](https://github.com/adobe/spectrum-css/issues/161) [#242](https://github.com/adobe/spectrum-css/issues/242) [#246](https://github.com/adobe/spectrum-css/issues/246) [#219](https://github.com/adobe/spectrum-css/issues/219) [#235](https://github.com/adobe/spectrum-css/issues/235) [#189](https://github.com/adobe/spectrum-css/issues/189) [#248](https://github.com/adobe/spectrum-css/issues/248) [#232](https://github.com/adobe/spectrum-css/issues/232) [#248](https://github.com/adobe/spectrum-css/issues/248) [#218](https://github.com/adobe/spectrum-css/issues/218) [#237](https://github.com/adobe/spectrum-css/issues/237) [#255](https://github.com/adobe/spectrum-css/issues/255) [#256](https://github.com/adobe/spectrum-css/issues/256) [#258](https://github.com/adobe/spectrum-css/issues/258) [#257](https://github.com/adobe/spectrum-css/issues/257) [#259](https://github.com/adobe/spectrum-css/issues/259)

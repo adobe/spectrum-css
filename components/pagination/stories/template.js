@@ -24,10 +24,7 @@ export const Template = ({
 				class=${classMap({
 					[rootClass]: true,
 					[`${rootClass}--explicit`]: true,
-					...customClasses.reduce(
-						(a, c) => ({ ...a, [c]: true }),
-						{}
-					),
+					...customClasses.reduce((a, c) => ({ ...a, [c]: true }), {}),
 				})}
 			>
 				${ActionButton({

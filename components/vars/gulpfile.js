@@ -108,9 +108,7 @@ function processDimensionAliases() {
 		.pipe(
 			replace(
 				/:root/,
-				["medium", "large"]
-					.map((scale) => `.spectrum--${scale}`)
-					.join(",\n")
+				["medium", "large"].map((scale) => `.spectrum--${scale}`).join(",\n")
 			)
 		)
 		.pipe(gulp.dest("dist/globals/"));

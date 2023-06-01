@@ -217,11 +217,11 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 🗓 2023-04-03 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/searchwithin@3.4.41...@spectrum-css/searchwithin@4.0.0)
 
--   fix(tokens)!: rgb transform to split out rgb values from css attributes (#1590) ([b714db4](https://github.com/adobe/spectrum-css/commit/b714db4)), closes [#1590](https://github.com/adobe/spectrum-css/issues/1590)
+- fix(tokens)!: rgb transform to split out rgb values from css attributes (#1590) ([b714db4](https://github.com/adobe/spectrum-css/commit/b714db4)), closes [#1590](https://github.com/adobe/spectrum-css/issues/1590)
 
 ### 🛑 BREAKING CHANGES
 
--   transforms color tokens to split out their `rgb` values
+- transforms color tokens to split out their `rgb` values
 
 Co-authored-by: castastrophe <castastrophe@users.noreply.github.com>
 
@@ -561,7 +561,7 @@ Co-authored-by: castastrophe <castastrophe@users.noreply.github.com>
 
 ### ✨ Features
 
--   break out ClearButton and LogicButton into their own packages ([3cc0a5f](https://github.com/adobe/spectrum-css/commit/3cc0a5f))
+- break out ClearButton and LogicButton into their own packages ([3cc0a5f](https://github.com/adobe/spectrum-css/commit/3cc0a5f))
 
 <a name="3.3.0"></a>
 
@@ -579,7 +579,7 @@ Co-authored-by: castastrophe <castastrophe@users.noreply.github.com>
 
 ### ✨ Features
 
--   break out ClearButton and LogicButton into their own packages ([a2092ab](https://github.com/adobe/spectrum-css/commit/a2092ab))
+- break out ClearButton and LogicButton into their own packages ([a2092ab](https://github.com/adobe/spectrum-css/commit/a2092ab))
 
 <a name="3.2.2"></a>
 
@@ -605,7 +605,7 @@ Co-authored-by: castastrophe <castastrophe@users.noreply.github.com>
 
 ### ✨ Features
 
--   add classname to position clearbutton ([694cc40](https://github.com/adobe/spectrum-css/commit/694cc40))
+- add classname to position clearbutton ([694cc40](https://github.com/adobe/spectrum-css/commit/694cc40))
 
 <a name="3.1.2"></a>
 
@@ -631,7 +631,7 @@ Co-authored-by: castastrophe <castastrophe@users.noreply.github.com>
 
 ### ✨ Features
 
--   make ClearButton build again, unblock CCX ([#1304](https://github.com/adobe/spectrum-css/issues/1304)) ([ae9399a](https://github.com/adobe/spectrum-css/commit/ae9399a))
+- make ClearButton build again, unblock CCX ([#1304](https://github.com/adobe/spectrum-css/issues/1304)) ([ae9399a](https://github.com/adobe/spectrum-css/commit/ae9399a))
 
 <a name="3.0.5"></a>
 
@@ -737,7 +737,7 @@ Co-authored-by: castastrophe <castastrophe@users.noreply.github.com>
 
 ### ✨ Features
 
--   added t-shirt sizes to picker ([35bf08f](https://github.com/adobe/spectrum-css/commit/35bf08f)), closes [#940](https://github.com/adobe/spectrum-css/issues/940)
+- added t-shirt sizes to picker ([35bf08f](https://github.com/adobe/spectrum-css/commit/35bf08f)), closes [#940](https://github.com/adobe/spectrum-css/issues/940)
 
 <a name="3.0.0-beta.7"></a>
 
@@ -747,20 +747,20 @@ Co-authored-by: castastrophe <castastrophe@users.noreply.github.com>
 
 ### ✨ Features
 
--   change all instances of .is-selected to .is-open ([e28af42](https://github.com/adobe/spectrum-css/commit/e28af42))
--   replace all FieldButton with ActionButton ([2fcbaaf](https://github.com/adobe/spectrum-css/commit/2fcbaaf))
+- change all instances of .is-selected to .is-open ([e28af42](https://github.com/adobe/spectrum-css/commit/e28af42))
+- replace all FieldButton with ActionButton ([2fcbaaf](https://github.com/adobe/spectrum-css/commit/2fcbaaf))
 
 ### 🐛 Bug fixes
 
--   make SearchWithin build again ([cf7fee7](https://github.com/adobe/spectrum-css/commit/cf7fee7))
--   update main, resolved conflicts ([d7880a2](https://github.com/adobe/spectrum-css/commit/d7880a2))
--   use new Picker markup ([c257f2a](https://github.com/adobe/spectrum-css/commit/c257f2a))
+- make SearchWithin build again ([cf7fee7](https://github.com/adobe/spectrum-css/commit/cf7fee7))
+- update main, resolved conflicts ([d7880a2](https://github.com/adobe/spectrum-css/commit/d7880a2))
+- use new Picker markup ([c257f2a](https://github.com/adobe/spectrum-css/commit/c257f2a))
 
 ### 🛑 BREAKING CHANGES
 
--   Use .is-open to indicate the popover is shown, not .is-selected
--   SearchWithin now uses new Picker markup
--   markup now requires spectrum-ActionButton where all uses of spectrum-FieldButton were
+- Use .is-open to indicate the popover is shown, not .is-selected
+- SearchWithin now uses new Picker markup
+- markup now requires spectrum-ActionButton where all uses of spectrum-FieldButton were
 
 <a name="3.0.0-beta.6"></a>
 
@@ -778,15 +778,15 @@ Co-authored-by: castastrophe <castastrophe@users.noreply.github.com>
 
 ### ✨ Features
 
--   renamed dropdown to picker ([#540](https://github.com/adobe/spectrum-css/issues/540)) ([d1081f0](https://github.com/adobe/spectrum-css/commit/d1081f0))
+- renamed dropdown to picker ([#540](https://github.com/adobe/spectrum-css/issues/540)) ([d1081f0](https://github.com/adobe/spectrum-css/commit/d1081f0))
 
 ### 🐛 Bug fixes
 
--   fix the issues caused by component rename ([#778](https://github.com/adobe/spectrum-css/issues/778)) ([e1d180c](https://github.com/adobe/spectrum-css/commit/e1d180c))
--   positioning clear button in searchwithin, closes [#880](https://github.com/adobe/spectrum-css/issues/880) ([0399609](https://github.com/adobe/spectrum-css/commit/0399609))
--   removed deprecated tokens from searchWithin ([d97b026](https://github.com/adobe/spectrum-css/commit/d97b026))
--   resolving conflicts with main ([8cafffa](https://github.com/adobe/spectrum-css/commit/8cafffa))
--   wip fix more components ([b74dbb8](https://github.com/adobe/spectrum-css/commit/b74dbb8))
+- fix the issues caused by component rename ([#778](https://github.com/adobe/spectrum-css/issues/778)) ([e1d180c](https://github.com/adobe/spectrum-css/commit/e1d180c))
+- positioning clear button in searchwithin, closes [#880](https://github.com/adobe/spectrum-css/issues/880) ([0399609](https://github.com/adobe/spectrum-css/commit/0399609))
+- removed deprecated tokens from searchWithin ([d97b026](https://github.com/adobe/spectrum-css/commit/d97b026))
+- resolving conflicts with main ([8cafffa](https://github.com/adobe/spectrum-css/commit/8cafffa))
+- wip fix more components ([b74dbb8](https://github.com/adobe/spectrum-css/commit/b74dbb8))
 
 <a name="3.0.0-beta.4"></a>
 
@@ -804,7 +804,7 @@ Co-authored-by: castastrophe <castastrophe@users.noreply.github.com>
 
 ### 🐛 Bug fixes
 
--   make SearchWithin use new Textfield markup ([#645](https://github.com/adobe/spectrum-css/issues/645)) ([262d5d7](https://github.com/adobe/spectrum-css/commit/262d5d7))
+- make SearchWithin use new Textfield markup ([#645](https://github.com/adobe/spectrum-css/issues/645)) ([262d5d7](https://github.com/adobe/spectrum-css/commit/262d5d7))
 
 <a name="3.0.0-beta.2"></a>
 
@@ -830,7 +830,7 @@ Co-authored-by: castastrophe <castastrophe@users.noreply.github.com>
 
 ### ✨ Features
 
--   make Search Within support RTL ([0aac282](https://github.com/adobe/spectrum-css/commit/0aac282))
+- make Search Within support RTL ([0aac282](https://github.com/adobe/spectrum-css/commit/0aac282))
 
 <a name="2.0.6"></a>
 
@@ -888,4 +888,4 @@ Co-authored-by: castastrophe <castastrophe@users.noreply.github.com>
 
 ### ✨ Features
 
--   move to individually versioned packages with Lerna ([#265](https://github.com/adobe/spectrum-css/issues/265)) ([cb7fd4b](https://github.com/adobe/spectrum-css/commit/cb7fd4b)), closes [#231](https://github.com/adobe/spectrum-css/issues/231) [#214](https://github.com/adobe/spectrum-css/issues/214) [#229](https://github.com/adobe/spectrum-css/issues/229) [#240](https://github.com/adobe/spectrum-css/issues/240) [#239](https://github.com/adobe/spectrum-css/issues/239) [#161](https://github.com/adobe/spectrum-css/issues/161) [#242](https://github.com/adobe/spectrum-css/issues/242) [#246](https://github.com/adobe/spectrum-css/issues/246) [#219](https://github.com/adobe/spectrum-css/issues/219) [#235](https://github.com/adobe/spectrum-css/issues/235) [#189](https://github.com/adobe/spectrum-css/issues/189) [#248](https://github.com/adobe/spectrum-css/issues/248) [#232](https://github.com/adobe/spectrum-css/issues/232) [#248](https://github.com/adobe/spectrum-css/issues/248) [#218](https://github.com/adobe/spectrum-css/issues/218) [#237](https://github.com/adobe/spectrum-css/issues/237) [#255](https://github.com/adobe/spectrum-css/issues/255) [#256](https://github.com/adobe/spectrum-css/issues/256) [#258](https://github.com/adobe/spectrum-css/issues/258) [#257](https://github.com/adobe/spectrum-css/issues/257) [#259](https://github.com/adobe/spectrum-css/issues/259)
+- move to individually versioned packages with Lerna ([#265](https://github.com/adobe/spectrum-css/issues/265)) ([cb7fd4b](https://github.com/adobe/spectrum-css/commit/cb7fd4b)), closes [#231](https://github.com/adobe/spectrum-css/issues/231) [#214](https://github.com/adobe/spectrum-css/issues/214) [#229](https://github.com/adobe/spectrum-css/issues/229) [#240](https://github.com/adobe/spectrum-css/issues/240) [#239](https://github.com/adobe/spectrum-css/issues/239) [#161](https://github.com/adobe/spectrum-css/issues/161) [#242](https://github.com/adobe/spectrum-css/issues/242) [#246](https://github.com/adobe/spectrum-css/issues/246) [#219](https://github.com/adobe/spectrum-css/issues/219) [#235](https://github.com/adobe/spectrum-css/issues/235) [#189](https://github.com/adobe/spectrum-css/issues/189) [#248](https://github.com/adobe/spectrum-css/issues/248) [#232](https://github.com/adobe/spectrum-css/issues/232) [#248](https://github.com/adobe/spectrum-css/issues/248) [#218](https://github.com/adobe/spectrum-css/issues/218) [#237](https://github.com/adobe/spectrum-css/issues/237) [#255](https://github.com/adobe/spectrum-css/issues/255) [#256](https://github.com/adobe/spectrum-css/issues/256) [#258](https://github.com/adobe/spectrum-css/issues/258) [#257](https://github.com/adobe/spectrum-css/issues/257) [#259](https://github.com/adobe/spectrum-css/issues/259)

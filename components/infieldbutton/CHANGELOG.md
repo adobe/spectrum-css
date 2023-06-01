@@ -177,11 +177,11 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 🗓 2022-10-25 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/infieldbutton@1.1.9...@spectrum-css/infieldbutton@2.0.0)
 
--   refactor(infieldbutton,inputgroup,pickerbutton)!: drop loudness api ([c97d40e](https://github.com/adobe/spectrum-css/commit/c97d40e))
+- refactor(infieldbutton,inputgroup,pickerbutton)!: drop loudness api ([c97d40e](https://github.com/adobe/spectrum-css/commit/c97d40e))
 
 ### 🛑 BREAKING CHANGES
 
--   remove high loudness selectors from pickerbutton, apply quiet background color from inputgroup, change loudness api to quiet for infieldbutton
+- remove high loudness selectors from pickerbutton, apply quiet background color from inputgroup, change loudness api to quiet for infieldbutton
 
 <a name="1.1.9"></a>
 
@@ -263,8 +263,8 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 ### ✨ Features
 
--   add InfieldButton component ([6424bf5](https://github.com/adobe/spectrum-css/commit/6424bf5))
+- add InfieldButton component ([6424bf5](https://github.com/adobe/spectrum-css/commit/6424bf5))
 
 ### 🐛 Bug fixes
 
--   correct icon positioning, fix RTL support ([de1e55e](https://github.com/adobe/spectrum-css/commit/de1e55e))
+- correct icon positioning, fix RTL support ([de1e55e](https://github.com/adobe/spectrum-css/commit/de1e55e))

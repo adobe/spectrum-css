@@ -9,11 +9,11 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 🗓 2023-05-23 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/actionbutton@3.0.45...@spectrum-css/actionbutton@4.0.0)
 
--   feat(dropzone)!: migrate tokens (#1831) ([5216021](https://github.com/adobe/spectrum-css/commit/5216021)), closes [#1831](https://github.com/adobe/spectrum-css/issues/1831)
+- feat(dropzone)!: migrate tokens (#1831) ([5216021](https://github.com/adobe/spectrum-css/commit/5216021)), closes [#1831](https://github.com/adobe/spectrum-css/issues/1831)
 
 ### 🛑 BREAKING CHANGES
 
--   migrates DropZone to use `@adobe/spectrum-tokens`.
+- migrates DropZone to use `@adobe/spectrum-tokens`.
 
 Also updates IllustratedMessage and ActionButton to share `--mod-` properties.
 
@@ -265,7 +265,7 @@ Also updates IllustratedMessage and ActionButton to share `--mod-` properties.
 
 ### 🐛 Bug fixes
 
--   **actionbutton:** fix variable used in documentation ([#1630](https://github.com/adobe/spectrum-css/issues/1630)) ([348f263](https://github.com/adobe/spectrum-css/commit/348f263))
+- **actionbutton:** fix variable used in documentation ([#1630](https://github.com/adobe/spectrum-css/issues/1630)) ([348f263](https://github.com/adobe/spectrum-css/commit/348f263))
 
 <a name="3.0.14"></a>
 
@@ -385,17 +385,17 @@ Also updates IllustratedMessage and ActionButton to share `--mod-` properties.
 
 🗓 2022-10-13 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/actionbutton@2.1.8...@spectrum-css/actionbutton@3.0.0)
 
--   refactor(actionbutton)!: remap core token aliases & rename aliases ([5966f9b](https://github.com/adobe/spectrum-css/commit/5966f9b))
+- refactor(actionbutton)!: remap core token aliases & rename aliases ([5966f9b](https://github.com/adobe/spectrum-css/commit/5966f9b))
 
 ### 🛑 BREAKING CHANGES
 
--   remaps existing aliases to new/renamed core token values
+- remaps existing aliases to new/renamed core token values
 
--   `--spectrum-focus-ring-thickness` renamed to `--spectrum-focus-indicator-thickness`
--   `--spectrum-focus-ring-gap` renamed to `--spectrum-focus-indicator-gap`
--   `--spectrum-focus-ring-color` renamed to `--spectrum-focus-indicator-color`
--   `--spectrum-static-white-focus-ring-color` renamed to `--spectrum-static-white-focus-indicator-color`
--   `--spectrum-static-black-focus-ring-color` renamed to `--spectrum-static-black-focus-indicator-color`
+- `--spectrum-focus-ring-thickness` renamed to `--spectrum-focus-indicator-thickness`
+- `--spectrum-focus-ring-gap` renamed to `--spectrum-focus-indicator-gap`
+- `--spectrum-focus-ring-color` renamed to `--spectrum-focus-indicator-color`
+- `--spectrum-static-white-focus-ring-color` renamed to `--spectrum-static-white-focus-indicator-color`
+- `--spectrum-static-black-focus-ring-color` renamed to `--spectrum-static-black-focus-indicator-color`
 
 <a name="2.1.8"></a>
 
@@ -469,7 +469,7 @@ Also updates IllustratedMessage and ActionButton to share `--mod-` properties.
 
 ### ✨ Features
 
--   **actionbutton:** adding x-small action-button (CSS-37) ([#1481](https://github.com/adobe/spectrum-css/issues/1481)) ([1f18708](https://github.com/adobe/spectrum-css/commit/1f18708))
+- **actionbutton:** adding x-small action-button (CSS-37) ([#1481](https://github.com/adobe/spectrum-css/issues/1481)) ([1f18708](https://github.com/adobe/spectrum-css/commit/1f18708))
 
 <a name="2.0.5"></a>
 
@@ -495,8 +495,8 @@ Also updates IllustratedMessage and ActionButton to share `--mod-` properties.
 
 ### 🐛 Bug fixes
 
--   **actionbutton, closebutton, picker:** remove `!important` declarations ([a26c212](https://github.com/adobe/spectrum-css/commit/a26c212))
--   **actionbutton:** match peer & dev deps for tokens package ([53df83d](https://github.com/adobe/spectrum-css/commit/53df83d))
+- **actionbutton, closebutton, picker:** remove `!important` declarations ([a26c212](https://github.com/adobe/spectrum-css/commit/a26c212))
+- **actionbutton:** match peer & dev deps for tokens package ([53df83d](https://github.com/adobe/spectrum-css/commit/53df83d))
 
 <a name="2.0.2"></a>
 
@@ -506,7 +506,7 @@ Also updates IllustratedMessage and ActionButton to share `--mod-` properties.
 
 ### 🐛 Bug fixes
 
--   **actionbutton:** adjust icon margin to match spec ([a95785b](https://github.com/adobe/spectrum-css/commit/a95785b))
+- **actionbutton:** adjust icon margin to match spec ([a95785b](https://github.com/adobe/spectrum-css/commit/a95785b))
 
 <a name="2.0.1"></a>
 
@@ -516,8 +516,8 @@ Also updates IllustratedMessage and ActionButton to share `--mod-` properties.
 
 ### 🐛 Bug fixes
 
--   **actionbutton:** removes unsupported vars, uses new values ([1a351f3](https://github.com/adobe/spectrum-css/commit/1a351f3))
--   **actionbutton:** update to latest tokens pkg ([ccd2d65](https://github.com/adobe/spectrum-css/commit/ccd2d65))
+- **actionbutton:** removes unsupported vars, uses new values ([1a351f3](https://github.com/adobe/spectrum-css/commit/1a351f3))
+- **actionbutton:** update to latest tokens pkg ([ccd2d65](https://github.com/adobe/spectrum-css/commit/ccd2d65))
 
 <a name="2.0.0"></a>
 
@@ -527,22 +527,22 @@ Also updates IllustratedMessage and ActionButton to share `--mod-` properties.
 
 ### ✨ Features
 
--   split things out, combine things ([3a817bc](https://github.com/adobe/spectrum-css/commit/3a817bc))
+- split things out, combine things ([3a817bc](https://github.com/adobe/spectrum-css/commit/3a817bc))
 
 ### 🐛 Bug fixes
 
--   removed theme styling from index.css ([fc3af46](https://github.com/adobe/spectrum-css/commit/fc3af46))
--   tweaks after merging in component-builder-simple ([ec8345a](https://github.com/adobe/spectrum-css/commit/ec8345a))
+- removed theme styling from index.css ([fc3af46](https://github.com/adobe/spectrum-css/commit/fc3af46))
+- tweaks after merging in component-builder-simple ([ec8345a](https://github.com/adobe/spectrum-css/commit/ec8345a))
 
--   feat!: implement ActionButton core tokens (#1430) ([e6337d6](https://github.com/adobe/spectrum-css/commit/e6337d6)), closes [#1430](https://github.com/adobe/spectrum-css/issues/1430)
--   feat!: implement ActionButton core tokens (#1430) ([774d09e](https://github.com/adobe/spectrum-css/commit/774d09e)), closes [#1430](https://github.com/adobe/spectrum-css/issues/1430)
+- feat!: implement ActionButton core tokens (#1430) ([e6337d6](https://github.com/adobe/spectrum-css/commit/e6337d6)), closes [#1430](https://github.com/adobe/spectrum-css/issues/1430)
+- feat!: implement ActionButton core tokens (#1430) ([774d09e](https://github.com/adobe/spectrum-css/commit/774d09e)), closes [#1430](https://github.com/adobe/spectrum-css/issues/1430)
 
 ### 🛑 BREAKING CHANGES
 
--   .spectrum-ActionButton-icon is now required on icons
--   .spectrum--express must be added to support Express ActionButton
--   .spectrum-ActionButton-icon is now required on icons
--   .spectrum--express must be added to support Express ActionButton
+- .spectrum-ActionButton-icon is now required on icons
+- .spectrum--express must be added to support Express ActionButton
+- .spectrum-ActionButton-icon is now required on icons
+- .spectrum--express must be added to support Express ActionButton
 
 <a name="1.1.14"></a>
 
@@ -560,7 +560,7 @@ Also updates IllustratedMessage and ActionButton to share `--mod-` properties.
 
 ### 🐛 Bug fixes
 
--   actionButton WHCM ([c81913f](https://github.com/adobe/spectrum-css/commit/c81913f))
+- actionButton WHCM ([c81913f](https://github.com/adobe/spectrum-css/commit/c81913f))
 
 <a name="1.1.12"></a>
 
@@ -634,7 +634,7 @@ Also updates IllustratedMessage and ActionButton to share `--mod-` properties.
 
 ### 🐛 Bug fixes
 
--   correct Actiongroup focus ring ([#1368](https://github.com/adobe/spectrum-css/issues/1368)) ([1c0af74](https://github.com/adobe/spectrum-css/commit/1c0af74))
+- correct Actiongroup focus ring ([#1368](https://github.com/adobe/spectrum-css/issues/1368)) ([1c0af74](https://github.com/adobe/spectrum-css/commit/1c0af74))
 
 <a name="1.1.3"></a>
 
@@ -652,7 +652,7 @@ Also updates IllustratedMessage and ActionButton to share `--mod-` properties.
 
 ### 🐛 Bug fixes
 
--   update peer dependencies ([97810cf](https://github.com/adobe/spectrum-css/commit/97810cf))
+- update peer dependencies ([97810cf](https://github.com/adobe/spectrum-css/commit/97810cf))
 
 <a name="1.1.1"></a>
 
@@ -678,7 +678,7 @@ Also updates IllustratedMessage and ActionButton to share `--mod-` properties.
 
 ### ✨ Features
 
--   add staticColor=white|black for ActionButton ([0c6ae88](https://github.com/adobe/spectrum-css/commit/0c6ae88))
+- add staticColor=white|black for ActionButton ([0c6ae88](https://github.com/adobe/spectrum-css/commit/0c6ae88))
 
 <a name="1.0.10"></a>
 
@@ -720,7 +720,7 @@ Also updates IllustratedMessage and ActionButton to share `--mod-` properties.
 
 ### 🐛 Bug fixes
 
--   high contrast mode for actionButton ([b294b9d](https://github.com/adobe/spectrum-css/commit/b294b9d))
+- high contrast mode for actionButton ([b294b9d](https://github.com/adobe/spectrum-css/commit/b294b9d))
 
 <a name="1.0.5"></a>
 
@@ -738,11 +738,11 @@ Also updates IllustratedMessage and ActionButton to share `--mod-` properties.
 
 ### 🐛 Bug fixes
 
--   change disabled buttons to not show selection per spectrum ([37f4fee](https://github.com/adobe/spectrum-css/commit/37f4fee))
--   high contrast mode for actionButton ([12028fa](https://github.com/adobe/spectrum-css/commit/12028fa))
--   remove comment ([07c5e01](https://github.com/adobe/spectrum-css/commit/07c5e01))
--   revise fixes to meet spectrum WHCM definition ([a4f0be4](https://github.com/adobe/spectrum-css/commit/a4f0be4))
--   updating version number on vars ([f535b49](https://github.com/adobe/spectrum-css/commit/f535b49))
+- change disabled buttons to not show selection per spectrum ([37f4fee](https://github.com/adobe/spectrum-css/commit/37f4fee))
+- high contrast mode for actionButton ([12028fa](https://github.com/adobe/spectrum-css/commit/12028fa))
+- remove comment ([07c5e01](https://github.com/adobe/spectrum-css/commit/07c5e01))
+- revise fixes to meet spectrum WHCM definition ([a4f0be4](https://github.com/adobe/spectrum-css/commit/a4f0be4))
+- updating version number on vars ([f535b49](https://github.com/adobe/spectrum-css/commit/f535b49))
 
 <a name="1.0.3-alpha.3"></a>
 
@@ -776,7 +776,7 @@ Also updates IllustratedMessage and ActionButton to share `--mod-` properties.
 
 ### 🐛 Bug fixes
 
--   adjusted spacing on actionbutton icon ([4829271](https://github.com/adobe/spectrum-css/commit/4829271))
+- adjusted spacing on actionbutton icon ([4829271](https://github.com/adobe/spectrum-css/commit/4829271))
 
 <a name="1.0.2"></a>
 
@@ -810,24 +810,24 @@ Also updates IllustratedMessage and ActionButton to share `--mod-` properties.
 
 ### ♻️ Code refactoring
 
--   fix padding ([89a6506](https://github.com/adobe/spectrum-css/commit/89a6506))
+- fix padding ([89a6506](https://github.com/adobe/spectrum-css/commit/89a6506))
 
 ### ✨ Features
 
--   fixup padding ([612dd0c](https://github.com/adobe/spectrum-css/commit/612dd0c))
--   implement t-shirt sizing for Action Button, closes [#936](https://github.com/adobe/spectrum-css/issues/936) ([1a9ecf6](https://github.com/adobe/spectrum-css/commit/1a9ecf6))
--   use postcss-remap vars to get t-shirt sizing ([f24f6b3](https://github.com/adobe/spectrum-css/commit/f24f6b3))
+- fixup padding ([612dd0c](https://github.com/adobe/spectrum-css/commit/612dd0c))
+- implement t-shirt sizing for Action Button, closes [#936](https://github.com/adobe/spectrum-css/issues/936) ([1a9ecf6](https://github.com/adobe/spectrum-css/commit/1a9ecf6))
+- use postcss-remap vars to get t-shirt sizing ([f24f6b3](https://github.com/adobe/spectrum-css/commit/f24f6b3))
 
 ### 🐛 Bug fixes
 
--   correct padding, this one is complicated! ([f535f4b](https://github.com/adobe/spectrum-css/commit/f535f4b))
--   correct variable usage ([12d3454](https://github.com/adobe/spectrum-css/commit/12d3454))
--   hold icon distance until it's updated in DNA ([046ae8e](https://github.com/adobe/spectrum-css/commit/046ae8e))
--   line-height of buttons ([eeb24b0](https://github.com/adobe/spectrum-css/commit/eeb24b0))
--   remove hack for broken small min-width ([b8cbfbd](https://github.com/adobe/spectrum-css/commit/b8cbfbd))
--   try to fix padding (still wrong for icon + label) ([8a2696e](https://github.com/adobe/spectrum-css/commit/8a2696e))
+- correct padding, this one is complicated! ([f535f4b](https://github.com/adobe/spectrum-css/commit/f535f4b))
+- correct variable usage ([12d3454](https://github.com/adobe/spectrum-css/commit/12d3454))
+- hold icon distance until it's updated in DNA ([046ae8e](https://github.com/adobe/spectrum-css/commit/046ae8e))
+- line-height of buttons ([eeb24b0](https://github.com/adobe/spectrum-css/commit/eeb24b0))
+- remove hack for broken small min-width ([b8cbfbd](https://github.com/adobe/spectrum-css/commit/b8cbfbd))
+- try to fix padding (still wrong for icon + label) ([8a2696e](https://github.com/adobe/spectrum-css/commit/8a2696e))
 
 ### 🛑 BREAKING CHANGES
 
--   require hold icon to come before workflow icon
--   .spectrum-ActionButton is no longer part of the button component, use the actionbutton component
+- require hold icon to come before workflow icon
+- .spectrum-ActionButton is no longer part of the button component, use the actionbutton component

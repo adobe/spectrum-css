@@ -163,7 +163,7 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 ### 🐛 Bug fixes
 
--   **preview:** storybook precompilation task ([#1764](https://github.com/adobe/spectrum-css/issues/1764)) ([c06e0a5](https://github.com/adobe/spectrum-css/commit/c06e0a5))
+- **preview:** storybook precompilation task ([#1764](https://github.com/adobe/spectrum-css/issues/1764)) ([c06e0a5](https://github.com/adobe/spectrum-css/commit/c06e0a5))
 
 <a name="3.0.3"></a>
 
@@ -195,11 +195,11 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 🗓 2023-04-03 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/preview@2.1.3...@spectrum-css/preview@3.0.0)
 
--   fix(tokens)!: rgb transform to split out rgb values from css attributes (#1590) ([b714db4](https://github.com/adobe/spectrum-css/commit/b714db4)), closes [#1590](https://github.com/adobe/spectrum-css/issues/1590)
+- fix(tokens)!: rgb transform to split out rgb values from css attributes (#1590) ([b714db4](https://github.com/adobe/spectrum-css/commit/b714db4)), closes [#1590](https://github.com/adobe/spectrum-css/issues/1590)
 
 ### 🛑 BREAKING CHANGES
 
--   transforms color tokens to split out their `rgb` values
+- transforms color tokens to split out their `rgb` values
 
 Co-authored-by: castastrophe <castastrophe@users.noreply.github.com>
 
@@ -235,7 +235,7 @@ Co-authored-by: castastrophe <castastrophe@users.noreply.github.com>
 
 ### ✨ Features
 
--   configure local visual testing with Chromatic ([#1673](https://github.com/adobe/spectrum-css/issues/1673)) ([e62913a](https://github.com/adobe/spectrum-css/commit/e62913a))
+- configure local visual testing with Chromatic ([#1673](https://github.com/adobe/spectrum-css/issues/1673)) ([e62913a](https://github.com/adobe/spectrum-css/commit/e62913a))
 
 <a name="2.0.8"></a>
 
@@ -307,11 +307,11 @@ Co-authored-by: castastrophe <castastrophe@users.noreply.github.com>
 
 🗓 2023-02-01 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/preview@1.0.9...@spectrum-css/preview@2.0.0)
 
--   chore(tokens)!: use latest dependency & fix build error (#1591) ([f2532e7](https://github.com/adobe/spectrum-css/commit/f2532e7)), closes [#1591](https://github.com/adobe/spectrum-css/issues/1591)
+- chore(tokens)!: use latest dependency & fix build error (#1591) ([f2532e7](https://github.com/adobe/spectrum-css/commit/f2532e7)), closes [#1591](https://github.com/adobe/spectrum-css/issues/1591)
 
 ### 🛑 BREAKING CHANGES
 
--   uses latest `@adobe/spectrum-tokens` dependency which includes token renames
+- uses latest `@adobe/spectrum-tokens` dependency which includes token renames
 
 <a name="1.0.9"></a>
 

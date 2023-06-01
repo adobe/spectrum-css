@@ -63,21 +63,14 @@ if (typeof window.CustomEvent !== "function") {
 
 		let links = [
 			createLink("components/" + component + "/index.css", component),
-			createLink(
-				"components/" + component + "/index-diff.css",
-				component
-			),
+			createLink("components/" + component + "/index-diff.css", component),
 		];
 
 		if (component !== "icons") {
 			links = links.concat(
 				stops.map(function (stop) {
 					return createLink(
-						"components/" +
-							component +
-							"/multiStops/" +
-							stop +
-							".css",
+						"components/" + component + "/multiStops/" + stop + ".css",
 						component
 					);
 				})
@@ -113,9 +106,7 @@ if (typeof window.CustomEvent !== "function") {
 
 		// Replace with index.css + index-diff.css + multiStops/*.css
 		Array.prototype.slice.call(links).forEach(function (link) {
-			console.log(
-				"🔗 Found link " + link.getAttribute("data-dependency")
-			);
+			console.log("🔗 Found link " + link.getAttribute("data-dependency"));
 			makeCompatibleLinks(link);
 		});
 	}

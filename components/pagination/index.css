@@ -31,9 +31,7 @@ governing permissions and limitations under the License.
 }
 
 .spectrum-Pagination-nextButton {
-	margin-inline-start: var(
-		--spectrum-pagination-page-button-margin-horizontal
-	);
+	margin-inline-start: var(--spectrum-pagination-page-button-margin-horizontal);
 }
 
 .spectrum-Pagination-prevButton,

@@ -36,10 +36,7 @@ export const Template = ({
 					[`is-selected`]: isSelected,
 					[`is-disabled`]: isDisabled,
 					[`${rootClass}--size${size}`]: typeof size !== "undefined",
-					...customClasses.reduce(
-						(a, c) => ({ ...a, [c]: true }),
-						{}
-					),
+					...customClasses.reduce((a, c) => ({ ...a, [c]: true }), {}),
 				})}
 				id=${ifDefined(id)}
 				@click=${onclick}
@@ -66,18 +63,12 @@ export const Template = ({
 					[`is-selected`]: isSelected,
 					[`is-disabled`]: isDisabled,
 					[`${rootClass}--size${size}`]: typeof size !== "undefined",
-					...customClasses.reduce(
-						(a, c) => ({ ...a, [c]: true }),
-						{}
-					),
+					...customClasses.reduce((a, c) => ({ ...a, [c]: true }), {}),
 				})}
 				id=${ifDefined(id)}
 				@click=${onclick}
 			>
-				<div
-					class="${rootClass}-background"
-					style=${styleMap(styles)}
-				></div>
+				<div class="${rootClass}-background" style=${styleMap(styles)}></div>
 				<div class="${rootClass}-image-wrapper">
 					${imageURL
 						? html`<img

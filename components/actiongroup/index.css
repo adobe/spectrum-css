@@ -17,9 +17,7 @@ governing permissions and limitations under the License.
 }
 
 .spectrum-ActionGroup--sizeS {
-	--spectrum-actiongroup-horizontal-spacing-regular: var(
-		--spectrum-spacing-75
-	);
+	--spectrum-actiongroup-horizontal-spacing-regular: var(--spectrum-spacing-75);
 	--spectrum-actiongroup-vertical-spacing-regular: var(--spectrum-spacing-75);
 }
 
@@ -27,27 +25,21 @@ governing permissions and limitations under the License.
 	--spectrum-actiongroup-horizontal-spacing-regular: var(
 		--spectrum-spacing-100
 	);
-	--spectrum-actiongroup-vertical-spacing-regular: var(
-		--spectrum-spacing-100
-	);
+	--spectrum-actiongroup-vertical-spacing-regular: var(--spectrum-spacing-100);
 }
 
 .spectrum-ActionGroup--sizeL {
 	--spectrum-actiongroup-horizontal-spacing-regular: var(
 		--spectrum-spacing-100
 	);
-	--spectrum-actiongroup-vertical-spacing-regular: var(
-		--spectrum-spacing-100
-	);
+	--spectrum-actiongroup-vertical-spacing-regular: var(--spectrum-spacing-100);
 }
 
 .spectrum-ActionGroup--sizeXL {
 	--spectrum-actiongroup-horizontal-spacing-regular: var(
 		--spectrum-spacing-100
 	);
-	--spectrum-actiongroup-vertical-spacing-regular: var(
-		--spectrum-spacing-100
-	);
+	--spectrum-actiongroup-vertical-spacing-regular: var(--spectrum-spacing-100);
 }
 
 .spectrum-ActionGroup {
@@ -62,9 +54,7 @@ governing permissions and limitations under the License.
 		flex-shrink: 0;
 	}
 
-	&:not(.spectrum-ActionGroup--vertical)&:not(
-			.spectrum-ActionGroup--compact
-		) {
+	&:not(.spectrum-ActionGroup--vertical)&:not(.spectrum-ActionGroup--compact) {
 		.spectrum-ActionGroup-item {
 			flex-shrink: 0;
 		}

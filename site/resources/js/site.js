@@ -103,11 +103,7 @@ window.addEventListener("DOMContentLoaded", function () {
 						});
 
 					var newDependencies = Array.prototype.slice
-						.call(
-							template.content.querySelectorAll(
-								"[data-dependency]"
-							)
-						)
+						.call(template.content.querySelectorAll("[data-dependency]"))
 						.filter(function (link) {
 							return (
 								currentDependencies.indexOf(
@@ -138,10 +134,7 @@ window.addEventListener("DOMContentLoaded", function () {
 								link,
 								link.getAttribute("data-dependency")
 							);
-							document.head.insertBefore(
-								link,
-								beforeLink.nextElementSibling
-							);
+							document.head.insertBefore(link, beforeLink.nextElementSibling);
 							beforeLink = link;
 						});
 					} else {
@@ -173,8 +166,7 @@ window.addEventListener("DOMContentLoaded", function () {
 				message =
 					"This page isn't available. Try checking the URL or visit a different page.";
 			}
-			let title =
-				"Error" + (statusCode ? " " + statusCode : "") + ": " + text;
+			let title = "Error" + (statusCode ? " " + statusCode : "") + ": " + text;
 			mainContainer.innerHTML =
 				'\
 <div class="spectrum-IllustratedMessage">\
@@ -349,10 +341,7 @@ window.addEventListener("DOMContentLoaded", function () {
 		});
 
 	// Search isn't supported on IE 11 and sideBar will not be exist in test mode
-	if (
-		typeof Search !== "undefined" &&
-		document.querySelector("#site-search")
-	) {
+	if (typeof Search !== "undefined" && document.querySelector("#site-search")) {
 		window.siteSearch = new Search(document.querySelector("#site-search"));
 	}
 

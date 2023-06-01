@@ -99,9 +99,7 @@ export const Template = ({
 
 	if (semantics === "code")
 		return html`
-			<code class=${classMap(classes)} id=${ifDefined(id)}
-				>${content}</code
-			>
+			<code class=${classMap(classes)} id=${ifDefined(id)}>${content}</code>
 		`;
 
 	return html`

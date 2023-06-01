@@ -113,11 +113,11 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 🗓 2023-04-19 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/colorslider@2.0.24...@spectrum-css/colorslider@3.0.0)
 
--   feat(colorloupe, colorhandle)!: migrate to core tokens (#1753) ([c72f147](https://github.com/adobe/spectrum-css/commit/c72f147)), closes [#1753](https://github.com/adobe/spectrum-css/issues/1753)
+- feat(colorloupe, colorhandle)!: migrate to core tokens (#1753) ([c72f147](https://github.com/adobe/spectrum-css/commit/c72f147)), closes [#1753](https://github.com/adobe/spectrum-css/issues/1753)
 
 ### 🛑 BREAKING CHANGES
 
--   migrates both the ColorLoupe and ColorHandle components to `@adobe/spectrum-tokens`
+- migrates both the ColorLoupe and ColorHandle components to `@adobe/spectrum-tokens`
 
 <a name="2.0.24"></a>
 
@@ -319,18 +319,18 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 ### ✨ Features
 
--   remove the need to add define hacks ([8c76829](https://github.com/adobe/spectrum-css/commit/8c76829))
--   use --spectrum-picked-color for everything ([62e6469](https://github.com/adobe/spectrum-css/commit/62e6469))
+- remove the need to add define hacks ([8c76829](https://github.com/adobe/spectrum-css/commit/8c76829))
+- use --spectrum-picked-color for everything ([62e6469](https://github.com/adobe/spectrum-css/commit/62e6469))
 
 ### 🐛 Bug fixes
 
--   give the Spectrum loupe a stroke ([486b079](https://github.com/adobe/spectrum-css/commit/486b079))
--   make ColorHandle and ColorSlider use the right checkerboard colors ([f7abb74](https://github.com/adobe/spectrum-css/commit/f7abb74))
--   use the correct checkerboard background for Slider and Handle ([cfb2151](https://github.com/adobe/spectrum-css/commit/cfb2151))
+- give the Spectrum loupe a stroke ([486b079](https://github.com/adobe/spectrum-css/commit/486b079))
+- make ColorHandle and ColorSlider use the right checkerboard colors ([f7abb74](https://github.com/adobe/spectrum-css/commit/f7abb74))
+- use the correct checkerboard background for Slider and Handle ([cfb2151](https://github.com/adobe/spectrum-css/commit/cfb2151))
 
 ### 🛑 BREAKING CHANGES
 
--   You must define --spectrum-picked-color instead of setting background-color
+- You must define --spectrum-picked-color instead of setting background-color
 
 <a name="1.0.13"></a>
 
@@ -356,7 +356,7 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 ### 🐛 Bug fixes
 
--   update peer dependencies ([97810cf](https://github.com/adobe/spectrum-css/commit/97810cf))
+- update peer dependencies ([97810cf](https://github.com/adobe/spectrum-css/commit/97810cf))
 
 <a name="1.0.10"></a>
 
@@ -414,8 +414,8 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 ### 🐛 Bug fixes
 
--   updating version number on vars ([f535b49](https://github.com/adobe/spectrum-css/commit/f535b49))
--   use opacity: 0 and appearance: none of form elements ([14c7fcf](https://github.com/adobe/spectrum-css/commit/14c7fcf))
+- updating version number on vars ([f535b49](https://github.com/adobe/spectrum-css/commit/f535b49))
+- use opacity: 0 and appearance: none of form elements ([14c7fcf](https://github.com/adobe/spectrum-css/commit/14c7fcf))
 
 <a name="1.0.4"></a>
 
@@ -425,8 +425,8 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 ### 🐛 Bug fixes
 
--   updating version number on vars ([f535b49](https://github.com/adobe/spectrum-css/commit/f535b49))
--   use opacity: 0 and appearance: none of form elements ([14c7fcf](https://github.com/adobe/spectrum-css/commit/14c7fcf))
+- updating version number on vars ([f535b49](https://github.com/adobe/spectrum-css/commit/f535b49))
+- use opacity: 0 and appearance: none of form elements ([14c7fcf](https://github.com/adobe/spectrum-css/commit/14c7fcf))
 
 <a name="1.0.3"></a>
 
@@ -436,7 +436,7 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 ### 🐛 Bug fixes
 
--   updating version number on vars ([f535b49](https://github.com/adobe/spectrum-css/commit/f535b49))
+- updating version number on vars ([f535b49](https://github.com/adobe/spectrum-css/commit/f535b49))
 
 <a name="1.0.3-alpha.3"></a>
 
@@ -502,7 +502,7 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 ### 🐛 Bug fixes
 
--   support high contrast mode in color components ([d4c05cb](https://github.com/adobe/spectrum-css/commit/d4c05cb))
+- support high contrast mode in color components ([d4c05cb](https://github.com/adobe/spectrum-css/commit/d4c05cb))
 
 <a name="1.0.0-beta.4"></a>
 
@@ -520,7 +520,7 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 ### 🐛 Bug fixes
 
--   wip fix more components ([b74dbb8](https://github.com/adobe/spectrum-css/commit/b74dbb8))
+- wip fix more components ([b74dbb8](https://github.com/adobe/spectrum-css/commit/b74dbb8))
 
 <a name="1.0.0-beta.2"></a>
 
@@ -538,4 +538,4 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 ### ✨ Features
 
--   Color Handle/Slider/Area/Wheel ([#673](https://github.com/adobe/spectrum-css/issues/673)) ([bcd2bf1](https://github.com/adobe/spectrum-css/commit/bcd2bf1))
+- Color Handle/Slider/Area/Wheel ([#673](https://github.com/adobe/spectrum-css/issues/673)) ([bcd2bf1](https://github.com/adobe/spectrum-css/commit/bcd2bf1))

@@ -49,10 +49,7 @@ const code_inline = md.renderer.rules.code_inline || defaultRenderer;
 md.renderer.rules.code_inline = function (tokens, idx, options, env, self) {
 	const token = tokens[idx];
 	// ~ indicates markup that should be red
-	if (
-		token.content.substr(0, 1) === "~" &&
-		token.content.substr(-1) === "~"
-	) {
+	if (token.content.substr(0, 1) === "~" && token.content.substr(-1) === "~") {
 		let aIndex = tokens[idx].attrIndex("class");
 
 		let className = "spectrum-CSSExample-oldAPI";
@@ -166,8 +163,7 @@ exports.populateDNAInfo = function (component, dnaVars) {
 	var cssStatus = this.getCSSStatus(dnaComponentId, component.status);
 	var dnaStatus = this.getDNAStatus(
 		dnaComponentId,
-		dnaVars["spectrum-" + dnaComponentId + "-status"] ||
-			component.dnaStatus,
+		dnaVars["spectrum-" + dnaComponentId + "-status"] || component.dnaStatus,
 		cssStatus
 	);
 
@@ -205,10 +201,7 @@ exports.populateDNAInfo = function (component, dnaVars) {
 			}
 
 			// The example is canon if the component is Canon and Verified
-			if (
-				component.dnaStatus === "Canon" &&
-				component.status === "Verified"
-			) {
+			if (component.dnaStatus === "Canon" && component.status === "Verified") {
 				example.dnaStatus = "Canon";
 			}
 

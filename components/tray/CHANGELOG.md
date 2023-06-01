@@ -385,13 +385,13 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 🗓 2022-12-09 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/tray@1.0.31...@spectrum-css/tray@2.0.0)
 
--   feat(tray)!: migrate to core tokens (#1535) ([442c5f6](https://github.com/adobe/spectrum-css/commit/442c5f6)), closes [#1535](https://github.com/adobe/spectrum-css/issues/1535)
+- feat(tray)!: migrate to core tokens (#1535) ([442c5f6](https://github.com/adobe/spectrum-css/commit/442c5f6)), closes [#1535](https://github.com/adobe/spectrum-css/issues/1535)
 
 ### 🛑 BREAKING CHANGES
 
--   migrates the Tray to core tokens
+- migrates the Tray to core tokens
 
--   removes the `375px` breakpoint, which was previously used to apply a `max-width` and border radius to the Tray, and instead this uses an orientation media query to apply these styles when viewport is in landscape orientation or when the width is greater than the height.
+- removes the `375px` breakpoint, which was previously used to apply a `max-width` and border radius to the Tray, and instead this uses an orientation media query to apply these styles when viewport is in landscape orientation or when the width is greater than the height.
 
 Co-authored-by: Patrick Fulton <pfulton@adobe.com>
 
@@ -547,7 +547,7 @@ Co-authored-by: Patrick Fulton <pfulton@adobe.com>
 
 ### 🐛 Bug fixes
 
--   update peer dependencies ([97810cf](https://github.com/adobe/spectrum-css/commit/97810cf))
+- update peer dependencies ([97810cf](https://github.com/adobe/spectrum-css/commit/97810cf))
 
 <a name="1.0.12"></a>
 
@@ -613,7 +613,7 @@ Co-authored-by: Patrick Fulton <pfulton@adobe.com>
 
 ### 🐛 Bug fixes
 
--   remove logical property usage from media queries ([cdeb051](https://github.com/adobe/spectrum-css/commit/cdeb051))
+- remove logical property usage from media queries ([cdeb051](https://github.com/adobe/spectrum-css/commit/cdeb051))
 
 <a name="1.0.5"></a>
 
@@ -631,7 +631,7 @@ Co-authored-by: Patrick Fulton <pfulton@adobe.com>
 
 ### 🐛 Bug fixes
 
--   updating version number on vars ([f535b49](https://github.com/adobe/spectrum-css/commit/f535b49))
+- updating version number on vars ([f535b49](https://github.com/adobe/spectrum-css/commit/f535b49))
 
 <a name="1.0.3-alpha.3"></a>
 
@@ -657,7 +657,7 @@ Co-authored-by: Patrick Fulton <pfulton@adobe.com>
 
 ### 🐛 Bug fixes
 
--   correct markup in Tray example ([72ada17](https://github.com/adobe/spectrum-css/commit/72ada17))
+- correct markup in Tray example ([72ada17](https://github.com/adobe/spectrum-css/commit/72ada17))
 
 <a name="1.0.3-alpha.0"></a>
 
@@ -699,12 +699,12 @@ Co-authored-by: Patrick Fulton <pfulton@adobe.com>
 
 ### ✨ Features
 
--   implement t-shirt sizing for Divider, closes [#972](https://github.com/adobe/spectrum-css/issues/972) ([bb10aa9](https://github.com/adobe/spectrum-css/commit/bb10aa9))
+- implement t-shirt sizing for Divider, closes [#972](https://github.com/adobe/spectrum-css/issues/972) ([bb10aa9](https://github.com/adobe/spectrum-css/commit/bb10aa9))
 
 ### 🛑 BREAKING CHANGES
 
--   .spectrum-Divider--size\* is now required
--   .spectrum-Divider--small is now .spectrum-Divider--sizeS, .spectrum-Divider--medium is now .spectrum-Divider--sizeM, .spectrum-Divider--large is now .spectrum-Divider--sizeL
+- .spectrum-Divider--size\* is now required
+- .spectrum-Divider--small is now .spectrum-Divider--sizeS, .spectrum-Divider--medium is now .spectrum-Divider--sizeM, .spectrum-Divider--large is now .spectrum-Divider--sizeL
 
 <a name="1.0.0-beta.2"></a>
 
@@ -722,8 +722,8 @@ Co-authored-by: Patrick Fulton <pfulton@adobe.com>
 
 ### 🐛 Bug fixes
 
--   added modal to tray component ([#776](https://github.com/adobe/spectrum-css/issues/776)) ([74a02f0](https://github.com/adobe/spectrum-css/commit/74a02f0))
--   adding divider & dialog to tray ([#861](https://github.com/adobe/spectrum-css/issues/861)) ([9184837](https://github.com/adobe/spectrum-css/commit/9184837))
--   fix the issues caused by component rename ([#778](https://github.com/adobe/spectrum-css/issues/778)) ([e1d180c](https://github.com/adobe/spectrum-css/commit/e1d180c))
--   resolving conflicts with main ([8cafffa](https://github.com/adobe/spectrum-css/commit/8cafffa))
--   wip fix more components ([b74dbb8](https://github.com/adobe/spectrum-css/commit/b74dbb8))
+- added modal to tray component ([#776](https://github.com/adobe/spectrum-css/issues/776)) ([74a02f0](https://github.com/adobe/spectrum-css/commit/74a02f0))
+- adding divider & dialog to tray ([#861](https://github.com/adobe/spectrum-css/issues/861)) ([9184837](https://github.com/adobe/spectrum-css/commit/9184837))
+- fix the issues caused by component rename ([#778](https://github.com/adobe/spectrum-css/issues/778)) ([e1d180c](https://github.com/adobe/spectrum-css/commit/e1d180c))
+- resolving conflicts with main ([8cafffa](https://github.com/adobe/spectrum-css/commit/8cafffa))
+- wip fix more components ([b74dbb8](https://github.com/adobe/spectrum-css/commit/b74dbb8))

@@ -42,8 +42,7 @@ export const Template = ({
 	const { express } = globals;
 
 	try {
-		if (!express)
-			import(/* webpackPrefetch: true */ "../themes/spectrum.css");
+		if (!express) import(/* webpackPrefetch: true */ "../themes/spectrum.css");
 		else import(/* webpackPrefetch: true */ "../themes/express.css");
 	} catch (e) {
 		console.warn(e);
@@ -109,10 +108,7 @@ export const Template = ({
 						pattern=${ifDefined(pattern)}
 						class=${classMap({
 							[`${rootClass}-input`]: true,
-							...customInputClasses.reduce(
-								(a, c) => ({ ...a, [c]: true }),
-								{}
-							),
+							...customInputClasses.reduce((a, c) => ({ ...a, [c]: true }), {}),
 						})}
 				  />`
 				: html` <input
@@ -123,16 +119,11 @@ export const Template = ({
 						autocomplete=${autocomplete ? undefined : "off"}
 						?required=${isRequired}
 						?disabled=${isDisabled}
-						readonly=${ifDefined(
-							isReadOnly ? "readonly" : undefined
-						)}
+						readonly=${ifDefined(isReadOnly ? "readonly" : undefined)}
 						pattern=${ifDefined(pattern)}
 						class=${classMap({
 							[`${rootClass}-input`]: true,
-							...customInputClasses.reduce(
-								(a, c) => ({ ...a, [c]: true }),
-								{}
-							),
+							...customInputClasses.reduce((a, c) => ({ ...a, [c]: true }), {}),
 						})}
 				  />`}
 			${isLoading

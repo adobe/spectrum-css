@@ -193,22 +193,22 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 🗓 2023-03-21 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/pickerbutton@2.0.12...@spectrum-css/pickerbutton@3.0.0)
 
--   refactor(textfield)!: migrate spectrum tokens (#1544) ([1723f01](https://github.com/adobe/spectrum-css/commit/1723f01)), closes [#1544](https://github.com/adobe/spectrum-css/issues/1544)
+- refactor(textfield)!: migrate spectrum tokens (#1544) ([1723f01](https://github.com/adobe/spectrum-css/commit/1723f01)), closes [#1544](https://github.com/adobe/spectrum-css/issues/1544)
 
 ### 🛑 BREAKING CHANGES
 
--   migrates textfield to spectrum tokens
+- migrates textfield to spectrum tokens
 
-*   Updates to latest tokens package
-*   WHCM added
-*   Focus state and dependency fixes
-*   Leveraging CSS grid for help text placement and character count
+* Updates to latest tokens package
+* WHCM added
+* Focus state and dependency fixes
+* Leveraging CSS grid for help text placement and character count
 
--   removes placeholder from stepper inputs
+- removes placeholder from stepper inputs
 
--   feat(stepper): add hideStepper control to fix border styling issue
--   refactor(stepper): adding native pseudo class styles
--   refactor(stepper): add support for invalid textfield styling
+- feat(stepper): add hideStepper control to fix border styling issue
+- refactor(stepper): adding native pseudo class styles
+- refactor(stepper): add support for invalid textfield styling
 
 <a name="2.0.13-beta.0"></a>
 
@@ -218,7 +218,7 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 ### 🐛 Bug fixes
 
--   **textfield:** remove zero margin from pickerbutton ([42a81b5](https://github.com/adobe/spectrum-css/commit/42a81b5))
+- **textfield:** remove zero margin from pickerbutton ([42a81b5](https://github.com/adobe/spectrum-css/commit/42a81b5))
 
 <a name="2.0.12"></a>
 
@@ -322,15 +322,15 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 🗓 2022-10-25 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/pickerbutton@1.1.22...@spectrum-css/pickerbutton@2.0.0)
 
--   refactor(infieldbutton,inputgroup,pickerbutton)!: drop loudness api ([c97d40e](https://github.com/adobe/spectrum-css/commit/c97d40e))
--   refactor(pickerbutton)!: replace medium loudness with quiet ([6e87687](https://github.com/adobe/spectrum-css/commit/6e87687))
--   refactor(pickerbutton)!: remove loudness levels ([3fc182a](https://github.com/adobe/spectrum-css/commit/3fc182a))
+- refactor(infieldbutton,inputgroup,pickerbutton)!: drop loudness api ([c97d40e](https://github.com/adobe/spectrum-css/commit/c97d40e))
+- refactor(pickerbutton)!: replace medium loudness with quiet ([6e87687](https://github.com/adobe/spectrum-css/commit/6e87687))
+- refactor(pickerbutton)!: remove loudness levels ([3fc182a](https://github.com/adobe/spectrum-css/commit/3fc182a))
 
 ### 🛑 BREAKING CHANGES
 
--   remove high loudness selectors from pickerbutton, apply quiet background color from inputgroup, change loudness api to quiet for infieldbutton
--   replaces `medium` loudness with `quiet`
--   refactor spectrum-PickerButton--high to use base spectrum-PickerButton styles
+- remove high loudness selectors from pickerbutton, apply quiet background color from inputgroup, change loudness api to quiet for infieldbutton
+- replaces `medium` loudness with `quiet`
+- refactor spectrum-PickerButton--high to use base spectrum-PickerButton styles
 
 <a name="1.1.22"></a>
 
@@ -452,7 +452,7 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 ### 🐛 Bug fixes
 
--   correct PickerButton icon sizing, add RTL support, fix rounding ([631cd32](https://github.com/adobe/spectrum-css/commit/631cd32))
+- correct PickerButton icon sizing, add RTL support, fix rounding ([631cd32](https://github.com/adobe/spectrum-css/commit/631cd32))
 
 <a name="1.1.7"></a>
 
@@ -486,7 +486,7 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 ### 🐛 Bug fixes
 
--   update peer dependencies ([97810cf](https://github.com/adobe/spectrum-css/commit/97810cf))
+- update peer dependencies ([97810cf](https://github.com/adobe/spectrum-css/commit/97810cf))
 
 <a name="1.1.3"></a>
 
@@ -528,4 +528,4 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 ### ✨ Features
 
--   add PickerButton ([7d720a6](https://github.com/adobe/spectrum-css/commit/7d720a6))
+- add PickerButton ([7d720a6](https://github.com/adobe/spectrum-css/commit/7d720a6))

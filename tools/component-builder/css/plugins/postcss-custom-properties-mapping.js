@@ -29,9 +29,7 @@ async function fetchVars() {
 		await varUtils.readDNAVariables("globals/spectrum-staticAliases.css"),
 		await varUtils.readDNAVariables("globals/spectrum-fontGlobals.css"),
 		await varUtils.readDNAVariables("globals/spectrum-fontGlobals.css"),
-		await varUtils.readDNAVariables(
-			"globals/spectrum-dimensionGlobals.css"
-		),
+		await varUtils.readDNAVariables("globals/spectrum-dimensionGlobals.css"),
 		await varUtils.readDNAVariables("globals/spectrum-colorGlobals.css"),
 		await varUtils.readDNAVariables("globals/spectrum-animationGlobals.css")
 	);
@@ -64,10 +62,7 @@ module.exports = postcss.plugin(
 						}
 
 						value.walk((node, index, nodes) => {
-							if (
-								node.type === "function" &&
-								node.value === "var"
-							) {
+							if (node.type === "function" && node.value === "var") {
 								let v = node.nodes[0].value;
 
 								// If the value is static, replace the variable with the value.
@@ -76,17 +71,13 @@ module.exports = postcss.plugin(
 									nodes.splice(
 										index,
 										1,
-										...valueParser(
-											`var(${v}, ${staticVars[v]})`
-										).nodes
+										...valueParser(`var(${v}, ${staticVars[v]})`).nodes
 									);
 								} else if (allVars[v]) {
 									nodes.splice(
 										index,
 										1,
-										...valueParser(
-											`var(${v}, ${allVars[v]})`
-										).nodes
+										...valueParser(`var(${v}, ${allVars[v]})`).nodes
 									);
 								}
 							}

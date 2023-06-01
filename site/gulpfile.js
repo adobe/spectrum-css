@@ -28,9 +28,7 @@ function buildSite_loadicons() {
 function buildSite_focusPolyfill() {
 	return gulp
 		.src(require.resolve("@adobe/focus-ring-polyfill"))
-		.pipe(
-			gulp.dest(path.join(__dirname, "../dist/js/focus-ring-polyfill/"))
-		);
+		.pipe(gulp.dest(path.join(__dirname, "../dist/js/focus-ring-polyfill/")));
 }
 
 function buildSite_lunr() {

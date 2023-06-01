@@ -41,21 +41,15 @@ governing permissions and limitations under the License.
 		(
 				(
 						var(--spectrum-dragbar-gripper-width) +
-							(
-								2 *
-									var(
-										--spectrum-dragbar-gripper-border-width-horizontal
-									)
-							) - var(--spectrum-dragbar-handle-width)
+							(2 * var(--spectrum-dragbar-gripper-border-width-horizontal)) -
+							var(--spectrum-dragbar-handle-width)
 					) / 2
 			) * -1
 	);
 	inline-size: var(--spectrum-dragbar-gripper-width);
 	block-size: var(--spectrum-dragbar-gripper-height);
 	border-block-width: var(--spectrum-dragbar-gripper-border-width-vertical);
-	border-inline-width: var(
-		--spectrum-dragbar-gripper-border-width-horizontal
-	);
+	border-inline-width: var(--spectrum-dragbar-gripper-border-width-horizontal);
 }
 
 .spectrum-SplitView-splitter {
@@ -115,12 +109,8 @@ governing permissions and limitations under the License.
 			(
 					(
 							var(--spectrum-dragbar-gripper-width) +
-								(
-									2 *
-										var(
-											--spectrum-dragbar-gripper-border-width-horizontal
-										)
-								) - var(--spectrum-dragbar-handle-width)
+								(2 * var(--spectrum-dragbar-gripper-border-width-horizontal)) -
+								var(--spectrum-dragbar-handle-width)
 						) / 2
 				) * -1
 		);
@@ -138,12 +128,8 @@ governing permissions and limitations under the License.
 		); /* same as default width */
 
 		/* opposite of default border-width */
-		border-block-width: var(
-			--spectrum-dragbar-gripper-border-width-horizontal
-		);
-		border-inline-width: var(
-			--spectrum-dragbar-gripper-border-width-vertical
-		);
+		border-block-width: var(--spectrum-dragbar-gripper-border-width-horizontal);
+		border-inline-width: var(--spectrum-dragbar-gripper-border-width-vertical);
 	}
 
 	.spectrum-SplitView-splitter {
@@ -153,9 +139,7 @@ governing permissions and limitations under the License.
 		&.is-collapsed-start,
 		&.is-collapsed-end {
 			.spectrum-SplitView-gripper {
-				inset-inline-start: var(
-					--spectrum-splitview-vertical-gripper-width
-				);
+				inset-inline-start: var(--spectrum-splitview-vertical-gripper-width);
 
 				/* make the center line of the gripper */
 				&:before {
@@ -163,12 +147,8 @@ governing permissions and limitations under the License.
 						var(--spectrum-splitview-vertical-gripper-width) -
 							calc(var(--spectrum-dragbar-handle-width) / 2)
 					);
-					inset-inline-start: var(
-						--spectrum-splitview-vertical-gripper-reset
-					);
-					inline-size: var(
-						--spectrum-splitview-vertical-gripper-outer-width
-					);
+					inset-inline-start: var(--spectrum-splitview-vertical-gripper-reset);
+					inline-size: var(--spectrum-splitview-vertical-gripper-outer-width);
 					block-size: var(--spectrum-dragbar-handle-width);
 				}
 			}
@@ -176,18 +156,14 @@ governing permissions and limitations under the License.
 
 		&.is-collapsed-start {
 			.spectrum-SplitView-gripper {
-				inset-block-start: var(
-					--spectrum-splitview-vertical-gripper-reset
-				);
+				inset-block-start: var(--spectrum-splitview-vertical-gripper-reset);
 			}
 		}
 
 		&.is-collapsed-end {
 			.spectrum-SplitView-gripper {
 				inset-block-start: auto;
-				inset-block-end: var(
-					--spectrum-splitview-vertical-gripper-reset
-				);
+				inset-block-end: var(--spectrum-splitview-vertical-gripper-reset);
 			}
 		}
 	}

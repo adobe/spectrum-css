@@ -9,23 +9,20 @@ export default {
 	description: "The Search within component is...",
 	component: "SearchWithin",
 	argTypes: {
-		...Object.entries(PickerStories.argTypes).reduce(
-			(acc, [key, value]) => {
-				if (ignoreProps.includes(key)) return acc;
-				if (["size"].includes(key))
-					value.table = {
-						...value.table,
-						category: "Shared settings",
-					};
-				else
-					value.table = {
-						...value.table,
-						category: "Picker settings",
-					};
-				return { ...acc, [key]: value };
-			},
-			{}
-		),
+		...Object.entries(PickerStories.argTypes).reduce((acc, [key, value]) => {
+			if (ignoreProps.includes(key)) return acc;
+			if (["size"].includes(key))
+				value.table = {
+					...value.table,
+					category: "Shared settings",
+				};
+			else
+				value.table = {
+					...value.table,
+					category: "Picker settings",
+				};
+			return { ...acc, [key]: value };
+		}, {}),
 	},
 	args: {
 		rootClass: "spectrum-SearchWithin",

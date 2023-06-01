@@ -73,10 +73,7 @@ governing permissions and limitations under the License.
 		solid
 		var(
 			--highcontrast-colorarea-border-color,
-			var(
-				--mod-colorarea-border-color,
-				var(--spectrum-colorarea-border-color)
-			)
+			var(--mod-colorarea-border-color, var(--spectrum-colorarea-border-color))
 		);
 
 	&.is-disabled {

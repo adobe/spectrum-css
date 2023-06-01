@@ -49,16 +49,16 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 🗓 2023-05-10 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/colorloupe@3.0.11...@spectrum-css/colorloupe@4.0.0)
 
--   chore(colorhandle, colorloupe, tokens)!: remove custom tokens (#1826) ([c41af3a](https://github.com/adobe/spectrum-css/commit/c41af3a)), closes [#1826](https://github.com/adobe/spectrum-css/issues/1826)
+- chore(colorhandle, colorloupe, tokens)!: remove custom tokens (#1826) ([c41af3a](https://github.com/adobe/spectrum-css/commit/c41af3a)), closes [#1826](https://github.com/adobe/spectrum-css/issues/1826)
 
 ### 🛑 BREAKING CHANGES
 
--   removes several Color-component related tokens from `@spectrum-css/tokens`
+- removes several Color-component related tokens from `@spectrum-css/tokens`
 
--   chore(colorhandle): remove custom tokens
--   chore(colorhandle): remove use of custom tokens
--   chore(colorloupe): update tokens for colorloupe
--   chore(colorhandle, colorloupe): remove comments
+- chore(colorhandle): remove custom tokens
+- chore(colorhandle): remove use of custom tokens
+- chore(colorloupe): update tokens for colorloupe
+- chore(colorhandle, colorloupe): remove comments
 
 <a name="3.0.11"></a>
 
@@ -154,11 +154,11 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 🗓 2023-04-19 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/colorloupe@2.0.20...@spectrum-css/colorloupe@3.0.0)
 
--   feat(colorloupe, colorhandle)!: migrate to core tokens (#1753) ([c72f147](https://github.com/adobe/spectrum-css/commit/c72f147)), closes [#1753](https://github.com/adobe/spectrum-css/issues/1753)
+- feat(colorloupe, colorhandle)!: migrate to core tokens (#1753) ([c72f147](https://github.com/adobe/spectrum-css/commit/c72f147)), closes [#1753](https://github.com/adobe/spectrum-css/issues/1753)
 
 ### 🛑 BREAKING CHANGES
 
--   migrates both the ColorLoupe and ColorHandle components to `@adobe/spectrum-tokens`
+- migrates both the ColorLoupe and ColorHandle components to `@adobe/spectrum-tokens`
 
 <a name="2.0.20"></a>
 
@@ -320,7 +320,7 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 ### 🐛 Bug fixes
 
--   correct loupe outer ([fd9f01c](https://github.com/adobe/spectrum-css/commit/fd9f01c))
+- correct loupe outer ([fd9f01c](https://github.com/adobe/spectrum-css/commit/fd9f01c))
 
 <a name="2.0.0"></a>
 
@@ -330,30 +330,30 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 ### ✨ Features
 
--   add checkerboard for Spectrum ([ec1feaf](https://github.com/adobe/spectrum-css/commit/ec1feaf))
--   combine Express and Spectrum SVGs, toggle visibility with vars ([84f4b8b](https://github.com/adobe/spectrum-css/commit/84f4b8b))
--   prepare for switcher ([896e1b3](https://github.com/adobe/spectrum-css/commit/896e1b3))
--   remove the need to add define hacks ([8c76829](https://github.com/adobe/spectrum-css/commit/8c76829))
--   start on Express color loupe ([007bae2](https://github.com/adobe/spectrum-css/commit/007bae2))
--   use --spectrum-picked-color for everything ([62e6469](https://github.com/adobe/spectrum-css/commit/62e6469))
+- add checkerboard for Spectrum ([ec1feaf](https://github.com/adobe/spectrum-css/commit/ec1feaf))
+- combine Express and Spectrum SVGs, toggle visibility with vars ([84f4b8b](https://github.com/adobe/spectrum-css/commit/84f4b8b))
+- prepare for switcher ([896e1b3](https://github.com/adobe/spectrum-css/commit/896e1b3))
+- remove the need to add define hacks ([8c76829](https://github.com/adobe/spectrum-css/commit/8c76829))
+- start on Express color loupe ([007bae2](https://github.com/adobe/spectrum-css/commit/007bae2))
+- use --spectrum-picked-color for everything ([62e6469](https://github.com/adobe/spectrum-css/commit/62e6469))
 
 ### 🐛 Bug fixes
 
--   add shadow for Spectrum, leave room for shadow ([13f579e](https://github.com/adobe/spectrum-css/commit/13f579e))
--   center the points of the loupes within their bounding boxes ([9a2a414](https://github.com/adobe/spectrum-css/commit/9a2a414))
--   correct checkerboard background color ([dc6c297](https://github.com/adobe/spectrum-css/commit/dc6c297))
--   correct checkerboard color, stroke around edges of loupe ([c327261](https://github.com/adobe/spectrum-css/commit/c327261))
--   correct markup ([9241121](https://github.com/adobe/spectrum-css/commit/9241121))
--   give the Spectrum loupe a stroke ([486b079](https://github.com/adobe/spectrum-css/commit/486b079))
+- add shadow for Spectrum, leave room for shadow ([13f579e](https://github.com/adobe/spectrum-css/commit/13f579e))
+- center the points of the loupes within their bounding boxes ([9a2a414](https://github.com/adobe/spectrum-css/commit/9a2a414))
+- correct checkerboard background color ([dc6c297](https://github.com/adobe/spectrum-css/commit/dc6c297))
+- correct checkerboard color, stroke around edges of loupe ([c327261](https://github.com/adobe/spectrum-css/commit/c327261))
+- correct markup ([9241121](https://github.com/adobe/spectrum-css/commit/9241121))
+- give the Spectrum loupe a stroke ([486b079](https://github.com/adobe/spectrum-css/commit/486b079))
 
 ### 📚 Documentation
 
--   add docs for --spectrum-loupe-color ([35704e2](https://github.com/adobe/spectrum-css/commit/35704e2))
+- add docs for --spectrum-loupe-color ([35704e2](https://github.com/adobe/spectrum-css/commit/35704e2))
 
 ### 🛑 BREAKING CHANGES
 
--   You must define --spectrum-picked-color instead of setting background-color
--   ColorLoupe now uses --spectrum-loupe-color to set the selected color
+- You must define --spectrum-picked-color instead of setting background-color
+- ColorLoupe now uses --spectrum-loupe-color to set the selected color
 
 <a name="1.0.13"></a>
 
@@ -379,7 +379,7 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 ### 🐛 Bug fixes
 
--   update peer dependencies ([97810cf](https://github.com/adobe/spectrum-css/commit/97810cf))
+- update peer dependencies ([97810cf](https://github.com/adobe/spectrum-css/commit/97810cf))
 
 <a name="1.0.10"></a>
 
@@ -437,7 +437,7 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 ### 🐛 Bug fixes
 
--   updating version number on vars ([f535b49](https://github.com/adobe/spectrum-css/commit/f535b49))
+- updating version number on vars ([f535b49](https://github.com/adobe/spectrum-css/commit/f535b49))
 
 <a name="1.0.4"></a>
 
@@ -447,7 +447,7 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 ### 🐛 Bug fixes
 
--   updating version number on vars ([f535b49](https://github.com/adobe/spectrum-css/commit/f535b49))
+- updating version number on vars ([f535b49](https://github.com/adobe/spectrum-css/commit/f535b49))
 
 <a name="1.0.3"></a>
 
@@ -457,7 +457,7 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 ### 🐛 Bug fixes
 
--   updating version number on vars ([f535b49](https://github.com/adobe/spectrum-css/commit/f535b49))
+- updating version number on vars ([f535b49](https://github.com/adobe/spectrum-css/commit/f535b49))
 
 <a name="1.0.3-alpha.3"></a>
 
@@ -523,7 +523,7 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 ### 🐛 Bug fixes
 
--   support high contrast mode in color components ([d4c05cb](https://github.com/adobe/spectrum-css/commit/d4c05cb))
+- support high contrast mode in color components ([d4c05cb](https://github.com/adobe/spectrum-css/commit/d4c05cb))
 
 <a name="1.0.0-beta.3"></a>
 
@@ -541,7 +541,7 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 ### 🐛 Bug fixes
 
--   wip fix more components ([b74dbb8](https://github.com/adobe/spectrum-css/commit/b74dbb8))
+- wip fix more components ([b74dbb8](https://github.com/adobe/spectrum-css/commit/b74dbb8))
 
 <a name="1.0.0-beta.1"></a>
 
@@ -551,4 +551,4 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 ### ✨ Features
 
--   Color Handle/Slider/Area/Wheel ([#673](https://github.com/adobe/spectrum-css/issues/673)) ([bcd2bf1](https://github.com/adobe/spectrum-css/commit/bcd2bf1))
+- Color Handle/Slider/Area/Wheel ([#673](https://github.com/adobe/spectrum-css/issues/673)) ([bcd2bf1](https://github.com/adobe/spectrum-css/commit/bcd2bf1))

@@ -43,7 +43,7 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 ### 🐛 Bug fixes
 
--   **floatingactionbutton:** update token dependency ([#1860](https://github.com/adobe/spectrum-css/issues/1860)) ([b4ac3e5](https://github.com/adobe/spectrum-css/commit/b4ac3e5))
+- **floatingactionbutton:** update token dependency ([#1860](https://github.com/adobe/spectrum-css/issues/1860)) ([b4ac3e5](https://github.com/adobe/spectrum-css/commit/b4ac3e5))
 
 <a name="1.0.1"></a>
 
@@ -69,4 +69,4 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 ### ✨ Features
 
--   **floatingactionbutton:** add new component ([#1793](https://github.com/adobe/spectrum-css/issues/1793)) ([174f438](https://github.com/adobe/spectrum-css/commit/174f438))
+- **floatingactionbutton:** add new component ([#1793](https://github.com/adobe/spectrum-css/issues/1793)) ([174f438](https://github.com/adobe/spectrum-css/commit/174f438))

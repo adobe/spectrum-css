@@ -131,7 +131,7 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 ### 🐛 Bug fixes
 
--   **typography:** reset margins ([2e300ab](https://github.com/adobe/spectrum-css/commit/2e300ab))
+- **typography:** reset margins ([2e300ab](https://github.com/adobe/spectrum-css/commit/2e300ab))
 
 <a name="5.0.3"></a>
 
@@ -163,28 +163,28 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 🗓 2023-04-17 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/typography@4.0.30...@spectrum-css/typography@5.0.0)
 
--   refactor(typography)!: use core tokens (#1557) ([f7fb606](https://github.com/adobe/spectrum-css/commit/f7fb606)), closes [#1557](https://github.com/adobe/spectrum-css/issues/1557)
+- refactor(typography)!: use core tokens (#1557) ([f7fb606](https://github.com/adobe/spectrum-css/commit/f7fb606)), closes [#1557](https://github.com/adobe/spectrum-css/issues/1557)
 
 ### 🛑 BREAKING CHANGES
 
--   migrates the Typography component to use `@adobe/spectrum-tokens`
+- migrates the Typography component to use `@adobe/spectrum-tokens`
 
 Additionally:
 
--   update heading tokens
--   add body tokens
--   add core tokens
--   add detail tokens
--   add `cjk` heading tokens
--   add themes files
--   heading t-shirt sizes
--   move spectrum-Body color to index.css
--   remove skin.css
--   update heading tokens
-    -   sans-serif-heading-light
-    -   serif-heading-light
-    -   heading
-    -   heading-heavy
+- update heading tokens
+- add body tokens
+- add core tokens
+- add detail tokens
+- add `cjk` heading tokens
+- add themes files
+- heading t-shirt sizes
+- move spectrum-Body color to index.css
+- remove skin.css
+- update heading tokens
+  - sans-serif-heading-light
+  - serif-heading-light
+  - heading
+  - heading-heavy
 
 <a name="4.0.31"></a>
 
@@ -370,7 +370,7 @@ Additionally:
 
 ### 🐛 Bug fixes
 
--   update peer dependencies ([97810cf](https://github.com/adobe/spectrum-css/commit/97810cf))
+- update peer dependencies ([97810cf](https://github.com/adobe/spectrum-css/commit/97810cf))
 
 <a name="4.0.8"></a>
 
@@ -436,7 +436,7 @@ Additionally:
 
 ### 🐛 Bug fixes
 
--   updating version number on vars ([f535b49](https://github.com/adobe/spectrum-css/commit/f535b49))
+- updating version number on vars ([f535b49](https://github.com/adobe/spectrum-css/commit/f535b49))
 
 <a name="4.0.1"></a>
 
@@ -446,7 +446,7 @@ Additionally:
 
 ### 🐛 Bug fixes
 
--   updating version number on vars ([f535b49](https://github.com/adobe/spectrum-css/commit/f535b49))
+- updating version number on vars ([f535b49](https://github.com/adobe/spectrum-css/commit/f535b49))
 
 <a name="4.0.0"></a>
 
@@ -456,7 +456,7 @@ Additionally:
 
 ### 🐛 Bug fixes
 
--   updating version number on vars ([f535b49](https://github.com/adobe/spectrum-css/commit/f535b49))
+- updating version number on vars ([f535b49](https://github.com/adobe/spectrum-css/commit/f535b49))
 
 <a name="4.0.0-alpha.3"></a>
 
@@ -490,11 +490,11 @@ Additionally:
 
 ### ✨ Features
 
--   updated typography token names to use standardorder ([50145fe](https://github.com/adobe/spectrum-css/commit/50145fe))
+- updated typography token names to use standardorder ([50145fe](https://github.com/adobe/spectrum-css/commit/50145fe))
 
 ### 🛑 BREAKING CHANGES
 
--   realigned classnames
+- realigned classnames
 
 <a name="3.0.2"></a>
 
@@ -534,11 +534,11 @@ Additionally:
 
 🗓 2020-10-20 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/typography@2.1.4-beta.0...@spectrum-css/typography@3.0.0-beta.0)
 
--   fix!: updated type sizes to use consistent syntax, related to #972 (#1031) ([1a604c4](https://github.com/adobe/spectrum-css/commit/1a604c4)), closes [#972](https://github.com/adobe/spectrum-css/issues/972) [#1031](https://github.com/adobe/spectrum-css/issues/1031)
+- fix!: updated type sizes to use consistent syntax, related to #972 (#1031) ([1a604c4](https://github.com/adobe/spectrum-css/commit/1a604c4)), closes [#972](https://github.com/adobe/spectrum-css/issues/972) [#1031](https://github.com/adobe/spectrum-css/issues/1031)
 
 ### 🛑 BREAKING CHANGES
 
--   all typography sizing classes now have --size* instead of --*, see migration guides
+- all typography sizing classes now have --size* instead of --*, see migration guides
 
 <a name="2.1.4-beta.0"></a>
 
@@ -548,8 +548,8 @@ Additionally:
 
 ### 🐛 Bug fixes
 
--   global typography color added back ([4a2f78f](https://github.com/adobe/spectrum-css/commit/4a2f78f))
--   wip fix more components ([b74dbb8](https://github.com/adobe/spectrum-css/commit/b74dbb8))
+- global typography color added back ([4a2f78f](https://github.com/adobe/spectrum-css/commit/4a2f78f))
+- wip fix more components ([b74dbb8](https://github.com/adobe/spectrum-css/commit/b74dbb8))
 
 <a name="2.1.3"></a>
 
@@ -583,7 +583,7 @@ Additionally:
 
 ### ✨ Features
 
--   adding t-shirt sized typography, fixes [#210](https://github.com/adobe/spectrum-css/issues/210), closes [#416](https://github.com/adobe/spectrum-css/issues/416) ([#408](https://github.com/adobe/spectrum-css/issues/408)) ([3921bcb](https://github.com/adobe/spectrum-css/commit/3921bcb)), closes [#523](https://github.com/adobe/spectrum-css/issues/523)
+- adding t-shirt sized typography, fixes [#210](https://github.com/adobe/spectrum-css/issues/210), closes [#416](https://github.com/adobe/spectrum-css/issues/416) ([#408](https://github.com/adobe/spectrum-css/issues/408)) ([3921bcb](https://github.com/adobe/spectrum-css/commit/3921bcb)), closes [#523](https://github.com/adobe/spectrum-css/issues/523)
 
 <a name="2.0.3"></a>
 
@@ -617,4 +617,4 @@ Additionally:
 
 ### ✨ Features
 
--   move to individually versioned packages with Lerna ([#265](https://github.com/adobe/spectrum-css/issues/265)) ([cb7fd4b](https://github.com/adobe/spectrum-css/commit/cb7fd4b)), closes [#231](https://github.com/adobe/spectrum-css/issues/231) [#214](https://github.com/adobe/spectrum-css/issues/214) [#229](https://github.com/adobe/spectrum-css/issues/229) [#240](https://github.com/adobe/spectrum-css/issues/240) [#239](https://github.com/adobe/spectrum-css/issues/239) [#161](https://github.com/adobe/spectrum-css/issues/161) [#242](https://github.com/adobe/spectrum-css/issues/242) [#246](https://github.com/adobe/spectrum-css/issues/246) [#219](https://github.com/adobe/spectrum-css/issues/219) [#235](https://github.com/adobe/spectrum-css/issues/235) [#189](https://github.com/adobe/spectrum-css/issues/189) [#248](https://github.com/adobe/spectrum-css/issues/248) [#232](https://github.com/adobe/spectrum-css/issues/232) [#248](https://github.com/adobe/spectrum-css/issues/248) [#218](https://github.com/adobe/spectrum-css/issues/218) [#237](https://github.com/adobe/spectrum-css/issues/237) [#255](https://github.com/adobe/spectrum-css/issues/255) [#256](https://github.com/adobe/spectrum-css/issues/256) [#258](https://github.com/adobe/spectrum-css/issues/258) [#257](https://github.com/adobe/spectrum-css/issues/257) [#259](https://github.com/adobe/spectrum-css/issues/259)
+- move to individually versioned packages with Lerna ([#265](https://github.com/adobe/spectrum-css/issues/265)) ([cb7fd4b](https://github.com/adobe/spectrum-css/commit/cb7fd4b)), closes [#231](https://github.com/adobe/spectrum-css/issues/231) [#214](https://github.com/adobe/spectrum-css/issues/214) [#229](https://github.com/adobe/spectrum-css/issues/229) [#240](https://github.com/adobe/spectrum-css/issues/240) [#239](https://github.com/adobe/spectrum-css/issues/239) [#161](https://github.com/adobe/spectrum-css/issues/161) [#242](https://github.com/adobe/spectrum-css/issues/242) [#246](https://github.com/adobe/spectrum-css/issues/246) [#219](https://github.com/adobe/spectrum-css/issues/219) [#235](https://github.com/adobe/spectrum-css/issues/235) [#189](https://github.com/adobe/spectrum-css/issues/189) [#248](https://github.com/adobe/spectrum-css/issues/248) [#232](https://github.com/adobe/spectrum-css/issues/232) [#248](https://github.com/adobe/spectrum-css/issues/248) [#218](https://github.com/adobe/spectrum-css/issues/218) [#237](https://github.com/adobe/spectrum-css/issues/237) [#255](https://github.com/adobe/spectrum-css/issues/255) [#256](https://github.com/adobe/spectrum-css/issues/256) [#258](https://github.com/adobe/spectrum-css/issues/258) [#257](https://github.com/adobe/spectrum-css/issues/257) [#259](https://github.com/adobe/spectrum-css/issues/259)

@@ -20,7 +20,7 @@ export const Template = ({
 		"is-disabled": isDisabled,
 		"is-focused": !isDisabled && isFocused,
 		...customClasses.reduce((a, c) => ({ ...a, [c]: true }), {}),
-  })}
+	})}
   style=${styleMap(colorHandleStyle)}>
       <div class="${rootClass}-inner"></div>
     </div>

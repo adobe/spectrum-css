@@ -71,16 +71,11 @@ governing permissions and limitations under the License.
 		border-color: transparent;
 		box-shadow: none;
 		.spectrum-Card-preview {
-			background-color: var(
-				--spectrum-card-m-quiet-preview-background-color
-			);
+			background-color: var(--spectrum-card-m-quiet-preview-background-color);
 
 			&:before {
-				border-color: var(
-					--spectrum-card-m-quiet-border-color-selected
-				);
-				box-shadow: 0 0 0 1px
-					var(--spectrum-card-m-quiet-border-color-selected);
+				border-color: var(--spectrum-card-m-quiet-border-color-selected);
+				box-shadow: 0 0 0 1px var(--spectrum-card-m-quiet-border-color-selected);
 			}
 		}
 	}
@@ -94,11 +89,8 @@ governing permissions and limitations under the License.
 			background-color: var(--spectrum-alias-highlight-selected);
 
 			&:before {
-				border-color: var(
-					--spectrum-card-m-quiet-border-color-selected
-				);
-				box-shadow: 0 0 0 1px
-					var(--spectrum-card-m-quiet-border-color-selected);
+				border-color: var(--spectrum-card-m-quiet-border-color-selected);
+				box-shadow: 0 0 0 1px var(--spectrum-card-m-quiet-border-color-selected);
 			}
 		}
 

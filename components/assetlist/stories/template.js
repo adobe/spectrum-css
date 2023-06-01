@@ -43,10 +43,7 @@ export const AssetListItem = ({
 		${when(
 			image,
 			() =>
-				html`<img
-					src=${image ?? exampleImage}
-					class="${rootClass}Thumbnail"
-				/>`
+				html`<img src=${image ?? exampleImage} class="${rootClass}Thumbnail" />`
 		)}
 		${when(iconName, () =>
 			Icon({
@@ -55,10 +52,7 @@ export const AssetListItem = ({
 				...globals,
 			})
 		)}
-		${when(
-			label,
-			() => html`<span class="${rootClass}Label">${label}</span>`
-		)}
+		${when(label, () => html`<span class="${rootClass}Label">${label}</span>`)}
 		${when(isBranch, () =>
 			Icon({
 				iconName: "ChevronRight100",

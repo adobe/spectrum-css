@@ -23,8 +23,7 @@ export const Template = ({
 	const { express } = globals;
 
 	try {
-		if (!express)
-			import(/* webpackPrefetch: true */ "../themes/spectrum.css");
+		if (!express) import(/* webpackPrefetch: true */ "../themes/spectrum.css");
 		else import(/* webpackPrefetch: true */ "../themes/express.css");
 	} catch (e) {
 		console.warn(e);
@@ -37,10 +36,8 @@ export const Template = ({
 				[`${rootClass}--size${size?.toUpperCase()}`]:
 					typeof size !== "undefined",
 				[`${rootClass}--${variant}`]: typeof variant !== "undefined",
-				[`${rootClass}--${customColor}`]:
-					typeof customColor !== "undefined",
-				[`${rootClass}--${customLayout}`]:
-					typeof customLayout !== "undefined",
+				[`${rootClass}--${customColor}`]: typeof customColor !== "undefined",
+				[`${rootClass}--${customLayout}`]: typeof customLayout !== "undefined",
 				...customClasses.reduce((a, c) => ({ ...a, [c]: true }), {}),
 			})}
 			id=${ifDefined(id)}
@@ -57,10 +54,7 @@ export const Template = ({
 			)}
 			${when(
 				!hideLabel || (!label && !variant),
-				() =>
-					html`<div class="${rootClass}-label">
-						${label ?? variant}
-					</div>`
+				() => html`<div class="${rootClass}-label">${label ?? variant}</div>`
 			)}
 		</div>
 	`;

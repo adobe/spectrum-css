@@ -201,11 +201,11 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 🗓 2023-03-31 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/inlinealert@6.0.11...@spectrum-css/inlinealert@7.0.0)
 
--   feat(inlinealert)!: updates tokens (#1695) ([e2960f4](https://github.com/adobe/spectrum-css/commit/e2960f4)), closes [#1695](https://github.com/adobe/spectrum-css/issues/1695)
+- feat(inlinealert)!: updates tokens (#1695) ([e2960f4](https://github.com/adobe/spectrum-css/commit/e2960f4)), closes [#1695](https://github.com/adobe/spectrum-css/issues/1695)
 
 ### 🛑 BREAKING CHANGES
 
--   migrates In-Line Alert to the new tokens system.
+- migrates In-Line Alert to the new tokens system.
 
 <a name="6.0.11"></a>
 
@@ -287,7 +287,7 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 ### 🐛 Bug fixes
 
--   **inlinealert:** correct spectrum theme capitalization ([#1615](https://github.com/adobe/spectrum-css/issues/1615)) ([8659820](https://github.com/adobe/spectrum-css/commit/8659820))
+- **inlinealert:** correct spectrum theme capitalization ([#1615](https://github.com/adobe/spectrum-css/issues/1615)) ([8659820](https://github.com/adobe/spectrum-css/commit/8659820))
 
 <a name="6.0.1"></a>
 
@@ -303,11 +303,11 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 🗓 2023-02-01 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/inlinealert@5.0.16...@spectrum-css/inlinealert@6.0.0)
 
--   chore(tokens)!: use latest dependency & fix build error (#1591) ([f2532e7](https://github.com/adobe/spectrum-css/commit/f2532e7)), closes [#1591](https://github.com/adobe/spectrum-css/issues/1591)
+- chore(tokens)!: use latest dependency & fix build error (#1591) ([f2532e7](https://github.com/adobe/spectrum-css/commit/f2532e7)), closes [#1591](https://github.com/adobe/spectrum-css/issues/1591)
 
 ### 🛑 BREAKING CHANGES
 
--   uses latest `@adobe/spectrum-tokens` dependency which includes token renames
+- uses latest `@adobe/spectrum-tokens` dependency which includes token renames
 
 <a name="5.0.16"></a>
 
@@ -325,7 +325,7 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 ### 🐛 Bug fixes
 
--   **inlinealert:** typo for --mod-inlinealert-spacing-header-content-button variable ([#1598](https://github.com/adobe/spectrum-css/issues/1598)) ([b1bd411](https://github.com/adobe/spectrum-css/commit/b1bd411))
+- **inlinealert:** typo for --mod-inlinealert-spacing-header-content-button variable ([#1598](https://github.com/adobe/spectrum-css/issues/1598)) ([b1bd411](https://github.com/adobe/spectrum-css/commit/b1bd411))
 
 <a name="5.0.14"></a>
 
@@ -445,11 +445,11 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 🗓 2022-10-12 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/inlinealert@4.0.13...@spectrum-css/inlinealert@5.0.0)
 
--   refactor(inlinealert)!: migrate to core tokens (#1519) ([a4d72ad](https://github.com/adobe/spectrum-css/commit/a4d72ad)), closes [#1519](https://github.com/adobe/spectrum-css/issues/1519)
+- refactor(inlinealert)!: migrate to core tokens (#1519) ([a4d72ad](https://github.com/adobe/spectrum-css/commit/a4d72ad)), closes [#1519](https://github.com/adobe/spectrum-css/issues/1519)
 
 ### 🛑 BREAKING CHANGES
 
--   migrates InlineAlert to core tokens
+- migrates InlineAlert to core tokens
 
 Co-authored-by: Patrick Fulton <pfulton@adobe.com>
 
@@ -565,15 +565,15 @@ Co-authored-by: Patrick Fulton <pfulton@adobe.com>
 
 ### 🐛 Bug fixes
 
--   update peer dependencies ([97810cf](https://github.com/adobe/spectrum-css/commit/97810cf))
+- update peer dependencies ([97810cf](https://github.com/adobe/spectrum-css/commit/97810cf))
 
 ### 📚 Documentation
 
--   use new Button markup ([886b2cb](https://github.com/adobe/spectrum-css/commit/886b2cb))
+- use new Button markup ([886b2cb](https://github.com/adobe/spectrum-css/commit/886b2cb))
 
 ### 🛑 BREAKING CHANGES
 
--   Button markup has changed
+- Button markup has changed
 
 <a name="3.0.0"></a>
 
@@ -591,11 +591,11 @@ Co-authored-by: Patrick Fulton <pfulton@adobe.com>
 
 ### 📚 Documentation
 
--   use new Button markup ([629bf05](https://github.com/adobe/spectrum-css/commit/629bf05))
+- use new Button markup ([629bf05](https://github.com/adobe/spectrum-css/commit/629bf05))
 
 ### 🛑 BREAKING CHANGES
 
--   Button markup has changed
+- Button markup has changed
 
 <a name="2.0.6"></a>
 
@@ -637,7 +637,7 @@ Co-authored-by: Patrick Fulton <pfulton@adobe.com>
 
 ### 🐛 Bug fixes
 
--   updating version number on vars ([f535b49](https://github.com/adobe/spectrum-css/commit/f535b49))
+- updating version number on vars ([f535b49](https://github.com/adobe/spectrum-css/commit/f535b49))
 
 <a name="2.0.1"></a>
 
@@ -647,7 +647,7 @@ Co-authored-by: Patrick Fulton <pfulton@adobe.com>
 
 ### 🐛 Bug fixes
 
--   updating version number on vars ([f535b49](https://github.com/adobe/spectrum-css/commit/f535b49))
+- updating version number on vars ([f535b49](https://github.com/adobe/spectrum-css/commit/f535b49))
 
 <a name="2.0.0"></a>
 
@@ -657,7 +657,7 @@ Co-authored-by: Patrick Fulton <pfulton@adobe.com>
 
 ### 🐛 Bug fixes
 
--   updating version number on vars ([f535b49](https://github.com/adobe/spectrum-css/commit/f535b49))
+- updating version number on vars ([f535b49](https://github.com/adobe/spectrum-css/commit/f535b49))
 
 <a name="2.0.0-alpha.2"></a>
 
@@ -683,12 +683,12 @@ Co-authored-by: Patrick Fulton <pfulton@adobe.com>
 
 ### 🐛 Bug fixes
 
--   rename `warning` inlinealert to `negative` ([27a50fc](https://github.com/adobe/spectrum-css/commit/27a50fc))
+- rename `warning` inlinealert to `negative` ([27a50fc](https://github.com/adobe/spectrum-css/commit/27a50fc))
 
 ### 🛑 BREAKING CHANGES
 
--   `.spectrum-InLineAlert--warning` renamed to
-    `.spectrum-InLineAlert--negative`
+- `.spectrum-InLineAlert--warning` renamed to
+  `.spectrum-InLineAlert--negative`
 
 <a name="1.1.1-alpha.0"></a>
 
@@ -698,7 +698,7 @@ Co-authored-by: Patrick Fulton <pfulton@adobe.com>
 
 ### 🐛 Bug fixes
 
--   adding neutral to inlinealert tokens ([409be21](https://github.com/adobe/spectrum-css/commit/409be21))
+- adding neutral to inlinealert tokens ([409be21](https://github.com/adobe/spectrum-css/commit/409be21))
 
 <a name="1.1.0"></a>
 
@@ -708,7 +708,7 @@ Co-authored-by: Patrick Fulton <pfulton@adobe.com>
 
 ### ✨ Features
 
--   added inlinealert ([bf26b56](https://github.com/adobe/spectrum-css/commit/bf26b56))
+- added inlinealert ([bf26b56](https://github.com/adobe/spectrum-css/commit/bf26b56))
 
 <a name="3.0.0-beta.3"></a>
 
@@ -742,8 +742,8 @@ Co-authored-by: Patrick Fulton <pfulton@adobe.com>
 
 ### ✨ Features
 
--   make Alert support RTL ([39f318b](https://github.com/adobe/spectrum-css/commit/39f318b))
--   make Alert support RTL ([8a661e9](https://github.com/adobe/spectrum-css/commit/8a661e9))
+- make Alert support RTL ([39f318b](https://github.com/adobe/spectrum-css/commit/39f318b))
+- make Alert support RTL ([8a661e9](https://github.com/adobe/spectrum-css/commit/8a661e9))
 
 <a name="2.0.5"></a>
 
@@ -793,8 +793,8 @@ Co-authored-by: Patrick Fulton <pfulton@adobe.com>
 
 ### ✨ Features
 
--   move to individually versioned packages with Lerna ([#265](https://github.com/adobe/spectrum-css/issues/265)) ([cb7fd4b](https://github.com/adobe/spectrum-css/commit/cb7fd4b)), closes [#231](https://github.com/adobe/spectrum-css/issues/231) [#214](https://github.com/adobe/spectrum-css/issues/214) [#229](https://github.com/adobe/spectrum-css/issues/229) [#240](https://github.com/adobe/spectrum-css/issues/240) [#239](https://github.com/adobe/spectrum-css/issues/239) [#161](https://github.com/adobe/spectrum-css/issues/161) [#242](https://github.com/adobe/spectrum-css/issues/242) [#246](https://github.com/adobe/spectrum-css/issues/246) [#219](https://github.com/adobe/spectrum-css/issues/219) [#235](https://github.com/adobe/spectrum-css/issues/235) [#189](https://github.com/adobe/spectrum-css/issues/189) [#248](https://github.com/adobe/spectrum-css/issues/248) [#232](https://github.com/adobe/spectrum-css/issues/232) [#248](https://github.com/adobe/spectrum-css/issues/248) [#218](https://github.com/adobe/spectrum-css/issues/218) [#237](https://github.com/adobe/spectrum-css/issues/237) [#255](https://github.com/adobe/spectrum-css/issues/255) [#256](https://github.com/adobe/spectrum-css/issues/256) [#258](https://github.com/adobe/spectrum-css/issues/258) [#257](https://github.com/adobe/spectrum-css/issues/257) [#259](https://github.com/adobe/spectrum-css/issues/259)
+- move to individually versioned packages with Lerna ([#265](https://github.com/adobe/spectrum-css/issues/265)) ([cb7fd4b](https://github.com/adobe/spectrum-css/commit/cb7fd4b)), closes [#231](https://github.com/adobe/spectrum-css/issues/231) [#214](https://github.com/adobe/spectrum-css/issues/214) [#229](https://github.com/adobe/spectrum-css/issues/229) [#240](https://github.com/adobe/spectrum-css/issues/240) [#239](https://github.com/adobe/spectrum-css/issues/239) [#161](https://github.com/adobe/spectrum-css/issues/161) [#242](https://github.com/adobe/spectrum-css/issues/242) [#246](https://github.com/adobe/spectrum-css/issues/246) [#219](https://github.com/adobe/spectrum-css/issues/219) [#235](https://github.com/adobe/spectrum-css/issues/235) [#189](https://github.com/adobe/spectrum-css/issues/189) [#248](https://github.com/adobe/spectrum-css/issues/248) [#232](https://github.com/adobe/spectrum-css/issues/232) [#248](https://github.com/adobe/spectrum-css/issues/248) [#218](https://github.com/adobe/spectrum-css/issues/218) [#237](https://github.com/adobe/spectrum-css/issues/237) [#255](https://github.com/adobe/spectrum-css/issues/255) [#256](https://github.com/adobe/spectrum-css/issues/256) [#258](https://github.com/adobe/spectrum-css/issues/258) [#257](https://github.com/adobe/spectrum-css/issues/257) [#259](https://github.com/adobe/spectrum-css/issues/259)
 
 ### 🐛 Bug fixes
 
--   correct Alert icon color, fixes [#272](https://github.com/adobe/spectrum-css/issues/272) ([f17848a](https://github.com/adobe/spectrum-css/commit/f17848a))
+- correct Alert icon color, fixes [#272](https://github.com/adobe/spectrum-css/issues/272) ([f17848a](https://github.com/adobe/spectrum-css/commit/f17848a))

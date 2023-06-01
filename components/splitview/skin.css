@@ -29,14 +29,10 @@ governing permissions and limitations under the License.
 	&.is-draggable {
 		&:hover,
 		&.is-hovered {
-			background-color: var(
-				--spectrum-dragbar-handle-background-color-hover
-			);
+			background-color: var(--spectrum-dragbar-handle-background-color-hover);
 
 			.spectrum-SplitView-gripper {
-				border-color: var(
-					--spectrum-dragbar-handle-background-color-hover
-				);
+				border-color: var(--spectrum-dragbar-handle-background-color-hover);
 				&:before {
 					background-color: var(
 						--spectrum-dragbar-handle-background-color-hover
@@ -47,14 +43,10 @@ governing permissions and limitations under the License.
 
 		&:active,
 		&.is-active {
-			background-color: var(
-				--spectrum-dragbar-handle-background-color-down
-			);
+			background-color: var(--spectrum-dragbar-handle-background-color-down);
 
 			.spectrum-SplitView-gripper {
-				border-color: var(
-					--spectrum-dragbar-handle-background-color-down
-				);
+				border-color: var(--spectrum-dragbar-handle-background-color-down);
 				&:before {
 					background-color: var(
 						--spectrum-dragbar-handle-background-color-down

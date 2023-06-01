@@ -116,9 +116,7 @@ function runTaskOnPackages(task, packages) {
 					processPackage();
 				});
 			} else {
-				logger.warn(
-					`${task} ran on ${packageCount} packages!`.bold.green
-				);
+				logger.warn(`${task} ran on ${packageCount} packages!`.bold.green);
 				resolve();
 			}
 		}

@@ -94,15 +94,11 @@ governing permissions and limitations under the License.
 	}
 
 	&:hover .spectrum-ClearButton-fill {
-		background-color: var(
-			--spectrum-clearbutton-fill-background-color-hover
-		);
+		background-color: var(--spectrum-clearbutton-fill-background-color-hover);
 	}
 
 	&:active .spectrum-ClearButton-fill {
-		background-color: var(
-			--spectrum-clearbutton-fill-background-color-down
-		);
+		background-color: var(--spectrum-clearbutton-fill-background-color-down);
 	}
 
 	&:focus-ring .spectrum-ClearButton-fill {
@@ -138,9 +134,7 @@ governing permissions and limitations under the License.
 
 	&:disabled,
 	&.is-disabled .spectrum-ClearButton-fill {
-		background-color: var(
-			--spectrum-alias-icon-color-overbackground-disabled
-		);
+		background-color: var(--spectrum-alias-icon-color-overbackground-disabled);
 	}
 }
 

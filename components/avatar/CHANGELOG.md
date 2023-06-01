@@ -257,11 +257,11 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 🗓 2023-02-06 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/avatar@5.0.27...@spectrum-css/avatar@6.0.0)
 
--   refactor(avatar)!: use spectrum tokens (#1565) ([8db2337](https://github.com/adobe/spectrum-css/commit/8db2337)), closes [#1565](https://github.com/adobe/spectrum-css/issues/1565)
+- refactor(avatar)!: use spectrum tokens (#1565) ([8db2337](https://github.com/adobe/spectrum-css/commit/8db2337)), closes [#1565](https://github.com/adobe/spectrum-css/issues/1565)
 
 ### 🛑 BREAKING CHANGES
 
--   migrates Avatar to new tokens system
+- migrates Avatar to new tokens system
 
 Co-authored-by: Patrick Fulton <pfulton@adobe.com>
 Co-authored-by: Bernhard Schmidt <bschmidt@adobe.com>
@@ -354,7 +354,7 @@ Co-authored-by: Bernhard Schmidt <bschmidt@adobe.com>
 
 ### 🐛 Bug fixes
 
--   avatar WHCM ([478225a](https://github.com/adobe/spectrum-css/commit/478225a))
+- avatar WHCM ([478225a](https://github.com/adobe/spectrum-css/commit/478225a))
 
 <a name="5.0.16"></a>
 
@@ -436,7 +436,7 @@ Co-authored-by: Bernhard Schmidt <bschmidt@adobe.com>
 
 ### 🐛 Bug fixes
 
--   update peer dependencies ([97810cf](https://github.com/adobe/spectrum-css/commit/97810cf))
+- update peer dependencies ([97810cf](https://github.com/adobe/spectrum-css/commit/97810cf))
 
 <a name="5.0.6"></a>
 
@@ -502,19 +502,19 @@ Co-authored-by: Bernhard Schmidt <bschmidt@adobe.com>
 
 ### ✨ Features
 
--   add support for border values for avatar ([58a76ed](https://github.com/adobe/spectrum-css/commit/58a76ed))
+- add support for border values for avatar ([58a76ed](https://github.com/adobe/spectrum-css/commit/58a76ed))
 
 ### 🐛 Bug fixes
 
--   updating version number on vars ([f535b49](https://github.com/adobe/spectrum-css/commit/f535b49))
--   wip adding avatar express css properties ([1e06175](https://github.com/adobe/spectrum-css/commit/1e06175))
+- updating version number on vars ([f535b49](https://github.com/adobe/spectrum-css/commit/f535b49))
+- wip adding avatar express css properties ([1e06175](https://github.com/adobe/spectrum-css/commit/1e06175))
 
--   fix!: avatar needs a div wrapper for to support express border overlay ([f54b645](https://github.com/adobe/spectrum-css/commit/f54b645))
+- fix!: avatar needs a div wrapper for to support express border overlay ([f54b645](https://github.com/adobe/spectrum-css/commit/f54b645))
 
 ### 🛑 BREAKING CHANGES
 
--   for express to support the transparent border overlay,
-    the avatar needs to be wrapped in a div to support pseudo elements.
+- for express to support the transparent border overlay,
+  the avatar needs to be wrapped in a div to support pseudo elements.
 
 <a name="4.0.0"></a>
 
@@ -524,7 +524,7 @@ Co-authored-by: Bernhard Schmidt <bschmidt@adobe.com>
 
 ### 🐛 Bug fixes
 
--   updating version number on vars ([f535b49](https://github.com/adobe/spectrum-css/commit/f535b49))
+- updating version number on vars ([f535b49](https://github.com/adobe/spectrum-css/commit/f535b49))
 
 <a name="4.0.0-alpha.3"></a>
 
@@ -558,11 +558,11 @@ Co-authored-by: Bernhard Schmidt <bschmidt@adobe.com>
 
 ### ✨ Features
 
--   added all the avatar sizes in DNA ([98b3f66](https://github.com/adobe/spectrum-css/commit/98b3f66))
+- added all the avatar sizes in DNA ([98b3f66](https://github.com/adobe/spectrum-css/commit/98b3f66))
 
 ### 🛑 BREAKING CHANGES
 
--   a size class is now required
+- a size class is now required
 
 <a name="3.0.2"></a>
 
@@ -612,8 +612,8 @@ Co-authored-by: Bernhard Schmidt <bschmidt@adobe.com>
 
 ### 🐛 Bug fixes
 
--   removed deprecated avatar tokens ([1ea0190](https://github.com/adobe/spectrum-css/commit/1ea0190))
--   removed more deprecations ([70dd116](https://github.com/adobe/spectrum-css/commit/70dd116))
+- removed deprecated avatar tokens ([1ea0190](https://github.com/adobe/spectrum-css/commit/1ea0190))
+- removed more deprecations ([70dd116](https://github.com/adobe/spectrum-css/commit/70dd116))
 
 <a name="3.0.0-beta.2"></a>
 
@@ -639,7 +639,7 @@ Co-authored-by: Bernhard Schmidt <bschmidt@adobe.com>
 
 ### ✨ Features
 
--   make Avatar support RTL ([87882c2](https://github.com/adobe/spectrum-css/commit/87882c2))
+- make Avatar support RTL ([87882c2](https://github.com/adobe/spectrum-css/commit/87882c2))
 
 <a name="2.0.5"></a>
 
@@ -681,7 +681,7 @@ Co-authored-by: Bernhard Schmidt <bschmidt@adobe.com>
 
 ### 🐛 Bug fixes
 
--   preprocess percentage values and convert them to floats, fixes [#340](https://github.com/adobe/spectrum-css/issues/340) ([a77ac11](https://github.com/adobe/spectrum-css/commit/a77ac11))
+- preprocess percentage values and convert them to floats, fixes [#340](https://github.com/adobe/spectrum-css/issues/340) ([a77ac11](https://github.com/adobe/spectrum-css/commit/a77ac11))
 
 <a name="2.0.0"></a>
 
@@ -691,4 +691,4 @@ Co-authored-by: Bernhard Schmidt <bschmidt@adobe.com>
 
 ### ✨ Features
 
--   move to individually versioned packages with Lerna ([#265](https://github.com/adobe/spectrum-css/issues/265)) ([cb7fd4b](https://github.com/adobe/spectrum-css/commit/cb7fd4b)), closes [#231](https://github.com/adobe/spectrum-css/issues/231) [#214](https://github.com/adobe/spectrum-css/issues/214) [#229](https://github.com/adobe/spectrum-css/issues/229) [#240](https://github.com/adobe/spectrum-css/issues/240) [#239](https://github.com/adobe/spectrum-css/issues/239) [#161](https://github.com/adobe/spectrum-css/issues/161) [#242](https://github.com/adobe/spectrum-css/issues/242) [#246](https://github.com/adobe/spectrum-css/issues/246) [#219](https://github.com/adobe/spectrum-css/issues/219) [#235](https://github.com/adobe/spectrum-css/issues/235) [#189](https://github.com/adobe/spectrum-css/issues/189) [#248](https://github.com/adobe/spectrum-css/issues/248) [#232](https://github.com/adobe/spectrum-css/issues/232) [#248](https://github.com/adobe/spectrum-css/issues/248) [#218](https://github.com/adobe/spectrum-css/issues/218) [#237](https://github.com/adobe/spectrum-css/issues/237) [#255](https://github.com/adobe/spectrum-css/issues/255) [#256](https://github.com/adobe/spectrum-css/issues/256) [#258](https://github.com/adobe/spectrum-css/issues/258) [#257](https://github.com/adobe/spectrum-css/issues/257) [#259](https://github.com/adobe/spectrum-css/issues/259)
+- move to individually versioned packages with Lerna ([#265](https://github.com/adobe/spectrum-css/issues/265)) ([cb7fd4b](https://github.com/adobe/spectrum-css/commit/cb7fd4b)), closes [#231](https://github.com/adobe/spectrum-css/issues/231) [#214](https://github.com/adobe/spectrum-css/issues/214) [#229](https://github.com/adobe/spectrum-css/issues/229) [#240](https://github.com/adobe/spectrum-css/issues/240) [#239](https://github.com/adobe/spectrum-css/issues/239) [#161](https://github.com/adobe/spectrum-css/issues/161) [#242](https://github.com/adobe/spectrum-css/issues/242) [#246](https://github.com/adobe/spectrum-css/issues/246) [#219](https://github.com/adobe/spectrum-css/issues/219) [#235](https://github.com/adobe/spectrum-css/issues/235) [#189](https://github.com/adobe/spectrum-css/issues/189) [#248](https://github.com/adobe/spectrum-css/issues/248) [#232](https://github.com/adobe/spectrum-css/issues/232) [#248](https://github.com/adobe/spectrum-css/issues/248) [#218](https://github.com/adobe/spectrum-css/issues/218) [#237](https://github.com/adobe/spectrum-css/issues/237) [#255](https://github.com/adobe/spectrum-css/issues/255) [#256](https://github.com/adobe/spectrum-css/issues/256) [#258](https://github.com/adobe/spectrum-css/issues/258) [#257](https://github.com/adobe/spectrum-css/issues/257) [#259](https://github.com/adobe/spectrum-css/issues/259)

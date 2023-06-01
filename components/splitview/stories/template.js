@@ -20,12 +20,10 @@ export const Template = ({
 }) => {
 	const collapsible = isCollapsible;
 	const collapsibleStart =
-		(typeof collapsePosition !== "undefined" &&
-			collapsePosition === "left") ||
+		(typeof collapsePosition !== "undefined" && collapsePosition === "left") ||
 		collapsePosition === "top";
 	const collapsibleEnd =
-		(typeof collapsePosition !== "undefined" &&
-			collapsePosition === "right") ||
+		(typeof collapsePosition !== "undefined" && collapsePosition === "right") ||
 		collapsePosition === "bottom";
 	const collapsibleClassName =
 		collapsible && collapsibleStart

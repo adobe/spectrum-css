@@ -75,10 +75,7 @@ governing permissions and limitations under the License.
 .spectrum-AlertBanner {
 	display: none;
 	justify-content: space-between;
-	inline-size: var(
-		--mod-alert-banner-size,
-		var(--spectrum-alert-banner-size)
-	);
+	inline-size: var(--mod-alert-banner-size, var(--spectrum-alert-banner-size));
 	min-block-size: var(
 		--mod-alert-banner-min-height,
 		var(--spectrum-alert-banner-min-height)
@@ -189,8 +186,6 @@ governing permissions and limitations under the License.
 @media (forced-colors: active) {
 	.spectrum-AlertBanner {
 		--highcontrast-alert-banner-border-color: CanvasText;
-		--highcontrast-alert-banner-border-width: var(
-			--spectrum-border-width-100
-		);
+		--highcontrast-alert-banner-border-width: var(--spectrum-border-width-100);
 	}
 }

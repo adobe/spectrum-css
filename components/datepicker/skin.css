@@ -18,9 +18,7 @@ governing permissions and limitations under the License.
 		&:active,
 		&.is-selected,
 		&.is-invalid {
-			border-color: var(
-				--spectrum-textfield-m-quiet-texticon-border-color
-			);
+			border-color: var(--spectrum-textfield-m-quiet-texticon-border-color);
 		}
 
 		&:disabled,

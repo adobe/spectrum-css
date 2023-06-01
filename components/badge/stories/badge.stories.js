@@ -39,13 +39,7 @@ export default {
 				type: { summary: "string" },
 				category: "Component",
 			},
-			options: [
-				"neutral",
-				"accent",
-				"informative",
-				"positive",
-				"negative",
-			],
+			options: ["neutral", "accent", "informative", "positive", "negative"],
 			control: "select",
 		},
 		hideLabel: {

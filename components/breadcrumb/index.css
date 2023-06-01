@@ -31,9 +31,7 @@ governing permissions and limitations under the License.
 	--spectrum-breadcrumbs-font-family-current: var(
 		--spectrum-sans-font-family-stack
 	);
-	--spectrum-breadcrumbs-font-weight-current: var(
-		--spectrum-bold-font-weight
-	);
+	--spectrum-breadcrumbs-font-weight-current: var(--spectrum-bold-font-weight);
 
 	/* text compact */
 	--spectrum-breadcrumbs-font-size-compact: var(--spectrum-font-size-100);
@@ -369,9 +367,7 @@ governing permissions and limitations under the License.
 		> .spectrum-ActionButton {
 			margin-block-start: var(
 				--mod-breadcrumbs-action-button-spacing-block-multiline,
-				var(
-					--spectrum-breadcrumbs-action-button-spacing-block-multiline
-				)
+				var(--spectrum-breadcrumbs-action-button-spacing-block-multiline)
 			);
 			margin-block-end: var(
 				--mod-breadcrumbs-action-button-spacing-block-between-multiline,
@@ -496,10 +492,7 @@ governing permissions and limitations under the License.
 	text-decoration: none;
 	color: var(
 		--highcontrast-breadcrumbs-text-color,
-		var(
-			--mod-breadcrumbs-text-color,
-			var(--spectrum-breadcrumbs-text-color)
-		)
+		var(--mod-breadcrumbs-text-color, var(--spectrum-breadcrumbs-text-color))
 	);
 
 	margin-block-start: var(

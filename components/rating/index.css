@@ -46,9 +46,7 @@ governing permissions and limitations under the License.
 	);
 
 	/* Disabled */
-	--spectrum-rating-icon-color-disabled: var(
-		--spectrum-disabled-content-color
-	);
+	--spectrum-rating-icon-color-disabled: var(--spectrum-disabled-content-color);
 	--spectrum-rating-icon-count: var(--spectrum-rating-icon-count);
 }
 
@@ -141,10 +139,7 @@ governing permissions and limitations under the License.
 	inline-size: calc(
 		(
 				var(--mod-rating-icon-width, var(--spectrum-rating-icon-width)) +
-					var(
-						--mod-rating-icon-spacing,
-						var(--spectrum-rating-icon-spacing)
-					)
+					var(--mod-rating-icon-spacing, var(--spectrum-rating-icon-spacing))
 			) * var(--mod-rating-icon-count, var(--spectrum-rating-icon-count))
 	);
 	border-radius: var(
@@ -154,10 +149,7 @@ governing permissions and limitations under the License.
 
 	padding-inline: calc(
 		(
-				var(
-						--mod-rating-icon-spacing,
-						var(--spectrum-rating-icon-spacing)
-					) +
+				var(--mod-rating-icon-spacing, var(--spectrum-rating-icon-spacing)) +
 					var(
 						--mod-rating-focus-indicator-gap,
 						var(--spectrum-rating-focus-indicator-gap)
@@ -200,14 +192,8 @@ governing permissions and limitations under the License.
 	position: relative;
 	background-size: contain;
 	background-repeat: no-repeat;
-	inline-size: var(
-		--mod-rating-icon-width,
-		var(--spectrum-rating-icon-width)
-	);
-	block-size: var(
-		--mod-rating-icon-height,
-		var(--spectrum-rating-icon-height)
-	);
+	inline-size: var(--mod-rating-icon-width, var(--spectrum-rating-icon-width));
+	block-size: var(--mod-rating-icon-height, var(--spectrum-rating-icon-height));
 	padding-block: calc(
 		var(
 				--mod-rating-icon-spacing-vertical-top,

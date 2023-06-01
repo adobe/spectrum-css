@@ -21,12 +21,7 @@ module.exports = (ctx) => {
 		plugins: [
 			require("postcss-rgb-mapping")(),
 			require("postcss-sorting")({
-				order: [
-					"custom-properties",
-					"declarations",
-					"at-rules",
-					"rules",
-				],
+				order: ["custom-properties", "declarations", "at-rules", "rules"],
 				"properties-order": "alphabetical",
 			}),
 			/* Merges _adjacent_ rules only */

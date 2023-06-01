@@ -71,10 +71,7 @@ governing permissions and limitations under the License.
 	-webkit-text-decoration-skip: objects;
 	text-decoration: underline;
 	transition: color
-		var(
-			--mod-link-animation-duration,
-			var(--spectrum-link-animation-duration)
-		)
+		var(--mod-link-animation-duration, var(--spectrum-link-animation-duration))
 		ease-in-out;
 	outline: none;
 	cursor: pointer;
@@ -180,10 +177,7 @@ governing permissions and limitations under the License.
 	&:focus {
 		color: var(
 			--highcontrast-link-text-color-white,
-			var(
-				--mod-link-text-color-white,
-				var(--spectrum-link-text-color-white)
-			)
+			var(--mod-link-text-color-white, var(--spectrum-link-text-color-white))
 		);
 	}
 }
@@ -199,10 +193,7 @@ governing permissions and limitations under the License.
 	&:focus {
 		color: var(
 			--highcontrast-link-text-color-black,
-			var(
-				--mod-link-text-color-black,
-				var(--spectrum-link-text-color-black)
-			)
+			var(--mod-link-text-color-black, var(--spectrum-link-text-color-black))
 		);
 	}
 }

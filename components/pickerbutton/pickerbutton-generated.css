@@ -48,12 +48,8 @@ governing permissions and limitations under the License.
 
 		.spectrum-PickerButton-label {
 			font-size: var(--spectrum-global-dimension-font-size-75);
-			padding-block-end: var(
-				--spectrum-alias-pickerbutton-label-padding-y-s
-			);
-			padding-block-start: var(
-				--spectrum-alias-pickerbutton-label-padding-y-s
-			);
+			padding-block-end: var(--spectrum-alias-pickerbutton-label-padding-y-s);
+			padding-block-start: var(--spectrum-alias-pickerbutton-label-padding-y-s);
 		}
 
 		.spectrum-PickerButton-icon {
@@ -63,12 +59,8 @@ governing permissions and limitations under the License.
 			);
 			block-size: var(--spectrum-global-dimension-size-200);
 			inline-size: var(--spectrum-global-dimension-size-200);
-			margin-block-end: var(
-				--spectrum-alias-infieldbutton-icon-margin-y-s
-			);
-			margin-block-start: var(
-				--spectrum-alias-infieldbutton-icon-margin-y-s
-			);
+			margin-block-end: var(--spectrum-alias-infieldbutton-icon-margin-y-s);
+			margin-block-start: var(--spectrum-alias-infieldbutton-icon-margin-y-s);
 		}
 
 		.spectrum-PickerButton-UIIcon {
@@ -77,12 +69,8 @@ governing permissions and limitations under the License.
 			);
 			block-size: var(--spectrum-alias-ui-icon-chevron-size-100);
 			inline-size: var(--spectrum-alias-ui-icon-chevron-size-100);
-			margin-block-end: var(
-				--spectrum-alias-pickerbutton-icon-margin-y-s
-			);
-			margin-block-start: var(
-				--spectrum-alias-pickerbutton-icon-margin-y-s
-			);
+			margin-block-end: var(--spectrum-alias-pickerbutton-icon-margin-y-s);
+			margin-block-start: var(--spectrum-alias-pickerbutton-icon-margin-y-s);
 		}
 	}
 
@@ -109,12 +97,8 @@ governing permissions and limitations under the License.
 
 		.spectrum-PickerButton-label {
 			font-size: var(--spectrum-global-dimension-font-size-100);
-			padding-block-end: var(
-				--spectrum-alias-pickerbutton-label-padding-y-m
-			);
-			padding-block-start: var(
-				--spectrum-alias-pickerbutton-label-padding-y-m
-			);
+			padding-block-end: var(--spectrum-alias-pickerbutton-label-padding-y-m);
+			padding-block-start: var(--spectrum-alias-pickerbutton-label-padding-y-m);
 		}
 
 		.spectrum-PickerButton-icon {
@@ -124,12 +108,8 @@ governing permissions and limitations under the License.
 			);
 			block-size: var(--spectrum-global-dimension-size-225);
 			inline-size: var(--spectrum-global-dimension-size-225);
-			margin-block-end: var(
-				--spectrum-alias-infieldbutton-icon-margin-y-m
-			);
-			margin-block-start: var(
-				--spectrum-alias-infieldbutton-icon-margin-y-m
-			);
+			margin-block-end: var(--spectrum-alias-infieldbutton-icon-margin-y-m);
+			margin-block-start: var(--spectrum-alias-infieldbutton-icon-margin-y-m);
 		}
 
 		.spectrum-PickerButton-UIIcon {
@@ -138,12 +118,8 @@ governing permissions and limitations under the License.
 			);
 			block-size: var(--spectrum-alias-ui-icon-chevron-size-200);
 			inline-size: var(--spectrum-alias-ui-icon-chevron-size-200);
-			margin-block-end: var(
-				--spectrum-alias-pickerbutton-icon-margin-y-m
-			);
-			margin-block-start: var(
-				--spectrum-alias-pickerbutton-icon-margin-y-m
-			);
+			margin-block-end: var(--spectrum-alias-pickerbutton-icon-margin-y-m);
+			margin-block-start: var(--spectrum-alias-pickerbutton-icon-margin-y-m);
 		}
 	}
 
@@ -170,22 +146,14 @@ governing permissions and limitations under the License.
 
 		.spectrum-PickerButton-label {
 			font-size: var(--spectrum-global-dimension-font-size-200);
-			padding-block-end: var(
-				--spectrum-alias-pickerbutton-label-padding-y-l
-			);
-			padding-block-start: var(
-				--spectrum-alias-pickerbutton-label-padding-y-l
-			);
+			padding-block-end: var(--spectrum-alias-pickerbutton-label-padding-y-l);
+			padding-block-start: var(--spectrum-alias-pickerbutton-label-padding-y-l);
 		}
 
 		.spectrum-PickerButton-icon {
 			gap: var(--spectrum-global-dimension-size-115);
-			margin-block-end: var(
-				--spectrum-alias-infieldbutton-icon-margin-y-l
-			);
-			margin-block-start: var(
-				--spectrum-alias-infieldbutton-icon-margin-y-l
-			);
+			margin-block-end: var(--spectrum-alias-infieldbutton-icon-margin-y-l);
+			margin-block-start: var(--spectrum-alias-infieldbutton-icon-margin-y-l);
 		}
 
 		.spectrum-PickerButton-UIIcon {
@@ -194,12 +162,8 @@ governing permissions and limitations under the License.
 			);
 			block-size: var(--spectrum-alias-ui-icon-chevron-size-300);
 			inline-size: var(--spectrum-alias-ui-icon-chevron-size-300);
-			margin-block-end: var(
-				--spectrum-alias-pickerbutton-icon-margin-y-l
-			);
-			margin-block-start: var(
-				--spectrum-alias-pickerbutton-icon-margin-y-l
-			);
+			margin-block-end: var(--spectrum-alias-pickerbutton-icon-margin-y-l);
+			margin-block-start: var(--spectrum-alias-pickerbutton-icon-margin-y-l);
 		}
 	}
 
@@ -226,9 +190,7 @@ governing permissions and limitations under the License.
 
 		.spectrum-PickerButton-label {
 			font-size: var(--spectrum-global-dimension-font-size-300);
-			padding-block-end: var(
-				--spectrum-alias-pickerbutton-label-padding-y-xl
-			);
+			padding-block-end: var(--spectrum-alias-pickerbutton-label-padding-y-xl);
 			padding-block-start: var(
 				--spectrum-alias-pickerbutton-label-padding-y-xl
 			);
@@ -241,12 +203,8 @@ governing permissions and limitations under the License.
 			);
 			block-size: var(--spectrum-global-dimension-size-275);
 			inline-size: var(--spectrum-global-dimension-size-275);
-			margin-block-end: var(
-				--spectrum-alias-infieldbutton-icon-margin-y-xl
-			);
-			margin-block-start: var(
-				--spectrum-alias-infieldbutton-icon-margin-y-xl
-			);
+			margin-block-end: var(--spectrum-alias-infieldbutton-icon-margin-y-xl);
+			margin-block-start: var(--spectrum-alias-infieldbutton-icon-margin-y-xl);
 		}
 
 		.spectrum-PickerButton-UIIcon {
@@ -255,12 +213,8 @@ governing permissions and limitations under the License.
 			);
 			block-size: var(--spectrum-alias-ui-icon-chevron-size-400);
 			inline-size: var(--spectrum-alias-ui-icon-chevron-size-400);
-			margin-block-end: var(
-				--spectrum-alias-pickerbutton-icon-margin-y-xl
-			);
-			margin-block-start: var(
-				--spectrum-alias-pickerbutton-icon-margin-y-xl
-			);
+			margin-block-end: var(--spectrum-alias-pickerbutton-icon-margin-y-xl);
+			margin-block-start: var(--spectrum-alias-pickerbutton-icon-margin-y-xl);
 		}
 	}
 
@@ -309,24 +263,18 @@ governing permissions and limitations under the License.
 	&.is-invalid {
 		&:not(:disabled) {
 			.spectrum-PickerButton-fill {
-				border-color: var(
-					--spectrum-alias-input-border-color-invalid-default
-				);
+				border-color: var(--spectrum-alias-input-border-color-invalid-default);
 			}
 
 			&:hover {
 				.spectrum-PickerButton-fill {
-					border-color: var(
-						--spectrum-alias-input-border-color-invalid-hover
-					);
+					border-color: var(--spectrum-alias-input-border-color-invalid-hover);
 				}
 			}
 
 			&:active {
 				.spectrum-PickerButton-fill {
-					border-color: var(
-						--spectrum-alias-input-border-color-invalid-down
-					);
+					border-color: var(--spectrum-alias-input-border-color-invalid-down);
 				}
 			}
 
@@ -486,9 +434,7 @@ governing permissions and limitations under the License.
 
 	&:not(.spectrum-PickerButton--rounded) {
 		.spectrum-PickerButton-fill {
-			border-end-end-radius: var(
-				--spectrum-alias-infieldbutton-border-radius
-			);
+			border-end-end-radius: var(--spectrum-alias-infieldbutton-border-radius);
 			border-end-start-radius: var(
 				--spectrum-alias-infieldbutton-border-radius
 			);
@@ -521,9 +467,7 @@ governing permissions and limitations under the License.
 	&.spectrum-PickerButton--uiicononly {
 		.spectrum-PickerButton-fill {
 			padding-inline-end: var(--spectrum-PickerButton-icononly-padding-x);
-			padding-inline-start: var(
-				--spectrum-PickerButton-icononly-padding-x
-			);
+			padding-inline-start: var(--spectrum-PickerButton-icononly-padding-x);
 			inline-size: var(--spectrum-PickerButton-Fill-size);
 		}
 
@@ -782,9 +726,7 @@ governing permissions and limitations under the License.
 
 	&.is-open {
 		.spectrum-PickerButton-fill {
-			background-color: var(
-				--spectrum-alias-component-background-color-down
-			);
+			background-color: var(--spectrum-alias-component-background-color-down);
 		}
 
 		.spectrum-PickerButton-label {
@@ -878,24 +820,18 @@ governing permissions and limitations under the License.
 		&:not(:disabled) {
 			&:not(.is-open) {
 				.spectrum-PickerButton-label {
-					color: var(
-						--spectrum-alias-component-text-color-error-default
-					);
+					color: var(--spectrum-alias-component-text-color-error-default);
 				}
 
 				&:hover {
 					.spectrum-PickerButton-label {
-						color: var(
-							--spectrum-alias-component-text-color-error-hover
-						);
+						color: var(--spectrum-alias-component-text-color-error-hover);
 					}
 				}
 
 				&:active {
 					.spectrum-PickerButton-label {
-						color: var(
-							--spectrum-alias-component-text-color-error-down
-						);
+						color: var(--spectrum-alias-component-text-color-error-down);
 					}
 				}
 			}

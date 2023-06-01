@@ -70,8 +70,7 @@ async function main(
 		/* Validate expected license */
 		if (!license || license !== rootPkg.license) {
 			packageJSON.license = rootPkg.license;
-			if (verbose)
-				report.push(`    Adding license=${packageJSON.license}`);
+			if (verbose) report.push(`    Adding license=${packageJSON.license}`);
 			updated = true;
 		}
 
@@ -117,8 +116,7 @@ async function main(
 		/* Validate homepage */
 		if (!homepage) {
 			packageJSON.homepage = expectedHomepage(name.split("/").pop());
-			if (verbose)
-				report.push(`    Adding homepage=${packageJSON.homepage}`);
+			if (verbose) report.push(`    Adding homepage=${packageJSON.homepage}`);
 			updated = true;
 		}
 
@@ -126,9 +124,7 @@ async function main(
 		if (!bugs || !bugs.url || bugs.url !== rootPkg.bugs?.url) {
 			packageJSON.bugs = rootPkg.bugs;
 			if (verbose)
-				report.push(
-					`    Adding bugs.url=${JSON.stringify(packageJSON.bugs)}`
-				);
+				report.push(`    Adding bugs.url=${JSON.stringify(packageJSON.bugs)}`);
 			updated = true;
 		}
 
@@ -199,12 +195,7 @@ async function checkPeerDependencies(
 			}
 
 			const newPeerDepVer = semver.coerce(
-				"^" +
-					devDepVer
-						.toString()
-						?.replace(/-\d+$/, "")
-						?.split(".")
-						?.shift()
+				"^" + devDepVer.toString()?.replace(/-\d+$/, "")?.split(".")?.shift()
 			);
 			peerDependencies[dependency] = `>=${newPeerDepVer.toString()}`;
 			updated = true;

@@ -229,9 +229,7 @@ Search.prototype.handlePopoverNavigation = function (e) {
 				currentItemIndex + 1 < items.length ? currentItemIndex + 1 : 0;
 		} else if (e.key === "ArrowUp") {
 			newItemIndex =
-				currentItemIndex - 1 >= 0
-					? currentItemIndex - 1
-					: items.length - 1;
+				currentItemIndex - 1 >= 0 ? currentItemIndex - 1 : items.length - 1;
 		} else if (e.key === "Home") {
 			newItemIndex = 0;
 		} else if (e.key === "End") {
@@ -333,19 +331,19 @@ Search.prototype.search = function (val) {
 			  }</span>
           <ul class="spectrum-Menu" role="presentation">
             ${results[category]
-				.map(function (result, i) {
-					return `
+							.map(function (result, i) {
+								return `
                 <a class="spectrum-Menu-item js-fastLoad" href="${result.href}" role="option">
                   <span class="spectrum-Menu-itemLabel">${result.name}</span>
                 </a>
                 `;
-				})
-				.join("\n")}
+							})
+							.join("\n")}
           </ul>
         </li>
         `
 			: "";
-  }).join("\n")}
+	}).join("\n")}
 `;
 		this.searchResults.innerHTML = markup;
 	} else {

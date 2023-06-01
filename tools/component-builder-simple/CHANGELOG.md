@@ -11,7 +11,7 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 ### 🐛 Bug fixes
 
--   **component-builder-simple:** correct processor function inputs ([2522ddb](https://github.com/adobe/spectrum-css/commit/2522ddb))
+- **component-builder-simple:** correct processor function inputs ([2522ddb](https://github.com/adobe/spectrum-css/commit/2522ddb))
 
 <a name="2.0.12"></a>
 
@@ -85,7 +85,7 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 ### 🐛 Bug fixes
 
--   correct RTL issues with SideNav and ActionButton ([#1611](https://github.com/adobe/spectrum-css/issues/1611)) ([54f7093](https://github.com/adobe/spectrum-css/commit/54f7093))
+- correct RTL issues with SideNav and ActionButton ([#1611](https://github.com/adobe/spectrum-css/issues/1611)) ([54f7093](https://github.com/adobe/spectrum-css/commit/54f7093))
 
 <a name="2.0.3"></a>
 
@@ -117,11 +117,11 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 🗓 2022-10-13 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/component-builder-simple@1.0.0...@spectrum-css/component-builder-simple@2.0.0)
 
--   chore!: use latest CSS tokens dependency ([ce0a646](https://github.com/adobe/spectrum-css/commit/ce0a646))
+- chore!: use latest CSS tokens dependency ([ce0a646](https://github.com/adobe/spectrum-css/commit/ce0a646))
 
 ### 🛑 BREAKING CHANGES
 
--   moves tokens dependency ahead by two major versions
+- moves tokens dependency ahead by two major versions
 
 <a name="1.0.0"></a>
 
@@ -131,19 +131,19 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 ### ✨ Features
 
--   add simple component builder ([535126b](https://github.com/adobe/spectrum-css/commit/535126b))
--   check that all defined tokens are used ([b1471d9](https://github.com/adobe/spectrum-css/commit/b1471d9))
--   define --system for completeness, don't ignore usage in builder ([cae6252](https://github.com/adobe/spectrum-css/commit/cae6252))
--   drop even more unused plugins ([1dd03fb](https://github.com/adobe/spectrum-css/commit/1dd03fb))
--   drop support for IE in AutoPrefixer config, remove useless plugin ([7404880](https://github.com/adobe/spectrum-css/commit/7404880))
--   first crack at splitinator ([206f543](https://github.com/adobe/spectrum-css/commit/206f543))
--   remove logical fallbacks from simple builder ([382e196](https://github.com/adobe/spectrum-css/commit/382e196))
--   split things out, combine things ([3a817bc](https://github.com/adobe/spectrum-css/commit/3a817bc))
+- add simple component builder ([535126b](https://github.com/adobe/spectrum-css/commit/535126b))
+- check that all defined tokens are used ([b1471d9](https://github.com/adobe/spectrum-css/commit/b1471d9))
+- define --system for completeness, don't ignore usage in builder ([cae6252](https://github.com/adobe/spectrum-css/commit/cae6252))
+- drop even more unused plugins ([1dd03fb](https://github.com/adobe/spectrum-css/commit/1dd03fb))
+- drop support for IE in AutoPrefixer config, remove useless plugin ([7404880](https://github.com/adobe/spectrum-css/commit/7404880))
+- first crack at splitinator ([206f543](https://github.com/adobe/spectrum-css/commit/206f543))
+- remove logical fallbacks from simple builder ([382e196](https://github.com/adobe/spectrum-css/commit/382e196))
+- split things out, combine things ([3a817bc](https://github.com/adobe/spectrum-css/commit/3a817bc))
 
 ### 🐛 Bug fixes
 
--   correct check if all defined variables are used ([57467aa](https://github.com/adobe/spectrum-css/commit/57467aa))
--   correct order of compliation, don't complain about --system ([27fc9a4](https://github.com/adobe/spectrum-css/commit/27fc9a4))
--   name things right ([9fc6477](https://github.com/adobe/spectrum-css/commit/9fc6477))
--   set path correct when concating things ([1a36f68](https://github.com/adobe/spectrum-css/commit/1a36f68))
--   tweaks after merging in component-builder-simple ([ec8345a](https://github.com/adobe/spectrum-css/commit/ec8345a))
+- correct check if all defined variables are used ([57467aa](https://github.com/adobe/spectrum-css/commit/57467aa))
+- correct order of compliation, don't complain about --system ([27fc9a4](https://github.com/adobe/spectrum-css/commit/27fc9a4))
+- name things right ([9fc6477](https://github.com/adobe/spectrum-css/commit/9fc6477))
+- set path correct when concating things ([1a36f68](https://github.com/adobe/spectrum-css/commit/1a36f68))
+- tweaks after merging in component-builder-simple ([ec8345a](https://github.com/adobe/spectrum-css/commit/ec8345a))

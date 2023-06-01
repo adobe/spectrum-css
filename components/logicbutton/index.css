@@ -42,9 +42,7 @@ governing permissions and limitations under the License.
 	&.is-focused {
 		&:after {
 			box-shadow: 0 0 0
-				var(
-					--spectrum-button-m-primary-outline-texticon-focus-ring-size
-				)
+				var(--spectrum-button-m-primary-outline-texticon-focus-ring-size)
 				var(
 					--spectrum-button-m-primary-outline-texticon-focus-ring-color-key-focus
 				);
@@ -58,18 +56,14 @@ governing permissions and limitations under the License.
 	color: var(--spectrum-logicbutton-and-text-color);
 
 	&:hover {
-		background-color: var(
-			--spectrum-logicbutton-and-background-color-hover
-		);
+		background-color: var(--spectrum-logicbutton-and-background-color-hover);
 		border-color: var(--spectrum-logicbutton-and-border-color-hover);
 		color: var(--spectrum-logicbutton-and-text-color);
 	}
 
 	&:disabled,
 	&.is-disabled {
-		background-color: var(
-			--spectrum-logicbutton-and-background-color-disabled
-		);
+		background-color: var(--spectrum-logicbutton-and-background-color-disabled);
 		border-color: var(--spectrum-logicbutton-and-border-color-disabled);
 		color: var(--spectrum-logicbutton-and-text-color-disabled);
 	}

@@ -393,13 +393,13 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 🗓 2022-10-03 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/buttongroup@5.0.13...@spectrum-css/buttongroup@6.0.0)
 
--   refactor(buttongroup)!: migrate to core tokens (#1514) ([66b3826](https://github.com/adobe/spectrum-css/commit/66b3826)), closes [#1514](https://github.com/adobe/spectrum-css/issues/1514)
+- refactor(buttongroup)!: migrate to core tokens (#1514) ([66b3826](https://github.com/adobe/spectrum-css/commit/66b3826)), closes [#1514](https://github.com/adobe/spectrum-css/issues/1514)
 
 ### 🛑 BREAKING CHANGES
 
--   migrates ButtonGroup to core tokens
+- migrates ButtonGroup to core tokens
 
--   feat: add variants for t-shirt sizes
+- feat: add variants for t-shirt sizes
 
 <a name="5.0.13"></a>
 
@@ -513,15 +513,15 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 ### 🐛 Bug fixes
 
--   update peer dependencies ([97810cf](https://github.com/adobe/spectrum-css/commit/97810cf))
+- update peer dependencies ([97810cf](https://github.com/adobe/spectrum-css/commit/97810cf))
 
 ### 📚 Documentation
 
--   use new Button markup ([886b2cb](https://github.com/adobe/spectrum-css/commit/886b2cb))
+- use new Button markup ([886b2cb](https://github.com/adobe/spectrum-css/commit/886b2cb))
 
 ### 🛑 BREAKING CHANGES
 
--   Button markup has changed
+- Button markup has changed
 
 <a name="4.0.0"></a>
 
@@ -539,11 +539,11 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 ### 📚 Documentation
 
--   use new Button markup ([629bf05](https://github.com/adobe/spectrum-css/commit/629bf05))
+- use new Button markup ([629bf05](https://github.com/adobe/spectrum-css/commit/629bf05))
 
 ### 🛑 BREAKING CHANGES
 
--   Button markup has changed
+- Button markup has changed
 
 <a name="3.0.10"></a>
 
@@ -601,7 +601,7 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 ### 🐛 Bug fixes
 
--   updating version number on vars ([f535b49](https://github.com/adobe/spectrum-css/commit/f535b49))
+- updating version number on vars ([f535b49](https://github.com/adobe/spectrum-css/commit/f535b49))
 
 <a name="3.0.3-alpha.3"></a>
 
@@ -667,12 +667,12 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 ### 🐛 Bug fixes
 
--   update main, resolved conflicts ([d7880a2](https://github.com/adobe/spectrum-css/commit/d7880a2))
--   use new Button markup ([502a1b0](https://github.com/adobe/spectrum-css/commit/502a1b0))
+- update main, resolved conflicts ([d7880a2](https://github.com/adobe/spectrum-css/commit/d7880a2))
+- use new Button markup ([502a1b0](https://github.com/adobe/spectrum-css/commit/502a1b0))
 
 ### 🛑 BREAKING CHANGES
 
--   markup has changed and now requires new Button markup (.spectrum-Button--sizeM)
+- markup has changed and now requires new Button markup (.spectrum-Button--sizeM)
 
 <a name="3.0.0-beta.5"></a>
 
@@ -704,23 +704,23 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 🗓 2020-05-14 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/buttongroup@3.0.0-beta.1...@spectrum-css/buttongroup@3.0.0-beta.2)
 
--   Button Breaking Changes (#649) ([abf116b](https://github.com/adobe/spectrum-css/commit/abf116b)), closes [#649](https://github.com/adobe/spectrum-css/issues/649) [#519](https://github.com/adobe/spectrum-css/issues/519) [#620](https://github.com/adobe/spectrum-css/issues/620) [#606](https://github.com/adobe/spectrum-css/issues/606)
+- Button Breaking Changes (#649) ([abf116b](https://github.com/adobe/spectrum-css/commit/abf116b)), closes [#649](https://github.com/adobe/spectrum-css/issues/649) [#519](https://github.com/adobe/spectrum-css/issues/519) [#620](https://github.com/adobe/spectrum-css/issues/620) [#606](https://github.com/adobe/spectrum-css/issues/606)
 
 ### 🛑 BREAKING CHANGES
 
--   Tool button has been removed
+- Tool button has been removed
 
--   fix: interaction on mobile, text select
+- fix: interaction on mobile, text select
 
--   feat: add Emphasized Action Button
+- feat: add Emphasized Action Button
 
--   docs: add exampes for Quiet Emphasized Action Button
+- docs: add exampes for Quiet Emphasized Action Button
 
 fix: correct Quiet Emphasized Action Button
 
--   feat: button group
--   Button group no longer supports Action Button, just normal buttons
--   Margins have been removed from adjacent buttons. Use ButtonGroup instead.
+- feat: button group
+- Button group no longer supports Action Button, just normal buttons
+- Margins have been removed from adjacent buttons. Use ButtonGroup instead.
 
 <a name="3.0.0-beta.1"></a>
 
@@ -738,7 +738,7 @@ fix: correct Quiet Emphasized Action Button
 
 ### ✨ Features
 
--   make ButtonGroup support RTL ([eeb2d4e](https://github.com/adobe/spectrum-css/commit/eeb2d4e))
+- make ButtonGroup support RTL ([eeb2d4e](https://github.com/adobe/spectrum-css/commit/eeb2d4e))
 
 <a name="2.2.1"></a>
 
@@ -756,7 +756,7 @@ fix: correct Quiet Emphasized Action Button
 
 ### ✨ Features
 
--   adding t-shirt sized typography, fixes [#210](https://github.com/adobe/spectrum-css/issues/210), closes [#416](https://github.com/adobe/spectrum-css/issues/416) ([#408](https://github.com/adobe/spectrum-css/issues/408)) ([3921bcb](https://github.com/adobe/spectrum-css/commit/3921bcb)), closes [#523](https://github.com/adobe/spectrum-css/issues/523)
+- adding t-shirt sized typography, fixes [#210](https://github.com/adobe/spectrum-css/issues/210), closes [#416](https://github.com/adobe/spectrum-css/issues/416) ([#408](https://github.com/adobe/spectrum-css/issues/408)) ([3921bcb](https://github.com/adobe/spectrum-css/commit/3921bcb)), closes [#523](https://github.com/adobe/spectrum-css/issues/523)
 
 <a name="2.1.0"></a>
 
@@ -766,7 +766,7 @@ fix: correct Quiet Emphasized Action Button
 
 ### ✨ Features
 
--   support vertical Rules inside of ButtonGroup, related to [#455](https://github.com/adobe/spectrum-css/issues/455) ([ea7b85f](https://github.com/adobe/spectrum-css/commit/ea7b85f))
+- support vertical Rules inside of ButtonGroup, related to [#455](https://github.com/adobe/spectrum-css/issues/455) ([ea7b85f](https://github.com/adobe/spectrum-css/commit/ea7b85f))
 
 <a name="2.0.3"></a>
 
@@ -800,4 +800,4 @@ fix: correct Quiet Emphasized Action Button
 
 ### ✨ Features
 
--   move to individually versioned packages with Lerna ([#265](https://github.com/adobe/spectrum-css/issues/265)) ([cb7fd4b](https://github.com/adobe/spectrum-css/commit/cb7fd4b)), closes [#231](https://github.com/adobe/spectrum-css/issues/231) [#214](https://github.com/adobe/spectrum-css/issues/214) [#229](https://github.com/adobe/spectrum-css/issues/229) [#240](https://github.com/adobe/spectrum-css/issues/240) [#239](https://github.com/adobe/spectrum-css/issues/239) [#161](https://github.com/adobe/spectrum-css/issues/161) [#242](https://github.com/adobe/spectrum-css/issues/242) [#246](https://github.com/adobe/spectrum-css/issues/246) [#219](https://github.com/adobe/spectrum-css/issues/219) [#235](https://github.com/adobe/spectrum-css/issues/235) [#189](https://github.com/adobe/spectrum-css/issues/189) [#248](https://github.com/adobe/spectrum-css/issues/248) [#232](https://github.com/adobe/spectrum-css/issues/232) [#248](https://github.com/adobe/spectrum-css/issues/248) [#218](https://github.com/adobe/spectrum-css/issues/218) [#237](https://github.com/adobe/spectrum-css/issues/237) [#255](https://github.com/adobe/spectrum-css/issues/255) [#256](https://github.com/adobe/spectrum-css/issues/256) [#258](https://github.com/adobe/spectrum-css/issues/258) [#257](https://github.com/adobe/spectrum-css/issues/257) [#259](https://github.com/adobe/spectrum-css/issues/259)
+- move to individually versioned packages with Lerna ([#265](https://github.com/adobe/spectrum-css/issues/265)) ([cb7fd4b](https://github.com/adobe/spectrum-css/commit/cb7fd4b)), closes [#231](https://github.com/adobe/spectrum-css/issues/231) [#214](https://github.com/adobe/spectrum-css/issues/214) [#229](https://github.com/adobe/spectrum-css/issues/229) [#240](https://github.com/adobe/spectrum-css/issues/240) [#239](https://github.com/adobe/spectrum-css/issues/239) [#161](https://github.com/adobe/spectrum-css/issues/161) [#242](https://github.com/adobe/spectrum-css/issues/242) [#246](https://github.com/adobe/spectrum-css/issues/246) [#219](https://github.com/adobe/spectrum-css/issues/219) [#235](https://github.com/adobe/spectrum-css/issues/235) [#189](https://github.com/adobe/spectrum-css/issues/189) [#248](https://github.com/adobe/spectrum-css/issues/248) [#232](https://github.com/adobe/spectrum-css/issues/232) [#248](https://github.com/adobe/spectrum-css/issues/248) [#218](https://github.com/adobe/spectrum-css/issues/218) [#237](https://github.com/adobe/spectrum-css/issues/237) [#255](https://github.com/adobe/spectrum-css/issues/255) [#256](https://github.com/adobe/spectrum-css/issues/256) [#258](https://github.com/adobe/spectrum-css/issues/258) [#257](https://github.com/adobe/spectrum-css/issues/257) [#259](https://github.com/adobe/spectrum-css/issues/259)

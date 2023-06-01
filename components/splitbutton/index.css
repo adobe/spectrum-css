@@ -122,9 +122,7 @@ governing permissions and limitations under the License.
 	}
 
 	&:after {
-		border-start-start-radius: var(
-			--spectrum-splitbutton-border-radius-edge
-		);
+		border-start-start-radius: var(--spectrum-splitbutton-border-radius-edge);
 		border-end-start-radius: var(--spectrum-splitbutton-border-radius-edge);
 	}
 }
@@ -168,27 +166,21 @@ governing permissions and limitations under the License.
 
 		/* CTA is special and doesn't have a border between the buttons */
 		&.spectrum-Button--accent {
-			padding-inline-start: var(
-				--spectrum-splitbutton-cta-flat-edge-padding
-			);
+			padding-inline-start: var(--spectrum-splitbutton-cta-flat-edge-padding);
 			margin-inline-start: var(
 				--spectrum-button-m-primary-outline-texticon-border-size
 			);
 		}
 
 		&:after {
-			border-start-start-radius: var(
-				--spectrum-splitbutton-border-radius-edge
-			);
+			border-start-start-radius: var(--spectrum-splitbutton-border-radius-edge);
 			border-start-end-radius: var(
 				--spectrum-button-m-primary-outline-texticon-border-radius
 			);
 			border-end-end-radius: var(
 				--spectrum-button-m-primary-outline-texticon-border-radius
 			);
-			border-end-start-radius: var(
-				--spectrum-splitbutton-border-radius-edge
-			);
+			border-end-start-radius: var(--spectrum-splitbutton-border-radius-edge);
 		}
 	}
 
@@ -207,13 +199,9 @@ governing permissions and limitations under the License.
 		border-inline-start-width: var(
 			--spectrum-button-m-primary-outline-texticon-border-size
 		);
-		border-inline-end-width: var(
-			--spectrum-splitbutton-trigger-border-left
-		);
+		border-inline-end-width: var(--spectrum-splitbutton-trigger-border-left);
 
-		padding-inline-end: var(
-			--spectrum-splitbutton-trigger-flat-edge-padding
-		);
+		padding-inline-end: var(--spectrum-splitbutton-trigger-flat-edge-padding);
 		padding-inline-start: var(
 			--spectrum-splitbutton-trigger-round-edge-padding
 		);
@@ -232,12 +220,8 @@ governing permissions and limitations under the License.
 			border-start-start-radius: var(
 				--spectrum-button-m-primary-outline-texticon-border-radius
 			);
-			border-start-end-radius: var(
-				--spectrum-splitbutton-border-radius-edge
-			);
-			border-end-end-radius: var(
-				--spectrum-splitbutton-border-radius-edge
-			);
+			border-start-end-radius: var(--spectrum-splitbutton-border-radius-edge);
+			border-end-end-radius: var(--spectrum-splitbutton-border-radius-edge);
 			border-end-start-radius: var(
 				--spectrum-button-m-primary-outline-texticon-border-radius
 			);

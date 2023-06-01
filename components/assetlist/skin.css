@@ -12,9 +12,7 @@ governing permissions and limitations under the License.
 
 .spectrum-AssetList-item {
 	&:hover {
-		background-color: var(
-			--spectrum-millercolumn-item-background-color-hover
-		);
+		background-color: var(--spectrum-millercolumn-item-background-color-hover);
 	}
 
 	&:focus {
@@ -25,22 +23,18 @@ governing permissions and limitations under the License.
 			);
 			&::before {
 				/* we cannot achieve rounded corners with outline so we use box-shadow instead */
-				box-shadow: 0px 0px 0px 2px
-					var(--spectrum-alias-border-color-key-focus) inset;
+				box-shadow: 0px 0px 0px 2px var(--spectrum-alias-border-color-key-focus)
+					inset;
 			}
 		}
 	}
 
 	&.is-navigated {
 		/* gray background */
-		background-color: var(
-			--spectrum-millercolumn-item-background-color-down
-		);
+		background-color: var(--spectrum-millercolumn-item-background-color-down);
 		&:hover,
 		&:focus {
-			background-color: var(
-				--spectrum-millercolumn-item-background-color-down
-			);
+			background-color: var(--spectrum-millercolumn-item-background-color-down);
 		}
 	}
 

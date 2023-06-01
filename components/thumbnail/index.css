@@ -30,19 +30,13 @@ governing permissions and limitations under the License.
 	);
 	--spectrum-thumbnail-layer-border-color-outer: var(--spectrum-gray-500);
 
-	--spectrum-thumbnail-border-width-selected: var(
-		--spectrum-border-width-200
-	);
-	--spectrum-thumbnail-border-color-selected: var(
-		--spectrum-accent-color-800
-	);
+	--spectrum-thumbnail-border-width-selected: var(--spectrum-border-width-200);
+	--spectrum-thumbnail-border-color-selected: var(--spectrum-accent-color-800);
 
 	--spectrum-thumbnail-focus-indicator-thickness: var(
 		--spectrum-focus-indicator-thickness
 	);
-	--spectrum-thumbnail-focus-indicator-gap: var(
-		--spectrum-focus-indicator-gap
-	);
+	--spectrum-thumbnail-focus-indicator-gap: var(--spectrum-focus-indicator-gap);
 	--spectrum-thumbnail-focus-indicator-color: var(
 		--spectrum-focus-indicator-color
 	);
@@ -160,10 +154,7 @@ governing permissions and limitations under the License.
 			var(--spectrum-thumbnail-border-radius)
 		);
 		box-shadow: inset 0 0 0
-			var(
-				--mod-thumbnail-border-width,
-				var(--spectrum-thumbnail-border-width)
-			)
+			var(--mod-thumbnail-border-width, var(--spectrum-thumbnail-border-width))
 			var(
 				--highcontrast-thumbnail-border-color,
 				var(
@@ -210,9 +201,7 @@ governing permissions and limitations under the License.
 							) +
 							var(
 								--mod-thumbnail-focus-indicator-thickness,
-								var(
-									--spectrum-thumbnail-focus-indicator-thickness
-								)
+								var(--spectrum-thumbnail-focus-indicator-thickness)
 							)
 					) * -1
 			);
@@ -224,9 +213,7 @@ governing permissions and limitations under the License.
 							) +
 							var(
 								--mod-thumbnail-focus-indicator-thickness,
-								var(
-									--spectrum-thumbnail-focus-indicator-thickness
-								)
+								var(--spectrum-thumbnail-focus-indicator-thickness)
 							)
 					) * -1
 			);
@@ -238,9 +225,7 @@ governing permissions and limitations under the License.
 							) +
 							var(
 								--mod-thumbnail-focus-indicator-thickness,
-								var(
-									--spectrum-thumbnail-focus-indicator-thickness
-								)
+								var(--spectrum-thumbnail-focus-indicator-thickness)
 							)
 					) * -1
 			);
@@ -252,9 +237,7 @@ governing permissions and limitations under the License.
 							) +
 							var(
 								--mod-thumbnail-focus-indicator-thickness,
-								var(
-									--spectrum-thumbnail-focus-indicator-thickness
-								)
+								var(--spectrum-thumbnail-focus-indicator-thickness)
 							)
 					) * -1
 			);

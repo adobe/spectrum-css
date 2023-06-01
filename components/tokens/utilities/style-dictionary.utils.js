@@ -104,9 +104,7 @@ module.exports = function ({ setName, subSystemName } = {}) {
 
 	return {
 		...baseConfig,
-		destination: `${
-			subSystemName ? `${subSystemName}/` : ""
-		}${scope}-vars.css`,
+		destination: `${subSystemName ? `${subSystemName}/` : ""}${scope}-vars.css`,
 		filter,
 		options: {
 			...baseConfig.options,

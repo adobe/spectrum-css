@@ -19,15 +19,9 @@ governing permissions and limitations under the License.
 		--spectrum-tag-border-color-focus: var(--spectrum-gray-800);
 
 		/* corner border radius */
-		--spectrum-tag-size-small-corner-radius: var(
-			--spectrum-corner-radius-100
-		);
-		--spectrum-tag-size-medium-corner-radius: var(
-			--spectrum-corner-radius-100
-		);
-		--spectrum-tag-size-large-corner-radius: var(
-			--spectrum-corner-radius-100
-		);
+		--spectrum-tag-size-small-corner-radius: var(--spectrum-corner-radius-100);
+		--spectrum-tag-size-medium-corner-radius: var(--spectrum-corner-radius-100);
+		--spectrum-tag-size-large-corner-radius: var(--spectrum-corner-radius-100);
 
 		/* background */
 		--spectrum-tag-background-color: var(--spectrum-gray-75);

@@ -19,9 +19,7 @@ governing permissions and limitations under the License.
 	--spectrum-slider-handle-border-width-down: var(
 		--spectrum-slider-handle-border-width-down-medium
 	);
-	--spectrum-slider-label-top-to-text: var(
-		--spectrum-component-top-to-text-75
-	);
+	--spectrum-slider-label-top-to-text: var(--spectrum-component-top-to-text-75);
 	--spectrum-slider-control-to-field-label: var(
 		--spectrum-slider-control-to-field-label-medium
 	);
@@ -35,9 +33,7 @@ governing permissions and limitations under the License.
 	--spectrum-slider-handle-border-width-down: var(
 		--spectrum-slider-handle-border-width-down-small
 	);
-	--spectrum-slider-label-top-to-text: var(
-		--spectrum-component-top-to-text-75
-	);
+	--spectrum-slider-label-top-to-text: var(--spectrum-component-top-to-text-75);
 	--spectrum-slider-control-to-field-label: var(
 		--spectrum-slider-control-to-field-label-small
 	);
@@ -63,9 +59,7 @@ governing permissions and limitations under the License.
 
 .spectrum-Slider--sizeXL {
 	--spectrum-slider-font-size: var(--spectrum-font-size-200);
-	--spectrum-slider-handle-size: var(
-		--spectrum-slider-handle-size-extra-large
-	);
+	--spectrum-slider-handle-size: var(--spectrum-slider-handle-size-extra-large);
 	--spectrum-slider-control-height: var(--spectrum-component-height-300);
 	--spectrum-slider-handle-border-radius: calc(
 		var(--spectrum-corner-radius-200) * 4
@@ -148,10 +142,7 @@ governing permissions and limitations under the License.
 	/* Don't let z-index'd child elements float above other things on the page */
 	z-index: 1;
 	display: block;
-	min-inline-size: var(
-		--mod-slider-min-size,
-		var(--spectrum-slider-min-size)
-	);
+	min-inline-size: var(--mod-slider-min-size, var(--spectrum-slider-min-size));
 
 	user-select: none;
 }
@@ -186,9 +177,7 @@ governing permissions and limitations under the License.
 }
 
 .spectrum-Slider-labelContainer + .spectrum-Slider-controls {
-	margin-block-start: calc(
-		-1 * var(--spectrum-slider-control-to-field-label)
-	);
+	margin-block-start: calc(-1 * var(--spectrum-slider-control-to-field-label));
 }
 
 /* TODO: Sliders with ticks + tick mark labels require more margin-block-end.
@@ -212,8 +201,7 @@ governing permissions and limitations under the License.
 	position: absolute;
 	z-index: 1;
 	inset-block-start: calc(
-		var(--mod-slider-control-height, var(--spectrum-slider-control-height)) /
-			2 -
+		var(--mod-slider-control-height, var(--spectrum-slider-control-height)) / 2 -
 			var(
 				--mod-slider-track-fill-thickness,
 				var(--spectrum-slider-track-fill-thickness)
@@ -320,10 +308,7 @@ governing permissions and limitations under the License.
 	margin-inline-start: 0;
 	padding-block: 0;
 	padding-inline-start: calc(
-		var(
-				--mod-slider-controls-margin,
-				var(--spectrum-slider-controls-margin)
-			) +
+		var(--mod-slider-controls-margin, var(--spectrum-slider-controls-margin)) +
 			var(--spectrum-slider-handle-gap, var(--spectrum-slider-handle-gap))
 	);
 	padding-inline-end: 0;
@@ -333,10 +318,7 @@ governing permissions and limitations under the License.
 	padding-block: 0;
 	padding-inline-start: 0;
 	padding-inline-end: calc(
-		var(
-				--mod-slider-controls-margin,
-				var(--spectrum-slider-controls-margin)
-			) +
+		var(--mod-slider-controls-margin, var(--spectrum-slider-controls-margin)) +
 			var(--spectrum-slider-handle-gap, var(--spectrum-slider-handle-gap))
 	);
 }
@@ -444,21 +426,15 @@ governing permissions and limitations under the License.
 		--mod-slider-handle-size,
 		var(--spectrum-slider-handle-size)
 	);
-	block-size: var(
-		--mod-slider-handle-size,
-		var(--spectrum-slider-handle-size)
-	);
+	block-size: var(--mod-slider-handle-size, var(--spectrum-slider-handle-size));
 
 	inset-block-start: calc(
-		var(--mod-slider-control-height, var(--spectrum-slider-control-height)) /
-			2 -
-			var(--mod-slider-handle-size, var(--spectrum-slider-handle-size)) /
-			2
+		var(--mod-slider-control-height, var(--spectrum-slider-control-height)) / 2 -
+			var(--mod-slider-handle-size, var(--spectrum-slider-handle-size)) / 2
 	);
 	margin-block: 0;
 	margin-inline: calc(
-			var(--mod-slider-handle-size, var(--spectrum-slider-handle-size)) /
-				-2
+			var(--mod-slider-handle-size, var(--spectrum-slider-handle-size)) / -2
 		)
 		0;
 	border-width: var(
@@ -473,10 +449,7 @@ governing permissions and limitations under the License.
 	);
 
 	transition: border-width
-		var(
-			--mod-animation-duration-100,
-			var(--spectrum-animation-duration-100)
-		)
+		var(--mod-animation-duration-100, var(--spectrum-animation-duration-100))
 		ease-in-out;
 
 	outline: none;
@@ -540,24 +513,14 @@ governing permissions and limitations under the License.
 	&.is-focused {
 		&:before {
 			inline-size: calc(
-				var(
-						--mod-slider-handle-size,
-						var(--spectrum-slider-handle-size)
-					) +
-					var(
-						--mod-focus-indicator-gap,
-						var(--spectrum-focus-indicator-gap)
-					) * 2
+				var(--mod-slider-handle-size, var(--spectrum-slider-handle-size)) +
+					var(--mod-focus-indicator-gap, var(--spectrum-focus-indicator-gap)) *
+					2
 			);
 			block-size: calc(
-				var(
-						--mod-slider-handle-size,
-						var(--spectrum-slider-handle-size)
-					) +
-					var(
-						--mod-focus-indicator-gap,
-						var(--spectrum-focus-indicator-gap)
-					) * 2
+				var(--mod-slider-handle-size, var(--spectrum-slider-handle-size)) +
+					var(--mod-focus-indicator-gap, var(--spectrum-focus-indicator-gap)) *
+					2
 			);
 		}
 	}
@@ -571,10 +534,7 @@ governing permissions and limitations under the License.
 		--mod-slider-handle-size,
 		var(--spectrum-slider-handle-size)
 	);
-	block-size: var(
-		--mod-slider-handle-size,
-		var(--spectrum-slider-handle-size)
-	);
+	block-size: var(--mod-slider-handle-size, var(--spectrum-slider-handle-size));
 	padding: 0;
 	position: absolute;
 
@@ -712,8 +672,7 @@ governing permissions and limitations under the License.
 
 	/* tick marks are centered half based on slider control height and tick height  */
 	inset-block-start: calc(
-		var(--mod-slider-track-thickness, var(--spectrum-slider-control-height)) /
-			2 -
+		var(--mod-slider-track-thickness, var(--spectrum-slider-control-height)) / 2 -
 			var(
 				--mod-slider-tick-mark-height,
 				var(--spectrum-slider-tick-mark-height)
@@ -755,10 +714,7 @@ governing permissions and limitations under the License.
 		justify-content: center;
 
 		font-size: var(--mod-font-size-75, var(--spectrum-font-size-75));
-		line-height: var(
-			--mod-line-height-100,
-			var(--spectrum-line-height-100)
-		);
+		line-height: var(--mod-line-height-100, var(--spectrum-line-height-100));
 	}
 
 	&:first-of-type,
@@ -773,10 +729,8 @@ governing permissions and limitations under the License.
 	&:first-of-type {
 		/* fix off-by-one alignment */
 		inset-inline-start: calc(
-			var(
-					--mod-slider-tick-mark-width,
-					var(--spectrum-slider-tick-mark-width)
-				) / -2
+			var(--mod-slider-tick-mark-width, var(--spectrum-slider-tick-mark-width)) /
+				-2
 		);
 
 		.spectrum-Slider-tickLabel {
@@ -787,10 +741,8 @@ governing permissions and limitations under the License.
 	&:last-of-type {
 		/* fix off-by-one alignment */
 		inset-inline-end: calc(
-			var(
-					--mod-slider-tick-mark-width,
-					var(--spectrum-slider-tick-mark-width)
-				) / -2
+			var(--mod-slider-tick-mark-width, var(--spectrum-slider-tick-mark-width)) /
+				-2
 		);
 
 		.spectrum-Slider-tickLabel {
@@ -853,10 +805,7 @@ governing permissions and limitations under the License.
 .spectrum-Slider-labelContainer {
 	color: var(
 		--highcontrast-slider-label-text-color,
-		var(
-			--mod-slider-label-text-color,
-			var(--spectrum-slider-label-text-color)
-		)
+		var(--mod-slider-label-text-color, var(--spectrum-slider-label-text-color))
 	);
 }
 
@@ -990,10 +939,7 @@ governing permissions and limitations under the License.
 	&:after {
 		background-color: var(
 			--highcontrast-slider-tick-mark-color,
-			var(
-				--mod-slider-tick-mark-color,
-				var(--spectrum-slider-tick-mark-color)
-			)
+			var(--mod-slider-tick-mark-color, var(--spectrum-slider-tick-mark-color))
 		);
 	}
 }

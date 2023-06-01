@@ -20,9 +20,7 @@ governing permissions and limitations under the License.
 	--spectrum-swatch-size: var(--spectrum-swatch-size-small);
 	--spectrum-swatch-border-radius: var(--spectrum-corner-radius-100);
 	--spectrum-swatch-border-thickness: var(--spectrum-border-width-100);
-	--spectrum-swatch-border-thickness-selected: var(
-		--spectrum-border-width-200
-	);
+	--spectrum-swatch-border-thickness-selected: var(--spectrum-border-width-200);
 	--spectrum-swatch-disabled-icon-size: var(--spectrum-workflow-icon-size-75);
 	--spectrum-swatch-slash-thickness: var(
 		--spectrum-swatch-slash-thickness-small
@@ -64,9 +62,7 @@ governing permissions and limitations under the License.
 
 .spectrum-Swatch--sizeM {
 	--spectrum-swatch-size: var(--spectrum-swatch-size-medium);
-	--spectrum-swatch-disabled-icon-size: var(
-		--spectrum-workflow-icon-size-100
-	);
+	--spectrum-swatch-disabled-icon-size: var(--spectrum-workflow-icon-size-100);
 	--spectrum-swatch-slash-thickness: var(
 		--spectrum-swatch-slash-thickness-medium
 	);
@@ -74,9 +70,7 @@ governing permissions and limitations under the License.
 
 .spectrum-Swatch--sizeL {
 	--spectrum-swatch-size: var(--spectrum-swatch-size-large);
-	--spectrum-swatch-disabled-icon-size: var(
-		--spectrum-workflow-icon-size-200
-	);
+	--spectrum-swatch-disabled-icon-size: var(--spectrum-workflow-icon-size-200);
 	--spectrum-swatch-slash-thickness: var(
 		--spectrum-swatch-slash-thickness-large
 	);
@@ -344,10 +338,7 @@ governing permissions and limitations under the License.
 		);
 
 		transition: opacity
-			var(
-				--mod-animation-duration-100,
-				var(--spectrum-animation-duration-100)
-			)
+			var(--mod-animation-duration-100, var(--spectrum-animation-duration-100))
 			ease-in-out;
 	}
 
@@ -412,10 +403,7 @@ governing permissions and limitations under the License.
 			)
 			var(
 				--highcontrast-swatch-border-color,
-				var(
-					--mod-swatch-border-color,
-					var(--spectrum-swatch-border-color)
-				)
+				var(--mod-swatch-border-color, var(--spectrum-swatch-border-color))
 			);
 		border-radius: var(
 			--mod-swatch-border-radius,
@@ -521,9 +509,7 @@ governing permissions and limitations under the License.
 							(
 								var(
 										--mod-swatch-border-thickness-selected,
-										var(
-											--spectrum-swatch-border-thickness-selected
-										)
+										var(--spectrum-swatch-border-thickness-selected)
 									) * 2
 							)
 					)
@@ -540,15 +526,9 @@ governing permissions and limitations under the License.
 	height: 100%;
 
 	transition: width
-			var(
-				--mod-animation-duration-100,
-				var(--spectrum-animation-duration-100)
-			)
+			var(--mod-animation-duration-100, var(--spectrum-animation-duration-100))
 			ease-in-out,
 		height
-			var(
-				--mod-animation-duration-100,
-				var(--spectrum-animation-duration-100)
-			)
+			var(--mod-animation-duration-100, var(--spectrum-animation-duration-100))
 			ease-in-out;
 }

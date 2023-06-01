@@ -20,8 +20,7 @@ export const Template = ({
 		<div
 			class=${classMap({
 				[rootClass]: true,
-				[`${rootClass}--${direction}`]:
-					typeof direction !== "undefined",
+				[`${rootClass}--${direction}`]: typeof direction !== "undefined",
 				...customClasses.reduce((a, c) => ({ ...a, [c]: true }), {}),
 			})}
 			style=${styleMap(styles)}

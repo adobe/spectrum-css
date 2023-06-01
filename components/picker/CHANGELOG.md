@@ -83,7 +83,7 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 ### 🐛 Bug fixes
 
--   **picker:** resolve missing var keyword ([#1857](https://github.com/adobe/spectrum-css/issues/1857)) ([1d85f90](https://github.com/adobe/spectrum-css/commit/1d85f90)), closes [#1852](https://github.com/adobe/spectrum-css/issues/1852)
+- **picker:** resolve missing var keyword ([#1857](https://github.com/adobe/spectrum-css/issues/1857)) ([1d85f90](https://github.com/adobe/spectrum-css/commit/1d85f90)), closes [#1852](https://github.com/adobe/spectrum-css/issues/1852)
 
 <a name="4.0.1"></a>
 
@@ -99,27 +99,27 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 🗓 2023-05-04 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/picker@3.0.12...@spectrum-css/picker@4.0.0)
 
--   fix(picker)!: update spacing tokens and storybook (#1804) ([1097b23](https://github.com/adobe/spectrum-css/commit/1097b23)), closes [#1804](https://github.com/adobe/spectrum-css/issues/1804)
+- fix(picker)!: update spacing tokens and storybook (#1804) ([1097b23](https://github.com/adobe/spectrum-css/commit/1097b23)), closes [#1804](https://github.com/adobe/spectrum-css/issues/1804)
 
 ### 🛑 BREAKING CHANGES
 
--   removes `--mod-picker-min-inline-size`
+- removes `--mod-picker-min-inline-size`
 
 Additionally:
 
--   chore(picker,pickerbutton): update stories - update stories to include label
--   chore(picker,pickerbutton): add loading state to stories
--   chore(picker): update icon size in stories
--   chore(picker): fixing label padding for story
--   style(picker): update spacing tokens
--   feat(picker): update spacing tokens
--   chore(picker): update storybook to match docs
--   fix(pickerbutton): undo changes to pickerbutton
--   chore(picker): get defaults set for storybook
--   chore(picker): updating stories to include express specific styling - adding express and spectrum specific styling to storybook - fixing loading spacing
--   chore(picker): update storybook - add invalid story - add click functionality
--   chore(picker): add focused story and fix icon focus color
--   docs(picker): update mods file
+- chore(picker,pickerbutton): update stories - update stories to include label
+- chore(picker,pickerbutton): add loading state to stories
+- chore(picker): update icon size in stories
+- chore(picker): fixing label padding for story
+- style(picker): update spacing tokens
+- feat(picker): update spacing tokens
+- chore(picker): update storybook to match docs
+- fix(pickerbutton): undo changes to pickerbutton
+- chore(picker): get defaults set for storybook
+- chore(picker): updating stories to include express specific styling - adding express and spectrum specific styling to storybook - fixing loading spacing
+- chore(picker): update storybook - add invalid story - add click functionality
+- chore(picker): add focused story and fix icon focus color
+- docs(picker): update mods file
 
 <a name="3.0.12"></a>
 
@@ -193,7 +193,7 @@ Additionally:
 
 ### 🐛 Bug fixes
 
--   **picker:** update border colors ([#1763](https://github.com/adobe/spectrum-css/issues/1763)) ([8932811](https://github.com/adobe/spectrum-css/commit/8932811))
+- **picker:** update border colors ([#1763](https://github.com/adobe/spectrum-css/issues/1763)) ([8932811](https://github.com/adobe/spectrum-css/commit/8932811))
 
 <a name="3.0.3"></a>
 
@@ -203,7 +203,7 @@ Additionally:
 
 ### 🐛 Bug fixes
 
--   **picker:** update border colors ([#1763](https://github.com/adobe/spectrum-css/issues/1763)) ([8932811](https://github.com/adobe/spectrum-css/commit/8932811))
+- **picker:** update border colors ([#1763](https://github.com/adobe/spectrum-css/issues/1763)) ([8932811](https://github.com/adobe/spectrum-css/commit/8932811))
 
 <a name="3.0.2"></a>
 
@@ -227,11 +227,11 @@ Additionally:
 
 🗓 2023-04-03 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/picker@2.0.11...@spectrum-css/picker@3.0.0)
 
--   fix(tokens)!: rgb transform to split out rgb values from css attributes (#1590) ([b714db4](https://github.com/adobe/spectrum-css/commit/b714db4)), closes [#1590](https://github.com/adobe/spectrum-css/issues/1590)
+- fix(tokens)!: rgb transform to split out rgb values from css attributes (#1590) ([b714db4](https://github.com/adobe/spectrum-css/commit/b714db4)), closes [#1590](https://github.com/adobe/spectrum-css/issues/1590)
 
 ### 🛑 BREAKING CHANGES
 
--   transforms color tokens to split out their `rgb` values
+- transforms color tokens to split out their `rgb` values
 
 Co-authored-by: castastrophe <castastrophe@users.noreply.github.com>
 
@@ -307,7 +307,7 @@ Co-authored-by: castastrophe <castastrophe@users.noreply.github.com>
 
 ### 🐛 Bug fixes
 
--   **picker:** resolve font-style, focus-ring, border issues ([#1618](https://github.com/adobe/spectrum-css/issues/1618)) ([c8f7c3b](https://github.com/adobe/spectrum-css/commit/c8f7c3b))
+- **picker:** resolve font-style, focus-ring, border issues ([#1618](https://github.com/adobe/spectrum-css/issues/1618)) ([c8f7c3b](https://github.com/adobe/spectrum-css/commit/c8f7c3b))
 
 <a name="2.0.2"></a>
 
@@ -331,11 +331,11 @@ Co-authored-by: castastrophe <castastrophe@users.noreply.github.com>
 
 🗓 2023-02-06 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/picker@1.2.21...@spectrum-css/picker@2.0.0)
 
--   refactor(picker)!: use spectrum tokens (#1528) ([7cdbad2](https://github.com/adobe/spectrum-css/commit/7cdbad2)), closes [#1528](https://github.com/adobe/spectrum-css/issues/1528)
+- refactor(picker)!: use spectrum tokens (#1528) ([7cdbad2](https://github.com/adobe/spectrum-css/commit/7cdbad2)), closes [#1528](https://github.com/adobe/spectrum-css/issues/1528)
 
 ### 🛑 BREAKING CHANGES
 
--   migrates Picker to new tokens system
+- migrates Picker to new tokens system
 
 <a name="1.2.21"></a>
 
@@ -361,7 +361,7 @@ Co-authored-by: castastrophe <castastrophe@users.noreply.github.com>
 
 ### 🐛 Bug fixes
 
--   **textfield,picker:** restore missing vars ([#1607](https://github.com/adobe/spectrum-css/issues/1607)) ([45f36f6](https://github.com/adobe/spectrum-css/commit/45f36f6))
+- **textfield,picker:** restore missing vars ([#1607](https://github.com/adobe/spectrum-css/issues/1607)) ([45f36f6](https://github.com/adobe/spectrum-css/commit/45f36f6))
 
 <a name="1.2.18"></a>
 
@@ -419,7 +419,7 @@ Co-authored-by: castastrophe <castastrophe@users.noreply.github.com>
 
 ### 🐛 Bug fixes
 
--   picker high contrast support ([4d2f6fc](https://github.com/adobe/spectrum-css/commit/4d2f6fc))
+- picker high contrast support ([4d2f6fc](https://github.com/adobe/spectrum-css/commit/4d2f6fc))
 
 <a name="1.2.11"></a>
 
@@ -429,8 +429,8 @@ Co-authored-by: castastrophe <castastrophe@users.noreply.github.com>
 
 ### 🐛 Bug fixes
 
--   **actionbutton, closebutton, picker:** remove `!important` declarations ([a26c212](https://github.com/adobe/spectrum-css/commit/a26c212))
--   **picker:** use proper colors for express quiet variant ([b54f299](https://github.com/adobe/spectrum-css/commit/b54f299))
+- **actionbutton, closebutton, picker:** remove `!important` declarations ([a26c212](https://github.com/adobe/spectrum-css/commit/a26c212))
+- **picker:** use proper colors for express quiet variant ([b54f299](https://github.com/adobe/spectrum-css/commit/b54f299))
 
 <a name="1.2.10"></a>
 
@@ -440,7 +440,7 @@ Co-authored-by: castastrophe <castastrophe@users.noreply.github.com>
 
 ### 🐛 Bug fixes
 
--   removed unused actionbutton from picker ([0812f91](https://github.com/adobe/spectrum-css/commit/0812f91))
+- removed unused actionbutton from picker ([0812f91](https://github.com/adobe/spectrum-css/commit/0812f91))
 
 <a name="1.2.9"></a>
 
@@ -522,11 +522,11 @@ Co-authored-by: castastrophe <castastrophe@users.noreply.github.com>
 
 ### ✨ Features
 
--   add support for express picker; closes [#1245](https://github.com/adobe/spectrum-css/issues/1245) ([b07bb3d](https://github.com/adobe/spectrum-css/commit/b07bb3d))
+- add support for express picker; closes [#1245](https://github.com/adobe/spectrum-css/issues/1245) ([b07bb3d](https://github.com/adobe/spectrum-css/commit/b07bb3d))
 
 ### 🐛 Bug fixes
 
--   put back selector I removed accidentally ([6ded29e](https://github.com/adobe/spectrum-css/commit/6ded29e))
+- put back selector I removed accidentally ([6ded29e](https://github.com/adobe/spectrum-css/commit/6ded29e))
 
 <a name="1.1.14"></a>
 
@@ -592,7 +592,7 @@ Co-authored-by: castastrophe <castastrophe@users.noreply.github.com>
 
 ### 🐛 Bug fixes
 
--   update peer dependencies ([97810cf](https://github.com/adobe/spectrum-css/commit/97810cf))
+- update peer dependencies ([97810cf](https://github.com/adobe/spectrum-css/commit/97810cf))
 
 <a name="1.1.6"></a>
 
@@ -658,7 +658,7 @@ Co-authored-by: castastrophe <castastrophe@users.noreply.github.com>
 
 ### ✨ Features
 
--   make ClearButton build again, unblock CCX ([#1304](https://github.com/adobe/spectrum-css/issues/1304)) ([ae9399a](https://github.com/adobe/spectrum-css/commit/ae9399a))
+- make ClearButton build again, unblock CCX ([#1304](https://github.com/adobe/spectrum-css/issues/1304)) ([ae9399a](https://github.com/adobe/spectrum-css/commit/ae9399a))
 
 <a name="1.0.5"></a>
 
@@ -676,7 +676,7 @@ Co-authored-by: castastrophe <castastrophe@users.noreply.github.com>
 
 ### 🐛 Bug fixes
 
--   updating version number on vars ([f535b49](https://github.com/adobe/spectrum-css/commit/f535b49))
+- updating version number on vars ([f535b49](https://github.com/adobe/spectrum-css/commit/f535b49))
 
 <a name="1.0.3-alpha.5"></a>
 
@@ -750,12 +750,12 @@ Co-authored-by: castastrophe <castastrophe@users.noreply.github.com>
 
 ### ✨ Features
 
--   added t-shirt sizes to picker ([35bf08f](https://github.com/adobe/spectrum-css/commit/35bf08f)), closes [#940](https://github.com/adobe/spectrum-css/issues/940)
+- added t-shirt sizes to picker ([35bf08f](https://github.com/adobe/spectrum-css/commit/35bf08f)), closes [#940](https://github.com/adobe/spectrum-css/issues/940)
 
 ### 🐛 Bug fixes
 
--   correct icononly Picker width ([b165e11](https://github.com/adobe/spectrum-css/commit/b165e11))
--   updated icon sizes for picker examples ([ad054f6](https://github.com/adobe/spectrum-css/commit/ad054f6))
+- correct icononly Picker width ([b165e11](https://github.com/adobe/spectrum-css/commit/b165e11))
+- updated icon sizes for picker examples ([ad054f6](https://github.com/adobe/spectrum-css/commit/ad054f6))
 
 <a name="1.0.0-beta.3"></a>
 
@@ -765,27 +765,27 @@ Co-authored-by: castastrophe <castastrophe@users.noreply.github.com>
 
 ### ✨ Features
 
--   change all instances of .is-selected to .is-open ([e28af42](https://github.com/adobe/spectrum-css/commit/e28af42))
--   migrate Picker from FieldButton to Picker... button ([6fbc452](https://github.com/adobe/spectrum-css/commit/6fbc452))
--   replace all FieldButton with ActionButton ([2fcbaaf](https://github.com/adobe/spectrum-css/commit/2fcbaaf))
+- change all instances of .is-selected to .is-open ([e28af42](https://github.com/adobe/spectrum-css/commit/e28af42))
+- migrate Picker from FieldButton to Picker... button ([6fbc452](https://github.com/adobe/spectrum-css/commit/6fbc452))
+- replace all FieldButton with ActionButton ([2fcbaaf](https://github.com/adobe/spectrum-css/commit/2fcbaaf))
 
 ### 🐛 Bug fixes
 
--   correct chevron icon size, closes [#1045](https://github.com/adobe/spectrum-css/issues/1045) ([#1056](https://github.com/adobe/spectrum-css/issues/1056)) ([12fb3cc](https://github.com/adobe/spectrum-css/commit/12fb3cc))
--   correct dependencies for FieldButton -> ActionButton change ([29d69f8](https://github.com/adobe/spectrum-css/commit/29d69f8))
--   correct margin between icons and text ([0d7453b](https://github.com/adobe/spectrum-css/commit/0d7453b))
--   correct Thumbnail indentation for Picker ([93602c2](https://github.com/adobe/spectrum-css/commit/93602c2))
--   make Picker build again ([dc541b9](https://github.com/adobe/spectrum-css/commit/dc541b9))
--   make Picker work again ([91f6e09](https://github.com/adobe/spectrum-css/commit/91f6e09))
--   quiet width, alignment of menu icon when it's alone, margin bits ([98d06e1](https://github.com/adobe/spectrum-css/commit/98d06e1))
--   remove useless state ([e442338](https://github.com/adobe/spectrum-css/commit/e442338))
--   update main, resolved conflicts ([d7880a2](https://github.com/adobe/spectrum-css/commit/d7880a2))
+- correct chevron icon size, closes [#1045](https://github.com/adobe/spectrum-css/issues/1045) ([#1056](https://github.com/adobe/spectrum-css/issues/1056)) ([12fb3cc](https://github.com/adobe/spectrum-css/commit/12fb3cc))
+- correct dependencies for FieldButton -> ActionButton change ([29d69f8](https://github.com/adobe/spectrum-css/commit/29d69f8))
+- correct margin between icons and text ([0d7453b](https://github.com/adobe/spectrum-css/commit/0d7453b))
+- correct Thumbnail indentation for Picker ([93602c2](https://github.com/adobe/spectrum-css/commit/93602c2))
+- make Picker build again ([dc541b9](https://github.com/adobe/spectrum-css/commit/dc541b9))
+- make Picker work again ([91f6e09](https://github.com/adobe/spectrum-css/commit/91f6e09))
+- quiet width, alignment of menu icon when it's alone, margin bits ([98d06e1](https://github.com/adobe/spectrum-css/commit/98d06e1))
+- remove useless state ([e442338](https://github.com/adobe/spectrum-css/commit/e442338))
+- update main, resolved conflicts ([d7880a2](https://github.com/adobe/spectrum-css/commit/d7880a2))
 
 ### 🛑 BREAKING CHANGES
 
--   Use .is-open to indicate the popover is shown, not .is-selected
--   Picker markup changed completely
--   markup now requires spectrum-ActionButton where all uses of spectrum-FieldButton were
+- Use .is-open to indicate the popover is shown, not .is-selected
+- Picker markup changed completely
+- markup now requires spectrum-ActionButton where all uses of spectrum-FieldButton were
 
 <a name="1.0.0-beta.2"></a>
 
@@ -803,12 +803,12 @@ Co-authored-by: castastrophe <castastrophe@users.noreply.github.com>
 
 ### ✨ Features
 
--   renamed dropdown to picker ([#540](https://github.com/adobe/spectrum-css/issues/540)) ([d1081f0](https://github.com/adobe/spectrum-css/commit/d1081f0))
+- renamed dropdown to picker ([#540](https://github.com/adobe/spectrum-css/issues/540)) ([d1081f0](https://github.com/adobe/spectrum-css/commit/d1081f0))
 
 ### 🐛 Bug fixes
 
--   renamed dropdown to picker ([6fc60cb](https://github.com/adobe/spectrum-css/commit/6fc60cb))
--   wip fix more components ([b74dbb8](https://github.com/adobe/spectrum-css/commit/b74dbb8))
+- renamed dropdown to picker ([6fc60cb](https://github.com/adobe/spectrum-css/commit/6fc60cb))
+- wip fix more components ([b74dbb8](https://github.com/adobe/spectrum-css/commit/b74dbb8))
 
 <a name="3.0.0-beta.3"></a>
 
@@ -842,7 +842,7 @@ Co-authored-by: castastrophe <castastrophe@users.noreply.github.com>
 
 ### ✨ Features
 
--   make Dropdown support RTL ([b580068](https://github.com/adobe/spectrum-css/commit/b580068))
+- make Dropdown support RTL ([b580068](https://github.com/adobe/spectrum-css/commit/b580068))
 
 <a name="2.1.5"></a>
 
@@ -868,8 +868,8 @@ Co-authored-by: castastrophe <castastrophe@users.noreply.github.com>
 
 ### 🐛 Bug fixes
 
--   fix Quiet Dropdown width in large scale, fixes [#477](https://github.com/adobe/spectrum-css/issues/477) ([a36f3bf](https://github.com/adobe/spectrum-css/commit/a36f3bf))
--   make Menu items wrap correctly, fixes [#451](https://github.com/adobe/spectrum-css/issues/451) ([#482](https://github.com/adobe/spectrum-css/issues/482)) ([03208af](https://github.com/adobe/spectrum-css/commit/03208af))
+- fix Quiet Dropdown width in large scale, fixes [#477](https://github.com/adobe/spectrum-css/issues/477) ([a36f3bf](https://github.com/adobe/spectrum-css/commit/a36f3bf))
+- make Menu items wrap correctly, fixes [#451](https://github.com/adobe/spectrum-css/issues/451) ([#482](https://github.com/adobe/spectrum-css/issues/482)) ([03208af](https://github.com/adobe/spectrum-css/commit/03208af))
 
 <a name="2.1.2"></a>
 
@@ -895,7 +895,7 @@ Co-authored-by: castastrophe <castastrophe@users.noreply.github.com>
 
 ### ✨ Features
 
--   add menu icon class, closes [#202](https://github.com/adobe/spectrum-css/issues/202) ([#331](https://github.com/adobe/spectrum-css/issues/331)) ([169940a](https://github.com/adobe/spectrum-css/commit/169940a))
+- add menu icon class, closes [#202](https://github.com/adobe/spectrum-css/issues/202) ([#331](https://github.com/adobe/spectrum-css/issues/331)) ([169940a](https://github.com/adobe/spectrum-css/commit/169940a))
 
 <a name="2.0.0"></a>
 
@@ -905,4 +905,4 @@ Co-authored-by: castastrophe <castastrophe@users.noreply.github.com>
 
 ### ✨ Features
 
--   move to individually versioned packages with Lerna ([#265](https://github.com/adobe/spectrum-css/issues/265)) ([cb7fd4b](https://github.com/adobe/spectrum-css/commit/cb7fd4b)), closes [#231](https://github.com/adobe/spectrum-css/issues/231) [#214](https://github.com/adobe/spectrum-css/issues/214) [#229](https://github.com/adobe/spectrum-css/issues/229) [#240](https://github.com/adobe/spectrum-css/issues/240) [#239](https://github.com/adobe/spectrum-css/issues/239) [#161](https://github.com/adobe/spectrum-css/issues/161) [#242](https://github.com/adobe/spectrum-css/issues/242) [#246](https://github.com/adobe/spectrum-css/issues/246) [#219](https://github.com/adobe/spectrum-css/issues/219) [#235](https://github.com/adobe/spectrum-css/issues/235) [#189](https://github.com/adobe/spectrum-css/issues/189) [#248](https://github.com/adobe/spectrum-css/issues/248) [#232](https://github.com/adobe/spectrum-css/issues/232) [#248](https://github.com/adobe/spectrum-css/issues/248) [#218](https://github.com/adobe/spectrum-css/issues/218) [#237](https://github.com/adobe/spectrum-css/issues/237) [#255](https://github.com/adobe/spectrum-css/issues/255) [#256](https://github.com/adobe/spectrum-css/issues/256) [#258](https://github.com/adobe/spectrum-css/issues/258) [#257](https://github.com/adobe/spectrum-css/issues/257) [#259](https://github.com/adobe/spectrum-css/issues/259)
+- move to individually versioned packages with Lerna ([#265](https://github.com/adobe/spectrum-css/issues/265)) ([cb7fd4b](https://github.com/adobe/spectrum-css/commit/cb7fd4b)), closes [#231](https://github.com/adobe/spectrum-css/issues/231) [#214](https://github.com/adobe/spectrum-css/issues/214) [#229](https://github.com/adobe/spectrum-css/issues/229) [#240](https://github.com/adobe/spectrum-css/issues/240) [#239](https://github.com/adobe/spectrum-css/issues/239) [#161](https://github.com/adobe/spectrum-css/issues/161) [#242](https://github.com/adobe/spectrum-css/issues/242) [#246](https://github.com/adobe/spectrum-css/issues/246) [#219](https://github.com/adobe/spectrum-css/issues/219) [#235](https://github.com/adobe/spectrum-css/issues/235) [#189](https://github.com/adobe/spectrum-css/issues/189) [#248](https://github.com/adobe/spectrum-css/issues/248) [#232](https://github.com/adobe/spectrum-css/issues/232) [#248](https://github.com/adobe/spectrum-css/issues/248) [#218](https://github.com/adobe/spectrum-css/issues/218) [#237](https://github.com/adobe/spectrum-css/issues/237) [#255](https://github.com/adobe/spectrum-css/issues/255) [#256](https://github.com/adobe/spectrum-css/issues/256) [#258](https://github.com/adobe/spectrum-css/issues/258) [#257](https://github.com/adobe/spectrum-css/issues/257) [#259](https://github.com/adobe/spectrum-css/issues/259)

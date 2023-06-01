@@ -14,26 +14,20 @@ governing permissions and limitations under the License.
 	&.is-selected {
 		> .spectrum-SideNav-itemLink {
 			color: var(--spectrum-sidenav-item-text-color-selected);
-			background-color: var(
-				--spectrum-sidenav-item-background-color-selected
-			);
+			background-color: var(--spectrum-sidenav-item-background-color-selected);
 		}
 	}
 
 	.is-active {
 		> .spectrum-SideNav-itemLink {
-			background-color: var(
-				--spectrum-sidenav-item-background-color-down
-			);
+			background-color: var(--spectrum-sidenav-item-background-color-down);
 		}
 	}
 
 	&.is-disabled {
 		/* Disable all children */
 		.spectrum-SideNav-itemLink {
-			background-color: var(
-				--spectrum-sidenav-item-background-color-disabled
-			);
+			background-color: var(--spectrum-sidenav-item-background-color-disabled);
 			color: var(--spectrum-sidenav-item-text-color-disabled);
 
 			cursor: default;
@@ -56,9 +50,7 @@ governing permissions and limitations under the License.
 	}
 
 	&:focus-ring {
-		background-color: var(
-			--spectrum-sidenav-item-background-color-key-focus
-		);
+		background-color: var(--spectrum-sidenav-item-background-color-key-focus);
 		color: var(--spectrum-sidenav-item-text-color-key-focus);
 
 		&::before {

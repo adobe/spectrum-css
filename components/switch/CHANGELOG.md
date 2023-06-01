@@ -313,15 +313,15 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 🗓 2022-10-13 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/switch@2.0.0...@spectrum-css/switch@3.0.0)
 
--   refactor(switch)!: remap core token aliases & rename aliases ([165bbb6](https://github.com/adobe/spectrum-css/commit/165bbb6))
+- refactor(switch)!: remap core token aliases & rename aliases ([165bbb6](https://github.com/adobe/spectrum-css/commit/165bbb6))
 
 ### 🛑 BREAKING CHANGES
 
--   remaps existing aliases to new/renamed core token values
+- remaps existing aliases to new/renamed core token values
 
--   `--spectrum-focus-ring-thickness` renamed to `--spectrum-focus-indicator-thickness`
--   `--spectrum-focus-ring-gap` renamed to `--spectrum-focus-indicator-gap`
--   `--spectrum-focus-ring-color` renamed to `--spectrum-focus-indicator-color`
+- `--spectrum-focus-ring-thickness` renamed to `--spectrum-focus-indicator-thickness`
+- `--spectrum-focus-ring-gap` renamed to `--spectrum-focus-indicator-gap`
+- `--spectrum-focus-ring-color` renamed to `--spectrum-focus-indicator-color`
 
 <a name="2.0.0"></a>
 
@@ -329,11 +329,11 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 🗓 2022-09-16 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/switch@1.0.23...@spectrum-css/switch@2.0.0)
 
--   feat(switch)!: migrating switch to core-tokens (CSS-42, CSS-100) (#1496) ([aab46c3](https://github.com/adobe/spectrum-css/commit/aab46c3)), closes [#1496](https://github.com/adobe/spectrum-css/issues/1496)
+- feat(switch)!: migrating switch to core-tokens (CSS-42, CSS-100) (#1496) ([aab46c3](https://github.com/adobe/spectrum-css/commit/aab46c3)), closes [#1496](https://github.com/adobe/spectrum-css/issues/1496)
 
 ### 🛑 BREAKING CHANGES
 
--   migrates Switch to core tokens
+- migrates Switch to core tokens
 
 Also, adds t-shirt sizes
 
@@ -361,7 +361,7 @@ Also, adds t-shirt sizes
 
 ### 🐛 Bug fixes
 
--   switch WHCM changes ([d2e1b49](https://github.com/adobe/spectrum-css/commit/d2e1b49))
+- switch WHCM changes ([d2e1b49](https://github.com/adobe/spectrum-css/commit/d2e1b49))
 
 <a name="1.0.20"></a>
 
@@ -443,7 +443,7 @@ Also, adds t-shirt sizes
 
 ### 🐛 Bug fixes
 
--   update peer dependencies ([97810cf](https://github.com/adobe/spectrum-css/commit/97810cf))
+- update peer dependencies ([97810cf](https://github.com/adobe/spectrum-css/commit/97810cf))
 
 <a name="1.0.10"></a>
 
@@ -501,8 +501,8 @@ Also, adds t-shirt sizes
 
 ### 🐛 Bug fixes
 
--   updating version number on vars ([f535b49](https://github.com/adobe/spectrum-css/commit/f535b49))
--   use opacity: 0 and appearance: none of form elements ([14c7fcf](https://github.com/adobe/spectrum-css/commit/14c7fcf))
+- updating version number on vars ([f535b49](https://github.com/adobe/spectrum-css/commit/f535b49))
+- use opacity: 0 and appearance: none of form elements ([14c7fcf](https://github.com/adobe/spectrum-css/commit/14c7fcf))
 
 <a name="1.0.4"></a>
 
@@ -512,8 +512,8 @@ Also, adds t-shirt sizes
 
 ### 🐛 Bug fixes
 
--   updating version number on vars ([f535b49](https://github.com/adobe/spectrum-css/commit/f535b49))
--   use opacity: 0 and appearance: none of form elements ([14c7fcf](https://github.com/adobe/spectrum-css/commit/14c7fcf))
+- updating version number on vars ([f535b49](https://github.com/adobe/spectrum-css/commit/f535b49))
+- use opacity: 0 and appearance: none of form elements ([14c7fcf](https://github.com/adobe/spectrum-css/commit/14c7fcf))
 
 <a name="1.0.3"></a>
 
@@ -523,7 +523,7 @@ Also, adds t-shirt sizes
 
 ### 🐛 Bug fixes
 
--   updating version number on vars ([f535b49](https://github.com/adobe/spectrum-css/commit/f535b49))
+- updating version number on vars ([f535b49](https://github.com/adobe/spectrum-css/commit/f535b49))
 
 <a name="1.0.3-alpha.3"></a>
 
@@ -557,7 +557,7 @@ Also, adds t-shirt sizes
 
 ### 🐛 Bug fixes
 
--   updated focus ring tokens to assume keyboard focus state ([2db4755](https://github.com/adobe/spectrum-css/commit/2db4755))
+- updated focus ring tokens to assume keyboard focus state ([2db4755](https://github.com/adobe/spectrum-css/commit/2db4755))
 
 <a name="1.0.2"></a>
 
@@ -591,7 +591,7 @@ Also, adds t-shirt sizes
 
 ### 🐛 Bug fixes
 
--   make Switch build again ([02c8c73](https://github.com/adobe/spectrum-css/commit/02c8c73))
+- make Switch build again ([02c8c73](https://github.com/adobe/spectrum-css/commit/02c8c73))
 
 <a name="1.0.0-beta.2"></a>
 
@@ -609,7 +609,7 @@ Also, adds t-shirt sizes
 
 ### 🐛 Bug fixes
 
--   resolving conflicts with main ([8cafffa](https://github.com/adobe/spectrum-css/commit/8cafffa))
+- resolving conflicts with main ([8cafffa](https://github.com/adobe/spectrum-css/commit/8cafffa))
 
 <a name="3.0.0-beta.2"></a>
 
@@ -635,12 +635,12 @@ Also, adds t-shirt sizes
 
 ### ✨ Features
 
--   make Switch support RTL ([07fddb3](https://github.com/adobe/spectrum-css/commit/07fddb3))
+- make Switch support RTL ([07fddb3](https://github.com/adobe/spectrum-css/commit/07fddb3))
 
 ### 🐛 Bug fixes
 
--   make Switch handle stay within track when on ([5632951](https://github.com/adobe/spectrum-css/commit/5632951))
--   re-add RTL support for Toggle since merge blew it away ([18a2e27](https://github.com/adobe/spectrum-css/commit/18a2e27))
+- make Switch handle stay within track when on ([5632951](https://github.com/adobe/spectrum-css/commit/5632951))
+- re-add RTL support for Toggle since merge blew it away ([18a2e27](https://github.com/adobe/spectrum-css/commit/18a2e27))
 
 <a name="2.1.0"></a>
 
@@ -650,7 +650,7 @@ Also, adds t-shirt sizes
 
 ### ✨ Features
 
--   halo focus ring, closes [#112](https://github.com/adobe/spectrum-css/issues/112), closes [#573](https://github.com/adobe/spectrum-css/issues/573) ([#603](https://github.com/adobe/spectrum-css/issues/603)) ([d87e9a5](https://github.com/adobe/spectrum-css/commit/d87e9a5)), closes [#619](https://github.com/adobe/spectrum-css/issues/619)
+- halo focus ring, closes [#112](https://github.com/adobe/spectrum-css/issues/112), closes [#573](https://github.com/adobe/spectrum-css/issues/573) ([#603](https://github.com/adobe/spectrum-css/issues/603)) ([d87e9a5](https://github.com/adobe/spectrum-css/commit/d87e9a5)), closes [#619](https://github.com/adobe/spectrum-css/issues/619)
 
 <a name="2.0.5"></a>
 
@@ -668,7 +668,7 @@ Also, adds t-shirt sizes
 
 ### 🐛 Bug fixes
 
--   align labels for Radio/Checkbox/Switch/Status light ([#458](https://github.com/adobe/spectrum-css/issues/458)) ([616a1b4](https://github.com/adobe/spectrum-css/commit/616a1b4)), closes [#406](https://github.com/adobe/spectrum-css/issues/406) [#402](https://github.com/adobe/spectrum-css/issues/402) [#403](https://github.com/adobe/spectrum-css/issues/403) [#426](https://github.com/adobe/spectrum-css/issues/426)
+- align labels for Radio/Checkbox/Switch/Status light ([#458](https://github.com/adobe/spectrum-css/issues/458)) ([616a1b4](https://github.com/adobe/spectrum-css/commit/616a1b4)), closes [#406](https://github.com/adobe/spectrum-css/issues/406) [#402](https://github.com/adobe/spectrum-css/issues/402) [#403](https://github.com/adobe/spectrum-css/issues/403) [#426](https://github.com/adobe/spectrum-css/issues/426)
 
 <a name="2.0.3"></a>
 
@@ -678,7 +678,7 @@ Also, adds t-shirt sizes
 
 ### 🐛 Bug fixes
 
--   text alignment in checkbox, radio, and switch ([#412](https://github.com/adobe/spectrum-css/issues/412)) ([e244b4f](https://github.com/adobe/spectrum-css/commit/e244b4f)), closes [#406](https://github.com/adobe/spectrum-css/issues/406) [#402](https://github.com/adobe/spectrum-css/issues/402) [#403](https://github.com/adobe/spectrum-css/issues/403)
+- text alignment in checkbox, radio, and switch ([#412](https://github.com/adobe/spectrum-css/issues/412)) ([e244b4f](https://github.com/adobe/spectrum-css/commit/e244b4f)), closes [#406](https://github.com/adobe/spectrum-css/issues/406) [#402](https://github.com/adobe/spectrum-css/issues/402) [#403](https://github.com/adobe/spectrum-css/issues/403)
 
 <a name="2.0.2"></a>
 
@@ -696,7 +696,7 @@ Also, adds t-shirt sizes
 
 ### 🐛 Bug fixes
 
--   revert Checkbox/Radio/Switch color change, fixes [#355](https://github.com/adobe/spectrum-css/issues/355) ([#356](https://github.com/adobe/spectrum-css/issues/356)) ([51477e9](https://github.com/adobe/spectrum-css/commit/51477e9))
+- revert Checkbox/Radio/Switch color change, fixes [#355](https://github.com/adobe/spectrum-css/issues/355) ([#356](https://github.com/adobe/spectrum-css/issues/356)) ([51477e9](https://github.com/adobe/spectrum-css/commit/51477e9))
 
 <a name="2.0.0"></a>
 
@@ -706,4 +706,4 @@ Also, adds t-shirt sizes
 
 ### ✨ Features
 
--   move to individually versioned packages with Lerna ([#265](https://github.com/adobe/spectrum-css/issues/265)) ([cb7fd4b](https://github.com/adobe/spectrum-css/commit/cb7fd4b)), closes [#231](https://github.com/adobe/spectrum-css/issues/231) [#214](https://github.com/adobe/spectrum-css/issues/214) [#229](https://github.com/adobe/spectrum-css/issues/229) [#240](https://github.com/adobe/spectrum-css/issues/240) [#239](https://github.com/adobe/spectrum-css/issues/239) [#161](https://github.com/adobe/spectrum-css/issues/161) [#242](https://github.com/adobe/spectrum-css/issues/242) [#246](https://github.com/adobe/spectrum-css/issues/246) [#219](https://github.com/adobe/spectrum-css/issues/219) [#235](https://github.com/adobe/spectrum-css/issues/235) [#189](https://github.com/adobe/spectrum-css/issues/189) [#248](https://github.com/adobe/spectrum-css/issues/248) [#232](https://github.com/adobe/spectrum-css/issues/232) [#248](https://github.com/adobe/spectrum-css/issues/248) [#218](https://github.com/adobe/spectrum-css/issues/218) [#237](https://github.com/adobe/spectrum-css/issues/237) [#255](https://github.com/adobe/spectrum-css/issues/255) [#256](https://github.com/adobe/spectrum-css/issues/256) [#258](https://github.com/adobe/spectrum-css/issues/258) [#257](https://github.com/adobe/spectrum-css/issues/257) [#259](https://github.com/adobe/spectrum-css/issues/259)
+- move to individually versioned packages with Lerna ([#265](https://github.com/adobe/spectrum-css/issues/265)) ([cb7fd4b](https://github.com/adobe/spectrum-css/commit/cb7fd4b)), closes [#231](https://github.com/adobe/spectrum-css/issues/231) [#214](https://github.com/adobe/spectrum-css/issues/214) [#229](https://github.com/adobe/spectrum-css/issues/229) [#240](https://github.com/adobe/spectrum-css/issues/240) [#239](https://github.com/adobe/spectrum-css/issues/239) [#161](https://github.com/adobe/spectrum-css/issues/161) [#242](https://github.com/adobe/spectrum-css/issues/242) [#246](https://github.com/adobe/spectrum-css/issues/246) [#219](https://github.com/adobe/spectrum-css/issues/219) [#235](https://github.com/adobe/spectrum-css/issues/235) [#189](https://github.com/adobe/spectrum-css/issues/189) [#248](https://github.com/adobe/spectrum-css/issues/248) [#232](https://github.com/adobe/spectrum-css/issues/232) [#248](https://github.com/adobe/spectrum-css/issues/248) [#218](https://github.com/adobe/spectrum-css/issues/218) [#237](https://github.com/adobe/spectrum-css/issues/237) [#255](https://github.com/adobe/spectrum-css/issues/255) [#256](https://github.com/adobe/spectrum-css/issues/256) [#258](https://github.com/adobe/spectrum-css/issues/258) [#257](https://github.com/adobe/spectrum-css/issues/257) [#259](https://github.com/adobe/spectrum-css/issues/259)

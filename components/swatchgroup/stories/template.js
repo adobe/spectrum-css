@@ -19,8 +19,7 @@ export const Template = ({
 	const { express } = globals;
 
 	try {
-		if (!express)
-			import(/* webpackPrefetch: true */ "../themes/spectrum.css");
+		if (!express) import(/* webpackPrefetch: true */ "../themes/spectrum.css");
 		else import(/* webpackPrefetch: true */ "../themes/express.css");
 	} catch (e) {
 		console.warn(e);
@@ -41,10 +40,7 @@ export const Template = ({
 					[rootClass]: true,
 					[`${rootClass}--${density}`]:
 						typeof density !== "undefined" && density !== "regular",
-					...customClasses.reduce(
-						(a, c) => ({ ...a, [c]: true }),
-						{}
-					),
+					...customClasses.reduce((a, c) => ({ ...a, [c]: true }), {}),
 				})}
 			>
 				${swatchesToDisplay.map((swatch, index) => {
@@ -58,9 +54,7 @@ export const Template = ({
 									typeof size !== "undefined",
 								[`${swatchRootClass}--rounding${capitalize(
 									lowerCase(rounding)
-								)}`]:
-									typeof rounding !== "undefined" &&
-									rounding !== "regular",
+								)}`]: typeof rounding !== "undefined" && rounding !== "regular",
 								[`${swatchRootClass}--lightBorder`]: true,
 							})}
 						>

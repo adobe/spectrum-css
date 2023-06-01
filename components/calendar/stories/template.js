@@ -80,15 +80,10 @@ export const Template = ({
 
 		if (selectedDate && typeof selectedDate.setHours === "function") {
 			selectedDate.setHours(0, 0, 0, 0);
-			selectedDatetime = selectedDate
-				? selectedDate.getTime()
-				: selectedDate;
+			selectedDatetime = selectedDate ? selectedDate.getTime() : selectedDate;
 		}
 
-		if (
-			lastSelectedDate &&
-			typeof lastSelectedDate.setHours === "function"
-		) {
+		if (lastSelectedDate && typeof lastSelectedDate.setHours === "function") {
 			lastSelectedDate.setHours(0, 0, 0, 0);
 			lastSelectedDatetime = lastSelectedDate
 				? lastSelectedDate.getTime()
@@ -111,11 +106,7 @@ export const Template = ({
 			displayedMonth + 1,
 			0
 		).getDate();
-		const firstDOWInMonth = new Date(
-			displayedYear,
-			displayedMonth,
-			1
-		).getDay(); // 0 = Sunday
+		const firstDOWInMonth = new Date(displayedYear, displayedMonth, 1).getDay(); // 0 = Sunday
 
 		/* This is generating a nested array with the  */
 		return new Array(Math.ceil(lastDateInMonth / DOW.length))
@@ -174,12 +165,8 @@ export const Template = ({
 						isToday,
 						isOutsideMonth,
 						isInRange,
-						isRangeStart: !!(
-							isInRange && thisDatetime === selectedDatetime
-						),
-						isRangeEnd: !!(
-							isInRange && thisDatetime === lastSelectedDatetime
-						),
+						isRangeStart: !!(isInRange && thisDatetime === selectedDatetime),
+						isRangeEnd: !!(isInRange && thisDatetime === lastSelectedDatetime),
 					};
 				})
 			);
@@ -225,9 +212,7 @@ export const Template = ({
 				return;
 			}
 			return updateArgs({
-				month: getMonthName(
-					displayedMonth > 10 ? 1 : displayedMonth + 2
-				),
+				month: getMonthName(displayedMonth > 10 ? 1 : displayedMonth + 2),
 				year: displayedMonth === 11 ? displayedYear + 1 : displayedYear,
 			});
 		};
@@ -300,13 +285,8 @@ export const Template = ({
 									scope="col"
 									class="${rootClass}-tableCell"
 								>
-									<abbr
-										class="${rootClass}-dayOfWeek"
-										title=${day}
-										>${day.slice(
-											0,
-											useDOWAbbrev ? 3 : 1
-										)}</abbr
+									<abbr class="${rootClass}-dayOfWeek" title=${day}
+										>${day.slice(0, useDOWAbbrev ? 3 : 1)}</abbr
 									>
 								</th>`
 							)}
@@ -324,15 +304,11 @@ export const Template = ({
 									(thisDay) => html` <td
 										role="gridcell"
 										class="${rootClass}-tableCell"
-										tabindex=${!thisDay.isOutsideMonth
-											? "-1"
-											: ""}
-										aria-disabled=${thisDay.isOutsideMonth ||
-										thisDay.isDisabled
+										tabindex=${!thisDay.isOutsideMonth ? "-1" : ""}
+										aria-disabled=${thisDay.isOutsideMonth || thisDay.isDisabled
 											? "true"
 											: "false"}
-										aria-selected=${thisDay.isSelected ===
-										true
+										aria-selected=${thisDay.isSelected === true
 											? "true"
 											: "false"}
 										aria-invalid="false"
@@ -345,29 +321,19 @@ export const Template = ({
 											role="presentation"
 											class=${classMap({
 												[`${rootClass}-date`]: true,
-												"is-outsideMonth":
-													thisDay.isOutsideMonth,
+												"is-outsideMonth": thisDay.isOutsideMonth,
 												"is-today": thisDay.isToday,
-												"is-focused":
-													thisDay.isSelected,
-												"is-range-selection":
-													thisDay.isInRange,
+												"is-focused": thisDay.isSelected,
+												"is-range-selection": thisDay.isInRange,
 												// "is-range-start": thisDay.isRangeStart, @todo
 												// "is-range-end": thisDay.isRangeEnd, @todo
-												"is-selected":
-													thisDay.isSelected,
-												"is-selection-start":
-													thisDay.isRangeStart,
-												"is-selection-end":
-													thisDay.isRangeEnd,
+												"is-selected": thisDay.isSelected,
+												"is-selection-start": thisDay.isRangeStart,
+												"is-selection-end": thisDay.isRangeEnd,
 												"is-disabled":
-													thisDay.isOutsideMonth ||
-													thisDay.isDisabled,
+													thisDay.isOutsideMonth || thisDay.isDisabled,
 											})}
-											@click=${onDateClick.bind(
-												null,
-												thisDay
-											)}
+											@click=${onDateClick.bind(null, thisDay)}
 											>${thisDay.date.getDate()}</span
 										>
 									</td>`

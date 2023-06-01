@@ -30,7 +30,8 @@ addons.setConfig({
 		colorSecondary: "rgb(2, 101, 220)",
 
 		// UI
-		appBg: "rgb(255,255,255)" /* Being applied to the active state of radio buttons */,
+		appBg:
+			"rgb(255,255,255)" /* Being applied to the active state of radio buttons */,
 		appContentBg: "rgb(255, 255, 255)" /* Being applied to the arg table */,
 		appBorderColor: "rgb(213, 213, 213)",
 		appBorderRadius: 4,
@@ -41,8 +42,7 @@ addons.setConfig({
 		// Toolbar default and active colors
 		barTextColor:
 			"rgb(34, 34, 34)" /* --spectrum-neutral-content-color-default */,
-		barSelectedColor:
-			"rgb(2, 101, 220)" /* --spectrum-global-color-blue-900 */,
+		barSelectedColor: "rgb(2, 101, 220)" /* --spectrum-global-color-blue-900 */,
 		// barBg: 'rgb(248, 248, 248)', /* --spectrum-alias-background-color-default */
 
 		// Form colors

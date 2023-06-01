@@ -6,8 +6,7 @@ import { default as Menu } from "@spectrum-css/menu/stories/menu.stories.js";
 
 export default {
 	title: "Action menu",
-	description:
-		"The Action menu component is an action button with a Popover.",
+	description: "The Action menu component is an action button with a Popover.",
 	component: "Action menu",
 	argTypes: {
 		items: { table: { disable: true } },

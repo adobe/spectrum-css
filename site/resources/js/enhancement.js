@@ -107,12 +107,8 @@ governing permissions and limitations under the License.
 		Array.prototype.forEach.call(
 			rating.querySelectorAll(".spectrum-Rating-icon"),
 			function (el, index) {
-				el.classList[index <= value - 1 ? "add" : "remove"](
-					"is-selected"
-				);
-				el.classList[index === value - 1 ? "add" : "remove"](
-					"is-currentValue"
-				);
+				el.classList[index <= value - 1 ? "add" : "remove"]("is-selected");
+				el.classList[index === value - 1 ? "add" : "remove"]("is-currentValue");
 			}
 		);
 	}
@@ -213,8 +209,7 @@ governing permissions and limitations under the License.
 				textfield.classList.add(focusClass);
 			});
 		} else {
-			if (pickerButton)
-				pickerButton.classList.remove("is-keyboardFocused");
+			if (pickerButton) pickerButton.classList.remove("is-keyboardFocused");
 			if (pickerButton) pickerButton.classList.remove("is-focused");
 			inputgroup.classList.remove("is-keyboardFocused");
 			inputgroup.classList.remove("is-focused");
@@ -324,22 +319,16 @@ governing permissions and limitations under the License.
 			var menu = menuItem.closest(".spectrum-Menu");
 			if (menuItem.classList.contains("spectrum-Menu-item")) {
 				var items = Array.prototype.slice.call(
-					menu.querySelectorAll(
-						".spectrum-Menu-item:not(.is-disabled)"
-					)
+					menu.querySelectorAll(".spectrum-Menu-item:not(.is-disabled)")
 				);
 				var menuItemIndex = items.indexOf(menuItem);
 				var newItemIndex = -1;
 				if (event.key === "ArrowDown") {
 					newItemIndex =
-						menuItemIndex + 1 < items.length
-							? menuItemIndex + 1
-							: 0;
+						menuItemIndex + 1 < items.length ? menuItemIndex + 1 : 0;
 				} else if (event.key === "ArrowUp") {
 					newItemIndex =
-						menuItemIndex - 1 >= 0
-							? menuItemIndex - 1
-							: items.length - 1;
+						menuItemIndex - 1 >= 0 ? menuItemIndex - 1 : items.length - 1;
 				} else if (event.key === "Home") {
 					newItemIndex = 0;
 				} else if (event.key === "End") {
@@ -389,9 +378,7 @@ governing permissions and limitations under the License.
 			menuItem.setAttribute("aria-selected", "true");
 
 			if (!label) {
-				var menuLabel = menuItem.querySelector(
-					".spectrum-Menu-itemLabel"
-				);
+				var menuLabel = menuItem.querySelector(".spectrum-Menu-itemLabel");
 				if (menuLabel) {
 					label = menuLabel.innerHTML;
 				}
@@ -401,9 +388,7 @@ governing permissions and limitations under the License.
 		picker.setAttribute("value", value);
 		var fieldButton = picker;
 		if (fieldButton && label) {
-			var pickerLabel = fieldButton.querySelector(
-				".spectrum-Picker-label"
-			);
+			var pickerLabel = fieldButton.querySelector(".spectrum-Picker-label");
 			if (pickerLabel) {
 				pickerLabel.innerHTML = label;
 			}
@@ -465,13 +450,9 @@ governing permissions and limitations under the License.
 
 			var menuItem = event.target.closest(".spectrum-Menu-item");
 			if (menuItem) {
-				var menuLabel = menuItem.querySelector(
-					".spectrum-Menu-itemLabel"
-				);
+				var menuLabel = menuItem.querySelector(".spectrum-Menu-itemLabel");
 				if (menuLabel) {
-					var pickerLabel = picker.querySelector(
-						".spectrum-Picker-label"
-					);
+					var pickerLabel = picker.querySelector(".spectrum-Picker-label");
 					if (pickerLabel) {
 						pickerLabel.innerHTML = menuLabel.innerHTML;
 
@@ -528,9 +509,7 @@ window.addEventListener("click", function (event) {
 			let outerTreeview = furthest(el, ".spectrum-TreeView");
 			if (outerTreeview) {
 				Array.prototype.forEach.call(
-					outerTreeview.querySelectorAll(
-						".spectrum-TreeView-item.is-selected"
-					),
+					outerTreeview.querySelectorAll(".spectrum-TreeView-item.is-selected"),
 					function (item) {
 						if (item != treeviewItem) {
 							item.classList.remove("is-selected");
@@ -657,13 +636,9 @@ function makeDoubleSlider(slider) {
 		}
 
 		var sliderOffsetWidth = slider.offsetWidth;
-		var sliderOffsetLeft =
-			slider.offsetLeft + slider.offsetParent.offsetLeft;
+		var sliderOffsetLeft = slider.offsetLeft + slider.offsetParent.offsetLeft;
 
-		var x = Math.max(
-			Math.min(e.x - sliderOffsetLeft, sliderOffsetWidth),
-			0
-		);
+		var x = Math.max(Math.min(e.x - sliderOffsetLeft, sliderOffsetWidth), 0);
 		var percent = Math.round((x / sliderOffsetWidth) * 100);
 
 		if (isRTL()) {
@@ -671,19 +646,13 @@ function makeDoubleSlider(slider) {
 		}
 
 		if (handle === leftHandle) {
-			if (
-				percent <
-				parseFloat(rightHandle.style[toggleRTL("left", "right")])
-			) {
+			if (percent < parseFloat(rightHandle.style[toggleRTL("left", "right")])) {
 				handle.style[toggleRTL("left", "right")] = percent + "%";
 				handle.style[toggleRTL("right", "left")] = "auto";
 				leftTrack.style.width = percent + "%";
 			}
 		} else {
-			if (
-				percent >
-				parseFloat(leftHandle.style[toggleRTL("left", "right")])
-			) {
+			if (percent > parseFloat(leftHandle.style[toggleRTL("left", "right")])) {
 				handle.style[toggleRTL("left", "right")] = percent + "%";
 				handle.style[toggleRTL("right", "left")] = "auto";
 				rightTrack.style.width = 100 - percent + "%";
@@ -692,9 +661,7 @@ function makeDoubleSlider(slider) {
 		middleTrack.style[toggleRTL("left", "right")] =
 			leftHandle.style[toggleRTL("left", "right")];
 		middleTrack.style[toggleRTL("right", "left")] =
-			100 -
-			parseFloat(rightHandle.style[toggleRTL("left", "right")]) +
-			"%";
+			100 - parseFloat(rightHandle.style[toggleRTL("left", "right")]) + "%";
 	}
 
 	function init() {
@@ -706,12 +673,8 @@ function makeDoubleSlider(slider) {
 		}
 
 		// Set initial track position
-		var startPercent = parseFloat(
-			leftHandle.style[toggleRTL("left", "right")]
-		);
-		var endPercent = parseFloat(
-			rightHandle.style[toggleRTL("left", "right")]
-		);
+		var startPercent = parseFloat(leftHandle.style[toggleRTL("left", "right")]);
+		var endPercent = parseFloat(rightHandle.style[toggleRTL("left", "right")]);
 		leftTrack.style.width = startPercent + "%";
 		middleTrack.style[toggleRTL("left", "right")] = startPercent + "%";
 		middleTrack.style[toggleRTL("right", "left")] = 100 - endPercent + "%";
@@ -724,10 +687,7 @@ function makeDoubleSlider(slider) {
 
 	var observer = new MutationObserver(function (mutations) {
 		mutations.forEach(function (mutation) {
-			if (
-				mutation.type === "attributes" &&
-				mutation.attributeName === "dir"
-			) {
+			if (mutation.type === "attributes" && mutation.attributeName === "dir") {
 				init();
 			}
 		});
@@ -778,13 +738,9 @@ function makeSlider(slider) {
 	}
 	function onMouseMove(e, sliderHandle) {
 		var sliderOffsetWidth = slider.offsetWidth;
-		var sliderOffsetLeft =
-			slider.offsetLeft + slider.offsetParent.offsetLeft;
+		var sliderOffsetLeft = slider.offsetLeft + slider.offsetParent.offsetLeft;
 
-		var x = Math.max(
-			Math.min(e.x - sliderOffsetLeft, sliderOffsetWidth),
-			0
-		);
+		var x = Math.max(Math.min(e.x - sliderOffsetLeft, sliderOffsetWidth), 0);
 		var percent = Math.round((x / sliderOffsetWidth) * 100);
 
 		if (isRTL()) {
@@ -826,18 +782,13 @@ function makeSlider(slider) {
 
 				// The left buffer is offset by the gap and some margin, so we have to add that back to make it actually hit the desired value
 				var bufferOffset =
-					parseInt(
-						bufferStyle[toggleRTL("marginLeft", "marginRight")],
-						10
-					) * -1;
+					parseInt(bufferStyle[toggleRTL("marginLeft", "marginRight")], 10) *
+					-1;
 				var actualMiddle =
-					handle.parentElement.offsetWidth / 2 +
-					bufferOffset +
-					handleGap;
+					handle.parentElement.offsetWidth / 2 + bufferOffset + handleGap;
 
 				// Keep the left buffer to account for the nasty gaps
-				leftBuffer.style.width =
-					Math.min(bufferMaxWidth, actualMiddle) + "px";
+				leftBuffer.style.width = Math.min(bufferMaxWidth, actualMiddle) + "px";
 			} else {
 				leftBuffer.style.width = percent + "%";
 				rightBuffer.style.width = "auto";
@@ -850,8 +801,7 @@ function makeSlider(slider) {
 		if (fill) {
 			fill.style[toggleRTL("left", "right")] =
 				(percent < 50 ? percent : 50) + "%";
-			fill.style.width =
-				(percent < 50 ? 50 - percent : percent - 50) + "%";
+			fill.style.width = (percent < 50 ? 50 - percent : percent - 50) + "%";
 			if (percent > 50) {
 				fill.classList.add("spectrum-Slider-fill--right");
 			} else {
@@ -880,8 +830,10 @@ function makeSlider(slider) {
 			if (tracks.length) {
 				// Flip colors
 				if (tracks[0].style.background) {
-					tracks[0].style.background =
-						tracks[0].style.background.replace("right", "left");
+					tracks[0].style.background = tracks[0].style.background.replace(
+						"right",
+						"left"
+					);
 				}
 			}
 		}
@@ -900,10 +852,7 @@ function makeSlider(slider) {
 
 	var observer = new MutationObserver(function (mutations) {
 		mutations.forEach(function (mutation) {
-			if (
-				mutation.type === "attributes" &&
-				mutation.attributeName === "dir"
-			) {
+			if (mutation.type === "attributes" && mutation.attributeName === "dir") {
 				init();
 			}
 		});

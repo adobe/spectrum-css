@@ -27,7 +27,7 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 ### 🐛 Bug fixes
 
--   correct PostCSS plugin names ([81ad868](https://github.com/adobe/spectrum-css/commit/81ad868))
+- correct PostCSS plugin names ([81ad868](https://github.com/adobe/spectrum-css/commit/81ad868))
 
 <a name="1.1.0"></a>
 
@@ -37,4 +37,4 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 ### ✨ Features
 
--   add postcss-dropdupedvars ([39adb3d](https://github.com/adobe/spectrum-css/commit/39adb3d))
+- add postcss-dropdupedvars ([39adb3d](https://github.com/adobe/spectrum-css/commit/39adb3d))

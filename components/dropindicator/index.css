@@ -39,9 +39,7 @@ governing permissions and limitations under the License.
 	}
 
 	&:before {
-		inset-inline-start: calc(
-			-1 * var(--spectrum-dropindicator-circle-size)
-		);
+		inset-inline-start: calc(-1 * var(--spectrum-dropindicator-circle-size));
 	}
 
 	&:after {

@@ -36,9 +36,7 @@ governing permissions and limitations under the License.
 		--spectrum-body-sans-serif-font-style
 	);
 	--spectrum-inlinealert-content-font-size: var(--spectrum-body-size-s);
-	--spectrum-inlinealert-content-line-height: var(
-		--spectrum-body-line-height
-	);
+	--spectrum-inlinealert-content-line-height: var(--spectrum-body-line-height);
 
 	/* Size*/
 	--spectrum-inlinealert-border-width: var(--spectrum-border-width-200);

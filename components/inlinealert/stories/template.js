@@ -19,8 +19,7 @@ export const Template = ({
 	const { express } = globals;
 
 	try {
-		if (!express)
-			import(/* webpackPrefetch: true */ "../themes/spectrum.css");
+		if (!express) import(/* webpackPrefetch: true */ "../themes/spectrum.css");
 		else import(/* webpackPrefetch: true */ "../themes/express.css");
 	} catch (e) {
 		console.warn(e);
@@ -78,8 +77,8 @@ export const Template = ({
 			})}
 		>
 			<div class="${rootClass}-header">
-				${variant.charAt(0).toUpperCase() + variant.slice(1)}
-				${headerText} ${iconMarkup}
+				${variant.charAt(0).toUpperCase() + variant.slice(1)} ${headerText}
+				${iconMarkup}
 			</div>
 			<div class="${rootClass}-content">${text}</div>
 			${closableMarkup}

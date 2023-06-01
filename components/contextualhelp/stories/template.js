@@ -42,9 +42,7 @@ export const Template = ({
 			})}
 			${Popover({
 				content: [
-					title
-						? html`<h2 class="${rootClass}-heading">${title}</h2>`
-						: "",
+					title ? html`<h2 class="${rootClass}-heading">${title}</h2>` : "",
 					body ? html`<p class="${rootClass}-body">${body}</p>` : "",
 					link
 						? Link({

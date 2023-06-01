@@ -39,8 +39,7 @@ export const Template = ({
 				[rootClass]: true,
 				[`${rootClass}--size${size?.toUpperCase()}`]:
 					typeof size !== "undefined",
-				[`${rootClass}--${orientation}`]:
-					typeof orientation !== "undefined",
+				[`${rootClass}--${orientation}`]: typeof orientation !== "undefined",
 				[`${rootClass}--quiet`]: isQuiet,
 				[`${rootClass}--emphasized`]: isEmphasized,
 				[`${rootClass}--compact`]: isCompact,

@@ -61,11 +61,7 @@ async function getDependencyOrder(done) {
 let buildCombined = gulp.series(
 	getDependencyOrder,
 	gulp.parallel(
-		concatPackageFiles(
-			"buildCombined_core",
-			"index.css",
-			"spectrum-core.css"
-		),
+		concatPackageFiles("buildCombined_core", "index.css", "spectrum-core.css"),
 		concatPackageFiles(
 			"buildCombined_large",
 			"index-lg.css",

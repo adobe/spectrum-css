@@ -85,14 +85,10 @@ governing permissions and limitations under the License.
 
 		&.is-disabled {
 			color: var(--spectrum-calendar-day-today-text-color-disabled);
-			border-color: var(
-				--spectrum-calendar-day-today-border-color-disabled
-			);
+			border-color: var(--spectrum-calendar-day-today-border-color-disabled);
 
 			&:before {
-				border-color: var(
-					--spectrum-calendar-day-today-border-color-disabled
-				);
+				border-color: var(--spectrum-calendar-day-today-border-color-disabled);
 			}
 		}
 	}
@@ -109,9 +105,7 @@ governing permissions and limitations under the License.
 		&:active,
 		&.is-selected {
 			color: var(--spectrum-calendar-day-text-color-selected);
-			background: var(
-				--spectrum-calendar-day-background-color-cap-selected
-			);
+			background: var(--spectrum-calendar-day-background-color-cap-selected);
 			border-color: var(--spectrum-calendar-day-border-color-key-focus);
 		}
 	}
@@ -147,9 +141,7 @@ governing permissions and limitations under the License.
 		color: var(--spectrum-calendar-day-text-color-cap-selected);
 
 		&:after {
-			background-color: var(
-				--spectrum-calendar-day-background-color-selected
-			);
+			background-color: var(--spectrum-calendar-day-background-color-selected);
 		}
 
 		&.is-disabled {

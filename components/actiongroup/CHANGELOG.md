@@ -385,14 +385,14 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 🗓 2022-09-22 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/actiongroup@2.0.0...@spectrum-css/actiongroup@3.0.0)
 
--   feat(actiongroup)!: migrate to core tokens (#1492) ([be1d629](https://github.com/adobe/spectrum-css/commit/be1d629)), closes [#1492](https://github.com/adobe/spectrum-css/issues/1492)
+- feat(actiongroup)!: migrate to core tokens (#1492) ([be1d629](https://github.com/adobe/spectrum-css/commit/be1d629)), closes [#1492](https://github.com/adobe/spectrum-css/issues/1492)
 
 ### 🛑 BREAKING CHANGES
 
--   migrates the ActionGroup to core tokens
+- migrates the ActionGroup to core tokens
 
--   feat: migrates the component to core tokens
--   feat: adds t-shirt sizes & requires the addition of a `.spectrum-ActionGroup--size*` class.
+- feat: migrates the component to core tokens
+- feat: adds t-shirt sizes & requires the addition of a `.spectrum-ActionGroup--size*` class.
 
 <a name="2.0.0"></a>
 
@@ -400,11 +400,11 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 🗓 2022-06-16 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/actiongroup@1.0.26...@spectrum-css/actiongroup@2.0.0)
 
--   feat!: updating to latest ActionButton with new markup ([3eef405](https://github.com/adobe/spectrum-css/commit/3eef405))
+- feat!: updating to latest ActionButton with new markup ([3eef405](https://github.com/adobe/spectrum-css/commit/3eef405))
 
 ### 🛑 BREAKING CHANGES
 
--   ActionButton changes icon markup
+- ActionButton changes icon markup
 
 <a name="1.0.26"></a>
 
@@ -478,8 +478,8 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 ### 🐛 Bug fixes
 
--   **actiongroup:** update tokens & utilize gap property ([76db1be](https://github.com/adobe/spectrum-css/commit/76db1be)), closes [#1392](https://github.com/adobe/spectrum-css/issues/1392)
--   begin actiongroup update ([1f5b266](https://github.com/adobe/spectrum-css/commit/1f5b266))
+- **actiongroup:** update tokens & utilize gap property ([76db1be](https://github.com/adobe/spectrum-css/commit/76db1be)), closes [#1392](https://github.com/adobe/spectrum-css/issues/1392)
+- begin actiongroup update ([1f5b266](https://github.com/adobe/spectrum-css/commit/1f5b266))
 
 <a name="1.0.17"></a>
 
@@ -505,7 +505,7 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 ### 🐛 Bug fixes
 
--   correct Actiongroup focus ring ([#1368](https://github.com/adobe/spectrum-css/issues/1368)) ([1c0af74](https://github.com/adobe/spectrum-css/commit/1c0af74))
+- correct Actiongroup focus ring ([#1368](https://github.com/adobe/spectrum-css/issues/1368)) ([1c0af74](https://github.com/adobe/spectrum-css/commit/1c0af74))
 
 <a name="1.0.14"></a>
 
@@ -523,7 +523,7 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 ### 🐛 Bug fixes
 
--   update peer dependencies ([97810cf](https://github.com/adobe/spectrum-css/commit/97810cf))
+- update peer dependencies ([97810cf](https://github.com/adobe/spectrum-css/commit/97810cf))
 
 <a name="1.0.12"></a>
 
@@ -605,7 +605,7 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 ### 🐛 Bug fixes
 
--   updating version number on vars ([f535b49](https://github.com/adobe/spectrum-css/commit/f535b49))
+- updating version number on vars ([f535b49](https://github.com/adobe/spectrum-css/commit/f535b49))
 
 <a name="1.0.3-alpha.3"></a>
 
@@ -671,16 +671,16 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 ### ✨ Features
 
--   update to new ActionButton markup ([a86bfc7](https://github.com/adobe/spectrum-css/commit/a86bfc7))
+- update to new ActionButton markup ([a86bfc7](https://github.com/adobe/spectrum-css/commit/a86bfc7))
 
 ### 🐛 Bug fixes
 
--   assume a Medium Action Button inside of Action Group ([f590d74](https://github.com/adobe/spectrum-css/commit/f590d74))
--   update main, resolved conflicts ([d7880a2](https://github.com/adobe/spectrum-css/commit/d7880a2))
+- assume a Medium Action Button inside of Action Group ([f590d74](https://github.com/adobe/spectrum-css/commit/f590d74))
+- update main, resolved conflicts ([d7880a2](https://github.com/adobe/spectrum-css/commit/d7880a2))
 
 ### 🛑 BREAKING CHANGES
 
--   .spectrum-ActionButton--sizeM now required for all uses
+- .spectrum-ActionButton--sizeM now required for all uses
 
 <a name="1.0.0-beta.4"></a>
 
@@ -698,9 +698,9 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 ### 🐛 Bug fixes
 
--   actiongroup wrapping, fixes [#749](https://github.com/adobe/spectrum-css/issues/749) ([8b654b7](https://github.com/adobe/spectrum-css/commit/8b654b7))
--   removed deprecated tokens from actiongroup ([4dfe577](https://github.com/adobe/spectrum-css/commit/4dfe577))
--   workflow icon size change to medium ([#917](https://github.com/adobe/spectrum-css/issues/917)) ([a609ee6](https://github.com/adobe/spectrum-css/commit/a609ee6))
+- actiongroup wrapping, fixes [#749](https://github.com/adobe/spectrum-css/issues/749) ([8b654b7](https://github.com/adobe/spectrum-css/commit/8b654b7))
+- removed deprecated tokens from actiongroup ([4dfe577](https://github.com/adobe/spectrum-css/commit/4dfe577))
+- workflow icon size change to medium ([#917](https://github.com/adobe/spectrum-css/issues/917)) ([a609ee6](https://github.com/adobe/spectrum-css/commit/a609ee6))
 
 <a name="1.0.0-beta.2"></a>
 
@@ -718,25 +718,25 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 ### 🐛 Bug fixes
 
--   quiet compact Action Group margin ([#724](https://github.com/adobe/spectrum-css/issues/724)) ([cbffcf2](https://github.com/adobe/spectrum-css/commit/cbffcf2))
+- quiet compact Action Group margin ([#724](https://github.com/adobe/spectrum-css/issues/724)) ([cbffcf2](https://github.com/adobe/spectrum-css/commit/cbffcf2))
 
--   Button Breaking Changes (#649) ([abf116b](https://github.com/adobe/spectrum-css/commit/abf116b)), closes [#649](https://github.com/adobe/spectrum-css/issues/649) [#519](https://github.com/adobe/spectrum-css/issues/519) [#620](https://github.com/adobe/spectrum-css/issues/620) [#606](https://github.com/adobe/spectrum-css/issues/606)
+- Button Breaking Changes (#649) ([abf116b](https://github.com/adobe/spectrum-css/commit/abf116b)), closes [#649](https://github.com/adobe/spectrum-css/issues/649) [#519](https://github.com/adobe/spectrum-css/issues/519) [#620](https://github.com/adobe/spectrum-css/issues/620) [#606](https://github.com/adobe/spectrum-css/issues/606)
 
 ### 🛑 BREAKING CHANGES
 
--   Tool button has been removed
+- Tool button has been removed
 
--   fix: interaction on mobile, text select
+- fix: interaction on mobile, text select
 
--   feat: add Emphasized Action Button
+- feat: add Emphasized Action Button
 
--   docs: add exampes for Quiet Emphasized Action Button
+- docs: add exampes for Quiet Emphasized Action Button
 
 fix: correct Quiet Emphasized Action Button
 
--   feat: button group
--   Button group no longer supports Action Button, just normal buttons
--   Margins have been removed from adjacent buttons. Use ButtonGroup instead.
+- feat: button group
+- Button group no longer supports Action Button, just normal buttons
+- Margins have been removed from adjacent buttons. Use ButtonGroup instead.
 
 <a name="3.0.0-beta.1"></a>
 
@@ -754,7 +754,7 @@ fix: correct Quiet Emphasized Action Button
 
 ### ✨ Features
 
--   make ButtonGroup support RTL ([eeb2d4e](https://github.com/adobe/spectrum-css/commit/eeb2d4e))
+- make ButtonGroup support RTL ([eeb2d4e](https://github.com/adobe/spectrum-css/commit/eeb2d4e))
 
 <a name="2.2.1"></a>
 
@@ -772,7 +772,7 @@ fix: correct Quiet Emphasized Action Button
 
 ### ✨ Features
 
--   adding t-shirt sized typography, fixes [#210](https://github.com/adobe/spectrum-css/issues/210), closes [#416](https://github.com/adobe/spectrum-css/issues/416) ([#408](https://github.com/adobe/spectrum-css/issues/408)) ([3921bcb](https://github.com/adobe/spectrum-css/commit/3921bcb)), closes [#523](https://github.com/adobe/spectrum-css/issues/523)
+- adding t-shirt sized typography, fixes [#210](https://github.com/adobe/spectrum-css/issues/210), closes [#416](https://github.com/adobe/spectrum-css/issues/416) ([#408](https://github.com/adobe/spectrum-css/issues/408)) ([3921bcb](https://github.com/adobe/spectrum-css/commit/3921bcb)), closes [#523](https://github.com/adobe/spectrum-css/issues/523)
 
 <a name="2.1.0"></a>
 
@@ -782,7 +782,7 @@ fix: correct Quiet Emphasized Action Button
 
 ### ✨ Features
 
--   support vertical Rules inside of ButtonGroup, related to [#455](https://github.com/adobe/spectrum-css/issues/455) ([ea7b85f](https://github.com/adobe/spectrum-css/commit/ea7b85f))
+- support vertical Rules inside of ButtonGroup, related to [#455](https://github.com/adobe/spectrum-css/issues/455) ([ea7b85f](https://github.com/adobe/spectrum-css/commit/ea7b85f))
 
 <a name="2.0.3"></a>
 
@@ -816,4 +816,4 @@ fix: correct Quiet Emphasized Action Button
 
 ### ✨ Features
 
--   move to individually versioned packages with Lerna ([#265](https://github.com/adobe/spectrum-css/issues/265)) ([cb7fd4b](https://github.com/adobe/spectrum-css/commit/cb7fd4b)), closes [#231](https://github.com/adobe/spectrum-css/issues/231) [#214](https://github.com/adobe/spectrum-css/issues/214) [#229](https://github.com/adobe/spectrum-css/issues/229) [#240](https://github.com/adobe/spectrum-css/issues/240) [#239](https://github.com/adobe/spectrum-css/issues/239) [#161](https://github.com/adobe/spectrum-css/issues/161) [#242](https://github.com/adobe/spectrum-css/issues/242) [#246](https://github.com/adobe/spectrum-css/issues/246) [#219](https://github.com/adobe/spectrum-css/issues/219) [#235](https://github.com/adobe/spectrum-css/issues/235) [#189](https://github.com/adobe/spectrum-css/issues/189) [#248](https://github.com/adobe/spectrum-css/issues/248) [#232](https://github.com/adobe/spectrum-css/issues/232) [#248](https://github.com/adobe/spectrum-css/issues/248) [#218](https://github.com/adobe/spectrum-css/issues/218) [#237](https://github.com/adobe/spectrum-css/issues/237) [#255](https://github.com/adobe/spectrum-css/issues/255) [#256](https://github.com/adobe/spectrum-css/issues/256) [#258](https://github.com/adobe/spectrum-css/issues/258) [#257](https://github.com/adobe/spectrum-css/issues/257) [#259](https://github.com/adobe/spectrum-css/issues/259)
+- move to individually versioned packages with Lerna ([#265](https://github.com/adobe/spectrum-css/issues/265)) ([cb7fd4b](https://github.com/adobe/spectrum-css/commit/cb7fd4b)), closes [#231](https://github.com/adobe/spectrum-css/issues/231) [#214](https://github.com/adobe/spectrum-css/issues/214) [#229](https://github.com/adobe/spectrum-css/issues/229) [#240](https://github.com/adobe/spectrum-css/issues/240) [#239](https://github.com/adobe/spectrum-css/issues/239) [#161](https://github.com/adobe/spectrum-css/issues/161) [#242](https://github.com/adobe/spectrum-css/issues/242) [#246](https://github.com/adobe/spectrum-css/issues/246) [#219](https://github.com/adobe/spectrum-css/issues/219) [#235](https://github.com/adobe/spectrum-css/issues/235) [#189](https://github.com/adobe/spectrum-css/issues/189) [#248](https://github.com/adobe/spectrum-css/issues/248) [#232](https://github.com/adobe/spectrum-css/issues/232) [#248](https://github.com/adobe/spectrum-css/issues/248) [#218](https://github.com/adobe/spectrum-css/issues/218) [#237](https://github.com/adobe/spectrum-css/issues/237) [#255](https://github.com/adobe/spectrum-css/issues/255) [#256](https://github.com/adobe/spectrum-css/issues/256) [#258](https://github.com/adobe/spectrum-css/issues/258) [#257](https://github.com/adobe/spectrum-css/issues/257) [#259](https://github.com/adobe/spectrum-css/issues/259)

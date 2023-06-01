@@ -13,9 +13,7 @@ governing permissions and limitations under the License.
 %spectrum-overlay {
 	/* TODO: replace with core tokens */
 	--spectrum-overlay-animation-distance: 6px;
-	--spectrum-overlay-animation-duration: var(
-		--spectrum-animation-duration-100
-	);
+	--spectrum-overlay-animation-duration: var(--spectrum-animation-duration-100);
 
 	visibility: hidden;
 
@@ -42,9 +40,7 @@ governing permissions and limitations under the License.
 
 %spectrum-overlay--top--open {
 	--spectrum-overlay-animation-distance: 6px;
-	transform: translateY(
-		calc(-1 * var(--spectrum-overlay-animation-distance))
-	);
+	transform: translateY(calc(-1 * var(--spectrum-overlay-animation-distance)));
 }
 
 %spectrum-overlay--right--open {
@@ -54,7 +50,5 @@ governing permissions and limitations under the License.
 
 %spectrum-overlay--left--open {
 	--spectrum-overlay-animation-distance: 6px;
-	transform: translateX(
-		calc(-1 * var(--spectrum-overlay-animation-distance))
-	);
+	transform: translateX(calc(-1 * var(--spectrum-overlay-animation-distance)));
 }

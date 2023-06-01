@@ -43,9 +43,7 @@ governing permissions and limitations under the License.
 	--spectrum-heading-sans-serif-font-family: var(
 		--spectrum-sans-font-family-stack
 	);
-	--spectrum-heading-serif-font-family: var(
-		--spectrum-serif-font-family-stack
-	);
+	--spectrum-heading-serif-font-family: var(--spectrum-serif-font-family-stack);
 	--spectrum-heading-cjk-font-family: var(--spectrum-cjk-font-family-stack);
 
 	--spectrum-heading-cjk-letter-spacing: var(--spectrum-cjk-letter-spacing);
@@ -274,15 +272,11 @@ governing permissions and limitations under the License.
 	em strong {
 		font-style: var(
 			--mod-heading-sans-serif-heavy-strong-emphasized-font-style,
-			var(
-				--spectrum-heading-sans-serif-heavy-strong-emphasized-font-style
-			)
+			var(--spectrum-heading-sans-serif-heavy-strong-emphasized-font-style)
 		);
 		font-weight: var(
 			--mod-heading-sans-serif-heavy-strong-emphasized-font-weight,
-			var(
-				--spectrum-heading-sans-serif-heavy-strong-emphasized-font-weight
-			)
+			var(--spectrum-heading-sans-serif-heavy-strong-emphasized-font-weight)
 		);
 	}
 
@@ -377,15 +371,11 @@ governing permissions and limitations under the License.
 	em strong {
 		font-style: var(
 			--mod-heading-sans-serif-light-strong-emphasized-font-style,
-			var(
-				--spectrum-heading-sans-serif-light-strong-emphasized-font-style
-			)
+			var(--spectrum-heading-sans-serif-light-strong-emphasized-font-style)
 		);
 		font-weight: var(
 			--mod-heading-sans-serif-light-strong-emphasized-font-weight,
-			var(
-				--spectrum-heading-sans-serif-light-strong-emphasized-font-weight
-			)
+			var(--spectrum-heading-sans-serif-light-strong-emphasized-font-weight)
 		);
 	}
 
@@ -845,9 +835,7 @@ governing permissions and limitations under the License.
 	--spectrum-detail-sans-serif-font-family: var(
 		--spectrum-sans-font-family-stack
 	);
-	--spectrum-detail-serif-font-family: var(
-		--spectrum-serif-font-family-stack
-	);
+	--spectrum-detail-serif-font-family: var(--spectrum-serif-font-family-stack);
 	--spectrum-detail-cjk-font-family: var(--spectrum-cjk-font-family-stack);
 
 	--spectrum-detail-margin-start: calc(
@@ -1109,9 +1097,7 @@ governing permissions and limitations under the License.
 		);
 		font-weight: var(
 			--mod-detail-sans-serif-light-strong-emphasized-font-weight,
-			var(
-				--spectrum-detail-sans-serif-light-strong-emphasized-font-weight
-			)
+			var(--spectrum-detail-sans-serif-light-strong-emphasized-font-weight)
 		);
 	}
 

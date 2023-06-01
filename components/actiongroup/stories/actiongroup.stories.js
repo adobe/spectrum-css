@@ -5,8 +5,7 @@ import { default as ActionButton } from "@spectrum-css/actionbutton/stories/acti
 
 export default {
 	title: "Action group",
-	description:
-		"The Action group component is a collection of action buttons.",
+	description: "The Action group component is a collection of action buttons.",
 	component: "ActionGroup",
 	argTypes: {
 		areQuiet: ActionButton.argTypes.isQuiet,

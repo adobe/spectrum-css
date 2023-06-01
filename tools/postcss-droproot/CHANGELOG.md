@@ -27,7 +27,7 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 ### 🐛 Bug fixes
 
--   correct PostCSS plugin names ([81ad868](https://github.com/adobe/spectrum-css/commit/81ad868))
+- correct PostCSS plugin names ([81ad868](https://github.com/adobe/spectrum-css/commit/81ad868))
 
 <a name="1.0.1"></a>
 

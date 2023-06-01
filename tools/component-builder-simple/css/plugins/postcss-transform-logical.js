@@ -68,18 +68,18 @@ module.exports = postcss.plugin("postcss-transform-logical", function (opts) {
 						if (rotationNode !== null) {
 							// Ignore 0 deg initial rotations for LTR; this means we meant for it to be standard rotation for LTR
 							if (parseInt(originalRotation, 10) !== 0) {
-								let ltrSelector = selectorParser(
-									addLTR
-								).processSync(rule.selector);
+								let ltrSelector = selectorParser(addLTR).processSync(
+									rule.selector
+								);
 								let ltrRule = postcss.parse(
 									`${ltrSelector} { transform: ${value}; }`
 								);
 								root.insertBefore(rule, ltrRule);
 
 								// Use the same rotation, but flip horizontal
-								let rtlSelector = selectorParser(
-									addRTL
-								).processSync(rule.selector);
+								let rtlSelector = selectorParser(addRTL).processSync(
+									rule.selector
+								);
 								let rtlRule = postcss.parse(
 									`${rtlSelector} { transform: ${matrix} ${value}; }`
 								);
@@ -89,9 +89,9 @@ module.exports = postcss.plugin("postcss-transform-logical", function (opts) {
 								rotationNode.remove();
 
 								// Add direction to all matching selectors
-								let newSelector = selectorParser(
-									addRTL
-								).processSync(rule.selector);
+								let newSelector = selectorParser(addRTL).processSync(
+									rule.selector
+								);
 
 								// Just flip horizontal
 								let rtlRule = postcss.parse(

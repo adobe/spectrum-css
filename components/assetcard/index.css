@@ -41,13 +41,9 @@ governing permissions and limitations under the License.
 		--spectrum-alias-border-color-hover
 	);
 	/* todo: this was hardcoded, it should reference --spectrum-alias-border-color-down once that becomes +200 */
-	--spectrum-assetcard-border-color-down: var(
-		--spectrum-global-color-gray-600
-	);
+	--spectrum-assetcard-border-color-down: var(--spectrum-global-color-gray-600);
 
-	--spectrum-assetcard-background-color: var(
-		--spectrum-global-color-gray-200
-	);
+	--spectrum-assetcard-background-color: var(--spectrum-global-color-gray-200);
 
 	--spectrum-assetcard-focus-ring-gap: var(
 		--spectrum-global-dimension-static-size-65
@@ -306,8 +302,7 @@ governing permissions and limitations under the License.
 	visibility: hidden;
 
 	opacity: 0;
-	transition: opacity var(--spectrum-global-animation-duration-100)
-		ease-in-out;
+	transition: opacity var(--spectrum-global-animation-duration-100) ease-in-out;
 }
 
 .spectrum-AssetCard-selectionOrder {
@@ -326,17 +321,13 @@ governing permissions and limitations under the License.
 		}
 
 		.spectrum-AssetCard-selectionOverlay {
-			background-color: var(
-				--spectrum-assetcard-overlay-background-color
-			);
+			background-color: var(--spectrum-assetcard-overlay-background-color);
 		}
 
 		&:hover {
 			.spectrum-AssetCard-assetContainer {
 				&:after {
-					border-color: var(
-						--spectrum-assetcard-border-color-selected-hover
-					);
+					border-color: var(--spectrum-assetcard-border-color-selected-hover);
 				}
 			}
 		}
@@ -344,9 +335,7 @@ governing permissions and limitations under the License.
 		&:active {
 			.spectrum-AssetCard-assetContainer {
 				&:after {
-					border-color: var(
-						--spectrum-assetcard-border-color-selected-down
-					);
+					border-color: var(--spectrum-assetcard-border-color-selected-down);
 				}
 			}
 		}

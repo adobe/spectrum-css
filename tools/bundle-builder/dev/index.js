@@ -81,17 +81,16 @@ function watchWithinPackages(glob, task, files) {
 					}
 
 					// Copy files
-					gulp.src(`${dirs.components}/${packageName}/dist/${files}`)
+					gulp
+						.src(`${dirs.components}/${packageName}/dist/${files}`)
 						.pipe(gulp.dest(`dist/components/${packageName}/`))
 						.on("end", () => {
-							logger.debug(
-								`Injecting files from ${packageName}/:\n  ${files}`
-							);
+							logger.debug(`Injecting files from ${packageName}/:\n  ${files}`);
 
 							// Inject
-							gulp.src(
-								`dist/components/${packageName}/${files}`
-							).pipe(browserSync.stream());
+							gulp
+								.src(`dist/components/${packageName}/${files}`)
+								.pipe(browserSync.stream());
 
 							changedFile = null;
 

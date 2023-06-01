@@ -18,9 +18,7 @@ governing permissions and limitations under the License.
 	}
 
 	&:focus {
-		border-color: var(
-			--spectrum-pagination-page-button-border-color-key-focus
-		);
+		border-color: var(--spectrum-pagination-page-button-border-color-key-focus);
 	}
 
 	&.is-selected {

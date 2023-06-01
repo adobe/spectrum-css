@@ -17,8 +17,7 @@ export const Template = ({
 	const { express } = globals;
 
 	try {
-		if (!express)
-			import(/* webpackPrefetch: true */ "../themes/spectrum.css");
+		if (!express) import(/* webpackPrefetch: true */ "../themes/spectrum.css");
 		else import(/* webpackPrefetch: true */ "../themes/express.css");
 	} catch (e) {
 		console.warn(e);
@@ -28,19 +27,18 @@ export const Template = ({
 		return html`
     <hr
       class=${classMap({
-			[rootClass]: true,
-			[`${rootClass}--size${upperCase(size)}`]:
-				typeof size !== "undefined",
-			[`${rootClass}--vertical`]: vertical === true,
-			[`${rootClass}--static${capitalize(lowerCase(staticColor))}`]:
-				typeof staticColor !== "undefined",
-			...customClasses.reduce((a, c) => ({ ...a, [c]: true }), {}),
-		})}
+				[rootClass]: true,
+				[`${rootClass}--size${upperCase(size)}`]: typeof size !== "undefined",
+				[`${rootClass}--vertical`]: vertical === true,
+				[`${rootClass}--static${capitalize(lowerCase(staticColor))}`]:
+					typeof staticColor !== "undefined",
+				...customClasses.reduce((a, c) => ({ ...a, [c]: true }), {}),
+			})}
       style=${
-			vertical === true
-				? "min-height: 20px; height: auto; align-self: stretch"
-				: ""
-		}
+				vertical === true
+					? "min-height: 20px; height: auto; align-self: stretch"
+					: ""
+			}
       role="separator"
       >
     </hr>`;

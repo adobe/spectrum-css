@@ -27,11 +27,11 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 ### ✨ Features
 
--   updated typography token names to use standardorder ([50145fe](https://github.com/adobe/spectrum-css/commit/50145fe))
+- updated typography token names to use standardorder ([50145fe](https://github.com/adobe/spectrum-css/commit/50145fe))
 
 ### 🛑 BREAKING CHANGES
 
--   realigned classnames
+- realigned classnames
 
 <a name="1.1.0"></a>
 
@@ -41,4 +41,4 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 ### ✨ Features
 
--   add postcss-transformselectors ([728854d](https://github.com/adobe/spectrum-css/commit/728854d))
+- add postcss-transformselectors ([728854d](https://github.com/adobe/spectrum-css/commit/728854d))

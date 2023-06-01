@@ -273,11 +273,11 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 🗓 2023-02-01 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/tag@4.0.9...@spectrum-css/tag@5.0.0)
 
--   chore(tokens)!: use latest dependency & fix build error (#1591) ([f2532e7](https://github.com/adobe/spectrum-css/commit/f2532e7)), closes [#1591](https://github.com/adobe/spectrum-css/issues/1591)
+- chore(tokens)!: use latest dependency & fix build error (#1591) ([f2532e7](https://github.com/adobe/spectrum-css/commit/f2532e7)), closes [#1591](https://github.com/adobe/spectrum-css/issues/1591)
 
 ### 🛑 BREAKING CHANGES
 
--   uses latest `@adobe/spectrum-tokens` dependency which includes token renames
+- uses latest `@adobe/spectrum-tokens` dependency which includes token renames
 
 <a name="4.0.9"></a>
 
@@ -357,11 +357,11 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 🗓 2022-12-08 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/tag@3.3.15...@spectrum-css/tag@4.0.0)
 
--   refactor(tag)!: migrate to core tokens (#1520) ([a9612d1](https://github.com/adobe/spectrum-css/commit/a9612d1)), closes [#1520](https://github.com/adobe/spectrum-css/issues/1520)
+- refactor(tag)!: migrate to core tokens (#1520) ([a9612d1](https://github.com/adobe/spectrum-css/commit/a9612d1)), closes [#1520](https://github.com/adobe/spectrum-css/issues/1520)
 
 ### 🛑 BREAKING CHANGES
 
--   migrates tag to core tokens
+- migrates tag to core tokens
 
 Co-authored-by: Patrick Fulton <pfulton@adobe.com>
 
@@ -397,7 +397,7 @@ Co-authored-by: Patrick Fulton <pfulton@adobe.com>
 
 ### 🐛 Bug fixes
 
--   tag WHCM ([2a87aed](https://github.com/adobe/spectrum-css/commit/2a87aed))
+- tag WHCM ([2a87aed](https://github.com/adobe/spectrum-css/commit/2a87aed))
 
 <a name="3.3.11"></a>
 
@@ -415,7 +415,7 @@ Co-authored-by: Patrick Fulton <pfulton@adobe.com>
 
 ### 🐛 Bug fixes
 
--   stick to a single selector for consistency in tag clearbutton ([2d8261e](https://github.com/adobe/spectrum-css/commit/2d8261e))
+- stick to a single selector for consistency in tag clearbutton ([2d8261e](https://github.com/adobe/spectrum-css/commit/2d8261e))
 
 <a name="3.3.9"></a>
 
@@ -489,8 +489,8 @@ Co-authored-by: Patrick Fulton <pfulton@adobe.com>
 
 ### 🐛 Bug fixes
 
--   add express support to tag ([92355bb](https://github.com/adobe/spectrum-css/commit/92355bb))
--   update tag for express WIP ([fe2d8d1](https://github.com/adobe/spectrum-css/commit/fe2d8d1))
+- add express support to tag ([92355bb](https://github.com/adobe/spectrum-css/commit/92355bb))
+- update tag for express WIP ([fe2d8d1](https://github.com/adobe/spectrum-css/commit/fe2d8d1))
 
 <a name="3.3.0"></a>
 
@@ -500,11 +500,11 @@ Co-authored-by: Patrick Fulton <pfulton@adobe.com>
 
 ### ✨ Features
 
--   break out ClearButton and LogicButton into their own packages ([3cc0a5f](https://github.com/adobe/spectrum-css/commit/3cc0a5f))
+- break out ClearButton and LogicButton into their own packages ([3cc0a5f](https://github.com/adobe/spectrum-css/commit/3cc0a5f))
 
 ### 🐛 Bug fixes
 
--   update peer dependencies ([97810cf](https://github.com/adobe/spectrum-css/commit/97810cf))
+- update peer dependencies ([97810cf](https://github.com/adobe/spectrum-css/commit/97810cf))
 
 <a name="3.2.0"></a>
 
@@ -522,7 +522,7 @@ Co-authored-by: Patrick Fulton <pfulton@adobe.com>
 
 ### ✨ Features
 
--   break out ClearButton and LogicButton into their own packages ([a2092ab](https://github.com/adobe/spectrum-css/commit/a2092ab))
+- break out ClearButton and LogicButton into their own packages ([a2092ab](https://github.com/adobe/spectrum-css/commit/a2092ab))
 
 <a name="3.1.4"></a>
 
@@ -564,7 +564,7 @@ Co-authored-by: Patrick Fulton <pfulton@adobe.com>
 
 ### ✨ Features
 
--   make ClearButton build again, unblock CCX ([#1304](https://github.com/adobe/spectrum-css/issues/1304)) ([ae9399a](https://github.com/adobe/spectrum-css/commit/ae9399a))
+- make ClearButton build again, unblock CCX ([#1304](https://github.com/adobe/spectrum-css/issues/1304)) ([ae9399a](https://github.com/adobe/spectrum-css/commit/ae9399a))
 
 <a name="3.0.0"></a>
 
@@ -574,15 +574,15 @@ Co-authored-by: Patrick Fulton <pfulton@adobe.com>
 
 ### 🐛 Bug fixes
 
--   adjusted tag avatar in metadata. fixes [#1239](https://github.com/adobe/spectrum-css/issues/1239) fixes [#693](https://github.com/adobe/spectrum-css/issues/693) ([262a44d](https://github.com/adobe/spectrum-css/commit/262a44d))
--   updating version number on vars ([f535b49](https://github.com/adobe/spectrum-css/commit/f535b49))
+- adjusted tag avatar in metadata. fixes [#1239](https://github.com/adobe/spectrum-css/issues/1239) fixes [#693](https://github.com/adobe/spectrum-css/issues/693) ([262a44d](https://github.com/adobe/spectrum-css/commit/262a44d))
+- updating version number on vars ([f535b49](https://github.com/adobe/spectrum-css/commit/f535b49))
 
--   fix!: avatar needs a div wrapper for to support express border overlay ([f54b645](https://github.com/adobe/spectrum-css/commit/f54b645))
+- fix!: avatar needs a div wrapper for to support express border overlay ([f54b645](https://github.com/adobe/spectrum-css/commit/f54b645))
 
 ### 🛑 BREAKING CHANGES
 
--   for express to support the transparent border overlay,
-    the avatar needs to be wrapped in a div to support pseudo elements.
+- for express to support the transparent border overlay,
+  the avatar needs to be wrapped in a div to support pseudo elements.
 
 <a name="2.0.0"></a>
 
@@ -592,7 +592,7 @@ Co-authored-by: Patrick Fulton <pfulton@adobe.com>
 
 ### 🐛 Bug fixes
 
--   updating version number on vars ([f535b49](https://github.com/adobe/spectrum-css/commit/f535b49))
+- updating version number on vars ([f535b49](https://github.com/adobe/spectrum-css/commit/f535b49))
 
 <a name="2.0.0-alpha.3"></a>
 
@@ -626,13 +626,13 @@ Co-authored-by: Patrick Fulton <pfulton@adobe.com>
 
 ### ✨ Features
 
--   align tags with more recent DNA tokens ([0f41e47](https://github.com/adobe/spectrum-css/commit/0f41e47))
+- align tags with more recent DNA tokens ([0f41e47](https://github.com/adobe/spectrum-css/commit/0f41e47))
 
 ### 🐛 Bug fixes
 
--   taggroup to use more dna tokens ([243aad6](https://github.com/adobe/spectrum-css/commit/243aad6))
--   updated focus ring tokens to assume keyboard focus state ([2db4755](https://github.com/adobe/spectrum-css/commit/2db4755))
+- taggroup to use more dna tokens ([243aad6](https://github.com/adobe/spectrum-css/commit/243aad6))
+- updated focus ring tokens to assume keyboard focus state ([2db4755](https://github.com/adobe/spectrum-css/commit/2db4755))
 
 ### 🛑 BREAKING CHANGES
 
--   changed tags to taggroup and broke tag into it's own component
+- changed tags to taggroup and broke tag into it's own component

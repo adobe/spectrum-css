@@ -51,12 +51,7 @@ export const TreeViewItem = ({
 				class="${rootClass}-itemLink"
 				@click=${onclick ??
 				function (evt) {
-					if (
-						isDisabled ||
-						!evt ||
-						!evt.target ||
-						typeof items === "undefined"
-					)
+					if (isDisabled || !evt || !evt.target || typeof items === "undefined")
 						return;
 					evt.preventDefault();
 					const closest = evt.target.closest(`.${rootClass}-item`);

@@ -79,9 +79,7 @@ governing permissions and limitations under the License.
 	white-space: nowrap;
 
 	transition: color
-		var(
-			--spectrum-tabs-texticon-tabitem-selection-indicator-animation-duration
-		)
+		var(--spectrum-tabs-texticon-tabitem-selection-indicator-animation-duration)
 		ease-out;
 	cursor: pointer;
 	outline: none;
@@ -162,9 +160,7 @@ governing permissions and limitations under the License.
 	z-index: 0;
 
 	transition: transform
-		var(
-			--spectrum-tabs-texticon-tabitem-selection-indicator-animation-duration
-		)
+		var(--spectrum-tabs-texticon-tabitem-selection-indicator-animation-duration)
 		var(--spectrum-tabs-texticon-tabitem-selection-indicator-animation-ease);
 	transform-origin: top left;
 
@@ -191,9 +187,7 @@ governing permissions and limitations under the License.
 
 		/* Target anything since React likes to add lots of happy <div>s around all things */
 		& + *:not(.spectrum-Tabs-selectionIndicator) {
-			margin-inline-start: var(
-				--spectrum-tabs-textonly-tabitem-margin-right
-			);
+			margin-inline-start: var(--spectrum-tabs-textonly-tabitem-margin-right);
 		}
 	}
 
@@ -252,9 +246,7 @@ governing permissions and limitations under the License.
 
 	&.spectrum-Tabs--compact {
 		.spectrum-Tabs-item {
-			block-size: var(
-				--spectrum-tabs-compact-vertical-textonly-tabitem-height
-			);
+			block-size: var(--spectrum-tabs-compact-vertical-textonly-tabitem-height);
 			line-height: var(
 				--spectrum-tabs-compact-vertical-textonly-tabitem-height
 			);

@@ -257,11 +257,11 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 🗓 2023-02-01 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/statuslight@5.0.10...@spectrum-css/statuslight@6.0.0)
 
--   chore(tokens)!: use latest dependency & fix build error (#1591) ([f2532e7](https://github.com/adobe/spectrum-css/commit/f2532e7)), closes [#1591](https://github.com/adobe/spectrum-css/issues/1591)
+- chore(tokens)!: use latest dependency & fix build error (#1591) ([f2532e7](https://github.com/adobe/spectrum-css/commit/f2532e7)), closes [#1591](https://github.com/adobe/spectrum-css/issues/1591)
 
 ### 🛑 BREAKING CHANGES
 
--   uses latest `@adobe/spectrum-tokens` dependency which includes token renames
+- uses latest `@adobe/spectrum-tokens` dependency which includes token renames
 
 <a name="5.0.10"></a>
 
@@ -327,7 +327,7 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 ### 🐛 Bug fixes
 
--   resolve missing tokens errors due to name changes ([#1555](https://github.com/adobe/spectrum-css/issues/1555)) ([ddae027](https://github.com/adobe/spectrum-css/commit/ddae027))
+- resolve missing tokens errors due to name changes ([#1555](https://github.com/adobe/spectrum-css/issues/1555)) ([ddae027](https://github.com/adobe/spectrum-css/commit/ddae027))
 
 <a name="5.0.2"></a>
 
@@ -351,16 +351,16 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 🗓 2022-09-21 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/statuslight@4.0.14...@spectrum-css/statuslight@5.0.0)
 
--   feat(statuslight)!: migrate statuslight to core tokens (#1495) ([3dc991d](https://github.com/adobe/spectrum-css/commit/3dc991d)), closes [#1495](https://github.com/adobe/spectrum-css/issues/1495)
+- feat(statuslight)!: migrate statuslight to core tokens (#1495) ([3dc991d](https://github.com/adobe/spectrum-css/commit/3dc991d)), closes [#1495](https://github.com/adobe/spectrum-css/issues/1495)
 
 ### 🛑 BREAKING CHANGES
 
--   migrates statuslight to core tokens
+- migrates statuslight to core tokens
 
--   migrates all tokens to core tokens
--   removes `skin.css`
--   deprecates and removes `disabled` state
--   adds high-contrast and modifier tokens
+- migrates all tokens to core tokens
+- removes `skin.css`
+- deprecates and removes `disabled` state
+- adds high-contrast and modifier tokens
 
 Co-authored-by: Patrick Fulton <pfulton@adobe.com>
 
@@ -388,7 +388,7 @@ Co-authored-by: Patrick Fulton <pfulton@adobe.com>
 
 ### 🐛 Bug fixes
 
--   statuslight WHCM ([4073fc6](https://github.com/adobe/spectrum-css/commit/4073fc6))
+- statuslight WHCM ([4073fc6](https://github.com/adobe/spectrum-css/commit/4073fc6))
 
 <a name="4.0.11"></a>
 
@@ -470,7 +470,7 @@ Co-authored-by: Patrick Fulton <pfulton@adobe.com>
 
 ### 🐛 Bug fixes
 
--   update peer dependencies ([97810cf](https://github.com/adobe/spectrum-css/commit/97810cf))
+- update peer dependencies ([97810cf](https://github.com/adobe/spectrum-css/commit/97810cf))
 
 <a name="4.0.1"></a>
 
@@ -496,13 +496,13 @@ Co-authored-by: Patrick Fulton <pfulton@adobe.com>
 
 ### 🐛 Bug fixes
 
--   **statuslight:** provide min-height & use updated vars ([6a3f824](https://github.com/adobe/spectrum-css/commit/6a3f824))
+- **statuslight:** provide min-height & use updated vars ([6a3f824](https://github.com/adobe/spectrum-css/commit/6a3f824))
 
--   feat(statuslight)!: use new tokens, new spacing ([700abe9](https://github.com/adobe/spectrum-css/commit/700abe9))
+- feat(statuslight)!: use new tokens, new spacing ([700abe9](https://github.com/adobe/spectrum-css/commit/700abe9))
 
 ### 🛑 BREAKING CHANGES
 
--   spacing in StatusLight has changed and may impact layout when it is used with other components.
+- spacing in StatusLight has changed and may impact layout when it is used with other components.
 
 <a name="3.0.8"></a>
 
@@ -536,7 +536,7 @@ Co-authored-by: Patrick Fulton <pfulton@adobe.com>
 
 ### 🐛 Bug fixes
 
--   updating version number on vars ([f535b49](https://github.com/adobe/spectrum-css/commit/f535b49))
+- updating version number on vars ([f535b49](https://github.com/adobe/spectrum-css/commit/f535b49))
 
 <a name="3.0.4"></a>
 
@@ -546,7 +546,7 @@ Co-authored-by: Patrick Fulton <pfulton@adobe.com>
 
 ### 🐛 Bug fixes
 
--   updating version number on vars ([f535b49](https://github.com/adobe/spectrum-css/commit/f535b49))
+- updating version number on vars ([f535b49](https://github.com/adobe/spectrum-css/commit/f535b49))
 
 <a name="3.0.3"></a>
 
@@ -556,7 +556,7 @@ Co-authored-by: Patrick Fulton <pfulton@adobe.com>
 
 ### 🐛 Bug fixes
 
--   updating version number on vars ([f535b49](https://github.com/adobe/spectrum-css/commit/f535b49))
+- updating version number on vars ([f535b49](https://github.com/adobe/spectrum-css/commit/f535b49))
 
 <a name="3.0.3-alpha.3"></a>
 
@@ -622,7 +622,7 @@ Co-authored-by: Patrick Fulton <pfulton@adobe.com>
 
 ### ✨ Features
 
--   implement t-shirt sizing for Status Light, closes [#686](https://github.com/adobe/spectrum-css/issues/686) ([0a20b52](https://github.com/adobe/spectrum-css/commit/0a20b52))
+- implement t-shirt sizing for Status Light, closes [#686](https://github.com/adobe/spectrum-css/issues/686) ([0a20b52](https://github.com/adobe/spectrum-css/commit/0a20b52))
 
 <a name="3.0.0-beta.4"></a>
 
@@ -640,7 +640,7 @@ Co-authored-by: Patrick Fulton <pfulton@adobe.com>
 
 ### 🐛 Bug fixes
 
--   wip fix more components ([b74dbb8](https://github.com/adobe/spectrum-css/commit/b74dbb8))
+- wip fix more components ([b74dbb8](https://github.com/adobe/spectrum-css/commit/b74dbb8))
 
 <a name="3.0.0-beta.2"></a>
 
@@ -666,7 +666,7 @@ Co-authored-by: Patrick Fulton <pfulton@adobe.com>
 
 ### ✨ Features
 
--   make StatusLight support RTL ([e0d398b](https://github.com/adobe/spectrum-css/commit/e0d398b))
+- make StatusLight support RTL ([e0d398b](https://github.com/adobe/spectrum-css/commit/e0d398b))
 
 <a name="2.0.6"></a>
 
@@ -684,7 +684,7 @@ Co-authored-by: Patrick Fulton <pfulton@adobe.com>
 
 ### 🐛 Bug fixes
 
--   [Accessibility] StatusLight dot disappears in High Contrast Mode, fixes [#508](https://github.com/adobe/spectrum-css/issues/508) ([#509](https://github.com/adobe/spectrum-css/issues/509)) ([0909251](https://github.com/adobe/spectrum-css/commit/0909251))
+- [Accessibility] StatusLight dot disappears in High Contrast Mode, fixes [#508](https://github.com/adobe/spectrum-css/issues/508) ([#509](https://github.com/adobe/spectrum-css/issues/509)) ([0909251](https://github.com/adobe/spectrum-css/commit/0909251))
 
 <a name="2.0.4"></a>
 
@@ -694,7 +694,7 @@ Co-authored-by: Patrick Fulton <pfulton@adobe.com>
 
 ### 🐛 Bug fixes
 
--   align labels for Radio/Checkbox/Switch/Status light ([#458](https://github.com/adobe/spectrum-css/issues/458)) ([616a1b4](https://github.com/adobe/spectrum-css/commit/616a1b4)), closes [#406](https://github.com/adobe/spectrum-css/issues/406) [#402](https://github.com/adobe/spectrum-css/issues/402) [#403](https://github.com/adobe/spectrum-css/issues/403) [#426](https://github.com/adobe/spectrum-css/issues/426)
+- align labels for Radio/Checkbox/Switch/Status light ([#458](https://github.com/adobe/spectrum-css/issues/458)) ([616a1b4](https://github.com/adobe/spectrum-css/commit/616a1b4)), closes [#406](https://github.com/adobe/spectrum-css/issues/406) [#402](https://github.com/adobe/spectrum-css/issues/402) [#403](https://github.com/adobe/spectrum-css/issues/403) [#426](https://github.com/adobe/spectrum-css/issues/426)
 
 <a name="2.0.3"></a>
 
@@ -704,7 +704,7 @@ Co-authored-by: Patrick Fulton <pfulton@adobe.com>
 
 ### 🐛 Bug fixes
 
--   vertical alignment of Status Light text, fixes [#426](https://github.com/adobe/spectrum-css/issues/426) ([#436](https://github.com/adobe/spectrum-css/issues/436)) ([b87148b](https://github.com/adobe/spectrum-css/commit/b87148b))
+- vertical alignment of Status Light text, fixes [#426](https://github.com/adobe/spectrum-css/issues/426) ([#436](https://github.com/adobe/spectrum-css/issues/436)) ([b87148b](https://github.com/adobe/spectrum-css/commit/b87148b))
 
 <a name="2.0.2"></a>
 
@@ -730,4 +730,4 @@ Co-authored-by: Patrick Fulton <pfulton@adobe.com>
 
 ### ✨ Features
 
--   move to individually versioned packages with Lerna ([#265](https://github.com/adobe/spectrum-css/issues/265)) ([cb7fd4b](https://github.com/adobe/spectrum-css/commit/cb7fd4b)), closes [#231](https://github.com/adobe/spectrum-css/issues/231) [#214](https://github.com/adobe/spectrum-css/issues/214) [#229](https://github.com/adobe/spectrum-css/issues/229) [#240](https://github.com/adobe/spectrum-css/issues/240) [#239](https://github.com/adobe/spectrum-css/issues/239) [#161](https://github.com/adobe/spectrum-css/issues/161) [#242](https://github.com/adobe/spectrum-css/issues/242) [#246](https://github.com/adobe/spectrum-css/issues/246) [#219](https://github.com/adobe/spectrum-css/issues/219) [#235](https://github.com/adobe/spectrum-css/issues/235) [#189](https://github.com/adobe/spectrum-css/issues/189) [#248](https://github.com/adobe/spectrum-css/issues/248) [#232](https://github.com/adobe/spectrum-css/issues/232) [#248](https://github.com/adobe/spectrum-css/issues/248) [#218](https://github.com/adobe/spectrum-css/issues/218) [#237](https://github.com/adobe/spectrum-css/issues/237) [#255](https://github.com/adobe/spectrum-css/issues/255) [#256](https://github.com/adobe/spectrum-css/issues/256) [#258](https://github.com/adobe/spectrum-css/issues/258) [#257](https://github.com/adobe/spectrum-css/issues/257) [#259](https://github.com/adobe/spectrum-css/issues/259)
+- move to individually versioned packages with Lerna ([#265](https://github.com/adobe/spectrum-css/issues/265)) ([cb7fd4b](https://github.com/adobe/spectrum-css/commit/cb7fd4b)), closes [#231](https://github.com/adobe/spectrum-css/issues/231) [#214](https://github.com/adobe/spectrum-css/issues/214) [#229](https://github.com/adobe/spectrum-css/issues/229) [#240](https://github.com/adobe/spectrum-css/issues/240) [#239](https://github.com/adobe/spectrum-css/issues/239) [#161](https://github.com/adobe/spectrum-css/issues/161) [#242](https://github.com/adobe/spectrum-css/issues/242) [#246](https://github.com/adobe/spectrum-css/issues/246) [#219](https://github.com/adobe/spectrum-css/issues/219) [#235](https://github.com/adobe/spectrum-css/issues/235) [#189](https://github.com/adobe/spectrum-css/issues/189) [#248](https://github.com/adobe/spectrum-css/issues/248) [#232](https://github.com/adobe/spectrum-css/issues/232) [#248](https://github.com/adobe/spectrum-css/issues/248) [#218](https://github.com/adobe/spectrum-css/issues/218) [#237](https://github.com/adobe/spectrum-css/issues/237) [#255](https://github.com/adobe/spectrum-css/issues/255) [#256](https://github.com/adobe/spectrum-css/issues/256) [#258](https://github.com/adobe/spectrum-css/issues/258) [#257](https://github.com/adobe/spectrum-css/issues/257) [#259](https://github.com/adobe/spectrum-css/issues/259)

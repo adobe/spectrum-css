@@ -177,11 +177,11 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 🗓 2023-04-03 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/swatch@3.0.21...@spectrum-css/swatch@4.0.0)
 
--   fix(tokens)!: rgb transform to split out rgb values from css attributes (#1590) ([b714db4](https://github.com/adobe/spectrum-css/commit/b714db4)), closes [#1590](https://github.com/adobe/spectrum-css/issues/1590)
+- fix(tokens)!: rgb transform to split out rgb values from css attributes (#1590) ([b714db4](https://github.com/adobe/spectrum-css/commit/b714db4)), closes [#1590](https://github.com/adobe/spectrum-css/issues/1590)
 
 ### 🛑 BREAKING CHANGES
 
--   transforms color tokens to split out their `rgb` values
+- transforms color tokens to split out their `rgb` values
 
 Co-authored-by: castastrophe <castastrophe@users.noreply.github.com>
 
@@ -359,15 +359,15 @@ Co-authored-by: castastrophe <castastrophe@users.noreply.github.com>
 
 🗓 2022-10-13 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/swatch@2.0.0...@spectrum-css/swatch@3.0.0)
 
--   refactor(swatch)!: remap core token aliases & rename aliases ([32df3c9](https://github.com/adobe/spectrum-css/commit/32df3c9))
+- refactor(swatch)!: remap core token aliases & rename aliases ([32df3c9](https://github.com/adobe/spectrum-css/commit/32df3c9))
 
 ### 🛑 BREAKING CHANGES
 
--   remaps existing aliases to new/renamed core token values
+- remaps existing aliases to new/renamed core token values
 
--   `--spectrum-focus-ring-color` renamed to `--spectrum-focus-indicator-color`
--   `--spectrum-focus-ring-thickness` renamed to `--spectrum-focus-indicator-thickness`
--   `--spectrum-focus-ring-gap` renamed to `--spectrum-focus-indicator-gap`
+- `--spectrum-focus-ring-color` renamed to `--spectrum-focus-indicator-color`
+- `--spectrum-focus-ring-thickness` renamed to `--spectrum-focus-indicator-thickness`
+- `--spectrum-focus-ring-gap` renamed to `--spectrum-focus-indicator-gap`
 
 <a name="2.0.0"></a>
 
@@ -375,11 +375,11 @@ Co-authored-by: castastrophe <castastrophe@users.noreply.github.com>
 
 🗓 2022-10-06 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/swatch@1.1.4...@spectrum-css/swatch@2.0.0)
 
--   feat(swatch)!: migrate swatch to core tokens (#1501) ([47b5ec9](https://github.com/adobe/spectrum-css/commit/47b5ec9)), closes [#1501](https://github.com/adobe/spectrum-css/issues/1501)
+- feat(swatch)!: migrate swatch to core tokens (#1501) ([47b5ec9](https://github.com/adobe/spectrum-css/commit/47b5ec9)), closes [#1501](https://github.com/adobe/spectrum-css/issues/1501)
 
 ### 🛑 BREAKING CHANGES
 
--   migrates Swatch to core tokens
+- migrates Swatch to core tokens
 
 Co-authored-by: Patrick Fulton <pfulton@adobe.com>
 
@@ -391,7 +391,7 @@ Co-authored-by: Patrick Fulton <pfulton@adobe.com>
 
 ### 🐛 Bug fixes
 
--   swatch high contrast support ([966db0a](https://github.com/adobe/spectrum-css/commit/966db0a))
+- swatch high contrast support ([966db0a](https://github.com/adobe/spectrum-css/commit/966db0a))
 
 <a name="1.1.3"></a>
 
@@ -425,18 +425,18 @@ Co-authored-by: Patrick Fulton <pfulton@adobe.com>
 
 ### ✨ Features
 
--   add docs, let stroke/fill of disabled icon be customizable ([94510d0](https://github.com/adobe/spectrum-css/commit/94510d0))
--   add more size examples ([eee3fff](https://github.com/adobe/spectrum-css/commit/eee3fff))
--   add support for lightBorder, docs for usage in Swatch Group ([cb44131](https://github.com/adobe/spectrum-css/commit/cb44131))
--   big progess on swatch ([ce33834](https://github.com/adobe/spectrum-css/commit/ce33834))
--   implement is-nothing ([129bfc6](https://github.com/adobe/spectrum-css/commit/129bfc6))
--   start on swatch ([4d419c2](https://github.com/adobe/spectrum-css/commit/4d419c2))
+- add docs, let stroke/fill of disabled icon be customizable ([94510d0](https://github.com/adobe/spectrum-css/commit/94510d0))
+- add more size examples ([eee3fff](https://github.com/adobe/spectrum-css/commit/eee3fff))
+- add support for lightBorder, docs for usage in Swatch Group ([cb44131](https://github.com/adobe/spectrum-css/commit/cb44131))
+- big progess on swatch ([ce33834](https://github.com/adobe/spectrum-css/commit/ce33834))
+- implement is-nothing ([129bfc6](https://github.com/adobe/spectrum-css/commit/129bfc6))
+- start on swatch ([4d419c2](https://github.com/adobe/spectrum-css/commit/4d419c2))
 
 ### 🐛 Bug fixes
 
--   alignment of checkerboard, XS disabled icon size ([9239f5e](https://github.com/adobe/spectrum-css/commit/9239f5e))
--   checkerboard on dark mode ([fb3b698](https://github.com/adobe/spectrum-css/commit/fb3b698))
--   corner radius selected ([b8737b7](https://github.com/adobe/spectrum-css/commit/b8737b7))
--   correct disabled icon stroke color ([837b392](https://github.com/adobe/spectrum-css/commit/837b392))
--   draw border over swatch contents ([a5041d3](https://github.com/adobe/spectrum-css/commit/a5041d3))
--   use a 12px disabled icon for XS ([d0634cc](https://github.com/adobe/spectrum-css/commit/d0634cc))
+- alignment of checkerboard, XS disabled icon size ([9239f5e](https://github.com/adobe/spectrum-css/commit/9239f5e))
+- checkerboard on dark mode ([fb3b698](https://github.com/adobe/spectrum-css/commit/fb3b698))
+- corner radius selected ([b8737b7](https://github.com/adobe/spectrum-css/commit/b8737b7))
+- correct disabled icon stroke color ([837b392](https://github.com/adobe/spectrum-css/commit/837b392))
+- draw border over swatch contents ([a5041d3](https://github.com/adobe/spectrum-css/commit/a5041d3))
+- use a 12px disabled icon for XS ([d0634cc](https://github.com/adobe/spectrum-css/commit/d0634cc))

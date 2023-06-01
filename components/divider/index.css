@@ -95,10 +95,7 @@ governing permissions and limitations under the License.
 	overflow: visible;
 
 	border: none;
-	border-width: var(
-		--mod-divider-thickness,
-		var(--spectrum-divider-thickness)
-	);
+	border-width: var(--mod-divider-thickness, var(--spectrum-divider-thickness));
 	border-radius: var(
 		--mod-divider-thickness,
 		var(--spectrum-divider-thickness)

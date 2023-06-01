@@ -11,9 +11,7 @@ governing permissions and limitations under the License.
 */
 
 .spectrum-FloatingActionButton {
-	--spectrum-floating-action-button-size: var(
-		--spectrum-component-height-200
-	);
+	--spectrum-floating-action-button-size: var(--spectrum-component-height-200);
 	--spectrum-floating-action-button-icon-size: var(
 		--spectrum-workflow-icon-size-200
 	);
@@ -53,9 +51,7 @@ governing permissions and limitations under the License.
 	--spectrum-floating-action-button-icon-color: var(--spectrum-white);
 	--spectrum-floating-action-button-icon-color-hover: var(--spectrum-white);
 	--spectrum-floating-action-button-icon-color-down: var(--spectrum-white);
-	--spectrum-floating-action-button-icon-color-key-focus: var(
-		--spectrum-white
-	);
+	--spectrum-floating-action-button-icon-color-key-focus: var(--spectrum-white);
 
 	&--secondary {
 		--spectrum-floating-action-button-background-color: var(
@@ -206,9 +202,7 @@ governing permissions and limitations under the License.
 			--highcontrast-floating-action-button-background-color-key-focus,
 			var(
 				--mod-floating-action-button-background-color-key-focus,
-				var(
-					--spectrum-floating-action-button-background-color-key-focus
-				)
+				var(--spectrum-floating-action-button-background-color-key-focus)
 			)
 		);
 		outline: 0;

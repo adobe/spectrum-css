@@ -51,8 +51,7 @@ function getTokensUsedInCSS(root, coreTokens, componentTokens) {
 					const usedTokensInValue = getTokensUsedInValueNode(node);
 					usedTokensInValue.forEach((tokenName) => {
 						if (coreTokens[tokenName]) {
-							coreTokensUsed[tokenName] =
-								(coreTokensUsed[tokenName] ?? 0) + 1;
+							coreTokensUsed[tokenName] = (coreTokensUsed[tokenName] ?? 0) + 1;
 						} else if (componentTokens[tokenName]) {
 							componentTokensUsed[tokenName] =
 								(componentTokensUsed[tokenName] ?? 0) + 1;
@@ -88,10 +87,7 @@ async function getCoreTokens() {
 		paths: [process.cwd(), path.join(process.cwd(), "../../")],
 	};
 	/* Resolve core tokens first from the current working directory, or if not found, from the root of the monorepo */
-	const coreTokensFile = require.resolve(
-		"@spectrum-css/tokens",
-		fetchOptions
-	);
+	const coreTokensFile = require.resolve("@spectrum-css/tokens", fetchOptions);
 	let contents = await fsp.readFile(coreTokensFile, "utf8");
 	let root = postcssReal.parse(contents);
 	return getTokensDefinedInCSS(root);
@@ -154,11 +150,7 @@ function buildExpressTheme() {
 	return gulp
 		.src(["dist/index-theme.css"])
 		.pipe(concat("express.css"))
-		.pipe(
-			postcss(
-				processorsFunction().concat(require("postcss-combininator"))
-			)
-		)
+		.pipe(postcss(processorsFunction().concat(require("postcss-combininator"))))
 		.pipe(gulp.dest("dist/themes/"));
 }
 
@@ -174,9 +166,7 @@ function checkCSS(glob) {
 					coreTokens = await getCoreTokens();
 				}
 
-				let pkg = JSON.parse(
-					await fsp.readFile(path.join("package.json"))
-				);
+				let pkg = JSON.parse(await fsp.readFile(path.join("package.json")));
 
 				// Parse only once
 				let root = postcssReal.parse(file.contents);

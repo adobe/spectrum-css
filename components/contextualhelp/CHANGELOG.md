@@ -97,17 +97,17 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 🗓 2023-05-02 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/contextualhelp@1.0.13...@spectrum-css/contextualhelp@2.0.0)
 
--   fix(contextualhelp)!: dark mode font color (#1817) ([4e103f1](https://github.com/adobe/spectrum-css/commit/4e103f1)), closes [#1817](https://github.com/adobe/spectrum-css/issues/1817)
+- fix(contextualhelp)!: dark mode font color (#1817) ([4e103f1](https://github.com/adobe/spectrum-css/commit/4e103f1)), closes [#1817](https://github.com/adobe/spectrum-css/issues/1817)
 
 ### 🛑 BREAKING CHANGES
 
--   removes `--mod-spectrum-contextual-help-title-size`
+- removes `--mod-spectrum-contextual-help-title-size`
 
--   fix(contextualhelp): add Heading and Body classes - add spectrum-Heading and spectrum-Body classes to get global colors
--   fix(contextualhelp): add tokens for font color
--   fix(contextualhelp): remove unneeded clases and update tokens - remove spectrum-Heading and spectrum-Body classes - update tokens to new contextual help specific ones
--   fix(contextualhelp): fix button display
--   chore(contextualhelp): remove Heading and Body classes from story
+- fix(contextualhelp): add Heading and Body classes - add spectrum-Heading and spectrum-Body classes to get global colors
+- fix(contextualhelp): add tokens for font color
+- fix(contextualhelp): remove unneeded clases and update tokens - remove spectrum-Heading and spectrum-Body classes - update tokens to new contextual help specific ones
+- fix(contextualhelp): fix button display
+- chore(contextualhelp): remove Heading and Body classes from story
 
 <a name="1.0.13"></a>
 
@@ -221,4 +221,4 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 ### ✨ Features
 
--   **contextualhelp:** create contextual help component ([#1676](https://github.com/adobe/spectrum-css/issues/1676)) ([fd9edbb](https://github.com/adobe/spectrum-css/commit/fd9edbb))
+- **contextualhelp:** create contextual help component ([#1676](https://github.com/adobe/spectrum-css/issues/1676)) ([fd9edbb](https://github.com/adobe/spectrum-css/commit/fd9edbb))

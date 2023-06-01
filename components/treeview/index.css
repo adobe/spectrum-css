@@ -30,9 +30,7 @@ governing permissions and limitations under the License.
 		filter: color;
 		replace: --spectrum-treeview$1-;
 	}
-	--spectrum-treeview-s-item-icon-gap: var(
-		--spectrum-global-dimension-size-85
-	);
+	--spectrum-treeview-s-item-icon-gap: var(--spectrum-global-dimension-size-85);
 }
 
 .spectrum-TreeView--sizeM {
@@ -107,9 +105,7 @@ governing permissions and limitations under the License.
 	&.is-selected {
 		.spectrum-TreeView-itemLink:not(:focus-ring) {
 			&:before {
-				border-width: var(
-					--spectrum-treeview-item-border-size-selected
-				);
+				border-width: var(--spectrum-treeview-item-border-size-selected);
 			}
 		}
 	}

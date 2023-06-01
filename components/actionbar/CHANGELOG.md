@@ -345,11 +345,11 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 🗓 2023-02-01 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/actionbar@5.0.14...@spectrum-css/actionbar@6.0.0)
 
--   chore(tokens)!: use latest dependency & fix build error (#1591) ([f2532e7](https://github.com/adobe/spectrum-css/commit/f2532e7)), closes [#1591](https://github.com/adobe/spectrum-css/issues/1591)
+- chore(tokens)!: use latest dependency & fix build error (#1591) ([f2532e7](https://github.com/adobe/spectrum-css/commit/f2532e7)), closes [#1591](https://github.com/adobe/spectrum-css/issues/1591)
 
 ### 🛑 BREAKING CHANGES
 
--   uses latest `@adobe/spectrum-tokens` dependency which includes token renames
+- uses latest `@adobe/spectrum-tokens` dependency which includes token renames
 
 <a name="5.0.14"></a>
 
@@ -447,7 +447,7 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 ### 🐛 Bug fixes
 
--   resolve missing tokens errors due to name changes ([#1555](https://github.com/adobe/spectrum-css/issues/1555)) ([ddae027](https://github.com/adobe/spectrum-css/commit/ddae027))
+- resolve missing tokens errors due to name changes ([#1555](https://github.com/adobe/spectrum-css/issues/1555)) ([ddae027](https://github.com/adobe/spectrum-css/commit/ddae027))
 
 <a name="5.0.2"></a>
 
@@ -471,11 +471,11 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 🗓 2022-11-01 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/actionbar@4.0.1...@spectrum-css/actionbar@5.0.0)
 
--   refactor(actionbar)!: migrate to core tokens (#1512) ([f0be21c](https://github.com/adobe/spectrum-css/commit/f0be21c)), closes [#1512](https://github.com/adobe/spectrum-css/issues/1512)
+- refactor(actionbar)!: migrate to core tokens (#1512) ([f0be21c](https://github.com/adobe/spectrum-css/commit/f0be21c)), closes [#1512](https://github.com/adobe/spectrum-css/issues/1512)
 
 ### 🛑 BREAKING CHANGES
 
--   migrates ActionBar to core tokens
+- migrates ActionBar to core tokens
 
 Co-authored-by: Patrick Fulton <pfulton@adobe.com>
 
@@ -493,11 +493,11 @@ Co-authored-by: Patrick Fulton <pfulton@adobe.com>
 
 🗓 2022-06-16 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/actionbar@3.0.28...@spectrum-css/actionbar@4.0.0)
 
--   feat!: update Action Bar to use latest Action Button ([c3f0866](https://github.com/adobe/spectrum-css/commit/c3f0866))
+- feat!: update Action Bar to use latest Action Button ([c3f0866](https://github.com/adobe/spectrum-css/commit/c3f0866))
 
 ### 🛑 BREAKING CHANGES
 
--   updated Action Button markup
+- updated Action Button markup
 
 <a name="3.0.29"></a>
 
@@ -635,7 +635,7 @@ Co-authored-by: Patrick Fulton <pfulton@adobe.com>
 
 ### 🐛 Bug fixes
 
--   update peer dependencies ([97810cf](https://github.com/adobe/spectrum-css/commit/97810cf))
+- update peer dependencies ([97810cf](https://github.com/adobe/spectrum-css/commit/97810cf))
 
 <a name="3.0.12"></a>
 
@@ -717,8 +717,8 @@ Co-authored-by: Patrick Fulton <pfulton@adobe.com>
 
 ### 🐛 Bug fixes
 
--   resolve failing test by applying t-shirt size to actionbar example ([d2aa865](https://github.com/adobe/spectrum-css/commit/d2aa865))
--   updating version number on vars ([f535b49](https://github.com/adobe/spectrum-css/commit/f535b49))
+- resolve failing test by applying t-shirt size to actionbar example ([d2aa865](https://github.com/adobe/spectrum-css/commit/d2aa865))
+- updating version number on vars ([f535b49](https://github.com/adobe/spectrum-css/commit/f535b49))
 
 <a name="3.0.3-alpha.5"></a>
 
@@ -792,11 +792,11 @@ Co-authored-by: Patrick Fulton <pfulton@adobe.com>
 
 ### ✨ Features
 
--   added t-shirt sizes to checkbox ([f4c59bd](https://github.com/adobe/spectrum-css/commit/f4c59bd)), closes [#951](https://github.com/adobe/spectrum-css/issues/951)
+- added t-shirt sizes to checkbox ([f4c59bd](https://github.com/adobe/spectrum-css/commit/f4c59bd)), closes [#951](https://github.com/adobe/spectrum-css/issues/951)
 
 ### 🛑 BREAKING CHANGES
 
--   a t-shirt size class is now required for checkbox.
+- a t-shirt size class is now required for checkbox.
 
 <a name="3.0.0-beta.6"></a>
 
@@ -806,15 +806,15 @@ Co-authored-by: Patrick Fulton <pfulton@adobe.com>
 
 ### ✨ Features
 
--   update to new ActionButton markup ([a86bfc7](https://github.com/adobe/spectrum-css/commit/a86bfc7))
+- update to new ActionButton markup ([a86bfc7](https://github.com/adobe/spectrum-css/commit/a86bfc7))
 
 ### 🐛 Bug fixes
 
--   update main, resolved conflicts ([d7880a2](https://github.com/adobe/spectrum-css/commit/d7880a2))
+- update main, resolved conflicts ([d7880a2](https://github.com/adobe/spectrum-css/commit/d7880a2))
 
 ### 🛑 BREAKING CHANGES
 
--   .spectrum-ActionButton--sizeM now required for all uses
+- .spectrum-ActionButton--sizeM now required for all uses
 
 <a name="3.0.0-beta.5"></a>
 
@@ -824,7 +824,7 @@ Co-authored-by: Patrick Fulton <pfulton@adobe.com>
 
 ### 🐛 Bug fixes
 
--   **actionbar:** ensure Poppover padding is managed for content direction ([06e5f1a](https://github.com/adobe/spectrum-css/commit/06e5f1a))
+- **actionbar:** ensure Poppover padding is managed for content direction ([06e5f1a](https://github.com/adobe/spectrum-css/commit/06e5f1a))
 
 <a name="3.0.0-beta.4"></a>
 
@@ -866,7 +866,7 @@ Co-authored-by: Patrick Fulton <pfulton@adobe.com>
 
 ### ✨ Features
 
--   make ActionBar support RTL ([71a1ac5](https://github.com/adobe/spectrum-css/commit/71a1ac5))
+- make ActionBar support RTL ([71a1ac5](https://github.com/adobe/spectrum-css/commit/71a1ac5))
 
 <a name="2.1.5"></a>
 
@@ -916,7 +916,7 @@ Co-authored-by: Patrick Fulton <pfulton@adobe.com>
 
 ### ✨ Features
 
--   add --flexible variant for Action Bar, fixes [#319](https://github.com/adobe/spectrum-css/issues/319) ([#329](https://github.com/adobe/spectrum-css/issues/329)) ([7266a6e](https://github.com/adobe/spectrum-css/commit/7266a6e))
+- add --flexible variant for Action Bar, fixes [#319](https://github.com/adobe/spectrum-css/issues/319) ([#329](https://github.com/adobe/spectrum-css/issues/329)) ([7266a6e](https://github.com/adobe/spectrum-css/commit/7266a6e))
 
 <a name="2.0.0"></a>
 
@@ -926,4 +926,4 @@ Co-authored-by: Patrick Fulton <pfulton@adobe.com>
 
 ### ✨ Features
 
--   move to individually versioned packages with Lerna ([#265](https://github.com/adobe/spectrum-css/issues/265)) ([cb7fd4b](https://github.com/adobe/spectrum-css/commit/cb7fd4b)), closes [#231](https://github.com/adobe/spectrum-css/issues/231) [#214](https://github.com/adobe/spectrum-css/issues/214) [#229](https://github.com/adobe/spectrum-css/issues/229) [#240](https://github.com/adobe/spectrum-css/issues/240) [#239](https://github.com/adobe/spectrum-css/issues/239) [#161](https://github.com/adobe/spectrum-css/issues/161) [#242](https://github.com/adobe/spectrum-css/issues/242) [#246](https://github.com/adobe/spectrum-css/issues/246) [#219](https://github.com/adobe/spectrum-css/issues/219) [#235](https://github.com/adobe/spectrum-css/issues/235) [#189](https://github.com/adobe/spectrum-css/issues/189) [#248](https://github.com/adobe/spectrum-css/issues/248) [#232](https://github.com/adobe/spectrum-css/issues/232) [#248](https://github.com/adobe/spectrum-css/issues/248) [#218](https://github.com/adobe/spectrum-css/issues/218) [#237](https://github.com/adobe/spectrum-css/issues/237) [#255](https://github.com/adobe/spectrum-css/issues/255) [#256](https://github.com/adobe/spectrum-css/issues/256) [#258](https://github.com/adobe/spectrum-css/issues/258) [#257](https://github.com/adobe/spectrum-css/issues/257) [#259](https://github.com/adobe/spectrum-css/issues/259)
+- move to individually versioned packages with Lerna ([#265](https://github.com/adobe/spectrum-css/issues/265)) ([cb7fd4b](https://github.com/adobe/spectrum-css/commit/cb7fd4b)), closes [#231](https://github.com/adobe/spectrum-css/issues/231) [#214](https://github.com/adobe/spectrum-css/issues/214) [#229](https://github.com/adobe/spectrum-css/issues/229) [#240](https://github.com/adobe/spectrum-css/issues/240) [#239](https://github.com/adobe/spectrum-css/issues/239) [#161](https://github.com/adobe/spectrum-css/issues/161) [#242](https://github.com/adobe/spectrum-css/issues/242) [#246](https://github.com/adobe/spectrum-css/issues/246) [#219](https://github.com/adobe/spectrum-css/issues/219) [#235](https://github.com/adobe/spectrum-css/issues/235) [#189](https://github.com/adobe/spectrum-css/issues/189) [#248](https://github.com/adobe/spectrum-css/issues/248) [#232](https://github.com/adobe/spectrum-css/issues/232) [#248](https://github.com/adobe/spectrum-css/issues/248) [#218](https://github.com/adobe/spectrum-css/issues/218) [#237](https://github.com/adobe/spectrum-css/issues/237) [#255](https://github.com/adobe/spectrum-css/issues/255) [#256](https://github.com/adobe/spectrum-css/issues/256) [#258](https://github.com/adobe/spectrum-css/issues/258) [#257](https://github.com/adobe/spectrum-css/issues/257) [#259](https://github.com/adobe/spectrum-css/issues/259)

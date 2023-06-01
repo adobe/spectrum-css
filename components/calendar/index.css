@@ -184,9 +184,7 @@ governing permissions and limitations under the License.
 	&:before {
 		content: "";
 		position: absolute;
-		inset-block-start: calc(
-			50% - calc(var(--spectrum-calendar-day-width) / 2)
-		);
+		inset-block-start: calc(50% - calc(var(--spectrum-calendar-day-width) / 2));
 		inset-inline-start: calc(
 			50% - calc(var(--spectrum-calendar-day-width) / 2)
 		);
@@ -235,9 +233,7 @@ governing permissions and limitations under the License.
 
 		&.is-selection-start,
 		&.is-selection-end {
-			font-weight: var(
-				--spectrum-calendar-day-text-font-weight-cap-selected
-			);
+			font-weight: var(--spectrum-calendar-day-text-font-weight-cap-selected);
 
 			&:after {
 				position: absolute;

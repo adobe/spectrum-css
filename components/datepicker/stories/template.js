@@ -42,9 +42,7 @@ export const Template = ({
 			})}
 			id=${ifDefined(id)}
 			aria-disabled=${isDisabled ? "true" : "false"}
-			aria-invalid=${ifDefined(
-				isInvalid && !isDisabled ? "false" : undefined
-			)}
+			aria-invalid=${ifDefined(isInvalid && !isDisabled ? "false" : undefined)}
 			aria-readonly=${ifDefined(readOnly ? "true" : "false")}
 			aria-required=${ifDefined(isRequired ? "true" : "false")}
 			aria-haspopup="dialog"

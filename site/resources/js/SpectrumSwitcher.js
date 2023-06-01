@@ -29,13 +29,9 @@ function SpectrumSwitcher(options) {
 					property = "theme";
 				} else if ((value = SpectrumSwitcher.ScaleKeys[event.key])) {
 					property = "scale";
-				} else if (
-					(value = SpectrumSwitcher.DirectionKeys[event.key])
-				) {
+				} else if ((value = SpectrumSwitcher.DirectionKeys[event.key])) {
 					property = "direction";
-				} else if (
-					(value = SpectrumSwitcher.VarsVersionKeys[event.key])
-				) {
+				} else if ((value = SpectrumSwitcher.VarsVersionKeys[event.key])) {
 					property = "varsVersion";
 				}
 
@@ -84,9 +80,7 @@ SpectrumSwitcher.DirectionKeys = {
 Object.defineProperty(SpectrumSwitcher.prototype, "theme", {
 	set: function (theme) {
 		SpectrumSwitcher.ColorStops.forEach(function (otherTheme) {
-			document.documentElement.classList.remove(
-				"spectrum--" + otherTheme
-			);
+			document.documentElement.classList.remove("spectrum--" + otherTheme);
 		});
 		document.documentElement.classList.add("spectrum--" + theme);
 
@@ -99,10 +93,7 @@ Object.defineProperty(SpectrumSwitcher.prototype, "theme", {
 					prismDarkLink.setAttribute("rel", "stylesheet");
 					prismDarkLink.setAttribute("data-prism-dark", "");
 					prismDarkLink.setAttribute("type", "text/css");
-					prismDarkLink.setAttribute(
-						"href",
-						"css/prism/prism-dark.css"
-					);
+					prismDarkLink.setAttribute("href", "css/prism/prism-dark.css");
 				}
 
 				prismLink.parentElement.insertBefore(
@@ -169,9 +160,7 @@ Object.defineProperty(SpectrumSwitcher.prototype, "varsVersion", {
 Object.defineProperty(SpectrumSwitcher.prototype, "scale", {
 	set: function (scale) {
 		SpectrumSwitcher.Scales.forEach(function (otherScale) {
-			document.documentElement.classList.remove(
-				"spectrum--" + otherScale
-			);
+			document.documentElement.classList.remove("spectrum--" + otherScale);
 		});
 		document.documentElement.classList.add("spectrum--" + scale);
 

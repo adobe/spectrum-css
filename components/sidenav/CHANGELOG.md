@@ -107,7 +107,7 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 ### 🐛 Bug fixes
 
--   correct RTL issues with SideNav and ActionButton ([#1611](https://github.com/adobe/spectrum-css/issues/1611)) ([54f7093](https://github.com/adobe/spectrum-css/commit/54f7093))
+- correct RTL issues with SideNav and ActionButton ([#1611](https://github.com/adobe/spectrum-css/issues/1611)) ([54f7093](https://github.com/adobe/spectrum-css/commit/54f7093))
 
 <a name="3.0.32"></a>
 
@@ -197,7 +197,7 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 ### 🐛 Bug fixes
 
--   sidenav WHCM ([e7c031e](https://github.com/adobe/spectrum-css/commit/e7c031e))
+- sidenav WHCM ([e7c031e](https://github.com/adobe/spectrum-css/commit/e7c031e))
 
 <a name="3.0.21"></a>
 
@@ -271,7 +271,7 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 ### 🐛 Bug fixes
 
--   removed sidenav's use of tab var ([08cfd56](https://github.com/adobe/spectrum-css/commit/08cfd56))
+- removed sidenav's use of tab var ([08cfd56](https://github.com/adobe/spectrum-css/commit/08cfd56))
 
 <a name="3.0.12"></a>
 
@@ -281,7 +281,7 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 ### 🐛 Bug fixes
 
--   update peer dependencies ([97810cf](https://github.com/adobe/spectrum-css/commit/97810cf))
+- update peer dependencies ([97810cf](https://github.com/adobe/spectrum-css/commit/97810cf))
 
 <a name="3.0.11"></a>
 
@@ -315,9 +315,9 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 ### 🐛 Bug fixes
 
--   focus-ring on SideNav ([3e91b5b](https://github.com/adobe/spectrum-css/commit/3e91b5b)), closes [#1317](https://github.com/adobe/spectrum-css/issues/1317)
--   focus-ring on SideNav, closes [#1317](https://github.com/adobe/spectrum-css/issues/1317) ([8006ff0](https://github.com/adobe/spectrum-css/commit/8006ff0))
--   make focus-ring animate nicely ([45b22e4](https://github.com/adobe/spectrum-css/commit/45b22e4))
+- focus-ring on SideNav ([3e91b5b](https://github.com/adobe/spectrum-css/commit/3e91b5b)), closes [#1317](https://github.com/adobe/spectrum-css/issues/1317)
+- focus-ring on SideNav, closes [#1317](https://github.com/adobe/spectrum-css/issues/1317) ([8006ff0](https://github.com/adobe/spectrum-css/commit/8006ff0))
+- make focus-ring animate nicely ([45b22e4](https://github.com/adobe/spectrum-css/commit/45b22e4))
 
 <a name="3.0.8"></a>
 
@@ -343,7 +343,7 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 ### 🐛 Bug fixes
 
--   replaced indentation with margin left in sidenav item ([7cb96d1](https://github.com/adobe/spectrum-css/commit/7cb96d1))
+- replaced indentation with margin left in sidenav item ([7cb96d1](https://github.com/adobe/spectrum-css/commit/7cb96d1))
 
 <a name="3.0.5"></a>
 
@@ -353,7 +353,7 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 ### 🐛 Bug fixes
 
--   replaced indentation with margin left in sidenav item ([7cb96d1](https://github.com/adobe/spectrum-css/commit/7cb96d1))
+- replaced indentation with margin left in sidenav item ([7cb96d1](https://github.com/adobe/spectrum-css/commit/7cb96d1))
 
 <a name="3.0.3"></a>
 
@@ -363,7 +363,7 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 ### 🐛 Bug fixes
 
--   updating version number on vars ([f535b49](https://github.com/adobe/spectrum-css/commit/f535b49))
+- updating version number on vars ([f535b49](https://github.com/adobe/spectrum-css/commit/f535b49))
 
 <a name="3.0.3-alpha.3"></a>
 
@@ -429,8 +429,8 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 ### 🐛 Bug fixes
 
--   make Sidenav build again ([a6f4844](https://github.com/adobe/spectrum-css/commit/a6f4844))
--   update main, resolved conflicts ([d7880a2](https://github.com/adobe/spectrum-css/commit/d7880a2))
+- make Sidenav build again ([a6f4844](https://github.com/adobe/spectrum-css/commit/a6f4844))
+- update main, resolved conflicts ([d7880a2](https://github.com/adobe/spectrum-css/commit/d7880a2))
 
 <a name="3.0.0-beta.4"></a>
 
@@ -448,8 +448,8 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 ### 🐛 Bug fixes
 
--   side nav item with long text cuts off icon, fixes [#895](https://github.com/adobe/spectrum-css/issues/895) ([d4b8bed](https://github.com/adobe/spectrum-css/commit/d4b8bed))
--   wip fix more components ([b74dbb8](https://github.com/adobe/spectrum-css/commit/b74dbb8))
+- side nav item with long text cuts off icon, fixes [#895](https://github.com/adobe/spectrum-css/issues/895) ([d4b8bed](https://github.com/adobe/spectrum-css/commit/d4b8bed))
+- wip fix more components ([b74dbb8](https://github.com/adobe/spectrum-css/commit/b74dbb8))
 
 <a name="3.0.0-beta.2"></a>
 
@@ -475,7 +475,7 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 ### ✨ Features
 
--   make Sidenav support RTL ([3d67b64](https://github.com/adobe/spectrum-css/commit/3d67b64))
+- make Sidenav support RTL ([3d67b64](https://github.com/adobe/spectrum-css/commit/3d67b64))
 
 <a name="2.0.5"></a>
 
@@ -525,4 +525,4 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 ### ✨ Features
 
--   move to individually versioned packages with Lerna ([#265](https://github.com/adobe/spectrum-css/issues/265)) ([cb7fd4b](https://github.com/adobe/spectrum-css/commit/cb7fd4b)), closes [#231](https://github.com/adobe/spectrum-css/issues/231) [#214](https://github.com/adobe/spectrum-css/issues/214) [#229](https://github.com/adobe/spectrum-css/issues/229) [#240](https://github.com/adobe/spectrum-css/issues/240) [#239](https://github.com/adobe/spectrum-css/issues/239) [#161](https://github.com/adobe/spectrum-css/issues/161) [#242](https://github.com/adobe/spectrum-css/issues/242) [#246](https://github.com/adobe/spectrum-css/issues/246) [#219](https://github.com/adobe/spectrum-css/issues/219) [#235](https://github.com/adobe/spectrum-css/issues/235) [#189](https://github.com/adobe/spectrum-css/issues/189) [#248](https://github.com/adobe/spectrum-css/issues/248) [#232](https://github.com/adobe/spectrum-css/issues/232) [#248](https://github.com/adobe/spectrum-css/issues/248) [#218](https://github.com/adobe/spectrum-css/issues/218) [#237](https://github.com/adobe/spectrum-css/issues/237) [#255](https://github.com/adobe/spectrum-css/issues/255) [#256](https://github.com/adobe/spectrum-css/issues/256) [#258](https://github.com/adobe/spectrum-css/issues/258) [#257](https://github.com/adobe/spectrum-css/issues/257) [#259](https://github.com/adobe/spectrum-css/issues/259)
+- move to individually versioned packages with Lerna ([#265](https://github.com/adobe/spectrum-css/issues/265)) ([cb7fd4b](https://github.com/adobe/spectrum-css/commit/cb7fd4b)), closes [#231](https://github.com/adobe/spectrum-css/issues/231) [#214](https://github.com/adobe/spectrum-css/issues/214) [#229](https://github.com/adobe/spectrum-css/issues/229) [#240](https://github.com/adobe/spectrum-css/issues/240) [#239](https://github.com/adobe/spectrum-css/issues/239) [#161](https://github.com/adobe/spectrum-css/issues/161) [#242](https://github.com/adobe/spectrum-css/issues/242) [#246](https://github.com/adobe/spectrum-css/issues/246) [#219](https://github.com/adobe/spectrum-css/issues/219) [#235](https://github.com/adobe/spectrum-css/issues/235) [#189](https://github.com/adobe/spectrum-css/issues/189) [#248](https://github.com/adobe/spectrum-css/issues/248) [#232](https://github.com/adobe/spectrum-css/issues/232) [#248](https://github.com/adobe/spectrum-css/issues/248) [#218](https://github.com/adobe/spectrum-css/issues/218) [#237](https://github.com/adobe/spectrum-css/issues/237) [#255](https://github.com/adobe/spectrum-css/issues/255) [#256](https://github.com/adobe/spectrum-css/issues/256) [#258](https://github.com/adobe/spectrum-css/issues/258) [#257](https://github.com/adobe/spectrum-css/issues/257) [#259](https://github.com/adobe/spectrum-css/issues/259)

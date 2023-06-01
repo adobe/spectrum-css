@@ -179,7 +179,7 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 ### ✨ Features
 
--   configure local visual testing with Chromatic ([#1673](https://github.com/adobe/spectrum-css/issues/1673)) ([e62913a](https://github.com/adobe/spectrum-css/commit/e62913a))
+- configure local visual testing with Chromatic ([#1673](https://github.com/adobe/spectrum-css/issues/1673)) ([e62913a](https://github.com/adobe/spectrum-css/commit/e62913a))
 
 <a name="3.0.38"></a>
 
@@ -301,8 +301,8 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 ### 🐛 Bug fixes
 
--   calendar WHCM ([9075308](https://github.com/adobe/spectrum-css/commit/9075308))
--   remove comment in calendar ([37fb0e9](https://github.com/adobe/spectrum-css/commit/37fb0e9))
+- calendar WHCM ([9075308](https://github.com/adobe/spectrum-css/commit/9075308))
+- remove comment in calendar ([37fb0e9](https://github.com/adobe/spectrum-css/commit/37fb0e9))
 
 <a name="3.0.23"></a>
 
@@ -392,7 +392,7 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 ### 🐛 Bug fixes
 
--   update peer dependencies ([97810cf](https://github.com/adobe/spectrum-css/commit/97810cf))
+- update peer dependencies ([97810cf](https://github.com/adobe/spectrum-css/commit/97810cf))
 
 <a name="3.0.12"></a>
 
@@ -474,7 +474,7 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 ### 🐛 Bug fixes
 
--   updating version number on vars ([f535b49](https://github.com/adobe/spectrum-css/commit/f535b49))
+- updating version number on vars ([f535b49](https://github.com/adobe/spectrum-css/commit/f535b49))
 
 <a name="3.0.3-alpha.3"></a>
 
@@ -508,7 +508,7 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 ### 🐛 Bug fixes
 
--   updated missing tokens ([f606b83](https://github.com/adobe/spectrum-css/commit/f606b83))
+- updated missing tokens ([f606b83](https://github.com/adobe/spectrum-css/commit/f606b83))
 
 <a name="3.0.2"></a>
 
@@ -542,8 +542,8 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 ### 🐛 Bug fixes
 
--   correct dependencies for FieldButton -> ActionButton change ([29d69f8](https://github.com/adobe/spectrum-css/commit/29d69f8))
--   update main, resolved conflicts ([d7880a2](https://github.com/adobe/spectrum-css/commit/d7880a2))
+- correct dependencies for FieldButton -> ActionButton change ([29d69f8](https://github.com/adobe/spectrum-css/commit/29d69f8))
+- update main, resolved conflicts ([d7880a2](https://github.com/adobe/spectrum-css/commit/d7880a2))
 
 <a name="3.0.0-beta.5"></a>
 
@@ -553,7 +553,7 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 ### 🐛 Bug fixes
 
--   calendar .is-today.is-focused should have blue focus ring, fixes [#1051](https://github.com/adobe/spectrum-css/issues/1051) ([#1052](https://github.com/adobe/spectrum-css/issues/1052)) ([56cf5d6](https://github.com/adobe/spectrum-css/commit/56cf5d6))
+- calendar .is-today.is-focused should have blue focus ring, fixes [#1051](https://github.com/adobe/spectrum-css/issues/1051) ([#1052](https://github.com/adobe/spectrum-css/issues/1052)) ([56cf5d6](https://github.com/adobe/spectrum-css/commit/56cf5d6))
 
 <a name="3.0.0-beta.4"></a>
 
@@ -563,8 +563,8 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 ### 🐛 Bug fixes
 
--   change previous/next icon size ([#893](https://github.com/adobe/spectrum-css/issues/893)) ([5494f44](https://github.com/adobe/spectrum-css/commit/5494f44))
--   wip fix more components ([b74dbb8](https://github.com/adobe/spectrum-css/commit/b74dbb8))
+- change previous/next icon size ([#893](https://github.com/adobe/spectrum-css/issues/893)) ([5494f44](https://github.com/adobe/spectrum-css/commit/5494f44))
+- wip fix more components ([b74dbb8](https://github.com/adobe/spectrum-css/commit/b74dbb8))
 
 <a name="3.0.0-beta.3"></a>
 
@@ -598,12 +598,12 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 ### ✨ Features
 
--   make Calendar support RTL ([9161381](https://github.com/adobe/spectrum-css/commit/9161381))
+- make Calendar support RTL ([9161381](https://github.com/adobe/spectrum-css/commit/9161381))
 
 ### 🐛 Bug fixes
 
--   broken selector in Calendar ([625a83c](https://github.com/adobe/spectrum-css/commit/625a83c))
--   correct ActionButton margin in Calendar heading ([269a17f](https://github.com/adobe/spectrum-css/commit/269a17f))
+- broken selector in Calendar ([625a83c](https://github.com/adobe/spectrum-css/commit/625a83c))
+- correct ActionButton margin in Calendar heading ([269a17f](https://github.com/adobe/spectrum-css/commit/269a17f))
 
 <a name="2.0.5"></a>
 
@@ -621,7 +621,7 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 ### 🐛 Bug fixes
 
--   adding letter spacing for calendar title, fixes [#407](https://github.com/adobe/spectrum-css/issues/407) ([#500](https://github.com/adobe/spectrum-css/issues/500)) ([915b56c](https://github.com/adobe/spectrum-css/commit/915b56c))
+- adding letter spacing for calendar title, fixes [#407](https://github.com/adobe/spectrum-css/issues/407) ([#500](https://github.com/adobe/spectrum-css/issues/500)) ([915b56c](https://github.com/adobe/spectrum-css/commit/915b56c))
 
 <a name="2.0.3"></a>
 
@@ -631,7 +631,7 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 ### 🐛 Bug fixes
 
--   remove transition from dates in calendar, fixes [#438](https://github.com/adobe/spectrum-css/issues/438) ([9a47b73](https://github.com/adobe/spectrum-css/commit/9a47b73))
+- remove transition from dates in calendar, fixes [#438](https://github.com/adobe/spectrum-css/issues/438) ([9a47b73](https://github.com/adobe/spectrum-css/commit/9a47b73))
 
 <a name="2.0.2"></a>
 
@@ -657,8 +657,8 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 ### ✨ Features
 
--   move to individually versioned packages with Lerna ([#265](https://github.com/adobe/spectrum-css/issues/265)) ([cb7fd4b](https://github.com/adobe/spectrum-css/commit/cb7fd4b)), closes [#231](https://github.com/adobe/spectrum-css/issues/231) [#214](https://github.com/adobe/spectrum-css/issues/214) [#229](https://github.com/adobe/spectrum-css/issues/229) [#240](https://github.com/adobe/spectrum-css/issues/240) [#239](https://github.com/adobe/spectrum-css/issues/239) [#161](https://github.com/adobe/spectrum-css/issues/161) [#242](https://github.com/adobe/spectrum-css/issues/242) [#246](https://github.com/adobe/spectrum-css/issues/246) [#219](https://github.com/adobe/spectrum-css/issues/219) [#235](https://github.com/adobe/spectrum-css/issues/235) [#189](https://github.com/adobe/spectrum-css/issues/189) [#248](https://github.com/adobe/spectrum-css/issues/248) [#232](https://github.com/adobe/spectrum-css/issues/232) [#248](https://github.com/adobe/spectrum-css/issues/248) [#218](https://github.com/adobe/spectrum-css/issues/218) [#237](https://github.com/adobe/spectrum-css/issues/237) [#255](https://github.com/adobe/spectrum-css/issues/255) [#256](https://github.com/adobe/spectrum-css/issues/256) [#258](https://github.com/adobe/spectrum-css/issues/258) [#257](https://github.com/adobe/spectrum-css/issues/257) [#259](https://github.com/adobe/spectrum-css/issues/259)
+- move to individually versioned packages with Lerna ([#265](https://github.com/adobe/spectrum-css/issues/265)) ([cb7fd4b](https://github.com/adobe/spectrum-css/commit/cb7fd4b)), closes [#231](https://github.com/adobe/spectrum-css/issues/231) [#214](https://github.com/adobe/spectrum-css/issues/214) [#229](https://github.com/adobe/spectrum-css/issues/229) [#240](https://github.com/adobe/spectrum-css/issues/240) [#239](https://github.com/adobe/spectrum-css/issues/239) [#161](https://github.com/adobe/spectrum-css/issues/161) [#242](https://github.com/adobe/spectrum-css/issues/242) [#246](https://github.com/adobe/spectrum-css/issues/246) [#219](https://github.com/adobe/spectrum-css/issues/219) [#235](https://github.com/adobe/spectrum-css/issues/235) [#189](https://github.com/adobe/spectrum-css/issues/189) [#248](https://github.com/adobe/spectrum-css/issues/248) [#232](https://github.com/adobe/spectrum-css/issues/232) [#248](https://github.com/adobe/spectrum-css/issues/248) [#218](https://github.com/adobe/spectrum-css/issues/218) [#237](https://github.com/adobe/spectrum-css/issues/237) [#255](https://github.com/adobe/spectrum-css/issues/255) [#256](https://github.com/adobe/spectrum-css/issues/256) [#258](https://github.com/adobe/spectrum-css/issues/258) [#257](https://github.com/adobe/spectrum-css/issues/257) [#259](https://github.com/adobe/spectrum-css/issues/259)
 
 ### 🐛 Bug fixes
 
--   fix Calendar title wrapping/alignment, related to [#269](https://github.com/adobe/spectrum-css/issues/269) ([#315](https://github.com/adobe/spectrum-css/issues/315)) ([1336f6a](https://github.com/adobe/spectrum-css/commit/1336f6a))
+- fix Calendar title wrapping/alignment, related to [#269](https://github.com/adobe/spectrum-css/issues/269) ([#315](https://github.com/adobe/spectrum-css/issues/315)) ([1336f6a](https://github.com/adobe/spectrum-css/commit/1336f6a))

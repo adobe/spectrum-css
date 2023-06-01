@@ -49,9 +49,7 @@ governing permissions and limitations under the License.
 		border-color: var(--spectrum-dial-handle-marker-color-key-focus);
 
 		&::after {
-			background-color: var(
-				--spectrum-dial-handle-marker-color-key-focus
-			);
+			background-color: var(--spectrum-dial-handle-marker-color-key-focus);
 		}
 	}
 
@@ -61,9 +59,7 @@ governing permissions and limitations under the License.
 		border-color: var(--spectrum-dial-border-color-hover);
 
 		&::after {
-			background-color: var(
-				--spectrum-dial-handle-marker-color-key-focus
-			);
+			background-color: var(--spectrum-dial-handle-marker-color-key-focus);
 		}
 	}
 }
@@ -83,9 +79,7 @@ governing permissions and limitations under the License.
 		.spectrum-Dial-controls {
 			&::after,
 			&::before {
-				background-color: var(
-					--spectrum-dial-handle-border-color-disabled
-				);
+				background-color: var(--spectrum-dial-handle-border-color-disabled);
 			}
 		}
 		.spectrum-Dial-handle {
@@ -100,9 +94,7 @@ governing permissions and limitations under the License.
 
 			&::after,
 			&::before {
-				background-color: var(
-					--spectrum-dial-handle-border-color-disabled
-				);
+				background-color: var(--spectrum-dial-handle-border-color-disabled);
 			}
 		}
 	}

@@ -18,9 +18,7 @@ governing permissions and limitations under the License.
 	--spectrum-illustrated-message-heading-max-inline-size: var(
 		--spectrum-illustrated-message-maximum-width
 	);
-	--spectrum-illustrated-message-title-to-heading: var(
-		--spectrum-spacing-400
-	);
+	--spectrum-illustrated-message-title-to-heading: var(--spectrum-spacing-400);
 	--spectrum-illustrated-message-heading-to-description: var(
 		--spectrum-spacing-75
 	);
@@ -67,9 +65,7 @@ governing permissions and limitations under the License.
 	--spectrum-illustrated-message-description-line-height: var(
 		--spectrum-body-line-height
 	);
-	--spectrum-illustrated-message-description-color: var(
-		--spectrum-body-color
-	);
+	--spectrum-illustrated-message-description-color: var(--spectrum-body-color);
 
 	/* CJK (Chinese, Japanese, and Korean) language support */
 	&:lang(ja),

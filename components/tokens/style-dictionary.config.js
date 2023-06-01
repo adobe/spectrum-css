@@ -53,9 +53,7 @@ module.exports = {
 				...["spectrum", "express"].map((subSystemName) =>
 					generateFileConfig({ subSystemName })
 				),
-				...setNames.map((context) =>
-					generateFileConfig({ setName: context })
-				),
+				...setNames.map((context) => generateFileConfig({ setName: context })),
 				...setNames.map((context) =>
 					generateFileConfig({
 						setName: context,

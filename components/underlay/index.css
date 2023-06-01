@@ -51,9 +51,7 @@ governing permissions and limitations under the License.
 		visibility 0ms linear
 			calc(
 				var(--spectrum-dialog-confirm-background-exit-animation-delay) +
-					var(
-						--spectrum-dialog-confirm-background-exit-animation-duration
-					)
+					var(--spectrum-dialog-confirm-background-exit-animation-duration)
 			);
 }
 

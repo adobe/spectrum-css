@@ -273,11 +273,11 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 🗓 2023-02-01 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/tooltip@4.0.10...@spectrum-css/tooltip@5.0.0)
 
--   chore(tokens)!: use latest dependency & fix build error (#1591) ([f2532e7](https://github.com/adobe/spectrum-css/commit/f2532e7)), closes [#1591](https://github.com/adobe/spectrum-css/issues/1591)
+- chore(tokens)!: use latest dependency & fix build error (#1591) ([f2532e7](https://github.com/adobe/spectrum-css/commit/f2532e7)), closes [#1591](https://github.com/adobe/spectrum-css/issues/1591)
 
 ### 🛑 BREAKING CHANGES
 
--   uses latest `@adobe/spectrum-tokens` dependency which includes token renames
+- uses latest `@adobe/spectrum-tokens` dependency which includes token renames
 
 <a name="4.0.10"></a>
 
@@ -351,7 +351,7 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 ### 🐛 Bug fixes
 
--   **tooltip:** update inline padding ([#1561](https://github.com/adobe/spectrum-css/issues/1561)) ([be8d1fb](https://github.com/adobe/spectrum-css/commit/be8d1fb))
+- **tooltip:** update inline padding ([#1561](https://github.com/adobe/spectrum-css/issues/1561)) ([be8d1fb](https://github.com/adobe/spectrum-css/commit/be8d1fb))
 
 <a name="4.0.1"></a>
 
@@ -367,11 +367,11 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 🗓 2022-12-06 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/tooltip@3.1.20...@spectrum-css/tooltip@4.0.0)
 
--   feat(tooltip)!: migrate to core tokens ([2087a67](https://github.com/adobe/spectrum-css/commit/2087a67))
+- feat(tooltip)!: migrate to core tokens ([2087a67](https://github.com/adobe/spectrum-css/commit/2087a67))
 
 ### 🛑 BREAKING CHANGES
 
--   -   Migrates Tooltip to core tokens
+- - Migrates Tooltip to core tokens
 
 Co-authored-by: Patrick Fulton <pfulton@adobe.com>
 
@@ -415,7 +415,7 @@ Co-authored-by: Patrick Fulton <pfulton@adobe.com>
 
 ### 🐛 Bug fixes
 
--   tooltip WHCM ([e6e0a04](https://github.com/adobe/spectrum-css/commit/e6e0a04))
+- tooltip WHCM ([e6e0a04](https://github.com/adobe/spectrum-css/commit/e6e0a04))
 
 <a name="3.1.15"></a>
 
@@ -497,7 +497,7 @@ Co-authored-by: Patrick Fulton <pfulton@adobe.com>
 
 ### 🐛 Bug fixes
 
--   update peer dependencies ([97810cf](https://github.com/adobe/spectrum-css/commit/97810cf))
+- update peer dependencies ([97810cf](https://github.com/adobe/spectrum-css/commit/97810cf))
 
 <a name="3.1.5"></a>
 
@@ -555,7 +555,7 @@ Co-authored-by: Patrick Fulton <pfulton@adobe.com>
 
 ### ✨ Features
 
--   make ClearButton build again, unblock CCX ([#1304](https://github.com/adobe/spectrum-css/issues/1304)) ([ae9399a](https://github.com/adobe/spectrum-css/commit/ae9399a))
+- make ClearButton build again, unblock CCX ([#1304](https://github.com/adobe/spectrum-css/issues/1304)) ([ae9399a](https://github.com/adobe/spectrum-css/commit/ae9399a))
 
 <a name="3.0.5"></a>
 
@@ -573,7 +573,7 @@ Co-authored-by: Patrick Fulton <pfulton@adobe.com>
 
 ### 🐛 Bug fixes
 
--   updating version number on vars ([f535b49](https://github.com/adobe/spectrum-css/commit/f535b49))
+- updating version number on vars ([f535b49](https://github.com/adobe/spectrum-css/commit/f535b49))
 
 <a name="3.0.3-alpha.3"></a>
 
@@ -639,7 +639,7 @@ Co-authored-by: Patrick Fulton <pfulton@adobe.com>
 
 ### 🐛 Bug fixes
 
--   update main, resolved conflicts ([d7880a2](https://github.com/adobe/spectrum-css/commit/d7880a2))
+- update main, resolved conflicts ([d7880a2](https://github.com/adobe/spectrum-css/commit/d7880a2))
 
 <a name="3.0.0-beta.4"></a>
 
@@ -657,8 +657,8 @@ Co-authored-by: Patrick Fulton <pfulton@adobe.com>
 
 ### 🐛 Bug fixes
 
--   tooltip with an icon on the left ([#929](https://github.com/adobe/spectrum-css/issues/929)) ([d696b2c](https://github.com/adobe/spectrum-css/commit/d696b2c))
--   wip fix more components ([b74dbb8](https://github.com/adobe/spectrum-css/commit/b74dbb8))
+- tooltip with an icon on the left ([#929](https://github.com/adobe/spectrum-css/issues/929)) ([d696b2c](https://github.com/adobe/spectrum-css/commit/d696b2c))
+- wip fix more components ([b74dbb8](https://github.com/adobe/spectrum-css/commit/b74dbb8))
 
 <a name="3.0.0-beta.2"></a>
 
@@ -684,7 +684,7 @@ Co-authored-by: Patrick Fulton <pfulton@adobe.com>
 
 ### ✨ Features
 
--   make Tooltip support RTL ([469b513](https://github.com/adobe/spectrum-css/commit/469b513))
+- make Tooltip support RTL ([469b513](https://github.com/adobe/spectrum-css/commit/469b513))
 
 <a name="2.0.5"></a>
 
@@ -734,8 +734,8 @@ Co-authored-by: Patrick Fulton <pfulton@adobe.com>
 
 ### ✨ Features
 
--   move to individually versioned packages with Lerna ([#265](https://github.com/adobe/spectrum-css/issues/265)) ([cb7fd4b](https://github.com/adobe/spectrum-css/commit/cb7fd4b)), closes [#231](https://github.com/adobe/spectrum-css/issues/231) [#214](https://github.com/adobe/spectrum-css/issues/214) [#229](https://github.com/adobe/spectrum-css/issues/229) [#240](https://github.com/adobe/spectrum-css/issues/240) [#239](https://github.com/adobe/spectrum-css/issues/239) [#161](https://github.com/adobe/spectrum-css/issues/161) [#242](https://github.com/adobe/spectrum-css/issues/242) [#246](https://github.com/adobe/spectrum-css/issues/246) [#219](https://github.com/adobe/spectrum-css/issues/219) [#235](https://github.com/adobe/spectrum-css/issues/235) [#189](https://github.com/adobe/spectrum-css/issues/189) [#248](https://github.com/adobe/spectrum-css/issues/248) [#232](https://github.com/adobe/spectrum-css/issues/232) [#248](https://github.com/adobe/spectrum-css/issues/248) [#218](https://github.com/adobe/spectrum-css/issues/218) [#237](https://github.com/adobe/spectrum-css/issues/237) [#255](https://github.com/adobe/spectrum-css/issues/255) [#256](https://github.com/adobe/spectrum-css/issues/256) [#258](https://github.com/adobe/spectrum-css/issues/258) [#257](https://github.com/adobe/spectrum-css/issues/257) [#259](https://github.com/adobe/spectrum-css/issues/259)
+- move to individually versioned packages with Lerna ([#265](https://github.com/adobe/spectrum-css/issues/265)) ([cb7fd4b](https://github.com/adobe/spectrum-css/commit/cb7fd4b)), closes [#231](https://github.com/adobe/spectrum-css/issues/231) [#214](https://github.com/adobe/spectrum-css/issues/214) [#229](https://github.com/adobe/spectrum-css/issues/229) [#240](https://github.com/adobe/spectrum-css/issues/240) [#239](https://github.com/adobe/spectrum-css/issues/239) [#161](https://github.com/adobe/spectrum-css/issues/161) [#242](https://github.com/adobe/spectrum-css/issues/242) [#246](https://github.com/adobe/spectrum-css/issues/246) [#219](https://github.com/adobe/spectrum-css/issues/219) [#235](https://github.com/adobe/spectrum-css/issues/235) [#189](https://github.com/adobe/spectrum-css/issues/189) [#248](https://github.com/adobe/spectrum-css/issues/248) [#232](https://github.com/adobe/spectrum-css/issues/232) [#248](https://github.com/adobe/spectrum-css/issues/248) [#218](https://github.com/adobe/spectrum-css/issues/218) [#237](https://github.com/adobe/spectrum-css/issues/237) [#255](https://github.com/adobe/spectrum-css/issues/255) [#256](https://github.com/adobe/spectrum-css/issues/256) [#258](https://github.com/adobe/spectrum-css/issues/258) [#257](https://github.com/adobe/spectrum-css/issues/257) [#259](https://github.com/adobe/spectrum-css/issues/259)
 
 ### 🐛 Bug fixes
 
--   **steplist:** [#215](https://github.com/adobe/spectrum-css/issues/215) [Accessibility] include interactive example w/ links ([23b38e4](https://github.com/adobe/spectrum-css/commit/23b38e4))
+- **steplist:** [#215](https://github.com/adobe/spectrum-css/issues/215) [Accessibility] include interactive example w/ links ([23b38e4](https://github.com/adobe/spectrum-css/commit/23b38e4))

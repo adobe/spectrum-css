@@ -23,12 +23,8 @@ governing permissions and limitations under the License.
 	--spectrum-site-sidebar-background-color: var(
 		--spectrum-site-background-color
 	);
-	--spectrum-site-scrollbar-track-color: var(
-		--spectrum-site-background-color
-	);
-	--spectrum-site-scrollbar-thumb-color: var(
-		--spectrum-global-color-gray-400
-	);
+	--spectrum-site-scrollbar-track-color: var(--spectrum-site-background-color);
+	--spectrum-site-scrollbar-thumb-color: var(--spectrum-global-color-gray-400);
 
 	/* .spectrum-Site-overlay */
 	--spectrum-site-overlay-underlay-background-color: rgba(0, 0, 0, 0.2);

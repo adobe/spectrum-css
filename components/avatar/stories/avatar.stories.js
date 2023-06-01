@@ -14,17 +14,7 @@ export default {
 				type: { summary: "string" },
 				category: "Component",
 			},
-			options: [
-				"50",
-				"75",
-				"100",
-				"200",
-				"300",
-				"400",
-				"500",
-				"600",
-				"700",
-			],
+			options: ["50", "75", "100", "200", "300", "400", "500", "600", "700"],
 			control: "select",
 		},
 		image: {

@@ -72,9 +72,7 @@ governing permissions and limitations under the License.
 
 .spectrum-FieldLabel--sizeL {
 	--spectrum-fieldlabel-min-height: var(--spectrum-component-height-100);
-	--spectrum-fieldlabel-top-to-text: var(
-		--spectrum-component-top-to-text-100
-	);
+	--spectrum-fieldlabel-top-to-text: var(--spectrum-component-top-to-text-100);
 	--spectrum-fieldlabel-bottom-to-text: var(
 		--spectrum-component-bottom-to-text-100
 	);
@@ -95,9 +93,7 @@ governing permissions and limitations under the License.
 
 .spectrum-FieldLabel--sizeXL {
 	--spectrum-fieldlabel-min-height: var(--spectrum-component-height-200);
-	--spectrum-fieldlabel-top-to-text: var(
-		--spectrum-component-top-to-text-200
-	);
+	--spectrum-fieldlabel-top-to-text: var(--spectrum-component-top-to-text-200);
 	--spectrum-fieldlabel-bottom-to-text: var(
 		--spectrum-component-bottom-to-text-200
 	);
@@ -222,9 +218,7 @@ governing permissions and limitations under the License.
 	--spectrum-tableform-margin-calc: calc(
 		var(--spectrum-spacing-300) + var(--spectrum-spacing-200)
 	);
-	--spectrum-tableform-margin: calc(
-			var(--spectrum-tableform-margin-calc) * -1
-		)
+	--spectrum-tableform-margin: calc(var(--spectrum-tableform-margin-calc) * -1)
 		0;
 
 	display: table;
@@ -251,10 +245,7 @@ governing permissions and limitations under the License.
 	&.is-disabled {
 		color: var(
 			--highcontrast-disabled-content-color,
-			var(
-				--mod-disabled-content-color,
-				var(--spectrum-disabled-content-color)
-			)
+			var(--mod-disabled-content-color, var(--spectrum-disabled-content-color))
 		);
 
 		.spectrum-FieldLabel-requiredIcon {

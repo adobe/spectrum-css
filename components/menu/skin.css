@@ -57,9 +57,7 @@ governing permissions and limitations under the License.
 
 	.is-active,
 	&:active {
-		background-color: var(
-			--spectrum-listitem-m-texticon-background-color-down
-		);
+		background-color: var(--spectrum-listitem-m-texticon-background-color-down);
 	}
 
 	&.is-disabled {

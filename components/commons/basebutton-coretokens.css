@@ -41,28 +41,16 @@ governing permissions and limitations under the License.
 	vertical-align: top;
 
 	transition: background
-			var(
-				--mod-animation-duration-100,
-				var(--spectrum-animation-duration-100)
-			)
+			var(--mod-animation-duration-100, var(--spectrum-animation-duration-100))
 			ease-out,
 		border-color
-			var(
-				--mod-animation-duration-100,
-				var(--spectrum-animation-duration-100)
-			)
+			var(--mod-animation-duration-100, var(--spectrum-animation-duration-100))
 			ease-out,
 		color
-			var(
-				--mod-animation-duration-100,
-				var(--spectrum-animation-duration-100)
-			)
+			var(--mod-animation-duration-100, var(--spectrum-animation-duration-100))
 			ease-out,
 		box-shadow
-			var(
-				--mod-animation-duration-100,
-				var(--spectrum-animation-duration-100)
-			)
+			var(--mod-animation-duration-100, var(--spectrum-animation-duration-100))
 			ease-out;
 
 	text-decoration: none;
@@ -116,8 +104,7 @@ governing permissions and limitations under the License.
 		bottom: 0;
 		top: 0;
 		margin: calc(
-			var(--mod-focus-indicator-gap, var(--spectrum-focus-indicator-gap)) *
-				-1
+			var(--mod-focus-indicator-gap, var(--spectrum-focus-indicator-gap)) * -1
 		);
 		transition: opacity
 				var(
@@ -136,10 +123,7 @@ governing permissions and limitations under the License.
 	&:focus-ring {
 		&:after {
 			margin: calc(
-				var(
-						--mod-focus-indicator-gap,
-						var(--spectrum-focus-indicator-gap)
-					) * -2
+				var(--mod-focus-indicator-gap, var(--spectrum-focus-indicator-gap)) * -2
 			);
 		}
 	}

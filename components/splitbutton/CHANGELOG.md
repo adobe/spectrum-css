@@ -387,16 +387,16 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 ### 🐛 Bug fixes
 
--   unbreak the build ([d595cad](https://github.com/adobe/spectrum-css/commit/d595cad))
--   update peer dependencies ([97810cf](https://github.com/adobe/spectrum-css/commit/97810cf))
+- unbreak the build ([d595cad](https://github.com/adobe/spectrum-css/commit/d595cad))
+- update peer dependencies ([97810cf](https://github.com/adobe/spectrum-css/commit/97810cf))
 
 ### 📚 Documentation
 
--   use new Button markup ([886b2cb](https://github.com/adobe/spectrum-css/commit/886b2cb))
+- use new Button markup ([886b2cb](https://github.com/adobe/spectrum-css/commit/886b2cb))
 
 ### 🛑 BREAKING CHANGES
 
--   Button markup has changed
+- Button markup has changed
 
 <a name="4.0.0"></a>
 
@@ -414,15 +414,15 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 ### 🐛 Bug fixes
 
--   unbreak the build ([123add2](https://github.com/adobe/spectrum-css/commit/123add2))
+- unbreak the build ([123add2](https://github.com/adobe/spectrum-css/commit/123add2))
 
 ### 📚 Documentation
 
--   use new Button markup ([629bf05](https://github.com/adobe/spectrum-css/commit/629bf05))
+- use new Button markup ([629bf05](https://github.com/adobe/spectrum-css/commit/629bf05))
 
 ### 🛑 BREAKING CHANGES
 
--   Button markup has changed
+- Button markup has changed
 
 <a name="3.0.10"></a>
 
@@ -480,7 +480,7 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 ### 🐛 Bug fixes
 
--   updating version number on vars ([f535b49](https://github.com/adobe/spectrum-css/commit/f535b49))
+- updating version number on vars ([f535b49](https://github.com/adobe/spectrum-css/commit/f535b49))
 
 <a name="3.0.3-alpha.3"></a>
 
@@ -514,7 +514,7 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 ### 🐛 Bug fixes
 
--   updated tokens to dna-7 order ([5bee091](https://github.com/adobe/spectrum-css/commit/5bee091))
+- updated tokens to dna-7 order ([5bee091](https://github.com/adobe/spectrum-css/commit/5bee091))
 
 <a name="3.0.2"></a>
 
@@ -548,9 +548,9 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 ### 🐛 Bug fixes
 
--   correct SplitButton padding ([04b362f](https://github.com/adobe/spectrum-css/commit/04b362f))
--   unbreak the build for SplitButton ([7c98dd5](https://github.com/adobe/spectrum-css/commit/7c98dd5))
--   update main, resolved conflicts ([d7880a2](https://github.com/adobe/spectrum-css/commit/d7880a2))
+- correct SplitButton padding ([04b362f](https://github.com/adobe/spectrum-css/commit/04b362f))
+- unbreak the build for SplitButton ([7c98dd5](https://github.com/adobe/spectrum-css/commit/7c98dd5))
+- update main, resolved conflicts ([d7880a2](https://github.com/adobe/spectrum-css/commit/d7880a2))
 
 <a name="3.0.0-beta.5"></a>
 
@@ -568,7 +568,7 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 ### 🐛 Bug fixes
 
--   wip fix more components ([b74dbb8](https://github.com/adobe/spectrum-css/commit/b74dbb8))
+- wip fix more components ([b74dbb8](https://github.com/adobe/spectrum-css/commit/b74dbb8))
 
 <a name="3.0.0-beta.3"></a>
 
@@ -578,13 +578,13 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 ### 🐛 Bug fixes
 
--   correct focus ring for SplitButton, fixes [#731](https://github.com/adobe/spectrum-css/issues/731) ([#732](https://github.com/adobe/spectrum-css/issues/732)) ([8410ce7](https://github.com/adobe/spectrum-css/commit/8410ce7))
+- correct focus ring for SplitButton, fixes [#731](https://github.com/adobe/spectrum-css/issues/731) ([#732](https://github.com/adobe/spectrum-css/issues/732)) ([8410ce7](https://github.com/adobe/spectrum-css/commit/8410ce7))
 
 ### 🛑 BREAKING CHANGES
 
--   remove margin between SplitButtons
+- remove margin between SplitButtons
 
--   fix: remove extra comment
+- fix: remove extra comment
 
 <a name="3.0.0-beta.2"></a>
 
@@ -610,7 +610,7 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 ### ✨ Features
 
--   make SplitButton support RTL ([f56928e](https://github.com/adobe/spectrum-css/commit/f56928e))
+- make SplitButton support RTL ([f56928e](https://github.com/adobe/spectrum-css/commit/f56928e))
 
 <a name="2.0.5"></a>
 
@@ -660,4 +660,4 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 ### ✨ Features
 
--   move to individually versioned packages with Lerna ([#265](https://github.com/adobe/spectrum-css/issues/265)) ([cb7fd4b](https://github.com/adobe/spectrum-css/commit/cb7fd4b)), closes [#231](https://github.com/adobe/spectrum-css/issues/231) [#214](https://github.com/adobe/spectrum-css/issues/214) [#229](https://github.com/adobe/spectrum-css/issues/229) [#240](https://github.com/adobe/spectrum-css/issues/240) [#239](https://github.com/adobe/spectrum-css/issues/239) [#161](https://github.com/adobe/spectrum-css/issues/161) [#242](https://github.com/adobe/spectrum-css/issues/242) [#246](https://github.com/adobe/spectrum-css/issues/246) [#219](https://github.com/adobe/spectrum-css/issues/219) [#235](https://github.com/adobe/spectrum-css/issues/235) [#189](https://github.com/adobe/spectrum-css/issues/189) [#248](https://github.com/adobe/spectrum-css/issues/248) [#232](https://github.com/adobe/spectrum-css/issues/232) [#248](https://github.com/adobe/spectrum-css/issues/248) [#218](https://github.com/adobe/spectrum-css/issues/218) [#237](https://github.com/adobe/spectrum-css/issues/237) [#255](https://github.com/adobe/spectrum-css/issues/255) [#256](https://github.com/adobe/spectrum-css/issues/256) [#258](https://github.com/adobe/spectrum-css/issues/258) [#257](https://github.com/adobe/spectrum-css/issues/257) [#259](https://github.com/adobe/spectrum-css/issues/259)
+- move to individually versioned packages with Lerna ([#265](https://github.com/adobe/spectrum-css/issues/265)) ([cb7fd4b](https://github.com/adobe/spectrum-css/commit/cb7fd4b)), closes [#231](https://github.com/adobe/spectrum-css/issues/231) [#214](https://github.com/adobe/spectrum-css/issues/214) [#229](https://github.com/adobe/spectrum-css/issues/229) [#240](https://github.com/adobe/spectrum-css/issues/240) [#239](https://github.com/adobe/spectrum-css/issues/239) [#161](https://github.com/adobe/spectrum-css/issues/161) [#242](https://github.com/adobe/spectrum-css/issues/242) [#246](https://github.com/adobe/spectrum-css/issues/246) [#219](https://github.com/adobe/spectrum-css/issues/219) [#235](https://github.com/adobe/spectrum-css/issues/235) [#189](https://github.com/adobe/spectrum-css/issues/189) [#248](https://github.com/adobe/spectrum-css/issues/248) [#232](https://github.com/adobe/spectrum-css/issues/232) [#248](https://github.com/adobe/spectrum-css/issues/248) [#218](https://github.com/adobe/spectrum-css/issues/218) [#237](https://github.com/adobe/spectrum-css/issues/237) [#255](https://github.com/adobe/spectrum-css/issues/255) [#256](https://github.com/adobe/spectrum-css/issues/256) [#258](https://github.com/adobe/spectrum-css/issues/258) [#257](https://github.com/adobe/spectrum-css/issues/257) [#259](https://github.com/adobe/spectrum-css/issues/259)

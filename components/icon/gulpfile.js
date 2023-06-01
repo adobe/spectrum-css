@@ -45,10 +45,7 @@ function sanitizeIcons() {
 		.pipe(
 			rename(
 				(path) =>
-					(path.basename = path.basename
-						.split("_")
-						.pop()
-						.replace("Size", ""))
+					(path.basename = path.basename.split("_").pop().replace("Size", ""))
 			)
 		)
 		.pipe(gulp.dest("./"));
@@ -69,8 +66,7 @@ function generateCombinedIcons() {
 				processClass: function (filePath) {
 					// Return the last directory
 					return (
-						"spectrum-UIIcon--" +
-						path.dirname(filePath).split(path.sep).pop()
+						"spectrum-UIIcon--" + path.dirname(filePath).split(path.sep).pop()
 					);
 				},
 			})

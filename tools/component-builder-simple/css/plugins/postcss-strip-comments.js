@@ -15,10 +15,7 @@ module.exports = postcss.plugin("postcss-strip-comments", (opts = {}) => {
 	return (css) => {
 		css.walk((node) => {
 			if (node.type === "comment") {
-				if (
-					node.text.trim().indexOf("topdoc") === 0 &&
-					opts.preserveTopdoc
-				) {
+				if (node.text.trim().indexOf("topdoc") === 0 && opts.preserveTopdoc) {
 					return;
 				}
 

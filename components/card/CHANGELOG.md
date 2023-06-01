@@ -291,7 +291,7 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 ### 🐛 Bug fixes
 
--   **card:** increase content area height when necessary ([9c19416](https://github.com/adobe/spectrum-css/commit/9c19416))
+- **card:** increase content area height when necessary ([9c19416](https://github.com/adobe/spectrum-css/commit/9c19416))
 
 <a name="5.0.0"></a>
 
@@ -299,11 +299,11 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 🗓 2022-06-16 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/card@4.0.22...@spectrum-css/card@5.0.0)
 
--   feat!: updating to latest ActionButton with new markup ([3eef405](https://github.com/adobe/spectrum-css/commit/3eef405))
+- feat!: updating to latest ActionButton with new markup ([3eef405](https://github.com/adobe/spectrum-css/commit/3eef405))
 
 ### 🛑 BREAKING CHANGES
 
--   ActionButton changes icon markup
+- ActionButton changes icon markup
 
 <a name="4.0.22"></a>
 
@@ -417,7 +417,7 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 ### 🐛 Bug fixes
 
--   update peer dependencies ([97810cf](https://github.com/adobe/spectrum-css/commit/97810cf))
+- update peer dependencies ([97810cf](https://github.com/adobe/spectrum-css/commit/97810cf))
 
 <a name="4.0.8"></a>
 
@@ -483,8 +483,8 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 ### 🐛 Bug fixes
 
--   mini card broken in docs site ([40ec3b6](https://github.com/adobe/spectrum-css/commit/40ec3b6)), closes [#1240](https://github.com/adobe/spectrum-css/issues/1240)
--   updating version number on vars ([f535b49](https://github.com/adobe/spectrum-css/commit/f535b49))
+- mini card broken in docs site ([40ec3b6](https://github.com/adobe/spectrum-css/commit/40ec3b6)), closes [#1240](https://github.com/adobe/spectrum-css/issues/1240)
+- updating version number on vars ([f535b49](https://github.com/adobe/spectrum-css/commit/f535b49))
 
 <a name="4.0.1"></a>
 
@@ -494,8 +494,8 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 ### 🐛 Bug fixes
 
--   mini card broken in docs site ([40ec3b6](https://github.com/adobe/spectrum-css/commit/40ec3b6)), closes [#1240](https://github.com/adobe/spectrum-css/issues/1240)
--   updating version number on vars ([f535b49](https://github.com/adobe/spectrum-css/commit/f535b49))
+- mini card broken in docs site ([40ec3b6](https://github.com/adobe/spectrum-css/commit/40ec3b6)), closes [#1240](https://github.com/adobe/spectrum-css/issues/1240)
+- updating version number on vars ([f535b49](https://github.com/adobe/spectrum-css/commit/f535b49))
 
 <a name="4.0.0"></a>
 
@@ -505,8 +505,8 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 ### 🐛 Bug fixes
 
--   mini card broken in docs site ([40ec3b6](https://github.com/adobe/spectrum-css/commit/40ec3b6)), closes [#1240](https://github.com/adobe/spectrum-css/issues/1240)
--   updating version number on vars ([f535b49](https://github.com/adobe/spectrum-css/commit/f535b49))
+- mini card broken in docs site ([40ec3b6](https://github.com/adobe/spectrum-css/commit/40ec3b6)), closes [#1240](https://github.com/adobe/spectrum-css/issues/1240)
+- updating version number on vars ([f535b49](https://github.com/adobe/spectrum-css/commit/f535b49))
 
 <a name="4.0.0-alpha.4"></a>
 
@@ -524,12 +524,12 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 ### 🐛 Bug fixes
 
--   gave card a width to avoid it expanding to full width ([db9c0c7](https://github.com/adobe/spectrum-css/commit/db9c0c7))
+- gave card a width to avoid it expanding to full width ([db9c0c7](https://github.com/adobe/spectrum-css/commit/db9c0c7))
 
 ### 🛑 BREAKING CHANGES
 
--   with the width being set and a min width, it's like to
-    not have the same width as before and will break layout
+- with the width being set and a min width, it's like to
+  not have the same width as before and will break layout
 
 <a name="4.0.0-alpha.2"></a>
 
@@ -555,16 +555,16 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 ### ♻️ Code refactoring
 
--   changed sized cards to t-shirt sizes ([7fe32e4](https://github.com/adobe/spectrum-css/commit/7fe32e4))
+- changed sized cards to t-shirt sizes ([7fe32e4](https://github.com/adobe/spectrum-css/commit/7fe32e4))
 
 ### 🐛 Bug fixes
 
--   switch height to min-height ([594873b](https://github.com/adobe/spectrum-css/commit/594873b))
--   updating min-width on card ([f15db2a](https://github.com/adobe/spectrum-css/commit/f15db2a))
+- switch height to min-height ([594873b](https://github.com/adobe/spectrum-css/commit/594873b))
+- updating min-width on card ([f15db2a](https://github.com/adobe/spectrum-css/commit/f15db2a))
 
 ### 🛑 BREAKING CHANGES
 
--   .spectrum-Card--small is now .spectrum-Card--sizeS
+- .spectrum-Card--small is now .spectrum-Card--sizeS
 
 <a name="3.0.2"></a>
 
@@ -590,11 +590,11 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 ### ✨ Features
 
--   added t-shirt sizes to checkbox ([f4c59bd](https://github.com/adobe/spectrum-css/commit/f4c59bd)), closes [#951](https://github.com/adobe/spectrum-css/issues/951)
+- added t-shirt sizes to checkbox ([f4c59bd](https://github.com/adobe/spectrum-css/commit/f4c59bd)), closes [#951](https://github.com/adobe/spectrum-css/issues/951)
 
 ### 🛑 BREAKING CHANGES
 
--   a t-shirt size class is now required for checkbox.
+- a t-shirt size class is now required for checkbox.
 
 <a name="3.0.0-beta.6"></a>
 
@@ -604,18 +604,18 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 ### ✨ Features
 
--   update to new ActionButton markup ([bacc814](https://github.com/adobe/spectrum-css/commit/bacc814))
+- update to new ActionButton markup ([bacc814](https://github.com/adobe/spectrum-css/commit/bacc814))
 
 ### 🐛 Bug fixes
 
--   correct dependencies for FieldButton -> ActionButton change ([29d69f8](https://github.com/adobe/spectrum-css/commit/29d69f8))
--   correct icon sizing for small cards ([5b570f4](https://github.com/adobe/spectrum-css/commit/5b570f4))
--   update main, resolved conflicts ([d7880a2](https://github.com/adobe/spectrum-css/commit/d7880a2))
+- correct dependencies for FieldButton -> ActionButton change ([29d69f8](https://github.com/adobe/spectrum-css/commit/29d69f8))
+- correct icon sizing for small cards ([5b570f4](https://github.com/adobe/spectrum-css/commit/5b570f4))
+- update main, resolved conflicts ([d7880a2](https://github.com/adobe/spectrum-css/commit/d7880a2))
 
 ### 🛑 BREAKING CHANGES
 
--   .spectrum-Icon--sizeL is now .spectrum-Icon--sizeXXL and will likely be removed later
--   .spectrum-ActionButton--sizeM now required for all uses
+- .spectrum-Icon--sizeL is now .spectrum-Icon--sizeXXL and will likely be removed later
+- .spectrum-ActionButton--sizeM now required for all uses
 
 <a name="3.0.0-beta.5"></a>
 
@@ -623,11 +623,11 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 🗓 2020-10-20 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/card@3.0.0-beta.4...@spectrum-css/card@3.0.0-beta.5)
 
--   fix!: updated type sizes to use consistent syntax, related to #972 (#1031) ([1a604c4](https://github.com/adobe/spectrum-css/commit/1a604c4)), closes [#972](https://github.com/adobe/spectrum-css/issues/972) [#1031](https://github.com/adobe/spectrum-css/issues/1031)
+- fix!: updated type sizes to use consistent syntax, related to #972 (#1031) ([1a604c4](https://github.com/adobe/spectrum-css/commit/1a604c4)), closes [#972](https://github.com/adobe/spectrum-css/issues/972) [#1031](https://github.com/adobe/spectrum-css/issues/1031)
 
 ### 🛑 BREAKING CHANGES
 
--   all typography sizing classes now have --size* instead of --*, see migration guides
+- all typography sizing classes now have --size* instead of --*, see migration guides
 
 <a name="3.0.0-beta.4"></a>
 
@@ -669,11 +669,11 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 ### ✨ Features
 
--   make Card support RTL ([6806754](https://github.com/adobe/spectrum-css/commit/6806754))
+- make Card support RTL ([6806754](https://github.com/adobe/spectrum-css/commit/6806754))
 
 ### 🐛 Bug fixes
 
--   position of Checkbox in Card QuickActions ([7ca2170](https://github.com/adobe/spectrum-css/commit/7ca2170))
+- position of Checkbox in Card QuickActions ([7ca2170](https://github.com/adobe/spectrum-css/commit/7ca2170))
 
 <a name="2.0.6"></a>
 
@@ -731,10 +731,10 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 ### ✨ Features
 
--   implement horizontal small card ([d18b02e](https://github.com/adobe/spectrum-css/commit/d18b02e))
--   move to individually versioned packages with Lerna ([#265](https://github.com/adobe/spectrum-css/issues/265)) ([cb7fd4b](https://github.com/adobe/spectrum-css/commit/cb7fd4b)), closes [#231](https://github.com/adobe/spectrum-css/issues/231) [#214](https://github.com/adobe/spectrum-css/issues/214) [#229](https://github.com/adobe/spectrum-css/issues/229) [#240](https://github.com/adobe/spectrum-css/issues/240) [#239](https://github.com/adobe/spectrum-css/issues/239) [#161](https://github.com/adobe/spectrum-css/issues/161) [#242](https://github.com/adobe/spectrum-css/issues/242) [#246](https://github.com/adobe/spectrum-css/issues/246) [#219](https://github.com/adobe/spectrum-css/issues/219) [#235](https://github.com/adobe/spectrum-css/issues/235) [#189](https://github.com/adobe/spectrum-css/issues/189) [#248](https://github.com/adobe/spectrum-css/issues/248) [#232](https://github.com/adobe/spectrum-css/issues/232) [#248](https://github.com/adobe/spectrum-css/issues/248) [#218](https://github.com/adobe/spectrum-css/issues/218) [#237](https://github.com/adobe/spectrum-css/issues/237) [#255](https://github.com/adobe/spectrum-css/issues/255) [#256](https://github.com/adobe/spectrum-css/issues/256) [#258](https://github.com/adobe/spectrum-css/issues/258) [#257](https://github.com/adobe/spectrum-css/issues/257) [#259](https://github.com/adobe/spectrum-css/issues/259)
+- implement horizontal small card ([d18b02e](https://github.com/adobe/spectrum-css/commit/d18b02e))
+- move to individually versioned packages with Lerna ([#265](https://github.com/adobe/spectrum-css/issues/265)) ([cb7fd4b](https://github.com/adobe/spectrum-css/commit/cb7fd4b)), closes [#231](https://github.com/adobe/spectrum-css/issues/231) [#214](https://github.com/adobe/spectrum-css/issues/214) [#229](https://github.com/adobe/spectrum-css/issues/229) [#240](https://github.com/adobe/spectrum-css/issues/240) [#239](https://github.com/adobe/spectrum-css/issues/239) [#161](https://github.com/adobe/spectrum-css/issues/161) [#242](https://github.com/adobe/spectrum-css/issues/242) [#246](https://github.com/adobe/spectrum-css/issues/246) [#219](https://github.com/adobe/spectrum-css/issues/219) [#235](https://github.com/adobe/spectrum-css/issues/235) [#189](https://github.com/adobe/spectrum-css/issues/189) [#248](https://github.com/adobe/spectrum-css/issues/248) [#232](https://github.com/adobe/spectrum-css/issues/232) [#248](https://github.com/adobe/spectrum-css/issues/248) [#218](https://github.com/adobe/spectrum-css/issues/218) [#237](https://github.com/adobe/spectrum-css/issues/237) [#255](https://github.com/adobe/spectrum-css/issues/255) [#256](https://github.com/adobe/spectrum-css/issues/256) [#258](https://github.com/adobe/spectrum-css/issues/258) [#257](https://github.com/adobe/spectrum-css/issues/257) [#259](https://github.com/adobe/spectrum-css/issues/259)
 
 ### 🐛 Bug fixes
 
--   don't shrink preview/content when cards are small ([37ce7c5](https://github.com/adobe/spectrum-css/commit/37ce7c5))
--   leave Gallery preview card height to the JS ([#283](https://github.com/adobe/spectrum-css/issues/283)) ([083d712](https://github.com/adobe/spectrum-css/commit/083d712))
+- don't shrink preview/content when cards are small ([37ce7c5](https://github.com/adobe/spectrum-css/commit/37ce7c5))
+- leave Gallery preview card height to the JS ([#283](https://github.com/adobe/spectrum-css/issues/283)) ([083d712](https://github.com/adobe/spectrum-css/commit/083d712))

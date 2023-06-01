@@ -154,17 +154,14 @@ governing permissions and limitations under the License.
 		border-color: transparent;
 		transition: box-shadow var(--spectrum-global-animation-duration-100)
 				ease-in-out,
-			border-color var(--spectrum-global-animation-duration-100)
-				ease-in-out;
+			border-color var(--spectrum-global-animation-duration-100) ease-in-out;
 	}
 
 	&.is-keyboardFocused:not(.spectrum-DatePicker--quiet) {
 		&:after {
 			box-shadow: 0 0 0
 				var(--spectrum-textfield-m-texticon-focus-ring-border-width)
-				var(
-					--spectrum-textfield-m-textonly-focus-ring-border-color-key-focus
-				);
+				var(--spectrum-textfield-m-textonly-focus-ring-border-color-key-focus);
 		}
 
 		.spectrum-DatePicker-textfield:after {
@@ -178,9 +175,7 @@ governing permissions and limitations under the License.
 			box-shadow: none;
 			border-radius: 0;
 			border-bottom: 2px solid
-				var(
-					--spectrum-textfield-m-textonly-focus-ring-border-color-key-focus
-				);
+				var(--spectrum-textfield-m-textonly-focus-ring-border-color-key-focus);
 			bottom: calc(-1 * var(--spectrum-alias-input-quiet-focusline-gap));
 		}
 	}
@@ -194,15 +189,11 @@ governing permissions and limitations under the License.
 			inline-size: var(--spectrum-datepicker-input-width-quiet);
 
 			&:first-of-type {
-				inline-size: var(
-					--spectrum-datepicker-range-input-width-quiet-first
-				);
+				inline-size: var(--spectrum-datepicker-range-input-width-quiet-first);
 			}
 		}
 		.spectrum-DatePicker-button {
-			border-radius: var(
-				--spectrum-combobox-quiet-fieldbutton-border-radius
-			);
+			border-radius: var(--spectrum-combobox-quiet-fieldbutton-border-radius);
 		}
 	}
 
@@ -214,17 +205,13 @@ governing permissions and limitations under the License.
 			min-inline-size: 0;
 
 			&:first-of-type {
-				inline-size: var(
-					--spectrum-datepicker-datetime-input-width-first
-				);
+				inline-size: var(--spectrum-datepicker-datetime-input-width-first);
 			}
 		}
 
 		&.spectrum-DatePicker--quiet {
 			.spectrum-DatePicker-textfield {
-				inline-size: var(
-					--spectrum-datepicker-datetime-quiet-input-width
-				);
+				inline-size: var(--spectrum-datepicker-datetime-quiet-input-width);
 
 				&:first-of-type {
 					inline-size: var(
@@ -291,9 +278,7 @@ governing permissions and limitations under the License.
 	&.spectrum-DatePicker--quiet {
 		.spectrum-DatePicker--rangeDash {
 			&:before {
-				margin-inline-start: var(
-					--spectrum-datepicker-range-dash-margin-left
-				);
+				margin-inline-start: var(--spectrum-datepicker-range-dash-margin-left);
 			}
 		}
 	}

@@ -273,11 +273,11 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 🗓 2023-02-01 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/helptext@3.0.13...@spectrum-css/helptext@4.0.0)
 
--   chore(tokens)!: use latest dependency & fix build error (#1591) ([f2532e7](https://github.com/adobe/spectrum-css/commit/f2532e7)), closes [#1591](https://github.com/adobe/spectrum-css/issues/1591)
+- chore(tokens)!: use latest dependency & fix build error (#1591) ([f2532e7](https://github.com/adobe/spectrum-css/commit/f2532e7)), closes [#1591](https://github.com/adobe/spectrum-css/issues/1591)
 
 ### 🛑 BREAKING CHANGES
 
--   uses latest `@adobe/spectrum-tokens` dependency which includes token renames
+- uses latest `@adobe/spectrum-tokens` dependency which includes token renames
 
 <a name="3.0.13"></a>
 
@@ -375,7 +375,7 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 ### 🐛 Bug fixes
 
--   resolve missing tokens errors due to name changes ([#1555](https://github.com/adobe/spectrum-css/issues/1555)) ([ddae027](https://github.com/adobe/spectrum-css/commit/ddae027))
+- resolve missing tokens errors due to name changes ([#1555](https://github.com/adobe/spectrum-css/issues/1555)) ([ddae027](https://github.com/adobe/spectrum-css/commit/ddae027))
 
 <a name="3.0.1"></a>
 
@@ -391,13 +391,13 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 🗓 2022-10-13 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/helptext@2.0.9...@spectrum-css/helptext@3.0.0)
 
--   refactor(helptext)!: remap core token aliases & rename aliases ([b34d4df](https://github.com/adobe/spectrum-css/commit/b34d4df))
+- refactor(helptext)!: remap core token aliases & rename aliases ([b34d4df](https://github.com/adobe/spectrum-css/commit/b34d4df))
 
 ### 🛑 BREAKING CHANGES
 
--   remaps existing aliases to new/renamed core token values
+- remaps existing aliases to new/renamed core token values
 
--   `--spectrum-negative-content-color` removed and `--spectrum-negative-color-900` used in its place
+- `--spectrum-negative-content-color` removed and `--spectrum-negative-color-900` used in its place
 
 <a name="2.0.9"></a>
 
@@ -415,7 +415,7 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 ### 🐛 Bug fixes
 
--   **helptext:** resolve error due to core tokens breaking change ([640e24f](https://github.com/adobe/spectrum-css/commit/640e24f))
+- **helptext:** resolve error due to core tokens breaking change ([640e24f](https://github.com/adobe/spectrum-css/commit/640e24f))
 
 <a name="2.0.7"></a>
 
@@ -479,11 +479,11 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 🗓 2022-07-25 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/helptext@1.0.20...@spectrum-css/helptext@2.0.0)
 
--   feat(helptext)!: migrate to core tokens ([8f6075e](https://github.com/adobe/spectrum-css/commit/8f6075e))
+- feat(helptext)!: migrate to core tokens ([8f6075e](https://github.com/adobe/spectrum-css/commit/8f6075e))
 
 ### 🛑 BREAKING CHANGES
 
--   This migrates the component to core tokens. Additionally, this adds support for Windows High Contrast Mode.
+- This migrates the component to core tokens. Additionally, this adds support for Windows High Contrast Mode.
 
 <a name="2.0.0-beta.1"></a>
 
@@ -499,11 +499,11 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 🗓 2022-07-25 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/helptext@1.0.20...@spectrum-css/helptext@2.0.0-beta.0)
 
--   feat(helptext)!: migrate to core tokens ([1535edf](https://github.com/adobe/spectrum-css/commit/1535edf))
+- feat(helptext)!: migrate to core tokens ([1535edf](https://github.com/adobe/spectrum-css/commit/1535edf))
 
 ### 🛑 BREAKING CHANGES
 
--   This migrates the component to core tokens. Additionally, this adds support for Windows High Contrast Mode.
+- This migrates the component to core tokens. Additionally, this adds support for Windows High Contrast Mode.
 
 <a name="1.0.20"></a>
 
@@ -601,7 +601,7 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 ### 🐛 Bug fixes
 
--   update peer dependencies ([97810cf](https://github.com/adobe/spectrum-css/commit/97810cf))
+- update peer dependencies ([97810cf](https://github.com/adobe/spectrum-css/commit/97810cf))
 
 <a name="1.0.8"></a>
 
@@ -675,7 +675,7 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 ### 🐛 Bug fixes
 
--   updating version number on vars ([f535b49](https://github.com/adobe/spectrum-css/commit/f535b49))
+- updating version number on vars ([f535b49](https://github.com/adobe/spectrum-css/commit/f535b49))
 
 <a name="1.0.0-alpha.3"></a>
 
@@ -693,4 +693,4 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 ### ✨ Features
 
--   added helptext component ([7aeb3c8](https://github.com/adobe/spectrum-css/commit/7aeb3c8))
+- added helptext component ([7aeb3c8](https://github.com/adobe/spectrum-css/commit/7aeb3c8))

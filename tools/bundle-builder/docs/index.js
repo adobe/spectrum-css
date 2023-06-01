@@ -79,9 +79,10 @@ async function buildDocs_forDep(dep) {
 	logger.debug(`Will build docs for package in ${dirs.components}/${dep}`);
 
 	return new Promise((resolve, reject) => {
-		gulp.src([`${dirName}/metadata.yml`, `${dirName}/metadata/*.yml`], {
-			allowEmpty: true,
-		})
+		gulp
+			.src([`${dirName}/metadata.yml`, `${dirName}/metadata/*.yml`], {
+				allowEmpty: true,
+			})
 			.pipe(
 				rename(function (file) {
 					if (file.basename === "metadata") {
@@ -97,15 +98,11 @@ async function buildDocs_forDep(dep) {
 					componentDeps.push(dep);
 
 					let pkg = JSON.parse(
-						await fsp.readFile(
-							path.join(dirs.components, dep, "package.json")
-						)
+						await fsp.readFile(path.join(dirs.components, dep, "package.json"))
 					);
 
 					let docsDeps = minimumDeps.concat(componentDeps);
-					docsDeps = docsDeps.filter(
-						(dep, i) => docsDeps.indexOf(dep) === i
-					);
+					docsDeps = docsDeps.filter((dep, i) => docsDeps.indexOf(dep) === i);
 
 					let date;
 					try {
@@ -131,8 +128,7 @@ async function buildDocs_forDep(dep) {
 						},
 						templateData,
 						{
-							pageURL:
-								path.basename(file.basename, ".yml") + ".html",
+							pageURL: path.basename(file.basename, ".yml") + ".html",
 							dependencyOrder: docsDeps,
 							releaseDate: date,
 							pkg: pkg,
@@ -177,10 +173,7 @@ async function buildDocs_forDep(dep) {
 
 					try {
 						const templatePath = `${dirs.site}/templates/siteComponent.pug`;
-						let compiled = pugCompiler.renderFile(
-							templatePath,
-							templateData
-						);
+						let compiled = pugCompiler.renderFile(templatePath, templateData);
 						file.contents = Buffer.from(compiled);
 					} catch (err) {
 						return cb(err);
@@ -363,9 +356,7 @@ function copySiteWorkflowIcons() {
 	return gulp
 		.src(
 			path.join(
-				path.dirname(
-					require.resolve("@adobe/spectrum-css-workflow-icons")
-				),
+				path.dirname(require.resolve("@adobe/spectrum-css-workflow-icons")),
 				"spectrum-icons.svg"
 			)
 		)

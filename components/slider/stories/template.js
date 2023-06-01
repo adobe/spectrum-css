@@ -30,8 +30,7 @@ export const Template = ({
 	const { express } = globals;
 
 	try {
-		if (!express)
-			import(/* webpackPrefetch: true */ "../themes/spectrum.css");
+		if (!express) import(/* webpackPrefetch: true */ "../themes/spectrum.css");
 		else import(/* webpackPrefetch: true */ "../themes/express.css");
 	} catch (e) {
 		console.warn(e);
@@ -69,9 +68,7 @@ export const Template = ({
 			class="${rootClass}-track"
 			style=${ifDefined(
 				styleMap({
-					[rtl ? "right" : "left"]: position
-						? `${position}%`
-						: undefined,
+					[rtl ? "right" : "left"]: position ? `${position}%` : undefined,
 					width: width ? `${width}%` : undefined,
 				})
 			)}
@@ -101,9 +98,7 @@ export const Template = ({
 				})}
 				style=${ifDefined(
 					styleMap({
-						[rtl ? "right" : "left"]: position
-							? `${position}%`
-							: undefined,
+						[rtl ? "right" : "left"]: position ? `${position}%` : undefined,
 					})
 				)}
 			>
@@ -144,17 +139,13 @@ export const Template = ({
 				...style,
 			})}
 			role=${ifDefined(values.length > 1 ? "group" : undefined)}
-			aria-labelledby=${ifDefined(
-				label && id ? `${id}-label` : undefined
-			)}
+			aria-labelledby=${ifDefined(label && id ? `${id}-label` : undefined)}
 		>
 			<!-- Label region -->
 			${label
 				? html`<div
 						class="${rootClass}-labelContainer"
-						role=${ifDefined(
-							values.length > 1 ? "presentation" : undefined
-						)}
+						role=${ifDefined(values.length > 1 ? "presentation" : undefined)}
 				  >
 						${FieldLabel({
 							...globals,
@@ -174,9 +165,7 @@ export const Template = ({
 										id && label ? `${id}-label` : undefined
 									)}
 							  >
-									${values[0]}${values.length > 1
-										? ` - ${values[1]}`
-										: ""}
+									${values[0]}${values.length > 1 ? ` - ${values[1]}` : ""}
 							  </div>`
 							: ""}
 				  </div>`
@@ -199,9 +188,7 @@ export const Template = ({
 							  })
 							: "",
 						isFirst && isRamp
-							? html`<div class="${rootClass}-ramp">
-									${rampSVG}
-							  </div>`
+							? html`<div class="${rootClass}-ramp">${rampSVG}</div>`
 							: "",
 						isFirst && showTicks && !isRamp
 							? renderTick({ from: min, to: max })
@@ -218,9 +205,7 @@ export const Template = ({
 							? html` <div
 									class=${classMap({
 										[`${rootClass}-fill`]: true,
-										[`${rootClass}-fill--right`]: !!(
-											value > centerPoint
-										),
+										[`${rootClass}-fill--right`]: !!(value > centerPoint),
 									})}
 									style=${ifDefined(
 										styleMap({
@@ -229,10 +214,7 @@ export const Template = ({
 													? getPosition(centerPoint)
 													: getPosition(value)
 											}%`,
-											width: `${getWidth(
-												value,
-												centerPoint
-											)}%`,
+											width: `${getWidth(value, centerPoint)}%`,
 										})
 									)}
 							  ></div>`

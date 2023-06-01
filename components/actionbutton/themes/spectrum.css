@@ -12,16 +12,10 @@ governing permissions and limitations under the License.
 
 @container (--system: spectrum) {
 	.spectrum-ActionButton {
-		--spectrum-actionbutton-background-color-default: var(
-			--spectrum-gray-75
-		);
-		--spectrum-actionbutton-background-color-hover: var(
-			--spectrum-gray-200
-		);
+		--spectrum-actionbutton-background-color-default: var(--spectrum-gray-75);
+		--spectrum-actionbutton-background-color-hover: var(--spectrum-gray-200);
 		--spectrum-actionbutton-background-color-down: var(--spectrum-gray-300);
-		--spectrum-actionbutton-background-color-focus: var(
-			--spectrum-gray-200
-		);
+		--spectrum-actionbutton-background-color-focus: var(--spectrum-gray-200);
 
 		--spectrum-actionbutton-border-color-default: var(--spectrum-gray-400);
 		--spectrum-actionbutton-border-color-hover: var(--spectrum-gray-500);
@@ -51,15 +45,9 @@ governing permissions and limitations under the License.
 
 		&.spectrum-ActionButton--quiet {
 			--spectrum-actionbutton-background-color-default: transparent;
-			--spectrum-actionbutton-background-color-hover: var(
-				--spectrum-gray-200
-			);
-			--spectrum-actionbutton-background-color-down: var(
-				--spectrum-gray-300
-			);
-			--spectrum-actionbutton-background-color-focus: var(
-				--spectrum-gray-200
-			);
+			--spectrum-actionbutton-background-color-hover: var(--spectrum-gray-200);
+			--spectrum-actionbutton-background-color-down: var(--spectrum-gray-300);
+			--spectrum-actionbutton-background-color-focus: var(--spectrum-gray-200);
 
 			--spectrum-actionbutton-border-color-default: transparent;
 			--spectrum-actionbutton-border-color-hover: transparent;
@@ -89,9 +77,7 @@ governing permissions and limitations under the License.
 			--spectrum-actionbutton-border-color-down: transparent;
 			--spectrum-actionbutton-border-color-focus: transparent;
 
-			--spectrum-actionbutton-content-color-default: var(
-				--spectrum-white
-			);
+			--spectrum-actionbutton-content-color-default: var(--spectrum-white);
 			--spectrum-actionbutton-content-color-hover: var(--spectrum-white);
 			--spectrum-actionbutton-content-color-down: var(--spectrum-white);
 			--spectrum-actionbutton-content-color-focus: var(--spectrum-white);
@@ -154,9 +140,7 @@ governing permissions and limitations under the License.
 				--spectrum-transparent-black-500
 			);
 
-			--spectrum-actionbutton-content-color-default: var(
-				--spectrum-black
-			);
+			--spectrum-actionbutton-content-color-default: var(--spectrum-black);
 			--spectrum-actionbutton-content-color-hover: var(--spectrum-black);
 			--spectrum-actionbutton-content-color-down: var(--spectrum-black);
 			--spectrum-actionbutton-content-color-focus: var(--spectrum-black);
@@ -237,9 +221,7 @@ governing permissions and limitations under the License.
 				--spectrum-transparent-white-500
 			);
 
-			--spectrum-actionbutton-content-color-default: var(
-				--spectrum-white
-			);
+			--spectrum-actionbutton-content-color-default: var(--spectrum-white);
 			--spectrum-actionbutton-content-color-hover: var(--spectrum-white);
 			--spectrum-actionbutton-content-color-down: var(--spectrum-white);
 			--spectrum-actionbutton-content-color-focus: var(--spectrum-white);

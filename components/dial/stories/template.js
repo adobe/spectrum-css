@@ -46,12 +46,8 @@ export const Template = ({
 				const input = dial.querySelector("input");
 				const min = -45;
 				const max = 225;
-				const dialOffsetLeft =
-					dial.offsetLeft + dial.offsetParent.offsetLeft;
-				var x = Math.max(
-					Math.min(e.x - dialOffsetLeft, dial.offsetWidth),
-					0
-				);
+				const dialOffsetLeft = dial.offsetLeft + dial.offsetParent.offsetLeft;
+				var x = Math.max(Math.min(e.x - dialOffsetLeft, dial.offsetWidth), 0);
 				var percent = (x / dial.offsetWidth) * 100;
 				var deg = percent * 0.01 * (max - min) + min;
 				handle.style.transform = "rotate(" + deg + "deg" + ")";
@@ -63,10 +59,7 @@ export const Template = ({
 			${when(
 				label,
 				() => html`<div class="${rootClass}-labelContainer">
-					<label
-						id="dialLabel"
-						class="${rootClass}-label"
-						for="labeledDial"
+					<label id="dialLabel" class="${rootClass}-label" for="labeledDial"
 						>${label}</label
 					>
 					<div

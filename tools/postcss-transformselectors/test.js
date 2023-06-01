@@ -57,10 +57,7 @@ test("support complex examples", (t) => {
 					.map((selectorPart) => {
 						return ["h1", "h2", "h3"]
 							.map((h) => {
-								return selectorPart.replace(
-									".spectrum-Heading",
-									h
-								);
+								return selectorPart.replace(".spectrum-Heading", h);
 							})
 							.join(",");
 					})
