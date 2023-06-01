@@ -1,0 +1,19 @@
+{
+  "name": "stylelint-no-missing-var",
+  "version": "1.0.1",
+  "license": "MIT",
+  "author": "Rajdeep Chandra",
+  "main": "index.js",
+  "scripts": {
+    "lint": "stylelint index.js",
+    "prepublishOnly": "yarn test",
+    "test": "ava"
+  },
+  "peerDependencies": {
+    "stylelint": ">=15"
+  },
+  "devDependencies": {
+    "ava": "^3.9.0",
+    "stylelint": "^15.6.2"
+  }
+}
