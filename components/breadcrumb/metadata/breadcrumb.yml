@@ -1,13 +1,13 @@
 name: Breadcrumbs
 SpectrumSiteSlug: https://spectrum.adobe.com/page/breadcrumbs/
 sections:
-- name: Custom Properties API
-  description: |
-    This component can be modified via its `--mod-*` prefixed custom properties. A list of those prefixed custom properties can be found <a href="https://github.com/adobe/spectrum-css/tree/main/components/breadcrumb/metadata/mods.md">here</a>.
-- name: Migration Guide
-  description: |
-    ### New Action Button markup
-    Action Button requires `.spectrum-ActionButton-icon` class on icons nested inside of Action Button.
+  - name: Custom Properties API
+    description: |
+      This component can be modified via its `--mod-*` prefixed custom properties. A list of those prefixed custom properties can be found <a href="https://github.com/adobe/spectrum-css/tree/main/components/breadcrumb/metadata/mods.md">here</a>.
+  - name: Migration Guide
+    description: |
+      ### New Action Button markup
+      Action Button requires `.spectrum-ActionButton-icon` class on icons nested inside of Action Button.
 examples:
   - id: breadcrumb
     name: Standard

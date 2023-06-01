@@ -1,39 +1,39 @@
 {
-  "name": "@spectrum-css/searchwithin",
-  "version": "4.0.26",
-  "description": "The Spectrum CSS searchwithin component",
-  "license": "Apache-2.0",
-  "author": "Adobe",
-  "homepage": "https://opensource.adobe.com/spectrum-css/searchwithin",
-  "repository": {
-    "type": "git",
-    "url": "https://github.com/adobe/spectrum-css.git",
-    "directory": "components/searchwithin"
-  },
-  "bugs": {
-    "url": "https://github.com/adobe/spectrum-css/issues"
-  },
-  "main": "dist/index-vars.css",
-  "scripts": {
-    "build": "gulp"
-  },
-  "peerDependencies": {
-    "@spectrum-css/clearbutton": ">=1",
-    "@spectrum-css/icon": ">=3",
-    "@spectrum-css/picker": ">=3",
-    "@spectrum-css/textfield": ">=5.0.0",
-    "@spectrum-css/vars": ">=9"
-  },
-  "devDependencies": {
-    "@spectrum-css/clearbutton": "^1.2.31",
-    "@spectrum-css/component-builder": "^4.0.9",
-    "@spectrum-css/icon": "^3.0.44",
-    "@spectrum-css/picker": "^4.0.11",
-    "@spectrum-css/textfield": "^5.1.10",
-    "@spectrum-css/vars": "^9.0.6",
-    "gulp": "^4.0.0"
-  },
-  "publishConfig": {
-    "access": "public"
-  }
+	"name": "@spectrum-css/searchwithin",
+	"version": "4.0.26",
+	"description": "The Spectrum CSS searchwithin component",
+	"license": "Apache-2.0",
+	"author": "Adobe",
+	"homepage": "https://opensource.adobe.com/spectrum-css/searchwithin",
+	"repository": {
+		"type": "git",
+		"url": "https://github.com/adobe/spectrum-css.git",
+		"directory": "components/searchwithin"
+	},
+	"bugs": {
+		"url": "https://github.com/adobe/spectrum-css/issues"
+	},
+	"main": "dist/index-vars.css",
+	"scripts": {
+		"build": "gulp"
+	},
+	"peerDependencies": {
+		"@spectrum-css/clearbutton": ">=1",
+		"@spectrum-css/icon": ">=3",
+		"@spectrum-css/picker": ">=3",
+		"@spectrum-css/textfield": ">=5.0.0",
+		"@spectrum-css/vars": ">=9"
+	},
+	"devDependencies": {
+		"@spectrum-css/clearbutton": "^1.2.31",
+		"@spectrum-css/component-builder": "^4.0.9",
+		"@spectrum-css/icon": "^3.0.44",
+		"@spectrum-css/picker": "^4.0.11",
+		"@spectrum-css/textfield": "^5.1.10",
+		"@spectrum-css/vars": "^9.0.6",
+		"gulp": "^4.0.0"
+	},
+	"publishConfig": {
+		"access": "public"
+	}
 }

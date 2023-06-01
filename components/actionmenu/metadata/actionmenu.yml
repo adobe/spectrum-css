@@ -1,13 +1,13 @@
 name: Action Menu
 description: Simply an action button with a Popover. Note that the `is-selected` class should be applied to the button when the menu is open. Also note the accessibility roles are different for an action menu vs a normal menu.
 sections:
-- name: Migration Guide
-  description: |
-    ### New Action Button markup
-    Action Button requires `.spectrum-ActionButton-icon` class on icons nested inside of Action Button.
+  - name: Migration Guide
+    description: |
+      ### New Action Button markup
+      Action Button requires `.spectrum-ActionButton-icon` class on icons nested inside of Action Button.
 
-    ### Change workflow icon size to medium
-    Replace `.spectrum-Icon--sizeS` with `.spectrum-Icon--sizeM`.
+      ### Change workflow icon size to medium
+      Replace `.spectrum-Icon--sizeS` with `.spectrum-Icon--sizeM`.
 examples:
   - id: actionmenu
     name: Standard

@@ -11,64 +11,64 @@ governing permissions and limitations under the License.
 */
 
 .spectrum-SplitView-pane {
-  background-color: var(--spectrum-panel-s-background-color);
+	background-color: var(--spectrum-panel-s-background-color);
 }
 
 .spectrum-SplitView-splitter {
-  background-color: var(--spectrum-dragbar-handle-background-color);
+	background-color: var(--spectrum-dragbar-handle-background-color);
 }
 
 .spectrum-SplitView-gripper {
-  border-color: var(--spectrum-dragbar-handle-background-color);
-  &:before {
-    background-color: var(--spectrum-dragbar-handle-background-color);
-  }
+	border-color: var(--spectrum-dragbar-handle-background-color);
+	&:before {
+		background-color: var(--spectrum-dragbar-handle-background-color);
+	}
 }
 
 .spectrum-SplitView-splitter {
-  &.is-draggable {
-    &:hover,
-    &.is-hovered {
-      background-color: var(--spectrum-dragbar-handle-background-color-hover);
+	&.is-draggable {
+		&:hover,
+		&.is-hovered {
+			background-color: var(--spectrum-dragbar-handle-background-color-hover);
 
-      .spectrum-SplitView-gripper {
-        border-color: var(--spectrum-dragbar-handle-background-color-hover);
-        &:before {
-          background-color: var(
-            --spectrum-dragbar-handle-background-color-hover
-          );
-        }
-      }
-    }
+			.spectrum-SplitView-gripper {
+				border-color: var(--spectrum-dragbar-handle-background-color-hover);
+				&:before {
+					background-color: var(
+						--spectrum-dragbar-handle-background-color-hover
+					);
+				}
+			}
+		}
 
-    &:active,
-    &.is-active {
-      background-color: var(--spectrum-dragbar-handle-background-color-down);
+		&:active,
+		&.is-active {
+			background-color: var(--spectrum-dragbar-handle-background-color-down);
 
-      .spectrum-SplitView-gripper {
-        border-color: var(--spectrum-dragbar-handle-background-color-down);
-        &:before {
-          background-color: var(
-            --spectrum-dragbar-handle-background-color-down
-          );
-        }
-      }
-    }
+			.spectrum-SplitView-gripper {
+				border-color: var(--spectrum-dragbar-handle-background-color-down);
+				&:before {
+					background-color: var(
+						--spectrum-dragbar-handle-background-color-down
+					);
+				}
+			}
+		}
 
-    &:focus {
-      outline: none;
-    }
+		&:focus {
+			outline: none;
+		}
 
-    &:focus-ring {
-      background-color: var(--spectrum-alias-focus-color);
+		&:focus-ring {
+			background-color: var(--spectrum-alias-focus-color);
 
-      .spectrum-SplitView-gripper {
-        border-color: var(--spectrum-alias-focus-color);
-        box-shadow: 0 0 0 1px var(--spectrum-alias-focus-color);
-        &:before {
-          background-color: var(--spectrum-alias-focus-color);
-        }
-      }
-    }
-  }
+			.spectrum-SplitView-gripper {
+				border-color: var(--spectrum-alias-focus-color);
+				box-shadow: 0 0 0 1px var(--spectrum-alias-focus-color);
+				&:before {
+					background-color: var(--spectrum-alias-focus-color);
+				}
+			}
+		}
+	}
 }

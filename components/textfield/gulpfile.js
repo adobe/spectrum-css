@@ -1,2 +1,1 @@
-module.exports = require('@spectrum-css/component-builder-simple');
-
+module.exports = require("@spectrum-css/component-builder-simple");

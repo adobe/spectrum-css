@@ -15,225 +15,257 @@ governing permissions and limitations under the License.
 @import "../vars/css/scales/spectrum-medium.css";
 
 .spectrum-Tabs--sizeS {
-  @remapvars {
-    find: /--spectrum-tabs-s-(.*)/;
-    replace: --spectrum-tabs-$1;
-  }
+	@remapvars {
+		find: /--spectrum-tabs-s-(. *) /;
+		replace: --spectrum-tabs-$1;
+	}
 }
 
 .spectrum-Tabs--sizeM {
-  @remapvars {
-    find: /--spectrum-tabs-m-(.*)/;
-    replace: --spectrum-tabs-$1;
-  }
+	@remapvars {
+		find: /--spectrum-tabs-m-(. *) /;
+		replace: --spectrum-tabs-$1;
+	}
 }
 
 .spectrum-Tabs--sizeL {
-  @remapvars {
-    find: /--spectrum-tabs-l-(.*)/;
-    replace: --spectrum-tabs-$1;
-  }
+	@remapvars {
+		find: /--spectrum-tabs-l-(. *) /;
+		replace: --spectrum-tabs-$1;
+	}
 }
 
 .spectrum-Tabs--sizeXL {
-  @remapvars {
-    find: /--spectrum-tabs-xl-(.*)/;
-    replace: --spectrum-tabs-$1;
-  }
+	@remapvars {
+		find: /--spectrum-tabs-xl-(. *) /;
+		replace: --spectrum-tabs-$1;
+	}
 }
 
 .spectrum-Tabs {
-  --spectrum-tabs-compact-item-height: calc(var(--spectrum-tabs-compact-textonly-height) - var(--spectrum-tabs-compact-textonly-divider-size));
+	--spectrum-tabs-compact-item-height: calc(
+		var(--spectrum-tabs-compact-textonly-height) -
+			var(--spectrum-tabs-compact-textonly-divider-size)
+	);
 }
 
 .spectrum-Tabs {
-  display: flex;
+	display: flex;
 
-  /* Contain the selection indicator */
-  position: relative;
-  z-index: 0;
+	/* Contain the selection indicator */
+	position: relative;
+	z-index: 0;
 
-  margin: 0;
-  padding-block: 0;
+	margin: 0;
+	padding-block: 0;
 
-  /* Friends should align to the top of the tabs */
-  vertical-align: top;
+	/* Friends should align to the top of the tabs */
+	vertical-align: top;
 }
 
 .spectrum-Tabs-item {
-  /* Contain the focus ring */
-  position: relative;
+	/* Contain the focus ring */
+	position: relative;
 
-  box-sizing: border-box;
+	box-sizing: border-box;
 
-  block-size: var(--spectrum-tabs-quiet-textonly-tabitem-height);
-  line-height: var(--spectrum-tabs-quiet-textonly-tabitem-height);
+	block-size: var(--spectrum-tabs-quiet-textonly-tabitem-height);
+	line-height: var(--spectrum-tabs-quiet-textonly-tabitem-height);
 
-  /* Float above the tab line */
-  z-index: 1;
+	/* Float above the tab line */
+	z-index: 1;
 
-  text-decoration: none;
-  white-space: nowrap;
+	text-decoration: none;
+	white-space: nowrap;
 
-  transition: color var(--spectrum-tabs-texticon-tabitem-selection-indicator-animation-duration) ease-out;
-  cursor: pointer;
-  outline: none;
+	transition: color
+		var(--spectrum-tabs-texticon-tabitem-selection-indicator-animation-duration)
+		ease-out;
+	cursor: pointer;
+	outline: none;
 
-  &.is-disabled {
-    cursor: default;
+	&.is-disabled {
+		cursor: default;
 
-    .spectrum-Tabs-itemLabel {
-      cursor: default;
-    }
-  }
+		.spectrum-Tabs-itemLabel {
+			cursor: default;
+		}
+	}
 
-  .spectrum-Icon {
-    /* Vertical centering */
-    block-size: var(--spectrum-tabs-quiet-textonly-tabitem-height);
+	.spectrum-Icon {
+		/* Vertical centering */
+		block-size: var(--spectrum-tabs-quiet-textonly-tabitem-height);
 
-    & + .spectrum-Tabs-itemLabel {
-      /* icons are inexplicably offset by 3px. Subtract this value from the icon-gap
+		& + .spectrum-Tabs-itemLabel {
+			/* icons are inexplicably offset by 3px. Subtract this value from the icon-gap
          to correct the gap in CSS */
-      margin-inline-start: calc(var(--spectrum-tabs-quiet-textonly-tabitem-icon-gap) - var(--spectrum-global-dimension-size-40));
-    }
-  }
+			margin-inline-start: calc(
+				var(--spectrum-tabs-quiet-textonly-tabitem-icon-gap) -
+					var(--spectrum-global-dimension-size-40)
+			);
+		}
+	}
 
-  &::before {
-    content: '';
-    position: absolute;
-    inset-block-start: 50%;
+	&::before {
+		content: "";
+		position: absolute;
+		inset-block-start: 50%;
 
-    box-sizing: border-box;
+		box-sizing: border-box;
 
-    block-size: var(--spectrum-tabs-textonly-tabitem-focus-ring-height);
-    margin-block-start: calc(var(--spectrum-tabs-textonly-tabitem-focus-ring-height) / -2);
+		block-size: var(--spectrum-tabs-textonly-tabitem-focus-ring-height);
+		margin-block-start: calc(
+			var(--spectrum-tabs-textonly-tabitem-focus-ring-height) / -2
+		);
 
-    inset-inline-start: calc(-1 * var(--spectrum-tabs-textonly-tabitem-focus-ring-padding-x));
-    inset-inline-end: calc(-1 * var(--spectrum-tabs-textonly-tabitem-focus-ring-padding-x));
+		inset-inline-start: calc(
+			-1 * var(--spectrum-tabs-textonly-tabitem-focus-ring-padding-x)
+		);
+		inset-inline-end: calc(
+			-1 * var(--spectrum-tabs-textonly-tabitem-focus-ring-padding-x)
+		);
 
-    border: var(--spectrum-tabs-textonly-tabitem-focus-ring-size) solid transparent;
-    border-radius: var(--spectrum-tabs-textonly-tabitem-focus-ring-border-radius);
+		border: var(--spectrum-tabs-textonly-tabitem-focus-ring-size) solid
+			transparent;
+		border-radius: var(
+			--spectrum-tabs-textonly-tabitem-focus-ring-border-radius
+		);
 
-    pointer-events: none;
-  }
+		pointer-events: none;
+	}
 }
 
 .spectrum-Tabs-itemLabel {
-  cursor: pointer;
-  vertical-align: top;
-  display: inline-block;
+	cursor: pointer;
+	vertical-align: top;
+	display: inline-block;
 
-  font-size: var(--spectrum-tabs-texticon-tabitem-text-size);
-  font-weight: var(--spectrum-tabs-textonly-tabitem-text-font-weight);
+	font-size: var(--spectrum-tabs-texticon-tabitem-text-size);
+	font-weight: var(--spectrum-tabs-textonly-tabitem-text-font-weight);
 
-  /* support links */
-  text-decoration: none;
+	/* support links */
+	text-decoration: none;
 
-  &:empty {
-    /* Hide the tab label if it's not being used */
-    display: none;
-  }
+	&:empty {
+		/* Hide the tab label if it's not being used */
+		display: none;
+	}
 }
 
 .spectrum-Tabs-selectionIndicator {
-  position: absolute;
-  inset-inline-start: 0;
+	position: absolute;
+	inset-inline-start: 0;
 
-  /* Be below the tab */
-  z-index: 0;
+	/* Be below the tab */
+	z-index: 0;
 
-  transition: transform var(--spectrum-tabs-texticon-tabitem-selection-indicator-animation-duration) var(--spectrum-tabs-texticon-tabitem-selection-indicator-animation-ease);
-  transform-origin: top left;
+	transition: transform
+		var(--spectrum-tabs-texticon-tabitem-selection-indicator-animation-duration)
+		var(--spectrum-tabs-texticon-tabitem-selection-indicator-animation-ease);
+	transform-origin: top left;
 
-  border-radius: var(--spectrum-tabs-textonly-divider-border-radius);
+	border-radius: var(--spectrum-tabs-textonly-divider-border-radius);
 }
 
 .spectrum-Tabs--compact {
-  .spectrum-Tabs-item {
-    block-size: var(--spectrum-tabs-compact-item-height);
-    line-height: var(--spectrum-tabs-compact-item-height);
+	.spectrum-Tabs-item {
+		block-size: var(--spectrum-tabs-compact-item-height);
+		line-height: var(--spectrum-tabs-compact-item-height);
 
-    .spectrum-Icon {
-      /* Vertical centering */
-      block-size: var(--spectrum-tabs-compact-item-height);
-    }
-  }
+		.spectrum-Icon {
+			/* Vertical centering */
+			block-size: var(--spectrum-tabs-compact-item-height);
+		}
+	}
 }
 
 .spectrum-Tabs--horizontal {
-  align-items: center;
+	align-items: center;
 
-  .spectrum-Tabs-item {
-    vertical-align: top;
+	.spectrum-Tabs-item {
+		vertical-align: top;
 
-    /* Target anything since React likes to add lots of happy <div>s around all things */
-    & + *:not(.spectrum-Tabs-selectionIndicator) {
-      margin-inline-start: var(--spectrum-tabs-textonly-tabitem-margin-right);
-    }
-  }
+		/* Target anything since React likes to add lots of happy <div>s around all things */
+		& + *:not(.spectrum-Tabs-selectionIndicator) {
+			margin-inline-start: var(--spectrum-tabs-textonly-tabitem-margin-right);
+		}
+	}
 
-  .spectrum-Tabs-selectionIndicator {
-    position: absolute;
-    inset-block-end: 0;
-    block-size: var(--spectrum-tabs-quiet-textonly-divider-size);
-  }
+	.spectrum-Tabs-selectionIndicator {
+		position: absolute;
+		inset-block-end: 0;
+		block-size: var(--spectrum-tabs-quiet-textonly-divider-size);
+	}
 
-
-  &.spectrum-Tabs--compact {
-    /* The ActionButton is taller than the tabs, so don't push tabs around */
-    box-sizing: content-box;
-    block-size: var(--spectrum-tabs-compact-item-height);
-    align-items: end;
-  }
+	&.spectrum-Tabs--compact {
+		/* The ActionButton is taller than the tabs, so don't push tabs around */
+		box-sizing: content-box;
+		block-size: var(--spectrum-tabs-compact-item-height);
+		align-items: end;
+	}
 }
 
 /* Quiet tabs should not extend all the way across the screen as their line doesn't */
 .spectrum-Tabs--quiet {
-  display: inline-flex;
+	display: inline-flex;
 }
 
 .spectrum-Tabs--vertical {
-  display: inline-flex;
-  flex-direction: column;
-  padding: 0;
+	display: inline-flex;
+	flex-direction: column;
+	padding: 0;
 
-  .spectrum-Tabs-item {
-    block-size: var(--spectrum-tabs-vertical-textonly-tabitem-height);
-    line-height: var(--spectrum-tabs-vertical-textonly-tabitem-height);
-    padding-block: 0;
-    padding-inline: var(--spectrum-tabs-quiet-textonly-tabitem-focus-ring-padding-x);
+	.spectrum-Tabs-item {
+		block-size: var(--spectrum-tabs-vertical-textonly-tabitem-height);
+		line-height: var(--spectrum-tabs-vertical-textonly-tabitem-height);
+		padding-block: 0;
+		padding-inline: var(
+			--spectrum-tabs-quiet-textonly-tabitem-focus-ring-padding-x
+		);
 
-    margin-block-end: var(--spectrum-tabs-vertical-textonly-tabitem-gap);
-    margin-inline-start: calc(var(--spectrum-tabs-vertical-textonly-tabitem-gap) / 2);
+		margin-block-end: var(--spectrum-tabs-vertical-textonly-tabitem-gap);
+		margin-inline-start: calc(
+			var(--spectrum-tabs-vertical-textonly-tabitem-gap) / 2
+		);
 
-    &::before {
-      /* padding is included in click area of tab items, so only need to offset by the size of the focus ring's border */
-      inset-inline-start: calc(-1 * var(--spectrum-tabs-textonly-tabitem-focus-ring-size));
-      inset-inline-end: calc(-1 * var(--spectrum-tabs-textonly-tabitem-focus-ring-size));
-    }
-  }
+		&::before {
+			/* padding is included in click area of tab items, so only need to offset by the size of the focus ring's border */
+			inset-inline-start: calc(
+				-1 * var(--spectrum-tabs-textonly-tabitem-focus-ring-size)
+			);
+			inset-inline-end: calc(
+				-1 * var(--spectrum-tabs-textonly-tabitem-focus-ring-size)
+			);
+		}
+	}
 
-  .spectrum-Icon {
-    height: var(--spectrum-tabs-vertical-textonly-tabitem-height);
-    line-height: var(--spectrum-tabs-vertical-textonly-tabitem-height);
-  }
+	.spectrum-Icon {
+		height: var(--spectrum-tabs-vertical-textonly-tabitem-height);
+		line-height: var(--spectrum-tabs-vertical-textonly-tabitem-height);
+	}
 
-  &.spectrum-Tabs--compact {
-    .spectrum-Tabs-item {
-      block-size: var(--spectrum-tabs-compact-vertical-textonly-tabitem-height);
-      line-height: var(--spectrum-tabs-compact-vertical-textonly-tabitem-height);
-      margin-block-end: var(--spectrum-tabs-compact-vertical-textonly-tabitem-gap);
+	&.spectrum-Tabs--compact {
+		.spectrum-Tabs-item {
+			block-size: var(--spectrum-tabs-compact-vertical-textonly-tabitem-height);
+			line-height: var(
+				--spectrum-tabs-compact-vertical-textonly-tabitem-height
+			);
+			margin-block-end: var(
+				--spectrum-tabs-compact-vertical-textonly-tabitem-gap
+			);
 
-      .spectrum-Icon {
-        /* Vertical centering */
-        block-size: var(--spectrum-tabs-compact-vertical-textonly-tabitem-height);
-      }
-    }
-  }
+			.spectrum-Icon {
+				/* Vertical centering */
+				block-size: var(
+					--spectrum-tabs-compact-vertical-textonly-tabitem-height
+				);
+			}
+		}
+	}
 
-  .spectrum-Tabs-selectionIndicator {
-    position: absolute;
-    inset-inline-start: 0px;
-    inline-size: var(--spectrum-tabs-quiet-textonly-divider-size);
-  }
+	.spectrum-Tabs-selectionIndicator {
+		position: absolute;
+		inset-inline-start: 0px;
+		inline-size: var(--spectrum-tabs-quiet-textonly-divider-size);
+	}
 }

@@ -1,15 +1,16 @@
 .btn {
-  border-width: 2px;
+	border-width: 2px;
 }
 
 .btn:hover {
-  color: black;
+	color: black;
 }
 
-.crd .btn, .btn--green {
-  color: green;
+.crd .btn,
+.btn--green {
+	color: green;
 }
 
 .crd {
-  border-width: 1px;
+	border-width: 1px;
 }

@@ -1,4 +1,5 @@
 # @spectrum-css/link
+
 > The Spectrum CSS link component
 
 This package is part of the [Spectrum CSS project](https://github.com/adobe/spectrum-css).

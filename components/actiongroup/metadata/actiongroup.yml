@@ -1,16 +1,16 @@
 name: Action Group
 SpectrumSiteSlug: https://spectrum.adobe.com/page/action-group/
 sections:
-- name: Custom Properties API
-  description: |
-    This component can be modified via its `--mod-*` prefixed custom properties. A list of those prefixed custom properties can be found <a href="https://github.com/adobe/spectrum-css/tree/main/components/actiongroup/metadata/mods.md">here</a>.
-- name: Migration Guide
-  description: |
-    ### New Action Button markup
-    Action Button requires `.spectrum-ActionButton-icon` class on icons nested inside of Action Button.
+  - name: Custom Properties API
+    description: |
+      This component can be modified via its `--mod-*` prefixed custom properties. A list of those prefixed custom properties can be found <a href="https://github.com/adobe/spectrum-css/tree/main/components/actiongroup/metadata/mods.md">here</a>.
+  - name: Migration Guide
+    description: |
+      ### New Action Button markup
+      Action Button requires `.spectrum-ActionButton-icon` class on icons nested inside of Action Button.
 
-    ### Change workflow icon size to medium
-    Replace `.spectrum-Icon--sizeS` with `.spectrum-Icon--sizeM`.
+      ### Change workflow icon size to medium
+      Replace `.spectrum-Icon--sizeS` with `.spectrum-Icon--sizeM`.
 examples:
   - id: actiongroup-horizontal
     name: Horizontal
@@ -423,6 +423,3 @@ examples:
           </div>
         </div>
       </div>
-
-
-

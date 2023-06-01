@@ -1,4 +1,5 @@
 # postcss-varfallback
+
 > Use the fallback value of any var reference
 
 ## Installation
@@ -14,11 +15,14 @@ Assuming you have some CSS defined that uses fallback variables:
 
 ```css
 :root {
-  --component-background-color: blue;
+	--component-background-color: blue;
 }
 
 .component {
-  background-color: var(--mod-background-color, var(--component-background-color));
+	background-color: var(
+		--mod-background-color,
+		var(--component-background-color)
+	);
 }
 ```
 
@@ -26,10 +30,10 @@ Running it through this plugin will produce:
 
 ```css
 :root {
-  --component-background-color: blue;
+	--component-background-color: blue;
 }
 
 .component {
-  background-color: var(--component-background-color);
+	background-color: var(--component-background-color);
 }
 ```
