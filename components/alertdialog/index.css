@@ -41,10 +41,6 @@ governing permissions and limitations under the License.
 
   /* mods for nested components */
   --mod-buttongroup-justify-content: flex-end;
-  --mod-icon-inline-size: var(--mod-alert-dialog-icon-size, var(--spectrum-alert-dialog-icon-size));
-  --mod-icon-block-size: var(--mod-alert-dialog-icon-size, var(--spectrum-alert-dialog-icon-size));
-  --mod-icon-margin-left: var(--mod-alert-dialog-title-to-icon, var(--spectrum-alert-dialog-title-to-icon));
-  --mod-icon-flex-shrink: 0;
 }
 
 .spectrum-AlertDialog {
@@ -56,6 +52,13 @@ governing permissions and limitations under the License.
   max-height: inherit;
   outline: none;
   padding: var(--mod-alert-dialog-padding, var(--spectrum-alert-dialog-padding));
+
+  .spectrum-Icon {
+    inline-size: var(--mod-alert-dialog-icon-size, var(--spectrum-alert-dialog-icon-size));
+    block-size: var(--mod-alert-dialog-icon-size, var(--spectrum-alert-dialog-icon-size));
+    margin-left: var(--mod-alert-dialog-title-to-icon, var(--spectrum-alert-dialog-title-to-icon));
+    flex-shrink: 0;
+  }
 
   &--warning {
     --mod-icon-color: var(--mod-alert-dialog-warning-icon-color, var(--spectrum-alert-dialog-warning-icon-color));
