@@ -3,6 +3,15 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+<a name="6.0.51"></a>
+##6.0.51
+🗓
+2023-06-01 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/popover@6.0.50...@spectrum-css/popover@6.0.51)
+
+### 🐛 Bug fixes
+
+- **popover:**keep nested drop shadows from affecting the other ([#1909](https://github.com/adobe/spectrum-css/issues/1909))([f5c206d](https://github.com/adobe/spectrum-css/commit/f5c206d))
+
 <a name="6.0.50"></a>
 
 ## 6.0.50

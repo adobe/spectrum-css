@@ -1,31 +1,31 @@
 {
-	"name": "@spectrum-css/progresscircle",
-	"version": "2.0.44",
-	"description": "The Spectrum CSS progress circle component",
-	"license": "Apache-2.0",
-	"author": "Adobe",
-	"homepage": "https://opensource.adobe.com/spectrum-css/progresscircle",
-	"repository": {
-		"type": "git",
-		"url": "https://github.com/adobe/spectrum-css.git",
-		"directory": "components/progresscircle"
-	},
-	"bugs": {
-		"url": "https://github.com/adobe/spectrum-css/issues"
-	},
-	"main": "dist/index-vars.css",
-	"scripts": {
-		"build": "gulp"
-	},
-	"peerDependencies": {
-		"@spectrum-css/tokens": ">=10.0.0"
-	},
-	"devDependencies": {
-		"@spectrum-css/component-builder-simple": "^2.0.13",
-		"@spectrum-css/tokens": "^10.1.1",
-		"gulp": "^4.0.0"
-	},
-	"publishConfig": {
-		"access": "public"
-	}
+  "name": "@spectrum-css/progresscircle",
+  "version": "2.0.45",
+  "description": "The Spectrum CSS progress circle component",
+  "license": "Apache-2.0",
+  "author": "Adobe",
+  "homepage": "https://opensource.adobe.com/spectrum-css/progresscircle",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/adobe/spectrum-css.git",
+    "directory": "components/progresscircle"
+  },
+  "bugs": {
+    "url": "https://github.com/adobe/spectrum-css/issues"
+  },
+  "main": "dist/index-vars.css",
+  "scripts": {
+    "build": "gulp"
+  },
+  "peerDependencies": {
+    "@spectrum-css/tokens": ">=10.0.0"
+  },
+  "devDependencies": {
+    "@spectrum-css/component-builder-simple": "^2.0.14",
+    "@spectrum-css/tokens": "^10.1.2",
+    "gulp": "^4.0.0"
+  },
+  "publishConfig": {
+    "access": "public"
+  }
 }

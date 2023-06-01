@@ -3,6 +3,15 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+<a name="6.1.0"></a>
+#6.1.0
+🗓
+2023-06-01 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/checkbox@6.0.34...@spectrum-css/checkbox@6.1.0)
+
+### ✨ Features
+
+\*add stylelint ([#1787](https://github.com/adobe/spectrum-css/issues/1787))([a450904](https://github.com/adobe/spectrum-css/commit/a450904))
+
 <a name="6.0.34"></a>
 
 ## 6.0.34

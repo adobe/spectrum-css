@@ -1,41 +1,41 @@
 {
-	"name": "@spectrum-css/pagination",
-	"version": "6.0.23",
-	"description": "The Spectrum CSS pagination component",
-	"license": "Apache-2.0",
-	"author": "Adobe",
-	"homepage": "https://opensource.adobe.com/spectrum-css/pagination",
-	"repository": {
-		"type": "git",
-		"url": "https://github.com/adobe/spectrum-css.git",
-		"directory": "components/pagination"
-	},
-	"bugs": {
-		"url": "https://github.com/adobe/spectrum-css/issues"
-	},
-	"main": "dist/index-vars.css",
-	"scripts": {
-		"build": "gulp"
-	},
-	"peerDependencies": {
-		"@spectrum-css/actionbutton": ">=4.0.0",
-		"@spectrum-css/button": ">=10",
-		"@spectrum-css/icon": ">=3",
-		"@spectrum-css/splitbutton": ">=5",
-		"@spectrum-css/textfield": ">=5.0.0",
-		"@spectrum-css/vars": ">=9"
-	},
-	"devDependencies": {
-		"@spectrum-css/actionbutton": "^4.0.0",
-		"@spectrum-css/button": "^10.1.1",
-		"@spectrum-css/component-builder": "^4.0.9",
-		"@spectrum-css/icon": "^3.0.44",
-		"@spectrum-css/splitbutton": "^5.0.47",
-		"@spectrum-css/textfield": "^5.1.10",
-		"@spectrum-css/vars": "^9.0.6",
-		"gulp": "^4.0.0"
-	},
-	"publishConfig": {
-		"access": "public"
-	}
+  "name": "@spectrum-css/pagination",
+  "version": "6.0.24",
+  "description": "The Spectrum CSS pagination component",
+  "license": "Apache-2.0",
+  "author": "Adobe",
+  "homepage": "https://opensource.adobe.com/spectrum-css/pagination",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/adobe/spectrum-css.git",
+    "directory": "components/pagination"
+  },
+  "bugs": {
+    "url": "https://github.com/adobe/spectrum-css/issues"
+  },
+  "main": "dist/index-vars.css",
+  "scripts": {
+    "build": "gulp"
+  },
+  "peerDependencies": {
+    "@spectrum-css/actionbutton": ">=4.0.0",
+    "@spectrum-css/button": ">=10",
+    "@spectrum-css/icon": ">=3",
+    "@spectrum-css/splitbutton": ">=5",
+    "@spectrum-css/textfield": ">=5.0.0",
+    "@spectrum-css/vars": ">=9"
+  },
+  "devDependencies": {
+    "@spectrum-css/actionbutton": "^4.0.1",
+    "@spectrum-css/button": "^10.1.2",
+    "@spectrum-css/component-builder": "^4.0.10",
+    "@spectrum-css/icon": "^3.0.45",
+    "@spectrum-css/splitbutton": "^5.0.48",
+    "@spectrum-css/textfield": "^5.1.11",
+    "@spectrum-css/vars": "^9.0.7",
+    "gulp": "^4.0.0"
+  },
+  "publishConfig": {
+    "access": "public"
+  }
 }

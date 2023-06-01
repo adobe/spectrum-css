@@ -1,32 +1,32 @@
 {
-	"name": "@spectrum-css/infieldbutton",
-	"version": "2.0.21",
-	"description": "The Spectrum CSS infield button component",
-	"license": "Apache-2.0",
-	"author": "Adobe",
-	"homepage": "https://opensource.adobe.com/spectrum-css/infieldbutton",
-	"repository": {
-		"type": "git",
-		"url": "https://github.com/adobe/spectrum-css.git",
-		"directory": "components/infieldbutton"
-	},
-	"bugs": {
-		"url": "https://github.com/adobe/spectrum-css/issues"
-	},
-	"main": "dist/index-vars.css",
-	"scripts": {
-		"build": "gulp"
-	},
-	"peerDependencies": {
-		"@spectrum-css/vars": ">=9"
-	},
-	"devDependencies": {
-		"@spectrum-css/component-builder": "^4.0.9",
-		"@spectrum-css/icon": "^3.0.44",
-		"@spectrum-css/vars": "^9.0.6",
-		"gulp": "^4.0.0"
-	},
-	"publishConfig": {
-		"access": "public"
-	}
+  "name": "@spectrum-css/infieldbutton",
+  "version": "2.0.22",
+  "description": "The Spectrum CSS infield button component",
+  "license": "Apache-2.0",
+  "author": "Adobe",
+  "homepage": "https://opensource.adobe.com/spectrum-css/infieldbutton",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/adobe/spectrum-css.git",
+    "directory": "components/infieldbutton"
+  },
+  "bugs": {
+    "url": "https://github.com/adobe/spectrum-css/issues"
+  },
+  "main": "dist/index-vars.css",
+  "scripts": {
+    "build": "gulp"
+  },
+  "peerDependencies": {
+    "@spectrum-css/vars": ">=9"
+  },
+  "devDependencies": {
+    "@spectrum-css/component-builder": "^4.0.10",
+    "@spectrum-css/icon": "^3.0.45",
+    "@spectrum-css/vars": "^9.0.7",
+    "gulp": "^4.0.0"
+  },
+  "publishConfig": {
+    "access": "public"
+  }
 }

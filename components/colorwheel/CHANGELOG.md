@@ -3,6 +3,13 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+<a name="3.0.18"></a>
+##3.0.18
+🗓
+2023-06-01 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/colorwheel@3.0.17...@spectrum-css/colorwheel@3.0.18)
+
+**Note:** Version bump only for package @spectrum-css/colorwheel
+
 <a name="3.0.17"></a>
 
 ## 3.0.17

@@ -1,38 +1,38 @@
 {
-	"name": "@spectrum-css/datepicker",
-	"version": "1.0.25",
-	"description": "The Spectrum CSS datepicker component",
-	"license": "Apache-2.0",
-	"author": "Adobe",
-	"homepage": "https://opensource.adobe.com/spectrum-css/",
-	"repository": {
-		"type": "git",
-		"url": "https://github.com/adobe/spectrum-css.git",
-		"directory": "components/datepicker"
-	},
-	"bugs": {
-		"url": "https://github.com/adobe/spectrum-css/issues"
-	},
-	"main": "dist/index-vars.css",
-	"scripts": {
-		"build": "gulp"
-	},
-	"peerDependencies": {
-		"@spectrum-css/pickerbutton": ">=3",
-		"@spectrum-css/popover": ">=5 <=6",
-		"@spectrum-css/vars": ">=9"
-	},
-	"devDependencies": {
-		"@spectrum-css/component-builder": "^4.0.9",
-		"@spectrum-css/icon": "^3.0.44",
-		"@spectrum-css/menu": "^4.0.38",
-		"@spectrum-css/pickerbutton": "^3.0.23",
-		"@spectrum-css/popover": "^6.0.50",
-		"@spectrum-css/textfield": "^5.1.10",
-		"@spectrum-css/vars": "^9.0.6",
-		"gulp": "^4.0.0"
-	},
-	"publishConfig": {
-		"access": "public"
-	}
+  "name": "@spectrum-css/datepicker",
+  "version": "1.0.26",
+  "description": "The Spectrum CSS datepicker component",
+  "license": "Apache-2.0",
+  "author": "Adobe",
+  "homepage": "https://opensource.adobe.com/spectrum-css/",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/adobe/spectrum-css.git",
+    "directory": "components/datepicker"
+  },
+  "bugs": {
+    "url": "https://github.com/adobe/spectrum-css/issues"
+  },
+  "main": "dist/index-vars.css",
+  "scripts": {
+    "build": "gulp"
+  },
+  "peerDependencies": {
+    "@spectrum-css/pickerbutton": ">=3",
+    "@spectrum-css/popover": ">=5 <=6",
+    "@spectrum-css/vars": ">=9"
+  },
+  "devDependencies": {
+    "@spectrum-css/component-builder": "^4.0.10",
+    "@spectrum-css/icon": "^3.0.45",
+    "@spectrum-css/menu": "^4.0.39",
+    "@spectrum-css/pickerbutton": "^3.0.24",
+    "@spectrum-css/popover": "^6.0.51",
+    "@spectrum-css/textfield": "^5.1.11",
+    "@spectrum-css/vars": "^9.0.7",
+    "gulp": "^4.0.0"
+  },
+  "publishConfig": {
+    "access": "public"
+  }
 }

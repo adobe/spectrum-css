@@ -1,35 +1,35 @@
 {
-	"name": "@spectrum-css/cyclebutton",
-	"version": "3.0.60",
-	"description": "The Spectrum CSS cyclebutton component",
-	"license": "Apache-2.0",
-	"author": "Adobe",
-	"homepage": "https://opensource.adobe.com/spectrum-css/cyclebutton",
-	"repository": {
-		"type": "git",
-		"url": "https://github.com/adobe/spectrum-css.git",
-		"directory": "components/cyclebutton"
-	},
-	"bugs": {
-		"url": "https://github.com/adobe/spectrum-css/issues"
-	},
-	"main": "dist/index-vars.css",
-	"scripts": {
-		"build": "gulp"
-	},
-	"peerDependencies": {
-		"@spectrum-css/actionbutton": ">=4.0.0",
-		"@spectrum-css/icon": ">=3",
-		"@spectrum-css/vars": ">=9"
-	},
-	"devDependencies": {
-		"@spectrum-css/actionbutton": "^4.0.0",
-		"@spectrum-css/component-builder": "^4.0.9",
-		"@spectrum-css/icon": "^3.0.44",
-		"@spectrum-css/vars": "^9.0.6",
-		"gulp": "^4.0.0"
-	},
-	"publishConfig": {
-		"access": "public"
-	}
+  "name": "@spectrum-css/cyclebutton",
+  "version": "3.0.61",
+  "description": "The Spectrum CSS cyclebutton component",
+  "license": "Apache-2.0",
+  "author": "Adobe",
+  "homepage": "https://opensource.adobe.com/spectrum-css/cyclebutton",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/adobe/spectrum-css.git",
+    "directory": "components/cyclebutton"
+  },
+  "bugs": {
+    "url": "https://github.com/adobe/spectrum-css/issues"
+  },
+  "main": "dist/index-vars.css",
+  "scripts": {
+    "build": "gulp"
+  },
+  "peerDependencies": {
+    "@spectrum-css/actionbutton": ">=4.0.0",
+    "@spectrum-css/icon": ">=3",
+    "@spectrum-css/vars": ">=9"
+  },
+  "devDependencies": {
+    "@spectrum-css/actionbutton": "^4.0.1",
+    "@spectrum-css/component-builder": "^4.0.10",
+    "@spectrum-css/icon": "^3.0.45",
+    "@spectrum-css/vars": "^9.0.7",
+    "gulp": "^4.0.0"
+  },
+  "publishConfig": {
+    "access": "public"
+  }
 }
