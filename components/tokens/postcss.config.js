@@ -12,42 +12,46 @@
  */
 
 module.exports = (ctx) => {
-    const {
-        combineSelectors = true,
-        /* This removes all copyright comments so we can add a single one at the top of the file */
-        commentsDenylist = ['Copyright', 'This file contains']
-    } = ctx.options;
-    return {
-        plugins: [
-            require('postcss-rgb-mapping')(),
-            require('postcss-sorting')({
-                order: [
-                    'custom-properties',
-                    'declarations',
-                    'at-rules',
-                    'rules',
-                ],
-                'properties-order': 'alphabetical',
-            }),
-            /* Merges _adjacent_ rules only */
-            require('postcss-merge-rules'),
-            /* Combines all duplicated selectors */
-            combineSelectors ? require('postcss-combine-duplicated-selectors')({}) : null,
-            /* Remove all duplicate copyrights and add a single one at the top */
-            require('postcss-discard-comments')({
-                removeAllButFirst: true,
-                remove: (comment) => {
-                    return commentsDenylist.some(str => comment.includes(str)) ||
-                        comment.trim() === '';
-                },
-            }),
-            /* After cleaning up comments, remove all empty rules */
-            require('postcss-discard-empty')(),
-            /* Ensure the license is at the top of the file */
-            require('postcss-licensing')({
-                filename: '../../COPYRIGHT',
-                skipIfEmpty: true,
-            }),
-        ],
-    }
+	const {
+		combineSelectors = true,
+		/* This removes all copyright comments so we can add a single one at the top of the file */
+		commentsDenylist = ["Copyright", "This file contains"],
+	} = ctx.options;
+	return {
+		plugins: [
+			require("postcss-rgb-mapping")(),
+			require("postcss-sorting")({
+				order: [
+					"custom-properties",
+					"declarations",
+					"at-rules",
+					"rules",
+				],
+				"properties-order": "alphabetical",
+			}),
+			/* Merges _adjacent_ rules only */
+			require("postcss-merge-rules"),
+			/* Combines all duplicated selectors */
+			combineSelectors
+				? require("postcss-combine-duplicated-selectors")({})
+				: null,
+			/* Remove all duplicate copyrights and add a single one at the top */
+			require("postcss-discard-comments")({
+				removeAllButFirst: true,
+				remove: (comment) => {
+					return (
+						commentsDenylist.some((str) => comment.includes(str)) ||
+						comment.trim() === ""
+					);
+				},
+			}),
+			/* After cleaning up comments, remove all empty rules */
+			require("postcss-discard-empty")(),
+			/* Ensure the license is at the top of the file */
+			require("postcss-licensing")({
+				filename: "../../COPYRIGHT",
+				skipIfEmpty: true,
+			}),
+		],
+	};
 };

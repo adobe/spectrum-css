@@ -1,4 +1,5 @@
 # postcss-splitinator
+
 > Splits custom properties organized by classes into named tokens
 
 ## Installation
@@ -31,50 +32,49 @@ Whether to avoid including selectors that use the flat variables in the output.
 This plugin turns this:
 
 ```css
-@container(--system: spectrum) {
-  .component {
-    --background-color: blue;
-  }
-  .component.is-selected {
-    --background-color: darkblue;
-  }
-  .component .icon {
-    --color: gray;
-  }
+@container (--system: spectrum) {
+	.component {
+		--background-color: blue;
+	}
+	.component.is-selected {
+		--background-color: darkblue;
+	}
+	.component .icon {
+		--color: gray;
+	}
 }
 
-@container(--system: express) {
-  .component {
-    --background-color: purple;
-  }
-  .component.is-selected {
-    --background-color: darkpurple;
-  }
-  .component .icon {
-    --color: white;
-  }
+@container (--system: express) {
+	.component {
+		--background-color: purple;
+	}
+	.component.is-selected {
+		--background-color: darkpurple;
+	}
+	.component .icon {
+		--color: white;
+	}
 }
-
 ```
 
 Into this:
 
 ```css
 .spectrum {
-  --system-component-background-color: blue;
-  --system-component-selected-background-color: darkblue;
+	--system-component-background-color: blue;
+	--system-component-selected-background-color: darkblue;
 }
 
 .spectrum--express {
-  --system-component-background-color: purple;
-  --system-component-selected-background-color: darkpurple;
+	--system-component-background-color: purple;
+	--system-component-selected-background-color: darkpurple;
 }
 
 .component {
-  --background-color: var(--system-component-background-color);
+	--background-color: var(--system-component-background-color);
 }
 
 .component.is-selected {
-  --background-color: var(--system-component-selected-background-color);
+	--background-color: var(--system-component-selected-background-color);
 }
 ```

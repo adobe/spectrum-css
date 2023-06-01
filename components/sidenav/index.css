@@ -11,118 +11,120 @@ governing permissions and limitations under the License.
 */
 
 .spectrum-SideNav {
-  --spectrum-sidenav-item-padding-y: var(--spectrum-global-dimension-size-65);
+	--spectrum-sidenav-item-padding-y: var(--spectrum-global-dimension-size-65);
 }
 
 .spectrum-SideNav {
-  list-style-type: none;
-  margin: 0;
-  padding: 0;
+	list-style-type: none;
+	margin: 0;
+	padding: 0;
 }
 
 .spectrum-SideNav-item {
-  list-style-type: none;
+	list-style-type: none;
 
-  margin-block: var(--spectrum-sidenav-item-gap);
-  margin-inline: 0;
+	margin-block: var(--spectrum-sidenav-item-gap);
+	margin-inline: 0;
 }
 
 .spectrum-SideNav-itemLink {
-  position: relative;
-  display: inline-flex;
-  align-items: center;
-  justify-content: start;
-  box-sizing: border-box;
+	position: relative;
+	display: inline-flex;
+	align-items: center;
+	justify-content: start;
+	box-sizing: border-box;
 
-  inline-size: 100%;
-  min-block-size: var(--spectrum-sidenav-item-height);
+	inline-size: 100%;
+	min-block-size: var(--spectrum-sidenav-item-height);
 
-  padding-inline: var(--spectrum-sidenav-item-padding-x);
-  padding-block: var(--spectrum-sidenav-item-padding-y);
+	padding-inline: var(--spectrum-sidenav-item-padding-x);
+	padding-block: var(--spectrum-sidenav-item-padding-y);
 
-  border-radius: var(--spectrum-sidenav-item-border-radius);
+	border-radius: var(--spectrum-sidenav-item-border-radius);
 
-  font-size: var(--spectrum-sidenav-item-text-size);
-  font-weight: var(--spectrum-sidenav-item-text-font-weight);
-  font-style: normal;
-  text-decoration: none;
+	font-size: var(--spectrum-sidenav-item-text-size);
+	font-weight: var(--spectrum-sidenav-item-text-font-weight);
+	font-style: normal;
+	text-decoration: none;
 
-  word-break: break-word;
-  hyphens: auto;
+	word-break: break-word;
+	hyphens: auto;
 
-  cursor: pointer;
+	cursor: pointer;
 
-  transition: background-color var(--spectrum-global-animation-duration-100) ease-out,
-    color var(--spectrum-global-animation-duration-100) ease-out;
+	transition: background-color var(--spectrum-global-animation-duration-100)
+			ease-out,
+		color var(--spectrum-global-animation-duration-100) ease-out;
 
-  &:focus {
-    outline: none;
-  }
+	&:focus {
+		outline: none;
+	}
 
-  &:before {
-    content: '';
-    position: absolute;
-    inset: 0;
-    pointer-events: none;
+	&:before {
+		content: "";
+		position: absolute;
+		inset: 0;
+		pointer-events: none;
 
-    border: var(--spectrum-alias-focus-ring-size) solid transparent;
-    border-radius: var(--spectrum-sidenav-item-border-radius);
+		border: var(--spectrum-alias-focus-ring-size) solid transparent;
+		border-radius: var(--spectrum-sidenav-item-border-radius);
 
-    transition: border var(--spectrum-global-animation-duration-100) ease-out;
-  }
+		transition: border var(--spectrum-global-animation-duration-100)
+			ease-out;
+	}
 
-  .spectrum-SideNav-itemIcon {
-    flex-shrink: 0;
-    margin-inline-end: var(--spectrum-sidenav-icon-gap);
-  }
+	.spectrum-SideNav-itemIcon {
+		flex-shrink: 0;
+		margin-inline-end: var(--spectrum-sidenav-icon-gap);
+	}
 }
 
 .spectrum-SideNav-heading {
-  block-size: var(--spectrum-sidenav-heading-height);
-  line-height: var(--spectrum-sidenav-heading-height);
+	block-size: var(--spectrum-sidenav-heading-height);
+	line-height: var(--spectrum-sidenav-heading-height);
 
-  margin-block-start: var(--spectrum-sidenav-heading-gap-top);
-  margin-inline-end: 0;
-  margin-block-end: var(--spectrum-sidenav-heading-gap-bottom);
-  margin-inline-start: 0;
-  padding-block: 0;
-  padding-inline: var(--spectrum-sidenav-heading-padding-x);
+	margin-block-start: var(--spectrum-sidenav-heading-gap-top);
+	margin-inline-end: 0;
+	margin-block-end: var(--spectrum-sidenav-heading-gap-bottom);
+	margin-inline-start: 0;
+	padding-block: 0;
+	padding-inline: var(--spectrum-sidenav-heading-padding-x);
 
-  border-radius: var(--spectrum-sidenav-heading-border-radius);
+	border-radius: var(--spectrum-sidenav-heading-border-radius);
 
-  font-size: var(--spectrum-sidenav-heading-text-size);
-  font-weight: var(--spectrum-sidenav-heading-text-font-weight);
-  font-style: normal;
-  letter-spacing: var(--spectrum-sidenav-heading-text-letter-spacing);
+	font-size: var(--spectrum-sidenav-heading-text-size);
+	font-weight: var(--spectrum-sidenav-heading-text-font-weight);
+	font-style: normal;
+	letter-spacing: var(--spectrum-sidenav-heading-text-letter-spacing);
 
-  text-transform: uppercase;
+	text-transform: uppercase;
 }
 
 .spectrum-SideNav--multiLevel {
-  .spectrum-SideNav-itemLink {
-    font-weight: var(--spectrum-sidenav-multilevel-main-item-font-weight);
-  }
+	.spectrum-SideNav-itemLink {
+		font-weight: var(--spectrum-sidenav-multilevel-main-item-font-weight);
+	}
 
-  .spectrum-SideNav {
-    margin: 0;
-    padding: 0;
+	.spectrum-SideNav {
+		margin: 0;
+		padding: 0;
 
-    .spectrum-SideNav-itemLink {
-      font-weight: var(--spectrum-sidenav-item-text-font-weight);
+		.spectrum-SideNav-itemLink {
+			font-weight: var(--spectrum-sidenav-item-text-font-weight);
 
-      padding-inline-start: calc(
-        var(--spectrum-sidenav-multilevel-item-margin-left) +
-          var(--spectrum-sidenav-item-padding-x)
-      );
-    }
+			padding-inline-start: calc(
+				var(--spectrum-sidenav-multilevel-item-margin-left) +
+					var(--spectrum-sidenav-item-padding-x)
+			);
+		}
 
-    .spectrum-SideNav {
-      .spectrum-SideNav-itemLink {
-        padding-inline-start: calc(
-          var(--spectrum-sidenav-multilevel-item-margin-left) +
-            var(--spectrum-sidenav-item-padding-x)
-        );
-      }
-    }
-  }
+		.spectrum-SideNav {
+			.spectrum-SideNav-itemLink {
+				padding-inline-start: calc(
+					var(--spectrum-sidenav-multilevel-item-margin-left) +
+						var(--spectrum-sidenav-item-padding-x)
+				);
+			}
+		}
+	}
 }

@@ -11,49 +11,57 @@ governing permissions and limitations under the License.
 */
 
 .spectrum-DatePicker--quiet {
-  .spectrum-DatePicker-button {
-    &,
-    &:hover,
-    &:focus,
-    &:active,
-    &.is-selected,
-    &.is-invalid {
-      border-color: var(--spectrum-textfield-m-quiet-texticon-border-color);
-    }
+	.spectrum-DatePicker-button {
+		&,
+		&:hover,
+		&:focus,
+		&:active,
+		&.is-selected,
+		&.is-invalid {
+			border-color: var(
+				--spectrum-textfield-m-quiet-texticon-border-color
+			);
+		}
 
-    &:disabled,
-    &:disabled:hover {
-      border-color: var(--spectrum-textfield-m-quiet-texticon-border-color-disabled);
-    }
+		&:disabled,
+		&:disabled:hover {
+			border-color: var(
+				--spectrum-textfield-m-quiet-texticon-border-color-disabled
+			);
+		}
 
-    &:disabled:not(.is-open) {
-      .spectrum-PickerButton-fill {
-        border-color: transparent;
-      }
-    }
+		&:disabled:not(.is-open) {
+			.spectrum-PickerButton-fill {
+				border-color: transparent;
+			}
+		}
 
-    &:not(:disabled):not(.is-open) {
-      .spectrum-PickerButton-fill {
-        background-color: transparent;
-      }
-    }
-  }
+		&:not(:disabled):not(.is-open) {
+			.spectrum-PickerButton-fill {
+				background-color: transparent;
+			}
+		}
+	}
 
-  &:hover:not(.is-focused):not(.is-keyboardFocused):not(.is-disabled) {
-    .spectrum-DatePicker-input,
-    .spectrum-DatePicker-button {
-      border-color: var(--spectrum-textfield-m-quiet-texticon-border-color-hover);
-    }
-  }
+	&:hover:not(.is-focused):not(.is-keyboardFocused):not(.is-disabled) {
+		.spectrum-DatePicker-input,
+		.spectrum-DatePicker-button {
+			border-color: var(
+				--spectrum-textfield-m-quiet-texticon-border-color-hover
+			);
+		}
+	}
 
-  &.is-invalid {
-    .spectrum-DatePicker-input,
-    .spectrum-DatePicker-button {
-      border-color: var(--spectrum-textfield-m-quiet-texticon-border-color-invalid);
-    }
-  }
+	&.is-invalid {
+		.spectrum-DatePicker-input,
+		.spectrum-DatePicker-button {
+			border-color: var(
+				--spectrum-textfield-m-quiet-texticon-border-color-invalid
+			);
+		}
+	}
 }
 
 .spectrum-DatePicker.is-disabled .spectrum-DatePicker-rangeDash {
-  color: var(--spectrum-alias-text-color-disabled);
+	color: var(--spectrum-alias-text-color-disabled);
 }

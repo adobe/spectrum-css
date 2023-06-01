@@ -1,4 +1,5 @@
 # @spectrum-css/card
+
 > The Spectrum CSS card component
 
 This package is part of the [Spectrum CSS project](https://github.com/adobe/spectrum-css).

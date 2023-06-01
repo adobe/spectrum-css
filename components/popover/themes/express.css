@@ -11,7 +11,7 @@ governing permissions and limitations under the License.
 */
 
 @container (--system: express) {
-  .spectrum-Popover {
-    --spectrum-popover-border-width: 0;
-  }
+	.spectrum-Popover {
+		--spectrum-popover-border-width: 0;
+	}
 }

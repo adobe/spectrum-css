@@ -10,35 +10,35 @@ OF ANY KIND, either express or implied. See the License for the specific languag
 governing permissions and limitations under the License.
 */
 
-const postcss = require('postcss');
+const postcss = require("postcss");
 
 function process(root, options) {
-  let rules = [];
-  let declarations = {};
-  root.walkRules(rule => {
-    rules.push(rule);
-    rule.walkDecls(decl => {
-      if (decl.prop.startsWith('--')) {
-        declarations[decl.prop] = decl;
-        decl.remove();
-      }
-    });
-  });
+	let rules = [];
+	let declarations = {};
+	root.walkRules((rule) => {
+		rules.push(rule);
+		rule.walkDecls((decl) => {
+			if (decl.prop.startsWith("--")) {
+				declarations[decl.prop] = decl;
+				decl.remove();
+			}
+		});
+	});
 
-  let lastRule = rules[rules.length - 1];
-  if (lastRule) {
-    rules.forEach((rule, index) => {
-      if (index !== rules.length -1) {
-        rule.remove();
-      }
-    });
+	let lastRule = rules[rules.length - 1];
+	if (lastRule) {
+		rules.forEach((rule, index) => {
+			if (index !== rules.length - 1) {
+				rule.remove();
+			}
+		});
 
-    for (let decl of Object.values(declarations)) {
-      lastRule.append(decl);
-    }
-  }
+		for (let decl of Object.values(declarations)) {
+			lastRule.append(decl);
+		}
+	}
 }
 
-module.exports = postcss.plugin('postcss-combininator', function(options) {
-  return (root, result) => process(root, options)
+module.exports = postcss.plugin("postcss-combininator", function (options) {
+	return (root, result) => process(root, options);
 });

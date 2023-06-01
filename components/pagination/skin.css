@@ -11,20 +11,26 @@ governing permissions and limitations under the License.
 */
 
 .spectrum-Pagination-pageButton {
-  &:hover {
-    background-color: var(--spectrum-pagination-page-button-background-color-hover);
-  }
+	&:hover {
+		background-color: var(
+			--spectrum-pagination-page-button-background-color-hover
+		);
+	}
 
-  &:focus {
-    border-color: var(--spectrum-pagination-page-button-border-color-key-focus);
-  }
+	&:focus {
+		border-color: var(
+			--spectrum-pagination-page-button-border-color-key-focus
+		);
+	}
 
-  &.is-selected {
-    background-color: var(--spectrum-pagination-page-button-background-color-down);
-    color: var(--spectrum-pagination-page-button-text-color-down);
-  }
+	&.is-selected {
+		background-color: var(
+			--spectrum-pagination-page-button-background-color-down
+		);
+		color: var(--spectrum-pagination-page-button-text-color-down);
+	}
 }
 
 .spectrum-Pagination-counter {
-  color: var(--spectrum-alias-label-text-color);
+	color: var(--spectrum-alias-label-text-color);
 }

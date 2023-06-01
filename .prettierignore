@@ -4,7 +4,13 @@
 **/node_modules
 
 components/*/dist
+components/expressvars/css/**/*.css
+components/vars/css/**/*.css
+components/tokens/custom-*/*.css
 dist
+template.hbs
+
+site/includes/*.js
 
 .DS_Store*
 ehthumbs.db

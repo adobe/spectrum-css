@@ -1,15 +1,14 @@
 ---
 name: "🐛 Bug report"
 about: Report a problem with Spectrum CSS
-title: ''
+title: ""
 labels: bug
-assignees: ''
-
+assignees: ""
 ---
 
 ## Description
-<!-- Describe the problem you're having and paste any error messages you received -->
 
+<!-- Describe the problem you're having and paste any error messages you received -->
 
 ## Steps to reproduce
 
@@ -17,19 +16,19 @@ assignees: ''
 2. Click on ...
 3. Observe ...
 
-
 ## Expected behavior
+
 <!-- Describe what you expected to happen -->
 
-
 ## Screenshots
+
 <!-- If applicable, add screenshots to help explain the problem -->
 
-
 ## Environment
- - **Spectrum CSS version:** <!-- 2.13.0 -->
- - **Browser(s) and OS(s):** <!-- Chrome 75.0.3770.142 on Win 10 -->
+
+-   **Spectrum CSS version:** <!-- 2.13.0 -->
+-   **Browser(s) and OS(s):** <!-- Chrome 75.0.3770.142 on Win 10 -->
 
 ## Additional context
-<!-- Provide any additional information that might help us debug the issue -->
 
+<!-- Provide any additional information that might help us debug the issue -->

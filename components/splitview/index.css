@@ -11,160 +11,184 @@ governing permissions and limitations under the License.
 */
 
 .spectrum-SplitView {
-  --spectrum-splitview-vertical-width: 100%;
-  --spectrum-splitview-vertical-gripper-width: 50%;
-  --spectrum-splitview-vertical-gripper-outer-width: 100%;
-  --spectrum-splitview-vertical-gripper-reset: 0;
+	--spectrum-splitview-vertical-width: 100%;
+	--spectrum-splitview-vertical-gripper-width: 50%;
+	--spectrum-splitview-vertical-gripper-outer-width: 100%;
+	--spectrum-splitview-vertical-gripper-reset: 0;
 }
 
 .spectrum-SplitView {
-  display: flex;
-  overflow: hidden;
+	display: flex;
+	overflow: hidden;
 }
 
 .spectrum-SplitView-pane {
-  block-size: 100%;
+	block-size: 100%;
 }
 
 .spectrum-SplitView-gripper {
-  content: "";
-  display: block;
-  position: absolute;
-  border-style: solid;
-  border-radius: var(--spectrum-dragbar-gripper-border-radius);
+	content: "";
+	display: block;
+	position: absolute;
+	border-style: solid;
+	border-radius: var(--spectrum-dragbar-gripper-border-radius);
 
-  inset-block-start: 50%;
-  transform: translate(0, -50%);
+	inset-block-start: 50%;
+	transform: translate(0, -50%);
 
-  /* half of (width + horizontal border - handle width) * -1 (for negative opposite) */
-  inset-inline-start: calc(
-    (
-        (
-            var(--spectrum-dragbar-gripper-width) +
-              (2 * var(--spectrum-dragbar-gripper-border-width-horizontal)) -
-              var(--spectrum-dragbar-handle-width)
-          ) / 2
-      ) * -1
-  );
-  inline-size: var(--spectrum-dragbar-gripper-width);
-  block-size: var(--spectrum-dragbar-gripper-height);
-  border-block-width: var(--spectrum-dragbar-gripper-border-width-vertical);
-  border-inline-width: var(--spectrum-dragbar-gripper-border-width-horizontal);
+	/* half of (width + horizontal border - handle width) * -1 (for negative opposite) */
+	inset-inline-start: calc(
+		(
+				(
+						var(--spectrum-dragbar-gripper-width) +
+							(
+								2 *
+									var(
+										--spectrum-dragbar-gripper-border-width-horizontal
+									)
+							) - var(--spectrum-dragbar-handle-width)
+					) / 2
+			) * -1
+	);
+	inline-size: var(--spectrum-dragbar-gripper-width);
+	block-size: var(--spectrum-dragbar-gripper-height);
+	border-block-width: var(--spectrum-dragbar-gripper-border-width-vertical);
+	border-inline-width: var(
+		--spectrum-dragbar-gripper-border-width-horizontal
+	);
 }
 
 .spectrum-SplitView-splitter {
-  /* Contain the gripper */
-  position: relative;
+	/* Contain the gripper */
+	position: relative;
 
-  /* Prevent text selection while dragging */
-  user-select: none;
+	/* Prevent text selection while dragging */
+	user-select: none;
 
-  inline-size: var(--spectrum-dragbar-handle-width);
-  block-size: 100%;
-  z-index: 1;
+	inline-size: var(--spectrum-dragbar-handle-width);
+	block-size: 100%;
+	z-index: 1;
 
-  &.is-collapsed-start,
-  &.is-collapsed-end {
-    .spectrum-SplitView-gripper {
-      /* make the center line of the gripper */
-      &:before {
-        content: "";
-        position: absolute;
+	&.is-collapsed-start,
+	&.is-collapsed-end {
+		.spectrum-SplitView-gripper {
+			/* make the center line of the gripper */
+			&:before {
+				content: "";
+				position: absolute;
 
-        inset-block-start: 0;
-        inset-inline-start: calc(
-          50% - calc(var(--spectrum-dragbar-handle-width) / 2)
-        );
-        inline-size: var(--spectrum-dragbar-handle-width);
-        block-size: 100%;
-      }
-    }
-  }
+				inset-block-start: 0;
+				inset-inline-start: calc(
+					50% - calc(var(--spectrum-dragbar-handle-width) / 2)
+				);
+				inline-size: var(--spectrum-dragbar-handle-width);
+				block-size: 100%;
+			}
+		}
+	}
 
-  &.is-collapsed-start {
-    .spectrum-SplitView-gripper {
-      inset-inline-start: 0;
-    }
-  }
+	&.is-collapsed-start {
+		.spectrum-SplitView-gripper {
+			inset-inline-start: 0;
+		}
+	}
 
-  &.is-collapsed-end {
-    .spectrum-SplitView-gripper {
-      inset-inline-end: 0;
-      inset-inline-start: auto;
-    }
-  }
+	&.is-collapsed-end {
+		.spectrum-SplitView-gripper {
+			inset-inline-end: 0;
+			inset-inline-start: auto;
+		}
+	}
 }
 
 .spectrum-SplitView--vertical {
-  flex-direction: column;
+	flex-direction: column;
 
-  .spectrum-SplitView-pane {
-    block-size: auto;
-    inline-size: var(--spectrum-splitview-vertical-width);
-  }
+	.spectrum-SplitView-pane {
+		block-size: auto;
+		inline-size: var(--spectrum-splitview-vertical-width);
+	}
 
-  .spectrum-SplitView-gripper {
-    /* half of (height + vertical border - handle width) * -1 (for negative opposite) */
-    inset-block-start: calc(
-      (
-          (
-              var(--spectrum-dragbar-gripper-width) +
-                (2 * var(--spectrum-dragbar-gripper-border-width-horizontal)) -
-                var(--spectrum-dragbar-handle-width)
-            ) / 2
-        ) * -1
-    );
+	.spectrum-SplitView-gripper {
+		/* half of (height + vertical border - handle width) * -1 (for negative opposite) */
+		inset-block-start: calc(
+			(
+					(
+							var(--spectrum-dragbar-gripper-width) +
+								(
+									2 *
+										var(
+											--spectrum-dragbar-gripper-border-width-horizontal
+										)
+								) - var(--spectrum-dragbar-handle-width)
+						) / 2
+				) * -1
+		);
 
-    transform: translate(
-      calc(-1 * var(--spectrum-splitview-vertical-gripper-width)),
-      0
-    );
-    inset-inline-start: var(--spectrum-splitview-vertical-gripper-width);
-    inline-size: var(
-      --spectrum-dragbar-gripper-height
-    ); /* same as default height */
-    block-size: var(
-      --spectrum-dragbar-gripper-width
-    ); /* same as default width */
+		transform: translate(
+			calc(-1 * var(--spectrum-splitview-vertical-gripper-width)),
+			0
+		);
+		inset-inline-start: var(--spectrum-splitview-vertical-gripper-width);
+		inline-size: var(
+			--spectrum-dragbar-gripper-height
+		); /* same as default height */
+		block-size: var(
+			--spectrum-dragbar-gripper-width
+		); /* same as default width */
 
-    /* opposite of default border-width */
-    border-block-width: var(--spectrum-dragbar-gripper-border-width-horizontal);
-    border-inline-width: var(--spectrum-dragbar-gripper-border-width-vertical);
-  }
+		/* opposite of default border-width */
+		border-block-width: var(
+			--spectrum-dragbar-gripper-border-width-horizontal
+		);
+		border-inline-width: var(
+			--spectrum-dragbar-gripper-border-width-vertical
+		);
+	}
 
-  .spectrum-SplitView-splitter {
-    inline-size: var(--spectrum-splitview-vertical-width);
-    block-size: var(--spectrum-dragbar-handle-width);
+	.spectrum-SplitView-splitter {
+		inline-size: var(--spectrum-splitview-vertical-width);
+		block-size: var(--spectrum-dragbar-handle-width);
 
-    &.is-collapsed-start,
-    &.is-collapsed-end {
-      .spectrum-SplitView-gripper {
-        inset-inline-start: var(--spectrum-splitview-vertical-gripper-width);
+		&.is-collapsed-start,
+		&.is-collapsed-end {
+			.spectrum-SplitView-gripper {
+				inset-inline-start: var(
+					--spectrum-splitview-vertical-gripper-width
+				);
 
-        /* make the center line of the gripper */
-        &:before {
-          inset-block-start: calc(
-            var(--spectrum-splitview-vertical-gripper-width) -
-              calc(var(--spectrum-dragbar-handle-width) / 2)
-          );
-          inset-inline-start: var(--spectrum-splitview-vertical-gripper-reset);
-          inline-size: var(--spectrum-splitview-vertical-gripper-outer-width);
-          block-size: var(--spectrum-dragbar-handle-width);
-        }
-      }
-    }
+				/* make the center line of the gripper */
+				&:before {
+					inset-block-start: calc(
+						var(--spectrum-splitview-vertical-gripper-width) -
+							calc(var(--spectrum-dragbar-handle-width) / 2)
+					);
+					inset-inline-start: var(
+						--spectrum-splitview-vertical-gripper-reset
+					);
+					inline-size: var(
+						--spectrum-splitview-vertical-gripper-outer-width
+					);
+					block-size: var(--spectrum-dragbar-handle-width);
+				}
+			}
+		}
 
-    &.is-collapsed-start {
-      .spectrum-SplitView-gripper {
-        inset-block-start: var(--spectrum-splitview-vertical-gripper-reset);
-      }
-    }
+		&.is-collapsed-start {
+			.spectrum-SplitView-gripper {
+				inset-block-start: var(
+					--spectrum-splitview-vertical-gripper-reset
+				);
+			}
+		}
 
-    &.is-collapsed-end {
-      .spectrum-SplitView-gripper {
-        inset-block-start: auto;
-        inset-block-end: var(--spectrum-splitview-vertical-gripper-reset);
-      }
-    }
-  }
+		&.is-collapsed-end {
+			.spectrum-SplitView-gripper {
+				inset-block-start: auto;
+				inset-block-end: var(
+					--spectrum-splitview-vertical-gripper-reset
+				);
+			}
+		}
+	}
 }

@@ -10,27 +10,26 @@ OF ANY KIND, either express or implied. See the License for the specific languag
 governing permissions and limitations under the License.
 */
 
-const gulp = require('gulp');
-const rename = require('gulp-rename');
-const del = require('del');
-const css = require('./css');
+const gulp = require("gulp");
+const rename = require("gulp-rename");
+const del = require("del");
+const css = require("./css");
 
 function clean() {
-  return del('dist/*');
+	return del("dist/*");
 }
 
-const build = gulp.series(
-  clean,
-  css.buildCSS,
-  function copyIndex() {
-    // Just copy index.vars as index.css to maintain backwards compat
-    return gulp.src('dist/index.css')
-      .pipe(rename((file) => {
-        file.basename = 'index-vars';
-      }))
-      .pipe(gulp.dest('dist/'))
-  }
-);
+const build = gulp.series(clean, css.buildCSS, function copyIndex() {
+	// Just copy index.vars as index.css to maintain backwards compat
+	return gulp
+		.src("dist/index.css")
+		.pipe(
+			rename((file) => {
+				file.basename = "index-vars";
+			})
+		)
+		.pipe(gulp.dest("dist/"));
+});
 
 exports.default = build;
 exports.build = build;

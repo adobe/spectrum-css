@@ -9,44 +9,47 @@ import { Template as Icon } from "@spectrum-css/icon/stories/template.js";
 import "../index.css";
 
 export const Template = ({
-  rootClass = "spectrum-CloseButton",
-  size = "m",
-  label = "Close",
-  staticColor,
-  isDisabled = false,
-  customClasses = [],
-  id,
-  onclick,
-  ...globals
+	rootClass = "spectrum-CloseButton",
+	size = "m",
+	label = "Close",
+	staticColor,
+	isDisabled = false,
+	customClasses = [],
+	id,
+	onclick,
+	...globals
 }) => {
-  const { express } = globals;
+	const { express } = globals;
 
-  try {
-    if (!express) import(/* webpackPrefetch: true */ "../themes/spectrum.css");
-    else import(/* webpackPrefetch: true */ "../themes/express.css");
-  } catch (e) {
-    console.warn(e);
-  }
+	try {
+		if (!express)
+			import(/* webpackPrefetch: true */ "../themes/spectrum.css");
+		else import(/* webpackPrefetch: true */ "../themes/express.css");
+	} catch (e) {
+		console.warn(e);
+	}
 
-  return html`
-    <button
-      class=${classMap({
-        [rootClass]: true,
-        [`${rootClass}--size${upperCase(size)}`]: typeof size !== "undefined",
-        [`${rootClass}--static${capitalize(lowerCase(staticColor))}`]:
-          typeof staticColor !== "undefined",
-        ...customClasses.reduce((a, c) => ({ ...a, [c]: true }), {}),
-      })}
-      aria-label="close"
-      id=${ifDefined(id)}
-      label=${ifDefined(label)}
-      ?disabled=${isDisabled}
-      @click=${onclick}>
-      ${Icon({
-        ...globals,
-        iconName: "Cross100",
-        customClasses: [`${rootClass}-UIIcon`],
-      })}
-    </button>
-  `;
+	return html`
+		<button
+			class=${classMap({
+				[rootClass]: true,
+				[`${rootClass}--size${upperCase(size)}`]:
+					typeof size !== "undefined",
+				[`${rootClass}--static${capitalize(lowerCase(staticColor))}`]:
+					typeof staticColor !== "undefined",
+				...customClasses.reduce((a, c) => ({ ...a, [c]: true }), {}),
+			})}
+			aria-label="close"
+			id=${ifDefined(id)}
+			label=${ifDefined(label)}
+			?disabled=${isDisabled}
+			@click=${onclick}
+		>
+			${Icon({
+				...globals,
+				iconName: "Cross100",
+				customClasses: [`${rootClass}-UIIcon`],
+			})}
+		</button>
+	`;
 };

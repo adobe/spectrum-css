@@ -2,35 +2,111 @@ name: In-Field Button
 status: Contribution
 SpectrumSiteSlug: https://spectrum.adobe.com/page/picker/
 sections:
-  - name: Migration Guide
-    description: |
-      ### In-Field Button uses the [Quiet](infieldbutton.html#quiet) variant instead of loudness levels.
+    - name: Migration Guide
+      description: |
+          ### In-Field Button uses the [Quiet](infieldbutton.html#quiet) variant instead of loudness levels.
 
-      The Loudness level classes, `.spectrum-InfieldButton--low`, `.spectrum-InfieldButton--medium`, and `.spectrum-InfieldButton--high`, have been removed.
+          The Loudness level classes, `.spectrum-InfieldButton--low`, `.spectrum-InfieldButton--medium`, and `.spectrum-InfieldButton--high`, have been removed.
 
-      - Use the base class, `.spectrum-InfieldButton`, to apply the default button styles. The default styles correspond to what was previously the Loudness - High variant, which used the class `.spectrum-InfieldButton--high`.
-      - Use the modifier class, `spectrum-InfieldButton--quiet`, to apply the quiet variant styles. Quiet corresponds to what was previously the Loudness - Low variant, which used the class `.spectrum-InfieldButton--low` class.
+          - Use the base class, `.spectrum-InfieldButton`, to apply the default button styles. The default styles correspond to what was previously the Loudness - High variant, which used the class `.spectrum-InfieldButton--high`.
+          - Use the modifier class, `spectrum-InfieldButton--quiet`, to apply the quiet variant styles. Quiet corresponds to what was previously the Loudness - Low variant, which used the class `.spectrum-InfieldButton--low` class.
 
-      The Loudness - Medium variant has been removed, so there is no equivalent.
+          The Loudness - Medium variant has been removed, so there is no equivalent.
 
 examples:
-  - id: infieldbutton-sizing
-    name: Sizing
-    markup: |
-      <div class="spectrum-Examples">
-        <div class="spectrum-Examples-item">
-          <h4 class="spectrum-Heading spectrum-Heading--sizeXS spectrum-Examples-itemHeading">S</h4>
-          <button class="spectrum-InfieldButton spectrum-InfieldButton--sizeS spectrum-InfieldButton--right" aria-haspopup="listbox">
-            <div class="spectrum-InfieldButton-fill">
-              <svg xmlns="http://www.w3.org/2000/svg" class="spectrum-Icon spectrum-InfieldButton-icon" focusable="false" aria-hidden="true" aria-label="Add">
-                <use href="#spectrum-icon-18-Add"></use>
-              </svg>
+    - id: infieldbutton-sizing
+      name: Sizing
+      markup: |
+          <div class="spectrum-Examples">
+            <div class="spectrum-Examples-item">
+              <h4 class="spectrum-Heading spectrum-Heading--sizeXS spectrum-Examples-itemHeading">S</h4>
+              <button class="spectrum-InfieldButton spectrum-InfieldButton--sizeS spectrum-InfieldButton--right" aria-haspopup="listbox">
+                <div class="spectrum-InfieldButton-fill">
+                  <svg xmlns="http://www.w3.org/2000/svg" class="spectrum-Icon spectrum-InfieldButton-icon" focusable="false" aria-hidden="true" aria-label="Add">
+                    <use href="#spectrum-icon-18-Add"></use>
+                  </svg>
+                </div>
+              </button>
             </div>
-          </button>
-        </div>
 
-        <div class="spectrum-Examples-item">
-          <h4 class="spectrum-Heading spectrum-Heading--sizeXS spectrum-Examples-itemHeading">M</h4>
+            <div class="spectrum-Examples-item">
+              <h4 class="spectrum-Heading spectrum-Heading--sizeXS spectrum-Examples-itemHeading">M</h4>
+              <button class="spectrum-InfieldButton spectrum-InfieldButton--sizeM spectrum-InfieldButton--right" aria-haspopup="listbox">
+                <div class="spectrum-InfieldButton-fill">
+                  <svg xmlns="http://www.w3.org/2000/svg" class="spectrum-Icon spectrum-InfieldButton-icon" focusable="false" aria-hidden="true" aria-label="Add">
+                    <use href="#spectrum-icon-18-Add"></use>
+                  </svg>
+                </div>
+              </button>
+            </div>
+
+            <div class="spectrum-Examples-item">
+              <h4 class="spectrum-Heading spectrum-Heading--sizeXS spectrum-Examples-itemHeading">L</h4>
+              <button class="spectrum-InfieldButton spectrum-InfieldButton--sizeL spectrum-InfieldButton--right" aria-haspopup="listbox">
+                <div class="spectrum-InfieldButton-fill">
+                  <svg xmlns="http://www.w3.org/2000/svg" class="spectrum-Icon spectrum-InfieldButton-icon" focusable="false" aria-hidden="true" aria-label="Add">
+                    <use href="#spectrum-icon-18-Add"></use>
+                  </svg>
+                </div>
+              </button>
+            </div>
+
+            <div class="spectrum-Examples-item">
+              <h4 class="spectrum-Heading spectrum-Heading--sizeXS spectrum-Examples-itemHeading">XL</h4>
+              <button class="spectrum-InfieldButton spectrum-InfieldButton--sizeXL spectrum-InfieldButton--right" aria-haspopup="listbox">
+                <div class="spectrum-InfieldButton-fill">
+                  <svg xmlns="http://www.w3.org/2000/svg" class="spectrum-Icon spectrum-InfieldButton-icon" focusable="false" aria-hidden="true" aria-label="Add">
+                    <use href="#spectrum-icon-18-Add"></use>
+                  </svg>
+                </div>
+              </button>
+            </div>
+          </div>
+
+    - id: infieldbutton-quiet
+      name: Quiet
+      markup: |
+          <div class="spectrum-Examples">
+            <div class="spectrum-Examples-item">
+              <button class="spectrum-InfieldButton spectrum-InfieldButton--sizeM spectrum-InfieldButton--quiet spectrum-InfieldButton--right" aria-haspopup="listbox">
+                <div class="spectrum-InfieldButton-fill">
+                  <svg xmlns="http://www.w3.org/2000/svg" class="spectrum-Icon spectrum-InfieldButton-icon" focusable="false" aria-hidden="true" aria-label="Add">
+                    <use href="#spectrum-icon-18-Add"></use>
+                  </svg>
+                </div>
+              </button>
+            </div>
+          </div>
+
+    - id: infieldbutton-position
+      name: Position
+      markup: |
+          <div class="spectrum-Examples" style="justify-content: space-around;">
+            <div class="spectrum-Examples-item">
+              <h4 class="spectrum-Heading spectrum-Heading--sizeXS spectrum-Examples-itemHeading">Start</h4>
+              <button class="spectrum-InfieldButton spectrum-InfieldButton--sizeM spectrum-InfieldButton--left" aria-haspopup="listbox">
+                <div class="spectrum-InfieldButton-fill">
+                  <svg xmlns="http://www.w3.org/2000/svg" class="spectrum-Icon spectrum-InfieldButton-icon" focusable="false" aria-hidden="true" aria-label="Add">
+                    <use href="#spectrum-icon-18-Add"></use>
+                  </svg>
+                </div>
+              </button>
+            </div>
+            <div class="spectrum-Examples-item">
+              <h4 class="spectrum-Heading spectrum-Heading--sizeXS spectrum-Examples-itemHeading">End</h4>
+              <button class="spectrum-InfieldButton spectrum-InfieldButton--sizeM spectrum-InfieldButton--right" aria-haspopup="listbox">
+                <div class="spectrum-InfieldButton-fill">
+                  <svg xmlns="http://www.w3.org/2000/svg" class="spectrum-Icon spectrum-InfieldButton-icon" focusable="false" aria-hidden="true" aria-label="Add">
+                    <use href="#spectrum-icon-18-Add"></use>
+                  </svg>
+                </div>
+              </button>
+            </div>
+          </div>
+
+    - id: infieldbutton-icononly
+      name: Workflow icon only
+      markup: |
           <button class="spectrum-InfieldButton spectrum-InfieldButton--sizeM spectrum-InfieldButton--right" aria-haspopup="listbox">
             <div class="spectrum-InfieldButton-fill">
               <svg xmlns="http://www.w3.org/2000/svg" class="spectrum-Icon spectrum-InfieldButton-icon" focusable="false" aria-hidden="true" aria-label="Add">
@@ -38,101 +114,25 @@ examples:
               </svg>
             </div>
           </button>
-        </div>
 
-        <div class="spectrum-Examples-item">
-          <h4 class="spectrum-Heading spectrum-Heading--sizeXS spectrum-Examples-itemHeading">L</h4>
-          <button class="spectrum-InfieldButton spectrum-InfieldButton--sizeL spectrum-InfieldButton--right" aria-haspopup="listbox">
+    - id: infieldbutton-disabled
+      name: Disabled
+      markup: |
+          <button class="spectrum-InfieldButton spectrum-InfieldButton--sizeM spectrum-InfieldButton--right" disabled aria-haspopup="listbox">
             <div class="spectrum-InfieldButton-fill">
               <svg xmlns="http://www.w3.org/2000/svg" class="spectrum-Icon spectrum-InfieldButton-icon" focusable="false" aria-hidden="true" aria-label="Add">
                 <use href="#spectrum-icon-18-Add"></use>
               </svg>
             </div>
           </button>
-        </div>
 
-        <div class="spectrum-Examples-item">
-          <h4 class="spectrum-Heading spectrum-Heading--sizeXS spectrum-Examples-itemHeading">XL</h4>
-          <button class="spectrum-InfieldButton spectrum-InfieldButton--sizeXL spectrum-InfieldButton--right" aria-haspopup="listbox">
+    - id: infieldbutton-invalid
+      name: Invalid
+      markup: |
+          <button class="spectrum-InfieldButton spectrum-InfieldButton--sizeM spectrum-InfieldButton--right is-invalid" aria-haspopup="listbox">
             <div class="spectrum-InfieldButton-fill">
               <svg xmlns="http://www.w3.org/2000/svg" class="spectrum-Icon spectrum-InfieldButton-icon" focusable="false" aria-hidden="true" aria-label="Add">
                 <use href="#spectrum-icon-18-Add"></use>
               </svg>
             </div>
           </button>
-        </div>
-      </div>
-
-  - id: infieldbutton-quiet
-    name: Quiet
-    markup: |
-      <div class="spectrum-Examples">
-        <div class="spectrum-Examples-item">
-          <button class="spectrum-InfieldButton spectrum-InfieldButton--sizeM spectrum-InfieldButton--quiet spectrum-InfieldButton--right" aria-haspopup="listbox">
-            <div class="spectrum-InfieldButton-fill">
-              <svg xmlns="http://www.w3.org/2000/svg" class="spectrum-Icon spectrum-InfieldButton-icon" focusable="false" aria-hidden="true" aria-label="Add">
-                <use href="#spectrum-icon-18-Add"></use>
-              </svg>
-            </div>
-          </button>
-        </div>
-      </div>
-
-  - id: infieldbutton-position
-    name: Position
-    markup: |
-      <div class="spectrum-Examples" style="justify-content: space-around;">
-        <div class="spectrum-Examples-item">
-          <h4 class="spectrum-Heading spectrum-Heading--sizeXS spectrum-Examples-itemHeading">Start</h4>
-          <button class="spectrum-InfieldButton spectrum-InfieldButton--sizeM spectrum-InfieldButton--left" aria-haspopup="listbox">
-            <div class="spectrum-InfieldButton-fill">
-              <svg xmlns="http://www.w3.org/2000/svg" class="spectrum-Icon spectrum-InfieldButton-icon" focusable="false" aria-hidden="true" aria-label="Add">
-                <use href="#spectrum-icon-18-Add"></use>
-              </svg>
-            </div>
-          </button>
-        </div>
-        <div class="spectrum-Examples-item">
-          <h4 class="spectrum-Heading spectrum-Heading--sizeXS spectrum-Examples-itemHeading">End</h4>
-          <button class="spectrum-InfieldButton spectrum-InfieldButton--sizeM spectrum-InfieldButton--right" aria-haspopup="listbox">
-            <div class="spectrum-InfieldButton-fill">
-              <svg xmlns="http://www.w3.org/2000/svg" class="spectrum-Icon spectrum-InfieldButton-icon" focusable="false" aria-hidden="true" aria-label="Add">
-                <use href="#spectrum-icon-18-Add"></use>
-              </svg>
-            </div>
-          </button>
-        </div>
-      </div>
-
-  - id: infieldbutton-icononly
-    name: Workflow icon only
-    markup: |
-      <button class="spectrum-InfieldButton spectrum-InfieldButton--sizeM spectrum-InfieldButton--right" aria-haspopup="listbox">
-        <div class="spectrum-InfieldButton-fill">
-          <svg xmlns="http://www.w3.org/2000/svg" class="spectrum-Icon spectrum-InfieldButton-icon" focusable="false" aria-hidden="true" aria-label="Add">
-            <use href="#spectrum-icon-18-Add"></use>
-          </svg>
-        </div>
-      </button>
-
-  - id: infieldbutton-disabled
-    name: Disabled
-    markup: |
-      <button class="spectrum-InfieldButton spectrum-InfieldButton--sizeM spectrum-InfieldButton--right" disabled aria-haspopup="listbox">
-        <div class="spectrum-InfieldButton-fill">
-          <svg xmlns="http://www.w3.org/2000/svg" class="spectrum-Icon spectrum-InfieldButton-icon" focusable="false" aria-hidden="true" aria-label="Add">
-            <use href="#spectrum-icon-18-Add"></use>
-          </svg>
-        </div>
-      </button>
-
-  - id: infieldbutton-invalid
-    name: Invalid
-    markup: |
-      <button class="spectrum-InfieldButton spectrum-InfieldButton--sizeM spectrum-InfieldButton--right is-invalid" aria-haspopup="listbox">
-        <div class="spectrum-InfieldButton-fill">
-          <svg xmlns="http://www.w3.org/2000/svg" class="spectrum-Icon spectrum-InfieldButton-icon" focusable="false" aria-hidden="true" aria-label="Add">
-            <use href="#spectrum-icon-18-Add"></use>
-          </svg>
-        </div>
-      </button>

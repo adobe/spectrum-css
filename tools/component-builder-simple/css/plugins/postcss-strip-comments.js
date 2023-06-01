@@ -9,27 +9,30 @@ the License is distributed on an "AS IS" BASIS, WITHOUT WARRANTIES OR REPRESENTA
 OF ANY KIND, either express or implied. See the License for the specific language
 governing permissions and limitations under the License.
 */
-const postcss = require('postcss');
+const postcss = require("postcss");
 
-module.exports = postcss.plugin('postcss-strip-comments', (opts = {}) => {
-  return css => {
-    css.walk(node => {
-      if (node.type === 'comment') {
-        if (node.text.trim().indexOf('topdoc') === 0 && opts.preserveTopdoc) {
-          return;
-        }
+module.exports = postcss.plugin("postcss-strip-comments", (opts = {}) => {
+	return (css) => {
+		css.walk((node) => {
+			if (node.type === "comment") {
+				if (
+					node.text.trim().indexOf("topdoc") === 0 &&
+					opts.preserveTopdoc
+				) {
+					return;
+				}
 
-        // Get a reference to the parent before the node is removed
-        let parent = node.parent;
+				// Get a reference to the parent before the node is removed
+				let parent = node.parent;
 
-        node.remove();
+				node.remove();
 
-        // If the comment was the last thing left in its parent, remove the parent
-        if (parent && parent.nodes && parent.nodes.length === 0) {
-          parent.remove();
-        }
-        return;
-      }
-    });
-  };
+				// If the comment was the last thing left in its parent, remove the parent
+				if (parent && parent.nodes && parent.nodes.length === 0) {
+					parent.remove();
+				}
+				return;
+			}
+		});
+	};
 });

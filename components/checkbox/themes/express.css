@@ -11,17 +11,23 @@ governing permissions and limitations under the License.
 */
 
 @container (--system: express) {
-  .spectrum-Checkbox {
-    /* Control */
-    --spectrum-checkbox-control-color-default: var(--spectrum-gray-800);
-    --spectrum-checkbox-control-color-hover: var(--spectrum-gray-900);
-    --spectrum-checkbox-control-color-down: var(--spectrum-gray-900);
-    --spectrum-checkbox-control-color-focus: var(--spectrum-gray-900);
+	.spectrum-Checkbox {
+		/* Control */
+		--spectrum-checkbox-control-color-default: var(--spectrum-gray-800);
+		--spectrum-checkbox-control-color-hover: var(--spectrum-gray-900);
+		--spectrum-checkbox-control-color-down: var(--spectrum-gray-900);
+		--spectrum-checkbox-control-color-focus: var(--spectrum-gray-900);
 
-    /* Control Selected */
-    --spectrum-checkbox-control-selected-color-default: var(--spectrum-gray-800);
-    --spectrum-checkbox-control-selected-color-hover: var(--spectrum-gray-900);
-    --spectrum-checkbox-control-selected-color-down: var(--spectrum-gray-900);
-    /* --spectrum-checkbox-control-selected-color-focus: var(--spectrum-gray-900); */
-  }
+		/* Control Selected */
+		--spectrum-checkbox-control-selected-color-default: var(
+			--spectrum-gray-800
+		);
+		--spectrum-checkbox-control-selected-color-hover: var(
+			--spectrum-gray-900
+		);
+		--spectrum-checkbox-control-selected-color-down: var(
+			--spectrum-gray-900
+		);
+		/* --spectrum-checkbox-control-selected-color-focus: var(--spectrum-gray-900); */
+	}
 }

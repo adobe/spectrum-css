@@ -1,96 +1,105 @@
 .spectrum-ColorSlider {
-  --spectrum-colorslider-handle-hitarea-border-radius: 0%;
-  --spectrum-colorslider-handle-hitarea-width: var(
-    --spectrum-global-dimension-size-300
-  );
-  --spectrum-colorslider-handle-hitarea-height: var(
-    --spectrum-global-dimension-size-300
-  );
-  --spectrum-colorslider-checkerboard-size: var(--spectrum-opacity-checkerboard-square-size);
-  --spectrum-colorslider-checkerboard-dark-color: var(--spectrum-opacity-checkerboard-square-dark);
-  --spectrum-colorslider-checkerboard-light-color: var(--spectrum-opacity-checkerboard-square-light);
+	--spectrum-colorslider-handle-hitarea-border-radius: 0%;
+	--spectrum-colorslider-handle-hitarea-width: var(
+		--spectrum-global-dimension-size-300
+	);
+	--spectrum-colorslider-handle-hitarea-height: var(
+		--spectrum-global-dimension-size-300
+	);
+	--spectrum-colorslider-checkerboard-size: var(
+		--spectrum-opacity-checkerboard-square-size
+	);
+	--spectrum-colorslider-checkerboard-dark-color: var(
+		--spectrum-opacity-checkerboard-square-dark
+	);
+	--spectrum-colorslider-checkerboard-light-color: var(
+		--spectrum-opacity-checkerboard-square-light
+	);
 }
 
 %spectrum-ColorControl-hiddenField {
-  opacity: 0;
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  z-index: 0;
-  margin: 0;
-  pointer-events: none;
+	opacity: 0;
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	z-index: 0;
+	margin: 0;
+	pointer-events: none;
 }
 
 .spectrum-ColorSlider {
-  position: relative;
-  display: block;
-  width: var(--spectrum-colorslider-default-length);
-  height: var(--spectrum-colorslider-height);
+	position: relative;
+	display: block;
+	width: var(--spectrum-colorslider-default-length);
+	height: var(--spectrum-colorslider-height);
 
-  /* Otherwise we randomly drag a file icon */
-  user-select: none;
+	/* Otherwise we randomly drag a file icon */
+	user-select: none;
 
-  cursor: default;
+	cursor: default;
 
-  &.is-focused {
-    z-index: 2;
-  }
+	&.is-focused {
+		z-index: 2;
+	}
 
-  &.is-disabled {
-    pointer-events: none;
-  }
+	&.is-disabled {
+		pointer-events: none;
+	}
 }
 
 .spectrum-ColorSlider--vertical {
-  display: inline-block;
+	display: inline-block;
 
-  width: var(--spectrum-colorslider-vertical-width);
-  height: var(--spectrum-colorslider-vertical-default-length);
+	width: var(--spectrum-colorslider-vertical-width);
+	height: var(--spectrum-colorslider-vertical-default-length);
 
-  .spectrum-ColorSlider-handle {
-    left: 50%;
-    top: 0;
-  }
+	.spectrum-ColorSlider-handle {
+		left: 50%;
+		top: 0;
+	}
 }
 
 .spectrum-ColorSlider-handle {
-  left: 0;
-  top: 50%;
+	left: 0;
+	top: 50%;
 
-  &:after {
-    border-radius: var(--spectrum-colorslider-handle-hitarea-border-radius);
-    width: var(--spectrum-colorslider-handle-hitarea-width);
-    height: var(--spectrum-colorslider-handle-hitarea-height);
-  }
+	&:after {
+		border-radius: var(--spectrum-colorslider-handle-hitarea-border-radius);
+		width: var(--spectrum-colorslider-handle-hitarea-width);
+		height: var(--spectrum-colorslider-handle-hitarea-height);
+	}
 }
 
 .spectrum-ColorSlider-checkerboard {
-  background:
-    repeating-conic-gradient(var(--spectrum-colorslider-checkerboard-light-color) 0% 25%, var(--spectrum-colorslider-checkerboard-dark-color) 0% 50%)
-    left top / calc(var(--spectrum-colorslider-checkerboard-size) * 2 ) calc(var(--spectrum-colorslider-checkerboard-size) * 2 );
+	background: repeating-conic-gradient(
+			var(--spectrum-colorslider-checkerboard-light-color) 0% 25%,
+			var(--spectrum-colorslider-checkerboard-dark-color) 0% 50%
+		)
+		left top / calc(var(--spectrum-colorslider-checkerboard-size) * 2)
+		calc(var(--spectrum-colorslider-checkerboard-size) * 2);
 
-  /* the floating inset box shadow must be a separate element since <canvas> won't take it */
-  &:before {
-    content: "";
-    z-index: 1;
-    position: absolute;
-    top: 0;
-    left: 0;
-    bottom: 0;
-    right: 0;
-    border-radius: var(--spectrum-colorslider-border-radius);
-  }
+	/* the floating inset box shadow must be a separate element since <canvas> won't take it */
+	&:before {
+		content: "";
+		z-index: 1;
+		position: absolute;
+		top: 0;
+		left: 0;
+		bottom: 0;
+		right: 0;
+		border-radius: var(--spectrum-colorslider-border-radius);
+	}
 }
 
 .spectrum-ColorSlider-gradient,
 .spectrum-ColorSlider-checkerboard {
-  width: 100%;
-  height: 100%;
-  border-radius: var(--spectrum-colorslider-border-radius);
+	width: 100%;
+	height: 100%;
+	border-radius: var(--spectrum-colorslider-border-radius);
 }
 
 .spectrum-ColorSlider-slider {
-  @extend %spectrum-ColorControl-hiddenField;
+	@extend %spectrum-ColorControl-hiddenField;
 }

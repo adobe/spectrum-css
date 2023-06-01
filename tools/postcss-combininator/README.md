@@ -1,4 +1,5 @@
 # postcss-combininator
+
 > Combines multiple blocks of custom properties
 
 ## Installation
@@ -14,12 +15,12 @@ This plugin turns this:
 
 ```css
 .spectrum {
-  --spectrum-actionbutton-background-color: blue;
-  --spectrum-actionbutton-border-color: transparent;
+	--spectrum-actionbutton-background-color: blue;
+	--spectrum-actionbutton-border-color: transparent;
 }
 
 .spectrum--express {
-  --spectrum-actionbutton-background-color: purple;
+	--spectrum-actionbutton-background-color: purple;
 }
 ```
 
@@ -27,8 +28,8 @@ Into this:
 
 ```css
 .spectrum--express {
-  --spectrum-actionbutton-border-color: transparent;
-  --spectrum-actionbutton-background-color: purple;
+	--spectrum-actionbutton-border-color: transparent;
+	--spectrum-actionbutton-background-color: purple;
 }
 ```
 

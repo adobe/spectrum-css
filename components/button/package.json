@@ -1,32 +1,32 @@
 {
-  "name": "@spectrum-css/button",
-  "version": "10.1.1",
-  "description": "The Spectrum CSS button component",
-  "license": "Apache-2.0",
-  "author": "Adobe",
-  "homepage": "https://opensource.adobe.com/spectrum-css/button-accent",
-  "repository": {
-    "type": "git",
-    "url": "https://github.com/adobe/spectrum-css.git",
-    "directory": "components/button"
-  },
-  "bugs": {
-    "url": "https://github.com/adobe/spectrum-css/issues"
-  },
-  "main": "dist/index-vars.css",
-  "scripts": {
-    "build": "gulp"
-  },
-  "peerDependencies": {
-    "@spectrum-css/tokens": ">=10.0.0"
-  },
-  "devDependencies": {
-    "@spectrum-css/component-builder-simple": "^2.0.13",
-    "@spectrum-css/icon": "^3.0.44",
-    "@spectrum-css/tokens": "^10.1.1",
-    "gulp": "^4.0.0"
-  },
-  "publishConfig": {
-    "access": "public"
-  }
+	"name": "@spectrum-css/button",
+	"version": "10.1.1",
+	"description": "The Spectrum CSS button component",
+	"license": "Apache-2.0",
+	"author": "Adobe",
+	"homepage": "https://opensource.adobe.com/spectrum-css/button-accent",
+	"repository": {
+		"type": "git",
+		"url": "https://github.com/adobe/spectrum-css.git",
+		"directory": "components/button"
+	},
+	"bugs": {
+		"url": "https://github.com/adobe/spectrum-css/issues"
+	},
+	"main": "dist/index-vars.css",
+	"scripts": {
+		"build": "gulp"
+	},
+	"peerDependencies": {
+		"@spectrum-css/tokens": ">=10.0.0"
+	},
+	"devDependencies": {
+		"@spectrum-css/component-builder-simple": "^2.0.13",
+		"@spectrum-css/icon": "^3.0.44",
+		"@spectrum-css/tokens": "^10.1.1",
+		"gulp": "^4.0.0"
+	},
+	"publishConfig": {
+		"access": "public"
+	}
 }
