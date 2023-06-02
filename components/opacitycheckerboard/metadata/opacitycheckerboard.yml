@@ -4,6 +4,7 @@ examples:
   - id: opacity-checkerboard
     name: Opactiy Checkerboard
     markup: |
-      <div>
-        <p>Content here</p>
+      <div class="spectrum-OpacityCheckerboard-example">
+        <div class="spectrum-OpacityCheckerboard">
+        </div>
       </div>

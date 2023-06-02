@@ -18,3 +18,19 @@ permissions and limitations under the License. */
 		--spectrum-opacity-checkerboard-square-size
 	);
 }
+
+.spectrum-OpacityCheckerboard {
+	inline-size: 100%;
+	block-size: 100%;
+	background: repeating-conic-gradient(
+			var(--spectrum-opacity-checkerboard-light) 0% 25%,
+			var(--spectrum-opacity-checkerboard-dark) 0% 50%
+		)
+		left top / calc(var(--spectrum-opacity-checkerboard-size) * 2)
+		calc(var(--spectrum-opacity-checkerboard-size) * 2);
+}
+
+.spectrum-OpacityCheckerboard-example {
+	inline-size: 200px;
+	block-size: 200px;
+}
