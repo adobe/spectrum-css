@@ -399,6 +399,7 @@ governing permissions and limitations under the License.
 .spectrum-InfieldButton-icon {
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 	display: initial;
 
 	/* don't be small, ever */
@@ -424,6 +425,12 @@ governing permissions and limitations under the License.
 >>>>>>> f01aba123 (style(infieldbutton!): begin updating css to tokens)
 =======
 >>>>>>> 3c05f5ec9 (style(infieldbutton): disabled colors and quiet colors)
+=======
+	display: initial;
+
+	/* don't be small, ever */
+	flex-shrink: 0;
+>>>>>>> f5a815e7c (refactor(infieldbutton): fix stylelint errors and remove invalid)
 
   /* remove margin used for centering */
   margin: 0 !important;

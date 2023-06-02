@@ -128,17 +128,6 @@ examples:
           </svg>
         </div>
       </button>
-
-  - id: infieldbutton-invalid
-    name: Invalid
-    markup: |
-      <button class="spectrum-InfieldButton spectrum-InfieldButton--sizeM spectrum-InfieldButton--right is-invalid" aria-haspopup="listbox">
-        <div class="spectrum-InfieldButton-fill">
-          <svg xmlns="http://www.w3.org/2000/svg" class="spectrum-Icon spectrum-Icon--sizeM spectrum-InfieldButton-icon" focusable="false" aria-hidden="true" aria-label="Add">
-            <use href="#spectrum-icon-18-Add"></use>
-          </svg>
-        </div>
-      </button>
   - id: infieldbutton-stacked
     name: Stacked
     markup: |
