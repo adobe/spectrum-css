@@ -17,14 +17,19 @@ governing permissions and limitations under the License.
 	--spectrum-thumbnail-border-width: var(--spectrum-border-width-100);
 	/* @todo Refactor with --spectrum-thumbnail-border-color once gray rgb token is no longer necessary to workaround nested rgb color token value using rgba(). */
 	--spectrum-thumbnail-border-color-rgba: rgba(
-		var(--spectrum-gray-800-rgb),
-		var(--spectrum-thumbnail-border-opacity)
+		34,
+		34,
+		34,
+		0.1
+	); /* Why is this not working?? rgba(var(--spectrum-gray-800-rgb), var(--spectrum-thumbnail-border-color-opacity)); */
+	--spectrum-thumbnail-layer-border-width-inner: var(
+		--spectrum-border-width-400
 	);
-
-  --spectrum-thumbnail-layer-border-width-inner: var(--spectrum-border-width-400);
-  --spectrum-thumbnail-layer-border-color-inner: var(--spectrum-white);
-  --spectrum-thumbnail-layer-border-width-outer: var(--spectrum-border-width-100);
-  --spectrum-thumbnail-layer-border-color-outer: var(--spectrum-gray-500);
+	--spectrum-thumbnail-layer-border-color-inner: var(--spectrum-white);
+	--spectrum-thumbnail-layer-border-width-outer: var(
+		--spectrum-border-width-100
+	);
+	--spectrum-thumbnail-layer-border-color-outer: var(--spectrum-gray-500);
 
   --spectrum-thumbnail-border-width-selected: var(--spectrum-border-width-200);
   --spectrum-thumbnail-border-color-selected: var(--spectrum-accent-color-800);
@@ -33,11 +38,9 @@ governing permissions and limitations under the License.
   --spectrum-thumbnail-focus-indicator-gap: var(--spectrum-focus-indicator-gap);
   --spectrum-thumbnail-focus-indicator-color: var(--spectrum-focus-indicator-color);
 
-  --spectrum-thumbnail-color-opacity-disabled: var(--spectrum-thumbnail-opacity-disabled);
-
-  --spectrum-thumbnail-checkerboard-size: var(--spectrum-opacity-checkerboard-square-size);
-  --spectrum-thumbnail-checkerboard-dark-color: var(--spectrum-opacity-checkerboard-square-dark);
-  --spectrum-thumbnail-checkerboard-light-color: var(--spectrum-opacity-checkerboard-square-light);
+	--spectrum-thumbnail-color-opacity-disabled: var(
+		--spectrum-thumbnail-opacity-disabled
+	);
 }
 
 .spectrum-Thumbnail--size50 {
@@ -97,10 +100,10 @@ governing permissions and limitations under the License.
   inline-size: var(--mod-thumbnail-size, var(--spectrum-thumbnail-size));
   block-size: var(--mod-thumbnail-size, var(--spectrum-thumbnail-size));
 
-  border-radius: var(--mod-thumbnail-border-radius, var(--spectrum-thumbnail-border-radius));
-  background:
-    repeating-conic-gradient(var(--mod-thumbnail-checkerboard-light-color, var(--spectrum-thumbnail-checkerboard-light-color)) 0% 25%, var(--mod-thumbnail-checkerboard-dark-color, var(--spectrum-thumbnail-checkerboard-dark-color)) 0% 50%)
-    left top / calc(var(--mod-thumbnail-checkerboard-size, var(--spectrum-thumbnail-checkerboard-size)) * 2) calc(var(--mod-thumbnail-checkerboard-size, var(--spectrum-thumbnail-checkerboard-size)) * 2);
+	border-radius: var(
+		--mod-thumbnail-border-radius,
+		var(--spectrum-thumbnail-border-radius)
+	);
 
   &::before {
     content: '';
@@ -117,7 +120,7 @@ governing permissions and limitations under the License.
   }
 
 	&.is-focused,
-	&:focus-ring {
+	&.focus-ring {
 		overflow: visible;
 		&::after {
 			content: "";
@@ -214,6 +217,7 @@ governing permissions and limitations under the License.
     content: none;
   }
 
+	/* stylelint-disable declaration-block-no-redundant-longhand-properties */
 	&.is-selected {
 		outline-style: solid;
 		outline-color: var(
@@ -283,6 +287,7 @@ governing permissions and limitations under the License.
 			)
 	);
 }
+/* stylelint-enable declaration-block-no-redundant-longhand-properties */
 
 .spectrum-Thumbnail-image-wrapper {
   display: flex;
@@ -323,6 +328,7 @@ governing permissions and limitations under the License.
 }
 
 /* Windows High Contrast Mode */
+/* stylelint-disable declaration-property-value-no-unknown */
 @media (forced-colors: active) {
   .spectrum-Thumbnail {
     /* Allow checkerboard pattern to be visible. */
@@ -335,3 +341,4 @@ governing permissions and limitations under the License.
 		color: CanvasText;
 	}
 }
+/* stylelint-enable declaration-property-value-no-unknown */
