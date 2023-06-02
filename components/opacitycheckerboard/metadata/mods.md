@@ -1,3 +1,3 @@
-| Modifiable Custom Properties                      |
-| ------------------------------------------------- |
-| `--mod-opacitycheckerboard-content-color-default` |
+| Modifiable Custom Properties          |
+| ------------------------------------- |
+| `--mod-opacity-checkerboard-position` |

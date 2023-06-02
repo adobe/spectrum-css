@@ -13,3 +13,4 @@
 | `--mod-colorhandle-outer-border-color`    |
 | `--mod-colorhandle-outer-border-width`    |
 | `--mod-colorhandle-size`                  |
+| `--mod-opacity-checkerboard-position`     |
