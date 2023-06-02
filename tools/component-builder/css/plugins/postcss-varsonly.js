@@ -9,36 +9,36 @@ the License is distributed on an "AS IS" BASIS, WITHOUT WARRANTIES OR REPRESENTA
 OF ANY KIND, either express or implied. See the License for the specific language
 governing permissions and limitations under the License.
 */
-var postcss = require('postcss');
+var postcss = require("postcss");
 
-module.exports = postcss.plugin('postcss-varsonly', function (opts) {
-  opts = opts || {};
+module.exports = postcss.plugin("postcss-varsonly", function (opts) {
+	opts = opts || {};
 
-  return function (root, result) {
-    // Delete all comments
-    root.walkComments((comment) => {
-      comment.remove();
-    });
+	return function (root, result) {
+		// Delete all comments
+		root.walkComments((comment) => {
+			comment.remove();
+		});
 
-    // Process each rule
-    root.walkRules((rule, ruleIndex) => {
-      // Don't break variable declarations
-      if (rule.selector === ':root') {
-        return;
-      }
+		// Process each rule
+		root.walkRules((rule, ruleIndex) => {
+			// Don't break variable declarations
+			if (rule.selector === ":root") {
+				return;
+			}
 
-      // Check every declaration
-      rule.walkDecls((decl) => {
-        // Remove if not variable
-        if (!decl.value.match('var\(.*?\)')) {
-          decl.remove();
-        }
-      });
+			// Check every declaration
+			rule.walkDecls((decl) => {
+				// Remove if not variable
+				if (!decl.value.match("var(.*?)")) {
+					decl.remove();
+				}
+			});
 
-      // Delete the rule if it's empty
-      if (rule.nodes.length === 0) {
-        rule.remove();
-      }
-    });
-  }
+			// Delete the rule if it's empty
+			if (rule.nodes.length === 0) {
+				rule.remove();
+			}
+		});
+	};
 });

@@ -269,7 +269,7 @@ examples:
       </div>
   - id: card-quiet-small
     name: Small (quiet)
-    description: 'A small, quiet card.'
+    description: "A small, quiet card."
     markup: |
       <div style="width: 112px; height: 136px;">
         <div class="spectrum-Card spectrum-Card--sizeS spectrum-Card--quiet" tabindex="0" role="figure">
@@ -311,7 +311,7 @@ examples:
         </div>
       </div>
   - id: card-quiet-small
-    name: 'Small (quiet, focused)'
+    name: "Small (quiet, focused)"
     markup: |
       <div role="grid">
         <div style="width: 112px; height: 136px; outline: 0;" role="row">

@@ -12,7 +12,7 @@ The preview tool for Spectrum CSS is driven by [Storybook](https://storybook.js.
 - `preview.js`
 - `preview-head.html` & `main-head.html`
 
-Storybook leverages webpack for bundling and we have updated it with the following settings (these rules are applied to *.stories.js assets as well as the template.js files):
+Storybook leverages webpack for bundling and we have updated it with the following settings (these rules are applied to \*.stories.js assets as well as the template.js files):
 
 - Packages can be loaded from local or root node_modules directories. i.e., in a story:
 
@@ -37,7 +37,7 @@ Storybook leverages webpack for bundling and we have updated it with the followi
 - Images can be loaded automatically from the `assets/images` directory at the root of the project.
 
   ```html
-  <img class="spectrum-Asset-image" src="example-ava.png">
+  <img class="spectrum-Asset-image" src="example-ava.png" />
   ```
 
 - CSS assets will be run automatically through their respective postcss configurations. This means you do not need to load dist assets into a story. It is recommended you load **local development assets** as they will be correctly compiled on the fly. i.e., in your template.js:
@@ -50,10 +50,10 @@ Storybook leverages webpack for bundling and we have updated it with the followi
 
   ```js
   try {
-    if (!express) import(/* webpackPrefetch: true */ "../themes/spectrum.css");
-    else import(/* webpackPrefetch: true */ "../themes/express.css");
+  	if (!express) import(/* webpackPrefetch: true */ "../themes/spectrum.css");
+  	else import(/* webpackPrefetch: true */ "../themes/express.css");
   } catch (e) {
-    console.warn(e);
+  	console.warn(e);
   }
   ```
 
@@ -249,66 +249,73 @@ import "../index.css";
 
 // More on component templates: https://storybook.js.org/docs/web-components/writing-stories/introduction#using-args
 export const Template = ({
-  rootClass = "spectrum-Tag",
-  size = "m",
-  iconName,
-  avatarUrl,
-  label,
-  isSelected = false,
-  isEmphasized = false,
-  isDisabled = false,
-  isInvalid = false,
-  hasClearButton = false,
-  id,
-  customClasses = [],
-  ...globals
+	rootClass = "spectrum-Tag",
+	size = "m",
+	iconName,
+	avatarUrl,
+	label,
+	isSelected = false,
+	isEmphasized = false,
+	isDisabled = false,
+	isInvalid = false,
+	hasClearButton = false,
+	id,
+	customClasses = [],
+	...globals
 }) => {
-  const { express } = globals;
+	const { express } = globals;
 
-  try {
-    if (!express) import(/* webpackPrefetch: true */ "../themes/spectrum.css");
-    else import(/* webpackPrefetch: true */ "../themes/express.css");
-  } catch (e) {
-    console.warn(e);
-  }
+	try {
+		if (!express) import(/* webpackPrefetch: true */ "../themes/spectrum.css");
+		else import(/* webpackPrefetch: true */ "../themes/express.css");
+	} catch (e) {
+		console.warn(e);
+	}
 
-  return html`
-    <div
-      class=${classMap({
-        [rootClass]: true,
-        [`${rootClass}--size${size?.toUpperCase()}`]: typeof size !== "undefined",
-        'is-emphasized': isEmphasized,
-        'is-disabled': isDisabled,
-        'is-invalid': isInvalid,
-        'is-selected': isSelected,
-        ...customClasses.reduce((a, c) => ({ ...a, [c]: true }), {}),
-      })}
-      id=${ifDefined(id)}
-      tabindex="0">
-      ${avatarUrl && !iconName ? Avatar({
-        ...globals,
-        image: avatarUrl,
-        size: '50',
-      }) : ""}
-      ${iconName ? Icon({
-        ...globals,
-        iconName,
-        customClasses: [`${rootClass}s-itemIcon`],
-      }) : ""}
-      <span class="${rootClass}s-itemLabel">${label}</span>
-      ${hasClearButton ? ClearButton({
-        ...globals,
-        customClasses: [`${rootClass}-clearButton`],
-        onclick: (evt) => {
-          const el = evt.target;
-          if (!el) return;
+	return html`
+		<div
+			class=${classMap({
+				[rootClass]: true,
+				[`${rootClass}--size${size?.toUpperCase()}`]:
+					typeof size !== "undefined",
+				"is-emphasized": isEmphasized,
+				"is-disabled": isDisabled,
+				"is-invalid": isInvalid,
+				"is-selected": isSelected,
+				...customClasses.reduce((a, c) => ({ ...a, [c]: true }), {}),
+			})}
+			id=${ifDefined(id)}
+			tabindex="0"
+		>
+			${avatarUrl && !iconName
+				? Avatar({
+						...globals,
+						image: avatarUrl,
+						size: "50",
+				  })
+				: ""} ${iconName
+				? Icon({
+						...globals,
+						iconName,
+						customClasses: [`${rootClass}s-itemIcon`],
+				  })
+				: ""}
+			<span class="${rootClass}s-itemLabel">${label}</span>
+			${hasClearButton
+				? ClearButton({
+						...globals,
+						customClasses: [`${rootClass}-clearButton`],
+						onclick: (evt) => {
+							const el = evt.target;
+							if (!el) return;
 
-          const wrapper = el.closest(rootClass);
-          wrapper.parentNode.removeChild(wrapper);
-        }
-      }) : ""}
-    </div>
-  `;
+							const wrapper = el.closest(rootClass);
+							wrapper.parentNode.removeChild(wrapper);
+						},
+				  })
+				: ""}
+		</div>
+	`;
 };
 ```
 

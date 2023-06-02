@@ -11,23 +11,23 @@ governing permissions and limitations under the License.
 */
 
 .spectrum-Dialog-heading {
-  color: var(--spectrum-dialog-confirm-title-text-color);
+	color: var(--spectrum-dialog-confirm-title-text-color);
 }
 
 .spectrum-Dialog-content {
-  color: var(--spectrum-dialog-confirm-description-text-color);
+	color: var(--spectrum-dialog-confirm-description-text-color);
 }
 
 .spectrum-Dialog-footer {
-  color: var(--spectrum-dialog-confirm-description-text-color);
+	color: var(--spectrum-dialog-confirm-description-text-color);
 }
 
 .spectrum-Dialog-typeIcon {
-  color: var(--spectrum-dialog-confirm-icon-color);
+	color: var(--spectrum-dialog-confirm-icon-color);
 }
 
 .spectrum-Dialog--error {
-  .spectrum-Dialog-typeIcon {
-    color: var(--spectrum-dialog-error-icon-color);
-  }
+	.spectrum-Dialog-typeIcon {
+		color: var(--spectrum-dialog-error-icon-color);
+	}
 }

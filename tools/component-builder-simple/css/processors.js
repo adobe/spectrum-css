@@ -11,29 +11,29 @@ governing permissions and limitations under the License.
 */
 
 function getProcessors(splitinatorOptions = {}) {
-  return [
-    require('postcss-import'),
-    require('postcss-nested'),
-    require('postcss-splitinator')({
-      processIdentifier: (identifier) => {
-        if (identifier === 'express') {
-          return 'spectrum--express';
-        }
-        return identifier;
-      },
-      ...splitinatorOptions
-    }),
-    require('postcss-inherit'),
-    require('./plugins/postcss-transform-logical')(),
-    require('./plugins/postcss-custom-properties-passthrough')(),
-    require('postcss-calc'),
-    require('postcss-dropunusedvars')({ fix: false }),
-    require('postcss-dropdupedvars'),
-    require('postcss-focus-ring'),
-    require('postcss-discard-empty'),
-    require('postcss-discard-comments')({removeAllButFirst: true}),
-    require('autoprefixer')({})
-  ].filter(Boolean);
+	return [
+		require("postcss-import"),
+		require("postcss-nested"),
+		require("postcss-splitinator")({
+			processIdentifier: (identifier) => {
+				if (identifier === "express") {
+					return "spectrum--express";
+				}
+				return identifier;
+			},
+			...splitinatorOptions,
+		}),
+		require("postcss-inherit"),
+		require("./plugins/postcss-transform-logical")(),
+		require("./plugins/postcss-custom-properties-passthrough")(),
+		require("postcss-calc"),
+		require("postcss-dropunusedvars")({ fix: false }),
+		require("postcss-dropdupedvars"),
+		require("postcss-focus-ring"),
+		require("postcss-discard-empty"),
+		require("postcss-discard-comments")({ removeAllButFirst: true }),
+		require("autoprefixer")({}),
+	].filter(Boolean);
 }
 
 exports.getProcessors = getProcessors;

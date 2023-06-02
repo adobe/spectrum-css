@@ -15,59 +15,72 @@ const path = require("path");
 const fg = require("fast-glob");
 
 async function main(dir = path.join(__dirname, "../components")) {
-    /* Loop over the directories in the components folder and find all the first-level css files */
-    for(const filepath of await fg('*/*.css', {
-        cwd: dir,
-        absolute: true,
-        /* Skip the vars and tokens files */
-        ignore: ['**/node_modules/**', '**/dist/**', '**/metadata/**', '**/*vars/*.css', '**/tokens/*.css'],
-        onlyFiles: true
-    })) {
-        /* This regex will find all the custom properties that start with --mod- */
-        /* and are defined inside a var() function */
-        const regex = /var\((--mod-(?:\w|-)+)/g;
+	/* Loop over the directories in the components folder and find all the first-level css files */
+	for (const filepath of await fg("*/*.css", {
+		cwd: dir,
+		absolute: true,
+		/* Skip the vars and tokens files */
+		ignore: [
+			"**/node_modules/**",
+			"**/dist/**",
+			"**/metadata/**",
+			"**/*vars/*.css",
+			"**/tokens/*.css",
+		],
+		onlyFiles: true,
+	})) {
+		/* This regex will find all the custom properties that start with --mod- */
+		/* and are defined inside a var() function */
+		const regex = /(--mod-(?:\w|-)+)/g;
 
-        /* Read the file and find all the matches */
-        const matches = await fsp.readFile(filepath, 'utf-8').then((content) => {
-            // assign the matches to an array through the spread operator and map the results to the first capture group
-            return [...content.matchAll(regex)].map((match) => match[1]);
-        }).catch((err) => {
-            console.log(err);
-        });
+		/* Read the file and find all the matches */
+		const matches = await fsp
+			.readFile(filepath, "utf-8")
+			.then((content) => {
+				// assign the matches to an array through the spread operator and map the results to the first capture group
+				return [...content.matchAll(regex)].map((match) => match[1]);
+			})
+			.catch((err) => {
+				console.log(err);
+			});
 
-        // If there are no matches, skip this file and continue to the next one
-        if (!matches || matches.length === 0) continue;
+		// If there are no matches, skip this file and continue to the next one
+		if (!matches || matches.length === 0) continue;
 
-        /* Remove duplicates using a Set and sort the results (default is alphabetical) */
-        const found = [...new Set(matches)].sort();
-        /* -- Markdown Output -- */
-        /* Output as a markdown table in the metadata folder for site rendering */
-        let destPath = `${path.dirname(filepath)}/metadata`;
-        // If the metadata folder doesn't exist, create it
-        if (!fs.existsSync(destPath)) fs.mkdirSync(destPath);
+		/* Remove duplicates using a Set and sort the results (default is alphabetical) */
+		const found = [...new Set(matches)].sort();
+		/* -- Markdown Output -- */
+		/* Output as a markdown table in the metadata folder for site rendering */
+		let destPath = `${path.dirname(filepath)}/metadata`;
+		// If the metadata folder doesn't exist, create it
+		if (!fs.existsSync(destPath)) fs.mkdirSync(destPath);
 
-        let formattedResults = [
-            '| Modifiable Custom Properties |\n| --- |',
-            ...found.map((result) => `| \`${result}\` |`),
-        ];
+		let formattedResults = [
+			"| Modifiable Custom Properties |\n| --- |",
+			...found.map((result) => `| \`${result}\` |`),
+		];
 
-        // Write the results to a markdown file in the metadata folder
-        await fsp.writeFile(`${destPath}/mods.md`, formattedResults.join('\n'), (err) => {
-            if (err) throw err;
-        });
+		// Write the results to a markdown file in the metadata folder
+		await fsp.writeFile(
+			`${destPath}/mods.md`,
+			formattedResults.join("\n"),
+			(err) => {
+				if (err) throw err;
+			}
+		);
 
-        /* -- JSON Output -- */
-        destPath = `${path.dirname(filepath)}/dist`;
-        // If the dist folder doesn't exist yet, create it
-        if (!fs.existsSync(destPath)) fs.mkdirSync(destPath);
+		/* -- JSON Output -- */
+		destPath = `${path.dirname(filepath)}/dist`;
+		// If the dist folder doesn't exist yet, create it
+		if (!fs.existsSync(destPath)) fs.mkdirSync(destPath);
 
-        formattedResults = JSON.stringify({ mods: found }, null, 2);
+		formattedResults = JSON.stringify({ mods: found }, null, 2);
 
-        // Write the JSON output to the dist folder
-        await fsp.writeFile(`${destPath}/mods.json`, formattedResults, (err) => {
-            if (err) throw err;
-        });
-    }
+		// Write the JSON output to the dist folder
+		await fsp.writeFile(`${destPath}/mods.json`, formattedResults, (err) => {
+			if (err) throw err;
+		});
+	}
 }
 
 main();

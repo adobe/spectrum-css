@@ -4,8 +4,8 @@ on:
   pull_request:
     types: [opened, synchronize, reopened, labeled, unlabeled]
     paths:
-      - 'components/**/*'
-      - 'tools/**/*'
+      - "components/**/*"
+      - "tools/**/*"
 
 jobs:
   vrt:
@@ -44,7 +44,7 @@ jobs:
         uses: mondeja/remove-labels-gh-action@v1
         with:
           token: ${{ secrets.GITHUB_TOKEN }}
-          labels: 'run_vrt'
+          labels: "run_vrt"
       - name: Upload logs
         uses: actions/upload-artifact@v3
         if: always()

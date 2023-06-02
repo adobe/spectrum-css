@@ -1,4 +1,5 @@
 # @spectrum-css/quickaction
+
 > The Spectrum CSS quickaction component
 
 This package is part of the [Spectrum CSS project](https://github.com/adobe/spectrum-css).

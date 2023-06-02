@@ -1,4 +1,5 @@
 # postcss-droproot
+
 > Remove :root rules
 
 ## Installation
@@ -14,11 +15,12 @@ Let's say you have `:root {}` rules you want gone. This plugin turns this:
 
 ```css
 :root {
-  --prefix-component-background-color: blue;
+	--prefix-component-background-color: blue;
 }
 ```
 
 Into this:
 
 ```
+
 ```

@@ -1,4 +1,5 @@
 # @spectrum-css/component-builder-simple
+
 > Simplified build system for Spectrum CSS components
 
 This package uses gulp to compile CSS for Spectrum CSS components.
@@ -7,8 +8,8 @@ This package uses gulp to compile CSS for Spectrum CSS components.
 
 The following tasks are available:
 
-* `gulp clean` - Clean everything
-* `gulp build` - Build everything
+- `gulp clean` - Clean everything
+- `gulp build` - Build everything
 
 ## Accessing PostCSS preprocessors
 
