@@ -14,8 +14,8 @@ sections:
       This component can be modified via its `--mod-*` prefixed custom properties. A list of those prefixed custom properties can be found <a href="https://github.com/adobe/spectrum-css/tree/main/components/colorwheel/metadata/mods.md">here</a>.
   - name: Migration Guide
     description: |
-     - Colorwheel no longer displays a canvas variant
-     - ColorWheel refactored to use a clip-path instead of an svg with a mask
+      - Colorwheel no longer displays a canvas variant
+      - ColorWheel refactored to use a clip-path instead of an svg with a mask
 examples:
   - id: color-wheel
     name: Standard

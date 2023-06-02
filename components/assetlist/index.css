@@ -11,107 +11,107 @@ governing permissions and limitations under the License.
 */
 
 .spectrum-AssetList {
-  --spectrum-millercolumn-chevron-height: 10px;
-  --spectrum-millercolumn-chevron-width: 6px;
-  --spectrum-millercolumn-checkbox-margin: 0;
+	--spectrum-millercolumn-chevron-height: 10px;
+	--spectrum-millercolumn-chevron-width: 6px;
+	--spectrum-millercolumn-checkbox-margin: 0;
 }
 
 .spectrum-AssetList {
-  margin-block-start: 0;
-  margin-block-end: 0;
-  padding: 0;
+	margin-block-start: 0;
+	margin-block-end: 0;
+	padding: 0;
 }
 
 .spectrum-AssetList-item {
-  position: relative;
+	position: relative;
 
-  display: flex;
-  box-sizing: border-box;
-  align-items: center;
+	display: flex;
+	box-sizing: border-box;
+	align-items: center;
 
-  inline-size: var(--spectrum-millercolumn-width);
-  block-size: var(--spectrum-millercolumn-item-height);
+	inline-size: var(--spectrum-millercolumn-width);
+	block-size: var(--spectrum-millercolumn-item-height);
 
-  padding-block: 0;
-  padding-inline: var(--spectrum-millercolumn-item-padding-left)
-    var(--spectrum-millercolumn-item-padding-right);
-  margin-block: 0 var(--spectrum-millercolumn-item-margin-bottom);
-  margin-inline: 0;
+	padding-block: 0;
+	padding-inline: var(--spectrum-millercolumn-item-padding-left)
+		var(--spectrum-millercolumn-item-padding-right);
+	margin-block: 0 var(--spectrum-millercolumn-item-margin-bottom);
+	margin-inline: 0;
 
-  border-radius: var(--spectrum-millercolumn-item-border-radius);
+	border-radius: var(--spectrum-millercolumn-item-border-radius);
 
-  transition: background-color var(--spectrum-global-animation-duration-100)
-    ease-in-out;
+	transition: background-color var(--spectrum-global-animation-duration-100)
+		ease-in-out;
 
-  /* todo: replace with proper DNA variables */
-  font-size: var(--spectrum-listitem-m-texticon-text-size);
-  font-weight: var(--spectrum-listitem-m-texticon-text-font-weight);
-  font-style: normal;
+	/* todo: replace with proper DNA variables */
+	font-size: var(--spectrum-listitem-m-texticon-text-size);
+	font-weight: var(--spectrum-listitem-m-texticon-text-font-weight);
+	font-style: normal;
 
-  cursor: pointer;
+	cursor: pointer;
 
-  outline: none;
+	outline: none;
 
-  &::before {
-    content: "";
+	&::before {
+		content: "";
 
-    position: absolute;
-    inset-inline-start: 0;
-    inset-inline-end: 0;
+		position: absolute;
+		inset-inline-start: 0;
+		inset-inline-end: 0;
 
-    block-size: var(--spectrum-millercolumn-item-height);
+		block-size: var(--spectrum-millercolumn-item-height);
 
-    background-color: transparent;
+		background-color: transparent;
 
-    border-radius: var(--spectrum-millercolumn-item-border-radius);
-  }
+		border-radius: var(--spectrum-millercolumn-item-border-radius);
+	}
 
-  &.is-selectable,
-  &.is-selected,
-  &:hover,
-  &:focus {
-    /* checkbox on the left, shows up always */
-    .spectrum-Checkbox {
-      display: inline-flex;
-    }
-  }
+	&.is-selectable,
+	&.is-selected,
+	&:hover,
+	&:focus {
+		/* checkbox on the left, shows up always */
+		.spectrum-Checkbox {
+			display: inline-flex;
+		}
+	}
 
-  &.is-branch {
-    /* show chevron */
-    .spectrum-AssetList-itemChildIndicator {
-      display: block;
-    }
-  }
+	&.is-branch {
+		/* show chevron */
+		.spectrum-AssetList-itemChildIndicator {
+			display: block;
+		}
+	}
 
-  .spectrum-AssetList-itemThumbnail {
-    /* Remove the border on images inside links in IE 10-. */
-    border-style: none;
+	.spectrum-AssetList-itemThumbnail {
+		/* Remove the border on images inside links in IE 10-. */
+		border-style: none;
 
-    inline-size: var(--spectrum-millercolumn-thumbnail-width);
-    block-size: var(--spectrum-millercolumn-thumbnail-height);
-    margin-inline-start: var(--spectrum-millercolumn-thumbnail-margin-left);
-    vertical-align: middle;
-  }
+		inline-size: var(--spectrum-millercolumn-thumbnail-width);
+		block-size: var(--spectrum-millercolumn-thumbnail-height);
+		margin-inline-start: var(--spectrum-millercolumn-thumbnail-margin-left);
+		vertical-align: middle;
+	}
 }
 
 .spectrum-AssetList-itemSelector {
-  display: none;
-  /* hack: this needs to be specified as margin-right to override Checkbox's margin for LTR */
-  margin-inline-end: var(--spectrum-millercolumn-checkbox-margin);
+	display: none;
+	/* hack: this needs to be specified as margin-right to override Checkbox's margin for LTR */
+	margin-inline-end: var(--spectrum-millercolumn-checkbox-margin);
 }
 
 .spectrum-AssetList-itemChildIndicator {
-  display: none;
-  transition: transform ease var(--spectrum-global-animation-duration-100);
+	display: none;
+	transition: transform ease var(--spectrum-global-animation-duration-100);
 
-  transform: logical rotate(0deg);
+	transform: logical rotate(0deg);
 }
 
 .spectrum-AssetList-itemLabel {
-  flex: 1;
-  padding-inline-start: var(--spectrum-millercolumn-item-label-padding-left);
+	flex: 1;
+	padding-inline-start: var(--spectrum-millercolumn-item-label-padding-left);
 
-  text-overflow: ellipsis;
-  overflow: hidden;
-  white-space: nowrap;
+	text-overflow: ellipsis;
+	overflow: hidden;
+	white-space: nowrap;
 }

@@ -70,14 +70,14 @@ examples:
   - id: pickerbutton-quiet
     name: Quiet
     markup: |
-     <button class="spectrum-PickerButton spectrum-PickerButton--quiet spectrum-PickerButton--sizeM spectrum-PickerButton--textuiicon spectrum-PickerButton--right" aria-haspopup="listbox">
-        <div class="spectrum-PickerButton-fill">
-          <span class="spectrum-PickerButton-label is-placeholder">All</span>
-          <svg class="spectrum-PickerButton-UIIcon spectrum-Icon spectrum-UIIcon-ChevronDown200" focusable="false" aria-hidden="true">
-            <use xlink:href="#spectrum-css-icon-Chevron200" />
-          </svg>
-        </div>
-      </button>
+      <button class="spectrum-PickerButton spectrum-PickerButton--quiet spectrum-PickerButton--sizeM spectrum-PickerButton--textuiicon spectrum-PickerButton--right" aria-haspopup="listbox">
+         <div class="spectrum-PickerButton-fill">
+           <span class="spectrum-PickerButton-label is-placeholder">All</span>
+           <svg class="spectrum-PickerButton-UIIcon spectrum-Icon spectrum-UIIcon-ChevronDown200" focusable="false" aria-hidden="true">
+             <use xlink:href="#spectrum-css-icon-Chevron200" />
+           </svg>
+         </div>
+       </button>
 
   - id: pickerbutton-texticon
     name: Text icon

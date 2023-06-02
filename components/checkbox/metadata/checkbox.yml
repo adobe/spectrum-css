@@ -12,13 +12,13 @@ sections:
       This component can be modified via its `--mod-*` prefixed custom properties. A list of those prefixed custom properties can be found <a href="https://github.com/adobe/spectrum-css/tree/main/components/checkbox/metadata/mods.md">here</a>.
   - name: Migration Guide
     description: |
-        ### Quiet and emphasized
-        Spectrum has chosen the variant previously known as `quiet` to be the default and has added an `emphasized` variant with the same styles as the previous default.
-        If you were using the `quiet` variant, the `.spectrum-Checkbox--quiet` class is no longer required and can be removed.
-        If you need a switch to look like it did before this change, add `.spectrum-Checkbox--emphasized`.
-        ### T-shirt sizing
-        Checkbox now supports t-shirt sizing and requires that you specify the size by adding a `.spectrum-Checkbox--size*` class.
-        Using the classes `.spectrum-Checkbox .spectrum-Checkbox--sizeM` will get result in the previous default checkbox size.
+      ### Quiet and emphasized
+      Spectrum has chosen the variant previously known as `quiet` to be the default and has added an `emphasized` variant with the same styles as the previous default.
+      If you were using the `quiet` variant, the `.spectrum-Checkbox--quiet` class is no longer required and can be removed.
+      If you need a switch to look like it did before this change, add `.spectrum-Checkbox--emphasized`.
+      ### T-shirt sizing
+      Checkbox now supports t-shirt sizing and requires that you specify the size by adding a `.spectrum-Checkbox--size*` class.
+      Using the classes `.spectrum-Checkbox .spectrum-Checkbox--sizeM` will get result in the previous default checkbox size.
 examples:
   - id: checkbox-default
     name: Standard

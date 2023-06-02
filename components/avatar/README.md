@@ -1,4 +1,5 @@
 # @spectrum-css/avatar
+
 > The Spectrum CSS avatar component
 
 This package is part of the [Spectrum CSS project](https://github.com/adobe/spectrum-css).

@@ -9,92 +9,107 @@ the License is distributed on an "AS IS" BASIS, WITHOUT WARRANTIES OR REPRESENTA
 OF ANY KIND, either express or implied. See the License for the specific language
 governing permissions and limitations under the License.
 */
-const gulp = require('gulp');
-const fsp = require('fs').promises;
-const path = require('path');
-const pug = require('pug');
-const data = require('gulp-data');
-const rename = require('gulp-rename');
-const yaml = require('js-yaml');
-const through = require('through2');
-const ext = require('replace-ext');
+const gulp = require("gulp");
+const fsp = require("fs").promises;
+const path = require("path");
+const pug = require("pug");
+const data = require("gulp-data");
+const rename = require("gulp-rename");
+const yaml = require("js-yaml");
+const through = require("through2");
+const ext = require("replace-ext");
 
-const sitePath = path.join(__dirname, '../../../site');
+const sitePath = path.join(__dirname, "../../../site");
 const util = require(`${sitePath}/util`);
 
 async function readJSONFile(filepath) {
-  return JSON.parse(await fsp.readFile(filepath));
+	return JSON.parse(await fsp.readFile(filepath));
 }
 
-async function getDependencies(packagePath = '') {
-  let package = await readJSONFile(path.join(packagePath, 'package.json'));
+async function getDependencies(packagePath = "") {
+	let package = await readJSONFile(path.join(packagePath, "package.json"));
 
-  let dependencies = [];
+	let dependencies = [];
 
-  if (package.devDependencies) {
-    dependencies = Object.keys(package.devDependencies);
+	if (package.devDependencies) {
+		dependencies = Object.keys(package.devDependencies);
 
-    dependencies = dependencies
-      .filter((dep) => {
-        return (
-          dep.indexOf('@spectrum-css') === 0 &&
-          dep !== '@spectrum-css/bundle-builder' &&
-          dep !== '@spectrum-css/component-builder' &&
-          dep !== '@spectrum-css/component-builder-simple'
-        );
-      })
-      .map((dep) => dep.split('/').pop());
-  }
+		dependencies = dependencies
+			.filter((dep) => {
+				return (
+					dep.indexOf("@spectrum-css") === 0 &&
+					dep !== "@spectrum-css/bundle-builder" &&
+					dep !== "@spectrum-css/component-builder" &&
+					dep !== "@spectrum-css/component-builder-simple"
+				);
+			})
+			.map((dep) => dep.split("/").pop());
+	}
 
-  return dependencies;
+	return dependencies;
 }
 
 function buildDocs_html() {
-  return new Promise(async (resolve, reject) => {
-    let dependencies;
-    let package;
-    try {
-      package = await readJSONFile('package.json');
-      dependencies = await getDependencies();
-    }
-    catch(err) {
-      return reject(err);
-    }
+	return new Promise(async (resolve, reject) => {
+		let dependencies;
+		let package;
+		try {
+			package = await readJSONFile("package.json");
+			dependencies = await getDependencies();
+		} catch (err) {
+			return reject(err);
+		}
 
-    let packageName = package.name.split('/').pop();
+		let packageName = package.name.split("/").pop();
 
-    let dnaVars = readJSONFile(path.join(path.dirname(require.resolve('@spectrum-css/vars')), '..', 'dist', 'spectrum-metadata.json'));
+		let dnaVars = readJSONFile(
+			path.join(
+				path.dirname(require.resolve("@spectrum-css/vars")),
+				"..",
+				"dist",
+				"spectrum-metadata.json"
+			)
+		);
 
-    gulp.src([
-        'metadata.yml',
-        'metadata/*.yml'
-      ], { allowEmpty: true })
-      .pipe(rename((file) => { file.basename = packageName; }))
-      .pipe(data(() => ({
-        dependencies: dependencies,
-        dnaVars: dnaVars,
-        pkg: package,
-        util: util
-      })))
-      .pipe(through.obj(function compilePug(file, enc, cb) {
-          let data = Object.assign({}, { component: yaml.load(String(file.contents)) }, file.data || {});
+		gulp
+			.src(["metadata.yml", "metadata/*.yml"], { allowEmpty: true })
+			.pipe(
+				rename((file) => {
+					file.basename = packageName;
+				})
+			)
+			.pipe(
+				data(() => ({
+					dependencies: dependencies,
+					dnaVars: dnaVars,
+					pkg: package,
+					util: util,
+				}))
+			)
+			.pipe(
+				through.obj(function compilePug(file, enc, cb) {
+					let data = Object.assign(
+						{},
+						{ component: yaml.load(String(file.contents)) },
+						file.data || {}
+					);
 
-          file.path = ext(file.path, '.html');
+					file.path = ext(file.path, ".html");
 
-          try {
-            const templatePath = `${sitePath}/templates/individualComponent.pug`;
-            let compiled = pug.renderFile(templatePath, data);
-            file.contents = Buffer.from(compiled);
-          } catch (e) {
-            return cb(e);
-          }
-          cb(null, file);
-        })
-      )
-      .pipe(gulp.dest(path.join(__dirname, '../../../dist/')))
-      .on('end', resolve)
-      .on('error', reject);
-  });
+					try {
+						const templatePath = `${sitePath}/templates/individualComponent.pug`;
+						let compiled = pug.renderFile(templatePath, data);
+						file.contents = Buffer.from(compiled);
+					} catch (e) {
+						return cb(e);
+					}
+					cb(null, file);
+				})
+			)
+			.pipe(gulp.dest(path.join(__dirname, "../../../dist/")))
+			.on("end", resolve)
+			.on("error", reject);
+	});
 }
 
 exports.buildDocs = buildDocs_html;

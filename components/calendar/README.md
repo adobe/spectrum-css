@@ -1,4 +1,5 @@
 # @spectrum-css/calendar
+
 > The Spectrum CSS calendar component
 
 This package is part of the [Spectrum CSS project](https://github.com/adobe/spectrum-css).

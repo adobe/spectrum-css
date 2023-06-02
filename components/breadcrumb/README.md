@@ -1,4 +1,5 @@
 # @spectrum-css/breadcrumb
+
 > The Spectrum CSS breadcrumb component
 
 This package is part of the [Spectrum CSS project](https://github.com/adobe/spectrum-css).

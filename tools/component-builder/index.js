@@ -10,38 +10,23 @@ OF ANY KIND, either express or implied. See the License for the specific languag
 governing permissions and limitations under the License.
 */
 
-const gulp = require('gulp');
-const del = require('del');
+const gulp = require("gulp");
+const del = require("del");
 
-const css = require('./css');
-const docs = require('./docs');
+const css = require("./css");
+const docs = require("./docs");
 
 function clean() {
-  return del('dist/*');
+	return del("dist/*");
 }
 
-const build = gulp.series(
-  clean,
-  gulp.parallel(
-    css.buildVars,
-    docs.buildDocs
-  )
-);
+const build = gulp.series(clean, gulp.parallel(css.buildVars, docs.buildDocs));
 
-const buildLite = gulp.series(
-  clean,
-  css.buildIndexVars
-);
+const buildLite = gulp.series(clean, css.buildIndexVars);
 
-const buildMedium = gulp.series(
-  clean,
-  css.buildVars
-);
+const buildMedium = gulp.series(clean, css.buildVars);
 
-const buildHeavy = gulp.series(
-  clean,
-  css.buildCSS
-);
+const buildHeavy = gulp.series(clean, css.buildCSS);
 
 exports.default = build;
 exports.build = build;

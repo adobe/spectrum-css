@@ -1,20 +1,18 @@
 {
-  "npmScope": "@spectrum-css",
-  "tasksRunnerOptions": {
-    "default": {
-      "runner": "nx/tasks-runners/default",
-      "options": {
-        "cacheableOperations": ["build"]
-      }
-    }
-  },
-  "targetDefaults": {
-    "build": {
-      "dependsOn": ["clean", "^build"],
-      "inputs": [
-        "{workspaceRoot}/*.css"
-      ]
-    }
-  },
-  "includedScripts": ["build"]
+	"npmScope": "@spectrum-css",
+	"tasksRunnerOptions": {
+		"default": {
+			"runner": "nx/tasks-runners/default",
+			"options": {
+				"cacheableOperations": ["build"]
+			}
+		}
+	},
+	"targetDefaults": {
+		"build": {
+			"dependsOn": ["clean", "^build"],
+			"inputs": ["{workspaceRoot}/*.css"]
+		}
+	},
+	"includedScripts": ["build"]
 }

@@ -10,46 +10,41 @@ OF ANY KIND, either express or implied. See the License for the specific languag
 governing permissions and limitations under the License.
 */
 
-const gulp = require('gulp');
-const postcss = require('gulp-postcss');
-const concat = require('gulp-concat');
-const processors = require('./processors').processors;
-const rename = require('gulp-rename');
+const gulp = require("gulp");
+const postcss = require("gulp-postcss");
+const concat = require("gulp-concat");
+const processors = require("./processors").processors;
+const rename = require("gulp-rename");
 
-const vars = require('./vars');
+const vars = require("./vars");
 
 // Read in all variables used
 // Read in all vars from recent DNA
 // Include definitions if they refer to a variable, static if not
 
 function buildIndexVars() {
-  return gulp.src([
-    'index.css',
-    'skin.css'
-  ], {
-    allowEmpty: true // Allow missing skin.css
-  })
-    .pipe(concat('index-vars.css'))
-    .pipe(postcss(processors))
-    .pipe(gulp.dest('dist/'));
+	return gulp
+		.src(["index.css", "skin.css"], {
+			allowEmpty: true, // Allow missing skin.css
+		})
+		.pipe(concat("index-vars.css"))
+		.pipe(postcss(processors))
+		.pipe(gulp.dest("dist/"));
 }
 
-let buildVars = gulp.series(
-  buildIndexVars,
-  vars.bakeVars
-);
+let buildVars = gulp.series(buildIndexVars, vars.bakeVars);
 
 exports.buildIndexVars = buildIndexVars;
 exports.buildVars = buildVars;
 
-exports.buildCSS = gulp.series(
-  buildVars,
-  function copyIndex() {
-    // Just copy index.vars as index.css to maintain backwards compat
-    return gulp.src('dist/index-vars.css')
-      .pipe(rename((file) => {
-        file.basename = 'index';
-      }))
-      .pipe(gulp.dest('dist/'))
-  }
-);
+exports.buildCSS = gulp.series(buildVars, function copyIndex() {
+	// Just copy index.vars as index.css to maintain backwards compat
+	return gulp
+		.src("dist/index-vars.css")
+		.pipe(
+			rename((file) => {
+				file.basename = "index";
+			})
+		)
+		.pipe(gulp.dest("dist/"));
+});

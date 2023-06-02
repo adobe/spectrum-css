@@ -1,8 +1,8 @@
-import { html } from 'lit-html';
-import { classMap } from 'lit-html/directives/class-map.js';
+import { html } from "lit-html";
+import { classMap } from "lit-html/directives/class-map.js";
 
-import { Template as ClearButton } from '@spectrum-css/clearbutton/stories/template.js';
-import { Template as TextField } from '@spectrum-css/textfield/stories/template.js';
+import { Template as ClearButton } from "@spectrum-css/clearbutton/stories/template.js";
+import { Template as TextField } from "@spectrum-css/textfield/stories/template.js";
 
 import '../index.css';
 

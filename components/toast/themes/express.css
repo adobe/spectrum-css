@@ -10,7 +10,9 @@ governing permissions and limitations under the License.
 */
 
 @container (--system: express) {
-  .spectrum-Toast {
-    --spectrum-toast-background-color-default: var(--spectrum-neutral-background-color-default);
-  }
+	.spectrum-Toast {
+		--spectrum-toast-background-color-default: var(
+			--spectrum-neutral-background-color-default
+		);
+	}
 }

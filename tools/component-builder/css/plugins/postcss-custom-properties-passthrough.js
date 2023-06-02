@@ -9,21 +9,24 @@ the License is distributed on an "AS IS" BASIS, WITHOUT WARRANTIES OR REPRESENTA
 OF ANY KIND, either express or implied. See the License for the specific language
 governing permissions and limitations under the License.
 */
-var postcss = require('postcss');
+var postcss = require("postcss");
 
-module.exports = postcss.plugin('postcss-custom-properties-passthrough', function (opts) {
-  opts = opts || {};
+module.exports = postcss.plugin(
+	"postcss-custom-properties-passthrough",
+	function (opts) {
+		opts = opts || {};
 
-  return function (root, result) {
-    root.walkRules((rule, ruleIndex) => {
-      rule.walkDecls((decl) => {
-        if (decl.value.match('xvar\(.*?\)')) {
-          decl.value = decl.value.substr(1);
-        }
-        if (decl.prop.substr(0,3) === 'x--') {
-          decl.prop = decl.prop.substr(1);
-        }
-      });
-    });
-  }
-});
+		return function (root, result) {
+			root.walkRules((rule, ruleIndex) => {
+				rule.walkDecls((decl) => {
+					if (decl.value.match("xvar(.*?)")) {
+						decl.value = decl.value.substr(1);
+					}
+					if (decl.prop.substr(0, 3) === "x--") {
+						decl.prop = decl.prop.substr(1);
+					}
+				});
+			});
+		};
+	}
+);

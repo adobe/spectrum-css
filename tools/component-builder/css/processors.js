@@ -33,30 +33,37 @@ governing permissions and limitations under the License.
  * @param {boolean} [secondNotNested=true]  catch stray
  * @param {boolean} [diff=false]  perform a diff
  */
-function getProcessors(keepVars = false, notNested = true, secondNotNested = true, diff = false) {
-  return [
-    require('postcss-import'),
-    require('postcss-remapvars'),
-    require('postcss-nested'),
-    require('postcss-inherit'),
-    diff ? require('./plugins/postcss-varsonly')() : null,
-    require('postcss-logical')(),
-    require('./plugins/postcss-transform-logical')(),
-    require('postcss-dir-pseudo-class')(),
-    require('./plugins/postcss-custom-properties-passthrough')(),
-    require('postcss-calc'),
-    keepVars ? require('./plugins/postcss-custom-properties-mapping') : null,
-    notNested ? require('./plugins/postcss-notnested')({ replace: '.spectrum' }) : null,
-    require('postcss-svg'),
-    require('postcss-dropunusedvars'),
-    require('postcss-dropdupedvars'),
-    require('postcss-droproot'),
-    require('postcss-focus-ring'),
-    secondNotNested ? require('./plugins/postcss-notnested')() : null, // Second one to catch all stray &
-    require('postcss-discard-empty'),
-    require('postcss-discard-comments')({removeAllButFirst: true}),
-    require('autoprefixer')({}),
-  ].filter(Boolean);
+function getProcessors(
+	keepVars = false,
+	notNested = true,
+	secondNotNested = true,
+	diff = false
+) {
+	return [
+		require("postcss-import"),
+		require("postcss-remapvars"),
+		require("postcss-nested"),
+		require("postcss-inherit"),
+		diff ? require("./plugins/postcss-varsonly")() : null,
+		require("postcss-logical")(),
+		require("./plugins/postcss-transform-logical")(),
+		require("postcss-dir-pseudo-class")(),
+		require("./plugins/postcss-custom-properties-passthrough")(),
+		require("postcss-calc"),
+		keepVars ? require("./plugins/postcss-custom-properties-mapping") : null,
+		notNested
+			? require("./plugins/postcss-notnested")({ replace: ".spectrum" })
+			: null,
+		require("postcss-svg"),
+		require("postcss-dropunusedvars"),
+		require("postcss-dropdupedvars"),
+		require("postcss-droproot"),
+		require("postcss-focus-ring"),
+		secondNotNested ? require("./plugins/postcss-notnested")() : null, // Second one to catch all stray &
+		require("postcss-discard-empty"),
+		require("postcss-discard-comments")({ removeAllButFirst: true }),
+		require("autoprefixer")({}),
+	].filter(Boolean);
 }
 
 exports.getProcessors = getProcessors;
