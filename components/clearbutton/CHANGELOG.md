@@ -3,6 +3,13 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+<a name="1.2.33"></a>
+##1.2.33
+🗓
+2023-06-02 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/clearbutton@1.2.32...@spectrum-css/clearbutton@1.2.33)
+
+**Note:** Version bump only for package @spectrum-css/clearbutton
+
 <a name="1.2.32"></a>
 ##1.2.32
 🗓
