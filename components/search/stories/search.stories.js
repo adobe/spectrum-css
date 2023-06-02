@@ -3,9 +3,19 @@ import { Template } from "./template.js";
 export default {
 	title: "Search",
 	description:
-		'The search component delivers a single input field with a "reset" button and mangifying glass icon which serves up a search UI.',
+		'This component contains a single input field with both a magnifying glass icon and a "reset" button displayed within it.',
 	component: "Search",
 	argTypes: {
+		size: {
+			name: "Size",
+			type: { name: "string", required: true },
+			table: {
+				type: { summary: "string" },
+				category: "Component",
+			},
+			options: ["s", "m", "l", "xl"],
+			control: "select",
+		},
 		isQuiet: {
 			name: "Quiet styling",
 			type: { name: "boolean" },
