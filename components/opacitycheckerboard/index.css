@@ -17,6 +17,7 @@ permissions and limitations under the License. */
 	--spectrum-opacity-checkerboard-size: var(
 		--spectrum-opacity-checkerboard-square-size
 	);
+	--spectrum-opacity-checkerboard-position: left top;
 }
 
 .spectrum-OpacityCheckerboard {
@@ -26,7 +27,10 @@ permissions and limitations under the License. */
 			var(--spectrum-opacity-checkerboard-light) 0% 25%,
 			var(--spectrum-opacity-checkerboard-dark) 0% 50%
 		)
-		left top / calc(var(--spectrum-opacity-checkerboard-size) * 2)
+		var(
+			--mod-opacity-checkerboard-position,
+			var(--spectrum-opacity-checkerboard-position)
+		) / calc(var(--spectrum-opacity-checkerboard-size) * 2)
 		calc(var(--spectrum-opacity-checkerboard-size) * 2);
 }
 
