@@ -14,7 +14,7 @@ sections:
       This component can be modified via its `--mod-*` prefixed custom properties. A list of those prefixed custom properties can be found <a href="https://github.com/adobe/spectrum-css/tree/main/components/colorslider/metadata/mods.md">here</a>.
   - name: Migration Guide
     description: |
-     - Color Slider examples no longer display a "canvas" variant.
+      - Color Slider examples no longer display a "canvas" variant.
 examples:
   - id: color-slider
     name: Standard

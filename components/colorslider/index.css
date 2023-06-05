@@ -1,43 +1,65 @@
 .spectrum-ColorSlider {
-  /* Size and Spacing */
-  --spectrum-color-slider-label-to-track-spacing: var(--spectrum-component-top-to-text-75);
-  --spectrum-color-slider-handle-margin-block: var(--spectrum-component-top-to-text-75);
+	/* Size and Spacing */
+	--spectrum-color-slider-label-to-track-spacing: var(
+		--spectrum-component-top-to-text-75
+	);
+	--spectrum-color-slider-handle-margin-block: var(
+		--spectrum-component-top-to-text-75
+	);
 
-  /* @todo Refactor with --spectrum-color-slider-border-color once gray rgb token is no longer necessary to workaround nested rgb color token value using rgba(). */
-  --spectrum-color-slider-border-color-rgba: rgba(--spectrum-gray-900-rgb, var(--spectrum-color-slider-border-opacity));
-  
-  /* Settings for nested Color Handle */
-  --spectrum-color-slider-handle-hitarea-border-radius: 0%;
-  --spectrum-color-slider-handle-hitarea-width: var(
-    --spectrum-global-dimension-size-300
-  );
-  --spectrum-color-slider-handle-hitarea-height: var(
-    --spectrum-global-dimension-size-300
-  );
+	/* @todo Refactor with --spectrum-color-slider-border-color once gray rgb token is no longer necessary to workaround nested rgb color token value using rgba(). */
+	--spectrum-color-slider-border-color-rgba: rgba(
+		var(--spectrum-gray-900-rgb),
+		var(--spectrum-color-slider-border-opacity)
+	);
 
-  /* Checkerboard pattern */
-  --spectrum-color-slider-checkerboard-size: var(--spectrum-opacity-checkerboard-square-size);
-  --spectrum-color-slider-checkerboard-dark-color: var(--spectrum-opacity-checkerboard-square-dark);
-  --spectrum-color-slider-checkerboard-light-color: var(--spectrum-opacity-checkerboard-square-light);
+	/* Settings for nested Color Handle */
+	--spectrum-color-slider-handle-hitarea-border-radius: 0%;
+	--spectrum-color-slider-handle-hitarea-width: var(
+		--spectrum-global-dimension-size-300
+	);
+	--spectrum-color-slider-handle-hitarea-height: var(
+		--spectrum-global-dimension-size-300
+	);
+
+	/* Checkerboard pattern */
+	--spectrum-color-slider-checkerboard-size: var(
+		--spectrum-opacity-checkerboard-square-size
+	);
+	--spectrum-color-slider-checkerboard-dark-color: var(
+		--spectrum-opacity-checkerboard-square-dark
+	);
+	--spectrum-color-slider-checkerboard-light-color: var(
+		--spectrum-opacity-checkerboard-square-light
+	);
 }
 
 @media (forced-colors: active) {
-  .spectrum-ColorSlider {
-    --highcontrast-color-slider-border-color: GrayText;
-    --highcontrast-disabled-background-color: Canvas;
-  }
-  .spectrum-ColorSlider {
-    forced-color-adjust: none;
-  }
+	.spectrum-ColorSlider {
+		--highcontrast-color-slider-border-color: GrayText;
+		--highcontrast-disabled-background-color: Canvas;
+	}
+	.spectrum-ColorSlider {
+		forced-color-adjust: none;
+	}
 }
 
 .spectrum-ColorSlider {
-  position: relative;
-  display: block;
+	position: relative;
+	display: block;
 
-  min-inline-size: var(--mod-color-slider-minimum-length, var(--spectrum-color-slider-minimum-length));
-  inline-size: var(--mod-color-slider-length, var(--spectrum-color-slider-length));
-  block-size: var(--mod-color-slider-control-track-width, var(--spectrum-color-control-track-width));
+	min-inline-size: var(
+		--mod-color-slider-minimum-length,
+		var(--spectrum-color-slider-minimum-length)
+	);
+	inline-size: var(
+		--mod-color-slider-length,
+		var(--spectrum-color-slider-length)
+	);
+	block-size: var(
+		--mod-color-slider-control-track-width,
+		var(--spectrum-color-control-track-width)
+	);
 
 	/* Otherwise we randomly drag a file icon */
 	user-select: none;
@@ -48,84 +70,162 @@
 		z-index: 2;
 	}
 
-  &.is-disabled {
-    pointer-events: none;
+	&.is-disabled {
+		pointer-events: none;
 
-    .spectrum-ColorSlider-gradient {
-      display: none
-    }
-  }
+		.spectrum-ColorSlider-gradient {
+			display: none;
+		}
+	}
 }
 
 .spectrum-ColorSlider--vertical {
 	display: inline-block;
 
-  min-block-size: var(--mod-color-slider-vertical-minimum-height, var(--mod-color-slider-minimum-length, var(--spectrum-color-slider-minimum-length)));
-  block-size: var(--mod-color-slider-vertical-height, var(--mod-color-slider-length, var(--spectrum-color-slider-length)));
-  min-inline-size: 0;
-  inline-size: var(--mod-color-slider-vertical-control-track-width, var(--mod-color-slider-control-track-height, var(--spectrum-color-control-track-width)));
+	min-block-size: var(
+		--mod-color-slider-vertical-minimum-height,
+		var(
+			--mod-color-slider-minimum-length,
+			var(--spectrum-color-slider-minimum-length)
+		)
+	);
+	block-size: var(
+		--mod-color-slider-vertical-height,
+		var(--mod-color-slider-length, var(--spectrum-color-slider-length))
+	);
+	min-inline-size: 0;
+	inline-size: var(
+		--mod-color-slider-vertical-control-track-width,
+		var(
+			--mod-color-slider-control-track-height,
+			var(--spectrum-color-control-track-width)
+		)
+	);
 
 	.spectrum-ColorSlider-handle {
-		left: 50%;
-		top: 0;
+		inset-inline-start: 50%;
+		inset-block-start: 0;
 	}
 }
 
 .spectrum-ColorSlider-handle {
-	left: 0;
-	top: 50%;
+	inset-inline-start: 0;
+	inset-block-start: 50%;
 
-  &::after {
-    border-radius: var(--mod-color-slider-handle-hitarea-border-radius, var(--spectrum-color-slider-handle-hitarea-border-radius));
-    inline-size: var(--mod-color-slider-handle-hitarea-width, var(--spectrum-color-slider-handle-hitarea-width));
-    block-size: var(--mod-color-slider-handle-hitarea-height, var(--spectrum-color-slider-handle-hitarea-height));
-  }
+	&::after {
+		border-radius: var(
+			--mod-color-slider-handle-hitarea-border-radius,
+			var(--spectrum-color-slider-handle-hitarea-border-radius)
+		);
+		inline-size: var(
+			--mod-color-slider-handle-hitarea-width,
+			var(--spectrum-color-slider-handle-hitarea-width)
+		);
+		block-size: var(
+			--mod-color-slider-handle-hitarea-height,
+			var(--spectrum-color-slider-handle-hitarea-height)
+		);
+	}
 }
 
 .spectrum-ColorSlider-checkerboard {
-  background:
-    repeating-conic-gradient(var(--mod-color-slider-checkerboard-light-color, var(--spectrum-color-slider-checkerboard-light-color)) 0% 25%, var(--mod-color-slider-checkerboard-dark-color, var(--spectrum-color-slider-checkerboard-dark-color)) 0% 50%)
-    left top / calc(var(--mod-color-slider-checkerboard-size, var(--spectrum-color-slider-checkerboard-size)) * 2 ) calc(var(--mod-spectrum-color-slider-checkerboard-size, var(--spectrum-color-slider-checkerboard-size)) * 2 );
+	background: repeating-conic-gradient(
+			var(
+					--mod-color-slider-checkerboard-light-color,
+					var(--spectrum-color-slider-checkerboard-light-color)
+				)
+				0% 25%,
+			var(
+					--mod-color-slider-checkerboard-dark-color,
+					var(--spectrum-color-slider-checkerboard-dark-color)
+				)
+				0% 50%
+		)
+		left top /
+		calc(
+			var(
+					--mod-color-slider-checkerboard-size,
+					var(--spectrum-color-slider-checkerboard-size)
+				) * 2
+		)
+		calc(
+			var(
+					--mod-spectrum-color-slider-checkerboard-size,
+					var(--spectrum-color-slider-checkerboard-size)
+				) * 2
+		);
 
-  /* The floating inset box shadow (border) must be a separate element since <canvas> won't take it. */
-  &::before {
-    content: "";
-    z-index: 1;
-    position: absolute;
-    inset: 0;
-    box-shadow: 0 0 0 var(--mod-color-slider-border-width, var(--spectrum-color-slider-border-width)) var(--highcontrast-color-slider-border-color, var(--mod-color-slider-border-color, var(--spectrum-color-slider-border-color-rgba)));
-    border-radius: var(--mod-color-slider-border-rounding, var(--spectrum-color-slider-border-rounding));
-  }
+	/* The floating inset box shadow (border) must be a separate element since <canvas> won't take it. */
+	&::before {
+		content: "";
+		z-index: 1;
+		position: absolute;
+		inset: 0;
+		box-shadow: 0 0 0
+			var(
+				--mod-color-slider-border-width,
+				var(--spectrum-color-slider-border-width)
+			)
+			var(
+				--highcontrast-color-slider-border-color,
+				var(
+					--mod-color-slider-border-color,
+					var(--spectrum-color-slider-border-color-rgba)
+				)
+			);
+		border-radius: var(
+			--mod-color-slider-border-rounding,
+			var(--spectrum-color-slider-border-rounding)
+		);
+	}
 
-  .spectrum-ColorSlider.is-disabled & {
-    background: var(--highcontrast-disabled-background-color, var(--mod-disabled-background-color, var(--spectrum-disabled-background-color)));
+	.spectrum-ColorSlider.is-disabled & {
+		background: var(
+			--highcontrast-disabled-background-color,
+			var(
+				--mod-disabled-background-color,
+				var(--spectrum-disabled-background-color)
+			)
+		);
 
-    &::before {
-      border-color: var(--highcontrast-disabled-background-color, var(--mod-disabled-background-color, var(--spectrum-disabled-background-color)));
-    }
-  }
+		&::before {
+			border-color: var(
+				--highcontrast-disabled-background-color,
+				var(
+					--mod-disabled-background-color,
+					var(--spectrum-disabled-background-color)
+				)
+			);
+		}
+	}
 }
 
 .spectrum-ColorSlider-gradient,
 .spectrum-ColorSlider-checkerboard {
-  inline-size: 100%;
-  block-size: 100%;
-  border-radius: var(--mod-color-slider-border-rounding, var(--spectrum-color-slider-border-rounding));
+	inline-size: 100%;
+	block-size: 100%;
+	border-radius: var(
+		--mod-color-slider-border-rounding,
+		var(--spectrum-color-slider-border-rounding)
+	);
 }
 
 /* Visually hidden "range" input field */
 .spectrum-ColorSlider-slider {
-  opacity: 0;
-  position: absolute;
-  inset-block-start: 0;
-  inset-inline-start: 0;
-  width: 100%;
-  height: 100%;
-  z-index: 0;
-  margin: 0;
-  pointer-events: none;
+	opacity: 0;
+	position: absolute;
+	inset-block-start: 0;
+	inset-inline-start: 0;
+	inline-size: 100%;
+	block-size: 100%;
+	z-index: 0;
+	margin: 0;
+	pointer-events: none;
 }
 
 .spectrum-FieldLabel + .spectrum-ColorSlider {
-  margin-block-start: var(--mod-color-slider-label-to-track-spacing, var(--spectrum-color-slider-label-to-track-spacing));
+	margin-block-start: var(
+		--mod-color-slider-label-to-track-spacing,
+		var(--spectrum-color-slider-label-to-track-spacing)
+	);
 }
