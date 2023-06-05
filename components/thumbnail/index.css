@@ -13,10 +13,13 @@ governing permissions and limitations under the License.
 .spectrum-Thumbnail {
   --spectrum-thumbnail-size: var(--spectrum-thumbnail-size-500);
 
-  --spectrum-thumbnail-border-radius: var(--spectrum-corner-radius-75);
-  --spectrum-thumbnail-border-width: var(--spectrum-border-width-100);
-  /* @todo Refactor with --spectrum-thumbnail-border-color once gray rgb token is no longer necessary to workaround nested rgb color token value using rgba(). */
-  --spectrum-thumbnail-border-color-rgba: rgba(var(--spectrum-gray-800-rgb), var(--spectrum-thumbnail-border-color-opacity));
+	--spectrum-thumbnail-border-radius: var(--spectrum-corner-radius-75);
+	--spectrum-thumbnail-border-width: var(--spectrum-border-width-100);
+	/* @todo Refactor with --spectrum-thumbnail-border-color once gray rgb token is no longer necessary to workaround nested rgb color token value using rgba(). */
+	--spectrum-thumbnail-border-color-rgba: rgba(
+		var(--spectrum-gray-800-rgb),
+		var(--spectrum-thumbnail-border-opacity)
+	);
 
   --spectrum-thumbnail-layer-border-width-inner: var(--spectrum-border-width-400);
   --spectrum-thumbnail-layer-border-color-inner: var(--spectrum-white);
@@ -113,26 +116,87 @@ governing permissions and limitations under the License.
     opacity: var(--mod-thumbnail-color-opacity-disabled, var(--spectrum-thumbnail-color-opacity-disabled));
   }
 
-  &.is-focused,
-  &:focus-ring {
-    overflow: visible;
-    &::after {
-      content: "";
-      border-style: solid;
-      border-width: var(--mod-thumbnail-focus-indicator-thickness, var(--spectrum-thumbnail-focus-indicator-thickness));
-      border-color: var(--highcontrast-thumbnail-focus-indicator-color, var(--mod-thumbnail-focus-indicator-color, var(--spectrum-thumbnail-focus-indicator-color)));
-      border-radius: var(--mod-thumbnail-border-radius, var(--spectrum-thumbnail-border-radius));
-      position: absolute;
-      inset-inline-start: calc((var(--mod-thumbnail-focus-indicator-gap, var(--spectrum-thumbnail-focus-indicator-gap)) + var(--mod-thumbnail-focus-indicator-thickness, var(--spectrum-thumbnail-focus-indicator-thickness))) * -1);
-      inset-inline-end:  calc((var(--mod-thumbnail-focus-indicator-gap, var(--spectrum-thumbnail-focus-indicator-gap)) + var(--mod-thumbnail-focus-indicator-thickness, var(--spectrum-thumbnail-focus-indicator-thickness))) * -1);
-      inset-block-end:  calc((var(--mod-thumbnail-focus-indicator-gap, var(--spectrum-thumbnail-focus-indicator-gap)) + var(--mod-thumbnail-focus-indicator-thickness, var(--spectrum-thumbnail-focus-indicator-thickness))) * -1);
-      inset-block-start:  calc((var(--mod-thumbnail-focus-indicator-gap, var(--spectrum-thumbnail-focus-indicator-gap)) + var(--mod-thumbnail-focus-indicator-thickness, var(--spectrum-thumbnail-focus-indicator-thickness))) * -1);
-    }
-    .spectrum-Thumbnail-image-wrapper {
-      overflow: hidden;
-      border-radius: var(--mod-thumbnail-border-radius, var(--spectrum-thumbnail-border-radius));
-    }
-  }
+	/* stylelint-disable selector-pseudo-class-no-unknown */
+	&.is-focused,
+	&:focus-ring {
+		overflow: visible;
+		&::after {
+			content: "";
+			border-style: solid;
+			border-width: var(
+				--mod-thumbnail-focus-indicator-thickness,
+				var(--spectrum-thumbnail-focus-indicator-thickness)
+			);
+			border-color: var(
+				--highcontrast-thumbnail-focus-indicator-color,
+				var(
+					--mod-thumbnail-focus-indicator-color,
+					var(--spectrum-thumbnail-focus-indicator-color)
+				)
+			);
+			border-radius: var(
+				--mod-thumbnail-border-radius,
+				var(--spectrum-thumbnail-border-radius)
+			);
+			position: absolute;
+			inset-inline-start: calc(
+				(
+						var(
+								--mod-thumbnail-focus-indicator-gap,
+								var(--spectrum-thumbnail-focus-indicator-gap)
+							) +
+							var(
+								--mod-thumbnail-focus-indicator-thickness,
+								var(--spectrum-thumbnail-focus-indicator-thickness)
+							)
+					) * -1
+			);
+			inset-inline-end: calc(
+				(
+						var(
+								--mod-thumbnail-focus-indicator-gap,
+								var(--spectrum-thumbnail-focus-indicator-gap)
+							) +
+							var(
+								--mod-thumbnail-focus-indicator-thickness,
+								var(--spectrum-thumbnail-focus-indicator-thickness)
+							)
+					) * -1
+			);
+			inset-block-end: calc(
+				(
+						var(
+								--mod-thumbnail-focus-indicator-gap,
+								var(--spectrum-thumbnail-focus-indicator-gap)
+							) +
+							var(
+								--mod-thumbnail-focus-indicator-thickness,
+								var(--spectrum-thumbnail-focus-indicator-thickness)
+							)
+					) * -1
+			);
+			inset-block-start: calc(
+				(
+						var(
+								--mod-thumbnail-focus-indicator-gap,
+								var(--spectrum-thumbnail-focus-indicator-gap)
+							) +
+							var(
+								--mod-thumbnail-focus-indicator-thickness,
+								var(--spectrum-thumbnail-focus-indicator-thickness)
+							)
+					) * -1
+			);
+		}
+		.spectrum-Thumbnail-image-wrapper {
+			overflow: hidden;
+			border-radius: var(
+				--mod-thumbnail-border-radius,
+				var(--spectrum-thumbnail-border-radius)
+			);
+		}
+	}
+	/* stylelint-enable selector-pseudo-class-no-unknown */
 
   /* Friends should align to the top of the tabs */
   vertical-align: top;
@@ -152,12 +216,32 @@ governing permissions and limitations under the License.
     content: none;
   }
 
-  &.is-selected {
-    outline-style: solid;
-    outline-color: var(--highcontrast-thumbnail-border-color-selected, var(--mod-thumbnail-border-color-selected, var(--spectrum-thumbnail-border-color-selected)));
-    outline-width: var(--mod-thumbnail-border-width-selected, var(--spectrum-thumbnail-border-width-selected));
-    outline-offset: calc(var(--mod-thumbnail-border-width-selected, var(--spectrum-thumbnail-border-width-selected)) - var(--mod-thumbnail-layer-border-width-inner, var(--spectrum-thumbnail-layer-border-width-inner)))
-  }
+	/* stylelint-disable declaration-block-no-redundant-longhand-properties */
+	&.is-selected {
+		outline-style: solid;
+		outline-color: var(
+			--highcontrast-thumbnail-border-color-selected,
+			var(
+				--mod-thumbnail-border-color-selected,
+				var(--spectrum-thumbnail-border-color-selected)
+			)
+		);
+		outline-width: var(
+			--mod-thumbnail-border-width-selected,
+			var(--spectrum-thumbnail-border-width-selected)
+		);
+		outline-offset: calc(
+			var(
+					--mod-thumbnail-border-width-selected,
+					var(--spectrum-thumbnail-border-width-selected)
+				) -
+				var(
+					--mod-thumbnail-layer-border-width-inner,
+					var(--spectrum-thumbnail-layer-border-width-inner)
+				)
+		);
+	}
+	/* stylelint-enable declaration-block-no-redundant-longhand-properties */
 }
 
 .spectrum-Thumbnail-layer-inner {
@@ -165,12 +249,45 @@ governing permissions and limitations under the License.
   align-items: center;
   justify-content: center;
 
-  inline-size: calc(var(--spectrum-thumbnail-size) - ((var(--mod-thumbnail-layer-border-width-inner, var(--spectrum-thumbnail-layer-border-width-inner)))) * 2);
-  block-size: calc(var(--spectrum-thumbnail-size) - ((var(--mod-thumbnail-layer-border-width-inner, var(--spectrum-thumbnail-layer-border-width-inner)))) * 2);
-
-  outline-style: solid;
-  outline-color: var(--mod-thumbnail-layer-border-color-inner, var(--spectrum-thumbnail-layer-border-color-inner));
-  outline-width: calc(var(--mod-thumbnail-layer-border-width-inner, var(--spectrum-thumbnail-layer-border-width-inner)) - var(--mod-thumbnail-layer-border-width-outer, var(--spectrum-thumbnail-layer-border-width-outer)));
+	inline-size: calc(
+		var(--spectrum-thumbnail-size) -
+			(
+				(
+					var(
+						--mod-thumbnail-layer-border-width-inner,
+						var(--spectrum-thumbnail-layer-border-width-inner)
+					)
+				)
+			) * 2
+	);
+	block-size: calc(
+		var(--spectrum-thumbnail-size) -
+			(
+				(
+					var(
+						--mod-thumbnail-layer-border-width-inner,
+						var(--spectrum-thumbnail-layer-border-width-inner)
+					)
+				)
+			) * 2
+	);
+	/* stylelint-disable declaration-block-no-redundant-longhand-properties */
+	outline-style: solid;
+	outline-color: var(
+		--mod-thumbnail-layer-border-color-inner,
+		var(--spectrum-thumbnail-layer-border-color-inner)
+	);
+	outline-width: calc(
+		var(
+				--mod-thumbnail-layer-border-width-inner,
+				var(--spectrum-thumbnail-layer-border-width-inner)
+			) -
+			var(
+				--mod-thumbnail-layer-border-width-outer,
+				var(--spectrum-thumbnail-layer-border-width-outer)
+			)
+	);
+	/* stylelint-enable declaration-block-no-redundant-longhand-properties */
 }
 
 .spectrum-Thumbnail-image-wrapper {
@@ -212,15 +329,17 @@ governing permissions and limitations under the License.
 }
 
 /* Windows High Contrast Mode */
+/* stylelint-disable declaration-property-value-no-unknown */
 @media (forced-colors: active) {
   .spectrum-Thumbnail {
     /* Allow checkerboard pattern to be visible. */
     forced-color-adjust: none;
 
-    --highcontrast-thumbnail-border-color-selected: SelectedItem;
-    --highcontrast-thumbnail-focus-indicator-color: Highlight;
-    --highcontrast-thumbnail-border-color: CanvasText;
-    background-color: Canvas;
-    color: CanvasText;
-  }
+		--highcontrast-thumbnail-border-color-selected: SelectedItem;
+		--highcontrast-thumbnail-focus-indicator-color: Highlight;
+		--highcontrast-thumbnail-border-color: CanvasText;
+		background-color: Canvas;
+		color: CanvasText;
+	}
 }
+/* stylelint-enable declaration-property-value-no-unknown */
