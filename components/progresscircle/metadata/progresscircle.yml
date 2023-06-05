@@ -7,8 +7,8 @@ sections:
       This component can be modified via its `--mod-*` prefixed custom properties. A list of those prefixed custom properties can be found <a href="https://github.com/adobe/spectrum-css/tree/main/components/progresscircle/metadata/mods.md">here</a>.
   - name: Migration Guide
     description: |
-        ### Component renamed
-        Circle loader is now known as Progress circle. Replace all `.spectrum-CircleLoader*` classnames with `.spectrum-ProgressCircle*`.
+      ### Component renamed
+      Circle loader is now known as Progress circle. Replace all `.spectrum-CircleLoader*` classnames with `.spectrum-ProgressCircle*`.
 examples:
   - id: progresscircle-sizes
     name: Standard
@@ -73,7 +73,6 @@ examples:
         </div>
       </div>
 
-
   - id: progresscircle-indeterminate
     name: Indeterminate
     markup: |
@@ -125,7 +124,6 @@ examples:
           </div>
         </div>
       </div>
-
 
   - id: progresscircle-static-white
     name: Static White

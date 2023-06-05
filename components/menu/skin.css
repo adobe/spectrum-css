@@ -11,101 +11,108 @@ governing permissions and limitations under the License.
 */
 
 .spectrum-Menu {
-  /* these need to be removed but we don't have a full design spec */
-  --spectrum-listheading-text-color: var(--spectrum-global-color-gray-700);
-  --spectrum-listitem-m-texticon-divider-color: var(--spectrum-global-color-gray-300);
+	/* these need to be removed but we don't have a full design spec */
+	--spectrum-listheading-text-color: var(--spectrum-global-color-gray-700);
+	--spectrum-listitem-m-texticon-divider-color: var(
+		--spectrum-global-color-gray-300
+	);
 }
 
 .spectrum-Menu {
-  background-color: var(--spectrum-listitem-m-texticon-background-color);
+	background-color: var(--spectrum-listitem-m-texticon-background-color);
 }
 
 .spectrum-Menu-item {
-  background-color: var(--spectrum-listitem-m-texticon-background-color);
-  color: var(--spectrum-listitem-m-texticon-text-color);
+	background-color: var(--spectrum-listitem-m-texticon-background-color);
+	color: var(--spectrum-listitem-m-texticon-text-color);
 
-  &:focus-ring,
-  &.is-focused {
-    background-color: var(
-      --spectrum-listitem-m-texticon-background-color-key-focus
-    );
-    color: var(--spectrum-listitem-m-texticon-text-color-key-focus);
-    border-inline-start-color: var(
-      --spectrum-listitem-m-texticon-focus-indicator-color
-    );
-  }
+	&:focus-ring,
+	&.is-focused {
+		background-color: var(
+			--spectrum-listitem-m-texticon-background-color-key-focus
+		);
+		color: var(--spectrum-listitem-m-texticon-text-color-key-focus);
+		border-inline-start-color: var(
+			--spectrum-listitem-m-texticon-focus-indicator-color
+		);
+	}
 
-  &:hover,
-  &:focus,
-  &.is-highlighted,
-  &.is-open {
-    background-color: var(--spectrum-listitem-m-texticon-background-color-hover);
-    color: var(--spectrum-listitem-m-texticon-text-color-hover);
-  }
+	&:hover,
+	&:focus,
+	&.is-highlighted,
+	&.is-open {
+		background-color: var(
+			--spectrum-listitem-m-texticon-background-color-hover
+		);
+		color: var(--spectrum-listitem-m-texticon-text-color-hover);
+	}
 
-  &.is-selected {
-    color: var(--spectrum-listitem-m-texticon-text-color-selected);
+	&.is-selected {
+		color: var(--spectrum-listitem-m-texticon-text-color-selected);
 
-    .spectrum-Menu-checkmark {
-      color: var(--spectrum-listitem-m-texticon-ui-icon-color-selected);
-    }
-  }
+		.spectrum-Menu-checkmark {
+			color: var(--spectrum-listitem-m-texticon-ui-icon-color-selected);
+		}
+	}
 
-  .is-active,
-  &:active {
-    background-color: var(--spectrum-listitem-m-texticon-background-color-down);
-  }
+	.is-active,
+	&:active {
+		background-color: var(--spectrum-listitem-m-texticon-background-color-down);
+	}
 
-  &.is-disabled {
-    background-color: var(--spectrum-listitem-m-texticon-background-color-disabled);
-    background-image: none;
-    color: var(--spectrum-listitem-m-texticon-text-color-disabled);
-    cursor: default;
-  }
+	&.is-disabled {
+		background-color: var(
+			--spectrum-listitem-m-texticon-background-color-disabled
+		);
+		background-image: none;
+		color: var(--spectrum-listitem-m-texticon-text-color-disabled);
+		cursor: default;
+	}
 }
 
 .spectrum-Menu-sectionHeading {
-  color: var(--spectrum-listheading-text-color);
+	color: var(--spectrum-listheading-text-color);
 }
 
 @media (forced-colors: active) {
-  .spectrum-Menu-divider {
-    background-color: CanvasText;
-    forced-color-adjust: none;
-  }
-  .spectrum-Menu-item {
-    forced-color-adjust: none;
+	.spectrum-Menu-divider {
+		background-color: CanvasText;
+		forced-color-adjust: none;
+	}
+	.spectrum-Menu-item {
+		forced-color-adjust: none;
 
-    --spectrum-listheading-text-color: ButtonText;
-    --spectrum-listitem-m-texticon-background-color: ButtonFace;
-    --spectrum-listitem-m-texticon-background-color-disabled: ButtonFace;
-    --spectrum-listitem-m-texticon-background-color-down: ButtonFace;
-    --spectrum-listitem-m-texticon-background-color-hover: Highlight;
-    --spectrum-listitem-m-texticon-background-color-key-focus: Highlight;
-    --spectrum-listitem-m-texticon-divider-color: ButtonText;
-    --spectrum-listitem-m-texticon-focus-indicator-color: Highlight;
-    --spectrum-listitem-m-texticon-text-color: ButtonText;
-    --spectrum-listitem-m-texticon-text-color-disabled: GrayText;
-    --spectrum-listitem-m-texticon-text-color-hover: HighlightText;
-    --spectrum-listitem-m-texticon-text-color-key-focus: HighlightText;
-    --spectrum-listitem-m-texticon-text-color-selected: ButtonText;
-    --spectrum-listitem-m-texticon-ui-icon-color-selected: Highlight;
-    &:not(.is-disabled)
-    {
-      &:hover,
-      &:focus,
-      &.is-highlighted,
-      &.is-open,
-      &:focus-ring,
-      &.is-focused {
-        &.is-selected {
-          .spectrum-Menu-checkmark {
-            color: HighlightText;
-          }
-        }
-        background-color: var(--spectrum-listitem-m-texticon-background-color-key-focus);
-        color: var(--spectrum-listitem-m-texticon-text-color-key-focus);
-      }
-    }
-  }
+		--spectrum-listheading-text-color: ButtonText;
+		--spectrum-listitem-m-texticon-background-color: ButtonFace;
+		--spectrum-listitem-m-texticon-background-color-disabled: ButtonFace;
+		--spectrum-listitem-m-texticon-background-color-down: ButtonFace;
+		--spectrum-listitem-m-texticon-background-color-hover: Highlight;
+		--spectrum-listitem-m-texticon-background-color-key-focus: Highlight;
+		--spectrum-listitem-m-texticon-divider-color: ButtonText;
+		--spectrum-listitem-m-texticon-focus-indicator-color: Highlight;
+		--spectrum-listitem-m-texticon-text-color: ButtonText;
+		--spectrum-listitem-m-texticon-text-color-disabled: GrayText;
+		--spectrum-listitem-m-texticon-text-color-hover: HighlightText;
+		--spectrum-listitem-m-texticon-text-color-key-focus: HighlightText;
+		--spectrum-listitem-m-texticon-text-color-selected: ButtonText;
+		--spectrum-listitem-m-texticon-ui-icon-color-selected: Highlight;
+		&:not(.is-disabled) {
+			&:hover,
+			&:focus,
+			&.is-highlighted,
+			&.is-open,
+			&:focus-ring,
+			&.is-focused {
+				&.is-selected {
+					.spectrum-Menu-checkmark {
+						color: HighlightText;
+					}
+				}
+				background-color: var(
+					--spectrum-listitem-m-texticon-background-color-key-focus
+				);
+				color: var(--spectrum-listitem-m-texticon-text-color-key-focus);
+			}
+		}
+	}
 }

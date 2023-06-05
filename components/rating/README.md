@@ -1,4 +1,5 @@
 # @spectrum-css/rating
+
 > The Spectrum CSS rating component
 
 This package is part of the [Spectrum CSS project](https://github.com/adobe/spectrum-css).

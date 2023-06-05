@@ -1,4 +1,5 @@
 # @spectrum-css/statuslight
+
 > The Spectrum CSS statuslight component
 
 This package is part of the [Spectrum CSS project](https://github.com/adobe/spectrum-css).

@@ -14,31 +14,28 @@ sections:
       Divider supports t-shirt sizes of small, medium and large. Divider requires that you specify the size by adding a `.spectrum-Divider--size*` class. No specified size class results in a medium size divider.
 examples:
   - id: divider-large
-    name: 'Large'
+    name: "Large"
     markup: |
       <h2 class="spectrum-Heading spectrum-Heading--sizeM">Large</h2>
       <hr class="spectrum-Divider spectrum-Divider--sizeL">
       <p class="spectrum-Body">Page or Section Titles.</p>
 
-
   - id: divider-medium
-    name: 'Medium'
+    name: "Medium"
     markup: |
       <h2 class="spectrum-Heading spectrum-Heading--sizeS">Medium</h2>
       <hr class="spectrum-Divider spectrum-Divider--sizeM">
       <p class="spectrum-Body">Divide subsections, or divide different groups of elements (between panels, rails, etc.)</p>
 
-
   - id: divider-small
-    name: 'Small'
+    name: "Small"
     markup: |
       <h2 class="spectrum-Heading spectrum-Heading--sizeXS">Small</h2>
       <hr class="spectrum-Divider spectrum-Divider--sizeS">
       <p class="spectrum-Body">Divide like-elements (tables, tool groups, elements within a panel, etc.)</p>
 
-
   - id: divider-vertical-small
-    name: 'Vertical'
+    name: "Vertical"
     description: |
       When a vertical Divider is used inside of a flex container, use `align-self: stretch; height: auto` on the Divider.
     markup: |
@@ -96,7 +93,6 @@ examples:
 
         </div>
 
-
   - id: divider-static-white
     name: Static White
     markup: |
@@ -112,7 +108,6 @@ examples:
           <hr class="spectrum-Divider spectrum-Divider--sizeL spectrum-Divider--staticWhite">
         </div>
       </div>
-
 
   - id: divider-static-black
     name: Static Black

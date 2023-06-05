@@ -1,4 +1,4 @@
-| Modifiable Custom Properties |
-| --- |
+| Modifiable Custom Properties           |
+| -------------------------------------- |
 | `--mod-buttongroup-spacing-horizontal` |
-| `--mod-buttongroup-spacing-vertical` |
+| `--mod-buttongroup-spacing-vertical`   |

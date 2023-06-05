@@ -167,7 +167,7 @@ examples:
       </form>
   - id: form-labels-above
     name: Form (labels above)
-    description: 'For labels above, the layout changes completely, so you must apply `.spectrum-Form--labelsAbove` to the Form itself. You do not need to apply a specific class to the FieldLabel.'
+    description: "For labels above, the layout changes completely, so you must apply `.spectrum-Form--labelsAbove` to the Form itself. You do not need to apply a specific class to the FieldLabel."
     markup: |
       <form class="spectrum-Form spectrum-Form--labelsAbove">
         <div class="spectrum-Form-item">

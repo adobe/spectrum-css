@@ -3,7 +3,7 @@ name: Build and deploy preview
 on:
   push:
     branches:
-      - 'main'
+      - "main"
   pull_request:
 
 jobs:
@@ -24,8 +24,8 @@ jobs:
       - name: Deploy to Netlify
         uses: nwtgck/actions-netlify@v2
         with:
-          publish-dir: 'dist'
-          production-branch: 'main'
+          publish-dir: "dist"
+          production-branch: "main"
           production-deploy: false
           netlify-config-path: ./netlify.toml
           github-token: ${{ secrets.GITHUB_TOKEN }}

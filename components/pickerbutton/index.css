@@ -16,51 +16,52 @@ governing permissions and limitations under the License.
 @import "./pickerbutton-generated.css";
 
 .spectrum-PickerButton {
-  @inherit: %spectrum-BaseButton;
+	@inherit: %spectrum-BaseButton;
 
-  border-style: none;
-  background-color: transparent;
+	border-style: none;
+	background-color: transparent;
 
-  display: flex;
-  justify-content: center;
-  align-items: center;
+	display: flex;
+	justify-content: center;
+	align-items: center;
 
-  --spectrum-infieldbutton-border-color-override: initial;
+	--spectrum-infieldbutton-border-color-override: initial;
 }
 
 .spectrum-PickerButton-label {
-  /* Be the biggest, but also shrink! */
-  flex: 1 1 auto;
+	/* Be the biggest, but also shrink! */
+	flex: 1 1 auto;
 
-  white-space: nowrap;
-  overflow: hidden;
+	white-space: nowrap;
+	overflow: hidden;
 }
 
 .spectrum-PickerButton-fill {
-  box-sizing: border-box;
-  border-color: var(--spectrum-infieldbutton-border-color-override);
+	box-sizing: border-box;
+	border-color: var(--spectrum-infieldbutton-border-color-override);
 
-  /* center icon */
-  display: flex;
-  align-items: center;
-  justify-content: center;
+	/* center icon */
+	display: flex;
+	align-items: center;
+	justify-content: center;
 
-  transition: border-color var(--spectrum-global-animation-duration-100) ease-in-out;
+	transition: border-color var(--spectrum-global-animation-duration-100)
+		ease-in-out;
 }
 
 .spectrum-PickerButton--uiicononly {
-  .spectrum-PickerButton-fill {
-    /* let icons position correctly */
-    padding: 0 !important;
-  }
+	.spectrum-PickerButton-fill {
+		/* let icons position correctly */
+		padding: 0 !important;
+	}
 }
 
 .spectrum-PickerButton-UIIcon {
-  /* remove margin used for centering */
-  margin: 0 !important;
+	/* remove margin used for centering */
+	margin: 0 !important;
 }
 
 .spectrum-PickerButton-icon {
-  /* don't be small, ever */
-  flex-shrink: 0;
+	/* don't be small, ever */
+	flex-shrink: 0;
 }

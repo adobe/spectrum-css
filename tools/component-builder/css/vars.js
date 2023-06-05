@@ -10,67 +10,81 @@ OF ANY KIND, either express or implied. See the License for the specific languag
 governing permissions and limitations under the License.
 */
 
-const gulp = require('gulp');
-const through = require('through2');
-const logger = require('gulplog');
-const colors = require('colors');
-const fsp = require('fs').promises;
-const path = require('path');
+const gulp = require("gulp");
+const through = require("through2");
+const logger = require("gulplog");
+const colors = require("colors");
+const fsp = require("fs").promises;
+const path = require("path");
 
-const varUtils = require('./lib/varUtils');
+const varUtils = require("./lib/varUtils");
 
 function bakeVars() {
-  return gulp.src([
-    'dist/index-vars.css'
-  ], {
-    allowEmpty: true,
-  })
-  .pipe(through.obj(async function doBake(file, enc, cb) {
-    let pkg = JSON.parse(await fsp.readFile(path.join('package.json')));
-    let pkgName = pkg.name.split('/').pop();
-    let classNames = varUtils.getClassNames(file.contents, pkgName);
+	return gulp
+		.src(["dist/index-vars.css"], {
+			allowEmpty: true,
+		})
+		.pipe(
+			through.obj(async function doBake(file, enc, cb) {
+				let pkg = JSON.parse(await fsp.readFile(path.join("package.json")));
+				let pkgName = pkg.name.split("/").pop();
+				let classNames = varUtils.getClassNames(file.contents, pkgName);
 
-    // Find all custom properties used in the component
-    let variableList = varUtils.getVarsFromCSS(file.contents);
+				// Find all custom properties used in the component
+				let variableList = varUtils.getVarsFromCSS(file.contents);
 
-    // Get vars defined inside of the component
-    let componentVars = varUtils.getVarsDefinedInCSS(file.contents);
+				// Get vars defined inside of the component
+				let componentVars = varUtils.getVarsDefinedInCSS(file.contents);
 
-    // Get vars in ALL components
-    let vars = await varUtils.getAllComponentVars();
+				// Get vars in ALL components
+				let vars = await varUtils.getAllComponentVars();
 
-    // Get literally all of the possible vars (even overridden vars that are different between themes/scales)
-    let allVars = await varUtils.getAllVars();
+				// Get literally all of the possible vars (even overridden vars that are different between themes/scales)
+				let allVars = await varUtils.getAllVars();
 
-    // For each color stop and scale, filter the variables for those matching the component
-    let errors = [];
-    let usedVars = {};
-    variableList.forEach(varName => {
-      varName = `${varName}`.cyan;
-      if (varName.indexOf('spectrum-global') !== -1) {
-        logger.warn(`${'◆'.red}  ${pkg.name} directly uses global variable ${varName}`);
-      } else if (!allVars[varName] && !varName.startsWith('--mod') && !varName.startsWith('--highcontrast')) {
-        if (componentVars.indexOf(varName) === -1) {
-          logger.warn(`${'◆'.yellow}  ${pkg.name} uses ${'undefined'.underline} variable ${varName}`);
-        }
-        else {
-          logger.warn(`${'◆'.yellow}  ${pkg.name} uses ${'internally'.italic} defined variable ${varName}`);
-        }
-      } else usedVars[varName] = vars[varName];
-    });
+				// For each color stop and scale, filter the variables for those matching the component
+				let errors = [];
+				let usedVars = {};
+				variableList.forEach((varName) => {
+					varName = `${varName}`.cyan;
+					if (varName.indexOf("spectrum-global") !== -1) {
+						logger.warn(
+							`${"◆".red}  ${pkg.name} directly uses global variable ${varName}`
+						);
+					} else if (
+						!allVars[varName] &&
+						!varName.startsWith("--mod") &&
+						!varName.startsWith("--highcontrast")
+					) {
+						if (componentVars.indexOf(varName) === -1) {
+							logger.warn(
+								`${"◆".yellow}  ${pkg.name} uses ${
+									"undefined".underline
+								} variable ${varName}`
+							);
+						} else {
+							logger.warn(
+								`${"◆".yellow}  ${pkg.name} uses ${
+									"internally".italic
+								} defined variable ${varName}`
+							);
+						}
+					} else usedVars[varName] = vars[varName];
+				});
 
-    if (errors.length) {
-      return cb(new Error(errors.join('\n')), file);
-    }
+				if (errors.length) {
+					return cb(new Error(errors.join("\n")), file);
+				}
 
-    let contents = varUtils.getVariableDeclarations(classNames, usedVars);
-    let newFile = file.clone({contents: false});
-    newFile.path = path.join(file.base, `vars.css`);
-    newFile.contents = Buffer.from(contents);
+				let contents = varUtils.getVariableDeclarations(classNames, usedVars);
+				let newFile = file.clone({ contents: false });
+				newFile.path = path.join(file.base, `vars.css`);
+				newFile.contents = Buffer.from(contents);
 
-    cb(null, newFile);
-  }))
-  .pipe(gulp.dest('dist/'));
+				cb(null, newFile);
+			})
+		)
+		.pipe(gulp.dest("dist/"));
 }
 
 exports.bakeVars = bakeVars;

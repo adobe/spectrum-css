@@ -39,14 +39,14 @@
   inline-size: var(--mod-color-slider-length, var(--spectrum-color-slider-length));
   block-size: var(--mod-color-slider-control-track-width, var(--spectrum-color-control-track-width));
 
-  /* Otherwise we randomly drag a file icon */
-  user-select: none;
+	/* Otherwise we randomly drag a file icon */
+	user-select: none;
 
-  cursor: default;
+	cursor: default;
 
-  &.is-focused {
-    z-index: 2;
-  }
+	&.is-focused {
+		z-index: 2;
+	}
 
   &.is-disabled {
     pointer-events: none;
@@ -58,22 +58,22 @@
 }
 
 .spectrum-ColorSlider--vertical {
-  display: inline-block;
+	display: inline-block;
 
   min-block-size: var(--mod-color-slider-vertical-minimum-height, var(--mod-color-slider-minimum-length, var(--spectrum-color-slider-minimum-length)));
   block-size: var(--mod-color-slider-vertical-height, var(--mod-color-slider-length, var(--spectrum-color-slider-length)));
   min-inline-size: 0;
   inline-size: var(--mod-color-slider-vertical-control-track-width, var(--mod-color-slider-control-track-height, var(--spectrum-color-control-track-width)));
 
-  .spectrum-ColorSlider-handle {
-    left: 50%;
-    top: 0;
-  }
+	.spectrum-ColorSlider-handle {
+		left: 50%;
+		top: 0;
+	}
 }
 
 .spectrum-ColorSlider-handle {
-  left: 0;
-  top: 50%;
+	left: 0;
+	top: 50%;
 
   &::after {
     border-radius: var(--mod-color-slider-handle-hitarea-border-radius, var(--spectrum-color-slider-handle-hitarea-border-radius));

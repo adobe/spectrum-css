@@ -114,21 +114,21 @@ examples:
   - id: progressbar-indeterminate-m
     name: Indeterminate
     markup: |
-        <div class="spectrum-ProgressBar spectrum-ProgressBar--sizeM spectrum-ProgressBar--indeterminate">
-          <div class="spectrum-ProgressBar-track">
-            <div class="spectrum-ProgressBar-fill"></div>
-          </div>
-          <div class="spectrum-FieldLabel spectrum-FieldLabel--sizeM spectrum-ProgressBar-label" hidden=""></div>
+      <div class="spectrum-ProgressBar spectrum-ProgressBar--sizeM spectrum-ProgressBar--indeterminate">
+        <div class="spectrum-ProgressBar-track">
+          <div class="spectrum-ProgressBar-fill"></div>
         </div>
+        <div class="spectrum-FieldLabel spectrum-FieldLabel--sizeM spectrum-ProgressBar-label" hidden=""></div>
+      </div>
   - id: progressbar-indeterminate-m
     name: Indeterminate (with label)
     markup: |
-        <div class="spectrum-ProgressBar spectrum-ProgressBar--sizeM spectrum-ProgressBar--indeterminate">
-          <div class="spectrum-FieldLabel spectrum-FieldLabel--sizeM spectrum-ProgressBar-label">Loading</div>
-          <div class="spectrum-ProgressBar-track">
-            <div class="spectrum-ProgressBar-fill"></div>
-          </div>
+      <div class="spectrum-ProgressBar spectrum-ProgressBar--sizeM spectrum-ProgressBar--indeterminate">
+        <div class="spectrum-FieldLabel spectrum-FieldLabel--sizeM spectrum-ProgressBar-label">Loading</div>
+        <div class="spectrum-ProgressBar-track">
+          <div class="spectrum-ProgressBar-fill"></div>
         </div>
+      </div>
   - id: progressbar-m
     name: Custom width
     markup: |
@@ -149,4 +149,3 @@ examples:
           <div class="spectrum-ProgressBar-fill" style="width: 50%;"></div>
         </div>
       </div>
-

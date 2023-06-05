@@ -1,4 +1,5 @@
 # @spectrum-css/tooltip
+
 > The Spectrum CSS tooltip component
 
 This package is part of the [Spectrum CSS project](https://github.com/adobe/spectrum-css).

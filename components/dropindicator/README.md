@@ -1,4 +1,5 @@
 # @spectrum-css/dropindicator
+
 > The Spectrum CSS dropindicator component
 
 This package is part of the [Spectrum CSS project](https://github.com/adobe/spectrum-css).
