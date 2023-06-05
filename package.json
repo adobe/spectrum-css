@@ -40,7 +40,6 @@
     "docs:mod": "node tasks/mod-extractor.js",
     "postdocs:mod": "prettier --cache --write components/*/metadata/*.md > /dev/null",
     "lint:components": "node ./tasks/packageLint.js",
-    "lint:styles": "stylelint",
     "mv:preview": "rimraf dist/preview && mv tools/preview/storybook-static dist/preview",
     "new": "nx run @spectrum-css/generator:new",
     "precommit": "lint-staged",
@@ -103,9 +102,6 @@
   "lint-staged": {
     "*.{md,js,css,yml,hbs}": [
       "prettier --write --cache"
-    ],
-    "components/*/*.css": [
-      "stylelint --write"
     ],
     "components/*/package.json": [
       "yarn lint:components",
