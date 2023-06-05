@@ -36,10 +36,9 @@
 
 @media (forced-colors: active) {
 	.spectrum-ColorSlider {
-		--highcontrast-color-slider-border-color: GrayText;
-		--highcontrast-disabled-background-color: Canvas;
-	}
-	.spectrum-ColorSlider {
+		--highcontrast-color-slider-border-color: CanvasText;
+		--highcontrast-color-slider-border-color-disabled: GrayText;
+		--highcontrast-color-slider-background-color-disabled: Canvas;
 		forced-color-adjust: none;
 	}
 }
@@ -155,6 +154,14 @@
 				) * 2
 		);
 
+	--spectrum-color-slider-border-color-local: var(
+		--highcontrast-color-slider-border-color,
+		var(
+			--mod-color-slider-border-color,
+			var(--spectrum-color-slider-border-color-rgba)
+		)
+	);
+
 	/* The floating inset box shadow (border) must be a separate element since <canvas> won't take it. */
 	&::before {
 		content: "";
@@ -166,13 +173,7 @@
 				--mod-color-slider-border-width,
 				var(--spectrum-color-slider-border-width)
 			)
-			var(
-				--highcontrast-color-slider-border-color,
-				var(
-					--mod-color-slider-border-color,
-					var(--spectrum-color-slider-border-color-rgba)
-				)
-			);
+			var(--spectrum-color-slider-border-color-local);
 		border-radius: var(
 			--mod-color-slider-border-rounding,
 			var(--spectrum-color-slider-border-rounding)
@@ -180,23 +181,21 @@
 	}
 
 	.spectrum-ColorSlider.is-disabled & {
-		background: var(
-			--highcontrast-disabled-background-color,
+		--spectrum-color-slider-border-color-local: var(
+			--highcontrast-color-slider-border-color-disabled,
 			var(
-				--mod-disabled-background-color,
+				--mod-color-slider-border-color-disabled,
 				var(--spectrum-disabled-background-color)
 			)
 		);
 
-		&::before {
-			border-color: var(
-				--highcontrast-disabled-background-color,
-				var(
-					--mod-disabled-background-color,
-					var(--spectrum-disabled-background-color)
-				)
-			);
-		}
+		background: var(
+			--highcontrast-color-slider-background-color-disabled,
+			var(
+				--mod-color-slider-background-color-disabled,
+				var(--spectrum-disabled-background-color)
+			)
+		);
 	}
 }
 

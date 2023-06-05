@@ -1,14 +1,22 @@
 | Modifiable Custom Properties                      |
 | ------------------------------------------------- |
+| `--mod-color-slider-background-color-disabled`    |
 | `--mod-color-slider-border-color`                 |
+| `--mod-color-slider-border-color-disabled`        |
 | `--mod-color-slider-border-rounding`              |
 | `--mod-color-slider-border-width`                 |
+| `--mod-color-slider-checkerboard-dark-color`      |
+| `--mod-color-slider-checkerboard-light-color`     |
+| `--mod-color-slider-checkerboard-size`            |
 | `--mod-color-slider-control-track-height`         |
 | `--mod-color-slider-control-track-width`          |
+| `--mod-color-slider-handle-hitarea-border-radius` |
+| `--mod-color-slider-handle-hitarea-height`        |
+| `--mod-color-slider-handle-hitarea-width`         |
 | `--mod-color-slider-label-to-track-spacing`       |
 | `--mod-color-slider-length`                       |
 | `--mod-color-slider-minimum-length`               |
 | `--mod-color-slider-vertical-control-track-width` |
 | `--mod-color-slider-vertical-height`              |
 | `--mod-color-slider-vertical-minimum-height`      |
-| `--mod-disabled-background-color`                 |
+| `--mod-spectrum-color-slider-checkerboard-size`   |
