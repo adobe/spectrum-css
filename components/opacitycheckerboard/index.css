@@ -45,3 +45,11 @@ permissions and limitations under the License. */
 	position: relative;
 	inset-block: -100%;
 }
+
+@media (forced-colors: active) {
+	.spectrum-OpacityCheckerboard,
+	.spectrum-OpacityCheckerboard-example-color {
+		/* Allow checkerboard pattern to be visible. */
+		forced-color-adjust: none;
+	}
+}
