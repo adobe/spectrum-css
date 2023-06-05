@@ -3,6 +3,19 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+<a name="6.0.0"></a>
+#6.0.0
+🗓
+2023-06-02 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/textfield@5.1.11...@spectrum-css/textfield@6.0.0)
+
+\*chore(search)!: core tokens migration (#1761)([b54d8ef](https://github.com/adobe/spectrum-css/commit/b54d8ef)), closes[#1761](https://github.com/adobe/spectrum-css/issues/1761)
+
+    	###
+    	🛑 BREAKING CHANGES
+
+    		*
+    		migrates Search to use `@adobe/spectrum-tokens`
+
 <a name="5.1.11"></a>
 ##5.1.11
 🗓
