@@ -35,6 +35,14 @@ permissions and limitations under the License. */
 }
 
 .spectrum-OpacityCheckerboard-example {
-	inline-size: 200px;
-	block-size: 200px;
+	inline-size: 100px;
+	block-size: 100px;
+}
+
+.spectrum-OpacityCheckerboard-example-color {
+	inline-size: 100%;
+	block-size: 100%;
+	background-color: rgba(255, 0, 0, 0.5);
+	position: relative;
+	inset-block: -100%;
 }

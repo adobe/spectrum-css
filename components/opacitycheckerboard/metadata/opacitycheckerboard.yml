@@ -8,3 +8,10 @@ examples:
         <div class="spectrum-OpacityCheckerboard">
         </div>
       </div>
+  - id: opacity-checkerboard
+    name: Opactiy Checkerboard with transparent color
+    markup: |
+      <div class="spectrum-OpacityCheckerboard-example" >
+        <div class="spectrum-OpacityCheckerboard"></div>
+        <div class="spectrum-OpacityCheckerboard-example-color"></div>
+      </div>
