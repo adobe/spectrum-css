@@ -114,11 +114,12 @@ governing permissions and limitations under the License.
 
       &.is-keyboardFocused,
       &:focus-visible {
+        /* stylelint-disable declaration-block-no-redundant-longhand-properties */
         outline-style: solid;
         outline-width: var(--mod-sidenav-focus-ring-size, var(--spectrum-sidenav-focus-ring-size));
         outline-offset: var(--mod-sidenav-focus-ring-gap, var(--spectrum-sidenav-focus-ring-gap));
         outline-color: var(--highcontrast-sidenav-focus-ring-color, var(--mod-sidenav-focus-ring-color, var(--spectrum-sidenav-focus-ring-color)));
-
+        /* stylelint-enable declaration-block-no-redundant-longhand-properties */
         background-color: var(--highcontrast-sidenav-background-key-focus-selected, var(--mod-sidenav-background-key-focus-selected, var(--spectrum-sidenav-background-key-focus-selected)));
         color: var(--mod-sidenav-content-color-key-focus-selected, var(--spectrum-sidenav-content-color-key-focus-selected));
       }
@@ -133,9 +134,6 @@ governing permissions and limitations under the License.
 
       cursor: default;
       pointer-events: none;
-    }
-    .spectrum-Icon {
-      fill: var(--highcontrast-sidenav-icon-fill-disabled);
     }
   }
 }
@@ -186,16 +184,12 @@ governing permissions and limitations under the License.
     block-size: var(--spectrum-sidenav-icon-size);
     margin-inline-end: var(--spectrum-sidenav-icon-spacing);
     margin-block-start: var(--spectrum-sidenav-top-to-icon);
-   flex-shrink: 0;
-    fill: var(--highcontrast-sidenav-icon-fill);
+    flex-shrink: 0;
   }
 
   &:hover {
     background-color: var(--highcontrast-sidenav-background-hover, var(--mod-sidenav-background-hover, var(--spectrum-sidenav-background-hover)));
     color: var(--highcontrast-sidenav-content-color-hover, var(--mod-sidenav-content-color-hover, var(--spectrum-sidenav-content-color-hover)));
-    .spectrum-Icon {
-      fill: var(--highcontrast-sidenav-icon-fill-hover);
-    }
   }
 
   &:active {
@@ -205,11 +199,12 @@ governing permissions and limitations under the License.
 
   &.is-keyboardFocused,
   &:focus-visible {
+    /* stylelint-disable declaration-block-no-redundant-longhand-properties */
     outline-style: solid;
     outline-width: var(--mod-sidenav-focus-ring-size, var(--spectrum-sidenav-focus-ring-size));
     outline-offset:  var(--mod-sidenav-focus-ring-gap, var(--spectrum-sidenav-focus-ring-gap));
     outline-color: var(--highcontrast-sidenav-focus-ring-color, var(--mod-sidenav-focus-ring-color, var(--spectrum-sidenav-focus-ring-color)));
-
+    /* stylelint-enable declaration-block-no-redundant-longhand-properties */
     background-color: var(--highcontrast-sidenav-background-key-focus, var(--mod-sidenav-background-key-focus, var(--spectrum-sidenav-background-key-focus)));
     color: var(--highcontrast-sidenav-content-color-key-focus, var(--mod-sidenav-content-color-key-focus, var(--spectrum-sidenav-content-color-key-focus)));
   }
@@ -275,15 +270,19 @@ governing permissions and limitations under the License.
 }
 
 @media (forced-colors: active) {
+  /* forced-color-adjust: preserve-parent-color addresses svg bug on icon hover*/
+  /* stylelint-disable declaration-property-value-no-unknown */
+  .spectrum-SideNav {
+    .spectrum-Icon {
+      forced-color-adjust: preserve-parent-color;
+    }
+  }
+  /* stylelint-enable declaration-property-value-no-unknown */
   .spectrum-SideNav-item {
     forced-color-adjust: none;
     --highcontrast-sidenav-content-disabled-color: GrayText;
 
     --highcontrast-sidenav-focus-ring-color: Highlight;
-
-    --highcontrast-sidenav-icon-fill-hover: HighlightText;
-    --highcontrast-sidenav-icon-fill: ButtonText;
-    --highcontrast-sidenav-icon-fill-disabled: GrayText;
 
     --highcontrast-sidenav-content-color-default-selected: SelectedItemText;
     --highcontrast-sidenav-item-background-default-selected: SelectedItem;
@@ -301,7 +300,7 @@ governing permissions and limitations under the License.
     --highcontrast-sidenav-top-level-color-hover: HighlightText;
     --highcontrast-sidenav-content-color-default: ButtonText;
     --highcontrast-sidenav-content-color-down: HighlightText;
-    --highcontrast-sidenav-content-color-hover: HighlightText;
     --highcontrast-sidenav-content-color-key-focus: ButtonText;
   }
 }
+
