@@ -17,11 +17,9 @@ governing permissions and limitations under the License.
 	--spectrum-thumbnail-border-width: var(--spectrum-border-width-100);
 	/* @todo Refactor with --spectrum-thumbnail-border-color once gray rgb token is no longer necessary to workaround nested rgb color token value using rgba(). */
 	--spectrum-thumbnail-border-color-rgba: rgba(
-		34,
-		34,
-		34,
-		0.1
-	); /* Why is this not working?? rgba(var(--spectrum-gray-800-rgb), var(--spectrum-thumbnail-border-color-opacity)); */
+		var(--spectrum-gray-800-rgb),
+		var(--spectrum-thumbnail-border-color-opacity)
+	);
 	--spectrum-thumbnail-layer-border-width-inner: var(
 		--spectrum-border-width-400
 	);
@@ -115,12 +113,15 @@ governing permissions and limitations under the License.
     box-shadow: inset 0 0 0 var(--mod-thumbnail-border-width, var(--spectrum-thumbnail-border-width)) var(--highcontrast-thumbnail-border-color, var(--mod-thumbnail-border-color, var(--spectrum-thumbnail-border-color-rgba)));
   }
 
-  &.is-disabled {
-    opacity: var(--mod-thumbnail-color-opacity-disabled, var(--spectrum-thumbnail-color-opacity-disabled));
-  }
-
+	&.is-disabled {
+		opacity: var(
+			--mod-thumbnail-color-opacity-disabled,
+			var(--spectrum-thumbnail-color-opacity-disabled)
+		);
+	}
+	/* stylelint-disable selector-pseudo-class-no-unknown */
 	&.is-focused,
-	&.focus-ring {
+	&:focus-ring {
 		overflow: visible;
 		&::after {
 			content: "";
@@ -198,6 +199,7 @@ governing permissions and limitations under the License.
 			);
 		}
 	}
+	/* stylelint-enable selector-pseudo-class-no-unknown */
 
   /* Friends should align to the top of the tabs */
   vertical-align: top;
