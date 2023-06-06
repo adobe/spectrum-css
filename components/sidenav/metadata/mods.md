@@ -6,6 +6,7 @@
 | `--mod-sidenav-background-hover-selected` |
 | `--mod-sidenav-background-key-focus` |
 | `--mod-sidenav-background-key-focus-selected` |
+| `--mod-sidenav-border-radius` |
 | `--mod-sidenav-bottom-to-label` |
 | `--mod-sidenav-content-color-default` |
 | `--mod-sidenav-content-color-default-selected` |
@@ -21,8 +22,6 @@
 | `--mod-sidenav-focus-ring-size` |
 | `--mod-sidenav-gap` |
 | `--mod-sidenav-header-color` |
-| `--mod-sidenav-header-font-color` |
-| `--mod-sidenav-header-font-family` |
 | `--mod-sidenav-header-font-size` |
 | `--mod-sidenav-header-font-style` |
 | `--mod-sidenav-header-font-weight` |
@@ -43,5 +42,11 @@
 | `--mod-sidenav-text-font-style` |
 | `--mod-sidenav-text-font-weight` |
 | `--mod-sidenav-text-lineheight` |
+| `--mod-sidenav-top-level-font-color` |
+| `--mod-sidenav-top-level-font-family` |
+| `--mod-sidenav-top-level-font-size` |
+| `--mod-sidenav-top-level-font-style` |
+| `--mod-sidenav-top-level-font-weight` |
+| `--mod-sidenav-top-level-line-height` |
 | `--mod-sidenav-top-to-label` |
 | `--mod-sidenav-width` |

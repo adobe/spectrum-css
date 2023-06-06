@@ -49,8 +49,8 @@ governing permissions and limitations under the License.
   --spectrum-sidenav-background-key-focus-selected: var(--spectrum-gray-200);
 
   /* color font */
-  --spectrum-sidenav-header-font-color: var(--spectrum-gray-900);
-  --spectrum-sidenav-header-color: var(--spectrum-gray-900); /* this needs to be named better */
+  --spectrum-sidenav-top-level-color: var(--spectrum-gray-900);
+  --spectrum-sidenav-header-color: var(--spectrum-gray-600);
 
   --spectrum-sidenav-content-disabled-color: var(--spectrum-disabled-content-color);
 
@@ -71,21 +71,17 @@ governing permissions and limitations under the License.
   --spectrum-sidenav-text-font-size: var(--spectrum-font-size-200);
   --spectrum-sidenav-text-lineheight: var(--spectrum-line-height-100);
 
+  --spectrum-sidenav-top-level-font-family: var(--spectrum-sans-font-family-stack);
+  --spectrum-sidenav-top-level-font-weight: var(--spectrum-bold-font-weight);
+  --spectrum-sidenav-top-level-font-style: var(--spectrum-default-font-style);
+  --spectrum-sidenav-top-level-font-size: var(--spectrum-font-size-200);
+  --spectrum-sidenav-top-level-line-height: var(--spectrum-line-height-100);
 
   --spectrum-sidenav-header-font-family: var(--spectrum-sans-font-family-stack);
-  --spectrum-sidenav-header-font-weight: var(--spectrum-bold-font-weight);
+  --spectrum-sidenav-header-font-weight: var(--spectrum-medium-font-weight);
   --spectrum-sidenav-header-font-style: var(--spectrum-default-font-style);
-  --spectrum-sidenav-header-font-size: var(--spectrum-font-size-200);
+  --spectrum-sidenav-header-font-size: var(--spectrum-font-size-75);
   --spectrum-sidenav-header-line-height: var(--spectrum-line-height-100);
-
-  /* passthrough custom properties */
-  --mod-icon-inline-size: var(--spectrum-sidenav-icon-size);
-  --mod-icon-block-size: var(--spectrum-sidenav-icon-size);
-  --mod-icon-flex-shrink: 0;
-  --mod-icon-margin-right: var(--spectrum-sidenav-icon-spacing);
-  --mod-icon-margin-top: var(--spectrum-sidenav-top-to-icon);
-}
-
 }
 
 .spectrum-SideNav {
@@ -145,6 +141,7 @@ governing permissions and limitations under the License.
 }
 
 .spectrum-SideNav-itemLink {
+  padding-inline: var(--mod-sidenav-inline-padding, var(--spectrum-sidenav-inline-padding));
   margin-block-end: var(--mod-sidenav-gap, var(--spectrum-sidenav-gap));
   position: relative;
   display: inline-flex;
@@ -155,8 +152,8 @@ governing permissions and limitations under the License.
   cursor: pointer;
   transition: background-color var(--spectrum-animation-duration-100) ease-out,
     color var(--spectrum-animation-duration-100) ease-out;
-  padding-inline: var(--mod-sidenav-inline-padding, var(--spectrum-sidenav-inline-padding));
-  border-radius: var(--spectrum-sidenav-border-radius);
+
+  border-radius: var(--mod-sidenav-border-radius, var(--spectrum-sidenav-border-radius));
 
   background-color: var(--highcontrast-sidenav-background-default, var(--mod-sidenav-background-default, var(--spectrum-sidenav-background-default)));
   color: var(--highcontrast-sidenav-content-color-default, var(--mod-sidenav-content-color-default, var(--spectrum-sidenav-content-color-default)));
@@ -217,34 +214,38 @@ governing permissions and limitations under the License.
     color: var(--highcontrast-sidenav-content-color-key-focus, var(--mod-sidenav-content-color-key-focus, var(--spectrum-sidenav-content-color-key-focus)));
   }
 }
-/* this is the CATEGORY or heading variant */
+
 .spectrum-SideNav-heading {
-  margin-block-start: 16px; /* needs tokens var(--spectrum-sidenav-heading-gap-top); */
-  margin-inline-end: 0;
-  margin-block-end: 4px; /* needs token var(--spectrum-sidenav-heading-gap-bottom); */
-  margin-inline-start: 0;
-  padding-block: 0;
-  padding-inline: 12px; /* needs token var(--spectrum-sidenav-heading-padding-x); */
-
-  border-radius: 4px; /* needs token var(--spectrum-sidenav-heading-border-radius); */
-
+  padding-inline: var(--mod-sidenav-inline-padding, var(--spectrum-sidenav-inline-padding));
   color: var(--mod-sidenav-header-color, var(--spectrum-sidenav-header-color));
-  font-size: 11px; /* needs token var(--spectrum-sidenav-heading-text-size); */
-  font-weight: 500; /* needs token var(--spectrum-sidenav-heading-text-font-weight); */
-  font-style: normal;
-  letter-spacing:  0.06em; /* needs token var(--spectrum-sidenav-heading-text-letter-spacing); */
+  font-size: var(--mod-sidenav-header-font-size, var(--spectrum-sidenav-header-font-size));
+  font-weight: var(--mod-sidenav-header-font-weight, var(--spectrum-sidenav-header-font-weight));
+  font-style: var(--mod-sidenav-header-font-style, var(--spectrum-sidenav-header-font-style));
   line-height: var(--mod-sidenav-header-line-height, var(--spectrum-sidenav-header-line-height));
-  text-transform: uppercase;
+  /* cjk language support */
+  &:lang(ja),
+  &:lang(zh),
+  &:lang(ko) {
+    --spectrum-sidenav-header-line-height: var(--spectrum-cjk-line-height-100);
+  }
 }
 
 .spectrum-SideNav--multiLevel {
   .spectrum-SideNav-itemLink {
-    font-family: var(--mod-sidenav-header-font-family, var(--spectrum-sidenav-header-font-family));
-    font-weight: var(--mod-sidenav-header-font-weight, var(--spectrum-sidenav-header-font-weight));
-    font-style: var(--mod-sidenav-header-font-style, var(--spectrum-sidenav-header-font-style));
-    font-size: var(--mod-sidenav-header-font-size, var(--spectrum-sidenav-header-font-size));
-    line-height: var(--mod-sidenav-header-line-height, var(--spectrum-sidenav-header-line-height));
-    color: var(--highcontrast-sidenav-header-font-color, var(--mod-sidenav-header-font-color, var(--spectrum-sidenav-header-font-color)));
+    color: var(--highcontrast-sidenav-top-level-font-color, var(--mod-sidenav-top-level-font-color, var(--spectrum-sidenav-top-level-font-color)));
+    font-family: var(--mod-sidenav-top-level-font-family, var(--spectrum-sidenav-top-level-font-family));
+    font-weight: var(--mod-sidenav-top-level-font-weight, var(--spectrum-sidenav-top-level-font-weight));
+    font-style: var(--mod-sidenav-top-level-font-style, var(--spectrum-sidenav-top-level-font-style));
+    font-size: var(--mod-sidenav-top-level-font-size, var(--spectrum-sidenav-top-level-font-size));
+    line-height: var(--mod-sidenav-top-level-line-height, var(--spectrum-sidenav-top-level-line-height));
+    &:lang(ja),
+    &:lang(zh),
+    &:lang(ko) {
+      --spectrum-sidenav-top-level-line-height: var(--spectrum-cjk-line-height-100);
+    }
+    &:hover {
+      color: var(--highcontrast-sidenav-top-level-color-hover);
+    }
   }
 
   .spectrum-SideNav {
