@@ -26,7 +26,7 @@ export const Template = ({
         ...customClasses.reduce((a, c) => ({ ...a, [c]: true }), {}),
       })}>
         ${repeat(items, (item) => item.id, (item) => {
-          if (typeof item.subitems !== "undefined") {
+          if (typeof item.levelTwoItems !== "undefined") {
             return html`
               <li class=${classMap({
                 [`${rootClass}-item`]: true,
@@ -44,13 +44,21 @@ export const Template = ({
                       iconName,
                     })
                   )}
-                  <span class="${rootClass}-link-label">${item.title}</span>
+                  <span class="${rootClass}-link-text">${item.title}</span>
                 </a>
                 `
               }
-                <ul class=${rootClass} aria-labelledby=${ifDefined(item.heading) ? `${item.id}-heading` : ""}>
-                  ${repeat(item.subitems, (item) => item.id, (item) => {
+              <ul class=${classMap({
+                [rootClass]: true,
+                [`${rootClass}--hasIcon`]: hasIcon,
+                ...customClasses.reduce((a, c) => ({ ...a, [c]: true }), {}),
+              })}
+              aria-labelledby=${ifDefined(item.heading) ? `${item.id}-heading` : ""}>
+                  ${repeat(item.levelTwoItems, (item) => item.id, (item) => {
                     return SideNavItem({
+                      variant,
+                      hasIcon,
+                      iconName,
                       ...globals,
                       ...item
                     })
@@ -74,7 +82,8 @@ export const Template = ({
 
 export const SideNavItem = ({
   rootClass = "spectrum-SideNav",
-  secondlevelsubitems,
+  variant,
+  levelThreeItems,
   link,
   title,
   isSelected,
@@ -85,6 +94,7 @@ export const SideNavItem = ({
   customClasses = [],
   ...globals
 }) => {
+  const disaplyIcon = hasIcon & variant === "multiLevel" ? false : true
   return html`
     <li id=${id} class=${classMap({
       [`${rootClass}-item`]: true,
@@ -93,17 +103,17 @@ export const SideNavItem = ({
       ...customClasses.reduce((a, c) => ({ ...a, [c]: true }), {}),
     })}>
       <a href=${link} class="${rootClass}-itemLink">
-        ${hasIcon ?
+        ${disaplyIcon ?
           Icon({
             ...globals,
             iconName,
           })
         : ""}
-        <span class="${rootClass}-link-label">${title}</span>
+        <span class="${rootClass}-link-text">${title}</span>
       </a>
-      ${when(secondlevelsubitems, () => html`
+      ${when(levelThreeItems, () => html`
         <ul class=${rootClass}>
-          ${repeat(secondlevelsubitems, (item) => item.id, (item) => {
+          ${repeat(levelThreeItems, (item) => item.id, (item) => {
             return SideNavItem({
               ...globals,
               ...item

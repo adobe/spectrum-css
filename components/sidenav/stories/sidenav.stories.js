@@ -11,7 +11,7 @@ export default {
       type: { name: "boolean" },
       table: {
         type: { summary: "boolean" },
-        category: "State",
+        category: "Component",
       },
       control: "boolean",
     },
@@ -20,7 +20,7 @@ export default {
       type: { name: "string" },
       table: {
         type: { summary: "string" },
-        category: "State",
+        category: "Component",
       },
       options: ['Image', "Folder", "Star"],
       control: "select",
@@ -80,7 +80,7 @@ Multilevel.args = {
       id: "2",
       title: "Section Title 2",
       link: "#",
-      subitems: [
+      levelTwoItems: [
         {
           id: "2.1",
           title: "Section Title 1",
@@ -90,7 +90,7 @@ Multilevel.args = {
           id: "2.2",
           title: "Section Title 2",
           link: "#",
-          secondlevelsubitems: [
+          levelThreeItems: [
             {
               id: "3.1",
               title: "Section Title 1",
@@ -123,14 +123,14 @@ WithHeading.args = {
   items: [
     {
       id: "1",
-      title: "Section Title 1",
+      title: "Section 1",
       link: "#",
     },
     {
       id: "2",
       heading: "Heading 1",
       link: "#",
-      subitems: [
+      levelTwoItems: [
         {
           id: "2.1",
           title: "Section 1",

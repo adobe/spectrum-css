@@ -2,11 +2,11 @@ name: Side navigation
 status: Verified
 SpectrumSiteSlug: https://spectrum.adobe.com/page/side-navigation/
 description: |
-  Side navigation lets users navigate the entire content of a product or a section. Make sure to use the right variant for the context and user needs. Don’t mix behavior, styles, or variations together in a single navigation menu.
+  Side navigation lets users navigate the entire content of a product or a section. Make sure to use the appropriate variant for the context and user needs. Don’t mix behavior, styles, or variations together in a single navigation menu.
 sections:
   - name: Migration Guide
     description: |
-      Core token migration work and design updates added a span tag wrapping the link label text.
+      Core token migration work and design updates added a span tag wrapping the link text.
 
 examples:
   - id: sidenav
@@ -18,17 +18,17 @@ examples:
           <li class="spectrum-SideNav-item is-selected">
             <!-- aria-current denotes current "page" or "location" -->
             <a href="#" class="spectrum-SideNav-itemLink" aria-current="page">
-              <span class="spectrum-SideNav-link-label">Section Title 1</span>
+              <span class="spectrum-SideNav-link-text">Section Title 1</span>
             </a>
           </li>
           <li class="spectrum-SideNav-item is-disabled">
             <a class="spectrum-SideNav-itemLink">
-              <span class="spectrum-SideNav-link-label">Section Title 2</span>
+              <span class="spectrum-SideNav-link-text">Section Title 2</span>
             </a>
           </li>
           <li class="spectrum-SideNav-item">
             <a href="#" class="spectrum-SideNav-itemLink">
-              <span class="spectrum-SideNav-link-label">Section Title 3</span>
+              <span class="spectrum-SideNav-link-text">Section Title 3</span>
             </a>
           </li>
         </ul>
@@ -41,56 +41,56 @@ examples:
         <ul class="spectrum-SideNav spectrum-SideNav--multiLevel">
           <li class="spectrum-SideNav-item">
             <a href="#" class="spectrum-SideNav-itemLink">
-              <span class="spectrum-SideNav-link-label"> Section Title 1 for a Multilevel Side Nav</span>
+              <span class="spectrum-SideNav-link-text"> Section Title 1 for a Multilevel Side Nav</span>
             </a>
           </li>
           <li class="spectrum-SideNav-item">
             <a href="#" class="spectrum-SideNav-itemLink">
-              <span class="spectrum-SideNav-link-label"> Section Title 2</span>
+              <span class="spectrum-SideNav-link-text"> Section Title 2</span>
             </a>
             <ul class="spectrum-SideNav">
               <li class="spectrum-SideNav-item">
                 <a href="#" class="spectrum-SideNav-itemLink">
-                  <span class="spectrum-SideNav-link-label"> Section Title 1</span>
+                  <span class="spectrum-SideNav-link-text"> Section Title 1</span>
                 </a>
               </li>
               <li class="spectrum-SideNav-item">
                 <a href="#" class="spectrum-SideNav-itemLink">
-                  <span class="spectrum-SideNav-link-label"> Section Title 2</span>
+                  <span class="spectrum-SideNav-link-text"> Section Title 2</span>
                 </a>
                 <ul class="spectrum-SideNav">
                   <li class="spectrum-SideNav-item">
                     <a href="#" class="spectrum-SideNav-itemLink">
-                      <span class="spectrum-SideNav-link-label"> Section Title 1</span>
+                      <span class="spectrum-SideNav-link-text"> Section Title 1</span>
                     </a>
                   </li>
                   <li class="spectrum-SideNav-item">
                     <a href="#" class="spectrum-SideNav-itemLink">
-                      <span class="spectrum-SideNav-link-label"> Section Title 2</span>
+                      <span class="spectrum-SideNav-link-text"> Section Title 2</span>
                     </a>
                   </li>
                 </ul>
               </li>
               <li class="spectrum-SideNav-item">
                 <a href="#" class="spectrum-SideNav-itemLink">
-                  <span class="spectrum-SideNav-link-label"> Section Title 3</span>
+                  <span class="spectrum-SideNav-link-text"> Section Title 3</span>
                 </a>
               </li>
             </ul>
           </li>
           <li class="spectrum-SideNav-item">
             <a href="#" class="spectrum-SideNav-itemLink">
-              <span class="spectrum-SideNav-link-label"> Section Title 4</span>
+              <span class="spectrum-SideNav-link-text"> Section Title 4</span>
             </a>
           </li>
           <li class="spectrum-SideNav-item">
             <a href="#" class="spectrum-SideNav-itemLink">
-              <span class="spectrum-SideNav-link-label"> Section Title 5</span>
+              <span class="spectrum-SideNav-link-text"> Section Title 5</span>
             </a>
           </li>
           <li class="spectrum-SideNav-item">
             <a href="#" class="spectrum-SideNav-itemLink">
-              <span class="spectrum-SideNav-link-label"> Section Title 6</span>
+              <span class="spectrum-SideNav-link-text"> Section Title 6</span>
             </a>
           </li>
         </ul>
@@ -98,19 +98,19 @@ examples:
 
   - id: sidenav
     name: Heading
-    description: When navigation is simple but categorical, use the single level side navigation with headers.
+    description: When navigation is simple but categorical, use the single level side navigation with headings.
     markup: |
       <nav>
         <ul class="spectrum-SideNav">
           <li class="spectrum-SideNav-item is-selected">
             <!-- aria-current denotes current "page" or "location" -->
             <a href="#" class="spectrum-SideNav-itemLink" aria-current="page">
-              <span class="spectrum-SideNav-link-label"> Section 1</span>
+              <span class="spectrum-SideNav-link-text"> Section 1</span>
             </a>
           </li>
           <li class="spectrum-SideNav-item">
             <a href="#" class="spectrum-SideNav-itemLink">
-              <span class="spectrum-SideNav-link-label"> Section 2</span>
+              <span class="spectrum-SideNav-link-text"> Section 2</span>
             </a>
           </li>
           <li class="spectrum-SideNav-item">
@@ -118,12 +118,12 @@ examples:
             <ul class="spectrum-SideNav" aria-labelledby="nav-heading-heading-1">
               <li class="spectrum-SideNav-item">
                 <a href="#" class="spectrum-SideNav-itemLink">
-                  <span class="spectrum-SideNav-link-label"> Section 3</span>
+                  <span class="spectrum-SideNav-link-text"> Section 3</span>
                 </a>
               </li>
               <li class="spectrum-SideNav-item">
                 <a href="#" class="spectrum-SideNav-itemLink">
-                  <span class="spectrum-SideNav-link-label"> Section 4</span>
+                  <span class="spectrum-SideNav-link-text"> Section 4</span>
                 </a>
               </li>
             </ul>
@@ -133,17 +133,17 @@ examples:
             <ul class="spectrum-SideNav" aria-labelledby="nav-heading-heading-2">
               <li class="spectrum-SideNav-item">
                 <a href="#" class="spectrum-SideNav-itemLink">
-                  <span class="spectrum-SideNav-link-label"> Section 5</span>
+                  <span class="spectrum-SideNav-link-text"> Section 5</span>
                 </a>
               </li>
               <li class="spectrum-SideNav-item">
                 <a href="#" class="spectrum-SideNav-itemLink">
-                  <span class="spectrum-SideNav-link-label"> Section 6</span>
+                  <span class="spectrum-SideNav-link-text"> Section 6</span>
                 </a>
               </li>
               <li class="spectrum-SideNav-item">
                 <a href="#" class="spectrum-SideNav-itemLink">
-                  <span class="spectrum-SideNav-link-label"> Section 7</span>
+                  <span class="spectrum-SideNav-link-text"> Section 7</span>
                 </a>
               </li>
             </ul>
@@ -161,7 +161,7 @@ examples:
               <svg class="spectrum-Icon spectrum-Icon--sizeM" focusable="false" aria-hidden="true">
                 <use xlink:href="#spectrum-icon-18-Image" />
               </svg>
-              <span class="spectrum-SideNav-link-label"> Section Title 2</span>
+              <span class="spectrum-SideNav-link-text"> Section Title 2</span>
             </a>
           </li>
           <li class="spectrum-SideNav-item">
@@ -169,33 +169,33 @@ examples:
               <svg class="spectrum-Icon spectrum-Icon--sizeM" focusable="false" aria-hidden="true">
                 <use xlink:href="#spectrum-icon-18-Folder" />
               </svg>
-              <span class="spectrum-SideNav-link-label"> Section Title 2</span>
+              <span class="spectrum-SideNav-link-text"> Section Title 2</span>
             </a>
             <ul class="spectrum-SideNav">
               <li class="spectrum-SideNav-item">
                 <a href="#" class="spectrum-SideNav-itemLink">
-                  <span class="spectrum-SideNav-link-label"> Section Title 1</span>
+                  <span class="spectrum-SideNav-link-text"> Section Title 1</span>
                 </a>
               </li>
               <li class="spectrum-SideNav-item">
                 <a href="#" class="spectrum-SideNav-itemLink">
-                  <span class="spectrum-SideNav-link-label"> Section Title 2</span>
+                  <span class="spectrum-SideNav-link-text"> Section Title 2</span>
                 </a>
                 <ul class="spectrum-SideNav">
                   <li class="spectrum-SideNav-item">
                     <a href="#" class="spectrum-SideNav-itemLink">
-                      <span class="spectrum-SideNav-link-label"> Section Title 1</span>
+                      <span class="spectrum-SideNav-link-text"> Section Title 1</span>
                     </a>
                   </li>
                   <li class="spectrum-SideNav-item">
                     <a href="#" class="spectrum-SideNav-itemLink">
-                      <span class="spectrum-SideNav-link-label"> Section Title 2</span>
+                      <span class="spectrum-SideNav-link-text"> Section Title 2</span>
                     </a>
                   </li>
                 </ul>
               <li class="spectrum-SideNav-item">
                 <a href="#" class="spectrum-SideNav-itemLink">
-                  <span class="spectrum-SideNav-link-label"> Section Title 3</span>
+                  <span class="spectrum-SideNav-link-text"> Section Title 3</span>
                 </a>
               </li>
             </ul>
@@ -205,7 +205,7 @@ examples:
               <svg class="spectrum-Icon spectrum-Icon--sizeM" focusable="false" aria-hidden="true">
                 <use xlink:href="#spectrum-icon-18-Star" />
               </svg>
-              <span class="spectrum-SideNav-link-label"> Section Title 4</span>
+              <span class="spectrum-SideNav-link-text"> Section Title 4</span>
             </a>
           </li>
           <li class="spectrum-SideNav-item is-disabled">
@@ -213,7 +213,7 @@ examples:
               <svg class="spectrum-Icon spectrum-Icon--sizeM" focusable="false" aria-hidden="true">
                 <use xlink:href="#spectrum-icon-18-Document" />
               </svg>
-              <span class="spectrum-SideNav-link-label"> Section Title 5</span>
+              <span class="spectrum-SideNav-link-text"> Section Title 5</span>
             </a>
           </li>
         </ul>
