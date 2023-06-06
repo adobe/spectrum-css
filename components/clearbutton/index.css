@@ -33,6 +33,7 @@ governing permissions and limitations under the License.
 	}
 }
 
+/* prettier-ignore */
 .spectrum-ClearButton--sizeS {
 	@remapvars {
 		find: --spectrum-clearbutton-s-;
@@ -40,6 +41,7 @@ governing permissions and limitations under the License.
 	}
 }
 
+/* prettier-ignore */
 .spectrum-ClearButton--sizeM {
 	@remapvars {
 		find: --spectrum-clearbutton-m-;
@@ -47,6 +49,7 @@ governing permissions and limitations under the License.
 	}
 }
 
+/* prettier-ignore */
 .spectrum-ClearButton--sizeL {
 	@remapvars {
 		find: --spectrum-clearbutton-l-;
@@ -54,6 +57,7 @@ governing permissions and limitations under the License.
 	}
 }
 
+/* prettier-ignore */
 .spectrum-ClearButton--sizeXL {
 	@remapvars {
 		find: --spectrum-clearbutton-xl-;

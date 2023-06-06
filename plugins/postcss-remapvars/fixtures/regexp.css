@@ -17,6 +17,7 @@
 		var(--component-border-style);
 }
 
+/* prettier-ignore */
 .component--hover {
 	@remapvars {
 		find: /(--component-. *)-hover/;

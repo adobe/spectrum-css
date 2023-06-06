@@ -24,18 +24,20 @@ governing permissions and limitations under the License.
 	);
 }
 
+/* prettier-ignore */
 .spectrum-TreeView--sizeS {
 	@remapvars {
-		find: /--spectrum-treeview(. *)-s-/;
+		find: /--spectrum-treeview(.*)-s-/;
 		filter: color;
 		replace: --spectrum-treeview$1-;
 	}
 	--spectrum-treeview-s-item-icon-gap: var(--spectrum-global-dimension-size-85);
 }
 
+/* prettier-ignore */
 .spectrum-TreeView--sizeM {
 	@remapvars {
-		find: /--spectrum-treeview(. *)-m-/;
+		find: /--spectrum-treeview(.*)-m-/;
 		filter: color;
 		replace: --spectrum-treeview$1-;
 	}
@@ -44,9 +46,10 @@ governing permissions and limitations under the License.
 	);
 }
 
+/* prettier-ignore */
 .spectrum-TreeView--sizeL {
 	@remapvars {
-		find: /--spectrum-treeview(. *)-l-/;
+		find: /--spectrum-treeview(.*)-l-/;
 		filter: color;
 		replace: --spectrum-treeview$1-;
 	}
@@ -55,9 +58,10 @@ governing permissions and limitations under the License.
 	);
 }
 
+/* prettier-ignore */
 .spectrum-TreeView--sizeXL {
 	@remapvars {
-		find: /--spectrum-treeview(. *)-xl-/;
+		find: /--spectrum-treeview(.*)-xl-/;
 		filter: color;
 		replace: --spectrum-treeview$1-;
 	}

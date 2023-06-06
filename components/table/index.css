@@ -17,17 +17,19 @@ governing permissions and limitations under the License.
 	border-spacing: 0;
 }
 
+/* prettier-ignore */
 .spectrum-Table--sizeS {
 	@remapvars {
-		find: /--spectrum-table(. *)-s-/;
+		find: /--spectrum-table(.*)-s-/;
 		filter: color;
 		replace: --spectrum-table$1-;
 	}
 }
 
+/* prettier-ignore */
 .spectrum-Table--sizeM {
 	@remapvars {
-		find: /--spectrum-table(. *)-m-/;
+		find: /--spectrum-table(.*)-m-/;
 		filter: color;
 		replace: --spectrum-table$1-;
 	}

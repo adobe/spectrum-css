@@ -12,17 +12,19 @@ governing permissions and limitations under the License.
 
 @import "../vars/css/components/spectrum-card.css";
 
+/* prettier-ignore */
 .spectrum-Card--sizeS {
 	@remapvars {
-		find: /--spectrum-card(. *)-s-/;
+		find: /--spectrum-card(.*)-s-/;
 		filter: color;
 		replace: --spectrum-card$1-;
 	}
 }
 
+/* prettier-ignore */
 .spectrum-Card--sizeM {
 	@remapvars {
-		find: /--spectrum-card(. *)-m-/;
+		find: /--spectrum-card(.*)-m-/;
 		filter: color;
 		replace: --spectrum-card$1-;
 	}

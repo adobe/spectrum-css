@@ -13,6 +13,7 @@
 	height: var(--prefix-component-height);
 }
 
+/* prettier-ignore */
 .component--small {
 	@remapvars {
 		find: --prefix-component-s-;
@@ -20,6 +21,7 @@
 	}
 }
 
+/* prettier-ignore */
 .component--large {
 	@remapvars {
 		find: --prefix-component-l-;
