@@ -1,3 +1,3 @@
 | Modifiable Custom Properties |
-| --- |
-| `--mod-icon-color` |
+| ---------------------------- |
+| `--mod-icon-color`           |
