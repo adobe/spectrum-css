@@ -10,6 +10,8 @@
 | `--mod-accordion-disclosure-indicator-to-text-space`  |
 | `--mod-accordion-divider-color`                       |
 | `--mod-accordion-divider-thickness`                   |
+| `--mod-accordion-edge-to-disclosure-indicator-space`  |
+| `--mod-accordion-edge-to-text-space`                  |
 | `--mod-accordion-focus-indicator-color`               |
 | `--mod-accordion-focus-indicator-gap`                 |
 | `--mod-accordion-focus-indicator-thickness`           |
