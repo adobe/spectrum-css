@@ -117,20 +117,58 @@ governing permissions and limitations under the License.
   }
 }
 
-.spectrum-CoachMarkIndicator--quiet {
-  min-inline-size: calc(var(--spectrum-coachmark-quiet-indicator-ring-diameter) * 2.75);
-  min-block-size: calc(var(--spectrum-coachmark-quiet-indicator-ring-diameter) * 2.75);
+.spectrum-CoachMarkIndicator-quiet {
+	min-inline-size: calc(
+		var(--spectrum-coachmark-quiet-indicator-ring-diameter) * 2.75
+	);
+	min-block-size: calc(
+		var(--spectrum-coachmark-quiet-indicator-ring-diameter) * 2.75
+	);
 
   .spectrum-CoachMarkIndicator-ring {
     inset-block-start: calc(var(--spectrum-coachmark-quiet-indicator-ring-diameter) * 0.75);
     inset-inline-start: calc(var(--spectrum-coachmark-quiet-indicator-ring-diameter) * 0.75);
 
-    inline-size: var(--spectrum-coachmark-quiet-indicator-ring-diameter);
-    block-size: var(--spectrum-coachmark-quiet-indicator-ring-diameter);
-    animation: pulse--quiet var(--spectrum-coachmark-animation-indicator-ring-duration) linear infinite;
+		inline-size: var(--spectrum-coachmark-quiet-indicator-ring-diameter);
+		block-size: var(--spectrum-coachmark-quiet-indicator-ring-diameter);
+		animation: pulse-quiet
+			var(--spectrum-coachmark-animation-indicator-ring-duration) linear
+			infinite;
 
     &:nth-child(1) {
       animation-delay: calc(var(--spectrum-coachmark-animation-indicator-ring-duration) * var(--spectrum-coachmark-quiet-animation-indicator-ring-inner-delay-multiple));
     }
   }
+}
+
+/* from skin */
+
+.spectrum-CoachMarkPopover {
+	background-color: var(--spectrum-coachmark-background-color);
+	border-color: var(--spectrum-coachmark-border-color);
+	box-shadow: 0 1px 4px var(--spectrum-coachmark-shadow-color);
+}
+
+.spectrum-CoachMarkPopover-title {
+	color: var(--spectrum-coachmark-title-text-color);
+}
+
+.spectrum-CoachMarkPopover-step {
+	color: var(--spectrum-coachmark-step-text-color);
+}
+
+.spectrum-CoachMarkPopover-content {
+	color: var(--spectrum-coachmark-content-text-color);
+}
+
+.spectrum-CoachMarkIndicator-ring {
+	border-color: var(--spectrum-coachmark-indicator-ring-default-color);
+}
+
+.spectrum-CoachMarkIndicator--light .spectrum-CoachMarkIndicator-ring {
+	border-color: var(--spectrum-coachmark-indicator-ring-low-contrast-color);
+}
+
+.spectrum-CoachMarkIndicator--dark .spectrum-CoachMarkIndicator-ring {
+	border-color: var(--spectrum-coachmark-indicator-ring-high-contrast-color);
 }

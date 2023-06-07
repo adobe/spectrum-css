@@ -24,19 +24,19 @@ examples:
   - id: coachmark-quiet
     name: Quiet
     markup: |
-      <div class="spectrum-CoachMarkIndicator spectrum-CoachMarkIndicator--quiet" style="display: inline-block;">
+      <div class="spectrum-CoachMarkIndicator spectrum-CoachMarkIndicator-quiet" style="display: inline-block;">
         <div class="spectrum-CoachMarkIndicator-ring"></div>
         <div class="spectrum-CoachMarkIndicator-ring"></div>
         <div class="spectrum-CoachMarkIndicator-ring"></div>
       </div>
 
-      <div class="spectrum-CoachMarkIndicator spectrum-CoachMarkIndicator--dark spectrum-CoachMarkIndicator--quiet" style="display: inline-block;">
+      <div class="spectrum-CoachMarkIndicator spectrum-CoachMarkIndicator--dark spectrum-CoachMarkIndicator-quiet" style="display: inline-block;">
         <div class="spectrum-CoachMarkIndicator-ring"></div>
         <div class="spectrum-CoachMarkIndicator-ring"></div>
         <div class="spectrum-CoachMarkIndicator-ring"></div>
       </div>
 
-      <div class="spectrum-CoachMarkIndicator spectrum-CoachMarkIndicator--light spectrum-CoachMarkIndicator--quiet" style="display: inline-block;">
+      <div class="spectrum-CoachMarkIndicator spectrum-CoachMarkIndicator--light spectrum-CoachMarkIndicator-quiet" style="display: inline-block;">
         <div class="spectrum-CoachMarkIndicator-ring"></div>
         <div class="spectrum-CoachMarkIndicator-ring"></div>
         <div class="spectrum-CoachMarkIndicator-ring"></div>
@@ -45,7 +45,7 @@ examples:
     name: Popover
     markup: |
       <div style="position: relative;">
-        <div class="spectrum-CoachMarkIndicator spectrum-CoachMarkIndicator--quiet" style="position: absolute;">
+        <div class="spectrum-CoachMarkIndicator spectrum-CoachMarkIndicator-quiet" style="position: absolute;">
           <div class="spectrum-CoachMarkIndicator-ring"></div>
           <div class="spectrum-CoachMarkIndicator-ring"></div>
           <div class="spectrum-CoachMarkIndicator-ring"></div>
@@ -69,7 +69,7 @@ examples:
       <div class="dummy-spacing" style="height: 250px"></div>
 
       <div>
-        <div class="spectrum-CoachMarkIndicator spectrum-CoachMarkIndicator--quiet">
+        <div class="spectrum-CoachMarkIndicator spectrum-CoachMarkIndicator-quiet">
           <div class="spectrum-CoachMarkIndicator-ring"></div>
           <div class="spectrum-CoachMarkIndicator-ring"></div>
           <div class="spectrum-CoachMarkIndicator-ring"></div>
