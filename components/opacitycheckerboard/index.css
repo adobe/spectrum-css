@@ -34,18 +34,6 @@ permissions and limitations under the License. */
 		calc(var(--spectrum-opacity-checkerboard-size) * 2);
 }
 
-.spectrum-OpacityCheckerboard-example {
-	inline-size: 100px;
-	block-size: 100px;
-}
-
-.spectrum-OpacityCheckerboard-example-color {
-	inline-size: 100%;
-	block-size: 100%;
-	position: relative;
-	inset-block: -100%;
-}
-
 @media (forced-colors: active) {
 	.spectrum-OpacityCheckerboard,
 	.spectrum-OpacityCheckerboard-example-color {

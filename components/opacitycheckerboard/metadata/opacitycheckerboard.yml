@@ -4,14 +4,14 @@ examples:
   - id: opacity-checkerboard
     name: Opactiy Checkerboard
     markup: |
-      <div class="spectrum-OpacityCheckerboard-example">
+      <div style="inline-size: 100px; block-size: 100px;">
         <div class="spectrum-OpacityCheckerboard">
         </div>
       </div>
   - id: opacity-checkerboard
     name: Opacity Checkerboard with color overlay
     markup: |
-      <div class="spectrum-OpacityCheckerboard-example">
+      <div style="inline-size: 100px; block-size: 100px;">
         <div class="spectrum-OpacityCheckerboard"></div>
-        <div class="spectrum-OpacityCheckerboard-example-color" style="background-color: rgba(255, 0, 0, 0.5);"></div>
+        <div style="background-color: rgba(255, 0, 0, 0.5); inline-size: 100%; block-size: 100%; position: relative; inset-block: -100%"></div>
       </div>
