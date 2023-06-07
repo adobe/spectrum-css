@@ -25,6 +25,7 @@ governing permissions and limitations under the License.
 }
 
 /* prettier-ignore */
+/* stylelint-disable */
 .spectrum-TreeView--sizeS {
 	@remapvars {
 		find: /--spectrum-treeview(.*)-s-/;
@@ -69,6 +70,7 @@ governing permissions and limitations under the License.
 		--spectrum-global-dimension-size-125
 	);
 }
+/* stylelint-enable */
 
 .spectrum-TreeView {
 	display: block;

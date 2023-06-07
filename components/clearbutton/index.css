@@ -34,6 +34,7 @@ governing permissions and limitations under the License.
 }
 
 /* prettier-ignore */
+/* stylelint-disable */
 .spectrum-ClearButton--sizeS {
 	@remapvars {
 		find: --spectrum-clearbutton-s-;
@@ -64,6 +65,7 @@ governing permissions and limitations under the License.
 		replace: --spectrum-clearbutton-;
 	}
 }
+/* stylelint-enable */
 
 .spectrum-ClearButton-fill {
 	background-color: var(--spectrum-clearbutton-fill-background-color);

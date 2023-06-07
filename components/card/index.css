@@ -13,6 +13,7 @@ governing permissions and limitations under the License.
 @import "../vars/css/components/spectrum-card.css";
 
 /* prettier-ignore */
+/* stylelint-disable */
 .spectrum-Card--sizeS {
 	@remapvars {
 		find: /--spectrum-card(.*)-s-/;
@@ -29,6 +30,7 @@ governing permissions and limitations under the License.
 		replace: --spectrum-card$1-;
 	}
 }
+/* stylelint-enable */
 
 .spectrum-Card {
 	position: relative;

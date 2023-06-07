@@ -52,6 +52,7 @@ governing permissions and limitations under the License.
 }
 
 /* prettier-ignore */
+/* stylelint-disable */
 .spectrum-Menu {
   @remapvars {
     find: /--spectrum-listitem-m(.*)/;
@@ -59,6 +60,7 @@ governing permissions and limitations under the License.
     replace: --spectrum-listitem$1;
   }
 }
+/* stylelint-enable */
 
 .spectrum-Menu {
   display: inline-block;
@@ -196,7 +198,7 @@ governing permissions and limitations under the License.
 }
 
 .spectrum-Menu-chevron {
-  transform: logical rotate(0deg);
+  transform: logical rotate(0deg); /* stylelint-disable-line declaration-property-value-no-unknown */
 }
 
 .spectrum-Menu-sectionHeading {
