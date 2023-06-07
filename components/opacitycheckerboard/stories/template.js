@@ -11,24 +11,33 @@ export const Template = ({
 	overlayColor,
 	backgroundPosition,
 	customClasses = [],
-	style = {
+	containerStyles = {
+		"inline-size": "100px",
+		"block-size": "100px",
+	},
+	checkerBoardStyles = {
 		"--mod-opacity-checkerboard-position": backgroundPosition,
+	},
+	colorStyles = {
+		"background-color": overlayColor,
+		"inline-size": "100%",
+		"block-size": "100%",
+		position: "relative",
+		"inset-block": "-100%",
 	},
 	...globals
 }) => {
 	return html`
-		<div style="inline-size: 100px; block-size: 100px;">
+		<div style=${styleMap(containerStyles)}>
 			<div
 				class=${classMap({
 					[rootClass]: true,
 					...customClasses.reduce((a, c) => ({ ...a, [c]: true }), {}),
 				})}
-				style=${styleMap(style)}
+				style=${styleMap(checkerBoardStyles)}
 			></div>
 			${when(hasColorOverlay, () => {
-				return html` <div
-					style="background-color:${overlayColor}; inline-size: 100%; block-size: 100%; position: relative; inset-block: -100%"
-				></div>`;
+				return html` <div style=${styleMap(colorStyles)}></div>`;
 			})}
 		</div>
 	`;
