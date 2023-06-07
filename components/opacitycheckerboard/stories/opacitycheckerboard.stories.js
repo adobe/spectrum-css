@@ -1,8 +1,9 @@
 import { Template } from "./template";
 
 export default {
-	title: "Opacity checkerboard",
-	description: "The Opacity checkerboard component is...",
+	title: "Opacity Checkerboard",
+	description:
+		"Opacity checkerboard is used with other components to highlight opacity.",
 	component: "OpacityCheckerboard",
 	argTypes: {
 		hasColorOverlay: {
@@ -32,7 +33,7 @@ export default {
 				category: "Component",
 			},
 			control: "text",
-			description: "accepts any valid background-position property",
+			description: "Accepts any valid CSS background-position property value",
 		},
 	},
 	args: {

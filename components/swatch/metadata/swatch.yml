@@ -20,7 +20,7 @@ examples:
               <div class="spectrum-Swatch-fill"></div>
             </div>
             <div class="spectrum-Swatch spectrum-Swatch--sizeXS" style="--spectrum-picked-color: rgba(174, 216, 230, 0.3)" tabindex="0">
-              <div class="spectrum-Swatch-fill spectrum-OpacityCheckerboard">
+              <div class="spectrum-OpacityCheckerboard spectrum-Swatch-fill">
               </div>
             </div>
           </div>
@@ -33,7 +33,7 @@ examples:
               <div class="spectrum-Swatch-fill"></div>
             </div>
             <div class="spectrum-Swatch spectrum-Swatch--sizeS" style="--spectrum-picked-color: rgba(174, 216, 230, 0.3)" tabindex="0">
-              <div class="spectrum-Swatch-fill spectrum-OpacityCheckerboard">
+              <div class="spectrum-OpacityCheckerboard spectrum-Swatch-fill">
               </div>
             </div>
           </div>
@@ -46,7 +46,7 @@ examples:
               <div class="spectrum-Swatch-fill"></div>
             </div>
             <div class="spectrum-Swatch spectrum-Swatch--sizeM" style="--spectrum-picked-color: rgba(174, 216, 230, 0.3)" tabindex="0">
-              <div class="spectrum-Swatch-fill spectrum-OpacityCheckerboard">
+              <div class="spectrum-OpacityCheckerboard spectrum-Swatch-fill">
               </div>
             </div>
           </div>
@@ -60,7 +60,7 @@ examples:
               <div class="spectrum-Swatch-fill"></div>
             </div>
             <div class="spectrum-Swatch spectrum-Swatch--sizeL" style="--spectrum-picked-color: rgba(174, 216, 230, 0.3)" tabindex="0">
-              <div class="spectrum-Swatch-fill spectrum-OpacityCheckerboard">
+              <div class="spectrum-OpacityCheckerboard spectrum-Swatch-fill">
               </div>
             </div>
           </div>
@@ -71,21 +71,21 @@ examples:
     name: Rounding - None
     markup: |
       <div class="spectrum-Swatch spectrum-Swatch--sizeM spectrum-Swatch--roundingNone" style="--spectrum-picked-color: rgba(174, 216, 230, 0.25)" tabindex="0">
-        <div class="spectrum-Swatch-fill spectrum-OpacityCheckerboard">
+        <div class="spectrum-OpacityCheckerboard spectrum-Swatch-fill">
         </div>
       </div>
   - id: swatch-roundingfull
     name: Rounding - Full
     markup: |
       <div class="spectrum-Swatch spectrum-Swatch--sizeM spectrum-Swatch--roundingFull" style="--spectrum-picked-color: rgba(174, 216, 230, 0.25)" tabindex="0">
-        <div class="spectrum-Swatch-fill spectrum-OpacityCheckerboard">
+        <div class="spectrum-OpacityCheckerboard spectrum-Swatch-fill>
         </div>
       </div>
   - id: swatch-lightborder
     name: Light border
     markup: |
       <div class="spectrum-Swatch spectrum-Swatch--sizeM spectrum-Swatch--lightBorder" style="--spectrum-picked-color: rgba(174, 216, 230, 0.25)" tabindex="0">
-        <div class="spectrum-Swatch-fill spectrum-OpacityCheckerboard">
+        <div class=" spectrum-OpacityCheckerboard spectrum-Swatch-fill">
         </div>
       </div>
   - id: swatch-noborder
@@ -99,7 +99,7 @@ examples:
     name: Shape - Rectangle
     markup: |
       <div class="spectrum-Swatch spectrum-Swatch--sizeM spectrum-Swatch--rectangle" style="--spectrum-picked-color: rgba(174, 216, 230, 0.25)" tabindex="0">
-        <div class="spectrum-Swatch-fill spectrum-OpacityCheckerboard">
+        <div class=" spectrum-OpacityCheckerboard spectrum-Swatch-fill">
         </div>
       </div>
   - id: swatch-image
@@ -114,7 +114,7 @@ examples:
     name: Gradient
     markup: |
       <div class="spectrum-Swatch spectrum-Swatch--sizeM is-image" tabindex="0">
-        <div class="spectrum-Swatch-fill spectrum-OpacityCheckerboard">
+        <div class=" spectrum-OpacityCheckerboard spectrum-Swatch-fill">
           <div class="spectrum-Swatch-image" style="background: linear-gradient(to right, rgba(0, 0, 0, 1) 0%, rgba(0, 0, 0, 0) 100%);"></div>
         </div>
       </div>

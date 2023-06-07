@@ -31,7 +31,7 @@ examples:
     name: Alpha
     markup: |
       <div class="spectrum-ColorSlider">
-        <div class="spectrum-ColorSlider-checkerboard spectrum-OpacityCheckerboard" role="presentation">
+        <div class="spectrum-OpacityCheckerboard spectrum-ColorSlider-checkerboard" role="presentation">
           <div class="spectrum-ColorSlider-gradient" role="presentation" style="background: linear-gradient(to right, rgba(0, 0, 0, 1) 0%, rgba(0, 0, 0, 0) 100%);"></div>
         </div>
 

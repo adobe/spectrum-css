@@ -9,9 +9,9 @@ examples:
         </div>
       </div>
   - id: opacity-checkerboard
-    name: Opactiy Checkerboard with color overlay
+    name: Opacity Checkerboard with color overlay
     markup: |
-      <div class="spectrum-OpacityCheckerboard-example" >
+      <div class="spectrum-OpacityCheckerboard-example">
         <div class="spectrum-OpacityCheckerboard"></div>
         <div class="spectrum-OpacityCheckerboard-example-color" style="background-color: rgba(255, 0, 0, 0.5);"></div>
       </div>

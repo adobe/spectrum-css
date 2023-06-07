@@ -2,6 +2,6 @@
 
 > Opacity checkerboard
 
-This package is part of the [Spectrum CSSproject](https://github.com/adobe/spectrum-css).
+This package is part of the [Spectrum CSS project](https://github.com/adobe/spectrum-css).
 
-See the [Spectrum CSSdocumentation](https://opensource.adobe.com/spectrum-css/opacitycheckerboard).
+See the [Spectrum CSS documentation](https://opensource.adobe.com/spectrum-css/opacitycheckerboard).
