@@ -211,6 +211,8 @@ governing permissions and limitations under the License.
 }
 
 .spectrum-SideNav-heading {
+  margin-block-start: calc(var(--spectrum-sidenav-heading-top-margin) - var(--spectrum-sidenav-gap));
+  margin-block-end: var(--spectrum-sidenav-heading-bottom-margin);
   padding-inline: var(--mod-sidenav-inline-padding, var(--spectrum-sidenav-inline-padding));
   color: var(--mod-sidenav-header-color, var(--spectrum-sidenav-header-color));
   font-size: var(--mod-sidenav-header-font-size, var(--spectrum-sidenav-header-font-size));
