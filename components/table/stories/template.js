@@ -1,4 +1,4 @@
-import { html, literal, nothing } from 'lit-html/static.js';
+import { html, literal } from 'lit-html/static.js';
 import { classMap } from "lit-html/directives/class-map.js";
 import { when } from "lit-html/directives/when.js";
 import { ifDefined } from "lit-html/directives/if-defined.js";
@@ -70,14 +70,13 @@ export const TableRowItem = ({
         ['is-drop-target']: isDropTarget,
         ...customClasses.reduce((a, c) => ({ ...a, [c]: true }), {})
       })}
-      role=${useDivs ? "row" : nothing}
-      id=${ifDefined(id)}
+      role=${ifDefined(useDivs ? "row" : undefined)}
       data-tier=${ifDefined(tier)}
       ?hidden=${isHidden}
     >
       ${when(showCheckbox, () => html`
         <${cellTag}
-          role=${useDivs ? "cell" : nothing}
+          role=${ifDefined(useDivs ? "cell" : undefined)}
           class="spectrum-Table-cell spectrum-Table-checkboxCell"
         >
           ${Checkbox({
@@ -91,7 +90,7 @@ export const TableRowItem = ({
 
       ${isCollapsible 
         ? html`<${cellTag}
-                  role=${useDivs ? "cell" : nothing}
+                  role=${ifDefined(useDivs ? "cell" : undefined)}
                   class=${classMap({
                     [`${rootClass}-cell`]: true,
                     [`${rootClass}-cell--collapsible`]: true,
@@ -117,7 +116,7 @@ export const TableRowItem = ({
               </${cellTag}>`
 
         : html`<${cellTag}
-                  role=${useDivs ? "cell" : nothing}
+                  role=${ifDefined(useDivs ? "cell" : undefined)}
                   class=${classMap({
                     [`${rootClass}-cell`]: true,
                     [`${rootClass}-cell--thumbnail`]: useThumbnail,
@@ -128,7 +127,7 @@ export const TableRowItem = ({
 
       ${when(!isSectionHeader, () => html`
         <${cellTag}
-          role=${useDivs ? "cell" : nothing}
+          role=${ifDefined(useDivs ? "cell" : undefined)}
           class=${classMap({
             [`${rootClass}-cell`]: true,
             [`${rootClass}-cell--thumbnail`]: useThumbnail,
@@ -136,7 +135,7 @@ export const TableRowItem = ({
           tabindex="0">${getCellContent(1)}</${cellTag}>
 
         <${cellTag}
-          role=${useDivs ? "cell" : nothing}
+          role=${ifDefined(useDivs ? "cell" : undefined)}
           class=${classMap({
             [`${rootClass}-cell`]: true,
           })}
@@ -179,7 +178,7 @@ export const Template = ({
 
   return html`
     <${tableTag}
-      role=${useDivs ? "table" : nothing}
+      role=${ifDefined(useDivs ? "table" : undefined)}
       class=${classMap({
         [rootClass]: true,
         [`${rootClass}--size${size?.toUpperCase()}`]: typeof size !== "undefined",
@@ -191,12 +190,12 @@ export const Template = ({
       id=${ifDefined(id)}
       style="max-width: 800px;"
     >
-      <${theadTag} class="${rootClass}-head" role=${useDivs ? "rowgroup" : nothing}>
-        <${rowTag} role=${useDivs ? "row" : nothing}>
+      <${theadTag} class="${rootClass}-head" role=${ifDefined(useDivs ? "rowgroup" : undefined)}>
+        <${rowTag} role=${ifDefined(useDivs ? "row" : undefined)}>
           ${when(rowItems.some(item => item.showCheckbox === true), () => html`
             <${thTag}
               class="spectrum-Table-headCell spectrum-Table-checkboxCell" 
-              role=${useDivs ? "columnheader" : nothing}
+              role=${ifDefined(useDivs ? "columnheader" : undefined)}
             >
               ${Checkbox({
                 size,
@@ -209,7 +208,7 @@ export const Template = ({
           )}
           <${thTag}
             class="${rootClass}-headCell is-sortable is-sorted-desc"
-            role=${useDivs ? "columnheader" : nothing}
+            role=${ifDefined(useDivs ? "columnheader" : undefined)}
             aria-sort="descending"
             tabindex="0"
           >
@@ -227,7 +226,7 @@ export const Template = ({
           </${thTag}>
           <${thTag}
             class="${rootClass}-headCell is-sortable"
-            role=${useDivs ? "columnheader" : nothing}
+            role=${ifDefined(useDivs ? "columnheader" : undefined)}
             aria-sort="none"
           >
             ${Icon({
@@ -239,7 +238,7 @@ export const Template = ({
           </${thTag}>
           <${thTag}
             class="${rootClass}-headCell"
-            role=${useDivs ? "columnheader" : nothing}>Column Title</${thTag}>
+            role=${ifDefined(useDivs ? "columnheader" : undefined)}>Column Title</${thTag}>
         </${rowTag}>
       </${theadTag}>
       <${tbodyTag}
@@ -247,7 +246,7 @@ export const Template = ({
           [`${rootClass}-body`]: true,
           ['is-drop-target']: isDropTarget,
         })}
-        role=${useDivs ? "rowgroup" : nothing}
+        role=${ifDefined(useDivs ? "rowgroup" : undefined)}
       >
         ${rowItems.map((item) =>
           TableRowItem({

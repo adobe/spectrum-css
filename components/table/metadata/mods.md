@@ -48,6 +48,7 @@
 | `--mod-table-row-active-color` |
 | `--mod-table-row-background-color` |
 | `--mod-table-row-background-color--quiet` |
+| `--mod-table-row-background-color-hover` |
 | `--mod-table-row-bottom-to-text` |
 | `--mod-table-row-bottom-to-text--compact` |
 | `--mod-table-row-bottom-to-text--spacious` |
@@ -56,7 +57,6 @@
 | `--mod-table-row-checkbox-block-spacing--spacious` |
 | `--mod-table-row-font-size` |
 | `--mod-table-row-font-weight` |
-| `--mod-table-row-hover-color` |
 | `--mod-table-row-line-height` |
 | `--mod-table-row-text-color` |
 | `--mod-table-row-top-to-text` |

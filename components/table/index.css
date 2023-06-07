@@ -707,11 +707,17 @@ governing permissions and limitations under the License.
   }
 
   &.spectrum-Table-cell {
-    padding-block: var(--mod-table-row-checkbox-block-spacing, var(--spectrum-table-row-checkbox-block-spacing));
+    padding-block: 0;
+    .spectrum-Checkbox {
+      margin-block: var(--mod-table-row-checkbox-block-spacing, var(--spectrum-table-row-checkbox-block-spacing));
+    }
   }
 
   &.spectrum-Table-headCell {
-    padding-block: var(--mod-table-header-checkbox-block-spacing, var(--spectrum-table-header-checkbox-block-spacing));
+    padding-block: 0;
+    .spectrum-Checkbox {
+      margin-block: var(--mod-table-header-checkbox-block-spacing, var(--spectrum-table-header-checkbox-block-spacing));
+    }
   }
 }
 
