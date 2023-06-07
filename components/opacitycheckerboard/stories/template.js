@@ -17,7 +17,7 @@ export const Template = ({
 	...globals
 }) => {
 	return html`
-		<div class="${rootClass}-example">
+		<div style="inline-size: 100px; block-size: 100px;">
 			<div
 				class=${classMap({
 					[rootClass]: true,
@@ -27,8 +27,7 @@ export const Template = ({
 			></div>
 			${when(hasColorOverlay, () => {
 				return html` <div
-					class="${rootClass}-example-color"
-					style="background-color:${overlayColor}"
+					style="background-color:${overlayColor}; inline-size: 100%; block-size: 100%; position: relative; inset-block: -100%"
 				></div>`;
 			})}
 		</div>
