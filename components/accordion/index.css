@@ -317,17 +317,17 @@ governing permissions and limitations under the License.
   display: list-item;
   margin: 0;
 
-	min-height: var(
+	min-block-size: var(
 		--mod-accordion-item-height,
 		var(--spectrum-accordion-item-height)
 	);
-	min-width: var(
+	min-inline-size: var(
 		--mod-accordion-item-width,
 		var(--spectrum-accordion-item-width)
 	);
 
 	&:first-child {
-		border-block-start: 0px solid transparent;
+		border-block-start: 1px solid transparent;
 		border-color: var(
 			--mod-accordion-divider-color,
 			var(--spectrum-accordion-divider-color)
@@ -338,7 +338,7 @@ governing permissions and limitations under the License.
 		);
 	}
 
-	border-block-end: 0px solid transparent;
+	border-block-end: 1px solid transparent;
 	border-color: var(
 		--mod-accordion-divider-color,
 		var(--spectrum-accordion-divider-color)
@@ -356,11 +356,11 @@ governing permissions and limitations under the License.
 }
 
 .spectrum-Accordion-item-iconContainer {
-	width: var(
+	inline-size: var(
 		--mod-accordion-disclosure-indicator-height,
 		var(--spectrum-accordion-disclosure-indicator-height)
 	);
-	height: var(
+	block-size: var(
 		--mod-accordion-disclosure-indicator-height,
 		var(--spectrum-accordion-disclosure-indicator-height)
 	);
@@ -541,11 +541,12 @@ governing permissions and limitations under the License.
 			--mod-accordion-corner-radius,
 			var(--spectrum-accordion-corner-radius)
 		);
-		box-shadow: 0 0 0
-			var(
+
+		outline: var(
 				--mod-accordion-focus-indicator-thickness,
 				var(--spectrum-accordion-focus-indicator-thickness)
 			)
+			solid
 			var(
 				--mod-accordion-focus-indicator-color,
 				var(--spectrum-accordion-focus-indicator-color)
@@ -558,9 +559,11 @@ governing permissions and limitations under the License.
 			--mod-accordion-item-header-color-key-focus,
 			var(--spectrum-accordion-item-header-color-key-focus)
 		);
-		margin: var(
-			--mod-accordion-focus-indicator-gap,
-			var(--spectrum-accordion-focus-indicator-gap)
+		outline-offset: calc(
+			var(
+					--mod-accordion-focus-indicator-gap,
+					var(--spectrum-accordion-focus-indicator-gap)
+				) * -1
 		);
 	}
 
