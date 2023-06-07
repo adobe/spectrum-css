@@ -581,13 +581,11 @@ governing permissions and limitations under the License.
 
 .spectrum-Accordion-item {
 	&.is-open {
-		.spectrum-Accordion-itemHeader {
-			&:hover {
-				background-color: var(
-					--mod-accordion-background-color-hover,
-					var(--spectrum-accordion-background-color-hover)
-				);
-			}
+		.spectrum-Accordion-itemHeader:hover {
+      background-color: var(
+        --mod-accordion-background-color-hover,
+        var(--spectrum-accordion-background-color-hover)
+      );
 		}
 	}
 }
@@ -622,7 +620,7 @@ governing permissions and limitations under the License.
 
 @media (forced-colors: active) {
 	.spectrum-Accordion-itemHeader {
-		&:after {
+		&::after {
 			/* make sure focus ring renders */
 			forced-color-adjust: none;
 		}
@@ -631,18 +629,16 @@ governing permissions and limitations under the License.
 
 .spectrum-Accordion-item {
 	&.is-open {
-		> .spectrum-Accordion-itemHeading {
-			> .spectrum-Accordion-item-iconContainer {
-				> .spectrum-Accordion-itemIndicator {
-					transform: logical rotate(90deg);
-				}
-			}
+		> .spectrum-Accordion-itemHeading > .spectrum-Accordion-item-iconContainer > .spectrum-Accordion-itemIndicator {
+      /* stylelint-disable declaration-property-value-no-unknown */
+      transform: logical rotate(90deg);
+      /* stylelint-enable declaration-property-value-no-unknown */
 		}
 
-		> .spectrum-Accordion-item-iconContainer {
-			> .spectrum-Accordion-itemIndicator {
-				transform: logical rotate(90deg);
-			}
+		> .spectrum-Accordion-item-iconContainer > .spectrum-Accordion-itemIndicator {
+      /* stylelint-disable declaration-property-value-no-unknown */
+      transform: logical rotate(90deg);
+      /* stylelint-enable declaration-property-value-no-unknown */
 		}
 
 		> .spectrum-Accordion-itemContent {
