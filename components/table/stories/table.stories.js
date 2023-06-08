@@ -150,7 +150,11 @@ MultiSelect.args = {
 			showCheckbox: true,
 		},
 		{
-			cellContent: "Table Row Echo",
+			cellContent: "Echo",
+			showCheckbox: true,
+		},
+		{
+			cellContent: "Foxtrot",
 			showCheckbox: true,
 		},
 	],

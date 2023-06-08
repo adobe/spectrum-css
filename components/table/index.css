@@ -373,7 +373,8 @@ governing permissions and limitations under the License.
   line-height: var(--mod-table-header-line-height, var(--spectrum-table-row-line-height));
   text-transform: var(--mod-table-header-text-transform, none);
 
-  min-block-size: var(--mod-table-min-header-height, var(--spectrum-table-min-header-height));
+  /* block-size functions as min-block-size for display table-cell. */
+  block-size: var(--mod-table-min-header-height, var(--spectrum-table-min-header-height));
   padding-block: var(--mod-table-header-top-to-text, var(--spectrum-table-header-top-to-text)) var(--mod-table-header-bottom-to-text, var(--spectrum-table-header-bottom-to-text));
   padding-inline: var(--mod-table-cell-inline-space, var(--spectrum-table-cell-inline-space));
 
@@ -527,19 +528,20 @@ governing permissions and limitations under the License.
   font-weight: var(--mod-table-row-font-weight, var(--spectrum-table-row-font-weight));
   line-height: var(--mod-table-row-line-height, var(--spectrum-table-row-line-height));
   vertical-align: var(--mod-table-default-vertical-align, var(--spectrum-table-default-vertical-align));
+  color: var(--highcontrast-table-row-text-color, var(--mod-table-row-text-color, var(--spectrum-table-row-text-color)));
 
-  padding-block: var(--mod-table-row-top-to-text, var(--spectrum-table-row-top-to-text)) var(--mod-table-row-bottom-to-text, var(--spectrum-table-row-bottom-to-text));
+  /* block-size functions as min-block-size for display table-cell. */
+  block-size: var(--mod-table-min-row-height, var(--spectrum-table-min-row-height));
+
+  padding-block-start: calc(
+    var(--mod-table-row-top-to-text, var(--spectrum-table-row-top-to-text)) -
+    var(--mod-table-border-width, var(--spectrum-table-border-width))
+  );
+  padding-block-end: var(--mod-table-row-bottom-to-text, var(--spectrum-table-row-bottom-to-text));
   padding-inline: calc(
     var(--mod-table-edge-to-content, var(--spectrum-table-edge-to-content)) - 
     var(--mod-table-outer-border-inline-width, var(--spectrum-table-outer-border-inline-width))
   );
-  /* Subtract top/bottom padding for this value to be correct in this implementation */
-  min-block-size: calc(
-    var(--spectrum-table-min-row-height) - 
-    (var(--mod-table-row-top-to-text, var(--spectrum-table-row-top-to-text)) + var(--mod-table-row-bottom-to-text, var(--spectrum-table-row-bottom-to-text)))
-  );
-
-  color: var(--highcontrast-table-row-text-color, var(--mod-table-row-text-color, var(--spectrum-table-row-text-color)));
 }
 
 /* Focus Indicator (Ring) */
@@ -709,14 +711,22 @@ governing permissions and limitations under the License.
   &.spectrum-Table-cell {
     padding-block: 0;
     .spectrum-Checkbox {
-      margin-block: var(--mod-table-row-checkbox-block-spacing, var(--spectrum-table-row-checkbox-block-spacing));
+      margin-block-start: calc(
+        var(--mod-table-row-checkbox-block-spacing, var(--spectrum-table-row-checkbox-block-spacing)) -
+        var(--mod-table-border-width, var(--spectrum-table-border-width))
+      );
+      margin-block-end: var(--mod-table-row-checkbox-block-spacing, var(--spectrum-table-row-checkbox-block-spacing));
     }
   }
 
   &.spectrum-Table-headCell {
     padding-block: 0;
     .spectrum-Checkbox {
-      margin-block: var(--mod-table-header-checkbox-block-spacing, var(--spectrum-table-header-checkbox-block-spacing));
+      margin-block-start: calc(
+        var(--mod-table-header-checkbox-block-spacing, var(--spectrum-table-header-checkbox-block-spacing)) -
+        var(--mod-table-border-width, var(--spectrum-table-border-width))
+      );
+      margin-block-end: var(--mod-table-header-checkbox-block-spacing, var(--spectrum-table-header-checkbox-block-spacing));
     }
   }
 }
@@ -790,7 +800,7 @@ div.spectrum-Table-headCell {
 
 .spectrum-Table-cell--collapsible {
   padding-inline-start: calc(var(--spectrum-table-row-tier, 0px) * var(--spectrum-table-collapsible-tier-indent));
-  padding-block: 0px;
+  padding-block: 0;
 }
 
 .spectrum-Table-collapseInner {
@@ -801,7 +811,11 @@ div.spectrum-Table-headCell {
   align-items: flex-start;
 
   .spectrum-Table-collapseContent {
-    padding-block: var(--mod-table-row-top-to-text, var(--spectrum-table-row-top-to-text)) var(--mod-table-row-bottom-to-text, var(--spectrum-table-row-bottom-to-text));
+    padding-block-start: calc(
+      var(--mod-table-row-top-to-text, var(--spectrum-table-row-top-to-text)) -
+      var(--mod-table-border-width, var(--spectrum-table-border-width))
+    );
+    padding-block-end: var(--mod-table-row-bottom-to-text, var(--spectrum-table-row-bottom-to-text));
   }
 }
 
