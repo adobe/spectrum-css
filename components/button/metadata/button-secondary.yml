@@ -20,7 +20,7 @@ sections:
       ### Icon Only
       Add the `.spectrum-Button--iconOnly` class to apply the correct styling when an icon is used without a label.
       Provide an `aria-label` on the button itself when using this variant for accessibility.
-      
+
       ### T-shirt sizing
       Button now supports t-shirt sizing and requires that you specify the size of button by adding a `.spectrum-Button--size*` class.
 

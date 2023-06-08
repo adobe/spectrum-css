@@ -1,0 +1,21 @@
+.button {
+	border-width: 2px;
+}
+
+.button--cta {
+	background-color: blue;
+}
+
+.button--cta:hover {
+	background-color: darkblue;
+}
+
+.light .button--cta .button-icon,
+.lightest .button--cta .button-icon {
+	color: black;
+}
+
+.dark .button--cta .button-icon,
+.darkest .button--cta .button-icon {
+	color: white;
+}

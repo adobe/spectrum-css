@@ -12,23 +12,23 @@ governing permissions and limitations under the License.
 /* eslint-disable no-unused-vars */
 /* global document, window, loadIcons */
 
-'use strict';
+"use strict";
 
-loadIcons('components/icon/spectrum-css-icons.svg');
-loadIcons('img/spectrum-icons.svg');
+loadIcons("components/icon/spectrum-css-icons.svg");
+loadIcons("img/spectrum-icons.svg");
 
 // Show and hide code samples
 function toggleMarkupVisibility(event) {
-  event.preventDefault();
-  var exampleMarkup = event.target.closest('.spectrum-CSSExample-markup');
-  var style = window.getComputedStyle(exampleMarkup);
-  var isOpen = exampleMarkup.classList.contains('is-open');
-  event.target.innerHTML = isOpen ? 'Show markup' : 'Hide markup';
-  exampleMarkup.classList.toggle('is-open');
+	event.preventDefault();
+	var exampleMarkup = event.target.closest(".spectrum-CSSExample-markup");
+	var style = window.getComputedStyle(exampleMarkup);
+	var isOpen = exampleMarkup.classList.contains("is-open");
+	event.target.innerHTML = isOpen ? "Show markup" : "Hide markup";
+	exampleMarkup.classList.toggle("is-open");
 }
 
-document.addEventListener('click', function(event) {
-  if (event.target.classList.contains('js-markup-toggle')) {
-    toggleMarkupVisibility(event);
-  }
+document.addEventListener("click", function (event) {
+	if (event.target.classList.contains("js-markup-toggle")) {
+		toggleMarkupVisibility(event);
+	}
 });

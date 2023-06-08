@@ -11,270 +11,290 @@ governing permissions and limitations under the License.
 */
 
 .spectrum-Steplist {
-  /* The width of a step */
-  --spectrum-steplist-step-width: 80px;
+	/* The width of a step */
+	--spectrum-steplist-step-width: 80px;
 
-  /* The diameter of the marker */
-  --spectrum-steplist-marker-diameter: 8px;
+	/* The diameter of the marker */
+	--spectrum-steplist-marker-diameter: 8px;
 
-  /* The width of the hit area */
-  --spectrum-steplist-marker-hitArea: 20px;
+	/* The width of the hit area */
+	--spectrum-steplist-marker-hitArea: 20px;
 
-  /* The height of the line */
-  --spectrum-steplist-segment-height: 2px;
+	/* The height of the line */
+	--spectrum-steplist-segment-height: 2px;
 
-  /* This gives enough space for one line of text */
-  --spectrum-steplist-topPadding: 22px;
-  --spectrum-steplist-small-topPadding: 11px;
+	/* This gives enough space for one line of text */
+	--spectrum-steplist-topPadding: 22px;
+	--spectrum-steplist-small-topPadding: 11px;
 
-  /* This gives enough space for the longest possible label */
-  --spectrum-steplist-sidePadding: 60px;
+	/* This gives enough space for the longest possible label */
+	--spectrum-steplist-sidePadding: 60px;
 
-  /* Offset from the BOTTOM of the steplist */
-  --spectrum-steplist-label-labelOffset: 10px;
+	/* Offset from the BOTTOM of the steplist */
+	--spectrum-steplist-label-labelOffset: 10px;
 
-  /* Font size of the label */
-  --spectrum-steplist-label-text-size: 12px;
+	/* Font size of the label */
+	--spectrum-steplist-label-text-size: 12px;
 }
 
 .spectrum-Steplist {
-  /* Contain child elements with positive z-index */
-  z-index: 0;
-  position: relative;
+	/* Contain child elements with positive z-index */
+	z-index: 0;
+	position: relative;
 
-  display: block;
-  vertical-align: top;
-  margin: 0;
-  padding-block-start: var(--spectrum-steplist-topPadding);
-  padding-inline-start: var(--spectrum-steplist-sidePadding);
-  padding-inline-end: var(--spectrum-steplist-sidePadding);
+	display: block;
+	vertical-align: top;
+	margin: 0;
+	padding-block-start: var(--spectrum-steplist-topPadding);
+	padding-inline-start: var(--spectrum-steplist-sidePadding);
+	padding-inline-end: var(--spectrum-steplist-sidePadding);
 
-  text-align: center;
-  white-space: nowrap;
-  font-size: 0; /* To remove html whitespace between inline elements */
-  line-height: 16px; /* in case the container changes it */
+	text-align: center;
+	white-space: nowrap;
+	font-size: 0; /* To remove html whitespace between inline elements */
+	line-height: 16px; /* in case the container changes it */
 }
 
 .spectrum-Steplist--interactive {
-  .spectrum-Steplist-label,
-  .spectrum-Steplist-markerContainer {
-    /* Show cursor on hit zone when clickable */
-    cursor: pointer;
-  }
+	.spectrum-Steplist-label,
+	.spectrum-Steplist-markerContainer {
+		/* Show cursor on hit zone when clickable */
+		cursor: pointer;
+	}
 }
 
 /* Small (w/o label or tooltip) */
 .spectrum-Steplist--small {
-  padding-block: var(--spectrum-steplist-small-topPadding);
-  padding-inline: 0;
+	padding-block: var(--spectrum-steplist-small-topPadding);
+	padding-inline: 0;
 
-  .spectrum-Steplist-item {
-    padding-block: 0;
-    padding-inline: 0 40px;
-    inline-size: 80px;
+	.spectrum-Steplist-item {
+		padding-block: 0;
+		padding-inline: 0 40px;
+		inline-size: 80px;
 
-    /* Disable Label */
-    .spectrum-Steplist-label {
-      display: none;
-    }
+		/* Disable Label */
+		.spectrum-Steplist-label {
+			display: none;
+		}
 
-    &:first-child, &:last-child {
-      inline-size: 20px;
-    }
+		&:first-child,
+		&:last-child {
+			inline-size: 20px;
+		}
 
-    /* Disable first line */
-    &:first-child {
-      .spectrum-Steplist-markerContainer {
-        margin-inline-start: -10px;
-      }
-    }
+		/* Disable first line */
+		&:first-child {
+			.spectrum-Steplist-markerContainer {
+				margin-inline-start: -10px;
+			}
+		}
 
-    &:last-child {
-      .spectrum-Steplist-markerContainer {
-        margin-inline-end: -10px;
-      }
-    }
-  }
+		&:last-child {
+			.spectrum-Steplist-markerContainer {
+				margin-inline-end: -10px;
+			}
+		}
+	}
 }
 
 .spectrum-Steplist-item {
-  outline: none;
-  position: relative;
-  display: inline-block;
-  margin: 0;
+	outline: none;
+	position: relative;
+	display: inline-block;
+	margin: 0;
 
-  /* Don't let tooltips mess up alignment */
-  vertical-align: bottom;
+	/* Don't let tooltips mess up alignment */
+	vertical-align: bottom;
 
-  box-sizing: content-box;
-  inline-size: var(--spectrum-steplist-step-width);
-  padding-block: 0;
-  padding-inline: 0 calc(var(--spectrum-steplist-step-width) / 2);
+	box-sizing: content-box;
+	inline-size: var(--spectrum-steplist-step-width);
+	padding-block: 0;
+	padding-inline: 0 calc(var(--spectrum-steplist-step-width) / 2);
 
-  /* Completed State */
-  &.is-complete {
-    .spectrum-Steplist-marker {
-      border: none;
-    }
+	/* Completed State */
+	&.is-complete {
+		.spectrum-Steplist-marker {
+			border: none;
+		}
 
-    /* The next step's line should be solid */
-    & + .spectrum-Steplist-item .spectrum-Steplist-segment {
-      border-block-end-width: var(--spectrum-steplist-segment-height);
-      border-block-end-style: solid;
-    }
-  }
+		/* The next step's line should be solid */
+		& + .spectrum-Steplist-item .spectrum-Steplist-segment {
+			border-block-end-width: var(--spectrum-steplist-segment-height);
+			border-block-end-style: solid;
+		}
+	}
 
-  /* Selected state */
-  &.is-selected {
-    /* Focus */
-    &:focus,
-    &.is-focused,
-    *:focus {
-      outline: none;
-    }
-    .spectrum-Steplist-marker {
-      border: none;
-    }
-  }
+	/* Selected state */
+	&.is-selected {
+		/* Focus */
+		&:focus,
+		&.is-focused,
+		*:focus {
+			outline: none;
+		}
+		.spectrum-Steplist-marker {
+			border: none;
+		}
+	}
 }
 
 .spectrum-Steplist-label {
-  position: absolute;
-  inset-inline-start: 50%;
-  inset-block-end: var(--spectrum-steplist-label-labelOffset);
+	position: absolute;
+	inset-inline-start: 50%;
+	inset-block-end: var(--spectrum-steplist-label-labelOffset);
 
-  display: block;
-  inline-size: calc(var(--spectrum-steplist-step-width) * 1.5);
+	display: block;
+	inline-size: calc(var(--spectrum-steplist-step-width) * 1.5);
 
-  font-size: var(--spectrum-steplist-label-text-size);
-  white-space: normal;
+	font-size: var(--spectrum-steplist-label-text-size);
+	white-space: normal;
 
-  transform: translateX(-50%);
+	transform: translateX(-50%);
 
-  &:dir(rtl) {
-    transform: translateX(50%);
-  }
+	&:dir(rtl) {
+		transform: translateX(50%);
+	}
 }
 
 .spectrum-Steplist-markerContainer {
-  display: block;
+	display: block;
 
-  z-index: 2;
-  position: absolute;
-  inset-block-end: -10px;
-  inset-inline-start: 50%;
+	z-index: 2;
+	position: absolute;
+	inset-block-end: -10px;
+	inset-inline-start: 50%;
 
-  inline-size: var(--spectrum-steplist-marker-hitArea);
-  block-size: var(--spectrum-steplist-marker-hitArea);
+	inline-size: var(--spectrum-steplist-marker-hitArea);
+	block-size: var(--spectrum-steplist-marker-hitArea);
 
-  margin-inline-start: calc(-1 * calc(var(--spectrum-steplist-marker-hitArea) / 2));
+	margin-inline-start: calc(
+		-1 * calc(var(--spectrum-steplist-marker-hitArea) / 2)
+	);
 }
 
 /* Circle step marker */
 .spectrum-Steplist-marker {
-  box-sizing: border-box; /* So we can stroke nicely */
-  display: block;
+	box-sizing: border-box; /* So we can stroke nicely */
+	display: block;
 
-  position: absolute;
-  inset-block-start: 50%;
-  inset-inline-start: 50%;
-  margin-block-start: calc(-1 * calc(var(--spectrum-steplist-marker-diameter) / 2));
-  margin-inline-start: calc(-1 * calc(var(--spectrum-steplist-marker-diameter) / 2));
+	position: absolute;
+	inset-block-start: 50%;
+	inset-inline-start: 50%;
+	margin-block-start: calc(
+		-1 * calc(var(--spectrum-steplist-marker-diameter) / 2)
+	);
+	margin-inline-start: calc(
+		-1 * calc(var(--spectrum-steplist-marker-diameter) / 2)
+	);
 
-  inline-size: var(--spectrum-steplist-marker-diameter);
-  block-size: var(--spectrum-steplist-marker-diameter);
+	inline-size: var(--spectrum-steplist-marker-diameter);
+	block-size: var(--spectrum-steplist-marker-diameter);
 
-  border-radius: var(--spectrum-steplist-marker-diameter);
+	border-radius: var(--spectrum-steplist-marker-diameter);
 
-  border: 2px solid;
-  border-color: transparent;
-  background: transparent;
+	border: 2px solid;
+	border-color: transparent;
+	background: transparent;
 }
 
 /* Step line */
 .spectrum-Steplist-segment {
-  display: block;
-  z-index: 1;
-  position: absolute;
-  inset-inline-end: calc(var(--spectrum-steplist-step-width) - calc(var(--spectrum-steplist-marker-diameter) * 1.5));
+	display: block;
+	z-index: 1;
+	position: absolute;
+	inset-inline-end: calc(
+		var(--spectrum-steplist-step-width) -
+			calc(var(--spectrum-steplist-marker-diameter) * 1.5)
+	);
 
-  box-sizing: content-box;
-  inline-size: calc(calc(var(--spectrum-steplist-step-width) * 1.5) - calc(var(--spectrum-steplist-marker-diameter) * 2));
-  inset-block-end: calc(-1 * calc(var(--spectrum-steplist-segment-height) / 2));
+	box-sizing: content-box;
+	inline-size: calc(
+		calc(var(--spectrum-steplist-step-width) * 1.5) -
+			calc(var(--spectrum-steplist-marker-diameter) * 2)
+	);
+	inset-block-end: calc(-1 * calc(var(--spectrum-steplist-segment-height) / 2));
 
-  /* Default is dashed */
-  border-block-end-width: var(--spectrum-steplist-segment-height);
-  border-block-end-style: dashed;
+	/* Default is dashed */
+	border-block-end-width: var(--spectrum-steplist-segment-height);
+	border-block-end-style: dashed;
 }
 
 /* First step overrides */
 .spectrum-Steplist-item:first-child {
-  .spectrum-Steplist-markerContainer {
-    inset-inline-start: 0;
-  }
+	.spectrum-Steplist-markerContainer {
+		inset-inline-start: 0;
+	}
 
-  .spectrum-Steplist-label {
-    inset-inline-start: 0;
-  }
+	.spectrum-Steplist-label {
+		inset-inline-start: 0;
+	}
 
-  .spectrum-Steplist-segment {
-    /* Not visible for first step */
-    display: none;
-  }
+	.spectrum-Steplist-segment {
+		/* Not visible for first step */
+		display: none;
+	}
 }
 
 /* Last step overrides */
 .spectrum-Steplist-item:last-child {
-  .spectrum-Steplist-label {
-    inset-inline-start: auto;
-    inset-inline-end: 0;
+	.spectrum-Steplist-label {
+		inset-inline-start: auto;
+		inset-inline-end: 0;
 
-    transform: translateX(50%);
+		transform: translateX(50%);
 
-    &:dir(rtl) {
-      transform: translateX(-50%);
-    }
-  }
+		&:dir(rtl) {
+			transform: translateX(-50%);
+		}
+	}
 
-  .spectrum-Steplist-markerContainer {
-    inset-inline-start: auto;
-    inset-inline-end: 0;
+	.spectrum-Steplist-markerContainer {
+		inset-inline-start: auto;
+		inset-inline-end: 0;
 
-    margin-inline-start: 0;
-    margin-inline-end: calc(-1 * calc(var(--spectrum-steplist-marker-hitArea) / 2));
-  }
+		margin-inline-start: 0;
+		margin-inline-end: calc(
+			-1 * calc(var(--spectrum-steplist-marker-hitArea) / 2)
+		);
+	}
 
-  .spectrum-Steplist-segment {
-    inset-inline-end: var(--spectrum-steplist-marker-diameter);
-    inset-inline-start: auto;
-  }
+	.spectrum-Steplist-segment {
+		inset-inline-end: var(--spectrum-steplist-marker-diameter);
+		inset-inline-start: auto;
+	}
 }
 
 .spectrum-Steplist-item:first-child,
 .spectrum-Steplist-item:last-child {
-  inline-size: calc(calc(var(--spectrum-steplist-step-width) / 2) - calc(var(--spectrum-steplist-marker-diameter) * 2.5));
+	inline-size: calc(
+		calc(var(--spectrum-steplist-step-width) / 2) -
+			calc(var(--spectrum-steplist-marker-diameter) * 2.5)
+	);
 }
 
 /* Single step */
 .spectrum-Steplist-item:only-child {
-  .spectrum-Steplist-label {
-    /* Be centered */
-    inset-inline-start: 50%;
+	.spectrum-Steplist-label {
+		/* Be centered */
+		inset-inline-start: 50%;
 
-    /* Override last-child bits */
-    transform: translate(-50%);
+		/* Override last-child bits */
+		transform: translate(-50%);
 
-    &:dir(rtl) {
-      transform: translateX(50%);
-    }
-  }
+		&:dir(rtl) {
+			transform: translateX(50%);
+		}
+	}
 
-  .spectrum-Steplist-markerContainer {
-    /* Be centered */
-    inset-inline-start: 50%;
+	.spectrum-Steplist-markerContainer {
+		/* Be centered */
+		inset-inline-start: 50%;
 
-    /* Override last-child bits */
-    margin-inline-end: 0;
-    margin-inline-start: calc(-1 * calc(var(--spectrum-steplist-marker-hitArea) / 2));
-  }
+		/* Override last-child bits */
+		margin-inline-end: 0;
+		margin-inline-start: calc(
+			-1 * calc(var(--spectrum-steplist-marker-hitArea) / 2)
+		);
+	}
 }

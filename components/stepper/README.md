@@ -1,4 +1,5 @@
 # @spectrum-css/stepper
+
 > The Spectrum CSS stepper component
 
 This package is part of the [Spectrum CSS project](https://github.com/adobe/spectrum-css).

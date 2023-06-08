@@ -1,6 +1,6 @@
 name: Button - Static Color
 status: Verified
-description: 'When a button needs to be placed on top of a colored background or a visual, use the over background button. In order to implement this button, you must set the CSS color property of a parent element to the same value as the background the button is placed against.'
+description: "When a button needs to be placed on top of a colored background or a visual, use the over background button. In order to implement this button, you must set the CSS color property of a parent element to the same value as the background the button is placed against."
 SpectrumSiteSlug: https://spectrum.adobe.com/page/button/#Over-background
 sections:
   - name: Custom Properties API
@@ -20,7 +20,7 @@ sections:
       ### Icon Only
       Add the `.spectrum-Button--iconOnly` class to apply the correct styling when an icon is used without a label.
       Provide an `aria-label` on the button itself when using this variant for accessibility.
-      
+
       ### T-shirt sizing
       Button now supports t-shirt sizing and requires that you specify the size of button by adding a `.spectrum-Button--size*` class.
 

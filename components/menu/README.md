@@ -1,4 +1,5 @@
 # @spectrum-css/menu
+
 > The Spectrum CSS menu component
 
 This package is part of the [Spectrum CSS project](https://github.com/adobe/spectrum-css).

@@ -108,7 +108,7 @@ examples:
   - id: tooltip
     name: Directions
     status: Verified
-    description: 'Tooltips can be top, top left, top right, top start, top end, bottom, bottom left, bottom right, bottom start, bottom end, left, left top, left bottom, start, start top, start bottom, right, right top, right bottom, end, end top, end bottom. The default placement value is at the top.'
+    description: "Tooltips can be top, top left, top right, top start, top end, bottom, bottom left, bottom right, bottom start, bottom end, left, left top, left bottom, start, start top, start bottom, right, right top, right bottom, end, end top, end bottom. The default placement value is at the top."
     markup: |
       <div class="spectrum-Examples">
         <div class="spectrum-Examples-item">

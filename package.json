@@ -38,8 +38,10 @@
     "predev": "yarn build:components",
     "dev": "NODE_ENV=development BROWSERSYNC_OPEN=true gulp dev",
     "docs:mod": "node tasks/mod-extractor.js",
+    "postdocs:mod": "prettier --cache --write components/*/metadata/*.md > /dev/null",
     "lint:components": "node ./tasks/packageLint.js",
-    "mv:preview": "rimraf dist/preview && mv -f tools/preview/storybook-static dist/preview",
+    "lint:styles": "stylelint",
+    "mv:preview": "rimraf dist/preview && mv tools/preview/storybook-static dist/preview",
     "new": "nx run @spectrum-css/generator:new",
     "precommit": "lint-staged",
     "prepare": "husky install",
@@ -58,7 +60,8 @@
   },
   "workspaces": [
     "components/*",
-    "tools/*"
+    "tools/*",
+    "plugins/*"
   ],
   "devDependencies": {
     "@adobe/focus-ring-polyfill": "^0.1.5",
@@ -76,10 +79,14 @@
     "markdown-it": "^12.3.2",
     "npm-run-all": "^4.1.5",
     "nx": "^16.2.2",
+    "prettier": "^2.8.8",
     "prettier-package-json": "^2.8.0",
     "prismjs": "^1.23.0",
     "rimraf": "^5.0.1",
     "semver": "^7.5.1",
+    "stylelint": "^15.5.0",
+    "stylelint-config-standard": "^33.0.0",
+    "stylelint-use-logical": "^2.1.0",
     "through2": "^3.0.1",
     "yargs": "^17.7.2"
   },
