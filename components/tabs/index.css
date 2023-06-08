@@ -46,7 +46,7 @@ governing permissions and limitations under the License.
     replace: --spectrum-tabs-$1;
   }
 }
-/* stylelint-enable/* stylelint-disable-line declaration-no-important */ */
+/* stylelint-enable */
 
 .spectrum-Tabs {
   --spectrum-tabs-compact-item-height: calc(var(--spectrum-tabs-compact-textonly-height) - var(--spectrum-tabs-compact-textonly-divider-size));
