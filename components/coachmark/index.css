@@ -132,6 +132,22 @@ governing permissions and limitations under the License.
 }
 
 .spectrum-CoachMarkPopover {
+	--spectrum-coachmark-background-color: rgba(255, 255, 255);
+	--spectrum-coachmark-border-color: rgba(177, 177, 177);
+	--spectrum-coachmark-shadow-color: rgba(0, 0, 0, 0.15);
+
+	--spectrum-coachmark-min-width: 272px;
+	--spectrum-coachmark-max-width: 400px;
+	--spectrum-coachmark-border-radius: 4px;
+	--spectrum-coachmark-border-size: 1px;
+	--spectrum-coachmark-padding-x: 24px;
+	--spectrum-coachmark-padding-y: 24px;
+
+	--spectrum-coachmark-title-text-size: 16px;
+	--spectrum-coachmark-title-text-font-weight: 700;
+	--spectrum-coachmark-title-text-line-height: 1.3;
+	--spectrum-coachmark-content-margin-bottom: 16px;
+	--spectrum-coachmark-content-text-color: rgba(34, 34, 34);
 }
 /* CoachMark Popover */
 .spectrum-CoachMarkPopover {
