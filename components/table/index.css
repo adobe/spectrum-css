@@ -84,6 +84,7 @@ governing permissions and limitations under the License.
   --spectrum-table-summary-row-font-weight: var(--spectrum-bold-font-weight);
   --spectrum-table-summary-row-background-color: var(--spectrum-gray-200);
 
+  --spectrum-table-section-header-min-height: var(--spectrum-table-section-header-row-height-medium);
   --spectrum-table-section-header-block-start-spacing: var(--spectrum-component-top-to-text-100);
   --spectrum-table-section-header-block-end-spacing: var(--spectrum-component-bottom-to-text-100);
 
@@ -125,6 +126,7 @@ governing permissions and limitations under the License.
   --spectrum-table-row-checkbox-block-spacing: var(--spectrum-table-row-checkbox-to-top-small-regular);
 
   /* Summary Row and Section Header Row */
+  --spectrum-table-section-header-min-height: var(--spectrum-table-section-header-row-height-small);
   --spectrum-table-section-header-block-start-spacing: var(--spectrum-component-top-to-text-75);
   --spectrum-table-section-header-block-end-spacing: var(--spectrum-component-bottom-to-text-75);
 
@@ -156,6 +158,7 @@ governing permissions and limitations under the License.
   --spectrum-table-row-checkbox-block-spacing: var(--spectrum-table-row-checkbox-to-top-large-regular);
 
   /* Summary Row and Section Header Row */
+  --spectrum-table-section-header-min-height: var(--spectrum-table-section-header-row-height-large);
   --spectrum-table-section-header-block-start-spacing: var(--spectrum-component-top-to-text-200);
   --spectrum-table-section-header-block-end-spacing: var(--spectrum-component-bottom-to-text-200);
 
@@ -187,6 +190,7 @@ governing permissions and limitations under the License.
   --spectrum-table-row-checkbox-block-spacing: var(--spectrum-table-row-checkbox-to-top-extra-large-regular);
 
   /* Summary Row and Section Header Row */
+  --spectrum-table-section-header-min-height: var(--spectrum-table-section-header-row-height-extra-large);
   --spectrum-table-section-header-block-start-spacing: var(--spectrum-component-top-to-text-300);
   --spectrum-table-section-header-block-end-spacing: var(--spectrum-component-bottom-to-text-300);
 
@@ -670,6 +674,7 @@ governing permissions and limitations under the License.
   .spectrum-Table-cell {
     font-weight: var(--mod-table-section-header-font-weight, var(--spectrum-table-section-header-font-weight));
     text-align: start;
+    block-size: var(--mod-table-section-header-min-height, var(--spectrum-table-section-header-min-height));
 
     padding-block-start: calc(
       var(--mod-table-section-header-block-start-spacing, var(--spectrum-table-section-header-block-start-spacing)) -
