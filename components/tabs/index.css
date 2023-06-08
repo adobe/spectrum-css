@@ -14,8 +14,6 @@ governing permissions and limitations under the License.
 @import "../vars/css/scales/spectrum-large.css";
 @import "../vars/css/scales/spectrum-medium.css";
 
-/* prettier-ignore */
-/* stylelint-disable */
 .spectrum-Tabs--sizeS {
   @remapvars {
     find: /--spectrum-tabs-s-(.*)/;
@@ -23,7 +21,6 @@ governing permissions and limitations under the License.
   }
 }
 
-/* prettier-ignore */
 .spectrum-Tabs--sizeM {
   @remapvars {
     find: /--spectrum-tabs-m-(.*)/;
@@ -31,7 +28,6 @@ governing permissions and limitations under the License.
   }
 }
 
-/* prettier-ignore */
 .spectrum-Tabs--sizeL {
   @remapvars {
     find: /--spectrum-tabs-l-(.*)/;
@@ -39,14 +35,12 @@ governing permissions and limitations under the License.
   }
 }
 
-/* prettier-ignore */
 .spectrum-Tabs--sizeXL {
   @remapvars {
     find: /--spectrum-tabs-xl-(.*)/;
     replace: --spectrum-tabs-$1;
   }
 }
-/* stylelint-enable */
 
 .spectrum-Tabs {
   --spectrum-tabs-compact-item-height: calc(var(--spectrum-tabs-compact-textonly-height) - var(--spectrum-tabs-compact-textonly-divider-size));
@@ -220,10 +214,10 @@ governing permissions and limitations under the License.
   }
 
   .spectrum-Icon {
-    height: var(--spectrum-tabs-vertical-textonly-tabitem-height); /* stylelint-disable-line csstools/use-logical */
+    height: var(--spectrum-tabs-vertical-textonly-tabitem-height);
     line-height: var(--spectrum-tabs-vertical-textonly-tabitem-height);
   }
-  
+
   &.spectrum-Tabs--compact {
     .spectrum-Tabs-item {
       block-size: var(--spectrum-tabs-compact-vertical-textonly-tabitem-height);
@@ -239,7 +233,7 @@ governing permissions and limitations under the License.
 
   .spectrum-Tabs-selectionIndicator {
     position: absolute;
-    inset-inline-start: 0px; /* stylelint-disable-line length-zero-no-unit */
+    inset-inline-start: 0px;
     inline-size: var(--spectrum-tabs-quiet-textonly-divider-size);
   }
 }
