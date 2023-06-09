@@ -49,7 +49,6 @@ governing permissions and limitations under the License.
   --spectrum-sidenav-background-key-focus-selected: var(--spectrum-gray-200);
 
   /* color font */
-  --spectrum-sidenav-top-level-color: var(--spectrum-gray-900);
   --spectrum-sidenav-header-color: var(--spectrum-gray-600);
 
   --spectrum-sidenav-content-disabled-color: var(--spectrum-disabled-content-color);
@@ -68,13 +67,13 @@ governing permissions and limitations under the License.
   --spectrum-sidenav-text-font-family: var(--spectrum-sans-font-family-stack);
   --spectrum-sidenav-text-font-weight: var(--spectrum-regular-font-weight);
   --spectrum-sidenav-text-font-style: var(--spectrum-default-font-style);
-  --spectrum-sidenav-text-font-size: var(--spectrum-font-size-200);
+  --spectrum-sidenav-text-font-size: var(--spectrum-font-size-100);
   --spectrum-sidenav-text-lineheight: var(--spectrum-line-height-100);
 
   --spectrum-sidenav-top-level-font-family: var(--spectrum-sans-font-family-stack);
   --spectrum-sidenav-top-level-font-weight: var(--spectrum-bold-font-weight);
   --spectrum-sidenav-top-level-font-style: var(--spectrum-default-font-style);
-  --spectrum-sidenav-top-level-font-size: var(--spectrum-font-size-200);
+  --spectrum-sidenav-top-level-font-size: var(--spectrum-font-size-100);
   --spectrum-sidenav-top-level-line-height: var(--spectrum-line-height-100);
 
   --spectrum-sidenav-header-font-family: var(--spectrum-sans-font-family-stack);
@@ -229,7 +228,6 @@ governing permissions and limitations under the License.
 
 .spectrum-SideNav--multiLevel {
   .spectrum-SideNav-itemLink {
-    color: var(--highcontrast-sidenav-top-level-font-color, var(--mod-sidenav-top-level-font-color, var(--spectrum-sidenav-top-level-font-color)));
     font-family: var(--mod-sidenav-top-level-font-family, var(--spectrum-sidenav-top-level-font-family));
     font-weight: var(--mod-sidenav-top-level-font-weight, var(--spectrum-sidenav-top-level-font-weight));
     font-style: var(--mod-sidenav-top-level-font-style, var(--spectrum-sidenav-top-level-font-style));
