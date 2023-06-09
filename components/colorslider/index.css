@@ -13,15 +13,6 @@
 		var(--spectrum-color-slider-border-opacity)
 	);
 
-	/* Settings for nested Color Handle */
-	--spectrum-color-slider-handle-hitarea-border-radius: 0%;
-	--spectrum-color-slider-handle-hitarea-width: var(
-		--spectrum-global-dimension-size-300
-	);
-	--spectrum-color-slider-handle-hitarea-height: var(
-		--spectrum-global-dimension-size-300
-	);
-
 	/* Checkerboard pattern */
 	--spectrum-color-slider-checkerboard-size: var(
 		--spectrum-opacity-checkerboard-square-size
@@ -110,21 +101,6 @@
 .spectrum-ColorSlider-handle {
 	inset-inline-start: 0;
 	inset-block-start: 50%;
-
-	&::after {
-		border-radius: var(
-			--mod-color-slider-handle-hitarea-border-radius,
-			var(--spectrum-color-slider-handle-hitarea-border-radius)
-		);
-		inline-size: var(
-			--mod-color-slider-handle-hitarea-width,
-			var(--spectrum-color-slider-handle-hitarea-width)
-		);
-		block-size: var(
-			--mod-color-slider-handle-hitarea-height,
-			var(--spectrum-color-slider-handle-hitarea-height)
-		);
-	}
 }
 
 .spectrum-ColorSlider-checkerboard {

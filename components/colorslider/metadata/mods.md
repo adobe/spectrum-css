@@ -10,9 +10,6 @@
 | `--mod-color-slider-checkerboard-size`            |
 | `--mod-color-slider-control-track-height`         |
 | `--mod-color-slider-control-track-width`          |
-| `--mod-color-slider-handle-hitarea-border-radius` |
-| `--mod-color-slider-handle-hitarea-height`        |
-| `--mod-color-slider-handle-hitarea-width`         |
 | `--mod-color-slider-label-to-track-spacing`       |
 | `--mod-color-slider-length`                       |
 | `--mod-color-slider-minimum-length`               |
