@@ -11,54 +11,55 @@ governing permissions and limitations under the License.
 */
 
 .spectrum-Icon {
-	--spectrum-icon-size-s: var(--spectrum-alias-workflow-icon-size-s);
-	--spectrum-icon-size-m: var(--spectrum-alias-workflow-icon-size-m);
-	--spectrum-icon-size-l: var(--spectrum-alias-workflow-icon-size-l);
-	--spectrum-icon-size-xl: var(--spectrum-alias-workflow-icon-size-xl);
-	--spectrum-icon-size-xxl: var(--spectrum-global-dimension-size-400);
+  --spectrum-icon-size-s: var(--spectrum-alias-workflow-icon-size-s);
+  --spectrum-icon-size-m: var(--spectrum-alias-workflow-icon-size-m);
+  --spectrum-icon-size-l: var(--spectrum-alias-workflow-icon-size-l);
+  --spectrum-icon-size-xl: var(--spectrum-alias-workflow-icon-size-xl);
+  --spectrum-icon-size-xxl: var(--spectrum-global-dimension-size-400);
 }
 
 .spectrum-Icon--sizeS {
-	&,
-	img,
-	svg {
-		block-size: var(--spectrum-icon-size-s);
-		inline-size: var(--spectrum-icon-size-s);
-	}
+  &,
+  img,
+  svg {
+    block-size: var(--spectrum-icon-size-s);
+    inline-size: var(--spectrum-icon-size-s);
+  }
 }
 
 .spectrum-Icon--sizeM {
-	&,
-	img,
-	svg {
-		block-size: var(--spectrum-icon-size-m);
-		inline-size: var(--spectrum-icon-size-m);
-	}
+  &,
+  img,
+  svg {
+    block-size: var(--spectrum-icon-size-m);
+    inline-size: var(--spectrum-icon-size-m);
+  }
 }
 
 .spectrum-Icon--sizeL {
-	&,
-	img,
-	svg {
-		block-size: var(--spectrum-icon-size-l);
-		inline-size: var(--spectrum-icon-size-l);
-	}
+  &,
+  img,
+  svg {
+    block-size: var(--spectrum-icon-size-l);
+    inline-size: var(--spectrum-icon-size-l);
+  }
 }
 
 .spectrum-Icon--sizeXL {
-	&,
-	img,
-	svg {
-		block-size: var(--spectrum-icon-size-xl);
-		inline-size: var(--spectrum-icon-size-xl);
-	}
+  &,
+  img,
+  svg {
+    block-size: var(--spectrum-icon-size-xl);
+    inline-size: var(--spectrum-icon-size-xl);
+  }
 }
 
+
 .spectrum-Icon--sizeXXL {
-	&,
-	img,
-	svg {
-		block-size: var(--spectrum-icon-size-xxl);
-		inline-size: var(--spectrum-icon-size-xxl);
-	}
+  &,
+  img,
+  svg {
+    block-size: var(--spectrum-icon-size-xxl);
+    inline-size: var(--spectrum-icon-size-xxl);
+  }
 }
