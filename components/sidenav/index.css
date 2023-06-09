@@ -294,13 +294,12 @@ governing permissions and limitations under the License.
     --highcontrast-sidenav-item-background-down: Highlight;
     --highcontrast-sidenav-background-hover: Highlight;
     --highcontrast-sidenav-content-color-hover: HighlightText;
-    --highcontrast-sidenav-background-key-focus: ButtonFace;
+    --highcontrast-sidenav-background-key-focus: Highlight;
 
     --highcontrast-sidenav-top-level-font-color: ButtonText;
     --highcontrast-sidenav-top-level-color-hover: HighlightText;
     --highcontrast-sidenav-content-color-default: ButtonText;
     --highcontrast-sidenav-content-color-down: HighlightText;
-    --highcontrast-sidenav-content-color-key-focus: ButtonText;
   }
 }
 
