@@ -196,6 +196,8 @@ governing permissions and limitations under the License.
 	--spectrum-coachmark-step-step-to-bottom: var(
 		--spectrum-coach-mark-pagination-text-to-bottom-edge
 	);
+
+	--mod-buttongroup-justify-content: flex-end;
 }
 /* CoachMark Popover */
 .spectrum-CoachMarkPopover {
@@ -244,11 +246,15 @@ governing permissions and limitations under the License.
 }
 
 .spectrum-CoachMarkPopover-footer {
-	display: flex;
-	justify-content: space-between;
+	display: grid;
+	grid-template-columns: 30% 70%;
 	margin-block-start: 0;
 	text-align: end;
 	padding-block-end: var(--spectrum-coachmark-padding);
+
+	.spectrum-ButtonGroup {
+		grid-column-start: 2;
+	}
 }
 
 .spectrum-CoachMarkPopover-title {
@@ -262,7 +268,7 @@ governing permissions and limitations under the License.
 }
 
 .spectrum-CoachMarkPopover-step {
-	align-self: start;
+	justify-self: start;
 	color: var(--spectrum-coachmark-step-color);
 	font-size: var(--spectrum-coachmark-step-text-size);
 	font-weight: var(--spectrum-coachmark-step-text-font-weight);
