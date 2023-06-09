@@ -14,37 +14,36 @@ governing permissions and limitations under the License.
 @import "./infieldbutton-generated.css";
 
 .spectrum-InfieldButton {
-	@inherit: %spectrum-BaseButton;
+  @inherit: %spectrum-BaseButton;
 
-	border-style: none;
-	background-color: transparent;
+  border-style: none;
+  background-color: transparent;
 
-	display: flex;
-	justify-content: center;
-	align-items: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 a.spectrum-InfieldButton {
-	@inherit: %spectrum-AnchorButton;
+  @inherit: %spectrum-AnchorButton;
 }
 
 .spectrum-InfieldButton-fill {
-	/* override generated CSS */
-	padding: 0 !important;
+  /* override generated CSS */
+  padding: 0 !important;
 
-	/* center icon */
-	display: flex;
-	align-items: center;
-	justify-content: center;
+  /* center icon */
+  display: flex;
+  align-items: center;
+  justify-content: center;
 
-	transition: border-color var(--spectrum-global-animation-duration-100)
-		ease-in-out;
+  transition: border-color var(--spectrum-global-animation-duration-100) ease-in-out;
 }
 
 .spectrum-InfieldButton-icon {
-	/* don't be small, ever */
-	flex-shrink: 0;
+  /* don't be small, ever */
+  flex-shrink: 0;
 
-	/* remove margin used for centering */
-	margin: 0 !important;
+  /* remove margin used for centering */
+  margin: 0 !important;
 }
