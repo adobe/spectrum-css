@@ -14,8 +14,8 @@ governing permissions and limitations under the License.
 
 /* CoachMark Indicator */
 .spectrum-CoachMarkIndicator {
-	--spectrum-coachmark-indicator-ring-diameter: 16px; /* TODO Needs token for var(--spectrum-coachmark-indicator-ring-diameter) */
-	--spectrum-coachmark-indicator-ring-border-size: 2px; /* ToDO Needs token */
+	--spectrum-coachmark-indicator-ring-diameter: 16px;
+	--spectrum-coachmark-indicator-ring-border-size: 2px;
 	--spectrum-coachmark-indicator-gap: 6px;
 	--spectrum-coachmark-indicator-ring-default-color: var(
 		--spectrum-global-color-blue-400
@@ -136,18 +136,66 @@ governing permissions and limitations under the License.
 	--spectrum-coachmark-border-color: rgba(177, 177, 177);
 	--spectrum-coachmark-shadow-color: rgba(0, 0, 0, 0.15);
 
-	--spectrum-coachmark-min-width: 272px;
+	--spectrum-coachmark-min-width: var(--spectrum-coach-mark-minimum-width);
+	--spectrum-coachmark-width: var(--spectrum-coach-mark-width);
 	--spectrum-coachmark-max-width: 400px;
 	--spectrum-coachmark-border-radius: 4px;
 	--spectrum-coachmark-border-size: 1px;
-	--spectrum-coachmark-padding-x: 24px;
-	--spectrum-coachmark-padding-y: 24px;
+	--spectrum-coachmark-padding: var(--spectrum-coach-mark-edge-to-content);
+	--spectrum-coachmark-header-to-body: var(--spectrum-spacing-200);
+	--spectrum-coachmark-body-to-footer: var(--spectrum-spacing-300);
 
-	--spectrum-coachmark-title-text-size: 16px;
-	--spectrum-coachmark-title-text-font-weight: 700;
-	--spectrum-coachmark-title-text-line-height: 1.3;
-	--spectrum-coachmark-content-margin-bottom: 16px;
-	--spectrum-coachmark-content-text-color: rgba(34, 34, 34);
+	--spectrum-coarchmark-title-color: var(--spectrum-heading-color);
+	--spectrum-coachmark-title-text-size: var(--spectrum-coach-mark-title-size);
+	--spectrum-coachmark-title-font-family: var(
+		--spectrum-heading-sans-serif-font-family-stack
+	);
+	--spectrum-coachmark-title-font-style: var(
+		--spectrum-heading-serif-font-style
+	);
+	--spectrum-coachmark-title-text-font-weight: var(
+		--spectrum-heading-sans-serif-font-weight
+	);
+
+	--spectrum-coachmark-title-text-line-height: var(
+		--spectrum-heading-line-height
+	);
+
+	--spectrum-coachmark-content-font-color: var(--spectrum-body-color);
+	--spectrum-coachmark-content-font-size: var(--spectrum-coach-mark-body-size);
+	--spectrum-coachmark-content-font-weight: var(
+		--spectrum-body-sans-serif-font-weight
+	);
+	--spectrum-coachmark-content-font-family: var(
+		--spectrum-body-sans-serif-font-family
+	);
+	--spectrum-coachmark-content-font-style: var(
+		--spectrum-body-sans-serif-font-style
+	);
+	--spectrum-coachmark-content-line-height: var(--spectrum-body-line-height);
+
+	--spectrum-coachmark-media-min-height: var(
+		--spectrum-coach-mark-media-minimun-height
+	);
+	--spectrum-coachmark-media-height: var(--spectrum-coach-mark-media-height);
+
+	--spectrum-coachmark-step-color: var(--spectrum-coach-mark-pagination-color);
+	--spectrum-coachmark-step-font-size: var(
+		--spectrum-coach-mark-pagination-body-size
+	);
+	--spectrum-coachmark-step-font-weight: var(
+		--spectrum-body-medium-font-weight
+	);
+	--spectrum-coachmark-step-font-family: var(
+		--spectrum-body-sans-serif-font-family
+	);
+	--spectrum-coachmark-step-font-style: var(
+		--spectrum-body-sans-serif-font-style
+	);
+	--spectrum-coachmark-step-line-height: var(--spectrum-body-line-height);
+	--spectrum-coachmark-step-step-to-bottom: var(
+		--spectrum-coach-mark-pagination-text-to-bottom-edge
+	);
 }
 /* CoachMark Popover */
 .spectrum-CoachMarkPopover {
@@ -161,63 +209,68 @@ governing permissions and limitations under the License.
 	max-inline-size: var(--spectrum-coachmark-max-width);
 
 }
+
 .spectrum-CoachMarkPopover-image {
   border-radius: var(--spectrum-coachmark-border-radius) var(--spectrum-coachmark-border-radius) 0 0;
 
-  inline-size: 100%;
+	inline-size: 100%;
+	min-block-size: var(--spectrum-coachmark-media-min-height);
+	block-size: var(--spectrum-coachmark-media-height);
 }
 
 .spectrum-CoachMarkPopover-header,
 .spectrum-CoachMarkPopover-content,
 .spectrum-CoachMarkPopover-footer {
-  padding-block: 0;
-  padding-inline: var(--spectrum-coachmark-padding-x);
+	padding-block: 0;
+	padding-inline: var(--spectrum-coachmark-padding);
 }
 
 .spectrum-CoachMarkPopover-header {
-  padding-block-start: var(--spectrum-coachmark-padding-y);
+	padding-block-start: var(--spectrum-coachmark-padding);
+	display: flex;
+	justify-content: space-between;
+	align-items: flex-end;
+	margin-block-end: var(--spectrum-coachmark-header-to-body);
+}
+
+.spectrum-CoachMarkPopover-content {
+	margin-block-end: var(--spectrum-coachmark-body-to-footer);
+	color: var(--spectrum-coachmark-content-font-color);
+	font-size: var(--spectrum-coachmark-content-font-size);
+	font-weight: var(--spectrum-coachmark-content-font-weight);
+	font-family: var(--spectrum-coachmark-content-font-family);
+	font-style: var(--spectrum-coachmark-content-font-style);
+	line-height: var(--spectrum-coachmark-content-line-height);
 }
 
 .spectrum-CoachMarkPopover-footer {
-  padding-block-end: var(--spectrum-coachmark-padding-y);
-}
-
-.spectrum-CoachMarkPopover-header {
-  display: flex;
-  justify-content: space-between;
-  align-items: flex-end;
-  margin-block-end: var(--spectrum-coachmark-title-margin-bottom);
+	display: flex;
+	justify-content: space-between;
+	margin-block-start: 0;
+	text-align: end;
+	padding-block-end: var(--spectrum-coachmark-padding);
 }
 
 .spectrum-CoachMarkPopover-title {
+	color: var(--spectrum-coarchmark-title-color);
 	font-size: var(--spectrum-coachmark-title-text-size);
 	font-weight: var(--spectrum-coachmark-title-text-font-weight);
+	font-family: var(--spectrum-coachmark-title-font-family);
+	font-style: var(--spectrum-coachmark-title-font-style);
 	line-height: var(--spectrum-coachmark-title-text-line-height);
 	margin-block-end: 0;
-	color: var(--spectrum-coachmark-title-text-color);
 }
 
 .spectrum-CoachMarkPopover-step {
-  align-self: start;
-
-	color: var(--spectrum-coachmark-step-text-color);
-
+	align-self: start;
+	color: var(--spectrum-coachmark-step-color);
 	font-size: var(--spectrum-coachmark-step-text-size);
 	font-weight: var(--spectrum-coachmark-step-text-font-weight);
+	font-style: var(--spectrum-coachmark-step-font-style);
 	line-height: var(--spectrum-coachmark-step-text-line-height);
 	white-space: nowrap;
-}
-
-.spectrum-CoachMarkPopover-content {
-  margin-block-end: var(--spectrum-coachmark-content-margin-bottom);
-}
-
-.spectrum-CoachMarkPopover-footer {
-  margin-block-start: 0;
-  text-align: end;
-}
-
-/* from skin */
-.spectrum-CoachMarkPopover-content {
-	color: var(--spectrum-coachmark-content-text-color);
+	margin-block-end: calc(
+		var(--spectrum-coachmark-step-step-to-bottom) -
+			var(--spectrum-coachmark-padding)
+	);
 }
