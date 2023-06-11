@@ -13,18 +13,13 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 <a name="3.0.49"></a>
 ##3.0.49
 🗓
-2023-06-15 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/accordion@3.0.48...@spectrum-css/accordion@3.0.49)
+2023-06-11 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/accordion@3.0.47...@spectrum-css/accordion@4.0.0-beta.3)
 
-**Note:** Version bump only for package @spectrum-css/accordion
+### ✨ Features
 
-<a name="3.0.48"></a>
-##3.0.48
-🗓
-2023-06-12 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/accordion@3.0.47...@spectrum-css/accordion@3.0.48)
-
-### 🐛 Bug fixes
-
-\*restore files to pre-formatted state([491dbcb](https://github.com/adobe/spectrum-css/commit/491dbcb))
+- **accordion:**init change accordion migration([3395838](https://github.com/adobe/spectrum-css/commit/3395838))_
+  **accordion:**remove sizes from yml([93170fb](https://github.com/adobe/spectrum-css/commit/93170fb))_
+  **accrodion:**version changes([83d27ab](https://github.com/adobe/spectrum-css/commit/83d27ab))
 
 <a name="3.0.47"></a>
 ##3.0.47
