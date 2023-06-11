@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+<a name="4.0.0-beta.3"></a>
+#4.0.0-beta.3
+🗓
+2023-06-11 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/accordion@3.0.47...@spectrum-css/accordion@4.0.0-beta.3)
+
+### ✨ Features
+
+- **accordion:**init change accordion migration([3395838](https://github.com/adobe/spectrum-css/commit/3395838))_
+  **accordion:**remove sizes from yml([93170fb](https://github.com/adobe/spectrum-css/commit/93170fb))_
+  **accrodion:**version changes([83d27ab](https://github.com/adobe/spectrum-css/commit/83d27ab))
+
 <a name="3.0.47"></a>
 ##3.0.47
 🗓
