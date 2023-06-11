@@ -340,7 +340,7 @@ governing permissions and limitations under the License.
   box-sizing: border-box;
 }
 
-.spectrum-Accordion-item-iconContainer {
+.spectrum-Accordion-itemIconContainer {
 	padding-inline-start: var(
 		--mod-accordion-edge-to-disclosure-indicator-space,
 		var(--spectrum-accordion-edge-to-disclosure-indicator-space)
@@ -517,7 +517,7 @@ governing permissions and limitations under the License.
 			var(--spectrum-accordion-background-color-hover)
 		);
 
-		+ .spectrum-Accordion-item-iconContainer {
+		+ .spectrum-Accordion-itemIconContainer {
 			color: var(
 				--mod-accordion-item-header-color-hover,
 				var(--spectrum-accordion-item-header-color-hover)
@@ -591,7 +591,7 @@ governing permissions and limitations under the License.
 			background-color: transparent;
 		}
 
-		+ .spectrum-Accordion-item-iconContainer {
+		+ .spectrum-Accordion-itemIconContainer {
 			color: var(
 				--mod-accordion-item-header-disabled-color,
 				var(--spectrum-accordion-item-header-disabled-color)
@@ -622,14 +622,14 @@ governing permissions and limitations under the License.
 .spectrum-Accordion-item {
 	&.is-open {
 		> .spectrum-Accordion-itemHeading
-			> .spectrum-Accordion-item-iconContainer
+			> .spectrum-Accordion-itemIconContainer
 			> .spectrum-Accordion-itemIndicator {
 			/* stylelint-disable declaration-property-value-no-unknown */
 			transform: logical rotate(90deg);
 			/* stylelint-enable declaration-property-value-no-unknown */
 		}
 
-		> .spectrum-Accordion-item-iconContainer
+		> .spectrum-Accordion-itemIconContainer
 			> .spectrum-Accordion-itemIndicator {
 			/* stylelint-disable declaration-property-value-no-unknown */
 			transform: logical rotate(90deg);

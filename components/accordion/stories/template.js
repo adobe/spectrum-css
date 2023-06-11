@@ -49,7 +49,7 @@ export const AccordionItem = ({
 				>
 					${heading}
 				</button>
-				<span class="${rootClass}-iconContainer">
+				<span class="${rootClass}IconContainer">
 					${Icon({
 						iconName: "ChevronRight100",
 						size: iconSize,
