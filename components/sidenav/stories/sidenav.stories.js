@@ -145,3 +145,45 @@ WithHeading.args = {
     }
   ]
 };
+
+export const WithIcons = Template.bind({});
+WithIcons .args = {
+  variant: "multiLevel",
+  hasIcon: true,
+  items: [
+    {
+      id: "1",
+      title: "Section 1",
+      link: "#",
+    },
+    {
+      id: "2",
+      title: "Section 2",
+      link: "#",
+      levelTwoItems: [
+        {
+          id: "2.1",
+          title: "Section 1",
+          link: "#",
+        },
+        {
+          id: "2.2",
+          title: "Section 2",
+          link: "#",
+          levelThreeItems: [
+            {
+              id: "3.1",
+              title: "Section 1",
+              link: "#",
+            },
+          ]
+        },
+      ]
+    },
+    {
+      id: "3",
+      title: "Section 3",
+      link: "#",
+    },
+  ]
+};
