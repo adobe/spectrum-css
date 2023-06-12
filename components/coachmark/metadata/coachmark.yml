@@ -2,38 +2,55 @@ name: Coach mark
 SpectrumSiteSlug: https://spectrum.adobe.com/page/coach-mark/
 examples:
   - id: coachmark
-    name: Popover
+    name: Standard
     markup: |
-      <div style="position: relative;">
-        <div class="spectrum-CoachMarkPopover" style="position: absolute; margin-left: 34px;">
-          <div class="spectrum-CoachMarkPopover-header">
-            <div class="spectrum-CoachMarkPopover-title">Zoom in</div>
-          </div>
-          <div class="spectrum-CoachMarkPopover-content">
-            Switch to the zoom tool then click and drag in the canvas to move your camera forward and backward.
-          </div>
-          <div class="spectrum-CoachMarkPopover-footer">
-            <div class="spectrum-ButtonGroup">
-              <button class="spectrum-Button spectrum-Button--sizeM spectrum-Button--outline spectrum-Button--primary">
-                <span class="spectrum-Button-label">Okay</span>
-              </button>
-            </div>
+      <div class="spectrum-CoachMarkPopover">
+        <div class="spectrum-CoachMarkPopover-header">
+          <div class="spectrum-CoachMarkPopover-title">Try playing with a pixel brush</div>
+        </div>
+        <div class="spectrum-CoachMarkPopover-content">
+          Pixel brushes use pixels to create brush strokes, just like in other design and drawing tools. Start drawing, and zoom in to see the pixels in each stroke.
+        </div>
+        <div class="spectrum-CoachMarkPopover-footer">
+          <div class="spectrum-ButtonGroup">
+            <button class="spectrum-Button spectrum-Button--sizeM spectrum-Button--outline spectrum-Button--primary">
+              <span class="spectrum-Button-label">Okay</span>
+            </button>
           </div>
         </div>
       </div>
-
-      <div class="dummy-spacing" style="height: 250px"></div>
+      <div class="dummy-spacing" style="height: 50px"></div>
         <div class="spectrum-CoachMarkPopover">
           <div class="spectrum-CoachMarkPopover-header">
-            <div class="spectrum-CoachMarkPopover-title">Zoom in</div>
+            <div class="spectrum-CoachMarkPopover-title">Try playing with a pixel brush</div>
           </div>
           <div class="spectrum-CoachMarkPopover-content">
-            Switch to the zoom tool then click and drag in the canvas to move your camera forward and backward.
+            Pixel brushes use pixels to create brush strokes, just like in other design and drawing tools. Start drawing, and zoom in to see the pixels in each stroke.
           </div>
           <div class="spectrum-CoachMarkPopover-footer">
             <div class="spectrum-ButtonGroup">
               <button class="spectrum-Button spectrum-Button--sizeM spectrum-Button--outline spectrum-Button--secondary spectrum-ButtonGroup-item">
-                <span class="spectrum-Button-label">Skip Tour!!</span>
+                <span class="spectrum-Button-label">Previous</span>
+              </button>
+              <button class="spectrum-Button spectrum-Button--sizeM spectrum-Button--outline spectrum-Button--primary spectrum-ButtonGroup-item">
+                <span class="spectrum-Button-label">Next</span>
+              </button>
+            </div>
+          </div>
+        </div>
+        <div class="dummy-spacing" style="height: 50px"></div>
+        <div class="spectrum-CoachMarkPopover">
+          <div class="spectrum-CoachMarkPopover-header">
+            <div class="spectrum-CoachMarkPopover-title">Try playing with a pixel brush</div>
+          </div>
+          <div class="spectrum-CoachMarkPopover-content">
+            Pixel brushes use pixels to create brush strokes, just like in other design and drawing tools. Start drawing, and zoom in to see the pixels in each stroke.
+          </div>
+          <div class="spectrum-CoachMarkPopover-footer">
+            <div class="spectrum-CoachMarkPopover-step"><bdo dir="ltr">2 of 8</bdo></div>
+            <div class="spectrum-ButtonGroup">
+              <button class="spectrum-Button spectrum-Button--sizeM spectrum-Button--outline spectrum-Button--secondary spectrum-ButtonGroup-item">
+                <span class="spectrum-Button-label">Go back to the previous information</span>
               </button>
               <button class="spectrum-Button spectrum-Button--sizeM spectrum-Button--outline spectrum-Button--primary spectrum-ButtonGroup-item">
                 <span class="spectrum-Button-label">Next</span>
@@ -43,13 +60,38 @@ examples:
         </div>
       </div>
 
-      <div class="dummy-spacing" style="height: 25px"></div>
-        <div class="spectrum-CoachMarkPopover">
+  - id: coachmark
+    name: Mobile
+    markup: |
+      <div class="spectrum-CoachMarkPopover">
           <div class="spectrum-CoachMarkPopover-header">
-            <div class="spectrum-CoachMarkPopover-title">Zoom in</div>
+            <div class="spectrum-CoachMarkPopover-title">Try playing with a pixel brush</div>
           </div>
           <div class="spectrum-CoachMarkPopover-content">
-            Switch to the zoom tool then click and drag in the canvas to move your camera forward and backward.
+            Pixel brushes use pixels to create brush strokes, just like in other design and drawing tools. Start drawing, and zoom in to see the pixels in each stroke.
+          </div>
+          <div class="spectrum-CoachMarkPopover-footer">
+            <div class="spectrum-ButtonGroup">
+              <button class="spectrum-Button spectrum-Button--sizeM spectrum-Button--outline spectrum-Button--secondary spectrum-ButtonGroup-item">
+                <span class="spectrum-Button-label">Previous</span>
+              </button>
+              <button class="spectrum-Button spectrum-Button--sizeM spectrum-Button--outline spectrum-Button--primary spectrum-ButtonGroup-item">
+                <span class="spectrum-Button-label">Next</span>
+              </button>
+            </div>
+          </div>
+        </div>
+  - id: coachmark
+    name: With Image
+    markup: |
+      <div class="spectrum-CoachMarkPopover">
+          <img src="img/example-card-landscape.jpeg" class="spectrum-CoachMarkPopover-image" />
+
+          <div class="spectrum-CoachMarkPopover-header">
+            <div class="spectrum-CoachMarkPopover-title">Try playing with a pixel brush</div>
+          </div>
+          <div class="spectrum-CoachMarkPopover-content">
+            Pixel brushes use pixels to create brush strokes, just like in other design and drawing tools. Start drawing, and zoom in to see the pixels in each stroke.
           </div>
           <div class="spectrum-CoachMarkPopover-footer">
             <div class="spectrum-CoachMarkPopover-step"><bdo dir="ltr">2 of 8</bdo></div>
@@ -63,19 +105,15 @@ examples:
             </div>
           </div>
         </div>
-      </div>
-
-      <div class="dummy-spacing" style="height: 25px"></div>
-
-      <div>
+        <div class="dummy-spacing" style="height: 50px"></div>
         <div class="spectrum-CoachMarkPopover">
-          <img src="img/example-ava.jpg" class="spectrum-CoachMarkPopover-image" />
+          <img src="img/example-card-landscape.jpeg" class="spectrum-CoachMarkPopover-image" />
 
           <div class="spectrum-CoachMarkPopover-header">
-            <div class="spectrum-CoachMarkPopover-title">Zoom in</div>
+            <div class="spectrum-CoachMarkPopover-title">Try playing with a pixel brush</div>
           </div>
           <div class="spectrum-CoachMarkPopover-content">
-            Switch to the zoom tool then click and drag in the canvas to move your camera forward and backward.
+            Pixel brushes use pixels to create brush strokes, just like in other design and drawing tools. Start drawing, and zoom in to see the pixels in each stroke.
           </div>
           <div class="spectrum-CoachMarkPopover-footer">
             <div class="spectrum-CoachMarkPopover-step"><bdo dir="ltr">2 of 8</bdo></div>
@@ -89,4 +127,25 @@ examples:
             </div>
           </div>
         </div>
-      <div class="dummy-spacing" style="height: 25px"></div>
+        <div class="dummy-spacing" style="height: 50px"></div>
+        <div class="spectrum-CoachMarkPopover">
+          <img src="img/example-card-landscape.jpeg" class="spectrum-CoachMarkPopover-image" />
+
+          <div class="spectrum-CoachMarkPopover-header">
+            <div class="spectrum-CoachMarkPopover-title">Try playing with a pixel brush</div>
+          </div>
+          <div class="spectrum-CoachMarkPopover-content">
+            Pixel brushes use pixels to create brush strokes, just like in other design and drawing tools. Start drawing, and zoom in to see the pixels in each stroke.
+          </div>
+          <div class="spectrum-CoachMarkPopover-footer">
+            <div class="spectrum-CoachMarkPopover-step"><bdo dir="ltr">2 of 8</bdo></div>
+            <div class="spectrum-ButtonGroup">
+              <button class="spectrum-Button spectrum-Button--sizeM spectrum-Button--outline spectrum-Button--secondary">
+                <span class="spectrum-Button-label">Skip Tour</span>
+              </button>
+              <button class="spectrum-Button spectrum-Button--sizeM spectrum-Button--outline spectrum-Button--primary">
+                <span class="spectrum-Button-label">Next</span>
+              </button>
+            </div>
+          </div>
+        </div>
