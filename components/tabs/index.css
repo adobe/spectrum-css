@@ -551,7 +551,7 @@ governing permissions and limitations under the License.
 
 @media (forced-colors: active) {
 	.spectrum-Tabs {
-		--highcontrast-tabs-divider-background-color: transparent;
+		--highcontrast-tabs-divider-background-color: var(--spectrum-gray-500);
 		--highcontrast-tabs-selection-indicator-color: Highlight;
 		--highcontrast-tabs-focus-indicator-color: CanvasText;
 		--highcontrast-tabs-focus-indicator-background-color: Highlight;
