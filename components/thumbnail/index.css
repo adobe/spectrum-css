@@ -116,7 +116,6 @@ governing permissions and limitations under the License.
     opacity: var(--mod-thumbnail-color-opacity-disabled, var(--spectrum-thumbnail-color-opacity-disabled));
   }
 
-	/* stylelint-disable selector-pseudo-class-no-unknown */
 	&.is-focused,
 	&:focus-ring {
 		overflow: visible;
@@ -196,7 +195,6 @@ governing permissions and limitations under the License.
 			);
 		}
 	}
-	/* stylelint-enable selector-pseudo-class-no-unknown */
 
   /* Friends should align to the top of the tabs */
   vertical-align: top;
@@ -216,7 +214,6 @@ governing permissions and limitations under the License.
     content: none;
   }
 
-	/* stylelint-disable declaration-block-no-redundant-longhand-properties */
 	&.is-selected {
 		outline-style: solid;
 		outline-color: var(
@@ -241,7 +238,6 @@ governing permissions and limitations under the License.
 				)
 		);
 	}
-	/* stylelint-enable declaration-block-no-redundant-longhand-properties */
 }
 
 .spectrum-Thumbnail-layer-inner {
@@ -271,7 +267,6 @@ governing permissions and limitations under the License.
 				)
 			) * 2
 	);
-	/* stylelint-disable declaration-block-no-redundant-longhand-properties */
 	outline-style: solid;
 	outline-color: var(
 		--mod-thumbnail-layer-border-color-inner,
@@ -287,7 +282,6 @@ governing permissions and limitations under the License.
 				var(--spectrum-thumbnail-layer-border-width-outer)
 			)
 	);
-	/* stylelint-enable declaration-block-no-redundant-longhand-properties */
 }
 
 .spectrum-Thumbnail-image-wrapper {
@@ -329,7 +323,6 @@ governing permissions and limitations under the License.
 }
 
 /* Windows High Contrast Mode */
-/* stylelint-disable declaration-property-value-no-unknown */
 @media (forced-colors: active) {
   .spectrum-Thumbnail {
     /* Allow checkerboard pattern to be visible. */
@@ -342,4 +335,3 @@ governing permissions and limitations under the License.
 		color: CanvasText;
 	}
 }
-/* stylelint-enable declaration-property-value-no-unknown */
