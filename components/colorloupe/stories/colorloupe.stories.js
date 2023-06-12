@@ -21,6 +21,7 @@ export default {
 	},
 	args: {
 		rootClass: "spectrum-ColorLoupe",
+    isOpen: true,
 	},
 	parameters: {
 		actions: {
