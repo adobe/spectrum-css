@@ -11,4 +11,30 @@ governing permissions and limitations under the License.
 */
 
 @container (--system: express) {
+  .spectrum-PickerButton {
+    --spectrum-picker-button-background-color: var(--spectrum-gray-200);
+    --spectrum-picker-button-background-color-hover: var(--spectrum-gray-300);
+    --spectrum-picker-button-background-color-down: var(--spectrum-gray-400);
+    --spectrum-picker-button-background-color-key-focus: var(--spectrum-gray-300);
+
+    --spectrum-picker-button-border-color: none;
+    --spectrum-picker-button-border-radius: var(--spectrum-corner-radius-75);
+    --spectrum-picker-button-border-radius-rounded-sided: var(--spectrum-corner-radius-200);
+    --spectrum-picker-button-border-radius-sided: var(--spectrum-corner-radius-75);
+    --spectrum-picker-button-border-width: 0;
+
+    --spectrum-picker-button-padding: var(--spectrum-in-field-button-edge-to-fill);
+    --spectrum-picker-button-fill-padding: calc(var(--spectrum-field-edge-to-disclosure-icon-100) - var(--spectrum-picker-button-padding));
+
+    &.spectrum-PickerButton--sizeS {
+      --spectrum-picker-button-fill-padding: calc(var(--spectrum-field-edge-to-disclosure-icon-75) - var(--spectrum-picker-button-padding));
+    }
+    &.spectrum-PickerButton--sizeL {
+      --spectrum-picker-button-fill-padding: calc(var(--spectrum-field-edge-to-disclosure-icon-200) - var(--spectrum-picker-button-padding));
+    }
+    &.spectrum-PickerButton--sizeXL {
+      --spectrum-picker-button-fill-padding: calc(var(--spectrum-field-edge-to-disclosure-icon-300) - var(--spectrum-picker-button-padding));
+    }
+
+  }
 }
