@@ -376,6 +376,9 @@ governing permissions and limitations under the License.
 				) / 2
 		)
 	);
+	[dir="rtl"] & {
+		transform: scaleX(-1);
+	}
 }
 
 .spectrum-Accordion-itemContent {
