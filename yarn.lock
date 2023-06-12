@@ -22,10 +22,10 @@
   resolved "https://registry.yarnpkg.com/@adobe/spectrum-tokens-deprecated/-/spectrum-tokens-deprecated-11.8.0.tgz#7edf6f7b7e3c22581e0732c8de97fa0a68ed66b9"
   integrity sha512-LW2SA/8VhW868tEcgIcugx7xdtgFG3KiUoEz+4s2nHTdmKj0h2A9pnTNplVTNAMq2uPSfp6wKKvQNNnMSIXqCg==
 
-"@adobe/spectrum-tokens@12.8.0":
-  version "12.8.0"
-  resolved "https://registry.yarnpkg.com/@adobe/spectrum-tokens/-/spectrum-tokens-12.8.0.tgz#eec3b755d9d6f61e12c0fd35feec441477c41ca6"
-  integrity sha512-XK1j8zkXLOwetH99+D7woihQ1NYHVYCaM+WREoU9bkA/sZ8kUy1lnXdyYwxWfWaoEHODNjLAtSaDYEJdDluTLQ==
+"@adobe/spectrum-tokens@12.10.0":
+  version "12.10.0"
+  resolved "https://registry.yarnpkg.com/@adobe/spectrum-tokens/-/spectrum-tokens-12.10.0.tgz#d84b52f209b48ee94bf82c54287a737b57a712b6"
+  integrity sha512-XV5j/ijaUSRS2n3Wxy2tF6g57OFwg7DWbP6dhMA/NVnDESVoogdo6FavL1p5cB4faSGG2jWMOL0pFYQp53a71w==
 
 "@ampproject/remapping@^2.2.0":
   version "2.2.0"
@@ -9097,6 +9097,17 @@ lead@^1.0.0:
   integrity sha512-IpSVCk9AYvLHo5ctcIXxOBpMWUe+4TKN3VPWAKUbJikkmsGp0VrSM8IttVc32D6J4WUsiPE6aEFRNmIoF/gdow==
   dependencies:
     flush-write-stream "^1.0.2"
+
+"legacy-postcss-dropdupedvars@file:plugins/legacy-postcss-dropdupedvars":
+  version "1.0.0"
+  dependencies:
+    postcss "^7.0.32"
+
+"legacy-postcss-dropunusedvars@file:plugins/legacy-postcss-dropunusedvars":
+  version "1.0.0"
+  dependencies:
+    postcss "^7.0.32"
+    postcss-value-parser "^4.1.0"
 
 lerna@^6.6.2:
   version "6.6.2"

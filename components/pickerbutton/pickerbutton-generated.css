@@ -12,884 +12,728 @@ governing permissions and limitations under the License.
 
 /* begin generated CSS for pickerbutton */
 .spectrum-PickerButton {
-	--spectrum-PickerButton-border-radius-right: var(
-		--spectrum-alias-infieldbutton-border-radius
-	);
-	--spectrum-PickerButton-border-radius-left: var(
-		--spectrum-alias-infieldbutton-border-radius
-	);
-	--spectrum-PickerButton-border-radius-right-rounded: var(
-		--spectrum-alias-pickerbutton-border-radius-rounded
-	);
-	--spectrum-PickerButton-border-radius-left-rounded: var(
-		--spectrum-alias-pickerbutton-border-radius-rounded
-	);
-
-	&.spectrum-PickerButton--sizeS {
-		padding: var(--spectrum-alias-infieldbutton-padding-s);
-		--spectrum-PickerButton-label-padding-y: var(
-			--spectrum-alias-pickerbutton-label-padding-y-s
-		);
-		--spectrum-PickerButton-icon-margin-y: var(
-			--spectrum-alias-pickerbutton-icon-margin-y-s
-		);
-		--spectrum-PickerButton-icononly-padding-x: var(
-			--spectrum-alias-pickerbutton-icononly-padding-x-s
-		);
-
-		.spectrum-PickerButton-fill {
-			--spectrum-PickerButton-Fill-size: var(
-				--spectrum-alias-infieldbutton-full-height-s
-			);
-			block-size: var(--spectrum-alias-infieldbutton-full-height-s);
-			inline-size: var(--spectrum-alias-infieldbutton-full-height-s);
-			gap: var(--spectrum-global-dimension-size-75);
-		}
-
-		.spectrum-PickerButton-label {
-			font-size: var(--spectrum-global-dimension-font-size-75);
-			padding-block-end: var(--spectrum-alias-pickerbutton-label-padding-y-s);
-			padding-block-start: var(--spectrum-alias-pickerbutton-label-padding-y-s);
-		}
-
-		.spectrum-PickerButton-icon {
-			gap: var(--spectrum-global-dimension-size-85);
-			--spectrum-PickerButton-Fill-Icon-size: var(
-				--spectrum-global-dimension-size-200
-			);
-			block-size: var(--spectrum-global-dimension-size-200);
-			inline-size: var(--spectrum-global-dimension-size-200);
-			margin-block-end: var(--spectrum-alias-infieldbutton-icon-margin-y-s);
-			margin-block-start: var(--spectrum-alias-infieldbutton-icon-margin-y-s);
-		}
-
-		.spectrum-PickerButton-UIIcon {
-			--spectrum-PickerButton-Fill-UIIcon-size: var(
-				--spectrum-alias-ui-icon-chevron-size-100
-			);
-			block-size: var(--spectrum-alias-ui-icon-chevron-size-100);
-			inline-size: var(--spectrum-alias-ui-icon-chevron-size-100);
-			margin-block-end: var(--spectrum-alias-pickerbutton-icon-margin-y-s);
-			margin-block-start: var(--spectrum-alias-pickerbutton-icon-margin-y-s);
-		}
-	}
-
-	&.spectrum-PickerButton--sizeM {
-		padding: var(--spectrum-alias-infieldbutton-padding-m);
-		--spectrum-PickerButton-label-padding-y: var(
-			--spectrum-alias-pickerbutton-label-padding-y-m
-		);
-		--spectrum-PickerButton-icon-margin-y: var(
-			--spectrum-alias-pickerbutton-icon-margin-y-m
-		);
-		--spectrum-PickerButton-icononly-padding-x: var(
-			--spectrum-alias-pickerbutton-icononly-padding-x-m
-		);
-
-		.spectrum-PickerButton-fill {
-			--spectrum-PickerButton-Fill-size: var(
-				--spectrum-alias-infieldbutton-full-height-m
-			);
-			block-size: var(--spectrum-alias-infieldbutton-full-height-m);
-			inline-size: var(--spectrum-alias-infieldbutton-full-height-m);
-			gap: var(--spectrum-global-dimension-size-85);
-		}
-
-		.spectrum-PickerButton-label {
-			font-size: var(--spectrum-global-dimension-font-size-100);
-			padding-block-end: var(--spectrum-alias-pickerbutton-label-padding-y-m);
-			padding-block-start: var(--spectrum-alias-pickerbutton-label-padding-y-m);
-		}
-
-		.spectrum-PickerButton-icon {
-			gap: var(--spectrum-global-dimension-size-100);
-			--spectrum-PickerButton-Fill-Icon-size: var(
-				--spectrum-global-dimension-size-225
-			);
-			block-size: var(--spectrum-global-dimension-size-225);
-			inline-size: var(--spectrum-global-dimension-size-225);
-			margin-block-end: var(--spectrum-alias-infieldbutton-icon-margin-y-m);
-			margin-block-start: var(--spectrum-alias-infieldbutton-icon-margin-y-m);
-		}
-
-		.spectrum-PickerButton-UIIcon {
-			--spectrum-PickerButton-Fill-UIIcon-size: var(
-				--spectrum-alias-ui-icon-chevron-size-200
-			);
-			block-size: var(--spectrum-alias-ui-icon-chevron-size-200);
-			inline-size: var(--spectrum-alias-ui-icon-chevron-size-200);
-			margin-block-end: var(--spectrum-alias-pickerbutton-icon-margin-y-m);
-			margin-block-start: var(--spectrum-alias-pickerbutton-icon-margin-y-m);
-		}
-	}
-
-	&.spectrum-PickerButton--sizeL {
-		padding: var(--spectrum-alias-infieldbutton-padding-l);
-		--spectrum-PickerButton-label-padding-y: var(
-			--spectrum-alias-pickerbutton-label-padding-y-l
-		);
-		--spectrum-PickerButton-icon-margin-y: var(
-			--spectrum-alias-pickerbutton-icon-margin-y-l
-		);
-		--spectrum-PickerButton-icononly-padding-x: var(
-			--spectrum-alias-pickerbutton-icononly-padding-x-l
-		);
-
-		.spectrum-PickerButton-fill {
-			--spectrum-PickerButton-Fill-size: var(
-				--spectrum-alias-infieldbutton-full-height-l
-			);
-			block-size: var(--spectrum-alias-infieldbutton-full-height-l);
-			inline-size: var(--spectrum-alias-infieldbutton-full-height-l);
-			gap: var(--spectrum-global-dimension-size-65);
-		}
-
-		.spectrum-PickerButton-label {
-			font-size: var(--spectrum-global-dimension-font-size-200);
-			padding-block-end: var(--spectrum-alias-pickerbutton-label-padding-y-l);
-			padding-block-start: var(--spectrum-alias-pickerbutton-label-padding-y-l);
-		}
-
-		.spectrum-PickerButton-icon {
-			gap: var(--spectrum-global-dimension-size-115);
-			margin-block-end: var(--spectrum-alias-infieldbutton-icon-margin-y-l);
-			margin-block-start: var(--spectrum-alias-infieldbutton-icon-margin-y-l);
-		}
-
-		.spectrum-PickerButton-UIIcon {
-			--spectrum-PickerButton-Fill-UIIcon-size: var(
-				--spectrum-alias-ui-icon-chevron-size-300
-			);
-			block-size: var(--spectrum-alias-ui-icon-chevron-size-300);
-			inline-size: var(--spectrum-alias-ui-icon-chevron-size-300);
-			margin-block-end: var(--spectrum-alias-pickerbutton-icon-margin-y-l);
-			margin-block-start: var(--spectrum-alias-pickerbutton-icon-margin-y-l);
-		}
-	}
-
-	&.spectrum-PickerButton--sizeXL {
-		padding: var(--spectrum-alias-infieldbutton-padding-xl);
-		--spectrum-PickerButton-label-padding-y: var(
-			--spectrum-alias-pickerbutton-label-padding-y-xl
-		);
-		--spectrum-PickerButton-icon-margin-y: var(
-			--spectrum-alias-pickerbutton-icon-margin-y-xl
-		);
-		--spectrum-PickerButton-icononly-padding-x: var(
-			--spectrum-alias-pickerbutton-icononly-padding-x-xl
-		);
-
-		.spectrum-PickerButton-fill {
-			--spectrum-PickerButton-Fill-size: var(
-				--spectrum-alias-infieldbutton-full-height-xl
-			);
-			block-size: var(--spectrum-alias-infieldbutton-full-height-xl);
-			inline-size: var(--spectrum-alias-infieldbutton-full-height-xl);
-			gap: var(--spectrum-global-dimension-size-85);
-		}
-
-		.spectrum-PickerButton-label {
-			font-size: var(--spectrum-global-dimension-font-size-300);
-			padding-block-end: var(--spectrum-alias-pickerbutton-label-padding-y-xl);
-			padding-block-start: var(
-				--spectrum-alias-pickerbutton-label-padding-y-xl
-			);
-		}
-
-		.spectrum-PickerButton-icon {
-			gap: var(--spectrum-global-dimension-size-125);
-			--spectrum-PickerButton-Fill-Icon-size: var(
-				--spectrum-global-dimension-size-275
-			);
-			block-size: var(--spectrum-global-dimension-size-275);
-			inline-size: var(--spectrum-global-dimension-size-275);
-			margin-block-end: var(--spectrum-alias-infieldbutton-icon-margin-y-xl);
-			margin-block-start: var(--spectrum-alias-infieldbutton-icon-margin-y-xl);
-		}
-
-		.spectrum-PickerButton-UIIcon {
-			--spectrum-PickerButton-Fill-UIIcon-size: var(
-				--spectrum-alias-ui-icon-chevron-size-400
-			);
-			block-size: var(--spectrum-alias-ui-icon-chevron-size-400);
-			inline-size: var(--spectrum-alias-ui-icon-chevron-size-400);
-			margin-block-end: var(--spectrum-alias-pickerbutton-icon-margin-y-xl);
-			margin-block-start: var(--spectrum-alias-pickerbutton-icon-margin-y-xl);
-		}
-	}
-
-	&:disabled {
-		&:not(.is-open) {
-			.spectrum-PickerButton-fill {
-				background-color: var(
-					--spectrum-alias-infieldbutton-fill-loudnessHigh-background-color-disabled
-				);
-			}
-		}
-
-		.spectrum-PickerButton-fill {
-			border-color: var(
-				--spectrum-alias-infieldbutton-fill-loudnessHigh-border-color-disabled
-			);
-		}
-	}
-
-	&:not(:disabled) {
-		&:not(.is-open) {
-			.spectrum-PickerButton-fill {
-				background-color: var(
-					--spectrum-alias-infieldbutton-fill-loudnessHigh-background-color-default
-				);
-			}
-
-			&:hover {
-				.spectrum-PickerButton-fill {
-					background-color: var(
-						--spectrum-alias-infieldbutton-fill-loudnessHigh-background-color-hover
-					);
-				}
-			}
-
-			&:active {
-				.spectrum-PickerButton-fill {
-					background-color: var(
-						--spectrum-alias-infieldbutton-fill-loudnessHigh-background-color-down
-					);
-				}
-			}
-		}
-	}
-
-	&.is-invalid {
-		&:not(:disabled) {
-			.spectrum-PickerButton-fill {
-				border-color: var(--spectrum-alias-input-border-color-invalid-default);
-			}
-
-			&:hover {
-				.spectrum-PickerButton-fill {
-					border-color: var(--spectrum-alias-input-border-color-invalid-hover);
-				}
-			}
-
-			&:active {
-				.spectrum-PickerButton-fill {
-					border-color: var(--spectrum-alias-input-border-color-invalid-down);
-				}
-			}
-
-			&:focus {
-				.spectrum-PickerButton-fill {
-					border-color: var(
-						--spectrum-alias-input-border-color-invalid-mouse-focus
-					);
-				}
-			}
-
-			&.is-focused {
-				.spectrum-PickerButton-fill {
-					border-color: var(
-						--spectrum-alias-input-border-color-invalid-mouse-focus
-					);
-				}
-			}
-
-			&:focus-visible {
-				.spectrum-PickerButton-fill {
-					border-color: var(
-						--spectrum-alias-input-border-color-invalid-key-focus
-					);
-				}
-			}
-
-			&.is-keyboardFocused {
-				.spectrum-PickerButton-fill {
-					border-color: var(
-						--spectrum-alias-input-border-color-invalid-key-focus
-					);
-				}
-			}
-		}
-	}
-
-	&:not(.is-invalid) {
-		&:not(:disabled) {
-			.spectrum-PickerButton-fill {
-				border-color: var(
-					--spectrum-alias-infieldbutton-fill-border-color-default
-				);
-			}
-
-			&:hover {
-				.spectrum-PickerButton-fill {
-					border-color: var(
-						--spectrum-alias-infieldbutton-fill-border-color-hover
-					);
-				}
-			}
-
-			&:active {
-				.spectrum-PickerButton-fill {
-					border-color: var(
-						--spectrum-alias-infieldbutton-fill-border-color-down
-					);
-				}
-			}
-
-			&:focus {
-				.spectrum-PickerButton-fill {
-					border-color: var(
-						--spectrum-alias-infieldbutton-fill-border-color-mouse-focus
-					);
-				}
-			}
-
-			&.is-focused {
-				.spectrum-PickerButton-fill {
-					border-color: var(
-						--spectrum-alias-infieldbutton-fill-border-color-mouse-focus
-					);
-				}
-			}
-
-			&:focus-visible {
-				.spectrum-PickerButton-fill {
-					border-color: var(
-						--spectrum-alias-infieldbutton-fill-border-color-key-focus
-					);
-				}
-			}
-
-			&.is-keyboardFocused {
-				.spectrum-PickerButton-fill {
-					border-color: var(
-						--spectrum-alias-infieldbutton-fill-border-color-key-focus
-					);
-				}
-			}
-		}
-	}
-
-	&.spectrum-PickerButton--right {
-		--spectrum-PickerButton-border-radius-left: var(
-			--spectrum-alias-infieldbutton-border-radius-sided
-		);
-		--spectrum-PickerButton-border-radius-left-rounded: var(
-			--spectrum-alias-pickerbutton-border-radius-rounded-sided
-		);
-
-		&:not(.spectrum-PickerButton--rounded) {
-			.spectrum-PickerButton-fill {
-				border-end-start-radius: var(
-					--spectrum-alias-infieldbutton-border-radius-sided
-				);
-				border-start-start-radius: var(
-					--spectrum-alias-infieldbutton-border-radius-sided
-				);
-			}
-		}
-
-		&.spectrum-PickerButton--rounded {
-			.spectrum-PickerButton-fill {
-				border-end-start-radius: var(
-					--spectrum-alias-pickerbutton-border-radius-rounded-sided
-				);
-				border-start-start-radius: var(
-					--spectrum-alias-pickerbutton-border-radius-rounded-sided
-				);
-			}
-		}
-	}
-
-	&.spectrum-PickerButton--left {
-		--spectrum-PickerButton-border-radius-right: var(
-			--spectrum-alias-infieldbutton-border-radius-sided
-		);
-		--spectrum-PickerButton-border-radius-right-rounded: var(
-			--spectrum-alias-pickerbutton-border-radius-rounded-sided
-		);
-
-		&:not(.spectrum-PickerButton--rounded) {
-			.spectrum-PickerButton-fill {
-				border-end-end-radius: var(
-					--spectrum-alias-infieldbutton-border-radius-sided
-				);
-				border-start-end-radius: var(
-					--spectrum-alias-infieldbutton-border-radius-sided
-				);
-			}
-		}
-
-		&.spectrum-PickerButton--rounded {
-			.spectrum-PickerButton-fill {
-				border-end-end-radius: var(
-					--spectrum-alias-pickerbutton-border-radius-rounded-sided
-				);
-				border-start-end-radius: var(
-					--spectrum-alias-pickerbutton-border-radius-rounded-sided
-				);
-			}
-		}
-	}
-
-	&:not(.spectrum-PickerButton--rounded) {
-		.spectrum-PickerButton-fill {
-			border-end-end-radius: var(--spectrum-alias-infieldbutton-border-radius);
-			border-end-start-radius: var(
-				--spectrum-alias-infieldbutton-border-radius
-			);
-			border-start-end-radius: var(
-				--spectrum-alias-infieldbutton-border-radius
-			);
-			border-start-start-radius: var(
-				--spectrum-alias-infieldbutton-border-radius
-			);
-		}
-	}
-
-	&.spectrum-PickerButton--rounded {
-		.spectrum-PickerButton-fill {
-			border-end-end-radius: var(
-				--spectrum-alias-pickerbutton-border-radius-rounded
-			);
-			border-end-start-radius: var(
-				--spectrum-alias-pickerbutton-border-radius-rounded
-			);
-			border-start-end-radius: var(
-				--spectrum-alias-pickerbutton-border-radius-rounded
-			);
-			border-start-start-radius: var(
-				--spectrum-alias-pickerbutton-border-radius-rounded
-			);
-		}
-	}
-
-	&.spectrum-PickerButton--uiicononly {
-		.spectrum-PickerButton-fill {
-			padding-inline-end: var(--spectrum-PickerButton-icononly-padding-x);
-			padding-inline-start: var(--spectrum-PickerButton-icononly-padding-x);
-			inline-size: var(--spectrum-PickerButton-Fill-size);
-		}
-
-		&.spectrum-PickerButton--sizeS {
-			.spectrum-PickerButton-fill {
-				padding-inline-end: var(
-					--spectrum-alias-pickerbutton-icononly-padding-x-s
-				);
-				padding-inline-start: var(
-					--spectrum-alias-pickerbutton-icononly-padding-x-s
-				);
-				inline-size: var(--spectrum-alias-infieldbutton-full-height-s);
-			}
-		}
-
-		&.spectrum-PickerButton--sizeM {
-			.spectrum-PickerButton-fill {
-				padding-inline-end: var(
-					--spectrum-alias-pickerbutton-icononly-padding-x-m
-				);
-				padding-inline-start: var(
-					--spectrum-alias-pickerbutton-icononly-padding-x-m
-				);
-				inline-size: var(--spectrum-alias-infieldbutton-full-height-m);
-			}
-		}
-
-		&.spectrum-PickerButton--sizeL {
-			.spectrum-PickerButton-fill {
-				padding-inline-end: var(
-					--spectrum-alias-pickerbutton-icononly-padding-x-l
-				);
-				padding-inline-start: var(
-					--spectrum-alias-pickerbutton-icononly-padding-x-l
-				);
-				inline-size: var(--spectrum-alias-infieldbutton-full-height-l);
-			}
-		}
-
-		&.spectrum-PickerButton--sizeXL {
-			.spectrum-PickerButton-fill {
-				padding-inline-end: var(
-					--spectrum-alias-pickerbutton-icononly-padding-x-xl
-				);
-				padding-inline-start: var(
-					--spectrum-alias-pickerbutton-icononly-padding-x-xl
-				);
-				inline-size: var(--spectrum-alias-infieldbutton-full-height-xl);
-			}
-		}
-
-		.spectrum-PickerButton-label {
-			display: none;
-		}
-
-		.spectrum-PickerButton-icon {
-			display: none;
-		}
-
-		.spectrum-PickerButton-UIIcon {
-			display: initial;
-		}
-	}
-
-	&.spectrum-PickerButton--icononly {
-		.spectrum-PickerButton-fill {
-			inline-size: var(--spectrum-PickerButton-Fill-size);
-		}
-
-		&.spectrum-PickerButton--sizeS {
-			.spectrum-PickerButton-fill {
-				padding-inline-end: var(--spectrum-global-dimension-size-50);
-				padding-inline-start: var(--spectrum-global-dimension-size-50);
-				inline-size: var(--spectrum-alias-infieldbutton-full-height-s);
-			}
-		}
-
-		&.spectrum-PickerButton--sizeM {
-			.spectrum-PickerButton-fill {
-				padding-inline-end: var(--spectrum-global-dimension-size-85);
-				padding-inline-start: var(--spectrum-global-dimension-size-85);
-				inline-size: var(--spectrum-alias-infieldbutton-full-height-m);
-			}
-		}
-
-		&.spectrum-PickerButton--sizeL {
-			.spectrum-PickerButton-fill {
-				padding-inline-end: var(--spectrum-global-dimension-size-125);
-				padding-inline-start: var(--spectrum-global-dimension-size-125);
-				inline-size: var(--spectrum-alias-infieldbutton-full-height-l);
-			}
-		}
-
-		&.spectrum-PickerButton--sizeXL {
-			.spectrum-PickerButton-fill {
-				padding-inline-end: var(--spectrum-global-dimension-size-160);
-				padding-inline-start: var(--spectrum-global-dimension-size-160);
-				inline-size: var(--spectrum-alias-infieldbutton-full-height-xl);
-			}
-		}
-
-		.spectrum-PickerButton-label {
-			display: none;
-		}
-
-		.spectrum-PickerButton-icon {
-			display: initial;
-		}
-
-		.spectrum-PickerButton-UIIcon {
-			display: none;
-		}
-	}
-
-	&.spectrum-PickerButton--textuiicon {
-		.spectrum-PickerButton-fill {
-			inline-size: auto;
-		}
-
-		&.spectrum-PickerButton--sizeS {
-			.spectrum-PickerButton-fill {
-				padding-inline-end: var(--spectrum-global-dimension-size-100);
-				padding-inline-start: var(--spectrum-global-dimension-size-115);
-			}
-		}
-
-		&.spectrum-PickerButton--sizeM {
-			.spectrum-PickerButton-fill {
-				padding-inline-end: var(--spectrum-global-dimension-size-125);
-				padding-inline-start: var(--spectrum-global-dimension-size-160);
-			}
-		}
-
-		&.spectrum-PickerButton--sizeL {
-			.spectrum-PickerButton-fill {
-				padding-inline-end: var(--spectrum-global-dimension-size-150);
-				padding-inline-start: var(--spectrum-global-dimension-size-185);
-			}
-		}
-
-		&.spectrum-PickerButton--sizeXL {
-			.spectrum-PickerButton-fill {
-				padding-inline-end: var(--spectrum-global-dimension-size-200);
-				padding-inline-start: var(--spectrum-global-dimension-size-225);
-			}
-		}
-
-		.spectrum-PickerButton-label {
-			display: initial;
-		}
-
-		.spectrum-PickerButton-icon {
-			display: none;
-		}
-
-		.spectrum-PickerButton-UIIcon {
-			display: initial;
-		}
-	}
-
-	&.spectrum-PickerButton--quiet {
-		&:disabled {
-			&:not(.is-open) {
-				.spectrum-PickerButton-fill {
-					background-color: var(
-						--spectrum-alias-infieldbutton-fill-loudnessLow-background-color-disabled
-					);
-				}
-			}
-
-			.spectrum-PickerButton-fill {
-				border-color: var(
-					--spectrum-alias-infieldbutton-fill-loudnessLow-border-color-disabled
-				);
-			}
-		}
-
-		&:not(:disabled) {
-			&:not(.is-open) {
-				.spectrum-PickerButton-fill {
-					background-color: var(
-						--spectrum-alias-infieldbutton-fill-loudnessLow-background-color-default
-					);
-				}
-
-				&:hover {
-					.spectrum-PickerButton-fill {
-						background-color: var(
-							--spectrum-alias-infieldbutton-fill-loudnessLow-background-color-hover
-						);
-					}
-				}
-
-				&:active {
-					.spectrum-PickerButton-fill {
-						background-color: var(
-							--spectrum-alias-infieldbutton-fill-loudnessLow-background-color-down
-						);
-					}
-				}
-			}
-		}
-
-		&.is-invalid {
-			&:not(:disabled) {
-				.spectrum-PickerButton-fill {
-					border-color: transparent;
-				}
-			}
-		}
-
-		&:not(.is-invalid) {
-			&:not(:disabled) {
-				.spectrum-PickerButton-fill {
-					border-color: transparent;
-				}
-
-				&:hover {
-					.spectrum-PickerButton-fill {
-						border-color: transparent;
-					}
-				}
-
-				&:active {
-					.spectrum-PickerButton-fill {
-						border-color: transparent;
-					}
-				}
-
-				&:focus {
-					.spectrum-PickerButton-fill {
-						border-color: transparent;
-					}
-				}
-
-				&.is-focused {
-					.spectrum-PickerButton-fill {
-						border-color: transparent;
-					}
-				}
-
-				&:focus-visible {
-					.spectrum-PickerButton-fill {
-						border-color: transparent;
-					}
-				}
-
-				&.is-keyboardFocused {
-					.spectrum-PickerButton-fill {
-						border-color: transparent;
-					}
-				}
-			}
-		}
-	}
-
-	&.is-open {
-		.spectrum-PickerButton-fill {
-			background-color: var(--spectrum-alias-component-background-color-down);
-		}
-
-		.spectrum-PickerButton-label {
-			color: var(--spectrum-alias-component-text-color-down);
-		}
-
-		.spectrum-PickerButton-icon {
-			color: var(--spectrum-alias-component-icon-color-down);
-		}
-
-		.spectrum-PickerButton-UIIcon {
-			color: var(--spectrum-alias-component-icon-color-down);
-		}
-	}
-
-	&:not(.is-open) {
-		.spectrum-PickerButton-label {
-			color: var(--spectrum-alias-component-text-color);
-		}
-
-		.spectrum-PickerButton-icon {
-			color: var(--spectrum-alias-component-icon-color);
-		}
-
-		.spectrum-PickerButton-UIIcon {
-			color: var(--spectrum-alias-component-icon-color);
-		}
-	}
-
-	&:disabled {
-		&:not(.is-open) {
-			.spectrum-PickerButton-label {
-				color: var(--spectrum-alias-component-text-color-disabled);
-			}
-
-			.spectrum-PickerButton-icon {
-				color: var(--spectrum-alias-component-icon-color-disabled);
-			}
-
-			.spectrum-PickerButton-UIIcon {
-				color: var(--spectrum-alias-component-icon-color-disabled);
-			}
-		}
-	}
-
-	&:not(:disabled) {
-		&:not(.is-open) {
-			.spectrum-PickerButton-label {
-				color: var(--spectrum-alias-component-text-color-default);
-			}
-
-			&:hover {
-				.spectrum-PickerButton-label {
-					color: var(--spectrum-alias-component-text-color-hover);
-				}
-
-				.spectrum-PickerButton-icon {
-					color: var(--spectrum-alias-component-icon-color-hover);
-				}
-
-				.spectrum-PickerButton-UIIcon {
-					color: var(--spectrum-alias-component-icon-color-hover);
-				}
-			}
-
-			&:active {
-				.spectrum-PickerButton-label {
-					color: var(--spectrum-alias-component-text-color-down);
-				}
-
-				.spectrum-PickerButton-icon {
-					color: var(--spectrum-alias-component-icon-color-down);
-				}
-
-				.spectrum-PickerButton-UIIcon {
-					color: var(--spectrum-alias-component-icon-color-down);
-				}
-			}
-
-			.spectrum-PickerButton-icon {
-				color: var(--spectrum-alias-component-icon-color-default);
-			}
-
-			.spectrum-PickerButton-UIIcon {
-				color: var(--spectrum-alias-component-icon-color-default);
-			}
-		}
-	}
-
-	&.spectrum-PickerButton--error {
-		&:not(:disabled) {
-			&:not(.is-open) {
-				.spectrum-PickerButton-label {
-					color: var(--spectrum-alias-component-text-color-error-default);
-				}
-
-				&:hover {
-					.spectrum-PickerButton-label {
-						color: var(--spectrum-alias-component-text-color-error-hover);
-					}
-				}
-
-				&:active {
-					.spectrum-PickerButton-label {
-						color: var(--spectrum-alias-component-text-color-error-down);
-					}
-				}
-			}
-		}
-	}
+  --spectrum-PickerButton-border-radius-right: var(--spectrum-alias-infieldbutton-border-radius);
+  --spectrum-PickerButton-border-radius-left: var(--spectrum-alias-infieldbutton-border-radius);
+  --spectrum-PickerButton-border-radius-right-rounded: var(--spectrum-alias-pickerbutton-border-radius-rounded);
+  --spectrum-PickerButton-border-radius-left-rounded: var(--spectrum-alias-pickerbutton-border-radius-rounded);
+
+  &.spectrum-PickerButton--sizeS {
+    padding: var(--spectrum-alias-infieldbutton-padding-s);
+    --spectrum-PickerButton-label-padding-y: var(--spectrum-alias-pickerbutton-label-padding-y-s);
+    --spectrum-PickerButton-icon-margin-y: var(--spectrum-alias-pickerbutton-icon-margin-y-s);
+    --spectrum-PickerButton-icononly-padding-x: var(--spectrum-alias-pickerbutton-icononly-padding-x-s);
+
+    .spectrum-PickerButton-fill {
+      --spectrum-PickerButton-Fill-size: var(--spectrum-alias-infieldbutton-full-height-s);
+      block-size: var(--spectrum-alias-infieldbutton-full-height-s);
+      inline-size: var(--spectrum-alias-infieldbutton-full-height-s);
+      gap: var(--spectrum-global-dimension-size-75)
+    }
+
+    .spectrum-PickerButton-label {
+      font-size: var(--spectrum-global-dimension-font-size-75);
+      padding-block-end: var(--spectrum-alias-pickerbutton-label-padding-y-s);
+      padding-block-start: var(--spectrum-alias-pickerbutton-label-padding-y-s)
+    }
+
+    .spectrum-PickerButton-icon {
+      gap: var(--spectrum-global-dimension-size-85);
+      --spectrum-PickerButton-Fill-Icon-size: var(--spectrum-global-dimension-size-200);
+      block-size: var(--spectrum-global-dimension-size-200);
+      inline-size: var(--spectrum-global-dimension-size-200);
+      margin-block-end: var(--spectrum-alias-infieldbutton-icon-margin-y-s);
+      margin-block-start: var(--spectrum-alias-infieldbutton-icon-margin-y-s)
+    }
+
+    .spectrum-PickerButton-UIIcon {
+      --spectrum-PickerButton-Fill-UIIcon-size: var(--spectrum-alias-ui-icon-chevron-size-100);
+      block-size: var(--spectrum-alias-ui-icon-chevron-size-100);
+      inline-size: var(--spectrum-alias-ui-icon-chevron-size-100);
+      margin-block-end: var(--spectrum-alias-pickerbutton-icon-margin-y-s);
+      margin-block-start: var(--spectrum-alias-pickerbutton-icon-margin-y-s)
+    }
+  }
+
+  &.spectrum-PickerButton--sizeM {
+    padding: var(--spectrum-alias-infieldbutton-padding-m);
+    --spectrum-PickerButton-label-padding-y: var(--spectrum-alias-pickerbutton-label-padding-y-m);
+    --spectrum-PickerButton-icon-margin-y: var(--spectrum-alias-pickerbutton-icon-margin-y-m);
+    --spectrum-PickerButton-icononly-padding-x: var(--spectrum-alias-pickerbutton-icononly-padding-x-m);
+
+    .spectrum-PickerButton-fill {
+      --spectrum-PickerButton-Fill-size: var(--spectrum-alias-infieldbutton-full-height-m);
+      block-size: var(--spectrum-alias-infieldbutton-full-height-m);
+      inline-size: var(--spectrum-alias-infieldbutton-full-height-m);
+      gap: var(--spectrum-global-dimension-size-85)
+    }
+
+    .spectrum-PickerButton-label {
+      font-size: var(--spectrum-global-dimension-font-size-100);
+      padding-block-end: var(--spectrum-alias-pickerbutton-label-padding-y-m);
+      padding-block-start: var(--spectrum-alias-pickerbutton-label-padding-y-m)
+    }
+
+    .spectrum-PickerButton-icon {
+      gap: var(--spectrum-global-dimension-size-100);
+      --spectrum-PickerButton-Fill-Icon-size: var(--spectrum-global-dimension-size-225);
+      block-size: var(--spectrum-global-dimension-size-225);
+      inline-size: var(--spectrum-global-dimension-size-225);
+      margin-block-end: var(--spectrum-alias-infieldbutton-icon-margin-y-m);
+      margin-block-start: var(--spectrum-alias-infieldbutton-icon-margin-y-m)
+    }
+
+    .spectrum-PickerButton-UIIcon {
+      --spectrum-PickerButton-Fill-UIIcon-size: var(--spectrum-alias-ui-icon-chevron-size-200);
+      block-size: var(--spectrum-alias-ui-icon-chevron-size-200);
+      inline-size: var(--spectrum-alias-ui-icon-chevron-size-200);
+      margin-block-end: var(--spectrum-alias-pickerbutton-icon-margin-y-m);
+      margin-block-start: var(--spectrum-alias-pickerbutton-icon-margin-y-m)
+    }
+  }
+
+  &.spectrum-PickerButton--sizeL {
+    padding: var(--spectrum-alias-infieldbutton-padding-l);
+    --spectrum-PickerButton-label-padding-y: var(--spectrum-alias-pickerbutton-label-padding-y-l);
+    --spectrum-PickerButton-icon-margin-y: var(--spectrum-alias-pickerbutton-icon-margin-y-l);
+    --spectrum-PickerButton-icononly-padding-x: var(--spectrum-alias-pickerbutton-icononly-padding-x-l);
+
+    .spectrum-PickerButton-fill {
+      --spectrum-PickerButton-Fill-size: var(--spectrum-alias-infieldbutton-full-height-l);
+      block-size: var(--spectrum-alias-infieldbutton-full-height-l);
+      inline-size: var(--spectrum-alias-infieldbutton-full-height-l);
+      gap: var(--spectrum-global-dimension-size-65)
+    }
+
+    .spectrum-PickerButton-label {
+      font-size: var(--spectrum-global-dimension-font-size-200);
+      padding-block-end: var(--spectrum-alias-pickerbutton-label-padding-y-l);
+      padding-block-start: var(--spectrum-alias-pickerbutton-label-padding-y-l)
+    }
+
+    .spectrum-PickerButton-icon {
+      gap: var(--spectrum-global-dimension-size-115);
+      margin-block-end: var(--spectrum-alias-infieldbutton-icon-margin-y-l);
+      margin-block-start: var(--spectrum-alias-infieldbutton-icon-margin-y-l)
+    }
+
+    .spectrum-PickerButton-UIIcon {
+      --spectrum-PickerButton-Fill-UIIcon-size: var(--spectrum-alias-ui-icon-chevron-size-300);
+      block-size: var(--spectrum-alias-ui-icon-chevron-size-300);
+      inline-size: var(--spectrum-alias-ui-icon-chevron-size-300);
+      margin-block-end: var(--spectrum-alias-pickerbutton-icon-margin-y-l);
+      margin-block-start: var(--spectrum-alias-pickerbutton-icon-margin-y-l)
+    }
+  }
+
+  &.spectrum-PickerButton--sizeXL {
+    padding: var(--spectrum-alias-infieldbutton-padding-xl);
+    --spectrum-PickerButton-label-padding-y: var(--spectrum-alias-pickerbutton-label-padding-y-xl);
+    --spectrum-PickerButton-icon-margin-y: var(--spectrum-alias-pickerbutton-icon-margin-y-xl);
+    --spectrum-PickerButton-icononly-padding-x: var(--spectrum-alias-pickerbutton-icononly-padding-x-xl);
+
+    .spectrum-PickerButton-fill {
+      --spectrum-PickerButton-Fill-size: var(--spectrum-alias-infieldbutton-full-height-xl);
+      block-size: var(--spectrum-alias-infieldbutton-full-height-xl);
+      inline-size: var(--spectrum-alias-infieldbutton-full-height-xl);
+      gap: var(--spectrum-global-dimension-size-85)
+    }
+
+    .spectrum-PickerButton-label {
+      font-size: var(--spectrum-global-dimension-font-size-300);
+      padding-block-end: var(--spectrum-alias-pickerbutton-label-padding-y-xl);
+      padding-block-start: var(--spectrum-alias-pickerbutton-label-padding-y-xl)
+    }
+
+    .spectrum-PickerButton-icon {
+      gap: var(--spectrum-global-dimension-size-125);
+      --spectrum-PickerButton-Fill-Icon-size: var(--spectrum-global-dimension-size-275);
+      block-size: var(--spectrum-global-dimension-size-275);
+      inline-size: var(--spectrum-global-dimension-size-275);
+      margin-block-end: var(--spectrum-alias-infieldbutton-icon-margin-y-xl);
+      margin-block-start: var(--spectrum-alias-infieldbutton-icon-margin-y-xl)
+    }
+
+    .spectrum-PickerButton-UIIcon {
+      --spectrum-PickerButton-Fill-UIIcon-size: var(--spectrum-alias-ui-icon-chevron-size-400);
+      block-size: var(--spectrum-alias-ui-icon-chevron-size-400);
+      inline-size: var(--spectrum-alias-ui-icon-chevron-size-400);
+      margin-block-end: var(--spectrum-alias-pickerbutton-icon-margin-y-xl);
+      margin-block-start: var(--spectrum-alias-pickerbutton-icon-margin-y-xl)
+    }
+  }
+
+  &:disabled {
+    &:not(.is-open) {
+      .spectrum-PickerButton-fill {
+        background-color: var(--spectrum-alias-infieldbutton-fill-loudnessHigh-background-color-disabled);
+      }
+    }
+
+    .spectrum-PickerButton-fill {
+      border-color: var(--spectrum-alias-infieldbutton-fill-loudnessHigh-border-color-disabled);
+    }
+  }
+
+  &:not(:disabled) {
+    &:not(.is-open) {
+      .spectrum-PickerButton-fill {
+        background-color: var(--spectrum-alias-infieldbutton-fill-loudnessHigh-background-color-default);
+      }
+
+      &:hover {
+        .spectrum-PickerButton-fill {
+          background-color: var(--spectrum-alias-infieldbutton-fill-loudnessHigh-background-color-hover);
+        }
+      }
+
+      &:active {
+        .spectrum-PickerButton-fill {
+          background-color: var(--spectrum-alias-infieldbutton-fill-loudnessHigh-background-color-down);
+        }
+      }
+    }
+  }
+
+  &.is-invalid {
+    &:not(:disabled) {
+      .spectrum-PickerButton-fill {
+        border-color: var(--spectrum-alias-input-border-color-invalid-default)
+      }
+
+      &:hover {
+        .spectrum-PickerButton-fill {
+          border-color: var(--spectrum-alias-input-border-color-invalid-hover)
+        }
+      }
+
+      &:active {
+        .spectrum-PickerButton-fill {
+          border-color: var(--spectrum-alias-input-border-color-invalid-down)
+        }
+      }
+
+      &:focus {
+        .spectrum-PickerButton-fill {
+          border-color: var(--spectrum-alias-input-border-color-invalid-mouse-focus)
+        }
+      }
+
+      &.is-focused {
+        .spectrum-PickerButton-fill {
+          border-color: var(--spectrum-alias-input-border-color-invalid-mouse-focus)
+        }
+      }
+
+      &:focus-visible {
+        .spectrum-PickerButton-fill {
+          border-color: var(--spectrum-alias-input-border-color-invalid-key-focus)
+        }
+      }
+
+      &.is-keyboardFocused {
+        .spectrum-PickerButton-fill {
+          border-color: var(--spectrum-alias-input-border-color-invalid-key-focus)
+        }
+      }
+    }
+  }
+
+  &:not(.is-invalid) {
+    &:not(:disabled) {
+      .spectrum-PickerButton-fill {
+        border-color: var(--spectrum-alias-infieldbutton-fill-border-color-default)
+      }
+
+      &:hover {
+        .spectrum-PickerButton-fill {
+          border-color: var(--spectrum-alias-infieldbutton-fill-border-color-hover)
+        }
+      }
+
+      &:active {
+        .spectrum-PickerButton-fill {
+          border-color: var(--spectrum-alias-infieldbutton-fill-border-color-down)
+        }
+      }
+
+      &:focus {
+        .spectrum-PickerButton-fill {
+          border-color: var(--spectrum-alias-infieldbutton-fill-border-color-mouse-focus)
+        }
+      }
+
+      &.is-focused {
+        .spectrum-PickerButton-fill {
+          border-color: var(--spectrum-alias-infieldbutton-fill-border-color-mouse-focus)
+        }
+      }
+
+      &:focus-visible {
+        .spectrum-PickerButton-fill {
+          border-color: var(--spectrum-alias-infieldbutton-fill-border-color-key-focus)
+        }
+      }
+
+      &.is-keyboardFocused {
+        .spectrum-PickerButton-fill {
+          border-color: var(--spectrum-alias-infieldbutton-fill-border-color-key-focus)
+        }
+      }
+    }
+  }
+
+  &.spectrum-PickerButton--right {
+    --spectrum-PickerButton-border-radius-left: var(--spectrum-alias-infieldbutton-border-radius-sided);
+    --spectrum-PickerButton-border-radius-left-rounded: var(--spectrum-alias-pickerbutton-border-radius-rounded-sided);
+
+    &:not(.spectrum-PickerButton--rounded) {
+      .spectrum-PickerButton-fill {
+        border-end-start-radius: var(--spectrum-alias-infieldbutton-border-radius-sided);
+        border-start-start-radius: var(--spectrum-alias-infieldbutton-border-radius-sided)
+      }
+    }
+
+    &.spectrum-PickerButton--rounded {
+      .spectrum-PickerButton-fill {
+        border-end-start-radius: var(--spectrum-alias-pickerbutton-border-radius-rounded-sided);
+        border-start-start-radius: var(--spectrum-alias-pickerbutton-border-radius-rounded-sided)
+      }
+    }
+  }
+
+  &.spectrum-PickerButton--left {
+    --spectrum-PickerButton-border-radius-right: var(--spectrum-alias-infieldbutton-border-radius-sided);
+    --spectrum-PickerButton-border-radius-right-rounded: var(--spectrum-alias-pickerbutton-border-radius-rounded-sided);
+
+    &:not(.spectrum-PickerButton--rounded) {
+      .spectrum-PickerButton-fill {
+        border-end-end-radius: var(--spectrum-alias-infieldbutton-border-radius-sided);
+        border-start-end-radius: var(--spectrum-alias-infieldbutton-border-radius-sided)
+      }
+    }
+
+    &.spectrum-PickerButton--rounded {
+      .spectrum-PickerButton-fill {
+        border-end-end-radius: var(--spectrum-alias-pickerbutton-border-radius-rounded-sided);
+        border-start-end-radius: var(--spectrum-alias-pickerbutton-border-radius-rounded-sided)
+      }
+    }
+  }
+
+  &:not(.spectrum-PickerButton--rounded) {
+    .spectrum-PickerButton-fill {
+      border-end-end-radius: var(--spectrum-alias-infieldbutton-border-radius);
+      border-end-start-radius: var(--spectrum-alias-infieldbutton-border-radius);
+      border-start-end-radius: var(--spectrum-alias-infieldbutton-border-radius);
+      border-start-start-radius: var(--spectrum-alias-infieldbutton-border-radius)
+    }
+  }
+
+  &.spectrum-PickerButton--rounded {
+    .spectrum-PickerButton-fill {
+      border-end-end-radius: var(--spectrum-alias-pickerbutton-border-radius-rounded);
+      border-end-start-radius: var(--spectrum-alias-pickerbutton-border-radius-rounded);
+      border-start-end-radius: var(--spectrum-alias-pickerbutton-border-radius-rounded);
+      border-start-start-radius: var(--spectrum-alias-pickerbutton-border-radius-rounded)
+    }
+  }
+
+  &.spectrum-PickerButton--uiicononly {
+    .spectrum-PickerButton-fill {
+      padding-inline-end: var(--spectrum-PickerButton-icononly-padding-x);
+      padding-inline-start: var(--spectrum-PickerButton-icononly-padding-x);
+      inline-size: var(--spectrum-PickerButton-Fill-size)
+    }
+
+    &.spectrum-PickerButton--sizeS {
+      .spectrum-PickerButton-fill {
+        padding-inline-end: var(--spectrum-alias-pickerbutton-icononly-padding-x-s);
+        padding-inline-start: var(--spectrum-alias-pickerbutton-icononly-padding-x-s);
+        inline-size: var(--spectrum-alias-infieldbutton-full-height-s)
+      }
+    }
+
+    &.spectrum-PickerButton--sizeM {
+      .spectrum-PickerButton-fill {
+        padding-inline-end: var(--spectrum-alias-pickerbutton-icononly-padding-x-m);
+        padding-inline-start: var(--spectrum-alias-pickerbutton-icononly-padding-x-m);
+        inline-size: var(--spectrum-alias-infieldbutton-full-height-m)
+      }
+    }
+
+    &.spectrum-PickerButton--sizeL {
+      .spectrum-PickerButton-fill {
+        padding-inline-end: var(--spectrum-alias-pickerbutton-icononly-padding-x-l);
+        padding-inline-start: var(--spectrum-alias-pickerbutton-icononly-padding-x-l);
+        inline-size: var(--spectrum-alias-infieldbutton-full-height-l)
+      }
+    }
+
+    &.spectrum-PickerButton--sizeXL {
+      .spectrum-PickerButton-fill {
+        padding-inline-end: var(--spectrum-alias-pickerbutton-icononly-padding-x-xl);
+        padding-inline-start: var(--spectrum-alias-pickerbutton-icononly-padding-x-xl);
+        inline-size: var(--spectrum-alias-infieldbutton-full-height-xl)
+      }
+    }
+
+    .spectrum-PickerButton-label {
+      display: none
+    }
+
+    .spectrum-PickerButton-icon {
+      display: none
+    }
+
+    .spectrum-PickerButton-UIIcon {
+      display: initial
+    }
+  }
+
+  &.spectrum-PickerButton--icononly {
+    .spectrum-PickerButton-fill {
+      inline-size: var(--spectrum-PickerButton-Fill-size)
+    }
+
+    &.spectrum-PickerButton--sizeS {
+      .spectrum-PickerButton-fill {
+        padding-inline-end: var(--spectrum-global-dimension-size-50);
+        padding-inline-start: var(--spectrum-global-dimension-size-50);
+        inline-size: var(--spectrum-alias-infieldbutton-full-height-s)
+      }
+    }
+
+    &.spectrum-PickerButton--sizeM {
+      .spectrum-PickerButton-fill {
+        padding-inline-end: var(--spectrum-global-dimension-size-85);
+        padding-inline-start: var(--spectrum-global-dimension-size-85);
+        inline-size: var(--spectrum-alias-infieldbutton-full-height-m)
+      }
+    }
+
+    &.spectrum-PickerButton--sizeL {
+      .spectrum-PickerButton-fill {
+        padding-inline-end: var(--spectrum-global-dimension-size-125);
+        padding-inline-start: var(--spectrum-global-dimension-size-125);
+        inline-size: var(--spectrum-alias-infieldbutton-full-height-l)
+      }
+    }
+
+    &.spectrum-PickerButton--sizeXL {
+      .spectrum-PickerButton-fill {
+        padding-inline-end: var(--spectrum-global-dimension-size-160);
+        padding-inline-start: var(--spectrum-global-dimension-size-160);
+        inline-size: var(--spectrum-alias-infieldbutton-full-height-xl)
+      }
+    }
+
+    .spectrum-PickerButton-label {
+      display: none
+    }
+
+    .spectrum-PickerButton-icon {
+      display: initial
+    }
+
+    .spectrum-PickerButton-UIIcon {
+      display: none
+    }
+  }
+
+  &.spectrum-PickerButton--textuiicon {
+    .spectrum-PickerButton-fill {
+      inline-size: auto
+    }
+
+    &.spectrum-PickerButton--sizeS {
+      .spectrum-PickerButton-fill {
+        padding-inline-end: var(--spectrum-global-dimension-size-100);
+        padding-inline-start: var(--spectrum-global-dimension-size-115)
+      }
+    }
+
+    &.spectrum-PickerButton--sizeM {
+      .spectrum-PickerButton-fill {
+        padding-inline-end: var(--spectrum-global-dimension-size-125);
+        padding-inline-start: var(--spectrum-global-dimension-size-160)
+      }
+    }
+
+    &.spectrum-PickerButton--sizeL {
+      .spectrum-PickerButton-fill {
+        padding-inline-end: var(--spectrum-global-dimension-size-150);
+        padding-inline-start: var(--spectrum-global-dimension-size-185)
+      }
+    }
+
+    &.spectrum-PickerButton--sizeXL {
+      .spectrum-PickerButton-fill {
+        padding-inline-end: var(--spectrum-global-dimension-size-200);
+        padding-inline-start: var(--spectrum-global-dimension-size-225)
+      }
+    }
+
+    .spectrum-PickerButton-label {
+      display: initial
+    }
+
+    .spectrum-PickerButton-icon {
+      display: none
+    }
+
+    .spectrum-PickerButton-UIIcon {
+      display: initial
+    }
+  }
+
+  &.spectrum-PickerButton--quiet {
+    &:disabled {
+      &:not(.is-open) {
+        .spectrum-PickerButton-fill {
+          background-color: var(--spectrum-alias-infieldbutton-fill-loudnessLow-background-color-disabled)
+        }
+      }
+
+      .spectrum-PickerButton-fill {
+        border-color: var(--spectrum-alias-infieldbutton-fill-loudnessLow-border-color-disabled)
+      }
+    }
+
+    &:not(:disabled) {
+      &:not(.is-open) {
+        .spectrum-PickerButton-fill {
+          background-color: var(--spectrum-alias-infieldbutton-fill-loudnessLow-background-color-default)
+        }
+
+        &:hover {
+          .spectrum-PickerButton-fill {
+            background-color: var(--spectrum-alias-infieldbutton-fill-loudnessLow-background-color-hover)
+          }
+        }
+
+        &:active {
+          .spectrum-PickerButton-fill {
+            background-color: var(--spectrum-alias-infieldbutton-fill-loudnessLow-background-color-down)
+          }
+        }
+      }
+    }
+
+    &.is-invalid {
+      &:not(:disabled) {
+        .spectrum-PickerButton-fill {
+          border-color: transparent
+        }
+      }
+    }
+
+    &:not(.is-invalid) {
+      &:not(:disabled) {
+        .spectrum-PickerButton-fill {
+          border-color: transparent
+        }
+
+        &:hover {
+          .spectrum-PickerButton-fill {
+            border-color: transparent
+          }
+        }
+
+        &:active {
+          .spectrum-PickerButton-fill {
+            border-color: transparent
+          }
+        }
+
+        &:focus {
+          .spectrum-PickerButton-fill {
+            border-color: transparent
+          }
+        }
+
+        &.is-focused {
+          .spectrum-PickerButton-fill {
+            border-color: transparent
+          }
+        }
+
+        &:focus-visible {
+          .spectrum-PickerButton-fill {
+            border-color: transparent
+          }
+        }
+
+        &.is-keyboardFocused {
+          .spectrum-PickerButton-fill {
+            border-color: transparent
+          }
+        }
+      }
+    }
+  }
+
+  &.is-open {
+    .spectrum-PickerButton-fill {
+      background-color: var(--spectrum-alias-component-background-color-down)
+    }
+
+    .spectrum-PickerButton-label {
+      color: var(--spectrum-alias-component-text-color-down)
+    }
+
+    .spectrum-PickerButton-icon {
+      color: var(--spectrum-alias-component-icon-color-down)
+    }
+
+    .spectrum-PickerButton-UIIcon {
+      color: var(--spectrum-alias-component-icon-color-down)
+    }
+  }
+
+  &:not(.is-open) {
+    .spectrum-PickerButton-label {
+      color: var(--spectrum-alias-component-text-color)
+    }
+
+    .spectrum-PickerButton-icon {
+      color: var(--spectrum-alias-component-icon-color)
+    }
+
+    .spectrum-PickerButton-UIIcon {
+      color: var(--spectrum-alias-component-icon-color)
+    }
+  }
+
+  &:disabled {
+    &:not(.is-open) {
+      .spectrum-PickerButton-label {
+        color: var(--spectrum-alias-component-text-color-disabled)
+      }
+
+      .spectrum-PickerButton-icon {
+        color: var(--spectrum-alias-component-icon-color-disabled)
+      }
+
+      .spectrum-PickerButton-UIIcon {
+        color: var(--spectrum-alias-component-icon-color-disabled)
+      }
+    }
+  }
+
+  &:not(:disabled) {
+    &:not(.is-open) {
+      .spectrum-PickerButton-label {
+        color: var(--spectrum-alias-component-text-color-default)
+      }
+
+      &:hover {
+        .spectrum-PickerButton-label {
+          color: var(--spectrum-alias-component-text-color-hover)
+        }
+
+        .spectrum-PickerButton-icon {
+          color: var(--spectrum-alias-component-icon-color-hover)
+        }
+
+        .spectrum-PickerButton-UIIcon {
+          color: var(--spectrum-alias-component-icon-color-hover)
+        }
+      }
+
+      &:active {
+        .spectrum-PickerButton-label {
+          color: var(--spectrum-alias-component-text-color-down)
+        }
+
+        .spectrum-PickerButton-icon {
+          color: var(--spectrum-alias-component-icon-color-down)
+        }
+
+        .spectrum-PickerButton-UIIcon {
+          color: var(--spectrum-alias-component-icon-color-down)
+        }
+      }
+
+      .spectrum-PickerButton-icon {
+        color: var(--spectrum-alias-component-icon-color-default)
+      }
+
+      .spectrum-PickerButton-UIIcon {
+        color: var(--spectrum-alias-component-icon-color-default)
+      }
+    }
+  }
+
+  &.spectrum-PickerButton--error {
+    &:not(:disabled) {
+      &:not(.is-open) {
+        .spectrum-PickerButton-label {
+          color: var(--spectrum-alias-component-text-color-error-default)
+        }
+
+        &:hover {
+          .spectrum-PickerButton-label {
+            color: var(--spectrum-alias-component-text-color-error-hover)
+          }
+        }
+
+        &:active {
+          .spectrum-PickerButton-label {
+            color: var(--spectrum-alias-component-text-color-error-down)
+          }
+        }
+      }
+    }
+  }
 }
 
 .spectrum-PickerButton-fill {
-	border-width: var(--spectrum-alias-infieldbutton-border-size);
-	border-style: solid;
-	flex-direction: row;
-	display: flex;
+  border-width: var(--spectrum-alias-infieldbutton-border-size);
+  border-style: solid;
+  flex-direction: row;
+  display: flex
 }
 
 .spectrum-PickerButton-label {
-	text-transform: none;
-	letter-spacing: var(--spectrum-global-font-letter-spacing-none);
-	line-height: var(--spectrum-global-font-component-text-line-height);
-	font-weight: var(--spectrum-global-font-body-text-font-weight);
-	font-style: var(--spectrum-global-font-style-regular);
-	font-family: var(--spectrum-global-font-body-text-font-family);
-	padding-block-end: var(--spectrum-PickerButton-label-padding-y);
-	padding-block-start: var(--spectrum-PickerButton-label-padding-y);
+  text-transform: none;
+  letter-spacing: var(--spectrum-global-font-letter-spacing-none);
+  line-height: var(--spectrum-global-font-component-text-line-height);
+  font-weight: var(--spectrum-global-font-body-text-font-weight);
+  font-style: var(--spectrum-global-font-style-regular);
+  font-family: var(--spectrum-global-font-body-text-font-family);
+  padding-block-end: var(--spectrum-PickerButton-label-padding-y);
+  padding-block-start: var(--spectrum-PickerButton-label-padding-y)
 }
 
 .spectrum--medium {
-	.spectrum-PickerButton {
-		&.spectrum-PickerButton--sizeL {
-			.spectrum-PickerButton-icon {
-				--spectrum-PickerButton-Fill-Icon-size: var(
-					--spectrum-global-dimension-static-size-250
-				);
-				block-size: var(--spectrum-global-dimension-static-size-250);
-				inline-size: var(--spectrum-global-dimension-static-size-250);
-			}
-		}
-	}
+  .spectrum-PickerButton {
+    &.spectrum-PickerButton--sizeL {
+      .spectrum-PickerButton-icon {
+        --spectrum-PickerButton-Fill-Icon-size: var(--spectrum-global-dimension-static-size-250);
+        block-size: var(--spectrum-global-dimension-static-size-250);
+        inline-size: var(--spectrum-global-dimension-static-size-250)
+      }
+    }
+  }
 }
 
 .spectrum--large {
-	.spectrum-PickerButton {
-		&.spectrum-PickerButton--sizeL {
-			.spectrum-PickerButton-icon {
-				--spectrum-PickerButton-Fill-Icon-size: var(
-					--spectrum-global-dimension-static-size-300
-				);
-				block-size: var(--spectrum-global-dimension-static-size-300);
-				inline-size: var(--spectrum-global-dimension-static-size-300);
-			}
-		}
-	}
+  .spectrum-PickerButton {
+    &.spectrum-PickerButton--sizeL {
+      .spectrum-PickerButton-icon {
+        --spectrum-PickerButton-Fill-Icon-size: var(--spectrum-global-dimension-static-size-300);
+        block-size: var(--spectrum-global-dimension-static-size-300);
+        inline-size: var(--spectrum-global-dimension-static-size-300)
+      }
+    }
+  }
 }
 
 .spectrum-PickerButton-UIIcon {
-	margin-block-end: var(--spectrum-PickerButton-icon-margin-y);
-	margin-block-start: var(--spectrum-PickerButton-icon-margin-y);
-	--spectrum-PickerButton-Fill-UIIcon-rotate: 90deg;
-	transform: rotate(90deg);
+  margin-block-end: var(--spectrum-PickerButton-icon-margin-y);
+  margin-block-start: var(--spectrum-PickerButton-icon-margin-y);
+  --spectrum-PickerButton-Fill-UIIcon-rotate: 90deg;
+  transform: rotate(90deg)
 }
 
 /* end generated CSS for pickerbutton */

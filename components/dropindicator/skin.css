@@ -11,10 +11,10 @@ governing permissions and limitations under the License.
 */
 
 .spectrum-DropIndicator {
-	background: var(--spectrum-dropindicator-border-color);
+  background: var(--spectrum-dropindicator-border-color);
 
-	&:before,
-	&:after {
-		border-color: var(--spectrum-dropindicator-circle-border-color);
-	}
+  &:before,
+  &:after {
+    border-color: var(--spectrum-dropindicator-circle-border-color);
+  }
 }

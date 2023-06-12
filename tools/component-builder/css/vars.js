@@ -12,12 +12,17 @@ governing permissions and limitations under the License.
 
 const gulp = require("gulp");
 const through = require("through2");
+const postcss = require("postcss");
 const logger = require("gulplog");
-const colors = require("colors");
 const fsp = require("fs").promises;
 const path = require("path");
 
 const varUtils = require("./lib/varUtils");
+
+// Todo: get these values from a common place?
+let colorStops = ["darkest", "dark", "light", "lightest"];
+
+let scales = ["medium", "large"];
 
 function bakeVars() {
 	return gulp
@@ -46,10 +51,9 @@ function bakeVars() {
 				let errors = [];
 				let usedVars = {};
 				variableList.forEach((varName) => {
-					varName = `${varName}`.cyan;
 					if (varName.indexOf("spectrum-global") !== -1) {
 						logger.warn(
-							`${"◆".red}  ${pkg.name} directly uses global variable ${varName}`
+							`⚠️  ${pkg.name} directly uses global variable ${varName}`
 						);
 					} else if (
 						!allVars[varName] &&
@@ -57,19 +61,15 @@ function bakeVars() {
 						!varName.startsWith("--highcontrast")
 					) {
 						if (componentVars.indexOf(varName) === -1) {
-							logger.warn(
-								`${"◆".yellow}  ${pkg.name} uses ${
-									"undefined".underline
-								} variable ${varName}`
-							);
+							errors.push(`${pkg.name} uses undefined variable ${varName}`);
 						} else {
 							logger.warn(
-								`${"◆".yellow}  ${pkg.name} uses ${
-									"internally".italic
-								} defined variable ${varName}`
+								`🔶 ${pkg.name} uses locally defined variable ${varName}`
 							);
 						}
-					} else usedVars[varName] = vars[varName];
+					} else {
+						usedVars[varName] = vars[varName];
+					}
 				});
 
 				if (errors.length) {

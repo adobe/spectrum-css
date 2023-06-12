@@ -3,6 +3,15 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+<a name="4.0.12"></a>
+##4.0.12
+🗓
+2023-06-12 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/component-builder@4.0.11...@spectrum-css/component-builder@4.0.12)
+
+### 🐛 Bug fixes
+
+\*revert component-builder changes([f77036d](https://github.com/adobe/spectrum-css/commit/f77036d))
+
 <a name="4.0.11"></a>
 ##4.0.11
 🗓

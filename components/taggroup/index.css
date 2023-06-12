@@ -11,20 +11,20 @@ governing permissions and limitations under the License.
 */
 
 .spectrum-TagGroup {
-	/* todo: get this added back to DNA */
-	--spectrum-taggroup-tag-gap-x: var(--spectrum-global-dimension-size-100);
-	--spectrum-taggroup-tag-gap-y: var(--spectrum-global-dimension-size-100);
+  /* todo: get this added back to DNA */
+  --spectrum-taggroup-tag-gap-x: var(--spectrum-global-dimension-size-100);
+  --spectrum-taggroup-tag-gap-y: var(--spectrum-global-dimension-size-100);
 }
 
 .spectrum-TagGroup {
-	display: inline-flex;
+  display: inline-flex;
 
-	margin: 0;
-	padding: 0;
-	list-style: none;
+  margin: 0;
+  padding: 0;
+  list-style: none;
 }
 
 .spectrum-TagGroup-item {
-	margin-block: calc(var(--spectrum-taggroup-tag-gap-y) / 2);
-	margin-inline: calc(var(--spectrum-taggroup-tag-gap-x) / 2);
+  margin-block: calc(var(--spectrum-taggroup-tag-gap-y)/2);
+  margin-inline: calc(var(--spectrum-taggroup-tag-gap-x)/2);
 }

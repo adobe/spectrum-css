@@ -11,133 +11,109 @@ governing permissions and limitations under the License.
 */
 
 .spectrum-TreeView {
-	--spectrum-treeview-item-background-color-selected: var(
-		--spectrum-alias-highlight-selected
-	);
-	--spectrum-treeview-item-border-color-selected: var(
-		--spectrum-global-color-blue-500
-	);
+  --spectrum-treeview-item-background-color-selected: var(--spectrum-alias-highlight-selected);
+  --spectrum-treeview-item-border-color-selected: var(--spectrum-global-color-blue-500);
 
-	--spectrum-treeview-item-background-color-quiet-selected: var(
-		--spectrum-alias-highlight-hover
-	);
-	--spectrum-treeview-item-border-color-quiet-selected: transparent;
+  --spectrum-treeview-item-background-color-quiet-selected: var(--spectrum-alias-highlight-hover);
+  --spectrum-treeview-item-border-color-quiet-selected: transparent;
 
-	/* todo: add missing variables below to DNA */
-	--spectrum-treeview-item-icon-color: var(--spectrum-alias-icon-color);
-	--spectrum-treeview-item-icon-color-hover: var(
-		--spectrum-alias-icon-color-hover
-	);
-	/*--spectrum-treeview-item-icon-color-down: var(--spectrum-alias-icon-color-down);*/ /* not used */
-	--spectrum-treeview-item-icon-color-focus: var(
-		--spectrum-alias-icon-color-key-focus
-	);
-	--spectrum-treeview-item-icon-color-selected: var(
-		--spectrum-alias-icon-color-selected-neutral
-	);
-	--spectrum-treeview-item-icon-color-disabled: var(
-		--spectrum-alias-icon-color-disabled
-	);
+  /* todo: add missing variables below to DNA */
+  --spectrum-treeview-item-icon-color: var(--spectrum-alias-icon-color);
+  --spectrum-treeview-item-icon-color-hover: var(--spectrum-alias-icon-color-hover);
+  /*--spectrum-treeview-item-icon-color-down: var(--spectrum-alias-icon-color-down);*/ /* not used */
+  --spectrum-treeview-item-icon-color-focus: var(--spectrum-alias-icon-color-key-focus);
+  --spectrum-treeview-item-icon-color-selected: var(--spectrum-alias-icon-color-selected-neutral);
+  --spectrum-treeview-item-icon-color-disabled: var(--spectrum-alias-icon-color-disabled);
 
-	/*--spectrum-treeview-m-item-text-color-down: var(--spectrum-alias-text-color-down);*/ /* not used */
-	--spectrum-treeview-m-item-text-color-selected: var(
-		--spectrum-alias-text-color-selected-neutral
-	);
+  /*--spectrum-treeview-m-item-text-color-down: var(--spectrum-alias-text-color-down);*/ /* not used */
+  --spectrum-treeview-m-item-text-color-selected: var(--spectrum-alias-text-color-selected-neutral);
 }
 
 .spectrum-TreeView-item {
-	&.is-disabled {
-		> .spectrum-TreeView-itemLink {
-			color: var(--spectrum-treeview-m-item-text-color-disabled);
+  &.is-disabled {
+    > .spectrum-TreeView-itemLink {
+      color: var(--spectrum-treeview-m-item-text-color-disabled);
 
-			.spectrum-Icon {
-				color: var(--spectrum-treeview-item-icon-color-disabled);
-			}
-		}
-	}
+      .spectrum-Icon {
+        color: var(--spectrum-treeview-item-icon-color-disabled);
+      }
+    }
+  }
 
-	&.is-selected {
-		> .spectrum-TreeView-itemLink {
-			color: var(--spectrum-treeview-m-item-text-color-selected);
+  &.is-selected {
+    > .spectrum-TreeView-itemLink {
+      color: var(--spectrum-treeview-m-item-text-color-selected);
 
-			&:before {
-				background-color: var(
-					--spectrum-treeview-item-background-color-selected
-				);
-				border-color: var(--spectrum-treeview-m-item-border-color-key-focus);
-			}
+      &:before {
+        background-color: var(--spectrum-treeview-item-background-color-selected);
+        border-color: var(--spectrum-treeview-m-item-border-color-key-focus);
+      }
 
-			.spectrum-TreeView-itemIcon {
-				color: var(--spectrum-treeview-item-icon-color-selected);
-			}
-		}
-	}
+      .spectrum-TreeView-itemIcon {
+        color: var(--spectrum-treeview-item-icon-color-selected);
+      }
+    }
+  }
 
-	&.is-drop-target {
-		> .spectrum-TreeView-itemLink {
-			&:before {
-				background-color: var(--spectrum-alias-highlight-selected);
-				border-color: var(--spectrum-treeview-m-item-border-color-key-focus);
-			}
-		}
-	}
+  &.is-drop-target {
+    > .spectrum-TreeView-itemLink {
+      &:before {
+        background-color: var(--spectrum-alias-highlight-selected);
+        border-color: var(--spectrum-treeview-m-item-border-color-key-focus);
+      }
+    }
+  }
 }
 
 .spectrum-TreeView--quiet {
-	.spectrum-TreeView-item {
-		&.is-selected {
-			> .spectrum-TreeView-itemLink {
-				&:before {
-					background-color: var(
-						--spectrum-treeview-item-background-color-quiet-selected
-					);
-					border-color: transparent;
-				}
+  .spectrum-TreeView-item {
+     &.is-selected {
+      > .spectrum-TreeView-itemLink {
+        &:before {
+          background-color: var(--spectrum-treeview-item-background-color-quiet-selected);
+          border-color: transparent;
+        }
 
-				&:focus-ring {
-					&:before {
-						border-color: var(
-							--spectrum-treeview-m-item-border-color-key-focus
-						);
-					}
-				}
-			}
-		}
-	}
+        &:focus-ring {
+          &:before {
+            border-color: var(--spectrum-treeview-m-item-border-color-key-focus);
+          }
+        }
+      }
+    }
+  }
 }
 
 .spectrum-TreeView-itemIcon {
-	color: var(--spectrum-treeview-item-icon-color);
+  color: var(--spectrum-treeview-item-icon-color);
 }
 
 .spectrum-TreeView-itemLink {
-	color: var(--spectrum-treeview-m-item-text-color);
+  color: var(--spectrum-treeview-m-item-text-color);
 
-	&:hover {
-		color: var(--spectrum-treeview-m-item-text-color-hover);
+  &:hover {
+    color: var(--spectrum-treeview-m-item-text-color-hover);
 
-		&:before {
-			background-color: var(--spectrum-treeview-m-item-background-color-hover);
-		}
+    &:before {
+      background-color: var(--spectrum-treeview-m-item-background-color-hover);
+    }
 
-		.spectrum-TreeView-itemIcon {
-			color: var(--spectrum-treeview-item-icon-color-hover);
-		}
-	}
+    .spectrum-TreeView-itemIcon {
+      color: var(--spectrum-treeview-item-icon-color-hover);
+    }
+  }
 
-	&:focus-ring {
-		color: var(--spectrum-treeview-m-item-text-color-mouse-focus);
+  &:focus-ring {
+    color: var(--spectrum-treeview-m-item-text-color-mouse-focus);
 
-		&::before {
-			background-color: var(
-				--spectrum-treeview-m-item-background-color-key-focus
-			);
+    &::before {
+      background-color: var(--spectrum-treeview-m-item-background-color-key-focus);
 
-			border-color: var(--spectrum-treeview-m-item-border-color-key-focus);
-		}
+      border-color: var(--spectrum-treeview-m-item-border-color-key-focus);
+    }
 
-		.spectrum-TreeView-itemIcon {
-			color: var(--spectrum-treeview-item-icon-color-focus);
-		}
-	}
+    .spectrum-TreeView-itemIcon {
+      color: var(--spectrum-treeview-item-icon-color-focus);
+    }
+  }
 }
