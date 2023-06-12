@@ -20,6 +20,7 @@ governing permissions and limitations under the License.
 	--spectrum-PickerButton-border-radius-left: var(--spectrum-alias-infieldbutton-border-radius);
 	--spectrum-PickerButton-border-radius-right-rounded: var(--spectrum-alias-pickerbutton-border-radius-rounded);
 	--spectrum-PickerButton-border-radius-left-rounded: var(--spectrum-alias-pickerbutton-border-radius-rounded);
+	--spectrum-PickerButton-Fill-UIIcon-rotate: 90deg;
 
 	--spectrum-infieldbutton-border-color-override: initial;
 
@@ -111,42 +112,110 @@ governing permissions and limitations under the License.
 	align-items: center;
 	padding: var(--spectrum-PickerButton-padding);
 
+	.spectrum-PickerButton-fill {
+		background-color: var(
+			--spectrum-alias-infieldbutton-fill-loudnessHigh-background-color-default
+		);
+		border-color: var(
+			--spectrum-alias-infieldbutton-fill-border-color-default
+		);
+	}
+
 	&:disabled {
-		&:not(.is-open) {
-			.spectrum-PickerButton-fill {
-				background-color: var(
-					--spectrum-alias-infieldbutton-fill-loudnessHigh-background-color-disabled
-				);
-			}
+		.spectrum-PickerButton-fill {
+			background-color: var(
+				--spectrum-alias-infieldbutton-fill-loudnessHigh-background-color-disabled
+			);
+		}
+		.spectrum-PickerButton-label {
+			color: var(--spectrum-alias-component-text-color-disabled);
+		}
+		.spectrum-PickerButton-icon {
+			color: var(--spectrum-alias-component-icon-color-disabled);
 		}
 
+		.spectrum-PickerButton-UIIcon {
+			color: var(--spectrum-alias-component-icon-color-disabled);
+		}
+	}
+	&:hover {
+		.spectrum-PickerButton-fill {
+			background-color: var(
+				--spectrum-alias-infieldbutton-fill-loudnessHigh-background-color-hover
+			);
+			border-color: var(
+				--spectrum-alias-infieldbutton-fill-border-color-hover
+			);
+		}
+		.spectrum-PickerButton-label {
+			color: var(--spectrum-alias-component-text-color-hover);
+		}
+
+		.spectrum-PickerButton-icon,
+		.spectrum-PickerButton-UIIcon {
+			color: var(--spectrum-alias-component-icon-color-hover);
+		}
+	}
+
+	&:active {
+		.spectrum-PickerButton-fill {
+			background-color: var(
+				--spectrum-alias-infieldbutton-fill-loudnessHigh-background-color-down
+			);
+			border-color: var(
+					--spectrum-alias-infieldbutton-fill-border-color-down
+				);
+		}
+		.spectrum-PickerButton-label {
+			color: var(--spectrum-alias-component-text-color-down);
+		}
+
+		.spectrum-PickerButton-icon,
+		.spectrum-PickerButton-UIIcon {
+			color: var(--spectrum-alias-component-icon-color-down);
+		}
+	}
+
+	&:focus,
+	&.is-focused {
 		.spectrum-PickerButton-fill {
 			border-color: var(
-				--spectrum-alias-infieldbutton-fill-loudnessHigh-border-color-disabled
+				--spectrum-alias-infieldbutton-fill-border-color-mouse-focus
 			);
 		}
 	}
-	&:not(.is-open) {
+
+	&:focus-visible,
+	&.is-keyboardFocused {
 		.spectrum-PickerButton-fill {
-			background-color: var(
-				--spectrum-alias-infieldbutton-fill-loudnessHigh-background-color-default
+			border-color: var(
+				--spectrum-alias-infieldbutton-fill-border-color-key-focus
 			);
 		}
+	}
 
-		&:hover {
+	&.is-open {
+		&:disabled {
 			.spectrum-PickerButton-fill {
-				background-color: var(
-					--spectrum-alias-infieldbutton-fill-loudnessHigh-background-color-hover
+				border-color: var(
+					--spectrum-alias-infieldbutton-fill-loudnessHigh-border-color-disabled
 				);
 			}
 		}
+		.spectrum-PickerButton-fill {
+			background-color: var(--spectrum-alias-component-background-color-down);
+		}
 
-		&:active {
-			.spectrum-PickerButton-fill {
-				background-color: var(
-					--spectrum-alias-infieldbutton-fill-loudnessHigh-background-color-down
-				);
-			}
+		.spectrum-PickerButton-label {
+			color: var(--spectrum-alias-component-text-color-down);
+		}
+
+		.spectrum-PickerButton-icon {
+			color: var(--spectrum-alias-component-icon-color-down);
+		}
+
+		.spectrum-PickerButton-UIIcon {
+			color: var(--spectrum-alias-component-icon-color-down);
 		}
 	}
 	&.is-invalid:not(:disabled) {
@@ -166,14 +235,7 @@ governing permissions and limitations under the License.
 			}
 		}
 
-		&:focus {
-			.spectrum-PickerButton-fill {
-				border-color: var(
-					--spectrum-alias-input-border-color-invalid-mouse-focus
-				);
-			}
-		}
-
+		&:focus,
 		&.is-focused {
 			.spectrum-PickerButton-fill {
 				border-color: var(
@@ -182,74 +244,11 @@ governing permissions and limitations under the License.
 			}
 		}
 
-		&:focus-visible {
-			.spectrum-PickerButton-fill {
-				border-color: var(
-					--spectrum-alias-input-border-color-invalid-key-focus
-				);
-			}
-		}
-
+		&:focus-visible,
 		&.is-keyboardFocused {
 			.spectrum-PickerButton-fill {
 				border-color: var(
 					--spectrum-alias-input-border-color-invalid-key-focus
-				);
-			}
-		}
-	}
-
-	&:not(:disabled) {
-		.spectrum-PickerButton-fill {
-			border-color: var(
-				--spectrum-alias-infieldbutton-fill-border-color-default
-			);
-		}
-
-		&:hover {
-			.spectrum-PickerButton-fill {
-				border-color: var(
-					--spectrum-alias-infieldbutton-fill-border-color-hover
-				);
-			}
-		}
-
-		&:active {
-			.spectrum-PickerButton-fill {
-				border-color: var(
-					--spectrum-alias-infieldbutton-fill-border-color-down
-				);
-			}
-		}
-
-		&:focus {
-			.spectrum-PickerButton-fill {
-				border-color: var(
-					--spectrum-alias-infieldbutton-fill-border-color-mouse-focus
-				);
-			}
-		}
-
-		&.is-focused {
-			.spectrum-PickerButton-fill {
-				border-color: var(
-					--spectrum-alias-infieldbutton-fill-border-color-mouse-focus
-				);
-			}
-		}
-
-		&:focus-visible {
-			.spectrum-PickerButton-fill {
-				border-color: var(
-					--spectrum-alias-infieldbutton-fill-border-color-key-focus
-				);
-			}
-		}
-
-		&.is-keyboardFocused {
-			.spectrum-PickerButton-fill {
-				border-color: var(
-					--spectrum-alias-infieldbutton-fill-border-color-key-focus
 				);
 			}
 		}
@@ -301,22 +300,36 @@ governing permissions and limitations under the License.
 }
 
 .spectrum-PickerButton-label {
-  /* Be the biggest, but also shrink! */
-  flex: 1 1 auto;
+	/* Be the biggest, but also shrink! */
+	flex: 1 1 auto;
+	color: var(--spectrum-alias-component-text-color-default);
 
 	white-space: nowrap;
 	overflow: hidden;
-	font-size: var(--spectrum-PickerButton-font-size);
 	padding-block-end: var(--spectrum-PickerButton-label-padding-y);
 	padding-block-start: var(--spectrum-PickerButton-label-padding-y);
+
+	text-transform: none;
+	letter-spacing: var(--spectrum-global-font-letter-spacing-none);
+	line-height: var(--spectrum-global-font-component-text-line-height);
+	font-weight: var(--spectrum-global-font-body-text-font-weight);
+	font-style: var(--spectrum-global-font-style-regular);
+	font-family: var(--spectrum-global-font-body-text-font-family);
+	font-size: var(--spectrum-PickerButton-font-size);
 }
 
 .spectrum-PickerButton-fill {
+	display: flex;
+	flex-direction: row;
 	box-sizing: border-box;
-	border-color: var(--spectrum-infieldbutton-border-color-override);
 	block-size: var(--spectrum-PickerButton-Fill-size);
 	inline-size: var(--spectrum-PickerButton-Fill-size);
 	gap: var(--spectrum-PickerButton-Fill-gap);
+
+	border-color: var(--spectrum-infieldbutton-border-color-override);
+	border-width: var(--spectrum-alias-infieldbutton-border-size);
+	border-style: solid;
+
 
 	border-end-end-radius: var(--spectrum-alias-infieldbutton-border-radius);
 	border-end-start-radius: var(
@@ -336,23 +349,25 @@ governing permissions and limitations under the License.
 
 	transition: border-color var(--spectrum-global-animation-duration-100)
 		ease-in-out;
-
-
 }
 
 .spectrum-PickerButton-UIIcon {
 	/* remove margin used for centering */
 	margin: 0 !important;
+	color: var(--spectrum-alias-component-icon-color-default);
 
 	block-size: var(--spectrum-PickerButton-Fill-UIIcon-size);
 	inline-size: var(--spectrum-PickerButton-Fill-UIIcon-size);
 	margin-block-end: var(--spectrum-PickerButton-icon-margin-y);
 	margin-block-start: var(--spectrum-PickerButton-icon-margin-y);
+
+	transform: rotate(90deg);
 }
 
 .spectrum-PickerButton-icon {
 	/* don't be small, ever */
 	flex-shrink: 0;
+	color: var(--spectrum-alias-component-icon-color-default);
 	gap: var(--spectrum-PickerButton-Icon-gap);
 	block-size: var(--spectrum-PickerButton-Fill-Icon-size);
 	inline-size: var(--spectrum-PickerButton-Fill-Icon-size);
@@ -384,10 +399,7 @@ governing permissions and limitations under the License.
 		inline-size: var(--spectrum-PickerButton-Fill-size);
 	}
 
-	.spectrum-PickerButton-label {
-		display: none;
-	}
-
+	.spectrum-PickerButton-label,
 	.spectrum-PickerButton-icon {
 		display: none;
 	}
@@ -440,5 +452,116 @@ governing permissions and limitations under the License.
 
 	.spectrum-PickerButton-UIIcon {
 		display: none;
+	}
+}
+
+.spectrum-PickerButton--textuiicon {
+	.spectrum-PickerButton-fill {
+		inline-size: auto;
+	}
+
+	&.spectrum-PickerButton--sizeS {
+		.spectrum-PickerButton-fill {
+			padding-inline-end: var(--spectrum-global-dimension-size-100);
+			padding-inline-start: var(--spectrum-global-dimension-size-115);
+		}
+	}
+
+	&.spectrum-PickerButton--sizeM {
+		.spectrum-PickerButton-fill {
+			padding-inline-end: var(--spectrum-global-dimension-size-125);
+			padding-inline-start: var(--spectrum-global-dimension-size-160);
+		}
+	}
+
+	&.spectrum-PickerButton--sizeL {
+		.spectrum-PickerButton-fill {
+			padding-inline-end: var(--spectrum-global-dimension-size-150);
+			padding-inline-start: var(--spectrum-global-dimension-size-185);
+		}
+	}
+
+	&.spectrum-PickerButton--sizeXL {
+		.spectrum-PickerButton-fill {
+			padding-inline-end: var(--spectrum-global-dimension-size-200);
+			padding-inline-start: var(--spectrum-global-dimension-size-225);
+		}
+	}
+
+	.spectrum-PickerButton-label,
+	.spectrum-PickerButton-UIIcon {
+		display: initial;
+	}
+
+	.spectrum-PickerButton-icon {
+		display: none;
+	}
+}
+
+.spectrum-PickerButton--quiet {
+	&:disabled {
+		.spectrum-PickerButton-fill {
+			background-color: var(
+				--spectrum-alias-infieldbutton-fill-loudnessLow-background-color-disabled
+			);
+		}
+		&.is-open {
+			.spectrum-PickerButton-fill {
+				border-color: var(
+					--spectrum-alias-infieldbutton-fill-loudnessLow-border-color-disabled
+				);
+			}
+		}
+	}
+
+	.spectrum-PickerButton-fill {
+		border-color: transparent;
+		background-color: var(
+			--spectrum-alias-infieldbutton-fill-loudnessLow-background-color-default
+		);
+	}
+
+	&:hover {
+		.spectrum-PickerButton-fill {
+			border-color: transparent;
+			background-color: var(
+				--spectrum-alias-infieldbutton-fill-loudnessLow-background-color-hover
+			);
+		}
+	}
+
+	&:active {
+		.spectrum-PickerButton-fill {
+			border-color: transparent;
+			background-color: var(
+				--spectrum-alias-infieldbutton-fill-loudnessLow-background-color-down
+			);
+		}
+	}
+
+	&.is-invalid {
+		&:not(:disabled) {
+			.spectrum-PickerButton-fill {
+				border-color: transparent;
+			}
+		}
+	}
+}
+
+.spectrum-PickerButton--error {
+	.spectrum-PickerButton-label {
+		color: var(--spectrum-alias-component-text-color-error-default);
+	}
+
+	&:hover {
+		.spectrum-PickerButton-label {
+			color: var(--spectrum-alias-component-text-color-error-hover);
+		}
+	}
+
+	&:active {
+		.spectrum-PickerButton-label {
+			color: var(--spectrum-alias-component-text-color-error-down);
+		}
 	}
 }
