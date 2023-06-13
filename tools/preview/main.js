@@ -1,15 +1,15 @@
 const { resolve } = require("path");
 const { readdirSync } = require("fs");
-
 const componentsPath = resolve(__dirname, "../../components");
-const componentPkgs = readdirSync(componentsPath, { withFileTypes: true })
+const componentPkgs = readdirSync(componentsPath, {
+	withFileTypes: true,
+})
 	.filter((dirent) => dirent.isDirectory())
 	.map((dirent) => dirent.name);
-
 module.exports = {
 	stories: [
-		"../../components/*/stories/*.stories.md",
-		"../../components/*/stories/*.stories.js",
+		"../../components/*/stories/*.stories.mdx",
+		"../../components/*/stories/*.stories.@(js|jsx|ts|tsx)",
 	],
 	rootDir: "../../",
 	staticDirs: ["../../assets"],
@@ -18,9 +18,12 @@ module.exports = {
 			name: "@storybook/addon-essentials",
 			// Supported booleans: actions, controls, docs, toolbars, measure, outline.
 			options: {
-				viewport: false, // Don't need viewports b/c the medium/large contexts are used to support scaling.
-				backgrounds: false, // Don't need backgrounds b/c this is handled by the color contexts.
-				configureJSX: true, // Enables JSX support in MDX for projects that aren't configured to handle the format.
+				viewport: false,
+				// Don't need viewports b/c the medium/large contexts are used to support scaling.
+				backgrounds: false,
+				// Don't need backgrounds b/c this is handled by the color contexts.
+				configureJSX: true,
+				// Enables JSX support in MDX for projects that aren't configured to handle the format.
 				transcludeMarkdown: true, // Support markdown in MDX files.
 			},
 		},
@@ -31,6 +34,9 @@ module.exports = {
 		// https://storybook.js.org/addons/@etchteam/storybook-addon-status
 		"@etchteam/storybook-addon-status",
 	],
+	core: {
+		disableTelemetry: true,
+	},
 	env: {
 		MIGRATED_PACKAGES: componentPkgs.filter((dir) => {
 			const pkg = require(resolve(componentsPath, dir, "package.json"));
@@ -43,25 +49,16 @@ module.exports = {
 			return false;
 		}),
 	},
-	core: {
-		/* Do not send analytics to storybook */
-		disableTelemetry: true,
-		options: {
-			/* @todo Webpack 5 features */
-			/* Enable lazy compilation */
-			// lazyCompilation: true,
-			/* Set up the cache when not in watch mode */
-			// fsCache: !(process.env.WATCH_MODE === 'true'),
-		},
-	},
 	webpackFinal: function (config) {
+		// Removing the global alias as it conflicts with the global npm pkg
+		const { global, ...alias } = config.resolve.alias;
+		config.resolve.alias = alias;
 		let storybookRules =
 			config && config.module && config.module.rules
 				? config.module.rules.filter(
 						(rule) => !(rule.test && rule.test.toString().includes("css"))
 				  )
 				: [];
-
 		return {
 			...config,
 			stats: {
@@ -139,8 +136,7 @@ module.exports = {
 						test: /\.js$/,
 						enforce: "pre",
 						use: ["source-map-loader"],
-					},
-					/* Raw SVG loader */
+					} /* Raw SVG loader */,
 					{
 						test: /\.svg$/i,
 						loader: "raw-loader",
@@ -149,19 +145,15 @@ module.exports = {
 			},
 		};
 	},
-	framework: "@storybook/web-components",
+	framework: {
+		name: "@storybook/web-components-webpack5",
+		options: {},
+	},
 	features: {
-		postcss: false,
 		/* Code splitting flag; load stories on-demand */
 		storyStoreV7: true,
 		/* Builds stories.json to help with on-demand loading */
 		buildStoriesJson: true,
-		/* Enables Storybook's modern inline rendering mode */
-		// modernInlineRender: true,
-		// babelModeV7: true,
-	},
-	reactOptions: {
-		fastRefresh: true,
 	},
 	// refs: {
 	//   'swc': {
@@ -170,4 +162,8 @@ module.exports = {
 	//     expanded: false,
 	//   },
 	// },
+	docs: {
+		autodocs: true, // see below for alternatives
+		defaultName: "Docs", // set to change the name of generated docs entries
+	},
 };
