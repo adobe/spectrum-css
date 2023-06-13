@@ -94,7 +94,7 @@ export const SideNavItem = ({
   customClasses = [],
   ...globals
 }) => {
-  const disaplyIcon = hasIcon & variant === "multiLevel" ? false : true
+  const displayIcon = hasIcon & variant === "multiLevel" ? false : true
   return html`
     <li id=${id} class=${classMap({
       [`${rootClass}-item`]: true,
@@ -103,7 +103,7 @@ export const SideNavItem = ({
       ...customClasses.reduce((a, c) => ({ ...a, [c]: true }), {}),
     })}>
       <a href=${link} class="${rootClass}-itemLink">
-        ${disaplyIcon ?
+        ${displayIcon ?
           Icon({
             ...globals,
             iconName,

@@ -128,10 +128,6 @@ governing permissions and limitations under the License.
 
       &.is-keyboardFocused,
       &:focus-visible {
-        outline-style: solid;
-        outline-width: var(--mod-sidenav-focus-ring-size, var(--spectrum-sidenav-focus-ring-size));
-        outline-offset: var(--mod-sidenav-focus-ring-gap, var(--spectrum-sidenav-focus-ring-gap));
-        outline-color: var(--highcontrast-sidenav-focus-ring-color, var(--mod-sidenav-focus-ring-color, var(--spectrum-sidenav-focus-ring-color)));
         background-color: var(--highcontrast-sidenav-background-key-focus-selected, var(--mod-sidenav-background-key-focus-selected, var(--spectrum-sidenav-background-key-focus-selected)));
         color: var(--mod-sidenav-content-color-key-focus-selected, var(--spectrum-sidenav-content-color-key-focus-selected));
       }
@@ -205,10 +201,11 @@ governing permissions and limitations under the License.
 
   &.is-keyboardFocused,
   &:focus-visible {
-    outline-style: solid;
-    outline-width: var(--mod-sidenav-focus-ring-size, var(--spectrum-sidenav-focus-ring-size));
+    outline:
+      var(--highcontrast-sidenav-focus-ring-color, var(--mod-sidenav-focus-ring-color, var(--spectrum-sidenav-focus-ring-color)))
+      solid
+      var(--mod-sidenav-focus-ring-size, var(--spectrum-sidenav-focus-ring-size));
     outline-offset:  var(--mod-sidenav-focus-ring-gap, var(--spectrum-sidenav-focus-ring-gap));
-    outline-color: var(--highcontrast-sidenav-focus-ring-color, var(--mod-sidenav-focus-ring-color, var(--spectrum-sidenav-focus-ring-color)));
     background-color: var(--highcontrast-sidenav-background-key-focus, var(--mod-sidenav-background-key-focus, var(--spectrum-sidenav-background-key-focus)));
     color: var(--highcontrast-sidenav-content-color-key-focus, var(--mod-sidenav-content-color-key-focus, var(--spectrum-sidenav-content-color-key-focus)));
   }
