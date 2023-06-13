@@ -296,11 +296,10 @@ governing permissions and limitations under the License.
 }
 
 .spectrum-Accordion-item {
-  z-index: inherit;
-  position: relative;
+	z-index: inherit;
+	position: relative;
 
-  display: list-item;
-  margin: 0;
+	margin: 0;
 
 	min-block-size: var(
 		--mod-accordion-item-height,
@@ -335,9 +334,9 @@ governing permissions and limitations under the License.
 }
 
 .spectrum-Accordion-itemHeading {
-  margin: 0;
-  position: relative;
-  box-sizing: border-box;
+	margin: 0;
+	position: relative;
+	box-sizing: border-box;
 }
 
 .spectrum-Accordion-itemIconContainer {
@@ -492,8 +491,8 @@ governing permissions and limitations under the License.
 	text-align: start;
 	inline-size: 100%;
 
-  &:focus {
-    outline: none;
+	&:focus {
+		outline: none;
 
 		&::after {
 			content: "";
@@ -644,9 +643,9 @@ governing permissions and limitations under the License.
 		}
 	}
 
-  &.is-disabled {
-    .spectrum-Accordion-itemHeader {
-      cursor: default;
-    }
-  }
+	&.is-disabled {
+		.spectrum-Accordion-itemHeader {
+			cursor: default;
+		}
+	}
 }
