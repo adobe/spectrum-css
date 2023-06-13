@@ -41,7 +41,7 @@
 | `--mod-sidenav-text-font-size`                          |
 | `--mod-sidenav-text-font-style`                         |
 | `--mod-sidenav-text-font-weight`                        |
-| `--mod-sidenav-text-lineheight`                         |
+| `--mod-sidenav-text-line-height`                        |
 | `--mod-sidenav-top-level-font-family`                   |
 | `--mod-sidenav-top-level-font-size`                     |
 | `--mod-sidenav-top-level-font-style`                    |

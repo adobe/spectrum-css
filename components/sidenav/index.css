@@ -68,19 +68,34 @@ governing permissions and limitations under the License.
   --spectrum-sidenav-text-font-weight: var(--spectrum-regular-font-weight);
   --spectrum-sidenav-text-font-style: var(--spectrum-default-font-style);
   --spectrum-sidenav-text-font-size: var(--spectrum-font-size-100);
-  --spectrum-sidenav-text-lineheight: var(--spectrum-line-height-100);
+  --spectrum-sidenav-text-line-height: var(--spectrum-line-height-100);
+  &:lang(ja),
+  &:lang(zh),
+  &:lang(ko) {
+    --spectrum-sidenav-text-line-height: var(--spectrum-cjk-line-height-100);
+  }
 
   --spectrum-sidenav-top-level-font-family: var(--spectrum-sans-font-family-stack);
   --spectrum-sidenav-top-level-font-weight: var(--spectrum-bold-font-weight);
   --spectrum-sidenav-top-level-font-style: var(--spectrum-default-font-style);
   --spectrum-sidenav-top-level-font-size: var(--spectrum-font-size-100);
   --spectrum-sidenav-top-level-line-height: var(--spectrum-line-height-100);
+  &:lang(ja),
+  &:lang(zh),
+  &:lang(ko) {
+    --spectrum-sidenav-top-level-line-height: var(--spectrum-cjk-line-height-100);
+  }
 
   --spectrum-sidenav-header-font-family: var(--spectrum-sans-font-family-stack);
   --spectrum-sidenav-header-font-weight: var(--spectrum-medium-font-weight);
   --spectrum-sidenav-header-font-style: var(--spectrum-default-font-style);
   --spectrum-sidenav-header-font-size: var(--spectrum-font-size-75);
   --spectrum-sidenav-header-line-height: var(--spectrum-line-height-100);
+  &:lang(ja),
+  &:lang(zh),
+  &:lang(ko) {
+    --spectrum-sidenav-header-line-height: var(--spectrum-cjk-line-height-100);
+  }
 }
 
 .spectrum-SideNav {
@@ -163,13 +178,7 @@ governing permissions and limitations under the License.
   font-weight: var(--mod-sidenav-text-font-weight, var(--spectrum-sidenav-text-font-weight));
   font-style: var(--mod-sidenav-text-font-style, var(--spectrum-sidenav-text-font-style));
   text-decoration: none;
-  line-height: var(--mod-sidenav-text-lineheight, var(--spectrum-sidenav-text-lineheight));
-  /* cjk language support */
-  &:lang(ja),
-  &:lang(zh),
-  &:lang(ko) {
-    --spectrum-sidenav-text-lineheight: var(--spectrum-cjk-line-height-100);
-  }
+  line-height: var(--mod-sidenav-text-line-height, var(--spectrum-sidenav-text-line-height));
 
   .spectrum-SideNav-link-text {
     margin-block-start: var(--mod-sidenav-top-to-label, var(--spectrum-sidenav-top-to-label));
@@ -214,12 +223,6 @@ governing permissions and limitations under the License.
   font-weight: var(--mod-sidenav-header-font-weight, var(--spectrum-sidenav-header-font-weight));
   font-style: var(--mod-sidenav-header-font-style, var(--spectrum-sidenav-header-font-style));
   line-height: var(--mod-sidenav-header-line-height, var(--spectrum-sidenav-header-line-height));
-  /* cjk language support */
-  &:lang(ja),
-  &:lang(zh),
-  &:lang(ko) {
-    --spectrum-sidenav-header-line-height: var(--spectrum-cjk-line-height-100);
-  }
 }
 
 .spectrum-SideNav--multiLevel {
@@ -229,11 +232,6 @@ governing permissions and limitations under the License.
     font-style: var(--mod-sidenav-top-level-font-style, var(--spectrum-sidenav-top-level-font-style));
     font-size: var(--mod-sidenav-top-level-font-size, var(--spectrum-sidenav-top-level-font-size));
     line-height: var(--mod-sidenav-top-level-line-height, var(--spectrum-sidenav-top-level-line-height));
-    &:lang(ja),
-    &:lang(zh),
-    &:lang(ko) {
-      --spectrum-sidenav-top-level-line-height: var(--spectrum-cjk-line-height-100);
-    }
     &:hover {
       color: var(--highcontrast-sidenav-top-level-color-hover);
     }
