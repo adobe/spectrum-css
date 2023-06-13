@@ -113,12 +113,10 @@ governing permissions and limitations under the License.
 
       &.is-keyboardFocused,
       &:focus-visible {
-        /* stylelint-disable declaration-block-no-redundant-longhand-properties */
         outline-style: solid;
         outline-width: var(--mod-sidenav-focus-ring-size, var(--spectrum-sidenav-focus-ring-size));
         outline-offset: var(--mod-sidenav-focus-ring-gap, var(--spectrum-sidenav-focus-ring-gap));
         outline-color: var(--highcontrast-sidenav-focus-ring-color, var(--mod-sidenav-focus-ring-color, var(--spectrum-sidenav-focus-ring-color)));
-        /* stylelint-enable declaration-block-no-redundant-longhand-properties */
         background-color: var(--highcontrast-sidenav-background-key-focus-selected, var(--mod-sidenav-background-key-focus-selected, var(--spectrum-sidenav-background-key-focus-selected)));
         color: var(--mod-sidenav-content-color-key-focus-selected, var(--spectrum-sidenav-content-color-key-focus-selected));
       }
@@ -198,12 +196,10 @@ governing permissions and limitations under the License.
 
   &.is-keyboardFocused,
   &:focus-visible {
-    /* stylelint-disable declaration-block-no-redundant-longhand-properties */
     outline-style: solid;
     outline-width: var(--mod-sidenav-focus-ring-size, var(--spectrum-sidenav-focus-ring-size));
     outline-offset:  var(--mod-sidenav-focus-ring-gap, var(--spectrum-sidenav-focus-ring-gap));
     outline-color: var(--highcontrast-sidenav-focus-ring-color, var(--mod-sidenav-focus-ring-color, var(--spectrum-sidenav-focus-ring-color)));
-    /* stylelint-enable declaration-block-no-redundant-longhand-properties */
     background-color: var(--highcontrast-sidenav-background-key-focus, var(--mod-sidenav-background-key-focus, var(--spectrum-sidenav-background-key-focus)));
     color: var(--highcontrast-sidenav-content-color-key-focus, var(--mod-sidenav-content-color-key-focus, var(--spectrum-sidenav-content-color-key-focus)));
   }
@@ -271,13 +267,11 @@ governing permissions and limitations under the License.
 
 @media (forced-colors: active) {
   /* forced-color-adjust: preserve-parent-color addresses svg bug on icon hover*/
-  /* stylelint-disable declaration-property-value-no-unknown */
   .spectrum-SideNav {
     .spectrum-Icon {
       forced-color-adjust: preserve-parent-color;
     }
   }
-  /* stylelint-enable declaration-property-value-no-unknown */
   .spectrum-SideNav-item {
     forced-color-adjust: none;
     --highcontrast-sidenav-content-disabled-color: GrayText;
