@@ -4,7 +4,7 @@ import { Template } from "./template";
 import { default as IconStories } from "@spectrum-css/icon/stories/icon.stories.js";
 
 export default {
-	title: "Infield button",
+	title: "Components/In-field button",
 	description: "The Infield button component is...",
 	component: "Infieldbutton",
 	argTypes: {

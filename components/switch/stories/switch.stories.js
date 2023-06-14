@@ -2,7 +2,7 @@
 import { Template } from "./template";
 
 export default {
-	title: "Switch",
+	title: "Components/Switch",
 	description:
 		"A switch is used to turn an option on or off. Switches allow users to select the state of a single option at a time.",
 	component: "Switch",

@@ -4,8 +4,8 @@ import { Template } from "./template";
 import { default as Icon } from "@spectrum-css/icon/stories/icon.stories.js";
 
 export default {
-	title: "Pickerbutton",
-	description: "The Pickerbutton component is...",
+	title: "Components/Picker button",
+	description: "The Picker button component is...",
 	component: "Pickerbutton",
 	argTypes: {
 		size: {

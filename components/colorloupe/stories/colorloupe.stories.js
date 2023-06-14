@@ -2,7 +2,7 @@
 import { Template } from "./template";
 
 export default {
-	title: "Color loupe",
+	title: "Components/Color loupe",
 	description:
 		"The Color loupe component shows the output color that would otherwise be covered by a cursor, stylus, or finger during color selection.",
 	component: "Colorloupe",

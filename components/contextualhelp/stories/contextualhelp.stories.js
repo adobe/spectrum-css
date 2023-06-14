@@ -5,7 +5,7 @@ import { default as ActionButtonStories } from "@spectrum-css/actionbutton/stori
 
 // More on default export: https://storybook.js.org/docs/web-components/writing-stories/introduction#default-export
 export default {
-	title: "Contextual Help",
+	title: "Components/Contextual help",
 	description:
 		"Contextual Help shows a user extra information in relation to another component or view.",
 	component: "ContextualHelp",

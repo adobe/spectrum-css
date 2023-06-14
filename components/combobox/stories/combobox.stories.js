@@ -4,7 +4,7 @@ import { Template } from "./template";
 import { Template as Menu } from "@spectrum-css/menu/stories/template.js";
 
 export default {
-	title: "Combobox",
+	title: "Components/Combobox",
 	description:
 		"Comboboxes combine a text entry with a picker menu, allowing users to filter longer lists to only the selections matching a query.",
 	component: "Combobox",

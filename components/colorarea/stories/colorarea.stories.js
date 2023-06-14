@@ -2,7 +2,7 @@
 import { Template } from "./template";
 
 export default {
-	title: "Color area",
+	title: "Components/Color area",
 	description:
 		"The Color area component allows users to visually select two properties of a color simultaneously. It's commonly used together with a color slider or color wheel.",
 	component: "ColorArea",

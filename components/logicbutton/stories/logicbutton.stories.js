@@ -2,9 +2,9 @@
 import { Template } from "./template";
 
 export default {
-	title: "Logic button",
+	title: "Components/Logic button",
 	description:
-		"A LogicButton displays an operator within a boolean logic sequence.",
+		"A Logic Button displays an operator within a boolean logic sequence.",
 	component: "Logicbutton",
 	argTypes: {
 		variant: {
