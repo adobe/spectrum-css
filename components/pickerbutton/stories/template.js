@@ -38,7 +38,7 @@ export const Template = ({
 	} catch (e) {
 		console.warn(e);
 	}
-	
+
 	return html`
 		<button
 			class=${classMap({
@@ -78,9 +78,7 @@ export const Template = ({
 					...globals,
 					iconName: iconName ?? "ChevronDown100",
 					size,
-					customClasses: [
-						iconType === "ui" ? `${rootClass}-UIIcon` : `${rootClass}-menuIcon`,
-					],
+					customClasses: [`${rootClass}-icon`],
 				})}
 			</div>
 		</button>
