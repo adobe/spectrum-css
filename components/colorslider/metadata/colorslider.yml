@@ -37,7 +37,6 @@ examples:
   - id: color-slider
     name: Alpha
     markup: |
-      <label class="spectrum-FieldLabel spectrum-FieldLabel--sizeM spectrum-FieldLabel--left">Label</label>
       <div class="spectrum-ColorSlider">
         <div class="spectrum-ColorSlider-checkerboard" role="presentation">
           <div class="spectrum-ColorSlider-gradient" role="presentation" style="background: linear-gradient(to right, rgba(0, 0, 0, 1) 0%, rgba(0, 0, 0, 0) 100%);"></div>
@@ -56,7 +55,6 @@ examples:
   - id: color-slider
     name: Disabled
     markup: |
-      <label class="spectrum-FieldLabel spectrum-FieldLabel--sizeM spectrum-FieldLabel--left is-disabled">Label</label>
       <div class="spectrum-ColorSlider is-disabled">
         <div class="spectrum-ColorSlider-checkerboard" role="presentation">
           <div class="spectrum-ColorSlider-gradient" role="presentation" style="background: linear-gradient(to right, rgb(255, 0, 0) 0%, rgb(255, 255, 0) 17%, rgb(0, 255, 0) 33%, rgb(0, 255, 255) 50%, rgb(0, 0, 255) 67%, rgb(255, 0, 255) 83%, rgb(255, 0, 0) 100%);"></div>

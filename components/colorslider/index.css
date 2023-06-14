@@ -1,8 +1,5 @@
 .spectrum-ColorSlider {
 	/* Size and Spacing */
-	--spectrum-color-slider-label-to-track-spacing: var(
-		--spectrum-component-top-to-text-75
-	);
 	--spectrum-color-slider-handle-margin-block: var(
 		--spectrum-component-top-to-text-75
 	);
@@ -196,11 +193,4 @@
 	z-index: 0;
 	margin: 0;
 	pointer-events: none;
-}
-
-.spectrum-FieldLabel + .spectrum-ColorSlider {
-	margin-block-start: var(
-		--mod-color-slider-label-to-track-spacing,
-		var(--spectrum-color-slider-label-to-track-spacing)
-	);
 }

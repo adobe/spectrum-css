@@ -18,11 +18,6 @@ export const Template = ({
 	...globals
 }) => {
 	return html`
-		<label
-			for="textfield-1"
-			class="spectrum-FieldLabel spectrum-FieldLabel--sizeM"
-			>Blue test</label
-		>
 		<div
 			class=${classMap({
 				[rootClass]: true,
