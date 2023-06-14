@@ -5,7 +5,7 @@ import { default as Icon } from "@spectrum-css/icon/stories/icon.stories.js";
 
 export default {
 	title: "Components/Picker button",
-	description: "The Picker button component is...",
+	description: "The Picker button component is used as a dropdown trigger. See Combobox.",
 	component: "Pickerbutton",
 	argTypes: {
 		size: {
@@ -30,6 +30,10 @@ export default {
 		},
 		iconName: {
 			...Icon.argTypes.iconName,
+			if: { arg: "iconType", eq: "workflow" },
+		},
+		uiIconName: {
+			...Icon.argTypes.uiIconName,
 			if: { arg: "iconType", eq: "ui" },
 		},
 		label: {
@@ -56,15 +60,6 @@ export default {
 			table: {
 				type: { summary: "boolean" },
 				category: "Component",
-			},
-			control: "boolean",
-		},
-		isValid: {
-			name: "Valid input",
-			type: { name: "boolean" },
-			table: {
-				type: { summary: "boolean" },
-				category: "State",
 			},
 			control: "boolean",
 		},
@@ -130,7 +125,6 @@ export default {
 		size: "m",
 		isOpen: false,
 		isRounded: false,
-		isValid: false,
 		isInvalid: false,
 		isQuiet: false,
 		isDisabled: false,
