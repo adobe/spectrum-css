@@ -11,10 +11,6 @@ governing permissions and limitations under the License.
 */
 
 .spectrum-CoachMark {
-	--spectrum-coachmark-background-color: rgba(255, 255, 255);
-	--spectrum-coachmark-border-color: rgba(177, 177, 177);
-	--spectrum-coachmark-shadow-color: rgba(0, 0, 0, 0.15);
-
 	--spectrum-coachmark-min-width: var(--spectrum-coach-mark-minimum-width);
 	--spectrum-coachmark-width: var(--spectrum-coach-mark-width);
 	--spectrum-coachmark-max-width: 400px;
@@ -81,14 +77,8 @@ governing permissions and limitations under the License.
 
 .spectrum-CoachMark {
   position: relative;
-
-	background-color: var(--spectrum-coachmark-background-color);
-	border-color: var(--spectrum-coachmark-border-color);
-	box-shadow: 0 1px 4px var(--spectrum-coachmark-shadow-color);
-
 	min-inline-size: var(--spectrum-coachmark-min-width);
 	max-inline-size: var(--spectrum-coachmark-max-width);
-
 }
 
 .spectrum-CoachMark-image {
