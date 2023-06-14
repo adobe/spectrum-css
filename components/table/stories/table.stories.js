@@ -2,7 +2,7 @@
 import { Template } from "./template";
 
 export default {
-	title: "Table",
+	title: "Components/Table",
 	description:
 		"A table is used to create a container for displaying information. It allows users to sort, compare, and take action on large amounts of data.",
 	component: "Table",

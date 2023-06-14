@@ -2,7 +2,7 @@
 import { Template } from "./template";
 
 export default {
-	title: "Modal",
+	title: "Components/Modal",
 	description:
 		"A modal component is a dialog box/popup window that is displayed on top of the current page.",
 	component: "Modal",

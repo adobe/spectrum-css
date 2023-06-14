@@ -2,7 +2,7 @@
 import { Template } from "./template";
 
 export default {
-	title: "Dial",
+	title: "Components/Dial",
 	description: "A dial for turning it up to 11.",
 	component: "Dial",
 	argTypes: {

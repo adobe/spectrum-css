@@ -6,8 +6,8 @@ import { default as CloseButton } from "@spectrum-css/closebutton/stories/closeb
 import { default as ActionButton } from "@spectrum-css/actionbutton/stories/actionbutton.stories.js";
 
 export default {
-	title: "Action bar",
-	description: "The Action bar component is...",
+	title: "Components/Action bar",
+	description: "The Action bar component is a floating full width bar that appears upon selection",
 	component: "Actionbar",
 	argTypes: {
 		isOpen: {

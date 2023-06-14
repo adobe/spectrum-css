@@ -4,7 +4,7 @@ import { Template } from "./template";
 import { Template as Dialog } from "@spectrum-css/dialog/stories/template.js";
 
 export default {
-	title: "Tray",
+	title: "Components/Tray",
 	description:
 		"Tray dialogs are typically used to portray information on mobile device or smaller screens.",
 	component: "Tray",

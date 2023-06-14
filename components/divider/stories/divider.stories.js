@@ -2,7 +2,7 @@
 import { Template } from "./template";
 
 export default {
-	title: "Divider",
+	title: "Components/Divider",
 	description:
 		"Dividers bring clarity to a layout by grouping and dividing content that exists in close proximity. It can also be used to establish rhythm and hierarchy.",
 	component: "Divider",

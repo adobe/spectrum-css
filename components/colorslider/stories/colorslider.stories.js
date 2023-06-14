@@ -2,7 +2,7 @@
 import { Template } from "./template";
 
 export default {
-	title: "Color slider",
+	title: "Components/Color slider",
 	description:
 		"The Color slider component lets users visually change an individual channel of a color.",
 	component: "ColorSlider",

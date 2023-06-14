@@ -2,7 +2,7 @@
 import { Template } from "./template";
 
 export default {
-	title: "Splitview",
+	title: "Components/Split view",
 	description: "The Splitview component is...",
 	component: "Splitview",
 	argTypes: {
