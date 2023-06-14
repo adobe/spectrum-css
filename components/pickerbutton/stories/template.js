@@ -16,12 +16,11 @@ export const Template = ({
 	label,
 	position,
 	iconType = "ui",
-	iconName = "ChevronDown",
+	iconName = "ChevronDown100",
 	isDisabled = false,
 	isFocused = false,
 	isKeyboardFocused = false,
 	isOpen = false,
-	isValid = false,
 	isInvalid = false,
 	isQuiet = false,
 	customClasses = [],
@@ -31,14 +30,21 @@ export const Template = ({
 	...globals
 }) => {
 	const [_, updateArgs] = useArgs();
+	const { express } = globals;
 
+	try {
+		if (!express) import(/* webpackPrefetch: true */ "../themes/spectrum.css");
+		else import(/* webpackPrefetch: true */ "../themes/express.css");
+	} catch (e) {
+		console.warn(e);
+	}
+	
 	return html`
 		<button
 			class=${classMap({
 				[rootClass]: true,
 				[`${rootClass}--textuiicon`]: label && iconType === "ui",
 				[`${rootClass}--uiicononly`]: !label && iconType === "ui",
-				[`${rootClass}--texticon`]: label && iconType !== "ui",
 				[`${rootClass}--icononly`]: !label && iconType !== "ui",
 				[`${rootClass}--${position}`]: typeof position !== "undefined",
 				[`${rootClass}--rounded`]: isRounded,
@@ -49,7 +55,6 @@ export const Template = ({
 				"is-keyboardFocused": isKeyboardFocused,
 				"is-open": isOpen && !isDisabled,
 				"is-invalid": isInvalid && !isDisabled,
-				"is-valid": isValid && !isDisabled,
 				[`${rootClass}--quiet`]: isQuiet,
 				...customClasses.reduce((a, c) => ({ ...a, [c]: true }), {}),
 			})}
@@ -71,7 +76,7 @@ export const Template = ({
 					: ""}
 				${Icon({
 					...globals,
-					iconName: iconName ?? "ChevronDown",
+					iconName: iconName ?? "ChevronDown100",
 					size,
 					customClasses: [
 						iconType === "ui" ? `${rootClass}-UIIcon` : `${rootClass}-menuIcon`,

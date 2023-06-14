@@ -32,10 +32,6 @@ export default {
 			...Icon.argTypes.iconName,
 			if: { arg: "iconType", eq: "workflow" },
 		},
-		uiIconName: {
-			...Icon.argTypes.uiIconName,
-			if: { arg: "iconType", eq: "ui" },
-		},
 		label: {
 			name: "Label",
 			type: { name: "string" },
@@ -121,7 +117,7 @@ export default {
 	},
 	args: {
 		rootClass: "spectrum-PickerButton",
-		label: "Select a Country",
+		label: "Select",
 		size: "m",
 		isOpen: false,
 		isRounded: false,
@@ -131,7 +127,8 @@ export default {
 		isFocused: false,
 		isKeyboardFocused: false,
 		iconType: "ui",
-		iconName: "ChevronDown",
+		iconName: "ChevronDown100",
+		position: "right"
 	},
 	parameters: {
 		actions: {

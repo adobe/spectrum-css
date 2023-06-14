@@ -152,11 +152,6 @@ governing permissions and limitations under the License.
 		--mod-picker-button-width,
 		var(--spectrum-picker-button-width)
 	);
-	inline-size: var(
-		--mod-picker-button-height,
-		var(--spectrum-picker-button-height)
-	);
-
 	display: flex;
 	justify-content: center;
 	align-items: center;
@@ -409,12 +404,20 @@ governing permissions and limitations under the License.
 }
 
 .spectrum-PickerButton--uiicononly {
+	inline-size: var(
+		--mod-picker-button-height,
+		var(--spectrum-picker-button-height)
+	);
 	.spectrum-PickerButton-label {
 		display: none;
 	}
 }
 
 .spectrum-PickerButton--icononly {
+	inline-size: var(
+		--mod-picker-button-height,
+		var(--spectrum-picker-button-height)
+	);
 	.spectrum-PickerButton-label {
 		display: none;
 	}
