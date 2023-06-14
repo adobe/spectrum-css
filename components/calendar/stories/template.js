@@ -114,6 +114,9 @@ export const Template = ({
 			.map((_val, idx) =>
 				new Array(DOW.length).fill(0).map((_v, i) => {
 					const thisDay = idx * DOW.length + i + 1 - firstDOWInMonth;
+					const isOutsideMonth =
+						displayedDate.getDate() < 1 ||
+						displayedDate.getDate() > lastDateInMonth;
 					/* Determine if this entry exists within this month or the next or prev month */
 					let thisMonth = !isOutsideMonth
 						? displayedMonth
@@ -121,9 +124,6 @@ export const Template = ({
 					/* Determine if the displayed date is in this year or the previous one */
 					let thisYear = displayedYear;
 
-					const isOutsideMonth =
-						displayedDate.getDate() < 1 ||
-						displayedDate.getDate() > lastDateInMonth;
 					if (isOutsideMonth) {
 						if (thisMonth < 0) {
 							thisMonth = 11;

@@ -12,31 +12,31 @@ governing permissions and limitations under the License.
 
 .spectrum-Pagination--explicit,
 .spectrum-Pagination--listing {
-	display: flex;
-	flex-direction: row;
-	align-items: center;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
 }
 
 .spectrum-Pagination-textfield {
-	inline-size: var(--spectrum-pagination-textfield-width);
-	min-inline-size: var(--spectrum-pagination-textfield-width);
+  inline-size: var(--spectrum-pagination-textfield-width);
+  min-inline-size: var(--spectrum-pagination-textfield-width);
 }
 
 .spectrum-Pagination-counter {
-	margin-inline-start: var(--spectrum-pagination-counter-margin-left);
+  margin-inline-start: var(--spectrum-pagination-counter-margin-left);
 }
 
 .spectrum-Pagination-prevButton {
-	margin-inline-end: var(--spectrum-pagination-page-button-margin-horizontal);
+  margin-inline-end: var(--spectrum-pagination-page-button-margin-horizontal);
 }
 
 .spectrum-Pagination-nextButton {
-	margin-inline-start: var(--spectrum-pagination-page-button-margin-horizontal);
+  margin-inline-start: var(--spectrum-pagination-page-button-margin-horizontal);
 }
 
 .spectrum-Pagination-prevButton,
 .spectrum-Pagination-nextButton {
-	.spectrum-Icon {
-		transform: logical rotate(0deg);
-	}
+  .spectrum-Icon {
+    transform: logical rotate(0deg);
+  }
 }

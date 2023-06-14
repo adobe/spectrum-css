@@ -101,12 +101,6 @@
     "last 2 iOS versions"
   ],
   "lint-staged": {
-    "*.{md,js,css,yml,hbs}": [
-      "prettier --write --cache"
-    ],
-    "components/*/*.css": [
-      "stylelint --write"
-    ],
     "components/*/package.json": [
       "yarn lint:components",
       "prettier-package-json --write"

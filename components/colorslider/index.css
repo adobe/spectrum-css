@@ -51,14 +51,14 @@
 		var(--spectrum-color-control-track-width)
 	);
 
-	/* Otherwise we randomly drag a file icon */
-	user-select: none;
+  /* Otherwise we randomly drag a file icon */
+  user-select: none;
 
-	cursor: default;
+  cursor: default;
 
-	&.is-focused {
-		z-index: 2;
-	}
+  &.is-focused {
+    z-index: 2;
+  }
 
 	&.is-disabled {
 		pointer-events: none;
@@ -70,7 +70,7 @@
 }
 
 .spectrum-ColorSlider--vertical {
-	display: inline-block;
+  display: inline-block;
 
 	min-block-size: var(
 		--mod-color-slider-vertical-minimum-height,
