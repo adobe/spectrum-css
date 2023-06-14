@@ -117,7 +117,7 @@ export default {
 	},
 	args: {
 		rootClass: "spectrum-PickerButton",
-		label: "Select",
+		label: undefined,
 		size: "m",
 		isOpen: false,
 		isRounded: false,
@@ -144,3 +144,23 @@ export default {
 
 export const Default = Template.bind({});
 Default.args = {};
+
+export const WithLabel = Template.bind({});
+WithLabel.args = {
+	label: "Select",
+};
+
+export const Disabled = Template.bind({});
+Disabled.args = {
+	isDisabled: true
+};
+
+export const Quiet = Template.bind({});
+Quiet.args = {
+	isQuiet: true
+};
+
+export const Express = Template.bind({});
+Express.args = {
+	express: true
+};

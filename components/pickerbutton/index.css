@@ -158,7 +158,7 @@ governing permissions and limitations under the License.
 	padding: var(
 		--mod-picker-button-padding,
 		var(--spectrum-picker-button-padding)
-	); /* TODO: padding not working with infield tokens */
+	);
 
 	&:hover {
 		.spectrum-PickerButton-fill {
@@ -343,10 +343,11 @@ governing permissions and limitations under the License.
 		var(--spectrum-picker-button-border-width)
 	);
 	border-style: solid;
-	padding: var(
-		--mod-picker-button-fill-padding,
-		var(--spectrum-picker-button-fill-padding)
-	);
+	padding: calc(var(--mod-picker-button-fill-padding, var(--spectrum-picker-button-fill-padding)) - 
+		var(
+			--mod-picker-button-border-width,
+			var(--spectrum-picker-button-border-width)
+	));
 
 	border-end-end-radius: var(
 		--mod-picker-button-border-radius,
