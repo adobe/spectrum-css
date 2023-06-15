@@ -10,6 +10,7 @@
 | `--mod-colorhandle-checkerboard-size`        |
 | `--mod-colorhandle-fill-color-disabled`      |
 | `--mod-colorhandle-focused-size`             |
+| `--mod-colorhandle-hitarea-border-radius`    |
 | `--mod-colorhandle-hitarea-size`             |
 | `--mod-colorhandle-inner-border-color`       |
 | `--mod-colorhandle-inner-border-width`       |
