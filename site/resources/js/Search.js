@@ -32,7 +32,7 @@ function Search(el) {
     </button>
   </form>
   <div class="spectrum-Popover spectrum-Site-searchResults js-popover">
-    <ul class="spectrum-Menu js-searchResults" id="search-results-listbox" role="listbox" aria-label="Search">
+    <ul class="spectrum-Menu spectrum-Menu--sizeM js-searchResults" id="search-results-listbox" role="listbox" aria-label="Search">
     </ul>
     <div class="spectrum-IllustratedMessage spectrum-Site-noSearchResults js-searchError">
       <div class="spectrum-IllustratedMessage spectrum-Site-noSearchResults">
@@ -325,17 +325,17 @@ Search.prototype.search = function (val) {
   ${Search.Categories.map(function (category) {
 		return results[category].length
 			? `
-        <li role="group" aria-labelledby="searchResults-${category}">
+        <li class="spectrum-Menu-item" role="group" aria-labelledby="searchResults-${category}">
           <span class="spectrum-Menu-sectionHeading" id="searchResults-${category}" aria-hidden="true">${
 					Search.CategoryNames[category]
 			  }</span>
-          <ul class="spectrum-Menu" role="presentation">
+          <ul class="spectrum-Menu spectrum-Menu--sizeM" role="presentation">
             ${results[category]
 							.map(function (result, i) {
-								return `
-                <a class="spectrum-Menu-item js-fastLoad" href="${result.href}" role="option">
-                  <span class="spectrum-Menu-itemLabel">${result.name}</span>
-                </a>
+								return `  
+                  <a class="spectrum-Menu-item js-fastLoad" href="${result.href}" role="option">
+                    <span class="spectrum-Menu-itemLabel">${result.name}</span>
+                  </a>
                 `;
 							})
 							.join("\n")}
