@@ -10,9 +10,11 @@
 | `--mod-color-slider-checkerboard-size`            |
 | `--mod-color-slider-control-track-height`         |
 | `--mod-color-slider-control-track-width`          |
+| `--mod-color-slider-handle-hitarea-border-radius` |
 | `--mod-color-slider-length`                       |
 | `--mod-color-slider-minimum-length`               |
 | `--mod-color-slider-vertical-control-track-width` |
 | `--mod-color-slider-vertical-height`              |
 | `--mod-color-slider-vertical-minimum-height`      |
+| `--mod-colorhandle-hitarea-border-radius`         |
 | `--mod-spectrum-color-slider-checkerboard-size`   |
