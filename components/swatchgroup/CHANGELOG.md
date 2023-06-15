@@ -3,6 +3,13 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+<a name="2.0.49"></a>
+##2.0.49
+🗓
+2023-06-15 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/swatchgroup@2.0.48...@spectrum-css/swatchgroup@2.0.49)
+
+**Note:** Version bump only for package @spectrum-css/swatchgroup
+
 <a name="2.0.48"></a>
 ##2.0.48
 🗓
