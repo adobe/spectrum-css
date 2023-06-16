@@ -25,16 +25,7 @@ export default {
 			},
 			control: "boolean",
 		},
-		variant: {
-			name: "Variant",
-			type: { name: "string" },
-			table: {
-				type: { summary: "string" },
-				category: "Component",
-			},
-			options: ["overBackground"],
-			control: "select",
-		},
+		variant: { table: { disable: true }},
 	},
 	args: {
 		rootClass: "spectrum-ClearButton",
@@ -55,3 +46,13 @@ export default {
 
 export const Default = Template.bind({});
 Default.args = {};
+
+export const OverBackground = Template.bind({});
+OverBackground.args = {
+	variant: "overBackground",
+	styles: {
+		"background-color": "rgb(15, 121, 125);", 
+		"color": "rgb(15, 121, 125);",
+		"padding": "15px 20px;"
+	}
+};
