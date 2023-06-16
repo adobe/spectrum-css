@@ -10,99 +10,96 @@ OF ANY KIND, either express or implied. See the License for the specific languag
 governing permissions and limitations under the License.
 */
 
-@import "../vars/css/scales/spectrum-large.css";
-@import "../vars/css/scales/spectrum-medium.css";
-@import "../commons/basebutton.css";
 @import "../vars/css/components/spectrum-clearbutton.css";
 
 .spectrum-ClearButton {
-  @inherit: %spectrum-BaseButton;
+  --spectrum-clear-button-height: var(--spectrum-component-height-100);
+  --spectrum-clear-button-width: var(--spectrum-component-height-100);
+  --spectrum-clear-button-padding: var(--spectrum-in-field-button-edge-to-fill);
 
+  --spectrum-clear-button-icon-color: var(--spectrum-neutral-content-color-default);
+  --spectrum-clear-button-icon-color-hover: var(--spectrum-neutral-content-color-hover);
+  --spectrum-clear-button-icon-color-down: var(--spectrum-neutral-content-color-down);
+  --spectrum-clear-button-icon-color-key-focus: var(--spectrum-neutral-content-color-key-focus);
+
+  &.spectrum-ClearButton--sizeS {
+    --spectrum-clear-button-height: var(--spectrum-component-height-75);
+    --spectrum-clear-button-width: var(--spectrum-component-height-75);
+  }
+
+  &.spectrum-ClearButton--sizeL {
+    --spectrum-clear-button-height: var(--spectrum-component-height-200);
+    --spectrum-clear-button-width: var(--spectrum-component-height-200);
+  }
+
+  &.spectrum-ClearButton--sizeXL {
+    --spectrum-clear-button-height: var(--spectrum-component-height-300);
+    --spectrum-clear-button-width: var(--spectrum-component-height-300);
+  }
+
+  &:disabled {
+    --mod-clear-button-icon-color: var(--spectrum-clear-button-icon-color-disabled, var(--spectrum-disabled-content-color));
+    --mod-clear-button-background-color: var(--spectrum-clear-button-background-color-disabled, var(--spectrum-disabled-background-color));
+  }
+
+  &.spectrum-ClearButton--quiet {
+    --mod-clear-button-background-color: var(--spectrum-clear-button-background-color-quiet, transparent);
+  }
+
+  &.spectrum-ClearButton--overBackground {
+    --mod-clear-button-icon-color: var(--spectrum-clear-button-icon-color-over-background, var(--spectrum-white));
+    --mod-clear-button-icon-color-hover: var(--spectrum-clear-button-icon-color-hover-over-background, var(--spectrum-white));
+    --mod-clear-button-icon-color-down: var(--spectrum-clear-button-icon-color-down-over-background, var(--spectrum-white));
+    --mod-clear-button-icon-color-key-focus: var(--spectrum-clear-button-icon-color-key-focus-over-background, var(--spectrum-white));
+
+    --mod-clear-button-background-color: var(--spectrum-clear-button-background-color-over-background, transparent);
+    --mod-clear-button-background-color-hover: var(--spectrum-clear-button-background-color-hover-over-background, var(--spectrum-transparent-white-300));
+    --mod-clear-button-background-color-down: var(--spectrum-clear-button-background-color-hover-over-background, var(--spectrum-transparent-white-400));
+    --mod-clear-button-background-color-key-focus: var(--spectrum-clear-button-background-color-hover-over-background, var(--spectrum-transparent-white-300));
+  }
+}
+
+.spectrum-ClearButton {
+  block-size: var(--mod-clear-button-height, var(--spectrum-clear-button-height));
+  inline-size: var(--mod-clear-button-width, var(--spectrum-clear-button-width));
   border-radius: 100%;
 
   background-color: transparent;
-  padding: var(--spectrum-clearbutton-padding);
   margin: 0;
+  padding: var(--mod-clear-button-padding, var(--spectrum-clear-button-padding));
 
   border: none;
+  color: var(--mod-clear-button-icon-color, var(--spectrum-clear-button-icon-color));
 
   > .spectrum-Icon {
     /* @safari10 Workaround for https://bugs.webkit.org/show_bug.cgi?id=169700 */
     margin-block: 0;
     margin-inline: auto;
   }
-}
-
-.spectrum-ClearButton--sizeS {
-  @remapvars {
-    find: --spectrum-clearbutton-s-;
-    replace: --spectrum-clearbutton-;
-  }
-}
-
-.spectrum-ClearButton--sizeM {
-  @remapvars {
-    find: --spectrum-clearbutton-m-;
-    replace: --spectrum-clearbutton-;
-  }
-}
-
-.spectrum-ClearButton--sizeL {
-  @remapvars {
-    find: --spectrum-clearbutton-l-;
-    replace: --spectrum-clearbutton-;
-  }
-}
-
-.spectrum-ClearButton--sizeXL {
-  @remapvars {
-    find: --spectrum-clearbutton-xl-;
-    replace: --spectrum-clearbutton-;
-  }
-}
-
-.spectrum-ClearButton-fill {
-  background-color: var(--spectrum-clearbutton-fill-background-color);
-
-  inline-size: var(--spectrum-clearbutton-fill-size);
-  block-size: var(--spectrum-clearbutton-fill-size);
-  border-radius: 100%;
-
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
-.spectrum-ClearButton {
-  color: var(--spectrum-clearbutton-m-fill-uiicon-color);
 
   &:hover {
-    color: var(--spectrum-clearbutton-fill-uiicon-color);
+    color: var(--mod-clear-button-icon-color-hover, var(--spectrum-clear-button-icon-color-hover));
+
+    .spectrum-ClearButton-fill {
+      background-color: var(--mod-clear-button-background-color-hover, var(--spectrum-clear-button-background-color-hover));
+    }
   }
 
   &:active {
-    color: var(--spectrum-clearbutton-fill-uiicon-color-down);
+    color: var(--mod-clear-button-icon-color-down, var(--spectrum-clear-button-icon-color-down));
+
+    .spectrum-ClearButton-fill {
+      background-color: var(--mod-clear-button-background-color-down, var(--spectrum-clear-button-background-color-down));
+    }
   }
 
-  &:focus-visible {
-    color: var(--spectrum-clearbutton-fill-uiicon-color-key-focus);
-  }
+  &:focus-visible,
+  &:focus-within {
+    color: var(--mod-clear-button-icon-color-key-focus, var(--spectrum-clear-button-icon-color-key-focus));
 
-  &:disabled,
-  &.is-disabled {
-    color: var(--spectrum-clearbutton-fill-uiicon-color-disabled);
-  }
-
-  &:hover .spectrum-ClearButton-fill {
-    background-color: var(--spectrum-clearbutton-fill-background-color-hover);
-  }
-
-  &:active .spectrum-ClearButton-fill {
-    background-color: var(--spectrum-clearbutton-fill-background-color-down);
-  }
-
-  &:focus-visible .spectrum-ClearButton-fill {
-    background-color: var(--spectrum-clearbutton-fill-background-color-key-focus);
+    .spectrum-ClearButton-fill {
+      background-color: var(--mod-clear-button-background-color-key-focus, var(--spectrum-clear-button-background-color-key-focus));
+    }
   }
 
   &:disabled,
@@ -113,36 +110,32 @@ governing permissions and limitations under the License.
   }
 }
 
-.spectrum-ClearButton--overBackground {
-  color: var(--spectrum-alias-icon-color-overbackground);
+.spectrum-ClearButton-fill {
+  background-color: var(--mod-clear-button-background-color, var(--spectrum-clear-button-background-color)); 
 
-  &:hover {
-    color: var(--spectrum-alias-icon-color-overbackground);
-  }
+  inline-size: 100%;
+  block-size: 100%;
+  border-radius: 100%;
 
-  &:active {
-    color: var(--spectrum-alias-icon-color-overbackground);
-  }
-
-  &:focus-visible {
-    color: var(--spectrum-alias-icon-color-overbackground);
-  }
-
-  &:disabled,
-  &.is-disabled .spectrum-ClearButton-fill {
-    background-color: var(--spectrum-alias-icon-color-overbackground-disabled);
-  }
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .spectrum-ClearButton--overBackground {
   background-color: var(--spectrum-button-m-primary-outline-white-texticon-background-color);
   border-color: var(--spectrum-button-m-primary-outline-white-texticon-border-color);
-  color: var(--spectrum-button-m-primary-outline-white-texticon-text-color);
 
   &:hover {
     background-color: var(--spectrum-button-m-primary-outline-white-texticon-background-color-hover);
     border-color: var(--spectrum-button-m-primary-outline-white-texticon-border-color-hover);
     color: var(--spectrum-button-m-primary-outline-white-texticon-text-color-hover);
+  }
+
+  &:active {
+    background-color: var(--spectrum-button-m-primary-outline-white-texticon-background-color-down);
+    border-color: var(--spectrum-button-m-primary-outline-white-texticon-border-color-down);
+    color: var(--spectrum-button-m-primary-outline-white-texticon-text-color-down);
   }
 
   &:focus-visible {
@@ -157,17 +150,16 @@ governing permissions and limitations under the License.
     }
   }
 
-  &:active {
-    background-color: var(--spectrum-button-m-primary-outline-white-texticon-background-color-down);
-    border-color: var(--spectrum-button-m-primary-outline-white-texticon-border-color-down);
-    color: var(--spectrum-button-m-primary-outline-white-texticon-text-color-down);
-  }
-
   &:disabled,
   &.is-disabled {
     background-color: var(--spectrum-button-m-primary-outline-white-texticon-background-color-disabled);
     border-color: var(--spectrum-button-m-primary-outline-white-texticon-border-color-disabled);
     color: var(--spectrum-button-m-primary-outline-white-texticon-text-color-disabled);
+  }
+
+  &:disabled,
+  &.is-disabled .spectrum-ClearButton-fill {
+    background-color: var(--spectrum-alias-icon-color-overbackground-disabled);
   }
 }
 
