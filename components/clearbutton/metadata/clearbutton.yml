@@ -82,6 +82,16 @@ examples:
           </svg>
         </div>
       </button>
+  - id: clearbutton-quiet
+    name: Quiet
+    markup: |
+      <button class="spectrum-ClearButton spectrum-ClearButton--sizeM spectrum-ClearButton--quiet">
+        <div class="spectrum-ClearButton-fill">
+          <svg class="spectrum-ClearButton-icon spectrum-Icon spectrum-UIIcon-Cross100" focusable="false" aria-hidden="true">
+            <use xlink:href="#spectrum-css-icon-Cross100" />
+          </svg>
+        </div>
+      </button>
   - id: clearbutton-overbackground
     name: Overbackground
     markup: |
