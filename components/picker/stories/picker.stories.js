@@ -5,7 +5,7 @@ import { Default as MenuStories } from "@spectrum-css/menu/stories/menu.stories.
 import { default as IconStories } from "@spectrum-css/icon/stories/icon.stories.js";
 
 export default {
-	title: "Picker",
+	title: "Components/Picker",
 	description: "A picker outlines a set of options for a user.",
 	component: "Picker",
 	argTypes: {

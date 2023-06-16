@@ -2,7 +2,7 @@
 import { Template } from "./template";
 
 export default {
-	title: "Drop indicator",
+	title: "Components/Drop indicator",
 	description:
 		"The Drop indicator component is used to show the insertion position into a list or table.",
 	component: "Dropindicator",

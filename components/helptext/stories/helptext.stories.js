@@ -2,7 +2,7 @@
 import { Template } from "./template";
 
 export default {
-	title: "Help text",
+	title: "Components/Help text",
 	description:
 		"Help text provides either an informative description or an error message that gives more context about what a user needs to input. It’s commonly used in forms.",
 	component: "HelpText",

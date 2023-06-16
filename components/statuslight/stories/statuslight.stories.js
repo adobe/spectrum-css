@@ -2,8 +2,8 @@
 import { Template } from "./template";
 
 export default {
-	title: "Statuslight",
-	description: "The Statuslight component is...",
+	title: "Components/Status light",
+	description: "The Status light component is...",
 	component: "Statuslight",
 	argTypes: {
 		size: {

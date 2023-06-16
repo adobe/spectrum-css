@@ -7,7 +7,7 @@ const ignoreProps = ["rootClass", "isDisabled"];
 
 // @todo add support for date *range*
 export default {
-	title: "Date Picker",
+	title: "Components/Date picker",
 	description:
 		"A date picker displays a Text Field input with a button next to it, and can display two Text Fields next to each other for choosing a date range.",
 	component: "DatePicker",

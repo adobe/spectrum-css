@@ -2,7 +2,7 @@
 import { Template } from "./template";
 
 export default {
-	title: "Radio",
+	title: "Components/Radio",
 	description:
 		"A radio selector allow users to select a single option from a list of mutually exclusive options. All possible options are exposed up front for users to compare.",
 	component: "Radio",

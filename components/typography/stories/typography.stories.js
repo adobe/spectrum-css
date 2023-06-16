@@ -3,7 +3,7 @@ import { Template } from "./template";
 import { html } from "lit-html";
 
 export default {
-	title: "Typography",
+	title: "Components/Typography",
 	description:
 		"Spectrum Typography is broken out into several separate components.",
 	component: "Typography",

@@ -2,7 +2,7 @@
 import { Template } from "./template";
 
 export default {
-	title: "Thumbnail",
+	title: "Components/Thumbnail",
 	description:
 		"A thumbnail is used to display a preview of an image, layer, or effect.",
 	component: "Thumbnail",

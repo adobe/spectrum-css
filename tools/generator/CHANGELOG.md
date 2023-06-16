@@ -3,6 +3,19 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+<a name="2.0.9"></a>
+##2.0.9
+	🗓
+	2023-06-15	• 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/generator@2.0.8...@spectrum-css/generator@2.0.9)
+
+### 🐛 Bug fixes
+
+*
+	**generator:**restore files to pre-formatted state([189ced1](https://github.com/adobe/spectrum-css/commit/189ced1))
+
+
+
+
 <a name="2.0.8"></a>
 ##2.0.8
 🗓

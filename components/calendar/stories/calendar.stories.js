@@ -8,7 +8,7 @@ const months = [...Array(12).keys()].map((key) =>
 );
 
 export default {
-	title: "Calendar",
+	title: "Components/Calendar",
 	description:
 		"Calendars display a grid of days in one or more months and allow users to select a single date.",
 	component: "Calendar",

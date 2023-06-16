@@ -2,7 +2,7 @@
 import { Template } from "./template";
 
 export default {
-	title: "Text field",
+	title: "Components/Text field",
 	description:
 		"Text fields are text boxes that allow users to input custom text entries with a keyboard. Various decorations can be displayed around the field to communicate the entry requirements.",
 	component: "TextField",

@@ -3,6 +3,13 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+<a name="6.0.4"></a>
+##6.0.4
+🗓
+2023-06-15 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/illustratedmessage@6.0.3...@spectrum-css/illustratedmessage@6.0.4)
+
+**Note:** Version bump only for package @spectrum-css/illustratedmessage
+
 <a name="6.0.3"></a>
 ##6.0.3
 🗓

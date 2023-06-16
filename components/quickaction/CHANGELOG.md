@@ -3,6 +3,13 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+<a name="3.0.64"></a>
+##3.0.64
+🗓
+2023-06-15 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/quickaction@3.0.63...@spectrum-css/quickaction@3.0.64)
+
+**Note:** Version bump only for package @spectrum-css/quickaction
+
 <a name="3.0.63"></a>
 ##3.0.63
 🗓

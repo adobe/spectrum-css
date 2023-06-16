@@ -2,7 +2,7 @@
 import { Template } from "./template";
 
 export default {
-	title: "Coach mark",
+	title: "Components/Coach mark",
 	description:
 		"The coach mark component can be used to bring added attention to specific parts of a page.",
 	component: "CoachMark",

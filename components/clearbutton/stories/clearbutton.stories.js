@@ -2,8 +2,8 @@
 import { Template } from "./template";
 
 export default {
-	title: "Clear button",
-	description: "The Clear button component is...",
+	title: "Components/Clear button",
+	description: "The Clear button component is and in-field button used in Search and Tag",
 	component: "Clearbutton",
 	argTypes: {
 		size: {

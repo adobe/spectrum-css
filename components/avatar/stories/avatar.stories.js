@@ -2,7 +2,7 @@
 import { Template } from "./template";
 
 export default {
-	title: "Avatar",
+	title: "Components/Avatar",
 	description: "An image representing a user.",
 	component: "Avatar",
 	argTypes: {

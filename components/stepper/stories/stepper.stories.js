@@ -2,7 +2,7 @@
 import { Template } from "./template";
 
 export default {
-	title: "Stepper",
+	title: "Components/Stepper",
 	description:
 		"A stepper can be used to increment or decrement a value by a specified amount via an up/down button. An input field displays the current value.",
 	component: "Stepper",

@@ -4,7 +4,7 @@ import { Template } from "./template";
 import { default as IconStories } from "@spectrum-css/icon/stories/icon.stories.js";
 
 export default {
-	title: "Badge",
+	title: "Components/Badge",
 	description:
 		"A badge element displays a small amount of color-categorized metadata; ideal for getting a user's attention.",
 	component: "Badge",

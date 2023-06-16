@@ -4,7 +4,7 @@ import { Template } from "./template";
 import { default as ActionButton } from "@spectrum-css/actionbutton/stories/actionbutton.stories.js";
 
 export default {
-	title: "Action group",
+	title: "Components/Action group",
 	description: "The Action group component is a collection of action buttons.",
 	component: "ActionGroup",
 	argTypes: {
