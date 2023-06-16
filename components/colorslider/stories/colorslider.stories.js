@@ -34,13 +34,21 @@ export default {
 			type: { name: "string" },
 			table: { disable: true },
 		},
+		gradientType: {
+			name: "Gradient Type",
+			description: "The gradient can be defined in the markup using CSS or with an image.",
+			options: ['gradient', 'image'],
+			control: { type: 'select' },
+			table: { disable: true },
+		},
 	},
 	args: {
 		rootClass: "spectrum-ColorSlider",
 		isDisabled: false,
 		isFocused: false,
+		gradientType: "gradient",
 		gradientStops:
-			"rgb(255, 255, 0) 17%, rgb(0, 255, 0) 33%, rgb(0, 255, 255) 50%, rgb(0, 0, 255) 67%, rgb(255, 0, 255) 83%, rgb(255, 0, 0) 100%",
+			"rgb(255, 0, 0) 0%, rgb(255, 255, 0) 17%, rgb(0, 255, 0) 33%, rgb(0, 255, 255) 50%, rgb(0, 0, 255) 67%, rgb(255, 0, 255) 83%, rgb(255, 0, 0)",
 	},
 	parameters: {
 		actions: {
@@ -65,4 +73,17 @@ Vertical.args = {
 export const Alpha = Template.bind({});
 Alpha.args = {
 	gradientStops: "rgba(0, 0, 0, 1) 0%, rgba(0, 0, 0, 0) 100%",
+	colorHandleStyle: {
+		"--spectrum-picked-color": "rgba(0, 0, 0, 1)",
+	},
 };
+
+export const WithImage = Template.bind({});
+WithImage.args = {
+	gradientType: "image",
+	colorHandleStyle: {
+		"--spectrum-picked-color": "#df6a7d",
+		"inset-inline-start": "50%",
+	},
+};
+WithImage.storyName = "Image";
