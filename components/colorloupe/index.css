@@ -30,6 +30,7 @@ governing permissions and limitations under the License.
 }
 
 .spectrum-ColorLoupe {
+  overflow: visible;
   inline-size: var(--spectrum-colorloupe-width);
   block-size:  var(--spectrum-colorloupe-height);
 
