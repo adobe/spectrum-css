@@ -70,7 +70,7 @@
 }
 
 .spectrum-ColorSlider--vertical {
-  display: inline-block;
+	display: inline-block;
 
 	min-block-size: var(
 		--mod-color-slider-vertical-minimum-height,
@@ -138,7 +138,7 @@
 		)
 	);
 
-	/* The floating inset box shadow (border) must be a separate element since <canvas> won't take it. */
+	/* Inset border on top of background, created with box-shadow. */
 	&::before {
 		content: "";
 		z-index: 1;
@@ -183,6 +183,11 @@
 		--mod-color-slider-border-rounding,
 		var(--spectrum-color-slider-border-rounding)
 	);
+}
+
+/* Reverse gradient horizontally when viewing RTL. */
+[dir="rtl"] .spectrum-ColorSlider-gradient {
+	transform: scaleX(-1);
 }
 
 /* Visually hidden "range" input field */

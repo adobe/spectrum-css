@@ -1,20 +1,21 @@
-name: Color Slider
+name: Color slider
 status: Verified
 SpectrumSiteSlug: https://spectrum.adobe.com/page/color-slider/
 description: |
-  - Set the value of the ColorHandle component to the selected color
-  - The `.spectrum-ColorHandle` should be moved with the `transform: translateX(x)` style property as the slider is dragged
-  - Ensure that you set the `min`/`max` of `.spectrum-ColorSlider-slider` to the corresponding scale (i.e. `0` to `1` for `a`, `0` to `255` for `r`, etc)
-  - Ensure that you the `step` attribute of `.spectrum-ColorSlider-slider` appropriately (i.e. `0.1` for `a`, `s`, `v` or `1` and `h`, `r`, etc)
-  - Set the `background` style property of `.spectrum-ColorSlider-gradient` to the gradient of the colors to be selected.
-  - Alternatively, provide a `<canvas>` or `<img>` element with the gradient you want to use and apply the `.spectrum-ColorSlider-gradient` class
+  - Set the color of the nested Color handle component to match Color slider's currently selected color using its custom property: `--spectrum-picked-color`.
+  - The `.spectrum-ColorHandle` should be moved with `inset-inline-*` (horizontal) or `inset-block-*` (vertical) style properties as the slider is dragged.
+  - Ensure that you set the `min` and `max` attributes of the `.spectrum-ColorSlider-slider` input to the corresponding scale (i.e. `0` to `1` for `a`, `0` to `255` for `r`, etc).
+  - Ensure that you set the `step` attribute of the `.spectrum-ColorSlider-slider` input appropriately (i.e. `0.1` for `a`, `s`, `v` or `1` and `h`, `r`, etc).
+  - Set the `background` style property of `.spectrum-ColorSlider-gradient` to the gradient of the colors to be selected. The CSS will automatically reverse the gradient element horizontally when using a RTL (right-to-left) base direction.
+  - Alternatively, provide a `<canvas>` or `<img>` element with the gradient you want to use and apply the `.spectrum-ColorSlider-gradient` class.
 sections:
   - name: Custom Properties API
     description: |
       This component can be modified via its `--mod-*` prefixed custom properties. A list of those prefixed custom properties can be found <a href="https://github.com/adobe/spectrum-css/tree/main/components/colorslider/metadata/mods.md">here</a>.
   - name: Migration Guide
     description: |
-      - Color Slider examples no longer display a "canvas" variant.
+      - The component now supports a RTL (right-to-left) base direction with logical properties, and reverses the gradient.
+      - Color slider examples no longer display a "canvas" variant.
 examples:
   - id: color-slider
     name: Standard
@@ -34,7 +35,7 @@ examples:
         <input type="range" class="spectrum-ColorSlider-slider" min="0" max="100" step="1">
       </div>
 
-  - id: color-slider
+  - id: color-slider-alpha
     name: Alpha
     markup: |
       <div class="spectrum-ColorSlider">
@@ -52,7 +53,7 @@ examples:
         <input type="range" class="spectrum-ColorSlider-slider" min="0" max="100" step="1">
       </div>
 
-  - id: color-slider
+  - id: color-slider-disabled
     name: Disabled
     markup: |
       <div class="spectrum-ColorSlider is-disabled">
@@ -70,7 +71,7 @@ examples:
         <input type="range" class="spectrum-ColorSlider-slider" min="0" max="100" step="1">
       </div>
 
-  - id: color-slider
+  - id: color-slider-vertical
     name: Vertical
     markup: |
       <div class="spectrum-ColorSlider spectrum-ColorSlider--vertical">
@@ -88,7 +89,7 @@ examples:
         <input type="range" class="spectrum-ColorSlider-slider" min="0" max="100" step="1">
       </div>
 
-  - id: color-slider
+  - id: color-slider-with-image
     name: Standard (with image)
     markup: |
       <div class="spectrum-ColorSlider">
@@ -109,7 +110,7 @@ examples:
         <input type="range" class="spectrum-ColorSlider-slider" min="0" max="100" step="1">
       </div>
 
-  - id: color-slider
+  - id: color-slider-full
     name: Full example
     demoClassName: spectrum-CSSExample-example--spacious
     markup: |
@@ -151,7 +152,7 @@ examples:
         <input type="range" class="spectrum-ColorSlider-slider" min="0" max="100" step="1">
       </div>
 
-  - id: color-slider
+  - id: color-slider-full-alpha
     name: Full example (alpha)
     demoClassName: spectrum-CSSExample-example--spacious
     markup: |
