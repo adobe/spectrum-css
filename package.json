@@ -21,7 +21,7 @@
   },
   "scripts": {
     "build": "yarn build:components",
-    "build:all": "run-s build:components build:site build:preview",
+    "build:all": "run-s build:preview build:site",
     "postbuild:all": "yarn mv:preview",
     "build:clean": "run-s clean build",
     "build:components": "lerna run --scope \"${SCOPE:-@spectrum-css/*}\" --ignore \"@spectrum-css/{*-builder*,preview,generator}\" build",
