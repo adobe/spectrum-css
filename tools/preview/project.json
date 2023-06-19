@@ -1,0 +1,48 @@
+{
+	"name": "storybook",
+	"namedInputs": {
+		"core": [
+			"{workspaceRoot}/assets",
+			"{workspaceRoot}/decorators",
+			"{workspaceRoot}/*.js",
+			"{workspaceRoot}/*.html"
+		],
+		"output": ["{workspaceRoot}/storybook-static"]
+	},
+	"implicitDependencies": [
+		"@spectrum-css/*",
+		"!@spectrum-css/generator",
+		"!@spectrum-css/component-builder",
+		"!@spectrum-css/component-builder-simple",
+		"!@spectrum-css/bundle-builder"
+	],
+	"targets": {
+		"clean": {
+			"inputs": ["output"],
+			"outputs": [],
+			"executor": "nx:run-script",
+			"options": {
+				"script": "clean"
+			}
+		},
+		"build": {
+			"dependsOn": ["clean", "^build"],
+			"inputs": ["core"],
+			"outputs": ["output"],
+			"executor": "nx:run-script",
+			"options": {
+				"script": "build"
+			}
+		},
+		"dev": {
+			"dependsOn": ["^build"],
+			"inputs": ["core"],
+			"outputs": ["output"],
+			"executor": "nx:run-script",
+			"options": {
+				"script": "dev"
+			}
+		}
+	},
+	"includedScripts": ["clean", "build", "start", "dev", "test", "test:scope"]
+}

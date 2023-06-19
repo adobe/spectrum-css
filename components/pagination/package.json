@@ -15,14 +15,17 @@
   },
   "main": "dist/index-vars.css",
   "scripts": {
-    "build": "gulp"
+    "build": "gulp",
+    "clean": "rimraf dist",
+    "dev": "run-s build watch",
+    "watch": "nx watch --projects @spectrum-css/pagination -- nx run @spectrum-css/pagination:build"
   },
   "peerDependencies": {
-    "@spectrum-css/actionbutton": ">=4.0.0",
+    "@spectrum-css/actionbutton": ">=4",
     "@spectrum-css/button": ">=10",
     "@spectrum-css/icon": ">=3",
     "@spectrum-css/splitbutton": ">=5",
-    "@spectrum-css/textfield": ">=5.0.0",
+    "@spectrum-css/textfield": ">=5",
     "@spectrum-css/vars": ">=9"
   },
   "devDependencies": {
@@ -33,9 +36,16 @@
     "@spectrum-css/splitbutton": "^5.0.52",
     "@spectrum-css/textfield": "^6.0.3",
     "@spectrum-css/vars": "^9.0.8",
-    "gulp": "^4.0.0"
+    "gulp": "^4.0.0",
+    "nx": "^16.3.2",
+    "rimraf": "^5.0.1"
   },
   "publishConfig": {
     "access": "public"
+  },
+  "nx": {
+    "tags": [
+      "components"
+    ]
   }
 }

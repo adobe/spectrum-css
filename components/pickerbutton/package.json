@@ -15,7 +15,10 @@
   },
   "main": "dist/index-vars.css",
   "scripts": {
-    "build": "gulp"
+    "build": "gulp",
+    "clean": "rimraf dist",
+    "dev": "run-s build watch",
+    "watch": "nx watch --projects @spectrum-css/pickerbutton -- nx run @spectrum-css/pickerbutton:build"
   },
   "peerDependencies": {
     "@spectrum-css/icon": ">=3",
@@ -29,9 +32,16 @@
     "@spectrum-css/menu": "^4.0.43",
     "@spectrum-css/popover": "^6.0.55",
     "@spectrum-css/vars": "^9.0.8",
-    "gulp": "^4.0.0"
+    "gulp": "^4.0.0",
+    "nx": "^16.3.2",
+    "rimraf": "^5.0.1"
   },
   "publishConfig": {
     "access": "public"
+  },
+  "nx": {
+    "tags": [
+      "components"
+    ]
   }
 }

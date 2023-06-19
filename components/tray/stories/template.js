@@ -2,9 +2,9 @@ import { html } from "lit";
 import { classMap } from "lit/directives/class-map.js";
 import { ifDefined } from "lit/directives/if-defined.js";
 
-import { Template as Modal } from "@spectrum-css/modal/stories/template.js";
+// import { Template as Modal } from "@spectrum-css/modal/stories/template.js";
 
-import "../index.css";
+import "@spectrum-css/tray";
 
 export const Template = ({
 	rootClass = "spectrum-Tray",

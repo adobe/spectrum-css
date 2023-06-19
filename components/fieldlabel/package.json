@@ -15,11 +15,14 @@
   },
   "main": "dist/index.css",
   "scripts": {
-    "build": "gulp"
+    "build": "gulp",
+    "clean": "rimraf dist",
+    "dev": "run-s build watch",
+    "watch": "nx watch --projects @spectrum-css/fieldlabel -- nx run @spectrum-css/fieldlabel:build"
   },
   "peerDependencies": {
     "@spectrum-css/icon": ">=3",
-    "@spectrum-css/tokens": ">=10.0.0"
+    "@spectrum-css/tokens": ">=10"
   },
   "devDependencies": {
     "@spectrum-css/checkbox": "^6.1.4",
@@ -31,9 +34,16 @@
     "@spectrum-css/stepper": "^4.0.39",
     "@spectrum-css/textfield": "^6.0.3",
     "@spectrum-css/tokens": "^10.2.0",
-    "gulp": "^4.0.0"
+    "gulp": "^4.0.0",
+    "nx": "^16.3.2",
+    "rimraf": "^5.0.1"
   },
   "publishConfig": {
     "access": "public"
+  },
+  "nx": {
+    "tags": [
+      "components"
+    ]
   }
 }

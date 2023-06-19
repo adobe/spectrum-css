@@ -6,8 +6,7 @@ import { Template as Button } from "@spectrum-css/button/stories/template.js";
 import { Template as ActionButton } from "@spectrum-css/actionbutton/stories/template.js";
 import { Template as Textfield } from "@spectrum-css/textfield/stories/template.js";
 
-import "../index.css";
-import "../skin.css";
+import "@spectrum-css/pagination";
 
 // More on component templates: https://storybook.js.org/docs/web-components/writing-stories/introduction#using-args
 export const Template = ({

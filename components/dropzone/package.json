@@ -15,10 +15,13 @@
   },
   "main": "dist/index-vars.css",
   "scripts": {
-    "build": "gulp"
+    "build": "gulp",
+    "clean": "rimraf dist",
+    "dev": "run-s build watch",
+    "watch": "nx watch --projects @spectrum-css/dropzone -- nx run @spectrum-css/dropzone:build"
   },
   "peerDependencies": {
-    "@spectrum-css/illustratedmessage": ">=6.0.0",
+    "@spectrum-css/illustratedmessage": ">=6",
     "@spectrum-css/link": ">=3 <=4",
     "@spectrum-css/tokens": ">=8 <=10"
   },
@@ -29,9 +32,16 @@
     "@spectrum-css/link": "^4.0.49",
     "@spectrum-css/tokens": "^10.2.0",
     "@spectrum-css/vars": "^9.0.8",
-    "gulp": "^4.0.0"
+    "gulp": "^4.0.0",
+    "nx": "^16.3.2",
+    "rimraf": "^5.0.1"
   },
   "publishConfig": {
     "access": "public"
+  },
+  "nx": {
+    "tags": [
+      "components"
+    ]
   }
 }

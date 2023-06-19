@@ -15,10 +15,13 @@
   },
   "main": "dist/index-vars.css",
   "scripts": {
-    "build": "gulp"
+    "build": "gulp",
+    "clean": "rimraf dist",
+    "dev": "run-s build watch",
+    "watch": "nx watch --projects @spectrum-css/card -- nx run @spectrum-css/card:build"
   },
   "peerDependencies": {
-    "@spectrum-css/actionbutton": ">=4.0.0",
+    "@spectrum-css/actionbutton": ">=4",
     "@spectrum-css/asset": ">=3",
     "@spectrum-css/checkbox": ">=3 <=6",
     "@spectrum-css/icon": ">=3",
@@ -35,9 +38,16 @@
     "@spectrum-css/quickaction": "^3.0.65",
     "@spectrum-css/typography": "^5.0.24",
     "@spectrum-css/vars": "^9.0.8",
-    "gulp": "^4.0.0"
+    "gulp": "^4.0.0",
+    "nx": "^16.3.2",
+    "rimraf": "^5.0.1"
   },
   "publishConfig": {
     "access": "public"
+  },
+  "nx": {
+    "tags": [
+      "components"
+    ]
   }
 }

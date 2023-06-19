@@ -6,8 +6,7 @@ import { repeat } from "lit/directives/repeat.js";
 import { Template as Divider } from "@spectrum-css/divider/stories/template.js";
 import { Template as Icon } from "@spectrum-css/icon/stories/template.js";
 
-import "../index.css";
-import "../skin.css";
+import "@spectrum-css/menu";
 
 export const MenuItem = ({
 	rootClass,

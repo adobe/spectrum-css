@@ -8,7 +8,7 @@ import { Template as Popover } from "@spectrum-css/popover/stories/template.js";
 import { Template as ProgressCircle } from "@spectrum-css/progresscircle/stories/template.js";
 import { Template as HelpText } from "@spectrum-css/helptext/stories/template.js";
 
-import "../index.css";
+import "@spectrum-css/picker";
 
 export const Template = ({
 	rootClass = "spectrum-Picker",

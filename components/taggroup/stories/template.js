@@ -4,8 +4,7 @@ import { ifDefined } from "lit/directives/if-defined.js";
 
 import { Template as Tag } from "@spectrum-css/tag/stories/template.js";
 
-import "../index.css";
-import "../skin.css";
+import "@spectrum-css/taggroup";
 
 export const Template = ({
 	rootClass = "spectrum-TagGroup",

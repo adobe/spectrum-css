@@ -3,7 +3,7 @@ import { classMap } from "lit/directives/class-map.js";
 
 import { upperCase, lowerCase, capitalize } from "lodash-es";
 
-import "../index.css";
+import "@spectrum-css/divider";
 
 export const Template = ({
 	rootClass = "spectrum-Divider",

@@ -15,7 +15,10 @@
   },
   "main": "dist/index-vars.css",
   "scripts": {
-    "build": "gulp"
+    "build": "gulp",
+    "clean": "rimraf dist",
+    "dev": "run-s build watch",
+    "watch": "nx watch --projects @spectrum-css/actionbar -- nx run @spectrum-css/actionbar:build"
   },
   "peerDependencies": {
     "@spectrum-css/actionbutton": ">=3",
@@ -24,7 +27,7 @@
     "@spectrum-css/fieldlabel": ">=7.0.0",
     "@spectrum-css/icon": ">=3",
     "@spectrum-css/popover": ">=5 <=6",
-    "@spectrum-css/tokens": ">=10.0.0"
+    "@spectrum-css/tokens": ">=10"
   },
   "devDependencies": {
     "@spectrum-css/actionbutton": "^4.0.5",
@@ -36,9 +39,16 @@
     "@spectrum-css/popover": "^6.0.55",
     "@spectrum-css/table": "^4.0.57",
     "@spectrum-css/tokens": "^10.2.0",
-    "gulp": "^4.0.0"
+    "gulp": "^4.0.0",
+    "nx": "^16.3.2",
+    "rimraf": "^5.0.1"
   },
   "publishConfig": {
     "access": "public"
+  },
+  "nx": {
+    "tags": [
+      "components"
+    ]
   }
 }

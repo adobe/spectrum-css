@@ -4,7 +4,7 @@ import { classMap } from "lit/directives/class-map.js";
 import { Template as ClearButton } from "@spectrum-css/clearbutton/stories/template.js";
 import { Template as TextField } from "@spectrum-css/textfield/stories/template.js";
 
-import "../index.css";
+import "@spectrum-css/search";
 
 export const Template = ({
 	rootClass = "spectrum-Search",

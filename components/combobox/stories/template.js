@@ -9,7 +9,7 @@ import { Template as PickerButton } from "@spectrum-css/pickerbutton/stories/tem
 
 import { useArgs, useGlobals } from "@storybook/client-api";
 
-import "../index.css";
+import "@spectrum-css/combobox";
 
 export const Template = ({
 	rootClass = "spectrum-Combobox",

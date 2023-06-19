@@ -7,7 +7,7 @@ import { useArgs } from "@storybook/client-api";
 import { Template as Icon } from "@spectrum-css/icon/stories/template.js";
 import { Template as ProgressCircle } from "@spectrum-css/progresscircle/stories/template.js";
 
-import "../index.css";
+import "@spectrum-css/textfield";
 
 export const Template = ({
 	rootClass = "spectrum-Textfield",

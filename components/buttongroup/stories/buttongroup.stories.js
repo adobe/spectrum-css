@@ -3,7 +3,8 @@ import { Template } from "./template";
 
 export default {
 	title: "Components/Button group",
-	description: "The Button group component is...",
+	description:
+		"The button group pattern visually unifies a set of related buttons.",
 	component: "Buttongroup",
 	argTypes: {
 		size: {

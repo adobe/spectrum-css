@@ -15,11 +15,14 @@
   },
   "main": "dist/index-vars.css",
   "scripts": {
-    "build": "gulp"
+    "build": "gulp",
+    "clean": "rimraf dist",
+    "dev": "run-s build watch",
+    "watch": "nx watch --projects @spectrum-css/popover -- nx run @spectrum-css/popover:build"
   },
   "peerDependencies": {
     "@spectrum-css/dialog": ">=6",
-    "@spectrum-css/tokens": ">=10.0.0"
+    "@spectrum-css/tokens": ">=10"
   },
   "devDependencies": {
     "@spectrum-css/button": "^10.1.6",
@@ -28,9 +31,16 @@
     "@spectrum-css/divider": "^2.1.8",
     "@spectrum-css/menu": "^4.0.43",
     "@spectrum-css/tokens": "^10.2.0",
-    "gulp": "^4.0.0"
+    "gulp": "^4.0.0",
+    "nx": "^16.3.2",
+    "rimraf": "^5.0.1"
   },
   "publishConfig": {
     "access": "public"
+  },
+  "nx": {
+    "tags": [
+      "components"
+    ]
   }
 }

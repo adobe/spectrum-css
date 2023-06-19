@@ -7,7 +7,7 @@ import { Template as CloseButton } from "@spectrum-css/closebutton/stories/templ
 import { Template as FieldLabel } from "@spectrum-css/fieldlabel/stories/template.js";
 import { Template as ActionGroup } from "@spectrum-css/actiongroup/stories/template.js";
 
-import "../index.css";
+import "@spectrum-css/actionbar";
 
 export const Template = ({
 	rootClass = "spectrum-ActionBar",

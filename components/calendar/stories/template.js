@@ -8,8 +8,7 @@ import { action } from "@storybook/addon-actions";
 
 import { Template as ActionButton } from "@spectrum-css/actionbutton/stories/template.js";
 
-import "../index.css";
-import "../skin.css";
+import "@spectrum-css/calendar";
 
 export const Template = ({
 	rootClass = "spectrum-Calendar",

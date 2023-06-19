@@ -8,7 +8,7 @@ import { useArgs } from "@storybook/client-api";
 // Uncomment if you plan to include an icon
 import { Template as Icon } from "@spectrum-css/icon/stories/template.js";
 
-import "../index.css";
+import "@spectrum-css/rating";
 
 export const Template = ({
 	rootClass = "spectrum-Rating",

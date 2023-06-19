@@ -4,7 +4,7 @@ import { classMap } from "lit/directives/class-map.js";
 
 import { lowerCase, capitalize } from "lodash-es";
 
-import "../index.css";
+import "@spectrum-css/swatchgroup";
 
 export const Template = ({
 	rootClass = "spectrum-SwatchGroup",

@@ -1,5 +1,3 @@
-<!-- Summarize your changes in the Title field -->
-
 ## Description
 
 <!--
@@ -11,8 +9,10 @@
 
 ## How and where has this been tested?
 
-- **How this was tested:** <!-- Using steps in issue #000 -->
-- **Browser(s) and OS(s) this was tested with:** <!-- Chrome 75.0.3770.142 on Win 10 -->
+- [ ] test 1, expected outcome
+
+- [ ] Validated a legacy documentation page (such as [accordion](https://pr-###--spectrum-css.netlify.app/accordion.html))
+- [ ] Validated a migrated documentation page (such as [action group](https://pr-###--spectrum-css.netlify.app/actiongroup.html))
 
 ## Screenshots
 

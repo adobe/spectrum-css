@@ -4,7 +4,7 @@ import { when } from "lit/directives/when.js";
 
 import { Template as Icon } from "@spectrum-css/icon/stories/template.js";
 
-import "../index.css";
+import "@spectrum-css/infieldbutton";
 
 export const Template = ({
 	rootClass = "spectrum-InfieldButton",

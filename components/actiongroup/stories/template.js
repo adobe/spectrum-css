@@ -3,7 +3,7 @@ import { classMap } from "lit/directives/class-map.js";
 
 import { Template as ActionButton } from "@spectrum-css/actionbutton/stories/template.js";
 
-import "../index.css";
+import "@spectrum-css/actiongroup";
 
 export const Template = ({
 	rootClass = "spectrum-ActionGroup",

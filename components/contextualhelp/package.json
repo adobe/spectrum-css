@@ -17,22 +17,30 @@
   "main": "dist/index-vars.css",
   "scripts": {
     "build": "gulp",
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "watch": "gulp watch"
+    "clean": "rimraf dist",
+    "dev": "run-s build watch",
+    "watch": "nx watch --projects @spectrum-css/contextualhelp -- nx run @spectrum-css/contextualhelp:build"
   },
   "peerDependencies": {
     "@spectrum-css/actionbutton": ">=3",
     "@spectrum-css/popover": ">=6",
-    "@spectrum-css/tokens": ">=10.0.0"
+    "@spectrum-css/tokens": ">=10"
   },
   "devDependencies": {
     "@spectrum-css/actionbutton": "^4.0.5",
     "@spectrum-css/component-builder-simple": "^2.0.15",
     "@spectrum-css/popover": "^6.0.55",
     "@spectrum-css/tokens": "^10.2.0",
-    "gulp": "^4.0.0"
+    "gulp": "^4.0.0",
+    "nx": "^16.3.2",
+    "rimraf": "^5.0.1"
   },
   "publishConfig": {
     "access": "public"
+  },
+  "nx": {
+    "tags": [
+      "components"
+    ]
   }
 }

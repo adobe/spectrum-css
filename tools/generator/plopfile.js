@@ -24,6 +24,7 @@ export default async (plop) => {
 
 	const tokens = await fetchPackage(resolve(srcPath, 'tokens'));
 	const builder = await fetchPackage(resolve(process.cwd(), '../component-builder-simple'));
+	const preview = await fetchPackage(resolve(process.cwd(), '../preview'));
 
 	/* Fetch the project name */
 	plop.setWelcomeMessage(`Welcome to the ${projectName} component generator!\n  To get started, answer a few short questions about your component.`);
@@ -103,6 +104,7 @@ export default async (plop) => {
 			data.pkg = pkg;
 			data.tokens = { name: tokens.name, version: tokens.version };
 			data.builder = { name: builder.name, version: builder.version };
+			data.preview = { name: preview.name, version: preview.version };
 
 			return [
 				{

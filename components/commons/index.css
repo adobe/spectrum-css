@@ -10,13 +10,6 @@ OF ANY KIND, either express or implied. See the License for the specific languag
 governing permissions and limitations under the License.
 */
 
-Object.assign(exports, require("./css"));
-Object.assign(exports, require("./docs"));
-
-exports.default = exports.build = require("gulp").parallel(
-	exports.buildVars,
-	exports.buildDocs
-);
-exports.buildLite = exports.buildIndexVars;
-exports.buildMedium = exports.buildVars;
-exports.buildHeavy = exports.buildCSS;
+@import "./overlay-coretokens";
+@import "./basebutton-coretokens";
+@import "./basebutton";

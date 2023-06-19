@@ -6,7 +6,7 @@ import { Template as Icon } from "@spectrum-css/icon/stories/template.js";
 import { Template as Avatar } from "@spectrum-css/avatar/stories/template.js";
 import { Template as ClearButton } from "@spectrum-css/clearbutton/stories/template.js";
 
-import "../index.css";
+import "@spectrum-css/tag";
 
 // More on component templates: https://storybook.js.org/docs/web-components/writing-stories/introduction#using-args
 export const Template = ({

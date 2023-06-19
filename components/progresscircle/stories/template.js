@@ -2,7 +2,7 @@ import { html } from "lit";
 import { classMap } from "lit/directives/class-map.js";
 // import { ifDefined } from 'lit/directives/if-definedjs';
 
-import "../index.css";
+import "@spectrum-css/progresscircle";
 
 export const Template = ({
 	rootClass = "spectrum-ProgressCircle",

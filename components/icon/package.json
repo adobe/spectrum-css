@@ -16,7 +16,10 @@
   "main": "dist/index-vars.css",
   "scripts": {
     "build": "gulp",
-    "update": "gulp updateIcons"
+    "clean": "rimraf dist",
+    "dev": "run-s build watch",
+    "update": "gulp updateIcons",
+    "watch": "nx watch --projects @spectrum-css/icon -- nx run @spectrum-css/icon:build"
   },
   "peerDependencies": {
     "@spectrum-css/vars": ">=9"
@@ -31,9 +34,16 @@
     "gulp-svgcombiner": "^1.0.1",
     "gulp-svgmin": "^2.1.0",
     "gulp-svgstore": "^7.0.1",
+    "nx": "^16.3.2",
+    "rimraf": "^5.0.1",
     "vinyl-paths": "^3.0.1"
   },
   "publishConfig": {
     "access": "public"
+  },
+  "nx": {
+    "tags": [
+      "components"
+    ]
   }
 }

@@ -24,12 +24,14 @@
     "copy:express": "postcss --dir dist/css/express/ custom-express/*.css",
     "copy:spectrum": "postcss --dir dist/css/spectrum/ custom-spectrum/*.css",
     "css:prepare": "yarn concat:dist && postcss --replace dist/index.css",
-    "format:results": "prettier --no-config --no-error-on-unmatched-pattern --ignore-unknown --loglevel silent --write dist/"
+    "format:results": "prettier --no-config --no-error-on-unmatched-pattern --ignore-unknown --loglevel silent --write dist/",
+    "watch": "nx watch --projects @spectrum-css/tokens -- nx run @spectrum-css/tokens:build"
   },
   "devDependencies": {
     "@adobe/spectrum-tokens": "12.12.0",
     "concat-cli": "^4.0.0",
     "npm-run-all": "^4.1.5",
+    "nx": "^16.3.2",
     "postcss": "^8.4.21",
     "postcss-cli": "^10.1.0",
     "postcss-combine-duplicated-selectors": "^10.0.3",
@@ -48,6 +50,9 @@
     "access": "public"
   },
   "nx": {
+    "tags": [
+      "tokens"
+    ],
     "targets": {
       "build": {
         "inputs": [
