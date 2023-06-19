@@ -1,4 +1,4 @@
-| Modifiable Custom Properties                  |
+| Modifiable custom properties                  |
 | --------------------------------------------- |
 | `--mod-popover-background-color`              |
 | `--mod-popover-border-color`                  |

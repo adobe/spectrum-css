@@ -4,15 +4,45 @@
 		"default": {
 			"runner": "nx/tasks-runners/default",
 			"options": {
-				"cacheableOperations": ["build"]
+				"cacheableOperations": ["clean", "build", "dev", "start"]
 			}
 		}
 	},
+	"implicitDependencies": {
+		"./tasks/build-vars.mjs": "*",
+		"./tasks/build.mjs": "*"
+	},
+	"namedInputs": {
+		"styles": [
+			"{workspaceRoot}/index.css",
+			"{workspaceRoot}/skin.css",
+			"{workspaceRoot}/themes/*.css"
+		]
+	},
 	"targetDefaults": {
 		"build": {
-			"dependsOn": ["clean", "^build"],
-			"inputs": ["{workspaceRoot}/*.css"]
+			"dependsOn": ["^build"],
+			"inputs": ["styles"],
+			"outputs": ["{workspaceRoot}/dist"]
+		},
+		"clean": {
+			"inputs": ["{workspaceRoot}/dist"],
+			"outputs": []
+		},
+		"dev": {
+			"dependsOn": ["build", "watch"],
+			"inputs": ["styles"],
+			"outputs": ["dist"]
+		},
+		"test": {
+			"dependsOn": ["build"],
+			"inputs": ["{workspaceRoot}/dist"],
+			"outputs": []
+		},
+		"watch": {
+			"inputs": ["styles"],
+			"outputs": ["{workspaceRoot}/dist"]
 		}
 	},
-	"includedScripts": ["build"]
+	"includedScripts": ["build", "clean", "dev", "start", "test", "watch"]
 }

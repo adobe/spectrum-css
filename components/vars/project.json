@@ -1,0 +1,56 @@
+{
+	"name": "vars",
+	"tags": ["tokens", "legacy"],
+	"namedInputs": {
+		"styles": [
+			"{workspaceRoot}/*.css",
+			"{workspaceRoot}/css/**/*",
+			"{workspaceRoot}/json/*",
+			"{projectRoot}/tasks/build-vars.mjs"
+		]
+	},
+	"targets": {
+		"build": {
+			"dependsOn": ["^build"],
+			"inputs": ["styles"],
+			"outputs": ["{workspaceRoot}/dist"],
+			"executor": "nx:run-commands",
+			"options": {
+				"cwd": "components/vars",
+				"command": "node ../../tasks/build-vars.mjs"
+			}
+		},
+		"clean": {
+			"inputs": ["{workspaceRoot}/dist"],
+			"outputs": [],
+			"executor": "nx:run-commands",
+			"options": {
+				"cwd": "components/vars",
+				"command": "rimraf dist"
+			}
+		},
+		"dev": {
+			"dependsOn": ["build", "watch"],
+			"inputs": ["styles"],
+			"outputs": ["dist"]
+		},
+		"test": {
+			"dependsOn": ["build"],
+			"inputs": ["{workspaceRoot}/dist"],
+			"outputs": [],
+			"executor": "nx:run-commands",
+			"options": {
+				"command": "nx run storybook:test:scope -- vars"
+			}
+		},
+		"watch": {
+			"inputs": ["styles"],
+			"outputs": ["{workspaceRoot}/dist"],
+			"executor": "nx:run-commands",
+			"options": {
+				"command": "nx watch --projects vars -- nx run \\$NX_PROJECT_NAME:build"
+			}
+		}
+	},
+	"includedScripts": ["build", "clean", "dev", "test", "watch"]
+}

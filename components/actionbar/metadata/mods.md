@@ -1,4 +1,4 @@
-| Modifiable Custom Properties                    |
+| Modifiable custom properties                    |
 | ----------------------------------------------- |
 | `--mod-actionbar-corner-radius`                 |
 | `--mod-actionbar-emphasized-background-color`   |
@@ -9,7 +9,6 @@
 | `--mod-actionbar-item-counter-line-height`      |
 | `--mod-actionbar-item-counter-line-height-cjk`  |
 | `--mod-actionbar-popover-background-color`      |
-| `--mod-actionbar-popover-border-color`          |
 | `--mod-actionbar-shadow-blur`                   |
 | `--mod-actionbar-shadow-color`                  |
 | `--mod-actionbar-shadow-horizontal`             |

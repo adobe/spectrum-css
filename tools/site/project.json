@@ -1,0 +1,44 @@
+{
+	"name": "documentation",
+	"namedInputs": {
+		"core": [
+			"{workspaceRoot}/includes",
+			"{workspaceRoot}/resources",
+			"{workspaceRoot}/templates",
+			"{workspaceRoot}/*.pug"
+		],
+		"output": ["{projectRoot}/dist"]
+	},
+	"implicitDependencies": ["tag:component", "storybook"],
+	"targets": {
+		"clean": {
+			"inputs": ["output"],
+			"outputs": [],
+			"executor": "nx:run-commands",
+			"options": {
+				"command": "rimraf dist"
+			}
+		},
+		"build": {
+			"dependsOn": ["^build"],
+			"inputs": ["core"],
+			"outputs": ["output"],
+			"executor": "nx:run-commands",
+			"options": {
+				"cwd": "tools/site",
+				"command": "gulp build -LLL"
+			}
+		},
+		"dev": {
+			"dependsOn": ["build", "start"],
+			"executor": "nx:noop"
+		},
+		"start": {
+			"executor": "nx:run-scripts",
+			"options": {
+				"script": "start"
+			}
+		}
+	},
+	"includedScripts": ["clean", "build", "start", "dev"]
+}

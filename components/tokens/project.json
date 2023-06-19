@@ -1,0 +1,57 @@
+{
+	"name": "tokens",
+	"tags": ["tokens"],
+	"namedInputs": {
+		"styles": [
+			"{workspaceRoot}/postcss.config.js",
+			"{workspaceRoot}/style-dictionary.config.js",
+			"{workspaceRoot}/utilities/style-dictionary.utils.js",
+			"{workspaceRoot}/custom-express/*.css",
+			"{workspaceRoot}/custom-spectrum/*.css"
+		]
+	},
+	"targets": {
+		"build": {
+			"inputs": ["styles"],
+			"outputs": ["{workspaceRoot}/dist"],
+			"executor": "nx:run-commands",
+			"options": {
+				"cwd": "components/tokens",
+				"commands": [
+					"style-dictionary build --config style-dictionary.config.js",
+					"postcss --replace dist/css/*.css",
+					"postcss --dir dist/css/express/ custom-express/*.css",
+					"postcss --dir dist/css/spectrum/ custom-spectrum/*.css",
+					"concat-cli -f dist/css/*.css dist/css/**/*.css -o dist/index.css",
+					"postcss --replace dist/index.css",
+					"prettier --no-config --no-error-on-unmatched-pattern --ignore-unknown --loglevel silent --write dist/",
+					"find dist -type f -empty -delete"
+				],
+				"parallel": false
+			}
+		},
+		"clean": {
+			"inputs": ["{workspaceRoot}/dist"],
+			"outputs": [],
+			"executor": "nx:run-commands",
+			"options": {
+				"cwd": "components/tokens",
+				"command": "rimraf dist"
+			}
+		},
+		"dev": {
+			"dependsOn": ["build", "watch"],
+			"inputs": ["styles"],
+			"outputs": ["{workspaceRoot}/dist"]
+		},
+		"watch": {
+			"inputs": ["styles"],
+			"outputs": ["{workspaceRoot}/dist"],
+			"executor": "nx:run-commands",
+			"options": {
+				"command": "nx watch --projects tokens -- nx run \\$NX_PROJECT_NAME:build"
+			}
+		}
+	},
+	"includedScripts": ["build", "clean", "dev", "watch"]
+}

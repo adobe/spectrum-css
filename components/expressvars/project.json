@@ -1,0 +1,47 @@
+{
+	"name": "expressvars",
+	"tags": ["tokens", "express"],
+	"namedInputs": {
+		"styles": [
+			"{workspaceRoot}/*.css",
+			"{workspaceRoot}/css",
+			"{workspaceRoot}/json"
+		]
+	},
+	"targets": {
+		"build": {
+			"dependsOn": ["^build"],
+			"inputs": ["styles"],
+			"outputs": ["{workspaceRoot}/dist"],
+			"executor": "nx:run-commands",
+			"options": {
+				"cwd": "components/expressvars",
+				"command": "node ../../tasks/build-vars.mjs",
+				"parallel": true
+			}
+		},
+		"clean": {
+			"inputs": ["{workspaceRoot}/dist"],
+			"outputs": [],
+			"executor": "nx:run-commands",
+			"options": {
+				"cwd": "components/expressvars",
+				"command": "rimraf dist"
+			}
+		},
+		"dev": {
+			"dependsOn": ["build", "watch"],
+			"inputs": ["styles"],
+			"outputs": ["dist"]
+		},
+		"watch": {
+			"inputs": ["styles"],
+			"outputs": ["{workspaceRoot}/dist"],
+			"executor": "nx:run-commands",
+			"options": {
+				"command": "nx watch --projects expressvars -- nx run \\$NX_PROJECT_NAME:build"
+			}
+		}
+	},
+	"includedScripts": ["build", "clean", "dev", "watch"]
+}

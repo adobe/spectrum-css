@@ -1,4 +1,4 @@
-| Modifiable Custom Properties                          |
+| Modifiable custom properties                          |
 | ----------------------------------------------------- |
 | `--mod-accordion-background-color-default`            |
 | `--mod-accordion-background-color-down`               |

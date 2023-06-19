@@ -1,4 +1,4 @@
-| Modifiable Custom Properties                            |
+| Modifiable custom properties                            |
 | ------------------------------------------------------- |
 | `--mod--Textfield-workflow-icon-gap`                    |
 | `--mod-Textfield-workflow-icon-width`                   |
@@ -8,17 +8,7 @@
 | `--mod-text-area-min-inline-size`                       |
 | `--mod-textfield-background-color`                      |
 | `--mod-textfield-background-color-disabled`             |
-| `--mod-textfield-border-color`                          |
 | `--mod-textfield-border-color-disabled`                 |
-| `--mod-textfield-border-color-focus`                    |
-| `--mod-textfield-border-color-focus-hover`              |
-| `--mod-textfield-border-color-hover`                    |
-| `--mod-textfield-border-color-invalid-default`          |
-| `--mod-textfield-border-color-invalid-focus`            |
-| `--mod-textfield-border-color-invalid-focus-hover`      |
-| `--mod-textfield-border-color-invalid-hover`            |
-| `--mod-textfield-border-color-invalid-keyboard-focus`   |
-| `--mod-textfield-border-color-keyboard-focus`           |
 | `--mod-textfield-border-width`                          |
 | `--mod-textfield-character-count-font-family`           |
 | `--mod-textfield-character-count-font-size`             |
@@ -29,15 +19,12 @@
 | `--mod-textfield-character-count-spacing-inline`        |
 | `--mod-textfield-character-count-spacing-inline-side`   |
 | `--mod-textfield-corner-radius`                         |
-| `--mod-textfield-focus-indicator-color`                 |
 | `--mod-textfield-focus-indicator-gap`                   |
 | `--mod-textfield-focus-indicator-width`                 |
 | `--mod-textfield-font-family`                           |
 | `--mod-textfield-font-weight`                           |
 | `--mod-textfield-height`                                |
 | `--mod-textfield-helptext-spacing-block`                |
-| `--mod-textfield-icon-color-invalid`                    |
-| `--mod-textfield-icon-color-valid`                      |
 | `--mod-textfield-icon-size-invalid`                     |
 | `--mod-textfield-icon-spacing-block-invalid`            |
 | `--mod-textfield-icon-spacing-block-valid`              |
@@ -57,13 +44,4 @@
 | `--mod-textfield-spacing-block-start`                   |
 | `--mod-textfield-spacing-inline`                        |
 | `--mod-textfield-spacing-inline-quiet`                  |
-| `--mod-textfield-text-color-default`                    |
-| `--mod-textfield-text-color-disabled`                   |
-| `--mod-textfield-text-color-focus`                      |
-| `--mod-textfield-text-color-focus-hover`                |
-| `--mod-textfield-text-color-hover`                      |
-| `--mod-textfield-text-color-invalid`                    |
-| `--mod-textfield-text-color-keyboard-focus`             |
-| `--mod-textfield-text-color-readonly`                   |
-| `--mod-textfield-text-color-valid`                      |
 | `--mod-textfield-width`                                 |

@@ -5,33 +5,35 @@
   "license": "Apache-2.0",
   "author": "Adobe",
   "homepage": "https://opensource.adobe.com/spectrum-css/preview",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/adobe/spectrum-css.git",
+    "directory": "tools/preview"
+  },
+  "bugs": {
+    "url": "https://github.com/adobe/spectrum-css/issues"
+  },
   "main": "main.js",
   "scripts": {
-    "build": "yarn storybook",
-    "clean": "rimraf storybook-static",
-    "new": "yarn workspace @spectrum-css/generator new story",
-    "start": "WATCH_MODE=true storybook dev --quiet --config-dir .",
-    "storybook": "storybook build --quiet --config-dir .",
+    "build": "storybook build --quiet --config-dir .",
+    "dev": "run-p dev:storybook watch",
+    "dev:storybook": "storybook dev --quiet --config-dir .",
+    "new": "nx run @spectrum-css/generator:new story",
+    "start": "WATCH_MODE=true yarn dev",
     "test": "chromatic --build-script-name build --junit-report",
-    "test:scope": "yarn test --only-story-names"
-  },
-  "dependencies": {
-    "@adobe/spectrum-css-workflow-icons": "^1.2.1",
-    "@spectrum-css/expressvars": "^3.0.9",
-    "@spectrum-css/icon": "^3.0.49",
-    "@spectrum-css/site": "^3.0.21",
-    "@spectrum-css/tokens": "^10.2.1",
-    "@spectrum-css/vars": "^9.0.8"
+    "test:scope": "yarn test --only-story-names",
+    "watch": "nx watch --projects tag:components -- nx run \\$NX_PROJECT_NAME:build"
   },
   "devDependencies": {
+    "@adobe/spectrum-css-workflow-icons": "^1.2.1",
     "@babel/core": "^7.22.1",
     "@etchteam/storybook-addon-status": "^4.2.4",
-    "@spectrum-css/component-builder": "^4.0.12",
     "@storybook/addon-a11y": "^7.0.20",
     "@storybook/addon-actions": "^7.0.20",
-    "@storybook/addon-console": "^1.2.3",
+    "@storybook/addon-console": "^2.0.0",
     "@storybook/addon-docs": "^7.0.20",
     "@storybook/addon-essentials": "^7.0.20",
+    "@storybook/addons": "^7.0.20",
     "@storybook/api": "^7.0.20",
     "@storybook/blocks": "^7.0.20",
     "@storybook/client-api": "^7.0.20",
@@ -47,9 +49,9 @@
     "lit": "^2.7.6",
     "lodash-es": "^4.17.21",
     "npm-run-all": "^4.1.5",
+    "nx": "^16.4.1",
     "postcss": "^7.0.36",
-    "postcss-class-prefix": "^0.3.0",
-    "postcss-loader": "^4.0.0",
+    "postcss-loader": "^7.3.3",
     "postcss-prefix-selector": "^1.16.0",
     "postcss-selector-replace": "^1.0.2",
     "postcss-warn-cleaner": "^0.1.9",
@@ -59,44 +61,10 @@
     "react-dom": "^18.0.0",
     "react-syntax-highlighter": "^15.5.0",
     "rimraf": "^5.0.1",
-    "source-map-loader": "^1.0.0",
+    "source-map-loader": "^4.0.1",
     "storybook": "^7.0.26",
     "style-loader": "3.3.3",
-    "webpack": "^5.83.1"
-  },
-  "nx": {
-    "targets": {
-      "build": {
-        "dependsOn": [
-          "^build"
-        ],
-        "inputs": [
-          "{workspaceRoot}/assets",
-          "{workspaceRoot}/decorators",
-          "{workspaceRoot}/*.js",
-          "{workspaceRoot}/*.html",
-          "{projectRoot}/components/*/dist"
-        ],
-        "outputs": [
-          "{workspaceRoot}/storybook-static"
-        ]
-      },
-      "clean": {
-        "inputs": [
-          "{workspaceRoot}/storybook-static"
-        ]
-      }
-    },
-    "implicitDependencies": [
-      "@spectrum-css/*",
-      "!@spectrum-css/generator"
-    ],
-    "includedScripts": [
-      "clean",
-      "test",
-      "test:scope",
-      "storybook",
-      "build"
-    ]
+    "typescript": "^5.1.3",
+    "webpack": "^5.87.0"
   }
 }

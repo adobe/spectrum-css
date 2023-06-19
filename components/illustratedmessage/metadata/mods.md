@@ -1,4 +1,4 @@
-| Modifiable Custom Properties                            |
+| Modifiable custom properties                            |
 | ------------------------------------------------------- |
 | `--mod-illustrated-message-content-maximum-width`       |
 | `--mod-illustrated-message-description-color`           |
@@ -15,8 +15,6 @@
 | `--mod-illustrated-message-heading-max-inline-size`     |
 | `--mod-illustrated-message-heading-to-body`             |
 | `--mod-illustrated-message-heading-to-description`      |
-| `--mod-illustrated-message-illustration-accent-color`   |
-| `--mod-illustrated-message-illustration-color`          |
 | `--mod-illustrated-message-pointer-events`              |
 | `--mod-illustrated-message-title-color`                 |
 | `--mod-illustrated-message-title-font-family`           |
