@@ -1,4 +1,4 @@
-import { html } from "lit-html";
+import { html } from "lit";
 import { useArgs } from "@storybook/client-api";
 
 import { Template as ActionButton } from "@spectrum-css/actionbutton/stories/template.js";

@@ -1,6 +1,6 @@
-import { html } from "lit-html";
-import { classMap } from "lit-html/directives/class-map.js";
-import { repeat } from "lit-html/directives/repeat.js";
+import { html } from "lit";
+import { classMap } from "lit/directives/class-map.js";
+import { repeat } from "lit/directives/repeat.js";
 
 import { Template as Icon } from "@spectrum-css/icon/stories/template.js";
 import { Template as Thumbnail } from "@spectrum-css/thumbnail/stories/template.js";
