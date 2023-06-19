@@ -1,5 +1,5 @@
 // Import the component markup template
-import { html } from "lit-html";
+import { html } from "lit";
 import { Template } from "./template";
 
 export default {
