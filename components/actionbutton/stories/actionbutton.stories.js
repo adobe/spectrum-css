@@ -1,4 +1,5 @@
 // Import the component markup template
+import { userEvent, waitFor, within } from '@storybook/testing-library';
 import { Template } from "./template";
 
 import { default as IconStories } from "@spectrum-css/icon/stories/icon.stories.js";
@@ -120,3 +121,37 @@ export default {
 
 export const Default = Template.bind({});
 Default.args = {};
+
+export const WithHoverState = Template.bind({
+  play: async ({ canvasElement }) => {
+    const canvas = within(canvasElement);
+    const actionBtn = canvas.getByRole('button');
+    await userEvent.click(actionBtn);
+    await waitFor(async () => {
+      await userEvent.hover(canvas.getByLabelText('Edit'));
+    });
+  },
+});
+
+WithHoverState.args = {
+  label: "Edit",
+  icon: false,
+  iconName: '',
+}
+
+export const WithFocusState = Template.bind({
+  play: async ({ canvasElement }) => {
+    const canvas = within(canvasElement);
+    const actionBtn = canvas.getByRole('button');
+    await userEvent.click(actionBtn);
+    await waitFor(async () => {
+      await userEvent.focus(canvas.getByLabelText('Edit'));
+    });
+  },
+});
+
+WithFocusState.args = {
+  label: "Edit",
+  icon: false,
+  iconName: '',
+}
