@@ -58,6 +58,7 @@ export const Template = ({
 			role=${ifDefined(role)}
 			?disabled=${isDisabled}
 			@click=${onclick}
+      tabindex="0"
 		>
 			${when(hasPopup, () =>
 				Icon({

@@ -147,6 +147,7 @@ governing permissions and limitations under the License.
   border-color: var(--highcontrast-actionbutton-border-color-default, var(--mod-actionbutton-border-color-default, var(--spectrum-actionbutton-border-color-default)));
   color: var(--highcontrast-actionbutton-content-color-default, var(--mod-actionbutton-content-color-default, var(--spectrum-actionbutton-content-color-default)));
 
+  &.sp-hover,
   &:hover {
     background-color: var(--highcontrast-actionbutton-background-color-hover, var(--mod-actionbutton-background-color-hover, var(--spectrum-actionbutton-background-color-hover)));
     border-color: var(--highcontrast-actionbutton-border-color-hover, var(--mod-actionbutton-border-color-hover, var(--spectrum-actionbutton-border-color-hover)));

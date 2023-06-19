@@ -1,4 +1,7 @@
 // Import the component markup template
+import { html } from "lit";
+import { userEvent, waitFor, within } from '@storybook/testing-library';
+import { expect } from '@storybook/jest';
 import { Template } from "./template";
 
 import { default as IconStories } from "@spectrum-css/icon/stories/icon.stories.js";
@@ -97,6 +100,15 @@ export default {
 			options: ["white", "black"],
 			control: "select",
 		},
+    role: {
+      name: "Role",
+      type: { name: "string" },
+      table: {
+        type: { summary: "string" },
+        category: "Component",
+      },
+      control: "text"
+    },
 	},
 	args: {
 		rootClass: "spectrum-ActionButton",
@@ -105,6 +117,7 @@ export default {
 		isQuiet: false,
 		isEmphasized: false,
 		hasPopup: false,
+    role: "button",
 	},
 	parameters: {
 		actions: {
@@ -120,3 +133,38 @@ export default {
 
 export const Default = Template.bind({});
 Default.args = {};
+
+export const WithHoverState = Template.bind({});
+
+WithHoverState.play = async ({ canvasElement }) => {
+  const canvas = within(canvasElement);
+  const actionBtn = canvas.getByRole('button');
+  await waitFor(async () => {
+    actionBtn.classList.add('sp-hover');
+  });
+};
+
+WithHoverState.args = {
+  label: "Edit",
+  icon: false,
+  iconName: '',
+}
+
+export const WithFocusState = Template.bind({});
+
+WithFocusState.play = async ({ canvasElement }) => {
+  const canvas = within(canvasElement);
+  await waitFor(async () => {
+    const actionBtn = await canvas.findByRole('button');
+    actionBtn.classList.add('is-focused', 'focus-ring');
+    actionBtn.focus();
+  });
+};
+
+WithFocusState.args = {
+  label: "Edit",
+  icon: false,
+  iconName: '',
+}
+
+WithFocusState.decorators = [(Story) => html`<div style="padding: 1em;">${Story().outerHTML || Story()}</div>`];

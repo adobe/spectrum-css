@@ -29,6 +29,7 @@ module.exports = {
 		},
 		// https://github.com/storybookjs/storybook/tree/next/code/addons/a11y
 		"@storybook/addon-a11y",
+    "@storybook/addon-interactions",
 		// https://www.npmjs.com/package/@whitespace/storybook-addon-html
 		"@whitespace/storybook-addon-html",
 		// https://storybook.js.org/addons/@etchteam/storybook-addon-status
