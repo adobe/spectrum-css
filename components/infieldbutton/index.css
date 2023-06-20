@@ -53,6 +53,10 @@ governing permissions and limitations under the License.
 			--mod-infield-button-background-color-hover-disabled,
 			var(--spectrum-disabled-background-color)
 		);
+		--mod-infield-button-background-color-hover: var(
+			--spectrum-infield-button-background-color-hover-disabled,
+			var(--spectrum-disabled-background-color)
+		);
 		--mod-infield-button-background-color-down: var(
 			--mod-infield-button-background-color-down-disabled,
 			var(--spectrum-disabled-background-color)
