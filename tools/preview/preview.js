@@ -76,6 +76,20 @@ export const globalTypes = {
 			dynamicTitle: true,
 		},
 	},
+  themesDisplay: {
+    title: "Themes Display",
+    description: "Show all themes at once",
+    showName: true,
+    defaultValue: 'default',
+    toolbar: {
+      items: [
+        {value: 'default', title: 'default', right: 'default'},
+        {value: 'stacked', title: 'stacked', right: 'stacked'},
+        {value: 'side-by-side', title: 'side-by-side', right: 'side-by-side'}
+      ],
+      dynamicTitle: true,
+    }
+  },
 };
 
 // Global properties added to each component;
