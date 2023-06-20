@@ -4,7 +4,7 @@ SpectrumSiteSlug: https://spectrum.adobe.com/page/picker/
 sections:
   - name: Migration Guide
     description: |
-      ### Picker Button uses the [Quiet](pickerbutton.html#quiet) variant instead of loudness levels.
+      ### Picker button uses the [Quiet](pickerbutton.html#quiet) variant instead of loudness levels.
 
       The Loudness level classes, `.spectrum-PickerButton--low`, `.spectrum-PickerButton--medium`, and `.spectrum-PickerButton--high`, have been removed.
 
@@ -98,7 +98,7 @@ examples:
   - id: pickerbutton-icononly
     name: UI icon only
     markup: |
-      <button class="spectrum-PickerButton spectrum-PickerButton--sizeM spectrum-PickerButton--uiicononly spectrum-PickerButton--right" aria-haspopup="listbox">
+      <button class="spectrum-PickerButton spectrum-PickerButton--sizeM spectrum-PickerButton--uiicononly spectrum-PickerButton--right" aria-haspopup="listbox" aria-label="Open">
         <div class="spectrum-PickerButton-fill">
           <svg class="spectrum-Icon spectrum-UIIcon-ChevronDown100 spectrum-PickerButton-icon" focusable="false" aria-hidden="true">
             <use xlink:href="#spectrum-css-icon-Chevron100" />
@@ -109,9 +109,9 @@ examples:
   - id: pickerbutton-icononly
     name: Workflow icon only
     markup: |
-      <button class="spectrum-PickerButton spectrum-PickerButton--sizeM spectrum-PickerButton--icononly spectrum-PickerButton--right" aria-haspopup="listbox">
+      <button class="spectrum-PickerButton spectrum-PickerButton--sizeM spectrum-PickerButton--icononly spectrum-PickerButton--right" aria-haspopup="listbox" aria-label="Add">
         <div class="spectrum-PickerButton-fill">
-          <svg xmlns="http://www.w3.org/2000/svg" class="spectrum-Icon spectrum-Icon--sizeM spectrum-PickerButton-icon" focusable="false" aria-hidden="true" aria-label="Add">
+          <svg xmlns="http://www.w3.org/2000/svg" class="spectrum-Icon spectrum-Icon--sizeM spectrum-PickerButton-icon" focusable="false" aria-hidden="true">
             <use href="#spectrum-icon-18-Add"></use>
           </svg>
         </div>
@@ -145,18 +145,6 @@ examples:
     name: Disabled
     markup: |
       <button class="spectrum-PickerButton spectrum-PickerButton--sizeM spectrum-PickerButton--textuiicon spectrum-PickerButton--right" disabled aria-haspopup="listbox">
-        <div class="spectrum-PickerButton-fill">
-          <span class="spectrum-PickerButton-label is-placeholder">All</span>
-          <svg class="spectrum-Icon spectrum-UIIcon-ChevronDown100 spectrum-PickerButton-icon" focusable="false" aria-hidden="true">
-            <use xlink:href="#spectrum-css-icon-Chevron100" />
-          </svg>
-        </div>
-      </button>
-
-  - id: pickerbutton-invalid
-    name: Invalid
-    markup: |
-      <button class="spectrum-PickerButton spectrum-PickerButton--sizeM spectrum-PickerButton--textuiicon spectrum-PickerButton--right is-invalid" aria-haspopup="listbox">
         <div class="spectrum-PickerButton-fill">
           <span class="spectrum-PickerButton-label is-placeholder">All</span>
           <svg class="spectrum-Icon spectrum-UIIcon-ChevronDown100 spectrum-PickerButton-icon" focusable="false" aria-hidden="true">

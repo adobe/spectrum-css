@@ -59,15 +59,6 @@ export default {
 			},
 			control: "boolean",
 		},
-		isInvalid: {
-			name: "Invalid input",
-			type: { name: "boolean" },
-			table: {
-				type: { summary: "boolean" },
-				category: "State",
-			},
-			control: "boolean",
-		},
 		isQuiet: {
 			name: "Quiet styling",
 			type: { name: "boolean" },
@@ -88,15 +79,6 @@ export default {
 		},
 		isFocused: {
 			name: "Focused",
-			type: { name: "boolean" },
-			table: {
-				type: { summary: "boolean" },
-				category: "State",
-			},
-			control: "boolean",
-		},
-		isKeyboardFocused: {
-			name: "Keyboard Focused",
 			type: { name: "boolean" },
 			table: {
 				type: { summary: "boolean" },
