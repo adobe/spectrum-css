@@ -21,20 +21,6 @@ governing permissions and limitations under the License.
     --spectrum-picker-button-border-radius: var(--spectrum-corner-radius-75);
     --spectrum-picker-button-border-radius-rounded-sided: var(--spectrum-corner-radius-200);
     --spectrum-picker-button-border-radius-sided: var(--spectrum-corner-radius-75);
-    --spectrum-picker-button-border-width: 0;
-
-    --spectrum-picker-button-padding: var(--spectrum-in-field-button-edge-to-fill);
-    --spectrum-picker-button-fill-padding: calc(var(--spectrum-field-edge-to-disclosure-icon-100) - var(--spectrum-picker-button-padding));
-
-    &.spectrum-PickerButton--sizeS {
-      --spectrum-picker-button-fill-padding: calc(var(--spectrum-field-edge-to-disclosure-icon-75) - var(--spectrum-picker-button-padding));
-    }
-    &.spectrum-PickerButton--sizeL {
-      --spectrum-picker-button-fill-padding: calc(var(--spectrum-field-edge-to-disclosure-icon-200) - var(--spectrum-picker-button-padding));
-    }
-    &.spectrum-PickerButton--sizeXL {
-      --spectrum-picker-button-fill-padding: calc(var(--spectrum-field-edge-to-disclosure-icon-300) - var(--spectrum-picker-button-padding));
-    }
-
+    --spectrum-picker-button-border-width: 0px;
   }
 }
