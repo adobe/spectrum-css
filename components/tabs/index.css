@@ -560,6 +560,7 @@ governing permissions and limitations under the License.
 		--highcontrast-tabs-color-hover: ButtonText;
 		--highcontrast-tabs-color-selected: HighlightText;
 		--highcontrast-tabs-color-key-focus: ButtonText;
+		--highcontrast-tabs-color-disabled: GrayText;
 
 		&--compact {
 			--highcontrast-tabs-selection-indicator-color: transparent;

@@ -129,6 +129,25 @@ examples:
         </div>
         <div class="spectrum-Tabs-selectionIndicator" style="width: 55px; left: 0px;"></div>
       </div>
+  - id: tabs-disabled
+    name: Disabled
+    status: Verified
+    markup: |
+      <div class="spectrum-Tabs spectrum-Tabs--sizeM spectrum-Tabs--horizontal spectrum-Tabs--quiet">
+        <div class="spectrum-Tabs-item is-selected" tabindex="0">
+          <span class="spectrum-Tabs-itemLabel">Tab 1</span>
+        </div>
+        <div class="spectrum-Tabs-item is-disabled">
+          <span class="spectrum-Tabs-itemLabel">Tab 2</span>
+        </div>
+        <div class="spectrum-Tabs-item" tabindex="0">
+          <span class="spectrum-Tabs-itemLabel">Tab 3</span>
+        </div>
+        <div class="spectrum-Tabs-item" tabindex="0">
+          <span class="spectrum-Tabs-itemLabel">Tab 4</span>
+        </div>
+        <div class="spectrum-Tabs-selectionIndicator" style="width: 28px; left: 0px;"></div>
+      </div>
   - id: tabs-quiet
     name: Quiet
     status: Verified
