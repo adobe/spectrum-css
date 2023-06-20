@@ -17,4 +17,3 @@
 | `--mod-color-slider-vertical-height`              |
 | `--mod-color-slider-vertical-minimum-height`      |
 | `--mod-colorhandle-hitarea-border-radius`         |
-| `--mod-spectrum-color-slider-checkerboard-size`   |

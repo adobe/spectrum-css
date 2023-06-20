@@ -125,7 +125,7 @@
 		)
 		calc(
 			var(
-					--mod-spectrum-color-slider-checkerboard-size,
+					--mod-color-slider-checkerboard-size,
 					var(--spectrum-color-slider-checkerboard-size)
 				) * 2
 		);
