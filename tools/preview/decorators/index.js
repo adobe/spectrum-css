@@ -1,5 +1,5 @@
 import { useEffect, makeDecorator } from "@storybook/preview-api";
-import { html } from "lit-html";
+import { html } from "lit";
 
 export { withContextWrapper } from "./contextsWrapper.js";
 

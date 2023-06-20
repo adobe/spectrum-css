@@ -1,4 +1,4 @@
-import { html } from "lit-html";
+import { html } from "lit";
 
 // Import the component markup template
 import { Template } from "./template";
