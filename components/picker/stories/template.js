@@ -1,6 +1,6 @@
-import { html } from "lit-html";
+import { html } from "lit";
 import { useArgs } from "@storybook/client-api";
-import { classMap } from "lit-html/directives/class-map.js";
+import { classMap } from "lit/directives/class-map.js";
 
 import { Template as FieldLabel } from "@spectrum-css/fieldlabel/stories/template.js";
 import { Template as Icon } from "@spectrum-css/icon/stories/template.js";

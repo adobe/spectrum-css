@@ -1,6 +1,6 @@
 import { Template } from "./template";
 
-import { html } from "lit-html";
+import { html } from "lit";
 
 export default {
 	title: "Components/Typography",

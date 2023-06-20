@@ -29,9 +29,9 @@ Storybook leverages webpack for bundling and we have updated it with the followi
 - CSS for other components can be loaded in a story using the package name (rather than the directory path), i.e. `@spectrum-css/toast` vs. `../toast/index.css`. The local version of the package is used regardless but the webpack settings will resolve the pathing for you.
 
   ```js
-  import { html } from "lit-html";
-  import { classMap } from "lit-html/directives/class-map.js";
-  import { ifDefined } from "lit-html/directives/if-defined.js";
+  import { html } from "lit";
+  import { classMap } from "lit/directives/class-map.js";
+  import { ifDefined } from "lit/directives/if-defined.js";
   ```
 
 - Images can be loaded automatically from the `assets/images` directory at the root of the project.
@@ -57,7 +57,7 @@ Storybook leverages webpack for bundling and we have updated it with the followi
   }
   ```
 
-We are leaning on Storybook's `@storybook/web-components-webpack5` framework configuration as our stories rely on lit-html for dynamic attribute assignment.
+We are leaning on Storybook's `@storybook/web-components-webpack5` framework configuration as our stories rely on lit for dynamic attribute assignment.
 
 ## Add-ons
 
@@ -230,16 +230,16 @@ The rest of the variables provided in the Template function's input object will 
 
 - [More on component templates](https://storybook.js.org/docs/web-components/writing-stories/introduction#using-args)
 
-To help in making a dynamic mark-up template, you can leverage any of the [directives](https://lit.dev/docs/templates/directives/) available in the `lit-html` package. Our most commonly used ones are: `html`, `classMap`, `ifDefined`.
+To help in making a dynamic mark-up template, you can leverage any of the [directives](https://lit.dev/docs/templates/directives/) available in the `lit` package. Our most commonly used ones are: `html`, `classMap`, `ifDefined`.
 
 All return values for Template functions should be outputting TemplateResults. Said another way, all mark-up needs to be wrapped in the html template literal.
 
 ### Full example
 
 ```js
-import { html } from "lit-html";
-import { classMap } from "lit-html/directives/class-map.js";
-import { ifDefined } from "lit-html/directives/if-defined.js";
+import { html } from "lit";
+import { classMap } from "lit/directives/class-map.js";
+import { ifDefined } from "lit/directives/if-defined.js";
 
 import { Template as Icon } from "@spectrum-css/icon/stories/template.js";
 import { Template as Avatar } from "@spectrum-css/avatar/stories/template.js";
@@ -428,7 +428,7 @@ export const Basic = {
 `*` Docs is now added to every component on the sidebar with the below code in Storybook 7
 ```js
   docs: {
-    autodocs: true, 
+    autodocs: true,
     defaultName: 'Docs',
   },
 ```
