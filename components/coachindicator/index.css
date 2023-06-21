@@ -92,3 +92,9 @@ governing permissions and limitations under the License.
     }
   }
 }
+
+@media (prefers-reduced-motion: reduce) {
+  .spectrum-CoachMarkIndicator-ring {
+    animation: none;
+  }
+}
