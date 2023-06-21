@@ -70,6 +70,7 @@
 | `--mod-table-section-header-font-style`                          |
 | `--mod-table-section-header-font-weight`                         |
 | `--mod-table-section-header-line-height`                         |
+| `--mod-table-section-header-min-height`                          |
 | `--mod-table-section-header-text-color`                          |
 | `--mod-table-selected-row-background-color`                      |
 | `--mod-table-selected-row-background-color-focus`                |
@@ -85,6 +86,10 @@
 | `--mod-table-summary-row-line-height`                            |
 | `--mod-table-summary-row-text-color`                             |
 | `--mod-table-thumbnail-block-spacing`                            |
+| `--mod-table-thumbnail-block-spacing-compact`                    |
+| `--mod-table-thumbnail-block-spacing-spacious`                   |
 | `--mod-table-thumbnail-size`                                     |
+| `--mod-table-thumbnail-size-compact`                             |
+| `--mod-table-thumbnail-size-spacious`                            |
 | `--mod-table-thumbnail-to-text`                                  |
 | `--mod-table-transition-duration`                                |
