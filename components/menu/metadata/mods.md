@@ -56,9 +56,11 @@
 | `--mod-menu-item-value-color-down`                                  |
 | `--mod-menu-item-value-color-focus`                                 |
 | `--mod-menu-item-value-color-hover`                                 |
+| `--mod-menu-section-header-bottom-edge-to-text`                     |
 | `--mod-menu-section-header-color`                                   |
 | `--mod-menu-section-header-font-size`                               |
 | `--mod-menu-section-header-font-weight`                             |
 | `--mod-menu-section-header-line-height`                             |
 | `--mod-menu-section-header-line-height-cjk`                         |
 | `--mod-menu-section-header-min-width`                               |
+| `--mod-menu-section-header-top-edge-to-text`                        |
