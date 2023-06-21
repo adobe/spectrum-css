@@ -69,13 +69,6 @@ governing permissions and limitations under the License.
 	--spectrum-tabs-animation-duration: var(--spectrum-animation-duration-100);
 	--spectrum-tabs-animation-ease: var(--spectrum-animation-ease-in-out);
 
-	&.spectrum-Tabs--quiet:not(.spectrum-Tabs--vertical) {
-		--mod-tabs-start-to-edge: var(
-			--mod-tabs-start-to-edge-quiet,
-			var(--spectrum-tab-item-start-to-edge-quiet)
-		);
-	}
-
 	&.spectrum-Tabs--sizeS {
 		--spectrum-tabs-item-height: var(--spectrum-tab-item-height-small);
 		--spectrum-tabs-item-horizontal-spacing: var(
@@ -484,10 +477,7 @@ governing permissions and limitations under the License.
 .spectrum-Tabs--quiet {
 	display: inline-flex;
 	background: none;
-	padding-inline-start: var(
-		--mod-tabs-start-to-edge,
-		var(--spectrum-tabs-start-to-edge)
-	);
+	border-color: transparent;
 
 	.spectrum-Tabs-selectionIndicator {
 		padding-inline-start: var(
@@ -510,7 +500,11 @@ governing permissions and limitations under the License.
   display: inline-flex;
   flex-direction: column;
   padding: 0;
-	border-bottom: none;
+	border-bottom-color: transparent;
+
+	&.spectrum-Tabs--quiet {
+		border-color: transparent;
+	}
 
 	.spectrum-Tabs-item {
 		line-height: var(--mod-tabs-item-height, var(--spectrum-tabs-item-height));
@@ -562,10 +556,6 @@ governing permissions and limitations under the License.
 		--highcontrast-tabs-color-selected: HighlightText;
 		--highcontrast-tabs-color-key-focus: ButtonText;
 		--highcontrast-tabs-color-disabled: GrayText;
-
-		&--compact {
-			--highcontrast-tabs-selection-indicator-color: transparent;
-		}
 
 		/* Prevents black box behind text on Highlight background */
 		forced-color-adjust: none;
