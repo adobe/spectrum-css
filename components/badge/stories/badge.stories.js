@@ -99,15 +99,3 @@ export default {
 
 export const Default = Template.bind({});
 Default.args = {};
-
-export const DarkDefault = Template.bind({});
-DarkDefault.args = {
-  ...Default.args,
-  color: 'dark'
-};
-
-export const DarkestDefault = Template.bind({});
-DarkestDefault.args = {
-  ...Default.args,
-  color: 'darkest'
-};
