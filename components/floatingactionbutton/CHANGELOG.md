@@ -3,6 +3,13 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+<a name="1.0.11"></a>
+##1.0.11
+🗓
+2023-06-21 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/floatingactionbutton@1.0.10...@spectrum-css/floatingactionbutton@1.0.11)
+
+**Note:** Version bump only for package @spectrum-css/floatingactionbutton
+
 <a name="1.0.10"></a>
 ##1.0.10
 🗓

@@ -3,6 +3,15 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+<a name="4.0.26"></a>
+##4.0.26
+🗓
+2023-06-21 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/swatch@4.0.25...@spectrum-css/swatch@4.0.26)
+
+### 🐛 Bug fixes
+
+- **swatch:**remove override in WHCM for disabled swatch ([#1955](https://github.com/adobe/spectrum-css/issues/1955))([9492040](https://github.com/adobe/spectrum-css/commit/9492040))
+
 <a name="4.0.25"></a>
 ##4.0.25
 🗓
