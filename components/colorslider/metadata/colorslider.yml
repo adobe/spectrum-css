@@ -187,7 +187,7 @@ examples:
           <div class="spectrum-ColorSlider-gradient" role="presentation" style="background: linear-gradient(to right, rgba(255, 0, 0, 0.5) 0%, rgba(255, 255, 0, 0.5) 17%, rgba(0, 255, 0, 0.5) 33%, rgba(0, 255, 255, 0.5) 50%, rgba(0, 0, 255, 0.5) 67%, rgba(255, 0, 255, 0.5) 83%, rgba(255, 0, 0, 0.5) 100%);"></div>
         </div>
 
-        <div class="spectrum-ColorHandle" style="--spectrum-picked-color: rgba(255, 0, 0, 0.5); position: absolute; inset-block: 75%; inset-inline: 50%">
+        <div class="spectrum-ColorHandle spectrum-ColorSlider-handle" style="--spectrum-picked-color: rgba(143, 254, 254, 0.5); left: 50%">
           <div class="spectrum-ColorHandle-inner"></div>
           <svg class="spectrum-ColorLoupe is-open">
             <defs>
