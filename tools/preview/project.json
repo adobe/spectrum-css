@@ -9,13 +9,7 @@
 		],
 		"output": ["{workspaceRoot}/storybook-static"]
 	},
-	"implicitDependencies": [
-		"@spectrum-css/*",
-		"!@spectrum-css/generator",
-		"!@spectrum-css/component-builder",
-		"!@spectrum-css/component-builder-simple",
-		"!@spectrum-css/bundle-builder"
-	],
+	"implicitDependencies": ["@spectrum-css/*", "!@spectrum-css/generator"],
 	"targets": {
 		"clean": {
 			"inputs": ["output"],

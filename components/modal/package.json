@@ -13,20 +13,21 @@
   "bugs": {
     "url": "https://github.com/adobe/spectrum-css/issues"
   },
-  "main": "dist/index-vars.css",
+  "main": "dist/index.css",
   "scripts": {
-    "build": "gulp",
+    "build": "node ../../tasks/css.mjs",
     "clean": "rimraf dist",
     "dev": "run-s build watch",
+    "test": "nx run @spectrum-css/modal:test:scope -- @spectrum-css/modal",
     "watch": "nx watch --projects @spectrum-css/modal -- nx run @spectrum-css/modal:build"
   },
   "peerDependencies": {
     "@spectrum-css/vars": ">=9"
   },
   "devDependencies": {
-    "@spectrum-css/component-builder": "^4.0.12",
+    "@spectrum-css/expressvars": "^3.0.8",
+    "@spectrum-css/tokens": "^10.2.0",
     "@spectrum-css/vars": "^9.0.8",
-    "gulp": "^4.0.0",
     "nx": "^16.3.2",
     "rimraf": "^5.0.1"
   },
@@ -35,7 +36,8 @@
   },
   "nx": {
     "tags": [
-      "components"
+      "components",
+      "legacy"
     ]
   }
 }

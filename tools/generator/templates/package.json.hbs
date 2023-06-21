@@ -16,7 +16,7 @@
   "main": "dist/index-vars.css",
   "scripts": {
     "clean": "rimraf dist",
-    "build": "gulp",
+    "build": "node ../../tasks/css.mjs",
     "watch": "nx watch --projects @spectrum-css/{{ folderName }} -- nx run @spectrum-css/{{ folderName }}:build",
     "test": "nx test:scope storybook {{ folderName }}"
   },
@@ -24,7 +24,6 @@
     "{{ tokens.name }}": ">={{ parse tokens.version '.' 0 1 }}"
   },
   "devDependencies": {
-    "{{ builder.name }}": "^{{ builder.version }}",
     "{{ tokens.name }}": "^{{ tokens.version }}",
     "{{ preview.name }}": "^{{ preview.version }}",
     "nx": "{{ pkg.devDependencies.nx }}",

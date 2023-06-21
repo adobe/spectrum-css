@@ -17,8 +17,6 @@ The following asset will only be seen in legacy components that have not yet mig
 
 - `skin.css` - The theme-specific styles for the component: colors, box-shadows, etc (these change between color stops)
 
-See [documentation generation](/tools/bundle-builder/docs/README.md) documentation for more information on the properties available within the `.yml` files.
-
 ## Editing an existing component
 
 1. Run `gulp dev` in the root of the project to begin developing.
@@ -28,7 +26,7 @@ See [documentation generation](/tools/bundle-builder/docs/README.md) documentati
 ## Adding a new component
 
 1. Generate a new component using the `yarn new component` command. The generator will prompt you to answer questions about your component.
-2. Edit the `dependencies` within the `package.json` file to use only the dependencies your component needs. All components rely on `@spectrum-css/tokens` and `@spectrum-css/component-builder-simple`, and most rely on `@spectrum-css/icon`. **Note: If you are working on a legacy component, it will dependend on `@spectrum-css/vars` and `@spectrum-css/component-builder` instead. This is expected.**
+2. Edit the `dependencies` within the `package.json` file to use only the dependencies your component needs. All components rely on `@spectrum-css/tokens`, and most rely on `@spectrum-css/icon`. **Note: If you are working on a legacy component, it will dependend on `@spectrum-css/vars` instead. This is expected.**
 3. Once your folder has been generated, you can run `yarn dev` in the root of the project to begin developing.
 4. The `index.css` file is where most of your styles will be added.
 5. Inside the `stories` directory you will find a `template.js` and an `*.stories.js` file.
@@ -57,23 +55,22 @@ For example, `actionbar` gets its tokens from `vars`, and requires `button`, `ch
 
 ```json
 {
-	"name": "@spectrum-css/actionbar",
-	"peerDependencies": {
-		"@spectrum-css/button": "^2.0.0",
-		"@spectrum-css/checkbox": "^2.0.0",
-		"@spectrum-css/icon": "^2.0.0",
-		"@spectrum-css/popover": "^2.0.0",
-		"@spectrum-css/vars": "^3.0.0-beta.0"
-	},
-	"devDependencies": {
-		"@spectrum-css/button": "^2.0.0",
-		"@spectrum-css/checkbox": "^2.0.0",
-		"@spectrum-css/component-builder": "^1.0.0",
-		"@spectrum-css/icon": "^2.0.0",
-		"@spectrum-css/popover": "^2.0.0",
-		"@spectrum-css/table": "^2.0.0",
-		"@spectrum-css/vars": "^3.0.0-beta.0"
-	}
+ "name": "@spectrum-css/actionbar",
+ "peerDependencies": {
+  "@spectrum-css/button": "^2.0.0",
+  "@spectrum-css/checkbox": "^2.0.0",
+  "@spectrum-css/icon": "^2.0.0",
+  "@spectrum-css/popover": "^2.0.0",
+  "@spectrum-css/vars": "^3.0.0-beta.0"
+ },
+ "devDependencies": {
+  "@spectrum-css/button": "^2.0.0",
+  "@spectrum-css/checkbox": "^2.0.0",
+  "@spectrum-css/icon": "^2.0.0",
+  "@spectrum-css/popover": "^2.0.0",
+  "@spectrum-css/table": "^2.0.0",
+  "@spectrum-css/vars": "^3.0.0-beta.0"
+ }
 }
 ```
 

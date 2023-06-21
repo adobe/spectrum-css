@@ -38,8 +38,8 @@ module.exports = {
 		MIGRATED_PACKAGES: componentPkgs.filter((dir) => {
 			const pkg = require(resolve(componentsPath, dir, "package.json"));
 			if (
-				pkg.devDependencies &&
-				pkg.devDependencies["@spectrum-css/component-builder-simple"]
+				pkg.peerDependencies &&
+				pkg.peerDependencies["@spectrum-css/tokens"]
 			) {
 				return true;
 			}

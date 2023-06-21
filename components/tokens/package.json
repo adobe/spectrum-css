@@ -15,9 +15,9 @@
   },
   "main": "dist/index.css",
   "scripts": {
-    "prebuild": "rimraf dist/*",
     "build": "run-s convert:tokens css:prepare format:results clean:empty",
     "build:tokens": "style-dictionary build --config style-dictionary.config.js && postcss --replace dist/css/*.css",
+    "clean": "rimraf dist/*",
     "clean:empty": "find dist -type f -empty -delete",
     "concat:dist": "concat-cli -f dist/css/*.css dist/css/**/*.css -o dist/index.css",
     "convert:tokens": "run-p build:tokens copy:*",

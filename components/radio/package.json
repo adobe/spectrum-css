@@ -13,11 +13,12 @@
   "bugs": {
     "url": "https://github.com/adobe/spectrum-css/issues"
   },
-  "main": "dist/index-vars.css",
+  "main": "dist/index.css",
   "scripts": {
-    "build": "gulp",
+    "build": "node ../../tasks/css.mjs",
     "clean": "rimraf dist",
     "dev": "run-s build watch",
+    "test": "nx run @spectrum-css/radio:test:scope -- @spectrum-css/radio",
     "watch": "nx watch --projects @spectrum-css/radio -- nx run @spectrum-css/radio:build"
   },
   "peerDependencies": {
@@ -25,10 +26,8 @@
     "@spectrum-css/tokens": ">=10"
   },
   "devDependencies": {
-    "@spectrum-css/component-builder-simple": "^2.0.15",
     "@spectrum-css/icon": "^3.0.49",
     "@spectrum-css/tokens": "^10.2.0",
-    "gulp": "^4.0.0",
     "nx": "^16.3.2",
     "rimraf": "^5.0.1"
   },

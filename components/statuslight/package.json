@@ -13,20 +13,19 @@
   "bugs": {
     "url": "https://github.com/adobe/spectrum-css/issues"
   },
-  "main": "dist/index-vars.css",
+  "main": "dist/index.css",
   "scripts": {
-    "build": "gulp",
+    "build": "node ../../tasks/css.mjs",
     "clean": "rimraf dist",
     "dev": "run-s build watch",
+    "test": "nx run @spectrum-css/statuslight:test:scope -- @spectrum-css/statuslight",
     "watch": "nx watch --projects @spectrum-css/statuslight -- nx run @spectrum-css/statuslight:build"
   },
   "peerDependencies": {
     "@spectrum-css/tokens": ">=10"
   },
   "devDependencies": {
-    "@spectrum-css/component-builder": "^4.0.12",
     "@spectrum-css/tokens": "^10.2.0",
-    "gulp": "^4.0.0",
     "nx": "^16.3.2",
     "rimraf": "^5.0.1"
   },

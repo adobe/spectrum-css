@@ -14,11 +14,12 @@
   "bugs": {
     "url": "https://github.com/adobe/spectrum-css/issues"
   },
-  "main": "dist/index-vars.css",
+  "main": "dist/index.css",
   "scripts": {
-    "build": "gulp",
+    "build": "node ../../tasks/css.mjs",
     "clean": "rimraf dist",
     "dev": "run-s build watch",
+    "test": "nx run @spectrum-css/contextualhelp:test:scope -- @spectrum-css/contextualhelp",
     "watch": "nx watch --projects @spectrum-css/contextualhelp -- nx run @spectrum-css/contextualhelp:build"
   },
   "peerDependencies": {
@@ -28,10 +29,8 @@
   },
   "devDependencies": {
     "@spectrum-css/actionbutton": "^4.0.5",
-    "@spectrum-css/component-builder-simple": "^2.0.15",
     "@spectrum-css/popover": "^6.0.55",
     "@spectrum-css/tokens": "^10.2.0",
-    "gulp": "^4.0.0",
     "nx": "^16.3.2",
     "rimraf": "^5.0.1"
   },

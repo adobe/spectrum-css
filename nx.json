@@ -9,8 +9,9 @@
 		}
 	},
 	"targetDefaults": {
+		"implicitDependencies": ["tag:tokens"],
 		"build": {
-			"dependsOn": ["^build"],
+			"dependsOn": ["clean", "^build"],
 			"inputs": [
 				"{workspaceRoot}/skin.css",
 				"{workspaceRoot}/index.css",

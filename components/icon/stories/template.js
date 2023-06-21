@@ -5,7 +5,7 @@ import { classMap } from "lit/directives/class-map.js";
 
 import { fetchIconSVG, workflowIcons, uiIcons } from "./utilities.js";
 
-import "@spectrum-css/icon/dist/index-vars.css";
+import "@spectrum-css/icon";
 
 /**
  * @typedef { keyof import("./icon.stories.js").default.args } IconArgs

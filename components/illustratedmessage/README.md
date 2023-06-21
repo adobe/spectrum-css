@@ -1,6 +1,6 @@
 # @spectrum-css/illustratedmessage
 
-> The Spectrum CSS illustratedmessage component
+> The Spectrum CSS illustrated message component
 
 This package is part of the [Spectrum CSS project](https://github.com/adobe/spectrum-css).
 

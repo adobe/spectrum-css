@@ -626,16 +626,12 @@ governing permissions and limitations under the License.
 		> .spectrum-Accordion-itemHeading
 			> .spectrum-Accordion-itemIconContainer
 			> .spectrum-Accordion-itemIndicator {
-			/* stylelint-disable declaration-property-value-no-unknown */
 			transform: logical rotate(90deg);
-			/* stylelint-enable declaration-property-value-no-unknown */
 		}
 
 		> .spectrum-Accordion-itemIconContainer
 			> .spectrum-Accordion-itemIndicator {
-			/* stylelint-disable declaration-property-value-no-unknown */
 			transform: logical rotate(90deg);
-			/* stylelint-enable declaration-property-value-no-unknown */
 		}
 
 		> .spectrum-Accordion-itemContent {

@@ -15,24 +15,15 @@
   },
   "main": "dist/spectrum-metadata.json",
   "scripts": {
-    "build": "gulp build",
+    "build": "node ../../tasks/buildVars.mjs",
+    "postbuild": "cp json/*.json dist/",
     "clean": "rimraf dist",
-    "copy:metadata": "cp json/spectrum-metadata.json dist/",
-    "dna:clean": "rimraf css/* js/*",
-    "dna:update": "yarn dna:clean && gulp update && yarn build",
     "watch": "nx watch --projects @spectrum-css/vars -- nx run @spectrum-css/vars:build"
   },
   "devDependencies": {
     "@adobe/spectrum-tokens-deprecated": "^11.8.0",
-    "gulp": "^4.0.0",
-    "gulp-concat": "^2.6.1",
-    "gulp-insert": "^0.5.0",
-    "gulp-replace": "^1.0.0",
     "nx": "^16.3.2",
-    "postcss": "^7.0.36",
-    "replace-ext": "^1.0.0",
-    "rimraf": "^5.0.1",
-    "through2": "^3.0.1"
+    "rimraf": "^5.0.1"
   },
   "publishConfig": {
     "access": "public"
