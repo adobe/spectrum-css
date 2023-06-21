@@ -22,10 +22,10 @@
   resolved "https://registry.yarnpkg.com/@adobe/spectrum-tokens-deprecated/-/spectrum-tokens-deprecated-11.8.0.tgz#7edf6f7b7e3c22581e0732c8de97fa0a68ed66b9"
   integrity sha512-LW2SA/8VhW868tEcgIcugx7xdtgFG3KiUoEz+4s2nHTdmKj0h2A9pnTNplVTNAMq2uPSfp6wKKvQNNnMSIXqCg==
 
-"@adobe/spectrum-tokens@>=12.5.0-beta.0 <12.5.0":
-  version "12.5.0-beta.1"
-  resolved "https://registry.yarnpkg.com/@adobe/spectrum-tokens/-/spectrum-tokens-12.5.0-beta.1.tgz#1af754145f63dfe5326e7dbb2672aaf3a760741d"
-  integrity sha512-1vRvW2+9f0150YBL9eDXxoR3RsqouhmpaylI2ZLM/j1qR0CkhyDi4Uy8mvsEs1L2hMGypbso7Inx32vwsyvO1w==
+"@adobe/spectrum-tokens@table":
+  version "0.0.0-table-20230620222432"
+  resolved "https://registry.yarnpkg.com/@adobe/spectrum-tokens/-/spectrum-tokens-0.0.0-table-20230620222432.tgz#99bcdea6239ec8563b36b0cd971d7647f6fc7e3e"
+  integrity sha512-/XwlCS0n7ehfBqN863r/nujm3XRE1ev1WD+ORegN7bvyCjB4vZsiEMCPZwJDJsMLSRN6aKWwuKVt/dUdQ5DhSQ==
 
 "@ampproject/remapping@^2.2.0":
   version "2.2.0"
@@ -2214,6 +2214,11 @@
   version "3.1.0"
   resolved "https://registry.yarnpkg.com/@socket.io/component-emitter/-/component-emitter-3.1.0.tgz#96116f2a912e0c02817345b3c10751069920d553"
   integrity sha512-+9jVqKhRSpsc591z5vX+X5Yyw+he/HCB4iQ/RYxw35CEPaY1gnsNE43nf9n9AaYjAQrTiI/mOwKUKdUs9vf7Xg==
+
+"@spectrum-css/button@10.0.5":
+  version "10.0.5"
+  resolved "https://registry.yarnpkg.com/@spectrum-css/button/-/button-10.0.5.tgz#75a18071e31769659a77b08ffa801a097f643fe3"
+  integrity sha512-hHXYBOvLf41KdEuWcvzcxlVcXQAr7duRM49mqsZCg9/hdMkt3xqbpWYsaShn1kBAvJK95GEB0s1aEPPdoVMSzg==
 
 "@spectrum-css/thumbnail@^2.0.34":
   version "2.0.34"
