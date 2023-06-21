@@ -611,7 +611,7 @@ governing permissions and limitations under the License.
 
 /* checkmarks that have text directly next to them */
 .spectrum-Menu-checkmark--withAdjacentText {
-  margin-inline-end: var(--mod-menu-item-label-text-to-visual, var(--spectrum-menu-item-label-text-to-visual));
+  margin-inline-end: var(--mod-menu-item-text-to-control, var(--spectrum-menu-item-text-to-control));
 }
 
 /* checkmarks that have an icon directly next to them */
