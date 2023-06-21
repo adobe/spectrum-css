@@ -1,5 +1,6 @@
 import { useEffect, makeDecorator } from "@storybook/preview-api";
 import { html } from "lit";
+import { styleMap } from "lit/directives/style-map.js";
 
 export { withContextWrapper } from "./contextsWrapper.js";
 
@@ -32,6 +33,41 @@ export const withTextDirectionWrapper = makeDecorator({
 
 		return StoryFn(context);
 	},
+});
+
+export const withThemesDisplayWrapper = makeDecorator({
+  name: "withThemesDisplayWrapper",
+  parameterName: "context",
+  wrapper: (StoryFn, context) => {
+    const { globals } = context;
+    const themesDisplay = globals.themesDisplay;
+    const isDefault = themesDisplay === 'default';
+    const isStacked = themesDisplay === 'stacked';
+    const isSideBySide = themesDisplay === 'side-by-side';
+    if (isDefault) return StoryFn(context);
+
+    const classes = ['spectrum--light', 'spectrum--dark', 'spectrum--darkest'];
+
+    const styles = {
+      grid: {
+        display: 'grid',
+        gridTemplateColumns: isStacked ? '1fr' : 'repeat(auto-fit, minmax(0px, 1fr))',
+        height: isStacked ? 'auto' : '100vh',
+      },
+      gridItem: {
+        outline: '1px solid #eee',
+      },
+    };
+
+    return html`
+      <div style=${styleMap(styles.grid)}>
+        ${classes.map((class) => {
+          const whatever = 'thing';
+          html``;
+        })}
+      </div>
+    `;
+  },
 });
 
 /**

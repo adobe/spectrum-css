@@ -3,6 +3,7 @@ import {
 	withTextDirectionWrapper,
 	withLanguageWrapper,
 	withReducedMotionWrapper,
+  withThemesDisplayWrapper
 	// withSizingWrapper,
 } from "./decorators/index.js";
 import { withActions } from "@storybook/addon-actions/decorator";
@@ -237,6 +238,7 @@ export const decorators = [
 	withReducedMotionWrapper,
 	withContextWrapper,
 	withActions,
+  withThemesDisplayWrapper
 ];
 
 export default {
