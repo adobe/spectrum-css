@@ -133,7 +133,7 @@ examples:
     name: Disabled
     status: Verified
     markup: |
-      <div class="spectrum-Tabs spectrum-Tabs--sizeM spectrum-Tabs--horizontal spectrum-Tabs--quiet">
+      <div class="spectrum-Tabs spectrum-Tabs--sizeM spectrum-Tabs--horizontal">
         <div class="spectrum-Tabs-item is-selected" tabindex="0">
           <span class="spectrum-Tabs-itemLabel">Tab 1</span>
         </div>
