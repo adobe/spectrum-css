@@ -43,53 +43,56 @@ export const withThemesDisplayWrapper = makeDecorator({
     const themesDisplay = globals.themesDisplay;
     const isDefault = themesDisplay === 'default';
     const isStacked = themesDisplay === 'stacked';
-    
-    // is it the "default" display option? Return early
+    const bodyEl = document.body;
+    const bodyElClasses = bodyEl.classList;
 
-    if (!isDefault) {
-      // prep the display areas with the correct classes
-      const isExpress = args.express;
-
-      const themeClassNames = ['spectrum--light', 'spectrum--dark', 'spectrum--darkest'];
-      const bodyEl = document.body;
-
-      // remove the classes from the Storybook body element
-      // use a timeout here to make it wait for other addons to modify classes first and then remove them after that
-      useEffect(() => {
+    // remove the classes from the Storybook body element
+    // use a timeout here to make it wait for other addons to modify classes first and then remove them after that
+    useEffect(() => {
+      if (isDefault) {
+        setTimeout(() => {
+          bodyEl.className = bodyElClasses;
+        }, 1000);
+      } else {
         setTimeout(() => {
           bodyEl.classList.remove(...themeClassNames);
         }, 1000);
-      }, [bodyEl]);
+      }
+    }, [bodyEl]);
+    
+    // is it the "default" display option? Return early
+    if (isDefault) return StoryFn(context);
+    
+    // prep the display areas with the correct classes
+    const isExpress = args.express;
 
-      const styles = {
-        grid: {
-          display: 'grid',
-          gridTemplateColumns: isStacked ? '1fr' : 'repeat(auto-fit, minmax(0px, 1fr))',
-          height: isStacked ? 'auto' : '100vh',
-        },
-        gridItem: {
-          backgroundColor: 'var(--spectrum-alias-background-color-default)',
-          color: 'var(--spectrum-alias-text-color-default)',
-          outline: '2px solid var(--spectrum-blue-background-color-default)',
-          padding: '2rem',
-        },
-      };
+    const themeClassNames = ['spectrum--light', 'spectrum--dark', 'spectrum--darkest'];
+    const styles = {
+      grid: {
+        display: 'grid',
+        gridTemplateColumns: isStacked ? '1fr' : 'repeat(auto-fit, minmax(0px, 1fr))',
+        height: isStacked ? 'auto' : '100vh',
+      },
+      gridItem: {
+        backgroundColor: 'var(--spectrum-alias-background-color-default)',
+        color: 'var(--spectrum-alias-text-color-default)',
+        outline: '2px solid var(--spectrum-blue-background-color-default)',
+        padding: '2rem',
+      },
+    };
 
-      return html`
-        <style>body { padding: 0 !important;}</style>
-        <div style=${styleMap(styles.grid)}>
-          ${themeClassNames.map((themeClassName) => {
-            return html`
-              <div class="spectrum spectrum--medium ${themeClassName} ${isExpress ? `spectrum--express` : null}" style=${styleMap(styles.gridItem)}>
-                ${StoryFn(context)}
-              </div>
-            `;
-          })}
-        </div>
-      `;
-    }
-
-    return StoryFn(context);
+    return html`
+      <style>body { padding: 0 !important;}</style>
+      <div style=${styleMap(styles.grid)}>
+        ${themeClassNames.map((themeClassName) => {
+          return html`
+            <div class="spectrum spectrum--medium ${themeClassName} ${isExpress ? `spectrum--express` : null}" style=${styleMap(styles.gridItem)}>
+              ${StoryFn(context)}
+            </div>
+          `;
+        })}
+      </div>
+    `;
   },
 });
 
