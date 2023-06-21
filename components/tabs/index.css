@@ -269,22 +269,8 @@ governing permissions and limitations under the License.
 	/* Friends should align to the top of the tabs */
 	vertical-align: top;
 
-	background: linear-gradient(
-		to
-			var(
-				--mod-tabs-list-background-direction,
-				var(--spectrum-tabs-list-background-direction)
-			),
-		var(
-				--highcontrast-tabs-divider-background-color,
-				var(
-					--mod-tabs-divider-background-color,
-					var(--spectrum-tabs-divider-background-color)
-				)
-			)
-			0 var(--mod-tabs-divider-size, var(--spectrum-tabs-divider-size)),
-		transparent var(--mod-tabs-divider-size, var(--spectrum-tabs-divider-size))
-	);
+	border-bottom: var(--mod-tabs-divider-size, var(--spectrum-tabs-divider-size)) solid var(--highcontrast-tabs-divider-background-color, var(--mod-tabs-divider-background-color, var(--spectrum-tabs-divider-background-color)))
+
 }
 
 .spectrum-Tabs-item {
@@ -394,7 +380,8 @@ governing permissions and limitations under the License.
 		}
 	}
 
-	&:focus-within {
+	&:focus,
+	&:focus-visible {
 		color: var(
 			--highcontrast-tabs-color-key-focus,
 			var(--mod-tabs-color-key-focus, var(--spectrum-tabs-color-key-focus))
@@ -482,7 +469,7 @@ governing permissions and limitations under the License.
 
 	.spectrum-Tabs-selectionIndicator {
 		position: absolute;
-		inset-block-end: 0;
+		inset-block-end: calc(-1 * var(--mod-tabs-divider-size, var(--spectrum-tabs-divider-size)));
 		block-size: var(--mod-tabs-divider-size, var(--spectrum-tabs-divider-size));
 	}
 
@@ -510,10 +497,20 @@ governing permissions and limitations under the License.
 	}
 }
 
+[dir="rtl"] .spectrum-Tabs--vertical {
+	border-right: var(--mod-tabs-divider-size, var(--spectrum-tabs-divider-size)) solid var(--highcontrast-tabs-divider-background-color, var(--mod-tabs-divider-background-color, var(--spectrum-tabs-divider-background-color)));
+}
+
+[dir="ltr"] .spectrum-Tabs--vertical {
+	border-left: var(--mod-tabs-divider-size, var(--spectrum-tabs-divider-size)) solid var(--highcontrast-tabs-divider-background-color, var(--mod-tabs-divider-background-color, var(--spectrum-tabs-divider-background-color)));
+}
+
+
 .spectrum-Tabs--vertical {
   display: inline-flex;
   flex-direction: column;
   padding: 0;
+	border-bottom: none;
 
 	.spectrum-Tabs-item {
 		line-height: var(--mod-tabs-item-height, var(--spectrum-tabs-item-height));
@@ -524,6 +521,10 @@ governing permissions and limitations under the License.
 			var(--spectrum-tabs-item-vertical-spacing)
 		);
 		margin-inline-start: var(
+			--mod-tabs-start-to-edge,
+			var(--spectrum-tabs-start-to-edge)
+		);
+		margin-inline-end: var(
 			--mod-tabs-start-to-edge,
 			var(--spectrum-tabs-start-to-edge)
 		);
@@ -541,7 +542,7 @@ governing permissions and limitations under the License.
 
 	.spectrum-Tabs-selectionIndicator {
 		position: absolute;
-		inset-inline-start: 0;
+		inset-inline-start: calc(-1 * var(--mod-tabs-divider-size, var(--spectrum-tabs-divider-size)));
 		inline-size: var(
 			--mod-tabs-divider-size,
 			var(--spectrum-tabs-divider-size)
@@ -588,7 +589,8 @@ governing permissions and limitations under the License.
 				);
 			}
 
-			&:focus-within {
+			&:focus,
+			&:focus-visible {
 				color: var(--highcontrast-tabs-color-selected);
 			}
 		}
