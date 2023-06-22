@@ -11,9 +11,10 @@ governing permissions and limitations under the License.
 */
 
 @container (--system: express) {
-  /* @todo remove this when stepper is migrated; this ensures stepper buttons inherit border color and width */
   .spectrum-Stepper {
-    --spectrum-stepper-border-width: var(--spectrum-border-width-200); /* express stepper has border */
+    --spectrum-stepper-border-width: var(--spectrum-border-width-200);
+
+    --spectrum-stepper-button-border-width: 0;
     --spectrum-stepper-button-border-width-reset: 0; /* express buttons have no inline start border */
     --spectrum-stepper-button-icon-nudge: calc(-1 * var(--spectrum-stepper-button-border-radius-reset));
 
