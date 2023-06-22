@@ -126,7 +126,6 @@ governing permissions and limitations under the License.
   --spectrum-menu-section-header-font-size: var(--spectrum-font-size-75);
   --spectrum-menu-section-header-min-width: var(--spectrum-component-height-75);
 
-  /* selection/checkmark */
   --spectrum-menu-item-selectable-edge-to-text-not-selected: var(--spectrum-menu-item-selectable-edge-to-text-not-selected-small);
 
   --spectrum-menu-item-checkmark-height: var(--spectrum-menu-item-checkmark-height-small);
@@ -267,17 +266,9 @@ governing permissions and limitations under the License.
   &:lang(ja),
   &:lang(zh),
   &:lang(ko) {
-    .spectrum-Menu-item {
-      line-height: var(--mod-menu-item-label-line-height-cjk, var(--spectrum-menu-item-label-line-height-cjk));
-    }
-
-    .spectrum-Menu-itemDescription {
-      line-height: var(--mod-menu-item-description-line-height-cjk, var(--spectrum-menu-item-description-line-height-cjk));
-    }
-
-    .spectrum-Menu-sectionHeading {
-      line-height: var(--mod-menu-section-header-line-height-cjk, var(--spectrum-menu-section-header-line-height-cjk));
-    }
+    --spectrum-menu-item-label-line-height: var(--mod-menu-item-label-line-height-cjk, var(--spectrum-menu-item-label-line-height-cjk));
+    --spectrum-menu-item-description-line-height: var(--mod-menu-item-description-line-height-cjk, var(--spectrum-menu-item-description-line-height-cjk));
+    --spectrum-menu-section-header-line-height: var(--mod-menu-section-header-line-height-cjk, var(--spectrum-menu-section-header-line-height-cjk));
   }
 
   .spectrum-Menu-divider {
