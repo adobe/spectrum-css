@@ -20,14 +20,16 @@
 | `--mod-stepper-button-background-color-focus`          |
 | `--mod-stepper-button-background-color-hover`          |
 | `--mod-stepper-button-background-color-keyboard-focus` |
+| `--mod-stepper-button-border-radius`                   |
+| `--mod-stepper-button-border-radius-reset`             |
 | `--mod-stepper-button-gap`                             |
 | `--mod-stepper-button-offset`                          |
 | `--mod-stepper-button-padding`                         |
 | `--mod-stepper-button-width`                           |
-| `--mod-stepper-buttons-height`                         |
 | `--mod-stepper-focus-indicator-color`                  |
 | `--mod-stepper-focus-indicator-gap`                    |
 | `--mod-stepper-focus-indicator-width`                  |
+| `--mod-stepper-height`                                 |
 | `--mod-stepper-icon-nudge-start`                       |
 | `--mod-stepper-quiet-button-width`                     |
 | `--mod-stepper-quiet-width`                            |
