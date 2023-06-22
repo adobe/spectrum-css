@@ -447,7 +447,6 @@ governing permissions and limitations under the License.
   flex-direction: column;
   justify-content: center;
   /* allow express buttons to have a gap the size of the stepper border */
-  row-gap: var(--mod-stepper-button-gap, var(--spectrum-stepper-button-gap));
   box-sizing: border-box;
 
   block-size: var(--mod-stepper-height, var(--spectrum-stepper-height));
@@ -473,8 +472,8 @@ governing permissions and limitations under the License.
 .spectrum-Stepper-stepUp,
 .spectrum-Stepper-stepDown {
   box-sizing: border-box;
-  block-size: calc((var(--mod-stepper-height, var(--spectrum-stepper-height)) / 2) - (var(--mod-stepper-button-gap, var(--spectrum-stepper-button-gap)) * 2.5));
-  inline-size: var(--mod-stepper-button-width, var(--spectrum-stepper-button-width));
+  block-size: calc((var(--mod-stepper-height, var(--spectrum-stepper-height)) / 2) - var(--mod-stepper-button-gap, var(--spectrum-stepper-button-gap)) - var(--mod-stepper-button-padding, var(--spectrum-stepper-button-padding)));
+  inline-size: 100%;
   min-inline-size: 0;
 
   border-color: inherit;
@@ -486,8 +485,8 @@ governing permissions and limitations under the License.
   border-end-end-radius: var(--mod-stepper-border-radius, var(--spectrum-stepper-border-radius));
   border-end-start-radius: 0;
 
-  padding-inline-start: calc(var(--mod-stepper-button-fill-padding-inline, var(--spectrum-stepper-button-fill-padding-inline)) - var(--mod-stepper-button-border-width, var(--spectrum-stepper-button-border-width)));
-  padding-inline-end: calc(var(--mod-stepper-button-fill-padding-inline, var(--spectrum-stepper-button-fill-padding-inline)) - var(--mod-stepper-button-border-width, var(--spectrum-stepper-button-border-width)));
+  padding-inline-start: calc(var(--mod-stepper-button-fill-padding-inline, var(--spectrum-stepper-button-fill-padding-inline)) - var(--mod-stepper-button-padding, var(--spectrum-stepper-button-padding)));
+  padding-inline-end: calc(var(--mod-stepper-button-fill-padding-inline, var(--spectrum-stepper-button-fill-padding-inline)) - var(--mod-stepper-button-padding, var(--spectrum-stepper-button-padding)));
 
   .spectrum-Icon {
     opacity: 1;
@@ -507,8 +506,10 @@ governing permissions and limitations under the License.
 }
 
 .spectrum-Stepper-stepUp {
-  padding-block-start: var(--mod-stepper-button-fill-padding-outer-edge, var(--spectrum-stepper-button-fill-padding-outer-edge));
-  padding-block-end: var(--mod-stepper-button-fill-padding-inner-edge, var(--spectrum-stepper-button-fill-padding-inner-edge));;
+  padding-block-start: calc(var(--mod-stepper-button-fill-padding-outer-edge, var(--spectrum-stepper-button-fill-padding-outer-edge)) - var(--mod-stepper-button-padding, var(--spectrum-stepper-button-padding)));
+  padding-block-end: var(--mod-stepper-button-fill-padding-inner-edge, var(--spectrum-stepper-button-fill-padding-inner-edge));
+
+  margin-block-end: var(--mod-stepper-button-gap, var(--spectrum-stepper-button-gap));
 
   border-start-start-radius: var(--mod-stepper-button-top-border-radius-start-start, var(--spectrum-stepper-button-top-border-radius-start-start));
   border-start-end-radius: var(--mod-stepper-button-border-radius, var(--spectrum-stepper-button-border-radius));
@@ -517,8 +518,10 @@ governing permissions and limitations under the License.
 }
 
 .spectrum-Stepper-stepDown {
-  padding-block-start: var(--mod-stepper-button-fill-padding-inner-edge, var(--spectrum-stepper-button-fill-padding-inner-edge));;
-  padding-block-end: var(--mod-stepper-button-fill-padding-outer-edge, var(--spectrum-stepper-button-fill-padding-outer-edge));
+  padding-block-start: var(--mod-stepper-button-fill-padding-inner-edge, var(--spectrum-stepper-button-fill-padding-inner-edge));
+  padding-block-end: calc(var(--mod-stepper-button-fill-padding-outer-edge, var(--spectrum-stepper-button-fill-padding-outer-edge)) - var(--mod-stepper-button-padding, var(--spectrum-stepper-button-padding)));
+  
+  margin-block-start: var(--mod-stepper-button-gap, var(--spectrum-stepper-button-gap));
 
   border-block-start-width: 0;
   border-start-start-radius: var(--mod-stepper-button-border-radius-reset, var(--spectrum-stepper-button-border-radius-reset));
