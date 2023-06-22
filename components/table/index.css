@@ -909,8 +909,37 @@ div.spectrum-Table-headCell {
 }
 
 /********* THUMBNAILS *********/
-.spectrum-Table-cell--thumbnail {
-  padding-block: 0px;
+
+.spectrum-Table-row--thumbnail {
+  --table-thumbnail-cell-block-spacing: var(--mod-table-thumbnail-block-spacing, var(--spectrum-table-thumbnail-block-spacing));
+  --table-thumbnail-inner-content-block-spacing: max(0px, calc((
+      var(--mod-table-thumbnail-size, var(--spectrum-table-thumbnail-size)) -
+      (var(--mod-table-row-line-height, var(--spectrum-table-row-line-height)) * var(--mod-table-header-font-size, var(--spectrum-table-row-font-size)))
+    ) / 2
+  ));
+
+  /* Cell that does not have a thumbnail, within a row that has a thumbnail. */
+  .spectrum-Table-cell {
+    padding-block: calc(var(--table-thumbnail-cell-block-spacing) + var(--table-thumbnail-inner-content-block-spacing));
+  }
+
+  /* Cell that does have a thumbnail has its padding moved within the "Inner" and "Content" alignment wrappers. */
+  .spectrum-Table-cell--thumbnail {
+    padding-block: 0px;
+  }
+
+  /* Sometimes the padding must be larger to match any extra space created by the disclosure icon (e.g. compact + large ). */
+  &.spectrum-Table-row--collapsible {
+    --table-thumbnail-inner-minimum-block-spacing: max(0px, calc((
+        var(--mod-table-disclosure-icon-size, var(--spectrum-table-disclosure-icon-size)) -
+        var(--mod-table-thumbnail-size, var(--spectrum-table-thumbnail-size))
+      ) / 2
+    ));
+    --table-thumbnail-cell-block-spacing: max(
+      var(--mod-table-thumbnail-block-spacing, var(--spectrum-table-thumbnail-block-spacing)), 
+      var(--table-thumbnail-inner-minimum-block-spacing)
+    );
+  }
 }
 
 .spectrum-Table-thumbnailInner {
@@ -919,14 +948,7 @@ div.spectrum-Table-headCell {
   flex-wrap: nowrap;
   justify-content: flex-start;
   align-items: flex-start;
-  
-  --table-disclosure-size-vs-thumbnail-excess: max(0px, calc(
-    (var(--mod-table-disclosure-icon-size, var(--spectrum-table-disclosure-icon-size)) - var(--mod-table-thumbnail-size, var(--spectrum-table-thumbnail-size))) / 2
-  ));
-  padding-block: calc(
-    var(--mod-table-thumbnail-block-spacing, var(--spectrum-table-thumbnail-block-spacing)) +
-    var(--table-disclosure-size-vs-thumbnail-excess)
-  );
+  padding-block: var(--table-thumbnail-cell-block-spacing);
 
   .spectrum-Thumbnail {
     flex-grow: 0;
@@ -936,10 +958,7 @@ div.spectrum-Table-headCell {
   }
 
   .spectrum-Table-thumbnailContent {
-    padding-block: max(0px, calc(
-      (var(--mod-table-thumbnail-size, var(--spectrum-table-thumbnail-size)) -
-       (var(--mod-table-row-line-height, var(--spectrum-table-row-line-height)) * var(--mod-table-header-font-size, var(--spectrum-table-row-font-size)))
-      ) / 2
-    ));
+    /* Vertically centers text with the middle of the thumbnail. */
+    padding-block: var(--table-thumbnail-inner-content-block-spacing);
   }
 }

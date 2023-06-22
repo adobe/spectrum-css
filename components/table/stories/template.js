@@ -66,6 +66,7 @@ export const TableRowItem = ({
 			[`${rootClass}-row--summary`]: isSummaryRow,
 			[`${rootClass}-row--sectionHeader`]: isSectionHeader,
 			[`${rootClass}-row--collapsible`]: isCollapsible,
+			[`${rootClass}-row--thumbnail`]: useThumbnail,
 			["is-selected"]: isSelected,
 			["is-expanded"]: isExpanded,
 			["is-last-tier"]: isLastTier,
