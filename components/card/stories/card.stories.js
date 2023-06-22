@@ -1,4 +1,4 @@
-import { html } from "lit-html";
+import { html } from "lit";
 
 // Import the component markup template
 import { Template } from "./template";
@@ -8,7 +8,7 @@ import { default as QuickAction } from "@spectrum-css/quickaction/stories/quicka
 import { default as Checkbox } from "@spectrum-css/checkbox/stories/checkbox.stories.js";
 
 export default {
-	title: "Card",
+	title: "Components/Card",
 	description:
 		"A card represents a rectangular space to contain text or images. Cards are typically used to encapsulate units of a data set, such as a gallery of image/caption pairs.",
 	component: "Card",

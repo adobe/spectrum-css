@@ -4,7 +4,7 @@ import { Template } from "./template";
 import { Default as Menu } from "@spectrum-css/menu/stories/menu.stories.js";
 
 export default {
-	title: "Popover",
+	title: "Components/Popover",
 	description:
 		"A popover is used to display transient content (menus, options, additional actions etc.) and appears when clicking/tapping on a source (tools, buttons, etc.). It stands out via its visual style (stroke and drop shadow) and floats on top of the rest of the interface.",
 	component: "Popover",

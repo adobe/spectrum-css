@@ -3,6 +3,29 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+<a name="7.0.7"></a>
+##7.0.7
+🗓
+2023-06-21 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/treeview@7.0.6...@spectrum-css/treeview@7.0.7)
+
+**Note:** Version bump only for package @spectrum-css/treeview
+
+<a name="7.0.6"></a>
+##7.0.6
+🗓
+2023-06-15 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/treeview@7.0.5...@spectrum-css/treeview@7.0.6)
+
+**Note:** Version bump only for package @spectrum-css/treeview
+
+<a name="7.0.5"></a>
+##7.0.5
+🗓
+2023-06-12 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/treeview@7.0.4...@spectrum-css/treeview@7.0.5)
+
+### 🐛 Bug fixes
+
+\*restore files to pre-formatted state([491dbcb](https://github.com/adobe/spectrum-css/commit/491dbcb))
+
 <a name="7.0.4"></a>
 ##7.0.4
 🗓

@@ -3,6 +3,31 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+<a name="3.0.13"></a>
+##3.0.13
+🗓
+2023-06-21 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/thumbnail@3.0.12...@spectrum-css/thumbnail@3.0.13)
+
+**Note:** Version bump only for package @spectrum-css/thumbnail
+
+<a name="3.0.12"></a>
+##3.0.12
+🗓
+2023-06-15 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/thumbnail@3.0.11...@spectrum-css/thumbnail@3.0.12)
+
+### 🐛 Bug fixes
+
+- **thumbnail:**border opacity typo ([#1926](https://github.com/adobe/spectrum-css/issues/1926))([9d7bc21](https://github.com/adobe/spectrum-css/commit/9d7bc21))
+
+<a name="3.0.11"></a>
+##3.0.11
+🗓
+2023-06-12 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/thumbnail@3.0.10...@spectrum-css/thumbnail@3.0.11)
+
+### 🐛 Bug fixes
+
+\*restore files to pre-formatted state([491dbcb](https://github.com/adobe/spectrum-css/commit/491dbcb))
+
 <a name="3.0.10"></a>
 ##3.0.10
 🗓

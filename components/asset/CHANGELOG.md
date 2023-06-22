@@ -3,6 +3,29 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+<a name="3.0.46"></a>
+##3.0.46
+🗓
+2023-06-21 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/asset@3.0.45...@spectrum-css/asset@3.0.46)
+
+**Note:** Version bump only for package @spectrum-css/asset
+
+<a name="3.0.45"></a>
+##3.0.45
+🗓
+2023-06-15 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/asset@3.0.44...@spectrum-css/asset@3.0.45)
+
+**Note:** Version bump only for package @spectrum-css/asset
+
+<a name="3.0.44"></a>
+##3.0.44
+🗓
+2023-06-12 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/asset@3.0.43...@spectrum-css/asset@3.0.44)
+
+### 🐛 Bug fixes
+
+\*restore files to pre-formatted state([491dbcb](https://github.com/adobe/spectrum-css/commit/491dbcb))
+
 <a name="3.0.43"></a>
 ##3.0.43
 🗓

@@ -3,6 +3,29 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+<a name="4.0.43"></a>
+##4.0.43
+🗓
+2023-06-21 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/menu@4.0.42...@spectrum-css/menu@4.0.43)
+
+**Note:** Version bump only for package @spectrum-css/menu
+
+<a name="4.0.42"></a>
+##4.0.42
+🗓
+2023-06-15 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/menu@4.0.41...@spectrum-css/menu@4.0.42)
+
+**Note:** Version bump only for package @spectrum-css/menu
+
+<a name="4.0.41"></a>
+##4.0.41
+🗓
+2023-06-12 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/menu@4.0.40...@spectrum-css/menu@4.0.41)
+
+### 🐛 Bug fixes
+
+\*restore files to pre-formatted state([491dbcb](https://github.com/adobe/spectrum-css/commit/491dbcb))
+
 <a name="4.0.40"></a>
 ##4.0.40
 🗓

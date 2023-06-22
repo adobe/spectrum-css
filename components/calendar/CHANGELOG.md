@@ -3,6 +3,31 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+<a name="3.2.1"></a>
+##3.2.1
+🗓
+2023-06-21 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/calendar@3.2.0...@spectrum-css/calendar@3.2.1)
+
+**Note:** Version bump only for package @spectrum-css/calendar
+
+<a name="3.2.0"></a>
+#3.2.0
+🗓
+2023-06-15 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/calendar@3.1.24...@spectrum-css/calendar@3.2.0)
+
+### ✨ Features
+
+\*update to Storybook v7 ([#1935](https://github.com/adobe/spectrum-css/issues/1935))([6dcf09b](https://github.com/adobe/spectrum-css/commit/6dcf09b))
+
+<a name="3.1.24"></a>
+##3.1.24
+🗓
+2023-06-12 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/calendar@3.1.23...@spectrum-css/calendar@3.1.24)
+
+### 🐛 Bug fixes
+
+\*restore files to pre-formatted state([491dbcb](https://github.com/adobe/spectrum-css/commit/491dbcb))
+
 <a name="3.1.23"></a>
 ##3.1.23
 🗓

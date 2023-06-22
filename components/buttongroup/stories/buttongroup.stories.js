@@ -2,7 +2,7 @@
 import { Template } from "./template";
 
 export default {
-	title: "Button group",
+	title: "Components/Button group",
 	description: "The Button group component is...",
 	component: "Buttongroup",
 	argTypes: {

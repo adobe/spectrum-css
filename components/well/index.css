@@ -11,19 +11,19 @@ governing permissions and limitations under the License.
 */
 
 .spectrum-Well {
-	--spectrum-well-padding: var(--spectrum-global-dimension-size-200);
-	--spectrum-well-border-width: var(--spectrum-alias-border-size-thin);
-	--spectrum-well-margin-top: var(--spectrum-global-dimension-size-50);
-	--spectrum-well-min-width: var(--spectrum-global-dimension-size-3000);
+  --spectrum-well-padding: var(--spectrum-global-dimension-size-200);
+  --spectrum-well-border-width: var(--spectrum-alias-border-size-thin);
+  --spectrum-well-margin-top: var(--spectrum-global-dimension-size-50);
+  --spectrum-well-min-width: var(--spectrum-global-dimension-size-3000);
 }
 
 .spectrum-Well {
-	text-align: start;
-	display: block;
-	min-inline-size: var(--spectrum-well-min-width);
-	padding: var(--spectrum-well-padding);
-	margin-block-start: var(--spectrum-well-margin-top);
-	border-width: var(--spectrum-well-border-width);
-	border-style: solid;
-	border-radius: var(--spectrum-alias-border-radius-regular);
+  text-align: start;
+  display: block;
+  min-inline-size: var(--spectrum-well-min-width);
+  padding: var(--spectrum-well-padding);
+  margin-block-start: var(--spectrum-well-margin-top);
+  border-width: var(--spectrum-well-border-width);
+  border-style: solid;
+  border-radius: var(--spectrum-alias-border-radius-regular);
 }

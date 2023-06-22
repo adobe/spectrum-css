@@ -2,7 +2,7 @@
 import { Template } from "./template";
 
 export default {
-	title: "Field label",
+	title: "Components/Field label",
 	description:
 		"The Field label component is used along with inputs to display a label for that input.",
 	component: "Fieldlabel",

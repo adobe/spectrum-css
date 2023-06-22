@@ -2,7 +2,7 @@
 import { Template } from "./template";
 
 export default {
-	title: "Rating",
+	title: "Components/Rating",
 	description:
 		"A rating element is used to display or collect a user's rating of an item as represented by a number of stars.",
 	component: "Rating",

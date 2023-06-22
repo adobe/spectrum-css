@@ -4,7 +4,7 @@ import { Template } from "./template";
 import { default as Checkbox } from "@spectrum-css/checkbox/stories/checkbox.stories.js";
 
 export default {
-	title: "Asset list",
+	title: "Components/Asset list",
 	description:
 		"A selectable list of Assets, often used inside of Miller Columns.",
 	component: "AssetList",

@@ -2,7 +2,7 @@
 import { Template } from "./template";
 
 export default {
-	title: "Color wheel",
+	title: "Components/Color wheel",
 	description:
 		"The Color wheel component lets users visually change an individual channel of a color on a circular track.",
 	component: "ColorWheel",

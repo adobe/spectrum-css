@@ -5,7 +5,7 @@ import { default as IconStories } from "@spectrum-css/icon/stories/icon.stories.
 
 // More on default export: https://storybook.js.org/docs/web-components/writing-stories/introduction#default-export
 export default {
-	title: "Floating action button",
+	title: "Components/Floating action button",
 	description:
 		"The Floating action button component is used to give users a more prominent button for high frequency actions",
 	component: "FloatingActionButton",

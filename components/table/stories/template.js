@@ -1,6 +1,6 @@
-import { html, literal } from "lit-html/static.js";
-import { classMap } from "lit-html/directives/class-map.js";
-import { when } from "lit-html/directives/when.js";
+import { html, literal } from "lit/static-html.js";
+import { classMap } from "lit/directives/class-map.js";
+import { when } from "lit/directives/when.js";
 import { ifDefined } from "lit-html/directives/if-defined.js";
 
 import { Template as Icon } from "@spectrum-css/icon/stories/template.js";

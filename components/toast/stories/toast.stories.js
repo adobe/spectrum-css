@@ -7,7 +7,7 @@
 import { Template } from "./template";
 
 export default {
-	title: "Toast",
+	title: "Components/Toast",
 	description:
 		"Toasts display brief, temporary notifications. They are noticeable but do not disrupt the user experience and do not require an action to be taken.",
 	component: "Toast",

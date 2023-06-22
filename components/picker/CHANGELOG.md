@@ -3,6 +3,29 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+<a name="4.0.16"></a>
+##4.0.16
+🗓
+2023-06-21 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/picker@4.0.15...@spectrum-css/picker@4.0.16)
+
+**Note:** Version bump only for package @spectrum-css/picker
+
+<a name="4.0.15"></a>
+##4.0.15
+🗓
+2023-06-15 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/picker@4.0.14...@spectrum-css/picker@4.0.15)
+
+**Note:** Version bump only for package @spectrum-css/picker
+
+<a name="4.0.14"></a>
+##4.0.14
+🗓
+2023-06-12 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/picker@4.0.13...@spectrum-css/picker@4.0.14)
+
+### 🐛 Bug fixes
+
+\*restore files to pre-formatted state([491dbcb](https://github.com/adobe/spectrum-css/commit/491dbcb))
+
 <a name="4.0.13"></a>
 ##4.0.13
 🗓

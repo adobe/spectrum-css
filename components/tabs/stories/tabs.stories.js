@@ -2,7 +2,7 @@
 import { Template } from "./template";
 
 export default {
-	title: "Tabs",
+	title: "Components/Tabs",
 	description:
 		"Tabs organize content into multiple sections and allow users to navigate between them. The content under the set of tabs should be related and form a coherent unit.",
 	component: "Tabs",

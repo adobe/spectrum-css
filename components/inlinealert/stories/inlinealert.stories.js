@@ -2,7 +2,7 @@
 import { Template } from "./template";
 
 export default {
-	title: "In-line Alert",
+	title: "Components/In-line alert",
 	description:
 		"In-line alerts display a non-modal message associated with objects in a view. These are often used in form validation, providing a place to aggregate feedback related to multiple fields.",
 	component: "InLineAlert",
