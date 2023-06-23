@@ -84,9 +84,9 @@ export const globalTypes = {
     defaultValue: 'default',
     toolbar: {
       items: [
-        {value: 'default', title: 'default', right: 'default'},
-        {value: 'stacked', title: 'stacked', right: 'stacked'},
-        {value: 'side-by-side', title: 'side-by-side', right: 'side-by-side'}
+        {value: 'default', icon: 'browser', title: 'default', right: 'default'},
+        {value: 'stacked', icon: 'bottombar', title: 'stacked', right: 'stacked'},
+        {value: 'side-by-side', icon: 'sidebaralt', title: 'side-by-side', right: 'side-by-side'}
       ],
       dynamicTitle: true,
     }

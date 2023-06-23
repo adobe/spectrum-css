@@ -39,8 +39,8 @@ export const withThemesDisplayWrapper = makeDecorator({
   name: "withThemesDisplayWrapper",
   parameterName: "context",
   wrapper: (StoryFn, context) => {
-    const { globals, args } = context;
-    const themesDisplay = globals.themesDisplay;
+    const { globals, args, parameters } = context;
+    const themesDisplay = parameters.themesDisplay || globals.themesDisplay;
     const isDefault = themesDisplay === 'default';
     const isStacked = themesDisplay === 'stacked';
     const bodyEl = document.body;
