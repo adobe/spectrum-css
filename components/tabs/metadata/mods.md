@@ -34,7 +34,6 @@
 | `--mod-tabs-selection-indicator-color`            |
 | `--mod-tabs-selection-indicator-color-emphasized` |
 | `--mod-tabs-start-to-edge`                        |
-| `--mod-tabs-start-to-edge-quiet`                  |
 | `--mod-tabs-start-to-item-quiet`                  |
 | `--mod-tabs-top-to-icon`                          |
 | `--mod-tabs-top-to-icon-compact`                  |
