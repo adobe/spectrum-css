@@ -47,7 +47,7 @@ examples:
           </button>
         </span>
       </div>
-  - id: stepper
+  - id: stepper-focused
     name: Focused
     markup: |
       <div class="spectrum-Stepper is-focused">
@@ -67,7 +67,7 @@ examples:
           </button>
         </span>
       </div>
-  - id: stepper
+  - id: stepper-keyboard-focused
     name: Keyboard Focused
     markup: |
       <div class="spectrum-Stepper is-keyboardFocused">
@@ -87,7 +87,7 @@ examples:
           </button>
         </span>
       </div>
-  - id: stepper
+  - id: stepper-invalid
     name: Invalid
     markup: |
       <div class="spectrum-Stepper is-invalid">
@@ -107,7 +107,7 @@ examples:
           </button>
         </span>
       </div>
-  - id: stepper
+  - id: stepper-invalid-focused
     name: Invalid (focused)
     markup: |
       <div class="spectrum-Stepper is-invalid is-focused">
@@ -127,7 +127,7 @@ examples:
           </button>
         </span>
       </div>
-  - id: stepper
+  - id: stepper-invalid-keyboard-focused
     name: Invalid (keyboard focused)
     markup: |
       <div class="spectrum-Stepper is-invalid is-keyboardFocused">
@@ -147,7 +147,7 @@ examples:
           </button>
         </span>
       </div>
-  - id: stepper
+  - id: stepper-disabled
     name: Disabled
     markup: |
       <div class="spectrum-Stepper is-disabled">
@@ -187,7 +187,7 @@ examples:
           </button>
         </span>
       </div>
-  - id: stepper-quiet
+  - id: stepper-quiet-focused
     name: Quiet (focused)
     markup: |
       <div class="spectrum-Stepper spectrum-Stepper--quiet is-focused">
@@ -207,7 +207,7 @@ examples:
           </button>
         </span>
       </div>
-  - id: stepper-quiet
+  - id: stepper-quiet-keyboard-focused
     name: Quiet (keyboard focused)
     markup: |
       <div class="spectrum-Stepper spectrum-Stepper--quiet is-keyboardFocused">
@@ -227,7 +227,7 @@ examples:
           </button>
         </span>
       </div>
-  - id: stepper-quiet
+  - id: stepper-quiet-invalid
     name: Quiet (invalid)
     markup: |
       <div class="spectrum-Stepper spectrum-Stepper--quiet is-invalid">
@@ -247,7 +247,7 @@ examples:
           </button>
         </span>
       </div>
-  - id: stepper-quiet
+  - id: stepper-quiet-invalid-focused
     name: Quiet (invalid, focused)
     markup: |
       <div class="spectrum-Stepper spectrum-Stepper--quiet is-invalid is-focused">
@@ -267,7 +267,7 @@ examples:
           </button>
         </span>
       </div>
-  - id: stepper-quiet
+  - id: stepper-quiet-invalid-keyboard-focused
     name: Quiet (invalid, keyboard focused)
     markup: |
       <div class="spectrum-Stepper spectrum-Stepper--quiet is-invalid is-keyboardFocused">
@@ -287,7 +287,7 @@ examples:
           </button>
         </span>
       </div>
-  - id: stepper-quiet
+  - id: stepper-quiet-disabled
     name: Quiet (disabled)
     markup: |
       <div class="spectrum-Stepper spectrum-Stepper--quiet is-disabled">

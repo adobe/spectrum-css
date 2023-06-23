@@ -38,5 +38,4 @@
 | `--mod-stepper-focus-indicator-gap`                    |
 | `--mod-stepper-focus-indicator-width`                  |
 | `--mod-stepper-height`                                 |
-| `--mod-stepper-quiet-button-width`                     |
 | `--mod-stepper-width`                                  |
