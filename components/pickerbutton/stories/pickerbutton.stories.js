@@ -49,6 +49,7 @@ export default {
 				category: "State",
 			},
 			control: "boolean",
+			if: { arg: 'isDisabled', truthy: false }
 		},
 		isRounded: {
 			name: "Rounded",
@@ -85,6 +86,7 @@ export default {
 				category: "State",
 			},
 			control: "boolean",
+			if: { arg: 'isDisabled', truthy: false }
 		},
 		position: {
 			name: "Position",
@@ -103,7 +105,6 @@ export default {
 		size: "m",
 		isOpen: false,
 		isRounded: false,
-		isInvalid: false,
 		isQuiet: false,
 		isDisabled: false,
 		isFocused: false,
