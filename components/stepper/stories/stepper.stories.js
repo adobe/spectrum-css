@@ -17,11 +17,11 @@ export default {
 			control: "boolean",
 		},
 		hideStepper: {
-			name: "Hide Stepper",
+			name: "Hide stepper",
 			type: { name: "boolean" },
 			table: {
 				type: { summary: "boolean" },
-				category: "State",
+				category: "Component",
 			},
 			control: "boolean",
 		},
@@ -44,7 +44,7 @@ export default {
 			control: "boolean",
 		},
 		isFocused: {
-			name: "Show Focus",
+			name: "Focused",
 			type: { name: "boolean" },
 			table: {
 				type: { summary: "boolean" },
@@ -53,7 +53,7 @@ export default {
 			control: "boolean",
 		},
 		isKeyboardFocused: {
-			name: "Show keyboard focus",
+			name: "Keyboard focused",
 			type: { name: "boolean" },
 			table: {
 				type: { summary: "boolean" },
@@ -69,6 +69,7 @@ export default {
 		isKeyboardFocused: false,
 		isInvalid: false,
 		isDisabled: false,
+		hideStepper: false
 	},
 	parameters: {
 		actions: {
