@@ -86,10 +86,5 @@ Default.args = {};
 export const AllThemes = Template.bind({});
 AllThemes.args = {...Default.args}
 AllThemes.parameters = {
-  toolbar: {
-    themesDisplay: {
-      hidden: true,
-    }
-  }
-  // themesDisplay: 'stacked',
+  themesDisplay: 'side-by-side',
 }
