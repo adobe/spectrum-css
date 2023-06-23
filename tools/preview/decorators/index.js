@@ -12,8 +12,9 @@ export const withTextDirectionWrapper = makeDecorator({
 	name: "withTextDirectionWrapper",
 	parameterName: "context",
 	wrapper: (StoryFn, context) => {
-		const { globals } = context;
-		const textDirection = globals.textDirection;
+		const { globals, parameters } = context;
+    const defaultDirection = 'ltr';
+		const textDirection =  parameters.textDirection || globals.textDirection || defaultDirection;
 
 		// Shortkeys for the global types
 		document.addEventListener("keydown", (e) => {
