@@ -142,8 +142,9 @@ export const withLanguageWrapper = makeDecorator({
 	name: "withLanguageWrapper",
 	parameterName: "context",
 	wrapper: (StoryFn, context) => {
-		const { globals } = context;
-		const lang = globals.lang;
+		const { globals, parameters } = context;
+    const defaultLang = 'en-US';
+		const lang = parameters.lang || globals.lang || defaultLang;
 
 		useEffect(() => {
 			if (lang) document.documentElement.lang = lang;
