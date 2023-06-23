@@ -271,7 +271,7 @@ governing permissions and limitations under the License.
 	position: relative;
 	box-sizing: border-box;
 
-	block-size: var(--mod-tabs-item-height, var(--spectrum-tabs-item-height));
+	block-size: calc(var(--mod-tabs-item-height, var(--spectrum-tabs-item-height)) - var(--mod-tabs-divider-size, var(--spectrum-tabs-divider-size)));
 
   /* Float above the tab line */
   z-index: 1;
@@ -487,14 +487,9 @@ governing permissions and limitations under the License.
 	}
 }
 
-[dir="rtl"] .spectrum-Tabs--vertical {
-	border-right: var(--mod-tabs-divider-size, var(--spectrum-tabs-divider-size)) solid var(--highcontrast-tabs-divider-background-color, var(--mod-tabs-divider-background-color, var(--spectrum-tabs-divider-background-color)));
+.spectrum-Tabs--vertical {
+	border-inline-start: var(--mod-tabs-divider-size, var(--spectrum-tabs-divider-size)) solid var(--highcontrast-tabs-divider-background-color, var(--mod-tabs-divider-background-color, var(--spectrum-tabs-divider-background-color)));
 }
-
-[dir="ltr"] .spectrum-Tabs--vertical {
-	border-left: var(--mod-tabs-divider-size, var(--spectrum-tabs-divider-size)) solid var(--highcontrast-tabs-divider-background-color, var(--mod-tabs-divider-background-color, var(--spectrum-tabs-divider-background-color)));
-}
-
 
 .spectrum-Tabs--vertical {
   display: inline-flex;
