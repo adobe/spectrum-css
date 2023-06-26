@@ -321,8 +321,8 @@ governing permissions and limitations under the License.
   border-end-end-radius: var(--mod-stepper-border-radius, var(--spectrum-stepper-border-radius));
   border-end-start-radius: 0;
 
-  padding-inline-start: calc(var(--mod-stepper-button-fill-padding-inline, var(--spectrum-stepper-button-fill-padding-inline)) - var(--mod-stepper-button-padding, var(--spectrum-stepper-button-padding)));
-  padding-inline-end: calc(var(--mod-stepper-button-fill-padding-inline, var(--spectrum-stepper-button-fill-padding-inline)) - var(--mod-stepper-button-padding, var(--spectrum-stepper-button-padding)));
+  padding-inline-start: calc(var(--mod-stepper-button-fill-padding-inline, var(--spectrum-stepper-button-fill-padding-inline)) - var(--mod-stepper-button-padding, var(--spectrum-stepper-button-padding)) - var(--mod-stepper-button-border-width, var(--spectrum-stepper-button-border-width)));
+  padding-inline-end: calc(var(--mod-stepper-button-fill-padding-inline, var(--spectrum-stepper-button-fill-padding-inline)) - var(--mod-stepper-button-padding, var(--spectrum-stepper-button-padding)) - var(--mod-stepper-button-border-width, var(--spectrum-stepper-button-border-width)));
 
   .spectrum-Icon {
     opacity: 1;

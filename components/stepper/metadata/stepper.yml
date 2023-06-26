@@ -12,9 +12,6 @@ sections:
       ### Icon classes removed
       `.spectrum-Stepper-stepUpIcon` and `.spectrum-Stepper-stepDownIcon` are no longer needed and have been removed.
 
-      ### Width change
-      Steppers are now much smaller than they were before. You can set a custom size by setting the CSS `width` property to the `.spectrum-Stepper` element.
-
       ### Indicating validity, focus, and disable
       Validity and focus must be bubbled up to the parent so descendants siblings can be styled.
 
