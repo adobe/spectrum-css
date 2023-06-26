@@ -432,6 +432,24 @@ examples:
         </div>
         <div class="spectrum-Tabs-selectionIndicator" style="height: 46px; top: 0px;"></div>
       </div>
+  - id: tabs-vertical-right
+    name: Vertical Right tabs
+    markup: |
+      <div class="spectrum-Tabs spectrum-Tabs--sizeM spectrum-Tabs--vertical-right">
+        <div class="spectrum-Tabs-item is-selected" tabindex="0">
+          <span class="spectrum-Tabs-itemLabel">Tab 1</span>
+        </div>
+        <div class="spectrum-Tabs-item" tabindex="0">
+          <span class="spectrum-Tabs-itemLabel">Tab 2</span>
+        </div>
+        <div class="spectrum-Tabs-item" tabindex="0">
+          <span class="spectrum-Tabs-itemLabel">Tab 3</span>
+        </div>
+        <div class="spectrum-Tabs-item" tabindex="0">
+          <span class="spectrum-Tabs-itemLabel">Tab 4</span>
+        </div>
+        <div class="spectrum-Tabs-selectionIndicator" style="height: 46px; top: 0px;"></div>
+      </div>
   - id: tabs-vertical-emphasized
     name: Vertical, emphasized tabs
     markup: |

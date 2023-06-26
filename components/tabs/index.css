@@ -171,6 +171,27 @@ governing permissions and limitations under the License.
 			right
 		);
 	}
+
+	&.spectrum-Tabs--vertical-right {
+		--mod-tabs-list-background-direction: var(
+			--mod-tabs-list-background-direction-vertical-right,
+			left
+		);
+	}
+}
+
+[dir="rtl"] .spectrum-Tabs--vertical {
+	--mod-tabs-list-background-direction: var(
+			--mod-tabs-list-background-direction-vertical,
+			left
+		);
+}
+
+[dir="rtl"] .spectrum-Tabs--vertical-right {
+	--mod-tabs-list-background-direction: var(
+			--mod-tabs-list-background-direction-vertical,
+			right
+		);
 }
 
 .spectrum-Tabs.spectrum-Tabs--compact {
@@ -262,8 +283,22 @@ governing permissions and limitations under the License.
 	/* Friends should align to the top of the tabs */
 	vertical-align: top;
 
-	border-bottom: var(--mod-tabs-divider-size, var(--spectrum-tabs-divider-size)) solid var(--highcontrast-tabs-divider-background-color, var(--mod-tabs-divider-background-color, var(--spectrum-tabs-divider-background-color)))
-
+	background: linear-gradient(
+		to
+			var(
+				--mod-tabs-list-background-direction,
+				var(--spectrum-tabs-list-background-direction)
+			),
+		var(
+				--highcontrast-tabs-divider-background-color,
+				var(
+					--mod-tabs-divider-background-color,
+					var(--spectrum-tabs-divider-background-color)
+				)
+			)
+			0 var(--mod-tabs-divider-size, var(--spectrum-tabs-divider-size)),
+		transparent var(--mod-tabs-divider-size, var(--spectrum-tabs-divider-size))
+	);
 }
 
 .spectrum-Tabs-item {
@@ -462,7 +497,7 @@ governing permissions and limitations under the License.
 
 	.spectrum-Tabs-selectionIndicator {
 		position: absolute;
-		inset-block-end: calc(-1 * var(--mod-tabs-divider-size, var(--spectrum-tabs-divider-size)));
+		inset-block-end: 0;
 		block-size: var(--mod-tabs-divider-size, var(--spectrum-tabs-divider-size));
 	}
 
@@ -487,15 +522,11 @@ governing permissions and limitations under the License.
 	}
 }
 
-.spectrum-Tabs--vertical {
-	border-inline-start: var(--mod-tabs-divider-size, var(--spectrum-tabs-divider-size)) solid var(--highcontrast-tabs-divider-background-color, var(--mod-tabs-divider-background-color, var(--spectrum-tabs-divider-background-color)));
-}
-
-.spectrum-Tabs--vertical {
+.spectrum-Tabs--vertical,
+.spectrum-Tabs--vertical-right {
   display: inline-flex;
   flex-direction: column;
   padding: 0;
-	border-bottom-color: transparent;
 
 	&.spectrum-Tabs--quiet {
 		border-color: transparent;
@@ -531,13 +562,21 @@ governing permissions and limitations under the License.
 
 	.spectrum-Tabs-selectionIndicator {
 		position: absolute;
-		inset-inline-start: calc(-1 * var(--mod-tabs-divider-size, var(--spectrum-tabs-divider-size)));
+		inset-inline-start: 0;
 		inline-size: var(
 			--mod-tabs-divider-size,
 			var(--spectrum-tabs-divider-size)
 		);
 	}
 }
+
+.spectrum-Tabs--vertical-right { 
+	.spectrum-Tabs-selectionIndicator {
+		inset-inline: auto 0;
+	}
+}
+
+
 
 @media (forced-colors: active) {
 	.spectrum-Tabs {
