@@ -10,8 +10,6 @@ OF ANY KIND, either express or implied. See the License for the specific languag
 governing permissions and limitations under the License.
 */
 
-@import "../vars/css/components/spectrum-clearbutton.css";
-
 .spectrum-ClearButton {
   --spectrum-clear-button-height: var(--spectrum-component-height-100);
   --spectrum-clear-button-width: var(--spectrum-component-height-100);
@@ -68,6 +66,7 @@ governing permissions and limitations under the License.
   block-size: var(--mod-clear-button-height, var(--spectrum-clear-button-height));
   inline-size: var(--mod-clear-button-width, var(--spectrum-clear-button-width));
   border-radius: 100%;
+  cursor: pointer;
 
   background-color: transparent;
   margin: 0;

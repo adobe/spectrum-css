@@ -11,7 +11,7 @@ export const ClearButton = ({
 	rootClass = "spectrum-ClearButton",
 	customClasses = [],
 	isDisabled = false,
-	size = "m",
+	size,
 	variant,
 	styles = {},
 	...globals
