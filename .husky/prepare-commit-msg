@@ -1,0 +1,19 @@
+#!/bin/sh
+#
+# ABOUT: a git prepare-commit-msg hook for automatically postfixing
+# an ticket number to commit messages based on the branch name
+
+# check if commit is merge commit or a commit ammend
+[[ $2 = "merge" || $2 = "commit" ]] && exit
+
+# Regex: looks for CSS or JIRA followed by either a dash, underscore, or nothing and then a number; case insensitive
+ISSUE_KEY=`git rev-parse --abbrev-ref HEAD | sed -r 's/^.*[CSS|JIRA][-|_]{0,1}([0-9]+).*$/CSS-\1/I'`
+
+# If the parse above returns the full branch name, default to the original message
+# Must quote variable and the command to compare strings in bash
+[[ "$ISSUE_KEY" == "$(git rev-parse --abbrev-ref HEAD)" ]] && exit
+
+# issue key matched from branch prefix, postfix to commit message
+TEMP=`mktemp /tmp/commitmsg-XXXXX`
+(echo "$(cat  $1) [$ISSUE_KEY]") > $TEMP
+cat $TEMP > $1
