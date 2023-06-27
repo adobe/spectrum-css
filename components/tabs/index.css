@@ -164,20 +164,20 @@ governing permissions and limitations under the License.
 			var(--spectrum-accent-content-color-default)
 		);
 	}
+}
 
-	&.spectrum-Tabs--vertical {
-		--mod-tabs-list-background-direction: var(
-			--mod-tabs-list-background-direction-vertical,
-			right
-		);
-	}
+.spectrum-Tabs--vertical {
+	--mod-tabs-list-background-direction: var(
+		--mod-tabs-list-background-direction-vertical,
+		right
+	);
+}
 
-	&.spectrum-Tabs--vertical-right {
-		--mod-tabs-list-background-direction: var(
-			--mod-tabs-list-background-direction-vertical-right,
-			left
-		);
-	}
+.spectrum-Tabs--vertical-right {
+	--mod-tabs-list-background-direction: var(
+		--mod-tabs-list-background-direction-vertical-right,
+		left
+	);
 }
 
 [dir="rtl"] .spectrum-Tabs--vertical {
@@ -563,6 +563,7 @@ governing permissions and limitations under the License.
 	.spectrum-Tabs-selectionIndicator {
 		position: absolute;
 		inset-inline-start: 0;
+		inset-block-start: 0;
 		inline-size: var(
 			--mod-tabs-divider-size,
 			var(--spectrum-tabs-divider-size)
@@ -575,8 +576,6 @@ governing permissions and limitations under the License.
 		inset-inline: auto 0;
 	}
 }
-
-
 
 @media (forced-colors: active) {
 	.spectrum-Tabs {
