@@ -3,6 +3,30 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+<a name="4.0.0"></a>
+#4.0.0
+🗓
+2023-06-22 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/accordion@3.0.50...@spectrum-css/accordion@4.0.0)
+
+\*feat(accordion)!: migrate to Spectrum Tokens (#1789)([c8be0af](https://github.com/adobe/spectrum-css/commit/c8be0af)), closes[#1789](https://github.com/adobe/spectrum-css/issues/1789)
+
+    	###
+    	🛑 BREAKING CHANGES
+
+    		*
+    		migrates the Accordion component to use `@adobe/spectrum-tokens`.
+
+Additionally:
+
+- feat: adds t-shirt sizes
+
+<a name="3.0.50"></a>
+##3.0.50
+🗓
+2023-06-21 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/accordion@3.0.49...@spectrum-css/accordion@3.0.50)
+
+**Note:** Version bump only for package @spectrum-css/accordion
+
 <a name="3.0.49"></a>
 ##3.0.49
 🗓
