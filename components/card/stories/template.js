@@ -108,11 +108,6 @@ export const Template = ({
                 ${when(description, () => html`<div class="${rootClass}-description">${description}</div>`)}
               </div>`
             )}
-            ${footer ? 
-              Divider({
-                size: 's'
-              })
-            : ''}
           </div>`
       )}
       ${when(footer, () => html`
