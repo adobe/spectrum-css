@@ -68,7 +68,7 @@ governing permissions and limitations under the License.
   --spectrum-sidenav-text-font-weight: var(--spectrum-regular-font-weight);
   --spectrum-sidenav-text-font-style: var(--spectrum-default-font-style);
   --spectrum-sidenav-text-font-size: var(--spectrum-font-size-100);
-  --spectrum-sidenav-text-line-height: var(--spectrum-line-height-100);
+  --spectrum-sidenav-text-line-height: 1.2;
   &:lang(ja),
   &:lang(zh),
   &:lang(ko) {
@@ -79,7 +79,7 @@ governing permissions and limitations under the License.
   --spectrum-sidenav-top-level-font-weight: var(--spectrum-bold-font-weight);
   --spectrum-sidenav-top-level-font-style: var(--spectrum-default-font-style);
   --spectrum-sidenav-top-level-font-size: var(--spectrum-font-size-100);
-  --spectrum-sidenav-top-level-line-height: var(--spectrum-line-height-100);
+  --spectrum-sidenav-top-level-line-height: 1.2;
   &:lang(ja),
   &:lang(zh),
   &:lang(ko) {
@@ -90,7 +90,7 @@ governing permissions and limitations under the License.
   --spectrum-sidenav-header-font-weight: var(--spectrum-medium-font-weight);
   --spectrum-sidenav-header-font-style: var(--spectrum-default-font-style);
   --spectrum-sidenav-header-font-size: var(--spectrum-font-size-75);
-  --spectrum-sidenav-header-line-height: var(--spectrum-line-height-100);
+  --spectrum-sidenav-header-line-height: 1.2;
   &:lang(ja),
   &:lang(zh),
   &:lang(ko) {
