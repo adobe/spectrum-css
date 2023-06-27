@@ -147,7 +147,7 @@ export const Quiet = Template.bind({});
 Quiet.args = {
   title: "Name",
   showAsset: "image",
-  image: "example-ava@2x.jpg",
+  image: "example-ava@2x.png",
   description: "10/15/18",
   isQuiet: true,
 };
