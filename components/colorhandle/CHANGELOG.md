@@ -3,6 +3,15 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+<a name="5.0.11"></a>
+##5.0.11
+🗓
+2023-06-28 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/colorhandle@5.0.10...@spectrum-css/colorhandle@5.0.11)
+
+### 🐛 Bug fixes
+
+- **colorloupe:**border bug ([#1958](https://github.com/adobe/spectrum-css/issues/1958))([559696f](https://github.com/adobe/spectrum-css/commit/559696f))
+
 <a name="5.0.10"></a>
 ##5.0.10
 🗓

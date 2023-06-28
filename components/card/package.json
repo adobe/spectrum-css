@@ -1,6 +1,6 @@
 {
   "name": "@spectrum-css/card",
-  "version": "6.0.0-beta.1",
+  "version": "6.0.0",
   "description": "The Spectrum CSS card component",
   "license": "Apache-2.0",
   "author": "Adobe",
@@ -33,8 +33,8 @@
     "@spectrum-css/component-builder-simple": "^2.0.6",
     "@spectrum-css/icon": "^3.0.49",
     "@spectrum-css/quickaction": "^3.0.65",
-    "@spectrum-css/typography": "^5.0.24",
     "@spectrum-css/tokens": "^10.0.0",
+    "@spectrum-css/typography": "^5.0.24",
     "gulp": "^4.0.0"
   },
   "publishConfig": {
