@@ -9,16 +9,6 @@ export default {
 		"The action button component represents an action a user can take.",
 	component: "ActionButton",
 	argTypes: {
-		size: {
-			name: "Size",
-			type: { name: "string", required: true },
-			table: {
-				type: { summary: "string" },
-				category: "Component",
-			},
-			options: ["xs", "s", "m", "l", "xl"],
-			control: "select",
-		},
 		iconName: {
 			...(IconStories?.argTypes?.iconName ?? {}),
 			if: false,
