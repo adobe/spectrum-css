@@ -25,6 +25,13 @@ governing permissions and limitations under the License.
     --spectrum-actionbutton-background-color-disabled: var(--spectrum-disabled-background-color);
     --spectrum-actionbutton-border-color-disabled: transparent;
 
+    &.spectrum-ActionButton--quiet {
+      --spectrum-actionbutton-background-color-default: transparent;
+      --spectrum-actionbutton-background-color-hover: var(--spectrum-gray-300);
+      --spectrum-actionbutton-background-color-down: var(--spectrum-gray-400);
+      --spectrum-actionbutton-background-color-focus: var(--spectrum-gray-300);
+    }
+
     &.is-selected {
       --spectrum-actionbutton-background-color-default: var(--spectrum-neutral-background-color-default);
       --spectrum-actionbutton-background-color-hover: var(--spectrum-neutral-background-color-hover);
