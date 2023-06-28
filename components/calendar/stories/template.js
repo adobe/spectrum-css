@@ -3,6 +3,7 @@ import { classMap } from "lit/directives/class-map.js";
 import { repeat } from "lit/directives/repeat.js";
 import { ifDefined } from "lit/directives/if-defined.js";
 
+import isChromatic from "chromatic/isChromatic";
 import { useArgs, useGlobals } from "@storybook/client-api";
 import { action } from "@storybook/addon-actions";
 
@@ -71,7 +72,7 @@ export const Template = ({
 	 */
 	const generateMonthArray = ({ selectedDate, lastSelectedDate }) => {
 		/* Fetch a clean (time-free) version of today's date */
-		const today = new Date();
+		const today = !isChromatic() ? new Date() : displayedDate;
 		today.setHours(0, 0, 0, 0);
 		const todayDatetime = today.getTime();
 
