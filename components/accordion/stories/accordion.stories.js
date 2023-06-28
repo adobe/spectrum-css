@@ -8,9 +8,40 @@ export default {
 	component: "Accordion",
 	argTypes: {
 		items: { table: { disable: true } },
+		size: {
+			name: "Size",
+			type: { name: "string", required: true },
+			table: {
+				type: { summary: "string" },
+				category: "Component",
+			},
+			options: ["s", "m", "l", "xl"],
+			control: "select",
+		},
+		disableAll: {
+			name: "Disabled",
+			type: { name: "boolean" },
+			table: {
+				type: { summary: "boolean" },
+				category: "State",
+			},
+			control: "boolean",
+		},
+		density: {
+			name: "Density",
+			type: { name: "string", required: true },
+			table: {
+				type: { summary: "string" },
+				category: "Component",
+			},
+			options: ["compact", "regular", "spacious"],
+			control: "select",
+		},
 	},
 	args: {
 		rootClass: "spectrum-Accordion",
+		size: "m",
+		density: "regular",
 	},
 	parameters: {
 		actions: {

@@ -4,8 +4,10 @@
 **/node_modules
 
 components/*/dist
+components/expressvars/custom.css
 components/expressvars/css/**/*.css
 components/vars/css/**/*.css
+components/vars/custom.css
 components/tokens/custom-*/*.css
 tools/preview/storybook-static/**
 tools/generator
