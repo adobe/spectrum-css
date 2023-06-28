@@ -138,7 +138,6 @@ export const Template = ({
 							thisYear += 1;
 						}
 					}
-
 					const thisDate = new Date(
 						thisYear,
 						displayedMonth,
@@ -176,7 +175,6 @@ export const Template = ({
 				})
 			);
 	};
-
 	if (!onDateClick || typeof onDateClick !== "function") {
 		/**
 		 * @param {DateMetadata} thisDay
@@ -311,7 +309,7 @@ export const Template = ({
 										role="gridcell"
 										class="${rootClass}-tableCell"
 										tabindex=${!thisDay.isOutsideMonth ? "-1" : ""}
-										aria-disabled=${thisDay.isOutsideMonth || thisDay.isDisabled
+										aria-disabled=${thisDay.isDisabled
 											? "true"
 											: "false"}
 										aria-selected=${thisDay.isSelected === true
@@ -327,7 +325,7 @@ export const Template = ({
 											role="presentation"
 											class=${classMap({
 												[`${rootClass}-date`]: true,
-												"is-outsideMonth": thisDay.isOutsideMonth,
+												"is-outsideMonth": thisDay.date.getMonth() !== displayedMonth,
 												"is-today": thisDay.isToday,
 												// "is-focused": thisDay.isSelected, @todo
 												"is-range-selection": thisDay.isInRange,
