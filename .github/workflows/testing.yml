@@ -14,7 +14,7 @@ jobs:
   vrt:
     name: Visual regression testing
     # Run VRT only if the PR is not a draft and has the label 'run_vrt' and does not have the label 'skip_vrt'
-    if: github.event.pull_request.draft != false || (github.event.pull_request.draft == false && contains(github.event.pull_request.labels.*.name, 'run_vrt'))
+    if: github.event.pull_request.draft != true || (github.event.pull_request.draft == true && contains(github.event.pull_request.labels.*.name, 'run_vrt'))
 
     runs-on: ubuntu-latest
 
