@@ -82,3 +82,15 @@ export default {
 
 export const Default = Template.bind({});
 Default.args = {};
+
+export const AllThemes = Template.bind({});
+AllThemes.args = {...Default.args}
+AllThemes.parameters = {
+  themesDisplay: 'side-by-side',
+}
+
+export const RTL = Template.bind({});
+RTL.args = {...Default.args};
+RTL.parameters = { 
+  textDirection: 'rtl'
+}

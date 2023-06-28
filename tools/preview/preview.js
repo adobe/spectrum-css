@@ -3,6 +3,7 @@ import {
 	withTextDirectionWrapper,
 	withLanguageWrapper,
 	withReducedMotionWrapper,
+  withThemesDisplayWrapper
 	// withSizingWrapper,
 } from "./decorators/index.js";
 import { withActions } from "@storybook/addon-actions/decorator";
@@ -76,6 +77,20 @@ export const globalTypes = {
 			dynamicTitle: true,
 		},
 	},
+  themesDisplay: {
+    title: "Themes Display",
+    description: "Show all themes at once",
+    showName: true,
+    defaultValue: 'default',
+    toolbar: {
+      items: [
+        {value: 'default', icon: 'browser', title: 'default', right: 'default'},
+        {value: 'stacked', icon: 'bottombar', title: 'stacked', right: 'stacked'},
+        {value: 'side-by-side', icon: 'sidebaralt', title: 'side-by-side', right: 'side-by-side'}
+      ],
+      dynamicTitle: true,
+    }
+  },
 };
 
 // Global properties added to each component;
@@ -223,6 +238,7 @@ export const decorators = [
 	withReducedMotionWrapper,
 	withContextWrapper,
 	withActions,
+  withThemesDisplayWrapper
 ];
 
 export default {
