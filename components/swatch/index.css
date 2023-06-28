@@ -86,6 +86,10 @@ governing permissions and limitations under the License.
       forced-color-adjust: none;
     }
   }
+  .spectrum-Swatch[disabled],
+  .spectrum-Swatch.is-disabled {
+    --highcontrast-swatch-border-color: GrayText;
+  }
 }
 
 /* Swatch styles */
