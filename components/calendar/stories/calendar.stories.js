@@ -75,7 +75,7 @@ export default {
 			control: "boolean",
 		},
 		useDOWAbbrev: {
-			name: "Use abbreviated day of week",
+			name: "Use 3 letter abbreviation for day of week",
 			type: { name: "boolean" },
 			table: {
 				type: { summary: "boolean" },
@@ -115,7 +115,6 @@ Default.args = {
 
 export const RangeSelection = Template.bind({});
 RangeSelection.args = {
-	scale: "large",
 	month: months[6],
 	selectedDay: new Date(2023, 6, 3),
 	lastDay: new Date(2023, 6, 7),

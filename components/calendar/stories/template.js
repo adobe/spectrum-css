@@ -1,5 +1,6 @@
 import { html } from "lit";
 import { classMap } from "lit/directives/class-map.js";
+import { styleMap } from "lit/directives/style-map.js";
 import { repeat } from "lit/directives/repeat.js";
 import { ifDefined } from "lit/directives/if-defined.js";
 
@@ -27,6 +28,9 @@ export const Template = ({
 	previousHandler,
 	nextHandler,
 	id,
+	style = {
+		"--mod-actionbutton-icon-size": "10px",
+	},
 	...globals
 }) => {
 	const [_, updateArgs] = useArgs();
@@ -226,6 +230,7 @@ export const Template = ({
 				[`${rootClass}--padded`]: padded,
 				...customClasses.reduce((a, c) => ({ ...a, [c]: true }), {}),
 			})}
+			style=${ifDefined(styleMap(style))}
 			id=${ifDefined(id)}
 		>
 			<div class="${rootClass}-header">
@@ -324,7 +329,7 @@ export const Template = ({
 												[`${rootClass}-date`]: true,
 												"is-outsideMonth": thisDay.isOutsideMonth,
 												"is-today": thisDay.isToday,
-												"is-focused": thisDay.isSelected,
+												// "is-focused": thisDay.isSelected, @todo
 												"is-range-selection": thisDay.isInRange,
 												// "is-range-start": thisDay.isRangeStart, @todo
 												// "is-range-end": thisDay.isRangeEnd, @todo
