@@ -230,7 +230,7 @@ governing permissions and limitations under the License.
     --mod-table-thumbnail-size: var(--mod-table-thumbnail-size-compact, var(--spectrum-thumbnail-size-50));
   }
 
-  &.spectrum-Table--SizeL {
+  &.spectrum-Table--sizeL {
     /* Size and Spacing */
     --mod-table-min-row-height: var(--mod-table-min-row-height--compact, var(--spectrum-table-row-height-large-compact));
     --mod-table-row-top-to-text: var(--mod-table-row-top-to-text--compact, var(--spectrum-table-row-top-to-text-large-compact));
@@ -244,7 +244,7 @@ governing permissions and limitations under the License.
     --mod-table-thumbnail-size: var(--mod-table-thumbnail-size-compact, var(--spectrum-thumbnail-size-300));
   }
 
-  &.spectrum-Table--SizeXL {
+  &.spectrum-Table--sizeXL {
     /* Size and Spacing */
     --mod-table-min-row-height: var(--mod-table-min-row-height--compact, var(--spectrum-table-row-height-extra-large-compact));
     --mod-table-row-top-to-text: var(--mod-table-row-top-to-text--compact, var(--spectrum-table-row-top-to-text-extra-large-compact));
@@ -286,7 +286,7 @@ governing permissions and limitations under the License.
     --mod-table-thumbnail-size: var(--mod-table-thumbnail-size-spacious, var(--spectrum-thumbnail-size-300));
   }
 
-  &.spectrum-Table--SizeL {
+  &.spectrum-Table--sizeL {
     /* Size and Spacing */
     --mod-table-min-row-height: var(--mod-table-min-row-height--spacious, var(--spectrum-table-row-height-large-spacious));
     --mod-table-row-top-to-text: var(--mod-table-row-top-to-text--spacious, var(--spectrum-table-row-top-to-text-large-spacious));
@@ -300,7 +300,7 @@ governing permissions and limitations under the License.
     --mod-table-thumbnail-size: var(--mod-table-thumbnail-size-spacious, var(--spectrum-thumbnail-size-700));
   }
 
-  &.spectrum-Table--SizeXL {
+  &.spectrum-Table--sizeXL {
     /* Size and Spacing */
     --mod-table-min-row-height: var(--mod-table-min-row-height--spacious, var(--spectrum-table-row-height-extra-large-spacious));
     --mod-table-row-top-to-text: var(--mod-table-row-top-to-text--spacious, var(--spectrum-table-row-top-to-text-extra-large-spacious));
@@ -333,9 +333,16 @@ governing permissions and limitations under the License.
     --highcontrast-table-icon-color: CanvasText;
     --highcontrast-table-icon-color-focus: Highlight;
 
-    --highcontrast-table-selected-row-background-color: SelectedItem;
-    --highcontrast-table-selected-row-text-color: SelectedItemText;
-    --highcontrast-table-selected-row-text-color-default: SelectedItemText;
+    --highcontrast-table-selected-row-background-color: Highlight;
+    --highcontrast-table-selected-row-text-color: HighlightText;
+    --highcontrast-table-selected-row-text-color-default: HighlightText;
+
+    @supports (color: SelectedItem) {
+      --highcontrast-table-selected-row-background-color: SelectedItem;
+      --highcontrast-table-selected-row-text-color: SelectedItemText;
+      --highcontrast-table-selected-row-text-color-default: SelectedItemText;
+    }
+
     --highcontrast-table-selected-row-background-color-focus: Highlight;
     --highcontrast-table-selected-row-text-color-focus: HighlightText;
     --highcontrast-table-row-background-color-hover: Highlight;
