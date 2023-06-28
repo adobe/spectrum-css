@@ -35,6 +35,7 @@ export default {
 				category: "Component",
 			},
 			control: "date",
+			if: { arg: "isDisabled", truthy: false },
 		},
 		lastDay: {
 			name: "Range end (date)",
@@ -127,4 +128,12 @@ export const TodayHighlighted = Template.bind({});
 TodayHighlighted.args = {
 	month: isChromatic() ? months[0] : months[new Date().getMonth()],
 	year: isChromatic() ? 2021 : new Date().getFullYear(),
+};
+
+export const Disabled = Template.bind({});
+Disabled.args = {
+	month: months[6],
+	selectedDay: new Date(2023, 6, 3),
+	year: 2023,
+	isDisabled: true
 };

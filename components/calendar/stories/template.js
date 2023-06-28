@@ -331,8 +331,7 @@ export const Template = ({
 												"is-selected": thisDay.isSelected,
 												"is-selection-start": thisDay.isRangeStart,
 												"is-selection-end": thisDay.isRangeEnd,
-												"is-disabled":
-													thisDay.isOutsideMonth || thisDay.isDisabled,
+												"is-disabled": isDisabled,
 											})}
 											@click=${onDateClick.bind(null, thisDay)}
 											>${thisDay.date.getDate()}</span
