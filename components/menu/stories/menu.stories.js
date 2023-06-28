@@ -28,6 +28,15 @@ export default {
     labelledby: { table: { disable: true } },
     items: { table: { disable: true } },
     role: { table: { disable: true } },
+    subrole: { table: { disable: true } },
+    customStyles: {
+      description: "Custom styles for testing the story, applied to the parent element.",
+      table: {
+        type: { summary: "object" },
+        category: "Storybook Only",
+      },
+      if: { arg: 'customStyles' }
+    }
   },
   args: {
     rootClass: "spectrum-Menu",
@@ -84,8 +93,8 @@ MenuWithSections.args = {
   ],
 };
 
-export const MenuWithCheckbox = Template.bind({});
-MenuWithCheckbox.args = {
+export const MenuWithCheckmark = Template.bind({});
+MenuWithCheckmark.args = {
   role: "listbox",
   subrole: "option",
   isSelectable: true,
@@ -95,7 +104,7 @@ MenuWithCheckbox.args = {
       heading: "San Francisco",
       id: "menu-heading-sf",
       items: [
-        { label: "Financial District", isSelected: true },
+        { label: "Financial District" },
         { label: "South of Market" },
         { label: "North Beach" },
       ],
@@ -119,27 +128,138 @@ MenuWithCheckbox.args = {
   ],
 };
 
-// export const Submenu = Template.bind({});
-// Submenu.args = {
-//   items: [
-//     {
-//       heading: 'Notifications',
-//       idx: 1,
-//       items: [
-//         { label: 'Push notifications', isToggle: true },
-//         { label: 'Badges', isToggle: true,  },
-//       ],
-//     },
-//     { label: 'Deselect' },
-//     { label: 'Select Inverse' },
-//     {
-//       label: 'Feather...',
-//       items: [
-//         { label: 'Deselect' },
-//         { label: 'Select and Mask...' },
-//       ]
-//     },
-//     { label: 'Select and Mask...' },
-//     { label: 'Save Selection' }
-//   ]
-// };
+export const IconsAndDescriptions = Template.bind({});
+IconsAndDescriptions.parameters = {
+	docs: {
+		description: {
+			story:
+				"A few different variants and states are demonstrated in this story. Menu items are shown with icons, with short descriptions, and with both. A selected item and a disabled item are shown for each.",
+		},
+	},
+};
+IconsAndDescriptions.args = {
+  role: "listbox",
+  subrole: "option",
+  isSelectable: true,
+  customStyles: {'max-width': '400px'},
+  items: [
+    {
+      idx: 1,
+      heading: "With Icons",
+      id: "menu-heading-with-icons",
+      items: [
+        {
+          label: "Default Menu Item",
+          iconName: "Export"
+        },
+        {
+          label: "Focused Menu Item",
+          iconName: "FolderOpen",
+          isFocused: true
+        },
+        {
+          label: "A Menu Item With a Longer Label That Causes The Text to Wrap",
+          iconName: "Share",
+        },
+        {
+          label: "Disabled Menu Item",
+          iconName: "Share",
+          isDisabled: true,
+        },
+      ],
+    },
+    {
+      idx: 2,
+      heading: "With Short Descriptions",
+      id: "menu-heading-short-desc",
+      items: [
+        {
+          label: "Default Menu Item",
+          description: "Short description",
+        },
+        {
+          label: "Focused Menu Item",
+          description: "Another short description",
+          isFocused: true,
+        },
+        {
+          label: "A Menu Item With a Longer Label That Causes The Text to Wrap",
+          description: "A description that is longer than average and is forced to wrap with an example max width.",
+        },
+        {
+          label: "Disabled Menu Item",
+          description: "Menu item description.",
+          isDisabled: true,
+        },
+      ],
+    },
+    {
+      idx: 3,
+      heading: "With Icons and Short Descriptions",
+      id: "menu-heading-desc-and-icon",
+      items: [
+        {
+          label: "Default Menu Item",
+          iconName: "Export",
+          description: "Short description",
+        },
+        {
+          label: "Focused Menu Item",
+          iconName: "FolderOpen",
+          description: "Another short description",
+          isFocused: true,
+        },
+        {
+          label: "A Menu Item With a Longer Label That Causes The Text to Wrap",
+          iconName: "Share",
+          description: "A description that is longer than average and is forced to wrap with an example max width.",
+        },
+        {
+          label: "Disabled Menu Item",
+          iconName: "Share",
+          description: "Menu item description.",
+          isDisabled: true,
+        },
+      ],
+    },
+  ],
+};
+
+export const SingleSelection = Template.bind({});
+SingleSelection.parameters = {
+	docs: {
+		description: {
+			story:
+				"For single selection menu sections, menu items show a single checkmark to indicate the selected item.",
+		},
+	},
+};
+SingleSelection.args = {
+  isSelectable: true,
+  items: [
+    { label: "Marquee", isSelected: true, isChecked: true, },
+    { label: "Add" },
+    { label: "Subtract" },
+  ],
+};
+
+export const SingleSelectionWithIcons = Template.bind({});
+SingleSelectionWithIcons.args = {
+  isSelectable: true,
+  items: [
+    {
+      label: "Marquee",
+      iconName: "Selection",
+      isSelected: true,
+      isChecked: true,
+    },
+    {
+      label: "Add",
+      iconName: "SelectAdd",
+    },
+    {
+      label: "Subtract",
+      iconName: "SelectSubtract",
+    },
+  ],
+};

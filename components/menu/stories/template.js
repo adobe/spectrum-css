@@ -1,5 +1,6 @@
-import { html } from "lit";
+import { html, css } from "lit";
 import { classMap } from "lit/directives/class-map.js";
+import { styleMap } from "lit/directives/style-map.js";
 import { ifDefined } from "lit/directives/if-defined.js";
 import { repeat } from "lit/directives/repeat.js";
 
@@ -11,6 +12,7 @@ import "../index.css";
 export const MenuItem = ({
   rootClass,
   label,
+  description,
   iconName,
   isHighlighted = false,
   isActive = false,
@@ -36,15 +38,30 @@ export const MenuItem = ({
       aria-selected=${isSelected ? "true" : "false"}
       aria-disabled=${isDisabled ? "true" : "false"}
       tabindex=${ifDefined(!isDisabled ? "0" : undefined)}>
-      ${iconName ? Icon({ ...globals, iconName, customClasses: [`${rootClass}Icon`] }) : ""}
+      ${iconName
+        ? Icon({
+            ...globals,
+            iconName,
+            customClasses: [
+              `${rootClass}Icon`,
+              `${rootClass}Icon--workflowIcon`
+            ] 
+          }) : ''}
       <span class="${rootClass}Label">${label}</span>
+      ${typeof description != "undefined" 
+        ? html`<span class="${rootClass}Description">${description}</span>`
+        : ''}
       ${isChecked
         ? Icon({
             ...globals,
             iconName: "Checkmark100",
-            customClasses: ["spectrum-Menu-checkmark", `${rootClass}Icon`],
+            customClasses: [
+              `${rootClass}Icon`,
+              "spectrum-Menu-checkmark",
+              iconName ? 'spectrum-Menu-checkmark--withAdjacentIcon' : 'spectrum-Menu-checkmark--withAdjacentText',
+            ],
           })
-        : ""}
+        : ''}
     </li>
   `;
 
@@ -121,6 +138,7 @@ export const Template = ({
   rootClass = "spectrum-Menu",
   labelledby,
   customClasses = [],
+  customStyles = {},
   isDisabled = false,
   isSelectable = true,
   items = [],
@@ -140,6 +158,7 @@ export const Template = ({
       role=${ifDefined(role)}
       aria-labelledby=${ifDefined(labelledby)}
       aria-disabled=${isDisabled ? "true" : "false"}
+      style=${styleMap(customStyles)}
     >
       ${repeat(items, (i) => {
         if (i.type === "divider")
