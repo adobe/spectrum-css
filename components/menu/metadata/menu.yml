@@ -1126,7 +1126,8 @@ examples:
         </div>
       </div>
   - id: submenu-drillin
-    name: Menu with drill-in
+    name: Drill-in for submenu
+    description: When a menu item contains a submenu, a drill-in chevron will appear at the end of the menu item to show that a submenu is available. See the guidelines for more info on how to display submenus.
     markup: |
       <div class="spectrum-Examples">
         <div class="spectrum-Examples-item">

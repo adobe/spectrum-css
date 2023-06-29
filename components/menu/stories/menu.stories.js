@@ -41,7 +41,7 @@ export default {
   args: {
     rootClass: "spectrum-Menu",
     isDisabled: false,
-    isSelectable: true,
+    isSelectable: false,
   },
   parameters: {
     actions: {
@@ -56,6 +56,7 @@ export default {
 };
 
 export const Default = Template.bind({});
+Default.storyName = "Standard with Dividers";
 Default.args = {
   items: [
     { label: "Deselect" },
@@ -140,7 +141,6 @@ IconsAndDescriptions.parameters = {
 IconsAndDescriptions.args = {
   role: "listbox",
   subrole: "option",
-  isSelectable: true,
   customStyles: {'max-width': '400px'},
   items: [
     {
@@ -261,5 +261,29 @@ SingleSelectionWithIcons.args = {
       label: "Subtract",
       iconName: "SelectSubtract",
     },
+  ],
+};
+
+export const DrillInSubmenu = Template.bind({});
+DrillInSubmenu.storyName = "Drill-in for Submenu";
+DrillInSubmenu.parameters = {
+	docs: {
+		description: {
+			story:
+				"When a menu item contains a submenu, a drill-in chevron will appear at the end of the menu item to show that a submenu is available.",
+		},
+	},
+};
+DrillInSubmenu.args = {
+  items: [
+    { label: "Deselect" },
+    { label: "Select Inverse" },
+    {
+      label: "Feather really long item",
+      isDrillIn: true,
+      isOpen: true,
+    },
+    { label: "Select and Mask..." },
+    { label: "Save Selection" },
   ],
 };

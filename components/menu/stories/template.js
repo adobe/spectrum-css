@@ -20,6 +20,8 @@ export const MenuItem = ({
   isDisabled = false,
   isChecked = false,
   isFocused = false,
+  isDrillIn = false,
+  isOpen = false,
   role = "menuitem",
   id,
   ...globals
@@ -32,6 +34,8 @@ export const MenuItem = ({
         "is-focused": isFocused,
         "is-selected": isSelected,
         "is-disabled": isDisabled,
+        [`${rootClass}--drillIn`]: isDrillIn,
+        "is-open": isOpen,
       })}
       id=${ifDefined(id)}
       role=${ifDefined(role)}
@@ -50,6 +54,16 @@ export const MenuItem = ({
       <span class="${rootClass}Label">${label}</span>
       ${typeof description != "undefined" 
         ? html`<span class="${rootClass}Description">${description}</span>`
+        : ''}
+      ${isDrillIn
+        ? Icon({
+            ...globals,
+            iconName: "ChevronRight100",
+            customClasses: [
+              `${rootClass}Icon`,
+              "spectrum-Menu-chevron",
+            ],
+          })
         : ''}
       ${isChecked
         ? Icon({
