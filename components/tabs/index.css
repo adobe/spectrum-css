@@ -533,6 +533,7 @@ governing permissions and limitations under the License.
 	}
 
 	.spectrum-Tabs-item {
+		block-size: var(--mod-tabs-item-height, var(--spectrum-tabs-item-height));
 		line-height: var(--mod-tabs-item-height, var(--spectrum-tabs-item-height));
 		padding-block: 0;
 
@@ -616,6 +617,33 @@ governing permissions and limitations under the License.
 			&:focus-visible {
 				color: var(--highcontrast-tabs-color-selected);
 			}
+		}
+
+		&.spectrum-Tabs--vertical.spectrum-Tabs--compact .spectrum-Tabs-item {
+			&::before {
+				block-size: 100%;
+				inset-block-start: 0px;
+			}
+		}
+
+		/* Quiet tabs get a bottom border in WHCM */
+		&.spectrum-Tabs--quiet {
+			background: linear-gradient(
+				to
+					var(
+						--mod-tabs-list-background-direction,
+						var(--spectrum-tabs-list-background-direction)
+					),
+				var(
+						--highcontrast-tabs-divider-background-color,
+						var(
+							--mod-tabs-divider-background-color,
+							var(--spectrum-tabs-divider-background-color)
+						)
+					)
+					0 var(--mod-tabs-divider-size, var(--spectrum-tabs-divider-size)),
+				transparent var(--mod-tabs-divider-size, var(--spectrum-tabs-divider-size))
+			);
 		}
 	}
 }
