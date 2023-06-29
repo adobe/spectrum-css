@@ -1,7 +1,7 @@
 import { argTypes, ActionButtons } from "./index";
 
 export default {
-	title: "Components/Action button",
+	title: "Components/Action button/Quiet",
 	description:
 		"The action button component represents an action a user can take.",
 	component: "ActionButton",
@@ -10,7 +10,7 @@ export default {
 		rootClass: "spectrum-ActionButton",
 		size: "m",
 		iconName: "More",
-		isQuiet: false,
+		isQuiet: true,
 		isEmphasized: false,
 		hasPopup: false,
 	},
@@ -47,11 +47,11 @@ SelectedDisabled.args = {
 
 export const Emphasized = ActionButtons.bind({});
 Emphasized.args = {
-	isEmphasized: true
+	isEmphasized: true,
 };
 
 export const SelectedEmphasized = ActionButtons.bind({});
 SelectedEmphasized.args = {
 	isEmphasized: true,
-	isSelected: true
+  isSelected: true
 };
