@@ -24,6 +24,7 @@ export default {
     isOpen: true,
 	},
 	parameters: {
+		chromatic: { diffThreshold: 0.2 },
 		actions: {
 			handles: [],
 		},

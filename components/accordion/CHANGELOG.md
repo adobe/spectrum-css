@@ -3,6 +3,20 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+<a name="4.0.2"></a>
+##4.0.2
+🗓
+2023-06-29 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/accordion@4.0.1...@spectrum-css/accordion@4.0.2)
+
+**Note:** Version bump only for package @spectrum-css/accordion
+
+<a name="4.0.1"></a>
+##4.0.1
+🗓
+2023-06-28 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/accordion@4.0.0...@spectrum-css/accordion@4.0.1)
+
+**Note:** Version bump only for package @spectrum-css/accordion
+
 <a name="4.0.0"></a>
 #4.0.0
 🗓

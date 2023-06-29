@@ -3,6 +3,13 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+<a name="10.2.1"></a>
+##10.2.1
+🗓
+2023-06-29 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/tokens@10.2.0...@spectrum-css/tokens@10.2.1)
+
+**Note:** Version bump only for package @spectrum-css/tokens
+
 <a name="10.2.0"></a>
 #10.2.0
 🗓
