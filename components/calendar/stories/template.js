@@ -1,5 +1,6 @@
 import { html } from "lit";
 import { classMap } from "lit/directives/class-map.js";
+import { styleMap } from "lit/directives/style-map.js";
 import { repeat } from "lit/directives/repeat.js";
 import { ifDefined } from "lit/directives/if-defined.js";
 
@@ -27,6 +28,9 @@ export const Template = ({
 	previousHandler,
 	nextHandler,
 	id,
+	style = {
+		"--mod-actionbutton-icon-size": "10px",
+	},
 	...globals
 }) => {
 	const [_, updateArgs] = useArgs();
@@ -107,17 +111,28 @@ export const Template = ({
 			displayedMonth + 1,
 			0
 		).getDate();
+
 		const firstDOWInMonth = new Date(displayedYear, displayedMonth, 1).getDay(); // 0 = Sunday
 
+		let weeksInMonth = Math.ceil(lastDateInMonth / DOW.length);
+		const orphanedDays = lastDateInMonth % DOW.length;
+
+		if (firstDOWInMonth > DOW.length - orphanedDays) {
+			weeksInMonth++;
+		}
+		if (displayedMonth === 1 && firstDOWInMonth > 0) { // accounts for Feburary
+			weeksInMonth++;
+		}
+
 		/* This is generating a nested array with the  */
-		return new Array(Math.ceil(lastDateInMonth / DOW.length))
+		return new Array(Math.ceil(weeksInMonth))
 			.fill(0)
 			.map((_val, idx) =>
 				new Array(DOW.length).fill(0).map((_v, i) => {
 					const thisDay = idx * DOW.length + i + 1 - firstDOWInMonth;
 					const isOutsideMonth =
-						displayedDate.getDate() < 1 ||
-						displayedDate.getDate() > lastDateInMonth;
+						thisDay < 1 ||
+						thisDay > lastDateInMonth;
 					/* Determine if this entry exists within this month or the next or prev month */
 					let thisMonth = !isOutsideMonth
 						? displayedMonth
@@ -134,7 +149,6 @@ export const Template = ({
 							thisYear += 1;
 						}
 					}
-
 					const thisDate = new Date(
 						thisYear,
 						displayedMonth,
@@ -172,7 +186,6 @@ export const Template = ({
 				})
 			);
 	};
-
 	if (!onDateClick || typeof onDateClick !== "function") {
 		/**
 		 * @param {DateMetadata} thisDay
@@ -226,6 +239,7 @@ export const Template = ({
 				[`${rootClass}--padded`]: padded,
 				...customClasses.reduce((a, c) => ({ ...a, [c]: true }), {}),
 			})}
+			style=${ifDefined(styleMap(style))}
 			id=${ifDefined(id)}
 		>
 			<div class="${rootClass}-header">
@@ -306,7 +320,7 @@ export const Template = ({
 										role="gridcell"
 										class="${rootClass}-tableCell"
 										tabindex=${!thisDay.isOutsideMonth ? "-1" : ""}
-										aria-disabled=${thisDay.isOutsideMonth || thisDay.isDisabled
+										aria-disabled=${thisDay.isDisabled
 											? "true"
 											: "false"}
 										aria-selected=${thisDay.isSelected === true
@@ -324,15 +338,14 @@ export const Template = ({
 												[`${rootClass}-date`]: true,
 												"is-outsideMonth": thisDay.isOutsideMonth,
 												"is-today": thisDay.isToday,
-												"is-focused": thisDay.isSelected,
+												// "is-focused": thisDay.isSelected, @todo
 												"is-range-selection": thisDay.isInRange,
 												// "is-range-start": thisDay.isRangeStart, @todo
 												// "is-range-end": thisDay.isRangeEnd, @todo
 												"is-selected": thisDay.isSelected,
 												"is-selection-start": thisDay.isRangeStart,
 												"is-selection-end": thisDay.isRangeEnd,
-												"is-disabled":
-													thisDay.isOutsideMonth || thisDay.isDisabled,
+												"is-disabled": isDisabled,
 											})}
 											@click=${onDateClick.bind(null, thisDay)}
 											>${thisDay.date.getDate()}</span
