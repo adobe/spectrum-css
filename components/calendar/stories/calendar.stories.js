@@ -113,6 +113,10 @@ Default.args = {
 	year: 2023,
 };
 
+export const DefaultRTL = Template.bind({});
+DefaultRTL.args = {...Default.args};
+DefaultRTL.parameters = {textDirection: "rtl"}
+
 export const RangeSelection = Template.bind({});
 RangeSelection.args = {
 	month: months[6],
