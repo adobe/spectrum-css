@@ -111,10 +111,21 @@ export const Template = ({
 			displayedMonth + 1,
 			0
 		).getDate();
+
 		const firstDOWInMonth = new Date(displayedYear, displayedMonth, 1).getDay(); // 0 = Sunday
 
+		let weeksInMonth = Math.ceil(lastDateInMonth / DOW.length);
+		let orphanedDays = lastDateInMonth % DOW.length;
+
+		if (firstDOWInMonth > DOW.length - orphanedDays) {
+			weeksInMonth++;
+		}
+		if (lastDateInMonth === 28) { // accounts for Feburary since 28 % DOW.length is 0
+			weeksInMonth++;
+		}
+
 		/* This is generating a nested array with the  */
-		return new Array(Math.ceil(lastDateInMonth / DOW.length))
+		return new Array(Math.ceil(weeksInMonth))
 			.fill(0)
 			.map((_val, idx) =>
 				new Array(DOW.length).fill(0).map((_v, i) => {
@@ -123,6 +134,7 @@ export const Template = ({
 						displayedDate.getDate() < 1 ||
 						displayedDate.getDate() > lastDateInMonth;
 					/* Determine if this entry exists within this month or the next or prev month */
+					console.log('isoutsidemonth', isOutsideMonth)
 					let thisMonth = !isOutsideMonth
 						? displayedMonth
 						: displayedMonth + (thisDay < 1 ? -1 : 1);
