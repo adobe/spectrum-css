@@ -255,22 +255,13 @@ a.spectrum-Button {
         --highcontrast-button-content-color-default: ButtonFace;
         --highcontrast-button-background-color-disabled: ButtonFace;
 
-
-
-        /* simplified for a lot of state for high contrast mode */
-        &:active,
-        &:hover,
-        &:focus-ring,
-        &.is-focused {
-          background-color: Highlight;
-        }
-        .spectrum-Button-label {
-          forced-color-adjust: none;
-        }
-
-        &:disabled {
-          background-color: ButtonFace;
-        }
+        --highcontrast-button-background-color-hover: Highlight;
+        --highcontrast-button-background-color-down: Highlight;
+        --highcontrast-button-background-color-focus: Highlight;
+        --highcontrast-button-content-color-hover: ButtonFace;
+        --highcontrast-button-content-color-down: ButtonFace;
+        --highcontrast-button-content-color-focus: ButtonFace;
+        
       }
     }
   }
