@@ -21,7 +21,7 @@ governing permissions and limitations under the License.
 	);
 	--spectrum-tabs-start-to-edge: var(--spectrum-tab-item-start-to-edge-medium);
 	--spectrum-tabs-top-to-text: var(--spectrum-tab-item-top-to-text-medium);
-	--spectrum-tabs-bottom-to-text: var(--spectrum-tab-item-top-to-text-medium);
+	--spectrum-tabs-bottom-to-text: var(--spectrum-tab-item-bottom-to-text-medium);
 
 	--spectrum-tabs-icon-size: var(--spectrum-workflow-icon-size-75);
 	--spectrum-tabs-icon-to-text: var(--spectrum-text-to-visual-100);
@@ -79,7 +79,7 @@ governing permissions and limitations under the License.
 		);
 		--spectrum-tabs-start-to-edge: var(--spectrum-tab-item-start-to-edge-small);
 		--spectrum-tabs-top-to-text: var(--spectrum-tab-item-top-to-text-small);
-		--spectrum-tabs-bottom-to-text: var(--spectrum-tab-item-top-to-text-small);
+		--spectrum-tabs-bottom-to-text: var(--spectrum-tab-item-bottom-to-text-small);
 	
 		--spectrum-tabs-icon-size: var(--spectrum-workflow-icon-size-50);
 		--spectrum-tabs-icon-to-text: var(--spectrum-text-to-visual-75);
@@ -103,7 +103,7 @@ governing permissions and limitations under the License.
 		);
 		--spectrum-tabs-start-to-edge: var(--spectrum-tab-item-start-to-edge-large);
 		--spectrum-tabs-top-to-text: var(--spectrum-tab-item-top-to-text-large);
-		--spectrum-tabs-bottom-to-text: var(--spectrum-tab-item-top-to-text-large);
+		--spectrum-tabs-bottom-to-text: var(--spectrum-tab-item-bottom-to-text-large);
 	
 		--spectrum-tabs-icon-size: var(--spectrum-workflow-icon-size-100);
 		--spectrum-tabs-icon-to-text: var(--spectrum-text-to-visual-200);
@@ -130,7 +130,7 @@ governing permissions and limitations under the License.
 		);
 		--spectrum-tabs-top-to-text: var(--spectrum-tab-item-top-to-text-extra-large);
 		--spectrum-tabs-bottom-to-text: var(
-			--spectrum-tab-item-top-to-text-extra-large
+			--spectrum-tab-item-bottom-to-text-extra-large
 		);
 	
 		--spectrum-tabs-icon-size: var(--spectrum-workflow-icon-size-200);
