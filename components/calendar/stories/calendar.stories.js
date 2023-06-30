@@ -83,7 +83,7 @@ export default {
 			},
 			control: "boolean",
 		},
-		buttonSize: ActionButtonStories.argTypes.size ?? {
+		buttonSize: {
 			table: { disable: true },
 		},
 	},
