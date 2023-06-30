@@ -134,9 +134,6 @@ export const Template = ({
 						thisDay < 1 ||
 						thisDay > lastDateInMonth;
 					/* Determine if this entry exists within this month or the next or prev month */
-					console.log('disaplyedDate', displayedDate)
-					console.log('thisDay', thisDay)
-					console.log('isoutsidemonth', isOutsideMonth)
 					let thisMonth = !isOutsideMonth
 						? displayedMonth
 						: displayedMonth + (thisDay < 1 ? -1 : 1);
