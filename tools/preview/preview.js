@@ -1,5 +1,6 @@
 import isChromatic from "chromatic/isChromatic";
 
+import DocumentationTemplate from './DocumentationTemplate.mdx';
 import {
 	withContextWrapper,
 	withTextDirectionWrapper,
@@ -209,6 +210,7 @@ export const parameters = {
 		},
 	},
 	docs: {
+    page: DocumentationTemplate,
 		story: {
 			inline: true,
 			iframeHeight: "200px",
