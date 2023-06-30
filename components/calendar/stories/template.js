@@ -115,12 +115,12 @@ export const Template = ({
 		const firstDOWInMonth = new Date(displayedYear, displayedMonth, 1).getDay(); // 0 = Sunday
 
 		let weeksInMonth = Math.ceil(lastDateInMonth / DOW.length);
-		let orphanedDays = lastDateInMonth % DOW.length;
+		const orphanedDays = lastDateInMonth % DOW.length;
 
 		if (firstDOWInMonth > DOW.length - orphanedDays) {
 			weeksInMonth++;
 		}
-		if (lastDateInMonth === 28) { // accounts for Feburary since 28 % DOW.length is 0
+		if (displayedMonth === 1 && firstDOWInMonth > 0) { // accounts for Feburary
 			weeksInMonth++;
 		}
 
