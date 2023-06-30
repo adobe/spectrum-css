@@ -131,9 +131,11 @@ export const Template = ({
 				new Array(DOW.length).fill(0).map((_v, i) => {
 					const thisDay = idx * DOW.length + i + 1 - firstDOWInMonth;
 					const isOutsideMonth =
-						displayedDate.getDate() < 1 ||
-						displayedDate.getDate() > lastDateInMonth;
+						thisDay < 1 ||
+						thisDay > lastDateInMonth;
 					/* Determine if this entry exists within this month or the next or prev month */
+					console.log('disaplyedDate', displayedDate)
+					console.log('thisDay', thisDay)
 					console.log('isoutsidemonth', isOutsideMonth)
 					let thisMonth = !isOutsideMonth
 						? displayedMonth
@@ -337,7 +339,7 @@ export const Template = ({
 											role="presentation"
 											class=${classMap({
 												[`${rootClass}-date`]: true,
-												"is-outsideMonth": thisDay.date.getMonth() !== displayedMonth,
+												"is-outsideMonth": thisDay.isOutsideMonth,
 												"is-today": thisDay.isToday,
 												// "is-focused": thisDay.isSelected, @todo
 												"is-range-selection": thisDay.isInRange,
