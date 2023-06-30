@@ -229,9 +229,6 @@ governing permissions and limitations under the License.
     font-style: var(--mod-sidenav-top-level-font-style, var(--spectrum-sidenav-top-level-font-style));
     font-size: var(--mod-sidenav-top-level-font-size, var(--spectrum-sidenav-top-level-font-size));
     line-height: var(--mod-sidenav-top-level-line-height, var(--spectrum-sidenav-top-level-line-height));
-    &:hover {
-      color: var(--highcontrast-sidenav-top-level-color-hover);
-    }
   }
 
   .spectrum-SideNav {
@@ -286,7 +283,6 @@ governing permissions and limitations under the License.
     --highcontrast-sidenav-background-key-focus: Highlight;
 
     --highcontrast-sidenav-top-level-font-color: ButtonText;
-    --highcontrast-sidenav-top-level-color-hover: HighlightText;
     --highcontrast-sidenav-content-color-default: ButtonText;
     --highcontrast-sidenav-content-color-down: HighlightText;
   }
