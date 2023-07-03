@@ -169,3 +169,13 @@ Focused.args = {
 	isFocused: true,
 	content: [MenuStories(MenuStories.args)],
 };
+
+export const WithForcedColors = Template.bind({
+  parameters: {
+    // Sets the forced-colors media feature for a specific story.
+    chromatic: { forcedColors: 'active' },
+  },
+});
+WithForcedColors.args = {
+	content: [MenuStories(MenuStories.args)],
+}
