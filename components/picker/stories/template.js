@@ -13,6 +13,7 @@ import "../index.css";
 export const PickerButton = ({
 	rootClass = "spectrum-Picker",
 	size = "m",
+	labelPosition,
 	placeholder,
 	isQuiet = false,
 	isFocused = false,
@@ -45,6 +46,7 @@ export const PickerButton = ({
 				[`${rootClass}--size${size?.toUpperCase()}`]:
 					typeof size !== "undefined",
 				[`${rootClass}--quiet`]: isQuiet,
+				[`${rootClass}--sideLabel`]: labelPosition != "top",
 				[`is-invalid`]: isInvalid,
 				[`is-open`]: isOpen,
 				[`is-loading`]: isLoading,
@@ -155,6 +157,7 @@ export const Template = ({
 					customStyles,
 					content,
 					iconName,
+					labelPosition,
 					id,
 				})}
 			</div>
@@ -176,6 +179,7 @@ export const Template = ({
 				customStyles,
 				content,
 				iconName,
+				labelPosition,
 				id,
 			})
 		}
