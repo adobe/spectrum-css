@@ -63,6 +63,9 @@
     "tools/*",
     "plugins/*"
   ],
+  "dependencies": {
+    "@adobe/spectrum-tokens": "^0.0.0-in-field-button-20230530211053"
+  },
   "devDependencies": {
     "@adobe/focus-ring-polyfill": "^0.1.5",
     "@commitlint/cli": "^17.7.1",
