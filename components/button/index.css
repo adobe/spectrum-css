@@ -261,6 +261,10 @@ a.spectrum-Button {
         --highcontrast-button-content-color-hover: ButtonFace;
         --highcontrast-button-content-color-down: ButtonFace;
         --highcontrast-button-content-color-focus: ButtonFace;
+
+        .spectrum-Button-label {
+          forced-color-adjust: none;
+        }
         
       }
     }
