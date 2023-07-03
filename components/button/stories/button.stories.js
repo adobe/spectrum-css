@@ -166,3 +166,13 @@ Disabled.args = {
 	isDisabled: true,
 	iconName: "Actions",
 };
+
+export const WithForcedColors = CustomButton.bind({
+	parameters: {
+    // Sets the forced-colors media feature for a specific story.
+    chromatic: { forcedColors: 'active' },
+  },
+});
+WithForcedColors.args = {
+	iconName: "Actions",
+};
