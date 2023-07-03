@@ -18,15 +18,21 @@
     "build": "gulp"
   },
   "peerDependencies": {
+    "@spectrum-css/actionbutton": ">=3",
+    "@spectrum-css/actionmenu": ">=4",
     "@spectrum-css/button": ">=10",
     "@spectrum-css/buttongroup": ">=5 <=6",
+    "@spectrum-css/menu": ">=4",
     "@spectrum-css/popover": ">=5 <=6",
     "@spectrum-css/tokens": ">=10"
   },
   "devDependencies": {
     "@spectrum-css/button": "^11.0.16",
+    "@spectrum-css/actionbutton": "^4.0.3",
+    "@spectrum-css/actionmenu": "4.0.38",
     "@spectrum-css/buttongroup": "^6.0.50",
     "@spectrum-css/component-builder-simple": "^2.0.15",
+    "@spectrum-css/menu": "^4.0.41",
     "@spectrum-css/popover": "^6.0.53",
     "@spectrum-css/tokens": "^10.1.2",
     "gulp": "^4.0.0"

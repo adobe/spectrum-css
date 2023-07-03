@@ -12,9 +12,10 @@ governing permissions and limitations under the License.
 
 .spectrum-CoachMark {
 	--spectrum-coachmark-min-width: var(--spectrum-coach-mark-minimum-width);
-	--spectrum-coachmark-width: var(--spectrum-coach-mark-width);
-	--spectrum-coachmark-max-width: 400px;
-	--spectrum-coachmark-border-radius: 4px;
+	--spectrum-coachmark-width: var(--spectrum-coach-mark-minimum-width);
+	--spectrum-coachmark-min-width-mobile: 216px;
+	--spectrum-coachmark-width-mobile: 216px;
+
 	--spectrum-coachmark-border-size: 1px;
 	--spectrum-coachmark-padding: var(--spectrum-coach-mark-edge-to-content);
 	--spectrum-coachmark-header-to-body: var(--spectrum-spacing-200);
@@ -25,69 +26,62 @@ governing permissions and limitations under the License.
 	--spectrum-coachmark-title-font-family: var(
 		--spectrum-heading-sans-serif-font-family-stack
 	);
-	--spectrum-coachmark-title-font-style: var(
-		--spectrum-heading-serif-font-style
-	);
-	--spectrum-coachmark-title-text-font-weight: var(
-		--spectrum-heading-sans-serif-font-weight
-	);
+	--spectrum-coachmark-title-font-style: var(--spectrum-heading-serif-font-style);
+	--spectrum-coachmark-title-text-font-weight: var(--spectrum-heading-sans-serif-font-weight);
 
-	--spectrum-coachmark-title-text-line-height: var(
-		--spectrum-heading-line-height
-	);
+	--spectrum-coachmark-title-text-line-height: var(--spectrum-heading-line-height);
 
 	--spectrum-coachmark-content-font-color: var(--spectrum-body-color);
 	--spectrum-coachmark-content-font-size: var(--spectrum-coach-mark-body-size);
-	--spectrum-coachmark-content-font-weight: var(
-		--spectrum-body-sans-serif-font-weight
-	);
-	--spectrum-coachmark-content-font-family: var(
-		--spectrum-body-sans-serif-font-family
-	);
-	--spectrum-coachmark-content-font-style: var(
-		--spectrum-body-sans-serif-font-style
-	);
+	--spectrum-coachmark-content-font-weight: var(--spectrum-body-sans-serif-font-weight);
+	--spectrum-coachmark-content-font-family: var(--spectrum-body-sans-serif-font-family);
+	--spectrum-coachmark-content-font-style: var(--spectrum-body-sans-serif-font-style);
 	--spectrum-coachmark-content-line-height: var(--spectrum-body-line-height);
 
-	--spectrum-coachmark-media-min-height: var(
-		--spectrum-coach-mark-media-minimun-height
-	);
+	--spectrum-coachmark-media-min-height: var(--spectrum-coach-mark-media-minimun-height);
 	--spectrum-coachmark-media-height: var(--spectrum-coach-mark-media-height);
 
 	--spectrum-coachmark-step-color: var(--spectrum-coach-mark-pagination-color);
-	--spectrum-coachmark-step-font-size: var(
-		--spectrum-coach-mark-pagination-body-size
-	);
-	--spectrum-coachmark-step-font-weight: var(
-		--spectrum-body-medium-font-weight
-	);
-	--spectrum-coachmark-step-font-family: var(
-		--spectrum-body-sans-serif-font-family
-	);
-	--spectrum-coachmark-step-font-style: var(
-		--spectrum-body-sans-serif-font-style
-	);
+	--spectrum-coachmark-step-font-size: var(--spectrum-coach-mark-pagination-body-size);
+	--spectrum-coachmark-step-font-weight: var(--spectrum-body-medium-font-weight);
+	--spectrum-coachmark-step-font-family: var(--spectrum-body-sans-serif-font-family);
+	--spectrum-coachmark-step-font-style: var(--spectrum-body-sans-serif-font-style);
 	--spectrum-coachmark-step-line-height: var(--spectrum-body-line-height);
-	--spectrum-coachmark-step-step-to-bottom: var(
-		--spectrum-coach-mark-pagination-text-to-bottom-edge
-	);
+	--spectrum-coachmark-step-step-to-bottom: var(--spectrum-coach-mark-pagination-text-to-bottom-edge);
+
+	--spectrum-coachmark-heading-to-action-button: var(--spectrum-spacing-300);
 
 	--mod-buttongroup-justify-content: flex-end;
+	--mod-popover-content-area-spacing-vertical: 0;
 }
 
 .spectrum-CoachMark {
   position: relative;
 	min-inline-size: var(--spectrum-coachmark-min-width);
-	max-inline-size: var(--spectrum-coachmark-max-width);
+	max-inline-size: 380px; /* can we use a calc here? */
+	inline-size: var(--mod-coachmark-width, var(--spectrum-coachmark-width));
+}
+
+.spectrum-CoachMark--mobile {
+
+  position: relative;
+	min-inline-size: var(--spectrum-coachmark-min-width-mobile);
+	max-inline-size: 380px; /* can we use a calc here? */
+	inline-size: var(--mod-coachmark-width-mobile, var(--spectrum-coachmark-width-mobile));
+
+}
+
+
+.spectrum-CoachMark--mobile .spectrum-CoachMark-image{
+  block-size: 121px;
 }
 
 .spectrum-CoachMark-image {
-  border-radius: var(--spectrum-coachmark-border-radius) var(--spectrum-coachmark-border-radius) 0 0;
-
-	inline-size: 100%;
-	min-block-size: var(--spectrum-coachmark-media-min-height);
-	block-size: var(--spectrum-coachmark-media-height);
+	block-size: 166px;
+	object-fit: cover;
+	object-position: center;
 }
+
 
 .spectrum-CoachMark-header,
 .spectrum-CoachMark-content,
@@ -102,6 +96,11 @@ governing permissions and limitations under the License.
 	justify-content: space-between;
 	align-items: flex-end;
 	margin-block-end: var(--spectrum-coachmark-header-to-body);
+}
+
+.spectrum-CoachMark-action-menu {
+	z-index: 1;
+	margin-inline-start: var(--spectrum-coachmark-heading-to-action-button)
 }
 
 .spectrum-CoachMark-content {
@@ -123,6 +122,7 @@ governing permissions and limitations under the License.
 
 	.spectrum-ButtonGroup {
 		grid-column-start: 2;
+		--mod-buttongroup-spacing-horizontal: var(--spectrum-spacing-100);
 	}
 }
 
