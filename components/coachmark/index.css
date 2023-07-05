@@ -63,21 +63,21 @@ governing permissions and limitations under the License.
 }
 
 .spectrum-CoachMark--mobile {
-
   position: relative;
 	min-inline-size: var(--spectrum-coachmark-min-width-mobile);
 	max-inline-size: 380px; /* can we use a calc here? */
 	inline-size: var(--mod-coachmark-width-mobile, var(--spectrum-coachmark-width-mobile));
-
 }
 
 
 .spectrum-CoachMark--mobile .spectrum-CoachMark-image{
   block-size: 121px;
+	inline-size: var(--mod-coachmark-width-mobile, var(--spectrum-coachmark-width-mobile));
 }
 
 .spectrum-CoachMark-image {
 	block-size: 166px;
+	inline-size: var(--spectrum-coachmark-width);
 	object-fit: cover;
 	object-position: center;
 }
