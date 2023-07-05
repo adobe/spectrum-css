@@ -7,8 +7,8 @@ export default {
 		"The coach mark component can be used to bring added attention to specific parts of a page.",
 	component: "CoachMark",
 	argTypes: {
-		withPopover: {
-			name: "With Popover",
+		hasActionMenu: {
+			name: "Disaply ActionMenu",
 			type: { name: "boolean" },
 			table: {
 				type: { summary: "boolean" },
@@ -16,8 +16,8 @@ export default {
 			},
 			control: "boolean",
 		},
-		isQuiet: {
-			name: "Quiet styling",
+		hasPagination: {
+			name: "Disaply pagination",
 			type: { name: "boolean" },
 			table: {
 				type: { summary: "boolean" },
@@ -25,21 +25,31 @@ export default {
 			},
 			control: "boolean",
 		},
-		variant: {
-			name: "Color variants",
-			type: { name: "string" },
+		hasImage: {
+			name: "Disaply image",
+			type: { name: "boolean" },
 			table: {
-				type: { summary: "string" },
+				type: { summary: "boolean" },
 				category: "Component",
 			},
-			options: ["dark", "light"],
-			control: "inline-radio",
+			control: "boolean",
+		},
+		isMobile: {
+			name: "Mobile Variant",
+			type: { name: "boolean" },
+			table: {
+				type: { summary: "boolean" },
+				category: "Component",
+			},
+			control: "boolean",
 		},
 	},
 	args: {
 		rootClass: "spectrum-CoachMark",
-		isQuiet: false,
-		withPopover: false,
+		hasActionMenu: false,
+		hasPagination: true,
+		hasImage: false,
+		isMobile: false,
 	},
 	parameters: {
 		actions: {
@@ -56,7 +66,12 @@ export default {
 export const Default = Template.bind({});
 Default.args = {};
 
-export const WithPopover = Template.bind({});
-WithPopover.args = {
-	withPopover: true,
+export const withImage = Template.bind({});
+withImage.args = {
+	hasImage: true,
+};
+
+export const Mobile = Template.bind({});
+Mobile.args = {
+	isMobile: true,
 };

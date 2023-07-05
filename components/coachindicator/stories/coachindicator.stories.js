@@ -2,10 +2,10 @@
 import { Template } from "./template";
 
 export default {
-	title: "Coach mark",
+	title: "components/Coach indicator",
 	description:
 		"The coach mark component can be used to bring added attention to specific parts of a page.",
-	component: "CoachMark",
+	component: "CoachIndicator",
 	argTypes: {
 		isQuiet: {
 			name: "Quiet styling",
@@ -37,7 +37,7 @@ export default {
 			handles: [],
 		},
 		status: {
-			type: process.env.MIGRATED_PACKAGES.includes("coachmark")
+			type: process.env.MIGRATED_PACKAGES.includes("coachindicator")
 				? "migrated"
 				: undefined,
 		},

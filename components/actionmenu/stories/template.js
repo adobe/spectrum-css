@@ -8,6 +8,8 @@ export const Template = ({
 	customClasses = [],
 	items = [],
 	isOpen = false,
+	label,
+	iconName,
 	...globals
 }) => {
 
@@ -28,13 +30,20 @@ export const Template = ({
 		],
 		trigger: (passthroughs) => ActionButton({
 			size: "m",
-			isQuiet: true,
+			label,
+			iconName,
+			isQuiet: false,
+			isEmphasized: false,
+			hasPopup: false,
 			isSelected: isOpen,
 			label: "More Actions",
 			iconName: "More",
 			id: "trigger",
 			customClasses,
 			...passthroughs,
+			onclick: function () {
+				updateArgs({ isOpen: !isOpen });
+			},
 		})
 	})
-};
+}

@@ -7,6 +7,7 @@ import { Template } from "./template";
 import { default as ActionButton } from "@spectrum-css/actionbutton/stories/actionbutton.stories.js";
 import { default as Menu } from "@spectrum-css/menu/stories/menu.stories.js";
 import { default as Popover } from "@spectrum-css/popover/stories/popover.stories.js";
+import { default as IconStories } from "@spectrum-css/icon/stories/icon.stories.js";
 
 export default {
 	title: "Components/Action menu",
@@ -22,6 +23,19 @@ export default {
 				category: "State",
 			},
 			control: "boolean",
+		},
+		iconName: {
+			...(IconStories?.argTypes?.iconName ?? {}),
+			if: false,
+		},
+		label: {
+			name: "Label",
+			type: { name: "string" },
+			table: {
+				type: { summary: "string" },
+				category: "Content",
+			},
+			control: { type: "text" },
 		},
 	},
 	args: {
@@ -56,6 +70,8 @@ Default.play = async ({ canvasElement }) => {
 Default.decorators = [(Story) => html`<div style="padding: 1em;">${Story().outerHTML || Story()}</div>`];
 Default.args = {
 	isOpen: false,
+	label: "More actions",
+	iconName: "More",
 	items: [
 		{
 			label: "Action 1",

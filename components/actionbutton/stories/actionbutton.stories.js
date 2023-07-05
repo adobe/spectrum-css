@@ -9,6 +9,7 @@ export default {
 	args: {
 		rootClass: "spectrum-ActionButton",
 		size: "m",
+		label: "More Actions",
 		iconName: "More",
 		isQuiet: false,
 		isEmphasized: false,
