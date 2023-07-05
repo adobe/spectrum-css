@@ -60,13 +60,12 @@ examples:
             </div>
             <div class="spectrum-CoachMark-footer">
               <div class="spectrum-CoachMark-step"><bdo dir="ltr">2 of 8</bdo></div>
-              <div class="spectrum-ButtonGroup">
-                <button class="spectrum-Button spectrum-Button--sizeM spectrum-Button--outline spectrum-Button--secondary spectrum-Button--iconOnly"  style="--mod-button-edge-to-visual-only: 8px;">
-                  <svg class="spectrum-Icon spectrum-UIIcon-ChevronLeft100" focusable="false" aria-hidden="true">
-                    <use xlink:href="#spectrum-css-icon-Chevron100" />
+              <div class="spectrum-ButtonGroup spectrum-ButtonGroup--sizeS">
+                <button style="padding: 4px 5px;" class="spectrum-Button spectrum-Button--outline spectrum-Button--secondary spectrum-Button--size spectrum-Button--iconOnly" aria-label="Edit">
+                  <svg class="spectrum-Icon spectrum-UIIcon-ChevronLeft75 spectrum-PickerButton-icon" focusable="false" aria-hidden="true">
+                    <use xlink:href="#spectrum-css-icon-Chevron75"></use>
                   </svg>
-                </button>
-                <button class="spectrum-Button spectrum-Button--sizeM spectrum-Button--outline spectrum-Button--primary">
+                <button class="spectrum-Button spectrum-Button--sizeS spectrum-Button--outline spectrum-Button--primary">
                   <span class="spectrum-Button-label">Next</span>
                 </button>
               </div>
@@ -87,7 +86,7 @@ examples:
             <div class="spectrum-CoachMark-footer">
               <div class="spectrum-CoachMark-step"><bdo dir="ltr">2 of 8</bdo></div>
               <div class="spectrum-ButtonGroup spectrum-ButtonGroup--sizeS">
-                <button style="padding: 0 8px;" class="spectrum-Button spectrum-Button--outline spectrum-Button--secondary spectrum-Button--size spectrum-Button--iconOnly" aria-label="Edit">
+                <button style="padding: 4px 5px;" class="spectrum-Button spectrum-Button--outline spectrum-Button--secondary spectrum-Button--size spectrum-Button--iconOnly" aria-label="Edit">
                   <svg class="spectrum-Icon spectrum-UIIcon-ChevronLeft75 spectrum-PickerButton-icon" focusable="false" aria-hidden="true">
                     <use xlink:href="#spectrum-css-icon-Chevron75"></use>
                   </svg>
