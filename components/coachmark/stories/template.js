@@ -39,34 +39,43 @@ export const Template = ({
 				<div class="spectrum-CoachMark-header">
 					<div class="spectrum-CoachMark-title">Try playing with a pixel brush</div>
 					<div class="spectrum-CoachMark-action-menu">
-					${ifDefined(hasActionMenu ? ActionMenu({
+					${hasActionMenu ? ActionMenu({
 							iconName: "More",
 							label: "More actions",
 							items: [
 								{
-									label: "Skip tour",
+								  label: "Skip tour",
 								},
 								{
 									label: "Reset tour",
-								},
-								{
-									label: "Action 3",
-								},
-								{
-									label: "Action 4",
-								},
+								}
 							],
-					}) : '')}
+					}) : ''}
 				</div>
 				</div>
 				<div class="spectrum-CoachMark-content">
 					Pixel brushes use pixels to create brush strokes, just like in other design and drawing tools. Start drawing, and zoom in to see the pixels in each stroke.
 				</div>
 				<div class="${rootClass}-footer">
-				${ifDefined(hasPagination ? html`<div class="spectrum-CoachMark-step"><bdo dir="ltr">2 of 8</bdo></div>` : '')}
+				${hasPagination ? html`<div class="spectrum-CoachMark-step"><bdo dir="ltr">2 of 8</bdo></div>` : ''}
 				${ButtonGroup({
 					size: isMobile ? 's' : 'm',
-					items: [
+					items: isMobile ?
+					[
+						{
+							variant: "secondary",
+							treatment: "outline",
+							hideLabel: true,
+							iconName: "More",
+						},
+						{
+							variant: "primary",
+							treatment: "outline",
+							label: "Next",
+						},
+					]
+					:
+					[
 						{
 							variant: "secondary",
 							treatment: "outline",
