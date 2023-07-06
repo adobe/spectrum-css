@@ -51,7 +51,10 @@ function getPopoverPlacement(popover, rect) {
 	let placement; 
 	const transforms = {
 		"spectrum-Popover--top": `translate(${rect.xCenter - popover.offsetWidth / 2}px, ${rect.top - popover.offsetHeight}px)`, 	
-		"spectrum-Popover--bottom": `translate(${rect.xCenter - popover.offsetWidth / 2}px, ${rect.bottom}px)` 	
+		"spectrum-Popover--bottom": `translate(${rect.xCenter - popover.offsetWidth / 2}px, ${rect.bottom}px)`,
+		"spectrum-Popover--left": `translate(${rect.left - popover.offsetWidth}px, ${rect.yCenter - popover.offsetHeight / 2}px)`,
+		"spectrum-Popover--right": `translate(${rect.right}px, ${rect.yCenter - popover.offsetHeight / 2}px)`,
+
 	}
 	classes.forEach((item) => {
 		if (transforms[item]) {
@@ -70,7 +73,9 @@ export const Template = ({
 	position = "top",
 	customClasses = [],
 	id,
-	customStyles = {},
+	customStyles = {
+"--spectrum-popover-cross-offset": "20px"
+	},
 	content = [],
 	...globals
 }) => {
