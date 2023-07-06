@@ -54,11 +54,27 @@ function getPopoverPlacement(popover, rect) {
 		"spectrum-Popover--bottom": `translate(${rect.xCenter - popover.offsetWidth / 2}px, ${rect.bottom}px)`,
 		"spectrum-Popover--left": `translate(${rect.left - popover.offsetWidth}px, ${rect.yCenter - popover.offsetHeight / 2}px)`,
 		"spectrum-Popover--right": `translate(${rect.right}px, ${rect.yCenter - popover.offsetHeight / 2}px)`,
+		"aliases": {
+			"spectrum-Popover--top-left": "spectrum-Popover--top",
+			"spectrum-Popover--top-right": "spectrum-Popover--top",
+			"spectrum-Popover--top-start": "spectrum-Popover--top",
+			"spectrum-Popover--top-end": "spectrum-Popover--top",
+			"spectrum-Popover--bottom-left": "spectrum-Popover--bottom",
+			"spectrum-Popover--bottom-right": "spectrum-Popover--bottom",
+			"spectrum-Popover--bottom-start": "spectrum-Popover--bottom",
+			"spectrum-Popover--bottom-end": "spectrum-Popover--bottom",
+			"spectrum-Popover--left-top": "spectrum-Popover--left",
+			"spectrum-Popover--left-bottom": "spectrum-Popover--left",
+			"spectrum-Popover--right-top": "spectrum-Popover--right",
+			"spectrum-Popover--right-bottom": "spectrum-Popover--right",
+		}
 
 	}
 	classes.forEach((item) => {
 		if (transforms[item]) {
 			placement = item;
+		} else if (transforms["aliases"][item]) {
+			placement = transforms["aliases"][item];
 		}
 	});
 	return transforms[placement];
@@ -73,9 +89,7 @@ export const Template = ({
 	position = "top",
 	customClasses = [],
 	id,
-	customStyles = {
-"--spectrum-popover-cross-offset": "20px"
-	},
+	customStyles = {},
 	content = [],
 	...globals
 }) => {
