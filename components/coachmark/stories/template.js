@@ -32,7 +32,7 @@ export const Template = ({
 		${Popover({
 			...globals,
 			customClasses: [`${rootClass}-popover`],
-			isCoachMarkOpen,
+			isOpen: isCoachMarkOpen,
 			content: [
 				html`
 				${hasImage ? html `<img src="example-card-landscape.png" class="${rootClass}-image" />` : ''}
@@ -41,7 +41,6 @@ export const Template = ({
 					<div class="spectrum-CoachMark-action-menu">
 					${hasActionMenu ? ActionMenu({
 							iconName: "More",
-							label: "More actions",
 							items: [
 								{
 								  label: "Skip tour",
