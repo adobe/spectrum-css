@@ -66,11 +66,12 @@ export default {
 	},
 	args: {
 		rootClass: "spectrum-Popover",
-		isOpen: true,
+		isOpen: false,
 		withTip: false,
 		position: "top",
 	},
 	parameters: {
+		layout: 'centered',
 		actions: {
 			handles: [],
 		},
