@@ -96,6 +96,7 @@ governing permissions and limitations under the License.
 	justify-content: space-between;
 	align-items: flex-end;
 	margin-block-end: var(--spectrum-coachmark-header-to-body);
+	white-space: nowrap;
 }
 
 .spectrum-CoachMark-action-menu {
