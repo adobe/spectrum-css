@@ -13,8 +13,8 @@ governing permissions and limitations under the License.
 .spectrum-CoachMark {
 	--spectrum-coachmark-min-width: var(--spectrum-coach-mark-minimum-width);
 	--spectrum-coachmark-width: var(--spectrum-coach-mark-minimum-width);
-	--spectrum-coachmark-min-width-mobile: 216px;
-	--spectrum-coachmark-width-mobile: 216px;
+	--spectrum-coachmark-min-width-mobile: 216px; /* TODO: Replace with new token */
+	--spectrum-coachmark-width-mobile: 216px; /* TODO: Replace with new token */
 
 	--spectrum-coachmark-border-size: 1px;
 	--spectrum-coachmark-padding: var(--spectrum-coach-mark-edge-to-content);
@@ -58,25 +58,25 @@ governing permissions and limitations under the License.
 .spectrum-CoachMark {
   position: relative;
 	min-inline-size: var(--spectrum-coachmark-min-width);
-	max-inline-size: 380px; /* can we use a calc here? */
+	max-inline-size: 380px; /* TODO: Replace with new token or modifier*/
 	inline-size: var(--mod-coachmark-width, var(--spectrum-coachmark-width));
 }
 
 .spectrum-CoachMark--mobile {
   position: relative;
 	min-inline-size: var(--spectrum-coachmark-min-width-mobile);
-	max-inline-size: 380px; /* can we use a calc here? */
+	max-inline-size: 380px; /* TODO: Replace with new token or modifier*/
 	inline-size: var(--mod-coachmark-width-mobile, var(--spectrum-coachmark-width-mobile));
 }
 
 
 .spectrum-CoachMark--mobile .spectrum-CoachMark-image{
-  block-size: 121px;
+  block-size: 121px; /* TODO: Replace with new token */
 	inline-size: var(--mod-coachmark-width-mobile, var(--spectrum-coachmark-width-mobile));
 }
 
 .spectrum-CoachMark-image {
-	block-size: 166px;
+	block-size: 166px; /* TODO: Replace with new token */
 	inline-size: var(--spectrum-coachmark-width);
 	object-fit: cover;
 	object-position: center;
