@@ -1,3 +1,6 @@
+import { within, userEvent } from '@storybook/testing-library';
+import { expect } from '@storybook/jest';
+
 // Import the component markup template
 import { Template } from "./template";
 
@@ -85,6 +88,7 @@ export default {
 
 export const Default = Template.bind({});
 Default.args = {
+	testId: "popover-1",
 	content: [
 		Menu({
 			items: [
@@ -108,6 +112,13 @@ Default.args = {
 		}),
 	],
 };
+Default.play = async ({ canvasElement }) => {
+	const canvas = within(canvasElement);
+
+	await userEvent.click(canvas.getByText('Open Popover'));
+
+	await expect(canvas.getByTestId('popover-1').classList.contains('is-open')).toBe(true);
+}
 
 export const WithTip = Template.bind({});
 WithTip.args = {

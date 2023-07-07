@@ -91,6 +91,7 @@ export const Template = ({
 	id,
 	customStyles = {},
 	content = [],
+	testId,
 	...globals
 }) => {
 	if (content.length === 0) {
@@ -125,6 +126,7 @@ export const Template = ({
 			style=${ifDefined(styleMap(customStyles))}
 			role="presentation"
 			id=${ifDefined(id)}
+			data-testid=${ifDefined(testId)}
 		>
 			${content.map((c) => (typeof c === "function" ? c({}) : c))}
 			${withTip
