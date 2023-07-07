@@ -41,7 +41,7 @@ export default {
 				"top",
 				"top-left",
 				"top-right",
-				"tip-start",
+				"top-start",
 				"top-end",
 				"bottom",
 				"bottom-left",
@@ -148,6 +148,7 @@ Nested.args = {
 			],
 		}),
 		Default({
+			position: "right",
 			content: [
 				Menu({
 					items: [

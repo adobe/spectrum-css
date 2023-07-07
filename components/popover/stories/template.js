@@ -14,7 +14,6 @@ const showPopover = (evt) => {
 	popover.style.zIndex = 1;
 	var rect = getTriggerPositions(button);
 	var transformTranslate = getPopoverPlacement(popover, rect);
-	console.log(transformTranslate);
 	const style ={
     top: "0px",
     left: "0px",
@@ -48,6 +47,7 @@ function getTriggerPositions(element) {
 
 function getPopoverPlacement(popover, rect) {
 	const classes = popover.className.split(' ');
+	console.log(rect.right);
 	let placement; 
 	const transforms = {
 		"spectrum-Popover--top": `translate(${rect.xCenter - popover.offsetWidth / 2}px, ${rect.top - popover.offsetHeight}px)`, 	
