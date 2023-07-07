@@ -8,7 +8,7 @@ export default {
 	component: "CoachMark",
 	argTypes: {
 		hasActionMenu: {
-			name: "Disaply ActionMenu",
+			name: "Display ActionMenu",
 			type: { name: "boolean" },
 			table: {
 				type: { summary: "boolean" },
@@ -17,7 +17,7 @@ export default {
 			control: "boolean",
 		},
 		hasPagination: {
-			name: "Disaply pagination",
+			name: "Display pagination",
 			type: { name: "boolean" },
 			table: {
 				type: { summary: "boolean" },
@@ -26,7 +26,7 @@ export default {
 			control: "boolean",
 		},
 		hasImage: {
-			name: "Disaply image",
+			name: "Display image",
 			type: { name: "boolean" },
 			table: {
 				type: { summary: "boolean" },
@@ -66,8 +66,8 @@ export default {
 export const Default = Template.bind({});
 Default.args = {};
 
-export const withImage = Template.bind({});
-withImage.args = {
+export const DefaultWithImage = Template.bind({});
+DefaultWithImage.args = {
 	hasImage: true,
 };
 
@@ -75,3 +75,10 @@ export const Mobile = Template.bind({});
 Mobile.args = {
 	isMobile: true,
 };
+
+export const MobileWithImage = Template.bind({});
+MobileWithImage.args = {
+	isMobile: true,
+	hasImage: true,
+};
+

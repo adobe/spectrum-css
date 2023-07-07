@@ -35,7 +35,11 @@ export const Template = ({
 			isOpen: isCoachMarkOpen,
 			content: [
 				html`
-				${hasImage ? html `<img src="example-card-landscape.png" class="${rootClass}-image" />` : ''}
+				${hasImage ? html
+					`<div class="${rootClass}-image-wrapper">
+					<img class="${rootClass}-image" src="example-card-landscape.png" />
+				</div>`
+					: ''}
 				<div class="spectrum-CoachMark-header">
 					<div class="spectrum-CoachMark-title">Try playing with a pixel brush</div>
 					<div class="spectrum-CoachMark-action-menu">

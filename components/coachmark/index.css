@@ -16,7 +16,11 @@ governing permissions and limitations under the License.
 	--spectrum-coachmark-min-width-mobile: 216px; /* TODO: Replace with new token */
 	--spectrum-coachmark-width-mobile: 216px; /* TODO: Replace with new token */
 
-	--spectrum-coachmark-border-size: 1px;
+	--mod-popover-border-width: var(--spectrum-border-width-100);
+	--mod-popover-corner-radius: var(--spectrum-corner-radius-100);
+	--spectrum-coachmark-border-size: var(--mod-popover-border-width);
+	--spectrum-coachmark-border-radius: var(--mod-popover-corner-radius);
+
 	--spectrum-coachmark-padding: var(--spectrum-coach-mark-edge-to-content);
 	--spectrum-coachmark-header-to-body: var(--spectrum-spacing-200);
 	--spectrum-coachmark-body-to-footer: var(--spectrum-spacing-300);
@@ -55,6 +59,10 @@ governing permissions and limitations under the License.
 	--mod-popover-content-area-spacing-vertical: 0;
 }
 
+.spectrum-Popover {
+	width: inherit; /* don't leave this here */
+}
+
 .spectrum-CoachMark {
   position: relative;
 	min-inline-size: var(--spectrum-coachmark-min-width);
@@ -70,18 +78,28 @@ governing permissions and limitations under the License.
 }
 
 
-.spectrum-CoachMark--mobile .spectrum-CoachMark-image{
+.spectrum-CoachMark--mobile .spectrum-CoachMark-image-wrapper{
   block-size: 121px; /* TODO: Replace with new token */
-	inline-size: var(--mod-coachmark-width-mobile, var(--spectrum-coachmark-width-mobile));
+	inline-size: calc(var(--mod-coachmark-width-mobile, var(--spectrum-coachmark-width-mobile)) - (var(--spectrum-coachmark-border-size) * 2));
+}
+
+.spectrum-CoachMark-image-wrapper {
+	block-size: 166px; /* TODO: Replace with new token */
+	inline-size: calc(var(--mod-coachmark-width, var(--spectrum-coachmark-width)) - (var(--spectrum-coachmark-border-size) * 2));
+	object-fit: cover;
+	object-position: center;
+	border-start-start-radius: inherit;
+	border-start-end-radius: inherit;
 }
 
 .spectrum-CoachMark-image {
-	block-size: 166px; /* TODO: Replace with new token */
-	inline-size: var(--spectrum-coachmark-width);
+	display: block;
+	width: 100%;
+	height: 100%;
 	object-fit: cover;
-	object-position: center;
+	border-start-start-radius: calc(var(--spectrum-coachmark-border-radius) - var(--spectrum-coachmark-border-size));
+	border-start-end-radius: calc(var(--spectrum-coachmark-border-radius) - var(--spectrum-coachmark-border-size));
 }
-
 
 .spectrum-CoachMark-header,
 .spectrum-CoachMark-content,
@@ -96,10 +114,10 @@ governing permissions and limitations under the License.
 	justify-content: space-between;
 	align-items: flex-end;
 	margin-block-end: var(--spectrum-coachmark-header-to-body);
-	white-space: nowrap;
 }
 
 .spectrum-CoachMark-action-menu {
+	white-space: nowrap;
 	z-index: 1;
 	margin-inline-start: var(--spectrum-coachmark-heading-to-action-button)
 }
