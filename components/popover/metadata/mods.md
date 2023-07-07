@@ -13,3 +13,4 @@
 | `--mod-popover-shadow-color`                  |
 | `--mod-popover-shadow-horizontal`             |
 | `--mod-popover-shadow-vertical`               |
+| `--mod-popover-source-distance`               |

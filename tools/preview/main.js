@@ -34,6 +34,8 @@ module.exports = {
 		// https://storybook.js.org/addons/@etchteam/storybook-addon-status
 		"@etchteam/storybook-addon-status",
     "storybook-addon-pseudo-states",
+		// https://github.com/storybookjs/storybook/tree/next/code/addons/interactions
+		"@storybook/addon-interactions"
 	],
 	core: {
 		disableTelemetry: true,
