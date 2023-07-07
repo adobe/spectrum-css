@@ -44,7 +44,7 @@ export const Template = ({
 					<div class="spectrum-CoachMark-title">Try playing with a pixel brush</div>
 					<div class="spectrum-CoachMark-action-menu">
 					${hasActionMenu ? ActionMenu({
-							iconName: "More",
+							isOpen: false,
 							items: [
 								{
 								  label: "Skip tour",
@@ -69,7 +69,7 @@ export const Template = ({
 							variant: "secondary",
 							treatment: "outline",
 							hideLabel: true,
-							iconName: "More",
+							iconName: "ChevronLeft100",
 						},
 						{
 							variant: "primary",
