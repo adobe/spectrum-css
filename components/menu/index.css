@@ -224,11 +224,7 @@ governing permissions and limitations under the License.
       &:active,
       &:focus,
       &.is-focused {
-        /* Fix for hover/focus on collapsible parent affecting children. */
         --highcontrast-menu-item-color-focus: var(--highcontrast-menu-item-color-default);
-        .spectrum-Menu-item:not(:hover, :active, :focus, .is-focused){
-          --highcontrast-menu-item-color-focus: var(--highcontrast-menu-item-color-default);
-        }
       }
     }
   }
@@ -339,33 +335,33 @@ governing permissions and limitations under the License.
   background-color: var(--highcontrast-menu-item-background-color-focus, var(--mod-menu-item-background-color-key-focus, var(--spectrum-menu-item-background-color-key-focus)));
   outline: none;
 
-  .spectrum-Menu-itemLabel {
+  > .spectrum-Menu-itemLabel {
     color: var(--highcontrast-menu-item-color-focus, var(--mod-menu-item-label-content-color-focus, var(--spectrum-menu-item-label-content-color-focus)));
   }
 
-  .spectrum-Menu-sectionHeading {
+  > .spectrum-Menu-sectionHeading {
     color: var(--highcontrast-menu-item-color-focus, var(--mod-menu-section-header-color, var(--spectrum-menu-section-header-color)));
   }
 
-  .spectrum-Menu-itemDescription {
+  > .spectrum-Menu-itemDescription {
     color: var(--highcontrast-menu-item-color-focus, var(--mod-menu-item-description-color-focus, var(--spectrum-menu-item-description-color-focus)));
   }
 
-  .spectrum-Menu-itemValue {
+  > .spectrum-Menu-itemValue {
     color: var(--highcontrast-menu-item-color-focus, var(--mod-menu-item-value-color-focus, var(--spectrum-menu-item-value-color-focus)));
   }
   
-  .spectrum-Menu-itemIcon:not(.spectrum-Menu-chevron, .spectrum-Menu-checkmark) {
+  > .spectrum-Menu-itemIcon:not(.spectrum-Menu-chevron, .spectrum-Menu-checkmark) {
     fill: var(--highcontrast-menu-item-color-focus, var(--mod-menu-item-label-icon-color-focus, var(--spectrum-menu-item-label-icon-color-focus)));
     color: var(--highcontrast-menu-item-color-focus, var(--mod-menu-item-label-icon-color-focus, var(--spectrum-menu-item-label-icon-color-focus)));
   }
 
-  .spectrum-Menu-chevron {
+  > .spectrum-Menu-chevron {
     fill: var(--highcontrast-menu-item-color-focus, var(--mod-menu-collapsible-icon-color, var(--spectrum-menu-collapsible-icon-color)));
     color: var(--highcontrast-menu-item-color-focus, var(--mod-menu-collapsible-icon-color, var(--spectrum-menu-collapsible-icon-color)));
   }
 
-  .spectrum-Menu-checkmark {
+  > .spectrum-Menu-checkmark {
     fill: var(--highcontrast-menu-item-color-focus, var(--mod-menu-checkmark-icon-color-focus, var(--spectrum-menu-checkmark-icon-color-focus)));
     color: var(--highcontrast-menu-item-color-focus, var(--mod-menu-checkmark-icon-color-focus, var(--spectrum-menu-checkmark-icon-color-focus)));
   }
@@ -385,33 +381,33 @@ governing permissions and limitations under the License.
 .spectrum-Menu-item:hover {
   background-color: var(--highcontrast-menu-item-background-color-focus, var(--mod-menu-item-background-color-hover, var(--spectrum-menu-item-background-color-hover)));
 
-  .spectrum-Menu-itemLabel {
+  > .spectrum-Menu-itemLabel {
     color: var(--highcontrast-menu-item-color-focus, var(--mod-menu-item-label-content-color-hover, var(--spectrum-menu-item-label-content-color-hover)));
   }
 
-  .spectrum-Menu-sectionHeading {
+  > .spectrum-Menu-sectionHeading {
     color: var(--highcontrast-menu-item-color-focus, var(--mod-menu-section-header-color, var(--spectrum-menu-section-header-color)));
   }
 
-  .spectrum-Menu-itemDescription {
+  > .spectrum-Menu-itemDescription {
     color: var(--highcontrast-menu-item-color-focus, var(--mod-menu-item-description-color-hover, var(--spectrum-menu-item-description-color-hover)));
   }
 
-  .spectrum-Menu-itemValue {
+  > .spectrum-Menu-itemValue {
     color: var(--highcontrast-menu-item-color-focus, var(--mod-menu-item-value-color-hover, var(--spectrum-menu-item-value-color-hover)));
   }
   
-  .spectrum-Menu-itemIcon:not(.spectrum-Menu-chevron, .spectrum-Menu-checkmark) {
+  > .spectrum-Menu-itemIcon:not(.spectrum-Menu-chevron, .spectrum-Menu-checkmark) {
     fill: var(--highcontrast-menu-item-color-focus, var(--mod-menu-item-label-icon-color-hover, var(--spectrum-menu-item-label-icon-color-hover)));
     color: var(--highcontrast-menu-item-color-focus, var(--mod-menu-item-label-icon-color-hover, var(--spectrum-menu-item-label-icon-color-hover)));
   }
 
-  .spectrum-Menu-chevron {
+  > .spectrum-Menu-chevron {
     fill: var(--highcontrast-menu-item-color-focus, var(--mod-menu-collapsible-icon-color, var(--spectrum-menu-collapsible-icon-color)));
     color: var(--highcontrast-menu-item-color-focus, var(--mod-menu-collapsible-icon-color, var(--spectrum-menu-collapsible-icon-color)));
   }
 
-  .spectrum-Menu-checkmark {
+  > .spectrum-Menu-checkmark {
     fill: var(--highcontrast-menu-item-color-focus, var(--mod-menu-checkmark-icon-color-hover, var(--spectrum-menu-checkmark-icon-color-hover)));
     color: var(--highcontrast-menu-item-color-focus, var(--mod-menu-checkmark-icon-color-hover, var(--spectrum-menu-checkmark-icon-color-hover)));
   }
@@ -420,33 +416,33 @@ governing permissions and limitations under the License.
 .spectrum-Menu-item:active {
   background-color: var(--highcontrast-menu-item-background-color-focus, var(--mod-menu-item-background-color-down, var(--spectrum-menu-item-background-color-down)));
 
-  .spectrum-Menu-itemLabel {
+  > .spectrum-Menu-itemLabel {
     color: var(--highcontrast-menu-item-color-focus, var(--mod-menu-item-label-content-color-down, var(--spectrum-menu-item-label-content-color-down)));
   }
   
-  .spectrum-Menu-sectionHeading {
+  > .spectrum-Menu-sectionHeading {
     color: var(--highcontrast-menu-item-color-focus, var(--mod-menu-section-header-color, var(--spectrum-menu-section-header-color)));
   }
 
-  .spectrum-Menu-itemDescription {
+  > .spectrum-Menu-itemDescription {
     color: var(--highcontrast-menu-item-color-focus, var(--mod-menu-item-description-color-down, var(--spectrum-menu-item-description-color-down)));
   }
 
-  .spectrum-Menu-itemValue {
+  > .spectrum-Menu-itemValue {
     color: var(--highcontrast-menu-item-color-focus, var(--mod-menu-item-value-color-down, var(--spectrum-menu-item-value-color-down)));
   }
   
-  .spectrum-Menu-itemIcon:not(.spectrum-Menu-chevron, .spectrum-Menu-checkmark) {
+  > .spectrum-Menu-itemIcon:not(.spectrum-Menu-chevron, .spectrum-Menu-checkmark) {
     fill: var(--highcontrast-menu-item-color-focus, var(--mod-menu-item-label-icon-color-down, var(--spectrum-menu-item-label-icon-color-down)));
     color: var(--highcontrast-menu-item-color-focus, var(--mod-menu-item-label-icon-color-down, var(--spectrum-menu-item-label-icon-color-down)));
   }
 
-  .spectrum-Menu-chevron {
+  > .spectrum-Menu-chevron {
     fill: var(--highcontrast-menu-item-color-focus, var(--mod-menu-collapsible-icon-color, var(--spectrum-menu-collapsible-icon-color)));
     color: var(--highcontrast-menu-item-color-focus, var(--mod-menu-collapsible-icon-color, var(--spectrum-menu-collapsible-icon-color)));
   }
 
-  .spectrum-Menu-checkmark {
+  > .spectrum-Menu-checkmark {
     fill: var(--highcontrast-menu-item-color-focus, var(--mod-menu-checkmark-icon-color-down, var(--spectrum-menu-checkmark-icon-color-down)));
     color: var(--highcontrast-menu-item-color-focus, var(--mod-menu-checkmark-icon-color-down, var(--spectrum-menu-checkmark-icon-color-down)));
   }
