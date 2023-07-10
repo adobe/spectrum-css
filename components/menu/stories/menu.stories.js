@@ -134,7 +134,7 @@ IconsAndDescriptions.parameters = {
 	docs: {
 		description: {
 			story:
-				"A few different variants and states are demonstrated in this story. Menu items are shown with icons, with short descriptions, and with both. A selected item and a disabled item are shown for each.",
+				"A few different variants and states are demonstrated in this story. Menu items are shown with icons, with short descriptions, and with both. A selected item and a disabled item are shown for each. A max-width is set for the story, to test the text wrapping.",
 		},
 	},
 };
@@ -285,5 +285,74 @@ DrillInSubmenu.args = {
     },
     { label: "Select and Mask..." },
     { label: "Save Selection" },
+  ],
+};
+
+export const Collapsible = Template.bind({});
+Collapsible.args = {
+  items: [
+    {
+      label: "Web Design",
+      iconName: "DesktopAndMobile",
+      isCollapsible: true,
+      isOpen: true,
+      items: [
+        {
+          label: "Web Large",
+          itemValue: "1920 x 1080",
+        },
+        {
+          label: "Web Medium",
+          itemValue: "1366 x 768",
+        },
+        {
+          label: "Web Small",
+          itemValue: "1280 x 800",
+        },
+      ],
+    },
+    {
+      label: "Mobile",
+      isCollapsible: true,
+      isOpen: true,
+      items: [
+        {
+          label: "Web Large",
+          itemValue: "1920 x 1080",
+        },
+        {
+          label: "Web Medium",
+          itemValue: "1366 x 768",
+        },
+        {
+          label: "Web Small",
+          itemValue: "1280 x 800",
+        },
+      ],
+    },
+    {
+      label: "Tablet",
+      iconName: "DeviceTablet",
+      isCollapsible: true,
+      items: [
+        { label: "Defaults to not visible within closed item" },
+      ],
+    },
+    {
+      label: "Social Media",
+      iconName: "ShareAndroid",
+      isCollapsible: true,
+      items: [
+        { label: "Defaults to not visible within closed item" },
+      ],
+    },
+    {
+      label: "Watches",
+      iconName: "Watch",
+      isCollapsible: true,
+      items: [
+        { label: "Defaults to not visible within closed item" },
+      ],
+    },
   ],
 };

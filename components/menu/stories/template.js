@@ -21,8 +21,10 @@ export const MenuItem = ({
   isChecked = false,
   isFocused = false,
   isDrillIn = false,
+  isCollapsible = false,
   isOpen = false,
   role = "menuitem",
+  items = [],
   id,
   ...globals
 }) => html`
@@ -35,6 +37,7 @@ export const MenuItem = ({
         "is-selected": isSelected,
         "is-disabled": isDisabled,
         [`${rootClass}--drillIn`]: isDrillIn,
+        [`${rootClass}--collapsible`]: isCollapsible,
         "is-open": isOpen,
       })}
       id=${ifDefined(id)}
@@ -42,6 +45,16 @@ export const MenuItem = ({
       aria-selected=${isSelected ? "true" : "false"}
       aria-disabled=${isDisabled ? "true" : "false"}
       tabindex=${ifDefined(!isDisabled ? "0" : undefined)}>
+      ${isCollapsible
+        ? Icon({
+            ...globals,
+            iconName: "ChevronRight100",
+            customClasses: [
+              `${rootClass}Icon`,
+              "spectrum-Menu-chevron",
+              "spectrum-Menu-chevron--withAdjacentText"
+            ],
+          }) : ''}
       ${iconName
         ? Icon({
             ...globals,
@@ -51,7 +64,10 @@ export const MenuItem = ({
               `${rootClass}Icon--workflowIcon`
             ] 
           }) : ''}
-      <span class="${rootClass}Label">${label}</span>
+      ${isCollapsible
+        ? html`<span class="spectrum-Menu-sectionHeading">${label}</span>`
+        : html`<span class="${rootClass}Label">${label}</span>`
+      }
       ${typeof description != "undefined" 
         ? html`<span class="${rootClass}Description">${description}</span>`
         : ''}
@@ -76,6 +92,7 @@ export const MenuItem = ({
             ],
           })
         : ''}
+      ${isCollapsible && items.length > 0 ? Template({ ...globals, items, isOpen }) : ''}
     </li>
   `;
 
@@ -112,49 +129,14 @@ export const MenuGroup = ({
     </li>
   `;
 
-export const Submenu = ({
-  rootClass,
-  label,
-  items = [],
-  isOpen = false,
-  isDisabled = false,
-  isFocused = false,
-  role = "menuitem",
-  id,
-  ...globals
-}) => html`
-    <li
-      class=${classMap({
-        [rootClass]: true,
-        "is-open": isOpen,
-        "is-disabled": isDisabled,
-        "is-focused": isFocused,
-      })}
-      id=${ifDefined(id)}
-      role=${ifDefined(role)}
-      tabindex="0">
-      ${label
-        ? html`<span class="${rootClass}Label">${label}</span>`
-        : ""}
-      ${Icon({
-        ...globals,
-        iconName: "ChevronRight100",
-        customClasses: [
-          "spectrum-Menu-chevron",
-          `${rootClass}Icon`,
-        ],
-      })}
-      ${Template({ ...globals, items })}
-    </li>
-  `;
-
 export const Template = ({
   rootClass = "spectrum-Menu",
   labelledby,
   customClasses = [],
   customStyles = {},
   isDisabled = false,
-  isSelectable = true,
+  isSelectable = false,
+  isOpen = false,
   items = [],
   role = "menu",
   subrole = "menuitem",
@@ -166,6 +148,7 @@ export const Template = ({
       class=${classMap({
         [rootClass]: true,
         "is-selectable": isSelectable,
+        "is-open": isOpen,
         ...customClasses.reduce((a, c) => ({ ...a, [c]: true }), {}),
       })}
       id=${ifDefined(id)}
@@ -182,13 +165,6 @@ export const Template = ({
             customClasses: [`${rootClass}-divider`],
           });
         else if (i.heading) return MenuGroup({ ...i, ...globals, subrole });
-        else if (i.items)
-          return Submenu({
-            ...globals,
-            ...i,
-            rootClass: `${rootClass}-item`,
-            role: subrole,
-          });
         else
           return MenuItem({
             ...globals,
