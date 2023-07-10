@@ -5,7 +5,6 @@ updates:
     schedule:
       interval: "weekly"
     labels:
-      - "skip_vrt"
       - "dependencies"
     assignees:
       - "castastrophe"
@@ -18,12 +17,7 @@ updates:
     rebase-strategy: "auto"
     versioning-strategy: "increase"
     ignore:
-      # Not yet upgrading to @storybook 7.x [#CSS-450]
-      - dependency-name: "@storybook/*"
-        versions: ["7.x"]
       - dependency-name: "@spectrum-css/*"
-      # Ignore postcss versions until build migration complete
-      - dependency-name: "postcss*"
       # Ignore gulp versions until build migration complete
       - dependency-name: "gulp*"
 

@@ -3,7 +3,7 @@ name: "✨ Feature request"
 about: Suggest a new feature or component
 title: ""
 labels: enhancement
-assignees: ""
+assignees: pfulton, castastrophe
 ---
 
 ## Description
