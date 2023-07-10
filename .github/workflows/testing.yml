@@ -36,7 +36,8 @@ jobs:
         with:
           projectToken: ${{ secrets.CHROMATIC_PROJECT_TOKEN }}
           buildScriptName: ci:storybook
-          storybookConfigDir: tools/preview
+          storybookBaseDir: tools/preview
+          workingDir: tools/preview
           exitOnceUploaded: true
           onlyChanged: true
           traceChanged: true
