@@ -68,7 +68,24 @@ function getPopoverPlacement(popover, rect) {
 			"spectrum-Popover--right-top": "spectrum-Popover--right",
 			"spectrum-Popover--right-bottom": "spectrum-Popover--right",
 		}
+	}
 
+	// Logical properties change based on the direction of the text 
+	const direction = getComputedStyle(document.body).direction;
+	if (direction == "ltr") {
+		transforms["aliases"]["spectrum-Popover--start"] = "spectrum-Popover--left";
+		transforms["aliases"]["spectrum-Popover--start-top"] = "spectrum-Popover--left";
+		transforms["aliases"]["spectrum-Popover--start-bottom"] = "spectrum-Popover--left";
+		transforms["aliases"]["spectrum-Popover--end"] = "spectrum-Popover--right";
+		transforms["aliases"]["spectrum-Popover--end-top"] = "spectrum-Popover--right";
+		transforms["aliases"]["spectrum-Popover--end-bottom"] = "spectrum-Popover--right";
+	} else {
+		transforms["aliases"]["spectrum-Popover--start"] = "spectrum-Popover--right";
+		transforms["aliases"]["spectrum-Popover--start-top"] = "spectrum-Popover--right";
+		transforms["aliases"]["spectrum-Popover--start-bottom"] = "spectrum-Popover--right";
+		transforms["aliases"]["spectrum-Popover--end"] = "spectrum-Popover--left";
+		transforms["aliases"]["spectrum-Popover--end-top"] = "spectrum-Popover--left";
+		transforms["aliases"]["spectrum-Popover--end-bottom"] = "spectrum-Popover--left";
 	}
 	classes.forEach((item) => {
 		if (transforms[item]) {

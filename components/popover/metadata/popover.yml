@@ -15,7 +15,7 @@ sections:
         #### Position Class Naming
         - First position term is popover position, second term is source position.
         - Example: --top-left = popover is to top and source is to left.
-        - Popover does not have any spacing between the source by default. This can be overridden in implementation by setting `--mod-popover-source-distance` to the amount of spacing you'd like to have between the popover and its source.
+        - Popover does not have any spacing between the source by default.
 
         #### Position of Tip
         - Default tip position is centered on the edge for top/bottom/left/right/start/end positions.
