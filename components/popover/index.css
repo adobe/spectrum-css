@@ -126,8 +126,8 @@ governing permissions and limitations under the License.
 
 /* popover position is right of source */
 .spectrum-Popover--right,
-.spectrum-Popover--right-bottom,
-.spectrum-Popover--right-top {
+.spectrum-Popover--right-start,
+.spectrum-Popover--right-end {
   margin-left: var(--spectrum-popover-cross-offset);
   /* popover animates towards right ⮕ */
   &.is-open {
@@ -137,8 +137,8 @@ governing permissions and limitations under the License.
 
 /* popover position is left of source */
 .spectrum-Popover--left,
-.spectrum-Popover--left-bottom,
-.spectrum-Popover--left-top {
+.spectrum-Popover--left-start,
+.spectrum-Popover--left-end {
   margin-right: var(--spectrum-popover-cross-offset);
   /* popover animates towards left ⬅ */
   &.is-open {
@@ -283,13 +283,13 @@ governing permissions and limitations under the License.
     }
   }
 
-  /* right, left start, end popover position with tip default to pointing right ▷ */
+  /* right, left, start, end popover position with tip default to pointing right ▷ */
   &.spectrum-Popover--left,
-  &.spectrum-Popover--left-bottom,
-  &.spectrum-Popover--left-top,
+  &.spectrum-Popover--left-start,
+  &.spectrum-Popover--left-end,
   &.spectrum-Popover--right,
-  &.spectrum-Popover--right-bottom,
-  &.spectrum-Popover--right-top,
+  &.spectrum-Popover--right-start,
+  &.spectrum-Popover--right-end,
   &.spectrum-Popover--start,
   &.spectrum-Popover--start-top,
   &.spectrum-Popover--start-bottom,
@@ -306,8 +306,8 @@ governing permissions and limitations under the License.
 
     /* left popover with tip pointing right ▷ */
     &.spectrum-Popover--left,
-    &.spectrum-Popover--left-bottom,
-    &.spectrum-Popover--left-top {
+    &.spectrum-Popover--left-start,
+    &.spectrum-Popover--left-end {
       .spectrum-Popover-tip {
         left: 100%;
         right: auto;
@@ -316,8 +316,8 @@ governing permissions and limitations under the License.
 
     /* right popover with tip pointing left ◁ */
     &.spectrum-Popover--right,
-    &.spectrum-Popover--right-bottom,
-    &.spectrum-Popover--right-top {
+    &.spectrum-Popover--right-start,
+    &.spectrum-Popover--right-end {
       .spectrum-Popover-tip {
         right: 100%;
         left: auto;
@@ -326,9 +326,10 @@ governing permissions and limitations under the License.
       }
     }
 
+  
     /* popover with tip at top */
-    &.spectrum-Popover--right-top,
-    &.spectrum-Popover--left-top,
+    &.spectrum-Popover--right-start,
+    &.spectrum-Popover--left-start,
     &.spectrum-Popover--start-top,
     &.spectrum-Popover--end-top {
       .spectrum-Popover-tip {
@@ -338,8 +339,8 @@ governing permissions and limitations under the License.
     }
 
     /* popover with tip at bottom */
-    &.spectrum-Popover--right-bottom,
-    &.spectrum-Popover--left-bottom,
+    &.spectrum-Popover--right-end,
+    &.spectrum-Popover--left-end,
     &.spectrum-Popover--start-bottom,
     &.spectrum-Popover--end-bottom {
       .spectrum-Popover-tip {

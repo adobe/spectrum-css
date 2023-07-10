@@ -55,38 +55,17 @@ function getPopoverPlacement(popover, rect) {
 		"spectrum-Popover--left": `translate(${rect.left - popover.offsetWidth}px, ${rect.yCenter - popover.offsetHeight / 2}px)`,
 		"spectrum-Popover--right": `translate(${rect.right}px, ${rect.yCenter - popover.offsetHeight / 2}px)`,
 		"aliases": {
-			"spectrum-Popover--top-left": "spectrum-Popover--top",
-			"spectrum-Popover--top-right": "spectrum-Popover--top",
 			"spectrum-Popover--top-start": "spectrum-Popover--top",
 			"spectrum-Popover--top-end": "spectrum-Popover--top",
-			"spectrum-Popover--bottom-left": "spectrum-Popover--bottom",
-			"spectrum-Popover--bottom-right": "spectrum-Popover--bottom",
 			"spectrum-Popover--bottom-start": "spectrum-Popover--bottom",
 			"spectrum-Popover--bottom-end": "spectrum-Popover--bottom",
-			"spectrum-Popover--left-top": "spectrum-Popover--left",
-			"spectrum-Popover--left-bottom": "spectrum-Popover--left",
-			"spectrum-Popover--right-top": "spectrum-Popover--right",
-			"spectrum-Popover--right-bottom": "spectrum-Popover--right",
+			"spectrum-Popover--left-start": "spectrum-Popover--left",
+			"spectrum-Popover--left-end": "spectrum-Popover--left",
+			"spectrum-Popover--right-start": "spectrum-Popover--right",
+			"spectrum-Popover--right-end": "spectrum-Popover--right",
 		}
 	}
-
-	// Logical properties change based on the direction of the text 
-	const direction = getComputedStyle(document.body).direction;
-	if (direction == "ltr") {
-		transforms["aliases"]["spectrum-Popover--start"] = "spectrum-Popover--left";
-		transforms["aliases"]["spectrum-Popover--start-top"] = "spectrum-Popover--left";
-		transforms["aliases"]["spectrum-Popover--start-bottom"] = "spectrum-Popover--left";
-		transforms["aliases"]["spectrum-Popover--end"] = "spectrum-Popover--right";
-		transforms["aliases"]["spectrum-Popover--end-top"] = "spectrum-Popover--right";
-		transforms["aliases"]["spectrum-Popover--end-bottom"] = "spectrum-Popover--right";
-	} else {
-		transforms["aliases"]["spectrum-Popover--start"] = "spectrum-Popover--right";
-		transforms["aliases"]["spectrum-Popover--start-top"] = "spectrum-Popover--right";
-		transforms["aliases"]["spectrum-Popover--start-bottom"] = "spectrum-Popover--right";
-		transforms["aliases"]["spectrum-Popover--end"] = "spectrum-Popover--left";
-		transforms["aliases"]["spectrum-Popover--end-top"] = "spectrum-Popover--left";
-		transforms["aliases"]["spectrum-Popover--end-bottom"] = "spectrum-Popover--left";
-	}
+	
 	classes.forEach((item) => {
 		if (transforms[item]) {
 			placement = item;
