@@ -1131,36 +1131,25 @@ examples:
     markup: |
       <div class="spectrum-Examples">
         <div class="spectrum-Examples-item">
-          <div style="position: relative; height: 260px;">
-            <ul class="spectrum-Menu spectrum-Menu--sizeM" role="menu">
-              <li class="spectrum-Menu-item" role="menuitem" tabindex="0">
-                <span class="spectrum-Menu-itemLabel">Deselect</span>
-              </li>
-              <li class="spectrum-Menu-item" role="menuitem" tabindex="0">
-                <span class="spectrum-Menu-itemLabel">Select Inverse</span>
-              </li>
-              <li class="spectrum-Menu-item spectrum-Menu-item--drillIn is-open" role="menuitem" tabindex="0">
-                <span class="spectrum-Menu-itemLabel">Feather really long item</span>
-                <svg class="spectrum-Icon spectrum-Icon--sizeM spectrum-UIIcon-ChevronRight100 spectrum-Menu-chevron spectrum-Menu-itemIcon" focusable="false" aria-hidden="true" aria-label="Next">
-                  <use xlink:href="#spectrum-css-icon-Chevron100" />
-                </svg>
-              </li>
-              <li class="spectrum-Menu-item" role="menuitem" tabindex="0">
-                <span class="spectrum-Menu-itemLabel">Select and Mask...</span>
-              </li>
-              <li class="spectrum-Menu-item" role="menuitem" tabindex="0">
-                <span class="spectrum-Menu-itemLabel">Save Selection</span>
-              </li>
-            </ul>
-
-            <ul class="spectrum-Menu spectrum-Menu--sizeM" role="menu">
-              <li class="spectrum-Menu-item" role="menuitem" tabindex="0">
-                <span class="spectrum-Menu-itemLabel">Deselect</span>
-              </li>
-              <li class="spectrum-Menu-item" role="menuitem" tabindex="0">
-                <span class="spectrum-Menu-itemLabel">Select and Mask...</span>
-              </li>
-            </ul>
-          </div>
+          <ul class="spectrum-Menu spectrum-Menu--sizeM" role="menu">
+            <li class="spectrum-Menu-item" role="menuitem" tabindex="0">
+              <span class="spectrum-Menu-itemLabel">Deselect</span>
+            </li>
+            <li class="spectrum-Menu-item" role="menuitem" tabindex="0">
+              <span class="spectrum-Menu-itemLabel">Select Inverse</span>
+            </li>
+            <li class="spectrum-Menu-item spectrum-Menu-item--drillIn is-open" role="menuitem" tabindex="0">
+              <span class="spectrum-Menu-itemLabel">Feather really long item</span>
+              <svg class="spectrum-Icon spectrum-Icon--sizeM spectrum-UIIcon-ChevronRight100 spectrum-Menu-chevron spectrum-Menu-itemIcon" focusable="false" aria-hidden="true" aria-label="Next">
+                <use xlink:href="#spectrum-css-icon-Chevron100" />
+              </svg>
+            </li>
+            <li class="spectrum-Menu-item" role="menuitem" tabindex="0">
+              <span class="spectrum-Menu-itemLabel">Select and Mask...</span>
+            </li>
+            <li class="spectrum-Menu-item" role="menuitem" tabindex="0">
+              <span class="spectrum-Menu-itemLabel">Save Selection</span>
+            </li>
+          </ul>
         </div>
       </div>
