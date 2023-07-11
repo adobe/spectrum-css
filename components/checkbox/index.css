@@ -378,7 +378,7 @@ governing permissions and limitations under the License.
 
   line-height: var(--mod-checkbox-line-height, var(--spectrum-checkbox-line-height));
 
-  &:lang(js),
+  &:lang(ja),
   &:lang(zh),
   &:lang(ko) {
     line-height: var(--mod-checkbox-line-height-cjk, var(--spectrum-checkbox-line-height-cjk));
