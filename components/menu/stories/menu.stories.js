@@ -25,6 +25,16 @@ export default {
       },
       control: "boolean",
     },
+		size: {
+			name: "Size",
+			type: { name: "string", required: true },
+			table: {
+				type: { summary: "string" },
+				category: "Component",
+			},
+			options: ["s", "m", "l", "xl"],
+			control: "select",
+		},
     labelledby: { table: { disable: true } },
     items: { table: { disable: true } },
     role: { table: { disable: true } },
@@ -42,6 +52,7 @@ export default {
     rootClass: "spectrum-Menu",
     isDisabled: false,
     isSelectable: false,
+    size: "m",
   },
   parameters: {
     actions: {

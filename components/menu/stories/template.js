@@ -25,6 +25,7 @@ export const MenuItem = ({
   isOpen = false,
   role = "menuitem",
   items = [],
+  size,
   id,
   ...globals
 }) => html`
@@ -49,6 +50,7 @@ export const MenuItem = ({
         ? Icon({
             ...globals,
             iconName: "ChevronRight100",
+            size,
             customClasses: [
               `${rootClass}Icon`,
               "spectrum-Menu-chevron",
@@ -59,6 +61,7 @@ export const MenuItem = ({
         ? Icon({
             ...globals,
             iconName,
+            size,
             customClasses: [
               `${rootClass}Icon`,
               `${rootClass}Icon--workflowIcon`
@@ -75,6 +78,7 @@ export const MenuItem = ({
         ? Icon({
             ...globals,
             iconName: "ChevronRight100",
+            size,
             customClasses: [
               `${rootClass}Icon`,
               "spectrum-Menu-chevron",
@@ -85,6 +89,7 @@ export const MenuItem = ({
         ? Icon({
             ...globals,
             iconName: "Checkmark100",
+            size,
             customClasses: [
               `${rootClass}Icon`,
               "spectrum-Menu-checkmark",
@@ -92,7 +97,7 @@ export const MenuItem = ({
             ],
           })
         : ''}
-      ${isCollapsible && items.length > 0 ? Template({ ...globals, items, isOpen }) : ''}
+      ${isCollapsible && items.length > 0 ? Template({ ...globals, items, isOpen, size }) : ''}
     </li>
   `;
 
@@ -104,6 +109,7 @@ export const MenuGroup = ({
   isDisabled = false,
   isSelectable = false,
   subrole,
+  size,
   ...globals
 }) => html`
     <li
@@ -125,6 +131,7 @@ export const MenuGroup = ({
         items,
         isDisabled,
         isSelectable,
+        size,
       })}
     </li>
   `;
@@ -134,6 +141,7 @@ export const Template = ({
   labelledby,
   customClasses = [],
   customStyles = {},
+  size,
   isDisabled = false,
   isSelectable = false,
   isOpen = false,
@@ -147,6 +155,7 @@ export const Template = ({
     <ul
       class=${classMap({
         [rootClass]: true,
+				[`${rootClass}--size${size?.toUpperCase()}`]: typeof size !== "undefined",
         "is-selectable": isSelectable,
         "is-open": isOpen,
         ...customClasses.reduce((a, c) => ({ ...a, [c]: true }), {}),
@@ -164,13 +173,14 @@ export const Template = ({
             tag: "li",
             customClasses: [`${rootClass}-divider`],
           });
-        else if (i.heading) return MenuGroup({ ...i, ...globals, subrole });
+        else if (i.heading) return MenuGroup({ ...i, ...globals, subrole, size });
         else
           return MenuItem({
             ...globals,
             ...i,
             rootClass: `${rootClass}-item`,
             role: subrole,
+            size,
           });
       })}
     </ul>
