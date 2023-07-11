@@ -3,6 +3,13 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+<a name="3.0.65"></a>
+##3.0.65
+🗓
+2023-07-11 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/miller@3.0.64...@spectrum-css/miller@3.0.65)
+
+**Note:** Version bump only for package @spectrum-css/miller
+
 <a name="3.0.64"></a>
 ##3.0.64
 🗓
