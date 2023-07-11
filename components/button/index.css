@@ -239,6 +239,9 @@ a.spectrum-Button {
 /* windows high contrast mode over-writes for accent variant */
 @media (forced-colors: active) {
   .spectrum-Button {
+    --highcontrast-button-content-color-disabled: GrayText;
+    --highcontrast-button-border-color-disabled: GrayText;
+
     &:focus-ring {
       &:after {
         forced-color-adjust: none;
@@ -248,25 +251,21 @@ a.spectrum-Button {
 
     &.spectrum-Button--accent {
       &.spectrum-Button--fill {
-        background-color: ButtonText;
-        color: ButtonFace;
+        --highcontrast-button-background-color-default: ButtonText;
+        --highcontrast-button-content-color-default: ButtonFace;
+        --highcontrast-button-background-color-disabled: ButtonFace;
 
-        &:disabled,
-        &.is-disabled {
-          background-color: ButtonFace;
-          color: GrayText;
-        }
+        --highcontrast-button-background-color-hover: Highlight;
+        --highcontrast-button-background-color-down: Highlight;
+        --highcontrast-button-background-color-focus: Highlight;
+        --highcontrast-button-content-color-hover: ButtonFace;
+        --highcontrast-button-content-color-down: ButtonFace;
+        --highcontrast-button-content-color-focus: ButtonFace;
 
-        /* simplified for a lot of state for high contrast mode */
-        &:active,
-        &:hover,
-        &:focus-ring,
-        &.is-focused {
-          background-color: Highlight;
-        }
         .spectrum-Button-label {
           forced-color-adjust: none;
         }
+        
       }
     }
   }
