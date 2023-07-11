@@ -233,7 +233,7 @@ governing permissions and limitations under the License.
 .spectrum-Menu {
   display: inline-block;
   box-sizing: border-box;
-  margin-inline: 0;
+  margin: 0;
   padding: 0;
   list-style-type: none;
   overflow: auto;
@@ -556,15 +556,7 @@ governing permissions and limitations under the License.
 .spectrum-Menu-checkmark {
   block-size: var(--mod-menu-item-checkmark-height, var(--spectrum-menu-item-checkmark-height));
   inline-size: var(--mod-menu-item-checkmark-width, var(--spectrum-menu-item-checkmark-width));
-}
-
-/* always provide space at the end of a workflow icon */
-.spectrum-Menu-itemIcon--workflowIcon {
-  margin-inline-end: var(--mod-menu-item-label-text-to-visual, var(--spectrum-menu-item-label-text-to-visual));
-}
-
-/* checkmarks that have text directly next to them */
-.spectrum-Menu-checkmark--withAdjacentText {
+  /* default: checkmarks that have text directly next to them */
   margin-inline-end: var(--mod-menu-item-text-to-control, var(--spectrum-menu-item-text-to-control));
 }
 
@@ -573,13 +565,18 @@ governing permissions and limitations under the License.
   margin-inline-end: var(--mod-menu-item-text-to-control, var(--spectrum-menu-item-text-to-control));
 }
 
-/* chevrons (aka collapsibles) that have an icon directly next to them */
-.spectrum-Menu-chevron--withAdjacentIcon {
+/* always provide space at the end of a workflow icon */
+.spectrum-Menu-itemIcon--workflowIcon {
+  margin-inline-end: var(--mod-menu-item-label-text-to-visual, var(--spectrum-menu-item-label-text-to-visual));
+}
+
+.spectrum-Menu-chevron {
+  /* default: chevrons (aka collapsibles) that have no icon and instead have text directly next to them */
   margin-inline-end: var(--mod-menu-item-text-to-control, var(--spectrum-menu-item-text-to-control));
 }
 
-/* chevrons (aka collapsibles) that have no icon and instead have text directly next to them */
-.spectrum-Menu-chevron--withAdjacentText {
+/* chevrons (aka collapsibles) that have an icon directly next to them */
+.spectrum-Menu-chevron--withAdjacentIcon {
   margin-inline-end: var(--mod-menu-item-text-to-control, var(--spectrum-menu-item-text-to-control));
 }
 

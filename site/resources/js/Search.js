@@ -325,11 +325,11 @@ Search.prototype.search = function (val) {
   ${Search.Categories.map(function (category) {
 		return results[category].length
 			? `
-        <li class="spectrum-Menu-item" role="group" aria-labelledby="searchResults-${category}">
+        <li role="presentation" aria-labelledby="searchResults-${category}">
           <span class="spectrum-Menu-sectionHeading" id="searchResults-${category}" aria-hidden="true">${
 					Search.CategoryNames[category]
 			  }</span>
-          <ul class="spectrum-Menu spectrum-Menu--sizeM" role="presentation">
+          <ul class="spectrum-Menu spectrum-Menu--sizeM" role="group">
             ${results[category]
 							.map(function (result, i) {
 								return `  
