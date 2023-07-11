@@ -3,6 +3,19 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+<a name="4.0.0"></a>
+#4.0.0
+🗓
+2023-07-11 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/preview@3.2.0...@spectrum-css/preview@4.0.0)
+
+\*feat(tabs)!: migrate tokens (#1902)([6d07436](https://github.com/adobe/spectrum-css/commit/6d07436)), closes[#1902](https://github.com/adobe/spectrum-css/issues/1902)
+
+    	###
+    	🛑 BREAKING CHANGES
+
+    		*
+    		Migrates the Tabs component to use `@adobe/spectrum-tokens`.
+
 <a name="3.2.0"></a>
 #3.2.0
 🗓
