@@ -3,6 +3,29 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+<a name="5.0.13"></a>
+##5.0.13
+🗓
+2023-07-11 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/colorhandle@5.0.12...@spectrum-css/colorhandle@5.0.13)
+
+**Note:** Version bump only for package @spectrum-css/colorhandle
+
+<a name="5.0.12"></a>
+##5.0.12
+🗓
+2023-06-29 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/colorhandle@5.0.11...@spectrum-css/colorhandle@5.0.12)
+
+**Note:** Version bump only for package @spectrum-css/colorhandle
+
+<a name="5.0.11"></a>
+##5.0.11
+🗓
+2023-06-28 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/colorhandle@5.0.10...@spectrum-css/colorhandle@5.0.11)
+
+### 🐛 Bug fixes
+
+- **colorloupe:**border bug ([#1958](https://github.com/adobe/spectrum-css/issues/1958))([559696f](https://github.com/adobe/spectrum-css/commit/559696f))
+
 <a name="5.0.10"></a>
 ##5.0.10
 🗓

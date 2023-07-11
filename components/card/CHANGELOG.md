@@ -3,6 +3,33 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+<a name="6.0.2"></a>
+##6.0.2
+🗓
+2023-07-11 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/card@6.0.1...@spectrum-css/card@6.0.2)
+
+**Note:** Version bump only for package @spectrum-css/card
+
+<a name="6.0.1"></a>
+##6.0.1
+🗓
+2023-06-29 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/card@6.0.0...@spectrum-css/card@6.0.1)
+
+**Note:** Version bump only for package @spectrum-css/card
+
+<a name="6.0.0"></a>
+#6.0.0
+🗓
+2023-06-28 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/card@5.0.41...@spectrum-css/card@6.0.0)
+
+\*feat(card)!: migrate to use `@adobe/spectrum-tokens` (#1693)([1afc96b](https://github.com/adobe/spectrum-css/commit/1afc96b)), closes[#1693](https://github.com/adobe/spectrum-css/issues/1693)
+
+    	###
+    	🛑 BREAKING CHANGES
+
+    		*
+    		migrates the Card component to use `@adobe/spectrum-tokens`
+
 <a name="5.0.41"></a>
 ##5.0.41
 🗓

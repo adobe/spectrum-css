@@ -3,6 +3,15 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+<a name="3.0.9"></a>
+##3.0.9
+🗓
+2023-06-28 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/expressvars@3.0.8...@spectrum-css/expressvars@3.0.9)
+
+### 🐛 Bug fixes
+
+- **expressvars:**slider variable typo([1136529](https://github.com/adobe/spectrum-css/commit/1136529))
+
 <a name="3.0.8"></a>
 ##3.0.8
 🗓

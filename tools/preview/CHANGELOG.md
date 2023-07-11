@@ -3,6 +3,33 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+<a name="3.2.0"></a>
+#3.2.0
+🗓
+2023-07-11 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/preview@3.1.3...@spectrum-css/preview@3.2.0)
+
+### ✨ Features
+
+\*allow story-level params to be passed to RTL decorator ([#1986](https://github.com/adobe/spectrum-css/issues/1986))([5fba21e](https://github.com/adobe/spectrum-css/commit/5fba21e))
+
+### 🐛 Bug fixes
+
+\*revert prettier version bump ([#2004](https://github.com/adobe/spectrum-css/issues/2004))([29b179c](https://github.com/adobe/spectrum-css/commit/29b179c))
+
+<a name="3.1.3"></a>
+##3.1.3
+🗓
+2023-06-29 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/preview@3.1.2...@spectrum-css/preview@3.1.3)
+
+**Note:** Version bump only for package @spectrum-css/preview
+
+<a name="3.1.2"></a>
+##3.1.2
+🗓
+2023-06-28 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/preview@3.1.1...@spectrum-css/preview@3.1.2)
+
+**Note:** Version bump only for package @spectrum-css/preview
+
 <a name="3.1.1"></a>
 ##3.1.1
 🗓

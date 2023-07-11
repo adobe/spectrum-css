@@ -3,6 +3,29 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+<a name="3.0.21"></a>
+##3.0.21
+🗓
+2023-07-11 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/colorslider@3.0.20...@spectrum-css/colorslider@3.0.21)
+
+**Note:** Version bump only for package @spectrum-css/colorslider
+
+<a name="3.0.20"></a>
+##3.0.20
+🗓
+2023-06-29 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/colorslider@3.0.19...@spectrum-css/colorslider@3.0.20)
+
+**Note:** Version bump only for package @spectrum-css/colorslider
+
+<a name="3.0.19"></a>
+##3.0.19
+🗓
+2023-06-28 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/colorslider@3.0.18...@spectrum-css/colorslider@3.0.19)
+
+### 🐛 Bug fixes
+
+- **colorloupe:**border bug ([#1958](https://github.com/adobe/spectrum-css/issues/1958))([559696f](https://github.com/adobe/spectrum-css/commit/559696f))
+
 <a name="3.0.18"></a>
 ##3.0.18
 🗓

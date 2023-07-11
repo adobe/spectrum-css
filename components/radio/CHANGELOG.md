@@ -3,6 +3,20 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+<a name="7.0.40"></a>
+##7.0.40
+🗓
+2023-07-11 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/radio@7.0.39...@spectrum-css/radio@7.0.40)
+
+**Note:** Version bump only for package @spectrum-css/radio
+
+<a name="7.0.39"></a>
+##7.0.39
+🗓
+2023-06-29 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/radio@7.0.38...@spectrum-css/radio@7.0.39)
+
+**Note:** Version bump only for package @spectrum-css/radio
+
 <a name="7.0.38"></a>
 ##7.0.38
 🗓
