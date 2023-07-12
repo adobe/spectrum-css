@@ -3156,7 +3156,7 @@
     "@storybook/client-logger" "7.0.20"
     "@storybook/preview-api" "7.0.20"
 
-"@storybook/client-logger@7.0.12", "@storybook/client-logger@^7.0.9":
+"@storybook/client-logger@7.0.12":
   version "7.0.12"
   resolved "https://registry.yarnpkg.com/@storybook/client-logger/-/client-logger-7.0.12.tgz#259931a1de7503227f0c082e130ca98e5109ca92"
   integrity sha512-MQMtIgGEgdixvxnBvZ2m8hhc0DGJWeCpHtxg7oqBLBEBmCYFueTqDZHl4Z6SoCrK0a2YS5X/BIXOcEtP1ulMKw==
@@ -3177,7 +3177,7 @@
   dependencies:
     "@storybook/global" "^5.0.0"
 
-"@storybook/client-logger@7.0.26":
+"@storybook/client-logger@7.0.26", "@storybook/client-logger@^7.0.9":
   version "7.0.26"
   resolved "https://registry.yarnpkg.com/@storybook/client-logger/-/client-logger-7.0.26.tgz#26e3f45e2740952a0c14d59b80b47c815c6ab665"
   integrity sha512-OMVLbgceoeuM8sWOfTX/9a4zCrH78G32hg7x8yXLZnRJ9OLaHJHzUM0Onc4MLudqVUdaKH0c8ejpBXUyIr1rJQ==
@@ -3735,7 +3735,7 @@
     nanoid "^3.3.1"
     read-pkg-up "^7.0.1"
 
-"@storybook/theming@7.0.12", "@storybook/theming@^7.0.9":
+"@storybook/theming@7.0.12":
   version "7.0.12"
   resolved "https://registry.yarnpkg.com/@storybook/theming/-/theming-7.0.12.tgz#5583639b391e7bbb710a74bc59c94b8bbc455d88"
   integrity sha512-frBkvH7LF8j23ODaywLK4m4LLscw49oKblkZ+30QZkBAzRf2o3a/QSZW2V1zfBo7ygcXiUJ5bIjh7Y17mMJqbQ==
@@ -3745,7 +3745,7 @@
     "@storybook/global" "^5.0.0"
     memoizerific "^1.11.3"
 
-"@storybook/theming@7.0.20", "@storybook/theming@^7.0.20":
+"@storybook/theming@7.0.20":
   version "7.0.20"
   resolved "https://registry.yarnpkg.com/@storybook/theming/-/theming-7.0.20.tgz#d890c65d20a26c0b7843ae4378f14b70b98396df"
   integrity sha512-qmo/RKygt7W+NoHCfszChhSOFKe7eNeGzax4YR7yeX3brTzUQqGnb0onGv7MPtoCPhMFpbktK80u4biZtC7XhQ==
@@ -3762,6 +3762,16 @@
   dependencies:
     "@emotion/use-insertion-effect-with-fallbacks" "^1.0.0"
     "@storybook/client-logger" "7.0.24"
+    "@storybook/global" "^5.0.0"
+    memoizerific "^1.11.3"
+
+"@storybook/theming@^7.0.26", "@storybook/theming@^7.0.9":
+  version "7.0.26"
+  resolved "https://registry.yarnpkg.com/@storybook/theming/-/theming-7.0.26.tgz#b537f92f6168d1228bd4ccc1c3c38dac1c6a02d3"
+  integrity sha512-7hxpT2yq+xZonSsEZHOF+HDHx6GE0qlys3EQ63K9XCJ8VeBnq9M5zHvMK9iXl90093ufxpvWsfDWgtja2zvmTw==
+  dependencies:
+    "@emotion/use-insertion-effect-with-fallbacks" "^1.0.0"
+    "@storybook/client-logger" "7.0.26"
     "@storybook/global" "^5.0.0"
     memoizerific "^1.11.3"
 
