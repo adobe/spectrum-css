@@ -2,7 +2,7 @@
 import { Template } from "./template";
 
 export default {
-	title: "Split button",
+	title: "Components/Split button",
 	description:
 		"A split button surfaces an immediately invokable action via it's main button, as well as a list of alternative actions in its toggle-able menu overlay.",
 	component: "SplitButton",

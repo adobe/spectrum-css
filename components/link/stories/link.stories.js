@@ -2,7 +2,7 @@
 import { Template } from "./template";
 
 export default {
-	title: "Link",
+	title: "Components/Link",
 	description:
 		"A link allow users to navigate to a different location. They can be presented in-line inside a paragraph or as a standalone text.",
 	component: "Link",

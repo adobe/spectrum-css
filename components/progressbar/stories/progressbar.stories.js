@@ -2,7 +2,7 @@
 import { Template } from "./template";
 
 export default {
-	title: "Progress bar",
+	title: "Components/Progress bar",
 	description:
 		"The Progress bar component shows the progression of a system operation such as downloading, uploading, processing, etc. in a visual way.",
 	component: "ProgressBar",

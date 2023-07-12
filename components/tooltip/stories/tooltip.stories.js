@@ -2,7 +2,7 @@
 import { Template } from "./template";
 
 export default {
-	title: "Tooltip",
+	title: "Components/Tooltip",
 	description:
 		"Tooltips show contextual help or information about specific components when a user hovers or focuses on them.",
 	component: "Tooltip",

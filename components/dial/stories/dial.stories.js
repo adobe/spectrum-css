@@ -2,8 +2,8 @@
 import { Template } from "./template";
 
 export default {
-	title: "Dial",
-	description: "A dial for turning it up to 11.",
+	title: "Components/Dial",
+	description: "A dial is an input control used for selecting a value within a range, similar to a slider. It's often used in audio and video mixing and editing applications, where horizontal space is limited.",
 	component: "Dial",
 	argTypes: {
 		size: {
@@ -71,5 +71,25 @@ export default {
 	},
 };
 
-export const Default = Template.bind({});
+export const Default = Template.bind();
 Default.args = {};
+
+export const DefaultExpress = Template.bind();
+DefaultExpress.args = {
+  express: true,
+};
+
+export const Small = Template.bind();
+Small.args = {
+  size: "s",
+}
+
+export const WithLabel = Template.bind();
+WithLabel.args = {
+  label: "Volume",
+};
+
+export const Disabled = Template.bind();
+Disabled.args = {
+  isDisabled: true,
+}

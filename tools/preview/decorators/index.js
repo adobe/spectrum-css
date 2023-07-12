@@ -1,5 +1,5 @@
 import { useEffect, makeDecorator } from "@storybook/preview-api";
-import { html } from "lit-html";
+import { html } from "lit";
 
 export { withContextWrapper } from "./contextsWrapper.js";
 
@@ -9,10 +9,11 @@ export { withContextWrapper } from "./contextsWrapper.js";
  **/
 export const withTextDirectionWrapper = makeDecorator({
 	name: "withTextDirectionWrapper",
-	parameterName: "context",
+	parameterName: "textDecoration",
 	wrapper: (StoryFn, context) => {
-		const { globals } = context;
-		const textDirection = globals.textDirection;
+		const { globals, parameters } = context;
+    const defaultDirection = "ltr"
+		const textDirection = parameters.textDirection || globals.textDirection || defaultDirection;
 
 		// Shortkeys for the global types
 		document.addEventListener("keydown", (e) => {
@@ -21,7 +22,7 @@ export const withTextDirectionWrapper = makeDecorator({
 					document.documentElement.dir = "rtl";
 					break;
 				case "n":
-					document.documentElement.dir = "ltr";
+					document.documentElement.dir = defaultDirection;
 					break;
 			}
 		});

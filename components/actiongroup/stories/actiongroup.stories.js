@@ -4,7 +4,7 @@ import { Template } from "./template";
 import { default as ActionButton } from "@spectrum-css/actionbutton/stories/actionbutton.stories.js";
 
 export default {
-	title: "Action group",
+	title: "Components/Action group",
 	description: "The Action group component is a collection of action buttons.",
 	component: "ActionGroup",
 	argTypes: {
@@ -72,21 +72,55 @@ export default {
 	},
 };
 
+const items = [
+	{
+		iconName: "Edit",
+		label: "Edit",
+	},
+	{
+		iconName: "Copy",
+		label: "Copy",
+	},
+	{
+		iconName: "Delete",
+		label: "Delete",
+		isSelected: true,
+	},
+];
+
 export const Default = Template.bind({});
 Default.args = {
-	content: [
-		{
-			iconName: "Edit",
-			label: "Edit",
-		},
-		{
-			iconName: "Copy",
-			label: "Copy",
-		},
-		{
-			iconName: "Delete",
-			label: "Delete",
-			isSelected: true,
-		},
-	],
+	content: items
+};
+
+
+export const Compact = Template.bind({});
+Compact.args = {
+	compact: true,
+	content: items
+};
+
+export const Vertical = Template.bind({});
+Vertical.args = {
+	vertical: true,
+	content: items
+};
+
+export const VerticalCompact = Template.bind({});
+VerticalCompact.args = {
+	vertical: true,
+	compact: true,
+	content: items
+};
+
+export const Justified = Template.bind({});
+Justified.args = {
+	justified: true,
+	content: items
+};
+
+export const Quiet = Template.bind({});
+Quiet.args = {
+	areQuiet: true,
+	content: items
 };

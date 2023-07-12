@@ -2,7 +2,7 @@
 import { Template } from "./template";
 
 export default {
-	title: "Swatch",
+	title: "Components/Swatch",
 	description:
 		"A swatch shows a small sample of a fill—such as a color, gradient, texture, or material—that is intended to be applied to an object.",
 	component: "Swatch",

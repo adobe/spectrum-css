@@ -1,11 +1,11 @@
-import { html } from "lit-html";
+import { html } from "lit";
 
 // Import the component markup template
 import { Template } from "./template";
 import { Template as Link } from "@spectrum-css/link/stories/template.js";
 
 export default {
-	title: "Illustrated Message",
+	title: "Components/Illustrated message",
 	description:
 		"The Illustrated Message component is used for status and errors. It is also used for call to actions, such as within the Drop Zone component.",
 	component: "IllustratedMessage",

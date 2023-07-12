@@ -4,7 +4,7 @@ import { Template } from "./template";
 import { workflowIcons, uiIcons } from "./utilities.js";
 
 export default {
-	title: "Icon",
+	title: "Components/Icon",
 	description:
 		"The icons component contains all UI icons used for components as well as the CSS for UI and workflow icons.",
 	component: "Icon",

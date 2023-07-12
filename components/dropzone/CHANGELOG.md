@@ -3,6 +3,34 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+<a name="5.0.7"></a>
+##5.0.7
+🗓
+2023-07-11 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/dropzone@5.0.6...@spectrum-css/dropzone@5.0.7)
+
+**Note:** Version bump only for package @spectrum-css/dropzone
+
+<a name="5.0.6"></a>
+##5.0.6
+🗓
+2023-06-29 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/dropzone@5.0.5...@spectrum-css/dropzone@5.0.6)
+
+**Note:** Version bump only for package @spectrum-css/dropzone
+
+<a name="5.0.5"></a>
+##5.0.5
+🗓
+2023-06-21 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/dropzone@5.0.4...@spectrum-css/dropzone@5.0.5)
+
+**Note:** Version bump only for package @spectrum-css/dropzone
+
+<a name="5.0.4"></a>
+##5.0.4
+🗓
+2023-06-15 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/dropzone@5.0.3...@spectrum-css/dropzone@5.0.4)
+
+**Note:** Version bump only for package @spectrum-css/dropzone
+
 <a name="5.0.3"></a>
 ##5.0.3
 🗓

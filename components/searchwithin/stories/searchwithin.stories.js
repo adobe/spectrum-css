@@ -5,7 +5,7 @@ import { default as PickerStories } from "@spectrum-css/picker/stories/picker.st
 const ignoreProps = ["rootClass", "position", "isRounded"];
 
 export default {
-	title: "Search within",
+	title: "Components/Search within",
 	description: "The Search within component is...",
 	component: "SearchWithin",
 	argTypes: {

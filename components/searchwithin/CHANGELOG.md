@@ -3,6 +3,41 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+<a name="4.0.34"></a>
+##4.0.34
+🗓
+2023-07-11 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/searchwithin@4.0.33...@spectrum-css/searchwithin@4.0.34)
+
+**Note:** Version bump only for package @spectrum-css/searchwithin
+
+<a name="4.0.33"></a>
+##4.0.33
+🗓
+2023-06-29 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/searchwithin@4.0.32...@spectrum-css/searchwithin@4.0.33)
+
+**Note:** Version bump only for package @spectrum-css/searchwithin
+
+<a name="4.0.32"></a>
+##4.0.32
+🗓
+2023-06-28 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/searchwithin@4.0.31...@spectrum-css/searchwithin@4.0.32)
+
+**Note:** Version bump only for package @spectrum-css/searchwithin
+
+<a name="4.0.31"></a>
+##4.0.31
+🗓
+2023-06-21 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/searchwithin@4.0.30...@spectrum-css/searchwithin@4.0.31)
+
+**Note:** Version bump only for package @spectrum-css/searchwithin
+
+<a name="4.0.30"></a>
+##4.0.30
+🗓
+2023-06-15 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/searchwithin@4.0.29...@spectrum-css/searchwithin@4.0.30)
+
+**Note:** Version bump only for package @spectrum-css/searchwithin
+
 <a name="4.0.29"></a>
 ##4.0.29
 🗓

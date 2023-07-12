@@ -1,8 +1,8 @@
-import { html } from "lit-html";
-import { classMap } from "lit-html/directives/class-map.js";
+import { html } from "lit";
+import { classMap } from "lit/directives/class-map.js";
 import { Template as FieldLabel } from "@spectrum-css/fieldlabel/stories/template.js";
-import { ifDefined } from "lit-html/directives/if-defined.js";
-import { styleMap } from "lit-html/directives/style-map.js";
+import { ifDefined } from "lit/directives/if-defined.js";
+import { styleMap } from "lit/directives/style-map.js";
 
 import "../index.css";
 

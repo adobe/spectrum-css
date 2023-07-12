@@ -2,7 +2,7 @@
 import { Template } from "./template";
 
 export default {
-	title: "Progresscircle",
+	title: "Components/Progress circle",
 	description:
 		"Progress circles show the progression of a system operation such as downloading, uploading, processing, etc. in a visual way. They can represent determinate or indeterminate progress.",
 	component: "Progresscircle",

@@ -1,7 +1,7 @@
-import { html } from "lit-html";
-import { classMap } from "lit-html/directives/class-map.js";
-import { styleMap } from "lit-html/directives/style-map.js";
-import { ifDefined } from "lit-html/directives/if-defined.js";
+import { html } from "lit";
+import { classMap } from "lit/directives/class-map.js";
+import { styleMap } from "lit/directives/style-map.js";
+import { ifDefined } from "lit/directives/if-defined.js";
 
 import { Template as Textfield } from "@spectrum-css/textfield/stories/template.js";
 import { Template as ActionButton } from "@spectrum-css/actionbutton/stories/template.js";

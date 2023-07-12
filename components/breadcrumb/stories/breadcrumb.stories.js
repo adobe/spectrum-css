@@ -2,7 +2,7 @@
 import { Template } from "./template";
 
 export default {
-	title: "Breadcrumbs",
+	title: "Components/Breadcrumbs",
 	description:
 		"Breadcrumbs show hierarchy and navigational context for a user’s location within an app.",
 	component: "Breadcrumbs",

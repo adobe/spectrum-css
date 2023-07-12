@@ -1,5 +1,5 @@
-import { html } from "lit-html";
-import { classMap } from "lit-html/directives/class-map.js";
+import { html } from "lit";
+import { classMap } from "lit/directives/class-map.js";
 
 import { upperCase, lowerCase, capitalize } from "lodash-es";
 

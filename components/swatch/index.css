@@ -85,12 +85,10 @@ governing permissions and limitations under the License.
     .spectrum-Swatch-fill {
       forced-color-adjust: none;
     }
-
-    &.is-disabled {
-      .spectrum-Swatch-fill {
-        forced-color-adjust: auto;
-      }
-    }
+  }
+  .spectrum-Swatch[disabled],
+  .spectrum-Swatch.is-disabled {
+    --highcontrast-swatch-border-color: GrayText;
   }
 }
 

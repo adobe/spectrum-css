@@ -3,6 +3,43 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+<a name="3.2.4"></a>
+##3.2.4
+🗓
+2023-07-11 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/calendar@3.2.3...@spectrum-css/calendar@3.2.4)
+
+**Note:** Version bump only for package @spectrum-css/calendar
+
+<a name="3.2.3"></a>
+##3.2.3
+🗓
+2023-06-29 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/calendar@3.2.2...@spectrum-css/calendar@3.2.3)
+
+**Note:** Version bump only for package @spectrum-css/calendar
+
+<a name="3.2.2"></a>
+##3.2.2
+🗓
+2023-06-28 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/calendar@3.2.1...@spectrum-css/calendar@3.2.2)
+
+**Note:** Version bump only for package @spectrum-css/calendar
+
+<a name="3.2.1"></a>
+##3.2.1
+🗓
+2023-06-21 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/calendar@3.2.0...@spectrum-css/calendar@3.2.1)
+
+**Note:** Version bump only for package @spectrum-css/calendar
+
+<a name="3.2.0"></a>
+#3.2.0
+🗓
+2023-06-15 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/calendar@3.1.24...@spectrum-css/calendar@3.2.0)
+
+### ✨ Features
+
+\*update to Storybook v7 ([#1935](https://github.com/adobe/spectrum-css/issues/1935))([6dcf09b](https://github.com/adobe/spectrum-css/commit/6dcf09b))
+
 <a name="3.1.24"></a>
 ##3.1.24
 🗓

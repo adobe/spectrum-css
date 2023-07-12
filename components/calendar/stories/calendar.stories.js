@@ -1,14 +1,15 @@
 // Import the component markup template
 import { Template } from "./template";
 
-import { default as ActionButtonStories } from "@spectrum-css/actionbutton/stories/actionbutton.stories.js";
+import isChromatic from "chromatic/isChromatic";
+import ActionButtonStories from "@spectrum-css/actionbutton/stories/actionbutton.stories.js";
 
 const months = [...Array(12).keys()].map((key) =>
 	new Date(0, key).toLocaleString("en", { month: "long" })
 );
 
 export default {
-	title: "Calendar",
+	title: "Components/Calendar",
 	description:
 		"Calendars display a grid of days in one or more months and allow users to select a single date.",
 	component: "Calendar",
@@ -34,6 +35,7 @@ export default {
 				category: "Component",
 			},
 			control: "date",
+			if: { arg: "isDisabled", truthy: false },
 		},
 		lastDay: {
 			name: "Range end (date)",
@@ -73,7 +75,7 @@ export default {
 			control: "boolean",
 		},
 		useDOWAbbrev: {
-			name: "Use abbreviated day of week",
+			name: "Use 3 letter abbreviation for day of week",
 			type: { name: "boolean" },
 			table: {
 				type: { summary: "boolean" },
@@ -81,7 +83,7 @@ export default {
 			},
 			control: "boolean",
 		},
-		buttonSize: ActionButtonStories.argTypes.size ?? {
+		buttonSize: {
 			table: { disable: true },
 		},
 	},
@@ -111,13 +113,30 @@ Default.args = {
 	year: 2023,
 };
 
+export const DefaultRTL = Template.bind({});
+DefaultRTL.args = {...Default.args};
+DefaultRTL.parameters = {textDirection: "rtl"}
+
 export const RangeSelection = Template.bind({});
 RangeSelection.args = {
-	scale: "large",
 	month: months[6],
 	selectedDay: new Date(2023, 6, 3),
 	lastDay: new Date(2023, 6, 7),
 	year: 2023,
 	useDOWAbbrev: true,
 	padded: true,
+};
+
+export const TodayHighlighted = Template.bind({});
+TodayHighlighted.args = {
+	month: isChromatic() ? months[0] : months[new Date().getMonth()],
+	year: isChromatic() ? 2021 : new Date().getFullYear(),
+};
+
+export const Disabled = Template.bind({});
+Disabled.args = {
+	month: months[6],
+	selectedDay: new Date(2023, 6, 3),
+	year: 2023,
+	isDisabled: true
 };

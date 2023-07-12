@@ -3,6 +3,36 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+<a name="5.0.40"></a>
+##5.0.40
+🗓
+2023-07-11 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/tag@5.0.39...@spectrum-css/tag@5.0.40)
+
+### 🐛 Bug fixes
+
+\*tag focus issue solved ([#1983](https://github.com/adobe/spectrum-css/issues/1983))([37baa4c](https://github.com/adobe/spectrum-css/commit/37baa4c))
+
+<a name="5.0.39"></a>
+##5.0.39
+🗓
+2023-06-29 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/tag@5.0.38...@spectrum-css/tag@5.0.39)
+
+**Note:** Version bump only for package @spectrum-css/tag
+
+<a name="5.0.38"></a>
+##5.0.38
+🗓
+2023-06-21 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/tag@5.0.37...@spectrum-css/tag@5.0.38)
+
+**Note:** Version bump only for package @spectrum-css/tag
+
+<a name="5.0.37"></a>
+##5.0.37
+🗓
+2023-06-15 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/tag@5.0.36...@spectrum-css/tag@5.0.37)
+
+**Note:** Version bump only for package @spectrum-css/tag
+
 <a name="5.0.36"></a>
 ##5.0.36
 🗓

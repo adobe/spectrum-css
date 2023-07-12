@@ -1,7 +1,7 @@
-import { html, nothing } from "lit-html";
-import { classMap } from "lit-html/directives/class-map.js";
-import { repeat } from "lit-html/directives/repeat.js";
-import { ifDefined } from "lit-html/directives/if-defined.js";
+import { html, nothing } from "lit";
+import { classMap } from "lit/directives/class-map.js";
+import { repeat } from "lit/directives/repeat.js";
+import { ifDefined } from "lit/directives/if-defined.js";
 
 import { Template as Tooltip } from "@spectrum-css/tooltip/stories/template.js";
 

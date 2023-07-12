@@ -2,7 +2,7 @@
 import { Template } from "./template";
 
 export default {
-	title: "Color handle",
+	title: "Components/Color handle",
 	description:
 		"The Color Handle component is used with ColorArea, ColorSlider and ColorWheel as the color selector",
 	component: "Colorhandle",

@@ -1,3 +1,6 @@
+import isChromatic from "chromatic/isChromatic";
+
+import DocumentationTemplate from './DocumentationTemplate.mdx';
 import {
 	withContextWrapper,
 	withTextDirectionWrapper,
@@ -171,13 +174,23 @@ export const args = {
 	customClasses: [],
 };
 
+/** @type import('@storybook/types').StorybookParameters & import('@storybook/types').API_Layout */
 export const parameters = {
-	layout: "padded", // Valid: 'centered' | 'fullscreen' | 'padded' | 'none';
+	layout: "padded",
 	showNav: true,
+	showTabs: true,
 	showPanel: true,
 	panelPosition: "bottom",
-	showToolbar: false,
+	showToolbar: true,
 	isFullscreen: false,
+	//👇 Defines a list of viewport widths for a single story to be captured in Chromatic.
+	chromatic: isChromatic()
+		? {
+				// viewports: [320, 1200],
+				// forcedColors: 'active',
+				// prefersReducedMotion: 'reduce',
+		  }
+		: {},
 	controls: {
 		expanded: true,
 		hideNoControlsWarning: true,
@@ -197,6 +210,7 @@ export const parameters = {
 		},
 	},
 	docs: {
+    page: DocumentationTemplate,
 		story: {
 			inline: true,
 			iframeHeight: "200px",
@@ -223,6 +237,7 @@ export const decorators = [
 	withReducedMotionWrapper,
 	withContextWrapper,
 	withActions,
+	// ...[isChromatic() ? withSizingWrapper : false].filter(Boolean),
 ];
 
 export default {

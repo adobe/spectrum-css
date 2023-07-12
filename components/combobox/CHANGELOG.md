@@ -3,6 +3,41 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+<a name="2.0.20"></a>
+##2.0.20
+🗓
+2023-07-11 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/combobox@2.0.19...@spectrum-css/combobox@2.0.20)
+
+**Note:** Version bump only for package @spectrum-css/combobox
+
+<a name="2.0.19"></a>
+##2.0.19
+🗓
+2023-06-29 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/combobox@2.0.18...@spectrum-css/combobox@2.0.19)
+
+**Note:** Version bump only for package @spectrum-css/combobox
+
+<a name="2.0.18"></a>
+##2.0.18
+🗓
+2023-06-28 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/combobox@2.0.17...@spectrum-css/combobox@2.0.18)
+
+**Note:** Version bump only for package @spectrum-css/combobox
+
+<a name="2.0.17"></a>
+##2.0.17
+🗓
+2023-06-21 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/combobox@2.0.16...@spectrum-css/combobox@2.0.17)
+
+**Note:** Version bump only for package @spectrum-css/combobox
+
+<a name="2.0.16"></a>
+##2.0.16
+🗓
+2023-06-15 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/combobox@2.0.15...@spectrum-css/combobox@2.0.16)
+
+**Note:** Version bump only for package @spectrum-css/combobox
+
 <a name="2.0.15"></a>
 ##2.0.15
 🗓

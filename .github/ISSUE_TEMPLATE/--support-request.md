@@ -3,7 +3,7 @@ name: "📚 Support request"
 about: Ask for help with using Spectrum CSS
 title: ""
 labels: question
-assignees: ""
+assignees: pfulton, castastrophe
 ---
 
 ## Description

@@ -1,37 +1,25 @@
-import { html } from "lit-html";
-import { classMap } from "lit-html/directives/class-map.js";
-import { styleMap } from "lit-html/directives/style-map.js";
-import { repeat } from "lit-html/directives/repeat.js";
-import { ifDefined } from "lit-html/directives/if-defined.js";
+import { html } from "lit";
+import { classMap } from "lit/directives/class-map.js";
+import { styleMap } from "lit/directives/style-map.js";
+import { repeat } from "lit/directives/repeat.js";
+import { ifDefined } from "lit/directives/if-defined.js";
 
 import { Template as Icon } from "@spectrum-css/icon/stories/template.js";
 
 import "../index.css";
-import "../skin.css";
 
 export const Template = ({
-	rootClass = "spectrum-Tabs",
-	customClasses = [],
-	size = "m",
-	orientation = "horizontal",
-	isQuiet,
-	isEmphasized,
-	isCompact,
-	items,
-	selectorStyle,
-	style = {
-		"--spectrum-tabs-textonly-tabitem-selection-indicator-background-color-selected":
-			"rgb(0,0,0)",
-		"--spectrum-tabs-quiet-textonly-tabitem-selection-indicator-background-color-selected":
-			"rgb(0,0,0)",
-		"--spectrum-tabs-emphasized-texticon-tabitem-text-color-selected":
-			"rgb(27,127,245)",
-		"--spectrum-tabs-emphasized-texticon-tabitem-selection-indicator-background-color-selected":
-			"rgb(27,127,245)",
-		"--spectrum-tabs-textonly-divider-background-color":
-			"rgba(225,225,225,0.8)",
-	},
-	...globals
+  rootClass = "spectrum-Tabs",
+  customClasses = [],
+  size = "m",
+  orientation = "horizontal",
+  isQuiet,
+  isEmphasized,
+  isCompact,
+  items,
+  selectorStyle = {},
+  style = {},
+  ...globals
 }) => {
 	return html`
 		<div

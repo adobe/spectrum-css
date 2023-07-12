@@ -3,6 +3,45 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+<a name="4.0.29"></a>
+##4.0.29
+🗓
+2023-07-11 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/swatch@4.0.28...@spectrum-css/swatch@4.0.29)
+
+**Note:** Version bump only for package @spectrum-css/swatch
+
+<a name="4.0.28"></a>
+##4.0.28
+🗓
+2023-06-29 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/swatch@4.0.27...@spectrum-css/swatch@4.0.28)
+
+**Note:** Version bump only for package @spectrum-css/swatch
+
+<a name="4.0.27"></a>
+##4.0.27
+🗓
+2023-06-28 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/swatch@4.0.26...@spectrum-css/swatch@4.0.27)
+
+### 🐛 Bug fixes
+
+- **swatch:**specify forced-color style for disabled swatch borders ([#1980](https://github.com/adobe/spectrum-css/issues/1980))([ef6c016](https://github.com/adobe/spectrum-css/commit/ef6c016))
+
+<a name="4.0.26"></a>
+##4.0.26
+🗓
+2023-06-21 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/swatch@4.0.25...@spectrum-css/swatch@4.0.26)
+
+### 🐛 Bug fixes
+
+- **swatch:**remove override in WHCM for disabled swatch ([#1955](https://github.com/adobe/spectrum-css/issues/1955))([9492040](https://github.com/adobe/spectrum-css/commit/9492040))
+
+<a name="4.0.25"></a>
+##4.0.25
+🗓
+2023-06-15 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/swatch@4.0.24...@spectrum-css/swatch@4.0.25)
+
+**Note:** Version bump only for package @spectrum-css/swatch
+
 <a name="4.0.24"></a>
 ##4.0.24
 🗓

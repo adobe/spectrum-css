@@ -2,7 +2,7 @@
 import { Template } from "./template";
 
 export default {
-	title: "Tree View",
+	title: "Components/Tree view",
 	description:
 		"The typical usage of a treeview involves nesting a .spectrum-Treeview element within the .spectrum-TreeView-item parent element.",
 	component: "Treeview",
