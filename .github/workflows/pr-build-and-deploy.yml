@@ -11,18 +11,8 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-      - name: Check out code
-        uses: actions/checkout@v3
-      - name: Use Node LTS version
-        uses: actions/setup-node@v3
-        with:
-          node-version: 16
-      - name: Install dependencies
-        run: yarn install
-      - name: Clean everything
-        run: yarn clean
-      - name: Build components
-        run: yarn build:components
+      - name: Build
+        uses: ./.github/workflows/build.yml
       - name: Build docs site
         run: yarn build:site
       - name: Build Storybook (preview)

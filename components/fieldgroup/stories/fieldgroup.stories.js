@@ -4,8 +4,9 @@ import { default as Radio } from "@spectrum-css/radio/stories/radio.stories.js";
 
 export default {
 	title: "Components/Field group",
-	description: "The Field group component is...",
-	component: "Fieldgroup",
+	description:
+		"The field group pattern provides structured layout for a set of related form elements.",
+	component: "FieldGroup",
 	argTypes: {
 		layout: {
 			name: "Layout",

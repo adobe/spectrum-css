@@ -3,8 +3,9 @@ import { Template } from "./template";
 
 export default {
 	title: "Components/Swatch group",
-	description: "The Swatch group component is...",
-	component: "Swatchgroup",
+	description:
+		"The swatch group pattern creates a unified view for a set of swatches.",
+	component: "SwatchGroup",
 	argTypes: {
 		size: {
 			name: "Size",

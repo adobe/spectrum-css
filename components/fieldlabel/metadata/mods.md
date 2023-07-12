@@ -1,6 +1,5 @@
-| Modifiable Custom Properties          |
+| Modifiable custom properties          |
 | ------------------------------------- |
-| `--mod-disabled-content-color`        |
 | `--mod-field-label-text-to-asterisk`  |
 | `--mod-field-label-top-to-asterisk`   |
 | `--mod-fieldlabel-font-size`          |

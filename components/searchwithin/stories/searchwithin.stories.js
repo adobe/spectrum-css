@@ -6,7 +6,8 @@ const ignoreProps = ["rootClass", "position", "isRounded"];
 
 export default {
 	title: "Components/Search within",
-	description: "The Search within component is...",
+	description:
+		"The search within pattern creates a searchable picker experience.",
 	component: "SearchWithin",
 	argTypes: {
 		...Object.entries(PickerStories.argTypes).reduce((acc, [key, value]) => {

@@ -13,20 +13,16 @@
   "bugs": {
     "url": "https://github.com/adobe/spectrum-css/issues"
   },
-  "main": "dist/index-vars.css",
-  "scripts": {
-    "build": "gulp"
+  "exports": {
+    ".": "./dist/index.css",
+    "./dist/index.css": "./dist/index.css",
+    "./dist/index-vars.css": "./dist/index.css",
+    "./dist/index-base.css": "./dist/index.css"
   },
+  "main": "dist/index.css",
   "peerDependencies": {
     "@spectrum-css/button": ">=10",
     "@spectrum-css/vars": ">=9"
-  },
-  "devDependencies": {
-    "@spectrum-css/button": "^10.1.8",
-    "@spectrum-css/component-builder": "^4.0.12",
-    "@spectrum-css/icon": "^3.0.49",
-    "@spectrum-css/vars": "^9.0.8",
-    "gulp": "^4.0.0"
   },
   "publishConfig": {
     "access": "public"

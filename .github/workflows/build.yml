@@ -1,0 +1,68 @@
+name: Build
+
+on:
+  workflow_call:
+    inputs:
+        ref:
+            description: 'Branch to build'
+            type: string
+            default: ${{ github.head_ref }}
+        path:
+            description: 'Path to build to'
+            type: string
+        sha:
+            description: 'The sha of the commit to build'
+            type: string
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    strategy:
+      matrix:
+        node: [ 16 ]
+
+    steps:
+      - name: Check out code
+        uses: actions/checkout@v3
+        with:
+          ref: ${{ github.event.inputs.ref }}
+          path: ${{ github.event.inputs.path }}
+      - name: Move to path
+        if: github.event.inputs.path
+        run: cd ${{ github.event.inputs.path }}
+      - name: Use Node LTS version
+        uses: actions/setup-node@v3
+        with:
+          node-version: ${{ matrix.node }}
+          cache: 'yarn'
+      - name: Install dependencies
+        run: yarn install --frozen-lockfile
+      - name: Check if a cache exists for the build artifacts
+        id: cache-build
+        uses: actions/cache@v3
+        with:
+            path: |
+                components/*/dist
+            key: compiled-${{ github.event.inputs.sha }}
+      - name: Restore cache
+        id: cache-build-restore
+        if: steps.cache-build.outputs.cache-hit == 'true'
+        uses: actions/cache/restore@v3
+        with:
+            path: |
+                components/*/dist
+            key: compiled-${{ github.event.inputs.sha }}
+      - name: Build components
+        if: steps.cache-build.outputs.cache-hit != 'true'
+        run: yarn build:components
+      - name: Archive production artifacts
+        uses: actions/upload-artifact@v3
+        with:
+            name: compiled-${{ github.event.inputs.sha }}
+            path: |
+                components/*/dist
+            # why throw an error?
+            # if no dist assets were generated, the build silently failed
+            if-no-files-found: error
+      - name: Workflow timer
+        uses: DeviesDevelopment/workflow-timer@v0.0.2

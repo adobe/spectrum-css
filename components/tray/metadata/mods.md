@@ -1,6 +1,5 @@
-| Modifiable Custom Properties                |
+| Modifiable custom properties                |
 | ------------------------------------------- |
-| `--mod-tray-background-color`               |
 | `--mod-tray-corner-radius`                  |
 | `--mod-tray-entry-animation-delay`          |
 | `--mod-tray-entry-animation-duration`       |

@@ -1,11 +1,7 @@
-| Modifiable Custom Properties                            |
+| Modifiable custom properties                            |
 | ------------------------------------------------------- |
 | `--mod-progressbar-animation-duration-indeterminate`    |
 | `--mod-progressbar-animation-ease-in-out-indeterminate` |
-| `--mod-progressbar-fill-color`                          |
-| `--mod-progressbar-fill-color-negative`                 |
-| `--mod-progressbar-fill-color-notice`                   |
-| `--mod-progressbar-fill-color-positive`                 |
 | `--mod-progressbar-fill-color-white`                    |
 | `--mod-progressbar-fill-size-indeterminate`             |
 | `--mod-progressbar-font-size`                           |
@@ -20,5 +16,4 @@
 | `--mod-progressbar-spacing-top-to-text`                 |
 | `--mod-progressbar-text-color`                          |
 | `--mod-progressbar-thickness`                           |
-| `--mod-progressbar-track-color`                         |
 | `--mod-spacing-progressbar-label-to-text`               |

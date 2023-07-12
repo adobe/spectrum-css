@@ -1,18 +1,51 @@
 {
-	"npmScope": "@spectrum-css",
+	"$schema": "./node_modules/nx/schemas/nx-schema.json",
 	"tasksRunnerOptions": {
 		"default": {
 			"runner": "nx/tasks-runners/default",
 			"options": {
-				"cacheableOperations": ["build"]
+				"cacheableOperations": ["clean", "build", "dev", "start"]
 			}
 		}
+	},
+	"cli": {
+	  "packageManager": "yarn"
+	},
+	"namedInputs": {
+		"styles": [
+			"{workspaceRoot}/index.css",
+			"{workspaceRoot}/skin.css",
+			"{workspaceRoot}/themes/*.css"
+		]
 	},
 	"targetDefaults": {
 		"build": {
 			"dependsOn": ["clean", "^build"],
-			"inputs": ["{workspaceRoot}/*.css"]
+			"inputs": ["styles", { "env": "NODE_ENV" }],
+			"outputs": ["{workspaceRoot}/dist"]
+		},
+		"lint": {
+			"inputs": ["styles", { "env": "NODE_ENV" }],
+			"outputs": ["styles"]
+		},
+		"clean": {
+			"inputs": ["{workspaceRoot}/dist"],
+			"outputs": []
+		},
+		"dev": {
+			"dependsOn": ["build", "watch"],
+			"inputs": ["styles"],
+			"outputs": ["dist"]
+		},
+		"test": {
+			"dependsOn": ["build"],
+			"inputs": ["{workspaceRoot}/dist"],
+			"outputs": []
+		},
+		"watch": {
+			"inputs": ["styles"],
+			"outputs": ["{workspaceRoot}/dist"]
 		}
 	},
-	"includedScripts": ["build"]
+	"includedScripts": ["build", "clean", "dev", "start", "test", "watch"]
 }

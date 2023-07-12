@@ -7,10 +7,7 @@ const componentPkgs = readdirSync(componentsPath, {
 	.filter((dirent) => dirent.isDirectory())
 	.map((dirent) => dirent.name);
 module.exports = {
-	stories: [
-		"../../components/*/stories/*.stories.mdx",
-		"../../components/*/stories/*.stories.@(js|jsx|ts|tsx)",
-	],
+	stories: ["../../components/*/stories/*.stories.js"],
 	rootDir: "../../",
 	staticDirs: ["../../assets"],
 	addons: [
@@ -127,7 +124,7 @@ module.exports = {
 								options: {
 									implementation: require("postcss"),
 									postcssOptions: {
-										config: resolve(__dirname, "postcss.config.js"),
+										config: resolve(__dirname, "postcss.production.config.js"),
 									},
 								},
 							},

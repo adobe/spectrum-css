@@ -1,4 +1,4 @@
-| Modifiable Custom Properties                   |
+| Modifiable custom properties                   |
 | ---------------------------------------------- |
 | `--mod-alert-banner-bottom-text`               |
 | `--mod-alert-banner-close-button-spacing`      |
@@ -19,12 +19,3 @@
 | `--mod-alert-banner-text-to-divider`           |
 | `--mod-alert-banner-top-icon`                  |
 | `--mod-alert-banner-top-text`                  |
-| `--mod-button-margin-block`                    |
-| `--mod-button-margin-left`                     |
-| `--mod-button-margin-right`                    |
-| `--mod-closebutton-align-self`                 |
-| `--mod-closebutton-margin-inline`              |
-| `--mod-closebutton-margin-top`                 |
-| `--mod-divider-vertical-align`                 |
-| `--mod-divider-vertical-height`                |
-| `--mod-divider-vertical-margin`                |

@@ -1,0 +1,47 @@
+{
+	"name": "button",
+	"tags": ["component"],
+	"targets": {
+		"build": {
+			"executor": "nx:run-commands",
+			"options": {
+				"cwd": "components/button",
+				"commands": [
+					"cat index.css themes/spectrum.css themes/*.css | postcss --from index.css --output dist/index.css --no-map && cp dist/index.css dist/index-vars.css",
+					"cat index.css themes/spectrum.css themes/*.css | postcss --from index.css --output dist/index-base.css --no-map",
+					"postcss --no-map themes/*.css --dir dist --base .",
+					"cat themes/spectrum.css themes/express.css | postcss --from themes/spectrum.css --output dist/index-theme.css --no-map"
+				]
+			}
+		},
+		"lint": {
+			"executor": "nx:run-commands",
+			"options": {
+				"command": "postcss index.css themes/*.css --overwrite"
+			}
+		},
+		"clean": {
+			"executor": "nx:run-commands",
+			"options": {
+				"command": "rimraf components/$NX_TASK_TARGET_PROJECT/dist"
+			}
+		},
+		"dev": {
+			"dependsOn": ["build", "watch"],
+			"executor": "nx:noop"
+		},
+		"test": {
+			"executor": "nx:run-commands",
+			"options": {
+				"command": "nx run storybook:test:scope -- $NX_TASK_TARGET_PROJECT"
+			}
+		},
+		"watch": {
+			"executor": "nx:run-commands",
+			"options": {
+				"command": "nx watch --projects $NX_TASK_TARGET_PROJECT -- nx run $NX_PROJECT_NAME:build"
+			}
+		}
+	},
+	"includedScripts": ["build", "clean", "dev", "test", "watch"]
+}

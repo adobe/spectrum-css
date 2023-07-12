@@ -1,0 +1,43 @@
+{
+	"name": "storybook",
+	"namedInputs": {
+		"core": [
+			"{workspaceRoot}/assets",
+			"{workspaceRoot}/decorators",
+			"{workspaceRoot}/*.js",
+			"{workspaceRoot}/*.html"
+		],
+		"output": ["{workspaceRoot}/storybook-static"]
+	},
+	"implicitDependencies": ["tag:component"],
+	"targets": {
+		"clean": {
+			"inputs": ["output"],
+			"outputs": [],
+			"executor": "nx:run-commands",
+			"options": {
+				"cwd": "cd tools/preview",
+				"command": "rimraf storybook-static"
+			}
+		},
+		"build": {
+			"dependsOn": ["^build"],
+			"inputs": ["core"],
+			"outputs": ["output"],
+			"executor": "nx:run-script",
+			"options": {
+				"script": "build"
+			}
+		},
+		"dev": {
+			"dependsOn": ["^build"],
+			"inputs": ["core"],
+			"outputs": ["output"],
+			"executor": "nx:run-script",
+			"options": {
+				"script": "dev"
+			}
+		}
+	},
+	"includedScripts": ["clean", "build", "start", "dev", "test", "test:scope"]
+}
