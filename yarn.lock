@@ -10929,12 +10929,12 @@ lead@^1.0.0:
 "legacy-postcss-dropdupedvars@file:plugins/legacy-postcss-dropdupedvars":
   version "1.0.0"
   dependencies:
-    postcss "^7.0.32"
+    postcss "^8.4.25"
 
 "legacy-postcss-dropunusedvars@file:plugins/legacy-postcss-dropunusedvars":
   version "1.0.0"
   dependencies:
-    postcss "^7.0.32"
+    postcss "^8.4.25"
     postcss-value-parser "^4.1.0"
 
 lerna@^6.6.2:
@@ -13606,12 +13606,12 @@ postcss-discard-empty@^6.0.0:
 "postcss-dropdupedvars@file:plugins/postcss-dropdupedvars":
   version "1.1.2"
   dependencies:
-    postcss "^7.0.32"
+    postcss "^8.4.25"
 
 "postcss-dropunusedvars@file:plugins/postcss-dropunusedvars":
   version "1.2.1"
   dependencies:
-    postcss "^7.0.32"
+    postcss "^8.4.25"
     postcss-value-parser "^4.1.0"
 
 postcss-focus-ring@^1.0.0:
@@ -13893,7 +13893,7 @@ postcss@^6.0.0, postcss@^6.0.1, postcss@^6.0.14, postcss@^6.0.22, postcss@^6.0.8
     source-map "^0.6.1"
     supports-color "^5.4.0"
 
-postcss@^7.0.0, postcss@^7.0.17, postcss@^7.0.2, postcss@^7.0.32, postcss@^7.0.36, postcss@^7.0.5, postcss@^7.0.6:
+postcss@^7.0.0, postcss@^7.0.17, postcss@^7.0.2, postcss@^7.0.5, postcss@^7.0.6:
   version "7.0.39"
   resolved "https://registry.yarnpkg.com/postcss/-/postcss-7.0.39.tgz#9624375d965630e2e1f2c02a935c82a59cb48309"
   integrity sha512-yioayjNbHn6z1/Bywyb2Y4s3yvDAeXGOyxqD+LnVOinq6Mdmd++SW2wUNVzavyyHxd6+DxzWGIuosg6P1Rj8uA==
@@ -13901,10 +13901,10 @@ postcss@^7.0.0, postcss@^7.0.17, postcss@^7.0.2, postcss@^7.0.32, postcss@^7.0.3
     picocolors "^0.2.1"
     source-map "^0.6.1"
 
-postcss@^8.4.21, postcss@^8.4.24:
-  version "8.4.24"
-  resolved "https://registry.yarnpkg.com/postcss/-/postcss-8.4.24.tgz#f714dba9b2284be3cc07dbd2fc57ee4dc972d2df"
-  integrity sha512-M0RzbcI0sO/XJNucsGjvWU9ERWxb/ytp1w6dKtxTKgixdtQDq4rmx/g8W1hnaheq9jgwL/oyEdH5Bc4WwJKMqg==
+postcss@^8.4.21, postcss@^8.4.24, postcss@^8.4.25:
+  version "8.4.25"
+  resolved "https://registry.yarnpkg.com/postcss/-/postcss-8.4.25.tgz#4a133f5e379eda7f61e906c3b1aaa9b81292726f"
+  integrity sha512-7taJ/8t2av0Z+sQEvNzCkpDynl0tX3uJMCODi6nT3PfASC7dYCWV9aQ+uiCf+KBD4SEFcu+GvJdGdwzQ6OSjCw==
   dependencies:
     nanoid "^3.3.6"
     picocolors "^1.0.0"
