@@ -30,6 +30,7 @@ updates:
         # Define patterns to include dependencies in the group (based on
         # dependency name)
         patterns:
+          - storybook
           - "@storybook/*"
       commitlint-ecosystem:
         patterns:
