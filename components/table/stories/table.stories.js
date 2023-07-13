@@ -104,6 +104,35 @@ export const Default = Template.bind({});
 Default.args = {
 	rowItems: [
 		{
+			cellContent: "Row Item Alpha",
+		},
+		{
+			cellContent: "Row Item Bravo",
+		},
+		{
+			cellContent: "Row Item Charlie",
+		},
+		{
+			cellContent: "Row Item Delta",
+		},
+		{
+			cellContent: "Row Item Echo",
+		},
+	],
+};
+
+export const SummaryAndSelected = Template.bind({});
+SummaryAndSelected.parameters = {
+	docs: {
+		description: {
+			story:
+				"An example showing both the optional summary row, and a row marked as selected.",
+		},
+	},
+};
+SummaryAndSelected.args = {
+	rowItems: [
+		{
 			cellContent: "Table Row Alpha",
 		},
 		{
