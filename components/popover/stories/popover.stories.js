@@ -4,7 +4,8 @@ import { expect } from '@storybook/jest';
 // Import the component markup template
 import { Template } from "./template";
 
-import { Default as Menu } from "@spectrum-css/menu/stories/menu.stories.js";
+import { Template as ActionButton } from "@spectrum-css/actionbutton/stories/template.js";
+import { Template as Menu } from "@spectrum-css/menu/stories/template.js";
 
 export default {
 	title: "Components/Popover",
@@ -12,6 +13,7 @@ export default {
 		"A popover is used to display transient content (menus, options, additional actions etc.) and appears when clicking/tapping on a source (tools, buttons, etc.). It stands out via its visual style (stroke and drop shadow) and floats on top of the rest of the interface.",
 	component: "Popover",
 	argTypes: {
+		trigger: { table: { disable: true } },
 		content: { table: { disable: true } },
 		isOpen: {
 			name: "Open",
@@ -33,7 +35,7 @@ export default {
 			control: { type: "boolean" },
 		},
 		position: {
-			name: "Tip positioning",
+			name: "Positioning",
 			type: { name: "string" },
 			table: {
 				type: { summary: "string" },
@@ -80,13 +82,18 @@ export const Default = Template.bind({});
 Default.play = async ({ canvasElement }) => {
 	const canvas = within(canvasElement);
 
-	await userEvent.click(canvas.getByText('Open Popover'));
+	await userEvent.click(canvas.getByText('Hop on pop(over)'));
 
 	expect(canvas.getByTestId('popover-1').classList.contains('is-open')).toBe(true);
 };
 Default.args = {
+	testId: 'popover-1',
+	trigger: (passthroughs) => ActionButton({
+		label: "Hop on pop(over)",
+		...passthroughs,
+	}),
 	content: [
-		Menu({
+		() => Menu({
 			items: [
 				{
 					iconName: "Edit",
@@ -109,68 +116,68 @@ Default.args = {
 	],
 };
 
-export const WithTip = Template.bind({});
-WithTip.args = {
-	withTip: true,
-	content: [
-		Menu({
-			items: [
-				{
-					iconName: "Edit",
-					label: "Edit",
-				},
-				{
-					iconName: "Copy",
-					label: "Copy",
-				},
-				{
-					iconName: "Move",
-					label: "Move",
-				},
-				{
-					iconName: "Delete",
-					label: "Delete",
-				},
-			],
-		}),
-	],
-};
+// export const WithTip = Template.bind({});
+// WithTip.args = {
+// 	withTip: true,
+// 	content: [
+// 		Menu({
+// 			items: [
+// 				{
+// 					iconName: "Edit",
+// 					label: "Edit",
+// 				},
+// 				{
+// 					iconName: "Copy",
+// 					label: "Copy",
+// 				},
+// 				{
+// 					iconName: "Move",
+// 					label: "Move",
+// 				},
+// 				{
+// 					iconName: "Delete",
+// 					label: "Delete",
+// 				},
+// 			],
+// 		}),
+// 	],
+// };
 
-export const Nested = Template.bind({});
-Nested.args = {
-	content: [
-		Menu({
-			items: [
-				{
-					iconName: "Edit",
-					label: "Edit",
-				},
-			],
-		}),
-		Default({
-			position: "right",
-			content: [
-				Menu({
-					items: [
-						{
-							iconName: "Edit",
-							label: "Edit",
-						},
-						{
-							iconName: "Copy",
-							label: "Copy",
-						},
-						{
-							iconName: "Move",
-							label: "Move",
-						},
-						{
-							iconName: "Delete",
-							label: "Delete",
-						},
-					],
-				}),
-			],
-		}),
-	],
-};
+// export const Nested = Template.bind({});
+// Nested.args = {
+// 	content: [
+// 		Menu({
+// 			items: [
+// 				{
+// 					iconName: "Edit",
+// 					label: "Edit",
+// 				},
+// 			],
+// 		}),
+// 		Default({
+// 			position: "right",
+// 			content: [
+// 				Menu({
+// 					items: [
+// 						{
+// 							iconName: "Edit",
+// 							label: "Edit",
+// 						},
+// 						{
+// 							iconName: "Copy",
+// 							label: "Copy",
+// 						},
+// 						{
+// 							iconName: "Move",
+// 							label: "Move",
+// 						},
+// 						{
+// 							iconName: "Delete",
+// 							label: "Delete",
+// 						},
+// 					],
+// 				}),
+// 			],
+// 		}),
+// 	],
+// };

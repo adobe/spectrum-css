@@ -3165,6 +3165,25 @@
     "@storybook/global" "^5.0.0"
     "@storybook/preview-api" "7.3.2"
 
+"@storybook/addon-interactions@^7.0.20":
+  version "7.0.27"
+  resolved "https://registry.yarnpkg.com/@storybook/addon-interactions/-/addon-interactions-7.0.27.tgz#528aec33e40d4dacd07702c086f06b7effa6c9f2"
+  integrity sha512-0pt9tWqAqMQpHDS7hglcz0kpyu5KsP/51squflZkY5GhItXEY9IFxoBZ4Ttounp//2z/pj2iQW0dPE5WJpwTrw==
+  dependencies:
+    "@storybook/client-logger" "7.0.27"
+    "@storybook/components" "7.0.27"
+    "@storybook/core-common" "7.0.27"
+    "@storybook/core-events" "7.0.27"
+    "@storybook/global" "^5.0.0"
+    "@storybook/instrumenter" "7.0.27"
+    "@storybook/manager-api" "7.0.27"
+    "@storybook/preview-api" "7.0.27"
+    "@storybook/theming" "7.0.27"
+    "@storybook/types" "7.0.27"
+    jest-mock "^27.0.6"
+    polished "^4.2.2"
+    ts-dedent "^2.2.0"
+
 "@storybook/addon-measure@7.0.20":
   version "7.0.20"
   resolved "https://registry.yarnpkg.com/@storybook/addon-measure/-/addon-measure-7.0.20.tgz#d2bfacdc254a0e0b913aa08f116e3068e1acbbf2"
