@@ -416,8 +416,10 @@ governing permissions and limitations under the License.
   line-height: var(--mod-table-header-line-height, var(--spectrum-table-row-line-height));
   text-transform: var(--mod-table-header-text-transform, none);
 
-  /* block-size functions as min-block-size for display table-cell. */
+  /* block-size functions as min-block-size when using display table-cell. */
   block-size: var(--mod-table-min-header-height, var(--spectrum-table-min-header-height));
+  min-block-size: var(--mod-table-min-header-height, var(--spectrum-table-min-header-height));
+
   padding-block: var(--mod-table-header-top-to-text, var(--spectrum-table-header-top-to-text)) var(--mod-table-header-bottom-to-text, var(--spectrum-table-header-bottom-to-text));
   padding-inline: var(--mod-table-cell-inline-space, var(--spectrum-table-cell-inline-space));
 
@@ -493,78 +495,75 @@ governing permissions and limitations under the License.
     outline-width: var(--mod-table-focus-indicator-thickness, var(--spectrum-table-focus-indicator-thickness));
     outline-style: solid;
     outline-color: var(--highcontrast-table-focus-indicator-color, var(--mod-table-drop-zone-outline-color, var(--spectrum-table-drop-zone-outline-color)));
-  }
-}
 
-/* Outside border, and row divider lines. */
-.spectrum-Table-body {
-  .spectrum-Table-row {
-    border-block-start: none;
-  }
-
-  &.is-drop-target {
     /* Make sure negative offset outline is not covered by borders. */
     --mod-table-border-color: transparent;
   }
+}
 
-  .spectrum-Table-cell {
-    border-block-start:
-      var(--mod-table-border-width, var(--spectrum-table-border-width))
-      solid 
-      var(--highcontrast-table-divider-color, var(--mod-table-divider-color, var(--spectrum-table-divider-color)));
-  }
+/* Outside border, row divider lines, and rounded corners:
+    The tbody tag doesn't allow setting a border or border-radius. To make them work, border styles are 
+    instead applied to the individual cells around the outside, while using border-collapse: separate. */
 
-  .spectrum-Table-row:first-child .spectrum-Table-cell {
+/* Row divider lines */
+.spectrum-Table-cell {
+  border-block-start:
+    var(--mod-table-border-width, var(--spectrum-table-border-width))
+    solid 
+    var(--highcontrast-table-divider-color, var(--mod-table-divider-color, var(--spectrum-table-divider-color)));
+}
+
+.spectrum-Table-row {
+  border-block-start: none;
+
+  /* Outside border */
+  &:first-child .spectrum-Table-cell {
     border-block-start:
       var(--mod-table-border-width, var(--spectrum-table-border-width))
       solid 
       var(--highcontrast-table-border-color, var(--mod-table-border-color, var(--spectrum-table-border-color)));
   }
 
-  .spectrum-Table-row .spectrum-Table-cell:first-child {
+  &:last-child .spectrum-Table-cell {
+    border-block-end:
+      var(--mod-table-border-width, var(--spectrum-table-border-width))
+      solid 
+      var(--highcontrast-table-border-color, var(--mod-table-border-color, var(--spectrum-table-border-color)));
+  }
+
+  .spectrum-Table-cell:first-child {
     border-inline-start: 
       var(--mod-table-outer-border-inline-width, var(--spectrum-table-outer-border-inline-width)) 
       solid 
       var(--highcontrast-table-border-color, var(--mod-table-border-color, var(--spectrum-table-border-color)));
   }
 
-  .spectrum-Table-row .spectrum-Table-cell:last-child {
+  .spectrum-Table-cell:last-child {
     border-inline-end: 
       var(--mod-table-outer-border-inline-width, var(--spectrum-table-outer-border-inline-width))
       solid
       var(--highcontrast-table-border-color, var(--mod-table-border-color, var(--spectrum-table-border-color)));
   }
 
-  .spectrum-Table-row:last-child .spectrum-Table-cell {
-    border-block-end:
-      var(--mod-table-border-width, var(--spectrum-table-border-width))
-      solid 
-      var(--highcontrast-table-border-color, var(--mod-table-border-color, var(--spectrum-table-border-color)));
+  /* Rounded corners (border-radius) */
+  &:first-child .spectrum-Table-cell:first-child {
+    border-start-start-radius: var(--mod-table-border-radius, var(--spectrum-table-border-radius));
+  }
+
+  &:first-child .spectrum-Table-cell:last-child {
+    border-start-end-radius: var(--mod-table-border-radius, var(--spectrum-table-border-radius));
+  }
+
+  &:last-child .spectrum-Table-cell:first-child {
+    border-end-start-radius: var(--mod-table-border-radius, var(--spectrum-table-border-radius));
+  }
+
+  &:last-child .spectrum-Table-cell:last-child {
+    border-end-end-radius: var(--mod-table-border-radius, var(--spectrum-table-border-radius));
   }
 }
 
-.spectrum-Table:not(.spectrum-Table--quiet) {
-  /* The tbody tag doesn't allow setting a border or border-radius. To make them work, border styles are 
-     instead applied to the individual cells around the outside, while using border-collapse: separate. */
-  .spectrum-Table-body {
-    .spectrum-Table-row:first-child .spectrum-Table-cell:first-child {
-      border-start-start-radius: var(--mod-table-border-radius, var(--spectrum-table-border-radius));
-    }
-
-    .spectrum-Table-row:first-child .spectrum-Table-cell:last-child {
-      border-start-end-radius: var(--mod-table-border-radius, var(--spectrum-table-border-radius));
-    }
-
-    .spectrum-Table-row:last-child .spectrum-Table-cell:first-child {
-      border-end-start-radius: var(--mod-table-border-radius, var(--spectrum-table-border-radius));
-    }
-
-    .spectrum-Table-row:last-child .spectrum-Table-cell:last-child {
-      border-end-end-radius: var(--mod-table-border-radius, var(--spectrum-table-border-radius));
-    }
-  }
-}
-
+/* Cells within table body */
 .spectrum-Table-cell {
   box-sizing: border-box;
   font-size: var(--mod-table-row-font-size, var(--spectrum-table-row-font-size));
@@ -573,8 +572,9 @@ governing permissions and limitations under the License.
   vertical-align: var(--mod-table-default-vertical-align, var(--spectrum-table-default-vertical-align));
   color: var(--highcontrast-table-row-text-color, var(--mod-table-row-text-color, var(--spectrum-table-row-text-color)));
 
-  /* block-size functions as min-block-size for display table-cell. */
+  /* block-size functions as min-block-size when using display table-cell. */
   block-size: var(--mod-table-min-row-height, var(--spectrum-table-min-row-height));
+  min-block-size: var(--mod-table-min-row-height, var(--spectrum-table-min-row-height));
 
   padding-block-start: calc(
     var(--mod-table-row-top-to-text, var(--spectrum-table-row-top-to-text)) -
@@ -609,6 +609,7 @@ governing permissions and limitations under the License.
   border-inline-end: var(--mod-table-border-width, var(--spectrum-table-border-width)) solid var(--highcontrast-table-divider-color, var(--mod-table-divider-color, var(--spectrum-table-divider-color)));
 }
 
+/* Rows within table body */
 .spectrum-Table-row {
   position: relative;
   background-color: var(--highcontrast-table-row-background-color, var(--mod-table-row-background-color, var(--spectrum-table-row-background-color)));
@@ -713,7 +714,10 @@ governing permissions and limitations under the License.
   .spectrum-Table-cell {
     font-weight: var(--mod-table-section-header-font-weight, var(--spectrum-table-section-header-font-weight));
     text-align: start;
+
+    /* block-size functions as min-block-size when using display table-cell. */
     block-size: var(--mod-table-section-header-min-height, var(--spectrum-table-section-header-min-height));
+    min-block-size: var(--mod-table-section-header-min-height, var(--spectrum-table-section-header-min-height));
 
     padding-block-start: calc(
       var(--mod-table-section-header-block-start-spacing, var(--spectrum-table-section-header-block-start-spacing)) -
