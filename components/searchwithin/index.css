@@ -16,6 +16,9 @@ governing permissions and limitations under the License.
   /* Force override */
   --spectrum-searchwithin-border-radius: 0;
   --spectrum-searchwithin-picker-min-width: 0;
+
+  /* Override inherit picker button border color */
+  --mod-picker-button-border-color: var(--spectrum-textfield-border-color);
 }
 
 .spectrum-SearchWithin {
