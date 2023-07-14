@@ -3,6 +3,13 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+<a name="3.0.53"></a>
+##3.0.53
+🗓
+2023-07-14 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/progressbar@3.0.52...@spectrum-css/progressbar@3.0.53)
+
+**Note:** Version bump only for package @spectrum-css/progressbar
+
 <a name="3.0.52"></a>
 ##3.0.52
 🗓
