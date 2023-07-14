@@ -85,9 +85,9 @@ export const Template = ({
 	withTip = false,
 	position = "top",
 	customClasses = [],
-	id,
+	id = "popover-1",
 	testId,
-	triggerId,
+	triggerId = "trigger",
 	customStyles = {},
 	trigger,
 	content = [],
@@ -119,10 +119,10 @@ export const Template = ({
 
 				// Get trigger element and popover
 				const element = document.querySelector(`#${triggerId}`);
+				console.log(triggerId);
 				if (!element) return [];
 				const rect = element.getBoundingClientRect();
 				const popover = document.querySelector(`#${id}`);
-				console.log(popover)
 				if (!popover) return [];
 
 				const transforms = [];
