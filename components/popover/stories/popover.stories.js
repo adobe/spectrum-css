@@ -56,7 +56,6 @@ export default {
 				"right-start",
 				"right-end",
 			],
-			if: { arg: "withTip", truthy: true },
 		},
 	},
 	args: {
@@ -116,68 +115,89 @@ Default.args = {
 	],
 };
 
-// export const WithTip = Template.bind({});
-// WithTip.args = {
-// 	withTip: true,
-// 	content: [
-// 		Menu({
-// 			items: [
-// 				{
-// 					iconName: "Edit",
-// 					label: "Edit",
-// 				},
-// 				{
-// 					iconName: "Copy",
-// 					label: "Copy",
-// 				},
-// 				{
-// 					iconName: "Move",
-// 					label: "Move",
-// 				},
-// 				{
-// 					iconName: "Delete",
-// 					label: "Delete",
-// 				},
-// 			],
-// 		}),
-// 	],
-// };
+export const WithTip = Template.bind({});
+WithTip.args = {
+	withTip: true,
+	testId: 'popover-1',
+	trigger: (passthroughs) => ActionButton({
+		label: "Hop on pop(over)",
+		...passthroughs,
+	}),
+	content: [
+		() => Menu({
+			items: [
+				{
+					iconName: "Edit",
+					label: "Edit",
+				},
+				{
+					iconName: "Copy",
+					label: "Copy",
+				},
+				{
+					iconName: "Move",
+					label: "Move",
+				},
+				{
+					iconName: "Delete",
+					label: "Delete",
+				},
+			],
+		}),
+	],
+};
 
-// export const Nested = Template.bind({});
-// Nested.args = {
-// 	content: [
-// 		Menu({
-// 			items: [
-// 				{
-// 					iconName: "Edit",
-// 					label: "Edit",
-// 				},
-// 			],
-// 		}),
-// 		Default({
-// 			position: "right",
-// 			content: [
-// 				Menu({
-// 					items: [
-// 						{
-// 							iconName: "Edit",
-// 							label: "Edit",
-// 						},
-// 						{
-// 							iconName: "Copy",
-// 							label: "Copy",
-// 						},
-// 						{
-// 							iconName: "Move",
-// 							label: "Move",
-// 						},
-// 						{
-// 							iconName: "Delete",
-// 							label: "Delete",
-// 						},
-// 					],
-// 				}),
-// 			],
-// 		}),
-// 	],
-// };
+export const Nested = Template.bind({});
+Nested.args = {
+	testId: 'popover-1',
+	id: 'popover-1',
+	triggerId: 'trigger-1',
+	trigger: (passthroughs) => ActionButton({
+		label: "Hop on pop(over)",
+		id: 'trigger-1',
+		...passthroughs,
+	}),
+	content: [
+		() => Menu({
+			items: [
+				{
+					iconName: "Edit",
+					label: "Edit",
+				},
+			],
+		}),
+		() => Default({
+			position: "right",
+			testId: 'popover-2',
+			id: 'popover-2',
+			triggerId: "trigger-2",
+			trigger: (passthroughs) => ActionButton({
+				label: "Hop on pop(over) 2",
+				id: "trigger-2",
+				...passthroughs,
+			}),
+			content: [
+				() => Menu({
+					items: [
+						{
+							iconName: "Edit",
+							label: "Edit",
+						},
+						{
+							iconName: "Copy",
+							label: "Copy",
+						},
+						{
+							iconName: "Move",
+							label: "Move",
+						},
+						{
+							iconName: "Delete",
+							label: "Delete",
+						},
+					],
+				}),
+			],
+		}),
+	],
+};

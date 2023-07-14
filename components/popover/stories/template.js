@@ -87,6 +87,7 @@ export const Template = ({
 	customClasses = [],
 	id,
 	testId,
+	triggerId,
 	customStyles = {},
 	trigger,
 	content = [],
@@ -112,16 +113,16 @@ export const Template = ({
 		${when(typeof trigger === "function", () => trigger({
 			...globals,
 			isSelected: isOpen,
-			id: 'trigger',
 			onclick: () => {
 				// No trigger? Nothing to do.
 				if (!trigger || !position) return [];
 
 				// Get trigger element and popover
-				const element = document.querySelector('#trigger');
+				const element = document.querySelector(`#${triggerId}`);
 				if (!element) return [];
 				const rect = element.getBoundingClientRect();
-				const popover = document.querySelector(`.${rootClass}`);
+				const popover = document.querySelector(`#${id}`);
+				console.log(popover)
 				if (!popover) return [];
 
 				const transforms = [];
@@ -131,7 +132,6 @@ export const Template = ({
 					const popWidth = popover.offsetWidth ?? 0;
 					const popHeight = popover.offsetHeight ?? 0;
 					let x, y;
-					console.log(item);
 					if (item === "top" || item === "bottom") {
 						x = triggerXCenter - (popWidth > 0 ? popWidth / 2 : popWidth);
 					} else if (item === "left" || item === "right") {
