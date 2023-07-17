@@ -53,10 +53,6 @@ governing permissions and limitations under the License.
 			--mod-infield-button-background-color-hover-disabled,
 			var(--spectrum-disabled-background-color)
 		);
-		--mod-infield-button-background-color-hover: var(
-			--spectrum-infield-button-background-color-hover-disabled,
-			var(--spectrum-disabled-background-color)
-		);
 		--mod-infield-button-background-color-down: var(
 			--mod-infield-button-background-color-down-disabled,
 			var(--spectrum-disabled-background-color)
@@ -401,41 +397,11 @@ governing permissions and limitations under the License.
 
 
 .spectrum-InfieldButton-icon {
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
 	display: initial;
 
-	/* don't be small, ever */
-	flex-shrink: 0;
-=======
-<<<<<<< HEAD
   /* don't be small, ever */
-  flex-shrink: 0;
-=======
-<<<<<<< HEAD
-	/* don't be small, ever */
 	flex-shrink: 0;
-=======
-=======
->>>>>>> 3c05f5ec9 (style(infieldbutton): disabled colors and quiet colors)
-  display: initial;
-
-  /* don't be small, ever */
-  flex-shrink: 0;
-<<<<<<< HEAD
->>>>>>> ebecd1185 (style(infieldbutton!): begin updating css to tokens)
->>>>>>> c0def263f (style(infieldbutton!): begin updating css to tokens)
->>>>>>> f01aba123 (style(infieldbutton!): begin updating css to tokens)
-=======
->>>>>>> 3c05f5ec9 (style(infieldbutton): disabled colors and quiet colors)
-=======
-	display: initial;
-
-	/* don't be small, ever */
-	flex-shrink: 0;
->>>>>>> f5a815e7c (refactor(infieldbutton): fix stylelint errors and remove invalid)
 
   /* remove margin used for centering */
-  margin: 0 !important;
+	margin: 0 !important;
 }
