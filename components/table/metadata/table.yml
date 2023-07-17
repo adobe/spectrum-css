@@ -925,7 +925,7 @@ examples:
       </table>
   - id: table-divs
     name: Divs
-    description: A table can alternatively be composed entirely of `<div>` tags, instead of a `<table>`.
+    description: A table can alternatively be composed entirely of `<div>` tags, instead of a `<table>`. This example shows how inner scrolling is possible when the table body has a set height.
     markup: |
       <div class="spectrum-Table spectrum-Table--sizeM spectrum-Table--emphasized" role="table">
         <div class="spectrum-Table-head role="rowgroup">
@@ -945,7 +945,7 @@ examples:
             <div class="spectrum-Table-headCell" role="columnheader">Column Title</div>
           </div>
         </div>
-        <div class="spectrum-Table-body" role="rowgroup">
+        <div class="spectrum-Table-body" role="rowgroup" style="height: 119px">
           <div class="spectrum-Table-row" role="row">
             <div class="spectrum-Table-cell" role="cell" tabindex="0">Row Item Alpha</div>
             <div class="spectrum-Table-cell" role="cell" tabindex="0">Row Item Alpha</div>

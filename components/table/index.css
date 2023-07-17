@@ -416,8 +416,10 @@ governing permissions and limitations under the License.
   line-height: var(--mod-table-header-line-height, var(--spectrum-table-row-line-height));
   text-transform: var(--mod-table-header-text-transform, none);
 
-  /* block-size functions as min-block-size when using display table-cell. */
-  block-size: var(--mod-table-min-header-height, var(--spectrum-table-min-header-height));
+  tbody.spectrum-Table-body & {
+    /* block-size functions as min-block-size when using display table-cell. */
+    block-size: var(--mod-table-min-header-height, var(--spectrum-table-min-header-height));
+  }
   min-block-size: var(--mod-table-min-header-height, var(--spectrum-table-min-header-height));
 
   padding-block: var(--mod-table-header-top-to-text, var(--spectrum-table-header-top-to-text)) var(--mod-table-header-bottom-to-text, var(--spectrum-table-header-bottom-to-text));
@@ -513,10 +515,8 @@ governing permissions and limitations under the License.
     var(--highcontrast-table-divider-color, var(--mod-table-divider-color, var(--spectrum-table-divider-color)));
 }
 
-.spectrum-Table-row {
-  border-block-start: none;
-
-  /* Outside border */
+/* Outside border */
+tbody.spectrum-Table-body .spectrum-Table-row {
   &:first-child .spectrum-Table-cell {
     border-block-start:
       var(--mod-table-border-width, var(--spectrum-table-border-width))
@@ -544,8 +544,10 @@ governing permissions and limitations under the License.
       solid
       var(--highcontrast-table-border-color, var(--mod-table-border-color, var(--spectrum-table-border-color)));
   }
+}
 
-  /* Rounded corners (border-radius) */
+/* Rounded corners */
+.spectrum-Table-row {
   &:first-child .spectrum-Table-cell:first-child {
     border-start-start-radius: var(--mod-table-border-radius, var(--spectrum-table-border-radius));
   }
@@ -572,8 +574,10 @@ governing permissions and limitations under the License.
   vertical-align: var(--mod-table-default-vertical-align, var(--spectrum-table-default-vertical-align));
   color: var(--highcontrast-table-row-text-color, var(--mod-table-row-text-color, var(--spectrum-table-row-text-color)));
 
-  /* block-size functions as min-block-size when using display table-cell. */
-  block-size: var(--mod-table-min-row-height, var(--spectrum-table-min-row-height));
+  tbody.spectrum-Table-body & {
+    /* block-size functions as min-block-size when using display table-cell. */
+    block-size: var(--mod-table-min-row-height, var(--spectrum-table-min-row-height));
+  }
   min-block-size: var(--mod-table-min-row-height, var(--spectrum-table-min-row-height));
 
   padding-block-start: calc(
@@ -615,6 +619,7 @@ governing permissions and limitations under the License.
   background-color: var(--highcontrast-table-row-background-color, var(--mod-table-row-background-color, var(--spectrum-table-row-background-color)));
   transition: background-color var(--highcontrast-table-transition-duration, var(--mod-table-transition-duration, var(--spectrum-table-transition-duration))) ease-in-out;
   cursor: var(--mod-table-cursor-row-default, pointer);
+  border-block-start: none;
 
   &:first-child {
     /* Ensure that 'outline' will match the border-radius, when used on rows. */
@@ -715,8 +720,10 @@ governing permissions and limitations under the License.
     font-weight: var(--mod-table-section-header-font-weight, var(--spectrum-table-section-header-font-weight));
     text-align: start;
 
-    /* block-size functions as min-block-size when using display table-cell. */
-    block-size: var(--mod-table-section-header-min-height, var(--spectrum-table-section-header-min-height));
+    tbody.spectrum-Table-body & {
+      /* block-size functions as min-block-size when using display table-cell. */
+      block-size: var(--mod-table-section-header-min-height, var(--spectrum-table-section-header-min-height));
+    }
     min-block-size: var(--mod-table-section-header-min-height, var(--spectrum-table-section-header-min-height));
 
     padding-block-start: calc(
@@ -780,27 +787,35 @@ governing permissions and limitations under the License.
 }
 
 /********* DIVS *********/
-/* Markup that uses divs instead of <table> elements. */
-div.spectrum-Table {
-  display: table;
-}
-
-div.spectrum-Table-head {
-  display: table-header-group;
-}
-
-div.spectrum-Table-body {
-  display: table-row-group;
-}
-
+/* Markup that uses divs instead of <table> elements, and allows a scrollable table body. */
 div.spectrum-Table-row,
 div.spectrum-Table-head div[role="row"] {
-  display: table-row;
+  display: flex;
 }
 
 div.spectrum-Table-cell,
 div.spectrum-Table-headCell {
-  display: table-cell;
+  flex: 1;
+}
+
+div.spectrum-Table-checkboxCell {
+  flex-grow: 0;
+}
+
+/* When made scrollable through non table element display properties, the
+  body needs an additional border around it. */
+div.spectrum-Table-body {
+  border-radius: var(--mod-table-border-radius, var(--spectrum-table-border-radius));
+  border-inline: var(--mod-table-outer-border-inline-width, var(--spectrum-table-outer-border-inline-width))
+      solid
+      var(--highcontrast-table-border-color, var(--mod-table-border-color, var(--spectrum-table-border-color)));
+  border-block: var(--mod-table-border-width, var(--spectrum-table-border-width))
+      solid
+      var(--highcontrast-table-border-color, var(--mod-table-border-color, var(--spectrum-table-border-color)));
+
+  .spectrum-Table-row:first-child .spectrum-Table-cell {
+    border-block-start: none;
+  }
 }
 
 /********* COLLAPSIBLE *********/
