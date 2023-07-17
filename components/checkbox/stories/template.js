@@ -61,12 +61,14 @@ export const Template = ({
 			<span class="${rootClass}-box">
 				${Icon({
 					...globals,
-					iconName: "Checkmark100",
+					size,
+					iconName: "Checkmark",
 					customClasses: [`${rootClass}-checkmark`],
 				})}
 				${Icon({
 					...globals,
-					iconName: "Dash100",
+					size,
+					iconName: "Dash",
 					customClasses: [`${rootClass}-partialCheckmark`],
 				})}
 			</span>
