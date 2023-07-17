@@ -27,22 +27,87 @@ examples:
   - id: stepper
     name: Standard
     markup: |
-      <div class="spectrum-Stepper">
-        <div class="spectrum-Textfield spectrum-Stepper-textfield">
-          <input type="number" class="spectrum-Textfield-input spectrum-Stepper-input" min="-2" max="2" step="0.5">
+      <div class="spectrum-Examples">
+        <div class="spectrum-Examples-item">
+          <h4 class="spectrum-Heading spectrum-Heading--sizeXS spectrum-Examples-itemHeading">S</h4>
+          <div class="spectrum-Stepper spectrum-Stepper--sizeS">
+            <div class="spectrum-Textfield spectrum-Textfield--sizeS spectrum-Stepper-textfield">
+              <input type="number" class="spectrum-Textfield-input spectrum-Stepper-input" min="-2" max="2" step="0.5">
+            </div>
+            <span class="spectrum-Stepper-buttons">
+              <button class="spectrum-ActionButton spectrum-ActionButton--sizeM spectrum-Stepper-stepUp" tabindex="-1">
+                <svg class="spectrum-Icon spectrum-UIIcon-ChevronUp50" focusable="false" aria-hidden="true">
+                  <use xlink:href="#spectrum-css-icon-Chevron50" />
+                </svg>
+              </button>
+              <button class="spectrum-ActionButton spectrum-ActionButton--sizeM spectrum-Stepper-stepDown" tabindex="-1">
+                <svg class="spectrum-Icon spectrum-UIIcon-ChevronDown50" focusable="false" aria-hidden="true">
+                  <use xlink:href="#spectrum-css-icon-Chevron50" />
+                </svg>
+              </button>
+            </span>
+          </div>
         </div>
-        <span class="spectrum-Stepper-buttons">
-          <button class="spectrum-ActionButton spectrum-ActionButton--sizeM spectrum-Stepper-stepUp" tabindex="-1">
-            <svg class="spectrum-Icon spectrum-UIIcon-ChevronUp75" focusable="false" aria-hidden="true">
-              <use xlink:href="#spectrum-css-icon-Chevron75" />
-            </svg>
-          </button>
-          <button class="spectrum-ActionButton spectrum-ActionButton--sizeM spectrum-Stepper-stepDown" tabindex="-1">
-            <svg class="spectrum-Icon spectrum-UIIcon-ChevronDown75" focusable="false" aria-hidden="true">
-              <use xlink:href="#spectrum-css-icon-Chevron75" />
-            </svg>
-          </button>
-        </span>
+        <div class="spectrum-Examples-item">
+          <h4 class="spectrum-Heading spectrum-Heading--sizeXS spectrum-Examples-itemHeading">M</h4>
+          <div class="spectrum-Stepper spectrum-Stepper--sizeM">
+            <div class="spectrum-Textfield spectrum-Textfield--sizeM spectrum-Stepper-textfield">
+              <input type="number" class="spectrum-Textfield-input spectrum-Stepper-input" min="-2" max="2" step="0.5">
+            </div>
+            <span class="spectrum-Stepper-buttons">
+              <button class="spectrum-ActionButton spectrum-ActionButton--sizeM spectrum-Stepper-stepUp" tabindex="-1">
+                <svg class="spectrum-Icon spectrum-UIIcon-ChevronUp75" focusable="false" aria-hidden="true">
+                  <use xlink:href="#spectrum-css-icon-Chevron75" />
+                </svg>
+              </button>
+              <button class="spectrum-ActionButton spectrum-ActionButton--sizeM spectrum-Stepper-stepDown" tabindex="-1">
+                <svg class="spectrum-Icon spectrum-UIIcon-ChevronDown75" focusable="false" aria-hidden="true">
+                  <use xlink:href="#spectrum-css-icon-Chevron75" />
+                </svg>
+              </button>
+            </span>
+          </div>
+        </div>
+        <div class="spectrum-Examples-item">
+          <h4 class="spectrum-Heading spectrum-Heading--sizeXS spectrum-Examples-itemHeading">L</h4>
+          <div class="spectrum-Stepper spectrum-Stepper--sizeL">
+            <div class="spectrum-Textfield spectrum-Textfield--sizeL spectrum-Stepper-textfield">
+              <input type="number" class="spectrum-Textfield-input spectrum-Stepper-input" min="-2" max="2" step="0.5">
+            </div>
+            <span class="spectrum-Stepper-buttons">
+              <button class="spectrum-ActionButton spectrum-ActionButton--sizeM spectrum-Stepper-stepUp" tabindex="-1">
+                <svg class="spectrum-Icon spectrum-UIIcon-ChevronUp100" focusable="false" aria-hidden="true">
+                  <use xlink:href="#spectrum-css-icon-Chevron100" />
+                </svg>
+              </button>
+              <button class="spectrum-ActionButton spectrum-ActionButton--sizeM spectrum-Stepper-stepDown" tabindex="-1">
+                <svg class="spectrum-Icon spectrum-UIIcon-ChevronDown100" focusable="false" aria-hidden="true">
+                  <use xlink:href="#spectrum-css-icon-Chevron100" />
+                </svg>
+              </button>
+            </span>
+          </div>
+        </div>
+        <div class="spectrum-Examples-item">
+          <h4 class="spectrum-Heading spectrum-Heading--sizeXS spectrum-Examples-itemHeading">XL</h4>
+          <div class="spectrum-Stepper spectrum-Stepper--sizeXL">
+            <div class="spectrum-Textfield spectrum-Textfield--sizeXL spectrum-Stepper-textfield">
+              <input type="number" class="spectrum-Textfield-input spectrum-Stepper-input" min="-2" max="2" step="0.5">
+            </div>
+            <span class="spectrum-Stepper-buttons">
+              <button class="spectrum-ActionButton spectrum-ActionButton--sizeM spectrum-Stepper-stepUp" tabindex="-1">
+                <svg class="spectrum-Icon spectrum-UIIcon-ChevronUp200" focusable="false" aria-hidden="true">
+                  <use xlink:href="#spectrum-css-icon-Chevron200" />
+                </svg>
+              </button>
+              <button class="spectrum-ActionButton spectrum-ActionButton--sizeM spectrum-Stepper-stepDown" tabindex="-1">
+                <svg class="spectrum-Icon spectrum-UIIcon-ChevronDown200" focusable="false" aria-hidden="true">
+                  <use xlink:href="#spectrum-css-icon-Chevron200" />
+                </svg>
+              </button>
+            </span>
+          </div>
+        </div>
       </div>
   - id: stepper-focused
     name: Focused
