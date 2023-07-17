@@ -7,6 +7,16 @@ export default {
 		"A stepper can be used to increment or decrement a value by a specified amount via an up/down button. An input field displays the current value.",
 	component: "Stepper",
 	argTypes: {
+		size: {
+			name: "Size",
+			type: { name: "string", required: true },
+			table: {
+				type: { summary: "string" },
+				category: "Component",
+			},
+			options: ["s", "m", "l", "xl"],
+			control: "select"
+		},
 		isQuiet: {
 			name: "Quiet",
 			type: { name: "boolean" },
@@ -64,6 +74,7 @@ export default {
 	},
 	args: {
 		rootClass: "spectrum-Stepper",
+		size: "m",
 		isQuiet: false,
 		isFocused: false,
 		isKeyboardFocused: false,

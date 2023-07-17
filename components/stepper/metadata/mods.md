@@ -38,4 +38,5 @@
 | `--mod-stepper-focus-indicator-gap`                    |
 | `--mod-stepper-focus-indicator-width`                  |
 | `--mod-stepper-height`                                 |
+| `--mod-stepper-min-width-multiplier`                   |
 | `--mod-stepper-width`                                  |

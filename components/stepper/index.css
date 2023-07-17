@@ -191,82 +191,92 @@ governing permissions and limitations under the License.
     }
   }
 
-  /*** Quiet ***/
-  &--quiet {
-    /* quiet corners are not rounded */
-    border-radius: 0;
+}
 
+/*** Quiet ***/
+.spectrum-Stepper.spectrum-Stepper--quiet {
+  /* quiet corners are not rounded */
+  border-start-start-radius: 0;
+  border-start-end-radius: 0;
+  border-end-start-radius: 0;
+  border-end-end-radius: 0;
+
+  &.hide-stepper .spectrum-Stepper-input {
+    border-inline-end-width: 0;
+    border-end-end-radius: 0;
+
+  }
+
+  &::after {
+    content: '';
+    position: absolute;
+    bottom: calc(-1 * (var(--mod-stepper-focus-indicator-gap, var(--spectrum-stepper-focus-indicator-gap)) + var(--mod-stepper-focus-indicator-width, var(--spectrum-stepper-focus-indicator-width))));
+    left: 0;
+    inline-size: 100%;
+    block-size: var(--mod-stepper-focus-indicator-width, var(--spectrum-stepper-focus-indicator-width));
+  }
+
+  .spectrum-Stepper-stepUp,
+  .spectrum-Stepper-stepDown {
+    min-inline-size: 0;
+
+    border-block-start: none;
+    border-inline-start: none;
+    border-inline-end: none;
+    border-radius: 0;
+    border-width: 0;
+
+    padding-inline-end: 0;
+    justify-content: flex-end;
+
+    /* More hitarea */
     &::after {
       content: '';
       position: absolute;
-      bottom: calc(-1 * (var(--mod-stepper-focus-indicator-gap, var(--spectrum-stepper-focus-indicator-gap)) + var(--mod-stepper-focus-indicator-width, var(--spectrum-stepper-focus-indicator-width))));
-      left: 0;
-      inline-size: 100%;
-      block-size: var(--mod-stepper-focus-indicator-width, var(--spectrum-stepper-focus-indicator-width));
+      block-size: 100%;
+      inline-size: var(--mod-stepper-button-offset, var(--spectrum-stepper-button-offset));
+      inset-inline-end: 0;
+      inset-inline-start: auto;
     }
+  }
 
-    .spectrum-Stepper-stepUp,
-    .spectrum-Stepper-stepDown {
-      min-inline-size: 0;
+  .spectrum-Stepper-input,
+  .spectrum-Stepper-buttons,
+  .spectrum-Stepper-stepUp,
+  .spectrum-Stepper-stepDown {
+    background-color: transparent;
+  }
 
-      border-block-start: none;
-      border-inline-start: none;
-      border-inline-end: none;
-      border-radius: 0;
-      border-width: 0;
-
-      padding-inline-end: 0;
-      justify-content: flex-end;
-
-      /* More hitarea */
-      &::after {
-        content: '';
-        position: absolute;
-        block-size: 100%;
-        inline-size: var(--mod-stepper-button-offset, var(--spectrum-stepper-button-offset));
-        inset-inline-end: 0;
-        inset-inline-start: auto;
-      }
-    }
-
-    .spectrum-Stepper-input,
+  /* quiet hover */
+  &:hover {
     .spectrum-Stepper-buttons,
     .spectrum-Stepper-stepUp,
     .spectrum-Stepper-stepDown {
       background-color: transparent;
     }
+  }
 
-    /* quiet hover */
-    &:hover {
-      .spectrum-Stepper-buttons,
-      .spectrum-Stepper-stepUp,
-      .spectrum-Stepper-stepDown {
-        background-color: transparent;
-      }
+  /* quiet focused */
+  &.is-focused {
+    .spectrum-Stepper-stepUp,
+    .spectrum-Stepper-stepDown {
+      background-color: transparent;
+    }
+  }
+
+  /* quiet keyboard focused */
+  &.is-keyboardFocused {
+
+    outline: none;
+
+    /* quiet focus indicator only on bottom border */
+    &::after {
+      background-color: var(--highcontrast-stepper-focus-indicator-color, var(--mod-stepper-focus-indicator-color, var(--spectrum-stepper-focus-indicator-color)));
     }
 
-    /* quiet focused */
-    &.is-focused {
-      .spectrum-Stepper-stepUp,
-      .spectrum-Stepper-stepDown {
-        background-color: transparent;
-      }
-    }
-
-    /* quiet keyboard focused */
-    &.is-keyboardFocused {
-
-      outline: none;
-
-      /* quiet focus indicator only on bottom border */
-      &::after {
-        background-color: var(--highcontrast-stepper-focus-indicator-color, var(--mod-stepper-focus-indicator-color, var(--spectrum-stepper-focus-indicator-color)));
-      }
-
-      .spectrum-Stepper-stepUp,
-      .spectrum-Stepper-stepDown {
-        background-color: transparent;
-      }
+    .spectrum-Stepper-stepUp,
+    .spectrum-Stepper-stepDown {
+      background-color: transparent;
     }
   }
 }
@@ -367,7 +377,7 @@ governing permissions and limitations under the License.
   border-end-start-radius: var(--mod-stepper-button-bottom-border-radius-end-start, var(--spectrum-stepper-button-bottom-border-radius-end-start));
 }
 
-/* Only remove input border if stepper is visible */
+/* hide-stepper */
 .spectrum-Stepper.hide-stepper .spectrum-Stepper-input {
   border-start-end-radius: var(--mod-stepper-border-radius, var(--spectrum-stepper-border-radius));
   border-end-end-radius: var(--mod-stepper-border-radius, var(--spectrum-stepper-border-radius));

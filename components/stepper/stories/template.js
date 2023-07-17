@@ -11,6 +11,7 @@ import "../skin.css";
 
 export const Template = ({
 	rootClass = "spectrum-Stepper",
+	size = "m",
 	isQuiet = false,
 	isFocused = false,
 	isKeyboardFocused = false,
@@ -33,10 +34,26 @@ export const Template = ({
 		console.warn(e);
 	}
 
+	let iconSize = "75";
+	switch (size) {
+		case "s":
+			iconSize = "50";
+			break;
+		case "l":
+			iconSize = "100";
+			break;
+		case "xl":
+			iconSize = "200";
+			break;
+		default:
+			iconSize = "75";
+	}
+
 	return html`
 		<div
 			class=${classMap({
 				[rootClass]: true,
+				[`${rootClass}--size${size?.toUpperCase()}`]: typeof size !== "undefined",
 				[`${rootClass}--quiet`]: isQuiet,
 				"is-focused": isFocused,
 				"is-keyboardFocused": isKeyboardFocused,
@@ -50,6 +67,7 @@ export const Template = ({
 		>
 			${Textfield({
 				...globals,
+				size,
 				placeholder: "1",
 				min: "-2",
 				max: "2",
@@ -64,15 +82,17 @@ export const Template = ({
 				: html`<span class="${rootClass}-buttons">
 						${ActionButton({
 							...globals,
+							size,
 							customClasses: [`${rootClass}-stepUp`],
-							iconName: "ChevronUp75",
+							iconName: `ChevronUp${iconSize}`,
 							isDisabled,
 							isQuiet,
 						})}
 						${ActionButton({
 							...globals,
+							size,
 							customClasses: [`${rootClass}-stepDown`],
-							iconName: "ChevronDown75",
+							iconName: `ChevronDown${iconSize}`,
 							isDisabled,
 							isQuiet,
 						})}
