@@ -3,7 +3,7 @@ import { classMap } from "lit/directives/class-map.js";
 import { styleMap } from "lit/directives/style-map.js";
 import { ifDefined } from "lit/directives/if-defined.js";
 
-import { Template as PickerButton } from "@spectrum-css/pickerbutton/stories/template.js";
+import { Template as Picker } from "@spectrum-css/picker/stories/template.js";
 import { Template as Popover } from "@spectrum-css/popover/stories/template.js";
 import { Template as Textfield } from "@spectrum-css/textfield/stories/template.js";
 import { Template as ClearButton } from "@spectrum-css/clearbutton/stories/template.js";
@@ -28,10 +28,11 @@ export const Template = ({
 			})}
 			style=${ifDefined(styleMap(customStyles))}
 		>
-			${PickerButton({
+			${Picker({
 				...globals,
 				size,
-				label: "All",
+				placeholder: "All",
+				label: undefined,
 				isOpen,
 				position: "left",
 				customClasses: [`${rootClass}-picker`],
