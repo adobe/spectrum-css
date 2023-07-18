@@ -41,21 +41,6 @@ export const Template = ({
 		console.warn(e);
 	}
 
-	let iconName = "ChevronDown200";
-	switch (size) {
-		case "s":
-			iconName = "ChevronDown75";
-			break;
-		case "m":
-			iconName = "ChevronDown100";
-			break;
-		case "xl":
-			iconName = "ChevronDown300";
-			break;
-		default:
-			iconName = "ChevronDown200";
-	}
-
 	return html`
 		${label
 			? FieldLabel({
@@ -94,13 +79,15 @@ export const Template = ({
 			${isInvalid && !isLoading
 				? Icon({
 						...globals,
+						size,
 						iconName: "Alert",
 						customClasses: [`${rootClass}-validationIcon`],
 				  })
 				: ""}
 			${Icon({
 				...globals,
-				iconName,
+				size,
+				iconName: "ChevronDown",
 				customClasses: [`${rootClass}-menuIcon`],
 			})}
 		</button>
