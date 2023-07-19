@@ -440,6 +440,8 @@ governing permissions and limitations under the License.
     --highcontrast-tag-content-color-active: ButtonText;
     --highcontrast-tag-content-color-focus: ButtonText;
 
+    --highcontrast-tag-focus-ring-color: Highlight;
+
     &.is-selected {
       --highcontrast-tag-border-color-selected: Highlight;
       --highcontrast-tag-border-color-selected-hover: Highlight;
