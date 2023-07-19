@@ -569,27 +569,17 @@ governing permissions and limitations under the License.
     var(--mod-menu-item-top-to-checkmark, var(--spectrum-menu-item-top-to-checkmark)) -
     var(--mod-menu-item-top-edge-to-text, var(--spectrum-menu-item-top-edge-to-text))
   );
-  /* default: checkmarks that have text directly next to them */
+  /* Checkmarks have text or an icon directly next to them. */
   margin-inline-end: var(--mod-menu-item-text-to-control, var(--spectrum-menu-item-text-to-control));
 }
 
-/* checkmarks that have an icon directly next to them */
-.spectrum-Menu-checkmark--withAdjacentIcon {
-  margin-inline-end: var(--mod-menu-item-text-to-control, var(--spectrum-menu-item-text-to-control));
-}
-
-/* always provide space at the end of a workflow icon */
 .spectrum-Menu-itemIcon--workflowIcon {
+  /* Always provide space at the end of a workflow icon. */
   margin-inline-end: var(--mod-menu-item-label-text-to-visual, var(--spectrum-menu-item-label-text-to-visual));
 }
 
 .spectrum-Menu-chevron {
-  /* default: chevrons (aka collapsibles) that have no icon and instead have text directly next to them */
-  margin-inline-end: var(--mod-menu-item-text-to-control, var(--spectrum-menu-item-text-to-control));
-}
-
-/* chevrons (aka collapsibles) that have an icon directly next to them */
-.spectrum-Menu-chevron--withAdjacentIcon {
+  /* Chevrons (aka collapsibles) have text or an icon directly next to them. */
   margin-inline-end: var(--mod-menu-item-text-to-control, var(--spectrum-menu-item-text-to-control));
 }
 

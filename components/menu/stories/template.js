@@ -54,7 +54,6 @@ export const MenuItem = ({
             customClasses: [
               `${rootClass}Icon`,
               "spectrum-Menu-chevron",
-              ... iconName ? ['spectrum-Menu-chevron--withAdjacentIcon'] : [],
             ],
           }) : ''}
       ${iconName
@@ -93,7 +92,6 @@ export const MenuItem = ({
             customClasses: [
               `${rootClass}Icon`,
               "spectrum-Menu-checkmark",
-              ... iconName ? ['spectrum-Menu-checkmark--withAdjacentIcon'] : [],
             ],
           })
         : ''}
