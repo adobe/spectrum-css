@@ -28,6 +28,10 @@ governing permissions and limitations under the License.
 
   /* selected */
   --spectrum-tag-content-color-selected: var(--spectrum-gray-50);
+  --spectrum-tag-background-color-selected: var(--spectrum-neutral-background-color-selected-default);
+  --spectrum-tag-background-color-selected-hover: var(--spectrum-neutral-background-color-selected-hover);
+  --spectrum-tag-background-color-selected-active: var(--spectrum-neutral-background-color-selected-down);
+  --spectrum-tag-background-color-selected-focus: var(--spectrum-neutral-background-color-selected-key-focus);
 
   /* invalid variant */
   --spectrum-tag-border-color-invalid: var(--spectrum-negative-color-900);
