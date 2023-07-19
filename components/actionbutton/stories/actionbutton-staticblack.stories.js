@@ -1,7 +1,7 @@
 import { argTypes, ActionButtons } from "./index";
 
 export default {
-	title: "Components/Action button",
+	title: "Components/Action button/Static Black",
 	description:
 		"The action button component represents an action a user can take.",
 	component: "ActionButton",
@@ -13,6 +13,8 @@ export default {
 		isQuiet: false,
 		isEmphasized: false,
 		hasPopup: false,
+    backgroundColor: "rgb(181, 209, 211)",
+    staticColor: "black",
 	},
 	parameters: {
 		actions: {
@@ -45,13 +47,7 @@ SelectedDisabled.args = {
 	isDisabled: true
 };
 
-export const Emphasized = ActionButtons.bind({});
-Emphasized.args = {
-	isEmphasized: true
-};
-
-export const SelectedEmphasized = ActionButtons.bind({});
-SelectedEmphasized.args = {
-	isEmphasized: true,
-	isSelected: true
+export const Quiet = ActionButtons.bind({});
+Quiet.args = {
+	isQuiet: true
 };

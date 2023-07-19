@@ -45,7 +45,8 @@ export const Template = ({
 		>
 			${Icon({
 				...globals,
-				iconName: "Cross100",
+				size,
+				iconName: "Cross",
 				customClasses: [`${rootClass}-UIIcon`],
 			})}
 		</button>

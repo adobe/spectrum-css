@@ -33,6 +33,7 @@ module.exports = {
 		"@whitespace/storybook-addon-html",
 		// https://storybook.js.org/addons/@etchteam/storybook-addon-status
 		"@etchteam/storybook-addon-status",
+    "storybook-addon-pseudo-states",
 	],
 	core: {
 		disableTelemetry: true,

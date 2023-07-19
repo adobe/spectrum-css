@@ -3,6 +3,23 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+<a name="6.1.8"></a>
+##6.1.8
+🗓
+2023-07-17 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/checkbox@6.1.7...@spectrum-css/checkbox@6.1.8)
+
+**Note:** Version bump only for package @spectrum-css/checkbox
+
+<a name="6.1.7"></a>
+##6.1.7
+🗓
+2023-07-14 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/checkbox@6.1.6...@spectrum-css/checkbox@6.1.7)
+
+### 🐛 Bug fixes
+
+- **actionbutton:**update action button color tokens ([#1982](https://github.com/adobe/spectrum-css/issues/1982))([95e4353](https://github.com/adobe/spectrum-css/commit/95e4353))\*
+  **checkbox:**use language code, not coding language name ([#2005](https://github.com/adobe/spectrum-css/issues/2005))([56c7cfc](https://github.com/adobe/spectrum-css/commit/56c7cfc))
+
 <a name="6.1.6"></a>
 ##6.1.6
 🗓
