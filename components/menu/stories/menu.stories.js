@@ -248,7 +248,11 @@ SingleSelection.parameters = {
 SingleSelection.args = {
   isSelectable: true,
   items: [
-    { label: "Marquee", isSelected: true, isChecked: true, },
+    {
+      label: "Marquee. Extra long menu item text to demonstrate wrapping text and alignment of icon in this situation. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
+      isSelected: true,
+      isChecked: true,
+    },
     { label: "Add" },
     { label: "Subtract" },
   ],
@@ -259,7 +263,7 @@ SingleSelectionWithIcons.args = {
   isSelectable: true,
   items: [
     {
-      label: "Marquee",
+      label: "Marquee. Extra long menu item text to demonstrate wrapping text and alignment of icon in this situation. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
       iconName: "Selection",
       isSelected: true,
       isChecked: true,

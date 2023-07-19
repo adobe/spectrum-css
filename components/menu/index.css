@@ -32,6 +32,7 @@ governing permissions and limitations under the License.
 
   --spectrum-menu-item-checkmark-height: var(--spectrum-menu-item-checkmark-height-medium);
   --spectrum-menu-item-checkmark-width: var(--spectrum-menu-item-checkmark-width-medium);
+  --spectrum-menu-item-top-to-checkmark: var(--spectrum-menu-item-top-to-selected-icon-medium);
 
   --spectrum-menu-item-label-line-height: var(--spectrum-line-height-100);
   --spectrum-menu-item-label-line-height-cjk: var(--spectrum-cjk-line-height-100);
@@ -130,6 +131,7 @@ governing permissions and limitations under the License.
 
   --spectrum-menu-item-checkmark-height: var(--spectrum-menu-item-checkmark-height-small);
   --spectrum-menu-item-checkmark-width: var(--spectrum-menu-item-checkmark-width-small);
+  --spectrum-menu-item-top-to-checkmark: var(--spectrum-menu-item-top-to-selected-icon-small);
 }
 
 .spectrum-Menu--sizeL {
@@ -154,6 +156,7 @@ governing permissions and limitations under the License.
 
   --spectrum-menu-item-checkmark-height: var(--spectrum-menu-item-checkmark-height-large);
   --spectrum-menu-item-checkmark-width: var(--spectrum-menu-item-checkmark-width-large);
+  --spectrum-menu-item-top-to-checkmark: var(--spectrum-menu-item-top-to-selected-icon-large);
 }
 
 .spectrum-Menu--sizeXL {
@@ -178,6 +181,7 @@ governing permissions and limitations under the License.
 
   --spectrum-menu-item-checkmark-height: var(--spectrum-menu-item-checkmark-height-extra-large);
   --spectrum-menu-item-checkmark-width: var(--spectrum-menu-item-checkmark-width-extra-large);
+  --spectrum-menu-item-top-to-checkmark: var(--spectrum-menu-item-top-to-selected-icon-extra-large);
 }
 
 @media (forced-colors: active) {
@@ -486,11 +490,12 @@ governing permissions and limitations under the License.
 
 .spectrum-Menu-itemIcon {
   grid-area: iconArea;
-  align-self: center;
+  align-self: start;
 }
 
 .spectrum-Menu-checkmark {
   grid-area: checkmarkArea;
+  align-self: start;
 }
 
 .spectrum-menu-itemSelection {
@@ -560,6 +565,10 @@ governing permissions and limitations under the License.
 .spectrum-Menu-checkmark {
   block-size: var(--mod-menu-item-checkmark-height, var(--spectrum-menu-item-checkmark-height));
   inline-size: var(--mod-menu-item-checkmark-width, var(--spectrum-menu-item-checkmark-width));
+  margin-block-start: calc(
+    var(--mod-menu-item-top-to-checkmark, var(--spectrum-menu-item-top-to-checkmark)) -
+    var(--mod-menu-item-top-edge-to-text, var(--spectrum-menu-item-top-edge-to-text))
+  );
   /* default: checkmarks that have text directly next to them */
   margin-inline-end: var(--mod-menu-item-text-to-control, var(--spectrum-menu-item-text-to-control));
 }
@@ -650,6 +659,11 @@ governing permissions and limitations under the License.
 
   .spectrum-Menu-sectionHeading {
     padding-inline: 0;
+  }
+
+  > .spectrum-Menu-itemIcon {
+    padding-block-start: var(--mod-menu-section-header-top-edge-to-text, var(--mod-menu-item-top-edge-to-text, var(--spectrum-menu-item-top-edge-to-text)));
+    padding-block-end: var(--mod-menu-section-header-bottom-edge-to-text, var(--mod-menu-item-bottom-edge-to-text, var(--spectrum-menu-item-bottom-edge-to-text)));
   }
 }
 
