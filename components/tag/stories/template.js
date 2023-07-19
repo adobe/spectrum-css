@@ -55,15 +55,15 @@ export const Template = ({
 						size: "50",
 				  })
 				: ""}
-			${iconName
+			${iconName && !avatarUrl
 				? Icon({
 						...globals,
 						size,
 						iconName,
-						customClasses: [`${rootClass}s-itemIcon`],
+						customClasses: [`${rootClass}-itemIcon`],
 				  })
 				: ""}
-			<span class="${rootClass}s-itemLabel">${label}</span>
+			<span class="${rootClass}-itemLabel">${label}</span>
 			${hasClearButton
 				? ClearButton({
 						...globals,

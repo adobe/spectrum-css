@@ -91,12 +91,12 @@ export default {
 		rootClass: "spectrum-Tag",
 		size: "m",
 		label: "Tag label",
-		avatarUrl: "example-ava.png",
+		avatarUrl: undefined,
 		isSelected: false,
 		isDisabled: false,
 		isInvalid: false,
 		isEmphasized: false,
-		hasClearButton: true,
+		hasClearButton: false,
 	},
 	parameters: {
 		actions: {
@@ -112,3 +112,18 @@ export default {
 
 export const Default = Template.bind({});
 Default.args = {};
+
+export const Icon = Template.bind({});
+Icon.args = {
+	iconName: 'Info'
+};
+
+export const Avatar = Template.bind({});
+Avatar.args = {
+	avatarUrl: "example-ava.png"
+};
+
+export const Removeable = Template.bind({});
+Removeable.args = {
+	hasClearButton: true,
+};
