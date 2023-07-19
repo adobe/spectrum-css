@@ -13,6 +13,13 @@ governing permissions and limitations under the License.
 @import "../commons/overlay-coretokens.css";
 
 .spectrum-Popover {
+  /* Used in positioning popover for storybook */
+  --flow-direction: 1;
+
+  [dir="rtl"] & {
+    --flow-direction: -1;
+  }
+
   --spectrum-popover-cross-offset: 0; /* change to offset from source, default is 0 */
 
   --spectrum-popover-background-color: var(--spectrum-background-layer-2-color);
@@ -54,8 +61,8 @@ governing permissions and limitations under the License.
 
   box-sizing: border-box;
   position: absolute;
-  top: 0;
-  left: 0;
+  inset-inline-start: 0;
+  inset-block-start: 0;
 
   outline: none; /* Hide focus outline */
 

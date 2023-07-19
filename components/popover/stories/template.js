@@ -120,43 +120,55 @@ export const Template = ({
 				// Get trigger element and popover
 				const element = document.querySelector(`#${triggerId}`);
 				console.log(triggerId);
+
 				if (!element) return [];
 				const rect = element.getBoundingClientRect();
 				const popover = document.querySelector(`#${id}`);
 				if (!popover) return [];
 
 				const transforms = [];
-				position.split("-")?.forEach((item) => {
-					const triggerXCenter = (rect.left + rect.right) / 2;
-					const triggerYCenter = (rect.top + rect.bottom) / 2;
-					const popWidth = popover.offsetWidth ?? 0;
-					const popHeight = popover.offsetHeight ?? 0;
-					let x, y;
-					if (item === "top" || item === "bottom") {
-						x = triggerXCenter - (popWidth > 0 ? popWidth / 2 : popWidth);
-					} else if (item === "left" || item === "right") {
-						y = triggerYCenter - (popHeight > 0 ? popHeight / 2 : popHeight);
-					}
-					if (item === "top") {
-						y = rect.top - popHeight;
-					} else if (item === "bottom") {
-						y = rect.bottom;
-					} else if (item === "left") {
-						x = rect.left - popWidth;
-					} else if (item === "right") {
-						x = rect.right;
-					}
-					if (x) transforms.push(`translateX(${parseInt(x, 10)}px)`);
-					if (y) transforms.push(`translateY(${parseInt(y, 10)}px)`);
-				});
+				const additionalStyles = {};
+				const triggerXCenter = (rect.left + rect.right) / 2;
+				const triggerYCenter = (rect.top + rect.bottom) / 2;
+				const popWidth = popover.offsetWidth ?? 0;
+				const popHeight = popover.offsetHeight ?? 0;
+				let x, y;
+				if (position.includes("top") || position.includes("bottom")) {
+					x = triggerXCenter - (popWidth > 0 ? popWidth / 2 : popWidth);
+				} else if (position.includes("left") || position.includes("right")) {
+					y = triggerYCenter - (popHeight > 0 ? popHeight / 2 : popHeight);
+				}
+				if (position.includes("top")) {
+					y = rect.top - popHeight;
+				} else if (position.includes("bottom")) {
+					y = rect.bottom;
+				} else if (position.includes("left")) {
+					x = rect.left - popWidth;
+				} else if (position.includes("right")) {
+					x = rect.right;
+				}
+				if (x) transforms.push(`translateX(calc(var(--flow-direction) * ${parseInt(x, 10)}px))`);
+				if (y) transforms.push(`translateY(${parseInt(y, 10)}px)`);
+
+				console.log(transforms);
+				// Add start and end styles
+
+				if (position === "top-start") {
+					additionalStyles["inset-inline-start"] = "calc(" + (popWidth / 2) + "px - var(--spectrum-popover-pointer-edge-offset))";
+				} else if (position.includes("end")) {
+					additionalStyles["inset-inline-start"] = "calc(" + (popWidth / 2) + "px - var(--spectrum-popover-pointer-edge-spacing))";
+				}
+
 				updateArgs({
 					isOpen: !isOpen,
 					customStyles: {
 						transform: transforms.join(" "),
+						...additionalStyles,
 					}
 				});
 			}
 		}))}
+
 		<div
 			class=${classMap({
 				[rootClass]: true,

@@ -87,8 +87,11 @@ Default.play = async ({ canvasElement }) => {
 };
 Default.args = {
 	testId: 'popover-1',
+	id: 'popover-1',
+	triggerId: 'trigger',
 	trigger: (passthroughs) => ActionButton({
 		label: "Hop on pop(over)",
+		id: 'trigger',
 		...passthroughs,
 	}),
 	content: [
@@ -118,9 +121,12 @@ Default.args = {
 export const WithTip = Template.bind({});
 WithTip.args = {
 	withTip: true,
+	id: 'popover-1',
+	triggerId: 'trigger',
 	testId: 'popover-1',
 	trigger: (passthroughs) => ActionButton({
 		label: "Hop on pop(over)",
+		id: 'trigger',
 		...passthroughs,
 	}),
 	content: [
