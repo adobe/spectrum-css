@@ -51,7 +51,7 @@ export const AccordionItem = ({
 				</button>
 				<span class="${rootClass}IconContainer">
 					${Icon({
-						iconName: "ChevronRight100",
+						iconName: "ChevronRight",
 						size: iconSize,
 						customClasses: [`${rootClass}Indicator`],
 						...globals,

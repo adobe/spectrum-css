@@ -90,7 +90,7 @@ export const Template = ({
 					customClasses: [`${rootClass}-button`],
 					size,
 					iconType: "workflow",
-					iconName: "ChevronDown200",
+					iconName: "ChevronDown",
 					isQuiet,
 					isOpen,
 					isInvalid,

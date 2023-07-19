@@ -35,6 +35,7 @@ export const Template = ({
 				${when(iconName, () =>
 					Icon({
 						...globals,
+						size,
 						iconName,
 						customClasses: [`${rootClass}-icon`],
 					})
