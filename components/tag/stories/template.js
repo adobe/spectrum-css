@@ -58,6 +58,7 @@ export const Template = ({
 			${iconName
 				? Icon({
 						...globals,
+						size,
 						iconName,
 						customClasses: [`${rootClass}s-itemIcon`],
 				  })
@@ -66,6 +67,7 @@ export const Template = ({
 			${hasClearButton
 				? ClearButton({
 						...globals,
+						size,
 						customClasses: [`${rootClass}-clearButton`],
 						onclick: (evt) => {
 							const el = evt.target;

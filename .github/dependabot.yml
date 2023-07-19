@@ -17,9 +17,24 @@ updates:
     rebase-strategy: "auto"
     versioning-strategy: "increase"
     ignore:
+      # Always ignore our internal dependencies
       - dependency-name: "@spectrum-css/*"
       # Ignore gulp versions until build migration complete
       - dependency-name: "gulp*"
+      # Ignore postcss versions until build migration complete
+      - dependency-name: "postcss*"
+    groups:
+      # Specify a name for the group, which will be used in pull request titles
+      # and branch names
+      storybook-ecosystem:
+        # Define patterns to include dependencies in the group (based on
+        # dependency name)
+        patterns:
+          - storybook
+          - "@storybook/*"
+      commitlint-ecosystem:
+        patterns:
+          - "@commitlint/*"
 
   - package-ecosystem: "github-actions"
     directory: "/"

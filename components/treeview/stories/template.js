@@ -63,7 +63,7 @@ export const TreeViewItem = ({
 					? Icon({
 							...globals,
 							size,
-							iconName: "Chevron100",
+							iconName: "Chevron",
 							customClasses: [`${rootClass}-itemIndicator`],
 					  })
 					: ""}

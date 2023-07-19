@@ -3,6 +3,20 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+<a name="5.0.42"></a>
+##5.0.42
+🗓
+2023-07-17 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/tooltip@5.0.41...@spectrum-css/tooltip@5.0.42)
+
+**Note:** Version bump only for package @spectrum-css/tooltip
+
+<a name="5.0.41"></a>
+##5.0.41
+🗓
+2023-07-14 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/tooltip@5.0.40...@spectrum-css/tooltip@5.0.41)
+
+**Note:** Version bump only for package @spectrum-css/tooltip
+
 <a name="5.0.40"></a>
 ##5.0.40
 🗓
