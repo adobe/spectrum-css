@@ -18,7 +18,7 @@ governing permissions and limitations under the License.
 
   /* layout */
   --spectrum-sidenav-min-height: var(--spectrum-component-height-100);
-  --spectrum-sidenav-width: var(--spectrum-side-navigation-width);
+  --spectrum-sidenav-width: 100%;
   --spectrum-sidenav-min-width: var(--spectrum-side-navigation-minimum-width);
   --spectrum-sidenav-max-width: var(--spectrum-side-navigation-maximum-width);
   --spectrum-sidenav-border-radius: var(--spectrum-corner-radius-100);
