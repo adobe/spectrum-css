@@ -8,76 +8,6 @@ import { useArgs } from "@storybook/client-api";
 
 import "@spectrum-css/popover";
 
-// const showPopover = (evt) => {
-// 	const button = evt.target;
-// 	const popover = getPopover(button);
-// 	if (!popover) return;
-// 	popover.style.zIndex = 1;
-// 	var rect = getTriggerPositions(button);
-// 	var transformTranslate = getPopoverPlacement(popover, rect);
-// 	const style ={
-//     top: "0px",
-//     left: "0px",
-// 		transform: transformTranslate,
-// 	}
-// 	Object.assign(popover.style, style);
-// 	popover.classList.toggle("is-open");
-// }
-
-// function getPopover(button) {
-// 	return button &&
-// 	button.nextElementSibling &&
-// 	button.nextElementSibling.matches(".spectrum-Popover")
-// 		? button.nextElementSibling
-// 		: null;
-// }
-
-// function getTriggerPositions(element) {
-// 	const rect = element.getBoundingClientRect();
-// 	const rectObject = {};
-
-// 	for (const prop in rect) {
-//     rectObject[prop] = rect[prop]
-//   }
-
-// 	/* Get centers of the trigger */
-// 	rectObject.xCenter = (rect.left + rect.right) / 2;
-// 	rectObject.yCenter = (rect.top + rect.bottom) / 2;
-// 	return rectObject;
-// }
-
-// function getPopoverPlacement(popover, rect) {
-// 	const classes = popover.className.split(' ');
-// 	console.log(rect.right);
-// 	let placement; 
-// 	const transforms = {
-// 		"spectrum-Popover--top": `translate(${rect.xCenter - popover.offsetWidth / 2}px, ${rect.top - popover.offsetHeight}px)`, 	
-// 		"spectrum-Popover--bottom": `translate(${rect.xCenter - popover.offsetWidth / 2}px, ${rect.bottom}px)`,
-// 		"spectrum-Popover--left": `translate(${rect.left - popover.offsetWidth}px, ${rect.yCenter - popover.offsetHeight / 2}px)`,
-// 		"spectrum-Popover--right": `translate(${rect.right}px, ${rect.yCenter - popover.offsetHeight / 2}px)`,
-// 		"aliases": {
-// 			"spectrum-Popover--top-start": "spectrum-Popover--top",
-// 			"spectrum-Popover--top-end": "spectrum-Popover--top",
-// 			"spectrum-Popover--bottom-start": "spectrum-Popover--bottom",
-// 			"spectrum-Popover--bottom-end": "spectrum-Popover--bottom",
-// 			"spectrum-Popover--left-start": "spectrum-Popover--left",
-// 			"spectrum-Popover--left-end": "spectrum-Popover--left",
-// 			"spectrum-Popover--right-start": "spectrum-Popover--right",
-// 			"spectrum-Popover--right-end": "spectrum-Popover--right",
-// 		}
-// 	}
-	
-// 	classes.forEach((item) => {
-// 		if (transforms[item]) {
-// 			placement = item;
-// 		} else if (transforms["aliases"][item]) {
-// 			placement = transforms["aliases"][item];
-// 		}
-// 	});
-// 	return transforms[placement];
-// }
-
-
 export const Template = ({
 	rootClass = "spectrum-Popover",
 	size = "m",
@@ -132,6 +62,7 @@ export const Template = ({
 				const triggerYCenter = (rect.top + rect.bottom) / 2;
 				const popWidth = popover.offsetWidth ?? 0;
 				const popHeight = popover.offsetHeight ?? 0;
+				const textDir = getComputedStyle(document.querySelector('html')).direction;
 				let x, y;
 				if (position.includes("top") || position.includes("bottom")) {
 					x = triggerXCenter - (popWidth > 0 ? popWidth / 2 : popWidth);
@@ -143,20 +74,30 @@ export const Template = ({
 				} else if (position.includes("bottom")) {
 					y = rect.bottom;
 				} else if (position.includes("left")) {
-					x = rect.left - popWidth;
+					if (textDir == 'rtl') {
+						x = rect.right;
+					} else {
+						x = rect.left - popWidth;
+					}
 				} else if (position.includes("right")) {
-					x = rect.right;
+					if (textDir == 'rtl') {
+						x = rect.left - popWidth;
+					} else {
+						x = rect.right;
+					}
 				}
-				if (x) transforms.push(`translateX(calc(var(--flow-direction) * ${parseInt(x, 10)}px))`);
+				if (x) transforms.push(`translateX(calc(var(--flow-direction) * ${parseInt(x, 10)}px))`); 
 				if (y) transforms.push(`translateY(${parseInt(y, 10)}px)`);
 
-				console.log(transforms);
 				// Add start and end styles
-
-				if (position === "top-start") {
+				if (position === "top-start" || position === "bottom-start") {
 					additionalStyles["inset-inline-start"] = "calc(" + (popWidth / 2) + "px - var(--spectrum-popover-pointer-edge-offset))";
-				} else if (position.includes("end")) {
-					additionalStyles["inset-inline-start"] = "calc(" + (popWidth / 2) + "px - var(--spectrum-popover-pointer-edge-spacing))";
+				} else if (position === "top-end" || position === "bottom-end") {
+					additionalStyles["inset-inline-start"] = "calc(-1 *" + (popWidth / 2) + "px + var(--spectrum-popover-pointer-edge-offset))";
+				} else if (position === "left-start" || position === "right-start") {
+					additionalStyles["inset-block-start"] = "calc(" + (popHeight / 2) + "px - var(--spectrum-popover-pointer-edge-offset))";
+				} else if (position === "left-end" || position === "right-end") {
+					additionalStyles["inset-block-start"] = "calc(-1 *" + (popHeight / 2) + "px + var(--spectrum-popover-pointer-edge-offset))";
 				}
 
 				updateArgs({

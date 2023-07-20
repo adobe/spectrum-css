@@ -15,7 +15,6 @@ governing permissions and limitations under the License.
 .spectrum-Popover {
   /* Used in positioning popover for storybook */
   --flow-direction: 1;
-
   [dir="rtl"] & {
     --flow-direction: -1;
   }
