@@ -26,4 +26,4 @@
 | `--mod-tooltip-tip-antialiasing-inset`       |
 | `--mod-tooltip-tip-block-size`               |
 | `--mod-tooltip-tip-height-percentage`        |
-| `--mod-tooltip-tip-inline-size`              |
+| `--mod-tooltip-tip-square-size`              |
