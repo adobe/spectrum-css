@@ -25,10 +25,51 @@ export default {
 			},
 			control: { type: "text" },
 		},
+		isEmphasized: {
+			name: "Emphasized styling",
+			type: { name: "boolean" },
+			table: {
+				type: { summary: "boolean" },
+				category: "State",
+			},
+			control: { type: "boolean" },
+		},
+		isChecked: {
+			name: "Radio selected",
+			type: { name: "boolean" },
+			table: {
+				type: { summary: "boolean" },
+				category: "State",
+			},
+			control: { type: "boolean" },
+		},
+		isDisabled: {
+			name: "Disabled",
+			type: { name: "boolean" },
+			table: {
+				type: { summary: "boolean" },
+				category: "State",
+			},
+			control: "boolean",
+		},
+		isReadOnly: {
+			name: "Read Only",
+			type: { name: "boolean" },
+			table: {
+				type: { summary: "boolean" },
+				category: "State",
+			},
+			control: "boolean",
+		},
 	},
 	args: {
 		rootClass: "spectrum-Radio",
-		size: "s",
+		size: "m",
+		label: "Label",
+		isEmphasized: false,
+		isChecked: false,
+		isDisabled: false,
+		isReadOnly: false,
 	},
 	parameters: {
 		actions: {
@@ -44,3 +85,22 @@ export default {
 
 export const Default = Template.bind({});
 Default.args = {};
+
+export const Emphasized = Template.bind({});
+Emphasized.args = {
+	isEmphasized: true,
+	isChecked: true,
+};
+
+export const Disabled = Template.bind({});
+Disabled.args = {
+	isDisabled: true,
+};
+
+export const ReadOnly = Template.bind({});
+ReadOnly.args = {
+	isDisabled: true,
+	isReadOnly: true,
+};
+
+
