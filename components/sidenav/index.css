@@ -103,7 +103,9 @@ governing permissions and limitations under the License.
 
   list-style-type: none;
   margin: 0;
-  padding: 0;
+
+  /* adds space to display focus ring */
+  padding-inline: calc(var(--spectrum-sidenav-focus-ring-size) + var(--spectrum-sidenav-focus-ring-gap));
 }
 
 .spectrum-SideNav-item {
@@ -210,6 +212,10 @@ governing permissions and limitations under the License.
   }
 }
 
+.spectrum-SideNav-heading + .spectrum-SideNav{
+  padding-inline: 0;
+}
+
 .spectrum-SideNav-heading {
   margin-block-start: calc(var(--spectrum-sidenav-heading-top-margin) - var(--spectrum-sidenav-gap));
   margin-block-end: var(--spectrum-sidenav-heading-bottom-margin);
@@ -231,11 +237,15 @@ governing permissions and limitations under the License.
   }
 
   .spectrum-SideNav {
+    padding-inline: 0px;
+
     .spectrum-SideNav-itemLink {
       font-weight: var(--mod-sidenav-text-font-weight, var(--spectrum-sidenav-text-font-weight));
       padding-inline-start: var(--mod-sidenav-start-to-content-second-level, var(--spectrum-sidenav-start-to-content-second-level));
     }
     .spectrum-SideNav {
+      padding-inline: 0px;
+
       .spectrum-SideNav-itemLink {
         padding-inline-start: var(--mod-sidenav-start-to-content-third-level, var(--spectrum-sidenav-start-to-content-third-level));
       }
