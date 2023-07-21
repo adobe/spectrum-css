@@ -212,7 +212,8 @@ governing permissions and limitations under the License.
   }
 }
 
-.spectrum-SideNav-heading + .spectrum-SideNav{
+/* prevent additional padding for focus ring from being added on nested side navs */
+.spectrum-SideNav-heading + .spectrum-SideNav {
   padding-inline: 0;
 }
 
