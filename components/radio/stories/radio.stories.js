@@ -7,6 +7,16 @@ export default {
 		"A radio selector allow users to select a single option from a list of mutually exclusive options. All possible options are exposed up front for users to compare.",
 	component: "Radio",
 	argTypes: {
+		size: {
+			name: "Size",
+			type: { name: "string", required: true },
+			table: {
+				type: { summary: "string" },
+				category: "Component",
+			},
+			options: ["s", "m", "l", "xl"],
+			control: "select",
+		},
 		label: {
 			name: "Label",
 			type: { name: "string" },
