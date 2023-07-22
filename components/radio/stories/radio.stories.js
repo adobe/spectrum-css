@@ -73,7 +73,8 @@ export default {
 	},
 	parameters: {
 		actions: {
-			handles: [],
+			handles: ['click input[type="radio"]'],
+
 		},
 		status: {
 			type: process.env.MIGRATED_PACKAGES.includes("radio")
