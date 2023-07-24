@@ -54,8 +54,9 @@ export default {
 export const Default = Template.bind({});
 Default.args = {
 	heading: "Error 404: Page not found",
-	description:
+	description: [
 		"This page isn't available. Try checking the URL or visit a different page.",
+	],
 	useAccentColor: false,
 };
 
@@ -65,7 +66,11 @@ AccentColor.description =
 AccentColor.args = {
 	...Default.args,
 	heading: "Drag and drop your file",
-	description: html`${Link({ url: "#", text: "Select a file" })} from your
-	computer.`,
+	description: [
+		() => {
+			return html`${Link({ url: "#", text: "Select a file" })} from your
+		computer.`
+		},
+	],
 	useAccentColor: true,
 };

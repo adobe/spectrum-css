@@ -70,7 +70,8 @@ Default.args = {
 	heading: "Disclaimer",
 	showModal: true,
 	content: [
-		html`<p class="spectrum-Body spectrum-Body--sizeM">
+		() => {
+			return html`<p class="spectrum-Body spectrum-Body--sizeM">
 			Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
 			tempor incididunt ut labore et dolore magna aliqua. Auctor augue mauris
 			augue neque gravida. Libero volutpat sed ornare arcu. Quisque egestas diam
@@ -81,6 +82,6 @@ Default.args = {
 			est lorem ipsum dolor. Vitae suscipit tellus mauris a diam maecenas sed.
 			Turpis in eu mi bibendum neque egestas congue. Rhoncus est pellentesque
 			elit ullamcorper dignissim cras lobortis.
-		</p>`,
-	],
+		</p>`;
+	}],
 };
