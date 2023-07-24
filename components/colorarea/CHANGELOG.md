@@ -3,6 +3,15 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+<a name="4.0.28"></a>
+##4.0.28
+🗓
+2023-07-24 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/colorarea@4.0.27...@spectrum-css/colorarea@4.0.28)
+
+### 🐛 Bug fixes
+
+- **colorarea:**return z-index ([#2041](https://github.com/adobe/spectrum-css/issues/2041))([0980f0d](https://github.com/adobe/spectrum-css/commit/0980f0d))
+
 <a name="4.0.27"></a>
 ##4.0.27
 🗓
