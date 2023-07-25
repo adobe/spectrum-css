@@ -18,18 +18,40 @@ export default {
 			options: ["s", "m", "l"],
 			control: "select",
 		},
+		hasIcon: {
+			name: "Has icon",
+			type: { name: "boolean" },
+			table: {
+				type: { summary: "boolean" },
+				category: "Component",
+			},
+			control: "boolean",
+			if: { arg: "hasAvatar", truthy: false },
+		},
 		iconName: {
 			...(IconStories?.argTypes?.iconName ?? {}),
 			if: false,
+			if: { arg: "hasIcon", truthy: true },
+		},
+		hasAvatar: {
+			name: "Has avatar",
+			type: { name: "boolean" },
+			table: {
+				type: { summary: "boolean" },
+				category: "Component",
+			},
+			control: "boolean",
+			if: { arg: "hasIcon", truthy: false },
 		},
 		avatarUrl: {
 			name: "Avatar image",
 			type: { name: "string" },
 			table: {
 				type: { summary: "string" },
-				category: "Component",
+				category: "Content",
 			},
 			control: { type: "file", accept: ".svg,.png,.jpg,.jpeg,.webc" },
+			if: { arg: "hasAvatar", truthy: true },
 		},
 		label: {
 			name: "Label",
@@ -91,7 +113,10 @@ export default {
 		rootClass: "spectrum-Tag",
 		size: "m",
 		label: "Tag label",
-		avatarUrl: undefined,
+		hasIcon: false,
+		iconName: 'Info',
+		avatarUrl: "example-ava.png",
+		hasAvatar: false,
 		isSelected: false,
 		isDisabled: false,
 		isInvalid: false,
@@ -115,11 +140,13 @@ Default.args = {};
 
 export const Icon = Template.bind({});
 Icon.args = {
+	hasIcon: true,
 	iconName: 'Info'
 };
 
 export const Avatar = Template.bind({});
 Avatar.args = {
+	hasAvatar: true,
 	avatarUrl: "example-ava.png"
 };
 

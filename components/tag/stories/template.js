@@ -48,14 +48,14 @@ export const Template = ({
 			id=${ifDefined(id)}
 			tabindex="0"
 		>
-			${avatarUrl && !iconName
+			${avatarUrl
 				? Avatar({
 						...globals,
 						image: avatarUrl,
 						size: "50",
 				  })
 				: ""}
-			${iconName && !avatarUrl
+			${iconName
 				? Icon({
 						...globals,
 						size,
