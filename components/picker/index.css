@@ -202,6 +202,7 @@ governing permissions and limitations under the License.
 
   /* Layout */
   display: flex;
+  box-sizing: border-box;
 
   /* Minimum width is 2 times the height */
   max-inline-size: 100%;
@@ -459,10 +460,6 @@ governing permissions and limitations under the License.
   transform: translateY(var(--mod-picker-spacing-picker-to-popover, var(--spectrum-picker-spacing-picker-to-popover)));
 }
 
-.spectrum-Picker--quiet + .spectrum-Popover--bottom.is-open {
-  margin-inline-start: calc(-1 * var(--mod-picker-popover-quiet-offset-x, var(--spectrum-picker-popover-quiet-offset-x)));
-}
-
 .spectrum-Picker--quiet {
   border: none;
   border-radius: 0;
@@ -511,4 +508,9 @@ governing permissions and limitations under the License.
   &.is-disabled {
     background-color: transparent;
   }
+}
+
+.spectrum-Picker--sideLabel {
+  display: inline-flex;
+  vertical-align: top;
 }
