@@ -510,17 +510,20 @@ governing permissions and limitations under the License.
   }
 }
 
-.spectrum-Icon.spectrum-Checkbox-checkmark,
-.spectrum-Icon.spectrum-Checkbox-partialCheckmark {
-  color: var(--highcontrast-checkbox-background-color-default, var(--mode-checkbox-checkmark-color, var(--spectrum-checkbox-checkmark-color)));
-  opacity: 0;
-  transform: scale(0);
+.spectrum-Checkbox {
 
-  transition: opacity var(--mod-checkbox-animation-duration, var(--spectrum-checkbox-animation-duration)) ease-in-out, transform var(--mod-checkbox-animation-duration, var(--spectrum-checkbox-animation-duration)) ease-in-out;
-}
+  .spectrum-Checkbox-checkmark,
+  .spectrum-Checkbox-partialCheckmark {
+    color: var(--highcontrast-checkbox-background-color-default, var(--mode-checkbox-checkmark-color, var(--spectrum-checkbox-checkmark-color)));
+    opacity: 0;
+    transform: scale(0);
 
-.spectrum-Icon.spectrum-Checkbox-partialCheckmark {
-  display: none;
+    transition: opacity var(--mod-checkbox-animation-duration, var(--spectrum-checkbox-animation-duration)) ease-in-out, transform var(--mod-checkbox-animation-duration, var(--spectrum-checkbox-animation-duration)) ease-in-out;
+  }
+
+  .spectrum-Checkbox-partialCheckmark {
+    display: none;
+  }
 }
 
 /* Disabled */
