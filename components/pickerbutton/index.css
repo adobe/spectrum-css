@@ -164,6 +164,7 @@ governing permissions and limitations under the License.
 	display: flex;
 	justify-content: center;
 	align-items: center;
+	box-sizing: border-box;
 	padding: var(
 		--mod-picker-button-padding,
 		var(--spectrum-picker-button-padding)
