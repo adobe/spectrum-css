@@ -585,26 +585,25 @@ governing permissions and limitations under the License.
     }
   }
   .spectrum-Checkbox {
-    --highcontrast-checkbox-content-color-default: ButtonText;
-    --highcontrast-checkbox-content-color-hover: ButtonText;
-    --highcontrast-checkbox-content-color-down: ButtonText;
-    --highcontrast-checkbox-content-color-focus: ButtonText;
+    /* Label Text */
+    --highcontrast-checkbox-content-color-default: CanvasText;
+    --highcontrast-checkbox-content-color-hover: CanvasText;
+    --highcontrast-checkbox-content-color-down: CanvasText;
+    --highcontrast-checkbox-content-color-focus: CanvasText;
 
-    --highcontrast-checkbox-background-color-default: Background;
+    /* Checkbox box */
+    --highcontrast-checkbox-background-color-default: Canvas;
 
     --highcontrast-checkbox-color-default: ButtonText;
     --highcontrast-checkbox-color-hover: ButtonText;
+    --highcontrast-checkbox-color-focus: Highlight;
 
     --highcontrast-checkbox-highlight-color-default: Highlight;
     --highcontrast-checkbox-highlight-color-hover: Highlight;
     --highcontrast-checkbox-highlight-color-down: Highlight;
+    --highcontrast-checkbox-highlight-color-focus: Highlight;
 
     --highcontrast-checkbox-disabled-color-default: GrayText;
-
-    --highcontrast-checkbox-focus-indicator-color: ButtonText;
-
-    --highcontrast-checkbox-highlight-color-focus: Highlight;
-    --highcontrast-checkbox-focus-indicator-color: FieldText;
-    --highcontrast-checkbox-color-focus: Highlight;
+    --highcontrast-checkbox-focus-indicator-color: CanvasText;
   }
 }
