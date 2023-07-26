@@ -110,7 +110,7 @@ export default {
 		isFocused: false,
 		isKeyboardFocused: false,
 		iconType: "ui",
-		iconName: "ChevronDown100",
+		iconName: "ChevronDown",
 		position: "right"
 	},
 	parameters: {

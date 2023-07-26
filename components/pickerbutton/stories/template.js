@@ -16,7 +16,7 @@ export const Template = ({
 	label,
 	position,
 	iconType = "ui",
-	iconName = "ChevronDown100",
+	iconName = "ChevronDown",
 	isDisabled = false,
 	isFocused = false,
 	isOpen = false,
@@ -72,7 +72,7 @@ export const Template = ({
 					: ""}
 				${Icon({
 					...globals,
-					iconName: iconName ?? "ChevronDown100",
+					iconName: iconName ?? "ChevronDown",
 					size,
 					customClasses: [`${rootClass}-icon`],
 				})}
