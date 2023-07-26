@@ -5,9 +5,6 @@
 | `--mod-color-slider-border-color-disabled`        |
 | `--mod-color-slider-border-rounding`              |
 | `--mod-color-slider-border-width`                 |
-| `--mod-color-slider-checkerboard-dark-color`      |
-| `--mod-color-slider-checkerboard-light-color`     |
-| `--mod-color-slider-checkerboard-size`            |
 | `--mod-color-slider-control-track-height`         |
 | `--mod-color-slider-control-track-width`          |
 | `--mod-color-slider-handle-hitarea-border-radius` |

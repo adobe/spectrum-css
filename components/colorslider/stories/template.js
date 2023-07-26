@@ -3,6 +3,7 @@ import { classMap } from "lit/directives/class-map.js";
 
 import { Template as ColorHandle } from "@spectrum-css/colorhandle/stories/template.js";
 
+import "../../opacitycheckerboard/index.css";
 import "../index.css";
 
 export const Template = ({
@@ -28,7 +29,7 @@ export const Template = ({
 				...customClasses.reduce((a, c) => ({ ...a, [c]: true }), {}),
 			})}
 		>
-			<div class="${rootClass}-checkerboard" role="presentation">
+			<div class="spectrum-OpacityCheckerboard ${rootClass}-checkerboard" role="presentation">
 				${gradientType == "image"
 					? html`
 						<img

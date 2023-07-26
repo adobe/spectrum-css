@@ -73,32 +73,6 @@
 }
 
 .spectrum-ColorSlider-checkerboard {
-	background: repeating-conic-gradient(
-			var(
-					--mod-color-slider-checkerboard-light-color,
-					var(--spectrum-color-slider-checkerboard-light-color)
-				)
-				0% 25%,
-			var(
-					--mod-color-slider-checkerboard-dark-color,
-					var(--spectrum-color-slider-checkerboard-dark-color)
-				)
-				0% 50%
-		)
-		left top /
-		calc(
-			var(
-					--mod-color-slider-checkerboard-size,
-					var(--spectrum-color-slider-checkerboard-size)
-				) * 2
-		)
-		calc(
-			var(
-					--mod-color-slider-checkerboard-size,
-					var(--spectrum-color-slider-checkerboard-size)
-				) * 2
-		);
-
 	--spectrum-color-slider-border-color-local: var(--highcontrast-color-slider-border-color, var(--mod-color-slider-border-color, var(--spectrum-color-slider-border-color-rgba)));
 
 	/* Inset border on top of background, created with box-shadow. */

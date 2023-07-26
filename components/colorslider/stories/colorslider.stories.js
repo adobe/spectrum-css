@@ -87,3 +87,8 @@ WithImage.args = {
 	},
 };
 WithImage.storyName = "Image";
+
+export const Disabled = Template.bind({});
+Disabled.args = {
+	isDisabled: true,
+};
