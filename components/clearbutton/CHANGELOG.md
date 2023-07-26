@@ -3,6 +3,22 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+<a name="1.2.37"></a>
+##1.2.37
+🗓
+2023-07-24 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/clearbutton@1.2.36...@spectrum-css/clearbutton@1.2.37)
+
+### 🐛 Bug fixes
+
+\*icon sizing in Storybook story templates ([#2037](https://github.com/adobe/spectrum-css/issues/2037))([c90c8a3](https://github.com/adobe/spectrum-css/commit/c90c8a3))
+
+<a name="1.2.36"></a>
+##1.2.36
+🗓
+2023-06-21 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/clearbutton@1.2.35...@spectrum-css/clearbutton@1.2.36)
+
+**Note:** Version bump only for package @spectrum-css/clearbutton
+
 <a name="1.2.35"></a>
 ##1.2.35
 🗓

@@ -235,7 +235,7 @@ governing permissions and limitations under the License.
         display: none;
       }
 
-      .spectrum-Checkbox-partialCheckmark {
+      .spectrum-Icon.spectrum-Checkbox-partialCheckmark {
         display: block;
 
         transform: scale(1);
@@ -378,7 +378,7 @@ governing permissions and limitations under the License.
 
   line-height: var(--mod-checkbox-line-height, var(--spectrum-checkbox-line-height));
 
-  &:lang(js),
+  &:lang(ja),
   &:lang(zh),
   &:lang(ko) {
     line-height: var(--mod-checkbox-line-height-cjk, var(--spectrum-checkbox-line-height-cjk));
@@ -510,8 +510,8 @@ governing permissions and limitations under the License.
   }
 }
 
-.spectrum-Checkbox-checkmark,
-.spectrum-Checkbox-partialCheckmark {
+.spectrum-Icon.spectrum-Checkbox-checkmark,
+.spectrum-Icon.spectrum-Checkbox-partialCheckmark {
   color: var(--highcontrast-checkbox-background-color-default, var(--mode-checkbox-checkmark-color, var(--spectrum-checkbox-checkmark-color)));
   opacity: 0;
   transform: scale(0);
@@ -519,7 +519,7 @@ governing permissions and limitations under the License.
   transition: opacity var(--mod-checkbox-animation-duration, var(--spectrum-checkbox-animation-duration)) ease-in-out, transform var(--mod-checkbox-animation-duration, var(--spectrum-checkbox-animation-duration)) ease-in-out;
 }
 
-.spectrum-Checkbox-partialCheckmark {
+.spectrum-Icon.spectrum-Checkbox-partialCheckmark {
   display: none;
 }
 

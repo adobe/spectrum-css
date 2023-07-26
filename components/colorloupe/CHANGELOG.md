@@ -3,6 +3,57 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+<a name="4.1.7"></a>
+##4.1.7
+🗓
+2023-07-24 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/colorloupe@4.1.6...@spectrum-css/colorloupe@4.1.7)
+
+**Note:** Version bump only for package @spectrum-css/colorloupe
+
+<a name="4.1.6"></a>
+##4.1.6
+🗓
+2023-07-17 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/colorloupe@4.1.5...@spectrum-css/colorloupe@4.1.6)
+
+**Note:** Version bump only for package @spectrum-css/colorloupe
+
+<a name="4.1.5"></a>
+##4.1.5
+🗓
+2023-07-14 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/colorloupe@4.1.4...@spectrum-css/colorloupe@4.1.5)
+
+**Note:** Version bump only for package @spectrum-css/colorloupe
+
+<a name="4.1.4"></a>
+##4.1.4
+🗓
+2023-07-11 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/colorloupe@4.1.3...@spectrum-css/colorloupe@4.1.4)
+
+**Note:** Version bump only for package @spectrum-css/colorloupe
+
+<a name="4.1.3"></a>
+##4.1.3
+🗓
+2023-06-29 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/colorloupe@4.1.2...@spectrum-css/colorloupe@4.1.3)
+
+**Note:** Version bump only for package @spectrum-css/colorloupe
+
+<a name="4.1.2"></a>
+##4.1.2
+🗓
+2023-06-28 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/colorloupe@4.1.1...@spectrum-css/colorloupe@4.1.2)
+
+### 🐛 Bug fixes
+
+- **colorloupe:**border bug ([#1958](https://github.com/adobe/spectrum-css/issues/1958))([559696f](https://github.com/adobe/spectrum-css/commit/559696f))
+
+<a name="4.1.1"></a>
+##4.1.1
+🗓
+2023-06-21 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/colorloupe@4.1.0...@spectrum-css/colorloupe@4.1.1)
+
+**Note:** Version bump only for package @spectrum-css/colorloupe
+
 <a name="4.1.0"></a>
 #4.1.0
 🗓

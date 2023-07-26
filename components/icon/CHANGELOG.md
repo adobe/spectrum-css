@@ -3,6 +3,22 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+<a name="3.0.50"></a>
+##3.0.50
+🗓
+2023-07-24 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/icon@3.0.49...@spectrum-css/icon@3.0.50)
+
+### 🐛 Bug fixes
+
+\*icon sizing in Storybook story templates ([#2037](https://github.com/adobe/spectrum-css/issues/2037))([c90c8a3](https://github.com/adobe/spectrum-css/commit/c90c8a3))
+
+<a name="3.0.49"></a>
+##3.0.49
+🗓
+2023-06-21 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/icon@3.0.48...@spectrum-css/icon@3.0.49)
+
+**Note:** Version bump only for package @spectrum-css/icon
+
 <a name="3.0.48"></a>
 ##3.0.48
 🗓

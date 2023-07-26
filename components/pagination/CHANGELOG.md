@@ -3,6 +3,50 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+<a name="6.0.33"></a>
+##6.0.33
+🗓
+2023-07-24 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/pagination@6.0.32...@spectrum-css/pagination@6.0.33)
+
+### 🐛 Bug fixes
+
+\*icon sizing in Storybook story templates ([#2037](https://github.com/adobe/spectrum-css/issues/2037))([c90c8a3](https://github.com/adobe/spectrum-css/commit/c90c8a3))
+
+<a name="6.0.32"></a>
+##6.0.32
+🗓
+2023-07-17 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/pagination@6.0.31...@spectrum-css/pagination@6.0.32)
+
+**Note:** Version bump only for package @spectrum-css/pagination
+
+<a name="6.0.31"></a>
+##6.0.31
+🗓
+2023-07-14 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/pagination@6.0.30...@spectrum-css/pagination@6.0.31)
+
+**Note:** Version bump only for package @spectrum-css/pagination
+
+<a name="6.0.30"></a>
+##6.0.30
+🗓
+2023-07-11 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/pagination@6.0.29...@spectrum-css/pagination@6.0.30)
+
+**Note:** Version bump only for package @spectrum-css/pagination
+
+<a name="6.0.29"></a>
+##6.0.29
+🗓
+2023-06-29 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/pagination@6.0.28...@spectrum-css/pagination@6.0.29)
+
+**Note:** Version bump only for package @spectrum-css/pagination
+
+<a name="6.0.28"></a>
+##6.0.28
+🗓
+2023-06-21 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/pagination@6.0.27...@spectrum-css/pagination@6.0.28)
+
+**Note:** Version bump only for package @spectrum-css/pagination
+
 <a name="6.0.27"></a>
 ##6.0.27
 🗓

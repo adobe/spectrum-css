@@ -3,6 +3,101 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+<a name="5.0.0"></a>
+#5.0.0
+🗓
+2023-07-24 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/swatch@4.0.31...@spectrum-css/swatch@5.0.0)
+
+\*feat(opacitycheckerboard)!: new component (#1916)([24e9f06](https://github.com/adobe/spectrum-css/commit/24e9f06)), closes[#1916](https://github.com/adobe/spectrum-css/issues/1916)
+
+    	###
+    	🛑 BREAKING CHANGES
+
+    		*
+    		creates new Opacity Checkerboard component and uses it within Swatch, Color Handle, Thumbnail, Color Slider.
+
+- chore(opacitycheckerboard): generate new component
+
+- feat(opacitycheckerboard): adds tokens
+
+- feat(opacitycheckerboard): use in swatch
+
+- feat(opacitycheckerboard): use in colorhandle
+
+- feat(opacitycheckerboard): use in colorslider
+
+- feat(opacitycheckerboard): use in thumbnail
+
+- feat(opacitycheckerboard): adds color variant
+
+- feat(opacitycheckerboard): adds stories
+
+- chore(opacitycheckerboard): whcm show checkerboard
+
+- chore(opacitycheckerboard): removes thumbnail border fix
+
+- chore(opacitycheckerboard): address PR feedback
+
+- fix(opacitycheckerboard): removes example classes
+
+- chore(opacitycheckerboard): add mods
+
+- fix(opacitycheckerboard): spelling
+
+- fix(opacitycheckerboard): add inline styling to storybook
+
+- chore(opacitycheckerboard): use stylemaps
+
+- feat(opacitycheckerboard): use in color slider full example
+
+- chore: update yarn.lock file after rebase
+
+<a name="4.0.31"></a>
+##4.0.31
+🗓
+2023-07-17 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/swatch@4.0.30...@spectrum-css/swatch@4.0.31)
+
+**Note:** Version bump only for package @spectrum-css/swatch
+
+<a name="4.0.30"></a>
+##4.0.30
+🗓
+2023-07-14 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/swatch@4.0.29...@spectrum-css/swatch@4.0.30)
+
+**Note:** Version bump only for package @spectrum-css/swatch
+
+<a name="4.0.29"></a>
+##4.0.29
+🗓
+2023-07-11 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/swatch@4.0.28...@spectrum-css/swatch@4.0.29)
+
+**Note:** Version bump only for package @spectrum-css/swatch
+
+<a name="4.0.28"></a>
+##4.0.28
+🗓
+2023-06-29 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/swatch@4.0.27...@spectrum-css/swatch@4.0.28)
+
+**Note:** Version bump only for package @spectrum-css/swatch
+
+<a name="4.0.27"></a>
+##4.0.27
+🗓
+2023-06-28 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/swatch@4.0.26...@spectrum-css/swatch@4.0.27)
+
+### 🐛 Bug fixes
+
+- **swatch:**specify forced-color style for disabled swatch borders ([#1980](https://github.com/adobe/spectrum-css/issues/1980))([ef6c016](https://github.com/adobe/spectrum-css/commit/ef6c016))
+
+<a name="4.0.26"></a>
+##4.0.26
+🗓
+2023-06-21 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/swatch@4.0.25...@spectrum-css/swatch@4.0.26)
+
+### 🐛 Bug fixes
+
+- **swatch:**remove override in WHCM for disabled swatch ([#1955](https://github.com/adobe/spectrum-css/issues/1955))([9492040](https://github.com/adobe/spectrum-css/commit/9492040))
+
 <a name="4.0.25"></a>
 ##4.0.25
 🗓

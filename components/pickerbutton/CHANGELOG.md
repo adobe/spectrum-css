@@ -3,6 +3,57 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+<a name="3.0.34"></a>
+##3.0.34
+🗓
+2023-07-24 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/pickerbutton@3.0.33...@spectrum-css/pickerbutton@3.0.34)
+
+### 🐛 Bug fixes
+
+\*icon sizing in Storybook story templates ([#2037](https://github.com/adobe/spectrum-css/issues/2037))([c90c8a3](https://github.com/adobe/spectrum-css/commit/c90c8a3))
+
+<a name="3.0.33"></a>
+##3.0.33
+🗓
+2023-07-17 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/pickerbutton@3.0.32...@spectrum-css/pickerbutton@3.0.33)
+
+**Note:** Version bump only for package @spectrum-css/pickerbutton
+
+<a name="3.0.32"></a>
+##3.0.32
+🗓
+2023-07-14 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/pickerbutton@3.0.31...@spectrum-css/pickerbutton@3.0.32)
+
+**Note:** Version bump only for package @spectrum-css/pickerbutton
+
+<a name="3.0.31"></a>
+##3.0.31
+🗓
+2023-07-11 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/pickerbutton@3.0.30...@spectrum-css/pickerbutton@3.0.31)
+
+**Note:** Version bump only for package @spectrum-css/pickerbutton
+
+<a name="3.0.30"></a>
+##3.0.30
+🗓
+2023-06-29 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/pickerbutton@3.0.29...@spectrum-css/pickerbutton@3.0.30)
+
+**Note:** Version bump only for package @spectrum-css/pickerbutton
+
+<a name="3.0.29"></a>
+##3.0.29
+🗓
+2023-06-28 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/pickerbutton@3.0.28...@spectrum-css/pickerbutton@3.0.29)
+
+**Note:** Version bump only for package @spectrum-css/pickerbutton
+
+<a name="3.0.28"></a>
+##3.0.28
+🗓
+2023-06-21 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/pickerbutton@3.0.27...@spectrum-css/pickerbutton@3.0.28)
+
+**Note:** Version bump only for package @spectrum-css/pickerbutton
+
 <a name="3.0.27"></a>
 ##3.0.27
 🗓

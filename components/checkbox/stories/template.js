@@ -33,6 +33,21 @@ export const Template = ({
 		console.warn(e);
 	}
 
+	let iconSize = "75";
+	switch (size) {
+		case "s":
+			iconSize = "50";
+			break;
+		case "l":
+			iconSize = "100";
+			break;
+		case "xl":
+			iconSize = "200";
+			break;
+		default:
+			iconSize = "75";
+	}
+
 	return html`
 		<label
 			class=${classMap({
@@ -61,12 +76,14 @@ export const Template = ({
 			<span class="${rootClass}-box">
 				${Icon({
 					...globals,
-					iconName: "Checkmark100",
+					size,
+					iconName: `Checkmark${iconSize}`,
 					customClasses: [`${rootClass}-checkmark`],
 				})}
 				${Icon({
 					...globals,
-					iconName: "Dash100",
+					size,
+					iconName: `Dash${iconSize}`,
 					customClasses: [`${rootClass}-partialCheckmark`],
 				})}
 			</span>

@@ -3,6 +3,56 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+<a name="11.0.2"></a>
+##11.0.2
+🗓
+2023-07-24 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/tokens@11.0.1...@spectrum-css/tokens@11.0.2)
+
+**Note:** Version bump only for package @spectrum-css/tokens
+
+<a name="11.0.1"></a>
+##11.0.1
+🗓
+2023-07-17 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/tokens@11.0.0...@spectrum-css/tokens@11.0.1)
+
+**Note:** Version bump only for package @spectrum-css/tokens
+
+<a name="11.0.0"></a>
+#11.0.0
+🗓
+2023-07-14 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/tokens@10.2.2...@spectrum-css/tokens@11.0.0)
+
+### ✨ Features
+
+-     **tokens:**update to spectrum-tokens 12.4.0 ([#2031](https://github.com/adobe/spectrum-css/issues/2031))([955c8f1](https://github.com/adobe/spectrum-css/commit/955c8f1))
+
+  \*feat(tokens)!: prefer lowercase, hyphenated font names in font stacks (#2007)([e978a3a](https://github.com/adobe/spectrum-css/commit/e978a3a)), closes[#2007](https://github.com/adobe/spectrum-css/issues/2007)
+
+      	###
+      	🛑 BREAKING CHANGES
+
+      		*
+      		updates the font-family stacks to remove the provided
+
+  value from `@adobe/spectrum-tokens`, and instead use the "older" naming
+  syntax that Spectrum CSS had used previously.
+
+<a name="10.2.2"></a>
+##10.2.2
+🗓
+2023-07-11 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/tokens@10.2.1...@spectrum-css/tokens@10.2.2)
+
+### 🐛 Bug fixes
+
+\*revert prettier version bump ([#2004](https://github.com/adobe/spectrum-css/issues/2004))([29b179c](https://github.com/adobe/spectrum-css/commit/29b179c))
+
+<a name="10.2.1"></a>
+##10.2.1
+🗓
+2023-06-29 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/tokens@10.2.0...@spectrum-css/tokens@10.2.1)
+
+**Note:** Version bump only for package @spectrum-css/tokens
+
 <a name="10.2.0"></a>
 #10.2.0
 🗓

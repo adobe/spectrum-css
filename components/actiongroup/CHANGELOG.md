@@ -3,6 +3,57 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+<a name="3.0.58"></a>
+##3.0.58
+🗓
+2023-07-24 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/actiongroup@3.0.57...@spectrum-css/actiongroup@3.0.58)
+
+**Note:** Version bump only for package @spectrum-css/actiongroup
+
+<a name="3.0.57"></a>
+##3.0.57
+🗓
+2023-07-17 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/actiongroup@3.0.56...@spectrum-css/actiongroup@3.0.57)
+
+**Note:** Version bump only for package @spectrum-css/actiongroup
+
+<a name="3.0.56"></a>
+##3.0.56
+🗓
+2023-07-14 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/actiongroup@3.0.55...@spectrum-css/actiongroup@3.0.56)
+
+**Note:** Version bump only for package @spectrum-css/actiongroup
+
+<a name="3.0.55"></a>
+##3.0.55
+🗓
+2023-07-11 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/actiongroup@3.0.54...@spectrum-css/actiongroup@3.0.55)
+
+**Note:** Version bump only for package @spectrum-css/actiongroup
+
+<a name="3.0.54"></a>
+##3.0.54
+🗓
+2023-06-29 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/actiongroup@3.0.53...@spectrum-css/actiongroup@3.0.54)
+
+**Note:** Version bump only for package @spectrum-css/actiongroup
+
+<a name="3.0.53"></a>
+##3.0.53
+🗓
+2023-06-28 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/actiongroup@3.0.52...@spectrum-css/actiongroup@3.0.53)
+
+### 🐛 Bug fixes
+
+- **actiongroup:**fix variable names for focus indicator border radius([ec8c8ec](https://github.com/adobe/spectrum-css/commit/ec8c8ec))
+
+<a name="3.0.52"></a>
+##3.0.52
+🗓
+2023-06-21 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/actiongroup@3.0.51...@spectrum-css/actiongroup@3.0.52)
+
+**Note:** Version bump only for package @spectrum-css/actiongroup
+
 <a name="3.0.51"></a>
 ##3.0.51
 🗓

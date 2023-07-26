@@ -41,11 +41,6 @@ body {
 
 button.sidebar-item {
 	font-weight: 700;
-	padding-inline: 12px;
-}
-
-button.sidebar-item > span:first-child {
-	display: none;
 }
 
 .sidebar-item {

@@ -34,6 +34,21 @@ export const Template = ({
 		console.warn(e);
 	}
 
+	let iconName = "Asterisk100";
+	switch (size) {
+		case "s":
+			iconName = "Asterisk100";
+			break;
+		case "l":
+			iconName = "Asterisk200";
+			break;
+		case "xl":
+			iconName = "Asterisk300";
+			break;
+		default:
+			iconName = "Asterisk100";
+	}
+
 	return html`
 		<label
 			class=${classMap({
@@ -52,7 +67,8 @@ export const Template = ({
 			${isRequired
 				? Icon({
 						...globals,
-						iconName: "Asterisk100",
+						size,
+						iconName,
 						customClasses: [`${rootClass}-UIIcon`],
 				  })
 				: ""}

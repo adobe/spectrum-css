@@ -6,7 +6,6 @@ import { ifDefined } from "lit/directives/if-defined.js";
 import { Template as Icon } from "@spectrum-css/icon/stories/template.js";
 
 import "../index.css";
-import "../skin.css";
 
 export const AccordionItem = ({
 	heading,
@@ -16,6 +15,8 @@ export const AccordionItem = ({
 	idx = 0,
 	isDisabled = false,
 	isOpen = false,
+	iconSize = "m",
+	disableAll = false,
 	// customClasses = [],
 	...globals
 }) => {
@@ -24,7 +25,7 @@ export const AccordionItem = ({
 			class=${classMap({
 				[rootClass]: true,
 				"is-open": isOpen,
-				"is-disabled": isDisabled,
+				"is-disabled": isDisabled || disableAll,
 			})}
 			id=${ifDefined(id)}
 			role="presentation"
@@ -41,18 +42,21 @@ export const AccordionItem = ({
 				<button
 					class="${rootClass}Header"
 					type="button"
-					?disabled=${isDisabled}
+					?disabled=${isDisabled || disableAll}
 					id="spectrum-accordion-item-${idx}-header"
 					aria-controls="spectrum-accordion-item-${idx}-content"
 					aria-expanded="${open ? "true" : "false"}"
 				>
 					${heading}
 				</button>
-				${Icon({
-					iconName: "ChevronRight100",
-					customClasses: [`${rootClass}Indicator`],
-					...globals,
-				})}
+				<span class="${rootClass}IconContainer">
+					${Icon({
+						iconName: "ChevronRight",
+						size: iconSize,
+						customClasses: [`${rootClass}Indicator`],
+						...globals,
+					})}
+				</span>
 			</h3>
 			<!-- WAI-ARIA 1.1: Item content role changed from "tabpanel" to "region" -->
 			<div
@@ -69,6 +73,8 @@ export const AccordionItem = ({
 
 export const Template = ({
 	rootClass = "spectrum-Accordion",
+	size = "m",
+	density = "regular",
 	items,
 	id,
 	customClasses = [],
@@ -80,6 +86,10 @@ export const Template = ({
 		<div
 			class="${classMap({
 				[rootClass]: true,
+				[`${rootClass}--size${size?.toUpperCase()}`]:
+					typeof size !== "undefined",
+				[`${rootClass}--${density}`]:
+					typeof density !== "undefined" && density !== "regular",
 				...customClasses.reduce((a, c) => ({ ...a, [c]: true }), {}),
 			})}"
 			id=${ifDefined(id)}
@@ -91,6 +101,7 @@ export const Template = ({
 					rootClass: `${rootClass}-item`,
 					heading,
 					idx,
+					iconSize: `${size}`,
 					...item,
 					...globals,
 				});

@@ -166,3 +166,11 @@ Disabled.args = {
 	isDisabled: true,
 	iconName: "Actions",
 };
+
+export const WithForcedColors = CustomButton.bind({});
+WithForcedColors.parameters = {
+  chromatic: { forcedColors: "active" },
+};
+WithForcedColors.args = {
+	iconName: "Actions",
+};

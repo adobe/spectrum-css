@@ -85,19 +85,18 @@ governing permissions and limitations under the License.
     .spectrum-Swatch-fill {
       forced-color-adjust: none;
     }
-
-    &.is-disabled {
-      .spectrum-Swatch-fill {
-        forced-color-adjust: auto;
-      }
-    }
+  }
+  .spectrum-Swatch[disabled],
+  .spectrum-Swatch.is-disabled {
+    --highcontrast-swatch-border-color: GrayText;
   }
 }
 
 /* Swatch styles */
+/* stylelint-disable max-nesting-depth */
 .spectrum-Swatch {
-  width: var(--mod-swatch-size, var(--spectrum-swatch-size));
-  height: var(--mod-swatch-size, var(--spectrum-swatch-size));
+	inline-size: var(--mod-swatch-size, var(--spectrum-swatch-size));
+	block-size: var(--mod-swatch-size, var(--spectrum-swatch-size));
 
   display: flex;
   align-items: center;
@@ -111,15 +110,24 @@ governing permissions and limitations under the License.
   /* don't let double clicking select stuff */
   user-select: none;
 
- .spectrum-Swatch-disabledIcon {
-    width: var(--mod-swatch-disabled-icon-size, var(--spectrum-swatch-disabled-icon-size));
-    height: var(--mod-swatch-disabled-icon-size, var(--spectrum-swatch-disabled-icon-size));
-  }
+	.spectrum-Swatch-disabledIcon {
+		inline-size: var(
+			--mod-swatch-disabled-icon-size,
+			var(--spectrum-swatch-disabled-icon-size)
+		);
+		block-size: var(
+			--mod-swatch-disabled-icon-size,
+			var(--spectrum-swatch-disabled-icon-size)
+		);
+	}
 
-  &,
-  &:before {
-    border-radius: var(--mod-swatch-border-radius, var(--spectrum-swatch-border-radius));
-  }
+	&,
+	&::before {
+		border-radius: var(
+			--mod-swatch-border-radius,
+			var(--spectrum-swatch-border-radius)
+		);
+	}
 
   &.is-selected {
     background-color: var(--highcontrast-swatch-background-color-selected, var(--mod-swatch-inner-border-color-selected, var(--spectrum-swatch-inner-border-color-selected)));
@@ -137,16 +145,16 @@ governing permissions and limitations under the License.
       /* no border radius when selected */
       border-radius: 0;
 
-      &:before {
-        border-radius: 0;
-        box-shadow: none;
-      }
-    }
+			&::before {
+				border-radius: 0;
+				box-shadow: none;
+			}
+		}
 
-    &:before {
-      opacity: 1;
-    }
-  }
+		&::before {
+			opacity: 1;
+		}
+	}
 
   /* Swatch fill: Image, Gradient, SVG */
   &.is-image {
@@ -176,24 +184,33 @@ governing permissions and limitations under the License.
       background-color: var(--spectrum-picked-color, transparent);
       background-image: none;
 
-      &:after {
-        height: var(--mod-swatch-slash-thickness, var(--spectrum-swatch-slash-thickness));
-        content: '';
-        position: absolute;
-        transform: rotate(-45deg);
-        width: 200%; /* just needs to be bigger than a swatch */
-        background: var(--highcontrast-swatch-fill-foreground-color, var(--mod-swatch-slash-icon-color, var(--spectrum-swatch-slash-icon-color)));
-      }
-    }
+			&::after {
+				inline-size: var(
+					--mod-swatch-slash-thickness,
+					var(--spectrum-swatch-slash-thickness)
+				);
+				content: "";
+				position: absolute;
+				transform: rotate(-45deg);
+				block-size: 200%; /* just needs to be bigger than a swatch */
+				background: var(
+					--highcontrast-swatch-fill-foreground-color,
+					var(
+						--mod-swatch-slash-icon-color,
+						var(--spectrum-swatch-slash-icon-color)
+					)
+				);
+			}
+		}
 
-    &.spectrum-Swatch--rectangle {
-      .spectrum-Swatch-fill {
-        &:after {
-          transform: rotate(-25deg);
-        }
-      }
-    }
-  }
+		&.spectrum-Swatch--rectangle {
+			.spectrum-Swatch-fill {
+				&::after {
+					transform: rotate(-25deg);
+				}
+			}
+		}
+	}
 
   &[disabled],
   &.is-disabled {
@@ -202,11 +219,11 @@ governing permissions and limitations under the License.
     }
   }
 
-  /* selection indicator */
-  &:before {
-    content: '';
-    position: absolute;
-    inset: 0;
+	/* selection indicator */
+	&::before {
+		content: "";
+		position: absolute;
+		inset: 0;
 
     border-width: var(--mod-swatch-border-thickness-selected, var(--spectrum-swatch-border-thickness-selected));
     border-style: solid;
@@ -217,11 +234,13 @@ governing permissions and limitations under the License.
     pointer-events: none;
   }
 
-  /* focus-ring */
-  &:after {
-    content: '';
-    position: absolute;
-    inset: calc(-2 * var(--mod-swatch-focus-indicator-gap, var(--spectrum-swatch-focus-indicator-gap)));
+	/* focus-ring */
+	&::after {
+		content: "";
+		position: absolute;
+		inset: calc(
+			-2 * var(--mod-swatch-focus-indicator-gap, var(--spectrum-swatch-focus-indicator-gap))
+		);
 
     opacity: 0;
 
@@ -233,21 +252,22 @@ governing permissions and limitations under the License.
     transition: opacity var(--mod-animation-duration-100, var(--spectrum-animation-duration-100)) ease-in-out;
   }
 
-  &:focus-visible {
-    &:after {
-      opacity: 1;
-    }
-  }
+	&:focus-visible {
+		&::after {
+			opacity: 1;
+		}
+	}
 }
+/* stylelint-enable max-nesting-depth */
 
 .spectrum-Swatch-fill {
   display: flex;
   align-items: center;
   justify-content: center;
 
-  width: 100%;
-  height: 100%;
-  box-sizing: border-box;
+	inline-size: 100%;
+	block-size: 100%;
+	box-sizing: border-box;
 
   position: relative;
 
@@ -255,22 +275,12 @@ governing permissions and limitations under the License.
 
   border-radius: var(--mod-swatch-border-radius, var(--spectrum-swatch-border-radius));
 
-
-  /* Checkerboard fill */
-  --spectrum-swatch-checkerboard-size: var(--spectrum-opacity-checkerboard-square-size);
-  --spectrum-swatch-checkerboard-dark-color: var(--spectrum-opacity-checkerboard-square-dark);
-  --spectrum-swatch-checkerboard-light-color: var(--spectrum-opacity-checkerboard-square-light);
-
-  background:
-    repeating-conic-gradient(var(--spectrum-swatch-checkerboard-light-color) 0% 25%, var(--spectrum-swatch-checkerboard-dark-color) 0% 50%)
-    left top / calc(var(--spectrum-swatch-checkerboard-size) * 2 ) calc(var(--spectrum-swatch-checkerboard-size) * 2 );
-
-  /* Swatch fill: Default */
-  &:before {
-    content: '';
-    position: absolute;
-    inset: 0;
-    z-index: 0;
+	/* Swatch fill: Default */
+	&::before {
+		content: "";
+		position: absolute;
+		inset: 0;
+		z-index: 0;
 
     /* Undefined variable allows custom stylesheet or JS to pass the value to this element */
     background-color: var(--spectrum-picked-color, transparent);
@@ -283,13 +293,13 @@ governing permissions and limitations under the License.
 
 /* Variant: No border */
 .spectrum-Swatch--noBorder {
-  .spectrum-Swatch-fill {
-    &:before {
-      box-shadow: none;
-      /* Undefined variable allows custom stylesheet or JS to pass the value to this element */
-      background-color: var(--spectrum-picked-color, transparent);
-    }
-  }
+	.spectrum-Swatch-fill {
+		&::before {
+			box-shadow: none;
+			/* Undefined variable allows custom stylesheet or JS to pass the value to this element */
+			background-color: var(--spectrum-picked-color, transparent);
+		}
+	}
 }
 
 .spectrum-Swatch-mixedValueIcon {
@@ -321,34 +331,34 @@ governing permissions and limitations under the License.
 }
 
 .spectrum-Swatch--rectangle {
-  width: calc(var(--mod-swatch-size, var(--spectrum-swatch-size)) * 2);
+	inline-size: calc(var(--mod-swatch-size, var(--spectrum-swatch-size)) * 2);
 }
 
 /* Variant: Rounding - None */
 .spectrum-Swatch--roundingNone {
-  &,
-  &:before,
-  &:after,
-  .spectrum-Swatch-fill,
-  .spectrum-Swatch-fill:before,
-  &.is-selected .spectrum-Swatch-fill,
-  &.is-selected .spectrum-Swatch-fill:before {
-    border-radius: 0;
-  }
+	&,
+	&::before,
+	&::after,
+	.spectrum-Swatch-fill,
+	.spectrum-Swatch-fill::before,
+	&.is-selected .spectrum-Swatch-fill,
+	&.is-selected .spectrum-Swatch-fill::before {
+		border-radius: 0;
+	}
 }
 
 /* Variant: Rounding - Full */
 .spectrum-Swatch--roundingFull {
-  &:not(.spectrum-Swatch--rectangle) {
-    &,
-    &:before,
-    &:after,
-    .spectrum-Swatch-fill,
-    .spectrum-Swatch-fill:before,
-    &.is-selected .spectrum-Swatch-fill,
-    &.is-selected .spectrum-Swatch-fill:before {
-      border-radius: 100%;
-    }
+	&:not(.spectrum-Swatch--rectangle) {
+		&,
+		&::before,
+		&::after,
+		.spectrum-Swatch-fill,
+		.spectrum-Swatch-fill::before,
+		&.is-selected .spectrum-Swatch-fill,
+		&.is-selected .spectrum-Swatch-fill::before {
+			border-radius: 100%;
+		}
 
     &.is-selected .spectrum-Swatch-fill {
       clip-path: circle(calc(50% - (var(--mod-swatch-border-thickness-selected, var(--spectrum-swatch-border-thickness-selected)) * 2)) at 50% 50%);
@@ -359,8 +369,8 @@ governing permissions and limitations under the License.
 .spectrum-Swatch-image {
   object-fit: contain;
 
-  width: 100%;
-  height: 100%;
+	inline-size: 100%;
+	block-size: 100%;
 
   transition: width var(--mod-animation-duration-100, var(--spectrum-animation-duration-100)) ease-in-out,
               height var(--mod-animation-duration-100, var(--spectrum-animation-duration-100)) ease-in-out;

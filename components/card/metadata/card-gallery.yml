@@ -11,17 +11,20 @@ sections:
       To make the card component more flexible, products can have more fine control over the typography by using the Heading and Detail components with their corresponding sizes. To be more consistent with previous card designs you can use the following:
         * Add the `spectrum-Heading` and `spectrum-Heading--sizeXS` or `spectrum-Heading--sizeXXS` to the `spectrum-Card-title` element.
         * Add the `spectrum-Detail` and `spectrum-Detail--sizeS` classes to `spectrum-Card-subtitle`.
+      ### Small Card deprecated
+      Card only has one size moving forward and the minimum width has been updated to allow for smaller card widths if needed. There is no longer a need for the `spectrum-Card--sizeM` class on this component.
 examples:
   - id: card-gallery
     name: Standard
     markup: |
       <div style="width: 532px; height: 224px;">
-        <div class="spectrum-Card spectrum-Card--sizeM spectrum-Card--gallery" tabindex="0" role="figure">
+        <div class="spectrum-Card spectrum-Card--gallery" tabindex="0" role="figure" style="width: 532px;">
           <div class="spectrum-Card-preview">
             <div class="spectrum-Asset">
               <img class="spectrum-Asset-image" src="img/example-card-landscape.jpeg" />
             </div>
           </div>
+          <hr class="spectrum-Divider spectrum-Divider--sizeS spectrum-Card-divider">
           <div class="spectrum-Card-body">
             <div class="spectrum-Card-header">
               <div class="spectrum-Card-title spectrum-Heading spectrum-Heading--sizeXS">Name</div>
