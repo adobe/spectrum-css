@@ -136,7 +136,7 @@ governing permissions and limitations under the License.
 			--mod-colorhandle-hitarea-size,
 			var(--spectrum-colorhandle-hitarea-size)
 		);
-    	border-radius: var(--mod-colorhandle-hitarea-border-radius, 100%);
+		border-radius: var(--mod-colorhandle-hitarea-border-radius, 100%);
 	}
 
   &.is-focused,
