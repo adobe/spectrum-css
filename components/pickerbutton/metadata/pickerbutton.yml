@@ -106,10 +106,10 @@ examples:
         </div>
       </button>
 
-  - id: pickerbutton-icononly
-    name: Workflow icon only
+  - id: pickerbutton-icononly-custom
+    name: Custom icon only
     markup: |
-      <button class="spectrum-PickerButton spectrum-PickerButton--sizeM spectrum-PickerButton--icononly spectrum-PickerButton--right" aria-haspopup="listbox" aria-label="Add">
+      <button class="spectrum-PickerButton spectrum-PickerButton--sizeM spectrum-PickerButton--uiicononly spectrum-PickerButton--right" aria-haspopup="listbox" aria-label="Add">
         <div class="spectrum-PickerButton-fill">
           <svg xmlns="http://www.w3.org/2000/svg" class="spectrum-Icon spectrum-Icon--sizeM spectrum-PickerButton-icon" focusable="false" aria-hidden="true">
             <use href="#spectrum-icon-18-Add"></use>

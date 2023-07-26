@@ -422,15 +422,8 @@ governing permissions and limitations under the License.
 	.spectrum-PickerButton-label {
 		display: none;
 	}
-}
-
-.spectrum-PickerButton--icononly {
-	inline-size: var(
-		--mod-picker-button-height,
-		var(--spectrum-picker-button-height)
-	);
-	.spectrum-PickerButton-label {
-		display: none;
+	.spectrum-PickerButton-fill {
+		padding: 0px;
 	}
 }
 
