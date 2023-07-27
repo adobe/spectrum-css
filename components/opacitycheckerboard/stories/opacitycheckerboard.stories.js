@@ -9,7 +9,6 @@ export default {
 		hasColorOverlay: {
 			name: "Has Color Overlay",
 			type: { name: "boolean" },
-			defaultValue: false,
 			table: {
 				category: "Component",
 			},
@@ -18,7 +17,6 @@ export default {
 		overlayColor: {
 			name: "Overlay Color",
 			type: { name: "string" },
-			defaultValue: "rgba(255, 0, 0, 0.5)",
 			table: {
 				category: "Component",
 			},
@@ -28,16 +26,27 @@ export default {
 		backgroundPosition: {
 			name: "Position",
 			type: { name: "string" },
-			defaultValue: "top left",
 			table: {
 				category: "Component",
 			},
 			control: "text",
-			description: "Accepts any valid CSS background-position property value",
+			description: "Value for <code>--mod-opacity-checkerboard-position</code>. Accepts any valid CSS background-position property value.",
+		},
+		componentOnly: {
+			name: "Use Component Markup Only",
+			type: { name: "boolean" },
+			table: {
+				disable: true,
+			},
 		},
 	},
 	args: {
 		rootClass: "spectrum-OpacityCheckerboard",
+		hasColorOverlay: false,
+		overlayColor: "rgba(255, 0, 0, 0.5)",
+		backgroundPosition: "top left",
+		componentOnly: false,
+		content: '',
 	},
 	parameters: {
 		actions: {
@@ -52,3 +61,16 @@ export default {
 };
 export const Default = Template.bind({});
 Default.args = {};
+
+export const CheckerboardPosition = Template.bind({});
+CheckerboardPosition.args = {
+	backgroundPosition: 'center center',
+};
+CheckerboardPosition.parameters = {
+	docs: {
+		description: {
+			story:
+				"An example of using the <code>--mod-opacity-checkerboard-position</code> custom property to adjust the position of the checkerboard pattern.",
+		},
+	},
+};
