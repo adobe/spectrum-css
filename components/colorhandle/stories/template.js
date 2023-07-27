@@ -1,6 +1,7 @@
 import { html } from "lit";
 import { classMap } from "lit/directives/class-map.js";
 import { styleMap } from "lit/directives/style-map.js";
+import { Template as OpacityCheckerboard } from "@spectrum-css/opacitycheckerboard/stories/template.js";
 
 import "../index.css";
 
@@ -12,18 +13,19 @@ export const Template = ({
 	colorHandleStyle = {
 		"--spectrum-picked-color": "rgba(255, 0, 0, 0.5)",
 	},
-	// ...globals
+	...globals
 }) => {
+
+	const checkerboardContent = html `<div class="${rootClass}-inner"></div>`
+
 	return html`
-  <div class=${classMap({
-		[rootClass]: true,
-		"is-disabled": isDisabled,
-		"is-focused": !isDisabled && isFocused,
-		...customClasses.reduce((a, c) => ({ ...a, [c]: true }), {}),
-	})}
-  style=${styleMap(colorHandleStyle)}>
-      <div class="${rootClass}-inner"></div>
-    </div>
-  </div>
-  `;
-};
+		${OpacityCheckerboard({
+			...globals,
+			componentOnly: true,
+			customClasses: [`${rootClass}`],
+			content: checkerboardContent,
+			checkerBoardStyles: colorHandleStyle,
+		})}`
+
+
+}
