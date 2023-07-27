@@ -49,7 +49,7 @@ export const Template = ({
 	}
 
 	if (isInvalid) iconName = "Alert";
-	else if (isValid) iconName = "Checkmark100";
+	else if (isValid) iconName = "Checkmark";
 
 	return html`
 		<div

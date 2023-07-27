@@ -3,6 +3,37 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+<a name="5.1.0"></a>
+#5.1.0
+🗓
+2023-07-24 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/tooltip@5.0.42...@spectrum-css/tooltip@5.1.0)
+
+### ✨ Features
+
+- **tooltip:**mods list update([33a6a08](https://github.com/adobe/spectrum-css/commit/33a6a08))\*
+  **tooltip:**square tip elements and modified hairline gap fix ([#1939](https://github.com/adobe/spectrum-css/issues/1939))([de33f42](https://github.com/adobe/spectrum-css/commit/de33f42)), closes[#1875](https://github.com/adobe/spectrum-css/issues/1875)
+
+<a name="5.0.42"></a>
+##5.0.42
+🗓
+2023-07-17 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/tooltip@5.0.41...@spectrum-css/tooltip@5.0.42)
+
+**Note:** Version bump only for package @spectrum-css/tooltip
+
+<a name="5.0.41"></a>
+##5.0.41
+🗓
+2023-07-14 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/tooltip@5.0.40...@spectrum-css/tooltip@5.0.41)
+
+**Note:** Version bump only for package @spectrum-css/tooltip
+
+<a name="5.0.40"></a>
+##5.0.40
+🗓
+2023-07-11 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/tooltip@5.0.39...@spectrum-css/tooltip@5.0.40)
+
+**Note:** Version bump only for package @spectrum-css/tooltip
+
 <a name="5.0.39"></a>
 ##5.0.39
 🗓

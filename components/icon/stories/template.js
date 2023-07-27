@@ -57,11 +57,12 @@ export const Template = ({
 		idKey = idKey.replace(/(Right|Left|Down|Up)/, "");
 	}
 
-	// If the icon name includes its scale, reformat it to match the provided sizing.
-	// E.g. with a size of "s", the icon name "Checkmark100" would become "Checkmark75".
+	// If the icon name includes its scale, we want to leave that scale
+	// If the icon name does not include scale, reformat it to match the provided sizing.
+	// E.g. with a size of "s", the icon name "ChevronRight" would become "ChevronRight75".
 	if (
-		idKey.match(/^(?!\d).*\d{2,3}$/) &&
 		uiIcons.includes(idKey.replace(/\d{2,3}$/, "")) &&
+		!idKey.match(/^(?!\d).*\d{2,3}$/) &&
 		!idKey.endsWith("Gripper")
 	) {
 		let sizeVal;
@@ -82,8 +83,9 @@ export const Template = ({
 				break;
 		}
 
-		idKey = idKey.replace(/\d{2,3}$/, sizeVal);
-		iconName = iconName.replace(/\d{2,3}$/, sizeVal);
+		idKey += sizeVal;
+		iconName += sizeVal;
+
 	}
 
 	// Determine which icon set contains this icon.

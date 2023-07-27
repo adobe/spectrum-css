@@ -3,6 +3,30 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+<a name="3.0.0"></a>
+#3.0.0
+🗓
+2023-07-26 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/infieldbutton@2.0.27...@spectrum-css/infieldbutton@3.0.0)
+
+\*feat(infieldbutton)!: migrate to spectrum tokens([5198fe0](https://github.com/adobe/spectrum-css/commit/5198fe0))
+
+    	###
+    	🛑 BREAKING CHANGES
+
+    		*
+    		updates infield button to use `@adobe/spectrum-tokens`
+
+docs(infieldbutton): remove small stacked variant from docs
+
+<a name="2.0.27"></a>
+##2.0.27
+🗓
+2023-07-24 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/infieldbutton@2.0.26...@spectrum-css/infieldbutton@2.0.27)
+
+### 🐛 Bug fixes
+
+\*icon sizing in Storybook story templates ([#2037](https://github.com/adobe/spectrum-css/issues/2037))([c90c8a3](https://github.com/adobe/spectrum-css/commit/c90c8a3))
+
 <a name="2.0.26"></a>
 ##2.0.26
 🗓

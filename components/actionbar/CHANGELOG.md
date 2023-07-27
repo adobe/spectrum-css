@@ -3,6 +3,41 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+<a name="6.0.54"></a>
+##6.0.54
+🗓
+2023-07-26 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/actionbar@6.0.53...@spectrum-css/actionbar@6.0.54)
+
+**Note:** Version bump only for package @spectrum-css/actionbar
+
+<a name="6.0.53"></a>
+##6.0.53
+🗓
+2023-07-24 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/actionbar@6.0.52...@spectrum-css/actionbar@6.0.53)
+
+**Note:** Version bump only for package @spectrum-css/actionbar
+
+<a name="6.0.52"></a>
+##6.0.52
+🗓
+2023-07-17 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/actionbar@6.0.51...@spectrum-css/actionbar@6.0.52)
+
+**Note:** Version bump only for package @spectrum-css/actionbar
+
+<a name="6.0.51"></a>
+##6.0.51
+🗓
+2023-07-14 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/actionbar@6.0.50...@spectrum-css/actionbar@6.0.51)
+
+**Note:** Version bump only for package @spectrum-css/actionbar
+
+<a name="6.0.50"></a>
+##6.0.50
+🗓
+2023-07-11 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/actionbar@6.0.49...@spectrum-css/actionbar@6.0.50)
+
+**Note:** Version bump only for package @spectrum-css/actionbar
+
 <a name="6.0.49"></a>
 ##6.0.49
 🗓
