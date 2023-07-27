@@ -12,7 +12,7 @@
     "new": "yarn workspace @spectrum-css/generator new story",
     "start": "WATCH_MODE=true storybook dev --quiet --config-dir .",
     "storybook": "storybook build --quiet --config-dir .",
-    "test": "chromatic --build-script-name build --junit-report",
+    "test": "chromatic --only-changed --build-script-name build --junit-report",
     "test:scope": "yarn test --only-story-names"
   },
   "dependencies": {
