@@ -1,6 +1,6 @@
 {
   "name": "@spectrum-css/sidenav",
-  "version": "4.0.0-beta.1",
+  "version": "4.0.0-beta.2",
   "description": "The Spectrum CSS sidenav component",
   "license": "Apache-2.0",
   "author": "Adobe",
@@ -21,8 +21,8 @@
     "@spectrum-css/tokens": ">=11"
   },
   "devDependencies": {
-    "@spectrum-css/icon": "^3.0.50",
     "@spectrum-css/component-builder-simple": "^2.0.15",
+    "@spectrum-css/icon": "^3.0.50",
     "@spectrum-css/tokens": "^11.0.1",
     "gulp": "^4.0.0"
   },
