@@ -93,3 +93,4 @@
 | `--mod-table-thumbnail-size-spacious`                            |
 | `--mod-table-thumbnail-to-text`                                  |
 | `--mod-table-transition-duration`                                |
+| `--mod-thumbnail-size`                                           |

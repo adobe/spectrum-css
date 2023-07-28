@@ -168,6 +168,7 @@ export const Template = ({
 	isQuiet = false,
 	isEmphasized = true,
 	useDivs = false,
+	useScroller = false,
 	showThumbnails = false,
 	isDropTarget = false,
 	rowItems = [],
@@ -192,7 +193,7 @@ export const Template = ({
 	const rowTag = useDivs ? literal`div` : literal`tr`;
 	const thTag = useDivs ? literal`div` : literal`th`;
 
-	return html`
+	const tableHtml = html`
 	<${tableTag}
 		role=${ifDefined(useDivs ? "table" : undefined)}
 		class=${classMap({
@@ -285,4 +286,14 @@ export const Template = ({
 		</${tbodyTag}>
 	</${tableTag}>
 	`;
+
+	if (useScroller) {
+		return html`
+			<div class="spectrum-Table-scroller" style="height: 198px; overscroll-behavior: none;">
+				${tableHtml}
+			</div>
+		`;
+	} else {
+		return tableHtml;
+	}
 };

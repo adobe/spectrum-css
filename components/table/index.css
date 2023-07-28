@@ -21,11 +21,6 @@ governing permissions and limitations under the License.
   --spectrum-table-row-bottom-to-text: var(--spectrum-table-row-bottom-to-text-medium-regular);
 
   --spectrum-table-cell-inline-space: var(--spectrum-table-edge-to-content);
-
-  --spectrum-table-border-width: var(--spectrum-table-border-divider-width);
-  --spectrum-table-outer-border-inline-width: var(--spectrum-table-border-width);
-  --spectrum-table-border-radius: var(--spectrum-corner-radius-100);
-
   --spectrum-table-icon-to-text: var(--spectrum-text-to-visual-100);
 
   --spectrum-table-default-vertical-align: top;
@@ -41,7 +36,6 @@ governing permissions and limitations under the License.
   --spectrum-table-row-line-height: var(--spectrum-line-height-100);
 
   /* General Colors */
-  --spectrum-table-border-color: var(--spectrum-gray-300);
   --spectrum-table-divider-color: var(--spectrum-gray-300);
 
   --spectrum-table-header-background-color: var(--spectrum-transparent-white-100);
@@ -315,6 +309,14 @@ governing permissions and limitations under the License.
   }
 }
 
+.spectrum-Table,
+.spectrum-Table-scroller {
+  --spectrum-table-border-radius: var(--spectrum-corner-radius-100);
+  --spectrum-table-border-color: var(--spectrum-gray-300);
+  --spectrum-table-border-width: var(--spectrum-table-border-divider-width);
+  --spectrum-table-outer-border-inline-width: var(--spectrum-table-border-divider-width);
+}
+
 .spectrum-Table--quiet {
   --mod-table-border-radius: var(--mod-table-border-radius--quiet, 0px);
   --mod-table-outer-border-inline-width: var(--mod-table-outer-border-inline-width--quiet, 0px);
@@ -416,11 +418,8 @@ governing permissions and limitations under the License.
   line-height: var(--mod-table-header-line-height, var(--spectrum-table-row-line-height));
   text-transform: var(--mod-table-header-text-transform, none);
 
-  tbody.spectrum-Table-body & {
-    /* block-size functions as min-block-size when using display table-cell. */
-    block-size: var(--mod-table-min-header-height, var(--spectrum-table-min-header-height));
-  }
-  min-block-size: var(--mod-table-min-header-height, var(--spectrum-table-min-header-height));
+  /* block-size functions as min-block-size when using display table-cell. */
+  block-size: var(--mod-table-min-header-height, var(--spectrum-table-min-header-height));
 
   padding-block: var(--mod-table-header-top-to-text, var(--spectrum-table-header-top-to-text)) var(--mod-table-header-bottom-to-text, var(--spectrum-table-header-bottom-to-text));
   padding-inline: var(--mod-table-cell-inline-space, var(--spectrum-table-cell-inline-space));
@@ -428,7 +427,7 @@ governing permissions and limitations under the License.
   color: var(--mod-table-header-text-color, var(--spectrum-table-header-text-color));
   background-color: var(--mod-table-header-background-color, var(--spectrum-table-header-background-color));
 
-  border-radius: var(--mod-table-border-radius, var(--spectrum-table-border-radius));
+  border-radius: 0;
   transition: color var(--highcontrast-table-transition-duration, var(--mod-table-transition-duration, var(--spectrum-table-transition-duration))) ease-in-out;
   cursor: var(--mod-table-cursor-header-default, initial);
   outline: 0;
@@ -516,7 +515,7 @@ governing permissions and limitations under the License.
 }
 
 /* Outside border */
-tbody.spectrum-Table-body .spectrum-Table-row {
+.spectrum-Table-body .spectrum-Table-row {
   &:first-child .spectrum-Table-cell {
     border-block-start:
       var(--mod-table-border-width, var(--spectrum-table-border-width))
@@ -574,11 +573,8 @@ tbody.spectrum-Table-body .spectrum-Table-row {
   vertical-align: var(--mod-table-default-vertical-align, var(--spectrum-table-default-vertical-align));
   color: var(--highcontrast-table-row-text-color, var(--mod-table-row-text-color, var(--spectrum-table-row-text-color)));
 
-  tbody.spectrum-Table-body & {
-    /* block-size functions as min-block-size when using display table-cell. */
-    block-size: var(--mod-table-min-row-height, var(--spectrum-table-min-row-height));
-  }
-  min-block-size: var(--mod-table-min-row-height, var(--spectrum-table-min-row-height));
+  /* block-size functions as min-block-size when using display table-cell. */
+  block-size: var(--mod-table-min-row-height, var(--spectrum-table-min-row-height));
 
   padding-block-start: calc(
     var(--mod-table-row-top-to-text, var(--spectrum-table-row-top-to-text)) -
@@ -720,11 +716,8 @@ tbody.spectrum-Table-body .spectrum-Table-row {
     font-weight: var(--mod-table-section-header-font-weight, var(--spectrum-table-section-header-font-weight));
     text-align: start;
 
-    tbody.spectrum-Table-body & {
-      /* block-size functions as min-block-size when using display table-cell. */
-      block-size: var(--mod-table-section-header-min-height, var(--spectrum-table-section-header-min-height));
-    }
-    min-block-size: var(--mod-table-section-header-min-height, var(--spectrum-table-section-header-min-height));
+    /* block-size functions as min-block-size when using display table-cell. */
+    block-size: var(--mod-table-section-header-min-height, var(--spectrum-table-section-header-min-height));
 
     padding-block-start: calc(
       var(--mod-table-section-header-block-start-spacing, var(--spectrum-table-section-header-block-start-spacing)) -
@@ -787,34 +780,122 @@ tbody.spectrum-Table-body .spectrum-Table-row {
 }
 
 /********* DIVS *********/
-/* Markup that uses divs instead of <table> elements, and allows a scrollable table body. */
+/* Markup that uses divs instead of <table> elements. By default, displays like a regular table. */
+div.spectrum-Table:not(.spectrum-Table-scroller) {
+  display: table;
+}
+
+div.spectrum-Table-head {
+  display: table-header-group;
+}
+
+div.spectrum-Table-body {
+  display: table-row-group;
+}
+
 div.spectrum-Table-row,
 div.spectrum-Table-head div[role="row"] {
-  display: flex;
+  display: table-row;
 }
 
 div.spectrum-Table-cell,
 div.spectrum-Table-headCell {
-  flex: 1;
+  display: table-cell;
 }
 
-div.spectrum-Table-checkboxCell {
-  flex-grow: 0;
-}
-
-/* When made scrollable through non table element display properties, the
-  body needs an additional border around it. */
-div.spectrum-Table-body {
+/* Div markup that had a scrollable body and sticky column header. 
+   Table is wrapped by another element with this class to enable this behavior. */
+.spectrum-Table-scroller {
+  box-sizing: border-box;
+  display: inline-block;
+  position: relative;
+  overflow: auto;
   border-radius: var(--mod-table-border-radius, var(--spectrum-table-border-radius));
-  border-inline: var(--mod-table-outer-border-inline-width, var(--spectrum-table-outer-border-inline-width))
-      solid
-      var(--highcontrast-table-border-color, var(--mod-table-border-color, var(--spectrum-table-border-color)));
-  border-block: var(--mod-table-border-width, var(--spectrum-table-border-width))
-      solid
-      var(--highcontrast-table-border-color, var(--mod-table-border-color, var(--spectrum-table-border-color)));
 
-  .spectrum-Table-row:first-child .spectrum-Table-cell {
+  .spectrum-Table {
+    --spectrum-table-header-background-color: var(--mod-table-header-background-color-scrollable, var(--spectrum-background-layer-1-color, var(--spectrum-global-color-gray-100)));
+  }
+
+  .spectrum-Table-head {
+    position: sticky;
+    top: 0;
+    z-index: 2;
+
+    /* Pseudo elements to create rounded corners and borders at the top of the table. */
+    &::before,
+    &::after {
+      content: "";
+      display: block;
+      height: 4px;
+      position: absolute;
+      box-sizing: border-box;
+      inset-inline: 0;
+      inset-block-start: 100%;
+    }
+
+    /* Places background color outside rounded corners to hide scrolling content underneath. */
+    &::before {
+      background: linear-gradient(
+        to right, 
+        var(--mod-table-header-background-color, var(--spectrum-table-header-background-color)), 
+        var(--mod-table-header-background-color, var(--spectrum-table-header-background-color)) 5px,
+        transparent 5px,
+        transparent calc(100% - 5px),
+        var(--mod-table-header-background-color, var(--spectrum-table-header-background-color)) calc(100% - 5px), 
+        var(--mod-table-header-background-color, var(--spectrum-table-header-background-color))
+      );
+      z-index: 3;
+
+      /* Clip area inside rounded border, to have the area on top of the table body transparent. */
+      mask-image:
+        radial-gradient(ellipse 8px 8px at 7px 7px, transparent 7px, #000 7.5px, #000 15px, transparent 0),
+        radial-gradient(ellipse 8px 8px at calc(100% - 7px) 7px, transparent 7.5px, #000 8px, #000 15px, transparent 0);
+      -webkit-mask-image:
+        radial-gradient(ellipse 8px 8px at 7px 7px, transparent 7px, #000 7.5px, #000 15px, transparent 0),
+        radial-gradient(ellipse 8px 8px at calc(100% - 7px) 7px, transparent 7px, #000 7.5px, #000 15px, transparent 0);
+    }
+
+    /* Creates rounded corner borders (and top border). */
+    &::after {
+      border-inline-end-width: var(--mod-table-border-width, var(--spectrum-table-border-width));
+      border-start-end-radius: var(--mod-table-border-radius, var(--spectrum-table-border-radius));
+      border-start-start-radius: var(--mod-table-border-radius, var(--spectrum-table-border-radius));
+      border: 0 solid var(--highcontrast-table-border-color, var(--mod-table-border-color, var(--spectrum-table-border-color)));
+      border-inline-width: var(--mod-table-border-width, var(--spectrum-table-border-width));
+      border-block-start-width: var(--mod-table-border-width, var(--spectrum-table-border-width));
+      z-index: 4;
+    }
+  }
+
+  /* Rounded corners and border for bottom of table. */
+  &::after {
+    content: "";
+    display: block;
+    position: sticky;
+    inset-inline: 0;
+    inset-block-end: 0;
+
+    height: var(--mod-table-border-radius, var(--spectrum-table-border-radius));
+    margin-block-start: calc(-1 * var(--mod-table-border-radius, var(--spectrum-table-border-radius)));
+
+    border-end-start-radius: var(--mod-table-border-radius, var(--spectrum-table-border-radius));
+    border-end-end-radius: var(--mod-table-border-radius, var(--spectrum-table-border-radius));
+    border: var(--mod-table-border-width, var(--spectrum-table-border-width))
+      solid
+      var(--highcontrast-table-border-color, var(--mod-table-border-color, var(--spectrum-table-border-color)));
     border-block-start: none;
+  }
+
+  .spectrum-Table-body .spectrum-Table-row {
+    &:first-child .spectrum-Table-cell {
+      border-block-start: none;
+      border-radius: 0;
+    }
+  
+    &:last-child .spectrum-Table-cell {
+      border-block-end: none;
+      border-radius: 0;
+    }
   }
 }
 

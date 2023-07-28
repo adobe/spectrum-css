@@ -54,6 +54,17 @@ export default {
 			},
 			control: "boolean",
 		},
+		useScroller: {
+			name: "Scrollable Body and Fixed Column Headers",
+			description:
+				"Uses a wrapper element that can have a fixed height and allows scrolling, along with column headers that are fixed to the top on scroll.",
+			type: { name: "boolean" },
+			table: {
+				type: { summary: "boolean" },
+				category: "Component",
+			},
+			control: "boolean",
+		},
 		showThumbnails: {
 			name: "Show Thumbnails in Content",
 			description:
@@ -87,6 +98,7 @@ export default {
 		useDivs: false,
 		showThumbnails: false,
 		isDropTarget: false,
+		useScroller: false,
 	},
 	parameters: {
 		actions: {
@@ -155,6 +167,91 @@ SummaryAndSelected.args = {
 export const MultiSelect = Template.bind({});
 MultiSelect.storyName = "Multi-select";
 MultiSelect.args = {
+	rowItems: [
+		{
+			cellContent: ["Table Row Alpha", "Alpha", "Table Row Alpha"],
+			showCheckbox: true,
+		},
+		{
+			cellContent: [
+				"Table Row Bravo. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+				"Bravo",
+				"Table Row Bravo. Lorem ipsum dolor sit amet.",
+			],
+			showCheckbox: true,
+			isSelected: true,
+		},
+		{
+			cellContent: "Table Row Charlie",
+			showCheckbox: true,
+			isSelected: true,
+		},
+		{
+			cellContent: "Table Row Delta",
+			showCheckbox: true,
+		},
+		{
+			cellContent: "Echo",
+			showCheckbox: true,
+		},
+		{
+			cellContent: "Foxtrot",
+			showCheckbox: true,
+		},
+	],
+};
+
+export const Scrollable = Template.bind({});
+Scrollable.parameters = {
+	docs: {
+		description: {
+			story:
+				"An example showing the use of the scrollable wrapper element with table markup. This allows a fixed height and scrolling, along with column headers that are fixed to the top on scroll.",
+		},
+	},
+};
+Scrollable.args = {
+	useScroller: true,
+	rowItems: [
+		{
+			cellContent: "Table Row Alpha",
+		},
+		{
+			cellContent: "Table Row Bravo",
+		},
+		{
+			cellContent: "Table Row Charlie",
+			isSelected: true,
+		},
+		{
+			cellContent: "Table Row Delta",
+		},
+		{
+			cellContent: "Table Row Echo",
+		},
+		{
+			cellContent: "Table Row Foxtrot",
+		},
+		{
+			cellContent: "Summary Row",
+			isSummaryRow: true,
+		},
+	],
+};
+
+export const DivsScrollable = Template.bind({});
+DivsScrollable.parameters = {
+	docs: {
+		description: {
+			story:
+				"A table can also be made up of divs if needed. This uses both the div markup, and the scrollable wrapper.",
+		},
+	},
+};
+DivsScrollable.storyName = "Divs and Scrollable";
+DivsScrollable.args = {
+	useDivs: true,
+	useScroller: true,
 	rowItems: [
 		{
 			cellContent: ["Table Row Alpha", "Alpha", "Table Row Alpha"],
