@@ -2,6 +2,7 @@ import { html } from "lit";
 import { classMap } from "lit/directives/class-map.js";
 import { styleMap } from "lit/directives/style-map.js";
 import { ifDefined } from "lit/directives/if-defined.js";
+import { Template as OpacityCheckerboard } from "@spectrum-css/opacitycheckerboard/stories/template.js";
 
 import "../index.css";
 
@@ -24,7 +25,16 @@ export const Template = ({
 	},
 	...globals
 }) => {
-	if (!imageURL && !svg) return html``;
+
+	const checkerboardContentLayer =  html`
+		${imageURL
+			? html`<img
+					class="${rootClass}-image"
+					src=${imageURL}
+					alt=${altText}
+				/>`
+			: ""}
+	`
 
 	if (isLayer)
 		return html`
@@ -41,15 +51,12 @@ export const Template = ({
 				id=${ifDefined(id)}
 				@click=${onclick}
 			>
-				<div class="${rootClass}-layer-inner">
-					${imageURL
-						? html`<img
-								class="${rootClass}-image"
-								src=${imageURL}
-								alt=${altText}
-						  />`
-						: ""}
-				</div>
+				${OpacityCheckerboard({
+					...globals,
+					componentOnly: true,
+					customClasses: [`${rootClass}-layer-inner`],
+					content: checkerboardContentLayer,
+				})}
 			</div>
 		`;
 
@@ -81,6 +88,18 @@ export const Template = ({
 			</div>
 		`;
 
+	const checkerboardContent = html`
+			<div class="${rootClass}-image-wrapper">
+			${imageURL
+				? html`<img
+						class="${rootClass}-image"
+						src=${imageURL}
+						alt=${altText}
+					/>`
+				: ""}
+			${svg ? html`${svg}` : ""}
+		</div>
+	`
 	return html`
 		<div
 			class=${classMap({
@@ -93,16 +112,11 @@ export const Template = ({
 			id=${ifDefined(id)}
 			@click=${onclick}
 		>
-			<div class="${rootClass}-image-wrapper">
-				${imageURL
-					? html`<img
-							class="${rootClass}-image"
-							src=${imageURL}
-							alt=${altText}
-					  />`
-					: ""}
-				${svg ? html`${svg}` : ""}
-			</div>
-		</div>
-	`;
+		${OpacityCheckerboard({
+			...globals,
+			componentOnly: true,
+			customClasses: [`${rootClass}`],
+			content: checkerboardContent,
+		})}
+	`
 };
