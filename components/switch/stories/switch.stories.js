@@ -6,9 +6,57 @@ export default {
 	description:
 		"A switch is used to turn an option on or off. Switches allow users to select the state of a single option at a time.",
 	component: "Switch",
-	argTypes: {},
+	argTypes: {
+		size: {
+			name: "Size",
+			type: { name: "string", required: true },
+			table: {
+				type: { summary: "string" },
+				category: "Component",
+			},
+			options: ["s", "m", "l", "xl"],
+			control: "select",
+		},
+		isEmphasized: {
+			name: "Emphasized",
+			type: { name: "boolean" },
+			table: {
+				type: { summary: "boolean" },
+				category: "State",
+			},
+			control: "boolean",
+		},
+		isDisabled: {
+			name: "Disabled",
+			type: { name: "boolean" },
+			table: {
+				type: { summary: "boolean" },
+				category: "State",
+			},
+			control: "boolean",
+		},
+		isChecked: {
+			name: "Disabled",
+			type: { name: "boolean" },
+			table: {
+				type: { summary: "boolean" },
+				category: "State",
+			},
+			control: "boolean",
+		},
+		label: {
+			name: "Label",
+			type: { name: "string" },
+			table: {
+				type: { summary: "string" },
+				category: "Content",
+			},
+			control: { type: "text" },
+		},
+	},
 	args: {
 		rootClass: "spectrum-Switch",
+		isDisabled: false,
 	},
 	parameters: {
 		actions: {
@@ -24,3 +72,13 @@ export default {
 
 export const Default = Template.bind({});
 Default.args = {};
+
+export const Emphasized = Template.bind({});
+Emphasized.args = {
+	isEmphasized: true
+};
+
+export const Disabled = Template.bind({});
+Disabled.args = {
+	isDisabled: true
+};

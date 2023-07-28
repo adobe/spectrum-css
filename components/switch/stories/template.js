@@ -7,9 +7,11 @@ import "../index.css";
 export const Template = ({
 	rootClass = "spectrum-Switch",
 	size = "m",
+	label = "Switch label",
+	isDisabled,
+	isEmphasized,
 	customClasses = [],
 	id,
-	label,
 	...globals
 }) => {
 	const { express } = globals;
@@ -25,13 +27,15 @@ export const Template = ({
 		<div
 			class=${classMap({
 				[rootClass]: true,
+				[`${rootClass}--disabled`] : isDisabled,
+				[`${rootClass}--emphasized`] : isEmphasized,
 				[`${rootClass}--size${size?.toUpperCase()}`]:
 					typeof size !== "undefined",
 				...customClasses.reduce((a, c) => ({ ...a, [c]: true }), {}),
 			})}
 			id=${ifDefined(id)}
 		>
-			<input type="checkbox" class="${rootClass}-input" id="switch-onoff-0" />
+			<input type="checkbox" class="${rootClass}-input" id="switch-onoff-0" ?disabled=${isDisabled} />
 			<span class="${rootClass}-switch"></span>
 			${label
 				? html`<label class="${rootClass}-label" for="switch-onoff-0"
