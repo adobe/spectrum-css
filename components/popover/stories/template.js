@@ -64,6 +64,8 @@ export const Template = ({
 				const popHeight = popover.offsetHeight ?? 0;
 				const textDir = getComputedStyle(document.querySelector('html')).direction;
 				let x, y;
+				let xOffset = "+ 0px";
+				let yOffset = "+ 0px";
 				if (position.includes("top") || position.includes("bottom")) {
 					x = triggerXCenter - (popWidth > 0 ? popWidth / 2 : popWidth);
 				} else if (position.includes("left") || position.includes("right")) {
@@ -71,23 +73,30 @@ export const Template = ({
 				}
 				if (position.includes("top")) {
 					y = rect.top - popHeight;
+					yOffset = "- var(--spectrum-popover-offset)";
 				} else if (position.includes("bottom")) {
 					y = rect.bottom;
+					yOffset = "+ var(--spectrum-popover-offset)";
 				} else if (position.includes("left")) {
 					if (textDir == 'rtl') {
 						x = rect.right;
+						xOffset = "+ var(--spectrum-popover-offset)";
 					} else {
 						x = rect.left - popWidth;
+						xOffset = "- var(--spectrum-popover-offset)";
 					}
 				} else if (position.includes("right")) {
 					if (textDir == 'rtl') {
 						x = rect.left - popWidth;
+						xOffset = "- var(--spectrum-popover-offset)";
 					} else {
 						x = rect.right;
+						xOffset = "+ var(--spectrum-popover-offset)";
 					}
 				}
-				if (x) transforms.push(`translateX(calc(var(--flow-direction) * ${parseInt(x, 10)}px))`); 
-				if (y) transforms.push(`translateY(${parseInt(y, 10)}px)`);
+
+				if (x) transforms.push(`translateX(calc(var(--flow-direction) * calc(${parseInt(x, 10)}px ${xOffset})))`);
+				if (y) transforms.push(`translateY(calc(${y}px ${yOffset}))`);
 
 				// Add start and end styles
 				if (position === "top-start" || position === "bottom-start") {

@@ -19,7 +19,11 @@ governing permissions and limitations under the License.
     --flow-direction: -1;
   }
 
-  --spectrum-popover-cross-offset: 0; /* change to offset from source, default is 0 */
+  /* change to offset on the cross axis. Default is 0 */
+  --spectrum-popover-cross-offset: 0; 
+
+  /* change to offset from source. Default is 8px */
+  --spectrum-popover-offset: var(--spectrum-spacing-100);
 
   --spectrum-popover-background-color: var(--spectrum-background-layer-2-color);
   --spectrum-popover-border-color: var(--spectrum-gray-400);
