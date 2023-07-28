@@ -19,9 +19,6 @@ governing permissions and limitations under the License.
     --flow-direction: -1;
   }
 
-  /* change to offset on the cross axis. Default is 0 */
-  --spectrum-popover-cross-offset: 0; 
-
   /* change to offset from source. Default is 8px */
   --spectrum-popover-offset: var(--spectrum-spacing-100);
 
@@ -116,7 +113,7 @@ governing permissions and limitations under the License.
 .spectrum-Popover--top-right,
 .spectrum-Popover--top-start,
 .spectrum-Popover--top-end {
-  margin-bottom: var(--spectrum-popover-cross-offset);
+  margin-bottom: var(--mod-popover-offset, var(--spectrum-popover-offset));
   /* popover animates upward ⬆ */
   &.is-open {
     @inherit: %spectrum-overlay--top--open;
@@ -129,7 +126,7 @@ governing permissions and limitations under the License.
 .spectrum-Popover--bottom-right,
 .spectrum-Popover--bottom-start,
 .spectrum-Popover--bottom-end {
-  margin-top: var(--spectrum-popover-cross-offset);
+  margin-top: var(--mod-popover-offset, var(--spectrum-popover-offset));
   /* popover animates downward ⬇ */
   &.is-open {
     @inherit: %spectrum-overlay--bottom--open;
@@ -140,7 +137,7 @@ governing permissions and limitations under the License.
 .spectrum-Popover--right,
 .spectrum-Popover--right-start,
 .spectrum-Popover--right-end {
-  margin-left: var(--spectrum-popover-cross-offset);
+  margin-left: var(--mod-popover-offset, var(--spectrum-popover-offset));
   /* popover animates towards right ⮕ */
   &.is-open {
     @inherit: %spectrum-overlay--right--open;
@@ -151,7 +148,7 @@ governing permissions and limitations under the License.
 .spectrum-Popover--left,
 .spectrum-Popover--left-start,
 .spectrum-Popover--left-end {
-  margin-right: var(--spectrum-popover-cross-offset);
+  margin-right: var(--mod-popover-offset, var(--spectrum-popover-offset));
   /* popover animates towards left ⬅ */
   &.is-open {
     @inherit: %spectrum-overlay--left--open;
@@ -162,7 +159,7 @@ governing permissions and limitations under the License.
 .spectrum-Popover--start,
 .spectrum-Popover--start-top,
 .spectrum-Popover--start-bottom {
-  margin-inline-end: var(--spectrum-popover-cross-offset);
+  margin-inline-end: var(--mod-popover-offset, var(--spectrum-popover-offset));
   /* LTR read, popover animates towards left ⬅ */
   &.is-open {
     @inherit: %spectrum-overlay--left--open;
@@ -180,7 +177,7 @@ governing permissions and limitations under the License.
 .spectrum-Popover--end,
 .spectrum-Popover--end-top,
 .spectrum-Popover--end-bottom {
-  margin-inline-start: var(--spectrum-popover-cross-offset);
+  margin-inline-start: var(--mod-popover-offset, var(--spectrum-popover-offset));
   /* LTR read, popover animates towards right ⮕ */
   &.is-open {
     @inherit: %spectrum-overlay--right--open;
