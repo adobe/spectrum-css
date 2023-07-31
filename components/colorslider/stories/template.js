@@ -53,6 +53,7 @@ export const Template = ({
 			${ColorHandle({
 				...globals,
 				isDisabled,
+				isFocused,
 				customClasses: [`${rootClass}-handle`],
 				colorHandleStyle,
 			})}
