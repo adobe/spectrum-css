@@ -594,6 +594,31 @@ function toggleInputGroupFocus(event) {
 	}
 }
 
+
+function deleteTag(button) {
+    const tagItem = button.closest('.spectrum-TagGroup-item'); // Find the parent tag item
+    if (tagItem) {
+      tagItem.remove(); // Remove the tag item from the DOM
+    }
+  }
+
+  // Function to handle arrow key navigation
+  function handleKeyDown(event) {
+    const button = event.target;
+    const tagGroup = button.parentElement.parentElement;
+    const buttons = tagGroup.querySelectorAll('.spectrum-ClearButton');
+
+    const currentIndex = Array.from(buttons).indexOf(button);
+
+    if (event.key === 'ArrowLeft' && currentIndex > 0) {
+      buttons[currentIndex - 1].focus(); // Move focus to the left button
+    } else if (event.key === 'ArrowRight' && currentIndex < buttons.length - 1) {
+      buttons[currentIndex + 1].focus(); // Move focus to the right button
+    }
+  }
+
+
+  
 document.addEventListener("focus", toggleInputGroupFocus, true);
 document.addEventListener("blur", toggleInputGroupFocus, true);
 
