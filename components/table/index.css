@@ -810,7 +810,8 @@ div.spectrum-Table-headCell {
   display: inline-block;
   position: relative;
   overflow: auto;
-  border-radius: var(--mod-table-border-radius, var(--spectrum-table-border-radius));
+  border-end-start-radius: var(--mod-table-border-radius, var(--spectrum-table-border-radius));
+  border-end-end-radius: var(--mod-table-border-radius, var(--spectrum-table-border-radius));
 
   .spectrum-Table {
     --spectrum-table-header-background-color: var(--mod-table-header-background-color-scrollable, var(--spectrum-background-layer-1-color, var(--spectrum-global-color-gray-100)));
@@ -825,12 +826,12 @@ div.spectrum-Table-headCell {
     &::before,
     &::after {
       content: "";
-      display: block;
+      display: var(--mod-table-scroller-corners-display, block);
       height: 4px;
       position: absolute;
       box-sizing: border-box;
       inset-inline: 0;
-      inset-block-start: 100%;
+      inset-block-start: calc(100% - 1px);
     }
 
     /* Places background color outside rounded corners to hide scrolling content underneath. */
@@ -886,15 +887,22 @@ div.spectrum-Table-headCell {
     border-block-start: none;
   }
 
+  /* Remove borders that have been replaced by borders on wrapper or pseudo elements. */
   .spectrum-Table-body .spectrum-Table-row {
     &:first-child .spectrum-Table-cell {
       border-block-start: none;
-      border-radius: 0;
     }
   
     &:last-child .spectrum-Table-cell {
       border-block-end: none;
-      border-radius: 0;
+    }
+  }
+
+  /* Prevent focus indicator outlines from cutting off. */
+  .spectrum-Table-headCell {
+    &:focus-visible,
+    &.is-focused {
+      z-index: 5;
     }
   }
 }

@@ -929,7 +929,7 @@ examples:
       When using the scrollable wrapper, the column headers must have a solid background color set. This can be customized with the custom property `--mod-table-header-background-color-scrollable`.
       Note that when using the quiet variant, this wrapper element must also include the `spectrum-Table--quiet` class.
     markup: |
-      <div class="spectrum-Table-scroller" style="height: 198px">
+      <div class="spectrum-Table-scroller" style="height: 196px">
         <table class="spectrum-Table spectrum-Table--sizeM spectrum-Table--emphasized">
           <thead class="spectrum-Table-head">
             <tr>
@@ -986,7 +986,7 @@ examples:
     name: Divs
     description: A table can alternatively be composed entirely of `<div>` tags, instead of a `<table>`. This example also uses the scrollable wrapper.
     markup: |
-      <div class="spectrum-Table-scroller" style="height: 198px">
+      <div class="spectrum-Table-scroller" style="height: 196px">
         <div class="spectrum-Table spectrum-Table--sizeM spectrum-Table--emphasized" role="table">
           <div class="spectrum-Table-head role="rowgroup">
             <div role="row">
@@ -1277,7 +1277,7 @@ examples:
     name: Row Dropzone
     description: Rows that accept dropped content.
     markup: |
-      <div class="spectrum-Table-scroller" style="height: 198px">
+      <div class="spectrum-Table-scroller" style="height: 196px">
         <div class="spectrum-Table spectrum-Table--sizeM spectrum-Table--emphasized" role="table">
           <div class="spectrum-Table-head" role="rowgroup">
             <div role="row">
@@ -1328,7 +1328,7 @@ examples:
   - id: table-row-dropzone-quiet
     name: Row Dropzone (Quiet)
     markup: |
-      <div class="spectrum-Table-scroller" style="height: 198px">
+      <div class="spectrum-Table-scroller" style="height: 196px">
         <div class="spectrum-Table spectrum-Table--sizeM spectrum-Table--emphasized spectrum-Table--quiet" role="table">
           <div class="spectrum-Table-head" role="rowgroup">
             <div role="row">
