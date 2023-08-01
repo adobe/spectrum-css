@@ -33,7 +33,7 @@ examples:
     description: Thumbnail should only be displayed as disabled if the entire componet is also disabled.
     markup: |
       <div class="spectrum-Thumbnail spectrum-Thumbnail--size700 is-disabled">
-        <div class="spectrum-Thumbnail-image-wrapper spectrum- spectrum-OpacityCheckerboard">
+        <div class="spectrum-Thumbnail-image-wrapper spectrum-OpacityCheckerboard">
           <img class="spectrum-Thumbnail-image" src="img/thumbnail.png" alt="Woman crouching">
         </div>
       </div>
