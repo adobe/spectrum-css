@@ -3,6 +3,78 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+<a name="5.0.0"></a>
+#5.0.0
+🗓
+2023-07-31 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/searchwithin@4.0.37...@spectrum-css/searchwithin@5.0.0)
+
+\*feat(pickerbutton)!: migrate to use spectrum tokens (#1940)([ad6051d](https://github.com/adobe/spectrum-css/commit/ad6051d)), closes[#1940](https://github.com/adobe/spectrum-css/issues/1940)
+
+    	###
+    	🛑 BREAKING CHANGES
+
+    		*
+    		migrates the Picker Button component to use `@adobe/spectrum-tokens`
+
+- feat(pickerbutton)!: update to use tokens
+
+- feat(pickerbutton): updating tokens
+
+- chore(pickerbutton): move css from generated to index
+
+- feat(pickerbutton): updating with tokens
+
+- docs(pickerbutton): update docs html to correct icon sizes
+
+- refactor(pickerbutton): fixing variable names and tokens
+
+- chore(pickerbutton): update story
+
+- chore(pickerbutton): update storybook controls and template
+
+- chore(pickerbutton): adding more storybook stories for express, quiet etc
+
+- fix(pickerbutton): fixing icon color
+
+- chore(pickerbutton): reset yarn file
+
+- chore: reset yarn file
+
+- refactor(pickerbutton): fix button fill padding calculations
+
+- chore(pickerbutton): remove invalid and isKeyboardFocused variants
+
+- chore(pickerbutton): prevent focused and open when disabled
+
+- fix(pickerbutton): fix disabled hover
+
+update mods
+
+- fix(searchwithin): pass through mod for picker button border color
+
+- chore(pickerbutton): bumping up tokens release
+
+- chore(pickerbutton): update token peer dependency
+
+- fix(searchwithin): update searchwithin story to match docs site
+
+use picker instead of pickerbutton
+remove extra border
+
+- chore(pickerbutton): manual version increase for beta release
+
+- chore(pickerbutton): remove pickerbutton-generated css
+
+- fix(pickerbutton): remove icononly class and remove padding from uiicononly
+
+removes padding from uiicononly class to allow for larger icons in slots
+
+- fix(pickerbutton): explicitly add box-sizing border-box
+
+- fix(pickerbutton): fix icon size
+
+- chore(pickerbutton): manual version increase for beta release
+
 <a name="4.0.37"></a>
 ##4.0.37
 🗓
