@@ -925,11 +925,14 @@ examples:
       </table>
   - id: table-scrollable
     name: Scrollable with Fixed Column Headers
-    description: A table can be wrapped in a fixed height div with the `spectrum-Table-scroller` class. This allows scrolling of the table body and makes the column headers fixed to the top on scroll.
-      When using the scrollable wrapper, the column headers must have a solid background color set. This can be customized with the custom property `--mod-table-header-background-color-scrollable`.
-      Note that when using the quiet variant, this wrapper element must also include the `spectrum-Table--quiet` class.
+    description: |
+      A table can be wrapped in a fixed height div with the `spectrum-Table-scroller` class. This allows scrolling of the table body and makes the column headers sticky (i.e. fixed to the top on scroll).
+
+      When using the scrollable wrapper, the column headers must have a solid background color set. This can be customized to match the parent background with the custom property `--mod-table-header-background-color-scrollable`. When using the quiet variant, this wrapper element must also include the `spectrum-Table--quiet` class.
+
+      To make sure that reverse keyboard link navigation (shift-tab) keeps the whole cell in focus, `--mod-table-current-header-height` should be dynamically updated with JS to match the table header height.  
     markup: |
-      <div class="spectrum-Table-scroller" style="height: 196px">
+      <div class="spectrum-Table-scroller" style="height: 200px">
         <table class="spectrum-Table spectrum-Table--sizeM spectrum-Table--emphasized">
           <thead class="spectrum-Table-head">
             <tr>
@@ -986,7 +989,7 @@ examples:
     name: Divs
     description: A table can alternatively be composed entirely of `<div>` tags, instead of a `<table>`. This example also uses the scrollable wrapper.
     markup: |
-      <div class="spectrum-Table-scroller" style="height: 196px">
+      <div class="spectrum-Table-scroller" style="height: 200px">
         <div class="spectrum-Table spectrum-Table--sizeM spectrum-Table--emphasized" role="table">
           <div class="spectrum-Table-head role="rowgroup">
             <div role="row">
@@ -1277,7 +1280,7 @@ examples:
     name: Row Dropzone
     description: Rows that accept dropped content.
     markup: |
-      <div class="spectrum-Table-scroller" style="height: 196px">
+      <div class="spectrum-Table-scroller" style="height: 200px">
         <div class="spectrum-Table spectrum-Table--sizeM spectrum-Table--emphasized" role="table">
           <div class="spectrum-Table-head" role="rowgroup">
             <div role="row">
@@ -1328,7 +1331,7 @@ examples:
   - id: table-row-dropzone-quiet
     name: Row Dropzone (Quiet)
     markup: |
-      <div class="spectrum-Table-scroller" style="height: 196px">
+      <div class="spectrum-Table-scroller" style="height: 200px">
         <div class="spectrum-Table spectrum-Table--sizeM spectrum-Table--emphasized spectrum-Table--quiet" role="table">
           <div class="spectrum-Table-head" role="rowgroup">
             <div role="row">
