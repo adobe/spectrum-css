@@ -12,15 +12,6 @@ governing permissions and limitations under the License.
 
 @import "../commons/basebutton-coretokens.css";
 
-/* Placeholder tokens to align Popover with Picker */
-.spectrum--medium {
-  --spectrum-picker-popover-quiet-offset-x: 12px;
-}
-
-.spectrum--large {
-  --spectrum-picker-popover-quiet-offset-x: 14px;
-}
-
 .spectrum-Picker {
   /* font */
   --spectrum-picker-font-size: var(--spectrum-font-size-100);
@@ -30,21 +21,27 @@ governing permissions and limitations under the License.
 
   /* height */
   --spectrum-picker-block-size: var(--spectrum-component-height-100);
+  --spectrum-picker-inline-size: var(--spectrum-field-width);
 
   /* border */
   --spectrum-picker-border-radius: var(--spectrum-corner-radius-100);
 
   /* spacing */
+  --spectrum-picker-spacing-top-to-text: var(--spectrum-component-top-to-text-100);
+  --spectrum-picker-spacing-bottom-to-text: var(--spectrum-component-bottom-to-text-100);
   --spectrum-picker-spacing-edge-to-text: var(--spectrum-component-edge-to-text-100);
   --spectrum-picker-spacing-edge-to-text-quiet: var(--spectrum-field-edge-to-text-quiet);
   --spectrum-picker-spacing-top-to-text-side-label-quiet: var(--spectrum-field-label-top-margin-medium);
+  --spectrum-picker-spacing-label-to-picker: var(--spectrum-field-label-to-component);
 
   --spectrum-picker-spacing-text-to-icon: var(--spectrum-text-to-visual-100);
   --spectrum-picker-spacing-text-to-alert-icon-inline-start: var(--spectrum-field-text-to-alert-icon-medium);
   --spectrum-picker-spacing-icon-to-disclosure-icon: var(--spectrum-picker-visual-to-disclosure-icon-medium);
   --spectrum-picker-spacing-label-to-picker-quiet: var(--spectrum-field-label-to-component-quiet-medium);
+  --spectrum-picker-spacing-top-to-alert-icon: var(--spectrum-field-top-to-alert-icon-medium);
+  --spectrum-picker-spacing-top-to-progress-circle: var(--spectrum-field-top-to-progress-circle-medium);
   --spectrum-picker-spacing-top-to-disclosure-icon: var(--spectrum-field-top-to-disclosure-icon-100);
-  --spectrum-picker-spacing-edge-to-disclosure-icon: var(--spectrum-field-top-to-disclosure-icon-100);
+  --spectrum-picker-spacing-edge-to-disclosure-icon: var(--spectrum-field-end-edge-to-disclosure-icon-100);
   --spectrum-picker-spacing-edge-to-disclosure-icon-quiet: var(--spectrum-picker-end-edge-to-disclousure-icon-quiet);
 
   & + .spectrum-Popover--bottom.is-open {
@@ -92,10 +89,15 @@ governing permissions and limitations under the License.
   --spectrum-picker-font-size: var(--spectrum-font-size-75);
   --spectrum-picker-block-size: var(--spectrum-component-height-75);
   --spectrum-picker-spacing-top-to-text-side-label-quiet: var(--spectrum-field-label-top-margin-small);
+  --spectrum-picker-spacing-top-to-text: var(--spectrum-component-top-to-text-75);
+  --spectrum-picker-spacing-bottom-to-text: var(--spectrum-component-bottom-to-text-75);
+  --spectrum-picker-spacing-edge-to-text: var(--spectrum-component-edge-to-text-75);
   --spectrum-picker-spacing-text-to-icon: var(--spectrum-text-to-visual-75);
   --spectrum-picker-spacing-text-to-alert-icon-inline-start: var(--spectrum-field-text-to-alert-icon-small);
   --spectrum-picker-spacing-icon-to-disclosure-icon: var(--spectrum-picker-visual-to-disclosure-icon-small);
   --spectrum-picker-spacing-label-to-picker-quiet: var(--spectrum-field-label-to-component-quiet-small);
+  --spectrum-picker-spacing-top-to-alert-icon: var(--spectrum-field-top-to-alert-icon-small);
+  --spectrum-picker-spacing-top-to-progress-circle: var(--spectrum-field-top-to-progress-circle-small);
   --spectrum-picker-spacing-top-to-disclosure-icon: var(--spectrum-field-top-to-disclosure-icon-75);
   --spectrum-picker-spacing-edge-to-disclosure-icon: var(--spectrum-field-end-edge-to-disclosure-icon-75);
 
@@ -104,30 +106,19 @@ governing permissions and limitations under the License.
   }
 }
 
-.spectrum-Picker--sizeM {
-  --spectrum-picker-font-size: var(--spectrum-font-size-100);
-  --spectrum-picker-block-size: var(--spectrum-component-height-100);
-  --spectrum-picker-spacing-top-to-text-side-label-quiet: var(--spectrum-field-label-top-margin-medium);
-  --spectrum-picker-spacing-text-to-icon: var(--spectrum-text-to-visual-100);
-  --spectrum-picker-spacing-text-to-alert-icon-inline-start: var(--spectrum-field-text-to-alert-icon-medium);
-  --spectrum-picker-spacing-icon-to-disclosure-icon: var(--spectrum-picker-visual-to-disclosure-icon-medium);
-  --spectrum-picker-spacing-label-to-picker-quiet: var(--spectrum-field-label-to-component-quiet-medium);
-  --spectrum-picker-spacing-top-to-disclosure-icon: var(--spectrum-field-top-to-disclosure-icon-100);
-  --spectrum-picker-spacing-edge-to-disclosure-icon: var(--spectrum-field-end-edge-to-disclosure-icon-100);
-
-  & + .spectrum-Popover--bottom.is-open {
-    --spectrum-picker-spacing-picker-to-popover: var(--spectrum-component-to-menu-medium);
-  }
-}
-
 .spectrum-Picker--sizeL {
   --spectrum-picker-font-size: var(--spectrum-font-size-200);
   --spectrum-picker-block-size: var(--spectrum-component-height-200);
   --spectrum-picker-spacing-top-to-text-side-label-quiet: var(--spectrum-field-label-top-margin-large);
+  --spectrum-picker-spacing-top-to-text: var(--spectrum-component-top-to-text-200);
+  --spectrum-picker-spacing-bottom-to-text: var(--spectrum-component-bottom-to-text-200);
+  --spectrum-picker-spacing-edge-to-text: var(--spectrum-component-edge-to-text-200);
   --spectrum-picker-spacing-text-to-icon: var(--spectrum-text-to-visual-200);
   --spectrum-picker-spacing-text-to-alert-icon-inline-start: var(--spectrum-field-text-to-alert-icon-large);
   --spectrum-picker-spacing-icon-to-disclosure-icon: var(--spectrum-picker-visual-to-disclosure-icon-large);
   --spectrum-picker-spacing-label-to-picker-quiet: var(--spectrum-field-label-to-component-quiet-large);
+  --spectrum-picker-spacing-top-to-alert-icon: var(--spectrum-field-top-to-alert-icon-large);
+  --spectrum-picker-spacing-top-to-progress-circle: var(--spectrum-field-top-to-progress-circle-large);
   --spectrum-picker-spacing-top-to-disclosure-icon: var(--spectrum-field-top-to-disclosure-icon-200);
   --spectrum-picker-spacing-edge-to-disclosure-icon: var(--spectrum-field-end-edge-to-disclosure-icon-200);
 
@@ -140,10 +131,15 @@ governing permissions and limitations under the License.
   --spectrum-picker-font-size: var(--spectrum-font-size-300);
   --spectrum-picker-block-size: var(--spectrum-component-height-300);
   --spectrum-picker-spacing-top-to-text-side-label-quiet: var(--spectrum-field-label-top-margin-extra-large);
+  --spectrum-picker-spacing-top-to-text: var(--spectrum-component-top-to-text-300);
+  --spectrum-picker-spacing-bottom-to-text: var(--spectrum-component-bottom-to-text-300);
+  --spectrum-picker-spacing-edge-to-text: var(--spectrum-component-edge-to-text-300);
   --spectrum-picker-spacing-text-to-icon: var(--spectrum-text-to-visual-300);
   --spectrum-picker-spacing-text-to-alert-icon-inline-start: var(--spectrum-field-text-to-alert-icon-extra-large);
   --spectrum-picker-spacing-icon-to-disclosure-icon: var(--spectrum-picker-visual-to-disclosure-icon-extra-large);
   --spectrum-picker-spacing-label-to-picker-quiet: var(--spectrum-field-label-to-component-quiet-extra-large);
+  --spectrum-picker-spacing-top-to-alert-icon: var(--spectrum-field-top-to-alert-icon-extra-large);
+  --spectrum-picker-spacing-top-to-progress-circle: var(--spectrum-field-top-to-progress-circle-extra-large);
   --spectrum-picker-spacing-top-to-disclosure-icon: var(--spectrum-field-top-to-disclosure-icon-300);
   --spectrum-picker-spacing-edge-to-disclosure-icon: var(--spectrum-field-end-edge-to-disclosure-icon-300);
 
@@ -207,8 +203,10 @@ governing permissions and limitations under the License.
   /* Minimum width is 2 times the height */
   max-inline-size: 100%;
   min-inline-size: calc(var(--spectrum-picker-minimum-width-multiplier) * var(--mod-picker-block-size, var(--spectrum-picker-block-size)));
+  inline-size: var(--mod-picker-inline-size, var(--spectrum-picker-inline-size));
   block-size: var(--mod-picker-block-size, var(--spectrum-picker-block-size));
   padding-block: 0;
+  margin-block-start: var(--mod-picker-spacing-label-to-picker, var(--spectrum-picker-spacing-label-to-picker));
 
   padding-inline-start: var(--mod-picker-spacing-edge-to-text, var(--spectrum-picker-spacing-edge-to-text));
   padding-inline-end: var(--mod-picker-spacing-edge-to-disclosure-icon, var(--spectrum-picker-spacing-edge-to-disclosure-icon));
@@ -413,6 +411,9 @@ governing permissions and limitations under the License.
   text-overflow: ellipsis;
   text-align: start;
 
+  margin-block-start: var(--mod-picker-spacing-top-to-text, var(--spectrum-picker-spacing-top-to-text));
+  margin-block-end: calc(var(--mod-picker-spacing-bottom-to-text, var(--spectrum-picker-spacing-bottom-to-text)) - var(--mod-picker-border-width, var(--spectrum-picker-border-width)));
+
   &.is-placeholder {
     font-weight: var(--mod-picker-font-weight, var(--spectrum-picker-font-weight));
     font-style: var(--mod-picker-placeholder-font-style, var(--spectrum-picker-placeholder-font-style));
@@ -450,6 +451,16 @@ governing permissions and limitations under the License.
 
 .spectrum-Picker-validationIcon, .spectrum-Picker .spectrum-ProgressCircle {
   margin-inline-start: var(--mod-picker-spacing-text-to-alert-icon-inline-start, var(--spectrum-picker-spacing-text-to-alert-icon-inline-start));
+}
+
+.spectrum-Picker-validationIcon {
+  margin-block-start: calc(var(--mod-picker-spacing-top-to-alert-icon, var(--spectrum-picker-spacing-top-to-alert-icon)) - var(--mod-picker-border-width, var(--spectrum-picker-border-width)));
+  margin-block-end: calc(var(--mod-picker-spacing-top-to-alert-icon, var(--spectrum-picker-spacing-top-to-alert-icon)) - var(--mod-picker-border-width, var(--spectrum-picker-border-width)));
+}
+
+.spectrum-Picker .spectrum-ProgressCircle {
+  margin-block-start: calc(var(--mod-picker-spacing-top-to-progress-circle, var(--spectrum-picker-spacing-top-to-progress-circle)) - var(--mod-picker-border-width, var(--spectrum-picker-border-width)));
+  margin-block-end: calc(var(--mod-picker-spacing-top-to-progress-circle, var(--spectrum-picker-spacing-top-to-progress-circle)) - var(--mod-picker-border-width, var(--spectrum-picker-border-width)));
 }
 
 .spectrum-Picker-label ~ .spectrum-Picker-menuIcon {
