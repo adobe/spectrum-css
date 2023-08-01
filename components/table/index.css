@@ -12,7 +12,6 @@ governing permissions and limitations under the License.
 
 .spectrum-Table {
   /* Size and Spacing */
-  --spectrum-table-min-header-height: var(--spectrum-component-height-100);
   --spectrum-table-header-top-to-text: var(--spectrum-table-column-header-row-top-to-text-medium);
   --spectrum-table-header-bottom-to-text: var(--spectrum-table-column-header-row-bottom-to-text-medium);
 
@@ -309,8 +308,10 @@ governing permissions and limitations under the License.
   }
 }
 
+/* Custom properties that also need to be available within the scrollable wrapper. */
 .spectrum-Table,
 .spectrum-Table-scroller {
+  --spectrum-table-min-header-height: var(--spectrum-component-height-100);
   --spectrum-table-border-radius: var(--spectrum-corner-radius-100);
   --spectrum-table-border-color: var(--spectrum-gray-300);
   --spectrum-table-border-width: var(--spectrum-table-border-divider-width);
@@ -486,8 +487,6 @@ governing permissions and limitations under the License.
 
 .spectrum-Table-body {
   position: relative;
-  overflow: auto;
-
   border: none;
   border-radius: var(--mod-table-border-radius, var(--spectrum-table-border-radius));
   background-color: var(--highcontrast-table-row-background-color, var(--mod-table-row-background-color, var(--spectrum-table-row-background-color)));
