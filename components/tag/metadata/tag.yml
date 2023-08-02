@@ -124,7 +124,7 @@ examples:
             <span class="spectrum-Tags-itemLabel">Tag label</span>
           </div>
 
-          <div class="spectrum-Tag spectrum-Tag--sizeS is-disabled" tabindex="0">
+          <div class="spectrum-Tag spectrum-Tag--sizeS is-disabled" tabindex="-1">
             <div class="spectrum-Avatar spectrum-Avatar--size50">
               <img class="spectrum-Avatar-image" src="img/example-ava.jpg" alt="Avatar">
             </div>

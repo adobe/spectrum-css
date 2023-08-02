@@ -51,6 +51,9 @@ governing permissions and limitations under the License.
   inline-size: 100%;
   max-block-size: calc(100vh - var(--mod-tray-spacing-edge-to-tray-safe-zone, var(--spectrum-tray-spacing-edge-to-tray-safe-zone)));
   margin-block-start: var(--mod-tray-spacing-edge-to-tray-safe-zone, var(--spectrum-tray-spacing-edge-to-tray-safe-zone));
+  padding-block-start: var(--mod-tray-top-to-content-area, var(--spectrum-tray-top-to-content-area));
+  padding-block-end: var(--mod-tray-bottom-to-content-area, var(--spectrum-tray-top-to-content-area));
+  box-sizing: border-box;
   overflow: auto;
   outline: none;
 

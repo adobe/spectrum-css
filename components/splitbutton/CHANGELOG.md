@@ -3,6 +3,13 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+<a name="5.0.57"></a>
+##5.0.57
+🗓
+2023-07-24 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/splitbutton@5.0.56...@spectrum-css/splitbutton@5.0.57)
+
+**Note:** Version bump only for package @spectrum-css/splitbutton
+
 <a name="5.0.56"></a>
 ##5.0.56
 🗓

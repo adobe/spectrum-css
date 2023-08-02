@@ -3,6 +3,20 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+<a name="1.1.49"></a>
+##1.1.49
+🗓
+2023-07-26 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/assetcard@1.1.48...@spectrum-css/assetcard@1.1.49)
+
+**Note:** Version bump only for package @spectrum-css/assetcard
+
+<a name="1.1.48"></a>
+##1.1.48
+🗓
+2023-07-24 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/assetcard@1.1.47...@spectrum-css/assetcard@1.1.48)
+
+**Note:** Version bump only for package @spectrum-css/assetcard
+
 <a name="1.1.47"></a>
 ##1.1.47
 🗓
