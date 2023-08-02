@@ -17,6 +17,7 @@
 | `--mod-checkbox-control-invalid-color-down`     |
 | `--mod-checkbox-control-selected-color-default` |
 | `--mod-checkbox-control-selected-color-down`    |
+| `--mod-checkbox-control-selected-color-focus`   |
 | `--mod-checkbox-control-selected-color-hover`   |
 | `--mod-checkbox-control-size`                   |
 | `--mod-checkbox-emphasized-color-default`       |
