@@ -12,8 +12,8 @@ governing permissions and limitations under the License.
 
 /* checkbox/index.css
  *
- * .spectrum-Checkbox-box::before the Checkbox "box"
- * .spectrum-Checkbox-box::after is the Focus ring
+ * .spectrum-Checkbox-box::before is the Checkbox "box"
+ * .spectrum-Checkbox-box::after is the focus indicator
  */
 
 /* Component tokens by t-shirt size */
@@ -39,6 +39,11 @@ governing permissions and limitations under the License.
   --spectrum-checkbox-emphasized-color-hover: var(--spectrum-accent-color-1000);
   --spectrum-checkbox-emphasized-color-down: var(--spectrum-accent-color-1100);
   --spectrum-checkbox-emphasized-color-focus: var(--spectrum-accent-color-1000);
+
+  --spectrum-checkbox-control-selected-color-default: var(--spectrum-neutral-background-color-selected-default);
+  --spectrum-checkbox-control-selected-color-hover: var(--spectrum-neutral-background-color-selected-hover);
+  --spectrum-checkbox-control-selected-color-down: var(--spectrum-neutral-background-color-selected-down);
+  --spectrum-checkbox-control-selected-color-focus: var(--spectrum-neutral-background-color-selected-key-focus);
 
   /* Font */
   --spectrum-checkbox-font-size: var(--spectrum-font-size-100);
@@ -161,8 +166,8 @@ governing permissions and limitations under the License.
       }
     }
 
-    &.is-indeterminate .spectrum-Checkbox-input:focus-ring,
-    .spectrum-Checkbox-input:focus-ring {
+    &.is-indeterminate .spectrum-Checkbox-input:focus-visible,
+    .spectrum-Checkbox-input:focus-visible {
       & + .spectrum-Checkbox-box {
         &:before {
           border-color: var(--highcontrast-checkbox-color-hover, var(--mod-checkbox-invalid-color-hover, var(--spectrum-checkbox-invalid-color-hover)));
@@ -243,6 +248,12 @@ governing permissions and limitations under the License.
       }
     }
 
+    .spectrum-Checkbox-input:focus-visible + .spectrum-Checkbox-box {
+      &:before {
+        border-color: var(--highcontrast-checkbox-highlight-color-focus, var(--mod-checkbox-control-selected-color-focus, var(--spectrum-checkbox-control-selected-color-focus)));
+      }
+    }
+
     &:hover {
       .spectrum-Checkbox-input:checked + .spectrum-Checkbox-box,
       .spectrum-Checkbox-box {
@@ -253,7 +264,7 @@ governing permissions and limitations under the License.
     }
   }
 
-  /* Invalid Indetermiante */
+  /* Invalid Indeterminate */
   &.is-invalid.is-indeterminate {
     .spectrum-Checkbox-box,
     .spectrum-Checkbox-input:checked + .spectrum-Checkbox-box {
@@ -281,14 +292,18 @@ governing permissions and limitations under the License.
   &--emphasized {
     /* Checked and Indeterminate Default States */
     .spectrum-Checkbox-input:checked + .spectrum-Checkbox-box,
+    &.is-indeterminate .spectrum-Checkbox-input:checked + .spectrum-Checkbox-box,
     &.is-indeterminate .spectrum-Checkbox-box {
       &:before {
         border-color: var(--highcontrast-checkbox-highlight-color-default, var(--mod-checkbox-emphasized-color-default, var(--spectrum-checkbox-emphasized-color-default)));
       }
     }
 
+    /* Hover for Checked and Indeterminate States */
     &:hover {
-      .spectrum-Checkbox-box {
+      .spectrum-Checkbox-input:checked + .spectrum-Checkbox-box,
+      &.is-indeterminate .spectrum-Checkbox-input:checked + .spectrum-Checkbox-box,
+      &.is-indeterminate .spectrum-Checkbox-box {
         &:before {
           border-color: var(--highcontrast-checkbox-color-hover, var(--mod-checkbox-emphasized-color-hover, var(--spectrum-checkbox-emphasized-color-hover)));
         }
@@ -296,24 +311,24 @@ governing permissions and limitations under the License.
     }
 
     /* Selected and Indeterminate Focus States */
-    .spectrum-Checkbox-input:focus-ring + .spectrum-Checkbox-box,
-    .spectrum-Checkbox-input:focus-ring:checked + .spectrum-Checkbox-box,
-    &.is-indeterminate .spectrum-Checkbox-input:focus-ring + .spectrum-Checkbox-box {
-       &:before {
+    .spectrum-Checkbox-input:focus-visible:checked + .spectrum-Checkbox-box,
+    &.is-indeterminate .spectrum-Checkbox-input:focus-visible + .spectrum-Checkbox-box {
+      &:before {
         border-color: var(--highcontrast-checkbox-highlight-color-focus, var(--mod-checkbox-emphasized-color-focus, var(--spectrum-checkbox-emphasized-color-focus)));
-       }
+      }
     }
 
     /* Selected Invalid Focus State */
-    &.is-invalid .spectrum-Checkbox-input:focus-ring:checked + .spectrum-Checkbox-box {
+    &.is-invalid .spectrum-Checkbox-input:focus-visible:checked + .spectrum-Checkbox-box {
       &:before {
-        border-color: var(--highcontrast-checkbox-color-focus, var(--mod-checkbox-invalid-color-focus, var(--spectrum-checkbox-invalid-color-focus)));
+        border-color: var(--highcontrast-checkbox-color-default, var(--mod-checkbox-invalid-color-focus, var(--spectrum-checkbox-invalid-color-focus)));
       }
     }
 
     /* Invalid Hover States */
     &.is-invalid:hover {
       &.is-indeterminate .spectrum-Checkbox-box,
+      &.is-indeterminate .spectrum-Checkbox-input:checked + .spectrum-Checkbox-box,
       .spectrum-Checkbox-input:checked + .spectrum-Checkbox-box {
         &:before {
           border-color: var(--highcontrast-checkbox-color-hover, var(--mod-checkbox-invalid-color-hover, var(--spectrum-checkbox-invalid-color-hover)));
@@ -324,6 +339,7 @@ governing permissions and limitations under the License.
     /* Selected and Indeterminate Hover States */
     &:hover {
       &.is-indeterminate .spectrum-Checkbox-box,
+      &.is-indeterminate .spectrum-Checkbox-input:checked + .spectrum-Checkbox-box,
       .spectrum-Checkbox-input:checked + .spectrum-Checkbox-box {
         &:before {
           border-color: var(--highcontrast-checkbox-highlight-color-hover, var(--mod-checkbox-emphasized-color-hover, var(--spectrum-checkbox-emphasized-color-hover)));
@@ -334,6 +350,7 @@ governing permissions and limitations under the License.
     /* Selected and Indeterminate Active States */
     &:active {
       &.is-indeterminate .spectrum-Checkbox-box,
+      &.is-indeterminate .spectrum-Checkbox-input:checked + .spectrum-Checkbox-box,
       .spectrum-Checkbox-input:checked + .spectrum-Checkbox-box {
         &:before {
           border-color: var(--highcontrast-checkbox-highlight-color-default, var(--mod-checkbox-emphasized-color-down, var(--spectrum-checkbox-emphasized-color-down)));
@@ -352,7 +369,7 @@ governing permissions and limitations under the License.
     }
 
     /* Focus State */
-    &:focus-ring {
+    &:focus-visible {
       .spectrum-Checkbox-input:checked + .spectrum-Checkbox-box,
       .spectrum-Checkbox-box {
         &:before {
@@ -418,10 +435,10 @@ governing permissions and limitations under the License.
     cursor: default;
   }
 
+  /* Selected */
   &:checked + .spectrum-Checkbox-box {
     &:before {
-      border-color:
-      var(--highcontrast-checkbox-highlight-color-default, var(--mod-checkbox-control-selected-color-default, var(--spectrum-checkbox-control-selected-color-default)));
+      border-color: var(--highcontrast-checkbox-highlight-color-default, var(--mod-checkbox-control-selected-color-default, var(--spectrum-checkbox-control-selected-color-default)));
       background-color: var(--mod-checkbox-checkmark-color, var(--spectrum-checkbox-checkmark-color));
       border-width: var(--mod-checkbox-selected-border-width, var(--spectrum-checkbox-selected-border-width));
     }
@@ -432,11 +449,12 @@ governing permissions and limitations under the License.
     }
   }
 
-  &:focus-ring + .spectrum-Checkbox-box {
+  /* Focus */
+  &:focus-visible + .spectrum-Checkbox-box {
     &:before {
-      border-color: var(--highcontrast-checkbox-highlight-color-focus, var(--mod-checkbox-emphasized-color-focus, var(--spectrum-checkbox-emphasized-color-focus)));
+      border-color: var(--highcontrast-checkbox-color-focus, var(--mod-checkbox-control-color-focus, var(--spectrum-checkbox-control-color-focus)));
     }
-
+    
     &:after {
       forced-color-adjust: none;
       box-shadow:
@@ -446,8 +464,15 @@ governing permissions and limitations under the License.
     }
   }
 
-  &:focus-ring + .spectrum-Checkbox-label {
+  &:focus-visible + .spectrum-Checkbox-label {
     color: var(--highcontrast-checkbox-content-color-focus, var(--mod-checkbox-content-color-focus, var(--spectrum-checkbox-content-color-focus)));
+  }
+
+  /* Selected and Focus */
+  &:focus-visible:checked + .spectrum-Checkbox-box {
+    &:before {
+      border-color: var(--highcontrast-checkbox-highlight-color-focus, var(--mod-checkbox-control-selected-color-focus, var(--spectrum-checkbox-control-selected-color-focus)));
+    }
   }
 }
 
@@ -546,7 +571,7 @@ governing permissions and limitations under the License.
 /* Windows high contrast mode */
 @media (forced-colors: active) {
   .spectrum-Checkbox-input {
-    &:focus-ring + .spectrum-Checkbox-box {
+    &:focus-visible + .spectrum-Checkbox-box {
       forced-color-adjust: none;
       outline-color: var(--highcontrast-checkbox-focus-indicator-color, var(--mod-checkbox-focus-indicator-color, var(--spectrum-checkbox-focus-indicator-color)));
       outline-style: auto;
@@ -560,26 +585,25 @@ governing permissions and limitations under the License.
     }
   }
   .spectrum-Checkbox {
-    --highcontrast-checkbox-content-color-default: ButtonText;
-    --highcontrast-checkbox-content-color-hover: ButtonText;
-    --highcontrast-checkbox-content-color-down: ButtonText;
-    --highcontrast-checkbox-content-color-focus: ButtonText;
+    /* Label Text */
+    --highcontrast-checkbox-content-color-default: CanvasText;
+    --highcontrast-checkbox-content-color-hover: CanvasText;
+    --highcontrast-checkbox-content-color-down: CanvasText;
+    --highcontrast-checkbox-content-color-focus: CanvasText;
 
-    --highcontrast-checkbox-background-color-default: Background;
+    /* Checkbox box */
+    --highcontrast-checkbox-background-color-default: Canvas;
 
     --highcontrast-checkbox-color-default: ButtonText;
     --highcontrast-checkbox-color-hover: ButtonText;
+    --highcontrast-checkbox-color-focus: Highlight;
 
     --highcontrast-checkbox-highlight-color-default: Highlight;
     --highcontrast-checkbox-highlight-color-hover: Highlight;
     --highcontrast-checkbox-highlight-color-down: Highlight;
+    --highcontrast-checkbox-highlight-color-focus: Highlight;
 
     --highcontrast-checkbox-disabled-color-default: GrayText;
-
-    --highcontrast-checkbox-focus-indicator-color: ButtonText;
-
-    --highcontrast-checkbox-highlight-color-focus: Highlight;
-    --highcontrast-checkbox-focus-indicator-color: FieldText;
-    --highcontrast-checkbox-color-focus: FieldText;
+    --highcontrast-checkbox-focus-indicator-color: CanvasText;
   }
 }
