@@ -74,12 +74,11 @@ export const TableRowItem = ({
 			...customClasses.reduce((a, c) => ({ ...a, [c]: true }), {}),
 		})}
 		role=${ifDefined(useDivs ? "row" : undefined)}
+		tabindex=${ifDefined(showCheckbox ? "0" : undefined)}
 		data-tier=${ifDefined(tier)}
 		?hidden=${isHidden}
 	>
-		${when(
-			showCheckbox,
-			() => html`
+		${when(showCheckbox, () => html`
 			<${cellTag}
 				role=${ifDefined(useDivs ? "cell" : undefined)}
 				class="spectrum-Table-cell spectrum-Table-checkboxCell"
@@ -93,8 +92,7 @@ export const TableRowItem = ({
 			</${cellTag}>`
 		)}
 
-		${
-			isCollapsible
+		${isCollapsible
 				? html`
 					<${cellTag}
 						role=${ifDefined(useDivs ? "cell" : undefined)}
@@ -103,7 +101,7 @@ export const TableRowItem = ({
 							[`${rootClass}-cell--collapsible`]: true,
 							[`${rootClass}-cell--thumbnail`]: useThumbnail,
 						})}
-						tabindex="0"
+						tabindex=${ifDefined(!showCheckbox ? "0" : undefined)}
 					>
 						<div class="${rootClass}-collapseInner">
 							${when(!isLastTier, () =>
@@ -134,28 +132,26 @@ export const TableRowItem = ({
 							[`${rootClass}-cell`]: true,
 							[`${rootClass}-cell--thumbnail`]: useThumbnail,
 						})}
-						tabindex="0"
+						tabindex=${ifDefined(!showCheckbox ? "0" : undefined)}
 						colspan=${ifDefined(isSectionHeader ? "3" : undefined)}
 					>${getCellContent(0)}</${cellTag}>`
 		}
 
-		${when(
-			!isSectionHeader,
-			() => html`
-				<${cellTag}
+		${when(!isSectionHeader, () => html`
+			<${cellTag}
+				role=${ifDefined(useDivs ? "cell" : undefined)}
+				class=${classMap({
+					[`${rootClass}-cell`]: true,
+					[`${rootClass}-cell--thumbnail`]: useThumbnail,
+				})}
+				tabindex=${ifDefined(!showCheckbox ? "0" : undefined)}>${getCellContent(1)}</${cellTag}>
+
+			<${cellTag}
 					role=${ifDefined(useDivs ? "cell" : undefined)}
 					class=${classMap({
 						[`${rootClass}-cell`]: true,
-						[`${rootClass}-cell--thumbnail`]: useThumbnail,
 					})}
-					tabindex="0">${getCellContent(1)}</${cellTag}>
-
-				<${cellTag}
-						role=${ifDefined(useDivs ? "cell" : undefined)}
-						class=${classMap({
-							[`${rootClass}-cell`]: true,
-						})}
-						tabindex="0">${getCellContent(2)}</${cellTag}>`
+					tabindex=${ifDefined(!showCheckbox ? "0" : undefined)}>${getCellContent(2)}</${cellTag}>`
 		)}
 	</${rowTag}>
   `;
@@ -193,16 +189,23 @@ export const Template = ({
 	const rowTag = useDivs ? literal`div` : literal`tr`;
 	const thTag = useDivs ? literal`div` : literal`th`;
 
+	const rootClassMapVariants = {
+		[`${rootClass}--size${size?.toUpperCase()}`]: typeof size !== "undefined",
+		[`${rootClass}--${density}`]: density !== "standard",
+		[`${rootClass}--quiet`]: isQuiet,
+		[`${rootClass}--emphasized`]: isEmphasized,
+		...customClasses.reduce((a, c) => ({ ...a, [c]: true }), {}),
+	};
+
+	const useCheckboxCell = rowItems.some((item) => item.showCheckbox === true);
+
 	const tableHtml = html`
 	<${tableTag}
 		role=${ifDefined(useDivs ? "table" : undefined)}
 		class=${classMap({
-			[rootClass]: true,
-			[`${rootClass}--size${size?.toUpperCase()}`]: typeof size !== "undefined",
-			[`${rootClass}--${density}`]: density !== "standard",
-			[`${rootClass}--quiet`]: isQuiet,
-			[`${rootClass}--emphasized`]: isEmphasized,
-			...customClasses.reduce((a, c) => ({ ...a, [c]: true }), {}),
+			[rootClass]: !useScroller,
+			[`${rootClass}-main`]: useScroller,
+			...rootClassMapVariants
 		})}
 		id=${ifDefined(id)}
 		style="max-width: 800px;"
@@ -214,9 +217,7 @@ export const Template = ({
 			<${rowTag}
 				role=${ifDefined(useDivs ? "row" : undefined)}
 			>
-				${when(
-					rowItems.some((item) => item.showCheckbox === true),
-					() => html`
+				${when(useCheckboxCell, () => html`
 					<${thTag}
 						class="spectrum-Table-headCell spectrum-Table-checkboxCell"
 						role=${ifDefined(useDivs ? "columnheader" : undefined)}
@@ -287,9 +288,18 @@ export const Template = ({
 	</${tableTag}>
 	`;
 
+	// Scrollable table moves the root class and variant classes into the wrapper
+	// with the scroller class.
 	if (useScroller) {
 		return html`
-			<div class="spectrum-Table-scroller" style="height: 198px; overscroll-behavior: none;">
+			<div
+				class=${classMap({
+					[rootClass]: true,
+					[`${rootClass}-scroller`]: true,
+					...rootClassMapVariants,
+				})}
+				style="height: 200px;"
+			>
 				${tableHtml}
 			</div>
 		`;
