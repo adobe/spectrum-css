@@ -2,6 +2,7 @@ import { html } from "lit-html";
 import { classMap } from "lit-html/directives/class-map.js";
 import { styleMap } from "lit-html/directives/style-map.js";
 import { when } from "lit-html/directives/when.js";
+import { ifDefined } from "lit-html/directives/if-defined.js";
 
 import "../index.css";
 
@@ -25,8 +26,25 @@ export const Template = ({
 		position: "relative",
 		"inset-block": "-100%",
 	},
+	componentOnly,
+	content,
+	role,
 	...globals
 }) => {
+	// Just the component markup. For use by other component's stories.
+	if (componentOnly){
+		return html`
+			<div
+				class=${classMap({
+					[rootClass]: true,
+					...customClasses.reduce((a, c) => ({ ...a, [c]: true }), {}),
+				})}
+				style=${styleMap(checkerBoardStyles)}
+				role=${ifDefined(role)}
+			>${content}</div>`;
+	}
+
+	// Component with wrapper for Storybook display, and a testing overlay.
 	return html`
 		<div style=${styleMap(containerStyles)}>
 			<div
@@ -35,7 +53,8 @@ export const Template = ({
 					...customClasses.reduce((a, c) => ({ ...a, [c]: true }), {}),
 				})}
 				style=${styleMap(checkerBoardStyles)}
-			></div>
+				role=${ifDefined(role)}
+			>${content}</div>
 			${when(hasColorOverlay, () => {
 				return html` <div style=${styleMap(colorStyles)}></div>`;
 			})}
