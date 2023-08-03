@@ -252,8 +252,9 @@ governing permissions and limitations under the License.
 
   .spectrum-Menu-divider {
     --spectrum-menu-divider-thickness: var(--spectrum-divider-thickness-medium);
-    &.spectrum-Divider--sizeS { --spectrum-menu-divider-thickness: var(--spectrum-divider-thickness-small); }
-    &.spectrum-Divider--sizeL { --spectrum-menu-divider-thickness: var(--spectrum-divider-thickness-large); }
+    &.spectrum-Divider--sizeS {
+      --spectrum-menu-divider-thickness: var(--spectrum-divider-thickness-small); 
+    }
 
     overflow: visible;
     inline-size: auto;

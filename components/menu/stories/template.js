@@ -169,6 +169,7 @@ export const Template = ({
           return Divider({
             ...globals,
             tag: "li",
+            size: "s",
             customClasses: [`${rootClass}-divider`],
           });
         else if (i.heading) return MenuGroup({ ...i, ...globals, subrole, size });
