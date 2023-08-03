@@ -104,40 +104,18 @@ governing permissions and limitations under the License.
 				var(--spectrum-colorhandle-animation-easing)
 			);
 
-	border-radius: 100%;
+  border-radius: 100%;
 
-	&::after {
-		content: "";
-		inset-inline: calc(
-			50% -
-				calc(
-					var(
-							--mod-colorhandle-hitarea-size,
-							var(--spectrum-colorhandle-hitarea-size)
-						) / 2
-				)
-		);
-		inset-block: calc(
-			50% -
-				calc(
-					var(
-							--mod-colorhandle-hitarea-size,
-							var(--spectrum-colorhandle-hitarea-size)
-						) / 2
-				)
-		);
-		position: absolute;
-		display: block;
-		inline-size: var(
-			--mod-colorhandle-hitarea-size,
-			var(--spectrum-colorhandle-hitarea-size)
-		);
-		block-size: var(
-			--mod-colorhandle-hitarea-size,
-			var(--spectrum-colorhandle-hitarea-size)
-		);
-		border-radius: var(--mod-colorhandle-hitarea-border-radius, 100%);
-	}
+  &:after {
+    content: '';
+    inset-inline: calc(50% - calc(var(--mod-colorhandle-hitarea-size, var(--spectrum-colorhandle-hitarea-size)) / 2));
+    inset-block: calc(50% - calc(var(--mod-colorhandle-hitarea-size, var(--spectrum-colorhandle-hitarea-size)) / 2));
+    position: absolute;
+    display: block;
+    inline-size: var(--mod-colorhandle-hitarea-size, var(--spectrum-colorhandle-hitarea-size));
+    block-size: var(--mod-colorhandle-hitarea-size, var(--spectrum-colorhandle-hitarea-size));
+    border-radius: var(--mod-colorhandle-hitarea-border-radius, 100%);
+  }
 
   &.is-focused,
   &.focus-ring {
