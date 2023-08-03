@@ -3,6 +3,22 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+<a name="5.0.45"></a>
+##5.0.45
+🗓
+2023-08-03 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/tag@5.0.44...@spectrum-css/tag@5.0.45)
+
+**Note:** Version bump only for package @spectrum-css/tag
+
+<a name="5.0.44"></a>
+##5.0.44
+🗓
+2023-07-31 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/tag@5.0.43...@spectrum-css/tag@5.0.44)
+
+### 🐛 Bug fixes
+
+- **tag:**update whcm focus ring color ([#2043](https://github.com/adobe/spectrum-css/issues/2043))([e581fbc](https://github.com/adobe/spectrum-css/commit/e581fbc))
+
 <a name="5.0.43"></a>
 ##5.0.43
 🗓

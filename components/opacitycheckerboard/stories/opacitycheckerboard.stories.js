@@ -1,7 +1,7 @@
 import { Template } from "./template";
 
 export default {
-	title: "Components/Opacity Checkerboard",
+	title: "Components/Opacity checkerboard",
 	description:
 		"Opacity checkerboard is used with other components to highlight opacity.",
 	component: "OpacityCheckerboard",

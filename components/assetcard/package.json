@@ -1,6 +1,6 @@
 {
   "name": "@spectrum-css/assetcard",
-  "version": "1.1.49",
+  "version": "1.1.50",
   "description": "The Spectrum CSS asset card component",
   "license": "Apache-2.0",
   "author": "Adobe",
@@ -18,16 +18,16 @@
     "build": "gulp"
   },
   "peerDependencies": {
-    "@spectrum-css/checkbox": ">=3 <=6",
+    "@spectrum-css/checkbox": ">=7.0.0",
     "@spectrum-css/icon": ">=3",
     "@spectrum-css/typography": ">=4 <=5",
     "@spectrum-css/vars": ">=9"
   },
   "devDependencies": {
-    "@spectrum-css/checkbox": "^6.1.10",
+    "@spectrum-css/checkbox": "^7.0.0",
     "@spectrum-css/component-builder": "^4.0.12",
     "@spectrum-css/icon": "^3.0.50",
-    "@spectrum-css/typography": "^5.0.29",
+    "@spectrum-css/typography": "^5.0.30",
     "@spectrum-css/vars": "^9.0.8",
     "gulp": "^4.0.0"
   },
