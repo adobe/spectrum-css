@@ -20,6 +20,7 @@ governing permissions and limitations under the License.
   --spectrum-slider-handle-border-width-down: var(--spectrum-slider-handle-border-width-down-medium);
   --spectrum-slider-label-top-to-text: var(--spectrum-component-top-to-text-75);
   --spectrum-slider-control-to-field-label: var(--spectrum-slider-control-to-field-label-medium);
+  --spectrum-slider-control-to-stepper: var(--spectrum-spacing-200);
 }
 
 
@@ -96,6 +97,19 @@ governing permissions and limitations under the License.
   min-inline-size: var(--mod-slider-min-size, var(--spectrum-slider-min-size));
 
   user-select: none;
+}
+
+.spectrum-Slider--sideLabel {
+  display: flex;
+  align-items: center;
+
+  .spectrum-Slider-labelContainer {
+    margin-block-start: 0;
+  }
+}
+
+.spectrum-Slider .spectrum-Stepper {
+  margin-inline-start: var(--mod-slider-control-to-stepper, var(--spectrum-slider-control-to-stepper));
 }
 
 .spectrum-Slider-controls {
