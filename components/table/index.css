@@ -319,7 +319,6 @@ governing permissions and limitations under the License.
   --mod-table-border-radius: var(--mod-table-border-radius--quiet, 0px);
   --mod-table-outer-border-inline-width: var(--mod-table-outer-border-inline-width--quiet, 0px);
   --mod-table-header-background-color: var(--mod-table-header-background-color--quiet, var(--spectrum-transparent-white-100));
-  --mod-table-header-background-color: var(--mod-table-header-background-color--quiet, var(--spectrum-transparent-white-100));
   --mod-table-row-background-color: var(--mod-table-row-background-color--quiet , var(--spectrum-transparent-white-100));
 }
 
@@ -809,9 +808,16 @@ div.spectrum-Table-headCell {
   overflow: auto;
 
   border-radius: var(--mod-table-border-radius, var(--spectrum-table-border-radius));
-  border: var(--mod-table-border-width, var(--spectrum-table-border-width))
+  border-block: var(--mod-table-border-width, var(--spectrum-table-border-width))
     solid
     var(--highcontrast-table-border-color, var(--mod-table-border-color, var(--spectrum-table-border-color)));
+  border-inline: var(--mod-table-outer-border-inline-width, var(--spectrum-table-outer-border-inline-width)) 
+    solid 
+    var(--highcontrast-table-border-color, var(--mod-table-border-color, var(--spectrum-table-border-color)));
+  
+  &.spectrum-Table--quiet {
+    border-block-start: none;
+  }
 
   /* Make sure shift-tab reverse keyboard navigation keeps the whole cell in focus.
      --mod-table-current-header-height should be dynamically updated with JS to match the table header height. */
@@ -825,6 +831,7 @@ div.spectrum-Table-headCell {
   .spectrum-Table,
   .spectrum-Table-main {
     --spectrum-table-header-background-color: var(--mod-table-header-background-color-scrollable, var(--spectrum-background-layer-1-color, var(--spectrum-global-color-gray-100)));
+    --mod-table-header-background-color--quiet: var(--mod-table-header-background-color-scrollable, var(--spectrum-background-layer-1-color, var(--spectrum-global-color-gray-100)));
   }
 
   .spectrum-Table-head {
