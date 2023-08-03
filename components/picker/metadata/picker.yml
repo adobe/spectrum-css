@@ -15,8 +15,7 @@ sections:
 
       Additionally, `.spectrum-Picker` should not contain the `.spectrum-Popover` that it opens.
 
-      In order to use a side label with a Picker, wrap the Picker in a `<div style="display: inline-flex">` to allow for the correct spacing.
-      Additionally, add the `spectrum-Picker--sideLabel` class to the Picker.
+      In order to use a side label with a Picker, add the `spectrum-Picker--sideLabel` class to the Picker.
 
       ### Icon classname changes
 
