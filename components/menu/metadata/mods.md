@@ -56,6 +56,7 @@
 | `--mod-menu-item-value-color-down`                                 |
 | `--mod-menu-item-value-color-focus`                                |
 | `--mod-menu-item-value-color-hover`                                |
+| `--mod-menu-section-divider-margin-block`                          |
 | `--mod-menu-section-header-bottom-edge-to-text`                    |
 | `--mod-menu-section-header-color`                                  |
 | `--mod-menu-section-header-font-size`                              |

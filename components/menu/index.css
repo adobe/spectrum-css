@@ -251,9 +251,16 @@ governing permissions and limitations under the License.
   }
 
   .spectrum-Menu-divider {
+    --spectrum-menu-divider-thickness: var(--spectrum-divider-thickness-medium);
+    &.spectrum-Divider--sizeS { --spectrum-menu-divider-thickness: var(--spectrum-divider-thickness-small); }
+    &.spectrum-Divider--sizeL { --spectrum-menu-divider-thickness: var(--spectrum-divider-thickness-large); }
+
     overflow: visible;
     inline-size: auto;
-    margin-block: var(--mod-menu-item-bottom-edge-to-text, var(--spectrum-menu-item-bottom-edge-to-text));
+    margin-block: var(
+      --mod-menu-section-divider-margin-block,
+      max(0px, (var(--spectrum-menu-item-section-divider-height) - var(--spectrum-menu-divider-thickness)) / 2)
+    );
     margin-inline: var(--mod-menu-item-label-inline-edge-to-content, var(--spectrum-menu-item-label-inline-edge-to-content));
   }
 }
