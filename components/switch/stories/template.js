@@ -9,6 +9,7 @@ export const Template = ({
 	size = "m",
 	label = "Switch label",
 	isDisabled,
+	isChecked,
 	isEmphasized,
 	customClasses = [],
 	id,
@@ -35,7 +36,7 @@ export const Template = ({
 			})}
 			id=${ifDefined(id)}
 		>
-			<input type="checkbox" class="${rootClass}-input" id="switch-onoff-0" ?disabled=${isDisabled} />
+			<input type="checkbox" class="${rootClass}-input" id="switch-onoff-0" ?disabled=${isDisabled} ?checked=${isChecked}/>
 			<span class="${rootClass}-switch"></span>
 			${label
 				? html`<label class="${rootClass}-label" for="switch-onoff-0"

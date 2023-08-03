@@ -36,7 +36,7 @@ export default {
 			control: "boolean",
 		},
 		isChecked: {
-			name: "Disabled",
+			name: "Checked",
 			type: { name: "boolean" },
 			table: {
 				type: { summary: "boolean" },
@@ -57,6 +57,10 @@ export default {
 	args: {
 		rootClass: "spectrum-Switch",
 		isDisabled: false,
+		isChecked: false,
+		isEmphasized: false,
+		label: "Switch label",
+		size: "m",
 	},
 	parameters: {
 		actions: {
@@ -76,6 +80,11 @@ Default.args = {};
 export const Emphasized = Template.bind({});
 Emphasized.args = {
 	isEmphasized: true
+};
+
+export const Checked = Template.bind({});
+Checked.args = {
+	isChecked: true
 };
 
 export const Disabled = Template.bind({});
