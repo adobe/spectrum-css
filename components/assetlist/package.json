@@ -1,6 +1,6 @@
 {
   "name": "@spectrum-css/assetlist",
-  "version": "3.0.69",
+  "version": "3.0.70",
   "description": "The Spectrum CSS assetlist component",
   "license": "Apache-2.0",
   "author": "Adobe",
@@ -18,12 +18,12 @@
     "build": "gulp"
   },
   "peerDependencies": {
-    "@spectrum-css/checkbox": ">=3 <=6",
+    "@spectrum-css/checkbox": ">=7.0.0",
     "@spectrum-css/icon": ">=3",
     "@spectrum-css/vars": ">=9"
   },
   "devDependencies": {
-    "@spectrum-css/checkbox": "^6.1.10",
+    "@spectrum-css/checkbox": "^7.0.0",
     "@spectrum-css/component-builder": "^4.0.12",
     "@spectrum-css/icon": "^3.0.50",
     "@spectrum-css/vars": "^9.0.8",
