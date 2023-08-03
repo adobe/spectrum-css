@@ -74,7 +74,6 @@ export const TableRowItem = ({
 			...customClasses.reduce((a, c) => ({ ...a, [c]: true }), {}),
 		})}
 		role=${ifDefined(useDivs ? "row" : undefined)}
-		tabindex=${ifDefined(showCheckbox ? "0" : undefined)}
 		data-tier=${ifDefined(tier)}
 		?hidden=${isHidden}
 	>
