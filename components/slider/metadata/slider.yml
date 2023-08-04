@@ -178,7 +178,9 @@ examples:
     name: With Side Label
     markup: |
       <div class="spectrum-Slider spectrum-Slider--sizeM spectrum-Slider--sideLabel">
-        <label class="spectrum-FieldLabel spectrum-FieldLabel--sizeM spectrum-FieldLabel--left spectrum-Slider-label" id="spectrum-Slider-label-6" for="spectrum-Slider-input-6">Label</label>
+        <div class="spectrum-Slider-labelContainer">
+          <label class="spectrum-FieldLabel spectrum-FieldLabel--sizeM spectrum-FieldLabel--left spectrum-Slider-label" id="spectrum-Slider-label-6" for="spectrum-Slider-input-6">Label</label>
+        </div>
         <div class="spectrum-Slider-controls">
           <div class="spectrum-Slider-track"></div>
           <div class="spectrum-Slider-handle" style="left: 40%;">
