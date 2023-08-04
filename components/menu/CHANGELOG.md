@@ -3,6 +3,205 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+<a name="5.0.0"></a>
+#5.0.0
+🗓
+2023-08-04 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/menu@4.0.50...@spectrum-css/menu@5.0.0)
+
+### ✨ Features
+
+- **menu:**migrate to spectrum-tokens + add new features ([#1942](https://github.com/adobe/spectrum-css/issues/1942))([d961abd](https://github.com/adobe/spectrum-css/commit/d961abd))
+
+      ###
+      🛑 BREAKING CHANGES
+
+      	*
+      	**menu:** migrates the Menu to `@adobe/spectrum-tokens`
+
+- feat(menu)!: migrate to spectrum-tokens
+
+- docs(site): update menu usage in the docs site
+
+- fix(menu): use correct guidelines link in docs
+
+- feat(menu): make medium size styles the default
+
+Make .spectrum-Menu--sizeM the default; move its custom properties to
+the parent class, and move sizing styles underneath the parent class
+custom property definitions.
+
+- fix(menu): set color property where fill is used
+
+Add color declaration wherever there is 'fill', per SWC request. Because
+"using fill to set the colour of icons in the menu css isn't
+compatible with the way we process our icons, so the icons aren't
+colouring properly or changing depending on the state".
+
+- fix(menu): checkmark margin to fix alignment of selected items
+
+Selected menu items with checkmark were shifting 2 pixels as compared
+to the non-selected menu items. Looking over the updated design, the
+text-to-control-\* tokens are used for the space between the checkmark
+and the text.
+
+- fix(menu): section heading top and bottom spacing
+
+When a section heading was above menu items, it previously looked
+strange because of the lack of space. The sectionHeading also needs
+top and bottom padding.
+
+- fix(menu): organize stories under components category
+
+- feat(menu): simplify cjk style rules
+
+Replace unnecessary CJK style rules with a change to the relevant custom
+property values.
+
+- refactor(menu): simplify high contrast mode styles with fixes
+
+* Simplify high contrast mode styles. Less custom properties are needed.
+* Fix for hover causing things to disappear on collapsible items. Fix
+  may need to be replaced later with one that addresses the regular
+  styles for children of menu-item being applied to the nested menu
+  items in the collapsible variant.
+* Remove skin.css as part of tokens migration. Its rules should already
+  be handled now by the index.css.
+
+- feat(menu): create new stories and finalize existing stories
+
+Updates the Menu stories to account for additional variants on the docs
+and changes to markup. Adds several new stories.
+
+- fix(menu): update for selected states and keyboard focus
+
+* Use state class naming instead of modifier class naming for
+  is-selected and is-selectable.
+* Show focus indicator line only with :focus-visible for keyboard focus
+* Simplify RTL/LTR change of focus indicator with scalar custom prop
+
+- feat(menu): story for drill-in variant
+
+Add story for drill-in variant. Also makes isSelectable false by default
+and change some stories to set it to false to better align with docs
+examples.
+
+- fix(menu): use child combinator to limit styles applied for nested
+
+In the collapsible variant, style rules applying to children of a menu
+item were also applying to the nested menu child items. This was causing
+some issues with high contrast hovers and could also be noticed by
+changing a mod like --mod-menu-item-label-content-color-hover and then
+hovering over the parent menu item in the collapsible variant (this
+would also change the color of all the child menu items).
+
+- docs(menu): remove submenu from drill-in example
+
+The displayed submenu for the drill-in example was not how submenus
+should be displayed per the guidelines. They need to be positioned, and
+are shown as being within another popover. Showing this adjacent menu
+like this could cause some confusion as to its usage; the adjacent menu
+was not positioned properly and does not have any separate styles within
+the CSS for doing so.
+
+- fix(menu): collapsible - remove extra indentation for sub items
+
+For the collapsible variant:
+The child menu items under a parent menu item that contains a workflow
+icon should not show extra indentation, otherwise it looks like a
+different tier when next to a menu item without an icon. Confirmed
+with design team.
+
+All sub-items are now indented to after the chevron and the start of the
+parent item text/heading.
+
+- feat(menu): add collapsible story
+
+Add Collapsible story to menu in Storybook, based on example from docs
+example.
+
+- feat(menu): add t-shirt sizing to storybook
+
+Add control for t-shirt sizing to menu stories. Adds the size class to
+various elements.
+
+- fix(menu): fixes for menu usage in docs site search and popovers
+
+Fixes for several issues with the menu that is displayed in the docs
+site search results, and theme/scale/direction popovers.
+
+- Makes the adjacentText classes the default margin, allowing them to
+  be removed (which fixes checkbox spacing in theme/scale popovers).
+- Fixes extra top and bottom margin appearing in menu for docs
+  theme/scale popovers. This was showing user agent values for top and
+  bottom margin. In production, they were previously set to a popover
+  padding token, which added more space than on the design (popover
+  component already has padding).
+- Fixes search results menu showing incorrectly because of difference in
+  the JS created markup related to section headers.
+
+* chore(menu): manual version increase for beta release
+
+* fix(menu): spacing adjustments including divider inline margin
+
+- Includes spacing on left and right of divider to match the same
+  spacing used on left and right of menu item labels and heading.
+- Remove extra padding on presentational list items used for section
+  header and divider examples.
+- Simplify rules for padding on sectionHeading. Default inline padding
+  and remove inline padding on collapsible variant.
+
+* feat(menu): use top to checkmark token and handle wrapping text
+
+- Use new spectrum-menu-item-top-to-selected-icon-\* tokens
+- Handle alignment of icon and checkmark when text is wrapping, so icons
+  are aligned top and not center, and stay in alignment with each other
+  with use of new token.
+- Updates stories to make sure edge case with selected + icon + wrapping
+  text is represented.
+
+* fix(menu): storybook - ensure long text wraps on wide screens
+
+Wrapping text examples need a max-width on the container to ensure that
+they are wrapping when stories are viewed at higher resolutions.
+
+Also updates generated mods file.
+
+- refactor(menu): remove two withAdjacentIcon classes
+
+Per PR feedback, these classes appear to be no longer needed as they are
+using the same token value.
+
+- chore(menu): new beta release
+
+- fix(menu): remove excess margin from drill-in chevron
+
+Zero out the margin-inline-end for the chevron used at the end
+of the drill-in menu items.
+
+- chore(menu): version increase for beta release
+
+- fix(menu): divider margin update and new tokens package version
+
+Update divider margin-block to agree with newly added token for the
+divider height. Sets minimum tokens package version to 11.0.2 where this
+--spectrum-menu-item-section-divider-height token was added.
+
+- fix(menu): use smaller divider instead of medium
+
+Replace medium divider with small divider in examples and storybook
+markup. Updates migration guide to note the change. Removes unnecessary
+large divider possibility from CSS, as that should never be used here
+according to divider guidelines.
+
+- docs(menu): fix migration guide not appearing and add docs
+
+Fix migration guide section no appearing in docs because it was named
+'section' and not 'sections' in the YML.
+
+Adds new standard section about -mod custom properties.
+
+- chore(menu): manual version increase + update tokens dep
+
 <a name="4.0.50"></a>
 ##4.0.50
 🗓
