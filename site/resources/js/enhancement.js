@@ -291,7 +291,7 @@ governing permissions and limitations under the License.
 		picker.classList[isOpen ? "add" : "remove"]("is-selected");
 
 		// We have to get the coordinates relative to the parent
-		const parent = popover.closest('.spectrum-CSSExample-container') || popover.closest("body")
+		const parent = popover.closest('.spectrum-CSSExample-container') || document.querySelector("body");
 
 		const parentRect = parent.getBoundingClientRect();
 
