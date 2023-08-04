@@ -3,6 +3,15 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+<a name="6.1.0"></a>
+#6.1.0
+🗓
+2023-08-04 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/colorhandle@6.0.2...@spectrum-css/colorhandle@6.1.0)
+
+### ✨ Features
+
+- **colorhandle:**add --mod-colorhandle-hitarea-border-radius([6752132](https://github.com/adobe/spectrum-css/commit/6752132))
+
 <a name="6.0.2"></a>
 ##6.0.2
 🗓
