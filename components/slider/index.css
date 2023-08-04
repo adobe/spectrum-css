@@ -21,6 +21,9 @@ governing permissions and limitations under the License.
   --spectrum-slider-label-top-to-text: var(--spectrum-component-top-to-text-75);
   --spectrum-slider-control-to-field-label: var(--spectrum-slider-control-to-field-label-medium);
   --spectrum-slider-control-to-stepper: var(--spectrum-spacing-200);
+
+  --spectrum-slider-value-side-padding-block: var(--spectrum-field-label-top-margin-medium);
+  --spectrum-slider-value-side-padding-inline: var(--spectrum-spacing-200);
 }
 
 
@@ -32,6 +35,9 @@ governing permissions and limitations under the License.
   --spectrum-slider-handle-border-width-down: var(--spectrum-slider-handle-border-width-down-small);
   --spectrum-slider-label-top-to-text: var(--spectrum-component-top-to-text-75);
   --spectrum-slider-control-to-field-label: var(--spectrum-slider-control-to-field-label-small);
+
+  --spectrum-slider-value-side-padding-block: var(--spectrum-field-label-top-margin-small);
+  --spectrum-slider-value-side-padding-inline: var(--spectrum-spacing-100);
 }
 
 .spectrum-Slider--sizeL {
@@ -42,6 +48,9 @@ governing permissions and limitations under the License.
   --spectrum-slider-handle-border-width-down: var(--spectrum-slider-handle-border-width-down-large);
   --spectrum-slider-label-top-to-text: var(--spectrum-component-top-to-text-100);
   --spectrum-slider-control-to-field-label: var(--spectrum-slider-control-to-field-label-large);
+
+  --spectrum-slider-value-side-padding-block: var(--spectrum-field-label-top-margin-large);
+  --spectrum-slider-value-side-padding-inline: var(--spectrum-spacing-200);
 }
 
 .spectrum-Slider--sizeXL {
@@ -52,6 +61,9 @@ governing permissions and limitations under the License.
   --spectrum-slider-handle-border-width-down: var(--spectrum-slider-handle-border-width-down-extra-large);
   --spectrum-slider-label-top-to-text: var(--spectrum-component-top-to-text-200);
   --spectrum-slider-control-to-field-label: var(--spectrum-slider-control-to-field-label-extra-large);
+
+  --spectrum-slider-value-side-padding-block: var(--spectrum-field-label-top-margin-extra-large);
+  --spectrum-slider-value-side-padding-inline: var(--spectrum-spacing-200);
 }
 
 .spectrum-Slider {
@@ -110,10 +122,14 @@ governing permissions and limitations under the License.
   .spectrum-Slider-labelContainer + .spectrum-Slider-controls {
     margin-block-start: 0;
   }
-}
 
-.spectrum-Slider .spectrum-Stepper {
-  margin-inline-start: var(--mod-slider-control-to-stepper, var(--spectrum-slider-control-to-stepper));
+  .spectrum-Slider-controls {
+    margin-inline-end: var(--mod-slider-controls-margin, var(--spectrum-slider-controls-margin));
+  }
+
+  .spectrum-Slider-value {
+    margin-inline-start: var(--mod-slider-value-side-padding-inline, var(--spectrum-slider-value-side-padding-inline));
+  }
 }
 
 .spectrum-Slider-controls {
