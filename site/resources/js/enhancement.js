@@ -307,6 +307,13 @@ governing permissions and limitations under the License.
 			popover.classList[isOpen ? "add" : "remove"]("is-open");
 			popover.querySelector(".spectrum-Menu-item").focus();
 		}
+
+		if (isOpen) {
+			if (openPicker && openPicker !== picker) {
+					toggleOpen(openPicker, false);
+				}
+				openPicker = picker;
+			}
 	}
 
 	function closeAndFocusPicker(picker) {
