@@ -28,6 +28,16 @@ export default {
 			},
 			control: { type: "text" },
 		},
+		labelPosition: {
+			name: "Label position",
+			type: { name: "string" },
+			table: {
+				type: { summary: "string" },
+				category: "Content",
+			},
+			options: ["top", "left"],
+			control: { type: "select" },
+		},
 		placeholder: {
 			name: "Placeholder",
 			type: { name: "string" },
@@ -128,6 +138,12 @@ Open.args = {
 	content: [MenuStories(MenuStories.args)],
 };
 
+export const SideLabel = Template.bind({});
+SideLabel.args = {
+	content: [MenuStories(MenuStories.args)],
+	labelPosition: "left"
+};
+
 export const Quiet = Template.bind({});
 Quiet.args = {
 	isQuiet: true,
@@ -153,3 +169,13 @@ Focused.args = {
 	isFocused: true,
 	content: [MenuStories(MenuStories.args)],
 };
+
+export const WithForcedColors = Template.bind({
+  parameters: {
+    // Sets the forced-colors media feature for a specific story.
+    chromatic: { forcedColors: 'active' },
+  },
+});
+WithForcedColors.args = {
+	content: [MenuStories(MenuStories.args)],
+}

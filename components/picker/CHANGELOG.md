@@ -3,6 +3,34 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+<a name="6.0.0"></a>
+#6.0.0
+🗓
+2023-08-04 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/picker@5.0.1...@spectrum-css/picker@6.0.0)
+
+### 🐛 Bug fixes
+
+-     **picker:**add side label variant ([#1991](https://github.com/adobe/spectrum-css/issues/1991))([d812ac2](https://github.com/adobe/spectrum-css/commit/d812ac2))
+
+  \*style(picker)!: add missing tokens (#2063)([c724c73](https://github.com/adobe/spectrum-css/commit/c724c73)), closes[#2063](https://github.com/adobe/spectrum-css/issues/2063)
+
+      	###
+      	🛑 BREAKING CHANGES
+
+      		*
+      		removes `.spectrum-Picker--sizeM` and makes "medium" the default style.
+
+Additionally:
+
+- style(picker): add missing tokens
+
+* Added inline-size for new field-width token
+* Removed medium size vars as they were set by default
+* Added spacing tokens for the label, validation icon, and progress circle
+* Removed margin-inline for quiet picker popovers
+
+- docs: update mods
+
 <a name="5.0.1"></a>
 ##5.0.1
 🗓

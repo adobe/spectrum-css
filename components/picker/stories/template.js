@@ -10,13 +10,11 @@ import { Template as HelpText } from "@spectrum-css/helptext/stories/template.js
 
 import "../index.css";
 
-export const Template = ({
+export const PickerButton = ({
 	rootClass = "spectrum-Picker",
 	size = "m",
-	label,
-	labelPosition = "top",
+	labelPosition,
 	placeholder,
-	helpText,
 	isQuiet = false,
 	isFocused = false,
 	isOpen = false,
@@ -26,8 +24,8 @@ export const Template = ({
 	isReadOnly = false,
 	customClasses = [],
 	customStyles = {},
-	customPopoverStyles = {},
 	content = [],
+	iconName,
 	id,
 	...globals
 }) => {
@@ -42,21 +40,13 @@ export const Template = ({
 	}
 
 	return html`
-		${label
-			? FieldLabel({
-					...globals,
-					size,
-					label,
-					isDisabled,
-					alignment: labelPosition,
-			  })
-			: ""}
-		<button
+	<button
 			class=${classMap({
 				[rootClass]: true,
 				[`${rootClass}--size${size?.toUpperCase()}`]:
 					typeof size !== "undefined",
 				[`${rootClass}--quiet`]: isQuiet,
+				[`${rootClass}--sideLabel`]: labelPosition != "top",
 				[`is-invalid`]: isInvalid,
 				[`is-open`]: isOpen,
 				[`is-loading`]: isLoading,
@@ -91,6 +81,109 @@ export const Template = ({
 				customClasses: [`${rootClass}-menuIcon`],
 			})}
 		</button>
+	`;
+}
+
+export const Template = ({
+	rootClass = "spectrum-Picker",
+	size = "m",
+	label,
+	labelPosition = "top",
+	placeholder,
+	helpText,
+	isQuiet = false,
+	isFocused = false,
+	isOpen = false,
+	isInvalid = false,
+	isLoading = false,
+	isDisabled = false,
+	isReadOnly = false,
+	customClasses = [],
+	customStyles = {},
+	customPopoverStyles = {},
+	content = [],
+	id,
+	...globals
+}) => {
+
+	const { express } = globals;
+	try {
+		if (!express) import(/* webpackPrefetch: true */ "../themes/spectrum.css");
+		else import(/* webpackPrefetch: true */ "../themes/express.css");
+	} catch (e) {
+		console.warn(e);
+	}
+
+	let iconName = "ChevronDown200";
+	switch (size) {
+		case "s":
+			iconName = "ChevronDown75";
+			break;
+		case "m":
+			iconName = "ChevronDown100";
+			break;
+		case "xl":
+			iconName = "ChevronDown300";
+			break;
+		default:
+			iconName = "ChevronDown200";
+	}
+
+	return html`
+		${label
+			? FieldLabel({
+					...globals,
+					size,
+					label,
+					isDisabled,
+					alignment: labelPosition,
+			  })
+			: ""}
+		${labelPosition == "left" ?
+			html`<div style="display: inline-block">
+				${PickerButton({
+					...globals,
+					rootClass,
+					size,
+					placeholder,
+					isQuiet,
+					isFocused,
+					isOpen,
+					isInvalid,
+					isLoading,
+					isDisabled,
+					isReadOnly,
+					customClasses,
+					customStyles,
+					content,
+					iconName,
+					labelPosition,
+					id,
+				})}
+			</div>
+			`
+		: 
+			PickerButton({
+				...globals,
+				rootClass,
+				size,
+				placeholder,
+				isQuiet,
+				isFocused,
+				isOpen,
+				isInvalid,
+				isLoading,
+				isDisabled,
+				isReadOnly,
+				customClasses,
+				customStyles,
+				content,
+				iconName,
+				labelPosition,
+				id,
+			})
+		}
+		
 		${helpText
 			? HelpText({
 					text: helpText,
