@@ -282,7 +282,6 @@ governing permissions and limitations under the License.
 		var isOpen =
 			force !== undefined ? force : !picker.classList.contains("is-open");
 		var popover = getPopoverForPicker(picker);
-		console.log(popover);
 
 		picker[isOpen ? "setAttribute" : "removeAttribute"](
 			"aria-expanded",
@@ -292,7 +291,8 @@ governing permissions and limitations under the License.
 		picker.classList[isOpen ? "add" : "remove"]("is-selected");
 
 		// We have to get the coordinates relative to the parent
-		const parent = popover.closest('.spectrum-CSSExample-container');
+		const parent = popover.closest('.spectrum-CSSExample-container') || popover.closest("body")
+
 		const parentRect = parent.getBoundingClientRect();
 
 		if (popover) {
