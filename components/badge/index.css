@@ -82,8 +82,6 @@ governing permissions and limitations under the License.
   --spectrum-badge-icon-spacing-horizontal: var(--spectrum-component-edge-to-visual-100);
   --spectrum-badge-icon-spacing-vertical-top: var(--spectrum-component-top-to-workflow-icon-100);
   --spectrum-badge-icon-only-spacing-horizontal: var(--spectrum-component-edge-to-visual-only-100);
-
-  
 }
 
 
@@ -102,23 +100,6 @@ governing permissions and limitations under the License.
   --spectrum-badge-icon-spacing-horizontal: var(--spectrum-component-edge-to-visual-75);
   --spectrum-badge-icon-spacing-vertical-top: var(--spectrum-component-top-to-workflow-icon-75);
   --spectrum-badge-icon-only-spacing-horizontal: var(--spectrum-component-edge-to-visual-only-75);
-}
-
-.spectrum-Badge--sizeM {
-  --spectrum-badge-height: var(--spectrum-component-height-100);
-
-  /* label */
-  --spectrum-badge-font-size: var(--spectrum-font-size-100);
-  --spectrum-badge-label-spacing-vertical-top: var(--spectrum-component-top-to-text-100);
-  --spectrum-badge-label-spacing-vertical-bottom: var(--spectrum-component-bottom-to-text-100);
-  --spectrum-badge-label-spacing-horizontal: var(--spectrum-component-edge-to-text-100);
-
-  /* icon */
-  --spectrum-badge-workflow-icon-size: var(--spectrum-workflow-icon-size-100);
-  --spectrum-badge-icon-text-spacing: var(--spectrum-text-to-visual-100);
-  --spectrum-badge-icon-spacing-horizontal: var(--spectrum-component-edge-to-visual-100);
-  --spectrum-badge-icon-spacing-vertical-top: var(--spectrum-component-top-to-workflow-icon-100);
-  --spectrum-badge-icon-only-spacing-horizontal: var(--spectrum-component-edge-to-visual-only-100);
 }
 
 .spectrum-Badge--sizeL {
