@@ -13,7 +13,7 @@ export const Template = ({
 	label,
 	iconName,
 	variant = "neutral",
-	customLayout,
+	fixed,
 	customClasses = [],
 	id,
 	...globals
@@ -34,8 +34,7 @@ export const Template = ({
 				[`${rootClass}--size${size?.toUpperCase()}`]:
 					typeof size !== "undefined",
 				[`${rootClass}--${variant}`]: typeof variant !== "undefined",
-				[`${rootClass}--${customColor}`]: typeof customColor !== "undefined",
-				[`${rootClass}--${customLayout}`]: typeof customLayout !== "undefined",
+				[`${rootClass}--${fixed}`]: typeof fixed !== "undefined",
 				...customClasses.reduce((a, c) => ({ ...a, [c]: true }), {}),
 			})}
 			id=${ifDefined(id)}

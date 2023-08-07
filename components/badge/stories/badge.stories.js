@@ -50,7 +50,6 @@ export default {
 				category: "Advanced",
 			},
 			options: [
-				"none",
 				"fixed-inline-start",
 				"fixed-inline-end",
 				"fixed-block-start",
