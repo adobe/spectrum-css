@@ -49,9 +49,26 @@ governing permissions and limitations under the License.
   --spectrum-progressbar-label-and-value-white: var(--spectrum-white);
   --spectrum-progressbar-track-color-white: var(--spectrum-transparent-white-300);
   --spectrum-progressbar-fill-color-white: var(--spectrum-white);
+
+  /* Meter layout */
+  --spectrum-meter-min-width: var(--spectrum-meter-minimum-width);
+  --spectrum-meter-max-width: var(--spectrum-meter-maximum-width);
+  --spectrum-meter-inline-size: var(--spectrum-meter-default-width);
+  --spectrum-meter-thickness-s: var(--spectrum-meter-thickness-small);
+  --spectrum-meter-thickness-l: var(--spectrum-meter-thickness-large);
+  --spectrum-meter-top-to-text: var(--spectrum-component-top-to-text);
 }
 
 /* Meter only supports size S and L */
+.spectrum-Meter--sizeS {
+  --mod-progressbar-thickness: var(--spectrum-meter-thickness-s);
+}
+
+.spectrum-Meter--sizeL {
+  --mod-progressbar-thickness: var(--spectrum-meter-thickness-l);
+  --mod-progressbar-spacing-top-to-text: var(--spectrum-component-top-to-text-75);
+}
+
 .spectrum-ProgressBar--sizeS, .spectrum-Meter--sizeS {
   --spectrum-progressbar-size-default: var(--spectrum-progressbar-size-2400);
 
@@ -96,6 +113,12 @@ governing permissions and limitations under the License.
     --highcontrast-progressbar-track-color: ButtonFace;
     border: 1px solid ButtonText;
   }
+}
+
+.spectrum-Meter{
+  --mod-progressbar-size-default: var(--spectrum-meter-inline-size);
+  --mod-progressbar-max-size: var(--spectrum-meter-max-width);
+  --mod-progressbar-min-size: var(--spectrum-meter-min-width);
 }
 
 .spectrum-ProgressBar {
