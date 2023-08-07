@@ -5,7 +5,7 @@ import { default as Icon } from "@spectrum-css/icon/stories/icon.stories.js";
 
 export default {
 	title: "Components/Picker button",
-	description: "The Picker button component is...",
+	description: "The Picker button component is used as a dropdown trigger. See Combobox.",
 	component: "Pickerbutton",
 	argTypes: {
 		size: {
@@ -30,7 +30,7 @@ export default {
 		},
 		iconName: {
 			...Icon.argTypes.iconName,
-			if: { arg: "iconType", eq: "ui" },
+			if: { arg: "iconType", eq: "workflow" },
 		},
 		label: {
 			name: "Label",
@@ -49,6 +49,7 @@ export default {
 				category: "State",
 			},
 			control: "boolean",
+			if: { arg: 'isDisabled', truthy: false }
 		},
 		isRounded: {
 			name: "Rounded",
@@ -56,24 +57,6 @@ export default {
 			table: {
 				type: { summary: "boolean" },
 				category: "Component",
-			},
-			control: "boolean",
-		},
-		isValid: {
-			name: "Valid input",
-			type: { name: "boolean" },
-			table: {
-				type: { summary: "boolean" },
-				category: "State",
-			},
-			control: "boolean",
-		},
-		isInvalid: {
-			name: "Invalid input",
-			type: { name: "boolean" },
-			table: {
-				type: { summary: "boolean" },
-				category: "State",
 			},
 			control: "boolean",
 		},
@@ -103,15 +86,7 @@ export default {
 				category: "State",
 			},
 			control: "boolean",
-		},
-		isKeyboardFocused: {
-			name: "Keyboard Focused",
-			type: { name: "boolean" },
-			table: {
-				type: { summary: "boolean" },
-				category: "State",
-			},
-			control: "boolean",
+			if: { arg: 'isDisabled', truthy: false }
 		},
 		position: {
 			name: "Position",
@@ -126,18 +101,17 @@ export default {
 	},
 	args: {
 		rootClass: "spectrum-PickerButton",
-		label: "Select a Country",
+		label: undefined,
 		size: "m",
 		isOpen: false,
 		isRounded: false,
-		isValid: false,
-		isInvalid: false,
 		isQuiet: false,
 		isDisabled: false,
 		isFocused: false,
 		isKeyboardFocused: false,
 		iconType: "ui",
-		iconName: "ChevronDown200",
+		iconName: "ChevronDown",
+		position: "right"
 	},
 	parameters: {
 		actions: {
@@ -153,3 +127,23 @@ export default {
 
 export const Default = Template.bind({});
 Default.args = {};
+
+export const WithLabel = Template.bind({});
+WithLabel.args = {
+	label: "Select",
+};
+
+export const Disabled = Template.bind({});
+Disabled.args = {
+	isDisabled: true
+};
+
+export const Quiet = Template.bind({});
+Quiet.args = {
+	isQuiet: true
+};
+
+export const Express = Template.bind({});
+Express.args = {
+	express: true
+};

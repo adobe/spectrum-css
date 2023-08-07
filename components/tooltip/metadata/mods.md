@@ -23,5 +23,7 @@
 | `--mod-tooltip-spacing-block-end`            |
 | `--mod-tooltip-spacing-block-start`          |
 | `--mod-tooltip-spacing-inline`               |
+| `--mod-tooltip-tip-antialiasing-inset`       |
 | `--mod-tooltip-tip-block-size`               |
-| `--mod-tooltip-tip-inline-size`              |
+| `--mod-tooltip-tip-height-percentage`        |
+| `--mod-tooltip-tip-square-size`              |

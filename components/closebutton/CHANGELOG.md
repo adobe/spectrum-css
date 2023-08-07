@@ -3,6 +3,43 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+<a name="3.1.12"></a>
+##3.1.12
+🗓
+2023-08-03 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/closebutton@3.1.11...@spectrum-css/closebutton@3.1.12)
+
+**Note:** Version bump only for package @spectrum-css/closebutton
+
+<a name="3.1.11"></a>
+##3.1.11
+🗓
+2023-07-24 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/closebutton@3.1.10...@spectrum-css/closebutton@3.1.11)
+
+### 🐛 Bug fixes
+
+\*icon sizing in Storybook story templates ([#2037](https://github.com/adobe/spectrum-css/issues/2037))([c90c8a3](https://github.com/adobe/spectrum-css/commit/c90c8a3))
+
+<a name="3.1.10"></a>
+##3.1.10
+🗓
+2023-07-17 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/closebutton@3.1.9...@spectrum-css/closebutton@3.1.10)
+
+**Note:** Version bump only for package @spectrum-css/closebutton
+
+<a name="3.1.9"></a>
+##3.1.9
+🗓
+2023-07-14 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/closebutton@3.1.8...@spectrum-css/closebutton@3.1.9)
+
+**Note:** Version bump only for package @spectrum-css/closebutton
+
+<a name="3.1.8"></a>
+##3.1.8
+🗓
+2023-07-11 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/closebutton@3.1.7...@spectrum-css/closebutton@3.1.8)
+
+**Note:** Version bump only for package @spectrum-css/closebutton
+
 <a name="3.1.7"></a>
 ##3.1.7
 🗓

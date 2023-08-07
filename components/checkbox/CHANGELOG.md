@@ -3,6 +3,91 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+<a name="7.0.0"></a>
+#7.0.0
+🗓
+2023-08-03 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/checkbox@6.1.10...@spectrum-css/checkbox@7.0.0)
+
+\*feat(checkbox)!: add new color aliases and focus color fixes (#2052)([2a0d3c8](https://github.com/adobe/spectrum-css/commit/2a0d3c8)), closes[#2052](https://github.com/adobe/spectrum-css/issues/2052)
+
+    	###
+    	🛑 BREAKING CHANGES
+
+    		*
+    		prefers `:focus-visible` to `:focus-ring` & updates colors
+
+Additionally:
+
+- refactor(checkbox): add color alias tokens and fix some colors
+
+* Adds new color alias tokens from CSS-472 and implements them. Tokens
+  are moved out of spectrum and express specific css.
+* Implemented previously commented out focus token.
+* Fix some color related bugs in prod: non-emphasized showing blue
+  border on focus and hover instead of grey when unchecked, emphasized
+  showing blue border on focus and hover when unchecked, and emphasized
+  indeterminate showing grey after click. Sorted some specificity issues
+  primarily around some indeterminate default styles overriding when
+  they shouldn't.
+* Changed old :focus-ring spec to :focus-visible (a find replace for the
+  generated .focus-ring class was already being done in the SWC version
+  of the component, replacing it with :focus-visble). Checkboxes should
+  now show their focus indicator when tabbed into in Storybook.
+
+- fix(checkbox): high contrast mode updates and remove deprecated
+
+Update to match previous WHCM behavior after styles update, and some
+needed system color updates noticed while looking at that code.
+
+- Focus color update to match with modified styles.
+- 'Background' system color is deprecated; replace with Canvas.
+- Default text of label should be CanvasText, it is not on top of a
+  background with ButtonFace.
+- Focus indicator color custom property was repeated in the same style
+  rule, and was using FieldText when not on top of a matching `Field`
+  background pair. Replaced with CanvasText as this should be appearing
+  on top of default Canvas.
+
+<a name="6.1.10"></a>
+##6.1.10
+🗓
+2023-07-26 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/checkbox@6.1.9...@spectrum-css/checkbox@6.1.10)
+
+**Note:** Version bump only for package @spectrum-css/checkbox
+
+<a name="6.1.9"></a>
+##6.1.9
+🗓
+2023-07-24 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/checkbox@6.1.8...@spectrum-css/checkbox@6.1.9)
+
+### 🐛 Bug fixes
+
+\*icon sizing in Storybook story templates ([#2037](https://github.com/adobe/spectrum-css/issues/2037))([c90c8a3](https://github.com/adobe/spectrum-css/commit/c90c8a3))
+
+<a name="6.1.8"></a>
+##6.1.8
+🗓
+2023-07-17 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/checkbox@6.1.7...@spectrum-css/checkbox@6.1.8)
+
+**Note:** Version bump only for package @spectrum-css/checkbox
+
+<a name="6.1.7"></a>
+##6.1.7
+🗓
+2023-07-14 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/checkbox@6.1.6...@spectrum-css/checkbox@6.1.7)
+
+### 🐛 Bug fixes
+
+- **actionbutton:**update action button color tokens ([#1982](https://github.com/adobe/spectrum-css/issues/1982))([95e4353](https://github.com/adobe/spectrum-css/commit/95e4353))\*
+  **checkbox:**use language code, not coding language name ([#2005](https://github.com/adobe/spectrum-css/issues/2005))([56c7cfc](https://github.com/adobe/spectrum-css/commit/56c7cfc))
+
+<a name="6.1.6"></a>
+##6.1.6
+🗓
+2023-07-11 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/checkbox@6.1.5...@spectrum-css/checkbox@6.1.6)
+
+**Note:** Version bump only for package @spectrum-css/checkbox
+
 <a name="6.1.5"></a>
 ##6.1.5
 🗓

@@ -3,6 +3,48 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+<a name="4.0.64"></a>
+##4.0.64
+🗓
+2023-08-03 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/table@4.0.63...@spectrum-css/table@4.0.64)
+
+**Note:** Version bump only for package @spectrum-css/table
+
+<a name="4.0.63"></a>
+##4.0.63
+🗓
+2023-07-26 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/table@4.0.62...@spectrum-css/table@4.0.63)
+
+**Note:** Version bump only for package @spectrum-css/table
+
+<a name="4.0.62"></a>
+##4.0.62
+🗓
+2023-07-24 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/table@4.0.61...@spectrum-css/table@4.0.62)
+
+**Note:** Version bump only for package @spectrum-css/table
+
+<a name="4.0.61"></a>
+##4.0.61
+🗓
+2023-07-17 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/table@4.0.60...@spectrum-css/table@4.0.61)
+
+**Note:** Version bump only for package @spectrum-css/table
+
+<a name="4.0.60"></a>
+##4.0.60
+🗓
+2023-07-14 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/table@4.0.59...@spectrum-css/table@4.0.60)
+
+**Note:** Version bump only for package @spectrum-css/table
+
+<a name="4.0.59"></a>
+##4.0.59
+🗓
+2023-07-11 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/table@4.0.58...@spectrum-css/table@4.0.59)
+
+**Note:** Version bump only for package @spectrum-css/table
+
 <a name="4.0.58"></a>
 ##4.0.58
 🗓

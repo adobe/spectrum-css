@@ -3,6 +3,54 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+<a name="4.0.1"></a>
+##4.0.1
+🗓
+2023-08-03 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/calendar@4.0.0...@spectrum-css/calendar@4.0.1)
+
+**Note:** Version bump only for package @spectrum-css/calendar
+
+<a name="4.0.0"></a>
+#4.0.0
+🗓
+2023-07-26 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/calendar@3.2.7...@spectrum-css/calendar@4.0.0)
+
+\*feat(calendar)!: migrate to use spectrum-tokens([a01b293](https://github.com/adobe/spectrum-css/commit/a01b293))
+
+    	###
+    	🛑 BREAKING CHANGES
+
+    		*
+    		migrates Calendar to use `@adobe/spectrum-tokens`
+
+<a name="3.2.7"></a>
+##3.2.7
+🗓
+2023-07-24 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/calendar@3.2.6...@spectrum-css/calendar@3.2.7)
+
+**Note:** Version bump only for package @spectrum-css/calendar
+
+<a name="3.2.6"></a>
+##3.2.6
+🗓
+2023-07-17 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/calendar@3.2.5...@spectrum-css/calendar@3.2.6)
+
+**Note:** Version bump only for package @spectrum-css/calendar
+
+<a name="3.2.5"></a>
+##3.2.5
+🗓
+2023-07-14 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/calendar@3.2.4...@spectrum-css/calendar@3.2.5)
+
+**Note:** Version bump only for package @spectrum-css/calendar
+
+<a name="3.2.4"></a>
+##3.2.4
+🗓
+2023-07-11 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/calendar@3.2.3...@spectrum-css/calendar@3.2.4)
+
+**Note:** Version bump only for package @spectrum-css/calendar
+
 <a name="3.2.3"></a>
 ##3.2.3
 🗓

@@ -30,7 +30,8 @@ export const Template = ({
 			<div class="${rootClass}-fill">
 				${Icon({
 					...globals,
-					iconName: "Cross100",
+					size,
+					iconName: "Cross",
 					customClasses: [`${rootClass}-icon`],
 				})}
 			</div>

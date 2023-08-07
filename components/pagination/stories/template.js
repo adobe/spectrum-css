@@ -30,7 +30,7 @@ export const Template = ({
 				${ActionButton({
 					size,
 					isQuiet: true,
-					iconName: "ChevronLeft100",
+					iconName: "ChevronLeft",
 					customClasses: [`${rootClass}-prevButton`],
 				})}
 				${Textfield({
@@ -43,7 +43,7 @@ export const Template = ({
 				${ActionButton({
 					size,
 					isQuiet: true,
-					iconName: "ChevronRight100",
+					iconName: "ChevronRight",
 					customClasses: [`${rootClass}-nextButton`],
 				})}
 			</nav>

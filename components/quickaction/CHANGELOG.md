@@ -3,6 +3,48 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+<a name="3.0.72"></a>
+##3.0.72
+🗓
+2023-08-03 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/quickaction@3.0.71...@spectrum-css/quickaction@3.0.72)
+
+**Note:** Version bump only for package @spectrum-css/quickaction
+
+<a name="3.0.71"></a>
+##3.0.71
+🗓
+2023-07-26 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/quickaction@3.0.70...@spectrum-css/quickaction@3.0.71)
+
+**Note:** Version bump only for package @spectrum-css/quickaction
+
+<a name="3.0.70"></a>
+##3.0.70
+🗓
+2023-07-24 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/quickaction@3.0.69...@spectrum-css/quickaction@3.0.70)
+
+**Note:** Version bump only for package @spectrum-css/quickaction
+
+<a name="3.0.69"></a>
+##3.0.69
+🗓
+2023-07-17 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/quickaction@3.0.68...@spectrum-css/quickaction@3.0.69)
+
+**Note:** Version bump only for package @spectrum-css/quickaction
+
+<a name="3.0.68"></a>
+##3.0.68
+🗓
+2023-07-14 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/quickaction@3.0.67...@spectrum-css/quickaction@3.0.68)
+
+**Note:** Version bump only for package @spectrum-css/quickaction
+
+<a name="3.0.67"></a>
+##3.0.67
+🗓
+2023-07-11 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/quickaction@3.0.66...@spectrum-css/quickaction@3.0.67)
+
+**Note:** Version bump only for package @spectrum-css/quickaction
+
 <a name="3.0.66"></a>
 ##3.0.66
 🗓

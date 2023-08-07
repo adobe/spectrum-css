@@ -1,8 +1,8 @@
 # Contributing
 
-We love pull requests from everyone.
+❤️ We love pull requests from everyone. 🎉
 
-The following are a set of guidelines to follow when contributing to this project.
+The following are a set of guidelines to follow when contributing to this project to ensure that your contributions are accepted as quickly as possible.
 
 ## Code of conduct
 
@@ -42,8 +42,8 @@ git clone git@github.com:yourusername/spectrum-css.git
 Set up a branch for your feature or bug fix, push it to your fork, and set up a remote for the upstream repo:
 
 ```shell
-git checkout -b my-awesome-new-feature
-git push -u origin my-awesome-new-feature
+git checkout -b feat-my-awesome-new-feature
+git push -u origin feat-my-awesome-new-feature
 git remote add upstream git@github.com:adobe/spectrum-css.git
 ```
 
@@ -51,12 +51,6 @@ Install [yarn](https://yarnpkg.com/en/docs/install):
 
 ```shell
 brew install yarn || curl -o- -L https://yarnpkg.com/install.sh | bash
-```
-
-Make sure the [gulp-cli](https://github.com/gulpjs/gulp-cli) is installed globally:
-
-```shell
-yarn global add gulp-cli
 ```
 
 Install dependencies:
@@ -71,7 +65,7 @@ To generate a new component, run the generator:
 yarn new component
 ```
 
-Build the project, open a livereloading browser window, and watch for changes:
+Build the project, open a live-reloading browser window, and watch for changes:
 
 ```shell
 yarn dev
@@ -80,7 +74,7 @@ yarn dev
 Commit changes with a [conventional commit message](https://www.conventionalcommits.org), making sure to correctly use `feat:`, `fix:`, and `BREAKING CHANGE` accordingly, and referencing the relevant issue number (if any):
 
 ```shell
-git commit -m "fix: calendar rendering issue in Safari, fixes #252"
+git commit -m "fix(calendar): rendering issue in Safari, fixes #252"
 ```
 
 Make sure your branch is up to date with the original repo:
@@ -103,5 +97,6 @@ At this point you're waiting on us. We do our best to keep on top of all the pul
 Some things that will increase the chance that your pull request is accepted:
 
 - Write a thorough pull request description, include screenshots, and test your changes across all evergreen browsers.
+- Write out your test cases for any new features or bug fixes in as much detail as possible and include them in the pull request description.
 - Make sure the PR merges cleanly with the latest main.
 - Describe your feature/bugfix and why it's needed/important in the pull request description.

@@ -290,20 +290,30 @@ governing permissions and limitations under the License.
 		picker.classList[isOpen ? "add" : "remove"]("is-open");
 		picker.classList[isOpen ? "add" : "remove"]("is-selected");
 
+		// We have to get the coordinates relative to the parent
+		const parent = popover.closest('.spectrum-CSSExample-container') || document.querySelector("body");
+
+		const parentRect = parent.getBoundingClientRect();
+
 		if (popover) {
+			const transforms = [];
 			popover.style.zIndex = 1;
-			var rect = picker.getBoundingClientRect();
-			popover.style.top = rect.bottom + "px";
+			const rect = picker.getBoundingClientRect();
+			const triggerBottom = rect.bottom - parentRect.top;
+			popover.style.left = rect.left - parentRect.left + "px";
+			popover.style.top = triggerBottom + "px";
+			popover.style.transform = transforms.join(" ");
+
 			popover.classList[isOpen ? "add" : "remove"]("is-open");
 			popover.querySelector(".spectrum-Menu-item").focus();
 		}
 
 		if (isOpen) {
 			if (openPicker && openPicker !== picker) {
-				toggleOpen(openPicker, false);
+					toggleOpen(openPicker, false);
+				}
+				openPicker = picker;
 			}
-			openPicker = picker;
-		}
 	}
 
 	function closeAndFocusPicker(picker) {

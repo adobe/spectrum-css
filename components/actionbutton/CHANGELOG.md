@@ -3,6 +3,45 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+<a name="4.0.11"></a>
+##4.0.11
+🗓
+2023-08-03 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/actionbutton@4.0.10...@spectrum-css/actionbutton@4.0.11)
+
+**Note:** Version bump only for package @spectrum-css/actionbutton
+
+<a name="4.0.10"></a>
+##4.0.10
+🗓
+2023-07-24 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/actionbutton@4.0.9...@spectrum-css/actionbutton@4.0.10)
+
+### 🐛 Bug fixes
+
+\*icon sizing in Storybook story templates ([#2037](https://github.com/adobe/spectrum-css/issues/2037))([c90c8a3](https://github.com/adobe/spectrum-css/commit/c90c8a3))
+
+<a name="4.0.9"></a>
+##4.0.9
+🗓
+2023-07-17 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/actionbutton@4.0.8...@spectrum-css/actionbutton@4.0.9)
+
+**Note:** Version bump only for package @spectrum-css/actionbutton
+
+<a name="4.0.8"></a>
+##4.0.8
+🗓
+2023-07-14 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/actionbutton@4.0.7...@spectrum-css/actionbutton@4.0.8)
+
+### 🐛 Bug fixes
+
+- **actionbutton:**update action button color tokens ([#1982](https://github.com/adobe/spectrum-css/issues/1982))([95e4353](https://github.com/adobe/spectrum-css/commit/95e4353))
+
+<a name="4.0.7"></a>
+##4.0.7
+🗓
+2023-07-11 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/actionbutton@4.0.6...@spectrum-css/actionbutton@4.0.7)
+
+**Note:** Version bump only for package @spectrum-css/actionbutton
+
 <a name="4.0.6"></a>
 ##4.0.6
 🗓

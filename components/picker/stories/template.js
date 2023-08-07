@@ -10,6 +10,80 @@ import { Template as HelpText } from "@spectrum-css/helptext/stories/template.js
 
 import "../index.css";
 
+export const PickerButton = ({
+	rootClass = "spectrum-Picker",
+	size = "m",
+	labelPosition,
+	placeholder,
+	isQuiet = false,
+	isFocused = false,
+	isOpen = false,
+	isInvalid = false,
+	isLoading = false,
+	isDisabled = false,
+	isReadOnly = false,
+	customClasses = [],
+	customStyles = {},
+	content = [],
+	iconName,
+	id,
+	...globals
+}) => {
+	const [_, updateArgs] = useArgs();
+
+	const { express } = globals;
+	try {
+		if (!express) import(/* webpackPrefetch: true */ "../themes/spectrum.css");
+		else import(/* webpackPrefetch: true */ "../themes/express.css");
+	} catch (e) {
+		console.warn(e);
+	}
+
+	return html`
+	<button
+			class=${classMap({
+				[rootClass]: true,
+				[`${rootClass}--size${size?.toUpperCase()}`]:
+					typeof size !== "undefined",
+				[`${rootClass}--quiet`]: isQuiet,
+				[`${rootClass}--sideLabel`]: labelPosition != "top",
+				[`is-invalid`]: isInvalid,
+				[`is-open`]: isOpen,
+				[`is-loading`]: isLoading,
+				[`is-focused`]: isFocused,
+				...customClasses.reduce((a, c) => ({ ...a, [c]: true }), {}),
+			})}
+			?disabled=${isDisabled}
+			aria-haspopup="listbox"
+			@click=${(e) => {
+				updateArgs({ isOpen: !isOpen });
+			}}
+		>
+			<span class="${rootClass}-label is-placeholder">${placeholder}</span>
+			${isLoading
+				? ProgressCircle({
+						size: "s",
+						isIndeterminate: true,
+				  })
+				: ""}
+			${isInvalid && !isLoading
+				? Icon({
+						...globals,
+						size,
+						iconName: "Alert",
+						customClasses: [`${rootClass}-validationIcon`],
+				  })
+				: ""}
+			${Icon({
+				...globals,
+				size,
+				iconName: "ChevronDown",
+				customClasses: [`${rootClass}-menuIcon`],
+			})}
+		</button>
+	`;
+}
+
 export const Template = ({
 	rootClass = "spectrum-Picker",
 	size = "m",
@@ -31,7 +105,6 @@ export const Template = ({
 	id,
 	...globals
 }) => {
-	const [_, updateArgs] = useArgs();
 
 	const { express } = globals;
 	try {
@@ -66,44 +139,51 @@ export const Template = ({
 					alignment: labelPosition,
 			  })
 			: ""}
-		<button
-			class=${classMap({
-				[rootClass]: true,
-				[`${rootClass}--size${size?.toUpperCase()}`]:
-					typeof size !== "undefined",
-				[`${rootClass}--quiet`]: isQuiet,
-				[`is-invalid`]: isInvalid,
-				[`is-open`]: isOpen,
-				[`is-loading`]: isLoading,
-				[`is-focused`]: isFocused,
-				...customClasses.reduce((a, c) => ({ ...a, [c]: true }), {}),
-			})}
-			?disabled=${isDisabled}
-			aria-haspopup="listbox"
-			@click=${(e) => {
-				updateArgs({ isOpen: !isOpen });
-			}}
-		>
-			<span class="${rootClass}-label is-placeholder">${placeholder}</span>
-			${isLoading
-				? ProgressCircle({
-						size: "s",
-						isIndeterminate: true,
-				  })
-				: ""}
-			${isInvalid && !isLoading
-				? Icon({
-						...globals,
-						iconName: "Alert",
-						customClasses: [`${rootClass}-validationIcon`],
-				  })
-				: ""}
-			${Icon({
+		${labelPosition == "left" ?
+			html`<div style="display: inline-block">
+				${PickerButton({
+					...globals,
+					rootClass,
+					size,
+					placeholder,
+					isQuiet,
+					isFocused,
+					isOpen,
+					isInvalid,
+					isLoading,
+					isDisabled,
+					isReadOnly,
+					customClasses,
+					customStyles,
+					content,
+					iconName,
+					labelPosition,
+					id,
+				})}
+			</div>
+			`
+		: 
+			PickerButton({
 				...globals,
+				rootClass,
+				size,
+				placeholder,
+				isQuiet,
+				isFocused,
+				isOpen,
+				isInvalid,
+				isLoading,
+				isDisabled,
+				isReadOnly,
+				customClasses,
+				customStyles,
+				content,
 				iconName,
-				customClasses: [`${rootClass}-menuIcon`],
-			})}
-		</button>
+				labelPosition,
+				id,
+			})
+		}
+		
 		${helpText
 			? HelpText({
 					text: helpText,

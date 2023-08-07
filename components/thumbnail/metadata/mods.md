@@ -5,9 +5,6 @@
 | `--mod-thumbnail-border-radius`             |
 | `--mod-thumbnail-border-width`              |
 | `--mod-thumbnail-border-width-selected`     |
-| `--mod-thumbnail-checkerboard-dark-color`   |
-| `--mod-thumbnail-checkerboard-light-color`  |
-| `--mod-thumbnail-checkerboard-size`         |
 | `--mod-thumbnail-color-opacity-disabled`    |
 | `--mod-thumbnail-focus-indicator-color`     |
 | `--mod-thumbnail-focus-indicator-gap`       |

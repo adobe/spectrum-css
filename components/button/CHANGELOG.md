@@ -3,6 +3,43 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+<a name="10.1.12"></a>
+##10.1.12
+🗓
+2023-08-03 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/button@10.1.11...@spectrum-css/button@10.1.12)
+
+**Note:** Version bump only for package @spectrum-css/button
+
+<a name="10.1.11"></a>
+##10.1.11
+🗓
+2023-07-24 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/button@10.1.10...@spectrum-css/button@10.1.11)
+
+**Note:** Version bump only for package @spectrum-css/button
+
+<a name="10.1.10"></a>
+##10.1.10
+🗓
+2023-07-17 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/button@10.1.9...@spectrum-css/button@10.1.10)
+
+**Note:** Version bump only for package @spectrum-css/button
+
+<a name="10.1.9"></a>
+##10.1.9
+🗓
+2023-07-14 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/button@10.1.8...@spectrum-css/button@10.1.9)
+
+### 🐛 Bug fixes
+
+- **button:**add explicit highcontrast variables for disabled color ([#1985](https://github.com/adobe/spectrum-css/issues/1985))([8697c37](https://github.com/adobe/spectrum-css/commit/8697c37))
+
+<a name="10.1.8"></a>
+##10.1.8
+🗓
+2023-07-11 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/button@10.1.7...@spectrum-css/button@10.1.8)
+
+**Note:** Version bump only for package @spectrum-css/button
+
 <a name="10.1.7"></a>
 ##10.1.7
 🗓

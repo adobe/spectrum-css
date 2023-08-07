@@ -62,6 +62,7 @@ export const Template = ({
 			${when(hasPopup, () =>
 				Icon({
 					...globals,
+					size,
 					iconName: "CornerTriangle100",
 					customClasses: [`${rootClass}-hold`],
 				})
@@ -69,6 +70,7 @@ export const Template = ({
 			${when(iconName, () =>
 				Icon({
 					...globals,
+					size,
 					iconName,
 					customClasses: [`${rootClass}-icon`, ...customIconClasses],
 				})
