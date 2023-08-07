@@ -25,6 +25,9 @@ sections:
       - border radius is 0 along the fixed edge of the component.
       - The actual component position is not represented in this document.
 
+      ### Notice Variant
+      - The notice variant can be used by adding the `spectrum-Badge--notice` class.
+
 examples:
   - id: badge
     name: Standard
@@ -47,6 +50,10 @@ examples:
 
       <div class="spectrum-Badge spectrum-Badge--sizeM spectrum-Badge--negative">
         <div class="spectrum-Badge-label">Negative</div>
+      </div>
+
+      <div class="spectrum-Badge spectrum-Badge--sizeM spectrum-Badge--notice">
+        <div class="spectrum-Badge-label">Notice</div>
       </div>
 
   - id: badge

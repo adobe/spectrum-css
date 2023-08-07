@@ -27,12 +27,13 @@ governing permissions and limitations under the License.
   /* background color default for all t-shirt sizes and all themes */
   --spectrum-badge-background-color-default: var(--spectrum-neutral-subdued-background-color-default);
 
-  /* background colors for all t-shirt sizes and all themes */
+  /* semantic background colors for all t-shirt sizes and all themes */
   --spectrum-badge-background-color-default: var(--spectrum-neutral-subdued-background-color-default);
   --spectrum-badge-background-color-accent: var(--spectrum-accent-background-color-default);
   --spectrum-badge-background-color-informative: var(--spectrum-informative-background-color-default);
   --spectrum-badge-background-color-negative: var(--spectrum-negative-background-color-default);
   --spectrum-badge-background-color-positive: var(--spectrum-positive-background-color-default);
+  --spectrum-badge-background-color-notice: var(--spectrum-notice-background-color-default);
 
   /*** DEFAULT STYLE fallbacks if no t-shirt size - uses Medium t-shirt styles ***/
   /* badge height - fallback if no t-shirt size */
@@ -186,6 +187,10 @@ governing permissions and limitations under the License.
   &--positive {
     background: var(--mod-badge-background-color-positive,
                     var(--spectrum-badge-background-color-positive));
+  }
+
+  &--notice {
+    background: var(--mod-badge-background-color-notice, var(--spectrum-badge-background-color-notice));
   }
 
   /* fixed position variants with border radius 0 on the fixed edge of the component */

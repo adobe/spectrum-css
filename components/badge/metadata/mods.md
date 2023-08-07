@@ -4,6 +4,7 @@
 | `--mod-badge-background-color-default`      |
 | `--mod-badge-background-color-informative`  |
 | `--mod-badge-background-color-negative`     |
+| `--mod-badge-background-color-notice`       |
 | `--mod-badge-background-color-positive`     |
 | `--mod-badge-corner-radius`                 |
 | `--mod-badge-font-size`                     |
