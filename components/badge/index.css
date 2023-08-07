@@ -21,8 +21,8 @@ governing permissions and limitations under the License.
   /* text and icon color default white for all t-shirt sizes and all themes */
   --spectrum-badge-label-icon-color: var(--spectrum-white);
 
-  /* text and icon color black for all t-shirt sizes and all themes */
-  &--black-text, &--orange, &--yellow, &--chartreuse, &--celery {
+  /* text and icon color is black for these background colors */
+  &--orange, &--yellow, &--chartreuse, &--celery {
     --spectrum-badge-label-icon-color: var(--spectrum-black);
   }
 
@@ -235,16 +235,10 @@ governing permissions and limitations under the License.
 
   &--chartreuse {
     background: var(--mod-badge-background-color-chartreuse, var(--spectrum-badge-background-color-chartreuse));
-    .spectrum-Badge-label, .spectrum-Badge-icon {
-      color: var(--mod-badge-label-icon-color-black, var(--spectrum-badge-label-icon-color-black));
-    }
   }
 
   &--celery {
     background: var(--mod-badge-background-color-celery, var(--spectrum-badge-background-color-celery));
-    .spectrum-Badge-label, .spectrum-Badge-icon {
-      color: var(--mod-badge-label-icon-color-black, var(--spectrum-badge-label-icon-color-black));
-    }
   }
 
   &--green {

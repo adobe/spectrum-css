@@ -42,33 +42,15 @@ export default {
 			options: ["neutral", "accent", "informative", "positive", "negative", "gray", "red", "orange", "yellow", "chartreuse", "celery", "green", "seafoam", "cyan", "blue", "indigo", "purple", "fuchsia", "magenta"],
 			control: "select",
 		},
-		hideLabel: {
-			name: "Hide label",
-			type: { name: "boolean" },
-			table: {
-				type: { summary: "boolean" },
-				category: "Component",
-			},
-			control: "boolean",
-		},
-		customColor: {
-			name: "Custom color",
-			type: { name: "string" },
-			table: {
-				type: { summary: "string" },
-				category: "Advanced",
-			},
-			options: ["black-text"],
-			control: "select",
-		},
-		customLayout: {
-			name: "Custom layout",
+		fixed: {
+			name: "Fixed layout",
 			type: { name: "string" },
 			table: {
 				type: { summary: "string" },
 				category: "Advanced",
 			},
 			options: [
+				"none",
 				"fixed-inline-start",
 				"fixed-inline-end",
 				"fixed-block-start",
@@ -82,7 +64,6 @@ export default {
 		size: "m",
 		label: "Badge",
 		variant: "neutral",
-		hideLabel: false,
 	},
 	parameters: {
 		actions: {
@@ -107,5 +88,5 @@ WithIcon.args = {
 export const IconOnly = Template.bind({});
 IconOnly.args = {
 	iconName: "Info",
-	hideLabel: true
+	label: undefined
 };

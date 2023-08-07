@@ -12,9 +12,7 @@ export const Template = ({
 	size = "m",
 	label,
 	iconName,
-	hideLabel = false,
 	variant = "neutral",
-	customColor,
 	customLayout,
 	customClasses = [],
 	id,
@@ -53,8 +51,8 @@ export const Template = ({
 				})
 			)}
 			${when(
-				!hideLabel || (!label && !variant),
-				() => html`<div class="${rootClass}-label">${label ?? variant}</div>`
+				label,
+				() => html`<div class="${rootClass}-label">${label}</div>`
 			)}
 		</div>
 	`;

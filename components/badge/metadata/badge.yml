@@ -15,18 +15,10 @@ sections:
       - Label and icon elements must be nested inside a parent container of class `.spectrum-Badge` in order to achieve the correct layout and wrapping behavior.
       - Layout of Badge is applied with a display of inline-flex, allowing badge to display as inline while the child elements for the label and icon utilize flexbox for layout.
 
-      ### Badge now includes white text/icon color and black text/icon color
-      - The color is applied to the parent container so that the icon and text child elements will inherit a unified color.
-      - White text/icon color is the default and requires no additional class.
-      - Black text/icon color is applied to the parent container with modifier class `.spectrum-Badge--black-text`
-
       ### Badge now includes fixed positioning
       - This document represents the border radius style which applies to each position.
       - border radius is 0 along the fixed edge of the component.
       - The actual component position is not represented in this document.
-
-      ### Notice Variant
-      - The notice variant can be used by adding the `spectrum-Badge--notice` class.
 
 examples:
   - id: badge
@@ -261,33 +253,4 @@ examples:
           </div>
         </div>
 
-      </div>
-
-  - id: badge
-    name: Text and Icon Color
-    markup: |
-      <div class="spectrum-Examples">
-        <div class="spectrum-Examples-item">
-          <h4 class="spectrum-Heading spectrum-Heading--sizeXS spectrum-Examples-itemHeading">White (default)</h4>
-
-          <div class="spectrum-Badge spectrum-Badge--sizeM spectrum-Badge--neutral">
-            <svg class="spectrum-Icon spectrum-Icon--sizeM spectrum-Badge-icon spectrum-Badge-icon" focusable="false" aria-hidden="true">
-              <use xlink:href="#spectrum-icon-18-Info" />
-            </svg>
-            <div class="spectrum-Badge-label">Label Text</div>
-          </div>
-
-        </div>
-
-        <div class="spectrum-Examples-item">
-          <h4 class="spectrum-Heading spectrum-Heading--sizeXS spectrum-Examples-itemHeading">Black</h4>
-
-          <div class="spectrum-Badge spectrum-Badge--sizeM spectrum-Badge--neutral spectrum-Badge--black-text">
-            <svg class="spectrum-Icon spectrum-Icon--sizeM spectrum-Badge-icon spectrum-Badge-icon" focusable="false" aria-hidden="true">
-              <use xlink:href="#spectrum-icon-18-Info" />
-            </svg>
-            <div class="spectrum-Badge-label">Label Text</div>
-          </div>
-
-        </div>
       </div>
