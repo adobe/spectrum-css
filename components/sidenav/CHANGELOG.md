@@ -3,6 +3,117 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+<a name="4.0.0"></a>
+#4.0.0
+🗓
+2023-08-07 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/sidenav@3.0.51...@spectrum-css/sidenav@4.0.0)
+
+\*feat(sidenav)!: use spectrum-tokens (#1901)([8851dd9](https://github.com/adobe/spectrum-css/commit/8851dd9)), closes[#1901](https://github.com/adobe/spectrum-css/issues/1901)
+
+    	###
+    	🛑 BREAKING CHANGES
+
+    		*
+    		Migrates Side Nav to use `@adobe/spectrum-tokens`
+
+Additionally:
+
+- chore(sidenav): initial build changes
+
+- chore(sidenav)!: wip add new tokens
+
+- chore(sidenav)!: wip migrate tokens
+
+- chore(sidenav)!: wip migrate tokens
+
+- chore(sidenav): migrates tokens part 3
+
+- fix(sidenav): typo
+
+- chore(sidenav): add description and migration guide
+
+- chore(sidenav): add highcontrast custom properties
+
+- chore(sidenav): properties rename and organize
+
+- chore(sidenav): wip adjust stories
+
+- chore(sidenav): add mods
+
+- chore(sidenav): rename and docs
+
+- feat(sidenav): adds all variants to storybook
+
+- fix(sidenav): icon and category story bugs
+
+- feat(sidenav): icon pass through custom properties
+
+- fix(sidenav): custom properties for icon
+
+- fix(sidenav): correct gap usage
+
+- fix(sidenav): dont't use pass through properties for icon
+
+- chore(sidenav): add span to doc site side nav
+
+- feat(sidenav): add icon styling
+
+- chore(sidenav): whcm
+
+- chore(sidenav): use new header tokens
+
+- chore(sidenav): mods auto updates
+
+- fix(sidenav): whcm icon hover
+
+- fix(sidenav): addresses nesting icons in storybook
+
+- feat(sidenav): use new tokens for heading layout
+
+- fix(sidenav): spectrum link
+
+- fix(sidenav): address design feedback
+
+- fix(sidenav): whcm
+
+- feat(sidenav): adds in icon variant to storybook
+
+- chore(sidenav): remove stylelint disables
+
+- chore(sidenav): address PR feedback
+
+- chore(sidebav): address PR feedback part 2
+
+- feat(sidenav): hard code line height
+
+- fix(sidenav): hover on dark
+
+- chore(sidenav): manual version increase for beta release
+
+- chore(sidenav): new value for text bottom margin
+
+- chore(sidenav): remove custom tokens
+
+- Revert "chore(sidenav): remove custom tokens"
+
+This reverts commit a404f9505d8125277ed5eda0312289a0468a527f.
+
+- chore(sidenav): tokens version
+
+- feat(sidenav): width set to 100%
+
+- chore(sidenav): manual version increase for beta release
+
+- fix(sidenav): line height properties
+
+- fix(sidenav): adds padding for focus ring
+
+- chore(sidenav): add comment
+
+- chore(sidenav): remove added padding
+
+- chore(sidenav): manual version increase for beta release
+
 <a name="3.0.51"></a>
 ##3.0.51
 🗓
