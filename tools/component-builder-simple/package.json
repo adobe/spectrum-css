@@ -12,6 +12,7 @@
     "url": "https://github.com/adobe/spectrum-css/issues"
   },
   "dependencies": {
+    "@spectrum-css/tokens": "^11.1.0",
     "autoprefixer": "^6.5.3",
     "colors": "^1.4.0",
     "del": "^5.0.0",
@@ -37,9 +38,15 @@
     "through2": "^3.0.1"
   },
   "peerDependencies": {
-    "@spectrum-css/tokens": ">=11"
+    "@spectrum-css/tokens": ">=7 <=11"
   },
   "publishConfig": {
     "access": "public"
+  },
+  "nx": {
+    "tags": [
+      "builder",
+      "tooling"
+    ]
   }
 }

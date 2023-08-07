@@ -15,12 +15,13 @@
   },
   "main": "dist/index-vars.css",
   "scripts": {
-    "build": "gulp"
+    "build": "node ./index.js",
+    "clean": "rimraf dist"
   },
   "peerDependencies": {
     "@spectrum-css/assetlist": ">=3",
-    "@spectrum-css/checkbox": ">=7.0.0",
-    "@spectrum-css/icon": ">=3",
+    "@spectrum-css/checkbox": ">=7",
+    "@spectrum-css/icon": ">=3 <=4",
     "@spectrum-css/vars": ">=9"
   },
   "devDependencies": {
@@ -29,7 +30,7 @@
     "@spectrum-css/component-builder": "^4.0.13",
     "@spectrum-css/icon": "^4.0.0",
     "@spectrum-css/vars": "^9.0.8",
-    "gulp": "^4.0.0"
+    "rimraf": "^5.0.1"
   },
   "publishConfig": {
     "access": "public"

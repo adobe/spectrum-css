@@ -64,40 +64,5 @@
     "storybook-addon-pseudo-states": "^2.1.0",
     "style-loader": "3.3.3",
     "webpack": "^5.83.1"
-  },
-  "nx": {
-    "targets": {
-      "build": {
-        "dependsOn": [
-          "^build"
-        ],
-        "inputs": [
-          "{workspaceRoot}/assets",
-          "{workspaceRoot}/decorators",
-          "{workspaceRoot}/*.js",
-          "{workspaceRoot}/*.html",
-          "{projectRoot}/components/*/dist"
-        ],
-        "outputs": [
-          "{workspaceRoot}/storybook-static"
-        ]
-      },
-      "clean": {
-        "inputs": [
-          "{workspaceRoot}/storybook-static"
-        ]
-      }
-    },
-    "implicitDependencies": [
-      "@spectrum-css/*",
-      "!@spectrum-css/generator"
-    ],
-    "includedScripts": [
-      "clean",
-      "test",
-      "test:scope",
-      "storybook",
-      "build"
-    ]
   }
 }

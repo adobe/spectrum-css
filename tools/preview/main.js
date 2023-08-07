@@ -8,7 +8,7 @@ const componentPkgs = readdirSync(componentsPath, {
 	.map((dirent) => dirent.name);
 module.exports = {
 	stories: [
-		"../../components/*/stories/*.stories.mdx",
+		// "../../components/*/stories/*.stories.mdx",
 		"../../components/*/stories/*.stories.@(js|jsx|ts|tsx)",
 	],
 	rootDir: "../../",
@@ -33,7 +33,7 @@ module.exports = {
 		"@whitespace/storybook-addon-html",
 		// https://storybook.js.org/addons/@etchteam/storybook-addon-status
 		"@etchteam/storybook-addon-status",
-    "storybook-addon-pseudo-states",
+		"storybook-addon-pseudo-states",
 	],
 	core: {
 		disableTelemetry: true,

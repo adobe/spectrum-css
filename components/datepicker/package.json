@@ -15,22 +15,23 @@
   },
   "main": "dist/index-vars.css",
   "scripts": {
-    "build": "gulp"
+    "build": "node ./index.js",
+    "clean": "rimraf dist"
   },
   "peerDependencies": {
-    "@spectrum-css/pickerbutton": ">=3",
+    "@spectrum-css/pickerbutton": ">=3 <=4",
     "@spectrum-css/popover": ">=5 <=6",
     "@spectrum-css/vars": ">=9"
   },
   "devDependencies": {
     "@spectrum-css/component-builder": "^4.0.13",
     "@spectrum-css/icon": "^4.0.0",
-    "@spectrum-css/menu": "^4.0.50",
-    "@spectrum-css/pickerbutton": "^3.0.34",
+    "@spectrum-css/menu": "^5.0.1",
+    "@spectrum-css/pickerbutton": "^4.0.2",
     "@spectrum-css/popover": "^6.0.64",
     "@spectrum-css/textfield": "^6.0.10",
     "@spectrum-css/vars": "^9.0.8",
-    "gulp": "^4.0.0"
+    "rimraf": "^5.0.1"
   },
   "publishConfig": {
     "access": "public"

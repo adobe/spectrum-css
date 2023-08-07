@@ -15,15 +15,16 @@
   },
   "main": "dist/index-vars.css",
   "scripts": {
-    "build": "gulp"
+    "build": "node ./index.js",
+    "clean": "rimraf dist"
   },
   "dependencies": {
     "@spectrum-css/vars": "^9.0.8"
   },
   "devDependencies": {
     "@spectrum-css/component-builder": "^4.0.13",
-    "@spectrum-css/vars": "*",
-    "gulp": "^4.0.0"
+    "@spectrum-css/vars": "^9.0.8",
+    "rimraf": "^5.0.1"
   },
   "publishConfig": {
     "access": "public"

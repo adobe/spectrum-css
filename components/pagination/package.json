@@ -15,14 +15,15 @@
   },
   "main": "dist/index-vars.css",
   "scripts": {
-    "build": "gulp"
+    "build": "node ./index.js",
+    "clean": "rimraf dist"
   },
   "peerDependencies": {
-    "@spectrum-css/actionbutton": ">=4.0.0",
+    "@spectrum-css/actionbutton": ">=4",
     "@spectrum-css/button": ">=10",
-    "@spectrum-css/icon": ">=3",
+    "@spectrum-css/icon": ">=3 <=4",
     "@spectrum-css/splitbutton": ">=5",
-    "@spectrum-css/textfield": ">=5.0.0",
+    "@spectrum-css/textfield": ">=5 <=6",
     "@spectrum-css/vars": ">=9"
   },
   "devDependencies": {
@@ -33,7 +34,7 @@
     "@spectrum-css/splitbutton": "^5.0.59",
     "@spectrum-css/textfield": "^6.0.10",
     "@spectrum-css/vars": "^9.0.8",
-    "gulp": "^4.0.0"
+    "rimraf": "^5.0.1"
   },
   "publishConfig": {
     "access": "public"

@@ -1,0 +1,63 @@
+{
+	"name": "preview",
+	"tags": ["tooling"],
+	"implicitDependencies": ["@spectrum-css/*"],
+	"includedScripts": [
+		"clean",
+		"test",
+		"test:scope",
+		"storybook",
+		"start",
+		"build"
+	],
+	"targets": {
+		"clean": {
+			"inputs": ["{workspaceRoot}/dist"],
+			"outputs": [],
+			"executor": "nx:run-script",
+			"options": {
+				"script": "clean"
+			}
+		},
+		"build": {
+			"dependsOn": ["^build"],
+			"inputs": ["{workspaceRoot}/*.css"],
+			"outputs": ["{workspaceRoot}/dist"],
+			"executor": "nx:run-script",
+			"options": {
+				"script": "build"
+			}
+		},
+		"build:clean": {
+			"dependsOn": ["clean", "build"]
+		},
+		"start": {
+			"dependsOn": ["^build"],
+			"executor": "nx:run-script",
+			"options": {
+				"script": "start"
+			}
+		},
+		"storybook": {
+			"dependsOn": ["^build"],
+			"executor": "nx:run-script",
+			"options": {
+				"script": "storybook"
+			}
+		},
+		"test": {
+			"dependsOn": ["^build"],
+			"executor": "nx:run-script",
+			"options": {
+				"script": "test"
+			}
+		},
+		"test:scope": {
+			"dependsOn": ["^build"],
+			"executor": "nx:run-script",
+			"options": {
+				"script": "test:scope"
+			}
+		}
+	}
+}

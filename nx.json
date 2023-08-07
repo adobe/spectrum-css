@@ -1,5 +1,5 @@
 {
-	"npmScope": "@spectrum-css",
+	"$schema": "./node_modules/nx/schemas/nx-schema.json",
 	"tasksRunnerOptions": {
 		"default": {
 			"runner": "nx/tasks-runners/default",
@@ -9,9 +9,14 @@
 		}
 	},
 	"targetDefaults": {
+		"clean": {
+			"inputs": ["{workspaceRoot}/dist"],
+			"outputs": []
+		},
 		"build": {
-			"dependsOn": ["clean", "^build"],
-			"inputs": ["{workspaceRoot}/*.css"]
+			"dependsOn": ["^build"],
+			"inputs": ["{workspaceRoot}/*.css"],
+			"outputs": ["{workspaceRoot}/dist"]
 		}
 	},
 	"includedScripts": ["build"]

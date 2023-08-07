@@ -17,10 +17,10 @@
   "scripts": {
     "build": "gulp",
     "clean": "rimraf dist",
-    "test": "nx test:scope @spectrum-css/previewopacitycheckerboard"
+    "test": "nx test:scope preview opacitycheckerboard"
   },
   "peerDependencies": {
-    "@spectrum-css/tokens": ">=10"
+    "@spectrum-css/tokens": ">=10 <=11"
   },
   "devDependencies": {
     "@spectrum-css/component-builder-simple": "^2.0.16",

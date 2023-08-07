@@ -77,8 +77,6 @@ function generateCombinedIcons() {
 // Only ran by Adobe
 const updateIcons = gulp.series(clean, sanitizeIcons, generateCombinedIcons);
 
-const tasks = require("@spectrum-css/component-builder");
-
 function generateSVGSprite() {
 	return gulp
 		.src("combined/*.svg")
@@ -126,12 +124,10 @@ const buildIcons = gulp.parallel(
 	generateSVGSprite
 );
 
-const build = gulp.parallel(buildIcons, tasks.buildCSS);
-
 exports.updateIcons = updateIcons;
 exports.build =
 	exports.buildLite =
 	exports.buildHeavy =
 	exports.buildMedium =
-		build;
-exports.default = build;
+		buildIcons;
+exports.default = buildIcons;

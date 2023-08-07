@@ -10,8 +10,6 @@ OF ANY KIND, either express or implied. See the License for the specific languag
 governing permissions and limitations under the License.
 */
 
-const logger = require("gulplog");
-
 const md = require("markdown-it")({
 	html: true,
 	linkify: false,
@@ -116,28 +114,19 @@ exports.getStatusLightVariant = function (status) {
 	return statusLightVariants[status] || "neutral";
 };
 
-exports.getDNAStatus = function (dnaComponentId, dnaStatus, cssStatus) {
+exports.getDNAStatus = function (_, dnaStatus, cssStatus) {
 	if (cssStatus === "Deprecated") {
 		dnaStatus = "Deprecated";
 	}
 
-	if (cssStatus === "Verified") {
-		if (dnaStatusTranslation[dnaStatus] !== "Canon") {
-			logger.debug(
-				`${dnaComponentId} is ${cssStatus} in CSS, but ${dnaStatus} in DNA`
-			);
-		}
-	}
-
 	if (!dnaStatus) {
-		logger.debug(`${dnaComponentId} has no DNA status`);
 		dnaStatus = "Contribution";
 	}
 
 	return dnaStatusTranslation[dnaStatus] || dnaStatus;
 };
 
-exports.getCSSStatus = function (dnaComponentId, cssStatus) {
+exports.getCSSStatus = function (_, cssStatus) {
 	if (!cssStatus) {
 		cssStatus = "Contribution";
 	}
@@ -153,15 +142,13 @@ exports.getSlug = function (name, subName) {
 
 exports.populateDNAInfo = function (component, dnaVars) {
 	// Get DNA information
-	var dnaComponentId = component.id || component.name.toLowerCase();
+	const dnaComponentId = component.id || component.name.toLowerCase();
 
 	// Get info based on component variation first, then component name second
-	var dnaComponentTitle = dnaVars["spectrum-" + dnaComponentId + "-name"];
+	const dnaComponentTitle = dnaVars["spectrum-" + dnaComponentId + "-name"];
 
-	var dnaDescription = dnaVars["spectrum-" + dnaComponentId + "-description"];
-
-	var cssStatus = this.getCSSStatus(dnaComponentId, component.status);
-	var dnaStatus = this.getDNAStatus(
+	const cssStatus = this.getCSSStatus(dnaComponentId, component.status);
+	const dnaStatus = this.getDNAStatus(
 		dnaComponentId,
 		dnaVars["spectrum-" + dnaComponentId + "-status"] || component.dnaStatus,
 		cssStatus
@@ -181,31 +168,31 @@ exports.populateDNAInfo = function (component, dnaVars) {
 		console.log(component);
 	}
 
-	if (component.examples) {
-		for (id in component.examples) {
-			let example = component.examples[id];
-			if (typeof example === "string") {
-				// Handle markup only examples
-				example = {
-					id: id,
-					markup: example,
-				};
-				component.examples[id] = example;
-			} else {
-				example.id = example.id || id;
-			}
+	if (!component.examples) return;
 
-			// All examples are verified if the outer component is verified
-			if (component.status === "Verified") {
-				example.status = "Verified";
-			}
-
-			// The example is canon if the component is Canon and Verified
-			if (component.dnaStatus === "Canon" && component.status === "Verified") {
-				example.dnaStatus = "Canon";
-			}
-
-			this.populateDNAInfo(example, dnaVars);
+	for (id in component.examples) {
+		let example = component.examples[id];
+		if (typeof example === "string") {
+			// Handle markup only examples
+			example = {
+				id: id,
+				markup: example,
+			};
+			component.examples[id] = example;
+		} else {
+			example.id = example.id || id;
 		}
+
+		// All examples are verified if the outer component is verified
+		if (component.status === "Verified") {
+			example.status = "Verified";
+		}
+
+		// The example is canon if the component is Canon and Verified
+		if (component.dnaStatus === "Canon" && component.status === "Verified") {
+			example.dnaStatus = "Canon";
+		}
+
+		this.populateDNAInfo(example, dnaVars);
 	}
 };

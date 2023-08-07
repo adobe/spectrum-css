@@ -13,10 +13,7 @@
   "bugs": {
     "url": "https://github.com/adobe/spectrum-css/issues"
   },
-  "main": "dist/index-vars.css",
-  "scripts": {
-    "build": "echo 'No build required'"
-  },
+  "main": "index.css",
   "publishConfig": {
     "access": "public"
   }

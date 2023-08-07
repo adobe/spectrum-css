@@ -13,11 +13,6 @@
     examples = component.examples;
   }
 
-  // Filter the list of deps since we already include vars
-  var deps = dependencies.filter(function(dep) {
-    return dep !== 'vars';
-  });
-
   if (component.examples) {
     for (id in component.examples) {
       let example = component.examples[id];
@@ -47,8 +42,9 @@ html(lang='en-US' dir="ltr").spectrum.spectrum--light.spectrum--medium
     link(rel='stylesheet', type='text/css', href='dependencies/@spectrum-css/vars/spectrum-medium.css')
     link(rel='stylesheet', type='text/css', href='dependencies/@spectrum-css/vars/spectrum-large.css')
 
-    each dep in deps
-      link(rel='stylesheet', type='text/css', href='dependencies/@spectrum-css/' + dep + '/index-vars.css')
+    if deps
+      each dep in deps
+        link(rel='stylesheet', type='text/css', href='dependencies/@spectrum-css/' + dep + '/index-vars.css')
 
     // Include the actual component
     link(rel='stylesheet', type='text/css', href='../index-vars.css')
@@ -81,7 +77,8 @@ html(lang='en-US' dir="ltr").spectrum.spectrum--light.spectrum--medium
       header(id=component.slug).spectrum-CSSComponent-heading
         h1.spectrum-CSSComponent-title.spectrum-Heading.spectrum-Heading--sizeXXXL.spectrum-Heading--serif
           a(href=`#${component.slug}`).spectrum-BigSubtleLink #{component.name}
-        p.spectrum-CSSComponent-version.spectrum-Body.spectrum-Body--sizeS Version #{pkg.version}
+        if pkg && pkg.version
+          p.spectrum-CSSComponent-version.spectrum-Body.spectrum-Body--sizeS Version #{pkg.version}
 
       if component.description
         section.spectrum-CSSComponent-description.spectrum-Body.spectrum-Body--sizeL!= util.markdown.render(component.description)

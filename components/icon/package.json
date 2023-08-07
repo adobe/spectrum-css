@@ -15,8 +15,10 @@
   },
   "main": "dist/index-vars.css",
   "scripts": {
-    "build": "gulp",
-    "update": "gulp updateIcons"
+    "build": "node ./index.js",
+    "build:icons": "gulp",
+    "clean": "rimraf dist",
+    "update:icons": "gulp updateIcons"
   },
   "peerDependencies": {
     "@spectrum-css/vars": ">=9"
@@ -31,6 +33,7 @@
     "gulp-svgcombiner": "^1.0.1",
     "gulp-svgmin": "^2.1.0",
     "gulp-svgstore": "^7.0.1",
+    "rimraf": "^5.0.1",
     "vinyl-paths": "^3.0.1"
   },
   "publishConfig": {

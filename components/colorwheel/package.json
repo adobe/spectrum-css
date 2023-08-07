@@ -19,7 +19,7 @@
   },
   "peerDependencies": {
     "@spectrum-css/colorhandle": ">=5.0.0",
-    "@spectrum-css/tokens": ">=10.0.0"
+    "@spectrum-css/tokens": ">=10 <=11"
   },
   "devDependencies": {
     "@spectrum-css/colorarea": "^4.0.32",

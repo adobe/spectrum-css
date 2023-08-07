@@ -19,7 +19,7 @@
   },
   "peerDependencies": {
     "@spectrum-css/swatch": ">=4",
-    "@spectrum-css/tokens": ">=8"
+    "@spectrum-css/tokens": ">=8 <=11"
   },
   "devDependencies": {
     "@spectrum-css/component-builder-simple": "^2.0.16",

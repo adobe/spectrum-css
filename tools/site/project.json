@@ -1,0 +1,35 @@
+{
+	"name": "documentation",
+	"tags": ["tooling"],
+	"implicitDependencies": ["@spectrum-css/*"],
+	"includedScripts": ["clean", "build", "start"],
+	"targets": {
+		"clean": {
+			"inputs": ["{projectRoot}/dist"],
+			"outputs": [],
+			"executor": "nx:run-script",
+			"options": {
+				"script": "clean"
+			}
+		},
+		"build": {
+			"dependsOn": ["^build"],
+			"inputs": ["{workspaceRoot}/**.pug"],
+			"outputs": ["{projectRoot}/dist"],
+			"executor": "nx:run-script",
+			"options": {
+				"script": "build"
+			}
+		},
+		"build:clean": {
+			"dependsOn": ["clean", "build"]
+		},
+		"start": {
+			"dependsOn": ["^build"],
+			"executor": "nx:run-script",
+			"options": {
+				"script": "start"
+			}
+		}
+	}
+}
