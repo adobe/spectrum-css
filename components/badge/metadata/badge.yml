@@ -56,7 +56,66 @@ examples:
         <div class="spectrum-Badge-label">Notice</div>
       </div>
 
-  - id: badge
+  - id: badge-non-semantic
+    name: Non-Semantic
+    markup: |
+      <div class="spectrum-Badge spectrum-Badge--sizeM spectrum-Badge--gray">
+        <div class="spectrum-Badge-label">Gray</div>
+      </div>
+
+      <div class="spectrum-Badge spectrum-Badge--sizeM spectrum-Badge--red">
+        <div class="spectrum-Badge-label">Red</div>
+      </div>
+
+      <div class="spectrum-Badge spectrum-Badge--sizeM spectrum-Badge--orange">
+        <div class="spectrum-Badge-label">Orange</div>
+      </div>
+
+      <div class="spectrum-Badge spectrum-Badge--sizeM spectrum-Badge--yellow">
+        <div class="spectrum-Badge-label">Yellow</div>
+      </div>
+
+      <div class="spectrum-Badge spectrum-Badge--sizeM spectrum-Badge--chartreuse">
+        <div class="spectrum-Badge-label">Chartreuse</div>
+      </div>
+
+      <div class="spectrum-Badge spectrum-Badge--sizeM spectrum-Badge--celery">
+        <div class="spectrum-Badge-label">Celery</div>
+      </div>
+
+      <div class="spectrum-Badge spectrum-Badge--sizeM spectrum-Badge--green">
+        <div class="spectrum-Badge-label">Green</div>
+      </div>
+
+      <div class="spectrum-Badge spectrum-Badge--sizeM spectrum-Badge--seafoam">
+        <div class="spectrum-Badge-label">Seafoam</div>
+      </div>
+
+      <div class="spectrum-Badge spectrum-Badge--sizeM spectrum-Badge--cyan">
+        <div class="spectrum-Badge-label">Cyan</div>
+      </div>
+
+      <div class="spectrum-Badge spectrum-Badge--sizeM spectrum-Badge--blue">
+        <div class="spectrum-Badge-label">Blue</div>
+      </div>
+
+      <div class="spectrum-Badge spectrum-Badge--sizeM spectrum-Badge--indigo">
+        <div class="spectrum-Badge-label">Indigo</div>
+      </div>
+
+      <div class="spectrum-Badge spectrum-Badge--sizeM spectrum-Badge--purple">
+        <div class="spectrum-Badge-label">Purple</div>
+      </div>
+
+      <div class="spectrum-Badge spectrum-Badge--sizeM spectrum-Badge--fuchsia">
+        <div class="spectrum-Badge-label">Fuchsia</div>
+      </div>
+
+      <div class="spectrum-Badge spectrum-Badge--sizeM spectrum-Badge--magenta">
+        <div class="spectrum-Badge-label">Magenta</div>
+      </div>
+
+  - id: badge-sizing
     name: Sizing
     markup: |
       <h4 class="spectrum-Heading spectrum-Heading--sizeXS spectrum-Examples-itemHeading">Label Only</h4>
