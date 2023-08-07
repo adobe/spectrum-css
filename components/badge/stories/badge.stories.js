@@ -39,7 +39,7 @@ export default {
 				type: { summary: "string" },
 				category: "Component",
 			},
-			options: ["neutral", "accent", "informative", "positive", "negative"],
+			options: ["neutral", "accent", "informative", "positive", "negative", "gray", "red", "orange", "yellow", "chartreuse", "celery", "green", "seafoam", "cyan", "blue", "indigo", "purple", "fuchsia", "magenta"],
 			control: "select",
 		},
 		hideLabel: {
