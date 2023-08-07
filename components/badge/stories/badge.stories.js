@@ -80,7 +80,6 @@ export default {
 	args: {
 		rootClass: "spectrum-Badge",
 		size: "m",
-		iconName: "Info",
 		label: "Badge",
 		variant: "neutral",
 		hideLabel: false,
@@ -99,3 +98,14 @@ export default {
 
 export const Default = Template.bind({});
 Default.args = {};
+
+export const WithIcon = Template.bind({});
+WithIcon.args = {
+	iconName: "Info"
+};
+
+export const IconOnly = Template.bind({});
+IconOnly.args = {
+	iconName: "Info",
+	hideLabel: true
+};
