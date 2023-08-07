@@ -28,7 +28,6 @@
 | `--mod-badge-icon-spacing-vertical-top`     |
 | `--mod-badge-icon-text-spacing`             |
 | `--mod-badge-label-icon-color`              |
-| `--mod-badge-label-icon-color-black`        |
 | `--mod-badge-label-spacing-horizontal`      |
 | `--mod-badge-label-spacing-vertical-bottom` |
 | `--mod-badge-label-spacing-vertical-top`    |

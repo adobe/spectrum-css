@@ -61,7 +61,6 @@ export default {
 	args: {
 		rootClass: "spectrum-Badge",
 		size: "m",
-		label: "Badge",
 		variant: "neutral",
 	},
 	parameters: {
@@ -77,15 +76,17 @@ export default {
 };
 
 export const Default = Template.bind({});
-Default.args = {};
+Default.args = {
+	label: "Badge",
+};
 
 export const WithIcon = Template.bind({});
 WithIcon.args = {
-	iconName: "Info"
+	iconName: "Info",
+	label: "Badge",
 };
 
 export const IconOnly = Template.bind({});
 IconOnly.args = {
 	iconName: "Info",
-	label: undefined
 };

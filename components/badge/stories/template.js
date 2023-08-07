@@ -44,7 +44,7 @@ export const Template = ({
 					...globals,
 					iconName,
 					customClasses: [
-						...(hideLabel ? [`${rootClass}-icon--no-label`] : []),
+						...(typeof label === "undefined" ? [`${rootClass}-icon--no-label`] : []),
 						`${rootClass}-icon`,
 					],
 				})
