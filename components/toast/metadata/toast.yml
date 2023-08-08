@@ -10,6 +10,7 @@ sections:
       Replace `spectrum-ClearButton spectrum-ClearButton--overBackground spectrum-ClearButton--sizeM` with `spectrum-CloseButton spectrum-CloseButton--sizeM spectrum-CloseButton--staticWhite` and remove the `<div class="spectrum-ClearButton-fill">` element.
       ### Over background replaced by Static White with Outline
       Replace all `.spectrum-Button--overBackground .spectrum-Button--quiet` with `.spectrum-Button--staticWhite .spectrum-Button--outline`.
+examples:
   - id: toast
     name: Default
     status: Verified

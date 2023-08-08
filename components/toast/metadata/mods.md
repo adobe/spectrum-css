@@ -1,6 +1,7 @@
 | Modifiable Custom Properties                            |
 | ------------------------------------------------------- |
 | `--mod-toast-background-color-default`                  |
+| `--mod-toast-block-size`                                |
 | `--mod-toast-border-width`                              |
 | `--mod-toast-corner-radius`                             |
 | `--mod-toast-divider-color`                             |
@@ -9,6 +10,7 @@
 | `--mod-toast-informative-background-color-default`      |
 | `--mod-toast-line-height`                               |
 | `--mod-toast-line-height-cjk`                           |
+| `--mod-toast-max-inline-size`                           |
 | `--mod-toast-negative-background-color-default`         |
 | `--mod-toast-positive-background-color-default`         |
 | `--mod-toast-spacing-block-end`                         |
