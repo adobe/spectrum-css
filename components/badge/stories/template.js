@@ -12,10 +12,8 @@ export const Template = ({
 	size = "m",
 	label,
 	iconName,
-	hideLabel = false,
 	variant = "neutral",
-	customColor,
-	customLayout,
+	fixed,
 	customClasses = [],
 	id,
 	...globals
@@ -36,8 +34,7 @@ export const Template = ({
 				[`${rootClass}--size${size?.toUpperCase()}`]:
 					typeof size !== "undefined",
 				[`${rootClass}--${variant}`]: typeof variant !== "undefined",
-				[`${rootClass}--${customColor}`]: typeof customColor !== "undefined",
-				[`${rootClass}--${customLayout}`]: typeof customLayout !== "undefined",
+				[`${rootClass}--${fixed}`]: typeof fixed !== "undefined",
 				...customClasses.reduce((a, c) => ({ ...a, [c]: true }), {}),
 			})}
 			id=${ifDefined(id)}
@@ -47,14 +44,14 @@ export const Template = ({
 					...globals,
 					iconName,
 					customClasses: [
-						...(hideLabel ? [`${rootClass}-icon--no-label`] : []),
+						...(typeof label === "undefined" ? [`${rootClass}-icon--no-label`] : []),
 						`${rootClass}-icon`,
 					],
 				})
 			)}
 			${when(
-				!hideLabel || (!label && !variant),
-				() => html`<div class="${rootClass}-label">${label ?? variant}</div>`
+				label,
+				() => html`<div class="${rootClass}-label">${label}</div>`
 			)}
 		</div>
 	`;
