@@ -1,7 +1,7 @@
 {
   "name": "@spectrum-css/taggroup",
-  "version": "3.3.64",
-  "description": "The Spectrum CSS tags component",
+  "version": "4.0.0-beta.0",
+  "description": "The Spectrum CSS tag group component",
   "license": "Apache-2.0",
   "author": "Adobe",
   "homepage": "https://opensource.adobe.com/spectrum-css/taggroup",
@@ -18,17 +18,17 @@
     "build": "gulp"
   },
   "peerDependencies": {
-    "@spectrum-css/clearbutton": ">=1",
-    "@spectrum-css/tag": ">=6",
-    "@spectrum-css/vars": ">=9"
+    "@spectrum-css/clearbutton": ">=5",
+    "@spectrum-css/tag": ">=8",
+    "@spectrum-css/tokens": ">=11"
   },
   "devDependencies": {
-    "@spectrum-css/avatar": "^6.0.48",
-    "@spectrum-css/clearbutton": "^2.0.0",
-    "@spectrum-css/component-builder": "^4.0.14",
+    "@spectrum-css/avatar": "^6.0.47",
+    "@spectrum-css/clearbutton": "^5.0.0",
+    "@spectrum-css/component-builder-simple": "^2.0.17",
     "@spectrum-css/icon": "^4.0.1",
-    "@spectrum-css/tag": "^8.0.1",
-    "@spectrum-css/vars": "^9.0.8",
+    "@spectrum-css/tag": "^8.0.0",
+    "@spectrum-css/tokens": "^11.2.2",
     "gulp": "^4.0.0"
   },
   "publishConfig": {

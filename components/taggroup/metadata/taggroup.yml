@@ -1,31 +1,40 @@
 name: Tag group
 status: Verified
-description: A group of tags.
+description: A group of <a href="https://opensource.adobe.com/spectrum-css/tag.html">tags</a>. Tags allow users to categorize content. They can represent keywords or people, and are grouped to describe an item or a search request. When horizontal space is limited in a tag group, the individual tags wrap to form another line.
 SpectrumSiteSlug: https://spectrum.adobe.com/page/tag/
 sections:
+  - name: Custom Properties API
+    description: |
+      This component can be modified via its `--mod-*` prefixed custom properties. A list of those prefixed custom properties can be found <a href="https://github.com/adobe/spectrum-css/tree/main/components/taggroup/metadata/mods.md">here</a>.
   - name: Migration Guide
     description: |
+      ### Updated tag classes
+      The examples now use the latest markup from the tag component. This includes additional classes:
+      - `spectrum-Tag-itemLabel`
+      - `spectrum-Tag-itemIcon`
+      - `spectrum-Tag-clearButton`
+
       ### A div wrapper is required for avatar
       ```
-      <div class="spectrum-Avatar spectrum-Avatar--size50 spectrum-Tag-avatar">
+      <div class="spectrum-Avatar spectrum-Avatar--size50">
         <img class="spectrum-Avatar-image" src="img/example-ava.jpg" alt="Avatar">
       </div>
       ```
-      ### Change avatar icon size to small
-      If you use avatar icon along with tag, please replace `.spectrum-Icon--sizeXS` with `.spectrum-Icon--sizeS`.
+      ### Icon size changed to small
+      If you use an icon (`spectrum-Tag-itemIcon`) along with a tag, please replace `.spectrum-Icon--sizeXS` with `.spectrum-Icon--sizeS`.
 examples:
   - id: taggroup
     name: Standard
     markup: |
       <div class="spectrum-TagGroup" role="list" aria-label="list">
-        <div class="spectrum-Tag spectrum-Tag--sizeS spectrum-TagGroup-item" role="listitem">
-          <span class="spectrum-Tag-label">Tag 1</span>
+        <div class="spectrum-Tag spectrum-Tag--sizeS spectrum-TagGroup-item" role="listitem" tabindex="0">
+          <span class="spectrum-Tag-itemLabel">Tag 1</span>
         </div>
-        <div class="spectrum-Tag spectrum-Tag--sizeS spectrum-TagGroup-item is-invalid" role="listitem">
-          <span class="spectrum-Tag-label">Tag 2</span>
+        <div class="spectrum-Tag spectrum-Tag--sizeS spectrum-TagGroup-item is-invalid" role="listitem" tabindex="0">
+          <span class="spectrum-Tag-itemLabel">Tag 2</span>
         </div>
         <div class="spectrum-Tag spectrum-Tag--sizeS spectrum-TagGroup-item is-disabled" role="listitem">
-          <span class="spectrum-Tag-label">Tag 2</span>
+          <span class="spectrum-Tag-itemLabel">Tag 2</span>
         </div>
       </div>
 
@@ -33,22 +42,22 @@ examples:
 
       <div class= "spectrum-TagGroup" role="list" aria-label="Tags">
         <div class="spectrum-Tag spectrum-Tag--sizeS spectrum-TagGroup-item" role="listitem" tabindex="0">
-          <div class="spectrum-Avatar spectrum-Avatar--size50 spectrum-Tag-avatar">
+          <div class="spectrum-Avatar spectrum-Avatar--size50">
             <img class="spectrum-Avatar-image" src="img/example-ava.jpg" alt="Avatar">
           </div>
-          <span class="spectrum-Tag-label">Shantanu</span>
+          <span class="spectrum-Tag-itemLabel">Shantanu</span>
         </div>
         <div class="spectrum-Tag spectrum-Tag--sizeS spectrum-TagGroup-item is-invalid" role="listitem" tabindex="0">
-          <div class="spectrum-Avatar spectrum-Avatar--size50 spectrum-Tag-avatar">
+          <div class="spectrum-Avatar spectrum-Avatar--size50">
             <img class="spectrum-Avatar-image" src="img/example-ava.jpg" alt="Avatar">
           </div>
-          <span class="spectrum-Tag-label">Shantanu</span>
+          <span class="spectrum-Tag-itemLabel">Shantanu</span>
         </div>
         <div class="spectrum-Tag spectrum-Tag--sizeS spectrum-TagGroup-item is-disabled" role="listitem">
-          <div class="spectrum-Avatar spectrum-Avatar--size50 spectrum-Tag-avatar">
+          <div class="spectrum-Avatar spectrum-Avatar--size50">
             <img class="spectrum-Avatar-image" src="img/example-ava.jpg" alt="Avatar">
           </div>
-          <span class="spectrum-Tag-label">Shantanu</span>
+          <span class="spectrum-Tag-itemLabel">Shantanu</span>
         </div>
       </div>
 
@@ -56,22 +65,22 @@ examples:
 
       <div class= "spectrum-TagGroup" role="list" aria-label="Tags">
         <div class="spectrum-Tag spectrum-Tag--sizeS spectrum-TagGroup-item" role="listitem" tabindex="0">
-          <svg class="spectrum-Icon spectrum-Icon--sizeS" focusable="false" aria-hidden="true" aria-label="Tag">
+          <svg class="spectrum-Icon spectrum-Icon--sizeS spectrum-Tag-itemIcon" focusable="false" aria-hidden="true" aria-label="Tag">
             <use xlink:href="#spectrum-icon-18-CheckmarkCircle" />
           </svg>
-          <span class="spectrum-Tag-label">Shantanu</span>
+          <span class="spectrum-Tag-itemLabel">Shantanu</span>
         </div>
         <div class="spectrum-Tag spectrum-Tag--sizeS spectrum-TagGroup-item is-invalid" role="listitem" tabindex="0">
-          <svg class="spectrum-Icon spectrum-Icon--sizeS" focusable="false" aria-hidden="true" aria-label="Tag">
+          <svg class="spectrum-Icon spectrum-Icon--sizeS spectrum-Tag-itemIcon" focusable="false" aria-hidden="true" aria-label="Tag">
             <use xlink:href="#spectrum-icon-18-CheckmarkCircle" />
           </svg>
-          <span class="spectrum-Tag-label">Shantanu</span>
+          <span class="spectrum-Tag-itemLabel">Shantanu</span>
         </div>
         <div class="spectrum-Tag spectrum-Tag--sizeS spectrum-TagGroup-item is-disabled" role="listitem">
-          <svg class="spectrum-Icon spectrum-Icon--sizeS" focusable="false" aria-hidden="true" aria-label="Tag">
+          <svg class="spectrum-Icon spectrum-Icon--sizeS spectrum-Tag-itemIcon" focusable="false" aria-hidden="true" aria-label="Tag">
             <use xlink:href="#spectrum-icon-18-CheckmarkCircle" />
           </svg>
-          <span class="spectrum-Tag-label">Shantanu</span>
+          <span class="spectrum-Tag-itemLabel">Shantanu</span>
         </div>
       </div>
   - id: tag-removable
@@ -80,18 +89,18 @@ examples:
     markup: |
       <div class= "spectrum-TagGroup" role="list" aria-label="Tags">
         <div class="spectrum-Tag spectrum-Tag--sizeS spectrum-TagGroup-item spectrum-Tag--removable" tabindex="0" role="listitem">
-          <span class="spectrum-Tag-label">Tag 1</span>
-          <button class="spectrum-ClearButton spectrum-ClearButton--sizeS" aria-label="Remove tag 1" tabindex="-1">
+          <span class="spectrum-Tag-itemLabel">Tag 1</span>
+          <button type="button" class="spectrum-ClearButton spectrum-ClearButton--sizeS spectrum-Tag-clearButton" aria-label="Remove tag 1" tabindex="-1">
             <div class="spectrum-ClearButton-fill">
-              <svg class="spectrum-ClearButton-icon spectrum-Icon spectrum-UIIcon-Cross75" focusable="false" aria-hidden="true">
+             <svg class="spectrum-ClearButton-icon spectrum-Icon spectrum-UIIcon-Cross75" focusable="false" aria-hidden="true">
                 <use xlink:href="#spectrum-css-icon-Cross75" />
               </svg>
             </div>
           </button>
         </div>
         <div class="spectrum-Tag spectrum-Tag--sizeS spectrum-TagGroup-item spectrum-Tag--removable is-invalid" tabindex="0" role="listitem">
-          <span class="spectrum-Tag-label">Tag 2</span>
-          <button class="spectrum-ClearButton spectrum-ClearButton--sizeS" aria-label="Remove tag 2" tabindex="-1">
+          <span class="spectrum-Tag-itemLabel">Tag 2</span>
+          <button type="button" class="spectrum-ClearButton spectrum-ClearButton--sizeS spectrum-Tag-clearButton" aria-label="Remove tag 2" tabindex="-1">
             <div class="spectrum-ClearButton-fill">
               <svg class="spectrum-ClearButton-icon spectrum-Icon spectrum-UIIcon-Cross75" focusable="false" aria-hidden="true">
                 <use xlink:href="#spectrum-css-icon-Cross75" />
@@ -99,53 +108,9 @@ examples:
             </div>
           </button>
         </div>
-        <div class="spectrum-Tag spectrum-Tag--sizeS spectrum-Tag--removable is-disabled" role="listitem">
-          <span class="spectrum-Tag-label">Tag 2</span>
-          <button class="spectrum-ClearButton spectrum-ClearButton--sizeS" aria-label="Remove tag 3" tabindex="-1" disabled>
-            <div class="spectrum-ClearButton-fill">
-              <svg class="spectrum-ClearButton-icon spectrum-Icon spectrum-UIIcon-Cross75" focusable="false" aria-hidden="true">
-                <use xlink:href="#spectrum-css-icon-Cross75" />
-              </svg>
-            </div>
-          </button>
-        </div>
-      </div>
-
-      <br><br>
-
-      <div class= "spectrum-TagGroup" role="list" aria-label="Tags">
-        <div class="spectrum-Tag spectrum-Tag--sizeS spectrum-TagGroup-item spectrum-Tag--removable" role="listitem" tabindex="0">
-          <div class="spectrum-Avatar spectrum-Avatar--size50 spectrum-Tag-avatar">
-            <img class="spectrum-Avatar-image" src="img/example-ava.jpg" alt="Avatar">
-          </div>
-          <span class="spectrum-Tag-label">Shantanu</span>
-          <button class="spectrum-ClearButton spectrum-ClearButton--sizeS" aria-label="Remove tag 2" tabindex="-1">
-            <div class="spectrum-ClearButton-fill">
-              <svg class="spectrum-ClearButton-icon spectrum-Icon spectrum-UIIcon-Cross75" focusable="false" aria-hidden="true">
-                <use xlink:href="#spectrum-css-icon-Cross75" />
-              </svg>
-            </div>
-          </button>
-        </div>
-        <div class="spectrum-Tag spectrum-Tag--sizeS spectrum-TagGroup-item spectrum-Tag--removable is-invalid" role="listitem" tabindex="0">
-          <div class="spectrum-Avatar spectrum-Avatar--size50 spectrum-Tag-avatar">
-            <img class="spectrum-Avatar-image" src="img/example-ava.jpg" alt="Avatar">
-          </div>
-          <span class="spectrum-Tag-label">Shantanu</span>
-          <button class="spectrum-ClearButton spectrum-ClearButton--sizeS" aria-label="Remove tag 2" tabindex="-1">
-            <div class="spectrum-ClearButton-fill">
-              <svg class="spectrum-ClearButton-icon spectrum-Icon spectrum-UIIcon-Cross75" focusable="false" aria-hidden="true">
-                <use xlink:href="#spectrum-css-icon-Cross75" />
-              </svg>
-            </div>
-          </button>
-        </div>
-        <div class="spectrum-Tag spectrum-Tag--sizeS spectrum-Tag--removable is-disabled" role="listitem">
-          <div class="spectrum-Avatar spectrum-Avatar--size50 spectrum-Tag-avatar">
-            <img class="spectrum-Avatar-image" src="img/example-ava.jpg" alt="Avatar">
-          </div>
-          <span class="spectrum-Tag-label">Shantanu</span>
-          <button class="spectrum-ClearButton spectrum-ClearButton--sizeS" aria-label="Remove tag 3" tabindex="-1" disabled>
+        <div class="spectrum-Tag spectrum-Tag--sizeS spectrum-TagGroup-item spectrum-Tag--removable is-disabled" role="listitem">
+          <span class="spectrum-Tag-itemLabel">Tag 2</span>
+          <button type="button" class="spectrum-ClearButton spectrum-ClearButton--sizeS spectrum-Tag-clearButton" aria-label="Remove tag 3" tabindex="-1" disabled>
             <div class="spectrum-ClearButton-fill">
               <svg class="spectrum-ClearButton-icon spectrum-Icon spectrum-UIIcon-Cross75" focusable="false" aria-hidden="true">
                 <use xlink:href="#spectrum-css-icon-Cross75" />
@@ -159,11 +124,11 @@ examples:
 
       <div class= "spectrum-TagGroup" role="list" aria-label="Tags">
         <div class="spectrum-Tag spectrum-Tag--sizeS spectrum-TagGroup-item spectrum-Tag--removable" role="listitem" tabindex="0">
-          <svg class="spectrum-Icon spectrum-Icon--sizeS" focusable="false" aria-hidden="true" aria-label="Tag">
-            <use xlink:href="#spectrum-icon-18-CheckmarkCircle" />
-          </svg>
-          <span class="spectrum-Tag-label">Shantanu</span>
-          <button class="spectrum-ClearButton spectrum-ClearButton--sizeS" aria-label="Remove tag Shantanu" tabindex="-1">
+          <div class="spectrum-Avatar spectrum-Avatar--size50">
+            <img class="spectrum-Avatar-image" src="img/example-ava.jpg" alt="Avatar">
+          </div>
+          <span class="spectrum-Tag-itemLabel">Shantanu</span>
+          <button type="button" class="spectrum-ClearButton spectrum-ClearButton--sizeS spectrum-Tag-clearButton" aria-label="Remove tag 2" tabindex="-1">
             <div class="spectrum-ClearButton-fill">
               <svg class="spectrum-ClearButton-icon spectrum-Icon spectrum-UIIcon-Cross75" focusable="false" aria-hidden="true">
                 <use xlink:href="#spectrum-css-icon-Cross75" />
@@ -172,11 +137,11 @@ examples:
           </button>
         </div>
         <div class="spectrum-Tag spectrum-Tag--sizeS spectrum-TagGroup-item spectrum-Tag--removable is-invalid" role="listitem" tabindex="0">
-          <svg class="spectrum-Icon spectrum-Icon--sizeS" focusable="false" aria-hidden="true" aria-label="Tag">
-            <use xlink:href="#spectrum-icon-18-CheckmarkCircle" />
-          </svg>
-          <span class="spectrum-Tag-label">Shantanu</span>
-          <button class="spectrum-ClearButton spectrum-ClearButton--sizeS" aria-label="Remove tag Shantanu" tabindex="-1">
+          <div class="spectrum-Avatar spectrum-Avatar--size50">
+            <img class="spectrum-Avatar-image" src="img/example-ava.jpg" alt="Avatar">
+          </div>
+          <span class="spectrum-Tag-itemLabel">Shantanu</span>
+          <button type="button" class="spectrum-ClearButton spectrum-ClearButton--sizeS spectrum-Tag-clearButton" aria-label="Remove tag 2" tabindex="-1">
             <div class="spectrum-ClearButton-fill">
               <svg class="spectrum-ClearButton-icon spectrum-Icon spectrum-UIIcon-Cross75" focusable="false" aria-hidden="true">
                 <use xlink:href="#spectrum-css-icon-Cross75" />
@@ -184,12 +149,56 @@ examples:
             </div>
           </button>
         </div>
-        <div class="spectrum-Tag spectrum-Tag--sizeS spectrum-Tag--removable is-disabled" role="listitem">
-          <svg class="spectrum-Icon spectrum-Icon--sizeS" focusable="false" aria-hidden="true" aria-label="Tag">
+        <div class="spectrum-Tag spectrum-Tag--sizeS spectrum-TagGroup-item spectrum-Tag--removable is-disabled" role="listitem">
+          <div class="spectrum-Avatar spectrum-Avatar--size50">
+            <img class="spectrum-Avatar-image" src="img/example-ava.jpg" alt="Avatar">
+          </div>
+          <span class="spectrum-Tag-itemLabel">Shantanu</span>
+          <button type="button" class="spectrum-ClearButton spectrum-ClearButton--sizeS spectrum-Tag-clearButton" aria-label="Remove tag 3" tabindex="-1" disabled>
+            <div class="spectrum-ClearButton-fill">
+              <svg class="spectrum-ClearButton-icon spectrum-Icon spectrum-UIIcon-Cross75" focusable="false" aria-hidden="true">
+                <use xlink:href="#spectrum-css-icon-Cross75" />
+              </svg>
+            </div>
+          </button>
+        </div>
+      </div>
+
+      <br><br>
+
+      <div class= "spectrum-TagGroup" role="list" aria-label="Tags">
+        <div class="spectrum-Tag spectrum-Tag--sizeS spectrum-TagGroup-item spectrum-Tag--removable" role="listitem" tabindex="0">
+          <svg class="spectrum-Icon spectrum-Icon--sizeS spectrum-Tag-itemIcon" focusable="false" aria-hidden="true" aria-label="Tag">
             <use xlink:href="#spectrum-icon-18-CheckmarkCircle" />
           </svg>
-          <span class="spectrum-Tag-label">Shantanu</span>
-          <button class="spectrum-ClearButton spectrum-ClearButton--sizeS" aria-label="Remove tag Shantanu" tabindex="-1" disabled>
+          <span class="spectrum-Tag-itemLabel">Shantanu</span>
+          <button type="button" class="spectrum-ClearButton spectrum-ClearButton--sizeS spectrum-Tag-clearButton" aria-label="Remove tag Shantanu" tabindex="-1">
+            <div class="spectrum-ClearButton-fill">
+              <svg class="spectrum-ClearButton-icon spectrum-Icon spectrum-UIIcon-Cross75" focusable="false" aria-hidden="true">
+                <use xlink:href="#spectrum-css-icon-Cross75" />
+              </svg>
+            </div>
+          </button>
+        </div>
+        <div class="spectrum-Tag spectrum-Tag--sizeS spectrum-TagGroup-item spectrum-Tag--removable is-invalid" role="listitem" tabindex="0">
+          <svg class="spectrum-Icon spectrum-Icon--sizeS spectrum-Tag-itemIcon" focusable="false" aria-hidden="true" aria-label="Tag">
+            <use xlink:href="#spectrum-icon-18-CheckmarkCircle" />
+          </svg>
+          <span class="spectrum-Tag-itemLabel">Shantanu</span>
+          <button type="button" class="spectrum-ClearButton spectrum-ClearButton--sizeS spectrum-Tag-clearButton" aria-label="Remove tag Shantanu" tabindex="-1">
+            <div class="spectrum-ClearButton-fill">
+              <svg class="spectrum-ClearButton-icon spectrum-Icon spectrum-UIIcon-Cross75" focusable="false" aria-hidden="true">
+                <use xlink:href="#spectrum-css-icon-Cross75" />
+              </svg>
+            </div>
+          </button>
+        </div>
+        <div class="spectrum-Tag spectrum-Tag--sizeS spectrum-TagGroup-item spectrum-Tag--removable is-disabled" role="listitem">
+          <svg class="spectrum-Icon spectrum-Icon--sizeS spectrum-Tag-itemIcon" focusable="false" aria-hidden="true" aria-label="Tag">
+            <use xlink:href="#spectrum-icon-18-CheckmarkCircle" />
+          </svg>
+          <span class="spectrum-Tag-itemLabel">Shantanu</span>
+          <button type="button" class="spectrum-ClearButton spectrum-ClearButton--sizeS spectrum-Tag-clearButton" aria-label="Remove tag Shantanu" tabindex="-1" disabled>
             <div class="spectrum-ClearButton-fill">
               <svg class="spectrum-ClearButton-icon spectrum-Icon spectrum-UIIcon-Cross75" focusable="false" aria-hidden="true">
                 <use xlink:href="#spectrum-css-icon-Cross75" />
