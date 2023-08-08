@@ -11,22 +11,36 @@ governing permissions and limitations under the License.
 */
 
 .spectrum-CoachMark {
-	--spectrum-coachmark-min-width: var(--spectrum-coach-mark-minimum-width);
-	--spectrum-coachmark-width: var(--spectrum-coach-mark-minimum-width);
+	--spectrum-coachmark-min-width:  296px; /* TODO: Replace with new token */
+	--spectrum-coachmark-width:  296px; /* TODO: Replace with new token */
+	--spectrum-coachmark-max-width: 380px; /* TODO: Replace with new token */
+
+	--spectrum-coachmark-media-min-height: 166px; /* TODO: Replace with new token */
+	--spectrum-coachmark-media-height: 222px; /* TODO: Replace with new token */
+
+	--spectrum-coachmark-padding: var(--spectrum-spacing-400);
+
+	/* compact tokens */
 	--spectrum-coachmark-min-width-mobile: 216px; /* TODO: Replace with new token */
 	--spectrum-coachmark-width-mobile: 216px; /* TODO: Replace with new token */
+	--spectrum-coachmark-max-width-compact: 248px;  /* TODO: Replace with new token */
+
+	--spectrum-coachmark-media-min-height-compact: 121px; /* TODO: Replace with new token */
+	--spectrum-coachmark-media-height-compact: 162pxpx; /* TODO: Replace with new token */
+
+	--spectrum-coachmark-padding-compact: var(--spectrum-spacing-300);
 
 	--mod-popover-border-width: var(--spectrum-border-width-100);
 	--mod-popover-corner-radius: var(--spectrum-corner-radius-100);
 	--spectrum-coachmark-border-size: var(--mod-popover-border-width);
 	--spectrum-coachmark-border-radius: var(--mod-popover-corner-radius);
 
-	--spectrum-coachmark-padding: var(--spectrum-coach-mark-edge-to-content);
 	--spectrum-coachmark-header-to-body: var(--spectrum-spacing-200);
 	--spectrum-coachmark-body-to-footer: var(--spectrum-spacing-300);
 
 	--spectrum-coachmark-title-color: var(--spectrum-heading-color);
-	--spectrum-coachmark-title-text-size: var(--spectrum-coach-mark-title-size);
+	--spectrum-coachmark-title-text-size: var(--spectrum-heading-size-xs);
+	--spectrum-coachmark-title-text-size-compact: var(--spectrum-heading-size-xxs);
 	--spectrum-coachmark-title-font-family: var(--spectrum-heading-sans-serif-font-family-stack);
 	--spectrum-coachmark-title-font-style: var(--spectrum-heading-serif-font-style);
 	--spectrum-coachmark-title-text-font-weight: var(--spectrum-heading-sans-serif-font-weight);
@@ -34,7 +48,8 @@ governing permissions and limitations under the License.
 	--spectrum-coachmark-title-text-line-height: var(--spectrum-heading-line-height);
 
 	--spectrum-coachmark-content-font-color: var(--spectrum-body-color);
-	--spectrum-coachmark-content-font-size: var(--spectrum-coach-mark-body-size);
+	--spectrum-coachmark-content-font-size: var(--spectrum-body-size-s);
+	--spectrum-coachmark-content-font-size-compact: var(--spectrum-body-size-xs);
 	--spectrum-coachmark-content-font-weight: var(--spectrum-body-sans-serif-font-weight);
 	--spectrum-coachmark-content-font-family: var(--spectrum-body-sans-serif-font-family);
 	--spectrum-coachmark-content-font-style: var(--spectrum-body-sans-serif-font-style);
@@ -44,18 +59,20 @@ governing permissions and limitations under the License.
 	--spectrum-coachmark-media-height: var(--spectrum-coach-mark-media-height);
 
 	--spectrum-coachmark-step-color: var(--spectrum-coach-mark-pagination-color);
-	--spectrum-coachmark-step-font-size: var(--spectrum-coach-mark-pagination-body-size);
+	--spectrum-coachmark-step-font-size: var(--spectrum-body-size-s);
+	--spectrum-coachmark-step-font-size-compact: var(--spectrum-body-size-xs);
 	--spectrum-coachmark-step-font-weight: var(--spectrum-body-medium-font-weight);
 	--spectrum-coachmark-step-font-family: var(--spectrum-body-sans-serif-font-family);
 	--spectrum-coachmark-step-font-style: var(--spectrum-body-sans-serif-font-style);
 	--spectrum-coachmark-step-line-height: var(--spectrum-body-line-height);
-	--spectrum-coachmark-step-step-to-bottom: var(--spectrum-coach-mark-pagination-text-to-bottom-edge);
+	--spectrum-coachmark-step-step-to-bottom: 33px; /* TODO: Replace with new token */
+	--spectrum-coachmark-step-step-to-bottom-compact: 22px; /* TODO: Replace with new token */
 
 	--spectrum-coachmark-heading-to-action-button: var(--spectrum-spacing-300);
 
 	--mod-buttongroup-justify-content: flex-end;
 	--mod-popover-content-area-spacing-vertical: 0;
-	--mod-button-edge-to-visual-only: 7px;
+	/* --mod-button-edge-to-visual-only: 9px; */
 	--mod-buttongroup-spacing-horizontal: var(--spectrum-spacing-100);
 }
 
@@ -71,6 +88,15 @@ governing permissions and limitations under the License.
 	min-inline-size: var(--mod-coachmark-min-width-mobile, var(--spectrum-coachmark-min-width-mobile));
 	max-inline-size: 380px; /* TODO: Replace with new token or modifier*/
 	inline-size: var(--mod-coachmark-width-mobile, var(--spectrum-coachmark-width-mobile));
+
+	--mod-coachmark-padding: var(--spectrum-coachmark-padding-compact);
+	--mod-coachmark-step-step-to-bottom: var(--spectrum-coachmark-step-step-to-bottom-compact);
+
+	--mod-coachmark-title-text-size: var(--spectrum-coachmark-title-text-size-compact);
+	--mod-coachmark-content-font-size: var(--spectrum-coachmark-content-font-size-compact);
+	--mod-coachmark-step-font-size: var(--spectrum-coachmark-step-font-size-compact);
+
+
 }
 
 
@@ -103,6 +129,7 @@ governing permissions and limitations under the License.
 	padding-block: 0;
 	padding-inline: var(--mod-coachmark-padding, var(--spectrum-coachmark-padding));
 }
+
 
 .spectrum-CoachMark-header {
 	padding-block-start: var(--mod-coachmark-padding, var(--spectrum-coachmark-padding));;

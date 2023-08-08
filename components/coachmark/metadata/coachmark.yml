@@ -4,7 +4,7 @@ examples:
   - id: coachmark
     name: Standard
     markup: |
-      <div class="spectrum-Examples-item" style="height: 250px; width: auto;">
+      <div class="spectrum-Examples-item" style="height: 400px; width: auto;">
         <div class="spectrum-CoachMark">
           <div class="spectrum-Popover is-open">
             <div class="spectrum-CoachMark-header">
@@ -27,7 +27,7 @@ examples:
           </div>
         </div>
       </div>
-      <div class="spectrum-Examples-item" style="height: 250px; width: auto;">
+      <div class="spectrum-Examples-item" style="height: 400px; width: auto;">
         <div class="spectrum-CoachMark">
           <div class="spectrum-Popover is-open">
             <div class="spectrum-CoachMark-header">
@@ -68,7 +68,7 @@ examples:
           </div>
         </div>
       </div>
-      <div class="spectrum-Examples-item" style="height: 400px; width: auto;">
+      <div class="spectrum-Examples-item" style="height: 500px; width: auto;">
         <div class="spectrum-CoachMark">
 
           <div class="spectrum-Popover is-open">
@@ -112,8 +112,8 @@ examples:
             <div class="spectrum-CoachMark-footer">
               <div class="spectrum-CoachMark-step"><bdo dir="ltr">2 of 8</bdo></div>
               <div class="spectrum-ButtonGroup spectrum-ButtonGroup--sizeS">
-                <button class="spectrum-Button spectrum-Button--outline spectrum-Button--secondary spectrum-Button--size spectrum-Button--iconOnly" aria-label="Edit">
-                  <svg class="spectrum-Icon spectrum-UIIcon-ChevronLeft75 spectrum-PickerButton-icon" focusable="false" aria-hidden="true">
+                <button class="spectrum-Button spectrum-Button--outline spectrum-Button--secondary spectrum-Button--sizeS spectrum-Button--iconOnly" aria-label="Edit">
+                  <svg class="spectrum-Icon spectrum-Icon--sizeS  spectrum-UIIcon-ChevronLeft75 spectrum-PickerButton-icon" focusable="false" aria-hidden="true">
                     <use xlink:href="#spectrum-css-icon-Chevron75"></use>
                   </svg>
                 <button class="spectrum-Button spectrum-Button--sizeS spectrum-Button--outline spectrum-Button--primary">
@@ -154,7 +154,7 @@ examples:
             <div class="spectrum-CoachMark-footer">
               <div class="spectrum-CoachMark-step"><bdo dir="ltr">2 of 8</bdo></div>
               <div class="spectrum-ButtonGroup spectrum-ButtonGroup--sizeS">
-                <button class="spectrum-Button spectrum-Button--outline spectrum-Button--secondary spectrum-Button--size spectrum-Button--iconOnly" aria-label="Edit">
+                <button class="spectrum-Button spectrum-Button--outline spectrum-Button--secondary spectrum-Button--sizeS spectrum-Button--iconOnly" aria-label="Edit">
                   <svg class="spectrum-Icon spectrum-UIIcon-ChevronLeft75 spectrum-PickerButton-icon" focusable="false" aria-hidden="true">
                     <use xlink:href="#spectrum-css-icon-Chevron75"></use>
                   </svg>
@@ -181,7 +181,7 @@ examples:
             <div class="spectrum-CoachMark-footer">
               <div class="spectrum-CoachMark-step"><bdo dir="ltr">2 of 8</bdo></div>
               <div class="spectrum-ButtonGroup spectrum-ButtonGroup--sizeS">
-                <button class="spectrum-Button spectrum-Button--outline spectrum-Button--secondary spectrum-Button--size spectrum-Button--iconOnly" aria-label="Edit">
+                <button class="spectrum-Button spectrum-Button--outline spectrum-Button--secondary spectrum-Button--sizeS spectrum-Button--iconOnly" aria-label="Edit">
                   <svg class="spectrum-Icon spectrum-UIIcon-ChevronLeft75 spectrum-PickerButton-icon" focusable="false" aria-hidden="true">
                     <use xlink:href="#spectrum-css-icon-Chevron75"></use>
                   </svg>
