@@ -1,10 +1,25 @@
 | Modifiable Custom Properties                |
 | ------------------------------------------- |
 | `--mod-badge-background-color-accent`       |
+| `--mod-badge-background-color-blue`         |
+| `--mod-badge-background-color-celery`       |
+| `--mod-badge-background-color-chartreuse`   |
+| `--mod-badge-background-color-cyan`         |
 | `--mod-badge-background-color-default`      |
+| `--mod-badge-background-color-fuchsia`      |
+| `--mod-badge-background-color-gray`         |
+| `--mod-badge-background-color-green`        |
+| `--mod-badge-background-color-indigo`       |
 | `--mod-badge-background-color-informative`  |
+| `--mod-badge-background-color-magenta`      |
 | `--mod-badge-background-color-negative`     |
+| `--mod-badge-background-color-notice`       |
+| `--mod-badge-background-color-orange`       |
 | `--mod-badge-background-color-positive`     |
+| `--mod-badge-background-color-purple`       |
+| `--mod-badge-background-color-red`          |
+| `--mod-badge-background-color-seafoam`      |
+| `--mod-badge-background-color-yellow`       |
 | `--mod-badge-corner-radius`                 |
 | `--mod-badge-font-size`                     |
 | `--mod-badge-height`                        |
@@ -12,8 +27,7 @@
 | `--mod-badge-icon-spacing-horizontal`       |
 | `--mod-badge-icon-spacing-vertical-top`     |
 | `--mod-badge-icon-text-spacing`             |
-| `--mod-badge-label-icon-color-black`        |
-| `--mod-badge-label-icon-color-white`        |
+| `--mod-badge-label-icon-color`              |
 | `--mod-badge-label-spacing-horizontal`      |
 | `--mod-badge-label-spacing-vertical-bottom` |
 | `--mod-badge-label-spacing-vertical-top`    |

@@ -3,6 +3,13 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+<a name="5.0.32"></a>
+##5.0.32
+🗓
+2023-08-07 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/page@5.0.31...@spectrum-css/page@5.0.32)
+
+**Note:** Version bump only for package @spectrum-css/page
+
 <a name="5.0.31"></a>
 ##5.0.31
 🗓

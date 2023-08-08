@@ -39,30 +39,11 @@ export default {
 				type: { summary: "string" },
 				category: "Component",
 			},
-			options: ["neutral", "accent", "informative", "positive", "negative"],
+			options: ["neutral", "accent", "informative", "positive", "negative", "gray", "red", "orange", "yellow", "chartreuse", "celery", "green", "seafoam", "cyan", "blue", "indigo", "purple", "fuchsia", "magenta"],
 			control: "select",
 		},
-		hideLabel: {
-			name: "Hide label",
-			type: { name: "boolean" },
-			table: {
-				type: { summary: "boolean" },
-				category: "Component",
-			},
-			control: "boolean",
-		},
-		customColor: {
-			name: "Custom color",
-			type: { name: "string" },
-			table: {
-				type: { summary: "string" },
-				category: "Advanced",
-			},
-			options: ["black-text"],
-			control: "select",
-		},
-		customLayout: {
-			name: "Custom layout",
+		fixed: {
+			name: "Fixed layout",
 			type: { name: "string" },
 			table: {
 				type: { summary: "string" },
@@ -80,10 +61,7 @@ export default {
 	args: {
 		rootClass: "spectrum-Badge",
 		size: "m",
-		iconName: "Info",
-		label: "Badge",
 		variant: "neutral",
-		hideLabel: false,
 	},
 	parameters: {
 		actions: {
@@ -98,4 +76,17 @@ export default {
 };
 
 export const Default = Template.bind({});
-Default.args = {};
+Default.args = {
+	label: "Badge",
+};
+
+export const WithIcon = Template.bind({});
+WithIcon.args = {
+	iconName: "Info",
+	label: "Badge",
+};
+
+export const IconOnly = Template.bind({});
+IconOnly.args = {
+	iconName: "Info",
+};

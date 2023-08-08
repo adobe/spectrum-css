@@ -18,21 +18,47 @@ governing permissions and limitations under the License.
   --spectrum-badge-line-height: var(--spectrum-line-height-100);
   --spectrum-badge-line-height-cjk: var(--spectrum-cjk-line-height-100);
 
-  /* text and icon color default white for all t-shirt sizes and all themes */
-  --spectrum-badge-label-icon-color-white: var(--spectrum-white);
 
-  /* text and icon color black for all t-shirt sizes and all themes */
-  --spectrum-badge-label-icon-color-black: var(--spectrum-black);
+  /* text and icon color default white for all t-shirt sizes and all themes */
+  --spectrum-badge-label-icon-color: var(--spectrum-white);
+
+  /* text and icon color is black for these background colors */
+  &--orange, &--yellow, &--chartreuse, &--celery {
+    --spectrum-badge-label-icon-color: var(--spectrum-black);
+  }
+
+  /* dark theme all non-semantic colors are black */
+  &--gray, &--red, &--green, &--seafoam, &--cyan, &--blue, &--indigo, &--purple, &--fuchsia, &--magenta {
+    --spectrum-badge-label-icon-color: var(--spectrum-badge-label-icon-color-primary);
+  }
 
   /* background color default for all t-shirt sizes and all themes */
   --spectrum-badge-background-color-default: var(--spectrum-neutral-subdued-background-color-default);
 
-  /* background colors for all t-shirt sizes and all themes */
+  /* semantic background colors for all t-shirt sizes and all themes */
   --spectrum-badge-background-color-default: var(--spectrum-neutral-subdued-background-color-default);
   --spectrum-badge-background-color-accent: var(--spectrum-accent-background-color-default);
   --spectrum-badge-background-color-informative: var(--spectrum-informative-background-color-default);
   --spectrum-badge-background-color-negative: var(--spectrum-negative-background-color-default);
   --spectrum-badge-background-color-positive: var(--spectrum-positive-background-color-default);
+  --spectrum-badge-background-color-notice: var(--spectrum-notice-background-color-default);
+
+  /* non-semantic background colors */
+  --spectrum-badge-background-color-gray: var(--spectrum-gray-background-color-default);
+  --spectrum-badge-background-color-red: var(--spectrum-red-background-color-default);
+  --spectrum-badge-background-color-orange: var(--spectrum-orange-background-color-default);
+  --spectrum-badge-background-color-yellow: var(--spectrum-yellow-background-color-default);
+  --spectrum-badge-background-color-chartreuse: var(--spectrum-chartreuse-background-color-default);
+  --spectrum-badge-background-color-celery: var(--spectrum-celery-background-color-default);
+  --spectrum-badge-background-color-green: var(--spectrum-green-background-color-default);
+  --spectrum-badge-background-color-seafoam: var(--spectrum-seafoam-background-color-default);
+  --spectrum-badge-background-color-cyan: var(--spectrum-cyan-background-color-default);
+  --spectrum-badge-background-color-blue: var(--spectrum-blue-background-color-default);
+  --spectrum-badge-background-color-indigo: var(--spectrum-indigo-background-color-default);
+  --spectrum-badge-background-color-purple: var(--spectrum-purple-background-color-default);
+  --spectrum-badge-background-color-fuchsia: var(--spectrum-fuchsia-background-color-default);
+  --spectrum-badge-background-color-magenta: var(--spectrum-magenta-background-color-default);
+
 
   /*** DEFAULT STYLE fallbacks if no t-shirt size - uses Medium t-shirt styles ***/
   /* badge height - fallback if no t-shirt size */
@@ -72,23 +98,6 @@ governing permissions and limitations under the License.
   --spectrum-badge-icon-spacing-horizontal: var(--spectrum-component-edge-to-visual-75);
   --spectrum-badge-icon-spacing-vertical-top: var(--spectrum-component-top-to-workflow-icon-75);
   --spectrum-badge-icon-only-spacing-horizontal: var(--spectrum-component-edge-to-visual-only-75);
-}
-
-.spectrum-Badge--sizeM {
-  --spectrum-badge-height: var(--spectrum-component-height-100);
-
-  /* label */
-  --spectrum-badge-font-size: var(--spectrum-font-size-100);
-  --spectrum-badge-label-spacing-vertical-top: var(--spectrum-component-top-to-text-100);
-  --spectrum-badge-label-spacing-vertical-bottom: var(--spectrum-component-bottom-to-text-100);
-  --spectrum-badge-label-spacing-horizontal: var(--spectrum-component-edge-to-text-100);
-
-  /* icon */
-  --spectrum-badge-workflow-icon-size: var(--spectrum-workflow-icon-size-100);
-  --spectrum-badge-icon-text-spacing: var(--spectrum-text-to-visual-100);
-  --spectrum-badge-icon-spacing-horizontal: var(--spectrum-component-edge-to-visual-100);
-  --spectrum-badge-icon-spacing-vertical-top: var(--spectrum-component-top-to-workflow-icon-100);
-  --spectrum-badge-icon-only-spacing-horizontal: var(--spectrum-component-edge-to-visual-only-100);
 }
 
 .spectrum-Badge--sizeL {
@@ -153,14 +162,8 @@ governing permissions and limitations under the License.
 
   background: var(--mod-badge-background-color-default,
                   var(--spectrum-badge-background-color-default));
-  color: var(--mod-badge-label-icon-color-white,
-            var(--spectrum-badge-label-icon-color-white));
-
-  /* text and icon black */
-  &--black-text {
-    color: var(--mod-badge-label-icon-color-black,
-              var(--spectrum-badge-label-icon-color-black));
-  }
+  color: var(--mod-badge-label-icon-color,
+            var(--spectrum-badge-label-icon-color));
 
   /* background color variants */
   &--neutral {
@@ -186,6 +189,67 @@ governing permissions and limitations under the License.
   &--positive {
     background: var(--mod-badge-background-color-positive,
                     var(--spectrum-badge-background-color-positive));
+  }
+
+  &--notice {
+    background: var(--mod-badge-background-color-notice, var(--spectrum-badge-background-color-notice));
+  }
+
+  /* non-semantic colors */
+  &--gray {
+    background: var(--mod-badge-background-color-gray, var(--spectrum-badge-background-color-gray));
+  }
+
+  &--red {
+    background: var(--mod-badge-background-color-red, var(--spectrum-badge-background-color-red));
+  }
+
+  &--orange {
+    background: var(--mod-badge-background-color-orange, var(--spectrum-badge-background-color-orange));
+  }
+
+  &--yellow {
+    background: var(--mod-badge-background-color-yellow, var(--spectrum-badge-background-color-yellow));
+  }
+
+  &--chartreuse {
+    background: var(--mod-badge-background-color-chartreuse, var(--spectrum-badge-background-color-chartreuse));
+  }
+
+  &--celery {
+    background: var(--mod-badge-background-color-celery, var(--spectrum-badge-background-color-celery));
+  }
+
+  &--green {
+    background: var(--mod-badge-background-color-green, var(--spectrum-badge-background-color-green));
+  }
+
+  &--seafoam {
+    background: var(--mod-badge-background-color-seafoam, var(--spectrum-badge-background-color-seafoam));
+  }
+
+  &--cyan {
+    background: var(--mod-badge-background-color-cyan, var(--spectrum-badge-background-color-cyan));
+  }
+
+  &--blue {
+    background: var(--mod-badge-background-color-blue, var(--spectrum-badge-background-color-blue));
+  }
+
+  &--indigo {
+    background: var(--mod-badge-background-color-indigo, var(--spectrum-badge-background-color-indigo));
+  }
+
+  &--purple {
+    background: var(--mod-badge-background-color-purple, var(--spectrum-badge-background-color-purple));
+  }
+
+  &--fuchsia {
+    background: var(--mod-badge-background-color-fuchsia, var(--spectrum-badge-background-color-fuchsia));
+  }
+
+  &--magenta {
+    background: var(--mod-badge-background-color-magenta, var(--spectrum-badge-background-color-magenta));
   }
 
   /* fixed position variants with border radius 0 on the fixed edge of the component */
@@ -226,14 +290,8 @@ governing permissions and limitations under the License.
   padding-block-end: var(--mod-badge-label-spacing-vertical-bottom,
                       var(--spectrum-badge-label-spacing-vertical-bottom));
 
-  color: var(--mod-badge-label-icon-color-white,
-                      var(--spectrum-badge-label-icon-color-white));
-
-  /* black text and icon variant */
-  .spectrum-Badge--black-text & {
-    color: var(--mod-badge-label-icon-color-black,
-                      var(--spectrum-badge-label-icon-color-black));
-  }
+  color: var(--mod-badge-label-icon-color,
+                      var(--spectrum-badge-label-icon-color));
 
   /* cjk language support */
   &:lang(ja),
@@ -270,8 +328,8 @@ governing permissions and limitations under the License.
   padding-block-end: var(--mod-badge-icon-spacing-vertical-top,
                       var(--spectrum-badge-icon-spacing-vertical-top));
 
-  color: var(--mod-badge-label-icon-color-white,
-                      var(--spectrum-badge-label-icon-color-white));
+  color: var(--mod-badge-label-icon-color,
+                      var(--spectrum-badge-label-icon-color));
 
   &--no-label {
     /* icon without label has identical padding left and right */
@@ -279,11 +337,5 @@ governing permissions and limitations under the License.
                       var(--spectrum-badge-icon-only-spacing-horizontal));
     padding-inline-end: var(--mod-badge-icon-only-spacing-horizontal,
                       var(--spectrum-badge-icon-only-spacing-horizontal));
-  }
-
-  /* black text and icon variant */
-  .spectrum-Badge--black-text & {
-    color: var(--mod-badge-label-icon-color-black,
-                      var(--spectrum-badge-label-icon-color-black));
   }
 }

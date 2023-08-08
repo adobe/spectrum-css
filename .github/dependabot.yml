@@ -23,6 +23,9 @@ updates:
       - dependency-name: "gulp*"
       # Ignore postcss versions until build migration complete
       - dependency-name: "postcss*"
+      # Ignore prettier 3.x until we resolve the lerna publishing error
+      - dependency-name: "prettier"
+        versions: ["3.x"]
     groups:
       # Specify a name for the group, which will be used in pull request titles
       # and branch names
