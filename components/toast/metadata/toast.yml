@@ -10,6 +10,7 @@ sections:
       Replace `spectrum-ClearButton spectrum-ClearButton--overBackground spectrum-ClearButton--sizeM` with `spectrum-CloseButton spectrum-CloseButton--sizeM spectrum-CloseButton--staticWhite` and remove the `<div class="spectrum-ClearButton-fill">` element.
       ### Over background replaced by Static White with Outline
       Replace all `.spectrum-Button--overBackground .spectrum-Button--quiet` with `.spectrum-Button--staticWhite .spectrum-Button--outline`.
+examples:
   - id: toast
     name: Default
     status: Verified
@@ -126,13 +127,13 @@ sections:
 
       <br><br>
 
-      <div class="spectrum-Toast spectrum-Toast--info" style="width: 318px;">
+      <div class="spectrum-Toast spectrum-Toast--info">
         <svg class="spectrum-Icon spectrum-Icon--sizeM spectrum-Toast-typeIcon" focusable="false" aria-hidden="true">
           <use xlink:href="#spectrum-icon-18-Info" />
         </svg>
         <div class="spectrum-Toast-body">
           <div class="spectrum-Toast-content">
-            A new version of Lightroom Classic is now available
+            A new version of Lightroom Classic is now available. Use the Update button below to start using the new version.
           </div>
           <button class="spectrum-Button spectrum-Button--sizeM spectrum-Button--outline spectrum-Button--staticWhite spectrum-Button--secondary">
             <span class="spectrum-Button-label">Update</span>
@@ -149,7 +150,7 @@ sections:
 
       <br><br>
 
-      <div class="spectrum-Toast spectrum-Toast--info" style="width: 332px;">
+      <div class="spectrum-Toast spectrum-Toast--info">
         <svg class="spectrum-Icon spectrum-Icon--sizeM spectrum-Toast-typeIcon" focusable="false" aria-hidden="true">
           <use xlink:href="#spectrum-icon-18-Info" />
         </svg>
