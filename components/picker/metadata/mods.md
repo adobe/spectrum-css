@@ -46,6 +46,7 @@
 | `--mod-picker-inline-size`                             |
 | `--mod-picker-line-height`                             |
 | `--mod-picker-placeholder-font-style`                  |
+| `--mod-picker-placeholder-font-weight`                 |
 | `--mod-picker-spacing-bottom-to-text`                  |
 | `--mod-picker-spacing-edge-to-disclosure-icon`         |
 | `--mod-picker-spacing-edge-to-disclosure-icon-quiet`   |
