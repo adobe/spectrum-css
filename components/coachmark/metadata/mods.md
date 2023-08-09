@@ -18,6 +18,7 @@
 | `--mod-coachmark-min-width-mobile`            |
 | `--mod-coachmark-padding`                     |
 | `--mod-coachmark-step-color`                  |
+| `--mod-coachmark-step-font-size`              |
 | `--mod-coachmark-step-font-style`             |
 | `--mod-coachmark-step-step-to-bottom`         |
 | `--mod-coachmark-step-text-font-weight`       |

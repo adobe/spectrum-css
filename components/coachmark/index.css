@@ -83,11 +83,22 @@ governing permissions and limitations under the License.
 	inline-size: var(--mod-coachmark-width, var(--spectrum-coachmark-width));
 }
 
-.spectrum-CoachMark--mobile {
-  position: relative;
-	min-inline-size: var(--mod-coachmark-min-width-mobile, var(--spectrum-coachmark-min-width-mobile));
-	max-inline-size: 380px; /* TODO: Replace with new token or modifier*/
-	inline-size: var(--mod-coachmark-width-mobile, var(--spectrum-coachmark-width-mobile));
+.spectrum-CoachMark-buttongroup--mobile {
+	display: none;
+}
+
+.spectrum-CoachMark-buttongroup {
+	display: flex;
+}
+
+.spectrum--large {
+	.spectrum-CoachMark-buttongroup--mobile {
+		display: flex;
+	}
+
+	.spectrum-CoachMark-buttongroup {
+		display: none;
+	}
 
 	--mod-coachmark-padding: var(--spectrum-coachmark-padding-compact);
 	--mod-coachmark-step-step-to-bottom: var(--spectrum-coachmark-step-step-to-bottom-compact);
@@ -96,6 +107,8 @@ governing permissions and limitations under the License.
 	--mod-coachmark-content-font-size: var(--spectrum-coachmark-content-font-size-compact);
 	--mod-coachmark-step-font-size: var(--spectrum-coachmark-step-font-size-compact);
 
+	--mod-coachmark-min-width: var(--spectrum-coachmark-min-width-mobile);
+	--mod-coachmark-width: var(--spectrum-coachmark-min-width-mobile);
 
 }
 
