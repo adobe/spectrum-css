@@ -39,6 +39,7 @@ examples:
           </div>
         </div>
       </div>
+
       <div class="spectrum-Examples-item" style="height: 400px; width: auto;">
         <div class="spectrum-CoachMark">
           <div class="spectrum-Popover is-open">
@@ -68,11 +69,22 @@ examples:
             </div>
             <div class="spectrum-CoachMark-footer">
             <div class="spectrum-CoachMark-step"><bdo dir="ltr">2 of 8</bdo></div>
-              <div class="spectrum-ButtonGroup">
+              <div class="spectrum-ButtonGroup spectrum-CoachMark-buttongroup">
                 <button class="spectrum-Button spectrum-Button--sizeM spectrum-Button--outline spectrum-Button--secondary">
                   <span class="spectrum-Button-label">Previous</span>
                 </button>
+
                 <button class="spectrum-Button spectrum-Button--sizeM spectrum-Button--outline spectrum-Button--primary">
+                  <span class="spectrum-Button-label">Next</span>
+                </button>
+              </div>
+
+              <div class="spectrum-ButtonGroup spectrum-ButtonGroup--sizeS spectrum-CoachMark-buttongroup--mobile">
+                <button class="spectrum-Button spectrum-Button--outline spectrum-Button--secondary spectrum-Button--sizeS spectrum-Button--iconOnly" aria-label="Edit">
+                  <svg class="spectrum-Icon spectrum-UIIcon-ChevronLeft75 spectrum-PickerButton-icon" focusable="false" aria-hidden="true">
+                    <use xlink:href="#spectrum-css-icon-Chevron75"></use>
+                  </svg>
+                <button class="spectrum-Button spectrum-Button--sizeS spectrum-Button--outline spectrum-Button--primary">
                   <span class="spectrum-Button-label">Next</span>
                 </button>
               </div>
@@ -96,7 +108,7 @@ examples:
 
             <div class="spectrum-CoachMark-footer">
               <div class="spectrum-CoachMark-step"><bdo dir="ltr">2 of 8</bdo></div>
-              <div class="spectrum-ButtonGroup">
+              <div class="spectrum-ButtonGroup spectrum-CoachMark-buttongroup">
                 <button class="spectrum-Button spectrum-Button--sizeM spectrum-Button--outline spectrum-Button--secondary">
                   <span class="spectrum-Button-label">Skip Tour</span>
                 </button>
@@ -104,68 +116,7 @@ examples:
                   <span class="spectrum-Button-label">Next</span>
                 </button>
               </div>
-            </div>
-          </div>
-        </div>
-      </div>
-  - id: coachmark
-    name: Mobile
-    description: for use on mobile the mobile variant should be use instead of relying on the coackmark to be responsive
-    markup: |
-      <div class="spectrum-Examples-item" style="height: 300px; width: auto;">
-        <div class="spectrum-CoachMark spectrum-CoachMark--mobile">
-          <div class="spectrum-Popover is-open">
-            <div class="spectrum-CoachMark-header">
-              <div class="spectrum-CoachMark-title">Try playing with a pixel brush</div>
-            </div>
-            <div class="spectrum-CoachMark-content">
-              Pixel brushes use pixels to create brush strokes, just like in other design and drawing tools. Start drawing, and zoom in to see the pixels in each stroke.
-            </div>
-            <div class="spectrum-CoachMark-footer">
-              <div class="spectrum-CoachMark-step"><bdo dir="ltr">2 of 8</bdo></div>
-              <div class="spectrum-ButtonGroup spectrum-ButtonGroup--sizeS">
-                <button class="spectrum-Button spectrum-Button--outline spectrum-Button--secondary spectrum-Button--sizeS spectrum-Button--iconOnly" aria-label="Edit">
-                  <svg class="spectrum-Icon spectrum-Icon--sizeS  spectrum-UIIcon-ChevronLeft75 spectrum-PickerButton-icon" focusable="false" aria-hidden="true">
-                    <use xlink:href="#spectrum-css-icon-Chevron75"></use>
-                  </svg>
-                <button class="spectrum-Button spectrum-Button--sizeS spectrum-Button--outline spectrum-Button--primary">
-                  <span class="spectrum-Button-label">Next</span>
-                </button>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-      <div class="spectrum-Examples-item" style="height: 300px; width: auto;">
-        <div class="spectrum-CoachMark spectrum-CoachMark--mobile">
-          <div class="spectrum-Popover is-open">
-            <div class="spectrum-CoachMark-header">
-              <div class="spectrum-CoachMark-title">Try playing with a pixel brush</div>
-              <div class="spectrum-CoachMark-action-menu">
-                <button class="spectrum-ActionButton spectrum-ActionButton--sizeM spectrum-ActionButton--quiet spectrum-CoachMark-header-button is-selected">
-                  <svg class="spectrum-Icon spectrum-Icon--sizeM spectrum-ActionButton-icon" focusable="false" aria-hidden="true">
-                    <use xlink:href="#spectrum-icon-18-More" />
-                  </svg>
-                </button>
-                <br>
-                <div class="spectrum-Popover spectrum-Popover--bottom is-open">
-                  <ul class="spectrum-Menu" role="menu">
-                    <li class="spectrum-Menu-item" role="menuitem" tabindex="0">
-                      <span class="spectrum-Menu-itemLabel">Skip tour</span>
-                    </li>
-                    <li class="spectrum-Menu-item" role="menuitem" tabindex="0">
-                      <span class="spectrum-Menu-itemLabel">Reset tour</span>
-                    </li>
-                  </ul>
-                </div>
-              </div>
-            </div>
-            <div class="spectrum-CoachMark-content">
-              Pixel brushes use pixels to create brush strokes, just like in other design and drawing tools. Start drawing, and zoom in to see the pixels in each stroke.
-            </div>
-            <div class="spectrum-CoachMark-footer">
-              <div class="spectrum-CoachMark-step"><bdo dir="ltr">2 of 8</bdo></div>
-              <div class="spectrum-ButtonGroup spectrum-ButtonGroup--sizeS">
+              <div class="spectrum-ButtonGroup spectrum-ButtonGroup--sizeS spectrum-CoachMark-buttongroup--mobile">
                 <button class="spectrum-Button spectrum-Button--outline spectrum-Button--secondary spectrum-Button--sizeS spectrum-Button--iconOnly" aria-label="Edit">
                   <svg class="spectrum-Icon spectrum-UIIcon-ChevronLeft75 spectrum-PickerButton-icon" focusable="false" aria-hidden="true">
                     <use xlink:href="#spectrum-css-icon-Chevron75"></use>
@@ -178,35 +129,6 @@ examples:
           </div>
         </div>
       </div>
-      <div class="spectrum-Examples-item" style="height: 400px; width: auto;">
-        <div class="spectrum-CoachMark spectrum-CoachMark--mobile">
-          <div class="spectrum-Popover is-open">
-            <div class="spectrum-CoachMark-image-wrapper">
-              <img class="spectrum-CoachMark-image" src="img/example-ava.jpg" />
-            </div>
-            <div class="spectrum-CoachMark-header">
-              <div class="spectrum-CoachMark-title">Try playing with a pixel brush</div>
-            </div>
-            <div class="spectrum-CoachMark-content">
-              Pixel brushes use pixels to create brush strokes, just like in other design and drawing tools. Start drawing, and zoom in to see the pixels in each stroke.
-            </div>
-            <div class="spectrum-CoachMark-footer">
-              <div class="spectrum-CoachMark-step"><bdo dir="ltr">2 of 8</bdo></div>
-              <div class="spectrum-ButtonGroup spectrum-ButtonGroup--sizeS">
-                <button class="spectrum-Button spectrum-Button--outline spectrum-Button--secondary spectrum-Button--sizeS spectrum-Button--iconOnly" aria-label="Edit">
-                  <svg class="spectrum-Icon spectrum-UIIcon-ChevronLeft75 spectrum-PickerButton-icon" focusable="false" aria-hidden="true">
-                    <use xlink:href="#spectrum-css-icon-Chevron75"></use>
-                  </svg>
-                <button class="spectrum-Button spectrum-Button--sizeS spectrum-Button--outline spectrum-Button--primary">
-                  <span class="spectrum-Button-label">Next</span>
-                </button>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-
-
 
 
 

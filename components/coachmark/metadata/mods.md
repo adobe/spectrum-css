@@ -15,7 +15,6 @@
 | `--mod-coachmark-header-to-body`              |
 | `--mod-coachmark-heading-to-action-button`    |
 | `--mod-coachmark-min-width`                   |
-| `--mod-coachmark-min-width-mobile`            |
 | `--mod-coachmark-padding`                     |
 | `--mod-coachmark-step-color`                  |
 | `--mod-coachmark-step-font-size`              |
