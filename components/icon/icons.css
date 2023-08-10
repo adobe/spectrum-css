@@ -14,8 +14,8 @@ governing permissions and limitations under the License.
 .spectrum-UIIcon {
   display: inline-block;
 
-  /* Inherit the text color */
-  color: inherit;
+  /* Use custom pass through or inherit the text color */
+  color: var(--mod-icon-color, inherit);
 
   /* Fill should match the current text color */
   fill: currentColor;

@@ -3,6 +3,22 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+<a name="7.0.46"></a>
+##7.0.46
+🗓
+2023-08-10 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/radio@7.0.45...@spectrum-css/radio@7.0.46)
+
+### 🐛 Bug fixes
+
+- **radio:**update selected color tokens ([#2045](https://github.com/adobe/spectrum-css/issues/2045))([7914b72](https://github.com/adobe/spectrum-css/commit/7914b72))
+
+<a name="7.0.45"></a>
+##7.0.45
+🗓
+2023-08-07 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/radio@7.0.44...@spectrum-css/radio@7.0.45)
+
+**Note:** Version bump only for package @spectrum-css/radio
+
 <a name="7.0.44"></a>
 ##7.0.44
 🗓

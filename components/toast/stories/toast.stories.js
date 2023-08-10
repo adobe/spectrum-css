@@ -13,14 +13,7 @@ export default {
 	component: "Toast",
 	argTypes: {
 		variant: {
-			name: "Variant",
-			type: { name: "string" },
-			table: {
-				type: { summary: "string" },
-				category: "Component",
-			},
-			options: ["negative", "positive", "info", "error", "warning"],
-			control: "select",
+			table: { disable: true },
 		},
 		message: {
 			name: "Message",
@@ -30,15 +23,6 @@ export default {
 				category: "Component",
 			},
 			control: "text",
-		},
-		isHidden: {
-			name: "Hidden",
-			type: { name: "boolean" },
-			table: {
-				category: "State",
-				type: { summary: "boolean" },
-			},
-			control: "boolean",
 		},
 		inlineButtonLabel: {
 			name: "Inline button label",
@@ -50,23 +34,9 @@ export default {
 			},
 			control: "text",
 		},
-		width: {
-			name: "width",
-			description:
-				"By default, the toast will be as wide as the message. Set this to a number to set a maximum width in pixels and allow the toast to wrap the message.",
-			type: { name: "number" },
-			table: {
-				category: "Advanced",
-			},
-			control: "number",
-		},
 	},
 	args: {
-		rootClass: "spectrum-Toast",
-		variant: "info",
-		message: "A new version of Lightroom Classic is now available",
-		isHidden: false,
-		inlineButtonLabel: "Update",
+		rootClass: "spectrum-Toast"
 	},
 	parameters: {
 		actions: {
@@ -81,4 +51,28 @@ export default {
 };
 
 export const Default = Template.bind({});
-Default.args = {};
+Default.args = {
+	message: "File has been archived",
+	inlineButtonLabel: "Undo",
+};
+
+export const Info = Template.bind({});
+Info.args = {
+	variant: "info",
+	message: "A new version of Lightroom Classic is now available",
+	inlineButtonLabel: "Update",
+};
+
+export const Negative = Template.bind({});
+Negative.args = {
+	variant: "negative",
+	message: "Unable to delete file",
+	inlineButtonLabel: "Eject",
+};
+
+export const Positive = Template.bind({});
+Positive.args = {
+	variant: "positive",
+	message: "Copied to clipboard",
+	inlineButtonLabel: "Eject",
+};

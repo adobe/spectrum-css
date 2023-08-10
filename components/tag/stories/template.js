@@ -48,7 +48,7 @@ export const Template = ({
 			id=${ifDefined(id)}
 			tabindex="0"
 		>
-			${avatarUrl && !iconName
+			${avatarUrl
 				? Avatar({
 						...globals,
 						image: avatarUrl,
@@ -60,10 +60,10 @@ export const Template = ({
 						...globals,
 						size,
 						iconName,
-						customClasses: [`${rootClass}s-itemIcon`],
+						customClasses: [`${rootClass}-itemIcon`],
 				  })
 				: ""}
-			<span class="${rootClass}s-itemLabel">${label}</span>
+			<span class="${rootClass}-itemLabel">${label}</span>
 			${hasClearButton
 				? ClearButton({
 						...globals,

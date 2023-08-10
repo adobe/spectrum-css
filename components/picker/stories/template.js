@@ -1,6 +1,8 @@
 import { html } from "lit";
 import { useArgs } from "@storybook/client-api";
 import { classMap } from "lit/directives/class-map.js";
+import { styleMap } from "lit/directives/style-map.js";
+import { ifDefined } from "lit/directives/if-defined.js";
 
 import { Template as FieldLabel } from "@spectrum-css/fieldlabel/stories/template.js";
 import { Template as Icon } from "@spectrum-css/icon/stories/template.js";
@@ -10,7 +12,7 @@ import { Template as HelpText } from "@spectrum-css/helptext/stories/template.js
 
 import "../index.css";
 
-export const PickerButton = ({
+export const Picker = ({
 	rootClass = "spectrum-Picker",
 	size = "m",
 	labelPosition,
@@ -55,6 +57,7 @@ export const PickerButton = ({
 			})}
 			?disabled=${isDisabled}
 			aria-haspopup="listbox"
+			style=${ifDefined(styleMap(customStyles))}
 			@click=${(e) => {
 				updateArgs({ isOpen: !isOpen });
 			}}
@@ -141,7 +144,7 @@ export const Template = ({
 			: ""}
 		${labelPosition == "left" ?
 			html`<div style="display: inline-block">
-				${PickerButton({
+				${Picker({
 					...globals,
 					rootClass,
 					size,
@@ -163,7 +166,7 @@ export const Template = ({
 			</div>
 			`
 		: 
-			PickerButton({
+			Picker({
 				...globals,
 				rootClass,
 				size,
@@ -176,7 +179,7 @@ export const Template = ({
 				isDisabled,
 				isReadOnly,
 				customClasses,
-				customStyles,
+				customStyles: customStyles,
 				content,
 				iconName,
 				labelPosition,

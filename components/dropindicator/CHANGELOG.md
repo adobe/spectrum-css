@@ -3,6 +3,13 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+<a name="3.0.51"></a>
+##3.0.51
+🗓
+2023-08-07 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/dropindicator@3.0.50...@spectrum-css/dropindicator@3.0.51)
+
+**Note:** Version bump only for package @spectrum-css/dropindicator
+
 <a name="3.0.50"></a>
 ##3.0.50
 🗓

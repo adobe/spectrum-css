@@ -43,6 +43,12 @@ governing permissions and limitations under the License.
   --spectrum-radio-border-width: var(--spectrum-border-width-200);
   --spectrum-radio-button-background-color: var(--spectrum-gray-75);
 
+  /* checked selection indicator */
+  --spectrum-radio-button-checked-border-color-default: var(--spectrum-neutral-background-color-selected-default);
+  --spectrum-radio-button-checked-border-color-hover: var(--spectrum-neutral-background-color-selected-hover);
+  --spectrum-radio-button-checked-border-color-down: var(--spectrum-neutral-background-color-selected-down);
+  --spectrum-radio-button-checked-border-color-focus: var(--spectrum-neutral-background-color-selected-focus);
+
   /* spacing all themes */
   --spectrum-radio-text-to-control: var(--spectrum-text-to-control-100);
   --spectrum-radio-label-top-to-text: var(--spectrum-component-top-to-text-100);

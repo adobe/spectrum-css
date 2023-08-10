@@ -117,6 +117,8 @@ governing permissions and limitations under the License.
     border-radius: var(--mod-colorhandle-hitarea-border-radius, 100%);
   }
 
+  transition: all var(--mod-colorhandle-animation-duration, var(--spectrum-colorhandle-animation-duration)) var(--mod-colorhandle-animation-easing, var(--spectrum-colorhandle-animation-easing));
+
   &.is-focused,
   &.focus-ring {
       /* Bigger handle when focused */

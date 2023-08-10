@@ -3,6 +3,22 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+<a name="4.1.7"></a>
+##4.1.7
+🗓
+2023-08-10 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/preview@4.1.6...@spectrum-css/preview@4.1.7)
+
+**Note:** Version bump only for package @spectrum-css/preview
+
+<a name="4.1.6"></a>
+##4.1.6
+🗓
+2023-08-07 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/preview@4.1.5...@spectrum-css/preview@4.1.6)
+
+### 🐛 Bug fixes
+
+\*revert prettier ([#2074](https://github.com/adobe/spectrum-css/issues/2074))([ebb98df](https://github.com/adobe/spectrum-css/commit/ebb98df))
+
 <a name="4.1.5"></a>
 ##4.1.5
 🗓

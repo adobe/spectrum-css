@@ -3,6 +3,20 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+<a name="10.1.14"></a>
+##10.1.14
+🗓
+2023-08-10 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/button@10.1.13...@spectrum-css/button@10.1.14)
+
+**Note:** Version bump only for package @spectrum-css/button
+
+<a name="10.1.13"></a>
+##10.1.13
+🗓
+2023-08-07 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/button@10.1.12...@spectrum-css/button@10.1.13)
+
+**Note:** Version bump only for package @spectrum-css/button
+
 <a name="10.1.12"></a>
 ##10.1.12
 🗓
