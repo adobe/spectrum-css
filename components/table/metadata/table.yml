@@ -1,11 +1,11 @@
 name: Table
-description: The table component is for displaying tabular info, with the option for sorting or row selection. Its HTML markup can use either use `<table>` or can be made up entirely of `<div>` elements.
+description: The Table component is for displaying tabular info, with the option for sorting or row selection.
 SpectrumSiteSlug: https://spectrum.adobe.com/page/table/
 sections:
-  - name: Custom Properties API
+  - name: Custom properties API
     description: |
       This component can be modified via its `--mod-*` prefixed custom properties. A list of those prefixed custom properties can be found <a href="https://github.com/adobe/spectrum-css/tree/main/components/table/metadata/mods.md">here</a>.
-  - name: Migration Guide
+  - name: Migration guide
     description: |
       ### Sorted icon moved to left side of text
       The sorted icon was previously on the right side of the text, but has been moved to the left in the markup. If used on the right side of the text, the spacing between icon and text will be incorrect. If for some reason you cannot move the sorted icon to right side of the text, there are mod properties available for the sort icon inline spacing.
@@ -14,7 +14,7 @@ sections:
       In the column header, when the sort icon or header menu icon is displayed, the text is now wrapped in a `<span>` element. This ensures that there is no extra space between them when there is white space in the HTML markup.
 examples:
   - id: table-medium
-    name: Default (Medium)
+    name: Default (medium)
     description: "Tables come in four different sizes: small, medium, large, and extra-large. The medium size is the default and recommended option."
     markup: |
       <table class="spectrum-Table spectrum-Table--sizeM spectrum-Table--emphasized">
@@ -24,15 +24,15 @@ examples:
               <svg class="spectrum-Icon spectrum-UIIcon-ArrowDown100 spectrum-Table-sortedIcon" focusable="false" aria-hidden="true">
                 <use xlink:href="#spectrum-css-icon-Arrow100" />
               </svg>
-              <span>Column Title</span>
+              <span>Column title</span>
             </th>
             <th class="spectrum-Table-headCell is-sortable" aria-sort="none">
               <svg class="spectrum-Icon spectrum-UIIcon-ArrowDown100 spectrum-Table-sortedIcon" focusable="false" aria-hidden="true">
                 <use xlink:href="#spectrum-css-icon-Arrow100" />
               </svg>
-              <span>Column Title</span>
+              <span>Column title</span>
             </th>
-            <th class="spectrum-Table-headCell">Column Title</th>
+            <th class="spectrum-Table-headCell">Column title</th>
           </tr>
         </thead>
         <tbody class="spectrum-Table-body">
@@ -64,7 +64,7 @@ examples:
         </tbody>
       </table>
   - id: table-small
-    name: T-Shirt Sizes
+    name: T-Shirt sizes
     description: "Tables come in four different sizes: small, medium, large, and extra-large. The medium size is the default and recommended option."
     markup: |
       <div class="spectrum-Examples-item" style="margin-bottom: 2rem">
@@ -77,15 +77,15 @@ examples:
                 <svg class="spectrum-Icon spectrum-UIIcon-ArrowDown75 spectrum-Table-sortedIcon" focusable="false" aria-hidden="true">
                   <use xlink:href="#spectrum-css-icon-Arrow75" />
                 </svg>
-                Column Title
+                Column title
               </th>
               <th class="spectrum-Table-headCell is-sortable is-sorted-asc" aria-sort="ascending">
                 <svg class="spectrum-Icon spectrum-UIIcon-ArrowDown75 spectrum-Table-sortedIcon" focusable="false" aria-hidden="true">
                   <use xlink:href="#spectrum-css-icon-Arrow75" />
                 </svg>
-                Column Title
+                Column title
               </th>
-              <th class="spectrum-Table-headCell">Column Title</th>
+              <th class="spectrum-Table-headCell">Column title</th>
             </tr>
           </thead>
           <tbody class="spectrum-Table-body">
@@ -112,15 +112,15 @@ examples:
                 <svg class="spectrum-Icon spectrum-UIIcon-ArrowDown100 spectrum-Table-sortedIcon" focusable="false" aria-hidden="true">
                   <use xlink:href="#spectrum-css-icon-Arrow100" />
                 </svg>
-                Column Title
+                Column title
               </th>
               <th class="spectrum-Table-headCell is-sortable is-sorted-asc" aria-sort="ascending">
                 <svg class="spectrum-Icon spectrum-UIIcon-ArrowDown100 spectrum-Table-sortedIcon" focusable="false" aria-hidden="true">
                   <use xlink:href="#spectrum-css-icon-Arrow100" />
                 </svg>
-                Column Title
+                Column title
               </th>
-              <th class="spectrum-Table-headCell">Column Title</th>
+              <th class="spectrum-Table-headCell">Column title</th>
             </tr>
           </thead>
           <tbody class="spectrum-Table-body">
@@ -147,15 +147,15 @@ examples:
                 <svg class="spectrum-Icon spectrum-UIIcon-ArrowDown200 spectrum-Table-sortedIcon" focusable="false" aria-hidden="true">
                   <use xlink:href="#spectrum-css-icon-Arrow200" />
                 </svg>
-                Column Title
+                Column title
               </th>
               <th class="spectrum-Table-headCell is-sortable is-sorted-asc" aria-sort="ascending">
                 <svg class="spectrum-Icon spectrum-UIIcon-ArrowDown200 spectrum-Table-sortedIcon" focusable="false" aria-hidden="true">
                   <use xlink:href="#spectrum-css-icon-Arrow200" />
                 </svg>
-                Column Title
+                Column title
               </th>
-              <th class="spectrum-Table-headCell">Column Title</th>
+              <th class="spectrum-Table-headCell">Column title</th>
             </tr>
           </thead>
           <tbody class="spectrum-Table-body">
@@ -183,15 +183,15 @@ examples:
                 <svg class="spectrum-Icon spectrum-UIIcon-ArrowDown300 spectrum-Table-sortedIcon" focusable="false" aria-hidden="true">
                   <use xlink:href="#spectrum-css-icon-Arrow300" />
                 </svg>
-                Column Title
+                Column title
               </th>
               <th class="spectrum-Table-headCell is-sortable is-sorted-asc" aria-sort="ascending">
                 <svg class="spectrum-Icon spectrum-UIIcon-ArrowDown300 spectrum-Table-sortedIcon" focusable="false" aria-hidden="true">
                   <use xlink:href="#spectrum-css-icon-Arrow300" />
                 </svg>
-                Column Title
+                Column title
               </th>
-              <th class="spectrum-Table-headCell">Column Title</th>
+              <th class="spectrum-Table-headCell">Column title</th>
             </tr>
           </thead>
           <tbody class="spectrum-Table-body">
@@ -219,15 +219,15 @@ examples:
               <svg class="spectrum-Icon spectrum-UIIcon-ArrowDown100 spectrum-Table-sortedIcon" focusable="false" aria-hidden="true">
                 <use xlink:href="#spectrum-css-icon-Arrow100" />
               </svg>
-              <span>Column Title</span>
+              <span>Column title</span>
             </th>
             <th class="spectrum-Table-headCell is-sortable" aria-sort="none">
               <svg class="spectrum-Icon spectrum-UIIcon-ArrowDown100 spectrum-Table-sortedIcon" focusable="false" aria-hidden="true">
                 <use xlink:href="#spectrum-css-icon-Arrow100" />
               </svg>
-              <span>Column Title</span>
+              <span>Column title</span>
             </th>
-            <th class="spectrum-Table-headCell">Column Title</th>
+            <th class="spectrum-Table-headCell">Column title</th>
           </tr>
         </thead>
         <tbody class="spectrum-Table-body">
@@ -269,15 +269,15 @@ examples:
               <svg class="spectrum-Icon spectrum-UIIcon-ArrowDown100 spectrum-Table-sortedIcon" focusable="false" aria-hidden="true">
                 <use xlink:href="#spectrum-css-icon-Arrow100" />
               </svg>
-              <span>Column Title</span>
+              <span>Column title</span>
             </th>
             <th class="spectrum-Table-headCell is-sortable" aria-sort="none">
               <svg class="spectrum-Icon spectrum-UIIcon-ArrowDown100 spectrum-Table-sortedIcon" focusable="false" aria-hidden="true">
                 <use xlink:href="#spectrum-css-icon-Arrow100" />
               </svg>
-              <span>Column Title</span>
+              <span>Column title</span>
             </th>
-            <th class="spectrum-Table-headCell">Column Title</th>
+            <th class="spectrum-Table-headCell">Column title</th>
           </tr>
         </thead>
         <tbody class="spectrum-Table-body">
@@ -329,15 +329,15 @@ examples:
               <svg class="spectrum-Icon spectrum-UIIcon-ArrowDown100 spectrum-Table-sortedIcon" focusable="false" aria-hidden="true">
                 <use xlink:href="#spectrum-css-icon-Arrow100" />
               </svg>
-              <span>Column Title</span>
+              <span>Column title</span>
             </th>
             <th class="spectrum-Table-headCell is-sortable" aria-sort="none" tabindex="0">
               <svg class="spectrum-Icon spectrum-UIIcon-ArrowDown100 spectrum-Table-sortedIcon" focusable="false" aria-hidden="true">
                 <use xlink:href="#spectrum-css-icon-Arrow100" />
               </svg>
-              <span>Column Title</span>
+              <span>Column title</span>
             </th>
-            <th class="spectrum-Table-headCell">Column Title</th>
+            <th class="spectrum-Table-headCell">Column title</th>
           </tr>
         </thead>
         <tbody class="spectrum-Table-body">
@@ -429,7 +429,7 @@ examples:
         </tbody>
       </table>
   - id: table-multi-select-non-emphasized
-    name: Non-emphasized Multi-select
+    name: Non-emphasized multi-select
     description: Excluding the `spectrum-Table--emphasized` class will change the style of selected rows.
     markup: |
       <table class="spectrum-Table spectrum-Table--sizeM">
@@ -449,15 +449,15 @@ examples:
               <svg class="spectrum-Icon spectrum-UIIcon-ArrowDown100 spectrum-Table-sortedIcon" focusable="false" aria-hidden="true">
                 <use xlink:href="#spectrum-css-icon-Arrow100" />
               </svg>
-              <span>Column Title</span>
+              <span>Column title</span>
             </th>
             <th class="spectrum-Table-headCell is-sortable" aria-sort="none" tabindex="0">
               <svg class="spectrum-Icon spectrum-UIIcon-ArrowDown100 spectrum-Table-sortedIcon" focusable="false" aria-hidden="true">
                 <use xlink:href="#spectrum-css-icon-Arrow100" />
               </svg>
-              <span>Column Title</span>
+              <span>Column title</span>
             </th>
-            <th class="spectrum-Table-headCell">Column Title</th>
+            <th class="spectrum-Table-headCell">Column title</th>
           </tr>
         </thead>
         <tbody class="spectrum-Table-body">
@@ -559,15 +559,15 @@ examples:
               <svg class="spectrum-Icon spectrum-UIIcon-ArrowDown100 spectrum-Table-sortedIcon" focusable="false" aria-hidden="true">
                 <use xlink:href="#spectrum-css-icon-Arrow100" />
               </svg>
-              <span>Column Title</span>
+              <span>Column title</span>
             </th>
             <th class="spectrum-Table-headCell is-sortable" aria-sort="descending">
               <svg class="spectrum-Icon spectrum-UIIcon-ArrowDown100 spectrum-Table-sortedIcon" focusable="false" aria-hidden="true">
                 <use xlink:href="#spectrum-css-icon-Arrow100" />
               </svg>
-              <span>Column Title</span>
+              <span>Column title</span>
             </th>
-            <th class="spectrum-Table-headCell">Column Title</th>
+            <th class="spectrum-Table-headCell">Column title</th>
           </tr>
         </thead>
         <tbody class="spectrum-Table-body">
@@ -599,7 +599,7 @@ examples:
         </tbody>
       </table>
   - id: table-quiet-multi-select
-    name: Multi-select (Quiet)
+    name: Multi-select (quiet)
     markup: |
       <table class="spectrum-Table spectrum-Table--sizeM spectrum-Table--emphasized spectrum-Table--quiet">
         <thead class="spectrum-Table-head">
@@ -618,15 +618,15 @@ examples:
               <svg class="spectrum-Icon spectrum-UIIcon-ArrowDown100 spectrum-Table-sortedIcon" focusable="false" aria-hidden="true">
                 <use xlink:href="#spectrum-css-icon-Arrow100" />
               </svg>
-              <span>Column Title</span>
+              <span>Column title</span>
             </th>
             <th class="spectrum-Table-headCell is-sortable" aria-sort="none" tabindex="0">
               <svg class="spectrum-Icon spectrum-UIIcon-ArrowDown100 spectrum-Table-sortedIcon" focusable="false" aria-hidden="true">
                 <use xlink:href="#spectrum-css-icon-Arrow100" />
               </svg>
-              <span>Column Title</span>
+              <span>Column title</span>
             </th>
-            <th class="spectrum-Table-headCell">Column Title</th>
+            <th class="spectrum-Table-headCell">Column title</th>
           </tr>
         </thead>
         <tbody class="spectrum-Table-body">
@@ -718,7 +718,7 @@ examples:
         </tbody>
       </table>
   - id: table-column-dividers
-    name: Column Dividers
+    name: Column dividers
     description: The standard table can display column dividers by including the `spectrum-Table-cell--divider` class with `spectrum-Table-cell`. Use sparingly to group related content (see guidelines for more info).
     markup: |
       <table class="spectrum-Table spectrum-Table--sizeM spectrum-Table--emphasized">
@@ -728,15 +728,15 @@ examples:
               <svg class="spectrum-Icon spectrum-UIIcon-ArrowDown100 spectrum-Table-sortedIcon" focusable="false" aria-hidden="true">
                 <use xlink:href="#spectrum-css-icon-Arrow100" />
               </svg>
-              <span>Column Title</span>
+              <span>Column title</span>
             </th>
             <th class="spectrum-Table-headCell is-sortable"" aria-sort="none" tabindex="0">
               <svg class="spectrum-Icon spectrum-UIIcon-ArrowDown100 spectrum-Table-sortedIcon" focusable="false" aria-hidden="true">
                 <use xlink:href="#spectrum-css-icon-Arrow100" />
               </svg>
-              <span>Column Title</span>
+              <span>Column title</span>
             </th>
-            <th class="spectrum-Table-headCell">Column Title</th>
+            <th class="spectrum-Table-headCell">Column title</th>
           </tr>
         </thead>
         <tbody class="spectrum-Table-body">
@@ -768,7 +768,7 @@ examples:
         </tbody>
       </table>
   - id: table-summary-row
-    name: Summary Row
+    name: Summary row
     description: "Tables can have a summary row to show totals, at either the top or the bottom of the table."
     markup: |
       <table class="spectrum-Table spectrum-Table--sizeM spectrum-Table--emphasized">
@@ -778,15 +778,15 @@ examples:
               <svg class="spectrum-Icon spectrum-UIIcon-ArrowDown100 spectrum-Table-sortedIcon" focusable="false" aria-hidden="true">
                 <use xlink:href="#spectrum-css-icon-Arrow100" />
               </svg>
-              <span>Column Title</span>
+              <span>Column title</span>
             </th>
             <th class="spectrum-Table-headCell is-sortable" aria-sort="none">
               <svg class="spectrum-Icon spectrum-UIIcon-ArrowDown100 spectrum-Table-sortedIcon" focusable="false" aria-hidden="true">
                 <use xlink:href="#spectrum-css-icon-Arrow100" />
               </svg>
-              <span>Column Title</span>
+              <span>Column title</span>
             </th>
-            <th class="spectrum-Table-headCell">Column Title</th>
+            <th class="spectrum-Table-headCell">Column title</th>
           </tr>
         </thead>
         <tbody class="spectrum-Table-body">
@@ -813,7 +813,7 @@ examples:
         </tbody>
       </table>
   - id: table-section-header-row
-    name: Section Header Row
+    name: Section header row
     description: "Tables can style one or more rows as section headers."
     markup: |
       <table class="spectrum-Table spectrum-Table--sizeM spectrum-Table--emphasized">
@@ -823,15 +823,15 @@ examples:
               <svg class="spectrum-Icon spectrum-UIIcon-ArrowDown100 spectrum-Table-sortedIcon" focusable="false" aria-hidden="true">
                 <use xlink:href="#spectrum-css-icon-Arrow100" />
               </svg>
-              <span>Column Title</span>
+              <span>Column title</span>
             </th>
             <th class="spectrum-Table-headCell is-sortable" aria-sort="none">
               <svg class="spectrum-Icon spectrum-UIIcon-ArrowDown100 spectrum-Table-sortedIcon" focusable="false" aria-hidden="true">
                 <use xlink:href="#spectrum-css-icon-Arrow100" />
               </svg>
-              <span>Column Title</span>
+              <span>Column title</span>
             </th>
-            <th class="spectrum-Table-headCell">Column Title</th>
+            <th class="spectrum-Table-headCell">Column title</th>
           </tr>
         </thead>
         <tbody class="spectrum-Table-body">
@@ -869,7 +869,7 @@ examples:
         </tbody>
       </table>
   - id: table-section-header-row-quiet
-    name: Section Header Row (Quiet)
+    name: Section header row (quiet)
     markup: |
       <table class="spectrum-Table spectrum-Table--sizeM spectrum-Table--emphasized spectrum-Table--quiet">
         <thead class="spectrum-Table-head">
@@ -878,15 +878,15 @@ examples:
               <svg class="spectrum-Icon spectrum-UIIcon-ArrowDown100 spectrum-Table-sortedIcon" focusable="false" aria-hidden="true">
                 <use xlink:href="#spectrum-css-icon-Arrow100" />
               </svg>
-              <span>Column Title</span>
+              <span>Column title</span>
             </th>
             <th class="spectrum-Table-headCell is-sortable" aria-sort="none">
               <svg class="spectrum-Icon spectrum-UIIcon-ArrowDown100 spectrum-Table-sortedIcon" focusable="false" aria-hidden="true">
                 <use xlink:href="#spectrum-css-icon-Arrow100" />
               </svg>
-              <span>Column Title</span>
+              <span>Column title</span>
             </th>
-            <th class="spectrum-Table-headCell">Column Title</th>
+            <th class="spectrum-Table-headCell">Column title</th>
           </tr>
         </thead>
         <tbody class="spectrum-Table-body">
@@ -924,7 +924,7 @@ examples:
         </tbody>
       </table>
   - id: table-scrollable
-    name: Scrollable with Fixed Column Headers
+    name: Scrollable with fixed column headers
     description: |
       A table can be wrapped in a fixed height div with the `spectrum-Table-scroller` class. This allows scrolling of the table body and makes the column headers sticky (i.e. fixed to the top on scroll).
 
@@ -940,15 +940,15 @@ examples:
                 <svg class="spectrum-Icon spectrum-UIIcon-ArrowDown100 spectrum-Table-sortedIcon" focusable="false" aria-hidden="true">
                   <use xlink:href="#spectrum-css-icon-Arrow100" />
                 </svg>
-                <span>Column Title</span>
+                <span>Column title</span>
               </th>
               <th class="spectrum-Table-headCell is-sortable" aria-sort="none">
                 <svg class="spectrum-Icon spectrum-UIIcon-ArrowDown100 spectrum-Table-sortedIcon" focusable="false" aria-hidden="true">
                   <use xlink:href="#spectrum-css-icon-Arrow100" />
                 </svg>
-                <span>Column Title</span>
+                <span>Column title</span>
               </th>
-              <th class="spectrum-Table-headCell">Column Title</th>
+              <th class="spectrum-Table-headCell">Column title</th>
             </tr>
           </thead>
           <tbody class="spectrum-Table-body">
@@ -997,15 +997,15 @@ examples:
                 <svg class="spectrum-Icon spectrum-UIIcon-ArrowDown100 spectrum-Table-sortedIcon" focusable="false" aria-hidden="true">
                   <use xlink:href="#spectrum-css-icon-Arrow100" />
                 </svg>
-                <span>Column Title</span>
+                <span>Column title</span>
               </div>
               <div class="spectrum-Table-headCell is-sortable" role="columnheader" aria-sort="none">
                 <svg class="spectrum-Icon spectrum-UIIcon-ArrowDown100 spectrum-Table-sortedIcon" focusable="false" aria-hidden="true">
                   <use xlink:href="#spectrum-css-icon-Arrow100" />
                 </svg>
-                <span>Column Title</span>
+                <span>Column title</span>
               </div>
-              <div class="spectrum-Table-headCell" role="columnheader">Column Title</div>
+              <div class="spectrum-Table-headCell" role="columnheader">Column title</div>
             </div>
           </div>
           <div class="spectrum-Table-body" role="rowgroup">
@@ -1043,7 +1043,7 @@ examples:
         </div>
       </div>
   - id: table-collapsible
-    name: Collapsible Rows
+    name: Collapsible rows
     description: "In a table with collapsible rows, all child items must have columns that match the parent items. See the Guidelines for more info on how and when to use collapsible rows."
     markup: |
       <table class="spectrum-Table spectrum-Table--sizeM spectrum-Table--emphasized">
@@ -1053,15 +1053,15 @@ examples:
               <svg class="spectrum-Icon spectrum-UIIcon-ArrowDown100 spectrum-Table-sortedIcon" focusable="false" aria-hidden="true">
                 <use xlink:href="#spectrum-css-icon-Arrow100" />
               </svg>
-              <span>Column Title</span>
+              <span>Column title</span>
             </th>
             <th class="spectrum-Table-headCell is-sortable" aria-sort="none">
               <svg class="spectrum-Icon spectrum-UIIcon-ArrowDown100 spectrum-Table-sortedIcon" focusable="false" aria-hidden="true">
                 <use xlink:href="#spectrum-css-icon-Arrow100" />
               </svg>
-              <span>Column Title</span>
+              <span>Column title</span>
             </th>
-            <th class="spectrum-Table-headCell">Column Title</th>
+            <th class="spectrum-Table-headCell">Column title</th>
           </tr>
         </thead>
         <tbody class="spectrum-Table-body">
@@ -1228,7 +1228,7 @@ examples:
         </tbody>
       </table>
   - id: table-body-dropzone-table
-    name: Body Dropzone
+    name: Body dropzone
     markup: |
       <table class="spectrum-Table spectrum-Table--sizeM spectrum-Table--emphasized">
         <thead class="spectrum-Table-head">
@@ -1237,15 +1237,15 @@ examples:
               <svg class="spectrum-Icon spectrum-UIIcon-ArrowDown100 spectrum-Table-sortedIcon" focusable="false" aria-hidden="true">
                 <use xlink:href="#spectrum-css-icon-Arrow100" />
               </svg>
-              <span>Column Title</span>
+              <span>Column title</span>
             </th>
             <th class="spectrum-Table-headCell is-sortable" aria-sort="none">
               <svg class="spectrum-Icon spectrum-UIIcon-ArrowDown100 spectrum-Table-sortedIcon" focusable="false" aria-hidden="true">
                 <use xlink:href="#spectrum-css-icon-Arrow100" />
               </svg>
-              <span>Column Title</span>
+              <span>Column title</span>
             </th>
-            <th class="spectrum-Table-headCell">Column Title</th>
+            <th class="spectrum-Table-headCell">Column title</th>
           </tr>
         </thead>
         <tbody class="spectrum-Table-body is-drop-target">
@@ -1277,7 +1277,7 @@ examples:
         </tbody>
       </table>
   - id: table-row-dropzone
-    name: Row Dropzone
+    name: Row dropzone
     description: Rows that accept dropped content.
     markup: |
       <div class="spectrum-Table-scroller spectrum-Table spectrum-Table--sizeM spectrum-Table--emphasized" style="height: 200px">
@@ -1288,15 +1288,15 @@ examples:
                 <svg class="spectrum-Icon spectrum-UIIcon-ArrowDown100 spectrum-Table-sortedIcon" focusable="false" aria-hidden="true">
                   <use xlink:href="#spectrum-css-icon-Arrow100" />
                 </svg>
-                <span>Column Title</span>
+                <span>Column title</span>
               </div>
               <div class="spectrum-Table-headCell is-sortable" role="columnheader" aria-sort="none" tabindex="0">
                 <svg class="spectrum-Icon spectrum-UIIcon-ArrowDown100 spectrum-Table-sortedIcon" focusable="false" aria-hidden="true">
                   <use xlink:href="#spectrum-css-icon-Arrow100" />
                 </svg>
-                <span>Column Title</span>
+                <span>Column title</span>
               </div>
-              <div class="spectrum-Table-headCell" role="columnheader">Column Title</div>
+              <div class="spectrum-Table-headCell" role="columnheader">Column title</div>
             </div>
           </div>
           <div class="spectrum-Table-body" role="rowgroup">
@@ -1329,7 +1329,7 @@ examples:
         </div>
       </div>
   - id: table-row-dropzone-quiet
-    name: Row Dropzone (Quiet)
+    name: Row dropzone (quiet)
     markup: |
       <div class="spectrum-Table-scroller spectrum-Table spectrum-Table--sizeM spectrum-Table--emphasized spectrum-Table--quiet" style="height: 200px">
         <div class="spectrum-Table-main" role="table">
@@ -1339,15 +1339,15 @@ examples:
                 <svg class="spectrum-Icon spectrum-UIIcon-ArrowDown100 spectrum-Table-sortedIcon" focusable="false" aria-hidden="true">
                   <use xlink:href="#spectrum-css-icon-Arrow100" />
                 </svg>
-                <span>Column Title</span>
+                <span>Column title</span>
               </div>
               <div class="spectrum-Table-headCell is-sortable" role="columnheader" aria-sort="none" tabindex="0">
                 <svg class="spectrum-Icon spectrum-UIIcon-ArrowDown100 spectrum-Table-sortedIcon" focusable="false" aria-hidden="true">
                   <use xlink:href="#spectrum-css-icon-Arrow100" />
                 </svg>
-                <span>Column Title</span>
+                <span>Column title</span>
               </div>
-              <div class="spectrum-Table-headCell" role="columnheader">Column Title</div>
+              <div class="spectrum-Table-headCell" role="columnheader">Column title</div>
             </div>
           </div>
           <div class="spectrum-Table-body" role="rowgroup">
