@@ -1,5 +1,6 @@
 | Modifiable Custom Properties                                     |
 | ---------------------------------------------------------------- |
+| `--mod-checkbox-spacing`                                         |
 | `--mod-table-border-color`                                       |
 | `--mod-table-border-radius`                                      |
 | `--mod-table-border-radius--quiet`                               |
