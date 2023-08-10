@@ -18,7 +18,9 @@ export const Template = ({
 	id = "popover-1",
 	testId,
 	triggerId = "trigger",
-	customStyles = {},
+	customStyles = {
+		"--spectrum-popover-offset": "8px"
+	},
 	trigger,
 	content = [],
 	...globals
@@ -112,6 +114,7 @@ export const Template = ({
 				updateArgs({
 					isOpen: !isOpen,
 					customStyles: {
+						...customStyles,
 						transform: transforms.join(" "),
 						...additionalStyles,
 					}
