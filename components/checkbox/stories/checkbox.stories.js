@@ -53,15 +53,15 @@ export default {
 			},
 			control: { type: "boolean" },
 		},
-    isIndeterminate: {
-      name: "Indeterminate",
-      type: { name: "boolean" },
-      table: {
-        type: { summary: "boolean" },
-        category: "Component",
-      },
-      control: "boolean",
-    },
+		isIndeterminate: {
+			name: "Indeterminate",
+			type: { name: "boolean" },
+			table: {
+				type: { summary: "boolean" },
+				category: "Component",
+			},
+			control: "boolean",
+		},
 	},
 	args: {
 		rootClass: "spectrum-Checkbox",
@@ -70,7 +70,7 @@ export default {
 		isChecked: false,
 		isDisabled: false,
 		isEmphasized: false,
-    isIndeterminate: false,
+		isIndeterminate: false,
 	},
 	parameters: {
 		actions: {
