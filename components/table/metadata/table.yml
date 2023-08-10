@@ -26,7 +26,7 @@ examples:
               </svg>
               <span>Column title</span>
             </th>
-            <th class="spectrum-Table-headCell is-sortable" aria-sort="none">
+            <th class="spectrum-Table-headCell is-sortable" aria-sort="none" tabindex="0">
               <svg class="spectrum-Icon spectrum-UIIcon-ArrowDown100 spectrum-Table-sortedIcon" focusable="false" aria-hidden="true">
                 <use xlink:href="#spectrum-css-icon-Arrow100" />
               </svg>
@@ -79,7 +79,7 @@ examples:
                 </svg>
                 Column title
               </th>
-              <th class="spectrum-Table-headCell is-sortable is-sorted-asc" aria-sort="ascending">
+              <th class="spectrum-Table-headCell is-sortable is-sorted-asc" aria-sort="ascending" tabindex="0">
                 <svg class="spectrum-Icon spectrum-UIIcon-ArrowDown75 spectrum-Table-sortedIcon" focusable="false" aria-hidden="true">
                   <use xlink:href="#spectrum-css-icon-Arrow75" />
                 </svg>
@@ -114,7 +114,7 @@ examples:
                 </svg>
                 Column title
               </th>
-              <th class="spectrum-Table-headCell is-sortable is-sorted-asc" aria-sort="ascending">
+              <th class="spectrum-Table-headCell is-sortable is-sorted-asc" aria-sort="ascending" tabindex="0">
                 <svg class="spectrum-Icon spectrum-UIIcon-ArrowDown100 spectrum-Table-sortedIcon" focusable="false" aria-hidden="true">
                   <use xlink:href="#spectrum-css-icon-Arrow100" />
                 </svg>
@@ -149,7 +149,7 @@ examples:
                 </svg>
                 Column title
               </th>
-              <th class="spectrum-Table-headCell is-sortable is-sorted-asc" aria-sort="ascending">
+              <th class="spectrum-Table-headCell is-sortable is-sorted-asc" aria-sort="ascending" tabindex="0">
                 <svg class="spectrum-Icon spectrum-UIIcon-ArrowDown200 spectrum-Table-sortedIcon" focusable="false" aria-hidden="true">
                   <use xlink:href="#spectrum-css-icon-Arrow200" />
                 </svg>
@@ -185,7 +185,7 @@ examples:
                 </svg>
                 Column title
               </th>
-              <th class="spectrum-Table-headCell is-sortable is-sorted-asc" aria-sort="ascending">
+              <th class="spectrum-Table-headCell is-sortable is-sorted-asc" aria-sort="ascending" tabindex="0">
                 <svg class="spectrum-Icon spectrum-UIIcon-ArrowDown300 spectrum-Table-sortedIcon" focusable="false" aria-hidden="true">
                   <use xlink:href="#spectrum-css-icon-Arrow300" />
                 </svg>
@@ -221,7 +221,7 @@ examples:
               </svg>
               <span>Column title</span>
             </th>
-            <th class="spectrum-Table-headCell is-sortable" aria-sort="none">
+            <th class="spectrum-Table-headCell is-sortable" aria-sort="none" tabindex="0">
               <svg class="spectrum-Icon spectrum-UIIcon-ArrowDown100 spectrum-Table-sortedIcon" focusable="false" aria-hidden="true">
                 <use xlink:href="#spectrum-css-icon-Arrow100" />
               </svg>
@@ -271,7 +271,7 @@ examples:
               </svg>
               <span>Column title</span>
             </th>
-            <th class="spectrum-Table-headCell is-sortable" aria-sort="none">
+            <th class="spectrum-Table-headCell is-sortable" aria-sort="none" tabindex="0">
               <svg class="spectrum-Icon spectrum-UIIcon-ArrowDown100 spectrum-Table-sortedIcon" focusable="false" aria-hidden="true">
                 <use xlink:href="#spectrum-css-icon-Arrow100" />
               </svg>
@@ -561,7 +561,7 @@ examples:
               </svg>
               <span>Column title</span>
             </th>
-            <th class="spectrum-Table-headCell is-sortable" aria-sort="descending">
+            <th class="spectrum-Table-headCell is-sortable" aria-sort="descending" tabindex="0">
               <svg class="spectrum-Icon spectrum-UIIcon-ArrowDown100 spectrum-Table-sortedIcon" focusable="false" aria-hidden="true">
                 <use xlink:href="#spectrum-css-icon-Arrow100" />
               </svg>
@@ -780,7 +780,7 @@ examples:
               </svg>
               <span>Column title</span>
             </th>
-            <th class="spectrum-Table-headCell is-sortable" aria-sort="none">
+            <th class="spectrum-Table-headCell is-sortable" aria-sort="none" tabindex="0">
               <svg class="spectrum-Icon spectrum-UIIcon-ArrowDown100 spectrum-Table-sortedIcon" focusable="false" aria-hidden="true">
                 <use xlink:href="#spectrum-css-icon-Arrow100" />
               </svg>
@@ -825,7 +825,7 @@ examples:
               </svg>
               <span>Column title</span>
             </th>
-            <th class="spectrum-Table-headCell is-sortable" aria-sort="none">
+            <th class="spectrum-Table-headCell is-sortable" aria-sort="none" tabindex="0">
               <svg class="spectrum-Icon spectrum-UIIcon-ArrowDown100 spectrum-Table-sortedIcon" focusable="false" aria-hidden="true">
                 <use xlink:href="#spectrum-css-icon-Arrow100" />
               </svg>
@@ -880,7 +880,7 @@ examples:
               </svg>
               <span>Column title</span>
             </th>
-            <th class="spectrum-Table-headCell is-sortable" aria-sort="none">
+            <th class="spectrum-Table-headCell is-sortable" aria-sort="none" tabindex="0">
               <svg class="spectrum-Icon spectrum-UIIcon-ArrowDown100 spectrum-Table-sortedIcon" focusable="false" aria-hidden="true">
                 <use xlink:href="#spectrum-css-icon-Arrow100" />
               </svg>
@@ -930,7 +930,7 @@ examples:
 
       When using the scrollable wrapper, the column headers must have a solid background color set. This can be customized to match the parent background with the custom property `--mod-table-header-background-color-scrollable`.
 
-      To make sure that reverse keyboard link navigation (shift-tab) keeps the whole cell in focus, `--mod-table-current-header-height` should be dynamically updated with JS to match the table header height.  
+      To make sure that reverse keyboard link navigation (shift-tab) keeps the whole cell in focus, `--mod-table-current-header-height` should be dynamically updated with JS to match the height of `.spectrum-Table-head`.
     markup: |
       <div class="spectrum-Table-scroller spectrum-Table spectrum-Table--sizeM" style="height: 200px">
         <table class="spectrum-Table-main spectrum-Table--emphasized">
@@ -942,7 +942,7 @@ examples:
                 </svg>
                 <span>Column title</span>
               </th>
-              <th class="spectrum-Table-headCell is-sortable" aria-sort="none">
+              <th class="spectrum-Table-headCell is-sortable" aria-sort="none" tabindex="0">
                 <svg class="spectrum-Icon spectrum-UIIcon-ArrowDown100 spectrum-Table-sortedIcon" focusable="false" aria-hidden="true">
                   <use xlink:href="#spectrum-css-icon-Arrow100" />
                 </svg>
@@ -999,7 +999,7 @@ examples:
                 </svg>
                 <span>Column title</span>
               </div>
-              <div class="spectrum-Table-headCell is-sortable" role="columnheader" aria-sort="none">
+              <div class="spectrum-Table-headCell is-sortable" role="columnheader" aria-sort="none" tabindex="0">
                 <svg class="spectrum-Icon spectrum-UIIcon-ArrowDown100 spectrum-Table-sortedIcon" focusable="false" aria-hidden="true">
                   <use xlink:href="#spectrum-css-icon-Arrow100" />
                 </svg>
@@ -1055,7 +1055,7 @@ examples:
               </svg>
               <span>Column title</span>
             </th>
-            <th class="spectrum-Table-headCell is-sortable" aria-sort="none">
+            <th class="spectrum-Table-headCell is-sortable" aria-sort="none" tabindex="0">
               <svg class="spectrum-Icon spectrum-UIIcon-ArrowDown100 spectrum-Table-sortedIcon" focusable="false" aria-hidden="true">
                 <use xlink:href="#spectrum-css-icon-Arrow100" />
               </svg>
@@ -1164,7 +1164,7 @@ examples:
               </svg>
               <span>Animals</span>
             </th>
-            <th class="spectrum-Table-headCell is-sortable" aria-sort="none">
+            <th class="spectrum-Table-headCell is-sortable" aria-sort="none" tabindex="0">
               <svg class="spectrum-Icon spectrum-UIIcon-ArrowDown100 spectrum-Table-sortedIcon" focusable="false" aria-hidden="true">
                 <use xlink:href="#spectrum-css-icon-Arrow100" />
               </svg>
@@ -1239,7 +1239,7 @@ examples:
               </svg>
               <span>Column title</span>
             </th>
-            <th class="spectrum-Table-headCell is-sortable" aria-sort="none">
+            <th class="spectrum-Table-headCell is-sortable" aria-sort="none" tabindex="0">
               <svg class="spectrum-Icon spectrum-UIIcon-ArrowDown100 spectrum-Table-sortedIcon" focusable="false" aria-hidden="true">
                 <use xlink:href="#spectrum-css-icon-Arrow100" />
               </svg>

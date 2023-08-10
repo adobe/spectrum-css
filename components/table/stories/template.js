@@ -252,6 +252,7 @@ export const Template = ({
 					class="${rootClass}-headCell is-sortable"
 					role=${ifDefined(useDivs ? "columnheader" : undefined)}
 					aria-sort="none"
+					tabindex="0"
 				>
 					${Icon({
 						iconName: "ArrowDown100",
