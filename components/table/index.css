@@ -483,10 +483,13 @@ governing permissions and limitations under the License.
 }
 
 .spectrum-Table-body {
+  /* Local custom property used to assign row color to child cells, to help get around Firefox bug 921341 
+     causing backgrounds to show outside of rounded corners when background-color was assigned to rows. */
+  --spectrum-table-cell-background-color: var(--highcontrast-table-row-background-color, var(--mod-table-row-background-color, var(--spectrum-table-row-background-color)));
+
   position: relative;
   border: none;
   border-radius: var(--mod-table-border-radius, var(--spectrum-table-border-radius));
-  background-color: var(--highcontrast-table-row-background-color, var(--mod-table-row-background-color, var(--spectrum-table-row-background-color)));
 
   &.is-drop-target {
     outline-width: var(--mod-table-focus-indicator-thickness, var(--spectrum-table-focus-indicator-thickness));
@@ -568,6 +571,7 @@ governing permissions and limitations under the License.
   line-height: var(--mod-table-row-line-height, var(--spectrum-table-row-line-height));
   vertical-align: var(--mod-table-default-vertical-align, var(--spectrum-table-default-vertical-align));
   color: var(--highcontrast-table-row-text-color, var(--mod-table-row-text-color, var(--spectrum-table-row-text-color)));
+  background-color: var(--spectrum-table-cell-background-color);
 
   /* block-size functions as min-block-size when using display table-cell. */
   block-size: var(--mod-table-min-row-height, var(--spectrum-table-min-row-height));
@@ -608,7 +612,6 @@ governing permissions and limitations under the License.
 /* Rows within table body */
 .spectrum-Table-row {
   position: relative;
-  background-color: var(--highcontrast-table-row-background-color, var(--mod-table-row-background-color, var(--spectrum-table-row-background-color)));
   transition: background-color var(--highcontrast-table-transition-duration, var(--mod-table-transition-duration, var(--spectrum-table-transition-duration))) ease-in-out;
   cursor: var(--mod-table-cursor-row-default, pointer);
   border-block-start: none;
@@ -633,36 +636,36 @@ governing permissions and limitations under the License.
   &.is-focused {
     --highcontrast-table-row-text-color: var(--highcontrast-table-row-text-color-hover);
     --highcontrast-table-icon-color: var(--highcontrast-table-row-text-color-hover);
-    background-color: var(--highcontrast-table-row-background-color-hover, var(--mod-table-row-background-color-hover, var(--spectrum-table-row-background-color-hover)));
+    --spectrum-table-cell-background-color: var(--highcontrast-table-row-background-color-hover, var(--mod-table-row-background-color-hover, var(--spectrum-table-row-background-color-hover)));
   }
 
   &:active {
     --highcontrast-table-row-text-color: var(--highcontrast-table-row-text-color-hover);
     --highcontrast-table-icon-color: var(--highcontrast-table-row-text-color-hover);
-    background-color: var(--highcontrast-table-row-background-color-hover, var(--mod-table-row-active-color, var(--spectrum-table-row-active-color)));
+    --spectrum-table-cell-background-color: var(--highcontrast-table-row-background-color-hover, var(--mod-table-row-active-color, var(--spectrum-table-row-active-color)));
   }
 
   &.is-selected {
     --highcontrast-table-row-text-color: var(--highcontrast-table-selected-row-text-color);
     --highcontrast-table-icon-color: var(--highcontrast-table-selected-row-text-color);
-    background-color: var(--highcontrast-table-selected-row-background-color, var(--mod-table-selected-row-background-color-non-emphasized, var(--spectrum-table-selected-row-background-color-non-emphasized)));
+    --spectrum-table-cell-background-color: var(--highcontrast-table-selected-row-background-color, var(--mod-table-selected-row-background-color-non-emphasized, var(--spectrum-table-selected-row-background-color-non-emphasized)));
 
     &:hover,
     &:focus-visible,
     &.is-focused {
       --highcontrast-table-row-text-color: var(--highcontrast-table-selected-row-text-color-focus);
       --highcontrast-table-icon-color: var(--highcontrast-table-selected-row-text-color-focus);
-      background-color: var(--highcontrast-table-selected-row-background-color-focus, var(--mod-table-selected-row-background-color-non-emphasized-focus, var(--spectrum-table-selected-row-background-color-non-emphasized-focus)));
+      --spectrum-table-cell-background-color: var(--highcontrast-table-selected-row-background-color-focus, var(--mod-table-selected-row-background-color-non-emphasized-focus, var(--spectrum-table-selected-row-background-color-non-emphasized-focus)));
     }
 
     .spectrum-Table.spectrum-Table--emphasized &,
     &.spectrum-Table-row--emphasized {
-      background-color: var(--highcontrast-table-selected-row-background-color, var(--mod-table-selected-row-background-color, var(--spectrum-table-selected-row-background-color)));
+      --spectrum-table-cell-background-color: var(--highcontrast-table-selected-row-background-color, var(--mod-table-selected-row-background-color, var(--spectrum-table-selected-row-background-color)));
 
       &:hover,
       &:focus-visible,
       &.is-focused {
-        background-color: var(--highcontrast-table-selected-row-background-color-focus, var(--mod-table-selected-row-background-color-focus, var(--spectrum-table-selected-row-background-color-focus)));
+        --spectrum-table-cell-background-color: var(--highcontrast-table-selected-row-background-color-focus, var(--mod-table-selected-row-background-color-focus, var(--spectrum-table-selected-row-background-color-focus)));
       }
     }
   }
@@ -671,7 +674,7 @@ governing permissions and limitations under the License.
   .spectrum-Table-body.is-drop-target & {
     --highcontrast-table-row-text-color: var(--highcontrast-table-selected-row-text-color);
     --highcontrast-table-icon-color: var(--highcontrast-table-selected-row-text-color);
-    background-color: var(--highcontrast-table-selected-row-background-color, var(--mod-table-drop-zone-background-color, var(--spectrum-table-drop-zone-background-color)));
+    --spectrum-table-cell-background-color: var(--highcontrast-table-selected-row-background-color, var(--mod-table-drop-zone-background-color, var(--spectrum-table-drop-zone-background-color)));
   }
 
   &.is-drop-target {
@@ -690,7 +693,7 @@ governing permissions and limitations under the License.
 }
 
 .spectrum-Table-row--summary {
-  background-color: var(--highcontrast-table-row-background-color, var(--mod-table-summary-row-background-color, var(--spectrum-table-summary-row-background-color)));
+  --spectrum-table-cell-background-color: var(--highcontrast-table-row-background-color, var(--mod-table-summary-row-background-color, var(--spectrum-table-summary-row-background-color)));
 
   .spectrum-Table-cell {
     font-weight: var(--mod-table-summary-row-font-weight, var(--spectrum-table-summary-row-font-weight));
@@ -705,7 +708,7 @@ governing permissions and limitations under the License.
 }
 
 .spectrum-Table-row--sectionHeader {
-  background-color: var(--highcontrast-table-section-header-background-color, var(--mod-table-section-header-background-color, var(--spectrum-table-section-header-background-color)));
+  --spectrum-table-cell-background-color: var(--highcontrast-table-section-header-background-color, var(--mod-table-section-header-background-color, var(--spectrum-table-section-header-background-color)));
   cursor: var(--mod-table-cursor-section-header, initial);
 
   .spectrum-Table-cell {
@@ -734,7 +737,7 @@ governing permissions and limitations under the License.
 
   &:hover {
     --highcontrast-table-row-text-color: var(--highcontrast-table-section-header-text-color);
-    background-color: var(--highcontrast-table-section-header-background-color, var(--mod-table-section-header-background-color, var(--spectrum-table-section-header-background-color)));
+    --spectrum-table-cell-background-color: var(--highcontrast-table-section-header-background-color, var(--mod-table-section-header-background-color, var(--spectrum-table-section-header-background-color)));
   }
 }
 
