@@ -15,19 +15,10 @@ governing permissions and limitations under the License.
 	--spectrum-coachmark-width:  296px; /* TODO: Replace with new token */
 	--spectrum-coachmark-max-width: 380px; /* TODO: Replace with new token */
 
-	--spectrum-coachmark-media-min-height: 166px; /* TODO: Replace with new token */
-	--spectrum-coachmark-media-height: 222px; /* TODO: Replace with new token */
+	--spectrum-coachmark-media-min-height: var(--spectrum-coach-mark-media-minimum-height);
+	--spectrum-coachmark-media-height: var(--spectrum-coach-mark-media-height);
 
 	--spectrum-coachmark-padding: var(--spectrum-coach-mark-edge-to-content);
-
-	/* compact tokens */
-	--spectrum-coachmark-min-width-mobile: 216px; /* TODO: Replace with new token */
-	--spectrum-coachmark-width-mobile: 216px; /* TODO: Replace with new token */
-	--spectrum-coachmark-max-width-compact: 248px;  /* TODO: Replace with new token */
-
-	--spectrum-coachmark-media-min-height-compact: 121px; /* TODO: Replace with new token */
-	--spectrum-coachmark-media-height-compact: 162pxpx; /* TODO: Replace with new token */
-
 
 	--mod-popover-border-width: var(--spectrum-border-width-100);
 	--mod-popover-corner-radius: var(--spectrum-corner-radius-100);
@@ -54,7 +45,7 @@ governing permissions and limitations under the License.
 	--spectrum-coachmark-content-line-height: var(--spectrum-body-line-height);
 
 	--spectrum-coachmark-media-min-height: var(--spectrum-coach-mark-media-minimun-height);
-	--spectrum-coachmark-media-height: var(--spectrum-coach-mark-media-height);
+	--spectrum-coachmark-media-height: var(--spectrum-coach-mark-media-height); /* THIS NEEDS A NEW TOKEN */
 
 	--spectrum-coachmark-step-color: var(--spectrum-coach-mark-pagination-color);
 	--spectrum-coachmark-step-font-size: var(--spectrum-coach-mark-pagination-body-size);
@@ -108,14 +99,8 @@ governing permissions and limitations under the License.
 	}
 }
 
-
-.spectrum-CoachMark--mobile .spectrum-CoachMark-image-wrapper{
-  block-size: 121px; /* TODO: Replace with new token */
-	inline-size: calc(var(--mod-coachmark-width-mobile, var(--spectrum-coachmark-width-mobile)) - (var(--mod-coachmark-border-size, var(--spectrum-coachmark-border-size)) * 2));
-}
-
 .spectrum-CoachMark-image-wrapper {
-	block-size: 166px; /* TODO: Replace with new token */
+	block-size: var(--spectrum-coachmark-media-height);
 	inline-size: calc(var(--mod-coachmark-width, var(--spectrum-coachmark-width)) - (var(--mod-coachmark-border-size, var(--spectrum-coachmark-border-size)) * 2));
 	object-fit: cover;
 	object-position: center;

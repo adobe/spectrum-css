@@ -22,15 +22,13 @@
 | `--mod-coachmark-step-step-to-bottom`         |
 | `--mod-coachmark-step-text-font-weight`       |
 | `--mod-coachmark-step-text-line-height`       |
-| `--mod-coachmark-step-text-size`              |
 | `--mod-coachmark-title-color`                 |
 | `--mod-coachmark-title-font-family`           |
+| `--mod-coachmark-title-font-size`             |
 | `--mod-coachmark-title-font-style`            |
 | `--mod-coachmark-title-text-font-weight`      |
 | `--mod-coachmark-title-text-line-height`      |
-| `--mod-coachmark-title-text-size`             |
 | `--mod-coachmark-width`                       |
-| `--mod-coachmark-width-mobile`                |
 | `--mod-popover-border-width`                  |
 | `--mod-popover-content-area-spacing-vertical` |
 | `--mod-popover-corner-radius`                 |
