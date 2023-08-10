@@ -241,7 +241,7 @@ export const Template = ({
 						size,
 						customClasses: [`${rootClass}-sortedIcon`],
 					})}
-					<span>Column Title</span>
+					<span>Column title</span>
 					${Icon({
 						iconName: "ChevronDown100",
 						size,
@@ -259,12 +259,12 @@ export const Template = ({
 						size,
 						customClasses: [`${rootClass}-sortedIcon`],
 					})}
-					<span>Column Title</span>
+					<span>Column title</span>
 				</${thTag}>
 				<${thTag}
 					class="${rootClass}-headCell"
 					role=${ifDefined(useDivs ? "columnheader" : undefined)}
-				>Column Title</${thTag}>
+				>Column title</${thTag}>
 			</${rowTag}>
 		</${theadTag}>
 		<${tbodyTag}

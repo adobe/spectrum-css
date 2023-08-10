@@ -527,7 +527,6 @@ RowDropzone.args = {
 		},
 		{
 			cellContent: "Table Row Charlie",
-			isSelected: true,
 			isDropTarget: true,
 		},
 		{
