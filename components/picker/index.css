@@ -406,7 +406,7 @@ governing permissions and limitations under the License.
 
   font-size: var(--mod-picker-font-size, var(--spectrum-picker-font-size));
   line-height: var(--mod-picker-line-height, var(--spectrum-picker-line-height));
-  
+  font-weight: var(--mod-picker-font-weight, var(--spectrum-picker-font-weight));
 
   text-overflow: ellipsis;
   text-align: start;
@@ -415,7 +415,7 @@ governing permissions and limitations under the License.
   margin-block-end: calc(var(--mod-picker-spacing-bottom-to-text, var(--spectrum-picker-spacing-bottom-to-text)) - var(--mod-picker-border-width, var(--spectrum-picker-border-width)));
 
   &.is-placeholder {
-    font-weight: var(--mod-picker-font-weight, var(--spectrum-picker-font-weight));
+    font-weight: var(--mod-picker-placeholder-font-weight, var(--spectrum-picker-font-weight));
     font-style: var(--mod-picker-placeholder-font-style, var(--spectrum-picker-placeholder-font-style));
     transition: color var(--mod-picker-animation-duration, var(--spectrum-picker-animation-duration)) ease-in-out;
 
