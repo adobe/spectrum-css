@@ -3,6 +3,15 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+<a name="6.0.2"></a>
+##6.0.2
+🗓
+2023-08-10 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/picker@6.0.1...@spectrum-css/picker@6.0.2)
+
+### 🐛 Bug fixes
+
+- **picker:**add separate mod for label font-weight ([#2079](https://github.com/adobe/spectrum-css/issues/2079))([1f8e486](https://github.com/adobe/spectrum-css/commit/1f8e486))
+
 <a name="6.0.1"></a>
 ##6.0.1
 🗓

@@ -3,6 +3,19 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+<a name="11.2.0"></a>
+#11.2.0
+🗓
+2023-08-10 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/tokens@11.1.0...@spectrum-css/tokens@11.2.0)
+
+### ✨ Features
+
+- **badge,tokens:**add non-semantic colors ([#2077](https://github.com/adobe/spectrum-css/issues/2077))([1bac588](https://github.com/adobe/spectrum-css/commit/1bac588))
+
+### 🐛 Bug fixes
+
+\*revert prettier ([#2074](https://github.com/adobe/spectrum-css/issues/2074))([ebb98df](https://github.com/adobe/spectrum-css/commit/ebb98df))
+
 <a name="11.1.0"></a>
 #11.1.0
 🗓
