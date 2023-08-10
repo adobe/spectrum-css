@@ -106,23 +106,24 @@ governing permissions and limitations under the License.
   --spectrum-progressbar-spacing-top-to-text: var(--spectrum-component-top-to-text-300);
 }
 
-@media (forced-colors: active) {
-  .spectrum-ProgressBar-track {
-    forced-color-adjust: none;
-    --highcontrast-progressbar-fill-color: ButtonText;
-    --highcontrast-progressbar-track-color: ButtonFace;
-    border: 1px solid ButtonText;
-  }
-}
-
-.spectrum-Meter{
+.spectrum-Meter {
   --mod-progressbar-size-default: var(--spectrum-meter-inline-size);
   --mod-progressbar-max-size: var(--spectrum-meter-max-width);
   --mod-progressbar-min-size: var(--spectrum-meter-min-width);
 
   &.is-positive {
     .spectrum-ProgressBar-fill {
-      background: var(--highcontrast-progressbar-fill-color, var(--mod-progressbar-fill-color-positive, var(--spectrum-progressbar-fill-color-positive)));
+      background-color: var(--highcontrast-progressbar-fill-color, var(--mod-progressbar-fill-color-positive, var(--spectrum-progressbar-fill-color-positive)));
+    }
+  }
+  &.is-notice {
+    .spectrum-ProgressBar-fill {
+      background-color: var(--highcontrast-progressbar-fill-color, var(--mod-progressbar-fill-color-notice, var(--spectrum-progressbar-fill-color-notice)));
+    }
+  }
+  &.is-negative {
+    .spectrum-ProgressBar-fill {
+      background-color: var(--highcontrast-progressbar-fill-color, var(--mod-progressbar-fill-color-negative, var(--spectrum-progressbar-fill-color-negative)));
     }
   }
 }
@@ -178,19 +179,6 @@ governing permissions and limitations under the License.
     border-radius: var(--spectrum-progressbar-corner-radius);
 
     background-color: var(--highcontrast-progressbar-track-color, var(--mod-progressbar-track-color, var(--spectrum-progressbar-track-color)));
-  }
-
-  /* Fill variants */
-
-  &.is-notice {
-    .spectrum-ProgressBar-fill {
-      background-color: var(--highcontrast-progressbar-fill-color, var(--mod-progressbar-fill-color-notice, var(--spectrum-progressbar-fill-color-notice)));
-    }
-  }
-  &.is-negative {
-    .spectrum-ProgressBar-fill {
-      background-color: var(--highcontrast-progressbar-fill-color, var(--mod-progressbar-fill-color-negative, var(--spectrum-progressbar-fill-color-negative)));
-    }
   }
 
   .spectrum-ProgressBar-fill {
@@ -278,5 +266,14 @@ governing permissions and limitations under the License.
   }
   to {
     transform: translate(calc(-1 * var(--mod-progressbar-size-default, var(--spectrum-progressbar-size-default))));
+  }
+}
+
+@media (forced-colors: active) {
+  .spectrum-ProgressBar-track {
+    forced-color-adjust: none;
+    --highcontrast-progressbar-fill-color: ButtonText;
+    --highcontrast-progressbar-track-color: ButtonFace;
+    border: 1px solid ButtonText;
   }
 }

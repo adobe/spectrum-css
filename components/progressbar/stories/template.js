@@ -17,6 +17,7 @@ export const Template = ({
 	label,
 	isMeter,
 	meterFill,
+	meterSize,
 	styles = {
 		width: customWidth ? customWidth : "",
 	},
@@ -41,23 +42,28 @@ export const Template = ({
 		console.warn(e);
 	}
 
+	const fillColor =
+		meterFill === "negative" ? "is-negative" :
+		meterFill === "positive" ? "is-positive" :
+		meterFill === "notice" ? "is-notice" : "default";
 
 	return html`
 		<div style="${staticWhite ? styleMap(staticWhiteStyles) : ""}">
 			<div
-				class="${classMap({
+				class=${classMap({
 					[rootClass]: true,
 					[`${rootClass}--size${size?.toUpperCase()}`]:
-						typeof size !== "undefined",
+						typeof size !== "undefined" && !isMeter,
 					[`${rootClass}--${labelPosition}Label`]:
-						typeof labelPosition !== "undefined",
+						typeof labelPosition !== "undefined" && !isMeter,
 					[`${rootClass}--${staticWhite}`]: typeof staticWhite !== "undefined",
-					["spectrum-Meter"]: true,
-					["spectrum-Meter--sizeS"]: true,
+					["spectrum-Meter"]: isMeter === true,
+					[`spectrum-Meter--size${meterSize?.toUpperCase()}`]: meterSize,
+					[`${fillColor}`]: fillColor !== "default",
 					[`${rootClass}--${indeterminate}`]:
 						typeof indeterminate !== "undefined",
 					...customClasses.reduce((a, c) => ({ ...a, [c]: true }), {}),
-				})}"
+				})}
 				style=${styleMap(styles)}
 				value="50"
 				role="progressbar"

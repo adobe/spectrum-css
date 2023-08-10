@@ -19,6 +19,7 @@ export default {
 			},
 			options: ["s", "m", "l", "xl"],
 			control: "select",
+			if: { arg: "isMeter", truthy: false },
 		},
 		labelPosition: {
 			name: "Label Position",
@@ -49,14 +50,26 @@ export default {
 			control: "boolean",
 		},
 		meterFill: {
-			name: "Meter Color",
+			name: "Meter fill color",
 			type: { name: "string" },
 			table: {
 				type: { summary: "string" },
 				category: "Component",
 			},
-			options: ["positive", "negative", "default", "notice"],
+			options: ["notice", "positive", "negative", "default"],
 			control: "select",
+			if: { arg: "isMeter", truthy: true },
+		},
+		meterSize: {
+			name: "Meter size",
+			type: { name: "string" },
+			table: {
+				type: { summary: "string" },
+				category: "Component",
+			},
+			options: ["s", "l"],
+			control: "select",
+			if: { arg: "isMeter", truthy: true },
 		},
 	},
 	args: {
@@ -101,6 +114,7 @@ export const Meter = Template.bind({});
 Meter.args = {
 	isMeter: true,
 	label: "Storage Space",
-	color: "positive"
+	meterFill: "positive",
+	meterSize: "s",
 };
 
