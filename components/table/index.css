@@ -12,19 +12,19 @@ governing permissions and limitations under the License.
 
 .spectrum-Table {
   /* Size and Spacing */
-  --spectrum-table-min-header-height: var(--spectrum-component-height-100);
   --spectrum-table-header-top-to-text: var(--spectrum-table-column-header-row-top-to-text-medium);
   --spectrum-table-header-bottom-to-text: var(--spectrum-table-column-header-row-bottom-to-text-medium);
 
+  --spectrum-table-min-header-height: var(--spectrum-component-height-100);
   --spectrum-table-min-row-height: var(--spectrum-table-row-height-medium-regular);
   --spectrum-table-row-top-to-text: var(--spectrum-table-row-top-to-text-medium-regular);
   --spectrum-table-row-bottom-to-text: var(--spectrum-table-row-bottom-to-text-medium-regular);
 
   --spectrum-table-cell-inline-space: var(--spectrum-table-edge-to-content);
 
-  --spectrum-table-border-width: var(--spectrum-table-border-divider-width);
-  --spectrum-table-outer-border-inline-width: var(--spectrum-table-border-width);
   --spectrum-table-border-radius: var(--spectrum-corner-radius-100);
+  --spectrum-table-border-width: var(--spectrum-table-border-divider-width);
+  --spectrum-table-outer-border-inline-width: var(--spectrum-table-border-divider-width);
 
   --spectrum-table-icon-to-text: var(--spectrum-text-to-visual-100);
 
@@ -319,7 +319,6 @@ governing permissions and limitations under the License.
   --mod-table-border-radius: var(--mod-table-border-radius--quiet, 0px);
   --mod-table-outer-border-inline-width: var(--mod-table-outer-border-inline-width--quiet, 0px);
   --mod-table-header-background-color: var(--mod-table-header-background-color--quiet, var(--spectrum-transparent-white-100));
-  --mod-table-header-background-color: var(--mod-table-header-background-color--quiet, var(--spectrum-transparent-white-100));
   --mod-table-row-background-color: var(--mod-table-row-background-color--quiet , var(--spectrum-transparent-white-100));
 }
 
@@ -385,7 +384,8 @@ governing permissions and limitations under the License.
 }
 
 /********* REGULAR / DEFAULT *********/
-.spectrum-Table {
+.spectrum-Table:not(.spectrum-Table-scroller),
+.spectrum-Table-main {
   border-collapse: separate;
   border-spacing: 0;
 }
@@ -418,7 +418,6 @@ governing permissions and limitations under the License.
 
   /* block-size functions as min-block-size when using display table-cell. */
   block-size: var(--mod-table-min-header-height, var(--spectrum-table-min-header-height));
-  min-block-size: var(--mod-table-min-header-height, var(--spectrum-table-min-header-height));
 
   padding-block: var(--mod-table-header-top-to-text, var(--spectrum-table-header-top-to-text)) var(--mod-table-header-bottom-to-text, var(--spectrum-table-header-bottom-to-text));
   padding-inline: var(--mod-table-cell-inline-space, var(--spectrum-table-cell-inline-space));
@@ -426,7 +425,7 @@ governing permissions and limitations under the License.
   color: var(--mod-table-header-text-color, var(--spectrum-table-header-text-color));
   background-color: var(--mod-table-header-background-color, var(--spectrum-table-header-background-color));
 
-  border-radius: var(--mod-table-border-radius, var(--spectrum-table-border-radius));
+  border-radius: 0;
   transition: color var(--highcontrast-table-transition-duration, var(--mod-table-transition-duration, var(--spectrum-table-transition-duration))) ease-in-out;
   cursor: var(--mod-table-cursor-header-default, initial);
   outline: 0;
@@ -485,8 +484,6 @@ governing permissions and limitations under the License.
 
 .spectrum-Table-body {
   position: relative;
-  overflow: auto;
-
   border: none;
   border-radius: var(--mod-table-border-radius, var(--spectrum-table-border-radius));
   background-color: var(--highcontrast-table-row-background-color, var(--mod-table-row-background-color, var(--spectrum-table-row-background-color)));
@@ -513,10 +510,8 @@ governing permissions and limitations under the License.
     var(--highcontrast-table-divider-color, var(--mod-table-divider-color, var(--spectrum-table-divider-color)));
 }
 
-.spectrum-Table-row {
-  border-block-start: none;
-
-  /* Outside border */
+/* Outside border */
+.spectrum-Table-body .spectrum-Table-row {
   &:first-child .spectrum-Table-cell {
     border-block-start:
       var(--mod-table-border-width, var(--spectrum-table-border-width))
@@ -544,8 +539,10 @@ governing permissions and limitations under the License.
       solid
       var(--highcontrast-table-border-color, var(--mod-table-border-color, var(--spectrum-table-border-color)));
   }
+}
 
-  /* Rounded corners (border-radius) */
+/* Rounded corners */
+.spectrum-Table-row {
   &:first-child .spectrum-Table-cell:first-child {
     border-start-start-radius: var(--mod-table-border-radius, var(--spectrum-table-border-radius));
   }
@@ -574,7 +571,6 @@ governing permissions and limitations under the License.
 
   /* block-size functions as min-block-size when using display table-cell. */
   block-size: var(--mod-table-min-row-height, var(--spectrum-table-min-row-height));
-  min-block-size: var(--mod-table-min-row-height, var(--spectrum-table-min-row-height));
 
   padding-block-start: calc(
     var(--mod-table-row-top-to-text, var(--spectrum-table-row-top-to-text)) -
@@ -615,6 +611,7 @@ governing permissions and limitations under the License.
   background-color: var(--highcontrast-table-row-background-color, var(--mod-table-row-background-color, var(--spectrum-table-row-background-color)));
   transition: background-color var(--highcontrast-table-transition-duration, var(--mod-table-transition-duration, var(--spectrum-table-transition-duration))) ease-in-out;
   cursor: var(--mod-table-cursor-row-default, pointer);
+  border-block-start: none;
 
   &:first-child {
     /* Ensure that 'outline' will match the border-radius, when used on rows. */
@@ -717,7 +714,6 @@ governing permissions and limitations under the License.
 
     /* block-size functions as min-block-size when using display table-cell. */
     block-size: var(--mod-table-section-header-min-height, var(--spectrum-table-section-header-min-height));
-    min-block-size: var(--mod-table-section-header-min-height, var(--spectrum-table-section-header-min-height));
 
     padding-block-start: calc(
       var(--mod-table-section-header-block-start-spacing, var(--spectrum-table-section-header-block-start-spacing)) -
@@ -780,8 +776,8 @@ governing permissions and limitations under the License.
 }
 
 /********* DIVS *********/
-/* Markup that uses divs instead of <table> elements. */
-div.spectrum-Table {
+/* Markup that uses divs instead of <table> elements. By default, displays like a regular table. */
+div.spectrum-Table:not(.spectrum-Table-scroller) {
   display: table;
 }
 
@@ -801,6 +797,75 @@ div.spectrum-Table-head div[role="row"] {
 div.spectrum-Table-cell,
 div.spectrum-Table-headCell {
   display: table-cell;
+}
+
+/* Div markup that had a scrollable body and sticky column header. 
+   Table is wrapped by another element with this class to enable this behavior. */
+.spectrum-Table-scroller {
+  box-sizing: border-box;
+  display: inline-block;
+  position: relative;
+  overflow: auto;
+
+  border-radius: var(--mod-table-border-radius, var(--spectrum-table-border-radius));
+  border-block: var(--mod-table-border-width, var(--spectrum-table-border-width))
+    solid
+    var(--highcontrast-table-border-color, var(--mod-table-border-color, var(--spectrum-table-border-color)));
+  border-inline: var(--mod-table-outer-border-inline-width, var(--spectrum-table-outer-border-inline-width)) 
+    solid 
+    var(--highcontrast-table-border-color, var(--mod-table-border-color, var(--spectrum-table-border-color)));
+  
+  &.spectrum-Table--quiet {
+    border-block-start: none;
+  }
+
+  /* Make sure shift-tab reverse keyboard navigation keeps the whole cell in focus.
+     --mod-table-current-header-height should be dynamically updated with JS to match the table header height. */
+  scroll-padding-top: calc(
+    (var(--mod-table-header-line-height, var(--spectrum-table-row-line-height)) * var(--mod-table-header-font-size, var(--spectrum-table-row-font-size))) + 
+    var(--mod-table-header-top-to-text, var(--spectrum-table-header-top-to-text)) + 
+    var(--mod-table-header-bottom-to-text, var(--spectrum-table-header-bottom-to-text)) +
+    var(--mod-table-border-width, var(--spectrum-table-border-width))
+  );
+
+  .spectrum-Table,
+  .spectrum-Table-main {
+    --spectrum-table-header-background-color: var(--mod-table-header-background-color-scrollable, var(--spectrum-background-layer-1-color, var(--spectrum-global-color-gray-100)));
+    --mod-table-header-background-color--quiet: var(--mod-table-header-background-color-scrollable, var(--spectrum-background-layer-1-color, var(--spectrum-global-color-gray-100)));
+  }
+
+  .spectrum-Table-head {
+    position: sticky;
+    top: 0;
+    z-index: 2;
+  }
+
+  .spectrum-Table-headCell {
+    border-block-end: var(--mod-table-border-width, var(--spectrum-table-border-width))
+      solid
+      var(--highcontrast-table-border-color, var(--mod-table-border-color, var(--spectrum-table-border-color)));
+  }
+
+  /* Remove borders that have been replaced by borders on wrapper or pseudo elements. */
+  .spectrum-Table-body .spectrum-Table-row {
+    &:first-child .spectrum-Table-cell {
+      border-block-start: none;
+      border-radius: 0;
+    }
+  
+    &:last-child .spectrum-Table-cell {
+      border-block-end: none;
+      border-radius: 0;
+    }
+
+    .spectrum-Table-cell:first-child {
+      border-inline-start: none;
+    }
+  
+    .spectrum-Table-cell:last-child {
+      border-inline-end: none;
+    }
+  }
 }
 
 /********* COLLAPSIBLE *********/
