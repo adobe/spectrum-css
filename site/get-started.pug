@@ -119,7 +119,12 @@ html(lang='en-US' dir="ltr").spectrum.spectrum--light.spectrum--medium
                 img(alt="Screenshot of the rendered CTA button in a browser window", src="img/button-tutorial-screenshot.png").spectrum-CenteredImage
 
                 h3.spectrum-Heading.spectrum-Heading--sizeS Modifying Spectrum CSS components
-                p.spectrum-Body.spectrum-Body--sizeL You can modify the look and feel of Spectrum CSS by overriding the custom variables for a component. Look for the Custom Property API section in the component docs for a list of variables that you can set to override styles. See the <a href="https://opensource.adobe.com/spectrum-css/actionbutton.html#custompropertiesapi" class="spectrum-Link spectrum-Link--quiet">Action Button docs</a> for an example.
+                p.spectrum-Body.spectrum-Body--sizeL You can modify the look and feel of Spectrum CSS by overriding the custom variables for a component. Look for the Custom Property API section in the component docs for a list of variables that you can set to override styles. See the <a href="http://localhost:3000/button-accent.html#custompropertiesapi" class="spectrum-Link spectrum-Link--quiet">Button docs</a> as an example.
+
+                p.spectrum-Body.spectrum-Body--sizeL You can override the available mod variables listed by adding something like the following to your CSS:
+                
+                pre.spectrum-CodeBlock
+                  code.spectrum-Code.spectrum-Code--sizeS.language-markup!=util.Prism.highlight('--mod-button-border-radius: 10px;', util.Prism.languages.markup, 'markup')
 
                 header(id="contribute")
                   h2.spectrum-Heading.spectrum-Heading--sizeM
