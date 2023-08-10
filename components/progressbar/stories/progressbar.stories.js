@@ -30,11 +30,41 @@ export default {
 			options: ["top", "side"],
 			control: "select",
 		},
+		label: {
+			name: "Label",
+			type: { name: "string" },
+			table: {
+				type: { summary: "string" },
+				category: "Content",
+			},
+			control: "text",
+		},
+		isMeter: {
+			name: "Meter component",
+			type: { name: "boolean" },
+			table: {
+				type: { summary: "boolean" },
+				category: "Component",
+			},
+			control: "boolean",
+		},
+		meterFill: {
+			name: "Meter Color",
+			type: { name: "string" },
+			table: {
+				type: { summary: "string" },
+				category: "Component",
+			},
+			options: ["positive", "negative", "default", "notice"],
+			control: "select",
+		},
 	},
 	args: {
 		rootClass: "spectrum-ProgressBar",
 		size: "m",
 		labelPosition: "top",
+		isMeter: false,
+		label: "Loading"
 	},
 	parameters: {
 		actions: {
@@ -66,3 +96,11 @@ StaticWhite.args = {
 	backgroundColor: "rgb(15, 121, 125)",
 	staticWhite: "staticWhite",
 };
+
+export const Meter = Template.bind({});
+Meter.args = {
+	isMeter: true,
+	label: "Storage Space",
+	color: "positive"
+};
+

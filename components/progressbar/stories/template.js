@@ -14,6 +14,9 @@ export const Template = ({
 	staticWhite,
 	customWidth,
 	indeterminate,
+	label,
+	isMeter,
+	meterFill,
 	styles = {
 		width: customWidth ? customWidth : "",
 	},
@@ -38,20 +41,23 @@ export const Template = ({
 		console.warn(e);
 	}
 
+
 	return html`
 		<div style="${staticWhite ? styleMap(staticWhiteStyles) : ""}">
 			<div
-				class=${classMap({
+				class="${classMap({
 					[rootClass]: true,
 					[`${rootClass}--size${size?.toUpperCase()}`]:
 						typeof size !== "undefined",
 					[`${rootClass}--${labelPosition}Label`]:
 						typeof labelPosition !== "undefined",
 					[`${rootClass}--${staticWhite}`]: typeof staticWhite !== "undefined",
+					["spectrum-Meter"]: true,
+					["spectrum-Meter--sizeS"]: true,
 					[`${rootClass}--${indeterminate}`]:
 						typeof indeterminate !== "undefined",
 					...customClasses.reduce((a, c) => ({ ...a, [c]: true }), {}),
-				})}
+				})}"
 				style=${styleMap(styles)}
 				value="50"
 				role="progressbar"
@@ -62,7 +68,7 @@ export const Template = ({
 				${FieldLabel({
 					...globals,
 					size: `${size}`,
-					label: "Loading",
+					label: `${label}`,
 					alignment: "",
 					customClasses: [`${rootClass}-label`],
 				})}
