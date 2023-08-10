@@ -64,6 +64,16 @@ export default {
 			control: "select",
 			options: ["ramp", "offset", "filled"],
 		},
+		labelPosition: {
+			name: "Label Position",
+			type: { name: "string" },
+			table: {
+				type: { summary: "string" },
+				category: "Component",
+			},
+			control: "select",
+			options: ["top", "side"],
+		},
 		fillColor: {
 			name: "Fill color",
 			type: { name: "string" },
@@ -110,6 +120,7 @@ export default {
 		isDisabled: false,
 		isFocused: false,
 		showTicks: false,
+		labelPosition: "top"
 	},
 	parameters: {
 		actions: {
@@ -184,4 +195,10 @@ Gradient.args = {
 		"--spectrum-slider-track-color-rtl":
 			"linear-gradient(to left, red, green 100%)",
 	},
+};
+
+export const SideLabel = Template.bind({});
+SideLabel.args = {
+	...Default.args,
+	labelPosition: "side",
 };

@@ -18,6 +18,7 @@ export const Template = ({
 	step = 2,
 	values = [],
 	variant,
+	labelPosition,
 	fillColor = "rgb(213, 213, 213)",
 	showTicks = false,
 	isDisabled = false,
@@ -130,6 +131,7 @@ export const Template = ({
 				[`${rootClass}--filled`]: variant === "filled",
 				[`${rootClass}--tick`]: showTicks,
 				"is-disabled": isDisabled,
+				[`${rootClass}--sideLabel`]: labelPosition === "side",
 				...customClasses.reduce((a, c) => ({ ...a, [c]: true }), {}),
 			})}
 			id=${ifDefined(id)}
@@ -156,7 +158,7 @@ export const Template = ({
 							forInput: id ? `${id}-1` : undefined,
 							customClasses: [`${rootClass}-label`],
 						})}
-						${values.length
+						${values.length && labelPosition != "side"
 							? html`<div
 									class="${rootClass}-value"
 									role="textbox"
@@ -222,6 +224,23 @@ export const Template = ({
 					];
 				})}
 			</div>
+			${values.length && labelPosition === "side"
+				? html`<div
+						class="${rootClass}-labelContainer"
+						role=${ifDefined(values.length > 1 ? "presentation" : undefined)}
+					>
+						<div
+							class="${rootClass}-value"
+							role="textbox"
+							aria-readonly="true"
+							aria-labelledby=${ifDefined(
+								id && label ? `${id}-label` : undefined
+							)}
+						>
+							${values[0]}${values.length > 1 ? ` - ${values[1]}` : ""}
+						</div>
+					</div>`
+				: ""}
 		</div>
 	`;
 };

@@ -53,3 +53,5 @@
 | `--mod-slider-track-margin-offset`                     |
 | `--mod-slider-track-middle-handleoffset`               |
 | `--mod-slider-track-thickness`                         |
+| `--mod-slider-value-inline-size`                       |
+| `--mod-slider-value-side-padding-inline`               |
