@@ -739,68 +739,63 @@ governing permissions and limitations under the License.
 }
 
 .spectrum-Table-checkboxCell {
-  /* Note: the calc subtraction is because the --spectrum-table-checkbox-to-text spacing includes start padding in adjacent cell. */
+  /* The calc subtraction is because the --spectrum-table-checkbox-to-text spacing value
+     includes the inline start padding in the adjacent cell. */
   padding-inline-end: calc(
     var(--mod-table-checkbox-to-text, var(--spectrum-table-checkbox-to-text)) - 
     var(--mod-table-edge-to-content, var(--spectrum-table-edge-to-content))
   );
+  /* Block spacing must be moved to calculated margin on the checkbox element. */
+  padding-block: 0;
   
-  .spectrum-Checkbox {
+  .spectrum-Table-checkbox {
+    --mod-checkbox-spacing: 0px;
     min-block-size: initial;
-    .spectrum-Checkbox-box {
-      margin: 0;
-    }
   }
 
-  &.spectrum-Table-cell {
-    padding-block: 0;
-    .spectrum-Checkbox {
-      margin-block-start: calc(
-        var(--mod-table-row-checkbox-block-spacing, var(--spectrum-table-row-checkbox-block-spacing)) -
-        var(--mod-table-border-width, var(--spectrum-table-border-width))
-      );
-      margin-block-end: var(--mod-table-row-checkbox-block-spacing, var(--spectrum-table-row-checkbox-block-spacing));
-    }
+  &.spectrum-Table-cell .spectrum-Table-checkbox {
+    margin-block-start: calc(
+      var(--mod-table-row-checkbox-block-spacing, var(--spectrum-table-row-checkbox-block-spacing)) -
+      var(--mod-table-border-width, var(--spectrum-table-border-width))
+    );
+    margin-block-end: var(--mod-table-row-checkbox-block-spacing, var(--spectrum-table-row-checkbox-block-spacing));
   }
 
-  &.spectrum-Table-headCell {
-    padding-block: 0;
-    .spectrum-Checkbox {
-      margin-block-start: calc(
-        var(--mod-table-header-checkbox-block-spacing, var(--spectrum-table-header-checkbox-block-spacing)) -
-        var(--mod-table-border-width, var(--spectrum-table-border-width))
-      );
-      margin-block-end: var(--mod-table-header-checkbox-block-spacing, var(--spectrum-table-header-checkbox-block-spacing));
-    }
+  &.spectrum-Table-headCell .spectrum-Table-checkbox {
+    margin-block-start: calc(
+      var(--mod-table-header-checkbox-block-spacing, var(--spectrum-table-header-checkbox-block-spacing)) -
+      var(--mod-table-border-width, var(--spectrum-table-border-width))
+    );
+    margin-block-end: var(--mod-table-header-checkbox-block-spacing, var(--spectrum-table-header-checkbox-block-spacing));
   }
 }
 
 /********* DIVS *********/
-/* Markup that uses divs instead of <table> elements. By default, displays like a regular table. */
-div.spectrum-Table:not(.spectrum-Table-scroller) {
+/* Make sure markup that uses divs instead of <table> elements displays like a regular table. */
+.spectrum-Table:not(.spectrum-Table-scroller) {
   display: table;
 }
 
-div.spectrum-Table-head {
+.spectrum-Table-head {
   display: table-header-group;
 }
 
-div.spectrum-Table-body {
+.spectrum-Table-body {
   display: table-row-group;
 }
 
-div.spectrum-Table-row,
-div.spectrum-Table-head div[role="row"] {
+.spectrum-Table-row,
+.spectrum-Table-head [role="row"] {
   display: table-row;
 }
 
-div.spectrum-Table-cell,
-div.spectrum-Table-headCell {
+.spectrum-Table-cell,
+.spectrum-Table-headCell {
   display: table-cell;
 }
 
-/* Div markup that had a scrollable body and sticky column header. 
-   Table is wrapped by another element with this class to enable this behavior. */
+/********* SCROLLABLE *********/
+/* Wrapper that allows a scrollable body and sticky column header. */
 .spectrum-Table-scroller {
   box-sizing: border-box;
   display: inline-block;
@@ -821,12 +816,12 @@ div.spectrum-Table-headCell {
 
   /* Make sure shift-tab reverse keyboard navigation keeps the whole cell in focus.
      --mod-table-current-header-height should be dynamically updated with JS to match the table header height. */
-  scroll-padding-top: calc(
+  scroll-padding-top: var(--mod-table-current-header-height, calc(
     (var(--mod-table-header-line-height, var(--spectrum-table-row-line-height)) * var(--mod-table-header-font-size, var(--spectrum-table-row-font-size))) + 
     var(--mod-table-header-top-to-text, var(--spectrum-table-header-top-to-text)) + 
     var(--mod-table-header-bottom-to-text, var(--spectrum-table-header-bottom-to-text)) +
     var(--mod-table-border-width, var(--spectrum-table-border-width))
-  );
+  ));
 
   .spectrum-Table,
   .spectrum-Table-main {
@@ -985,7 +980,6 @@ div.spectrum-Table-headCell {
 }
 
 /********* THUMBNAILS *********/
-
 .spectrum-Table-row--thumbnail {
   --table-thumbnail-cell-block-spacing: var(--mod-table-thumbnail-block-spacing, var(--spectrum-table-thumbnail-block-spacing));
   --table-thumbnail-inner-content-block-spacing: max(0px, calc((
