@@ -21,7 +21,7 @@ html(lang='en-US' dir="ltr").spectrum.spectrum--light.spectrum--medium
             .spectrum-Site-page.spectrum-Typography
               h1.spectrum-Heading.spectrum-Heading--sizeXXL.spectrum-Heading--serif Get started with Spectrum CSS
 
-              p.spectrum-Body.spectrum-Body--sizeL We have a number of resources that outline how to set up Spectrum CSS for your project, as well as an introductory tutorial that’s a hands-on way to understand how our implementation works.
+              p.spectrum-Body.spectrum-Body--sizeL We have a number of resources that outline how to set up Spectrum CSS for your project, as well as an introductory tutorial that provides a hands-on way to understand how our implementation works.
 
               header(id="resources")
                 h2.spectrum-Heading.spectrum-Heading--sizeM
@@ -47,39 +47,47 @@ html(lang='en-US' dir="ltr").spectrum.spectrum--light.spectrum--medium
               section
                 p.spectrum-Body.spectrum-Body--sizeL This introductory exercise will show you how to quickly add a Spectrum button to your project.
 
-                h3.spectrum-Heading.spectrum-Heading--sizeS Installing Spectrum CSS
-                p.spectrum-Body.spectrum-Body--sizeL Spectrum CSS requires a Node.js environment with a minimum version of 10.
+                h3.spectrum-Heading.spectrum-Heading--sizeS Installing Spectrum CSS components
+                p.spectrum-Body.spectrum-Body--sizeL Spectrum CSS requires a Node.js environment with a minimum version of 14. Each component is released on npm as a separate package inside of the <a href="https://www.npmjs.com/org/spectrum-css" class="spectrum-Link spectrum-Link--quiet" target="_blank">@spectrum-css org</a>.
 
                 p.spectrum-Body.spectrum-Body--sizeL First, install the required button dependencies by running:
 
                 pre.spectrum-CodeBlock
-                  code.spectrum-Code.spectrum-Code--sizeS.language-markup!=util.Prism.highlight('$ npm install @spectrum-css/vars @spectrum-css/button @spectrum-css/page', util.Prism.languages.markup, 'markup')
+                  code.spectrum-Code.spectrum-Code--sizeS.language-markup!=util.Prism.highlight('$ npm install @spectrum-css/vars @spectrum-css/tokens @spectrum-css/button @spectrum-css/page', util.Prism.languages.markup, 'markup')
 
-                p.spectrum-Body.spectrum-Body--sizeL Installed components will be available in the node_modules/@spectrum-css/ folder or on the Spectrum CSS NPM page.
+                p.spectrum-Body.spectrum-Body--sizeL We definitely need the #[code.spectrum-Code.spectrum-Code--sizeS button] package in order to add a button to our project. We're going to use the #[code.spectrum-Code.spectrum-Code--sizeS page] component to wrap our button in some default styles. The #[code.spectrum-Code.spectrum-Code--sizeS vars] and #[code.spectrum-Code.spectrum-Code--sizeS tokens] packages provide global Spectrum CSS styling for responsiveness and themes that we will need for our components to display properly.
+                
+                p.spectrum-Body.spectrum-Body--sizeL Installed components will be available in the node_modules/@spectrum-css/ folder.
 
-                h3.spectrum-Heading.spectrum-Heading--sizeS Setting up global variables
+                h3.spectrum-Heading.spectrum-Heading--sizeS Using components
                 p.spectrum-Body.spectrum-Body--sizeL Create a new HTML file (e.g., #[code.spectrum-Code.spectrum-Code--sizeS button.html]) in your project’s root folder.
 
-                p.spectrum-Body.spectrum-Body--sizeL or displaying a button in Spectrum’s light color theme and medium scale, a couple of classes need to be added to the document’s #[code.spectrum-Code.spectrum-Code--sizeS &lt;html&gt;] tag:
+                p.spectrum-Body.spectrum-Body--sizeL Spectrum CSS components utilize custom properties in order to change themes and scales. For these to apply, a couple of classes need to be added to the document’s #[code.spectrum-Code.spectrum-Code--sizeS &lt;html&gt;] tag based on the scale and theme you wish to use. For example, the following code snippet will display styling for the medium scale and light color theme:
 
                 pre.spectrum-CodeBlock
                   code.spectrum-Code.spectrum-Code--sizeS.language-markup!=util.Prism.highlight('<html class="spectrum spectrum--medium spectrum--light">', util.Prism.languages.markup, 'markup')
 
-                h3.spectrum-Heading.spectrum-Heading--sizeS Adding Spectrum CSS
-                p.spectrum-Body.spectrum-Body--sizeL Inside the #[code.spectrum-Code.spectrum-Code--sizeS &lt;head&gt;] tag, include the stylesheets that contain the design system tokens for global variables, scales, and color themes, as well as the stylesheets for the components themselves:
+                p.spectrum-Body.spectrum-Body--sizeL Inside the #[code.spectrum-Code.spectrum-Code--sizeS &lt;head&gt;] tag, include the stylesheets that contain the design system tokens for global variables, scales, and color themes, as well as the stylesheets for the button and page components:
 
                 -
                   htmlMarkup = util.Prism.highlight(`<head>
+                    <!-- Include global variables first -->
                     <link rel="stylesheet" href="node_modules/@spectrum-css/vars/dist/spectrum-global.css">
+
+                    <!-- Include the scale files that your project needs (medium or large) -->
                     <link rel="stylesheet" href="node_modules/@spectrum-css/vars/dist/spectrum-medium.css">
+
+                    <!-- Include the color themes that your project needs (light, dark, or darkest) -->
                     <link rel="stylesheet" href="node_modules/@spectrum-css/vars/dist/spectrum-light.css">
+
+                    <!-- Include index-vars.css for all components you're using -->
                     <link rel="stylesheet" href="node_modules/@spectrum-css/page/dist/index-vars.css">
                     <link rel="stylesheet" href="node_modules/@spectrum-css/button/dist/index-vars.css">
                   </head>`, util.Prism.languages.markup, 'markup');
                 pre.spectrum-CodeBlock
                   code.spectrum-Code.spectrum-Code--sizeS.language-markup!=htmlMarkup
 
-                p.spectrum-Body.spectrum-Body--sizeL Inside the #[code.spectrum-Code.spectrum-Code--sizeS &lt;body&gt;] tag, add the markup for a Spectrum button. Note that the example also includes the CSS class name, #[code.spectrum-Code.spectrum-Code--sizeS spectrum-Button--fill spectrum-Button--accent], to use the call to action (CTA) option.
+                p.spectrum-Body.spectrum-Body--sizeL Inside the #[code.spectrum-Code.spectrum-Code--sizeS &lt;body&gt;] tag, add the markup for a <a href="http://localhost:3000/button-accent.html" class="spectrum-Link spectrum-Link--quiet">Spectrum button</a>. The example also includes the CSS class names #[code.spectrum-Code.spectrum-Code--sizeS spectrum-Button--fill spectrum-Button--accent], to use the call to action (CTA) variant.
 
                 -
                   htmlMarkup = util.Prism.highlight(`<button class="spectrum-Button spectrum-Button--fill spectrum-Button--accent spectrum-Button--sizeM">
@@ -108,7 +116,10 @@ html(lang='en-US' dir="ltr").spectrum.spectrum--light.spectrum--medium
                 pre.spectrum-CodeBlock
                   code.spectrum-Code.spectrum-Code--sizeS.language-markup!=htmlMarkup
 
-                img(alt="Screenshot of the rendered CTA button in a browser window", src="img/button-screen-shot.png").spectrum-CenteredImage
+                img(alt="Screenshot of the rendered CTA button in a browser window", src="img/button-tutorial-screenshot.png").spectrum-CenteredImage
+
+                h3.spectrum-Heading.spectrum-Heading--sizeS Modifying Spectrum CSS components
+                p.spectrum-Body.spectrum-Body--sizeL You can modify the look and feel of Spectrum CSS by overriding the custom variables for a component. Look for the Custom Property API section in the component docs for a list of variables that you can set to override styles. See the <a href="https://opensource.adobe.com/spectrum-css/actionbutton.html#custompropertiesapi" class="spectrum-Link spectrum-Link--quiet">Action Button docs</a> for an example.
 
                 header(id="contribute")
                   h2.spectrum-Heading.spectrum-Heading--sizeM
