@@ -87,7 +87,6 @@ governing permissions and limitations under the License.
   --spectrum-progressbar-spacing-top-to-text: var(--spectrum-component-top-to-text-75);
 }
 
-/* Meter only supports size S and L */
 .spectrum-ProgressBar--sizeL, .spectrum-Meter--sizeL {
   --spectrum-progressbar-size-default: var(--spectrum-progressbar-size-2500);
 

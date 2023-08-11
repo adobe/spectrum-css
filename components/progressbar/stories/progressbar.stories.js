@@ -40,6 +40,16 @@ export default {
 			},
 			control: "text",
 		},
+		value: {
+			name: "Percent value for fill",
+			type: { name: "number" },
+			table: {
+				type: { summary: "number" },
+				category: "Content",
+			},
+			control: { type: "range", min: 0, max: 100,},
+			if: { arg: "indeterminate", truthy: false },
+		},
 		isMeter: {
 			name: "Meter component",
 			type: { name: "boolean" },
@@ -77,7 +87,8 @@ export default {
 		size: "m",
 		labelPosition: "top",
 		isMeter: false,
-		label: "Loading"
+		label: "Loading",
+		value: 50,
 	},
 	parameters: {
 		actions: {

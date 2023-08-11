@@ -15,6 +15,7 @@ export const Template = ({
 	customWidth,
 	indeterminate,
 	label,
+	value,
 	isMeter,
 	meterFill,
 	meterSize,
@@ -65,9 +66,9 @@ export const Template = ({
 					...customClasses.reduce((a, c) => ({ ...a, [c]: true }), {}),
 				})}
 				style=${styleMap(styles)}
-				value="50"
+				value="${value}%"
 				role="progressbar"
-				aria-valuenow="50"
+				aria-valuenow="${value}%"
 				aria-valuemin="0"
 				aria-valuemax="100"
 			>
@@ -81,12 +82,12 @@ export const Template = ({
 				${FieldLabel({
 					...globals,
 					size: `${size}`,
-					label: indeterminate ? "" : "50%",
+					label: indeterminate ? "" : `${value}%`,
 					alignment: "",
 					customClasses: [`${rootClass}-percentage`],
 				})}
 				<div class="${rootClass}-track">
-					<div class="${rootClass}-fill" style="width: 50%;"></div>
+					<div class="${rootClass}-fill" style="width: ${value}%;"></div>
 				</div>
 			</div>
 		</div>
