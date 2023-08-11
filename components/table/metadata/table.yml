@@ -312,7 +312,7 @@ examples:
     name: Multi-select
     description: The standard multi-select table includes a column of checkboxes used for selecting rows.
     markup: |
-      <table class="spectrum-Table spectrum-Table--sizeM spectrum-Table--emphasized">
+      <table class="spectrum-Table spectrum-Table--sizeM spectrum-Table--emphasized" role="grid" aria-multiselectable="true">
         <thead class="spectrum-Table-head">
           <tr>
             <th class="spectrum-Table-headCell spectrum-Table-checkboxCell">
@@ -342,7 +342,7 @@ examples:
         </thead>
         <tbody class="spectrum-Table-body">
           <tr class="spectrum-Table-row">
-            <td class="spectrum-Table-cell spectrum-Table-checkboxCell">
+            <td class="spectrum-Table-cell spectrum-Table-checkboxCell" role="gridcell">
               <label class="spectrum-Checkbox spectrum-Checkbox--sizeM spectrum-Checkbox--emphasized spectrum-Table-checkbox">
                 <input type="checkbox" class="spectrum-Checkbox-input" title="Select">
                 <span class="spectrum-Checkbox-box">
@@ -352,14 +352,14 @@ examples:
                 </span>
               </label>
             </td>
-            <td class="spectrum-Table-cell">
+            <td class="spectrum-Table-cell" role="gridcell">
               Row Item Alpha
             </td>
-            <td class="spectrum-Table-cell">Row Item Alpha</td>
-            <td class="spectrum-Table-cell">Row Item Alpha</td>
+            <td class="spectrum-Table-cell" role="gridcell">Row Item Alpha</td>
+            <td class="spectrum-Table-cell" role="gridcell">Row Item Alpha</td>
           </tr>
-          <tr class="spectrum-Table-row is-selected">
-            <td class="spectrum-Table-cell spectrum-Table-checkboxCell">
+          <tr class="spectrum-Table-row is-selected" aria-selected="true">
+            <td class="spectrum-Table-cell spectrum-Table-checkboxCell" role="gridcell">
               <label class="spectrum-Checkbox spectrum-Checkbox--sizeM spectrum-Checkbox--emphasized spectrum-Table-checkbox">
                 <input type="checkbox" class="spectrum-Checkbox-input" checked title="Select">
                 <span class="spectrum-Checkbox-box">
@@ -369,14 +369,14 @@ examples:
                 </span>
               </label>
             </td>
-            <td class="spectrum-Table-cell">
+            <td class="spectrum-Table-cell" role="gridcell">
               Row Item Bravo
             </td>
-            <td class="spectrum-Table-cell">Row Item Bravo</td>
-            <td class="spectrum-Table-cell">Row Item Bravo</td>
+            <td class="spectrum-Table-cell" role="gridcell">Row Item Bravo</td>
+            <td class="spectrum-Table-cell" role="gridcell">Row Item Bravo</td>
           </tr>
-          <tr class="spectrum-Table-row is-selected">
-            <td class="spectrum-Table-cell spectrum-Table-checkboxCell">
+          <tr class="spectrum-Table-row is-selected" aria-selected="true">
+            <td class="spectrum-Table-cell spectrum-Table-checkboxCell" role="gridcell">
               <label class="spectrum-Checkbox spectrum-Checkbox--sizeM spectrum-Checkbox--emphasized spectrum-Table-checkbox">
                 <input type="checkbox" class="spectrum-Checkbox-input" checked title="Select">
                 <span class="spectrum-Checkbox-box">
@@ -386,14 +386,14 @@ examples:
                 </span>
               </label>
             </td>
-            <td class="spectrum-Table-cell">
+            <td class="spectrum-Table-cell" role="gridcell">
               Row Item Charlie
             </td>
-            <td class="spectrum-Table-cell">Row Item Charlie</td>
-            <td class="spectrum-Table-cell">Row Item Charlie</td>
+            <td class="spectrum-Table-cell" role="gridcell">Row Item Charlie</td>
+            <td class="spectrum-Table-cell" role="gridcell">Row Item Charlie</td>
           </tr>
           <tr class="spectrum-Table-row">
-            <td class="spectrum-Table-cell spectrum-Table-checkboxCell">
+            <td class="spectrum-Table-cell spectrum-Table-checkboxCell" role="gridcell">
               <label class="spectrum-Checkbox spectrum-Checkbox--sizeM spectrum-Checkbox--emphasized spectrum-Table-checkbox">
                 <input type="checkbox" class="spectrum-Checkbox-input" title="Select">
                 <span class="spectrum-Checkbox-box">
@@ -403,14 +403,14 @@ examples:
                 </span>
               </label>
             </td>
-            <td class="spectrum-Table-cell">
+            <td class="spectrum-Table-cell" role="gridcell">
               Row Item Delta
             </td>
-            <td class="spectrum-Table-cell">Row Item Delta</td>
-            <td class="spectrum-Table-cell">Row Item Delta</td>
+            <td class="spectrum-Table-cell" role="gridcell">Row Item Delta</td>
+            <td class="spectrum-Table-cell" role="gridcell">Row Item Delta</td>
           </tr>
           <tr class="spectrum-Table-row">
-            <td class="spectrum-Table-cell spectrum-Table-checkboxCell">
+            <td class="spectrum-Table-cell spectrum-Table-checkboxCell" role="gridcell">
               <label class="spectrum-Checkbox spectrum-Checkbox--sizeM spectrum-Checkbox--emphasized spectrum-Table-checkbox">
                 <input type="checkbox" class="spectrum-Checkbox-input" title="Select">
                 <span class="spectrum-Checkbox-box">
@@ -420,11 +420,11 @@ examples:
                 </span>
               </label>
             </td>
-            <td class="spectrum-Table-cell">
+            <td class="spectrum-Table-cell" role="gridcell">
               Row Item Echo
             </td>
-            <td class="spectrum-Table-cell">Row Item Echo</td>
-            <td class="spectrum-Table-cell">Row Item Echo</td>
+            <td class="spectrum-Table-cell" role="gridcell">Row Item Echo</td>
+            <td class="spectrum-Table-cell" role="gridcell">Row Item Echo</td>
           </tr>
         </tbody>
       </table>
@@ -432,7 +432,7 @@ examples:
     name: Non-emphasized multi-select
     description: Excluding the `spectrum-Table--emphasized` class will change the style of selected rows.
     markup: |
-      <table class="spectrum-Table spectrum-Table--sizeM">
+      <table class="spectrum-Table spectrum-Table--sizeM" role="grid" aria-multiselectable="true">
         <thead class="spectrum-Table-head">
           <tr>
             <th class="spectrum-Table-headCell spectrum-Table-checkboxCell">
@@ -462,7 +462,7 @@ examples:
         </thead>
         <tbody class="spectrum-Table-body">
           <tr class="spectrum-Table-row">
-            <td class="spectrum-Table-cell spectrum-Table-checkboxCell">
+            <td class="spectrum-Table-cell spectrum-Table-checkboxCell" role="gridcell">
               <label class="spectrum-Checkbox spectrum-Checkbox--sizeM spectrum-Table-checkbox">
                 <input type="checkbox" class="spectrum-Checkbox-input" title="Select">
                 <span class="spectrum-Checkbox-box">
@@ -472,14 +472,14 @@ examples:
                 </span>
               </label>
             </td>
-            <td class="spectrum-Table-cell">
+            <td class="spectrum-Table-cell" role="gridcell">
               Row Item Alpha
             </td>
-            <td class="spectrum-Table-cell">Row Item Alpha</td>
-            <td class="spectrum-Table-cell">Row Item Alpha</td>
+            <td class="spectrum-Table-cell" role="gridcell">Row Item Alpha</td>
+            <td class="spectrum-Table-cell" role="gridcell">Row Item Alpha</td>
           </tr>
-          <tr class="spectrum-Table-row is-selected">
-            <td class="spectrum-Table-cell spectrum-Table-checkboxCell">
+          <tr class="spectrum-Table-row is-selected" aria-selected="true">
+            <td class="spectrum-Table-cell spectrum-Table-checkboxCell" role="gridcell">
               <label class="spectrum-Checkbox spectrum-Checkbox--sizeM spectrum-Table-checkbox">
                 <input type="checkbox" class="spectrum-Checkbox-input" checked title="Select">
                 <span class="spectrum-Checkbox-box">
@@ -489,13 +489,13 @@ examples:
                 </span>
               </label>
             </td>
-            <td class="spectrum-Table-cell">
+            <td class="spectrum-Table-cell" role="gridcell">
               Row Item Bravo
             </td>
-            <td class="spectrum-Table-cell">Row Item Bravo</td>
-            <td class="spectrum-Table-cell">Row Item Bravo</td>
+            <td class="spectrum-Table-cell" role="gridcell">Row Item Bravo</td>
+            <td class="spectrum-Table-cell" role="gridcell">Row Item Bravo</td>
           </tr>
-          <tr class="spectrum-Table-row is-selected">
+          <tr class="spectrum-Table-row is-selected" aria-selected="true">
             <td class="spectrum-Table-cell spectrum-Table-checkboxCell">
               <label class="spectrum-Checkbox spectrum-Checkbox--sizeM spectrum-Table-checkbox">
                 <input type="checkbox" class="spectrum-Checkbox-input" checked title="Select">
@@ -506,14 +506,14 @@ examples:
                 </span>
               </label>
             </td>
-            <td class="spectrum-Table-cell">
+            <td class="spectrum-Table-cell" role="gridcell">
               Row Item Charlie
             </td>
-            <td class="spectrum-Table-cell">Row Item Charlie</td>
-            <td class="spectrum-Table-cell">Row Item Charlie</td>
+            <td class="spectrum-Table-cell" role="gridcell">Row Item Charlie</td>
+            <td class="spectrum-Table-cell" role="gridcell">Row Item Charlie</td>
           </tr>
           <tr class="spectrum-Table-row">
-            <td class="spectrum-Table-cell spectrum-Table-checkboxCell">
+            <td class="spectrum-Table-cell spectrum-Table-checkboxCell" role="gridcell">
               <label class="spectrum-Checkbox spectrum-Checkbox--sizeM spectrum-Table-checkbox">
                 <input type="checkbox" class="spectrum-Checkbox-input" title="Select">
                 <span class="spectrum-Checkbox-box">
@@ -523,14 +523,14 @@ examples:
                 </span>
               </label>
             </td>
-            <td class="spectrum-Table-cell">
+            <td class="spectrum-Table-cell" role="gridcell">
               Row Item Delta
             </td>
-            <td class="spectrum-Table-cell">Row Item Delta</td>
-            <td class="spectrum-Table-cell">Row Item Delta</td>
+            <td class="spectrum-Table-cell" role="gridcell">Row Item Delta</td>
+            <td class="spectrum-Table-cell" role="gridcell">Row Item Delta</td>
           </tr>
           <tr class="spectrum-Table-row">
-            <td class="spectrum-Table-cell spectrum-Table-checkboxCell">
+            <td class="spectrum-Table-cell spectrum-Table-checkboxCell" role="gridcell">
               <label class="spectrum-Checkbox spectrum-Checkbox--sizeM spectrum-Table-checkbox">
                 <input type="checkbox" class="spectrum-Checkbox-input" title="Select">
                 <span class="spectrum-Checkbox-box">
@@ -540,11 +540,11 @@ examples:
                 </span>
               </label>
             </td>
-            <td class="spectrum-Table-cell">
+            <td class="spectrum-Table-cell" role="gridcell">
               Row Item Echo
             </td>
-            <td class="spectrum-Table-cell">Row Item Echo</td>
-            <td class="spectrum-Table-cell">Row Item Echo</td>
+            <td class="spectrum-Table-cell" role="gridcell">Row Item Echo</td>
+            <td class="spectrum-Table-cell" role="gridcell">Row Item Echo</td>
           </tr>
         </tbody>
       </table>
@@ -601,7 +601,7 @@ examples:
   - id: table-quiet-multi-select
     name: Multi-select (quiet)
     markup: |
-      <table class="spectrum-Table spectrum-Table--sizeM spectrum-Table--emphasized spectrum-Table--quiet">
+      <table class="spectrum-Table spectrum-Table--sizeM spectrum-Table--emphasized spectrum-Table--quiet" role="grid" aria-multiselectable="true">
         <thead class="spectrum-Table-head">
           <tr>
             <th class="spectrum-Table-headCell spectrum-Table-checkboxCell">
@@ -631,7 +631,7 @@ examples:
         </thead>
         <tbody class="spectrum-Table-body">
           <tr class="spectrum-Table-row">
-            <td class="spectrum-Table-cell spectrum-Table-checkboxCell">
+            <td class="spectrum-Table-cell spectrum-Table-checkboxCell" role="gridcell">
               <label class="spectrum-Checkbox spectrum-Checkbox--sizeM spectrum-Checkbox--emphasized spectrum-Table-checkbox">
                 <input type="checkbox" class="spectrum-Checkbox-input" title="Select">
                 <span class="spectrum-Checkbox-box">
@@ -641,14 +641,14 @@ examples:
                 </span>
               </label>
             </td>
-            <td class="spectrum-Table-cell">
+            <td class="spectrum-Table-cell" role="gridcell">
               Row Item Alpha
             </td>
-            <td class="spectrum-Table-cell">Row Item Alpha</td>
-            <td class="spectrum-Table-cell">Row Item Alpha</td>
+            <td class="spectrum-Table-cell" role="gridcell">Row Item Alpha</td>
+            <td class="spectrum-Table-cell" role="gridcell">Row Item Alpha</td>
           </tr>
-          <tr class="spectrum-Table-row is-selected">
-            <td class="spectrum-Table-cell spectrum-Table-checkboxCell">
+          <tr class="spectrum-Table-row is-selected" aria-selected="true">
+            <td class="spectrum-Table-cell spectrum-Table-checkboxCell" role="gridcell">
               <label class="spectrum-Checkbox spectrum-Checkbox--sizeM spectrum-Checkbox--emphasized spectrum-Table-checkbox">
                 <input type="checkbox" class="spectrum-Checkbox-input" checked title="Select">
                 <span class="spectrum-Checkbox-box">
@@ -658,14 +658,14 @@ examples:
                 </span>
               </label>
             </td>
-            <td class="spectrum-Table-cell">
+            <td class="spectrum-Table-cell" role="gridcell">
               Row Item Bravo
             </td>
-            <td class="spectrum-Table-cell">Row Item Bravo</td>
-            <td class="spectrum-Table-cell">Row Item Bravo</td>
+            <td class="spectrum-Table-cell" role="gridcell">Row Item Bravo</td>
+            <td class="spectrum-Table-cell" role="gridcell">Row Item Bravo</td>
           </tr>
-          <tr class="spectrum-Table-row is-selected">
-            <td class="spectrum-Table-cell spectrum-Table-checkboxCell">
+          <tr class="spectrum-Table-row is-selected" aria-selected="true">
+            <td class="spectrum-Table-cell spectrum-Table-checkboxCell" role="gridcell">
               <label class="spectrum-Checkbox spectrum-Checkbox--sizeM spectrum-Checkbox--emphasized spectrum-Table-checkbox">
                 <input type="checkbox" class="spectrum-Checkbox-input" checked title="Select">
                 <span class="spectrum-Checkbox-box">
@@ -675,11 +675,11 @@ examples:
                 </span>
               </label>
             </td>
-            <td class="spectrum-Table-cell">
+            <td class="spectrum-Table-cell" role="gridcell">
               Row Item Charlie
             </td>
-            <td class="spectrum-Table-cell">Row Item Charlie</td>
-            <td class="spectrum-Table-cell">Row Item Charlie</td>
+            <td class="spectrum-Table-cell" role="gridcell">Row Item Charlie</td>
+            <td class="spectrum-Table-cell" role="gridcell">Row Item Charlie</td>
           </tr>
           <tr class="spectrum-Table-row">
             <td class="spectrum-Table-cell spectrum-Table-checkboxCell">
@@ -692,14 +692,14 @@ examples:
                 </span>
               </label>
             </td>
-            <td class="spectrum-Table-cell">
+            <td class="spectrum-Table-cell" role="gridcell">
               Row Item Delta
             </td>
-            <td class="spectrum-Table-cell">Row Item Delta</td>
-            <td class="spectrum-Table-cell">Row Item Delta</td>
+            <td class="spectrum-Table-cell" role="gridcell">Row Item Delta</td>
+            <td class="spectrum-Table-cell" role="gridcell">Row Item Delta</td>
           </tr>
           <tr class="spectrum-Table-row">
-            <td class="spectrum-Table-cell spectrum-Table-checkboxCell">
+            <td class="spectrum-Table-cell spectrum-Table-checkboxCell" role="gridcell">
               <label class="spectrum-Checkbox spectrum-Checkbox--sizeM spectrum-Checkbox--emphasized spectrum-Table-checkbox">
                 <input type="checkbox" class="spectrum-Checkbox-input" title="Select">
                 <span class="spectrum-Checkbox-box">
@@ -709,11 +709,11 @@ examples:
                 </span>
               </label>
             </td>
-            <td class="spectrum-Table-cell">
+            <td class="spectrum-Table-cell" role="gridcell">
               Row Item Echo
             </td>
-            <td class="spectrum-Table-cell">Row Item Echo</td>
-            <td class="spectrum-Table-cell">Row Item Echo</td>
+            <td class="spectrum-Table-cell" role="gridcell">Row Item Echo</td>
+            <td class="spectrum-Table-cell" role="gridcell">Row Item Echo</td>
           </tr>
         </tbody>
       </table>

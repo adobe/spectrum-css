@@ -74,12 +74,13 @@ export const TableRowItem = ({
 			...customClasses.reduce((a, c) => ({ ...a, [c]: true }), {}),
 		})}
 		role=${ifDefined(useDivs ? "row" : undefined)}
+		aria-selected=${ifDefined(showCheckbox ? "true" : undefined)}
 		data-tier=${ifDefined(tier)}
 		?hidden=${isHidden}
 	>
 		${when(showCheckbox, () => html`
 			<${cellTag}
-				role=${ifDefined(useDivs ? "cell" : undefined)}
+				role="gridcell"
 				class="spectrum-Table-cell spectrum-Table-checkboxCell"
 			>
 				${Checkbox({
@@ -94,7 +95,7 @@ export const TableRowItem = ({
 		${isCollapsible
 				? html`
 					<${cellTag}
-						role=${ifDefined(useDivs ? "cell" : undefined)}
+						role=${ifDefined(showCheckbox ? "gridcell" : useDivs ? "cell" : undefined)}
 						class=${classMap({
 							[`${rootClass}-cell`]: true,
 							[`${rootClass}-cell--collapsible`]: true,
@@ -125,7 +126,7 @@ export const TableRowItem = ({
 					</${cellTag}>`
 				: html`
 					<${cellTag}
-						role=${ifDefined(useDivs ? "cell" : undefined)}
+						role=${ifDefined(showCheckbox ? "gridcell" : useDivs ? "cell" : undefined)}
 						class=${classMap({
 							[`${rootClass}-cell`]: true,
 							[`${rootClass}-cell--thumbnail`]: useThumbnail,
@@ -136,7 +137,7 @@ export const TableRowItem = ({
 
 		${when(!isSectionHeader, () => html`
 			<${cellTag}
-				role=${ifDefined(useDivs ? "cell" : undefined)}
+				role=${ifDefined(showCheckbox ? "gridcell" : useDivs ? "cell" : undefined)}
 				class=${classMap({
 					[`${rootClass}-cell`]: true,
 					[`${rootClass}-cell--thumbnail`]: useThumbnail,
@@ -144,7 +145,7 @@ export const TableRowItem = ({
 			>${getCellContent(1)}</${cellTag}>
 
 			<${cellTag}
-				role=${ifDefined(useDivs ? "cell" : undefined)}
+				role=${ifDefined(showCheckbox ? "gridcell" : useDivs ? "cell" : undefined)}
 				class=${classMap({
 					[`${rootClass}-cell`]: true,
 				})}
@@ -198,13 +199,14 @@ export const Template = ({
 
 	const tableHtml = html`
 	<${tableTag}
-		role=${ifDefined(useDivs ? "table" : undefined)}
 		class=${classMap({
 			[rootClass]: !useScroller,
 			[`${rootClass}-main`]: useScroller,
 			...rootClassMapVariants
 		})}
 		id=${ifDefined(id)}
+		role=${ifDefined(useCheckboxCell ? "grid" : useDivs ? "table" : undefined)}
+		aria-multiselectable=${ifDefined(useCheckboxCell ? "true" : undefined)}
 		style="max-width: 800px;"
 	>
 		<${theadTag}
