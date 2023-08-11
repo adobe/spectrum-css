@@ -100,7 +100,6 @@ export const TableRowItem = ({
 							[`${rootClass}-cell--collapsible`]: true,
 							[`${rootClass}-cell--thumbnail`]: useThumbnail,
 						})}
-						tabindex=${ifDefined(!showCheckbox ? "0" : undefined)}
 					>
 						<div class="${rootClass}-collapseInner">
 							${when(!isLastTier, () =>
@@ -131,7 +130,6 @@ export const TableRowItem = ({
 							[`${rootClass}-cell`]: true,
 							[`${rootClass}-cell--thumbnail`]: useThumbnail,
 						})}
-						tabindex=${ifDefined(!showCheckbox ? "0" : undefined)}
 						colspan=${ifDefined(isSectionHeader ? "3" : undefined)}
 					>${getCellContent(0)}</${cellTag}>`
 		}
@@ -143,14 +141,14 @@ export const TableRowItem = ({
 					[`${rootClass}-cell`]: true,
 					[`${rootClass}-cell--thumbnail`]: useThumbnail,
 				})}
-				tabindex=${ifDefined(!showCheckbox ? "0" : undefined)}>${getCellContent(1)}</${cellTag}>
+			>${getCellContent(1)}</${cellTag}>
 
 			<${cellTag}
-					role=${ifDefined(useDivs ? "cell" : undefined)}
-					class=${classMap({
-						[`${rootClass}-cell`]: true,
-					})}
-					tabindex=${ifDefined(!showCheckbox ? "0" : undefined)}>${getCellContent(2)}</${cellTag}>`
+				role=${ifDefined(useDivs ? "cell" : undefined)}
+				class=${classMap({
+					[`${rootClass}-cell`]: true,
+				})}
+			>${getCellContent(2)}</${cellTag}>`
 		)}
 	</${rowTag}>
   `;
