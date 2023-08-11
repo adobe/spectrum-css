@@ -69,7 +69,7 @@ governing permissions and limitations under the License.
   outline: none;
 
   &.is-focused,
-  &:focus-ring {
+  &:focus-visible {
     .spectrum-AssetCard-assetContainer {
       &:before {
         opacity: 1;
@@ -96,7 +96,7 @@ governing permissions and limitations under the License.
 
   transition: border var(--spectrum-global-animation-duration-100) ease-in-out;
 
-  /* focus-ring */
+  /* focus indicator */
   &:before {
     content: '';
 
