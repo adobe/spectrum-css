@@ -1,7 +1,6 @@
 import { html } from "lit";
 import { classMap } from "lit/directives/class-map.js";
 import { Template as FieldLabel } from "@spectrum-css/fieldlabel/stories/template.js";
-import { ifDefined } from "lit/directives/if-defined.js";
 import { styleMap } from "lit/directives/style-map.js";
 
 import "../index.css";
@@ -16,9 +15,6 @@ export const Template = ({
 	indeterminate,
 	label,
 	value,
-	isMeter,
-	meterFill,
-	meterSize,
 	styles = {
 		width: customWidth ? customWidth : "",
 	},
@@ -43,24 +39,16 @@ export const Template = ({
 		console.warn(e);
 	}
 
-	const fillColor =
-		meterFill === "negative" ? "is-negative" :
-		meterFill === "positive" ? "is-positive" :
-		meterFill === "notice" ? "is-notice" : "default";
-
 	return html`
 		<div style="${staticWhite ? styleMap(staticWhiteStyles) : ""}">
 			<div
 				class=${classMap({
 					[rootClass]: true,
 					[`${rootClass}--size${size?.toUpperCase()}`]:
-						typeof size !== "undefined" && !isMeter,
+						typeof size !== "undefined",
 					[`${rootClass}--${labelPosition}Label`]:
-						typeof labelPosition !== "undefined" && !isMeter,
+						typeof labelPosition !== "undefined",
 					[`${rootClass}--${staticWhite}`]: typeof staticWhite !== "undefined",
-					["spectrum-Meter"]: isMeter === true,
-					[`spectrum-Meter--size${meterSize?.toUpperCase()}`]: meterSize,
-					[`${fillColor}`]: fillColor !== "default",
 					[`${rootClass}--${indeterminate}`]:
 						typeof indeterminate !== "undefined",
 					...customClasses.reduce((a, c) => ({ ...a, [c]: true }), {}),

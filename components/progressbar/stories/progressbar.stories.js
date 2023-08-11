@@ -19,7 +19,6 @@ export default {
 			},
 			options: ["s", "m", "l", "xl"],
 			control: "select",
-			if: { arg: "isMeter", truthy: false },
 		},
 		labelPosition: {
 			name: "Label Position",
@@ -50,43 +49,11 @@ export default {
 			control: { type: "range", min: 0, max: 100,},
 			if: { arg: "indeterminate", truthy: false },
 		},
-		isMeter: {
-			name: "Meter component",
-			type: { name: "boolean" },
-			table: {
-				type: { summary: "boolean" },
-				category: "Component",
-			},
-			control: "boolean",
-		},
-		meterFill: {
-			name: "Meter fill color",
-			type: { name: "string" },
-			table: {
-				type: { summary: "string" },
-				category: "Component",
-			},
-			options: ["notice", "positive", "negative", "default"],
-			control: "select",
-			if: { arg: "isMeter", truthy: true },
-		},
-		meterSize: {
-			name: "Meter size",
-			type: { name: "string" },
-			table: {
-				type: { summary: "string" },
-				category: "Component",
-			},
-			options: ["s", "l"],
-			control: "select",
-			if: { arg: "isMeter", truthy: true },
-		},
 	},
 	args: {
 		rootClass: "spectrum-ProgressBar",
 		size: "m",
 		labelPosition: "top",
-		isMeter: false,
 		label: "Loading",
 		value: 50,
 	},
@@ -120,12 +87,3 @@ StaticWhite.args = {
 	backgroundColor: "rgb(15, 121, 125)",
 	staticWhite: "staticWhite",
 };
-
-export const Meter = Template.bind({});
-Meter.args = {
-	isMeter: true,
-	label: "Storage Space",
-	meterFill: "positive",
-	meterSize: "s",
-};
-
