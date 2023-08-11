@@ -120,11 +120,11 @@ governing permissions and limitations under the License.
 @media (forced-colors: active) {
   .spectrum-ActionButton {
     &:after {
-      /* make sure focus-ring renders */
+      /* make sure focus indicator renders */
       forced-color-adjust: none;
     }
 
-    /* force a more visible focus-ring color */
+    /* force a more visible focus indicator color */
     --highcontrast-actionbutton-focus-indicator-color: ButtonText;
 
     &.is-selected {
@@ -182,7 +182,7 @@ governing permissions and limitations under the License.
     color: var(--highcontrast-actionbutton-content-color-hover, var(--mod-actionbutton-content-color-hover, var(--spectrum-actionbutton-content-color-hover)));
   }
 
-  &:focus-ring {
+  &:focus-visible {
     background-color: var(--highcontrast-actionbutton-background-color-focus, var(--mod-actionbutton-background-color-focus, var(--spectrum-actionbutton-background-color-focus)));
     border-color: var(--highcontrast-actionbutton-border-color-focus, var(--mod-actionbutton-border-color-focus, var(--spectrum-actionbutton-border-color-focus)));
     color: var(--highcontrast-actionbutton-content-color-focus, var(--mod-actionbutton-content-color-focus, var(--spectrum-actionbutton-content-color-focus)));
@@ -273,9 +273,10 @@ a.spectrum-ActionButton {
     content: '';
   }
 
-  &:focus-ring {
+  &:focus-visible {
     /* kill the default ring */
     box-shadow: none;
+    outline: none;
 
     &:after {
       box-shadow: 0 0 0 var(--mod-actionbutton-focus-indicator-thickness, var(--spectrum-actionbutton-focus-indicator-thickness)) var(--highcontrast-actionbutton-focus-indicator-color, var(--mod-actionbutton-focus-indicator-color, var(--spectrum-actionbutton-focus-indicator-color)));
