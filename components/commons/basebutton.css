@@ -102,7 +102,7 @@ governing permissions and limitations under the License.
                 margin var(--spectrum-global-animation-duration-100) ease-out;
   }
 
-  &:focus-ring {
+  &:focus-visible {
     &:after {
       margin: calc(var(--spectrum-alias-focus-ring-gap) * -2);
     }

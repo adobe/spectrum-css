@@ -97,7 +97,7 @@ governing permissions and limitations under the License.
                 margin var(--mod-animation-duration-100, var(--spectrum-animation-duration-100)) ease-out;
   }
 
-  &:focus-ring {
+  &:focus-visible {
     &:after {
       margin: calc(var(--mod-focus-indicator-gap, var(--spectrum-focus-indicator-gap)) * -2);
     }
