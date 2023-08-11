@@ -103,20 +103,9 @@ governing permissions and limitations under the License.
     --highcontrast-closebutton-background-color-default: ButtonFace;
     --highcontrast-closebutton-focus-indicator-color: ButtonText;
 
-    &:focus-ring {
+    &:focus-visible {
       &:after {
         forced-color-adjust: none;
-        box-shadow:
-        0 0 0 var(--mod-closebutton-focus-indicator-thickness, var(--spectrum-closebutton-focus-indicator-thickness))
-        var(--highcontrast-closebutton-focus-indicator-color, var(--mod-closebutton-focus-indicator-color, var(--spectrum-closebutton-focus-indicator-color)));
-        border-radius: 100%;
-        content: "";
-        display: block;
-        position: absolute;
-        left: 0;
-        right: 0;
-        bottom: 0;
-        top: 0;
         margin: var(--mod-closebutton-focus-indicator-gap, var(--spectrum-closebutton-focus-indicator-gap));
         transition:
         opacity var(--mod-closebutton-animation-duration, var(--spectrum-closebutton-animation-duration)) ease-out,margin var(--mod-closebutton-animation-duraction, var(--spectrum-closebutton-animation-duration)) ease-out;
@@ -180,8 +169,9 @@ a.spectrum-CloseButton {
     transition: box-shadow var(--mod-closebutton-animation-duration, var(--spectrum-closebutton-animation-duration)) ease-in-out;
   }
 
-  &:focus-ring {
+  &:focus-visible {
     box-shadow: none;
+    outline: none;
 
     &:after {
       box-shadow:
