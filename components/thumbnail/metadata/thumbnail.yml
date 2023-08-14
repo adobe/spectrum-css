@@ -23,7 +23,7 @@ examples:
   - id: thumbnail-focus
     name: Thumbnail (focused)
     markup: |
-      <div class="spectrum-Thumbnail spectrum-Thumbnail--size700 d is-focused">
+      <div class="spectrum-Thumbnail spectrum-Thumbnail--size700 is-focused">
         <div class="spectrum-Thumbnail-image-wrapper spectrum-OpacityCheckerboard">
           <img class="spectrum-Thumbnail-image" src="img/example-ava.jpg" alt="Woman crouching">
         </div>
