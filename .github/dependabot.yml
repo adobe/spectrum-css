@@ -35,6 +35,12 @@ updates:
         patterns:
           - storybook
           - "@storybook/*"
+          - "@types/storybook*"
+          # manually added these because they weren't being included for some reason 🤷‍♀️
+          - "@storybook/core-events"
+          - "@storybook/components"
+          - "@storybook/blocks"
+          - "@storybook/preview-api"
       commitlint-ecosystem:
         patterns:
           - "@commitlint/*"
