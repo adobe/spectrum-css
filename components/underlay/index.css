@@ -17,16 +17,33 @@ governing permissions and limitations under the License.
   --spectrum-dialog-confirm-background-entry-animation-delay: 0ms;
   --spectrum-dialog-confirm-background-exit-animation-ease: cubic-bezier(0.5, 0, 1, 1); /* wrong in DNA */
   --spectrum-dialog-confirm-background-entry-animation-ease: cubic-bezier(0, 0, 0.40, 1); /* wrong in DNA */
+  --spectrum-dialog-background-exit-animation-duration: 130ms;
+  --spectrum-dialog-confirm-background-entry-animation-duration: 300ms;
+  --spectrum-dialog-confirm-background-exit-animation-duration: 190ms;
+  --spectrum-dialog-confirm-background-exit-animation-delay: 160ms;
+
+  .spectrum--light &,
+	.spectrum--lightest & {
+    --spectrum-dialog-background-color: rgba(var(--spectrum-black-rgb), var(--spectrum-transparent-black-400-opacity));
+	}
+
+  .spectrum--dark & {
+    --spectrum-dialog-background-color: rgba(var(--spectrum-black-rgb), 0.5);
+  }
+
+  .spectrum--darkest & {
+    --spectrum-dialog-background-color: rgba(var(--spectrum-black-rgb), 0.6);
+  }
 }
 
 .spectrum-Underlay {
   @inherit: %spectrum-overlay;
 
   position: fixed;
-  top: 0;
-  right: 0;
-  bottom: 0;
-  left: 0;
+  inset-block: 0;
+  inset-inline: 0;
+
+  background-color: var(--mod-dialog-background-color, var(--spectrum-dialog-background-color));
 
   /* Float above things by default */
   z-index: 1;
@@ -34,13 +51,20 @@ governing permissions and limitations under the License.
   overflow: hidden;
 
   /* Exit animations */
-  transition: opacity var(--spectrum-dialog-confirm-background-exit-animation-duration) var(--spectrum-dialog-confirm-background-exit-animation-ease) var(--spectrum-dialog-confirm-background-exit-animation-delay),
-              visibility 0ms linear calc(var(--spectrum-dialog-confirm-background-exit-animation-delay) + var(--spectrum-dialog-confirm-background-exit-animation-duration));
+  transition: opacity var(--mod-dialog-confirm-background-exit-animation-duration, var(--spectrum-dialog-confirm-background-exit-animation-duration))
+                      var(--mod-dialog-confirm-background-exit-animation-ease, var(--spectrum-dialog-confirm-background-exit-animation-ease))
+                      var(--mod-dialog-confirm-background-exit-animation-delay, var(--spectrum-dialog-confirm-background-exit-animation-delay)),
+              visibility 0ms
+              linear calc(
+                      var(--mod-dialog-confirm-background-exit-animation-delay, var(--spectrum-dialog-confirm-background-exit-animation-delay)) +
+                      var(--mod-dialog-confirm-background-exit-animation-duration, var(--spectrum-dialog-confirm-background-exit-animation-duration)));
 }
 
 .spectrum-Underlay.is-open {
   @inherit: %spectrum-overlay--open;
 
   /* Entry animations */
-  transition: opacity var(--spectrum-dialog-confirm-background-entry-animation-duration) var(--spectrum-dialog-confirm-background-entry-animation-ease) var(--spectrum-dialog-confirm-background-entry-animation-delay);
+  transition: opacity var(--mod-dialog-confirm-background-entry-animation-duration, var(--spectrum-dialog-confirm-background-entry-animation-duration))
+                      var(--mod-dialog-confirm-background-entry-animation-ease, var(--spectrum-dialog-confirm-background-entry-animation-ease))
+                      var(--mod-dialog-confirm-background-entry-animation-delay, var(--spectrum-dialog-confirm-background-entry-animation-delay));
 }
