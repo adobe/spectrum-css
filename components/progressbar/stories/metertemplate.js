@@ -35,14 +35,14 @@ export const Template = ({
 		>
 			${FieldLabel({
 				...globals,
-				size: `${size}`,
-				label: `${label}`,
+				size,
+				label,
 				alignment: "",
 				customClasses: [`${rootClass}-label`],
 			})}
 			${FieldLabel({
 				...globals,
-				size: `${size}`,
+				size,
 				label: `${value}%`,
 				alignment: "",
 				customClasses: [`${rootClass}-percentage`],

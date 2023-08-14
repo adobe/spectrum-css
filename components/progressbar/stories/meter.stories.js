@@ -7,16 +7,6 @@ export default {
 		"The meter component is a visual representations of a quantity or an achievement. Their progress is determined by user actions, rather than system actions.",
 	component: "ProgressBar",
 	argTypes: {
-		labelPosition: {
-			name: "Label Position",
-			type: { name: "string" },
-			table: {
-				type: { summary: "string" },
-				category: "Component",
-			},
-			options: ["top", "side"],
-			control: "select",
-		},
 		label: {
 			name: "Label",
 			type: { name: "string" },
