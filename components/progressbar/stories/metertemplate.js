@@ -13,10 +13,6 @@ export const Template = ({
 	size = "s",
 	...globals
 }) => {
-	const fillColor =
-		meterFill === "negative" ? "is-negative" :
-		meterFill === "positive" ? "is-positive" :
-		meterFill === "notice" ? "is-notice" : "default";
 
 	return html`
 		<div
@@ -24,7 +20,7 @@ export const Template = ({
 				[rootClass]: true,
 				["spectrum-Meter"]: true,
 				[`spectrum-Meter--size${size?.toUpperCase()}`]: size,
-				[`${fillColor}`]: fillColor !== "default",
+				[`is-${meterFill}`]: meterFill !== "default",
 				...customClasses.reduce((a, c) => ({ ...a, [c]: true }), {}),
 			})}
 			value="${value}%"
