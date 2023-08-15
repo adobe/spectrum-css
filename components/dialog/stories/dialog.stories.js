@@ -55,7 +55,7 @@ export default {
 	},
 	parameters: {
 		actions: {
-			handles: [],
+			handles: ["click .spectrum-Dialog button", "click .spectrum-CSSExample-overlayShowButton button"],
 		},
 		status: {
 			type: process.env.MIGRATED_PACKAGES.includes("dialog")
@@ -69,6 +69,7 @@ export const Default = Template.bind({});
 Default.args = {
 	heading: "Disclaimer",
 	showModal: true,
+	isOpen: true,
 	content: [
 		html`<p class="spectrum-Body spectrum-Body--sizeM">
 			Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
