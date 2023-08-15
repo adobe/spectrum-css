@@ -47,6 +47,9 @@ sections:
 
       ### Include markup for hold icon before workflow icon
       Because of the way padding is calculated, the hold icon must be placed before the workflow icon.
+
+      ### Remove focus-ring class
+      We've migrated away from the focus-ring class in favor of the native `:focus-visible` pseudo-class due to changes in browser support.
 examples:
   - id: actionbutton-sizing
     name: Sizing
