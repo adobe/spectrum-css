@@ -35,6 +35,11 @@ governing permissions and limitations under the License.
 
   .spectrum-ActionGroup-item {
     flex-shrink: 0;
+    
+    /* Focus indicator should appear above hovered and selected borders */
+    &:focus-visible {
+      z-index: 3;
+    }
   }
 
   &:not(.spectrum-ActionGroup--vertical)&:not(.spectrum-ActionGroup--compact) {
@@ -52,13 +57,6 @@ governing permissions and limitations under the License.
 
 .spectrum-ActionGroup--compact {
   gap: var(--mod-actiongroup-gap-size-compact, var(--spectrum-actiongroup-gap-size-compact));
-
-  .spectrum-ActionGroup-item {
-    /* Focus indicator should appear above hovered and selected borders */
-    &:focus-visible {
-      z-index: 3;
-    }
-  }
 
   &:not(.spectrum-ActionGroup--quiet) {
     flex-wrap: nowrap;
