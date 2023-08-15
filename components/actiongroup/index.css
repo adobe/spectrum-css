@@ -35,6 +35,11 @@ governing permissions and limitations under the License.
 
   .spectrum-ActionGroup-item {
     flex-shrink: 0;
+    
+    /* Focus indicator should appear above hovered and selected borders */
+    &:focus-visible {
+      z-index: 3;
+    }
   }
 
   &:not(.spectrum-ActionGroup--vertical)&:not(.spectrum-ActionGroup--compact) {
@@ -96,11 +101,10 @@ governing permissions and limitations under the License.
         z-index: 2;
       }
 
-      /* Appear above hovered and selected borders */
-      &:focus-ring {
+      /* Focus indicator should appear above hovered and selected borders */
+      &:focus-visible {
         z-index: 3;
       }
-
 
       .spectrum-ActionButton-label {
         inline-size: auto;
