@@ -1,6 +1,6 @@
 {
   "name": "@spectrum-css/radio",
-  "version": "7.0.46",
+  "version": "8.0.0-beta.0",
   "description": "The Spectrum CSS radio component",
   "license": "Apache-2.0",
   "author": "Adobe",
@@ -19,7 +19,7 @@
   },
   "peerDependencies": {
     "@spectrum-css/icon": ">=3",
-    "@spectrum-css/tokens": ">=10.0.0"
+    "@spectrum-css/tokens": ">=10"
   },
   "devDependencies": {
     "@spectrum-css/component-builder-simple": "^2.0.16",

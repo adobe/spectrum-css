@@ -58,7 +58,6 @@ function getProcessors(
 		require("legacy-postcss-dropunusedvars"),
 		require("legacy-postcss-dropdupedvars"),
 		require("postcss-droproot"),
-		require("postcss-focus-ring"),
 		secondNotNested ? require("./plugins/postcss-notnested")() : null, // Second one to catch all stray &
 		require("postcss-discard-empty"),
 		require("postcss-discard-comments")({ removeAllButFirst: true }),
