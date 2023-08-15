@@ -69,7 +69,6 @@ export const Default = Template.bind({});
 Default.args = {
 	heading: "Disclaimer",
 	showModal: true,
-	isOpen: true,
 	content: [
 		html`<p class="spectrum-Body spectrum-Body--sizeM">
 			Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod

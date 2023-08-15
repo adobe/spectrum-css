@@ -16,7 +16,7 @@ import "../skin.css";
 export const Template = ({
 	rootClass = "spectrum-Dialog",
 	isDismissable = true,
-	isOpen,
+	isOpen = true,
 	showModal = false,
 	heading,
 	content = [],
@@ -66,27 +66,27 @@ export const Template = ({
 
 	if (showModal) {
 		return html`
-    ${Underlay({
-      ...globals,
-      isOpen,
-    })}
-    ${Button({
-      ...globals,
-      size: "m",
-      variant: "secondary",
-      label: "Click to open Dialog",
-      treatment: "outline",
-      customClasses: ['spectrum-CSSExample-overlayShowButton'],
-      onclick: () => {
-        updateArgs({ isOpen: !isOpen });
-      },
-    })}
-    ${Modal({
-      ...globals,
-      isOpen,
-      content: Dialog,
-    })}
-      `
+			${Underlay({
+				...globals,
+				isOpen,
+			})}
+			${Button({
+				...globals,
+				size: "m",
+				variant: "secondary",
+				label: "Click to open Dialog",
+				treatment: "outline",
+				customClasses: ['spectrum-CSSExample-overlayShowButton'],
+				onclick: () => {
+					updateArgs({ isOpen: !isOpen });
+				},
+			})}
+			${Modal({
+				...globals,
+				isOpen,
+				content: Dialog,
+			})}
+		`
 	} else {
 		return Dialog;
 	}
