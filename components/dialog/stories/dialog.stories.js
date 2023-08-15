@@ -55,7 +55,7 @@ export default {
 	},
 	parameters: {
 		actions: {
-			handles: ["click .spectrum-Dialog button", "click .spectrum-CSSExample-overlayShowButton button"],
+			handles: ["click .spectrum-Dialog button"],
 		},
 		status: {
 			type: process.env.MIGRATED_PACKAGES.includes("dialog")
