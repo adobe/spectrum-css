@@ -474,6 +474,10 @@ governing permissions and limitations under the License.
   }
 }
 
+.spectrum-Table-columnTitle {
+  display: inline-block;
+}
+
 .spectrum-Table-cell--alignCenter {
   text-align: center;
 }

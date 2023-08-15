@@ -240,9 +240,8 @@ export const Template = ({
 						iconName: "ArrowDown100",
 						size,
 						customClasses: [`${rootClass}-sortedIcon`],
-					})}
-					<span>Column title</span>
-					${Icon({
+					})}<span class="${rootClass}-columnTitle">Column title</span>${
+					Icon({
 						iconName: "ChevronDown100",
 						size,
 						customClasses: [`${rootClass}-menuIcon`],
@@ -258,8 +257,7 @@ export const Template = ({
 						iconName: "ArrowDown100",
 						size,
 						customClasses: [`${rootClass}-sortedIcon`],
-					})}
-					<span>Column title</span>
+					})}<span class="${rootClass}-columnTitle">Column title</span>
 				</${thTag}>
 				<${thTag}
 					class="${rootClass}-headCell"
