@@ -101,6 +101,12 @@ governing permissions and limitations under the License.
   --spectrum-table-thumbnail-block-spacing: var(--spectrum-table-thumbnail-to-top-minimum-medium-regular);
   --spectrum-table-thumbnail-size: var(--spectrum-thumbnail-size-300);
 
+  /* Local custom properties used to assign row color to child cells, to help get around Firefox bug 921341 
+     and for modifying emphasized/non-emphasized background colors from the root element. */
+  --spectrum-table-cell-background-color: var(--highcontrast-table-row-background-color, var(--mod-table-row-background-color, var(--spectrum-table-row-background-color)));
+  --spectrum-table-selected-cell-background-color: var(--highcontrast-table-selected-row-background-color, var(--mod-table-selected-row-background-color-non-emphasized, var(--spectrum-table-selected-row-background-color-non-emphasized)));
+  --spectrum-table-selected-cell-background-color-focus: var(--highcontrast-table-selected-row-background-color-focus, var(--mod-table-selected-row-background-color-non-emphasized-focus, var(--spectrum-table-selected-row-background-color-non-emphasized-focus)));
+
   /* Passthrough for nested component(s) */
   --mod-thumbnail-size: var(--mod-table-thumbnail-size, var(--spectrum-table-thumbnail-size));
 }
@@ -315,6 +321,11 @@ governing permissions and limitations under the License.
   }
 }
 
+.spectrum-Table--emphasized {
+  --spectrum-table-selected-cell-background-color: var(--highcontrast-table-selected-row-background-color, var(--mod-table-selected-row-background-color, var(--spectrum-table-selected-row-background-color)));
+  --spectrum-table-selected-cell-background-color-focus: var(--highcontrast-table-selected-row-background-color-focus, var(--mod-table-selected-row-background-color-focus, var(--spectrum-table-selected-row-background-color-focus)));
+}
+
 .spectrum-Table--quiet {
   --mod-table-border-radius: var(--mod-table-border-radius--quiet, 0px);
   --mod-table-outer-border-inline-width: var(--mod-table-outer-border-inline-width--quiet, 0px);
@@ -487,10 +498,6 @@ governing permissions and limitations under the License.
 }
 
 .spectrum-Table-body {
-  /* Local custom property used to assign row color to child cells, to help get around Firefox bug 921341 
-     causing backgrounds to show outside of rounded corners when background-color was assigned to rows. */
-  --spectrum-table-cell-background-color: var(--highcontrast-table-row-background-color, var(--mod-table-row-background-color, var(--spectrum-table-row-background-color)));
-
   position: relative;
   border: none;
   border-radius: var(--mod-table-border-radius, var(--spectrum-table-border-radius));
@@ -652,25 +659,14 @@ governing permissions and limitations under the License.
   &.is-selected {
     --highcontrast-table-row-text-color: var(--highcontrast-table-selected-row-text-color);
     --highcontrast-table-icon-color: var(--highcontrast-table-selected-row-text-color);
-    --spectrum-table-cell-background-color: var(--highcontrast-table-selected-row-background-color, var(--mod-table-selected-row-background-color-non-emphasized, var(--spectrum-table-selected-row-background-color-non-emphasized)));
-
+    --spectrum-table-cell-background-color: var(--spectrum-table-selected-cell-background-color);
+  
     &:hover,
     &:focus-visible,
     &.is-focused {
       --highcontrast-table-row-text-color: var(--highcontrast-table-selected-row-text-color-focus);
       --highcontrast-table-icon-color: var(--highcontrast-table-selected-row-text-color-focus);
-      --spectrum-table-cell-background-color: var(--highcontrast-table-selected-row-background-color-focus, var(--mod-table-selected-row-background-color-non-emphasized-focus, var(--spectrum-table-selected-row-background-color-non-emphasized-focus)));
-    }
-
-    .spectrum-Table.spectrum-Table--emphasized &,
-    &.spectrum-Table-row--emphasized {
-      --spectrum-table-cell-background-color: var(--highcontrast-table-selected-row-background-color, var(--mod-table-selected-row-background-color, var(--spectrum-table-selected-row-background-color)));
-
-      &:hover,
-      &:focus-visible,
-      &.is-focused {
-        --spectrum-table-cell-background-color: var(--highcontrast-table-selected-row-background-color-focus, var(--mod-table-selected-row-background-color-focus, var(--spectrum-table-selected-row-background-color-focus)));
-      }
+      --spectrum-table-cell-background-color: var(--spectrum-table-selected-cell-background-color-focus);
     }
   }
 
