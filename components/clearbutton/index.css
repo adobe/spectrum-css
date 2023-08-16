@@ -84,7 +84,7 @@ governing permissions and limitations under the License.
     color: var(--spectrum-clearbutton-fill-uiicon-color-down);
   }
 
-  &:focus-ring {
+  &:focus-visible {
     color: var(--spectrum-clearbutton-fill-uiicon-color-key-focus);
   }
 
@@ -101,7 +101,7 @@ governing permissions and limitations under the License.
     background-color: var(--spectrum-clearbutton-fill-background-color-down);
   }
 
-  &:focus-ring .spectrum-ClearButton-fill {
+  &:focus-visible .spectrum-ClearButton-fill {
     background-color: var(--spectrum-clearbutton-fill-background-color-key-focus);
   }
 
@@ -124,7 +124,7 @@ governing permissions and limitations under the License.
     color: var(--spectrum-alias-icon-color-overbackground);
   }
 
-  &:focus-ring {
+  &:focus-visible {
     color: var(--spectrum-alias-icon-color-overbackground);
   }
 
@@ -145,11 +145,12 @@ governing permissions and limitations under the License.
     color: var(--spectrum-button-m-primary-outline-white-texticon-text-color-hover);
   }
 
-  &:focus-ring {
+  &:focus-visible {
     background-color: var(--spectrum-button-m-primary-outline-white-texticon-background-color-hover);
     border-color: var(--spectrum-button-m-primary-outline-white-texticon-border-color-hover);
     color: var(--spectrum-button-m-primary-outline-white-texticon-text-color-hover);
     box-shadow: none;
+    outline: none;
 
     &:after {
       box-shadow: 0 0 0 var(--spectrum-alias-focus-ring-size) var(--spectrum-button-m-primary-outline-white-texticon-border-color-key-focus);

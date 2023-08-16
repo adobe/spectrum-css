@@ -3,6 +3,15 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+<a name="3.1.13"></a>
+##3.1.13
+🗓
+2023-08-10 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/switch@3.1.12...@spectrum-css/switch@3.1.13)
+
+### 🐛 Bug fixes
+
+- **switch:**update selected background color tokens ([#2057](https://github.com/adobe/spectrum-css/issues/2057))([255a47a](https://github.com/adobe/spectrum-css/commit/255a47a))
+
 <a name="3.1.12"></a>
 ##3.1.12
 🗓
