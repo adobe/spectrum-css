@@ -1,6 +1,6 @@
 {
   "name": "@spectrum-css/actiongroup",
-  "version": "3.0.61",
+  "version": "4.0.0-beta.0",
   "description": "The Spectrum CSS actiongroup component",
   "license": "Apache-2.0",
   "author": "Adobe",
@@ -19,10 +19,10 @@
   },
   "peerDependencies": {
     "@spectrum-css/actionbutton": ">=3",
-    "@spectrum-css/tokens": ">=10.0.0"
+    "@spectrum-css/tokens": ">=10"
   },
   "devDependencies": {
-    "@spectrum-css/actionbutton": "^4.0.13",
+    "@spectrum-css/actionbutton": "^5.0.0-beta.0",
     "@spectrum-css/component-builder-simple": "^2.0.16",
     "@spectrum-css/icon": "^4.0.0",
     "@spectrum-css/tokens": "^11.2.0",

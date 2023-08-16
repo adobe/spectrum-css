@@ -1,4 +1,9 @@
 name: Split button
+sections:
+  - name: Migration Guide
+    description: |
+      ### Remove focus-ring class
+      We've migrated away from the focus-ring class in favor of the native `:focus-visible` pseudo-class due to changes in browser support.
 examples:
   - id: splitbutton
     name: CTA

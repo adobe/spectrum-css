@@ -23,6 +23,8 @@ sections:
       ### Invalid/Error State
       - Invalid radio buttons are signified by alert [HelpText](helptext.html) and [Icon](icon.html) included in [FieldGroup](fieldgroup.html).
 
+      ### Remove focus-ring class
+      We've migrated away from the focus-ring class in favor of the native `:focus-visible` pseudo-class due to changes in browser support.
 examples:
   - id: radio
     name: Sizing

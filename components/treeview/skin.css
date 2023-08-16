@@ -74,7 +74,7 @@ governing permissions and limitations under the License.
           border-color: transparent;
         }
 
-        &:focus-ring {
+        &:focus-visible {
           &:before {
             border-color: var(--spectrum-treeview-m-item-border-color-key-focus);
           }
@@ -103,7 +103,7 @@ governing permissions and limitations under the License.
     }
   }
 
-  &:focus-ring {
+  &:focus-visible {
     color: var(--spectrum-treeview-m-item-text-color-mouse-focus);
 
     &::before {

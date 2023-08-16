@@ -94,7 +94,7 @@ governing permissions and limitations under the License.
     border-inline-start-width: var(--spectrum-button-m-primary-outline-texticon-border-size);
   }
 
-  &:focus-ring {
+  &:focus-visible {
     box-shadow: none;
   }
 
@@ -113,9 +113,10 @@ governing permissions and limitations under the License.
 .spectrum-SplitButton-trigger {
   position: relative;
 
-  &:focus {
+  &:focus-visible {
     /* Be on top when focused or border leaks */
     z-index: 1;
+    outline: none;
   }
 }
 

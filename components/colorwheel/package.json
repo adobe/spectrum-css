@@ -18,12 +18,12 @@
     "build": "gulp"
   },
   "peerDependencies": {
-    "@spectrum-css/colorhandle": ">=5.0.0",
-    "@spectrum-css/tokens": ">=10.0.0"
+    "@spectrum-css/colorhandle": ">=5",
+    "@spectrum-css/tokens": ">=10"
   },
   "devDependencies": {
     "@spectrum-css/colorarea": "^4.0.33",
-    "@spectrum-css/colorhandle": "^6.1.2",
+    "@spectrum-css/colorhandle": "^7.0.0-beta.0",
     "@spectrum-css/component-builder-simple": "^2.0.16",
     "@spectrum-css/tokens": "^11.2.0",
     "gulp": "^4.0.0"

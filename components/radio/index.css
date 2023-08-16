@@ -418,8 +418,7 @@ governing permissions and limitations under the License.
     }
   }
 
- /* focus ring is focused state */
-  &:focus-ring,
+ /* focused state */
   &:focus-visible {
     + .spectrum-Radio-button {
       &:after {

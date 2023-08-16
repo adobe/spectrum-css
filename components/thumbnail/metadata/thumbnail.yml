@@ -11,6 +11,9 @@ sections:
 
       ### Layer
       Adds variant for when thumbnails are used in layer management (such as the Compact or Detail Layers panels). When used this way the thumbnail is given a thick blue border when selected.
+
+      ### Remove focus-ring class
+      We've migrated away from the focus-ring class in favor of the native `:focus-visible` pseudo-class due to changes in browser support.
 examples:
   - id: thumbnail-image
     name: Thumbnail
@@ -23,7 +26,7 @@ examples:
   - id: thumbnail-focus
     name: Thumbnail (focused)
     markup: |
-      <div class="spectrum-Thumbnail spectrum-Thumbnail--size700 d is-focused">
+      <div class="spectrum-Thumbnail spectrum-Thumbnail--size700 is-focused">
         <div class="spectrum-Thumbnail-image-wrapper spectrum-OpacityCheckerboard">
           <img class="spectrum-Thumbnail-image" src="img/example-ava.jpg" alt="Woman crouching">
         </div>
