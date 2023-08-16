@@ -35,13 +35,6 @@ governing permissions and limitations under the License.
     --spectrum-clear-button-width: var(--spectrum-component-height-300);
   }
 
-  &:disabled {
-    --mod-clear-button-icon-color: var(--spectrum-clear-button-icon-color-disabled, var(--spectrum-disabled-content-color));
-    --mod-clear-button-icon-color-hover: var(--spectrum-clear-button-icon-color-hover-disabled, var(--spectrum-disabled-content-color));
-    --mod-clear-button-icon-color-down: var(--spectrum-clear-button-icon-color-down-disabled, var(--spectrum-disabled-content-color));
-    --mod-clear-button-background-color: var(--spectrum-clear-button-background-color-disabled, var(--spectrum-disabled-background-color));
-  }
-
   &.spectrum-ClearButton--quiet {
     --mod-clear-button-background-color: var(--spectrum-clear-button-background-color-quiet, transparent);
     --mod-clear-button-background-color-hover: var(--spectrum-clear-button-background-color-hover-quiet, transparent);
@@ -58,7 +51,15 @@ governing permissions and limitations under the License.
     --mod-clear-button-background-color: var(--spectrum-clear-button-background-color-over-background, transparent);
     --mod-clear-button-background-color-hover: var(--spectrum-clear-button-background-color-hover-over-background, var(--spectrum-transparent-white-300));
     --mod-clear-button-background-color-down: var(--spectrum-clear-button-background-color-hover-over-background, var(--spectrum-transparent-white-400));
-    --mod-clear-button-background-color-key-focus: var(--spectrum-clear-button-background-color-hover-over-background, var(--spectrum-transparent-white-300));
+    --mod-clear-button-background-color-key-focus: var(--spectrum-clear-button-background-color-hover-over-background, var(--spectrum-transparent-white-300));  
+  }
+
+  &:disabled, 
+  &.is-disabled {
+    --mod-clear-button-icon-color: var(--mod-clear-button-icon-color-disabled, var(--spectrum-disabled-content-color));
+    --mod-clear-button-icon-color-hover: var(--spectrum-clear-button-icon-color-hover-disabled, var(--spectrum-disabled-content-color));
+    --mod-clear-button-icon-color-down: var(--spectrum-clear-button-icon-color-down-disabled, var(--spectrum-disabled-content-color));
+    --mod-clear-button-background-color: var(--mod-clear-button-background-color-disabled, transparent);
   }
 }
 
@@ -68,7 +69,7 @@ governing permissions and limitations under the License.
   border-radius: 100%;
   cursor: pointer;
 
-  background-color: transparent;
+  background-color: var(--mod-clear-button-background-color, transparent);
   margin: 0;
   padding: var(--mod-clear-button-padding, var(--spectrum-clear-button-padding));
 
@@ -105,13 +106,6 @@ governing permissions and limitations under the License.
       background-color: var(--mod-clear-button-background-color-key-focus, var(--spectrum-clear-button-background-color-key-focus));
     }
   }
-
-  &:disabled,
-  &.is-disabled {
-    .spectrum-ClearButton-fill {
-      background-color: var(--spectrum-clearbutton-fill-background-color-disabled);
-    }
-  }
 }
 
 .spectrum-ClearButton-fill {
@@ -127,32 +121,9 @@ governing permissions and limitations under the License.
 }
 
 .spectrum-ClearButton--overBackground {
-  background-color: var(--spectrum-button-m-primary-outline-white-texticon-background-color);
-  border-color: var(--spectrum-button-m-primary-outline-white-texticon-border-color);
-
 
   &:focus-visible {
-    background-color: var(--spectrum-button-m-primary-outline-white-texticon-background-color-hover);
-    border-color: var(--spectrum-button-m-primary-outline-white-texticon-border-color-hover);
-    color: var(--spectrum-button-m-primary-outline-white-texticon-text-color-hover);
-    box-shadow: none;
     outline: none;
-
-    &:after {
-      box-shadow: 0 0 0 var(--spectrum-alias-focus-ring-size) var(--spectrum-button-m-primary-outline-white-texticon-border-color-key-focus);
-    }
-  }
-
-  &:disabled,
-  &.is-disabled {
-    background-color: var(--spectrum-button-m-primary-outline-white-texticon-background-color-disabled);
-    border-color: var(--spectrum-button-m-primary-outline-white-texticon-border-color-disabled);
-    color: var(--spectrum-button-m-primary-outline-white-texticon-text-color-disabled);
-  }
-
-  &:disabled,
-  &.is-disabled .spectrum-ClearButton-fill {
-    background-color: var(--spectrum-alias-icon-color-overbackground-disabled);
   }
 }
 
