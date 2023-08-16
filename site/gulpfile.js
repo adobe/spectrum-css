@@ -43,7 +43,6 @@ function buildSite_prism() {
 exports.copySiteResources = gulp.parallel(
 	buildSite_resources,
 	buildSite_loadicons,
-	buildSite_focusPolyfill,
 	buildSite_lunr,
 	buildSite_prism
 );
