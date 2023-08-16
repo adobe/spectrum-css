@@ -742,7 +742,8 @@ governing permissions and limitations under the License.
 }
 
 .spectrum-Table-checkboxCell {
-  max-inline-size: min-content;
+  /* Prevent width expansion with 100% width table. */
+  inline-size: var(--spectrum-checkbox-control-size-small);
   /* The calc subtraction is because the --spectrum-table-checkbox-to-text spacing value
      includes the inline start padding in the adjacent cell. */
   padding-inline-end: calc(
