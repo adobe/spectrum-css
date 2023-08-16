@@ -303,7 +303,7 @@ governing permissions and limitations under the License.
   outline: none;
 }
 
-.spectrum-CSSComponent-link:focus-ring,
+.spectrum-CSSComponent-link:focus-visible,
 .spectrum-CSSComponent-link:hover {
   text-decoration: underline;
 }
