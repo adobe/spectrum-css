@@ -742,6 +742,7 @@ governing permissions and limitations under the License.
 }
 
 .spectrum-Table-checkboxCell {
+  max-inline-size: min-content;
   /* The calc subtraction is because the --spectrum-table-checkbox-to-text spacing value
      includes the inline start padding in the adjacent cell. */
   padding-inline-end: calc(
@@ -775,7 +776,8 @@ governing permissions and limitations under the License.
 
 /********* DIVS *********/
 /* Make sure markup that uses divs instead of <table> elements displays like a regular table. */
-.spectrum-Table:not(.spectrum-Table-scroller) {
+.spectrum-Table:not(.spectrum-Table-scroller),
+.spectrum-Table-main {
   display: table;
 }
 
