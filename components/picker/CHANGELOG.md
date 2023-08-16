@@ -3,6 +3,19 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+<a name="7.0.0"></a>
+#7.0.0
+🗓
+2023-08-16 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/picker@6.0.2...@spectrum-css/picker@7.0.0)
+
+\*refactor(picker)!: remove focus-ring([e37b430](https://github.com/adobe/spectrum-css/commit/e37b430))
+
+    	###
+    	🛑 BREAKING CHANGES
+
+    		*
+    		Remove focus-ring pseudo class in favor of focus-visible
+
 <a name="6.0.2"></a>
 ##6.0.2
 🗓

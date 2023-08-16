@@ -3,6 +3,19 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+<a name="5.0.0"></a>
+#5.0.0
+🗓
+2023-08-16 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/actionbutton@4.0.13...@spectrum-css/actionbutton@5.0.0)
+
+\*refactor(actionbutton)!: replace focus-ring with focus-visible([995a0dd](https://github.com/adobe/spectrum-css/commit/995a0dd))
+
+    	###
+    	🛑 BREAKING CHANGES
+
+    		*
+    		native focus-visible pseudo class used for styling
+
 <a name="4.0.13"></a>
 ##4.0.13
 🗓

@@ -1,6 +1,6 @@
 {
   "name": "@spectrum-css/breadcrumb",
-  "version": "8.0.0-beta.0",
+  "version": "8.0.0",
   "description": "The Spectrum CSS breadcrumb component",
   "license": "Apache-2.0",
   "author": "Adobe",
@@ -23,9 +23,9 @@
     "@spectrum-css/tokens": ">=10"
   },
   "devDependencies": {
-    "@spectrum-css/actionbutton": "^5.0.0-beta.0",
-    "@spectrum-css/component-builder-simple": "^2.0.16",
-    "@spectrum-css/icon": "^4.0.0",
+    "@spectrum-css/actionbutton": "^5.0.0",
+    "@spectrum-css/component-builder-simple": "^2.0.17",
+    "@spectrum-css/icon": "^4.0.1",
     "@spectrum-css/tokens": "^11.2.0",
     "gulp": "^4.0.0"
   },

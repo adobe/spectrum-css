@@ -3,6 +3,21 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+<a name="4.0.0"></a>
+#4.0.0
+🗓
+2023-08-16 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/closebutton@3.1.14...@spectrum-css/closebutton@4.0.0)
+
+\*refactor(closebutton)!: replace focus-ring with focus-visible([a17183f](https://github.com/adobe/spectrum-css/commit/a17183f))
+
+    	###
+    	🛑 BREAKING CHANGES
+
+    		*
+    		use focus-visible pseudo class for focus styling
+
+remove duplicate focus indicator styling
+
 <a name="3.1.14"></a>
 ##3.1.14
 🗓

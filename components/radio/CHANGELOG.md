@@ -3,6 +3,19 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+<a name="8.0.0"></a>
+#8.0.0
+🗓
+2023-08-16 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/radio@7.0.46...@spectrum-css/radio@8.0.0)
+
+\*refactor(radio)!: remove focus-ring([30849cf](https://github.com/adobe/spectrum-css/commit/30849cf))
+
+    	###
+    	🛑 BREAKING CHANGES
+
+    		*
+    		remove focus-ring in favor of focus-visible
+
 <a name="7.0.46"></a>
 ##7.0.46
 🗓

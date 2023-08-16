@@ -3,6 +3,19 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+<a name="4.0.0"></a>
+#4.0.0
+🗓
+2023-08-16 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/switch@3.1.13...@spectrum-css/switch@4.0.0)
+
+\*refactor(switch)!: replace focus-ring with focus-visible([7c5aa13](https://github.com/adobe/spectrum-css/commit/7c5aa13))
+
+    	###
+    	🛑 BREAKING CHANGES
+
+    		*
+    		use focus-visible pseudo class in place of focus-ring
+
 <a name="3.1.13"></a>
 ##3.1.13
 🗓

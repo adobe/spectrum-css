@@ -3,6 +3,19 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+<a name="2.0.0"></a>
+#2.0.0
+🗓
+2023-08-16 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/clearbutton@1.2.38...@spectrum-css/clearbutton@2.0.0)
+
+\*refactor(clearbutton)!: replace focus-ring with focus-visible([a4fd637](https://github.com/adobe/spectrum-css/commit/a4fd637))
+
+    	###
+    	🛑 BREAKING CHANGES
+
+    		*
+    		use native focus-visible pseudo class for focus styling
+
 <a name="1.2.38"></a>
 ##1.2.38
 🗓

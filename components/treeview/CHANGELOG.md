@@ -3,6 +3,19 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+<a name="8.0.0"></a>
+#8.0.0
+🗓
+2023-08-16 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/treeview@7.0.9...@spectrum-css/treeview@8.0.0)
+
+\*refactor(treeview)!: replace focus-ring with focus-visible([5db0310](https://github.com/adobe/spectrum-css/commit/5db0310))
+
+    	###
+    	🛑 BREAKING CHANGES
+
+    		*
+    		use focus-visible pseudo class in place of focus-ring
+
 <a name="7.0.9"></a>
 ##7.0.9
 🗓

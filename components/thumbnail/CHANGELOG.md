@@ -3,6 +3,23 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+<a name="5.0.0"></a>
+#5.0.0
+🗓
+2023-08-16 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/thumbnail@4.0.4...@spectrum-css/thumbnail@5.0.0)
+
+### 🐛 Bug fixes
+
+-     **thumbnail:**remove typo from docs([30b2ea1](https://github.com/adobe/spectrum-css/commit/30b2ea1))
+
+  \*refactor(thumbnail)!: remove focus-ring pseudo class([d783ada](https://github.com/adobe/spectrum-css/commit/d783ada))
+
+      	###
+      	🛑 BREAKING CHANGES
+
+      		*
+      		remove usage of focus-ring as it is not needed
+
 <a name="4.0.4"></a>
 ##4.0.4
 🗓
