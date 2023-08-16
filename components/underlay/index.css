@@ -13,12 +13,12 @@ governing permissions and limitations under the License.
 @import '../overlay/index.css';
 
 .spectrum-Underlay {
-  --spectrum-underlay-background-entry-animation-delay: var(--spectrum-animation-duration-0);   /* Bug: this must be 0ms, not 0 */
-  --spectrum-underlay-background-exit-animation-ease: cubic-bezier(0.5, 0, 1, 1); /* wrong in DNA */
-  --spectrum-underlay-background-entry-animation-ease: cubic-bezier(0, 0, 0.40, 1); /* wrong in DNA */
+  --spectrum-underlay-background-entry-animation-delay: var(--spectrum-animation-duration-0);
+  --spectrum-underlay-background-exit-animation-ease: var(--spectrum-animation-ease-in);
+  --spectrum-underlay-background-entry-animation-ease: var(--spectrum-animation-ease-out);
   --spectrum-underlay-background-exit-animation-duration: var(--spectrum-animation-duration-100);
   --spectrum-underlay-background-entry-animation-duration: var(--spectrum-animation-duration-600);
-  --spectrum-underlay-background-exit-animation-duration: var(----spectrum-animation-duration-300);
+  --spectrum-underlay-background-exit-animation-duration: var(--spectrum-animation-duration-300);
   --spectrum-underlay-background-exit-animation-delay: var(--spectrum-animation-duration-200);
 
   --spectrum-underlay-background-color-rgb: var(--spectrum-black-rgb);
