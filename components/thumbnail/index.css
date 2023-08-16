@@ -120,8 +120,7 @@ governing permissions and limitations under the License.
 		);
 	}
 	/* stylelint-disable selector-pseudo-class-no-unknown */
-	&.is-focused,
-	&:focus-ring {
+	&.is-focused {
 		overflow: visible;
 		&::after {
 			content: "";

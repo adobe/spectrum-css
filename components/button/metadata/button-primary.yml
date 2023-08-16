@@ -34,6 +34,9 @@ sections:
       | `.spectrum-Button--sizeM`  | `.spectrum-Icon--sizeM`           |
       | `.spectrum-Button--sizeL`  | `.spectrum-Icon--sizeL`           |
       | `.spectrum-Button--sizeXL` | `.spectrum-Icon--sizeXL`          |
+
+      ### Remove focus-ring class
+      We've migrated away from the focus-ring class in favor of the native `:focus-visible` pseudo-class due to changes in browser support.
 examples:
   - id: button-primary
     name: Sizing

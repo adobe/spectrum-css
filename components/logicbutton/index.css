@@ -38,8 +38,9 @@ governing permissions and limitations under the License.
 }
 
 .spectrum-LogicButton {
-  &:focus-ring,
+  &:focus-visible,
   &.is-focused {
+    outline: none;
     &:after {
       box-shadow: 0 0 0 var(--spectrum-button-m-primary-outline-texticon-focus-ring-size) var(--spectrum-button-m-primary-outline-texticon-focus-ring-color-key-focus);
     }

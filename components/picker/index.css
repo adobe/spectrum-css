@@ -184,7 +184,6 @@ governing permissions and limitations under the License.
     }
   }
   .spectrum-Picker--quiet {
-    &:focus-ring,
     &:focus-visible,
     &.is-focused {
       forced-color-adjust: none;
@@ -279,7 +278,6 @@ governing permissions and limitations under the License.
   }
 
   &:focus-visible,
-  &:focus-ring,
   &.is-focused {
     outline: none;
     background-color: var(--highcontrast-picker-background-color-default, var(--mod-picker-background-color-key-focus, var(--spectrum-picker-background-color-key-focus)));
@@ -345,7 +343,6 @@ governing permissions and limitations under the License.
       border-color: var(--highcontrast-picker-border-color-error-hover-open, var(--mod-picker-border-color-error-hover-open, var(--spectrum-picker-border-color-error-hover-open)));
     }
 
-    &:focus-ring,
     &:focus-visible,
     &.is-focused {
       border-color: var(--highcontrast-picker-border-color-error-default, var(--mod-picker-border-color-error-key-focus, var(--spectrum-picker-border-color-error-key-focus)));
@@ -390,7 +387,6 @@ governing permissions and limitations under the License.
 
   &:disabled,
   &.is-disabled {
-    &:focus-ring,
     &:focus-visible {
       border-color: transparent;
     }
@@ -497,7 +493,6 @@ governing permissions and limitations under the License.
     background-color: transparent;
   }
 
-  &:focus-ring,
   &:focus-visible,
   &.is-focused {
     background-color: transparent;

@@ -1,6 +1,6 @@
 {
   "name": "@spectrum-css/calendar",
-  "version": "4.0.3",
+  "version": "4.0.4",
   "description": "The Spectrum CSS calendar component",
   "license": "Apache-2.0",
   "author": "Adobe",
@@ -18,14 +18,14 @@
     "build": "gulp"
   },
   "peerDependencies": {
-    "@spectrum-css/actionbutton": ">=4.0.0",
+    "@spectrum-css/actionbutton": ">=4",
     "@spectrum-css/icon": ">=3",
     "@spectrum-css/tokens": ">=11"
   },
   "devDependencies": {
-    "@spectrum-css/actionbutton": "^4.0.13",
-    "@spectrum-css/component-builder-simple": "^2.0.16",
-    "@spectrum-css/icon": "^4.0.0",
+    "@spectrum-css/actionbutton": "^5.0.0",
+    "@spectrum-css/component-builder-simple": "^2.0.17",
+    "@spectrum-css/icon": "^4.0.1",
     "@spectrum-css/tokens": "^11.2.0",
     "gulp": "^4.0.0"
   },

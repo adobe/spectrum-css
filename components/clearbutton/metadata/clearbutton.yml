@@ -17,6 +17,9 @@ sections:
       | `spectrum-ClearButton--sizeM`  | `spectrum-css-icon-Cross100` |
       | `spectrum-ClearButton--sizeL`  | `spectrum-css-icon-Cross200` |
       | `spectrum-ClearButton--sizeXL` | `spectrum-css-icon-Cross300` |
+
+      ### Remove focus-ring class
+      We've migrated away from the focus-ring class in favor of the native `:focus-visible` pseudo-class due to changes in browser support.
 examples:
   - id: clearbutton
     name: Sizing

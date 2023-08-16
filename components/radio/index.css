@@ -31,7 +31,7 @@ governing permissions and limitations under the License.
 
   /* disabled all themes */
   --spectrum-radio-disabled-content-color: var(--spectrum-disabled-content-color);
-  --spectrum-radio-disabled-border-color: var(--spectrum-gray-400);
+  --spectrum-radio-disabled-border-color: var(--spectrum-disabled-content-color);
 
   /* emphasized state colors selection indicator all themes */
   --spectrum-radio-emphasized-accent-color: var(--spectrum-accent-color-900);
@@ -418,8 +418,7 @@ governing permissions and limitations under the License.
     }
   }
 
- /* focus ring is focused state */
-  &:focus-ring,
+ /* focused state */
   &:focus-visible {
     + .spectrum-Radio-button {
       &:after {

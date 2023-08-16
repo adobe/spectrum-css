@@ -143,7 +143,7 @@ governing permissions and limitations under the License.
     cursor: default;
   }
 
-  &:focus-ring {
+  &:focus-visible {
     & + .spectrum-Switch-switch {
       &:after {
         margin: calc(var(--mod-focus-indicator-gap, var(--spectrum-focus-indicator-gap)) * -1);
@@ -323,7 +323,7 @@ governing permissions and limitations under the License.
 /* :before is used for the handle of the switch */
 .spectrum-Switch,
 .spectrum-Switch:hover {
-  .spectrum-Switch-input:focus-ring {
+  .spectrum-Switch-input:focus-visible {
     & + .spectrum-Switch-switch {
       &:after {
         box-shadow:

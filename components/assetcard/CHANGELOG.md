@@ -3,6 +3,19 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+<a name="2.0.0"></a>
+#2.0.0
+🗓
+2023-08-16 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/assetcard@1.1.52...@spectrum-css/assetcard@2.0.0)
+
+\*refactor(assetcard)!: replace focus-ring with focus-visible([1c6a3e9](https://github.com/adobe/spectrum-css/commit/1c6a3e9))
+
+    	###
+    	🛑 BREAKING CHANGES
+
+    		*
+    		use native focus-visible pseudo class for focus styling
+
 <a name="1.1.52"></a>
 ##1.1.52
 🗓

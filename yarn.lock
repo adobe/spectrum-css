@@ -2823,10 +2823,10 @@
   resolved "https://registry.yarnpkg.com/@socket.io/component-emitter/-/component-emitter-3.1.0.tgz#96116f2a912e0c02817345b3c10751069920d553"
   integrity sha512-+9jVqKhRSpsc591z5vX+X5Yyw+he/HCB4iQ/RYxw35CEPaY1gnsNE43nf9n9AaYjAQrTiI/mOwKUKdUs9vf7Xg==
 
-"@spectrum-css/button@10.1.13":
-  version "10.1.13"
-  resolved "https://registry.yarnpkg.com/@spectrum-css/button/-/button-10.1.13.tgz#e5aaefdd77346147a1e332dc20909f9ecb47a5a2"
-  integrity sha512-A9QYV3gJzQImMw6Y6P7y/YzNSuoqGYMnLRur6fZQpm1avXMBvtGsm8sfH4B0xz9jbvr4A3q+rE/5/1Enh6A6Xg==
+"@spectrum-css/actionbutton@^4.0.0-beta.0":
+  version "4.0.13"
+  resolved "https://registry.yarnpkg.com/@spectrum-css/actionbutton/-/actionbutton-4.0.13.tgz#5ff2f77f907b5c091ec0dca8c7cce5a6b2513c2c"
+  integrity sha512-KfxlqWKGyUsjOUDBOzCWE2nWU3xPuGfr0itTfjQY2ndlUpbqwjz3rEMM9o/0B5mJ4NvJ+1NXTxD+a+t8kA1cBQ==
 
 "@spectrum-css/menu@^4.0.50":
   version "4.0.50"
@@ -2837,11 +2837,6 @@
   version "3.0.34"
   resolved "https://registry.yarnpkg.com/@spectrum-css/pickerbutton/-/pickerbutton-3.0.34.tgz#987c639a281f0a54e72695cf38127faa60b9fcce"
   integrity sha512-D8cfc9nvGNiLlY/y6TsgyZpj6zdGMh2ENUQi846DYS6ONRtDh9M2xoigpRcbIXc6Cm8kgCiZcTFsk07B/TT+pg==
-
-"@spectrum-css/table@^4.0.66":
-  version "4.0.66"
-  resolved "https://registry.yarnpkg.com/@spectrum-css/table/-/table-4.0.66.tgz#972d8d8d041e0075f73c674e4fb1533fd2ccf4a1"
-  integrity sha512-wsdIzhMMZ6wK8giJkvnWZ0u1/Ns1unwx1nJqNAGIG0lNr1iKjNxMhgzRFpeuqq5sUwu8SJaxXPfOXNfRe0ttcg==
 
 "@spectrum-css/thumbnail@^2.0.34":
   version "2.0.34"
@@ -13828,14 +13823,6 @@ postcss-discard-empty@^6.0.0:
     postcss "^7.0.32"
     postcss-value-parser "^4.1.0"
 
-postcss-focus-ring@^1.0.0:
-  version "1.0.0"
-  resolved "https://registry.yarnpkg.com/postcss-focus-ring/-/postcss-focus-ring-1.0.0.tgz#df533b1fa2c6d2d1bdd72e8f0462e3f9f7a08390"
-  integrity sha512-XQT/Xwz6q7NH/kTXnqYUtrnLu7ABfaX5kCO/PwPzn7wzqp9TrvmpucTcz8Cdv1bfvvLekJNwHjUoHe9n+uyDjw==
-  dependencies:
-    postcss "^6.0.1"
-    postcss-selector-parser "^2.2.3"
-
 postcss-import@^10.0.0:
   version "10.0.0"
   resolved "https://registry.yarnpkg.com/postcss-import/-/postcss-import-10.0.0.tgz#4c85c97b099136cc5ea0240dc1dfdbfde4e2ebbe"
@@ -13994,7 +13981,7 @@ postcss-safe-parser@^6.0.0:
   resolved "https://registry.yarnpkg.com/postcss-safe-parser/-/postcss-safe-parser-6.0.0.tgz#bb4c29894171a94bc5c996b9a30317ef402adaa1"
   integrity sha512-FARHN8pwH+WiS2OPCxJI8FuRJpTVnn6ZNFiqAM2aeW2LwTHWWmWgIyKC6cUo0L8aeKiF/14MNvnpls6R2PBeMQ==
 
-postcss-selector-parser@^2.2.2, postcss-selector-parser@^2.2.3:
+postcss-selector-parser@^2.2.2:
   version "2.2.3"
   resolved "https://registry.yarnpkg.com/postcss-selector-parser/-/postcss-selector-parser-2.2.3.tgz#f9437788606c3c9acee16ffe8d8b16297f27bb90"
   integrity sha512-3pqyakeGhrO0BQ5+/tGTfvi5IAUAhHRayGK8WFSu06aEv2BmHoXw/Mhb+w7VY5HERIuC+QoUI7wgrCcq2hqCVA==

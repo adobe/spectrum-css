@@ -2,6 +2,11 @@ name: Asset card
 SpectrumSiteSlug: https://spectrum.adobe.com/page/cards/
 description: |
   - Set the `--spectrum-assetcard-asset-size` custom property to the size you want to display the asset as
+sections:
+  - name: Migration Guide
+    description: |
+      ### Remove focus-ring class
+      We've migrated away from the focus-ring class in favor of the native `:focus-visible` pseudo-class due to changes in browser support.
 examples:
   - id: assetcard-portrait
     name: Portrait

@@ -11,6 +11,9 @@ sections:
 
       ### Change workflow icon size to medium
       Replace `.spectrum-Icon--sizeS` with `.spectrum-Icon--sizeM`.
+
+      ### Remove focus-ring class
+      We've migrated away from the focus-ring class in favor of the native `:focus-visible` pseudo-class due to changes in browser support.
 examples:
   - id: actiongroup-horizontal
     name: Horizontal
