@@ -2828,6 +2828,11 @@
   resolved "https://registry.yarnpkg.com/@spectrum-css/actionbutton/-/actionbutton-4.0.13.tgz#5ff2f77f907b5c091ec0dca8c7cce5a6b2513c2c"
   integrity sha512-KfxlqWKGyUsjOUDBOzCWE2nWU3xPuGfr0itTfjQY2ndlUpbqwjz3rEMM9o/0B5mJ4NvJ+1NXTxD+a+t8kA1cBQ==
 
+"@spectrum-css/clearbutton@^2.0.0":
+  version "2.0.0"
+  resolved "https://registry.yarnpkg.com/@spectrum-css/clearbutton/-/clearbutton-2.0.0.tgz#ad638dd4bd021f42c0b020ae024f487aa64198ca"
+  integrity sha512-hdJFgBVnzRPe9jne5iaGE6NFuynUpwFuNtKRB4LJ1Yt0IqDK+bXhdak9NxMnvHEFjUr4NGDdBoXFUiBHPYYlSQ==
+
 "@spectrum-css/menu@^4.0.50":
   version "4.0.50"
   resolved "https://registry.yarnpkg.com/@spectrum-css/menu/-/menu-4.0.50.tgz#d72467542b0cab858062c6fd5cb2950e8bbb0bc4"
@@ -2837,11 +2842,6 @@
   version "3.0.34"
   resolved "https://registry.yarnpkg.com/@spectrum-css/pickerbutton/-/pickerbutton-3.0.34.tgz#987c639a281f0a54e72695cf38127faa60b9fcce"
   integrity sha512-D8cfc9nvGNiLlY/y6TsgyZpj6zdGMh2ENUQi846DYS6ONRtDh9M2xoigpRcbIXc6Cm8kgCiZcTFsk07B/TT+pg==
-  
-"@spectrum-css/clearbutton@^1.2.36":
-  version "1.2.36"
-  resolved "https://registry.yarnpkg.com/@spectrum-css/clearbutton/-/clearbutton-1.2.36.tgz#62313aa0b102392ea046c2acab70dfaf15c1cde1"
-  integrity sha512-wDu3gqYndeDadNA6yes0DOfGYXnvp3y8cKd16BJeNwKFvyEw2f5Lp0ENvqgd35Ybp/SW7wnHo+CtPBpVLdZ9xg==
 
 "@spectrum-css/thumbnail@^2.0.34":
   version "2.0.34"
@@ -3108,14 +3108,6 @@
     "@storybook/preview-api" "7.2.3"
     "@storybook/types" "7.2.3"
 
-"@storybook/api@^7.0.9", "@storybook/api@^7.2.3":
-  version "7.2.3"
-  resolved "https://registry.yarnpkg.com/@storybook/api/-/api-7.2.3.tgz#e391d9329b8195f2cdb9ae74bcef956aba7c66a8"
-  integrity sha512-yoCP4zfvEBOpfHuhU65FVd4cqNvnzM3PmHXmTD4l/WaDvlkL1MrUq2Wtam0Uq3MPm33Mw54DHnfc4lNRg014jQ==
-  dependencies:
-    "@storybook/client-logger" "7.2.3"
-    "@storybook/manager-api" "7.2.3"
-
 "@storybook/api@^7.0.9":
   version "7.0.12"
   resolved "https://registry.yarnpkg.com/@storybook/api/-/api-7.0.12.tgz#52022f0b2c091f5e0921d11151869bad830b4e8b"
@@ -3123,6 +3115,14 @@
   dependencies:
     "@storybook/client-logger" "7.0.12"
     "@storybook/manager-api" "7.0.12"
+
+"@storybook/api@^7.2.3":
+  version "7.2.3"
+  resolved "https://registry.yarnpkg.com/@storybook/api/-/api-7.2.3.tgz#e391d9329b8195f2cdb9ae74bcef956aba7c66a8"
+  integrity sha512-yoCP4zfvEBOpfHuhU65FVd4cqNvnzM3PmHXmTD4l/WaDvlkL1MrUq2Wtam0Uq3MPm33Mw54DHnfc4lNRg014jQ==
+  dependencies:
+    "@storybook/client-logger" "7.2.3"
+    "@storybook/manager-api" "7.2.3"
 
 "@storybook/blocks@7.0.20":
   version "7.0.20"
@@ -3264,6 +3264,11 @@
     "@storybook/global" "^5.0.0"
     qs "^6.10.0"
     telejson "^7.0.3"
+
+"@storybook/channels@7.0.12":
+  version "7.0.12"
+  resolved "https://registry.yarnpkg.com/@storybook/channels/-/channels-7.0.12.tgz#54fc4a14cd27746c1f210e45d563f4d88cf2280c"
+  integrity sha512-KDdDmDs8kxAJU+vndTqTNazjLO+XoIPiTRlfP7mk7cgHiQXSjMYy3JSCQ7W0of0Q+9VSl/ve9CNbnGbcQF7rNQ==
 
 "@storybook/channels@7.0.20":
   version "7.0.20"
@@ -3634,6 +3639,27 @@
   version "1.1.6"
   resolved "https://registry.yarnpkg.com/@storybook/icons/-/icons-1.1.6.tgz#22536cde6dd85fa259608fa8bd7b9eeca2a8e688"
   integrity sha512-co5gDCYPojRAc5lRMnWxbjrR1V37/rTmAo9Vok4a1hDpHZIwkGTWesdzvYivSQXYFxZTpxdM1b5K3W87brnahw==
+
+"@storybook/manager-api@7.0.12":
+  version "7.0.12"
+  resolved "https://registry.yarnpkg.com/@storybook/manager-api/-/manager-api-7.0.12.tgz#b0278d5500641bdb31fc7125609466bfd8a4f258"
+  integrity sha512-3QXARtxpc6Xxqf5pviUw2UuhK53+IsINSljeWhAqdQ1Gzbywl67TpibTd7xVN6NKxhUH5Bzo9bIZTAzMZGqaKw==
+  dependencies:
+    "@storybook/channels" "7.0.12"
+    "@storybook/client-logger" "7.0.12"
+    "@storybook/core-events" "7.0.12"
+    "@storybook/csf" "^0.1.0"
+    "@storybook/global" "^5.0.0"
+    "@storybook/router" "7.0.12"
+    "@storybook/theming" "7.0.12"
+    "@storybook/types" "7.0.12"
+    dequal "^2.0.2"
+    lodash "^4.17.21"
+    memoizerific "^1.11.3"
+    semver "^7.3.7"
+    store2 "^2.14.2"
+    telejson "^7.0.3"
+    ts-dedent "^2.0.0"
 
 "@storybook/manager-api@7.0.20":
   version "7.0.20"
