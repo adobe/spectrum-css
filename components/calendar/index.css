@@ -85,10 +85,12 @@ governing permissions and limitations under the License.
 .spectrum-Calendar-prevMonth,
 .spectrum-Calendar-nextMonth {
   transform: logical rotate(0deg);
+}
 
-  &:not([disabled]) {
-    color: var(--highcontrast-calendar-button-icon-color, var(--mod-calendar-button-icon-color, var(--spectrum-calendar-button-icon-color)));
-  }
+/* addresses specificty concerns for SWC implementation see PR #2100 */
+.spectrum-Calendar:not([disabled]) .spectrum-Calendar-nextMonth:not([disabled]),
+.spectrum-Calendar:not([disabled]) .spectrum-Calendar-prevMonthtMonth:not([disabled]) {
+    color: var(--highcontrast-calendar-button-icon-color,var(--mod-calendar-button-icon-color, var(--spectrum-calendar-button-icon-color)));
 }
 
 .spectrum-Calendar-prevMonth {
