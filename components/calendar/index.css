@@ -86,7 +86,7 @@ governing permissions and limitations under the License.
 .spectrum-Calendar-nextMonth {
   transform: logical rotate(0deg);
 
-  &:not(disabled) {
+  &:not([disabled]) {
     color: var(--highcontrast-calendar-button-icon-color, var(--mod-calendar-button-icon-color, var(--spectrum-calendar-button-icon-color)));
   }
 }
