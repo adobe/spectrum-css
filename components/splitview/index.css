@@ -48,7 +48,7 @@ governing permissions and limitations under the License.
   position: absolute;
   border-style: solid;
   border-radius: var(--mod-splitview-gripper-border-radius, var(--spectrum-splitview-gripper-border-radius));
-  border-color: var(--mod-splitview-handle-background-color, var(--spectrum-splitview-handle-background-color));
+  border-color: var(--highcontrast-splitview-handle-background-color, var(--mod-splitview-handle-background-color, var(--spectrum-splitview-handle-background-color)));
 
   inset-block-start: 50%;
   transform: translate(0, -50%);
@@ -69,7 +69,7 @@ governing permissions and limitations under the License.
   border-inline-width: var(--mod-splitview-gripper-border-width-horizontal, var(--spectrum-splitview-gripper-border-width-horizontal));
 
   &:before {
-    background-color: var(--mod-splitview-handle-background-color, var(--spectrum-splitview-handle-background-color));
+    background-color: var(--highcontrast-splitview-handle-background-color, var(--mod-splitview-handle-background-color, var(--spectrum-splitview-handle-background-color)));
   }
 }
 
@@ -77,7 +77,7 @@ governing permissions and limitations under the License.
   /* Contains the gripper */
   position: relative;
 
-  background-color: var(--mod-splitview-handle-background-color, var(--spectrum-splitview-handle-background-color));
+  background-color: var(--highcontrast-splitview-handle-background-color, var(--mod-splitview-handle-background-color, var(--spectrum-splitview-handle-background-color)));
 
   /* Prevent text selection while dragging */
   user-select: none;
@@ -120,24 +120,24 @@ governing permissions and limitations under the License.
   &.is-draggable {
     &:hover,
     &.is-hovered {
-      background-color: var(--mod-splitview-handle-background-color-hover, var(--spectrum-splitview-handle-background-color-hover));
+      background-color: var(--highcontrast-splitview-handle-background-color-hover, var(--mod-splitview-handle-background-color-hover, var(--spectrum-splitview-handle-background-color-hover)));
 
       .spectrum-SplitView-gripper {
-        border-color: var(--mod-splitview-handle-background-color-hover, var(--spectrum-splitview-handle-background-color-hover));
+        border-color: var(--highcontrast-splitview-handle-background-color-hover, var(--mod-splitview-handle-background-color-hover, var(--spectrum-splitview-handle-background-color-hover)));
         &:before {
-          background-color: var(--mod-splitview-handle-background-color-hover, var(--spectrum-splitview-handle-background-color-hover));
+          background-color: var(--highcontrast-splitview-handle-background-color-hover, var(--mod-splitview-handle-background-color-hover, var(--spectrum-splitview-handle-background-color-hover)));
         }
       }
     }
 
     &:active,
     &.is-active {
-      background-color: var(--mod-splitview-handle-background-color-down, var(--spectrum-splitview-handle-background-color-down));
+      background-color: var(--highcontrast-splitview-handle-background-color-down, var(--mod-splitview-handle-background-color-down, var(--spectrum-splitview-handle-background-color-down)));
 
       .spectrum-SplitView-gripper {
-        border-color: var(--mod-splitview-handle-background-color-down, var(--spectrum-splitview-handle-background-color-down));
+        border-color: var(--highcontrast-splitview-handle-background-color-down, var(--mod-splitview-handle-background-color-down, var(--spectrum-splitview-handle-background-color-down)));
         &:before {
-          background-color: var(--mod-splitview-handle-background-color-down, var(--spectrum-splitview-handle-background-color-down));
+          background-color: var(--highcontrast-splitview-handle-background-color-down, var(--mod-splitview-handle-background-color-down, var(--spectrum-splitview-handle-background-color-down)));
         }
       }
     }
@@ -148,13 +148,13 @@ governing permissions and limitations under the License.
 
     &:focus-visible {
       outline: none;
-      background-color: var(--mod-splitview-handle-background-color-focus, var(--spectrum-splitview-handle-background-color-focus));
+      background-color: var(--highcontrast-splitview-handle-background-color-focus, var(--mod-splitview-handle-background-color-focus, var(--spectrum-splitview-handle-background-color-focus)));
 
       .spectrum-SplitView-gripper {
-        border-color: var(--mod-splitview-handle-background-color-focus, var(--spectrum-splitview-handle-background-color-focus));
-        box-shadow: 0 0 0 1px var(--mod-splitview-handle-background-color-focus, var(--spectrum-splitview-handle-background-color-focus));
+        border-color: var(--highcontrast-splitview-handle-background-color-focus, var(--mod-splitview-handle-background-color-focus, var(--spectrum-splitview-handle-background-color-focus)));
+        box-shadow: 0 0 0 1px var(--highcontrast-splitview-handle-background-color-focus, var(--mod-splitview-handle-background-color-focus, var(--spectrum-splitview-handle-background-color-focus)));
         &:before {
-          background-color: var(--mod-splitview-handle-background-color-focus, var(--spectrum-splitview-handle-background-color-focus));
+          background-color: var(--highcontrast-splitview-handle-background-color-focus, var(--mod-splitview-handle-background-color-focus, var(--spectrum-splitview-handle-background-color-focus)));
         }
       }
     }
@@ -228,5 +228,14 @@ governing permissions and limitations under the License.
         inset-block-end: var(--mod-splitview-vertical-gripper-reset, var(--spectrum-splitview-vertical-gripper-reset));
       }
     }
+  }
+}
+
+@media (forced-colors: active) {
+  .spectrum-SplitView {
+    --highcontrast-splitview-handle-background-color: CanvasText;
+    --highcontrast-splitview-handle-background-color-hover: CanvasText;
+    --highcontrast-splitview-handle-background-color-down: CanvasText;
+    --highcontrast-splitview-handle-background-color-focus: Highlight;
   }
 }
