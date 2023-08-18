@@ -23,7 +23,7 @@ export default {
 				type: { summary: "string" },
 				category: "Component",
 			},
-			options: ["dark", "light"],
+			options: ["default", "dark", "light"],
 			control: "inline-radio",
 		},
 	},
@@ -31,6 +31,7 @@ export default {
 		rootClass: "spectrum-CoachMark",
 		isQuiet: false,
 		withPopover: false,
+		variant: "default",
 	},
 	parameters: {
 		actions: {
@@ -46,3 +47,9 @@ export default {
 
 export const Default = Template.bind({});
 Default.args = {};
+
+export const Quiet = Template.bind({});
+Quiet.args = {
+	isQuiet: true
+};
+
