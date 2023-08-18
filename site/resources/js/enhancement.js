@@ -1011,22 +1011,8 @@ var NAVIGATION_KEYS = [
 	'Left',
 	'Esc'
 ];
-var TEXT_INPUT_TYPES = [
-	'text',
-	'date',
-	'datetime-local',
-	'email',
-	'month',
-	'number',
-	'password',
-	'search',
-	'tel',
-	'time',
-	'url',
-	'week'
-];
+
 var keyboardFocus = false;
-var elements = document.getElementsByClassName('is-keyboardFocused');
 
 function onKeydownHandler(event) {
 	if (event.ctrlKey || event.altKey || event.metaKey || NAVIGATION_KEYS.indexOf(event.key) === -1) {
@@ -1034,7 +1020,6 @@ function onKeydownHandler(event) {
 	}
 	keyboardFocus = true;
 
-	console.log(document.activeElement);
 	if (document.activeElement &&
 		document.activeElement !== document.body) {
 					document.activeElement.classList.add('is-keyboardFocused');
@@ -1048,14 +1033,8 @@ function onFocusHandler(event) {
 	}
 }
 
-function onBlurHandler(event) {
-	var classList = event.target.classList;
-	classList && classList.remove('is-keyboardFocused');
-}
-
 window.addEventListener('keydown', onKeydownHandler, true);
 window.addEventListener('focus', onFocusHandler, true);
-window.addEventListener('blur', onBlurHandler, true);
 
 animateCircleLoaders();
 window.addEventListener("PageFastLoaded", enhanceAll);
