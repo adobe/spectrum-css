@@ -14,6 +14,9 @@
 | `--mod-coachmark-content-line-height`         |
 | `--mod-coachmark-header-to-body`              |
 | `--mod-coachmark-heading-to-action-button`    |
+| `--mod-coachmark-max-width`                   |
+| `--mod-coachmark-media-height`                |
+| `--mod-coachmark-media-min-height`            |
 | `--mod-coachmark-min-width`                   |
 | `--mod-coachmark-padding`                     |
 | `--mod-coachmark-step-color`                  |
