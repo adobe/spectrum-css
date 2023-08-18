@@ -53,6 +53,9 @@ governing permissions and limitations under the License.
   inset-block-start: 50%;
   transform: translate(0, -50%);
 
+  /* Prevent touch-action on handle */
+  touch-action: none;
+
   /* half of (width + horizontal border - handle width) * -1 (for negative opposite) */
   inset-inline-start: calc(
     (
