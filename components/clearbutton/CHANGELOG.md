@@ -3,6 +3,26 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+<a name="4.0.0"></a>
+#4.0.0
+🗓
+2023-08-18 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/clearbutton@2.0.0...@spectrum-css/clearbutton@4.0.0)
+
+\*refactor(clearbutton)!: migrate tokens (#1943)([495198a](https://github.com/adobe/spectrum-css/commit/495198a)), closes[#1943](https://github.com/adobe/spectrum-css/issues/1943)
+
+    	###
+    	🛑 BREAKING CHANGES
+
+    		*
+    		migrates clear button to use `@adobe/spectrum-tokens`
+
+- update to use infield button tokens release
+- migrate css to use tokens
+- add quiet variant and whcm styles
+- update storybook to include over background story
+- fix icon sizing in story, add cursor pointer
+- add aria-labels
+
 <a name="2.0.0"></a>
 #2.0.0
 🗓

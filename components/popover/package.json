@@ -1,6 +1,6 @@
 {
   "name": "@spectrum-css/popover",
-  "version": "6.0.66",
+  "version": "6.0.67",
   "description": "The Spectrum CSS popover component",
   "license": "Apache-2.0",
   "author": "Adobe",
@@ -22,12 +22,12 @@
     "@spectrum-css/tokens": ">=11"
   },
   "devDependencies": {
-    "@spectrum-css/button": "^11.0.0",
+    "@spectrum-css/button": "^11.0.1",
     "@spectrum-css/component-builder-simple": "^2.0.17",
-    "@spectrum-css/dialog": "^6.0.67",
-    "@spectrum-css/divider": "^2.1.18",
-    "@spectrum-css/menu": "^5.0.3",
-    "@spectrum-css/tokens": "^11.2.0",
+    "@spectrum-css/dialog": "^6.0.68",
+    "@spectrum-css/divider": "^2.1.19",
+    "@spectrum-css/menu": "^5.0.4",
+    "@spectrum-css/tokens": "^11.2.1",
     "gulp": "^4.0.0"
   },
   "publishConfig": {
