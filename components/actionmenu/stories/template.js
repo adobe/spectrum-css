@@ -10,6 +10,8 @@ export const Template = ({
 	isOpen = false,
 	label,
 	iconName,
+	size = "m",
+	// isOpen = true,
 	...globals
 }) => {
 

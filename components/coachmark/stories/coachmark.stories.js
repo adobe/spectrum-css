@@ -1,6 +1,9 @@
 // Import the component markup template
 import { Template } from "./template";
 
+import { default as ActionButton } from "@spectrum-css/actionbutton/stories/actionbutton.stories.js";
+import { default as Menu } from "@spectrum-css/menu/stories/menu.stories.js";
+
 export default {
 	title: "Components/Coach mark",
 	description:
@@ -34,26 +37,19 @@ export default {
 			},
 			control: "boolean",
 		},
-		isMobile: {
-			name: "Mobile Variant",
-			type: { name: "boolean" },
-			table: {
-				type: { summary: "boolean" },
-				category: "Component",
-			},
-			control: "boolean",
-		},
 	},
 	args: {
 		rootClass: "spectrum-CoachMark",
 		hasActionMenu: true,
 		hasPagination: true,
 		hasImage: false,
-		isMobile: false,
 	},
 	parameters: {
 		actions: {
-			handles: [],
+			handles: [
+				...ActionButton.parameters.actions.handles,
+				...Menu.parameters.actions.handles,
+			],
 		},
 		status: {
 			type: process.env.MIGRATED_PACKAGES.includes("coachmark")
@@ -66,19 +62,7 @@ export default {
 export const Default = Template.bind({});
 Default.args = {};
 
-export const DefaultWithImage = Template.bind({});
-DefaultWithImage.args = {
+export const WithMedia = Template.bind({});
+WithMedia.args = {
 	hasImage: true,
 };
-
-export const Mobile = Template.bind({});
-Mobile.args = {
-	isMobile: true,
-};
-
-export const MobileWithImage = Template.bind({});
-MobileWithImage.args = {
-	isMobile: true,
-	hasImage: true,
-};
-

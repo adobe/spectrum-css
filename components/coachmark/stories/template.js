@@ -1,6 +1,6 @@
 import { html } from "lit";
 import { classMap } from "lit/directives/class-map.js";
-import { ifDefined } from 'lit/directives/if-defined.js';
+import { useArgs } from "@storybook/client-api";
 
 import { Template as ButtonGroup } from "@spectrum-css/buttongroup/stories/template.js";
 import { Template as ActionButton } from "@spectrum-css/actionbutton/stories/template.js";
@@ -18,14 +18,15 @@ export const Template = ({
 	hasActionMenu = false,
 	hasPagination,
 	hasImage,
-	isMobile,
+	isOpen = true,
 	...globals
 }) => {
+	const [, updateArgs] = useArgs();
+
 	return html`
-		<div cdiv
+		<div
 		class=${classMap({
 			[rootClass]: true,
-			[`${rootClass}--mobile`]: isMobile,
 			...customClasses.reduce((a, c) => ({ ...a, [c]: true }), {}),
 		})}
 	>
@@ -44,7 +45,12 @@ export const Template = ({
 					<div class="spectrum-CoachMark-title">Try playing with a pixel brush</div>
 					<div class="spectrum-CoachMark-action-menu">
 					${hasActionMenu ? ActionMenu({
-							isOpen: false,
+							onclick: function () {
+								updateArgs({ isOpen: !isOpen });
+							},
+							isOpen,
+							iconName: 'More',
+							size: globals.scale === "large" ? "s" : "m",
 							items: [
 								{
 								  label: "Skip tour",
@@ -62,8 +68,8 @@ export const Template = ({
 				<div class="${rootClass}-footer">
 				${hasPagination ? html`<div class="spectrum-CoachMark-step"><bdo dir="ltr">2 of 8</bdo></div>` : ''}
 				${ButtonGroup({
-					size: isMobile ? 's' : 'm',
-					items: isMobile ?
+					size: globals.scale === "large" ? "s" : "m",
+					items: globals.scale === "large" ?
 					[
 						{
 							variant: "secondary",
