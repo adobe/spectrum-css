@@ -160,7 +160,7 @@ governing permissions and limitations under the License.
 // Textfield
 (function () {
 	function setFocus(textfield, input, focused) {
-		var focusClass = input.classList.contains("focus-ring")
+		var focusClass = input.classList.contains("is-keyboardFocused")
 			? "is-keyboardFocused"
 			: "is-focused";
 		if (focused) {
@@ -194,7 +194,7 @@ governing permissions and limitations under the License.
 		var textfields = inputgroup.querySelectorAll(".spectrum-Textfield");
 		var inputs = inputgroup.querySelectorAll(".spectrum-InputGroup-input");
 		var input = inputs[0];
-		var focusClass = event.target.classList.contains("focus-ring")
+		var focusClass = event.target.classList.contains("is-keyboardFocused")
 			? "is-keyboardFocused"
 			: "is-focused";
 		var pickerButton = inputgroup.querySelector(".spectrum-PickerButton");
@@ -246,7 +246,7 @@ governing permissions and limitations under the License.
 // Stepper
 (function () {
 	function setFocus(stepper, input, focused) {
-		var focusClass = input.classList.contains("focus-ring")
+		var focusClass = input.classList.contains("is-keyboardFocused")
 			? "is-keyboardFocused"
 			: "is-focused";
 		if (focused) {
@@ -988,6 +988,74 @@ function enhanceAll() {
 		}
 	);
 }
+
+// Focus Indicator Classes
+var NAVIGATION_KEYS = [
+	'Tab',
+	'ArrowUp',
+	'ArrowRight',
+	'ArrowDown',
+	'ArrowLeft',
+	'Home',
+	'End',
+	'PageUp',
+	'PageDown',
+	'Enter',
+	' ',
+	'Escape',
+
+	/* IE9 and Firefox < 37 */
+	'Up',
+	'Right',
+	'Down',
+	'Left',
+	'Esc'
+];
+var TEXT_INPUT_TYPES = [
+	'text',
+	'date',
+	'datetime-local',
+	'email',
+	'month',
+	'number',
+	'password',
+	'search',
+	'tel',
+	'time',
+	'url',
+	'week'
+];
+var keyboardFocus = false;
+var elements = document.getElementsByClassName('is-keyboardFocused');
+
+function onKeydownHandler(event) {
+	if (event.ctrlKey || event.altKey || event.metaKey || NAVIGATION_KEYS.indexOf(event.key) === -1) {
+		return;
+	}
+	keyboardFocus = true;
+
+	console.log(document.activeElement);
+	if (document.activeElement &&
+		document.activeElement !== document.body) {
+					document.activeElement.classList.add('is-keyboardFocused');
+	}
+}
+
+function onFocusHandler(event) {
+	var classList = event.target.classList;
+	if (classList && keyboardFocus) {
+		classList.add('is-keyboardFocused');
+	}
+}
+
+function onBlurHandler(event) {
+	var classList = event.target.classList;
+	classList && classList.remove('is-keyboardFocused');
+}
+
+window.addEventListener('keydown', onKeydownHandler, true);
+window.addEventListener('focus', onFocusHandler, true);
+window.addEventListener('blur', onBlurHandler, true);
 
 animateCircleLoaders();
 window.addEventListener("PageFastLoaded", enhanceAll);
