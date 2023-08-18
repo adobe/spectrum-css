@@ -11,7 +11,16 @@
 	"targetDefaults": {
 		"build": {
 			"dependsOn": ["clean", "^build"],
-			"inputs": ["{workspaceRoot}/*.css"]
+			"inputs": ["{workspaceRoot}/*.css", "{workspaceRoot}/themes/*.css"],
+			"outputs": ["{workspaceRoot}/dist/**"]
+		},
+		"dev": {
+			"dependsOn": ["build"]
+		},
+		"dev:site": {
+			"dependsOn": ["clean:docs", "build:components"],
+			"inputs": ["{projectRoot}/site/**"],
+			"outputs": ["{projectRoot}/dist"]
 		}
 	},
 	"includedScripts": ["build"]
