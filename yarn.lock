@@ -2702,6 +2702,12 @@
   integrity sha512-qokLJ1FvEFS/0ef6I1cKFCZr3JLfBLCPdRmAimrElocUx6hBbzwfBOVoRm0tHSZM9VIxHVMugziTA2IbSdH2EA==
 
 "@spectrum-css/menu@^4.0.50":
+"@spectrum-css/actionmenu@4.0.38":
+  version "4.0.38"
+  resolved "https://registry.yarnpkg.com/@spectrum-css/actionmenu/-/actionmenu-4.0.38.tgz#fc89340a956422ce7898a7183394a2fc1741d85d"
+  integrity sha512-xhnTHQOV55Cw+u+P5SZwfn4wAewLCKaVlHrZgVzvBNwCr8IrQoWvwG2BcDiLKbFsUjeGntwtm3q3I8nzYAj0iw==
+
+"@spectrum-css/menu@^4.0.41", "@spectrum-css/menu@^4.0.50":
   version "4.0.50"
   resolved "https://registry.yarnpkg.com/@spectrum-css/menu/-/menu-4.0.50.tgz#d72467542b0cab858062c6fd5cb2950e8bbb0bc4"
   integrity sha512-CBg8mUe4BFR0pKsMLWkAQW9/7tOp1V9QQkQzc8ZnT3Ayz5uFGy9saEErN5mSWxf2+22Ab5UftMU2uzgFo762eA==
@@ -2710,10 +2716,6 @@
   version "3.0.34"
   resolved "https://registry.yarnpkg.com/@spectrum-css/pickerbutton/-/pickerbutton-3.0.34.tgz#987c639a281f0a54e72695cf38127faa60b9fcce"
   integrity sha512-D8cfc9nvGNiLlY/y6TsgyZpj6zdGMh2ENUQi846DYS6ONRtDh9M2xoigpRcbIXc6Cm8kgCiZcTFsk07B/TT+pg==
-"@spectrum-css/actionmenu@4.0.38":
-  version "4.0.38"
-  resolved "https://registry.yarnpkg.com/@spectrum-css/actionmenu/-/actionmenu-4.0.38.tgz#fc89340a956422ce7898a7183394a2fc1741d85d"
-  integrity sha512-xhnTHQOV55Cw+u+P5SZwfn4wAewLCKaVlHrZgVzvBNwCr8IrQoWvwG2BcDiLKbFsUjeGntwtm3q3I8nzYAj0iw==
 
 "@spectrum-css/stepper@^4.0.59":
   version "4.0.59"

@@ -46,11 +46,19 @@ examples:
             <div class="spectrum-CoachMark-header">
               <div class="spectrum-CoachMark-title">Try playing with a pixel brush</div>
               <div class="spectrum-CoachMark-action-menu">
-                <button class="spectrum-ActionButton spectrum-ActionButton--sizeM spectrum-ActionButton--quiet spectrum-CoachMark-header-button is-selected">
+
+                <button class="spectrum-ActionButton spectrum-ActionButton--sizeM spectrum-ActionButton--quiet spectrum-CoachMark-menu is-selected">
                   <svg class="spectrum-Icon spectrum-Icon--sizeM spectrum-ActionButton-icon" focusable="false" aria-hidden="true">
                     <use xlink:href="#spectrum-icon-18-More" />
                   </svg>
                 </button>
+
+                <button class="spectrum-ActionButton spectrum-ActionButton--sizeS spectrum-ActionButton--quiet spectrum-CoachMark-menu--mobile is-selected">
+                  <svg class="spectrum-Icon spectrum-Icon--sizeS spectrum-ActionButton-icon" focusable="false" aria-hidden="true">
+                    <use xlink:href="#spectrum-icon-18-More" />
+                  </svg>
+                </button>
+
                 <br>
                 <div class="spectrum-Popover spectrum-Popover--bottom is-open">
                   <ul class="spectrum-Menu" role="menu">

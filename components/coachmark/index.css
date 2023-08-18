@@ -11,17 +11,8 @@ governing permissions and limitations under the License.
 */
 
 .spectrum-CoachMark {
-	--spectrum-coachmark-min-width:  296px; /* TODO: Replace with new token */
-	--spectrum-coachmark-width:  296px; /* TODO: Replace with new token */
-	--spectrum-coachmark-max-width: 380px; /* TODO: Replace with new token */
-
-	--spectrum-coachmark-media-min-height: var(--spectrum-coach-mark-media-minimum-height);
-	--spectrum-coachmark-media-height: var(--spectrum-coach-mark-media-height);
-
 	--spectrum-coachmark-padding: var(--spectrum-coach-mark-edge-to-content);
 
-	--mod-popover-border-width: var(--spectrum-border-width-100);
-	--mod-popover-corner-radius: var(--spectrum-corner-radius-100);
 	--spectrum-coachmark-border-size: var(--mod-popover-border-width);
 	--spectrum-coachmark-border-radius: var(--mod-popover-corner-radius);
 
@@ -29,7 +20,6 @@ governing permissions and limitations under the License.
 	--spectrum-coachmark-body-to-footer: var(--spectrum-spacing-300);
 
 	--spectrum-coachmark-title-color: var(--spectrum-heading-color);
-	--spectrum-coachmark-title-font-size: var(--spectrum-coach-mark-title-size);
 
 	--spectrum-coachmark-title-font-family: var(--spectrum-heading-sans-serif-font-family-stack);
 	--spectrum-coachmark-title-font-style: var(--spectrum-heading-serif-font-style);
@@ -38,17 +28,14 @@ governing permissions and limitations under the License.
 	--spectrum-coachmark-title-text-line-height: var(--spectrum-heading-line-height);
 
 	--spectrum-coachmark-content-font-color: var(--spectrum-body-color);
-	--spectrum-coachmark-content-font-size: var(--spectrum-coach-mark-body-size);
+
 	--spectrum-coachmark-content-font-weight: var(--spectrum-body-sans-serif-font-weight);
 	--spectrum-coachmark-content-font-family: var(--spectrum-body-sans-serif-font-family);
 	--spectrum-coachmark-content-font-style: var(--spectrum-body-sans-serif-font-style);
 	--spectrum-coachmark-content-line-height: var(--spectrum-body-line-height);
 
-	--spectrum-coachmark-media-min-height: var(--spectrum-coach-mark-media-minimun-height);
-	--spectrum-coachmark-media-height: var(--spectrum-coach-mark-media-height); /* THIS NEEDS A NEW TOKEN */
-
 	--spectrum-coachmark-step-color: var(--spectrum-coach-mark-pagination-color);
-	--spectrum-coachmark-step-font-size: var(--spectrum-coach-mark-pagination-body-size);
+
 	--spectrum-coachmark-step-font-weight: var(--spectrum-body-medium-font-weight);
 	--spectrum-coachmark-step-font-family: var(--spectrum-body-sans-serif-font-family);
 	--spectrum-coachmark-step-font-style: var(--spectrum-body-sans-serif-font-style);
@@ -58,9 +45,11 @@ governing permissions and limitations under the License.
 	--spectrum-coachmark-heading-to-action-button: var(--spectrum-spacing-300);
 
 	--mod-buttongroup-justify-content: flex-end;
+	--mod-popover-border-width: var(--spectrum-border-width-100);
+	--mod-popover-corner-radius: var(--spectrum-corner-radius-100);
 	--mod-popover-content-area-spacing-vertical: 0;
-	/* --mod-button-edge-to-visual-only: 9px; */
-	--mod-buttongroup-spacing-horizontal: var(--spectrum-spacing-100);
+	--mod-button-edge-to-visual-only: 9px;
+
 
 	--spectrum-coachmark-buttongroup-hidden: none;
 	--spectrum-coachmark-buttongroup-displayed: flex;
@@ -69,12 +58,30 @@ governing permissions and limitations under the License.
 	--spectrum-coachmark-buttongroup-mobile-hidden: none;
 	--spectrum-coachmark-buttongroup-mobile-displayed: flex;
 	--spectrum-coachmark-buttongroup-mobile-display: var(--spectrum-coachmark-buttongroup-mobile-hidden);
+
+	--spectrum-coachmark-menu-hidden: none;
+	--spectrum-coachmark-menu-displayed: inline-block;
+	--spectrum-coachmark-menu-display: var(--spectrum-coachmark-menu-displayed);
+
+	--spectrum-coachmark-menu-mobile-hidden: none;
+	--spectrum-coachmark-menu-mobile-displayed: inline-block;
+	--spectrum-coachmark-menu-mobile-display: var(--spectrum-coachmark-buttongroup-mobile-hidden);
+
+	--spectrum-coachmark-min-width:  296px; /* TODO: Replace with new token */
+	--spectrum-coachmark-width:  296px; /* TODO: Replace with new token */
+	--spectrum-coachmark-max-width: 380px; /* TODO: Replace with new token */
+	--spectrum-coachmark-content-font-size: var(--spectrum-body-size-s);
+	--spectrum-coachmark-step-font-size: var(--spectrum-body-size-s);
+	--spectrum-coachmark-title-font-size: var(--spectrum-heading-size-xs);
+	--spectrum-coachmark-media-height: 222px; /* THIS NEEDS A NEW TOKEN */
+	--spectrum-coachmark-media-min-height: 166px;
+
 }
 
 .spectrum-CoachMark {
   position: relative;
 	min-inline-size: var(--mod-coachmark-min-width, var(--spectrum-coachmark-min-width));
-	max-inline-size: 380px; /* TODO: Replace with new token or modifier*/
+	max-inline-size: var(--mod-coachmark-max-width, var(--spectrum-coachmark-max-width));
 	inline-size: var(--mod-coachmark-width, var(--spectrum-coachmark-width));
 }
 
@@ -86,21 +93,50 @@ governing permissions and limitations under the License.
 	display: var(--spectrum-coachmark-buttongroup-display);
 }
 
+.spectrum-CoachMark-menu {
+	display: var(--spectrum-coachmark-menu-display);
+}
+.spectrum-CoachMark-menu--mobile {
+	display: var(--spectrum-coachmark-menu-mobile-display);
+}
+
+
 .spectrum--large {
+	/* TODO: replaces these mods with using new tokens */
+	--mod-coachmark-min-width:  216px;
+	--mod-coachmark-width:  216px;
+	--mod-coachmark-max-width: 248px;
+	--mod-coachmark-content-font-size: var(--spectrum-coach-mark-body-size);
+	--mod-coachmark-step-font-size: var(--spectrum-coach-mark-pagination-body-size);
+	--mod-coachmark-title-font-size: var(--spectrum-coach-mark-title-size);
+	--mod-coachmark-media-height: 162px;
+	--mod-coachmark-media-min-height: 121px;
+	--mod-buttongroup-spacing-horizontal: var(--spectrum-spacing-100);
+
+	.spectrum-CoachMark-buttongroup {
+		--spectrum-coachmark-buttongroup-display: var(--spectrum-coachmark-buttongroup-hidden);
+		display: var(--spectrum-coachmark-buttongroup-display);
+	}
 
 	.spectrum-CoachMark-buttongroup--mobile {
 		--spectrum-coachmark-buttongroup-mobile-display: var(--spectrum-coachmark-buttongroup-mobile-displayed);
 		display: var(--spectrum-coachmark-buttongroup-mobile-display);
 	}
 
-	.spectrum-CoachMark-buttongroup {
-		--spectrum-coachmark-buttongroup-display: var(--spectrum-coachmark-buttongroup-hidden);
-		display: var(--spectrum-coachmark-buttongroup-display);
+	.spectrum-CoachMark-menu {
+		--spectrum-coachmark-menu-display: var(--spectrum-coachmark-menu-hidden);
+		display: var(--spectrum-coachmark-menu-display);
+	}
+
+	.spectrum-CoachMark-menu--mobile {
+		--spectrum-coachmark-menu-mobile-display: var(--spectrum-coachmark-menu-mobile-displayed);
+		display: var(--spectrum-coachmark-menu-mobile-display);
 	}
 }
 
 .spectrum-CoachMark-image-wrapper {
-	block-size: var(--spectrum-coachmark-media-height);
+	block-size: var(--mod-coachmark-media-height, var(--spectrum-coachmark-media-height));
+	min-block-size: var(--mod-coachmark-media-min-height, var(--spectrum-coachmark-media-min-height));
 	inline-size: calc(var(--mod-coachmark-width, var(--spectrum-coachmark-width)) - (var(--mod-coachmark-border-size, var(--spectrum-coachmark-border-size)) * 2));
 	object-fit: cover;
 	object-position: center;
@@ -129,7 +165,7 @@ governing permissions and limitations under the License.
 	padding-block-start: var(--mod-coachmark-padding, var(--spectrum-coachmark-padding));;
 	display: flex;
 	justify-content: space-between;
-	align-items: flex-end;
+	align-items: center;
 	margin-block-end: var(--mod-coachmark-header-to-body, var(--spectrum-coachmark-header-to-body));
 }
 
