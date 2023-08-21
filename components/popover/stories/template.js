@@ -19,7 +19,9 @@ export const Template = ({
 	testId,
 	triggerId = "trigger",
 	customStyles = {
-		"--spectrum-popover-offset": "8px"
+		"--spectrum-popover-offset": "8px",
+		"inset-inline-start": "0px",
+		"inset-block-start": "0px",
 	},
 	trigger,
 	content = [],
@@ -51,7 +53,6 @@ export const Template = ({
 
 				// Get trigger element and popover
 				const element = document.querySelector(`#${triggerId}`);
-				console.log(triggerId);
 
 				if (!element) return [];
 				const rect = element.getBoundingClientRect();
@@ -68,15 +69,17 @@ export const Template = ({
 				let x, y;
 				let xOffset = "+ 0px";
 				let yOffset = "+ 0px";
-				if (position.includes("top") || position.includes("bottom")) {
+				if (position.includes("top") || position.includes("bottom") && !(position.includes("-top") || position.includes("-bottom"))) {
 					x = triggerXCenter - (popWidth > 0 ? popWidth / 2 : popWidth);
-				} else if (position.includes("left") || position.includes("right")) {
+				} 
+				if (position.includes("left") || position.includes("right")) {
 					y = triggerYCenter - (popHeight > 0 ? popHeight / 2 : popHeight);
+					console.log(y);
 				}
-				if (position.includes("top")) {
+				if (position.includes("top") && !position.includes("-top")) {
 					y = rect.top - popHeight;
 					yOffset = "- var(--spectrum-popover-offset)";
-				} else if (position.includes("bottom")) {
+				} else if (position.includes("bottom") && !position.includes("-bottom")) {
 					y = rect.bottom;
 					yOffset = "+ var(--spectrum-popover-offset)";
 				} else if (position.includes("left")) {
@@ -105,9 +108,9 @@ export const Template = ({
 					additionalStyles["inset-inline-start"] = "calc(" + (popWidth / 2) + "px - var(--spectrum-popover-pointer-edge-offset))";
 				} else if (position === "top-end" || position === "bottom-end") {
 					additionalStyles["inset-inline-start"] = "calc(-1 *" + (popWidth / 2) + "px + var(--spectrum-popover-pointer-edge-offset))";
-				} else if (position === "left-start" || position === "right-start") {
+				} else if (position === "left-top" || position === "right-top") {
 					additionalStyles["inset-block-start"] = "calc(" + (popHeight / 2) + "px - var(--spectrum-popover-pointer-edge-offset))";
-				} else if (position === "left-end" || position === "right-end") {
+				} else if (position === "left-bottom" || position === "right-bottom") {
 					additionalStyles["inset-block-start"] = "calc(-1 *" + (popHeight / 2) + "px + var(--spectrum-popover-pointer-edge-offset))";
 				}
 
