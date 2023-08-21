@@ -2843,6 +2843,11 @@
   resolved "https://registry.yarnpkg.com/@spectrum-css/menu/-/menu-4.0.50.tgz#d72467542b0cab858062c6fd5cb2950e8bbb0bc4"
   integrity sha512-CBg8mUe4BFR0pKsMLWkAQW9/7tOp1V9QQkQzc8ZnT3Ayz5uFGy9saEErN5mSWxf2+22Ab5UftMU2uzgFo762eA==
 
+"@spectrum-css/modal@^3.0.47":
+  version "3.0.47"
+  resolved "https://registry.yarnpkg.com/@spectrum-css/modal/-/modal-3.0.47.tgz#128f96def4218f5ed011793a8d589b545034ed20"
+  integrity sha512-qTEze1f0QNS5RER4kKZTTPWfakB92ATAAAYrDtvFm6pjg2iKKvlqdtMq4QOoooNXhE4nPeO/JWI9HWOTMboF6g==
+
 "@spectrum-css/pickerbutton@^3.0.34":
   version "3.0.34"
   resolved "https://registry.yarnpkg.com/@spectrum-css/pickerbutton/-/pickerbutton-3.0.34.tgz#987c639a281f0a54e72695cf38127faa60b9fcce"
@@ -12970,7 +12975,6 @@ nx@16.6.0, nx@^16.6.0:
     jsonc-parser "3.2.0"
     lines-and-columns "~2.0.3"
     minimatch "3.0.5"
-    node-machine-id "1.1.12"
     npm-run-path "^4.0.1"
     open "^8.4.0"
     semver "7.5.3"
@@ -15398,7 +15402,7 @@ rimraf@^4.4.1:
   dependencies:
     glob "^9.2.0"
 
-rimraf@^5.0.1:
+rimraf@^5.0.0, rimraf@^5.0.1:
   version "5.0.1"
   resolved "https://registry.yarnpkg.com/rimraf/-/rimraf-5.0.1.tgz#0881323ab94ad45fec7c0221f27ea1a142f3f0d0"
   integrity sha512-OfFZdwtd3lZ+XZzYP/6gTACubwFcHdLRqS9UX3UwpU2dnGQYkPFISRwvM3w9IiB2w7bW5qGo/uAwE4SmXXSKvg==
