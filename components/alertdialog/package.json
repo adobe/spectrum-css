@@ -1,0 +1,47 @@
+{
+  "name": "@spectrum-css/alertdialog",
+  "version": "1.0.0-alpha.1",
+  "description": "The Spectrum CSS alertdialog component",
+  "license": "Apache-2.0",
+  "author": "Adobe",
+  "homepage": "https://opensource.adobe.com/spectrum-css/",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/adobe/spectrum-css.git",
+    "directory": "components/alertdialog"
+  },
+  "bugs": {
+    "url": "https://github.com/adobe/spectrum-css/issues"
+  },
+  "main": "dist/index-vars.css",
+  "scripts": {
+    "build": "gulp",
+    "clean": "rimraf dist",
+    "test": "nx test:scope @spectrum-css/preview alertdialog"
+  },
+  "peerDependencies": {
+    "@spectrum-css/button": ">=10",
+    "@spectrum-css/buttongroup": ">=6.1.0-alpha.0",
+    "@spectrum-css/divider": ">=1 <=2",
+    "@spectrum-css/icon": ">=3.1.0-alpha.0",
+    "@spectrum-css/modal": ">=3.1.0-alpha.0",
+    "@spectrum-css/tokens": ">=11.2.0-alpha.0",
+    "@spectrum-css/underlay": ">=2.1.0-alpha.0"
+  },
+  "devDependencies": {
+    "@spectrum-css/button": "^10.0.5",
+    "@spectrum-css/buttongroup": "^6.1.0-alpha.0",
+    "@spectrum-css/component-builder-simple": "^2.0.10",
+    "@spectrum-css/divider": "^2.0.36",
+    "@spectrum-css/icon": "^3.1.0-alpha.0",
+    "@spectrum-css/modal": "^3.1.0-alpha.0",
+    "@spectrum-css/tokens": "^11.2.0-alpha.0",
+    "@spectrum-css/underlay": "^2.1.0-alpha.0",
+    "gulp": "^4.0.0",
+    "nx": "^16.0.3",
+    "rimraf": "^5.0.0"
+  },
+  "publishConfig": {
+    "access": "public"
+  }
+}

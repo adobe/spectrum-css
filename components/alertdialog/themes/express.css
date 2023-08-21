@@ -10,7 +10,4 @@ OF ANY KIND, either express or implied. See the License for the specific languag
 governing permissions and limitations under the License.
 */
 
-.spectrum-Underlay {
-  /* TODO update to --spectrum-overlay-color token once an RGB stripped value is available */
-  background: rgba(var(--spectrum-black-rgb), var(--spectrum-overlay-opacity));
-}
+@container (--system: express) {}
