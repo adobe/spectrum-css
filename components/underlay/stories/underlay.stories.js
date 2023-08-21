@@ -2,7 +2,7 @@
 import { Template } from "./template";
 
 export default {
-  title: "Underlay",
+  title: "Components/Underlay",
   description: "A underlay component is used with modal and dialog. It lays over the rest of the page to deliver a blocking layer between the two contexts.",
   component: "Underlay",
   argTypes: {

@@ -4,7 +4,7 @@ import { html } from "lit-html";
 import { Template } from "./template";
 
 export default {
-  title: "Alert Dialog",
+  title: "Components/Alert dialog",
   description:
     "Alert dialogs display important information that users need to acknowledge. They appear over the interface and block further interactions until an action is selected.",
   component: "AlertDialog",
