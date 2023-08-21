@@ -21,28 +21,8 @@ governing permissions and limitations under the License.
   --spectrum-underlay-background-exit-animation-duration: var(--spectrum-animation-duration-300);
   --spectrum-underlay-background-exit-animation-delay: var(--spectrum-animation-duration-200);
 
-  --spectrum-underlay-background-color-rgb: var(--spectrum-black-rgb);
-  --spectrum-underlay-background-opacity-light: var(--spectrum-transparent-black-400-opacity);
-  --spectrum-underlay-background-opacity-dark: 0.5;
-  --spectrum-underlay-background-opacity-darkest: 0.6;
-
-
-
-  .spectrum--light &,
-	.spectrum--lightest & {
-    --spectrum-underlay-background-color: rgba(var(--mod-underlay-background-color-rgb, var(--spectrum-underlay-background-color-rgb)),
-                                              var(--mod-underlay-background-opacity-light, var(--spectrum-underlay-background-opacity-light)));
-	}
-
-  .spectrum--dark & {
-    --spectrum-underlay-background-color: rgba(var(--mod-underlay-background-color-rgb, var(--spectrum-underlay-background-color-rgb)),
-                                              var(--mod-underlay-background-opacity-dark, var(--spectrum-underlay-background-opacity-dark)));
-  }
-
-  .spectrum--darkest & {
-    --spectrum-underlay-background-color: rgba(var(--mod-underlay-background-color-rgb, var(--spectrum-underlay-background-color-rgb)),
-                                              var(--mod-underlay-background-opacity-darkest, var(--spectrum-underlay-background-opacity-darkest)));
-  }
+    /* TODO update to --spectrum-overlay-color token once an RGB stripped value is available */
+  --spectrum-underlay-background-color: rgba(var(--spectrum-black-rgb), var(--spectrum-overlay-opacity));;
 }
 
 .spectrum-Underlay {
