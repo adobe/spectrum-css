@@ -74,7 +74,6 @@ export const Template = ({
 				} 
 				if (position.includes("left") || position.includes("right")) {
 					y = triggerYCenter - (popHeight > 0 ? popHeight / 2 : popHeight);
-					console.log(y);
 				}
 				if (position.includes("top") && !position.includes("-top")) {
 					y = rect.top - popHeight;
