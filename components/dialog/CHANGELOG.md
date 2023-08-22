@@ -3,6 +3,19 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+<a name="7.0.0"></a>
+#7.0.0
+🗓
+2023-08-22 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/dialog@6.0.67...@spectrum-css/dialog@7.0.0)
+
+\*feat(dialog)!: major layout updates([526d505](https://github.com/adobe/spectrum-css/commit/526d505))
+
+    	###
+    	🛑 BREAKING CHANGES
+
+    		*
+    		Alert variants of Dialog have been removed and placed inside of Alert Dialog
+
 <a name="6.0.68"></a>
 ##6.0.68
 🗓

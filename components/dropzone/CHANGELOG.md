@@ -3,6 +3,13 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+<a name="5.0.16"></a>
+##5.0.16
+🗓
+2023-08-22 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/dropzone@5.0.14...@spectrum-css/dropzone@5.0.16)
+
+**Note:** Version bump only for package @spectrum-css/dropzone
+
 <a name="5.0.15"></a>
 ##5.0.15
 🗓

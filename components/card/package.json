@@ -1,6 +1,6 @@
 {
   "name": "@spectrum-css/card",
-  "version": "6.0.11",
+  "version": "6.0.12",
   "description": "The Spectrum CSS card component",
   "license": "Apache-2.0",
   "author": "Adobe",
@@ -27,14 +27,14 @@
     "@spectrum-css/typography": ">=4 <=5"
   },
   "devDependencies": {
-    "@spectrum-css/actionbutton": "^5.0.1",
+    "@spectrum-css/actionbutton": "^5.0.2",
     "@spectrum-css/asset": "^3.0.48",
-    "@spectrum-css/checkbox": "^7.0.4",
+    "@spectrum-css/checkbox": "^7.0.5",
     "@spectrum-css/component-builder-simple": "^2.0.17",
     "@spectrum-css/icon": "^4.0.1",
-    "@spectrum-css/quickaction": "^3.0.76",
-    "@spectrum-css/tokens": "^11.2.1",
-    "@spectrum-css/typography": "^5.0.34",
+    "@spectrum-css/quickaction": "^3.0.77",
+    "@spectrum-css/tokens": "^11.2.2",
+    "@spectrum-css/typography": "^5.0.35",
     "gulp": "^4.0.0"
   },
   "publishConfig": {
