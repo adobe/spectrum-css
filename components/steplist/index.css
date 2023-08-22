@@ -128,7 +128,6 @@ governing permissions and limitations under the License.
   &.is-selected {
     /* Focus */
     &:focus,
-    &.is-focused,
     *:focus {
       outline: none;
     }
