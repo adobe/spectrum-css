@@ -10,7 +10,7 @@ import { Template as ClearButton } from "@spectrum-css/clearbutton/stories/templ
 
 import { Template as Menu } from "@spectrum-css/menu/stories/template.js";
 
-import "../index.css";
+import "@spectrum-css/searchwithin";
 
 export const Template = ({
 	rootClass = "spectrum-SearchWithin",

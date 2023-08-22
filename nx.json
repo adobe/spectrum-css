@@ -11,8 +11,12 @@
 	"targetDefaults": {
 		"build": {
 			"dependsOn": ["clean", "^build"],
-			"inputs": ["{workspaceRoot}/*.css", "{workspaceRoot}/themes/*.css"],
-			"outputs": ["{workspaceRoot}/dist/**"]
+			"inputs": [
+				"{workspaceRoot}/*.css",
+				"{workspaceRoot}/themes/*.css",
+				"{workspaceRoot}/gulpfile.js"
+			],
+			"outputs": ["{workspaceRoot}/dist/", "{workspaceRoot}/metadata/mods.md"]
 		},
 		"dev": {
 			"dependsOn": ["build"]

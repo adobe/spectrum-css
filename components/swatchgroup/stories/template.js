@@ -4,7 +4,7 @@ import { classMap } from "lit/directives/class-map.js";
 
 import { lowerCase, capitalize } from "lodash-es";
 
-import "../index.css";
+import "@spectrum-css/swatchgroup";
 
 export const Template = ({
 	rootClass = "spectrum-SwatchGroup",
@@ -19,8 +19,14 @@ export const Template = ({
 	const { express } = globals;
 
 	try {
-		if (!express) import(/* webpackPrefetch: true */ "../themes/spectrum.css");
-		else import(/* webpackPrefetch: true */ "../themes/express.css");
+		if (!express)
+			import(
+				/* webpackPrefetch: true */ "@spectrum-css/swatchgroup/dist/themes/spectrum.css"
+			);
+		else
+			import(
+				/* webpackPrefetch: true */ "@spectrum-css/swatchgroup/dist/themes/express.css"
+			);
 	} catch (e) {
 		console.warn(e);
 	}

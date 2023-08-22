@@ -7,8 +7,7 @@ import { Template as Modal } from "@spectrum-css/modal/stories/template.js";
 import { Template as Divider } from "@spectrum-css/divider/stories/template.js";
 import { Template as CloseButton } from "@spectrum-css/closebutton/stories/template.js";
 
-import "../index.css";
-import "../skin.css";
+import "@spectrum-css/dialog";
 
 export const Template = ({
 	rootClass = "spectrum-Dialog",

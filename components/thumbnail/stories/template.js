@@ -4,7 +4,7 @@ import { styleMap } from "lit/directives/style-map.js";
 import { ifDefined } from "lit/directives/if-defined.js";
 import { Template as OpacityCheckerboard } from "@spectrum-css/opacitycheckerboard/stories/template.js";
 
-import "../index.css";
+import "@spectrum-css/thumbnail";
 
 export const Template = ({
 	rootClass = "spectrum-Thumbnail",
@@ -25,16 +25,11 @@ export const Template = ({
 	},
 	...globals
 }) => {
-
-	const checkerboardContentLayer =  html`
+	const checkerboardContentLayer = html`
 		${imageURL
-			? html`<img
-					class="${rootClass}-image"
-					src=${imageURL}
-					alt=${altText}
-				/>`
+			? html`<img class="${rootClass}-image" src=${imageURL} alt=${altText} />`
 			: ""}
-	`
+	`;
 
 	if (isLayer)
 		return html`
@@ -89,17 +84,17 @@ export const Template = ({
 		`;
 
 	const checkerboardContent = html`
-			<div class="${rootClass}-image-wrapper">
+		<div class="${rootClass}-image-wrapper">
 			${imageURL
 				? html`<img
 						class="${rootClass}-image"
 						src=${imageURL}
 						alt=${altText}
-					/>`
+				  />`
 				: ""}
 			${svg ? html`${svg}` : ""}
 		</div>
-	`
+	`;
 	return html`
 		<div
 			class=${classMap({
@@ -112,11 +107,12 @@ export const Template = ({
 			id=${ifDefined(id)}
 			@click=${onclick}
 		>
-		${OpacityCheckerboard({
-			...globals,
-			componentOnly: true,
-			customClasses: [`${rootClass}`],
-			content: checkerboardContent,
-		})}
-	`
+			${OpacityCheckerboard({
+				...globals,
+				componentOnly: true,
+				customClasses: [`${rootClass}`],
+				content: checkerboardContent,
+			})}
+		</div>
+	`;
 };

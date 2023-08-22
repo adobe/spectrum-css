@@ -10,7 +10,7 @@ import { Template as Popover } from "@spectrum-css/popover/stories/template.js";
 import { Template as ProgressCircle } from "@spectrum-css/progresscircle/stories/template.js";
 import { Template as HelpText } from "@spectrum-css/helptext/stories/template.js";
 
-import "../index.css";
+import "@spectrum-css/picker";
 
 export const Picker = ({
 	rootClass = "spectrum-Picker",
@@ -35,14 +35,20 @@ export const Picker = ({
 
 	const { express } = globals;
 	try {
-		if (!express) import(/* webpackPrefetch: true */ "../themes/spectrum.css");
-		else import(/* webpackPrefetch: true */ "../themes/express.css");
+		if (!express)
+			import(
+				/* webpackPrefetch: true */ "@spectrum-css/picker/dist/themes/spectrum.css"
+			);
+		else
+			import(
+				/* webpackPrefetch: true */ "@spectrum-css/picker/dist/themes/express.css"
+			);
 	} catch (e) {
 		console.warn(e);
 	}
 
 	return html`
-	<button
+		<button
 			class=${classMap({
 				[rootClass]: true,
 				[`${rootClass}--size${size?.toUpperCase()}`]:
@@ -85,7 +91,7 @@ export const Picker = ({
 			})}
 		</button>
 	`;
-}
+};
 
 export const Template = ({
 	rootClass = "spectrum-Picker",
@@ -108,11 +114,16 @@ export const Template = ({
 	id,
 	...globals
 }) => {
-
 	const { express } = globals;
 	try {
-		if (!express) import(/* webpackPrefetch: true */ "../themes/spectrum.css");
-		else import(/* webpackPrefetch: true */ "../themes/express.css");
+		if (!express)
+			import(
+				/* webpackPrefetch: true */ "@spectrum-css/picker/dist/themes/spectrum.css"
+			);
+		else
+			import(
+				/* webpackPrefetch: true */ "@spectrum-css/picker/dist/themes/express.css"
+			);
 	} catch (e) {
 		console.warn(e);
 	}
@@ -142,9 +153,29 @@ export const Template = ({
 					alignment: labelPosition,
 			  })
 			: ""}
-		${labelPosition == "left" ?
-			html`<div style="display: inline-block">
-				${Picker({
+		${labelPosition == "left"
+			? html`<div style="display: inline-block">
+					${Picker({
+						...globals,
+						rootClass,
+						size,
+						placeholder,
+						isQuiet,
+						isFocused,
+						isOpen,
+						isInvalid,
+						isLoading,
+						isDisabled,
+						isReadOnly,
+						customClasses,
+						customStyles,
+						content,
+						iconName,
+						labelPosition,
+						id,
+					})}
+			  </div> `
+			: Picker({
 					...globals,
 					rootClass,
 					size,
@@ -157,36 +188,12 @@ export const Template = ({
 					isDisabled,
 					isReadOnly,
 					customClasses,
-					customStyles,
+					customStyles: customStyles,
 					content,
 					iconName,
 					labelPosition,
 					id,
-				})}
-			</div>
-			`
-		: 
-			Picker({
-				...globals,
-				rootClass,
-				size,
-				placeholder,
-				isQuiet,
-				isFocused,
-				isOpen,
-				isInvalid,
-				isLoading,
-				isDisabled,
-				isReadOnly,
-				customClasses,
-				customStyles: customStyles,
-				content,
-				iconName,
-				labelPosition,
-				id,
-			})
-		}
-		
+			  })}
 		${helpText
 			? HelpText({
 					text: helpText,

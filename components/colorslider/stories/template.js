@@ -3,8 +3,7 @@ import { classMap } from "lit/directives/class-map.js";
 
 import { Template as ColorHandle } from "@spectrum-css/colorhandle/stories/template.js";
 
-import "../index.css";
-import "../skin.css";
+import "@spectrum-css/colorslider";
 
 export const Template = ({
 	rootClass = "spectrum-ColorSlider",

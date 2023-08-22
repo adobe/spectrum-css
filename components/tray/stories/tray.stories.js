@@ -14,8 +14,8 @@ export default {
 			name: "Open",
 			type: { name: "boolean" },
 			table: { disable: true },
+			control: "boolean",
 		},
-		control: "boolean",
 	},
 	args: {
 		rootClass: "spectrum-Tray",

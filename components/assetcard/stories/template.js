@@ -7,7 +7,7 @@ import { useArgs } from "@storybook/client-api";
 
 import { Template as Checkbox } from "@spectrum-css/checkbox/stories/template.js";
 
-import "../index.css";
+import "@spectrum-css/assetcard";
 
 export const Template = ({
 	rootClass = "spectrum-AssetCard",

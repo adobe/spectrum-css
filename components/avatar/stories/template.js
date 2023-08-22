@@ -2,7 +2,7 @@ import { html } from "lit";
 import { classMap } from "lit/directives/class-map.js";
 import { ifDefined } from "lit/directives/if-defined.js";
 
-import "../index.css";
+import "@spectrum-css/avatar";
 
 export const Template = ({
 	rootClass = "spectrum-Avatar",
