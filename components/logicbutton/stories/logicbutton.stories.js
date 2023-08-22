@@ -26,21 +26,11 @@ export default {
 			},
 			control: "boolean",
 		},
-		isFocused: {
-			name: "Focused",
-			type: { name: "boolean" },
-			table: {
-				type: { summary: "boolean" },
-				category: "State",
-			},
-			control: "boolean",
-		},
 	},
 	args: {
 		rootClass: "spectrum-LogicButton",
 		variant: "and",
 		isDisabled: false,
-		isFocused: false,
 	},
 	parameters: {
 		actions: {
