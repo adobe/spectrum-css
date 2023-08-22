@@ -22,10 +22,10 @@
   resolved "https://registry.yarnpkg.com/@adobe/spectrum-tokens-deprecated/-/spectrum-tokens-deprecated-11.8.0.tgz#7edf6f7b7e3c22581e0732c8de97fa0a68ed66b9"
   integrity sha512-LW2SA/8VhW868tEcgIcugx7xdtgFG3KiUoEz+4s2nHTdmKj0h2A9pnTNplVTNAMq2uPSfp6wKKvQNNnMSIXqCg==
 
-"@adobe/spectrum-tokens@12.16.0":
-  version "12.16.0"
-  resolved "https://registry.yarnpkg.com/@adobe/spectrum-tokens/-/spectrum-tokens-12.16.0.tgz#4af75e0faf484aa97a1e904edeef1f4e2e910817"
-  integrity sha512-UaHX78bYtzXu7NRNFvtJ9mu6y7Q0RsRSW+QOQp3kFaPcnbopAiDHyddwSH3xojDCgP9LZcPsyVMmxXeo0gP0NQ==
+"@adobe/spectrum-tokens@12.17.0":
+  version "12.17.0"
+  resolved "https://registry.yarnpkg.com/@adobe/spectrum-tokens/-/spectrum-tokens-12.17.0.tgz#ba2d45fd2b0d925241073dbbcf3fc9edda39e213"
+  integrity sha512-U2a+JWvzlZdnmVEyZviFLsARzaS3NKMPD/8E71zfvcDB7X7IG/BntuK0mzyH+m0Nm2wJtwjPEQFWbV5+PeKdlQ==
 
 "@ampproject/remapping@^2.2.0":
   version "2.2.0"
@@ -2828,11 +2828,6 @@
   resolved "https://registry.yarnpkg.com/@spectrum-css/actionbutton/-/actionbutton-4.0.13.tgz#5ff2f77f907b5c091ec0dca8c7cce5a6b2513c2c"
   integrity sha512-KfxlqWKGyUsjOUDBOzCWE2nWU3xPuGfr0itTfjQY2ndlUpbqwjz3rEMM9o/0B5mJ4NvJ+1NXTxD+a+t8kA1cBQ==
 
-"@spectrum-css/buttongroup@^6.0.63":
-  version "6.0.63"
-  resolved "https://registry.yarnpkg.com/@spectrum-css/buttongroup/-/buttongroup-6.0.63.tgz#1a1873cbfe96b6bea44a4bcd2dadb41ec84d0e9d"
-  integrity sha512-9dJdPQD6ztasCwKqJPA/gfowNsdstp7Ny7eiMkokn3sJqfEm4HGvLcl8QwP5ynkWzNJqdKha7jaTLkAx0IybBQ==
-
 "@spectrum-css/clearbutton@^2.0.0":
   version "2.0.0"
   resolved "https://registry.yarnpkg.com/@spectrum-css/clearbutton/-/clearbutton-2.0.0.tgz#ad638dd4bd021f42c0b020ae024f487aa64198ca"
@@ -2848,11 +2843,6 @@
   resolved "https://registry.yarnpkg.com/@spectrum-css/menu/-/menu-4.0.50.tgz#d72467542b0cab858062c6fd5cb2950e8bbb0bc4"
   integrity sha512-CBg8mUe4BFR0pKsMLWkAQW9/7tOp1V9QQkQzc8ZnT3Ayz5uFGy9saEErN5mSWxf2+22Ab5UftMU2uzgFo762eA==
 
-"@spectrum-css/modal@^3.0.49":
-  version "3.0.49"
-  resolved "https://registry.yarnpkg.com/@spectrum-css/modal/-/modal-3.0.49.tgz#2b3df3521c85e35d5193fe39a3953cdaa17fdeb8"
-  integrity sha512-SoG0CjmzrrSvcM1bL4XKDx8fOW+5/s/BVIxM/b47Q+lo8fw9j8TteI9jSUtSXbB9w8QPgxqOIKCtTahaOfPM8Q==
-
 "@spectrum-css/pickerbutton@^3.0.34":
   version "3.0.34"
   resolved "https://registry.yarnpkg.com/@spectrum-css/pickerbutton/-/pickerbutton-3.0.34.tgz#987c639a281f0a54e72695cf38127faa60b9fcce"
@@ -2867,11 +2857,6 @@
   version "10.2.2"
   resolved "https://registry.yarnpkg.com/@spectrum-css/tokens/-/tokens-10.2.2.tgz#461697381575446542bbce8ae6d8ea948195ab3f"
   integrity sha512-ljNXDPIJiS2q58dYn1EsXYF78gZaUCrLkOv8T8A5RBy/hM8fI85BghgiRkM0Dvsh87ej0juw3fO71Vkv3fuWlg==
-
-"@spectrum-css/underlay@^2.0.54":
-  version "2.0.54"
-  resolved "https://registry.yarnpkg.com/@spectrum-css/underlay/-/underlay-2.0.54.tgz#40b48994ef62e0c4b4ac2ce8999a7c5d63cb6f6d"
-  integrity sha512-t5TN59GPF5Xo4PCJcRclaPkHVYtuaBy+lmtgp+W/UQEy3CnQYfEQGD9j3qEerFs9ltzOUwiLvuPKX+NayEy15A==
 
 "@storybook/addon-a11y@^7.2.3":
   version "7.2.3"
