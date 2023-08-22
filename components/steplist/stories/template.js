@@ -5,8 +5,7 @@ import { ifDefined } from "lit/directives/if-defined.js";
 
 import { Template as Tooltip } from "@spectrum-css/tooltip/stories/template.js";
 
-import "../index.css";
-import "../skin.css";
+import "@spectrum-css/steplist";
 
 export const SteplistItem = ({
 	rootClass,

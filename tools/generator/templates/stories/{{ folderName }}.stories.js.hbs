@@ -1,5 +1,6 @@
 // Import the component markup template
 import { Template } from "./template";
+import { Template as Typography } from "@spectrum-css/typography/stories/template.js";
 
 // More on default export: https://storybook.js.org/docs/web-components/writing-stories/introduction#default-export
 export default {
@@ -7,6 +8,7 @@ export default {
   description: "{{ description }}",
   component: "{{ pascalCase name }}",
   argTypes: {
+		content: { table: { disable: true } },
     size: {
       name: "Size",
       type: { name: "string", required: true },
@@ -19,11 +21,18 @@ export default {
       options: ["s", "m", "l", "xl"],
       control: "select"
     },
+		isOpen: {
+			name: "Open",
+			type: { name: "boolean" },
+			table: { disable: true },
+			control: "boolean",
+		},
   },
   // More on args: https://storybook.js.org/docs/web-components/writing-stories/args
   args: {
     rootClass: "spectrum-{{ pascalCase name }}",
     size: "m",
+    isOpen: true,
   },
   parameters: {
     actions: {
@@ -36,4 +45,11 @@ export default {
 };
 
 export const Default = Template.bind({});
-Default.args = {};
+Default.args = {
+  content: [
+    {
+      template: Typography,
+      ...Typography.args,
+    }
+  ]
+};

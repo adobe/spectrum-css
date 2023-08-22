@@ -13,7 +13,6 @@ The following tasks are available:
 - `gulp buildLite` - Clean, then build CSS custom properties only (`index.vars`)
 - `gulp buildHeavy` - Clean, then build CSS for all strategies
 - `gulp buildCSS` - Build CSS for all strategies
-- `gulp buildDocs` - Build documentation only
 
 ## Accessing PostCSS preprocessors
 

@@ -7,7 +7,7 @@ import { useArgs, useGlobals } from "@storybook/client-api";
 
 import { Template as FieldLabel } from "@spectrum-css/fieldlabel/stories/template.js";
 
-import "../index.css";
+import "@spectrum-css/slider";
 
 export const Template = ({
 	rootClass = "spectrum-Slider",
@@ -31,8 +31,14 @@ export const Template = ({
 	const { express } = globals;
 
 	try {
-		if (!express) import(/* webpackPrefetch: true */ "../themes/spectrum.css");
-		else import(/* webpackPrefetch: true */ "../themes/express.css");
+		if (!express)
+			import(
+				/* webpackPrefetch: true */ "@spectrum-css/slider/dist/themes/spectrum.css"
+			);
+		else
+			import(
+				/* webpackPrefetch: true */ "@spectrum-css/slider/dist/themes/express.css"
+			);
 	} catch (e) {
 		console.warn(e);
 	}
@@ -228,7 +234,7 @@ export const Template = ({
 				? html`<div
 						class="${rootClass}-labelContainer"
 						role=${ifDefined(values.length > 1 ? "presentation" : undefined)}
-					>
+				  >
 						<div
 							class="${rootClass}-value"
 							role="textbox"
@@ -239,7 +245,7 @@ export const Template = ({
 						>
 							${values[0]}${values.length > 1 ? ` - ${values[1]}` : ""}
 						</div>
-					</div>`
+				  </div>`
 				: ""}
 		</div>
 	`;

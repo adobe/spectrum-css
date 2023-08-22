@@ -10,7 +10,7 @@ import { action } from "@storybook/addon-actions";
 
 import { Template as ActionButton } from "@spectrum-css/actionbutton/stories/template.js";
 
-import "../index.css";
+import "@spectrum-css/calendar";
 
 export const Template = ({
 	rootClass = "spectrum-Calendar",
@@ -119,71 +119,68 @@ export const Template = ({
 		if (firstDOWInMonth > DOW.length - orphanedDays) {
 			weeksInMonth++;
 		}
-		if (displayedMonth === 1 && firstDOWInMonth > 0) { // accounts for Feburary
+		if (displayedMonth === 1 && firstDOWInMonth > 0) {
+			// accounts for Feburary
 			weeksInMonth++;
 		}
 
 		/* This is generating a nested array with the  */
-		return new Array(Math.ceil(weeksInMonth))
-			.fill(0)
-			.map((_val, idx) =>
-				new Array(DOW.length).fill(0).map((_v, i) => {
-					const thisDay = idx * DOW.length + i + 1 - firstDOWInMonth;
-					const isOutsideMonth =
-						thisDay < 1 ||
-						thisDay > lastDateInMonth;
-					/* Determine if this entry exists within this month or the next or prev month */
-					let thisMonth = !isOutsideMonth
-						? displayedMonth
-						: displayedMonth + (thisDay < 1 ? -1 : 1);
-					/* Determine if the displayed date is in this year or the previous one */
-					let thisYear = displayedYear;
+		return new Array(Math.ceil(weeksInMonth)).fill(0).map((_val, idx) =>
+			new Array(DOW.length).fill(0).map((_v, i) => {
+				const thisDay = idx * DOW.length + i + 1 - firstDOWInMonth;
+				const isOutsideMonth = thisDay < 1 || thisDay > lastDateInMonth;
+				/* Determine if this entry exists within this month or the next or prev month */
+				let thisMonth = !isOutsideMonth
+					? displayedMonth
+					: displayedMonth + (thisDay < 1 ? -1 : 1);
+				/* Determine if the displayed date is in this year or the previous one */
+				let thisYear = displayedYear;
 
-					if (isOutsideMonth) {
-						if (thisMonth < 0) {
-							thisMonth = 11;
-							thisYear -= 1;
-						} else if (thisMonth > 11) {
-							thisMonth = 0;
-							thisYear += 1;
-						}
+				if (isOutsideMonth) {
+					if (thisMonth < 0) {
+						thisMonth = 11;
+						thisYear -= 1;
+					} else if (thisMonth > 11) {
+						thisMonth = 0;
+						thisYear += 1;
 					}
-					const thisDate = new Date(
-						thisYear,
-						displayedMonth,
-						thisDay,
-						0,
-						0,
-						0,
-						0
-					);
-					const thisDatetime = thisDate.getTime();
+				}
+				const thisDate = new Date(
+					thisYear,
+					displayedMonth,
+					thisDay,
+					0,
+					0,
+					0,
+					0
+				);
+				const thisDatetime = thisDate.getTime();
 
-					/* Compare the rendered date against the clean date stamp for today */
-					const isToday = !!(thisDatetime === todayDatetime);
-					const isInRange = !!(
-						thisDatetime &&
-						selectedDatetime &&
-						lastSelectedDatetime &&
-						thisDatetime >= selectedDatetime &&
-						thisDatetime <= lastSelectedDatetime
-					);
-					const isSelected = !!(
-						(selectedDate && selectedDatetime === thisDatetime) ||
-						isInRange
-					);
+				/* Compare the rendered date against the clean date stamp for today */
+				const isToday = !!(thisDatetime === todayDatetime);
+				const isInRange = !!(
+					thisDatetime &&
+					selectedDatetime &&
+					lastSelectedDatetime &&
+					thisDatetime >= selectedDatetime &&
+					thisDatetime <= lastSelectedDatetime
+				);
+				const isSelected = !!(
+					(selectedDate && selectedDatetime === thisDatetime) ||
+					isInRange
+				);
 
-					return {
-						date: thisDate,
-						isSelected,
-						isToday,
-						isOutsideMonth,
-						isInRange,
-						isRangeStart: !!(isInRange && thisDatetime === selectedDatetime),
-						isRangeEnd: !!(isInRange && thisDatetime === lastSelectedDatetime),
-					};
-				})
-			);
+				return {
+					date: thisDate,
+					isSelected,
+					isToday,
+					isOutsideMonth,
+					isInRange,
+					isRangeStart: !!(isInRange && thisDatetime === selectedDatetime),
+					isRangeEnd: !!(isInRange && thisDatetime === lastSelectedDatetime),
+				};
+			})
+		);
 	};
 	if (!onDateClick || typeof onDateClick !== "function") {
 		/**
@@ -319,9 +316,7 @@ export const Template = ({
 										role="gridcell"
 										class="${rootClass}-tableCell"
 										tabindex=${!thisDay.isOutsideMonth ? "-1" : ""}
-										aria-disabled=${thisDay.isDisabled
-											? "true"
-											: "false"}
+										aria-disabled=${thisDay.isDisabled ? "true" : "false"}
 										aria-selected=${thisDay.isSelected === true
 											? "true"
 											: "false"}

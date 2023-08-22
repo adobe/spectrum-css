@@ -4,7 +4,7 @@ import { when } from "lit/directives/when.js";
 
 import { Template as Icon } from "@spectrum-css/icon/stories/template.js";
 
-import "../index.css";
+import "@spectrum-css/tooltip";
 
 export const Template = ({
 	rootClass = "spectrum-Tooltip",
@@ -19,8 +19,14 @@ export const Template = ({
 	const { express } = globals;
 
 	try {
-		if (!express) import(/* webpackPrefetch: true */ "../themes/spectrum.css");
-		else import(/* webpackPrefetch: true */ "../themes/express.css");
+		if (!express)
+			import(
+				/* webpackPrefetch: true */ "@spectrum-css/tooltip/dist/themes/spectrum.css"
+			);
+		else
+			import(
+				/* webpackPrefetch: true */ "@spectrum-css/tooltip/dist/themes/express.css"
+			);
 	} catch (e) {
 		console.warn(e);
 	}
