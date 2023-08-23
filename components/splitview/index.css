@@ -71,7 +71,7 @@ governing permissions and limitations under the License.
   border-block-width: var(--mod-splitview-gripper-border-width-vertical, var(--spectrum-splitview-gripper-border-width-vertical));
   border-inline-width: var(--mod-splitview-gripper-border-width-horizontal, var(--spectrum-splitview-gripper-border-width-horizontal));
 
-  &:before {
+  &::before {
     background-color: var(--highcontrast-splitview-handle-background-color, var(--mod-splitview-handle-background-color, var(--spectrum-splitview-handle-background-color)));
   }
 }
@@ -91,19 +91,17 @@ governing permissions and limitations under the License.
 
   &.is-collapsed-start,
   &.is-collapsed-end {
-    .spectrum-SplitView-gripper {
-      /* make the center line of the gripper */
-      &:before {
-        content: "";
-        position: absolute;
+    /* make the center line of the gripper */
+    .spectrum-SplitView-gripper::before {
+      content: "";
+      position: absolute;
 
-        inset-block-start: 0;
-        inset-inline-start: calc(
-          50% - calc(var(--mod-splitview-handle-width, var(--spectrum-splitview-handle-width)) / 2)
-        );
-        inline-size: var(--mod-splitview-handle-width, var(--spectrum-splitview-handle-width));
-        block-size: 100%;
-      }
+      inset-block-start: 0;
+      inset-inline-start: calc(
+        50% - calc(var(--mod-splitview-handle-width, var(--spectrum-splitview-handle-width)) / 2)
+      );
+      inline-size: var(--mod-splitview-handle-width, var(--spectrum-splitview-handle-width));
+      block-size: 100%;
     }
   }
 
@@ -119,47 +117,51 @@ governing permissions and limitations under the License.
       inset-inline-start: auto;
     }
   }
+}
 
-  &.is-draggable {
-    &:hover,
-    &.is-hovered {
+.spectrum-SplitView-splitter.is-draggable {
+  &:hover,
+  &.is-hovered {
+    background-color: var(--highcontrast-splitview-handle-background-color-hover, var(--mod-splitview-handle-background-color-hover, var(--spectrum-splitview-handle-background-color-hover)));
+
+    .spectrum-SplitView-gripper {
+      border-color: var(--highcontrast-splitview-handle-background-color-hover, var(--mod-splitview-handle-background-color-hover, var(--spectrum-splitview-handle-background-color-hover)));
+    }
+
+    .spectrum-SplitView-gripper::before {
       background-color: var(--highcontrast-splitview-handle-background-color-hover, var(--mod-splitview-handle-background-color-hover, var(--spectrum-splitview-handle-background-color-hover)));
+    }
+  }
 
-      .spectrum-SplitView-gripper {
-        border-color: var(--highcontrast-splitview-handle-background-color-hover, var(--mod-splitview-handle-background-color-hover, var(--spectrum-splitview-handle-background-color-hover)));
-        &:before {
-          background-color: var(--highcontrast-splitview-handle-background-color-hover, var(--mod-splitview-handle-background-color-hover, var(--spectrum-splitview-handle-background-color-hover)));
-        }
-      }
+  &:active,
+  &.is-active {
+    background-color: var(--highcontrast-splitview-handle-background-color-down, var(--mod-splitview-handle-background-color-down, var(--spectrum-splitview-handle-background-color-down)));
+
+    .spectrum-SplitView-gripper {
+      border-color: var(--highcontrast-splitview-handle-background-color-down, var(--mod-splitview-handle-background-color-down, var(--spectrum-splitview-handle-background-color-down)));
     }
 
-    &:active,
-    &.is-active {
+    /* Center line of gripper */
+    .spectrum-SplitView-gripper::before {
       background-color: var(--highcontrast-splitview-handle-background-color-down, var(--mod-splitview-handle-background-color-down, var(--spectrum-splitview-handle-background-color-down)));
+    }
+  }
 
-      .spectrum-SplitView-gripper {
-        border-color: var(--highcontrast-splitview-handle-background-color-down, var(--mod-splitview-handle-background-color-down, var(--spectrum-splitview-handle-background-color-down)));
-        &:before {
-          background-color: var(--highcontrast-splitview-handle-background-color-down, var(--mod-splitview-handle-background-color-down, var(--spectrum-splitview-handle-background-color-down)));
-        }
-      }
+  &:focus {
+    outline: none;
+  }
+
+  &:focus-visible {
+    outline: none;
+    background-color: var(--highcontrast-splitview-handle-background-color-focus, var(--mod-splitview-handle-background-color-focus, var(--spectrum-splitview-handle-background-color-focus)));
+
+    .spectrum-SplitView-gripper {
+      border-color: var(--highcontrast-splitview-handle-background-color-focus, var(--mod-splitview-handle-background-color-focus, var(--spectrum-splitview-handle-background-color-focus)));
+      box-shadow: 0 0 0 1px var(--highcontrast-splitview-handle-background-color-focus, var(--mod-splitview-handle-background-color-focus, var(--spectrum-splitview-handle-background-color-focus)));
     }
 
-    &:focus {
-      outline: none;
-    }
-
-    &:focus-visible {
-      outline: none;
+    .spectrum-SplitView-gripper::before {
       background-color: var(--highcontrast-splitview-handle-background-color-focus, var(--mod-splitview-handle-background-color-focus, var(--spectrum-splitview-handle-background-color-focus)));
-
-      .spectrum-SplitView-gripper {
-        border-color: var(--highcontrast-splitview-handle-background-color-focus, var(--mod-splitview-handle-background-color-focus, var(--spectrum-splitview-handle-background-color-focus)));
-        box-shadow: 0 0 0 1px var(--highcontrast-splitview-handle-background-color-focus, var(--mod-splitview-handle-background-color-focus, var(--spectrum-splitview-handle-background-color-focus)));
-        &:before {
-          background-color: var(--highcontrast-splitview-handle-background-color-focus, var(--mod-splitview-handle-background-color-focus, var(--spectrum-splitview-handle-background-color-focus)));
-        }
-      }
     }
   }
 }
@@ -200,36 +202,36 @@ governing permissions and limitations under the License.
   .spectrum-SplitView-splitter {
     inline-size: var(--mod-splitview-vertical-width, var(--spectrum-splitview-vertical-width));
     block-size: var(--mod-splitview-handle-width, var(--spectrum-splitview-handle-width));
+  }
 
-    &.is-collapsed-start,
-    &.is-collapsed-end {
-      .spectrum-SplitView-gripper {
-        inset-inline-start: var(--mod-splitview-vertical-gripper-width, var(--spectrum-splitview-vertical-gripper-width));
-
-        /* make the center line of the gripper */
-        &:before {
-          inset-block-start: calc(
-            var(--mod-splitview-vertical-gripper-width, var(--spectrum-splitview-vertical-gripper-width)) -
-              calc(var(--mod-splitview-handle-width, var(--spectrum-splitview-handle-width)) / 2)
-          );
-          inset-inline-start: var(--mod-splitview-vertical-gripper-reset, var(--spectrum-splitview-vertical-gripper-reset));
-          inline-size: var(--mod-splitview-vertical-gripper-outer-width, var(--spectrum-splitview-vertical-gripper-outer-width));
-          block-size: var(--mod-splitview-handle-width, var(--spectrum-splitview-handle-width));
-        }
-      }
+  .spectrum-SplitView-splitter.is-collapsed-start,
+  .spectrum-SplitView-splitter.is-collapsed-end {
+    .spectrum-SplitView-gripper {
+      inset-inline-start: var(--mod-splitview-vertical-gripper-width, var(--spectrum-splitview-vertical-gripper-width));
     }
-
-    &.is-collapsed-start {
-      .spectrum-SplitView-gripper {
-        inset-block-start: var(--mod-splitview-vertical-gripper-reset, var(--spectrum-splitview-vertical-gripper-reset));
-      }
+    
+    /* make the center line of the gripper */
+    .spectrum-SplitView-gripper::before {
+      inset-block-start: calc(
+        var(--mod-splitview-vertical-gripper-width, var(--spectrum-splitview-vertical-gripper-width)) -
+          calc(var(--mod-splitview-handle-width, var(--spectrum-splitview-handle-width)) / 2)
+      );
+      inset-inline-start: var(--mod-splitview-vertical-gripper-reset, var(--spectrum-splitview-vertical-gripper-reset));
+      inline-size: var(--mod-splitview-vertical-gripper-outer-width, var(--spectrum-splitview-vertical-gripper-outer-width));
+      block-size: var(--mod-splitview-handle-width, var(--spectrum-splitview-handle-width));
     }
+  }
 
-    &.is-collapsed-end {
-      .spectrum-SplitView-gripper {
-        inset-block-start: auto;
-        inset-block-end: var(--mod-splitview-vertical-gripper-reset, var(--spectrum-splitview-vertical-gripper-reset));
-      }
+  .spectrum-SplitView-splitter.is-collapsed-start {
+    .spectrum-SplitView-gripper {
+      inset-block-start: var(--mod-splitview-vertical-gripper-reset, var(--spectrum-splitview-vertical-gripper-reset));
+    }
+  }
+
+  .spectrum-SplitView-splitter.is-collapsed-end {
+    .spectrum-SplitView-gripper {
+      inset-block-start: auto;
+      inset-block-end: var(--mod-splitview-vertical-gripper-reset, var(--spectrum-splitview-vertical-gripper-reset));
     }
   }
 }
