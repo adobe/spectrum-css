@@ -44,7 +44,7 @@ governing permissions and limitations under the License.
 
   --spectrum-calendar-day-today-text-color-disabled: var(--spectrum-gray-500);
   --spectrum-calendar-day-today-border-color-disabled: var(--spectrum-gray-400);
-  --spectrum-calendar-day-text-color-disabled: var(--spectrum-gray-500);
+  --spectrum-calendar-day-text-color-disabled: var(--spectrum-disabled-content-color);
 
   --spectrum-calendar-day-text-color-key-focus: var(--spectrum-gray-900);
 
@@ -90,10 +90,6 @@ governing permissions and limitations under the License.
 
   &:not([disabled]) {
     color: var(--highcontrast-calendar-button-icon-color, var(--mod-calendar-button-icon-color, var(--spectrum-calendar-button-icon-color)));
-  }
-
-  &:disabled {
-    color: var(--highcontrast-calendar-button-icon-color-disabled, var(--mod-calendar-button-icon-color-disabled, var(--spectrum-calendar-button-icon-color-disabled)));
   }
 }
 
