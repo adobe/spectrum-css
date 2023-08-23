@@ -1,11 +1,11 @@
 import { html } from "lit-html";
 import { classMap } from "lit-html/directives/class-map.js";
 import { styleMap } from "lit-html/directives/style-map.js";
-import { ifDefined } from "lit-html/directives/if-defined.js";
+import { ifDefined } from 'lit-html/directives/if-defined.js';
 
 import { Template as Icon } from "@spectrum-css/icon/stories/template.js";
 
-import "@spectrum-css/clearbutton";
+import "../index.css";
 
 export const ClearButton = ({
 	rootClass = "spectrum-ClearButton",
@@ -17,7 +17,7 @@ export const ClearButton = ({
 	...globals
 }) => {
 	return html`
-		<button
+	<button
 			type="reset"
 			class=${classMap({
 				[rootClass]: true,
@@ -40,7 +40,7 @@ export const ClearButton = ({
 			</div>
 		</button>
 	`;
-};
+}
 
 export const Template = ({
 	rootClass = "spectrum-ClearButton",
@@ -54,18 +54,12 @@ export const Template = ({
 	const { express } = globals;
 
 	try {
-		if (!express)
-			import(
-				/* webpackPrefetch: true */ "@spectrum-css/clearbutton/dist/themes/spectrum.css"
-			);
-		else
-			import(
-				/* webpackPrefetch: true */ "@spectrum-css/clearbutton/dist/themes/express.css"
-			);
+		if (!express) import(/* webpackPrefetch: true */ "../themes/spectrum.css");
+		else import(/* webpackPrefetch: true */ "../themes/express.css");
 	} catch (e) {
 		console.warn(e);
 	}
-
+	
 	if (typeof variant !== "undefined") {
 		return html`
 			<div style=${ifDefined(styleMap(styles))}>
@@ -75,7 +69,7 @@ export const Template = ({
 					isDisabled,
 					size,
 					variant,
-					globals,
+					globals
 				})}
 			</div>
 		`;
@@ -88,6 +82,6 @@ export const Template = ({
 		size,
 		variant,
 		styles,
-		globals,
-	});
+		globals
+	})
 };

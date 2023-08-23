@@ -6,7 +6,8 @@ import { ifDefined } from "lit/directives/if-defined.js";
 import { Template as Textfield } from "@spectrum-css/textfield/stories/template.js";
 import { Template as ActionButton } from "@spectrum-css/actionbutton/stories/template.js";
 
-import "@spectrum-css/stepper";
+import "../index.css";
+import "../skin.css";
 
 export const Template = ({
 	rootClass = "spectrum-Stepper",
@@ -26,14 +27,8 @@ export const Template = ({
 	const { express } = globals;
 
 	try {
-		if (!express)
-			import(
-				/* webpackPrefetch: true */ "@spectrum-css/stepper/dist/themes/spectrum.css"
-			);
-		else
-			import(
-				/* webpackPrefetch: true */ "@spectrum-css/stepper/dist/themes/express.css"
-			);
+		if (!express) import(/* webpackPrefetch: true */ "../themes/spectrum.css");
+		else import(/* webpackPrefetch: true */ "../themes/express.css");
 	} catch (e) {
 		console.warn(e);
 	}

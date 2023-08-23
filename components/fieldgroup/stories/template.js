@@ -6,7 +6,7 @@ import { Template as FieldLabel } from "@spectrum-css/fieldlabel/stories/templat
 import { Template as Radio } from "@spectrum-css/radio/stories/template.js";
 import { Template as HelpText } from "@spectrum-css/helptext/stories/template.js";
 
-import "@spectrum-css/fieldgroup";
+import "../index.css";
 
 export const Template = ({
 	rootClass = "spectrum-FieldGroup",
@@ -20,14 +20,8 @@ export const Template = ({
 	const { express } = globals;
 
 	try {
-		if (!express)
-			import(
-				/* webpackPrefetch: true */ "@spectrum-css/fieldgroup/dist/themes/spectrum.css"
-			);
-		else
-			import(
-				/* webpackPrefetch: true */ "@spectrum-css/fieldgroup/dist/themes/express.css"
-			);
+		if (!express) import(/* webpackPrefetch: true */ "../themes/spectrum.css");
+		else import(/* webpackPrefetch: true */ "../themes/express.css");
 	} catch (e) {
 		console.warn(e);
 	}

@@ -8,7 +8,7 @@ import { useArgs } from "@storybook/client-api";
 // Uncomment if you plan to include an icon
 import { Template as Icon } from "@spectrum-css/icon/stories/template.js";
 
-import "@spectrum-css/rating";
+import "../index.css";
 
 export const Template = ({
 	rootClass = "spectrum-Rating",
@@ -24,14 +24,8 @@ export const Template = ({
 }) => {
 	const { express } = globals;
 	try {
-		if (express)
-			import(
-				/* webpackPrefetch: true */ "@spectrum-css/rating/dist/themes/express.css"
-			);
-		else
-			import(
-				/* webpackPrefetch: true */ "@spectrum-css/rating/dist/themes/spectrum.css"
-			);
+		if (express) import(/* webpackPrefetch: true */ "../themes/express.css");
+		else import(/* webpackPrefetch: true */ "../themes/spectrum.css");
 	} catch (e) {
 		console.warn(e);
 	}

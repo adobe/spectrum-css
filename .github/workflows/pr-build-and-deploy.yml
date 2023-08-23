@@ -18,9 +18,17 @@ jobs:
         with:
           node-version: 16
       - name: Install dependencies
-        run: yarn install --frozen-lockfile
-      - name: Build
-        run: yarn ci
+        run: yarn install
+      - name: Clean everything
+        run: yarn clean
+      - name: Build components
+        run: yarn build:components
+      - name: Build docs site
+        run: yarn build:site
+      - name: Build Storybook (preview)
+        run: yarn workspace @spectrum-css/preview build
+      - name: Move Storybook build to dist
+        run: yarn postbuild:all
       - name: Deploy to Netlify
         uses: nwtgck/actions-netlify@v2
         with:

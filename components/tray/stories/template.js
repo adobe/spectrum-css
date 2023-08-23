@@ -2,8 +2,9 @@ import { html } from "lit";
 import { classMap } from "lit/directives/class-map.js";
 import { ifDefined } from "lit/directives/if-defined.js";
 
-import "@spectrum-css/tray";
-import "@spectrum-css/modal";
+import { Template as Modal } from "@spectrum-css/modal/stories/template.js";
+
+import "../index.css";
 
 export const Template = ({
 	rootClass = "spectrum-Tray",
@@ -16,14 +17,8 @@ export const Template = ({
 	const { express } = globals;
 
 	try {
-		if (!express)
-			import(
-				/* webpackPrefetch: true */ "@spectrum-css/tray/dist/themes/spectrum.css"
-			);
-		else
-			import(
-				/* webpackPrefetch: true */ "@spectrum-css/tray/dist/themes/express.css"
-			);
+		if (!express) import(/* webpackPrefetch: true */ "../themes/spectrum.css");
+		else import(/* webpackPrefetch: true */ "../themes/express.css");
 	} catch (e) {
 		console.warn(e);
 	}

@@ -6,20 +6,20 @@ import { ifDefined } from "lit/directives/if-defined.js";
 
 import { Template as Icon } from "@spectrum-css/icon/stories/template.js";
 
-import "@spectrum-css/tabs";
+import "../index.css";
 
 export const Template = ({
-	rootClass = "spectrum-Tabs",
-	customClasses = [],
-	size = "m",
-	orientation = "horizontal",
-	isQuiet,
-	isEmphasized,
-	isCompact,
-	items,
-	selectorStyle = {},
-	style = {},
-	...globals
+  rootClass = "spectrum-Tabs",
+  customClasses = [],
+  size = "m",
+  orientation = "horizontal",
+  isQuiet,
+  isEmphasized,
+  isCompact,
+  items,
+  selectorStyle = {},
+  style = {},
+  ...globals
 }) => {
 	return html`
 		<div

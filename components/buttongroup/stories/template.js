@@ -4,7 +4,7 @@ import { classMap } from "lit/directives/class-map.js";
 
 import { Template as Button } from "@spectrum-css/button/stories/template.js";
 
-import "@spectrum-css/buttongroup";
+import "../index.css";
 
 export const Template = ({
 	rootClass = "spectrum-ButtonGroup",
@@ -17,14 +17,8 @@ export const Template = ({
 	const { express } = globals;
 
 	try {
-		if (!express)
-			import(
-				/* webpackPrefetch: true */ "@spectrum-css/buttongroup/dist/themes/spectrum.css"
-			);
-		else
-			import(
-				/* webpackPrefetch: true */ "@spectrum-css/buttongroup/dist/themes/express.css"
-			);
+		if (!express) import(/* webpackPrefetch: true */ "../themes/spectrum.css");
+		else import(/* webpackPrefetch: true */ "../themes/express.css");
 	} catch (e) {
 		console.warn(e);
 	}

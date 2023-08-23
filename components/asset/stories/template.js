@@ -2,7 +2,8 @@ import { html, svg } from "lit";
 import { classMap } from "lit/directives/class-map.js";
 import { ifDefined } from "lit/directives/if-defined.js";
 
-import "@spectrum-css/asset";
+import "../index.css";
+import "../skin.css";
 
 export const Template = ({
 	rootClass = "spectrum-Asset",

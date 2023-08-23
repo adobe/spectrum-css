@@ -4,7 +4,8 @@ import { classMap } from "lit/directives/class-map.js";
 
 import { Template as Button } from "@spectrum-css/button/stories/template.js";
 
-import "@spectrum-css/coachmark";
+import "../index.css";
+import "../skin.css";
 
 export const Template = ({
 	rootClass = "spectrum-CoachMark",

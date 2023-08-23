@@ -5,7 +5,7 @@ import { when } from "lit/directives/when.js";
 
 import { Template as Icon } from "@spectrum-css/icon/stories/template.js";
 
-import "@spectrum-css/badge";
+import "../index.css";
 
 export const Template = ({
 	rootClass = "spectrum-Badge",
@@ -21,14 +21,8 @@ export const Template = ({
 	const { express } = globals;
 
 	try {
-		if (!express)
-			import(
-				/* webpackPrefetch: true */ "@spectrum-css/badge/dist/themes/spectrum.css"
-			);
-		else
-			import(
-				/* webpackPrefetch: true */ "@spectrum-css/badge/dist/themes/express.css"
-			);
+		if (!express) import(/* webpackPrefetch: true */ "../themes/spectrum.css");
+		else import(/* webpackPrefetch: true */ "../themes/express.css");
 	} catch (e) {
 		console.warn(e);
 	}
@@ -50,14 +44,15 @@ export const Template = ({
 					...globals,
 					iconName,
 					customClasses: [
-						...(typeof label === "undefined"
-							? [`${rootClass}-icon--no-label`]
-							: []),
+						...(typeof label === "undefined" ? [`${rootClass}-icon--no-label`] : []),
 						`${rootClass}-icon`,
 					],
 				})
 			)}
-			${when(label, () => html`<div class="${rootClass}-label">${label}</div>`)}
+			${when(
+				label,
+				() => html`<div class="${rootClass}-label">${label}</div>`
+			)}
 		</div>
 	`;
 };

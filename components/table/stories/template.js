@@ -4,7 +4,8 @@ import { ifDefined } from "lit/directives/if-defined.js";
 
 import { Template as Icon } from "@spectrum-css/icon/stories/template.js";
 
-import "@spectrum-css/table";
+import "../index.css";
+import "../skin.css";
 
 export const Template = ({
 	rootClass = "spectrum-Table",

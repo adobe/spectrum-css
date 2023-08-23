@@ -1,7 +1,8 @@
 import { html } from "lit";
 import { classMap } from "lit/directives/class-map.js";
+// import { ifDefined } from 'lit/directives/if-definedjs';
 
-import "@spectrum-css/progresscircle";
+import "../index.css";
 
 export const Template = ({
 	rootClass = "spectrum-ProgressCircle",
@@ -14,14 +15,8 @@ export const Template = ({
 	const { express } = globals;
 
 	try {
-		if (!express)
-			import(
-				/* webpackPrefetch: true */ "@spectrum-css/progresscircle/dist/themes/spectrum.css"
-			);
-		else
-			import(
-				/* webpackPrefetch: true */ "@spectrum-css/progresscircle/dist/themes/express.css"
-			);
+		if (!express) import(/* webpackPrefetch: true */ "../themes/spectrum.css");
+		else import(/* webpackPrefetch: true */ "../themes/express.css");
 	} catch (e) {
 		console.warn(e);
 	}

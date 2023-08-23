@@ -3,7 +3,8 @@ import { classMap } from "lit/directives/class-map.js";
 import { when } from "lit/directives/when.js";
 // import { ifDefined } from 'lit/directives/if-defined.js';
 
-import "@spectrum-css/splitview";
+import "../index.css";
+import "../skin.css";
 
 export const Template = ({
 	rootClass = "spectrum-SplitView",
