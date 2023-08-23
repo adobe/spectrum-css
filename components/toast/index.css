@@ -90,10 +90,8 @@ governing permissions and limitations under the License.
     background-color: var(--highcontrast-toast-negative-background-color-default, var(--mod-toast-negative-background-color-default, var(--spectrum-toast-negative-background-color-default)));
     color: var(--highcontrast-toast-negative-background-color-default, var(--mod-toast-negative-background-color-default, var(--spectrum-toast-negative-background-color-default)));
 
-    .spectrum-Toast-closeButton {
-      &:focus-visible:not(:active) {
-        color: var(--highcontrast-toast-negative-background-color-default, var(--mod-toast-negative-background-color-default, var(--spectrum-toast-negative-background-color-default)));
-      }
+    .spectrum-Toast-closeButton &:focus-visible:not(:active) {
+      color: var(--highcontrast-toast-negative-background-color-default, var(--mod-toast-negative-background-color-default, var(--spectrum-toast-negative-background-color-default)));
     }
   }
 
@@ -101,10 +99,8 @@ governing permissions and limitations under the License.
     background-color: var(--highcontrast-toast-informative-background-color-default, var(--mod-toast-informative-background-color-default, var(--spectrum-toast-informative-background-color-default)));
     color: var(--highcontrast-toast-informative-background-color-default, var(--mod-toast-informative-background-color-default, var(--spectrum-toast-informative-background-color-default)));
 
-    .spectrum-Toast-closeButton {
-      &:focus-visible:not(:active) {
-        color: var(--highcontrast-toast-informative-background-color-default, var(--mod-toast-informative-background-color-default, var(--spectrum-toast-informative-background-color-default)));
-      }
+    .spectrum-Toast-closeButton &:focus-visible:not(:active) {
+      color: var(--highcontrast-toast-informative-background-color-default, var(--mod-toast-informative-background-color-default, var(--spectrum-toast-informative-background-color-default)));
     }
   }
 
@@ -112,10 +108,8 @@ governing permissions and limitations under the License.
     background-color: var(--highcontrast-toast-positive-background-color-default, var(--mod-toast-positive-background-color-default, var(--spectrum-toast-positive-background-color-default)));
     color: var(--highcontrast-toast-positive-background-color-default, var(--mod-toast-positive-background-color-default, var(--spectrum-toast-positive-background-color-default)));
 
-    .spectrum-Toast-closeButton {
-      &:focus-visible:not(:active) {
-        color: var(--highcontrast-toast-positive-background-color-default, var(--mod-toast-positive-background-color-default, var(--spectrum-toast-positive-background-color-default)));
-      }
+    .spectrum-Toast-closeButton &:focus-visible:not(:active) {
+      color: var(--highcontrast-toast-positive-background-color-default, var(--mod-toast-positive-background-color-default, var(--spectrum-toast-positive-background-color-default)));
     }
   }
 }
@@ -186,11 +180,11 @@ governing permissions and limitations under the License.
     margin-inline-end: var(--mod-toast-spacing-text-and-action-button-to-divider, var(--spectrum-toast-spacing-text-and-action-button-to-divider));
 
     [dir="ltr"] & {
-      margin-left: auto;
+      margin-inline-start: auto;
     }
 
     [dir="rtl"] & {
-      margin-right: auto;
+      margin-inline-end: auto;
       margin-inline-end: var(--mod-toast-spacing-text-and-action-button-to-divider, var(--spectrum-toast-spacing-text-and-action-button-to-divider));
     }
   }
