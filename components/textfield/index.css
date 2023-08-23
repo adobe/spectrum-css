@@ -97,8 +97,8 @@ governing permissions and limitations under the License.
 	--spectrum-textfield-icon-spacing-inline-end-override: 32px; /* TODO - placeholder - reevaluate after combobox migration */
 
 	/* TODO - icon spacing override for search - reevaluate after search is migrated */
-	--spectrum-Textfield-workflow-icon-width: 18px;
-	--spectrum-Textfield-workflow-icon-gap: 6px;
+	--spectrum-textfield-workflow-icon-width: 18px;
+	--spectrum-textfield-workflow-icon-gap: 6px;
 
 	/* font styles */
 	--spectrum-textfield-font-family: var(--spectrum-sans-font-family-stack);
@@ -413,7 +413,6 @@ governing permissions and limitations under the License.
 /********* TEXT FIELD and TEXT AREA Outer Wrapper *********/
 .spectrum-Textfield {
 	position: relative;
-	margin: auto;
 
 	/* prevent input from expanding to width of helptext */
 	inline-size: var(--mod-textfield-width, var(--spectrum-textfield-width));
@@ -445,41 +444,41 @@ governing permissions and limitations under the License.
 	display: inline-grid;
 	grid-template-columns: auto auto;
 	grid-template-rows: auto auto auto;
+}
 
-	&.spectrum-Textfield--quiet {
+.spectrum-Textfield.spectrum-Textfield--quiet {
+	&::after {
+		content: "";
+		position: absolute;
+		inset-block-end: calc(
+			-1 * (var(
+							--mod-textfield-focus-indicator-gap,
+							var(--spectrum-textfield-focus-indicator-gap)
+						) +
+						var(
+							--mod-textfield-focus-indicator-width,
+							var(--spectrum-textfield-focus-indicator-width)
+						))
+		);
+		inset-inline-start: 0;
+		inline-size: 100%;
+		block-size: var(
+			--mod-textfield-focus-indicator-width,
+			var(--spectrum-textfield-focus-indicator-width)
+		);
+	}
+
+	&.is-keyboardFocused,
+	&:focus-visible,
+	&:focus-within {
 		&::after {
-			content: "";
-			position: absolute;
-			bottom: calc(
-				-1 * (var(
-								--mod-textfield-focus-indicator-gap,
-								var(--spectrum-textfield-focus-indicator-gap)
-							) +
-							var(
-								--mod-textfield-focus-indicator-width,
-								var(--spectrum-textfield-focus-indicator-width)
-							))
+			background-color: var(
+				--highcontrast-textfield-focus-indicator-color,
+				var(
+					--mod-textfield-focus-indicator-color,
+					var(--spectrum-textfield-focus-indicator-color)
+				)
 			);
-			left: 0;
-			inline-size: 100%;
-			block-size: var(
-				--mod-textfield-focus-indicator-width,
-				var(--spectrum-textfield-focus-indicator-width)
-			);
-		}
-
-		&.is-keyboardFocused,
-		&:focus-visible,
-		&:focus-within {
-			&::after {
-				background-color: var(
-					--highcontrast-textfield-focus-indicator-color,
-					var(
-						--mod-textfield-focus-indicator-color,
-						var(--spectrum-textfield-focus-indicator-color)
-					)
-				);
-			}
 		}
 	}
 }
@@ -491,7 +490,7 @@ governing permissions and limitations under the License.
 	.spectrum-Textfield.is-invalid & {
 		position: absolute;
 		pointer-events: all;
-		top: 0;
+		inset-block-start: 0;
 		margin-inline-start: auto;
 		grid-row: 2;
 		grid-column: 2;
@@ -600,7 +599,7 @@ governing permissions and limitations under the License.
 		);
 		grid-row: 1;
 		grid-column: 1 / span 1;
-		padding-left: calc(
+		padding-inline-start: calc(
 			var(
 					--mod-textfield-corner-radius,
 					var(--spectrum-textfield-corner-radius)
@@ -629,7 +628,7 @@ governing permissions and limitations under the License.
 		);
 		grid-row: 3;
 		grid-column: 1 / span 2;
-		padding-left: calc(
+		padding-inline-start: calc(
 			var(
 					--mod-textfield-corner-radius,
 					var(--spectrum-textfield-corner-radius)
@@ -643,7 +642,7 @@ governing permissions and limitations under the License.
 	display: inline-flex;
 	align-items: flex-end;
 	justify-content: flex-end;
-	width: auto;
+	inline-size: auto;
 	margin-block-end: var(
 		--mod-textfield-character-count-spacing-block,
 		var(--spectrum-textfield-character-count-spacing-block)
@@ -667,7 +666,7 @@ governing permissions and limitations under the License.
 	);
 	grid-row: 1;
 	grid-column: 2 / span 1;
-	padding-right: calc(
+	padding-inline-end: calc(
 		var(--mod-textfield-corner-radius, var(--spectrum-textfield-corner-radius)) /
 			2
 	);
@@ -788,12 +787,12 @@ governing permissions and limitations under the License.
 	.spectrum-Textfield--quiet .spectrum-Textfield-icon ~ & {
 		padding-inline-start: calc(
 			var(
-					--mod--Textfield-workflow-icon-gap,
-					var(--spectrum-Textfield-workflow-icon-gap)
+					--mod-textfield-workflow-icon-gap,
+					var(--spectrum-textfield-workflow-icon-gap)
 				) +
 				var(
-					--mod-Textfield-workflow-icon-width,
-					var(--spectrum-Textfield-workflow-icon-width)
+					--mod-textfield-workflow-icon-width,
+					var(--spectrum-textfield-workflow-icon-width)
 				)
 		);
 	}
@@ -821,9 +820,12 @@ governing permissions and limitations under the License.
 	/* added to work with Edge, note, it needs double ::
    * not single : which is what autoprefixer will add
    */
+	/* stylelint-disable selector-no-vendor-prefix */
 	&::-ms-input-placeholder {
 		opacity: 1;
 	}
+	/* stylelint-enable selector-no-vendor-prefix */
+
 
 	/*** Input Placeholder Text ***/
 	&::placeholder {
@@ -863,10 +865,12 @@ governing permissions and limitations under the License.
 			font-style: normal;
 		}
 
+		/* stylelint-disable selector-no-vendor-prefix */
 		&::-ms-input-placeholder {
 			/* added to work with Edge, same as above */
 			font-style: normal;
 		}
+		/* stylelint-enable selector-no-vendor-prefix */
 	}
 
 	/* hover */
@@ -942,16 +946,16 @@ governing permissions and limitations under the License.
 					var(--spectrum-textfield-text-color-focus-hover)
 				)
 			);
+		}
 
-			&::placeholder {
-				color: var(
-					--highcontrast-textfield-text-color-focus-hover,
-					var(
-						--mod-textfield-text-color-focus-hover,
-						var(--spectrum-textfield-text-color-focus-hover)
-					)
-				);
-			}
+		&:hover &::placeholder {
+			color: var(
+				--highcontrast-textfield-text-color-focus-hover,
+				var(
+					--mod-textfield-text-color-focus-hover,
+					var(--spectrum-textfield-text-color-focus-hover)
+				)
+			);
 		}
 	}
 
