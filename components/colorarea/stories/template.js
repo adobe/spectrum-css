@@ -3,7 +3,7 @@ import { classMap } from "lit/directives/class-map.js";
 import { styleMap } from "lit/directives/style-map.js";
 import { Template as ColorHandle } from "@spectrum-css/colorhandle/stories/template.js";
 
-import "@spectrum-css/colorarea";
+import "../index.css";
 
 export const Template = ({
 	rootClass = "spectrum-ColorArea",

@@ -3,7 +3,7 @@ import { classMap } from "lit/directives/class-map.js";
 
 import { upperCase, lowerCase, capitalize } from "lodash-es";
 
-import "@spectrum-css/divider";
+import "../index.css";
 
 export const Template = ({
 	rootClass = "spectrum-Divider",
@@ -17,14 +17,8 @@ export const Template = ({
 	const { express } = globals;
 
 	try {
-		if (!express)
-			import(
-				/* webpackPrefetch: true */ "@spectrum-css/divider/dist/themes/spectrum.css"
-			);
-		else
-			import(
-				/* webpackPrefetch: true */ "@spectrum-css/divider/dist/themes/express.css"
-			);
+		if (!express) import(/* webpackPrefetch: true */ "../themes/spectrum.css");
+		else import(/* webpackPrefetch: true */ "../themes/express.css");
 	} catch (e) {
 		console.warn(e);
 	}

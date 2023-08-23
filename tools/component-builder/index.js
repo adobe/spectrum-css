@@ -14,16 +14,29 @@ const gulp = require("gulp");
 const del = require("del");
 
 const css = require("./css");
+const docs = require("./docs");
 
 function clean() {
 	return del("dist/*");
 }
 
-exports.default = exports.build = gulp.series(clean, css.buildVars);
-exports.buildLite = gulp.series(clean, css.buildIndexVars);
-exports.buildMedium = gulp.series(clean, css.buildVars);
-exports.buildHeavy = gulp.series(clean, css.buildCSS);
+const build = gulp.series(clean, gulp.parallel(css.buildVars, docs.buildDocs));
+
+const buildLite = gulp.series(clean, css.buildIndexVars);
+
+const buildMedium = gulp.series(clean, css.buildVars);
+
+const buildHeavy = gulp.series(clean, css.buildCSS);
+
+exports.default = build;
+exports.build = build;
+exports.buildLite = buildLite;
+exports.buildMedium = buildMedium;
+exports.buildHeavy = buildHeavy;
 exports.clean = clean;
 
 exports.buildCSS = css.buildCSS;
 exports.buildVars = css.buildVars;
+
+exports.buildDocs = docs.buildDocs;
+exports.buildDocs_html = docs.buildDocs_html;

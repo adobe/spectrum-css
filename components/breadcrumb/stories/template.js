@@ -5,7 +5,7 @@ import { when } from "lit/directives/when.js";
 import { Template as Icon } from "@spectrum-css/icon/stories/template.js";
 import { Template as ActionButton } from "@spectrum-css/actionbutton/stories/template.js";
 
-import "@spectrum-css/breadcrumb";
+import "../index.css";
 
 export const Template = ({
 	rootClass = "spectrum-Breadcrumbs",
@@ -17,14 +17,8 @@ export const Template = ({
 	const { express } = globals;
 
 	try {
-		if (!express)
-			import(
-				/* webpackPrefetch: true */ "@spectrum-css/breadcrumb/dist/themes/spectrum.css"
-			);
-		else
-			import(
-				/* webpackPrefetch: true */ "@spectrum-css/breadcrumb/dist/themes/express.css"
-			);
+		if (!express) import(/* webpackPrefetch: true */ "../themes/spectrum.css");
+		else import(/* webpackPrefetch: true */ "../themes/express.css");
 	} catch (e) {
 		console.warn(e);
 	}

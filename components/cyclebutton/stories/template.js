@@ -3,7 +3,7 @@ import { useArgs } from "@storybook/client-api";
 
 import { Template as ActionButton } from "@spectrum-css/actionbutton/stories/template.js";
 
-import "@spectrum-css/cyclebutton";
+import "../index.css";
 
 export const Template = ({
 	rootClass = "spectrum-CycleButton",

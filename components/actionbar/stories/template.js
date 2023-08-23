@@ -7,7 +7,7 @@ import { Template as CloseButton } from "@spectrum-css/closebutton/stories/templ
 import { Template as FieldLabel } from "@spectrum-css/fieldlabel/stories/template.js";
 import { Template as ActionGroup } from "@spectrum-css/actiongroup/stories/template.js";
 
-import "@spectrum-css/actionbar";
+import "../index.css";
 
 export const Template = ({
 	rootClass = "spectrum-ActionBar",
@@ -23,14 +23,8 @@ export const Template = ({
 	const { express } = globals;
 
 	try {
-		if (!express)
-			import(
-				/* webpackPrefetch: true */ "@spectrum-css/actionbar/dist/themes/spectrum.css"
-			);
-		else
-			import(
-				/* webpackPrefetch: true */ "@spectrum-css/actionbar/dist/themes/express.css"
-			);
+		if (!express) import(/* webpackPrefetch: true */ "../themes/spectrum.css");
+		else import(/* webpackPrefetch: true */ "../themes/express.css");
 	} catch (e) {
 		console.warn(e);
 	}

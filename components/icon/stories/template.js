@@ -5,7 +5,7 @@ import { classMap } from "lit/directives/class-map.js";
 
 import { fetchIconSVG, workflowIcons, uiIcons } from "./utilities.js";
 
-import "@spectrum-css/icon";
+import "../index.css";
 
 /**
  * @typedef { keyof import("./icon.stories.js").default.args } IconArgs
@@ -85,6 +85,7 @@ export const Template = ({
 
 		idKey += sizeVal;
 		iconName += sizeVal;
+
 	}
 
 	// Determine which icon set contains this icon.

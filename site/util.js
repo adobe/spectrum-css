@@ -10,6 +10,8 @@ OF ANY KIND, either express or implied. See the License for the specific languag
 governing permissions and limitations under the License.
 */
 
+const logger = require("gulplog");
+
 const md = require("markdown-it")({
 	html: true,
 	linkify: false,
@@ -114,24 +116,32 @@ exports.getStatusLightVariant = function (status) {
 	return statusLightVariants[status] || "neutral";
 };
 
-exports.getDNAStatus = function (_, dnaStatus, cssStatus) {
+exports.getDNAStatus = function (dnaComponentId, dnaStatus, cssStatus) {
 	if (cssStatus === "Deprecated") {
 		dnaStatus = "Deprecated";
 	}
 
-	return (
-		dnaStatusTranslation[dnaStatus ?? "Contribution"] ??
-		dnaStatus ??
-		"Contribution"
-	);
+	if (cssStatus === "Verified") {
+		if (dnaStatusTranslation[dnaStatus] !== "Canon") {
+			logger.debug(
+				`${dnaComponentId} is ${cssStatus} in CSS, but ${dnaStatus} in DNA`
+			);
+		}
+	}
+
+	if (!dnaStatus) {
+		logger.debug(`${dnaComponentId} has no DNA status`);
+		dnaStatus = "Contribution";
+	}
+
+	return dnaStatusTranslation[dnaStatus] || dnaStatus;
 };
 
-exports.getCSSStatus = function (_, cssStatus) {
-	return (
-		cssStatusTranslation[cssStatus ?? "Contribution"] ??
-		cssStatus ??
-		"Contribution"
-	);
+exports.getCSSStatus = function (dnaComponentId, cssStatus) {
+	if (!cssStatus) {
+		cssStatus = "Contribution";
+	}
+	return cssStatusTranslation[cssStatus] || cssStatus;
 };
 
 exports.getSlug = function (name, subName) {
@@ -147,6 +157,8 @@ exports.populateDNAInfo = function (component, dnaVars) {
 
 	// Get info based on component variation first, then component name second
 	var dnaComponentTitle = dnaVars["spectrum-" + dnaComponentId + "-name"];
+
+	var dnaDescription = dnaVars["spectrum-" + dnaComponentId + "-description"];
 
 	var cssStatus = this.getCSSStatus(dnaComponentId, component.status);
 	var dnaStatus = this.getDNAStatus(

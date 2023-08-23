@@ -22,13 +22,9 @@
   nav.spectrum-Site-bottomNav
     ul.spectrum-SideNav
       li.spectrum-SideNav-item
-        a.spectrum-SideNav-itemLink(href='https://spectrum.adobe.com', rel='noopener')
+        a.spectrum-SideNav-itemLink(href='https://spectrum.adobe.com', target='_blank', rel='noopener')
           span.spectrum-SideNav-link-text Spectrum
-      if process.env.STORYBOOK_URL
-        li.spectrum-SideNav-item
-          a.spectrum-SideNav-itemLink(href=process.env.STORYBOOK_URL, rel='noopener')
-            span.spectrum-SideNav-link-text Component preview
-      else
+      unless process.env.NODE_ENV === 'development'
         li.spectrum-SideNav-item
           a.spectrum-SideNav-itemLink(href='preview/', rel='noopener')
             span.spectrum-SideNav-link-text Component preview

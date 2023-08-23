@@ -5,7 +5,7 @@ import { ifDefined } from "lit/directives/if-defined.js";
 
 import { Template as Icon } from "@spectrum-css/icon/stories/template.js";
 
-import "@spectrum-css/accordion";
+import "../index.css";
 
 export const AccordionItem = ({
 	heading,

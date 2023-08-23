@@ -33,7 +33,7 @@ module.exports = {
 		"@whitespace/storybook-addon-html",
 		// https://storybook.js.org/addons/@etchteam/storybook-addon-status
 		"@etchteam/storybook-addon-status",
-		"storybook-addon-pseudo-states",
+    "storybook-addon-pseudo-states",
 	],
 	core: {
 		disableTelemetry: true,
@@ -92,7 +92,7 @@ module.exports = {
 							{
 								loader: "file-loader",
 								options: {
-									outputPath: (url) => {
+									outputPath: (url, resourcePath, context) => {
 										return `assets/images/${url.replace(/_\//g, "")}`;
 									},
 								},
@@ -116,7 +116,7 @@ module.exports = {
 								loader: "file-loader",
 								options: {
 									name: "[path][name].[ext][query]",
-									outputPath: (url) => {
+									outputPath: (url, resourcePath, context) => {
 										return `assets/css/${url.replace(/_\//g, "")}`;
 									},
 									esModule: false,

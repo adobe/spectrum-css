@@ -4,36 +4,15 @@
 		"default": {
 			"runner": "nx/tasks-runners/default",
 			"options": {
-				"cacheableOperations": ["clean", "build"]
+				"cacheableOperations": ["build"]
 			}
 		}
 	},
 	"targetDefaults": {
-		"clean": {
-			"inputs": ["{workspaceRoot}/dist/**"],
-			"outputs": [],
-			"executor": "@nrwl/workspace:run-commands",
-			"options": {
-				"commands": "rimraf dist"
-			}
-		},
 		"build": {
-			"dependsOn": ["^build"],
-			"inputs": [
-				"{workspaceRoot}/*.css",
-				"{workspaceRoot}/themes/*.css",
-				"{workspaceRoot}/gulpfile.js"
-			],
-			"outputs": ["{workspaceRoot}/dist/**", "{workspaceRoot}/metadata/mods.md"]
-		},
-		"dev": {
-			"dependsOn": ["build"]
-		},
-		"dev:site": {
-			"dependsOn": ["clean:docs", "build:components"],
-			"inputs": ["{projectRoot}/site/**"],
-			"outputs": ["{projectRoot}/dist/**"]
+			"dependsOn": ["clean", "^build"],
+			"inputs": ["{workspaceRoot}/*.css"]
 		}
 	},
-	"includedScripts": ["clean", "build", "dev"]
+	"includedScripts": ["build"]
 }

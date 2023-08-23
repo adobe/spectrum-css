@@ -72,47 +72,30 @@
           "^build"
         ],
         "inputs": [
-          "{workspaceRoot}/assets/**",
-          "{workspaceRoot}/decorators/**",
+          "{workspaceRoot}/assets",
+          "{workspaceRoot}/decorators",
           "{workspaceRoot}/*.js",
           "{workspaceRoot}/*.html",
-          "{projectRoot}/components/*/stories/**",
-          "{projectRoot}/components/*/dist/**"
+          "{projectRoot}/components/*/dist"
         ],
         "outputs": [
-          "{workspaceRoot}/storybook-static/**"
-        ]
-      },
-      "storybook": {
-        "dependsOn": [
-          "^build"
-        ],
-        "inputs": [
-          "{workspaceRoot}/assets/**",
-          "{workspaceRoot}/decorators/**",
-          "{workspaceRoot}/*.js",
-          "{workspaceRoot}/*.html",
-          "{projectRoot}/components/*/dist/**"
-        ],
-        "outputs": [
-          "{workspaceRoot}/storybook-static/**"
+          "{workspaceRoot}/storybook-static"
         ]
       },
       "clean": {
         "inputs": [
-          "{workspaceRoot}/storybook-static/**"
-        ],
-        "outputs": []
+          "{workspaceRoot}/storybook-static"
+        ]
       }
     },
     "implicitDependencies": [
-      "@spectrum-css/*"
+      "@spectrum-css/*",
+      "!@spectrum-css/generator"
     ],
     "includedScripts": [
       "clean",
       "test",
       "test:scope",
-      "start",
       "storybook",
       "build"
     ]
