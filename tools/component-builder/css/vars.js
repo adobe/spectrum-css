@@ -12,25 +12,19 @@ governing permissions and limitations under the License.
 
 const gulp = require("gulp");
 const through = require("through2");
-const postcss = require("postcss");
 const logger = require("gulplog");
 const fsp = require("fs").promises;
 const path = require("path");
 
 const varUtils = require("./lib/varUtils");
 
-// Todo: get these values from a common place?
-let colorStops = ["darkest", "dark", "light", "lightest"];
-
-let scales = ["medium", "large"];
-
-function bakeVars() {
+exports.bakeVars = function () {
 	return gulp
 		.src(["dist/index-vars.css"], {
 			allowEmpty: true,
 		})
 		.pipe(
-			through.obj(async function doBake(file, enc, cb) {
+			through.obj(async function doBake(file, _, cb) {
 				let pkg = JSON.parse(await fsp.readFile(path.join("package.json")));
 				let pkgName = pkg.name.split("/").pop();
 				let classNames = varUtils.getClassNames(file.contents, pkgName);
@@ -48,7 +42,6 @@ function bakeVars() {
 				let allVars = await varUtils.getAllVars();
 
 				// For each color stop and scale, filter the variables for those matching the component
-				let errors = [];
 				let usedVars = {};
 				variableList.forEach((varName) => {
 					if (varName.indexOf("spectrum-global") !== -1) {
@@ -61,7 +54,7 @@ function bakeVars() {
 						!varName.startsWith("--highcontrast")
 					) {
 						if (componentVars.indexOf(varName) === -1) {
-							errors.push(`${pkg.name} uses undefined variable ${varName}`);
+							logger.warn(`${pkg.name} uses undefined variable ${varName}`);
 						} else {
 							logger.warn(
 								`🔶 ${pkg.name} uses locally defined variable ${varName}`
@@ -72,11 +65,11 @@ function bakeVars() {
 					}
 				});
 
-				if (errors.length) {
-					return cb(new Error(errors.join("\n")), file);
+				const contents = varUtils.getVariableDeclarations(classNames, usedVars);
+				if (!contents) {
+					return cb(null, file);
 				}
 
-				let contents = varUtils.getVariableDeclarations(classNames, usedVars);
 				let newFile = file.clone({ contents: false });
 				newFile.path = path.join(file.base, `vars.css`);
 				newFile.contents = Buffer.from(contents);
@@ -85,6 +78,4 @@ function bakeVars() {
 			})
 		)
 		.pipe(gulp.dest("dist/"));
-}
-
-exports.bakeVars = bakeVars;
+};

@@ -149,10 +149,10 @@ export const Template = ({
 
 	try {
 		import(
-			/* webpackPrefetch: true */ `!!raw-loader!@adobe/spectrum-css-workflow-icons/dist/spectrum-icons.svg`
+			/* webpackPrefetch: true */ `@adobe/spectrum-css-workflow-icons/dist/spectrum-icons.svg`
 		);
 		import(
-			/* webpackPrefetch: true */ `!!raw-loader!@spectrum-css/icon/dist/spectrum-css-icons.svg`
+			/* webpackPrefetch: true */ `@spectrum-css/icon/dist/spectrum-css-icons.svg`
 		);
 	} catch (e) {
 		console.warn(e);

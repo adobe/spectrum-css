@@ -1,20 +1,15 @@
 const { resolve, relative, basename } = require("path");
-const warnCleaner = require("postcss-warn-cleaner");
 
 module.exports = (ctx) => {
-	let plugins = [];
 	const componentPath = resolve(__dirname, "../../components");
 	const folderName = relative(componentPath, ctx.file).split("/")[0];
 
-	if (["expressvars", "vars", "tokens"].includes(folderName)) {
-		const isExpress = folderName === "expressvars";
-		const modifier = basename(ctx.file, ".css").startsWith("spectrum")
-			? basename(ctx.file, ".css")
-					.replace("spectrum-", "")
-					.replace("global", "")
-			: "";
-
-		plugins = [
+	const isExpress = folderName === "expressvars";
+	const modifier = basename(ctx.file, ".css").startsWith("spectrum")
+		? basename(ctx.file, ".css").replace("spectrum-", "").replace("global", "")
+		: "";
+	return {
+		plugins: [
 			require("postcss-import")(),
 			require("postcss-selector-replace")({
 				before: [":root"],
@@ -36,15 +31,6 @@ module.exports = (ctx) => {
 						}),
 				  ]
 				: []),
-		];
-	}
-
-	// For storybook, add a tool to suppress autoprefixer warnings
-	plugins.push(
-		warnCleaner({
-			ignoreFiles: "**/*.css",
-		})
-	);
-
-	return { plugins };
+		],
+	};
 };

@@ -12,6 +12,7 @@ governing permissions and limitations under the License.
 const fs = require("fs");
 const fsp = fs.promises;
 const path = require("path");
+
 const fg = require("fast-glob");
 
 async function main(dir = path.join(__dirname, "../components")) {

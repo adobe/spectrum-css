@@ -17,7 +17,6 @@ const path = require("path");
 const gulp = require("gulp");
 const pug = require("gulp-pug");
 const data = require("gulp-data");
-const rename = require("gulp-rename");
 const through = require("through2");
 
 const browserSync = require("browser-sync");
@@ -30,9 +29,9 @@ const npmFetch = require("npm-registry-fetch");
 const depSolver = require("dependency-solver");
 
 const dirs = {
-	components: path.join(__dirname, "components"),
-	site: path.join(__dirname, "site"),
-	dist: path.join(__dirname, "dist"),
+	components: path.join(__dirname, "../components"),
+	site: __dirname,
+	dist: path.join(__dirname, "../dist"),
 };
 
 const paths = {

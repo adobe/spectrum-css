@@ -49,5 +49,8 @@
   "peerDependencies": {
     "@spectrum-css/tokens": ">=11",
     "@spectrum-css/vars": ">=8 <=9"
+  },
+  "nx": {
+    "name": "builder"
   }
 }

@@ -10,47 +10,47 @@ OF ANY KIND, either express or implied. See the License for the specific languag
 governing permissions and limitations under the License.
 */
 
-@import "../overlay/index.css";
+@import "@spectrum-css/overlay/index.css";
 
 .spectrum-QuickActions {
-  box-sizing: border-box;
+	box-sizing: border-box;
 
-  @inherit: %spectrum-overlay;
+	@inherit: %spectrum-overlay;
 
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
+	display: inline-flex;
+	align-items: center;
+	justify-content: center;
 
-  padding-block: var(--spectrum-quickactions-padding-y);
-  padding-inline: var(--spectrum-quickactions-padding-x);
+	padding-block: var(--spectrum-quickactions-padding-y);
+	padding-inline: var(--spectrum-quickactions-padding-x);
 
-  block-size: var(--spectrum-quickactions-height);
+	block-size: var(--spectrum-quickactions-height);
 
-  border-radius: var(--spectrum-quickactions-border-radius);
+	border-radius: var(--spectrum-quickactions-border-radius);
 
-  &.is-open {
-    @inherit: %spectrum-overlay--open;
-  }
+	&.is-open {
+		@inherit: %spectrum-overlay--open;
+	}
 
-  .spectrum-ActionButton + .spectrum-ActionButton {
-    margin-inline-start: var(--spectrum-quickactions-button-gap-x);
-  }
+	.spectrum-ActionButton + .spectrum-ActionButton {
+		margin-inline-start: var(--spectrum-quickactions-button-gap-x);
+	}
 }
 
 .spectrum-QuickActions--textOnly {
-  .spectrum-ActionButton + .spectrum-ActionButton {
-    margin-inline-start: var(--spectrum-quickactions-text-button-gap-x);
-  }
+	.spectrum-ActionButton + .spectrum-ActionButton {
+		margin-inline-start: var(--spectrum-quickactions-text-button-gap-x);
+	}
 }
 
 .spectrum-QuickActions--right {
-  &.is-open {
-    @inherit: %spectrum-overlay--left--open; /* should animate to the left when aligned right */
-  }
+	&.is-open {
+		@inherit: %spectrum-overlay--left--open; /* should animate to the left when aligned right */
+	}
 }
 
 .spectrum-QuickActions--left {
-  &.is-open {
-    @inherit: %spectrum-overlay--right--open; /* should animate to the right when aligned left */
-  }
+	&.is-open {
+		@inherit: %spectrum-overlay--right--open; /* should animate to the right when aligned left */
+	}
 }

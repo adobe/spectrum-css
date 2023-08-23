@@ -10,105 +10,112 @@ OF ANY KIND, either express or implied. See the License for the specific languag
 governing permissions and limitations under the License.
 */
 
-@import "../vars/css/scales/spectrum-large.css";
-@import "../vars/css/scales/spectrum-medium.css";
-@import "../commons/basebutton.css";
+@import "@spectrum-css/vars/css/scales/spectrum-large.css";
+@import "@spectrum-css/vars/css/scales/spectrum-medium.css";
+@import "@spectrum-css/commons/basebutton.css";
 
 .spectrum-LogicButton {
-  @inherit: %spectrum-BaseButton;
-  @inherit: %spectrum-ButtonWithFocusRing;
+	@inherit: %spectrum-BaseButton;
+	@inherit: %spectrum-ButtonWithFocusRing;
 
-  block-size: var(--spectrum-logicbutton-and-height);
-  padding: var(--spectrum-logicbutton-and-padding-x);
+	block-size: var(--spectrum-logicbutton-and-height);
+	padding: var(--spectrum-logicbutton-and-padding-x);
 
-  border-width: var(--spectrum-logicbutton-and-border-size);
-  border-radius: var(--spectrum-logicbutton-and-border-radius);
+	border-width: var(--spectrum-logicbutton-and-border-size);
+	border-radius: var(--spectrum-logicbutton-and-border-radius);
 
-  font-size: var(--spectrum-logicbutton-and-text-size);
-  font-weight: var(--spectrum-logicbutton-and-text-font-weight);
-  line-height: 0;
+	font-size: var(--spectrum-logicbutton-and-text-size);
+	font-weight: var(--spectrum-logicbutton-and-text-font-weight);
+	line-height: 0;
 
-  &:after {
-    /* Override border-radius set in %spectrum-ButtonWithFocusRing since this is not a pill button */
-    border-radius: calc(
-      var(--spectrum-logicbutton-and-border-radius) +
-        var(--spectrum-alias-focus-ring-gap)
-    );
-  }
+	&:after {
+		/* Override border-radius set in %spectrum-ButtonWithFocusRing since this is not a pill button */
+		border-radius: calc(
+			var(--spectrum-logicbutton-and-border-radius) +
+				var(--spectrum-alias-focus-ring-gap)
+		);
+	}
 }
 
 .spectrum-LogicButton {
-  &:focus-visible,
-  &.is-focused {
-    outline: none;
-    &:after {
-      box-shadow: 0 0 0 var(--spectrum-button-m-primary-outline-texticon-focus-ring-size) var(--spectrum-button-m-primary-outline-texticon-focus-ring-color-key-focus);
-    }
-  }
+	&:focus-visible,
+	&.is-focused {
+		outline: none;
+		&:after {
+			box-shadow: 0 0 0
+				var(--spectrum-button-m-primary-outline-texticon-focus-ring-size)
+				var(
+					--spectrum-button-m-primary-outline-texticon-focus-ring-color-key-focus
+				);
+		}
+	}
 }
 
 .spectrum-LogicButton--and {
-  background-color: var(--spectrum-logicbutton-and-background-color);
-  border-color: var(--spectrum-logicbutton-and-border-color);
-  color: var(--spectrum-logicbutton-and-text-color);
+	background-color: var(--spectrum-logicbutton-and-background-color);
+	border-color: var(--spectrum-logicbutton-and-border-color);
+	color: var(--spectrum-logicbutton-and-text-color);
 
-  &:hover {
-    background-color: var(--spectrum-logicbutton-and-background-color-hover);
-    border-color: var(--spectrum-logicbutton-and-border-color-hover);
-    color: var(--spectrum-logicbutton-and-text-color);
-  }
+	&:hover {
+		background-color: var(--spectrum-logicbutton-and-background-color-hover);
+		border-color: var(--spectrum-logicbutton-and-border-color-hover);
+		color: var(--spectrum-logicbutton-and-text-color);
+	}
 
-  &:disabled,
-  &.is-disabled {
-    background-color: var(--spectrum-logicbutton-and-background-color-disabled);
-    border-color: var(--spectrum-logicbutton-and-border-color-disabled);
-    color: var(--spectrum-logicbutton-and-text-color-disabled);
-  }
+	&:disabled,
+	&.is-disabled {
+		background-color: var(--spectrum-logicbutton-and-background-color-disabled);
+		border-color: var(--spectrum-logicbutton-and-border-color-disabled);
+		color: var(--spectrum-logicbutton-and-text-color-disabled);
+	}
 }
 
 .spectrum-LogicButton--or {
-  background-color: var(--spectrum-logicbutton-or-background-color);
-  border-color: var(--spectrum-logicbutton-or-border-color);
-  color: var(--spectrum-logicbutton-or-text-color);
+	background-color: var(--spectrum-logicbutton-or-background-color);
+	border-color: var(--spectrum-logicbutton-or-border-color);
+	color: var(--spectrum-logicbutton-or-text-color);
 
-  &:hover {
-    background-color: var(--spectrum-logicbutton-or-background-color-hover);
-    border-color: var(--spectrum-logicbutton-or-border-color-hover);
-    color: var(--spectrum-logicbutton-or-text-color);
-  }
+	&:hover {
+		background-color: var(--spectrum-logicbutton-or-background-color-hover);
+		border-color: var(--spectrum-logicbutton-or-border-color-hover);
+		color: var(--spectrum-logicbutton-or-text-color);
+	}
 
-  &:disabled,
-  &.is-disabled {
-    background-color: var(--spectrum-button-m-primary-fill-texticon-background-color-disabled);
-    border-color: var(--spectrum-button-m-primary-fill-texticon-border-color-disabled);
-    color: var(--spectrum-logicbutton-and-text-color-disabled);
-  }
+	&:disabled,
+	&.is-disabled {
+		background-color: var(
+			--spectrum-button-m-primary-fill-texticon-background-color-disabled
+		);
+		border-color: var(
+			--spectrum-button-m-primary-fill-texticon-border-color-disabled
+		);
+		color: var(--spectrum-logicbutton-and-text-color-disabled);
+	}
 }
 
-
 @media (forced-colors: active) {
-  .spectrum-LogicButton::after {
-    --spectrum-button-m-primary-outline-texticon-focus-ring-color-key-focus: Highlight;
-    forced-color-adjust: none;
-  }
+	.spectrum-LogicButton::after {
+		--spectrum-button-m-primary-outline-texticon-focus-ring-color-key-focus: Highlight;
+		forced-color-adjust: none;
+	}
 
-  .spectrum-LogicButton {
-    forced-color-adjust: none;
-    --spectrum-button-primary-texticon-focus-ring-size: 2;
-    --spectrum-button-m-primary-fill-texticon-background-color-disabled: ButtonFace;
-    --spectrum-button-m-secondary-texticon-border-color-disabled: GrayText;
-    --spectrum-logicbutton-and-background-color: ButtonFace;
-    --spectrum-logicbutton-and-background-color-disabled: ButtonFace;
-    --spectrum-logicbutton-and-background-color-hover: ButtonFace;
-    --spectrum-logicbutton-and-border-color: ButtonText;
-    --spectrum-logicbutton-and-border-color-disabled: GrayText;
-    --spectrum-logicbutton-and-border-color-hover: Highlight;
-    --spectrum-logicbutton-and-text-color: ButtonText;
-    --spectrum-logicbutton-and-text-color-disabled: GrayText;
-    --spectrum-logicbutton-or-background-color: ButtonFace;
-    --spectrum-logicbutton-or-background-color-hover: ButtonFace;
-    --spectrum-logicbutton-or-border-color: ButtonText;
-    --spectrum-logicbutton-or-border-color-hover: Highlight;
-    --spectrum-logicbutton-or-text-color: ButtonText;
-  }
+	.spectrum-LogicButton {
+		forced-color-adjust: none;
+		--spectrum-button-primary-texticon-focus-ring-size: 2;
+		--spectrum-button-m-primary-fill-texticon-background-color-disabled: ButtonFace;
+		--spectrum-button-m-secondary-texticon-border-color-disabled: GrayText;
+		--spectrum-logicbutton-and-background-color: ButtonFace;
+		--spectrum-logicbutton-and-background-color-disabled: ButtonFace;
+		--spectrum-logicbutton-and-background-color-hover: ButtonFace;
+		--spectrum-logicbutton-and-border-color: ButtonText;
+		--spectrum-logicbutton-and-border-color-disabled: GrayText;
+		--spectrum-logicbutton-and-border-color-hover: Highlight;
+		--spectrum-logicbutton-and-text-color: ButtonText;
+		--spectrum-logicbutton-and-text-color-disabled: GrayText;
+		--spectrum-logicbutton-or-background-color: ButtonFace;
+		--spectrum-logicbutton-or-background-color-hover: ButtonFace;
+		--spectrum-logicbutton-or-border-color: ButtonText;
+		--spectrum-logicbutton-or-border-color-hover: Highlight;
+		--spectrum-logicbutton-or-text-color: ButtonText;
+	}
 }

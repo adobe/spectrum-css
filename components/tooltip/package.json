@@ -18,10 +18,11 @@
     "build": "gulp"
   },
   "peerDependencies": {
-    "@spectrum-css/icon": ">=3",
-    "@spectrum-css/tokens": ">=10.0.0"
+    "@spectrum-css/icon": ">=4",
+    "@spectrum-css/tokens": ">=11"
   },
   "devDependencies": {
+    "@spectrum-css/commons": "^8.0.0",
     "@spectrum-css/component-builder-simple": "^2.0.17",
     "@spectrum-css/icon": "^4.0.1",
     "@spectrum-css/tokens": "^11.3.0",

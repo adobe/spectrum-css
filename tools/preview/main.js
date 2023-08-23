@@ -7,10 +7,7 @@ const componentPkgs = readdirSync(componentsPath, {
 	.filter((dirent) => dirent.isDirectory())
 	.map((dirent) => dirent.name);
 module.exports = {
-	stories: [
-		"../../components/*/stories/*.stories.mdx",
-		"../../components/*/stories/*.stories.@(js|jsx|ts|tsx)",
-	],
+	stories: ["../../components/*/stories/*.stories.@(js|jsx|ts|tsx)"],
 	rootDir: "../../",
 	staticDirs: ["../../assets"],
 	addons: [
@@ -50,102 +47,86 @@ module.exports = {
 			return false;
 		}),
 	},
-	webpackFinal: function (config) {
-		// Removing the global alias as it conflicts with the global npm pkg
-		const { global, ...alias } = config.resolve.alias;
-		config.resolve.alias = alias;
-		let storybookRules =
-			config && config.module && config.module.rules
-				? config.module.rules.filter(
-						(rule) => !(rule.test && rule.test.toString().includes("css"))
-				  )
-				: [];
-		return {
-			...config,
-			stats: {
-				/* Suppress autoprefixer warnings from storybook build */
-				warningsFilter: [/autoprefixer: /],
-			},
-			/* Add support for root node_modules imports */
-			resolve: {
-				...(config.resolve ? config.resolve : {}),
-				modules: [
-					...(config.resolve ? config.resolve.modules : []),
-					resolve(__dirname, "../../node_modules"),
-				],
-				alias: {
-					...(config.resolve ? config.resolve.alias : {}),
-					...componentPkgs.reduce((pkgs, dir) => {
-						const pkg = require(resolve(componentsPath, dir, "package.json"));
-						pkgs[pkg.name] = resolve(componentsPath, dir);
-						return pkgs;
-					}, {}),
-				},
-			},
-			module: {
-				...(config.module ?? []),
-				rules: [
-					...storybookRules,
-					{
-						test: /^\w+\.{ico,jpg,jpeg,png,gif,webp}$/i,
-						use: [
-							{
-								loader: "file-loader",
-								options: {
-									outputPath: (url) => {
-										return `assets/images/${url.replace(/_\//g, "")}`;
-									},
-								},
-							},
-						],
-					},
-					{
-						test: /\.css$/i,
-						sideEffects: true,
-						use: [
-							{
-								loader: "style-loader",
-								options: {
-									injectType: "linkTag",
-									attributes: {
-										"data-source": "processed",
-									},
-								},
-							},
-							{
-								loader: "file-loader",
-								options: {
-									name: "[path][name].[ext][query]",
-									outputPath: (url) => {
-										return `assets/css/${url.replace(/_\//g, "")}`;
-									},
-									esModule: false,
-								},
-							},
-							{
-								loader: "postcss-loader",
-								options: {
-									implementation: require("postcss"),
-									postcssOptions: {
-										config: resolve(__dirname, "postcss.config.js"),
-									},
-								},
-							},
-						],
-					},
-					{
-						test: /\.js$/,
-						enforce: "pre",
-						use: ["source-map-loader"],
-					} /* Raw SVG loader */,
-					{
-						test: /\.svg$/i,
-						loader: "raw-loader",
-					},
-				],
-			},
-		};
-	},
+	// webpackFinal: function (config) {
+	// 	// Removing the global alias as it conflicts with the global npm pkg
+	// 	const { global, ...alias } = config.resolve.alias;
+	// 	config.resolve.alias = alias;
+	// 	let storybookRules =
+	// 		config && config.module && config.module.rules
+	// 			? config.module.rules.filter(
+	// 					(rule) => !(rule.test && rule.test.toString().includes("css"))
+	// 			  )
+	// 			: [];
+	// 	return {
+	// 		...config,
+	// 		/* Suppress autoprefixer warnings from storybook build */
+	// 		ignoreWarnings: [/autoprefixer: /],
+	// 		/* Add support for root node_modules imports */
+	// 		resolve: {
+	// 			...(config.resolve ? config.resolve : {}),
+	// 			modules: [
+	// 				...(config.resolve ? config.resolve.modules : []),
+	// 				resolve(__dirname, "../../node_modules"),
+	// 			],
+	// 			alias: {
+	// 				...(config.resolve ? config.resolve.alias : {}),
+	// 				...componentPkgs.reduce((pkgs, dir) => {
+	// 					const pkg = require(resolve(componentsPath, dir, "package.json"));
+	// 					pkgs[pkg.name] = resolve(componentsPath, dir);
+	// 					return pkgs;
+	// 				}, {}),
+	// 			},
+	// 		},
+	// 		module: {
+	// 			...(config.module ?? []),
+	// 			rules: [
+	// 				...storybookRules,
+	// 				// 		{
+	// 				// 			test: /^\w+\.{ico,jpg,jpeg,png,gif,webp}$/i,
+	// 				// 			type: "asset/resource",
+	// 				// 			use: [
+	// 				// 				{
+	// 				// 					loader: "file-loader",
+	// 				// 					options: {
+	// 				// 						outputPath: (url) => {
+	// 				// 							return `assets/images/${url.replace(/_\//g, "")}`;
+	// 				// 						},
+	// 				// 					},
+	// 				// 				},
+	// 				// 			],
+	// 				// 		},
+	// 				// 		// {
+	// 				// 		// 	test: {
+	// 				// 		// 		and: [/\/(expressvars|vars|tokens)\//, /\.css$/i],
+	// 				// 		// 	},
+	// 				// 		// 	type: "css/auto",
+	// 				// 		// 	use: [
+	// 				// 		// 		"style-loader",
+	// 				// 		// 		"file-loader",
+	// 				// 		// 		{
+	// 				// 		// 			loader: "postcss-loader",
+	// 				// 		// 			options: {
+	// 				// 		// 				implementation: require("postcss"),
+	// 				// 		// 				postcssOptions: {
+	// 				// 		// 					config: resolve(__dirname, "postcss.config.js"),
+	// 				// 		// 				},
+	// 				// 		// 			},
+	// 				// 		// 		},
+	// 				// 		// 	],
+	// 				// 		// },
+	// 				// 		{
+	// 				// 			test: /\.css$i/,
+	// 				// 			type: "css/auto",
+	// 				// 			use: ["style-loader", "css-loader"],
+	// 				// 		},
+	// 				{
+	// 					test: /\.svg$/i,
+	// 					type: "asset/source",
+	// 				},
+	// 			],
+	// 		},
+	// 	};
+	// },
 	framework: {
 		name: "@storybook/web-components-webpack5",
 		options: {},
