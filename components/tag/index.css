@@ -304,10 +304,10 @@ governing permissions and limitations under the License.
       content: "";
       display: inline-block;
       position: absolute;
-      top: calc(-1 * var(--mod-tag-focus-ring-gap, var(--spectrum-tag-focus-ring-gap)) - var(--mod-tag-border-width, var(--spectrum-tag-border-width)) - var(--mod-tag-focus-ring-thickness, var(--spectrum-tag-focus-ring-thickness)));
-      bottom: calc(-1 * var(--mod-tag-focus-ring-gap, var(--spectrum-tag-focus-ring-gap)) - var(--mod-tag-border-width, var(--spectrum-tag-border-width)) - var(--mod-tag-focus-ring-thickness, var(--spectrum-tag-focus-ring-thickness)));
-      left: calc(-1 * var(--mod-tag-focus-ring-gap, var(--spectrum-tag-focus-ring-gap)) - var(--mod-tag-border-width, var(--spectrum-tag-border-width)) - var(--mod-tag-focus-ring-thickness, var(--spectrum-tag-focus-ring-thickness)));
-      right: calc(-1 * var(--mod-tag-focus-ring-gap, var(--spectrum-tag-focus-ring-gap)) - var(--mod-tag-border-width, var(--spectrum-tag-border-width)) - var(--mod-tag-focus-ring-thickness, var(--spectrum-tag-focus-ring-thickness)));
+      inset-block-start: calc(-1 * var(--mod-tag-focus-ring-gap, var(--spectrum-tag-focus-ring-gap)) - var(--mod-tag-border-width, var(--spectrum-tag-border-width)) - var(--mod-tag-focus-ring-thickness, var(--spectrum-tag-focus-ring-thickness)));
+      inset-block-end: calc(-1 * var(--mod-tag-focus-ring-gap, var(--spectrum-tag-focus-ring-gap)) - var(--mod-tag-border-width, var(--spectrum-tag-border-width)) - var(--mod-tag-focus-ring-thickness, var(--spectrum-tag-focus-ring-thickness)));
+      inset-inline-start: calc(-1 * var(--mod-tag-focus-ring-gap, var(--spectrum-tag-focus-ring-gap)) - var(--mod-tag-border-width, var(--spectrum-tag-border-width)) - var(--mod-tag-focus-ring-thickness, var(--spectrum-tag-focus-ring-thickness)));
+      inset-inline-end: calc(-1 * var(--mod-tag-focus-ring-gap, var(--spectrum-tag-focus-ring-gap)) - var(--mod-tag-border-width, var(--spectrum-tag-border-width)) - var(--mod-tag-focus-ring-thickness, var(--spectrum-tag-focus-ring-thickness)));
       border-color: var(--highcontrast-tag-focus-ring-color, var(--mod-tag-focus-ring-color, var(--spectrum-tag-focus-ring-color)));
       border-radius: calc(var(--mod-tag-corner-radius, var(--spectrum-tag-corner-radius))
                            + var(--mod-tag-focus-ring-gap, var(--spectrum-tag-focus-ring-gap))
