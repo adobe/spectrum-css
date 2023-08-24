@@ -367,7 +367,7 @@ governing permissions and limitations under the License.
   inset-block-start: var(--mod-slider-input-top-size, var(--spectrum-slider-input-top-size));
   inset-inline-start: var(--mod-slider-input-left, var(--spectrum-slider-input-left));
   overflow: hidden;
-  opacity: 0.000001;
+  opacity: 0.000001; /* stylelint-disable-line number-max-precision */
   cursor: default;
   -webkit-appearance: none;
   border: 0;
