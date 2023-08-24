@@ -45,16 +45,6 @@ governing permissions and limitations under the License.
   inset-block-start: calc(var(--spectrum-coachmark-indicator-ring-diameter) * 0.75);
   inset-inline-start: calc(var(--spectrum-coachmark-indicator-ring-diameter) * 0.75);
 
-	/* border-color: var(--spectrum-coachmark-indicator-ring-default-color);
-
-	&.spectrum-CoachMarkIndicator--light {
-		border-color: var(--spectrum-coachmark-indicator-ring-low-contrast-color);
-	}
-
-	&--dark {
-		border-color: var(--spectrum-coachmark-indicator-ring-high-contrast-color);
-	} */
-
   inline-size: var(--spectrum-coachmark-indicator-ring-diameter);
   block-size: var(--spectrum-coachmark-indicator-ring-diameter);
   animation: pulse var(--spectrum-coachmark-animation-indicator-ring-duration) linear infinite;

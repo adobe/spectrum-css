@@ -58,7 +58,7 @@ governing permissions and limitations under the License.
 	--mod-button-edge-to-visual-only: 9px;
 
 
-	/* handles display toggle to create reeponsive styling */
+	/* handles display toggle to create responsive styling */
 	--spectrum-coachmark-buttongroup-hidden: none;
 	--spectrum-coachmark-buttongroup-displayed: flex;
 	--spectrum-coachmark-buttongroup-display: var(--spectrum-coachmark-buttongroup-displayed);
