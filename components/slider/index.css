@@ -177,7 +177,7 @@ governing permissions and limitations under the License.
   padding-inline-end: var(--mod-slider-handle-gap, var(--spectrum-slider-handle-gap));
   margin-inline-start: var(--mod-slider-track-margin-offset, var(--spectrum-slider-track-margin-offset));
 
-  &:before {
+  &::before {
     content: "";
     display: block;
     block-size: 100%;
@@ -192,14 +192,14 @@ governing permissions and limitations under the License.
 
 .spectrum-Slider-track {
   &:first-of-type {
-    &:before {
+    &::before {
       border-start-start-radius: var(--mod-slider-track-corner-radius, var(--spectrum-slider-track-corner-radius));
       border-end-start-radius: var(--mod-slider-track-corner-radius, var(--spectrum-slider-track-corner-radius));
     }
   }
 
   &:last-of-type {
-    &:before {
+    &::before {
       border-start-end-radius: var(--mod-slider-track-corner-radius, var(--spectrum-slider-track-corner-radius));
       border-end-end-radius: var(--mod-slider-track-corner-radius, var(--spectrum-slider-track-corner-radius));
     }
@@ -251,11 +251,11 @@ governing permissions and limitations under the License.
       inset-inline-start: var(--mod-slider-range-track-reset, var(--spectrum-slider-range-track-reset));
       inset-inline-end: auto;
       margin-inline-start: var(--mod-slider-track-margin-offset, var(--spectrum-slider-track-margin-offset));
+    }
 
-      &:before {
-        border-start-start-radius: var(--mod-slider-track-corner-radius, var(--spectrum-slider-track-corner-radius));
-        border-end-start-radius: var(--mod-slider-track-corner-radius, var(--spectrum-slider-track-corner-radius));
-      }
+    &:first-of-type::before {
+      border-start-start-radius: var(--mod-slider-track-corner-radius, var(--spectrum-slider-track-corner-radius));
+      border-end-start-radius: var(--mod-slider-track-corner-radius, var(--spectrum-slider-track-corner-radius));
     }
 
     &:last-of-type {
@@ -264,11 +264,11 @@ governing permissions and limitations under the License.
       inset-inline-start: auto;
       inset-inline-end: var(--mod-slider-range-track-reset, var(--spectrum-slider-range-track-reset));
       margin-inline-end: var(--mod-slider-track-margin-offset, var(--spectrum-slider-track-margin-offset));
+    }
 
-      &:before {
-        border-start-end-radius: var(--mod-slider-track-corner-radius, var(--spectrum-slider-track-corner-radius));
-        border-end-end-radius: var(--mod-slider-track-corner-radius, var(--spectrum-slider-track-corner-radius));
-      }
+    &:last-of-type::before {
+      border-start-end-radius: var(--mod-slider-track-corner-radius, var(--spectrum-slider-track-corner-radius));
+      border-end-end-radius: var(--mod-slider-track-corner-radius, var(--spectrum-slider-track-corner-radius));
     }
   }
 }
@@ -286,6 +286,7 @@ governing permissions and limitations under the License.
     block-size: 100%;
 
     /* Flip the ramp automatically for RTL */
+    /* stylelint-disable-next-line declaration-property-value-no-unknown */
     transform: logical rotate(0deg);
   }
 }
@@ -327,12 +328,12 @@ governing permissions and limitations under the License.
     z-index: 3;
   }
 
-  &:before {
+  &::before {
     content: " ";
     display: block;
     position: absolute;
-    left: 50%;
-    top: 50%;
+    inset-inline-start: 50%;
+    inset-block-start: 50%;
 
     transition: box-shadow var(--mod-animation-duration-100, var(--spectrum-animation-duration-100)) ease-out,
       inline-size var(--mod-animation-duration-100, var(--spectrum-animation-duration-100)) ease-out,
@@ -347,7 +348,7 @@ governing permissions and limitations under the License.
   }
 
   &.is-focused {
-    &:before {
+    &::before {
       inline-size: calc(var(--mod-slider-handle-size, var(--spectrum-slider-handle-size)) + var(--mod-focus-indicator-gap, var(--spectrum-focus-indicator-gap)) * 2);
       block-size: calc(var(--mod-slider-handle-size, var(--spectrum-slider-handle-size)) + var(--mod-focus-indicator-gap, var(--spectrum-focus-indicator-gap)) * 2);
     }
@@ -465,7 +466,7 @@ governing permissions and limitations under the License.
     );
 
 
-  &:after {
+  &::after {
     display: block;
     position: absolute;
     inset-block-start: 0;
@@ -593,7 +594,7 @@ governing permissions and limitations under the License.
   &.is-focused {
     border-color: var(--highcontrast-slider-handle-border-color-key-focus, var(--mod-slider-handle-border-color-key-focus, var(--spectrum-slider-handle-border-color-key-focus)));
 
-    &:before {
+    &::before {
       box-shadow: 0 0 0 var(--spectrum-focus-indicator-thickness) var(--highcontrast-slider-handle-focus-ring-color-key-focus, var(--mod-slider-handle-focus-ring-color-key-focus, var(--spectrum-slider-handle-focus-ring-color-key-focus)));
     }
   }
@@ -625,7 +626,7 @@ governing permissions and limitations under the License.
 }
 
 .spectrum-Slider-tick {
-  &:after {
+  &::after {
     background-color: var(--highcontrast-slider-tick-mark-color, var(--mod-slider-tick-mark-color, var(--spectrum-slider-tick-mark-color)));
   }
 }
@@ -640,96 +641,71 @@ governing permissions and limitations under the License.
 
 .spectrum-Slider--range {
   .spectrum-Slider-track {
-    &:not(:first-of-type):not(:last-of-type) {
-      &:before {
-        background: var(--highcontrast-slider-track-fill-color, var(--mod-slider-track-fill-color, var(--spectrum-slider-track-fill-color)));
-      }
+    &:not(:first-of-type):not(:last-of-type)::before {
+      background: var(--highcontrast-slider-track-fill-color, var(--mod-slider-track-fill-color, var(--spectrum-slider-track-fill-color)));
     }
   }
 }
 
-.spectrum-Slider {
-  &.is-disabled {
-    .spectrum-Slider-labelContainer {
-      color: var(--highcontrast-slider-label-text-color-disabled, var(--mod-slider-label-text-color-disabled, var(--spectrum-slider-label-text-color-disabled)));
+.spectrum-Slider.is-disabled {
+  .spectrum-Slider-labelContainer {
+    color: var(--highcontrast-slider-label-text-color-disabled, var(--mod-slider-label-text-color-disabled, var(--spectrum-slider-label-text-color-disabled)));
+  }
+
+  .spectrum-Slider-handle {
+    border-color: var(--highcontrast-slider-handle-border-color-disabled, var(--mod-slider-handle-border-color-disabled, var(--spectrum-slider-handle-border-color-disabled)));
+    background: var(--highcontrast-slider-handle-disabled-background-color, var(--mod-slider-handle-disabled-background-color, var(--spectrum-slider-handle-disabled-background-color)));
+
+    &:hover,
+    &:active {
+      border-color: var(--highcontrast-disabled-border-color, var(--mod-disabled-border-color, var(--spectrum-disabled-border-color)));
+      background: var(--highcontrast-slider-handle-background-color-disabled, var(--mod-slider-handle-background-color-disabled, var(--spectrum-slider-handle-background-color-disabled)));
     }
+  }
 
-    .spectrum-Slider-handle {
-      border-color: var(--highcontrast-slider-handle-border-color-disabled, var(--mod-slider-handle-border-color-disabled, var(--spectrum-slider-handle-border-color-disabled)));
-      background: var(--highcontrast-slider-handle-disabled-background-color, var(--mod-slider-handle-disabled-background-color, var(--spectrum-slider-handle-disabled-background-color)));
-
-      &:hover,
-      &:active {
-        border-color: var(--highcontrast-disabled-border-color, var(--mod-disabled-border-color, var(--spectrum-disabled-border-color)));
-        background: var(--highcontrast-slider-handle-background-color-disabled, var(--mod-slider-handle-background-color-disabled, var(--spectrum-slider-handle-background-color-disabled)));
-      }
+  .spectrum-Slider-track {
+    &::before {
+      background: var(--highcontrast-slider-track-color-disabled, var(--mod-slider-track-color-disabled, var(--spectrum-slider-track-color-disabled)));
     }
+  }
 
-    .spectrum-Slider-track {
-      &::before {
-        background: var(--highcontrast-slider-track-color-disabled, var(--mod-slider-track-color-disabled, var(--spectrum-slider-track-color-disabled)));
-      }
+  &.spectrum-Slider--filled {
+    .spectrum-Slider-track:first-child::before {
+      background: var(--highcontrast-slider-track-fill-color-disabled, var(--mod-slider-track-fill-color-disabled, var(--spectrum-slider-track-fill-color-disabled)));
     }
+  }
 
-    &.spectrum-Slider--filled {
-      .spectrum-Slider-track:first-child {
-        &::before {
-          background: var(--highcontrast-slider-track-fill-color-disabled, var(--mod-slider-track-fill-color-disabled, var(--spectrum-slider-track-fill-color-disabled)));
-        }
-      }
+  .spectrum-Slider-fill {
+    &::before {
+      background: var(--highcontrast-slider-track-fill-color-disabled, var(--mod-slider-track-fill-color-disabled, var(--spectrum-slider-track-fill-color-disabled)));
     }
+  }
 
-    .spectrum-Slider-fill {
-      &::before {
-        background: var(--highcontrast-slider-track-fill-color-disabled, var(--mod-slider-track-fill-color-disabled, var(--spectrum-slider-track-fill-color-disabled)));
-      }
+  .spectrum-Slider-ramp {
+    path {
+      fill: var(--highcontrast-slider-ramp-track-color-disabled, var(--mod-slider-ramp-track-color-disabled, var(--spectrum-slider-ramp-track-color-disabled)));
     }
+  }
 
-    .spectrum-Slider-ramp {
-      /* Slider handle turns transparent in high contrast mode for ramp */
-      @media (forced-colors: active) {
-        & + .spectrum-Slider-handle {
-            fill: ButtonFace;
-            background-color: ButtonFace;
-          }
-      }
-
-      path {
-        fill: var(--highcontrast-slider-ramp-track-color-disabled, var(--mod-slider-ramp-track-color-disabled, var(--spectrum-slider-ramp-track-color-disabled)));
-      }
+  .spectrum-Slider-tick {
+    &::after {
+      background-color: var(--highcontrast-slider-tick-mark-color-disabled, var(--mod-slider-tick-mark-color-disabled, var(--spectrum-slider-tick-mark-color-disabled)));
     }
+  }
 
-    .spectrum-Slider-tick {
-      &:after {
-        background-color: var(--highcontrast-slider-tick-mark-color-disabled, var(--mod-slider-tick-mark-color-disabled, var(--spectrum-slider-tick-mark-color-disabled)));
-      }
-    }
-
-    &.spectrum-Slider--range {
-      .spectrum-Slider-track {
-        &:not(:first-of-type):not(:last-of-type) {
-          &:before {
-            background: var(--highcontrast-slider-track-color-disabled, var(--mod-slider-track-color-disabled, var(--spectrum-slider-track-color-disabled)));
-          }
-        }
-      }
+  &.spectrum-Slider--range {
+    .spectrum-Slider-track:not(:first-of-type):not(:last-of-type)::before {
+      background: var(--highcontrast-slider-track-color-disabled, var(--mod-slider-track-color-disabled, var(--spectrum-slider-track-color-disabled)));
     }
   }
 }
-
 
 @media (forced-colors: active) {
 
   .spectrum-Slider {
-    --spectrum-slider-track-color: GrayText;
-    --spectrum-slider-track-fill-color: GrayText;
-
-    --spectrum-slider-track-color-disabled: GrayText;
-    --spectrum-slider-track-fill-color-disabled: GrayText;
 
     /*  over-writes */
     --highcontrast-slider-track-color: ButtonText;
-    --highcontrast-slider-track-fill-color: ButtonText;
     --highcontrast-slider-track-fill-color: ButtonText;
     --highcontrast-slider-ramp-track-color: ButtonText;
     --highcontrast-slider-ramp-track-color-disabled: GrayText;
@@ -756,7 +732,7 @@ governing permissions and limitations under the License.
 
     --spectrum-slider-track-color-disabled: GrayText;
     --spectrum-slider-track-fill-color-disabled: GrayText;
-
+    
     --spectrum-slider-handle-border-color-disabled: GrayText;
 
     --spectrum-slider-label-text-color: CanvasText;
@@ -764,5 +740,13 @@ governing permissions and limitations under the License.
 
     --spectrum-slider-ramp-handle-border-color-active: ButtonText;
 
+  }
+
+  /* Slider handle turns transparent in high contrast mode for ramp */
+  .spectrum-Slider.is-disabled {
+    .spectrum-Slider-ramp + .spectrum-Slider-handle {
+      fill: ButtonFace;
+      background-color: ButtonFace;
+    }
   }
 }
