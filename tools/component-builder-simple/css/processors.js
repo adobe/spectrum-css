@@ -30,6 +30,7 @@ function getProcessors(splitinatorOptions = {}) {
 		require("postcss-dropunusedvars")({ fix: false }),
 		require("postcss-dropdupedvars"),
 		require("postcss-discard-empty"),
+    require("postcss-hover-media-feature"),
 		require("postcss-discard-comments")({ removeAllButFirst: true }),
 		require("autoprefixer")({}),
 	].filter(Boolean);

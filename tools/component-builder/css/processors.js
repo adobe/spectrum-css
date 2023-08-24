@@ -60,6 +60,7 @@ function getProcessors(
 		require("postcss-droproot"),
 		secondNotNested ? require("./plugins/postcss-notnested")() : null, // Second one to catch all stray &
 		require("postcss-discard-empty"),
+    require("postcss-hover-media-feature"),
 		require("postcss-discard-comments")({ removeAllButFirst: true }),
 		require("autoprefixer")({}),
 	].filter(Boolean);
