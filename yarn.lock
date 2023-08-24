@@ -13638,6 +13638,13 @@ postcss-discard-empty@^6.0.0:
     postcss "^7.0.32"
     postcss-value-parser "^4.1.0"
 
+postcss-hover-media-feature@^1.0.2:
+  version "1.0.2"
+  resolved "https://registry.yarnpkg.com/postcss-hover-media-feature/-/postcss-hover-media-feature-1.0.2.tgz#7c2046ddee1521148660195864b014d6c1d13b3c"
+  integrity sha512-o5xDUqCQ4xtilWOcvo5LKYxFVSLWcBN0IlTqa0IJwAwHTd4pxKmX4c0fGIpgLQCcBB/+aFizt2NVWNGJWG4Izg==
+  dependencies:
+    postcss-selector-parser "^6.0.4"
+
 postcss-import@^10.0.0:
   version "10.0.0"
   resolved "https://registry.yarnpkg.com/postcss-import/-/postcss-import-10.0.0.tgz#4c85c97b099136cc5ea0240dc1dfdbfde4e2ebbe"
