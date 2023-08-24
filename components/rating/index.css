@@ -42,10 +42,10 @@ governing permissions and limitations under the License.
 
     .spectrum-Rating-icon {
       color: var(--highcontrast-rating-icon-color-key-focus, var(--mod-rating-icon-color-key-focus, var(--spectrum-rating-icon-color-key-focus)));
+    }
 
-      &.is-selected {
-        color: var(--highcontrast-rating-icon-color-key-focus, var(--mod-rating-icon-color-key-focus, var(--spectrum-rating-icon-color-key-focus)));
-      }
+    .spectrum-Rating-icon.is-selected {
+      color: var(--highcontrast-rating-icon-color-key-focus, var(--mod-rating-icon-color-key-focus, var(--spectrum-rating-icon-color-key-focus)));
     }
   }
 
@@ -53,22 +53,22 @@ governing permissions and limitations under the License.
     .spectrum-Rating-icon {
       /* Make all stars colored when the component is hovered */
       color: var(--highcontrast-rating-icon-color-default, var(--mod-rating-icon-color-default, var(--spectrum-rating-icon-color-default)));
+    }
 
-      &:hover {
-        /* The icon that's actually hovered is darker */
-        color: var(--highcontrast-rating-icon-color-hover, var(--mod-rating-icon-color-hover, var(--spectrum-rating-icon-color-hover)));
-      }
+    /* The icon that's actually hovered is darker */
+    .spectrum-Rating-icon:hover {
+      color: var(--highcontrast-rating-icon-color-hover, var(--mod-rating-icon-color-hover, var(--spectrum-rating-icon-color-hover)));
+    }
 
-      &:active {
-        color: var(--highcontrast-rating-icon-color-down, var(--mod-rating-icon-color-down, var(--spectrum-rating-icon-color-down)));
-      }
+    .spectrum-Rating-icon:active {
+      color: var(--highcontrast-rating-icon-color-down, var(--mod-rating-icon-color-down, var(--spectrum-rating-icon-color-down)));
+    }
 
-      /* Show which star is currently selected */
-      &.is-currentValue {
-        &:after {
-          /* Match the color of the star */
-          background: currentColor;
-        }
+    /* Show which star is currently selected */
+    .spectrum-Rating-icon.is-currentValue {
+      &::after {
+        /* Match the color of the star */
+        background: currentColor;
       }
     }
   }
