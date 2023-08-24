@@ -151,7 +151,7 @@ governing permissions and limitations under the License.
 
 
 .spectrum-CoachMark-header {
-	padding-block-start: var(--mod-coachmark-padding, var(--spectrum-coachmark-padding));;
+	padding-block-start: var(--mod-coachmark-padding, var(--spectrum-coachmark-padding));
 	display: flex;
 	justify-content: space-between;
 	align-items: center;
@@ -176,7 +176,6 @@ governing permissions and limitations under the License.
 
 .spectrum-CoachMark-footer {
 	display: grid;
-	grid-template-columns: 30% 70%;
 	align-items: end;
 	margin-block-start: 0;
 	padding-block-end: var(--mod-coachmark-padding, var(--spectrum-coachmark-padding));
