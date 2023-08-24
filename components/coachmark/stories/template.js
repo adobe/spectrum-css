@@ -8,7 +8,6 @@ import { Template as ActionMenu } from "@spectrum-css/actionmenu/stories/templat
 import { Template as Popover } from "@spectrum-css/popover/stories/template.js";
 
 import "../index.css";
-import "../skin.css";
 
 export const Template = ({
 	rootClass = "spectrum-CoachMark",
@@ -22,6 +21,24 @@ export const Template = ({
 	...globals
 }) => {
 	const [, updateArgs] = useArgs();
+
+	const displayedActionMenu = ActionMenu({
+		onclick: function () {
+			updateArgs({ isOpen: !isOpen });
+		},
+		isOpen,
+		iconName: 'More',
+		size: globals.scale === "large" ? "s" : "m",
+		items: [
+			{
+				label: "Skip tour",
+			},
+			{
+				label: "Reset tour",
+			}
+		],
+})
+
 
 	return html`
 		<div
@@ -44,22 +61,7 @@ export const Template = ({
 				<div class="spectrum-CoachMark-header">
 					<div class="spectrum-CoachMark-title">Try playing with a pixel brush</div>
 					<div class="spectrum-CoachMark-action-menu">
-					${hasActionMenu ? ActionMenu({
-							onclick: function () {
-								updateArgs({ isOpen: !isOpen });
-							},
-							isOpen,
-							iconName: 'More',
-							size: globals.scale === "large" ? "s" : "m",
-							items: [
-								{
-								  label: "Skip tour",
-								},
-								{
-									label: "Reset tour",
-								}
-							],
-					}) : ''}
+					${hasActionMenu ? displayedActionMenu : ""}
 				</div>
 				</div>
 				<div class="spectrum-CoachMark-content">
@@ -75,7 +77,7 @@ export const Template = ({
 							variant: "secondary",
 							treatment: "outline",
 							hideLabel: true,
-							iconName: "ChevronLeft100",
+							iconName: "ChevronLeft75",
 						},
 						{
 							variant: "primary",

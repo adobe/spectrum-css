@@ -68,11 +68,11 @@ governing permissions and limitations under the License.
 	--spectrum-coachmark-buttongroup-mobile-display: var(--spectrum-coachmark-buttongroup-mobile-hidden);
 
 	--spectrum-coachmark-menu-hidden: none;
-	--spectrum-coachmark-menu-displayed: inline-block;
+	--spectrum-coachmark-menu-displayed: inline-flex;
 	--spectrum-coachmark-menu-display: var(--spectrum-coachmark-menu-displayed);
 
 	--spectrum-coachmark-menu-mobile-hidden: none;
-	--spectrum-coachmark-menu-mobile-displayed: inline-block;
+	--spectrum-coachmark-menu-mobile-displayed: inline-flex;
 	--spectrum-coachmark-menu-mobile-display: var(--spectrum-coachmark-buttongroup-mobile-hidden);
 }
 
