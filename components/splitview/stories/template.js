@@ -4,7 +4,6 @@ import { when } from "lit/directives/when.js";
 // import { ifDefined } from 'lit/directives/if-defined.js';
 
 import "../index.css";
-import "../skin.css";
 
 export const Template = ({
 	rootClass = "spectrum-SplitView",
@@ -50,6 +49,8 @@ export const Template = ({
 					["is-draggable"]: isResizable,
 					[`is-collapsed-${collapsibleClassName}`]: isCollapsible,
 				})}
+				tabindex="0"
+				data-testid="splitter"
 			>
 				${when(
 					isResizable,
