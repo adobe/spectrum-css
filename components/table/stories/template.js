@@ -78,17 +78,19 @@ export const TableRowItem = ({
 		data-tier=${ifDefined(tier)}
 		?hidden=${isHidden}
 	>
-		${when(showCheckbox, () => html`
+		${when(showCheckbox && !isSectionHeader, () => html`
 			<${cellTag}
 				role="gridcell"
 				class="spectrum-Table-cell spectrum-Table-checkboxCell"
 			>
-				${Checkbox({
-					size,
-					isEmphasized: tableIsEmphasized,
-					isChecked: isSelected,
-					customClasses: [`${rootClass}-checkbox`],
-				})}
+				${when(!isSummaryRow, () => 
+					Checkbox({
+						size,
+						isEmphasized: tableIsEmphasized,
+						isChecked: isSelected,
+						customClasses: [`${rootClass}-checkbox`],
+					})
+				)}
 			</${cellTag}>`
 		)}
 
@@ -131,7 +133,7 @@ export const TableRowItem = ({
 							[`${rootClass}-cell`]: true,
 							[`${rootClass}-cell--thumbnail`]: useThumbnail,
 						})}
-						colspan=${ifDefined(isSectionHeader ? "3" : undefined)}
+						colspan=${ifDefined(isSectionHeader && showCheckbox ? "4" : isSectionHeader ? "3" : undefined)}
 					>${getCellContent(0)}</${cellTag}>`
 		}
 
