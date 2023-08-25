@@ -1,8 +1,12 @@
+import { within, userEvent } from '@storybook/testing-library';
+import { expect } from '@storybook/jest';
+
 // Import the component markup template
 import { Template } from "./template";
 
 import { default as ActionButton } from "@spectrum-css/actionbutton/stories/actionbutton.stories.js";
 import { default as Menu } from "@spectrum-css/menu/stories/menu.stories.js";
+import { default as Popover } from "@spectrum-css/popover/stories/popover.stories.js";
 
 export default {
 	title: "Components/Action menu",
@@ -26,6 +30,7 @@ export default {
 	parameters: {
 		actions: {
 			handles: [
+				...Popover.parameters.actions.handles,
 				...ActionButton.parameters.actions.handles,
 				...Menu.parameters.actions.handles,
 			],
@@ -39,7 +44,18 @@ export default {
 };
 
 export const Default = Template.bind({});
+Default.play = async ({ canvasElement }) => {
+	const canvas = within(canvasElement);
+
+	await userEvent.click(canvas.getByRole('button', { id: 'trigger' }));
+
+	setTimeout(() => {
+		expect(canvas.getByTestId('popover-1').classList.contains('is-open')).toBe(true);
+	}, 100)
+
+};
 Default.args = {
+	isOpen: false,
 	items: [
 		{
 			label: "Action 1",

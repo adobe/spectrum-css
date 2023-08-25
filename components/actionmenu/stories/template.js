@@ -7,7 +7,7 @@ import { Template as Menu } from "@spectrum-css/menu/stories/template.js";
 export const Template = ({
 	customClasses = [],
 	items = [],
-	isOpen = true,
+	isOpen = false,
 	...globals
 }) => {
 
@@ -20,12 +20,14 @@ export const Template = ({
 		...globals,
 		position: "bottom",
 		isOpen,
+		id: "popover-1",
+		testId: "popover-1",
+		triggerId: 'trigger',
 		content: [
-			Menu({ ...globals, items })
+			Menu({ items })
 		],
 		trigger: (passthroughs) => ActionButton({
 			size: "m",
-			...globals,
 			isQuiet: true,
 			isSelected: isOpen,
 			label: "More Actions",
