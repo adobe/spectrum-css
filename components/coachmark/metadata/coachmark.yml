@@ -1,5 +1,9 @@
 name: Coach mark
 SpectrumSiteSlug: https://spectrum.adobe.com/page/coach-mark/
+sections:
+  - name: Migration Guide
+    description: |
+      - Coach Mark is now a seperate component from Coach Indicator
 examples:
   - id: coachmark
     name: Standard
