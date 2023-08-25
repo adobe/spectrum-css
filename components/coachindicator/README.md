@@ -1,6 +1,6 @@
 # @spectrum-css/coachindicator
 
-> The Spectrum CSS coachindicator component
+> The Spectrum CSS Coach Indicator component
 
 This package is part of the [Spectrum CSS project](https://github.com/adobe/spectrum-css).
 

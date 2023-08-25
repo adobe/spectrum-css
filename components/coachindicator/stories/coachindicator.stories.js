@@ -4,7 +4,7 @@ import { Template } from "./template";
 export default {
 	title: "components/Coach indicator",
 	description:
-		"The coach mark component can be used to bring added attention to specific parts of a page.",
+		"The coach indicator component can be used to bring added attention to specific parts of a page.",
 	component: "CoachIndicator",
 	argTypes: {
 		isQuiet: {
@@ -28,7 +28,7 @@ export default {
 		},
 	},
 	args: {
-		rootClass: "spectrum-CoachMark",
+		rootClass: "spectrum-CoachMarkIndicator",
 		isQuiet: false,
 		withPopover: false,
 		variant: "default",
