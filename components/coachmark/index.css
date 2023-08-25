@@ -48,7 +48,7 @@ governing permissions and limitations under the License.
 	--spectrum-coachmark-step-font-style: var(--spectrum-body-sans-serif-font-style);
 	--spectrum-coachmark-step-line-height: var(--spectrum-body-line-height);
 	--spectrum-coachmark-step-font-size: var(--spectrum-coach-mark-pagination-body-size);
-	--spectrum-coachmark-step-step-to-bottom: var(--spectrum-coach-mark-pagination-text-to-bottom-edge);
+	--spectrum-coachmark-step-to-bottom: var(--spectrum-coach-mark-pagination-text-to-bottom-edge);
 
 	/* mods */
 	--mod-buttongroup-justify-content: flex-end;
@@ -203,5 +203,5 @@ governing permissions and limitations under the License.
 	font-style: var(--mod-coachmark-step-font-style, var(--spectrum-coachmark-step-font-style));
 	line-height: var(--mod-coachmark-step-text-line-height, var(--spectrum-coachmark-step-text-line-height));
 	white-space: nowrap;
-	margin-block-end: calc(var(--mod-coachmark-step-step-to-bottom, var(--spectrum-coachmark-step-step-to-bottom)) - var(--mod-coachmark-padding, var(--spectrum-coachmark-padding)));
+	margin-block-end: calc(var(--mod-coachmark-step-to-bottom, var(--spectrum-coachmark-step-to-bottom)) - var(--mod-coachmark-padding, var(--spectrum-coachmark-padding)));
 }

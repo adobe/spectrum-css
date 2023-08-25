@@ -22,9 +22,9 @@
 | `--mod-coachmark-step-color`                  |
 | `--mod-coachmark-step-font-size`              |
 | `--mod-coachmark-step-font-style`             |
-| `--mod-coachmark-step-step-to-bottom`         |
 | `--mod-coachmark-step-text-font-weight`       |
 | `--mod-coachmark-step-text-line-height`       |
+| `--mod-coachmark-step-to-bottom`              |
 | `--mod-coachmark-title-color`                 |
 | `--mod-coachmark-title-font-family`           |
 | `--mod-coachmark-title-font-size`             |
