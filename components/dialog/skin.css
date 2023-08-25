@@ -22,12 +22,3 @@ governing permissions and limitations under the License.
   color: var(--spectrum-dialog-confirm-description-text-color);
 }
 
-.spectrum-Dialog-typeIcon {
-  color: var(--spectrum-dialog-confirm-icon-color);
-}
-
-.spectrum-Dialog--error {
-  .spectrum-Dialog-typeIcon {
-    color: var(--spectrum-dialog-error-icon-color);
-  }
-}

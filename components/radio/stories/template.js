@@ -9,6 +9,10 @@ export const Template = ({
 	size = "m",
 	label,
 	name,
+	isEmphasized,
+	isChecked,
+	isDisabled,
+	isReadOnly,
 	id,
 	customClasses = [],
 	...globals
@@ -28,6 +32,8 @@ export const Template = ({
 				[rootClass]: true,
 				[`${rootClass}--size${size?.toUpperCase()}`]:
 					typeof size !== "undefined",
+				[`${rootClass}--emphasized`]: isEmphasized,
+				"is-readOnly" : isReadOnly,
 				...customClasses.reduce((a, c) => ({ ...a, [c]: true }), {}),
 			})}
 			id=${ifDefined(id)}
@@ -37,6 +43,9 @@ export const Template = ({
 				name=${name}
 				class="${rootClass}-input"
 				id="radio-0"
+				readOnly=${isReadOnly ? 'readonly' : ""}
+				?checked=${isChecked}
+				?disabled=${isDisabled}
 			/>
 			<span class="${rootClass}-button ${rootClass}-button--sizeS"></span>
 			<label class="${rootClass}-label ${rootClass}-label--sizeS" for="radio-0"

@@ -3,6 +3,47 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+<a name="2.0.3"></a>
+##2.0.3
+🗓
+2023-08-22 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/assetcard@2.0.2...@spectrum-css/assetcard@2.0.3)
+
+**Note:** Version bump only for package @spectrum-css/assetcard
+
+<a name="2.0.2"></a>
+##2.0.2
+🗓
+2023-08-22 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/assetcard@2.0.0...@spectrum-css/assetcard@2.0.2)
+
+**Note:** Version bump only for package @spectrum-css/assetcard
+
+<a name="2.0.1"></a>
+##2.0.1
+🗓
+2023-08-18 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/assetcard@2.0.0...@spectrum-css/assetcard@2.0.1)
+
+**Note:** Version bump only for package @spectrum-css/assetcard
+
+<a name="2.0.0"></a>
+#2.0.0
+🗓
+2023-08-16 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/assetcard@1.1.52...@spectrum-css/assetcard@2.0.0)
+
+\*refactor(assetcard)!: replace focus-ring with focus-visible([1c6a3e9](https://github.com/adobe/spectrum-css/commit/1c6a3e9))
+
+    	###
+    	🛑 BREAKING CHANGES
+
+    		*
+    		use native focus-visible pseudo class for focus styling
+
+<a name="1.1.52"></a>
+##1.1.52
+🗓
+2023-08-10 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/assetcard@1.1.51...@spectrum-css/assetcard@1.1.52)
+
+**Note:** Version bump only for package @spectrum-css/assetcard
+
 <a name="1.1.51"></a>
 ##1.1.51
 🗓

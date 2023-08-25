@@ -3,6 +3,43 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+<a name="3.1.4"></a>
+##3.1.4
+🗓
+2023-08-22 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/badge@3.1.3...@spectrum-css/badge@3.1.4)
+
+**Note:** Version bump only for package @spectrum-css/badge
+
+<a name="3.1.3"></a>
+##3.1.3
+🗓
+2023-08-22 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/badge@3.1.1...@spectrum-css/badge@3.1.3)
+
+**Note:** Version bump only for package @spectrum-css/badge
+
+<a name="3.1.2"></a>
+##3.1.2
+🗓
+2023-08-18 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/badge@3.1.1...@spectrum-css/badge@3.1.2)
+
+**Note:** Version bump only for package @spectrum-css/badge
+
+<a name="3.1.1"></a>
+##3.1.1
+🗓
+2023-08-16 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/badge@3.1.0...@spectrum-css/badge@3.1.1)
+
+**Note:** Version bump only for package @spectrum-css/badge
+
+<a name="3.1.0"></a>
+#3.1.0
+🗓
+2023-08-10 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/badge@3.0.45...@spectrum-css/badge@3.1.0)
+
+### ✨ Features
+
+- **badge,tokens:**add non-semantic colors ([#2077](https://github.com/adobe/spectrum-css/issues/2077))([1bac588](https://github.com/adobe/spectrum-css/commit/1bac588))
+
 <a name="3.0.45"></a>
 ##3.0.45
 🗓

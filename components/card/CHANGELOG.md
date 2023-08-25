@@ -3,6 +3,41 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+<a name="6.0.13"></a>
+##6.0.13
+🗓
+2023-08-22 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/card@6.0.12...@spectrum-css/card@6.0.13)
+
+**Note:** Version bump only for package @spectrum-css/card
+
+<a name="6.0.12"></a>
+##6.0.12
+🗓
+2023-08-22 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/card@6.0.10...@spectrum-css/card@6.0.12)
+
+**Note:** Version bump only for package @spectrum-css/card
+
+<a name="6.0.11"></a>
+##6.0.11
+🗓
+2023-08-18 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/card@6.0.10...@spectrum-css/card@6.0.11)
+
+**Note:** Version bump only for package @spectrum-css/card
+
+<a name="6.0.10"></a>
+##6.0.10
+🗓
+2023-08-16 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/card@6.0.9...@spectrum-css/card@6.0.10)
+
+**Note:** Version bump only for package @spectrum-css/card
+
+<a name="6.0.9"></a>
+##6.0.9
+🗓
+2023-08-10 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/card@6.0.8...@spectrum-css/card@6.0.9)
+
+**Note:** Version bump only for package @spectrum-css/card
+
 <a name="6.0.8"></a>
 ##6.0.8
 🗓

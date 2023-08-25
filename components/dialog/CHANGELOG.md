@@ -3,6 +3,47 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+<a name="7.0.1"></a>
+##7.0.1
+🗓
+2023-08-22 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/dialog@7.0.0...@spectrum-css/dialog@7.0.1)
+
+**Note:** Version bump only for package @spectrum-css/dialog
+
+<a name="7.0.0"></a>
+#7.0.0
+🗓
+2023-08-22 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/dialog@6.0.67...@spectrum-css/dialog@7.0.0)
+
+\*feat(dialog)!: major layout updates([526d505](https://github.com/adobe/spectrum-css/commit/526d505))
+
+    	###
+    	🛑 BREAKING CHANGES
+
+    		*
+    		Alert variants of Dialog have been removed and placed inside of Alert Dialog
+
+<a name="6.0.68"></a>
+##6.0.68
+🗓
+2023-08-18 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/dialog@6.0.67...@spectrum-css/dialog@6.0.68)
+
+**Note:** Version bump only for package @spectrum-css/dialog
+
+<a name="6.0.67"></a>
+##6.0.67
+🗓
+2023-08-16 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/dialog@6.0.66...@spectrum-css/dialog@6.0.67)
+
+**Note:** Version bump only for package @spectrum-css/dialog
+
+<a name="6.0.66"></a>
+##6.0.66
+🗓
+2023-08-10 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/dialog@6.0.65...@spectrum-css/dialog@6.0.66)
+
+**Note:** Version bump only for package @spectrum-css/dialog
+
 <a name="6.0.65"></a>
 ##6.0.65
 🗓

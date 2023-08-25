@@ -3,6 +3,41 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+<a name="5.0.36"></a>
+##5.0.36
+🗓
+2023-08-22 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/typography@5.0.35...@spectrum-css/typography@5.0.36)
+
+**Note:** Version bump only for package @spectrum-css/typography
+
+<a name="5.0.35"></a>
+##5.0.35
+🗓
+2023-08-22 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/typography@5.0.33...@spectrum-css/typography@5.0.35)
+
+**Note:** Version bump only for package @spectrum-css/typography
+
+<a name="5.0.34"></a>
+##5.0.34
+🗓
+2023-08-18 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/typography@5.0.33...@spectrum-css/typography@5.0.34)
+
+**Note:** Version bump only for package @spectrum-css/typography
+
+<a name="5.0.33"></a>
+##5.0.33
+🗓
+2023-08-16 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/typography@5.0.32...@spectrum-css/typography@5.0.33)
+
+**Note:** Version bump only for package @spectrum-css/typography
+
+<a name="5.0.32"></a>
+##5.0.32
+🗓
+2023-08-10 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/typography@5.0.31...@spectrum-css/typography@5.0.32)
+
+**Note:** Version bump only for package @spectrum-css/typography
+
 <a name="5.0.31"></a>
 ##5.0.31
 🗓

@@ -3,6 +3,49 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+<a name="4.0.3"></a>
+##4.0.3
+🗓
+2023-08-22 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/closebutton@4.0.2...@spectrum-css/closebutton@4.0.3)
+
+**Note:** Version bump only for package @spectrum-css/closebutton
+
+<a name="4.0.2"></a>
+##4.0.2
+🗓
+2023-08-22 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/closebutton@4.0.0...@spectrum-css/closebutton@4.0.2)
+
+**Note:** Version bump only for package @spectrum-css/closebutton
+
+<a name="4.0.1"></a>
+##4.0.1
+🗓
+2023-08-18 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/closebutton@4.0.0...@spectrum-css/closebutton@4.0.1)
+
+**Note:** Version bump only for package @spectrum-css/closebutton
+
+<a name="4.0.0"></a>
+#4.0.0
+🗓
+2023-08-16 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/closebutton@3.1.14...@spectrum-css/closebutton@4.0.0)
+
+\*refactor(closebutton)!: replace focus-ring with focus-visible([a17183f](https://github.com/adobe/spectrum-css/commit/a17183f))
+
+    	###
+    	🛑 BREAKING CHANGES
+
+    		*
+    		use focus-visible pseudo class for focus styling
+
+remove duplicate focus indicator styling
+
+<a name="3.1.14"></a>
+##3.1.14
+🗓
+2023-08-10 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/closebutton@3.1.13...@spectrum-css/closebutton@3.1.14)
+
+**Note:** Version bump only for package @spectrum-css/closebutton
+
 <a name="3.1.13"></a>
 ##3.1.13
 🗓

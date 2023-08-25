@@ -11,5 +11,6 @@ governing permissions and limitations under the License.
 */
 
 .spectrum-Underlay {
-  background: var(--spectrum-dialog-confirm-overlay-background-color);
+  /* TODO update to --spectrum-overlay-color token once an RGB stripped value is available */
+  background: rgba(var(--spectrum-black-rgb), var(--spectrum-overlay-opacity));
 }

@@ -17,6 +17,9 @@ examples:
       | `.spectrum-CloseButton--sizeM`  | `.spectrum-UIIcon-Cross100` |
       | `.spectrum-CloseButton--sizeL`  | `.spectrum-UIIcon-Cross200` |
       | `.spectrum-CloseButton--sizeXL` | `.spectrum-UIIcon-Cross300` |
+
+      ### Remove focus-ring class
+      We've migrated away from the focus-ring class in favor of the native `:focus-visible` pseudo-class due to changes in browser support.
     name: Icon Size - Regular
     markup: |
       <div class="spectrum-Examples">

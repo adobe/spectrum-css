@@ -3,6 +3,19 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+<a name="2.0.0"></a>
+#2.0.0
+🗓
+2023-08-16 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/logicbutton@1.2.36...@spectrum-css/logicbutton@2.0.0)
+
+\*refactor(logicbutton)!: replace focus-ring with focus-visible([1bee468](https://github.com/adobe/spectrum-css/commit/1bee468))
+
+    	###
+    	🛑 BREAKING CHANGES
+
+    		*
+    		use focus-visible psuedo class for focus styling
+
 <a name="1.2.36"></a>
 ##1.2.36
 🗓

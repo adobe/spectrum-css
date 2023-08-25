@@ -17,6 +17,9 @@ sections:
 
       ### A/B toggle variant removed
       It's been deprecated and removed. A similar use case could be served by using Radio buttons.
+
+      ### Remove focus-ring class
+      We've migrated away from the focus-ring class in favor of the native `:focus-visible` pseudo-class due to changes in browser support.
 examples:
   - id: switch
     name: Standard

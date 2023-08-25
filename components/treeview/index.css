@@ -91,7 +91,7 @@ governing permissions and limitations under the License.
   }
 
   &.is-selected {
-    .spectrum-TreeView-itemLink:not(:focus-ring) {
+    .spectrum-TreeView-itemLink:not(:focus-visible) {
       &:before {
         border-width: var(--spectrum-treeview-item-border-size-selected);
       }
@@ -150,7 +150,7 @@ governing permissions and limitations under the License.
     color: transparent;
   }
 
-  &:focus-ring {
+  &:focus-visible {
     &:before {
       border-width: var(--spectrum-treeview-item-border-size);
     }

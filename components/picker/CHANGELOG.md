@@ -3,6 +3,49 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+<a name="7.0.3"></a>
+##7.0.3
+🗓
+2023-08-22 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/picker@7.0.2...@spectrum-css/picker@7.0.3)
+
+**Note:** Version bump only for package @spectrum-css/picker
+
+<a name="7.0.2"></a>
+##7.0.2
+🗓
+2023-08-22 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/picker@7.0.0...@spectrum-css/picker@7.0.2)
+
+**Note:** Version bump only for package @spectrum-css/picker
+
+<a name="7.0.1"></a>
+##7.0.1
+🗓
+2023-08-18 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/picker@7.0.0...@spectrum-css/picker@7.0.1)
+
+**Note:** Version bump only for package @spectrum-css/picker
+
+<a name="7.0.0"></a>
+#7.0.0
+🗓
+2023-08-16 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/picker@6.0.2...@spectrum-css/picker@7.0.0)
+
+\*refactor(picker)!: remove focus-ring([e37b430](https://github.com/adobe/spectrum-css/commit/e37b430))
+
+    	###
+    	🛑 BREAKING CHANGES
+
+    		*
+    		Remove focus-ring pseudo class in favor of focus-visible
+
+<a name="6.0.2"></a>
+##6.0.2
+🗓
+2023-08-10 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/picker@6.0.1...@spectrum-css/picker@6.0.2)
+
+### 🐛 Bug fixes
+
+- **picker:**add separate mod for label font-weight ([#2079](https://github.com/adobe/spectrum-css/issues/2079))([1f8e486](https://github.com/adobe/spectrum-css/commit/1f8e486))
+
 <a name="6.0.1"></a>
 ##6.0.1
 🗓

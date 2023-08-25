@@ -129,7 +129,7 @@ governing permissions and limitations under the License.
     color: inherit;
   }
 
-  /* correct focus-ring radius for t-shirt sizing */
+  /* correct focus indicator radius for t-shirt sizing */
   &:after {
     border-radius: calc(var(--mod-button-border-radius, var(--spectrum-button-border-radius)) + var(--mod-focus-indicator-gap, var(--spectrum-focus-indicator-gap)));
   }
@@ -163,7 +163,7 @@ a.spectrum-Button {
 }
 
 .spectrum-Button {
-  &:focus-ring,
+  &:focus-visible,
   &.is-focused {
     &:after {
       box-shadow: 0 0 0 var(--mod-button-focus-ring-thickness, var(--spectrum-button-focus-ring-thickness)) var(--mod-button-focus-ring-color, var(--spectrum-button-focus-indicator-color));
@@ -189,9 +189,10 @@ a.spectrum-Button {
     content: '';
   }
 
-  &:focus-ring {
+  &:focus-visible {
     /* kill the default ring */
     box-shadow: none;
+    outline: none;
 
     &:after {
       box-shadow: 0 0 0 var(--mod-button-focus-ring-thickness, var(--spectrum-button-focus-ring-thickness)) var(--highcontrast-button-focus-ring-color, var(--mod-button-focus-ring-color,
@@ -216,7 +217,7 @@ a.spectrum-Button {
     color: var(--highcontrast-button-content-color-hover, var(--mod-button-content-color-hover, var(--spectrum-button-content-color-hover)));
   }
 
-  &:focus-ring {
+  &:focus-visible {
     background-color: var(--highcontrast-button-background-color-focus, var(--mod-button-background-color-focus, var(--spectrum-button-background-color-focus)));
     border-color: var(--highcontrast-button-border-color-focus, var(--mod-button-border-color-focus, var(--spectrum-button-border-color-focus)));
     color: var(--highcontrast-button-content-color-focus, var(--mod-button-content-color-focus, var(--spectrum-button-content-color-focus)));
@@ -242,7 +243,7 @@ a.spectrum-Button {
     --highcontrast-button-content-color-disabled: GrayText;
     --highcontrast-button-border-color-disabled: GrayText;
 
-    &:focus-ring {
+    &:focus-visible {
       &:after {
         forced-color-adjust: none;
         box-shadow: 0 0 0 var(--mod-button-focus-ring-thickness, var(--spectrum-button-focus-ring-thickness)) ButtonText;

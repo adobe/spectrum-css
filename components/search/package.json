@@ -1,6 +1,6 @@
 {
   "name": "@spectrum-css/search",
-  "version": "6.0.10",
+  "version": "6.0.15",
   "description": "The Spectrum CSS search component",
   "license": "Apache-2.0",
   "author": "Adobe",
@@ -21,14 +21,14 @@
     "@spectrum-css/clearbutton": ">=1",
     "@spectrum-css/icon": ">=3",
     "@spectrum-css/textfield": ">=5.1.7",
-    "@spectrum-css/tokens": ">=10.0.0"
+    "@spectrum-css/tokens": ">=10"
   },
   "devDependencies": {
-    "@spectrum-css/clearbutton": "^1.2.38",
-    "@spectrum-css/component-builder-simple": "^2.0.16",
-    "@spectrum-css/icon": "^4.0.0",
-    "@spectrum-css/textfield": "^6.0.10",
-    "@spectrum-css/tokens": "^11.1.0",
+    "@spectrum-css/clearbutton": "^2.0.0",
+    "@spectrum-css/component-builder-simple": "^2.0.17",
+    "@spectrum-css/icon": "^4.0.1",
+    "@spectrum-css/textfield": "^6.0.15",
+    "@spectrum-css/tokens": "^11.3.0",
     "gulp": "^4.0.0"
   },
   "publishConfig": {

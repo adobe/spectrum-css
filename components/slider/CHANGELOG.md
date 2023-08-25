@@ -3,6 +3,50 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+<a name="4.1.4"></a>
+##4.1.4
+🗓
+2023-08-22 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/slider@4.1.3...@spectrum-css/slider@4.1.4)
+
+**Note:** Version bump only for package @spectrum-css/slider
+
+<a name="4.1.3"></a>
+##4.1.3
+🗓
+2023-08-22 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/slider@4.1.1...@spectrum-css/slider@4.1.3)
+
+**Note:** Version bump only for package @spectrum-css/slider
+
+<a name="4.1.2"></a>
+##4.1.2
+🗓
+2023-08-18 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/slider@4.1.1...@spectrum-css/slider@4.1.2)
+
+**Note:** Version bump only for package @spectrum-css/slider
+
+<a name="4.1.1"></a>
+##4.1.1
+🗓
+2023-08-16 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/slider@4.1.0...@spectrum-css/slider@4.1.1)
+
+**Note:** Version bump only for package @spectrum-css/slider
+
+<a name="4.1.0"></a>
+#4.1.0
+🗓
+2023-08-10 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/slider@4.0.19...@spectrum-css/slider@4.1.0)
+
+### ✨ Features
+
+- **slider:**add side label variant ([#2067](https://github.com/adobe/spectrum-css/issues/2067))([0e983d3](https://github.com/adobe/spectrum-css/commit/0e983d3))
+
+<a name="4.0.19"></a>
+##4.0.19
+🗓
+2023-08-10 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/slider@4.0.18...@spectrum-css/slider@4.0.19)
+
+**Note:** Version bump only for package @spectrum-css/slider
+
 <a name="4.0.18"></a>
 ##4.0.18
 🗓

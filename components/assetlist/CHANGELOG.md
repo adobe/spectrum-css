@@ -3,6 +3,41 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+<a name="3.0.76"></a>
+##3.0.76
+🗓
+2023-08-22 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/assetlist@3.0.75...@spectrum-css/assetlist@3.0.76)
+
+**Note:** Version bump only for package @spectrum-css/assetlist
+
+<a name="3.0.75"></a>
+##3.0.75
+🗓
+2023-08-22 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/assetlist@3.0.73...@spectrum-css/assetlist@3.0.75)
+
+**Note:** Version bump only for package @spectrum-css/assetlist
+
+<a name="3.0.74"></a>
+##3.0.74
+🗓
+2023-08-18 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/assetlist@3.0.73...@spectrum-css/assetlist@3.0.74)
+
+**Note:** Version bump only for package @spectrum-css/assetlist
+
+<a name="3.0.73"></a>
+##3.0.73
+🗓
+2023-08-16 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/assetlist@3.0.72...@spectrum-css/assetlist@3.0.73)
+
+**Note:** Version bump only for package @spectrum-css/assetlist
+
+<a name="3.0.72"></a>
+##3.0.72
+🗓
+2023-08-10 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/assetlist@3.0.71...@spectrum-css/assetlist@3.0.72)
+
+**Note:** Version bump only for package @spectrum-css/assetlist
+
 <a name="3.0.71"></a>
 ##3.0.71
 🗓

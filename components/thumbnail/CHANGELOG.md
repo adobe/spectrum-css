@@ -3,6 +3,51 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+<a name="5.0.3"></a>
+##5.0.3
+🗓
+2023-08-22 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/thumbnail@5.0.2...@spectrum-css/thumbnail@5.0.3)
+
+**Note:** Version bump only for package @spectrum-css/thumbnail
+
+<a name="5.0.2"></a>
+##5.0.2
+🗓
+2023-08-22 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/thumbnail@5.0.0...@spectrum-css/thumbnail@5.0.2)
+
+**Note:** Version bump only for package @spectrum-css/thumbnail
+
+<a name="5.0.1"></a>
+##5.0.1
+🗓
+2023-08-18 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/thumbnail@5.0.0...@spectrum-css/thumbnail@5.0.1)
+
+**Note:** Version bump only for package @spectrum-css/thumbnail
+
+<a name="5.0.0"></a>
+#5.0.0
+🗓
+2023-08-16 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/thumbnail@4.0.4...@spectrum-css/thumbnail@5.0.0)
+
+### 🐛 Bug fixes
+
+-     **thumbnail:**remove typo from docs([30b2ea1](https://github.com/adobe/spectrum-css/commit/30b2ea1))
+
+  \*refactor(thumbnail)!: remove focus-ring pseudo class([d783ada](https://github.com/adobe/spectrum-css/commit/d783ada))
+
+      	###
+      	🛑 BREAKING CHANGES
+
+      		*
+      		remove usage of focus-ring as it is not needed
+
+<a name="4.0.4"></a>
+##4.0.4
+🗓
+2023-08-10 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/thumbnail@4.0.3...@spectrum-css/thumbnail@4.0.4)
+
+**Note:** Version bump only for package @spectrum-css/thumbnail
+
 <a name="4.0.3"></a>
 ##4.0.3
 🗓

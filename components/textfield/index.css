@@ -11,7 +11,11 @@ governing permissions and limitations under the License.
 */
 
 .spectrum-Textfield {
-	--spectrum-texfield-animation-duration: var(
+  /* set input line-height to the height of the textfield - prevents the cutting off of diacritics in some languages */
+  /* disallow mod for max compatibility */
+  --spectrum-textfield-input-line-height: var(--spectrum-textfield-height);
+	
+  --spectrum-texfield-animation-duration: var(
 		--spectrum-animation-duration-100
 	);
 
@@ -678,6 +682,8 @@ governing permissions and limitations under the License.
 
 /********* Child Element - Input *********/
 .spectrum-Textfield-input {
+  /* no mod defined to allow for maximum compatibility */
+  line-height: var(--spectrum-textfield-input-line-height);
 	box-sizing: border-box;
 	inline-size: 100%;
 	min-inline-size: var(
@@ -1251,7 +1257,8 @@ governing permissions and limitations under the License.
 
 /*** Text Area ***/
 .spectrum-Textfield--multiline {
-	.spectrum-Textfield-input {
+  --spectrum-textfield-input-line-height: normal;
+  .spectrum-Textfield-input {
 		min-inline-size: var(
 			--mod-text-area-min-inline-size,
 			var(--spectrum-text-area-min-inline-size)

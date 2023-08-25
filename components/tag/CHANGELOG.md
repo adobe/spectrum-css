@@ -3,6 +3,79 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+<a name="8.0.1"></a>
+##8.0.1
+🗓
+2023-08-22 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/tag@8.0.0...@spectrum-css/tag@8.0.1)
+
+**Note:** Version bump only for package @spectrum-css/tag
+
+<a name="8.0.0"></a>
+#8.0.0
+🗓
+2023-08-22 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/tag@6.0.1...@spectrum-css/tag@8.0.0)
+
+\*refactor(clearbutton)!: migrate tokens (#1943)([495198a](https://github.com/adobe/spectrum-css/commit/495198a)), closes[#1943](https://github.com/adobe/spectrum-css/issues/1943)
+
+    	###
+    	🛑 BREAKING CHANGES
+
+    		*
+    		migrates clear button to use `@adobe/spectrum-tokens`
+
+- update to use infield button tokens release
+- migrate css to use tokens
+- add quiet variant and whcm styles
+- update storybook to include over background story
+- fix icon sizing in story, add cursor pointer
+- add aria-labels
+
+<a name="7.0.0"></a>
+#7.0.0
+🗓
+2023-08-18 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/tag@6.0.1...@spectrum-css/tag@7.0.0)
+
+\*refactor(clearbutton)!: migrate tokens (#1943)([495198a](https://github.com/adobe/spectrum-css/commit/495198a)), closes[#1943](https://github.com/adobe/spectrum-css/issues/1943)
+
+    	###
+    	🛑 BREAKING CHANGES
+
+    		*
+    		migrates clear button to use `@adobe/spectrum-tokens`
+
+- update to use infield button tokens release
+- migrate css to use tokens
+- add quiet variant and whcm styles
+- update storybook to include over background story
+- fix icon sizing in story, add cursor pointer
+- add aria-labels
+
+<a name="6.0.1"></a>
+##6.0.1
+🗓
+2023-08-16 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/tag@6.0.0...@spectrum-css/tag@6.0.1)
+
+**Note:** Version bump only for package @spectrum-css/tag
+
+<a name="6.0.0"></a>
+#6.0.0
+🗓
+2023-08-10 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/tag@5.0.46...@spectrum-css/tag@6.0.0)
+
+\*fix(tag)!: update color tokens, rename classes to be singular (#2039)([bb60ff4](https://github.com/adobe/spectrum-css/commit/bb60ff4)), closes[#2039](https://github.com/adobe/spectrum-css/issues/2039)
+
+    	###
+    	🛑 BREAKING CHANGES
+
+    		*
+    		renames class name instances of `--spectrum-Tags-*` to be `--spectrum-Tag-*`
+
+Additionally:
+
+- chore(tag): use new selected bg colors
+- chore(tag): update stories
+- fix(tag): storybook icon avatar toggle
+
 <a name="5.0.46"></a>
 ##5.0.46
 🗓

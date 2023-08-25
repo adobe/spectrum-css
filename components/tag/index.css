@@ -26,8 +26,12 @@ governing permissions and limitations under the License.
   --spectrum-tag-label-line-height: var(--spectrum-line-height-100);
   --spectrum-tag-label-font-weight: var(--spectrum-regular-font-weight);
 
-  /* selected content */
-  --spectrum-tag-content-color-selected: var(--spectrum-white);
+  /* selected */
+  --spectrum-tag-content-color-selected: var(--spectrum-gray-50);
+  --spectrum-tag-background-color-selected: var(--spectrum-neutral-background-color-selected-default);
+  --spectrum-tag-background-color-selected-hover: var(--spectrum-neutral-background-color-selected-hover);
+  --spectrum-tag-background-color-selected-active: var(--spectrum-neutral-background-color-selected-down);
+  --spectrum-tag-background-color-selected-focus: var(--spectrum-neutral-background-color-selected-key-focus);
 
   /* invalid variant */
   --spectrum-tag-border-color-invalid: var(--spectrum-negative-color-900);
@@ -204,7 +208,7 @@ governing permissions and limitations under the License.
               background-color var(--mod-tag-animation-duration, var(--spectrum-tag-animation-duration)) ease-in-out;
 
 
-  .spectrum-Tags-itemIcon {
+  .spectrum-Tag-itemIcon {
     block-size: var(--mod-tag-icon-size, var(--spectrum-tag-icon-size));
     inline-size: var(--mod-tag-icon-size, var(--spectrum-tag-icon-size));
 
@@ -244,6 +248,7 @@ governing permissions and limitations under the License.
     color: currentcolor;
 
     /* width of fill neutralized to ensure correct inline spacing within tag */
+    --mod-clear-button-width: fit-content;
     --spectrum-clearbutton-fill-size: fit-content;
     --spectrum-clearbutton-fill-background-color: transparent;
 
@@ -255,7 +260,7 @@ governing permissions and limitations under the License.
     }
   }
 
-  .spectrum-Tags-itemLabel {
+  .spectrum-Tag-itemLabel {
     block-size: 100%;
     box-sizing: border-box;
     line-height: var(--mod-tag-label-line-height, var(--spectrum-tag-label-line-height));

@@ -4,6 +4,11 @@ SpectrumSiteSlug: https://spectrum.adobe.com/page/color-area/
 description: |
   - Set the `--spectrum-picked-color` custom property to the CSS color value you want to show
   - Apply `.is-open` to `.spectrum-ColorLoupe` display the loupe
+sections:
+  - name: Migration Guide
+    description: |
+      ### Remove focus-ring class
+      We've migrated away from the focus-ring class in favor of the native `:focus-visible` pseudo-class due to changes in browser support.
 examples:
   - id: color-area
     name: Standard

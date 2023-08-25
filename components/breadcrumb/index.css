@@ -300,7 +300,7 @@ governing permissions and limitations under the License.
     cursor: pointer;
 
     &:hover,
-    &:focus-ring {
+    &:focus-visible {
       text-decoration: underline;
       text-decoration-thickness: var(--mod-breadcrumbs-text-decoration-thickness, var(--spectrum-breadcrumbs-text-decoration-thickness));
       text-underline-offset: var(--mod-breadcrumbs-text-decoration-gap, var(--spectrum-breadcrumbs-text-decoration-gap));
@@ -310,7 +310,7 @@ governing permissions and limitations under the License.
 
 /* focus indicator */
 .spectrum-Breadcrumbs-item.is-dragged .spectrum-Breadcrumbs-itemLink:before,
-.spectrum-Breadcrumbs-itemLink:focus-ring:before {
+.spectrum-Breadcrumbs-itemLink:focus-visible:before {
   position: absolute;
 
   margin-inline-start: calc((var(--mod-breadcrumbs-focus-indicator-gap, var(--spectrum-breadcrumbs-focus-indicator-gap))

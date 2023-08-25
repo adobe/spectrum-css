@@ -10,18 +10,19 @@ import { Template as Icon } from "@spectrum-css/icon/stories/template.js";
 import "../index.css";
 
 export const Template = ({
-	rootClass = "spectrum-Button",
-	id,
-	customClasses = [],
-	size = "m",
-	label,
-	hideLabel = false,
-	iconName,
-	variant,
-	staticColor,
-	treatment,
-	isDisabled = false,
-	...globals
+  rootClass = "spectrum-Button",
+  id,
+  customClasses = [],
+  size = "m",
+  label,
+  hideLabel = false,
+  iconName,
+  variant,
+  staticColor,
+  treatment,
+  onclick,
+  isDisabled = false,
+  ...globals
 }) => {
 	const { express } = globals;
 	try {
@@ -31,28 +32,25 @@ export const Template = ({
 		console.warn(e);
 	}
 
-	return html`
-		<button
-			class=${classMap({
-				[rootClass]: true,
-				[`${rootClass}--${treatment}`]: typeof treatment !== "undefined",
-				[`${rootClass}--${variant}`]: typeof variant !== "undefined",
-				[`${rootClass}--size${size?.toUpperCase()}`]:
-					typeof size !== "undefined",
-				[`${rootClass}--static${capitalize(lowerCase(staticColor))}`]:
-					typeof staticColor !== "undefined",
-				[`${rootClass}--iconOnly`]: hideLabel,
-				...customClasses.reduce((a, c) => ({ ...a, [c]: true }), {}),
-			})}
-			id=${ifDefined(id)}
-			?disabled=${isDisabled}
-			aria-label=${hideLabel ? iconName : undefined}
-		>
-			${when(iconName, () => Icon({ ...globals, iconName, size }))}
-			${when(
-				label && !hideLabel,
-				() => html`<span class=${`${rootClass}-label`}>${label}</span>`
-			)}
-		</button>
-	`;
+  return html`
+    <button
+      class=${classMap({
+        [rootClass]: true,
+        [`${rootClass}--${treatment}`]: typeof treatment !== "undefined",
+        [`${rootClass}--${variant}`]: typeof variant !== "undefined",
+        [`${rootClass}--size${size?.toUpperCase()}`]: typeof size !== "undefined",
+        [`${rootClass}--static${capitalize(lowerCase(staticColor))}`]: typeof staticColor !== "undefined",
+        [`${rootClass}--iconOnly`]: hideLabel,
+        ...customClasses.reduce((a, c) => ({ ...a, [c]: true }), {}),
+      })}
+      id=${ifDefined(id)}
+      ?disabled=${isDisabled}
+      @click=${onclick}
+      aria-label=${hideLabel ? iconName : undefined}>
+      ${when(iconName, () => Icon({ ...globals, iconName, size }))}
+      ${when(label && !hideLabel,
+        () => html`<span class=${`${rootClass}-label`}>${label}</span>`
+      )}
+    </button>
+  `;
 };

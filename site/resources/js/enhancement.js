@@ -160,7 +160,7 @@ governing permissions and limitations under the License.
 // Textfield
 (function () {
 	function setFocus(textfield, input, focused) {
-		var focusClass = input.classList.contains("focus-ring")
+		var focusClass = input.classList.contains("is-keyboardFocused")
 			? "is-keyboardFocused"
 			: "is-focused";
 		if (focused) {
@@ -188,65 +188,10 @@ governing permissions and limitations under the License.
 	});
 })();
 
-// Inputgroup
-(function () {
-	function setFocus(inputgroup, focused, event) {
-		var textfields = inputgroup.querySelectorAll(".spectrum-Textfield");
-		var inputs = inputgroup.querySelectorAll(".spectrum-InputGroup-input");
-		var input = inputs[0];
-		var focusClass = event.target.classList.contains("focus-ring")
-			? "is-keyboardFocused"
-			: "is-focused";
-		var pickerButton = inputgroup.querySelector(".spectrum-PickerButton");
-		if (focused) {
-			inputgroup.classList.add(focusClass);
-			if (pickerButton) pickerButton.classList.add(focusClass);
-			if (event.target.tagName !== "INPUT") {
-				input.focus();
-			}
-
-			Array.prototype.forEach.call(textfields, (textfield) => {
-				textfield.classList.add(focusClass);
-			});
-		} else {
-			if (pickerButton) pickerButton.classList.remove("is-keyboardFocused");
-			if (pickerButton) pickerButton.classList.remove("is-focused");
-			inputgroup.classList.remove("is-keyboardFocused");
-			inputgroup.classList.remove("is-focused");
-
-			Array.prototype.forEach.call(textfields, (textfield) => {
-				textfield.classList.remove("is-focused");
-				textfield.classList.remove("is-keyboardFocused");
-			});
-		}
-	}
-
-	document.addEventListener("focusin", function (event) {
-		var inputgroup = event.target.closest(".spectrum-InputGroup");
-
-		if (event.target.closest(".spectrum-Menu")) {
-			// Don't mess with focus on menuitems
-			return;
-		}
-
-		if (inputgroup) {
-			setFocus(inputgroup, true, event);
-		}
-	});
-
-	document.addEventListener("focusout", function (event) {
-		var inputgroup = event.target.closest(".spectrum-InputGroup");
-
-		if (inputgroup) {
-			setFocus(inputgroup, false, event);
-		}
-	});
-})();
-
 // Stepper
 (function () {
 	function setFocus(stepper, input, focused) {
-		var focusClass = input.classList.contains("focus-ring")
+		var focusClass = input.classList.contains("is-keyboardFocused")
 			? "is-keyboardFocused"
 			: "is-focused";
 		if (focused) {
@@ -988,6 +933,74 @@ function enhanceAll() {
 		}
 	);
 }
+
+// Focus Indicator Classes
+var NAVIGATION_KEYS = [
+	'Tab',
+	'ArrowUp',
+	'ArrowRight',
+	'ArrowDown',
+	'ArrowLeft',
+	'Home',
+	'End',
+	'PageUp',
+	'PageDown',
+	'Enter',
+	' ',
+	'Escape',
+
+	/* IE9 and Firefox < 37 */
+	'Up',
+	'Right',
+	'Down',
+	'Left',
+	'Esc'
+];
+
+var keyboardFocus = false;
+
+function onKeydownHandler(event) {
+	if (event.ctrlKey || event.altKey || event.metaKey || NAVIGATION_KEYS.indexOf(event.key) === -1) {
+		return;
+	}
+	keyboardFocus = true;
+
+	if (document.activeElement &&
+		document.activeElement !== document.body) {
+					document.activeElement.classList.add('is-keyboardFocused');
+	}
+}
+
+function onMousedownHandler() {
+	keyboardFocus = false;
+
+	if (document.activeElement &&
+		document.activeElement !== document.body) {
+				document.activeElement.classList.add('is-focused');
+	}
+}
+
+// Programmatic focus
+function onFocusHandler(event) {
+	var classList = event.target.classList;
+	if (classList && keyboardFocus) {
+		classList.add('is-keyboardFocused');
+	}
+}
+
+// Remove classes on focus out
+function onFocusOutHandler(event) {
+	var classList = event.target.classList;
+	if (classList) {
+		classList.remove('is-keyboardFocused');
+		classList.remove('is-focused');
+	}
+}
+
+window.addEventListener('keydown', onKeydownHandler, true);
+window.addEventListener('focusin', onFocusHandler, true);
+window.addEventListener('focusout', onFocusOutHandler, true);
+window.addEventListener('mousedown', onMousedownHandler, true);
 
 animateCircleLoaders();
 window.addEventListener("PageFastLoaded", enhanceAll);

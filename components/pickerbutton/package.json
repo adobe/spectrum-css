@@ -1,6 +1,6 @@
 {
   "name": "@spectrum-css/pickerbutton",
-  "version": "4.0.2",
+  "version": "4.0.7",
   "description": "The Spectrum CSS picker button component",
   "license": "Apache-2.0",
   "author": "Adobe",
@@ -24,11 +24,11 @@
     "@spectrum-css/tokens": ">=11"
   },
   "devDependencies": {
-    "@spectrum-css/component-builder-simple": "^2.0.16",
-    "@spectrum-css/icon": "^4.0.0",
-    "@spectrum-css/menu": "^5.0.1",
-    "@spectrum-css/popover": "^6.0.64",
-    "@spectrum-css/tokens": "^11.1.0",
+    "@spectrum-css/component-builder-simple": "^2.0.17",
+    "@spectrum-css/icon": "^4.0.1",
+    "@spectrum-css/menu": "^5.0.6",
+    "@spectrum-css/popover": "^6.0.69",
+    "@spectrum-css/tokens": "^11.3.0",
     "gulp": "^4.0.0"
   },
   "publishConfig": {

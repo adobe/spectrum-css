@@ -3,6 +3,19 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+<a name="8.0.0"></a>
+#8.0.0
+🗓
+2023-08-16 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/commons@7.0.8...@spectrum-css/commons@8.0.0)
+
+\*refactor(button)!: replace focus-ring with focus-visible([5ec4849](https://github.com/adobe/spectrum-css/commit/5ec4849))
+
+    	###
+    	🛑 BREAKING CHANGES
+
+    		*
+    		use native focus-visible pseudo class for focus styling on button and basebutton
+
 <a name="7.0.8"></a>
 ##7.0.8
 🗓

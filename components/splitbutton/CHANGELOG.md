@@ -3,6 +3,47 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+<a name="6.0.3"></a>
+##6.0.3
+🗓
+2023-08-22 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/splitbutton@6.0.2...@spectrum-css/splitbutton@6.0.3)
+
+**Note:** Version bump only for package @spectrum-css/splitbutton
+
+<a name="6.0.2"></a>
+##6.0.2
+🗓
+2023-08-22 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/splitbutton@6.0.0...@spectrum-css/splitbutton@6.0.2)
+
+**Note:** Version bump only for package @spectrum-css/splitbutton
+
+<a name="6.0.1"></a>
+##6.0.1
+🗓
+2023-08-18 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/splitbutton@6.0.0...@spectrum-css/splitbutton@6.0.1)
+
+**Note:** Version bump only for package @spectrum-css/splitbutton
+
+<a name="6.0.0"></a>
+#6.0.0
+🗓
+2023-08-16 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/splitbutton@5.0.60...@spectrum-css/splitbutton@6.0.0)
+
+\*refactor(splitbutton)!: replace focus-ring with focus-visible([adaa89e](https://github.com/adobe/spectrum-css/commit/adaa89e))
+
+    	###
+    	🛑 BREAKING CHANGES
+
+    		*
+    		replace focus-ring pseudo class with focus-visible
+
+<a name="5.0.60"></a>
+##5.0.60
+🗓
+2023-08-10 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/splitbutton@5.0.59...@spectrum-css/splitbutton@5.0.60)
+
+**Note:** Version bump only for package @spectrum-css/splitbutton
+
 <a name="5.0.59"></a>
 ##5.0.59
 🗓

@@ -3,6 +3,41 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+<a name="1.0.23"></a>
+##1.0.23
+🗓
+2023-08-22 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/floatingactionbutton@1.0.22...@spectrum-css/floatingactionbutton@1.0.23)
+
+**Note:** Version bump only for package @spectrum-css/floatingactionbutton
+
+<a name="1.0.22"></a>
+##1.0.22
+🗓
+2023-08-22 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/floatingactionbutton@1.0.20...@spectrum-css/floatingactionbutton@1.0.22)
+
+**Note:** Version bump only for package @spectrum-css/floatingactionbutton
+
+<a name="1.0.21"></a>
+##1.0.21
+🗓
+2023-08-18 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/floatingactionbutton@1.0.20...@spectrum-css/floatingactionbutton@1.0.21)
+
+**Note:** Version bump only for package @spectrum-css/floatingactionbutton
+
+<a name="1.0.20"></a>
+##1.0.20
+🗓
+2023-08-16 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/floatingactionbutton@1.0.19...@spectrum-css/floatingactionbutton@1.0.20)
+
+**Note:** Version bump only for package @spectrum-css/floatingactionbutton
+
+<a name="1.0.19"></a>
+##1.0.19
+🗓
+2023-08-10 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/floatingactionbutton@1.0.18...@spectrum-css/floatingactionbutton@1.0.19)
+
+**Note:** Version bump only for package @spectrum-css/floatingactionbutton
+
 <a name="1.0.18"></a>
 ##1.0.18
 🗓

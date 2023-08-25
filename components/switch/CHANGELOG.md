@@ -3,6 +3,56 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+<a name="4.0.3"></a>
+##4.0.3
+🗓
+2023-08-22 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/switch@4.0.2...@spectrum-css/switch@4.0.3)
+
+**Note:** Version bump only for package @spectrum-css/switch
+
+<a name="4.0.2"></a>
+##4.0.2
+🗓
+2023-08-22 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/switch@4.0.0...@spectrum-css/switch@4.0.2)
+
+**Note:** Version bump only for package @spectrum-css/switch
+
+<a name="4.0.1"></a>
+##4.0.1
+🗓
+2023-08-18 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/switch@4.0.0...@spectrum-css/switch@4.0.1)
+
+**Note:** Version bump only for package @spectrum-css/switch
+
+<a name="4.0.0"></a>
+#4.0.0
+🗓
+2023-08-16 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/switch@3.1.13...@spectrum-css/switch@4.0.0)
+
+\*refactor(switch)!: replace focus-ring with focus-visible([7c5aa13](https://github.com/adobe/spectrum-css/commit/7c5aa13))
+
+    	###
+    	🛑 BREAKING CHANGES
+
+    		*
+    		use focus-visible pseudo class in place of focus-ring
+
+<a name="3.1.13"></a>
+##3.1.13
+🗓
+2023-08-10 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/switch@3.1.12...@spectrum-css/switch@3.1.13)
+
+### 🐛 Bug fixes
+
+- **switch:**update selected background color tokens ([#2057](https://github.com/adobe/spectrum-css/issues/2057))([255a47a](https://github.com/adobe/spectrum-css/commit/255a47a))
+
+<a name="3.1.12"></a>
+##3.1.12
+🗓
+2023-08-10 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/switch@3.1.11...@spectrum-css/switch@3.1.12)
+
+**Note:** Version bump only for package @spectrum-css/switch
+
 <a name="3.1.11"></a>
 ##3.1.11
 🗓

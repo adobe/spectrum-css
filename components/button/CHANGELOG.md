@@ -3,6 +3,47 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+<a name="11.0.3"></a>
+##11.0.3
+🗓
+2023-08-22 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/button@11.0.2...@spectrum-css/button@11.0.3)
+
+**Note:** Version bump only for package @spectrum-css/button
+
+<a name="11.0.2"></a>
+##11.0.2
+🗓
+2023-08-22 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/button@11.0.0...@spectrum-css/button@11.0.2)
+
+**Note:** Version bump only for package @spectrum-css/button
+
+<a name="11.0.1"></a>
+##11.0.1
+🗓
+2023-08-18 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/button@11.0.0...@spectrum-css/button@11.0.1)
+
+**Note:** Version bump only for package @spectrum-css/button
+
+<a name="11.0.0"></a>
+#11.0.0
+🗓
+2023-08-16 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/button@10.1.14...@spectrum-css/button@11.0.0)
+
+\*refactor(button)!: replace focus-ring with focus-visible([5ec4849](https://github.com/adobe/spectrum-css/commit/5ec4849))
+
+    	###
+    	🛑 BREAKING CHANGES
+
+    		*
+    		use native focus-visible pseudo class for focus styling on button and basebutton
+
+<a name="10.1.14"></a>
+##10.1.14
+🗓
+2023-08-10 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/button@10.1.13...@spectrum-css/button@10.1.14)
+
+**Note:** Version bump only for package @spectrum-css/button
+
 <a name="10.1.13"></a>
 ##10.1.13
 🗓

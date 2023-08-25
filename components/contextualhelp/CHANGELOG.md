@@ -3,6 +3,41 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+<a name="2.0.30"></a>
+##2.0.30
+🗓
+2023-08-22 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/contextualhelp@2.0.29...@spectrum-css/contextualhelp@2.0.30)
+
+**Note:** Version bump only for package @spectrum-css/contextualhelp
+
+<a name="2.0.29"></a>
+##2.0.29
+🗓
+2023-08-22 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/contextualhelp@2.0.27...@spectrum-css/contextualhelp@2.0.29)
+
+**Note:** Version bump only for package @spectrum-css/contextualhelp
+
+<a name="2.0.28"></a>
+##2.0.28
+🗓
+2023-08-18 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/contextualhelp@2.0.27...@spectrum-css/contextualhelp@2.0.28)
+
+**Note:** Version bump only for package @spectrum-css/contextualhelp
+
+<a name="2.0.27"></a>
+##2.0.27
+🗓
+2023-08-16 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/contextualhelp@2.0.26...@spectrum-css/contextualhelp@2.0.27)
+
+**Note:** Version bump only for package @spectrum-css/contextualhelp
+
+<a name="2.0.26"></a>
+##2.0.26
+🗓
+2023-08-10 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/contextualhelp@2.0.25...@spectrum-css/contextualhelp@2.0.26)
+
+**Note:** Version bump only for package @spectrum-css/contextualhelp
+
 <a name="2.0.25"></a>
 ##2.0.25
 🗓

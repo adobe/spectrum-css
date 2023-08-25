@@ -29,7 +29,6 @@ function getProcessors(splitinatorOptions = {}) {
 		require("postcss-calc"),
 		require("postcss-dropunusedvars")({ fix: false }),
 		require("postcss-dropdupedvars"),
-		require("postcss-focus-ring"),
 		require("postcss-discard-empty"),
 		require("postcss-discard-comments")({ removeAllButFirst: true }),
 		require("autoprefixer")({}),

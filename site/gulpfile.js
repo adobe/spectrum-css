@@ -25,12 +25,6 @@ function buildSite_loadicons() {
 		.pipe(gulp.dest(path.join(__dirname, "../dist/js/loadicons/")));
 }
 
-function buildSite_focusPolyfill() {
-	return gulp
-		.src(require.resolve("@adobe/focus-ring-polyfill"))
-		.pipe(gulp.dest(path.join(__dirname, "../dist/js/focus-ring-polyfill/")));
-}
-
 function buildSite_lunr() {
 	return gulp
 		.src(require.resolve("lunr"))
@@ -49,7 +43,6 @@ function buildSite_prism() {
 exports.copySiteResources = gulp.parallel(
 	buildSite_resources,
 	buildSite_loadicons,
-	buildSite_focusPolyfill,
 	buildSite_lunr,
 	buildSite_prism
 );

@@ -3,6 +3,43 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+<a name="9.1.4"></a>
+##9.1.4
+🗓
+2023-08-22 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/toast@9.1.3...@spectrum-css/toast@9.1.4)
+
+**Note:** Version bump only for package @spectrum-css/toast
+
+<a name="9.1.3"></a>
+##9.1.3
+🗓
+2023-08-22 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/toast@9.1.1...@spectrum-css/toast@9.1.3)
+
+**Note:** Version bump only for package @spectrum-css/toast
+
+<a name="9.1.2"></a>
+##9.1.2
+🗓
+2023-08-18 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/toast@9.1.1...@spectrum-css/toast@9.1.2)
+
+**Note:** Version bump only for package @spectrum-css/toast
+
+<a name="9.1.1"></a>
+##9.1.1
+🗓
+2023-08-16 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/toast@9.1.0...@spectrum-css/toast@9.1.1)
+
+**Note:** Version bump only for package @spectrum-css/toast
+
+<a name="9.1.0"></a>
+#9.1.0
+🗓
+2023-08-10 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/toast@9.0.45...@spectrum-css/toast@9.1.0)
+
+### ✨ Features
+
+- **toast:**add max width token ([#2066](https://github.com/adobe/spectrum-css/issues/2066))([8d1de3b](https://github.com/adobe/spectrum-css/commit/8d1de3b))
+
 <a name="9.0.45"></a>
 ##9.0.45
 🗓
