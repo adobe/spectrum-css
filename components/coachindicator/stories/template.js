@@ -4,7 +4,7 @@ import { classMap } from "lit-html/directives/class-map.js";
 import "../index.css";
 
 export const Template = ({
-	rootClass = "spectrum-CoachMark",
+	rootClass = "spectrum-CoachMarkIndicator",
 	isQuiet = false,
 	withPopover = false,
 	variant,
@@ -13,15 +13,14 @@ export const Template = ({
 	return html`
 		<div
 			class=${classMap({
-				[`${rootClass}Indicator`]: true,
-				[`${rootClass}Indicator--quiet`]: isQuiet,
-				[`${rootClass}Indicator--${variant}`]: variant !== "default",
+				[`${rootClass}`]: true,
+				[`${rootClass}--quiet`]: isQuiet,
+				[`${rootClass}--${variant}`]: variant !== "default",
 			})}
-			style="display: inline-block;vertical-align: top;"
 		>
-			<div class="${rootClass}Indicator-ring"></div>
-			<div class="${rootClass}Indicator-ring"></div>
-			<div class="${rootClass}Indicator-ring"></div>
+			<div class="${rootClass}-ring"></div>
+			<div class="${rootClass}-ring"></div>
+			<div class="${rootClass}-ring"></div>
 		</div>
 	`;
 };
