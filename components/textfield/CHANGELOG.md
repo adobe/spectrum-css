@@ -3,6 +3,19 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+<a name="6.0.16"></a>
+##6.0.16
+🗓
+2023-08-25 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/textfield@6.0.15...@spectrum-css/textfield@6.0.16)
+
+### 🐛 Bug fixes
+
+- **textfield:**add line-height to prevent missing diacritics ([#2123](https://github.com/adobe/spectrum-css/issues/2123))([e44e4f4](https://github.com/adobe/spectrum-css/commit/e44e4f4))
+
+### 🔙 Reverts
+
+\*gulp and build updates ([#2121](https://github.com/adobe/spectrum-css/issues/2121))([03a37f5](https://github.com/adobe/spectrum-css/commit/03a37f5)), closes[#2099](https://github.com/adobe/spectrum-css/issues/2099)
+
 <a name="6.0.15"></a>
 ##6.0.15
 🗓
