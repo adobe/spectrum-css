@@ -81,9 +81,11 @@ export const Default = Template.bind({});
 Default.play = async ({ canvasElement }) => {
 	const canvas = within(canvasElement);
 
+	await new Promise((resolve) => setTimeout(resolve, 100));
+
 	await userEvent.click(canvas.getByRole('button', { name: 'Hop on pop(over)' }));
 
-	expect(canvas.getByTestId('popover-1').classList.contains('is-open')).toBe(true);
+	expect(canvas.findByTestId('popover-1').classList.contains('is-open')).toBe(true);
 };
 Default.args = {
 	testId: 'popover-1',

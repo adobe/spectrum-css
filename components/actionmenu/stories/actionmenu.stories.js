@@ -47,12 +47,11 @@ export const Default = Template.bind({});
 Default.play = async ({ canvasElement }) => {
 	const canvas = within(canvasElement);
 
+	await new Promise((resolve) => setTimeout(resolve, 100));
+
 	await userEvent.click(canvas.getByRole('button', { id: 'trigger' }));
 
-	setTimeout(() => {
-		expect(canvas.getByTestId('popover-1').classList.contains('is-open')).toBe(true);
-	}, 100)
-
+	expect(canvas.findByTestId('popover-1').classList.contains('is-open')).toBe(true);
 };
 Default.args = {
 	isOpen: false,

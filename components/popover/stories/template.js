@@ -48,6 +48,7 @@ export const Template = ({
 			...globals,
 			isSelected: isOpen,
 			onclick: () => {
+				setTimeout(() => {
 				// No trigger? Nothing to do.
 				if (!trigger || !position) return [];
 
@@ -121,6 +122,7 @@ export const Template = ({
 						...additionalStyles,
 					}
 				});
+			}, 100)
 			}
 		}))}
 
