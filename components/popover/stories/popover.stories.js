@@ -74,6 +74,7 @@ export default {
 				? "migrated"
 				: undefined,
 		},
+		chromatic: { delay: 300 },
 	},
 };
 
