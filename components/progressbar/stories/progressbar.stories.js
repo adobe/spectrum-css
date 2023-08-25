@@ -30,11 +30,32 @@ export default {
 			options: ["top", "side"],
 			control: "select",
 		},
+		label: {
+			name: "Label",
+			type: { name: "string" },
+			table: {
+				type: { summary: "string" },
+				category: "Content",
+			},
+			control: "text",
+		},
+		value: {
+			name: "Percent value for fill",
+			type: { name: "number" },
+			table: {
+				type: { summary: "number" },
+				category: "Content",
+			},
+			control: { type: "range", min: 0, max: 100,},
+			if: { arg: "indeterminate", truthy: false },
+		},
 	},
 	args: {
 		rootClass: "spectrum-ProgressBar",
 		size: "m",
 		labelPosition: "top",
+		label: "Loading",
+		value: 50,
 	},
 	parameters: {
 		actions: {
