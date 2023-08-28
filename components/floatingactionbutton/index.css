@@ -46,7 +46,7 @@ governing permissions and limitations under the License.
 @media (forced-colors: active) {
   .spectrum-FloatingActionButton {
 
-    &:after {
+    &::after {
       /* make sure focus-ring renders */
       forced-color-adjust: none;
     }
@@ -105,7 +105,7 @@ governing permissions and limitations under the License.
       fill: var(--highcontrast-floating-action-button-icon-color-key-focus, var(--mod-floating-action-button-icon-color-key-focus, var(--spectrum-floating-action-button-icon-color-key-focus)));
     }
 
-    &:after {
+    &::after {
       position: absolute;
       inset: 0;
       margin: calc(-1 * var(--mod-floating-action-button-focus-ring-gap, var(--spectrum-floating-action-button-focus-ring-gap)));
