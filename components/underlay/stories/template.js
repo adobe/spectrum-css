@@ -3,7 +3,6 @@ import { classMap } from 'lit-html/directives/class-map.js';
 import { styleMap } from 'lit-html/directives/style-map.js';
 
 import "../index.css";
-import "../skin.css";
 
 export const Template = ({
   rootClass = "spectrum-Underlay",
