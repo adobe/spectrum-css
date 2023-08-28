@@ -343,14 +343,8 @@ governing permissions and limitations under the License.
 	
 	.spectrum-InfieldButton-fill {
 		box-sizing: border-box;
-		padding-inline-start: calc(var(--mod-infield-button-stacked-fill-padding-inline, var(--spectrum-infield-button-stacked-fill-padding-inline)) - 
-			var(--mod-infield-button-edge-to-fill, var(--spectrum-infield-button-edge-to-fill)) - 
-			var(--mod-infield-button-border-width, var(--spectrum-infield-button-border-width))
-		);
-		padding-inline-end: calc(var(--mod-infield-button-stacked-fill-padding-inline, var(--spectrum-infield-button-stacked-fill-padding-inline)) - 
-			var(--mod-infield-button-edge-to-fill, var(--spectrum-infield-button-edge-to-fill)) - 
-			var(--mod-infield-button-border-width, var(--spectrum-infield-button-border-width))
-		);
+		padding-inline-start: calc(var(--mod-infield-button-stacked-fill-padding-inline, var(--spectrum-infield-button-stacked-fill-padding-inline)) - var(--mod-infield-button-edge-to-fill, var(--spectrum-infield-button-edge-to-fill)) - var(--mod-infield-button-border-width, var(--spectrum-infield-button-border-width)));
+		padding-inline-end: calc(var(--mod-infield-button-stacked-fill-padding-inline, var(--spectrum-infield-button-stacked-fill-padding-inline)) - var(--mod-infield-button-edge-to-fill, var(--spectrum-infield-button-edge-to-fill)) - var(--mod-infield-button-border-width, var(--spectrum-infield-button-border-width)));
 	}
 }
 
@@ -360,14 +354,9 @@ governing permissions and limitations under the License.
 		var(--spectrum-infield-button-inner-edge-to-fill)
 	);
 	.spectrum-InfieldButton-fill {
-		padding-block-start: calc(var(--mod-infield-button-stacked-fill-padding-outer, var(--spectrum-infield-button-stacked-fill-padding-outer)) -
-			var(--mod-infield-button-edge-to-fill, var(--spectrum-infield-button-edge-to-fill)) - 
-			var(--mod-infield-button-border-width, var(--spectrum-infield-button-border-width))
-		);
-		padding-block-end: calc(var(--mod-infield-button-stacked-fill-padding-inner, var(--spectrum-infield-button-stacked-fill-padding-inner)) -
-			var(--mod-infield-button-inner-edge-to-fill, var(--spectrum-infield-button-inner-edge-to-fill))
-		);
-		border-bottom: none;
+		padding-block-start: calc(var(--mod-infield-button-stacked-fill-padding-outer, var(--spectrum-infield-button-stacked-fill-padding-outer)) - var(--mod-infield-button-edge-to-fill, var(--spectrum-infield-button-edge-to-fill)) - var(--mod-infield-button-border-width, var(--spectrum-infield-button-border-width)));
+		padding-block-end: calc(var(--mod-infield-button-stacked-fill-padding-inner, var(--spectrum-infield-button-stacked-fill-padding-inner)) - var(--mod-infield-button-inner-edge-to-fill, var(--spectrum-infield-button-inner-edge-to-fill)));
+		border-block-end: none;
 		border-start-start-radius: var(
 			--mod-infield-button-stacked-top-border-radius-start-start,
 			var(--spectrum-infield-button-stacked-top-border-radius-start-start)
@@ -388,14 +377,8 @@ governing permissions and limitations under the License.
 		var(--spectrum-infield-button-inner-edge-to-fill)
 	);
 	.spectrum-InfieldButton-fill {
-		padding-block-start: calc(var(--mod-infield-button-stacked-fill-padding-inner, var(--spectrum-infield-button-stacked-fill-padding-inner)) -
-			var(--mod-infield-button-edge-to-fill, var(--spectrum-infield-button-edge-to-fill)) - 
-			var(--mod-infield-button-border-width, var(--spectrum-infield-button-border-width))
-		);
-		padding-block-end: calc(var(--mod-infield-button-stacked-fill-padding-outer, var(--spectrum-infield-button-stacked-fill-padding-outer)) -
-			var(--mod-infield-button-inner-edge-to-fill, var(--spectrum-infield-button-inner-edge-to-fill)) - 
-			var(--mod-infield-button-border-width, var(--spectrum-infield-button-border-width))
-		);
+		padding-block-start: calc(var(--mod-infield-button-stacked-fill-padding-inner, var(--spectrum-infield-button-stacked-fill-padding-inner)) - var(--mod-infield-button-edge-to-fill, var(--spectrum-infield-button-edge-to-fill)) - var(--mod-infield-button-border-width, var(--spectrum-infield-button-border-width)));
+		padding-block-end: calc(var(--mod-infield-button-stacked-fill-padding-outer, var(--spectrum-infield-button-stacked-fill-padding-outer)) - var(--mod-infield-button-inner-edge-to-fill, var(--spectrum-infield-button-inner-edge-to-fill)) - var(--mod-infield-button-border-width, var(--spectrum-infield-button-border-width)));
 		border-end-start-radius: var(
 			--mod-infield-button-stacked-bottom-border-radius-end-start,
 			var(--spectrum-infield-button-stacked-bottom-border-radius-end-start)
