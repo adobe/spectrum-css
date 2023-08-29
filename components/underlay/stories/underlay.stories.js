@@ -34,6 +34,7 @@ export default {
 
 export const Default = Template.bind({});
 Default.args = {
+	isOpen: true,
   content: [
     "This is a underlay. Don't use it like this. Use it with a Modal and a Dialog.",
   ],

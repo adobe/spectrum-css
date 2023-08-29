@@ -55,7 +55,7 @@ export default {
 	},
 	parameters: {
 		actions: {
-			handles: [],
+			handles: ["click .spectrum-Dialog button"],
 		},
 		status: {
 			type: process.env.MIGRATED_PACKAGES.includes("dialog")
