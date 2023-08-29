@@ -9,6 +9,16 @@ the License is distributed on an "AS IS" BASIS, WITHOUT WARRANTIES OR REPRESENTA
 OF ANY KIND, either express or implied. See the License for the specific language
 governing permissions and limitations under the License.
 */
+.spectrum-CoachMarkIndicator{
+  --spectrum-coachmark-animation-indicator-keyframe-0-scale: 1;
+  --spectrum-coachmark-animation-indicator-keyframe-0-opacity: 0;
+  --spectrum-coachmark-animation-indicator-keyframe-50-scale: 1.5;
+  --spectrum-coachmark-animation-indicator-keyframe-50-opacity: 1;
+  --spectrum-coachmark-animation-indicator-keyframe-100-scale: 2;
+  --spectrum-coachmark-animation-indicator-keyframe-100-opacity: 0;
+  --spectrum-coachmark-quiet-animation-indicator-keyframe-0-scale: 0.8;
+}
+
 
 @keyframes pulse {
   0% {

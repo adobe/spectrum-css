@@ -12,6 +12,17 @@ governing permissions and limitations under the License.
 
 @import "animation.css";
 
+.spectrum-CoachMarkIndicator{
+  --spectrum-coachmark-indicator-ring-border-size: var(--spectrum-border-width-200);
+
+ /* animation */
+ --spectrum-coachmark-animation-indicator-ring-duration: 3000ms;
+ --spectrum-coachmark-animation-indicator-ring-inner-delay-multiple: -0.5;
+ --spectrum-coachmark-animation-indicator-ring-center-delay-multiple: -0.66;
+ --spectrum-coachmark-animation-indicator-ring-outer-delay-multiple: -1;
+ --spectrum-coachmark-quiet-animation-indicator-ring-inner-delay-multiple: -0.33;
+}
+
 .spectrum-CoachMarkIndicator {
   position: relative;
 
@@ -38,7 +49,6 @@ governing permissions and limitations under the License.
 .spectrum-CoachMarkIndicator {
   min-inline-size: calc(var(--spectrum-coachmark-indicator-ring-diameter) * 3);
   min-block-size: calc(var(--spectrum-coachmark-indicator-ring-diameter) * 3);
-
 }
 
 .spectrum-CoachMarkIndicator-ring {
@@ -58,11 +68,11 @@ governing permissions and limitations under the License.
 }
 
 .spectrum-CoachMarkIndicator--light .spectrum-CoachMarkIndicator-ring {
-  border-color: var(--spectrum-coachmark-indicator-ring-low-contrast-color);
+  border-color: var(--spectrum-coachmark-indicator-ring-light-color);
 }
 
 .spectrum-CoachMarkIndicator--dark .spectrum-CoachMarkIndicator-ring {
-  border-color: var(--spectrum-coachmark-indicator-ring-high-contrast-color);
+  border-color: var(--spectrum-coachmark-indicator-ring-dark-color);
 }
 
 .spectrum-CoachMarkIndicator--quiet {
