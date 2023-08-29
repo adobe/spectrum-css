@@ -119,7 +119,7 @@ governing permissions and limitations under the License.
 
 @media (forced-colors: active) {
   .spectrum-ActionButton {
-    &:after {
+    &::after {
       /* make sure focus indicator renders */
       forced-color-adjust: none;
     }
@@ -162,7 +162,7 @@ governing permissions and limitations under the License.
   position: relative;
 
   min-inline-size: var(--mod-actionbutton-min-width, var(--spectrum-actionbutton-min-width));
-  height: var(--mod-actionbutton-height, var(--spectrum-actionbutton-height));
+  block-size: var(--mod-actionbutton-height, var(--spectrum-actionbutton-height));
 
   border-radius: var(--mod-actionbutton-border-radius, var(--spectrum-actionbutton-border-radius));
   border-width: var(--mod-actionbutton-border-width, var(--spectrum-actionbutton-border-width));
@@ -209,8 +209,8 @@ a.spectrum-ActionButton {
 .spectrum-ActionButton-icon {
   @inherit: %spectrum-ButtonIcon;
 
-  width: var(--mod-actionbutton-icon-size, var(--spectrum-actionbutton-icon-size));
-  height: var(--mod-actionbutton-icon-size, var(--spectrum-actionbutton-icon-size));
+  inline-size: var(--mod-actionbutton-icon-size, var(--spectrum-actionbutton-icon-size));
+  block-size: var(--mod-actionbutton-icon-size, var(--spectrum-actionbutton-icon-size));
 
   /* adjust icon positioning to match UI kit */
   margin-inline-start: calc(
@@ -253,14 +253,14 @@ a.spectrum-ActionButton {
 
   color: inherit;
 
-  transform: logical rotate(0deg);
+  transform: logical rotate(0deg); /* stylelint-disable-line declaration-property-value-no-unknown */
 }
 
 /* special cases for focus-ring */
 .spectrum-ActionButton {
   transition: border-color var(--mod-actionbutton-animation-duration, var(--spectrum-actionbutton-animation-duration)) ease-in-out;
 
-  &:after {
+  &::after {
     position: absolute;
     inset: 0;
 
@@ -279,7 +279,7 @@ a.spectrum-ActionButton {
     box-shadow: none;
     outline: none;
 
-    &:after {
+    &::after {
       box-shadow: 0 0 0 var(--mod-actionbutton-focus-indicator-thickness, var(--spectrum-actionbutton-focus-indicator-thickness)) var(--highcontrast-actionbutton-focus-indicator-color, var(--mod-actionbutton-focus-indicator-color, var(--spectrum-actionbutton-focus-indicator-color)));
     }
   }
