@@ -17,26 +17,10 @@ examples:
           <use xlink:href="#spectrum-icon-18-AddCircle" />
         </svg>
       </button>
-  - id: floatingactionbutton-primary-focused
-    name: Primary (focused)
-    markup: |
-      <button class="spectrum-FloatingActionButton spectrum-FloatingActionButton--primary is-focused" aria-label="Add">
-        <svg class="spectrum-Icon spectrum-FloatingActionButton-icon" focusable="false" aria-hidden="true">
-          <use xlink:href="#spectrum-icon-18-AddCircle" />
-        </svg>
-      </button>
   - id: floatingactionbutton-secondary
     name: Secondary
     markup: |
       <button class="spectrum-FloatingActionButton spectrum-FloatingActionButton--secondary" aria-label="Add">
-        <svg class="spectrum-Icon spectrum-FloatingActionButton-icon" focusable="false" aria-hidden="true">
-          <use xlink:href="#spectrum-icon-18-AddCircle" />
-        </svg>
-      </button>
-  - id: floatingactionbutton-secondary-focused
-    name: Secondary (focused)
-    markup: |
-      <button class="spectrum-FloatingActionButton spectrum-FloatingActionButton--secondary is-focused" aria-label="Add">
         <svg class="spectrum-Icon spectrum-FloatingActionButton-icon" focusable="false" aria-hidden="true">
           <use xlink:href="#spectrum-icon-18-AddCircle" />
         </svg>
