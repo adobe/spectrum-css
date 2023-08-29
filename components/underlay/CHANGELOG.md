@@ -3,6 +3,51 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+<a name="3.0.0"></a>
+#3.0.0
+🗓
+2023-08-29 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/underlay@2.1.0...@spectrum-css/underlay@3.0.0)
+
+### 🔙 Reverts
+
+\*gulp and build updates ([#2121](https://github.com/adobe/spectrum-css/issues/2121))([03a37f5](https://github.com/adobe/spectrum-css/commit/03a37f5)), closes[#2099](https://github.com/adobe/spectrum-css/issues/2099)
+
+\*feat(underlay)!: migrate to use spectrum-tokens (#2096)([2e0651a](https://github.com/adobe/spectrum-css/commit/2e0651a)), closes[#2096](https://github.com/adobe/spectrum-css/issues/2096)
+
+    	###
+    	🛑 BREAKING CHANGES
+
+    		*
+    		migrates Underlay to use `@adobe/spectrum-tokens`
+
+Additionally:
+
+- chore(underlay): build changes
+
+- chore(underlay): add mods
+
+- feat(underlay): add to storybook
+
+- feat(dialog): use underlay in story
+
+- refactor(dialog): story and template
+
+- refactor(underlay): use custom animation tokens
+
+- chore(underlay): mods
+
+- refactor(dialog): remove unneeded handle
+
+- fix(underlay): address pr feedback
+
+- refactor(underlay): use new token for underlay color
+
+- chore(underlay): manual version increase for beta release
+
+- chore(underlay): update mods
+
+- chore(underlay): remove skin import
+
 <a name="2.1.0"></a>
 #2.1.0
 🗓
