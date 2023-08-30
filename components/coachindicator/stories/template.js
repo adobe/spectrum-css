@@ -4,7 +4,7 @@ import { classMap } from "lit-html/directives/class-map.js";
 import "../index.css";
 
 export const Template = ({
-	rootClass = "spectrum-CoachMarkIndicator",
+	rootClass = "spectrum-CoachIndicator",
 	isQuiet = false,
 	withPopover = false,
 	variant,

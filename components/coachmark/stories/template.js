@@ -3,7 +3,6 @@ import { classMap } from "lit/directives/class-map.js";
 import { useArgs } from "@storybook/client-api";
 
 import { Template as ButtonGroup } from "@spectrum-css/buttongroup/stories/template.js";
-import { Template as ActionButton } from "@spectrum-css/actionbutton/stories/template.js";
 import { Template as ActionMenu } from "@spectrum-css/actionmenu/stories/template.js";
 import { Template as Popover } from "@spectrum-css/popover/stories/template.js";
 
