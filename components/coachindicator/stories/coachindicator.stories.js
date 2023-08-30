@@ -1,4 +1,4 @@
-// Import the component markup template
+import { html } from "lit";
 import { Template } from "./template";
 
 export default {
@@ -16,16 +16,7 @@ export default {
 			},
 			control: "boolean",
 		},
-		variant: {
-			name: "Color variants",
-			type: { name: "string" },
-			table: {
-				type: { summary: "string" },
-				category: "Component",
-			},
-			options: ["default", "dark", "light"],
-			control: "inline-radio",
-		},
+		variant: { table: { disable: true } },
 	},
 	args: {
 		rootClass: "spectrum-CoachIndicator",
@@ -44,10 +35,31 @@ export default {
 	},
 };
 
-export const Default = Template.bind({});
+const CustomCoachIndicator = (args) => {
+	return html`
+	<div
+		style="display: flex;">
+			${Template({
+				...args,
+				variant: "default"
+			})}
+			${Template({
+				...args,
+				variant: "dark"
+			})}
+			${Template({
+				...args,
+				variant: "light"
+			})}
+		<div>
+	`;
+};
+
+
+export const Default = CustomCoachIndicator.bind({});
 Default.args = {};
 
-export const Quiet = Template.bind({});
+export const Quiet = CustomCoachIndicator.bind({});
 Quiet.args = {
 	isQuiet: true
 };
