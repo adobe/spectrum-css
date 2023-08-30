@@ -1,5 +1,5 @@
 import { within, userEvent } from '@storybook/testing-library';
-import { expect } from '@storybook/jest';
+import { html } from "lit";
 
 // Import the component markup template
 import { Template } from "./template";
