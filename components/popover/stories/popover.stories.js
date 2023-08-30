@@ -1,4 +1,5 @@
 import { within, userEvent } from '@storybook/testing-library';
+import { html } from "lit";
 
 // Import the component markup template
 import { Template } from "./template";
@@ -78,6 +79,8 @@ export default {
 };
 
 export const Default = Template.bind({});
+// provide padding so that Chromatic can capture the full focus indicator
+Default.decorators = [(Story) => html`<div style="padding: 1em;">${Story().outerHTML || Story()}</div>`];
 Default.play = async ({ canvasElement }) => {
 	const canvas = within(canvasElement);
   await userEvent.click(canvas.getByRole('button'));

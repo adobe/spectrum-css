@@ -52,6 +52,8 @@ Default.play = async ({ canvasElement }) => {
 
 	await userEvent.click(canvas.getByRole('button', { id: 'trigger' }));
 };
+// provide padding so that Chromatic can capture the full focus indicator
+Default.decorators = [(Story) => html`<div style="padding: 1em;">${Story().outerHTML || Story()}</div>`];
 Default.args = {
 	isOpen: false,
 	items: [
