@@ -6,7 +6,6 @@ import "../index.css";
 export const Template = ({
 	rootClass = "spectrum-CoachIndicator",
 	isQuiet = false,
-	withPopover = false,
 	variant,
 	...globals
 }) => {

@@ -30,7 +30,6 @@ export default {
 	args: {
 		rootClass: "spectrum-CoachIndicator",
 		isQuiet: false,
-		withPopover: false,
 		variant: "default",
 	},
 	parameters: {
