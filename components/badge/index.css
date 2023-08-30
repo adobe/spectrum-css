@@ -36,7 +36,6 @@ governing permissions and limitations under the License.
   --spectrum-badge-background-color-default: var(--spectrum-neutral-subdued-background-color-default);
 
   /* semantic background colors for all t-shirt sizes and all themes */
-  --spectrum-badge-background-color-default: var(--spectrum-neutral-subdued-background-color-default);
   --spectrum-badge-background-color-accent: var(--spectrum-accent-background-color-default);
   --spectrum-badge-background-color-informative: var(--spectrum-informative-background-color-default);
   --spectrum-badge-background-color-negative: var(--spectrum-negative-background-color-default);
@@ -137,7 +136,7 @@ governing permissions and limitations under the License.
 /* windows high contrast mode */
 @media (forced-colors: active) {
   .spectrum-Badge {
-    border-color: CanvasText;
+    border-color: CanvasText; /* stylelint-disable-line declaration-property-value-no-unknown */
   }
 }
 
@@ -154,7 +153,6 @@ governing permissions and limitations under the License.
 
   -webkit-font-smoothing: subpixel-antialiased;
   -moz-osx-font-smoothing: auto;
-  font-smoothing: subpixel-antialiased;
 
   border-radius: var(--mod-badge-corner-radius,
                     var(--spectrum-badge-corner-radius));
