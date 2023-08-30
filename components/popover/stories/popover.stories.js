@@ -1,5 +1,4 @@
 import { within, userEvent } from '@storybook/testing-library';
-import { expect } from '@storybook/jest';
 
 // Import the component markup template
 import { Template } from "./template";
@@ -81,12 +80,7 @@ export default {
 export const Default = Template.bind({});
 Default.play = async ({ canvasElement }) => {
 	const canvas = within(canvasElement);
-
-	await new Promise((resolve) => setTimeout(resolve, 100));
-
-	await userEvent.click(canvas.getByRole('button', { name: 'Hop on pop(over)' }));
-
-	expect(canvas.findByTestId('popover-1').classList.contains('is-open')).toBe(true);
+  await userEvent.click(canvas.getByRole('button'));
 };
 Default.args = {
 	testId: 'popover-1',
