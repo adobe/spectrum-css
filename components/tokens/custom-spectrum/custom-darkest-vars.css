@@ -30,4 +30,8 @@ governing permissions and limitations under the License.
   --spectrum-calendar-day-border-color-key-focus: var(--spectrum-blue-700);
 
   --spectrum-badge-label-icon-color-primary: var(--spectrum-black);
+
+  --spectrum-coach-indicator-ring-default-color: var(--spectrum-blue-700);
+  --spectrum-coach-indicator-ring-dark-color: var(--spectrum-gray-900);
+  --spectrum-coach-indicator-ring-light-color: var(--spectrum-gray-50);
   }
