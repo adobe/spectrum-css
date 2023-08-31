@@ -3,6 +3,13 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+<a name="4.0.40"></a>
+##4.0.40
+🗓
+2023-08-31 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/colorarea@4.0.39...@spectrum-css/colorarea@4.0.40)
+
+**Note:** Version bump only for package @spectrum-css/colorarea
+
 <a name="4.0.39"></a>
 ##4.0.39
 🗓
