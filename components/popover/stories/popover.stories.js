@@ -153,6 +153,13 @@ WithTip.args = {
 	],
 };
 
+WithTip.decorators = [(Story) => html`<div style="padding: 1em;">${Story().outerHTML || Story()}</div>`];
+
+WithTip.play = async ({ canvasElement }) => {
+	const canvas = within(canvasElement);
+  await userEvent.click(canvas.getByRole('button'));
+};
+
 export const Nested = Template.bind({});
 Nested.args = {
 	testId: 'popover-1',
@@ -206,4 +213,11 @@ Nested.args = {
 			],
 		}),
 	],
+};
+
+Nested.decorators = [(Story) => html`<div style="padding: 1em;">${Story().outerHTML || Story()}</div>`];
+
+Nested.play = async ({ canvasElement }) => {
+	const canvas = within(canvasElement);
+  await userEvent.click(canvas.getAllByRole('button')[0]);
 };
