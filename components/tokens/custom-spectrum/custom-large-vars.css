@@ -65,4 +65,8 @@ governing permissions and limitations under the License.
 
   --spectrum-alert-dialog-padding: var(--spectrum-spacing-400);
   --spectrum-alert-dialog-description-to-buttons: var(--spectrum-spacing-600);
+
+  --spectrum-coach-indicator-gap: 8px;
+  --spectrum-coach-indicator-ring-diameter: 20px;
+  --spectrum-coach-indicator-quiet-ring-diameter: 10px;
 }
