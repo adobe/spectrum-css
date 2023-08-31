@@ -69,4 +69,9 @@ governing permissions and limitations under the License.
   --spectrum-coach-indicator-gap: 6px;
   --spectrum-coach-indicator-ring-diameter: var(--spectrum-spacing-300);
   --spectrum-coach-indicator-quiet-ring-diameter: var(--spectrum-spacing-100);
+
+  --spectrum-coachmark-buttongroup-display: flex;
+  --spectrum-coachmark-buttongroup-mobile-display: none;
+  --spectrum-coachmark-menu-display: inline-flex;
+  --spectrum-coachmark-menu-mobile-display: none;
 }
