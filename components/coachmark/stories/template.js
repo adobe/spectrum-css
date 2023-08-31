@@ -69,6 +69,7 @@ export const Template = ({
 				<div class="${rootClass}-footer">
 				${hasPagination ? html`<div class="spectrum-CoachMark-step"><bdo dir="ltr">2 of 8</bdo></div>` : ''}
 				${ButtonGroup({
+					customClasses: globals.scale === "large" ? [`${rootClass}-buttongroup--mobile`] : [`${rootClass}-buttongroup`],
 					size: globals.scale === "large" ? "s" : "m",
 					items: globals.scale === "large" ?
 					[

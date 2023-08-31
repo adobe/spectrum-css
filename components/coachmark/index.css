@@ -56,24 +56,6 @@ governing permissions and limitations under the License.
 	--mod-popover-corner-radius: var(--spectrum-corner-radius-100);
 	--mod-popover-content-area-spacing-vertical: 0;
 	--mod-button-edge-to-visual-only: 9px;
-
-
-	/* handles display toggle to create responsive styling */
-	--spectrum-coachmark-buttongroup-hidden: none;
-	--spectrum-coachmark-buttongroup-displayed: flex;
-	--spectrum-coachmark-buttongroup-display: var(--spectrum-coachmark-buttongroup-displayed);
-
-	--spectrum-coachmark-buttongroup-mobile-hidden: none;
-	--spectrum-coachmark-buttongroup-mobile-displayed: flex;
-	--spectrum-coachmark-buttongroup-mobile-display: var(--spectrum-coachmark-buttongroup-mobile-hidden);
-
-	--spectrum-coachmark-menu-hidden: none;
-	--spectrum-coachmark-menu-displayed: inline-flex;
-	--spectrum-coachmark-menu-display: var(--spectrum-coachmark-menu-displayed);
-
-	--spectrum-coachmark-menu-mobile-hidden: none;
-	--spectrum-coachmark-menu-mobile-displayed: inline-flex;
-	--spectrum-coachmark-menu-mobile-display: var(--spectrum-coachmark-buttongroup-mobile-hidden);
 }
 
 .spectrum-CoachMark {
@@ -87,6 +69,7 @@ governing permissions and limitations under the License.
 	display: var(--spectrum-coachmark-buttongroup-display);
 
 	&--mobile {
+ 		--mod-buttongroup-spacing-horizontal: var(--spectrum-spacing-100);
 		display: var(--spectrum-coachmark-buttongroup-mobile-display);
 	}
 }
@@ -96,30 +79,6 @@ governing permissions and limitations under the License.
 
 	&--mobile {
 		display: var(--spectrum-coachmark-menu-mobile-display);
-	}
-}
-
-.spectrum--large {
-	--mod-buttongroup-spacing-horizontal: var(--spectrum-spacing-100);
-
-	.spectrum-CoachMark-buttongroup {
-		--spectrum-coachmark-buttongroup-display: var(--spectrum-coachmark-buttongroup-hidden);
-		display: var(--spectrum-coachmark-buttongroup-display);
-
-		&--mobile{
-			--spectrum-coachmark-buttongroup-mobile-display: var(--spectrum-coachmark-buttongroup-mobile-displayed);
-			display: var(--spectrum-coachmark-buttongroup-mobile-display);
-		}
-	}
-
-	.spectrum-CoachMark-menu {
-		--spectrum-coachmark-menu-display: var(--spectrum-coachmark-menu-hidden);
-		display: var(--spectrum-coachmark-menu-display);
-
-		&--mobile {
-			--spectrum-coachmark-menu-mobile-display: var(--spectrum-coachmark-menu-mobile-displayed);
-			display: var(--spectrum-coachmark-menu-mobile-display);
-		}
 	}
 }
 
