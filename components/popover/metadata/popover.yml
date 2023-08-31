@@ -1,5 +1,5 @@
 name: Popover
-SpectrumSiteSlug: https://spectrum.adobe.com/page/popovers/
+SpectrumSiteSlug: https://spectrum.adobe.com/page/popover/
 sections:
   - name: Custom Properties API
     description: |
@@ -15,10 +15,11 @@ sections:
         #### Position Class Naming
         - First position term is popover position, second term is source position.
         - Example: --top-left = popover is to top and source is to left.
+        - Popover does not have any spacing between the source by default.
 
         #### Position of Tip
         - Default tip position is centered on the edge for top/bottom/left/right/start/end positions.
-        - Default tip position is distance from edge is equal to popover corner radius for all other positions.
+        - Default tip position distance from edge is equal to popover corner radius for all other positions.
         - Popover tip position can be overridden in implementation to center with the source by setting '--spectrum-popover-pointer-edge-offset' equal to half the width of the source (for top and bottom popovers) or half the height of the source (for side popovers).
 
         #### Tip SVG
@@ -81,7 +82,7 @@ examples:
 
   - id: popover-offset
     name: Popover - Cross Offset
-    description: Spectrum Popover tip distance to edge is overridden in implementation by setting the property to half of the source width or height. This results in the tip centering with the center of the source.
+    description: Spectrum Popover tip distance to edge can be overridden in implementation by setting the property to half of the source width or height. This results in the tip centering with the center of the source.
     markup: |
       <div class="spectrum-Examples">
         <div class="spectrum-Examples-item">

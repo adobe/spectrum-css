@@ -34,7 +34,7 @@ export const Template = ({
 					html`<p
 						class="spectrum-Body spectrum-Body--sizeS ${rootClass}-description"
 					>
-						${description}
+						${description.map((c) => (typeof c === "function" ? c({}) : c))}
 					</p>`
 			)}
 		</div>

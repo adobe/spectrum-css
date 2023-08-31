@@ -41,6 +41,7 @@ export const Template = ({
 				customClasses: [`${rootClass}-button`],
 			})}
 			${Popover({
+				isOpen: true,
 				content: [
 					title ? html`<h2 class="${rootClass}-heading">${title}</h2>` : "",
 					body ? html`<p class="${rootClass}-body">${body}</p>` : "",

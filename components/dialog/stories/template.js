@@ -50,7 +50,7 @@ export const Template = ({
 						...globals,
 					}),
 				])}
-				<section class="${rootClass}-content">${content}</section>
+				<section class="${rootClass}-content">${content.map((c) => (typeof c === "function" ? c({}) : c))}</section>
 				${when(isDismissable, () =>
 					CloseButton({
 						customClasses: [`${rootClass}-closeButton`],

@@ -15,7 +15,15 @@ export default {
 			type: { name: "boolean" },
 			table: { disable: true },
 		},
-		control: "boolean",
+		heading: {
+			name: "Heading",
+			type: { name: "string" },
+			table: {
+				type: { summary: "string" },
+				category: "Content",
+			},
+			control: "text",
+		},
 	},
 	args: {
 		rootClass: "spectrum-Tray",
@@ -35,25 +43,13 @@ export default {
 };
 
 export const Default = Template.bind({});
-Default.argTypes = {
-	heading: {
-		name: "Heading",
-		type: { name: "string" },
-		table: {
-			type: { summary: "string" },
-			category: "Content",
-		},
-		control: "text",
-	},
-};
 Default.args = {
 	heading: "Tray Dialog",
 	content: [
-		{
-			template: Dialog,
-			heading: "New Messages",
-			content: "You have 5 new messages!",
-			isDismissable: false,
-		},
+		() => Dialog({
+				heading: "New Messages",
+				content: ["You have 5 new messages!"],
+				isDismissable: false,
+			})
 	],
 };

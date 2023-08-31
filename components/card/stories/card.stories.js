@@ -127,7 +127,7 @@ const defaultArgs = {
   title: "Card title",
   image: "example-card-portrait.png",
   description: "Optional description that should be one or two lines",
-  footer: [ html`Footer` ],
+  footer: [ "Footer" ],
 }
 
 export const Default = Template.bind({});
