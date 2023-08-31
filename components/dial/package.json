@@ -18,13 +18,13 @@
     "build": "gulp"
   },
   "peerDependencies": {
-    "@spectrum-css/icon": ">=3",
-    "@spectrum-css/tokens": ">=10"
+    "@spectrum-css/icon": ">=4",
+    "@spectrum-css/tokens": ">=11"
   },
   "devDependencies": {
-    "@spectrum-css/component-builder-simple": "^2.0.15",
-    "@spectrum-css/icon": "^3.0.49",
-    "@spectrum-css/tokens": "^10.2.0",
+    "@spectrum-css/component-builder-simple": "^2.0.17",
+    "@spectrum-css/icon": "^4.0.1",
+    "@spectrum-css/tokens": "^11.3.2",
     "gulp": "^4.0.0"
   },
   "publishConfig": {
