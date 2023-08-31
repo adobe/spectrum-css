@@ -3,6 +3,13 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+<a name="1.1.23"></a>
+##1.1.23
+🗓
+2023-08-31 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/alertbanner@1.1.22...@spectrum-css/alertbanner@1.1.23)
+
+**Note:** Version bump only for package @spectrum-css/alertbanner
+
 <a name="1.1.22"></a>
 ##1.1.22
 🗓
