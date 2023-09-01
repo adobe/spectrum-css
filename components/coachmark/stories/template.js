@@ -49,7 +49,7 @@ export const Template = ({
 		${Popover({
 			...globals,
 			customClasses: [`${rootClass}-popover`],
-			isOpen: isCoachMarkOpen,
+			isOpen: true,
 			content: [
 				html`
 				${hasImage ? html

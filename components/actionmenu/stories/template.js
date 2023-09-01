@@ -1,4 +1,5 @@
 import { html } from "lit";
+import { useArgs } from "@storybook/client-api";
 
 import { Template as ActionButton } from "@spectrum-css/actionbutton/stories/template.js";
 import { Template as Popover } from "@spectrum-css/popover/stories/template.js";
@@ -11,9 +12,9 @@ export const Template = ({
 	label,
 	iconName,
 	size = "m",
-	// isOpen = true,
 	...globals
 }) => {
+  const [_, updateArgs] = useArgs();
 
 	if (!items.length) {
 		console.warn("ActionMenu: requires items be passed in to render.");
@@ -31,14 +32,14 @@ export const Template = ({
 			Menu({ items })
 		],
 		trigger: (passthroughs) => ActionButton({
-			size: "m",
+			size,
 			label,
 			iconName,
 			isQuiet: false,
 			isEmphasized: false,
 			hasPopup: false,
 			isSelected: isOpen,
-			label: "More Actions",
+			label,
 			iconName: "More",
 			id: "trigger",
 			customClasses,
