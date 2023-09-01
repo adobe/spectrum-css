@@ -48,7 +48,7 @@ export const Template = ({
       id=${ifDefined(id)}
       ?disabled=${isDisabled}
       @click=${onclick}
-      aria-label=${hideLabel ? iconName : undefined}
+      aria-label=${ifDefined(hideLabel ? iconName : undefined)}
       aria-expanded=${ifDefined(ariaExpanded?.toString())}
       aria-controls=${ifDefined(ariaControls)}
     >
