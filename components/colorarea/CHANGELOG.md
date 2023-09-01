@@ -3,6 +3,50 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+<a name="4.0.40"></a>
+##4.0.40
+🗓
+2023-08-31 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/colorarea@4.0.39...@spectrum-css/colorarea@4.0.40)
+
+**Note:** Version bump only for package @spectrum-css/colorarea
+
+<a name="4.0.39"></a>
+##4.0.39
+🗓
+2023-08-31 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/colorarea@4.0.38...@spectrum-css/colorarea@4.0.39)
+
+**Note:** Version bump only for package @spectrum-css/colorarea
+
+<a name="4.0.38"></a>
+##4.0.38
+🗓
+2023-08-29 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/colorarea@4.0.37...@spectrum-css/colorarea@4.0.38)
+
+### 🔙 Reverts
+
+\*gulp and build updates ([#2121](https://github.com/adobe/spectrum-css/issues/2121))([03a37f5](https://github.com/adobe/spectrum-css/commit/03a37f5)), closes[#2099](https://github.com/adobe/spectrum-css/issues/2099)
+
+<a name="4.0.37"></a>
+##4.0.37
+🗓
+2023-08-22 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/colorarea@4.0.36...@spectrum-css/colorarea@4.0.37)
+
+**Note:** Version bump only for package @spectrum-css/colorarea
+
+<a name="4.0.36"></a>
+##4.0.36
+🗓
+2023-08-22 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/colorarea@4.0.34...@spectrum-css/colorarea@4.0.36)
+
+**Note:** Version bump only for package @spectrum-css/colorarea
+
+<a name="4.0.35"></a>
+##4.0.35
+🗓
+2023-08-18 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/colorarea@4.0.34...@spectrum-css/colorarea@4.0.35)
+
+**Note:** Version bump only for package @spectrum-css/colorarea
+
 <a name="4.0.34"></a>
 ##4.0.34
 🗓

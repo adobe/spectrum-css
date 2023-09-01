@@ -307,9 +307,7 @@ governing permissions and limitations under the License.
 		}
 	}
 
-	&.is-keyboardFocused,
 	&:focus-visible,
-	&.is-focused,
 	&:focus {
 		.spectrum-InfieldButton-fill {
 			background-color: var(

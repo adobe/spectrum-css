@@ -3,6 +3,57 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+<a name="5.0.12"></a>
+##5.0.12
+🗓
+2023-08-31 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/searchwithin@5.0.11...@spectrum-css/searchwithin@5.0.12)
+
+**Note:** Version bump only for package @spectrum-css/searchwithin
+
+<a name="5.0.11"></a>
+##5.0.11
+🗓
+2023-08-31 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/searchwithin@5.0.10...@spectrum-css/searchwithin@5.0.11)
+
+**Note:** Version bump only for package @spectrum-css/searchwithin
+
+<a name="5.0.10"></a>
+##5.0.10
+🗓
+2023-08-29 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/searchwithin@5.0.9...@spectrum-css/searchwithin@5.0.10)
+
+**Note:** Version bump only for package @spectrum-css/searchwithin
+
+<a name="5.0.9"></a>
+##5.0.9
+🗓
+2023-08-25 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/searchwithin@5.0.8...@spectrum-css/searchwithin@5.0.9)
+
+### 🔙 Reverts
+
+\*gulp and build updates ([#2121](https://github.com/adobe/spectrum-css/issues/2121))([03a37f5](https://github.com/adobe/spectrum-css/commit/03a37f5)), closes[#2099](https://github.com/adobe/spectrum-css/issues/2099)
+
+<a name="5.0.8"></a>
+##5.0.8
+🗓
+2023-08-22 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/searchwithin@5.0.7...@spectrum-css/searchwithin@5.0.8)
+
+**Note:** Version bump only for package @spectrum-css/searchwithin
+
+<a name="5.0.7"></a>
+##5.0.7
+🗓
+2023-08-22 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/searchwithin@5.0.5...@spectrum-css/searchwithin@5.0.7)
+
+**Note:** Version bump only for package @spectrum-css/searchwithin
+
+<a name="5.0.6"></a>
+##5.0.6
+🗓
+2023-08-18 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/searchwithin@5.0.5...@spectrum-css/searchwithin@5.0.6)
+
+**Note:** Version bump only for package @spectrum-css/searchwithin
+
 <a name="5.0.5"></a>
 ##5.0.5
 🗓

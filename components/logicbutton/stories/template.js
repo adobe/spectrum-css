@@ -8,14 +8,12 @@ export const Template = ({
 	customClasses = [],
 	variant = "and",
 	isDisabled = false,
-	isFocused = false,
 }) => {
 	return html`
 		<button
 			class=${classMap({
 				[rootClass]: true,
 				[`${rootClass}--${variant}`]: typeof variant !== "undefined",
-				"is-focused": isFocused,
 				...customClasses.reduce((a, c) => ({ ...a, [c]: true }), {}),
 			})}
 			aria-disabled=${isDisabled ? "true" : "false"}

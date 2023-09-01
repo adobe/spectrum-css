@@ -3,6 +3,50 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+<a name="11.3.3"></a>
+##11.3.3
+🗓
+2023-08-31 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/tokens@11.3.2...@spectrum-css/tokens@11.3.3)
+
+**Note:** Version bump only for package @spectrum-css/tokens
+
+<a name="11.3.2"></a>
+##11.3.2
+🗓
+2023-08-31 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/tokens@11.3.1...@spectrum-css/tokens@11.3.2)
+
+**Note:** Version bump only for package @spectrum-css/tokens
+
+<a name="11.3.1"></a>
+##11.3.1
+🗓
+2023-08-29 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/tokens@11.3.0...@spectrum-css/tokens@11.3.1)
+
+**Note:** Version bump only for package @spectrum-css/tokens
+
+<a name="11.3.0"></a>
+#11.3.0
+🗓
+2023-08-22 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/tokens@11.2.2...@spectrum-css/tokens@11.3.0)
+
+### ✨ Features
+
+- **tokens:**update to spectrum-tokens v12.17.0 ([#2118](https://github.com/adobe/spectrum-css/issues/2118))([57d1d93](https://github.com/adobe/spectrum-css/commit/57d1d93))
+
+<a name="11.2.2"></a>
+##11.2.2
+🗓
+2023-08-22 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/tokens@11.2.0...@spectrum-css/tokens@11.2.2)
+
+**Note:** Version bump only for package @spectrum-css/tokens
+
+<a name="11.2.1"></a>
+##11.2.1
+🗓
+2023-08-18 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/tokens@11.2.0...@spectrum-css/tokens@11.2.1)
+
+**Note:** Version bump only for package @spectrum-css/tokens
+
 <a name="11.2.0"></a>
 #11.2.0
 🗓

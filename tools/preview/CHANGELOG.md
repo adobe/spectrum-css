@@ -3,6 +3,50 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+<a name="4.1.14"></a>
+##4.1.14
+🗓
+2023-08-31 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/preview@4.1.13...@spectrum-css/preview@4.1.14)
+
+**Note:** Version bump only for package @spectrum-css/preview
+
+<a name="4.1.13"></a>
+##4.1.13
+🗓
+2023-08-31 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/preview@4.1.12...@spectrum-css/preview@4.1.13)
+
+**Note:** Version bump only for package @spectrum-css/preview
+
+<a name="4.1.12"></a>
+##4.1.12
+🗓
+2023-08-29 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/preview@4.1.11...@spectrum-css/preview@4.1.12)
+
+### 🔙 Reverts
+
+\*gulp and build updates ([#2121](https://github.com/adobe/spectrum-css/issues/2121))([03a37f5](https://github.com/adobe/spectrum-css/commit/03a37f5)), closes[#2099](https://github.com/adobe/spectrum-css/issues/2099)
+
+<a name="4.1.11"></a>
+##4.1.11
+🗓
+2023-08-22 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/preview@4.1.10...@spectrum-css/preview@4.1.11)
+
+**Note:** Version bump only for package @spectrum-css/preview
+
+<a name="4.1.10"></a>
+##4.1.10
+🗓
+2023-08-22 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/preview@4.1.8...@spectrum-css/preview@4.1.10)
+
+**Note:** Version bump only for package @spectrum-css/preview
+
+<a name="4.1.9"></a>
+##4.1.9
+🗓
+2023-08-18 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/preview@4.1.8...@spectrum-css/preview@4.1.9)
+
+**Note:** Version bump only for package @spectrum-css/preview
+
 <a name="4.1.8"></a>
 ##4.1.8
 🗓

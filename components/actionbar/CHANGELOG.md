@@ -3,6 +3,57 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+<a name="6.0.67"></a>
+##6.0.67
+🗓
+2023-08-31 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/actionbar@6.0.66...@spectrum-css/actionbar@6.0.67)
+
+**Note:** Version bump only for package @spectrum-css/actionbar
+
+<a name="6.0.66"></a>
+##6.0.66
+🗓
+2023-08-31 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/actionbar@6.0.65...@spectrum-css/actionbar@6.0.66)
+
+**Note:** Version bump only for package @spectrum-css/actionbar
+
+<a name="6.0.65"></a>
+##6.0.65
+🗓
+2023-08-29 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/actionbar@6.0.64...@spectrum-css/actionbar@6.0.65)
+
+**Note:** Version bump only for package @spectrum-css/actionbar
+
+<a name="6.0.64"></a>
+##6.0.64
+🗓
+2023-08-25 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/actionbar@6.0.63...@spectrum-css/actionbar@6.0.64)
+
+### 🔙 Reverts
+
+\*gulp and build updates ([#2121](https://github.com/adobe/spectrum-css/issues/2121))([03a37f5](https://github.com/adobe/spectrum-css/commit/03a37f5)), closes[#2099](https://github.com/adobe/spectrum-css/issues/2099)
+
+<a name="6.0.63"></a>
+##6.0.63
+🗓
+2023-08-22 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/actionbar@6.0.62...@spectrum-css/actionbar@6.0.63)
+
+**Note:** Version bump only for package @spectrum-css/actionbar
+
+<a name="6.0.62"></a>
+##6.0.62
+🗓
+2023-08-22 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/actionbar@6.0.60...@spectrum-css/actionbar@6.0.62)
+
+**Note:** Version bump only for package @spectrum-css/actionbar
+
+<a name="6.0.61"></a>
+##6.0.61
+🗓
+2023-08-18 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/actionbar@6.0.60...@spectrum-css/actionbar@6.0.61)
+
+**Note:** Version bump only for package @spectrum-css/actionbar
+
 <a name="6.0.60"></a>
 ##6.0.60
 🗓

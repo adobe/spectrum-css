@@ -1,6 +1,6 @@
 {
   "name": "@spectrum-css/fieldlabel",
-  "version": "7.0.24",
+  "version": "7.0.31",
   "description": "The Spectrum CSS fieldlabel component",
   "license": "Apache-2.0",
   "author": "Adobe",
@@ -22,15 +22,15 @@
     "@spectrum-css/tokens": ">=10"
   },
   "devDependencies": {
-    "@spectrum-css/checkbox": "^7.0.3",
+    "@spectrum-css/checkbox": "^7.0.9",
     "@spectrum-css/component-builder-simple": "^2.0.17",
-    "@spectrum-css/fieldgroup": "^4.0.63",
+    "@spectrum-css/fieldgroup": "^4.0.70",
     "@spectrum-css/icon": "^4.0.1",
-    "@spectrum-css/picker": "^7.0.0",
-    "@spectrum-css/radio": "^8.0.0",
-    "@spectrum-css/stepper": "^4.0.48",
-    "@spectrum-css/textfield": "^6.0.12",
-    "@spectrum-css/tokens": "^11.2.0",
+    "@spectrum-css/picker": "^7.0.6",
+    "@spectrum-css/radio": "^8.0.7",
+    "@spectrum-css/stepper": "^4.0.55",
+    "@spectrum-css/textfield": "^6.0.19",
+    "@spectrum-css/tokens": "^11.3.3",
     "gulp": "^4.0.0"
   },
   "publishConfig": {

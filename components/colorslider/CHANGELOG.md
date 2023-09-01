@@ -3,6 +3,231 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+<a name="5.0.3"></a>
+##5.0.3
+🗓
+2023-08-31 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/colorslider@5.0.2...@spectrum-css/colorslider@5.0.3)
+
+**Note:** Version bump only for package @spectrum-css/colorslider
+
+<a name="5.0.2"></a>
+##5.0.2
+🗓
+2023-08-31 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/colorslider@5.0.1...@spectrum-css/colorslider@5.0.2)
+
+**Note:** Version bump only for package @spectrum-css/colorslider
+
+<a name="5.0.1"></a>
+##5.0.1
+🗓
+2023-08-29 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/colorslider@5.0.0...@spectrum-css/colorslider@5.0.1)
+
+**Note:** Version bump only for package @spectrum-css/colorslider
+
+<a name="5.0.0"></a>
+#5.0.0
+🗓
+2023-08-25 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/colorslider@4.0.9...@spectrum-css/colorslider@5.0.0)
+
+### 🔙 Reverts
+
+\*gulp and build updates ([#2121](https://github.com/adobe/spectrum-css/issues/2121))([03a37f5](https://github.com/adobe/spectrum-css/commit/03a37f5)), closes[#2099](https://github.com/adobe/spectrum-css/issues/2099)
+
+\*feat(colorslider)!: spectrum tokens migration (#1924)([da345bd](https://github.com/adobe/spectrum-css/commit/da345bd)), closes[#1924](https://github.com/adobe/spectrum-css/issues/1924)
+
+    	###
+    	🛑 BREAKING CHANGES
+
+    		*
+    		migrates Color Slider to use `@adobe/spectrum-tokens` and the new Opacity Checkerboard
+
+Additionally:
+
+- build(colorslider)!: migrate build to use core tokens
+  Migrate dependencies and other build related files to use the new
+  @spectrum-css/tokens package.
+
+- refactor(colorslider): convert CSS to use core tokens - wip
+
+* Add new tokens defined in design.
+* Use tokens in existing CSS.
+* Merge skin.css into index.css.
+
+- feat(colorslider): add story for 'alpha' gradient
+
+Add story that shows the existing variant from the docs, with a
+transparent color used in the gradient and checkerboard appearing behind
+it. Adds a hidden control to Storybook. This variant needed to be
+testable and compared against in Storybook.
+
+- refactor(colorslider): move styles out of hidden placeholder
+
+Removes unnecessary placeholder variable (%) that is only used once.
+Clarifies what these "hidden" styles are doing.
+
+- feat(colorslider): finalize css to use new core tokens
+
+* Finalize CSS to use new core tokens.
+* Integrates skin.css into index.css.
+* Remove "canvas" variant as was done with colorwheel component.
+* Replaces some properties with their logical properties.
+* Generate mods.
+
+- style(colorslider): prettier and stylelint on colorslider files
+
+Run prettier with automatic changes to colorslider files, to update
+formatting to match new changes to linting.
+
+And manually make a few changes after stylelint check.
+
+- fix(colorslider): highcontrast update
+
+Updates colors for high contrast to fix disabled border color being off.
+Refactors those colors and uses a local variable for the box-shadow
+color.
+
+Change: Uses CanvasText border color in high contrast mode, so
+component still shows a border in high contrast mode with a dark
+background theme. Border was previously barely visible.
+
+- refactor(colorslider): remove no longer needed colorhandle styles
+
+These styles for the nested ColorHandle appear to be no longer
+necessary.
+
+- hit area size (width and height) is available through colorhandle's
+  --mod property. The global-dimension-size-300 was equal to the same
+  pixel value already set by colorhandle using
+  --spectrum-color-control-track-width
+
+- border-radius is set to 100% in colorhandle and there does not appear
+  to be any option to support changing this through a mod or SWC options
+
+* fix(colorslider): remove added label and its spacing token
+
+Per discussion with design, the label on the design was meant to serve
+more as guidance, and does not need to be a part of the component.
+
+- feat(colorhandle): add --mod-colorhandle-hitarea-border-radius
+
+Add --mod custom property for the border radius of the hit area, so that
+other components that use colorhandle can easily customize it
+(colorslider sets it to square, not rounded).
+
+- fix(colorslider): keep square hit area on colorhandle with new mod
+
+Keep the square hit area (::after) on the nested colorhandle, which was
+defaulting to rounded, using the newly added passthrough for
+--mod-colorhandle-hitarea-border-radius
+
+- feat(colorslider): reversed gradient for rtl support and docs update
+
+Use same technique as SWC for reversing the gradient when using a RTL
+base direction. The handles were flipping to the other side using the
+new logical properties but the gradient was not.
+
+Also updates documentation around this and improves overall docs
+explanations. Changes first usage docs bullet point specifying
+translateX, as this does not appear to be correct (SWC changes the
+inset-inline-start and inset-block-end of the position absolute handle).
+
+Fixes capitalization of component name in a few places to match the
+sentence case specified in the Spectrum capitalization guidelines.
+
+- fix(colorslider): update stories and example colors
+
+Update gradient used and use the matching colorhandle background color
+for the new Alpha story.
+
+Add new story for the "With Image" example from the docs. This example
+also includes the 50% positioned handle, for testing/VRT purposes.
+
+- fix(colorslider): update mod name for checkerboard
+
+Custom property mod had the wrong name.
+
+Co-authored-by: Jennifer Grenier Diaz <jenn.diaz@heysparkbox.com>
+
+- style(colorslider): remove prettier auto formatting
+
+To ease merge and keep to existing style conventions. Changes were made
+before prettier auto formatting was reverted.
+
+- feat(colorslider): integrate opacitycheckerboard changes
+
+Integrate new opacitycheckerboard changes that have merged into main.
+ColorSlider now uses the opacitycheckerboard component, which is
+viewable with the Alpha variant.
+
+Also added a "Disabled" story to Storybook, so that's included in VRTs.
+
+- style(colorhandle): update indentation on addition
+
+Due to mix of tabs and spaces in file.
+
+- feat(opacitycheckerboard): modify stories for use in components
+
+* Modify storybook template so that it can be imported and used by other
+  components' stories. Allow passing in content, and excluding the
+  storybook testing wrapper markup.
+* Moves defaultValue to args, as that syntax has been deprecated in
+  newer versions of Storybook:
+  https://storybook.js.org/docs/react/api/arg-types#defaultvalue
+* Adds a new story with a centered background position mod, and
+  clarifies that the arg is changing the mod.
+
+- feat(colorslider): use imported opacitycheckerboard story
+
+Use opacitycheckerboard story in the template for ColorSlider, so the
+checkerboard appears in the Alpha variant.
+
+- feat(colorslider): in storybook add focused class to color handle
+
+When isFocused is enabled in Storybook, also add the focused class to
+the colorhandle (showing it scaled up). Otherwise focused state in
+Storybook has no visual difference.
+
+- chore(colorslider): manual version increase for beta release
+
+- fix(colorslider): inset the box-shadow border
+
+The 'inset' of the box-shadow border had been lost from the skin.css, as
+noticed in VRTs.
+
+- chore(colorslider): manual version increase for beta release
+
+- build(colorslider): minimum colorhandle version
+
+Increase minimum version of colorhandle to be the latest release that
+includes the addition of --mod-colorhandle-hitarea-border-radius
+
+- build(colorslider): build with latest version of tokens
+
+Update devDependencies to use latest version of tokens package.
+
+- chore(colorslider): manual version increase for beta release
+
+<a name="4.0.9"></a>
+##4.0.9
+🗓
+2023-08-22 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/colorslider@4.0.8...@spectrum-css/colorslider@4.0.9)
+
+**Note:** Version bump only for package @spectrum-css/colorslider
+
+<a name="4.0.8"></a>
+##4.0.8
+🗓
+2023-08-22 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/colorslider@4.0.6...@spectrum-css/colorslider@4.0.8)
+
+**Note:** Version bump only for package @spectrum-css/colorslider
+
+<a name="4.0.7"></a>
+##4.0.7
+🗓
+2023-08-18 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/colorslider@4.0.6...@spectrum-css/colorslider@4.0.7)
+
+**Note:** Version bump only for package @spectrum-css/colorslider
+
 <a name="4.0.6"></a>
 ##4.0.6
 🗓

@@ -46,7 +46,7 @@ export const Template = ({
 				...customClasses.reduce((a, c) => ({ ...a, [c]: true }), {}),
 			})}
 			id=${ifDefined(id)}
-			tabindex="0"
+			tabindex=${isDisabled ? '-1' : '0'}
 		>
 			${avatarUrl
 				? Avatar({

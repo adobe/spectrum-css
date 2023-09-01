@@ -33,10 +33,7 @@ export const Template = ({
 				})}
 				id=${ifDefined(id)}
 			>
-				${content.map((c) => {
-					const { template, ...props } = c;
-					return template({ ...props, ...globals });
-				})}
+			${content.map((c) => (typeof c === "function" ? c({}) : c))}
 			</div>
 		</div>
 	`;

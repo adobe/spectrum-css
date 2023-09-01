@@ -3,6 +3,57 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+<a name="4.0.70"></a>
+##4.0.70
+🗓
+2023-08-31 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/fieldgroup@4.0.69...@spectrum-css/fieldgroup@4.0.70)
+
+**Note:** Version bump only for package @spectrum-css/fieldgroup
+
+<a name="4.0.69"></a>
+##4.0.69
+🗓
+2023-08-31 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/fieldgroup@4.0.68...@spectrum-css/fieldgroup@4.0.69)
+
+**Note:** Version bump only for package @spectrum-css/fieldgroup
+
+<a name="4.0.68"></a>
+##4.0.68
+🗓
+2023-08-29 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/fieldgroup@4.0.67...@spectrum-css/fieldgroup@4.0.68)
+
+**Note:** Version bump only for package @spectrum-css/fieldgroup
+
+<a name="4.0.67"></a>
+##4.0.67
+🗓
+2023-08-25 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/fieldgroup@4.0.66...@spectrum-css/fieldgroup@4.0.67)
+
+### 🔙 Reverts
+
+\*gulp and build updates ([#2121](https://github.com/adobe/spectrum-css/issues/2121))([03a37f5](https://github.com/adobe/spectrum-css/commit/03a37f5)), closes[#2099](https://github.com/adobe/spectrum-css/issues/2099)
+
+<a name="4.0.66"></a>
+##4.0.66
+🗓
+2023-08-22 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/fieldgroup@4.0.65...@spectrum-css/fieldgroup@4.0.66)
+
+**Note:** Version bump only for package @spectrum-css/fieldgroup
+
+<a name="4.0.65"></a>
+##4.0.65
+🗓
+2023-08-22 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/fieldgroup@4.0.63...@spectrum-css/fieldgroup@4.0.65)
+
+**Note:** Version bump only for package @spectrum-css/fieldgroup
+
+<a name="4.0.64"></a>
+##4.0.64
+🗓
+2023-08-18 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/fieldgroup@4.0.63...@spectrum-css/fieldgroup@4.0.64)
+
+**Note:** Version bump only for package @spectrum-css/fieldgroup
+
 <a name="4.0.63"></a>
 ##4.0.63
 🗓

@@ -16,7 +16,7 @@ export const Template = ({
 				...customClasses.reduce((a, c) => ({ ...a, [c]: true }), {}),
 			})}
 		>
-			${content}
+		${content.map((c) => (typeof c === "function" ? c({}) : c))}
 		</span>
 	`;
 };

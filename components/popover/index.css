@@ -13,7 +13,14 @@ governing permissions and limitations under the License.
 @import "../commons/overlay-coretokens.css";
 
 .spectrum-Popover {
-  --spectrum-popover-cross-offset: 0; /* change to offset from source, default is 0 */
+  /* Used in positioning popover for storybook */
+  --flow-direction: 1;
+  [dir="rtl"] & {
+    --flow-direction: -1;
+  }
+
+  /* change to offset from source */
+  --spectrum-popover-offset: 0px;
 
   --spectrum-popover-background-color: var(--spectrum-background-layer-2-color);
   --spectrum-popover-border-color: var(--spectrum-gray-400);
@@ -104,7 +111,7 @@ governing permissions and limitations under the License.
 .spectrum-Popover--top-right,
 .spectrum-Popover--top-start,
 .spectrum-Popover--top-end {
-  margin-bottom: var(--spectrum-popover-cross-offset);
+  margin-bottom: var(--mod-popover-offset, var(--spectrum-popover-offset));
   /* popover animates upward ⬆ */
   &.is-open {
     @inherit: %spectrum-overlay--top--open;
@@ -117,7 +124,7 @@ governing permissions and limitations under the License.
 .spectrum-Popover--bottom-right,
 .spectrum-Popover--bottom-start,
 .spectrum-Popover--bottom-end {
-  margin-top: var(--spectrum-popover-cross-offset);
+  margin-top: var(--mod-popover-offset, var(--spectrum-popover-offset));
   /* popover animates downward ⬇ */
   &.is-open {
     @inherit: %spectrum-overlay--bottom--open;
@@ -128,7 +135,7 @@ governing permissions and limitations under the License.
 .spectrum-Popover--right,
 .spectrum-Popover--right-bottom,
 .spectrum-Popover--right-top {
-  margin-left: var(--spectrum-popover-cross-offset);
+  margin-left: var(--mod-popover-offset, var(--spectrum-popover-offset));
   /* popover animates towards right ⮕ */
   &.is-open {
     @inherit: %spectrum-overlay--right--open;
@@ -139,7 +146,7 @@ governing permissions and limitations under the License.
 .spectrum-Popover--left,
 .spectrum-Popover--left-bottom,
 .spectrum-Popover--left-top {
-  margin-right: var(--spectrum-popover-cross-offset);
+  margin-right: var(--mod-popover-offset, var(--spectrum-popover-offset));
   /* popover animates towards left ⬅ */
   &.is-open {
     @inherit: %spectrum-overlay--left--open;
@@ -150,7 +157,7 @@ governing permissions and limitations under the License.
 .spectrum-Popover--start,
 .spectrum-Popover--start-top,
 .spectrum-Popover--start-bottom {
-  margin-inline-end: var(--spectrum-popover-cross-offset);
+  margin-inline-end: var(--mod-popover-offset, var(--spectrum-popover-offset));
   /* LTR read, popover animates towards left ⬅ */
   &.is-open {
     @inherit: %spectrum-overlay--left--open;
@@ -168,7 +175,7 @@ governing permissions and limitations under the License.
 .spectrum-Popover--end,
 .spectrum-Popover--end-top,
 .spectrum-Popover--end-bottom {
-  margin-inline-start: var(--spectrum-popover-cross-offset);
+  margin-inline-start: var(--mod-popover-offset, var(--spectrum-popover-offset));
   /* LTR read, popover animates towards right ⮕ */
   &.is-open {
     @inherit: %spectrum-overlay--right--open;
@@ -283,7 +290,7 @@ governing permissions and limitations under the License.
     }
   }
 
-  /* right, left start, end popover position with tip default to pointing right ▷ */
+  /* right, left, start, end popover position with tip default to pointing right ▷ */
   &.spectrum-Popover--left,
   &.spectrum-Popover--left-bottom,
   &.spectrum-Popover--left-top,
@@ -326,6 +333,7 @@ governing permissions and limitations under the License.
       }
     }
 
+  
     /* popover with tip at top */
     &.spectrum-Popover--right-top,
     &.spectrum-Popover--left-top,

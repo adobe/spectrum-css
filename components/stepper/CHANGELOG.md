@@ -3,6 +3,57 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+<a name="4.0.55"></a>
+##4.0.55
+🗓
+2023-08-31 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/stepper@4.0.54...@spectrum-css/stepper@4.0.55)
+
+**Note:** Version bump only for package @spectrum-css/stepper
+
+<a name="4.0.54"></a>
+##4.0.54
+🗓
+2023-08-31 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/stepper@4.0.53...@spectrum-css/stepper@4.0.54)
+
+**Note:** Version bump only for package @spectrum-css/stepper
+
+<a name="4.0.53"></a>
+##4.0.53
+🗓
+2023-08-29 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/stepper@4.0.52...@spectrum-css/stepper@4.0.53)
+
+**Note:** Version bump only for package @spectrum-css/stepper
+
+<a name="4.0.52"></a>
+##4.0.52
+🗓
+2023-08-25 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/stepper@4.0.51...@spectrum-css/stepper@4.0.52)
+
+### 🔙 Reverts
+
+\*gulp and build updates ([#2121](https://github.com/adobe/spectrum-css/issues/2121))([03a37f5](https://github.com/adobe/spectrum-css/commit/03a37f5)), closes[#2099](https://github.com/adobe/spectrum-css/issues/2099)
+
+<a name="4.0.51"></a>
+##4.0.51
+🗓
+2023-08-22 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/stepper@4.0.50...@spectrum-css/stepper@4.0.51)
+
+**Note:** Version bump only for package @spectrum-css/stepper
+
+<a name="4.0.50"></a>
+##4.0.50
+🗓
+2023-08-22 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/stepper@4.0.48...@spectrum-css/stepper@4.0.50)
+
+**Note:** Version bump only for package @spectrum-css/stepper
+
+<a name="4.0.49"></a>
+##4.0.49
+🗓
+2023-08-18 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/stepper@4.0.48...@spectrum-css/stepper@4.0.49)
+
+**Note:** Version bump only for package @spectrum-css/stepper
+
 <a name="4.0.48"></a>
 ##4.0.48
 🗓

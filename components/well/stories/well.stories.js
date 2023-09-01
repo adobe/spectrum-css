@@ -28,8 +28,10 @@ export default {
 export const Default = Template.bind({});
 Default.args = {
 	content: [
-		html` <em>Well done is better than well said.</em><br />
+		() => {
+			return html` <em>Well done is better than well said.</em><br />
 			<strong>Benjamin Franklin</strong>
-			<br /><br />Well said Ben!`,
+			<br /><br />Well said Ben!`;
+		}
 	],
 };

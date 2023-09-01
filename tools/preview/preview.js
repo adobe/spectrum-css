@@ -164,6 +164,12 @@ export const argTypes = {
 		table: { disable: true },
 		control: "text",
 	},
+	testId: { 
+		name: "Test ID",
+		type: { name: "string", required: false },
+		table: { disable: true },
+		control: "text", 
+	},
 };
 
 export const args = {

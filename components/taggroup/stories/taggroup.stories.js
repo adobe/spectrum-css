@@ -37,6 +37,14 @@ export default {
 			},
 			control: "boolean",
 		},
+		customStyles: {
+			description: "Custom styles for testing the story, applied to the parent element.",
+			table: {
+				type: { summary: "object" },
+				category: "Storybook Only",
+			},
+			if: { arg: 'customStyles' }
+		}
 	},
 	args: {
 		rootClass: "spectrum-TagGroup",
@@ -85,6 +93,45 @@ Removable.args = {
 		},
 		{
 			label: "Tag 3",
+		},
+	],
+};
+
+export const OverflowItems = Template.bind({});
+OverflowItems.parameters = {
+	docs: {
+		description: {
+			story:
+				"When horizontal space is limited in a tag group, the individual tags wrap to form another line.",
+		},
+	},
+};
+OverflowItems.args = {
+	size: "m",
+	isRemovable: true,
+	isEmphasized: false,
+	customStyles: {'max-width': '300px'},
+	items: [
+		{
+			label: "Tag 1 Example",
+		},
+		{
+			label: "Tag 2 Example",
+		},
+		{
+			label: "Tag 3 Example",
+		},
+		{
+			label: "Tag 4",
+		},
+		{
+			label: "Tag 5",
+		},
+		{
+			label: "Tag 6",
+		},
+		{
+			label: "Tag 7",
 		},
 	],
 };

@@ -6,14 +6,10 @@ updates:
       interval: "weekly"
     labels:
       - "dependencies"
-    assignees:
-      - "castastrophe"
-    reviewers:
-      - "castastrophe"
     commit-message:
       prefix: "chore"
       include: "scope"
-    open-pull-requests-limit: 10
+    open-pull-requests-limit: 5
     rebase-strategy: "auto"
     versioning-strategy: "increase"
     ignore:
@@ -33,14 +29,9 @@ updates:
         # Define patterns to include dependencies in the group (based on
         # dependency name)
         patterns:
-          - storybook
+          - "storybook"
           - "@storybook/*"
           - "@types/storybook*"
-          # manually added these because they weren't being included for some reason 🤷‍♀️
-          - "@storybook/core-events"
-          - "@storybook/components"
-          - "@storybook/blocks"
-          - "@storybook/preview-api"
       commitlint-ecosystem:
         patterns:
           - "@commitlint/*"
@@ -49,5 +40,3 @@ updates:
     directory: "/"
     schedule:
       interval: "monthly"
-    reviewers:
-      - "castastrophe"

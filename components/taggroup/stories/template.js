@@ -1,11 +1,11 @@
 import { html } from "lit";
 import { classMap } from "lit/directives/class-map.js";
+import { styleMap } from "lit/directives/style-map.js";
 import { ifDefined } from "lit/directives/if-defined.js";
 
 import { Template as Tag } from "@spectrum-css/tag/stories/template.js";
 
 import "../index.css";
-import "../skin.css";
 
 export const Template = ({
 	rootClass = "spectrum-TagGroup",
@@ -13,6 +13,7 @@ export const Template = ({
 	items,
 	isRemovable = false,
 	customClasses = [],
+	customStyles = {},
 	...globals
 }) => {
 	return html`
@@ -21,6 +22,7 @@ export const Template = ({
 				[rootClass]: true,
 				...customClasses.reduce((a, c) => ({ ...a, [c]: true }), {}),
 			})}
+			style=${styleMap(customStyles)}
 			role="list"
 			aria-label=${ifDefined(ariaLabel)}
 		>

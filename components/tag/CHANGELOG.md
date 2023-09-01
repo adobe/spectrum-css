@@ -3,6 +3,83 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+<a name="8.0.5"></a>
+##8.0.5
+🗓
+2023-08-31 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/tag@8.0.4...@spectrum-css/tag@8.0.5)
+
+**Note:** Version bump only for package @spectrum-css/tag
+
+<a name="8.0.4"></a>
+##8.0.4
+🗓
+2023-08-31 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/tag@8.0.3...@spectrum-css/tag@8.0.4)
+
+**Note:** Version bump only for package @spectrum-css/tag
+
+<a name="8.0.3"></a>
+##8.0.3
+🗓
+2023-08-29 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/tag@8.0.2...@spectrum-css/tag@8.0.3)
+
+**Note:** Version bump only for package @spectrum-css/tag
+
+<a name="8.0.2"></a>
+##8.0.2
+🗓
+2023-08-25 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/tag@8.0.1...@spectrum-css/tag@8.0.2)
+
+### 🔙 Reverts
+
+\*gulp and build updates ([#2121](https://github.com/adobe/spectrum-css/issues/2121))([03a37f5](https://github.com/adobe/spectrum-css/commit/03a37f5)), closes[#2099](https://github.com/adobe/spectrum-css/issues/2099)
+
+<a name="8.0.1"></a>
+##8.0.1
+🗓
+2023-08-22 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/tag@8.0.0...@spectrum-css/tag@8.0.1)
+
+**Note:** Version bump only for package @spectrum-css/tag
+
+<a name="8.0.0"></a>
+#8.0.0
+🗓
+2023-08-22 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/tag@6.0.1...@spectrum-css/tag@8.0.0)
+
+\*refactor(clearbutton)!: migrate tokens (#1943)([495198a](https://github.com/adobe/spectrum-css/commit/495198a)), closes[#1943](https://github.com/adobe/spectrum-css/issues/1943)
+
+    	###
+    	🛑 BREAKING CHANGES
+
+    		*
+    		migrates clear button to use `@adobe/spectrum-tokens`
+
+- update to use infield button tokens release
+- migrate css to use tokens
+- add quiet variant and whcm styles
+- update storybook to include over background story
+- fix icon sizing in story, add cursor pointer
+- add aria-labels
+
+<a name="7.0.0"></a>
+#7.0.0
+🗓
+2023-08-18 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/tag@6.0.1...@spectrum-css/tag@7.0.0)
+
+\*refactor(clearbutton)!: migrate tokens (#1943)([495198a](https://github.com/adobe/spectrum-css/commit/495198a)), closes[#1943](https://github.com/adobe/spectrum-css/issues/1943)
+
+    	###
+    	🛑 BREAKING CHANGES
+
+    		*
+    		migrates clear button to use `@adobe/spectrum-tokens`
+
+- update to use infield button tokens release
+- migrate css to use tokens
+- add quiet variant and whcm styles
+- update storybook to include over background story
+- fix icon sizing in story, add cursor pointer
+- add aria-labels
+
 <a name="6.0.1"></a>
 ##6.0.1
 🗓

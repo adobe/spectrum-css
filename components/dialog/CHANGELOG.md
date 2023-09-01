@@ -3,6 +3,92 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+<a name="8.0.2"></a>
+##8.0.2
+🗓
+2023-08-31 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/dialog@8.0.1...@spectrum-css/dialog@8.0.2)
+
+**Note:** Version bump only for package @spectrum-css/dialog
+
+<a name="8.0.1"></a>
+##8.0.1
+🗓
+2023-08-31 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/dialog@8.0.0...@spectrum-css/dialog@8.0.1)
+
+**Note:** Version bump only for package @spectrum-css/dialog
+
+<a name="8.0.0"></a>
+#8.0.0
+🗓
+2023-08-29 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/dialog@7.0.1...@spectrum-css/dialog@8.0.0)
+
+### 🔙 Reverts
+
+\*gulp and build updates ([#2121](https://github.com/adobe/spectrum-css/issues/2121))([03a37f5](https://github.com/adobe/spectrum-css/commit/03a37f5)), closes[#2099](https://github.com/adobe/spectrum-css/issues/2099)
+
+\*feat(underlay)!: migrate to use spectrum-tokens (#2096)([2e0651a](https://github.com/adobe/spectrum-css/commit/2e0651a)), closes[#2096](https://github.com/adobe/spectrum-css/issues/2096)
+
+    	###
+    	🛑 BREAKING CHANGES
+
+    		*
+    		migrates Underlay to use `@adobe/spectrum-tokens`
+
+Additionally:
+
+- chore(underlay): build changes
+
+- chore(underlay): add mods
+
+- feat(underlay): add to storybook
+
+- feat(dialog): use underlay in story
+
+- refactor(dialog): story and template
+
+- refactor(underlay): use custom animation tokens
+
+- chore(underlay): mods
+
+- refactor(dialog): remove unneeded handle
+
+- fix(underlay): address pr feedback
+
+- refactor(underlay): use new token for underlay color
+
+- chore(underlay): manual version increase for beta release
+
+- chore(underlay): update mods
+
+- chore(underlay): remove skin import
+
+<a name="7.0.1"></a>
+##7.0.1
+🗓
+2023-08-22 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/dialog@7.0.0...@spectrum-css/dialog@7.0.1)
+
+**Note:** Version bump only for package @spectrum-css/dialog
+
+<a name="7.0.0"></a>
+#7.0.0
+🗓
+2023-08-22 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/dialog@6.0.67...@spectrum-css/dialog@7.0.0)
+
+\*feat(dialog)!: major layout updates([526d505](https://github.com/adobe/spectrum-css/commit/526d505))
+
+    	###
+    	🛑 BREAKING CHANGES
+
+    		*
+    		Alert variants of Dialog have been removed and placed inside of Alert Dialog
+
+<a name="6.0.68"></a>
+##6.0.68
+🗓
+2023-08-18 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/dialog@6.0.67...@spectrum-css/dialog@6.0.68)
+
+**Note:** Version bump only for package @spectrum-css/dialog
+
 <a name="6.0.67"></a>
 ##6.0.67
 🗓

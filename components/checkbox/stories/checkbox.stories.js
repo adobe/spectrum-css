@@ -57,8 +57,8 @@ export default {
 			name: "Indeterminate",
 			type: { name: "boolean" },
 			table: {
-				type: { summary: "boolean" },
-				category: "Component",
+			type: { summary: "boolean" },
+			category: "Component",
 			},
 			control: "boolean",
 		},

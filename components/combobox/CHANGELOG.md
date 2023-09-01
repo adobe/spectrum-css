@@ -3,6 +3,57 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+<a name="2.0.35"></a>
+##2.0.35
+🗓
+2023-08-31 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/combobox@2.0.34...@spectrum-css/combobox@2.0.35)
+
+**Note:** Version bump only for package @spectrum-css/combobox
+
+<a name="2.0.34"></a>
+##2.0.34
+🗓
+2023-08-31 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/combobox@2.0.33...@spectrum-css/combobox@2.0.34)
+
+**Note:** Version bump only for package @spectrum-css/combobox
+
+<a name="2.0.33"></a>
+##2.0.33
+🗓
+2023-08-29 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/combobox@2.0.32...@spectrum-css/combobox@2.0.33)
+
+**Note:** Version bump only for package @spectrum-css/combobox
+
+<a name="2.0.32"></a>
+##2.0.32
+🗓
+2023-08-25 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/combobox@2.0.31...@spectrum-css/combobox@2.0.32)
+
+### 🔙 Reverts
+
+\*gulp and build updates ([#2121](https://github.com/adobe/spectrum-css/issues/2121))([03a37f5](https://github.com/adobe/spectrum-css/commit/03a37f5)), closes[#2099](https://github.com/adobe/spectrum-css/issues/2099)
+
+<a name="2.0.31"></a>
+##2.0.31
+🗓
+2023-08-22 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/combobox@2.0.30...@spectrum-css/combobox@2.0.31)
+
+**Note:** Version bump only for package @spectrum-css/combobox
+
+<a name="2.0.30"></a>
+##2.0.30
+🗓
+2023-08-22 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/combobox@2.0.28...@spectrum-css/combobox@2.0.30)
+
+**Note:** Version bump only for package @spectrum-css/combobox
+
+<a name="2.0.29"></a>
+##2.0.29
+🗓
+2023-08-18 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/combobox@2.0.28...@spectrum-css/combobox@2.0.29)
+
+**Note:** Version bump only for package @spectrum-css/combobox
+
 <a name="2.0.28"></a>
 ##2.0.28
 🗓

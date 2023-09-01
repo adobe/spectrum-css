@@ -10,6 +10,4 @@ OF ANY KIND, either express or implied. See the License for the specific languag
 governing permissions and limitations under the License.
 */
 
-.spectrum-Underlay {
-  background: var(--spectrum-dialog-confirm-overlay-background-color);
-}
+@container (--system: express) {}

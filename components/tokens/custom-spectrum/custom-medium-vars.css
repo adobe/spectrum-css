@@ -62,4 +62,16 @@ governing permissions and limitations under the License.
   --spectrum-sidenav-heading-top-margin: 24px; /* TODO replace with var(--spectrum-side-navigation-item-to-header); once token is updated */
   --spectrum-sidenav-heading-bottom-margin: 8px; /* TODO replace with var(--spectrum-side-navigation-item-to-header); once token is added */
   --spectrum-sidenav-bottom-to-label: 8px; /* TODO replace with updated var(--spectrum-component-bottom-to-text-100); */
+
+  --spectrum-alert-dialog-padding: var(--spectrum-spacing-500);
+  --spectrum-alert-dialog-description-to-buttons: var(--spectrum-spacing-700);
+
+  --spectrum-coach-indicator-gap: 6px;
+  --spectrum-coach-indicator-ring-diameter: var(--spectrum-spacing-300);
+  --spectrum-coach-indicator-quiet-ring-diameter: var(--spectrum-spacing-100);
+
+  --spectrum-coachmark-buttongroup-display: flex;
+  --spectrum-coachmark-buttongroup-mobile-display: none;
+  --spectrum-coachmark-menu-display: inline-flex;
+  --spectrum-coachmark-menu-mobile-display: none;
 }

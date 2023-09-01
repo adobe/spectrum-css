@@ -1,5 +1,8 @@
 | Modifiable Custom Properties                            |
 | ------------------------------------------------------- |
+| `--mod-meter-inline-size`                               |
+| `--mod-meter-max-width`                                 |
+| `--mod-meter-min-width`                                 |
 | `--mod-progressbar-animation-duration-indeterminate`    |
 | `--mod-progressbar-animation-ease-in-out-indeterminate` |
 | `--mod-progressbar-fill-color`                          |

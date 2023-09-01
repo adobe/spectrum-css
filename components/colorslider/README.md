@@ -1,6 +1,6 @@
 # @spectrum-css/colorslider
 
-> The Spectrum CSS Color Slider component
+> The Spectrum CSS Color slider component
 
 This package is part of the [Spectrum CSS project](https://github.com/adobe/spectrum-css).
 

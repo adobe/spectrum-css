@@ -3,69 +3,149 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
-<a name="2.0.0"></a>
-#2.0.0
+<a name="5.0.4"></a>
+##5.0.4
 🗓
-2023-08-16 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/clearbutton@1.2.38...@spectrum-css/clearbutton@2.0.0)
+2023-08-31 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/clearbutton@5.0.3...@spectrum-css/clearbutton@5.0.4)
 
-\*refactor(clearbutton)!: replace focus-ring with focus-visible([a4fd637](https://github.com/adobe/spectrum-css/commit/a4fd637))
+**Note:** Version bump only for package @spectrum-css/clearbutton
+
+<a name="5.0.3"></a>
+##5.0.3
+🗓
+2023-08-31 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/clearbutton@5.0.2...@spectrum-css/clearbutton@5.0.3)
+
+**Note:** Version bump only for package @spectrum-css/clearbutton
+
+<a name="5.0.2"></a>
+##5.0.2
+🗓
+2023-08-29 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/clearbutton@5.0.1...@spectrum-css/clearbutton@5.0.2)
+
+### 🔙 Reverts
+
+\*gulp and build updates ([#2121](https://github.com/adobe/spectrum-css/issues/2121))([03a37f5](https://github.com/adobe/spectrum-css/commit/03a37f5)), closes[#2099](https://github.com/adobe/spectrum-css/issues/2099)
+
+<a name="5.0.1"></a>
+##5.0.1
+🗓
+2023-08-22 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/clearbutton@5.0.0...@spectrum-css/clearbutton@5.0.1)
+
+**Note:** Version bump only for package @spectrum-css/clearbutton
+
+<a name="5.0.0"></a>
+#5.0.0
+🗓
+2023-08-22 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/clearbutton@2.0.0...@spectrum-css/clearbutton@5.0.0)
+
+\*refactor(clearbutton)!: migrate tokens (#1943)([495198a](https://github.com/adobe/spectrum-css/commit/495198a)), closes[#1943](https://github.com/adobe/spectrum-css/issues/1943)
 
     	###
     	🛑 BREAKING CHANGES
 
     		*
-    		use native focus-visible pseudo class for focus styling
+    		migrates clear button to use `@adobe/spectrum-tokens`
+
+- update to use infield button tokens release
+- migrate css to use tokens
+- add quiet variant and whcm styles
+- update storybook to include over background story
+- fix icon sizing in story, add cursor pointer
+- add aria-labels
+
+<a name="4.0.0"></a>
+
+# 4.0.0
+
+🗓 2023-08-18 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/clearbutton@2.0.0...@spectrum-css/clearbutton@4.0.0)
+
+- refactor(clearbutton)!: migrate tokens (#1943)([495198a](https://github.com/adobe/spectrum-css/commit/495198a)), closes[#1943](https://github.com/adobe/spectrum-css/issues/1943)
+
+### 🛑 BREAKING CHANGES
+
+- migrates clear button to use `@adobe/spectrum-tokens`
+- update to use infield button tokens release
+- migrate css to use tokens
+- add quiet variant and whcm styles
+- update storybook to include over background story
+- fix icon sizing in story, add cursor pointer
+- add aria-labels
+
+<a name="3.0.0"></a>
+
+# 3.0.0
+
+**Deprecated tag**: exists solely on npm and does not appear in the git repository. This was an accidental release that went out without a build.
+
+<a name="2.0.0"></a>
+
+# 2.0.0
+
+🗓 2023-08-16 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/clearbutton@1.2.38...@spectrum-css/clearbutton@2.0.0)
+
+- refactor(clearbutton)!: replace focus-ring with focus-visible([a4fd637](https://github.com/adobe/spectrum-css/commit/a4fd637))
+
+### 🛑 BREAKING CHANGES
+
+- use native focus-visible pseudo class for focus styling
 
 <a name="1.2.38"></a>
-##1.2.38
-🗓
-2023-08-07 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/clearbutton@1.2.37...@spectrum-css/clearbutton@1.2.38)
+
+## 1.2.38
+
+🗓 2023-08-07 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/clearbutton@1.2.37...@spectrum-css/clearbutton@1.2.38)
 
 **Note:** Version bump only for package @spectrum-css/clearbutton
 
 <a name="1.2.37"></a>
-##1.2.37
-🗓
-2023-07-24 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/clearbutton@1.2.36...@spectrum-css/clearbutton@1.2.37)
+
+## 1.2.37
+
+🗓 2023-07-24 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/clearbutton@1.2.36...@spectrum-css/clearbutton@1.2.37)
 
 ### 🐛 Bug fixes
 
-\*icon sizing in Storybook story templates ([#2037](https://github.com/adobe/spectrum-css/issues/2037))([c90c8a3](https://github.com/adobe/spectrum-css/commit/c90c8a3))
+- icon sizing in Storybook story templates ([#2037](https://github.com/adobe/spectrum-css/issues/2037))([c90c8a3](https://github.com/adobe/spectrum-css/commit/c90c8a3))
 
 <a name="1.2.36"></a>
-##1.2.36
-🗓
-2023-06-21 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/clearbutton@1.2.35...@spectrum-css/clearbutton@1.2.36)
+
+## 1.2.36
+
+🗓 2023-06-21 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/clearbutton@1.2.35...@spectrum-css/clearbutton@1.2.36)
 
 **Note:** Version bump only for package @spectrum-css/clearbutton
 
 <a name="1.2.35"></a>
-##1.2.35
-🗓
-2023-06-15 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/clearbutton@1.2.34...@spectrum-css/clearbutton@1.2.35)
+
+## 1.2.35
+
+🗓 2023-06-15 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/clearbutton@1.2.34...@spectrum-css/clearbutton@1.2.35)
 
 **Note:** Version bump only for package @spectrum-css/clearbutton
 
 <a name="1.2.34"></a>
-##1.2.34
-🗓
-2023-06-12 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/clearbutton@1.2.33...@spectrum-css/clearbutton@1.2.34)
+
+## 1.2.34
+
+🗓 2023-06-12 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/clearbutton@1.2.33...@spectrum-css/clearbutton@1.2.34)
 
 ### 🐛 Bug fixes
 
-\*restore files to pre-formatted state([491dbcb](https://github.com/adobe/spectrum-css/commit/491dbcb))
+- restore files to pre-formatted state([491dbcb](https://github.com/adobe/spectrum-css/commit/491dbcb))
 
 <a name="1.2.33"></a>
-##1.2.33
-🗓
-2023-06-02 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/clearbutton@1.2.32...@spectrum-css/clearbutton@1.2.33)
+
+## 1.2.33
+
+🗓 2023-06-02 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/clearbutton@1.2.32...@spectrum-css/clearbutton@1.2.33)
 
 **Note:** Version bump only for package @spectrum-css/clearbutton
 
 <a name="1.2.32"></a>
-##1.2.32
-🗓
-2023-06-01 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/clearbutton@1.2.31...@spectrum-css/clearbutton@1.2.32)
+
+## 1.2.32
+
+🗓 2023-06-01 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/clearbutton@1.2.31...@spectrum-css/clearbutton@1.2.32)
 
 **Note:** Version bump only for package @spectrum-css/clearbutton
 

@@ -3,6 +3,81 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+<a name="4.0.3"></a>
+##4.0.3
+🗓
+2023-08-31 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/taggroup@4.0.2...@spectrum-css/taggroup@4.0.3)
+
+**Note:** Version bump only for package @spectrum-css/taggroup
+
+<a name="4.0.2"></a>
+##4.0.2
+🗓
+2023-08-31 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/taggroup@4.0.1...@spectrum-css/taggroup@4.0.2)
+
+**Note:** Version bump only for package @spectrum-css/taggroup
+
+<a name="4.0.1"></a>
+##4.0.1
+🗓
+2023-08-29 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/taggroup@4.0.0...@spectrum-css/taggroup@4.0.1)
+
+**Note:** Version bump only for package @spectrum-css/taggroup
+
+<a name="4.0.0"></a>
+#4.0.0
+🗓
+2023-08-25 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/taggroup@3.3.64...@spectrum-css/taggroup@4.0.0)
+
+### 🔙 Reverts
+
+\*gulp and build updates ([#2121](https://github.com/adobe/spectrum-css/issues/2121))([03a37f5](https://github.com/adobe/spectrum-css/commit/03a37f5)), closes[#2099](https://github.com/adobe/spectrum-css/issues/2099)
+
+\*feat(taggroup)!: migrate to spectrum-tokens([531e067](https://github.com/adobe/spectrum-css/commit/531e067))
+
+    	###
+    	🛑 BREAKING CHANGES
+
+    		*
+    		migrates TagGroup to use `@adobe/spectrum-tokens`
+
+Update build related files to migrate to use of core tokens.
+
+Use new global tokens for margin, and simplify usage. Adds mod prefixed
+custom properties and improves docs with mod section and description
+text pulled from the tag guidelines.
+
+Updates example markup and migration guide.
+
+fix(taggroup): allow tag items to wrap to the next line
+
+Tag group flex items were not previously wrapping and would overflow and
+cut off at smaller screen sizes. This now follows the tag guidelines to
+wrap items to the next line. And adds a story that shows wrapping.
+
+CSS-500
+
+<a name="3.3.64"></a>
+##3.3.64
+🗓
+2023-08-22 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/taggroup@3.3.63...@spectrum-css/taggroup@3.3.64)
+
+**Note:** Version bump only for package @spectrum-css/taggroup
+
+<a name="3.3.63"></a>
+##3.3.63
+🗓
+2023-08-22 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/taggroup@3.3.61...@spectrum-css/taggroup@3.3.63)
+
+**Note:** Version bump only for package @spectrum-css/taggroup
+
+<a name="3.3.62"></a>
+##3.3.62
+🗓
+2023-08-18 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/taggroup@3.3.61...@spectrum-css/taggroup@3.3.62)
+
+**Note:** Version bump only for package @spectrum-css/taggroup
+
 <a name="3.3.61"></a>
 ##3.3.61
 🗓

@@ -150,7 +150,7 @@ Avatar.args = {
 	avatarUrl: "example-ava.png"
 };
 
-export const Removeable = Template.bind({});
-Removeable.args = {
+export const Removable = Template.bind({});
+Removable.args = {
 	hasClearButton: true,
 };

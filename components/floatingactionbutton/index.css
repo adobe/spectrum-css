@@ -96,7 +96,6 @@ governing permissions and limitations under the License.
     }
   }
 
-  &.is-focused,
   &:focus, 
   &:focus-within {
     background-color: var(--highcontrast-floating-action-button-background-color-key-focus, var(--mod-floating-action-button-background-color-key-focus, var(--spectrum-floating-action-button-background-color-key-focus)));

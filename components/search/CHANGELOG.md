@@ -3,6 +3,57 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+<a name="6.0.19"></a>
+##6.0.19
+🗓
+2023-08-31 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/search@6.0.18...@spectrum-css/search@6.0.19)
+
+**Note:** Version bump only for package @spectrum-css/search
+
+<a name="6.0.18"></a>
+##6.0.18
+🗓
+2023-08-31 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/search@6.0.17...@spectrum-css/search@6.0.18)
+
+**Note:** Version bump only for package @spectrum-css/search
+
+<a name="6.0.17"></a>
+##6.0.17
+🗓
+2023-08-29 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/search@6.0.16...@spectrum-css/search@6.0.17)
+
+**Note:** Version bump only for package @spectrum-css/search
+
+<a name="6.0.16"></a>
+##6.0.16
+🗓
+2023-08-25 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/search@6.0.15...@spectrum-css/search@6.0.16)
+
+### 🔙 Reverts
+
+\*gulp and build updates ([#2121](https://github.com/adobe/spectrum-css/issues/2121))([03a37f5](https://github.com/adobe/spectrum-css/commit/03a37f5)), closes[#2099](https://github.com/adobe/spectrum-css/issues/2099)
+
+<a name="6.0.15"></a>
+##6.0.15
+🗓
+2023-08-22 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/search@6.0.14...@spectrum-css/search@6.0.15)
+
+**Note:** Version bump only for package @spectrum-css/search
+
+<a name="6.0.14"></a>
+##6.0.14
+🗓
+2023-08-22 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/search@6.0.12...@spectrum-css/search@6.0.14)
+
+**Note:** Version bump only for package @spectrum-css/search
+
+<a name="6.0.13"></a>
+##6.0.13
+🗓
+2023-08-18 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/search@6.0.12...@spectrum-css/search@6.0.13)
+
+**Note:** Version bump only for package @spectrum-css/search
+
 <a name="6.0.12"></a>
 ##6.0.12
 🗓
