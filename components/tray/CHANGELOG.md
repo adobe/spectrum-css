@@ -3,6 +3,13 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+<a name="2.1.11"></a>
+##2.1.11
+🗓
+2023-09-01 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/tray@2.1.10...@spectrum-css/tray@2.1.11)
+
+**Note:** Version bump only for package @spectrum-css/tray
+
 <a name="2.1.10"></a>
 ##2.1.10
 🗓
