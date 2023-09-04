@@ -2981,11 +2981,6 @@
   resolved "https://registry.yarnpkg.com/@spectrum-css/pickerbutton/-/pickerbutton-3.0.34.tgz#987c639a281f0a54e72695cf38127faa60b9fcce"
   integrity sha512-D8cfc9nvGNiLlY/y6TsgyZpj6zdGMh2ENUQi846DYS6ONRtDh9M2xoigpRcbIXc6Cm8kgCiZcTFsk07B/TT+pg==
 
-"@spectrum-css/popover@^6.0.69":
-  version "6.0.69"
-  resolved "https://registry.yarnpkg.com/@spectrum-css/popover/-/popover-6.0.69.tgz#8016e0ef5e8f6f4c27a8c8b6b5cc446a56d32ba9"
-  integrity sha512-6v4ge5mpQfBwxVjMjzVObplpQwxLpC0UqogdxW1m8I3c8b2lNEw6vcfs5cMgHg50LuY8UHPodcmaofay9l2ang==
-
 "@spectrum-css/thumbnail@^2.0.34":
   version "2.0.34"
   resolved "https://registry.yarnpkg.com/@spectrum-css/thumbnail/-/thumbnail-2.0.34.tgz#b10c6474490ca1ae88992cbecf752ae12b3e986f"
@@ -16703,10 +16698,10 @@ store2@^2.14.2:
   resolved "https://registry.yarnpkg.com/store2/-/store2-2.14.2.tgz#56138d200f9fe5f582ad63bc2704dbc0e4a45068"
   integrity sha512-siT1RiqlfQnGqgT/YzXVUNsom9S0H1OX+dpdGN1xkyYATo4I6sep5NmsRD/40s3IIOvlCq6akxkqG82urIZW1w==
 
-storybook-addon-pseudo-states@^2.1.0:
-  version "2.1.0"
-  resolved "https://registry.yarnpkg.com/storybook-addon-pseudo-states/-/storybook-addon-pseudo-states-2.1.0.tgz#05faffb7e0d19fc012035ecee2a02d432f312d2d"
-  integrity sha512-AwbCL1OiZ16aIeXSP/IOovkMwXy7NTZqmjkz+UM2guSGjvogHNA95NhuVyWoqieE+QWUpGO48+MrBGMeeJcHOQ==
+storybook-addon-pseudo-states@^2.1.1:
+  version "2.1.1"
+  resolved "https://registry.yarnpkg.com/storybook-addon-pseudo-states/-/storybook-addon-pseudo-states-2.1.1.tgz#9f9c37c234d9860937791c01488efc37bbda2127"
+  integrity sha512-f6x4ZDTNlG888KVFEvGpaxqUReCfTweHIOm01LF7vC0/T5c7NHxqdjZ1/1C+nTNjmYqxKwud6/IgG9ZVv1gRsA==
 
 storybook@^7.3.2:
   version "7.3.2"
