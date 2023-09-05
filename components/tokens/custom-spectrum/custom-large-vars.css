@@ -47,12 +47,18 @@ governing permissions and limitations under the License.
 
   --spectrum-button-top-to-text-small: 6px;
   --spectrum-button-bottom-to-text-small: 5px;
-  --spectrum-button-top-to-text-medium: 9px;
-  --spectrum-button-bottom-to-text-medium: 10px;
-  --spectrum-button-top-to-text-large: 12px;
+  --spectrum-button-top-to-text-medium: 10px;
+  --spectrum-button-bottom-to-text-medium: 9px;
+  --spectrum-button-top-to-text-large: 13px;
   --spectrum-button-bottom-to-text-large: 13px;
   --spectrum-button-top-to-text-extra-large: 16px;
   --spectrum-button-bottom-to-text-extra-large: 17px;
+
+  /* addresses differences in button text positioning in firefox */
+  @supports (-moz-appearance:none){
+    --spectrum-button-top-to-text-small: 5px;
+    --spectrum-button-top-to-text-extra-large: 15px;
+  }
 
   --spectrum-alert-banner-close-button-spacing: var(--spectrum-spacing-200);
   --spectrum-alert-banner-edge-to-divider: var(--spectrum-spacing-200);
