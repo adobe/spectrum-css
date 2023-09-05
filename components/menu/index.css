@@ -281,6 +281,19 @@ governing permissions and limitations under the License.
   }
 }
 
+/* Menus with the ability to select multiple menu items */
+.spectrum-Menu.is-selectableMultiple {
+  .spectrum-Menu-item {
+    margin-block-start: 0;
+  }
+}
+
+.spectrum-Menu-item-Checkbox {
+  grid-area: checkmarkArea;
+  align-self: start;
+  margin-inline-end: var(--mod-menu-item-text-to-control, var(--spectrum-menu-item-text-to-control));
+}
+
 .spectrum-Menu-itemIcon {
   fill: var(--highcontrast-menu-item-color-default, var(--mod-menu-item-label-icon-color-default, var(--spectrum-menu-item-label-icon-color-default)));
   color: var(--highcontrast-menu-item-color-default, var(--mod-menu-item-label-icon-color-default, var(--spectrum-menu-item-label-icon-color-default)));

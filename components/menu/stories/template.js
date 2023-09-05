@@ -4,8 +4,11 @@ import { styleMap } from "lit/directives/style-map.js";
 import { ifDefined } from "lit/directives/if-defined.js";
 import { repeat } from "lit/directives/repeat.js";
 
+import { useArgs } from "@storybook/client-api";
+
 import { Template as Divider } from "@spectrum-css/divider/stories/template.js";
 import { Template as Icon } from "@spectrum-css/icon/stories/template.js";
+import { Template as Checkbox } from "@spectrum-css/checkbox/stories/template.js";
 
 import "../index.css";
 
@@ -27,8 +30,10 @@ export const MenuItem = ({
   items = [],
   size,
   id,
+  selectionMode,
   ...globals
-}) => html`
+}) => {
+  return html`
     <li
       class=${classMap({
         [`${rootClass}`]: true,
@@ -84,7 +89,16 @@ export const MenuItem = ({
             ],
           })
         : ''}
-      ${isChecked
+      ${selectionMode == "multiple" 
+        ? Checkbox({
+          ...globals,
+          size,
+          customClasses: [
+            `${rootClass}-Checkbox`,
+          ],
+        })
+      : ''}
+      ${isChecked && selectionMode != "multiple"
         ? Icon({
             ...globals,
             iconName: "Checkmark100",
@@ -97,7 +111,8 @@ export const MenuItem = ({
         : ''}
       ${isCollapsible && items.length > 0 ? Template({ ...globals, items, isOpen, size }) : ''}
     </li>
-  `;
+  `
+};
 
 export const MenuGroup = ({
   heading,
@@ -141,7 +156,7 @@ export const Template = ({
   customStyles = {},
   size,
   isDisabled = false,
-  isSelectable = false,
+  selectionMode = "none",
   isOpen = false,
   items = [],
   role = "menu",
@@ -149,12 +164,14 @@ export const Template = ({
   id,
   ...globals
 }) => {
+
   return html`
     <ul
       class=${classMap({
         [rootClass]: true,
 				[`${rootClass}--size${size?.toUpperCase()}`]: typeof size !== "undefined",
-        "is-selectable": isSelectable,
+        "is-selectable": selectionMode === "single",
+        "is-selectableMultiple": selectionMode === "multiple",
         "is-open": isOpen,
         ...customClasses.reduce((a, c) => ({ ...a, [c]: true }), {}),
       })}
@@ -164,7 +181,7 @@ export const Template = ({
       aria-disabled=${isDisabled ? "true" : "false"}
       style=${styleMap(customStyles)}
     >
-      ${repeat(items, (i) => {
+      ${items.map((i, idx) => {
         if (i.type === "divider")
           return Divider({
             ...globals,
@@ -172,7 +189,7 @@ export const Template = ({
             size: "s",
             customClasses: [`${rootClass}-divider`],
           });
-        else if (i.heading) return MenuGroup({ ...i, ...globals, subrole, size });
+        else if (i.heading) return MenuGroup({ ...i, ...globals, subrole, size, selectionMode });
         else
           return MenuItem({
             ...globals,
@@ -180,6 +197,7 @@ export const Template = ({
             rootClass: `${rootClass}-item`,
             role: subrole,
             size,
+            selectionMode,
           });
       })}
     </ul>

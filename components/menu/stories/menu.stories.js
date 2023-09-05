@@ -16,14 +16,15 @@ export default {
       },
       control: "boolean",
     },
-    isSelectable: {
-      name: "Selectable",
+    selectionMode: {
+      name: "Selection Mode",
       type: { name: "boolean" },
       table: {
         type: { summary: "boolean" },
         category: "State",
       },
-      control: "boolean",
+      options: ["none", "single", "multiple"],
+			control: "select",
     },
 		size: {
 			name: "Size",
@@ -51,7 +52,7 @@ export default {
   args: {
     rootClass: "spectrum-Menu",
     isDisabled: false,
-    isSelectable: false,
+    selectionMode: "none",
     size: "m",
   },
   parameters: {
@@ -109,7 +110,7 @@ export const MenuWithCheckmark = Template.bind({});
 MenuWithCheckmark.args = {
   role: "listbox",
   subrole: "option",
-  isSelectable: true,
+  selectionMode: "single",
   items: [
     {
       idx: 1,
@@ -246,7 +247,7 @@ SingleSelection.parameters = {
 	},
 };
 SingleSelection.args = {
-  isSelectable: true,
+  selectionMode: "single",
   customStyles: {'max-width': '1000px'},
   items: [
     {
@@ -261,7 +262,7 @@ SingleSelection.args = {
 
 export const SingleSelectionWithIcons = Template.bind({});
 SingleSelectionWithIcons.args = {
-  isSelectable: true,
+  selectionMode: "single",
   customStyles: {'max-width': '1000px'},
   items: [
     {
@@ -280,6 +281,29 @@ SingleSelectionWithIcons.args = {
     },
   ],
 };
+
+export const MultipleSelection = Template.bind({});
+MultipleSelection.args = {
+  selectionMode: "multiple",
+  customStyles: {'max-width': '1000px'},
+  items: [
+    {
+      label: "Marquee. Extra long menu item text to demonstrate wrapping text and alignment of icon in this situation. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
+      iconName: "Selection",
+      isSelected: true,
+      isChecked: true,
+    },
+    {
+      label: "Add",
+      iconName: "SelectAdd",
+    },
+    {
+      label: "Subtract",
+      iconName: "SelectSubtract",
+    },
+  ],
+};
+
 
 export const DrillInSubmenu = Template.bind({});
 DrillInSubmenu.storyName = "Drill-in for Submenu";
