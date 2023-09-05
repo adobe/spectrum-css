@@ -186,7 +186,7 @@ governing permissions and limitations under the License.
     );
 
     transform: translate(
-      calc(-1 * var(--mod-splitview-gripper-width, var(--spectrum-splitview-gripper-width))),
+      calc(-1 * var(--mod-splitview-vertical-gripper-width, var(--spectrum-splitview-vertical-gripper-width))),
       0
     );
     inset-inline-start: var(--mod-splitview-vertical-gripper-width, var(--spectrum-splitview-vertical-gripper-width));
