@@ -1,3 +1,6 @@
+import { within, userEvent } from '@storybook/testing-library';
+import { expect } from '@storybook/jest';
+
 // Import the component markup template
 import { Template } from "./template";
 
@@ -92,6 +95,21 @@ Horizontal.args = {
 
 export const HorizontallyResizable = Template.bind({});
 HorizontallyResizable.args = {
+	orientation: "horizontal",
+	isResizable: true,
+	isCollapsible: false,
+	panelLabels: ["Left", "Right"],
+	panelStyles: ["width: 304px;", "flex: 1;"],
+};
+
+export const HorizontallyFocused = Template.bind({});
+HorizontallyFocused.play = async ({ canvasElement }) => {
+	const canvas = within(canvasElement);
+
+	await canvas.getByTestId('splitter').focus();
+
+};
+HorizontallyFocused.args = {
 	orientation: "horizontal",
 	isResizable: true,
 	isCollapsible: false,
