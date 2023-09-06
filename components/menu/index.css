@@ -34,6 +34,9 @@ governing permissions and limitations under the License.
   --spectrum-menu-item-checkmark-width: var(--spectrum-menu-item-checkmark-width-medium);
   --spectrum-menu-item-top-to-checkmark: var(--spectrum-menu-item-top-to-selected-icon-medium);
 
+  --spectrum-menu-item-top-to-action: var(--spectrum-spacing-50);
+  --spectrum-menu-item-top-to-checkbox: var(--spectrum-spacing-50);
+
   --spectrum-menu-item-label-line-height: var(--spectrum-line-height-100);
   --spectrum-menu-item-label-line-height-cjk: var(--spectrum-cjk-line-height-100);
   --spectrum-menu-item-label-to-description-spacing: var(--spectrum-menu-item-label-to-description);
@@ -295,7 +298,16 @@ governing permissions and limitations under the License.
   min-block-size: 0;
 
   .spectrum-Checkbox-box {
-    margin-block-start: 2px;
+    margin-block-start: var(--mod-menu-item-top-to-checkbox, var(--spectrum-menu-item-top-to-checkbox));
+    margin-block-end: 0;
+  }
+}
+
+.spectrum-Menu-itemSwitch {
+  min-block-size: 0;
+  
+  .spectrum-Switch-switch {
+    margin-block-start: var(--mod-menu-item-top-to-action, var(--spectrum-menu-item-top-to-action));;
     margin-block-end: 0;
   }
 }
@@ -541,6 +553,7 @@ governing permissions and limitations under the License.
 
 .spectrum-Menu-itemActions {
   grid-area: actionsArea;
+  margin-inline-start: var(--mod-menu-item-label-to-value-area-min-spacing, var(--spectrum-menu-item-label-to-value-area-min-spacing));
 }
 
 .spectrum-Menu-chevron {

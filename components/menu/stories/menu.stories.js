@@ -36,6 +36,7 @@ export default {
 			options: ["s", "m", "l", "xl"],
 			control: "select",
 		},
+    hasActions: { table: { disable: true } },
     labelledby: { table: { disable: true } },
     items: { table: { disable: true } },
     role: { table: { disable: true } },
@@ -304,6 +305,45 @@ MultipleSelection.args = {
   ],
 };
 
+export const WithActions = Template.bind({});
+WithActions.args = {
+  hasActions: true,
+  customStyles: {'max-width': '1000px'},
+  items: [
+    {
+      label: "Marquee. Extra long menu item text to demonstrate wrapping text and alignment of icon in this situation. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
+      iconName: "Selection",
+    },
+    {
+      label: "Add",
+      iconName: "SelectAdd",
+    },
+    {
+      label: "Subtract",
+      iconName: "SelectSubtract",
+    },
+  ],
+};
+
+export const WithValueAndActions = Template.bind({});
+WithValueAndActions.args = {
+  hasActions: true,
+  customStyles: {'max-width': '1000px'},
+  items: [
+    {
+      label: "Marquee. Extra long menu item text to demonstrate wrapping text and alignment of icon in this situation. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
+      value: "Value"
+    },
+    {
+      label: "Add",
+      value: "Value"
+    },
+    {
+      label: "Subtract",
+      value: "Value"
+    },
+  ],
+};
 
 export const DrillInSubmenu = Template.bind({});
 DrillInSubmenu.storyName = "Drill-in for Submenu";

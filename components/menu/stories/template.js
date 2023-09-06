@@ -2,13 +2,11 @@ import { html, css } from "lit";
 import { classMap } from "lit/directives/class-map.js";
 import { styleMap } from "lit/directives/style-map.js";
 import { ifDefined } from "lit/directives/if-defined.js";
-import { repeat } from "lit/directives/repeat.js";
-
-import { useArgs } from "@storybook/client-api";
 
 import { Template as Divider } from "@spectrum-css/divider/stories/template.js";
 import { Template as Icon } from "@spectrum-css/icon/stories/template.js";
 import { Template as Checkbox } from "@spectrum-css/checkbox/stories/template.js";
+import { Template as Switch } from "@spectrum-css/switch/stories/template.js";
 
 import "../index.css";
 
@@ -30,7 +28,9 @@ export const MenuItem = ({
   items = [],
   size,
   id,
+  hasActions,
   selectionMode,
+  value,
   ...globals
 }) => {
   return html`
@@ -110,6 +110,21 @@ export const MenuItem = ({
             ],
           })
         : ''}
+        ${value
+          ? html`<span class="${rootClass}Value">${value}</span>`
+          : ''}
+        ${hasActions
+          ? html`<div class="${rootClass}Actions">
+          ${Switch({
+              ...globals,
+              size,
+              label: null,
+              customClasses: [
+                `${rootClass}Switch`,
+              ],
+            })}
+            </div>`
+          : ''}
       ${isCollapsible && items.length > 0 ? Template({ ...globals, items, isOpen, size }) : ''}
     </li>
   `
@@ -159,6 +174,7 @@ export const Template = ({
   isDisabled = false,
   selectionMode = "none",
   isOpen = false,
+  hasActions = false,
   items = [],
   role = "menu",
   subrole = "menuitem",
@@ -199,6 +215,7 @@ export const Template = ({
             role: subrole,
             size,
             selectionMode,
+            hasActions,
           });
       })}
     </ul>
