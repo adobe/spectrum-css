@@ -292,6 +292,12 @@ governing permissions and limitations under the License.
   grid-area: checkmarkArea;
   align-self: start;
   margin-inline-end: var(--mod-menu-item-text-to-control, var(--spectrum-menu-item-text-to-control));
+  min-block-size: 0;
+
+  .spectrum-Checkbox-box {
+    margin-block-start: 2px;
+    margin-block-end: 0;
+  }
 }
 
 .spectrum-Menu-itemIcon {
