@@ -284,27 +284,6 @@ governing permissions and limitations under the License.
   }
 }
 
-.spectrum-Menu-item .spectrum-Menu-item-Checkbox {
-  grid-area: checkmarkArea;
-  align-self: start;
-  margin-inline-end: var(--mod-menu-item-text-to-control, var(--spectrum-menu-item-text-to-control));
-  min-block-size: 0;
-
-  .spectrum-Checkbox-box {
-    margin-block-start: var(--mod-menu-item-top-to-checkbox, var(--spectrum-menu-item-top-to-checkbox));
-    margin-block-end: 0;
-  }
-}
-
-.spectrum-Menu-itemSwitch {
-  min-block-size: 0;
-  
-  .spectrum-Switch-switch {
-    margin-block-start: var(--mod-menu-item-top-to-action, var(--spectrum-menu-item-top-to-action));;
-    margin-block-end: 0;
-  }
-}
-
 .spectrum-Menu-itemIcon {
   fill: var(--highcontrast-menu-item-color-default, var(--mod-menu-item-label-icon-color-default, var(--spectrum-menu-item-label-icon-color-default)));
   color: var(--highcontrast-menu-item-color-default, var(--mod-menu-item-label-icon-color-default, var(--spectrum-menu-item-label-icon-color-default)));
@@ -345,6 +324,27 @@ governing permissions and limitations under the License.
   
   margin: 0;
   text-decoration: none;
+
+  .spectrum-Menu-itemCheckbox {
+    grid-area: checkmarkArea;
+    align-self: start;
+    margin-inline-end: var(--mod-menu-item-text-to-control, var(--spectrum-menu-item-text-to-control));
+    min-block-size: 0;
+
+    .spectrum-Checkbox-box {
+      margin-block-start: var(--mod-menu-item-top-to-checkbox, var(--spectrum-menu-item-top-to-checkbox));
+      margin-block-end: 0;
+    }
+  }
+
+  .spectrum-Menu-itemSwitch {
+    min-block-size: 0;
+    
+    .spectrum-Switch-switch {
+      margin-block-start: var(--mod-menu-item-top-to-action, var(--spectrum-menu-item-top-to-action));;
+      margin-block-end: 0;
+    }
+  }
 }
 
 .spectrum-Menu-item {

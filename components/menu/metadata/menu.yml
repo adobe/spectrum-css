@@ -1137,7 +1137,7 @@ examples:
           <div class="spectrum-Examples-itemGroup">
             <ul class="spectrum-Menu spectrum-Menu--sizeM is-selectableMultiple" role="menu">
               <li class="spectrum-Menu-item is-selected" role="menuitem" tabindex="0">
-                <label class="spectrum-Checkbox spectrum-Checkbox--sizeM spectrum-Checkbox--emphasized spectrum-Menu-item-Checkbox">
+                <label class="spectrum-Checkbox spectrum-Checkbox--sizeM spectrum-Checkbox--emphasized spectrum-Menu-itemCheckbox">
                   <input type="checkbox" class="spectrum-Checkbox-input" aria-labelledby="ms-label1" checked>
                   <span class="spectrum-Checkbox-box">
                     <svg class="spectrum-Icon spectrum-UIIcon-Checkmark100 spectrum-Checkbox-checkmark" focusable="false" aria-hidden="true">
@@ -1148,7 +1148,7 @@ examples:
                 <span class="spectrum-Menu-itemLabel" id="ms-label1">Marquee</span>
               </li>
               <li class="spectrum-Menu-item is-selectable" role="menuitem" tabindex="0">
-                <label class="spectrum-Checkbox spectrum-Checkbox--sizeM spectrum-Checkbox--emphasized spectrum-Menu-item-Checkbox">
+                <label class="spectrum-Checkbox spectrum-Checkbox--sizeM spectrum-Checkbox--emphasized spectrum-Menu-itemCheckbox">
                   <input type="checkbox" class="spectrum-Checkbox-input" aria-labelledby="ms-label2">
                   <span class="spectrum-Checkbox-box">
                     <svg class="spectrum-Icon spectrum-UIIcon-Checkmark100 spectrum-Checkbox-checkmark" focusable="false" aria-hidden="true">
@@ -1159,7 +1159,7 @@ examples:
                 <span class="spectrum-Menu-itemLabel" id="ms-label2">Add</span>
               </li>
               <li class="spectrum-Menu-item is-selectable" role="menuitem" tabindex="0">
-                <label class="spectrum-Checkbox spectrum-Checkbox--sizeM spectrum-Checkbox--emphasized spectrum-Menu-item-Checkbox">
+                <label class="spectrum-Checkbox spectrum-Checkbox--sizeM spectrum-Checkbox--emphasized spectrum-Menu-itemCheckbox">
                   <input type="checkbox" class="spectrum-Checkbox-input" aria-labelledby="ms-label3">
                   <span class="spectrum-Checkbox-box">
                     <svg class="spectrum-Icon spectrum-UIIcon-Checkmark100 spectrum-Checkbox-checkmark" focusable="false" aria-hidden="true">
@@ -1177,7 +1177,7 @@ examples:
           <div class="spectrum-Examples-itemGroup">
             <ul class="spectrum-Menu spectrum-Menu--sizeM is-selectableMultiple" role="menu">
               <li class="spectrum-Menu-item is-selected" role="menuitem" tabindex="0">
-                <label class="spectrum-Checkbox spectrum-Checkbox--sizeM spectrum-Checkbox--emphasized spectrum-Menu-item-Checkbox">
+                <label class="spectrum-Checkbox spectrum-Checkbox--sizeM spectrum-Checkbox--emphasized spectrum-Menu-itemCheckbox">
                   <input type="checkbox" class="spectrum-Checkbox-input" aria-labelledby="ms-label4" checked>
                   <span class="spectrum-Checkbox-box">
                     <svg class="spectrum-Icon spectrum-UIIcon-Checkmark100 spectrum-Checkbox-checkmark" focusable="false" aria-hidden="true">
@@ -1191,7 +1191,7 @@ examples:
                 <span class="spectrum-Menu-itemLabel" id="ms-label4">Marquee</span>
               </li>
               <li class="spectrum-Menu-item is-selectable" role="menuitem" tabindex="0">
-                <label class="spectrum-Checkbox spectrum-Checkbox--sizeM spectrum-Checkbox--emphasized spectrum-Menu-item-Checkbox">
+                <label class="spectrum-Checkbox spectrum-Checkbox--sizeM spectrum-Checkbox--emphasized spectrum-Menu-itemCheckbox">
                   <input type="checkbox" class="spectrum-Checkbox-input" aria-labelledby="ms-label5" checked>
                   <span class="spectrum-Checkbox-box">
                     <svg class="spectrum-Icon spectrum-UIIcon-Checkmark100 spectrum-Checkbox-checkmark" focusable="false" aria-hidden="true">
@@ -1205,7 +1205,7 @@ examples:
                 <span class="spectrum-Menu-itemLabel" id="ms-label5">Add</span>
               </li>
               <li class="spectrum-Menu-item is-selectable" role="menuitem" tabindex="0">
-                <label class="spectrum-Checkbox spectrum-Checkbox--sizeM spectrum-Checkbox--emphasized spectrum-Menu-item-Checkbox">
+                <label class="spectrum-Checkbox spectrum-Checkbox--sizeM spectrum-Checkbox--emphasized spectrum-Menu-itemCheckbox">
                   <input type="checkbox" class="spectrum-Checkbox-input" aria-labelledby="ms-label6" checked>
                   <span class="spectrum-Checkbox-box">
                     <svg class="spectrum-Icon spectrum-UIIcon-Checkmark100 spectrum-Checkbox-checkmark" focusable="false" aria-hidden="true">
@@ -1233,7 +1233,7 @@ examples:
               <li class="spectrum-Menu-item" role="menuitem" tabindex="0">
                 <span class="spectrum-Menu-itemLabel" id="label1">Marquee</span>
                 <div class="spectrum-Menu-itemActions">
-                  <div class="spectrum-Switch spectrum-Switch--sizeM">
+                  <div class="spectrum-Switch spectrum-Switch--sizeM spectrum-Menu-itemSwitch">
                     <input type="checkbox" class="spectrum-Switch-input" aria-labelledby="label1" id="switch-onoff-0">
                     <span class="spectrum-Switch-switch"></span>
                   </div>
@@ -1242,7 +1242,7 @@ examples:
               <li class="spectrum-Menu-item" role="menuitem" tabindex="0">
                 <span class="spectrum-Menu-itemLabel" id="label2">Add</span>
                 <div class="spectrum-Menu-itemActions">
-                  <div class="spectrum-Switch spectrum-Switch--sizeM">
+                  <div class="spectrum-Switch spectrum-Switch--sizeM spectrum-Menu-itemSwitch">
                     <input type="checkbox" class="spectrum-Switch-input" aria-labelledby="label2" id="switch-onoff-1">
                     <span class="spectrum-Switch-switch"></span>
                   </div>
@@ -1251,7 +1251,7 @@ examples:
               <li class="spectrum-Menu-item" role="menuitem" tabindex="0">
                 <span class="spectrum-Menu-itemLabel" id="label3">Subtract</span>
                 <div class="spectrum-Menu-itemActions">
-                  <div class="spectrum-Switch spectrum-Switch--sizeM">
+                  <div class="spectrum-Switch spectrum-Switch--sizeM spectrum-Menu-itemSwitch">
                     <input type="checkbox" class="spectrum-Switch-input" aria-labelledby="label3" id="switch-onoff-2">
                     <span class="spectrum-Switch-switch"></span>
                   </div>
@@ -1270,7 +1270,7 @@ examples:
                 </svg>
                 <span class="spectrum-Menu-itemLabel" id="label4">Marquee</span>
                 <div class="spectrum-Menu-itemActions">
-                  <div class="spectrum-Switch spectrum-Switch--sizeM">
+                  <div class="spectrum-Switch spectrum-Switch--sizeM spectrum-Menu-itemSwitch">
                     <input type="checkbox" class="spectrum-Switch-input" aria-labelledby="label4" id="switch-onoff-3">
                     <span class="spectrum-Switch-switch"></span>
                   </div>
@@ -1282,7 +1282,7 @@ examples:
                 </svg>
                 <span class="spectrum-Menu-itemLabel" id="label5">Add</span>
                 <div class="spectrum-Menu-itemActions">
-                  <div class="spectrum-Switch spectrum-Switch--sizeM">
+                  <div class="spectrum-Switch spectrum-Switch--sizeM spectrum-Menu-itemSwitch">
                     <input type="checkbox" class="spectrum-Switch-input" aria-labelledby="label5" id="switch-onoff-4">
                     <span class="spectrum-Switch-switch"></span>
                   </div>
@@ -1294,7 +1294,7 @@ examples:
                 </svg>
                 <span class="spectrum-Menu-itemLabel" id="label6">Subtract</span>
                 <div class="spectrum-Menu-itemActions">
-                  <div class="spectrum-Switch spectrum-Switch--sizeM">
+                  <div class="spectrum-Switch spectrum-Switch--sizeM spectrum-Menu-itemSwitch">
                     <input type="checkbox" class="spectrum-Switch-input" aria-labelledby="label6" id="switch-onoff-5">
                     <span class="spectrum-Switch-switch"></span>
                   </div>
