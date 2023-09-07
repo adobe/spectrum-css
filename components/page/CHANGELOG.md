@@ -3,6 +3,19 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+<a name="6.0.0"></a>
+#6.0.0
+🗓
+2023-09-07 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/page@5.0.33...@spectrum-css/page@6.0.0)
+
+\*feat(page)!: migrate to spectrum-tokens (#2150)([bdf535b](https://github.com/adobe/spectrum-css/commit/bdf535b)), closes[#2150](https://github.com/adobe/spectrum-css/issues/2150)
+
+    	###
+    	🛑 BREAKING CHANGES
+
+    		*
+    		migrates the Page component to use `@adobe/spectrum-tokens`
+
 <a name="5.0.33"></a>
 ##5.0.33
 🗓

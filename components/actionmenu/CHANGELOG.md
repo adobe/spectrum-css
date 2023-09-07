@@ -3,6 +3,23 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+<a name="5.0.0"></a>
+#5.0.0
+🗓
+2023-09-07 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/actionmenu@4.0.58...@spectrum-css/actionmenu@5.0.0)
+
+\*feat(actionmenu)!: migrate to use spectrum-tokens (#2144)([16e8239](https://github.com/adobe/spectrum-css/commit/16e8239)), closes[#2144](https://github.com/adobe/spectrum-css/issues/2144)
+
+    	###
+    	🛑 BREAKING CHANGES
+
+    		*
+    		migrates ActionMenu to use `@adobe/spectrum-tokens`
+
+- chore(action-menu): diy migration
+- chore(actionmenu): add themes folder
+- chore(actionmenu): update dependencies
+
 <a name="4.0.58"></a>
 ##4.0.58
 🗓

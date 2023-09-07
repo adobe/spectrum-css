@@ -3,6 +3,40 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+<a name="4.0.0"></a>
+#4.0.0
+🗓
+2023-09-07 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/splitview@3.0.48...@spectrum-css/splitview@4.0.0)
+
+### 🔙 Reverts
+
+\*gulp and build updates ([#2121](https://github.com/adobe/spectrum-css/issues/2121))([03a37f5](https://github.com/adobe/spectrum-css/commit/03a37f5)), closes[#2099](https://github.com/adobe/spectrum-css/issues/2099)
+
+\*feat(splitview)!: migrate to spectrum tokens (#2103)([4f39c5d](https://github.com/adobe/spectrum-css/commit/4f39c5d)), closes[#2103](https://github.com/adobe/spectrum-css/issues/2103)
+
+    	###
+    	🛑 BREAKING CHANGES
+
+    		*
+    		migrates SplitView to use `@adobe/spectrum-tokens`
+
+Additionally:
+
+- fix(splitview): remove touch-action from gripper
+- refactor(splitview): combine skin.css with index.css and delete skin.css
+- feat(splitview)!: updating to use core tokens
+- chore(splitview): update mods
+- style(splitview): add whcm styling
+- chore(splitview): fix linter errors
+
+use two colon pseudo elements
+fix max nesting depth
+
+- chore(splitview): working on adding focus story
+- chore(splitview): add storybook interaction add-on
+- chore(splitview): use latest version of tokens
+- fix(splitview): use vertical gripper width for vertical gripper
+
 <a name="3.0.48"></a>
 ##3.0.48
 🗓

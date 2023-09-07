@@ -3,6 +3,19 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+<a name="4.0.0"></a>
+#4.0.0
+🗓
+2023-09-07 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/well@3.0.49...@spectrum-css/well@4.0.0)
+
+\*feat(well)!: migrate to use spectrum-tokens([b362c23](https://github.com/adobe/spectrum-css/commit/b362c23))
+
+    	###
+    	🛑 BREAKING CHANGES
+
+    		*
+    		migrates Well to use spectrum-tokens
+
 <a name="3.0.49"></a>
 ##3.0.49
 🗓
