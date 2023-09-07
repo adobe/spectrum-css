@@ -53,9 +53,9 @@ html(lang='en-US' dir="ltr").spectrum.spectrum--light.spectrum--medium
                 p.spectrum-Body.spectrum-Body--sizeL First, install the required button dependencies by running:
 
                 pre.spectrum-CodeBlock
-                  code.spectrum-Code.spectrum-Code--sizeS.language-markup!=util.Prism.highlight('$ npm install @spectrum-css/vars @spectrum-css/tokens @spectrum-css/button @spectrum-css/page', util.Prism.languages.markup, 'markup')
+                  code.spectrum-Code.spectrum-Code--sizeS.language-markup!=util.Prism.highlight('$ npm install @spectrum-css/tokens @spectrum-css/button @spectrum-css/page', util.Prism.languages.markup, 'markup')
 
-                p.spectrum-Body.spectrum-Body--sizeL We definitely need the #[code.spectrum-Code.spectrum-Code--sizeS button] package in order to add a button to our project. We're going to use the #[code.spectrum-Code.spectrum-Code--sizeS page] component to wrap our button in some default styles. The #[code.spectrum-Code.spectrum-Code--sizeS vars] and #[code.spectrum-Code.spectrum-Code--sizeS tokens] packages provide global Spectrum CSS styling for responsiveness and themes that we will need for our components to display properly.
+                p.spectrum-Body.spectrum-Body--sizeL We definitely need the #[code.spectrum-Code.spectrum-Code--sizeS button] package in order to add a button to our project. We're going to use the #[code.spectrum-Code.spectrum-Code--sizeS page] component to wrap our button in some default styles. The #[code.spectrum-Code.spectrum-Code--sizeS tokens] package provide global Spectrum CSS styling for responsiveness and themes that we will need for our components to display properly.
                 
                 p.spectrum-Body.spectrum-Body--sizeL Installed components will be available in the node_modules/@spectrum-css/ folder.
 
@@ -67,18 +67,12 @@ html(lang='en-US' dir="ltr").spectrum.spectrum--light.spectrum--medium
                 pre.spectrum-CodeBlock
                   code.spectrum-Code.spectrum-Code--sizeS.language-markup!=util.Prism.highlight('<html class="spectrum spectrum--medium spectrum--light">', util.Prism.languages.markup, 'markup')
 
-                p.spectrum-Body.spectrum-Body--sizeL Inside the #[code.spectrum-Code.spectrum-Code--sizeS &lt;head&gt;] tag, include the stylesheets that contain the design system tokens for global variables, scales, and color themes, as well as the stylesheets for the button and page components:
+                p.spectrum-Body.spectrum-Body--sizeL Inside the #[code.spectrum-Code.spectrum-Code--sizeS &lt;head&gt;] tag, include the stylesheets that contain the design system tokens, as well as the stylesheets for the button and page components:
 
                 -
                   htmlMarkup = util.Prism.highlight(`<head>
-                    <!-- Include global variables first -->
-                    <link rel="stylesheet" href="node_modules/@spectrum-css/vars/dist/spectrum-global.css">
-
-                    <!-- Include the scale files that your project needs (medium or large) -->
-                    <link rel="stylesheet" href="node_modules/@spectrum-css/vars/dist/spectrum-medium.css">
-
-                    <!-- Include the color themes that your project needs (light, dark, or darkest) -->
-                    <link rel="stylesheet" href="node_modules/@spectrum-css/vars/dist/spectrum-light.css">
+                    <!-- Include global tokens first -->
+                    <link rel="stylesheet" href="node_modules/@spectrum-css/tokens/dist/index.css"/>
 
                     <!-- Include index-vars.css for all components you're using -->
                     <link rel="stylesheet" href="node_modules/@spectrum-css/page/dist/index-vars.css">
@@ -101,9 +95,7 @@ html(lang='en-US' dir="ltr").spectrum.spectrum--light.spectrum--medium
                 -
                   htmlMarkup = util.Prism.highlight(`<html class="spectrum spectrum--light spectrum--medium">
                     <head>
-                      <link rel="stylesheet" href="node_modules/@spectrum-css/vars/dist/spectrum-global.css">
-                      <link rel="stylesheet" href="node_modules/@spectrum-css/vars/dist/spectrum-medium.css">
-                      <link rel="stylesheet" href="node_modules/@spectrum-css/vars/dist/spectrum-light.css">
+                      <link rel="stylesheet" href="node_modules/@spectrum-css/tokens/dist/index.css"/>
                       <link rel="stylesheet" href="node_modules/@spectrum-css/page/dist/index-vars.css">
                       <link rel="stylesheet" href="node_modules/@spectrum-css/button/dist/index-vars.css">
                     </head>
