@@ -7,24 +7,11 @@ export default {
     "A menu is used for creating a menu list. The various elements inside a menu can be: a menu group, a menu item, or a menu divider. Often a menu will appear in a popover so that it displays as a togglig menu.",
   component: "Menu",
   argTypes: {
-    isDisabled: {
-      name: "Disabled",
-      type: { name: "boolean" },
-      table: {
-        type: { summary: "boolean" },
-        category: "State",
-      },
-      control: "boolean",
-    },
     selectionMode: {
       name: "Selection Mode",
       type: { name: "boolean" },
-      table: {
-        type: { summary: "boolean" },
-        category: "State",
-      },
+      table: { disable: true },
       options: ["none", "single", "multiple"],
-			control: "select",
     },
 		size: {
 			name: "Size",
@@ -52,7 +39,6 @@ export default {
   },
   args: {
     rootClass: "spectrum-Menu",
-    isDisabled: false,
     selectionMode: "none",
     size: "m",
   },
@@ -102,7 +88,6 @@ MenuWithSections.args = {
         { label: "Edit", iconName: "Edit" },
         { label: "Copy", iconName: "Copy", isDisabled: true },
       ],
-      isDisabled: true,
     },
   ],
 };
@@ -137,7 +122,6 @@ MenuWithCheckmark.args = {
           isChecked: true,
         },
       ],
-      isDisabled: true,
     },
   ],
 };
