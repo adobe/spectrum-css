@@ -284,14 +284,7 @@ governing permissions and limitations under the License.
   }
 }
 
-/* Menus with the ability to select multiple menu items */
-.spectrum-Menu.is-selectableMultiple {
-  .spectrum-Menu-item {
-    margin-block-start: 0;
-  }
-}
-
-.spectrum-Menu-item-Checkbox {
+.spectrum-Menu-item .spectrum-Menu-item-Checkbox {
   grid-area: checkmarkArea;
   align-self: start;
   margin-inline-end: var(--mod-menu-item-text-to-control, var(--spectrum-menu-item-text-to-control));
