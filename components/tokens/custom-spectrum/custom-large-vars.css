@@ -74,4 +74,8 @@ governing permissions and limitations under the License.
   --spectrum-coachmark-buttongroup-mobile-display: flex;
   --spectrum-coachmark-menu-display: none;
   --spectrum-coachmark-menu-mobile-display: inline-flex;
+  --spectrum-well-padding: 20px;
+  --spectrum-well-margin-top: 5px;
+  --spectrum-well-min-width: 300px;
+  --spectrum-well-border-radius: 5px
 }
