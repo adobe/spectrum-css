@@ -111,7 +111,8 @@ governing permissions and limitations under the License.
   margin-inline: var(--mod-field-label-text-to-asterisk, var(--spectrum-field-label-text-to-asterisk)) 0;
 }
 
-.spectrum-FieldLabel--left {
+.spectrum-FieldLabel--left,
+.spectrum-FieldLabel--right {
   display: inline-flex;
   padding-block: var(--mod-field-label-side-padding-top, var(--spectrum-field-label-side-padding-top)) 0;
   padding-inline: 0 var(--mod-field-label-side-padding-right, var(--spectrum-field-label-side-padding-right));
@@ -123,10 +124,8 @@ governing permissions and limitations under the License.
 }
 
 .spectrum-FieldLabel--right {
-  display: inline-flex;
   text-align: end;
-  padding-block: var(--mod-field-label-side-padding-top, var(--spectrum-field-label-side-padding-top)) 0;
-  padding-inline: 0 var(--mod-field-label-side-padding-right, var(--spectrum-field-label-side-padding-right));
+  justify-content: flex-end;
 }
 
 .spectrum-Form {
