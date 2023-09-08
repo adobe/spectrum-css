@@ -53,7 +53,7 @@ governing permissions and limitations under the License.
 }
 
 .spectrum-ActionButton--sizeXS {
-  --spectrum-actionbutton-min-width: calc((var(--spectrum-component-edge-to-visual-only-75) * 2) + var(--spectrum-workflow-icon-size-75));
+  --spectrum-actionbutton-min-width: calc((var(--spectrum-component-edge-to-visual-only-50) * 2) + var(--spectrum-workflow-icon-size-50));
   --spectrum-actionbutton-height: var(--spectrum-component-height-50);
 
   --spectrum-actionbutton-icon-size: var(--spectrum-workflow-icon-size-50);
