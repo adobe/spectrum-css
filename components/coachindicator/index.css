@@ -40,7 +40,7 @@ governing permissions and limitations under the License.
     --mod-coach-indicator-top: calc(var(--spectrum-coach-indicator-quiet-ring-diameter) * 0.75);
     --mod-coach-indicator-left: calc(var(--spectrum-coach-indicator-quiet-ring-diameter) * 0.75);
     --mod-coach-indicator-animation-name: pulse--quiet;
-    --mod-coach-indicator-inner-animation-delay-multiple: var(--mod-coach-indicator-quiet-animation-ring-inner-delay-multiple:, var(--spectrum-coach-indicator-quiet-animation-ring-inner-delay-multiple:));
+    --mod-coach-indicator-inner-animation-delay-multiple: var(--mod-coach-indicator-quiet-animation-ring-inner-delay-multiple, var(--spectrum-coach-indicator-quiet-animation-ring-inner-delay-multiple));
   }
 }
 
