@@ -69,7 +69,7 @@ export const Template = ({
 						...globals,
 						size,
 						iconName,
-						customClasses: [`${rootClass}-UIIcon`],
+						customClasses: [`${rootClass}-requiredIcon`],
 				  })
 				: ""}
 		</label>

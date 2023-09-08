@@ -79,6 +79,15 @@ Default.args = {
 	label: "Label",
 };
 
+export const Required = Template.bind({});
+Required.args = {
+	label: "Label text that wraps to the next line",
+	isRequired: true,
+	style: {
+		"width": "120px"
+	}
+};
+
 export const RightAligned = Template.bind({});
 RightAligned.args = {
 	label: "Label",

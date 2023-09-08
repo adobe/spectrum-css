@@ -117,7 +117,7 @@ governing permissions and limitations under the License.
   padding-inline: 0 var(--mod-field-label-side-padding-right, var(--spectrum-field-label-side-padding-right));
 
   & .spectrum-FieldLabel-requiredIcon {
-    margin-block-start: calc(var(--mod-field-label-text-to-asterisk, var(--spectrum-field-label-text-to-asterisk)) -
+    margin-block-start: calc(var(--mod-field-label-top-to-asterisk, var(--spectrum-field-label-top-to-asterisk)) -
       var(--mod-field-label-side-padding-top, var(--spectrum-field-label-side-padding-top)));
   }
 }
