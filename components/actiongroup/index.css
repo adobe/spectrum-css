@@ -16,6 +16,7 @@ governing permissions and limitations under the License.
   --spectrum-actiongroup-border-radius: var(--spectrum-corner-radius-100);
 }
 
+.spectrum-ActionGroup--sizeXS,
 .spectrum-ActionGroup--sizeS {
   --spectrum-actiongroup-horizontal-spacing-regular: var(--spectrum-spacing-75);
   --spectrum-actiongroup-vertical-spacing-regular: var(--spectrum-spacing-75);
