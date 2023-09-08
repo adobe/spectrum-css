@@ -95,7 +95,7 @@ export const MenuItem = ({
           size,
           isEmphasized: true,
           customClasses: [
-            `${rootClass}-Checkbox`,
+            `${rootClass}Checkbox`,
           ],
         })
       : ''}
