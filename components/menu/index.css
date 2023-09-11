@@ -547,7 +547,7 @@ governing permissions and limitations under the License.
   align-self: start;
 }
 
-.spectrum-menu-itemSelection {
+.spectrum-Menu-itemSelection {
   grid-area: selectedArea;
 }
 
@@ -570,9 +570,7 @@ governing permissions and limitations under the License.
   grid-area: chevronArea;
   align-self: center;
   block-size: var(--spectrum-menu-item-checkmark-height);
-  height: var(--spectrum-menu-item-checkmark-height);
   inline-size: var(--spectrum-menu-item-checkmark-width);
-  width: var(--spectrum-menu-item-checkmark-width);
 }
 
 .spectrum-Menu-item--collapsible .spectrum-Menu-chevron {
