@@ -1,3 +1,4 @@
+import { userEvent, within } from '@storybook/testing-library';
 // Import the component markup template
 import { Template } from "./template";
 
@@ -45,3 +46,17 @@ export default {
 
 export const Default = Template.bind({});
 Default.args = {};
+
+export const Hovered = Template.bind({})
+Hovered.args = Default.args;
+Hovered.parameters = {
+  pseudo: { hover: true },
+}
+
+export const Focused = Template.bind({});
+Focused.args = Default.args;
+Focused.play = async ({ canvasElement }) => {
+	const canvas = within(canvasElement);
+	await new Promise((resolve) => setTimeout(resolve, 100));
+	await userEvent.click(canvas.getByRole('button'));
+};
