@@ -203,6 +203,7 @@ governing permissions and limitations under the License.
     --highcontrast-menu-item-selected-background-color: Highlight;
     --highcontrast-menu-item-selected-color: HighlightText;
 
+
     @supports (color: SelectedItem) {
       --highcontrast-menu-item-selected-background-color: SelectedItem;
       --highcontrast-menu-item-selected-color: SelectedItemText;
@@ -211,6 +212,22 @@ governing permissions and limitations under the License.
     .spectrum-Menu-item {
       /* Hide unstylable readability backplates. */
       forced-color-adjust: none;
+    }
+
+    .spectrum-Menu-item:hover, .spectrum-Menu-item:focus {
+
+      .spectrum-Menu-itemCheckbox {
+        --highcontrast-checkbox-highlight-color-hover: ButtonText;
+        --highcontrast-checkbox-highlight-color-default: ButtonText;
+      }
+  
+      .spectrum-Menu-itemSwitch {
+        --highcontrast-switch-handle-border-color-hover: ButtonText;
+        --highcontrast-switch-handle-border-color-selected-default: ButtonText;
+        --highcontrast-switch-handle-border-color-selected-hover: ButtonText;
+        --highcontrast-switch-background-color-selected-default: ButtonText;
+        --highcontrast-switch-background-color-selected-hover: ButtonText;
+      }
     }
 
     .spectrum-Menu-item--drillIn.is-open {
