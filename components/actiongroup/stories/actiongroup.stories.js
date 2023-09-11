@@ -19,7 +19,7 @@ export default {
 				type: { summary: "string" },
 				category: "Component",
 			},
-			options: ["s", "m", "l", "xl"],
+			options: ["xs", "s", "m", "l", "xl"],
 			control: "select",
 		},
 		vertical: {

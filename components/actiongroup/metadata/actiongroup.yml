@@ -308,6 +308,20 @@ examples:
     markup: |
       <div class="spectrum-Examples">
         <div class="spectrum-Examples-item">
+          <h4 class="spectrum-Heading spectrum-Heading--sizeXS spectrum-Examples-itemHeading">XS</h4>
+          <div class="spectrum-ActionGroup spectrum-ActionGroup--sizeXS">
+            <button class="spectrum-ActionButton spectrum-ActionButton--sizeXS spectrum-ActionGroup-item">
+              <span class="spectrum-ActionButton-label">Edit</span>
+            </button>
+            <button class="spectrum-ActionButton spectrum-ActionButton--sizeXS spectrum-ActionGroup-item">
+              <span class="spectrum-ActionButton-label">Copy</span>
+            </button>
+            <button class="spectrum-ActionButton spectrum-ActionButton--sizeXS spectrum-ActionGroup-item is-selected">
+              <span class="spectrum-ActionButton-label">Delete</span>
+            </button>
+          </div>
+        </div>
+        <div class="spectrum-Examples-item">
           <h4 class="spectrum-Heading spectrum-Heading--sizeXS spectrum-Examples-itemHeading">S</h4>
           <div class="spectrum-ActionGroup spectrum-ActionGroup--sizeS">
             <button class="spectrum-ActionButton spectrum-ActionButton--sizeS spectrum-ActionGroup-item">
@@ -369,6 +383,20 @@ examples:
     name: Vertical Sizing
     markup: |
       <div class="spectrum-Examples">
+        <div class="spectrum-Examples-item">
+          <h4 class="spectrum-Heading spectrum-Heading--sizeXS spectrum-Examples-itemHeading">XS</h4>
+          <div class="spectrum-ActionGroup spectrum-ActionGroup--vertical spectrum-ActionGroup--sizeXS">
+            <button class="spectrum-ActionButton spectrum-ActionButton--sizeXS spectrum-ActionGroup-item">
+              <span class="spectrum-ActionButton-label">Edit</span>
+            </button>
+            <button class="spectrum-ActionButton spectrum-ActionButton--sizeXS spectrum-ActionGroup-item">
+              <span class="spectrum-ActionButton-label">Copy</span>
+            </button>
+            <button class="spectrum-ActionButton spectrum-ActionButton--sizeXS spectrum-ActionGroup-item is-selected">
+              <span class="spectrum-ActionButton-label">Delete</span>
+            </button>
+          </div>
+        </div>
         <div class="spectrum-Examples-item">
           <h4 class="spectrum-Heading spectrum-Heading--sizeXS spectrum-Examples-itemHeading">S</h4>
           <div class="spectrum-ActionGroup spectrum-ActionGroup--vertical spectrum-ActionGroup--sizeS">
