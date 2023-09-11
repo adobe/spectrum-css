@@ -19,13 +19,13 @@
   },
   "peerDependencies": {
     "@spectrum-css/icon": ">=3",
-    "@spectrum-css/vars": ">=9"
+    "@spectrum-css/tokens": ">=11"
   },
   "devDependencies": {
-    "@spectrum-css/component-builder": "^4.0.14",
+    "@spectrum-css/component-builder-simple": "^2.0.16",
     "@spectrum-css/icon": "^4.0.1",
+    "@spectrum-css/tokens": "^11.2.0",
     "@spectrum-css/tooltip": "^5.1.11",
-    "@spectrum-css/vars": "^9.0.8",
     "gulp": "^4.0.0"
   },
   "publishConfig": {
