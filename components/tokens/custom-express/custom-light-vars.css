@@ -14,6 +14,6 @@ governing permissions and limitations under the License.
 .spectrum--express.spectrum--light,
 .spectrum--express.spectrum--lightest {
   /* Drop Zone background color rgb */
-  --spectrum-drop-zone-background-color-rgb: var( --spectrum-indigo-800-rgb); /* var(--spectrum-accent-color-800);*/
-  --spectrum-well-border-color:rgba(var(--spectrum-black-rgb), 0.05);
+  --spectrum-drop-zone-background-color-rgb: var(--spectrum-indigo-800-rgb); /* var(--spectrum-accent-color-800);*/
+  --spectrum-well-border-color: rgba(var(--spectrum-black-rgb), 0.05);
 }
