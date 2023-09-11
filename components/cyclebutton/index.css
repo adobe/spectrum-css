@@ -11,6 +11,14 @@ governing permissions and limitations under the License.
 */
 
 .spectrum-CycleButton {
+  /* 
+    force button to be square by negating
+    the :only-child selector from ActionButton-icon
+  */
+  &.spectrum-ActionButton-icon:not(:only-child) {
+    margin-inline-start: calc(var(--mod-actionbutton-edge-to-visual-only, var(--spectrum-actionbutton-edge-to-visual-only)) - var(--mod-actionbutton-edge-to-text, var(--spectrum-actionbutton-edge-to-text)));
+  }
+  
   .spectrum-CycleButton-item:not(.is-selected) {
     display: none
   }
