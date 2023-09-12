@@ -22,6 +22,13 @@ governing permissions and limitations under the License.
 	--spectrum-dialog-fullscreen-margin: 32px;
 	--spectrum-dialog-max-height: 90vh;
 	--spectrum-dialog-max-width: 90%;
+
+	--spectrum-dialog-background-color: var(--spectrum-gray-100);
+  --spectrum-dialog-confirm-border-radius: var(--spectrum-corner-radius-100);
+  --spectrum-dialog-confirm-exit-animation-duration: 130ms;
+  --spectrum-dialog-confirm-entry-animation-duration: 250ms;
+  --spectrum-dialog-confirm-entry-animation-delay: 160ms;
+  --spectrum-dialog-transition-animation-duration: 130ms;
 }
 
 /* Used to position the modal */
@@ -56,7 +63,7 @@ governing permissions and limitations under the License.
 
 	/* Be invisible by default */
 	transition: visibility 0ms linear
-		var(--spectrum-global-animation-duration-100);
+		var(--spectrum-dialog-transition-animation-duration);
 
 	&.is-open {
 		visibility: visible;
@@ -78,10 +85,11 @@ governing permissions and limitations under the License.
 	max-block-size: var(--spectrum-dialog-max-height);
 	max-inline-size: var(--spectrum-dialog-max-width);
 
+	background: var(--spectrum-dialog-background-color);
+
 	/* border-radius includes legacy token fallback, which can be deprecated once component is migrated */
 	border-radius: var(
-		--spectrum-dialog-confirm-border-radius,
-		var(--spectrum-corner-radius-100)
+		--spectrum-dialog-confirm-border-radius
 	);
 	overflow: hidden;
 	outline: none; /* Firefox shows outline */
