@@ -566,6 +566,7 @@ governing permissions and limitations under the License.
 
 .spectrum-Menu-itemActions {
   grid-area: actionsArea;
+  align-self: start;
   margin-inline-start: var(--mod-menu-item-label-to-value-area-min-spacing, var(--spectrum-menu-item-label-to-value-area-min-spacing));
 }
 
@@ -652,6 +653,7 @@ governing permissions and limitations under the License.
   color: var(--highcontrast-menu-item-color-default, var(--mod-menu-item-value-color-default, var(--spectrum-menu-item-value-color-default)));
   font-size: var(--mod-menu-item-label-font-size, var(--spectrum-menu-item-label-font-size));
   justify-self: end;
+  align-self: start;
   margin-inline-start: var(--mod-menu-item-label-to-value-area-min-spacing, var(--spectrum-menu-item-label-to-value-area-min-spacing));
 }
 

@@ -73,8 +73,16 @@ export const MenuItem = ({
           }) : ''}
       ${isCollapsible
         ? html`<span class="spectrum-Menu-sectionHeading">${label}</span>`
-        : html`<span class="${rootClass}Label">${label}</span>`
+        : ''
       }
+      ${selectionMode != "multiple"
+        ? html`<span class=${classMap({
+          [`${rootClass}Label`]: true,
+          ['spectrum-Switch-label']: hasActions,
+          })}>
+          ${label}
+        </span>`
+        : ''}
       ${typeof description != "undefined" 
         ? html`<span class="${rootClass}Description">${description}</span>`
         : ''}
@@ -94,6 +102,7 @@ export const MenuItem = ({
           ...globals,
           size,
           isEmphasized: true,
+          label: label,
           customClasses: [
             `${rootClass}Checkbox`,
           ],
