@@ -7,7 +7,7 @@ sections:
   - name: Migration Guide
     description: |
       ### T-shirt sizing
-      Field Label now supports t-shirt sizing and requires that you specify the size by adding a `.spectrum-FieldLabel--size*` class.
+      Field label now supports t-shirt sizing and requires that you specify the size by adding a `.spectrum-FieldLabel--size*` class.
 examples:
   - id: fieldlabel-sizing
     name: Sizing
@@ -16,7 +16,7 @@ examples:
         <div class="spectrum-Examples-item">
           <h4 class="spectrum-Heading spectrum-Heading--sizeXS spectrum-Examples-itemHeading">S</h4>
 
-          <label for="lifestory" class="spectrum-FieldLabel spectrum-FieldLabel--sizeS">Life Story</label>
+          <label for="lifestory" class="spectrum-FieldLabel spectrum-FieldLabel--sizeS">Life story</label>
           <div class="spectrum-Textfield">
             <input id="lifestory" name="field" value="" class="spectrum-Textfield-input">
           </div>
@@ -24,7 +24,7 @@ examples:
         <div class="spectrum-Examples-item">
           <h4 class="spectrum-Heading spectrum-Heading--sizeXS spectrum-Examples-itemHeading">M (default)</h4>
 
-          <label for="lifestory" class="spectrum-FieldLabel spectrum-FieldLabel--sizeM">Life Story</label>
+          <label for="lifestory" class="spectrum-FieldLabel spectrum-FieldLabel--sizeM">Life story</label>
           <div class="spectrum-Textfield">
             <input id="lifestory" name="field" value="" class="spectrum-Textfield-input">
           </div>
@@ -33,7 +33,7 @@ examples:
         <div class="spectrum-Examples-item">
           <h4 class="spectrum-Heading spectrum-Heading--sizeXS spectrum-Examples-itemHeading">L</h4>
 
-          <label for="lifestory" class="spectrum-FieldLabel spectrum-FieldLabel--sizeL">Life Story</label>
+          <label for="lifestory" class="spectrum-FieldLabel spectrum-FieldLabel--sizeL">Life story</label>
           <div class="spectrum-Textfield">
             <input id="lifestory" name="field" value="" class="spectrum-Textfield-input">
           </div>
@@ -42,7 +42,7 @@ examples:
         <div class="spectrum-Examples-item">
           <h4 class="spectrum-Heading spectrum-Heading--sizeXS spectrum-Examples-itemHeading">XL</h4>
 
-          <label for="lifestory" class="spectrum-FieldLabel spectrum-FieldLabel--sizeXL">Life Story</label>
+          <label for="lifestory" class="spectrum-FieldLabel spectrum-FieldLabel--sizeXL">Life story</label>
           <div class="spectrum-Textfield">
             <input id="lifestory" name="field" value="" class="spectrum-Textfield-input">
           </div>
@@ -51,39 +51,40 @@ examples:
   - id: fieldlabel-standard
     name: Standard
     markup: |
-      <label for="lifestory" class="spectrum-FieldLabel spectrum-FieldLabel--sizeM">Life Story</label>
+      <label for="lifestory" class="spectrum-FieldLabel spectrum-FieldLabel--sizeM">Life story</label>
       <div class="spectrum-Textfield">
         <input id="lifestory" name="field" value="" class="spectrum-Textfield-input">
       </div>
 
-      <label for="lifestory2" class="spectrum-FieldLabel spectrum-FieldLabel--sizeM is-disabled">Life Story</label>
+      <label for="lifestory2" class="spectrum-FieldLabel spectrum-FieldLabel--sizeM is-disabled">Life story</label>
       <div class="spectrum-Textfield is-disabled">
         <input id="lifestory2" name="field" value="" class="spectrum-Textfield-input" disabled>
       </div>
   - id: fieldlabel-side-left
     name: Left
-    description: A left aligned field label.
+    description: A left aligned Field label.
     markup: |
-      <label for="lifestory3" class="spectrum-FieldLabel spectrum-FieldLabel--sizeM spectrum-FieldLabel--left" style="width: 72px">Life Story</label>
+      <label for="lifestory3" class="spectrum-FieldLabel spectrum-FieldLabel--sizeM spectrum-FieldLabel--left" style="width: 72px">Life story</label>
 
       <div class="spectrum-Textfield spectrum-Textfield--multiline">
         <textarea id="lifestory3" name="field" value="" class="spectrum-Textfield-input"></textarea>
       </div>
   - id: fieldlabel-side-right
     name: Right
-    description: A right aligned field label.
+    description: A right aligned Field label.
     markup: |
-      <label for="lifestory4" class="spectrum-FieldLabel spectrum-FieldLabel--sizeM spectrum-FieldLabel--right" style="width: 72px">Life Story</label>
+      <label for="lifestory4" class="spectrum-FieldLabel spectrum-FieldLabel--sizeM spectrum-FieldLabel--right" style="width: 72px">Life story</label>
 
       <div class="spectrum-Textfield spectrum-Textfield--multiline">
         <textarea id="lifestory4" name="field" value="" class="spectrum-Textfield-input"></textarea>
       </div>
   - id: fieldlabel-required
     name: Required
-    description: Field label for a required field.
+    description: A Field label for a required field can display either the text "(required)", or an asterisk. If using the asterisk icon, do not leave any space between the label text and the start of the `<svg>` element in the markup, so extra space is not added in addition to the inline margin.
     markup: |
-      <label for="lifestory5" class="spectrum-FieldLabel spectrum-FieldLabel--sizeM">Life Story
-        <svg class="spectrum-Icon spectrum-UIIcon-Asterisk100 spectrum-FieldLabel-requiredIcon" focusable="false" aria-hidden="true">
+      <label for="lifestory5" class="spectrum-FieldLabel spectrum-FieldLabel--sizeM">
+        Life story<svg 
+          class="spectrum-Icon spectrum-UIIcon-Asterisk100 spectrum-FieldLabel-requiredIcon" focusable="false" aria-hidden="true">
           <use xlink:href="#spectrum-css-icon-Asterisk100" />
         </svg>
       </label>
@@ -91,7 +92,7 @@ examples:
         <input id="lifestory5" name="field" value="" class="spectrum-Textfield-input">
       </div>
 
-      <label for="lifestory6" class="spectrum-FieldLabel spectrum-FieldLabel--sizeM">Life Story (Required)</label>
+      <label for="lifestory6" class="spectrum-FieldLabel spectrum-FieldLabel--sizeM">Life story (required)</label>
       <div class="spectrum-Textfield">
         <input id="lifestory6" name="field" value="" class="spectrum-Textfield-input">
       </div>
@@ -99,8 +100,9 @@ examples:
       <br/>
       <br/>
 
-      <label for="lifestory7" class="spectrum-FieldLabel spectrum-FieldLabel--sizeM spectrum-FieldLabel--left">Life Story
-        <svg class="spectrum-Icon spectrum-UIIcon-Asterisk100 spectrum-FieldLabel-requiredIcon" focusable="false" aria-hidden="true">
+      <label for="lifestory7" class="spectrum-FieldLabel spectrum-FieldLabel--sizeM spectrum-FieldLabel--left">
+        Life story<svg
+          class="spectrum-Icon spectrum-UIIcon-Asterisk100 spectrum-FieldLabel-requiredIcon" focusable="false" aria-hidden="true">
           <use xlink:href="#spectrum-css-icon-Asterisk100" />
         </svg>
       </label>
@@ -108,9 +110,9 @@ examples:
         <textarea id="lifestory7" name="field" value="" class="spectrum-Textfield-input"></textarea>
       </div>
 
-
-      <label for="lifestory8" class="spectrum-FieldLabel spectrum-FieldLabel--sizeM is-disabled">Life Story
-        <svg class="spectrum-Icon spectrum-UIIcon-Asterisk100 spectrum-FieldLabel-requiredIcon" focusable="false" aria-hidden="true">
+      <label for="lifestory8" class="spectrum-FieldLabel spectrum-FieldLabel--sizeM is-disabled">
+        Life story<svg 
+          class="spectrum-Icon spectrum-UIIcon-Asterisk100 spectrum-FieldLabel-requiredIcon" focusable="false" aria-hidden="true">
           <use xlink:href="#spectrum-css-icon-Asterisk100" />
         </svg>
       </label>

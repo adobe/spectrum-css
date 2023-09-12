@@ -63,13 +63,12 @@ export const Template = ({
 			id=${ifDefined(id)}
 			for=${ifDefined(forInput)}
 		>
-			${label}
-			${isRequired
+			${label}${isRequired
 				? Icon({
 						...globals,
 						size,
 						iconName,
-						customClasses: [`${rootClass}-UIIcon`],
+						customClasses: [`${rootClass}-UIIcon`, `${rootClass}-requiredIcon`],
 				  })
 				: ""}
 		</label>
