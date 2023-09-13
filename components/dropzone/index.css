@@ -174,11 +174,9 @@ governing permissions and limitations under the License.
   .spectrum-DropZone {
     --highcontrast-drop-zone-illustration-color: CanvasText;
 
-    --highcontrast-drop-zone-illustration-color-hover: Highlight;
     --highcontrast-drop-zone-border-color-hover: Highlight;
 
     /* Updated values for a nested illustrated message when in a high contrast state */
     --highcontrast-illustrated-message-illustration-color: var(--highcontrast-drop-zone-illustration-color);
-    --highcontrast-illustrated-message-illustration-color-hover: var(--highcontrast-drop-zone-illustration-color-hover);
   }
 }
