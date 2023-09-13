@@ -158,8 +158,8 @@ governing permissions and limitations under the License.
   block-size: var(--mod-tooltip-tip-square-size, var(--spectrum-tooltip-tip-square-size));
   inline-size: var(--mod-tooltip-tip-square-size, var(--spectrum-tooltip-tip-square-size));
 
-  inset-block-start: 100%;
-  inset-inline-start: 50%;
+  top: 100%;
+  left: 50%;
   transform: translateX(-50%);
 
   background-color: var(--highcontrast-tooltip-background-color-default, var(--mod-tooltip-background-color-default, var(--spectrum-tooltip-background-color-default)));
@@ -190,7 +190,7 @@ governing permissions and limitations under the License.
   .spectrum-Tooltip--top-right &,
   .spectrum-Tooltip--top-start &,
   .spectrum-Tooltip--top-end & {
-    inset-block-start: 100%;
+    top: 100%;
   }
 
   /* tip is horizontal at top pointing up △ */
@@ -204,8 +204,8 @@ governing permissions and limitations under the License.
       0 calc(100% + var(--mod-tooltip-tip-antialiasing-inset, var(--spectrum-tooltip-tip-antialiasing-inset))),
       100% calc(100% + var(--mod-tooltip-tip-antialiasing-inset, var(--spectrum-tooltip-tip-antialiasing-inset)))
     );
-    inset-block-start: auto;
-    inset-block-end: 100%;
+    top: auto;
+    bottom: 100%;
   }
 
   /* tip is horizontal and at the edge */
@@ -223,28 +223,38 @@ governing permissions and limitations under the License.
   /* tip is horizontal at left △ ▽ */
   .spectrum-Tooltip--top-left &,
   .spectrum-Tooltip--bottom-left & {
-    inset-inline-start: var(--mod-tooltip-pointer-corner-spacing, var(--spectrum-tooltip-pointer-corner-spacing));
+    left: var(--mod-tooltip-pointer-corner-spacing, var(--spectrum-tooltip-pointer-corner-spacing));
   }
 
   /* tip is horizontal at right △ ▽ */
   .spectrum-Tooltip--top-right &,
   .spectrum-Tooltip--bottom-right & {
-    inset-inline-start: auto;
-    inset-inline-end: var(--mod-tooltip-pointer-corner-spacing, var(--spectrum-tooltip-pointer-corner-spacing));
+    left: auto;
+    right: var(--mod-tooltip-pointer-corner-spacing, var(--spectrum-tooltip-pointer-corner-spacing));
   }
 
   /* logical property - tip is horizontal at start △ ▽ */
   .spectrum-Tooltip--top-start &,
   .spectrum-Tooltip--bottom-start & {
-    inset-inline-start: var(--mod-tooltip-pointer-corner-spacing, var(--spectrum-tooltip-pointer-corner-spacing));
-    inset-inline-end: auto;
+    left: var(--mod-tooltip-pointer-corner-spacing, var(--spectrum-tooltip-pointer-corner-spacing));
+    right: auto;
+
+    [dir="rtl"] & {
+      right: var(--mod-tooltip-pointer-corner-spacing, var(--spectrum-tooltip-pointer-corner-spacing));
+      left: auto;
+    }
   }
 
   /* logical property - tip is horizontal at end △ ▽ */
   .spectrum-Tooltip--top-end &,
   .spectrum-Tooltip--bottom-end & {
-    inset-inline-start: auto;
-    inset-inline-end: var(--mod-tooltip-pointer-corner-spacing, var(--spectrum-tooltip-pointer-corner-spacing));
+    left: auto;
+    right: var(--mod-tooltip-pointer-corner-spacing, var(--spectrum-tooltip-pointer-corner-spacing));
+
+    [dir="rtl"] & {
+      left: var(--mod-tooltip-pointer-corner-spacing, var(--spectrum-tooltip-pointer-corner-spacing));
+      right: auto;
+    }
   }
 
   /* tip right left start end resets ◁ ▷ */
@@ -260,7 +270,7 @@ governing permissions and limitations under the License.
   .spectrum-Tooltip--end &,
   .spectrum-Tooltip--end-top &,
   .spectrum-Tooltip--end-bottom & {
-    inset-block-start: 50%;
+    top: 50%;
     transform: translateY(-50%);
   }
 
@@ -274,7 +284,7 @@ governing permissions and limitations under the License.
   .spectrum-Tooltip--end-top &,
   .spectrum-Tooltip--end-bottom & {
     transform: none;
-    inset-block-start: auto;
+    top: auto;
   }
 
   /* tip is vertical pointing ◁ left or start, for LTR. */
@@ -289,8 +299,8 @@ governing permissions and limitations under the License.
       calc(100% + var(--mod-tooltip-tip-antialiasing-inset, var(--spectrum-tooltip-tip-antialiasing-inset))) 100%,
       calc(100% + var(--mod-tooltip-tip-antialiasing-inset, var(--spectrum-tooltip-tip-antialiasing-inset))) 0
     );
-    inset-inline-start: auto;
-    inset-inline-end: 100%;
+    left: auto;
+    right: 100%;
   }
 
   /* tip is vertical pointing ▷ right or end, for LTR. */
@@ -305,7 +315,7 @@ governing permissions and limitations under the License.
       calc(0% - var(--mod-tooltip-tip-antialiasing-inset, var(--spectrum-tooltip-tip-antialiasing-inset))) 100%,
       var(--mod-tooltip-tip-height-percentage, var(--spectrum-tooltip-tip-height-percentage)) 50%
     );
-    inset-inline-start: 100%;
+    left: 100%;
   }
 
   /* tip is vertical at top ◁ ▷ */
@@ -313,7 +323,7 @@ governing permissions and limitations under the License.
   .spectrum-Tooltip--left-top &,
   .spectrum-Tooltip--start-top &,
   .spectrum-Tooltip--end-top & {
-    inset-block-start: var(--mod-tooltip-pointer-corner-spacing, var(--spectrum-tooltip-pointer-corner-spacing));
+    top: var(--mod-tooltip-pointer-corner-spacing, var(--spectrum-tooltip-pointer-corner-spacing));
   }
 
   /* tip is vertical at bottom ◁ ▷ */
@@ -321,7 +331,7 @@ governing permissions and limitations under the License.
   .spectrum-Tooltip--left-bottom &,
   .spectrum-Tooltip--start-bottom &,
   .spectrum-Tooltip--end-bottom & {
-    inset-block-end: var(--mod-tooltip-pointer-corner-spacing, var(--spectrum-tooltip-pointer-corner-spacing));
+    bottom: var(--mod-tooltip-pointer-corner-spacing, var(--spectrum-tooltip-pointer-corner-spacing));
   }
 
   /* tip logical property - Start pointing tip reversed to point toward end ▷ for RTL. */
@@ -334,8 +344,8 @@ governing permissions and limitations under the License.
         calc(0% - var(--mod-tooltip-tip-antialiasing-inset, var(--spectrum-tooltip-tip-antialiasing-inset))) 100%,
         var(--mod-tooltip-tip-height-percentage, var(--spectrum-tooltip-tip-height-percentage)) 50%
       );
-      inset-inline-end: auto;
-      inset-inline-start: 100%;
+      right: auto;
+      left: 100%;
     }
   }
 
@@ -349,8 +359,8 @@ governing permissions and limitations under the License.
         calc(100% + var(--mod-tooltip-tip-antialiasing-inset, var(--spectrum-tooltip-tip-antialiasing-inset))) 100%,
         calc(100% + var(--mod-tooltip-tip-antialiasing-inset, var(--spectrum-tooltip-tip-antialiasing-inset))) 0
       );
-      inset-inline-start: auto;
-      inset-inline-end: 100%;
+      left: auto;
+      right: 100%;
     }
   }
 }
@@ -384,7 +394,7 @@ governing permissions and limitations under the License.
 .spectrum-Tooltip--top-right,
 .spectrum-Tooltip--top-start,
 .spectrum-Tooltip--top-end {
-  margin-block-end: calc(var(--mod-tooltip-tip-block-size, var(--spectrum-tooltip-tip-block-size))
+  margin-bottom: calc(var(--mod-tooltip-tip-block-size, var(--spectrum-tooltip-tip-block-size))
                       + var(--mod-tooltip-margin, var(--spectrum-tooltip-margin)));
 
   /* tooltip animates upward ⬆ */
@@ -399,7 +409,7 @@ governing permissions and limitations under the License.
 .spectrum-Tooltip--bottom-right,
 .spectrum-Tooltip--bottom-start,
 .spectrum-Tooltip--bottom-end {
-  margin-block-start: calc(var(--mod-tooltip-tip-block-size, var(--spectrum-tooltip-tip-block-size))
+  margin-top: calc(var(--mod-tooltip-tip-block-size, var(--spectrum-tooltip-tip-block-size))
                   + var(--mod-tooltip-margin, var(--spectrum-tooltip-margin)));
 
   /* Tooltip animates downward ⬇ */
@@ -412,7 +422,7 @@ governing permissions and limitations under the License.
 .spectrum-Tooltip--right,
 .spectrum-Tooltip--right-bottom,
 .spectrum-Tooltip--right-top {
-  margin-inline-start: calc(var(--mod-tooltip-tip-block-size, var(--spectrum-tooltip-tip-block-size))
+  margin-left: calc(var(--mod-tooltip-tip-block-size, var(--spectrum-tooltip-tip-block-size))
                   + var(--mod-tooltip-margin, var(--spectrum-tooltip-margin)));
 
   /* Tooltip animates to right ⮕ */
@@ -425,7 +435,7 @@ governing permissions and limitations under the License.
 .spectrum-Tooltip--left,
 .spectrum-Tooltip--left-bottom,
 .spectrum-Tooltip--left-top {
-  margin-inline-end: calc(var(--mod-tooltip-tip-block-size, var(--spectrum-tooltip-tip-block-size))
+  margin-right: calc(var(--mod-tooltip-tip-block-size, var(--spectrum-tooltip-tip-block-size))
                     + var(--mod-tooltip-margin, var(--spectrum-tooltip-margin)));
 
   /* Tooltip animates to left ⬅ */
@@ -509,7 +519,7 @@ governing permissions and limitations under the License.
   .spectrum-Tooltip--bottom-right,
   .spectrum-Tooltip--bottom-start,
   .spectrum-Tooltip--bottom-end {
-    inset-inline-start: 50%;
+    left: 50%;
     transform: translate(-50%, 0);
   }
 
@@ -518,7 +528,7 @@ governing permissions and limitations under the License.
   .spectrum-Tooltip--top-right,
   .spectrum-Tooltip--top-start,
   .spectrum-Tooltip--top-end {
-    inset-block-end: 100%;
+    bottom: 100%;
   }
 
   .spectrum-Tooltip--bottom,
@@ -526,7 +536,7 @@ governing permissions and limitations under the License.
   .spectrum-Tooltip--bottom-right,
   .spectrum-Tooltip--bottom-start,
   .spectrum-Tooltip--bottom-end {
-    inset-block-start: 100%;
+    top: 100%;
   }
 
   .spectrum-Tooltip--left,
@@ -541,7 +551,7 @@ governing permissions and limitations under the License.
   .spectrum-Tooltip--end,
   .spectrum-Tooltip--end-top,
   .spectrum-Tooltip--end-bottom {
-    inset-block-start: 50%;
+    top: 50%;
     transform: translate(0, -50%);
   }
 
@@ -551,7 +561,7 @@ governing permissions and limitations under the License.
   .spectrum-Tooltip--start,
   .spectrum-Tooltip--start-top,
   .spectrum-Tooltip--start-bottom {
-    inset-inline-end: 100%;
+    right: 100%;
   }
 
    /* RTL */
@@ -559,8 +569,8 @@ governing permissions and limitations under the License.
     .spectrum-Tooltip--start,
     .spectrum-Tooltip--start-top,
     .spectrum-Tooltip--start-bottom {
-      inset-inline-start: 100%;
-      inset-inline-end: auto;
+      left: 100%;
+      right: auto;
     }
   }
 
@@ -570,8 +580,8 @@ governing permissions and limitations under the License.
   .spectrum-Tooltip--end,
   .spectrum-Tooltip--end-top,
   .spectrum-Tooltip--end-bottom {
-    inset-inline-start: 100%;
-    inset-inline-end: auto;
+    left: 100%;
+    right: auto;
   }
 
    /* RTL */
@@ -579,8 +589,8 @@ governing permissions and limitations under the License.
     .spectrum-Tooltip--end,
     .spectrum-Tooltip--end-top,
     .spectrum-Tooltip--end-bottom {
-      inset-inline-start: auto;
-      inset-inline-end: 100%;
+      left: auto;
+      right: 100%;
     }
   }
 
