@@ -15,14 +15,22 @@ governing permissions and limitations under the License.
 @import "../commons/basebutton.css";
 
 .spectrum-LogicButton {
+  --spectrum-logic-button-height: 24px;
+  --spectrum-logic-button-padding: var(--spectrum-component-edge-to-text-50);
+
+  --spectrum-logic-button-border-width: var(--spectrum-border-width-200);
+  --spectrum-logic-button-border-radius: var(--spectrum-corner-radius-100);
+}
+
+.spectrum-LogicButton {
   @inherit: %spectrum-BaseButton;
   @inherit: %spectrum-ButtonWithFocusRing;
 
-  block-size: var(--spectrum-logicbutton-and-height);
-  padding: var(--spectrum-logicbutton-and-padding-x);
+  block-size: var(--mod-logic-button-height, var(--spectrum-logic-button-height));
+  padding: var(--mod-logic-button-padding, var(--spectrum-logic-button-padding));
 
-  border-width: var(--spectrum-logicbutton-and-border-size);
-  border-radius: var(--spectrum-logicbutton-and-border-radius);
+  border-width: var(--mod-logic-button-border-width, var(--spectrum-logic-button-border-width));
+  border-radius: var(--mod-logic-button-border-radius, var(--spectrum-logic-button-border-radius));
 
   font-size: var(--spectrum-logicbutton-and-text-size);
   font-weight: var(--spectrum-logicbutton-and-text-font-weight);
