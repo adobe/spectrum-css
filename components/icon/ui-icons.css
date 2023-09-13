@@ -58,6 +58,11 @@ governing permissions and limitations under the License.
   transform: rotate(270deg);
 }
 
+%spectrum-UIIcon-Chevron50 {
+  inline-size: var(--spectrum-icon-chevron-size-50);
+  block-size: var(--spectrum-icon-chevron-size-50);
+}
+
 %spectrum-UIIcon-Chevron75 {
   inline-size: var(--spectrum-alias-ui-icon-chevron-size-75);
   block-size: var(--spectrum-alias-ui-icon-chevron-size-75);
@@ -124,6 +129,10 @@ governing permissions and limitations under the License.
 }
 
 /* Chevron */
+.spectrum-UIIcon-ChevronRight50 {
+  @inherit: %spectrum-UIIcon-Chevron50;
+}
+
 .spectrum-UIIcon-ChevronRight75 {
   @inherit: %spectrum-UIIcon-Chevron75;
 }
@@ -146,6 +155,11 @@ governing permissions and limitations under the License.
 
 .spectrum-UIIcon-ChevronRight500 {
   @inherit: %spectrum-UIIcon-Chevron500;
+}
+
+.spectrum-UIIcon-ChevronDown50 {
+  @inherit: %spectrum-UIIcon-Chevron50;
+  @inherit: %spectrum-UIIcon--rotation90;
 }
 
 .spectrum-UIIcon-ChevronDown75 {
@@ -178,6 +192,11 @@ governing permissions and limitations under the License.
   @inherit: %spectrum-UIIcon--rotation90;
 }
 
+.spectrum-UIIcon-ChevronLeft50 {
+  @inherit: %spectrum-UIIcon-Chevron50;
+  @inherit: %spectrum-UIIcon--rotation180;
+}
+
 .spectrum-UIIcon-ChevronLeft75 {
   @inherit: %spectrum-UIIcon-Chevron75;
   @inherit: %spectrum-UIIcon--rotation180;
@@ -206,6 +225,11 @@ governing permissions and limitations under the License.
 .spectrum-UIIcon-ChevronLeft500 {
   @inherit: %spectrum-UIIcon-Chevron500;
   @inherit: %spectrum-UIIcon--rotation180;
+}
+
+.spectrum-UIIcon-ChevronUp50 {
+  @inherit: %spectrum-UIIcon-Chevron50;
+  @inherit: %spectrum-UIIcon--rotation270;
 }
 
 .spectrum-UIIcon-ChevronUp75 {
