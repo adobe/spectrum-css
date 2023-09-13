@@ -1,6 +1,6 @@
 {
   "name": "@spectrum-css/colorhandle",
-  "version": "7.0.7",
+  "version": "7.0.8",
   "description": "The Spectrum CSS Color Handle component",
   "license": "Apache-2.0",
   "author": "Adobe",
@@ -23,10 +23,10 @@
     "@spectrum-css/tokens": ">=11"
   },
   "devDependencies": {
-    "@spectrum-css/colorloupe": "^4.1.18",
+    "@spectrum-css/colorloupe": "^4.1.19",
     "@spectrum-css/component-builder-simple": "^2.0.17",
     "@spectrum-css/opacitycheckerboard": "^1.0.4",
-    "@spectrum-css/tokens": "^11.3.4",
+    "@spectrum-css/tokens": "^11.3.5",
     "gulp": "^4.0.0"
   },
   "publishConfig": {

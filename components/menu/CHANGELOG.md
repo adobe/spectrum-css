@@ -3,6 +3,13 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+<a name="5.0.11"></a>
+##5.0.11
+🗓
+2023-09-13 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/menu@5.0.10...@spectrum-css/menu@5.0.11)
+
+**Note:** Version bump only for package @spectrum-css/menu
+
 <a name="5.0.10"></a>
 ##5.0.10
 🗓

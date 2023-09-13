@@ -3,6 +3,13 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+<a name="4.0.73"></a>
+##4.0.73
+🗓
+2023-09-13 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/fieldgroup@4.0.72...@spectrum-css/fieldgroup@4.0.73)
+
+**Note:** Version bump only for package @spectrum-css/fieldgroup
+
 <a name="4.0.72"></a>
 ##4.0.72
 🗓

@@ -3,6 +3,15 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+<a name="11.3.5"></a>
+##11.3.5
+🗓
+2023-09-13 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/tokens@11.3.4...@spectrum-css/tokens@11.3.5)
+
+### 🐛 Bug fixes
+
+- **well:**missing semicolons in custom vars ([#2163](https://github.com/adobe/spectrum-css/issues/2163))([814c49e](https://github.com/adobe/spectrum-css/commit/814c49e))
+
 <a name="11.3.4"></a>
 ##11.3.4
 🗓

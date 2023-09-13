@@ -1,6 +1,6 @@
 {
   "name": "@spectrum-css/contextualhelp",
-  "version": "2.0.35",
+  "version": "2.0.36",
   "description": "The Spectrum CSS contextualhelp component",
   "license": "Apache-2.0",
   "author": "Adobe",
@@ -26,10 +26,10 @@
     "@spectrum-css/tokens": ">=10"
   },
   "devDependencies": {
-    "@spectrum-css/actionbutton": "^5.0.7",
+    "@spectrum-css/actionbutton": "^5.0.8",
     "@spectrum-css/component-builder-simple": "^2.0.17",
-    "@spectrum-css/popover": "^6.0.74",
-    "@spectrum-css/tokens": "^11.3.4",
+    "@spectrum-css/popover": "^6.0.75",
+    "@spectrum-css/tokens": "^11.3.5",
     "gulp": "^4.0.0"
   },
   "publishConfig": {
