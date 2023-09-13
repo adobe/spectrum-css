@@ -947,7 +947,7 @@ governing permissions and limitations under the License.
 			);
 		}
 
-		&:hover &::placeholder {
+		&:hover::placeholder {
 			color: var(
 				--highcontrast-textfield-text-color-focus-hover,
 				var(
