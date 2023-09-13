@@ -451,14 +451,13 @@ governing permissions and limitations under the License.
 		content: "";
 		position: absolute;
 		inset-block-end: calc(
-			-1 * (var(
-							--mod-textfield-focus-indicator-gap,
-							var(--spectrum-textfield-focus-indicator-gap)
-						) +
-						var(
-							--mod-textfield-focus-indicator-width,
-							var(--spectrum-textfield-focus-indicator-width)
-						))
+			-1 * (
+				var(--mod-textfield-focus-indicator-gap,
+				var(--spectrum-textfield-focus-indicator-gap)
+			) +
+				var(--mod-textfield-focus-indicator-width,
+				var(--spectrum-textfield-focus-indicator-width)
+			))
 		);
 		inset-inline-start: 0;
 		inline-size: 100%;
