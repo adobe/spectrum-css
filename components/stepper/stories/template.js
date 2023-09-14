@@ -67,7 +67,7 @@ export const Template = ({
 			${Textfield({
 				...globals,
 				size,
-				placeholder: "1",
+				type: "number",
 				min: "-2",
 				max: "2",
 				step: "0.5",
