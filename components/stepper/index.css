@@ -237,40 +237,14 @@ governing permissions and limitations under the License.
     justify-content: flex-end;
   }
 
-  .spectrum-Stepper-stepUp,
-  .spectrum-Stepper-stepDown {
-
-    /* More hitarea */
-    &::after {
-      content: '';
-      position: absolute;
-      block-size: 100%;
-      inline-size: var(--mod-stepper-button-offset, var(--spectrum-stepper-button-offset));
-      inset-inline-end: 0;
-      inset-inline-start: auto;
-    }
-  }
-
   .spectrum-Stepper-input,
-  .spectrum-Stepper-buttons,
-  .spectrum-Stepper-stepUp,
-  .spectrum-Stepper-stepDown {
+  .spectrum-Stepper-buttons {
     background-color: transparent;
   }
 
   /* quiet hover */
   &:hover {
-    .spectrum-Stepper-buttons,
-    .spectrum-Stepper-stepUp,
-    .spectrum-Stepper-stepDown {
-      background-color: transparent;
-    }
-  }
-
-  /* quiet focused */
-  &.is-focused {
-    .spectrum-Stepper-stepUp,
-    .spectrum-Stepper-stepDown {
+    .spectrum-Stepper-buttons{
       background-color: transparent;
     }
   }
@@ -283,11 +257,6 @@ governing permissions and limitations under the License.
     /* quiet focus indicator only on bottom border */
     &::after {
       background-color: var(--highcontrast-stepper-focus-indicator-color, var(--mod-stepper-focus-indicator-color, var(--spectrum-stepper-focus-indicator-color)));
-    }
-
-    .spectrum-Stepper-stepUp,
-    .spectrum-Stepper-stepDown {
-      background-color: transparent;
     }
   }
 }
@@ -325,62 +294,6 @@ governing permissions and limitations under the License.
 
 .spectrum-Stepper-button.spectrum-InfieldButton--bottom {
   padding-block-end: calc(var(--mod-stepper-button-padding, var(--spectrum-stepper-button-padding)) - var(--mod-stepper-border-width, var(--spectrum-stepper-border-width)));
-}
-
-.spectrum-Stepper-stepUp,
-.spectrum-Stepper-stepDown {
-  box-sizing: border-box;
-  block-size: calc((var(--mod-stepper-height, var(--spectrum-stepper-height)) / 2) - var(--mod-stepper-button-gap, var(--spectrum-stepper-button-gap)) - var(--mod-stepper-button-padding, var(--spectrum-stepper-button-padding)));
-  inline-size: 100%;
-  min-inline-size: 0;
-
-  border-color: inherit;
-  border-width: var(--mod-stepper-button-border-width, var(--spectrum-stepper-button-border-width));
-  background-color: var(--highcontrast-stepper-button-background-color-default, var(--mod-stepper-button-background-color-default, var(--spectrum-stepper-button-background-color-default)));
-
-  border-start-start-radius: 0;
-  border-start-end-radius: var(--mod-stepper-border-radius, var(--spectrum-stepper-border-radius));
-  border-end-end-radius: var(--mod-stepper-border-radius, var(--spectrum-stepper-border-radius));
-  border-end-start-radius: 0;
-
-  padding-inline-start: calc(var(--mod-stepper-button-fill-padding-inline, var(--spectrum-stepper-button-fill-padding-inline)) - var(--mod-stepper-button-padding, var(--spectrum-stepper-button-padding)) - var(--mod-stepper-button-border-width, var(--spectrum-stepper-button-border-width)));
-  padding-inline-end: calc(var(--mod-stepper-button-fill-padding-inline, var(--spectrum-stepper-button-fill-padding-inline)) - var(--mod-stepper-button-padding, var(--spectrum-stepper-button-padding)) - var(--mod-stepper-button-border-width, var(--spectrum-stepper-button-border-width)));
-
-  .spectrum-Icon {
-    opacity: 1;
-    margin: 0;
-  }
-
-  /*** Action Buttons Hover ***/
-  &:hover {
-    background-color: var(--highcontrast-stepper-button-background-color-hover, var(--mod-stepper-button-background-color-hover, var(--spectrum-stepper-button-background-color-hover)));
-  }
-}
-
-.spectrum-Stepper-stepUp {
-  /* The outer and inner edge tokens include the outer button padding in the Express theme so we have to subtract it */
-  padding-block-start: calc(var(--mod-stepper-button-fill-padding-outer-edge, var(--spectrum-stepper-button-fill-padding-outer-edge)) - var(--mod-stepper-button-padding, var(--spectrum-stepper-button-padding)) - var(--mod-stepper-button-border-width, var(--spectrum-stepper-button-border-width)));
-  padding-block-end: calc(var(--mod-stepper-button-fill-padding-inner-edge, var(--spectrum-stepper-button-fill-padding-inner-edge)) - var(--mod-stepper-button-border-width, var(--spectrum-stepper-button-border-width)));
-
-  margin-block-end: var(--mod-stepper-button-gap, var(--spectrum-stepper-button-gap));
-
-  border-start-start-radius: var(--mod-stepper-button-top-border-radius-start-start, var(--spectrum-stepper-button-top-border-radius-start-start));
-  border-start-end-radius: var(--mod-stepper-button-border-radius, var(--spectrum-stepper-button-border-radius));
-  border-end-start-radius: var(--mod-stepper-button-border-radius-reset, var(--spectrum-stepper-button-border-radius-reset));
-  border-end-end-radius: var(--mod-stepper-button-border-radius-reset, var(--spectrum-stepper-button-border-radius-reset));
-}
-
-.spectrum-Stepper-stepDown {
-  padding-block-start: calc(var(--mod-stepper-button-fill-padding-inner-edge, var(--spectrum-stepper-button-fill-padding-inner-edge)) - var(--mod-stepper-button-border-width, var(--spectrum-stepper-button-border-width)));
-  padding-block-end: calc(var(--mod-stepper-button-fill-padding-outer-edge, var(--spectrum-stepper-button-fill-padding-outer-edge)) - var(--mod-stepper-button-padding, var(--spectrum-stepper-button-padding)) - var(--mod-stepper-button-border-width, var(--spectrum-stepper-button-border-width)));
-  
-  margin-block-start: var(--mod-stepper-button-gap, var(--spectrum-stepper-button-gap));
-
-  border-block-start-width: 0;
-  border-start-start-radius: var(--mod-stepper-button-border-radius-reset, var(--spectrum-stepper-button-border-radius-reset));
-  border-start-end-radius: var(--mod-stepper-button-border-radius-reset, var(--spectrum-stepper-button-border-radius-reset)); 
-  border-end-end-radius: var(--mod-stepper-button-border-radius, var(--spectrum-stepper-button-border-radius));
-  border-end-start-radius: var(--mod-stepper-button-bottom-border-radius-end-start, var(--spectrum-stepper-button-bottom-border-radius-end-start));
 }
 
 /* hide-stepper */
