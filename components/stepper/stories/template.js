@@ -4,10 +4,9 @@ import { styleMap } from "lit/directives/style-map.js";
 import { ifDefined } from "lit/directives/if-defined.js";
 
 import { Template as Textfield } from "@spectrum-css/textfield/stories/template.js";
-import { Template as ActionButton } from "@spectrum-css/actionbutton/stories/template.js";
+import { Template as InfieldButton } from "@spectrum-css/infieldbutton/stories/template.js";
 
 import "../index.css";
-import "../skin.css";
 
 export const Template = ({
 	rootClass = "spectrum-Stepper",
@@ -80,21 +79,23 @@ export const Template = ({
 			${hideStepper
 				? ""
 				: html`<span class="${rootClass}-buttons">
-						${ActionButton({
+						${InfieldButton({
 							...globals,
 							size,
-							customClasses: [`${rootClass}-stepUp`],
+							customClasses: [`${rootClass}-button`],
 							iconName: `ChevronUp${iconSize}`,
 							isDisabled,
 							isQuiet,
+							position: "top"
 						})}
-						${ActionButton({
+						${InfieldButton({
 							...globals,
 							size,
-							customClasses: [`${rootClass}-stepDown`],
+							customClasses: [`${rootClass}-button`],
 							iconName: `ChevronDown${iconSize}`,
 							isDisabled,
 							isQuiet,
+							position: "bottom"
 						})}
 				  </span>`}
 		</div>

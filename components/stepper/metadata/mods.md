@@ -1,8 +1,11 @@
 | Modifiable Custom Properties                           |
 | ------------------------------------------------------ |
+| `--mod-infield-button-background-color`                |
+| `--mod-infield-button-border-color`                    |
+| `--mod-infield-button-border-color-quiet-disabled`     |
+| `--mod-infield-button-width-stacked`                   |
 | `--mod-stepper-animation-duration`                     |
 | `--mod-stepper-border-color`                           |
-| `--mod-stepper-border-color-disabled`                  |
 | `--mod-stepper-border-color-focus`                     |
 | `--mod-stepper-border-color-focus-hover`               |
 | `--mod-stepper-border-color-focus-hover-invalid`       |
@@ -12,12 +15,9 @@
 | `--mod-stepper-border-color-invalid`                   |
 | `--mod-stepper-border-color-keyboard-focus`            |
 | `--mod-stepper-border-color-keyboard-focus-invalid`    |
-| `--mod-stepper-border-color-quiet-disabled`            |
 | `--mod-stepper-border-radius`                          |
 | `--mod-stepper-border-width`                           |
-| `--mod-stepper-button-background-color`                |
 | `--mod-stepper-button-background-color-default`        |
-| `--mod-stepper-button-background-color-disabled`       |
 | `--mod-stepper-button-background-color-focus`          |
 | `--mod-stepper-button-background-color-hover`          |
 | `--mod-stepper-button-background-color-keyboard-focus` |
@@ -34,9 +34,13 @@
 | `--mod-stepper-button-top-border-radius-start-start`   |
 | `--mod-stepper-button-width`                           |
 | `--mod-stepper-button-width-quiet`                     |
+| `--mod-stepper-buttons-background-color`               |
+| `--mod-stepper-buttons-border-style`                   |
+| `--mod-stepper-buttons-border-width`                   |
 | `--mod-stepper-focus-indicator-color`                  |
 | `--mod-stepper-focus-indicator-gap`                    |
 | `--mod-stepper-focus-indicator-width`                  |
 | `--mod-stepper-height`                                 |
 | `--mod-stepper-min-width-multiplier`                   |
 | `--mod-stepper-width`                                  |
+| `--mod-textfield-focus-indicator-color`                |
