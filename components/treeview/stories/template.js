@@ -6,7 +6,6 @@ import { Template as Icon } from "@spectrum-css/icon/stories/template.js";
 import { Template as Thumbnail } from "@spectrum-css/thumbnail/stories/template.js";
 
 import "../index.css";
-import "../skin.css";
 
 export const TreeViewItem = ({
 	rootClass = "spectrum-TreeView",
