@@ -38,6 +38,9 @@ governing permissions and limitations under the License.
 
   --spectrum-stepper-animation-duration: var(--spectrum-animation-duration-100);
 
+  /*** MODS for Infield Button ***/
+  --mod-infield-button-border-color: var(--highcontrast-stepper-border-color, var(--mod-stepper-border-color, var(--spectrum-stepper-border-color)));
+
   &.spectrum-Stepper--sizeS {
     --spectrum-stepper-button-width: var(--spectrum-in-field-button-width-stacked-small);
     --spectrum-stepper-height: var(--spectrum-component-height-75);
@@ -65,15 +68,14 @@ governing permissions and limitations under the License.
     --spectrum-stepper-button-fill-padding-inner-edge: var(--spectrum-in-field-button-inner-edge-to-disclosure-icon-stacked-extra-large);
   }
 
-  /*** Disabled ***/
-  &.is-disabled {
-    --mod-stepper-button-background-color: var(--mod-stepper-button-background-color-disabled, var(--spectrum-disabled-background-color));
-    --mod-stepper-border-color: var(--mod-stepper-border-color-disabled, var(--spectrum-disabled-background-color));
-  }
-
   /*** Quiet ***/
   &.spectrum-Stepper--quiet {
-    --mod-stepper-button-width: var(--mod-stepper-button-width-quiet, var(--spectrum-stepper-button-width));
+    --mod-infield-button-width-stacked: var(--mod-stepper-button-width-quiet, var(--spectrum-stepper-button-width));
+    --mod-textfield-focus-indicator-color: transparent;
+  }
+
+  &.is-disabled {
+    --mod-infield-button-border-color-quiet-disabled: var(--spectrum-disabled-border-color);
   }
 
   /*** Invalid ***/
@@ -83,6 +85,7 @@ governing permissions and limitations under the License.
     --mod-stepper-border-color-focus: var(--mod-stepper-border-color-focus-invalid, var(--spectrum-negative-border-color-focus));
     --mod-stepper-border-color-focus-hover: var(--mod-stepper-border-color-focus-hover-invalid, var(--spectrum-negative-border-color-focus-hover));
     --mod-stepper-border-color-keyboard-focus: var(--mod-stepper-border-color-keyboard-focus-invalid, var(--spectrum-negative-border-color-key-focus));
+    --mod-infield-button-border-color: var(--mod-stepper-border-color-invalid, var(--spectrum-negative-border-color-default));
   }
 }
 
@@ -139,9 +142,10 @@ governing permissions and limitations under the License.
 
   /*** Hover ***/
   &:hover:not(.is-disabled) {
+    --mod-infield-button-border-color: var(--highcontrast-stepper-border-color-hover, var(--mod-stepper-border-color-hover, var(--spectrum-stepper-border-color-hover)));
+
     .spectrum-Stepper-input,
-    .spectrum-Stepper-buttons,
-    .spectrum-Stepper-button .spectrum-InfieldButton-fill {
+    .spectrum-Stepper-buttons {
       border-color: var(--highcontrast-stepper-border-color-hover, var(--mod-stepper-border-color-hover, var(--spectrum-stepper-border-color-hover)));
     }
   }
@@ -149,30 +153,32 @@ governing permissions and limitations under the License.
   /*** Focused ***/
   &.is-focused,
   &:focus {
+    --mod-infield-button-background-color: var(--highcontrast-stepper-button-background-color-focus, var(--mod-stepper-button-background-color-focus, var(--spectrum-stepper-button-background-color-focus)));
+    --mod-infield-button-border-color: var(--highcontrast-stepper-border-color-focus, var(--mod-stepper-border-color-focus, var(--spectrum-stepper-border-color-focus)));
+
     .spectrum-Stepper-input {
       outline: none;
     }
     .spectrum-Stepper-input,
-    .spectrum-Stepper-buttons,
-    .spectrum-Stepper-button .spectrum-InfieldButton-fill {
+    .spectrum-Stepper-buttons {
       border-color: var(--highcontrast-stepper-border-color-focus, var(--mod-stepper-border-color-focus, var(--spectrum-stepper-border-color-focus)));
     }
 
-    .spectrum-Stepper-stepUp,
-    .spectrum-Stepper-stepDown {
-      background-color: var(--highcontrast-stepper-button-background-color-focus, var(--mod-stepper-button-background-color-focus, var(--spectrum-stepper-button-background-color-focus)));
-    }
-
-    &:hover .spectrum-Stepper-input,
-    &:hover .spectrum-Stepper-buttons,
-    &:hover .spectrum-Stepper-button .spectrum-InfieldButton-fill {
-      border-color: var(--highcontrast-stepper-border-color-focus-hover, var(--mod-stepper-border-color-focus-hover, var(--spectrum-stepper-border-color-focus-hover)));
-    }
+    &:hover {
+      --mod-infield-button-border-color: var(--highcontrast-stepper-border-color-focus-hover, var(--mod-stepper-border-color-focus-hover, var(--spectrum-stepper-border-color-focus-hover)));
+      
+      .spectrum-Stepper-input,
+      .spectrum-Stepper-buttons {
+        border-color: var(--highcontrast-stepper-border-color-focus-hover, var(--mod-stepper-border-color-focus-hover, var(--spectrum-stepper-border-color-focus-hover)));
+      }
+    } 
   }
 
   /*** Keyboard Focused ***/
   &.is-keyboardFocused,
   &:focus-visible {
+    --mod-infield-button-background-color: var(--highcontrast-stepper-button-background-color-keyboard-focus, var(--mod-stepper-button-background-color-keyboard-focus, var(--spectrum-stepper-button-background-color-keyboard-focus)));
+    --mod-infield-button-border-color: var(--highcontrast-stepper-border-color-keyboard-focus, var(--mod-stepper-border-color-keyboard-focus, var(--spectrum-stepper-border-color-keyboard-focus)));
 
     /* keyboard focus indicator is visible */
     outline: var(--mod-stepper-focus-indicator-width, var(--spectrum-stepper-focus-indicator-width)) solid;
@@ -184,14 +190,8 @@ governing permissions and limitations under the License.
     }
     
     .spectrum-Stepper-input,
-    .spectrum-Stepper-buttons,
-    .spectrum-Stepper-button .spectrum-InfieldButton-fill {
+    .spectrum-Stepper-buttons {
       border-color: var(--highcontrast-stepper-border-color-keyboard-focus, var(--mod-stepper-border-color-keyboard-focus, var(--spectrum-stepper-border-color-keyboard-focus)));
-    }
-
-    .spectrum-Stepper-stepUp,
-    .spectrum-Stepper-stepDown {
-      background-color: var(--highcontrast-stepper-button-background-color-keyboard-focus, var(--mod-stepper-button-background-color-keyboard-focus, var(--spectrum-stepper-button-background-color-keyboard-focus)));
     }
   }
 
@@ -219,18 +219,26 @@ governing permissions and limitations under the License.
     block-size: var(--mod-stepper-focus-indicator-width, var(--spectrum-stepper-focus-indicator-width));
   }
 
+  .spectrum-Stepper-buttons {
+    border: none;
+  }
+
+  .spectrum-Stepper-button {
+    padding: 0;
+  }
+
+  .spectrum-Stepper-button.spectrum-InfieldButton--bottom .spectrum-InfieldButton-fill {
+    border-block-end-width: var(--mod-stepper-border-width, var(--spectrum-stepper-border-width));
+    border-end-end-radius: 0;
+    border-end-start-radius: 0;
+  }
+
+  .spectrum-Stepper-button .spectrum-InfieldButton-fill {
+    justify-content: flex-end;
+  }
+
   .spectrum-Stepper-stepUp,
   .spectrum-Stepper-stepDown {
-    min-inline-size: 0;
-
-    border-block-start: none;
-    border-inline-start: none;
-    border-inline-end: none;
-    border-radius: 0;
-    border-width: 0;
-
-    padding-inline-end: 0;
-    justify-content: flex-end;
 
     /* More hitarea */
     &::after {
@@ -299,8 +307,8 @@ governing permissions and limitations under the License.
   inline-size: var(--mod-stepper-button-width, var(--spectrum-stepper-button-width));
 
   border-color: var(--highcontrast-stepper-border-color, var(--mod-stepper-border-color, var(--spectrum-stepper-border-color)));
-  border-style: var(--spectrum-stepper-buttons-border-style);
-  border-width: var(--spectrum-stepper-buttons-border-width);
+  border-style: var(--mod-stepper-buttons-border-style, var(--spectrum-stepper-buttons-border-style));
+  border-width: var(--mod-stepper-buttons-border-width, var(--spectrum-stepper-buttons-border-width));
   border-inline-start-width: 0;
 
   /* Have to add border radius here to avoid overlapping textfield border */
@@ -309,10 +317,6 @@ governing permissions and limitations under the License.
 
   background-color: var(--highcontrast-stepper-buttons-background-color, var(--mod-stepper-buttons-background-color, var(--spectrum-stepper-buttons-background-color)));
   transition: border-color var(--mod-stepper-animation-duration, var(--spectrum-stepper-animation-duration)) ease-in-out;
-}
-
-.spectrum-Stepper-button .spectrum-InfieldButton-fill {
-  border-color: var(--highcontrast-stepper-border-color, var(--mod-stepper-border-color, var(--spectrum-stepper-border-color)));
 }
 
 .spectrum-Stepper-button.spectrum-InfieldButton--top {
@@ -350,12 +354,6 @@ governing permissions and limitations under the License.
   /*** Action Buttons Hover ***/
   &:hover {
     background-color: var(--highcontrast-stepper-button-background-color-hover, var(--mod-stepper-button-background-color-hover, var(--spectrum-stepper-button-background-color-hover)));
-  }
-
-  /*** Action Buttons Disabled **/
-  &:disabled {
-    border-color: var(--highcontrast-stepper-border-color-quiet-disabled, var(--mod-stepper-border-color-quiet-disabled, var(--spectrum-stepper-border-color-quiet-disabled)));
-    border-color: transparent;
   }
 }
 
