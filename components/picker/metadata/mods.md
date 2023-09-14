@@ -54,7 +54,6 @@
 | `--mod-picker-spacing-edge-to-text-quiet`              |
 | `--mod-picker-spacing-icon-to-disclosure-icon`         |
 | `--mod-picker-spacing-label-to-picker`                 |
-| `--mod-picker-spacing-label-to-picker-quiet`           |
 | `--mod-picker-spacing-picker-to-popover`               |
 | `--mod-picker-spacing-text-to-alert-icon-inline-start` |
 | `--mod-picker-spacing-text-to-icon`                    |
