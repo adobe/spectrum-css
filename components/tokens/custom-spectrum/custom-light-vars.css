@@ -37,4 +37,7 @@ governing permissions and limitations under the License.
   --spectrum-coach-indicator-ring-light-color: var(--spectrum-gray-50);
   --spectrum-well-border-color: var(--spectrum-black-rgb);
   --spectrum-steplist-current-marker-color-key-focus: var(--spectrum-blue-800);
+
+  --spectrum-treeview-item-background-color-quiet-selected: rgba(var(--spectrum-gray-900-rgb), 0.06);
+  --spectrum-treeview-item-background-color-selected: rgba(var(--spectrum-blue-900-rgb), 0.1);
 }

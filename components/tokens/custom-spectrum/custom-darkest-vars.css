@@ -37,4 +37,6 @@ governing permissions and limitations under the License.
   --spectrum-well-border-color: rgba(var(--spectrum-white-rgb), 0.05);
   --spectrum-steplist-current-marker-color-key-focus: var(--spectrum-blue-700);
 
-  }
+  --spectrum-treeview-item-background-color-quiet-selected: rgba(var(--spectrum-gray-900-rgb), 0.08);
+  --spectrum-treeview-item-background-color-selected: rgba(var(--spectrum-blue-800-rgb), 0.2);
+}
