@@ -315,6 +315,14 @@ governing permissions and limitations under the License.
   border-color: var(--highcontrast-stepper-border-color, var(--mod-stepper-border-color, var(--spectrum-stepper-border-color)));
 }
 
+.spectrum-Stepper-button.spectrum-InfieldButton--top {
+  padding-block-start: calc(var(--mod-stepper-button-padding, var(--spectrum-stepper-button-padding)) - var(--mod-stepper-border-width, var(--spectrum-stepper-border-width)));
+}
+
+.spectrum-Stepper-button.spectrum-InfieldButton--bottom {
+  padding-block-end: calc(var(--mod-stepper-button-padding, var(--spectrum-stepper-button-padding)) - var(--mod-stepper-border-width, var(--spectrum-stepper-border-width)));
+}
+
 .spectrum-Stepper-stepUp,
 .spectrum-Stepper-stepDown {
   box-sizing: border-box;
