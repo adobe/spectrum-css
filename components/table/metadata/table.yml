@@ -910,8 +910,8 @@ examples:
 
       To make sure that reverse keyboard link navigation (shift-tab) keeps the whole cell in focus, `--mod-table-current-header-height` should be dynamically updated with JS to match the height of `.spectrum-Table-head`.
     markup: |
-      <div class="spectrum-Table-scroller spectrum-Table spectrum-Table--sizeM" style="height: 200px">
-        <table class="spectrum-Table-main spectrum-Table--emphasized">
+      <div class="spectrum-Table-scroller spectrum-Table spectrum-Table--emphasized spectrum-Table--sizeM" style="height: 200px">
+        <table class="spectrum-Table-main">
           <thead class="spectrum-Table-head">
             <tr>
               <th class="spectrum-Table-headCell is-sortable is-sorted-desc" aria-sort="descending" tabindex="0">
@@ -967,7 +967,7 @@ examples:
     markup: |
       <div class="spectrum-Table-scroller spectrum-Table spectrum-Table--sizeM spectrum-Table--emphasized" style="height: 200px">
         <div class="spectrum-Table-main" role="table">
-          <div class="spectrum-Table-head role="rowgroup">
+          <div class="spectrum-Table-head" role="rowgroup">
             <div role="row">
               <div class="spectrum-Table-headCell is-sortable is-sorted-desc" role="columnheader" aria-sort="descending" tabindex="0">
                 <svg class="spectrum-Icon spectrum-UIIcon-ArrowDown100 spectrum-Table-sortedIcon" focusable="false" aria-hidden="true">
