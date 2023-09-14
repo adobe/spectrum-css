@@ -3,6 +3,45 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+<a name="9.0.0"></a>
+#9.0.0
+🗓
+2023-09-14 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/treeview@8.0.1...@spectrum-css/treeview@9.0.0)
+
+\*refactor(treeview)!: migrate to spectrum tokens([525485e](https://github.com/adobe/spectrum-css/commit/525485e)), closes[#1428](https://github.com/adobe/spectrum-css/issues/1428)[#1432](https://github.com/adobe/spectrum-css/issues/1432)
+
+    	###
+    	🛑 BREAKING CHANGES
+
+    		*
+    		migrate to use `@adobe/spectrum-tokens`
+
+Migrate to use of new Spectrum tokens package, with token values to match
+with the previous values through closest available tokens and hardcoded
+values.
+
+- Integrate skin.css into index.css
+- Replace remapvars with built vars
+- Various documentation updates
+- Simplify quiet variant styles to be custom property value overrides
+
+Including the following:
+
+fix(treeview): fix minor visual differences and misnamed variable
+
+Note:
+The previously named variables for the item padding were all named
+incorrectly (values within padding shorthand are top, right, bottom,
+left, but variables used were named left, top, right, bottom, so
+everything was shifted. The padding right token was the only one with a
+value greater than zero and it was actually being assigned to the
+padding bottom).
+
+fix(treeview): fix icons disappearing on hover
+
+Icon was appearing behind the ::before pseudo that is currently used
+for the hover background color.
+
 <a name="8.0.1"></a>
 ##8.0.1
 🗓

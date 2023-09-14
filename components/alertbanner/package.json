@@ -1,6 +1,6 @@
 {
   "name": "@spectrum-css/alertbanner",
-  "version": "1.1.26",
+  "version": "1.1.27",
   "description": "The Spectrum CSS alertbanner component",
   "license": "Apache-2.0",
   "author": "Adobe",
@@ -24,11 +24,11 @@
     "@spectrum-css/tokens": ">=10"
   },
   "devDependencies": {
-    "@spectrum-css/closebutton": "^4.0.8",
+    "@spectrum-css/closebutton": "^4.0.9",
     "@spectrum-css/component-builder-simple": "^2.0.17",
-    "@spectrum-css/divider": "^2.1.26",
+    "@spectrum-css/divider": "^2.1.27",
     "@spectrum-css/icon": "^4.0.2",
-    "@spectrum-css/tokens": "^11.3.5",
+    "@spectrum-css/tokens": "^11.3.6",
     "gulp": "^4.0.0"
   },
   "publishConfig": {

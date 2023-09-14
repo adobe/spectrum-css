@@ -1,6 +1,6 @@
 {
   "name": "@spectrum-css/buttongroup",
-  "version": "6.1.7",
+  "version": "6.1.8",
   "description": "The Spectrum CSS buttongroup component",
   "license": "Apache-2.0",
   "author": "Adobe",
@@ -22,10 +22,10 @@
     "@spectrum-css/tokens": ">=10"
   },
   "devDependencies": {
-    "@spectrum-css/button": "^11.0.9",
+    "@spectrum-css/button": "^11.0.10",
     "@spectrum-css/component-builder-simple": "^2.0.17",
     "@spectrum-css/icon": "^4.0.2",
-    "@spectrum-css/tokens": "^11.3.5",
+    "@spectrum-css/tokens": "^11.3.6",
     "gulp": "^4.0.0"
   },
   "publishConfig": {
