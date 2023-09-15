@@ -75,7 +75,7 @@ export const MenuItem = ({
         ? html`<span class="spectrum-Menu-sectionHeading">${label}</span>`
         : ''
       }
-      ${selectionMode != "multiple"
+      ${selectionMode != "multiple" && !isCollapsible
         ? html`<span class=${classMap({
           [`${rootClass}Label`]: true,
           ['spectrum-Switch-label']: hasActions,
