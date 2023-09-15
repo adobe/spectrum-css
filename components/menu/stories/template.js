@@ -2,10 +2,11 @@ import { html, css } from "lit";
 import { classMap } from "lit/directives/class-map.js";
 import { styleMap } from "lit/directives/style-map.js";
 import { ifDefined } from "lit/directives/if-defined.js";
-import { repeat } from "lit/directives/repeat.js";
 
 import { Template as Divider } from "@spectrum-css/divider/stories/template.js";
 import { Template as Icon } from "@spectrum-css/icon/stories/template.js";
+import { Template as Checkbox } from "@spectrum-css/checkbox/stories/template.js";
+import { Template as Switch } from "@spectrum-css/switch/stories/template.js";
 
 import "../index.css";
 
@@ -27,8 +28,12 @@ export const MenuItem = ({
   items = [],
   size,
   id,
+  hasActions,
+  selectionMode,
+  value,
   ...globals
-}) => html`
+}) => {
+  return html`
     <li
       class=${classMap({
         [`${rootClass}`]: true,
@@ -68,8 +73,16 @@ export const MenuItem = ({
           }) : ''}
       ${isCollapsible
         ? html`<span class="spectrum-Menu-sectionHeading">${label}</span>`
-        : html`<span class="${rootClass}Label">${label}</span>`
+        : ''
       }
+      ${selectionMode != "multiple" && !isCollapsible
+        ? html`<span class=${classMap({
+          [`${rootClass}Label`]: true,
+          ['spectrum-Switch-label']: hasActions,
+          })}>
+          ${label}
+        </span>`
+        : ''}
       ${typeof description != "undefined" 
         ? html`<span class="${rootClass}Description">${description}</span>`
         : ''}
@@ -84,7 +97,18 @@ export const MenuItem = ({
             ],
           })
         : ''}
-      ${isChecked
+      ${selectionMode == "multiple" 
+        ? Checkbox({
+          ...globals,
+          size,
+          isEmphasized: true,
+          label: label,
+          customClasses: [
+            `${rootClass}Checkbox`,
+          ],
+        })
+      : ''}
+      ${isChecked && selectionMode != "multiple"
         ? Icon({
             ...globals,
             iconName: "Checkmark100",
@@ -95,9 +119,25 @@ export const MenuItem = ({
             ],
           })
         : ''}
+        ${value
+          ? html`<span class="${rootClass}Value">${value}</span>`
+          : ''}
+        ${hasActions
+          ? html`<div class="${rootClass}Actions">
+          ${Switch({
+              ...globals,
+              size,
+              label: null,
+              customClasses: [
+                `${rootClass}Switch`,
+              ],
+            })}
+            </div>`
+          : ''}
       ${isCollapsible && items.length > 0 ? Template({ ...globals, items, isOpen, size }) : ''}
     </li>
-  `;
+  `
+};
 
 export const MenuGroup = ({
   heading,
@@ -141,20 +181,23 @@ export const Template = ({
   customStyles = {},
   size,
   isDisabled = false,
-  isSelectable = false,
+  selectionMode = "none",
   isOpen = false,
+  hasActions = false,
   items = [],
   role = "menu",
   subrole = "menuitem",
   id,
   ...globals
 }) => {
+
   return html`
     <ul
       class=${classMap({
         [rootClass]: true,
 				[`${rootClass}--size${size?.toUpperCase()}`]: typeof size !== "undefined",
-        "is-selectable": isSelectable,
+        "is-selectable": selectionMode === "single",
+        "is-selectableMultiple": selectionMode === "multiple",
         "is-open": isOpen,
         ...customClasses.reduce((a, c) => ({ ...a, [c]: true }), {}),
       })}
@@ -164,7 +207,7 @@ export const Template = ({
       aria-disabled=${isDisabled ? "true" : "false"}
       style=${styleMap(customStyles)}
     >
-      ${repeat(items, (i) => {
+      ${items.map((i, idx) => {
         if (i.type === "divider")
           return Divider({
             ...globals,
@@ -172,7 +215,7 @@ export const Template = ({
             size: "s",
             customClasses: [`${rootClass}-divider`],
           });
-        else if (i.heading) return MenuGroup({ ...i, ...globals, subrole, size });
+        else if (i.heading) return MenuGroup({ ...i, ...globals, subrole, size, selectionMode });
         else
           return MenuItem({
             ...globals,
@@ -180,6 +223,8 @@ export const Template = ({
             rootClass: `${rootClass}-item`,
             role: subrole,
             size,
+            selectionMode,
+            hasActions,
           });
       })}
     </ul>
