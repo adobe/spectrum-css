@@ -20,13 +20,8 @@ governing permissions and limitations under the License.
   --spectrum-stepper-border-radius: var(--spectrum-corner-radius-100);
 
   --spectrum-stepper-button-width: var(--spectrum-in-field-button-width-stacked-medium);
-  --spectrum-stepper-button-background-color: transparent;
 
   --spectrum-stepper-button-padding: var(--spectrum-in-field-button-edge-to-fill);
-  --spectrum-stepper-button-gap: var(--spectrum-in-field-button-stacked-inner-edge-to-fill);
-  --spectrum-stepper-button-fill-padding-inline: var(--spectrum-in-field-button-edge-to-disclosure-icon-stacked-medium);
-  --spectrum-stepper-button-fill-padding-outer-edge: var(--spectrum-in-field-button-outer-edge-to-disclosure-icon-stacked-medium);
-  --spectrum-stepper-button-fill-padding-inner-edge: var(--spectrum-in-field-button-inner-edge-to-disclosure-icon-stacked-medium);
 
   /*** Focus Indicator ***/
   --spectrum-stepper-focus-indicator-width: var(--spectrum-focus-indicator-thickness);
@@ -44,28 +39,16 @@ governing permissions and limitations under the License.
   &.spectrum-Stepper--sizeS {
     --spectrum-stepper-button-width: var(--spectrum-in-field-button-width-stacked-small);
     --spectrum-stepper-height: var(--spectrum-component-height-75);
-
-    --spectrum-stepper-button-fill-padding-inline: var(--spectrum-in-field-button-edge-to-disclosure-icon-stacked-small);
-    --spectrum-stepper-button-fill-padding-outer-edge: var(--spectrum-in-field-button-outer-edge-to-disclosure-icon-stacked-small);
-    --spectrum-stepper-button-fill-padding-inner-edge: var(--spectrum-in-field-button-inner-edge-to-disclosure-icon-stacked-small);
   }
 
   &.spectrum-Stepper--sizeL {
     --spectrum-stepper-button-width: var(--spectrum-in-field-button-width-stacked-large);
     --spectrum-stepper-height: var(--spectrum-component-height-200);
-
-    --spectrum-stepper-button-fill-padding-inline: var(--spectrum-in-field-button-edge-to-disclosure-icon-stacked-large);
-    --spectrum-stepper-button-fill-padding-outer-edge: var(--spectrum-in-field-button-outer-edge-to-disclosure-icon-stacked-large);
-    --spectrum-stepper-button-fill-padding-inner-edge: var(--spectrum-in-field-button-inner-edge-to-disclosure-icon-stacked-large);
   }
 
   &.spectrum-Stepper--sizeXL {
     --spectrum-stepper-button-width: var(--spectrum-in-field-button-width-stacked-extra-large);
     --spectrum-stepper-height: var(--spectrum-component-height-300);
-
-    --spectrum-stepper-button-fill-padding-inline: var(--spectrum-in-field-button-edge-to-disclosure-icon-stacked-extra-large);
-    --spectrum-stepper-button-fill-padding-outer-edge: var(--spectrum-in-field-button-outer-edge-to-disclosure-icon-stacked-extra-large);
-    --spectrum-stepper-button-fill-padding-inner-edge: var(--spectrum-in-field-button-inner-edge-to-disclosure-icon-stacked-extra-large);
   }
 
   /*** Quiet ***/
