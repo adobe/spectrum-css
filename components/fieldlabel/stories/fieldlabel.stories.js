@@ -85,3 +85,19 @@ RightAligned.args = {
 	alignment: "right",
 	style: { width: "72px" },
 };
+
+export const Required = Template.bind({});
+Required.args = {
+	label: "Label example",
+	alignment: "left",
+	isRequired: true,
+	style: { width: "200px" },
+};
+
+export const WrappingAndRequired = Template.bind({});
+WrappingAndRequired.args = {
+	label: "Label example with longer text that will wrap to the next line. And with an asterisk that marks it as required.",
+	alignment: "left",
+	isRequired: true,
+	style: { width: "200px" },
+};
