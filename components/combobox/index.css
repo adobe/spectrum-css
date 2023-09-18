@@ -136,8 +136,7 @@ governing permissions and limitations under the License.
   --spectrum-combobox-spacing-inline-start-edge-to-text: var(--spectrum-field-edge-to-text-quiet);
   --spectrum-combobox-spacing-label-to-combobox: var(--spectrum-field-label-to-component-quiet-medium);
   --spectrum-combobox-button-inline-offset: calc(
-    (var(--mod-combobox-block-size, var(--spectrum-combobox-block-size)) / 2) - 
-    (var(--mod-combobox-icon-size, var(--spectrum-combobox-icon-size)) / 2)
+    (var(--mod-combobox-block-size, var(--spectrum-combobox-block-size)) / 2) - (var(--mod-combobox-icon-size, var(--spectrum-combobox-icon-size)) / 2)
   );
 
   --spectrum-combobox-border-color-disabled: var(--spectrum-disabled-border-color);
@@ -182,8 +181,7 @@ governing permissions and limitations under the License.
   position: relative;
 
   display: inline-flex;
-  flex-direction: row;
-  flex-wrap: nowrap;
+  flex-flow: row nowrap;
 
   inline-size: var(--mod-combobox-inline-size, var(--spectrum-combobox-inline-size));
   min-inline-size: var(--mod-combobox-min-inline-size, var(--spectrum-combobox-min-inline-size));
@@ -215,6 +213,8 @@ governing permissions and limitations under the License.
     );
   }
 }
+
+/* stylelint-disable max-nesting-depth */
 
 /* PICKER BUTTON */
 .spectrum-Combobox-button {
@@ -313,6 +313,7 @@ governing permissions and limitations under the License.
     }
   }
 }
+/* stylelint-enable max-nesting-depth */
 
 /* TEXTFIELD (wrapper) */
 .spectrum-Combobox-textfield {
@@ -330,12 +331,12 @@ governing permissions and limitations under the License.
     var(--mod-combobox-border-width, var(--spectrum-combobox-border-width))
   );
   padding-inline-start: calc(
-    var(--mod-combobox-spacing-inline-start-edge-to-text, var(--spectrum-combobox-spacing-inline-start-edge-to-text)) - 
+    var(--mod-combobox-spacing-inline-start-edge-to-text, var(--spectrum-combobox-spacing-inline-start-edge-to-text)) -
     var(--mod-combobox-border-width, var(--spectrum-combobox-border-width))
   );
   padding-inline-end: calc(
-    var(--mod-combobox-button-width, var(--spectrum-combobox-button-width)) + 
-    var(--mod-combobox-spacing-inline-end-edge-to-text, var(--spectrum-combobox-spacing-inline-end-edge-to-text)) - 
+    var(--mod-combobox-button-width, var(--spectrum-combobox-button-width)) +
+    var(--mod-combobox-spacing-inline-end-edge-to-text, var(--spectrum-combobox-spacing-inline-end-edge-to-text)) -
     (var(--mod-combobox-border-width, var(--spectrum-combobox-border-width)) * 2)
   );
 
@@ -404,7 +405,7 @@ governing permissions and limitations under the License.
       var(--mod-combobox-spacing-inline-icon-to-button, var(--spectrum-combobox-spacing-inline-icon-to-button)) +
       var(--mod-combobox-icon-size, var(--spectrum-combobox-icon-size)) +
       var(--mod-combobox-spacing-inline-end-edge-to-text, var(--spectrum-combobox-spacing-inline-end-edge-to-text)) -
-      var(--mod-combobox-button-inline-offset, var(--spectrum-combobox-button-inline-offset, 0px)) - 
+      var(--mod-combobox-button-inline-offset, var(--spectrum-combobox-button-inline-offset, 0px)) -
       (var(--mod-combobox-border-width, var(--spectrum-combobox-border-width)) * 2)
     );
   }
@@ -505,7 +506,7 @@ governing permissions and limitations under the License.
 
     padding-inline-start: var(--mod-combobox-spacing-inline-start-edge-to-text, var(--spectrum-combobox-spacing-inline-start-edge-to-text));
     padding-inline-end: calc(
-      var(--mod-combobox-button-width, var(--spectrum-combobox-button-width)) + 
+      var(--mod-combobox-button-width, var(--spectrum-combobox-button-width)) +
       var(--mod-combobox-spacing-inline-end-edge-to-text, var(--spectrum-combobox-spacing-inline-end-edge-to-text)) -
       var(--mod-combobox-button-inline-offset, var(--spectrum-combobox-button-inline-offset, 0px))
     );
@@ -526,6 +527,6 @@ governing permissions and limitations under the License.
   &.is-disabled .spectrum-Combobox-textfield .spectrum-Combobox-input,
   .spectrum-Combobox-textfield.is-disabled .spectrum-Combobox-input,
   .spectrum-Combobox-input:disabled {
-    border-bottom-color: var(--highcontrast-combobox-border-color-disabled, var(--mod-combobox-border-color-disabled, var(--spectrum-combobox-border-color-disabled)));
+    border-block-end-color: var(--highcontrast-combobox-border-color-disabled, var(--mod-combobox-border-color-disabled, var(--spectrum-combobox-border-color-disabled)));
   }
 }

@@ -84,21 +84,21 @@ governing permissions and limitations under the License.
 }
 
 %spectrum-ButtonWithFocusRing {
-  &:after {
+  &::after {
     content: "";
     display: block;
     position: absolute;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    top: 0;
+    inset-block-start: 0;
+    inset-block-end: 0;
+    inset-inline-start: 0;
+    inset-inline-end: 0;
     margin: calc(var(--mod-focus-indicator-gap, var(--spectrum-focus-indicator-gap)) * -1);
     transition: opacity var(--mod-animation-duration-100, var(--spectrum-animation-duration-100)) ease-out,
                 margin var(--mod-animation-duration-100, var(--spectrum-animation-duration-100)) ease-out;
   }
 
   &:focus-visible {
-    &:after {
+    &::after {
       margin: calc(var(--mod-focus-indicator-gap, var(--spectrum-focus-indicator-gap)) * -2);
     }
   }

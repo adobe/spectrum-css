@@ -108,7 +108,7 @@ governing permissions and limitations under the License.
     forced-color-adjust: none;
     --highcontrast-statuslight-content-color-default: CanvasText;
     --highcontrast-statuslight-subdued-content-color-default: CanvasText;
-    &:before {
+    &::before {
       border: var(--mod-statuslight-border-width, var(--spectrum-statuslight-border-width)) solid ButtonText;
     }
   }
@@ -119,7 +119,7 @@ governing permissions and limitations under the License.
   flex-direction: row;
   align-items: flex-start;
 
-  min-height: var(--mod-statuslight-height, var(--spectrum-statuslight-height));
+  min-block-size: var(--mod-statuslight-height, var(--spectrum-statuslight-height));
 
   padding-block-start: var(--mod-statuslight-spacing-top-to-label, var(--spectrum-statuslight-spacing-top-to-label));
   padding-block-end: var(--mod-statuslight-spacing-bottom-to-label, var(--spectrum-statuslight-spacing-bottom-to-label));

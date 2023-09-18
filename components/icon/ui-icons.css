@@ -11,6 +11,7 @@ governing permissions and limitations under the License.
 */
 
 /* Hide UI icons on older browsers with SVG 1.1 implementations */
+/* stylelint-disable property-no-unknown declaration-property-value-no-unknown function-no-unknown */
 .spectrum--medium {
   .spectrum-UIIcon--large {
     display: none;
@@ -573,3 +574,4 @@ governing permissions and limitations under the License.
   inline-size: var(--spectrum-alias-ui-icon-asterisk-size-300);
   block-size: var(--spectrum-alias-ui-icon-asterisk-size-300);
 }
+/* stylelint-enable property-no-unknown declaration-property-value-no-unknown function-no-unknown */

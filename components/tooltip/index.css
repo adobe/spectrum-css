@@ -635,7 +635,8 @@ governing permissions and limitations under the License.
     }
   }
 
-   /* RTL */
+  /* stylelint-disable max-nesting-depth */
+  /* RTL */
   [dir="rtl"] & {
     &:hover,
     &:focus,
@@ -653,7 +654,7 @@ governing permissions and limitations under the License.
   &:focus,
   &.is-focused,
   *:focus {
-    .spectrum-Tooltip--right ,
+    .spectrum-Tooltip--right,
     .spectrum-Tooltip--right-top,
     .spectrum-Tooltip--right-bottom,
     .spectrum-Tooltip--end,

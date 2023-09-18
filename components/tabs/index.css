@@ -622,7 +622,7 @@ governing permissions and limitations under the License.
 		&.spectrum-Tabs--vertical.spectrum-Tabs--compact .spectrum-Tabs-item {
 			&::before {
 				block-size: 100%;
-				inset-block-start: 0px;
+				inset-block-start: 0;
 			}
 		}
 

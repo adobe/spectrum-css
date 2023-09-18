@@ -18,8 +18,7 @@ governing permissions and limitations under the License.
 
 .spectrum-SwatchGroup {
   display: inline-flex;
-  flex-direction: row;
-  flex-wrap: wrap;
+  flex-flow: row wrap;
   align-items: flex-start;
   justify-content: flex-start;
 }

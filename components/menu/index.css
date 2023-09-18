@@ -367,6 +367,7 @@ governing permissions and limitations under the License.
 
 .spectrum-Menu-item {
   display: grid;
+  /* stylelint-disable declaration-block-no-redundant-longhand-properties */
   grid-template-areas:
     ".            chevronAreaCollapsible .             iconArea sectionHeadingArea  .         .           .                 "
     "selectedArea chevronAreaCollapsible checkmarkArea iconArea labelArea        valueArea actionsArea chevronAreaDrillIn"
@@ -383,6 +384,7 @@ governing permissions and limitations under the License.
   grid-template-columns: auto auto;
   grid-template-rows: 1fr auto;
 }
+/* stylelint-enable declaration-block-no-redundant-longhand-properties */
 
 .spectrum-Menu-item .spectrum-Menu-item .spectrum-Menu-itemLabel {
   grid-area: submenuItemLabelArea;

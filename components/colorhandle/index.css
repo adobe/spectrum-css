@@ -57,56 +57,9 @@ governing permissions and limitations under the License.
     var(--mod-colorhandle-outer-border-width, var(--spectrum-colorhandle-outer-border-width))
     var(--mod-colorhandle-outer-border-color, var(--spectrum-colorhandle-outer-border-color));
 
-	/* Add a half-percent to fix diagonal line issue in Chrome on non-retina displays */
-	transition: inline-size
-			var(
-				--mod-colorhandle-animation-duration,
-				var(--spectrum-colorhandle-animation-duration)
-			)
-			var(
-				--mod-colorhandle-animation-easing,
-				var(--spectrum-colorhandle-animation-easing)
-			),
-		block-size
-			var(
-				--mod-colorhandle-animation-duration,
-				var(--spectrum-colorhandle-animation-duration)
-			)
-			var(
-				--mod-colorhandle-animation-easing,
-				var(--spectrum-colorhandle-animation-easing)
-			),
-		border-width
-			var(
-				--mod-colorhandle-animation-duration,
-				var(--spectrum-colorhandle-animation-duration)
-			)
-			var(
-				--mod-colorhandle-animation-easing,
-				var(--spectrum-colorhandle-animation-easing)
-			),
-		margin-inline
-			var(
-				--mod-colorhandle-animation-duration,
-				var(--spectrum-colorhandle-animation-duration)
-			)
-			var(
-				--mod-colorhandle-animation-easing,
-				var(--spectrum-colorhandle-animation-easing)
-			),
-		margin-block
-			var(
-				--mod-colorhandle-animation-duration,
-				var(--spectrum-colorhandle-animation-duration)
-			)
-			var(
-				--mod-colorhandle-animation-easing,
-				var(--spectrum-colorhandle-animation-easing)
-			);
-
   border-radius: 100%;
 
-  &:after {
+  &::after {
     content: '';
     inset-inline: calc(50% - calc(var(--mod-colorhandle-hitarea-size, var(--spectrum-colorhandle-hitarea-size)) / 2));
     inset-block: calc(50% - calc(var(--mod-colorhandle-hitarea-size, var(--spectrum-colorhandle-hitarea-size)) / 2));

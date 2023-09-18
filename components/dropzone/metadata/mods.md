@@ -15,7 +15,7 @@
 | `--mod-drop-zone-border-color`                         |
 | `--mod-drop-zone-border-color-hover`                   |
 | `--mod-drop-zone-border-style`                         |
-| `--mod-drop-zone-border-style--dragged`                |
+| `--mod-drop-zone-border-style-dragged`                 |
 | `--mod-drop-zone-border-width`                         |
 | `--mod-drop-zone-content-background-color`             |
 | `--mod-drop-zone-content-bottom-to-text`               |

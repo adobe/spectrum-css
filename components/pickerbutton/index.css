@@ -353,12 +353,7 @@ governing permissions and limitations under the License.
 		var(--spectrum-picker-button-border-width)
 	);
 	border-style: solid;
-	padding: calc(var(--mod-picker-button-fill-padding, var(--spectrum-picker-button-fill-padding)) - 
-	 	var(--mod-picker-button-padding, var(--spectrum-picker-button-padding)) -
-		var(
-			--mod-picker-button-border-width,
-			var(--spectrum-picker-button-border-width)
-	));
+	padding: calc(var(--mod-picker-button-fill-padding, var(--spectrum-picker-button-fill-padding)) - var(--mod-picker-button-padding, var(--spectrum-picker-button-padding)) - var(--mod-picker-button-border-width, var(--spectrum-picker-button-border-width)));
 
 	border-end-end-radius: var(
 		--mod-picker-button-border-radius,
@@ -424,7 +419,7 @@ governing permissions and limitations under the License.
 		display: none;
 	}
 	.spectrum-PickerButton-fill {
-		padding: 0px;
+		padding: 0;
 	}
 }
 

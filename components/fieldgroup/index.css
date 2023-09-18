@@ -27,9 +27,7 @@ governing permissions and limitations under the License.
 /* field group */
 .spectrum-FieldGroup {
   display: flex;
-  align-items: top;
-  flex-wrap: wrap;
-  flex-direction: column;
+  flex-flow: column wrap;
 
   /* field group label top aligned */
   &--toplabel {
@@ -45,9 +43,7 @@ governing permissions and limitations under the License.
 /* input fields layout */
 .spectrum-FieldGroupInputLayout {
   display: flex;
-  align-items: top;
-  flex-wrap: wrap;
-  flex-direction: column;
+  flex-flow: column wrap;
 
   /* input fields stacked vertically */
   .spectrum-FieldGroup--vertical & {
@@ -78,12 +74,8 @@ governing permissions and limitations under the License.
     }
 
     /* read-only checkbox fields delimited by commas */
-    &:not(:last-child) {
-      .spectrum-Checkbox-label {
-        &:after {
-          content: var(--spectrum-fieldgroup-readonly-delimiter)
-        }
-      }
+    &:not(:last-child) .spectrum-Checkbox-label::after {
+      content: var(--spectrum-fieldgroup-readonly-delimiter);
     }
   }
 }
