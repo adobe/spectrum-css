@@ -97,8 +97,10 @@ governing permissions and limitations under the License.
 	--spectrum-textfield-icon-spacing-inline-end-override: 32px; /* TODO - placeholder - reevaluate after combobox migration */
 
 	/* TODO - icon spacing override for search - reevaluate after search is migrated */
-	--spectrum-textfield-workflow-icon-width: 18px;
-	--spectrum-textfield-workflow-icon-gap: 6px;
+	/* @deprecation --spectrum-Textfield-workflow-icon-width and --spectrum-Textfield-workflow-icon-gap will be removed during the S2 migration; 
+	please update your code to --spectrum-textfield-workflow-icon-width and --spectrum-textfield-workflow-icon-gap */
+	--spectrum-textfield-workflow-icon-width: var(--spectrum-Textfield-workflow-icon-width, 18px);
+	--spectrum-textfield-workflow-icon-gap: var(--spectrum-Textfield-workflow-icon-gap, 6px);
 
 	/* font styles */
 	--spectrum-textfield-font-family: var(--spectrum-sans-font-family-stack);
