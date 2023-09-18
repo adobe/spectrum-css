@@ -113,9 +113,15 @@ governing permissions and limitations under the License.
 
   .spectrum-LogicButton {
     forced-color-adjust: none;
-    --mod-logic-button-and-background-color-disabled: ButtonFace;
-    --mod-logic-button-and-border-color-disabled: GrayText;
-    --mod-logic-button-and-text-color-disabled: GrayText;
+    &:disabled,
+    &.is-disabled {
+      --highcontrast-logic-button-and-background-color: ButtonFace;
+      --highcontrast-logic-button-and-border-color: GrayText;
+      --highcontrast-logic-button-and-text-color: GrayText;
+      --highcontrast-logic-button-or-background-color: ButtonFace;
+      --highcontrast-logic-button-or-border-color: GrayText;
+      --highcontrast-logic-button-or-text-color: GrayText;
+    }
 
     --highcontrast-logic-button-and-background-color: ButtonFace;
     --highcontrast-logic-button-and-background-color-hover: ButtonFace;
