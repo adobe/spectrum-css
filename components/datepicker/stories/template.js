@@ -10,7 +10,6 @@ import { Template as PickerButton } from "@spectrum-css/pickerbutton/stories/tem
 import { useArgs, useGlobals } from "@storybook/client-api";
 
 import "../index.css";
-import "../skin.css";
 
 export const Template = ({
 	rootClass = "spectrum-DatePicker",

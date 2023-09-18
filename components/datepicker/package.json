@@ -23,13 +23,13 @@
     "@spectrum-css/vars": ">=9"
   },
   "devDependencies": {
-    "@spectrum-css/component-builder": "^4.0.14",
     "@spectrum-css/icon": "^4.0.3",
     "@spectrum-css/menu": "^4.0.50",
     "@spectrum-css/pickerbutton": "^3.0.34",
     "@spectrum-css/popover": "^6.0.79",
     "@spectrum-css/textfield": "^6.0.25",
     "@spectrum-css/vars": "^9.0.8",
+    "@spectrum-css/component-builder-simple": "^2.0.17",
     "gulp": "^4.0.0"
   },
   "publishConfig": {
