@@ -10,10 +10,10 @@ examples:
   - id: logicbutton-and
     name: And
     markup: |
-      <button class="spectrum-LogicButton spectrum-LogicButton--and">And</button>
+      <button class="spectrum-LogicButton spectrum-LogicButton--and" style="margin-inline-end: 4px;">And</button>
       <button class="spectrum-LogicButton spectrum-LogicButton--and" disabled>And</button>
   - id: logicbutton-or
     name: Or
     markup: |
-      <button class="spectrum-LogicButton spectrum-LogicButton--or">Or</button>
+      <button class="spectrum-LogicButton spectrum-LogicButton--or" style="margin-inline-end: 4px;">Or</button>
       <button class="spectrum-LogicButton spectrum-LogicButton--or" disabled>Or</button>
