@@ -45,21 +45,26 @@ governing permissions and limitations under the License.
 
   --spectrum-rating-icon-spacing: var(--spectrum-spacing-75);
 
-  --spectrum-button-top-to-text-small: 5px;
-  --spectrum-button-bottom-to-text-small: 4px;
-  --spectrum-button-top-to-text-medium: 7px;
-  --spectrum-button-bottom-to-text-medium: 8px;
-  --spectrum-button-top-to-text-large: 10px;
-  --spectrum-button-bottom-to-text-large: 10px;
-  --spectrum-button-top-to-text-extra-large: 13px;
-  --spectrum-button-bottom-to-text-extra-large: 13px;
+
+    --spectrum-button-top-to-text-small: 5px;
+    --spectrum-button-bottom-to-text-small: 4px;
+    --spectrum-button-top-to-text-medium: 7px;
+    --spectrum-button-bottom-to-text-medium: 8px;
+    --spectrum-button-top-to-text-large: 10px;
+    --spectrum-button-bottom-to-text-large: 10px;
+    --spectrum-button-top-to-text-extra-large: 13px;
+    --spectrum-button-bottom-to-text-extra-large: 13px;
+
+
 
   /* addresses differences in button text positioning in firefox */
-  @supports (-moz-appearance:none){
-    --spectrum-button-top-to-text-small: 4px;
-    --spectrum-button-top-to-text-medium: 6px;
-    --spectrum-button-top-to-text-large: 9px;
-    --spectrum-button-top-to-text-extra-large: 12px;
+  @-mox-document url-prefix() {
+    @supports (-moz-apperence:none){
+      --spectrum-button-top-to-text-small: 4px;
+      --spectrum-button-top-to-text-medium: 6px;
+      --spectrum-button-top-to-text-large: 9px;
+      --spectrum-button-top-to-text-extra-large: 12px;
+    }
   }
 
   --spectrum-alert-banner-close-button-spacing: var(--spectrum-spacing-100);
