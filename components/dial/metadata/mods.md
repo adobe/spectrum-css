@@ -20,6 +20,7 @@
 | `--mod-dial-handle-position`               |
 | `--mod-dial-handle-size`                   |
 | `--mod-dial-height`                        |
+| `--mod-dial-label-container-top-to-text`   |
 | `--mod-dial-label-gap-y`                   |
 | `--mod-dial-label-line-height`             |
 | `--mod-dial-label-text-color`              |
@@ -29,4 +30,3 @@
 | `--mod-dial-min-max-tick-angles`           |
 | `--mod-dial-min-max-tick-color`            |
 | `--mod-dial-width`                         |
-| `--mod-fieldlabel-m-padding-top`           |

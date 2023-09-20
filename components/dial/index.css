@@ -98,7 +98,7 @@ governing permissions and limitations under the License.
   display: flex;
   position: relative;
   inline-size: auto;
-  padding-block-start: var(--mod-fieldlabel-m-padding-top, var(--spectrum-fieldlabel-m-padding-top));
+  padding-block-start: var(--mod-dial-label-container-top-to-text, var(--spectrum-dial-label-container-top-to-text));
   font-size: var(--mod-dial-label-text-size, var(--spectrum-dial-label-text-size));
   line-height: var(--mod-dial-label-line-height, var(--spectrum-dial-label-line-height));
   margin-block-end: var(--mod-dial-label-gap-y, var(--spectrum-dial-label-gap-y));
