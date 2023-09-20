@@ -71,6 +71,7 @@ export const Template = ({
 				min: "-2",
 				max: "2",
 				step: "0.5",
+				value: "0",
 				isDisabled,
 				isQuiet,
 				customClasses: [`${rootClass}-textfield`],
