@@ -55,8 +55,6 @@ governing permissions and limitations under the License.
     --spectrum-button-top-to-text-extra-large: 13px;
     --spectrum-button-bottom-to-text-extra-large: 13px;
 
-
-
   /* addresses differences in button text positioning in firefox */
   @-mox-document url-prefix() {
     @supports (-moz-apperence:none){
