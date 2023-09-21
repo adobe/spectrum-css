@@ -18,6 +18,7 @@ export const Template = ({
 			})}
 			aria-disabled=${isDisabled ? "true" : "false"}
 			?disabled=${isDisabled}
+			type="button"
 		>
 			${variant
 				? variant.charAt(0).toUpperCase() + variant.slice(1)
