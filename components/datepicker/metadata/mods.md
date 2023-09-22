@@ -1,0 +1,21 @@
+| Modifiable Custom Properties                        |
+| --------------------------------------------------- |
+| `--mod-combobox-quiet-fieldbutton-border-radius`    |
+| `--mod-datepicker-border-color-disabled`            |
+| `--mod-datepicker-border-radius`                    |
+| `--mod-datepicker-dash-color-disabled`              |
+| `--mod-datepicker-dash-font-size`                   |
+| `--mod-datepicker-datetime-quiet-input-width`       |
+| `--mod-datepicker-datetime-quiet-input-width-first` |
+| `--mod-datepicker-generic-padding`                  |
+| `--mod-datepicker-icon-to-text-right`               |
+| `--mod-datepicker-input-padding-right`              |
+| `--mod-datepicker-input-width`                      |
+| `--mod-datepicker-input-width-quiet`                |
+| `--mod-datepicker-invalid-quiet-color`              |
+| `--mod-datepicker-min-width`                        |
+| `--mod-datepicker-quiet-border-color-hover`         |
+| `--mod-datepicker-range-dash-line-height`           |
+| `--mod-datepicker-range-dash-margin-left`           |
+| `--mod-datepicker-range-dash-padding-top`           |
+| `--mod-datepicker-range-input-width-first`          |
