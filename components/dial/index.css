@@ -203,8 +203,8 @@ governing permissions and limitations under the License.
   }
 
   &.is-focused {
-    background-color: var(--highcontrast-dial-handle-marker-color-key-focus, var(--mod-dial-handle-marker-color-key-focus, var(--spectrum-dial-handle-marker-color-key-focus)));
-    border-color: var(--highcontrast-dial-handle-marker-color-key-focus, var(--mod-dial-handle-marker-color-key-focus, var(--spectrum-dial-handle-marker-color-key-focus)));
+    background-color: var(--highcontrast-dial-handle-marker-color-mouse-focus, var(--mod-dial-handle-marker-color-mouse-focus, var(--spectrum-dial-handle-marker-color-mouse-focus)));
+    border-color: var(--highcontrast-dial-handle-marker-color-mouse-focus, var(--mod-dial-handle-marker-color-mouse-focus, var(--spectrum-dial-handle-marker-color-mouse-focus)));
 
     &::after {
       background-color: var(--highcontrast-dial-handle-marker-color-key-focus, var(--mod-dial-handle-marker-color-key-focus, var(--spectrum-dial-handle-marker-color-key-focus)));
