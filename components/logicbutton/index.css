@@ -10,9 +10,7 @@ OF ANY KIND, either express or implied. See the License for the specific languag
 governing permissions and limitations under the License.
 */
 
-@import "../vars/css/scales/spectrum-large.css";
-@import "../vars/css/scales/spectrum-medium.css";
-@import "../commons/basebutton.css";
+@import "../commons/basebutton-coretokens.css";
 
 .spectrum-LogicButton {
   --spectrum-logic-button-height: 24px;
@@ -76,7 +74,7 @@ governing permissions and limitations under the License.
   &:focus-visible {
     outline: none;
     &:after {
-      box-shadow: 0 0 0 var(--mod-logic-button-focus-indicator-width, var(--spectrum-logic-button-focus-indicator-width)) 
+      box-shadow: 0 0 0 var(--mod-logic-button-focus-indicator-width, var(--spectrum-logic-button-focus-indicator-width))
       var(--highcontrast-logic-button-focus-indicator-color, var(--mod-logic-button-focus-indicator-color, var(--spectrum-logic-button-focus-indicator-color)));
     }
   }
