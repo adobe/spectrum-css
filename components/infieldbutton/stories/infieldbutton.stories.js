@@ -34,7 +34,7 @@ export default {
         type: { summary: "string" },
         category: "Component",
       },
-      options: ["left", "right"],
+      options: ["left", "right", "top", "bottom"],
       control: "select"
     },
     iconName: {
