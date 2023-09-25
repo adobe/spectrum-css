@@ -13,7 +13,6 @@ governing permissions and limitations under the License.
 .spectrum-DatePicker {
   --spectrum-datepicker-border-radius: var(--spectrum-corner-radius-100);
   --spectrum-datepicker-min-width: var(--spectrum-field-width);
-  --spectrum-datepicker-initial-width: 128px;  /* 160px */
   --spectrum-datepicker-initial-height: var(--spectrum-component-height-100); /* for express component-height-75 */
   --spectrum-datepicker-generic-padding: var(--spectrum-spacing-200); /* 12px; 15px; */
   --spectrum-datepicker-icon-size: 18px; /* 22px */
@@ -34,6 +33,9 @@ governing permissions and limitations under the License.
   --spectrum-datepicker-focus-line-gap: var(--spectrum-spacing-75);
 
   --spectrum-datepicker-invalid-quiet-color: var(--spectrum-negative-border-color-default);
+  --spectrum-datepicker-invalid-icon-to-button: 8px; /* 10 */
+  --spectrum-datepicker-invalid-icon-to-button-quiet: 0;
+  --spectrum-datepicker-invalid-text-to-icon: var(--spectrum-field-text-to-alert-icon-medium);
 
   --spectrum-datepicker-quiet-border-color-hover: var(--spectrum-gray-500);
   --spectrum-datepicker-border-color-disabled: var(--spectrum-disabled-border-color);
@@ -86,6 +88,13 @@ governing permissions and limitations under the License.
   /* Be above textfield so box shadow shines through */
   position: absolute;
   inset-inline-end: 0;
+}
+
+/* positions invlaid icon to be left of picker button */
+.spectrum-PickerButton-icon {
+  --datepicker-button-width: calc((var(--spectrum-field-edge-to-disclosure-icon-100) * 2) + var(--spectrum-icon-size-m));
+  --mod-textfield-icon-spacing-inline-end-invalid: calc(var(--datepicker-button-width)  + var(--spectrum-datepicker-invalid-icon-to-button));
+  --mod-textfield-icon-spacing-inline-end-quiet-invalid: var(--spectrum-datepicker-button-width);
 }
 
 .spectrum-DatePicker-input {
@@ -194,8 +203,9 @@ governing permissions and limitations under the License.
       inline-size: var(--mod-datepicker-range-input-width-first, var(--spectrum-datepicker-range-input-width-first));
     }
     &.is-invalid {
-      .spectrum-DatePicker-input {
-        padding-inline-end: var(--mod-datepicker-generic-padding, var(--spectrum-datepicker-generic-padding));
+      .spectrum-DatePicker-endField {
+        padding-inline-end: calc(60px + var(--mod-datepicker-invalid-text-to-icon, var(--spectrum-datepicker-invalid-text-to-icon)));
+        };
       }
     }
   }
@@ -217,7 +227,7 @@ governing permissions and limitations under the License.
     }
   }
 
-  /* Em dash */
+  /* "-" between inputs */
   .spectrum-DatePicker-rangeDash {
     line-height: var(--mod-datepicker-range-dash-line-height, var(--spectrum-datepicker-range-dash-line-height));
     padding-block-start: var(--mod-datepicker-range-dash-padding-top, var(--spectrum-datepicker-range-dash-padding-top));
@@ -235,7 +245,6 @@ governing permissions and limitations under the License.
       inline-size: var(--mod-datepicker-dash-font-size, var(--spectrum-datepicker-dash-font-size));
     }
   }
-}
 
 .spectrum-DatePicker--quiet {
   .spectrum-DatePicker-button {
