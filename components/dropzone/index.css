@@ -114,7 +114,8 @@ governing permissions and limitations under the License.
   }
 
   &.is-dragged {
-    --mod-drop-zone-border-style: var(--mod-drop-zone-border-style--dragged, solid);
+    /* @deprecation --mod-drop-zone-border-style--dragged will be removed during the S2 migration; please update your code to --mod-drop-zone-border-style-dragged */
+    --mod-drop-zone-border-style: var(--mod-drop-zone-border-style--dragged, var(--mod-drop-zone-border-style-dragged, solid));
     --mod-drop-zone-background-color: rgba(var(--spectrum-drop-zone-background-color), var(--mod-drop-zone-background-color-opacity, var(--spectrum-drop-zone-background-color-opacity)));
     --spectrum-drop-zone-border-color: var(--highcontrast-drop-zone-border-color-hover, var(--mod-drop-zone-border-color-hover, var(--spectrum-drop-zone-border-color-hover)));
 
@@ -143,7 +144,7 @@ governing permissions and limitations under the License.
 
 .spectrum-DropZone-content {
   display: var(--mod-drop-zone-content-display, none);
-  height: 100%;
+  block-size: 100%;
   align-items: center;
   justify-content: center;
   position: relative;
@@ -174,11 +175,9 @@ governing permissions and limitations under the License.
   .spectrum-DropZone {
     --highcontrast-drop-zone-illustration-color: CanvasText;
 
-    --highcontrast-drop-zone-illustration-color-hover: Highlight;
     --highcontrast-drop-zone-border-color-hover: Highlight;
 
     /* Updated values for a nested illustrated message when in a high contrast state */
     --highcontrast-illustrated-message-illustration-color: var(--highcontrast-drop-zone-illustration-color);
-    --highcontrast-illustrated-message-illustration-color: var(--highcontrast-drop-zone-illustration-color-hover);
   }
 }

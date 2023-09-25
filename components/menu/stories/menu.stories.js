@@ -7,23 +7,11 @@ export default {
     "A menu is used for creating a menu list. The various elements inside a menu can be: a menu group, a menu item, or a menu divider. Often a menu will appear in a popover so that it displays as a togglig menu.",
   component: "Menu",
   argTypes: {
-    isDisabled: {
-      name: "Disabled",
+    selectionMode: {
+      name: "Selection Mode",
       type: { name: "boolean" },
-      table: {
-        type: { summary: "boolean" },
-        category: "State",
-      },
-      control: "boolean",
-    },
-    isSelectable: {
-      name: "Selectable",
-      type: { name: "boolean" },
-      table: {
-        type: { summary: "boolean" },
-        category: "State",
-      },
-      control: "boolean",
+      table: { disable: true },
+      options: ["none", "single", "multiple"],
     },
 		size: {
 			name: "Size",
@@ -35,6 +23,7 @@ export default {
 			options: ["s", "m", "l", "xl"],
 			control: "select",
 		},
+    hasActions: { table: { disable: true } },
     labelledby: { table: { disable: true } },
     items: { table: { disable: true } },
     role: { table: { disable: true } },
@@ -50,8 +39,7 @@ export default {
   },
   args: {
     rootClass: "spectrum-Menu",
-    isDisabled: false,
-    isSelectable: false,
+    selectionMode: "none",
     size: "m",
   },
   parameters: {
@@ -100,7 +88,6 @@ MenuWithSections.args = {
         { label: "Edit", iconName: "Edit" },
         { label: "Copy", iconName: "Copy", isDisabled: true },
       ],
-      isDisabled: true,
     },
   ],
 };
@@ -109,7 +96,7 @@ export const MenuWithCheckmark = Template.bind({});
 MenuWithCheckmark.args = {
   role: "listbox",
   subrole: "option",
-  isSelectable: true,
+  selectionMode: "single",
   items: [
     {
       idx: 1,
@@ -135,7 +122,6 @@ MenuWithCheckmark.args = {
           isChecked: true,
         },
       ],
-      isDisabled: true,
     },
   ],
 };
@@ -246,7 +232,7 @@ SingleSelection.parameters = {
 	},
 };
 SingleSelection.args = {
-  isSelectable: true,
+  selectionMode: "single",
   customStyles: {'max-width': '1000px'},
   items: [
     {
@@ -261,7 +247,7 @@ SingleSelection.args = {
 
 export const SingleSelectionWithIcons = Template.bind({});
 SingleSelectionWithIcons.args = {
-  isSelectable: true,
+  selectionMode: "single",
   customStyles: {'max-width': '1000px'},
   items: [
     {
@@ -277,6 +263,62 @@ SingleSelectionWithIcons.args = {
     {
       label: "Subtract",
       iconName: "SelectSubtract",
+    },
+  ],
+};
+
+export const MultipleSelection = Template.bind({});
+MultipleSelection.args = {
+  selectionMode: "multiple",
+  customStyles: {'max-width': '1000px'},
+  items: [
+    {
+      label: "Marquee. Extra long menu item text to demonstrate wrapping text and alignment of icon in this situation. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
+      isSelected: true,
+      isChecked: true,
+    },
+    {
+      label: "Add",
+    },
+    {
+      label: "Subtract",
+    },
+  ],
+};
+
+export const WithActions = Template.bind({});
+WithActions.args = {
+  hasActions: true,
+  customStyles: {'max-width': '1000px'},
+  items: [
+    {
+      label: "Marquee. Extra long menu item text to demonstrate wrapping text and alignment of icon in this situation. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
+    },
+    {
+      label: "Add",
+    },
+    {
+      label: "Subtract",
+    },
+  ],
+};
+
+export const WithValueAndActions = Template.bind({});
+WithValueAndActions.args = {
+  hasActions: true,
+  customStyles: {'max-width': '1000px'},
+  items: [
+    {
+      label: "Marquee. Extra long menu item text to demonstrate wrapping text and alignment of icon in this situation. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
+      value: "Value"
+    },
+    {
+      label: "Add",
+      value: "Value"
+    },
+    {
+      label: "Subtract",
+      value: "Value"
     },
   ],
 };

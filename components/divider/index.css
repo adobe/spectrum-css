@@ -127,7 +127,7 @@ governing permissions and limitations under the License.
                     var(--spectrum-divider-thickness));
 
     margin-block: var(--mod-divider-vertical-margin);
-    height: var(--mod-divider-vertical-height);
+    block-size: var(--mod-divider-vertical-height);
     align-self: var(--mod-divider-vertical-align);
   }
 }

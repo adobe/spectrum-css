@@ -28,7 +28,7 @@ governing permissions and limitations under the License.
   font-weight: var(--spectrum-logicbutton-and-text-font-weight);
   line-height: 0;
 
-  &:after {
+  &::after {
     /* Override border-radius set in %spectrum-ButtonWithFocusRing since this is not a pill button */
     border-radius: calc(
       var(--spectrum-logicbutton-and-border-radius) +
@@ -40,7 +40,7 @@ governing permissions and limitations under the License.
 .spectrum-LogicButton {
   &:focus-visible {
     outline: none;
-    &:after {
+    &::after {
       box-shadow: 0 0 0 var(--spectrum-button-m-primary-outline-texticon-focus-ring-size) var(--spectrum-button-m-primary-outline-texticon-focus-ring-color-key-focus);
     }
   }

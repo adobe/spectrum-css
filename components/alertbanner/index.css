@@ -53,7 +53,7 @@ governing permissions and limitations under the License.
   font-size: var(--mod-alert-banner-font-size, var(--spectrum-alert-banner-font-size));
   color: var(--mod-alert-banner-font-color, var(--spectrum-alert-banner-font-color));
   background-color: var(--mod-alert-banner-netural-background, var(--spectrum-alert-banner-netural-background));
-  border: var(--highcontrast-alert-banner-border-width, 0px) solid var(--highcontrast-alert-banner-border-color, transparent);
+  border: var(--highcontrast-alert-banner-border-width, 0) solid var(--highcontrast-alert-banner-border-color, transparent);
 
   &.is-open {
     display: flex;
@@ -69,7 +69,7 @@ governing permissions and limitations under the License.
 }
 
 .spectrum-AlertBanner-body {
-  width: 100%;
+  inline-size: 100%;
   display: flex;
   /* --mod-* for alert-banner-text-to-button-vertical will only accept values larger than alert-banner-edge-to-bottom, as gap only recognizes positive values */
   gap: max(calc(var(--mod-alert-banner-text-to-button-vertical, var(--spectrum-alert-banner-text-to-button-vertical)) - var(--mod-alert-banner-edge-to-button, var(--spectrum-alert-banner-edge-to-button))), 0px);

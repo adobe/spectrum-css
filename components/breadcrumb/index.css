@@ -128,13 +128,10 @@ governing permissions and limitations under the License.
   padding-inline-end: var(--mod-breadcrumbs-inline-end, var(--spectrum-breadcrumbs-inline-end));
 
   display: flex;
-  flex-wrap: nowrap;
-  flex-direction: row;
+  flex-flow: row nowrap;
   align-items: center;
   justify-content: flex-start;
-  flex-grow: 1;
-  flex-shrink: 0;
-  flex-basis: 0%;
+  flex: 1 0 0%;
 
   block-size: var(--mod-breadcrumbs-block-size, var(--spectrum-breadcrumbs-block-size));
 
@@ -156,7 +153,7 @@ governing permissions and limitations under the License.
   margin-block: var(--mod-breadcrumbs-icon-spacing-block, var(--spectrum-breadcrumbs-icon-spacing-block));
   margin-inline: var(--mod-breadcrumbs-separator-spacing-inline, var(--spectrum-breadcrumbs-separator-spacing-inline));
 
-  transform: logical scale(1) rotate(0deg);
+  transform: logical scale(1) rotate(0deg); /* stylelint-disable-line declaration-property-value-no-unknown */
 
   opacity: 1;
   color: var(--highcontrast-breadcrumbs-separator-color, var(--mod-breadcrumbs-separator-color, var(--spectrum-breadcrumbs-separator-color)));
@@ -309,8 +306,8 @@ governing permissions and limitations under the License.
 }
 
 /* focus indicator */
-.spectrum-Breadcrumbs-item.is-dragged .spectrum-Breadcrumbs-itemLink:before,
-.spectrum-Breadcrumbs-itemLink:focus-visible:before {
+.spectrum-Breadcrumbs-item.is-dragged .spectrum-Breadcrumbs-itemLink::before,
+.spectrum-Breadcrumbs-itemLink:focus-visible::before {
   position: absolute;
 
   margin-inline-start: calc((var(--mod-breadcrumbs-focus-indicator-gap, var(--spectrum-breadcrumbs-focus-indicator-gap))

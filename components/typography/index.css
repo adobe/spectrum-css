@@ -353,7 +353,7 @@ governing permissions and limitations under the License.
 
 /* Windows high contrast mode */
 @media (forced-colors: active) {
-  .spectrum-body {
+  .spectrum-Body {
     --highcontrast-body-font-color: Text;
   }
 }

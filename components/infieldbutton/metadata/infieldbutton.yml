@@ -124,6 +124,24 @@ examples:
     markup: |
       <div class="spectrum-Examples">
         <div class="spectrum-Examples-item">
+          <h4 class="spectrum-Heading spectrum-Heading--sizeXS spectrum-Examples-itemHeading">S</h4>
+          <button class="spectrum-InfieldButton spectrum-InfieldButton--sizeS spectrum-InfieldButton--top" aria-haspopup="listbox" aria-label="Add">
+            <div class="spectrum-InfieldButton-fill">
+              <svg class="spectrum-Icon spectrum-UIIcon-ChevronUp50 spectrum-InfieldButton-icon" focusable="false" aria-hidden="true">
+                  <use xlink:href="#spectrum-css-icon-Chevron50" />
+                </svg>
+            </div>
+          </button>
+          <button class="spectrum-InfieldButton spectrum-InfieldButton--sizeS spectrum-InfieldButton--bottom" aria-haspopup="listbox" aria-label="Add">
+            <div class="spectrum-InfieldButton-fill">
+              <svg class="spectrum-Icon spectrum-UIIcon-ChevronDown50 spectrum-InfieldButton-icon" focusable="false" aria-hidden="true">
+                <use xlink:href="#spectrum-css-icon-Chevron50" />
+              </svg>
+            </div>
+          </button>
+        </div>
+
+        <div class="spectrum-Examples-item">
           <h4 class="spectrum-Heading spectrum-Heading--sizeXS spectrum-Examples-itemHeading">M</h4>
           <button class="spectrum-InfieldButton spectrum-InfieldButton--sizeM spectrum-InfieldButton--top" aria-haspopup="listbox" aria-label="Add">
             <div class="spectrum-InfieldButton-fill">
