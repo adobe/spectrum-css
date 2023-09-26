@@ -85,7 +85,7 @@ governing permissions and limitations under the License.
   border-color: var(--highcontrast-logic-button-and-border-color, var(--mod-logic-button-and-border-color, var(--spectrum-logic-button-and-border-color)));
   color: var(--highcontrast-logic-button-and-text-color, var(--mod-logic-button-and-text-color, var(--spectrum-logic-button-and-text-color)));
 
-  &:hover {
+  &:hover:not([disabled]) {
     background-color: var(--highcontrast-logic-button-and-background-color-hover, var(--mod-logic-button-and-background-color-hover, var(--spectrum-logic-button-and-background-color-hover)));
     border-color: var(--highcontrast-logic-button-and-border-color-hover, var(--mod-logic-button-and-border-color-hover, var(--spectrum-logic-button-and-border-color-hover)));
   }
@@ -96,7 +96,7 @@ governing permissions and limitations under the License.
   border-color: var(--highcontrast-logic-button-or-border-color, var(--mod-logic-button-or-border-color, var(--spectrum-logic-button-or-border-color)));
   color: var(--highcontrast-logic-button-or-text-color, var(--mod-logic-button-or-text-color, var(--spectrum-logic-button-or-text-color)));
 
-  &:hover {
+  &:hover:not([disabled]) {
     background-color: var(--highcontrast-logic-button-or-background-color-hover, var(--mod-logic-button-or-background-color-hover, var(--spectrum-logic-button-or-background-color-hover)));
     border-color: var(--highcontrast-logic-button-or-border-color-hover, var(--mod-logic-button-or-border-color-hover, var(--spectrum-logic-button-or-border-color-hover)));
   }
