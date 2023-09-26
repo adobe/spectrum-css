@@ -18,10 +18,12 @@
     "build": "gulp"
   },
   "peerDependencies": {
+    "@spectrum-css/alertdialog": ">=1",
     "@spectrum-css/dialog": ">=6",
     "@spectrum-css/tokens": ">=11"
   },
   "devDependencies": {
+    "@spectrum-css/alertdialog": "^1.0.9",
     "@spectrum-css/button": "^11.0.11",
     "@spectrum-css/component-builder-simple": "^2.0.17",
     "@spectrum-css/dialog": "^8.0.7",
