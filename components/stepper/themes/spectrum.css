@@ -11,23 +11,21 @@ governing permissions and limitations under the License.
 */
 
 @container (--system: spectrum) {
-  /* @todo remove this when stepper is migrated; this ensures stepper buttons inherit border color and width */
   .spectrum-Stepper {
-    --spectrum-stepper-border-width: var(--spectrum-border-width-100); /* spectrum stepper has border */
-    --spectrum-stepper-button-border-width-reset: var(--spectrum-border-width-100); /* spectrum stepper has border */
-    --spectrum-stepper-button-icon-nudge: calc(-1 * var(--spectrum-corner-radius-100) / 2);
+    --spectrum-stepper-border-width: var(--spectrum-border-width-100);
 
-    --spectrum-stepper-button-gap-reset: 0px; /* spectrum buttons have no middle gap */
-    --spectrum-stepper-button-border-radius-reset: 0px;
+    --spectrum-stepper-buttons-border-style: none;
+    --spectrum-stepper-buttons-border-width: 0;
+    --spectrum-stepper-buttons-background-color: var(--spectrum-gray-50);
 
     --spectrum-stepper-border-color: var(--spectrum-gray-500);
     --spectrum-stepper-border-color-hover: var(--spectrum-gray-600);
     --spectrum-stepper-border-color-focus: var(--spectrum-gray-800);
-    --spectrum-stepper-border-color-focus-hover: var(--spectrum-gray-900);
-    --spectrum-stepper-border-color-keyboard-focus: var(--spectrum-gray-900);
+    --spectrum-stepper-border-color-focus-hover: var(--spectrum-gray-800);
+    --spectrum-stepper-border-color-keyboard-focus: var(--spectrum-gray-900); 
 
-    --spectrum-stepper-button-background-color-default: var(--spectrum-gray-75);
-    --spectrum-stepper-button-background-color-hover: var(--spectrum-gray-200);
+    --spectrum-stepper-button-border-radius-reset: 0px;
+
     --spectrum-stepper-button-background-color-focus: var(--spectrum-gray-300);
     --spectrum-stepper-button-background-color-keyboard-focus: var(--spectrum-gray-200);
   }

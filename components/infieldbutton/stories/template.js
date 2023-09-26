@@ -27,14 +27,19 @@ export const Template = ({
   }
 
   return html`
-    <button class=${classMap({
-      [rootClass]: true,
-      [`${rootClass}--size${size?.toUpperCase()}`]: typeof size !== "undefined",
-      [`${rootClass}--${position}`]: typeof position !== "undefined",
-      [`${rootClass}--quiet`]: isQuiet,
-      "is-invalid": isInvalid,
-      ...customClasses.reduce((a, c) => ({ ...a, [c]: true }), {}),
-  })} ?disabled=${isDisabled} aria-haspopup="listbox">
+    <button
+      class=${classMap({
+        [rootClass]: true,
+        [`${rootClass}--size${size?.toUpperCase()}`]: typeof size !== "undefined",
+        [`${rootClass}--${position}`]: typeof position !== "undefined",
+        [`${rootClass}--quiet`]: isQuiet,
+        "is-invalid": isInvalid,
+        ...customClasses.reduce((a, c) => ({ ...a, [c]: true }), {}),
+      })} 
+      ?disabled=${isDisabled}
+      aria-haspopup="listbox"
+      type="button"
+    >
     <div class="${rootClass}-fill">
       ${when(iconName, () => Icon({
         ...globals,
