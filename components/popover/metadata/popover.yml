@@ -154,7 +154,7 @@ examples:
         <div class="spectrum-Examples-item">
           <h4 class="spectrum-Heading spectrum-Heading--sizeXS spectrum-Examples-itemHeading" style="margin-bottom: 16px;">Alert Dialog - Error</h4>
             <div class="spectrum-Popover spectrum-Popover--top spectrum-Popover--withTip is-open" role="presentation">
-              <section class="spectrum-AlertDialog spectrum-AlertDialog--error"  role="dialog" tabindex="-1" aria-modal="true" aria-labelledby="dialog_label">
+              <section class="spectrum-AlertDialog spectrum-AlertDialog--error" role="dialog" tabindex="-1" aria-modal="true" aria-labelledby="dialog_label">
                 <div class="spectrum-AlertDialog-grid">
                   <div class="spectrum-AlertDialog-header">
                     <h1 class="spectrum-AlertDialog-heading">Unable to share</h1>
