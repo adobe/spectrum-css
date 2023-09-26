@@ -5,6 +5,7 @@
 | `--mod-datepicker-border-radius`                        |
 | `--mod-datepicker-dash-color-disabled`                  |
 | `--mod-datepicker-dash-font-size`                       |
+| `--mod-datepicker-dash-line-height`                     |
 | `--mod-datepicker-datetime-input-width`                 |
 | `--mod-datepicker-datetime-input-width-first`           |
 | `--mod-datepicker-datetime-quiet-input-width`           |
@@ -20,10 +21,8 @@
 | `--mod-datepicker-input-width`                          |
 | `--mod-datepicker-input-width-quiet`                    |
 | `--mod-datepicker-invalid-quiet-color`                  |
-| `--mod-datepicker-invalid-text-to-icon`                 |
 | `--mod-datepicker-min-width`                            |
 | `--mod-datepicker-quiet-border-color-hover`             |
-| `--mod-datepicker-range-dash-line-height`               |
 | `--mod-datepicker-range-dash-margin-left`               |
 | `--mod-datepicker-range-dash-padding-top`               |
 | `--mod-datepicker-range-input-width-first`              |

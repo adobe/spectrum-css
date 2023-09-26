@@ -16,10 +16,12 @@ governing permissions and limitations under the License.
   --spectrum-datepicker-initial-height: var(--spectrum-component-height-100); /* for express component-height-75 */
   --spectrum-datepicker-icon-size: var(--spectrum-workflow-icon-size-100);
 
-  --spectrum-datepicker-input-datetime-width: var(--spectrum-component-width-75);
-  --spectrum-datepicker-input-padding-right: 32px; /* 40px for Large Spectrum for Express Med 24px Large 30px */;
+  --spectrum-datepicker-input-datetime-width: var(--spectrum-component-width-75); /* Fix this! */
+  --spectrum-datepicker-input-padding-right: calc(var(--spectrum-datepicker-pickerbutton-width) + var(--spectrum-component-edge-to-text-100));
   --spectrum-datepicker-icon-to-text-right: var(--spectrum-text-to-visual-100); /* for express 4px M 5px L */
   --spectrum-datepicker-button-width: var(--spectrum-component-height-100);
+
+  --spectrum-datepicker-pickerbutton-width: calc((var(--spectrum-field-edge-to-disclosure-icon-100) * 2) + var(--spectrum-workflow-icon-size-100));
 
   --spectrum-datepicker-focus-ring-gap: 0;/*  var(--spectrum-focus-indicator-gap); for express */
   --spectrum-datepicker-focus-animation: var(--spectrum-animation-duration-100);
@@ -37,33 +39,25 @@ governing permissions and limitations under the License.
 
   --spectrum-datepicker-dash-font-size: var(--spectrum-font-size-100);
   --spectrum-datepicker-dash-color-disabled: var(--spectrum-disabled-content-color);
-
-  --spectrum-combobox-quiet-fieldbutton-border-radius: 0;
-  --spectrum-combobox-field-border-width-right: 0;
-  --spectrum-combobox-quiet-fieldbutton-padding-right: 0;
-
-  --spectrum-datepicker-range-input-width-first: calc(var(--spectrum-datepicker-initial-width) - 2 * var(--spectrum-datepicker-generic-padding));
-  --spectrum-datepicker-input-width-base: calc(var(--spectrum-datepicker-range-input-width-first) + var(--spectrum-datepicker-icon-size));
-
+  --spectrum-datepicker-range-dash-margin-left: calc( -0.5 * var(--spectrum-datepicker-dash-font-size));
+  --spectrum-datepicker-range-dash-padding-top: 0;
 
   /* todo: when we add t-shirt sizing, this will be wrong ❤️ */
+  --spectrum-datepicker-range-input-width-first: calc(var(--spectrum-datepicker-initial-width) - 2 * var(--spectrum-datepicker-generic-padding));
+  --spectrum-datepicker-input-width-base: calc(var(--spectrum-datepicker-range-input-width-first) + var(--spectrum-datepicker-icon-size));
   --spectrum-datepicker-input-width: calc(var(--spectrum-datepicker-input-width-base) + var(--spectrum-datepicker-initial-height));
   --spectrum-datepicker-range-input-width-quiet-first: calc(var(--spectrum-datepicker-width-quiet-first) + var(--spectrum-datepicker-width-quiet-second));
   --spectrum-datepicker-input-width-quiet: calc(var(--spectrum-datepicker-range-input-width-quiet-first) + var(--spectrum-datepicker-icon-size) + var(--spectrum-datepicker-initial-height));
   --spectrum-datepicker-datetime-input-width-first: calc(var(--spectrum-datepicker-input-width-base) + var(--spectrum-datepicker-datetime-width-first));
-
-  /* todo: when we add t-shirt sizing, this will be wrong ❤️ */
   --spectrum-datepicker-datetime-input-width: calc(var(--spectrum-datepicker-datetime-input-width-first) + var(--spectrum-datepicker-icon-size) + var(--spectrum-datepicker-initial-height));
-
   --spectrum-datepicker-datetime-quiet-input-width-first: calc(var(--spectrum-datepicker-input-width-base) + var(--spectrum-datepicker-input-datetime-width));
   --spectrum-datepicker-datetime-quiet-input-width: calc(var(--spectrum-datepicker-datetime-quiet-input-width-first) + var(--spectrum-datepicker-icon-size) + var(--spectrum-datepicker-initial-height));
 
-  --spectrum-datepicker-range-dash-margin-left: calc( -0.5 * var(--spectrum-datepicker-dash-font-size));
-  --spectrum-datepicker-range-dash-padding-top: 0;
-
-  /* be square: we're a little ahead of DNA at the time of writing, but Nate said so */
   --spectrum-combobox-button-width: var(--spectrum-datepicker-button-width);
   --spectrum-combobox-quiet-button-offset: calc(var(--spectrum-datepicker-button-width) / 2 - var(--spectrum-datepicker-icon-size) / 2);
+  --spectrum-combobox-quiet-fieldbutton-border-radius: 0;
+  --spectrum-combobox-field-border-width-right: 0;
+  --spectrum-combobox-quiet-fieldbutton-padding-right: 0;
 }
 
 .spectrum-DatePicker {
@@ -81,10 +75,9 @@ governing permissions and limitations under the License.
   inset-inline-end: 0;
 }
 
-/* positions invlaid icon to be left of picker button */
-.spectrum-PickerButton-icon {
-  --datepicker-button-width: calc((var(--spectrum-field-edge-to-disclosure-icon-100) * 2) + var(--spectrum-icon-size-m));
-  --mod-textfield-icon-spacing-inline-end-invalid: calc(var(--datepicker-button-width)  + var(--spectrum-datepicker-invalid-icon-to-button));
+/* positions invalid icon to be left of picker button */
+.spectrum-Textfield.is-invalid .spectrum-Textfield-validationIcon {
+  --mod-textfield-icon-spacing-inline-end-invalid: calc(var(--spectrum-datepicker-pickerbutton-width)  + var(--spectrum-datepicker-invalid-icon-to-button));
   --mod-textfield-icon-spacing-inline-end-quiet-invalid: var(--spectrum-datepicker-button-width);
 }
 
@@ -195,7 +188,11 @@ governing permissions and limitations under the License.
     }
     &.is-invalid {
       .spectrum-DatePicker-endField {
-        padding-inline-end: calc(60px + var(--mod-datepicker-invalid-text-to-icon, var(--spectrum-datepicker-invalid-text-to-icon)));
+        padding-inline-end: calc(
+          var(--spectrum-datepicker-invalid-text-to-icon)
+          + var(--spectrum-datepicker-icon-size)
+          + var(--spectrum-datepicker-invalid-icon-to-button)
+          + var(--spectrum-datepicker-pickerbutton-width));
         };
       }
     }
