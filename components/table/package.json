@@ -1,6 +1,6 @@
 {
   "name": "@spectrum-css/table",
-  "version": "5.0.4",
+  "version": "5.0.5",
   "description": "The Spectrum CSS table component",
   "license": "Apache-2.0",
   "author": "Adobe",
@@ -22,12 +22,12 @@
     "@spectrum-css/tokens": ">=11"
   },
   "devDependencies": {
-    "@spectrum-css/button": "^11.0.11",
-    "@spectrum-css/checkbox": "^7.0.14",
+    "@spectrum-css/button": "^11.0.12",
+    "@spectrum-css/checkbox": "^7.0.15",
     "@spectrum-css/component-builder-simple": "^2.0.17",
     "@spectrum-css/icon": "^4.0.3",
-    "@spectrum-css/thumbnail": "^5.0.10",
-    "@spectrum-css/tokens": "^11.3.7",
+    "@spectrum-css/thumbnail": "^5.0.11",
+    "@spectrum-css/tokens": "^11.4.0",
     "gulp": "^4.0.0"
   },
   "publishConfig": {

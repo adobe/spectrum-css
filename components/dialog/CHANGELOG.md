@@ -3,6 +3,13 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+<a name="8.0.8"></a>
+##8.0.8
+🗓
+2023-09-26 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/dialog@8.0.7...@spectrum-css/dialog@8.0.8)
+
+**Note:** Version bump only for package @spectrum-css/dialog
+
 <a name="8.0.7"></a>
 ##8.0.7
 🗓

@@ -1,6 +1,6 @@
 {
   "name": "@spectrum-css/page",
-  "version": "6.0.3",
+  "version": "6.0.4",
   "description": "The Spectrum CSS page component",
   "license": "Apache-2.0",
   "author": "Adobe",
@@ -18,7 +18,7 @@
     "build": "gulp"
   },
   "dependencies": {
-    "@spectrum-css/tokens": "^11.3.7"
+    "@spectrum-css/tokens": "^11.4.0"
   },
   "devDependencies": {
     "@spectrum-css/component-builder-simple": "^2.0.17",
