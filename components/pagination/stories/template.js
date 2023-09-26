@@ -2,12 +2,12 @@ import { html } from "lit";
 import { classMap } from "lit/directives/class-map.js";
 import { repeat } from "lit/directives/repeat.js";
 
-import { Template as Button } from "@spectrum-css/button/stories/template.js";
 import { Template as ActionButton } from "@spectrum-css/actionbutton/stories/template.js";
+import { Template as Button } from "@spectrum-css/button/stories/template.js";
+import { Template as SplitButton } from "@spectrum-css/splitbutton/stories/template.js";
 import { Template as Textfield } from "@spectrum-css/textfield/stories/template.js";
 
 import "../index.css";
-import "../skin.css";
 
 // More on component templates: https://storybook.js.org/docs/web-components/writing-stories/introduction#using-args
 export const Template = ({
@@ -34,12 +34,11 @@ export const Template = ({
 					customClasses: [`${rootClass}-prevButton`],
 				})}
 				${Textfield({
+					size,
 					value: "1",
 					customClasses: [`${rootClass}-textfield`],
 				})}
-				<span class="spectrum-Body--secondary ${rootClass}-counter"
-					>of 89 pages</span
-				>
+				<span class="${rootClass}-counter">of 89 pages</span>
 				${ActionButton({
 					size,
 					isQuiet: true,
@@ -48,6 +47,16 @@ export const Template = ({
 				})}
 			</nav>
 		`;
+	} else if (variant == "button") {
+		return SplitButton({
+			position: "left",
+			variant: "accent",
+			label: "Next",
+			iconName: "ChevronLeft100",
+			labelIconName: "ChevronRight100",
+			customFirstButtonClasses: ["spectrum-Pagination-prevButton"],
+			customLastButtonClasses: ["spectrum-Pagination-nextButton"]
+		});
 	}
 	return html`
 		<nav
@@ -73,6 +82,7 @@ export const Template = ({
 						return ActionButton({
 							...globals,
 							...item,
+							size,
 							isQuiet: true,
 						});
 					} else return item;
