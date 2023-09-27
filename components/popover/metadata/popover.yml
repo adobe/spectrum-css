@@ -131,7 +131,7 @@ examples:
 
   - id: popover-dialog
     name: Popover - Dialog style
-    description: Spectrum Popovers are implemented using the Dialog's inner elements.
+    description: Spectrum Popovers are implemented using the Dialog and Alert Dialog inner elements.
     markup: |
       <div class="spectrum-Examples">
         <div class="spectrum-Examples-item">
@@ -152,22 +152,21 @@ examples:
         </div>
 
         <div class="spectrum-Examples-item">
-          <h4 class="spectrum-Heading spectrum-Heading--sizeXS spectrum-Examples-itemHeading" style="margin-bottom: 16px;">Dialog with Error</h4>
+          <h4 class="spectrum-Heading spectrum-Heading--sizeXS spectrum-Examples-itemHeading" style="margin-bottom: 16px;">Alert Dialog - Error</h4>
             <div class="spectrum-Popover spectrum-Popover--top spectrum-Popover--withTip is-open" role="presentation">
-              <section class="spectrum-Dialog spectrum-Dialog--small spectrum-Dialog--error" role="dialog" tabindex="-1" aria-modal="true">
-                <div class="spectrum-Dialog-grid" style="display: grid;">
-                  <h1 class="spectrum-Dialog-heading spectrum-Dialog-heading--noHeader">Popover Title</h1>
-                  <svg class="spectrum-Icon spectrum-Icon--sizeM spectrum-Dialog-typeIcon" focusable="false" aria-hidden="true">
-                    <use xlink:href="#spectrum-icon-18-Alert"></use>
-                  </svg>
-                  <hr class="spectrum-Divider spectrum-Divider--sizeM spectrum-Divider--horizontal spectrum-Dialog-divider">
-                  <section class="spectrum-Dialog-content">Cupcake ipsum dolor sit amet jelly beans. Chocolate jelly caramels. Icing soufflé chupa chups donut cheesecake. Jelly-o chocolate cake sweet roll cake danish candy biscuit halvah.</section>
-                  <div class="spectrum-ButtonGroup spectrum-Dialog-buttonGroup spectrum-Dialog-buttonGroup--noFooter">
-                    <button class="spectrum-Button spectrum-Button--sizeM spectrum-Button--outline spectrum-Button--secondary spectrum-ButtonGroup-item" type="button">
-                      <span class="spectrum-Button-label">Cancel</span>
-                    </button>
-                    <button class="spectrum-Button spectrum-Button--sizeM spectrum-Button--outline spectrum-Button--primary spectrum-ButtonGroup-item" type="button">
-                      <span class="spectrum-Button-label">Save</span>
+              <section class="spectrum-AlertDialog spectrum-AlertDialog--error" role="dialog" tabindex="-1" aria-modal="true" aria-labelledby="dialog_label">
+                <div class="spectrum-AlertDialog-grid">
+                  <div class="spectrum-AlertDialog-header">
+                    <h1 class="spectrum-AlertDialog-heading">Unable to share</h1>
+                      <svg class="spectrum-Icon spectrum-Icon--sizeM" focusable="false" aria-hidden="true">
+                        <use xlink:href="#spectrum-icon-18-Alert" />
+                      </svg>
+                  </div>
+                  <div class="spectrum-Divider spectrum-Divider--sizeM spectrum-Divider--horizontal"></div>
+                  <section class="spectrum-AlertDialog-content">An error occured while sharing your project. Please verify the email address and try again.</section>
+                  <div class="spectrum-ButtonGroup">
+                    <button class="spectrum-Button spectrum-Button--sizeM spectrum-Button--outline spectrum-Button--primary spectrum-ButtonGroup-item" type="button" onclick="closeDialog(this.closest('.spectrum-Modal-wrapper'))">
+                      <span class="spectrum-Button-label">Continue</span>
                     </button>
                   </div>
                 </div>

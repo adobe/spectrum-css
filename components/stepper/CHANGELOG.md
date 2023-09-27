@@ -3,6 +3,129 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+<a name="5.0.0"></a>
+#5.0.0
+🗓
+2023-09-26 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/stepper@4.0.59...@spectrum-css/stepper@5.0.0)
+
+\*feat(stepper)!: stepper migrate tokens (#1960)([3a4c217](https://github.com/adobe/spectrum-css/commit/3a4c217)), closes[#1960](https://github.com/adobe/spectrum-css/issues/1960)
+
+    	###
+    	🛑 BREAKING CHANGES
+
+    		*
+    		migrates Stepper to use `@adobe/spectrum-tokens`
+
+Additionally:
+
+- style(infieldbutton!): begin updating css to tokens
+
+- style(infieldbutton): updating css to tokens
+
+- style(infieldbutton): add color styling and spacing
+
+- style(infieldbutton): disabled colors and quiet colors
+
+- feat(infieldbutton): add icon t shirt sizing
+
+- docs(infieldbutton): update mods and remove unneeded file
+
+- refactor(infieldbutton): fix stylelint errors and remove invalid
+
+- chore(infieldbutton): removing dependency for tokens
+
+- fix(infieldbutton): remove dependency from package json
+
+- fix(infieldbutton): reset yarn file to main
+
+- fix(infieldbutton): fix express border radius
+
+- style(infieldbutton): removed disabled background color change on hover
+
+- docs(infieldbutton): update aria labels and remove icon only example
+
+- refactor(infieldbutton): update to utilize tokens that have express values
+
+- style(stepper): get borders for buttons migrated and working
+
+- style(stepper): add additional stepper button tokens
+
+- style(stepper): fixing express button spacing
+
+- refactor(stepper): clean up css
+
+remove duplicate css and use mods
+
+- docs(stepper): update mods
+
+- chore(stepper): update storybook defaults and remove skin import
+
+- style(stepper): finish invalid and high contrast styling
+
+- fix(stepper): remove border width from padding
+
+- chore(stepper): bump tokens release
+
+- docs(stepper): adding sizing examples
+
+- fix(stepper): fix quiet no-stepper variant from showing border
+
+- fix(icon): updating icon to prevent size overrides
+
+- chore(stepper): fix linter errors
+
+use logical properties
+use flex-flow shorthand property
+fix max nesting depth
+
+- feat(stepper): use infield button and new small chevron
+
+- fix(stepper): fix express button placement
+
+- chore(stepper): update docs examples to all use infield button
+
+- fix(stepper): update express and quiet styling
+
+- chore(stepper): update storybook stories
+
+- chore(stepper): update story to use number type textfield
+
+- chore(stepper): removing stepUp and stepDown classes
+
+- chore(stepper): remove unused variables
+
+- chore(stepper): manual version increase for beta release
+
+- docs: specify type attribute on button elements
+
+Button elements should specify a type of "button", otherwise they
+default to a type of submit if the element happens to be within a form.
+
+- docs(stepper): include value in storybook
+
+Include value to replace the removed placeholder, so visuals with a
+value can be compared in VRTs.
+
+- fix(stepper): adjustments for width differences
+
+Using component-height-200 instead of component-height-100 was making
+the component too much wider than the original. Now uses the stepper
+height token, which is using component-height-100 at medium, and
+adjustments for t-shirt sizing. This makes the larger sizes like XL
+scale more appropriately in their width as well. Previously the
+characters entered in the field would turn to ellipsis after 3 chars at
+XL size.
+
+Note: Medium version of component -should- be about 6px wider due to
+wider in-field buttons, defined in tokens. Original medium was 72px.
+
+Adjusts usage of some of the width tokens so that usage of
+--mod-stepper-width and --mod-stepper-border-width will have the desired
+effect.
+
+Also needed to add border width to calc, so that 4 chars appear before
+ellipsis at medium size, instead of 3. Was a matter of 1 or 2 pixels.
+
 <a name="4.0.59"></a>
 ##4.0.59
 🗓
