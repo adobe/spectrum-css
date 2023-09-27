@@ -243,8 +243,6 @@ governing permissions and limitations under the License.
 
 .spectrum-Dial {
   &.is-disabled {
-    cursor: default;
-
     .spectrum-Dial-labelContainer {
       color: var(--highcontrast-dial-label-text-color-disabled, var(--mod-dial-label-text-color-disabled, var(--spectrum-dial-label-text-color-disabled)));
     }
@@ -255,14 +253,9 @@ governing permissions and limitations under the License.
       }
     }
     .spectrum-Dial-handle {
+      cursor: default;
       border-color: var(--highcontrast-dial-handle-border-color-disabled, var(--mod-dial-handle-border-color-disabled, var(--spectrum-dial-handle-border-color-disabled)));
       background: var(--highcontrast-dial-background-color-default, var(--mod-dial-background-color-default, var(--spectrum-dial-background-color-default)));
-
-      &:hover,
-      &:active {
-        border-color: var(--highcontrast-dial-handle-border-color-disabled, var(--mod-dial-handle-border-color-disabled, var(--spectrum-dial-handle-border-color-disabled)));
-        background: var(--highcontrast-dial-handle-border-color-disabled, var(--mod-dial-handle-border-color-disabled, var(--spectrum-dial-handle-border-color-disabled)));
-      }
 
       &::after,
       &::before {
