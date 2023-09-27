@@ -112,3 +112,12 @@ Default.args = {
 	year: 2023,
 	content: [{}],
 };
+
+export const Quiet = Template.bind({});
+Quiet.args = {
+	month: "March",
+	selectedDay: 1,
+	year: 2023,
+	content: [{}],
+	isQuiet: true,
+};
