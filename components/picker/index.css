@@ -469,7 +469,6 @@ governing permissions and limitations under the License.
   border: none;
   border-radius: 0;
   padding-inline: var(--mod-picker-spacing-edge-to-text-quiet, var(--spectrum-picker-spacing-edge-to-text-quiet));
-  
   color: var(--highcontrast-picker-font-color-default, var(--mod-picker-font-color-default, var(--spectrum-picker-font-color-default)));
   background-color: transparent;
 
