@@ -66,9 +66,9 @@ examples:
   - id: datepicker-range
     name: Range
     markup: |
-      <div aria-invalid="false" class="spectrum-DatePicker spectrum-DatePicker spectrum-DatePicker--range is-keyboardFocused" role="combobox" aria-expanded="false" aria-haspopup="dialog">
-        <div class="spectrum-Textfield spectrum-DatePicker-textfield is-keyboardFocused">
-          <input type="text" class="spectrum-Textfield-input spectrum-DatePicker-input spectrum-DatePicker-startField is-keyboardFocused" placeholder="mm/dd/yyyy" name="start" value="">
+      <div aria-invalid="false" class="spectrum-DatePicker spectrum-DatePicker spectrum-DatePicker--range" role="combobox" aria-expanded="false" aria-haspopup="dialog">
+        <div class="spectrum-Textfield spectrum-DatePicker-textfield">
+          <input type="text" class="spectrum-Textfield-input spectrum-DatePicker-input spectrum-DatePicker-startField" placeholder="mm/dd/yyyy" name="start" value="">
         </div>
         <div class="spectrum-DatePicker-rangeDash"></div>
         <div class="spectrum-Textfield spectrum-DatePicker-textfield">
@@ -166,7 +166,7 @@ examples:
   - id: datepicker-range-quiet
     name: Range (quiet)
     markup: |
-      <div class="spectrum-DatePicker spectrum-DatePicker--quiet spectrum-DatePicker spectrum-DatePicker--range is-keyboardFocused" role="combobox" aria-expanded="false" aria-haspopup="dialog">
+      <div class="spectrum-DatePicker spectrum-DatePicker--quiet spectrum-DatePicker spectrum-DatePicker--range" role="combobox" aria-expanded="false" aria-haspopup="dialog">
         <div class="spectrum-Textfield spectrum-Textfield--quiet spectrum-DatePicker-textfield">
           <input type="text" class="spectrum-Textfield-input spectrum-DatePicker-input spectrum-DatePicker-startField" placeholder="mm/dd/yyyy" name="start" value="2018-10-01">
         </div>
