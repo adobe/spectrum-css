@@ -12,13 +12,13 @@ examples:
                 <input type="checkbox" class="spectrum-Checkbox-input" id="checkbox-0">
                 <span class="spectrum-Checkbox-box">
                   <svg class="spectrum-Icon spectrum-UIIcon-Checkmark100 spectrum-Checkbox-checkmark" focusable="false" aria-hidden="true">
-                    <use xlink:href="#spectrum-css-icon-Checkmark100" />
+                    <use xlink:href="#spectrum-css-icon-Checkmark100"/>
                   </svg>
                 </span>
               </label>
               <span class="spectrum-AssetList-itemLabel">File 1</span>
               <svg class="spectrum-Icon spectrum-UIIcon-ChevronRight100 spectrum-AssetList-itemChildIndicator" focusable="false" aria-hidden="true">
-                <use xlink:href="#spectrum-css-icon-Chevron100" />
+                <use xlink:href="#spectrum-css-icon-Chevron100"/>
               </svg>
             </li>
             <li class="spectrum-AssetList-item is-branch is-selectable is-selected" tabindex="0">
@@ -26,13 +26,13 @@ examples:
                 <input type="checkbox" class="spectrum-Checkbox-input" id="checkbox-1" checked>
                 <span class="spectrum-Checkbox-box">
                   <svg class="spectrum-Icon spectrum-UIIcon-Checkmark100 spectrum-Checkbox-checkmark" focusable="false" aria-hidden="true">
-                    <use xlink:href="#spectrum-css-icon-Checkmark100" />
+                    <use xlink:href="#spectrum-css-icon-Checkmark100"/>
                   </svg>
                 </span>
               </label>
               <span class="spectrum-AssetList-itemLabel">File 2</span>
               <svg class="spectrum-Icon spectrum-UIIcon-ChevronRight100 spectrum-AssetList-itemChildIndicator" focusable="false" aria-hidden="true">
-                <use xlink:href="#spectrum-css-icon-Chevron100" />
+                <use xlink:href="#spectrum-css-icon-Chevron100"/>
               </svg>
             </li>
             <li class="spectrum-AssetList-item is-branch is-selectable" tabindex="0">
@@ -40,14 +40,14 @@ examples:
                 <input type="checkbox" class="spectrum-Checkbox-input" id="checkbox-2">
                 <span class="spectrum-Checkbox-box">
                   <svg class="spectrum-Icon spectrum-UIIcon-Checkmark100 spectrum-Checkbox-checkmark" focusable="false" aria-hidden="true">
-                    <use xlink:href="#spectrum-css-icon-Checkmark100" />
+                    <use xlink:href="#spectrum-css-icon-Checkmark100"/>
                   </svg>
                 </span>
               </label>
-              <img src="img/example-ava.jpg" class="spectrum-AssetList-itemThumbnail">
+              <img src="img/example-ava.jpg" alt="asset item thumbnail" class="spectrum-AssetList-itemThumbnail">
               <span class="spectrum-AssetList-itemLabel">File 3</span>
               <svg class="spectrum-Icon spectrum-UIIcon-ChevronRight100 spectrum-AssetList-itemChildIndicator" focusable="false" aria-hidden="true">
-                <use xlink:href="#spectrum-css-icon-Chevron100" />
+                <use xlink:href="#spectrum-css-icon-Chevron100"/>
               </svg>
             </li>
           </ul>
@@ -59,13 +59,13 @@ examples:
                 <input type="checkbox" class="spectrum-Checkbox-input" id="checkbox-0">
                 <span class="spectrum-Checkbox-box">
                   <svg class="spectrum-Icon spectrum-UIIcon-Checkmark100 spectrum-Checkbox-checkmark" focusable="false" aria-hidden="true">
-                    <use xlink:href="#spectrum-css-icon-Checkmark100" />
+                    <use xlink:href="#spectrum-css-icon-Checkmark100"/>
                   </svg>
                 </span>
               </label>
               <span class="spectrum-AssetList-itemLabel">File 1</span>
               <svg class="spectrum-Icon spectrum-UIIcon-ChevronRight100 spectrum-AssetList-itemChildIndicator" focusable="false" aria-hidden="true">
-                <use xlink:href="#spectrum-css-icon-Chevron100" />
+                <use xlink:href="#spectrum-css-icon-Chevron100"/>
               </svg>
             </li>
             <li class="spectrum-AssetList-item is-selectable is-selected" tabindex="0">
@@ -73,13 +73,13 @@ examples:
                 <input type="checkbox" class="spectrum-Checkbox-input" id="checkbox-1" checked>
                 <span class="spectrum-Checkbox-box">
                   <svg class="spectrum-Icon spectrum-UIIcon-Checkmark100 spectrum-Checkbox-checkmark" focusable="false" aria-hidden="true">
-                    <use xlink:href="#spectrum-css-icon-Checkmark100" />
+                    <use xlink:href="#spectrum-css-icon-Checkmark100"/>
                   </svg>
                 </span>
               </label>
               <span class="spectrum-AssetList-itemLabel">File 2</span>
               <svg class="spectrum-Icon spectrum-UIIcon-ChevronRight100 spectrum-AssetList-itemChildIndicator" focusable="false" aria-hidden="true">
-                <use xlink:href="#spectrum-css-icon-Chevron100" />
+                <use xlink:href="#spectrum-css-icon-Chevron100"/>
               </svg>
             </li>
             <li class="spectrum-AssetList-item is-selectable is-selected" tabindex="0">
@@ -87,14 +87,14 @@ examples:
                 <input type="checkbox" class="spectrum-Checkbox-input" id="checkbox-2" checked>
                 <span class="spectrum-Checkbox-box">
                   <svg class="spectrum-Icon spectrum-UIIcon-Checkmark100 spectrum-Checkbox-checkmark" focusable="false" aria-hidden="true">
-                    <use xlink:href="#spectrum-css-icon-Checkmark100" />
+                    <use xlink:href="#spectrum-css-icon-Checkmark100"/>
                   </svg>
                 </span>
               </label>
-              <img src="img/example-ava.jpg" class="spectrum-AssetList-itemThumbnail">
+              <img src="img/example-ava.jpg" alt="asset item thumbnail" class="spectrum-AssetList-itemThumbnail">
               <span class="spectrum-AssetList-itemLabel">File 3</span>
               <svg class="spectrum-Icon spectrum-UIIcon-ChevronRight100 spectrum-AssetList-itemChildIndicator" focusable="false" aria-hidden="true">
-                <use xlink:href="#spectrum-css-icon-Chevron100" />
+                <use xlink:href="#spectrum-css-icon-Chevron100"/>
               </svg>
             </li>
           </ul>
@@ -110,7 +110,7 @@ examples:
             <li class="spectrum-AssetList-item is-branch" tabindex="0">
               <span class="spectrum-AssetList-itemLabel">File 1</span>
               <svg class="spectrum-Icon spectrum-UIIcon-ChevronRight100 spectrum-AssetList-itemChildIndicator" focusable="false" aria-hidden="true">
-                <use xlink:href="#spectrum-css-icon-Chevron100" />
+                <use xlink:href="#spectrum-css-icon-Chevron100"/>
               </svg>
             </li>
             <li class="spectrum-AssetList-item" tabindex="0">
@@ -119,20 +119,20 @@ examples:
                 <input type="checkbox" class="spectrum-Checkbox-input" id="checkbox-1">
                 <span class="spectrum-Checkbox-box">
                   <svg class="spectrum-Icon spectrum-UIIcon-Checkmark100 spectrum-Checkbox-checkmark" focusable="false" aria-hidden="true">
-                    <use xlink:href="#spectrum-css-icon-Checkmark100" />
+                    <use xlink:href="#spectrum-css-icon-Checkmark100"/>
                   </svg>
                 </span>
               </label>
               <svg class="spectrum-Icon spectrum-UIIcon-ChevronRight100 spectrum-AssetList-itemChildIndicator" focusable="false" aria-hidden="true">
-                <use xlink:href="#spectrum-css-icon-Chevron100" />
+                <use xlink:href="#spectrum-css-icon-Chevron100"/>
               </svg>
             </li>
             <li class="spectrum-AssetList-item is-navigated is-branch" tabindex="0">
-              <img src="img/example-ava.jpg" class="spectrum-AssetList-itemThumbnail">
+              <img src="img/example-ava.jpg" alt="asset item thumbnail" class="spectrum-AssetList-itemThumbnail">
               <span class="spectrum-AssetList-itemLabel">File 3</span></span>
 
               <svg class="spectrum-Icon spectrum-UIIcon-ChevronRight100 spectrum-AssetList-itemChildIndicator" focusable="false" aria-hidden="true">
-                <use xlink:href="#spectrum-css-icon-Chevron100" />
+                <use xlink:href="#spectrum-css-icon-Chevron100"/>
               </svg>
             </li>
           </ul>
@@ -143,7 +143,7 @@ examples:
             <li class="spectrum-AssetList-item is-branch" tabindex="0">
               <span class="spectrum-AssetList-itemLabel">File 1</span>
               <svg class="spectrum-Icon spectrum-UIIcon-ChevronRight100 spectrum-AssetList-itemChildIndicator" focusable="false" aria-hidden="true">
-                <use xlink:href="#spectrum-css-icon-Chevron100" />
+                <use xlink:href="#spectrum-css-icon-Chevron100"/>
               </svg>
             </li>
             <li class="spectrum-AssetList-item" tabindex="0">
@@ -152,27 +152,27 @@ examples:
                 <input type="checkbox" class="spectrum-Checkbox-input" id="checkbox-1">
                 <span class="spectrum-Checkbox-box">
                   <svg class="spectrum-Icon spectrum-UIIcon-Checkmark100 spectrum-Checkbox-checkmark" focusable="false" aria-hidden="true">
-                    <use xlink:href="#spectrum-css-icon-Checkmark100" />
+                    <use xlink:href="#spectrum-css-icon-Checkmark100"/>
                   </svg>
                 </span>
               </label>
               <svg class="spectrum-Icon spectrum-UIIcon-ChevronRight100 spectrum-AssetList-itemChildIndicator" focusable="false" aria-hidden="true">
-                <use xlink:href="#spectrum-css-icon-Chevron100" />
+                <use xlink:href="#spectrum-css-icon-Chevron100"/>
               </svg>
             </li>
             <li class="spectrum-AssetList-item is-selected" tabindex="0">
-              <img src="img/example-ava.jpg" class="spectrum-AssetList-itemThumbnail">
+              <img src="img/example-ava.jpg" alt="asset item thumbnail" class="spectrum-AssetList-itemThumbnail">
               <span class="spectrum-AssetList-itemLabel">File 3</span>
               <label class="spectrum-Checkbox spectrum-Checkbox--sizeM spectrum-AssetList-itemSelector">
                 <input type="checkbox" class="spectrum-Checkbox-input" id="checkbox-2" checked>
                 <span class="spectrum-Checkbox-box">
                   <svg class="spectrum-Icon spectrum-UIIcon-Checkmark100 spectrum-Checkbox-checkmark" focusable="false" aria-hidden="true">
-                    <use xlink:href="#spectrum-css-icon-Checkmark100" />
+                    <use xlink:href="#spectrum-css-icon-Checkmark100"/>
                   </svg>
                 </span>
               </label>
               <svg class="spectrum-Icon spectrum-UIIcon-ChevronRight100 spectrum-AssetList-itemChildIndicator" focusable="false" aria-hidden="true">
-                <use xlink:href="#spectrum-css-icon-Chevron100" />
+                <use xlink:href="#spectrum-css-icon-Chevron100"/>
               </svg>
             </li>
           </ul>
