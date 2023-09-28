@@ -50,6 +50,3 @@
 | `--mod-combobox-spacing-inline-icon-to-button`         |
 | `--mod-combobox-spacing-inline-start-edge-to-text`     |
 | `--mod-combobox-spacing-label-to-combobox`             |
-| `--mod-textfield-focus-indicator-color`                |
-| `--mod-textfield-focus-indicator-gap`                  |
-| `--mod-textfield-focus-indicator-width`                |
