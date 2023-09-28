@@ -27,5 +27,6 @@
 | `--mod-datepicker-range-dash-padding-top`               |
 | `--mod-datepicker-range-input-width-first`              |
 | `--mod-datepicker-range-input-width-quiet-first`        |
+| `--mod-datepicker-range-invalid-padding-right`          |
 | `--mod-textfield-icon-spacing-inline-end-invalid`       |
 | `--mod-textfield-icon-spacing-inline-end-quiet-invalid` |

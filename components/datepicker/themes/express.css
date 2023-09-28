@@ -12,5 +12,6 @@ governing permissions and limitations under the License.
 
 @container (--system: express) {
   .spectrum-DatePicker {
+    --spectrum-datepicker-initial-height: var(--spectrum-component-height-75);
   }
 }
