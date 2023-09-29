@@ -34,12 +34,13 @@ export const AssetListItem = ({
 		@click=${onclick}
 		tabindex="0"
 	>
-		${Checkbox({
+		${when(isSelectable, () =>
+		Checkbox({
 			...globals,
 			size: "m",
 			isChecked: isSelected,
 			customClasses: [`${rootClass}Selector`],
-		})}
+		}))}
 		${when(
 			image,
 			() =>
@@ -53,6 +54,13 @@ export const AssetListItem = ({
 			})
 		)}
 		${when(label, () => html`<span class="${rootClass}Label">${label}</span>`)}
+		${when(!isSelectable && !isBranch, () =>
+			Checkbox({
+				...globals,
+				size: "m",
+				isChecked: isSelected,
+				customClasses: [`${rootClass}Selector`],
+			}))}
 		${when(isBranch, () =>
 			Icon({
 				iconName: "ChevronRight100",
