@@ -1,0 +1,78 @@
+name: Build and verify production
+
+on:
+  push:
+    branches: [main]
+
+permissions:
+  contents: read
+  pull-requests: write
+
+concurrency:
+  group: "${{ github.workflow }} @ main"
+  cancel-in-progress: false
+
+defaults:
+  run:
+    shell: bash
+
+# todo: this could add deploy steps as well
+jobs:
+  build:
+    name: Build
+    uses: ./.github/workflows/build.yml
+    with:
+      ref: ${{ github.sha }}
+    secrets: inherit
+
+  # Run VRT on ALL pushes to main
+  vrt:
+    name: Testing
+    needs: [build]
+    uses: ./.github/workflows/vrt.yml
+    secrets: inherit
+
+  publish_site:
+    name: Publish
+    runs-on: macos-latest
+    needs: [build, vrt]
+    steps:
+      - uses: actions/checkout@v3
+      - name: Setup and build
+        uses: ./.github/actions/setup-and-build/
+        # uses: spectrum-tools/gh-action-setup@v1
+        with:
+          token: ${{ secrets.GITHUB_TOKEN }}
+      - name: Build docs site
+        run: yarn build:site
+        env:
+          CHROMATIC_URL: ${{ needs.vrt.outputs.storybook-url }}
+      - name: Deploy
+        uses: nwtgck/actions-netlify@v2
+        with:
+          publish-dir: dist
+          production-branch: main
+          production-deploy: false
+          netlify-config-path: ./netlify.toml
+          github-token: ${{ secrets.GITHUB_TOKEN }}
+        env:
+          NETLIFY_AUTH_TOKEN: ${{ secrets.NETLIFY_AUTH_TOKEN_GH_ACTIONS_DEPLOY }}
+          NETLIFY_SITE_ID: ${{ secrets.NETLIFY_SITE_ID }}
+        timeout-minutes: 10
+
+  autoupdate:
+    name: Auto-update pull requests
+    runs-on: ubuntu-latest
+    permissions:
+      contents: read
+      pull-requests: write
+    steps:
+      # README: https://github.com/castastrophe/actions-pr-auto-update#auto-update-pull-requests
+      - uses: castastrophe/actions-pr-auto-update@v1.1.0
+        with:
+          token: ${{ secrets.GH_PAC_TOKEN }}
+          # Draft PRs will not be automatically updated by this utility
+          include_drafts: false
+          limit: 10
+          include_labels: auto-update
+          exclude_labels: blocked,wip,dependencies

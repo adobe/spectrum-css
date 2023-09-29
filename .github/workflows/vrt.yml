@@ -1,0 +1,48 @@
+name: Visual regression testing
+
+on:
+  workflow_dispatch:
+  workflow_call:
+    inputs:
+      skip:
+        description: "Skip running VRT"
+        required: false
+        type: boolean
+        default: false
+    outputs:
+      storybook-url:
+        description: "URL of the published Storybook"
+        value: ${{ jobs.vrt.outputs.storybook-url }}
+
+permissions:
+  contents: read
+  pull-requests: write
+
+jobs:
+  vrt:
+    name: Chromatic
+    runs-on: macos-latest
+    outputs:
+      storybook-url: ${{ steps.chromatic.outputs.storybookUrl }}
+
+    steps:
+      - uses: actions/checkout@v3
+      - name: Build
+        uses: ./.github/actions/setup-and-build/
+        # uses: spectrum-tools/gh-action-setup@v1
+        with:
+          fetch-depth: 0
+          token: ${{ secrets.GITHUB_TOKEN }}
+      - name: Publish to Chromatic
+        id: chromatic
+        uses: chromaui/action@v1
+        with:
+          projectToken: ${{ secrets.CHROMATIC_PROJECT_TOKEN }}
+          buildScriptName: ci:storybook
+          storybookConfigDir: tools/preview
+          exitOnceUploaded: true
+          onlyChanged: true
+          traceChanged: true
+          diagnostics: true
+          # Lets VRT pass without running so as not to waste snapshots
+          skip: ${{ inputs.skip }}

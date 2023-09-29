@@ -1,0 +1,90 @@
+name: Validate successful build
+#
+# This workflow validates that the commit in question can be built successfully
+# in several environments:
+#
+#   Systems:    Ubuntu, MacOS, // Windows
+#   Node:       16, // 18
+#
+# After the build is successful, the compiled assets are uploaded as an artifact
+# to the workflow run. This allows us to download the compiled assets and use
+# them in other workflows.
+
+on:
+  workflow_dispatch:
+    inputs:
+      ref:
+        description: "The branch or tag to checkout"
+        required: true
+        type: string
+      skip-cache:
+        description: "Whether to skip the caches or not"
+        required: false
+        type: string
+        default: "false"
+  workflow_call:
+    inputs:
+      ref:
+        description: "The branch or tag to checkout"
+        required: false
+        type: string
+        default: ${{ github.head_ref }}
+      skip-cache:
+        description: "Whether to skip the caches or not"
+        required: false
+        type: string
+        default: "false"
+
+permissions:
+  contents: read
+  pull-requests: write
+
+jobs:
+  # ---------- Validate build for various environments ---------- #
+  build:
+    strategy:
+      fail-fast: false
+      matrix:
+        system:
+          - ubuntu-latest
+          - macos-latest
+          # todo: windows-latest is currently failing on rimraf, we can debug later
+          # - windows-latest
+        node-version:
+          - 16
+          # todo: debug why 18 is failing as not supported via package.json
+          # - 18
+    runs-on: ${{ matrix.system }}
+    name: ${{ matrix.system }} node v${{ matrix.node-version }}
+    steps:
+      # Sparse checkout to only pull in the .github folder so we can access the workflow we want
+      # todo: this can be deleted after the workflow is published
+      - uses: actions/checkout@v3
+        with:
+          ref: ${{ github.head_ref }}
+          sparse-checkout: |
+            .github
+      # todo: add this when we start using nx affected in CI
+      # - name: Derive appropriate SHAs for base and head for `nx affected` commands
+      #   uses: nrwl/nx-set-shas@v3
+      - name: Build
+        uses: ./.github/actions/setup-and-build/
+        # uses: spectrum-tools/gh-action-setup@v1
+        with:
+          branch-ref: ${{ inputs.ref || github.head_ref }}
+          node-version: ${{ matrix.node-version }}
+          token: ${{ secrets.GITHUB_TOKEN }}
+          skip-cache: ${{ inputs.skip-cache || 'false' }}
+          path: branch
+      # todo: add this (or something like it) back after merging into main; needs to update existing comment though & not keep spamming PRs
+      # - name: Report build time
+      #   uses: DeviesDevelopment/workflow-timer@v0.0.2
+      - name: Upload compiled assets
+        id: upload
+        uses: actions/upload-artifact@v3
+        with:
+          path: ${{ github.workspace }}/branch/components/*/dist/**
+          name: ${{ matrix.system }}-node${{ matrix.node-version }}-compiled-assets-${{ inputs.ref || github.head_ref }}
+          # this is important, it lets us catch if the build failed silently
+          # by alterting us that no compiled assets were generated
+          if-no-files-found: error

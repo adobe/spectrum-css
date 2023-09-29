@@ -1,0 +1,121 @@
+name:
+  Verify
+
+  # This workflow will build and verify pull requests. It will:
+  # - Build the base branch and the PR branch
+  # - Compare the compiled output of the two branches
+  # - Run visual regression tests on the PR branch
+  # - Publish the PR branch to Netlify for review
+
+on:
+  pull_request:
+    branches:
+      - main
+      # Allow us to run tests for PRs updating github actions
+      - chore-*ci*
+      - chore-*github-actions*
+    # todo: we can get even more detailed with this later by evaluating what influences the built assets
+    paths-ignore:
+      - "**.md"
+      - "LICENSE"
+      - "tools/generator/**"
+      - "plugins/conventional-changelog-spectrum/**"
+    types:
+      - opened
+      - synchronize
+      - reopened
+      - labeled
+      - unlabeled
+      - auto_merge_enabled
+
+permissions:
+  contents: read
+  pull-requests: write
+
+concurrency:
+  group: "${{ github.workflow }} @ ${{ github.event.pull_request.head.label || github.head_ref || github.ref }}"
+  cancel-in-progress: true
+
+defaults:
+  run:
+    shell: bash
+
+jobs:
+  # ---------- Validate build for various environments ---------- #
+  build:
+    name: Build
+    # Check that the PR is not in draft mode (or if it is, that it has the run_ci label to force a build)
+    if: ${{ github.event.pull_request.draft != 'true' || contains(github.event.pull_request.labels.*.name, 'run_ci') }}
+    uses: ./.github/workflows/build.yml
+    with:
+      ref: ${{ github.event.pull_request.head.sha }}
+    secrets: inherit
+
+    # ---------- Compare the compiled assets ---------- #
+  compare:
+    name: Compare
+    needs: [build]
+    # Check that the PR is not in draft mode (or if it is, that it has the run_ci label to force a build)
+    if: ${{ github.event.pull_request.draft != 'true' || contains(github.event.pull_request.labels.*.name, 'run_ci') }}
+    uses: ./.github/workflows/compare-results.yml
+    with:
+      ref: ${{ github.event.pull_request.head.sha }}
+      base-ref: ${{ github.event.pull_request.base.sha }}
+    secrets: inherit
+
+  # ---------- RUN VISUAL REGRESSION TESTS ---------- #
+  # Run VRT on:
+  #   - ALL pull_request where:
+  #     - PR has label 'run_vrt'
+  #     - NOT in draft UNLESS labels includes 'run_ci'
+  #     - PR is mergeable
+  # Note: mergeable implies ONLY that no merge conflicts with the base
+  #   branch; nothing about other checks, like CI, passing.
+  # Note: 'skip_vrt' label is used to pass the tasks but not actually
+  #   publish to Chromatic
+  vrt:
+    name: Testing
+    needs: [build]
+    if: ${{ contains(github.event.pull_request.labels.*.name, 'run_vrt') || ((github.event.pull_request.draft != true || contains(github.event.pull_request.labels.*.name, 'run_ci')) && github.event.pull_request.mergeable == true) }}
+    uses: ./.github/workflows/vrt.yml
+    with:
+      skip: ${{ contains(github.event.pull_request.labels.*.name, 'skip_vrt') }}
+    secrets: inherit
+
+  # ---------- PUBLISH TO NETLIFY ---------- #
+  # Publish to netlify by leveraging the previous build and then building the site as well
+  publish_site:
+    name: Publish
+    runs-on: macos-latest
+    # The build step ensures we are leveraging the cache for the build
+    needs: [build, vrt]
+    # Note: the goal here is to allow vrt to be skipped but still require the build to succeed
+    if: ${{ always() && (needs.vrt.result == 'success' || needs.vrt.result == 'skipped') && needs.build.result == 'success' }}
+    steps:
+      - uses: actions/checkout@v3
+      - name: Setup and build
+        uses: ./.github/actions/setup-and-build/
+        # uses: spectrum-tools/gh-action-setup@v1
+        with:
+          token: ${{ secrets.GITHUB_TOKEN }}
+      - name: Build docs site
+        run: yarn build:site
+        env:
+          CHROMATIC_URL: ${{ needs.vrt.outputs.storybook-url }}
+      - name: Deploy
+        uses: nwtgck/actions-netlify@v2
+        with:
+          publish-dir: dist
+          production-branch: main
+          production-deploy: false
+          netlify-config-path: ./netlify.toml
+          github-token: ${{ secrets.GITHUB_TOKEN }}
+          deploy-message: ${{ github.event.pull_request.title }}
+          enable-pull-request-comment: true
+          enable-commit-comment: false
+          overwrites-pull-request-comment: true
+          alias: pr-${{ github.event.number }}
+        env:
+          NETLIFY_AUTH_TOKEN: ${{ secrets.NETLIFY_AUTH_TOKEN_GH_ACTIONS_DEPLOY }}
+          NETLIFY_SITE_ID: ${{ secrets.NETLIFY_SITE_ID }}
+        timeout-minutes: 10

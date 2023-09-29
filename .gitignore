@@ -1,8 +1,10 @@
+# Compiled results
 dist
 
 # Recommended update re:https://docs.netlify.com/integrations/frameworks/eleventy/
 **/node_modules/**
 
+# Reporting and logs
 temp
 .npmrc*
 .env
@@ -13,6 +15,7 @@ npm-debug.log*
 lerna-debug.log
 yarn-error.log
 package-lock.json
+lint-results.txt
 
 # Storybook build output
 storybook/storybook-static

@@ -6,6 +6,11 @@ updates:
       interval: "weekly"
     labels:
       - "dependencies"
+      - "skip_vrt"
+    assignees:
+      - "castastrophe"
+    reviewers:
+      - "castastrophe"
     commit-message:
       prefix: "chore"
       include: "scope"

@@ -1,0 +1,107 @@
+name:
+  Can this PR be merged?
+
+  # This workflow will build and verify pull requests. It will:
+  # - Build the base branch and the PR branch
+  # - Compare the compiled output of the two branches
+  # - Run visual regression tests on the PR branch
+  # - Publish the PR branch to Netlify for review
+
+on:
+  pull_request_review:
+    types: [submitted]
+
+permissions:
+  contents: read
+  pull-requests: write
+
+concurrency:
+  group: "${{ github.workflow }} @ ${{ github.event.pull_request.head.label || github.head_ref || github.ref }}"
+  cancel-in-progress: true
+
+defaults:
+  run:
+    shell: bash
+
+jobs:
+  # ---------- Validate build for various environments ---------- #
+  build:
+    name: Setup and build
+    if: ${{ github.event.review.state == 'approved' }}
+    uses: ./.github/workflows/build.yml
+    with:
+      ref: ${{ github.event.pull_request.base.sha }}
+      skip-cache: "true"
+    secrets: inherit
+
+  label:
+    name: Label
+    runs-on: ubuntu-latest
+    needs: [build]
+    steps:
+      - name: Add label
+        if: ${{ github.event.review.state == 'approved' }}
+        uses: pullreminders/label-when-approved-action@master
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          ADD_LABEL: "auto-update"
+      - name: Remove label
+        if: ${{ github.event.review.state != 'approved' }}
+        uses: pullreminders/label-when-approved-action@master
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          REMOVE_LABEL: "auto-update"
+
+  # ---------- RUN VISUAL REGRESSION TESTS ---------- #
+  # Run VRT on:
+  #   - ALL pull_request where:
+  #     - PR has label 'run_vrt'
+  #     - NOT in draft UNLESS labels includes 'run_ci'
+  #     - PR is mergeable
+  # Note: mergeable implies ONLY that no merge conflicts with the base
+  #   branch; nothing about other checks, like CI, passing.
+  # Note: 'skip_vrt' label is used to pass the tasks but not actually
+  #   publish to Chromatic
+  vrt:
+    name: Visual regression testing
+    if: ${{ github.event.review.state == 'approved' }}
+    uses: ./.github/workflows/vrt.yml
+    with:
+      skip: ${{ contains(github.event.pull_request.labels.*.name, 'skip_vrt') }}
+    secrets: inherit
+
+  # ---------- PUBLISH TO NETLIFY ---------- #
+  # Publish to netlify by leveraging the previous build and then building the site as well
+  publish_site:
+    name: Netlify
+    if: ${{ github.event.review.state == 'approved' }}
+    runs-on: macos-latest
+    needs: [build, vrt]
+    steps:
+      - uses: actions/checkout@v3
+      - name: Setup and build
+        uses: ./.github/actions/setup-and-build/
+        # uses: spectrum-tools/gh-action-setup@v1
+        with:
+          token: ${{ secrets.GITHUB_TOKEN }}
+      - name: Build docs site
+        run: yarn build:site
+        env:
+          CHROMATIC_URL: ${{ needs.vrt.outputs.storybook-url }}
+      - name: Deploy
+        uses: nwtgck/actions-netlify@v2
+        with:
+          publish-dir: dist
+          production-branch: main
+          production-deploy: false
+          netlify-config-path: ./netlify.toml
+          github-token: ${{ secrets.GITHUB_TOKEN }}
+          deploy-message: ${{ github.event.pull_request.title }}
+          enable-pull-request-comment: true
+          enable-commit-comment: false
+          overwrites-pull-request-comment: true
+          alias: pr-${{ github.event.pull_request.number }}
+        env:
+          NETLIFY_AUTH_TOKEN: ${{ secrets.NETLIFY_AUTH_TOKEN_GH_ACTIONS_DEPLOY }}
+          NETLIFY_SITE_ID: ${{ secrets.NETLIFY_SITE_ID }}
+        timeout-minutes: 10

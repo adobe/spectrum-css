@@ -1,0 +1,96 @@
+name: Setup and build
+description: |
+  A composite action that sets up the environment and builds the project.
+  It leverages caching where available and uploads the compiled assets
+  as an artifact for subsequent runs.
+author: "spectrum-tools"
+inputs:
+  branch-ref:
+    description: "Reference to the branch we are checking out."
+    required: false
+    default: ${{ github.head_ref }}
+  build-command:
+    description: "Command to run to build the project."
+    required: false
+    default: "yarn ci"
+  node-version:
+    description: "Node version to use."
+    required: false
+    default: "16"
+  skip-cache:
+    description: "Whether to skip the cache."
+    required: false
+    default: "false"
+  skip-build:
+    description: "Whether to skip the build steps."
+    required: false
+    default: "false"
+  path:
+    description: "Path to current working directory."
+    required: false
+    default: ${{ github.workspace }}
+  fetch-depth:
+    description: "Number of commits to fetch."
+    required: false
+  token:
+    description: "GITHUB_TOKEN for the repository."
+    required: false
+    default: ${{ github.token }}
+
+runs:
+  using: composite
+
+  steps:
+    - name: Check out code
+      uses: actions/checkout@v3
+      with:
+        ref: ${{ inputs.branch-ref }}
+        fetch-depth: ${{ inputs.fetch-depth }}
+        path: ${{ inputs.path }}
+    - name: Use Node LTS version
+      uses: actions/setup-node@v3
+      with:
+        node-version: ${{ inputs.node-version }}
+        cache: yarn
+        cache-dependency-path: ${{ inputs.path }}/yarn.lock
+    - name: Check for cached dependencies
+      if: ${{ inputs.skip-cache != 'true' }}
+      continue-on-error: true
+      id: cache-dependencies
+      uses: actions/cache@v3
+      with:
+        path: |
+          ${{ inputs.path }}/.cache/yarn
+          ${{ inputs.path }}/node_modules
+        key: node${{ inputs.node-version }}-${{ hashFiles('yarn.lock') }}
+    # If statement isn't needed here b/c yarn will leverage the cache if it exists
+    - name: Install dependencies
+      shell: bash
+      run: |
+        cd ${{ inputs.path }} && yarn install --frozen-lockfile --cache-folder .cache/yarn
+    - name: Check for cached build assets
+      if: ${{ inputs.skip-cache != 'true' }}
+      continue-on-error: true
+      id: cache-build
+      uses: actions/cache@v3
+      with:
+        path: |
+          ${{ inputs.path }}/components/*/dist/**
+        key: compiled-assets-${{ inputs.branch-ref }}
+    - name: Build components
+      if: ${{ inputs.skip-build != 'true' || steps.cache-build.outputs.cache-hit != 'true' }}
+      shell: bash
+      # Note: we need to skip the nx cache b/c it does not contain the compiled assets
+      run: |
+        echo "::group::Build logs"
+        cd ${{ inputs.path }} && ${{ inputs.build-command }}
+        echo "::endgroup::"
+    # Note: this reports on the final directory structure for debugging purposes
+    - name: List workspace content
+      shell: bash
+      if: ${{ always() }}
+      continue-on-error: true
+      run: |
+        echo "::group::Directory listing for debugging"
+        ls -lRG ${{ inputs.path }}/components ${{ inputs.path }}/site ${{ inputs.path }}/tasks ${{ inputs.path }}/tools ${{ inputs.path }}/plugins ${{ inputs.path }}/dist
+        echo "::endgroup::"

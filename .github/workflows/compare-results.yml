@@ -1,0 +1,84 @@
+# ---------- COMPARE PR & BASE ---------- #
+#
+# This workflow is triggered by the Validate successful build workflow
+# which, when successful, will run a compare of the compiled assets
+# between the PR branch and the base branch. If there are any changes
+# in the compiled assets, the workflow will fail and report back.
+#
+name: Compare
+
+on:
+  workflow_call:
+    inputs:
+      base-ref:
+        description: "The branch or tag to compare against"
+        required: false
+        type: string
+        default: main
+      ref:
+        description: "The branch or tag to checkout"
+        required: false
+        type: string
+        default: ${{ github.event.workflow_call.head.ref }}
+    outputs:
+      has-changed:
+        value: ${{ jobs.compare_results.outputs.has-changed }}
+      total-size:
+        value: ${{ jobs.compare_results.outputs.total-size }}
+
+permissions:
+  contents: read
+  pull-requests: write
+
+defaults:
+  run:
+    shell: bash
+
+jobs:
+  compare_results:
+    name: Compare compiled assets
+    # note: why a matrix when there's only 1 input? because we reuse the value
+    # multiple times below and this makes it easier to maintain
+    strategy:
+      matrix:
+        system: [macos-latest]
+        node-version: [16]
+    runs-on: ${{ matrix.system }}
+    outputs:
+      has-changed: ${{ steps.compare.outputs.has-changed }}
+      total-size: ${{ steps.compare.outputs.total-size }}
+    steps:
+      - uses: actions/checkout@v3
+      - name: Basic setup
+        uses: ./.github/actions/setup-and-build/
+        # uses: spectrum-tools/gh-action-setup@v1
+        with:
+          skip-build: "true"
+          token: ${{ secrets.GITHUB_TOKEN }}
+      - name: Download base branch artifacts
+        uses: actions/download-artifact@v2
+        with:
+          name: ${{ matrix.system }}-node${{ matrix.node-version }}-compiled-assets-${{ inputs.base-ref }}
+      # If no artifacts are found for main, kick off a manual build
+      - if: ${{ failure() }}
+        uses: ./.github/actions/setup-and-build/
+        # uses: spectrum-tools/gh-action-setup@v1
+        with:
+          branch-ref: ${{ inputs.base-ref }}
+          path: base-branch
+          token: ${{ secrets.GITHUB_TOKEN }}
+          # todo: delete this before merging into main
+          build-command: yarn build:components
+      - name: Download head branch artifacts
+        uses: actions/download-artifact@v2
+        with:
+          name: ${{ matrix.system }}-node${{ matrix.node-version }}-compiled-assets-${{ inputs.ref }}
+      - name: Compare compiled output file size
+        id: compare
+        uses: ./.github/actions/file-diff/
+        # uses: spectrum-tools/gh-action-file-diff@v1
+        with:
+          path: ${{ github.workspace }}/base-branch/
+          diff-path: ${{ github.workspace }}/pr-branch/
+          file-glob-pattern: components/*/dist/**
+          token: ${{ secrets.GITHUB_TOKEN }}

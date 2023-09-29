@@ -1,0 +1,56 @@
+# ---------- LINT PRE-COMPILED ASSETS ---------- #
+# Lint runs our pre-compiled assets through stylelint and provides a log of
+# any errors or warnings; it only runs on the PR branch
+name: Lint
+
+on:
+  pull_request:
+    paths:
+      - "components/**/*.css"
+      - "components/*/package.json"
+# From docs: By default, a workflow only runs when a pull_request event's
+# activity type is opened, synchronize, or reopened.
+
+permissions:
+  contents: read
+  pull-requests: write
+
+defaults:
+  run:
+    shell: bash
+
+jobs:
+  lint:
+    name: Lint
+    runs-on: macos-latest
+    steps:
+      - uses: actions/checkout@v3
+      - name: Setup
+        uses: ./.github/actions/setup-and-build/
+        # uses: spectrum-tools/gh-action-setup@v1
+        with:
+          # install but don't build - we're linting pre-compiled assets
+          skip-build: "true"
+          token: ${{ secrets.GITHUB_TOKEN }}
+      - name: Get list of changed files
+        id: files
+        uses: tj-actions/changed-files@v37
+        with:
+          files_yaml: |
+            styles:
+              - components/**/*.css
+            packages:
+              - components/*/package.json
+      - name: Lint component styles
+        if: ${{ steps.files.outputs.styles_added_files != '' || steps.files.outputs.styles_modified_files != '' }}
+        uses: reviewdog/action-stylelint@v1.17.1
+        with:
+          fail_on_error: false
+          level: info
+          reporter: github-pr-check
+          stylelint_input: ${{ steps.files.outputs.styles_added_files }} ${{ steps.files.outputs.styles_modified_files }}
+          stylelint_config: ./.stylelintrc.json
+      - name: Lint component packages
+        if: ${{ steps.files.outputs.packages_added_files != '' || steps.files.outputs.packages_modified_files != '' }}
+        shell: bash
+        run: yarn lint:components ${{ steps.files.outputs.packages_added_files }} ${{ steps.files.outputs.packages_modified_files }}
