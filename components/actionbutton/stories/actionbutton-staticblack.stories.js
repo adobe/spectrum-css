@@ -1,9 +1,10 @@
-import { argTypes, ActionButtons } from "./index";
+import { ActionButtons, argTypes } from "./index";
 
+/**
+ * The action button component represents an action a user can take.
+ */
 export default {
 	title: "Components/Action button/Static Black",
-	description:
-		"The action button component represents an action a user can take.",
 	component: "ActionButton",
 	argTypes: argTypes,
 	args: {
@@ -13,8 +14,8 @@ export default {
 		isQuiet: false,
 		isEmphasized: false,
 		hasPopup: false,
-    backgroundColor: "rgb(181, 209, 211)",
-    staticColor: "black",
+		backgroundColor: "rgb(181, 209, 211)",
+		staticColor: "black",
 	},
 	parameters: {
 		actions: {

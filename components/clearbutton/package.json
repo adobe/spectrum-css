@@ -1,6 +1,6 @@
 {
   "name": "@spectrum-css/clearbutton",
-  "version": "5.0.9",
+  "version": "5.0.8",
   "description": "The Spectrum CSS clearbutton component",
   "license": "Apache-2.0",
   "author": "Adobe",
@@ -13,17 +13,13 @@
   "bugs": {
     "url": "https://github.com/adobe/spectrum-css/issues"
   },
-  "main": "dist/index-vars.css",
-  "scripts": {
-    "build": "gulp"
-  },
+  "main": "dist/index.css",
   "peerDependencies": {
     "@spectrum-css/tokens": ">=11"
   },
   "devDependencies": {
-    "@spectrum-css/component-builder-simple": "^2.0.17",
-    "@spectrum-css/tokens": "^11.4.0",
-    "gulp": "^4.0.0"
+    "@spectrum-css/commons": "^8.0.0",
+    "@spectrum-css/tokens": "^11.4.0"
   },
   "publishConfig": {
     "access": "public"

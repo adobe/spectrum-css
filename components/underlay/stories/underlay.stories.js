@@ -1,9 +1,11 @@
 // Import the component markup template
 import { Template } from "./template";
 
+/**
+ * A underlay component is used with modal and dialog. It lays over the rest of the page to deliver a blocking layer between the two contexts.
+ */
 export default {
   title: "Components/Underlay",
-  description: "A underlay component is used with modal and dialog. It lays over the rest of the page to deliver a blocking layer between the two contexts.",
   component: "Underlay",
   argTypes: {
     isOpen: {

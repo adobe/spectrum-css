@@ -1,0 +1,16 @@
+{
+	"$schema": "../../node_modules/nx/schemas/project-schema.json",
+	"name": "accordion",
+	"tags": ["component"],
+	"implicitDependencies": ["tag:postcss"],
+	"targets": {
+		"clean": {},
+		"profile": {},
+		"lint": {},
+		"build": {},
+		"test": {
+			"defaultConfiguration": "scoped"
+		},
+		"watch": {}
+	}
+}

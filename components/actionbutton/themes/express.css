@@ -10,7 +10,9 @@ OF ANY KIND, either express or implied. See the License for the specific languag
 governing permissions and limitations under the License.
 */
 
-@container (--system: express) {
+@import "./spectrum.css";
+
+@container style(--system: express) {
   .spectrum-ActionButton {
     --spectrum-actionbutton-background-color-default: var(--spectrum-gray-200);
     --spectrum-actionbutton-background-color-hover: var(--spectrum-gray-300);
@@ -22,7 +24,9 @@ governing permissions and limitations under the License.
     --spectrum-actionbutton-border-color-down: transparent;
     --spectrum-actionbutton-border-color-focus: transparent;
 
-    --spectrum-actionbutton-background-color-disabled: var(--spectrum-disabled-background-color);
+    --spectrum-actionbutton-background-color-disabled: var(
+      --spectrum-disabled-background-color
+    );
     --spectrum-actionbutton-border-color-disabled: transparent;
 
     &.spectrum-ActionButton--quiet {
@@ -41,17 +45,33 @@ governing permissions and limitations under the License.
     }
 
     &.spectrum-ActionButton--staticBlack {
-      --spectrum-actionbutton-background-color-default: var(--spectrum-transparent-black-200);
-      --spectrum-actionbutton-background-color-hover: var(--spectrum-transparent-black-300);
-      --spectrum-actionbutton-background-color-down: var(--spectrum-transparent-black-400);
-      --spectrum-actionbutton-background-color-focus: var(--spectrum-transparent-black-300);
+      --spectrum-actionbutton-background-color-default: var(
+        --spectrum-transparent-black-200
+      );
+      --spectrum-actionbutton-background-color-hover: var(
+        --spectrum-transparent-black-300
+      );
+      --spectrum-actionbutton-background-color-down: var(
+        --spectrum-transparent-black-400
+      );
+      --spectrum-actionbutton-background-color-focus: var(
+        --spectrum-transparent-black-300
+      );
     }
 
     &.spectrum-ActionButton--staticWhite {
-      --spectrum-actionbutton-background-color-default: var(--spectrum-transparent-white-200);
-      --spectrum-actionbutton-background-color-hover: var(--spectrum-transparent-white-300);
-      --spectrum-actionbutton-background-color-down: var(--spectrum-transparent-white-400);
-      --spectrum-actionbutton-background-color-focus: var(--spectrum-transparent-white-300);
+      --spectrum-actionbutton-background-color-default: var(
+        --spectrum-transparent-white-200
+      );
+      --spectrum-actionbutton-background-color-hover: var(
+        --spectrum-transparent-white-300
+      );
+      --spectrum-actionbutton-background-color-down: var(
+        --spectrum-transparent-white-400
+      );
+      --spectrum-actionbutton-background-color-focus: var(
+        --spectrum-transparent-white-300
+      );
     }
   }
 }

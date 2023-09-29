@@ -1,6 +1,6 @@
 {
   "name": "@spectrum-css/steplist",
-  "version": "4.0.3",
+  "version": "4.0.2",
   "description": "The Spectrum CSS steplist component",
   "license": "Apache-2.0",
   "author": "Adobe",
@@ -13,20 +13,15 @@
   "bugs": {
     "url": "https://github.com/adobe/spectrum-css/issues"
   },
-  "main": "dist/index-vars.css",
-  "scripts": {
-    "build": "gulp"
-  },
+  "main": "dist/index.css",
   "peerDependencies": {
-    "@spectrum-css/icon": ">=3",
+    "@spectrum-css/icon": ">=3 <=4",
     "@spectrum-css/tokens": ">=11"
   },
   "devDependencies": {
-    "@spectrum-css/component-builder-simple": "^2.0.16",
     "@spectrum-css/icon": "^4.0.3",
     "@spectrum-css/tokens": "^11.4.0",
-    "@spectrum-css/tooltip": "^5.1.15",
-    "gulp": "^4.0.0"
+    "@spectrum-css/tooltip": "^5.1.14"
   },
   "publishConfig": {
     "access": "public"

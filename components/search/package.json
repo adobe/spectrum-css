@@ -1,6 +1,6 @@
 {
   "name": "@spectrum-css/search",
-  "version": "6.0.24",
+  "version": "6.0.23",
   "description": "The Spectrum CSS search component",
   "license": "Apache-2.0",
   "author": "Adobe",
@@ -13,23 +13,18 @@
   "bugs": {
     "url": "https://github.com/adobe/spectrum-css/issues"
   },
-  "main": "dist/index-vars.css",
-  "scripts": {
-    "build": "gulp"
-  },
+  "main": "dist/index.css",
   "peerDependencies": {
-    "@spectrum-css/clearbutton": ">=1",
-    "@spectrum-css/icon": ">=3",
-    "@spectrum-css/textfield": ">=5.1.7",
-    "@spectrum-css/tokens": ">=10"
+    "@spectrum-css/clearbutton": ">=5",
+    "@spectrum-css/icon": ">=4",
+    "@spectrum-css/textfield": ">=6",
+    "@spectrum-css/tokens": ">=10 <=11"
   },
   "devDependencies": {
-    "@spectrum-css/clearbutton": "^2.0.0",
-    "@spectrum-css/component-builder-simple": "^2.0.17",
+    "@spectrum-css/clearbutton": "^5.0.6",
     "@spectrum-css/icon": "^4.0.3",
-    "@spectrum-css/textfield": "^6.0.24",
-    "@spectrum-css/tokens": "^11.4.0",
-    "gulp": "^4.0.0"
+    "@spectrum-css/textfield": "^6.0.23",
+    "@spectrum-css/tokens": "^11.4.0"
   },
   "publishConfig": {
     "access": "public"

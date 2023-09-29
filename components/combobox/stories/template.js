@@ -3,13 +3,13 @@ import { classMap } from "lit/directives/class-map.js";
 import { ifDefined } from "lit/directives/if-defined.js";
 
 import { Template as Menu } from "@spectrum-css/menu/stories/template.js";
-import { Template as TextField } from "@spectrum-css/textfield/stories/template.js";
-import { Template as Popover } from "@spectrum-css/popover/stories/template.js";
 import { Template as PickerButton } from "@spectrum-css/pickerbutton/stories/template.js";
+import { Template as Popover } from "@spectrum-css/popover/stories/template.js";
+import { Template as TextField } from "@spectrum-css/textfield/stories/template.js";
 
 import { useArgs, useGlobals } from "@storybook/client-api";
 
-import "../index.css";
+import "@spectrum-css/combobox/dist/index-base.css";
 
 export const Template = ({
 	rootClass = "spectrum-Combobox",
@@ -29,17 +29,9 @@ export const Template = ({
 	readOnly = false,
 	...globals
 }) => {
-	const [_, updateArgs] = useArgs();
+	const [, updateArgs] = useArgs();
 	const [{ lang }] = useGlobals();
 
-	const { express } = globals;
-
-	try {
-		if (!express) import(/* webpackPrefetch: true */ "../themes/spectrum.css");
-		else import(/* webpackPrefetch: true */ "../themes/express.css");
-	} catch (e) {
-		console.warn(e);
-	}
 
 	return html`
 		<div
@@ -55,6 +47,8 @@ export const Template = ({
 				"is-keyboardFocused": !isDisabled && isKeyboardFocused,
 				"is-loading": isLoading,
 				"is-disabled": isDisabled,
+				"is-required": isRequired,
+				"is-read-only": readOnly,
 				...customClasses.reduce((a, c) => ({ ...a, [c]: true }), {}),
 			})}
 			id=${ifDefined(id)}
@@ -68,6 +62,8 @@ export const Template = ({
 					isValid,
 					isInvalid,
 					isFocused,
+					isRequired,
+					readOnly,
 					isKeyboardFocused,
 					customClasses: [
 						`${rootClass}-textfield`,
@@ -98,6 +94,8 @@ export const Template = ({
 					isFocused,
 					isKeyboardFocused,
 					isDisabled,
+					isRequired,
+					readOnly,
 					position: "right",
 					onclick: function () {
 						updateArgs({ isOpen: !isOpen });
@@ -117,7 +115,7 @@ export const Template = ({
 								width: "100%",
 						  }
 						: {},
-					content: [
+					content: content ?? [
 						Menu({
 							...globals,
 							items: [

@@ -1,10 +1,12 @@
 // Import the component markup template
-import { Template } from "./template";
 import { default as Radio } from "@spectrum-css/radio/stories/radio.stories.js";
+import { Template } from "./template";
 
+/**
+ * The Field group component is...
+ */
 export default {
 	title: "Components/Field group",
-	description: "The Field group component is...",
 	component: "Fieldgroup",
 	argTypes: {
 		layout: {

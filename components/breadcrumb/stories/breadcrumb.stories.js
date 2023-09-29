@@ -1,10 +1,11 @@
 // Import the component markup template
 import { Template } from "./template";
 
+/**
+ * Breadcrumbs show hierarchy and navigational context for a user’s location within an app.
+ */
 export default {
 	title: "Components/Breadcrumbs",
-	description:
-		"Breadcrumbs show hierarchy and navigational context for a user’s location within an app.",
 	component: "Breadcrumbs",
 	argTypes: {
 		items: { table: { disable: true } },

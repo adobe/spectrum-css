@@ -1,11 +1,11 @@
 import { html, nothing } from "lit";
 import { classMap } from "lit/directives/class-map.js";
-import { repeat } from "lit/directives/repeat.js";
 import { ifDefined } from "lit/directives/if-defined.js";
+import { repeat } from "lit/directives/repeat.js";
 
 import { Template as Tooltip } from "@spectrum-css/tooltip/stories/template.js";
 
-import "../index.css";
+import "@spectrum-css/steplist";
 
 export const SteplistItem = ({
 	rootClass,
@@ -28,7 +28,8 @@ export const SteplistItem = ({
 	const markerContainer = html`
 		<span class="${rootClass}-markerContainer">
 			${withTooltip && !isSmall && typeof label !== "undefined"
-				? Tooltip({
+		? Tooltip({
+					...globals,
 						label,
 						isOpen: false,
 						placement: "top",
@@ -98,6 +99,7 @@ export const Template = ({
 		>
 			${repeat(items, (args, idx) =>
 				SteplistItem({
+					...globals,
 					rootClass: `${rootClass}`,
 					isSmall,
 					isInteractive,

@@ -1,4 +1,4 @@
-| Modifiable Custom Properties                    |
+| Modifiable custom properties                    |
 | ----------------------------------------------- |
 | `--mod-clear-button-background-color`           |
 | `--mod-clear-button-background-color-disabled`  |
@@ -9,7 +9,6 @@
 | `--mod-clear-button-icon-color`                 |
 | `--mod-clear-button-icon-color-disabled`        |
 | `--mod-clear-button-icon-color-down`            |
-| `--mod-clear-button-icon-color-hover`           |
 | `--mod-clear-button-icon-color-key-focus`       |
 | `--mod-clear-button-padding`                    |
 | `--mod-clear-button-width`                      |

@@ -1,0 +1,188 @@
+@import url("https://unpkg.com/prismjs@1.20.0/themes/prism.css") screen and
+  ((prefers-color-scheme: light) or (prefers-color-scheme: no-preference));
+@import url("https://unpkg.com/prismjs@1.20.0/themes/prism-dark.css") screen and
+  (prefers-color-scheme: dark);
+
+@import "../assets/styles/_themes.css";
+
+@import "@spectrum-css/actionbutton";
+@import "@spectrum-css/typography";
+@import "@spectrum-css/treeview";
+@import "@spectrum-css/button";
+@import "@spectrum-css/card";
+@import "@spectrum-css/table";
+
+/* body {
+  margin: 0;
+  font-family: var(--spectrum-sans-font-family-stack);
+  background-color: var(--spectrum-gray-100) !important;
+  color: var(--spectrum-gray-900) !important;
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+}
+
+*:not([class]),
+[class^="site-"] {
+  box-sizing: border-box;
+} */
+
+/* Hide the SVG elements that only include references */
+svg:has(symbol):not(:has(use)) {
+  display: none;
+}
+
+/* Surfaces */
+
+/* .spectrum,
+.spectrum--express {
+  background-color: var(--spectrum-gray-100) !important;
+  color: var(--spectrum-gray-900) !important;
+}
+
+.docs-story {
+  & + div {
+    background: inherit !important;
+    color: inherit !important;
+  }
+
+  & > *:first-child {
+    padding: 0;
+  }
+}
+
+#components button {
+  margin-left: 0;
+  padding: 0;
+  letter-spacing: unset;
+  text-transform: unset;
+}
+
+#storybook-explorer-tree > div {
+  margin-inline: 0;
+} */
+
+/* Tree navigation item in the sidebar */
+
+/* button.sidebar-item {
+  font-weight: 700 !important;
+} */
+
+/* .sidebar-subheading button span {
+  display: none;
+} */
+
+/* .sidebar-item {
+  color: rgb(34, 34, 34) !important;
+  font-weight: 400 !important;
+  font-size: 14px !important;
+  line-height: 1.4em !important;
+  block-size: 32px !important;
+  border-radius: 4px !important;
+  padding-inline-start: 24px !important;
+  padding-inline-end: 12px !important;
+  padding-block: 4px !important;
+  margin-block: 4px !important;
+} */
+
+/* input,
+textarea,
+select {
+  border-radius: 4px !important;
+}
+
+div[role="main"] > div > div > div:first-child > div:first-child > div div {
+  background-color: unset !important;
+}
+
+div[role="main"] > div > div > div:first-child > div:first-child > div > div:first-child > span {
+  display: none !important;
+}
+
+[role="main"] > div {
+  box-shadow: none !important;
+  border-top-left-radius: 0 !important;
+  border-bottom-left-radius: 0 !important;
+  overflow: auto !important;
+}
+
+
+#storybook-explorer-searchfield {
+  padding: 3px 12px 5px 35px !important;
+}
+
+input:focus,
+textarea:focus,
+select:focus,
+#storybook-explorer-searchfield:focus {
+  border-color: rgb(2, 101, 220) !important;
+  box-shadow: rgb(2, 101, 220) 0 0 0 1px inset !important;
+} */
+
+/* .sidebar-item svg {
+  display: none;
+} */
+
+/* .sidebar-header > div:has(img, a) {
+  margin-inline-end: 0;
+  color: inherit !important;
+}
+
+.sidebar-header > div img {
+  block-size: auto;
+  inline-size: 100%;
+}
+
+#storybook-explorer-menu {
+
+}
+
+#storybook-explorer-searchfield {
+  padding: 3px 12px 5px 35px !important;
+}
+
+button.sidebar-item {
+  font-weight: 700;
+} */
+
+/* .sidebar-item { */
+
+/* height: 32px !important; */
+
+/* padding-block: 4px; */
+
+/* } */
+
+/* input,
+textarea,
+select {
+  border-radius: 4px !important;
+} */
+
+/* Documentation site */
+.docblock-source.spectrum-Code {
+  block-size: auto;
+  max-inline-size: 100%;
+}
+
+.docblock-source.spectrum-Code.is-collapsed {
+  max-block-size: max(300px, 50vh);
+  overflow: auto;
+}
+
+.docblock-source > div:last-child {
+  position: sticky;
+  block-start: 0;
+  inline-end: 0;
+  font-family: var(--spectrum-code-font-family-stack);
+
+  & button {
+    @extend .spectrum-ActionButton;
+  }
+}
+
+.sbdocs.sbdocs-preview,
+.docblock-source {
+  filter: none !important;
+  box-shadow: none !important;
+  border-radius: var(--spectrum-table-border-radius);
+  border: var(--spectrum-border-width-100) solid var(----spectrum-gray-300);
+}

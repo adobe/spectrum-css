@@ -1,9 +1,11 @@
 // Import the component markup template
 import { Template } from "./template";
 
+/**
+ * The Swatch group component is...
+ */
 export default {
 	title: "Components/Swatch group",
-	description: "The Swatch group component is...",
 	component: "Swatchgroup",
 	argTypes: {
 		size: {

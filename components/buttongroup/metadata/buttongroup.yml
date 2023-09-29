@@ -1,14 +1,12 @@
-name: Button group
-SpectrumSiteSlug: https://spectrum.adobe.com/page/button/
-sections:
-  - name: Custom Properties API
-    description: |
-      This component can be modified via its `--mod-*` prefixed custom properties. A list of those prefixed custom properties can be found <a href="https://github.com/adobe/spectrum-css/tree/main/components/buttongroup/metadata/mods.md">here</a>.
+title: Button group
+designLink: https://spectrum.adobe.com/page/button/
+SWC:
+  url: https://opensource.adobe.com/spectrum-web-components/components/button-group/
+  tag: "sp-button-group"
 examples:
   - id: buttongroup-horizontal
-    name: Horizontal
-    description: |
-      Default spacing for Medium, Large, and Extra Large t-shirt sizes.
+    title: Horizontal
+    description: Default spacing for Medium, Large, and Extra Large t-shirt sizes.
     markup: |
       <div class="spectrum-ButtonGroup">
         <button class="spectrum-Button spectrum-Button--sizeM spectrum-Button--outline spectrum-Button--secondary spectrum-ButtonGroup-item">
@@ -23,7 +21,7 @@ examples:
       </div>
 
   - id: buttongroup-horizontal-small
-    name: Horizontal - Small
+    title: Horizontal - Small
     description: |
       Spacing for the Small t-shirt size.
     markup: |
@@ -40,7 +38,7 @@ examples:
       </div>
 
   - id: buttongroup-vertical
-    name: Vertical
+    title: Vertical
     description: |
       Default spacing for Medium, Large, and Extra Large t-shirt sizes.
     markup: |
@@ -57,7 +55,7 @@ examples:
       </div>
 
   - id: buttongroup-vertical-small
-    name: Vertical - Small
+    title: Vertical - Small
     description: |
       Spacing for the Small t-shirt size.
     markup: |

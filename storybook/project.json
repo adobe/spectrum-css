@@ -1,0 +1,96 @@
+{
+	"name": "storybook",
+	"tags": ["tooling", "website"],
+	"namedInputs": {
+		"default": [
+			"{projectRoot}/assets/**",
+			"{projectRoot}/decorators/**",
+			"{projectRoot}/*.js",
+			"{projectRoot}/*.html",
+			"{workspaceRoot}/components/*/stories/**"
+		]
+	},
+	"targets": {
+		"clean": {
+			"inputs": ["{projectRoot}/storybook-static/**"]
+		},
+		"dev": {
+			"dependsOn": [
+				{
+					"projects": ["tag:component"],
+					"target": "build",
+					"configuration": "light"
+				}
+			],
+			"inputs": ["default"],
+			"executor": "@nx/storybook:storybook",
+			"options": {
+				"port": 3000,
+				"open": true,
+				"configDir": "{projectRoot}",
+        		"browserTarget": "build",
+				"docsMode": true
+			}
+		},
+		"build": {
+			"dependsOn": [
+				{
+					"projects": ["tag:component"],
+					"target": "build"
+				}
+			],
+			"inputs": ["default"],
+			"outputs": ["{options.outputDir}"],
+			"executor": "@nx/storybook:build",
+			"options": {
+				"outputDir": "{projectRoot}/storybook-static",
+				"configDir": "{projectRoot}",
+        		"browserTarget": "build",
+				"styles": ["./assets/styles/storybook.css"],
+				"stylePreprocessorOptions": {
+					"includePaths": ["./assets/styles"]
+				}
+			}
+		},
+		"start": {
+			"dependsOn": [
+				{
+					"projects": ["tag:component"],
+					"target": "build",
+					"configuration": "light"
+				}
+			],
+			"inputs": ["default"],
+			"executor": "@nx/storybook:storybook",
+			"options": {
+				"port": 3000,
+				"configDir": "{projectRoot}",
+				"docsMode": true
+			}
+		},
+		"lint": {
+			"inputs": [
+				"{workspaceRoot}/assets/*.css",
+				"{workspaceRoot}/*.js",
+				"{workspaceRoot}/*.json",
+				"{projectRoot}/components/*/stories/*.js",
+				"{projectRoot}/.stylelintignore",
+				"{projectRoot}/stylelint.config.js",
+				"{projectRoot}/.eslintrc.js"
+			],
+			"executor": "nx:run-commands",
+			"options": {
+				"commands": [
+					"stylelint {projectRoot}/assets/*.css",
+					"eslint {projectRoot}/*.js {projectRoot}/decorators/*.js {projectRoot}/package.json {projectRoot}/project.json ./components/*/stories/*.js"
+				]
+			}
+		},
+		"test": {
+			"executor": "nx:run-commands",
+			"options": {
+				"command": "chromatic --build-script-name build --junit-report"
+			}
+		}
+	}
+}

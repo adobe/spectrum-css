@@ -1,13 +1,13 @@
 // Import the component markup template
 import { Template } from "./template";
 
+/**
+ * Use an asset element to visually represent a file, folder or image. File and folder representations will center themselves horizontally and vertically in the space provided to the element. Images will be contained to the element, growing to the element's full height while centering itself within the width provided.
+ */
 export default {
 	title: "Components/Asset",
-	description:
-		"Use an asset element to visually represent a file, folder or image. File and folder representations will center themselves horizontally and vertically in the space provided to the element. Images will be contained to the element, growing to the element's full height while centering itself within the width provided.",
 	component: "Asset",
 	argTypes: {
-		reducedMotion: { table: { disable: true } },
 		preset: {
 			name: "Preset asset types",
 			type: { name: "string" },
@@ -51,8 +51,7 @@ SymbolicAsset.args = {
 export const ImageAsset = Template.bind({});
 ImageAsset.argTypes = {
 	preset: { table: { disable: true } },
-	scale: { table: { disable: true } },
 };
 ImageAsset.args = {
-	image: "example-ava.png",
+	image: "images/example-ava.png",
 };

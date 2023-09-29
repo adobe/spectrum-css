@@ -1,10 +1,10 @@
 import { html } from "lit-html";
 import { classMap } from "lit-html/directives/class-map.js";
+import { ifDefined } from "lit-html/directives/if-defined.js";
 import { styleMap } from "lit-html/directives/style-map.js";
 import { when } from "lit-html/directives/when.js";
-import { ifDefined } from "lit-html/directives/if-defined.js";
 
-import "../index.css";
+import "@spectrum-css/opacitycheckerboard";
 
 export const Template = ({
 	rootClass = "spectrum-OpacityCheckerboard",
@@ -29,10 +29,9 @@ export const Template = ({
 	componentOnly,
 	content,
 	role,
-	...globals
 }) => {
 	// Just the component markup. For use by other component's stories.
-	if (componentOnly){
+	if (componentOnly) {
 		return html`
 			<div
 				class=${classMap({

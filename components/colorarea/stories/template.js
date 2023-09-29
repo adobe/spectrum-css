@@ -1,9 +1,9 @@
+import { Template as ColorHandle } from "@spectrum-css/colorhandle/stories/template.js";
 import { html } from "lit";
 import { classMap } from "lit/directives/class-map.js";
 import { styleMap } from "lit/directives/style-map.js";
-import { Template as ColorHandle } from "@spectrum-css/colorhandle/stories/template.js";
 
-import "../index.css";
+import "@spectrum-css/colorarea";
 
 export const Template = ({
 	rootClass = "spectrum-ColorArea",

@@ -1,10 +1,11 @@
 // Import the component markup template
 import { Template } from "./template";
 
+/**
+ * Checkboxes allow users to select multiple items from a list of individual items, or mark one individual item as selected.
+ */
 export default {
 	title: "Components/Checkbox",
-	description:
-		"Checkboxes allow users to select multiple items from a list of individual items, or mark one individual item as selected.",
 	component: "Checkbox",
 	argTypes: {
 		size: {

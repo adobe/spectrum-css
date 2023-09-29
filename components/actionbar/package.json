@@ -1,6 +1,6 @@
 {
   "name": "@spectrum-css/actionbar",
-  "version": "7.0.5",
+  "version": "7.0.4",
   "description": "The Spectrum CSS actionbar component",
   "license": "Apache-2.0",
   "author": "Adobe",
@@ -13,29 +13,24 @@
   "bugs": {
     "url": "https://github.com/adobe/spectrum-css/issues"
   },
-  "main": "dist/index-vars.css",
-  "scripts": {
-    "build": "gulp"
-  },
+  "main": "dist/index.css",
   "peerDependencies": {
-    "@spectrum-css/actionbutton": ">=3",
-    "@spectrum-css/actiongroup": ">=3",
-    "@spectrum-css/closebutton": ">=3",
+    "@spectrum-css/actionbutton": ">=5",
+    "@spectrum-css/actiongroup": ">=4",
+    "@spectrum-css/closebutton": ">=4",
     "@spectrum-css/fieldlabel": ">=7",
-    "@spectrum-css/icon": ">=3",
-    "@spectrum-css/popover": ">=5 <=6",
-    "@spectrum-css/tokens": ">=10"
+    "@spectrum-css/icon": ">=4",
+    "@spectrum-css/popover": ">=6",
+    "@spectrum-css/tokens": ">=11"
   },
   "devDependencies": {
     "@spectrum-css/actionbutton": "^5.0.11",
-    "@spectrum-css/closebutton": "^4.0.11",
-    "@spectrum-css/component-builder-simple": "^2.0.17",
-    "@spectrum-css/fieldlabel": "^7.1.1",
+    "@spectrum-css/closebutton": "^4.0.10",
+    "@spectrum-css/fieldlabel": "^7.1.0",
     "@spectrum-css/icon": "^4.0.3",
-    "@spectrum-css/popover": "^6.0.78",
-    "@spectrum-css/table": "^5.0.5",
-    "@spectrum-css/tokens": "^11.4.0",
-    "gulp": "^4.0.0"
+    "@spectrum-css/popover": "^6.0.77",
+    "@spectrum-css/table": "^5.0.4",
+    "@spectrum-css/tokens": "^11.4.0"
   },
   "publishConfig": {
     "access": "public"

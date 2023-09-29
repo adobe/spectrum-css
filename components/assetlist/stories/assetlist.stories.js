@@ -3,10 +3,11 @@ import { Template } from "./template";
 
 import { default as Checkbox } from "@spectrum-css/checkbox/stories/checkbox.stories.js";
 
+/**
+ * A selectable list of Assets, often used inside of Miller Columns.
+ */
 export default {
 	title: "Components/Asset list",
-	description:
-		"A selectable list of Assets, often used inside of Miller Columns.",
 	component: "AssetList",
 	argTypes: {
 		items: { table: { disable: true } },
@@ -30,8 +31,8 @@ export const Default = Template.bind({});
 Default.args = {
 	items: [
 		{
-			image: "example-ava.png",
-			label: "Shantanu.jpg",
+			image: "images/example-ava.png",
+			label: "images/Shantanu.jpg",
 			isSelectable: true,
 		},
 		{

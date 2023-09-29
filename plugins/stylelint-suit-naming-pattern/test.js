@@ -2,7 +2,7 @@ const test = require("ava");
 const stylelint = require("stylelint");
 const rule = require("./index");
 
-const { ruleName, messages } = rule;
+const { ruleName } = rule;
 
 async function runRule(code) {
 	const result = await stylelint.lint({

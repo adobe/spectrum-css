@@ -1,8 +1,8 @@
-name: Dial
+title: Dial
 description: A dial for turning it up to 11.
 examples:
   - id: dial
-    name: Standard
+    title: Standard
     markup: |
       <div class="spectrum-Dial">
         <div class="spectrum-Dial-controls">
@@ -34,7 +34,7 @@ examples:
         </div>
       </div>
   - id: dial
-    name: With label
+    title: With label
     markup: |
       <div class="spectrum-Dial">
         <div class="spectrum-Dial-labelContainer">

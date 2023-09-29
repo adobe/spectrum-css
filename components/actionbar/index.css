@@ -9,28 +9,31 @@ OF ANY KIND, either express or implied. See the License for the specific languag
 governing permissions and limitations under the License.
 */
 
+/**
+ * @namespace spectrum
+ * @component ActionBar
+ */
 .spectrum-ActionBar {
   --spectrum-actionbar-height: var(--spectrum-action-bar-height);
   --spectrum-actionbar-corner-radius: var(--spectrum-corner-radius-100);
 
   /* item counter field label */
   --spectrum-actionbar-item-counter-font-size: var(--spectrum-font-size-100);
-  --spectrum-actionbar-item-counter-line-height: var(--spectrum-line-height-100);
-  --spectrum-actionbar-item-counter-color: var(--spectrum-neutral-content-color-default);
-
-  /* cjk language support for item counter */
-  &:lang(ja),
-  &:lang(zh),
-  &:lang(ko) {
-    --spectrum-actionbar-item-counter-line-height-cjk: var(--spectrum-cjk-line-height-100);
-  }
+  --spectrum-actionbar-item-counter-line-height: var(
+    --spectrum-line-height-100
+  );
+  --spectrum-actionbar-item-counter-color: var(
+    --spectrum-neutral-content-color-default
+  );
 
   /* colors - applied to popover */
   --spectrum-actionbar-popover-background-color: var(--spectrum-gray-50);
   --spectrum-actionbar-popover-border-color: var(--spectrum-gray-400);
 
   /* emphasized variation colors */
-  --spectrum-actionbar-emphasized-background-color: var(--spectrum-informative-background-color-default);
+  --spectrum-actionbar-emphasized-background-color: var(
+    --spectrum-informative-background-color-default
+  );
   --spectrum-actionbar-emphasized-item-counter-color: var(--spectrum-white);
 
   /* spacing of action bar bottom and horizontal outer edge */
@@ -42,7 +45,9 @@ governing permissions and limitations under the License.
   --spectrum-actionbar-spacing-close-button-end: var(--spectrum-spacing-75);
 
   /* spacing of item counter field label */
-  --spectrum-actionbar-spacing-item-counter-top: var(--spectrum-action-bar-top-to-item-counter);
+  --spectrum-actionbar-spacing-item-counter-top: var(
+    --spectrum-action-bar-top-to-item-counter
+  );
   --spectrum-actionbar-spacing-item-counter-end: var(--spectrum-spacing-400);
 
   /* spacing of action group */
@@ -54,6 +59,15 @@ governing permissions and limitations under the License.
   --spectrum-actionbar-shadow-vertical: var(--spectrum-drop-shadow-y);
   --spectrum-actionbar-shadow-blur: var(--spectrum-drop-shadow-blur);
   --spectrum-actionbar-shadow-color: var(--spectrum-drop-shadow-color);
+
+  /* cjk language support for item counter */
+  &:lang(ja),
+  &:lang(zh),
+  &:lang(ko) {
+    --spectrum-actionbar-item-counter-line-height-cjk: var(
+      --spectrum-cjk-line-height-100
+    );
+  }
 }
 
 /* windows high contrast mode */
@@ -72,7 +86,11 @@ governing permissions and limitations under the License.
 /* ActionBar is outer wrapper with nested popover component within */
 .spectrum-ActionBar {
   /* creates horizontal spacing to edge */
-  padding: 0 var(--mod-actionbar-spacing-outer-edge, var(--spectrum-actionbar-spacing-outer-edge));
+  padding: 0
+    var(
+      --mod-actionbar-spacing-outer-edge,
+      var(--spectrum-actionbar-spacing-outer-edge)
+    );
   inset-block-end: 0;
   z-index: 1;
 
@@ -84,12 +102,17 @@ governing permissions and limitations under the License.
 
   /* Take up no space and be invisible when not open */
   block-size: 0;
-  opacity: 0;
+  opacity: 0%;
 
   &.is-open {
     /* add ActionBar bottom margin to height for correct spacing even when sticky */
-    block-size: calc(var(--mod-actionbar-spacing-outer-edge, var(--spectrum-actionbar-spacing-outer-edge)) + var(--mod-actionbar-height, var(--spectrum-actionbar-height)));
-    opacity: 1;
+    block-size: calc(
+      var(
+          --mod-actionbar-spacing-outer-edge,
+          var(--spectrum-actionbar-spacing-outer-edge)
+        ) + var(--mod-actionbar-height, var(--spectrum-actionbar-height))
+    );
+    opacity: 100%;
   }
 
   .spectrum-ActionBar-popover {
@@ -104,11 +127,37 @@ governing permissions and limitations under the License.
     /* Be relative so our width can be restricted */
     position: relative;
 
-    border-radius: var(--mod-actionbar-corner-radius, var(--spectrum-actionbar-corner-radius));
-    border-color: var(--highcontrast-actionbar-popover-border-color, var(--mod-actionbar-popover-border-color, var(--spectrum-actionbar-popover-border-color)));
-    background-color: var(--mod-actionbar-popover-background-color, var(--spectrum-actionbar-popover-background-color));
+    border-radius: var(
+      --mod-actionbar-corner-radius,
+      var(--spectrum-actionbar-corner-radius)
+    );
+    border-color: var(
+      --highcontrast-actionbar-popover-border-color,
+      var(
+        --mod-actionbar-popover-border-color,
+        var(--spectrum-actionbar-popover-border-color)
+      )
+    );
+    background-color: var(
+      --mod-actionbar-popover-background-color,
+      var(--spectrum-actionbar-popover-background-color)
+    );
 
-    filter: drop-shadow(var(--mod-actionbar-shadow-horizontal, var(--spectrum-actionbar-shadow-horizontal)) var(--mod-actionbar-shadow-vertical, var(--spectrum-actionbar-shadow-vertical)) var(--mod-actionbar-shadow-blur, var(--spectrum-actionbar-shadow-blur)) var(--mod-actionbar-shadow-color, var(--spectrum-actionbar-shadow-color)));
+    filter: drop-shadow(
+      var(
+          --mod-actionbar-shadow-horizontal,
+          var(--spectrum-actionbar-shadow-horizontal)
+        )
+        var(
+          --mod-actionbar-shadow-vertical,
+          var(--spectrum-actionbar-shadow-vertical)
+        )
+        var(--mod-actionbar-shadow-blur, var(--spectrum-actionbar-shadow-blur))
+        var(
+          --mod-actionbar-shadow-color,
+          var(--spectrum-actionbar-shadow-color)
+        )
+    );
 
     /* Let clicks do their thing */
     pointer-events: auto;
@@ -120,36 +169,70 @@ governing permissions and limitations under the License.
 
   /* close button */
   .spectrum-CloseButton {
-    margin-inline-start: var(--mod-actionbar-spacing-close-button-start, var(--spectrum-actionbar-spacing-close-button-start));
-    margin-inline-end: var(--mod-actionbar-spacing-close-button-end, var(--spectrum-actionbar-spacing-close-button-end));
-    margin-block-start: var(--mod-actionbar-spacing-close-button-top, var(--spectrum-actionbar-spacing-close-button-top));
+    margin-inline-start: var(
+      --mod-actionbar-spacing-close-button-start,
+      var(--spectrum-actionbar-spacing-close-button-start)
+    );
+    margin-inline-end: var(
+      --mod-actionbar-spacing-close-button-end,
+      var(--spectrum-actionbar-spacing-close-button-end)
+    );
+    margin-block-start: var(
+      --mod-actionbar-spacing-close-button-top,
+      var(--spectrum-actionbar-spacing-close-button-top)
+    );
     flex-shrink: 0;
   }
 
   /* item counter */
   .spectrum-FieldLabel {
-    margin-inline-end: var(--mod-actionbar-spacing-item-counter-end, var(--spectrum-actionbar-spacing-item-counter-end));
-    margin-block-start: var(--mod-actionbar-spacing-item-counter-top, var(--spectrum-actionbar-spacing-item-counter-top));
+    margin-inline-end: var(
+      --mod-actionbar-spacing-item-counter-end,
+      var(--spectrum-actionbar-spacing-item-counter-end)
+    );
+    margin-block-start: var(
+      --mod-actionbar-spacing-item-counter-top,
+      var(--spectrum-actionbar-spacing-item-counter-top)
+    );
 
     /* neutralize padding for correct spacing within ActionBar */
     padding: 0;
 
-    font-size: var(--mod-actionbar-item-counter-font-size, var(--spectrum-actionbar-item-counter-font-size));
-    color: var(--mod-actionbar-item-counter-color, var(--spectrum-actionbar-item-counter-color));
-    line-height: var(--mod-actionbar-item-counter-line-height, var(--spectrum-actionbar-item-counter-line-height));
+    font-size: var(
+      --mod-actionbar-item-counter-font-size,
+      var(--spectrum-actionbar-item-counter-font-size)
+    );
+    color: var(
+      --mod-actionbar-item-counter-color,
+      var(--spectrum-actionbar-item-counter-color)
+    );
+    line-height: var(
+      --mod-actionbar-item-counter-line-height,
+      var(--spectrum-actionbar-item-counter-line-height)
+    );
 
     /* cjk language support */
     &:lang(ja),
     &:lang(zh),
     &:lang(ko) {
-      line-height: var(--mod-actionbar-item-counter-line-height-cjk, var(--spectrum-actionbar-item-counter-line-height-cjk));
+      line-height: var(
+        --mod-actionbar-item-counter-line-height-cjk,
+        var(--spectrum-actionbar-item-counter-line-height-cjk)
+      );
     }
   }
 
   /* action group */
   .spectrum-ActionGroup {
-    margin-inline-end: var(--mod-actionbar-spacing-action-group-end, var(--spectrum-actionbar-spacing-action-group-end));
-    margin-block-start: var(--mod-actionbar-spacing-action-group-top, var(--spectrum-actionbar-spacing-action-group-top));
+    margin-inline-end: var(
+      --mod-actionbar-spacing-action-group-end,
+      var(--spectrum-actionbar-spacing-action-group-end)
+    );
+    margin-block-start: var(
+      --mod-actionbar-spacing-action-group-top,
+      var(--spectrum-actionbar-spacing-action-group-top)
+    );
+
     /* align to end by default */
     margin-inline-start: auto;
   }
@@ -158,14 +241,21 @@ governing permissions and limitations under the License.
 .spectrum-ActionBar--emphasized {
   .spectrum-ActionBar-popover {
     filter: none;
-    background-color: var(--mod-actionbar-emphasized-background-color, var(--spectrum-actionbar-emphasized-background-color));
+    background-color: var(
+      --mod-actionbar-emphasized-background-color,
+      var(--spectrum-actionbar-emphasized-background-color)
+    );
+
     /* border transparent instead of none so WHCM will have visible border */
     border-color: transparent;
   }
 
   /* ensure text is legible on emphasized background */
   .spectrum-FieldLabel {
-    color: var(--mod-actionbar-emphasized-item-counter-color, var(--spectrum-actionbar-emphasized-item-counter-color));
+    color: var(
+      --mod-actionbar-emphasized-item-counter-color,
+      var(--spectrum-actionbar-emphasized-item-counter-color)
+    );
   }
 }
 
@@ -176,7 +266,7 @@ governing permissions and limitations under the License.
 }
 
 .spectrum-ActionBar--fixed {
-   position: fixed;
+  position: fixed;
 }
 
 /* flexible width */

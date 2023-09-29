@@ -1,0 +1,28 @@
+{
+  "name": "@spectrum-css/tokens",
+  "version": "11.4.0",
+  "description": "The Spectrum CSS tokens package",
+  "license": "Apache-2.0",
+  "author": "Adobe",
+  "homepage": "https://opensource.adobe.com/spectrum-css/",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/adobe/spectrum-css.git",
+    "directory": "tokens"
+  },
+  "bugs": {
+    "url": "https://github.com/adobe/spectrum-css/issues"
+  },
+  "main": "dist/index.css",
+  "devDependencies": {
+    "@adobe/spectrum-tokens": "12.20.0",
+    "glob-concat-cli": "^1.0.1",
+    "postcss": " ^8.4.29",
+    "postcss-cli": " ^10.1.0",
+    "style-dictionary": "^3.8.0",
+    "style-dictionary-sets": "^2.3.0"
+  },
+  "publishConfig": {
+    "access": "public"
+  }
+}

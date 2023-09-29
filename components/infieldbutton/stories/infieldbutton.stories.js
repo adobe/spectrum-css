@@ -3,9 +3,11 @@ import { Template } from "./template";
 
 import { default as IconStories } from "@spectrum-css/icon/stories/icon.stories.js";
 
+/**
+ * The In-field button component is a button used inside a textfield
+ */
 export default {
   title: "Components/In-field button",
-  description: "The In-field button component is a button used inside a textfield",
   component: "Infieldbutton",
   argTypes: {
     size: {
@@ -16,7 +18,7 @@ export default {
         category: "Component",
       },
       options: ["s", "m", "l", "xl"],
-      control: "select"
+      control: "select",
     },
     isQuiet: {
       name: "Quiet",
@@ -25,7 +27,7 @@ export default {
         type: { summary: "boolean" },
         category: "Component",
       },
-      control: "boolean"
+      control: "boolean",
     },
     position: {
       name: "Position",
@@ -34,11 +36,11 @@ export default {
         type: { summary: "string" },
         category: "Component",
       },
-      options: ["left", "right", "top", "bottom"],
-      control: "select"
+      options: ["left", "right"],
+      control: "select",
     },
     iconName: {
-      ...IconStories?.argTypes?.iconName ?? {},
+      ...(IconStories?.argTypes?.iconName ?? {}),
       if: false,
     },
     isDisabled: {
@@ -48,7 +50,7 @@ export default {
         type: { summary: "boolean" },
         category: "State",
       },
-      control: "boolean"
+      control: "boolean",
     },
   },
   args: {
@@ -57,16 +59,18 @@ export default {
     position: "left",
     iconName: "Add",
     isQuiet: false,
-    isDisabled: false
+    isDisabled: false,
   },
   parameters: {
     actions: {
-      handles: []
+      handles: [],
     },
     status: {
-      type: process.env.MIGRATED_PACKAGES.includes('infieldbutton') ? 'migrated' : undefined
-    }
-  }
+      type: process.env.MIGRATED_PACKAGES.includes("infieldbutton")
+        ? "migrated"
+        : undefined,
+    },
+  },
 };
 
 export const Default = Template.bind({});
@@ -74,16 +78,15 @@ Default.args = {};
 
 export const Right = Template.bind({});
 Right.args = {
-  position: "right"
+  position: "right",
 };
 
 export const Quiet = Template.bind({});
 Quiet.args = {
-  isQuiet: true
+  isQuiet: true,
 };
 
 export const Disabled = Template.bind({});
 Disabled.args = {
-  isDisabled: true
+  isDisabled: true,
 };
-

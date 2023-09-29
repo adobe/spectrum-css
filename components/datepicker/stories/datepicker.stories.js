@@ -6,10 +6,11 @@ import { default as CalendarStories } from "@spectrum-css/calendar/stories/calen
 const ignoreProps = ["rootClass", "isDisabled"];
 
 // @todo add support for date *range*
+/**
+ * A date picker displays a Text Field input with a button next to it, and can display two Text Fields next to each other for choosing a date range.
+ */
 export default {
 	title: "Components/Date picker",
-	description:
-		"A date picker displays a Text Field input with a button next to it, and can display two Text Fields next to each other for choosing a date range.",
 	component: "DatePicker",
 	argTypes: {
 		...Object.entries(CalendarStories.argTypes).reduce((acc, [key]) => {

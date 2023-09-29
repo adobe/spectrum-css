@@ -32,20 +32,20 @@ export const fetchIconSVG = ({
 	// Check adobe workflow icons first
 	if (setName === "workflow") {
 		try {
-			icon = require(`!!raw-loader!@adobe/spectrum-css-workflow-icons/dist/${
+			icon = require(`@adobe/spectrum-css-workflow-icons/dist/${
 				scale !== "medium" ? `24` : `18`
-			}/${iconName}.svg`);
+			}/${iconName}.svg?raw`);
 			if (icon) return icon.default ?? icon;
-		} catch (e) {}
+		} catch (e) {/* ignore */}
 	}
 
 	// Check the ui kit for icon set if not yet found
 	try {
-		icon = require(`!!raw-loader!@spectrum-css/icon/${
+		icon = require(`@adobe/spectrum-css-ui-icons/${
 			scale ? scale : "medium"
-		}/${iconName}.svg`);
+		}/${iconName}.svg?raw`);
 		if (icon) return icon.default ?? icon;
-	} catch (e) {}
+	} catch (e) {/* ignore */}
 
 	return;
 };

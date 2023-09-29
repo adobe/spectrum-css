@@ -3,10 +3,11 @@ import { Template } from "./template";
 
 import { default as ActionButton } from "@spectrum-css/actionbutton/stories/actionbutton.stories";
 
+/**
+ * The Pagination component displays numbered buttons or an input field to allow for navigation
+ */
 export default {
 	title: "Components/Pagination",
-	description:
-		"The Pagination component displays numbered buttons or an input field to allow for navigation",
 	component: "Pagination",
 	argTypes: {
 		size: {

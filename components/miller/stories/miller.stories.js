@@ -1,10 +1,11 @@
 // Import the component markup template
 import { Template } from "./template";
 
+/**
+ * Miller columns are a browsing/visualization technique that can be applied to tree structures. The columns allow for multiple levels of the hierarchy to be open at once and provide a visual representation of the current location.
+ */
 export default {
 	title: "Components/Miller columns",
-	description:
-		"Miller columns are a browsing/visualization technique that can be applied to tree structures. The columns allow for multiple levels of the hierarchy to be open at once and provide a visual representation of the current location.",
 	component: "Miller",
 	argTypes: {
 		columns: { table: { disable: true } },
@@ -46,7 +47,7 @@ BranchesSelectable.args = {
 					isBranch: true,
 					isSelectable: true,
 					isSelected: false,
-					image: "example-ava.png",
+					image: "images/example-ava.png",
 				},
 			],
 		},
@@ -69,7 +70,7 @@ BranchesSelectable.args = {
 					isBranch: true,
 					isSelectable: true,
 					isSelected: true,
-					image: "example-ava.png",
+					image: "images/example-ava.png",
 				},
 			],
 		},
@@ -99,7 +100,7 @@ FilesSelectable.args = {
 					isSelectable: false,
 					isSelected: false,
 					isNavigated: true,
-					image: "example-ava.png",
+					image: "images/example-ava.png",
 				},
 			],
 		},
@@ -122,7 +123,7 @@ FilesSelectable.args = {
 					isBranch: false,
 					isSelectable: false,
 					isSelected: true,
-					image: "example-ava.png",
+					image: "images/example-ava.png",
 				},
 			],
 		},

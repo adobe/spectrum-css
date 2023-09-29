@@ -1,16 +1,16 @@
-import { html } from "lit";
 import { useArgs } from "@storybook/client-api";
+import { html } from "lit";
 import { classMap } from "lit/directives/class-map.js";
-import { styleMap } from "lit/directives/style-map.js";
 import { ifDefined } from "lit/directives/if-defined.js";
+import { styleMap } from "lit/directives/style-map.js";
 
 import { Template as FieldLabel } from "@spectrum-css/fieldlabel/stories/template.js";
+import { Template as HelpText } from "@spectrum-css/helptext/stories/template.js";
 import { Template as Icon } from "@spectrum-css/icon/stories/template.js";
 import { Template as Popover } from "@spectrum-css/popover/stories/template.js";
 import { Template as ProgressCircle } from "@spectrum-css/progresscircle/stories/template.js";
-import { Template as HelpText } from "@spectrum-css/helptext/stories/template.js";
 
-import "../index.css";
+import "@spectrum-css/picker/dist/index-base.css";
 
 export const Picker = ({
 	rootClass = "spectrum-Picker",
@@ -23,26 +23,16 @@ export const Picker = ({
 	isInvalid = false,
 	isLoading = false,
 	isDisabled = false,
-	isReadOnly = false,
+	// isReadOnly = false,
 	customClasses = [],
 	customStyles = {},
-	content = [],
-	iconName,
-	id,
+	// content = [],
+	// iconName,
+	// id,
 	...globals
 }) => {
-	const [_, updateArgs] = useArgs();
-
-	const { express } = globals;
-	try {
-		if (!express) import(/* webpackPrefetch: true */ "../themes/spectrum.css");
-		else import(/* webpackPrefetch: true */ "../themes/express.css");
-	} catch (e) {
-		console.warn(e);
-	}
-
-	return html`
-	<button
+	const [, updateArgs] = useArgs();
+	return html`<button
 			class=${classMap({
 				[rootClass]: true,
 				[`${rootClass}--size${size?.toUpperCase()}`]:
@@ -58,7 +48,7 @@ export const Picker = ({
 			?disabled=${isDisabled}
 			aria-haspopup="listbox"
 			style=${ifDefined(styleMap(customStyles))}
-			@click=${(e) => {
+			@click=${() => {
 				updateArgs({ isOpen: !isOpen });
 			}}
 		>
@@ -85,7 +75,7 @@ export const Picker = ({
 			})}
 		</button>
 	`;
-}
+};
 
 export const Template = ({
 	rootClass = "spectrum-Picker",
@@ -108,15 +98,6 @@ export const Template = ({
 	id,
 	...globals
 }) => {
-
-	const { express } = globals;
-	try {
-		if (!express) import(/* webpackPrefetch: true */ "../themes/spectrum.css");
-		else import(/* webpackPrefetch: true */ "../themes/express.css");
-	} catch (e) {
-		console.warn(e);
-	}
-
 	let iconName = "ChevronDown200";
 	switch (size) {
 		case "s":
@@ -165,7 +146,7 @@ export const Template = ({
 				})}
 			</div>
 			`
-		: 
+		:
 			Picker({
 				...globals,
 				rootClass,
@@ -186,7 +167,7 @@ export const Template = ({
 				id,
 			})
 		}
-		
+
 		${helpText
 			? HelpText({
 					text: helpText,

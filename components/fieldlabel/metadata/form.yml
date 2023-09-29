@@ -1,8 +1,8 @@
-name: Form
+title: Form
 description: Form provides structure and spacing for your form fields.
 examples:
   - id: form-labels-left
-    name: Form (labels left)
+    title: Form (labels left)
     description: Apply `.spectrum-FieldLabel--left` to each FieldLabel to get left labels.
     markup: |
       <form class="spectrum-Form">
@@ -26,7 +26,7 @@ examples:
           <label class="spectrum-FieldLabel spectrum-FieldLabel--sizeM spectrum-Form-itemLabel spectrum-FieldLabel--left" for="spectrum-textinput-instance">Country</label>
           <div class="spectrum-Form-itemField">
             <button class="spectrum-Picker spectrum-Picker--sizeM" aria-haspopup="true">
-              <span class="spectrum-Picker-label is-placeholder">Select a Country</span>
+              <span class="spectrum-Picker-label is-placeholder">Select a country</span>
               <svg class="spectrum-Icon spectrum-UIIcon-ChevronDown100 spectrum-Picker-menuIcon" focusable="false" aria-hidden="true">
                 <use xlink:href="#spectrum-css-icon-Chevron100" />
               </svg>
@@ -84,7 +84,7 @@ examples:
         </div>
       </form>
   - id: form-labels-right
-    name: Form (labels right)
+    title: Form (labels right)
     description: Apply `.spectrum-FieldLabel--right` to each FieldLabel to get right labels.
     markup: |
       <form class="spectrum-Form">
@@ -108,7 +108,7 @@ examples:
           <label class="spectrum-FieldLabel spectrum-FieldLabel--sizeM spectrum-Form-itemLabel spectrum-FieldLabel--right" for="spectrum-textinput-instance">Country</label>
           <div class="spectrum-Form-itemField">
             <button class="spectrum-Picker spectrum-Picker--sizeM" aria-haspopup="true">
-              <span class="spectrum-Picker-label is-placeholder">Select a Country</span>
+              <span class="spectrum-Picker-label is-placeholder">Select a country</span>
               <svg class="spectrum-Icon spectrum-UIIcon-ChevronDown100 spectrum-Picker-menuIcon" focusable="false" aria-hidden="true">
                 <use xlink:href="#spectrum-css-icon-Chevron100" />
               </svg>
@@ -166,7 +166,7 @@ examples:
         </div>
       </form>
   - id: form-labels-above
-    name: Form (labels above)
+    title: Form (labels above)
     description: "For labels above, the layout changes completely, so you must apply `.spectrum-Form--labelsAbove` to the Form itself. You do not need to apply a specific class to the FieldLabel."
     markup: |
       <form class="spectrum-Form spectrum-Form--labelsAbove">
@@ -190,7 +190,7 @@ examples:
           <label class="spectrum-FieldLabel spectrum-FieldLabel--sizeM spectrum-Form-itemLabel" for="spectrum-textinput-instance">Country</label>
           <div class="spectrum-Form-itemField">
             <button class="spectrum-Picker spectrum-Picker--sizeM" aria-haspopup="true">
-              <span class="spectrum-Picker-label is-placeholder">Select a Country</span>
+              <span class="spectrum-Picker-label is-placeholder">Select a country</span>
               <svg class="spectrum-Icon spectrum-UIIcon-ChevronDown100 spectrum-Picker-menuIcon" focusable="false" aria-hidden="true">
                 <use xlink:href="#spectrum-css-icon-Chevron100" />
               </svg>

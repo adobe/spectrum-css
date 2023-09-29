@@ -7,7 +7,7 @@ import { useArgs } from "@storybook/client-api";
 
 import { Template as Checkbox } from "@spectrum-css/checkbox/stories/template.js";
 
-import "../index.css";
+import "@spectrum-css/assetcard";
 
 export const Template = ({
 	rootClass = "spectrum-AssetCard",
@@ -24,14 +24,14 @@ export const Template = ({
 	id,
 	...globals
 }) => {
-	const [_, updateArgs] = useArgs();
+	const [, updateArgs] = useArgs();
 
 	if (!image && !exampleImage) {
 		console.warn("AssetCard: image is required");
 		return html``;
 	}
 
-	if (exampleImage) exampleImage = `example-card-${exampleImage}.png`;
+	if (exampleImage) exampleImage = `images/example-card-${exampleImage}.png`;
 
 	return html`
 		<div

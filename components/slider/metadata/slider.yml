@@ -1,13 +1,16 @@
-name: Slider
-SpectrumSiteSlug: https://spectrum.adobe.com/page/slider/
+title: Slider
+designLink: https://spectrum.adobe.com/page/slider/
+SWC:
+  url: https://opensource.adobe.com/spectrum-web-components/components/slider/
+  tag: "sp-slider"
 sections:
-  - name: Migration Guide
+  - title: Migration guide
     description: |
       ### Dial is now a separate component
       Dial has been moved to the [Dial](dial.html) component.
 
       ### Color slider is now a separate component
-      Color slider has been moved to the [Color Slider](colorslider.html) component.
+      Color slider has been moved to the [Color slider](colorslider.html) component.
       Replace class names starting with `.spectrum-Slider` with `.spectrum-ColorSlider`.
 
       ### Use class `is-dragged` instead of `u-isGrabbing`
@@ -17,7 +20,7 @@ sections:
       When using a slider with three handles, classify it as a `range` variant to apply correct styling
 examples:
   - id: slider
-    name: Standard
+    title: Standard
     markup: |
       <div class="spectrum-Slider spectrum-Slider--sizeM">
         <div class="spectrum-Slider-controls">
@@ -146,7 +149,7 @@ examples:
         </div>
       </div>
   - id: slider-label
-    name: With Label
+    title: With label
     markup: |
       <div class="spectrum-Slider spectrum-Slider--sizeM">
         <div class="spectrum-Slider-labelContainer">
@@ -194,7 +197,7 @@ examples:
       </div>
 
   - id: slider-fill
-    name: Filled
+    title: Filled
     description: With fill.
     markup: |
       <div class="spectrum-Slider spectrum-Slider--sizeM spectrum-Slider--filled">
@@ -224,7 +227,7 @@ examples:
         </div>
       </div>
   - id: slider-fill
-    name: Filled-Offset
+    title: Filled-Offset
     description: With fill and offset.
     markup: |
       <div class="spectrum-Slider spectrum-Slider--sizeM">
@@ -270,7 +273,7 @@ examples:
         </div>
       </div>
   - id: slider-range
-    name: Range
+    title: Range
     description: A range slider with two handles.
     markup: |
       <div class="spectrum-Slider spectrum-Slider--sizeM spectrum-Slider--range" role="group" aria-labelledby="spectrum-Slider-label-12">
@@ -309,7 +312,7 @@ examples:
         </div>
       </div>
   - id: slider-tick
-    name: Tick
+    title: Tick
     description: Spectrum tick slider
     markup: |
       <div class="spectrum-Slider spectrum-Slider--sizeM spectrum-Slider--tick">
@@ -361,7 +364,7 @@ examples:
         </div>
       </div>
   - id: slider-tick
-    name: Tick with Labels
+    title: Tick with labels
     description: Spectrum tick slider with labels
     markup: |
       <div class="spectrum-Slider spectrum-Slider--sizeM spectrum-Slider--tick">
@@ -440,7 +443,7 @@ examples:
         </div>
       </div>
   - id: slider-ramp
-    name: Ramp
+    title: Ramp
     markup: |
       <div class="spectrum-Slider spectrum-Slider--sizeM spectrum-Slider--ramp">
         <div class="spectrum-Slider-labelContainer">

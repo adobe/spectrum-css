@@ -1,86 +1,95 @@
-name: Tabs
-SpectrumSiteSlug: https://spectrum.adobe.com/page/tabs/
+title: Tabs
+designLink: https://spectrum.adobe.com/page/tabs/
+SWC:
+  url: https://opensource.adobe.com/spectrum-web-components/components/tabs/
+  tag: "sp-tabs"
 sections:
-  - name: Migration Guide
+  - title: Migration guide
     description: |
       ### T-shirt sizing
       Tabs now support t-shirt sizing and require that you specify the size by adding a `.spectrum-Tabs--size*` class.
 
       ### Change workflow icon size to medium
       If you use a workflow icon with tab items, please replace `.spectrum-Icon--sizeS` with `.spectrum-Icon--sizeM`.
-
-      ### Compact Tabs
-      Compact tabs should not be used without `.spectrum-Tabs--quiet`.
 examples:
   - id: tabs-sizing
-    name: Sizing
-    markup: |
-      <h4 class="spectrum-Heading spectrum-Heading--sizeXS spectrum-Examples-itemHeading">S</h4>
-      <div class="spectrum-Tabs spectrum-Tabs--sizeS spectrum-Tabs--horizontal">
-        <div class="spectrum-Tabs-item is-selected" tabindex="0">
-          <span class="spectrum-Tabs-itemLabel">Tab 1</span>
-        </div>
-        <div class="spectrum-Tabs-item" tabindex="0">
-          <span class="spectrum-Tabs-itemLabel">Tab 2</span>
-        </div>
-        <div class="spectrum-Tabs-item" tabindex="0">
-          <span class="spectrum-Tabs-itemLabel">Tab 3</span>
-        </div>
-        <div class="spectrum-Tabs-item" tabindex="0">
-          <span class="spectrum-Tabs-itemLabel">Tab 4</span>
-        </div>
-        <div class="spectrum-Tabs-selectionIndicator" style="width: 24px; left: 0px;"></div>
-      </div>
-      <h4 style="margin-top: 62px;" class="spectrum-Heading spectrum-Heading--sizeXS spectrum-Examples-itemHeading">M (default)</h4>
-      <div class="spectrum-Tabs spectrum-Tabs--sizeM spectrum-Tabs--horizontal">
-        <div class="spectrum-Tabs-item is-selected" tabindex="0">
-          <span class="spectrum-Tabs-itemLabel">Tab 1</span>
-        </div>
-        <div class="spectrum-Tabs-item" tabindex="0">
-          <span class="spectrum-Tabs-itemLabel">Tab 2</span>
-        </div>
-        <div class="spectrum-Tabs-item" tabindex="0">
-          <span class="spectrum-Tabs-itemLabel">Tab 3</span>
-        </div>
-        <div class="spectrum-Tabs-item" tabindex="0">
-          <span class="spectrum-Tabs-itemLabel">Tab 4</span>
-        </div>
-        <div class="spectrum-Tabs-selectionIndicator" style="width: 28px; left: 0px;"></div>
-      </div>
-      <h4 style="margin-top: 62px;" class="spectrum-Heading spectrum-Heading--sizeXS spectrum-Examples-itemHeading">L</h4>
-      <div class="spectrum-Tabs spectrum-Tabs--sizeL spectrum-Tabs--horizontal">
-        <div class="spectrum-Tabs-item is-selected" tabindex="0">
-          <span class="spectrum-Tabs-itemLabel">Tab 1</span>
-        </div>
-        <div class="spectrum-Tabs-item" tabindex="0">
-          <span class="spectrum-Tabs-itemLabel">Tab 2</span>
-        </div>
-        <div class="spectrum-Tabs-item" tabindex="0">
-          <span class="spectrum-Tabs-itemLabel">Tab 3</span>
-        </div>
-        <div class="spectrum-Tabs-item" tabindex="0">
-          <span class="spectrum-Tabs-itemLabel">Tab 4</span>
-        </div>
-        <div class="spectrum-Tabs-selectionIndicator" style="width: 32px; left: 0px;"></div>
-      </div>
-      <h4 style="margin-top: 62px;" class="spectrum-Heading spectrum-Heading--sizeXS spectrum-Examples-itemHeading">XL</h4>
-      <div class="spectrum-Tabs spectrum-Tabs--sizeXL spectrum-Tabs--horizontal">
-        <div class="spectrum-Tabs-item is-selected" tabindex="0">
-          <span class="spectrum-Tabs-itemLabel">Tab 1</span>
-        </div>
-        <div class="spectrum-Tabs-item" tabindex="0">
-          <span class="spectrum-Tabs-itemLabel">Tab 2</span>
-        </div>
-        <div class="spectrum-Tabs-item" tabindex="0">
-          <span class="spectrum-Tabs-itemLabel">Tab 3</span>
-        </div>
-        <div class="spectrum-Tabs-item" tabindex="0">
-          <span class="spectrum-Tabs-itemLabel">Tab 4</span>
-        </div>
-        <div class="spectrum-Tabs-selectionIndicator" style="width: 36px; left: 0px;"></div>
-      </div>
+    title: Sizing
+    markup:
+      - title: S
+        group:
+          - |
+            <div class="spectrum-Tabs spectrum-Tabs--sizeS spectrum-Tabs--horizontal">
+              <div class="spectrum-Tabs-item is-selected" tabindex="0">
+                <span class="spectrum-Tabs-itemLabel">Tab 1</span>
+              </div>
+              <div class="spectrum-Tabs-item" tabindex="0">
+                <span class="spectrum-Tabs-itemLabel">Tab 2</span>
+              </div>
+              <div class="spectrum-Tabs-item" tabindex="0">
+                <span class="spectrum-Tabs-itemLabel">Tab 3</span>
+              </div>
+              <div class="spectrum-Tabs-item" tabindex="0">
+                <span class="spectrum-Tabs-itemLabel">Tab 4</span>
+              </div>
+              <div class="spectrum-Tabs-selectionIndicator" style="width: 24px; left: 0px;"></div>
+            </div>
+      - title: M
+        tag: Default
+        group:
+          - |
+            <div class="spectrum-Tabs spectrum-Tabs--sizeM spectrum-Tabs--horizontal">
+              <div class="spectrum-Tabs-item is-selected" tabindex="0">
+                <span class="spectrum-Tabs-itemLabel">Tab 1</span>
+              </div>
+              <div class="spectrum-Tabs-item" tabindex="0">
+                <span class="spectrum-Tabs-itemLabel">Tab 2</span>
+              </div>
+              <div class="spectrum-Tabs-item" tabindex="0">
+                <span class="spectrum-Tabs-itemLabel">Tab 3</span>
+              </div>
+              <div class="spectrum-Tabs-item" tabindex="0">
+                <span class="spectrum-Tabs-itemLabel">Tab 4</span>
+              </div>
+              <div class="spectrum-Tabs-selectionIndicator" style="width: 28px; left: 0px;"></div>
+            </div>
+      - title: L
+        group:
+          - |
+            <div class="spectrum-Tabs spectrum-Tabs--sizeL spectrum-Tabs--horizontal">
+              <div class="spectrum-Tabs-item is-selected" tabindex="0">
+                <span class="spectrum-Tabs-itemLabel">Tab 1</span>
+              </div>
+              <div class="spectrum-Tabs-item" tabindex="0">
+                <span class="spectrum-Tabs-itemLabel">Tab 2</span>
+              </div>
+              <div class="spectrum-Tabs-item" tabindex="0">
+                <span class="spectrum-Tabs-itemLabel">Tab 3</span>
+              </div>
+              <div class="spectrum-Tabs-item" tabindex="0">
+                <span class="spectrum-Tabs-itemLabel">Tab 4</span>
+              </div>
+              <div class="spectrum-Tabs-selectionIndicator" style="width: 32px; left: 0px;"></div>
+            </div>
+      - title: XL
+        group:
+          - |
+            <div class="spectrum-Tabs spectrum-Tabs--sizeXL spectrum-Tabs--horizontal">
+              <div class="spectrum-Tabs-item is-selected" tabindex="0">
+                <span class="spectrum-Tabs-itemLabel">Tab 1</span>
+              </div>
+              <div class="spectrum-Tabs-item" tabindex="0">
+                <span class="spectrum-Tabs-itemLabel">Tab 2</span>
+              </div>
+              <div class="spectrum-Tabs-item" tabindex="0">
+                <span class="spectrum-Tabs-itemLabel">Tab 3</span>
+              </div>
+              <div class="spectrum-Tabs-item" tabindex="0">
+                <span class="spectrum-Tabs-itemLabel">Tab 4</span>
+              </div>
+              <div class="spectrum-Tabs-selectionIndicator" style="width: 36px; left: 0px;"></div>
+            </div>
   - id: tabs
-    name: Basic tabs
+    title: Basic tabs
     status: Verified
     markup: |
       <div class="spectrum-Tabs spectrum-Tabs--sizeM spectrum-Tabs--horizontal">
@@ -99,7 +108,7 @@ examples:
         <div class="spectrum-Tabs-selectionIndicator" style="width: 28px; left: 0px;"></div>
       </div>
   - id: tabs-icon
-    name: Tabs with icons
+    title: Tabs with icons
     status: Verified
     markup: |
       <div class="spectrum-Tabs spectrum-Tabs--sizeM spectrum-Tabs--horizontal">
@@ -129,27 +138,8 @@ examples:
         </div>
         <div class="spectrum-Tabs-selectionIndicator" style="width: 55px; left: 0px;"></div>
       </div>
-  - id: tabs-disabled
-    name: Disabled
-    status: Verified
-    markup: |
-      <div class="spectrum-Tabs spectrum-Tabs--sizeM spectrum-Tabs--horizontal">
-        <div class="spectrum-Tabs-item is-selected" tabindex="0">
-          <span class="spectrum-Tabs-itemLabel">Tab 1</span>
-        </div>
-        <div class="spectrum-Tabs-item is-disabled">
-          <span class="spectrum-Tabs-itemLabel">Tab 2</span>
-        </div>
-        <div class="spectrum-Tabs-item" tabindex="0">
-          <span class="spectrum-Tabs-itemLabel">Tab 3</span>
-        </div>
-        <div class="spectrum-Tabs-item" tabindex="0">
-          <span class="spectrum-Tabs-itemLabel">Tab 4</span>
-        </div>
-        <div class="spectrum-Tabs-selectionIndicator" style="width: 28px; left: 0px;"></div>
-      </div>
   - id: tabs-quiet
-    name: Quiet
+    title: Quiet
     status: Verified
     markup: |
       <div class="spectrum-Tabs spectrum-Tabs--sizeM spectrum-Tabs--horizontal spectrum-Tabs--quiet">
@@ -168,7 +158,7 @@ examples:
         <div class="spectrum-Tabs-selectionIndicator" style="width: 28px; left: 0px;"></div>
       </div>
   - id: tabs-quiet-emphasized
-    name: Quiet and emphasized
+    title: Quiet and emphasized
     status: Verified
     markup: |
       <div class="spectrum-Tabs spectrum-Tabs--sizeM spectrum-Tabs--horizontal spectrum-Tabs--quiet spectrum-Tabs--emphasized">
@@ -187,7 +177,7 @@ examples:
         <div class="spectrum-Tabs-selectionIndicator" style="width: 28px; left: 0px;"></div>
       </div>
   - id: tabs-quiet-icon
-    name: Quiet tabs with icons
+    title: Quiet tabs with icons
     status: Verified
     markup: |
       <div class="spectrum-Tabs spectrum-Tabs--sizeM spectrum-Tabs--horizontal spectrum-Tabs--quiet">
@@ -218,7 +208,7 @@ examples:
         <div class="spectrum-Tabs-selectionIndicator" style="width: 55px; left: 0px;"></div>
       </div>
   - id: tabs-emphasized
-    name: Emphasized tabs
+    title: Emphasized tabs
     markup: |
       <div class="spectrum-Tabs spectrum-Tabs--sizeM spectrum-Tabs--horizontal spectrum-Tabs--emphasized">
         <div class="spectrum-Tabs-item is-selected" tabindex="0">
@@ -236,7 +226,7 @@ examples:
         <div class="spectrum-Tabs-selectionIndicator" style="width: 28px; left: 0px;"></div>
       </div>
   - id: tabs-emphasized-icon
-    name: Emphasized tabs with icons
+    title: Emphasized tabs with icons
     markup: |
       <div class="spectrum-Tabs spectrum-Tabs--sizeM spectrum-Tabs--horizontal spectrum-Tabs--emphasized">
         <div class="spectrum-Tabs-item is-selected" tabindex="0">
@@ -266,10 +256,10 @@ examples:
         <div class="spectrum-Tabs-selectionIndicator" style="width: 55px; left: 0px;"></div>
       </div>
   - id: tabs-compact
-    name: Compact (quiet)
-    description: 'Compact tabs should never be used without the quiet variation.'
+    title: Compact
+    description: "Compact tabs should never be used without the quiet variation. Please use [Quiet Compact Tabs instead](#quiet-compact)."
     markup: |
-      <div class="spectrum-Tabs spectrum-Tabs--sizeM spectrum-Tabs--horizontal spectrum-Tabs--compact spectrum-Tabs--quiet">
+      <div class="spectrum-Tabs spectrum-Tabs--sizeM spectrum-Tabs--horizontal spectrum-Tabs--compact">
         <div class="spectrum-Tabs-item is-selected" tabindex="0">
           <span class="spectrum-Tabs-itemLabel">Tab 1</span>
         </div>
@@ -284,10 +274,10 @@ examples:
         </div>
         <div class="spectrum-Tabs-selectionIndicator" style="width: 28px; left: 0px;"></div>
       </div>
-  - id: tabs-compact-emphasized-quiet
-    name: Compact emphasized (quiet)
+  - id: tabs-compact-emphasized
+    title: Compact emphasized
     markup: |
-      <div class="spectrum-Tabs spectrum-Tabs--sizeM spectrum-Tabs--horizontal spectrum-Tabs--compact spectrum-Tabs--quiet spectrum-Tabs--emphasized">
+      <div class="spectrum-Tabs spectrum-Tabs--sizeM spectrum-Tabs--horizontal spectrum-Tabs--compact spectrum-Tabs--emphasized">
         <div class="spectrum-Tabs-item is-selected" tabindex="0">
           <span class="spectrum-Tabs-itemLabel">Tab 1</span>
         </div>
@@ -303,9 +293,9 @@ examples:
         <div class="spectrum-Tabs-selectionIndicator" style="width: 28px; left: 0px;"></div>
       </div>
   - id: tabs-quiet-compact-icons-text
-    name: Compact tabs with icons and text (quiet)
+    title: Compact tabs with icons and text
     markup: |
-      <div class="spectrum-Tabs spectrum-Tabs--sizeM spectrum-Tabs--horizontal spectrum-Tabs--compact spectrum-Tabs--quiet">
+      <div class="spectrum-Tabs spectrum-Tabs--sizeM spectrum-Tabs--horizontal spectrum-Tabs--compact">
         <div class="spectrum-Tabs-item is-selected" tabindex="0">
           <svg class="spectrum-Icon spectrum-Icon--sizeM" focusable="false" aria-hidden="true" aria-label="Folder">
             <use xlink:href="#spectrum-icon-18-Folder" />
@@ -333,9 +323,110 @@ examples:
         <div class="spectrum-Tabs-selectionIndicator" style="width: 55px; left: 0px;"></div>
       </div>
   - id: tabs-quiet-compact-emphasized-icons-text
-    name: Compact, emphasized tabs with icons and text (quiet)
+    title: Compact, emphasized tabs with icons and text
     markup: |
-      <div class="spectrum-Tabs spectrum-Tabs--sizeM spectrum-Tabs--horizontal spectrum-Tabs--compact spectrum-Tabs--quiet spectrum-Tabs--emphasized">
+      <div class="spectrum-Tabs spectrum-Tabs--sizeM spectrum-Tabs--horizontal spectrum-Tabs--compact spectrum-Tabs--emphasized">
+        <div class="spectrum-Tabs-item is-selected" tabindex="0">
+          <svg class="spectrum-Icon spectrum-Icon--sizeM" focusable="false" aria-hidden="true" aria-label="Folder">
+            <use xlink:href="#spectrum-icon-18-Folder" />
+          </svg>
+          <span class="spectrum-Tabs-itemLabel">Tab 1</span>
+        </div>
+        <div class="spectrum-Tabs-item" tabindex="0">
+          <svg class="spectrum-Icon spectrum-Icon--sizeM" focusable="false" aria-hidden="true" aria-label="Image">
+            <use xlink:href="#spectrum-icon-18-Image" />
+          </svg>
+          <span class="spectrum-Tabs-itemLabel">Tab 2</span>
+        </div>
+        <div class="spectrum-Tabs-item" tabindex="0">
+          <svg class="spectrum-Icon spectrum-Icon--sizeM" focusable="false" aria-hidden="true" aria-label="Filter">
+            <use xlink:href="#spectrum-icon-18-Filter" />
+          </svg>
+          <span class="spectrum-Tabs-itemLabel">Tab 3</span>
+        </div>
+        <div class="spectrum-Tabs-item" tabindex="0">
+          <svg class="spectrum-Icon spectrum-Icon--sizeM" focusable="false" aria-hidden="true" aria-label="Comment">
+            <use xlink:href="#spectrum-icon-18-Document" />
+          </svg>
+          <span class="spectrum-Tabs-itemLabel">Tab 4</span>
+        </div>
+        <div class="spectrum-Tabs-selectionIndicator" style="width: 55px; left: 0px;"></div>
+      </div>
+  - id: tabs-quiet-compact-icon
+    title: Compact tabs with icons
+    markup: |
+      <div class="spectrum-Tabs spectrum-Tabs--sizeM spectrum-Tabs--horizontal spectrum-Tabs--compact">
+        <div class="spectrum-Tabs-item is-selected" tabindex="0">
+          <svg class="spectrum-Icon spectrum-Icon--sizeM" focusable="false" aria-hidden="true" aria-label="Folder">
+            <use xlink:href="#spectrum-icon-18-Folder" />
+          </svg>
+        </div>
+        <div class="spectrum-Tabs-item" tabindex="0">
+          <svg class="spectrum-Icon spectrum-Icon--sizeM" focusable="false" aria-hidden="true" aria-label="Image">
+            <use xlink:href="#spectrum-icon-18-Image" />
+          </svg>
+        </div>
+        <div class="spectrum-Tabs-item" tabindex="0">
+          <svg class="spectrum-Icon spectrum-Icon--sizeM" focusable="false" aria-hidden="true" aria-label="Filter">
+            <use xlink:href="#spectrum-icon-18-Filter" />
+          </svg>
+        </div>
+        <div class="spectrum-Tabs-item" tabindex="0">
+          <svg class="spectrum-Icon spectrum-Icon--sizeM" focusable="false" aria-hidden="true" aria-label="Comment">
+            <use xlink:href="#spectrum-icon-18-Document" />
+          </svg>
+        </div>
+        <div class="spectrum-Tabs-selectionIndicator" style="width: 17px; left: 0px;"></div>
+      </div>
+  - id: tabs-quiet-compact-emphasized-icon
+    title: Compact, emphasized tabs with icons
+    markup: |
+      <div class="spectrum-Tabs spectrum-Tabs--sizeM spectrum-Tabs--horizontal spectrum-Tabs--compact spectrum-Tabs--emphasized">
+        <div class="spectrum-Tabs-item is-selected" tabindex="0">
+          <svg class="spectrum-Icon spectrum-Icon--sizeM" focusable="false" aria-hidden="true" aria-label="Folder">
+            <use xlink:href="#spectrum-icon-18-Folder" />
+          </svg>
+        </div>
+        <div class="spectrum-Tabs-item" tabindex="0">
+          <svg class="spectrum-Icon spectrum-Icon--sizeM" focusable="false" aria-hidden="true" aria-label="Image">
+            <use xlink:href="#spectrum-icon-18-Image" />
+          </svg>
+        </div>
+        <div class="spectrum-Tabs-item" tabindex="0">
+          <svg class="spectrum-Icon spectrum-Icon--sizeM" focusable="false" aria-hidden="true" aria-label="Filter">
+            <use xlink:href="#spectrum-icon-18-Filter" />
+          </svg>
+        </div>
+        <div class="spectrum-Tabs-item" tabindex="0">
+          <svg class="spectrum-Icon spectrum-Icon--sizeM" focusable="false" aria-hidden="true" aria-label="Comment">
+            <use xlink:href="#spectrum-icon-18-Document" />
+          </svg>
+        </div>
+        <div class="spectrum-Tabs-selectionIndicator" style="width: 17px; left: 0px;"></div>
+      </div>
+  - id: tabs-quiet-compact
+    title: Compact (quiet)
+    status: Verified
+    markup: |
+      <div class="spectrum-Tabs spectrum-Tabs--sizeM spectrum-Tabs--horizontal spectrum-Tabs--compact spectrum-Tabs--quiet">
+        <div class="spectrum-Tabs-item is-selected" tabindex="0">
+          <span class="spectrum-Tabs-itemLabel">Tab 1</span>
+        </div>
+        <div class="spectrum-Tabs-item" tabindex="0">
+          <span class="spectrum-Tabs-itemLabel">Tab 2</span>
+        </div>
+        <div class="spectrum-Tabs-item" tabindex="0">
+          <span class="spectrum-Tabs-itemLabel">Tab 3</span>
+        </div>
+        <div class="spectrum-Tabs-item" tabindex="0">
+          <span class="spectrum-Tabs-itemLabel">Tab 4</span>
+        </div>
+        <div class="spectrum-Tabs-selectionIndicator" style="width: 28px; left: 0px;"></div>
+      </div>
+  - id: tabs-quiet-compact-icons-text
+    title: Compact tabs with icons and text (quiet)
+    markup: |
+      <div class="spectrum-Tabs spectrum-Tabs--sizeM spectrum-Tabs--horizontal spectrum-Tabs--compact spectrum-Tabs--quiet">
         <div class="spectrum-Tabs-item is-selected" tabindex="0">
           <svg class="spectrum-Icon spectrum-Icon--sizeM" focusable="false" aria-hidden="true" aria-label="Folder">
             <use xlink:href="#spectrum-icon-18-Folder" />
@@ -363,7 +454,7 @@ examples:
         <div class="spectrum-Tabs-selectionIndicator" style="width: 55px; left: 0px;"></div>
       </div>
   - id: tabs-quiet-compact-only-icons
-    name: Compact tabs with icons only (quiet)
+    title: Compact tabs with icons only (quiet)
     markup: |
       <div class="spectrum-Tabs spectrum-Tabs--sizeM spectrum-Tabs--horizontal spectrum-Tabs--compact spectrum-Tabs--quiet">
         <div class="spectrum-Tabs-item is-selected" tabindex="0">
@@ -388,34 +479,8 @@ examples:
         </div>
         <div class="spectrum-Tabs-selectionIndicator" style="width: 17px; left: 0px;"></div>
       </div>
-  - id: tabs-quiet-compact-emphasized-icon
-    name: Compact, emphasized tabs with icons only (quiet)
-    markup: |
-      <div class="spectrum-Tabs spectrum-Tabs--sizeM spectrum-Tabs--horizontal spectrum-Tabs--compact spectrum-Tabs--quiet spectrum-Tabs--emphasized">
-        <div class="spectrum-Tabs-item is-selected" tabindex="0">
-          <svg class="spectrum-Icon spectrum-Icon--sizeM" focusable="false" aria-hidden="true" aria-label="Folder">
-            <use xlink:href="#spectrum-icon-18-Folder" />
-          </svg>
-        </div>
-        <div class="spectrum-Tabs-item" tabindex="0">
-          <svg class="spectrum-Icon spectrum-Icon--sizeM" focusable="false" aria-hidden="true" aria-label="Image">
-            <use xlink:href="#spectrum-icon-18-Image" />
-          </svg>
-        </div>
-        <div class="spectrum-Tabs-item" tabindex="0">
-          <svg class="spectrum-Icon spectrum-Icon--sizeM" focusable="false" aria-hidden="true" aria-label="Filter">
-            <use xlink:href="#spectrum-icon-18-Filter" />
-          </svg>
-        </div>
-        <div class="spectrum-Tabs-item" tabindex="0">
-          <svg class="spectrum-Icon spectrum-Icon--sizeM" focusable="false" aria-hidden="true" aria-label="Comment">
-            <use xlink:href="#spectrum-icon-18-Document" />
-          </svg>
-        </div>
-        <div class="spectrum-Tabs-selectionIndicator" style="width: 17px; left: 0px;"></div>
-      </div>
   - id: tabs-vertical
-    name: Vertical tabs
+    title: Vertical tabs
     markup: |
       <div class="spectrum-Tabs spectrum-Tabs--sizeM spectrum-Tabs--vertical">
         <div class="spectrum-Tabs-item is-selected" tabindex="0">
@@ -432,26 +497,8 @@ examples:
         </div>
         <div class="spectrum-Tabs-selectionIndicator" style="height: 46px; top: 0px;"></div>
       </div>
-  - id: tabs-vertical-right
-    name: Vertical Right tabs
-    markup: |
-      <div class="spectrum-Tabs spectrum-Tabs--sizeM spectrum-Tabs--vertical-right">
-        <div class="spectrum-Tabs-item is-selected" tabindex="0">
-          <span class="spectrum-Tabs-itemLabel">Tab 1</span>
-        </div>
-        <div class="spectrum-Tabs-item" tabindex="0">
-          <span class="spectrum-Tabs-itemLabel">Tab 2</span>
-        </div>
-        <div class="spectrum-Tabs-item" tabindex="0">
-          <span class="spectrum-Tabs-itemLabel">Tab 3</span>
-        </div>
-        <div class="spectrum-Tabs-item" tabindex="0">
-          <span class="spectrum-Tabs-itemLabel">Tab 4</span>
-        </div>
-        <div class="spectrum-Tabs-selectionIndicator" style="height: 46px; top: 0px;"></div>
-      </div>
   - id: tabs-vertical-emphasized
-    name: Vertical, emphasized tabs
+    title: Vertical, emphasized tabs
     markup: |
       <div class="spectrum-Tabs spectrum-Tabs--sizeM spectrum-Tabs--vertical spectrum-Tabs--emphasized">
         <div class="spectrum-Tabs-item is-selected" tabindex="0">
@@ -469,7 +516,7 @@ examples:
         <div class="spectrum-Tabs-selectionIndicator" style="height: 46px; top: 0px;"></div>
       </div>
   - id: tabs-vertical-icon
-    name: Vertical tabs with icon and text
+    title: Vertical tabs with icon and text
     markup: |
       <div class="spectrum-Tabs spectrum-Tabs--sizeM spectrum-Tabs--vertical">
         <div class="spectrum-Tabs-item is-selected" tabindex="0">
@@ -499,7 +546,7 @@ examples:
         <div class="spectrum-Tabs-selectionIndicator" style="height: 46px; top: 0px;"></div>
       </div>
   - id: tabs-vertical-icon-emphasized
-    name: Vertical, emphasized tabs with icon and text
+    title: Vertical, emphasized tabs with icon and text
     markup: |
       <div class="spectrum-Tabs spectrum-Tabs--sizeM spectrum-Tabs--vertical spectrum-Tabs--emphasized">
         <div class="spectrum-Tabs-item is-selected" tabindex="0">
@@ -529,7 +576,7 @@ examples:
         <div class="spectrum-Tabs-selectionIndicator" style="height: 46px; top: 0px;"></div>
       </div>
   - id: tabs-compact-vertical
-    name: Compact vertical tabs
+    title: Compact vertical tabs
     markup: |
       <div class="spectrum-Tabs spectrum-Tabs--sizeM spectrum-Tabs--vertical spectrum-Tabs--compact">
         <div class="spectrum-Tabs-item is-selected" tabindex="0">
@@ -547,7 +594,7 @@ examples:
         <div class="spectrum-Tabs-selectionIndicator" style="height: 32px; top: 0px;"></div>
       </div>
   - id: tabs-compact-vertical-emphasized
-    name: Compact, emphasized vertical tabs
+    title: Compact, emphasized vertical tabs
     markup: |
       <div class="spectrum-Tabs spectrum-Tabs--sizeM spectrum-Tabs--vertical spectrum-Tabs--compact spectrum-Tabs--emphasized">
         <div class="spectrum-Tabs-item is-selected" tabindex="0">
@@ -565,7 +612,7 @@ examples:
         <div class="spectrum-Tabs-selectionIndicator" style="height: 32px; top: 0px;"></div>
       </div>
   - id: tabs-compact-vertical-icon
-    name: Compact vertical tabs with icon and text
+    title: Compact vertical tabs with icon and text
     markup: |
       <div class="spectrum-Tabs spectrum-Tabs--sizeM spectrum-Tabs--vertical spectrum-Tabs--compact">
         <div class="spectrum-Tabs-item is-selected" tabindex="0">
@@ -595,7 +642,7 @@ examples:
         <div class="spectrum-Tabs-selectionIndicator" style="height: 32px; top: 0px;"></div>
       </div>
   - id: tabs-compact-vertical-icon-emphasized
-    name: Compact, emphasized vertical tabs with icon and text
+    title: Compact, emphasized vertical tabs with icon and text
     markup: |
       <div class="spectrum-Tabs spectrum-Tabs--sizeM spectrum-Tabs--vertical spectrum-Tabs--compact spectrum-Tabs--emphasized">
         <div class="spectrum-Tabs-item is-selected" tabindex="0">
@@ -625,7 +672,7 @@ examples:
         <div class="spectrum-Tabs-selectionIndicator" style="height: 32px; top: 0px;"></div>
       </div>
   - id: tabs-with-overflow
-    name: Basic tabs with overflow
+    title: Basic tabs with overflow
     status: Verified
     markup: |
       <h4>Closed</h4>
@@ -671,7 +718,7 @@ examples:
 
       <div class="dummy-spacing"></div>
   - id: tabs-compact-overflow
-    name: Compact tabs with overflow
+    title: Compact tabs with overflow
     status: Verified
     markup: |
       <h4>Closed</h4>
@@ -718,7 +765,7 @@ examples:
 
       <div class="dummy-spacing"></div>
   - id: tabs-with-anchors
-    name: Tabs with anchors
+    title: Tabs with anchors
     status: Verified
     markup: |
       <div class="spectrum-Tabs spectrum-Tabs--sizeM spectrum-Tabs--horizontal">

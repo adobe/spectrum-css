@@ -2,8 +2,9 @@ import { html } from "lit";
 import { classMap } from "lit/directives/class-map.js";
 import { ifDefined } from "lit/directives/if-defined.js";
 
-import "../index.css";
 import { Template as Icon } from "@spectrum-css/icon/stories/template.js";
+
+import "@spectrum-css/floatingactionbutton";
 
 // More on component templates: https://storybook.js.org/docs/web-components/writing-stories/introduction#using-args
 export const Template = ({

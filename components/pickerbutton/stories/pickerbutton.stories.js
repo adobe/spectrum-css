@@ -3,9 +3,11 @@ import { Template } from "./template";
 
 import { default as Icon } from "@spectrum-css/icon/stories/icon.stories.js";
 
+/**
+ * The Picker button component is used as a dropdown trigger. See Combobox.
+ */
 export default {
 	title: "Components/Picker button",
-	description: "The Picker button component is used as a dropdown trigger. See Combobox.",
 	component: "Pickerbutton",
 	argTypes: {
 		size: {
@@ -144,6 +146,6 @@ Quiet.args = {
 };
 
 export const Express = Template.bind({});
-Express.args = {
-	express: true
+Express.globalTypes = {
+	theme: 'express'
 };

@@ -1,12 +1,12 @@
 import { html } from "lit";
-import { classMap } from "lit/directives/class-map.js";
-import { repeat } from "lit/directives/repeat.js";
-import { ifDefined } from "lit/directives/if-defined.js";
 import { when } from "lit-html/directives/when.js";
+import { classMap } from "lit/directives/class-map.js";
+import { ifDefined } from "lit/directives/if-defined.js";
+import { repeat } from "lit/directives/repeat.js";
 
 import { Template as Icon } from "@spectrum-css/icon/stories/template.js";
 
-import "../index.css";
+import "@spectrum-css/sidenav";
 
 export const Template = ({
   rootClass = "spectrum-SideNav",
@@ -61,24 +61,24 @@ export const Template = ({
                       iconName,
                       ...globals,
                       ...item
-                    })
+                    });
                   })}
                 </ul>
               </li>
-            `
+            `;
           } else {
             return SideNavItem({
               hasIcon,
               iconName,
               ...globals,
               ...item
-            })
+            });
           }
         })}
       </ul>
   </nav>
   `;
-}
+};
 
 export const SideNavItem = ({
   rootClass = "spectrum-SideNav",
@@ -94,7 +94,7 @@ export const SideNavItem = ({
   customClasses = [],
   ...globals
 }) => {
-  const displayIcon = hasIcon & variant === "multiLevel" ? false : true
+  const displayIcon = hasIcon & variant === "multiLevel" ? false : true;
   return html`
     <li id=${id} class=${classMap({
       [`${rootClass}-item`]: true,
@@ -117,10 +117,10 @@ export const SideNavItem = ({
             return SideNavItem({
               ...globals,
               ...item
-            })
+            });
           })}
         </ul>`
       )}
     </li>
-  `
-}
+  `;
+};

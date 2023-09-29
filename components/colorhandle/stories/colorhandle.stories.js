@@ -1,10 +1,11 @@
 // Import the component markup template
 import { Template } from "./template";
 
+/**
+ * The Color Handle component is used with ColorArea, ColorSlider and ColorWheel as the color selector
+ */
 export default {
 	title: "Components/Color handle",
-	description:
-		"The Color Handle component is used with ColorArea, ColorSlider and ColorWheel as the color selector",
 	component: "Colorhandle",
 	argTypes: {
 		isDisabled: {

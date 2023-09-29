@@ -1,9 +1,11 @@
 // Import the component markup template
 import { Template } from "./template";
 
+/**
+ * The Clear button component is and in-field button used in Search and Tag
+ */
 export default {
 	title: "Components/Clear button",
-	description: "The Clear button component is and in-field button used in Search and Tag",
 	component: "Clearbutton",
 	argTypes: {
 		size: {
@@ -51,7 +53,7 @@ export const OverBackground = Template.bind({});
 OverBackground.args = {
 	variant: "overBackground",
 	styles: {
-		"background-color": "rgb(15, 121, 125);", 
+		"background-color": "rgb(15, 121, 125);",
 		"color": "rgb(15, 121, 125);",
 		"padding": "15px 20px;"
 	}

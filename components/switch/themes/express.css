@@ -10,16 +10,24 @@ OF ANY KIND, either express or implied. See the License for the specific languag
 governing permissions and limitations under the License.
 */
 
-@container (--system: express) {
+@container style(--system: express) {
   .spectrum-Switch {
     --spectrum-switch-handle-border-color-default: var(--spectrum-gray-800);
     --spectrum-switch-handle-border-color-hover: var(--spectrum-gray-900);
     --spectrum-switch-handle-border-color-down: var(--spectrum-gray-900);
     --spectrum-switch-handle-border-color-focus: var(--spectrum-gray-900);
 
-    --spectrum-switch-handle-border-color-selected-default: var(--spectrum-gray-800);
-    --spectrum-switch-handle-border-color-selected-hover: var(--spectrum-gray-900);
-    --spectrum-switch-handle-border-color-selected-down: var(--spectrum-gray-900);
-    --spectrum-switch-handle-border-color-selected-focus: var(--spectrum-gray-900);
+    --spectrum-switch-handle-border-color-selected-default: var(
+      --spectrum-gray-800
+    );
+    --spectrum-switch-handle-border-color-selected-hover: var(
+      --spectrum-gray-900
+    );
+    --spectrum-switch-handle-border-color-selected-down: var(
+      --spectrum-gray-900
+    );
+    --spectrum-switch-handle-border-color-selected-focus: var(
+      --spectrum-gray-900
+    );
   }
 }

@@ -6,10 +6,10 @@ import { when } from "lit/directives/when.js";
 import { useArgs } from "@storybook/client-api";
 
 import { Template as ActionButton } from "@spectrum-css/actionbutton/stories/template.js";
-import { Template as QuickAction } from "@spectrum-css/quickaction/stories/template.js";
-import { Template as Checkbox } from "@spectrum-css/checkbox/stories/template.js";
 import { Template as Asset } from "@spectrum-css/asset/stories/template.js";
+import { Template as Checkbox } from "@spectrum-css/checkbox/stories/template.js";
 import { Template as Icon } from "@spectrum-css/icon/stories/template.js";
+import { Template as QuickAction } from "@spectrum-css/quickaction/stories/template.js";
 
 import '../index.css';
 
@@ -26,17 +26,17 @@ export const Template = ({
   isQuiet = false,
   isGallery = false,
   isGrid = false,
-  isDropTarget = false,
+  // isDropTarget = false,
   hasQuickAction = false,
   hasActions = false,
   showAsset,
   customClasses = [],
-  onclick,
+  // onclick,
   id,
   role,
   ...globals
 }) => {
-	const [_, updateArgs] = useArgs();
+	const [, updateArgs] = useArgs();
 
   return html`
     <div

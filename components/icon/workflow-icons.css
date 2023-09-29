@@ -10,56 +10,24 @@ OF ANY KIND, either express or implied. See the License for the specific languag
 governing permissions and limitations under the License.
 */
 
+/* stylelint-disable spectrum-tools/suit-naming-pattern, custom-property-pattern, spectrum-tools/no-unknown-custom-properties, spectrum-tools/no-unused-custom-properties */
 .spectrum-Icon {
-  --spectrum-icon-size-s: var(--spectrum-alias-workflow-icon-size-s);
-  --spectrum-icon-size-m: var(--spectrum-alias-workflow-icon-size-m);
-  --spectrum-icon-size-l: var(--spectrum-alias-workflow-icon-size-l);
-  --spectrum-icon-size-xl: var(--spectrum-alias-workflow-icon-size-xl);
   --spectrum-icon-size-xxl: var(--spectrum-global-dimension-size-400);
-}
 
-.spectrum-Icon--sizeS {
-  &,
-  img,
-  svg {
-    block-size: var(--spectrum-icon-size-s);
-    inline-size: var(--spectrum-icon-size-s);
+  @each $size in (s, m, l, xl) {
+    --spectrum-icon-size-$(size): var(
+      --spectrum-alias-workflow-icon-size-$(size)
+    );
   }
 }
 
-.spectrum-Icon--sizeM {
-  &,
-  img,
-  svg {
-    block-size: var(--spectrum-icon-size-m);
-    inline-size: var(--spectrum-icon-size-m);
+@each $size, $var in (S, M, L, XL, XXL), (s, m, l, xl, xxl) {
+  .spectrum-Icon--size$(size),
+  .spectrum-Icon--size$(size) img,
+  .spectrum-Icon--size$(size) svg {
+    block-size: var(--spectrum-icon-size-$(var));
+    inline-size: var(--spectrum-icon-size-$(var));
   }
 }
 
-.spectrum-Icon--sizeL {
-  &,
-  img,
-  svg {
-    block-size: var(--spectrum-icon-size-l);
-    inline-size: var(--spectrum-icon-size-l);
-  }
-}
-
-.spectrum-Icon--sizeXL {
-  &,
-  img,
-  svg {
-    block-size: var(--spectrum-icon-size-xl);
-    inline-size: var(--spectrum-icon-size-xl);
-  }
-}
-
-
-.spectrum-Icon--sizeXXL {
-  &,
-  img,
-  svg {
-    block-size: var(--spectrum-icon-size-xxl);
-    inline-size: var(--spectrum-icon-size-xxl);
-  }
-}
+/* stylelint-enable spectrum-tools/suit-naming-pattern, custom-property-pattern, spectrum-tools/no-unknown-custom-properties, spectrum-tools/no-unused-custom-properties */

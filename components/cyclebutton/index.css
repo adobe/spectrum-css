@@ -10,11 +10,24 @@ OF ANY KIND, either express or implied. See the License for the specific languag
 governing permissions and limitations under the License.
 */
 
+/**
+ * @namespace spectrum
+ * @component CycleButton
+ */
 .spectrum-CycleButton {
+  --spectrum-actionbutton-m-icononly-padding-left: var(
+    --spectrum-global-dimension-size-85
+  );
+  --spectrum-actionbutton-m-icononly-padding-right: var(
+    --spectrum-global-dimension-size-85
+  );
+
   /* Be square */
   padding-block: 0;
-  padding-inline: var(--spectrum-actionbutton-m-icononly-padding-left) var(--spectrum-actionbutton-m-icononly-padding-right);
+  padding-inline: var(--spectrum-actionbutton-m-icononly-padding-left)
+    var(--spectrum-actionbutton-m-icononly-padding-right);
+
   .spectrum-CycleButton-item:not(.is-selected) {
-    display: none
+    display: none;
   }
 }

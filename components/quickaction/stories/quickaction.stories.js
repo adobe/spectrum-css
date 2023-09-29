@@ -1,9 +1,11 @@
 // Import the component markup template
 import { Template } from "./template";
 
+/**
+ * The Quick actions component is...
+ */
 export default {
 	title: "Components/Quick actions",
-	description: "The Quick actions component is...",
 	component: "QuickAction",
 	argTypes: {
 		content: { table: { disable: true } },

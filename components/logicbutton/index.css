@@ -10,23 +10,22 @@ OF ANY KIND, either express or implied. See the License for the specific languag
 governing permissions and limitations under the License.
 */
 
-@import "../vars/css/scales/spectrum-large.css";
-@import "../vars/css/scales/spectrum-medium.css";
-@import "../commons/basebutton.css";
-
+/**
+ * @namespace spectrum
+ * @component LogicButton
+ */
 .spectrum-LogicButton {
-  @inherit: %spectrum-BaseButton;
-  @inherit: %spectrum-ButtonWithFocusRing;
+  /* Contain halo */
+  position: relative;
 
-  block-size: var(--spectrum-logicbutton-and-height);
-  padding: var(--spectrum-logicbutton-and-padding-x);
+  display: inline-flex;
+  box-sizing: border-box;
 
-  border-width: var(--spectrum-logicbutton-and-border-size);
-  border-radius: var(--spectrum-logicbutton-and-border-radius);
+  align-items: center;
+  justify-content: center;
 
-  font-size: var(--spectrum-logicbutton-and-text-size);
-  font-weight: var(--spectrum-logicbutton-and-text-font-weight);
-  line-height: 0;
+  /* Show the button overflow in Edge. */
+  overflow: visible;
 
   &::after {
     /* Override border-radius set in %spectrum-ButtonWithFocusRing since this is not a pill button */
@@ -40,8 +39,13 @@ governing permissions and limitations under the License.
 .spectrum-LogicButton {
   &:focus-visible {
     outline: none;
+
     &::after {
-      box-shadow: 0 0 0 var(--spectrum-button-m-primary-outline-texticon-focus-ring-size) var(--spectrum-button-m-primary-outline-texticon-focus-ring-color-key-focus);
+      box-shadow: 0 0 0
+        var(--spectrum-button-m-primary-outline-texticon-focus-ring-size)
+        var(
+          --spectrum-button-m-primary-outline-texticon-focus-ring-color-key-focus
+        );
     }
   }
 }
@@ -78,12 +82,15 @@ governing permissions and limitations under the License.
 
   &:disabled,
   &.is-disabled {
-    background-color: var(--spectrum-button-m-primary-fill-texticon-background-color-disabled);
-    border-color: var(--spectrum-button-m-primary-fill-texticon-border-color-disabled);
+    background-color: var(
+      --spectrum-button-m-primary-fill-texticon-background-color-disabled
+    );
+    border-color: var(
+      --spectrum-button-m-primary-fill-texticon-border-color-disabled
+    );
     color: var(--spectrum-logicbutton-and-text-color-disabled);
   }
 }
-
 
 @media (forced-colors: active) {
   .spectrum-LogicButton::after {
@@ -92,7 +99,6 @@ governing permissions and limitations under the License.
   }
 
   .spectrum-LogicButton {
-    forced-color-adjust: none;
     --spectrum-button-primary-texticon-focus-ring-size: 2;
     --spectrum-button-m-primary-fill-texticon-background-color-disabled: ButtonFace;
     --spectrum-button-m-secondary-texticon-border-color-disabled: GrayText;
@@ -109,5 +115,6 @@ governing permissions and limitations under the License.
     --spectrum-logicbutton-or-border-color: ButtonText;
     --spectrum-logicbutton-or-border-color-hover: Highlight;
     --spectrum-logicbutton-or-text-color: ButtonText;
+    forced-color-adjust: none;
   }
 }

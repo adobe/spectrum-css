@@ -4,7 +4,7 @@ import { classMap } from "lit/directives/class-map.js";
 
 import { Template as Button } from "@spectrum-css/button/stories/template.js";
 
-import "../index.css";
+import "@spectrum-css/buttongroup";
 
 export const Template = ({
 	rootClass = "spectrum-ButtonGroup",
@@ -14,15 +14,6 @@ export const Template = ({
 	vertical = false,
 	...globals
 }) => {
-	const { express } = globals;
-
-	try {
-		if (!express) import(/* webpackPrefetch: true */ "../themes/spectrum.css");
-		else import(/* webpackPrefetch: true */ "../themes/express.css");
-	} catch (e) {
-		console.warn(e);
-	}
-
 	return html`
 		<div
 			class=${classMap({

@@ -1,10 +1,11 @@
 // Import the component markup template
 import { Template } from "./template";
 
+/**
+ * The Field label component is used along with inputs to display a label for that input.
+ */
 export default {
 	title: "Components/Field label",
-	description:
-		"The Field label component is used along with inputs to display a label for that input.",
 	component: "Fieldlabel",
 	argTypes: {
 		size: {

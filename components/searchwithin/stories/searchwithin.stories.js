@@ -4,9 +4,11 @@ import { Template } from "./template";
 import { default as PickerStories } from "@spectrum-css/picker/stories/picker.stories.js";
 const ignoreProps = ["rootClass", "position", "isRounded"];
 
+/**
+ * The Search within component is...
+ */
 export default {
 	title: "Components/Search within",
-	description: "The Search within component is...",
 	component: "SearchWithin",
 	argTypes: {
 		...Object.entries(PickerStories.argTypes).reduce((acc, [key, value]) => {

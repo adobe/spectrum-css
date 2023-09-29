@@ -3,10 +3,11 @@ import { Template } from "./template";
 
 import { Template as Menu } from "@spectrum-css/menu/stories/template.js";
 
+/**
+ * Comboboxes combine a text entry with a picker menu, allowing users to filter longer lists to only the selections matching a query.
+ */
 export default {
 	title: "Components/Combobox",
-	description:
-		"Comboboxes combine a text entry with a picker menu, allowing users to filter longer lists to only the selections matching a query.",
 	component: "Combobox",
 	argTypes: {
 		size: {

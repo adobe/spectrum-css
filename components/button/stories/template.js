@@ -3,11 +3,11 @@ import { classMap } from "lit/directives/class-map.js";
 import { ifDefined } from "lit/directives/if-defined.js";
 import { when } from "lit/directives/when.js";
 
-import { lowerCase, capitalize } from "lodash-es";
+import { capitalize, lowerCase } from "lodash-es";
 
 import { Template as Icon } from "@spectrum-css/icon/stories/template.js";
 
-import "../index.css";
+import "@spectrum-css/button/dist/index-base.css";
 
 export const Template = ({
   rootClass = "spectrum-Button",
@@ -26,14 +26,6 @@ export const Template = ({
   ariaControls,
   ...globals
 }) => {
-	const { express } = globals;
-	try {
-		if (express) import(/* webpackPrefetch: true */ "../themes/express.css");
-		else import(/* webpackPrefetch: true */ "../themes/spectrum.css");
-	} catch (e) {
-		console.warn(e);
-	}
-
   return html`
     <button
       class=${classMap({

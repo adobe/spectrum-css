@@ -1,0 +1,17 @@
+{
+	"$schema": "../../node_modules/nx/schemas/project-schema.json",
+	"name": "cyclebutton",
+	"tags": ["component", "legacy"],
+	"targets": {
+		"profile": {},
+		"build": {
+			"defaultConfiguration": "legacy"
+		},
+		"test": {
+			"defaultConfiguration": "scoped"
+		},
+		"lint": {},
+		"clean": {},
+		"watch": {}
+	}
+}

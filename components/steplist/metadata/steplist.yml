@@ -1,7 +1,7 @@
-name: Steplist
+title: Steplist
 examples:
   - id: steplist-current
-    name: Standard (static)
+    title: Standard (static)
     description: A basic steplist.
     markup: |
       <div class="spectrum-Steplist spectrum-Steplist--small" role="list">
@@ -32,7 +32,7 @@ examples:
         </div>
       </div>
   - id: steplist-current
-    name: Standard (interactive)
+    title: Standard (interactive)
     description: A basic interactive steplist.
     markup: |
       <div class="spectrum-Steplist spectrum-Steplist--small spectrum-Steplist--interactive" role="list">
@@ -71,7 +71,7 @@ examples:
         </div>
       </div>
   - id: steplist-current
-    name: With label (static)
+    title: With label (static)
     description: A static steplist with labels.
     markup: |
       <div class="spectrum-Steplist" role="list">
@@ -105,7 +105,7 @@ examples:
         </div>
       </div>
   - id: steplist-current
-    name: With label (interactive)
+    title: With label (interactive)
     description: An interactive steplist with labels.
     markup: |
       <div class="spectrum-Steplist spectrum-Steplist--interactive" role="list">
@@ -147,7 +147,7 @@ examples:
         </div>
       </div>
   - id: steplist-current
-    name: With tooltip (static)
+    title: With tooltip (static)
     description: A static steplist with tooltips.
     markup: |
       <h3 class="spectrum-Heading spectrum-Heading--sizeXXS">Static variant</h3>
@@ -207,7 +207,7 @@ examples:
         </div>
       </div>
   - id: steplist-current
-    name: With tooltip (interactive)
+    title: With tooltip (interactive)
     description: An interactive steplist with tooltips.
     markup: |
       <div class="spectrum-Steplist spectrum-Steplist--interactive" role="list">

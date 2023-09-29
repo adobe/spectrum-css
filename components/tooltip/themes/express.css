@@ -10,8 +10,12 @@ OF ANY KIND, either express or implied. See the License for the specific languag
 governing permissions and limitations under the License.
 */
 
-@container (--system: express) {
+@import "./spectrum.css";
+
+@container style(--system: express) {
   .spectrum-Tooltip {
-    --spectrum-tooltip-backgound-color-default-neutral: var(--spectrum-neutral-background-color-default);
+    --spectrum-tooltip-backgound-color-default-neutral: var(
+      --spectrum-neutral-background-color-default
+    );
   }
 }

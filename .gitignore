@@ -1,5 +1,4 @@
 dist
-dist-site
 
 # Recommended update re:https://docs.netlify.com/integrations/frameworks/eleventy/
 **/node_modules/**
@@ -16,9 +15,15 @@ yarn-error.log
 package-lock.json
 
 # Storybook build output
-tools/preview/storybook-static
+storybook/storybook-static
 build-storybook.log
 
 # Chromatic
 chromatic-build-*.xml
 chromatic-diagnostics*.json
+
+# Other assundry caches
+.*-cache
+
+# Test coverage reports
+coverage

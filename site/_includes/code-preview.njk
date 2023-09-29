@@ -1,0 +1,14 @@
+<div class="site-Example-preview">
+    {{ markup | safe }}
+</div>
+<div class="site-Example-markup is-open">
+    <div id="{{ example.id | slugify }}-code-copy">
+        {% highlight "html" %}{{ markup | safe }}{% endhighlight %}
+    </div>
+    {% if markup.split('\n').length > 10 %}
+        <a href="#" class="site-Example-markupToggle spectrum-Link">Hide markup</a>
+    {% endif %}
+    <button class="code-copy" data-clipboard-target="#{{ example.id | slugify }}-code-copy" aria-label="Copy markup to clipboard">
+        <span></span>
+    </button>
+</div>

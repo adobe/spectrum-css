@@ -1,6 +1,6 @@
 {
   "name": "@spectrum-css/colorslider",
-  "version": "5.0.8",
+  "version": "5.0.7",
   "description": "The Spectrum CSS Color slider component",
   "license": "Apache-2.0",
   "author": "Adobe",
@@ -13,21 +13,16 @@
   "bugs": {
     "url": "https://github.com/adobe/spectrum-css/issues"
   },
-  "main": "dist/index-vars.css",
-  "scripts": {
-    "build": "gulp"
-  },
+  "main": "dist/index.css",
   "peerDependencies": {
-    "@spectrum-css/colorhandle": ">=6.1.0",
-    "@spectrum-css/opacitycheckerboard": ">=1.0.0",
+    "@spectrum-css/colorhandle": ">=7",
+    "@spectrum-css/opacitycheckerboard": ">=1",
     "@spectrum-css/tokens": ">=11"
   },
   "devDependencies": {
-    "@spectrum-css/colorhandle": "^7.0.11",
-    "@spectrum-css/component-builder-simple": "^2.0.17",
+    "@spectrum-css/colorhandle": "^7.0.10",
     "@spectrum-css/opacitycheckerboard": "^1.0.4",
-    "@spectrum-css/tokens": "^11.4.0",
-    "gulp": "^4.0.0"
+    "@spectrum-css/tokens": "^11.4.0"
   },
   "publishConfig": {
     "access": "public"

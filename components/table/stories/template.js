@@ -1,14 +1,14 @@
-import { html, literal } from "lit/static-html.js";
+import { ifDefined } from "lit-html/directives/if-defined.js";
 import { classMap } from "lit/directives/class-map.js";
 import { when } from "lit/directives/when.js";
-import { ifDefined } from "lit-html/directives/if-defined.js";
+import { html, literal } from "lit/static-html.js";
 
-import { Template as Icon } from "@spectrum-css/icon/stories/template.js";
-import { Template as Checkbox } from "@spectrum-css/checkbox/stories/template.js";
 import { Template as Button } from "@spectrum-css/button/stories/template.js";
+import { Template as Checkbox } from "@spectrum-css/checkbox/stories/template.js";
+import { Template as Icon } from "@spectrum-css/icon/stories/template.js";
 import { Template as Thumbnail } from "@spectrum-css/thumbnail/stories/template.js";
 
-import "../index.css";
+import "@spectrum-css/table";
 
 export const TableRowItem = ({
 	rootClass = "spectrum-Table",
@@ -29,7 +29,6 @@ export const TableRowItem = ({
 	ariaControls,
 	customClasses = [],
 	size = "m",
-	id,
 }) => {
 	const useThumbnail = showThumbnails && !isSummaryRow && !isSectionHeader;
 
@@ -48,7 +47,7 @@ export const TableRowItem = ({
 				<div class="spectrum-Table-thumbnailInner">
 					${Thumbnail({
 						size: "300",
-						imageURL: "example-card-landscape.png",
+						imageURL: "images/example-card-landscape.png",
 						isCover: true,
 					})}
 					<div class="spectrum-Table-thumbnailContent">${content}</div>
@@ -83,7 +82,7 @@ export const TableRowItem = ({
 				role="gridcell"
 				class="spectrum-Table-cell spectrum-Table-checkboxCell"
 			>
-				${when(!isSummaryRow, () => 
+				${when(!isSummaryRow, () =>
 					Checkbox({
 						size,
 						isEmphasized: tableIsEmphasized,
@@ -120,7 +119,7 @@ export const TableRowItem = ({
 									? getCellContent(0)
 									: // prettier-ignore
 									  html`
-									  	<div 
+									  	<div
 											class="${rootClass}-collapseContent"
 										>${getCellContent(0)}</div>`
 							}
@@ -169,18 +168,9 @@ export const Template = ({
 	isDropTarget = false,
 	rowItems = [],
 	customClasses = [],
-	id,
-	...globals
+	id
 }) => {
 	if (!rowItems || !rowItems.length) return html``;
-
-	const { express } = globals;
-	try {
-		if (!express) import(/* webpackPrefetch: true */ "../themes/spectrum.css");
-		else import(/* webpackPrefetch: true */ "../themes/express.css");
-	} catch (e) {
-		console.warn(e);
-	}
 
 	// Use Table tags or Div tags.
 	const tableTag = useDivs ? literal`div` : literal`table`;

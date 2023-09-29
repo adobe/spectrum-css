@@ -1,16 +1,16 @@
-name: Tooltip
-SpectrumSiteSlug: https://spectrum.adobe.com/page/tooltip/
+title: Tooltip
+designLink: https://spectrum.adobe.com/page/tooltip/
+SWC:
+  url: https://opensource.adobe.com/spectrum-web-components/components/tooltip/
+  tag: "sp-tooltip"
 sections:
-  - name: Custom Properties API
-    description: |
-      This component can be modified via its `--mod-*` prefixed custom properties. A list of those prefixed custom properties can be found <a href="https://github.com/adobe/spectrum-css/tree/main/components/tooltip/metadata/mods.md">here</a>.
-  - name: Migration Guide
+  - title: Migration guide
     description: |
       ### Tooltip now has 22 directions
       - 10 of the new directions are logical and should be tested both left-to-right and right-to-left
 examples:
   - id: tooltip
-    name: Neutral
+    title: Neutral
     status: Verified
     markup: |
       <span class="spectrum-Tooltip spectrum-Tooltip--top is-open">
@@ -22,7 +22,7 @@ examples:
         <span class="spectrum-Tooltip-tip"></span>
       </span>
   - id: tooltip-info
-    name: Informative
+    title: Informative
     status: Verified
     description: |
       *Spectrum for Adobe Express uses a different icon. Use the `SX_Info_14_S.svg` icon in the Express workflow icon set.*
@@ -50,7 +50,7 @@ examples:
         <span class="spectrum-Tooltip-tip"></span>
       </span>
   - id: tooltip-positive
-    name: Positive
+    title: Positive
     status: Verified
     description: |
       *Spectrum for Adobe Express uses a different icon. Use the `SX_CheckmarkCircle_14_S.svg` icon in the Express workflow icon set.*
@@ -78,7 +78,7 @@ examples:
         <span class="spectrum-Tooltip-tip"></span>
       </span>
   - id: tooltip-negative
-    name: Negative
+    title: Negative
     status: Verified
     description: |
       *Spectrum for Adobe Express uses a different icon. Use the `SX_Alert_14_S.svg` icon in the Express workflow icon set.*
@@ -106,13 +106,13 @@ examples:
         <span class="spectrum-Tooltip-tip"></span>
       </span>
   - id: tooltip
-    name: Directions
+    title: Directions
     status: Verified
     description: "Tooltips can be top, top left, top right, top start, top end, bottom, bottom left, bottom right, bottom start, bottom end, left, left top, left bottom, start, start top, start bottom, right, right top, right bottom, end, end top, end bottom. The default placement value is at the top."
     markup: |
-      <div class="spectrum-Examples">
-        <div class="spectrum-Examples-item">
-          <h4 class="spectrum-Heading spectrum-Heading--sizeXS spectrum-Examples-itemHeading">Top</h4>
+      <div class="site-Examples">
+        <div class="site-Examples-item">
+          <h4 class="spectrum-Heading spectrum-Heading--sizeXS site-Examples-itemHeading">Top</h4>
 
           <span class="spectrum-Tooltip spectrum-Tooltip--top is-open">
             <span class="spectrum-Tooltip-label">Top</span>
@@ -145,8 +145,8 @@ examples:
           <br><br>
         </div>
 
-        <div class="spectrum-Examples-item">
-          <h4 class="spectrum-Heading spectrum-Heading--sizeXS spectrum-Examples-itemHeading">Left</h4>
+        <div class="site-Examples-item">
+          <h4 class="spectrum-Heading spectrum-Heading--sizeXS site-Examples-itemHeading">Left</h4>
           <span class="spectrum-Tooltip spectrum-Tooltip--left is-open">
             <span class="spectrum-Tooltip-label">Left</span>
             <span class="spectrum-Tooltip-tip"></span>
@@ -166,8 +166,8 @@ examples:
           <br><br>
         </div>
 
-        <div class="spectrum-Examples-item">
-          <h4 class="spectrum-Heading spectrum-Heading--sizeXS spectrum-Examples-itemHeading">Right</h4>
+        <div class="site-Examples-item">
+          <h4 class="spectrum-Heading spectrum-Heading--sizeXS site-Examples-itemHeading">Right</h4>
           <span class="spectrum-Tooltip spectrum-Tooltip--right is-open">
             <span class="spectrum-Tooltip-label">Right</span>
             <span class="spectrum-Tooltip-tip"></span>
@@ -187,8 +187,8 @@ examples:
           <br><br>
         </div>
 
-        <div class="spectrum-Examples-item">
-          <h4 class="spectrum-Heading spectrum-Heading--sizeXS spectrum-Examples-itemHeading">Bottom</h4>
+        <div class="site-Examples-item">
+          <h4 class="spectrum-Heading spectrum-Heading--sizeXS site-Examples-itemHeading">Bottom</h4>
           <span class="spectrum-Tooltip spectrum-Tooltip--bottom is-open">
             <span class="spectrum-Tooltip-label">Bottom</span>
             <span class="spectrum-Tooltip-tip"></span>
@@ -220,8 +220,8 @@ examples:
           <br><br>
         </div>
 
-        <div class="spectrum-Examples-item">
-           <h4 class="spectrum-Heading spectrum-Heading--sizeXS spectrum-Examples-itemHeading">Start</h4>
+        <div class="site-Examples-item">
+           <h4 class="spectrum-Heading spectrum-Heading--sizeXS site-Examples-itemHeading">Start</h4>
           <span class="spectrum-Tooltip spectrum-Tooltip--start is-open">
             <span class="spectrum-Tooltip-label">Start</span>
             <span class="spectrum-Tooltip-tip"></span>
@@ -241,8 +241,8 @@ examples:
           <br><br>
         </div>
 
-        <div class="spectrum-Examples-item">
-           <h4 class="spectrum-Heading spectrum-Heading--sizeXS spectrum-Examples-itemHeading">End</h4>
+        <div class="site-Examples-item">
+           <h4 class="spectrum-Heading spectrum-Heading--sizeXS site-Examples-itemHeading">End</h4>
           <span class="spectrum-Tooltip spectrum-Tooltip--end is-open">
             <span class="spectrum-Tooltip-label">End</span>
             <span class="spectrum-Tooltip-tip"></span>
@@ -264,7 +264,7 @@ examples:
       </div>
 
   - id: tooltip-success
-    name: Success
+    title: Success
     status: Deprecated
     details: Use `positive` instead.
     markup: |
@@ -273,7 +273,7 @@ examples:
         <span class="spectrum-Tooltip-tip"></span>
       </span>
   - id: tooltip-error
-    name: Error
+    title: Error
     status: Deprecated
     details: Use `negative` instead.
     markup: |
@@ -282,7 +282,7 @@ examples:
         <span class="spectrum-Tooltip-tip"></span>
       </span>
   - id: tooltip-help
-    name: Help
+    title: Help
     status: Deprecated
     details: Use `info`
     description: |
@@ -298,13 +298,13 @@ examples:
         <span class="spectrum-Tooltip-tip"></span>
       </span>
   - id: tooltip-showOnHover
-    name: Show on hover
+    title: Show on hover
     status: Unverified
     description: A tooltip that shows on hover using CSS only. Note that this approach does not support text wrapping.
     markup: |
-      <div class="spectrum-Examples">
-        <div class="spectrum-Examples-item">
-          <h4 class="spectrum-Heading spectrum-Heading--sizeXS spectrum-Examples-itemHeading">Top</h4>
+      <div class="site-Examples">
+        <div class="site-Examples-item">
+          <h4 class="spectrum-Heading spectrum-Heading--sizeXS site-Examples-itemHeading">Top</h4>
 
           <span class="u-tooltip-showOnHover" style="margin: 15px 50px; cursor: default;">
             Top
@@ -353,8 +353,8 @@ examples:
           <br><br>
         </div>
 
-        <div class="spectrum-Examples-item">
-          <h4 class="spectrum-Heading spectrum-Heading--sizeXS spectrum-Examples-itemHeading">Left</h4>
+        <div class="site-Examples-item">
+          <h4 class="spectrum-Heading spectrum-Heading--sizeXS site-Examples-itemHeading">Left</h4>
           <span class="u-tooltip-showOnHover" style="margin: 15px 50px; cursor: default;">
             Left
             <span class="spectrum-Tooltip spectrum-Tooltip--left">
@@ -383,8 +383,8 @@ examples:
           <br><br>
         </div>
 
-        <div class="spectrum-Examples-item">
-          <h4 class="spectrum-Heading spectrum-Heading--sizeXS spectrum-Examples-itemHeading">Right</h4>
+        <div class="site-Examples-item">
+          <h4 class="spectrum-Heading spectrum-Heading--sizeXS site-Examples-itemHeading">Right</h4>
           <span class="u-tooltip-showOnHover" style="margin: 15px 50px; cursor: default;">
             Right
             <span class="spectrum-Tooltip spectrum-Tooltip--right">
@@ -413,8 +413,8 @@ examples:
           <br><br>
         </div>
 
-        <div class="spectrum-Examples-item">
-          <h4 class="spectrum-Heading spectrum-Heading--sizeXS spectrum-Examples-itemHeading">Bottom</h4>
+        <div class="site-Examples-item">
+          <h4 class="spectrum-Heading spectrum-Heading--sizeXS site-Examples-itemHeading">Bottom</h4>
           <span class="u-tooltip-showOnHover" style="margin: 15px 50px; cursor: default;">
             Bottom
             <span class="spectrum-Tooltip spectrum-Tooltip--bottom">
@@ -461,8 +461,8 @@ examples:
           <br><br>
         </div>
 
-        <div class="spectrum-Examples-item">
-           <h4 class="spectrum-Heading spectrum-Heading--sizeXS spectrum-Examples-itemHeading">Start</h4>
+        <div class="site-Examples-item">
+           <h4 class="spectrum-Heading spectrum-Heading--sizeXS site-Examples-itemHeading">Start</h4>
           <span class="u-tooltip-showOnHover" style="margin: 15px 50px; cursor: default;">
             Start
             <span class="spectrum-Tooltip spectrum-Tooltip--start">
@@ -491,8 +491,8 @@ examples:
           <br><br>
         </div>
 
-        <div class="spectrum-Examples-item">
-           <h4 class="spectrum-Heading spectrum-Heading--sizeXS spectrum-Examples-itemHeading">End</h4>
+        <div class="site-Examples-item">
+           <h4 class="spectrum-Heading spectrum-Heading--sizeXS site-Examples-itemHeading">End</h4>
           <span class="u-tooltip-showOnHover" style="margin: 15px 50px; cursor: default;">
             End
             <span class="spectrum-Tooltip spectrum-Tooltip--end">

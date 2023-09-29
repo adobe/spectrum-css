@@ -10,6 +10,10 @@ OF ANY KIND, either express or implied. See the License for the specific languag
 governing permissions and limitations under the License.
 */
 
+/**
+ * @namespace spectrum
+ * @component Dial
+ */
 .spectrum-Dial {
   --spectrum-dial-label-gap-y: var(--spectrum-global-dimension-size-65);
   --spectrum-dial-handle-position: var(--spectrum-global-dimension-size-100);
@@ -24,6 +28,50 @@ governing permissions and limitations under the License.
   --spectrum-dial-handle-border-size: var(--spectrum-alias-border-size-thick);
   --spectrum-dial-label-text-size: var(--spectrum-body-xs-text-size);
   --spectrum-dial-label-line-height: var(--spectrum-body-xs-text-line-height);
+
+  --spectrum-alias-border-size-thick: var(
+    --spectrum-global-dimension-static-size-25
+  );
+  --spectrum-body-xs-text-size: var(--spectrum-global-dimension-font-size-75);
+  --spectrum-body-xs-text-line-height: var(
+    --spectrum-alias-body-text-line-height
+  );
+  --spectrum-dial-container-width: var(
+    --spectrum-global-dimension-static-size-600
+  );
+  --spectrum-fieldlabel-m-padding-top: var(--spectrum-global-dimension-size-50);
+  --spectrum-dial-width: var(--spectrum-global-dimension-static-size-400);
+  --spectrum-dial-height: var(--spectrum-global-dimension-static-size-400);
+  --spectrum-dial-border-radius: var(--spectrum-alias-border-radius-large);
+  --spectrum-dial-handle-marker-height: var(--spectrum-alias-border-size-thick);
+  --spectrum-dial-handle-marker-border-radius: var(
+    --spectrum-alias-border-radius-xsmall
+  );
+  --spectrum-dial-min-max-tick-angles: 45deg;
+  --spectrum-dial-handle-marker-width: var(
+    --spectrum-global-dimension-static-size-150
+  );
+  --spectrum-dial-small-width: var(--spectrum-global-dimension-static-size-300);
+  --spectrum-dial-small-height: var(
+    --spectrum-global-dimension-static-size-300
+  );
+  --spectrum-alias-label-text-color: var(--spectrum-global-color-gray-700);
+  --spectrum-alias-icon-color-disabled: var(--spectrum-global-color-gray-400);
+  --spectrum-dial-small-handle-marker-color: var(
+    --spectrum-global-color-gray-700
+  );
+  --spectrum-dial-handle-marker-color: var(--spectrum-global-color-gray-700);
+  --spectrum-dial-border-color-hover: var(--spectrum-global-color-gray-800);
+  --spectrum-dial-handle-marker-color-hover: var(
+    --spectrum-global-color-gray-800
+  );
+  --spectrum-dial-handle-marker-color-key-focus: var(
+    --spectrum-global-color-gray-50
+  );
+  --spectrum-dial-min-max-tick-color: var(--spectrum-global-color-gray-600);
+  --spectrum-alias-background-color-default: var(
+    --spectrum-global-color-gray-100
+  );
 }
 
 .spectrum-Dial-label {
@@ -69,10 +117,6 @@ governing permissions and limitations under the License.
 }
 
 .spectrum-Dial-controls {
-  display: inline-block;
-  box-sizing: border-box;
-
-  position: relative;
   z-index: auto;
 
   vertical-align: top;
@@ -99,11 +143,13 @@ governing permissions and limitations under the License.
     position: absolute;
     inset-block-end: 0;
   }
+
   &::before {
     inset-inline-start: auto;
     inset-inline-end: calc(var(--spectrum-dial-handle-marker-height) * -1);
     transform: rotate(var(--spectrum-dial-min-max-tick-angles));
   }
+
   &::after {
     inset-inline-start: calc(var(--spectrum-dial-handle-marker-height) * -1);
     transform: rotate(calc(-1 * var(--spectrum-dial-min-max-tick-angles)));
@@ -111,8 +157,6 @@ governing permissions and limitations under the License.
 }
 
 .spectrum-Dial-handle {
-  position: absolute;
-  inset-inline-start: 0;
   z-index: 2;
   display: inline-block;
   box-sizing: border-box;
@@ -121,8 +165,6 @@ governing permissions and limitations under the License.
   margin-inline: calc(var(--spectrum-global-dimension-size-200) / -2) 0;
 
   outline: none;
-  cursor: pointer;
-  cursor: grab;
 
   inline-size: var(--spectrum-dial-handle-size);
   block-size: var(--spectrum-dial-handle-size);
@@ -136,7 +178,6 @@ governing permissions and limitations under the License.
   inset-block-end: var(--spectrum-dial-handle-position);
   border-radius: var(--spectrum-dial-border-radius);
   transform: rotate(calc(-1 * var(--spectrum-dial-min-max-tick-angles)));
-  cursor: pointer;
   cursor: grab;
 
   &::after {
@@ -165,15 +206,16 @@ governing permissions and limitations under the License.
   padding: 0;
   position: absolute;
   overflow: hidden;
-  opacity: 0.000001;
+  opacity: 0.0001%;
   cursor: default;
-  -webkit-appearance: none;
+  appearance: none;
   border: 0;
   pointer-events: none;
   inline-size: var(--spectrum-dial-handle-size);
   block-size: var(--spectrum-dial-handle-size);
   inset-inline-start: 0;
   inset-block-start: 0;
+
   &:focus {
     outline: none;
   }
@@ -194,18 +236,107 @@ governing permissions and limitations under the License.
 
 .u-isGrabbing {
   cursor: ns-resize;
-  cursor: -webkit-grabbing;
   cursor: grabbing;
-
-  -webkit-user-select: none;
-  -moz-user-select: none;
-  -ms-user-select: none;
+  cursor: grabbing;
   user-select: none;
 
   .spectrum-Dial {
     .spectrum-Dial-label,
     .spectrum-Dial-value {
       cursor: inherit;
+    }
+  }
+}
+
+.spectrum-Dial {
+  --spectrum-dial-label-text-color: var(--spectrum-alias-label-text-color);
+  --spectrum-dial-label-text-color-disabled: var(
+    --spectrum-alias-label-text-color
+  );
+  --spectrum-dial-handle-border-color-disabled: var(
+    --spectrum-alias-icon-color-disabled
+  );
+}
+
+.spectrum-Dial-labelContainer {
+  color: var(--spectrum-dial-label-text-color);
+}
+
+.spectrum-Dial-handle {
+  box-shadow: none;
+  border-color: var(--spectrum-dial-small-handle-marker-color);
+
+  &::before {
+    display: none;
+  }
+
+  &::after {
+    background-color: var(--spectrum-dial-handle-marker-color);
+  }
+
+  &:hover {
+    border-color: var(--spectrum-dial-border-color-hover);
+
+    &::after {
+      background-color: var(--spectrum-dial-handle-marker-color-hover);
+    }
+  }
+
+  &.is-focused {
+    background-color: var(--spectrum-dial-handle-marker-color-key-focus);
+
+    border-color: var(--spectrum-dial-handle-marker-color-key-focus);
+
+    &::after {
+      background-color: var(--spectrum-dial-handle-marker-color-key-focus);
+    }
+  }
+
+  &:active,
+  &.is-dragged {
+    background-color: var(--spectrum-dial-border-color-hover);
+    border-color: var(--spectrum-dial-border-color-hover);
+
+    &::after {
+      background-color: var(--spectrum-dial-handle-marker-color-key-focus);
+    }
+  }
+}
+
+.spectrum-Dial-controls {
+  &::before,
+  &::after {
+    background-color: var(--spectrum-dial-min-max-tick-color);
+  }
+}
+
+.spectrum-Dial {
+  &.is-disabled {
+    .spectrum-Dial-labelContainer {
+      color: var(--spectrum-dial-label-text-color-disabled);
+    }
+
+    .spectrum-Dial-controls {
+      &::after,
+      &::before {
+        background-color: var(--spectrum-dial-handle-border-color-disabled);
+      }
+    }
+
+    .spectrum-Dial-handle {
+      border-color: var(--spectrum-dial-handle-border-color-disabled);
+      background: var(--spectrum-alias-background-color-default);
+
+      &:hover,
+      &:active {
+        border-color: var(--spectrum-dial-handle-border-color-disabled);
+        background: var(--spectrum-dial-handle-border-color-disabled);
+      }
+
+      &::after,
+      &::before {
+        background-color: var(--spectrum-dial-handle-border-color-disabled);
+      }
     }
   }
 }

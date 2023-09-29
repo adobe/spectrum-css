@@ -1,11 +1,11 @@
 import { html } from "lit-html";
 import { classMap } from "lit-html/directives/class-map.js";
-import { styleMap } from "lit-html/directives/style-map.js";
 import { ifDefined } from 'lit-html/directives/if-defined.js';
+import { styleMap } from "lit-html/directives/style-map.js";
 
 import { Template as Icon } from "@spectrum-css/icon/stories/template.js";
 
-import "../index.css";
+import "@spectrum-css/clearbutton/dist/index-base.css";
 
 export const ClearButton = ({
 	rootClass = "spectrum-ClearButton",
@@ -40,7 +40,7 @@ export const ClearButton = ({
 			</div>
 		</button>
 	`;
-}
+};
 
 export const Template = ({
 	rootClass = "spectrum-ClearButton",
@@ -51,15 +51,7 @@ export const Template = ({
 	styles = {},
 	...globals
 }) => {
-	const { express } = globals;
 
-	try {
-		if (!express) import(/* webpackPrefetch: true */ "../themes/spectrum.css");
-		else import(/* webpackPrefetch: true */ "../themes/express.css");
-	} catch (e) {
-		console.warn(e);
-	}
-	
 	if (typeof variant !== "undefined") {
 		return html`
 			<div style=${ifDefined(styleMap(styles))}>
@@ -83,5 +75,5 @@ export const Template = ({
 		variant,
 		styles,
 		globals
-	})
+	});
 };

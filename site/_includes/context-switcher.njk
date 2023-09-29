@@ -1,0 +1,22 @@
+<div class="site-Switcher">
+    <div class="site-Switcher-container">
+        <label class="spectrum-FieldLabel spectrum-FieldLabel--sizeM" for="switcher-theme">Theme</label>
+        {% set picker = { id: "switcher-theme", options: ["Light", "Dark",  "Darkest"] } %}
+        {% include "picker.njk" %}
+    </div>
+    <div class="site-Switcher-container">
+        <label class="spectrum-FieldLabel spectrum-FieldLabel--sizeM" for="switcher-scale">Scale</label>
+        {% set picker = { id: "switcher-scale", options: ["Medium", "Large"] } %}
+        {% include "picker.njk" %}
+    </div>
+    <div class="site-Switcher-container">
+        <label class="spectrum-FieldLabel spectrum-FieldLabel--sizeM" for="switcher-direction">Direction</label>
+        {% set picker = { id: "switcher-direction", options: ["LTR", "RTL"] } %}
+        {% include "picker.njk" %}
+    </div>
+    <div class="site-Switcher-container">
+        <label class="spectrum-FieldLabel spectrum-FieldLabel--sizeM" for="switcher-vars-version">Vars version</label>
+        {% set picker = { id: "switcher-vars-version", options: ["Default", "Express"] } %}
+        {% include "picker.njk" %}
+    </div>
+</div>

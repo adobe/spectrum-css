@@ -1,0 +1,74 @@
+{
+	"name": "tokens",
+	"tag": ["tokens"],
+	"targets": {
+		"clean": {
+			"options": {
+				"cwd": "tokens"
+			}
+		},
+		"build": {
+			"dependsOn": ["style-dictionary"],
+			"inputs": [
+				"{workspaceRoot}/postcss.config.js",
+				"{workspaceRoot}/custom-express/*.css",
+				"{workspaceRoot}/custom-spectrum/*.css"
+			],
+			"outputs": [
+				"{workspaceRoot}/dist/css/express",
+				"{workspaceRoot}/dist/css/spectrum"
+			],
+			"executor": "nx:run-commands",
+			"options": {
+				"cwd": "tokens",
+				"commands": [
+					"postcss --verbose ./dist/css/*.css ./dist/css/spectrum/*.css ./dist/css/express/*.css --replace",
+					"postcss --verbose ./custom-express/*.css --dir ./dist/css/express/",
+					"postcss --verbose ./custom-spectrum/*.css --dir ./dist/css/spectrum/",
+					"glob-concat ./dist/css/*.css ./dist/css/spectrum/*.css ./dist/css/express/*.css -o ./dist/index.css && postcss ./dist/index.css --replace"
+				],
+				"parallel": false
+			},
+			"configurations": {
+				"light": {
+					"cwd": "tokens",
+					"commands": [
+						"postcss --verbose ./dist/css/*.css ./dist/css/spectrum/*.css ./dist/css/express/*.css --replace",
+						"postcss --verbose ./custom-express/*.css --dir ./dist/css/express/",
+						"postcss --verbose ./custom-spectrum/*.css --dir ./dist/css/spectrum/",
+						"glob-concat ./dist/css/*.css ./dist/css/spectrum/*.css ./dist/css/express/*.css -o ./dist/index.css && postcss ./dist/index.css --replace"
+					],
+					"parallel": false
+				}
+			}
+		},
+		"style-dictionary": {
+			"dependsOn": ["clean"],
+			"inputs": [
+				"{workspaceRoot}/postcss.config.js",
+				"{workspaceRoot}/style-dictionary.config.js",
+				"{workspaceRoot}/utilities/style-dictionary.utils.js"
+			],
+			"outputs": [
+				"{workspaceRoot}/dist/global-vars.css",
+				"{workspaceRoot}/dist/light-vars.css",
+				"{workspaceRoot}/dist/dark-vars.css",
+				"{workspaceRoot}/dist/darkest-vars.css",
+				"{workspaceRoot}/dist/medium-vars.css",
+				"{workspaceRoot}/dist/large-vars.css",
+				"{workspaceRoot}/dist/specrum/global-vars.css",
+				"{workspaceRoot}/dist/express/global-vars.css",
+				"{workspaceRoot}/dist/specrum/medium-vars.css",
+				"{workspaceRoot}/dist/specrum/large-vars.css"
+			],
+			"executor": "@nxkit/style-dictionary:build",
+			"options": {
+				"styleDictionaryConfig": "./tokens/style-dictionary.config.js",
+				"outputPath": "./tokens",
+				"tsConfig": "./tsconfig.base.json",
+				"deleteOutputPath": false,
+				"platform": "CSS"
+			}
+		}
+	}
+}

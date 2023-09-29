@@ -1,12 +1,12 @@
 import { html } from "lit";
 import { classMap } from "lit/directives/class-map.js";
-import { styleMap } from "lit/directives/style-map.js";
 import { ifDefined } from "lit/directives/if-defined.js";
+import { styleMap } from "lit/directives/style-map.js";
 import { when } from "lit/directives/when.js";
 
 import { useArgs } from "@storybook/client-api";
 
-import "@spectrum-css/popover";
+import "@spectrum-css/popover/dist/index-base.css";
 
 export const Template = ({
 	rootClass = "spectrum-Popover",
@@ -34,14 +34,6 @@ export const Template = ({
 		return html``;
 	}
 
-	const { express } = globals;
-
-	try {
-		if (!express) import(/* webpackPrefetch: true */ "../themes/spectrum.css");
-		else import(/* webpackPrefetch: true */ "../themes/express.css");
-	} catch (e) {
-		console.warn(e);
-	}
 
 	return html`
 		${when(typeof trigger === "function", () => trigger({
@@ -72,7 +64,7 @@ export const Template = ({
 				let yOffset = "+ 0px";
 				if (position.includes("top") || position.includes("bottom") && !(position.includes("-top") || position.includes("-bottom"))) {
 					x = triggerXCenter - (popWidth > 0 ? popWidth / 2 : popWidth);
-				} 
+				}
 				if (position.includes("left") || position.includes("right")) {
 					y = triggerYCenter - (popHeight > 0 ? popHeight / 2 : popHeight);
 				}
@@ -122,7 +114,7 @@ export const Template = ({
 						...additionalStyles,
 					}
 				});
-			}, 100)
+			}, 100);
 			}
 		}))}
 

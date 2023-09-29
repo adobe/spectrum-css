@@ -1,6 +1,6 @@
 {
   "name": "@spectrum-css/dropzone",
-  "version": "5.0.25",
+  "version": "5.0.24",
   "description": "The Spectrum CSS dropzone component",
   "license": "Apache-2.0",
   "author": "Adobe",
@@ -13,10 +13,7 @@
   "bugs": {
     "url": "https://github.com/adobe/spectrum-css/issues"
   },
-  "main": "dist/index-vars.css",
-  "scripts": {
-    "build": "gulp"
-  },
+  "main": "dist/index.css",
   "peerDependencies": {
     "@spectrum-css/illustratedmessage": ">=6",
     "@spectrum-css/link": ">=3 <=4",
@@ -24,12 +21,9 @@
   },
   "devDependencies": {
     "@spectrum-css/actionbutton": "^5.0.11",
-    "@spectrum-css/component-builder-simple": "^2.0.17",
-    "@spectrum-css/illustratedmessage": "^6.0.25",
-    "@spectrum-css/link": "^4.0.69",
-    "@spectrum-css/tokens": "^11.4.0",
-    "@spectrum-css/vars": "^9.0.8",
-    "gulp": "^4.0.0"
+    "@spectrum-css/illustratedmessage": "^6.0.24",
+    "@spectrum-css/link": "^4.0.68",
+    "@spectrum-css/tokens": "^11.4.0"
   },
   "publishConfig": {
     "access": "public"

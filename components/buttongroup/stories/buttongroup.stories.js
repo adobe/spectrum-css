@@ -1,9 +1,11 @@
 // Import the component markup template
 import { Template } from "./template";
 
+/**
+ * The Button group component is...
+ */
 export default {
 	title: "Components/Button group",
-	description: "The Button group component is...",
 	component: "Buttongroup",
 	argTypes: {
 		size: {

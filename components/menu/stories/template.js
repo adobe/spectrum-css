@@ -1,14 +1,14 @@
-import { html, css } from "lit";
+import { html } from "lit";
 import { classMap } from "lit/directives/class-map.js";
-import { styleMap } from "lit/directives/style-map.js";
 import { ifDefined } from "lit/directives/if-defined.js";
+import { styleMap } from "lit/directives/style-map.js";
 
+import { Template as Checkbox } from "@spectrum-css/checkbox/stories/template.js";
 import { Template as Divider } from "@spectrum-css/divider/stories/template.js";
 import { Template as Icon } from "@spectrum-css/icon/stories/template.js";
-import { Template as Checkbox } from "@spectrum-css/checkbox/stories/template.js";
 import { Template as Switch } from "@spectrum-css/switch/stories/template.js";
 
-import "../index.css";
+import "@spectrum-css/menu";
 
 export const MenuItem = ({
   rootClass,
@@ -69,7 +69,7 @@ export const MenuItem = ({
             customClasses: [
               `${rootClass}Icon`,
               `${rootClass}Icon--workflowIcon`
-            ] 
+            ]
           }) : ''}
       ${isCollapsible
         ? html`<span class="spectrum-Menu-sectionHeading">${label}</span>`
@@ -83,7 +83,7 @@ export const MenuItem = ({
           ${label}
         </span>`
         : ''}
-      ${typeof description != "undefined" 
+      ${typeof description != "undefined"
         ? html`<span class="${rootClass}Description">${description}</span>`
         : ''}
       ${isDrillIn
@@ -97,7 +97,7 @@ export const MenuItem = ({
             ],
           })
         : ''}
-      ${selectionMode == "multiple" 
+      ${selectionMode == "multiple"
         ? Checkbox({
           ...globals,
           size,
@@ -136,7 +136,7 @@ export const MenuItem = ({
           : ''}
       ${isCollapsible && items.length > 0 ? Template({ ...globals, items, isOpen, size }) : ''}
     </li>
-  `
+  `;
 };
 
 export const MenuGroup = ({
@@ -207,7 +207,7 @@ export const Template = ({
       aria-disabled=${isDisabled ? "true" : "false"}
       style=${styleMap(customStyles)}
     >
-      ${items.map((i, idx) => {
+      ${items.map((i) => {
         if (i.type === "divider")
           return Divider({
             ...globals,

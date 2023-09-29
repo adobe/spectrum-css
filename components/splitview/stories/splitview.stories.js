@@ -1,12 +1,13 @@
-import { within, userEvent } from '@storybook/testing-library';
-import { expect } from '@storybook/jest';
+import { within } from '@storybook/testing-library';
 
 // Import the component markup template
 import { Template } from "./template";
 
+/**
+ * The Splitview component is...
+ */
 export default {
 	title: "Components/Split view",
-	description: "The Splitview component is...",
 	component: "Splitview",
 	argTypes: {
 		orientation: {

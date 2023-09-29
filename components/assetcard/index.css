@@ -10,35 +10,76 @@ OF ANY KIND, either express or implied. See the License for the specific languag
 governing permissions and limitations under the License.
 */
 
+/**
+ * @namespace spectrum
+ * @component AssetCard
+ * @descendants assetContainer, asset, header, title, headerContent, content, selectionOverlay, selectionIndicator, selectionOrder
+ * @modifiers highlightSelection, checkboxSelection, orderedSelection
+ * @utilities is-drop-target, is-selected
+ */
+
 /* outer container, unstyled */
 .spectrum-AssetCard {
   /* todo: this isn't quite the size from the XD file as 232px is not a size token, so we use 224px */
-  --spectrum-assetcard-asset-size: var(--spectrum-global-dimension-static-size-2800);
+  --spectrum-assetcard-asset-size: var(
+    --spectrum-global-dimension-static-size-2800
+  );
 
-  --spectrum-assetcard-overlay-background-color: var(--spectrum-alias-assetcard-overlay-background-color);
-  --spectrum-assetcard-border-color-selected: var(--spectrum-alias-assetcard-border-color-selected);
-  --spectrum-assetcard-border-color-selected-hover: var(--spectrum-alias-assetcard-border-color-selected-hover);
-  --spectrum-assetcard-border-color-selected-down: var(--spectrum-alias-assetcard-border-color-selected-down);
-  --spectrum-assetcard-selectionindicator-background-color-ordered: var(--spectrum-alias-assetcard-selectionindicator-background-color-ordered);
+  --spectrum-assetcard-overlay-background-color: var(
+    --spectrum-alias-assetcard-overlay-background-color
+  );
+  --spectrum-assetcard-border-color-selected: var(
+    --spectrum-alias-assetcard-border-color-selected
+  );
+  --spectrum-assetcard-border-color-selected-hover: var(
+    --spectrum-alias-assetcard-border-color-selected-hover
+  );
+  --spectrum-assetcard-border-color-selected-down: var(
+    --spectrum-alias-assetcard-border-color-selected-down
+  );
+  --spectrum-assetcard-selectionindicator-background-color-ordered: var(
+    --spectrum-alias-assetcard-selectionindicator-background-color-ordered
+  );
 
-  --spectrum-assetcard-border-radius: var(--spectrum-alias-border-radius-regular);
+  --spectrum-assetcard-border-radius: var(
+    --spectrum-alias-border-radius-regular
+  );
   --spectrum-assetcard-border-color: transparent;
-  --spectrum-assetcard-border-color-hover: var(--spectrum-alias-border-color-hover);
+  --spectrum-assetcard-border-color-hover: var(
+    --spectrum-alias-border-color-hover
+  );
+
   /* todo: this was hardcoded, it should reference --spectrum-alias-border-color-down once that becomes +200 */
   --spectrum-assetcard-border-color-down: var(--spectrum-global-color-gray-600);
 
   --spectrum-assetcard-background-color: var(--spectrum-global-color-gray-200);
 
-  --spectrum-assetcard-focus-ring-gap: var(--spectrum-global-dimension-static-size-65);
-  --spectrum-assetcard-focus-ring-border-radius: var(--spectrum-alias-focus-ring-border-radius-regular);
+  --spectrum-assetcard-focus-ring-gap: var(
+    --spectrum-global-dimension-static-size-65
+  );
+  --spectrum-assetcard-focus-ring-border-radius: var(
+    --spectrum-alias-focus-ring-border-radius-regular
+  );
 
-  --spectrum-assetcard-selectionindicator-background-color-default: var(--spectrum-alias-background-color-quickactions);
-  --spectrum-assetcard-selectionindicator-margin: var(--spectrum-global-dimension-size-150);
-  --spectrum-assetcard-selectionindicator-size: var(--spectrum-global-dimension-static-size-500);
-  --spectrum-assetcard-selectionindicator-border-radius: var(--spectrum-alias-border-radius-regular);
+  --spectrum-assetcard-selectionindicator-background-color-default: var(
+    --spectrum-alias-background-color-quickactions
+  );
+  --spectrum-assetcard-selectionindicator-margin: var(
+    --spectrum-global-dimension-size-150
+  );
+  --spectrum-assetcard-selectionindicator-size: var(
+    --spectrum-global-dimension-static-size-500
+  );
+  --spectrum-assetcard-selectionindicator-border-radius: var(
+    --spectrum-alias-border-radius-regular
+  );
 
-  --spectrum-assetcard-heading-text-color: var(--spectrum-global-color-gray-900);
-  --spectrum-assetcard-content-text-color: var(--spectrum-global-color-gray-700);
+  --spectrum-assetcard-heading-text-color: var(
+    --spectrum-global-color-gray-900
+  );
+  --spectrum-assetcard-content-text-color: var(
+    --spectrum-global-color-gray-700
+  );
 
   /* contain selection indicator */
   position: relative;
@@ -49,6 +90,8 @@ governing permissions and limitations under the License.
   inline-size: var(--spectrum-assetcard-asset-size);
 
   cursor: pointer;
+
+  outline: none;
 
   &:hover {
     .spectrum-AssetCard-assetContainer::after {
@@ -62,11 +105,9 @@ governing permissions and limitations under the License.
     }
   }
 
-  outline: none;
-
   &:focus-visible {
     .spectrum-AssetCard-assetContainer::before {
-      opacity: 1;
+      opacity: 100%;
     }
   }
 }
@@ -91,27 +132,30 @@ governing permissions and limitations under the License.
 
   /* focus indicator */
   &::before {
-    content: '';
+    content: "";
 
     position: absolute;
     inset: calc(-1 * var(--spectrum-assetcard-focus-ring-gap));
 
-    border: var(--spectrum-alias-border-size-thick) solid var(--spectrum-alias-focus-color);
+    border: var(--spectrum-alias-border-size-thick) solid
+      var(--spectrum-alias-focus-color);
     border-radius: var(--spectrum-assetcard-focus-ring-border-radius);
 
-    opacity: 0;
+    opacity: 0%;
     pointer-events: none;
-    transition: opacity var(--spectrum-global-animation-duration-100) ease-in-out;
+    transition: opacity var(--spectrum-global-animation-duration-100)
+      ease-in-out;
   }
 
   /* border */
   &::after {
-    content: '';
+    content: "";
     position: absolute;
     inset: 0;
     z-index: 3;
 
-    border: var(--spectrum-alias-border-size-thin) solid var(--spectrum-assetcard-border-color);
+    border: var(--spectrum-alias-border-size-thin) solid
+      var(--spectrum-assetcard-border-color);
     border-radius: calc(var(--spectrum-assetcard-border-radius) - 1px);
   }
 }
@@ -123,8 +167,9 @@ governing permissions and limitations under the License.
   inline-size: 100%;
   block-size: 100%;
 
-  transition: inline-size var(--spectrum-global-animation-duration-100) ease-in-out,
-              block-size var(--spectrum-global-animation-duration-100) ease-in-out;
+  transition:
+    inline-size var(--spectrum-global-animation-duration-100) ease-in-out,
+    block-size var(--spectrum-global-animation-duration-100) ease-in-out;
 
   border-radius: calc(var(--spectrum-assetcard-border-radius) - 1px);
 }
@@ -175,18 +220,19 @@ governing permissions and limitations under the License.
   line-height: var(--spectrum-body-m-text-line-height);
   font-style: var(--spectrum-body-m-text-font-style);
   letter-spacing: var(--spectrum-body-m-text-letter-spacing);
-}
 
-.spectrum--large .spectrum-AssetCard-headerContent {
-  /* be a S body */
-  font-family: var(--spectrum-body-s-text-font-family);
-  font-size: var(--spectrum-body-s-text-size);
-  font-weight: var(--spectrum-body-s-text-font-weight);
-  line-height: var(--spectrum-body-s-text-line-height);
-  font-style: var(--spectrum-body-s-text-font-style);
-  letter-spacing: var(--spectrum-body-s-text-letter-spacing);
+  .spectrum--large & {
+    /* be a S body */
+    --spectrum-body-m-text-font-family: var(--spectrum-body-s-text-font-family);
+    --spectrum-body-m-text-size: var(--spectrum-body-s-text-size);
+    --spectrum-body-m-text-font-weight: var(--spectrum-body-s-text-font-weight);
+    --spectrum-body-m-text-line-height: var(--spectrum-body-s-text-line-height);
+    --spectrum-body-m-text-font-style: var(--spectrum-body-s-text-font-style);
+    --spectrum-body-m-text-letter-spacing: var(
+      --spectrum-body-s-text-letter-spacing
+    );
+  }
 }
-
 
 /* content area, the last thing in the card */
 .spectrum-AssetCard-content {
@@ -204,16 +250,16 @@ governing permissions and limitations under the License.
   line-height: var(--spectrum-body-s-text-line-height);
   font-style: var(--spectrum-body-s-text-font-style);
   letter-spacing: var(--spectrum-body-s-text-letter-spacing);
-}
 
-/* be a XS body on large/mobile */
-.spectrum--large .spectrum-AssetCard-content {
-  font-family: var(--spectrum-body-xs-text-font-family);
-  font-size: var(--spectrum-body-xs-text-size);
-  font-weight: var(--spectrum-body-xs-text-font-weight);
-  line-height: var(--spectrum-body-xs-text-line-height);
-  font-style: var(--spectrum-body-xs-text-font-style);
-  letter-spacing: var(--spectrum-body-xs-text-letter-spacing);
+  /* be a XS body on large/mobile */
+  .spectrum--large & {
+    font-family: var(--spectrum-body-xs-text-font-family);
+    font-size: var(--spectrum-body-xs-text-size);
+    font-weight: var(--spectrum-body-xs-text-font-weight);
+    line-height: var(--spectrum-body-xs-text-line-height);
+    font-style: var(--spectrum-body-xs-text-font-style);
+    letter-spacing: var(--spectrum-body-xs-text-letter-spacing);
+  }
 }
 
 /*
@@ -227,7 +273,8 @@ governing permissions and limitations under the License.
   background-color: transparent;
 
   pointer-events: none;
-  transition: background-color var(--spectrum-global-animation-duration-100) ease-in-out;
+  transition: background-color var(--spectrum-global-animation-duration-100)
+    ease-in-out;
 
   border-radius: calc(var(--spectrum-assetcard-border-radius) - 1px);
 }
@@ -248,7 +295,8 @@ governing permissions and limitations under the License.
 
   border-radius: var(--spectrum-assetcard-selectionindicator-border-radius);
 
-  box-shadow: 0 var(--spectrum-global-dimension-static-size-25) var(--spectrum-global-dimension-static-size-75) rgb(0, 0, 0, 0.15);
+  box-shadow: 0 var(--spectrum-global-dimension-static-size-25)
+    var(--spectrum-global-dimension-static-size-75) rgb(0, 0, 0, 15%);
 
   color: var(--spectrum-global-color-static-white);
   font-weight: var(--spectrum-global-font-weight-bold);
@@ -256,7 +304,7 @@ governing permissions and limitations under the License.
 
   visibility: hidden;
 
-  opacity: 0;
+  opacity: 0%;
   transition: opacity var(--spectrum-global-animation-duration-100) ease-in-out;
 }
 
@@ -265,7 +313,8 @@ governing permissions and limitations under the License.
 }
 
 /* base selection styles shared by every selection mode */
-  /* drop target looks identical to selected */
+
+/* drop target looks identical to selected */
 .spectrum-AssetCard.is-drop-target,
 .spectrum-AssetCard.is-selected {
   .spectrum-AssetCard-assetContainer::after {
@@ -305,7 +354,9 @@ governing permissions and limitations under the License.
 /* with a checkbox */
 .spectrum-AssetCard--checkboxSelection {
   .spectrum-AssetCard-selectionIndicator {
-    background-color: var(--spectrum-assetcard-selectionindicator-background-color-default);
+    background-color: var(
+      --spectrum-assetcard-selectionindicator-background-color-default
+    );
 
     .spectrum-AssetCard-selectionOrder {
       display: none;
@@ -317,7 +368,7 @@ governing permissions and limitations under the License.
   &:hover {
     .spectrum-AssetCard-selectionIndicator {
       visibility: visible;
-      opacity: 1;
+      opacity: 100%;
       pointer-events: all;
     }
   }
@@ -326,7 +377,9 @@ governing permissions and limitations under the License.
 /* with the little order flag that shows the selection order */
 .spectrum-AssetCard--orderedSelection {
   .spectrum-AssetCard-selectionIndicator {
-    background-color: var(--spectrum-assetcard-selectionindicator-background-color-ordered);
+    background-color: var(
+      --spectrum-assetcard-selectionindicator-background-color-ordered
+    );
 
     .spectrum-AssetCard-checkbox {
       display: none;
@@ -336,7 +389,7 @@ governing permissions and limitations under the License.
   &.is-selected {
     .spectrum-AssetCard-selectionIndicator {
       visibility: visible;
-      opacity: 1;
+      opacity: 100%;
       pointer-events: all;
     }
   }

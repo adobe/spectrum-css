@@ -10,37 +10,39 @@ OF ANY KIND, either express or implied. See the License for the specific languag
 governing permissions and limitations under the License.
 */
 
-
-/* fieldgroup/index.css
+/**
+ * @dependencies: radio, checkbox, helptext, fieldlabel
  *
- * fieldgroup contains four component dependences:
- * radio, checkbox, helptext, fieldlabel
- *
+ * @namespace spectrum
+ * @component FieldGroup
+ * @descendants item
+ * @modifiers toplabel, sidelabel, vertical, horizontal
  */
-
-/* custom properties */
 .spectrum-FieldGroup {
+  /* custom properties */
   --spectrum-fieldgroup-margin: var(--spectrum-spacing-300);
-  --spectrum-fieldgroup-readonly-delimiter: '\002c';
-}
+  --spectrum-fieldgroup-readonly-delimiter: "\002c";
 
-/* field group */
-.spectrum-FieldGroup {
   display: flex;
   flex-flow: column wrap;
-
-  /* field group label top aligned */
-  &--toplabel {
-    flex-direction: column;
-  }
-
-  /* field group label side aligned */
-  &--sidelabel {
-    flex-direction: row;
-  }
 }
 
-/* input fields layout */
+/* field group label top aligned */
+.spectrum-FieldGroup--toplabel {
+  flex-direction: column;
+}
+
+/* field group label side aligned */
+.spectrum-FieldGroup--sidelabel {
+  flex-direction: row;
+}
+
+/**
+ * @description input fields layout
+ *
+ * @namespace spectrum
+ * @component FieldGroupInputLayout
+ */
 .spectrum-FieldGroupInputLayout {
   display: flex;
   flex-flow: column wrap;
@@ -50,7 +52,7 @@ governing permissions and limitations under the License.
     flex-direction: column;
   }
 
-   /* input fields aligned horizontally */
+  /* input fields aligned horizontally */
   .spectrum-FieldGroup--horizontal & {
     flex-direction: row;
 
@@ -60,6 +62,8 @@ governing permissions and limitations under the License.
     }
 
     /* move help text down to new row */
+
+    /** @todo explore using a passthrough */
     .spectrum-HelpText {
       flex-basis: 100%;
     }
@@ -68,6 +72,7 @@ governing permissions and limitations under the License.
 
 /* read-only checkbox group */
 .spectrum-FieldGroup {
+  /** @todo explore using a passthrough */
   .spectrum-Checkbox.is-readOnly {
     .spectrum-Checkbox-box {
       display: none;

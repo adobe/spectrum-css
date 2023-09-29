@@ -10,15 +10,18 @@ governing permissions and limitations under the License.
 */
 
 %spectrum-overlay {
-  --spectrum-overlay-animation-distance: var(--spectrum-picker-m-texticon-popover-offset-y);
+  --spectrum-overlay-animation-distance: var(
+    --spectrum-picker-m-texticon-popover-offset-y
+  );
 
   visibility: hidden;
 
-  opacity: 0;
+  opacity: 0%;
 
-  transition: transform var(--spectrum-global-animation-duration-100) ease-in-out,
-              opacity var(--spectrum-global-animation-duration-100) ease-in-out,
-              visibility 0ms linear var(--spectrum-global-animation-duration-100);
+  transition:
+    transform var(--spectrum-global-animation-duration-100) ease-in-out,
+    opacity var(--spectrum-global-animation-duration-100) ease-in-out,
+    visibility 0ms linear var(--spectrum-global-animation-duration-100);
 
   pointer-events: none;
 }
@@ -26,7 +29,7 @@ governing permissions and limitations under the License.
 %spectrum-overlay--open {
   visibility: visible;
 
-  opacity: 1;
+  opacity: 100%;
 
   transition-delay: 0ms;
 
@@ -47,4 +50,9 @@ governing permissions and limitations under the License.
 
 %spectrum-overlay--left--open {
   transform: translateX(calc(-1 * var(--spectrum-overlay-animation-distance)));
+}
+
+/* stylelint-disable-next-line spectrum-tools/suit-naming-pattern */
+.spectrum-overlay {
+  @extend %spectrum-overlay;
 }

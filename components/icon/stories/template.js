@@ -1,11 +1,11 @@
 import { html } from "lit";
+import { classMap } from "lit/directives/class-map.js";
 import { ifDefined } from "lit/directives/if-defined.js";
 import { unsafeHTML } from "lit/directives/unsafe-html.js";
-import { classMap } from "lit/directives/class-map.js";
 
-import { fetchIconSVG, workflowIcons, uiIcons } from "./utilities.js";
+import { fetchIconSVG, uiIcons, workflowIcons } from "./utilities.js";
 
-import "../index.css";
+import "@spectrum-css/icon";
 
 /**
  * @typedef { keyof import("./icon.stories.js").default.args } IconArgs
@@ -150,10 +150,10 @@ export const Template = ({
 
 	try {
 		import(
-			/* webpackPrefetch: true */ `!!raw-loader!@adobe/spectrum-css-workflow-icons/dist/spectrum-icons.svg`
+			/* webpackPrefetch: true */ `@adobe/spectrum-css-workflow-icons/dist/spectrum-icons.svg?raw`
 		);
 		import(
-			/* webpackPrefetch: true */ `!!raw-loader!@spectrum-css/icon/dist/spectrum-css-icons.svg`
+			/* webpackPrefetch: true */ `@spectrum-css/icon/dist/spectrum-css-icons.svg?raw`
 		);
 	} catch (e) {
 		console.warn(e);

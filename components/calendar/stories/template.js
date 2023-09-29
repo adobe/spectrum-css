@@ -1,16 +1,16 @@
 import { html } from "lit";
 import { classMap } from "lit/directives/class-map.js";
-import { styleMap } from "lit/directives/style-map.js";
-import { repeat } from "lit/directives/repeat.js";
 import { ifDefined } from "lit/directives/if-defined.js";
+import { repeat } from "lit/directives/repeat.js";
+import { styleMap } from "lit/directives/style-map.js";
 
-import isChromatic from "chromatic/isChromatic";
-import { useArgs, useGlobals } from "@storybook/client-api";
 import { action } from "@storybook/addon-actions";
+import { useArgs, useGlobals } from "@storybook/client-api";
+import isChromatic from "chromatic/isChromatic";
 
 import { Template as ActionButton } from "@spectrum-css/actionbutton/stories/template.js";
 
-import "../index.css";
+import "@spectrum-css/calendar";
 
 export const Template = ({
 	rootClass = "spectrum-Calendar",
@@ -32,7 +32,7 @@ export const Template = ({
 	},
 	...globals
 }) => {
-	const [_, updateArgs] = useArgs();
+	const [, updateArgs] = useArgs();
 	const [{ lang }] = useGlobals();
 
 	const displayedDate = new Date(`${month} 1, ${year}`);

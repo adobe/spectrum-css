@@ -75,7 +75,7 @@ const itemsWithIcons = [
     label: "Tab 3",
     icon: "Document"
   }
-]
+];
 
 const itemsIconOnly = [
   {
@@ -91,7 +91,7 @@ const itemsIconOnly = [
     id: "tab-3",
     icon: "Document"
   }
-]
+];
 
 /* Set default args and export for other stories */
 export const horizontalProps = {

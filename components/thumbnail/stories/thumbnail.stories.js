@@ -1,13 +1,13 @@
 // Import the component markup template
 import { Template } from "./template";
 
+/**
+ * A thumbnail is used to display a preview of an image, layer, or effect.
+ */
 export default {
 	title: "Components/Thumbnail",
-	description:
-		"A thumbnail is used to display a preview of an image, layer, or effect.",
 	component: "Thumbnail",
 	argTypes: {
-		reduceMotion: { table: { disable: true } },
 		size: {
 			name: "Size",
 			type: { name: "string", required: true },
@@ -109,7 +109,7 @@ export default {
 		isLayer: false,
 		isDisabled: false,
 		isSelected: false,
-		imageURL: "example-card-landscape.png",
+		imageURL: "images/example-card-landscape.png",
 		altText: "Landscape with mountains and lake",
 	},
 	parameters: {

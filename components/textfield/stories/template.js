@@ -1,13 +1,13 @@
-import { html } from "lit";
-import { ifDefined } from "lit/directives/if-defined.js";
-import { classMap } from "lit/directives/class-map.js";
-import { styleMap } from "lit/directives/style-map.js";
 import { useArgs } from "@storybook/client-api";
+import { html } from "lit";
+import { classMap } from "lit/directives/class-map.js";
+import { ifDefined } from "lit/directives/if-defined.js";
+import { styleMap } from "lit/directives/style-map.js";
 
 import { Template as Icon } from "@spectrum-css/icon/stories/template.js";
 import { Template as ProgressCircle } from "@spectrum-css/progresscircle/stories/template.js";
 
-import "../index.css";
+import "@spectrum-css/textfield/dist/index-base.css";
 
 export const Template = ({
 	rootClass = "spectrum-Textfield",
@@ -39,14 +39,6 @@ export const Template = ({
 	...globals
 }) => {
 	const [, updateArgs] = useArgs();
-	const { express } = globals;
-
-	try {
-		if (!express) import(/* webpackPrefetch: true */ "../themes/spectrum.css");
-		else import(/* webpackPrefetch: true */ "../themes/express.css");
-	} catch (e) {
-		console.warn(e);
-	}
 
 	if (isInvalid) iconName = "Alert";
 	else if (isValid) iconName = "Checkmark";
@@ -89,7 +81,7 @@ export const Template = ({
 						size,
 						iconName,
 						customClasses: [
-							!!(isInvalid || isValid)
+							isInvalid || isValid
 								? `${rootClass}-validationIcon`
 								: `${rootClass}-icon`,
 							...customIconClasses,

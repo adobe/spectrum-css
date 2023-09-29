@@ -1,12 +1,10 @@
-name: Button - negative
+title: Negative button
+parent: Button
 status: Verified
 description: The negative button is for high emphasis of negative or destructive actions.
-SpectrumSiteSlug: https://spectrum.adobe.com/page/button/#Negative
+designLink: https://spectrum.adobe.com/page/button/#Negative
 sections:
-  - name: Custom Properties API
-    description: |
-      This component can be modified via its `--mod-*` prefixed custom properties. A list of those prefixed custom properties can be found <a href="https://github.com/adobe/spectrum-css/tree/main/components/button/metadata/mods.md">here</a>.
-  - name: Migration Guide
+  - title: Migration guide
     description: |
       ### Fill or Outline class required
       All buttons now require either the `.spectrum-Button--fill` or `.spectrum-Button--outline` class.
@@ -28,7 +26,7 @@ sections:
 
       Previously, all Buttons used `.spectrum-Icon--sizeS`. This has changed:
 
-      | Button classname           | Workflow icon classname           |
+      | Button class name          | Workflow icon class name          |
       | -------------------------- | --------------------------------- |
       | `.spectrum-Button--sizeS`  | `.spectrum-Icon--sizeS`           |
       | `.spectrum-Button--sizeM`  | `.spectrum-Icon--sizeM`           |
@@ -39,11 +37,11 @@ sections:
       We've migrated away from the focus-ring class in favor of the native `:focus-visible` pseudo-class due to changes in browser support.
 examples:
   - id: button-negative
-    name: Sizing
+    title: Sizing
     markup: |
-      <div class="spectrum-Examples">
-        <div class="spectrum-Examples-item">
-          <h4 class="spectrum-Heading spectrum-Heading--sizeXS spectrum-Examples-itemHeading">S</h4>
+      <div class="site-Examples">
+        <div class="site-Examples-item">
+          <h4 class="spectrum-Heading spectrum-Heading--sizeXS site-Examples-itemHeading">S</h4>
 
           <button class="spectrum-Button spectrum-Button--fill spectrum-Button--negative spectrum-Button--sizeS">
             <span class="spectrum-Button-label">Delete</span>
@@ -62,8 +60,8 @@ examples:
             </svg>
           </button>
         </div>
-        <div class="spectrum-Examples-item">
-          <h4 class="spectrum-Heading spectrum-Heading--sizeXS spectrum-Examples-itemHeading">M (default)</h4>
+        <div class="site-Examples-item">
+          <h4 class="spectrum-Heading spectrum-Heading--sizeXS site-Examples-itemHeading">M (default)</h4>
 
           <button class="spectrum-Button spectrum-Button--fill spectrum-Button--negative spectrum-Button--sizeM">
             <span class="spectrum-Button-label">Delete</span>
@@ -83,8 +81,8 @@ examples:
           </button>
         </div>
 
-        <div class="spectrum-Examples-item">
-          <h4 class="spectrum-Heading spectrum-Heading--sizeXS spectrum-Examples-itemHeading">L</h4>
+        <div class="site-Examples-item">
+          <h4 class="spectrum-Heading spectrum-Heading--sizeXS site-Examples-itemHeading">L</h4>
 
           <button class="spectrum-Button spectrum-Button--fill spectrum-Button--negative spectrum-Button--sizeL">
             <span class="spectrum-Button-label">Delete</span>
@@ -104,8 +102,8 @@ examples:
           </button>
         </div>
 
-        <div class="spectrum-Examples-item">
-          <h4 class="spectrum-Heading spectrum-Heading--sizeXS spectrum-Examples-itemHeading">XL</h4>
+        <div class="site-Examples-item">
+          <h4 class="spectrum-Heading spectrum-Heading--sizeXS site-Examples-itemHeading">XL</h4>
 
           <button class="spectrum-Button spectrum-Button--fill spectrum-Button--negative spectrum-Button--sizeXL">
             <span class="spectrum-Button-label">Delete</span>
@@ -127,7 +125,7 @@ examples:
       </div>
 
   - id: button-negative-disabled
-    name: Disabled
+    title: Disabled
     markup: |
       <button class="spectrum-Button spectrum-Button--sizeM spectrum-Button--fill spectrum-Button--negative" disabled>
         <span class="spectrum-Button-label">Delete</span>
@@ -147,11 +145,11 @@ examples:
       </button>
 
   - id: button-negative-outline
-    name: Outline
+    title: Outline
     markup: |
-      <div class="spectrum-Examples">
-        <div class="spectrum-Examples-item">
-          <h4 class="spectrum-Heading spectrum-Heading--sizeXS spectrum-Examples-itemHeading">S</h4>
+      <div class="site-Examples">
+        <div class="site-Examples-item">
+          <h4 class="spectrum-Heading spectrum-Heading--sizeXS site-Examples-itemHeading">S</h4>
 
           <button class="spectrum-Button spectrum-Button--outline spectrum-Button--negative spectrum-Button--sizeS">
             <span class="spectrum-Button-label">Delete</span>
@@ -170,8 +168,8 @@ examples:
             </svg>
           </button>
         </div>
-        <div class="spectrum-Examples-item">
-          <h4 class="spectrum-Heading spectrum-Heading--sizeXS spectrum-Examples-itemHeading">M (default)</h4>
+        <div class="site-Examples-item">
+          <h4 class="spectrum-Heading spectrum-Heading--sizeXS site-Examples-itemHeading">M (default)</h4>
 
           <button class="spectrum-Button spectrum-Button--outline spectrum-Button--negative spectrum-Button--sizeM">
             <span class="spectrum-Button-label">Delete</span>
@@ -191,8 +189,8 @@ examples:
           </button>
         </div>
 
-        <div class="spectrum-Examples-item">
-          <h4 class="spectrum-Heading spectrum-Heading--sizeXS spectrum-Examples-itemHeading">L</h4>
+        <div class="site-Examples-item">
+          <h4 class="spectrum-Heading spectrum-Heading--sizeXS site-Examples-itemHeading">L</h4>
 
           <button class="spectrum-Button spectrum-Button--outline spectrum-Button--negative spectrum-Button--sizeL">
             <span class="spectrum-Button-label">Delete</span>
@@ -212,8 +210,8 @@ examples:
           </button>
         </div>
 
-        <div class="spectrum-Examples-item">
-          <h4 class="spectrum-Heading spectrum-Heading--sizeXS spectrum-Examples-itemHeading">XL</h4>
+        <div class="site-Examples-item">
+          <h4 class="spectrum-Heading spectrum-Heading--sizeXS site-Examples-itemHeading">XL</h4>
 
           <button class="spectrum-Button spectrum-Button--outline spectrum-Button--negative spectrum-Button--sizeXL">
             <span class="spectrum-Button-label">Delete</span>
@@ -235,7 +233,7 @@ examples:
       </div>
 
   - id: button-negative-outline-disabled
-    name: Outline - Disabled
+    title: Outline - Disabled
     markup: |
       <button class="spectrum-Button spectrum-Button--sizeM spectrum-Button--outline spectrum-Button--negative" disabled>
         <span class="spectrum-Button-label">Delete</span>

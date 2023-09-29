@@ -1,15 +1,15 @@
-name: Switch
-SpectrumSiteSlug: https://spectrum.adobe.com/page/switch/
+title: Switch
+designLink: https://spectrum.adobe.com/page/switch/
+SWC:
+  url: https://opensource.adobe.com/spectrum-web-components/components/switch/
+  tag: "sp-switch"
 sections:
-  - name: Custom Properties API
-    description: |
-      This component can be modified via its `--mod-*` prefixed custom properties. A list of those prefixed custom properties can be found <a href="https://github.com/adobe/spectrum-css/tree/main/components/switch/metadata/mods.md">here</a>.
-  - name: Migration Guide
+  - title: Migration guide
     description: |
       ### Component renamed
       Toggle is now known as Switch. Replace all `.spectrum-ToggleSwitch*` classnames with `.spectrum-Switch*`.
       ### T-shirt sizing
-      Switch now supports t-shirt sizing and requires that you specify the size by adding a .spectrum-Switch--size* class. The default size is "medium". 
+      Switch now supports t-shirt sizing and requires that you specify the size by adding a .spectrum-Switch--size* class. The default size is "medium".
       ### Quiet and emphasized
       Spectrum has chosen the variant previously known as `quiet` to be the default and has added an `emphasized` variant with the same styles as the previous default.
       If you were using the `quiet` variant, the `.spectrum-Switch--quiet` class is no longer required and can be removed.
@@ -22,7 +22,7 @@ sections:
       We've migrated away from the focus-ring class in favor of the native `:focus-visible` pseudo-class due to changes in browser support.
 examples:
   - id: switch
-    name: Standard
+    title: Standard
     status: Verified
     description: The on/off variant of the Switch.
     markup: |
@@ -50,7 +50,7 @@ examples:
         <label class="spectrum-Switch-label" for="switch-onoff-disabled-1">Switch On</label>
       </div>
   - id: switch
-    name: Sizes
+    title: Sizes
     status: Verified
     description: The t-shirt sizes of the Switch.
     markup: |
@@ -85,7 +85,7 @@ examples:
         <label class="spectrum-Switch-label" for="switch-onoff-0">Switch Size XL</label>
       </div>
   - id: switch
-    name: Emphasis
+    title: Emphasis
     status: Verified
     description: The emphasized variant of the Switch.
     markup: |
@@ -113,7 +113,7 @@ examples:
         <label class="spectrum-Switch-label" for="switch-onoff-disabled-1">Switch On</label>
       </div>
   - id: switch
-    name: Disabled
+    title: Disabled
     status: Verified
     description: The disabled variant of the Switch.
     markup: |

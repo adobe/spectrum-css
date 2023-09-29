@@ -2,17 +2,16 @@ import { html } from "lit";
 import { classMap } from "lit/directives/class-map.js";
 import { ifDefined } from "lit/directives/if-defined.js";
 
-import "../index.css";
+import "@spectrum-css/avatar";
 
 export const Template = ({
 	rootClass = "spectrum-Avatar",
-	image = "example-ava.png",
+	image = "images/example-ava.png",
 	altText,
 	isDisabled = false,
 	size = "700",
 	id,
 	customClasses = [],
-	// ...globals
 }) => {
 	return html`
 		<div

@@ -1,6 +1,6 @@
 {
   "name": "@spectrum-css/tabs",
-  "version": "4.0.21",
+  "version": "4.0.20",
   "description": "The Spectrum CSS tabs component",
   "license": "Apache-2.0",
   "author": "Adobe",
@@ -13,22 +13,17 @@
   "bugs": {
     "url": "https://github.com/adobe/spectrum-css/issues"
   },
-  "main": "dist/index-vars.css",
-  "scripts": {
-    "build": "gulp"
-  },
+  "main": "dist/index.css",
   "peerDependencies": {
     "@spectrum-css/menu": ">=5",
-    "@spectrum-css/picker": ">=6",
-    "@spectrum-css/tokens": ">=11"
+    "@spectrum-css/picker": ">=7",
+    "@spectrum-css/tokens": ">=10.2.0 <=11"
   },
   "devDependencies": {
-    "@spectrum-css/component-builder-simple": "^2.0.17",
     "@spectrum-css/icon": "^4.0.3",
     "@spectrum-css/menu": "^5.1.1",
-    "@spectrum-css/picker": "^7.0.12",
-    "@spectrum-css/tokens": "^11.4.0",
-    "gulp": "^4.0.0"
+    "@spectrum-css/picker": "^7.0.11",
+    "@spectrum-css/tokens": "^11.4.0"
   },
   "publishConfig": {
     "access": "public"

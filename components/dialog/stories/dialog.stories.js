@@ -3,10 +3,11 @@ import { html } from "lit";
 // Import the component markup template
 import { Template } from "./template";
 
+/**
+ * A Dialog displays important information that users need to acknowledge. They appear over the interface and block further interactions.
+ */
 export default {
 	title: "Components/Dialog",
-	description:
-		"A Dialog displays important information that users need to acknowledge. They appear over the interface and block further interactions.",
 	component: "Dialog",
 	argTypes: {
 		heading: {

@@ -6,10 +6,11 @@
 // Import the component markup template
 import { Template } from "./template";
 
+/**
+ * Toasts display brief, temporary notifications. They are noticeable but do not disrupt the user experience and do not require an action to be taken.
+ */
 export default {
 	title: "Components/Toast",
-	description:
-		"Toasts display brief, temporary notifications. They are noticeable but do not disrupt the user experience and do not require an action to be taken.",
 	component: "Toast",
 	argTypes: {
 		variant: {

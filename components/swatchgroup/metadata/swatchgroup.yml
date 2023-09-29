@@ -1,16 +1,15 @@
-name: Swatch group
+title: Swatch group
 status: Verified
-SpectrumSiteSlug: https://spectrum.adobe.com/page/swatchgroup/
+designLink: https://spectrum.adobe.com/page/swatchgroup/
+SWC:
+  url: https://opensource.adobe.com/spectrum-web-components/components/swatch-group/
+  tag: "sp-swatch-group"
 description: |
   - Grouped swatches must use the `.spectrum-Swatch--roundingNone` class to help minimize the Hermann grid illusion
   - Swatches with a color that have a contrast ratio of less than 3:1 should have `.spectrum-Swatch--lightBorder` class, otherwise, it should have the `.spectrum-Swatch--noBorder` class
-sections:
-  - name: Custom Properties API
-    description: |
-      This component can be modified via its `--mod-*` prefixed custom properties. A list of those prefixed custom properties can be found <a href="https://github.com/adobe/spectrum-css/tree/main/components/swatchgroup/metadata/mods.md">here</a>.
 examples:
   - id: swatchgroup-compact
-    name: Density - Compact
+    title: Density - Compact
     markup: |
       <div class="spectrum-SwatchGroup spectrum-SwatchGroup--compact" style="width: 200px">
         <div class="spectrum-Swatch spectrum-Swatch--sizeM spectrum-Swatch--roundingNone spectrum-Swatch--lightBorder" tabindex="0" style="--spectrum-picked-color: rgb(22, 135, 140)">
@@ -69,7 +68,7 @@ examples:
         </div>
       </div>
   - id: swatchgroup-regular
-    name: Density - Regular
+    title: Density - Regular
     markup: |
       <div class="spectrum-SwatchGroup" style="width: 200px">
         <div class="spectrum-Swatch spectrum-Swatch--sizeM spectrum-Swatch--roundingNone spectrum-Swatch--lightBorder" tabindex="0" style="--spectrum-picked-color: rgb(22, 135, 140)">
@@ -128,7 +127,7 @@ examples:
         </div>
       </div>
   - id: swatchgroup-spacious
-    name: Density - Spacious
+    title: Density - Spacious
     markup: |
       <div class="spectrum-SwatchGroup spectrum-SwatchGroup--spacious" style="width: 200px">
         <div class="spectrum-Swatch spectrum-Swatch--sizeM spectrum-Swatch--roundingNone spectrum-Swatch--lightBorder" tabindex="0" style="--spectrum-picked-color: rgb(22, 135, 140)">
@@ -187,7 +186,7 @@ examples:
         </div>
       </div>
   - id: swatchgroup-sizing
-    name: Sizing
+    title: Sizing
     description: Use any size swatches as necessary.
     markup: |
       <div class="spectrum-SwatchGroup" style="width: 140px">
@@ -247,7 +246,7 @@ examples:
         </div>
       </div>
   - id: swatchgroup-rounding
-    name: Rounding - Regular
+    title: Rounding - Regular
     description: Only use rounded swatches if there is a single row.
     markup: |
       <div class="spectrum-SwatchGroup" style="width: 220px">
@@ -271,7 +270,7 @@ examples:
         </div>
       </div>
   - id: swatchgroup-rounding
-    name: Rounding - Full
+    title: Rounding - Full
     description: Only use rounded swatches if there is a single row.
     markup: |
       <div class="spectrum-SwatchGroup" style="width: 220px">

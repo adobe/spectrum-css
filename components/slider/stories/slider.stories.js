@@ -1,13 +1,13 @@
 // Import the component markup template
 import { Template } from "./template";
 
+/**
+ * A slider allows users to quickly select a value within a range. They should be used when the upper and lower bounds to the range are invariable.
+ */
 export default {
 	title: "Components/Slider",
-	description:
-		"A slider allows users to quickly select a value within a range. They should be used when the upper and lower bounds to the range are invariable.",
 	component: "Slider",
 	argTypes: {
-		reducedMotion: { table: { disable: true } },
 		size: {
 			name: "Size",
 			type: { name: "string", required: true },

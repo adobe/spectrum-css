@@ -10,7 +10,7 @@ OF ANY KIND, either express or implied. See the License for the specific languag
 governing permissions and limitations under the License.
 */
 
-@container (--system: spectrum) {
+@container style(--system: spectrum) {
   .spectrum-Checkbox {
     --spectrum-checkbox-control-color-default: var(--spectrum-gray-600);
     --spectrum-checkbox-control-color-hover: var(--spectrum-gray-700);

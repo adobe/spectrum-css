@@ -1,0 +1,23 @@
+@container style(--system: spectrum) {
+  :where(.component) {
+    --background-color: blue;
+  }
+  :where(.component.is-selected) {
+    --background-color: darkblue;
+  }
+  :where(.component .icon) {
+    --color: gray;
+  }
+}
+
+@container style(--system: express) {
+  :where(.component) {
+    --background-color: purple;
+  }
+  :where(.component.is-selected) {
+    --background-color: darkpurple;
+  }
+  :where(.component .icon) {
+    --color: white;
+  }
+}

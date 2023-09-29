@@ -1,10 +1,10 @@
 name: Table
 description: The Table component is for displaying tabular info, with the option for sorting or row selection.
-SpectrumSiteSlug: https://spectrum.adobe.com/page/table/
+designLink: https://spectrum.adobe.com/page/table/
+SWC:
+  url: https://opensource.adobe.com/spectrum-web-components/components/table/
+  tag: "sp-table"
 sections:
-  - name: Custom properties API
-    description: |
-      This component can be modified via its `--mod-*` prefixed custom properties. A list of those prefixed custom properties can be found <a href="https://github.com/adobe/spectrum-css/tree/main/components/table/metadata/mods.md">here</a>.
   - name: Migration guide
     description: |
       ### Sorted icon moved to left side of text
@@ -1297,7 +1297,7 @@ examples:
         </div>
       </div>
   - id: table-row-dropzone-quiet
-    name: Row dropzone (quiet)
+    title: Row dropzone (quiet)
     markup: |
       <div class="spectrum-Table-scroller spectrum-Table spectrum-Table--sizeM spectrum-Table--emphasized spectrum-Table--quiet" style="height: 200px">
         <div class="spectrum-Table-main" role="table">

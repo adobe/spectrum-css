@@ -1,13 +1,13 @@
 import { html } from "lit";
 import { classMap } from "lit/directives/class-map.js";
-import { styleMap } from "lit/directives/style-map.js";
 import { ifDefined } from "lit/directives/if-defined.js";
+import { styleMap } from "lit/directives/style-map.js";
 
 import { useArgs, useGlobals } from "@storybook/client-api";
 
 import { Template as FieldLabel } from "@spectrum-css/fieldlabel/stories/template.js";
 
-import "../index.css";
+import "@spectrum-css/slider/dist/index-base.css";
 
 export const Template = ({
 	rootClass = "spectrum-Slider",
@@ -28,16 +28,8 @@ export const Template = ({
 	id,
 	...globals
 }) => {
-	const { express } = globals;
 
-	try {
-		if (!express) import(/* webpackPrefetch: true */ "../themes/spectrum.css");
-		else import(/* webpackPrefetch: true */ "../themes/express.css");
-	} catch (e) {
-		console.warn(e);
-	}
-
-	const [_, updateArgs] = useArgs();
+	const [, updateArgs] = useArgs();
 	const [{ textDirection }] = useGlobals();
 
 	const rtl = !!(textDirection === "rtl");

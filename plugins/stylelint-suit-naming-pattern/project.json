@@ -1,0 +1,23 @@
+{
+	"$schema": "../../node_modules/nx/schemas/project-schema.json",
+	"tags": ["tooling", "stylelint"],
+	"name": "stylelint-suit-naming-pattern",
+	"targets": {
+		"clean": {
+			"executor": "nx:noop"
+		},
+		"build": {
+			"executor": "nx:noop"
+		},
+		"watch": {
+			"executor": "nx:noop"
+		},
+		"lint": {
+			"defaultConfiguration": "plugins"
+		},
+		"coverage": {},
+		"test": {
+			"defaultConfiguration": "plugins"
+		}
+	}
+}

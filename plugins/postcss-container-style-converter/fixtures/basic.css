@@ -1,0 +1,23 @@
+@container style(--system: spectrum) {
+  .component {
+    --background-color: blue;
+  }
+  .component.is-selected {
+    --background-color: darkblue;
+  }
+  .component .icon {
+    --color: gray;
+  }
+}
+
+@container style(--system: express) {
+  .component {
+    --background-color: purple;
+  }
+  .component.is-selected {
+    --background-color: darkpurple;
+  }
+  .component .icon {
+    --color: white;
+  }
+}

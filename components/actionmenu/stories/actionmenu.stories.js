@@ -1,4 +1,4 @@
-import { within, userEvent } from '@storybook/testing-library';
+import { userEvent, within } from '@storybook/testing-library';
 import { html } from "lit";
 
 // Import the component markup template
@@ -8,9 +8,11 @@ import { default as ActionButton } from "@spectrum-css/actionbutton/stories/acti
 import { default as Menu } from "@spectrum-css/menu/stories/menu.stories.js";
 import { default as Popover } from "@spectrum-css/popover/stories/popover.stories.js";
 
+/**
+ * The Action menu component is an action button with a Popover.
+ */
 export default {
 	title: "Components/Action menu",
-	description: "The Action menu component is an action button with a Popover.",
 	component: "Action menu",
 	argTypes: {
 		items: { table: { disable: true } },

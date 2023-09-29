@@ -1,0 +1,16 @@
+<nav>
+    <ul class="spectrum-Breadcrumbs">
+      {% for entry in breadcrumbs -%}
+      <li class="spectrum-Breadcrumbs-item {{ 'is-selected' if entry.url == page.url }}">
+        <a href="{{ entry.url | url }}" class="spectrum-Breadcrumbs-itemLink">
+          {{ entry.title }}
+        </a>
+        {% if not loop.last -%}
+        <svg class="spectrum-Icon spectrum-UIIcon-ChevronRight100 spectrum-Breadcrumbs-itemSeparator" focusable="false" aria-hidden="true">
+          <use xlink:href="#spectrum-css-icon-Chevron100" />
+        </svg>
+      </li>
+      {%- endif %}
+      {%- endfor %}
+    </ul>
+</nav>

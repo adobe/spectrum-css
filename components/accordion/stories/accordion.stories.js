@@ -1,10 +1,11 @@
 // Import the component markup template
 import { Template } from "./template";
 
+/**
+ * The accordion element contains a list of items that can be expanded or collapsed to reveal additional content or information associated with each item. There can be zero expanded items, exactly one expanded item, or more than one item expanded at a time, depending on the configuration. This list of items is defined by child accordion item elements.
+ */
 export default {
 	title: "Components/Accordion",
-	description:
-		"The accordion element contains a list of items that can be expanded or collapsed to reveal additional content or information associated with each item. There can be zero expanded items, exactly one expanded item, or more than one item expanded at a time, depending on the configuration. This list of items is defined by child accordion item elements.",
 	component: "Accordion",
 	argTypes: {
 		items: { table: { disable: true } },
@@ -14,7 +15,9 @@ export default {
 			table: {
 				type: { summary: "string" },
 				category: "Component",
+				defaultValue: { summary: "m" },
 			},
+			defaultValue: "m",
 			options: ["s", "m", "l", "xl"],
 			control: "select",
 		},

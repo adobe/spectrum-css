@@ -3,7 +3,7 @@ import { html } from "lit";
 // Import the component markup template
 import { Template } from "./template";
 
-import { default as IconStories } from "@spectrum-css/icon";
+import { default as IconStories } from "@spectrum-css/icon/stories/icon.stories.js";
 
 export const argTypes = {
 	size: {
@@ -99,7 +99,7 @@ export const argTypes = {
 export const ActionButtons = (args) => {
 	return html`
 		<div
-			style="padding: 1rem; ${args.staticColor && args.backgroundColor
+			style="${args.staticColor && args.backgroundColor
 				? `background-color: ${args.backgroundColor}`
 				: ""}"
 		>

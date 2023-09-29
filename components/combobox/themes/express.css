@@ -10,7 +10,9 @@ OF ANY KIND, either express or implied. See the License for the specific languag
 governing permissions and limitations under the License.
 */
 
-@container (--system: express) {
+@import "./spectrum.css";
+
+@container style(--system: express) {
   .spectrum-Combobox {
     --spectrum-combobox-border-color-default: var(--spectrum-gray-400);
     --spectrum-combobox-border-color-hover: var(--spectrum-gray-500);

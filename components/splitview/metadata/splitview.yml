@@ -1,7 +1,10 @@
-name: Split view
+title: Split view
+SWC:
+  url: https://opensource.adobe.com/spectrum-web-components/components/split-view/
+  tag: "sp-split-view"
 examples:
   - id: splitview
-    name: Horizontal
+    title: Horizontal
     markup: |
       <div class="spectrum-SplitView spectrum-SplitView--horizontal" style="height: 200px">
         <div class="spectrum-SplitView-pane" style="width: 304px">Left</div>
@@ -9,7 +12,7 @@ examples:
         <div class="spectrum-SplitView-pane" style="flex: 1">Right</div>
       </div>
   - id: splitview-horizontal
-    name: Horizontally resizable
+    title: Horizontally resizable
     markup: |
       <div class="spectrum-SplitView spectrum-SplitView--horizontal" style="height: 200px">
         <div class="spectrum-SplitView-pane" style="width: 304px">Left</div>
@@ -19,7 +22,7 @@ examples:
         <div class="spectrum-SplitView-pane" style="flex: 1">Right</div>
       </div>
   - id: splitview-left
-    name: Horizontal collapsed left
+    title: Horizontal collapsed left
     markup: |
       <div class="spectrum-SplitView spectrum-SplitView--horizontal" style="height: 200px">
         <div class="spectrum-SplitView-pane" style="width: 0">Left</div>
@@ -29,7 +32,7 @@ examples:
         <div class="spectrum-SplitView-pane" style="flex: 1">Right</div>
       </div>
   - id: splitview-right
-    name: Horizontal collapsed right
+    title: Horizontal collapsed right
     markup: |
       <div class="spectrum-SplitView spectrum-SplitView--horizontal" style="height: 200px">
         <div class="spectrum-SplitView-pane" style="flex: 1">Left</div>
@@ -39,7 +42,7 @@ examples:
         <div class="spectrum-SplitView-pane" style="width: 0">Right</div>
       </div>
   - id: splitview-vertical
-    name: Vertically resizable
+    title: Vertically resizable
     markup: |
       <div class="spectrum-SplitView spectrum-SplitView--vertical" style="height: 200px">
         <div class="spectrum-SplitView-pane" style="height: 50px">Left</div>
@@ -49,7 +52,7 @@ examples:
         <div class="spectrum-SplitView-pane" style="flex: 1">Right</div>
       </div>
   - id: splitview-vertical-top
-    name: Vertical collapsed top
+    title: Vertical collapsed top
     markup: |
       <div class="spectrum-SplitView spectrum-SplitView--vertical" style="height: 200px">
         <div class="spectrum-SplitView-pane" style="height: 0">Left</div>
@@ -59,7 +62,7 @@ examples:
         <div class="spectrum-SplitView-pane" style="flex: 1">Right</div>
       </div>
   - id: splitview-vertical-bottom
-    name: Vertical collapsed bottom
+    title: Vertical collapsed bottom
     markup: |
       <div class="spectrum-SplitView spectrum-SplitView--vertical" style="height: 200px">
         <div class="spectrum-SplitView-pane" style="flex: 1">Left</div>

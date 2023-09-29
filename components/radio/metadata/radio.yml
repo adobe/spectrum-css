@@ -1,16 +1,16 @@
-name: Radio
+title: Radio
 status: Verified
-SpectrumSiteSlug: https://spectrum.adobe.com/page/radio-button/
+designLink: https://spectrum.adobe.com/page/radio-button/
+SWC:
+  url: https://opensource.adobe.com/spectrum-web-components/components/radio/
+  tag: "sp-radio"
 description: |
   - Radio buttons allow users to select a single option from a list of mutually exclusive options. All possible options are exposed up front for users to compare.
   - Radio buttons should not be used on their own, they should always be used within a [FieldGroup](fieldgroup.html).
   - Invalid radio buttons are signified by including [HelpText](helptext.html) in a [FieldGroup](fieldgroup.html). Sample usage for an invalid radio state is included in the [FieldGroup](fieldgroup.html#invalid) documentation.
 
 sections:
-  - name: Custom Properties API
-    description: |
-      This component can be modified via its `--mod-*` prefixed custom properties. A list of those prefixed custom properties can be found <a href="https://github.com/adobe/spectrum-css/tree/main/components/radio/metadata/mods.md">here</a>.
-  - name: Migration Guide
+  - title: Migration guide
     description: |
       ### T-shirt sizing
       Radio Button now supports t-shirt sizing and requires that you specify the size by adding a `.spectrum-RadioButton--size*` class. Default styling is medium.
@@ -27,12 +27,12 @@ sections:
       We've migrated away from the focus-ring class in favor of the native `:focus-visible` pseudo-class due to changes in browser support.
 examples:
   - id: radio
-    name: Sizing
+    title: Sizing
     markup: |
-      <div class="spectrum-Examples">
+      <div class="site-Examples">
 
-        <div class="spectrum-Examples-item">
-          <h4 class="spectrum-Heading spectrum-Heading--sizeXS spectrum-Examples-itemHeading">S</h4>
+        <div class="site-Examples-item">
+          <h4 class="spectrum-Heading spectrum-Heading--sizeXS site-Examples-itemHeading">S</h4>
 
           <form>
             <div class="spectrum-Radio spectrum-Radio--sizeS">
@@ -50,8 +50,8 @@ examples:
 
         </div>
 
-        <div class="spectrum-Examples-item">
-          <h4 class="spectrum-Heading spectrum-Heading--sizeXS spectrum-Examples-itemHeading">M (default)</h4>
+        <div class="site-Examples-item">
+          <h4 class="spectrum-Heading spectrum-Heading--sizeXS site-Examples-itemHeading">M (default)</h4>
 
           <form>
             <div class="spectrum-Radio spectrum-Radio--sizeM">
@@ -69,8 +69,8 @@ examples:
 
         </div>
 
-        <div class="spectrum-Examples-item">
-          <h4 class="spectrum-Heading spectrum-Heading--sizeXS spectrum-Examples-itemHeading">L</h4>
+        <div class="site-Examples-item">
+          <h4 class="spectrum-Heading spectrum-Heading--sizeXS site-Examples-itemHeading">L</h4>
 
           <form>
             <div class="spectrum-Radio spectrum-Radio--sizeL">
@@ -88,8 +88,8 @@ examples:
 
         </div>
 
-        <div class="spectrum-Examples-item">
-          <h4 class="spectrum-Heading spectrum-Heading--sizeXS spectrum-Examples-itemHeading">XL</h4>
+        <div class="site-Examples-item">
+          <h4 class="spectrum-Heading spectrum-Heading--sizeXS site-Examples-itemHeading">XL</h4>
 
           <form>
             <div class="spectrum-Radio spectrum-Radio--sizeXL">
@@ -109,11 +109,11 @@ examples:
       </div>
 
   - id: radio
-    name: Standard
+    title: Standard
     markup: |
-      <div class="spectrum-Examples">
-        <div class="spectrum-Examples-item">
-          <h4 class="spectrum-Heading spectrum-Heading--sizeXS spectrum-Examples-itemHeading">Default</h4>
+      <div class="site-Examples">
+        <div class="site-Examples-item">
+          <h4 class="spectrum-Heading spectrum-Heading--sizeXS site-Examples-itemHeading">Default</h4>
 
           <form>
             <div class="spectrum-Radio">
@@ -131,8 +131,27 @@ examples:
 
         </div>
 
-        <div class="spectrum-Examples-item">
-          <h4 class="spectrum-Heading spectrum-Heading--sizeXS spectrum-Examples-itemHeading">Disabled</h4>
+        <div class="site-Examples-item">
+          <h4 class="spectrum-Heading spectrum-Heading--sizeXS site-Examples-itemHeading">Invalid</h4>
+
+          <form>
+            <div class="spectrum-Radio is-invalid">
+              <input type="radio" name="pets" class="spectrum-Radio-input" id="radio-10">
+              <span class="spectrum-Radio-button"></span>
+              <label class="spectrum-Radio-label" for="radio-0">Kittens</label>
+            </div>
+            <br>
+            <div class="spectrum-Radio is-invalid">
+              <input type="radio" name="pets" class="spectrum-Radio-input" id="radio-11" checked>
+              <span class="spectrum-Radio-button"></span>
+              <label class="spectrum-Radio-label" for="radio-1">Puppies</label>
+            </div>
+          </form>
+
+        </div>
+
+        <div class="site-Examples-item">
+          <h4 class="spectrum-Heading spectrum-Heading--sizeXS site-Examples-itemHeading">Disabled</h4>
 
           <form>
             <div class="spectrum-Radio">
@@ -150,8 +169,8 @@ examples:
 
         </div>
 
-        <div class="spectrum-Examples-item">
-          <h4 class="spectrum-Heading spectrum-Heading--sizeXS spectrum-Examples-itemHeading">Read-only</h4>
+        <div class="site-Examples-item">
+          <h4 class="spectrum-Heading spectrum-Heading--sizeXS site-Examples-itemHeading">Read-only</h4>
 
           <form>
             <div class="spectrum-Radio is-readOnly">
@@ -171,11 +190,11 @@ examples:
       </div>
 
   - id: radio-emphasized
-    name: Emphasized
+    title: Emphasized
     markup: |
-      <div class="spectrum-Examples">
-        <div class="spectrum-Examples-item">
-          <h4 class="spectrum-Heading spectrum-Heading--sizeXS spectrum-Examples-itemHeading">Default</h4>
+      <div class="site-Examples">
+        <div class="site-Examples-item">
+          <h4 class="spectrum-Heading spectrum-Heading--sizeXS site-Examples-itemHeading">Default</h4>
 
           <form>
             <div class="spectrum-Radio spectrum-Radio--sizeM spectrum-Radio--emphasized">
@@ -193,8 +212,27 @@ examples:
 
         </div>
 
-        <div class="spectrum-Examples-item">
-          <h4 class="spectrum-Heading spectrum-Heading--sizeXS spectrum-Examples-itemHeading">Disabled</h4>
+        <div class="site-Examples-item">
+          <h4 class="spectrum-Heading spectrum-Heading--sizeXS site-Examples-itemHeading">Invalid</h4>
+
+          <form>
+            <div class="spectrum-Radio spectrum-Radio--sizeM spectrum-Radio--emphasized is-invalid">
+              <input type="radio" name="pets" class="spectrum-Radio-input" id="radio-18">
+              <span class="spectrum-Radio-button"></span>
+              <label class="spectrum-Radio-label" for="radio-0">Kittens</label>
+            </div>
+            <br>
+            <div class="spectrum-Radio spectrum-Radio--sizeM spectrum-Radio--emphasized is-invalid">
+              <input type="radio" name="pets" class="spectrum-Radio-input" id="radio-19" checked>
+              <span class="spectrum-Radio-button"></span>
+              <label class="spectrum-Radio-label" for="radio-1">Puppies</label>
+            </div>
+          </form>
+
+        </div>
+
+        <div class="site-Examples-item">
+          <h4 class="spectrum-Heading spectrum-Heading--sizeXS site-Examples-itemHeading">Disabled</h4>
 
           <form>
             <div class="spectrum-Radio spectrum-Radio--sizeM spectrum-Radio--emphasized">
@@ -212,8 +250,8 @@ examples:
 
         </div>
 
-        <div class="spectrum-Examples-item">
-          <h4 class="spectrum-Heading spectrum-Heading--sizeXS spectrum-Examples-itemHeading">Read-only</h4>
+        <div class="site-Examples-item">
+          <h4 class="spectrum-Heading spectrum-Heading--sizeXS site-Examples-itemHeading">Read-only</h4>
 
           <form>
             <div class="spectrum-Radio spectrum-Radio--sizeM spectrum-Radio--emphasized is-readOnly">
@@ -233,7 +271,7 @@ examples:
       </div>
 
   - id: radio-wrapping
-    name: Wrapping behavior
+    title: Wrapping behavior
     markup: |
       <div class="spectrum-Radio">
         <input type="radio" name="longname" class="spectrum-Radio-input" id="radio-24">

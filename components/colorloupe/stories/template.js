@@ -2,7 +2,7 @@ import { svg } from "lit";
 import { classMap } from "lit/directives/class-map.js";
 import { styleMap } from "lit/directives/style-map.js";
 
-import "../index.css";
+import "@spectrum-css/colorloupe";
 
 export const Template = ({
 	rootClass = "spectrum-ColorLoupe",
@@ -13,7 +13,6 @@ export const Template = ({
 		"inset-inline-start": "5px",
 	},
 	customClasses = [],
-	// ...globals
 }) => {
 	return svg`
     <svg class=${classMap({

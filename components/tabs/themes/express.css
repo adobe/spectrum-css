@@ -10,7 +10,7 @@ OF ANY KIND, either express or implied. See the License for the specific languag
 governing permissions and limitations under the License.
 */
 
-@container (--system: express) {
+@container style(--system: express) {
   .spectrum-Tabs {
     --spectrum-tabs-font-weight: var(--spectrum-bold-font-weight);
   }

@@ -1,18 +1,14 @@
-| Modifiable Custom Properties                            |
+| Modifiable custom properties                            |
 | ------------------------------------------------------- |
-| `--mod-toast-background-color-default`                  |
 | `--mod-toast-block-size`                                |
 | `--mod-toast-border-width`                              |
 | `--mod-toast-corner-radius`                             |
 | `--mod-toast-divider-color`                             |
 | `--mod-toast-font-size`                                 |
 | `--mod-toast-font-weight`                               |
-| `--mod-toast-informative-background-color-default`      |
 | `--mod-toast-line-height`                               |
 | `--mod-toast-line-height-cjk`                           |
 | `--mod-toast-max-inline-size`                           |
-| `--mod-toast-negative-background-color-default`         |
-| `--mod-toast-positive-background-color-default`         |
 | `--mod-toast-spacing-block-end`                         |
 | `--mod-toast-spacing-block-start`                       |
 | `--mod-toast-spacing-bottom-edge-to-divider`            |
@@ -25,4 +21,3 @@
 | `--mod-toast-spacing-top-edge-to-divider`               |
 | `--mod-toast-spacing-top-edge-to-icon`                  |
 | `--mod-toast-spacing-top-edge-to-text`                  |
-| `--mod-toast-text-and-icon-color`                       |

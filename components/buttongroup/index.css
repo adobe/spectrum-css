@@ -10,6 +10,11 @@ OF ANY KIND, either express or implied. See the License for the specific languag
 governing permissions and limitations under the License.
 */
 
+/**
+ * @namespace spectrum
+ * @component ButtonGroup
+ * @category Buttons, Groups
+ */
 .spectrum-ButtonGroup {
   --spectrum-buttongroup-spacing-horizontal: var(--spectrum-spacing-300);
   --spectrum-buttongroup-spacing-vertical: var(--spectrum-spacing-300);
@@ -38,7 +43,10 @@ governing permissions and limitations under the License.
 .spectrum-ButtonGroup {
   display: flex;
   flex-wrap: wrap;
-  gap: var(--mod-buttongroup-spacing-horizontal, var(--spectrum-buttongroup-spacing-horizontal));
+  gap: var(
+    --mod-buttongroup-spacing-horizontal,
+    var(--spectrum-buttongroup-spacing-horizontal)
+  );
   justify-content: var(--mod-buttongroup-justify-content, normal);
 
   .spectrum-ButtonGroup-item {
@@ -49,5 +57,8 @@ governing permissions and limitations under the License.
 .spectrum-ButtonGroup--vertical {
   display: inline-flex;
   flex-direction: column;
-  gap: var(--mod-buttongroup-spacing-vertical, var(--spectrum-buttongroup-spacing-vertical));
+  gap: var(
+    --mod-buttongroup-spacing-vertical,
+    var(--spectrum-buttongroup-spacing-vertical)
+  );
 }

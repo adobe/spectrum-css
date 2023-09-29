@@ -4,9 +4,11 @@ import { Template } from "./template";
 import { default as TagStories } from "@spectrum-css/tag/stories/tag.stories.js";
 const ignoreProps = ["rootClass", "hasClearButton", "label"];
 
+/**
+ * A group of tags.
+ */
 export default {
 	title: "Components/Tag group",
-	description: "A group of tags.",
 	component: "TagGroup",
 	argTypes: {
 		...Object.entries(TagStories.argTypes).reduce((acc, [key, value]) => {

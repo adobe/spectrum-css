@@ -1,0 +1,202 @@
+import isChromatic from "chromatic/isChromatic";
+
+import {
+  withContextWrapper,
+  withLanguageWrapper,
+  withReducedMotionWrapper,
+  withTextDirectionWrapper,
+} from "./decorators.js";
+
+import { withActions } from "@storybook/addon-actions/decorator";
+
+import DocumentationTemplate from "./templates/Documentation.mdx";
+
+import "./storybook.css";
+import "./storybook.js";
+
+const color = localStorage.getItem(`spectrum-color`) ?? window.matchMedia("(prefers-color-scheme: dark)").matches ? 'dark' : 'light';
+const scale = localStorage.getItem(`spectrum-scale`) ?? window.matchMedia("(max-width: 961px)").matches ? 'large' : 'medium';
+const theme = localStorage.getItem(`spectrum-theme`) ?? 'spectrum';
+
+// Rendered as controls; these properties are assigned
+//      to the document root element
+export const globalTypes = {
+  textDirection: {
+    title: "Text direction",
+    description: "Direction of the content flow",
+    showName: true,
+    defaultValue: "ltr",
+    toolbar: {
+      items: [
+        { value: "ltr", title: "LTR", right: "left to right", icon: "arrowrightalt" },
+        { value: "rtl", title: "RTL", right: "right to left", icon: "arrowleftalt" },
+      ],
+      dynamicTitle: true,
+    },
+  },
+  lang: {
+    title: "Language",
+    showName: true,
+    icon: "globe",
+    description: "Language of the content",
+    defaultValue: "en-US",
+    toolbar: {
+      items: [
+        { value: "en-US", title: "🇺🇸", right: "English (US)" },
+        { value: "ja", title: "🇯🇵", right: "Japanese" },
+        { value: "ko", title: "🇰🇷", right: "한국어" },
+        { value: "zh", title: "🇨🇳", right: "中文" },
+      ],
+      dynamicTitle: true,
+    },
+  },
+  color: {
+    title: "Color",
+    showName: true,
+    icon: "paintbrush",
+    description: "Controls the color context of the component.",
+    defaultValue: color,
+    toolbar: {
+      items: [
+        { value: "light", title: "Light", right: "default" },
+        { value: "dark", title: "Dark" },
+        { value: "darkest", title: "Darkest" },
+      ],
+      dynamicTitle: true,
+    },
+  },
+  scale: {
+    title: "Platform scale",
+    description: "Controls the platform scale of the component.",
+    defaultValue: scale,
+    toolbar: {
+      items: [
+        { value: "medium", title: "Medium", right: "default", icon: "" },
+        { value: "large", title: "Large", icon: "" },
+      ],
+      dynamicTitle: true,
+    },
+  },
+  // @todo https://jira.corp.adobe.com/browse/CSS-314
+  reducedMotion: {
+    title: "Reduce motion",
+    description: "Reduce animation and transitions",
+    defaultValue: false,
+    toolbar: {
+      items: [
+        { value: false, title: "Motion", right: "default", icon: "play" },
+        { value: true, title: "Reduced motion", icon: "stop" },
+      ],
+    },
+  },
+  theme: {
+    title: "Theme",
+    showName: true,
+    description: "Variations of the Spectrum theme.",
+    defaultValue: theme,
+    toolbar: {
+      items: [
+        { value: 'spectrum', title: "Spectrum" },
+        { value: 'express', title: "Express" },
+      ],
+      dynamicTitle: true,
+    },
+  },
+};
+
+export const argTypes = {
+  /* None of these should show up in the args table but are necessary for rendering the templates */
+  rootClass: {
+    name: "Class name",
+    type: { name: "string", required: true },
+    table: { disable: true },
+    control: "text",
+  },
+  customClasses: {
+    name: "Custom classes",
+    type: { name: "string", required: false },
+    table: { disable: true },
+    control: "object",
+  },
+  id: {
+    name: "Element ID",
+    type: { name: "string", required: false },
+    table: { disable: true },
+    control: "text",
+  },
+  testId: {
+    name: "Test ID",
+    type: { name: "string", required: false },
+    table: { disable: true },
+    control: "text",
+  },
+};
+
+export const args = {
+  customClasses: [],
+};
+
+/** @type import('@storybook/types').StorybookParameters & import('@storybook/types').API_Layout */
+export const parameters = {
+  layout: "padded",
+  showNav: true,
+  showTabs: true,
+  showPanel: true,
+  panelPosition: "bottom",
+  showToolbar: true,
+  isFullscreen: false,
+  //👇 Defines a list of viewport widths for a single story to be captured in Chromatic.
+  chromatic: isChromatic()
+    ? {
+        // viewports: [320, 1200],
+        // forcedColors: 'active',
+        // prefersReducedMotion: 'reduce',
+      }
+    : {},
+  controls: {
+    expanded: true,
+    hideNoControlsWarning: true,
+    sort: "requiredFirst",
+  },
+  docs: {
+    page: DocumentationTemplate,
+    story: {
+      inline: true,
+      iframeHeight: "200px",
+    },
+    source: {
+      type: "dynamic",
+      language: "html",
+      format: 'html',
+      transform: (code) => {
+        return code.replace(/^\s*<section(.*)>/, "").replace(/<\/section>$/, "");
+      }
+    },
+  },
+  status: {
+    statuses: {
+      migrated: {
+        background: "#f0f0f0",
+        color: "#444",
+        description: "Migrated to the latest tokens.",
+      },
+    },
+  },
+};
+
+export const decorators = [
+  withTextDirectionWrapper,
+  withLanguageWrapper,
+  withReducedMotionWrapper,
+  withContextWrapper,
+  withActions,
+  // ...[isChromatic() ? withSizingWrapper : false].filter(Boolean),
+];
+
+export default {
+  globalTypes,
+  argTypes,
+  args,
+  parameters,
+  decorators,
+};

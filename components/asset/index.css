@@ -10,7 +10,33 @@ OF ANY KIND, either express or implied. See the License for the specific languag
 governing permissions and limitations under the License.
 */
 
+/**
+ * @namespace spectrum
+ * @component Asset
+ */
 .spectrum-Asset {
+  --spectrum-asset-icon-min-width: var(--spectrum-global-dimension-size-600);
+  --spectrum-asset-icon-max-width: var(
+    --spectrum-global-dimension-static-size-1000
+  );
+  --spectrum-asset-icon-margin: var(--spectrum-global-dimension-size-250);
+  --spectrum-asset-folder-background-color: var(
+    --spectrum-global-color-gray-300
+  );
+  --spectrum-asset-file-background-color: var(--spectrum-global-color-gray-50);
+  --spectrum-asset-icon-outline-color: var(--spectrum-global-color-gray-500);
+
+  --spectrum-asset-icon-min-width: var(--spectrum-global-dimension-size-600);
+  --spectrum-asset-icon-max-width: var(
+    --spectrum-global-dimension-static-size-1000
+  );
+  --spectrum-asset-icon-margin: var(--spectrum-global-dimension-size-250);
+  --spectrum-asset-folder-background-color: var(
+    --spectrum-global-color-gray-300
+  );
+  --spectrum-asset-file-background-color: var(--spectrum-global-color-gray-50);
+  --spectrum-asset-icon-outline-color: var(--spectrum-global-color-gray-500);
+
   inline-size: 100%;
   block-size: 100%;
   display: flex;
@@ -32,4 +58,17 @@ governing permissions and limitations under the License.
   min-inline-size: var(--spectrum-asset-icon-min-width);
   max-inline-size: var(--spectrum-asset-icon-max-width);
   margin: var(--spectrum-asset-icon-margin);
+}
+
+.spectrum-Asset-folderBackground {
+  fill: var(--spectrum-asset-folder-background-color);
+}
+
+.spectrum-Asset-fileBackground {
+  fill: var(--spectrum-asset-file-background-color);
+}
+
+.spectrum-Asset-folderOutline,
+.spectrum-Asset-fileOutline {
+  fill: var(--spectrum-asset-icon-outline-color);
 }

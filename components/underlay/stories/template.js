@@ -2,7 +2,7 @@ import { html } from 'lit-html';
 import { classMap } from 'lit-html/directives/class-map.js';
 import { styleMap } from 'lit-html/directives/style-map.js';
 
-import "../index.css";
+import "@spectrum-css/underlay";
 
 export const Template = ({
   rootClass = "spectrum-Underlay",
@@ -10,7 +10,6 @@ export const Template = ({
   style = [],
   content,
   isOpen = true,
-  ...globals
 }) => {
   return html`
   <div class=${classMap({
@@ -22,4 +21,4 @@ export const Template = ({
       ${content}
     </div>
   `;
-}
+};

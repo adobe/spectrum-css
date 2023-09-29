@@ -1,0 +1,81 @@
+{
+	"$schema": "../node_modules/nx/schemas/project-schema.json",
+	"name": "site",
+	"tags": ["tooling", "website", "documentation"],
+	"implicitDependencies": ["tag:component"],
+	"namedInputs": {
+		"core": [
+			"{workspaceRoot}/_data",
+			"{workspaceRoot}/_includes",
+			"{workspaceRoot}/_layouts",
+			"{workspaceRoot}/content",
+			"{workspaceRoot}/utils",
+			"{workspaceRoot}/.eleventy.js"
+		]
+	},
+	"targets": {
+		"clean": {
+			"inputs": ["{workspaceRoot}/dist"],
+			"outputs": [],
+			"executor": "nx:run-commands",
+			"options": {
+				"command": "rimraf {projectRoot}/dist"
+			}
+		},
+		"build": {
+			"dependsOn": ["clean", "^build"],
+			"inputs": ["core"],
+			"outputs": ["{workspaceRoot}/dist"],
+			"executor": "nx:run-commands",
+			"options": {
+				"command": "eleventy",
+				"color": true,
+				"envFile": "{projectRoot}/.env.build"
+			}
+		},
+		"start": {
+			"dependsOn": ["^build"],
+			"inputs": ["core"],
+			"outputs": ["{workspaceRoot}/dist"],
+			"executor": "nx:run-commands",
+			"options": {
+				"command": "eleventy --serve",
+				"color": true,
+				"envFile": ".env.dev"
+			}
+		},
+		"lint": {
+			"inputs": [
+				"{workspaceRoot}/content/styles/*.css",
+				"{workspaceRoot}/content/scripts/**/*.js",
+				"{workspaceRoot}/content/**/*.json",
+				"{workspaceRoot}/content/metadata/*.js",
+				"{workspaceRoot}/utils/*.js",
+				"{workspaceRoot}/data/*.js",
+				"{workspaceRoot}/*.js",
+				"{workspaceRoot}/*.json",
+				"{projectRoot}/.stylelintignore",
+				"{projectRoot}/stylelint.config.js",
+				"{projectRoot}/.eslintrc.js"
+			],
+			"executor": "nx:run-commands",
+			"options": {
+				"commands": [
+					"stylelint {projectRoot}/content/styles/*.css",
+					"eslint {projectRoot}/**/*.js {projectRoot}/**/*.json {projectRoot}/.eleventy.js {projectRoot}/*.json"
+				]
+			}
+		},
+		"dev": {
+			"dependsOn": ["^build"],
+			"inputs": ["core"],
+			"outputs": ["{workspaceRoot}/dist"],
+			"executor": "nx:run-commands",
+			"options": {
+				"command": "eleventy --serve --incremental",
+				"color": true,
+				"envFile": ".env.dev"
+			}
+		}
+	}
+}

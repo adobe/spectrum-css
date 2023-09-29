@@ -1,9 +1,11 @@
 // Import the component markup template
 import { Template } from "./template";
 
+/**
+ * A button used to close or dismiss components
+ */
 export default {
 	title: "Components/Close button",
-	description: "A button used to close or dismiss components",
 	component: "CloseButton",
 	argTypes: {
 		size: {

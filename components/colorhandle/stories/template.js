@@ -1,7 +1,7 @@
-import { html } from "lit";
 import { Template as OpacityCheckerboard } from "@spectrum-css/opacitycheckerboard/stories/template.js";
+import { html } from "lit";
 
-import "../index.css";
+import "@spectrum-css/colorhandle";
 
 export const Template = ({
 	rootClass = "spectrum-ColorHandle",
@@ -13,7 +13,7 @@ export const Template = ({
 	},
 	...globals
 }) => {
-	const checkerboardContent = html `<div class="${rootClass}-inner"></div>`
+	const checkerboardContent = html `<div class="${rootClass}-inner"></div>`;
 
 	return html`
 		${OpacityCheckerboard({
@@ -27,5 +27,5 @@ export const Template = ({
 			],
 			content: checkerboardContent,
 			checkerBoardStyles: colorHandleStyle,
-		})}`
-}
+		})}`;
+};

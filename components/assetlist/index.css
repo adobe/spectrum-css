@@ -10,13 +10,72 @@ OF ANY KIND, either express or implied. See the License for the specific languag
 governing permissions and limitations under the License.
 */
 
+/**
+ * @namespace spectrum
+ * @component AssetList
+ * @descendants item, itemSelector, itemChildIndicator, itemThumbnail, itemLabel
+ * @utilities is-navigated, is-selectable, is-selected, is-branch
+ */
 .spectrum-AssetList {
+  /* @passthrough start */
   --spectrum-millercolumn-chevron-height: 10px;
   --spectrum-millercolumn-chevron-width: 6px;
   --spectrum-millercolumn-checkbox-margin: 0;
-}
 
-.spectrum-AssetList {
+  /* @passthrough end */
+
+  --spectrum-millercolumn-item-padding-left: var(
+    --spectrum-global-dimension-static-size-200
+  );
+  --spectrum-millercolumn-item-padding-right: var(
+    --spectrum-global-dimension-static-size-200
+  );
+  --spectrum-millercolumn-width: var(
+    --spectrum-global-dimension-static-size-3400
+  );
+  --spectrum-millercolumn-item-height: var(
+    --spectrum-global-dimension-static-size-500
+  );
+  --spectrum-millercolumn-item-margin-bottom: var(
+    --spectrum-global-dimension-static-size-50
+  );
+  --spectrum-millercolumn-item-border-radius: var(
+    --spectrum-global-dimension-static-size-50
+  );
+  --spectrum-listitem-m-texticon-text-size: var(
+    --spectrum-global-dimension-font-size-100
+  );
+  --spectrum-listitem-m-texticon-text-font-weight: var(
+    --spectrum-alias-body-text-font-weight
+  );
+  --spectrum-millercolumn-thumbnail-margin-left: var(
+    --spectrum-global-dimension-static-size-100
+  );
+  --spectrum-millercolumn-thumbnail-width: var(
+    --spectrum-global-dimension-static-size-300
+  );
+  --spectrum-millercolumn-thumbnail-height: var(
+    --spectrum-global-dimension-static-size-300
+  );
+  --spectrum-millercolumn-item-label-padding-left: var(
+    --spectrum-global-dimension-static-size-100
+  );
+  --spectrum-millercolumn-item-background-color-hover: var(
+    --spectrum-global-color-gray-200
+  );
+  --spectrum-alias-border-color-key-focus: var(
+    --spectrum-global-color-blue-400
+  );
+  --spectrum-millercolumn-item-background-color-down: var(
+    --spectrum-global-color-gray-300
+  );
+  --spectrum-millercolumn-item-background-color-selected: var(
+    --spectrum-alias-highlight-selected
+  );
+  --spectrum-millercolumn-item-background-color-selected-hover: var(
+    --spectrum-alias-highlight-selected-hover
+  );
+
   margin-block-start: 0;
   margin-block-end: 0;
   padding: 0;
@@ -92,10 +151,53 @@ governing permissions and limitations under the License.
     margin-inline-start: var(--spectrum-millercolumn-thumbnail-margin-left);
     vertical-align: middle;
   }
+
+  &:hover {
+    background-color: var(--spectrum-millercolumn-item-background-color-hover);
+  }
+
+  &:focus {
+    /* stylelint-disable-next-line selector-pseudo-class-no-unknown */
+    &:focus-ring,
+    &.is-focused {
+      background-color: var(
+        --spectrum-millercolumn-item-background-color-hover
+      );
+
+      &::before {
+        /* we cannot achieve rounded corners with outline so we use box-shadow instead */
+        box-shadow: 0 0 0 2px var(--spectrum-alias-border-color-key-focus) inset;
+      }
+    }
+  }
+
+  &.is-navigated {
+    /* gray background */
+    background-color: var(--spectrum-millercolumn-item-background-color-down);
+
+    &:hover,
+    &:focus {
+      background-color: var(--spectrum-millercolumn-item-background-color-down);
+    }
+  }
+
+  &.is-selected {
+    background-color: var(
+      --spectrum-millercolumn-item-background-color-selected
+    );
+
+    &:hover,
+    &:focus {
+      background-color: var(
+        --spectrum-millercolumn-item-background-color-selected-hover
+      );
+    }
+  }
 }
 
 .spectrum-AssetList-itemSelector {
   display: none;
+
   /* hack: this needs to be specified as margin-right to override Checkbox's margin for LTR */
   margin-inline-end: var(--spectrum-millercolumn-checkbox-margin);
 }

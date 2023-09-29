@@ -1,9 +1,11 @@
 // Import the component markup template
 import { Template } from "./template";
 
+/**
+ * The Status light component is...
+ */
 export default {
 	title: "Components/Status light",
-	description: "The Status light component is...",
 	component: "Statuslight",
 	argTypes: {
 		size: {

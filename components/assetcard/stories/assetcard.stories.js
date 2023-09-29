@@ -3,10 +3,11 @@ import { Template } from "./template";
 
 import { default as Checkbox } from "@spectrum-css/checkbox/stories/checkbox.stories.js";
 
+/**
+ * The asset card component allows users to select and manage assets and their metadata in a grid.
+ */
 export default {
 	title: "Components/Asset card",
-	description:
-		"The asset card component allows users to select and manage assets and their metadata in a grid.",
 	component: "Assetcard",
 	argTypes: {
 		image: {

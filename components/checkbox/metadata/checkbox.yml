@@ -1,16 +1,16 @@
-name: Checkbox
+title: Checkbox
 status: Verified
-SpectrumSiteSlug: https://spectrum.adobe.com/page/checkbox/
+designLink: https://spectrum.adobe.com/page/checkbox/
+SWC:
+  url: https://opensource.adobe.com/spectrum-web-components/components/checkbox/
+  tag: "sp-checkbox"
 description: |
   - Checkboxes allow users to select multiple items from a list of individual items, or mark one individual item as selected.
   - Checkboxes should not be used on their own, they should always be used within a [FieldGroup](fieldgroup.html).
   - Invalid checkboxes are indicated with an alert [HelpText](helptext.html) when included in a Fieldgroup.
 
 sections:
-  - name: Custom Properties API
-    description: |
-      This component can be modified via its `--mod-*` prefixed custom properties. A list of those prefixed custom properties can be found <a href="https://github.com/adobe/spectrum-css/tree/main/components/checkbox/metadata/mods.md">here</a>.
-  - name: Migration Guide
+  - title: Migration guide
     description: |
       ### Quiet and emphasized
       Spectrum has chosen the variant previously known as `quiet` to be the default and has added an `emphasized` variant with the same styles as the previous default.
@@ -21,11 +21,11 @@ sections:
       Using the classes `.spectrum-Checkbox .spectrum-Checkbox--sizeM` will get result in the previous default checkbox size.
 examples:
   - id: checkbox-default
-    name: Standard
+    title: Standard
     markup: |
-      <div class="spectrum-Examples">
-        <div class="spectrum-Examples-item">
-          <h4 class="spectrum-Heading spectrum-Heading--sizeXS spectrum-Examples-itemHeading">Default</h4>
+      <div class="site-Examples">
+        <div class="site-Examples-item">
+          <h4 class="spectrum-Heading spectrum-Heading--sizeXS site-Examples-itemHeading">Default</h4>
 
           <label class="spectrum-Checkbox spectrum-Checkbox--sizeM">
             <input type="checkbox" class="spectrum-Checkbox-input" id="checkbox-0">
@@ -71,8 +71,8 @@ examples:
           </label>
         </div>
 
-        <div class="spectrum-Examples-item">
-          <h4 class="spectrum-Heading spectrum-Heading--sizeXS spectrum-Examples-itemHeading">Invalid</h4>
+        <div class="site-Examples-item">
+          <h4 class="spectrum-Heading spectrum-Heading--sizeXS site-Examples-itemHeading">Invalid</h4>
           <label class="spectrum-Checkbox spectrum-Checkbox--sizeM is-invalid">
             <input type="checkbox" class="spectrum-Checkbox-input" id="checkbox-0">
             <span class="spectrum-Checkbox-box">
@@ -117,8 +117,8 @@ examples:
           </label>
         </div>
 
-        <div class="spectrum-Examples-item">
-          <h4 class="spectrum-Heading spectrum-Heading--sizeXS spectrum-Examples-itemHeading">Disabled</h4>
+        <div class="site-Examples-item">
+          <h4 class="spectrum-Heading spectrum-Heading--sizeXS site-Examples-itemHeading">Disabled</h4>
 
           <label class="spectrum-Checkbox spectrum-Checkbox--sizeM is-disabled">
             <input type="checkbox" class="spectrum-Checkbox-input" id="checkbox-3" disabled>
@@ -164,8 +164,8 @@ examples:
           </label>
         </div>
 
-        <div class="spectrum-Examples-item">
-          <h4 class="spectrum-Heading spectrum-Heading--sizeXS spectrum-Examples-itemHeading">Read-only</h4>
+        <div class="site-Examples-item">
+          <h4 class="spectrum-Heading spectrum-Heading--sizeXS site-Examples-itemHeading">Read-only</h4>
 
           <label class="spectrum-Checkbox spectrum-Checkbox--sizeM is-disabled is-readOnly">
             <input type="checkbox" class="spectrum-Checkbox-input" id="checkbox-3" disabled>
@@ -213,11 +213,11 @@ examples:
       </div>
 
   - id: checkbox-emphasized
-    name: Emphasized
+    title: Emphasized
     markup: |
-      <div class="spectrum-Examples">
-        <div class="spectrum-Examples-item">
-          <h4 class="spectrum-Heading spectrum-Heading--sizeXS spectrum-Examples-itemHeading">Default</h4>
+      <div class="site-Examples">
+        <div class="site-Examples-item">
+          <h4 class="spectrum-Heading spectrum-Heading--sizeXS site-Examples-itemHeading">Default</h4>
 
           <label class="spectrum-Checkbox spectrum-Checkbox--sizeM spectrum-Checkbox--emphasized">
             <input type="checkbox" class="spectrum-Checkbox-input" id="checkbox-0">
@@ -263,8 +263,8 @@ examples:
           </label>
         </div>
 
-        <div class="spectrum-Examples-item">
-          <h4 class="spectrum-Heading spectrum-Heading--sizeXS spectrum-Examples-itemHeading">Invalid</h4>
+        <div class="site-Examples-item">
+          <h4 class="spectrum-Heading spectrum-Heading--sizeXS site-Examples-itemHeading">Invalid</h4>
           <label class="spectrum-Checkbox spectrum-Checkbox--sizeM spectrum-Checkbox--quiet is-invalid">
             <input type="checkbox" class="spectrum-Checkbox-input" id="checkbox-0">
             <span class="spectrum-Checkbox-box">
@@ -309,8 +309,8 @@ examples:
           </label>
         </div>
 
-        <div class="spectrum-Examples-item">
-          <h4 class="spectrum-Heading spectrum-Heading--sizeXS spectrum-Examples-itemHeading">Disabled</h4>
+        <div class="site-Examples-item">
+          <h4 class="spectrum-Heading spectrum-Heading--sizeXS site-Examples-itemHeading">Disabled</h4>
 
           <label class="spectrum-Checkbox spectrum-Checkbox--sizeM spectrum-Checkbox--emphasized is-disabled">
             <input type="checkbox" class="spectrum-Checkbox-input" id="checkbox-3" disabled>
@@ -356,8 +356,8 @@ examples:
           </label>
         </div>
 
-        <div class="spectrum-Examples-item">
-          <h4 class="spectrum-Heading spectrum-Heading--sizeXS spectrum-Examples-itemHeading">Read-only</h4>
+        <div class="site-Examples-item">
+          <h4 class="spectrum-Heading spectrum-Heading--sizeXS site-Examples-itemHeading">Read-only</h4>
 
           <label class="spectrum-Checkbox spectrum-Checkbox--sizeM spectrum-Checkbox--emphasized is-disabled is-readOnly">
             <input type="checkbox" class="spectrum-Checkbox-input" id="checkbox-3" disabled>
@@ -404,11 +404,11 @@ examples:
         </div>
       </div>
   - id: t-shirt-sizes
-    name: T-Shirt Sizes
+    title: T-Shirt Sizes
     markup: |
-      <div class="spectrum-Examples">
-        <div class="spectrum-Examples-item">
-          <h4 class="spectrum-Heading spectrum-Heading--sizeXS spectrum-Examples-itemHeading">S</h4>
+      <div class="site-Examples">
+        <div class="site-Examples-item">
+          <h4 class="spectrum-Heading spectrum-Heading--sizeXS site-Examples-itemHeading">S</h4>
 
           <label class="spectrum-Checkbox spectrum-Checkbox--sizeS">
             <input type="checkbox" class="spectrum-Checkbox-input" id="checkbox-0">
@@ -454,8 +454,8 @@ examples:
           </label>
 
         </div>
-        <div class="spectrum-Examples-item">
-          <h4 class="spectrum-Heading spectrum-Heading--sizeXS spectrum-Examples-itemHeading">M (default)</h4>
+        <div class="site-Examples-item">
+          <h4 class="spectrum-Heading spectrum-Heading--sizeXS site-Examples-itemHeading">M (default)</h4>
 
           <label class="spectrum-Checkbox spectrum-Checkbox--sizeM">
             <input type="checkbox" class="spectrum-Checkbox-input" id="checkbox-0">
@@ -502,8 +502,8 @@ examples:
 
         </div>
 
-        <div class="spectrum-Examples-item">
-          <h4 class="spectrum-Heading spectrum-Heading--sizeXS spectrum-Examples-itemHeading">L</h4>
+        <div class="site-Examples-item">
+          <h4 class="spectrum-Heading spectrum-Heading--sizeXS site-Examples-itemHeading">L</h4>
 
           <label class="spectrum-Checkbox spectrum-Checkbox--sizeL">
             <input type="checkbox" class="spectrum-Checkbox-input" id="checkbox-0">
@@ -552,8 +552,8 @@ examples:
 
         </div>
 
-        <div class="spectrum-Examples-item">
-          <h4 class="spectrum-Heading spectrum-Heading--sizeXS spectrum-Examples-itemHeading">XL</h4>
+        <div class="site-Examples-item">
+          <h4 class="spectrum-Heading spectrum-Heading--sizeXS site-Examples-itemHeading">XL</h4>
 
           <label class="spectrum-Checkbox spectrum-Checkbox--sizeXL">
             <input type="checkbox" class="spectrum-Checkbox-input" id="checkbox-0">
@@ -601,7 +601,7 @@ examples:
         </div>
       </div>
   - id: checkbox-wrapping
-    name: Wrapping behavior
+    title: Wrapping behavior
     markup: |
       <label class="spectrum-Checkbox spectrum-Checkbox--sizeM">
         <input type="checkbox" class="spectrum-Checkbox-input" id="checkbox-0">

@@ -1,10 +1,11 @@
 // Import the component markup template
 import { Template } from "./template";
 
+/**
+ * The Color loupe component shows the output color that would otherwise be covered by a cursor, stylus, or finger during color selection.
+ */
 export default {
 	title: "Components/Color loupe",
-	description:
-		"The Color loupe component shows the output color that would otherwise be covered by a cursor, stylus, or finger during color selection.",
 	component: "Colorloupe",
 	argTypes: {
 		isOpen: {
@@ -21,7 +22,7 @@ export default {
 	},
 	args: {
 		rootClass: "spectrum-ColorLoupe",
-    isOpen: true,
+    	isOpen: true,
 	},
 	parameters: {
 		chromatic: { diffThreshold: 0.2 },

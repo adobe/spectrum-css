@@ -1,6 +1,9 @@
-components/**/*-generated.css
-components/tokens/*
-components/vars/*
-components/express/*
-components/expressvars/*
-components/site/*
+*-generated.css
+
+tokens/**/*.css
+node_modules/**/*.css
+plugins/*/expected/*.css
+plugins/*/fixtures/*.css
+
+components/*/themes/*.css
+components/commons/*.css

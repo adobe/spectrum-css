@@ -1,12 +1,11 @@
-import { html } from "lit-html";
-
 // Import the component markup template
 import { Template } from "./template";
 
+/**
+ * Alert dialogs display important information that users need to acknowledge. They appear over the interface and block further interactions until an action is selected.
+ */
 export default {
   title: "Components/Alert dialog",
-  description:
-    "Alert dialogs display important information that users need to acknowledge. They appear over the interface and block further interactions until an action is selected.",
   component: "AlertDialog",
   argTypes: {
     heading: {
@@ -63,10 +62,9 @@ Default.args = {
     treatment: "outline",
     label: "Remind me later"
   }, {
-    variant: "primary",
+    variant: "accent",
     treatment: "fill",
     label: "Enable",
-    variant: "accent"
   }],
   content: 'Smart filters are nondestructive and will preserve your original images.',
 };
@@ -104,7 +102,6 @@ Warning.args = {
     variant: "primary",
     treatment: "outline",
     label: "Continue",
-    variant: "primary"
   }],
   content: 'This format has not been verified and may not be viewable for some users. Do you want to continue publishing?',
 };
@@ -122,7 +119,6 @@ Error.args = {
     variant: "primary",
     treatment: "outline",
     label: "Continue",
-    variant: "primary"
   }],
   content: 'An error occured while sharing your project. Please verify the email address and try again.',
 
@@ -137,11 +133,9 @@ Destructive.args = {
     treatment: "outline",
     label: "Cancel"
   }, {
-    variant: "primary",
+    variant: "negative",
     treatment: "fill",
     label: "Delete",
-    variant: "negative"
   }],
   content: 'Are you sure you want to delete the 3 selected documents?',
 };
-

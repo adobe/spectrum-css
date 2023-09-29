@@ -1,17 +1,15 @@
 // Import the component markup template
 import { Template } from "./template";
 
-import { workflowIcons, uiIcons } from "./utilities.js";
+import { uiIcons, workflowIcons } from "./utilities.js";
 
+/**
+ * The icons component contains all UI icons used for components as well as the CSS for UI and workflow icons.
+ */
 export default {
 	title: "Components/Icon",
-	description:
-		"The icons component contains all UI icons used for components as well as the CSS for UI and workflow icons.",
 	component: "Icon",
 	argTypes: {
-		/* Turn off express theme for icon preview b/c they use a separate icon set */
-		express: { table: { disable: true } },
-		reducedMotion: { table: { disable: true } },
 		size: {
 			name: "Size",
 			type: { name: "string", required: true },

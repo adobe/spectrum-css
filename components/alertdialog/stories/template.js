@@ -1,33 +1,33 @@
+import { useArgs } from "@storybook/client-api";
 import { html } from "lit-html";
 import { classMap } from "lit-html/directives/class-map.js";
 import { ifDefined } from "lit-html/directives/if-defined.js";
 import { when } from 'lit-html/directives/when.js';
-import { useArgs } from "@storybook/client-api";
 
-import { Template as Underlay } from '@spectrum-css/underlay/stories/template.js';
-import { Template as Modal } from '@spectrum-css/modal/stories/template.js';
-import { Template as Divider } from "@spectrum-css/divider/stories/template.js";
-import { Template as ButtonGroup } from "@spectrum-css/buttongroup/stories/template.js";
 import { Template as Button } from '@spectrum-css/button/stories/template.js';
+import { Template as ButtonGroup } from "@spectrum-css/buttongroup/stories/template.js";
+import { Template as Divider } from "@spectrum-css/divider/stories/template.js";
 import { Template as Icon } from "@spectrum-css/icon/stories/template.js";
+import { Template as Modal } from '@spectrum-css/modal/stories/template.js';
+import { Template as Underlay } from '@spectrum-css/underlay/stories/template.js';
 
-import '../index.css';
+import '@spectrum-css/alertdialog';
 
 export const Template = ({
   rootClass = "spectrum-AlertDialog",
   isOpen = true,
-  showModal = false,
+  // showModal = false,
   heading = true,
   content = true,
   customClasses = [],
   buttons,
   variant,
-  onclick,
+  // onclick,
   icon = false,
   id,
   ...globals
 }) => {
-  const [_, updateArgs] = useArgs();
+  const [, updateArgs] = useArgs();
 
   const Dialog = html`
     <div
@@ -90,5 +90,5 @@ export const Template = ({
       isOpen,
       content: Dialog,
     })}
-      `
-  }
+      `;
+  };

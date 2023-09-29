@@ -1,10 +1,9 @@
 import { html } from "lit";
 import { classMap } from "lit/directives/class-map.js";
-// import { ifDefined } from 'lit/directives/if-defined.js';
 
-import { lowerCase, capitalize } from "lodash-es";
+import { capitalize, lowerCase } from "lodash-es";
 
-import "../index.css";
+import "@spectrum-css/swatchgroup";
 
 export const Template = ({
 	rootClass = "spectrum-SwatchGroup",
@@ -13,18 +12,8 @@ export const Template = ({
 	density = "regular",
 	rounding = "regular",
 	swatches = [],
-	containerWidth = "250px",
-	...globals
+	containerWidth = "250px"
 }) => {
-	const { express } = globals;
-
-	try {
-		if (!express) import(/* webpackPrefetch: true */ "../themes/spectrum.css");
-		else import(/* webpackPrefetch: true */ "../themes/express.css");
-	} catch (e) {
-		console.warn(e);
-	}
-
 	const swatchRootClass = "spectrum-Swatch";
 
 	const limitedSwatches = swatches.slice(0, 6);
@@ -43,7 +32,7 @@ export const Template = ({
 					...customClasses.reduce((a, c) => ({ ...a, [c]: true }), {}),
 				})}
 			>
-				${swatchesToDisplay.map((swatch, index) => {
+				${swatchesToDisplay.map((swatch) => {
 					return html`
 						<div
 							tabindex="0"

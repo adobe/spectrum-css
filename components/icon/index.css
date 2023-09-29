@@ -10,6 +10,18 @@ OF ANY KIND, either express or implied. See the License for the specific languag
 governing permissions and limitations under the License.
 */
 
-@import 'icons.css';
-@import 'workflow-icons.css';
-@import 'ui-icons.css';
+/**
+ * @namespace spectrum
+ * @component UIIcon
+ * @modifiers large, medium
+ */
+
+/**
+ * @namespace spectrum
+ * @component Icon
+ * @modifiers sizeS, sizeM, sizeL, sizeXL, sizeXXL
+ */
+
+@import "./icons.css";
+@import "./workflow-icons.css";
+@import "./ui-icons.css";

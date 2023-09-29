@@ -1,12 +1,13 @@
 // Import the component markup template
 import { Template } from "./template";
 
+/**
+ * An image representing a user.
+ */
 export default {
 	title: "Components/Avatar",
-	description: "An image representing a user.",
 	component: "Avatar",
 	argTypes: {
-		reducedMotion: { table: { disable: true } },
 		size: {
 			name: "Size",
 			type: { name: "string", required: true },
@@ -48,7 +49,7 @@ export default {
 	args: {
 		rootClass: "spectrum-Avatar",
 		size: "700",
-		image: "example-ava.png",
+		image: "images/example-ava.png",
 		altText: "Avatar",
 		isDisabled: false,
 	},

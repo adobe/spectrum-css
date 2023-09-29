@@ -9,7 +9,7 @@ OF ANY KIND, either express or implied. See the License for the specific languag
 governing permissions and limitations under the License.
 */
 
-@container (--system: spectrum) {
+@container style(--system: spectrum) {
   .spectrum-CloseButton {
     --spectrum-closebutton-background-color-default: transparent;
     --spectrum-closebutton-background-color-hover: var(--spectrum-gray-200);

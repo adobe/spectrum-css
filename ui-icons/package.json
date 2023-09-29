@@ -1,0 +1,24 @@
+{
+  "private": true,
+  "name": "@adobe/spectrum-css-ui-icons",
+  "version": "0.0.0-alpha.0",
+  "description": "The Spectrum CSS UI icons",
+  "license": "Apache-2.0",
+  "author": "Adobe",
+  "homepage": "https://opensource.adobe.com/spectrum-css/",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/adobe/spectrum-css.git",
+    "directory": "ui-icons"
+  },
+  "bugs": {
+    "url": "https://github.com/adobe/spectrum-css/issues"
+  },
+  "main": "dist/spectrum-css-icons.svg",
+  "devDependencies": {
+    "fast-glob": "^3.3.1",
+    "svgcombiner": "^1.0.1",
+    "svgo": "^3.0.2",
+    "svgstore": "^3.0.1"
+  }
+}

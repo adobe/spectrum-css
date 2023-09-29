@@ -36,5 +36,5 @@ export const Template = ({
 			customClasses,
 			...passthroughs,
 		})
-	})
+	});
 };

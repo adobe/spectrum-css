@@ -3,9 +3,11 @@ import { Template } from "./template";
 
 import { default as ActionButton } from "@spectrum-css/actionbutton/stories/actionbutton.stories.js";
 
+/**
+ * The Action group component is a collection of action buttons.
+ */
 export default {
 	title: "Components/Action group",
-	description: "The Action group component is a collection of action buttons.",
 	component: "ActionGroup",
 	argTypes: {
 		areQuiet: ActionButton.argTypes.isQuiet,

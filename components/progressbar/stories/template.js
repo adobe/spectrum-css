@@ -1,9 +1,9 @@
+import { Template as FieldLabel } from "@spectrum-css/fieldlabel/stories/template.js";
 import { html } from "lit";
 import { classMap } from "lit/directives/class-map.js";
-import { Template as FieldLabel } from "@spectrum-css/fieldlabel/stories/template.js";
 import { styleMap } from "lit/directives/style-map.js";
 
-import "../index.css";
+import "@spectrum-css/progressbar";
 
 export const Template = ({
 	rootClass = "spectrum-ProgressBar",
@@ -30,15 +30,6 @@ export const Template = ({
 	size = "m",
 	...globals
 }) => {
-	const { express } = globals;
-
-	try {
-		if (!express) import(/* webpackPrefetch: true */ "../themes/spectrum.css");
-		else import(/* webpackPrefetch: true */ "../themes/express.css");
-	} catch (e) {
-		console.warn(e);
-	}
-
 	return html`
 		<div style="${staticWhite ? styleMap(staticWhiteStyles) : ""}">
 			<div

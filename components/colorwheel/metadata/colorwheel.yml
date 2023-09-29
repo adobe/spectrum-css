@@ -1,6 +1,9 @@
-name: Color wheel
+title: Color wheel
 status: Verified
-SpectrumSiteSlug: https://spectrum.adobe.com/page/color-wheel/
+designLink: https://spectrum.adobe.com/page/color-wheel/
+SWC:
+  url: https://opensource.adobe.com/spectrum-web-components/components/color-wheel/
+  tag: "sp-color-wheel"
 description: |
   - For a given rotation on the wheel, `X`, the `.spectrum-ColorHandle` should be moved by applying the style property `transform: translate(${Y * Math.cos(X)}px, ${Y * Math.sin(X)}px)`, where Y is  ((radius -  `.spectrum-colorwheel-track-width`) / 2))
   - Set the `value` attribute of `.spectrum-ColorWheel-value` to the currently selected color (i.e. `hsl(326, 100%, 50%)`)
@@ -9,16 +12,13 @@ description: |
   - `.spectrum-colorwheel-colorarea-container-size` is hard coded to position the ColorArea within the ColorWheel using `.spectrum-color-wheel-color-area-margin`. Using JS container size can be calcaulted with `Math.sqrt(2 * R * R)`, where R is the innerRadius as calcaulted for the clip paths
   - `.spectrum-colorwheel-path`, `.spectrum-colorwheel-path-borders` and `.spectrum-colorwheel-colorarea-container` are hard coded in CSS and include token values in custom CSS variables so they can be accessed with JS to and used to calcualte these values, `const wheel = document.querySelector(".spectrum-ColorWheel-wheel") getComputedStyle(wheel).getPropertyValue('--track-width'))`
 sections:
-  - name: Custom Properties API
-    description: |
-      This component can be modified via its `--mod-*` prefixed custom properties. A list of those prefixed custom properties can be found <a href="https://github.com/adobe/spectrum-css/tree/main/components/colorwheel/metadata/mods.md">here</a>.
-  - name: Migration Guide
+  - title: Migration guide
     description: |
       - Colorwheel no longer displays a canvas variant
       - ColorWheel refactored to use a clip-path instead of an svg with a mask
 examples:
   - id: color-wheel
-    name: Standard
+    title: Standard
     markup: |
       <div class="spectrum-ColorWheel">
         <div class="spectrum-ColorWheel-inner">
@@ -39,7 +39,7 @@ examples:
         <input type="range" class="spectrum-ColorWheel-slider" aria-label="hue" min="0" max="360" step="`">
       </div>
   - id: color-wheel
-    name: Disabled
+    title: Disabled
     markup: |
       <div class="spectrum-ColorWheel is-disabled">
         <div class="spectrum-ColorWheel-inner">
@@ -60,7 +60,7 @@ examples:
         <input type="range" class="spectrum-ColorWheel-slider" aria-label="hue" min="0" max="360" step="`">
       </div>
   - id: color-wheel
-    name: Standard with ColorArea
+    title: Standard with Color area
     markup: |
       <div class="spectrum-ColorWheel">
         <div class="spectrum-ColorWheel-inner">

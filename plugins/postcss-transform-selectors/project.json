@@ -1,0 +1,23 @@
+{
+	"$schema": "../../node_modules/nx/schemas/project-schema.json",
+	"tags": ["tooling", "postcss"],
+	"name": "postcss-transform-selectors",
+	"targets": {
+		"clean": {
+			"executor": "nx:noop"
+		},
+		"build": {
+			"executor": "nx:noop"
+		},
+		"watch": {
+			"executor": "nx:noop"
+		},
+		"lint": {
+			"defaultConfiguration": "plugins"
+		},
+		"coverage": {},
+		"test": {
+			"defaultConfiguration": "plugins"
+		}
+	}
+}

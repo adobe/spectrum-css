@@ -1,13 +1,13 @@
 id: pagination-explicit
 name: Pagination - explicit
 sections:
-  - name: Migration Guide
+  - title: Migration guide
     description: |
       ### New Textfield markup
       Pagination(Explicit) now uses the new Textfield markup. See the [Textfield migration guide](textfield.html#migrationguide) for more information. You must add `.spectrum-Pagination-textfield` modifier to the outer element `div.spectrum-Textfield`.
 examples:
   - id: pagination-explicit
-    name: Standard
+    title: Standard
     markup: |
       <nav class="spectrum-Pagination spectrum-Pagination--explicit">
         <a href="#" class="spectrum-ActionButton spectrum-ActionButton--sizeM spectrum-ActionButton--quiet spectrum-Pagination-prevButton">

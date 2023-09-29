@@ -1,10 +1,11 @@
 // Import the component markup template
 import { Template } from "./template";
 
+/**
+ * The typical usage of a treeview involves nesting a .spectrum-Treeview element within the .spectrum-TreeView-item parent element.
+ */
 export default {
 	title: "Components/Tree view",
-	description:
-		"The typical usage of a treeview involves nesting a .spectrum-Treeview element within the .spectrum-TreeView-item parent element.",
 	component: "Treeview",
 	argTypes: {
 		items: { table: { disable: true } },
@@ -179,7 +180,7 @@ Thumbnails.args = {
 			link: "#",
 			isOpen: true,
 			thumbnail: {
-				imageURL: "thumbnail.png",
+				imageURL: "images/thumbnail.png",
 				altText: "Woman crouching",
 			},
 			items: [
@@ -188,7 +189,7 @@ Thumbnails.args = {
 					label: "Label 2",
 					link: "#",
 					thumbnail: {
-						imageURL: "thumbnail.png",
+						imageURL: "images/thumbnail.png",
 						altText: "Woman crouching",
 					},
 				},
@@ -197,7 +198,7 @@ Thumbnails.args = {
 					label: "Label 3",
 					link: "#",
 					thumbnail: {
-						imageURL: "flowers.png",
+						imageURL: "images/flowers.png",
 						altText: "Flowers",
 					},
 				},

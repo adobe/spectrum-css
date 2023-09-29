@@ -3,9 +3,11 @@ import { Template } from "./template";
 
 import { Default as MenuStories } from "@spectrum-css/menu/stories/menu.stories.js";
 
+/**
+ * A picker outlines a set of options for a user.
+ */
 export default {
 	title: "Components/Picker",
-	description: "A picker outlines a set of options for a user.",
 	component: "Picker",
 	argTypes: {
 		size: {
@@ -193,4 +195,4 @@ WithForcedColors.args = {
 	content: [
 		() => MenuStories(MenuStories.args)
 	],
-}
+};

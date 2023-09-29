@@ -3,10 +3,11 @@ import { Template } from "./template";
 
 import { default as IconStories } from "@spectrum-css/icon/stories/icon.stories.js";
 
+/**
+ * A tag categorizes content. They can represent keywords or people, and are grouped to describe an item or a search request.
+ */
 export default {
 	title: "Components/Tag",
-	description:
-		"A tag categorizes content. They can represent keywords or people, and are grouped to describe an item or a search request.",
 	component: "Tag",
 	argTypes: {
 		size: {
@@ -30,7 +31,6 @@ export default {
 		},
 		iconName: {
 			...(IconStories?.argTypes?.iconName ?? {}),
-			if: false,
 			if: { arg: "hasIcon", truthy: true },
 		},
 		hasAvatar: {
@@ -115,7 +115,7 @@ export default {
 		label: "Tag label",
 		hasIcon: false,
 		iconName: 'Info',
-		avatarUrl: "example-ava.png",
+		avatarUrl: "images/example-ava.png",
 		hasAvatar: false,
 		isSelected: false,
 		isDisabled: false,
@@ -147,7 +147,7 @@ Icon.args = {
 export const Avatar = Template.bind({});
 Avatar.args = {
 	hasAvatar: true,
-	avatarUrl: "example-ava.png"
+	avatarUrl: "images/example-ava.png"
 };
 
 export const Removable = Template.bind({});

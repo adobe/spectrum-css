@@ -1,9 +1,8 @@
-name: Well
+title: Well
 examples:
   - id: well
-    name: Standard
+    title: Well Label (Optional)
     markup: |
-      <h3 class="spectrum-Heading spectrum-Heading--sizeXXS">Well Label (Optional)</h3>
       <span class="spectrum-Well">
        <p class="spectrum-Body">
         <em>Well done is better than well said.</em>
