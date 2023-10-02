@@ -9548,10 +9548,10 @@ init-package-json@3.0.2, init-package-json@^3.0.2:
     validate-npm-package-license "^3.0.4"
     validate-npm-package-name "^4.0.0"
 
-inquirer-autocomplete-prompt@^3.0.0:
-  version "3.0.0"
-  resolved "https://registry.yarnpkg.com/inquirer-autocomplete-prompt/-/inquirer-autocomplete-prompt-3.0.0.tgz#b00478882feb326b34e0754a1695d912e387a63b"
-  integrity sha512-nsPWllBQB3qhvpVgV1UIJN4xo3yz7Qv8y1+zrNVpJUNPxtUZ7btCum/4UCAs5apPCe/FVhKH1V6Wx0cAwkreyg==
+inquirer-autocomplete-prompt@^3.0.1:
+  version "3.0.1"
+  resolved "https://registry.yarnpkg.com/inquirer-autocomplete-prompt/-/inquirer-autocomplete-prompt-3.0.1.tgz#e84ed088399f80740f0c4d4b65d17b2abb4fe367"
+  integrity sha512-DQBXwX2fVQPVUzu4v4lGgtNgyjcX2+rTyphb2MeSOQh3xUayKAfHAF4y0KgsMi06m6ZiR3xIOdzMZMfQgX2m9w==
   dependencies:
     ansi-escapes "^6.0.0"
     figures "^5.0.0"
