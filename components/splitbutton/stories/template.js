@@ -8,9 +8,12 @@ import "../index.css";
 export const Template = ({
 	rootClass = "spectrum-SplitButton",
 	customClasses = [],
+	customFirstButtonClasses = [],
+	customLastButtonClasses = [],
 	size = "m",
 	variant = "cta",
 	iconName = "ChevronDown100",
+	labelIconName = undefined,
 	position = "right",
 	label = "Split Button",
 	...globals
@@ -28,25 +31,34 @@ export const Template = ({
 				...globals,
 				variant,
 				size,
-				iconName: position === "right" ? undefined : iconName,
+				iconName: position === "right"
+					? typeof labelIconName != "undefined" ? labelIconName : undefined
+					: iconName,
 				label: position === "right" ? label : undefined,
 				hideLabel: position === "right" ? false : true,
-				customClasses:
+				customClasses: [
 					position === "right"
-						? ["spectrum-SplitButton-action"]
-						: ["spectrum-SplitButton-trigger"],
+						? "spectrum-SplitButton-action"
+						: "spectrum-SplitButton-trigger",
+					...customFirstButtonClasses
+				]
 			})}
 			${Button({
 				...globals,
 				variant,
 				size,
-				iconName: position === "right" ? iconName : undefined,
+				iconName: position === "right"
+					? iconName 
+					: typeof labelIconName != "undefined" ? labelIconName : undefined,
+				iconAfterLabel: true,
 				label: position === "right" ? undefined : label,
 				hideLabel: position === "right" ? true : false,
-				customClasses:
+				customClasses: [
 					position === "right"
-						? ["spectrum-SplitButton-trigger"]
-						: ["spectrum-SplitButton-action"],
+						? "spectrum-SplitButton-trigger"
+						: "spectrum-SplitButton-action",
+					...customLastButtonClasses
+				]
 			})}
 		</div>
 	`;

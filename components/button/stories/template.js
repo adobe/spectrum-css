@@ -3,7 +3,7 @@ import { classMap } from "lit/directives/class-map.js";
 import { ifDefined } from "lit/directives/if-defined.js";
 import { when } from "lit/directives/when.js";
 
-import { lowerCase, capitalize } from "lodash-es";
+import { capitalize, lowerCase } from "lodash-es";
 
 import { Template as Icon } from "@spectrum-css/icon/stories/template.js";
 
@@ -17,6 +17,7 @@ export const Template = ({
   label,
   hideLabel = false,
   iconName,
+  iconAfterLabel = false,
   variant,
   staticColor,
   treatment,
@@ -52,10 +53,11 @@ export const Template = ({
       aria-expanded=${ifDefined(ariaExpanded?.toString())}
       aria-controls=${ifDefined(ariaControls)}
     >
-      ${when(iconName, () => Icon({ ...globals, iconName, size }))}
+      ${when(iconName && !iconAfterLabel, () => Icon({ ...globals, iconName, size }))}
       ${when(label && !hideLabel,
         () => html`<span class=${`${rootClass}-label`}>${label}</span>`
       )}
+      ${when(iconName && iconAfterLabel, () => Icon({ ...globals, iconName, size }))}
     </button>
   `;
 };

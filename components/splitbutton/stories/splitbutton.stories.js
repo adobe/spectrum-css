@@ -18,7 +18,7 @@ export default {
 			name: "Variant",
 			type: { name: "string" },
 			table: { disable: true },
-			options: ["cta", "primary", "secondary"],
+			options: ["accent", "primary", "secondary"],
 			control: "select",
 		},
 		position: {
