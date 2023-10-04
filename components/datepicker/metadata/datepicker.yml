@@ -63,6 +63,57 @@ examples:
           </div>
         </button>
       </div>
+  - id: datepicker-invalid
+    name: Invalid
+    markup: |
+      <div class="spectrum-Examples" style="justify-content: space-evenly;">
+        <div class="spectrum-Examples-item">
+          <h4 class="spectrum-Heading spectrum-Heading--sizeXS spectrum-Examples-itemHeading">Standard</h4>
+
+          <div class="spectrum-Examples-itemGroup">
+            <div aria-invalid="true" class="spectrum-DatePicker spectrum-DatePicker is-invalid" role="combobox" aria-expanded="false" aria-haspopup="dialog">
+              <div class="spectrum-Textfield is-invalid spectrum-DatePicker-textfield">
+                <svg class="spectrum-PickerButton-icon spectrum-Icon spectrum-Icon--sizeM spectrum-Textfield-validationIcon" focusable="false" aria-hidden="true">
+                  <use xlink:href="#spectrum-icon-18-Alert" />
+                </svg>
+                <input type="text" class="spectrum-Textfield-input spectrum-DatePicker-input" aria-invalid="true" placeholder="Choose a date" name="end" value="">
+              </div>
+              <button tabindex="-1" class="spectrum-PickerButton spectrum-PickerButton--sizeM spectrum-PickerButton--icononly spectrum-PickerButton--right spectrum-DatePicker-button is-invalid" aria-haspopup="dialog">
+                <div class="spectrum-PickerButton-fill">
+                  <svg class="spectrum-PickerButton-icon spectrum-Icon spectrum-Icon--sizeM" focusable="false" aria-hidden="true" aria-label="Calendar">
+                    <use xlink:href="#spectrum-icon-18-Calendar" />
+                  </svg>
+                </div>
+              </button>
+            </div>
+          </div>
+        </div>
+        <div class="spectrum-Examples-item">
+          <h4 class="spectrum-Heading spectrum-Heading--sizeXS spectrum-Examples-itemHeading">Quiet</h4>
+
+          <div aria-disabled="false" aria-invalid="false" class="spectrum-DatePicker spectrum-DatePicker--quiet spectrum-DatePicker is-invalid" aria-readonly="false" aria-required="false" aria-haspopup="dialog">
+            <div class="spectrum-Textfield spectrum-Textfield--quiet spectrum-DatePicker-textfield is-invalid">
+              <svg class="spectrum-PickerButton-icon spectrum-Icon spectrum-Icon--sizeM spectrum-Textfield-validationIcon" focusable="false" aria-hidden="true">
+                <use xlink:href="#spectrum-icon-18-Alert" />
+              </svg>
+              <input type="text" class="spectrum-Textfield-input spectrum-DatePicker-input" aria-invalid="true" placeholder="Choose a date" value="">
+            </div>
+            <button tabindex="-1" class="spectrum-PickerButton spectrum-PickerButton--sizeM spectrum-PickerButton--icononly spectrum-PickerButton--quiet spectrum-PickerButton--right spectrum-DatePicker-button" aria-haspopup="dialog" aria-label="Calendar" aria-expanded="false">
+              <div class="spectrum-PickerButton-fill">
+                <svg class="spectrum-PickerButton-icon spectrum-Icon spectrum-Icon--sizeM" focusable="false" aria-hidden="true" aria-label="Calendar">
+                  <use xlink:href="#spectrum-icon-18-Calendar" />
+                </svg>
+              </div>
+            </button>
+          </div>
+          <div class="spectrum-Examples-itemGroup">
+
+          </div>
+        </div>
+      </div>
+
+
+
   - id: datepicker-range
     name: Range
     markup: |
