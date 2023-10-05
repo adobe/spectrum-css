@@ -1,5 +1,9 @@
 | Modifiable Custom Properties                                       |
 | ------------------------------------------------------------------ |
+| `--mod-menu-back-icon-margin-block`                                |
+| `--mod-menu-back-icon-margin-inline`                               |
+| `--mod-menu-back-padding-block`                                    |
+| `--mod-menu-back-padding-inline-start`                             |
 | `--mod-menu-checkmark-display`                                     |
 | `--mod-menu-checkmark-icon-color-default`                          |
 | `--mod-menu-checkmark-icon-color-down`                             |
@@ -10,6 +14,7 @@
 | `--mod-menu-drillin-icon-color-down`                               |
 | `--mod-menu-drillin-icon-color-focus`                              |
 | `--mod-menu-drillin-icon-color-hover`                              |
+| `--mod-menu-inline-size`                                           |
 | `--mod-menu-item-background-color-default`                         |
 | `--mod-menu-item-background-color-down`                            |
 | `--mod-menu-item-background-color-hover`                           |

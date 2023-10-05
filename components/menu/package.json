@@ -22,7 +22,8 @@
     "@spectrum-css/divider": ">=2",
     "@spectrum-css/icon": ">=4",
     "@spectrum-css/switch": ">=4",
-    "@spectrum-css/tokens": ">=11.1.0"
+    "@spectrum-css/tokens": ">=11.1.0",
+    "@spectrum-css/tray": ">=2.1"
   },
   "devDependencies": {
     "@spectrum-css/checkbox": "^8.0.2",
@@ -31,6 +32,7 @@
     "@spectrum-css/icon": "^4.0.5",
     "@spectrum-css/switch": "^4.0.15",
     "@spectrum-css/tokens": "^13.0.4",
+    "@spectrum-css/tray": "^2.1.17",
     "gulp": "^4.0.0"
   },
   "publishConfig": {

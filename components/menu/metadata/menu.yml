@@ -41,7 +41,7 @@ examples:
         <div class="spectrum-Examples-item">
           <h4 class="spectrum-Heading spectrum-Heading--sizeXS spectrum-Examples-itemHeading">M</h4>
           <div class="spectrum-Examples-itemGroup">
-            <ul class="spectrum-Menu spectrum-Menu--sizeM" role="menu">
+            <ul class="spectrum-Menu" role="menu">
               <li class="spectrum-Menu-item" role="menuitem" tabindex="0">
                 <span class="spectrum-Menu-itemLabel">Medium Menu</span>
               </li>
@@ -128,7 +128,7 @@ examples:
         <div class="spectrum-Examples-item">
           <h4 class="spectrum-Heading spectrum-Heading--sizeXS spectrum-Examples-itemHeading">M</h4>
           <div class="spectrum-Examples-itemGroup">
-            <ul class="spectrum-Menu spectrum-Menu--sizeM" role="menu">
+            <ul class="spectrum-Menu" role="menu">
               <li class="spectrum-Menu-item" role="menuitem" tabindex="0">
                 <svg class="spectrum-Icon spectrum-Icon--sizeM spectrum-Menu-itemIcon spectrum-Menu-itemIcon--workflowIcon" focusable="false" aria-hidden="true" aria-label="Cut Icon">
                   <use xlink:href="#spectrum-icon-18-Cut"></use>
@@ -208,7 +208,7 @@ examples:
         <div class="spectrum-Examples-item">
           <h4 class="spectrum-Heading spectrum-Heading--sizeXS spectrum-Examples-itemHeading">Menu with icons</h4>
           <div class="spectrum-Examples-itemGroup">
-            <ul class="spectrum-Menu spectrum-Menu--sizeM" role="menu">
+            <ul class="spectrum-Menu" role="menu">
               <li class="spectrum-Menu-item" role="menuitem" tabindex="0">
                 <svg class="spectrum-Icon spectrum-Icon--sizeM spectrum-Menu-itemIcon spectrum-Menu-itemIcon--workflowIcon" focusable="false" aria-hidden="true" aria-label="Cut Icon">
                   <use xlink:href="#spectrum-icon-18-Cut"></use>
@@ -233,7 +233,7 @@ examples:
         <div class="spectrum-Examples-item">
           <h4 class="spectrum-Heading spectrum-Heading--sizeXS spectrum-Examples-itemHeading">Menu with descriptions</h4>
           <div class="spectrum-Examples-itemGroup">
-            <ul class="spectrum-Menu spectrum-Menu--sizeM" role="menu">
+            <ul class="spectrum-Menu" role="menu">
               <li class="spectrum-Menu-item" role="menuitem" tabindex="0">
                 <span class="spectrum-Menu-itemLabel">Quick export</span>
                 <span class="spectrum-Menu-itemDescription">Share a snapshot</span>
@@ -252,7 +252,7 @@ examples:
         <div class="spectrum-Examples-item">
           <h4 class="spectrum-Heading spectrum-Heading--sizeXS spectrum-Examples-itemHeading">Menu with icons & descriptions</h4>
           <div class="spectrum-Examples-itemGroup">
-            <ul class="spectrum-Menu spectrum-Menu--sizeM" role="menu">
+            <ul class="spectrum-Menu" role="menu">
               <li class="spectrum-Menu-item" role="menuitem" tabindex="0">
                 <svg class="spectrum-Icon spectrum-Icon--sizeM spectrum-Menu-itemIcon spectrum-Menu-itemIcon--workflowIcon" focusable="false" aria-hidden="true" aria-label="Export Icon">
                   <use xlink:href="#spectrum-icon-18-Export"></use>
@@ -285,7 +285,7 @@ examples:
         <div class="spectrum-Examples-item">
           <h4 class="spectrum-Heading spectrum-Heading--sizeXS spectrum-Examples-itemHeading">Menu without descriptions</h4>
           <div class="spectrum-Examples-itemGroup" style="max-width: 150px;">
-            <ul class="spectrum-Menu spectrum-Menu--sizeM" role="menu">
+            <ul class="spectrum-Menu" role="menu">
               <li class="spectrum-Menu-item" role="menuitem" tabindex="0">
                 <span class="spectrum-Menu-itemLabel">Small (works best for mobile phones)</span>
               </li>
@@ -301,7 +301,7 @@ examples:
         <div class="spectrum-Examples-item">
           <h4 class="spectrum-Heading spectrum-Heading--sizeXS spectrum-Examples-itemHeading">Menu with descriptions</h4>
           <div class="spectrum-Examples-itemGroup" style="max-width: 150px;">
-            <ul class="spectrum-Menu spectrum-Menu--sizeM" role="menu">
+            <ul class="spectrum-Menu" role="menu">
               <li class="spectrum-Menu-item" role="menuitem" tabindex="0">
                 <span class="spectrum-Menu-itemLabel">Small (works best for mobile phones)</span>
                 <span class="spectrum-Menu-itemDescription">A lengthy description about small is here</span>
@@ -344,7 +344,7 @@ examples:
         <div class="spectrum-Examples-item">
           <h4 class="spectrum-Heading spectrum-Heading--sizeXS spectrum-Examples-itemHeading">M</h4>
           <div class="spectrum-Examples-itemGroup">
-            <ul class="spectrum-Menu spectrum-Menu--sizeM" role="menu">
+            <ul class="spectrum-Menu" role="menu">
               <li class="spectrum-Menu-item" role="menuitem" tabindex="0">
                 <span class="spectrum-Menu-itemLabel">Quick export</span>
                 <span class="spectrum-Menu-itemDescription">Share a snapshot</span>
@@ -434,7 +434,7 @@ examples:
         <div class="spectrum-Examples-item">
           <h4 class="spectrum-Heading spectrum-Heading--sizeXS spectrum-Examples-itemHeading">M</h4>
           <div class="spectrum-Examples-itemGroup">
-            <ul class="spectrum-Menu spectrum-Menu--sizeM" role="menu">
+            <ul class="spectrum-Menu" role="menu">
               <li class="spectrum-Menu-item" role="menuitem" tabindex="0">
                 <svg class="spectrum-Icon spectrum-Icon--sizeM spectrum-Menu-itemIcon spectrum-Menu-itemIcon--workflowIcon" focusable="false" aria-hidden="true" aria-label="Export Icon">
                   <use xlink:href="#spectrum-icon-18-Export"></use>
@@ -531,8 +531,8 @@ examples:
                 <svg class="spectrum-Icon spectrum-Icon--sizeS spectrum-Menu-itemIcon spectrum-Menu-itemIcon--workflowIcon" focusable="false" aria-hidden="true" aria-label="Desktop & Mobile Icon">
                   <use xlink:href="#spectrum-icon-18-DesktopAndMobile"></use>
                 </svg>
-                <span class="spectrum-Menu-sectionHeading" id="menu-heading-category-1" aria-hidden="true">Web Design</span>
-                <ul id="spectrum-menu-item-0-submenu" class="spectrum-Menu spectrum-Menu--sizeS is-open" aria-labelledby="menu-heading-category-1" role="menu">
+                <span class="spectrum-Menu-sectionHeading" id="ex1-menu-heading-1" aria-hidden="true">Web Design</span>
+                <ul id="spectrum-menu-item-0-submenu" class="spectrum-Menu spectrum-Menu--sizeS is-open" aria-labelledby="ex1-menu-heading-2" role="menu">
                   <li class="spectrum-Menu-item" role="menuitem" tabindex="0">
                     <span class="spectrum-Menu-itemLabel">Web Large</span>
                     <span class="spectrum-Menu-itemValue">1920 x 1080</span>
@@ -552,8 +552,8 @@ examples:
                   <use xlink:href="#spectrum-css-icon-Chevron75" />
                 </svg>
                 
-                <span class="spectrum-Menu-sectionHeading" id="menu-heading-category-1" aria-hidden="true">Mobile</span>
-                <ul id="spectrum-menu-item-1-submenu" class="spectrum-Menu spectrum-Menu--sizeS is-open" aria-labelledby="spectrum-menu-item-1-label" role="menu">
+                <span class="spectrum-Menu-sectionHeading" id="ex1-menu-heading-2" aria-hidden="true">Mobile</span>
+                <ul id="spectrum-menu-item-1-submenu" class="spectrum-Menu spectrum-Menu--sizeS is-open" aria-labelledby="ex1-menu-heading-2" role="menu">
                   <li class="spectrum-Menu-item" role="menuitem" tabindex="0">
                     <span class="spectrum-Menu-itemLabel">Mobile Large</span>
                     <span class="spectrum-Menu-itemValue">1920 x 1080</span>
@@ -575,8 +575,8 @@ examples:
                 <svg class="spectrum-Icon spectrum-Icon--sizeS spectrum-Menu-itemIcon spectrum-Menu-itemIcon--workflowIcon" focusable="false" aria-hidden="true" aria-label="Tablet Icon" style="transform: rotate(90deg);">
                   <use xlink:href="#spectrum-icon-18-DeviceTablet"></use>
                 </svg>
-                <span class="spectrum-Menu-sectionHeading" id="menu-heading-category-1" aria-hidden="true">Tablet</span>
-                <ul id="spectrum-menu-item-1-submenu" class="spectrum-Menu spectrum-Menu--sizeS" aria-labelledby="spectrum-menu-item-1-label" role="menu">
+                <span class="spectrum-Menu-sectionHeading" id="ex1-menu-heading-3" aria-hidden="true">Tablet</span>
+                <ul id="spectrum-menu-item-1-submenu" class="spectrum-Menu spectrum-Menu--sizeS" aria-labelledby="ex1-menu-heading-3" role="menu">
                   <li class="spectrum-Menu-item" role="menuitem" tabindex="0">
                     <span class="spectrum-Menu-itemLabel">Tablet Large</span>
                     <span class="spectrum-Menu-itemValue">1920 x 1080</span>
@@ -598,8 +598,8 @@ examples:
                 <svg class="spectrum-Icon spectrum-Icon--sizeS spectrum-Menu-itemIcon spectrum-Menu-itemIcon--workflowIcon" focusable="false" aria-hidden="true" aria-label="Share Icon">
                   <use xlink:href="#spectrum-icon-18-ShareAndroid"></use>
                 </svg>
-                <span class="spectrum-Menu-sectionHeading" id="menu-heading-category-1" aria-hidden="true">Social Media</span>
-                <ul id="spectrum-menu-item-1-submenu" class="spectrum-Menu spectrum-Menu--sizeS" aria-labelledby="spectrum-menu-item-1-label" role="menu">
+                <span class="spectrum-Menu-sectionHeading" id="ex1-menu-heading-4" aria-hidden="true">Social Media</span>
+                <ul id="spectrum-menu-item-1-submenu" class="spectrum-Menu spectrum-Menu--sizeS" aria-labelledby="ex1-menu-heading-4" role="menu">
                   <li class="spectrum-Menu-item" role="menuitem" tabindex="0">
                     <span class="spectrum-Menu-itemLabel">Social Media Large</span>
                     <span class="spectrum-Menu-itemValue">1920 x 1080</span>
@@ -621,8 +621,8 @@ examples:
                 <svg class="spectrum-Icon spectrum-Icon--sizeS spectrum-Menu-itemIcon spectrum-Menu-itemIcon--workflowIcon" focusable="false" aria-hidden="true" aria-label="Watch Icon">
                   <use xlink:href="#spectrum-icon-18-Watch"></use>
                 </svg>
-                <span class="spectrum-Menu-sectionHeading" id="menu-heading-category-1" aria-hidden="true">Watches</span>
-                <ul id="spectrum-menu-item-1-submenu" class="spectrum-Menu spectrum-Menu--sizeS" aria-labelledby="spectrum-menu-item-1-label" role="menu">
+                <span class="spectrum-Menu-sectionHeading" id="ex1-menu-heading-5" aria-hidden="true">Watches</span>
+                <ul id="spectrum-menu-item-1-submenu" class="spectrum-Menu spectrum-Menu--sizeS" aria-labelledby="ex1-menu-heading-5" role="menu">
                   <li class="spectrum-Menu-item" role="menuitem" tabindex="0">
                     <span class="spectrum-Menu-itemLabel">Watch Large</span>
                     <span class="spectrum-Menu-itemValue">1920 x 1080</span>
@@ -643,7 +643,7 @@ examples:
         <div class="spectrum-Examples-item">
           <h4 class="spectrum-Heading spectrum-Heading--sizeXS spectrum-Examples-itemHeading">M</h4>
           <div class="spectrum-Examples-itemGroup">
-            <ul class="spectrum-Menu spectrum-Menu--sizeM" role="menu">
+            <ul class="spectrum-Menu" role="menu">
               <li class="spectrum-Menu-item spectrum-Menu-item--collapsible spectrum-Menu-item--collapsible-withWorkflowIcon is-open" role="menuitem" tabindex="0">
                 <svg class="spectrum-Icon spectrum-Icon--sizeM spectrum-UIIcon-ChevronRight100 spectrum-Menu-chevron spectrum-Menu-itemIcon" focusable="false" aria-hidden="true" aria-label="Next">
                   <use xlink:href="#spectrum-css-icon-Chevron100" />
@@ -651,8 +651,8 @@ examples:
                 <svg class="spectrum-Icon spectrum-Icon--sizeM spectrum-Menu-itemIcon spectrum-Menu-itemIcon--workflowIcon" focusable="false" aria-hidden="true" aria-label="Desktop & Mobile Icon">
                   <use xlink:href="#spectrum-icon-18-DesktopAndMobile"></use>
                 </svg>
-                <span class="spectrum-Menu-sectionHeading" id="menu-heading-category-1" aria-hidden="true">Web Design</span>
-                <ul id="spectrum-menu-item-0-submenu" class="spectrum-Menu spectrum-Menu--sizeM is-open" aria-labelledby="menu-heading-category-1" role="menu">
+                <span class="spectrum-Menu-sectionHeading" id="ex2-menu-heading-1" aria-hidden="true">Web Design</span>
+                <ul id="spectrum-menu-item-0-submenu" class="spectrum-Menu is-open" aria-labelledby="ex2-menu-heading-1" role="menu">
                   <li class="spectrum-Menu-item" role="menuitem" tabindex="0">
                     <span class="spectrum-Menu-itemLabel">Web Large</span>
                     <span class="spectrum-Menu-itemValue">1920 x 1080</span>
@@ -672,8 +672,8 @@ examples:
                   <use xlink:href="#spectrum-css-icon-Chevron100" />
                 </svg>
                 
-                <span class="spectrum-Menu-sectionHeading" id="menu-heading-category-1" aria-hidden="true">Mobile</span>
-                <ul id="spectrum-menu-item-1-submenu" class="spectrum-Menu spectrum-Menu--sizeM is-open" aria-labelledby="spectrum-menu-item-1-label" role="menu">
+                <span class="spectrum-Menu-sectionHeading" id="ex2-menu-heading-2" aria-hidden="true">Mobile</span>
+                <ul id="spectrum-menu-item-1-submenu" class="spectrum-Menu is-open" aria-labelledby="ex2-menu-heading-2" role="menu">
                   <li class="spectrum-Menu-item" role="menuitem" tabindex="0">
                     <span class="spectrum-Menu-itemLabel">Mobile Large</span>
                     <span class="spectrum-Menu-itemValue">1920 x 1080</span>
@@ -695,8 +695,8 @@ examples:
                 <svg class="spectrum-Icon spectrum-Icon--sizeM spectrum-Menu-itemIcon spectrum-Menu-itemIcon--workflowIcon" focusable="false" aria-hidden="true" aria-label="Tablet Icon" style="transform: rotate(90deg);">
                   <use xlink:href="#spectrum-icon-18-DeviceTablet"></use>
                 </svg>
-                <span class="spectrum-Menu-sectionHeading" id="menu-heading-category-1" aria-hidden="true">Tablet</span>
-                <ul id="spectrum-menu-item-1-submenu" class="spectrum-Menu spectrum-Menu--sizeM" aria-labelledby="spectrum-menu-item-1-label" role="menu">
+                <span class="spectrum-Menu-sectionHeading" id="ex2-menu-heading-3" aria-hidden="true">Tablet</span>
+                <ul id="spectrum-menu-item-1-submenu" class="spectrum-Menu" aria-labelledby="ex2-menu-heading-3" role="menu">
                   <li class="spectrum-Menu-item" role="menuitem" tabindex="0">
                     <span class="spectrum-Menu-itemLabel">Tablet Large</span>
                     <span class="spectrum-Menu-itemValue">1920 x 1080</span>
@@ -718,8 +718,8 @@ examples:
                 <svg class="spectrum-Icon spectrum-Icon--sizeM spectrum-Menu-itemIcon spectrum-Menu-itemIcon--workflowIcon" focusable="false" aria-hidden="true" aria-label="Share Icon">
                   <use xlink:href="#spectrum-icon-18-ShareAndroid"></use>
                 </svg>
-                <span class="spectrum-Menu-sectionHeading" id="menu-heading-category-1" aria-hidden="true">Social Media</span>
-                <ul id="spectrum-menu-item-1-submenu" class="spectrum-Menu spectrum-Menu--sizeM" aria-labelledby="spectrum-menu-item-1-label" role="menu">
+                <span class="spectrum-Menu-sectionHeading" id="ex2-menu-heading-4" aria-hidden="true">Social Media</span>
+                <ul id="spectrum-menu-item-1-submenu" class="spectrum-Menu" aria-labelledby="ex2-menu-heading-4" role="menu">
                   <li class="spectrum-Menu-item" role="menuitem" tabindex="0">
                     <span class="spectrum-Menu-itemLabel">Social Media Large</span>
                     <span class="spectrum-Menu-itemValue">1920 x 1080</span>
@@ -741,8 +741,8 @@ examples:
                 <svg class="spectrum-Icon spectrum-Icon--sizeM spectrum-Menu-itemIcon spectrum-Menu-itemIcon--workflowIcon" focusable="false" aria-hidden="true" aria-label="Watch Icon">
                   <use xlink:href="#spectrum-icon-18-Watch"></use>
                 </svg>
-                <span class="spectrum-Menu-sectionHeading" id="menu-heading-category-1" aria-hidden="true">Watches</span>
-                <ul id="spectrum-menu-item-1-submenu" class="spectrum-Menu spectrum-Menu--sizeM" aria-labelledby="spectrum-menu-item-1-label" role="menu">
+                <span class="spectrum-Menu-sectionHeading" id="ex2-menu-heading-5" aria-hidden="true">Watches</span>
+                <ul id="spectrum-menu-item-1-submenu" class="spectrum-Menu" aria-labelledby="ex2-menu-heading-5" role="menu">
                   <li class="spectrum-Menu-item" role="menuitem" tabindex="0">
                     <span class="spectrum-Menu-itemLabel">Watch Large</span>
                     <span class="spectrum-Menu-itemValue">1920 x 1080</span>
@@ -771,8 +771,8 @@ examples:
                 <svg class="spectrum-Icon spectrum-Icon--sizeL spectrum-Menu-itemIcon spectrum-Menu-itemIcon--workflowIcon" focusable="false" aria-hidden="true" aria-label="Desktop & Mobile Icon">
                   <use xlink:href="#spectrum-icon-18-DesktopAndMobile"></use>
                 </svg>
-                <span class="spectrum-Menu-sectionHeading" id="menu-heading-category-1" aria-hidden="true">Web Design</span>
-                <ul id="spectrum-menu-item-0-submenu" class="spectrum-Menu spectrum-Menu--sizeL is-open" aria-labelledby="menu-heading-category-1" role="menu">
+                <span class="spectrum-Menu-sectionHeading" id="ex3-menu-heading-1" aria-hidden="true">Web Design</span>
+                <ul id="spectrum-menu-item-0-submenu" class="spectrum-Menu spectrum-Menu--sizeL is-open" aria-labelledby="ex3-menu-heading-1" role="menu">
                   <li class="spectrum-Menu-item" role="menuitem" tabindex="0">
                     <span class="spectrum-Menu-itemLabel">Web Large</span>
                     <span class="spectrum-Menu-itemValue">1920 x 1080</span>
@@ -792,8 +792,8 @@ examples:
                   <use xlink:href="#spectrum-css-icon-Chevron200" />
                 </svg>
                 
-                <span class="spectrum-Menu-sectionHeading" id="menu-heading-category-1" aria-hidden="true">Mobile</span>
-                <ul id="spectrum-menu-item-1-submenu" class="spectrum-Menu spectrum-Menu--sizeL is-open" aria-labelledby="spectrum-menu-item-1-label" role="menu">
+                <span class="spectrum-Menu-sectionHeading" id="ex3-menu-heading-2" aria-hidden="true">Mobile</span>
+                <ul id="spectrum-menu-item-1-submenu" class="spectrum-Menu spectrum-Menu--sizeL is-open" aria-labelledby="ex3-menu-heading-2" role="menu">
                   <li class="spectrum-Menu-item" role="menuitem" tabindex="0">
                     <span class="spectrum-Menu-itemLabel">Mobile Large</span>
                     <span class="spectrum-Menu-itemValue">1920 x 1080</span>
@@ -815,8 +815,8 @@ examples:
                 <svg class="spectrum-Icon spectrum-Icon--sizeL spectrum-Menu-itemIcon spectrum-Menu-itemIcon--workflowIcon" focusable="false" aria-hidden="true" aria-label="Tablet Icon" style="transform: rotate(90deg);">
                   <use xlink:href="#spectrum-icon-18-DeviceTablet"></use>
                 </svg>
-                <span class="spectrum-Menu-sectionHeading" id="menu-heading-category-1" aria-hidden="true">Tablet</span>
-                <ul id="spectrum-menu-item-1-submenu" class="spectrum-Menu spectrum-Menu--sizeL" aria-labelledby="spectrum-menu-item-1-label" role="menu">
+                <span class="spectrum-Menu-sectionHeading" id="ex3-menu-heading-3" aria-hidden="true">Tablet</span>
+                <ul id="spectrum-menu-item-1-submenu" class="spectrum-Menu spectrum-Menu--sizeL" aria-labelledby="ex3-menu-heading-3" role="menu">
                   <li class="spectrum-Menu-item" role="menuitem" tabindex="0">
                     <span class="spectrum-Menu-itemLabel">Tablet Large</span>
                     <span class="spectrum-Menu-itemValue">1920 x 1080</span>
@@ -838,8 +838,8 @@ examples:
                 <svg class="spectrum-Icon spectrum-Icon--sizeL spectrum-Menu-itemIcon spectrum-Menu-itemIcon--workflowIcon" focusable="false" aria-hidden="true" aria-label="Share Icon">
                   <use xlink:href="#spectrum-icon-18-ShareAndroid"></use>
                 </svg>
-                <span class="spectrum-Menu-sectionHeading" id="menu-heading-category-1" aria-hidden="true">Social Media</span>
-                <ul id="spectrum-menu-item-1-submenu" class="spectrum-Menu spectrum-Menu--sizeL" aria-labelledby="spectrum-menu-item-1-label" role="menu">
+                <span class="spectrum-Menu-sectionHeading" id="ex3-menu-heading-4" aria-hidden="true">Social Media</span>
+                <ul id="spectrum-menu-item-1-submenu" class="spectrum-Menu spectrum-Menu--sizeL" aria-labelledby="ex3-menu-heading-4" role="menu">
                   <li class="spectrum-Menu-item" role="menuitem" tabindex="0">
                     <span class="spectrum-Menu-itemLabel">Social Media Large</span>
                     <span class="spectrum-Menu-itemValue">1920 x 1080</span>
@@ -861,8 +861,8 @@ examples:
                 <svg class="spectrum-Icon spectrum-Icon--sizeL spectrum-Menu-itemIcon spectrum-Menu-itemIcon--workflowIcon" focusable="false" aria-hidden="true" aria-label="Watch Icon">
                   <use xlink:href="#spectrum-icon-18-Watch"></use>
                 </svg>
-                <span class="spectrum-Menu-sectionHeading" id="menu-heading-category-1" aria-hidden="true">Watches</span>
-                <ul id="spectrum-menu-item-1-submenu" class="spectrum-Menu spectrum-Menu--sizeL" aria-labelledby="spectrum-menu-item-1-label" role="menu">
+                <span class="spectrum-Menu-sectionHeading" id="ex3-menu-heading-5" aria-hidden="true">Watches</span>
+                <ul id="spectrum-menu-item-1-submenu" class="spectrum-Menu spectrum-Menu--sizeL" aria-labelledby="ex3-menu-heading-5" role="menu">
                   <li class="spectrum-Menu-item" role="menuitem" tabindex="0">
                     <span class="spectrum-Menu-itemLabel">Watch Large</span>
                     <span class="spectrum-Menu-itemValue">1920 x 1080</span>
@@ -891,8 +891,8 @@ examples:
                 <svg class="spectrum-Icon spectrum-Icon--sizeXL spectrum-Menu-itemIcon spectrum-Menu-itemIcon--workflowIcon" focusable="false" aria-hidden="true" aria-label="Desktop & Mobile Icon">
                   <use xlink:href="#spectrum-icon-18-DesktopAndMobile"></use>
                 </svg>
-                <span class="spectrum-Menu-sectionHeading" id="menu-heading-category-1" aria-hidden="true">Web Design</span>
-                <ul id="spectrum-menu-item-0-submenu" class="spectrum-Menu spectrum-Menu--sizeXL is-open" aria-labelledby="menu-heading-category-1" role="menu">
+                <span class="spectrum-Menu-sectionHeading" id="ex4-menu-heading-1" aria-hidden="true">Web Design</span>
+                <ul id="spectrum-menu-item-0-submenu" class="spectrum-Menu spectrum-Menu--sizeXL is-open" aria-labelledby="ex4-menu-heading-1" role="menu">
                   <li class="spectrum-Menu-item" role="menuitem" tabindex="0">
                     <span class="spectrum-Menu-itemLabel">Web Large</span>
                     <span class="spectrum-Menu-itemValue">1920 x 1080</span>
@@ -912,8 +912,8 @@ examples:
                   <use xlink:href="#spectrum-css-icon-Chevron300" />
                 </svg>
                 
-                <span class="spectrum-Menu-sectionHeading" id="menu-heading-category-1" aria-hidden="true">Mobile</span>
-                <ul id="spectrum-menu-item-1-submenu" class="spectrum-Menu spectrum-Menu--sizeXL is-open" aria-labelledby="spectrum-menu-item-1-label" role="menu">
+                <span class="spectrum-Menu-sectionHeading" id="ex4-menu-heading-2" aria-hidden="true">Mobile</span>
+                <ul id="spectrum-menu-item-1-submenu" class="spectrum-Menu spectrum-Menu--sizeXL is-open" aria-labelledby="ex4-menu-heading-2" role="menu">
                   <li class="spectrum-Menu-item" role="menuitem" tabindex="0">
                     <span class="spectrum-Menu-itemLabel">Mobile Large</span>
                     <span class="spectrum-Menu-itemValue">1920 x 1080</span>
@@ -935,8 +935,8 @@ examples:
                 <svg class="spectrum-Icon spectrum-Icon--sizeXL spectrum-Menu-itemIcon spectrum-Menu-itemIcon--workflowIcon" focusable="false" aria-hidden="true" aria-label="Tablet Icon" style="transform: rotate(90deg);">
                   <use xlink:href="#spectrum-icon-18-DeviceTablet"></use>
                 </svg>
-                <span class="spectrum-Menu-sectionHeading" id="menu-heading-category-1" aria-hidden="true">Tablet</span>
-                <ul id="spectrum-menu-item-1-submenu" class="spectrum-Menu spectrum-Menu--sizeXL" aria-labelledby="spectrum-menu-item-1-label" role="menu">
+                <span class="spectrum-Menu-sectionHeading" id="ex4-menu-heading-3" aria-hidden="true">Tablet</span>
+                <ul id="spectrum-menu-item-1-submenu" class="spectrum-Menu spectrum-Menu--sizeXL" aria-labelledby="ex4-menu-heading-3" role="menu">
                   <li class="spectrum-Menu-item" role="menuitem" tabindex="0">
                     <span class="spectrum-Menu-itemLabel">Tablet Large</span>
                     <span class="spectrum-Menu-itemValue">1920 x 1080</span>
@@ -958,8 +958,8 @@ examples:
                 <svg class="spectrum-Icon spectrum-Icon--sizeXL spectrum-Menu-itemIcon spectrum-Menu-itemIcon--workflowIcon" focusable="false" aria-hidden="true" aria-label="Share Icon">
                   <use xlink:href="#spectrum-icon-18-ShareAndroid"></use>
                 </svg>
-                <span class="spectrum-Menu-sectionHeading" id="menu-heading-category-1" aria-hidden="true">Social Media</span>
-                <ul id="spectrum-menu-item-1-submenu" class="spectrum-Menu spectrum-Menu--sizeXL" aria-labelledby="spectrum-menu-item-1-label" role="menu">
+                <span class="spectrum-Menu-sectionHeading" id="ex4-menu-heading-4" aria-hidden="true">Social Media</span>
+                <ul id="spectrum-menu-item-1-submenu" class="spectrum-Menu spectrum-Menu--sizeXL" aria-labelledby="ex4-menu-heading-4" role="menu">
                   <li class="spectrum-Menu-item" role="menuitem" tabindex="0">
                     <span class="spectrum-Menu-itemLabel">Social Media Large</span>
                     <span class="spectrum-Menu-itemValue">1920 x 1080</span>
@@ -981,8 +981,8 @@ examples:
                 <svg class="spectrum-Icon spectrum-Icon--sizeXL spectrum-Menu-itemIcon spectrum-Menu-itemIcon--workflowIcon" focusable="false" aria-hidden="true" aria-label="Watch Icon">
                   <use xlink:href="#spectrum-icon-18-Watch"></use>
                 </svg>
-                <span class="spectrum-Menu-sectionHeading" id="menu-heading-category-1" aria-hidden="true">Watches</span>
-                <ul id="spectrum-menu-item-1-submenu" class="spectrum-Menu spectrum-Menu--sizeM" aria-labelledby="spectrum-menu-item-1-label" role="menu">
+                <span class="spectrum-Menu-sectionHeading" id="ex4-menu-heading-5" aria-hidden="true">Watches</span>
+                <ul id="spectrum-menu-item-1-submenu" class="spectrum-Menu" aria-labelledby="ex4-menu-heading-5" role="menu">
                   <li class="spectrum-Menu-item" role="menuitem" tabindex="0">
                     <span class="spectrum-Menu-itemLabel">Watch Large</span>
                     <span class="spectrum-Menu-itemValue">1920 x 1080</span>
@@ -1006,7 +1006,7 @@ examples:
     markup: |
       <div class="spectrum-Examples">
         <div class="spectrum-Examples-item">
-          <ul class="spectrum-Menu spectrum-Menu--sizeM" role="menu">
+          <ul class="spectrum-Menu" role="menu">
             <li class="spectrum-Menu-item" role="menuitem" tabindex="0">
               <span class="spectrum-Menu-itemLabel">Deselect</span>
             </li>
@@ -1034,10 +1034,10 @@ examples:
     markup: |
       <div class="spectrum-Examples">
         <div class="spectrum-Examples-item">
-          <ul class="spectrum-Menu spectrum-Menu--sizeM" role="menu">
+          <ul class="spectrum-Menu" role="menu">
             <li role="presentation">
-              <span class="spectrum-Menu-sectionHeading" id="menu-heading-category-1"  aria-hidden="true">Tools</span>
-              <ul class="spectrum-Menu spectrum-Menu--sizeM is-selectable" role="group" aria-labelledby="menu-heading-category-1">
+              <span class="spectrum-Menu-sectionHeading" id="menu-sections-heading-1" aria-hidden="true">Tools</span>
+              <ul class="spectrum-Menu is-selectable" role="group" aria-labelledby="menu-sections-heading-1">
                 <li class="spectrum-Menu-item is-selected" role="menuitem" tabindex="0">
                   <svg class="spectrum-Icon spectrum-Icon--sizeM spectrum-UIIcon-Checkmark100 spectrum-Menu-itemIcon spectrum-Menu-checkmark" focusable="false" aria-hidden="true">
                     <use xlink:href="#spectrum-css-icon-Checkmark100" />
@@ -1063,8 +1063,8 @@ examples:
             </li>
             <li class="spectrum-Divider spectrum-Divider--sizeS spectrum-Menu-divider" role="separator"></li>
             <li role="presentation">
-              <span class="spectrum-Menu-sectionHeading" id="menu-heading-category-2"  aria-hidden="true">Actions</span>
-              <ul class="spectrum-Menu spectrum-Menu--sizeM is-selectable" role="group" aria-labelledby="menu-heading-category-2" aria-disabled="true">
+              <span class="spectrum-Menu-sectionHeading" id="menu-sections-heading-2"  aria-hidden="true">Actions</span>
+              <ul class="spectrum-Menu is-selectable" role="group" aria-labelledby="menu-sections-heading-2" aria-disabled="true">
                 <li class="spectrum-Menu-item spectrum-Menu-item--is-selectable is-disabled" role="menuitem" aria-disabled="true">
                   <svg class="spectrum-Icon spectrum-Icon--sizeM spectrum-Menu-itemIcon spectrum-Menu-itemIcon--workflowIcon" focusable="false" aria-hidden="true" aria-label="Deselect Icon">
                     <use xlink:href="#spectrum-icon-18-Deselect"></use>
@@ -1083,7 +1083,7 @@ examples:
         <div class="spectrum-Examples-item">
           <h4 class="spectrum-Heading spectrum-Heading--sizeXS spectrum-Examples-itemHeading">Without icons</h4>
           <div class="spectrum-Examples-itemGroup">
-            <ul class="spectrum-Menu spectrum-Menu--sizeM is-selectable" role="menu">
+            <ul class="spectrum-Menu is-selectable" role="menu">
               <li class="spectrum-Menu-item is-selected" role="menuitem" tabindex="0">
                 <svg class="spectrum-Icon spectrum-Icon--sizeM spectrum-UIIcon-Checkmark100 spectrum-Menu-itemIcon spectrum-Menu-checkmark" focusable="false" aria-hidden="true">
                   <use xlink:href="#spectrum-css-icon-Checkmark100" />
@@ -1102,7 +1102,7 @@ examples:
         <div class="spectrum-Examples-item">
           <h4 class="spectrum-Heading spectrum-Heading--sizeXS spectrum-Examples-itemHeading">With icons</h4>
           <div class="spectrum-Examples-itemGroup">
-            <ul class="spectrum-Menu spectrum-Menu--sizeM is-selectable" role="menu">
+            <ul class="spectrum-Menu is-selectable" role="menu">
               <li class="spectrum-Menu-item is-selected" role="menuitem" tabindex="0">
                 <svg class="spectrum-Icon spectrum-Icon--sizeM spectrum-UIIcon-Checkmark100 spectrum-Menu-itemIcon spectrum-Menu-checkmark" focusable="false" aria-hidden="true">
                   <use xlink:href="#spectrum-css-icon-Checkmark100" />
@@ -1135,38 +1135,38 @@ examples:
         <div class="spectrum-Examples-item">
           <h4 class="spectrum-Heading spectrum-Heading--sizeXS spectrum-Examples-itemHeading">Without icons</h4>
           <div class="spectrum-Examples-itemGroup">
-            <ul class="spectrum-Menu spectrum-Menu--sizeM is-selectableMultiple" role="menu">
+            <ul class="spectrum-Menu is-selectableMultiple" role="menu">
               <li class="spectrum-Menu-item is-selected" role="menuitem" tabindex="0">
                 <label class="spectrum-Checkbox spectrum-Checkbox--sizeM spectrum-Checkbox--emphasized spectrum-Menu-itemCheckbox">
-                  <input type="checkbox" class="spectrum-Checkbox-input" aria-labelledby="ms-label1" checked>
+                  <input type="checkbox" class="spectrum-Checkbox-input" checked>
                   <span class="spectrum-Checkbox-box">
                     <svg class="spectrum-Icon spectrum-UIIcon-Checkmark100 spectrum-Checkbox-checkmark" focusable="false" aria-hidden="true">
                       <use xlink:href="#spectrum-css-icon-Checkmark100" />
                     </svg>
                   </span>
-                  <span class="spectrum-Checkbox-label spectrum-Menu-itemLabel" id="ms-label1">Marquee</span>
+                  <span class="spectrum-Checkbox-label spectrum-Menu-itemLabel">Marquee</span>
                 </label>
               </li>
               <li class="spectrum-Menu-item is-selectable" role="menuitem" tabindex="0">
                 <label class="spectrum-Checkbox spectrum-Checkbox--sizeM spectrum-Checkbox--emphasized spectrum-Menu-itemCheckbox">
-                  <input type="checkbox" class="spectrum-Checkbox-input" aria-labelledby="ms-label2">
+                  <input type="checkbox" class="spectrum-Checkbox-input">
                   <span class="spectrum-Checkbox-box">
                     <svg class="spectrum-Icon spectrum-UIIcon-Checkmark100 spectrum-Checkbox-checkmark" focusable="false" aria-hidden="true">
                       <use xlink:href="#spectrum-css-icon-Checkmark100" />
                     </svg>
                   </span>
-                  <span class="spectrum-Checkbox-label spectrum-Menu-itemLabel" id="ms-label2">Add</span>
+                  <span class="spectrum-Checkbox-label spectrum-Menu-itemLabel">Add</span>
                 </label>
               </li>
               <li class="spectrum-Menu-item is-selectable" role="menuitem" tabindex="0">
                 <label class="spectrum-Checkbox spectrum-Checkbox--sizeM spectrum-Checkbox--emphasized spectrum-Menu-itemCheckbox">
-                  <input type="checkbox" class="spectrum-Checkbox-input" aria-labelledby="ms-label3">
+                  <input type="checkbox" class="spectrum-Checkbox-input">
                   <span class="spectrum-Checkbox-box">
                     <svg class="spectrum-Icon spectrum-UIIcon-Checkmark100 spectrum-Checkbox-checkmark" focusable="false" aria-hidden="true">
                       <use xlink:href="#spectrum-css-icon-Checkmark100" />
                     </svg>
                   </span>
-                  <span class="spectrum-Checkbox-label spectrum-Menu-itemLabel" id="ms-label3">Subtract</span>
+                  <span class="spectrum-Checkbox-label spectrum-Menu-itemLabel">Subtract</span>
                 </label>
               </li>
             </ul>
@@ -1175,10 +1175,10 @@ examples:
         <div class="spectrum-Examples-item">
           <h4 class="spectrum-Heading spectrum-Heading--sizeXS spectrum-Examples-itemHeading">With icons</h4>
           <div class="spectrum-Examples-itemGroup">
-            <ul class="spectrum-Menu spectrum-Menu--sizeM is-selectableMultiple" role="menu">
+            <ul class="spectrum-Menu is-selectableMultiple" role="menu">
               <li class="spectrum-Menu-item is-selected" role="menuitem" tabindex="0">
                 <label class="spectrum-Checkbox spectrum-Checkbox--sizeM spectrum-Checkbox--emphasized spectrum-Menu-itemCheckbox">
-                  <input type="checkbox" class="spectrum-Checkbox-input" aria-labelledby="ms-label4" checked>
+                  <input type="checkbox" class="spectrum-Checkbox-input" checked>
                   <span class="spectrum-Checkbox-box">
                     <svg class="spectrum-Icon spectrum-UIIcon-Checkmark100 spectrum-Checkbox-checkmark" focusable="false" aria-hidden="true">
                       <use xlink:href="#spectrum-css-icon-Checkmark100" />
@@ -1187,12 +1187,12 @@ examples:
                   <svg class="spectrum-Icon spectrum-Icon--sizeM spectrum-Menu-itemIcon spectrum-Menu-itemIcon--workflowIcon" focusable="false" aria-hidden="true" aria-label="Selection Icon">
                     <use xlink:href="#spectrum-icon-18-Selection"></use>
                   </svg>
-                  <span class="spectrum-Checkbox-label spectrum-Menu-itemLabel" id="ms-label4">Marquee</span>
+                  <span class="spectrum-Checkbox-label spectrum-Menu-itemLabel">Marquee</span>
                 </label>
               </li>
               <li class="spectrum-Menu-item is-selectable" role="menuitem" tabindex="0">
                 <label class="spectrum-Checkbox spectrum-Checkbox--sizeM spectrum-Checkbox--emphasized spectrum-Menu-itemCheckbox">
-                  <input type="checkbox" class="spectrum-Checkbox-input" aria-labelledby="ms-label5">
+                  <input type="checkbox" class="spectrum-Checkbox-input">
                   <span class="spectrum-Checkbox-box">
                     <svg class="spectrum-Icon spectrum-UIIcon-Checkmark100 spectrum-Checkbox-checkmark" focusable="false" aria-hidden="true">
                       <use xlink:href="#spectrum-css-icon-Checkmark100" />
@@ -1201,12 +1201,12 @@ examples:
                   <svg class="spectrum-Icon spectrum-Icon--sizeM spectrum-Menu-itemIcon spectrum-Menu-itemIcon--workflowIcon" focusable="false" aria-hidden="true" aria-label="Select Add Icon">
                     <use xlink:href="#spectrum-icon-18-SelectAdd"></use>
                   </svg>
-                  <span class="spectrum-Checkbox-label spectrum-Menu-itemLabel" id="ms-label5">Add</span>
+                  <span class="spectrum-Checkbox-label spectrum-Menu-itemLabel">Add</span>
                 </label>
               </li>
               <li class="spectrum-Menu-item is-selectable" role="menuitem" tabindex="0">
                 <label class="spectrum-Checkbox spectrum-Checkbox--sizeM spectrum-Checkbox--emphasized spectrum-Menu-itemCheckbox">
-                  <input type="checkbox" class="spectrum-Checkbox-input" aria-labelledby="ms-label6">
+                  <input type="checkbox" class="spectrum-Checkbox-input">
                   <span class="spectrum-Checkbox-box">
                     <svg class="spectrum-Icon spectrum-UIIcon-Checkmark100 spectrum-Checkbox-checkmark" focusable="false" aria-hidden="true">
                       <use xlink:href="#spectrum-css-icon-Checkmark100" />
@@ -1215,7 +1215,7 @@ examples:
                   <svg class="spectrum-Icon spectrum-Icon--sizeM spectrum-Menu-itemIcon spectrum-Menu-itemIcon--workflowIcon" focusable="false" aria-hidden="true" aria-label="Select Subtract Icon">
                     <use xlink:href="#spectrum-icon-18-SelectSubtract"></use>
                   </svg>
-                  <span class="spectrum-Checkbox-label spectrum-Menu-itemLabel" id="ms-label6">Subtract</span>
+                  <span class="spectrum-Checkbox-label spectrum-Menu-itemLabel">Subtract</span>
                 </label>
               </li>
             </ul>
@@ -1229,7 +1229,7 @@ examples:
         <div class="spectrum-Examples-item">
           <h4 class="spectrum-Heading spectrum-Heading--sizeXS spectrum-Examples-itemHeading">Without icons</h4>
           <div class="spectrum-Examples-itemGroup">
-            <ul class="spectrum-Menu spectrum-Menu--sizeM" role="menu">
+            <ul class="spectrum-Menu" role="menu">
               <li class="spectrum-Menu-item" role="menuitem" tabindex="0">
                 <label class="spectrum-Switch-label spectrum-Menu-itemLabel" for="switch-onoff-0">Marquee</label>
                 <div class="spectrum-Menu-itemActions">
@@ -1263,7 +1263,7 @@ examples:
         <div class="spectrum-Examples-item">
           <h4 class="spectrum-Heading spectrum-Heading--sizeXS spectrum-Examples-itemHeading">With icons</h4>
           <div class="spectrum-Examples-itemGroup">
-            <ul class="spectrum-Menu spectrum-Menu--sizeM" role="menu">
+            <ul class="spectrum-Menu" role="menu">
               <li class="spectrum-Menu-item" role="menuitem" tabindex="0">
                 <label class="spectrum-Switch-label spectrum-Menu-itemLabel" for="switch-onoff-3">
                   <svg class="spectrum-Icon spectrum-Icon--sizeM spectrum-Menu-itemIcon spectrum-Menu-itemIcon--workflowIcon" focusable="false" aria-hidden="true" aria-label="Selection Icon">
@@ -1316,7 +1316,7 @@ examples:
     markup: |
       <div class="spectrum-Examples">
         <div class="spectrum-Examples-item">
-          <ul class="spectrum-Menu spectrum-Menu--sizeM" role="menu">
+          <ul class="spectrum-Menu" role="menu">
             <li class="spectrum-Menu-item" role="menuitem" tabindex="0">
               <span class="spectrum-Menu-itemLabel">Deselect</span>
             </li>
@@ -1335,6 +1335,60 @@ examples:
             <li class="spectrum-Menu-item" role="menuitem" tabindex="0">
               <span class="spectrum-Menu-itemLabel">Save Selection</span>
             </li>
+          </ul>
+        </div>
+      </div>
+  - id: tray-submenus
+    name: Tray submenus
+    description: When a menu is displayed within a tray, a submenu will replace the tray content when the parent menu item is selected. A submenu displays a back button (labeled by the title of the parent item) at the top of the tray to return the user to the previous level of the menu.
+    markup: |
+      <div class="spectrum-Tray-wrapper spectrum-CSSExample-dialog" style="background: rgba(0,0,0,0.4);">
+        <div class="spectrum-Modal spectrum-Tray is-open spectrum-Tray">
+          <ul class="spectrum-Menu is-selectableMultiple" role="menu" style="--mod-menu-inline-size: 100%;">
+            <li role="presentation">
+              <li class="spectrum-Menu-item spectrum-Menu-item--back" role="menuitem" tabindex="0">
+                <svg 
+                  class="spectrum-Icon spectrum-Icon--sizeM spectrum-UIIcon-ArrowLeft100 spectrum-Menu-backIcon"
+                  focusable="false" 
+                  aria-label="View previous menu"
+                >
+                  <use xlink:href="#spectrum-css-icon-Arrow100" />
+                </svg>
+                <span class="spectrum-Menu-itemLabel">Snap to</span>
+              </li>
+              <li class="spectrum-Menu-item is-selected" role="menuitem" tabindex="0">
+                <label class="spectrum-Checkbox spectrum-Checkbox--sizeM spectrum-Checkbox--emphasized spectrum-Menu-itemCheckbox">
+                  <input type="checkbox" class="spectrum-Checkbox-input" checked>
+                  <span class="spectrum-Checkbox-box">
+                    <svg class="spectrum-Icon spectrum-UIIcon-Checkmark100 spectrum-Checkbox-checkmark" focusable="false" aria-hidden="true">
+                      <use xlink:href="#spectrum-css-icon-Checkmark100" />
+                    </svg>
+                  </span>
+                  <span class="spectrum-Checkbox-label spectrum-Menu-itemLabel">Guides</span>
+                </label>
+              </li>
+              <li class="spectrum-Menu-item is-selectable" role="menuitem" tabindex="0">
+                <label class="spectrum-Checkbox spectrum-Checkbox--sizeM spectrum-Checkbox--emphasized spectrum-Menu-itemCheckbox">
+                  <input type="checkbox" class="spectrum-Checkbox-input">
+                  <span class="spectrum-Checkbox-box">
+                    <svg class="spectrum-Icon spectrum-UIIcon-Checkmark100 spectrum-Checkbox-checkmark" focusable="false" aria-hidden="true">
+                      <use xlink:href="#spectrum-css-icon-Checkmark100" />
+                    </svg>
+                  </span>
+                  <span class="spectrum-Checkbox-label spectrum-Menu-itemLabel"">Grid</span>
+                </label>
+              </li>
+              <li class="spectrum-Menu-item is-selected" role="menuitem" tabindex="0">
+                <label class="spectrum-Checkbox spectrum-Checkbox--sizeM spectrum-Checkbox--emphasized spectrum-Menu-itemCheckbox">
+                  <input type="checkbox" class="spectrum-Checkbox-input" checked>
+                  <span class="spectrum-Checkbox-box">
+                    <svg class="spectrum-Icon spectrum-UIIcon-Checkmark100 spectrum-Checkbox-checkmark" focusable="false" aria-hidden="true">
+                      <use xlink:href="#spectrum-css-icon-Checkmark100" />
+                    </svg>
+                  </span>
+                  <span class="spectrum-Checkbox-label spectrum-Menu-itemLabel">Rulers</span>
+                </label>
+              </li>
           </ul>
         </div>
       </div>
