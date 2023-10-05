@@ -16,7 +16,6 @@
 | `--mod-datepicker-focus-ring-gap`                       |
 | `--mod-datepicker-focus-ring-width`                     |
 | `--mod-datepicker-generic-padding`                      |
-| `--mod-datepicker-icon-to-text-right`                   |
 | `--mod-datepicker-input-padding-right`                  |
 | `--mod-datepicker-input-width`                          |
 | `--mod-datepicker-input-width-quiet`                    |
@@ -28,5 +27,6 @@
 | `--mod-datepicker-range-input-width-first`              |
 | `--mod-datepicker-range-input-width-quiet-first`        |
 | `--mod-datepicker-range-invalid-padding-right`          |
+| `--mod-quiet-button-offset`                             |
 | `--mod-textfield-icon-spacing-inline-end-invalid`       |
 | `--mod-textfield-icon-spacing-inline-end-quiet-invalid` |
