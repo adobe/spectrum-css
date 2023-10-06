@@ -188,6 +188,7 @@ governing permissions and limitations under the License.
 
   &:active,
   &:focus-visible,
+  &:focus-within,
   &.is-dragged {
     border-width: var(--mod-dial-handle-border-size, var(--spectrum-dial-handle-border-size));
     cursor: ns-resize;
@@ -201,7 +202,8 @@ governing permissions and limitations under the License.
     }
   }
 
-  &:focus-visible {
+  &:focus-visible,
+  &:focus-within {
     background-color: var(--highcontrast-dial-handle-marker-color-mouse-focus, var(--mod-dial-handle-marker-color-mouse-focus, var(--spectrum-dial-handle-marker-color-mouse-focus)));
     border-color: var(--highcontrast-dial-handle-marker-color-mouse-focus, var(--mod-dial-handle-marker-color-mouse-focus, var(--spectrum-dial-handle-marker-color-mouse-focus)));
 
