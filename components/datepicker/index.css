@@ -17,6 +17,8 @@ governing permissions and limitations under the License.
   --spectrum-datepicker-icon-size: var(--spectrum-workflow-icon-size-100);
 
   /* button */
+  --spectrum-datepicker-pickerbutton-border-color: var(--spectrum-gray-500);
+  --spectrum-datepicker-pickerbutton-border-color-invalid: var(--spectrum-negative-border-color-default);
   --spectrum-datepicker-button-width: var(--spectrum-component-height-100);
   --spectrum-datepicker-pickerbutton-width: calc((var(--spectrum-field-edge-to-disclosure-icon-100) * 2) + var(--spectrum-workflow-icon-size-100));
   --spectrum-datepicker-pickerbutton-width-quiet: calc(var(--spectrum-datepicker-pickerbutton-width) - var(--spectrum-datepicker-quiet-button-offset));
@@ -88,10 +90,14 @@ governing permissions and limitations under the License.
       --mod-textfield-icon-spacing-inline-end-quiet-invalid: calc(var(--spectrum-datepicker-pickerbutton-width-quiet) + var(--spectrum-datepicker-invalid-icon-to-button-quiet));
     }
   }
-  &.is-invalid:not(.spectrum-DatePicker--quiet) {
-    .spectrum-PickerButton-fill {
-      border-color: var(--highcontrast-datepicker-pickerbutton-border-color);
-    }
+
+}
+
+.spectrum-DatePicker:not(.spectrum-DatePicker--quiet):not(.is-disabled) {
+  /* ensures picker button border color matches the textfield border color */
+  --mod-picker-button-border-color: var(--highcontrast-datepicker-pickerbutton-border-color, var(--mod-datepicker-pickerbutton-border-color, var(--spectrum-datepicker-pickerbutton-border-color)));
+  &.is-invalid {
+    --mod-picker-button-border-color: var(--highcontrast-datepicker-pickerbutton-border-color, var(--mod-datepicker-pickerbutton-border-color-invalid, var(--spectrum-datepicker-pickerbutton-border-color-invalid)));
   }
 }
 
@@ -125,7 +131,6 @@ governing permissions and limitations under the License.
     padding-inline-end: var(--mod-datepicker-padding-inline-end-quiet, var(--spectrum-datepicker-padding-inline-end-quiet));
   }
 }
-
 
 .spectrum-DatePicker-button {
   /* Be above textfield so box shadow shines through */

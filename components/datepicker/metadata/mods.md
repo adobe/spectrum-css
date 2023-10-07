@@ -15,6 +15,7 @@
 | `--mod-datepicker-focus-ring-color`                     |
 | `--mod-datepicker-focus-ring-gap`                       |
 | `--mod-datepicker-focus-ring-width`                     |
+| `--mod-datepicker-focus-thickness`                      |
 | `--mod-datepicker-generic-padding`                      |
 | `--mod-datepicker-input-width`                          |
 | `--mod-datepicker-input-width-quiet`                    |
@@ -24,11 +25,13 @@
 | `--mod-datepicker-padding-inline-end-invalid`           |
 | `--mod-datepicker-padding-inline-end-invalid-quiet`     |
 | `--mod-datepicker-padding-inline-end-quiet`             |
+| `--mod-datepicker-pickerbutton-border-color-invalid`    |
 | `--mod-datepicker-quiet-border-color-hover`             |
 | `--mod-datepicker-range-dash-margin-left`               |
 | `--mod-datepicker-range-dash-padding-top`               |
 | `--mod-datepicker-range-input-width-first`              |
 | `--mod-datepicker-range-input-width-quiet-first`        |
+| `--mod-picker-button-border-color`                      |
 | `--mod-quiet-button-offset`                             |
 | `--mod-textfield-icon-spacing-inline-end-invalid`       |
 | `--mod-textfield-icon-spacing-inline-end-quiet-invalid` |
