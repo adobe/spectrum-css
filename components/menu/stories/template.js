@@ -7,6 +7,7 @@ import { Template as Checkbox } from "@spectrum-css/checkbox/stories/template.js
 import { Template as Divider } from "@spectrum-css/divider/stories/template.js";
 import { Template as Icon } from "@spectrum-css/icon/stories/template.js";
 import { Template as Switch } from "@spectrum-css/switch/stories/template.js";
+import { Template as Tray } from "@spectrum-css/tray/stories/template.js";
 
 import "../index.css";
 
@@ -23,6 +24,7 @@ export const MenuItem = ({
   isFocused = false,
   isDrillIn = false,
   isCollapsible = false,
+  isTraySubmenuBack = false,
   isOpen = false,
   role = "menuitem",
   items = [],
@@ -45,6 +47,7 @@ export const MenuItem = ({
         "is-disabled": isDisabled,
         [`${rootClass}--drillIn`]: isDrillIn,
         [`${rootClass}--collapsible`]: isCollapsible,
+        [`${rootClass}--back`]: isTraySubmenuBack,
         "is-open": isOpen,
       })}
       id=${ifDefined(id)}
@@ -72,14 +75,21 @@ export const MenuItem = ({
               `${rootClass}Icon--workflowIcon`
             ]
           }) : ''}
+      ${isTraySubmenuBack
+        ? Icon({
+            ...globals,
+            iconName: "ArrowLeft",
+            size,
+            customClasses: [`spectrum-Menu-backIcon`] 
+          }) : ''}
       ${isCollapsible
         ? html`<span class="spectrum-Menu-sectionHeading">${label}</span>`
         : ''
       }
       ${selectionMode != "multiple" && !isCollapsible
         ? html`<span class=${classMap({
-          [`${rootClass}Label`]: true,
-          ['spectrum-Switch-label']: hasActions,
+            [`${rootClass}Label`]: true,
+            ['spectrum-Switch-label']: hasActions,
           })}>
           ${label}
         </span>`
@@ -110,7 +120,7 @@ export const MenuItem = ({
           ],
         })
       : ''}
-      ${isChecked && selectionMode != "multiple"
+      ${isChecked && selectionMode == "single"
         ? Icon({
             ...globals,
             iconName: "Checkmark100",
@@ -187,14 +197,14 @@ export const Template = ({
   selectionMode = "none",
   isOpen = false,
   hasActions = false,
+  isTraySubmenu = false,
   items = [],
   role = "menu",
   subrole = "menuitem",
   id,
   ...globals
 }) => {
-
-  return html`
+  const menuMarkup = html`
     <ul
       class=${classMap({
         [rootClass]: true,
@@ -227,10 +237,15 @@ export const Template = ({
             rootClass: `${rootClass}-item`,
             role: subrole,
             size,
-            selectionMode,
+            selectionMode: idx == 0 && isTraySubmenu ? "none" : selectionMode,
             hasActions,
           });
       })}
     </ul>
   `;
+
+  if (isTraySubmenu){
+    return Tray({ content: [menuMarkup] });
+  }
+  return menuMarkup;
 };

@@ -412,3 +412,29 @@ Collapsible.args = {
     },
   ],
 };
+
+export const TraySubmenu = Template.bind({});
+TraySubmenu.args = {
+  selectionMode: "multiple",
+  customStyles: {
+    '--mod-menu-inline-size': '100%',
+  },
+  isTraySubmenu: true,
+  items: [
+    {
+      label: "Snap to",
+      isTraySubmenuBack: true,
+    },
+    {
+      label: "Guides",
+      isSelected: true,
+      isChecked: true,
+    },
+    {
+      label: "Grid",
+    },
+    {
+      label: "Rulers",
+    },
+  ],
+};
