@@ -5,7 +5,6 @@ import { default as CalendarStories } from "@spectrum-css/calendar/stories/calen
 
 const ignoreProps = ["rootClass", "isDisabled"];
 
-// @todo add support for date *range*
 export default {
 	title: "Components/Date picker",
 	description:
@@ -34,15 +33,15 @@ export default {
 			},
 			control: "boolean",
 		},
-		isValid: {
-			name: "Valid",
+		isDateTimeRange: {
+			name: "Date Time Range styling",
 			type: { name: "boolean" },
 			table: {
 				type: { summary: "boolean" },
-				category: "State",
+				category: "Component",
 			},
 			control: "boolean",
-			if: { arg: "isInvalid", truthy: false },
+			if: { arg: "isRange", truthy: true },
 		},
 		isInvalid: {
 			name: "Invalid",
@@ -63,15 +62,6 @@ export default {
 			},
 			control: "boolean",
 		},
-		isRequired: {
-			name: "Required",
-			type: { name: "boolean" },
-			table: {
-				type: { summary: "boolean" },
-				category: "State",
-			},
-			control: "boolean",
-		},
 		readOnly: {
 			name: "Read only",
 			type: { name: "boolean" },
@@ -82,11 +72,16 @@ export default {
 			control: "boolean",
 		},
 		content: { table: { disable: true } },
+		isRange: { table: {disable: true} },
+		isValid: { table: {disable: true}},
+		isRequired: { table: {disable: true} }
 	},
 	args: {
 		rootClass: "spectrum-DatePicker",
 		isOpen: true,
 		isQuiet: false,
+		isRange: false,
+		isDateTimeRange: false,
 		isInvalid: false,
 		isValid: false,
 		isDisabled: false,
@@ -120,4 +115,15 @@ Quiet.args = {
 	year: 2023,
 	content: [{}],
 	isQuiet: true,
+};
+
+export const Range = Template.bind({});
+Range.args = {
+	month: "March",
+	selectedDay: 1,
+	year: 2023,
+	lastDay: 3,
+	content: [{}],
+	isRange: true,
+	isOpen: false,
 };
