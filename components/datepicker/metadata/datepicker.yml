@@ -28,7 +28,7 @@ examples:
   - id: datepicker
     name: Standard
     markup: |
-      <div aria-disabled="false" aria-invalid="false" class="spectrum-DatePicker spectrum-DatePicker" aria-readonly="false" aria-required="false" aria-haspopup="dialog">
+      <div aria-disabled="false" aria-invalid="false" class="spectrum-DatePicker" aria-readonly="false" aria-required="false" aria-haspopup="dialog">
         <div class="spectrum-Textfield spectrum-DatePicker-textfield">
           <input type="text" class="spectrum-Textfield-input spectrum-DatePicker-input" aria-invalid="false" placeholder="Choose a date" value="">
         </div>
@@ -43,7 +43,7 @@ examples:
   - id: datepicker-readonly
     name: Read-only
     markup: |
-      <div aria-disabled="false" aria-invalid="false" class="spectrum-DatePicker spectrum-DatePicker" aria-readonly="true" aria-required="false">
+      <div aria-disabled="false" aria-invalid="false" class="spectrum-DatePicker" aria-readonly="true" aria-required="false">
         <div class="spectrum-Textfield spectrum-DatePicker-textfield is-readOnly">
           <input type="text" class="spectrum-Textfield-input spectrum-DatePicker-input" placeholder="Choose a date" value="02/14/2020" readonly="readonly">
         </div>
@@ -71,7 +71,7 @@ examples:
           <h4 class="spectrum-Heading spectrum-Heading--sizeXS spectrum-Examples-itemHeading">Standard</h4>
 
           <div class="spectrum-Examples-itemGroup">
-            <div aria-invalid="true" class="spectrum-DatePicker spectrum-DatePicker is-invalid" role="combobox" aria-expanded="false" aria-haspopup="dialog">
+            <div aria-invalid="true" class="spectrum-DatePicker is-invalid" role="combobox" aria-expanded="false" aria-haspopup="dialog">
               <div class="spectrum-Textfield is-invalid spectrum-DatePicker-textfield">
                 <svg class="spectrum-PickerButton-icon spectrum-Icon spectrum-Icon--sizeM spectrum-Textfield-validationIcon" focusable="false" aria-hidden="true">
                   <use xlink:href="#spectrum-icon-18-Alert" />
@@ -117,7 +117,7 @@ examples:
   - id: datepicker-range
     name: Range
     markup: |
-      <div aria-invalid="false" class="spectrum-DatePicker spectrum-DatePicker spectrum-DatePicker--range" role="combobox" aria-expanded="false" aria-haspopup="dialog">
+      <div aria-invalid="false" class="spectrum-DatePicker spectrum-DatePicker--range" role="combobox" aria-expanded="false" aria-haspopup="dialog">
         <div class="spectrum-Textfield spectrum-DatePicker-textfield">
           <input type="text" class="spectrum-Textfield-input spectrum-DatePicker-input spectrum-DatePicker-startField" placeholder="mm/dd/yyyy" name="start" value="">
         </div>
@@ -136,7 +136,7 @@ examples:
 
       <p/>
 
-      <div aria-invalid="true" class="spectrum-DatePicker spectrum-DatePicker spectrum-DatePicker--range is-invalid" role="combobox" aria-expanded="false" aria-haspopup="dialog">
+      <div aria-invalid="true" class="spectrum-DatePicker spectrum-DatePicker--range is-invalid" role="combobox" aria-expanded="false" aria-haspopup="dialog">
         <div class="spectrum-Textfield is-invalid spectrum-DatePicker-textfield">
           <input type="text" class="spectrum-Textfield-input spectrum-DatePicker-input spectrum-DatePicker-startField" aria-invalid="true" placeholder="mm/dd/yyyy" name="start" value="">
         </div>
@@ -158,7 +158,7 @@ examples:
 
       <p/>
 
-      <div aria-disabled="true" class="spectrum-DatePicker spectrum-DatePicker spectrum-DatePicker--range is-disabled" role="combobox" aria-expanded="false" aria-haspopup="dialog">
+      <div aria-disabled="true" class="spectrum-DatePicker spectrum-DatePicker--range is-disabled" role="combobox" aria-expanded="false" aria-haspopup="dialog">
         <div class="spectrum-Textfield spectrum-DatePicker-textfield is-disabled">
           <input type="text" class="spectrum-Textfield-input spectrum-DatePicker-input spectrum-DatePicker-startField" placeholder="mm/dd/yyyy" name="start" value="" disabled>
         </div>
@@ -177,7 +177,7 @@ examples:
 
       <p/>
 
-      <div class="spectrum-DatePicker spectrum-DatePicker spectrum-DatePicker--range spectrum-DatePicker--datetimeRange" role="combobox" aria-expanded="false" aria-haspopup="dialog">
+      <div class="spectrum-DatePicker spectrum-DatePicker--range spectrum-DatePicker--datetimeRange" role="combobox" aria-expanded="false" aria-haspopup="dialog">
         <div class="spectrum-Textfield spectrum-DatePicker-textfield">
           <input type="text" class="spectrum-Textfield-input spectrum-DatePicker-input spectrum-DatePicker-startField" placeholder="mm/dd/yyyy hh:mm a" name="start" value="">
         </div>
@@ -195,7 +195,7 @@ examples:
       </div>
       <p/>
 
-      <div class="spectrum-DatePicker spectrum-DatePicker spectrum-DatePicker--range spectrum-DatePicker--datetimeRange is-invalid" role="combobox" aria-expanded="false" aria-haspopup="dialog">
+      <div class="spectrum-DatePicker spectrum-DatePicker--range spectrum-DatePicker--datetimeRange is-invalid" role="combobox" aria-expanded="false" aria-haspopup="dialog">
         <div class="spectrum-Textfield spectrum-DatePicker-textfield is-invalid">
           <input type="text" class="spectrum-Textfield-input spectrum-DatePicker-input spectrum-DatePicker-startField" placeholder="mm/dd/yyyy hh:mm a" name="start" value="">
         </div>
