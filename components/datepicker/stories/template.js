@@ -48,12 +48,14 @@ export const Template = ({
 		>
 			${[
 				TextField({
+				isReadOnly: readOnly,
 					...globals,
 					size: "m",
 					isQuiet,
 					isDisabled,
 					isValid,
 					isInvalid,
+					isReadOnly: readOnly,
 					customClasses: [`${rootClass}-textfield`],
 					customInputClasses: [`${rootClass}-input`],
 					placeholder: "Choose a date",
@@ -72,6 +74,7 @@ export const Template = ({
 					iconType: "workflow",
 					iconName: "Calendar",
 					isQuiet,
+					customStyles:  readOnly ? {'display': 'none'} : "",
 					// @todo this is not added to the button on the website; need to make sure it's not a bug
 					// isOpen,
 					isInvalid,
@@ -84,7 +87,7 @@ export const Template = ({
 				}),
 				Popover({
 					...globals,
-					isOpen: isOpen && !isDisabled,
+					isOpen: isOpen && !isDisabled && !readOnly,
 					withTip: false,
 					position: "bottom",
 					isQuiet,
