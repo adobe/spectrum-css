@@ -120,7 +120,7 @@ governing permissions and limitations under the License.
   }
 
   &:focus-within {
-    &:focus-ring,
+    &:focus-visible,
     &.is-focused {
       background-color: var(--mod-assetlist-item-background-color-hover, var(--spectrum-assetlist-item-background-color-hover));
       &::before {
