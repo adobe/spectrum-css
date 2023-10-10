@@ -13,7 +13,6 @@ governing permissions and limitations under the License.
 .spectrum-AssetList {
   --spectrum-assetlist-checkbox-margin: 0;
   --spectrum-assetlist-width: 272px;
-
   --spectrum-assetlist-child-indicator-animation: var(--spectrum-animation-duration-100);
 
   /* item */
@@ -25,27 +24,17 @@ governing permissions and limitations under the License.
   --spectrum-assetlist-item-animation: var(--spectrum-animation-duration-100);
   --spectrum-assetlist-item-font-size: var(--spectrum-font-size-100);
   --spectrum-assetlist-item-font-weight: var(--spectrum-regular-font-weight);
+  --spectrum-assetlist-item-background-color-down: var(--spectrum-gray-300);
 
   /* Thumbnail */
   --spectrum-assetlist-thumbnail-width: var(--spectrum-spacing-400);
   --spectrum-assetlist-thumbnail-height: var(--spectrum-spacing-400);
-  --spectrum-assetlist-thumbnail-margin-left: var(--spectrum-spacing-100);
-
-  /* item colors */
-  --spectrum-assetlist-item-background-color-selected-hover: rgba(2, 101, 220, 0.2);
-  /* dark rgba(84, 163, 246, 0.25) darkest rgba(64, 150, 243, 0.3)*/
-  --spectrum-assetlist-item-background-color-selected: rgba(2, 101, 220, 0.1);
-  /*
-  dark rgab(84, 163, 246, 0.15)
-  darkest rgba(64, 150, 243, 0.2))
-  */
-  --spectrum-assetlist-item-background-color-down: var(--spectrum-gray-300);
-  --spectrum-assetlist-border-color-key-focus: var(--spectrum-blue-800); /* and blue-700 for dark and darkest */
+  --spectrum-assetlist-thumbnail-margin-inline-start: var(--spectrum-spacing-100);
 
   /* label */
-  --spectrum-assetlist-item-label-padding-left: var(--spectrum-spacing-100);
+  --spectrum-assetlist-item-label-padding-inline-start: var(--spectrum-spacing-100);
   --spectrum-assetlist-item-background-color-hover: var(--spectrum-gray-200);
-
+  --spectrum-assetlist-label-color: var(--spectrum-neutral-content-color-default);
 }
 
 .spectrum-AssetList {
@@ -56,8 +45,9 @@ governing permissions and limitations under the License.
 
 .spectrum-AssetList-item {
   position: relative;
+  color: var(--spectrum-assetlist-label-color, var(--spectrum-assetlist-label-color));
 
-  display: flex;
+  display: grid;
   box-sizing: border-box;
   align-items: center;
 
@@ -89,11 +79,11 @@ governing permissions and limitations under the License.
     inset-inline-start: 0;
     inset-inline-end: 0;
 
-    block-size: var(--spectrum-assetlist-item-height); /* do we need this? if so make another custom prop */
+    block-size: var(--mod-assetlist-item-height, var(--spectrum-assetlist-item-height)); /* do we need this? if so make another custom prop */
 
     background-color: transparent;
 
-    border-radius: var(--spectrum-assetlist-item-border-radius); /* do we need this? if so make another custom prop */
+    border-radius: var(--mod-assetlist-item-border-radius, var(--spectrum-assetlist-item-border-radius)); /* do we need this? if so make another custom prop */
   }
 
   &.is-selectable,
@@ -103,6 +93,7 @@ governing permissions and limitations under the License.
     /* checkbox on the left, shows up always */
     .spectrum-Checkbox {
       display: inline-flex;
+      align-items: center;
     }
   }
 
@@ -110,6 +101,7 @@ governing permissions and limitations under the License.
     /* show chevron */
     .spectrum-AssetList-itemChildIndicator {
       display: block;
+      justify-self: flex-end;
     }
   }
 
@@ -119,7 +111,7 @@ governing permissions and limitations under the License.
 
     inline-size: var(--mod-assetlist-thumbnail-width, var(--spectrum-assetlist-thumbnail-width));
     block-size: var(--mod-assetlist-thumnail-height, var(--spectrum-assetlist-thumbnail-height));
-    margin-inline-start: var(--mod-assetlist-thumbnail-margin-left, var(--spectrum-assetlist-thumbnail-margin-left));
+    margin-inline-start: var(--mod-assetlist-thumbnail-margin-left, var(--spectrum-assetlist-thumbnail-margin-inline-start));
     vertical-align: middle;
   }
 
@@ -127,7 +119,7 @@ governing permissions and limitations under the License.
     background-color: var(--mod-assetlist-item-background-color-hover, var(--spectrum-assetlist-item-background-color-hover));
   }
 
-  &:focus {
+  &:focus-within {
     &:focus-ring,
     &.is-focused {
       background-color: var(--mod-assetlist-item-background-color-hover, var(--spectrum-assetlist-item-background-color-hover));
@@ -172,6 +164,7 @@ governing permissions and limitations under the License.
 .spectrum-AssetList-itemLabel {
   flex: 1;
   padding-inline-start: var(--mod-assetlist-item-label-padding-inline-start, var(--spectrum-assetlist-item-label-padding-inline-start));
+
 
   text-overflow: ellipsis;
   overflow: hidden;
