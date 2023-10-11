@@ -28,11 +28,11 @@
 | `--mod-datepicker-pickerbutton-border-color`            |
 | `--mod-datepicker-pickerbutton-border-color-invalid`    |
 | `--mod-datepicker-quiet-border-color-hover`             |
+| `--mod-datepicker-quiet-button-offset`                  |
 | `--mod-datepicker-range-dash-margin-left`               |
 | `--mod-datepicker-range-dash-padding-top`               |
 | `--mod-datepicker-range-input-width-first`              |
 | `--mod-datepicker-range-input-width-quiet-first`        |
 | `--mod-picker-button-border-color`                      |
-| `--mod-quiet-button-offset`                             |
 | `--mod-textfield-icon-spacing-inline-end-invalid`       |
 | `--mod-textfield-icon-spacing-inline-end-quiet-invalid` |

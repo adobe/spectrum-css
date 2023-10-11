@@ -8,7 +8,7 @@ sections:
       The classes containing `InputGroup` have been renamed or removed. For details, see the "renamed" and "removed" sections below or the example markup.
 
       ### New Picker markup
-      Instead of a `.spectrum-Picker`, Combobox now uses `.spectrum-PickerButton`. Refer to the example markup for usage details.
+      Instead of a `.spectrum-Picker`, DatePicker now uses `.spectrum-PickerButton`. Refer to the example markup for usage details.
 
       ### Workflow icon size changed to medium
       If your markup is still using the small icon, replace `.spectrum-Icon--sizeS` with `.spectrum-Icon--sizeM`.

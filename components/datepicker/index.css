@@ -23,6 +23,7 @@ governing permissions and limitations under the License.
   --spectrum-datepicker-pickerbutton-width: calc((var(--spectrum-field-edge-to-disclosure-icon-100) * 2) + var(--spectrum-workflow-icon-size-100));
   --spectrum-datepicker-pickerbutton-width-quiet: calc(var(--spectrum-datepicker-pickerbutton-width) - var(--spectrum-datepicker-quiet-button-offset));
   --spectrum-datepicker-quiet-button-offset: var(--spectrum-text-to-visual-100);
+  --spectrum-datepicker-fieldbutton-border-radius-quiet: 0;
 
   --spectrum-datepicker-icon-to-button: var(--spectrum-text-to-visual-100);
   --spectrum-datepicker-icon-to-text: var(--spectrum-component-edge-to-text-100);
@@ -65,9 +66,6 @@ governing permissions and limitations under the License.
   --spectrum-datepicker-padding-inline-end-quiet: calc((var(--spectrum-datepicker-pickerbutton-width) + var(--spectrum-component-edge-to-text-100)) - var(--spectrum-datepicker-quiet-button-offset));
   --spectrum-datepicker-padding-inline-end-invalid: calc(var(--spectrum-datepicker-pickerbutton-width) + var(--spectrum-component-edge-to-text-100) + var(--spectrum-datepicker-icon-to-button) + var(--spectrum-datepicker-icon-size) - (var(--spectrum-datepicker-border-width) * 2));
   --spectrum-datepicker-padding-inline-end-invalid-quiet: calc(var(--spectrum-datepicker-pickerbutton-width-quiet) + var(--spectrum-datepicker-icon-size) + var(--spectrum-datepicker-icon-to-text));
-
-  /* combobox */
-  --spectrum-combobox-quiet-fieldbutton-border-radius: 0;
 }
 
 .spectrum-DatePicker {
@@ -139,11 +137,11 @@ governing permissions and limitations under the License.
 }
 
 .spectrum-DatePicker--quiet {
-  border-radius: var(--mod-combobox-quiet-fieldbutton-border-radius, var(--spectrum-combobox-quiet-fieldbutton-border-radius));
+  border-radius: var(--mod-datepicker-fieldbutton-border-radius-quiet, var(--spectrum-datepicker-fieldbutton-border-radius-quiet));
 
   .spectrum-DatePicker-button {
     inline-size: auto;
-    inset-inline-end: calc(-1 * var(--mod-quiet-button-offset, var(--spectrum-datepicker-quiet-button-offset)));
+    inset-inline-end: calc(-1 * var(--mod-datepicker-quiet-button-offset, var(--spectrum-datepicker-quiet-button-offset)));
 
     &:disabled,
     &:disabled:hover {
