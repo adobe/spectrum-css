@@ -18,8 +18,8 @@ export default {
 			},
 			control: { type: "text" },
 		},
-		treatment: {
-			name: "Treatment",
+		variant: {
+			name: "Variant",
 			type: { name: "string" },
 			table: {
 				type: { summary: "string" },
@@ -28,17 +28,27 @@ export default {
 			options: ["neutral", "negative"],
 			control: "inline-radio",
 		},
+		size: {
+			name: "Size",
+			type: { name: "string", required: true },
+			table: {
+				type: { summary: "string" },
+				category: "Component",
+			},
+			options: ["s", "m", "l", "xl"],
+			control: "select",
+		},
 		hideIcon: {
 			name: "Hide icon",
 			type: { name: "boolean" },
-			description: "Only applicable if treatment is negative.",
+			description: "Help text using the negative variant can have an optional icon.",
 			table: {
 				type: { summary: "boolean" },
 				disable: false,
-				category: "Advanced",
+				category: "Component",
 			},
 			control: "boolean",
-			if: { arg: "treatment", eq: "negative" },
+			if: { arg: "variant", eq: "negative" },
 		},
 		isDisabled: {
 			name: "Disabled",
@@ -49,13 +59,23 @@ export default {
 			},
 			control: "boolean",
 		},
+		customStyles: {
+			name: "Custom styles",
+			description: "Storybook only styles for testing the story, applied to the parent element.",
+			table: {
+				type: { summary: "object" },
+				category: "Advanced",
+			},
+			if: { arg: 'customStyles' }
+		}
 	},
 	args: {
 		rootClass: "spectrum-HelpText",
 		text: "Create a password with at least 8 characters.",
-		treatment: "neutral",
+		variant: "neutral",
 		hideIcon: false,
 		isDisabled: false,
+		size: "m",
 	},
 	parameters: {
 		actions: {
@@ -70,4 +90,13 @@ export default {
 };
 
 export const Default = Template.bind({});
+Default.storyName = "Neutral";
 Default.args = {};
+
+export const Negative = Template.bind({});
+Negative.storyName = "Negative";
+Negative.args = {
+	variant: "negative",
+	text: "This is an example with wrapping text. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+	customStyles: {'max-width': '350px'},
+};
