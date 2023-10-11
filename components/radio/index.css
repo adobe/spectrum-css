@@ -177,8 +177,7 @@ governing permissions and limitations under the License.
   position: relative;
   vertical-align: top;
 
-  min-block-size: var(--mod-radio-height,
-                      var(--spectrum-radio-height));
+  min-block-size: var(--mod-radio-height, var(--spectrum-radio-height));
   max-inline-size: 100%;
 
   &:hover {
@@ -256,14 +255,7 @@ governing permissions and limitations under the License.
     .spectrum-Radio-label {
       color: var(--highcontrast-radio-neutral-content-color-focus,
                 var(--mod-radio-neutral-content-color-focus,
-                    var(--spectrum-radio-neutral-content-color-focus)));    }
-  }
-
-  &.is-invalid {
-    .spectrum-Radio-label {
-      color: var(--highcontrast-radio-neutral-content-color,
-                var(--mod-radio-neutral-content-color,
-                    var(--spectrum-radio-neutral-content-color)));
+                    var(--spectrum-radio-neutral-content-color-focus)));
     }
   }
 
@@ -284,7 +276,7 @@ governing permissions and limitations under the License.
     .spectrum-Radio-label,
     /* ensure disabled readonly has normal text color */
     & .spectrum-Radio-input:disabled ~ .spectrum-Radio-label,
-    & .spectrum-Radio-input:checked:disabled ~ .spectrum-Radio-label, {
+    & .spectrum-Radio-input:checked:disabled ~ .spectrum-Radio-label {
       margin-inline-start: auto;
       color: inherit;
     }
@@ -383,7 +375,7 @@ governing permissions and limitations under the License.
     }
   }
 
- /* focused state */
+  /* focused state */
   &:focus-visible {
     + .spectrum-Radio-button::after {
       border-width: var(--mod-radio-focus-indicator-thickness,

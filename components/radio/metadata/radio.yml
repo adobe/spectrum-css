@@ -21,7 +21,7 @@ sections:
       - Read-only radio buttons do not have a focus ring, but the button should be focusable.]
 
       ### Invalid/Error State
-      - Invalid radio buttons are signified by including [HelpText](helptext.html) in a [FieldGroup](fieldgroup.html).
+      - Invalid radio buttons are signified by including [Help text](helptext.html) in a [Field group](fieldgroup.html). The `.is-invalid` class has been removed. See Field group for an example with an invalid radio group. 
 
       ### Remove focus-ring class
       We've migrated away from the focus-ring class in favor of the native `:focus-visible` pseudo-class due to changes in browser support.
