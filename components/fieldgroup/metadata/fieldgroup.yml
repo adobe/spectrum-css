@@ -1,20 +1,20 @@
 name: Field group
 description: |
   - A group of fields, usually Radios or Checkboxes.
-  - Fieldgroup incorporates the help text component which may appear below a fieldgroup.
+  - Field group incorporates the Help text component which may appear below a Field group.
   - Help text is necessary to denote invalid checkbox fields, invalid radio button fields, and required fields.
-  - Invalid radio buttons are signified only by alert help text.
-  - Invalid checkboxes are signified by alert help text and alert input box color.
+  - Invalid radio buttons are signified only by negative Help text.
+  - Invalid checkboxes are signified by negative Help text and the negative/invalid color on the input box.
 sections:
   - name: Migration Guide
     description: |
-      ### Field Group Now Includes Label and Helptext
+      ### Field group now includes Field label and Help text
       - Include Field Label as size medium, `spectrum-FieldLabel spectrum-FieldLabel--sizeM`.
-      - Include Helptext as `spectrum-HelpText-text`.
-      ### Field Group Label has two layout options
+      - Include Help text as `spectrum-HelpText-text`.
+      ### Field group label has two layout options
       - Label can be top aligned with `spectrum-FieldGroup spectrum-FieldGroup--toplabel`.
       - Label can be side aligned with `spectrum-FieldGroup spectrum-FieldGroup--sidelabel`.
-      ### Field Group must now include `spectrum-FieldGroupInputLayout` as the immediate parent of the FieldGroup items
+      ### Field group must now include `spectrum-FieldGroupInputLayout` as the immediate parent of the Field group items
       - Due to the addition of label, a new nested div must wrap the fieldgroup items to control their layout separately from the label
 
 examples:
@@ -198,17 +198,22 @@ examples:
           <h4 class="spectrum-Heading spectrum-Heading--sizeXS spectrum-Examples-itemHeading">Radio</h4>
 
           <form class="spectrum-Form">
-            <div class="spectrum-FieldGroup spectrum-FieldGroup--toplabel spectrum-FieldGroup--horizontal" role="radiogroup" aria-labelledby="radiogroup-label-3">
+            <div
+              class="spectrum-FieldGroup spectrum-FieldGroup--toplabel spectrum-FieldGroup--horizontal"
+              role="radiogroup"
+              aria-invalid="true"
+              aria-labelledby="radiogroup-label-3"
+            >
               <div class="spectrum-FieldLabel spectrum-FieldLabel--sizeM" id="radiogroup-label-3">Radio Group Label</div>
 
               <div class="spectrum-FieldGroupInputLayout" aria-describedby="helptext-radio-3">
-                <div class="spectrum-Radio spectrum-FieldGroup-item is-invalid">
+                <div class="spectrum-Radio spectrum-FieldGroup-item">
                   <input type="radio" name="pets" class="spectrum-Radio-input" id="radio-4">
                   <span class="spectrum-Radio-button"></span>
                   <label class="spectrum-Radio-label" for="radio-0">Kittens</label>
                 </div>
 
-                <div class="spectrum-Radio spectrum-FieldGroup-item is-invalid">
+                <div class="spectrum-Radio spectrum-FieldGroup-item">
                   <input type="radio" name="pets" class="spectrum-Radio-input" id="radio-5" checked>
                   <span class="spectrum-Radio-button"></span>
                   <label class="spectrum-Radio-label" for="radio-1">Puppies</label>
