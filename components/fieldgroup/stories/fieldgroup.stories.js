@@ -1,6 +1,6 @@
 // Import the component markup template
-import { Template } from "./template";
 import { default as Radio } from "@spectrum-css/radio/stories/radio.stories.js";
+import { Template } from "./template";
 
 export default {
 	title: "Components/Field group",
@@ -58,6 +58,7 @@ export default {
 export const Vertical = Template.bind({});
 Vertical.args = {
 	layout: "vertical",
+	isInvalid: true,
 	items: [
 		{
 			id: "1",
@@ -73,6 +74,7 @@ Vertical.args = {
 export const Horizontal = Template.bind({});
 Horizontal.args = {
 	layout: "horizontal",
+	isInvalid: true,
 	items: [
 		{
 			id: "1",
