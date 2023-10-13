@@ -54,8 +54,8 @@ governing permissions and limitations under the License.
   --spectrum-treeview-indicator-margin-inline-start: calc(-1 * var(--spectrum-component-height-200));
   --spectrum-treeview-indicator-margin-block-end: calc(-1 * var(--spectrum-component-edge-to-visual-only-200));
   --spectrum-treeview-indicator-margin-inline-end: var(--spectrum-text-to-visual-75);
-  --spectrum-treeview-indicator-padding-inline: var(--spectrum-component-edge-to-text-100);
-  --spectrum-treeview-indicator-padding-block: var(--spectrum-component-edge-to-visual-only-200);
+  --spectrum-treeview-indicator-padding: var(--spectrum-disclosure-indicator-top-to-disclosure-icon-medium);
+
   --spectrum-treeview-indicator-animation-duration: var(--spectrum-animation-duration-100);
 }
 
@@ -65,6 +65,7 @@ governing permissions and limitations under the License.
   --spectrum-treeview-item-indentation: var(--spectrum-treeview-item-indentation-small);
   --spectrum-treeview-item-padding-block-end: var(--spectrum-component-edge-to-text-75);
   --spectrum-treeview-item-affordance-size: var(--spectrum-component-height-75);
+  --spectrum-treeview-indicator-padding: var(--spectrum-disclosure-indicator-top-to-disclosure-icon-small);
 }
 
 .spectrum-TreeView--sizeL {
@@ -73,6 +74,7 @@ governing permissions and limitations under the License.
   --spectrum-treeview-item-min-block-size: var(--spectrum-component-height-100);
   --spectrum-treeview-item-padding-block-end: var(--spectrum-component-edge-to-text-200);
   --spectrum-treeview-item-affordance-size: var(--spectrum-component-height-200);
+  --spectrum-treeview-indicator-padding: var(--spectrum-disclosure-indicator-top-to-disclosure-icon-medium);
 }
 
 .spectrum-TreeView--sizeXL {
@@ -82,6 +84,7 @@ governing permissions and limitations under the License.
   --spectrum-treeview-item-min-block-size: var(--spectrum-component-height-200);
   --spectrum-treeview-item-padding-block-end: var(--spectrum-component-edge-to-text-300);
   --spectrum-treeview-item-affordance-size: var(--spectrum-component-height-300);
+  --spectrum-treeview-indicator-padding: var(--spectrum-disclosure-indicator-top-to-disclosure-icon-large);
 }
 
 .spectrum-TreeView--quiet {
@@ -96,13 +99,6 @@ governing permissions and limitations under the License.
     --highcontrast-treeview-item-text-color-selected: HighlightText;
     --highcontrast-treeview-item-icon-color-selected: HighlightText;
 
-    @supports (color: SelectedItem) {
-      --highcontrast-treeview-item-background-color-selected: SelectedItem;
-      --highcontrast-treeview-item-border-color-selected: SelectedItem;
-      --highcontrast-treeview-item-text-color-selected: SelectedItemText;
-      --highcontrast-treeview-item-icon-color-selected: SelectedItemText;
-    }
-
     --highcontrast-treeview-item-icon-color: LinkText;
     --highcontrast-treeview-item-text-color: LinkText;
 
@@ -116,6 +112,15 @@ governing permissions and limitations under the License.
     --highcontrast-treeview-item-icon-color-disabled: GrayText;
 
     --highcontrast-treeview-heading-color: CanvasText;
+  }
+
+  @supports (color: SelectedItem) {
+    .spectrum-TreeView {
+      --highcontrast-treeview-item-background-color-selected: SelectedItem;
+      --highcontrast-treeview-item-border-color-selected: SelectedItem;
+      --highcontrast-treeview-item-text-color-selected: SelectedItemText;
+      --highcontrast-treeview-item-icon-color-selected: SelectedItemText;
+    }
   }
 
   .spectrum-TreeView-itemLabel {
@@ -185,7 +190,6 @@ governing permissions and limitations under the License.
       }
     }
   }
-
 
   &.is-selected {
     > .spectrum-TreeView-itemLink:not(:focus-visible) {
@@ -321,8 +325,8 @@ governing permissions and limitations under the License.
   margin-block-end: var(--mod-treeview-indicator-margin-block-end, var(--spectrum-treeview-indicator-margin-block-end));
   margin-inline-end: var(--mod-treeview-indicator-margin-inline-end, var(--spectrum-treeview-indicator-margin-inline-end));
 
-  padding-inline: var(--mod-treeview-indicator-padding-inline, var(--spectrum-treeview-indicator-padding-inline));
-  padding-block: var(--mod-treeview-indicator-padding-block, var(--spectrum-treeview-indicator-padding-block));
+  padding-inline: var(--mod-treeview-indicator-padding-inline, var(--spectrum-treeview-indicator-padding));
+  padding-block: var(--mod-treeview-indicator-padding-block, var(--spectrum-treeview-indicator-padding));
 
   transform: logical rotate(0deg);
   transition: transform ease var(--mod-treeview-indicator-animation-duration, var(--spectrum-treeview-indicator-animation-duration));
