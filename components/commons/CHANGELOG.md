@@ -3,6 +3,23 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+<a name="9.0.0"></a>
+#9.0.0
+🗓
+2023-10-13 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/commons@8.0.1...@spectrum-css/commons@9.0.0)
+
+\*feat(overlay)!: migrate to spectrum-tokens (#2165)([0331dae](https://github.com/adobe/spectrum-css/commit/0331dae)), closes[#2165](https://github.com/adobe/spectrum-css/issues/2165)
+
+    	###
+    	🛑 BREAKING CHANGES
+
+    		*
+    		migrates Overlay to use `@adobe/spectrum-tokens`
+
+- feat(overlay): migrate to use spectrum-tokens BREAKING CHANGE: migrate overlay to use spectrum tokens
+- chore(tokens): add custom tokens to overlay component
+- docs: regenerate mods
+
 <a name="8.0.1"></a>
 ##8.0.1
 🗓

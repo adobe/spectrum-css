@@ -3,6 +3,28 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+<a name="4.0.0"></a>
+#4.0.0
+🗓
+2023-10-13 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/assetlist@3.0.85...@spectrum-css/assetlist@4.0.0)
+
+\*feat(millercolumns)!: migrate to spectrum-tokens (#2191)([aa163d2](https://github.com/adobe/spectrum-css/commit/aa163d2)), closes[#2191](https://github.com/adobe/spectrum-css/issues/2191)
+
+    	###
+    	🛑 BREAKING CHANGES
+
+    		*
+    		migrates MillerColumns to use `@adobe/spectrum-tokens`
+
+Additionally:
+
+- chore(miller): update build
+- chore(miller): use new tokens
+- chore(miller): remove extra space
+- fix(miller): storybook only files selectable
+- chore(millercolumns): rename custom properties
+- docs(miller): generate mods
+
 <a name="3.0.85"></a>
 ##3.0.85
 🗓

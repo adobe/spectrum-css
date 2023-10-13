@@ -3,6 +3,15 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+<a name="5.1.2"></a>
+##5.1.2
+🗓
+2023-10-13 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/menu@5.1.1...@spectrum-css/menu@5.1.2)
+
+### 🐛 Bug fixes
+
+- **menu:**drill-in disabled menu item chevron ([#2199](https://github.com/adobe/spectrum-css/issues/2199))([2dba5d9](https://github.com/adobe/spectrum-css/commit/2dba5d9)), closes[#2176](https://github.com/adobe/spectrum-css/issues/2176)
+
 <a name="5.1.1"></a>
 ##5.1.1
 🗓

@@ -3,6 +3,53 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+<a name="2.0.0"></a>
+#2.0.0
+🗓
+2023-10-13 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/dial@1.0.55...@spectrum-css/dial@2.0.0)
+
+\*feat(dial)!: migrate to use `@adobe/spectrum-tokens` (#1971)([f116b7e](https://github.com/adobe/spectrum-css/commit/f116b7e)), closes[#1971](https://github.com/adobe/spectrum-css/issues/1971)
+
+    	###
+    	🛑 BREAKING CHANGES
+
+    		*
+    		migrates the Dial component to `@adobe/spectrum-tokens`
+
+Additionally:
+
+- chore(dial): begin migrating from old to new tokens
+
+- chore(dial): use latest dependencies
+
+- feat(dial): replace vars with new values
+
+- chore(dial): update to latest deps
+
+- chore(dial): update dependencies
+
+- chore(dial): finish migration
+
+Uses correct colors & removes duplicate properties
+
+- chore(dial): high-contrast fixes
+
+- chore(dial): rename custom properties
+
+- refactor(dial): focus and dragged states and SB controls
+
+- chore(dial): address left margin issue
+
+- chore(dial): address PR feedback
+
+- chore(dial): address PR feedback for disabled state
+
+- refactor(dial): use focus-visible
+
+- chore(dial): remove disabled from tab order
+
+- chore(dial): adds focus-visible
+
 <a name="1.0.55"></a>
 ##1.0.55
 🗓

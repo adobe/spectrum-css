@@ -3,6 +3,41 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+<a name="4.0.0"></a>
+#4.0.0
+🗓
+2023-10-13 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/modal@3.1.0...@spectrum-css/modal@4.0.0)
+
+### 🔙 Reverts
+
+\*gulp and build updates ([#2121](https://github.com/adobe/spectrum-css/issues/2121))([03a37f5](https://github.com/adobe/spectrum-css/commit/03a37f5)), closes[#2099](https://github.com/adobe/spectrum-css/issues/2099)
+
+\*feat(modal)!: diy migration (#2164)([0b83f13](https://github.com/adobe/spectrum-css/commit/0b83f13)), closes[#2164](https://github.com/adobe/spectrum-css/issues/2164)
+
+    	###
+    	🛑 BREAKING CHANGES
+
+    		*
+    		migrates Modal to use `@adobe/spectrum-tokens`
+
+Additionally:
+
+- feat(modal)!: migrate to spectrum tokens
+
+- chore(tokens): add modal custom tokens
+
+chore(modal): fixed indentation index.css
+
+chore(modal): added mod variables
+
+chore(modal): updated package version
+
+chore(modal): updated css to use custom tokens for animation
+
+chore: updated css properties
+
+- docs(modal): regenerate mods
+
 <a name="3.1.0"></a>
 #3.1.0
 🗓

@@ -3,6 +3,24 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+<a name="9.0.0"></a>
+#9.0.0
+🗓
+2023-10-13 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/dialog@8.0.8...@spectrum-css/dialog@9.0.0)
+
+\*feat(dialog)!: migrate to spectrum-tokens (#2168)([0811386](https://github.com/adobe/spectrum-css/commit/0811386)), closes[#2168](https://github.com/adobe/spectrum-css/issues/2168)
+
+    	###
+    	🛑 BREAKING CHANGES
+
+    		*
+    		migrates to use `@adobe/spectrum-tokens`
+
+Additionally:
+
+- feat(dialog): migrate to use spectrum-tokens BREAKING CHANGE: migrate dialog to use spectrum tokens
+- docs(dialog): regenerate mods file
+
 <a name="8.0.8"></a>
 ##8.0.8
 🗓

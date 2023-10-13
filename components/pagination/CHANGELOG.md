@@ -3,6 +3,52 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+<a name="7.0.0"></a>
+#7.0.0
+🗓
+2023-10-13 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/pagination@6.0.50...@spectrum-css/pagination@7.0.0)
+
+\*feat(pagination)!: migrate to spectrum tokens package([f29a74d](https://github.com/adobe/spectrum-css/commit/f29a74d))
+
+    	###
+    	🛑 BREAKING CHANGES
+
+    		*
+    		Replaces DNA tokens with Spectrum tokens.
+
+Update build to use Spectrum tokens.
+Remove skin.css and incorporate its CSS into index.css.
+
+refactor(pagination): styles migration to core tokens
+
+Migration of stylesheet to use Spectrum tokens.
+
+refactor(pagination): remove unused pagebutton class
+
+Remove CSS for .spectrum-Pagination-pageButton which is not used
+anywhere in the repo. This removes the need for additions to the custom
+tokens.
+
+fix(pagination): correct direction of arrows for right-to-left
+
+When viewing in RTL, the arrows were both facing in the same direction.
+This was because they were both setting the same rotation, and one of
+the arrows icons already uses a 180 degree rotation.
+
+fix: counter text sizing and t-shirt sizing docs
+
+Disable t-shirt size in Storybook until it is fully supported. To be
+supported it will need font sizes for the counter text and probably
+changes to the inline margins.
+
+For the counter text, removes spectrum-Body--secondary which doesn't
+seem to exist anymore, and applies the appropriate font size (14px
+at medium) and line-height tokens.
+
+docs(pagination): add button style pagination to storybook
+
+Add the "Button style" version of Pagination from the docs to Storybook.
+
 <a name="6.0.50"></a>
 ##6.0.50
 🗓

@@ -3,6 +3,39 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+<a name="3.0.0"></a>
+#3.0.0
+🗓
+2023-10-13 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/logicbutton@2.0.2...@spectrum-css/logicbutton@3.0.0)
+
+\*feat(logicbutton)!: migrate to use spectrum-tokens (#2175)([f4dc972](https://github.com/adobe/spectrum-css/commit/f4dc972)), closes[#2175](https://github.com/adobe/spectrum-css/issues/2175)[#714](https://github.com/adobe/spectrum-css/issues/714)
+
+    	###
+    	🛑 BREAKING CHANGES
+
+    		*
+    		migrates to use `@adobe/spectrum-tokens`
+
+Additionally:
+
+- chore(logicbutton): update to use tokens
+
+- feat(logicbutton): working on converting css to tokens
+
+- feat(logicbutton): utilize core tokens
+
+- chore(logicbutton): add spectrum and express files, fix unclosed css block
+
+- fix(logicbutton): fix and colors
+
+- chore(logicbutton): add additional stories for or and disabled
+
+- style(logicbutton): update WHCM styling for disabled button
+
+- docs(logicbutton): add spacing for examples
+
+Adds some extra room between the example buttons in the docs site.
+
 <a name="2.0.2"></a>
 ##2.0.2
 🗓
