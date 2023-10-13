@@ -1,4 +1,4 @@
-| Modifiable Custom Properties          |
+| Modifiable custom properties          |
 | ------------------------------------- |
 | `--mod-opacity-checkerboard-dark`     |
 | `--mod-opacity-checkerboard-light`    |

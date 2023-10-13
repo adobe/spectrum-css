@@ -1,13 +1,13 @@
 import { html } from "lit";
 import { classMap } from "lit/directives/class-map.js";
 
-import "../index.css";
+import "@spectrum-css/logicbutton";
 
 export const Template = ({
-	rootClass = "spectrum-LogicButton",
-	customClasses = [],
-	variant = "and",
-	isDisabled = false,
+    rootClass = "spectrum-LogicButton",
+    customClasses = [],
+    variant = "and",
+    isDisabled = false,
 }) => {
 	return html`
 		<button

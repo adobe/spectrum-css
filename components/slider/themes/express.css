@@ -9,13 +9,15 @@ OF ANY KIND, either express or implied. See the License for the specific languag
 governing permissions and limitations under the License.
 */
 
-@container (--system: express) {
-    .spectrum-Slider {
+@import "./spectrum.css";
 
+/* stylelint-disable spectrum-tools/no-unused-custom-properties */
+@container style(--system: express) {
+    .spectrum-Slider {
         --spectrum-slider-track-color: var(--spectrum-gray-200);
         --spectrum-slider-track-fill-color: var(--spectrum-gray-600);
         --spectrum-slider-ramp-track-color: var(--spectrum-gray-300);
-        --spectrum-slider-ramp-track-color-disabled:  var(--spectrum-gray-200);
+        --spectrum-slider-ramp-track-color-disabled: var(--spectrum-gray-200);
 
         --spectrum-slider-handle-background-color: var(--spectrum-gray-50);
         --spectrum-slider-handle-background-color-disabled: var(--spectrum-gray-50);
@@ -32,3 +34,4 @@ governing permissions and limitations under the License.
         --spectrum-slider-handle-focus-ring-color-key-focus: var(--spectrum-focus-indicator-color);
     }
 }
+/* stylelint-enable spectrum-tools/no-unused-custom-properties */

@@ -1,0 +1,14 @@
+:root,
+.spectrum,
+.spectrum--express {
+    font-family: var(--spectrum-sans-font-family-stack);
+    color: var(--spectrum-gray-900);
+    background-color: var(--spectrum-gray-100);
+
+    -webkit-tap-highlight-color: rgba(0 0 0 / 0%);
+}
+
+/* #root-inner {
+  overflow: hidden;
+  padding: var(--spectrum-spacing-400);
+} */

@@ -1,39 +1,27 @@
 {
-  "name": "@spectrum-css/searchwithin",
-  "version": "5.0.19",
-  "description": "The Spectrum CSS searchwithin component",
-  "license": "Apache-2.0",
-  "author": "Adobe",
-  "homepage": "https://opensource.adobe.com/spectrum-css/searchwithin",
-  "repository": {
-    "type": "git",
-    "url": "https://github.com/adobe/spectrum-css.git",
-    "directory": "components/searchwithin"
-  },
-  "bugs": {
-    "url": "https://github.com/adobe/spectrum-css/issues"
-  },
-  "main": "dist/index-vars.css",
-  "scripts": {
-    "build": "gulp"
-  },
-  "peerDependencies": {
-    "@spectrum-css/clearbutton": ">=1",
-    "@spectrum-css/icon": ">=3",
-    "@spectrum-css/picker": ">=3",
-    "@spectrum-css/textfield": ">=5",
-    "@spectrum-css/vars": ">=9"
-  },
-  "devDependencies": {
-    "@spectrum-css/clearbutton": "^2.0.0",
-    "@spectrum-css/component-builder": "^4.0.14",
-    "@spectrum-css/icon": "^4.0.3",
-    "@spectrum-css/picker": "^7.0.13",
-    "@spectrum-css/textfield": "^6.0.25",
-    "@spectrum-css/vars": "^9.0.8",
-    "gulp": "^4.0.0"
-  },
-  "publishConfig": {
-    "access": "public"
-  }
+    "name": "@spectrum-css/searchwithin",
+    "version": "5.0.19",
+    "description": "The Spectrum CSS searchwithin component",
+    "license": "Apache-2.0",
+    "author": "Adobe",
+    "homepage": "https://opensource.adobe.com/spectrum-css/searchwithin",
+    "repository": {
+        "type": "git",
+        "url": "https://github.com/adobe/spectrum-css.git",
+        "directory": "components/searchwithin"
+    },
+    "bugs": {
+        "url": "https://github.com/adobe/spectrum-css/issues"
+    },
+    "main": "dist/index.css",
+    "peerDependencies": {
+        "@spectrum-css/clearbutton": ">=5",
+        "@spectrum-css/icon": ">=4",
+        "@spectrum-css/picker": ">=7",
+        "@spectrum-css/textfield": ">=6",
+        "@spectrum-css/vars": ">=9"
+    },
+    "publishConfig": {
+        "access": "public"
+    }
 }

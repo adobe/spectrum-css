@@ -1,33 +1,29 @@
 {
-  "name": "@spectrum-css/illustratedmessage",
-  "version": "6.0.26",
-  "description": "The Spectrum CSS illustratedmessage component",
-  "license": "Apache-2.0",
-  "author": "Adobe",
-  "homepage": "https://opensource.adobe.com/spectrum-css/illustratedmessage",
-  "repository": {
-    "type": "git",
-    "url": "https://github.com/adobe/spectrum-css.git",
-    "directory": "components/illustratedmessage"
-  },
-  "bugs": {
-    "url": "https://github.com/adobe/spectrum-css/issues"
-  },
-  "main": "dist/index-vars.css",
-  "scripts": {
-    "build": "gulp"
-  },
-  "peerDependencies": {
-    "@spectrum-css/tokens": ">=10.0.0",
-    "@spectrum-css/typography": ">=5"
-  },
-  "devDependencies": {
-    "@spectrum-css/component-builder-simple": "^2.0.17",
-    "@spectrum-css/tokens": "^12.0.0",
-    "@spectrum-css/typography": "^5.0.45",
-    "gulp": "^4.0.0"
-  },
-  "publishConfig": {
-    "access": "public"
-  }
+    "name": "@spectrum-css/illustratedmessage",
+    "version": "6.0.26",
+    "description": "The Spectrum CSS illustratedmessage component",
+    "license": "Apache-2.0",
+    "author": "Adobe",
+    "homepage": "https://opensource.adobe.com/spectrum-css/illustratedmessage",
+    "repository": {
+        "type": "git",
+        "url": "https://github.com/adobe/spectrum-css.git",
+        "directory": "components/illustratedmessage"
+    },
+    "bugs": {
+        "url": "https://github.com/adobe/spectrum-css/issues"
+    },
+    "main": "dist/index.css",
+    "peerDependencies": {
+        "@spectrum-css/tokens": ">=12",
+        "@spectrum-css/typography": ">=5"
+    },
+    "peerDependenciesMeta": {
+        "@spectrum-css/typography": {
+            "optional": true
+        }
+    },
+    "publishConfig": {
+        "access": "public"
+    }
 }

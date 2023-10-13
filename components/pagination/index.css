@@ -10,19 +10,26 @@ OF ANY KIND, either express or implied. See the License for the specific languag
 governing permissions and limitations under the License.
 */
 
+/**
+ * @namespace spectrum
+ * @component Pagination
+ * @descendents textfield, counter, prevButton, nextButton, pageButton
+ * @modifiers explicit, listing
+ * @utility is-selected
+ */
 .spectrum-Pagination {
   --spectrum-pagination-counter-margin-inline-start: var(--spectrum-pagination-item-inline-spacing);
   --spectrum-pagination-page-button-inline-spacing: var(--spectrum-pagination-item-inline-spacing);
   --spectrum-pagination-counter-color: var(--spectrum-neutral-subdued-content-color-default);
   --spectrum-pagination-counter-font-size: var(--spectrum-font-size-100);
-  --spectrum-pagination-counter-line-height: var(-spectrum-line-height-100);
+  --spectrum-pagination-counter-line-height: var(--spectrum-line-height-100);
 }
 
 .spectrum-Pagination--explicit,
 .spectrum-Pagination--listing {
-  display: flex;
-  flex-direction: row;
-  align-items: center;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
 }
 
 /* Explicit variant elements */
@@ -32,9 +39,9 @@ governing permissions and limitations under the License.
 }
 
 .spectrum-Pagination-counter {
+  margin-inline-start: var(--mod-pagination-counter-margin-inline-start, var(--spectrum-pagination-counter-margin-inline-start));
   font-size: var(--mod-pagination-counter-font-size, var(--spectrum-pagination-counter-font-size));
   line-height: var(--mod-pagination-counter-line-height, var(--spectrum-pagination-counter-line-height));
-  margin-inline-start: var(--mod-pagination-counter-margin-inline-start, var(--spectrum-pagination-counter-margin-inline-start));
   color: var(--mod-pagination-counter-color, var(--spectrum-pagination-counter-color));
 }
 

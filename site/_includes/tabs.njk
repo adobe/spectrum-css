@@ -1,0 +1,16 @@
+<div class="spectrum-Tabs spectrum-Tabs--sizeM spectrum-Tabs--horizontal" id="{{ tab_id }}">
+    <div class="spectrum-ActionGroup spectrum-ActionGroup--compact spectrum-ActionGroup--sizeM">
+        {% for tab in tabs %}
+        <button class="spectrum-ActionButton spectrum-ActionButton--sizeM spectrum-ActionGroup-item{% if tab.isSelected %} is-selected{% endif %}" panel-id="{{ tab.id }}">
+            <span class="spectrum-ActionButton-label">{{ tab.label }}</span>
+        </button>
+        {%- endfor %}
+    </div>
+    {% for tab in tabs %}
+    <div class="spectrum-Tabs-panel{% if tab.isSelected %} is-selected{% endif %}" id="{{ tab.id }}" tabindex="0">
+        <div class="spectrum-Tabs-panelContainer">
+            {{ tab.content | safe }}
+        </div>
+    </div>
+    {%- endfor %}
+</div>

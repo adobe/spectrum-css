@@ -1,31 +1,29 @@
-import { argTypes, ActionButtons } from "./index";
+import { ActionButtons, argTypes } from "./index";
 
+/**
+ * The action button component represents an action a user can take.
+ */
 export default {
-	title: "Components/Action button/Static Black",
-	description:
-		"The action button component represents an action a user can take.",
-	component: "ActionButton",
-	argTypes: argTypes,
-	args: {
-		rootClass: "spectrum-ActionButton",
-		size: "m",
-		iconName: "More",
-		isQuiet: false,
-		isEmphasized: false,
-		hasPopup: false,
-    backgroundColor: "rgb(181, 209, 211)",
-    staticColor: "black",
-	},
-	parameters: {
-		actions: {
-			handles: ["click .spectrum-ActionButton:not([disabled])"],
-		},
-		status: {
-			type: process.env.MIGRATED_PACKAGES.includes("actionbutton")
-				? "migrated"
-				: undefined,
-		},
-	},
+    title: "Components/Action button/Static Black",
+    component: "ActionButton",
+    argTypes: argTypes,
+    args: {
+        rootClass: "spectrum-ActionButton",
+        size: "m",
+        iconName: "More",
+        isQuiet: false,
+        isEmphasized: false,
+        hasPopup: false,
+        staticColor: "black",
+    },
+    parameters: {
+        actions: {
+            handles: ["click .spectrum-ActionButton:not([disabled])"],
+        },
+        status: {
+            type: process.env.MIGRATED_PACKAGES.includes("actionbutton") ? "migrated" : undefined,
+        },
+    },
 };
 
 export const Default = ActionButtons.bind({});
@@ -33,21 +31,21 @@ Default.args = {};
 
 export const Selected = ActionButtons.bind({});
 Selected.args = {
-	isSelected: true
+    isSelected: true,
 };
 
 export const Disabled = ActionButtons.bind({});
 Disabled.args = {
-	isDisabled: true
+    isDisabled: true,
 };
 
 export const SelectedDisabled = ActionButtons.bind({});
 SelectedDisabled.args = {
-	isSelected: true,
-	isDisabled: true
+    isSelected: true,
+    isDisabled: true,
 };
 
 export const Quiet = ActionButtons.bind({});
 Quiet.args = {
-	isQuiet: true
+    isQuiet: true,
 };

@@ -31,7 +31,7 @@ Wrong: Throws an error here
 
 ```css
 .spectrum-Well-Component {
-	background-color: (--prefix-component-background-color);
+    background-color: (--prefix-component-background-color);
 }
 ```
 
@@ -39,6 +39,6 @@ Correct:
 
 ```css
 .spectrum-Well-Component {
-	background-color: var(--prefix-component-background-color);
+    background-color: var(--prefix-component-background-color);
 }
 ```

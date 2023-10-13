@@ -1,7 +1,5 @@
-| Modifiable Custom Properties                                      |
+| Modifiable custom properties                                      |
 | ----------------------------------------------------------------- |
-| `--mod-breadcrumbs-action-button-color`                           |
-| `--mod-breadcrumbs-action-button-color-disabled`                  |
 | `--mod-breadcrumbs-action-button-spacing-block`                   |
 | `--mod-breadcrumbs-action-button-spacing-block-between-multiline` |
 | `--mod-breadcrumbs-action-button-spacing-block-compact`           |
@@ -11,7 +9,6 @@
 | `--mod-breadcrumbs-block-size`                                    |
 | `--mod-breadcrumbs-block-size-compact`                            |
 | `--mod-breadcrumbs-block-size-multiline`                          |
-| `--mod-breadcrumbs-focus-indicator-color`                         |
 | `--mod-breadcrumbs-focus-indicator-gap`                           |
 | `--mod-breadcrumbs-focus-indicator-thickness`                     |
 | `--mod-breadcrumbs-font-family`                                   |
@@ -40,11 +37,7 @@
 | `--mod-breadcrumbs-inline-start`                                  |
 | `--mod-breadcrumbs-item-link-border-radius`                       |
 | `--mod-breadcrumbs-line-height`                                   |
-| `--mod-breadcrumbs-separator-color`                               |
 | `--mod-breadcrumbs-separator-spacing-inline`                      |
-| `--mod-breadcrumbs-text-color`                                    |
-| `--mod-breadcrumbs-text-color-current`                            |
-| `--mod-breadcrumbs-text-color-disabled`                           |
 | `--mod-breadcrumbs-text-decoration-gap`                           |
 | `--mod-breadcrumbs-text-decoration-thickness`                     |
 | `--mod-breadcrumbs-text-spacing-block-between-multiline`          |

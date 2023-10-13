@@ -1,16 +1,16 @@
-import { html } from "lit";
 import { useArgs } from "@storybook/client-api";
+import { html } from "lit";
 import { classMap } from "lit/directives/class-map.js";
-import { styleMap } from "lit/directives/style-map.js";
 import { ifDefined } from "lit/directives/if-defined.js";
+import { styleMap } from "lit/directives/style-map.js";
 
 import { Template as FieldLabel } from "@spectrum-css/fieldlabel/stories/template.js";
+import { Template as HelpText } from "@spectrum-css/helptext/stories/template.js";
 import { Template as Icon } from "@spectrum-css/icon/stories/template.js";
 import { Template as Popover } from "@spectrum-css/popover/stories/template.js";
 import { Template as ProgressCircle } from "@spectrum-css/progresscircle/stories/template.js";
-import { Template as HelpText } from "@spectrum-css/helptext/stories/template.js";
 
-import "../index.css";
+import "@spectrum-css/picker";
 
 export const Picker = ({
 	rootClass = "spectrum-Picker",
@@ -32,14 +32,6 @@ export const Picker = ({
 	...globals
 }) => {
 	const [_, updateArgs] = useArgs();
-
-	const { express } = globals;
-	try {
-		if (!express) import(/* webpackPrefetch: true */ "../themes/spectrum.css");
-		else import(/* webpackPrefetch: true */ "../themes/express.css");
-	} catch (e) {
-		console.warn(e);
-	}
 
 	return html`
 	<button
@@ -109,15 +101,6 @@ export const Template = ({
 	id,
 	...globals
 }) => {
-
-	const { express } = globals;
-	try {
-		if (!express) import(/* webpackPrefetch: true */ "../themes/spectrum.css");
-		else import(/* webpackPrefetch: true */ "../themes/express.css");
-	} catch (e) {
-		console.warn(e);
-	}
-
 	let iconName = "ChevronDown200";
 	switch (size) {
 		case "s":
@@ -164,9 +147,8 @@ export const Template = ({
 					labelPosition,
 					id,
 				})}
-			</div>
-			`
-		: 
+			</div>`
+		:
 			Picker({
 				...globals,
 				rootClass,
@@ -187,7 +169,7 @@ export const Template = ({
 				id,
 			})
 		}
-		
+
 		${helpText
 			? HelpText({
 					text: helpText,

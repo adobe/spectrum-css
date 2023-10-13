@@ -1,0 +1,9 @@
+.elements {
+  --seafoam-100-rgb: 206, 247, 243;
+  --seafoam-100: rgba(var(--seafoam-100-rgb));
+  --seafoam-200-rgb: 206, 247, 243;
+  --seafoam-200-opacity: 0.5;
+  --seafoam-200: rgba(var(--seafoam-200-rgb), var(--seafoam-200-opacity));
+  --seafoam-300-rgb: 206, 247, 243;
+  --seafoam-300: rgba(var(--seafoam-300-rgb));
+}

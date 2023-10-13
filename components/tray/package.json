@@ -1,39 +1,36 @@
 {
-  "name": "@spectrum-css/tray",
-  "version": "2.1.17",
-  "description": "The Spectrum CSS tray component",
-  "license": "Apache-2.0",
-  "author": "Adobe",
-  "homepage": "https://opensource.adobe.com/spectrum-css/tray",
-  "repository": {
-    "type": "git",
-    "url": "https://github.com/adobe/spectrum-css.git",
-    "directory": "components/tray"
-  },
-  "bugs": {
-    "url": "https://github.com/adobe/spectrum-css/issues"
-  },
-  "main": "dist/index-vars.css",
-  "scripts": {
-    "build": "gulp"
-  },
-  "peerDependencies": {
-    "@spectrum-css/button": ">=10",
-    "@spectrum-css/icon": ">=3",
-    "@spectrum-css/modal": ">=3",
-    "@spectrum-css/tokens": ">=10"
-  },
-  "devDependencies": {
-    "@spectrum-css/button": "^11.0.13",
-    "@spectrum-css/component-builder-simple": "^2.0.17",
-    "@spectrum-css/dialog": "^9.0.0",
-    "@spectrum-css/divider": "^2.1.30",
-    "@spectrum-css/icon": "^4.0.3",
-    "@spectrum-css/modal": "^4.0.0",
-    "@spectrum-css/tokens": "^12.0.0",
-    "gulp": "^4.0.0"
-  },
-  "publishConfig": {
-    "access": "public"
-  }
+    "name": "@spectrum-css/tray",
+    "version": "2.1.17",
+    "description": "The Spectrum CSS tray component",
+    "license": "Apache-2.0",
+    "author": "Adobe",
+    "homepage": "https://opensource.adobe.com/spectrum-css/tray",
+    "repository": {
+        "type": "git",
+        "url": "https://github.com/adobe/spectrum-css.git",
+        "directory": "components/tray"
+    },
+    "bugs": {
+        "url": "https://github.com/adobe/spectrum-css/issues"
+    },
+    "main": "dist/index.css",
+    "peerDependencies": {
+        "@spectrum-css/button": ">=11",
+        "@spectrum-css/checkbox": ">=7",
+        "@spectrum-css/divider": ">=2",
+        "@spectrum-css/icon": ">=3",
+        "@spectrum-css/modal": ">=4",
+        "@spectrum-css/tokens": ">=12"
+    },
+    "peerDependenciesMeta": {
+        "@spectrum-css/checkbox": {
+            "optional": true
+        },
+        "@spectrum-css/divider": {
+            "optional": true
+        }
+    },
+    "publishConfig": {
+        "access": "public"
+    }
 }

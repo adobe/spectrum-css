@@ -1,0 +1,22 @@
+/* stylelint-disable-next-line selector-id-pattern */
+#footer_global #AdobeFooterNav.Footernav-wrapper {
+    background-color: var(--spectrum-global-color-gray-50);
+
+    & .Footernav-disclaimer.is-adChoices .Footernav-disclaimer-link,
+    & .Footernav-disclaimer {
+        color: var(--spectrum-body-text-color, var(--spectrum-alias-text-color));
+        fill: currentColor;
+
+        &:hover {
+            color: var(--spectrum-alias-text-color-hover);
+        }
+
+        &:active {
+            color: var(--spectrum-alias-text-color-active);
+        }
+
+        &:focus {
+            color: var(--spectrum-alias-text-color-focus);
+        }
+    }
+}

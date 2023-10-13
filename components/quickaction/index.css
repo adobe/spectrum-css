@@ -10,47 +10,64 @@ OF ANY KIND, either express or implied. See the License for the specific languag
 governing permissions and limitations under the License.
 */
 
-@import "../overlay/index.css";
+@import "@spectrum-css/commons/overlay.css";
 
+/**
+ * @namespace spectrum
+ * @component QuickActions
+ */
 .spectrum-QuickActions {
-  box-sizing: border-box;
+    --spectrum-picker-m-texticon-popover-offset-y: var(--spectrum-global-dimension-size-75);
+    --spectrum-quickactions-padding-y: var(--spectrum-global-dimension-size-50);
+    --spectrum-quickactions-padding-x: var(--spectrum-global-dimension-size-50);
+    --spectrum-quickactions-height: var(--spectrum-global-dimension-size-500);
+    --spectrum-quickactions-border-radius: var(--spectrum-alias-border-radius-regular);
+    --spectrum-quickactions-button-gap-x: var(--spectrum-global-dimension-size-100);
+    --spectrum-quickactions-text-button-gap-x: var(--spectrum-global-dimension-size-50);
+    --spectrum-quickactions-overlay-color: var(--spectrum-alias-background-color-quickactions-overlay);
+    --spectrum-quickactions-background-color: var(--spectrum-alias-background-color-quickactions);
 
-  @inherit: %spectrum-overlay;
+    @extend %spectrum-overlay;
 
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
 
-  padding-block: var(--spectrum-quickactions-padding-y);
-  padding-inline: var(--spectrum-quickactions-padding-x);
+    box-sizing: border-box;
+    block-size: var(--spectrum-quickactions-height);
+    padding-block: var(--spectrum-quickactions-padding-y);
+    padding-inline: var(--spectrum-quickactions-padding-x);
 
-  block-size: var(--spectrum-quickactions-height);
+    background-color: var(--spectrum-quickactions-background-color);
+    border-radius: var(--spectrum-quickactions-border-radius);
 
-  border-radius: var(--spectrum-quickactions-border-radius);
+    &.is-open {
+        @extend %spectrum-overlay--open;
+    }
 
-  &.is-open {
-    @inherit: %spectrum-overlay--open;
-  }
-
-  .spectrum-ActionButton + .spectrum-ActionButton {
-    margin-inline-start: var(--spectrum-quickactions-button-gap-x);
-  }
+    .spectrum-ActionButton + .spectrum-ActionButton {
+        margin-inline-start: var(--spectrum-quickactions-button-gap-x);
+    }
 }
 
 .spectrum-QuickActions--textOnly {
-  .spectrum-ActionButton + .spectrum-ActionButton {
-    margin-inline-start: var(--spectrum-quickactions-text-button-gap-x);
-  }
+    .spectrum-ActionButton + .spectrum-ActionButton {
+        margin-inline-start: var(--spectrum-quickactions-text-button-gap-x);
+    }
 }
 
 .spectrum-QuickActions--right {
-  &.is-open {
-    @inherit: %spectrum-overlay--left--open; /* should animate to the left when aligned right */
-  }
+    &.is-open {
+        @extend %spectrum-overlay--left--open; /* should animate to the left when aligned right */
+    }
 }
 
 .spectrum-QuickActions--left {
-  &.is-open {
-    @inherit: %spectrum-overlay--right--open; /* should animate to the right when aligned left */
-  }
+    &.is-open {
+        @extend %spectrum-overlay--right--open; /* should animate to the right when aligned left */
+    }
+}
+
+.spectrum-QuickActions-overlay {
+    background-color: var(--spectrum-quickactions-overlay-color);
 }

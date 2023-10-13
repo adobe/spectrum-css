@@ -10,8 +10,10 @@ OF ANY KIND, either express or implied. See the License for the specific languag
 governing permissions and limitations under the License.
 */
 
-@container (--system: spectrum) {
-  .spectrum-Tooltip {
-    --spectrum-tooltip-backgound-color-default-neutral: var(--spectrum-neutral-subdued-background-color-default);
-  }
+/* stylelint-disable spectrum-tools/no-unused-custom-properties */
+@container style(--system: spectrum) {
+    .spectrum-Tooltip {
+        --spectrum-tooltip-backgound-color-default-neutral: var(--spectrum-neutral-subdued-background-color-default);
+    }
 }
+/* stylelint-enable spectrum-tools/no-unused-custom-properties */

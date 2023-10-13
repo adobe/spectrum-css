@@ -10,12 +10,16 @@ OF ANY KIND, either express or implied. See the License for the specific languag
 governing permissions and limitations under the License.
 */
 
-@container (--system: express) {
-  .spectrum-Radio {
-    /* selection indicator */
-    --spectrum-radio-button-border-color-default: var(--spectrum-gray-800);
-    --spectrum-radio-button-border-color-hover: var(--spectrum-gray-900);
-    --spectrum-radio-button-border-color-down: var(--spectrum-gray-900);
-    --spectrum-radio-button-border-color-focus: var(--spectrum-gray-900);
-  }
+@import "./spectrum.css";
+
+/* stylelint-disable spectrum-tools/no-unused-custom-properties */
+@container style(--system: express) {
+    .spectrum-Radio {
+        /* selection indicator */
+        --spectrum-radio-button-border-color-default: var(--spectrum-gray-800);
+        --spectrum-radio-button-border-color-hover: var(--spectrum-gray-900);
+        --spectrum-radio-button-border-color-down: var(--spectrum-gray-900);
+        --spectrum-radio-button-border-color-focus: var(--spectrum-gray-900);
+    }
 }
+/* stylelint-enable spectrum-tools/no-unused-custom-properties */

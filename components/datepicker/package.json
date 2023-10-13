@@ -1,38 +1,39 @@
 {
-  "name": "@spectrum-css/datepicker",
-  "version": "1.0.55",
-  "description": "The Spectrum CSS datepicker component",
-  "license": "Apache-2.0",
-  "author": "Adobe",
-  "homepage": "https://opensource.adobe.com/spectrum-css/",
-  "repository": {
-    "type": "git",
-    "url": "https://github.com/adobe/spectrum-css.git",
-    "directory": "components/datepicker"
-  },
-  "bugs": {
-    "url": "https://github.com/adobe/spectrum-css/issues"
-  },
-  "main": "dist/index-vars.css",
-  "scripts": {
-    "build": "gulp"
-  },
-  "peerDependencies": {
-    "@spectrum-css/pickerbutton": ">=3",
-    "@spectrum-css/popover": ">=5 <=6",
-    "@spectrum-css/vars": ">=9"
-  },
-  "devDependencies": {
-    "@spectrum-css/component-builder": "^4.0.14",
-    "@spectrum-css/icon": "^4.0.3",
-    "@spectrum-css/menu": "^4.0.50",
-    "@spectrum-css/pickerbutton": "^3.0.34",
-    "@spectrum-css/popover": "^6.0.79",
-    "@spectrum-css/textfield": "^6.0.25",
-    "@spectrum-css/vars": "^9.0.8",
-    "gulp": "^4.0.0"
-  },
-  "publishConfig": {
-    "access": "public"
-  }
+    "name": "@spectrum-css/datepicker",
+    "version": "1.0.55",
+    "description": "The Spectrum CSS datepicker component",
+    "license": "Apache-2.0",
+    "author": "Adobe",
+    "homepage": "https://opensource.adobe.com/spectrum-css/",
+    "repository": {
+        "type": "git",
+        "url": "https://github.com/adobe/spectrum-css.git",
+        "directory": "components/datepicker"
+    },
+    "bugs": {
+        "url": "https://github.com/adobe/spectrum-css/issues"
+    },
+    "main": "dist/index.css",
+    "peerDependencies": {
+        "@spectrum-css/icon": ">=4",
+        "@spectrum-css/menu": ">=5",
+        "@spectrum-css/pickerbutton": ">=4",
+        "@spectrum-css/popover": ">=6",
+        "@spectrum-css/textfield": ">=6",
+        "@spectrum-css/vars": ">=9"
+    },
+    "peerDependenciesMeta": {
+        "@spectrum-css/icon": {
+            "optional": true
+        },
+        "@spectrum-css/menu": {
+            "optional": true
+        },
+        "@spectrum-css/textfield": {
+            "optional": true
+        }
+    },
+    "publishConfig": {
+        "access": "public"
+    }
 }

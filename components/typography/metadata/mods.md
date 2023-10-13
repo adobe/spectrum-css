@@ -1,4 +1,4 @@
-| Modifiable Custom Properties                                   |
+| Modifiable custom properties                                   |
 | -------------------------------------------------------------- |
 | `--mod-body-cjk-emphasized-font-style`                         |
 | `--mod-body-cjk-emphasized-font-weight`                        |
@@ -11,7 +11,6 @@
 | `--mod-body-cjk-strong-emphasized-font-weight`                 |
 | `--mod-body-cjk-strong-font-style`                             |
 | `--mod-body-cjk-strong-font-weight`                            |
-| `--mod-body-font-color`                                        |
 | `--mod-body-font-size`                                         |
 | `--mod-body-line-height`                                       |
 | `--mod-body-margin`                                            |
@@ -46,7 +45,6 @@
 | `--mod-code-cjk-strong-font-weight`                            |
 | `--mod-code-emphasized-font-style`                             |
 | `--mod-code-emphasized-font-weight`                            |
-| `--mod-code-font-color`                                        |
 | `--mod-code-font-family`                                       |
 | `--mod-code-font-size`                                         |
 | `--mod-code-font-style`                                        |
@@ -74,7 +72,6 @@
 | `--mod-detail-cjk-strong-emphasized-font-weight`               |
 | `--mod-detail-cjk-strong-font-style`                           |
 | `--mod-detail-cjk-strong-font-weight`                          |
-| `--mod-detail-font-color`                                      |
 | `--mod-detail-font-size`                                       |
 | `--mod-detail-letter-spacing`                                  |
 | `--mod-detail-line-height`                                     |
@@ -141,7 +138,6 @@
 | `--mod-heading-cjk-strong-emphasized-font-weight`              |
 | `--mod-heading-cjk-strong-font-style`                          |
 | `--mod-heading-cjk-strong-font-weight`                         |
-| `--mod-heading-font-color`                                     |
 | `--mod-heading-font-size`                                      |
 | `--mod-heading-line-height`                                    |
 | `--mod-heading-margin-end`                                     |

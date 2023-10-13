@@ -1,0 +1,19 @@
+{
+    "$schema": "../../node_modules/nx/schemas/project-schema.json",
+    "name": "actionmenu",
+    "tags": ["component"],
+    "targets": {
+        "build": {
+            "executor": "nx:noop"
+        },
+        "dev": {
+            "executor": "nx:noop"
+        },
+        "lint": {
+            "executor": "nx:noop"
+        },
+        "format": {
+            "executor": "nx:noop"
+        }
+    }
+}

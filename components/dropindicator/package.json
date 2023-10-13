@@ -1,33 +1,24 @@
 {
-  "name": "@spectrum-css/dropindicator",
-  "version": "3.0.54",
-  "description": "The Spectrum CSS dropindicator component",
-  "license": "Apache-2.0",
-  "author": "Adobe",
-  "homepage": "https://opensource.adobe.com/spectrum-css/dropindicator",
-  "repository": {
-    "type": "git",
-    "url": "https://github.com/adobe/spectrum-css.git",
-    "directory": "components/dropindicator"
-  },
-  "bugs": {
-    "url": "https://github.com/adobe/spectrum-css/issues"
-  },
-  "main": "dist/index-vars.css",
-  "scripts": {
-    "build": "gulp"
-  },
-  "peerDependencies": {
-    "@spectrum-css/icon": ">=3",
-    "@spectrum-css/vars": ">=9"
-  },
-  "devDependencies": {
-    "@spectrum-css/component-builder": "^4.0.14",
-    "@spectrum-css/icon": "^4.0.3",
-    "@spectrum-css/vars": "^9.0.8",
-    "gulp": "^4.0.0"
-  },
-  "publishConfig": {
-    "access": "public"
-  }
+    "name": "@spectrum-css/dropindicator",
+    "version": "3.0.54",
+    "description": "The Spectrum CSS dropindicator component",
+    "license": "Apache-2.0",
+    "author": "Adobe",
+    "homepage": "https://opensource.adobe.com/spectrum-css/dropindicator",
+    "repository": {
+        "type": "git",
+        "url": "https://github.com/adobe/spectrum-css.git",
+        "directory": "components/dropindicator"
+    },
+    "bugs": {
+        "url": "https://github.com/adobe/spectrum-css/issues"
+    },
+    "main": "dist/index.css",
+    "peerDependencies": {
+        "@spectrum-css/icon": ">=4",
+        "@spectrum-css/vars": ">=9"
+    },
+    "publishConfig": {
+        "access": "public"
+    }
 }

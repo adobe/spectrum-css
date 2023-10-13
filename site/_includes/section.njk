@@ -1,0 +1,23 @@
+<section class="site-Section spectrum-Typography">
+  <header class="site-Section-header" id="{{ section.id | slugify }}">
+  {% if section.title %}
+      <h2 class="spectrum-Heading spectrum-Heading--sizeM" id="{{ section.title | slugify }}">
+        <a href="#{{ section.title | slugify }}">{{section.title}}</a>
+      </h2>
+      <hr class="spectrum-Divider spectrum-Divider--large"/>
+  {% endif %}
+  {% if section.description or section.details -%}
+    {% if section.description -%}
+      {{ section.description | markdownify | safe }}
+    {%- endif %}
+    {% if section.details -%}
+      {{ section.details | markdownify | safe }}
+    {%- endif %}
+  {% endif %}
+  </header>
+
+  {% if section.markup -%}
+    {% set example = { markup: section.markup } %}
+    {% include "example.njk" %}
+  {% endif %}
+</section>

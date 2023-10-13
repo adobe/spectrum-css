@@ -1,23 +1,10 @@
-| Modifiable Custom Properties                            |
+| Modifiable custom properties                            |
 | ------------------------------------------------------- |
-| `--mod-sidenav-background-default`                      |
-| `--mod-sidenav-background-disabled`                     |
-| `--mod-sidenav-background-hover`                        |
-| `--mod-sidenav-background-hover-selected`               |
-| `--mod-sidenav-background-key-focus`                    |
-| `--mod-sidenav-background-key-focus-selected`           |
 | `--mod-sidenav-border-radius`                           |
 | `--mod-sidenav-bottom-to-label`                         |
-| `--mod-sidenav-content-color-default`                   |
-| `--mod-sidenav-content-color-default-selected`          |
-| `--mod-sidenav-content-color-down`                      |
 | `--mod-sidenav-content-color-down-selected`             |
-| `--mod-sidenav-content-color-hover`                     |
 | `--mod-sidenav-content-color-hover-selected`            |
-| `--mod-sidenav-content-color-key-focus`                 |
 | `--mod-sidenav-content-color-key-focus-selected`        |
-| `--mod-sidenav-content-disabled-color`                  |
-| `--mod-sidenav-focus-ring-color`                        |
 | `--mod-sidenav-focus-ring-gap`                          |
 | `--mod-sidenav-focus-ring-size`                         |
 | `--mod-sidenav-gap`                                     |
@@ -27,9 +14,6 @@
 | `--mod-sidenav-header-font-weight`                      |
 | `--mod-sidenav-header-line-height`                      |
 | `--mod-sidenav-inline-padding`                          |
-| `--mod-sidenav-item-background-default-selected`        |
-| `--mod-sidenav-item-background-down`                    |
-| `--mod-sidenav-item-background-down-selected`           |
 | `--mod-sidenav-max-width`                               |
 | `--mod-sidenav-min-height`                              |
 | `--mod-sidenav-min-width`                               |

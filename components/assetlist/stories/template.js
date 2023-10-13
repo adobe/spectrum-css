@@ -1,27 +1,26 @@
 import { html } from "lit";
 import { classMap } from "lit/directives/class-map.js";
-import { when } from "lit/directives/when.js";
 import { ifDefined } from "lit/directives/if-defined.js";
+import { when } from "lit/directives/when.js";
 
 import { useArgs } from "@storybook/client-api";
 
 import { Template as Checkbox } from "@spectrum-css/checkbox/stories/template.js";
 import { Template as Icon } from "@spectrum-css/icon/stories/template.js";
 
-import "../index.css";
-import "../skin.css";
+import "@spectrum-css/assetlist";
 
 export const AssetListItem = ({
-	rootClass = "spectrum-AssetList-item",
-	image,
-	iconName,
-	label,
-	isNavigated = false,
-	isSelectable = false,
-	isSelected = false,
-	isBranch = false,
-	onclick = () => {},
-	...globals
+    rootClass = "spectrum-AssetList-item",
+    image,
+    iconName,
+    label,
+    isNavigated = false,
+    isSelectable = false,
+    isSelected = false,
+    isBranch = false,
+    onclick = () => {},
+    ...globals
 }) => {
 	return html` <li
 		class=${classMap({
@@ -71,37 +70,31 @@ export const AssetListItem = ({
 	</li>`;
 };
 
-export const Template = ({
-	rootClass = "spectrum-AssetList",
-	items = [],
-	customClasses = [],
-	id,
-	...globals
-}) => {
-	if (!items) return html``;
+export const Template = ({ rootClass = "spectrum-AssetList", items = [], customClasses = [], id, ...globals }) => {
+    if (!items) return html``;
 
-	const [, updateArgs] = useArgs();
+    const [, updateArgs] = useArgs();
 
-	return html`
-		<ul
-			class=${classMap({
-				[rootClass]: true,
-				...customClasses.reduce((a, c) => ({ ...a, [c]: true }), {}),
-			})}
-			id=${ifDefined(id)}
-		>
-			${items.map((item, idx) => {
-				return AssetListItem({
-					rootClass: `${rootClass}-item`,
-					onclick: () => {
-						if (item.isDisabled) return;
-						item.isSelected = !item.isSelected;
-						updateArgs({ items });
-					},
-					...item,
-					...globals,
-				});
-			})}
-		</ul>
-	`;
+    return html`
+        <ul
+            class=${classMap({
+                [rootClass]: true,
+                ...customClasses.reduce((a, c) => ({ ...a, [c]: true }), {}),
+            })}
+            id=${ifDefined(id)}
+        >
+            ${items.map((item) => {
+                return AssetListItem({
+                    rootClass: `${rootClass}-item`,
+                    onclick: () => {
+                        if (item.isDisabled) return;
+                        item.isSelected = !item.isSelected;
+                        updateArgs({ items });
+                    },
+                    ...item,
+                    ...globals,
+                });
+            })}
+        </ul>
+    `;
 };

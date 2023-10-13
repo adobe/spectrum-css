@@ -1,0 +1,92 @@
+name: Visual regression testing
+
+on:
+  workflow_dispatch:
+  workflow_call:
+    inputs:
+      skip:
+        description: "Skip running VRT"
+        required: false
+        type: boolean
+        default: false
+    outputs:
+      storybook-url:
+        description: "URL of the published Storybook"
+        value: ${{ jobs.vrt.outputs.storybook-url }}
+
+permissions:
+  contents: read
+  pull-requests: write
+
+jobs:
+  vrt:
+    name: Chromatic
+    runs-on: ubuntu-latest
+    outputs:
+      storybook-url: ${{ steps.chromatic.outputs.storybookUrl }}
+
+    steps:
+      - name: Check out code
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Use Node LTS version
+        uses: actions/setup-node@v3
+        with:
+          node-version: 18
+          cache: yarn
+          cache-dependency-path: yarn.lock
+
+      - name: Derive appropriate SHAs for base and head for `nx affected` commands
+        id: set-SHAs
+        uses: nrwl/nx-set-shas@v3
+
+      ## --- YARN CACHE --- ##
+      - name: Check for cached dependencies
+        continue-on-error: true
+        id: cache-dependencies
+        uses: actions/cache@v3
+        with:
+          path: |
+            .cache/yarn
+            node_modules
+          key: ubuntu-latest-node18-${{ hashFiles('yarn.lock') }}
+
+      ## --- INSTALL --- ##
+      - name: Install dependencies
+        shell: bash
+        run: yarn install --frozen-lockfile --cache-folder .cache/yarn
+
+      - name: Reset nx cache to prevent cross-machine errors
+        shell: bash
+        run: yarn cache:clean
+
+      ## --- BUILD --- ##
+      - name: Check for cached build assets
+        continue-on-error: true
+        id: cache-build
+        uses: actions/cache@v3
+        with:
+          path: |
+            components/*/dist/**
+          key: ubuntu-latest-node18-compiled-assets-${{ steps.set-SHAs.outputs.head }}
+
+      - name: Build components
+        if: ${{ steps.cache-build.outputs.cache-hit != 'true' }}
+        shell: bash
+        run: yarn ci
+
+      - name: Publish to Chromatic
+        id: chromatic
+        uses: chromaui/action@v1
+        with:
+          projectToken: ${{ secrets.CHROMATIC_PROJECT_TOKEN }}
+          buildScriptName: storybook
+          storybookConfigDir: storybook
+          exitOnceUploaded: true
+          onlyChanged: true
+          traceChanged: true
+          diagnostics: true
+          # Lets VRT pass without running so as not to waste snapshots
+          skip: ${{ inputs.skip }}

@@ -10,8 +10,12 @@ OF ANY KIND, either express or implied. See the License for the specific languag
 governing permissions and limitations under the License.
 */
 
-@container (--system: express) {
-  .spectrum-Popover {
-    --spectrum-popover-border-width: 0;
-  }
+@import "./spectrum.css";
+
+/* stylelint-disable spectrum-tools/no-unused-custom-properties */
+@container style(--system: express) {
+    .spectrum-Popover {
+        --spectrum-popover-border-width: 0;
+    }
 }
+/* stylelint-enable spectrum-tools/no-unused-custom-properties */

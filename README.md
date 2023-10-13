@@ -1,4 +1,10 @@
-# Spectrum CSS
+# :wave: Spectrum CSS
+
+[![Build Status]()]()
+[![Coverage Status]()]()
+[![npm version]()]()
+[![npm downloads]()]()
+[![License]()]()
 
 Spectrum CSS provides a standard CSS implementation of the Spectrum design language for internal and 3rd party use on Adobe's platforms.
 
@@ -44,58 +50,25 @@ Spectrum CSS components have build output that uses CSS custom properties to cha
 
 ```html
 <!-- Include global variables first -->
-<link
-	rel="stylesheet"
-	href="node_modules/@spectrum-css/vars/dist/spectrum-global.css"
-/>
+<link rel="stylesheet" href="node_modules/@spectrum-css/vars/dist/spectrum-global.css" />
 
 <!-- Include only the scales your application needs -->
-<link
-	rel="stylesheet"
-	href="node_modules/@spectrum-css/vars/dist/spectrum-medium.css"
-/>
-<link
-	rel="stylesheet"
-	href="node_modules/@spectrum-css/vars/dist/spectrum-large.css"
-/>
+<link rel="stylesheet" href="node_modules/@spectrum-css/vars/dist/spectrum-medium.css" />
+<link rel="stylesheet" href="node_modules/@spectrum-css/vars/dist/spectrum-large.css" />
 
 <!-- Include only the colorstops your application needs -->
-<link
-	rel="stylesheet"
-	href="node_modules/@spectrum-css/vars/dist/spectrum-light.css"
-/>
-<link
-	rel="stylesheet"
-	href="node_modules/@spectrum-css/vars/dist/spectrum-dark.css"
-/>
-<link
-	rel="stylesheet"
-	href="node_modules/@spectrum-css/vars/dist/spectrum-darkest.css"
-/>
+<link rel="stylesheet" href="node_modules/@spectrum-css/vars/dist/spectrum-light.css" />
+<link rel="stylesheet" href="node_modules/@spectrum-css/vars/dist/spectrum-dark.css" />
+<link rel="stylesheet" href="node_modules/@spectrum-css/vars/dist/spectrum-darkest.css" />
 
 <!-- Include tokens -->
-<link
-	rel="stylesheet"
-	href="node_modules/@spectrum-css/tokens/dist/index.css"
-/>
+<link rel="stylesheet" href="node_modules/@spectrum-css/tokens/dist/index.css" />
 
 <!-- Include index-vars.css for all components you need -->
-<link
-	rel="stylesheet"
-	href="node_modules/@spectrum-css/page/dist/index-vars.css"
-/>
-<link
-	rel="stylesheet"
-	href="node_modules/@spectrum-css/typography/dist/index-vars.css"
-/>
-<link
-	rel="stylesheet"
-	href="node_modules/@spectrum-css/icon/dist/index-vars.css"
-/>
-<link
-	rel="stylesheet"
-	href="node_modules/@spectrum-css/button/dist/index-vars.css"
-/>
+<link rel="stylesheet" href="node_modules/@spectrum-css/page/dist/index-vars.css" />
+<link rel="stylesheet" href="node_modules/@spectrum-css/typography/dist/index-vars.css" />
+<link rel="stylesheet" href="node_modules/@spectrum-css/icon/dist/index-vars.css" />
+<link rel="stylesheet" href="node_modules/@spectrum-css/button/dist/index-vars.css" />
 ```
 
 Make sure you've included the relevant classes to choose which scale and colorstop you want:
@@ -108,27 +81,15 @@ To switch to Express, load vars from `@spectrum-css/expressvars` instead of `@sp
 
 ```html
 <html class="spectrum spectrum--medium spectrum--light spectrum--express">
-	<head>
-		<!-- Include only the scales your application needs -->
-		<link
-			rel="stylesheet"
-			href="node_modules/@spectrum-css/expressvars/dist/spectrum-medium.css"
-		/>
-		<link
-			rel="stylesheet"
-			href="node_modules/@spectrum-css/expressvars/dist/spectrum-large.css"
-		/>
+    <head>
+        <!-- Include only the scales your application needs -->
+        <link rel="stylesheet" href="node_modules/@spectrum-css/expressvars/dist/spectrum-medium.css" />
+        <link rel="stylesheet" href="node_modules/@spectrum-css/expressvars/dist/spectrum-large.css" />
 
-		<!-- Include only the colorstops your application needs -->
-		<link
-			rel="stylesheet"
-			href="node_modules/@spectrum-css/expressvars/dist/spectrum-light.css"
-		/>
-		<link
-			rel="stylesheet"
-			href="node_modules/@spectrum-css/expressvars/dist/spectrum-dark.css"
-		/>
-	</head>
+        <!-- Include only the colorstops your application needs -->
+        <link rel="stylesheet" href="node_modules/@spectrum-css/expressvars/dist/spectrum-light.css" />
+        <link rel="stylesheet" href="node_modules/@spectrum-css/expressvars/dist/spectrum-dark.css" />
+    </head>
 </html>
 ```
 
@@ -155,9 +116,9 @@ For most use cases, you'll want to use `spectrum-css-icons.svg` so you have supp
 
 Based on which scales you'll be using, you can choose to load different files:
 
-- `@spectrum-css/icon/dist/spectrum-css-icons.svg` - Both medium and large icons for responsive UIs that support both `.spectrum--medium` and `.spectrum--large`
-- `@spectrum-css/icon/dist/spectrum-css-icons-medium.svg` - Medium icons only, supports `.spectrum--medium` only
-- `@spectrum-css/icon/dist/spectrum-css-icons-large.svg` - Large icons only, supports `.spectrum--large` only
+-   `@spectrum-css/icon/dist/spectrum-css-icons.svg` - Both medium and large icons for responsive UIs that support both `.spectrum--medium` and `.spectrum--large`
+-   `@spectrum-css/icon/dist/spectrum-css-icons-medium.svg` - Medium icons only, supports `.spectrum--medium` only
+-   `@spectrum-css/icon/dist/spectrum-css-icons-large.svg` - Large icons only, supports `.spectrum--large` only
 
 **Note:** If you're using `spectrum-css-icons.svg`, be sure to add `.spectrum--medium` or `.spectrum--large` to the `<html>` element, or you'll see both medium and large icons at once.
 
@@ -168,9 +129,7 @@ If your app has any level of complexity, you'll need "workflow" icons to indicat
 These icons are released within the [`@adobe/spectrum-css-workflow-icons`](https://www.npmjs.com/package/@adobe/spectrum-css-workflow-icons) package. After installing the package, you can import the entire set of icons in all sizes as follows:
 
 ```js
-loadIcons(
-	"node_modules/@adobe/spectrum-css-workflow-icons/dist/spectrum-icons.svg"
-);
+loadIcons("node_modules/@adobe/spectrum-css-workflow-icons/dist/spectrum-icons.svg");
 ```
 
 You can then use the icons in your app. Visit the [Spectrum workflow icon list](https://spectrum.adobe.com/page/icons/) and click on any icon to get the markup.
@@ -212,12 +171,12 @@ Spectrum CSS is designed to be as flexible as possible, and as such, leaves room
 
 ```json
 {
-	"name": "my-project",
-	"devDependencies": {
-		"@spectrum-css/button": "^3.0.0",
-		"@spectrum-css/page": "^3.0.0",
-		"@spectrum-css/vars": "^3.0.0"
-	}
+    "name": "my-project",
+    "devDependencies": {
+        "@spectrum-css/button": "^3.0.0",
+        "@spectrum-css/page": "^3.0.0",
+        "@spectrum-css/vars": "^3.0.0"
+    }
 }
 ```
 
@@ -243,12 +202,12 @@ Next, create a `postcss.config.js`:
 
 ```js
 module.exports = {
-	plugins: [
-		require("postcss-import"),
-		require("postcss-varfallback"),
-		require("postcss-dropunusedvars"),
-		require("cssnano"),
-	],
+    plugins: [
+        require("postcss-import"),
+        require("postcss-varfallback"),
+        require("postcss-dropunusedvars"),
+        require("cssnano"),
+    ],
 };
 ```
 
@@ -266,46 +225,46 @@ If you need an even smaller bundle, you can employ a tool such as [PurifyCSS](ht
 
 <!-- @todo link to the external repositories where these postcss plugins now live: transformselectors -->
 
-You can employ `postcss-transformselectors` to change the classnames Spectrum CSS uses. For instance, you may want to use bare `h1`/`h2`/`h3` instead of `.spectrum-Heading.spectrum-Heading--size*`.
+You can employ `postcss-transform-selectors` to change the classnames Spectrum CSS uses. For instance, you may want to use bare `h1`/`h2`/`h3` instead of `.spectrum-Heading.spectrum-Heading--size*`.
 
 To do this, first install the plugin:
 
 ```js
-npm i postcss-transformselectors --save-dev
+npm i @spectrum-tools/postcss-transform-selectors --save-dev
 ```
 
 Then, add something like this to your `postcss.config.js`:
 
 ```js
 module.exports = {
-	plugins: [
-		require("postcss-transformselectors")({
-			replace: [
-				{ search: ".spectrum-Heading--sizeXXL", replace: "h1" },
-				{ search: ".spectrum-Heading--sizeXL", replace: "h2" },
-				{ search: ".spectrum-Heading--sizeL", replace: "h3" },
-			],
-			transform: (selector) => {
-				if (selector.startsWith(".spectrum-Heading")) {
-					// Operate on each selector in a selector list
-					return selector
-						.split(",")
-						.map((selectorPart) => {
-							// Create separate selectors for each reference to .spectrum-Heading
-							return ["h1", "h2", "h3"]
-								.map((h) => {
-									return selectorPart.replace(".spectrum-Heading", h);
-								})
-								.join(",");
-						})
-						.join(",");
-				}
+    plugins: [
+        require("@spectrum-tools/postcss-transform-selectors")({
+            replace: [
+                { search: ".spectrum-Heading--sizeXXL", replace: "h1" },
+                { search: ".spectrum-Heading--sizeXL", replace: "h2" },
+                { search: ".spectrum-Heading--sizeL", replace: "h3" },
+            ],
+            transform: (selector) => {
+                if (selector.startsWith(".spectrum-Heading")) {
+                    // Operate on each selector in a selector list
+                    return selector
+                        .split(",")
+                        .map((selectorPart) => {
+                            // Create separate selectors for each reference to .spectrum-Heading
+                            return ["h1", "h2", "h3"]
+                                .map((h) => {
+                                    return selectorPart.replace(".spectrum-Heading", h);
+                                })
+                                .join(",");
+                        })
+                        .join(",");
+                }
 
-				// Don't mess with things that don't have .spectrum-Heading in them
-				return selector;
-			},
-		}),
-	],
+                // Don't mess with things that don't have .spectrum-Heading in them
+                return selector;
+            },
+        }),
+    ],
 };
 ```
 
@@ -382,11 +341,11 @@ git push origin nextjs
 
 The following tasks are available:
 
-- `yarn build:all` - Performs a build of all components, documentation site, and storybook
-- `yarn build` - Performs a build of all components
-- `yarn dev` - Performs a component build, runs storybook, and serves the documentation on the default port (3000), then starts watching components and website files
-- `yarn clean` - Cleans all output files for the project and all components
-- `yarn watch` - Assuming a build has already been performed, re-starts starts watching components and website files. Presumes a browser is already open to your locally served docs
+-   `yarn build:all` - Performs a build of all components, documentation site, and storybook
+-   `yarn build` - Performs a build of all components
+-   `yarn dev` - Performs a component build, runs storybook, and serves the documentation on the default port (3000), then starts watching components and website files
+-   `yarn clean` - Cleans all output files for the project and all components
+-   `yarn watch` - Assuming a build has already been performed, re-starts starts watching components and website files. Presumes a browser is already open to your locally served docs
 
 ---
 
@@ -418,19 +377,19 @@ Occasionally, it can be helpful for our subscribers to test CSS changes before t
 
 To publish prerelease versions:
 
-- First, be sure that you're working on a branch other than `main`.
-- Once your change(s) are ready to be committed, be aware of the severity of the change(s), and be sure to author your commit message so that Lerna understands how to increase the version number(s) of the affected components.
-- Once your changes are committed, you **must** build the affected package(s) locally **before** publishing them to npm. An npm task for cleaning, building, and beta publishing is available, and it can be run via the following command: `yarn release:beta-from-package`. This command will perform a full `clean` (via the `clean` task), a full `build` (via the `build` task), and will attempt to bump the version numbers in the affected package(s) (via `lerna publish --conventional-prerelease --preid beta --pre-dist-tag beta --no-private`).
-- Depending on the severity of your change(s), and before publishing to npm, Lerna should show a preview of the affected package version numbers that look something like: `@spectrum-css/tag: 3.3.8 => 3.3.9-beta.0`. Additionally, at this time, Lerna will ask if you would like to continue with publishing the changes or cancel.
-- Selecting `y` to publish will publish the affected package(s) to npm.
+-   First, be sure that you're working on a branch other than `main`.
+-   Once your change(s) are ready to be committed, be aware of the severity of the change(s), and be sure to author your commit message so that Lerna understands how to increase the version number(s) of the affected components.
+-   Once your changes are committed, you **must** build the affected package(s) locally **before** publishing them to npm. An npm task for cleaning, building, and beta publishing is available, and it can be run via the following command: `yarn release:beta-from-package`. This command will perform a full `clean` (via the `clean` task), a full `build` (via the `build` task), and will attempt to bump the version numbers in the affected package(s) (via `lerna publish --conventional-prerelease --preid beta --pre-dist-tag beta --no-private`).
+-   Depending on the severity of your change(s), and before publishing to npm, Lerna should show a preview of the affected package version numbers that look something like: `@spectrum-css/tag: 3.3.8 => 3.3.9-beta.0`. Additionally, at this time, Lerna will ask if you would like to continue with publishing the changes or cancel.
+-   Selecting `y` to publish will publish the affected package(s) to npm.
 
 ### Manual prerelease versioning & publishing
 
 Occasionally, you may want to run a prerelease for an individual package and skip a version bump for consuming packages. It's possible to manually change a package's version number to achieve this.
 
-- For the package that you want to prerelease, manually alter the version number in the package's `package.json` file.
-  - For example, let's say you'd like to release a `beta` version of the Switch component. In the Switch's `package.json`, manually change the `version` number from its current number (`"version": "1.0.23"`) to the next appropriate semver version number (`"version": "2.0.0-beta.0"`).
-- Save your changes, and commit them with the appropriate conventional commit-style commit message: `chore(switch): manual version bump for beta release` or something similar.
-- You **must** run a build **before** continuing with the prerelease. An npm task for cleaning, building, and beta publishing is available, and it can be run via the following command: `yarn release:beta-from-package`. This command will perform a full `clean` (via the `clean` task), a full `build` (via the `build` task), and will attempt to publish the package (via `lerna publish --conventional-prerelease --preid beta --pre-dist-tag beta --no-private`).
-- Depending on the severity of your change(s), and before publishing to npm, Lerna should show a preview of the affected package version number that looks something like: `@spectrum-css/switch: 1.0.23 => 2.0.0-beta.0`. Additionally, at this time, Lerna will ask if you would like to continue with publishing the changes or cancel.
-- Selecting `y` to publish will publish the affected package(s) to npm.
+-   For the package that you want to prerelease, manually alter the version number in the package's `package.json` file.
+    -   For example, let's say you'd like to release a `beta` version of the Switch component. In the Switch's `package.json`, manually change the `version` number from its current number (`"version": "1.0.23"`) to the next appropriate semver version number (`"version": "2.0.0-beta.0"`).
+-   Save your changes, and commit them with the appropriate conventional commit-style commit message: `chore(switch): manual version bump for beta release` or something similar.
+-   You **must** run a build **before** continuing with the prerelease. An npm task for cleaning, building, and beta publishing is available, and it can be run via the following command: `yarn release:beta-from-package`. This command will perform a full `clean` (via the `clean` task), a full `build` (via the `build` task), and will attempt to publish the package (via `lerna publish --conventional-prerelease --preid beta --pre-dist-tag beta --no-private`).
+-   Depending on the severity of your change(s), and before publishing to npm, Lerna should show a preview of the affected package version number that looks something like: `@spectrum-css/switch: 1.0.23 => 2.0.0-beta.0`. Additionally, at this time, Lerna will ask if you would like to continue with publishing the changes or cancel.
+-   Selecting `y` to publish will publish the affected package(s) to npm.

@@ -10,11 +10,15 @@ OF ANY KIND, either express or implied. See the License for the specific languag
 governing permissions and limitations under the License.
 */
 
-@container (--system: express) {
-  .spectrum-Checkbox {
-    --spectrum-checkbox-control-color-default: var(--spectrum-gray-800);
-    --spectrum-checkbox-control-color-hover: var(--spectrum-gray-900);
-    --spectrum-checkbox-control-color-down: var(--spectrum-gray-900);
-    --spectrum-checkbox-control-color-focus: var(--spectrum-gray-900);
-  }
+@import "./spectrum.css";
+
+/* stylelint-disable spectrum-tools/no-unused-custom-properties */
+@container style(--system: express) {
+    .spectrum-Checkbox {
+        --spectrum-checkbox-control-color-default: var(--spectrum-gray-800);
+        --spectrum-checkbox-control-color-hover: var(--spectrum-gray-900);
+        --spectrum-checkbox-control-color-down: var(--spectrum-gray-900);
+        --spectrum-checkbox-control-color-focus: var(--spectrum-gray-900);
+    }
 }
+/* stylelint-enable spectrum-tools/no-unused-custom-properties */

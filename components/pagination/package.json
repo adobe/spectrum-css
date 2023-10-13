@@ -1,41 +1,28 @@
 {
-  "name": "@spectrum-css/pagination",
-  "version": "7.0.0",
-  "description": "The Spectrum CSS Pagination component",
-  "license": "Apache-2.0",
-  "author": "Adobe",
-  "homepage": "https://opensource.adobe.com/spectrum-css/pagination",
-  "repository": {
-    "type": "git",
-    "url": "https://github.com/adobe/spectrum-css.git",
-    "directory": "components/pagination"
-  },
-  "bugs": {
-    "url": "https://github.com/adobe/spectrum-css/issues"
-  },
-  "main": "dist/index-vars.css",
-  "scripts": {
-    "build": "gulp"
-  },
-  "peerDependencies": {
-    "@spectrum-css/actionbutton": ">=4",
-    "@spectrum-css/button": ">=10",
-    "@spectrum-css/icon": ">=3",
-    "@spectrum-css/splitbutton": ">=5",
-    "@spectrum-css/textfield": ">=5",
-    "@spectrum-css/tokens": ">=11"
-  },
-  "devDependencies": {
-    "@spectrum-css/actionbutton": "^5.0.12",
-    "@spectrum-css/button": "^11.0.13",
-    "@spectrum-css/component-builder-simple": "^2.0.17",
-    "@spectrum-css/icon": "^4.0.3",
-    "@spectrum-css/splitbutton": "^6.0.13",
-    "@spectrum-css/textfield": "^6.0.25",
-    "@spectrum-css/tokens": "^12.0.0",
-    "gulp": "^4.0.0"
-  },
-  "publishConfig": {
-    "access": "public"
-  }
+    "name": "@spectrum-css/pagination",
+    "version": "7.0.0",
+    "description": "The Spectrum CSS pagination component",
+    "license": "Apache-2.0",
+    "author": "Adobe",
+    "homepage": "https://opensource.adobe.com/spectrum-css/pagination",
+    "repository": {
+        "type": "git",
+        "url": "https://github.com/adobe/spectrum-css.git",
+        "directory": "components/pagination"
+    },
+    "bugs": {
+        "url": "https://github.com/adobe/spectrum-css/issues"
+    },
+    "main": "dist/index.css",
+    "peerDependencies": {
+        "@spectrum-css/actionbutton": ">=5",
+        "@spectrum-css/button": ">=11",
+        "@spectrum-css/icon": ">=4",
+        "@spectrum-css/splitbutton": ">=6",
+        "@spectrum-css/textfield": ">=6",
+        "@spectrum-css/tokens": ">=12"
+    },
+    "publishConfig": {
+        "access": "public"
+    }
 }

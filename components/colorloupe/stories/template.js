@@ -2,25 +2,24 @@ import { svg } from "lit";
 import { classMap } from "lit/directives/class-map.js";
 import { styleMap } from "lit/directives/style-map.js";
 
-import "../index.css";
+import "@spectrum-css/colorloupe";
 
 export const Template = ({
-	rootClass = "spectrum-ColorLoupe",
-	isOpen,
-	styles = {
-		"--spectrum-picked-color": "RGBA(255, 0, 0, 0.5)",
-		"inset-block-start": "5px",
-		"inset-inline-start": "5px",
-	},
-	customClasses = [],
-	// ...globals
+    rootClass = "spectrum-ColorLoupe",
+    isOpen,
+    styles = {
+        "--spectrum-picked-color": "RGBA(255, 0, 0, 0.5)",
+        "inset-block-start": "5px",
+        "inset-inline-start": "5px",
+    },
+    customClasses = [],
 }) => {
-	return svg`
+    return svg`
     <svg class=${classMap({
-			[rootClass]: true,
-			"is-open": isOpen,
-			...customClasses.reduce((a, c) => ({ ...a, [c]: true }), {}),
-		})}
+        [rootClass]: true,
+        "is-open": isOpen,
+        ...customClasses.reduce((a, c) => ({ ...a, [c]: true }), {}),
+    })}
   style=${styleMap(styles)}>
     <defs>
       <path

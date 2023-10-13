@@ -1,0 +1,17 @@
+{
+    "$schema": "../../node_modules/nx/schemas/project-schema.json",
+    "tags": ["tooling"],
+    "name": "conventional-changelog-spectrum",
+    "targets": {
+        "lint": {
+            "defaultConfiguration": "plugins"
+        },
+        "format": {
+            "defaultConfiguration": "plugins"
+        },
+        "coverage": {},
+        "test": {
+            "defaultConfiguration": "plugins"
+        }
+    }
+}

@@ -1,0 +1,19 @@
+{
+	"name": "ui-icons",
+	"tag": ["icons"],
+	"targets": {
+		"clean": {},
+		"build": {
+			"options": {
+				"cwd": "./ui-icons",
+				"commands": ["node ./index.js"]
+			},
+			"configurations": {
+				"light": {
+					"cwd": "./ui-icons",
+					"commands": ["node ./index.js"]
+				}
+			}
+		}
+	}
+}

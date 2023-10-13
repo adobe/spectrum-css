@@ -1,31 +1,23 @@
 {
-  "name": "@spectrum-css/asset",
-  "version": "3.0.48",
-  "description": "The Spectrum CSS asset component",
-  "license": "Apache-2.0",
-  "author": "Adobe",
-  "homepage": "https://opensource.adobe.com/spectrum-css/asset",
-  "repository": {
-    "type": "git",
-    "url": "https://github.com/adobe/spectrum-css.git",
-    "directory": "components/asset"
-  },
-  "bugs": {
-    "url": "https://github.com/adobe/spectrum-css/issues"
-  },
-  "main": "dist/index-vars.css",
-  "scripts": {
-    "build": "gulp"
-  },
-  "peerDependencies": {
-    "@spectrum-css/vars": ">=9"
-  },
-  "devDependencies": {
-    "@spectrum-css/component-builder": "^4.0.14",
-    "@spectrum-css/vars": "^9.0.8",
-    "gulp": "^4.0.0"
-  },
-  "publishConfig": {
-    "access": "public"
-  }
+    "name": "@spectrum-css/asset",
+    "version": "3.0.48",
+    "description": "The Spectrum CSS asset component",
+    "license": "Apache-2.0",
+    "author": "Adobe",
+    "homepage": "https://opensource.adobe.com/spectrum-css/asset",
+    "repository": {
+        "type": "git",
+        "url": "https://github.com/adobe/spectrum-css.git",
+        "directory": "components/asset"
+    },
+    "bugs": {
+        "url": "https://github.com/adobe/spectrum-css/issues"
+    },
+    "main": "dist/index.css",
+    "peerDependencies": {
+        "@spectrum-css/vars": ">=9"
+    },
+    "publishConfig": {
+        "access": "public"
+    }
 }

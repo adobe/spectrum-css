@@ -10,12 +10,9 @@ For e.g:
 
 ```css
 .spectrum-ActionButton-hold {
-	inset-inline-end: calc(
-		var(
-				--mod-actionbutton-edge-to-hold-icon,
-				var(--spectrum-actionbutton-edge-to-hold-icon)
-			) - var(--mod-actionbutton-border-width, var(--spectrum-actionbutton-border-width))
-	);
+    inset-inline-end: calc(
+        var(--mod-actionbutton-edge-to-hold-icon, var(--spectrum-actionbutton-edge-to-hold-icon)) - var(--mod-actionbutton-border-width, var(--spectrum-actionbutton-border-width))
+    );
 }
 ```
 
@@ -52,9 +49,6 @@ Correct:
 
 ```css
 .spectrum-Well-Component {
-	background-color: calc(
-		var(--prefix-component-background-color),
-		var(--prefix-component-background-color)
-	);
+    background-color: calc(var(--prefix-component-background-color), var(--prefix-component-background-color));
 }
 ```

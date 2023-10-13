@@ -1,0 +1,66 @@
+{
+    "name": "storybook",
+    "tags": ["tooling"],
+    "implicitDependencies": ["tag:component"],
+    "namedInputs": {
+        "core": [
+            "{workspaceRoot}/assets/**",
+            "{projectRoot}/*.js",
+            "{projectRoot}/*.html",
+            "{workspaceRoot}/components/*/stories/**",
+            "{workspaceRoot}/components/*/*.css"
+        ],
+        "tools": []
+    },
+    "targets": {
+        "clean": {
+            "inputs": ["{projectRoot}/storybook-static"]
+        },
+        "build": {
+            "dependsOn": ["^build"],
+            "inputs": ["core"],
+            "outputs": ["{projectRoot}/storybook-static"],
+            "executor": "nx:run-commands",
+            "options": {
+                "commands": ["storybook build --config-dir {projectRoot} --output-dir {projectRoot}/storybook-static"],
+                "envFile": ".env.prod"
+            }
+        },
+        "watch": {
+            "options": {
+                "commands": ["storybook dev --port 3000 --config-dir {projectRoot}"]
+            }
+        },
+        "dev": {
+            "outputs": [],
+            "options": {
+                "commands": ["storybook dev --port 3000 --config-dir {projectRoot}"]
+            }
+        },
+        "lint": {
+            "inputs": ["core", "linter"],
+            "options": {
+                "commands": [
+                    "stylelint {projectRoot}/assets/*.css",
+                    "eslint --no-error-on-unmatched-pattern {projectRoot}/*.js {projectRoot}/{package,project}.json ./components/*/stories/*.js"
+                ]
+            }
+        },
+        "format": {
+            "inputs": ["core", "linter"],
+            "options": {
+                "commands": [
+                    "stylelint {projectRoot}/assets/*.css --fix",
+                    "eslint --no-error-on-unmatched-pattern {projectRoot}/*.js {projectRoot}/{package,project}.json ./components/*/stories/*.js --fix",
+                    "prettier --no-error-on-unmatched-pattern --write {projectRoot}/**/*.{js,json,yml,md} {projectRoot}/*.{js,json,yml,md}"
+                ]
+            }
+        },
+        "test": {
+            "executor": "nx:run-commands",
+            "options": {
+                "command": "chromatic --build-script-name build --junit-report"
+            }
+        }
+    }
+}

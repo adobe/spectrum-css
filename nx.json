@@ -1,18 +1,187 @@
 {
-	"npmScope": "@spectrum-css",
-	"tasksRunnerOptions": {
-		"default": {
-			"runner": "nx/tasks-runners/default",
-			"options": {
-				"cacheableOperations": ["build"]
-			}
-		}
-	},
-	"targetDefaults": {
-		"build": {
-			"dependsOn": ["clean", "^build"],
-			"inputs": ["{workspaceRoot}/*.css"]
-		}
-	},
-	"includedScripts": ["build"]
+    "$schema": "./node_modules/nx/schemas/nx-schema.json",
+    "tasksRunnerOptions": {
+        "default": {
+            "options": {
+                "cacheableOperations": ["clean", "build", "dev", "lint", "profile", "coverage", "test"]
+            }
+        }
+    },
+    "cli": {
+        "warnings": {
+            "versionMismatch": true
+        },
+        "packageManager": "yarn",
+        "analytics": false
+    },
+    "namedInputs": {
+        "core": ["{projectRoot}/*.css", "{projectRoot}/themes/*.css"],
+        "scripts": ["{projectRoot}/stories/*.js"],
+        "stylelint": [
+            "{workspaceRoot}/.stylelintignore",
+            "{workspaceRoot}/stylelint.config.js",
+            "{workspaceRoot}/plugins/stylelint-*/index.js"
+        ],
+        "eslint": ["{workspaceRoot}/.eslintrc.js"],
+        "tools": [
+            "{projectRoot}/*.json",
+            "{workspaceRoot}/postcss.config.js",
+            "{workspaceRoot}/plugins/postcss-*/index.js",
+            "stylelint"
+        ],
+        "linter": ["stylelint", "eslint"]
+    },
+    "targetDefaults": {
+        "clean": {
+            "inputs": ["{projectRoot}/dist"],
+            "outputs": [],
+            "executor": "nx:run-commands",
+            "options": {
+                "commands": [
+                    "rimraf {projectRoot}/dist",
+                    "test -d {projectRoot}/dist && echo \"Error: dist directory could not be removed\" && exit 1 || exit 0"
+                ],
+                "parallel": false,
+                "envFile": ".env.dev"
+            },
+            "configurations": {
+                "ci": {
+                    "envFile": ".env.prod"
+                }
+            }
+        },
+        "build": {
+            "dependsOn": ["^build", "clean"],
+            "inputs": ["core", "tools"],
+            "outputs": ["{projectRoot}/dist"],
+            "executor": "nx:run-commands",
+            "options": {
+                "commands": [
+                    "test -f {projectRoot}/index-base.css && FILE_NAME=index-base || FILE_NAME=index; postcss {projectRoot}/${FILE_NAME}.css --output {projectRoot}/dist/index.css",
+                    "test -f {projectRoot}/index-base.css && FILE_NAME=index-base || FILE_NAME=index; postcss {projectRoot}/${FILE_NAME}.css --output {projectRoot}/dist/index-vars.css",
+                    "test -f {projectRoot}/index-base.css && FILE_NAME=index-base || FILE_NAME=index; postcss {projectRoot}/${FILE_NAME}.css --output {projectRoot}/dist/vars.css --only-vars",
+                    "# note: for the following tests, we check if the file does **not** exist so we can still pass through flags to the postcss command",
+                    "! test -f {projectRoot}/index-base.css && exit 0 || postcss {projectRoot}/index-base.css --output {projectRoot}/dist/index-base.css --no-flat-variables",
+                    "! test -d {projectRoot}/themes && exit 0 || postcss {projectRoot}/index-theme.css --output {projectRoot}/dist/index-theme.css --no-selectors",
+                    "! test -d {projectRoot}/themes && exit 0 || postcss {projectRoot}/themes/*.css --dir {projectRoot}/dist --base {projectRoot} --no-selectors"
+                ],
+                "envFile": ".env.dev"
+            },
+            "configurations": {
+                "light": {
+                    "commands": [
+                        "test -f {projectRoot}/index-base.css && FILE_NAME=index-base || FILE_NAME=index; postcss {projectRoot}/${FILE_NAME}.css --output {projectRoot}/dist/index.css"
+                    ]
+                },
+                "ci": {
+                    "envFile": ".env.prod"
+                }
+            }
+        },
+        "watch": {
+            "dependsOn": ["build:light"],
+            "executor": "nx:run-commands",
+            "options": {
+                "commands": [
+                    "nx watch --projects $NX_TASK_TARGET_PROJECT -- nx run \\$NX_PROJECT_NAME:build"
+                ],
+                "envFile": ".env.dev"
+            }
+        },
+        "dev": {
+            "dependsOn": ["build:light"],
+            "executor": "nx:run-commands",
+            "options": {
+                "commands": ["nx watch --projects $NX_TASK_TARGET_PROJECT -- nx run \\$NX_PROJECT_NAME:build"],
+                "envFile": ".env.dev"
+            }
+        },
+        "test": {
+            "dependsOn": ["build"],
+            "inputs": ["scripts", "tools"],
+            "executor": "nx:run-commands",
+            "options": {
+                "commands": ["chromatic --build-script-name build --only-story-names $NX_TASK_TARGET_PROJECT"],
+                "envFile": ".env.prod"
+            },
+            "configurations": {
+                "plugins": {
+                    "inputs": [
+                        "{workspaceRoot}/index.js",
+                        "{workspaceRoot}/test.js",
+                        "{workspaceRoot}/expected/*.css",
+                        "{workspaceRoot}/fixtures/*.css"
+                    ],
+                    "commands": ["ava {projectRoot}/test.js"]
+                }
+            }
+        },
+        "lint": {
+            "inputs": ["core", "scripts", "linter"],
+            "executor": "nx:run-commands",
+            "options": {
+                "commands": [
+                    "stylelint {projectRoot}/*.css {projectRoot}/themes/*.css",
+                    "eslint --no-error-on-unmatched-pattern {projectRoot}/*.json {projectRoot}/stories/*.js"
+                ],
+                "envFile": ".env.prod"
+            },
+            "configurations": {
+                "plugins": {
+                    "inputs": ["{projectRoot}/*.js", "{projectRoot}/*.json", "eslint"],
+                    "commands": ["eslint --no-error-on-unmatched-pattern {projectRoot}/*.js {projectRoot}/*.json"]
+                }
+            }
+        },
+        "format": {
+            "inputs": ["core", "scripts", "linter"],
+            "executor": "nx:run-commands",
+            "options": {
+                "commands": [
+                    "stylelint {projectRoot}/*.css {projectRoot}/themes/*.css --fix",
+                    "eslint --no-error-on-unmatched-pattern {projectRoot}/*.json {projectRoot}/stories/*.js --fix",
+                    "prettier --no-error-on-unmatched-pattern --write {projectRoot}/**/*.{js,json,yml,md} {projectRoot}/*.{js,json,yml,md}"
+                ],
+                "envFile": ".env.prod"
+            },
+            "configurations": {
+                "plugins": {
+                    "inputs": ["{workspaceRoot}/*.js", "{workspaceRoot}/*.json", "eslint"],
+                    "commands": [
+                        "eslint --no-error-on-unmatched-pattern {projectRoot}/*.js {projectRoot}/*.json --fix",
+                        "prettier --no-error-on-unmatched-pattern --write {projectRoot}/**/*.{js,json,yml,md} {projectRoot}/*.{js,json,yml,md}"
+                    ]
+                }
+            }
+        },
+        "profile": {
+            "dependsOn": ["build"],
+            "inputs": ["{projectRoot}/dist/index.css"],
+            "outputs": ["{workspaceRoot}/dist/profile.json"],
+            "executor": "nx:run-commands",
+            "options": {
+                "commands": ["cat {projectRoot}/dist/index.css | wallace --json > {projectRoot}/dist/profile.json"],
+                "envFile": ".env.prod"
+            },
+            "configurations": {
+                "log": {
+                    "commands": ["cat {projectRoot}/dist/index.css | wallace"]
+                }
+            }
+        },
+        "coverage": {
+            "inputs": ["{projectRoot}/.c8rc"],
+            "outputs": ["{workspaceRoot}/coverage"],
+            "executor": "nx:run-commands",
+            "options": {
+                "cwd": "{projectRoot}",
+                "commands": ["c8 nx test $NX_TASK_TARGET_PROJECT"]
+            },
+            "configurations": {
+                "log": {
+                    "commands": ["c8 --reporter=lcov nx test $NX_TASK_TARGET_PROJECT"]
+                }
+            }
+        }
+    }
 }

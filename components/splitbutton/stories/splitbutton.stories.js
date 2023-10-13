@@ -1,10 +1,11 @@
 // Import the component markup template
 import { Template } from "./template";
 
+/**
+ * A split button surfaces an immediately invokable action via it's main button, as well as a list of alternative actions in its toggle-able menu overlay.
+ */
 export default {
 	title: "Components/Split button",
-	description:
-		"A split button surfaces an immediately invokable action via it's main button, as well as a list of alternative actions in its toggle-able menu overlay.",
 	component: "SplitButton",
 	argTypes: {
 		size: {
@@ -62,42 +63,42 @@ export default {
 
 export const CTA = Template.bind({});
 CTA.args = {
-	variant: "accent",
-	treatment: "fill",
-	iconName: "ChevronDown100",
+    variant: "accent",
+    treatment: "fill",
+    iconName: "ChevronDown100",
 };
 
 export const CTAMoreIcon = Template.bind({});
 CTAMoreIcon.args = {
-	variant: "accent",
-	treatment: "fill",
-	iconName: "More",
+    variant: "accent",
+    treatment: "fill",
+    iconName: "More",
 };
 
 export const Primary = Template.bind({});
 Primary.args = {
-	variant: "primary",
-	treatment: "outline",
-	iconName: "ChevronDown100",
+    variant: "primary",
+    treatment: "outline",
+    iconName: "ChevronDown100",
 };
 
 export const PrimaryMoreIcon = Template.bind({});
 PrimaryMoreIcon.args = {
-	variant: "primary",
-	treatment: "outline",
-	iconName: "More",
+    variant: "primary",
+    treatment: "outline",
+    iconName: "More",
 };
 
 export const Secondary = Template.bind({});
 Secondary.args = {
-	variant: "secondary",
-	treatment: "outline",
-	iconName: "ChevronDown100",
+    variant: "secondary",
+    treatment: "outline",
+    iconName: "ChevronDown100",
 };
 
 export const SecondaryMoreIcon = Template.bind({});
 SecondaryMoreIcon.args = {
-	variant: "secondary",
-	treatment: "outline",
-	iconName: "More",
+    variant: "secondary",
+    treatment: "outline",
+    iconName: "More",
 };

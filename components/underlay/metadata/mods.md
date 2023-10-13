@@ -1,4 +1,4 @@
-| Modifiable Custom Properties                         |
+| Modifiable custom properties                         |
 | ---------------------------------------------------- |
 | `--mod-underlay-background-color`                    |
 | `--mod-underlay-background-entry-animation-delay`    |

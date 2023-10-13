@@ -3,18 +3,11 @@
 **/.hg
 **/node_modules
 
-components/*/dist
-components/expressvars/custom.css
-components/expressvars/css/**/*.css
-components/vars/css/**/*.css
-components/vars/custom.css
-components/tokens/custom-*/*.css
-tools/preview/storybook-static/**
-tools/generator
-dist
-template.hbs
+*.hbs
+**/dist
 
-site/includes/*.js
+tokens/custom-*/*.css
+storybook-static
 
 .DS_Store*
 ehthumbs.db
@@ -22,3 +15,9 @@ Icon?
 Thumbs.db
 *~
 *.swp
+
+fixtures
+expected
+
+components/*/dist
+CHANGELOG.md

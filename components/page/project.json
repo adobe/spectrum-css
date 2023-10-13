@@ -1,0 +1,17 @@
+{
+    "$schema": "../../node_modules/nx/schemas/project-schema.json",
+    "name": "page",
+    "tags": ["component", "legacy"],
+    "targets": {
+        "profile": {},
+        "build": {},
+        "dev": {},
+        "test": {
+            "defaultConfiguration": "scoped"
+        },
+        "lint": {},
+        "format": {},
+        "clean": {},
+        "watch": {}
+    }
+}

@@ -1,38 +1,39 @@
 {
-  "name": "@spectrum-css/combobox",
-  "version": "2.0.42",
-  "description": "The Spectrum CSS combobox component",
-  "license": "Apache-2.0",
-  "author": "Adobe",
-  "homepage": "https://opensource.adobe.com/spectrum-css/",
-  "repository": {
-    "type": "git",
-    "url": "https://github.com/adobe/spectrum-css.git",
-    "directory": "components/combobox"
-  },
-  "bugs": {
-    "url": "https://github.com/adobe/spectrum-css/issues"
-  },
-  "main": "dist/index-vars.css",
-  "scripts": {
-    "build": "gulp"
-  },
-  "peerDependencies": {
-    "@spectrum-css/pickerbutton": ">=4",
-    "@spectrum-css/popover": ">=6",
-    "@spectrum-css/tokens": ">=11"
-  },
-  "devDependencies": {
-    "@spectrum-css/component-builder-simple": "^2.0.17",
-    "@spectrum-css/menu": "^5.1.2",
-    "@spectrum-css/pickerbutton": "^4.0.17",
-    "@spectrum-css/popover": "^6.0.79",
-    "@spectrum-css/progresscircle": "^2.0.70",
-    "@spectrum-css/textfield": "^6.0.25",
-    "@spectrum-css/tokens": "^12.0.0",
-    "gulp": "^4.0.0"
-  },
-  "publishConfig": {
-    "access": "public"
-  }
+    "name": "@spectrum-css/combobox",
+    "version": "2.0.42",
+    "description": "The Spectrum CSS combobox component",
+    "license": "Apache-2.0",
+    "author": "Adobe",
+    "homepage": "https://opensource.adobe.com/spectrum-css/",
+    "repository": {
+        "type": "git",
+        "url": "https://github.com/adobe/spectrum-css.git",
+        "directory": "components/combobox"
+    },
+    "bugs": {
+        "url": "https://github.com/adobe/spectrum-css/issues"
+    },
+    "main": "dist/index.css",
+    "peerDependencies": {
+        "@spectrum-css/menu": ">=5",
+        "@spectrum-css/pickerbutton": ">=4",
+        "@spectrum-css/popover": ">=6",
+        "@spectrum-css/progresscircle": ">=2",
+        "@spectrum-css/textfield": ">=6",
+        "@spectrum-css/tokens": ">=12"
+    },
+    "peerDependenciesMeta": {
+        "@spectrum-css/menu": {
+            "optional": true
+        },
+        "@spectrum-css/popover": {
+            "optional": true
+        },
+        "@spectrum-css/progresscircle": {
+            "optional": true
+        }
+    },
+    "publishConfig": {
+        "access": "public"
+    }
 }

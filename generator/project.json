@@ -1,0 +1,30 @@
+{
+    "$schema": "../node_modules/nx/schemas/project-schema.json",
+    "name": "generator",
+    "tags": ["tooling"],
+    "namedInputs": {
+        "core": ["{workspaceRoot}/templates", "{workspaceRoot}/plopfile.js"]
+    },
+    "targets": {
+        "new": {
+            "inputs": ["core"],
+            "command": "plop"
+        },
+        "lint": {
+            "inputs": ["{workspaceRoot}/plopfile.js", "{workspaceRoot}/*.json"],
+            "executor": "nx:run-commands",
+            "options": {
+                "commands": ["eslint --no-error-on-unmatched-pattern {projectRoot}/plopfile.js {projectRoot}/*.json"]
+            }
+        },
+        "format": {
+            "inputs": ["{workspaceRoot}/plopfile.js", "{workspaceRoot}/*.json"],
+            "executor": "nx:run-commands",
+            "options": {
+                "commands": [
+                    "eslint --no-error-on-unmatched-pattern {projectRoot}/plopfile.js {projectRoot}/*.json --fix"
+                ]
+            }
+        }
+    }
+}

@@ -1,33 +1,30 @@
 // Import the component markup template
+import { argTypes, horizontalIconOnlyProps, horizontalProps, horizontalWithIconsProps } from "./index.js";
 import { Template } from "./template";
-import {
-  argTypes, 
-  horizontalProps, 
-  horizontalWithIconsProps,
-  horizontalIconOnlyProps
-} from "./index.js";
 
+/**
+ * Tabs organize content into multiple sections and allow users to navigate between them. The content under the set of tabs should be related and form a coherent unit.
+ */
 export default {
-  title: "Components/Tabs/Horizontal",
-  description: "Tabs organize content into multiple sections and allow users to navigate between them. The content under the set of tabs should be related and form a coherent unit.",
-  component: "Tabs",
-  argTypes: argTypes,
-  args: {
-    rootClass: "spectrum-Tabs",
-    size: "m",
-    orientation: "horizontal",
-    isQuiet: false,
-    isEmphasized: false,
-    isCompact: false,
-  },
-  parameters: {
-    actions: {
-      handles: []
+    title: "Components/Tabs/Horizontal",
+    component: "Tabs",
+    argTypes: argTypes,
+    args: {
+        rootClass: "spectrum-Tabs",
+        size: "m",
+        orientation: "horizontal",
+        isQuiet: false,
+        isEmphasized: false,
+        isCompact: false,
     },
-    status: {
-      type: process.env.MIGRATED_PACKAGES.includes('tabs') ? 'migrated' : undefined
-    }
-  }
+    parameters: {
+        actions: {
+            handles: [],
+        },
+        status: {
+            type: process.env.MIGRATED_PACKAGES.includes("tabs") ? "migrated" : undefined,
+        },
+    },
 };
 
 export const Default = Template.bind({});

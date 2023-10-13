@@ -1,0 +1,29 @@
+<table class="spectrum-Table spectrum-Table--sizeM spectrum-Table--quiet" style="width: 100%;">
+    {%- if table.headings.length > 0 %}
+    <thead class="spectrum-Table-head">
+        <tr>
+        {% for heading in table.headings -%}
+            <th class="spectrum-Table-headCell{% if heading.isSortable %} is-sortable{# is-sorted-desc #}{% endif %}" aria-sort="descending" tabindex="0">
+                {{ heading.content }}
+                {% if heading.isSortable -%}
+                <svg class="spectrum-Icon spectrum-UIIcon-ArrowDown100 spectrum-Table-sortedIcon" focusable="false" aria-hidden="true">
+                    <use xlink:href="#spectrum-css-icon-Arrow100" />
+                </svg>
+                {%- endif %}
+            </th>
+        {%- endfor %}
+        </tr>
+    </thead>
+    {% endif -%}
+    <tbody class="spectrum-Table-body">
+        {% for row in table.rows -%}
+            <tr class="spectrum-Table-row">
+                {% for cell in row -%}
+                <td class="spectrum-Table-cell">
+                    {{ cell | safe }}
+                </td>
+                {%- endfor %}
+            </tr>
+        {%- endfor %}
+    </tbody>
+</table>

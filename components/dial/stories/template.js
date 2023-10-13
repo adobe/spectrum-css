@@ -3,20 +3,19 @@ import { classMap } from "lit/directives/class-map.js";
 import { ifDefined } from "lit/directives/if-defined.js";
 import { when } from "lit/directives/when.js";
 
-import "../index.css";
+import "@spectrum-css/dial";
 
 export const Template = ({
-	rootClass = "spectrum-Dial",
-	size = "m",
-	label,
-	isFocused = false,
-	isDragged = false,
-	isDisabled = false,
-	min = 0,
-	max = 100,
-	customClasses = [],
-	id,
-	// ...globals
+    rootClass = "spectrum-Dial",
+    size = "m",
+    label,
+    isFocused = false,
+    isDragged = false,
+    isDisabled = false,
+    min = 0,
+    max = 100,
+    customClasses = [],
+    id,
 }) => {
 	return html`
 		<div

@@ -1,4 +1,4 @@
-| Modifiable Custom Properties                  |
+| Modifiable custom properties                  |
 | --------------------------------------------- |
 | `--mod-animation-duration-100`                |
 | `--mod-card-actions-background-color-opacity` |
@@ -12,7 +12,6 @@
 | `--mod-card-actions-spacing`                  |
 | `--mod-card-background-color`                 |
 | `--mod-card-background-color-hover`           |
-| `--mod-card-body-font-color`                  |
 | `--mod-card-body-font-family`                 |
 | `--mod-card-body-font-size`                   |
 | `--mod-card-body-font-style`                  |
@@ -21,7 +20,6 @@
 | `--mod-card-body-spacing`                     |
 | `--mod-card-border-color`                     |
 | `--mod-card-border-color-hover`               |
-| `--mod-card-border-color-selected`            |
 | `--mod-card-border-width`                     |
 | `--mod-card-content-margin-bottom`            |
 | `--mod-card-content-margin-top`               |
@@ -38,7 +36,6 @@
 | `--mod-card-selected-background-color-rgb`    |
 | `--mod-card-selected-background-opacity`      |
 | `--mod-card-subtitle-padding-right`           |
-| `--mod-card-title-font-color`                 |
 | `--mod-card-title-font-family`                |
 | `--mod-card-title-font-size`                  |
 | `--mod-card-title-font-style`                 |
@@ -46,4 +43,3 @@
 | `--mod-card-title-line-height`                |
 | `--mod-card-title-padding-right`              |
 | `--mod-card-title-padding-top`                |
-| `--mod-spectrum-card-background-color`        |

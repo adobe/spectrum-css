@@ -1,0 +1,44 @@
+<site-search id="site-search">
+    <form aria-owns="search-results-listbox">
+        <spectrum-textfield>
+            <svg class="spectrum-Icon spectrum-Icon--sizeM spectrum-Textfield-icon spectrum-Search-icon" focusable="false" aria-hidden="true">
+                <use xlink:href="#spectrum-icon-18-Magnify"></use>
+            </svg>
+            <input type="search" placeholder="Search" name="search" value="" autocomplete="off">
+        </spectrum-textfield>
+        <button type="reset" value="Reset" class="spectrum-ClearButton spectrum-ClearButton--sizeM spectrum-Search-clearButton site-Search-clearButton" tabindex="-1" hidden="">
+            <span class="spectrum-ClearButton-fill">
+                <svg class="spectrum-ClearButton-icon spectrum-Icon spectrum-UIIcon-Cross100" focusable="false" aria-hidden="true">
+                <use xlink:href="#spectrum-css-icon-Cross100"></use>
+                </svg>
+            </span>
+        </button>
+    </form>
+    <spectrum-popover>
+        <spectrum-menu id="search-results-listbox" role="listbox">
+        </spectrum-menu>
+    </spectrum-popover>
+
+    <template id="search-message">
+        <div class="spectrum-IllustratedMessage site-Search-results--none site-Search-searchError">
+            <div class="spectrum-IllustratedMessage site-Search-results--none">
+                <h2 class="spectrum-Heading spectrum-Heading--pageTitle spectrum-IllustratedMessage-heading" id="search-message-title"></h2>
+                <p class="spectrum-Body--secondary spectrum-IllustratedMessage-description"><em id="search-message-content"></em></p>
+            </div>
+        </div>
+    </template>
+
+    <template id="search-result-item">
+        <li role="group">
+            <span class="spectrum-Menu-sectionHeading" aria-hidden="true" id="search-result-category"></span>
+            <spectrum-menu role="presentation" id="search-result-category-item">
+            </spectrum-menu>
+        </li>
+    </template>
+
+    <template id="search-result-item-link">
+        <spectrum-menu-item role="option">
+            <span class="spectrum-Menu-itemLabel" id="search-result-item-label"></span>
+        </spectrum-menu-item>
+    </template>
+</site-search>
