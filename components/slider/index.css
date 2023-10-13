@@ -47,7 +47,7 @@ governing permissions and limitations under the License.
   --spectrum-slider-label-top-to-text: var(--spectrum-component-top-to-text-100);
   --spectrum-slider-control-to-field-label: var(--spectrum-slider-control-to-field-label-large);
   --spectrum-slider-value-side-padding-inline: var(--spectrum-spacing-200);
-  
+
   /* TODO: placeholder value for sideLabel variant value width */
   --spectrum-slider-value-inline-size: 18px;
 }
@@ -316,7 +316,6 @@ governing permissions and limitations under the License.
   outline: none;
 
   &:active,
-  &.is-focused,
   &.is-dragged {
     border-width: var(--mod-slider-handle-border-width-down, var(--spectrum-slider-handle-border-width-down));
   }
@@ -732,7 +731,7 @@ governing permissions and limitations under the License.
 
     --spectrum-slider-track-color-disabled: GrayText;
     --spectrum-slider-track-fill-color-disabled: GrayText;
-    
+
     --spectrum-slider-handle-border-color-disabled: GrayText;
 
     --spectrum-slider-label-text-color: CanvasText;
