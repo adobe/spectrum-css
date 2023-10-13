@@ -46,3 +46,13 @@ export default {
 
 export const Default = Template.bind({});
 Default.args = {};
+
+export const Or = Template.bind({});
+Or.args = {
+	variant: "or"
+};
+
+export const Disabled = Template.bind({});
+Disabled.args = {
+	isDisabled: true
+};
