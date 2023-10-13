@@ -58,6 +58,7 @@ export const Picker = ({
 			?disabled=${isDisabled}
 			aria-haspopup="listbox"
 			style=${ifDefined(styleMap(customStyles))}
+			type="button"
 			@click=${(e) => {
 				updateArgs({ isOpen: !isOpen });
 			}}
