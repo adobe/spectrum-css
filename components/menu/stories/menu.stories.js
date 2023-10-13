@@ -342,7 +342,12 @@ DrillInSubmenu.args = {
       isDrillIn: true,
       isOpen: true,
     },
-    { label: "Select and Mask..." },
+    {
+      label: "Select and Mask...",
+      isDrillIn: true,
+      isDisabled: true,
+      isOpen: true,
+    },
     { label: "Save Selection" },
   ],
 };
