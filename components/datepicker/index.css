@@ -214,7 +214,7 @@ governing permissions and limitations under the License.
 
   /* Input Group */
   &.spectrum-DatePicker--quiet {
-    border-radius: var(--mod-combobox-quiet-fieldbutton-border-radius, var(--spectrum-combobox-quiet-fieldbutton-border-radius));
+    border-radius: var(--mod-datepicker-fieldbutton-border-radius-quiet, var(--spectrum-datepicker-fieldbutton-border-radius-quiet));
 
     .spectrum-DatePicker-textfield {
       min-inline-size: 0;
@@ -225,7 +225,7 @@ governing permissions and limitations under the License.
       }
     }
     .spectrum-DatePicker-button {
-      border-radius: var(--mod-combobox-quiet-fieldbutton-border-radius, var(--spectrum-combobox-quiet-fieldbutton-border-radius));
+      border-radius: var(--mod-datepicker-fieldbutton-border-radius-quiet, var(--spectrum-datepicker-fieldbutton-border-radius-quiet));
     }
   }
 

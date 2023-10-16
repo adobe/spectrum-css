@@ -1,6 +1,5 @@
 | Modifiable Custom Properties                            |
 | ------------------------------------------------------- |
-| `--mod-combobox-quiet-fieldbutton-border-radius`        |
 | `--mod-datepicker-border-color-disabled`                |
 | `--mod-datepicker-border-radius`                        |
 | `--mod-datepicker-dash-color-disabled`                  |
@@ -10,6 +9,7 @@
 | `--mod-datepicker-datetime-input-width-first`           |
 | `--mod-datepicker-datetime-quiet-input-width`           |
 | `--mod-datepicker-datetime-quiet-input-width-first`     |
+| `--mod-datepicker-fieldbutton-border-radius-quiet`      |
 | `--mod-datepicker-focus-animation`                      |
 | `--mod-datepicker-focus-line-gap`                       |
 | `--mod-datepicker-focus-ring-color`                     |
