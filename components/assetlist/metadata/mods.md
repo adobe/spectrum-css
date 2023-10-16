@@ -16,6 +16,7 @@
 | `--mod-assetlist-item-margin-bottom`                   |
 | `--mod-assetlist-item-padding-inline-end`              |
 | `--mod-assetlist-item-padding-inline-start`            |
+| `--mod-assetlist-label-color`                          |
 | `--mod-assetlist-thumbnail-margin-left`                |
 | `--mod-assetlist-thumbnail-width`                      |
 | `--mod-assetlist-thumnail-height`                      |

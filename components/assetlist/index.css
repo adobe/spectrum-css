@@ -45,7 +45,7 @@ governing permissions and limitations under the License.
 
 .spectrum-AssetList-item {
   position: relative;
-  color: var(--spectrum-assetlist-label-color, var(--spectrum-assetlist-label-color));
+  color: var(--highcontrast-assetlist-label-color, var(--mod-assetlist-label-color, var(--spectrum-assetlist-label-color)));
 
   display: flex;
   box-sizing: border-box;
@@ -140,7 +140,6 @@ governing permissions and limitations under the License.
   }
 
   &.is-selected {
-    color: var(--highcontrast-assetlist-label-color);
     background-color: var(--highcontrast-assetlist-item-background-color-selected, var(--mod-assetlist-item-background-color-selected, var(--spectrum-assetlist-item-background-color-selected)));
     &:hover,
     &:focus {
@@ -175,15 +174,15 @@ governing permissions and limitations under the License.
 @media (forced-colors: active) {
   .spectrum-AssetList-item {
    forced-color-adjust: none;
-    /* --highcontrast-assetlist-border-color-key-focus: Highlight;*/
+    --highcontrast-assetlist-border-color-key-focus: Highlight;
     --highcontrast-assetlist-item-background-color-hover: Highlight;
     --highcontrast-assetlist-item-background-color-selected-hover: Highlight;
-    --highcontrast-assetlist-label-color: SelectedItemText;
-
+    --highcontrast-assetlist-label-color: ButtonText;
     --highcontrast-assetlist-item-background-color-selected: SelectedItem;
-    /* --highcontrast-assetlist-label-color: SelectedItemText; */
 
-    @supports (color: SelectedItem) {
+    &:hover,
+    &.is-selected,
+    &.is-navigated {
       --highcontrast-assetlist-label-color: SelectedItemText;
     }
   }
