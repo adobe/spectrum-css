@@ -11,31 +11,33 @@ governing permissions and limitations under the License.
 */
 
 export default class CycleButton {
-  constructor(el, options = {}) {
-    if (!el) return;
+    constructor(el) {
+        if (!el) return;
 
-    this.el = el;
-    this.icons = [...this.el.querySelectorAll(".spectrum-Icon")];
+        this.el = el;
 
-    this.clickHandler = this.clickHandler.bind(this);
+        this.clickHandler = this.clickHandler.bind(this);
 
-    this.el.addEventListener("click", this.clickHandler);
-  }
+        this.el.addEventListener("click", this.clickHandler);
+    }
 
-  get selectedIcon() {
-    return this.icons.find((icon) => icon.classList.contains("is-selected"));
-  }
+    get icons() {
+        return [...this.el.querySelectorAll(".spectrum-Icon")]
+    }
 
-  clickHandler(event) {
-    if (!this.el || !this.selectedIcon) return;
+    get selectedIcon() {
+        return this.icons.find((icon) => icon.classList.contains("is-selected"));
+    }
 
-    const selectedIndex = this.icons.indexOf(this.selectedIcon);
-    this.selectedIcon.classList.toggle("is-selected", false);
+    clickHandler(event) {
+        if (!this.el || !this.selectedIcon) return;
 
-    const newIndex =
-      selectedIndex + 1 < this.icons.length ? selectedIndex + 1 : 0;
-    this.icons[newIndex].classList.toggle("is-selected", true);
+        const selectedIndex = this.icons.indexOf(this.selectedIcon);
+        this.selectedIcon.classList.toggle("is-selected", false);
 
-    event.preventDefault();
-  }
+        const newIndex = selectedIndex + 1 < this.icons.length ? selectedIndex + 1 : 0;
+        this.icons[newIndex].classList.toggle("is-selected", true);
+
+        event.preventDefault();
+    }
 }

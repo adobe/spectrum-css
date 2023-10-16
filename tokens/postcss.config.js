@@ -12,47 +12,48 @@
  */
 
 module.exports = (ctx) => {
-  const {
-    combineSelectors = true,
-    /* This removes all copyright comments so we can add a single one at the top of the file */
-    commentsDenylist = ["Copyright", "This file contains"],
-  } = ctx.options;
+    const {
+        combineSelectors = true,
+        /* This removes all copyright comments so we can add a single one at the top of the file */
+        commentsDenylist = ["Copyright", "This file contains"],
+    } = ctx.options;
 
-  return {
-    ...ctx.options,
-    plugins: {
-      "postcss-import": {},
-      "postcss-combine-media-query": {},
-      "postcss-sorting": {
-        order: ["custom-properties", "declarations", "rules", "at-rules"],
-        "properties-order": "alphabetical",
-      },
-      /** @note Merges _adjacent_ rules only; hense the sorting is first */
-      "postcss-merge-rules": {},
-      "postcss-combine-duplicated-selectors": {},
-      "@spectrum-tools/postcss-rgb-mapping": {},
-      /* After cleaning up comments, remove all empty rules */
-      "cssnano": {
-        preset: [
-          'lite', {
-            normalizeWhitespace: false,
-            discardComments: true,
-            orderedValues: {},
-            mergeRules: {},
-            uniqueSelectors: {},
-            cssDeclarationSorter: {},
-          }
-        ],
-      },
-      /* Ensure the license is at the top of the file */
-      "postcss-licensing": {
-        filename: "../COPYRIGHT",
-        skipIfEmpty: true,
-      },
-      "postcss-reporter": {
-        clearReportedMessages: true,
-      },
-      "@spectrum-tools/postcss-prettier": {},
-    },
-  };
+    return {
+        ...ctx.options,
+        plugins: {
+            "postcss-import": {},
+            "postcss-combine-media-query": {},
+            "postcss-sorting": {
+                order: ["custom-properties", "declarations", "rules", "at-rules"],
+                "properties-order": "alphabetical",
+            },
+            /** @note Merges _adjacent_ rules only; hense the sorting is first */
+            "postcss-merge-rules": {},
+            "postcss-combine-duplicated-selectors": {},
+            "@spectrum-tools/postcss-rgb-mapping": {},
+            /* After cleaning up comments, remove all empty rules */
+            cssnano: {
+                preset: [
+                    "lite",
+                    {
+                        normalizeWhitespace: false,
+                        discardComments: true,
+                        orderedValues: {},
+                        mergeRules: {},
+                        uniqueSelectors: {},
+                        cssDeclarationSorter: {},
+                    },
+                ],
+            },
+            /* Ensure the license is at the top of the file */
+            "postcss-licensing": {
+                filename: "../COPYRIGHT",
+                skipIfEmpty: true,
+            },
+            "postcss-reporter": {
+                clearReportedMessages: true,
+            },
+            "@spectrum-tools/postcss-prettier": {},
+        },
+    };
 };

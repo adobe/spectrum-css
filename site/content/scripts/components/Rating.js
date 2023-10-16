@@ -11,93 +11,102 @@ governing permissions and limitations under the License.
 */
 
 export default class Rating {
-  constructor(el, options = {}) {
-    if (!el) return;
-    this.el = el;
-    this.input = this.el.querySelector(".spectrum-Rating-input");
-    this.icons = [...this.el.querySelectorAll(".spectrum-Rating-icon")].map(
-      (el, idx) => new RatingItem(el, { idx, parent: this }),
-    );
+    constructor(el) {
+        if (!el) return;
 
-    this.focusinHandler = this.focusinHandler.bind(this);
-    this.focusoutHandler = this.focusoutHandler.bind(this);
-    this.changeHandler = this.changeHandler.bind(this);
+        this.el = el;
 
-    this.el.addEventListener("focusin", this.focusinHandler);
-    this.el.addEventListener("focusout", this.focusoutHandler);
-    this.el.addEventListener("change", this.changeHandler);
-  }
+        this.icons.forEach(
+            (el, idx) => new RatingItem(el, { idx, parent: this }),
+        );
 
-  get isReadOnly() {
-    return this.input.classList.contains("is-readOnly");
-  }
+        this.focusinHandler = this.focusinHandler.bind(this);
+        this.focusoutHandler = this.focusoutHandler.bind(this);
+        this.changeHandler = this.changeHandler.bind(this);
 
-  get isFocused() {
-    return this.el.classList.contains("is-focused");
-  }
+        this.el.addEventListener("focusin", this.focusinHandler);
+        this.el.addEventListener("focusout", this.focusoutHandler);
+        this.el.addEventListener("change", this.changeHandler);
+    }
 
-  set isFocused(state) {
-    this.el.classList.toggle("is-focused", state);
-  }
+    get input() {
+        return this.el.querySelector(".spectrum-Rating-input");
+    }
 
-  set value(input) {
-    const parsedInput = parseInt(input, 10);
-    if (this.isReadOnly || this.value === parsedInput) return;
-    this.input.value = parsedInput;
-  }
+    get icons() {
+        return [...this.el.querySelectorAll(".spectrum-Rating-icon")];
+    }
 
-  get value() {
-    return parseInt(this.input.value, 10);
-  }
+    get isReadOnly() {
+        return this.input.classList.contains("is-readOnly");
+    }
 
-  focusinHandler() {
-    if (!this.el) return;
-    this.isFocused = true;
-  }
+    get isFocused() {
+        return this.el.classList.contains("is-focused");
+    }
 
-  focusoutHandler() {
-    if (!this.el) return;
-    this.isFocused = false;
-  }
+    set isFocused(state) {
+        this.el.classList.toggle("is-focused", state);
+    }
 
-  changeHandler(event) {
-    if (!this.el || !this.input || this.isReadOnly) return;
+    set value(input) {
+        const parsedInput = parseInt(input, 10);
+        if (this.isReadOnly || this.value === parsedInput) return;
+        this.input.value = parsedInput;
+    }
 
-    event.preventDefault();
+    get value() {
+        return parseInt(this.input.value, 10);
+    }
 
-    this.icons.forEach((icon, index) => {
-      icon.isSelected = index <= parsedInput - 1;
-      icon.isCurrentValue = index === parsedInput - 1;
-    });
-  }
+    focusinHandler() {
+        if (!this.el) return;
+        this.isFocused = true;
+    }
+
+    focusoutHandler() {
+        if (!this.el) return;
+        this.isFocused = false;
+    }
+
+    changeHandler(event) {
+        if (!this.el || !this.input || this.isReadOnly) return;
+
+        event.preventDefault();
+
+        this.icons.forEach((icon, index) => {
+            icon.isSelected = index <= parsedInput - 1;
+            icon.isCurrentValue = index === parsedInput - 1;
+        });
+    }
 }
 
 export class RatingItem {
-  constructor(el, options = {}) {
-    if (!el) return;
-    this.el = el;
-    this.index = options.idx;
-    this.parent = options.parent;
-  }
+    constructor(el, options = {}) {
+        if (!el) return;
+        this.el = el;
+        this.index = options.idx;
+        this.parent = options.parent;
+    }
 
-  set isSelected(state) {
-    this.el.classList.toggle("is-selected", state);
-  }
+    set isSelected(state) {
+        this.el.classList.toggle("is-selected", state);
+    }
 
-  get isSelected() {
-    return this.el.classList.contains("is-selected");
-  }
+    get isSelected() {
+        return this.el.classList.contains("is-selected");
+    }
 
-  set isCurrentValue(state) {
-    this.el.classList.toggle("is-currentValue", state);
-  }
+    set isCurrentValue(state) {
+        this.el.classList.toggle("is-currentValue", state);
+    }
 
-  get isCurrentValue() {
-    return this.el.classList.contains("is-currentValue");
-  }
+    get isCurrentValue() {
+        return this.el.classList.contains("is-currentValue");
+    }
 
-  clickHandler() {
-    if (!this.el) return;
-    this.parent.value = this.index;
-  }
+    clickHandler() {
+        if (!this.el) return;
+        this.parent.value = this.index;
+    }
 }

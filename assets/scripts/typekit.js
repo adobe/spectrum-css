@@ -15,63 +15,59 @@ governing permissions and limitations under the License.
  * See https://wiki.corp.adobe.com/display/devrel/Using+Typekit+at+Adobe to get set up right.
  */
 window.addEventListener("DOMContentLoaded", function () {
-  "use strict";
+    "use strict";
 
-  // On pageload, determine to current pages language setting.
-  // If it is US-language or unset use the 1st Adobe font web project id (smaller size),
-  // otherwise use the 2nd kit with all the language settings (larger size)
+    // On pageload, determine to current pages language setting.
+    // If it is US-language or unset use the 1st Adobe font web project id (smaller size),
+    // otherwise use the 2nd kit with all the language settings (larger size)
 
-  // This wrapper prevents loading the font more than once
-  if (!window.Typekit) {
-    const kitId =
-      document.querySelector('[lang]:not([lang="en-US"])') === null
-        ? "mge7bvf"
-        : "rok6rmo";
+    // This wrapper prevents loading the font more than once
+    if (!window.Typekit) {
+        const kitId = document.querySelector('[lang]:not([lang="en-US"])') === null ? "mge7bvf" : "rok6rmo";
 
-    const html = document.documentElement;
-    html.classList.add("wf-loading");
+        const html = document.documentElement;
+        html.classList.add("wf-loading");
 
-    const t = setTimeout(function () {
-      html.classList.remove("wf-loading");
-      html.classList.add("wf-inactive");
-    }, 3000);
+        const t = setTimeout(function () {
+            html.classList.remove("wf-loading");
+            html.classList.add("wf-inactive");
+        }, 3000);
 
-    const tk = document.createElement("script");
-    let d = false;
+        const tk = document.createElement("script");
+        let d = false;
 
-    // Always load over https
-    tk.src = "https://use.typekit.net/" + kitId + ".js";
-    tk.type = "text/javascript";
-    tk.async = "true";
-    tk.onload = tk.onreadystatechange = () => {
-      const a = this.readyState;
-      if (d || (a && a !== "complete" && a !== "loaded")) return;
+        // Always load over https
+        tk.src = "https://use.typekit.net/" + kitId + ".js";
+        tk.type = "text/javascript";
+        tk.async = "true";
+        tk.onload = tk.onreadystatechange = () => {
+            const a = this.readyState;
+            if (d || (a && a !== "complete" && a !== "loaded")) return;
 
-      d = true;
-      clearTimeout(t);
+            d = true;
+            clearTimeout(t);
 
-      try {
-        Typekit.load({
-          // kitId: document.querySelector('[lang]:not([lang="en-US"])') !== null ? 'pbi5ojv' : 'ruf7eed',
-          kitId:
-            document.querySelector('[lang]:not([lang="en-US"])') === null
-              ? "mge7bvf"
-              : "rok6rmo",
-          scriptTimeout: 3000,
-          active: function () {
-            var loader = document.getElementById("loader");
-            if (loader) {
-              setTimeout(function () {
-                // Hide the loader
-                loader.style.display = "none";
-              }, 125);
+            try {
+                Typekit.load({
+                    // kitId: document.querySelector('[lang]:not([lang="en-US"])') !== null ? 'pbi5ojv' : 'ruf7eed',
+                    kitId: document.querySelector('[lang]:not([lang="en-US"])') === null ? "mge7bvf" : "rok6rmo",
+                    scriptTimeout: 3000,
+                    active: function () {
+                        var loader = document.getElementById("loader");
+                        if (loader) {
+                            setTimeout(function () {
+                                // Hide the loader
+                                loader.style.display = "none";
+                            }, 125);
+                        }
+                    },
+                });
+            } catch (b) {
+                /* ignore */
             }
-          },
-        });
-      } catch (b) {/* ignore */}
-    };
+        };
 
-    const script = document.getElementsByTagName("script")[0];
-    script.parentNode.insertBefore(tk, script);
-  }
+        const script = document.getElementsByTagName("script")[0];
+        script.parentNode.insertBefore(tk, script);
+    }
 });

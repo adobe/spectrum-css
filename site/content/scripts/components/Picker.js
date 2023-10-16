@@ -10,6 +10,30 @@ OF ANY KIND, either express or implied. See the License for the specific languag
 governing permissions and limitations under the License.
 */
 export default class Picker {
+    constructor(el) {
+        if (!el) return;
+
+        this.el = el;
+
+        this.keydownHandler = this.keydownHandler.bind(this);
+        this.changeHandler = this.changeHandler.bind(this);
+        this.clickHandler = this.clickHandler.bind(this);
+
+        if (this.keyBindings && typeof this.keyBindings === "object") {
+            document.addEventListener("keydown", this.keydownHandler);
+        } else {
+            this.el.addEventListener("keydown", this.keydownHandler);
+        }
+
+        this.el.addEventListener("change", this.changeHandler);
+        this.el.addEventListener("click", this.clickHandler);
+
+        document.addEventListener("closePickers", (event) => {
+            if (event.detail.picker === this) return;
+            this.isOpen = false;
+        });
+    }
+
     get value() {
         return this.getAttribute("value");
     }
@@ -92,28 +116,6 @@ export default class Picker {
         this.popover.isOpen = state;
     }
     /** -- end -- */
-
-    constructor(el) {
-        this.el = el;
-
-        this.keydownHandler = this.keydownHandler.bind(this);
-        this.changeHandler = this.changeHandler.bind(this);
-        this.clickHandler = this.clickHandler.bind(this);
-
-        if (this.keyBindings && typeof this.keyBindings === "object") {
-            document.addEventListener("keydown", this.keydownHandler);
-        } else {
-            this.el.addEventListener("keydown", this.keydownHandler);
-        }
-
-        this.el.addEventListener("change", this.changeHandler);
-        this.el.addEventListener("click", this.clickHandler);
-
-        document.addEventListener("closePickers", (event) => {
-            if (event.detail.picker === this) return;
-            this.isOpen = false;
-        });
-    }
 
     // @todo should we run this as part of a mutation observer too?
     getOptions() {
@@ -221,9 +223,3 @@ export default class Picker {
     }
     /** -- end -- */
 }
-
-window.addEventListener("DOMContentLoaded", () => {
-    [...document.querySelectorAll(".spectrum-Picker")].forEach((el) => {
-        new Picker(el);
-    });
-});

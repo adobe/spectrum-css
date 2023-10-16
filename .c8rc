@@ -1,8 +1,5 @@
 {
     "clean": true,
     "perFile": true,
-    "reporter": [
-        "text",
-        "cobertura"
-    ]
+    "reporter": ["text", "cobertura"]
 }

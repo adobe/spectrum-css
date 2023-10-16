@@ -13,11 +13,6 @@ export default class InputGroup {
     constructor(el) {
         this.el = el;
 
-        this.menu = this.el.closest(".spectrum-Menu");
-        this.pickerButton = this.el.querySelector(".spectrum-PickerButton");
-        this.textfields = [...this.el.querySelectorAll(".spectrum-Textfield")];
-        this.inputs = [...this.el.querySelectorAll(".spectrum-InputGroup-input")];
-
         this.focusinHandler = this.focusinHandler.bind(this);
         this.focusoutHandler = this.focusoutHandler.bind(this);
         this.focusHandler = this.focusHandler.bind(this);
@@ -27,6 +22,22 @@ export default class InputGroup {
         this.el.addEventListener("focusout", this.focusoutHandler);
         this.el.addEventListener("focus", this.focusHandler, true);
         this.el.addEventListener("blur", this.blurHandler, true);
+    }
+
+    get menu() {
+        return this.el.closest(".spectrum-Menu");
+    }
+
+    get pickerButton() {
+        return this.el.querySelector(".spectrum-PickerButton");
+    }
+
+    get textfields() {
+        return [...this.el.querySelectorAll(".spectrum-Textfield")];
+    }
+
+    get inputs() {
+        return [...this.el.querySelectorAll(".spectrum-InputGroup-input")];
     }
 
     set isSelected(state) {
@@ -85,9 +96,3 @@ export default class InputGroup {
         this.focus = event.type === "focus";
     }
 }
-
-window.addEventListener("DOMContentLoaded", () => {
-    [...document.querySelectorAll(".spectrum-InputGroup")].forEach((el) => {
-        new InputGroup(el);
-    });
-});

@@ -1,74 +1,71 @@
 {
-	"name": "tokens",
-	"tag": ["tokens"],
-	"targets": {
-		"clean": {
-			"options": {
-				"cwd": "tokens"
-			}
-		},
-		"build": {
-			"dependsOn": ["style-dictionary"],
-			"inputs": [
-				"{projectRoot}/postcss.config.js",
-				"{projectRoot}/custom-express/*.css",
-				"{projectRoot}/custom-spectrum/*.css"
-			],
-			"outputs": [
-				"{projectRoot}/dist/css/express",
-				"{projectRoot}/dist/css/spectrum"
-			],
-			"executor": "nx:run-commands",
-			"options": {
-				"cwd": "{projectRoot}",
-				"commands": [
-					"postcss ./dist/css/*.css ./dist/css/spectrum/*.css ./dist/css/express/*.css --replace",
-					"postcss ./custom-express/*.css --dir ./dist/css/express/",
-					"postcss ./custom-spectrum/*.css --dir ./dist/css/spectrum/",
-					"cat ./dist/css/*.css ./dist/css/spectrum/*.css ./dist/css/express/*.css | postcss --output ./dist/index.css"
-				],
-				"parallel": false
-			},
-			"configurations": {
-				"light": {
-					"cwd": "{projectRoot}",
-					"commands": [
-						"postcss ./dist/css/*.css ./dist/css/spectrum/*.css ./dist/css/express/*.css --replace",
-						"postcss ./custom-express/*.css --dir ./dist/css/express/",
-						"postcss ./custom-spectrum/*.css --dir ./dist/css/spectrum/",
-						"cat ./dist/css/*.css ./dist/css/spectrum/*.css ./dist/css/express/*.css | postcss --output ./dist/index.css"
-					],
-					"parallel": false
-				}
-			}
-		},
-		"style-dictionary": {
-			"dependsOn": ["clean"],
-			"inputs": [
-				"{projectRoot}/postcss.config.js",
-				"{projectRoot}/style-dictionary.config.js",
-				"{projectRoot}/utilities/style-dictionary.utils.js"
-			],
-			"outputs": [
-				"{projectRoot}/dist/global-vars.css",
-				"{projectRoot}/dist/light-vars.css",
-				"{projectRoot}/dist/dark-vars.css",
-				"{projectRoot}/dist/darkest-vars.css",
-				"{projectRoot}/dist/medium-vars.css",
-				"{projectRoot}/dist/large-vars.css",
-				"{projectRoot}/dist/specrum/global-vars.css",
-				"{projectRoot}/dist/express/global-vars.css",
-				"{projectRoot}/dist/specrum/medium-vars.css",
-				"{projectRoot}/dist/specrum/large-vars.css"
-			],
-			"executor": "@nxkit/style-dictionary:build",
-			"options": {
-				"styleDictionaryConfig": "./tokens/style-dictionary.config.js",
-				"outputPath": "./tokens",
-				"tsConfig": "./tsconfig.base.json",
-				"deleteOutputPath": false,
-				"platform": "CSS"
-			}
-		}
-	}
+    "name": "tokens",
+    "tag": ["tokens"],
+    "targets": {
+        "clean": {
+            "options": {
+                "cwd": "tokens"
+            }
+        },
+        "build": {
+            "dependsOn": ["style-dictionary"],
+            "inputs": [
+                "{projectRoot}/postcss.config.js",
+                "{projectRoot}/custom-express/*.css",
+                "{projectRoot}/custom-spectrum/*.css"
+            ],
+            "outputs": ["{projectRoot}/dist/css/express", "{projectRoot}/dist/css/spectrum"],
+            "executor": "nx:run-commands",
+            "options": {
+                "cwd": "{projectRoot}",
+                "commands": [
+                    "postcss ./dist/css/*.css ./dist/css/spectrum/*.css ./dist/css/express/*.css --replace",
+                    "postcss ./custom-express/*.css --dir ./dist/css/express/",
+                    "postcss ./custom-spectrum/*.css --dir ./dist/css/spectrum/",
+                    "cat ./dist/css/*.css ./dist/css/spectrum/*.css ./dist/css/express/*.css | postcss --output ./dist/index.css"
+                ],
+                "parallel": false
+            },
+            "configurations": {
+                "light": {
+                    "cwd": "{projectRoot}",
+                    "commands": [
+                        "postcss ./dist/css/*.css ./dist/css/spectrum/*.css ./dist/css/express/*.css --replace",
+                        "postcss ./custom-express/*.css --dir ./dist/css/express/",
+                        "postcss ./custom-spectrum/*.css --dir ./dist/css/spectrum/",
+                        "cat ./dist/css/*.css ./dist/css/spectrum/*.css ./dist/css/express/*.css | postcss --output ./dist/index.css"
+                    ],
+                    "parallel": false
+                }
+            }
+        },
+        "style-dictionary": {
+            "dependsOn": ["clean"],
+            "inputs": [
+                "{projectRoot}/postcss.config.js",
+                "{projectRoot}/style-dictionary.config.js",
+                "{projectRoot}/utilities/style-dictionary.utils.js"
+            ],
+            "outputs": [
+                "{projectRoot}/dist/global-vars.css",
+                "{projectRoot}/dist/light-vars.css",
+                "{projectRoot}/dist/dark-vars.css",
+                "{projectRoot}/dist/darkest-vars.css",
+                "{projectRoot}/dist/medium-vars.css",
+                "{projectRoot}/dist/large-vars.css",
+                "{projectRoot}/dist/specrum/global-vars.css",
+                "{projectRoot}/dist/express/global-vars.css",
+                "{projectRoot}/dist/specrum/medium-vars.css",
+                "{projectRoot}/dist/specrum/large-vars.css"
+            ],
+            "executor": "@nxkit/style-dictionary:build",
+            "options": {
+                "styleDictionaryConfig": "./tokens/style-dictionary.config.js",
+                "outputPath": "./tokens",
+                "tsConfig": "./tsconfig.base.json",
+                "deleteOutputPath": false,
+                "platform": "CSS"
+            }
+        }
+    }
 }

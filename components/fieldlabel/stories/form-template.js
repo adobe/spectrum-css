@@ -9,12 +9,7 @@ import { Template as TextField } from "@spectrum-css/textfield/stories/template.
 
 import "@spectrum-css/fieldlabel";
 
-export const Template = ({
-    rootClass = "spectrum-Form",
-    labelsAbove,
-    customClasses = [],
-    id,
-}) => {
+export const Template = ({ rootClass = "spectrum-Form", labelsAbove, customClasses = [], id }) => {
     return html`
         <form
             class=${classMap({

@@ -26,8 +26,8 @@ assignees: pfulton, castastrophe
 
 ## Environment
 
-- **Version of the impacted component(s):** <!-- 2.13.0 -->
-- **Browser(s) and OS(s):** <!-- Chrome 75.0.3770.142 on Win 10 -->
+-   **Version of the impacted component(s):** <!-- 2.13.0 -->
+-   **Browser(s) and OS(s):** <!-- Chrome 75.0.3770.142 on Win 10 -->
 
 ## Additional context
 

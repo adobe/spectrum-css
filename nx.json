@@ -82,9 +82,7 @@
             "dependsOn": ["build:light"],
             "executor": "nx:run-commands",
             "options": {
-                "commands": [
-                    "nx watch --projects $NX_TASK_TARGET_PROJECT -- nx run \\$NX_PROJECT_NAME:build"
-                ],
+                "commands": ["nx watch --projects $NX_TASK_TARGET_PROJECT -- nx run \\$NX_PROJECT_NAME:build"],
                 "envFile": ".env.dev"
             }
         },

@@ -10,102 +10,89 @@ OF ANY KIND, either express or implied. See the License for the specific languag
 governing permissions and limitations under the License.
 */
 
-import { LitElement } from "lit";
+export default class TextField {
+    constructor(el) {
+        if (!el) return;
 
-export default class TextField extends LitElement {
-  // This allows us to use web component syntax without the shadow dom
-  // we want this to act like a regular HTML element with external styles
-  createRenderRoot() {
-    return this;
-  }
+        this.el = el;
 
-  get input() {
-    return this.querySelector("input");
-  }
+        if (this.input) {
+            this.input.classList.add("spectrum-TextField-input");
+        }
 
-  get icon() {
-    return this.querySelector(".spectrum-TextField-icon");
-  }
+        this.el.addEventListener("focusin", () => {
+            this.focus = true;
+        });
 
-  get form() {
-    return this.closest("form");
-  }
+        this.el.addEventListener("focusout", () => {
+            this.focus = false;
+        });
 
-  constructor() {
-    super();
+        this.handleKeyDown = this.handleKeyDown.bind(this);
 
-    this.classList.add("spectrum-TextField");
+        this.input.addEventListener("keydown", this.handleKeyDown);
 
-    if (this.input) this.input.classList.add("spectrum-TextField-input");
+        // this.input.addEventListener('keypress', this.handleKeyPress.bind(this));
+        // this.input.addEventListener('focus', (event) => {
+        //   // Immediately hide results, otherwise they show up in the wrong position since we're in the middle of animation
+        //   this.hideResults();
 
-    this.addEventListener("focusin", () => {
-      this.focus = true;
-    });
-
-    this.addEventListener("focusout", () => {
-      this.focus = false;
-    });
-
-    this.handleKeyDown = this.handleKeyDown.bind(this);
-
-    this.input.addEventListener("keydown", this.handleKeyDown);
-    // this.input.addEventListener('keypress', this.handleKeyPress.bind(this));
-    // this.input.addEventListener('focus', (event) => {
-    //   // Immediately hide results, otherwise they show up in the wrong position since we're in the middle of animation
-    //   this.hideResults();
-
-    //   if (typeof options.onFocusCallback === 'function') {
-    //     options.onFocusCallback(event);
-    //   }
-    // });
-  }
-
-  set focus(state) {
-    if (this.classList.contains("focus-ring") || !state) {
-      this.classList?.toggle("is-keyboardFocused", state);
-    } else if (!this.classList.contains("focus-ring") || !state) {
-      this.classList?.toggle("is-focused", state);
+        //   if (typeof options.onFocusCallback === 'function') {
+        //     options.onFocusCallback(event);
+        //   }
+        // });
     }
-  }
 
-  get focus() {
-    return (
-      this.classList.contains("focus-ring") ||
-      this.classList.contains("is-keyboardFocused") ||
-      this.classList.contains("is-focused")
-    );
-  }
-
-  get isEmpty() {
-    return (
-      !this.input.value ||
-      this.input.value === "" ||
-      this.input.value.length === 0
-    );
-  }
-
-  reset() {
-    this.input.value = "";
-  }
-
-  handleKeyDown(event) {
-    switch (event.key) {
-      case "ArrowDown":
-      case "Enter":
-        if (!this.form) break;
-        if (this.form.requestSubmit) this.form.requestSubmit();
-        else this.form.submit();
-        break;
-      case "Escape":
-        if (!this.form) break;
-        this.form.reset();
-        break;
-      default:
-        if (event.isComposing) break;
+    get input() {
+        return this.el.querySelector("input");
     }
-  }
-}
 
-if (!customElements.get('spectrum-textfield')) {
-  customElements.define('spectrum-textfield', TextField);
+    get icon() {
+        return this.el.querySelector(".spectrum-TextField-icon");
+    }
+
+    get form() {
+        return this.el.closest("form");
+    }
+
+    set focus(state) {
+        if (this.el.classList.contains("focus-ring") || !state) {
+            this.el.classList?.toggle("is-keyboardFocused", state);
+        } else if (!this.el.classList.contains("focus-ring") || !state) {
+            this.el.classList?.toggle("is-focused", state);
+        }
+    }
+
+    get focus() {
+        return (
+            this.el.classList.contains("focus-ring") ||
+            this.el.classList.contains("is-keyboardFocused") ||
+            this.el.classList.contains("is-focused")
+        );
+    }
+
+    get isEmpty() {
+        return !this.input.value || this.input.value === "" || this.input.value.length === 0;
+    }
+
+    reset() {
+        this.input.value = "";
+    }
+
+    handleKeyDown(event) {
+        switch (event.key) {
+            case "ArrowDown":
+            case "Enter":
+                if (!this.form) break;
+                if (this.form.requestSubmit) this.form.requestSubmit();
+                else this.form.submit();
+                break;
+            case "Escape":
+                if (!this.form) break;
+                this.form.reset();
+                break;
+            default:
+                if (event.isComposing) break;
+        }
+    }
 }

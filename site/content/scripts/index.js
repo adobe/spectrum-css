@@ -16,6 +16,13 @@ import uiLarge from "@adobe/spectrum-css-ui-icons/dist/spectrum-css-icons-large.
 import uiMedium from "@adobe/spectrum-css-ui-icons/dist/spectrum-css-icons-medium.svg";
 import workflow from "@adobe/spectrum-css-workflow-icons/dist/spectrum-icons.svg";
 
+import "./components/CodePreview.js";
+import "./components/Search.js";
+import "./components/SideBar.js";
+
+/* --- LOAD COMPONENTS --- */
+import "./components/index.js";
+
 /* --- UTILITIES --- */
 const injectSVG = (source, label = "") => {
     const svgContainer = document.createElement("div");

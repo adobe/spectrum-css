@@ -73,208 +73,208 @@ examples:
     - id: badge
       title: Standard
       markup:
-        - title: Neutral
-          group:
-            - |
-              <div class="spectrum-Badge spectrum-Badge--sizeM spectrum-Badge--neutral">
-                <div class="spectrum-Badge-label">Neutral</div>
-              </div>
-        - title: Accent
-          group:
-            - |
-              <div class="spectrum-Badge spectrum-Badge--sizeM spectrum-Badge--accent">
-                <div class="spectrum-Badge-label">Accent</div>
-              </div>
-        - title: Informative
-          group:
-            - |
-              <div class="spectrum-Badge spectrum-Badge--sizeM spectrum-Badge--informative">
-                <div class="spectrum-Badge-label">Informative</div>
-              </div>
-        - title: Positive
-          group:
-            - |
-              <div class="spectrum-Badge spectrum-Badge--sizeM spectrum-Badge--positive">
-                <div class="spectrum-Badge-label">Positive</div>
-              </div>
-        - title: Negative
-          group:
-            - |
-              <div class="spectrum-Badge spectrum-Badge--sizeM spectrum-Badge--negative">
-                <div class="spectrum-Badge-label">Negative</div>
-              </div>
-        - title: Notice
-          group:
-            - |
-              <div class="spectrum-Badge spectrum-Badge--sizeM spectrum-Badge--notice">
-                <div class="spectrum-Badge-label">Notice</div>
-              </div>
+          - title: Neutral
+            group:
+                - |
+                    <div class="spectrum-Badge spectrum-Badge--sizeM spectrum-Badge--neutral">
+                      <div class="spectrum-Badge-label">Neutral</div>
+                    </div>
+          - title: Accent
+            group:
+                - |
+                    <div class="spectrum-Badge spectrum-Badge--sizeM spectrum-Badge--accent">
+                      <div class="spectrum-Badge-label">Accent</div>
+                    </div>
+          - title: Informative
+            group:
+                - |
+                    <div class="spectrum-Badge spectrum-Badge--sizeM spectrum-Badge--informative">
+                      <div class="spectrum-Badge-label">Informative</div>
+                    </div>
+          - title: Positive
+            group:
+                - |
+                    <div class="spectrum-Badge spectrum-Badge--sizeM spectrum-Badge--positive">
+                      <div class="spectrum-Badge-label">Positive</div>
+                    </div>
+          - title: Negative
+            group:
+                - |
+                    <div class="spectrum-Badge spectrum-Badge--sizeM spectrum-Badge--negative">
+                      <div class="spectrum-Badge-label">Negative</div>
+                    </div>
+          - title: Notice
+            group:
+                - |
+                    <div class="spectrum-Badge spectrum-Badge--sizeM spectrum-Badge--notice">
+                      <div class="spectrum-Badge-label">Notice</div>
+                    </div>
 
     - id: badge-non-semantic
       title: Non-Semantic
       markup:
-        - title: Gray
-          group:
-            - |
-              <div class="spectrum-Badge spectrum-Badge--sizeM spectrum-Badge--gray">
-                <div class="spectrum-Badge-label">Gray</div>
-              </div>
-        - title: Red
-          group:
-            - |
-              <div class="spectrum-Badge spectrum-Badge--sizeM spectrum-Badge--red">
-                <div class="spectrum-Badge-label">Red</div>
-              </div>
-        - title: Orange
-          group:
-            - |
-              <div class="spectrum-Badge spectrum-Badge--sizeM spectrum-Badge--orange">
-                <div class="spectrum-Badge-label">Orange</div>
-              </div>
-        - title: Yellow
-          group:
-            - |
-              <div class="spectrum-Badge spectrum-Badge--sizeM spectrum-Badge--yellow">
-                <div class="spectrum-Badge-label">Yellow</div>
-              </div>
-        - title: Chartreuse
-          group:
-            - |
-              <div class="spectrum-Badge spectrum-Badge--sizeM spectrum-Badge--chartreuse">
-                <div class="spectrum-Badge-label">Chartreuse</div>
-              </div>
-        - title: Celery
-          group:
-            - |
-              <div class="spectrum-Badge spectrum-Badge--sizeM spectrum-Badge--celery">
-                <div class="spectrum-Badge-label">Celery</div>
-              </div>
-        - title: Green
-          group:
-            - |
-              <div class="spectrum-Badge spectrum-Badge--sizeM spectrum-Badge--green">
-                <div class="spectrum-Badge-label">Green</div>
-              </div>
-        - title: Seafoam
-          group:
-            - |
-              <div class="spectrum-Badge spectrum-Badge--sizeM spectrum-Badge--seafoam">
-                <div class="spectrum-Badge-label">Seafoam</div>
-              </div>
-        - title: Cyan
-          group:
-            - |
-              <div class="spectrum-Badge spectrum-Badge--sizeM spectrum-Badge--cyan">
-                <div class="spectrum-Badge-label">Cyan</div>
-              </div>
-        - title: Blue
-          group:
-            - |
-              <div class="spectrum-Badge spectrum-Badge--sizeM spectrum-Badge--blue">
-                <div class="spectrum-Badge-label">Blue</div>
-              </div>
-        - title: Indigo
-          group:
-            - |
-              <div class="spectrum-Badge spectrum-Badge--sizeM spectrum-Badge--indigo">
-                <div class="spectrum-Badge-label">Indigo</div>
-              </div>
-        - title: Purple
-          group:
-            - |
-              <div class="spectrum-Badge spectrum-Badge--sizeM spectrum-Badge--purple">
-                <div class="spectrum-Badge-label">Purple</div>
-              </div>
-        - title: Fuchsia
-          group:
-            - |
-              <div class="spectrum-Badge spectrum-Badge--sizeM spectrum-Badge--fuchsia">
-                <div class="spectrum-Badge-label">Fuchsia</div>
-              </div>
-        - title: Magenta
-          group:
-            - |
-              <div class="spectrum-Badge spectrum-Badge--sizeM spectrum-Badge--magenta">
-                <div class="spectrum-Badge-label">Magenta</div>
-              </div>
+          - title: Gray
+            group:
+                - |
+                    <div class="spectrum-Badge spectrum-Badge--sizeM spectrum-Badge--gray">
+                      <div class="spectrum-Badge-label">Gray</div>
+                    </div>
+          - title: Red
+            group:
+                - |
+                    <div class="spectrum-Badge spectrum-Badge--sizeM spectrum-Badge--red">
+                      <div class="spectrum-Badge-label">Red</div>
+                    </div>
+          - title: Orange
+            group:
+                - |
+                    <div class="spectrum-Badge spectrum-Badge--sizeM spectrum-Badge--orange">
+                      <div class="spectrum-Badge-label">Orange</div>
+                    </div>
+          - title: Yellow
+            group:
+                - |
+                    <div class="spectrum-Badge spectrum-Badge--sizeM spectrum-Badge--yellow">
+                      <div class="spectrum-Badge-label">Yellow</div>
+                    </div>
+          - title: Chartreuse
+            group:
+                - |
+                    <div class="spectrum-Badge spectrum-Badge--sizeM spectrum-Badge--chartreuse">
+                      <div class="spectrum-Badge-label">Chartreuse</div>
+                    </div>
+          - title: Celery
+            group:
+                - |
+                    <div class="spectrum-Badge spectrum-Badge--sizeM spectrum-Badge--celery">
+                      <div class="spectrum-Badge-label">Celery</div>
+                    </div>
+          - title: Green
+            group:
+                - |
+                    <div class="spectrum-Badge spectrum-Badge--sizeM spectrum-Badge--green">
+                      <div class="spectrum-Badge-label">Green</div>
+                    </div>
+          - title: Seafoam
+            group:
+                - |
+                    <div class="spectrum-Badge spectrum-Badge--sizeM spectrum-Badge--seafoam">
+                      <div class="spectrum-Badge-label">Seafoam</div>
+                    </div>
+          - title: Cyan
+            group:
+                - |
+                    <div class="spectrum-Badge spectrum-Badge--sizeM spectrum-Badge--cyan">
+                      <div class="spectrum-Badge-label">Cyan</div>
+                    </div>
+          - title: Blue
+            group:
+                - |
+                    <div class="spectrum-Badge spectrum-Badge--sizeM spectrum-Badge--blue">
+                      <div class="spectrum-Badge-label">Blue</div>
+                    </div>
+          - title: Indigo
+            group:
+                - |
+                    <div class="spectrum-Badge spectrum-Badge--sizeM spectrum-Badge--indigo">
+                      <div class="spectrum-Badge-label">Indigo</div>
+                    </div>
+          - title: Purple
+            group:
+                - |
+                    <div class="spectrum-Badge spectrum-Badge--sizeM spectrum-Badge--purple">
+                      <div class="spectrum-Badge-label">Purple</div>
+                    </div>
+          - title: Fuchsia
+            group:
+                - |
+                    <div class="spectrum-Badge spectrum-Badge--sizeM spectrum-Badge--fuchsia">
+                      <div class="spectrum-Badge-label">Fuchsia</div>
+                    </div>
+          - title: Magenta
+            group:
+                - |
+                    <div class="spectrum-Badge spectrum-Badge--sizeM spectrum-Badge--magenta">
+                      <div class="spectrum-Badge-label">Magenta</div>
+                    </div>
 
     - id: badge-sizing
       title: Sizing
       markup:
-        - title: Label only
-          group:
-            - |
-              <div class="spectrum-Badge spectrum-Badge--sizeS spectrum-Badge--neutral">
-                <div class="spectrum-Badge-label">Small</div>
-              </div>
-            - |
-              <div class="spectrum-Badge spectrum-Badge--sizeM spectrum-Badge--neutral">
-                <div class="spectrum-Badge-label">Medium</div>
-              </div>
-            - |
-              <div class="spectrum-Badge spectrum-Badge--sizeL spectrum-Badge--neutral">
-                <div class="spectrum-Badge-label">Large</div>
-              </div>
-            - |
-              <div class="spectrum-Badge spectrum-Badge--sizeXL spectrum-Badge--neutral">
-                <div class="spectrum-Badge-label">Extra Large</div>
-              </div>
-        - title: Icon only
-          group:
-            - |
-              <div class="spectrum-Badge spectrum-Badge--sizeS spectrum-Badge--neutral">
-                <svg class="spectrum-Icon spectrum-Icon--sizeS spectrum-Badge-icon spectrum-Badge-icon--no-label" focusable="false" aria-hidden="true">
-                  <use xlink:href="#spectrum-icon-18-Info" />
-                </svg>
-              </div>
-            - |
-              <div class="spectrum-Badge spectrum-Badge--sizeM spectrum-Badge--neutral">
-                <svg class="spectrum-Icon spectrum-Icon--sizeM spectrum-Badge-icon spectrum-Badge-icon--no-label" focusable="false" aria-hidden="true">
-                  <use xlink:href="#spectrum-icon-18-Info" />
-                </svg>
-              </div>
-            - |
-              <div class="spectrum-Badge spectrum-Badge--sizeL spectrum-Badge--neutral">
-                <svg class="spectrum-Icon spectrum-Icon--sizeL spectrum-Badge-icon spectrum-Badge-icon--no-label" focusable="false" aria-hidden="true">
-                  <use xlink:href="#spectrum-icon-18-Info" />
-                </svg>
-              </div>
-            - |
-              <div class="spectrum-Badge spectrum-Badge--sizeXL spectrum-Badge--neutral">
-                <svg class="spectrum-Icon spectrum-Icon--sizeXL spectrum-Badge-icon spectrum-Badge-icon--no-label" focusable="false" aria-hidden="true">
-                  <use xlink:href="#spectrum-icon-18-Info" />
-                </svg>
-              </div>
-        - title: Icon with label
-          group:
-            - |
-              <div class="spectrum-Badge spectrum-Badge--sizeS spectrum-Badge--neutral">
-                <svg class="spectrum-Icon spectrum-Icon--sizeS spectrum-Badge-icon spectrum-Badge-icon" focusable="false" aria-hidden="true">
-                  <use xlink:href="#spectrum-icon-18-Info" />
-                </svg>
-                <div class="spectrum-Badge-label">Small</div>
-              </div>
-            - |
-              <div class="spectrum-Badge spectrum-Badge--sizeM spectrum-Badge--neutral">
-                <svg class="spectrum-Icon spectrum-Icon--sizeM spectrum-Badge-icon spectrum-Badge-icon" focusable="false" aria-hidden="true">
-                  <use xlink:href="#spectrum-icon-18-Info" />
-                </svg>
-                <div class="spectrum-Badge-label">Medium</div>
-              </div>
-            - |
-              <div class="spectrum-Badge spectrum-Badge--sizeL spectrum-Badge--neutral">
-                <svg class="spectrum-Icon spectrum-Icon--sizeL spectrum-Badge-icon spectrum-Badge-icon" focusable="false" aria-hidden="true">
-                  <use xlink:href="#spectrum-icon-18-Info" />
-                </svg>
-                <div class="spectrum-Badge-label">Large</div>
-              </div>
-            - |
-              <div class="spectrum-Badge spectrum-Badge--sizeXL spectrum-Badge--neutral">
-                <svg class="spectrum-Icon spectrum-Icon--sizeXL spectrum-Badge-icon spectrum-Badge-icon" focusable="false" aria-hidden="true">
-                  <use xlink:href="#spectrum-icon-18-Info" />
-                </svg>
-                <div class="spectrum-Badge-label">Extra Large</div>
-              </div>
+          - title: Label only
+            group:
+                - |
+                    <div class="spectrum-Badge spectrum-Badge--sizeS spectrum-Badge--neutral">
+                      <div class="spectrum-Badge-label">Small</div>
+                    </div>
+                - |
+                    <div class="spectrum-Badge spectrum-Badge--sizeM spectrum-Badge--neutral">
+                      <div class="spectrum-Badge-label">Medium</div>
+                    </div>
+                - |
+                    <div class="spectrum-Badge spectrum-Badge--sizeL spectrum-Badge--neutral">
+                      <div class="spectrum-Badge-label">Large</div>
+                    </div>
+                - |
+                    <div class="spectrum-Badge spectrum-Badge--sizeXL spectrum-Badge--neutral">
+                      <div class="spectrum-Badge-label">Extra Large</div>
+                    </div>
+          - title: Icon only
+            group:
+                - |
+                    <div class="spectrum-Badge spectrum-Badge--sizeS spectrum-Badge--neutral">
+                      <svg class="spectrum-Icon spectrum-Icon--sizeS spectrum-Badge-icon spectrum-Badge-icon--no-label" focusable="false" aria-hidden="true">
+                        <use xlink:href="#spectrum-icon-18-Info" />
+                      </svg>
+                    </div>
+                - |
+                    <div class="spectrum-Badge spectrum-Badge--sizeM spectrum-Badge--neutral">
+                      <svg class="spectrum-Icon spectrum-Icon--sizeM spectrum-Badge-icon spectrum-Badge-icon--no-label" focusable="false" aria-hidden="true">
+                        <use xlink:href="#spectrum-icon-18-Info" />
+                      </svg>
+                    </div>
+                - |
+                    <div class="spectrum-Badge spectrum-Badge--sizeL spectrum-Badge--neutral">
+                      <svg class="spectrum-Icon spectrum-Icon--sizeL spectrum-Badge-icon spectrum-Badge-icon--no-label" focusable="false" aria-hidden="true">
+                        <use xlink:href="#spectrum-icon-18-Info" />
+                      </svg>
+                    </div>
+                - |
+                    <div class="spectrum-Badge spectrum-Badge--sizeXL spectrum-Badge--neutral">
+                      <svg class="spectrum-Icon spectrum-Icon--sizeXL spectrum-Badge-icon spectrum-Badge-icon--no-label" focusable="false" aria-hidden="true">
+                        <use xlink:href="#spectrum-icon-18-Info" />
+                      </svg>
+                    </div>
+          - title: Icon with label
+            group:
+                - |
+                    <div class="spectrum-Badge spectrum-Badge--sizeS spectrum-Badge--neutral">
+                      <svg class="spectrum-Icon spectrum-Icon--sizeS spectrum-Badge-icon spectrum-Badge-icon" focusable="false" aria-hidden="true">
+                        <use xlink:href="#spectrum-icon-18-Info" />
+                      </svg>
+                      <div class="spectrum-Badge-label">Small</div>
+                    </div>
+                - |
+                    <div class="spectrum-Badge spectrum-Badge--sizeM spectrum-Badge--neutral">
+                      <svg class="spectrum-Icon spectrum-Icon--sizeM spectrum-Badge-icon spectrum-Badge-icon" focusable="false" aria-hidden="true">
+                        <use xlink:href="#spectrum-icon-18-Info" />
+                      </svg>
+                      <div class="spectrum-Badge-label">Medium</div>
+                    </div>
+                - |
+                    <div class="spectrum-Badge spectrum-Badge--sizeL spectrum-Badge--neutral">
+                      <svg class="spectrum-Icon spectrum-Icon--sizeL spectrum-Badge-icon spectrum-Badge-icon" focusable="false" aria-hidden="true">
+                        <use xlink:href="#spectrum-icon-18-Info" />
+                      </svg>
+                      <div class="spectrum-Badge-label">Large</div>
+                    </div>
+                - |
+                    <div class="spectrum-Badge spectrum-Badge--sizeXL spectrum-Badge--neutral">
+                      <svg class="spectrum-Icon spectrum-Icon--sizeXL spectrum-Badge-icon spectrum-Badge-icon" focusable="false" aria-hidden="true">
+                        <use xlink:href="#spectrum-icon-18-Info" />
+                      </svg>
+                      <div class="spectrum-Badge-label">Extra Large</div>
+                    </div>
 
     - id: badge-text-wrapping
       title: Text Wrapping
@@ -289,39 +289,39 @@ examples:
     - id: badge-fixed-edge
       title: Fixed Edge
       markup:
-        - title: Fixed inline start
-          group:
-            - |
-              <div class="spectrum-Badge spectrum-Badge--sizeM spectrum-Badge--neutral spectrum-Badge--fixed-inline-start">
-                <svg class="spectrum-Icon spectrum-Icon--sizeM spectrum-Badge-icon spectrum-Badge-icon" focusable="false" aria-hidden="true">
-                  <use xlink:href="#spectrum-icon-18-Info" />
-                </svg>
-                <div class="spectrum-Badge-label">Label Text</div>
-              </div>
-        - title: Fixed inline end
-          group:
-            - |
-              <div class="spectrum-Badge spectrum-Badge--sizeM spectrum-Badge--neutral spectrum-Badge--fixed-inline-end">
-                <svg class="spectrum-Icon spectrum-Icon--sizeM spectrum-Badge-icon spectrum-Badge-icon" focusable="false" aria-hidden="true">
-                  <use xlink:href="#spectrum-icon-18-Info" />
-                </svg>
-                <div class="spectrum-Badge-label">Label Text</div>
-              </div>
-        - title: Fixed block start
-          group:
-            - |
-              <div class="spectrum-Badge spectrum-Badge--sizeM spectrum-Badge--neutral spectrum-Badge--fixed-block-start">
-                <svg class="spectrum-Icon spectrum-Icon--sizeM spectrum-Badge-icon spectrum-Badge-icon" focusable="false" aria-hidden="true">
-                  <use xlink:href="#spectrum-icon-18-Info" />
-                </svg>
-                <div class="spectrum-Badge-label">Label Text</div>
-              </div>
-        - title: Fixed block end
-          group:
-            - |
-              <div class="spectrum-Badge spectrum-Badge--sizeM spectrum-Badge--neutral spectrum-Badge--fixed-block-end">
-                <svg class="spectrum-Icon spectrum-Icon--sizeM spectrum-Badge-icon spectrum-Badge-icon" focusable="false" aria-hidden="true">
-                  <use xlink:href="#spectrum-icon-18-Info" />
-                </svg>
-                <div class="spectrum-Badge-label">Label Text</div>
-              </div>
+          - title: Fixed inline start
+            group:
+                - |
+                    <div class="spectrum-Badge spectrum-Badge--sizeM spectrum-Badge--neutral spectrum-Badge--fixed-inline-start">
+                      <svg class="spectrum-Icon spectrum-Icon--sizeM spectrum-Badge-icon spectrum-Badge-icon" focusable="false" aria-hidden="true">
+                        <use xlink:href="#spectrum-icon-18-Info" />
+                      </svg>
+                      <div class="spectrum-Badge-label">Label Text</div>
+                    </div>
+          - title: Fixed inline end
+            group:
+                - |
+                    <div class="spectrum-Badge spectrum-Badge--sizeM spectrum-Badge--neutral spectrum-Badge--fixed-inline-end">
+                      <svg class="spectrum-Icon spectrum-Icon--sizeM spectrum-Badge-icon spectrum-Badge-icon" focusable="false" aria-hidden="true">
+                        <use xlink:href="#spectrum-icon-18-Info" />
+                      </svg>
+                      <div class="spectrum-Badge-label">Label Text</div>
+                    </div>
+          - title: Fixed block start
+            group:
+                - |
+                    <div class="spectrum-Badge spectrum-Badge--sizeM spectrum-Badge--neutral spectrum-Badge--fixed-block-start">
+                      <svg class="spectrum-Icon spectrum-Icon--sizeM spectrum-Badge-icon spectrum-Badge-icon" focusable="false" aria-hidden="true">
+                        <use xlink:href="#spectrum-icon-18-Info" />
+                      </svg>
+                      <div class="spectrum-Badge-label">Label Text</div>
+                    </div>
+          - title: Fixed block end
+            group:
+                - |
+                    <div class="spectrum-Badge spectrum-Badge--sizeM spectrum-Badge--neutral spectrum-Badge--fixed-block-end">
+                      <svg class="spectrum-Icon spectrum-Icon--sizeM spectrum-Badge-icon spectrum-Badge-icon" focusable="false" aria-hidden="true">
+                        <use xlink:href="#spectrum-icon-18-Info" />
+                      </svg>
+                      <div class="spectrum-Badge-label">Label Text</div>
+                    </div>

@@ -30,7 +30,7 @@ const fetchComponentMetadata = require("./tasks/fetch-metadata-from-css");
  * @type import('postcss-load-config').ConfigFn
  */
 module.exports = ({ env = "development", file, options = {} }) => {
-    const { varsOnly = false, noFlatVariables = false, noSelectors = false, skipLint = false, } = options;
+    const { varsOnly = false, noFlatVariables = false, noSelectors = false, skipLint = false } = options;
 
     const isProduction = Boolean(env === "production");
 

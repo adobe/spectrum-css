@@ -10,119 +10,95 @@ OF ANY KIND, either express or implied. See the License for the specific languag
 governing permissions and limitations under the License.
 */
 
-import { LitElement } from "lit";
 
-export default class Tabs extends LitElement {
-  // This allows us to use web component syntax without the shadow dom
-  // we want this to act like a regular HTML element with external styles
-  createRenderRoot() {
-    return this;
-  }
+export default class Tabs {
+    constructor(el) {
+        if (!el) return;
 
-  get items() {
-    return [...this.querySelectorAll(".spectrum-Tabs-item")];
-  }
+        this.el = el;
 
-  get panels() {
-    return [...this.querySelectorAll(".spectrum-Tabs-panel")];
-  }
+        this.selected = this.items.indexOf(this.items.find((item) => this.isSelected(item))) ?? 0;
+        this.select(this.items[this.selected]);
 
-  get indicator() {
-    return this.querySelector(".spectrum-Tabs-selectionIndicator");
-  }
-
-  constructor() {
-    super();
-
-    this.classList.add("spectrum-Tabs");
-
-    // this.items = [
-    //   ...el.querySelectorAll(
-    //     ":scope > .spectrum-Tabs-items > .spectrum-Tabs-item",
-    //   ),
-    //   ...el.querySelectorAll(":scope > .spectrum-Tabs-item"),
-    //   ...el.querySelectorAll(
-    //     ":scope > .spectrum-ActionGroup > .spectrum-ActionGroup-item",
-    //   ),
-    // ];
-
-    this.selected =
-      this.items.indexOf(this.items.find((item) => this.isSelected(item))) ?? 0;
-    this.select(this.items[this.selected]);
-
-    this.items.forEach((tabItem) => {
-      tabItem.addEventListener("click", this.clickHandler.bind(this));
-    });
-  }
-
-  isTabItem(el) {
-    return this.items.includes(el);
-  }
-
-  isPanel(el) {
-    return this.panels.includes(el);
-  }
-
-  isSelected(el) {
-    return el.classList.contains("is-selected");
-  }
-
-  isDisabled(el) {
-    return el.classList.contains("is-disabled");
-  }
-
-  getSelectedTabItem() {
-    if (!this.items) return;
-    if (this.selected) return this.items[this.selected];
-    return this.items.find((item) => this.isSelected(item));
-  }
-
-  getPanel(el) {
-    const id = el.getAttribute("panel-id");
-    if (id) return this.panels.find((panel) => panel.id === id);
-
-    const index = this.items.indexOf(el);
-    if (index >= 0) return this.panels[index];
-    return;
-  }
-
-  updateIndicator(tabItem) {
-    if (!tabItem || !this.indicator) return;
-    const width = tabItem.offsetWidth;
-    const position = tabItem.offsetLeft;
-    this.indicator.style.width = `${width}px`;
-    this.indicator.style.transform = `translateX(${position}px)`;
-  }
-
-  select(el) {
-    if (!this.isTabItem(el) || this.isDisabled(el)) return;
-
-    const current = this.getSelectedTabItem();
-    if (current) {
-      current.classList.remove("is-selected");
-      const panel = this.getPanel(current);
-      if (panel) panel.classList.remove("is-selected");
+        this.items.forEach((tabItem) => {
+            tabItem.addEventListener("click", this.clickHandler.bind(this));
+        });
     }
 
-    el.classList.add("is-selected");
-    this.selected = this.items.indexOf(el);
+    get items() {
+        return [...this.el.querySelectorAll(".spectrum-Tabs-item")];
+    }
 
-    const panel = this.getPanel(el);
-    if (panel) panel.classList.add("is-selected");
-  }
+    get panels() {
+        return [...this.el.querySelectorAll(".spectrum-Tabs-panel")];
+    }
 
-  clickHandler(event) {
-    const tabItem = event.target.closest(
-      ".spectrum-Tabs-item, .spectrum-ActionGroup-item",
-    );
-    if (!this.isTabItem(tabItem)) return;
-    if (this.isDisabled(tabItem)) return;
+    get indicator() {
+        return this.el.querySelector(".spectrum-Tabs-selectionIndicator");
+    }
 
-    // Update selected tab item
-    this.select(tabItem);
-  }
-}
+    isTabItem(el) {
+        return this.items.includes(el);
+    }
 
-if (!customElements.get('spectrum-tabs')) {
-  customElements.define('spectrum-tabs', Tabs);
+    isPanel(el) {
+        return this.panels.includes(el);
+    }
+
+    isSelected(el) {
+        return el.classList.contains("is-selected");
+    }
+
+    isDisabled(el) {
+        return el.classList.contains("is-disabled");
+    }
+
+    getSelectedTabItem() {
+        if (!this.items) return;
+        if (this.selected) return this.items[this.selected];
+        return this.items.find((item) => this.isSelected(item));
+    }
+
+    getPanel(el) {
+        const id = el.getAttribute("panel-id");
+        if (id) return this.panels.find((panel) => panel.id === id);
+
+        const index = this.items.indexOf(el);
+        if (index >= 0) return this.panels[index];
+        return;
+    }
+
+    updateIndicator(tabItem) {
+        if (!tabItem || !this.indicator) return;
+        const width = tabItem.offsetWidth;
+        const position = tabItem.offsetLeft;
+        this.indicator.style.width = `${width}px`;
+        this.indicator.style.transform = `translateX(${position}px)`;
+    }
+
+    select(el) {
+        if (!this.isTabItem(el) || this.isDisabled(el)) return;
+
+        const current = this.getSelectedTabItem();
+        if (current) {
+            current.classList.remove("is-selected");
+            const panel = this.getPanel(current);
+            if (panel) panel.classList.remove("is-selected");
+        }
+
+        el.classList.add("is-selected");
+        this.selected = this.items.indexOf(el);
+
+        const panel = this.getPanel(el);
+        if (panel) panel.classList.add("is-selected");
+    }
+
+    clickHandler(event) {
+        const tabItem = event.target.closest(".spectrum-Tabs-item, .spectrum-ActionGroup-item");
+        if (!this.isTabItem(tabItem)) return;
+        if (this.isDisabled(tabItem)) return;
+
+        // Update selected tab item
+        this.select(tabItem);
+    }
 }

@@ -7,13 +7,13 @@ sections:
           ### Remove focus-ring class
           We've migrated away from the focus-ring class in favor of the native `:focus-visible` pseudo-class due to changes in browser support.
 examples:
-  - id: logicbutton-and
-    title: And
-    markup: |
-      <button type="button" class="spectrum-LogicButton spectrum-LogicButton--and" style="margin-inline-end: 4px;">And</button>
-      <button type="button" class="spectrum-LogicButton spectrum-LogicButton--and" disabled>And</button>
-  - id: logicbutton-or
-    title: Or
-    markup: |
-      <button type="button" class="spectrum-LogicButton spectrum-LogicButton--or" style="margin-inline-end: 4px;">Or</button>
-      <button type="button" class="spectrum-LogicButton spectrum-LogicButton--or" disabled>Or</button>
+    - id: logicbutton-and
+      title: And
+      markup: |
+          <button type="button" class="spectrum-LogicButton spectrum-LogicButton--and" style="margin-inline-end: 4px;">And</button>
+          <button type="button" class="spectrum-LogicButton spectrum-LogicButton--and" disabled>And</button>
+    - id: logicbutton-or
+      title: Or
+      markup: |
+          <button type="button" class="spectrum-LogicButton spectrum-LogicButton--or" style="margin-inline-end: 4px;">Or</button>
+          <button type="button" class="spectrum-LogicButton spectrum-LogicButton--or" disabled>Or</button>

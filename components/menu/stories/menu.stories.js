@@ -324,22 +324,22 @@ DrillInSubmenu.parameters = {
     },
 };
 DrillInSubmenu.args = {
-  items: [
-    { label: "Deselect" },
-    { label: "Select Inverse" },
-    {
-      label: "Feather really long item",
-      isDrillIn: true,
-      isOpen: true,
-    },
-    {
-      label: "Select and Mask...",
-      isDrillIn: true,
-      isDisabled: true,
-      isOpen: true,
-    },
-    { label: "Save Selection" },
-  ],
+    items: [
+        { label: "Deselect" },
+        { label: "Select Inverse" },
+        {
+            label: "Feather really long item",
+            isDrillIn: true,
+            isOpen: true,
+        },
+        {
+            label: "Select and Mask...",
+            isDrillIn: true,
+            isDisabled: true,
+            isOpen: true,
+        },
+        { label: "Save Selection" },
+    ],
 };
 
 export const Collapsible = Template.bind({});

@@ -22,52 +22,50 @@ export const AssetListItem = ({
     onclick = () => {},
     ...globals
 }) => {
-	return html` <li
-		class=${classMap({
-			[rootClass]: true,
-			"is-selectable": isSelectable,
-			"is-selected": isSelected,
-			"is-branch": isBranch,
-			"is-navigated": isNavigated,
-		})}
-		@click=${onclick}
-		tabindex="0"
-	>
-		${when(isSelectable, () =>
-		Checkbox({
-			...globals,
-			size: "m",
-			isChecked: isSelected,
-			customClasses: [`${rootClass}Selector`],
-		}))}
-		${when(
-			image,
-			() =>
-				html`<img src=${image ?? exampleImage} class="${rootClass}Thumbnail" />`
-		)}
-		${when(iconName, () =>
-			Icon({
-				iconName,
-				customClasses: [`${rootClass}Thumbnail`],
-				...globals,
-			})
-		)}
-		${when(label, () => html`<span class="${rootClass}Label">${label}</span>`)}
-		${when(!isSelectable && !isBranch, () =>
-			Checkbox({
-				...globals,
-				size: "m",
-				isChecked: isSelected,
-				customClasses: [`${rootClass}Selector`],
-			}))}
-		${when(isBranch, () =>
-			Icon({
-				iconName: "ChevronRight100",
-				customClasses: [`${rootClass}ChildIndicator`],
-				...globals,
-			})
-		)}
-	</li>`;
+    return html` <li
+        class=${classMap({
+            [rootClass]: true,
+            "is-selectable": isSelectable,
+            "is-selected": isSelected,
+            "is-branch": isBranch,
+            "is-navigated": isNavigated,
+        })}
+        @click=${onclick}
+        tabindex="0"
+    >
+        ${when(isSelectable, () =>
+            Checkbox({
+                ...globals,
+                size: "m",
+                isChecked: isSelected,
+                customClasses: [`${rootClass}Selector`],
+            }),
+        )}
+        ${when(image, () => html`<img src=${image} class="${rootClass}Thumbnail" />`)}
+        ${when(iconName, () =>
+            Icon({
+                iconName,
+                customClasses: [`${rootClass}Thumbnail`],
+                ...globals,
+            }),
+        )}
+        ${when(label, () => html`<span class="${rootClass}Label">${label}</span>`)}
+        ${when(!isSelectable && !isBranch, () =>
+            Checkbox({
+                ...globals,
+                size: "m",
+                isChecked: isSelected,
+                customClasses: [`${rootClass}Selector`],
+            }),
+        )}
+        ${when(isBranch, () =>
+            Icon({
+                iconName: "ChevronRight100",
+                customClasses: [`${rootClass}ChildIndicator`],
+                ...globals,
+            }),
+        )}
+    </li>`;
 };
 
 export const Template = ({ rootClass = "spectrum-AssetList", items = [], customClasses = [], id, ...globals }) => {

@@ -5,60 +5,58 @@ import { Template } from "./template";
  * A split button surfaces an immediately invokable action via it's main button, as well as a list of alternative actions in its toggle-able menu overlay.
  */
 export default {
-	title: "Components/Split button",
-	component: "SplitButton",
-	argTypes: {
-		size: {
-			name: "Size",
-			type: { name: "string", required: true },
-			table: { disable: true },
-			options: ["m"],
-			control: "select",
-		},
-		variant: {
-			name: "Variant",
-			type: { name: "string" },
-			table: { disable: true },
-			options: ["accent", "primary", "secondary"],
-			control: "select",
-		},
-		position: {
-			name: "Position",
-			type: { name: "string", required: true },
-			table: {
-				type: { summary: "string" },
-				category: "Component",
-			},
-			options: ["right", "left"],
-			control: "select",
-		},
-		iconName: { table: { disable: true } },
-		label: {
-			name: "Label",
-			type: { name: "string" },
-			table: {
-				type: { summary: "string" },
-				category: "Content",
-			},
-			control: { type: "text" },
-		},
-	},
-	args: {
-		rootClass: "spectrum-SplitButton",
-		size: "m",
-		position: "right",
-		label: "Split Button",
-	},
-	parameters: {
-		actions: {
-			handles: [],
-		},
-		status: {
-			type: process.env.MIGRATED_PACKAGES.includes("splitbutton")
-				? "migrated"
-				: undefined,
-		},
-	},
+    title: "Components/Split button",
+    component: "SplitButton",
+    argTypes: {
+        size: {
+            name: "Size",
+            type: { name: "string", required: true },
+            table: { disable: true },
+            options: ["m"],
+            control: "select",
+        },
+        variant: {
+            name: "Variant",
+            type: { name: "string" },
+            table: { disable: true },
+            options: ["accent", "primary", "secondary"],
+            control: "select",
+        },
+        position: {
+            name: "Position",
+            type: { name: "string", required: true },
+            table: {
+                type: { summary: "string" },
+                category: "Component",
+            },
+            options: ["right", "left"],
+            control: "select",
+        },
+        iconName: { table: { disable: true } },
+        label: {
+            name: "Label",
+            type: { name: "string" },
+            table: {
+                type: { summary: "string" },
+                category: "Content",
+            },
+            control: { type: "text" },
+        },
+    },
+    args: {
+        rootClass: "spectrum-SplitButton",
+        size: "m",
+        position: "right",
+        label: "Split Button",
+    },
+    parameters: {
+        actions: {
+            handles: [],
+        },
+        status: {
+            type: process.env.MIGRATED_PACKAGES.includes("splitbutton") ? "migrated" : undefined,
+        },
+    },
 };
 
 export const CTA = Template.bind({});

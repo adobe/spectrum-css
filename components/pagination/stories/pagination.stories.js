@@ -14,7 +14,7 @@ export default {
             name: "Size",
             type: { name: "string", required: true },
             table: {
-				disable: true,
+                disable: true,
                 type: { summary: "string" },
                 category: "Component",
             },
@@ -71,5 +71,5 @@ Explicit.args = {
 export const Button = Template.bind({});
 Button.storyName = "Button style";
 Button.args = {
-	variant: "button",
+    variant: "button",
 };

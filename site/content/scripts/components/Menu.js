@@ -11,6 +11,19 @@ governing permissions and limitations under the License.
 */
 
 export default class Menu {
+    constructor(el) {
+        if (!el) return;
+
+        this.el = el;
+
+        this.el.addEventListener("keydown", this.keydownHandler);
+        this.el.addEventListener("change", this.changeHandler);
+
+        this.items.forEach((item) => {
+            new MenuItem(item, this);
+        });
+    }
+
     _selectedDefault;
     get selectedDefault() {
         return this._selectedDefault;
@@ -69,13 +82,6 @@ export default class Menu {
     set selectedItem(state) {
         if (!this.selectedItem) return;
         this.selectedItem.isSelected = state;
-    }
-
-    constructor(el) {
-        this.el = el;
-
-        this.el.addEventListener("keydown", this.keydownHandler);
-        this.el.addEventListener("change", this.changeHandler);
     }
 
     // Select an item via the index of the item in the items array
@@ -173,6 +179,17 @@ export default class Menu {
 }
 
 export class MenuItem {
+    constructor(el, menu) {
+        if (!el) return;
+
+        this.el = el;
+        this.menu = menu;
+
+        this.el.setAttribute("tabindex", "-1");
+
+        this.el.addEventListener("click", this.clickHandler);
+    }
+
     _ariaProperty = "aria-selected";
 
     _value;
@@ -187,7 +204,7 @@ export class MenuItem {
             this.el.removeAttribute("value");
 
             // Loop through all menu items and update selected state
-            this.items.forEach((item) => {
+            this.menu.items.forEach((item) => {
                 item.isSelected = false;
             });
             return;
@@ -196,7 +213,7 @@ export class MenuItem {
         this.el.setAttribute("value", input);
 
         // Loop through all menu items and update selected state
-        this.items.forEach((item) => {
+        this.menu.items.forEach((item) => {
             item.isSelected = item.value === input;
         });
     }
@@ -265,20 +282,6 @@ export class MenuItem {
         return this.el.closest(".spectrum-Menu-itemIcon");
     }
 
-    constructor(el) {
-        this.el = el;
-
-        this.el.setAttribute("tabindex", "-1");
-
-        this.el.addEventListener("click", this.clickHandler);
-
-        window.addEventListener("DOMContentLoaded", () => {
-            [...this.el.querySelectorAll(".spectrum-Menu-item")].forEach((item) => {
-                new MenuItem(item);
-            });
-        });
-    }
-
     clickHandler = async () => {
         if (this.isDisabled) return;
         this.isSelected = !this.isSelected;
@@ -287,12 +290,6 @@ export class MenuItem {
 
         // Sends a custom event to the menu
         const e = new Event("change", { bubbles: true });
-        this.dispatchEvent(e);
+        this.el.dispatchEvent(e);
     };
 }
-
-window.addEventListener("DOMContentLoaded", () => {
-    [...document.querySelectorAll(".spectrum-Menu")].forEach((el) => {
-        new Menu(el);
-    });
-});

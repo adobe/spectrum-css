@@ -1,10 +1,5 @@
 {
     "clean": true,
-    "reporter": [
-        "text",
-        "cobertura"
-    ],
-    "include": [
-        "index.js"
-    ]
+    "reporter": ["text", "cobertura"],
+    "include": ["index.js"]
 }

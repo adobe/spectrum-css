@@ -10,6 +10,16 @@ OF ANY KIND, either express or implied. See the License for the specific languag
 governing permissions and limitations under the License.
 */
 export default class Popover {
+    constructor(el) {
+        if (!el) return;
+
+        this.el = el;
+
+        if (this.el.previousElementSibling) {
+            this.alignment(this.el.previousElementSibling, 8);
+        }
+    }
+
     /* -- State utilities -- */
     get isOpen() {
         return this.el.classList.contains("is-open");
@@ -42,14 +52,6 @@ export default class Popover {
         return this.el.querySelector(".spectrum-Menu");
     }
 
-    constructor(el) {
-        this.el = el;
-
-        if (this.el.previousElementSibling) {
-            this.alignment(this.el.previousElementSibling, 8);
-        }
-    }
-
     alignment(relativeTo, offset = 0) {
         if (!relativeTo) return;
         const rect = relativeTo.getBoundingClientRect();
@@ -76,9 +78,3 @@ export default class Popover {
         }
     }
 }
-
-window.addEventListener("DOMContentLoaded", () => {
-    [...document.querySelectorAll(".spectrum-Popover")].forEach((el) => {
-        new Popover(el);
-    });
-});

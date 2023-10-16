@@ -11,41 +11,44 @@ governing permissions and limitations under the License.
 */
 
 export default class AssetCard {
-  constructor(el, options = {}) {
-    if (!el) return;
-    this.el = el;
+    constructor(el) {
+        if (!el) return;
 
-    this.checkbox = this.el.querySelector(".spectrum-Checkbox-input");
+        this.el = el;
 
-    this.clickHandler = this.clickHandler.bind(this);
-    this.keypressHandler = this.keypressHandler.bind(this);
+        this.clickHandler = this.clickHandler.bind(this);
+        this.keypressHandler = this.keypressHandler.bind(this);
 
-    this.el.addEventListener("click", this.clickHandler);
-    this.el.addEventListener("keypress", this.keypressHandler);
-  }
+        this.el.addEventListener("click", this.clickHandler);
+        this.el.addEventListener("keypress", this.keypressHandler);
+    }
 
-  set isSelected(state) {
-    this.el.classList.toggle("is-selected", state);
-  }
+    get checkbox() {
+        return this.el.querySelector(".spectrum-Checkbox-input");
+    }
 
-  get isSelected() {
-    return this.el.classList.contains("is-selected");
-  }
+    set isSelected(state) {
+        this.el.classList.toggle("is-selected", state);
+    }
 
-  clickHandler(event) {
-    if (this.isDisabled) return;
+    get isSelected() {
+        return this.el.classList.contains("is-selected");
+    }
 
-    if (this.checkbox) this.checkbox.checked = !this.isSelected;
-    this.isSelected = !this.isSelected;
-    event.preventDefault();
-  }
+    clickHandler(event) {
+        if (this.isDisabled) return;
 
-  keypressHandler(event) {
-    if (this.isDisabled) return;
-    if (event.key !== "Enter" && event.key !== " ") return;
+        if (this.checkbox) this.checkbox.checked = !this.isSelected;
+        this.isSelected = !this.isSelected;
+        event.preventDefault();
+    }
 
-    if (this.checkbox) this.checkbox.checked = !this.isSelected;
-    this.isSelected = !this.isSelected;
-    event.preventDefault();
-  }
+    keypressHandler(event) {
+        if (this.isDisabled) return;
+        if (event.key !== "Enter" && event.key !== " ") return;
+
+        if (this.checkbox) this.checkbox.checked = !this.isSelected;
+        this.isSelected = !this.isSelected;
+        event.preventDefault();
+    }
 }

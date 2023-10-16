@@ -25,15 +25,15 @@ Validate:
 
 1. A legacy documentation page (such as [accordion](https://pr-###--spectrum-css.netlify.app/accordion.html)), including:
 
-- [ ] The page renders correctly
-- [ ] The page is accessible
-- [ ] The page is responsive
+-   [ ] The page renders correctly
+-   [ ] The page is accessible
+-   [ ] The page is responsive
 
 2. A migrated documentation page (such as [action group](https://pr-###--spectrum-css.netlify.app/actiongroup.html)), including:
 
-- [ ] The page renders correctly
-- [ ] The page is accessible
-- [ ] The page is responsive
+-   [ ] The page renders correctly
+-   [ ] The page is accessible
+-   [ ] The page is responsive
 
 ## Screenshots
 
@@ -43,11 +43,11 @@ Validate:
 
 <!-- Put an "x" to indicate you've done each of the following. Add/remove additional tasks, as needed. -->
 
-- [ ] I have read the [contribution guidelines](/.github/CONTRIBUTING.md).
-- [ ] I have updated relevant storybook stories and templates.
-- [ ] I have tested these changes in Windows High Contrast mode.
+-   [ ] I have read the [contribution guidelines](/.github/CONTRIBUTING.md).
+-   [ ] I have updated relevant storybook stories and templates.
+-   [ ] I have tested these changes in Windows High Contrast mode.
 
-- [ ] If my change impacts **other components**, I have tested to make sure they don't break.
-- [ ] If my change impacts **documentation**, I have updated the documentation accordingly.
+-   [ ] If my change impacts **other components**, I have tested to make sure they don't break.
+-   [ ] If my change impacts **documentation**, I have updated the documentation accordingly.
 
-- [ ] ✨ This pull request is ready to merge. ✨
+-   [ ] ✨ This pull request is ready to merge. ✨
