@@ -33,11 +33,13 @@ Default.args = {
 			image: "example-ava.png",
 			label: "Shantanu.jpg",
 			isSelectable: true,
+			id: "assetitemlabel-1",
 		},
 		{
 			iconName: "Document",
 			label: "Resource Allocation.csv",
 			isSelectable: true,
+			id: "assetitemlabel-2",
 		},
 		{
 			iconName: "Folder",
@@ -45,6 +47,7 @@ Default.args = {
 			isSelectable: true,
 			isBranch: true,
 			isSelected: true,
+			id: "assetitemlabel-3",
 		},
 		{
 			iconName: "Folder",
@@ -53,6 +56,7 @@ Default.args = {
 			isBranch: true,
 			isSelected: false,
 			isNavigated: true,
+			id: "assetitemlabel-4",
 		},
 	],
 };

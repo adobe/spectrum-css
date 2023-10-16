@@ -15,6 +15,7 @@ export const AssetListItem = ({
 	image,
 	iconName,
 	label,
+	id,
 	isNavigated = false,
 	isSelectable = false,
 	isSelected = false,
@@ -22,6 +23,7 @@ export const AssetListItem = ({
 	onclick = () => {},
 	...globals
 }) => {
+
 	return html` <li
 		class=${classMap({
 			[rootClass]: true,
@@ -38,12 +40,13 @@ export const AssetListItem = ({
 			...globals,
 			size: "m",
 			isChecked: isSelected,
+			ariaLabelledby: id,
 			customClasses: [`${rootClass}Selector`],
 		}))}
 		${when(
 			image,
 			() =>
-				html`<img src=${image ?? exampleImage} class="${rootClass}Thumbnail" />`
+				html`<img src=${image ?? exampleImage} class="${rootClass}Thumbnail" alt="asset image thumbnail" />`
 		)}
 		${when(iconName, () =>
 			Icon({
@@ -52,12 +55,13 @@ export const AssetListItem = ({
 				...globals,
 			})
 		)}
-		${when(label, () => html`<span class="${rootClass}Label">${label}</span>`)}
+		${when(label, () => html`<span class="${rootClass}Label" id=${id}>${label}</span>`)}
 		${when(!isSelectable && !isBranch, () =>
 			Checkbox({
 				...globals,
 				size: "m",
 				isChecked: isSelected,
+				ariaLabelledby: id,
 				customClasses: [`${rootClass}Selector`],
 			}))}
 		${when(isBranch, () =>

@@ -1,7 +1,6 @@
 | Modifiable Custom Properties                           |
 | ------------------------------------------------------ |
 | `--mod-assetlist-border-color-key-focus`               |
-| `--mod-assetlist-checkbox-margin`                      |
 | `--mod-assetlist-child-indicator-animation`            |
 | `--mod-assetlist-item-animation`                       |
 | `--mod-assetlist-item-background-color-down`           |
