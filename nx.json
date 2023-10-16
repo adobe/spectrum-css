@@ -71,30 +71,11 @@
                 }
             }
         },
-        "build:light": {
-            "inputs": ["core", "tools", { "externalDependencies": ["postcss"] }],
-            "outputs": ["{projectRoot}/dist"],
-            "executor": "nx:run-commands",
-            "options": {
-                "commands": [
-                    "test -f {projectRoot}/index-base.css && FILE_NAME=index-base || FILE_NAME=index; postcss {projectRoot}/${FILE_NAME}.css --output {projectRoot}/dist/index.css --skip-lint"
-                ],
-                "envFile": ".env.dev"
-            }
-        },
         "watch": {
             "dependsOn": ["build"],
             "executor": "nx:run-commands",
             "options": {
                 "commands": ["nx watch --projects $NX_TASK_TARGET_PROJECT -- nx run \\$NX_PROJECT_NAME:build"],
-                "envFile": ".env.dev"
-            }
-        },
-        "dev": {
-            "dependsOn": ["build:light"],
-            "executor": "nx:run-commands",
-            "options": {
-                "commands": ["nx watch --projects $NX_TASK_TARGET_PROJECT -- nx run \\$NX_PROJECT_NAME:build:light"],
                 "envFile": ".env.dev"
             }
         },

@@ -1,11 +1,11 @@
-<site-search id="site-search">
-    <form aria-owns="search-results-listbox">
-        <spectrum-textfield>
+<site-search class="site-Search" id="site-search" role="search">
+    <form aria-owns="search-results-listbox" class="spectrum-Search">
+        <div class="spectrum-TextField spectrum-Search-textfield">
             <svg class="spectrum-Icon spectrum-Icon--sizeM spectrum-Textfield-icon spectrum-Search-icon" focusable="false" aria-hidden="true">
                 <use xlink:href="#spectrum-icon-18-Magnify"></use>
             </svg>
-            <input type="search" placeholder="Search" name="search" value="" autocomplete="off">
-        </spectrum-textfield>
+            <input type="search" placeholder="Search" name="search" value="" class="spectrum-Textfield-input spectrum-Search-input" autocomplete="off">
+        </div>
         <button type="reset" value="Reset" class="spectrum-ClearButton spectrum-ClearButton--sizeM spectrum-Search-clearButton site-Search-clearButton" tabindex="-1" hidden="">
             <span class="spectrum-ClearButton-fill">
                 <svg class="spectrum-ClearButton-icon spectrum-Icon spectrum-UIIcon-Cross100" focusable="false" aria-hidden="true">
@@ -14,10 +14,10 @@
             </span>
         </button>
     </form>
-    <spectrum-popover>
-        <spectrum-menu id="search-results-listbox" role="listbox">
-        </spectrum-menu>
-    </spectrum-popover>
+    <div class="spectrum-Popover">
+        <div class="spectrum-Menu" id="search-results-listbox" role="listbox">
+        </div>
+    </div>
 
     <template id="search-message">
         <div class="spectrum-IllustratedMessage site-Search-results--none site-Search-searchError">
@@ -29,10 +29,10 @@
     </template>
 
     <template id="search-result-item">
-        <li role="group">
+        <li class="spectrum-Menu-item" role="group">
             <span class="spectrum-Menu-sectionHeading" aria-hidden="true" id="search-result-category"></span>
-            <spectrum-menu role="presentation" id="search-result-category-item">
-            </spectrum-menu>
+            <div class="spectrum-Menu" role="presentation" id="search-result-category-item">
+            </div>
         </li>
     </template>
 

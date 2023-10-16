@@ -38,9 +38,6 @@ export default class Search extends LitElement {
     constructor() {
         super();
 
-        this.classList.add("site-Search");
-        this.setAttribute("role", "search");
-
         if (this.form) {
             this.form.classList.add("spectrum-Search", "site-Search-form");
             this.form.setAttribute("role", "combobox");
