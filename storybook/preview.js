@@ -8,7 +8,6 @@ import {
 } from "./decorators.js";
 
 import { withActions } from "@storybook/addon-actions/decorator";
-import { withThemeByClassName } from "@storybook/addon-styling";
 
 import DocumentationTemplate from "./templates/Documentation.mdx";
 
@@ -83,6 +82,19 @@ export const globalTypes = {
             items: [
                 { value: "spectrum", title: "Spectrum" },
                 { value: "express", title: "Express" },
+            ],
+            dynamicTitle: true,
+        },
+    },
+    color: {
+        title: "Color context",
+        description: "Color contexts in which components can be rendered.",
+        defaultValue: "light",
+        toolbar: {
+            items: [
+                { value: "light", title: "Light" },
+                { value: "dark", title: "Dark" },
+                { value: "darkest", title: "Darkest" },
             ],
             dynamicTitle: true,
         },
@@ -172,14 +184,6 @@ export const decorators = [
     withReducedMotionWrapper,
     withContextWrapper,
     withActions,
-    withThemeByClassName({
-        themes: {
-            Light: "spectrum--light",
-            Dark: "spectrum--dark",
-            Darkest: "spectrum--darkest",
-        },
-        defaultTheme: "Light",
-    }),
 ];
 
 export default {

@@ -14,11 +14,12 @@
         "url": "https://github.com/adobe/spectrum-css/issues"
     },
     "main": "dist/index.css",
+    "browser": "dist/index.css",
     "peerDependencies": {
         "@spectrum-css/actionbutton": ">=5",
         "@spectrum-css/checkbox": ">=7",
-        "@spectrum-css/vars": ">=9",
-        "@spectrum-css/tokens": ">=12"
+        "@spectrum-css/tokens": ">=12",
+        "@spectrum-css/vars": ">=9"
     },
     "devDependencies": {
         "@spectrum-css/commons": "^9.0.0"

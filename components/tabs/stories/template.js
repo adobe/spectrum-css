@@ -6,7 +6,7 @@ import { styleMap } from "lit/directives/style-map.js";
 
 import { Template as Icon } from "@spectrum-css/icon/stories/template.js";
 
-import "@spectrum-css/tabs/dist/index-base.css";
+import "@spectrum-css/tabs";
 
 export const Template = ({
     rootClass = "spectrum-Tabs",

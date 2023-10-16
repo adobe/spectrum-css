@@ -19,7 +19,6 @@ module.exports = {
     },
     plugins: ["@nx"],
     extends: ["eslint:recommended", "plugin:@nx/javascript", "plugin:prettier/recommended"],
-    parser: "@babel/eslint-parser",
     parserOptions: {
         ecmaVersion: "latest",
         sourceType: "module",

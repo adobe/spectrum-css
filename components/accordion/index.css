@@ -49,16 +49,20 @@ governing permissions and limitations under the License.
 
     /* Colors */
     --spectrum-accordion-background-color-default: rgba(
-        var(--spectrum-gray-900-rgb) / var(--spectrum-background-opacity-default)
+        var(--spectrum-gray-900-rgb),
+        var(--spectrum-background-opacity-default)
     );
     --spectrum-accordion-background-color-hover: rgba(
-        var(--spectrum-gray-900-rgb) / var(--spectrum-background-opacity-hover)
+        var(--spectrum-gray-900-rgb),
+        var(--spectrum-background-opacity-hover)
     );
     --spectrum-accordion-background-color-down: rgba(
-        var(--spectrum-gray-900-rgb) / var(--spectrum-background-opacity-down)
+        var(--spectrum-gray-900-rgb),
+        var(--spectrum-background-opacity-down)
     );
     --spectrum-accordion-background-color-key-focus: rgba(
-        var(--spectrum-gray-900-rgb) / var(--spectrum-background-opacity-key-focus)
+        var(--spectrum-gray-900-rgb),
+        var(--spectrum-background-opacity-key-focus)
     );
 
     /* Label */
@@ -93,47 +97,17 @@ governing permissions and limitations under the License.
         )
     );
 
-    display: block;
-    margin: 0;
-    padding: 0;
-    list-style: none;
-
     &:lang(ja),
     &:lang(zh),
     &:lang(ko) {
         --spectrum-accordion-item-header-line-height: var(--spectrum-cjk-line-height-100);
+    }
+
+    &:lang(ja),
+    &:lang(zh),
+    &:lang(ko) {
         --spectrum-accordion-item-content-line-height: var(--spectrum-cjk-line-height-100);
     }
-}
-
-.spectrum-Accordion--sizeS {
-    --spectrum-accordion-item-height: var(--spectrum-component-height-100);
-    --spectrum-accordion-disclosure-indicator-height: var(--spectrum-component-height-75);
-    --spectrum-accordion-component-edge-to-text: var(--spectrum-component-edge-to-text-50);
-    --spectrum-accordion-item-header-font-size: var(--spectrum-font-size-200);
-    --spectrum-accordion-item-content-font-size: var(--spectrum-body-size-xs);
-    --spectrum-accordion-item-header-top-to-text-space: var(--spectrum-accordion-top-to-text-regular-small);
-    --spectrum-accordion-item-header-bottom-to-text-space: var(--spectrum-accordion-bottom-to-text-regular-small);
-}
-
-.spectrum-Accordion--sizeL {
-    --spectrum-accordion-item-height: var(--spectrum-component-height-300);
-    --spectrum-accordion-disclosure-indicator-height: var(--spectrum-component-height-200);
-    --spectrum-accordion-component-edge-to-text: var(--spectrum-component-edge-to-text-100);
-    --spectrum-accordion-item-header-font-size: var(--spectrum-font-size-500);
-    --spectrum-accordion-item-content-font-size: var(--spectrum-body-size-m);
-    --spectrum-accordion-item-header-top-to-text-space: var(--spectrum-accordion-top-to-text-regular-large);
-    --spectrum-accordion-item-header-bottom-to-text-space: var(--spectrum-accordion-bottom-to-text-regular-large);
-}
-
-.spectrum-Accordion--sizeXL {
-    --spectrum-accordion-item-height: var(--spectrum-component-height-400);
-    --spectrum-accordion-disclosure-indicator-height: var(--spectrum-component-height-300);
-    --spectrum-accordion-component-edge-to-text: var(--spectrum-component-edge-to-text-200);
-    --spectrum-accordion-item-header-font-size: var(--spectrum-font-size-700);
-    --spectrum-accordion-item-content-font-size: var(--spectrum-body-size-l);
-    --spectrum-accordion-item-header-top-to-text-space: var(--spectrum-accordion-top-to-text-regular-extra-large);
-    --spectrum-accordion-item-header-bottom-to-text-space: var(--spectrum-accordion-bottom-to-text-regular-extra-large);
 }
 
 .spectrum-Accordion--compact {
@@ -188,6 +162,43 @@ governing permissions and limitations under the License.
     }
 }
 
+.spectrum-Accordion--sizeS {
+    --spectrum-accordion-item-height: var(--spectrum-component-height-100);
+    --spectrum-accordion-disclosure-indicator-height: var(--spectrum-component-height-75);
+    --spectrum-accordion-component-edge-to-text: var(--spectrum-component-edge-to-text-50);
+    --spectrum-accordion-item-header-font-size: var(--spectrum-font-size-200);
+    --spectrum-accordion-item-content-font-size: var(--spectrum-body-size-xs);
+    --spectrum-accordion-item-header-top-to-text-space: var(--spectrum-accordion-top-to-text-regular-small);
+    --spectrum-accordion-item-header-bottom-to-text-space: var(--spectrum-accordion-bottom-to-text-regular-small);
+}
+
+.spectrum-Accordion--sizeL {
+    --spectrum-accordion-item-height: var(--spectrum-component-height-300);
+    --spectrum-accordion-disclosure-indicator-height: var(--spectrum-component-height-200);
+    --spectrum-accordion-component-edge-to-text: var(--spectrum-component-edge-to-text-100);
+    --spectrum-accordion-item-header-font-size: var(--spectrum-font-size-500);
+    --spectrum-accordion-item-content-font-size: var(--spectrum-body-size-m);
+    --spectrum-accordion-item-header-top-to-text-space: var(--spectrum-accordion-top-to-text-regular-large);
+    --spectrum-accordion-item-header-bottom-to-text-space: var(--spectrum-accordion-bottom-to-text-regular-large);
+}
+
+.spectrum-Accordion--sizeXL {
+    --spectrum-accordion-item-height: var(--spectrum-component-height-400);
+    --spectrum-accordion-disclosure-indicator-height: var(--spectrum-component-height-300);
+    --spectrum-accordion-component-edge-to-text: var(--spectrum-component-edge-to-text-200);
+    --spectrum-accordion-item-header-font-size: var(--spectrum-font-size-700);
+    --spectrum-accordion-item-content-font-size: var(--spectrum-body-size-l);
+    --spectrum-accordion-item-header-top-to-text-space: var(--spectrum-accordion-top-to-text-regular-extra-large);
+    --spectrum-accordion-item-header-bottom-to-text-space: var(--spectrum-accordion-bottom-to-text-regular-extra-large);
+}
+
+.spectrum-Accordion {
+    display: block;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
 .spectrum-Accordion-item {
     position: relative;
     z-index: inherit;
@@ -196,61 +207,15 @@ governing permissions and limitations under the License.
     min-block-size: var(--mod-accordion-item-height, var(--spectrum-accordion-item-height));
     margin: 0;
 
-    border-color: var(--mod-accordion-divider-color, var(--spectrum-accordion-divider-color));
+    border-color: transparent;
+    border-style: solid;
     border-width: var(--mod-accordion-divider-thickness, var(--spectrum-divider-thickness-small));
-    border-block-end-color: transparent;
+    border-block-start-color: var(--mod-accordion-divider-color, var(--spectrum-accordion-divider-color));
+    border-block-end-width: 0;
 
-    &:not(first-child) {
-        border-block-start-color: transparent;
+    &:last-child {
         border-block-end-color: var(--mod-accordion-divider-color, var(--spectrum-accordion-divider-color));
-    }
-
-    &.is-open {
-        & > .spectrum-Accordion-itemHeading > .spectrum-Accordion-itemIconContainer > .spectrum-Accordion-itemIndicator,
-        & > .spectrum-Accordion-itemIconContainer > .spectrum-Accordion-itemIndicator {
-            transform: logical rotate(90deg);
-        }
-
-        > .spectrum-Accordion-itemContent {
-            display: block;
-        }
-
-        & .spectrum-Accordion-itemHeader:hover {
-            background-color: var(
-                --mod-accordion-background-color-hover,
-                var(--spectrum-accordion-background-color-hover)
-            );
-        }
-    }
-
-    &.is-disabled {
-        & .spectrum-Accordion-itemHeader {
-            cursor: default;
-        }
-
-        & .spectrum-Accordion-itemHeader,
-        & .spectrum-Accordion-itemHeader:hover,
-        & .spectrum-Accordion-itemHeader:focus-visible {
-            color: var(
-                --mod-accordion-item-header-disabled-color,
-                var(--spectrum-accordion-item-header-disabled-color)
-            );
-            background-color: transparent;
-        }
-
-        & .spectrum-Accordion-itemHeader + .spectrum-Accordion-itemIconContainer {
-            color: var(
-                --mod-accordion-item-header-disabled-color,
-                var(--spectrum-accordion-item-header-disabled-color)
-            );
-        }
-
-        & .spectrum-Accordion-itemContent {
-            color: var(
-                --mod-accordion-item-content-disabled-color,
-                var(--spectrum-accordion-item-content-disabled-color)
-            );
-        }
+        border-block-end-width: var(--mod-accordion-divider-thickness, var(--spectrum-divider-thickness-small));
     }
 }
 
@@ -291,7 +256,7 @@ governing permissions and limitations under the License.
 
     color: var(--mod-accordion-item-header-color-default, var(--spectrum-accordion-item-header-color-default));
 
-    &:dir(rtl) {
+    [dir="rtl"] & {
         transform: scaleX(-1);
     }
 }
@@ -400,13 +365,77 @@ governing permissions and limitations under the License.
     }
 }
 
-@media (forced-colors: active) {
-    .spectrum-Accordion-itemHeader::after {
-        content: "";
-        position: absolute;
-        inset-inline-start: 0;
+.spectrum-Accordion-item {
+    &.is-open {
+        .spectrum-Accordion-itemHeader:hover {
+            background-color: var(
+                --mod-accordion-background-color-hover,
+                var(--spectrum-accordion-background-color-hover)
+            );
+        }
+    }
+}
 
-        /* make sure focus ring renders */
-        forced-color-adjust: none;
+.spectrum-Accordion-item.is-disabled {
+    .spectrum-Accordion-itemHeader {
+        &,
+        &:hover,
+        &:focus-visible {
+            color: var(
+                --mod-accordion-item-header-disabled-color,
+                var(--spectrum-accordion-item-header-disabled-color)
+            );
+            background-color: transparent;
+        }
+
+        + .spectrum-Accordion-itemIconContainer {
+            color: var(
+                --mod-accordion-item-header-disabled-color,
+                var(--spectrum-accordion-item-header-disabled-color)
+            );
+        }
+    }
+
+    .spectrum-Accordion-itemContent {
+        color: var(--mod-accordion-item-content-disabled-color, var(--spectrum-accordion-item-content-disabled-color));
+    }
+}
+
+@media (forced-colors: active) {
+    .spectrum-Accordion-itemHeader {
+        &::after {
+            content: "";
+            position: absolute;
+            inset-inline-start: 0;
+
+            /* make sure focus ring renders */
+            forced-color-adjust: none;
+        }
+    }
+}
+
+.spectrum-Accordion-item {
+    &.is-open {
+        > .spectrum-Accordion-itemHeading > .spectrum-Accordion-itemIconContainer > .spectrum-Accordion-itemIndicator {
+            /* stylelint-disable declaration-property-value-no-unknown */
+            transform: logical rotate(90deg);
+            /* stylelint-enable declaration-property-value-no-unknown */
+        }
+
+        > .spectrum-Accordion-itemIconContainer > .spectrum-Accordion-itemIndicator {
+            /* stylelint-disable declaration-property-value-no-unknown */
+            transform: logical rotate(90deg);
+            /* stylelint-enable declaration-property-value-no-unknown */
+        }
+
+        > .spectrum-Accordion-itemContent {
+            display: block;
+        }
+    }
+
+    &.is-disabled {
+        .spectrum-Accordion-itemHeader {
+            cursor: default;
+        }
     }
 }

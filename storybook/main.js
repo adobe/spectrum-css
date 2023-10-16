@@ -15,7 +15,14 @@ export default {
     core: {
         disableTelemetry: true,
     },
-    framework: "@storybook/web-components-webpack5",
+    framework: {
+        name: "@storybook/web-components-webpack5",
+        options: {
+            builder: {
+                useSWC: true,
+            }
+        }
+    },
     stories: [
         // "../components/*/stories/*.stories.mdx",
         join(componentsPath, "*/stories/*.stories.js"),
@@ -35,6 +42,13 @@ export default {
                 // Enables JSX support in MDX for projects that aren't configured to handle the format.
                 transcludeMarkdown: true, // Support markdown in MDX files.
             },
+        },
+        // https://storybook.js.org/addons/storybook-addon-swc
+        {
+            name: 'storybook-addon-swc',
+            options: {
+                enableSwcMinify: false,
+            }
         },
         // https://github.com/storybookjs/storybook/tree/next/code/addons/a11y
         "@storybook/addon-a11y",
@@ -62,5 +76,5 @@ export default {
             }
             return false;
         }),
-    },
+    }
 };

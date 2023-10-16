@@ -6,7 +6,7 @@ import { styleMap } from "lit/directives/style-map.js";
 import { Template as ActionButton } from "@spectrum-css/actionbutton/stories/template.js";
 import { Template as Textfield } from "@spectrum-css/textfield/stories/template.js";
 
-import "@spectrum-css/stepper/dist/index-base.css";
+import "@spectrum-css/stepper";
 
 export const Template = ({
     rootClass = "spectrum-Stepper",

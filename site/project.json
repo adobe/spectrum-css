@@ -26,7 +26,7 @@
             "options": {
                 "cwd": "{projectRoot}",
                 "commands": [
-                    "nx watch --projects tag:component -- nx run \\$NX_PROJECT_NAME:build:light",
+                    "nx watch --projects tag:component -- nx run \\$NX_PROJECT_NAME:build",
                     "eleventy --watch"
                 ],
                 "envFile": ".env.dev"
@@ -39,7 +39,7 @@
             "options": {
                 "cwd": "{projectRoot}",
                 "commands": [
-                    "nx watch --projects tag:component -- nx run \\$NX_PROJECT_NAME:build:light",
+                    "nx watch --projects tag:component -- nx run \\$NX_PROJECT_NAME:build",
                     "eleventy --serve --incremental"
                 ],
                 "envFile": ".env.dev"

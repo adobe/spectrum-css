@@ -4,7 +4,7 @@ import { when } from "lit/directives/when.js";
 
 import { Template as Icon } from "@spectrum-css/icon/stories/template.js";
 
-import "@spectrum-css/tooltip/dist/index-base.css";
+import "@spectrum-css/tooltip";
 
 export const Template = ({
     rootClass = "spectrum-Tooltip",

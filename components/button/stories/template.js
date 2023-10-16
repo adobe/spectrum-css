@@ -7,7 +7,7 @@ import { capitalize, lowerCase } from "lodash-es";
 
 import { Template as Icon } from "@spectrum-css/icon/stories/template.js";
 
-import "@spectrum-css/button/dist/index-base.css";
+import "@spectrum-css/button";
 
 export const Template = ({
     rootClass = "spectrum-Button",

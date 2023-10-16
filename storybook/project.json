@@ -4,11 +4,11 @@
     "implicitDependencies": ["tag:component"],
     "namedInputs": {
         "core": [
-            "{workspaceRoot}/assets/**",
+            "{workspaceRoot}/assets",
             "{projectRoot}/*.js",
             "{projectRoot}/*.html",
-            "{workspaceRoot}/components/*/stories/**",
-            "{workspaceRoot}/components/*/*.css"
+            "{workspaceRoot}/components/*/stories",
+            "{workspaceRoot}/components/*/dist"
         ],
         "tools": []
     },
@@ -18,7 +18,7 @@
         },
         "build": {
             "dependsOn": ["^build"],
-            "inputs": ["core"],
+            "inputs": ["core", { "externalDependencies": ["storybook"] }],
             "outputs": ["{projectRoot}/storybook-static"],
             "executor": "nx:run-commands",
             "options": {
@@ -26,19 +26,20 @@
                 "envFile": ".env.prod"
             }
         },
-        "watch": {
-            "options": {
-                "commands": ["storybook dev --port 3000 --config-dir {projectRoot}"]
-            }
-        },
         "dev": {
+            "dependsOn": ["^build"],
+            "inputs": ["core", { "externalDependencies": ["storybook"] }],
             "outputs": [],
+            "executor": "nx:run-commands",
             "options": {
-                "commands": ["storybook dev --port 3000 --config-dir {projectRoot}"]
+                "commands": [
+                    "nx watch --projects tag:component -- nx run \\$NX_PROJECT_NAME:build",
+                    "storybook dev --config-dir {projectRoot} --port 3000"
+                ]
             }
         },
         "lint": {
-            "inputs": ["core", "linter"],
+            "inputs": ["core", { "externalDependencies": ["stylelint", "eslint"] }],
             "options": {
                 "commands": [
                     "stylelint {projectRoot}/assets/*.css",
@@ -47,7 +48,7 @@
             }
         },
         "format": {
-            "inputs": ["core", "linter"],
+            "inputs": ["core", { "externalDependencies": ["stylelint", "eslint", "prettier"] }],
             "options": {
                 "commands": [
                     "stylelint {projectRoot}/assets/*.css --fix",

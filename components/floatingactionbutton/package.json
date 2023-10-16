@@ -15,6 +15,7 @@
         "url": "https://github.com/adobe/spectrum-css/issues"
     },
     "main": "dist/index.css",
+    "browser": "dist/index.css",
     "peerDependencies": {
         "@spectrum-css/tokens": ">=12"
     },

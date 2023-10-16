@@ -97,34 +97,33 @@ export const withContextWrapper = makeDecorator({
     name: "withContextWrapper",
     parameterName: "context",
     wrapper: (StoryFn, { parameters, globals, viewMode }) => {
-        // const colors = ["spectrum--light", "spectrum--dark", "spectrum--darkest"];
-        const contexts = ["spectrum", "spectrum--express"];
+        const colors = ["spectrum--light", "spectrum--dark", "spectrum--darkest"];
         const scales = ["spectrum--medium", "spectrum--large"];
 
-        // const color = parameters.color ?? globals.color;
+        const color = parameters.color ?? globals.color;
         const context = parameters.context ?? globals.context ?? localStorage.getItem("spectrum-theme");
         const scale = parameters.scale ?? globals.scale ?? localStorage.getItem("spectrum-scale");
 
         useEffect(() => {
             localStorage.setItem("spectrum-theme", context);
-            // localStorage.setItem("spectrum-color", color);
-            localStorage.setItem("spectrum-scale", scale);
+            localStorage.setItem("spectrum-color", color);
+            localStorage.setItem("spectrum-scale", scale ?? "medium");
 
             const els =
                 viewMode === "docs" ? [...document.querySelectorAll(".docs-story")] : [document.documentElement];
             els.forEach((root) => {
                 [...root.classList].forEach((className) => {
-                    if ([...contexts, ...scales].includes(className)) {
+                    // @note: we never remove the spectrum class
+                    if (["spectrum--express", ...scales, ...colors].includes(className)) {
                         root.classList.remove(className);
                     }
                 });
 
                 // Add the spectrum root class
-                root.classList.add(
-                    `spectrum${context !== "spectrum" ? `--${context}` : ""}`,
-                    `spectrum--${scale}`,
-                    // `spectrum--${color}`
-                );
+                root.classList.add("spectrum");
+                root.classList.add(`spectrum--${scale ?? "medium"}`);
+                root.classList.add(`spectrum--${color ?? "light"}`);
+                root.classList.toggle(`spectrum--express`, context !== "spectrum");
             });
         }, [context, scale]);
 

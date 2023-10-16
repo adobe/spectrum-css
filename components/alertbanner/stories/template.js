@@ -6,7 +6,7 @@ import { Template as CloseButton } from "@spectrum-css/closebutton/stories/templ
 import { Template as Divider } from "@spectrum-css/divider/stories/template.js";
 import { Template as Icon } from "@spectrum-css/icon/stories/template.js";
 
-import "@spectrum-css/alertbanner/dist/index-base.css";
+import "@spectrum-css/alertbanner";
 
 export const Template = ({
     rootClass = "spectrum-AlertBanner",

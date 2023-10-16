@@ -1,14 +1,10 @@
-/*
 @import url("https://unpkg.com/prismjs@1.20.0/themes/prism.css") screen and
-  ((prefers-color-scheme: light) or (prefers-color-scheme: no-preference));
-@import url("https://unpkg.com/prismjs@1.20.0/themes/prism-dark.css") screen and
-  (prefers-color-scheme: dark);
-*/
+    ((prefers-color-scheme: light) or (prefers-color-scheme: no-preference));
+@import url("https://unpkg.com/prismjs@1.20.0/themes/prism-dark.css") screen and (prefers-color-scheme: dark);
 
-/* @import "../assets/styles/_themes.css";
+@import "../assets/styles/_themes.css";
 
 @import "@spectrum-css/typography";
-@import "@spectrum-css/treeview"; */
 
 body {
     margin: 0;

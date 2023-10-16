@@ -14,6 +14,7 @@
         "url": "https://github.com/adobe/spectrum-css/issues"
     },
     "main": "dist/index.css",
+    "browser": "dist/index.css",
     "peerDependencies": {
         "@spectrum-css/actionbutton": ">=5",
         "@spectrum-css/popover": ">=6",
