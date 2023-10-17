@@ -21,17 +21,6 @@
                 "envFile": ".env.prod"
             }
         },
-        "watch": {
-            "dependsOn": [],
-            "options": {
-                "cwd": "{projectRoot}",
-                "commands": [
-                    "nx watch --projects tag:component -- nx run \\$NX_PROJECT_NAME:build",
-                    "eleventy --watch"
-                ],
-                "envFile": ".env.dev"
-            }
-        },
         "dev": {
             "dependsOn": [{
                 "target": "build",
@@ -46,7 +35,6 @@
             "options": {
                 "cwd": "{projectRoot}",
                 "commands": [
-                    "nx watch --projects tag:component -- nx run \\$NX_PROJECT_NAME:build",
                     "eleventy --serve --incremental"
                 ],
                 "envFile": ".env.dev"

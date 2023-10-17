@@ -40,8 +40,7 @@
         "test": "nx run-many --target test --projects ",
         "test:lib": "yarn test tag:component",
         "test:plugins": "yarn test tag:postcss,tag:stylelint",
-        "test:tools": "yarn test tag:tooling",
-        "watch": "nx watch --projects tag:component --includeDependentProjects -- nx build \\$NX_PROJECT_NAME"
+        "test:tools": "yarn test tag:tooling"
     },
     "workspaces": [
         ".github/actions/*",
