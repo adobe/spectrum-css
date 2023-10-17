@@ -22,10 +22,7 @@
             }
         },
         "dev": {
-            "dependsOn": [{
-                "target": "build",
-                "projects": "tag:component"
-            }, {
+            "dependsOn": ["^build", {
                 "target": "build",
                 "projects": "storybook"
             }],
