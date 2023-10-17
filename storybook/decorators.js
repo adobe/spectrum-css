@@ -140,7 +140,7 @@ export const withContextWrapper = makeDecorator({
                     root.style[prop] = value;
                 });
             });
-        }, [context, scale, staticColor]);
+        }, [context, scale, color, staticColor]);
 
         return StoryFn(context);
     },

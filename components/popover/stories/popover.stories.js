@@ -15,6 +15,7 @@ export default {
     component: "Popover",
     argTypes: {
         trigger: { table: { disable: true } },
+        triggerId: { table: { disable: true } },
         content: { table: { disable: true } },
         isOpen: {
             name: "Open",

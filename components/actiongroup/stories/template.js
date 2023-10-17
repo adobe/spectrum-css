@@ -35,15 +35,23 @@ export const Template = ({
                     case "object":
                         return ActionButton({
                             ...globals,
+                            ...item,
                             size,
-                            iconName: item.iconName,
-                            isQuiet: areQuiet || item.isQuiet,
-                            isEmphasized: areEmphasized || item.isEmphasized,
+                            isQuiet: areQuiet ?? item.isQuiet,
+                            isEmphasized: areEmphasized ?? item.isEmphasized,
                             staticColor: staticColors ?? item.staticColor,
                             customClasses: [`${rootClass}-item`],
                         });
                     case "function":
-                        return item({ ...globals, size });
+                        return item({
+                            ...globals,
+                            ...item,
+                            size,
+                            isQuiet: areQuiet ?? item.isQuiet,
+                            isEmphasized: areEmphasized ?? item.isEmphasized,
+                            staticColor: staticColors ?? item.staticColor,
+                            customClasses: [`${rootClass}-item`],
+                        });
                     default:
                         return item;
                 }
