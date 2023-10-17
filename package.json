@@ -26,6 +26,7 @@
         "lint": "nx run-many --target lint --projects ",
         "lint:lib": "yarn lint tag:component",
         "lint:tools": "yarn lint tag:tooling",
+        "migration:cleanup": "test -n \"${BASH_VERSION}\" && bash ./tasks/clean-up-after-migration.sh || exit 0",
         "new": "nx run generator:new",
         "precommit": "lint-staged",
         "prepare": "husky install && yarn refresh:env",
