@@ -25,15 +25,15 @@ governing permissions and limitations under the License.
   --spectrum-assetlist-item-font-size: var(--spectrum-font-size-100);
   --spectrum-assetlist-item-font-weight: var(--spectrum-regular-font-weight);
   --spectrum-assetlist-item-background-color-down: var(--spectrum-gray-300);
+  --spectrum-assetlist-item-background-color-hover: var(--spectrum-gray-200);
 
-  /* Thumbnail */
+  /* thumbnail */
   --spectrum-assetlist-thumbnail-width: var(--spectrum-spacing-400);
   --spectrum-assetlist-thumbnail-height: var(--spectrum-spacing-400);
   --spectrum-assetlist-thumbnail-margin-inline-start: var(--spectrum-spacing-100);
 
   /* label */
   --spectrum-assetlist-item-label-padding-inline-start: var(--spectrum-spacing-100);
-  --spectrum-assetlist-item-background-color-hover: var(--spectrum-gray-200);
   --spectrum-assetlist-label-color: var(--spectrum-neutral-content-color-default);
 }
 
