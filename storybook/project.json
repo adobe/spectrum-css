@@ -33,7 +33,6 @@
             "executor": "nx:run-commands",
             "options": {
                 "commands": [
-                    "nx watch --projects tag:component -- nx run \\$NX_PROJECT_NAME:build",
                     "storybook dev --config-dir {projectRoot} --port 3000"
                 ]
             }

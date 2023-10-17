@@ -7,7 +7,7 @@ import { useArgs, useGlobals } from "@storybook/client-api";
 
 import { Template as FieldLabel } from "@spectrum-css/fieldlabel/stories/template.js";
 
-import "@spectrum-css/slider";
+import "../index-base.css";
 
 export const Template = ({
     rootClass = "spectrum-Slider",

@@ -20,8 +20,8 @@ export default {
         options: {
             builder: {
                 useSWC: true,
-            }
-        }
+            },
+        },
     },
     stories: [
         // "../components/*/stories/*.stories.mdx",
@@ -45,10 +45,10 @@ export default {
         },
         // https://storybook.js.org/addons/storybook-addon-swc
         {
-            name: 'storybook-addon-swc',
+            name: "storybook-addon-swc",
             options: {
                 enableSwcMinify: false,
-            }
+            },
         },
         // https://github.com/storybookjs/storybook/tree/next/code/addons/a11y
         "@storybook/addon-a11y",
@@ -56,7 +56,14 @@ export default {
         "@etchteam/storybook-addon-status",
         "storybook-addon-pseudo-states",
         // https://github.com/storybookjs/addon-styling#storybookaddon-styling
-        "@storybook/addon-styling",
+        {
+            name: "@storybook/addon-styling",
+            options: {
+                postCss: {
+                    implementation: require("postcss"),
+                },
+            },
+        },
     ],
     features: {
         /* Code splitting flag; load stories on-demand */
@@ -76,5 +83,5 @@ export default {
             }
             return false;
         }),
-    }
+    },
 };

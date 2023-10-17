@@ -34,8 +34,12 @@ export default class Picker {
         });
     }
 
+    get popover() {
+        return this.el.nextElementSibling(".spectrum-Picker-popover");
+    }
+
     get value() {
-        return this.getAttribute("value");
+        return this.el.getAttribute("value");
     }
 
     set value(input) {
@@ -48,7 +52,7 @@ export default class Picker {
             this.updateLabel(this.menu.activeItem.labelText);
         }
 
-        this.dispatchEvent(
+        this.el.dispatchEvent(
             new CustomEvent("change", {
                 bubbles: true,
                 detail: {
@@ -81,35 +85,35 @@ export default class Picker {
 
     /* -- State utilities -- */
     get isSelected() {
-        return this?.classList.contains("is-selected");
+        return this.el.classList.contains("is-selected");
     }
 
     set isSelected(state) {
-        this?.classList.toggle("is-selected", state);
+        this.el.classList.toggle("is-selected", state);
     }
 
     get isOpen() {
-        return this?.classList.contains("is-open");
+        return this.el.classList.contains("is-open");
     }
 
     set isOpen(state) {
         this.isSelected = state;
-        this?.classList.toggle("is-open", state);
+        this.el.classList.toggle("is-open", state);
 
         if (state) {
-            this?.setAttribute("aria-expanded", "true");
+            this.el.setAttribute("aria-expanded", "true");
 
             // Close other pickers
-            this.dispatchEvent(
+            this.el.dispatchEvent(
                 new CustomEvent("closePickers", {
                     bubbles: true,
                     detail: {
                         picker: this,
-                        id: this?.id,
+                        id: this.el.id,
                     },
                 }),
             );
-        } else this?.removeAttribute("aria-expanded");
+        } else this.el.removeAttribute("aria-expanded");
 
         // If a popover is present, toggle its state
         if (!this.popover) return;
@@ -213,8 +217,8 @@ export default class Picker {
             if (!this.isOpen) this.isOpen = true;
         }
 
-        if (!event.ctrlKey || !(this.keyBinding && this.keyBinding[event.key])) return;
-        this.value = this.keyBinding[event.key];
+        if (!event.ctrlKey || !(this.keyBinding && this.keyBindings[event.key])) return;
+        this.value = this.keyBindings[event.key];
     }
 
     clickHandler(event) {

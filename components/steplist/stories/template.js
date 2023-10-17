@@ -5,7 +5,7 @@ import { repeat } from "lit/directives/repeat.js";
 
 import { Template as Tooltip } from "@spectrum-css/tooltip/stories/template.js";
 
-import "@spectrum-css/steplist";
+import "../index-base.css";
 
 export const SteplistItem = ({
     rootClass,

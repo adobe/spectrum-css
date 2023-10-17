@@ -4,7 +4,7 @@ import { ifDefined } from "lit/directives/if-defined.js";
 
 import { Template as ActionButton } from "@spectrum-css/actionbutton/stories/template.js";
 
-import "@spectrum-css/quickaction";
+import "../index-base.css";
 
 export const Template = ({
     rootClass = "spectrum-QuickActions",

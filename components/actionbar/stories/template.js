@@ -6,7 +6,7 @@ import { Template as CloseButton } from "@spectrum-css/closebutton/stories/templ
 import { Template as FieldLabel } from "@spectrum-css/fieldlabel/stories/template.js";
 import { Template as Popover } from "@spectrum-css/popover/stories/template.js";
 
-import "@spectrum-css/actionbar";
+import "../index-base.css";
 
 export const Template = ({
     rootClass = "spectrum-ActionBar",

@@ -1,5 +1,4 @@
 import { html } from "lit";
-import { styleMap } from "lit/directives/style-map.js";
 
 // Import the component markup template
 import { Template } from "./template";
@@ -86,7 +85,8 @@ export const argTypes = {
         control: "boolean",
     },
     staticColor: {
-        name: "StaticColor",
+        name: "Static color",
+        description: "When used, the component no longer responds to theme changes.",
         type: { name: "string" },
         table: {
             type: { summary: "string" },
@@ -98,7 +98,7 @@ export const argTypes = {
 };
 
 export const ActionButtons = (args) => {
-    const content = html`${Template({
+    return html`${Template({
         ...args,
         label: "More",
         iconName: undefined,
@@ -114,18 +114,4 @@ export const ActionButtons = (args) => {
         ...args,
         hasPopup: true,
     })}`;
-
-    return args.staticColor
-        ? html`<div
-              style=${styleMap({
-                  backgroundColor: "rgb(15, 121, 125)", // : "rgb(181, 209, 211)",
-                  margin: "-30px -20px",
-                  height: "100%",
-                  width: "100%",
-                  padding: "var(--spectrum-spacing-400)",
-              })}
-          >
-              ${content}
-          </div>`
-        : content;
 };

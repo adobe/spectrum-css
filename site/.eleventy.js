@@ -109,8 +109,7 @@ module.exports = (config) => {
             permalink: () => (data) => `assets/${data.page.filePathStem}.${data.page.outputFileExtension}`,
         },
         compile: async function (content, path) {
-            // Only compile the main stylesheet
-            if (!path.endsWith("/styles/index.css")) return;
+            if (!path.endsWith("/styles/*.css")) return;
 
             // Run the entrypoint through postcss
             const { plugins, options } = await postcssrc({

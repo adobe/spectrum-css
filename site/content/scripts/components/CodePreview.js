@@ -14,13 +14,18 @@ import { LitElement } from "lit";
 import Prism from "prismjs";
 
 export default class CodePreview extends LitElement {
+    // This allows us to use web component syntax without the shadow dom
+    // we want this to act like a regular HTML element with external styles
+    createRenderRoot() {
+        return this;
+    }
+
     constructor() {
         super();
 
         this.codeFormatter = Prism.highlight;
 
         this.clickHandler = this.clickHandler.bind(this);
-        this.init = this.init.bind(this);
 
         // Add the 'is-open' class to the markup container to get an accurate initial height
         if (!this.isOpen) this.isOpen = true;
@@ -64,7 +69,7 @@ export default class CodePreview extends LitElement {
     }
 
     set isOpen(state) {
-        return this.markup.classList.toggle("is-open", Boolean(state));
+        this.markup.classList.toggle("is-open", Boolean(state));
     }
 
     get codeHeight() {

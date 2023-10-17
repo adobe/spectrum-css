@@ -5,7 +5,7 @@ import { styleMap } from "lit/directives/style-map.js";
 
 import { Template as OpacityCheckerboard } from "@spectrum-css/opacitycheckerboard/stories/template.js";
 
-import "@spectrum-css/thumbnail";
+import "../index-base.css";
 
 export const Template = ({
     rootClass = "spectrum-Thumbnail",

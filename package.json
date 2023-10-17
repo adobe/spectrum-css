@@ -19,7 +19,7 @@
         "ci": "yarn build tag:component --configuration ci",
         "clean": "nx run-many --target clean --skip-nx-cache --projects ",
         "clean:lib": "yarn clean tag:component",
-        "dev": "nx run-many --target dev --projects storybook,site",
+        "dev": "nx dev site",
         "format": "nx run-many --target format --projects ",
         "format:lib": "yarn format tag:component",
         "format:tools": "yarn format tag:tooling",

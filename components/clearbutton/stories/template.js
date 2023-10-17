@@ -5,7 +5,7 @@ import { styleMap } from "lit-html/directives/style-map.js";
 
 import { Template as Icon } from "@spectrum-css/icon/stories/template.js";
 
-import "@spectrum-css/clearbutton";
+import "../index-base.css";
 
 export const ClearButton = ({
     rootClass = "spectrum-ClearButton",

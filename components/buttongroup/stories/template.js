@@ -4,7 +4,7 @@ import { classMap } from "lit/directives/class-map.js";
 
 import { Template as Button } from "@spectrum-css/button/stories/template.js";
 
-import "@spectrum-css/buttongroup";
+import "../index-base.css";
 
 export const Template = ({
     rootClass = "spectrum-ButtonGroup",

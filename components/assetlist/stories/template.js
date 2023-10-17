@@ -8,7 +8,7 @@ import { useArgs } from "@storybook/client-api";
 import { Template as Checkbox } from "@spectrum-css/checkbox/stories/template.js";
 import { Template as Icon } from "@spectrum-css/icon/stories/template.js";
 
-import "@spectrum-css/assetlist";
+import "../index-base.css";
 
 export const AssetListItem = ({
     rootClass = "spectrum-AssetList-item",

@@ -2,7 +2,7 @@ import { html } from "lit";
 import { classMap } from "lit/directives/class-map.js";
 import { styleMap } from "lit/directives/style-map.js";
 
-import "@spectrum-css/dropindicator";
+import "../index-base.css";
 
 export const Template = ({
     rootClass = "spectrum-DropIndicator",

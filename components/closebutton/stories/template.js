@@ -6,7 +6,7 @@ import { capitalize, lowerCase, upperCase } from "lodash-es";
 
 import { Template as Icon } from "@spectrum-css/icon/stories/template.js";
 
-import "@spectrum-css/closebutton";
+import "../index-base.css";
 
 export const Template = ({
     rootClass = "spectrum-CloseButton",

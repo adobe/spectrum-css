@@ -10,7 +10,7 @@ import { Template as Icon } from "@spectrum-css/icon/stories/template.js";
 import { Template as Popover } from "@spectrum-css/popover/stories/template.js";
 import { Template as ProgressCircle } from "@spectrum-css/progresscircle/stories/template.js";
 
-import "@spectrum-css/picker";
+import "../index-base.css";
 
 export const Picker = ({
     rootClass = "spectrum-Picker",

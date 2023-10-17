@@ -25,3 +25,11 @@
 {%- if site.url !== '/' -%}
   <link rel="canonical" href="{{ page.url | url }}" />
 {%- endif -%}
+
+<style>
+  @import url("https://unpkg.com/prismjs@1.20.0/themes/prism.css") screen and
+    ((prefers-color-scheme: light) or (prefers-color-scheme: no-preference));
+  @import url("https://unpkg.com/prismjs@1.20.0/themes/prism-dark.css") screen and (prefers-color-scheme: dark);
+  @import url("https://cdn.jsdelivr.net/npm/@mdi/font@6.5.95/css/materialdesignicons.min.css");
+  @import url("https://cdnjs.cloudflare.com/ajax/libs/Primer/19.1.1/tooltips.min.css");
+</style>

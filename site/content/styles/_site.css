@@ -10,10 +10,6 @@ OF ANY KIND, either express or implied. See the License for the specific languag
 governing permissions and limitations under the License.
 */
 
-@import "@spectrum-css/sidenav";
-@import "@spectrum-css/treeview";
-@import "@spectrum-css/link";
-
 .site {
     color: var(--spectrum-body-color);
     background-color: var(--spectrum-background-layer-2-color);

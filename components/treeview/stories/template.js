@@ -5,7 +5,7 @@ import { repeat } from "lit/directives/repeat.js";
 import { Template as Icon } from "@spectrum-css/icon/stories/template.js";
 import { Template as Thumbnail } from "@spectrum-css/thumbnail/stories/template.js";
 
-import "@spectrum-css/treeview";
+import "../index-base.css";
 
 export const TreeViewItem = ({
     rootClass = "spectrum-TreeView",

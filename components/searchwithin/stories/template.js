@@ -10,7 +10,7 @@ import { Template as Textfield } from "@spectrum-css/textfield/stories/template.
 
 import { Template as Menu } from "@spectrum-css/menu/stories/template.js";
 
-import "@spectrum-css/searchwithin";
+import "../index-base.css";
 
 export const Template = ({
     rootClass = "spectrum-SearchWithin",

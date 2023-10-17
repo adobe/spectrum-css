@@ -5,7 +5,7 @@ import { when } from "lit/directives/when.js";
 
 import { Template as Icon } from "@spectrum-css/icon/stories/template.js";
 
-import "@spectrum-css/badge";
+import "../index-base.css";
 
 export const Template = ({
     rootClass = "spectrum-Badge",

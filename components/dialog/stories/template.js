@@ -10,7 +10,7 @@ import { Template as Divider } from "@spectrum-css/divider/stories/template.js";
 import { Template as Modal } from "@spectrum-css/modal/stories/template.js";
 import { Template as Underlay } from "@spectrum-css/underlay/stories/template.js";
 
-import "@spectrum-css/dialog";
+import "../index-base.css";
 
 export const Template = ({
     rootClass = "spectrum-Dialog",

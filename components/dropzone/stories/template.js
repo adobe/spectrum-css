@@ -6,7 +6,7 @@ import { Template as ActionButton } from "@spectrum-css/actionbutton/stories/tem
 import { AccentColor as IllustratedMessageStory } from "@spectrum-css/illustratedmessage/stories/illustratedmessage.stories.js";
 import { Template as IllustratedMessage } from "@spectrum-css/illustratedmessage/stories/template.js";
 
-import "@spectrum-css/dropzone";
+import "../index-base.css";
 
 export const Template = ({
     rootClass = "spectrum-DropZone",

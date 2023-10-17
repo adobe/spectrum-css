@@ -4,7 +4,7 @@ import { ActionButtons, argTypes } from "./index";
  * The action button component represents an action a user can take.
  */
 export default {
-    title: "Components/Action button/Static Black",
+    title: "Components/Action button/Static black",
     component: "ActionButton",
     argTypes: argTypes,
     args: {

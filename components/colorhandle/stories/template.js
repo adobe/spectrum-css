@@ -1,7 +1,7 @@
 import { Template as OpacityCheckerboard } from "@spectrum-css/opacitycheckerboard/stories/template.js";
 import { html } from "lit";
 
-import "@spectrum-css/colorhandle";
+import "../index-base.css";
 
 export const Template = ({
     rootClass = "spectrum-ColorHandle",

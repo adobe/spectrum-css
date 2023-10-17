@@ -197,7 +197,7 @@ async function fetchRenderData(cwd) {
     const dependencies = [
         ...new Set([
             folderName,
-            ...Object.keys(packageJSON.devDependencies ?? {})
+            ...Object.keys(packageJSON.peerDependencies ?? {})
                 .filter(
                     (packageName) =>
                         packageName.startsWith("@spectrum-css") && !["vars", "tokens"].includes(packageName),
@@ -206,7 +206,7 @@ async function fetchRenderData(cwd) {
         ]),
     ];
 
-    const stylesheet = fs.existsSync(path.join(cwd, `dist/index-base.css`))
+    const stylesheet = fs.existsSync(path.join(cwd, `dist/index-vars.css`))
         ? `index-base.css`
         : fs.existsSync(path.join(cwd, `dist/index.css`))
         ? `index.css`

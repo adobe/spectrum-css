@@ -6,7 +6,7 @@ import { Template as FieldLabel } from "@spectrum-css/fieldlabel/stories/templat
 import { Template as HelpText } from "@spectrum-css/helptext/stories/template.js";
 import { Template as Radio } from "@spectrum-css/radio/stories/template.js";
 
-import "@spectrum-css/fieldgroup";
+import "../index-base.css";
 
 export const Template = ({
     rootClass = "spectrum-FieldGroup",

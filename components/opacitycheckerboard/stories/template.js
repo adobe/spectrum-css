@@ -4,7 +4,7 @@ import { ifDefined } from "lit-html/directives/if-defined.js";
 import { styleMap } from "lit-html/directives/style-map.js";
 import { when } from "lit-html/directives/when.js";
 
-import "@spectrum-css/opacitycheckerboard";
+import "../index-base.css";
 
 export const Template = ({
     rootClass = "spectrum-OpacityCheckerboard",

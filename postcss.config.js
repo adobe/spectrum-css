@@ -16,8 +16,8 @@ governing permissions and limitations under the License.
  * to all components without having to import them.
  */
 
-const fs = require("fs");
-const path = require("path");
+const { existsSync } = require("fs");
+const { sep, join, basename } = require("path");
 
 const { hideBin } = require("yargs/helpers");
 const yargs = require("yargs");
@@ -30,16 +30,13 @@ const fetchComponentMetadata = require("./tasks/fetch-metadata-from-css");
  * @type import('postcss-load-config').ConfigFn
  */
 module.exports = ({ env = "development", file, options = {} }) => {
-    const { varsOnly = false, noFlatVariables = false, noSelectors = false, skipLint = false } = options;
+    const { skipLint = false } = options;
 
     const isProduction = Boolean(env === "production");
 
     const {
         // _: input,
-        // output,
-        onlyVars = varsOnly,
-        flatVariables = !noFlatVariables,
-        selectors = !noSelectors,
+        output,
         lint = !skipLint,
         map = options.map ?? !isProduction ? { inline: false } : false,
     } = yargs(hideBin(process.argv)).argv;
@@ -50,7 +47,7 @@ module.exports = ({ env = "development", file, options = {} }) => {
     let foldername = process.env.NX_TASK_TARGET_PROJECT;
     if (!foldername) {
         // If we didn't get a foldername from the env variable, try to get it from the file
-        const parts = file?.dirname.split(path.sep);
+        const parts = file?.dirname.split(sep);
         if (parts.includes("components")) {
             foldername = parts[parts.indexOf("components") + 1];
         }
@@ -62,24 +59,22 @@ module.exports = ({ env = "development", file, options = {} }) => {
     }
 
     // If we got a foldername from the interpretation above, use it to set the paths
-    const cwd = foldername ? path.join(__dirname, "components", foldername) : process.cwd();
-    const from =
-        file && file.dirname && file.basename ? path.join(file.dirname, file.basename) : path.join(cwd, "index.css");
-
-    const basename = path.basename(from, ".css");
-
-    // Determine if this is an express file
-    const isExpress = Boolean(basename === "express");
-    const isTheme = isExpress || Boolean(basename === prefix);
+    const cwd = foldername ? join(__dirname, "components", foldername) : process.cwd();
+    const from = file && file.dirname && file.basename ? join(file.dirname, file.basename) : join(cwd, "index.css");
+    const to = output ?? join(cwd, "dist/index.css");
 
     let metadata = fetchComponentMetadata(from);
-    if (!metadata && fs.existsSync(path.join(cwd, "index.css"))) {
-        metadata = fetchComponentMetadata(path.join(cwd, "index.css"));
+    if (!metadata && existsSync(join(cwd, "index.css"))) {
+        metadata = fetchComponentMetadata(join(cwd, "index.css"));
     }
 
     if (metadata && Object.keys(metadata).length && metadata.namespace) {
         prefix = metadata.namespace;
     }
+
+    // Determine if this is an express file
+    const isExpress = Boolean(basename(from, ".css") === "express");
+    const isTheme = isExpress || Boolean(basename(from, ".css") === prefix);
 
     return {
         ...options,
@@ -90,7 +85,7 @@ module.exports = ({ env = "development", file, options = {} }) => {
             /** @link https://github.com/postcss/postcss-import#postcss-import */
             "postcss-import": {
                 root: cwd,
-                addModulesDirectories: [path.join(cwd, "node_modules"), path.join(__dirname, "node_modules")],
+                addModulesDirectories: [join(cwd, "node_modules"), join(__dirname, "node_modules")],
             },
             /* --------------------------------------------------- */
             /* ------------------- SASS-LIKE UTILITIES ----------- */
@@ -132,21 +127,21 @@ module.exports = ({ env = "development", file, options = {} }) => {
                 ? {
                       prefix,
                       keyIdentifier: metadata && metadata.component ? metadata.component : "",
-                      noSelectors: isTheme || Boolean(basename === "index-theme") || !selectors,
-                      noFlatVariables: !flatVariables,
+                      noSelectors: isTheme || Boolean(basename(to, ".css") === "index-theme"),
+                      noFlatVariables: Boolean(basename(to, ".css") === "index-base"),
                   }
                 : false,
             /**
              * @note this is only running on updated components in the themes/express.css file
-             * or on the onlyVars build
+             * or on the vars.css build
              */
             "@spectrum-tools/postcss-combine-selectors": isTheme
                 ? {
                       selector: isExpress ? `.${prefix}--express` : `.${prefix}`,
-                      customPropertiesOnly: onlyVars,
+                      customPropertiesOnly: Boolean(basename(to, ".css") === "vars"),
                       ignoreList: [/^--highcontrast/, /^--mod/, /^--spectrum/],
                   }
-                : { customPropertiesOnly: onlyVars },
+                : { customPropertiesOnly: Boolean(basename(to, ".css") === "vars") },
             /* --------------------------------------------------- */
             /* ------------------- POLYFILLS --------------------- */
             /** @note [CSS-289] Coordinating with SWC */
@@ -219,10 +214,10 @@ module.exports = ({ env = "development", file, options = {} }) => {
             stylelint: lint
                 ? {
                       fix: true, // !isProduction,
-                      configFile: path.join(__dirname, "stylelint.config.js"),
+                      configFile: join(__dirname, "stylelint.config.js"),
                       allowEmptyInput: true,
                       cache: !isProduction,
-                      ignorePath: path.join(__dirname, ".stylelintignore"),
+                      ignorePath: join(__dirname, ".stylelintignore"),
                       reportNeedlessDisables: true,
                       reportInvalidScopeDisables: true,
                   }

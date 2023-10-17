@@ -8,7 +8,7 @@ import { Template as Divider } from "@spectrum-css/divider/stories/template.js";
 import { Template as Icon } from "@spectrum-css/icon/stories/template.js";
 import { Template as Switch } from "@spectrum-css/switch/stories/template.js";
 
-import "@spectrum-css/menu";
+import "../index-base.css";
 
 export const MenuItem = ({
     rootClass,

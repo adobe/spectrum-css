@@ -8,7 +8,7 @@ import { Template as Checkbox } from "@spectrum-css/checkbox/stories/template.js
 import { Template as Icon } from "@spectrum-css/icon/stories/template.js";
 import { Template as Thumbnail } from "@spectrum-css/thumbnail/stories/template.js";
 
-import "@spectrum-css/table";
+import "../index-base.css";
 
 export const TableRowItem = ({
     rootClass = "spectrum-Table",

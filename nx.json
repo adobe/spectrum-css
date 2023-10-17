@@ -55,13 +55,13 @@
             "executor": "nx:run-commands",
             "options": {
                 "commands": [
+                    "# note: postcss command should always come at the end of the statement so we can still pass flags to it",
                     "test -f {projectRoot}/index-base.css && FILE_NAME=index-base || FILE_NAME=index; postcss {projectRoot}/${FILE_NAME}.css --output {projectRoot}/dist/index.css",
                     "test -f {projectRoot}/index-base.css && FILE_NAME=index-base || FILE_NAME=index; postcss {projectRoot}/${FILE_NAME}.css --output {projectRoot}/dist/index-vars.css",
-                    "test -f {projectRoot}/index-base.css && FILE_NAME=index-base || FILE_NAME=index; postcss {projectRoot}/${FILE_NAME}.css --output {projectRoot}/dist/vars.css --only-vars",
-                    "# note: for the following tests, we check if the file does **not** exist so we can still pass through flags to the postcss command",
-                    "! test -f {projectRoot}/index-base.css && exit 0 || postcss {projectRoot}/index-base.css --output {projectRoot}/dist/index-base.css --no-flat-variables",
-                    "! test -d {projectRoot}/themes && exit 0 || postcss {projectRoot}/index-theme.css --output {projectRoot}/dist/index-theme.css --no-selectors",
-                    "! test -d {projectRoot}/themes && exit 0 || postcss {projectRoot}/themes/*.css --dir {projectRoot}/dist --base {projectRoot} --no-selectors"
+                    "test -f {projectRoot}/index-base.css && FILE_NAME=index-base || FILE_NAME=index; postcss {projectRoot}/${FILE_NAME}.css --output {projectRoot}/dist/vars.css",
+                    "! test -f {projectRoot}/index-base.css && exit 0 || postcss {projectRoot}/index-base.css --output {projectRoot}/dist/index-base.css",
+                    "! test -d {projectRoot}/themes && exit 0 || postcss {projectRoot}/index-theme.css --output {projectRoot}/dist/index-theme.css",
+                    "! test -d {projectRoot}/themes && exit 0 || postcss {projectRoot}/themes/*.css --dir {projectRoot}/dist --base {projectRoot}"
                 ],
                 "envFile": ".env.dev"
             },

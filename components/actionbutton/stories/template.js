@@ -1,13 +1,20 @@
+/**
+ * The Template function is a JavaScript function that generates an HTML button element with various
+ * customizable properties and classes.
+ * @returns The `Template` function is returning an HTML template that represents a button component.
+ * The button has various attributes and classes based on the provided props. It includes an optional
+ * icon, label, and event handler for the `onclick` event.
+ */
 import { html } from "lit";
 import { classMap } from "lit/directives/class-map.js";
 import { ifDefined } from "lit/directives/if-defined.js";
 import { when } from "lit/directives/when.js";
 
-import { capitalize, lowerCase } from "lodash-es";
+import { capitalize } from "lodash-es";
 
 import { Template as Icon } from "@spectrum-css/icon/stories/template.js";
 
-import "@spectrum-css/actionbutton";
+import "../index-base.css";
 
 export const Template = ({
     rootClass = "spectrum-ActionButton",
@@ -38,7 +45,7 @@ export const Template = ({
                 [`${rootClass}--size${size?.toUpperCase()}`]: typeof size !== "undefined",
                 [`${rootClass}--quiet`]: isQuiet,
                 [`${rootClass}--emphasized`]: isEmphasized,
-                [`${rootClass}--static${capitalize(lowerCase(staticColor))}`]: typeof staticColor !== "undefined",
+                [`${rootClass}--static${capitalize(staticColor)}`]: typeof staticColor !== "undefined",
                 [`is-disabled`]: isDisabled,
                 [`is-selected`]: isSelected,
                 ...customClasses.reduce((a, c) => ({ ...a, [c]: true }), {}),

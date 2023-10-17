@@ -1,7 +1,7 @@
 import { html } from "lit";
 import { classMap } from "lit/directives/class-map.js";
 
-import "@spectrum-css/well";
+import "../index-base.css";
 
 export const Template = ({ rootClass = "spectrum-Well", customClasses = [], content = [] }) => {
     return html`

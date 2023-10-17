@@ -4,7 +4,7 @@ import { ifDefined } from "lit/directives/if-defined.js";
 
 import { capitalize } from "lodash-es";
 
-import "@spectrum-css/typography";
+import "../index-base.css";
 
 // More on component templates: https://storybook.js.org/docs/web-components/writing-stories/introduction#using-args
 export const Template = ({

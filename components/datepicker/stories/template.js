@@ -9,7 +9,7 @@ import { Template as TextField } from "@spectrum-css/textfield/stories/template.
 
 import { useArgs, useGlobals } from "@storybook/client-api";
 
-import "@spectrum-css/datepicker";
+import "../index-base.css";
 
 export const Template = ({
     rootClass = "spectrum-DatePicker",

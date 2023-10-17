@@ -96,13 +96,25 @@ export const withLanguageWrapper = makeDecorator({
 export const withContextWrapper = makeDecorator({
     name: "withContextWrapper",
     parameterName: "context",
-    wrapper: (StoryFn, { parameters, globals, viewMode }) => {
+    wrapper: (StoryFn, { args, parameters, globals, viewMode }) => {
         const colors = ["spectrum--light", "spectrum--dark", "spectrum--darkest"];
         const scales = ["spectrum--medium", "spectrum--large"];
 
         const color = parameters.color ?? globals.color;
         const context = parameters.context ?? globals.context ?? localStorage.getItem("spectrum-theme");
         const scale = parameters.scale ?? globals.scale ?? localStorage.getItem("spectrum-scale");
+
+        // Check args for the presence of staticWhite or staticBlack settings
+        // use rgb(15, 121, 125) for white; rgb(181, 209, 211) for black
+        const styles = {};
+        const staticColor = args.staticColor ?? args.staticColors;
+        if (staticColor) {
+            if (staticColor === "white") {
+                styles.backgroundColor = "rgba(15, 121, 125)";
+            } else if (staticColor === "black") {
+                styles.backgroundColor = "rgba(181, 209, 211)";
+            }
+        }
 
         useEffect(() => {
             localStorage.setItem("spectrum-theme", context);
@@ -124,8 +136,11 @@ export const withContextWrapper = makeDecorator({
                 root.classList.add(`spectrum--${scale ?? "medium"}`);
                 root.classList.add(`spectrum--${color ?? "light"}`);
                 root.classList.toggle(`spectrum--express`, context !== "spectrum");
+                Object.entries(styles).forEach(([prop, value]) => {
+                    root.style[prop] = value;
+                });
             });
-        }, [context, scale]);
+        }, [context, scale, staticColor]);
 
         return StoryFn(context);
     },

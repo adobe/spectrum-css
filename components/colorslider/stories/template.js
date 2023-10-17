@@ -4,7 +4,7 @@ import { classMap } from "lit/directives/class-map.js";
 import { Template as ColorHandle } from "@spectrum-css/colorhandle/stories/template.js";
 import { Template as OpacityCheckerboard } from "@spectrum-css/opacitycheckerboard/stories/template.js";
 
-import "@spectrum-css/colorslider";
+import "../index-base.css";
 
 export const Template = ({
     rootClass = "spectrum-ColorSlider",

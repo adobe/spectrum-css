@@ -2,7 +2,7 @@ import { Template as ColorHandle } from "@spectrum-css/colorhandle/stories/templ
 import { html } from "lit";
 import { classMap } from "lit/directives/class-map.js";
 
-import "@spectrum-css/colorwheel";
+import "../index-base.css";
 
 export const Template = ({
     rootClass = "spectrum-ColorWheel",

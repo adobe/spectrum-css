@@ -33,6 +33,13 @@
             }
         },
         "dev": {
+            "dependsOn": [{
+                "target": "build",
+                "projects": "tag:component"
+            }, {
+                "target": "build",
+                "projects": "storybook"
+            }],
             "inputs": ["core", "tools"],
             "outputs": ["{projectRoot}/dist"],
             "executor": "nx:run-commands",

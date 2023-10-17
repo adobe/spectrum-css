@@ -52,16 +52,14 @@ governing permissions and limitations under the License.
             --spectrum-actionbutton-border-color-disabled: transparent;
         }
 
-        &.spectrum-ActionButton--staticBlack,
-        &.spectrum-ActionButton--staticWhite {
-            &.spectrum-ActionButton--quiet {
-                --spectrum-actionbutton-border-color-default: transparent;
-                --spectrum-actionbutton-border-color-hover: transparent;
-                --spectrum-actionbutton-border-color-down: transparent;
-                --spectrum-actionbutton-border-color-focus: transparent;
+        &.spectrum-ActionButton--staticBlack.spectrum-ActionButton--quiet,
+        &.spectrum-ActionButton--staticWhite.spectrum-ActionButton--quiet {
+            --spectrum-actionbutton-border-color-default: transparent;
+            --spectrum-actionbutton-border-color-hover: transparent;
+            --spectrum-actionbutton-border-color-down: transparent;
+            --spectrum-actionbutton-border-color-focus: transparent;
 
-                --spectrum-actionbutton-border-color-disabled: transparent;
-            }
+            --spectrum-actionbutton-border-color-disabled: transparent;
         }
 
         &.spectrum-ActionButton--staticBlack {
