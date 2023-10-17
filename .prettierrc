@@ -1,5 +1,6 @@
 {
     "tabWidth": 4,
     "useTabs": false,
-    "printWidth": 120
+    "printWidth": 120,
+	"plugins": ["prettier-plugin-sh"]
 }
