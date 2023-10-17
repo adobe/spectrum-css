@@ -518,7 +518,6 @@ governing permissions and limitations under the License.
 }
 
 /*** CSS Hover Animation ***/
-/* stylelint-disable-next-line spectrum-tools/suit-naming-pattern */
 .u-tooltip-showOnHover {
     position: relative;
     display: inline-block;
@@ -691,8 +690,6 @@ governing permissions and limitations under the License.
             }
         }
     }
-
-    /* stylelint-disable max-nesting-depth */
 
     /* RTL */
     &:dir(rtl) {

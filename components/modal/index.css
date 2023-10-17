@@ -52,13 +52,15 @@ governing permissions and limitations under the License.
     box-sizing: border-box;
     inline-size: 100vw;
 
-    /* On mobile browsers, vh units are fixed based on the maximum height of the screen.
-   * However, when you scroll, the toolbar and address bar shrink, making the viewport resize.
-   * We use the stretch value to counteract this where supported. */
+    /**
+      * On mobile browsers, vh units are fixed based on the maximum height of the screen.
+      * However, when you scroll, the toolbar and address bar shrink, making the viewport resize.
+      * We use the stretch value to counteract this where supported.
+      */
     block-size: 100vh;
-    /* stylelint-disable-next-line value-no-vendor-prefix */
+    /* stylelint-disable-next-line value-no-vendor-prefix, declaration-property-value-no-unknown */
     block-size: -moz-available;
-    /* stylelint-disable-next-line value-no-vendor-prefix */
+    /* stylelint-disable-next-line value-no-vendor-prefix, declaration-property-value-no-unknown */
     block-size: -webkit-fill-available;
     block-size: stretch;
 
@@ -74,7 +76,7 @@ governing permissions and limitations under the License.
 }
 
 .spectrum-Modal {
-    @inherit: %spectrum-overlay;
+    @extend %spectrum-overlay;
     pointer-events: auto;
 
     /* Appear above underlay */
@@ -121,7 +123,7 @@ governing permissions and limitations under the License.
             );
 
     &.is-open {
-        @inherit: %spectrum-overlay--open;
+        @extend %spectrum-overlay--open;
 
         transform: translateY(0);
 

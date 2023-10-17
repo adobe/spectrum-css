@@ -119,7 +119,6 @@ governing permissions and limitations under the License.
     }
 
     &:focus {
-        /* stylelint-disable-next-line selector-pseudo-class-no-unknown */
         &:focus-ring,
         &.is-focused {
             background-color: var(--spectrum-millercolumn-item-background-color-hover);

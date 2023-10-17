@@ -17,7 +17,7 @@ governing permissions and limitations under the License.
  * @component Popover
  */
 .spectrum-Popover {
-    /* stylelint-disable-next-line spectrum-tools/no-unused-custom-properties custom-property-pattern - used in positioning popover for storybook */
+    /* stylelint-disable-next-line spectrum-tools/no-unused-custom-properties, custom-property-pattern -- used in positioning popover for storybook */
     --flow-direction: 1;
 
     /* change to offset from source */
@@ -53,7 +53,7 @@ governing permissions and limitations under the License.
     );
 
     &:dir(rtl) {
-        /* stylelint-disable-next-line spectrum-tools/no-unused-custom-properties */
+        /* stylelint-disable-next-line spectrum-tools/no-unused-custom-properties, custom-property-pattern -- used in positioning popover for storybook */
         --flow-direction: -1;
     }
 }

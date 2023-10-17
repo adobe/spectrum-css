@@ -422,9 +422,9 @@ governing permissions and limitations under the License.
     }
 }
 
+/* stylelint-disable declaration-block-no-redundant-longhand-properties */
 .spectrum-Menu-item {
     display: grid;
-    /* stylelint-disable declaration-block-no-redundant-longhand-properties */
     grid-template-areas:
         ".            chevronAreaCollapsible .             iconArea sectionHeadingArea  .         .           .                 "
         "selectedArea chevronAreaCollapsible checkmarkArea iconArea labelArea        valueArea actionsArea chevronAreaDrillIn"

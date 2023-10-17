@@ -127,6 +127,7 @@ governing permissions and limitations under the License.
     &.is-disabled {
         opacity: var(--mod-thumbnail-color-opacity-disabled, var(--spectrum-thumbnail-color-opacity-disabled));
     }
+
     /* stylelint-disable selector-pseudo-class-no-unknown */
     &.is-focused {
         overflow: visible;
@@ -294,11 +295,13 @@ governing permissions and limitations under the License.
         --highcontrast-thumbnail-border-color-selected: SelectedItem;
         --highcontrast-thumbnail-focus-indicator-color: Highlight;
         --highcontrast-thumbnail-border-color: CanvasText;
+
         /* stylelint-disable-next-line declaration-property-value-no-unknown */
         color: CanvasText;
 
         /* Allow checkerboard pattern to be visible. */
         forced-color-adjust: none;
+
         /* stylelint-disable-next-line declaration-property-value-no-unknown */
         background-color: Canvas;
     }

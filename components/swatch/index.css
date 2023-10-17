@@ -96,7 +96,6 @@ governing permissions and limitations under the License.
 }
 
 /* Swatch styles */
-/* stylelint-disable max-nesting-depth */
 .spectrum-Swatch {
     /* don't let double clicking select stuff */
     user-select: none;
@@ -290,7 +289,6 @@ governing permissions and limitations under the License.
         }
     }
 }
-/* stylelint-enable max-nesting-depth */
 
 /**
  * @namespace spectrum

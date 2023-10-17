@@ -550,14 +550,10 @@ governing permissions and limitations under the License.
         appearance: none;
     }
 
-    /* added to work with Edge, note, it needs double ::
-   * not single : which is what autoprefixer will add
-   */
-    /* stylelint-disable selector-no-vendor-prefix */
+    /* stylelint-disable-next-line selector-no-vendor-prefix -- added to work with Edge, note, it needs double :: not single : which is what autoprefixer will add */
     &::-ms-input-placeholder {
         opacity: 100%;
     }
-    /* stylelint-enable selector-no-vendor-prefix */
 
     /*** Input Placeholder Text ***/
     &::placeholder {
@@ -596,12 +592,10 @@ governing permissions and limitations under the License.
             font-style: normal;
         }
 
-        /* stylelint-disable selector-no-vendor-prefix */
+        /* stylelint-disable-next-line selector-no-vendor-prefix -- added to work with Edge, note, it needs double :: not single : which is what autoprefixer will add */
         &::-ms-input-placeholder {
-            /* added to work with Edge, same as above */
             font-style: normal;
         }
-        /* stylelint-enable selector-no-vendor-prefix */
     }
 
     /* hover */
