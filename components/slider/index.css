@@ -520,6 +520,10 @@ governing permissions and limitations under the License.
   &.is-disabled {
     cursor: default;
 
+    .spectrum-Slider-controls {
+      cursor: default;
+    }
+
     .spectrum-Slider-handle {
       cursor: default;
       pointer-events: none;
