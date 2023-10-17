@@ -709,7 +709,8 @@ governing permissions and limitations under the License.
     --highcontrast-slider-ramp-track-color: ButtonText;
     --highcontrast-slider-ramp-track-color-disabled: GrayText;
     --highcontrast-slider-tick-mark-color: ButtonText;
-
+    --highcontrast-slider-handle-border-color-hover: Highlight;
+    --highcontrast-slider-track-color-hover: Highlight;
 
     --spectrum-slider-track-color: ButtonText;
     --spectrum-slider-track-fill-color: ButtonText;
@@ -740,6 +741,36 @@ governing permissions and limitations under the License.
     --spectrum-slider-ramp-handle-border-color-active: ButtonText;
 
   }
+
+  /* Slider track background color doesn't show in high contrast mode, but border does */
+  .spectrum-Slider:not(.is-disabled) {
+    .spectrum-Slider-track {
+      &::before {
+        border-block-start: 2px solid transparent;
+      }
+    }
+
+    /* We only need these states in high contrast mode */
+    .spectrum-Slider-controls:hover,
+    .spectrum-Slider-controls:active,
+    .spectrum-Slider-controls:focus-within {
+      .spectrum-Slider-track::before {
+        background: var(--highcontrast-slider-track-color-hover, var(--mod-slider-track-color, var(--spectrum-slider-track-color)));
+        border-block-start: none;
+      }
+
+      .spectrum-Slider-handle {
+        border-color: var(--highcontrast-slider-handle-border-color-hover, var(--mod-slider-handle-border-color-hover, var(--spectrum-slider-handle-border-color-hover)));
+
+        &.is-focused {
+          &::before {
+            border: 2px solid transparent;
+          }
+        }
+      }
+    }
+  }
+
 
   /* Slider handle turns transparent in high contrast mode for ramp */
   .spectrum-Slider.is-disabled {
