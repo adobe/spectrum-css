@@ -19,7 +19,7 @@ export const AssetListItem = ({
     isSelectable = false,
     isSelected = false,
     isBranch = false,
-    onclick = () => {},
+    onclick,
     ...globals
 }) => {
     return html` <li

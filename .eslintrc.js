@@ -43,7 +43,7 @@ module.exports = {
     },
     overrides: [
         {
-            files: ["components/*/stories/*template.js"],
+            files: ["components/*/stories/*.js"],
             rules: {
                 "@nx/enforce-module-boundaries": 0,
             },

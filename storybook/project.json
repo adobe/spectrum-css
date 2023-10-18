@@ -28,9 +28,7 @@
             "outputs": [],
             "executor": "nx:run-commands",
             "options": {
-                "commands": [
-                    "storybook dev --config-dir {projectRoot}"
-                ]
+                "commands": ["storybook dev --config-dir {projectRoot}"]
             }
         },
         "lint": {
@@ -55,7 +53,7 @@
         "test": {
             "executor": "nx:run-commands",
             "options": {
-                "command": "chromatic --build-script-name build --junit-report"
+                "commands": ["chromatic --build-script-name storybook --junit-report"]
             }
         }
     }

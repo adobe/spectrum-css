@@ -1,11 +1,12 @@
 name:
     Verify
-
+    # -------------------------------------------------------------
     # This workflow will build and verify pull requests. It will:
     # - Build the base branch and the PR branch
     # - Compare the compiled output of the two branches
     # - Run visual regression tests on the PR branch
     # - Publish the PR branch to Netlify for review
+    # -------------------------------------------------------------
 
 on:
     pull_request:
@@ -42,7 +43,9 @@ defaults:
         shell: bash
 
 jobs:
-    # --- Validate build for various environments --- #
+    # -------------------------------------------------------------
+    # Validate build for various environments
+    # -------------------------------------------------------------
     build:
         name: Build
         # Check that the PR is not in draft mode (or if it is, that it has the run_ci label to force a build)
@@ -62,7 +65,9 @@ jobs:
             node-version: ${{ matrix.node-version }}
         secrets: inherit
 
-    # --- Compare the compiled assets --- #
+    # -------------------------------------------------------------
+    # Compare the compiled assets
+    # -------------------------------------------------------------
     compare:
         name: Compare
         needs: [build]
@@ -74,13 +79,51 @@ jobs:
             head-sha: ${{ needs.build.outputs.head-sha }}
         secrets: inherit
 
-    # --- Lint pre-compiled assets for consistency --- #
+    # -------------------------------------------------------------
+    # Returns all changed pull request files.
+    # --------------------------------------------------------------
+    changed_files:
+        runs-on: ubuntu-latest
+        name: Capture changed-files
+        outputs:
+            styles_added_files: ${{ steps.changed-files.outputs.styles_added_files }}
+            styles_modified_files: ${{ steps.changed-files.outputs.styles_modified_files }}
+            eslint_added_files: ${{ steps.changed-files.outputs.eslint_added_files }}
+            eslint_modified_files: ${{ steps.changed-files.outputs.eslint_modified_files }}
+        permissions:
+          pull-requests: read
+
+        steps:
+            - name: Get changed files
+              id: changed-files
+              uses: tj-actions/changed-files@v39
+              with:
+                  files_yaml: |
+                      styles:
+                        - components/*/index.css
+                        - components/*/themes/spectrum.css
+                        - components/*/themes/express.css
+                      eslint:
+                        - components/*/package.json
+                        - components/*/project.json
+                        - components/*/stories/*.js
+
+    # -------------------------------------------------------------
+    # Lint pre-compiled assets for consistency
+    # -------------------------------------------------------------
     lint:
         name: Lint
+        needs: [changed_files]
         uses: ./.github/workflows/lint.yml
+        with:
+            styles_added_files: ${{ needs.changed_files.outputs.styles_added_files }}
+            styles_modified_files: ${{ needs.changed_files.outputs.styles_modified_files }}
+            eslint_added_files: ${{ needs.changed_files.outputs.eslint_added_files }}
+            eslint_modified_files: ${{ needs.changed_files.outputs.eslint_modified_files }}
         secrets: inherit
 
-    # --- RUN VISUAL REGRESSION TESTS --- #
+    # -------------------------------------------------------------
+    # RUN VISUAL REGRESSION TESTS --- #
     # Run VRT on:
     #   - ALL pull_request where:
     #     - PR has label 'run_vrt'
@@ -90,7 +133,7 @@ jobs:
     #   branch; nothing about other checks, like CI, passing.
     # Note: 'skip_vrt' label is used to pass the tasks but not actually
     #   publish to Chromatic
-    # --- #
+    # -------------------------------------------------------------
     vrt:
         name: Testing
         needs: [build]
@@ -100,9 +143,10 @@ jobs:
             skip: ${{ contains(github.event.pull_request.labels.*.name, 'skip_vrt') }}
         secrets: inherit
 
-    # --- PUBLISH TO NETLIFY --- #
+    # -------------------------------------------------------------
+    # PUBLISH TO NETLIFY --- #
     # Publish to netlify by leveraging the previous build and then building the site as well
-    # --- #
+    # -------------------------------------------------------------
     publish_site:
         name: Publish
         # The build step ensures we are leveraging the cache for the build
