@@ -76,7 +76,7 @@ export default class Picker {
         }
 
         if (typeof input !== "object") {
-            console.warn("The key bindings must be provided as an object.");
+            console.warn("Picker: the key bindings must be provided as an object.");
             return;
         }
 

@@ -14,21 +14,29 @@
     "targets": {
         "clean": {},
         "build": {
-            "dependsOn": ["clean", "^build"],
+            "dependsOn": [
+                {
+                    "target": "build",
+                    "projects": "tag:component"
+                },
+                "^build",
+                "clean"
+            ],
             "inputs": ["core", { "externalDependencies": ["storybook"] }],
-            "executor": "nx:run-commands",
+            "outputs": ["{options.outputPath}"],
+            "executor": "@nx/storybook:build",
             "options": {
-                "commands": ["storybook build --config-dir {projectRoot} --output-dir {projectRoot}/dist"],
-                "envFile": ".env.prod"
+                "outputDir": "{projectRoot}/dist",
+                "configDir": "{projectRoot}"
             }
         },
         "dev": {
             "dependsOn": ["^build"],
             "inputs": ["core", { "externalDependencies": ["storybook"] }],
             "outputs": [],
-            "executor": "nx:run-commands",
+            "executor": "@nx/storybook:storybook",
             "options": {
-                "commands": ["storybook dev --config-dir {projectRoot}"]
+                "configDir": "{projectRoot}"
             }
         },
         "lint": {
@@ -53,7 +61,7 @@
         "test": {
             "executor": "nx:run-commands",
             "options": {
-                "commands": ["chromatic --build-script-name storybook --junit-report"]
+                "commands": ["chromatic --build-script-name storybook --only-changed"]
             }
         }
     }

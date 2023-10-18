@@ -10,13 +10,8 @@ OF ANY KIND, either express or implied. See the License for the specific languag
 governing permissions and limitations under the License.
 */
 
-/**
- * @todo: Importing commons assets such as extends brings along all their comments
- * which is not ideal. We should be able to strip them out or make the extends available
- * to all components without having to import them.
- */
-
-const { join } = require("path");
+const { join, dirname } = require("path");
+const componentConfig = require("../postcss.config.js");
 
 /**
  * @description This PostCSS config determines which file
@@ -25,14 +20,20 @@ const { join } = require("path");
  */
 module.exports = ({ env = "development", file, options = {} }) => {
     const isProduction = Boolean(env === "production");
-    console.warn("postcss.config.js", { env, file, options });
 
-    const isNodeModules = Boolean(file.dirname && file.dirname.includes("node_modules"));
-    if (isNodeModules)
+    const isNodeModules = Boolean(file && dirname(file).includes("node_modules"));
+    const isLocalPackage = Boolean(file && dirname(file).includes("components"));
+
+    if (isNodeModules) {
         return {
             ...options,
             plugins: {},
         };
+    }
+
+    if (isLocalPackage) {
+        return componentConfig({ env, file, options });
+    }
 
     return {
         ...options,

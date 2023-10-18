@@ -1,6 +1,8 @@
 import { readdirSync } from "fs";
 import { join, resolve } from "path";
 
+const { mergeWithRules } = require("webpack-merge");
+
 const componentsPath = resolve(__dirname, "../components");
 const componentPkgs = readdirSync(componentsPath, {
     withFileTypes: true,
@@ -17,11 +19,6 @@ export default {
     },
     framework: {
         name: "@storybook/web-components-webpack5",
-        options: {
-            builder: {
-                useSWC: true,
-            },
-        },
     },
     stories: [
         // "../components/*/stories/*.stories.mdx",
@@ -43,37 +40,58 @@ export default {
                 transcludeMarkdown: true, // Support markdown in MDX files.
             },
         },
-        // https://storybook.js.org/addons/storybook-addon-swc
-        {
-            name: "storybook-addon-swc",
-            options: {
-                enableSwcMinify: false,
-            },
-        },
         // https://github.com/storybookjs/storybook/tree/next/code/addons/a11y
         "@storybook/addon-a11y",
-        // https://storybook.js.org/addons/@xfinx/storybook-addon-html/
-        "@xfinx/storybook-addon-html",
+        // https://storybook.js.org/addons/@whitespace/storybook-addon-html/
+        "@whitespace/storybook-addon-html",
         // https://storybook.js.org/addons/@etchteam/storybook-addon-status
         "@etchteam/storybook-addon-status",
         // https://storybook.js.org/addons/@storybook/addon-actions
         "@storybook/addon-actions",
         "storybook-addon-pseudo-states",
-        // https://github.com/storybookjs/addon-styling#storybookaddon-styling
-        {
-            name: "@storybook/addon-styling",
-            options: {
-                postCss: {
-                    implementation: require("postcss"),
-                },
-            },
-        },
+        // https://github.com/storybookjs/storybook/tree/next/code/addons/interactions
+        "@storybook/addon-interactions",
     ],
     features: {
         /* Code splitting flag; load stories on-demand */
         storyStoreV7: true,
         /* Builds stories.json to help with on-demand loading */
         buildStoriesJson: true,
+    },
+    async webpackFinal(config) {
+        return mergeWithRules({
+            resolve: {
+                modules: "append",
+            },
+            module: {
+                rules: {
+                    test: "match",
+                    use: "append",
+                },
+            },
+        })(config, {
+            resolve: {
+                modules: [resolve(__dirname, "../node_modules")],
+            },
+            module: {
+                rules: [
+                    {
+                        test: /\.css$/,
+                        use: [
+                            {
+                                loader: require.resolve("postcss-loader"),
+                                options: {
+                                    implementation: require.resolve("postcss"),
+                                    postcssOptions: {
+                                        config: join(__dirname, "postcss.config.js"),
+                                    },
+                                },
+                            },
+                        ],
+                    },
+                ],
+            },
+        });
     },
     docs: {
         autodocs: true, // see below for alternatives

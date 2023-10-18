@@ -200,8 +200,7 @@ function initContexts(defaults) {
         if (!window[item]) return;
 
         window[item].value = localStorage.getItem(`spectrum-${item}`) ?? defaults[item];
-        window[item].addEventListener("change", (event) => {
-            console.log(event);
+        window[item].addEventListener("change", () => {
             if (window[item]) localStorage.setItem(`spectrum-${item}`, window[item].value);
         });
 
