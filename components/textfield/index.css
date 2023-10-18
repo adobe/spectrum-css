@@ -14,7 +14,14 @@ governing permissions and limitations under the License.
   /* set input line-height to the height of the textfield - prevents the cutting off of diacritics in some languages */
   /* disallow mod for max compatibility */
   --spectrum-textfield-input-line-height: var(--spectrum-textfield-height);
-	
+
+	--spectrum-textfield-padding-inline-default: calc(
+		var(--spectrum-textfield-spacing-inline) -
+		var(--spectrum-textfield-border-width)
+		);
+	--spectrum-textfield-text-to-icon-valid: var(--spectrum-field-text-to-validation-icon-medium);
+
+
   --spectrum-texfield-animation-duration: var(
 		--spectrum-animation-duration-100
 	);
@@ -97,7 +104,7 @@ governing permissions and limitations under the License.
 	--spectrum-textfield-icon-spacing-inline-end-override: 32px; /* TODO - placeholder - reevaluate after combobox migration */
 
 	/* TODO - icon spacing override for search - reevaluate after search is migrated */
-	/* @deprecation --spectrum-Textfield-workflow-icon-width and --spectrum-Textfield-workflow-icon-gap will be removed during the S2 migration; 
+	/* @deprecation --spectrum-Textfield-workflow-icon-width and --spectrum-Textfield-workflow-icon-gap will be removed during the S2 migration;
 	please update your code to --spectrum-textfield-workflow-icon-width and --spectrum-textfield-workflow-icon-gap */
 	--spectrum-textfield-workflow-icon-width: var(--spectrum-Textfield-workflow-icon-width, 18px);
 	--spectrum-textfield-workflow-icon-gap: var(--spectrum-Textfield-workflow-icon-gap, 6px);
@@ -705,13 +712,9 @@ governing permissions and limitations under the License.
 			) -
 			var(--mod-textfield-border-width, var(--spectrum-textfield-border-width))
 	);
-	padding-inline: calc(
-		var(
-				--mod-textfield-spacing-inline,
-				var(--spectrum-textfield-spacing-inline)
-			) -
-			var(--mod-textfield-border-width, var(--spectrum-textfield-border-width))
-	);
+	/* can I use just the one or do I need both here */
+	padding-inline-start: var(--mod-textfield-padding-inline-default, var(--spectrum-textfield-padding-inline-default));
+	padding-inline-end: var(--mod-textfield-padding-inline-default, var(--spectrum-textfield-padding-inline-default));
 	/* Use padding instead of text-indent because text-indent does not left align the text in Edge browser  */
 	text-indent: 0;
 	vertical-align: top; /* used to align them correctly in forms. */
@@ -1009,6 +1012,9 @@ governing permissions and limitations under the License.
 
 	/*** Input Valid ✅ ***/
 	.is-valid & {
+		/* left padding + icon size + right padding */
+		--valid-icon-size: 10px;
+		padding-inline-end: calc(var(--spectrum-textfield-icon-spacing-inline-start-valid) + var(--valid-icon-size) + var(--spectrum-textfield-padding-inline-default));
 		color: var(
 			--highcontrast-textfield-text-color-valid,
 			var(
@@ -1020,6 +1026,10 @@ governing permissions and limitations under the License.
 
 	/*** Input Invalid ⚠️ ***/
 	.is-invalid & {
+		/* left padding + icon size + right padding */
+
+		--valid-icon-size: 10px;
+		padding-inline-end: calc(var(--spectrum-textfield-icon-spacing-inline-start-invalid) + var(--spectrum-textfield-icon-size-invalid) + var(--spectrum-textfield-padding-inline-default));
 		color: var(
 			--highcontrast-textfield-text-color-invalid,
 			var(
