@@ -1,16 +1,14 @@
 | Modifiable Custom Properties                          |
 | ----------------------------------------------------- |
+| `--mod-treeview-font-size`                            |
 | `--mod-treeview-heading-color`                        |
 | `--mod-treeview-heading-font-weight`                  |
 | `--mod-treeview-indicator-animation-duration`         |
 | `--mod-treeview-indicator-inset-block-start`          |
-| `--mod-treeview-indicator-inset-inline-start`         |
 | `--mod-treeview-indicator-margin-block-end`           |
-| `--mod-treeview-indicator-margin-inline-end`          |
 | `--mod-treeview-indicator-margin-inline-start`        |
 | `--mod-treeview-indicator-padding-block`              |
 | `--mod-treeview-indicator-padding-inline`             |
-| `--mod-treeview-item-affordance-size`                 |
 | `--mod-treeview-item-background-color-focus`          |
 | `--mod-treeview-item-background-color-hover`          |
 | `--mod-treeview-item-background-color-quiet-selected` |
@@ -27,6 +25,7 @@
 | `--mod-treeview-item-icon-color-hover`                |
 | `--mod-treeview-item-icon-color-selected`             |
 | `--mod-treeview-item-icon-gap`                        |
+| `--mod-treeview-item-icon-offset-block`               |
 | `--mod-treeview-item-indentation`                     |
 | `--mod-treeview-item-min-block-size`                  |
 | `--mod-treeview-item-padding-block-end`               |
