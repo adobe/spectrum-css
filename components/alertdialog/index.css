@@ -20,8 +20,11 @@ governing permissions and limitations under the License.
     --spectrum-alert-dialog-icon-size: var(--spectrum-workflow-icon-size-100);
 
     /* color */
+    /* @passthrough start */
     --spectrum-alert-dialog-warning-icon-color: var(--spectrum-notice-visual-color);
     --spectrum-alert-dialog-error-icon-color: var(--spectrum-negative-visual-color);
+
+    /* @passthrough end */
 
     /* typography */
     --spectrum-alert-dialog-title-font-family: var(--spectrum-sans-font-family-stack);
@@ -65,6 +68,7 @@ governing permissions and limitations under the License.
     }
 }
 
+/* @passthrough start */
 .spectrum-AlertDialog--warning {
     --mod-icon-color: var(--mod-alert-dialog-warning-icon-color, var(--spectrum-alert-dialog-warning-icon-color));
 }
@@ -72,6 +76,8 @@ governing permissions and limitations under the License.
 .spectrum-AlertDialog--error {
     --mod-icon-color: var(--mod-alert-dialog-error-icon-color, var(--spectrum-alert-dialog-error-icon-color));
 }
+
+/* @passthrough end */
 
 .spectrum-AlertDialog-grid {
     display: grid;

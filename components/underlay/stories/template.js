@@ -1,6 +1,7 @@
-import { html } from "lit-html";
-import { classMap } from "lit-html/directives/class-map.js";
-import { styleMap } from "lit-html/directives/style-map.js";
+import { html } from "lit";
+import { classMap } from "lit/directives/class-map.js";
+import { ifDefined } from "lit/directives/if-defined.js";
+import { styleMap } from "lit/directives/style-map.js";
 
 import "../index-base.css";
 
@@ -9,6 +10,7 @@ export const Template = ({
     customClasses = [],
     style = [],
     content,
+    id = "spectrum-underlay",
     isOpen = true,
 }) => {
     return html`
@@ -18,8 +20,8 @@ export const Template = ({
                 "is-open": isOpen,
                 ...customClasses.reduce((a, c) => ({ ...a, [c]: true }), {}),
             })}
-            id="spectrum-underlay"
-            style=${styleMap(style)}
+            id=${ifDefined(id)}
+            style=${ifDefined(styleMap(style))}
         >
             ${content}
         </div>

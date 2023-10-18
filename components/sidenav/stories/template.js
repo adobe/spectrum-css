@@ -1,8 +1,8 @@
 import { html } from "lit";
-import { when } from "lit-html/directives/when.js";
 import { classMap } from "lit/directives/class-map.js";
 import { ifDefined } from "lit/directives/if-defined.js";
 import { repeat } from "lit/directives/repeat.js";
+import { when } from "lit/directives/when.js";
 
 import { Template as Icon } from "../../icon/stories/template.js";
 

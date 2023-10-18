@@ -1,8 +1,8 @@
 import { useArgs } from "@storybook/client-api";
-import { html } from "lit-html";
-import { classMap } from "lit-html/directives/class-map.js";
-import { ifDefined } from "lit-html/directives/if-defined.js";
-import { when } from "lit-html/directives/when.js";
+import { html } from "lit";
+import { classMap } from "lit/directives/class-map.js";
+import { ifDefined } from "lit/directives/if-defined.js";
+import { when } from "lit/directives/when.js";
 
 import { Template as Button } from "../../button/stories/template.js";
 import { Template as ButtonGroup } from "../../buttongroup/stories/template.js";
@@ -75,17 +75,19 @@ export const Template = ({
             ...globals,
             isOpen,
         })}
-        ${Button({
-            ...globals,
-            size: "m",
-            variant: "secondary",
-            label: "Click to open Alert Dialog",
-            treatment: "outline",
-            customClasses: ["spectrum-CSSExample-overlayShowButton"],
-            onclick: () => {
-                updateArgs({ isOpen: !isOpen });
-            },
-        })}
+        ${!isOpen
+            ? Button({
+                  ...globals,
+                  size: "m",
+                  variant: "secondary",
+                  label: "Click to open Alert Dialog",
+                  treatment: "outline",
+                  customClasses: ["spectrum-CSSExample-overlayShowButton"],
+                  onclick: () => {
+                      updateArgs({ isOpen: !isOpen });
+                  },
+              })
+            : ""}
         ${Modal({
             ...globals,
             isOpen,

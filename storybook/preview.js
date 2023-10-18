@@ -15,6 +15,10 @@ import DocumentationTemplate from "./templates/Documentation.mdx";
 const panelExclude = setConsoleOptions({}).panelExclude;
 setConsoleOptions({
     panelExclude: [...panelExclude, /deprecated/],
+    // panelInclude: [],
+    log: "🔵 [log]",
+    warn: "🟡 [warn]",
+    error: "🔴 [error]",
 });
 
 import "@spectrum-css/typography";
@@ -180,12 +184,15 @@ export const parameters = {
     },
     html: {
         root: "#root-inner",
+        removeEmptyComments: true,
+        removeComments: /lit/,
         prettier: {
             tabWidth: 4,
             useTabs: false,
             htmlWhitespaceSensitivity: "strict",
-            removeEmptyComments: true,
-            removeComments: /\?lit/,
+        },
+        highlighter: {
+            wrapLines: false,
         },
     },
     docs: {

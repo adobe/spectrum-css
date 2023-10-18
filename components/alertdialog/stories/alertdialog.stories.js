@@ -8,6 +8,7 @@ export default {
     title: "Components/Alert dialog",
     component: "AlertDialog",
     argTypes: {
+        buttons: { table: { disable: true } },
         heading: {
             name: "Heading",
             type: { name: "string" },
@@ -42,6 +43,7 @@ export default {
         isOpen: true,
     },
     parameters: {
+        layout: "centered",
         actions: {
             handles: ["click .spectrum-AlertDialog button"],
         },

@@ -35,6 +35,12 @@ module.exports = {
                 ignoreAtRules: ["extend"],
             },
         ],
+        "at-rule-no-unknown": [
+            true,
+            {
+                ignoreAtRules: ["extend", "container", "each", "include", "mixin"],
+            },
+        ],
         "rule-empty-line-before": [
             "always",
             {
@@ -48,14 +54,16 @@ module.exports = {
         "no-descending-specificity": null,
         /* Not useful at the moment */
         "no-duplicate-selectors": null,
-        "at-rule-no-unknown": [
-            true,
-            {
-                ignoreAtRules: ["extend", "container", "each", "include", "mixin"],
-            },
-        ],
         "selector-class-pattern": null,
         "declaration-empty-line-before": null,
+        "comment-empty-line-before": [
+            "always",
+            {
+                except: ["first-nested"],
+                ignore: ["after-comment", "stylelint-commands"],
+                ignoreComments: [/^passthroughs?/],
+            },
+        ],
         "declaration-block-no-redundant-longhand-properties": null,
         "custom-property-empty-line-before": null,
         "value-no-vendor-prefix": [
