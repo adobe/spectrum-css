@@ -1,6 +1,7 @@
 import { html } from "lit";
 import { classMap } from "lit/directives/class-map.js";
 import { repeat } from "lit/directives/repeat.js";
+import { styleMap } from "lit/directives/style-map.js";
 
 import { Template as Icon } from "@spectrum-css/icon/stories/template.js";
 import { Template as Thumbnail } from "@spectrum-css/thumbnail/stories/template.js";
@@ -100,6 +101,7 @@ export const TreeViewItem = ({
 export const Template = ({
 	rootClass = "spectrum-TreeView",
 	customClasses = [],
+	customStyles = {},
 	size = "m",
 	variant,
 	isQuiet,
@@ -116,6 +118,7 @@ export const Template = ({
 				[`${rootClass}--quiet`]: isQuiet,
 				...customClasses.reduce((a, c) => ({ ...a, [c]: true }), {}),
 			})}
+			style=${styleMap(customStyles)}
 		>
 			${repeat(
 				items,

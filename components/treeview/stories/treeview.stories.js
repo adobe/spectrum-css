@@ -28,11 +28,23 @@ export default {
 			},
 			control: "boolean",
 		},
+		customStyles: {
+			name: "Custom styles",
+			description: "Storybook only styles for testing the story, applied to the parent element.",
+			table: {
+				type: { summary: "object" },
+				category: "Advanced",
+			},
+			if: { arg: 'customStyles' }
+		}
 	},
 	args: {
 		rootClass: "spectrum-TreeView",
 		size: "m",
 		isQuiet: false,
+		customStyles: {
+			'max-inline-size': '600px',
+		},
 	},
 	parameters: {
 		actions: {
@@ -133,6 +145,12 @@ FoldersAndFiles.args = {
 				{
 					id: "label3",
 					label: "Label 3",
+					link: "#",
+					icon: "Document",
+				},
+				{
+					id: "label4",
+					label: "This example has longer text. Per the guidelines, long text will truncate with an ellipsis, and the full text should be available in a tooltip.",
 					link: "#",
 					icon: "Document",
 				},
