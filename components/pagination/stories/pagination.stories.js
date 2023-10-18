@@ -1,7 +1,7 @@
 // Import the component markup template
 import { Template } from "./template";
 
-import { default as ActionButton } from "../../actionbutton/stories/actionbutton.stories";
+import { default as ActionButton } from "@spectrum-css/actionbutton/stories/actionbutton.stories";
 
 /**
  * The Pagination component displays numbered buttons or an input field to allow for navigation

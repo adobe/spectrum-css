@@ -5,7 +5,7 @@ import { unsafeHTML } from "lit/directives/unsafe-html.js";
 
 import { fetchIconSVG, uiIcons, workflowIcons } from "./utilities.js";
 
-import "../index-base.css";
+import "@spectrum-css/icon/index-base.css";
 
 /**
  * @typedef { keyof import("./icon.stories.js").default.args } IconArgs

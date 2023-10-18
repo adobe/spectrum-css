@@ -3,7 +3,7 @@ import { classMap } from "lit/directives/class-map.js";
 import { ifDefined } from "lit/directives/if-defined.js";
 import { styleMap } from "lit/directives/style-map.js";
 
-import "../index-base.css";
+import "@spectrum-css/underlay/index-base.css";
 
 export const Template = ({
     rootClass = "spectrum-Underlay",

@@ -17,7 +17,7 @@ governing permissions and limitations under the License.
  */
 
 const { existsSync } = require("fs");
-const { sep, join, basename } = require("path");
+const { sep, join, basename, dirname } = require("path");
 
 const { hideBin } = require("yargs/helpers");
 const yargs = require("yargs");
@@ -30,6 +30,8 @@ const fetchComponentMetadata = require("./tasks/fetch-metadata-from-css");
  * @type import('postcss-load-config').ConfigFn
  */
 module.exports = ({ env = "development", file, options = {} }) => {
+    const inputDirname = typeof file === "string" ? dirname(file) : file.dirname;
+    const inputBasename = typeof file === "string" ? basename(file) : file.basename;
     const { skipLint = false } = options;
 
     const isProduction = Boolean(env === "production");
@@ -43,7 +45,7 @@ module.exports = ({ env = "development", file, options = {} }) => {
 
     let prefix = "spectrum";
 
-    const isNodeModules = Boolean(file.dirname && file.dirname.includes("node_modules"));
+    const isNodeModules = Boolean(inputDirname.includes("node_modules"));
     if (isNodeModules)
         return {
             ...options,
@@ -55,7 +57,7 @@ module.exports = ({ env = "development", file, options = {} }) => {
     let foldername = process.env.NX_TASK_TARGET_PROJECT;
     if (!foldername) {
         // If we didn't get a foldername from the env variable, try to get it from the file
-        const parts = file?.dirname.split(sep);
+        const parts = inputDirname.split(sep);
         if (parts.includes("components")) {
             foldername = parts[parts.indexOf("components") + 1];
         }
@@ -68,7 +70,7 @@ module.exports = ({ env = "development", file, options = {} }) => {
 
     // If we got a foldername from the interpretation above, use it to set the paths
     const cwd = foldername ? join(__dirname, "components", foldername) : process.cwd();
-    const from = file && file.dirname && file.basename ? join(file.dirname, file.basename) : join(cwd, "index.css");
+    const from = inputDirname && inputBasename ? join(inputDirname, inputBasename) : join(cwd, "index.css");
     const to = output ?? join(cwd, "dist/index.css");
 
     let metadata = fetchComponentMetadata(from);

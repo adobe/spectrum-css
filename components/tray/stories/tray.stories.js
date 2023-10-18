@@ -1,7 +1,7 @@
 // Import the component markup template
 import { Template } from "./template";
 
-import { Template as Dialog } from "../../dialog/stories/template.js";
+import { Template as Dialog } from "@spectrum-css/dialog/stories/template.js";
 
 /**
  * Tray dialogs are typically used to portray information on mobile device or smaller screens.

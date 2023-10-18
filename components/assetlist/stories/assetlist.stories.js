@@ -1,7 +1,7 @@
 // Import the component markup template
 import { Template } from "./template";
 
-import { default as Checkbox } from "../../checkbox/stories/checkbox.stories.js";
+import { default as Checkbox } from "@spectrum-css/checkbox/stories/checkbox.stories.js";
 
 /**
  * A selectable list of Assets, often used inside of Miller Columns.

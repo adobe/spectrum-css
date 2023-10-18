@@ -3,9 +3,9 @@ import { classMap } from "lit/directives/class-map.js";
 import { ifDefined } from "lit/directives/if-defined.js";
 import { repeat } from "lit/directives/repeat.js";
 
-import { Template as Tooltip } from "../../tooltip/stories/template.js";
+import { Template as Tooltip } from "@spectrum-css/tooltip/stories/template.js";
 
-import "../index-base.css";
+import "@spectrum-css/steplist/index-base.css";
 
 export const SteplistItem = ({
     rootClass,

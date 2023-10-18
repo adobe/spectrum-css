@@ -3,7 +3,7 @@ import { html } from "lit";
 // Import the component markup template
 import { Template } from "./template";
 
-import { default as IconStories } from "../../icon/stories/icon.stories.js";
+import { default as IconStories } from "@spectrum-css/icon/stories/icon.stories.js";
 
 /**
  * Buttons allow users to perform an action or to navigate to another page. They have multiple styles for various needs, and are ideal for calling attention to where a user needs to do something in order to move forward in a flow.

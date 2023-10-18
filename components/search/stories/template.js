@@ -1,10 +1,10 @@
 import { html } from "lit";
 import { classMap } from "lit/directives/class-map.js";
 
-import { Template as ClearButton } from "../../clearbutton/stories/template.js";
-import { Template as TextField } from "../../textfield/stories/template.js";
+import { Template as ClearButton } from "@spectrum-css/clearbutton/stories/template.js";
+import { Template as TextField } from "@spectrum-css/textfield/stories/template.js";
 
-import "../index-base.css";
+import "@spectrum-css/search/index-base.css";
 
 export const Template = ({
     rootClass = "spectrum-Search",

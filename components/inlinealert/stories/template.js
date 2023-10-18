@@ -1,10 +1,10 @@
 import { html } from "lit";
 import { classMap } from "lit/directives/class-map.js";
 
-import { Template as Button } from "../../button/stories/template.js";
-import { Template as Icon } from "../../icon/stories/template.js";
+import { Template as Button } from "@spectrum-css/button/stories/template.js";
+import { Template as Icon } from "@spectrum-css/icon/stories/template.js";
 
-import "../index-base.css";
+import "@spectrum-css/inlinealert/index-base.css";
 
 export const Template = ({
     rootClass = "spectrum-InLineAlert",

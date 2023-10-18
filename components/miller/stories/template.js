@@ -2,9 +2,9 @@ import { html } from "lit";
 import { classMap } from "lit/directives/class-map.js";
 // import { ifDefined } from 'lit/directives/if-defined.js';
 
-import { Template as AssetList } from "../../assetlist/stories/template.js";
+import { Template as AssetList } from "@spectrum-css/assetlist/stories/template.js";
 
-import "../index-base.css";
+import "@spectrum-css/miller/index-base.css";
 
 export const Template = ({ rootClass = "spectrum-MillerColumns", customClasses = [], columns, ...globals }) => {
     if (!columns) {

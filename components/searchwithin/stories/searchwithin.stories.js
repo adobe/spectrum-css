@@ -1,7 +1,7 @@
 // Import the component markup template
 import { Template } from "./template";
 
-import { default as PickerStories } from "../../picker/stories/picker.stories.js";
+import { default as PickerStories } from "@spectrum-css/picker/stories/picker.stories.js";
 const ignoreProps = ["rootClass", "position", "isRounded"];
 
 /**

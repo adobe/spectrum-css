@@ -4,13 +4,13 @@ import { classMap } from "lit/directives/class-map.js";
 import { ifDefined } from "lit/directives/if-defined.js";
 import { styleMap } from "lit/directives/style-map.js";
 
-import { Template as FieldLabel } from "../../fieldlabel/stories/template.js";
-import { Template as HelpText } from "../../helptext/stories/template.js";
-import { Template as Icon } from "../../icon/stories/template.js";
-import { Template as Popover } from "../../popover/stories/template.js";
-import { Template as ProgressCircle } from "../../progresscircle/stories/template.js";
+import { Template as FieldLabel } from "@spectrum-css/fieldlabel/stories/template.js";
+import { Template as HelpText } from "@spectrum-css/helptext/stories/template.js";
+import { Template as Icon } from "@spectrum-css/icon/stories/template.js";
+import { Template as Popover } from "@spectrum-css/popover/stories/template.js";
+import { Template as ProgressCircle } from "@spectrum-css/progresscircle/stories/template.js";
 
-import "../index-base.css";
+import "@spectrum-css/picker/index-base.css";
 
 export const Picker = ({
     rootClass = "spectrum-Picker",

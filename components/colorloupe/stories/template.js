@@ -2,7 +2,7 @@ import { svg } from "lit";
 import { classMap } from "lit/directives/class-map.js";
 import { styleMap } from "lit/directives/style-map.js";
 
-import "../index-base.css";
+import "@spectrum-css/colorloupe/index-base.css";
 
 export const Template = ({
     rootClass = "spectrum-ColorLoupe",

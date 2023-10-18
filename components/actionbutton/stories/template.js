@@ -12,9 +12,9 @@ import { when } from "lit/directives/when.js";
 
 import { capitalize } from "lodash-es";
 
-import { Template as Icon } from "../../icon/stories/template.js";
+import { Template as Icon } from "@spectrum-css/icon/stories/template.js";
 
-import "../index-base.css";
+import "@spectrum-css/actionbutton/index-base.css";
 
 export const Template = ({
     rootClass = "spectrum-ActionButton",

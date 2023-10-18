@@ -62,6 +62,7 @@ export default {
         return mergeWithRules({
             resolve: {
                 modules: "append",
+                alias: "merge",
             },
             module: {
                 rules: {
@@ -72,6 +73,13 @@ export default {
         })(config, {
             resolve: {
                 modules: [resolve(__dirname, "../node_modules")],
+                alias: {
+                    ...componentPkgs.reduce((pkgs, dir) => {
+                        const pkg = require(resolve(componentsPath, dir, "package.json"));
+                        pkgs[pkg.name] = resolve(componentsPath, dir);
+                        return pkgs;
+                    }, {}),
+                },
             },
             module: {
                 rules: [

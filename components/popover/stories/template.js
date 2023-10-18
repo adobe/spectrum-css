@@ -6,7 +6,7 @@ import { when } from "lit/directives/when.js";
 
 import { useArgs } from "@storybook/client-api";
 
-import "../index-base.css";
+import "@spectrum-css/popover/index-base.css";
 
 export const Template = ({
     rootClass = "spectrum-Popover",

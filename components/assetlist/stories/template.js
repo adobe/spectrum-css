@@ -5,10 +5,10 @@ import { when } from "lit/directives/when.js";
 
 import { useArgs } from "@storybook/client-api";
 
-import { Template as Checkbox } from "../../checkbox/stories/template.js";
-import { Template as Icon } from "../../icon/stories/template.js";
+import { Template as Checkbox } from "@spectrum-css/checkbox/stories/template.js";
+import { Template as Icon } from "@spectrum-css/icon/stories/template.js";
 
-import "../index-base.css";
+import "@spectrum-css/assetlist/index-base.css";
 
 export const AssetListItem = ({
     rootClass = "spectrum-AssetList-item",

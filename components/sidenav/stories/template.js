@@ -4,9 +4,9 @@ import { ifDefined } from "lit/directives/if-defined.js";
 import { repeat } from "lit/directives/repeat.js";
 import { when } from "lit/directives/when.js";
 
-import { Template as Icon } from "../../icon/stories/template.js";
+import { Template as Icon } from "@spectrum-css/icon/stories/template.js";
 
-import "../index-base.css";
+import "@spectrum-css/sidenav/index-base.css";
 
 export const Template = ({
     rootClass = "spectrum-SideNav",

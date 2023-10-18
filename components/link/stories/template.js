@@ -4,7 +4,7 @@ import { ifDefined } from "lit/directives/if-defined.js";
 
 import { capitalize, lowerCase } from "lodash-es";
 
-import "../index-base.css";
+import "@spectrum-css/link/index-base.css";
 
 export const Template = ({
     rootClass = "spectrum-Link",

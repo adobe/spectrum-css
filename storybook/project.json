@@ -15,10 +15,6 @@
         "clean": {},
         "build": {
             "dependsOn": [
-                {
-                    "target": "build",
-                    "projects": "tag:component"
-                },
                 "^build",
                 "clean"
             ],
@@ -36,7 +32,8 @@
             "outputs": [],
             "executor": "@nx/storybook:storybook",
             "options": {
-                "configDir": "{projectRoot}"
+                "configDir": "{projectRoot}",
+                "open": true
             }
         },
         "lint": {

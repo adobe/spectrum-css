@@ -2,14 +2,14 @@ import { html } from "lit";
 import { classMap } from "lit/directives/class-map.js";
 import { ifDefined } from "lit/directives/if-defined.js";
 
-import { Template as Calendar } from "../../calendar/stories/template.js";
-import { Template as PickerButton } from "../../pickerbutton/stories/template.js";
-import { Template as Popover } from "../../popover/stories/template.js";
-import { Template as TextField } from "../../textfield/stories/template.js";
+import { Template as Calendar } from "@spectrum-css/calendar/stories/template.js";
+import { Template as PickerButton } from "@spectrum-css/pickerbutton/stories/template.js";
+import { Template as Popover } from "@spectrum-css/popover/stories/template.js";
+import { Template as TextField } from "@spectrum-css/textfield/stories/template.js";
 
 import { useArgs, useGlobals } from "@storybook/client-api";
 
-import "../index-base.css";
+import "@spectrum-css/datepicker/index-base.css";
 
 export const Template = ({
     rootClass = "spectrum-DatePicker",

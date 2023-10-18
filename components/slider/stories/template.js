@@ -5,9 +5,9 @@ import { styleMap } from "lit/directives/style-map.js";
 
 import { useArgs, useGlobals } from "@storybook/client-api";
 
-import { Template as FieldLabel } from "../../fieldlabel/stories/template.js";
+import { Template as FieldLabel } from "@spectrum-css/fieldlabel/stories/template.js";
 
-import "../index-base.css";
+import "@spectrum-css/slider/index-base.css";
 
 export const Template = ({
     rootClass = "spectrum-Slider",

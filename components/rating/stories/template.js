@@ -5,9 +5,9 @@ import { repeat } from "lit/directives/repeat.js";
 
 import { useArgs } from "@storybook/client-api";
 
-import { Template as Icon } from "../../icon/stories/template.js";
+import { Template as Icon } from "@spectrum-css/icon/stories/template.js";
 
-import "../index-base.css";
+import "@spectrum-css/rating/index-base.css";
 
 export const Template = ({
     rootClass = "spectrum-Rating",

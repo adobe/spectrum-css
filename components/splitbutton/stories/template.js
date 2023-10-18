@@ -1,9 +1,9 @@
 import { html } from "lit";
 import { classMap } from "lit/directives/class-map.js";
 
-import { Template as Button } from "../../button/stories/template.js";
+import { Template as Button } from "@spectrum-css/button/stories/template.js";
 
-import "../index-base.css";
+import "@spectrum-css/splitbutton/index-base.css";
 
 export const Template = ({
     rootClass = "spectrum-SplitButton",

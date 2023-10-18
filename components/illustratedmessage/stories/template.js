@@ -2,7 +2,7 @@ import { html } from "lit";
 import { classMap } from "lit/directives/class-map.js";
 import { when } from "lit/directives/when.js";
 
-import "../index-base.css";
+import "@spectrum-css/illustratedmessage/index-base.css";
 
 export const Template = ({
     rootClass = "spectrum-IllustratedMessage",

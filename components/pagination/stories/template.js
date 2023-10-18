@@ -2,12 +2,12 @@ import { html } from "lit";
 import { classMap } from "lit/directives/class-map.js";
 import { repeat } from "lit/directives/repeat.js";
 
-import { Template as ActionButton } from "../../actionbutton/stories/template.js";
-import { Template as Button } from "../../button/stories/template.js";
-import { Template as SplitButton } from "../../splitbutton/stories/template.js";
-import { Template as Textfield } from "../../textfield/stories/template.js";
+import { Template as ActionButton } from "@spectrum-css/actionbutton/stories/template.js";
+import { Template as Button } from "@spectrum-css/button/stories/template.js";
+import { Template as SplitButton } from "@spectrum-css/splitbutton/stories/template.js";
+import { Template as Textfield } from "@spectrum-css/textfield/stories/template.js";
 
-import "../index-base.css";
+import "@spectrum-css/pagination/index-base.css";
 
 // More on component templates: https://storybook.js.org/docs/web-components/writing-stories/introduction#using-args
 export const Template = ({

@@ -3,9 +3,9 @@ import { classMap } from "lit/directives/class-map.js";
 import { ifDefined } from "lit/directives/if-defined.js";
 import { styleMap } from "lit/directives/style-map.js";
 
-import { Template as Tag } from "../../tag/stories/template.js";
+import { Template as Tag } from "@spectrum-css/tag/stories/template.js";
 
-import "../index-base.css";
+import "@spectrum-css/taggroup/index-base.css";
 
 export const Template = ({
     rootClass = "spectrum-TagGroup",

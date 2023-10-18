@@ -2,11 +2,11 @@ import { html } from "lit";
 import { classMap } from "lit/directives/class-map.js";
 import { repeat } from "lit/directives/repeat.js";
 
-import { Template as FieldLabel } from "../../fieldlabel/stories/template.js";
-import { Template as HelpText } from "../../helptext/stories/template.js";
-import { Template as Radio } from "../../radio/stories/template.js";
+import { Template as FieldLabel } from "@spectrum-css/fieldlabel/stories/template.js";
+import { Template as HelpText } from "@spectrum-css/helptext/stories/template.js";
+import { Template as Radio } from "@spectrum-css/radio/stories/template.js";
 
-import "../index-base.css";
+import "@spectrum-css/fieldgroup/index-base.css";
 
 export const Template = ({
     rootClass = "spectrum-FieldGroup",

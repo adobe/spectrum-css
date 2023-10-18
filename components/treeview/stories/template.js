@@ -2,10 +2,10 @@ import { html } from "lit";
 import { classMap } from "lit/directives/class-map.js";
 import { repeat } from "lit/directives/repeat.js";
 
-import { Template as Icon } from "../../icon/stories/template.js";
-import { Template as Thumbnail } from "../../thumbnail/stories/template.js";
+import { Template as Icon } from "@spectrum-css/icon/stories/template.js";
+import { Template as Thumbnail } from "@spectrum-css/thumbnail/stories/template.js";
 
-import "../index-base.css";
+import "@spectrum-css/treeview/index-base.css";
 
 export const TreeViewItem = ({
     rootClass = "spectrum-TreeView",

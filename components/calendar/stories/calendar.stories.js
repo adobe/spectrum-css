@@ -1,8 +1,8 @@
 // Import the component markup template
 import { Template } from "./template";
 
+import ActionButtonStories from "@spectrum-css/actionbutton/stories/actionbutton.stories.js";
 import isChromatic from "chromatic/isChromatic";
-import ActionButtonStories from "../../actionbutton/stories/actionbutton.stories.js";
 
 const months = [...Array(12).keys()].map((key) => new Date(0, key).toLocaleString("en", { month: "long" }));
 

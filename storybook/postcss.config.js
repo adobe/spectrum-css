@@ -18,7 +18,9 @@ const componentConfig = require("../postcss.config.js");
  * to load based on env variable
  * @type import('postcss-load-config').ConfigFn
  */
-module.exports = ({ env = "development", file, options = {} }) => {
+module.exports = (ctx) => {
+    const { env = "development", file, options = {} } = ctx;
+
     const isProduction = Boolean(env === "production");
 
     const isNodeModules = Boolean(file && dirname(file).includes("node_modules"));
@@ -32,7 +34,7 @@ module.exports = ({ env = "development", file, options = {} }) => {
     }
 
     if (isLocalPackage) {
-        return componentConfig({ env, file, options });
+        return componentConfig(ctx);
     }
 
     return {

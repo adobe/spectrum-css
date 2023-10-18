@@ -1,7 +1,7 @@
 // Import the component markup template
 import { Template } from "./template";
 
-import { default as ActionButton } from "../../actionbutton/stories/actionbutton.stories.js";
+import { default as ActionButton } from "@spectrum-css/actionbutton/stories/actionbutton.stories.js";
 
 /**
  * The Action group component is a collection of action buttons.

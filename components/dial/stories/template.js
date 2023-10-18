@@ -3,7 +3,7 @@ import { classMap } from "lit/directives/class-map.js";
 import { ifDefined } from "lit/directives/if-defined.js";
 import { when } from "lit/directives/when.js";
 
-import "../index-base.css";
+import "@spectrum-css/dial/index-base.css";
 
 export const Template = ({
     rootClass = "spectrum-Dial",
