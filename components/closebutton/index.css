@@ -10,7 +10,7 @@ OF ANY KIND, either express or implied. See the License for the specific languag
 governing permissions and limitations under the License.
 */
 
-@from "@spectrum-css/commons/basebutton.css";
+@import "@spectrum-css/commons/basebutton.css";
 
 /**
  * @note .spectrum-CloseButton::after is the Focus ring

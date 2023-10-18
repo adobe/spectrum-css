@@ -10,8 +10,7 @@ OF ANY KIND, either express or implied. See the License for the specific languag
 governing permissions and limitations under the License.
 */
 
-const { join, dirname } = require("path");
-const componentConfig = require("../postcss.config.js");
+const { join } = require("path");
 
 /**
  * @description This PostCSS config determines which file
@@ -19,23 +18,9 @@ const componentConfig = require("../postcss.config.js");
  * @type import('postcss-load-config').ConfigFn
  */
 module.exports = (ctx) => {
-    const { env = "development", file, options = {} } = ctx;
+    const { env = "development", options = {} } = ctx;
 
     const isProduction = Boolean(env === "production");
-
-    const isNodeModules = Boolean(file && dirname(file).includes("node_modules"));
-    const isLocalPackage = Boolean(file && dirname(file).includes("components"));
-
-    if (isNodeModules) {
-        return {
-            ...options,
-            plugins: {},
-        };
-    }
-
-    if (isLocalPackage) {
-        return componentConfig(ctx);
-    }
 
     return {
         ...options,

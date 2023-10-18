@@ -21,8 +21,6 @@ setConsoleOptions({
     error: "🔴 [error]",
 });
 
-import "@spectrum-css/typography";
-
 /* --- LEGACY EXPRESS TOKENS --- */
 import "@spectrum-css/expressvars/dist/spectrum-dark.css";
 import "@spectrum-css/expressvars/dist/spectrum-darkest.css";
@@ -41,6 +39,8 @@ import "@spectrum-css/vars/dist/spectrum-medium.css";
 
 /* --- MODERN TOKENS --- */
 import "@spectrum-css/tokens/dist/index.css";
+
+import "@spectrum-css/typography/dist/index-base.css";
 
 import "./storybook-stories.css";
 import "./storybook-stories.js";

@@ -43,7 +43,7 @@ export default {
         // https://github.com/storybookjs/storybook/tree/next/code/addons/a11y
         "@storybook/addon-a11y",
         // https://storybook.js.org/addons/@whitespace/storybook-addon-html/
-        "@whitespace/storybook-addon-html",
+        // "@whitespace/storybook-addon-html",
         // https://storybook.js.org/addons/@etchteam/storybook-addon-status
         "@etchteam/storybook-addon-status",
         // https://storybook.js.org/addons/@storybook/addon-actions
@@ -67,6 +67,7 @@ export default {
             module: {
                 rules: {
                     test: "match",
+                    exclude: "replace",
                     use: "append",
                 },
             },
@@ -74,9 +75,9 @@ export default {
             resolve: {
                 modules: [resolve(__dirname, "../node_modules")],
                 alias: {
-                    ...componentPkgs.reduce((pkgs, dir) => {
-                        const pkg = require(resolve(componentsPath, dir, "package.json"));
-                        pkgs[pkg.name] = resolve(componentsPath, dir);
+                    ...componentPkgs.reduce((pkgs, foldername) => {
+                        const pkg = require(resolve(componentsPath, foldername, "package.json"));
+                        pkgs[pkg.name] = resolve(componentsPath, foldername);
                         return pkgs;
                     }, {}),
                 },
@@ -85,13 +86,14 @@ export default {
                 rules: [
                     {
                         test: /\.css$/,
+                        exclude: [/\/node_modules\//, /\/dist\//],
                         use: [
                             {
                                 loader: require.resolve("postcss-loader"),
                                 options: {
                                     implementation: require.resolve("postcss"),
                                     postcssOptions: {
-                                        config: join(__dirname, "postcss.config.js"),
+                                        config: true,
                                     },
                                 },
                             },

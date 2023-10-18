@@ -14,10 +14,7 @@
     "targets": {
         "clean": {},
         "build": {
-            "dependsOn": [
-                "^build",
-                "clean"
-            ],
+            "dependsOn": ["^build", "clean"],
             "inputs": ["core", { "externalDependencies": ["storybook"] }],
             "outputs": ["{options.outputPath}"],
             "executor": "@nx/storybook:build",

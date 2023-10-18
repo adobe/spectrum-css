@@ -30,32 +30,26 @@ const fetchComponentMetadata = require("./tasks/fetch-metadata-from-css");
  * @type import('postcss-load-config').ConfigFn
  */
 module.exports = ({ env = "development", file, options = {} }) => {
-    const inputDirname = typeof file === "string" ? dirname(file) : file.dirname;
-    const inputBasename = typeof file === "string" ? basename(file) : file.basename;
     const { skipLint = false } = options;
 
     const isProduction = Boolean(env === "production");
+    console.log(isProduction ? "Production" : "Development", file);
 
     const {
-        // _: input,
+        _: input,
         output,
         lint = !skipLint,
         map = options.map ?? !isProduction ? { inline: false } : false,
     } = yargs(hideBin(process.argv)).argv;
 
-    let prefix = "spectrum";
+    const inputDirname = typeof file === "string" ? dirname(file) : file.dirname ?? dirname(input[0]);
+    const inputBasename = typeof file === "string" ? basename(file) : file.basename ?? basename(input[0]);
 
-    const isNodeModules = Boolean(inputDirname.includes("node_modules"));
-    if (isNodeModules)
-        return {
-            ...options,
-            map,
-            plugins: {},
-        };
+    let prefix = "spectrum";
 
     // Prefer the foldername provided by the NX_TASK_TARGET_PROJECT env variable
     let foldername = process.env.NX_TASK_TARGET_PROJECT;
-    if (!foldername) {
+    if (!foldername || foldername === "storybook" || foldername === "site") {
         // If we didn't get a foldername from the env variable, try to get it from the file
         const parts = inputDirname.split(sep);
         if (parts.includes("components")) {
@@ -189,12 +183,7 @@ module.exports = ({ env = "development", file, options = {} }) => {
             /* --------------------------------------------------- */
             /* ------------------- CLEAN-UP TASKS ---------------- */
             "postcss-discard-comments": {
-                removeAll: true, // isProduction,
-                /* not production? just remove the license data */
-                // remove: !isProduction ? (comment) => {
-                //   if (comment && comment.startsWith("!")) return true;
-                //   return false;
-                // } : undefined,
+                removeAll: true,
             },
             cssnano: {
                 preset: [
@@ -224,13 +213,15 @@ module.exports = ({ env = "development", file, options = {} }) => {
                       allowEmptyInput: true,
                       cache: !isProduction,
                       ignorePath: join(__dirname, ".stylelintignore"),
-                      reportNeedlessDisables: true,
-                      reportInvalidScopeDisables: true,
+                      reportNeedlessDisables: isProduction,
+                      reportInvalidScopeDisables: isProduction,
                   }
                 : false,
-            "postcss-reporter": {
-                clearReportedMessages: true,
-            },
+            "postcss-reporter": !isProduction
+                ? {
+                      clearReportedMessages: true,
+                  }
+                : false,
         },
     };
 };
