@@ -62,7 +62,7 @@ export const TreeViewItem = ({
 					? Icon({
 							...globals,
 							size,
-							iconName: "Chevron",
+							iconName: "ChevronRight",
 							customClasses: [`${rootClass}-itemIndicator`],
 					  })
 					: ""}
@@ -124,6 +124,7 @@ export const Template = ({
 					return TreeViewItem({
 						...globals,
 						...item,
+						size,
 					});
 				}
 			)}
