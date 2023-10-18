@@ -100,30 +100,24 @@ export default {
 
 const CustomButton = (args) => {
     return html`
-        <div
-            style="padding: 1rem; ${args.staticColor && args.backgroundColor
-                ? `background-color: ${args.backgroundColor}`
-                : ""}"
-        >
-            ${Template({
-                ...args,
-                iconName: undefined,
-            })}
-            ${Template({
-                ...args,
-                iconName: undefined,
-                treatment: "outline",
-            })}
-            ${Template({
-                ...args,
-                iconName: args.iconName ?? "Edit",
-            })}
-            ${Template({
-                ...args,
-                hideLabel: true,
-                iconName: args.iconName ?? "Edit",
-            })}
-        </div>
+        ${Template({
+            ...args,
+            iconName: undefined,
+        })}
+        ${Template({
+            ...args,
+            iconName: undefined,
+            treatment: "outline",
+        })}
+        ${Template({
+            ...args,
+            iconName: args.iconName ?? "Edit",
+        })}
+        ${Template({
+            ...args,
+            hideLabel: true,
+            iconName: args.iconName ?? "Edit",
+        })}
     `;
 };
 

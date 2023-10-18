@@ -61,7 +61,7 @@ export default {
         "storybook-addon-pseudo-states",
         // https://github.com/storybookjs/addon-styling#storybookaddon-styling
         {
-            name: "@storybook/addon-styling-webpack",
+            name: "@storybook/addon-styling",
             options: {
                 postCss: {
                     implementation: require("postcss"),

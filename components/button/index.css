@@ -10,15 +10,16 @@ OF ANY KIND, either express or implied. See the License for the specific languag
 governing permissions and limitations under the License.
 */
 
-@import "@spectrum-css/commons/basebutton.css";
+@import "../commons/basebutton.css";
 
 /**
  * @namespace spectrum
  * @component Button
  * @category Buttons
  */
+
+/* default for all buttons */
 .spectrum-Button {
-    /* default for all buttons */
     --spectrum-button-animation-duration: var(--spectrum-animation-duration-100);
     --spectrum-button-border-radius: var(--spectrum-corner-radius-100);
     --spectrum-button-border-width: var(--spectrum-border-width-200);
@@ -121,8 +122,6 @@ governing permissions and limitations under the License.
 }
 
 .spectrum-Button {
-    @extend %spectrum-BaseButton;
-    @extend %spectrum-ButtonWithFocusRing;
     position: relative;
 
     gap: var(--mod-button-padding-label-to-icon, var(--spectrum-button-padding-label-to-icon));
@@ -184,14 +183,17 @@ governing permissions and limitations under the License.
             margin-inline-start: 0;
         }
     }
+
+    @inherit: %spectrum-BaseButton;
+    @inherit: %spectrum-ButtonWithFocusRing;
 }
 
 a.spectrum-Button {
-    @extend %spectrum-AnchorButton;
+    @inherit: %spectrum-AnchorButton;
 }
 
 .spectrum-Button-label {
-    @extend %spectrum-ButtonLabel;
+    @inherit: %spectrum-ButtonLabel;
     align-self: start;
 
     padding-block-start: calc(
@@ -261,15 +263,10 @@ a.spectrum-Button {
 }
 
 /* Core Token Theming */
-
 /* former skin.css, applied / copied from actionbutton/index.css  */
 
-/**
- * @namespace spectrum
- * @component Button
- */
 .spectrum-Button {
-    @extend %spectrum-BaseButton;
+    @inherit: %spectrum-BaseButton;
     color: var(
         --highcontrast-button-content-color-default,
         var(--mod-button-content-color-default, var(--spectrum-button-content-color-default))

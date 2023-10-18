@@ -66,10 +66,8 @@ governing permissions and limitations under the License.
         --highcontrast-actionbar-popover-border-color: CanvasText;
     }
 
-    .spectrum-ActionBar--emphasized {
-        .spectrum-ActionBar-popover {
-            --highcontrast-actionbar-popover-border-color: CanvasText;
-        }
+    .spectrum-ActionBar--emphasized .spectrum-ActionBar-popover {
+        --highcontrast-actionbar-popover-border-color: CanvasText;
     }
 }
 
@@ -101,7 +99,7 @@ governing permissions and limitations under the License.
         opacity: 100%;
     }
 
-    .spectrum-ActionBar-popover {
+    & .spectrum-ActionBar-popover {
         /* Let clicks do their thing */
         pointer-events: auto;
 
@@ -139,7 +137,7 @@ governing permissions and limitations under the License.
     }
 
     /* close button */
-    .spectrum-CloseButton {
+    & .spectrum-CloseButton {
         flex-shrink: 0;
         margin-block-start: var(
             --mod-actionbar-spacing-close-button-top,
@@ -156,7 +154,7 @@ governing permissions and limitations under the License.
     }
 
     /* item counter */
-    .spectrum-FieldLabel {
+    & .spectrum-FieldLabel {
         margin-block-start: var(
             --mod-actionbar-spacing-item-counter-top,
             var(--spectrum-actionbar-spacing-item-counter-top)
@@ -185,7 +183,7 @@ governing permissions and limitations under the License.
     }
 
     /* action group */
-    .spectrum-ActionGroup {
+    & .spectrum-ActionGroup {
         margin-block-start: var(
             --mod-actionbar-spacing-action-group-top,
             var(--spectrum-actionbar-spacing-action-group-top)
@@ -201,7 +199,7 @@ governing permissions and limitations under the License.
 }
 
 .spectrum-ActionBar--emphasized {
-    .spectrum-ActionBar-popover {
+    & .spectrum-ActionBar-popover {
         background-color: var(
             --mod-actionbar-emphasized-background-color,
             var(--spectrum-actionbar-emphasized-background-color)
@@ -213,7 +211,7 @@ governing permissions and limitations under the License.
     }
 
     /* ensure text is legible on emphasized background */
-    .spectrum-FieldLabel {
+    & .spectrum-FieldLabel {
         color: var(
             --mod-actionbar-emphasized-item-counter-color,
             var(--spectrum-actionbar-emphasized-item-counter-color)
@@ -232,8 +230,6 @@ governing permissions and limitations under the License.
 }
 
 /* flexible width */
-.spectrum-ActionBar--flexible {
-    .spectrum-ActionBar-popover {
-        inline-size: auto;
-    }
+.spectrum-ActionBar--flexible .spectrum-ActionBar-popover {
+    inline-size: auto;
 }

@@ -25,6 +25,7 @@ const { join } = require("path");
  */
 module.exports = ({ env = "development", file, options = {} }) => {
     const isProduction = Boolean(env === "production");
+    console.warn("postcss.config.js", { env, file, options });
 
     const isNodeModules = Boolean(file.dirname && file.dirname.includes("node_modules"));
     if (isNodeModules)
@@ -42,6 +43,14 @@ module.exports = ({ env = "development", file, options = {} }) => {
             "postcss-import": {
                 root: process.cwd(),
                 addModulesDirectories: [join(process.cwd(), "node_modules"), join(__dirname, "node_modules")],
+            },
+            /**
+             * @link https://github.com/csstools/postcss-extend-rule
+             * @note replacement for postcss-inherit
+             */
+            "postcss-extend-rule": {
+                onRecursiveExtend: "throw",
+                onUnusedExtend: "ignore",
             },
             /* --------------------------------------------------- */
             /* ------------------- POLYFILLS --------------------- */
