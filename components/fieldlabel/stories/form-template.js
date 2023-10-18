@@ -2,12 +2,12 @@ import { html } from "lit";
 import { classMap } from "lit/directives/class-map.js";
 import { ifDefined } from "lit/directives/if-defined.js";
 
-import { Template as FieldLabel } from "@spectrum-css/fieldlabel/stories/template.js";
-import { Template as Picker } from "@spectrum-css/picker/stories/template.js";
-import { Template as Stepper } from "@spectrum-css/stepper/stories/template.js";
-import { Template as TextField } from "@spectrum-css/textfield/stories/template.js";
+import { Template as FieldLabel } from "../../fieldlabel/stories/template.js";
+import { Template as Picker } from "../../picker/stories/template.js";
+import { Template as Stepper } from "../../stepper/stories/template.js";
+import { Template as TextField } from "../../textfield/stories/template.js";
 
-import "@spectrum-css/fieldlabel";
+import "../index-base.css";
 
 export const Template = ({ rootClass = "spectrum-Form", labelsAbove, customClasses = [], id }) => {
     return html`

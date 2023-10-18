@@ -1,8 +1,8 @@
 import { html } from "lit";
 
-import { Template as ActionButton } from "@spectrum-css/actionbutton/stories/template.js";
-import { Template as Popover } from "@spectrum-css/popover/stories/template.js";
-import { Template as Menu } from "@spectrum-css/menu/stories/template.js";
+import { Template as ActionButton } from "../../actionbutton/stories/template.js";
+import { Template as Menu } from "../../menu/stories/template.js";
+import { Template as Popover } from "../../popover/stories/template.js";
 
 export const Template = ({ customClasses = [], items = [], isOpen = false, ...globals }) => {
     if (!items.length) {

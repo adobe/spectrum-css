@@ -4,7 +4,7 @@ import { ifDefined } from "lit/directives/if-defined.js";
 
 import { capitalize, lowerCase, upperCase } from "lodash-es";
 
-import { Template as Icon } from "@spectrum-css/icon/stories/template.js";
+import { Template as Icon } from "../../icon/stories/template.js";
 
 import "../index-base.css";
 

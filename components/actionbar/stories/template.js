@@ -1,10 +1,10 @@
 import { html } from "lit";
 import { classMap } from "lit/directives/class-map.js";
 
-import { Template as ActionGroup } from "@spectrum-css/actiongroup/stories/template.js";
-import { Template as CloseButton } from "@spectrum-css/closebutton/stories/template.js";
-import { Template as FieldLabel } from "@spectrum-css/fieldlabel/stories/template.js";
-import { Template as Popover } from "@spectrum-css/popover/stories/template.js";
+import { Template as ActionGroup } from "../../actiongroup/stories/template.js";
+import { Template as CloseButton } from "../../closebutton/stories/template.js";
+import { Template as FieldLabel } from "../../fieldlabel/stories/template.js";
+import { Template as Popover } from "../../popover/stories/template.js";
 
 import "../index-base.css";
 

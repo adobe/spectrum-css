@@ -3,8 +3,8 @@ import { classMap } from "lit/directives/class-map.js";
 import { ifDefined } from "lit/directives/if-defined.js";
 import { styleMap } from "lit/directives/style-map.js";
 
-import { Template as ActionButton } from "@spectrum-css/actionbutton/stories/template.js";
-import { Template as Textfield } from "@spectrum-css/textfield/stories/template.js";
+import { Template as ActionButton } from "../../actionbutton/stories/template.js";
+import { Template as Textfield } from "../../textfield/stories/template.js";
 
 import "../index-base.css";
 

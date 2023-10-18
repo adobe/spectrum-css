@@ -3,10 +3,10 @@ import { classMap } from "lit/directives/class-map.js";
 import { when } from "lit/directives/when.js";
 import { html, literal } from "lit/static-html.js";
 
-import { Template as Button } from "@spectrum-css/button/stories/template.js";
-import { Template as Checkbox } from "@spectrum-css/checkbox/stories/template.js";
-import { Template as Icon } from "@spectrum-css/icon/stories/template.js";
-import { Template as Thumbnail } from "@spectrum-css/thumbnail/stories/template.js";
+import { Template as Button } from "../../button/stories/template.js";
+import { Template as Checkbox } from "../../checkbox/stories/template.js";
+import { Template as Icon } from "../../icon/stories/template.js";
+import { Template as Thumbnail } from "../../thumbnail/stories/template.js";
 
 import "../index-base.css";
 

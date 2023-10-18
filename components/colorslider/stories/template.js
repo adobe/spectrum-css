@@ -1,8 +1,8 @@
 import { html } from "lit";
 import { classMap } from "lit/directives/class-map.js";
 
-import { Template as ColorHandle } from "@spectrum-css/colorhandle/stories/template.js";
-import { Template as OpacityCheckerboard } from "@spectrum-css/opacitycheckerboard/stories/template.js";
+import { Template as ColorHandle } from "../../colorhandle/stories/template.js";
+import { Template as OpacityCheckerboard } from "../../opacitycheckerboard/stories/template.js";
 
 import "../index-base.css";
 

@@ -1,7 +1,7 @@
-import { Template as FieldLabel } from "@spectrum-css/fieldlabel/stories/template.js";
 import { html } from "lit";
 import { classMap } from "lit/directives/class-map.js";
 import { styleMap } from "lit/directives/style-map.js";
+import { Template as FieldLabel } from "../../fieldlabel/stories/template.js";
 
 import "../index-base.css";
 

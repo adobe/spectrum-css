@@ -3,9 +3,9 @@ import { userEvent, within } from "@storybook/testing-library";
 // Import the component markup template
 import { Template } from "./template";
 
-import { default as ActionButton } from "@spectrum-css/actionbutton/stories/actionbutton.stories.js";
-import { default as Menu } from "@spectrum-css/menu/stories/menu.stories.js";
-import { default as Popover } from "@spectrum-css/popover/stories/popover.stories.js";
+import { default as ActionButton } from "../../actionbutton/stories/actionbutton.stories.js";
+import { default as Menu } from "../../menu/stories/menu.stories.js";
+import { default as Popover } from "../../popover/stories/popover.stories.js";
 
 /**
  * The Action menu component is an action button with a Popover.

@@ -8,12 +8,35 @@ import {
 } from "./decorators.js";
 
 import { withActions } from "@storybook/addon-actions/decorator";
+import { setConsoleOptions } from "@storybook/addon-console";
 
 import DocumentationTemplate from "./templates/Documentation.mdx";
 
+const panelExclude = setConsoleOptions({}).panelExclude;
+setConsoleOptions({
+    panelExclude: [...panelExclude, /deprecated/],
+});
+
 import "@spectrum-css/typography";
 
-import "../assets/styles/_themes.css";
+/* --- LEGACY EXPRESS TOKENS --- */
+import "@spectrum-css/expressvars/dist/spectrum-dark.css";
+import "@spectrum-css/expressvars/dist/spectrum-darkest.css";
+import "@spectrum-css/expressvars/dist/spectrum-global.css";
+import "@spectrum-css/expressvars/dist/spectrum-large.css";
+import "@spectrum-css/expressvars/dist/spectrum-light.css";
+import "@spectrum-css/expressvars/dist/spectrum-medium.css";
+
+/* --- LEGACY TOKENS --- */
+import "@spectrum-css/vars/dist/spectrum-dark.css";
+import "@spectrum-css/vars/dist/spectrum-darkest.css";
+import "@spectrum-css/vars/dist/spectrum-global.css";
+import "@spectrum-css/vars/dist/spectrum-large.css";
+import "@spectrum-css/vars/dist/spectrum-light.css";
+import "@spectrum-css/vars/dist/spectrum-medium.css";
+
+/* --- MODERN TOKENS --- */
+import "@spectrum-css/tokens/dist/index.css";
 
 import "./storybook-stories.css";
 import "./storybook-stories.js";
@@ -154,6 +177,16 @@ export const parameters = {
         expanded: true,
         hideNoControlsWarning: true,
         sort: "requiredFirst",
+    },
+    html: {
+        root: "#root-inner",
+        prettier: {
+            tabWidth: 4,
+            useTabs: false,
+            htmlWhitespaceSensitivity: "strict",
+            removeEmptyComments: true,
+            removeComments: /\?lit/,
+        },
     },
     docs: {
         page: DocumentationTemplate,

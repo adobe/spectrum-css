@@ -112,6 +112,7 @@ module.exports = ({ prefix = "", keyIdentifier, processIdentifier, noFlatVariabl
         return {
             AtRule: {
                 container: (container, { Rule }) => {
+
                     if (container[processed]) return;
                     // Ensure we don't process the same container twice
                     container[processed] = true;
@@ -120,7 +121,7 @@ module.exports = ({ prefix = "", keyIdentifier, processIdentifier, noFlatVariabl
                     keyIdentifier = keyIdentifier ? clean(keyIdentifier) : undefined;
 
                     /** @todo Use a parser when released: https://github.com/postcss/postcss-at-rule-parser */
-                    const capture = container.params.match(/(\w+)?\(\s*--(.*?)\s*[:=]\s*(.*?)\s*\)/);
+                    const capture = container.params?.match(/(\w+)?\(\s*--(.*?)\s*[:=]\s*(.*?)\s*\)/);
                     if (!capture || capture.length < 2) return;
 
                     const [, identiferFunc, identifierName, identifierValue] = capture;
@@ -143,63 +144,65 @@ module.exports = ({ prefix = "", keyIdentifier, processIdentifier, noFlatVariabl
                         [processed]: true,
                     });
 
-                    container.nodes.forEach((node) => {
-                        if (node[processed]) return;
-                        node[processed] = true;
+                    if (container.nodes && container.nodes.length > 0) {
+                        container.nodes.forEach((node) => {
+                            if (node[processed]) return;
+                            node[processed] = true;
 
-                        if (node.type === "rule") {
-                            /* walk the declarations and update the values */
-                            node.walkDecls((decl) => {
-                                if (decl[processed]) return;
-                                decl[processed] = true;
+                            if (node.type === "rule") {
+                                /* walk the declarations and update the values */
+                                node.walkDecls((decl) => {
+                                    if (decl[processed]) return;
+                                    decl[processed] = true;
 
-                                /* @todo might be nice to add an option to remove any non-custom properties */
-                                if (!decl.prop.startsWith("--")) return;
+                                    /* @todo might be nice to add an option to remove any non-custom properties */
+                                    if (!decl.prop.startsWith("--")) return;
 
-                                // Process rules that match multiple selectors separately to avoid weird var names and edge cases
-                                selectorParser((selectors) => {
-                                    selectors.each((selector) => {
-                                        /* New variable name by combining selector and property data */
-                                        const variableName = variableProcessor(selector, decl);
-                                        if (!variableName) return;
+                                    // Process rules that match multiple selectors separately to avoid weird var names and edge cases
+                                    selectorParser((selectors) => {
+                                        selectors.each((selector) => {
+                                            /* New variable name by combining selector and property data */
+                                            const variableName = variableProcessor(selector, decl);
+                                            if (!variableName) return;
 
-                                        const newDecl = decl.clone({ prop: variableName });
+                                            const newDecl = decl.clone({ prop: variableName });
 
-                                        let value;
+                                            let value;
 
-                                        // Check for fallbacks
-                                        // todo: use valueparser instead of a regex
-                                        const fallbackMatch = decl.value.match(
-                                            /var\(\s*(.*?)\s*,\s*var\(\s*(.*?)\s*\)\)/,
-                                        );
-                                        if (fallbackMatch) {
-                                            const [, override, fallback] = fallbackMatch;
+                                            // Check for fallbacks
+                                            // todo: use valueparser instead of a regex
+                                            const fallbackMatch = decl.value.match(
+                                                /var\(\s*(.*?)\s*,\s*var\(\s*(.*?)\s*\)\)/,
+                                            );
+                                            if (fallbackMatch) {
+                                                const [, override, fallback] = fallbackMatch;
 
-                                            // The final declaration should have the override present
-                                            value = `var(${override}, var(${variableName}))`;
+                                                // The final declaration should have the override present
+                                                value = `var(${override}, var(${variableName}))`;
 
-                                            // The system-level declaration should only have the fallback
-                                            newDecl.assign({ value: `var(${fallback})` });
-                                        } else {
-                                            value = `var(${variableName})`;
-                                        }
+                                                // The system-level declaration should only have the fallback
+                                                newDecl.assign({ value: `var(${fallback})` });
+                                            } else {
+                                                value = `var(${variableName})`;
+                                            }
 
-                                        if (value) decl.assign({ value });
+                                            if (value) decl.assign({ value });
 
-                                        if (!noFlatVariables) {
-                                            // Remove any existing declarations with the same name
-                                            newRule.walkDecls(newDecl.prop, (d) => {
-                                                d.remove();
-                                            });
-                                            newRule.append(newDecl);
-                                        }
-                                    });
-                                }).processSync(decl.parent.selector);
-                            });
-                        }
+                                            if (!noFlatVariables) {
+                                                // Remove any existing declarations with the same name
+                                                newRule.walkDecls(newDecl.prop, (d) => {
+                                                    d.remove();
+                                                });
+                                                newRule.append(newDecl);
+                                            }
+                                        });
+                                    }).processSync(decl.parent.selector);
+                                });
+                            }
 
-                        container.parent.insertAfter(container, node);
-                    });
+                            container.parent.insertAfter(container, node);
+                        });
+                    }
 
                     // Insert the new rule with system-level mapped values after the container query
                     if (!noFlatVariables) {

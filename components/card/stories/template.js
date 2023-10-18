@@ -5,11 +5,11 @@ import { when } from "lit/directives/when.js";
 
 import { useArgs } from "@storybook/client-api";
 
-import { Template as ActionButton } from "@spectrum-css/actionbutton/stories/template.js";
-import { Template as Asset } from "@spectrum-css/asset/stories/template.js";
-import { Template as Checkbox } from "@spectrum-css/checkbox/stories/template.js";
-import { Template as Icon } from "@spectrum-css/icon/stories/template.js";
-import { Template as QuickAction } from "@spectrum-css/quickaction/stories/template.js";
+import { Template as ActionButton } from "../../actionbutton/stories/template.js";
+import { Template as Asset } from "../../asset/stories/template.js";
+import { Template as Checkbox } from "../../checkbox/stories/template.js";
+import { Template as Icon } from "../../icon/stories/template.js";
+import { Template as QuickAction } from "../../quickaction/stories/template.js";
 
 import "../index.css";
 

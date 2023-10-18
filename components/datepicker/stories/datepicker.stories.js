@@ -1,7 +1,7 @@
 // Import the component markup template
 import { Template } from "./template";
 
-import { default as CalendarStories } from "@spectrum-css/calendar/stories/calendar.stories.js";
+import { default as CalendarStories } from "../../calendar/stories/calendar.stories.js";
 
 const ignoreProps = ["rootClass", "isDisabled"];
 

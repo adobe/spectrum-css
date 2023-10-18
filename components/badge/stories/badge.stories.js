@@ -1,7 +1,7 @@
 // Import the component markup template
 import { Template } from "./template";
 
-import { default as IconStories } from "@spectrum-css/icon/stories/icon.stories.js";
+import { default as IconStories } from "../../icon/stories/icon.stories.js";
 
 /**
  * A badge element displays a small amount of color-categorized metadata; ideal for getting a user's attention.

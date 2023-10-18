@@ -3,10 +3,10 @@ import { classMap } from "lit/directives/class-map.js";
 import { ifDefined } from "lit/directives/if-defined.js";
 import { styleMap } from "lit/directives/style-map.js";
 
-import { Template as Checkbox } from "@spectrum-css/checkbox/stories/template.js";
-import { Template as Divider } from "@spectrum-css/divider/stories/template.js";
-import { Template as Icon } from "@spectrum-css/icon/stories/template.js";
-import { Template as Switch } from "@spectrum-css/switch/stories/template.js";
+import { Template as Checkbox } from "../../checkbox/stories/template.js";
+import { Template as Divider } from "../../divider/stories/template.js";
+import { Template as Icon } from "../../icon/stories/template.js";
+import { Template as Switch } from "../../switch/stories/template.js";
 
 import "../index-base.css";
 

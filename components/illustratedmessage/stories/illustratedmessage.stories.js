@@ -1,7 +1,7 @@
 import { html } from "lit";
 
 // Import the component markup template
-import { Template as Link } from "@spectrum-css/link/stories/template.js";
+import { Template as Link } from "../../link/stories/template.js";
 import { Template } from "./template";
 
 /**

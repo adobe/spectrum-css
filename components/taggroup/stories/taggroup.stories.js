@@ -1,7 +1,7 @@
 // Import the component markup template
 import { Template } from "./template";
 
-import { default as TagStories } from "@spectrum-css/tag/stories/tag.stories.js";
+import { default as TagStories } from "../../tag/stories/tag.stories.js";
 const ignoreProps = ["rootClass", "hasClearButton", "label"];
 
 /**

@@ -52,8 +52,12 @@ export default {
         },
         // https://github.com/storybookjs/storybook/tree/next/code/addons/a11y
         "@storybook/addon-a11y",
+        // https://storybook.js.org/addons/@xfinx/storybook-addon-html/
+        "@xfinx/storybook-addon-html",
         // https://storybook.js.org/addons/@etchteam/storybook-addon-status
         "@etchteam/storybook-addon-status",
+        // https://storybook.js.org/addons/@storybook/addon-actions
+        "@storybook/addon-actions",
         "storybook-addon-pseudo-states",
         // https://github.com/storybookjs/addon-styling#storybookaddon-styling
         {

@@ -1,7 +1,7 @@
 // Import the component markup template
 import { Template } from "./template";
 
-import { default as Icon } from "@spectrum-css/icon/stories/icon.stories.js";
+import { default as Icon } from "../../icon/stories/icon.stories.js";
 
 /**
  * The Picker button component is used as a dropdown trigger. See Combobox.

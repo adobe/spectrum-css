@@ -1,7 +1,7 @@
 // Import the component markup template
 import { Template } from "./template";
 
-import { default as IconStories } from "@spectrum-css/icon/stories/icon.stories.js";
+import { default as IconStories } from "../../icon/stories/icon.stories.js";
 
 /**
  * A tag categorizes content. They can represent keywords or people, and are grouped to describe an item or a search request.

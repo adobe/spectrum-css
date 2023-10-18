@@ -1,9 +1,9 @@
 // Import the component markup template
 import { Template } from "./template";
 
-import { default as ActionButton } from "@spectrum-css/actionbutton/stories/actionbutton.stories.js";
-import { default as CloseButton } from "@spectrum-css/closebutton/stories/closebutton.stories.js";
-import { default as Popover } from "@spectrum-css/popover/stories/popover.stories.js";
+import { default as ActionButton } from "../../actionbutton/stories/actionbutton.stories.js";
+import { default as CloseButton } from "../../closebutton/stories/closebutton.stories.js";
+import { default as Popover } from "../../popover/stories/popover.stories.js";
 
 /**
  * The Action bar component is a floating full width bar that appears upon selection

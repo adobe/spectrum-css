@@ -1,7 +1,7 @@
 import { html } from "lit";
 import { classMap } from "lit/directives/class-map.js";
 
-import { Template as Button } from "@spectrum-css/button/stories/template.js";
+import { Template as Button } from "../../button/stories/template.js";
 
 import "../index-base.css";
 

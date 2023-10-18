@@ -1,7 +1,6 @@
 {
     "name": "storybook",
     "tags": ["tooling"],
-    "implicitDependencies": ["tag:component"],
     "namedInputs": {
         "core": [
             "{workspaceRoot}/assets",
@@ -13,16 +12,13 @@
         "tools": []
     },
     "targets": {
-        "clean": {
-            "inputs": ["{projectRoot}/storybook-static"]
-        },
+        "clean": {},
         "build": {
-            "dependsOn": ["^build"],
+            "dependsOn": ["clean", "^build"],
             "inputs": ["core", { "externalDependencies": ["storybook"] }],
-            "outputs": ["{projectRoot}/storybook-static"],
             "executor": "nx:run-commands",
             "options": {
-                "commands": ["storybook build --config-dir {projectRoot} --output-dir {projectRoot}/storybook-static"],
+                "commands": ["storybook build --config-dir {projectRoot} --output-dir {projectRoot}/dist"],
                 "envFile": ".env.prod"
             }
         },
@@ -33,7 +29,7 @@
             "executor": "nx:run-commands",
             "options": {
                 "commands": [
-                    "storybook dev --config-dir {projectRoot} --port 3000"
+                    "storybook dev --config-dir {projectRoot}"
                 ]
             }
         },

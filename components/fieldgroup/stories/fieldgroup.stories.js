@@ -1,5 +1,5 @@
 // Import the component markup template
-import { default as Radio } from "@spectrum-css/radio/stories/radio.stories.js";
+import { default as Radio } from "../../radio/stories/radio.stories.js";
 import { Template } from "./template";
 
 /**

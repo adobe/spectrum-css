@@ -1,5 +1,5 @@
-import { Template as OpacityCheckerboard } from "@spectrum-css/opacitycheckerboard/stories/template.js";
 import { html } from "lit";
+import { Template as OpacityCheckerboard } from "../../opacitycheckerboard/stories/template.js";
 
 import "../index-base.css";
 

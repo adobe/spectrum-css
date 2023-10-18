@@ -194,7 +194,7 @@ module.exports = (config) => {
         "../assets/favicons": "/",
         ...(!isDev && {
             // Pass through the storybook build
-            "../storybook/storybook-static": "preview",
+            "../storybook/dist": "preview",
         }),
         ...components.reduce((acc, c) => {
             acc[`${componentDir}/${c}/dist/*`] = `components/${c}`;

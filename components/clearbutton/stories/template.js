@@ -3,7 +3,7 @@ import { classMap } from "lit-html/directives/class-map.js";
 import { ifDefined } from "lit-html/directives/if-defined.js";
 import { styleMap } from "lit-html/directives/style-map.js";
 
-import { Template as Icon } from "@spectrum-css/icon/stories/template.js";
+import { Template as Icon } from "../../icon/stories/template.js";
 
 import "../index-base.css";
 

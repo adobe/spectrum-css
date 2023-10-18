@@ -27,7 +27,21 @@ module.exports = {
         "stylelint-high-performance-animation",
     ],
     rules: {
-        "at-rule-empty-line-before": null,
+        "at-rule-empty-line-before": [
+            "always",
+            {
+                except: ["blockless-after-blockless", "first-nested"],
+                ignore: ["after-comment", "first-nested"],
+                ignoreAtRules: ["extend"],
+            },
+        ],
+        "rule-empty-line-before": [
+            "always",
+            {
+                except: ["first-nested", "after-single-line-comment"],
+                ignore: ["after-comment", "first-nested"],
+            },
+        ],
         "selector-attribute-quotes": null,
         "block-no-empty": null,
         /* Could probably dig into this further, might be useful */
@@ -37,7 +51,7 @@ module.exports = {
         "at-rule-no-unknown": [
             true,
             {
-                ignoreAtRules: [/^extend/, /^container/, /^each/, /^include/, /^mixin/],
+                ignoreAtRules: ["extend", "container", "each", "include", "mixin"],
             },
         ],
         "selector-class-pattern": null,

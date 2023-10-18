@@ -5,7 +5,7 @@ import { when } from "lit/directives/when.js";
 
 import { useArgs } from "@storybook/client-api";
 
-import { Template as Checkbox } from "@spectrum-css/checkbox/stories/template.js";
+import { Template as Checkbox } from "../../checkbox/stories/template.js";
 
 import "../index-base.css";
 

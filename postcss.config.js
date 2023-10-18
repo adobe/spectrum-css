@@ -43,6 +43,14 @@ module.exports = ({ env = "development", file, options = {} }) => {
 
     let prefix = "spectrum";
 
+    const isNodeModules = Boolean(file.dirname && file.dirname.includes("node_modules"));
+    if (isNodeModules)
+        return {
+            ...options,
+            map,
+            plugins: {},
+        };
+
     // Prefer the foldername provided by the NX_TASK_TARGET_PROJECT env variable
     let foldername = process.env.NX_TASK_TARGET_PROJECT;
     if (!foldername) {
@@ -207,13 +215,9 @@ module.exports = ({ env = "development", file, options = {} }) => {
             },
             /* --------------------------------------------------- */
             /* ------------------- REPORTING --------------------- */
-            "postcss-reporter": {
-                clearReportedMessages: true,
-            },
             "@spectrum-tools/postcss-prettier": {},
             stylelint: lint
                 ? {
-                      fix: true, // !isProduction,
                       configFile: join(__dirname, "stylelint.config.js"),
                       allowEmptyInput: true,
                       cache: !isProduction,
@@ -222,6 +226,9 @@ module.exports = ({ env = "development", file, options = {} }) => {
                       reportInvalidScopeDisables: true,
                   }
                 : false,
+            "postcss-reporter": {
+                clearReportedMessages: true,
+            },
         },
     };
 };
