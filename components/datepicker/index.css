@@ -12,6 +12,7 @@ governing permissions and limitations under the License.
 
 .spectrum-DatePicker {
   --spectrum-datepicker-border-radius: var(--spectrum-corner-radius-100);
+  --spectrum-datepicker-border-radius-quiet: 0;
   --spectrum-datepicker-border-width: var(--spectrum-border-width-100);
   --spectrum-datepicker-min-width: var(--spectrum-field-width);
   --spectrum-datepicker-icon-size: var(--spectrum-workflow-icon-size-100);
@@ -19,12 +20,9 @@ governing permissions and limitations under the License.
   /* button */
   --spectrum-datepicker-pickerbutton-border-color: var(--spectrum-gray-500);
   --spectrum-datepicker-pickerbutton-border-color-invalid: var(--spectrum-negative-border-color-default);
-  --spectrum-datepicker-button-width: var(--spectrum-component-height-100);
   --spectrum-datepicker-pickerbutton-width: calc((var(--spectrum-field-edge-to-disclosure-icon-100) * 2) + var(--spectrum-workflow-icon-size-100));
   --spectrum-datepicker-pickerbutton-width-quiet: calc(var(--spectrum-datepicker-pickerbutton-width) - var(--spectrum-datepicker-quiet-button-offset));
   --spectrum-datepicker-quiet-button-offset: var(--spectrum-text-to-visual-100);
-  --spectrum-datepicker-fieldbutton-border-radius-quiet: 0;
-
   --spectrum-datepicker-icon-to-button: var(--spectrum-text-to-visual-100);
   --spectrum-datepicker-icon-to-text: var(--spectrum-component-edge-to-text-100);
 
@@ -88,7 +86,6 @@ governing permissions and limitations under the License.
       --mod-textfield-icon-spacing-inline-end-quiet-invalid: calc(var(--spectrum-datepicker-pickerbutton-width-quiet) + var(--spectrum-datepicker-invalid-icon-to-button-quiet));
     }
   }
-
 }
 
 .spectrum-DatePicker:not(.spectrum-DatePicker--quiet):not(.is-disabled) {
@@ -137,7 +134,7 @@ governing permissions and limitations under the License.
 }
 
 .spectrum-DatePicker--quiet {
-  border-radius: var(--mod-datepicker-fieldbutton-border-radius-quiet, var(--spectrum-datepicker-fieldbutton-border-radius-quiet));
+  border-radius: var(--mod-datepicker-border-radius-quiet, var(--spectrum-datepicker-border-radius-quiet));
 
   .spectrum-DatePicker-button {
     inline-size: auto;
@@ -214,7 +211,7 @@ governing permissions and limitations under the License.
 
   /* Input Group */
   &.spectrum-DatePicker--quiet {
-    border-radius: var(--mod-datepicker-fieldbutton-border-radius-quiet, var(--spectrum-datepicker-fieldbutton-border-radius-quiet));
+    border-radius: var(--mod-datepicker-border-radius-quiet, var(--spectrum-datepicker-border-radius-quiet));
 
     .spectrum-DatePicker-textfield {
       min-inline-size: 0;
@@ -223,9 +220,6 @@ governing permissions and limitations under the License.
       &:first-of-type {
         inline-size: var(--mod-datepicker-range-input-width-quiet-first, var(--spectrum-datepicker-range-input-width-quiet-first));
       }
-    }
-    .spectrum-DatePicker-button {
-      border-radius: var(--mod-datepicker-fieldbutton-border-radius-quiet, var(--spectrum-datepicker-fieldbutton-border-radius-quiet));
     }
   }
 
