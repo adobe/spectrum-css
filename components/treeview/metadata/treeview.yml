@@ -720,8 +720,7 @@ examples:
   - id: treeview-flat
     name: Flat
     description: |
-      A Tree view drawn without nesting, suitable for infinite scrolling.
-      With this version of the treeview, you must manage the visibility of "child items" manually based on the open state of the "parent item."
+      A Tree view drawn without nesting, suitable for infinite scrolling. With this version of the treeview, you must manage the visibility of "child items" manually based on the open state of the "parent item." The level of visual indentation is handled by a numbered `indent` variant class.
     markup: |
       <ul class="spectrum-TreeView spectrum-TreeView--sizeM" style="width: 250px">
         <li class="spectrum-TreeView-item">

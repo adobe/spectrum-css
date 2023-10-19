@@ -85,7 +85,7 @@ export const TreeViewItem = ({
 					: ""}
 				<span class="${rootClass}-itemLabel">${label}</span>
 			</a>
-			${typeof items !== "undefined"
+			${typeof items !== "undefined" && items.length > 0
 				? Template({
 						...globals,
 						items: items,
