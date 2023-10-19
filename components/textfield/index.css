@@ -489,6 +489,17 @@ governing permissions and limitations under the License.
 			);
 		}
 	}
+	&.is-invalid{
+		.spectrum-Textfield-input{
+			padding-inline-end: calc(var(--spectrum-textfield-icon-spacing-inline-start-invalid) + var(--spectrum-textfield-icon-size-invalid));
+		}
+	}
+	&.is-valid{
+		.spectrum-Textfield-input{
+			--valid-icon-size: 10px;
+			padding-inline-end: calc(var(--spectrum-textfield-icon-spacing-inline-start-valid) + var(--valid-icon-size));
+		}
+	}
 }
 
 /********* Child Element - Validation Icons - ⚠️ ✅ *********/
@@ -1012,7 +1023,6 @@ governing permissions and limitations under the License.
 
 	/*** Input Valid ✅ ***/
 	.is-valid & {
-		/* left padding + icon size + right padding */
 		--valid-icon-size: 10px;
 		padding-inline-end: calc(var(--spectrum-textfield-icon-spacing-inline-start-valid) + var(--valid-icon-size) + var(--spectrum-textfield-padding-inline-default));
 		color: var(
@@ -1026,8 +1036,6 @@ governing permissions and limitations under the License.
 
 	/*** Input Invalid ⚠️ ***/
 	.is-invalid & {
-		/* left padding + icon size + right padding */
-
 		--valid-icon-size: 10px;
 		padding-inline-end: calc(var(--spectrum-textfield-icon-spacing-inline-start-invalid) + var(--spectrum-textfield-icon-size-invalid) + var(--spectrum-textfield-padding-inline-default));
 		color: var(
@@ -1151,7 +1159,11 @@ governing permissions and limitations under the License.
 			--mod-textfield-spacing-block-start,
 			var(--spectrum-textfield-spacing-block-start)
 		);
-		padding-inline: var(
+		padding-inline-start: var(
+			--mod-textfield-spacing-inline-quiet,
+			var(--spectrum-textfield-spacing-inline-quiet)
+		);
+		padding-inline-end: var(
 			--mod-textfield-spacing-inline-quiet,
 			var(--spectrum-textfield-spacing-inline-quiet)
 		);
@@ -1293,6 +1305,7 @@ governing permissions and limitations under the License.
 
 	&.spectrum-Textfield--quiet {
 		.spectrum-Textfield-input {
+
 			min-block-size: var(
 				--mod-text-area-min-block-size-quiet,
 				var(--spectrum-text-area-min-block-size-quiet)
