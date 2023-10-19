@@ -86,7 +86,7 @@ export default {
                 rules: [
                     {
                         test: /\.css$/,
-                        exclude: [/\/node_modules\//, /\/dist\//],
+                        // exclude: [/\/node_modules\//, /\/dist\//],
                         use: [
                             {
                                 loader: require.resolve("postcss-loader"),
