@@ -72,6 +72,10 @@ governing permissions and limitations under the License.
 	--spectrum-textfield-icon-size-invalid: var(
 		--spectrum-workflow-icon-size-100
 	);
+	--spectrum-textfield-icon-size-valid: var(
+		--spectrum-checkmark-icon-size-100
+	);
+
 
 	/* default icon spacing */
 	--spectrum-textfield-icon-spacing-inline-start-invalid: var(
@@ -234,6 +238,9 @@ governing permissions and limitations under the License.
 		--spectrum-component-edge-to-text-75
 	);
 	--spectrum-textfield-icon-size-invalid: var(--spectrum-workflow-icon-size-75);
+	--spectrum-textfield-icon-size-valid: var(
+		--spectrum-checkmark-icon-size-75
+	);
 	--spectrum-textfield-icon-spacing-inline-end-invalid: var(
 		--spectrum-field-edge-to-alert-icon-small
 	);
@@ -283,6 +290,9 @@ governing permissions and limitations under the License.
 	);
 	--spectrum-textfield-icon-size-invalid: var(
 		--spectrum-workflow-icon-size-100
+	);
+	--spectrum-textfield-icon-size-valid: var(
+		--spectrum-checkmark-icon-size-100
 	);
 	--spectrum-textfield-icon-spacing-inline-end-invalid: var(
 		--spectrum-field-edge-to-alert-icon-medium
@@ -334,6 +344,9 @@ governing permissions and limitations under the License.
 	--spectrum-textfield-icon-size-invalid: var(
 		--spectrum-workflow-icon-size-200
 	);
+	--spectrum-textfield-icon-size-valid: var(
+		--spectrum-checkmark-icon-size-300
+	);
 	--spectrum-textfield-icon-spacing-inline-end-invalid: var(
 		--spectrum-field-edge-to-alert-icon-large
 	);
@@ -383,6 +396,9 @@ governing permissions and limitations under the License.
 	);
 	--spectrum-textfield-icon-size-invalid: var(
 		--spectrum-workflow-icon-size-300
+	);
+	--spectrum-textfield-icon-size-valid: var(
+		--spectrum-checkmark-icon-size-300
 	);
 	--spectrum-textfield-icon-spacing-inline-end-invalid: var(
 		--spectrum-field-edge-to-alert-icon-extra-large
@@ -496,8 +512,7 @@ governing permissions and limitations under the License.
 	}
 	&.is-valid{
 		.spectrum-Textfield-input{
-			--valid-icon-size: 10px;
-			padding-inline-end: calc(var(--spectrum-textfield-icon-spacing-inline-start-valid) + var(--valid-icon-size));
+			padding-inline-end: calc(var(--spectrum-textfield-icon-spacing-inline-start-valid) + var(-spectrum-textfield-icon-size-valid));
 		}
 	}
 }
@@ -1023,8 +1038,7 @@ governing permissions and limitations under the License.
 
 	/*** Input Valid ✅ ***/
 	.is-valid & {
-		--valid-icon-size: 10px;
-		padding-inline-end: calc(var(--spectrum-textfield-icon-spacing-inline-start-valid) + var(--valid-icon-size) + var(--spectrum-textfield-padding-inline-default));
+		padding-inline-end: calc(var(--spectrum-textfield-icon-spacing-inline-start-valid) + var(-spectrum-textfield-icon-size-valid) + var(--spectrum-textfield-padding-inline-default));
 		color: var(
 			--highcontrast-textfield-text-color-valid,
 			var(
@@ -1036,7 +1050,6 @@ governing permissions and limitations under the License.
 
 	/*** Input Invalid ⚠️ ***/
 	.is-invalid & {
-		--valid-icon-size: 10px;
 		padding-inline-end: calc(var(--spectrum-textfield-icon-spacing-inline-start-invalid) + var(--spectrum-textfield-icon-size-invalid) + var(--spectrum-textfield-padding-inline-default));
 		color: var(
 			--highcontrast-textfield-text-color-invalid,
