@@ -19,8 +19,6 @@ governing permissions and limitations under the License.
 		var(--spectrum-textfield-spacing-inline) -
 		var(--spectrum-textfield-border-width)
 		);
-	--spectrum-textfield-text-to-icon-valid: var(--spectrum-field-text-to-validation-icon-medium);
-
 
   --spectrum-texfield-animation-duration: var(
 		--spectrum-animation-duration-100
@@ -76,8 +74,7 @@ governing permissions and limitations under the License.
 		--spectrum-checkmark-icon-size-100
 	);
 
-
-	/* default icon spacing */
+	/* default icon spacing - invalid */
 	--spectrum-textfield-icon-spacing-inline-start-invalid: var(
 		--spectrum-field-text-to-alert-icon-medium
 	);
@@ -91,11 +88,9 @@ governing permissions and limitations under the License.
 		--spectrum-field-top-to-alert-icon-medium
 	);
 
+		/* default icon spacing - valid */
 	--spectrum-textfield-icon-spacing-inline-start-valid: var(
 		--spectrum-field-text-to-validation-icon-medium
-	);
-	--spectrum-textfield-icon-spacing-inline-end-valid: var(
-		--spectrum-field-edge-to-validation-icon-medium
 	);
 	--spectrum-textfield-icon-spacing-inline-end-quiet-valid: var(
 		--spectrum-field-edge-to-validation-icon-quiet
@@ -345,7 +340,7 @@ governing permissions and limitations under the License.
 		--spectrum-workflow-icon-size-200
 	);
 	--spectrum-textfield-icon-size-valid: var(
-		--spectrum-checkmark-icon-size-300
+		--spectrum-checkmark-icon-size-200
 	);
 	--spectrum-textfield-icon-spacing-inline-end-invalid: var(
 		--spectrum-field-edge-to-alert-icon-large
@@ -505,14 +500,24 @@ governing permissions and limitations under the License.
 			);
 		}
 	}
+
+	/*** Quiet Input Invalid ⚠️ ***/
 	&.is-invalid{
 		.spectrum-Textfield-input{
-			padding-inline-end: calc(var(--spectrum-textfield-icon-spacing-inline-start-invalid) + var(--spectrum-textfield-icon-size-invalid));
+			padding-inline-end: calc(
+				var(--mod--textfield-icon-spacing-inline-start-invalid, var(--spectrum-textfield-icon-spacing-inline-start-invalid)) +
+				var(--mod-textfield-icon-size-invalid, var(--spectrum-textfield-icon-size-invalid))
+			);
 		}
 	}
+
+	/*** Quiet Input Valid ✅ ***/
 	&.is-valid{
 		.spectrum-Textfield-input{
-			padding-inline-end: calc(var(--spectrum-textfield-icon-spacing-inline-start-valid) + var(--spectrum-textfield-icon-size-valid));
+			padding-inline-end: calc(
+				var(--mod-textfield-icon-spacing-inline-start-valid, var(--spectrum-textfield-icon-spacing-inline-start-valid)) +
+				var(--mod-textfield-icon-size-valid, var(--spectrum-textfield-icon-size-valid))
+			);
 		}
 	}
 }
@@ -1038,7 +1043,12 @@ governing permissions and limitations under the License.
 
 	/*** Input Valid ✅ ***/
 	.is-valid & {
-		padding-inline-end: calc(var(--spectrum-textfield-icon-spacing-inline-start-valid) + var(-spectrum-textfield-icon-size-valid) + var(--spectrum-textfield-padding-inline-default));
+		padding-inline-end: calc(
+			var(--mod-textfield-icon-spacing-inline-start-valid, var(--spectrum-textfield-icon-spacing-inline-start-valid)) +
+			var(--mod-textfield-icon-size-valid, var(--spectrum-textfield-icon-size-valid)) +
+			var(--mod-textfield-icon-spacing-inline-end-valid, var(--spectrum-textfield-icon-spacing-inline-end-valid)) -
+			var(--mod-textfield-border-width, var(--spectrum-textfield-border-width))
+		);
 		color: var(
 			--highcontrast-textfield-text-color-valid,
 			var(
@@ -1050,7 +1060,12 @@ governing permissions and limitations under the License.
 
 	/*** Input Invalid ⚠️ ***/
 	.is-invalid & {
-		padding-inline-end: calc(var(--spectrum-textfield-icon-spacing-inline-start-invalid) + var(--spectrum-textfield-icon-size-invalid) + var(--spectrum-textfield-padding-inline-default));
+		padding-inline-end: calc(
+			var(--mod-textfield-icon-spacing-inline-start-invalid, var(--spectrum-textfield-icon-spacing-inline-start-invalid)) +
+			var(--mod-textfield-icon-size-invalid, var(--spectrum-textfield-icon-size-invalid)) +
+			var(--mod-textfield-icon-spacing-inline-end-invalid, var(--spectrum-textfield-icon-spacing-inline-end-invalid)) -
+			var(--mod-textfield-border-width, var(--spectrum-textfield-border-width))
+		);
 		color: var(
 			--highcontrast-textfield-text-color-invalid,
 			var(
