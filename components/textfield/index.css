@@ -512,7 +512,7 @@ governing permissions and limitations under the License.
 	}
 	&.is-valid{
 		.spectrum-Textfield-input{
-			padding-inline-end: calc(var(--spectrum-textfield-icon-spacing-inline-start-valid) + var(-spectrum-textfield-icon-size-valid));
+			padding-inline-end: calc(var(--spectrum-textfield-icon-spacing-inline-start-valid) + var(--spectrum-textfield-icon-size-valid));
 		}
 	}
 }
