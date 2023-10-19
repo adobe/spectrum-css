@@ -1,5 +1,6 @@
 | Modifiable Custom Properties                            |
 | ------------------------------------------------------- |
+| `--mod--textfield-icon-spacing-inline-start-invalid`    |
 | `--mod-texfield-animation-duration`                     |
 | `--mod-text-area-min-block-size`                        |
 | `--mod-text-area-min-block-size-quiet`                  |
@@ -37,6 +38,7 @@
 | `--mod-textfield-icon-color-invalid`                    |
 | `--mod-textfield-icon-color-valid`                      |
 | `--mod-textfield-icon-size-invalid`                     |
+| `--mod-textfield-icon-size-valid`                       |
 | `--mod-textfield-icon-spacing-block-invalid`            |
 | `--mod-textfield-icon-spacing-block-valid`              |
 | `--mod-textfield-icon-spacing-inline-end-invalid`       |
