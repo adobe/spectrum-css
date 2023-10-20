@@ -17,9 +17,7 @@ export default {
     core: {
         disableTelemetry: true,
     },
-    framework: {
-        name: "@storybook/web-components-webpack5",
-    },
+    framework: "@storybook/web-components-webpack5",
     stories: [
         // "../components/*/stories/*.stories.mdx",
         join(componentsPath, "*/stories/*.stories.js"),
@@ -42,8 +40,6 @@ export default {
         },
         // https://github.com/storybookjs/storybook/tree/next/code/addons/a11y
         "@storybook/addon-a11y",
-        // https://storybook.js.org/addons/@whitespace/storybook-addon-html/
-        // "@whitespace/storybook-addon-html",
         // https://storybook.js.org/addons/@etchteam/storybook-addon-status
         "@etchteam/storybook-addon-status",
         // https://storybook.js.org/addons/@storybook/addon-actions
@@ -82,25 +78,25 @@ export default {
                     }, {}),
                 },
             },
-            module: {
-                rules: [
-                    {
-                        test: /\.css$/,
-                        // exclude: [/\/node_modules\//, /\/dist\//],
-                        use: [
-                            {
-                                loader: require.resolve("postcss-loader"),
-                                options: {
-                                    implementation: require.resolve("postcss"),
-                                    postcssOptions: {
-                                        config: true,
-                                    },
-                                },
-                            },
-                        ],
-                    },
-                ],
-            },
+            // module: {
+            //     rules: [
+            //         {
+            //             test: /\.css$/,
+            //             // exclude: [/\/node_modules\//, /\/dist\//],
+            //             use: [
+            //                 {
+            //                     loader: require.resolve("postcss-loader"),
+            //                     options: {
+            //                         implementation: require.resolve("postcss"),
+            //                         postcssOptions: {
+            //                             config: true,
+            //                         },
+            //                     },
+            //                 },
+            //             ],
+            //         },
+            //     ],
+            // },
         });
     },
     docs: {
