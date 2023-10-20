@@ -92,6 +92,9 @@ governing permissions and limitations under the License.
 	--spectrum-textfield-icon-spacing-inline-start-valid: var(
 		--spectrum-field-text-to-validation-icon-medium
 	);
+	--spectrum-textfield-icon-spacing-inline-end-valid: var(
+		--spectrum-field-edge-to-validation-icon-medium
+	);
 	--spectrum-textfield-icon-spacing-inline-end-quiet-valid: var(
 		--spectrum-field-edge-to-validation-icon-quiet
 	);
