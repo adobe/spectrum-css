@@ -3,7 +3,6 @@
    - Search for (issues)[https://github.com/adobe/spectrum-css/issues]
    - If there's no issue, please [file it](https://github.com/adobe/spectrum-css/issues/new/choose) and tag @pfulton or @castastrophe for feedback.
 -->
-
 ## Description
 
 <!-- Describe what you changed and link to relevant issue(s) (e.g., #000) -->
@@ -12,8 +11,9 @@
 
 Please tag yourself on the tests you've marked complete to confirm the tests have been run by someone other than the author.
 
+### Validation steps
 <!--
-  Example test outline:
+  Include steps for the PR reviewer that explain how they should test your PR. Example test outline:
   1. Open the [storybook](url) for the button component:
     - [ ] Hover over the button and validate the new hover background color is applied
     - [x] Click the button and validate the new active background color is applied [@castastrophe]
@@ -23,17 +23,14 @@ Please tag yourself on the tests you've marked complete to confirm the tests hav
 
 Validate:
 
-1. A legacy documentation page (such as [accordion](https://pr-###--spectrum-css.netlify.app/accordion.html)), including:
+1. The documentation pages for at least two other components are still loading, including:
 
-- [ ] The page renders correctly
-- [ ] The page is accessible
-- [ ] The page is responsive
+- [ ] The pages render correctly, are accessible, and are responsive.
 
-2. A migrated documentation page (such as [action group](https://pr-###--spectrum-css.netlify.app/actiongroup.html)), including:
+2. If components have been modified, VRTs have been run on this branch:
 
-- [ ] The page renders correctly
-- [ ] The page is accessible
-- [ ] The page is responsive
+- [ ] VRTs have been run and looked at.
+- [ ] Any VRT changes have been accepted (by reviewer and/or PR author), or there are no changes.
 
 ## Screenshots
 
@@ -46,8 +43,6 @@ Validate:
 - [ ] I have read the [contribution guidelines](/.github/CONTRIBUTING.md).
 - [ ] I have updated relevant storybook stories and templates.
 - [ ] I have tested these changes in Windows High Contrast mode.
-
 - [ ] If my change impacts **other components**, I have tested to make sure they don't break.
 - [ ] If my change impacts **documentation**, I have updated the documentation accordingly.
-
 - [ ] ✨ This pull request is ready to merge. ✨
