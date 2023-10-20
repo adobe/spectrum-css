@@ -51,11 +51,11 @@
 | `--mod-textfield-label-spacing-block-quiet`             |
 | `--mod-textfield-label-spacing-inline-side-label`       |
 | `--mod-textfield-min-width`                             |
-| `--mod-textfield-padding-inline-default`                |
 | `--mod-textfield-placeholder-font-size`                 |
 | `--mod-textfield-spacing-block-end`                     |
 | `--mod-textfield-spacing-block-quiet`                   |
 | `--mod-textfield-spacing-block-start`                   |
+| `--mod-textfield-spacing-inline`                        |
 | `--mod-textfield-spacing-inline-quiet`                  |
 | `--mod-textfield-text-color-default`                    |
 | `--mod-textfield-text-color-disabled`                   |

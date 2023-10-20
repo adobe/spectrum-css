@@ -14,12 +14,6 @@ governing permissions and limitations under the License.
   /* set input line-height to the height of the textfield - prevents the cutting off of diacritics in some languages */
   /* disallow mod for max compatibility */
   --spectrum-textfield-input-line-height: var(--spectrum-textfield-height);
-
-	--spectrum-textfield-padding-inline-default: calc(
-		var(--spectrum-textfield-spacing-inline) -
-		var(--spectrum-textfield-border-width)
-		);
-
   --spectrum-texfield-animation-duration: var(
 		--spectrum-animation-duration-100
 	);
@@ -101,15 +95,6 @@ governing permissions and limitations under the License.
 	--spectrum-textfield-icon-spacing-block-valid: var(
 		--spectrum-field-top-to-validation-icon-medium
 	);
-
-	/* icon end spacing override for combobox */
-	--spectrum-textfield-icon-spacing-inline-end-override: 32px; /* TODO - placeholder - reevaluate after combobox migration */
-
-	/* TODO - icon spacing override for search - reevaluate after search is migrated */
-	/* @deprecation --spectrum-Textfield-workflow-icon-width and --spectrum-Textfield-workflow-icon-gap will be removed during the S2 migration;
-	please update your code to --spectrum-textfield-workflow-icon-width and --spectrum-textfield-workflow-icon-gap */
-	--spectrum-textfield-workflow-icon-width: var(--spectrum-Textfield-workflow-icon-width, 18px);
-	--spectrum-textfield-workflow-icon-gap: var(--spectrum-Textfield-workflow-icon-gap, 6px);
 
 	/* font styles */
 	--spectrum-textfield-font-family: var(--spectrum-sans-font-family-stack);
@@ -624,13 +609,6 @@ governing permissions and limitations under the License.
 		);
 	}
 
-	/* TODO - reevaluate InputGroup override after combobox is migrated - this ensures icon is not hidden under picker button */
-	.spectrum-InputGroup & {
-		margin-inline-end: var(
-			--spectrum-textfield-icon-spacing-inline-end-override
-		);
-	}
-}
 
 /********* Child Component - Label *********/
 .spectrum-FieldLabel {
@@ -746,9 +724,12 @@ governing permissions and limitations under the License.
 			) -
 			var(--mod-textfield-border-width, var(--spectrum-textfield-border-width))
 	);
-	/* can I use just the one or do I need both here */
-	padding-inline-start: var(--mod-textfield-padding-inline-default, var(--spectrum-textfield-padding-inline-default));
-	padding-inline-end: var(--mod-textfield-padding-inline-default, var(--spectrum-textfield-padding-inline-default));
+
+	padding-inline: calc(
+		var(--mod-textfield-spacing-inline, var(--spectrum-textfield-spacing-inline)) -
+		var(--mod-textfield-border-width, var(--spectrum-textfield-border-width))
+	);
+
 	/* Use padding instead of text-indent because text-indent does not left align the text in Edge browser  */
 	text-indent: 0;
 	vertical-align: top; /* used to align them correctly in forms. */
@@ -820,20 +801,6 @@ governing permissions and limitations under the License.
 	/* place in same cell: input, focus indicator, and grows sizer */
 	grid-row: 2;
 	grid-column: 1 / span 2;
-
-	/* TODO - quiet search field left padding - reevaluate when search is migrated */
-	.spectrum-Textfield--quiet .spectrum-Textfield-icon ~ & {
-		padding-inline-start: calc(
-			var(
-					--mod-textfield-workflow-icon-gap,
-					var(--spectrum-textfield-workflow-icon-gap)
-				) +
-				var(
-					--mod-textfield-workflow-icon-width,
-					var(--spectrum-textfield-workflow-icon-width)
-				)
-		);
-	}
 
 	/* Remove the native clear button in IE */
 	/* http://stackoverflow.com/questions/14007655/remove-ie10s-clear-field-x-button-on-certain-inputs */
@@ -1190,15 +1157,10 @@ governing permissions and limitations under the License.
 			--mod-textfield-spacing-block-start,
 			var(--spectrum-textfield-spacing-block-start)
 		);
-		padding-inline-start: var(
+		padding-inline: var(
 			--mod-textfield-spacing-inline-quiet,
 			var(--spectrum-textfield-spacing-inline-quiet)
 		);
-		padding-inline-end: var(
-			--mod-textfield-spacing-inline-quiet,
-			var(--spectrum-textfield-spacing-inline-quiet)
-		);
-
 		background-color: transparent;
 		border-radius: 0;
 
