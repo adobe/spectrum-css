@@ -1346,49 +1346,39 @@ examples:
         <div class="spectrum-Modal spectrum-Tray is-open spectrum-Tray">
           <ul class="spectrum-Menu is-selectableMultiple" role="menu" style="--mod-menu-inline-size: 100%;">
             <li role="presentation">
-              <li class="spectrum-Menu-item spectrum-Menu-item--back" role="menuitem" tabindex="0">
-                <svg 
-                  class="spectrum-Icon spectrum-Icon--sizeM spectrum-UIIcon-ArrowLeft100 spectrum-Menu-backIcon"
-                  focusable="false" 
-                  aria-label="View previous menu"
-                >
-                  <use xlink:href="#spectrum-css-icon-Arrow100" />
-                </svg>
-                <span class="spectrum-Menu-itemLabel">Snap to</span>
-              </li>
-              <li class="spectrum-Menu-item is-selected" role="menuitem" tabindex="0">
-                <label class="spectrum-Checkbox spectrum-Checkbox--sizeM spectrum-Checkbox--emphasized spectrum-Menu-itemCheckbox">
-                  <input type="checkbox" class="spectrum-Checkbox-input" checked>
-                  <span class="spectrum-Checkbox-box">
-                    <svg class="spectrum-Icon spectrum-UIIcon-Checkmark100 spectrum-Checkbox-checkmark" focusable="false" aria-hidden="true">
-                      <use xlink:href="#spectrum-css-icon-Checkmark100" />
-                    </svg>
-                  </span>
-                  <span class="spectrum-Checkbox-label spectrum-Menu-itemLabel">Guides</span>
-                </label>
-              </li>
-              <li class="spectrum-Menu-item is-selectable" role="menuitem" tabindex="0">
-                <label class="spectrum-Checkbox spectrum-Checkbox--sizeM spectrum-Checkbox--emphasized spectrum-Menu-itemCheckbox">
-                  <input type="checkbox" class="spectrum-Checkbox-input">
-                  <span class="spectrum-Checkbox-box">
-                    <svg class="spectrum-Icon spectrum-UIIcon-Checkmark100 spectrum-Checkbox-checkmark" focusable="false" aria-hidden="true">
-                      <use xlink:href="#spectrum-css-icon-Checkmark100" />
-                    </svg>
-                  </span>
-                  <span class="spectrum-Checkbox-label spectrum-Menu-itemLabel"">Grid</span>
-                </label>
-              </li>
-              <li class="spectrum-Menu-item is-selected" role="menuitem" tabindex="0">
-                <label class="spectrum-Checkbox spectrum-Checkbox--sizeM spectrum-Checkbox--emphasized spectrum-Menu-itemCheckbox">
-                  <input type="checkbox" class="spectrum-Checkbox-input" checked>
-                  <span class="spectrum-Checkbox-box">
-                    <svg class="spectrum-Icon spectrum-UIIcon-Checkmark100 spectrum-Checkbox-checkmark" focusable="false" aria-hidden="true">
-                      <use xlink:href="#spectrum-css-icon-Checkmark100" />
-                    </svg>
-                  </span>
-                  <span class="spectrum-Checkbox-label spectrum-Menu-itemLabel">Rulers</span>
-                </label>
-              </li>
+              <div class="spectrum-Menu-back">
+                <button aria-label="Back to previous menu" class="spectrum-Menu-backButton" type="button" role="menuitem">
+                  <svg
+                    class="spectrum-Icon spectrum-Icon--sizeM spectrum-UIIcon-ArrowLeft100 spectrum-Menu-backIcon"
+                    aria-hidden="true"
+                  ><use xlink:href="#spectrum-css-icon-Arrow100" /></svg>
+                </button>
+                <span class="spectrum-Menu-backHeading" id="back-menu-heading" aria-hidden="true">Snap to</span>
+              </div>
+              <ul class="spectrum-Menu is-selectable" role="group" aria-labelledby="back-menu-heading">
+                <li class="spectrum-Menu-item is-selected" role="menuitem" tabindex="0">
+                  <svg class="spectrum-Icon spectrum-Icon--sizeM spectrum-UIIcon-Checkmark100 spectrum-Menu-itemIcon spectrum-Menu-checkmark" focusable="false" aria-hidden="true">
+                    <use xlink:href="#spectrum-css-icon-Checkmark100" />
+                  </svg>
+                  <svg class="spectrum-Icon spectrum-Icon--sizeM spectrum-Menu-itemIcon spectrum-Menu-itemIcon--workflowIcon" focusable="false" aria-hidden="true" aria-label="Selection Icon">
+                    <use xlink:href="#spectrum-icon-18-Selection"></use>
+                  </svg>
+                  <span class="spectrum-Menu-itemLabel">Marquee</span>
+                </li>
+                <li class="spectrum-Menu-item is-selectable" role="menuitem" tabindex="0">
+                  <svg class="spectrum-Icon spectrum-Icon--sizeM spectrum-Menu-itemIcon spectrum-Menu-itemIcon--workflowIcon" focusable="false" aria-hidden="true" aria-label="Select Add Icon">
+                    <use xlink:href="#spectrum-icon-18-SelectAdd"></use>
+                  </svg>
+                  <span class="spectrum-Menu-itemLabel">Add</span>
+                </li>
+                <li class="spectrum-Menu-item is-selectable" role="menuitem" tabindex="0">
+                  <svg class="spectrum-Icon spectrum-Icon--sizeM spectrum-Menu-itemIcon spectrum-Menu-itemIcon--workflowIcon" focusable="false" aria-hidden="true" aria-label="Select Subtract Icon">
+                    <use xlink:href="#spectrum-icon-18-SelectSubtract"></use>
+                  </svg>
+                  <span class="spectrum-Menu-itemLabel">Subtract</span>
+                </li>
+              </ul>
+            </li>
           </ul>
         </div>
       </div>

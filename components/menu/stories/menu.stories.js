@@ -422,19 +422,21 @@ TraySubmenu.args = {
   isTraySubmenu: true,
   items: [
     {
-      label: "Snap to",
-      isTraySubmenuBack: true,
-    },
-    {
-      label: "Guides",
-      isSelected: true,
-      isChecked: true,
-    },
-    {
-      label: "Grid",
-    },
-    {
-      label: "Rulers",
-    },
+      heading: "Snap to",
+      idx: 1,
+      items: [
+        {
+          label: "Guides",
+          isSelected: true,
+          isChecked: true,
+        },
+        {
+          label: "Grid",
+        },
+        {
+          label: "Rulers",
+        },
+      ]
+    }
   ],
 };

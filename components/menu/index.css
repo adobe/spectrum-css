@@ -794,15 +794,43 @@ governing permissions and limitations under the License.
 }
 
 /* Tray submenu */
-.spectrum-Menu-item--back {
+.spectrum-Menu-back {
   display: flex;
   flex-flow: row wrap;
   align-items: center;
   padding-inline-start: var(--mod-menu-back-padding-inline-start, 0);
   padding-block: var(--mod-menu-back-padding-block, 0);
+
+  .spectrum-Menu-sectionHeading {
+    padding: 0;
+  }
+}
+
+.spectrum-Menu-backButton {
+  padding: 0;
+  margin: 0;
+  background: transparent;
+  border: 0;
+  display: inline-flex;
+  cursor: pointer;
+
+  &:focus-visible {
+    outline: var(--spectrum-focus-indicator-thickness) solid var(--spectrum-focus-indicator-color);
+    outline-offset: calc(-1 * (var(--spectrum-focus-indicator-thickness) + 1px));
+  }
+}
+
+.spectrum-Menu-backHeading {
+  display: block;
+  color: var(--highcontrast-menu-item-color-default, var(--mod-menu-back-heading-color, var(--spectrum-menu-section-header-color)));
+  font-size: var(--mod-menu-section-header-font-size, var(--spectrum-menu-section-header-font-size));
+  font-weight: var(--mod-menu-section-header-font-weight, var(--spectrum-menu-section-header-font-weight));
+  line-height: var(--mod-menu-section-header-line-height, var(--spectrum-menu-section-header-line-height));
 }
 
 .spectrum-Menu-backIcon {
   margin-block: var(--mod-menu-back-icon-margin-block, var(--spectrum-menu-back-icon-margin));
   margin-inline: var(--mod-menu-back-icon-margin-inline, var(--spectrum-menu-back-icon-margin));
+  fill: var(--highcontrast-menu-item-color-default, var(--mod-menu-back-icon-color-default));
+  color: var(--highcontrast-menu-item-color-default, var(--mod-menu-back-icon-color-default));
 }

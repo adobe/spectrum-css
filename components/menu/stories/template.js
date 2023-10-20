@@ -24,7 +24,6 @@ export const MenuItem = ({
   isFocused = false,
   isDrillIn = false,
   isCollapsible = false,
-  isTraySubmenuBack = false,
   isOpen = false,
   role = "menuitem",
   items = [],
@@ -47,7 +46,6 @@ export const MenuItem = ({
         "is-disabled": isDisabled,
         [`${rootClass}--drillIn`]: isDrillIn,
         [`${rootClass}--collapsible`]: isCollapsible,
-        [`${rootClass}--back`]: isTraySubmenuBack,
         "is-open": isOpen,
       })}
       id=${ifDefined(id)}
@@ -74,13 +72,6 @@ export const MenuItem = ({
               `${rootClass}Icon`,
               `${rootClass}Icon--workflowIcon`
             ]
-          }) : ''}
-      ${isTraySubmenuBack
-        ? Icon({
-            ...globals,
-            iconName: "ArrowLeft",
-            size,
-            customClasses: [`spectrum-Menu-backIcon`] 
           }) : ''}
       ${isCollapsible
         ? html`<span class="spectrum-Menu-sectionHeading">${label}</span>`
@@ -113,8 +104,9 @@ export const MenuItem = ({
           ...globals,
           size,
           isEmphasized: true,
+          isChecked: isSelected,
           label: label,
-          id: `checkbox-${idx}`,
+          id: `menu-checkbox-${idx}`,
           customClasses: [
             `${rootClass}Checkbox`,
           ],
@@ -139,8 +131,9 @@ export const MenuItem = ({
           ${Switch({
               ...globals,
               size,
+              isChecked: isSelected,
               label: null,
-              id: `switch-${idx}`,
+              id: `menu-switch-${idx}`,
               customClasses: [
                 `${rootClass}Switch`,
               ],
@@ -159,33 +152,49 @@ export const MenuGroup = ({
   items = [],
   isDisabled = false,
   isSelectable = false,
+  isTraySubmenu = false,
   subrole,
   size,
   ...globals
 }) => html`
-    <li
-      id=${ifDefined(id)}
-      role="presentation">
-      ${heading
-        ? html`<span
-            class="spectrum-Menu-sectionHeading"
+  <li
+    id=${ifDefined(id)}
+    role="presentation"
+  >
+    ${!isTraySubmenu 
+      ? html`<span
+          class="spectrum-Menu-sectionHeading"
+          id=${id ?? `menu-heading-category-${idx}`}
+          aria-hidden="true"
+        >${heading}</span>`
+      : html`<div class="spectrum-Menu-back">
+          <button aria-label="Back to previous menu" class="spectrum-Menu-backButton" type="button" role="menuitem">
+            ${Icon({
+              ...globals,
+              iconName: "ArrowLeft",
+              size,
+              customClasses: [`spectrum-Menu-backIcon`] 
+            })}
+          </button>
+          <span
+            class="spectrum-Menu-backHeading"
             id=${id ?? `menu-heading-category-${idx}`}
             aria-hidden="true"
-            >${heading}</span
-          >`
-        : ""}
-      ${Template({
-        ...globals,
-        role: "group",
-        subrole,
-        labelledby: id,
-        items,
-        isDisabled,
-        isSelectable,
-        size,
-      })}
-    </li>
-  `;
+          >${heading}</span>
+        </div>`
+    }
+    ${Template({
+      ...globals,
+      role: "group",
+      subrole,
+      labelledby: id ?? `menu-heading-category-${idx}`,
+      items,
+      isDisabled,
+      isSelectable,
+      size,
+    })}
+  </li>
+`;
 
 export const Template = ({
   rootClass = "spectrum-Menu",
@@ -228,7 +237,15 @@ export const Template = ({
             size: "s",
             customClasses: [`${rootClass}-divider`],
           });
-        else if (i.heading) return MenuGroup({ ...i, ...globals, subrole, size, selectionMode });
+        else if (i.heading || i.isTraySubmenu)
+          return MenuGroup({ 
+            ...i,
+            ...globals,
+            subrole,
+            size,
+            selectionMode,
+            isTraySubmenu,
+          });
         else
           return MenuItem({
             ...globals,
@@ -237,7 +254,7 @@ export const Template = ({
             rootClass: `${rootClass}-item`,
             role: subrole,
             size,
-            selectionMode: idx == 0 && isTraySubmenu ? "none" : selectionMode,
+            selectionMode,
             hasActions,
           });
       })}

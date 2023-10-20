@@ -1,5 +1,7 @@
 | Modifiable Custom Properties                                       |
 | ------------------------------------------------------------------ |
+| `--mod-menu-back-heading-color`                                    |
+| `--mod-menu-back-icon-color-default`                               |
 | `--mod-menu-back-icon-margin-block`                                |
 | `--mod-menu-back-icon-margin-inline`                               |
 | `--mod-menu-back-padding-block`                                    |
