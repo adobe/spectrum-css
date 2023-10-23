@@ -15,7 +15,8 @@ export const AssetListItem = ({
 	image,
 	iconName,
 	label,
-	id,
+	checkboxId,
+	ariaLabelledby,
 	isNavigated = false,
 	isSelectable = false,
 	isSelected = false,
@@ -40,7 +41,8 @@ export const AssetListItem = ({
 			...globals,
 			size: "m",
 			isChecked: isSelected,
-			ariaLabelledby: id,
+			ariaLabelledby,
+			id: checkboxId,
 			customClasses: [`${rootClass}Selector`],
 		}))}
 		${when(
@@ -55,13 +57,14 @@ export const AssetListItem = ({
 				...globals,
 			})
 		)}
-		${when(label, () => html`<span class="${rootClass}Label" id=${id}>${label}</span>`)}
+		${when(label, () => html`<span class="${rootClass}Label">${label}</span>`)}
 		${when(!isSelectable && !isBranch, () =>
 			Checkbox({
 				...globals,
 				size: "m",
 				isChecked: isSelected,
-				ariaLabelledby: id,
+				ariaLabelledby,
+				id: checkboxId,
 				customClasses: [`${rootClass}Selector`],
 			}))}
 		${when(isBranch, () =>

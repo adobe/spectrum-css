@@ -33,13 +33,15 @@ Default.args = {
 			image: "example-ava.png",
 			label: "Shantanu.jpg",
 			isSelectable: true,
-			id: "assetitemlabel-1",
+			ariaLabelledBy: "assetitemlabel-1",
+			checkboxId: "checkbox-1"
 		},
 		{
 			iconName: "Document",
 			label: "Resource Allocation.csv",
 			isSelectable: true,
-			id: "assetitemlabel-2",
+			ariaLabelledby: "assetitemlabel-2",
+			checkboxId: "checkbox-2",
 		},
 		{
 			iconName: "Folder",
@@ -47,7 +49,8 @@ Default.args = {
 			isSelectable: true,
 			isBranch: true,
 			isSelected: true,
-			id: "assetitemlabel-3",
+			ariaLabelledby: "assetitemlabel-3",
+			checkboxId: "checkbox-3",
 		},
 		{
 			iconName: "Folder",
@@ -56,7 +59,8 @@ Default.args = {
 			isBranch: true,
 			isSelected: false,
 			isNavigated: true,
-			id: "assetitemlabel-4",
+			ariaLabelledby: "assetitemlabel-4",
+			checkboxId: "checkbox-4",
 		},
 	],
 };
