@@ -15,6 +15,17 @@ sections:
 
       ### Three Handles is included in the `range` variant
       When using a slider with three handles, classify it as a `range` variant to apply correct styling
+
+      ### Indicating focus
+      Focus must be bubbled up to the parent so descendants siblings can be styled.
+
+      Thus, implementations should add the following class to the `.spectrum-Slider` parent class in the following situations:
+
+      * `.is-disabled` - when the slider is disabled
+
+      Implementations should also add the following class to the `.spectrum-Slider-handle` parent class in the following situations:
+
+      * `.is-focused` - when the handle input is focused with the mouse or keyboard
 examples:
   - id: slider
     name: Standard
@@ -118,7 +129,7 @@ examples:
             </div>
           </div>
         </div>
-        
+
         <div class="spectrum-Examples-item" style="width: 200px">
           <h4 class="spectrum-Heading spectrum-Heading--sizeXS spectrum-Examples-itemHeading">XL</h4>
           <div class="spectrum-Slider spectrum-Slider--sizeXL">
