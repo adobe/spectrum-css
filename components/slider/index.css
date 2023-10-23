@@ -599,6 +599,7 @@ governing permissions and limitations under the License.
 
     &::before {
       box-shadow: 0 0 0 var(--spectrum-focus-indicator-thickness) var(--highcontrast-slider-handle-focus-ring-color-key-focus, var(--mod-slider-handle-focus-ring-color-key-focus, var(--spectrum-slider-handle-focus-ring-color-key-focus)));
+      forced-color-adjust: none;
     }
   }
 
@@ -714,7 +715,9 @@ governing permissions and limitations under the License.
     --highcontrast-slider-ramp-track-color-disabled: GrayText;
     --highcontrast-slider-tick-mark-color: ButtonText;
     --highcontrast-slider-handle-border-color-hover: Highlight;
-    --highcontrast-slider-track-color-hover: Highlight;
+    --highcontrast-slider-handle-border-color-down: Highlight;
+    --highcontrast-slider-handle-border-color-key-focus: Highlight;
+    --highcontrast-slider-handle-focus-ring-color-key-focus: CanvasText;
 
     --spectrum-slider-track-color: ButtonText;
     --spectrum-slider-track-fill-color: ButtonText;
@@ -746,32 +749,15 @@ governing permissions and limitations under the License.
 
   }
 
-  /* Slider track background color doesn't show in high contrast mode, but border does */
   .spectrum-Slider:not(.is-disabled) {
-    .spectrum-Slider-track {
-      &::before {
-        border-block-start: 2px solid transparent;
-      }
-    }
-
     /* We only need these states in high contrast mode */
     .spectrum-Slider-controls:hover,
     .spectrum-Slider-controls:active,
     .spectrum-Slider-controls:focus-within {
-      .spectrum-Slider-track::before {
-        background: var(--highcontrast-slider-track-color-hover, var(--mod-slider-track-color, var(--spectrum-slider-track-color)));
-        border-block-start: none;
-      }
-
-      .spectrum-Slider-handle {
-        border-color: var(--highcontrast-slider-handle-border-color-hover, var(--mod-slider-handle-border-color-hover, var(--spectrum-slider-handle-border-color-hover)));
-
-        &.is-focused {
-          &::before {
-            border: 2px solid transparent;
-          }
-        }
-      }
+      --highcontrast-slider-track-fill-color: Highlight;
+      --highcontrast-slider-track-color: Highlight;
+      --highcontrast-slider-handle-border-color: Highlight;
+      --highcontrast-slider-ramp-track-color: Highlight;
     }
   }
 
