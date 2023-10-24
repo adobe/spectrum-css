@@ -745,14 +745,16 @@ governing permissions and limitations under the License.
     --spectrum-slider-ramp-handle-border-color-active: ButtonText;
   }
 
-  .spectrum-Slider:not(.is-disabled):hover,
-  .spectrum-Slider:not(.is-disabled):active,
-  .spectrum-Slider:not(.is-disabled):focus-within {
-    --highcontrast-slider-track-fill-color: Highlight;
-    --highcontrast-slider-track-color: Highlight;
-    --highcontrast-slider-handle-border-color: Highlight;
-    --highcontrast-slider-ramp-track-color: Highlight;
-    --highcontrast-slider-tick-mark-color: Highlight;
+  .spectrum-Slider:not(.is-disabled) {
+    .spectrum-Slider-controls:hover,
+    .spectrum-Slider-controls:active,
+    .spectrum-Slider-controls:focus-within {
+      --highcontrast-slider-track-fill-color: Highlight;
+      --highcontrast-slider-track-color: Highlight;
+      --highcontrast-slider-handle-border-color: Highlight;
+      --highcontrast-slider-ramp-track-color: Highlight;
+      --highcontrast-slider-tick-mark-color: Highlight;
+    }
   }
 
   /* Slider handle turns transparent in high contrast mode for ramp */
