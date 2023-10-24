@@ -613,15 +613,9 @@ governing permissions and limitations under the License.
 .spectrum-Slider--ramp {
   .spectrum-Slider-handle {
     box-shadow: 0 0 0 var(--spectrum-slider-handle-gap) var(--highcontrast-slider-ramp-handle-border-color-active, var(--mod-sectrum-slider-ramp-handle-border-color-active, var(--spectrum-slider-ramp-handle-border-color-active)));
-    background: var(--mod-slider-ramp-handle-background-color, var(--spectrum-slider-ramp-handle-background-color));
-
-    @media (forced-colors: active) {
-      /* forced-color-adjust required to ensure the "circle" around the handle is transparent */
-      forced-color-adjust: none;
-      box-shadow: 0 0 0 var(--spectrum-slider-handle-gap) ButtonFace;
-      border-color: ButtonText;
-      background-color: ButtonFace;
-    }
+    background: var(--mod-slider-ramp-handle-background-color, var(--highcontrast-slider-ramp-handle-background-color, var(--spectrum-slider-ramp-handle-background-color)));
+    /* forced-color-adjust required to ensure the "circle" around the handle is transparent */
+    forced-color-adjust: none;
   }
 }
 
@@ -707,17 +701,20 @@ governing permissions and limitations under the License.
 @media (forced-colors: active) {
 
   .spectrum-Slider {
-
     /*  over-writes */
     --highcontrast-slider-track-color: ButtonText;
     --highcontrast-slider-track-fill-color: ButtonText;
     --highcontrast-slider-ramp-track-color: ButtonText;
     --highcontrast-slider-ramp-track-color-disabled: GrayText;
     --highcontrast-slider-tick-mark-color: ButtonText;
+    --highcontrast-slider-handle-border-color: ButtonText;
     --highcontrast-slider-handle-border-color-hover: Highlight;
     --highcontrast-slider-handle-border-color-down: Highlight;
     --highcontrast-slider-handle-border-color-key-focus: Highlight;
     --highcontrast-slider-handle-focus-ring-color-key-focus: CanvasText;
+    --highcontrast-slider-handle-background-color: ButtonFace;
+    --highcontrast-slider-ramp-handle-border-color-active: ButtonFace;
+    --highcontrast-slider-ramp-handle-background-color: ButtonFace;
 
     --spectrum-slider-track-color: ButtonText;
     --spectrum-slider-track-fill-color: ButtonText;
@@ -746,21 +743,17 @@ governing permissions and limitations under the License.
     --spectrum-slider-label-text-color-disabled: GrayText;
 
     --spectrum-slider-ramp-handle-border-color-active: ButtonText;
-
   }
 
-  .spectrum-Slider:not(.is-disabled) {
-    /* We only need these states in high contrast mode */
-    .spectrum-Slider-controls:hover,
-    .spectrum-Slider-controls:active,
-    .spectrum-Slider-controls:focus-within {
-      --highcontrast-slider-track-fill-color: Highlight;
-      --highcontrast-slider-track-color: Highlight;
-      --highcontrast-slider-handle-border-color: Highlight;
-      --highcontrast-slider-ramp-track-color: Highlight;
-    }
+  .spectrum-Slider:not(.is-disabled):hover,
+  .spectrum-Slider:not(.is-disabled):active,
+  .spectrum-Slider:not(.is-disabled):focus-within {
+    --highcontrast-slider-track-fill-color: Highlight;
+    --highcontrast-slider-track-color: Highlight;
+    --highcontrast-slider-handle-border-color: Highlight;
+    --highcontrast-slider-ramp-track-color: Highlight;
+    --highcontrast-slider-tick-mark-color: Highlight;
   }
-
 
   /* Slider handle turns transparent in high contrast mode for ramp */
   .spectrum-Slider.is-disabled {
