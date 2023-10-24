@@ -743,25 +743,26 @@ governing permissions and limitations under the License.
     --spectrum-slider-label-text-color-disabled: GrayText;
 
     --spectrum-slider-ramp-handle-border-color-active: ButtonText;
-  }
 
-  .spectrum-Slider:not(.is-disabled) {
-    .spectrum-Slider-controls:hover,
-    .spectrum-Slider-controls:active,
-    .spectrum-Slider-controls:focus-within {
-      --highcontrast-slider-track-fill-color: Highlight;
-      --highcontrast-slider-track-color: Highlight;
-      --highcontrast-slider-handle-border-color: Highlight;
-      --highcontrast-slider-ramp-track-color: Highlight;
-      --highcontrast-slider-tick-mark-color: Highlight;
+    /* Slider control hover and focus colors for high contrast mode */
+    &:not(.is-disabled) {
+      .spectrum-Slider-controls:hover,
+      .spectrum-Slider-controls:active,
+      .spectrum-Slider-controls:focus-within {
+        --highcontrast-slider-track-fill-color: Highlight;
+        --highcontrast-slider-track-color: Highlight;
+        --highcontrast-slider-handle-border-color: Highlight;
+        --highcontrast-slider-ramp-track-color: Highlight;
+        --highcontrast-slider-tick-mark-color: Highlight;
+      }
     }
-  }
 
-  /* Slider handle turns transparent in high contrast mode for ramp */
-  .spectrum-Slider.is-disabled {
-    .spectrum-Slider-ramp + .spectrum-Slider-handle {
-      fill: ButtonFace;
-      background-color: ButtonFace;
+    /* Slider handle turns transparent in high contrast mode for ramp */
+    &.is-disabled {
+      .spectrum-Slider-ramp + .spectrum-Slider-handle {
+        fill: ButtonFace;
+        background-color: ButtonFace;
+      }
     }
   }
 }
