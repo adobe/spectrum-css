@@ -23,7 +23,7 @@ sections:
 
       * `.is-disabled` - when the slider is disabled
 
-      Implementations should also add the following class to the `.spectrum-Slider-handle` parent class in the following situations:
+      Implementations should also bubble the following class to the `.spectrum-Slider-controls` parent class in the following situations:
 
       * `.is-focused` - when the handle input is focused with the mouse or keyboard
 examples:

@@ -175,7 +175,11 @@ export const Template = ({
 
 			<!-- Slider controls -->
 			<div
-				class="${rootClass}-controls"
+				class=${classMap({
+					[`${rootClass}-controls`]: true,
+					"is-focused": isFocused,
+					...customClasses.reduce((a, c) => ({ ...a, [c]: true }), {}),
+				})}
 				role=${ifDefined(isRamp ? "presentation" : undefined)}
 			>
 				${values.map((value, idx) => {
