@@ -1,4 +1,4 @@
-const { resolve } = require("path");
+const { resolve, join } = require("path");
 const { readdirSync, existsSync } = require("fs");
 
 const { mergeWithRules } = require("webpack-merge");
@@ -15,11 +15,12 @@ module.exports = {
     core: {
         disableTelemetry: true,
     },
-    framework: {
-        name: "@storybook/web-components-webpack5",
-        options: {},
-    },
-    stories: ["../components/*/stories/*.stories.js"],
+    framework: "@storybook/web-components-webpack5",
+    stories: [
+        // "../components/*/stories/*.stories.mdx",
+        join(componentsPath, "*/stories/*.stories.js"),
+    ],
+    /* Make available global static assets from root */
     staticDirs: ["../assets"],
     addons: [
         {
