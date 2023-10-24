@@ -121,12 +121,12 @@ governing permissions and limitations under the License.
         margin-block-start: var(--mod-detail-margin-start, var(--spectrum-detail-margin-start));
         margin-block-end: var(--mod-detail-margin-end, var(--spectrum-detail-margin-end));
     }
+}
 
-    /* Windows high contrast mode */
-    @media (forced-colors: active) {
-        & {
-            --highcontrast-detail-font-color: text;
-        }
+/* Windows high contrast mode */
+@media (forced-colors: active) {
+    .spectrum-Typography {
+        --highcontrast-detail-font-color: text;
     }
 }
 

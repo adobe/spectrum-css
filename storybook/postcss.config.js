@@ -1,62 +1,12 @@
-/*!
-Copyright 2023 Adobe. All rights reserved.
-This file is licensed to you under the Apache License, Version 2.0 (the "License");
-you may not use this file except in compliance with the License. You may obtain a copy
-of the License at http://www.apache.org/licenses/LICENSE-2.0
-
-Unless required by applicable law or agreed to in writing, software distributed under
-the License is distributed on an "AS IS" BASIS, WITHOUT WARRANTIES OR REPRESENTATIONS
-OF ANY KIND, either express or implied. See the License for the specific language
-governing permissions and limitations under the License.
-*/
-
-const { join } = require("path");
-
-/**
- * @description This PostCSS config determines which file
- * to load based on env variable
- * @type import('postcss-load-config').ConfigFn
- */
-module.exports = (ctx) => {
-    const { env = "development", options = {} } = ctx;
-
-    const isProduction = Boolean(env === "production");
-
-    return {
-        ...options,
-        plugins: {
-            /* --------------------------------------------------- */
-            /* ------------------- IMPORTS ---------------- */
-            /** @link https://github.com/postcss/postcss-import#postcss-import */
-            "postcss-import": {
-                root: process.cwd(),
-                addModulesDirectories: [join(process.cwd(), "node_modules"), join(__dirname, "node_modules")],
-            },
-            /**
-             * @link https://github.com/csstools/postcss-extend-rule
-             * @note replacement for postcss-inherit
-             */
-            "postcss-extend-rule": {
-                onRecursiveExtend: "throw",
-                onUnusedExtend: "ignore",
-            },
-            /* --------------------------------------------------- */
-            /* ------------------- POLYFILLS --------------------- */
-            /** @note [CSS-289] Coordinating with SWC */
-            // "postcss-hover-media-feature": {},
-            /**
-             * @todo should we be documenting this for downstream users rather
-             * than polyfilling the features ourselves? what if they want to
-             * use a different support matrix?
-             *
-             * @note stage 2 (default); stage 4 === stable
-             * @link https://github.com/csstools/postcss-plugins
-             * @link https://preset-env.cssdb.org/features/#stage-2
-             */
-            "postcss-preset-env": !isProduction
+module.exports = (ctx) => ({
+    ...ctx,
+    plugins: {
+        "postcss-import": {},
+        "postcss-preset-env":
+            ctx.mode !== "PRODUCTION"
                 ? {
                       stage: 3,
-                      env,
+                      env: ctx.mode,
                       features: {
                           "logical-properties-and-values": false,
                           clamp: true,
@@ -74,36 +24,31 @@ module.exports = (ctx) => {
                       },
                   }
                 : {},
-            /* --------------------------------------------------- */
-            /* ------------------- CLEAN-UP TASKS ---------------- */
-            "postcss-discard-comments": {
-                removeAll: isProduction,
-            },
-            cssnano: {
-                preset: [
-                    "lite",
-                    {
-                        normalizeWhitespace: false,
-                        discardComments: true,
-                        orderedValues: {},
-                        mergeRules: {},
-                        uniqueSelectors: {},
-                        cssDeclarationSorter: {},
-                    },
-                ],
-            },
-            /* Ensure the license is at the top of the file */
-            "postcss-licensing": {
-                filename: "COPYRIGHT",
-                cwd: __dirname,
-                skipIfEmpty: true,
-            },
-            /* --------------------------------------------------- */
-            /* ------------------- REPORTING --------------------- */
-            "@spectrum-tools/postcss-prettier": {},
-            "postcss-reporter": {
-                clearReportedMessages: true,
-            },
+        "postcss-discard-comments": {
+            removeAll: true,
         },
-    };
-};
+        cssnano: {
+            preset: [
+                "lite",
+                {
+                    normalizeWhitespace: false,
+                    discardComments: true,
+                    orderedValues: {},
+                    mergeRules: {},
+                    uniqueSelectors: {},
+                    cssDeclarationSorter: {},
+                },
+            ],
+        },
+        /* Ensure the license is at the top of the file */
+        "postcss-licensing": {
+            filename: "COPYRIGHT",
+            cwd: __dirname,
+            skipIfEmpty: true,
+        },
+        "@spectrum-tools/postcss-prettier": {},
+        "postcss-reporter": {
+            clearReportedMessages: true,
+        },
+    },
+});

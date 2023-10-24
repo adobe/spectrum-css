@@ -33,7 +33,6 @@ module.exports = ({ env = "development", file, options = {} }) => {
     const { skipLint = false } = options;
 
     const isProduction = Boolean(env === "production");
-    console.log(isProduction ? "Production" : "Development", file);
 
     const {
         _: input,

@@ -105,9 +105,7 @@
             "options": {
                 "commands": [
                     "stylelint {projectRoot}/*.css {projectRoot}/themes/*.css",
-                    "eslint --no-error-on-unmatched-pattern {projectRoot}/*.json {projectRoot}/stories/*.js",
-                    "nx dependency-check $NX_TASK_TARGET_PROJECT",
-                    "nx version-check $NX_TASK_TARGET_PROJECT"
+                    "eslint --no-error-on-unmatched-pattern {projectRoot}/*.json {projectRoot}/stories/*.js"
                 ],
                 "envFile": ".env.prod"
             },

@@ -44,8 +44,8 @@ module.exports = {
         "rule-empty-line-before": [
             "always",
             {
-                except: ["first-nested", "after-single-line-comment"],
-                ignore: ["after-comment", "first-nested"],
+                except: ["first-nested"],
+                ignore: ["after-comment"],
             },
         ],
         "selector-attribute-quotes": null,

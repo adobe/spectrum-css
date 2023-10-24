@@ -1,35 +1,107 @@
-body {
-    margin: 0;
+:root,
+.spectrum {
+    font-family: var(--spectrum-sans-font-family-stack);
+    color: var(--spectrum-alias-text-color-default, var(--spectrum-global-color-gray-900));
+    background-color: var(--spectrum-alias-background-color-default, var(--spectrum-global-color-gray-100));
+
+    -webkit-tap-highlight-color: rgba(0, 0, 0, 0%);
 }
 
-/* Hide the SVG elements that only include references */
-svg:has(symbol):not(:has(use)) {
+.sidebar-header > div:has(img, a) {
+    margin-inline-end: 8px;
+}
+
+.sidebar-header > div img {
+    inline-size: 100%;
+    block-size: auto;
+}
+
+.docblock-argstable-body tr td {
+    font-size: 11px;
+    color: rgb(34, 34, 34);
+    letter-spacing: unset;
+    background-color: rgb(255, 255, 255);
+}
+
+.docblock-argstable-body td > span:has(select),
+.docblock-argstable-body td textarea {
+    max-inline-size: var(--spectrum-alias-single-line-width, var(--spectrum-global-dimension-size-2400)) !important;
+}
+
+#storybook-explorer-searchfield {
+    padding: 3px 12px 5px 35px !important;
+}
+
+button.sidebar-item {
+    font-weight: 700;
+}
+
+.sidebar-item {
+    /* height: 32px !important; */
+    padding-block: 4px;
+}
+
+input,
+textarea,
+select {
+    border-radius: 4px !important;
+}
+
+input:focus,
+textarea:focus,
+select:focus,
+#storybook-explorer-searchfield:focus {
+    border-color: rgb(2, 101, 220) !important;
+    box-shadow: rgb(2, 101, 220) 0 0 0 1px inset !important;
+}
+
+body {
+    margin: 0;
+    font-size: 10px;
+}
+
+nav .spectrum-Site-logo {
+    block-size: 32px;
+    margin-inline-end: var(--spectrum-global-dimension-size-200);
+    color: #fa0f00;
+}
+
+.spectrum--large nav .spectrum-Site-logo {
+    block-size: 40px;
+}
+
+.docblock-argstable-head {
     display: none;
 }
 
-/* Surfaces */
-body,
-.spectrum,
-.spectrum--express {
-    font-family: var(--spectrum-sans-font-family-stack);
-    color: var(--spectrum-gray-900) !important;
-    background-color: var(--spectrum-gray-100) !important;
+/* .docblock-argstable-body {
+     display: grid;
+     grid-template-columns: minmax(25%, 200px) minmax(75%, 1fr);
+ } */
 
-    -webkit-tap-highlight-color: rgba(0 0 0 / 0%);
+.docblock-argstable-body tr td {
+    font-size: 11px;
+    color: rgb(34, 34, 34);
+    letter-spacing: unset;
+    background-color: rgb(255, 255, 255);
+}
+
+.docblock-argstable-body td > span:has(select),
+.docblock-argstable-body td textarea {
+    max-inline-size: 280px !important;
+}
+
+#storybook-explorer-tree {
+    background-color: rgb(255, 255, 255) !important;
 }
 
 #storybook-explorer-tree > div {
-    margin-inline-start: 0;
+    margin-inline: 0;
 }
 
-/* Tree navigation item in the sidebar */
 button.sidebar-item {
     font-weight: 700 !important;
 }
-
-/* .sidebar-subheading button span {
-  display: none;
-} */
 
 .sidebar-item {
     block-size: 32px !important;
@@ -43,88 +115,110 @@ button.sidebar-item {
     line-height: 1.4em !important;
     color: rgb(34, 34, 34) !important;
 
-    border-radius: var(--spectrum-corner-radius-100) !important;
+    border-radius: 4px !important;
 }
 
-/* input,
+input,
 textarea,
 select {
-  border-radius: var(--spectrum-corner-radius-100) !important;
+    border-radius: 4px !important;
 }
-
-div[role="main"] > div > div > div:first-child > div:first-child > div div {
-  background-color: unset !important;
-}
-
-div[role="main"] > div > div > div:first-child > div:first-child > div > div:first-child > span {
-  display: none !important;
-}
-
-[role="main"] > div {
-  box-shadow: none !important;
-  border-top-left-radius: 0 !important;
-  border-bottom-left-radius: 0 !important;
-  overflow: auto !important;
-}
-
 
 #storybook-explorer-searchfield {
-  padding: 3px 12px 5px 35px !important;
+    padding: 3px 12px 5px 35px !important;
 }
 
 input:focus,
 textarea:focus,
 select:focus,
 #storybook-explorer-searchfield:focus {
-  border-color: rgb(2, 101, 220) !important;
-  box-shadow: rgb(2, 101, 220) 0 0 0 1px inset !important;
+    border-color: rgb(2, 101, 220) !important;
+    box-shadow: rgb(2, 101, 220) 0 0 0 1px inset !important;
+}
+
+.sidebar-item svg {
+    display: none;
+    color: rgb(34, 34, 34) !important;
+}
+
+[role="main"] > div > div:first-child .os-content > div > :is(div, div > div:has(a)) {
+    gap: 4px;
+}
+
+[role="main"] > div > div:first-child .os-content > div > div > div:has(a) {
+    display: flex;
+}
+
+/* [role="main"] > div > div:first-child .os-content > div > div > div:not(:has(a)) button */
+[role="main"] > div > div:first-child .os-content > div > div :is(button, a:not(:has(button))) {
+    min-inline-size: 32px;
+    margin: 0;
+    padding-block: 4px;
+    padding-inline: 11px;
+
+    font-weight: 300;
+    line-height: 1.3;
+    color: rgb(34, 34, 34) !important;
+
+    /* background-color: transparent !important; */
+    border-color: transparent !important;
+    border-radius: 4px;
+
+    transition:
+        background 130ms ease-out,
+        border-color 130ms ease-out,
+        color 130ms ease-out,
+        box-shadow 130ms ease-out;
+}
+
+[role="main"] > div > div:first-child .os-content > div > div > * {
+    margin-block-start: 0 !important;
+}
+
+[role="main"] > div > div:first-child .os-content > div > div > div > a {
+    display: flex;
+    align-items: flex-end;
+    justify-content: flex-end;
+}
+
+/* .os-content > div > div > div > a > button {
+    height: 100%;
 } */
 
-/* .sidebar-item svg {
-  display: none;
-} */
-
-/* .sidebar-header > div:has(img, a) {
-  margin-inline-end: 0;
-  color: inherit !important;
+/* Indicates a button with a dropdown menu */
+[role="main"] > div > div:first-child .os-content > div > div > div:not(:has(a)) button {
+    position: relative;
+    background-color: rgb(253, 253, 253) !important;
+    border: 1px solid rgb(144, 144, 144) !important;
 }
 
-.sidebar-header > div img {
-  block-size: auto;
-  inline-size: 100%;
+/* Indicates a button with a dropdown menu */
+/* [role="main"] > div > div:first-child .os-content > div > div :is(button,a:not(:has(button)),span) */
+[role="main"] > div > div:first-child .os-content > div > div > div:not(:has(a)) button::after {
+    content: "◢";
+
+    position: absolute;
+    inset-block-end: -3px;
+    inset-inline-end: -1px;
+    transform: scale(0.5);
+
+    display: inline-block;
+
+    color: rgb(177, 177, 177);
 }
 
-#storybook-explorer-menu {
-
+[role="main"] > div > div:first-child .os-content > div > div > div:not(:has(a)) button:hover {
+    background-color: rgb(242, 242, 242) !important;
 }
 
-#storybook-explorer-searchfield {
-  padding: 3px 12px 5px 35px !important;
+[role="main"] > div > div:first-child .os-content > div > div > * {
+    margin-inline: 0 !important;
 }
 
-button.sidebar-item {
-  font-weight: 700;
-} */
-
-/* .sidebar-item { */
-
-/* height: 32px !important; */
-
-/* padding-block: 4px; */
-
-/* } */
-
-input,
-textarea,
-select {
-    border-radius: var(--spectrum-corner-radius-100) !important;
-    box-shadow: none !important;
+[role="main"] > div > div:first-child .os-content > div > div :is(button, a:not(:has(button)), span) {
+    block-size: 32px;
 }
 
-.sbdocs.sbdocs-preview,
-.docblock-source {
-    filter: none !important;
-    border: var(--spectrum-border-width-100) solid var(--spectrum-gray-300);
-    border-radius: var(--spectrum-corner-radius-100);
-    box-shadow: none !important;
+[role="main"] > div > div:first-child .os-content > div > div :is(button:hover, a:hover:not(:has(button))) {
+    background-color: rgb(230, 230, 230) !important;
 }

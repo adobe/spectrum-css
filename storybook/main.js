@@ -1,5 +1,5 @@
-import { readdirSync } from "fs";
-import { join, resolve } from "path";
+const { resolve } = require("path");
+const { readdirSync, existsSync } = require("fs");
 
 const { mergeWithRules } = require("webpack-merge");
 
@@ -10,22 +10,17 @@ const componentPkgs = readdirSync(componentsPath, {
     .filter((dirent) => dirent.isDirectory())
     .map((dirent) => dirent.name);
 
-export const rootDir = join(__dirname, "../");
-
-export default {
-    rootDir,
+module.exports = {
+    rootDir: "../",
     core: {
         disableTelemetry: true,
     },
     framework: {
         name: "@storybook/web-components-webpack5",
+        options: {},
     },
-    stories: [
-        // "../components/*/stories/*.stories.mdx",
-        join(componentsPath, "*/stories/*.stories.js"),
-    ],
-    /* Make available global static assets from root */
-    staticDirs: [join(rootDir, "assets")],
+    stories: ["../components/*/stories/*.stories.js"],
+    staticDirs: ["../assets"],
     addons: [
         {
             name: "@storybook/addon-essentials",
@@ -42,7 +37,7 @@ export default {
         },
         // https://github.com/storybookjs/storybook/tree/next/code/addons/a11y
         "@storybook/addon-a11y",
-        // https://storybook.js.org/addons/@whitespace/storybook-addon-html/
+        // https://www.npmjs.com/package/@whitespace/storybook-addon-html
         // "@whitespace/storybook-addon-html",
         // https://storybook.js.org/addons/@etchteam/storybook-addon-status
         "@etchteam/storybook-addon-status",
@@ -58,46 +53,184 @@ export default {
         /* Builds stories.json to help with on-demand loading */
         buildStoriesJson: true,
     },
-    async webpackFinal(config) {
+    webpackFinal(config) {
         return mergeWithRules({
             resolve: {
-                modules: "append",
+                modules: "merge",
                 alias: "merge",
             },
             module: {
-                rules: {
-                    test: "match",
-                    exclude: "replace",
-                    use: "append",
-                },
+                rules: "merge",
             },
         })(config, {
+            /* Add support for root node_modules imports */
             resolve: {
                 modules: [resolve(__dirname, "../node_modules")],
-                alias: {
-                    ...componentPkgs.reduce((pkgs, foldername) => {
-                        const pkg = require(resolve(componentsPath, foldername, "package.json"));
-                        pkgs[pkg.name] = resolve(componentsPath, foldername);
-                        return pkgs;
-                    }, {}),
-                },
+                alias: componentPkgs.reduce((pkgs, dir) => {
+                    const pkgPath = resolve(componentsPath, dir, "package.json");
+                    if (existsSync(pkgPath)) {
+                        const pkg = require(pkgPath);
+                        pkgs[pkg.name] = resolve(componentsPath, dir);
+                    }
+                    return pkgs;
+                }, {}),
             },
             module: {
                 rules: [
                     {
-                        test: /\.css$/,
-                        exclude: [/\/node_modules\//, /\/dist\//],
+                        test: /\.css$/i,
+                        exclude: [/(\/|\\)dist(\/|\\)/, /(\/|\\)node_modules(\/|\\)/],
+                        sideEffects: true,
                         use: [
                             {
-                                loader: require.resolve("postcss-loader"),
+                                loader: "style-loader",
                                 options: {
-                                    implementation: require.resolve("postcss"),
+                                    injectType: "linkTag",
+                                    attributes: {
+                                        "data-source": "processed",
+                                    },
+                                },
+                            },
+                            {
+                                loader: "file-loader",
+                                options: {
+                                    name: "[path][name].[ext][query]",
+                                    outputPath: (url) => {
+                                        return `assets/css/${url.replace(/_\//g, "")}`;
+                                    },
+                                    esModule: false,
+                                },
+                            },
+                            {
+                                loader: "postcss-loader",
+                                options: {
+                                    implementation: require("postcss"),
                                     postcssOptions: {
                                         config: true,
                                     },
                                 },
                             },
                         ],
+                    },
+                    {
+                        test: /\.css$/i,
+                        include: [/(\/|\\)node_modules(\/|\\)/, /(\/|\\)dist(\/|\\)/],
+                        exclude: [/@spectrum-css(\/|\\)expressvars/, /@spectrum-css(\/|\\)vars/],
+                        sideEffects: true,
+                        use: [
+                            {
+                                loader: "style-loader",
+                                options: {
+                                    injectType: "linkTag",
+                                    attributes: {
+                                        "data-source": "processed",
+                                    },
+                                },
+                            },
+                            {
+                                loader: "file-loader",
+                                options: {
+                                    name: "[path][name].[ext][query]",
+                                    outputPath: (url) => {
+                                        return `assets/css/${url.replace(/_\//g, "")}`;
+                                    },
+                                    esModule: false,
+                                },
+                            },
+                        ],
+                    },
+                    {
+                        test: /\.css$/i,
+                        include: [/@spectrum-css(\/|\\)expressvars/],
+                        sideEffects: true,
+                        use: [
+                            {
+                                loader: "style-loader",
+                                options: {
+                                    injectType: "linkTag",
+                                    attributes: {
+                                        "data-source": "processed",
+                                    },
+                                },
+                            },
+                            {
+                                loader: "file-loader",
+                                options: {
+                                    name: "[path][name].[ext][query]",
+                                    outputPath: (url) => {
+                                        return `assets/css/${url.replace(/_\//g, "")}`;
+                                    },
+                                    esModule: false,
+                                },
+                            },
+                            {
+                                loader: "postcss-loader",
+                                options: {
+                                    implementation: require("postcss"),
+                                    postcssOptions: {
+                                        plugins: [
+                                            require("postcss-selector-replace")({
+                                                before: [":root"],
+                                                after: [".spectrum--express"],
+                                            }),
+                                            require("postcss-prefix-selector")({
+                                                prefix: ".spectrum--express",
+                                                transform(_prefix, selector, prefixedSelector) {
+                                                    if (selector.startsWith(".spectrum--express")) return selector;
+                                                    /* Smoosh the selectors together b/c they co-exist */
+                                                    return prefixedSelector.replace(" ", "");
+                                                },
+                                            }),
+                                        ],
+                                    },
+                                },
+                            },
+                        ],
+                    },
+                    {
+                        test: /\.css$/i,
+                        include: [/@spectrum-css(\/|\\)vars/],
+                        sideEffects: true,
+                        use: [
+                            {
+                                loader: "style-loader",
+                                options: {
+                                    injectType: "linkTag",
+                                    attributes: {
+                                        "data-source": "processed",
+                                    },
+                                },
+                            },
+                            {
+                                loader: "file-loader",
+                                options: {
+                                    name: "[path][name].[ext][query]",
+                                    outputPath: (url) => {
+                                        return `assets/css/${url.replace(/_\//g, "")}`;
+                                    },
+                                    esModule: false,
+                                },
+                            },
+                            {
+                                loader: "postcss-loader",
+                                options: {
+                                    implementation: require("postcss"),
+                                    postcssOptions: {
+                                        plugins: [
+                                            require("postcss-selector-replace")({
+                                                before: [":root"],
+                                                after: [".spectrum"],
+                                            }),
+                                        ],
+                                    },
+                                },
+                            },
+                        ],
+                    },
+                    {
+                        test: /\.js$/,
+                        enforce: "pre",
+                        use: ["source-map-loader"],
                     },
                 ],
             },
@@ -110,10 +243,14 @@ export default {
     env: {
         MIGRATED_PACKAGES: componentPkgs.filter((dir) => {
             const pkg = require(resolve(componentsPath, dir, "package.json"));
-            if (pkg.devDependencies && pkg.devDependencies["@spectrum-css/tokens"]) {
-                return true;
-            }
-            return false;
+            return pkg.peerDependencies && !pkg.peerDependencies["@spectrum-css/vars"];
         }),
     },
+    // refs: {
+    //   'swc': {
+    //     title: 'Spectrum Web Components',
+    //     url: 'https://opensource.adobe.com/spectrum-web-components/storybook/',
+    //     expanded: false,
+    //   },
+    // },
 };

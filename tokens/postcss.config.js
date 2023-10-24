@@ -12,12 +12,6 @@
  */
 
 module.exports = (ctx) => {
-    const {
-        combineSelectors = true,
-        /* This removes all copyright comments so we can add a single one at the top of the file */
-        commentsDenylist = ["Copyright", "This file contains"],
-    } = ctx.options;
-
     return {
         ...ctx.options,
         plugins: {
@@ -31,6 +25,9 @@ module.exports = (ctx) => {
             "postcss-merge-rules": {},
             "postcss-combine-duplicated-selectors": {},
             "@spectrum-tools/postcss-rgb-mapping": {},
+            "postcss-discard-comments": {
+                removeAll: true,
+            },
             /* After cleaning up comments, remove all empty rules */
             cssnano: {
                 preset: [
@@ -50,10 +47,10 @@ module.exports = (ctx) => {
                 filename: "../COPYRIGHT",
                 skipIfEmpty: true,
             },
+            "@spectrum-tools/postcss-prettier": {},
             "postcss-reporter": {
                 clearReportedMessages: true,
             },
-            "@spectrum-tools/postcss-prettier": {},
         },
     };
 };

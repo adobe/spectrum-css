@@ -1,0 +1,13 @@
+/* Hide the SVG elements that only include references */
+svg:has(symbol):not(:has(use)) {
+    display: none;
+}
+
+body,
+.spectrum {
+    font-family: var(--spectrum-sans-font-family-stack);
+    color: var(--spectrum-alias-text-color-default, var(--spectrum-global-color-gray-900));
+    background-color: var(--spectrum-alias-background-color-default, var(--spectrum-global-color-gray-100));
+
+    -webkit-tap-highlight-color: rgba(0, 0, 0, 0%);
+}
