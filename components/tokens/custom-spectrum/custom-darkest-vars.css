@@ -58,4 +58,8 @@ governing permissions and limitations under the License.
   --spectrum-assetcard-border-color-selected-down: var(--spectrum-blue-900);
   --spectrum-assetcard-selectionindicator-background-color-ordered: var(--spectrum-blue-800);
   --spectrum-assestcard-focus-indicator-color: var(--spectrum-blue-700);
+
+  --spectrum-assetlist-item-background-color-selected-hover: rgba(var(--spectrum-blue-800-rgb), 0.3);
+  --spectrum-assetlist-item-background-color-selected: rgba(var(--spectrum-blue-800-rgb), 0.2);
+  --spectrum-assetlist-border-color-key-focus: var(--spectrum-blue-700);
 }
