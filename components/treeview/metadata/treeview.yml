@@ -22,6 +22,7 @@ sections:
 
       ### Renamed classes
 
+      * `.spectrum-TreeView-standalone` renamed to `.spectrum-TreeView-detached`
       * `.spectrum-TreeView-indicator` renamed to `.spectrum-TreeView-itemIndicator`
       * `.spectrum-TreeView-icon` renamed to `.spectrum-TreeView-itemIcon`
 
@@ -65,7 +66,7 @@ examples:
         </li>
 
         <li class="spectrum-TreeView-item">
-          <a class="spectrum-TreeView-itemLink" href="#"><span class="spectrum-TreeView-itemLabel">Layer 4</span></a>
+          <a class="spectrum-TreeView-itemLink" href="#"><span class="spectrum-TreeView-itemLabel">Layer 4 - Per the guidelines, long text will truncate with an ellipsis, and the full text should be available in a tooltip.</span></a>
         </li>
         <li class="spectrum-TreeView-item">
           <a class="spectrum-TreeView-itemLink" href="#"><span class="spectrum-TreeView-itemLabel">Layer 5</span></a>
@@ -144,13 +145,12 @@ examples:
         </li>
       </ul>
 
-  - id: treeview-standalone
-    name: Standalone
+  - id: treeview-detached
+    name: Detached
     description: |
-      Standalone treeviews are meant to be used outside of a panel.
-      Items in standalone treeviews have rounded corners.
+      Detached Tree views are meant to be used outside of a panel. Items in detached Tree views have rounded corners.
     markup: |
-      <ul class="spectrum-TreeView spectrum-TreeView--sizeM spectrum-TreeView--standalone" style="width: 250px">
+      <ul class="spectrum-TreeView spectrum-TreeView--sizeM spectrum-TreeView--detached" style="width: 250px">
         <li class="spectrum-TreeView-item">
           <a class="spectrum-TreeView-itemLink" href="#"><span class="spectrum-TreeView-itemLabel">Layer 1</span></a>
         </li>
@@ -160,12 +160,12 @@ examples:
         </li>
       </ul>
 
-  - id: treeview-standalone-quiet
-    name: Standalone (quiet)
+  - id: treeview-detached-quiet
+    name: Detached (quiet)
     description: |
-      A standalone, quiet treeview.
+      A detached, quiet Tree view.
     markup: |
-      <ul class="spectrum-TreeView spectrum-TreeView--sizeM spectrum-TreeView--quiet spectrum-TreeView--standalone" style="width: 250px">
+      <ul class="spectrum-TreeView spectrum-TreeView--sizeM spectrum-TreeView--quiet spectrum-TreeView--detached" style="width: 250px">
         <li class="spectrum-TreeView-item">
           <a class="spectrum-TreeView-itemLink" href="#"><span class="spectrum-TreeView-itemLabel">Layer 1</span></a>
         </li>
@@ -296,8 +296,46 @@ examples:
 
   - id: treeview-thumbnail
     name: Thumbnail
-    description: A Tree view with Thumbnails.
+    description: Use Thumbnails when a user needs to have a preview of the content contained in a Tree view item. For its primary use within layer panels, the first example uses the layer variant of Thumbnail. The second example uses the default Thumbnail.
     markup: |
+      <ul class="spectrum-TreeView spectrum-TreeView--sizeM spectrum-TreeView--thumbnail" style="width: 250px">
+        <li class="spectrum-TreeView-item is-open">
+          <a class="spectrum-TreeView-itemLink" href="#">
+            <svg class="spectrum-Icon spectrum-UIIcon-ChevronRight100 spectrum-TreeView-itemIndicator" focusable="false" aria-hidden="true">
+              <use xlink:href="#spectrum-css-icon-Chevron100" />
+            </svg>
+            <div class="spectrum-Thumbnail spectrum-Thumbnail--size500 spectrum-TreeView-itemThumbnail spectrum-Thumbnail-layer">
+              <div class="spectrum-Thumbnail-layer-inner spectrum-OpacityCheckerboard">
+                <img class="spectrum-Thumbnail-image" src="img/thumbnail.png" alt="Woman crouching">
+              </div>
+            </div>
+            <span class="spectrum-TreeView-itemLabel">Composition</span>
+          </a>
+          <ul class="spectrum-TreeView spectrum-TreeView--sizeM">
+            <li class="spectrum-TreeView-item is-selected">
+              <a class="spectrum-TreeView-itemLink" href="#">
+                <div class="spectrum-Thumbnail spectrum-Thumbnail--size500 spectrum-TreeView-itemThumbnail spectrum-Thumbnail-layer is-selected">
+                  <div class="spectrum-Thumbnail-layer-inner spectrum-OpacityCheckerboard">
+                    <img class="spectrum-Thumbnail-image" src="img/flowers.png" alt="Flowers">
+                  </div>
+                </div>
+                <span class="spectrum-TreeView-itemLabel">Flowers</span>
+              </a>
+            </li>
+            <li class="spectrum-TreeView-item">
+              <a class="spectrum-TreeView-itemLink" href="#">
+                <div class="spectrum-Thumbnail spectrum-Thumbnail--size500 spectrum-TreeView-itemThumbnail spectrum-Thumbnail-layer">
+                  <div class="spectrum-Thumbnail-layer-inner spectrum-OpacityCheckerboard">
+                    <img class="spectrum-Thumbnail-image" src="img/thumbnail.png" alt="Woman crouching">
+                  </div>
+                </div>
+                <span class="spectrum-TreeView-itemLabel">Figure</span>
+              </a>
+            </li>
+          </ul>
+        </li>
+      </ul>
+
       <ul class="spectrum-TreeView spectrum-TreeView--sizeM spectrum-TreeView--thumbnail" style="width: 250px">
         <li class="spectrum-TreeView-item is-open">
           <a class="spectrum-TreeView-itemLink" href="#">
@@ -307,15 +345,14 @@ examples:
             <div class="spectrum-Thumbnail spectrum-Thumbnail--size500 spectrum-TreeView-itemThumbnail">
               <div class="spectrum-Thumbnail-image-wrapper spectrum-OpacityCheckerboard">
                 <img class="spectrum-Thumbnail-image" src="img/thumbnail.png" alt="Woman crouching">
-                <img class="spectrum-Thumbnail-image" src="img/flowers.png" alt="Flowers">
               </div>
             </div>
             <span class="spectrum-TreeView-itemLabel">Composition</span>
           </a>
           <ul class="spectrum-TreeView spectrum-TreeView--sizeM">
-            <li class="spectrum-TreeView-item">
+            <li class="spectrum-TreeView-item is-selected">
               <a class="spectrum-TreeView-itemLink" href="#">
-                <div class="spectrum-Thumbnail spectrum-Thumbnail--size500 spectrum-TreeView-itemThumbnail">
+                <div class="spectrum-Thumbnail spectrum-Thumbnail--size500 spectrum-TreeView-itemThumbnail is-selected">
                   <div class="spectrum-Thumbnail-image-wrapper spectrum-OpacityCheckerboard">
                     <img class="spectrum-Thumbnail-image" src="img/flowers.png" alt="Flowers">
                   </div>
@@ -339,7 +376,8 @@ examples:
 
   - id: treeview-thumbnail-quiet
     name: Thumbnail (quiet)
-    description: A quiet Tree view with Thumbnails.
+    description: A quiet Tree view with Thumbnails using the layer variant.
+      When using the quiet variant, less visual emphasis is given to the selected Tree view item.
     markup: |
       <ul class="spectrum-TreeView spectrum-TreeView--sizeM spectrum-TreeView--thumbnail spectrum-TreeView--quiet" style="width: 250px">
         <li class="spectrum-TreeView-item is-open">
@@ -347,19 +385,18 @@ examples:
             <svg class="spectrum-Icon spectrum-UIIcon-ChevronRight100 spectrum-TreeView-itemIndicator" focusable="false" aria-hidden="true">
               <use xlink:href="#spectrum-css-icon-Chevron100" />
             </svg>
-            <div class="spectrum-Thumbnail spectrum-Thumbnail--size500 spectrum-TreeView-itemThumbnail">
-              <div class="spectrum-Thumbnail-image-wrapper spectrum-OpacityCheckerboard">
+            <div class="spectrum-Thumbnail spectrum-Thumbnail--size500 spectrum-TreeView-itemThumbnail spectrum-Thumbnail-layer">
+              <div class="spectrum-Thumbnail-layer-inner spectrum-OpacityCheckerboard">
                 <img class="spectrum-Thumbnail-image" src="img/thumbnail.png" alt="Woman crouching">
-                <img class="spectrum-Thumbnail-image" src="img/flowers.png" alt="Flowers">
               </div>
             </div>
             <span class="spectrum-TreeView-itemLabel">Composition</span>
           </a>
           <ul class="spectrum-TreeView spectrum-TreeView--sizeM">
-            <li class="spectrum-TreeView-item">
+            <li class="spectrum-TreeView-item is-selected">
               <a class="spectrum-TreeView-itemLink" href="#">
-                <div class="spectrum-Thumbnail spectrum-Thumbnail--size500 spectrum-TreeView-itemThumbnail">
-                  <div class="spectrum-Thumbnail-image-wrapper spectrum-OpacityCheckerboard">
+                <div class="spectrum-Thumbnail spectrum-Thumbnail--size500 spectrum-TreeView-itemThumbnail spectrum-Thumbnail-layer is-selected">
+                  <div class="spectrum-Thumbnail-layer-inner spectrum-OpacityCheckerboard">
                     <img class="spectrum-Thumbnail-image" src="img/flowers.png" alt="Flowers">
                   </div>
                 </div>
@@ -368,8 +405,8 @@ examples:
             </li>
             <li class="spectrum-TreeView-item">
               <a class="spectrum-TreeView-itemLink" href="#">
-                <div class="spectrum-Thumbnail spectrum-Thumbnail--size500 spectrum-TreeView-itemThumbnail">
-                  <div class="spectrum-Thumbnail-image-wrapper spectrum-OpacityCheckerboard">
+                <div class="spectrum-Thumbnail spectrum-Thumbnail--size500 spectrum-TreeView-itemThumbnail spectrum-Thumbnail-layer">
+                  <div class="spectrum-Thumbnail-layer-inner spectrum-OpacityCheckerboard">
                     <img class="spectrum-Thumbnail-image" src="img/thumbnail.png" alt="Woman crouching">
                   </div>
                 </div>

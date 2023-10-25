@@ -205,6 +205,7 @@ Thumbnails.args = {
 					id: "label2",
 					label: "Label 2",
 					link: "#",
+					isSelected: true,
 					thumbnail: {
 						imageURL: "thumbnail.png",
 						altText: "Woman crouching",

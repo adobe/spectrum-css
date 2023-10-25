@@ -80,6 +80,8 @@ export const TreeViewItem = ({
 							...globals,
 							...thumbnail,
 							size: "300",
+							isLayer: true,
+							isSelected,
 							customClasses: [`${rootClass}-itemThumbnail`],
 					  })
 					: ""}

@@ -1,11 +1,10 @@
 | Modifiable Custom Properties                          |
 | ----------------------------------------------------- |
 | `--mod-treeview-font-size`                            |
+| `--mod-treeview-heading-bottom-to-text`               |
 | `--mod-treeview-heading-color`                        |
 | `--mod-treeview-heading-font-weight`                  |
 | `--mod-treeview-indicator-animation-duration`         |
-| `--mod-treeview-indicator-inset-block-start`          |
-| `--mod-treeview-indicator-margin-block-end`           |
 | `--mod-treeview-indicator-margin-inline-start`        |
 | `--mod-treeview-indicator-padding-block`              |
 | `--mod-treeview-indicator-padding-inline`             |
@@ -17,6 +16,7 @@
 | `--mod-treeview-item-border-color-selected`           |
 | `--mod-treeview-item-border-color-selected-quiet`     |
 | `--mod-treeview-item-border-radius`                   |
+| `--mod-treeview-item-border-radius-detached`          |
 | `--mod-treeview-item-border-size`                     |
 | `--mod-treeview-item-border-size-selected`            |
 | `--mod-treeview-item-icon-color`                      |
@@ -25,12 +25,9 @@
 | `--mod-treeview-item-icon-color-hover`                |
 | `--mod-treeview-item-icon-color-selected`             |
 | `--mod-treeview-item-icon-gap`                        |
-| `--mod-treeview-item-icon-offset-block`               |
 | `--mod-treeview-item-indentation`                     |
 | `--mod-treeview-item-min-block-size`                  |
-| `--mod-treeview-item-padding-block-end`               |
-| `--mod-treeview-item-padding-block-start`             |
-| `--mod-treeview-item-padding-default`                 |
+| `--mod-treeview-item-min-block-size-thumbnail`        |
 | `--mod-treeview-item-padding-inline-end`              |
 | `--mod-treeview-item-padding-inline-start`            |
 | `--mod-treeview-item-text-color`                      |
@@ -38,9 +35,7 @@
 | `--mod-treeview-item-text-color-focus`                |
 | `--mod-treeview-item-text-color-hover`                |
 | `--mod-treeview-item-text-color-selected`             |
-| `--mod-treeview-item-text-padding-block-end`          |
-| `--mod-treeview-item-text-padding-block-start`        |
 | `--mod-treeview-line-height`                          |
-| `--mod-treeview-link-min-block-size-thumbnail`        |
 | `--mod-treeview-margin-block`                         |
 | `--mod-treeview-section-spacing`                      |
+| `--mod-treeview-thumbnail-margin-block`               |
