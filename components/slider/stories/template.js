@@ -1,7 +1,7 @@
 import { html } from "lit";
 import { classMap } from "lit/directives/class-map.js";
-import { styleMap } from "lit/directives/style-map.js";
 import { ifDefined } from "lit/directives/if-defined.js";
+import { styleMap } from "lit/directives/style-map.js";
 
 import { useArgs, useGlobals } from "@storybook/client-api";
 
@@ -142,6 +142,14 @@ export const Template = ({
 			})}
 			role=${ifDefined(values.length > 1 ? "group" : undefined)}
 			aria-labelledby=${ifDefined(label && id ? `${id}-label` : undefined)}
+			@focusin=${() => {
+				const focusClass = { isFocused: true };
+				updateArgs(focusClass);
+			}}
+			@focusout=${() => {
+				const focusClass = { isFocused: false };
+				updateArgs(focusClass);
+			}}
 		>
 			<!-- Label region -->
 			${label
