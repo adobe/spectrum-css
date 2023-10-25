@@ -13,24 +13,16 @@ governing permissions and limitations under the License.
 /* outer container, unstyled */
 .spectrum-AssetCard {
   /* todo: this isn't quite the size from the XD file as 232px is not a size token, so we use 224px */
-  --spectrum-assetcard-asset-size: var(--spectrum-global-dimension-static-size-2800);
+  --spectrum-assetcard-asset-size: 224px;
 
-  --spectrum-assetcard-overlay-background-color: var(--spectrum-alias-assetcard-overlay-background-color);
-  --spectrum-assetcard-border-color-selected: var(--spectrum-alias-assetcard-border-color-selected);
-  --spectrum-assetcard-border-color-selected-hover: var(--spectrum-alias-assetcard-border-color-selected-hover);
-  --spectrum-assetcard-border-color-selected-down: var(--spectrum-alias-assetcard-border-color-selected-down);
-  --spectrum-assetcard-selectionindicator-background-color-ordered: var(--spectrum-alias-assetcard-selectionindicator-background-color-ordered);
-
-  --spectrum-assetcard-border-radius: var(--spectrum-alias-border-radius-regular);
+  --spectrum-assetcard-border-radius: var(--spectrum-corner-radius-100);
   --spectrum-assetcard-border-color: transparent;
-  --spectrum-assetcard-border-color-hover: var(--spectrum-alias-border-color-hover);
-  /* todo: this was hardcoded, it should reference --spectrum-alias-border-color-down once that becomes +200 */
-  --spectrum-assetcard-border-color-down: var(--spectrum-global-color-gray-600);
+  --spectrum-assetcard-border-color-hover: var(--spectrum-gray-500);
+  --spectrum-assetcard-border-color-down: var(--spectrum-gray-600);
 
-  --spectrum-assetcard-background-color: var(--spectrum-global-color-gray-200);
+  --spectrum-assetcard-background-color: var(--spectrum-gray-200);
 
-  --spectrum-assetcard-focus-ring-gap: var(--spectrum-global-dimension-static-size-65);
-  --spectrum-assetcard-focus-ring-border-radius: var(--spectrum-alias-focus-ring-border-radius-regular);
+  --spectrum-assetcard-focus-ring-gap: 5px;
 
   --spectrum-assetcard-selectionindicator-background-color-default: var(--spectrum-alias-background-color-quickactions);
   --spectrum-assetcard-selectionindicator-margin: var(--spectrum-global-dimension-size-150);
@@ -40,25 +32,34 @@ governing permissions and limitations under the License.
   --spectrum-assetcard-heading-text-color: var(--spectrum-global-color-gray-900);
   --spectrum-assetcard-content-text-color: var(--spectrum-global-color-gray-700);
 
+  --spectrum-assetcard-asset-animation-duration: var(--spectrum-animation-duration-100);
+
+  --spectrum-alias-border-size-thick: ;
+  --spectrum-alias-focus-color: ;
+  --spectrum-alias-border-size-thin: ;
+  --spectrum-global-dimension-static-size-200: ;
+}
+
+.spectrum-AssetCard {
   /* contain selection indicator */
   position: relative;
 
   display: flex;
   flex-direction: column;
 
-  inline-size: var(--spectrum-assetcard-asset-size);
+  inline-size: var(--mod-assetcard-asset-size, var(--spectrum-assetcard-asset-size));
 
   cursor: pointer;
 
   &:hover {
     .spectrum-AssetCard-assetContainer::after {
-      border-color: var(--spectrum-assetcard-border-color-hover);
+      border-color: var(--mod-assetcard-border-color-hover, var(--spectrum-assetcard-border-color-hover));
     }
   }
 
   &:active {
     .spectrum-AssetCard-assetContainer::after {
-      border-color: var(--spectrum-assetcard-border-color-down);
+      border-color: var(--mod-assetcard-border-color-down, var(--spectrum-assetcard-border-color-down));
     }
   }
 
@@ -80,14 +81,14 @@ governing permissions and limitations under the License.
   align-items: center;
   justify-content: center;
 
-  inline-size: var(--spectrum-assetcard-asset-size);
-  block-size: var(--spectrum-assetcard-asset-size);
+  inline-size: var(--mod-assetcard-asset-size, var(--spectrum-assetcard-asset-size));
+  block-size: var(--mod-assetcard-asset-size, var(--spectrum-assetcard-asset-size));
 
-  border-radius: var(--spectrum-assetcard-border-radius);
+  border-radius: var(--mod-assetcard-border-radius, var(--spectrum-assetcard-border-radius));
 
-  background-color: var(--spectrum-assetcard-background-color);
+  background-color: var(--mod-assetcard-background-color, var(--spectrum-assetcard-background-color));
 
-  transition: border var(--spectrum-global-animation-duration-100) ease-in-out;
+  transition: border var(--mod-assetcard-asset-animation-duration, var(--spectrum-assetcard-asset-animation-duration)) ease-in-out;
 
   /* focus indicator */
   &::before {
@@ -101,7 +102,7 @@ governing permissions and limitations under the License.
 
     opacity: 0;
     pointer-events: none;
-    transition: opacity var(--spectrum-global-animation-duration-100) ease-in-out;
+    transition: opacity var(--mod-assetcard-asset-animation-duration, var(--spectrum-assetcard-asset-animation-duration)) ease-in-out;
   }
 
   /* border */
@@ -123,8 +124,8 @@ governing permissions and limitations under the License.
   inline-size: 100%;
   block-size: 100%;
 
-  transition: inline-size var(--spectrum-global-animation-duration-100) ease-in-out,
-              block-size var(--spectrum-global-animation-duration-100) ease-in-out;
+  transition: inline-size var(--mod-assetcard-asset-animation-duration, var(--spectrum-assetcard-asset-animation-duration)) ease-in-out,
+              block-size var(--mod-assetcard-asset-animation-duration, var(--spectrum-assetcard-asset-animation-duration)) ease-in-out;
 
   border-radius: calc(var(--spectrum-assetcard-border-radius) - 1px);
 }
@@ -216,9 +217,7 @@ governing permissions and limitations under the License.
   letter-spacing: var(--spectrum-body-xs-text-letter-spacing);
 }
 
-/*
-  Selection styles
-*/
+/* Selection styles */
 .spectrum-AssetCard-selectionOverlay {
   position: absolute;
   z-index: 1;
@@ -227,7 +226,7 @@ governing permissions and limitations under the License.
   background-color: transparent;
 
   pointer-events: none;
-  transition: background-color var(--spectrum-global-animation-duration-100) ease-in-out;
+  transition: background-color var(--mod-assetcard-asset-animation-duration, var(--spectrum-assetcard-asset-animation-duration)) ease-in-out;
 
   border-radius: calc(var(--spectrum-assetcard-border-radius) - 1px);
 }
@@ -257,7 +256,7 @@ governing permissions and limitations under the License.
   visibility: hidden;
 
   opacity: 0;
-  transition: opacity var(--spectrum-global-animation-duration-100) ease-in-out;
+  transition: opacity var(--mod-assetcard-asset-animation-duration, var(--spectrum-assetcard-asset-animation-duration)) ease-in-out;
 }
 
 .spectrum-AssetCard-selectionOrder {

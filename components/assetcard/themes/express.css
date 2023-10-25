@@ -12,5 +12,6 @@ governing permissions and limitations under the License.
 
 @container (--system: express) {
   .spectrum-AssetCard {
+    --spectrum-assetcard-overlay-background-color: rgba(109, 115, 246, 0.2)
   }
 }
