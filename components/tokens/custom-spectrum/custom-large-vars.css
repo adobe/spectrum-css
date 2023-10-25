@@ -117,4 +117,9 @@ governing permissions and limitations under the License.
   --spectrum-dial-label-container-top-to-text: 5px;
 
   --spectrum-assetcard-focus-ring-border-radius: 9px;
+  --spectrum-assetcard-selectionindicator-margin: 15px;
+  --spectrum-assetcard-title-font-size: var(--spectrum-heading-size-xxs);
+  --spectrum-assetcard-header-content-font-size: var(--spectrum-heading-size-xxs);
+	--spectrum-assetcard-content-font-size: var(--spectrum-body-size-s);
+
 }
