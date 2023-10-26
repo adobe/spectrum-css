@@ -17,7 +17,7 @@ examples:
           <div class="spectrum-AssetCard-selectionOverlay"></div>
         </div>
         <div class="spectrum-AssetCard-header">
-          <div class="spectrum-AssetCard-title">Card Title</div>
+          <div class="spectrum-AssetCard-title" id="card-title-1">Card Title</div>
           <div class="spectrum-AssetCard-headerContent"></div>
         </div>
         <div class="spectrum-AssetCard-content">
@@ -25,7 +25,7 @@ examples:
         </div>
         <div class="spectrum-AssetCard-selectionIndicator">
           <div class="spectrum-Checkbox spectrum-Checkbox--sizeM spectrum-Checkbox--emphasized spectrum-AssetCard-checkbox">
-            <input type="checkbox" class="spectrum-Checkbox-input" title="Select" value="">
+            <input type="checkbox" class="spectrum-Checkbox-input" title="Select" value="" aria-labelledby="card-title-1">
             <span class="spectrum-Checkbox-box">
               <svg class="spectrum-Icon spectrum-UIIcon-Checkmark100 spectrum-Checkbox-checkmark" focusable="false" aria-hidden="true">
                 <use xlink:href="#spectrum-css-icon-Checkmark100" />
@@ -47,7 +47,7 @@ examples:
           <div class="spectrum-AssetCard-selectionOverlay"></div>
         </div>
         <div class="spectrum-AssetCard-header">
-          <div class="spectrum-AssetCard-title">Card Title</div>
+          <div class="spectrum-AssetCard-title" id="card-title-2">Card Title</div>
           <div class="spectrum-AssetCard-headerContent"></div>
         </div>
         <div class="spectrum-AssetCard-content">
@@ -55,7 +55,7 @@ examples:
         </div>
         <div class="spectrum-AssetCard-selectionIndicator">
           <div class="spectrum-Checkbox spectrum-Checkbox--sizeM spectrum-Checkbox--emphasized spectrum-AssetCard-checkbox">
-            <input type="checkbox" class="spectrum-Checkbox-input" title="Select" value="">
+            <input type="checkbox" class="spectrum-Checkbox-input" title="Select" value="" aria-labelledby="card-title-2">
             <span class="spectrum-Checkbox-box">
               <svg class="spectrum-Icon spectrum-UIIcon-Checkmark100 spectrum-Checkbox-checkmark" focusable="false" aria-hidden="true">
                 <use xlink:href="#spectrum-css-icon-Checkmark100" />
@@ -77,7 +77,7 @@ examples:
           <div class="spectrum-AssetCard-selectionOverlay"></div>
         </div>
         <div class="spectrum-AssetCard-header">
-          <div class="spectrum-AssetCard-title">Card Title</div>
+          <div class="spectrum-AssetCard-title" id="card-title-3">Card Title</div>
           <div class="spectrum-AssetCard-headerContent"></div>
         </div>
         <div class="spectrum-AssetCard-content">
@@ -85,7 +85,7 @@ examples:
         </div>
         <div class="spectrum-AssetCard-selectionIndicator">
           <div class="spectrum-Checkbox spectrum-Checkbox--sizeM spectrum-Checkbox--emphasized spectrum-AssetCard-checkbox">
-            <input type="checkbox" class="spectrum-Checkbox-input" title="Select" value="">
+            <input type="checkbox" class="spectrum-Checkbox-input" title="Select" value="" aria-labelledby="card-title-3">
             <span class="spectrum-Checkbox-box">
               <svg class="spectrum-Icon spectrum-UIIcon-Checkmark100 spectrum-Checkbox-checkmark" focusable="false" aria-hidden="true">
                 <use xlink:href="#spectrum-css-icon-Checkmark100" />
@@ -109,12 +109,12 @@ examples:
           <div class="spectrum-AssetCard-selectionOverlay"></div>
         </div>
         <div class="spectrum-AssetCard-header">
-          <div class="spectrum-AssetCard-title">MVI_0123.mp4</div>
+          <div class="spectrum-AssetCard-title" id="card-title-4">MVI_0123.mp4</div>
           <div class="spectrum-AssetCard-headerContent">39:02</div>
         </div>
         <div class="spectrum-AssetCard-selectionIndicator">
           <div class="spectrum-Checkbox spectrum-Checkbox--sizeM spectrum-Checkbox--emphasized spectrum-AssetCard-checkbox">
-            <input type="checkbox" class="spectrum-Checkbox-input" title="Select" value="">
+            <input type="checkbox" class="spectrum-Checkbox-input" title="Select" value="" aria-labelledby="card-title-4">
             <span class="spectrum-Checkbox-box">
               <svg class="spectrum-Icon spectrum-UIIcon-Checkmark100 spectrum-Checkbox-checkmark" focusable="false" aria-hidden="true">
                 <use xlink:href="#spectrum-css-icon-Checkmark100" />
@@ -153,7 +153,7 @@ examples:
           <div class="spectrum-AssetCard-selectionOverlay"></div>
         </div>
         <div class="spectrum-AssetCard-header">
-          <div class="spectrum-AssetCard-title">Card Title</div>
+          <div class="spectrum-AssetCard-title" id="card-title-5">Card Title</div>
           <div class="spectrum-AssetCard-headerContent"></div>
         </div>
         <div class="spectrum-AssetCard-content">
@@ -161,7 +161,7 @@ examples:
         </div>
         <div class="spectrum-AssetCard-selectionIndicator">
           <div class="spectrum-Checkbox spectrum-Checkbox--sizeM spectrum-Checkbox--emphasized spectrum-AssetCard-checkbox">
-            <input type="checkbox" class="spectrum-Checkbox-input" title="Select" value="" checked>
+            <input type="checkbox" class="spectrum-Checkbox-input" title="Select" value="" aria-labelledby="card-title-5" checked>
             <span class="spectrum-Checkbox-box">
               <svg class="spectrum-Icon spectrum-UIIcon-Checkmark100 spectrum-Checkbox-checkmark" focusable="false" aria-hidden="true">
                 <use xlink:href="#spectrum-css-icon-Checkmark100" />
