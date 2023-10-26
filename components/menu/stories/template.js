@@ -1,11 +1,11 @@
-import { html, css } from "lit";
+import { html } from "lit";
 import { classMap } from "lit/directives/class-map.js";
-import { styleMap } from "lit/directives/style-map.js";
 import { ifDefined } from "lit/directives/if-defined.js";
+import { styleMap } from "lit/directives/style-map.js";
 
+import { Template as Checkbox } from "@spectrum-css/checkbox/stories/template.js";
 import { Template as Divider } from "@spectrum-css/divider/stories/template.js";
 import { Template as Icon } from "@spectrum-css/icon/stories/template.js";
-import { Template as Checkbox } from "@spectrum-css/checkbox/stories/template.js";
 import { Template as Switch } from "@spectrum-css/switch/stories/template.js";
 
 import "../index.css";
@@ -28,6 +28,7 @@ export const MenuItem = ({
   items = [],
   size,
   id,
+  idx = 0,
   hasActions,
   selectionMode,
   value,
@@ -103,6 +104,7 @@ export const MenuItem = ({
           size,
           isEmphasized: true,
           label: label,
+          id: `checkbox-${idx}`,
           customClasses: [
             `${rootClass}Checkbox`,
           ],
@@ -128,6 +130,7 @@ export const MenuItem = ({
               ...globals,
               size,
               label: null,
+              id: `switch-${idx}`,
               customClasses: [
                 `${rootClass}Switch`,
               ],
@@ -220,6 +223,7 @@ export const Template = ({
           return MenuItem({
             ...globals,
             ...i,
+            idx,
             rootClass: `${rootClass}-item`,
             role: subrole,
             size,
