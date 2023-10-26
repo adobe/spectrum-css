@@ -24,6 +24,9 @@ export const Template = ({
 		console.warn(e);
 	}
 
+	// ID attribute value for the input element.
+	const inputId = id ? `${id}-input` : 'switch-onoff-0';
+
 	return html`
 		<div
 			class=${classMap({
@@ -36,10 +39,16 @@ export const Template = ({
 			})}
 			id=${ifDefined(id)}
 		>
-			<input type="checkbox" class="${rootClass}-input" id="switch-onoff-0" ?disabled=${isDisabled} ?checked=${isChecked}/>
+			<input
+				type="checkbox"
+				class="${rootClass}-input"
+				id=${inputId}
+				?disabled=${isDisabled}
+				?checked=${isChecked}
+			/>
 			<span class="${rootClass}-switch"></span>
 			${label
-				? html`<label class="${rootClass}-label" for="switch-onoff-0"
+				? html`<label class="${rootClass}-label" for=${inputId}
 						>${label}</label
 				  >`
 				: ""}
