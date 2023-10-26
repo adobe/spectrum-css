@@ -231,33 +231,37 @@ WithSections.args = {
 		{
 			type: "heading",
 			label: "Section 1",
-		},
-		{
-			id: "group1",
-			label: "Group 1",
-			link: "#",
-			isOpen: true,
 			items: [
 				{
-					id: "label2",
-					label: "Label 2",
+					id: "group1",
+					label: "Group 1",
 					link: "#",
-				},
-				{
-					id: "label3",
-					label: "Label 3",
-					link: "#",
+					isOpen: true,
+					items: [
+						{
+							id: "label2",
+							label: "Label 2",
+							link: "#",
+						},
+						{
+							id: "label3",
+							label: "Label 3",
+							link: "#",
+						},
+					],
 				},
 			],
 		},
 		{
 			type: "heading",
 			label: "Section 2",
-		},
-		{
-			id: "label4",
-			label: "Label 4",
-			link: "#",
+			items: [
+				{
+					id: "label4",
+					label: "Label 4",
+					link: "#",
+				},
+			]
 		},
 	],
 };

@@ -343,17 +343,24 @@ governing permissions and limitations under the License.
   pointer-events: all;
 }
 
+/* Section headings */
+.spectrum-TreeView-section > .spectrum-TreeView {
+  display: block;
+  block-size: auto;
+  padding-inline-start: 0;
+}
+
+.spectrum-TreeView-section:not(:first-child) {
+  margin-block-start: var(--mod-treeview-section-spacing, var(--spectrum-treeview-section-spacing));
+}
+
 .spectrum-TreeView-heading {
   padding-block-end: var(--mod-treeview-heading-bottom-to-text, var(--spectrum-treeview-heading-bottom-to-text));
   font-weight: var(--mod-treeview-heading-font-weight, var(--spectrum-treeview-heading-font-weight));
   color: var(--highcontrast-treeview-heading-color, var(--mod-treeview-heading-color, inherit));
-
-  &:not(:first-child) {
-    margin-block-start: var(--mod-treeview-section-spacing, var(--spectrum-treeview-section-spacing));
-  }
 }
 
-/* ***** INDENTATION LEVELS ***** */
+/* Indentation levels used with Flat structure variant. */
 .spectrum-TreeView-item {
   &--indent1 {
     padding-inline-start: var(--mod-treeview-item-indentation, var(--spectrum-treeview-item-indentation));

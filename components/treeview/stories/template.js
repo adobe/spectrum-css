@@ -27,9 +27,26 @@ export const TreeViewItem = ({
 }) => {
 	if (type === "heading") {
 		return html`
-			<div class="${rootClass}-heading">
-				<span class="${rootClass}-itemLabel">${label}</span>
-			</div>
+			<li
+				id=${id}
+				class=${classMap({
+					[`${rootClass}-section`]: true,
+					...customClasses.reduce((a, c) => ({ ...a, [c]: true }), {}),
+				})}
+			>
+				<div class="${rootClass}-heading">
+					<span class="${rootClass}-itemLabel">${label}</span>
+				</div>
+				${typeof items !== "undefined" && items.length > 0
+					? Template({
+							...globals,
+							items: items,
+							size,
+							rootClass: "spectrum-TreeView",
+							customClasses: ["is-opened"],
+					})
+					: ""}
+			</li>
 		`;
 	}
 
