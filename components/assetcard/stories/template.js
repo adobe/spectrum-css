@@ -52,7 +52,7 @@ export const Template = ({
 			role="figure"
 		>
 			<div class="${rootClass}-assetContainer">
-				<img class="${rootClass}-asset" src="${image ?? exampleImage}" />
+				<img class="${rootClass}-asset" alt="assetcard example image" src="${image ?? exampleImage}" />
 				<div class="${rootClass}-selectionOverlay"></div>
 			</div>
 			${when(
