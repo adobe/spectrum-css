@@ -19,6 +19,7 @@
 | `--mod-assetcard-content-font-weight`                         |
 | `--mod-assetcard-content-letter-spacing`                      |
 | `--mod-assetcard-content-line-height`                         |
+| `--mod-assetcard-content-margin-block-start`                  |
 | `--mod-assetcard-content-text-color`                          |
 | `--mod-assetcard-focus-indicator-thickness`                   |
 | `--mod-assetcard-focus-ring-border-radius`                    |
@@ -46,4 +47,3 @@
 | `--mod-assetcard-title-letter-spacing`                        |
 | `--mod-assetcard-title-line-height`                           |
 | `--mod-assetcard-title-text-color`                            |
-| `--mod-assetcardcontent-margin-block-start`                   |

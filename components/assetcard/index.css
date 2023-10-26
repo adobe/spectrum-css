@@ -205,7 +205,7 @@ governing permissions and limitations under the License.
   flex-grow: 1;
 
   /* space between the content and the header, place it on the content so content can be optional */
-  margin-block-start: var(--mod-assetcardcontent-margin-block-start, var(--spectrum-assetcardcontent-margin-block-start));
+  margin-block-start: var(--mod-assetcard-content-margin-block-start, var(--spectrum-assetcard-content-margin-block-start));
 
   color: var(--mod-assetcard-content-text-color, var(--spectrum-assetcard-content-text-color));
 
