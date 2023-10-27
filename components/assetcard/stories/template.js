@@ -4,6 +4,7 @@ import { ifDefined } from "lit/directives/if-defined.js";
 import { when } from "lit/directives/when.js";
 
 import { useArgs } from "@storybook/client-api";
+import { camelCase } from "lodash-es";
 
 import { Template as Checkbox } from "@spectrum-css/checkbox/stories/template.js";
 
@@ -60,7 +61,7 @@ export const Template = ({
 				() => html`<div class="${rootClass}-header">
 					${when(
 						title,
-						() => html`<div class="${rootClass}-title">${title}</div>`
+						() => html`<div class="${rootClass}-title" id=${camelCase(title)}>${title}</div>`
 					)}
 					${when(
 						headerContent,
@@ -84,6 +85,7 @@ export const Template = ({
 							size: "m",
 							isEmphasized: true,
 							isChecked: isSelected,
+							ariaLabelledby: camelCase(title),
 							customClasses: [`${rootClass}-checkbox`],
 						}),
 					() => html`<div class="${rootClass}-selectionOrder">1</div>`

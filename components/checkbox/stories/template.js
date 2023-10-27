@@ -20,6 +20,7 @@ export const Template = ({
 	title,
 	value,
 	id,
+	ariaLabelledby,
 	customClasses = [],
 	...globals
 }) => {
@@ -65,6 +66,7 @@ export const Template = ({
 			<input
 				type="checkbox"
 				class="${rootClass}-input"
+				aria-labelledby=${ariaLabelledby}
 				?checked=${isChecked}
 				?disabled=${isDisabled}
 				title=${ifDefined(label || title)}
