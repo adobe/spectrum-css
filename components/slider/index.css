@@ -579,7 +579,6 @@ governing permissions and limitations under the License.
 
     &::before {
       box-shadow: 0 0 0 var(--spectrum-focus-indicator-thickness) var(--highcontrast-slider-handle-focus-ring-color-key-focus, var(--mod-slider-handle-focus-ring-color-key-focus, var(--spectrum-slider-handle-focus-ring-color-key-focus)));
-      forced-color-adjust: none;
     }
   }
 
@@ -594,8 +593,6 @@ governing permissions and limitations under the License.
   .spectrum-Slider-handle {
     box-shadow: 0 0 0 var(--spectrum-slider-handle-gap) var(--highcontrast-slider-ramp-handle-border-color-active, var(--mod-sectrum-slider-ramp-handle-border-color-active, var(--spectrum-slider-ramp-handle-border-color-active)));
     background: var(--mod-slider-ramp-handle-background-color, var(--highcontrast-slider-ramp-handle-background-color, var(--spectrum-slider-ramp-handle-background-color)));
-    /* forced-color-adjust required to ensure the "circle" around the handle is transparent */
-    forced-color-adjust: none;
   }
 }
 
@@ -735,6 +732,15 @@ governing permissions and limitations under the License.
     --spectrum-slider-label-text-color-disabled: GrayText;
 
     --spectrum-slider-ramp-handle-border-color-active: ButtonText;
+
+    .spectrum-Slider-handle.is-focused::before {
+      forced-color-adjust: none;
+    }
+
+    .spectrum-Slider--ramp .spectrum-Slider-handle {
+      /* forced-color-adjust required to ensure the "circle" around the handle is transparent */
+      forced-color-adjust: none;
+    }
 
     /* Slider control hover and focus colors for high contrast mode */
     &:not(.is-disabled) {
