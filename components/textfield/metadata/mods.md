@@ -1,6 +1,5 @@
 | Modifiable Custom Properties                            |
 | ------------------------------------------------------- |
-| `--mod--textfield-icon-spacing-inline-start-invalid`    |
 | `--mod-texfield-animation-duration`                     |
 | `--mod-text-area-min-block-size`                        |
 | `--mod-text-area-min-block-size-quiet`                  |
@@ -67,5 +66,3 @@
 | `--mod-textfield-text-color-readonly`                   |
 | `--mod-textfield-text-color-valid`                      |
 | `--mod-textfield-width`                                 |
-| `--mod-textfield-workflow-icon-gap`                     |
-| `--mod-textfield-workflow-icon-width`                   |

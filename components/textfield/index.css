@@ -493,7 +493,7 @@ governing permissions and limitations under the License.
 	&.is-invalid{
 		.spectrum-Textfield-input{
 			padding-inline-end: calc(
-				var(--mod--textfield-icon-spacing-inline-start-invalid, var(--spectrum-textfield-icon-spacing-inline-start-invalid)) +
+				var(--mod-textfield-icon-spacing-inline-start-invalid, var(--spectrum-textfield-icon-spacing-inline-start-invalid)) +
 				var(--mod-textfield-icon-size-invalid, var(--spectrum-textfield-icon-size-invalid))
 			);
 		}
