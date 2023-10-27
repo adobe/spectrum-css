@@ -146,6 +146,7 @@ governing permissions and limitations under the License.
       var(--mod-button-edge-to-text, var(--spectrum-button-edge-to-text))
     );
     color: inherit;
+    flex-shrink: 0;
   }
 
   /* correct focus indicator radius for t-shirt sizing */
@@ -176,7 +177,6 @@ a.spectrum-Button {
   @extend %spectrum-ButtonLabel;
   padding-block-start: calc(var(--mod-button-top-to-text, var(--spectrum-button-top-to-text)) - var(--mod-button-border-width, var(--spectrum-button-border-width)));
   padding-block-end: calc(var(--mod-button-bottom-to-text, var(--spectrum-button-bottom-to-text)) - var(--mod-button-border-width, var(--spectrum-button-border-width)));
-  white-space: nowrap;
   line-height: var(--mod-button-line-height, var(--spectrum-button-line-height));
   align-self: start;
 }
