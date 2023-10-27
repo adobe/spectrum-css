@@ -96,11 +96,11 @@ export const TreeViewItem = ({
 					? Thumbnail({
 							...globals,
 							...thumbnail,
-							size: size == "s"  ? "400"
-								: size == "m"  ? "500"
-								: size == "l"  ? "700"
-								: size == "xl" ? "800"
-								: "500",
+							size: size == "s"  ? "200"
+								: size == "m"  ? "200"
+								: size == "l"  ? "400"
+								: size == "xl" ? "600"
+								: "300",
 							isLayer: true,
 							isSelected,
 							customClasses: [`${rootClass}-itemThumbnail`],

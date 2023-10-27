@@ -15,7 +15,6 @@
 | `--mod-treeview-item-border-color-focus`              |
 | `--mod-treeview-item-border-color-selected`           |
 | `--mod-treeview-item-border-color-selected-quiet`     |
-| `--mod-treeview-item-border-radius`                   |
 | `--mod-treeview-item-border-radius-detached`          |
 | `--mod-treeview-item-border-size`                     |
 | `--mod-treeview-item-border-size-selected`            |
@@ -38,4 +37,3 @@
 | `--mod-treeview-line-height`                          |
 | `--mod-treeview-margin-block`                         |
 | `--mod-treeview-section-spacing`                      |
-| `--mod-treeview-thumbnail-margin-block`               |

@@ -54,7 +54,7 @@ governing permissions and limitations under the License.
   --spectrum-treeview-indicator-margin-inline-start: calc(-1 * var(--spectrum-component-height-100));
   --spectrum-treeview-indicator-padding: var(--spectrum-disclosure-indicator-top-to-disclosure-icon-medium);
 
-  --spectrum-treeview-thumbnail-margin-block: 5px;
+  --spectrum-treeview-item-min-block-size-thumbnail-offset: var(--spectrum-treeview-item-min-block-size-thumbnail-offset-medium, 0px);
 
   --spectrum-treeview-indicator-animation-duration: var(--spectrum-animation-duration-100);
 }
@@ -71,7 +71,7 @@ governing permissions and limitations under the License.
   --spectrum-treeview-item-padding-inline-end: var(--spectrum-component-edge-to-text-75);
   --spectrum-treeview-indicator-padding: var(--spectrum-disclosure-indicator-top-to-disclosure-icon-small);
 
-  --spectrum-treeview-thumbnail-margin-block: 6px;
+  --spectrum-treeview-item-min-block-size-thumbnail-offset: 6px;
 }
 
 .spectrum-TreeView--sizeL {
@@ -86,7 +86,7 @@ governing permissions and limitations under the License.
   --spectrum-treeview-item-padding-inline-end: var(--spectrum-component-edge-to-text-200);
   --spectrum-treeview-indicator-padding: var(--spectrum-disclosure-indicator-top-to-disclosure-icon-large);
 
-  --spectrum-treeview-thumbnail-margin-block: 5px;
+  --spectrum-treeview-item-min-block-size-thumbnail-offset: 0px;
 }
 
 .spectrum-TreeView--sizeXL {
@@ -101,7 +101,7 @@ governing permissions and limitations under the License.
   --spectrum-treeview-item-padding-inline-end: var(--spectrum-component-edge-to-text-300);
   --spectrum-treeview-indicator-padding: var(--spectrum-disclosure-indicator-top-to-disclosure-icon-extra-large);
 
-  --spectrum-treeview-thumbnail-margin-block: 6px;
+  --spectrum-treeview-item-min-block-size-thumbnail-offset: 0px;
 }
 
 .spectrum-TreeView--quiet {
@@ -111,8 +111,7 @@ governing permissions and limitations under the License.
 
 .spectrum-TreeView--thumbnail {
   --mod-treeview-item-min-block-size: var(--mod-treeview-item-min-block-size-thumbnail, calc(
-    var(--spectrum-treeview-item-min-block-size) +
-    (2 * var(--mod-treeview-thumbnail-margin-block, var(--spectrum-treeview-thumbnail-margin-block)))
+    var(--spectrum-treeview-item-min-block-size) + var(--spectrum-treeview-item-min-block-size-thumbnail-offset)
   ));
 }
 
