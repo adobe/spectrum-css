@@ -75,9 +75,16 @@ governing permissions and limitations under the License.
 
   cursor: pointer;
 
-  &:hover {
+  &.is-selected,
+  &:hover,
+  &:focus-visible {
     .spectrum-AssetCard-assetContainer::after {
-      border-color: var(--mod-assetcard-border-color-hover, var(--spectrum-assetcard-border-color-hover));
+      border-color: var(--highcontrast-assetcard-border-color-hover, var(--mod-assetcard-border-color-hover, var(--spectrum-assetcard-border-color-hover)));
+    }
+
+    /* adds hover to checkbox when spectrum-AssetCard card receives hover */
+    .spectrum-Checkbox-box::before{
+      border-color: var(--highcontrast-assetcard-border-color-hover, var(--mod-assetcard-border-color-hover, var(--spectrum-assetcard-border-color-hover)));
     }
   }
 
@@ -214,7 +221,7 @@ governing permissions and limitations under the License.
   font-weight: var(--mod-assetcard-content-font-weight, var(--spectrum-assetcard-content-font-weight));
   line-height: var(--mod-assetcard-content-line-height, var(--spectrum-assetcard-content-line-height));
   font-style: var(--mod-assetcard-content-font-style, var(--spectrum-assetcard-content-font-style));
-  letter-spacing: car(--mod-assetcard-content-letter-spacing, var(--spectrum-assetcard-content-letter-spacing));
+  letter-spacing: var(--mod-assetcard-content-letter-spacing, var(--spectrum-assetcard-content-letter-spacing));
 }
 
 /* Selection styles */
@@ -249,7 +256,7 @@ governing permissions and limitations under the License.
 
   box-shadow: 0 var(--spectrum-assetcard-selectionindicator-offset-y) var(--spectrum-assetcard-selectionindicator-blur) rgb(0, 0, 0, 0.15);
 
-  color: var(--mod-assetcard-selectionindicator-color, var(--spectrum-assetcard-selectionindicator-color));
+  color: var(--highcontrast-assetcard-selectionindicator-color, var(--mod-assetcard-selectionindicator-color, var(--spectrum-assetcard-selectionindicator-color)));
   font-weight: var(--mod-assetcard-selectionindicator-font-weight, var(--spectrum-assetcard-selectionindicator-font-weight));
   font-size: var(--mod-assetcard-selectionindicator-font-size, var(--spectrum-assetcard-selectionindicator-font-size));
 
@@ -257,6 +264,7 @@ governing permissions and limitations under the License.
 
   opacity: 0;
   transition: opacity var(--mod-assetcard-asset-animation-duration, var(--spectrum-assetcard-asset-animation-duration)) ease-in-out;
+  background-color: transparent;
 }
 
 .spectrum-AssetCard-selectionOrder {
@@ -268,7 +276,7 @@ governing permissions and limitations under the License.
 .spectrum-AssetCard.is-drop-target,
 .spectrum-AssetCard.is-selected {
   .spectrum-AssetCard-assetContainer::after {
-    border-color: var(--mod-assetcard-border-color-selected, var(--spectrum-assetcard-border-color-selected));
+    border-color: var(--highcontrast-assetcard-border-color-selected, var(--mod-assetcard-border-color-selected, var(--spectrum-assetcard-border-color-selected)));
   }
 
   .spectrum-AssetCard-selectionOverlay {
@@ -277,13 +285,16 @@ governing permissions and limitations under the License.
 
   &:hover {
     .spectrum-AssetCard-assetContainer::after {
-      border-color: var(--mod-assetcard-border-color-selected-hover, var(--spectrum-assetcard-border-color-selected-hover));
+      border-color: var(--highcontrast-assetcard-border-color-selected-hover, var(--mod-assetcard-border-color-selected-hover, var(--spectrum-assetcard-border-color-selected-hover)));
+    }
+    .spectrum-Checkbox-box::before {
+      color: red;
     }
   }
 
   &:active {
     .spectrum-AssetCard-assetContainer::after {
-      border-color: var(--mod-assectcard-border-color-selected-down, var(--spectrum-assetcard-border-color-selected-down));
+      border-color: var(--highcontrast-assectcard-border-color-selected-down, var(--mod-assectcard-border-color-selected-down, var(--spectrum-assetcard-border-color-selected-down)));
     }
   }
 }
@@ -312,7 +323,7 @@ governing permissions and limitations under the License.
   }
 
   &.is-selected,
-  &:focus,
+  &:focus-visible,
   &:hover {
     .spectrum-AssetCard-selectionIndicator {
       visibility: visible;
@@ -325,7 +336,7 @@ governing permissions and limitations under the License.
 /* with the little order flag that shows the selection order */
 .spectrum-AssetCard--orderedSelection {
   .spectrum-AssetCard-selectionIndicator {
-    background-color: var(--mod-assetcar-selectionindicator-background-color-ordered, var(--spectrum-assetcard-selectionindicator-background-color-ordered));
+    background-color: var(--highcontrast-assetcard-selectionindicator-background-color-ordered, var(--mod-assetcard-selectionindicator-background-color-ordered, var(--spectrum-assetcard-selectionindicator-background-color-ordered)));
 
     .spectrum-AssetCard-checkbox {
       display: none;
@@ -337,6 +348,21 @@ governing permissions and limitations under the License.
       visibility: visible;
       opacity: 1;
       pointer-events: all;
+    }
+  }
+}
+
+@media (forced-colors: active) {
+  .spectrum-AssetCard {
+    --highcontrast-assetcard-border-color-hover: Highlight;
+    --highcontrast-assetcard-border-color-selected: Highlight;
+    --highcontrast-assetcard-border-color-selected-hover: Highlight;
+    --highcontrast-assectcard-border-color-selected-down: Highlight;
+    --highcontrast-assetcard-selectionindicator-background-color-ordered: Highlight;
+    --highcontrast-assetcard-selectionindicator-color: SelectedItemText;
+    .spectrum-AssetCard-selectionOrder {
+      /* prevents text backplate on displayed order number */
+      forced-color-adjust: none;
     }
   }
 }
