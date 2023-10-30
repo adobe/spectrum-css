@@ -73,7 +73,7 @@ export const Template = ({
 					if (isDisabled) return;
 					updateArgs({ isChecked: !isChecked });
 				}}
-				id=${ifDefined(id ? `${id}-checkbox` : undefined)}
+				id=${ifDefined(id ? `${id}-input` : undefined)}
 			/>
 			<span class="${rootClass}-box">
 				${Icon({
