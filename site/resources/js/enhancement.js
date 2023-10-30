@@ -880,6 +880,12 @@ function closeDialog(dialog) {
 	}, 130);
 }
 
+function toggleSpectrumPopover(popover) {
+	popover.classList.contains("is-open")
+		? popover.classList.remove("is-open")
+		: popover.classList.add("is-open");
+}
+
 function animateCircleLoaders() {
 	var value = 0;
 	setInterval(function () {

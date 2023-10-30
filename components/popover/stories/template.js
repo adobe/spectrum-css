@@ -19,7 +19,6 @@ export const Template = ({
 	testId,
 	triggerId = "trigger",
 	customStyles = {
-		"--spectrum-popover-offset": "8px",
 		"inset-inline-start": "0px",
 		"inset-block-start": "0px",
 	},
@@ -78,25 +77,31 @@ export const Template = ({
 				}
 				if (position.includes("top") && !position.includes("-top")) {
 					y = rect.top - popHeight;
-					yOffset = "- var(--spectrum-popover-offset)";
+					yOffset = withTip
+						? "- (var(--spectrum-popover-pointer-height) + var(--spectrum-popover-animation-distance) - 1px)"
+						: "- var(--spectrum-popover-animation-distance)";
 				} else if (position.includes("bottom") && !position.includes("-bottom")) {
 					y = rect.bottom;
-					yOffset = "+ var(--spectrum-popover-offset)";
+					yOffset = "+ (var(--spectrum-popover-animation-distance))";
 				} else if (position.includes("left")) {
 					if (textDir == 'rtl') {
 						x = rect.right;
-						xOffset = "+ var(--spectrum-popover-offset)";
+						xOffset = withTip ? "+ 0px" : "+ var(--spectrum-popover-animation-distance)";
 					} else {
 						x = rect.left - popWidth;
-						xOffset = "- var(--spectrum-popover-offset)";
+						xOffset = withTip
+							? "- ((var(--spectrum-popover-pointer-width) / 2) + var(--spectrum-popover-animation-distance) - 2px)"
+							: "- var(--spectrum-popover-animation-distance)";
 					}
 				} else if (position.includes("right")) {
 					if (textDir == 'rtl') {
 						x = rect.left - popWidth;
-						xOffset = "- var(--spectrum-popover-offset)";
+						xOffset = withTip
+							? "- ((var(--spectrum-popover-pointer-width) / 2) + var(--spectrum-popover-animation-distance) - 2px)"
+							: "- var(--spectrum-popover-animation-distance)";
 					} else {
 						x = rect.right;
-						xOffset = "+ var(--spectrum-popover-offset)";
+						xOffset = withTip ? "+ 0px" : "+ var(--spectrum-popover-animation-distance)";
 					}
 				}
 

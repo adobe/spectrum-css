@@ -15,7 +15,7 @@ sections:
         #### Position Class Naming
         - First position term is popover position, second term is source position.
         - Example: --top-left = popover is to top and source is to left.
-        - Popover does not have any spacing between the source by default.
+        - Popover has 8px spacing from the source by default.
 
         #### Position of Tip
         - Default tip position is centered on the edge for top/bottom/left/right/start/end positions.
@@ -34,7 +34,8 @@ examples:
       <div class="spectrum-Examples">
         <div class="spectrum-Examples-item">
           <h4 class="spectrum-Heading spectrum-Heading--sizeXS spectrum-Examples-itemHeading" style="margin-bottom: 16px;">Default</h4>
-          <div class="spectrum-Popover is-open">
+          <br>
+          <div class="spectrum-Popover spectrum-Popover--top is-open" id="popover-default">
             <ul class="spectrum-Menu" role="listbox">
               <li class="spectrum-Menu-item is-selected" role="option" aria-selected="true" tabindex="0">
                 <span class="spectrum-Menu-itemLabel">Ballard</span>
@@ -51,12 +52,16 @@ examples:
               </li>
             </ul>
           </div>
-          <div class="dummy-spacing" style="position: relative; height: 162px; min-width: 200px; max-width: 50%;"></div>
+          <div class="dummy-spacing" style="position: relative; height: 146px; min-width: 166px; max-width: 50%;"></div>
+          <button class="spectrum-Button spectrum-Button--sizeM spectrum-Button--outline spectrum-Button--secondary spectrum-ButtonGroup-item" type="button" onclick="toggleSpectrumPopover(document.getElementById('popover-default'))" style="position: relative; display: flex; align-items: center; justify-content: center; box-sizing: border-box;">
+            <span>Source 50x100</span>
+          </button>
         </div>
 
         <div class="spectrum-Examples-item">
           <h4 class="spectrum-Heading spectrum-Heading--sizeXS spectrum-Examples-itemHeading" style="margin-bottom: 16px;">With Tip</h4>
-          <div class="spectrum-Popover spectrum-Popover--withTip is-open">
+          <br>
+          <div class="spectrum-Popover spectrum-Popover--top spectrum-Popover--withTip is-open" id="popover-tip">
             <ul class="spectrum-Menu" role="listbox">
               <li class="spectrum-Menu-item is-selected" role="option" aria-selected="true" tabindex="0">
                 <span class="spectrum-Menu-itemLabel">Ballard</span>
@@ -76,18 +81,22 @@ examples:
               <path class="spectrum-Popover-tip-triangle" d="M-1,-1 8,8 17,-1">
             </svg>
           </div>
-          <div class="dummy-spacing" style="position: relative; height: 170px; min-width: 200px; max-width: 50%;"></div>
+          <div class="dummy-spacing" style="position: relative; height: 153px; min-width: 166px; max-width: 50%;"></div>
+          <button class="spectrum-Button spectrum-Button--sizeM spectrum-Button--outline spectrum-Button--secondary spectrum-ButtonGroup-item" type="button" onclick="toggleSpectrumPopover(document.getElementById('popover-tip'))" style="position: relative; display: flex; align-items: center; justify-content: center; box-sizing: border-box;">
+            <span>Source 50x100</span>
+          </button>
         </div>
       </div>
 
-  - id: popover-offset
-    name: Popover - Cross Offset
-    description: Spectrum Popover tip distance to edge can be overridden in implementation by setting the property to half of the source width or height. This results in the tip centering with the center of the source.
+  - id: popover-offset-animation
+    name: Popover - Offset and Animation
+    description: Spectrum Popover has an offset default of 8px distance from the source that is applied with an animation transform when the `.is-open` class is added.
     markup: |
       <div class="spectrum-Examples">
         <div class="spectrum-Examples-item">
-          <h4 class="spectrum-Heading spectrum-Heading--sizeXS spectrum-Examples-itemHeading" style="margin-bottom: 16px;">Cross Offset of Tip =  50px</h4>
-          <div class="spectrum-Popover spectrum-Popover--top-start spectrum-Popover--withTip is-open" role="presentation" style="--spectrum-popover-pointer-edge-offset: 50px;">
+          <h4 class="spectrum-Heading spectrum-Heading--sizeXS spectrum-Examples-itemHeading" style="margin-bottom: 16px;">Top with Tip</h4>
+          <br>
+          <div class="spectrum-Popover spectrum-Popover--top-start spectrum-Popover--withTip is-open" role="presentation" id="popover-top">
             <section class="spectrum-Dialog spectrum-Dialog--small" role="dialog" tabindex="-1" aria-modal="true">
               <div class="spectrum-Dialog-grid" style="display: grid;">
                 <h1 class="spectrum-Dialog-heading spectrum-Dialog-heading--noHeader">Popover Title</h1>
@@ -99,19 +108,71 @@ examples:
               <path class="spectrum-Popover-tip-triangle" d="M-1,-1 8,8 17,-1">
             </svg>
           </div>
-          <div class="dummy-spacing" style="position: relative; box-sizing: border-box; height: 235px; min-width: 400px; max-width: 50%;"></div>
+          <div class="dummy-spacing" style="position: relative; box-sizing: border-box; height: 231px; min-width: 402px; max-width: 50%;"></div>
 
-          <div class="dummy-source" style="position: relative; display: flex; align-items: center; justify-content: center; width: 100px; height: 50px; background: #E6E6E6; border-radius: 8px; box-sizing: border-box;">
-            <span><em>Source 50x100</em></span>
+          <button class="spectrum-Button spectrum-Button--sizeM spectrum-Button--outline spectrum-Button--secondary spectrum-ButtonGroup-item" type="button" onclick="toggleSpectrumPopover(document.getElementById('popover-top'))" style="position: relative; display: flex; align-items: center; justify-content: center; box-sizing: border-box;">
+            <span>Source 50x100</span>
+          </button>
+          <br>
+        </div>
+
+        <div class="spectrum-Examples-item" style="position: relative;">
+          <h4 class="spectrum-Heading spectrum-Heading--sizeXS spectrum-Examples-itemHeading" style="margin-bottom: 16px;">Bottom with Tip</h4>
+
+          <button class="spectrum-Button spectrum-Button--sizeM spectrum-Button--outline spectrum-Button--secondary spectrum-ButtonGroup-item" type="button" onclick="toggleSpectrumPopover(this.nextElementSibling)" style="position: relative; margin-left: auto; display: flex; align-items: center; justify-content: center; box-sizing: border-box;">
+            <span class="spectrum-Button-label">Source 50x100</span>
+          </button>
+
+          <div class="spectrum-Popover spectrum-Popover--bottom-end spectrum-Popover--withTip is-open" role="presentation">
+            <section class="spectrum-Dialog spectrum-Dialog--small" role="dialog" tabindex="-1" aria-modal="true">
+              <div class="spectrum-Dialog-grid" style="display: grid;">
+                <h1 class="spectrum-Dialog-heading spectrum-Dialog-heading--noHeader">Popover Title</h1>
+                <hr class="spectrum-Divider spectrum-Divider--sizeM spectrum-Divider--horizontal spectrum-Dialog-divider">
+                <section class="spectrum-Dialog-content">Cupcake ipsum dolor sit amet jelly beans. Chocolate jelly caramels. Icing soufflé chupa chups donut cheesecake. Jelly-o chocolate cake sweet roll cake danish candy biscuit halvah.</section>
+              </div>
+            </section>
+            <svg class="spectrum-Popover-tip" viewBox="0 -0.5 16 9">
+              <path class="spectrum-Popover-tip-triangle" d="M-1,-1 8,8 17,-1">
+            </svg>
           </div>
+          <div class="dummy-spacing" style="position: relative; box-sizing: border-box; height: 224px; min-width: 402px; max-width: 50%;"></div>
+        </div>
+      </div>
+
+  - id: popover-cross-offset
+    name: Popover - Cross Offset
+    description: Spectrum Popover tip distance to edge can be overridden in implementation by setting the property to half of the source width or height. This results in the tip centering with the center of the source.
+    markup: |
+      <div class="spectrum-Examples">
+        <div class="spectrum-Examples-item">
+          <h4 class="spectrum-Heading spectrum-Heading--sizeXS spectrum-Examples-itemHeading" style="margin-bottom: 16px;">Cross Offset of Tip =  50px</h4>
+          <br>
+          <div class="spectrum-Popover spectrum-Popover--top-start spectrum-Popover--withTip is-open" role="presentation" style="--spectrum-popover-pointer-edge-offset: 50px;" id="popover1">
+            <section class="spectrum-Dialog spectrum-Dialog--small" role="dialog" tabindex="-1" aria-modal="true">
+              <div class="spectrum-Dialog-grid" style="display: grid;">
+                <h1 class="spectrum-Dialog-heading spectrum-Dialog-heading--noHeader">Popover Title</h1>
+                <hr class="spectrum-Divider spectrum-Divider--sizeM spectrum-Divider--horizontal spectrum-Dialog-divider">
+                <section class="spectrum-Dialog-content">Cupcake ipsum dolor sit amet jelly beans. Chocolate jelly caramels. Icing soufflé chupa chups donut cheesecake. Jelly-o chocolate cake sweet roll cake danish candy biscuit halvah.</section>
+              </div>
+            </section>
+            <svg class="spectrum-Popover-tip" viewBox="0 -0.5 16 9">
+              <path class="spectrum-Popover-tip-triangle" d="M-1,-1 8,8 17,-1">
+            </svg>
+          </div>
+          <div class="dummy-spacing" style="position: relative; box-sizing: border-box; height: 232px; min-width: 402px; max-width: 50%;"></div>
+
+          <button class="spectrum-Button spectrum-Button--sizeM spectrum-Button--outline spectrum-Button--secondary spectrum-ButtonGroup-item" type="button" onclick="toggleSpectrumPopover(document.getElementById('popover1'))" style="position: relative; display: flex; align-items: center; justify-content: center; box-sizing: border-box;">
+            <span>Source 50x100</span>
+          </button>
           <br>
         </div>
 
         <div class="spectrum-Examples-item" style="position: relative;">
           <h4 class="spectrum-Heading spectrum-Heading--sizeXS spectrum-Examples-itemHeading" style="margin-bottom: 16px;">Cross Offset of Tip = 50px</h4>
-          <div class="dummy-source" style="position: relative; margin-left: auto; display: flex; align-items: center; justify-content: center; width: 100px; height: 50px; background: #E6E6E6; border-radius: 8px; box-sizing: border-box; margin-bottom: 16px;">
-            <span><em>Source 50x100</em></span>
-          </div>
+
+          <button class="spectrum-Button spectrum-Button--sizeM spectrum-Button--outline spectrum-Button--secondary spectrum-ButtonGroup-item" type="button" onclick="toggleSpectrumPopover(this.nextElementSibling)" style="position: relative; margin-left: auto; display: flex; align-items: center; justify-content: center; box-sizing: border-box;">
+            <span class="spectrum-Button-label">Source 50x100</span>
+          </button>
 
           <div class="spectrum-Popover spectrum-Popover--bottom-end spectrum-Popover--withTip is-open" role="presentation" style="--spectrum-popover-pointer-edge-offset: 50px;">
             <section class="spectrum-Dialog spectrum-Dialog--small" role="dialog" tabindex="-1" aria-modal="true">
@@ -125,7 +186,7 @@ examples:
               <path class="spectrum-Popover-tip-triangle" d="M-1,-1 8,8 17,-1">
             </svg>
           </div>
-          <div class="dummy-spacing" style="position: relative; box-sizing: border-box; height: 224px; min-width: 400px; max-width: 50%;"></div>
+          <div class="dummy-spacing" style="position: relative; box-sizing: border-box; height: 224px; min-width: 402px; max-width: 50%;"></div>
         </div>
       </div>
 
