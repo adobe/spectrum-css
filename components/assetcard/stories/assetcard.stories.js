@@ -158,6 +158,7 @@ OrderedSelection.args = {
 export const DropTarget = Template.bind({});
 DropTarget.args = {
 	title: "Drop target",
+	selection: "highlight",
 	isDropTarget: true,
-	exampleImage: "square",
+	isSelected: true,
 };
