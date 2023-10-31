@@ -2,7 +2,6 @@
 | ------------------------------------------------------------- |
 | `--mod-assectcard-border-color-selected-down`                 |
 | `--mod-assectcard-focus-indicator-color`                      |
-| `--mod-assetcar-selectionindicator-background-color-ordered`  |
 | `--mod-assetcard-asset-animation-duration`                    |
 | `--mod-assetcard-asset-size`                                  |
 | `--mod-assetcard-assetcontainer-border-size`                  |
@@ -34,6 +33,7 @@
 | `--mod-assetcard-header-margin-block-start`                   |
 | `--mod-assetcard-overlay-background-color`                    |
 | `--mod-assetcard-selectionindicator-background-color-default` |
+| `--mod-assetcard-selectionindicator-background-color-ordered` |
 | `--mod-assetcard-selectionindicator-border-radius`            |
 | `--mod-assetcard-selectionindicator-color`                    |
 | `--mod-assetcard-selectionindicator-font-size`                |
