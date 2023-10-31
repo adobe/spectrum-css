@@ -82,6 +82,7 @@ export default {
 		},
 		staticColor: {
 			name: "Static color",
+			description: "Variants that can be used when a button needs to be placed on top of a colored background or a visual.",
 			type: { name: "string" },
 			table: {
 				type: { summary: "string" },
