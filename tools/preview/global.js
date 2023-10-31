@@ -29,7 +29,19 @@ window.addEventListener("DOMContentLoaded", () => {
 			clearTimeout(t);
 
 			try {
-				Typekit.load(config);
+				window.Typekit = Typekit.load({
+                    kitId,
+                    scriptTimeout: 3000,
+                    active: function () {
+                        var loader = document.getElementById("loader");
+                        if (loader) {
+                            setTimeout(function () {
+                                // Hide the loader
+                                loader.style.display = "none";
+                            }, 125);
+                        }
+                    },
+                });
 			} catch (b) {}
 		};
 
