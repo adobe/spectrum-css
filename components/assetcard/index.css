@@ -260,7 +260,7 @@ governing permissions and limitations under the License.
   font-weight: var(--mod-assetcard-selectionindicator-font-weight, var(--spectrum-assetcard-selectionindicator-font-weight));
   font-size: var(--mod-assetcard-selectionindicator-font-size, var(--spectrum-assetcard-selectionindicator-font-size));
 
-  visibility: hidden;
+  display: none;
 
   opacity: 0;
   transition: opacity var(--mod-assetcard-asset-animation-duration, var(--spectrum-assetcard-asset-animation-duration)) ease-in-out;
@@ -286,9 +286,6 @@ governing permissions and limitations under the License.
   &:hover {
     .spectrum-AssetCard-assetContainer::after {
       border-color: var(--highcontrast-assetcard-border-color-selected-hover, var(--mod-assetcard-border-color-selected-hover, var(--spectrum-assetcard-border-color-selected-hover)));
-    }
-    .spectrum-Checkbox-box::before {
-      color: red;
     }
   }
 
@@ -326,7 +323,7 @@ governing permissions and limitations under the License.
   &:focus-visible,
   &:hover {
     .spectrum-AssetCard-selectionIndicator {
-      visibility: visible;
+      display: flex;
       opacity: 1;
       pointer-events: all;
     }
@@ -345,7 +342,7 @@ governing permissions and limitations under the License.
 
   &.is-selected {
     .spectrum-AssetCard-selectionIndicator {
-      visibility: visible;
+      display: flex;
       opacity: 1;
       pointer-events: all;
     }
