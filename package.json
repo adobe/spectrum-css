@@ -41,10 +41,11 @@
     "postdocs:mod": "prettier --cache --write components/*/metadata/*.md > /dev/null",
     "lint:components": "node ./tasks/packageLint.js",
     "lint:styles": "stylelint",
+    "migration:clean": "test -n \"${BASH_VERSION}\" && bash ./tasks/clean-up-after-migration.sh || exit 0",
     "mv:preview": "rimraf dist/preview && mv tools/preview/storybook-static dist/preview",
     "new": "nx run @spectrum-css/generator:new",
     "precommit": "lint-staged",
-    "prepare": "husky install",
+    "prepare": "husky install && yarn migration:clean",
     "prepare:site": "run-s clean:docs build:all",
     "prerelease": "yarn version:build",
     "release": "lerna publish",
@@ -61,7 +62,8 @@
   "workspaces": [
     "components/*",
     "tools/*",
-    "plugins/*"
+    "plugins/*",
+    "generator"
   ],
   "devDependencies": {
     "@adobe/focus-ring-polyfill": "^0.1.5",
