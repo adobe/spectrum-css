@@ -3,11 +3,11 @@ import { existsSync, readdirSync, readFileSync } from 'fs';
 import { readFile } from 'fs/promises';
 import { resolve } from 'path';
 
-import yaml from 'js-yaml';
 import cheerio from 'cheerio';
+import yaml from 'js-yaml';
 
-import autocompletePrompt from 'inquirer-autocomplete-prompt';
 import fuzzy from 'fuzzy';
+import autocompletePrompt from 'inquirer-autocomplete-prompt';
 
 const fetchPackage = async (path) =>
 	readFile(resolve(path, 'package.json'), {
@@ -17,13 +17,13 @@ const fetchPackage = async (path) =>
 
 export default async (plop) => {
 	/* Allow customization from the environment variables */
-	const rootFolder = process.env.ROOT_DIR ?? resolve(process.cwd(), '../../');
+	const rootFolder = process.env.ROOT_DIR ?? resolve(process.cwd(), '../');
 	const srcPath = process.env.COMPONENT_DIR ?? resolve(rootFolder, 'components');
 	const projectName = process.env.PROJECT_NAME ?? 'Spectrum CSS';
 	const pkg = await fetchPackage(rootFolder);
 
 	const tokens = await fetchPackage(resolve(srcPath, 'tokens'));
-	const builder = await fetchPackage(resolve(process.cwd(), '../component-builder-simple'));
+	const builder = await fetchPackage(resolve(process.cwd(), '../tools/component-builder-simple'));
 
 	/* Fetch the project name */
 	plop.setWelcomeMessage(`Welcome to the ${projectName} component generator!\n  To get started, answer a few short questions about your component.`);
