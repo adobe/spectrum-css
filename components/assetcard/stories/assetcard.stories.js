@@ -58,7 +58,6 @@ export default {
 			},
 			options: ["checkbox", "highlight", "ordered"],
 			control: "select",
-			if: { arg: "isDropTarget", truthy: false },
 		},
 		isSelected: {
 			name: "Selected",
