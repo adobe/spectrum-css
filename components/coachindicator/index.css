@@ -66,20 +66,20 @@ governing permissions and limitations under the License.
 
   inline-size: var(--mod-coach-indicator-ring-inline-size, var(--spectrum-coach-indicator-ring-inline-size));
   block-size: var(--mod-coach-indicator-ring-block-size, var(--spectrum-coach-indicator-ring-block-size));
-  animation: var(--mod-coach-indicator-animation-name, var(--spectrum-coach-indicator-animation-name)) var(--mod--coach-animation-indicator-ring-duration, var(--spectrum-coach-animation-indicator-ring-duration)) linear infinite;
+  animation: var(--mod-coach-indicator-animation-name, var(--spectrum-coach-indicator-animation-name)) var(--mod-coach-animation-indicator-ring-duration, var(--spectrum-coach-animation-indicator-ring-duration)) linear infinite;
 
   &:nth-child(1) {
-    animation-delay: calc(var(--mod--coach-animation-indicator-ring-duration, var(--spectrum-coach-animation-indicator-ring-duration))
+    animation-delay: calc(var(--mod-coach-animation-indicator-ring-duration, var(--spectrum-coach-animation-indicator-ring-duration))
                       * var(--mod-coach-indicator-inner-animation-delay-multiple, var(--spectrum-coach-indicator-inner-animation-delay-multiple)));
   }
 
   &:nth-child(2) {
-    animation-delay: calc( var(--mod--coach-animation-indicator-ring-duration, var(--spectrum-coach-animation-indicator-ring-duration))
+    animation-delay: calc( var(--mod-coach-animation-indicator-ring-duration, var(--spectrum-coach-animation-indicator-ring-duration))
                       * var(--mod-coach-animation-indicator-ring-center-delay-multiple, var(--spectrum-coach-animation-indicator-ring-center-delay-multiple)));
   }
 
   &:nth-child(3) {
-    animation-delay: calc(var(--mod--coach-animation-indicator-ring-duration, var(--spectrum-coach-animation-indicator-ring-duration))
+    animation-delay: calc(var(--mod-coach-animation-indicator-ring-duration, var(--spectrum-coach-animation-indicator-ring-duration))
                       * var(--mod-coach-animation-indicator-ring-outer-delay-multiple, var(--spectrum-coach-animation-indicator-ring-outer-delay-multiple)));
   }
 }
