@@ -3,8 +3,8 @@
 | `--mod-assectcard-border-color-selected-down`                 |
 | `--mod-assectcard-focus-indicator-color`                      |
 | `--mod-assetcard-asset-animation-duration`                    |
+| `--mod-assetcard-asset-container-border-size`                 |
 | `--mod-assetcard-asset-size`                                  |
-| `--mod-assetcard-assetcontainer-border-size`                  |
 | `--mod-assetcard-background-color`                            |
 | `--mod-assetcard-border-color`                                |
 | `--mod-assetcard-border-color-down`                           |

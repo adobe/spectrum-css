@@ -16,7 +16,7 @@ governing permissions and limitations under the License.
   --spectrum-assetcard-asset-size: 224px;
   --spectrum-assetcard-background-color: var(--spectrum-gray-200);
   --spectrum-assetcard-asset-animation-duration: var(--spectrum-animation-duration-100);
-  --spectrum-assetcard-assetcontainer-border-size: 1px;
+  --spectrum-assetcard-asset-container-border-size: 1px;
   --spectrum-assetcard-header-margin-block-start: var(--spectrum-spacing-300);
 
   --spectrum-assetcard-border-radius: var(--spectrum-corner-radius-100);
@@ -148,7 +148,7 @@ governing permissions and limitations under the License.
     z-index: 3;
 
     border:
-      var(--mod-assetcard-assetcontainer-border-size, var(--spectrum-assetcard-assetcontainer-border-size))
+      var(--mod-assetcard-asset-container-border-size, var(--spectrum-assetcard-asset-container-border-size))
       solid
       var(--mod-assetcard-border-color, var(--spectrum-assetcard-border-color));
     border-radius: calc(var(--mod-assetcard-border-radius, var(--spectrum-assetcard-border-radius)) - 1px);
@@ -245,7 +245,7 @@ governing permissions and limitations under the License.
   inset-inline-start: var(--mod-assetcard-selectionindicator-margin, var(--spectrum-assetcard-selectionindicator-margin));
   inset-block-start: var(--mod-assetcard-selectionindicator-margin, var(--spectrum-assetcard-selectionindicator-margin));
 
-  display: flex;
+  display: none;
   align-items: center;
   justify-content: center;
 
@@ -260,9 +260,6 @@ governing permissions and limitations under the License.
   font-weight: var(--mod-assetcard-selectionindicator-font-weight, var(--spectrum-assetcard-selectionindicator-font-weight));
   font-size: var(--mod-assetcard-selectionindicator-font-size, var(--spectrum-assetcard-selectionindicator-font-size));
 
-  display: none;
-
-  opacity: 0;
   transition: opacity var(--mod-assetcard-asset-animation-duration, var(--spectrum-assetcard-asset-animation-duration)) ease-in-out;
   background-color: transparent;
 }
@@ -324,7 +321,6 @@ governing permissions and limitations under the License.
   &:hover {
     .spectrum-AssetCard-selectionIndicator {
       display: flex;
-      opacity: 1;
       pointer-events: all;
     }
   }
@@ -343,7 +339,6 @@ governing permissions and limitations under the License.
   &.is-selected {
     .spectrum-AssetCard-selectionIndicator {
       display: flex;
-      opacity: 1;
       pointer-events: all;
     }
   }
