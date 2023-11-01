@@ -1,0 +1,22 @@
+| Modifiable Custom Properties                    |
+| ----------------------------------------------- |
+| `--mod-assetcard-content-font-family`           |
+| `--mod-assetcard-content-font-size`             |
+| `--mod-assetcard-content-font-style`            |
+| `--mod-assetcard-content-font-weight`           |
+| `--mod-assetcard-content-letter-spacing`        |
+| `--mod-assetcard-content-line-height`           |
+| `--mod-assetcard-header-content-font-family`    |
+| `--mod-assetcard-header-content-font-size`      |
+| `--mod-assetcard-header-content-font-style`     |
+| `--mod-assetcard-header-content-font-weight`    |
+| `--mod-assetcard-header-content-letter-spacing` |
+| `--mod-assetcard-header-content-line-height`    |
+| `--mod-assetcard-header-content-text-color`     |
+| `--mod-assetcard-header-text-color`             |
+| `--mod-assetcard-title-font-family`             |
+| `--mod-assetcard-title-font-size`               |
+| `--mod-assetcard-title-font-style`              |
+| `--mod-assetcard-title-font-weight`             |
+| `--mod-assetcard-title-letter-spacing`          |
+| `--mod-assetcard-title-line-height`             |
