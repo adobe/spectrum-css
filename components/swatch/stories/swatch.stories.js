@@ -1,10 +1,9 @@
-// Import the component markup template
 import { Template } from "./template";
 
 export default {
 	title: "Components/Swatch",
 	description:
-		"A swatch shows a small sample of a fill-such as a color, gradient, texture, or material—that is intended to be applied to an object.",
+		"A swatch shows a small sample of a fill&emdash;such as a color, gradient, texture, or material&emdash;that is intended to be applied to an object.",
 	component: "Swatch",
 	argTypes: {
 		size: {
@@ -15,6 +14,25 @@ export default {
 				category: "Component",
 			},
 			options: ["xs", "s", "m", "l",],
+			control: "select",
+		},
+		color: {
+			name: "Color",
+			type: { name: "string", required: true },
+			table: {
+				type: { summary: "string" },
+				category: "Component",
+			},
+			control: "color",
+		},
+		rounding: {
+			name: "Rounding",
+			type: { name: "string" },
+			table: {
+				type: { summary: "string", required: true },
+				category: "Component",
+			},
+			options: ["none", "regular", "full"],
 			control: "select",
 		},
 		isDisabled: {
@@ -38,8 +56,11 @@ export default {
   },
   args: {
     rootClass: "spectrum-Swatch",
+    size: "m",
     isSelected: false,
     isDisabled: false,
+    rounding: "none",
+    color: "rgb(174, 216, 230)"
   },
   parameters: {
     actions: {
@@ -58,5 +79,5 @@ Default.args = {};
 
 export const Transparent = Template.bind({});
 Transparent.args = {
-	customStyles: {"--spectrum-picked-color": "rgba(174, 216, 230, 0.3)"},
+	color: "rgba(174, 216, 230, 0.3)",
 };

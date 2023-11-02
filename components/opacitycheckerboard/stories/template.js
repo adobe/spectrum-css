@@ -38,20 +38,20 @@ export const Template = ({
 					...customClasses.reduce((a, c) => ({ ...a, [c]: true }), {}),
 					[rootClass]: true,
 				})}
-				style=${styleMap(checkerBoardStyles)}
+				style=${ifDefined(styleMap(checkerBoardStyles))}
 				role=${ifDefined(role)}
 			>${content}</div>`;
 	}
 
 	// Component with wrapper for Storybook display, and a testing overlay.
 	return html`
-		<div style=${styleMap(containerStyles)}>
+		<div style=${ifDefined(styleMap(containerStyles))}>
 			<div
 				class=${classMap({
 					...customClasses.reduce((a, c) => ({ ...a, [c]: true }), {}),
 					[rootClass]: true,
 				})}
-				style=${styleMap(checkerBoardStyles)}
+				style=${ifDefined(styleMap(checkerBoardStyles))}
 				role=${ifDefined(role)}
 			>${content}</div>
 			${when(hasColorOverlay, () => {

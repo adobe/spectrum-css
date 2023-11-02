@@ -153,6 +153,12 @@ export const argTypes = {
 		table: { disable: true },
 		control: "object",
 	},
+	customStyles: {
+		name: "Custom styles",
+		type: { name: "string", required: false },
+		table: { disable: true },
+		control: "object",
+	},
 	id: {
 		name: "Element ID",
 		type: { name: "string", required: false },
