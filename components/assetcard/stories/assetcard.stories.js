@@ -58,7 +58,6 @@ export default {
 			},
 			options: ["checkbox", "highlight", "ordered"],
 			control: "select",
-			if: { arg: "isDropTarget", truthy: false },
 		},
 		isSelected: {
 			name: "Selected",
@@ -158,6 +157,7 @@ OrderedSelection.args = {
 export const DropTarget = Template.bind({});
 DropTarget.args = {
 	title: "Drop target",
+	selection: "highlight",
 	isDropTarget: true,
-	exampleImage: "square",
+	isSelected: true,
 };
