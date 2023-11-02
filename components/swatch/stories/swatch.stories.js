@@ -16,7 +16,7 @@ export default {
 			options: ["xs", "s", "m", "l",],
 			control: "select",
 		},
-		color: {
+		swatchColor: {
 			name: "Color",
 			type: { name: "string", required: true },
 			table: {
@@ -59,8 +59,8 @@ export default {
     size: "m",
     isSelected: false,
     isDisabled: false,
-    rounding: "none",
-    color: "rgb(174, 216, 230)"
+    rounding: "regular",
+    swatchColor: "rgb(174, 216, 230)"
   },
   parameters: {
     actions: {
@@ -79,5 +79,5 @@ Default.args = {};
 
 export const Transparent = Template.bind({});
 Transparent.args = {
-	color: "rgba(174, 216, 230, 0.3)",
+	swatchColor: "rgba(174, 216, 230, 0.3)",
 };

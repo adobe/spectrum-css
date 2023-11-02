@@ -1,6 +1,6 @@
+import { Template as ColorHandle } from "@spectrum-css/colorhandle/stories/template.js";
 import { html } from "lit";
 import { classMap } from "lit/directives/class-map.js";
-import { Template as ColorHandle } from "@spectrum-css/colorhandle/stories/template.js";
 
 import "../index.css";
 
@@ -35,11 +35,11 @@ export const Template = ({
         </div>
       </div>
       ${ColorHandle({
-				...globals,
-				isDisabled,
-				customClasses: [`${rootClass}-handle`],
-				colorHandleStyle,
-			})}
+			...globals,
+			isDisabled,
+			customClasses: [`${rootClass}-handle`],
+			customStyles: colorHandleStyle,
+		})}
       <input type="range" class="${rootClass}-slider" aria-label="hue" min="0" max="360" step="">
     </div>
   </div>

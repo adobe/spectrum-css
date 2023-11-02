@@ -48,7 +48,6 @@ export const Template = ({
 			${when(backgroundColor, () => html`<div class="${rootClass}-background" style=${ifDefined(styleMap({ backgroundColor }))}></div>`)}
 			${OpacityCheckerboard({
 				rootClass: backgroundColor ? `${rootClass}-image-wrapper` : undefined,
-				componentOnly: true,
 				customClasses: isLayer ? [`${rootClass}-layer-inner`] : !backgroundColor ? [`${rootClass}-image-wrapper`] : [],
 				content: image ? [image] : [],
 			})}

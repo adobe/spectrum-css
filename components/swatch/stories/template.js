@@ -1,4 +1,3 @@
-import { Template as OpacityCheckerboard } from "@spectrum-css/opacitycheckerboard/stories/template.js";
 import { html } from "lit";
 import { classMap } from "lit/directives/class-map.js";
 import { ifDefined } from "lit/directives/if-defined.js";
@@ -18,7 +17,7 @@ export const Template = ({
 	isDisabled = false,
 	rounding = "regular",
 	customClasses = [],
-	color = "rgb(174, 216, 230)",
+	swatchColor = "rgb(174, 216, 230)",
 	customStyles = {},
 	id,
 	...globals
@@ -49,11 +48,11 @@ export const Template = ({
 			?disabled=${isDisabled}
 			id=${ifDefined(id)}
 			style=${ifDefined(styleMap({
-				"--spectrum-picked-color": color,
+				"--spectrum-picked-color": swatchColor,
 				...customStyles,
 			}))}
 			tabindex="0"
-			@click=${(e) => {
+			@click=${() => {
 				updateArgs({ isSelected: !isSelected });
 			}}
 			@focusout=${() => updateArgs({ isSelected: false })}
@@ -62,11 +61,9 @@ export const Template = ({
 				updateArgs({ isSelected: !isSelected });
 			}}
 		>
-		${OpacityCheckerboard({
-			...globals,
-			componentOnly: true,
-			customClasses: [`${rootClass}-fill`],
-		})}
+			${OpacityCheckerboard({
+				customClasses: [`${rootClass}-fill`],
+			})}
 		</div>
 	`;
 };
