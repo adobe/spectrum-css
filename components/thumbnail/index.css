@@ -207,7 +207,7 @@ governing permissions and limitations under the License.
 }
 
 .spectrum-Thumbnail-layer {
-  border: var(--mod-thumbnail-layer-border-width-outer, var(--spectrum-thumbnail-layer-border-width-outer)) solid var(--mod-thumbnail-layer-border-color-outer, var(--spectrum-thumbnail-layer-border-color-outer));
+  border: var(--mod-thumbnail-layer-border-width-outer, var(--spectrum-thumbnail-layer-border-width-outer)) solid var(--highcontrast-thumbnail-layer-border-color-outer, var(--mod-thumbnail-layer-border-color-outer, var(--spectrum-thumbnail-layer-border-color-outer)));
   box-sizing: border-box;
 
   display: flex;
@@ -273,10 +273,10 @@ governing permissions and limitations under the License.
 			) * 2
 	);
 	outline-style: solid;
-	outline-color: var(
+	outline-color: var(--highcontrast-thumbnail-layer-border-color-inner, var(
 		--mod-thumbnail-layer-border-color-inner,
 		var(--spectrum-thumbnail-layer-border-color-inner)
-	);
+	));
 	outline-width: calc(
 		var(
 				--mod-thumbnail-layer-border-width-inner,
@@ -329,17 +329,17 @@ governing permissions and limitations under the License.
 }
 
 /* Windows High Contrast Mode */
-/* stylelint-disable declaration-property-value-no-unknown */
 @media (forced-colors: active) {
   .spectrum-Thumbnail {
     /* Allow checkerboard pattern to be visible. */
     forced-color-adjust: none;
-
-		--highcontrast-thumbnail-border-color-selected: SelectedItem;
+		--highcontrast-thumbnail-border-color-selected: Highlight;
 		--highcontrast-thumbnail-focus-indicator-color: Highlight;
 		--highcontrast-thumbnail-border-color: CanvasText;
+		--highcontrast-thumbnail-layer-border-color-inner: Canvas;
+		--highcontrast-thumbnail-layer-border-color-outer: CanvasText;
+
 		background-color: Canvas;
 		color: CanvasText;
 	}
 }
-/* stylelint-enable declaration-property-value-no-unknown */
