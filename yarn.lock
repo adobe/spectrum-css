@@ -1919,6 +1919,13 @@
   dependencies:
     nx "15.9.6"
 
+"@nrwl/devkit@17.0.2", "@nrwl/devkit@^17.0.2":
+  version "17.0.2"
+  resolved "https://registry.yarnpkg.com/@nrwl/devkit/-/devkit-17.0.2.tgz#f9d2bab38c625e3a5edb5e4f04a27c1c56aa8693"
+  integrity sha512-zgqTFYmvs80D3T/TwmR/EBdV1OU2c96YYHngAe3DX8kXhjlV3dq+VPZVBROM0AzYLGaSckW3mHBhgL+JrDp5Pg==
+  dependencies:
+    "@nx/devkit" "17.0.2"
+
 "@nrwl/devkit@>=15.5.2 < 16":
   version "15.9.6"
   resolved "https://registry.yarnpkg.com/@nrwl/devkit/-/devkit-15.9.6.tgz#3eee51bb3b2a357b8cbb747be4cb505dc5fa5548"
@@ -1988,6 +1995,19 @@
   integrity sha512-hH03oF+yVmaf19UZfyLDSuVEh0KasU5YfYezuNsdRkXNdTU/WmpDrk4qoo0j6fVoMPrqbbPOn1YMRtulP2WyYA==
   dependencies:
     nx "16.7.4"
+    tslib "^2.3.0"
+
+"@nx/devkit@17.0.2":
+  version "17.0.2"
+  resolved "https://registry.yarnpkg.com/@nx/devkit/-/devkit-17.0.2.tgz#2f931d243dcc08e3cf4e238d782bc14ee40312f6"
+  integrity sha512-gtJNrFtGZa96qAM4ijAvoCLj/LuUr+Jq91QITsYE4cvYL0qan4zGcAOBMclzpaXVN9pwpko+veDwHwnmp/SXTg==
+  dependencies:
+    "@nrwl/devkit" "17.0.2"
+    ejs "^3.1.7"
+    enquirer "~2.3.6"
+    ignore "^5.0.4"
+    semver "7.5.3"
+    tmp "~0.2.1"
     tslib "^2.3.0"
 
 "@nx/nx-darwin-arm64@16.7.4":
