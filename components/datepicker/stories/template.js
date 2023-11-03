@@ -67,7 +67,7 @@ export const Template = ({
 				isQuiet,
 				isDisabled,
 				isReadOnly: readOnly,
-				isInvalid: isRange ? "" : isInvalid,
+				isInvalid: !isRange ? isInvalid : undefined,
 				customClasses: [`${rootClass}-textfield`],
 				customInputClasses: isRange ? [`${rootClass}-input`, `${rootClass}-startField`] : [`${rootClass}-input`],
 				placeholder: "Choose a date",

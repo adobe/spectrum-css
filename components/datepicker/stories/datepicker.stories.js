@@ -34,7 +34,7 @@ export default {
 			control: "boolean",
 		},
 		isDateTimeRange: {
-			name: "Date Time Range styling",
+			name: "Date and Time styling",
 			type: { name: "boolean" },
 			table: {
 				type: { summary: "boolean" },
