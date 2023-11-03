@@ -26,6 +26,10 @@
 | `--mod-sidenav-header-font-style`                       |
 | `--mod-sidenav-header-font-weight`                      |
 | `--mod-sidenav-header-line-height`                      |
+| `--mod-sidenav-heading-bottom-margin`                   |
+| `--mod-sidenav-heading-top-margin`                      |
+| `--mod-sidenav-icon-size`                               |
+| `--mod-sidenav-icon-spacing`                            |
 | `--mod-sidenav-inline-padding`                          |
 | `--mod-sidenav-item-background-default-selected`        |
 | `--mod-sidenav-item-background-down`                    |
@@ -47,5 +51,6 @@
 | `--mod-sidenav-top-level-font-style`                    |
 | `--mod-sidenav-top-level-font-weight`                   |
 | `--mod-sidenav-top-level-line-height`                   |
+| `--mod-sidenav-top-to-icon`                             |
 | `--mod-sidenav-top-to-label`                            |
 | `--mod-sidenav-width`                                   |
