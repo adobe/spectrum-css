@@ -59,9 +59,7 @@ governing permissions and limitations under the License.
   --spectrum-alert-banner-edge-to-button: var(--spectrum-spacing-200);
   --spectrum-alert-banner-text-to-button-vertical: var(--spectrum-spacing-200);
 
-  --spectrum-sidenav-heading-top-margin: 30px; /* TODO replace with var(--spectrum-side-navigation-item-to-header); once token is updated */
-  --spectrum-sidenav-heading-bottom-margin: 10px; /* TODO replace with var(--spectrum-side-navigation-item-to-header); once token is added */
-  --spectrum-sidenav-bottom-to-label: 10px; /* TODO replace with updated var(--spectrum-component-bottom-to-text-100); */
+  --spectrum-sidenav-bottom-to-label: 10px;
 
   --spectrum-alert-dialog-padding: var(--spectrum-spacing-400);
   --spectrum-alert-dialog-description-to-buttons: var(--spectrum-spacing-600);
