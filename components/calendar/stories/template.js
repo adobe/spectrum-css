@@ -1,12 +1,12 @@
 import { html } from "lit";
 import { classMap } from "lit/directives/class-map.js";
-import { styleMap } from "lit/directives/style-map.js";
-import { repeat } from "lit/directives/repeat.js";
 import { ifDefined } from "lit/directives/if-defined.js";
+import { repeat } from "lit/directives/repeat.js";
+import { styleMap } from "lit/directives/style-map.js";
 
-import isChromatic from "chromatic/isChromatic";
-import { useArgs, useGlobals } from "@storybook/client-api";
 import { action } from "@storybook/addon-actions";
+import { useArgs, useGlobals } from "@storybook/client-api";
+import isChromatic from "chromatic/isChromatic";
 
 import { Template as ActionButton } from "@spectrum-css/actionbutton/stories/template.js";
 
@@ -23,13 +23,13 @@ export const Template = ({
 	useDOWAbbrev = false,
 	buttonSize = "s",
 	customClasses = [],
+	customStyles = {
+		"--mod-actionbutton-icon-size": "10px",
+	},
 	onDateClick,
 	previousHandler,
 	nextHandler,
 	id,
-	style = {
-		"--mod-actionbutton-icon-size": "10px",
-	},
 	...globals
 }) => {
 	const [_, updateArgs] = useArgs();
@@ -238,7 +238,7 @@ export const Template = ({
 				[`${rootClass}--padded`]: padded,
 				...customClasses.reduce((a, c) => ({ ...a, [c]: true }), {}),
 			})}
-			style=${ifDefined(styleMap(style))}
+			style=${ifDefined(styleMap(customStyles))}
 			id=${ifDefined(id)}
 		>
 			<div class="${rootClass}-header">

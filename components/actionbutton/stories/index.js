@@ -1,6 +1,7 @@
 import { html } from "lit";
+import { ifDefined } from "lit/directives/if-defined.js";
+import { styleMap } from "lit/directives/style-map.js";
 
-// Import the component markup template
 import { Template } from "./template";
 
 import { default as IconStories } from "@spectrum-css/icon";
@@ -96,27 +97,35 @@ export const argTypes = {
 	},
 };
 
-export const ActionButtons = (args) => {
+export const ActionButtons = ({
+	staticColor,
+	...args
+}) => {
 	return html`
 		<div
-			style="padding: 1rem; ${args.staticColor && args.backgroundColor
-				? `background-color: ${args.backgroundColor}`
-				: ""}"
+      		style=${ifDefined(styleMap({
+				padding: "1rem",
+				backgroundColor: staticColor === "white" ? "rgb(15, 121, 125)" : staticColor === "black" ? "rgb(181, 209, 211)" : undefined,
+			}))}
 		>
 			${Template({
 				...args,
+				staticColor,
 				label: "More",
 				iconName: undefined,
 			})}
 			${Template({
 				...args,
+				staticColor,
 				label: "More",
 			})}
 			${Template({
 				...args,
+				staticColor,
 			})}
 			${Template({
 				...args,
+				staticColor,
 				hasPopup: true,
 			})}
 		</div>

@@ -1,8 +1,9 @@
-import { html } from "lit";
-import { ifDefined } from "lit/directives/if-defined.js";
-import { classMap } from "lit/directives/class-map.js";
-import { styleMap } from "lit/directives/style-map.js";
 import { useArgs } from "@storybook/client-api";
+import { html } from "lit";
+import { classMap } from "lit/directives/class-map.js";
+import { ifDefined } from "lit/directives/if-defined.js";
+import { styleMap } from "lit/directives/style-map.js";
+import { when } from "lit/directives/when.js";
 
 import { Template as Icon } from "@spectrum-css/icon/stories/template.js";
 import { Template as ProgressCircle } from "@spectrum-css/progresscircle/stories/template.js";
@@ -35,7 +36,7 @@ export const Template = ({
 	type = "text",
 	autocomplete = true,
 	onclick,
-	styles = {},
+	customStyles = {},
 	...globals
 }) => {
 	const [, updateArgs] = useArgs();
@@ -68,7 +69,7 @@ export const Template = ({
 				"is-readOnly": isReadOnly,
 				...customClasses.reduce((a, c) => ({ ...a, [c]: true }), {}),
 			})}
-			style=${ifDefined(styleMap(styles))}
+			style=${ifDefined(styleMap(customStyles))}
 			@click=${onclick}
 			@focusin=${(e) => {
 				const focusClass = e.target?.classList?.contains("focus-ring")
@@ -83,35 +84,31 @@ export const Template = ({
 				updateArgs(focusClass);
 			}}
 		>
-			${iconName
-				? Icon({
-						...globals,
-						size,
-						iconName,
-						customClasses: [
-							!!(isInvalid || isValid)
-								? `${rootClass}-validationIcon`
-								: `${rootClass}-icon`,
-							...customIconClasses,
-						],
-				  })
-				: ""}
-			${multiline
-				? html` <textarea
-						placeholder=${ifDefined(placeholder)}
-						name=${ifDefined(name)}
-						.value=${ifDefined(value)}
-						autocomplete=${autocomplete ? undefined : "off"}
-						?required=${isRequired}
-						?disabled=${isDisabled}
-						?readonly=${ifDefined(isReadOnly)}
-						pattern=${ifDefined(pattern)}
-						class=${classMap({
-							[`${rootClass}-input`]: true,
-							...customInputClasses.reduce((a, c) => ({ ...a, [c]: true }), {}),
-						})}
-				  />`
-				: html` <input
+			${when(iconName, () => Icon({
+				...globals,
+				size,
+				iconName,
+				customClasses: [
+					!!(isInvalid || isValid)
+						? `${rootClass}-validationIcon`
+						: `${rootClass}-icon`,
+					...customIconClasses,
+				],
+			}))}
+			${when(multiline, () => html`<textarea
+				placeholder=${ifDefined(placeholder)}
+				name=${ifDefined(name)}
+				.value=${ifDefined(value)}
+				autocomplete=${autocomplete ? undefined : "off"}
+				?required=${isRequired}
+				?disabled=${isDisabled}
+				?readonly=${ifDefined(isReadOnly)}
+				pattern=${ifDefined(pattern)}
+				class=${classMap({
+					[`${rootClass}-input`]: true,
+					...customInputClasses.reduce((a, c) => ({ ...a, [c]: true }), {}),
+				})}
+			/>`, () => html` <input
 						type=${ifDefined(type)}
 						placeholder=${ifDefined(placeholder)}
 						name=${ifDefined(name)}
@@ -125,14 +122,12 @@ export const Template = ({
 							[`${rootClass}-input`]: true,
 							...customInputClasses.reduce((a, c) => ({ ...a, [c]: true }), {}),
 						})}
-				  />`}
-			${isLoading
-				? ProgressCircle({
-						isIndeterminate: true,
-						size: "s",
-						customClasses: customProgressCircleClasses,
-				  })
-				: ""}
+				  />`)}
+			${when(isLoading, () => ProgressCircle({
+				isIndeterminate: true,
+				size: "s",
+				customClasses: customProgressCircleClasses,
+			}))}
 		</div>
 	`;
 };

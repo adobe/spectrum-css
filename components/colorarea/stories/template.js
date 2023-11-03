@@ -1,7 +1,8 @@
+import { Template as ColorHandle } from "@spectrum-css/colorhandle/stories/template.js";
 import { html } from "lit";
 import { classMap } from "lit/directives/class-map.js";
+import { ifDefined } from "lit/directives/if-defined.js";
 import { styleMap } from "lit/directives/style-map.js";
-import { Template as ColorHandle } from "@spectrum-css/colorhandle/stories/template.js";
 
 import "../index.css";
 
@@ -12,9 +13,9 @@ export const Template = ({
 	isFocused = false,
 	customWidth,
 	customHeight,
-	styles = {
+	customStyles = {
 		"--mod-colorarea-height": customHeight,
-		" --mod-colorarea-width": customWidth,
+		"--mod-colorarea-width": customWidth,
 	},
 	...globals
 }) => {
@@ -26,7 +27,7 @@ export const Template = ({
 				"is-focused": isFocused,
 				...customClasses.reduce((a, c) => ({ ...a, [c]: true }), {}),
 			})}
-			style=${styleMap(styles)}
+      		style=${ifDefined(styleMap(customStyles))}
 		>
 			<div
 				class="spectrum-ColorArea-gradient"

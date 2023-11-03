@@ -17,7 +17,6 @@ export default {
 			options: ["xs", "s", "m", "l",],
 			control: "select",
 		},
-		styles: { table: { disable: true } },
 	},
 	args: {
 		rootClass: "spectrum-Swatch",
@@ -39,5 +38,5 @@ Default.args = {};
 
 export const Transparent = Template.bind({});
 Transparent.args = {
-	styles: {"--spectrum-picked-color": "rgba(174, 216, 230, 0.3)"},
+	customStyles: {"--spectrum-picked-color": "rgba(174, 216, 230, 0.3)"},
 };

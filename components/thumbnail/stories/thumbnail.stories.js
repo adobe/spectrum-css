@@ -51,14 +51,14 @@ export default {
 			control: "text",
 		},
 		backgroundColor: {
-			name: "Background Color",
+			name: "Background color",
 			description: "Optional value for `background-color` style property.",
 			type: { name: "string" },
 			table: {
 				type: { summary: "string" },
 				category: "Content",
 			},
-			control: "text",
+			control: "color",
 		},
 		isCover: {
 			name: "Cover",
@@ -104,7 +104,7 @@ export default {
 	},
 	args: {
 		rootClass: "spectrum-Thumbnail",
-		size: "500",
+		size: "1000",
 		isCover: false,
 		isLayer: false,
 		isDisabled: false,

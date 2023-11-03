@@ -1,9 +1,10 @@
 import { html } from "lit";
 import { classMap } from "lit/directives/class-map.js";
 import { ifDefined } from "lit/directives/if-defined.js";
+import { styleMap } from "lit/directives/style-map.js";
 import { when } from "lit/directives/when.js";
 
-import { lowerCase, capitalize } from "lodash-es";
+import { capitalize, lowerCase } from "lodash-es";
 
 import { Template as Icon } from "@spectrum-css/icon/stories/template.js";
 
@@ -22,6 +23,7 @@ export const Template = ({
 	hideLabel = false,
 	staticColor,
 	customClasses = [],
+	customStyles = {},
 	customIconClasses = [],
 	onclick,
 	id,
@@ -56,6 +58,7 @@ export const Template = ({
 			})}
 			id=${ifDefined(id)}
 			role=${ifDefined(role)}
+			style=${ifDefined(styleMap(customStyles))}
 			?disabled=${isDisabled}
 			@click=${onclick}
 		>

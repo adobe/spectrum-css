@@ -1,6 +1,3 @@
-import { html } from "lit-html";
-
-// Import the component markup template
 import { Template } from "./template";
 
 export default {
@@ -144,4 +141,3 @@ Destructive.args = {
   }],
   content: 'Are you sure you want to delete the 3 selected documents?',
 };
-

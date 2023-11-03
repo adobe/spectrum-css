@@ -1,7 +1,7 @@
 import { html } from "lit";
 import { classMap } from "lit/directives/class-map.js";
-import { styleMap } from "lit/directives/style-map.js";
 import { ifDefined } from "lit/directives/if-defined.js";
+import { styleMap } from "lit/directives/style-map.js";
 
 import { Template as Tag } from "@spectrum-css/tag/stories/template.js";
 
@@ -22,7 +22,7 @@ export const Template = ({
 				[rootClass]: true,
 				...customClasses.reduce((a, c) => ({ ...a, [c]: true }), {}),
 			})}
-			style=${styleMap(customStyles)}
+			style=${ifDefined(styleMap(customStyles))}
 			role="list"
 			aria-label=${ifDefined(ariaLabel)}
 		>

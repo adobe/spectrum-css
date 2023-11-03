@@ -70,7 +70,7 @@ export const MenuItem = ({
             customClasses: [
               `${rootClass}Icon`,
               `${rootClass}Icon--workflowIcon`
-            ] 
+            ]
           }) : ''}
       ${isCollapsible
         ? html`<span class="spectrum-Menu-sectionHeading">${label}</span>`
@@ -84,7 +84,7 @@ export const MenuItem = ({
           ${label}
         </span>`
         : ''}
-      ${typeof description != "undefined" 
+      ${typeof description != "undefined"
         ? html`<span class="${rootClass}Description">${description}</span>`
         : ''}
       ${isDrillIn
@@ -98,7 +98,7 @@ export const MenuItem = ({
             ],
           })
         : ''}
-      ${selectionMode == "multiple" 
+      ${selectionMode == "multiple"
         ? Checkbox({
           ...globals,
           size,
@@ -208,7 +208,7 @@ export const Template = ({
       role=${ifDefined(role)}
       aria-labelledby=${ifDefined(labelledby)}
       aria-disabled=${isDisabled ? "true" : "false"}
-      style=${styleMap(customStyles)}
+      style=${ifDefined(styleMap(customStyles))}
     >
       ${items.map((i, idx) => {
         if (i.type === "divider")

@@ -28,14 +28,6 @@ export default {
     items: { table: { disable: true } },
     role: { table: { disable: true } },
     subrole: { table: { disable: true } },
-    customStyles: {
-      description: "Custom styles for testing the story, applied to the parent element.",
-      table: {
-        type: { summary: "object" },
-        category: "Storybook Only",
-      },
-      if: { arg: 'customStyles' }
-    }
   },
   args: {
     rootClass: "spectrum-Menu",
@@ -138,7 +130,7 @@ IconsAndDescriptions.parameters = {
 IconsAndDescriptions.args = {
   role: "listbox",
   subrole: "option",
-  customStyles: {'max-width': '400px'},
+  customStyles: { maxWidth: '400px' },
   items: [
     {
       idx: 1,
@@ -233,7 +225,7 @@ SingleSelection.parameters = {
 };
 SingleSelection.args = {
   selectionMode: "single",
-  customStyles: {'max-width': '1000px'},
+  customStyles: {maxWidth: '1000px'},
   items: [
     {
       label: "Marquee. Extra long menu item text to demonstrate wrapping text and alignment of icon in this situation. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
@@ -248,7 +240,7 @@ SingleSelection.args = {
 export const SingleSelectionWithIcons = Template.bind({});
 SingleSelectionWithIcons.args = {
   selectionMode: "single",
-  customStyles: {'max-width': '1000px'},
+  customStyles: {maxWidth: '1000px'},
   items: [
     {
       label: "Marquee. Extra long menu item text to demonstrate wrapping text and alignment of icon in this situation. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
@@ -270,7 +262,7 @@ SingleSelectionWithIcons.args = {
 export const MultipleSelection = Template.bind({});
 MultipleSelection.args = {
   selectionMode: "multiple",
-  customStyles: {'max-width': '1000px'},
+  customStyles: {maxWidth: '1000px'},
   items: [
     {
       label: "Marquee. Extra long menu item text to demonstrate wrapping text and alignment of icon in this situation. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
@@ -289,7 +281,7 @@ MultipleSelection.args = {
 export const WithActions = Template.bind({});
 WithActions.args = {
   hasActions: true,
-  customStyles: {'max-width': '1000px'},
+  customStyles: {maxWidth: '1000px'},
   items: [
     {
       label: "Marquee. Extra long menu item text to demonstrate wrapping text and alignment of icon in this situation. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
@@ -306,7 +298,7 @@ WithActions.args = {
 export const WithValueAndActions = Template.bind({});
 WithValueAndActions.args = {
   hasActions: true,
-  customStyles: {'max-width': '1000px'},
+  customStyles: {maxWidth: '1000px'},
   items: [
     {
       label: "Marquee. Extra long menu item text to demonstrate wrapping text and alignment of icon in this situation. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
