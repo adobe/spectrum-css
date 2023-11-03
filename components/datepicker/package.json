@@ -19,16 +19,17 @@
   },
   "peerDependencies": {
     "@spectrum-css/pickerbutton": ">=3",
-    "@spectrum-css/popover": ">=5"
+    "@spectrum-css/popover": ">=5",
+    "@spectrum-css/tokens": ">=12"
   },
   "devDependencies": {
     "@spectrum-css/component-builder-simple": "^2.0.17",
     "@spectrum-css/icon": "^4.0.3",
     "@spectrum-css/menu": "^4.0.50",
+    "@spectrum-css/pickerbutton": "^4.0.15",
     "@spectrum-css/popover": "^6.0.79",
     "@spectrum-css/textfield": "^6.0.25",
-    "@spectrum-css/pickerbutton": "^4.0.15",
-    "@spectrum-css/tokens": "^11.3.3",
+    "@spectrum-css/tokens": "^12.0.0",
     "gulp": "^4.0.0"
   },
   "publishConfig": {
