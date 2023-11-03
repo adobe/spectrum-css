@@ -1,6 +1,7 @@
 import { html } from "lit";
+import { ifDefined } from "lit/directives/if-defined.js";
+import { styleMap } from "lit/directives/style-map.js";
 
-// Import the component markup template
 import { Template } from "./template";
 
 import { default as IconStories } from "@spectrum-css/icon/stories/icon.stories.js";
@@ -69,7 +70,7 @@ export default {
 			control: "boolean",
 		},
 		staticColor: {
-			name: "StaticColor",
+			name: "Static color",
 			type: { name: "string" },
 			table: {
 				type: { summary: "string" },
@@ -99,30 +100,41 @@ export default {
 	},
 };
 
-const CustomButton = (args) => {
+const CustomButton = ({
+	iconName,
+	staticColor,
+	customStyles = {},
+	...args
+}) => {
 	return html`
 		<div
-			style="padding: 1rem; ${args.staticColor && args.backgroundColor
-				? `background-color: ${args.backgroundColor}`
-				: ""}"
+      		style=${ifDefined(styleMap({
+				padding: "1rem",
+				backgroundColor: staticColor === "white" ? "rgb(15, 121, 125)" : staticColor === "black" ? "rgb(181, 209, 211)" : undefined,
+				...customStyles
+			}))}
 		>
 			${Template({
 				...args,
+				staticColor,
 				iconName: undefined,
 			})}
 			${Template({
 				...args,
+				staticColor,
 				iconName: undefined,
 				treatment: "outline",
 			})}
 			${Template({
 				...args,
-				iconName: args.iconName ?? "Edit",
+				staticColor,
+				iconName: iconName ?? "Edit",
 			})}
 			${Template({
 				...args,
+				staticColor,
 				hideLabel: true,
-				iconName: args.iconName ?? "Edit",
+				iconName: iconName ?? "Edit",
 			})}
 		</div>
 	`;
@@ -151,13 +163,11 @@ Secondary.args = {
 
 export const StaticColorWhite = CustomButton.bind({});
 StaticColorWhite.args = {
-	backgroundColor: "rgb(15, 121, 125)",
 	staticColor: "white",
 };
 
 export const StaticColorBlack = CustomButton.bind({});
 StaticColorBlack.args = {
-	backgroundColor: "rgb(181, 209, 211)",
 	staticColor: "black",
 };
 

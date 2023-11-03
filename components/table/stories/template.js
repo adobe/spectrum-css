@@ -1,11 +1,11 @@
-import { html, literal } from "lit/static-html.js";
 import { classMap } from "lit/directives/class-map.js";
+import { ifDefined } from "lit/directives/if-defined.js";
 import { when } from "lit/directives/when.js";
-import { ifDefined } from "lit-html/directives/if-defined.js";
+import { html, literal } from "lit/static-html.js";
 
-import { Template as Icon } from "@spectrum-css/icon/stories/template.js";
-import { Template as Checkbox } from "@spectrum-css/checkbox/stories/template.js";
 import { Template as Button } from "@spectrum-css/button/stories/template.js";
+import { Template as Checkbox } from "@spectrum-css/checkbox/stories/template.js";
+import { Template as Icon } from "@spectrum-css/icon/stories/template.js";
 import { Template as Thumbnail } from "@spectrum-css/thumbnail/stories/template.js";
 
 import "../index.css";
@@ -83,7 +83,7 @@ export const TableRowItem = ({
 				role="gridcell"
 				class="spectrum-Table-cell spectrum-Table-checkboxCell"
 			>
-				${when(!isSummaryRow, () => 
+				${when(!isSummaryRow, () =>
 					Checkbox({
 						size,
 						isEmphasized: tableIsEmphasized,
@@ -120,7 +120,7 @@ export const TableRowItem = ({
 									? getCellContent(0)
 									: // prettier-ignore
 									  html`
-									  	<div 
+									  	<div
 											class="${rootClass}-collapseContent"
 										>${getCellContent(0)}</div>`
 							}

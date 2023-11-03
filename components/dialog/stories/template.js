@@ -1,14 +1,14 @@
+import { useArgs } from "@storybook/client-api";
 import { html } from "lit";
 import { classMap } from "lit/directives/class-map.js";
 import { ifDefined } from "lit/directives/if-defined.js";
 import { when } from "lit/directives/when.js";
-import { useArgs } from "@storybook/client-api";
 
-import { Template as Underlay } from '@spectrum-css/underlay/stories/template.js';
-import { Template as Modal } from "@spectrum-css/modal/stories/template.js";
-import { Template as Divider } from "@spectrum-css/divider/stories/template.js";
-import { Template as CloseButton } from "@spectrum-css/closebutton/stories/template.js";
 import { Template as Button } from '@spectrum-css/button/stories/template.js';
+import { Template as CloseButton } from "@spectrum-css/closebutton/stories/template.js";
+import { Template as Divider } from "@spectrum-css/divider/stories/template.js";
+import { Template as Modal } from "@spectrum-css/modal/stories/template.js";
+import { Template as Underlay } from '@spectrum-css/underlay/stories/template.js';
 
 import "../index.css";
 
@@ -73,9 +73,15 @@ export const Template = ({
 				...globals,
 				size: "m",
 				variant: "secondary",
-				label: "Click to open Dialog",
+				label: "Click to open dialog",
 				treatment: "outline",
-				customClasses: ['spectrum-CSSExample-overlayShowButton'],
+				customClasses: [],
+				customStyles: {
+					position: "absolute",
+					insetInlineStart: "50%",
+					insetBlockStart: "50%",
+					transform: "translate(-50%, -50%)",
+				},
 				onclick: () => {
 					updateArgs({ isOpen: !isOpen });
 				},

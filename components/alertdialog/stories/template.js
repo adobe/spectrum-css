@@ -1,15 +1,15 @@
-import { html } from "lit-html";
-import { classMap } from "lit-html/directives/class-map.js";
-import { ifDefined } from "lit-html/directives/if-defined.js";
-import { when } from 'lit-html/directives/when.js';
 import { useArgs } from "@storybook/client-api";
+import { html } from "lit";
+import { classMap } from "lit/directives/class-map.js";
+import { ifDefined } from "lit/directives/if-defined.js";
+import { when } from 'lit/directives/when.js';
 
-import { Template as Underlay } from '@spectrum-css/underlay/stories/template.js';
-import { Template as Modal } from '@spectrum-css/modal/stories/template.js';
-import { Template as Divider } from "@spectrum-css/divider/stories/template.js";
-import { Template as ButtonGroup } from "@spectrum-css/buttongroup/stories/template.js";
 import { Template as Button } from '@spectrum-css/button/stories/template.js';
+import { Template as ButtonGroup } from "@spectrum-css/buttongroup/stories/template.js";
+import { Template as Divider } from "@spectrum-css/divider/stories/template.js";
 import { Template as Icon } from "@spectrum-css/icon/stories/template.js";
+import { Template as Modal } from '@spectrum-css/modal/stories/template.js';
+import { Template as Underlay } from '@spectrum-css/underlay/stories/template.js';
 
 import '../index.css';
 
@@ -80,7 +80,13 @@ export const Template = ({
       variant: "secondary",
       label: "Click to open Alert Dialog",
       treatment: "outline",
-      customClasses: ['spectrum-CSSExample-overlayShowButton'],
+      customClasses: [],
+      customStyles: {
+        position: "absolute",
+        insetInlineStart: "50%",
+        insetBlockStart: "50%",
+        transform: "translate(-50%, -50%)",
+      },
       onclick: () => {
         updateArgs({ isOpen: !isOpen });
       },

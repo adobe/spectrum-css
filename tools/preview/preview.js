@@ -1,14 +1,13 @@
 import isChromatic from "chromatic/isChromatic";
 
+import { withActions } from "@storybook/addon-actions/decorator";
 import DocumentationTemplate from './DocumentationTemplate.mdx';
 import {
 	withContextWrapper,
-	withTextDirectionWrapper,
 	withLanguageWrapper,
 	withReducedMotionWrapper,
-	// withSizingWrapper,
+	withTextDirectionWrapper,
 } from "./decorators/index.js";
-import { withActions } from "@storybook/addon-actions/decorator";
 
 // https://github.com/storybookjs/storybook-addon-console
 import "@storybook/addon-console";
@@ -19,29 +18,25 @@ setConsoleOptions({
 	panelExclude: [...panelExclude, /deprecated/, /TypeError/],
 });
 
-import "@spectrum-css/vars/dist/spectrum-medium.css";
 import "@spectrum-css/vars/dist/spectrum-large.css";
+import "@spectrum-css/vars/dist/spectrum-medium.css";
 
-import "@spectrum-css/vars/dist/spectrum-light.css";
 import "@spectrum-css/vars/dist/spectrum-dark.css";
 import "@spectrum-css/vars/dist/spectrum-darkest.css";
+import "@spectrum-css/vars/dist/spectrum-light.css";
 
 import "@spectrum-css/vars/dist/spectrum-global.css";
 
-import "@spectrum-css/expressvars/dist/spectrum-medium.css";
 import "@spectrum-css/expressvars/dist/spectrum-large.css";
+import "@spectrum-css/expressvars/dist/spectrum-medium.css";
 
-import "@spectrum-css/expressvars/dist/spectrum-light.css";
 import "@spectrum-css/expressvars/dist/spectrum-dark.css";
 import "@spectrum-css/expressvars/dist/spectrum-darkest.css";
+import "@spectrum-css/expressvars/dist/spectrum-light.css";
 
 import "@spectrum-css/expressvars/dist/spectrum-global.css";
 
 import "@spectrum-css/tokens";
-
-// Loading typography on every page because it's a useful utility
-import "@spectrum-css/typography";
-import "@spectrum-css/site";
 
 import "./global.js";
 
@@ -164,11 +159,11 @@ export const argTypes = {
 		table: { disable: true },
 		control: "text",
 	},
-	testId: { 
+	testId: {
 		name: "Test ID",
 		type: { name: "string", required: false },
 		table: { disable: true },
-		control: "text", 
+		control: "text",
 	},
 };
 
@@ -216,7 +211,7 @@ export const parameters = {
 		},
 	},
 	docs: {
-    page: DocumentationTemplate,
+    	page: DocumentationTemplate,
 		story: {
 			inline: true,
 			iframeHeight: "200px",

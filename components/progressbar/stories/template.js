@@ -1,7 +1,10 @@
 import { html } from "lit";
 import { classMap } from "lit/directives/class-map.js";
-import { Template as FieldLabel } from "@spectrum-css/fieldlabel/stories/template.js";
+import { ifDefined } from "lit/directives/if-defined.js";
 import { styleMap } from "lit/directives/style-map.js";
+import { when } from "lit/directives/when.js";
+
+import { Template as FieldLabel } from "@spectrum-css/fieldlabel/stories/template.js";
 
 import "../index.css";
 
@@ -15,17 +18,8 @@ export const Template = ({
 	indeterminate,
 	label,
 	value,
-	styles = {
+	customStyles = {
 		width: customWidth ? customWidth : "",
-	},
-	staticWhiteStyles = {
-		backgroundColor: backgroundColor,
-		width: "400px",
-		height: "200px",
-		display: "flex",
-		flexDirection: "column",
-		alignItems: "center",
-		justifyContent: "space-around",
 	},
 	size = "m",
 	...globals
@@ -40,7 +34,15 @@ export const Template = ({
 	}
 
 	return html`
-		<div style="${staticWhite ? styleMap(staticWhiteStyles) : ""}">
+		<div style=${when(staticWhite, () => styleMap({
+			backgroundColor,
+			width: "400px",
+			height: "200px",
+			display: "flex",
+			flexDirection: "column",
+			alignItems: "center",
+			justifyContent: "space-around",
+		}))}>
 			<div
 				class=${classMap({
 					[rootClass]: true,
@@ -53,7 +55,7 @@ export const Template = ({
 						typeof indeterminate !== "undefined",
 					...customClasses.reduce((a, c) => ({ ...a, [c]: true }), {}),
 				})}
-				style=${styleMap(styles)}
+				style=${ifDefined(styleMap(customStyles))}
 				value="${value}%"
 				role="progressbar"
 				aria-valuenow="${value}%"

@@ -1,7 +1,7 @@
 import { html } from "lit";
 import { classMap } from "lit/directives/class-map.js";
-import { styleMap } from "lit/directives/style-map.js";
 import { ifDefined } from "lit/directives/if-defined.js";
+import { styleMap } from "lit/directives/style-map.js";
 import { when } from "lit/directives/when.js";
 
 import { useArgs } from "@storybook/client-api";
@@ -72,7 +72,7 @@ export const Template = ({
 				let yOffset = "+ 0px";
 				if (position.includes("top") || position.includes("bottom") && !(position.includes("-top") || position.includes("-bottom"))) {
 					x = triggerXCenter - (popWidth > 0 ? popWidth / 2 : popWidth);
-				} 
+				}
 				if (position.includes("left") || position.includes("right")) {
 					y = triggerYCenter - (popHeight > 0 ? popHeight / 2 : popHeight);
 				}

@@ -1,6 +1,7 @@
 import { html } from "lit";
 import { classMap } from "lit/directives/class-map.js";
 import { ifDefined } from "lit/directives/if-defined.js";
+import { styleMap } from "lit/directives/style-map.js";
 import { when } from "lit/directives/when.js";
 
 import { capitalize, lowerCase } from "lodash-es";
@@ -13,6 +14,7 @@ export const Template = ({
   rootClass = "spectrum-Button",
   id,
   customClasses = [],
+  customStyles = {},
   size = "m",
   label,
   hideLabel = false,
@@ -47,6 +49,7 @@ export const Template = ({
         ...customClasses.reduce((a, c) => ({ ...a, [c]: true }), {}),
       })}
       id=${ifDefined(id)}
+      style=${ifDefined(styleMap(customStyles))}
       ?disabled=${isDisabled}
       @click=${onclick}
       aria-label=${ifDefined(hideLabel ? iconName : undefined)}

@@ -1,12 +1,10 @@
-import { html } from "lit";
-
-// Import the component markup template
+import { Template as Typography } from "@spectrum-css/typography/stories/template.js";
 import { Template } from "./template";
 
 export default {
 	title: "Components/Dialog",
 	description:
-		"A Dialog displays important information that users need to acknowledge. They appear over the interface and block further interactions.",
+		"A dialog displays important information that users need to acknowledge. They appear over the interface and block further interactions.",
 	component: "Dialog",
 	argTypes: {
 		heading: {
@@ -57,6 +55,11 @@ export default {
 		actions: {
 			handles: ["click .spectrum-Dialog button"],
 		},
+		docs: {
+			story: {
+				height: "700px",
+			},
+		},
 		status: {
 			type: process.env.MIGRATED_PACKAGES.includes("dialog")
 				? "migrated"
@@ -70,18 +73,12 @@ Default.args = {
 	heading: "Disclaimer",
 	showModal: true,
 	content: [
-		() => {
-			return html`<p class="spectrum-Body spectrum-Body--sizeM">
-			Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
-			tempor incididunt ut labore et dolore magna aliqua. Auctor augue mauris
-			augue neque gravida. Libero volutpat sed ornare arcu. Quisque egestas diam
-			in arcu cursus euismod quis viverra. Posuere ac ut consequat semper
-			viverra nam libero justo laoreet. Enim ut tellus elementum sagittis vitae
-			et leo duis ut. Neque laoreet suspendisse interdum consectetur libero id
-			faucibus nisl. Diam volutpat commodo sed egestas egestas. Dolor magna eget
-			est lorem ipsum dolor. Vitae suscipit tellus mauris a diam maecenas sed.
-			Turpis in eu mi bibendum neque egestas congue. Rhoncus est pellentesque
-			elit ullamcorper dignissim cras lobortis.
-		</p>`;
-	}],
+		() => Typography({
+			semantics: "body",
+			size: "m",
+			content: [
+				"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Auctor augue mauris augue neque gravida. Libero volutpat sed ornare arcu. Quisque egestas diam in arcu cursus euismod quis viverra. Posuere ac ut consequat semper viverra nam libero justo laoreet. Enim ut tellus elementum sagittis vitae et leo duis ut. Neque laoreet suspendisse interdum consectetur libero id faucibus nisl. Diam volutpat commodo sed egestas egestas. Dolor magna eget est lorem ipsum dolor. Vitae suscipit tellus mauris a diam maecenas sed. Turpis in eu mi bibendum neque egestas congue. Rhoncus est pellentesque elit ullamcorper dignissim cras lobortis."
+			]
+		}),
+	],
 };

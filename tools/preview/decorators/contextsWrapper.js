@@ -1,4 +1,4 @@
-import { useEffect, makeDecorator } from "@storybook/preview-api";
+import { makeDecorator, useEffect } from "@storybook/preview-api";
 
 /**
  * @type import('@storybook/csf').DecoratorFunction<import('@storybook/web-components').WebComponentsFramework>
@@ -23,22 +23,25 @@ export const withContextWrapper = makeDecorator({
 			? args.express
 			: getDefaultValue(argTypes.express);
 		/** @type string */
-		const color = args.color ? args.color : getDefaultValue(argTypes.color);
+		const color = args.color ? args.color : getDefaultValue(argTypes.color) ?? "light";
 		/** @type string */
-		const scale = args.scale ? args.scale : getDefaultValue(argTypes.scale);
+		const scale = args.scale ? args.scale : getDefaultValue(argTypes.scale) ?? "medium";
 
-		const colors = argTypes.color.options;
-		const scales = argTypes.scale.options;
+		const colors = ["light", "dark", "darkest"];
+		const scales = ["medium", "large"];
 
 		useEffect(() => {
-			document.body.classList.toggle("spectrum--express", isExpress);
+			const container = document.querySelector('#root-inner') ?? document.body;
+			container.classList.toggle("spectrum", true);
+
+			container.classList.toggle("spectrum--express", isExpress);
 
 			for (const c of colors) {
-				document.body.classList.toggle(`spectrum--${c}`, c === color);
+				container.classList.toggle(`spectrum--${c}`, c === color);
 			}
 
 			for (const s of scales) {
-				document.body.classList.toggle(`spectrum--${s}`, s === scale);
+				container.classList.toggle(`spectrum--${s}`, s === scale);
 			}
 		}, [color, scale, isExpress]);
 

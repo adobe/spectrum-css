@@ -1,4 +1,4 @@
-import { argTypes, ActionButtons } from "./index";
+import { ActionButtons, argTypes } from "./index";
 
 export default {
 	title: "Components/Action button/Static Black",
@@ -13,8 +13,7 @@ export default {
 		isQuiet: false,
 		isEmphasized: false,
 		hasPopup: false,
-    backgroundColor: "rgb(181, 209, 211)",
-    staticColor: "black",
+		staticColor: "black",
 	},
 	parameters: {
 		actions: {

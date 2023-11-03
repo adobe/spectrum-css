@@ -78,7 +78,7 @@ export const TreeViewItem = ({
 					? Thumbnail({
 							...globals,
 							...thumbnail,
-							size: "s",
+							size: "300",
 							customClasses: [`${rootClass}-itemThumbnail`],
 					  })
 					: ""}
