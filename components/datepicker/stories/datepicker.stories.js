@@ -33,6 +33,16 @@ export default {
 			},
 			control: "boolean",
 		},
+		isValid: {
+			name: "Valid",
+			type: { name: "boolean" },
+			table: {
+				type: { summary: "boolean" },
+				category: "State",
+			},
+			control: "boolean",
+			if: { arg: "isInvalid", truthy: false },
+		},
 		isDateTimeRange: {
 			name: "Date and Time styling",
 			type: { name: "boolean" },
@@ -62,6 +72,15 @@ export default {
 			},
 			control: "boolean",
 		},
+		isRequired: {
+			name: "Required",
+			type: { name: "boolean" },
+			table: {
+				type: { summary: "boolean" },
+				category: "State",
+			},
+			control: "boolean",
+		},
 		readOnly: {
 			name: "Read only",
 			type: { name: "boolean" },
@@ -73,8 +92,6 @@ export default {
 		},
 		content: { table: { disable: true } },
 		isRange: { table: {disable: true} },
-		isValid: { table: {disable: true}},
-		isRequired: { table: {disable: true} }
 	},
 	args: {
 		rootClass: "spectrum-DatePicker",
