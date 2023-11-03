@@ -1,7 +1,5 @@
 | Modifiable Custom Properties                                       |
 | ------------------------------------------------------------------ |
-| `--mod-checkbox-text-to-control`                                   |
-| `--mod-checkbox-top-to-text`                                       |
 | `--mod-menu-checkmark-display`                                     |
 | `--mod-menu-checkmark-icon-color-default`                          |
 | `--mod-menu-checkmark-icon-color-down`                             |

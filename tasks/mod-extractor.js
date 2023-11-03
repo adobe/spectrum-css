@@ -29,9 +29,13 @@ async function main(dir = path.join(__dirname, "../components")) {
 		],
 		onlyFiles: true,
 	})) {
-		/* This regex will find all the custom properties that start with --mod- */
-		/* and are defined inside a var() function */
-		const regex = /(--mod-(?:\w|-)+)/g;
+		/**
+		 * This regex will find all the custom properties that start with --mod-
+		 * and are defined inside a var() function. The last capture group will
+		 * ignore any mod properties that are followed by a colon, to exclude
+		 * sub-component passthrough properties that should not be listed as mods.
+		 */
+		const regex = /(--mod-(?:\w|-)+)(?!:|\w|-)/g;
 
 		/* Read the file and find all the matches */
 		const matches = await fsp

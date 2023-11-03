@@ -1,10 +1,5 @@
 | Modifiable Custom Properties                           |
 | ------------------------------------------------------ |
-| `--mod-infield-button-background-color`                |
-| `--mod-infield-button-border-color`                    |
-| `--mod-infield-button-border-color-quiet-disabled`     |
-| `--mod-infield-button-border-width`                    |
-| `--mod-infield-button-width-stacked`                   |
 | `--mod-stepper-animation-duration`                     |
 | `--mod-stepper-border-color`                           |
 | `--mod-stepper-border-color-focus`                     |
@@ -32,5 +27,3 @@
 | `--mod-stepper-height`                                 |
 | `--mod-stepper-min-width-multiplier`                   |
 | `--mod-stepper-width`                                  |
-| `--mod-textfield-border-width`                         |
-| `--mod-textfield-focus-indicator-color`                |
