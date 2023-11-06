@@ -122,6 +122,7 @@ governing permissions and limitations under the License.
   }
 
   &.is-open {
+    --spectrum-overlay-animation-distance: var(--mod-tooltip-animation-distance, var(--spectrum-tooltip-animation-distance));
     @inherit: %spectrum-overlay--open;
   }
 
@@ -399,6 +400,7 @@ governing permissions and limitations under the License.
 
   /* tooltip animates upward ⬆ */
   &.is-open {
+    --spectrum-overlay-animation-distance: var(--mod-tooltip-animation-distance, var(--spectrum-tooltip-animation-distance));
     @inherit: %spectrum-overlay--top--open;
   }
 }
@@ -414,6 +416,7 @@ governing permissions and limitations under the License.
 
   /* Tooltip animates downward ⬇ */
   &.is-open {
+    --spectrum-overlay-animation-distance: var(--mod-tooltip-animation-distance, var(--spectrum-tooltip-animation-distance));
     @inherit: %spectrum-overlay--bottom--open;
   }
 }
@@ -427,6 +430,7 @@ governing permissions and limitations under the License.
 
   /* Tooltip animates to right ⮕ */
   &.is-open {
+    --spectrum-overlay-animation-distance: var(--mod-tooltip-animation-distance, var(--spectrum-tooltip-animation-distance));
     @inherit: %spectrum-overlay--right--open;
   }
 }
@@ -440,6 +444,7 @@ governing permissions and limitations under the License.
 
   /* Tooltip animates to left ⬅ */
   &.is-open {
+    --spectrum-overlay-animation-distance: var(--mod-tooltip-animation-distance, var(--spectrum-tooltip-animation-distance));
     @inherit: %spectrum-overlay--left--open;
   }
 }
@@ -453,12 +458,14 @@ governing permissions and limitations under the License.
 
   /* LTR read, tooltip animates towards left ⬅ */
   &.is-open {
+    --spectrum-overlay-animation-distance: var(--mod-tooltip-animation-distance, var(--spectrum-tooltip-animation-distance));
     @inherit: %spectrum-overlay--left--open;
   }
 
   /* RTL read, tooltip animates towards right ⮕ */
   [dir="rtl"] & {
     &.is-open {
+      --spectrum-overlay-animation-distance: var(--mod-tooltip-animation-distance, var(--spectrum-tooltip-animation-distance));
       @inherit: %spectrum-overlay--right--open;
     }
   }
@@ -473,12 +480,14 @@ governing permissions and limitations under the License.
 
   /* LTR read, tooltip animates towards right ⮕ */
   &.is-open {
+    --spectrum-overlay-animation-distance: var(--mod-tooltip-animation-distance, var(--spectrum-tooltip-animation-distance));
     @inherit: %spectrum-overlay--right--open;
   }
 
   /* RTL read, tooltip animates towards left ⬅ */
   [dir="rtl"] & {
     &.is-open {
+      --spectrum-overlay-animation-distance: var(--mod-tooltip-animation-distance, var(--spectrum-tooltip-animation-distance));
       @inherit: %spectrum-overlay--left--open;
     }
   }
