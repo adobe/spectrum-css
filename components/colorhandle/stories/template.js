@@ -1,5 +1,5 @@
-import { html } from "lit";
 import { Template as OpacityCheckerboard } from "@spectrum-css/opacitycheckerboard/stories/template.js";
+import { html } from "lit";
 
 import "../index.css";
 
@@ -8,24 +8,18 @@ export const Template = ({
 	customClasses = [],
 	isDisabled = false,
 	isFocused = false,
-	colorHandleStyle = {
+	customStyles = {
 		"--spectrum-picked-color": "rgba(255, 0, 0, 0.5)",
 	},
 	...globals
-}) => {
-	const checkerboardContent = html `<div class="${rootClass}-inner"></div>`
-
-	return html`
-		${OpacityCheckerboard({
-			...globals,
-			componentOnly: true,
-			customClasses: [
-				`${rootClass}`,
-				...!isDisabled && isFocused ? ["is-focused"] : [],
-				...isDisabled ? ["is-disabled"] : [],
-				...customClasses,
-			],
-			content: checkerboardContent,
-			checkerBoardStyles: colorHandleStyle,
-		})}`
-}
+}) => OpacityCheckerboard({
+	...globals,
+	customClasses: [
+		`${rootClass}`,
+		...!isDisabled && isFocused ? ["is-focused"] : [],
+		...isDisabled ? ["is-disabled"] : [],
+		...customClasses,
+	],
+	content: [html `<div class="${rootClass}-inner"></div>`],
+	customStyles,
+});

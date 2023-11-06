@@ -1,8 +1,9 @@
 import { html } from "lit";
 import { classMap } from "lit/directives/class-map.js";
-// import { ifDefined } from 'lit/directives/if-defined.js';
+import { ifDefined } from "lit/directives/if-defined.js";
+import { styleMap } from "lit/directives/style-map.js";
 
-import { lowerCase, capitalize } from "lodash-es";
+import { Template as Swatch } from "@spectrum-css/swatch/stories/template.js";
 
 import "../index.css";
 
@@ -12,57 +13,27 @@ export const Template = ({
 	size = "m",
 	density = "regular",
 	rounding = "regular",
-	swatches = [],
-	containerWidth = "250px",
-	...globals
-}) => {
-	const { express } = globals;
-
-	try {
-		if (!express) import(/* webpackPrefetch: true */ "../themes/spectrum.css");
-		else import(/* webpackPrefetch: true */ "../themes/express.css");
-	} catch (e) {
-		console.warn(e);
-	}
-
-	const swatchRootClass = "spectrum-Swatch";
-
-	const limitedSwatches = swatches.slice(0, 6);
-	const swatchesToDisplay =
-		typeof rounding !== "undefined" && rounding !== "none"
-			? limitedSwatches
-			: swatches;
-
-	return html`
-		<div style="width: ${containerWidth};">
-			<div
-				class=${classMap({
-					[rootClass]: true,
-					[`${rootClass}--${density}`]:
-						typeof density !== "undefined" && density !== "regular",
-					...customClasses.reduce((a, c) => ({ ...a, [c]: true }), {}),
-				})}
-			>
-				${swatchesToDisplay.map((swatch, index) => {
-					return html`
-						<div
-							tabindex="0"
-							style="--spectrum-picked-color: rgba(${swatch.r}, ${swatch.g}, ${swatch.b})"
-							class=${classMap({
-								[`${swatchRootClass}`]: true,
-								[`${swatchRootClass}--size${size?.toUpperCase()}`]:
-									typeof size !== "undefined",
-								[`${swatchRootClass}--rounding${capitalize(
-									lowerCase(rounding)
-								)}`]: typeof rounding !== "undefined" && rounding !== "regular",
-								[`${swatchRootClass}--lightBorder`]: true,
-							})}
-						>
-							<div class="spectrum-Swatch-fill"></div>
-						</div>
-					`;
-				})}
-			</div>
-		</div>
-	`;
-};
+	items = [],
+	customStyles = {},
+	id,
+}) => html`
+	<div
+		class=${classMap({
+			[rootClass]: true,
+			[`${rootClass}--${density}`]:
+				typeof density !== "undefined" && density !== "regular",
+			...customClasses.reduce((a, c) => ({ ...a, [c]: true }), {}),
+		})}
+		style=${styleMap({
+			...customStyles,
+			size: `calc(${items.length} / 10 * 32px)`,
+		})}
+		id=${ifDefined(id)}
+	>
+		${items.map((swatch) => Swatch({
+			size,
+			rounding,
+			...swatch,
+		}))}
+	</div>
+`;

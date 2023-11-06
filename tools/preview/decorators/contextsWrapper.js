@@ -1,4 +1,5 @@
 import { makeDecorator, useEffect } from "@storybook/preview-api";
+import isChromatic from "chromatic/isChromatic";
 
 /**
  * @type import('@storybook/csf').DecoratorFunction<import('@storybook/web-components').WebComponentsFramework>
@@ -8,7 +9,7 @@ export const withContextWrapper = makeDecorator({
 	name: "withContextWrapper",
 	parameterName: "context",
 	wrapper: (StoryFn, context) => {
-		const { args, argTypes } = context;
+		const { args, argTypes, viewMode } = context;
 
 		const getDefaultValue = (type) => {
 			if (!type) return null;
@@ -31,7 +32,7 @@ export const withContextWrapper = makeDecorator({
 		const scales = ["medium", "large"];
 
 		useEffect(() => {
-			const container = document.querySelector('#root-inner') ?? document.body;
+			const container = viewMode === "docs" && !isChromatic() ? document.querySelector('#root-inner') ?? document.body : document.body;
 			container.classList.toggle("spectrum", true);
 
 			container.classList.toggle("spectrum--express", isExpress);

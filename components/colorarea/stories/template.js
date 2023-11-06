@@ -31,13 +31,13 @@ export const Template = ({
 		>
 			<div
 				class="spectrum-ColorArea-gradient"
-				style="background: linear-gradient(to top, black 0%, rgba(0, 0, 0, 0) 100%), linear-gradient(to right, white 0%, rgba(0, 0, 0, 0) 100%), rgb(255, 0, 0);"
+				style="background: linear-gradient(to top, black 0%, rgba(0, 0, 0, 0) 100%), linear-gradient(to right, white 0%, rgba(0, 0, 0, 0) 100%), rgba(255, 0, 0);"
 			></div>
 			${ColorHandle({
 				...globals,
 				isDisabled,
 				customClasses: [`${rootClass}-handle`],
-				colorHandleStyle: {
+				customStyles: {
 					"--spectrum-picked-color": "rgba(255, 0, 0)",
 					transfom: `translate(${customWidth}, 0px)`,
 				},
