@@ -12,8 +12,10 @@
 | `--mod-fieldlabel-min-height`                     |
 | `--mod-fieldlabel-side-padding-right`             |
 | `--mod-fieldlabel-side-padding-top`               |
-| `--mod-tableform-border-spacing`                  |
+| `--mod-form-grid-template-columns`                |
+| `--mod-form-grid-template-columns-labels-above`   |
+| `--mod-form-inline-size`                          |
+| `--mod-form-item-block-spacing`                   |
+| `--mod-form-item-block-spacing-labels-above`      |
 | `--mod-tableform-item-block-spacing`              |
 | `--mod-tableform-item-block-spacing-labels-above` |
-| `--mod-tableform-margin`                          |
-| `--mod-tableform-margin-labels-above`             |

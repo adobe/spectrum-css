@@ -82,16 +82,12 @@ governing permissions and limitations under the License.
 
   line-height: var(--mod-fieldlabel-line-height, var(--spectrum-fieldlabel-line-height));
 
-  vertical-align: top;
-
   -webkit-font-smoothing: subpixel-antialiased;
   -moz-osx-font-smoothing: auto;
 
   color: var(--spectrum-fieldlabel-color);
-}
 
-/* international lang support */
-.spectrum-FieldLabel {
+  /* CJK (Chinese, Japanese, and Korean) language support */
   &:lang(ja),
   &:lang(zh),
   &:lang(ko) {
@@ -108,6 +104,7 @@ governing permissions and limitations under the License.
 .spectrum-FieldLabel--left,
 .spectrum-FieldLabel--right {
   display: inline-block;
+  vertical-align: top;
   padding-block: var(--mod-fieldlabel-side-padding-top, var(--spectrum-fieldlabel-side-padding-top)) 0;
   padding-inline: 0 var(--mod-fieldlabel-side-padding-right, var(--spectrum-fieldlabel-side-padding-right));
 }
@@ -116,25 +113,37 @@ governing permissions and limitations under the License.
   text-align: end;
 }
 
-/* Form: two column alignment via display: table */
+/********* Form *********/
 .spectrum-Form {
   --spectrum-tableform-item-block-spacing: var(--spectrum-spacing-300);
-  --spectrum-tableform-border-spacing: 0 var(--mod-tableform-item-block-spacing, var(--spectrum-tableform-item-block-spacing));
-  --spectrum-tableform-margin: calc(var(--mod-tableform-item-block-spacing, var(--spectrum-tableform-item-block-spacing)) * -1) 0;
 
-  display: table;
-  border-collapse: separate;
-  border-spacing: var(--mod-tableform-border-spacing, var(--spectrum-tableform-border-spacing));
-  margin: var(--mod-tableform-margin, var(--spectrum-tableform-margin));
+  margin: 0;
+  display: grid;
+  grid-template-columns: var(--mod-form-grid-template-columns, auto auto);
+  inline-size: var(--mod-form-inline-size, fit-content);
+  justify-content: start;
+
+  /* @deprecation --mod-tableform-item-block-spacing has been renamed to
+     --mod-form-item-block-spacing. The fallback will be removed in a future version. */
+  row-gap: var(--mod-form-item-block-spacing, var(--mod-tableform-item-block-spacing, var(--spectrum-tableform-item-block-spacing)));
 }
 
+/* Row */
 .spectrum-Form-item {
-  display: table-row;
+  display: contents;
+}
+
+@supports(grid-template-columns: subgrid){
+  .spectrum-Form-item {
+    display: grid;
+    grid-column: span 2;
+    grid-template-columns: subgrid;
+  }
 }
 
 .spectrum-Form-itemLabel,
 .spectrum-Form-itemField {
-  display: table-cell;
+  display: block;
 }
 
 /* Fix extra space after inline-flex elements such as stepper. */
@@ -142,28 +151,19 @@ governing permissions and limitations under the License.
   vertical-align: top;
 }
 
-/* Form: stacked alignment via display: flex */
+/* Rows with stacked alignment */
 .spectrum-Form--labelsAbove {
-  --mod-tableform-margin: var(--mod-tableform-margin-labels-above, 0);
-  display: flex;
-  flex-direction: column;
+  /* @deprecation --mod-tableform-item-block-spacing-labels-above has been renamed to
+     --mod-form-item-block-spacing-labels-above. The fallback will be removed in a future version. */
+  --mod-form-item-block-spacing: var(--mod-form-item-block-spacing-labels-above, var(--mod-tableform-item-block-spacing-labels-above, var(--spectrum-spacing-200)));
+  --mod-form-grid-template-columns: var(--mod-form-grid-template-columns-labels-above, auto);
 
   .spectrum-Form-item {
-    display: flex;
-    flex-direction: column;
-
-    .spectrum-Form-itemLabel,
-    .spectrum-Form-itemField {
-      display: block;
-    }
-
-    & + .spectrum-Form-item {
-      margin-block-start: var(--mod-tableform-item-block-spacing-labels-above, var(--spectrum-spacing-200));
-    }
+    display: block;
   }
 }
 
-/* Disabled state */
+/********* Disabled state *********/
 .spectrum-FieldLabel,
 .spectrum-Form-itemLabel {
   &.is-disabled {

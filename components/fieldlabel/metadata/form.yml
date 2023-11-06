@@ -18,7 +18,7 @@ examples:
           <label class="spectrum-FieldLabel spectrum-FieldLabel--sizeM spectrum-Form-itemLabel spectrum-FieldLabel--left" for="fieldLabelExample-emailaddress">Email Address</label>
           <div class="spectrum-Form-itemField">
             <div class="spectrum-Textfield">
-              <input class="spectrum-Textfield-input" aria-invalid="false" type="text" placeholder="Enter your e-mail address" id="fieldLabelExample-emailaddress">
+              <input class="spectrum-Textfield-input" aria-invalid="false" type="text" id="fieldLabelExample-emailaddress">
             </div>
           </div>
         </div>
@@ -65,7 +65,7 @@ examples:
           <div class="spectrum-Form-itemField">
             <div class="spectrum-Stepper">
               <div class="spectrum-Textfield spectrum-Stepper-textfield">
-                <input type="number" class="spectrum-Textfield-input spectrum-Stepper-input" placeholder="Enter a number" min="-2" max="2" step="0.5" id="fieldLabelExample-stepper">
+                <input type="number" class="spectrum-Textfield-input spectrum-Stepper-input" min="-2" max="2" step="0.5" id="fieldLabelExample-stepper">
               </div>
               <span class="spectrum-Stepper-buttons">
                 <button class="spectrum-ActionButton spectrum-ActionButton--sizeM spectrum-Stepper-stepUp" tabindex="-1">
@@ -92,7 +92,7 @@ examples:
           <label for="fieldLabelExample-lifestory" class="spectrum-FieldLabel spectrum-FieldLabel--sizeM spectrum-Form-itemLabel spectrum-FieldLabel--right">Company Title</label>
           <div class="spectrum-Form-itemField">
             <div class="spectrum-Textfield spectrum-Textfield--multiline">
-              <textarea id="fieldLabelExample-lifestory" placeholder="Enter your life story" name="field" class="spectrum-Textfield-input"></textarea>
+              <textarea id="fieldLabelExample-lifestory" name="field" class="spectrum-Textfield-input"></textarea>
             </div>
           </div>
         </div>
@@ -100,7 +100,7 @@ examples:
           <label class="spectrum-FieldLabel spectrum-FieldLabel--sizeM spectrum-Form-itemLabel spectrum-FieldLabel--right" for="fieldLabelExample-emailaddress">Email Address</label>
           <div class="spectrum-Form-itemField">
             <div class="spectrum-Textfield">
-              <input class="spectrum-Textfield-input" aria-invalid="false" type="text" placeholder="Enter your e-mail address" id="fieldLabelExample-emailaddress">
+              <input class="spectrum-Textfield-input" aria-invalid="false" type="text" id="fieldLabelExample-emailaddress">
             </div>
           </div>
         </div>
@@ -147,7 +147,7 @@ examples:
           <div class="spectrum-Form-itemField">
             <div class="spectrum-Stepper">
               <div class="spectrum-Textfield spectrum-Stepper-textfield">
-                <input type="number" class="spectrum-Textfield-input spectrum-Stepper-input" placeholder="Enter a number" min="-2" max="2" step="0.5" id="fieldLabelExample-stepper">
+                <input type="number" class="spectrum-Textfield-input spectrum-Stepper-input" min="-2" max="2" step="0.5" id="fieldLabelExample-stepper">
               </div>
               <span class="spectrum-Stepper-buttons">
                 <button class="spectrum-ActionButton spectrum-ActionButton--sizeM spectrum-Stepper-stepUp" tabindex="-1">
@@ -174,7 +174,7 @@ examples:
           <label for="fieldLabelExample-lifestory" class="spectrum-FieldLabel spectrum-FieldLabel--sizeM spectrum-Form-itemLabel">Company Title</label>
           <div class="spectrum-Form-itemField">
             <div class="spectrum-Textfield spectrum-Textfield--multiline">
-              <textarea id="fieldLabelExample-lifestory" placeholder="Enter your life story" name="field" class="spectrum-Textfield-input"></textarea>
+              <textarea id="fieldLabelExample-lifestory" name="field" class="spectrum-Textfield-input"></textarea>
             </div>
           </div>
         </div>
@@ -182,7 +182,7 @@ examples:
           <label class="spectrum-FieldLabel spectrum-FieldLabel--sizeM spectrum-Form-itemLabel" for="fieldLabelExample-emailaddress">Email Address</label>
           <div class="spectrum-Form-itemField">
             <div class="spectrum-Textfield">
-              <input class="spectrum-Textfield-input" aria-invalid="false" type="text" placeholder="Enter your e-mail address" id="fieldLabelExample-emailaddress">
+              <input class="spectrum-Textfield-input" aria-invalid="false" type="text" id="fieldLabelExample-emailaddress">
             </div>
           </div>
         </div>
@@ -229,7 +229,7 @@ examples:
           <div class="spectrum-Form-itemField">
             <div class="spectrum-Stepper">
               <div class="spectrum-Textfield spectrum-Stepper-textfield">
-                <input type="number" class="spectrum-Textfield-input spectrum-Stepper-input" placeholder="Enter a number" min="-2" max="2" step="0.5" id="fieldLabelExample-stepper">
+                <input type="number" class="spectrum-Textfield-input spectrum-Stepper-input" min="-2" max="2" step="0.5" id="fieldLabelExample-stepper">
               </div>
               <span class="spectrum-Stepper-buttons">
                 <button class="spectrum-ActionButton spectrum-ActionButton--sizeM spectrum-Stepper-stepUp" tabindex="-1">
