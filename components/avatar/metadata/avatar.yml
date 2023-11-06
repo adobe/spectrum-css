@@ -5,6 +5,7 @@ description: |
 
   An avatar image is wrapped in a link that uses the `.spectrum-Avatar-link`
   class by default, however, an avatar may also be used without a link.
+  When disabled the avatar should only be used without a link.
 SpectrumSiteSlug: https://spectrum.adobe.com/page/avatar/
 sections:
   - name: Custom Properties API
@@ -23,6 +24,8 @@ sections:
 examples:
   - id: avatar
     name: Standard
+    description: |
+      Standard Avatars are wrapped in a link.
     markup: |
       <div class="spectrum-Examples spectrum-Examples--vertical">
         <div class="spectrum-Examples-item">
@@ -99,8 +102,7 @@ examples:
       </div>
 
   - id: avatar-no-link
-    name: No Link.
-    Descrption: Only avatars without links should be used for the disabed state of avatar
+    name: No Link
     markup: |
       <div class="spectrum-Examples spectrum-Examples--vertical">
         <div class="spectrum-Examples-item">
