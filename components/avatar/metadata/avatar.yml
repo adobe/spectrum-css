@@ -24,8 +24,6 @@ sections:
 examples:
   - id: avatar
     name: Standard
-    description: |
-      Standard Avatars are wrapped in a link.
     markup: |
       <div class="spectrum-Examples spectrum-Examples--vertical">
         <div class="spectrum-Examples-item">
@@ -43,6 +41,7 @@ examples:
               <img class="spectrum-Avatar-image" src="img/example-ava.jpg" alt="Avatar">
             </a>
           </div>
+        </div>
         <div class="spectrum-Examples-item">
           <h4 class="spectrum-Heading spectrum-Heading--sizeXS spectrum-Examples-itemHeading">100 (default)</h4>
           <div class="spectrum-Avatar spectrum-Avatar--size100">
