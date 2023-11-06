@@ -7,25 +7,25 @@ examples:
     markup: |
       <form class="spectrum-Form">
         <div class="spectrum-Form-item">
-          <label for="fieldLabelExample-lifestory" class="spectrum-FieldLabel spectrum-FieldLabel--sizeM spectrum-Form-itemLabel spectrum-FieldLabel--left">Company Title</label>
+          <label for="fieldLabelExample-company-1" class="spectrum-FieldLabel spectrum-FieldLabel--sizeM spectrum-Form-itemLabel spectrum-FieldLabel--left">Company Title</label>
           <div class="spectrum-Form-itemField">
             <div class="spectrum-Textfield spectrum-Textfield--multiline">
-              <textarea id="fieldLabelExample-lifestory" placeholder="Enter your life story" name="field" class="spectrum-Textfield-input"></textarea>
+              <textarea id="fieldLabelExample-company-1" name="field" class="spectrum-Textfield-input"></textarea>
             </div>
           </div>
         </div>
         <div class="spectrum-Form-item">
-          <label class="spectrum-FieldLabel spectrum-FieldLabel--sizeM spectrum-Form-itemLabel spectrum-FieldLabel--left" for="fieldLabelExample-emailaddress">Email Address</label>
+          <label class="spectrum-FieldLabel spectrum-FieldLabel--sizeM spectrum-Form-itemLabel spectrum-FieldLabel--left" for="fieldLabelExample-emailaddress-1">Email Address</label>
           <div class="spectrum-Form-itemField">
             <div class="spectrum-Textfield">
-              <input class="spectrum-Textfield-input" aria-invalid="false" type="text" id="fieldLabelExample-emailaddress">
+              <input class="spectrum-Textfield-input" aria-invalid="false" type="text" id="fieldLabelExample-emailaddress-1">
             </div>
           </div>
         </div>
         <div class="spectrum-Form-item">
-          <label class="spectrum-FieldLabel spectrum-FieldLabel--sizeM spectrum-Form-itemLabel spectrum-FieldLabel--left" for="spectrum-textinput-instance">Country</label>
+          <div class="spectrum-FieldLabel spectrum-FieldLabel--sizeM spectrum-Form-itemLabel spectrum-FieldLabel--left">Country</div>
           <div class="spectrum-Form-itemField">
-            <button class="spectrum-Picker spectrum-Picker--sizeM" aria-haspopup="true">
+            <button type="button" class="spectrum-Picker spectrum-Picker--sizeM" aria-haspopup="listbox">
               <span class="spectrum-Picker-label is-placeholder">Select a Country</span>
               <svg class="spectrum-Icon spectrum-UIIcon-ChevronDown100 spectrum-Picker-menuIcon" focusable="false" aria-hidden="true">
                 <use xlink:href="#spectrum-css-icon-Chevron100" />
@@ -39,7 +39,7 @@ examples:
           <div class="spectrum-Form-itemField">
             <div class="spectrum-FieldGroup spectrum-FieldGroup--vertical">
               <label class="spectrum-Checkbox spectrum-Checkbox--sizeM spectrum-FieldGroup-item">
-                <input type="checkbox" class="spectrum-Checkbox-input" id="checkbox-0">
+                <input type="checkbox" class="spectrum-Checkbox-input" id="checkbox-1-0">
                 <span class="spectrum-Checkbox-box">
                   <svg class="spectrum-Icon spectrum-UIIcon-Checkmark100 spectrum-Checkbox-checkmark" focusable="false" aria-hidden="true">
                     <use xlink:href="#spectrum-css-icon-Checkmark100" />
@@ -48,7 +48,7 @@ examples:
                 <span class="spectrum-Checkbox-label">Kittens</span>
               </label>
               <label class="spectrum-Checkbox spectrum-Checkbox--sizeM spectrum-FieldGroup-item">
-                <input type="checkbox" class="spectrum-Checkbox-input" id="checkbox-1" checked>
+                <input type="checkbox" class="spectrum-Checkbox-input" id="checkbox-1-1" checked>
                 <span class="spectrum-Checkbox-box">
                   <svg class="spectrum-Icon spectrum-UIIcon-Checkmark100 spectrum-Checkbox-checkmark" focusable="false" aria-hidden="true">
                     <use xlink:href="#spectrum-css-icon-Checkmark100" />
@@ -61,24 +61,28 @@ examples:
         </div>
 
         <div class="spectrum-Form-item">
-          <label class="spectrum-FieldLabel spectrum-FieldLabel--sizeM spectrum-Form-itemLabel spectrum-FieldLabel--left" for="fieldLabelExample-stepper">Age</label>
+          <label class="spectrum-FieldLabel spectrum-FieldLabel--sizeM spectrum-Form-itemLabel spectrum-FieldLabel--left" for="fieldLabelExample-stepper-1">Age</label>
           <div class="spectrum-Form-itemField">
             <div class="spectrum-Stepper">
               <div class="spectrum-Textfield spectrum-Stepper-textfield">
-                <input type="number" class="spectrum-Textfield-input spectrum-Stepper-input" min="-2" max="2" step="0.5" id="fieldLabelExample-stepper">
+                <input type="number" class="spectrum-Textfield-input spectrum-Stepper-input" min="-2" max="2" step="0.5" id="fieldLabelExample-stepper-1">
               </div>
-              <span class="spectrum-Stepper-buttons">
-                <button class="spectrum-ActionButton spectrum-ActionButton--sizeM spectrum-Stepper-stepUp" tabindex="-1">
-                  <svg class="spectrum-Icon spectrum-UIIcon-ChevronUp75 spectrum-Stepper-stepUpIcon" focusable="false" aria-hidden="true">
-                    <use xlink:href="#spectrum-css-icon-Chevron75" />
-                  </svg>
+              <div class="spectrum-Stepper-buttons">
+                <button type="button" class="spectrum-InfieldButton spectrum-InfieldButton--top spectrum-Stepper-button" aria-haspopup="listbox" aria-label="Add">
+                  <div class="spectrum-InfieldButton-fill">
+                    <svg class="spectrum-Icon spectrum-UIIcon-ChevronUp75 spectrum-InfieldButton-icon" focusable="false" aria-hidden="true">
+                        <use xlink:href="#spectrum-css-icon-Chevron75" />
+                      </svg>
+                  </div>
                 </button>
-                <button class="spectrum-ActionButton spectrum-ActionButton--sizeM spectrum-Stepper-stepDown" tabindex="-1">
-                  <svg class="spectrum-Icon spectrum-UIIcon-ChevronDown75 spectrum-Stepper-stepDownIcon" focusable="false" aria-hidden="true">
-                    <use xlink:href="#spectrum-css-icon-Chevron75" />
-                  </svg>
+                <button type="button" class="spectrum-InfieldButton spectrum-InfieldButton--bottom spectrum-Stepper-button" aria-haspopup="listbox" aria-label="Add">
+                  <div class="spectrum-InfieldButton-fill">
+                    <svg class="spectrum-Icon spectrum-UIIcon-ChevronDown75 spectrum-InfieldButton-icon" focusable="false" aria-hidden="true">
+                      <use xlink:href="#spectrum-css-icon-Chevron75" />
+                    </svg>
+                  </div>
                 </button>
-              </span>
+              </div>
             </div>
           </div>
         </div>
@@ -89,25 +93,25 @@ examples:
     markup: |
       <form class="spectrum-Form">
         <div class="spectrum-Form-item">
-          <label for="fieldLabelExample-lifestory" class="spectrum-FieldLabel spectrum-FieldLabel--sizeM spectrum-Form-itemLabel spectrum-FieldLabel--right">Company Title</label>
+          <label for="fieldLabelExample-company-2" class="spectrum-FieldLabel spectrum-FieldLabel--sizeM spectrum-Form-itemLabel spectrum-FieldLabel--right">Company Title</label>
           <div class="spectrum-Form-itemField">
             <div class="spectrum-Textfield spectrum-Textfield--multiline">
-              <textarea id="fieldLabelExample-lifestory" name="field" class="spectrum-Textfield-input"></textarea>
+              <textarea id="fieldLabelExample-company-2" name="field" class="spectrum-Textfield-input"></textarea>
             </div>
           </div>
         </div>
         <div class="spectrum-Form-item">
-          <label class="spectrum-FieldLabel spectrum-FieldLabel--sizeM spectrum-Form-itemLabel spectrum-FieldLabel--right" for="fieldLabelExample-emailaddress">Email Address</label>
+          <label class="spectrum-FieldLabel spectrum-FieldLabel--sizeM spectrum-Form-itemLabel spectrum-FieldLabel--right" for="fieldLabelExample-emailaddress-2">Email Address</label>
           <div class="spectrum-Form-itemField">
             <div class="spectrum-Textfield">
-              <input class="spectrum-Textfield-input" aria-invalid="false" type="text" id="fieldLabelExample-emailaddress">
+              <input class="spectrum-Textfield-input" aria-invalid="false" type="text" id="fieldLabelExample-emailaddress-2">
             </div>
           </div>
         </div>
         <div class="spectrum-Form-item">
-          <label class="spectrum-FieldLabel spectrum-FieldLabel--sizeM spectrum-Form-itemLabel spectrum-FieldLabel--right" for="spectrum-textinput-instance">Country</label>
+          <div class="spectrum-FieldLabel spectrum-FieldLabel--sizeM spectrum-Form-itemLabel spectrum-FieldLabel--right">Country</div>
           <div class="spectrum-Form-itemField">
-            <button class="spectrum-Picker spectrum-Picker--sizeM" aria-haspopup="true">
+            <button type="button" class="spectrum-Picker spectrum-Picker--sizeM" aria-haspopup="listbox">
               <span class="spectrum-Picker-label is-placeholder">Select a Country</span>
               <svg class="spectrum-Icon spectrum-UIIcon-ChevronDown100 spectrum-Picker-menuIcon" focusable="false" aria-hidden="true">
                 <use xlink:href="#spectrum-css-icon-Chevron100" />
@@ -121,7 +125,7 @@ examples:
           <div class="spectrum-Form-itemField">
             <div class="spectrum-FieldGroup spectrum-FieldGroup--vertical">
               <label class="spectrum-Checkbox spectrum-Checkbox--sizeM spectrum-FieldGroup-item">
-                <input type="checkbox" class="spectrum-Checkbox-input" id="checkbox-0">
+                <input type="checkbox" class="spectrum-Checkbox-input" id="checkbox-2-0">
                 <span class="spectrum-Checkbox-box">
                   <svg class="spectrum-Icon spectrum-UIIcon-Checkmark100 spectrum-Checkbox-checkmark" focusable="false" aria-hidden="true">
                     <use xlink:href="#spectrum-css-icon-Checkmark100" />
@@ -130,7 +134,7 @@ examples:
                 <span class="spectrum-Checkbox-label">Kittens</span>
               </label>
               <label class="spectrum-Checkbox spectrum-Checkbox--sizeM spectrum-FieldGroup-item">
-                <input type="checkbox" class="spectrum-Checkbox-input" id="checkbox-1" checked>
+                <input type="checkbox" class="spectrum-Checkbox-input" id="checkbox-2-1" checked>
                 <span class="spectrum-Checkbox-box">
                   <svg class="spectrum-Icon spectrum-UIIcon-Checkmark100 spectrum-Checkbox-checkmark" focusable="false" aria-hidden="true">
                     <use xlink:href="#spectrum-css-icon-Checkmark100" />
@@ -143,24 +147,28 @@ examples:
         </div>
 
         <div class="spectrum-Form-item">
-          <label class="spectrum-FieldLabel spectrum-FieldLabel--sizeM spectrum-Form-itemLabel spectrum-FieldLabel--right" for="fieldLabelExample-stepper">Age</label>
+          <label class="spectrum-FieldLabel spectrum-FieldLabel--sizeM spectrum-Form-itemLabel spectrum-FieldLabel--right" for="fieldLabelExample-stepper-2">Age</label>
           <div class="spectrum-Form-itemField">
             <div class="spectrum-Stepper">
               <div class="spectrum-Textfield spectrum-Stepper-textfield">
-                <input type="number" class="spectrum-Textfield-input spectrum-Stepper-input" min="-2" max="2" step="0.5" id="fieldLabelExample-stepper">
+                <input type="number" class="spectrum-Textfield-input spectrum-Stepper-input" min="-2" max="2" step="0.5" id="fieldLabelExample-stepper-2">
               </div>
-              <span class="spectrum-Stepper-buttons">
-                <button class="spectrum-ActionButton spectrum-ActionButton--sizeM spectrum-Stepper-stepUp" tabindex="-1">
-                  <svg class="spectrum-Icon spectrum-UIIcon-ChevronUp75 spectrum-Stepper-stepUpIcon" focusable="false" aria-hidden="true">
-                    <use xlink:href="#spectrum-css-icon-Chevron75" />
-                  </svg>
+              <div class="spectrum-Stepper-buttons">
+                <button type="button" class="spectrum-InfieldButton spectrum-InfieldButton--top spectrum-Stepper-button" aria-haspopup="listbox" aria-label="Add">
+                  <div class="spectrum-InfieldButton-fill">
+                    <svg class="spectrum-Icon spectrum-UIIcon-ChevronUp75 spectrum-InfieldButton-icon" focusable="false" aria-hidden="true">
+                        <use xlink:href="#spectrum-css-icon-Chevron75" />
+                      </svg>
+                  </div>
                 </button>
-                <button class="spectrum-ActionButton spectrum-ActionButton--sizeM spectrum-Stepper-stepDown" tabindex="-1">
-                  <svg class="spectrum-Icon spectrum-UIIcon-ChevronDown75 spectrum-Stepper-stepDownIcon" focusable="false" aria-hidden="true">
-                    <use xlink:href="#spectrum-css-icon-Chevron75" />
-                  </svg>
+                <button type="button" class="spectrum-InfieldButton spectrum-InfieldButton--bottom spectrum-Stepper-button" aria-haspopup="listbox" aria-label="Add">
+                  <div class="spectrum-InfieldButton-fill">
+                    <svg class="spectrum-Icon spectrum-UIIcon-ChevronDown75 spectrum-InfieldButton-icon" focusable="false" aria-hidden="true">
+                      <use xlink:href="#spectrum-css-icon-Chevron75" />
+                    </svg>
+                  </div>
                 </button>
-              </span>
+              </div>
             </div>
           </div>
         </div>
@@ -171,25 +179,25 @@ examples:
     markup: |
       <form class="spectrum-Form spectrum-Form--labelsAbove">
         <div class="spectrum-Form-item">
-          <label for="fieldLabelExample-lifestory" class="spectrum-FieldLabel spectrum-FieldLabel--sizeM spectrum-Form-itemLabel">Company Title</label>
+          <label for="fieldLabelExample-company-3" class="spectrum-FieldLabel spectrum-FieldLabel--sizeM spectrum-Form-itemLabel">Company Title</label>
           <div class="spectrum-Form-itemField">
             <div class="spectrum-Textfield spectrum-Textfield--multiline">
-              <textarea id="fieldLabelExample-lifestory" name="field" class="spectrum-Textfield-input"></textarea>
+              <textarea id="fieldLabelExample-company-3" name="field" class="spectrum-Textfield-input"></textarea>
             </div>
           </div>
         </div>
         <div class="spectrum-Form-item">
-          <label class="spectrum-FieldLabel spectrum-FieldLabel--sizeM spectrum-Form-itemLabel" for="fieldLabelExample-emailaddress">Email Address</label>
+          <label class="spectrum-FieldLabel spectrum-FieldLabel--sizeM spectrum-Form-itemLabel" for="fieldLabelExample-emailaddress-3">Email Address</label>
           <div class="spectrum-Form-itemField">
             <div class="spectrum-Textfield">
-              <input class="spectrum-Textfield-input" aria-invalid="false" type="text" id="fieldLabelExample-emailaddress">
+              <input class="spectrum-Textfield-input" aria-invalid="false" type="text" id="fieldLabelExample-emailaddress-3">
             </div>
           </div>
         </div>
         <div class="spectrum-Form-item">
-          <label class="spectrum-FieldLabel spectrum-FieldLabel--sizeM spectrum-Form-itemLabel" for="spectrum-textinput-instance">Country</label>
+          <div class="spectrum-FieldLabel spectrum-FieldLabel--sizeM spectrum-Form-itemLabel">Country</div>
           <div class="spectrum-Form-itemField">
-            <button class="spectrum-Picker spectrum-Picker--sizeM" aria-haspopup="true">
+            <button type="button" class="spectrum-Picker spectrum-Picker--sizeM" aria-haspopup="listbox">
               <span class="spectrum-Picker-label is-placeholder">Select a Country</span>
               <svg class="spectrum-Icon spectrum-UIIcon-ChevronDown100 spectrum-Picker-menuIcon" focusable="false" aria-hidden="true">
                 <use xlink:href="#spectrum-css-icon-Chevron100" />
@@ -203,7 +211,7 @@ examples:
           <div class="spectrum-Form-itemField">
             <div class="spectrum-FieldGroup spectrum-FieldGroup--vertical" id="checkboxgroup-label-3">
               <label class="spectrum-Checkbox spectrum-Checkbox--sizeM spectrum-FieldGroup-item">
-                <input type="checkbox" class="spectrum-Checkbox-input" id="checkbox-0">
+                <input type="checkbox" class="spectrum-Checkbox-input" id="checkbox-3-0">
                 <span class="spectrum-Checkbox-box">
                   <svg class="spectrum-Icon spectrum-UIIcon-Checkmark100 spectrum-Checkbox-checkmark" focusable="false" aria-hidden="true">
                     <use xlink:href="#spectrum-css-icon-Checkmark100" />
@@ -212,7 +220,7 @@ examples:
                 <span class="spectrum-Checkbox-label">Kittens</span>
               </label>
               <label class="spectrum-Checkbox spectrum-Checkbox--sizeM spectrum-FieldGroup-item">
-                <input type="checkbox" class="spectrum-Checkbox-input" id="checkbox-1" checked>
+                <input type="checkbox" class="spectrum-Checkbox-input" id="checkbox-3-1" checked>
                 <span class="spectrum-Checkbox-box">
                   <svg class="spectrum-Icon spectrum-UIIcon-Checkmark100 spectrum-Checkbox-checkmark" focusable="false" aria-hidden="true">
                     <use xlink:href="#spectrum-css-icon-Checkmark100" />
@@ -225,24 +233,28 @@ examples:
         </div>
 
         <div class="spectrum-Form-item">
-          <label class="spectrum-FieldLabel spectrum-FieldLabel--sizeM spectrum-Form-itemLabel" for="fieldLabelExample-stepper">Age</label>
+          <label class="spectrum-FieldLabel spectrum-FieldLabel--sizeM spectrum-Form-itemLabel" for="fieldLabelExample-stepper-3">Age</label>
           <div class="spectrum-Form-itemField">
             <div class="spectrum-Stepper">
               <div class="spectrum-Textfield spectrum-Stepper-textfield">
-                <input type="number" class="spectrum-Textfield-input spectrum-Stepper-input" min="-2" max="2" step="0.5" id="fieldLabelExample-stepper">
+                <input type="number" class="spectrum-Textfield-input spectrum-Stepper-input" min="-2" max="2" step="0.5" id="fieldLabelExample-stepper-3">
               </div>
-              <span class="spectrum-Stepper-buttons">
-                <button class="spectrum-ActionButton spectrum-ActionButton--sizeM spectrum-Stepper-stepUp" tabindex="-1">
-                  <svg class="spectrum-Icon spectrum-UIIcon-ChevronUp75 spectrum-Stepper-stepUpIcon" focusable="false" aria-hidden="true">
-                    <use xlink:href="#spectrum-css-icon-Chevron75" />
-                  </svg>
+              <div class="spectrum-Stepper-buttons">
+                <button type="button" class="spectrum-InfieldButton spectrum-InfieldButton--top spectrum-Stepper-button" aria-haspopup="listbox" aria-label="Add">
+                  <div class="spectrum-InfieldButton-fill">
+                    <svg class="spectrum-Icon spectrum-UIIcon-ChevronUp75 spectrum-InfieldButton-icon" focusable="false" aria-hidden="true">
+                        <use xlink:href="#spectrum-css-icon-Chevron75" />
+                      </svg>
+                  </div>
                 </button>
-                <button class="spectrum-ActionButton spectrum-ActionButton--sizeM spectrum-Stepper-stepDown" tabindex="-1">
-                  <svg class="spectrum-Icon spectrum-UIIcon-ChevronDown75 spectrum-Stepper-stepDownIcon" focusable="false" aria-hidden="true">
-                    <use xlink:href="#spectrum-css-icon-Chevron75" />
-                  </svg>
+                <button type="button" class="spectrum-InfieldButton spectrum-InfieldButton--bottom spectrum-Stepper-button" aria-haspopup="listbox" aria-label="Add">
+                  <div class="spectrum-InfieldButton-fill">
+                    <svg class="spectrum-Icon spectrum-UIIcon-ChevronDown75 spectrum-InfieldButton-icon" focusable="false" aria-hidden="true">
+                      <use xlink:href="#spectrum-css-icon-Chevron75" />
+                    </svg>
+                  </div>
                 </button>
-              </span>
+              </div>
             </div>
           </div>
         </div>
