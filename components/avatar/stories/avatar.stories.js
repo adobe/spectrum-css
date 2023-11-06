@@ -35,6 +35,16 @@ export default {
 			},
 			control: "text",
 		},
+		hasLink: {
+			name: "Has Link",
+			type: { name: "boolean" },
+			table: {
+				type: { summary: "boolean" },
+				category: "State",
+			},
+			control: "boolean",
+			if: { arg: "isDisabled", truthy: false },
+		},
 		isDisabled: {
 			name: "Disabled",
 			type: { name: "boolean" },
@@ -51,6 +61,7 @@ export default {
 		image: "example-ava.png",
 		altText: "Avatar",
 		isDisabled: false,
+		hasLink: true,
 	},
 	parameters: {
 		status: {
