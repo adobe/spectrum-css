@@ -1,0 +1,78 @@
+name: Build and verify production
+
+on:
+    push:
+        branches: [main]
+
+permissions:
+    contents: read
+    pull-requests: write
+
+concurrency:
+    group: "${{ github.workflow }} @ main"
+    cancel-in-progress: false
+
+defaults:
+    run:
+        shell: bash
+
+# todo: this could add deploy steps as well
+jobs:
+    build:
+        strategy:
+            fail-fast: false
+            matrix:
+                system:
+                    - macos-latest
+                    - ubuntu-latest
+                node-version:
+                    - 18
+        name: Build
+        uses: ./.github/workflows/build.yml
+        with:
+            ref: ${{ github.sha }}
+            system: ${{ matrix.system }}
+            node-version: ${{ matrix.node-version }}
+        secrets: inherit
+
+    # Run VRT on ALL pushes to main
+    vrt:
+        name: Testing
+        needs: [build]
+        uses: ./.github/workflows/vrt.yml
+        secrets: inherit
+
+    publish_site:
+        name: Publish
+        # The build step ensures we are leveraging the cache for the build
+        needs: [build, vrt]
+        uses: ./.github/workflows/publish-site.yml
+        with:
+            storybook-url: ${{ needs.vrt.outputs.storybook-url }}
+        secrets: inherit
+
+    todo_to_issue:
+        runs-on: ubuntu-latest
+        steps:
+            - name: Check out code
+              uses: actions/checkout@v4
+
+            - name: Convert new TODO items to issues
+              uses: alstr/todo-to-issue-action@v4
+
+    autoupdate:
+      name: Auto-update pull requests
+      runs-on: ubuntu-latest
+      permissions:
+        contents: read
+        pull-requests: write
+      steps:
+        # README: https://github.com/castastrophe/actions-pr-auto-update#auto-update-pull-requests
+        - uses: castastrophe/actions-pr-auto-update@v1.1.0
+          with:
+            token: ${{ secrets.GH_PAC_TOKEN }}
+            # Draft PRs will not be automatically updated by this utility
+            include_drafts: false
+            limit: 10
+            include_labels: auto-update
+            exclude_labels: blocked,wip,dependencies
