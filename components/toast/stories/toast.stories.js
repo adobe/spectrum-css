@@ -3,13 +3,11 @@
 // Uncomment if you plan to include an icon
 // import { default as IconStories } from '@spectrum-css/icon/stories/icon.stories.js';
 
-// Import the component markup template
 import { Template } from "./template";
 
+/** Toasts display brief, temporary notifications. They are noticeable but do not disrupt the user experience and do not require an action to be taken. */
 export default {
 	title: "Components/Toast",
-	description:
-		"Toasts display brief, temporary notifications. They are noticeable but do not disrupt the user experience and do not require an action to be taken.",
 	component: "Toast",
 	argTypes: {
 		variant: {
@@ -45,7 +43,7 @@ export default {
 		status: {
 			type: process.env.MIGRATED_PACKAGES.includes("toast")
 				? "migrated"
-				: undefined,
+				: "legacy",
 		},
 	},
 };

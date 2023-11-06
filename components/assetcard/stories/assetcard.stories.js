@@ -1,12 +1,12 @@
-// Import the component markup template
 import { Template } from "./template";
+
+import { isFocused, isSelected } from "@spectrum-css/preview/types/states.js";
 
 import { default as Checkbox } from "@spectrum-css/checkbox/stories/checkbox.stories.js";
 
+/** The asset card component allows users to select and manage assets and their metadata in a grid. */
 export default {
 	title: "Components/Asset card",
-	description:
-		"The asset card component allows users to select and manage assets and their metadata in a grid.",
 	component: "Assetcard",
 	argTypes: {
 		image: {
@@ -59,24 +59,8 @@ export default {
 			options: ["checkbox", "highlight", "ordered"],
 			control: "select",
 		},
-		isSelected: {
-			name: "Selected",
-			type: { name: "boolean" },
-			table: {
-				type: { summary: "boolean" },
-				category: "State",
-			},
-			control: "boolean",
-		},
-		isFocused: {
-			name: "Focused",
-			type: { name: "boolean" },
-			table: {
-				type: { summary: "boolean" },
-				category: "State",
-			},
-			control: "boolean",
-		},
+		isSelected,
+		isFocused,
 		isDropTarget: {
 			name: "Drop target",
 			type: { name: "boolean" },
@@ -102,7 +86,7 @@ export default {
 		status: {
 			type: process.env.MIGRATED_PACKAGES.includes("assetcard")
 				? "migrated"
-				: undefined,
+				: "legacy",
 		},
 	},
 };

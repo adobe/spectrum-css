@@ -1,10 +1,8 @@
-// Import the component markup template
 import { Template } from "./template";
 
+/** A table is used to create a container for displaying information. It allows users to sort, compare, and take action on large amounts of data. */
 export default {
 	title: "Components/Table",
-	description:
-		"A table is used to create a container for displaying information. It allows users to sort, compare, and take action on large amounts of data.",
 	component: "Table",
 	argTypes: {
 		size: {
@@ -107,7 +105,7 @@ export default {
 		status: {
 			type: process.env.MIGRATED_PACKAGES.includes("table")
 				? "migrated"
-				: undefined,
+				: "legacy",
 		},
 	},
 };

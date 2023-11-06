@@ -1,4 +1,3 @@
-// Import the component markup template
 import { Template } from "./template";
 
 import { default as PickerStories } from "@spectrum-css/picker/stories/picker.stories.js";
@@ -6,7 +5,6 @@ const ignoreProps = ["rootClass", "position", "isRounded"];
 
 export default {
 	title: "Components/Search within",
-	description: "The Search within component is...",
 	component: "SearchWithin",
 	argTypes: {
 		...Object.entries(PickerStories.argTypes).reduce((acc, [key, value]) => {
@@ -39,7 +37,7 @@ export default {
 		status: {
 			type: process.env.MIGRATED_PACKAGES.includes("searchwithin")
 				? "migrated"
-				: undefined,
+				: "legacy",
 		},
 	},
 };

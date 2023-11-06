@@ -1,12 +1,12 @@
-// Import the component markup template
 import { Template } from "./template";
+
+import { isDisabled, isFocused, isInvalid, isKeyboardFocused, isLoading, isOpen, isValid } from "@spectrum-css/preview/types/states.js";
 
 import { Template as Menu } from "@spectrum-css/menu/stories/template.js";
 
+/** Comboboxes combine a text entry with a picker menu, allowing users to filter longer lists to only the selections matching a query. */
 export default {
 	title: "Components/Combobox",
-	description:
-		"Comboboxes combine a text entry with a picker menu, allowing users to filter longer lists to only the selections matching a query.",
 	component: "Combobox",
 	argTypes: {
 		size: {
@@ -19,15 +19,7 @@ export default {
 			options: ["s", "m", "l", "xl"],
 			control: "select",
 		},
-		isOpen: {
-			name: "Open",
-			type: { name: "boolean" },
-			table: {
-				type: { summary: "boolean" },
-				category: "State",
-			},
-			control: "boolean",
-		},
+		isOpen,
 		isQuiet: {
 			name: "Quiet styling",
 			type: { name: "boolean" },
@@ -38,62 +30,17 @@ export default {
 			control: "boolean",
 		},
 		isValid: {
-			name: "Valid",
-			type: { name: "boolean" },
-			table: {
-				disable: true,
-				type: { summary: "boolean" },
-				category: "State",
-			},
-			control: "boolean",
+			...isValid,
 			if: { arg: "isInvalid", truthy: false },
 		},
 		isInvalid: {
-			name: "Invalid",
-			type: { name: "boolean" },
-			table: {
-				type: { summary: "boolean" },
-				category: "State",
-			},
-			control: "boolean",
+			...isInvalid,
 			if: { arg: "isValid", truthy: false },
 		},
-		isFocused: {
-			name: "Focused",
-			type: { name: "boolean" },
-			table: {
-				type: { summary: "boolean" },
-				category: "State",
-			},
-			control: "boolean",
-		},
-		isKeyboardFocused: {
-			name: "Keyboard Focused",
-			type: { name: "boolean" },
-			table: {
-				type: { summary: "boolean" },
-				category: "State",
-			},
-			control: "boolean",
-		},
-		isLoading: {
-			name: "Loading",
-			type: { name: "boolean" },
-			table: {
-				type: { summary: "boolean" },
-				category: "State",
-			},
-			control: "boolean",
-		},
-		isDisabled: {
-			name: "Disabled",
-			type: { name: "boolean" },
-			table: {
-				type: { summary: "boolean" },
-				category: "State",
-			},
-			control: "boolean",
-		},
+		isFocused,
+		isKeyboardFocused,
+		isLoading,
+		isDisabled,
 		content: { table: { disable: true } },
 	},
 	args: {
@@ -115,7 +62,7 @@ export default {
 		status: {
 			type: process.env.MIGRATED_PACKAGES.includes("combobox")
 				? "migrated"
-				: undefined,
+				: "legacy",
 		},
 	},
 };

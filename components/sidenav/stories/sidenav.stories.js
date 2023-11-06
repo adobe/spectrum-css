@@ -1,9 +1,8 @@
-// Import the component markup template
 import { Template } from "./template";
 
+/** SideNav lets users navigate the entire content of a product or a section. These can be used for a single level or a multi-level navigation. */
 export default {
   title: "Components/Side nav",
-  description: "SideNav lets users navigate the entire content of a product or a section. These can be used for a single level or a multi-level navigation.",
   component: "Sidenav",
   argTypes: {
     hasIcon: {

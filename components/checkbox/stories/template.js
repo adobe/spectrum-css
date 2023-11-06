@@ -7,7 +7,7 @@ import { useArgs } from "@storybook/client-api";
 
 import { Template as Icon } from "@spectrum-css/icon/stories/template.js";
 
-import "../index.css";
+import "@spectrum-css/checkbox";
 
 export const Template = ({
 	rootClass = "spectrum-Checkbox",
@@ -22,18 +22,9 @@ export const Template = ({
 	id,
 	ariaLabelledby,
 	customClasses = [],
-	...globals
+	testId,
 }) => {
 	const [_, updateArgs] = useArgs();
-
-	const { express } = globals;
-
-	try {
-		if (!express) import(/* webpackPrefetch: true */ "../themes/spectrum.css");
-		else import(/* webpackPrefetch: true */ "../themes/express.css");
-	} catch (e) {
-		console.warn(e);
-	}
 
 	let iconSize = "75";
 	switch (size) {
@@ -62,6 +53,7 @@ export const Template = ({
 				...customClasses.reduce((a, c) => ({ ...a, [c]: true }), {}),
 			})}
 			id=${ifDefined(id)}
+			data-testid=${ifDefined(testId)}
 		>
 			<input
 				type="checkbox"
@@ -79,13 +71,13 @@ export const Template = ({
 			/>
 			<span class="${rootClass}-box">
 				${Icon({
-					...globals,
+
 					size,
 					iconName: `Checkmark${iconSize}`,
 					customClasses: [`${rootClass}-checkmark`],
 				})}
 				${Icon({
-					...globals,
+
 					size,
 					iconName: `Dash${iconSize}`,
 					customClasses: [`${rootClass}-partialCheckmark`],

@@ -1,13 +1,11 @@
-// Import the component markup template
 import { Template } from "./template";
 
 import { default as ActionButton } from "@spectrum-css/actionbutton/stories/actionbutton.stories.js";
 import { default as Menu } from "@spectrum-css/menu/stories/menu.stories.js";
 
+/** The coach mark component can be used to bring added attention to specific parts of a page. */
 export default {
 	title: "Components/Coach mark",
-	description:
-		"The coach mark component can be used to bring added attention to specific parts of a page.",
 	component: "CoachMark",
 	argTypes: {
 		hasActionMenu: {
@@ -54,7 +52,7 @@ export default {
 		status: {
 			type: process.env.MIGRATED_PACKAGES.includes("coachmark")
 				? "migrated"
-				: undefined,
+				: "legacy",
 		},
 	},
 };

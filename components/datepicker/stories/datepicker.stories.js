@@ -1,29 +1,21 @@
-// Import the component markup template
 import { Template } from "./template";
+
+import { isDisabled, isInvalid, isOpen, isValid } from "@spectrum-css/preview/types/states.js";
 
 import { default as CalendarStories } from "@spectrum-css/calendar/stories/calendar.stories.js";
 
 const ignoreProps = ["rootClass", "isDisabled"];
 
+/** A date picker displays a Text Field input with a button next to it, and can display two Text Fields next to each other for choosing a date range. */
 export default {
 	title: "Components/Date picker",
-	description:
-		"A date picker displays a Text Field input with a button next to it, and can display two Text Fields next to each other for choosing a date range.",
 	component: "DatePicker",
 	argTypes: {
 		...Object.entries(CalendarStories.argTypes).reduce((acc, [key]) => {
 			if (ignoreProps.includes(key)) return acc;
 			return { ...acc, [key]: { table: { disable: true } } };
 		}, {}),
-		isOpen: {
-			name: "Open",
-			type: { name: "boolean" },
-			table: {
-				type: { summary: "boolean" },
-				category: "State",
-			},
-			control: "boolean",
-		},
+		isOpen,
 		isQuiet: {
 			name: "Quiet styling",
 			type: { name: "boolean" },
@@ -34,13 +26,7 @@ export default {
 			control: "boolean",
 		},
 		isValid: {
-			name: "Valid",
-			type: { name: "boolean" },
-			table: {
-				type: { summary: "boolean" },
-				category: "State",
-			},
-			control: "boolean",
+			...isValid,
 			if: { arg: "isInvalid", truthy: false },
 		},
 		isDateTimeRange: {
@@ -54,42 +40,12 @@ export default {
 			if: { arg: "isRange", truthy: true },
 		},
 		isInvalid: {
-			name: "Invalid",
-			type: { name: "boolean" },
-			table: {
-				type: { summary: "boolean" },
-				category: "State",
-			},
-			control: "boolean",
+			...isInvalid,
 			if: { arg: "isValid", truthy: false },
 		},
-		isDisabled: {
-			name: "Disabled",
-			type: { name: "boolean" },
-			table: {
-				type: { summary: "boolean" },
-				category: "State",
-			},
-			control: "boolean",
-		},
-		isRequired: {
-			name: "Required",
-			type: { name: "boolean" },
-			table: {
-				type: { summary: "boolean" },
-				category: "State",
-			},
-			control: "boolean",
-		},
-		readOnly: {
-			name: "Read only",
-			type: { name: "boolean" },
-			table: {
-				type: { summary: "boolean" },
-				category: "Advanced",
-			},
-			control: "boolean",
-		},
+		isDisabled,
+		isRequired,
+		isReadOnly,
 		content: { table: { disable: true } },
 		isRange: { table: {disable: true} },
 	},
@@ -103,7 +59,7 @@ export default {
 		isValid: false,
 		isDisabled: false,
 		isRequired: false,
-		readOnly: false,
+		isReadOnly: false,
 	},
 	parameters: {
 		actions: {
@@ -112,7 +68,7 @@ export default {
 		status: {
 			type: process.env.MIGRATED_PACKAGES.includes("datepicker")
 				? "migrated"
-				: undefined,
+				: "legacy",
 		},
 	},
 };

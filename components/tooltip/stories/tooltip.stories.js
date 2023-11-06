@@ -1,10 +1,10 @@
-// Import the component markup template
 import { Template } from "./template";
 
+import { isFocused, isOpen } from "@spectrum-css/preview/types/states.js";
+
+/** Tooltips show contextual help or information about specific components when a user hovers or focuses on them. */
 export default {
 	title: "Components/Tooltip",
-	description:
-		"Tooltips show contextual help or information about specific components when a user hovers or focuses on them.",
 	component: "Tooltip",
 	argTypes: {
 		label: {
@@ -59,24 +59,9 @@ export default {
 			],
 			control: "select",
 		},
-		isOpen: {
-			name: "Open",
-			type: { name: "boolean" },
-			table: {
-				type: { summary: "boolean" },
-				category: "State",
-			},
-			control: "boolean",
-		},
+		isOpen,
 		isFocused: {
-			name: "Focused",
-			type: { name: "boolean" },
-			table: {
-				type: { summary: "boolean" },
-				category: "State",
-				disable: true,
-			},
-			control: "boolean",
+			...isFocused,
 			if: { arg: "showOnHover", truthy: true },
 		},
 		showOnHover: {
@@ -105,7 +90,7 @@ export default {
 		status: {
 			type: process.env.MIGRATED_PACKAGES.includes("tooltip")
 				? "migrated"
-				: undefined,
+				: "legacy",
 		},
 	},
 };

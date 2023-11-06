@@ -1,29 +1,21 @@
-import { within, userEvent } from '@storybook/testing-library';
+import { userEvent, within } from '@storybook/testing-library';
 import { html } from "lit";
 
-// Import the component markup template
-import { Template } from "./template";
+import { isOpen } from "@spectrum-css/preview/types/states.js";
 
 import { default as ActionButton } from "@spectrum-css/actionbutton/stories/actionbutton.stories.js";
 import { default as Menu } from "@spectrum-css/menu/stories/menu.stories.js";
 import { default as Popover } from "@spectrum-css/popover/stories/popover.stories.js";
 import { default as IconStories } from "@spectrum-css/icon/stories/icon.stories.js";
 
+import { Template } from "./template";
+/** The action menu component is an action button with a popover. */
 export default {
 	title: "Components/Action menu",
-	description: "The Action menu component is an action button with a Popover.",
 	component: "Action menu",
 	argTypes: {
 		items: { table: { disable: true } },
-		isOpen: {
-			name: "Open",
-			type: { name: "boolean" },
-			table: {
-				type: { summary: "boolean" },
-				category: "State",
-			},
-			control: "boolean",
-		},
+		isOpen,
 		iconName: {
 			...(IconStories?.argTypes?.iconName ?? {}),
 			if: false,
@@ -52,7 +44,7 @@ export default {
 		status: {
 			type: process.env.MIGRATED_PACKAGES.includes("actionmenu")
 				? "migrated"
-				: undefined,
+				: "legacy",
 		},
 		chromatic: { delay: 2000 },
 	},

@@ -8,10 +8,7 @@ export const Template = ({
 	customClasses = [],
 	items = [],
 	isOpen = false,
-	label,
-	iconName,
-	size = "m",
-	...globals
+
 }) => {
 
 	if (!items.length) {
@@ -20,7 +17,7 @@ export const Template = ({
 	}
 
 	return Popover({
-		...globals,
+
 		position: "bottom",
 		isOpen,
 		id: "popover-1",

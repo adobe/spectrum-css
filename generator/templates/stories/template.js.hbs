@@ -1,29 +1,30 @@
 import { html } from 'lit';
 import { classMap } from 'lit/directives/class-map.js';
+import { styleMap } from 'lit/directives/class-map.js';
 import { ifDefined } from 'lit/directives/if-defined.js';
+import { when } from 'lit/directives/when.js';
 
-import "../index.css";
+import "@spectrum-css/{{ name }}";
 
-// More on component templates: https://storybook.js.org/docs/web-components/writing-stories/introduction#using-args
 export const Template = ({
   rootClass = "spectrum-{{ pascalCase name }}",
-  size,
-  id,
+  size = "m",
+  id = "spectrum-{{ kebabCase name }}",
+  testId,
+  content = [],
   customClasses = [],
-  ...globals
+  customStyles = {},
 }) => {
   return html`
-    <div class=${classMap({
-      [rootClass]: true,
-      [`${rootClass}--size${size.toUpperCase()}`]: true,
-      ...customClasses.reduce((a, c) => ({ ...a, [c]: true }), {}),
-    })} id=${ifDefined(id)}>
-      <!-- Component mark-up goes here -->
-    </div>{{#if example}}
-
-    <!-- Example markup -->
-    <!--
-      {{{ example }}}
-    -->{{/if}}
+    <div
+      class=${ifDefined(classMap({
+        [rootClass]: true,
+        [`${rootClass}--size${size.toUpperCase()}`]: true,
+        ...customClasses.reduce((a, c) => ({ ...a, [c]: true }), {}),
+      }))}
+      style=${ifDefined(styleMap(customStyles))}
+      id=${ifDefined(id)}
+      data-testid=${ifDefined(testId)}
+    >${when(content, (c) => c)}</div>
   `;
 }

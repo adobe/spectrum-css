@@ -11,7 +11,7 @@ import { Template as Icon } from "@spectrum-css/icon/stories/template.js";
 import { Template as Modal } from '@spectrum-css/modal/stories/template.js';
 import { Template as Underlay } from '@spectrum-css/underlay/stories/template.js';
 
-import '../index.css';
+import '@spectrum-css/alertdialog';
 
 export const Template = ({
   rootClass = "spectrum-AlertDialog",
@@ -22,10 +22,9 @@ export const Template = ({
   customClasses = [],
   buttons,
   variant,
-  onclick,
   icon = false,
   id,
-  ...globals
+  testId,
 }) => {
   const [_, updateArgs] = useArgs();
 
@@ -37,6 +36,7 @@ export const Template = ({
         ...customClasses.reduce((a, c) => ({ ...a, [c]: true }), {}),
       })}
       id=${ifDefined(id)}
+			data-testid=${ifDefined(testId)}
       role="dialog"
       tabindex="-1"
       aria-modal="true"
@@ -46,39 +46,29 @@ export const Template = ({
       <div class="spectrum-AlertDialog-header">
         <h1 class="${rootClass}-heading" id="dialog_label">${heading}</h1>
         ${when(icon, () => Icon({
-          size: 'm',
           iconName: "Alert",
           customClasses: [`${rootClass}-icon`],
-          ...globals,
-        })) }
+        }))}
       </div>
       ${Divider({
-            horizontal: true,
-            customClasses: [`${rootClass}-divider`],
-            ...globals,
+          horizontal: true,
+          customClasses: [`${rootClass}-divider`],
           })}
       <section class="${rootClass}-content">${content}</section>
       ${ButtonGroup({
           items: buttons,
-          onclick: () => {
-            updateArgs({ isOpen: !isOpen });
-          },
+          onclick: () => updateArgs({ isOpen: !isOpen }),
         })
       }
       </div>
     </div>
   `;
 
-  return  html`
-    ${Underlay({
-      ...globals,
-      isOpen,
-    })}
+  return when(showModal, () => html`
+    ${Underlay({ isOpen })}
     ${Button({
-      ...globals,
-      size: "m",
       variant: "secondary",
-      label: "Click to open Alert Dialog",
+      label: "Click to open",
       treatment: "outline",
       customClasses: [],
       customStyles: {
@@ -87,14 +77,7 @@ export const Template = ({
         insetBlockStart: "50%",
         transform: "translate(-50%, -50%)",
       },
-      onclick: () => {
-        updateArgs({ isOpen: !isOpen });
-      },
+      onclick: () => updateArgs({ isOpen: !isOpen }),
     })}
-    ${Modal({
-      ...globals,
-      isOpen,
-      content: Dialog,
-    })}
-      `
+    ${Modal({ isOpen, content: Dialog })}`, () => Dialog);
   }

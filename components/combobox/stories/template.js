@@ -3,13 +3,13 @@ import { classMap } from "lit/directives/class-map.js";
 import { ifDefined } from "lit/directives/if-defined.js";
 
 import { Template as Menu } from "@spectrum-css/menu/stories/template.js";
-import { Template as TextField } from "@spectrum-css/textfield/stories/template.js";
-import { Template as Popover } from "@spectrum-css/popover/stories/template.js";
 import { Template as PickerButton } from "@spectrum-css/pickerbutton/stories/template.js";
+import { Template as Popover } from "@spectrum-css/popover/stories/template.js";
+import { Template as TextField } from "@spectrum-css/textfield/stories/template.js";
 
 import { useArgs, useGlobals } from "@storybook/client-api";
 
-import "../index.css";
+import "@spectrum-css/combobox";
 
 export const Template = ({
 	rootClass = "spectrum-Combobox",
@@ -25,21 +25,13 @@ export const Template = ({
 	isFocused = false,
 	isKeyboardFocused = false,
 	isLoading = false,
-	isRequired = false,
-	readOnly = false,
-	...globals
+	// isRequired = false,
+	// readOnly = false,
+	selectedDay,
+	testId,
 }) => {
 	const [_, updateArgs] = useArgs();
 	const [{ lang }] = useGlobals();
-
-	const { express } = globals;
-
-	try {
-		if (!express) import(/* webpackPrefetch: true */ "../themes/spectrum.css");
-		else import(/* webpackPrefetch: true */ "../themes/express.css");
-	} catch (e) {
-		console.warn(e);
-	}
 
 	return html`
 		<div
@@ -58,10 +50,10 @@ export const Template = ({
 				...customClasses.reduce((a, c) => ({ ...a, [c]: true }), {}),
 			})}
 			id=${ifDefined(id)}
+			data-testid=${ifDefined(testId)}
 		>
 			${[
 				TextField({
-					...globals,
 					size,
 					isQuiet,
 					isDisabled,
@@ -78,15 +70,14 @@ export const Template = ({
 					customProgressCircleClasses: ["spectrum-Combobox-progress-circle"],
 					placeholder: "Type here",
 					name: "field",
-					value: globals.selectedDay
-						? new Date(globals.selectedDay).toLocaleDateString(lang)
+					value: selectedDay
+						? new Date(selectedDay).toLocaleDateString(lang)
 						: undefined,
 					onclick: function () {
 						if (!isOpen) updateArgs({ isOpen: true });
 					},
 				}),
 				PickerButton({
-					...globals,
 					customClasses: [`${rootClass}-button`],
 					size,
 					iconType: "workflow",
@@ -104,7 +95,6 @@ export const Template = ({
 					},
 				}),
 				Popover({
-					...globals,
 					isOpen: isOpen && !isDisabled,
 					withTip: false,
 					position: "bottom",
@@ -117,9 +107,8 @@ export const Template = ({
 								width: "100%",
 						  }
 						: {},
-					content: [
+					content: content ?? [
 						Menu({
-							...globals,
 							items: [
 								{
 									label: "Ballard",

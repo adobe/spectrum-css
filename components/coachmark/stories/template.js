@@ -1,12 +1,13 @@
 import { html } from "lit";
 import { classMap } from "lit/directives/class-map.js";
 
+import { useGlobals } from "@storybook/client-api";
+
 import { Template as ActionMenu } from "@spectrum-css/actionmenu/stories/template.js";
 import { Template as ButtonGroup } from "@spectrum-css/buttongroup/stories/template.js";
-
 import { Template as Popover } from "@spectrum-css/popover/stories/template.js";
 
-import "../index.css";
+import "@spectrum-css/coachmark";
 
 export const Template = ({
 	rootClass = "spectrum-CoachMark",
@@ -17,8 +18,8 @@ export const Template = ({
 	hasPagination,
 	hasImage,
 	isOpen = true,
-	...globals
 }) => {
+	const [{ scale }] = useGlobals();
 
 	const displayedActionMenu = ActionMenu({
 		isOpen,
@@ -28,7 +29,7 @@ export const Template = ({
 		popoverTriggerId: "trigger-nested-2",
 		customStyles:  { "margin-block-start": "30px", "margin-inline-start": "-32px"},
 		iconName: 'More',
-		size: globals.scale === "large" ? "s" : "m",
+		size: scale === "large" ? "s" : "m",
 		items: [
 			{
 				label: "Skip tour",
@@ -48,7 +49,6 @@ export const Template = ({
 		})}
 	>
 		${Popover({
-			...globals,
 			nested: true,
 			testId: 'popover-nested',
 			id: 'popover-nested',
@@ -77,9 +77,9 @@ export const Template = ({
 				<div class="${rootClass}-footer">
 				${hasPagination ? html`<div class="spectrum-CoachMark-step"><bdo dir="ltr">2 of 8</bdo></div>` : ''}
 				${ButtonGroup({
-					customClasses: globals.scale === "large" ? [`${rootClass}-buttongroup--mobile`] : [`${rootClass}-buttongroup`],
-					size: globals.scale === "large" ? "s" : "m",
-					items: globals.scale === "large" ?
+					customClasses: scale === "large" ? [`${rootClass}-buttongroup--mobile`] : [`${rootClass}-buttongroup`],
+					size: scale === "large" ? "s" : "m",
+					items: scale === "large" ?
 					[
 						{
 							variant: "secondary",

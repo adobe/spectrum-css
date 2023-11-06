@@ -2,10 +2,9 @@ import { Template } from "./template";
 
 import { html } from "lit";
 
+/** Spectrum Typography is broken out into several separate components. */
 export default {
 	title: "Components/Typography",
-	description:
-		"Spectrum Typography is broken out into several separate components.",
 	component: "Typography",
 	argTypes: {
 		reduceMotion: { table: { disable: true } },
@@ -66,7 +65,7 @@ export default {
 		status: {
 			type: process.env.MIGRATED_PACKAGES.includes("typography")
 				? "migrated"
-				: undefined,
+				: "legacy",
 		},
 	},
 };

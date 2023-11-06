@@ -1,17 +1,17 @@
-// Import the component markup template
 import { Template } from "./template";
 
+import { isDisabled } from "@spectrum-css/preview/types/states.js";
 import isChromatic from "chromatic/isChromatic";
+
 import ActionButtonStories from "@spectrum-css/actionbutton/stories/actionbutton.stories.js";
 
 const months = [...Array(12).keys()].map((key) =>
 	new Date(0, key).toLocaleString("en", { month: "long" })
 );
 
+/** Calendars display a grid of days in one or more months and allow users to select a single date. */
 export default {
 	title: "Components/Calendar",
-	description:
-		"Calendars display a grid of days in one or more months and allow users to select a single date.",
 	component: "Calendar",
 	argTypes: {
 		reducedMotion: { table: { disable: true } },
@@ -56,15 +56,7 @@ export default {
 			},
 			control: "number",
 		},
-		isDisabled: {
-			name: "Disabled",
-			type: { name: "boolean" },
-			table: {
-				type: { summary: "boolean" },
-				category: "State",
-			},
-			control: "boolean",
-		},
+		isDisabled,
 		padded: {
 			name: "Padded",
 			type: { name: "boolean" },
@@ -101,7 +93,7 @@ export default {
 		status: {
 			type: process.env.MIGRATED_PACKAGES.includes("calendar")
 				? "migrated"
-				: undefined,
+				: "legacy",
 		},
 	},
 };

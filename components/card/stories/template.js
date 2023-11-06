@@ -6,12 +6,12 @@ import { when } from "lit/directives/when.js";
 import { useArgs } from "@storybook/client-api";
 
 import { Template as ActionButton } from "@spectrum-css/actionbutton/stories/template.js";
-import { Template as QuickAction } from "@spectrum-css/quickaction/stories/template.js";
-import { Template as Checkbox } from "@spectrum-css/checkbox/stories/template.js";
 import { Template as Asset } from "@spectrum-css/asset/stories/template.js";
+import { Template as Checkbox } from "@spectrum-css/checkbox/stories/template.js";
 import { Template as Icon } from "@spectrum-css/icon/stories/template.js";
+import { Template as QuickAction } from "@spectrum-css/quickaction/stories/template.js";
 
-import '../index.css';
+import '@spectrum-css/card';
 
 export const Template = ({
   rootClass = "spectrum-Card",
@@ -26,15 +26,13 @@ export const Template = ({
   isQuiet = false,
   isGallery = false,
   isGrid = false,
-  isDropTarget = false,
   hasQuickAction = false,
   hasActions = false,
   showAsset,
   customClasses = [],
-  onclick,
   id,
   role,
-  ...globals
+  testId,
 }) => {
 	const [_, updateArgs] = useArgs();
 
@@ -50,6 +48,7 @@ export const Template = ({
         ...customClasses.reduce((a, c) => ({ ...a, [c]: true }), {}),
       })}
       id=${ifDefined(id)}
+			data-testid=${ifDefined(testId)}
       tabindex="0"
       role=${ifDefined(image || showAsset ? "figure" : isGrid ? "rowheader" : role)}
     >
@@ -62,12 +61,12 @@ export const Template = ({
               ${when(
                 !isHorizontal,
                 () => Asset({
-                  ...globals,
+
                   image,
                   preset: !image ? showAsset : undefined,
                 }),
                 () => Icon({
-                  ...globals,
+
                   size: "xxl",
                   iconName: showAsset === "folder" ? "File" : "Document",
                 })
@@ -89,7 +88,7 @@ export const Template = ({
                   () => html`
                     <div class="${rootClass}-actionButton">
                       ${ActionButton({
-                        ...globals,
+
                         iconName: "More",
                         variant: "overBackground",
                         size: "m",
@@ -116,11 +115,11 @@ export const Template = ({
       ${when(
         hasQuickAction && !isHorizontal,
         () => QuickAction({
-          ...globals,
+
           noOverlay: true,
           content: [
             Checkbox({
-              ...globals,
+
               isChecked: isSelected,
               title: "Select",
             }),

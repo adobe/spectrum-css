@@ -3,7 +3,7 @@ import { classMap } from "lit/directives/class-map.js";
 
 import { Template as Button } from "@spectrum-css/button/stories/template.js";
 
-import "../index.css";
+import "@spectrum-css/splitbutton";
 
 export const Template = ({
 	rootClass = "spectrum-SplitButton",
@@ -16,7 +16,7 @@ export const Template = ({
 	labelIconName = undefined,
 	position = "right",
 	label = "Split Button",
-	...globals
+
 }) => {
 	return html`
 		<div
@@ -28,7 +28,7 @@ export const Template = ({
 			})}
 		>
 			${Button({
-				...globals,
+
 				variant,
 				size,
 				iconName: position === "right"
@@ -44,11 +44,11 @@ export const Template = ({
 				]
 			})}
 			${Button({
-				...globals,
+
 				variant,
 				size,
 				iconName: position === "right"
-					? iconName 
+					? iconName
 					: typeof labelIconName != "undefined" ? labelIconName : undefined,
 				iconAfterLabel: true,
 				label: position === "right" ? undefined : label,

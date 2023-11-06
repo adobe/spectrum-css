@@ -1,9 +1,10 @@
-// Import the component markup template
 import { Template } from "./template";
 
+import { isDisabled } from "@spectrum-css/preview/types/states.js";
+
+/** A button used to close or dismiss components. */
 export default {
 	title: "Components/Close button",
-	description: "A button used to close or dismiss components",
 	component: "CloseButton",
 	argTypes: {
 		size: {
@@ -26,15 +27,7 @@ export default {
 			options: ["white", "black"],
 			control: "select",
 		},
-		isDisabled: {
-			name: "Disabled",
-			type: { name: "boolean" },
-			table: {
-				type: { summary: "boolean" },
-				category: "State",
-			},
-			control: "boolean",
-		},
+		isDisabled,
 	},
 	args: {
 		rootClass: "spectrum-CloseButton",
@@ -48,7 +41,7 @@ export default {
 		status: {
 			type: process.env.MIGRATED_PACKAGES.includes("closebutton")
 				? "migrated"
-				: undefined,
+				: "legacy",
 		},
 	},
 };

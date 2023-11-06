@@ -3,7 +3,7 @@ import { classMap } from "lit/directives/class-map.js";
 import { ifDefined } from "lit/directives/if-defined.js";
 import { when } from "lit/directives/when.js"
 
-import "../index.css";
+import "@spectrum-css/avatar";
 
 export const Template = ({
 	rootClass = "spectrum-Avatar",
@@ -13,8 +13,8 @@ export const Template = ({
 	size = "700",
 	hasLink,
 	id,
+	testId,
 	customClasses = [],
-	// ...globals
 }) => {
 	return html`
 		<div
@@ -25,6 +25,7 @@ export const Template = ({
 				...customClasses.reduce((a, c) => ({ ...a, [c]: true }), {}),
 			})}
 			id=${ifDefined(id)}
+			data-testid=${ifDefined(testId)}
 		>
 			${when(hasLink, () =>
 				html`

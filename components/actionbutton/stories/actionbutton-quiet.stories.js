@@ -1,9 +1,8 @@
-import { argTypes, ActionButtons } from "./index";
+import { ActionButtons, argTypes } from "./index";
 
+/** The action button component represents an action a user can take. */
 export default {
 	title: "Components/Action button/Quiet",
-	description:
-		"The action button component represents an action a user can take.",
 	component: "ActionButton",
 	argTypes: argTypes,
 	args: {
@@ -21,7 +20,7 @@ export default {
 		status: {
 			type: process.env.MIGRATED_PACKAGES.includes("actionbutton")
 				? "migrated"
-				: undefined,
+				: "legacy",
 		},
 	},
 };

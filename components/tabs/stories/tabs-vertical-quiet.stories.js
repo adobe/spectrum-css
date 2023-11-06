@@ -1,10 +1,9 @@
-// Import the component markup template
-import { Template } from "./template";
 import {
-  argTypes, 
-  verticalProps, 
-  verticalWithIconsProps,
+    argTypes,
+    verticalProps,
+    verticalWithIconsProps,
 } from "./index.js";
+import { Template } from "./template";
 
 export default {
   title: "Components/Tabs/Vertical/Quiet",
@@ -33,4 +32,3 @@ Default.args = verticalProps;
 
 export const WithIcon = Template.bind({});
 WithIcon.args = verticalWithIconsProps;
-

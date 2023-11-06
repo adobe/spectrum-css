@@ -2,13 +2,13 @@ import { html } from "lit";
 import { classMap } from "lit/directives/class-map.js";
 import { ifDefined } from "lit/directives/if-defined.js";
 import { styleMap } from "lit/directives/style-map.js";
-import { capitalize, lowerCase } from "lodash-es";
 
+import { capitalize, lowerCase } from "lodash-es";
 import { useArgs } from '@storybook/client-api';
 
 import { Template as OpacityCheckerboard } from "@spectrum-css/opacitycheckerboard/stories/template.js";
 
-import "../index.css";
+import "@spectrum-css/swatch";
 
 export const Template = ({
 	rootClass = "spectrum-Swatch",
@@ -20,18 +20,8 @@ export const Template = ({
 	swatchColor = "rgb(174, 216, 230)",
 	customStyles = {},
 	id,
-	...globals
+	testId,
 }) => {
-	const { express } = globals;
-  	const [_, updateArgs] = useArgs();
-
-	try {
-		if (!express) import(/* webpackPrefetch: true */ "../themes/spectrum.css");
-		else import(/* webpackPrefetch: true */ "../themes/express.css");
-	} catch (e) {
-		console.warn(e);
-	}
-
 	return html`
 		<div
 			class=${classMap({
@@ -47,6 +37,7 @@ export const Template = ({
 			})}
 			?disabled=${isDisabled}
 			id=${ifDefined(id)}
+			data-testid=${ifDefined(testId)}
 			style=${ifDefined(styleMap({
 				"--spectrum-picked-color": swatchColor,
 				...customStyles,

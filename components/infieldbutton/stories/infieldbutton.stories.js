@@ -1,11 +1,12 @@
-// Import the component markup template
 import { Template } from "./template";
+
+import { isDisabled } from "@spectrum-css/preview/types/states.js";
 
 import { default as IconStories } from "@spectrum-css/icon/stories/icon.stories.js";
 
+/** The In-field button component is a button used inside a textfield */
 export default {
   title: "Components/In-field button",
-  description: "The In-field button component is a button used inside a textfield",
   component: "Infieldbutton",
   argTypes: {
     size: {
@@ -41,15 +42,7 @@ export default {
       ...IconStories?.argTypes?.iconName ?? {},
       if: false,
     },
-    isDisabled: {
-      name: "Disabled",
-      type: { name: "boolean" },
-      table: {
-        type: { summary: "boolean" },
-        category: "State",
-      },
-      control: "boolean"
-    },
+    isDisabled,
   },
   args: {
     rootClass: "spectrum-InfieldButton",
@@ -86,4 +79,3 @@ export const Disabled = Template.bind({});
 Disabled.args = {
   isDisabled: true
 };
-

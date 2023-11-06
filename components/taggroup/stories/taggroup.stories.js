@@ -1,12 +1,11 @@
-// Import the component markup template
 import { Template } from "./template";
 
 import { default as TagStories } from "@spectrum-css/tag/stories/tag.stories.js";
 const ignoreProps = ["rootClass", "hasClearButton", "label"];
 
+/** A group of tags. */
 export default {
 	title: "Components/Tag group",
-	description: "A group of tags.",
 	component: "TagGroup",
 	argTypes: {
 		...Object.entries(TagStories.argTypes).reduce((acc, [key, value]) => {
@@ -37,14 +36,6 @@ export default {
 			},
 			control: "boolean",
 		},
-		customStyles: {
-			description: "Custom styles for testing the story, applied to the parent element.",
-			table: {
-				type: { summary: "object" },
-				category: "Storybook Only",
-			},
-			if: { arg: 'customStyles' }
-		}
 	},
 	args: {
 		rootClass: "spectrum-TagGroup",
@@ -58,7 +49,7 @@ export default {
 		status: {
 			type: process.env.MIGRATED_PACKAGES.includes("taggroup")
 				? "migrated"
-				: undefined,
+				: "legacy",
 		},
 	},
 };
@@ -97,15 +88,8 @@ Removable.args = {
 	],
 };
 
+/** When horizontal space is limited in a tag group, the individual tags wrap to form another line. */
 export const OverflowItems = Template.bind({});
-OverflowItems.parameters = {
-	docs: {
-		description: {
-			story:
-				"When horizontal space is limited in a tag group, the individual tags wrap to form another line.",
-		},
-	},
-};
 OverflowItems.args = {
 	size: "m",
 	isRemovable: true,

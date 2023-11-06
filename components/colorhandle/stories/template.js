@@ -1,7 +1,7 @@
 import { Template as OpacityCheckerboard } from "@spectrum-css/opacitycheckerboard/stories/template.js";
 import { html } from "lit";
 
-import "../index.css";
+import "@spectrum-css/colorhandle";
 
 export const Template = ({
 	rootClass = "spectrum-ColorHandle",
@@ -11,15 +11,18 @@ export const Template = ({
 	customStyles = {
 		"--spectrum-picked-color": "rgba(255, 0, 0, 0.5)",
 	},
-	...globals
-}) => OpacityCheckerboard({
-	...globals,
-	customClasses: [
-		`${rootClass}`,
-		...!isDisabled && isFocused ? ["is-focused"] : [],
-		...isDisabled ? ["is-disabled"] : [],
-		...customClasses,
-	],
-	content: [html `<div class="${rootClass}-inner"></div>`],
-	customStyles,
-});
+
+}) => {
+	return html`
+		${OpacityCheckerboard({
+
+			customClasses: [
+				`${rootClass}`,
+				...!isDisabled && isFocused ? ["is-focused"] : [],
+				...isDisabled ? ["is-disabled"] : [],
+				...customClasses,
+			],
+			customStyles: colorHandleStyle,
+			items: [html `<div class="${rootClass}-inner"></div>`],
+		})}`
+}

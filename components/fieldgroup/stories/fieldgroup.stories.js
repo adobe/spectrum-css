@@ -1,11 +1,12 @@
-// Import the component markup template
 import { default as Radio } from "@spectrum-css/radio/stories/radio.stories.js";
+
 import { Template } from "./template";
+
+import { isInvalid } from "@spectrum-css/preview/types/states.js";
 
 export default {
 	title: "Components/Field group",
-	description: "The Field group component is...",
-	component: "Fieldgroup",
+	component: "FieldGroup",
 	argTypes: {
 		layout: {
 			name: "Layout",
@@ -27,15 +28,7 @@ export default {
 			options: ["top", "side"],
 			control: "select",
 		},
-		isInvalid: {
-			name: "Invalid",
-			type: { name: "boolean" },
-			table: {
-				type: { summary: "boolean" },
-				category: "State",
-			},
-			control: "boolean",
-		},
+		isInvalid,
 	},
 	args: {
 		rootClass: "spectrum-FieldGroup",
@@ -50,7 +43,7 @@ export default {
 		status: {
 			type: process.env.MIGRATED_PACKAGES.includes("fieldgroup")
 				? "migrated"
-				: undefined,
+				: "legacy",
 		},
 	},
 };

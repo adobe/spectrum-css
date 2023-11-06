@@ -1,11 +1,12 @@
-// Import the component markup template
 import { Template } from "./template";
+
+import { isDisabled, isFocused, isInvalid, isLoading, isOpen } from "@spectrum-css/preview/types/states.js";
 
 import { Default as MenuStories } from "@spectrum-css/menu/stories/menu.stories.js";
 
+/** A picker outlines a set of options for a user. */
 export default {
 	title: "Components/Picker",
-	description: "A picker outlines a set of options for a user.",
 	component: "Picker",
 	argTypes: {
 		size: {
@@ -55,51 +56,11 @@ export default {
 			},
 			control: "boolean",
 		},
-		isOpen: {
-			name: "Open",
-			type: { name: "boolean" },
-			table: {
-				type: { summary: "boolean" },
-				category: "State",
-			},
-			control: "boolean",
-		},
-		isFocused: {
-			name: "Focused",
-			type: { name: "boolean" },
-			table: {
-				type: { summary: "boolean" },
-				category: "State",
-			},
-			control: "boolean",
-		},
-		isDisabled: {
-			name: "Disabled",
-			type: { name: "boolean" },
-			table: {
-				type: { summary: "boolean" },
-				category: "State",
-			},
-			control: "boolean",
-		},
-		isLoading: {
-			name: "Loading",
-			type: { name: "boolean" },
-			table: {
-				type: { summary: "boolean" },
-				category: "State",
-			},
-			control: "boolean",
-		},
-		isInvalid: {
-			name: "Invalid input",
-			type: { name: "boolean" },
-			table: {
-				type: { summary: "boolean" },
-				category: "State",
-			},
-			control: "boolean",
-		},
+		isOpen,
+		isFocused,
+		isDisabled,
+		isLoading,
+		isInvalid,
 		content: { table: { disable: true } },
 	},
 	args: {
@@ -121,7 +82,7 @@ export default {
 		status: {
 			type: process.env.MIGRATED_PACKAGES.includes("picker")
 				? "migrated"
-				: undefined,
+				: "legacy",
 		},
 	},
 };

@@ -1,9 +1,10 @@
-// Import the component markup template
 import { Template } from "./template";
 
+import { isDisabled, isDragged, isFocused } from "@spectrum-css/preview/types/states.js";
+
+/** A dial is an input control used for selecting a value within a range, similar to a slider. It's often used in audio and video mixing and editing applications, where horizontal space is limited. */
 export default {
 	title: "Components/Dial",
-	description: "A dial is an input control used for selecting a value within a range, similar to a slider. It's often used in audio and video mixing and editing applications, where horizontal space is limited.",
 	component: "Dial",
 	argTypes: {
 		size: {
@@ -24,33 +25,9 @@ export default {
 			},
 			control: "text",
 		},
-		isFocused: {
-			name: "Focused",
-			type: { name: "boolean" },
-			table: {
-				type: { summary: "boolean" },
-				category: "State",
-			},
-			control: "boolean",
-		},
-		isDragged: {
-			name: "Dragged",
-			type: { name: "boolean" },
-			table: {
-				type: { summary: "boolean" },
-				category: "State",
-			},
-			control: "boolean",
-		},
-		isDisabled: {
-			name: "Disabled",
-			type: { name: "boolean" },
-			table: {
-				type: { summary: "boolean" },
-				category: "State",
-			},
-			control: "boolean",
-		},
+		isFocused,
+		isDragged,
+		isDisabled,
 	},
 	args: {
 		rootClass: "spectrum-Dial",
@@ -66,7 +43,7 @@ export default {
 		status: {
 			type: process.env.MIGRATED_PACKAGES.includes("dial")
 				? "migrated"
-				: undefined,
+				: "legacy",
 		},
 	},
 };

@@ -1,10 +1,8 @@
-// Import the component markup template
 import { Template } from "./template";
 
+/** A steplist can communicate the progress of a task or workflow. It can help users understand where they are in a process and what they need to do next. */
 export default {
 	title: "Components/Steplist",
-	description:
-		"A steplist can communicate the progress of a task or workflow. It can help users understand where they are in a process and what they need to do next.",
 	component: "StepList",
 	argTypes: {
 		isSmall: {
@@ -57,7 +55,7 @@ export default {
 		status: {
 			type: process.env.MIGRATED_PACKAGES.includes("steplist")
 				? "migrated"
-				: undefined,
+				: "legacy",
 		},
 	},
 };

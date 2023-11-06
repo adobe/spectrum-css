@@ -1,16 +1,22 @@
 const { resolve } = require("path");
 const { readdirSync } = require("fs");
+
 const componentsPath = resolve(__dirname, "../components");
 const componentPkgs = readdirSync(componentsPath, {
 	withFileTypes: true,
 })
 	.filter((dirent) => dirent.isDirectory())
 	.map((dirent) => dirent.name);
+
 module.exports = {
-	stories: [
-		"../components/*/stories/*.stories.@(js|jsx|ts|tsx)",
-	],
 	rootDir: "../",
+	core: {
+		disableTelemetry: true,
+	},
+	framework: "@storybook/web-components-webpack5",
+	stories: [
+		"../components/*/stories/*.stories.js",
+	],
 	staticDirs: ["../assets"],
 	addons: [
 		{
@@ -32,12 +38,20 @@ module.exports = {
 		"@whitespace/storybook-addon-html",
 		// https://storybook.js.org/addons/@etchteam/storybook-addon-status
 		"@etchteam/storybook-addon-status",
-    "storybook-addon-pseudo-states",
+        // https://storybook.js.org/addons/storybook-addon-pseudo-states
+    	"storybook-addon-pseudo-states",
 		// https://github.com/storybookjs/storybook/tree/next/code/addons/interactions
 		"@storybook/addon-interactions"
 	],
-	core: {
-		disableTelemetry: true,
+	features: {
+		/* Code splitting flag; load stories on-demand */
+		storyStoreV7: true,
+		/* Builds stories.json to help with on-demand loading */
+		buildStoriesJson: true,
+	},
+	docs: {
+		autodocs: true, // see below for alternatives
+		defaultName: "Docs", // set to change the name of generated docs entries
 	},
 	env: {
 		MIGRATED_PACKAGES: componentPkgs.filter((dir) => {
@@ -63,10 +77,6 @@ module.exports = {
 				: [];
 		return {
 			...config,
-			stats: {
-				/* Suppress autoprefixer warnings from storybook build */
-				warningsFilter: [/autoprefixer: /],
-			},
 			/* Add support for root node_modules imports */
 			resolve: {
 				...(config.resolve ? config.resolve : {}),
@@ -87,17 +97,6 @@ module.exports = {
 				...(config.module ?? []),
 				rules: [
 					...storybookRules,
-					{
-						test: /^\w+\.{ico,jpg,jpeg,png,gif,webp}$/i,
-						use: [
-							{
-								loader: "file-loader",
-								options: {
-									outputPath: (url) => `assets/images/${url.replace(/_\//g, "")}`,
-								},
-							},
-						],
-					},
 					{
 						test: /\.css$/i,
 						sideEffects: true,
@@ -137,38 +136,8 @@ module.exports = {
 							},
 						],
 					},
-					{
-						test: /\.js$/,
-						enforce: "pre",
-						use: ["source-map-loader"],
-					} /* Raw SVG loader */,
-					{
-						test: /\.svg$/i,
-						loader: "raw-loader",
-					},
 				],
 			},
 		};
-	},
-	framework: {
-		name: "@storybook/web-components-webpack5",
-		options: {},
-	},
-	features: {
-		/* Code splitting flag; load stories on-demand */
-		storyStoreV7: true,
-		/* Builds stories.json to help with on-demand loading */
-		buildStoriesJson: true,
-	},
-	// refs: {
-	//   'swc': {
-	//     title: 'Spectrum Web Components',
-	//     url: 'https://opensource.adobe.com/spectrum-web-components/storybook/',
-	//     expanded: false,
-	//   },
-	// },
-	docs: {
-		autodocs: true, // see below for alternatives
-		defaultName: "Docs", // set to change the name of generated docs entries
 	},
 };

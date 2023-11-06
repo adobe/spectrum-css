@@ -1,12 +1,10 @@
-// Import the component markup template
 import { Template } from "./template";
 
 import { default as IconStories } from "@spectrum-css/icon/stories/icon.stories.js";
 
+/** A badge element displays a small amount of color-categorized metadata; ideal for getting a user's attention. */
 export default {
 	title: "Components/Badge",
-	description:
-		"A badge element displays a small amount of color-categorized metadata; ideal for getting a user's attention.",
 	component: "Badge",
 	argTypes: {
 		size: {
@@ -70,7 +68,7 @@ export default {
 		status: {
 			type: process.env.MIGRATED_PACKAGES.includes("badge")
 				? "migrated"
-				: undefined,
+				: "legacy",
 		},
 	},
 };

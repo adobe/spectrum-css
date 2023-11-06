@@ -1,14 +1,12 @@
+import { useArgs } from "@storybook/client-api";
 import { html } from "lit";
 import { classMap } from "lit/directives/class-map.js";
-import { repeat } from "lit/directives/repeat.js";
 import { ifDefined } from "lit/directives/if-defined.js";
+import { repeat } from "lit/directives/repeat.js";
 
-import { useArgs } from "@storybook/client-api";
-
-// Uncomment if you plan to include an icon
 import { Template as Icon } from "@spectrum-css/icon/stories/template.js";
 
-import "../index.css";
+import "@spectrum-css/rating";
 
 export const Template = ({
 	rootClass = "spectrum-Rating",
@@ -20,16 +18,8 @@ export const Template = ({
 	isEmphasized = false,
 	customClasses = [],
 	id,
-	...globals
+	testId,
 }) => {
-	const { express } = globals;
-	try {
-		if (express) import(/* webpackPrefetch: true */ "../themes/express.css");
-		else import(/* webpackPrefetch: true */ "../themes/spectrum.css");
-	} catch (e) {
-		console.warn(e);
-	}
-
 	const [, updateArgs] = useArgs();
 
 	return html`
@@ -37,11 +27,13 @@ export const Template = ({
 			class=${classMap({
 				[rootClass]: true,
 				"is-disabled": isDisabled,
+				"is-focused": isFocused,
 				"is-readOnly": isReadOnly,
 				[`${rootClass}--emphasized`]: isEmphasized,
 				...customClasses.reduce((a, c) => ({ ...a, [c]: true }), {}),
 			})}
 			id=${ifDefined(id)}
+			data-testid=${ifDefined(testId)}
 			@focusin=${() => {
 				updateArgs({ isFocused: true });
 			}}
@@ -84,12 +76,12 @@ export const Template = ({
 						}}
 					>
 						${Icon({
-							...globals,
+
 							iconName: "Star",
 							customClasses: [`${rootClass}-starActive`],
 						})}
 						${Icon({
-							...globals,
+
 							iconName: "StarOutline",
 							customClasses: [`${rootClass}-starInactive`],
 						})}

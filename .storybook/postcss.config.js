@@ -1,6 +1,5 @@
 const { resolve, basename } = require("path");
 const { existsSync } = require("fs");
-const warnCleaner = require("postcss-warn-cleaner");
 
 const simpleBuilder = require("@spectrum-css/component-builder-simple/css/processors.js");
 const legacyBuilder = require("@spectrum-css/component-builder/css/processors.js");
@@ -84,6 +83,8 @@ module.exports = (ctx) => {
 				plugins.push(...simpleBuilder.getProcessors());
 			}
 		}
+	} else {
+		plugins.push(...simpleBuilder.getProcessors());
 	}
 
 	/**
@@ -94,6 +95,12 @@ module.exports = (ctx) => {
 			ignoreFiles: "**/*.css",
 		})
 	);
+
+					return prefixedSelector;
+				},
+			}),
+		);
+	}
 
 	return { plugins };
 };

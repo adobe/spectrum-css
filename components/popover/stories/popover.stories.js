@@ -1,31 +1,22 @@
 import { userEvent, within } from '@storybook/testing-library';
 import { html } from "lit";
 
-// Import the component markup template
+import { isOpen } from "@spectrum-css/preview/types/states.js";
+
 import { Template } from "./template";
 
 import { Template as ActionButton } from "@spectrum-css/actionbutton/stories/template.js";
 import { Template as Menu } from "@spectrum-css/menu/stories/template.js";
 
+/** A popover is used to display transient content (menus, options, additional actions etc.) and appears when clicking/tapping on a source (tools, buttons, etc.). It stands out via its visual style (stroke and drop shadow) and floats on top of the rest of the interface. */
 export default {
 	title: "Components/Popover",
-	description:
-		"A popover is used to display transient content (menus, options, additional actions etc.) and appears when clicking/tapping on a source (tools, buttons, etc.). It stands out via its visual style (stroke and drop shadow) and floats on top of the rest of the interface.",
 	component: "Popover",
 	argTypes: {
 		trigger: { table: { disable: true } },
 		content: { table: { disable: true } },
 		nested: { table: { disable: true } },
-		isOpen: {
-			name: "Open",
-			type: { name: "boolean" },
-			table: {
-				disable: true,
-				type: { summary: "boolean" },
-				category: "State",
-			},
-			control: { type: "boolean" },
-		},
+		isOpen,
 		withTip: {
 			name: "Show with tip",
 			type: { name: "boolean" },
@@ -75,7 +66,7 @@ export default {
 		status: {
 			type: process.env.MIGRATED_PACKAGES.includes("popover")
 				? "migrated"
-				: undefined,
+				: "legacy",
 		},
 		chromatic: { delay: 2000 },
 	},

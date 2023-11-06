@@ -1,10 +1,8 @@
-// Import the component markup template
 import { Template } from "./template";
 
+/** In-line alerts display a non-modal message associated with objects in a view. These are often used in form validation, providing a place to aggregate feedback related to multiple fields. */
 export default {
 	title: "Components/In-line alert",
-	description:
-		"In-line alerts display a non-modal message associated with objects in a view. These are often used in form validation, providing a place to aggregate feedback related to multiple fields.",
 	component: "InLineAlert",
 	argTypes: {
 		headerText: {
@@ -61,7 +59,7 @@ export default {
 		status: {
 			type: process.env.MIGRATED_PACKAGES.includes("inlinealert")
 				? "migrated"
-				: undefined,
+				: "legacy",
 		},
 	},
 };

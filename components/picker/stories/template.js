@@ -10,7 +10,7 @@ import { Template as Icon } from "@spectrum-css/icon/stories/template.js";
 import { Template as Popover } from "@spectrum-css/popover/stories/template.js";
 import { Template as ProgressCircle } from "@spectrum-css/progresscircle/stories/template.js";
 
-import "../index.css";
+import "@spectrum-css/picker";
 
 export const Picker = ({
 	rootClass = "spectrum-Picker",
@@ -29,62 +29,53 @@ export const Picker = ({
 	content = [],
 	iconName,
 	id,
-	...globals
 }) => {
 	const [_, updateArgs] = useArgs();
 
-	const { express } = globals;
-	try {
-		if (!express) import(/* webpackPrefetch: true */ "../themes/spectrum.css");
-		else import(/* webpackPrefetch: true */ "../themes/express.css");
-	} catch (e) {
-		console.warn(e);
-	}
-
 	return html`
 	<button
-			class=${classMap({
-				[rootClass]: true,
-				[`${rootClass}--size${size?.toUpperCase()}`]:
-					typeof size !== "undefined",
-				[`${rootClass}--quiet`]: isQuiet,
-				[`${rootClass}--sideLabel`]: labelPosition != "top",
-				[`is-invalid`]: isInvalid,
-				[`is-open`]: isOpen,
-				[`is-loading`]: isLoading,
-				[`is-focused`]: isFocused,
-				...customClasses.reduce((a, c) => ({ ...a, [c]: true }), {}),
-			})}
-			?disabled=${isDisabled}
-			aria-haspopup="listbox"
-			style=${ifDefined(styleMap(customStyles))}
-			type="button"
-			@click=${(e) => {
-				updateArgs({ isOpen: !isOpen });
-			}}
-		>
-			<span class="${rootClass}-label is-placeholder">${placeholder}</span>
-			${isLoading
-				? ProgressCircle({
-						size: "s",
-						isIndeterminate: true,
-				  })
-				: ""}
-			${isInvalid && !isLoading
-				? Icon({
-						...globals,
-						size,
-						iconName: "Alert",
-						customClasses: [`${rootClass}-validationIcon`],
-				  })
-				: ""}
-			${Icon({
-				...globals,
-				size,
-				iconName: "ChevronDown",
-				customClasses: [`${rootClass}-menuIcon`],
-			})}
-		</button>
+		class=${classMap({
+			[rootClass]: true,
+			[`${rootClass}--size${size?.toUpperCase()}`]:
+				typeof size !== "undefined",
+			[`${rootClass}--quiet`]: isQuiet,
+			[`${rootClass}--sideLabel`]: labelPosition != "top",
+			[`is-invalid`]: isInvalid,
+			[`is-open`]: isOpen,
+			[`is-loading`]: isLoading,
+			[`is-focused`]: isFocused,
+			...customClasses.reduce((a, c) => ({ ...a, [c]: true }), {}),
+		})}
+		?disabled=${isDisabled}
+		aria-haspopup="listbox"
+		style=${ifDefined(styleMap(customStyles))}
+		type="button"
+		@click=${(e) => {
+			updateArgs({ isOpen: !isOpen });
+		}}
+	>
+		<span class="${rootClass}-label is-placeholder">${placeholder}</span>
+		${isLoading
+			? ProgressCircle({
+					size: "s",
+					isIndeterminate: true,
+				})
+			: ""}
+		${isInvalid && !isLoading
+			? Icon({
+
+					size,
+					iconName: "Alert",
+					customClasses: [`${rootClass}-validationIcon`],
+				})
+			: ""}
+		${Icon({
+
+			size,
+			iconName: "ChevronDown",
+			customClasses: [`${rootClass}-menuIcon`],
+		})}
+	</button>
 	`;
 }
 
@@ -107,17 +98,7 @@ export const Template = ({
 	customPopoverStyles = {},
 	content = [],
 	id,
-	...globals
 }) => {
-
-	const { express } = globals;
-	try {
-		if (!express) import(/* webpackPrefetch: true */ "../themes/spectrum.css");
-		else import(/* webpackPrefetch: true */ "../themes/express.css");
-	} catch (e) {
-		console.warn(e);
-	}
-
 	let iconName = "ChevronDown200";
 	switch (size) {
 		case "s":
@@ -136,7 +117,7 @@ export const Template = ({
 	return html`
 		${label
 			? FieldLabel({
-					...globals,
+
 					size,
 					label,
 					isDisabled,
@@ -146,7 +127,7 @@ export const Template = ({
 		${labelPosition == "left" ?
 			html`<div style="display: inline-block">
 				${Picker({
-					...globals,
+
 					rootClass,
 					size,
 					placeholder,
@@ -168,7 +149,7 @@ export const Template = ({
 			`
 		:
 			Picker({
-				...globals,
+
 				rootClass,
 				size,
 				placeholder,
@@ -196,7 +177,7 @@ export const Template = ({
 			  })
 			: ""}
 		${Popover({
-			...globals,
+
 			isOpen: isOpen && !isDisabled,
 			withTip: false,
 			position: "bottom",

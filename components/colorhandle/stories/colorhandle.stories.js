@@ -1,29 +1,15 @@
-// Import the component markup template
 import { Template } from "./template";
 
+import { isDisabled, isFocused } from "@spectrum-css/preview/types/states.js";
+
+/** The Color Handle component is used with ColorArea, ColorSlider and ColorWheel as the color selector */
 export default {
 	title: "Components/Color handle",
-	description:
-		"The Color Handle component is used with ColorArea, ColorSlider and ColorWheel as the color selector",
 	component: "ColorHandle",
 	argTypes: {
-		isDisabled: {
-			name: "Disabled",
-			type: { name: "boolean" },
-			table: {
-				type: { summary: "boolean" },
-				category: "State",
-			},
-			control: "boolean",
-		},
+		isDisabled,
 		isFocused: {
-			name: "Focused",
-			type: { name: "boolean" },
-			table: {
-				type: { summary: "boolean" },
-				category: "State",
-			},
-			control: "boolean",
+			...isFocused,
 			if: { arg: "isDisabled", truthy: false },
 		},
 	},
@@ -39,7 +25,7 @@ export default {
 		status: {
 			type: process.env.MIGRATED_PACKAGES.includes("colorhandle")
 				? "migrated"
-				: undefined,
+				: "legacy",
 		},
 	},
 };

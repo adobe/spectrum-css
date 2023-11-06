@@ -1,14 +1,14 @@
-// Import the component markup template
 import { Template } from "./template";
 
 import { default as Swatch } from "@spectrum-css/swatch/stories/swatch.stories.js";
 
+/** A collection of swatches. */
 export default {
 	title: "Components/Swatch group",
-	description: "The Swatch group component is a collection of swatches.",
-	component: "Swatchgroup",
+	component: "SwatchGroup",
 	argTypes: {
 		...Swatch.argTypes,
+		swatchColor: { table: { disable: true } },
 		density: {
 			name: "Density",
 			type: { name: "string" },
@@ -19,7 +19,6 @@ export default {
 			options: ["regular", "compact", "spacious"],
 			control: "select",
 		},
-		swatchColor: { table: { disable: true } },
 		items: {
 			name: "Swatches",
 			table: { disable: true },
@@ -33,7 +32,7 @@ export default {
 		rootClass: "spectrum-SwatchGroup",
 		size: "m",
 		density: "regular",
-		rounding: "none",
+		rounding: "regular",
 		items: [
 			{swatchColor: "rgb(22, 135, 140)",},
 			{swatchColor: "rgb(33, 132, 113)",},
@@ -65,7 +64,7 @@ export default {
 		status: {
 			type: process.env.MIGRATED_PACKAGES.includes("swatchgroup")
 				? "migrated"
-				: undefined,
+				: "legacy",
 		},
 	},
 };

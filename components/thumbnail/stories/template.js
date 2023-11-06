@@ -5,7 +5,7 @@ import { ifDefined } from "lit/directives/if-defined.js";
 import { styleMap } from "lit/directives/style-map.js";
 import { when } from "lit/directives/when.js";
 
-import "../index.css";
+import "@spectrum-css/thumbnail";
 
 export const Template = ({
 	rootClass = "spectrum-Thumbnail",
@@ -23,8 +23,8 @@ export const Template = ({
 	customClasses = [],
 	customStyles = {},
 	id,
+	testId,
 }) => {
-
 	const image = imageURL ? html`<img class="${rootClass}-image" src=${imageURL} alt=${ifDefined(altText)}/>` : svg ? html`${svg}` : "";
 
   const checkerboardContent = html`
@@ -105,10 +105,9 @@ export const Template = ({
 				[`${rootClass}--size${size}`]: typeof size !== "undefined",
 				...customClasses.reduce((a, c) => ({ ...a, [c]: true }), {}),
 			})}
-		style=${ifDefined(styleMap({
-			...customStyles,
-		}))}
+		style=${ifDefined(styleMap(customStyles))}
 		id=${ifDefined(id)}
+		data-testid=${ifDefined(testId)}
 		@click=${onclick}
 	>
 			${when(backgroundColor, () => html`<div class="${rootClass}-background" style=${ifDefined(styleMap({ backgroundColor }))}></div>`)}

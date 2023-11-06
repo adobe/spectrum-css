@@ -1,11 +1,10 @@
 import { html } from "lit";
 import { classMap } from "lit/directives/class-map.js";
-// import { ifDefined } from 'lit/directives/if-definedjs';
 
-import { Template as Icon } from "@spectrum-css/icon/stories/template.js";
 import { Template as Button } from "@spectrum-css/button/stories/template.js";
+import { Template as Icon } from "@spectrum-css/icon/stories/template.js";
 
-import "../index.css";
+import "@spectrum-css/inlinealert";
 
 export const Template = ({
 	rootClass = "spectrum-InLineAlert",
@@ -14,17 +13,7 @@ export const Template = ({
 	text,
 	variant = "neutral",
 	isClosable = false,
-	...globals
 }) => {
-	const { express } = globals;
-
-	try {
-		if (!express) import(/* webpackPrefetch: true */ "../themes/spectrum.css");
-		else import(/* webpackPrefetch: true */ "../themes/express.css");
-	} catch (e) {
-		console.warn(e);
-	}
-
 	let iconName;
 	switch (variant) {
 		case "info":
@@ -46,7 +35,7 @@ export const Template = ({
 		typeof iconName !== "undefined"
 			? html`
 					${Icon({
-						...globals,
+
 						iconName,
 						customClasses: [`${rootClass}-icon`],
 					})}
@@ -57,7 +46,7 @@ export const Template = ({
 		? html`
 				<div class="spectrum-InLineAlert-footer">
 					${Button({
-						...globals,
+
 						treatment: "outline",
 						variant: "primary",
 						iconName: false,

@@ -1,9 +1,10 @@
 import { Template } from "./template.js";
 
+import { isDisabled } from "@spectrum-css/preview/types/states.js";
+
+/** This component contains a single input field with both a magnifying glass icon and a "reset" button displayed within it. */
 export default {
 	title: "Components/Search",
-	description:
-		'This component contains a single input field with both a magnifying glass icon and a "reset" button displayed within it.',
 	component: "Search",
 	argTypes: {
 		size: {
@@ -25,15 +26,7 @@ export default {
 			},
 			control: "boolean",
 		},
-		isDisabled: {
-			name: "Disabled",
-			type: { name: "boolean" },
-			table: {
-				type: { summary: "boolean" },
-				category: "State",
-			},
-			control: "boolean",
-		},
+		isDisabled,
 	},
 	args: {
 		rootClass: "spectrum-Search",
@@ -51,7 +44,7 @@ export default {
 		status: {
 			type: process.env.MIGRATED_PACKAGES.includes("search")
 				? "migrated"
-				: undefined,
+				: "legacy",
 		},
 	},
 };

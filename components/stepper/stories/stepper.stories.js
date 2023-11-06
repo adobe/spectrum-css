@@ -1,10 +1,10 @@
-// Import the component markup template
 import { Template } from "./template";
 
+import { isDisabled, isFocused, isInvalid, isKeyboardFocused } from "@spectrum-css/preview/types/states.js";
+
+/** A stepper can be used to increment or decrement a value by a specified amount via an up/down button. An input field displays the current value. */
 export default {
 	title: "Components/Stepper",
-	description:
-		"A stepper can be used to increment or decrement a value by a specified amount via an up/down button. An input field displays the current value.",
 	component: "Stepper",
 	argTypes: {
 		size: {
@@ -35,42 +35,10 @@ export default {
 			},
 			control: "boolean",
 		},
-		isDisabled: {
-			name: "Disabled",
-			type: { name: "boolean" },
-			table: {
-				type: { summary: "boolean" },
-				category: "State",
-			},
-			control: "boolean",
-		},
-		isInvalid: {
-			name: "Invalid",
-			type: { name: "boolean" },
-			table: {
-				type: { summary: "boolean" },
-				category: "State",
-			},
-			control: "boolean",
-		},
-		isFocused: {
-			name: "Focused",
-			type: { name: "boolean" },
-			table: {
-				type: { summary: "boolean" },
-				category: "State",
-			},
-			control: "boolean",
-		},
-		isKeyboardFocused: {
-			name: "Keyboard focused",
-			type: { name: "boolean" },
-			table: {
-				type: { summary: "boolean" },
-				category: "State",
-			},
-			control: "boolean",
-		},
+		isDisabled,
+		isInvalid,
+		isFocused,
+		isKeyboardFocused,
 	},
 	args: {
 		rootClass: "spectrum-Stepper",
@@ -89,7 +57,7 @@ export default {
 		status: {
 			type: process.env.MIGRATED_PACKAGES.includes("stepper")
 				? "migrated"
-				: undefined,
+				: "legacy",
 		},
 	},
 };

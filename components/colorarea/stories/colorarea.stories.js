@@ -1,32 +1,18 @@
-// Import the component markup template
 import { Template } from "./template";
 
+import { isDisabled, isFocused } from "@spectrum-css/preview/types/states.js";
+
+/** The Color area component allows users to visually select two properties of a color simultaneously. It's commonly used together with a color slider or color wheel. */
 export default {
 	title: "Components/Color area",
-	description:
-		"The Color area component allows users to visually select two properties of a color simultaneously. It's commonly used together with a color slider or color wheel.",
 	component: "ColorArea",
 	argTypes: {
 		customWidth: { table: { disable: true } },
 		customHeight: { table: { disable: true } },
 		handlePosition: { table: { disable: true } },
-		isDisabled: {
-			name: "Disabled",
-			type: { name: "boolean" },
-			table: {
-				type: { summary: "boolean" },
-				category: "State",
-			},
-			control: "boolean",
-		},
+		isDisabled,
 		isFocused: {
-			name: "Focused",
-			type: { name: "boolean" },
-			table: {
-				type: { summary: "boolean" },
-				category: "State",
-			},
-			control: "boolean",
+			...isFocused,
 			if: { arg: "isDisabled", truthy: false },
 		},
 	},
@@ -42,7 +28,7 @@ export default {
 		status: {
 			type: process.env.MIGRATED_PACKAGES.includes("colorarea")
 				? "migrated"
-				: undefined,
+				: "legacy",
 		},
 	},
 };

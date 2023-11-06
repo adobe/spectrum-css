@@ -1,0 +1,291 @@
+/*
+Copyright 2023 Adobe. All rights reserved.
+
+This file is licensed to you under the Apache License, Version 2.0 (the "License");
+you may not use this file except in compliance with the License. You may obtain a copy
+of the License at <http://www.apache.org/licenses/LICENSE-2.0>
+
+Unless required by applicable law or agreed to in writing, software distributed under
+the License is distributed on an "AS IS" BASIS, WITHOUT WARRANTIES OR REPRESENTATIONS
+OF ANY KIND, either express or implied. See the License for the specific language
+governing permissions and limitations under the License.
+*/
+
+@import "@spectrum-css/typography";
+
+:root {
+	margin: 0;
+
+	font-family: var(
+		--spectrum-sans-font-family-stack,
+		adobe-clean,
+		"Adobe Clean",
+		"Source Sans Pro",
+		-apple-system,
+		BlinkMacSystemFont,
+		"Segoe UI",
+		Roboto,
+		Ubuntu,
+		"Trebuchet MS",
+		"Lucida Grande",
+		sans-serif
+	);
+	font-size: var(--spectrum-font-size-100, 16px);
+	font-weight: var(--spectrum-regular-font-weight, normal);
+	font-style: var(--spectrum-default-font-style, normal);
+	line-height: var(--spectrum-line-height-100, 1.3);
+	color: var(
+		--spectrum-alias-text-color-default,
+		var(--spectrum-gray-900, #000)
+	);
+
+	background-color: var(--spectrum-gray-50, #fff);
+
+	-webkit-tap-highlight-color: rgba(0 0 0 / 0%);
+}
+
+#storybook-preview-wrapper,
+#storybook-docs {
+	color: var(--spectrum-gray-900, #000);
+	background-color: var(
+		--spectrum-background-layer-1-color,
+		var(--spectrum-gray-100, rgba(248, 248, 248))
+	);
+}
+
+nav .spectrum-Site-logo {
+	block-size: var(--spectrum-component-height-100, 32px);
+	margin-inline-end: var(--spectrum-global-dimension-size-200);
+	color: #fa0f00;
+}
+
+.spectrum--large nav .spectrum-Site-logo {
+	block-size: 40px;
+}
+
+input,
+textarea,
+select {
+	border-radius: 4px !important;
+}
+
+div.search-field {
+	block-size: var(--spectrum-component-height-100, 32px);
+	max-inline-size: calc(100% - 20px);
+	color: var(
+		--spectrum-neutral-content-color-default,
+		var(--spectrum-gray-800, rgba(34, 34, 34))
+	);
+	background-color: var(--spectrum-gray-50, #fff);
+}
+
+div.search-field > input#storybook-explorer-searchfield {
+	font-family: var(
+		--spectrum-sans-font-family-stack,
+		adobe-clean,
+		"Adobe Clean",
+		"Source Sans Pro",
+		-apple-system,
+		BlinkMacSystemFont,
+		"Segoe UI",
+		Roboto,
+		Ubuntu,
+		"Trebuchet MS",
+		"Lucida Grande",
+		sans-serif
+	);
+	font-size: var(--spectrum-font-size-100, 16px);
+	font-weight: var(--spectrum-regular-font-weight, normal);
+	font-style: var(--spectrum-default-font-style, normal);
+	line-height: var(--spectrum-line-height-100, 1.3);
+	max-inline-size: 100%;
+}
+
+input:focus,
+textarea:focus,
+select:focus,
+#storybook-explorer-searchfield:focus {
+	border-color: rgb(2, 101, 220) !important;
+	box-shadow: rgb(2, 101, 220) 0 0 0 1px inset !important;
+}
+
+td {
+	vertical-align: middle;
+}
+
+.docblock-argstable-body tr td {
+	font-size: 11px;
+	color: var(--spectrum-gray-900, #000);
+	letter-spacing: unset;
+	background-color: var(--spectrum-gray-50, #fff);
+}
+
+.docblock-argstable-body td > span:has(select),
+.docblock-argstable-body td textarea {
+	max-inline-size: var(
+		--spectrum-alias-single-line-width,
+		var(--spectrum-global-dimension-size-2400)
+	) !important;
+}
+
+.docblock-argstable-body td > span:has(select),
+.docblock-argstable-body td textarea {
+	max-inline-size: 280px !important;
+}
+
+#storybook-explorer-tree {
+	background-color: transparent;
+}
+
+#storybook-explorer-tree > div {
+	margin-inline: 0;
+}
+
+.sidebar-header {
+	max-inline-size: calc(100% - 20px);
+}
+
+.sidebar-header a:has(img) {
+	margin: 0;
+	padding: 0;
+	border: none;
+	border-radius: 0;
+}
+
+.sidebar-header > div img {
+	inline-size: 100%;
+	block-size: auto;
+}
+
+div.sidebar-subheading {
+	font-family: var(
+		--spectrum-sans-font-family-stack,
+		adobe-clean,
+		"Adobe Clean",
+		"Source Sans Pro",
+		-apple-system,
+		BlinkMacSystemFont,
+		"Segoe UI",
+		Roboto,
+		Ubuntu,
+		"Trebuchet MS",
+		"Lucida Grande",
+		sans-serif
+	);
+	font-size: var(--spectrum-heading-size-s, 18px) !important;
+	font-weight: var(--spectrum-bold-font-weight, 700);
+	font-style: var(--spectrum-default-font-style, normal);
+	line-height: var(--spectrum-heading-line-height, 1.2);
+	color: var(--spectrum-heading-color);
+	text-transform: unset;
+	letter-spacing: unset;
+}
+
+.sidebar-subheading > button > span:first-child {
+	display: none;
+}
+
+div.sidebar-item,
+button.sidebar-item {
+	display: flex;
+	align-items: center;
+
+	box-sizing: border-box;
+	min-block-size: var(--spectrum-component-height-100, 32px);
+	padding-block: var(--spectrum-component-edge-to-text-50, 8px);
+	padding-inline: var(--spectrum-treeview-item-indentation-medium, 24px)
+		var(--spectrum-component-height-100, 24px);
+
+	color: var(--spectrum-gray-900, #000);
+	white-space: nowrap;
+}
+
+button.sidebar-item {
+	font-weight: var(--spectrum-bold-font-weight, 700);
+}
+
+/* Triangle icon */
+button.sidebar-item > div > span {
+	transform: rotate(0deg);
+
+	overflow: hidden;
+
+	inline-size: 0.6em;
+	block-size: 0.6em;
+	margin-inline-start: -0.6em;
+
+	color: inherit;
+
+	background-image: url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 10 10'><path d='M3 9.95a.875.875 0 01-.615-1.498L5.88 5 2.385 1.547A.875.875 0 013.615.302L7.74 4.377a.876.876 0 010 1.246L3.615 9.698A.872.872 0 013 9.95z'></path></svg>");
+	border: none;
+}
+
+button.sidebar-item[aria-expanded="true"] > div > span {
+	transform: rotate(90deg);
+}
+
+/* nested item */
+button.sidebar-item > div > a {
+	align-items: center;
+	padding: 0;
+}
+
+button.sidebar-item:not([data-parent-id="components"]),
+div.sidebar-item {
+	padding-inline-start: calc(
+		3 * var(--spectrum-component-edge-to-text-50, 8px)
+	);
+}
+
+button.sidebar-item:not([data-parent-id="components"]) + div.sidebar-item {
+	padding-inline-start: calc(
+		4 * var(--spectrum-component-edge-to-text-50, 8px)
+	);
+}
+
+.sidebar-item[data-selected="true"] svg {
+	color: inherit;
+}
+
+div.sidebar-item > a:first-child {
+	padding-inline-start: 0;
+}
+
+div.sidebar-item:hover {
+	color: var(--spectrum-gray-900, #000);
+	background-color: var(--spectrum-gray-200, rgba(230, 230, 230));
+}
+
+div.sidebar-item[data-selected="true"] {
+	color: var(--spectrum-gray-900, #000);
+	background-color: rgba(var(--spectrum-blue-900-rgb, 2, 101, 220), 0.1);
+	border: 1px solid var(--spectrum-blue-900, rgba(2, 101, 220));
+}
+
+input,
+textarea,
+select {
+	border-radius: 4px !important;
+}
+
+#storybook-explorer-searchfield {
+	padding: 3px 12px 5px 35px !important;
+}
+
+input:focus,
+textarea:focus,
+select:focus,
+#storybook-explorer-searchfield:focus {
+	border-color: rgb(2, 101, 220) !important;
+	box-shadow: rgb(2, 101, 220) 0 0 0 1px inset !important;
+}
+
+[role="main"] > div {
+	border-radius: 0 !important;
+	box-shadow: none !important;
+}
+
+[role="main"] > div > div > div > div {
+	border-inline-start: 1px solid #f8f8f8;
+	box-shadow: none;
+}

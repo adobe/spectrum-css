@@ -1,13 +1,12 @@
 import { html } from "lit-html";
 import { classMap } from "lit-html/directives/class-map.js";
 
-import "../index.css";
+import "@spectrum-css/coachindicator";
 
 export const Template = ({
 	rootClass = "spectrum-CoachIndicator",
 	isQuiet = false,
 	variant,
-	...globals
 }) => {
 	return html`
 		<div

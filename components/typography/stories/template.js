@@ -4,9 +4,8 @@ import { ifDefined } from "lit/directives/if-defined.js";
 
 import { capitalize } from "lodash-es";
 
-import "../index.css";
+import "@spectrum-css/typography";
 
-// More on component templates: https://storybook.js.org/docs/web-components/writing-stories/introduction#using-args
 export const Template = ({
 	rootClass = "spectrum-Typography",
 	semantics,
@@ -15,9 +14,9 @@ export const Template = ({
 	weight,
 	glyph = "sans-serif",
 	id,
+	testId,
 	content = [],
 	customClasses = [],
-	// ...globals
 }) => {
 	if (Array.isArray(content)) {
 		content = content.map((c) => {
@@ -45,6 +44,7 @@ export const Template = ({
 				...customClasses.reduce((a, c) => ({ ...a, [c]: true }), {}),
 			})}
 			id=${ifDefined(id)}
+			data-testid=${ifDefined(testId)}
 		>
 			${content}
 		</div>`;
@@ -89,20 +89,20 @@ export const Template = ({
 
 	if (semantics === "heading")
 		return html`
-			<h2 class=${classMap(classes)} id=${ifDefined(id)}>${content}</h2>
+			<h2 class=${classMap(classes)} id=${ifDefined(id)} data-testid=${ifDefined(testId)}>${content}</h2>
 		`;
 
 	if (semantics === "body")
 		return html`
-			<p class=${classMap(classes)} id=${ifDefined(id)}>${content}</p>
+			<p class=${classMap(classes)} id=${ifDefined(id)} data-testid=${ifDefined(testId)}>${content}</p>
 		`;
 
 	if (semantics === "code")
 		return html`
-			<code class=${classMap(classes)} id=${ifDefined(id)}>${content}</code>
+			<code class=${classMap(classes)} id=${ifDefined(id)} data-testid=${ifDefined(testId)}>${content}</code>
 		`;
 
 	return html`
-		<span class=${classMap(classes)} id=${ifDefined(id)}>${content}</span>
+		<span class=${classMap(classes)} id=${ifDefined(id)} data-testid=${ifDefined(testId)}>${content}</span>
 	`;
 };

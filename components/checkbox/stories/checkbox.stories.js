@@ -1,10 +1,10 @@
-// Import the component markup template
 import { Template } from "./template";
 
+import { isChecked, isDisabled } from "@spectrum-css/preview/types/states.js";
+
+/** Checkboxes allow users to select multiple items from a list of individual items, or mark one individual item as selected. */
 export default {
 	title: "Components/Checkbox",
-	description:
-		"Checkboxes allow users to select multiple items from a list of individual items, or mark one individual item as selected.",
 	component: "Checkbox",
 	argTypes: {
 		size: {
@@ -35,24 +35,8 @@ export default {
 			},
 			control: { type: "boolean" },
 		},
-		isDisabled: {
-			name: "Disabled",
-			type: { name: "boolean" },
-			table: {
-				type: { summary: "boolean" },
-				category: "State",
-			},
-			control: "boolean",
-		},
-		isChecked: {
-			name: "Checked",
-			type: { name: "boolean" },
-			table: {
-				type: { summary: "boolean" },
-				category: "State",
-			},
-			control: { type: "boolean" },
-		},
+		isDisabled,
+		isChecked,
 		isIndeterminate: {
 			name: "Indeterminate",
 			type: { name: "boolean" },
@@ -79,7 +63,7 @@ export default {
 		status: {
 			type: process.env.MIGRATED_PACKAGES.includes("checkbox")
 				? "migrated"
-				: undefined,
+				: "legacy",
 		},
 	},
 };

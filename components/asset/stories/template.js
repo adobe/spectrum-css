@@ -2,16 +2,15 @@ import { html, svg } from "lit";
 import { classMap } from "lit/directives/class-map.js";
 import { ifDefined } from "lit/directives/if-defined.js";
 
-import "../index.css";
-import "../skin.css";
+import "@spectrum-css/asset";
 
 export const Template = ({
 	rootClass = "spectrum-Asset",
 	image,
 	preset,
 	id,
+	testId,
 	customClasses = [],
-	// ...globals
 }) => {
 	let visual;
 	if (preset === "file") {
@@ -40,6 +39,7 @@ export const Template = ({
 			...customClasses.reduce((a, c) => ({ ...a, [c]: true }), {}),
 		})}
 		id=${ifDefined(id)}
+		data-testid=${ifDefined(testId)}
 	>
 		${visual}
 	</div>`;

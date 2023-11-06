@@ -1,10 +1,10 @@
-// Import the component markup template
 import { Template } from "./template";
 
+import { isChecked, isDisabled, isReadOnly } from "@spectrum-css/preview/types/states.js";
+
+/** A radio selector allow users to select a single option from a list of mutually exclusive options. All possible options are exposed up front for users to compare. */
 export default {
 	title: "Components/Radio",
-	description:
-		"A radio selector allow users to select a single option from a list of mutually exclusive options. All possible options are exposed up front for users to compare.",
 	component: "Radio",
 	argTypes: {
 		size: {
@@ -44,33 +44,9 @@ export default {
 			},
 			control: { type: "boolean" },
 		},
-		isChecked: {
-			name: "Radio selected",
-			type: { name: "boolean" },
-			table: {
-				type: { summary: "boolean" },
-				category: "State",
-			},
-			control: { type: "boolean" },
-		},
-		isDisabled: {
-			name: "Disabled",
-			type: { name: "boolean" },
-			table: {
-				type: { summary: "boolean" },
-				category: "State",
-			},
-			control: "boolean",
-		},
-		isReadOnly: {
-			name: "Read Only",
-			type: { name: "boolean" },
-			table: {
-				type: { summary: "boolean" },
-				category: "State",
-			},
-			control: "boolean",
-		},
+		isChecked,
+		isDisabled,
+		isReadOnly,
 	},
 	args: {
 		rootClass: "spectrum-Radio",
@@ -89,7 +65,7 @@ export default {
 		status: {
 			type: process.env.MIGRATED_PACKAGES.includes("radio")
 				? "migrated"
-				: undefined,
+				: "legacy",
 		},
 	},
 };
@@ -113,5 +89,3 @@ ReadOnly.args = {
 	isDisabled: true,
 	isReadOnly: true,
 };
-
-

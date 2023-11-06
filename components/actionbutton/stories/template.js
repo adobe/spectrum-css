@@ -8,7 +8,7 @@ import { capitalize, lowerCase } from "lodash-es";
 
 import { Template as Icon } from "@spectrum-css/icon/stories/template.js";
 
-import "../index.css";
+import "@spectrum-css/actionbutton";
 
 export const Template = ({
 	rootClass = "spectrum-ActionButton",
@@ -27,61 +27,51 @@ export const Template = ({
 	customIconClasses = [],
 	onclick,
 	id,
+	testId,
 	role,
-	...globals
-}) => {
-	const { express } = globals;
+}) => html`
+	<button
+		aria-label=${ifDefined(label)}
+		aria-haspopup=${hasPopup ? "true" : "false"}
+		aria-pressed=${isSelected ? "true" : "false"}
+		class=${classMap({
+			[rootClass]: true,
+			[`${rootClass}--size${size?.toUpperCase()}`]:
+				typeof size !== "undefined",
+			[`${rootClass}--quiet`]: isQuiet,
+			[`${rootClass}--emphasized`]: isEmphasized,
+			[`${rootClass}--static${capitalize(lowerCase(staticColor))}`]:
+				typeof staticColor !== "undefined",
+			[`is-disabled`]: isDisabled,
+			[`is-selected`]: isSelected,
+			...customClasses.reduce((a, c) => ({ ...a, [c]: true }), {}),
+		})}
+		id=${ifDefined(id)}
+		data-testid=${ifDefined(testId)}
+		role=${ifDefined(role)}
+		style=${ifDefined(styleMap(customStyles))}
+		?disabled=${isDisabled}
+		@click=${onclick}
+	>
+		${when(hasPopup, () =>
+			Icon({
 
-	try {
-		if (!express) import(/* webpackPrefetch: true */ "../themes/spectrum.css");
-		else import(/* webpackPrefetch: true */ "../themes/express.css");
-	} catch (e) {
-		console.warn(e);
-	}
+				size,
+				iconName: "CornerTriangle100",
+				customClasses: [`${rootClass}-hold`],
+			})
+		)}
+		${when(iconName, () =>
+			Icon({
 
-	return html`
-		<button
-			aria-label=${ifDefined(label)}
-			aria-haspopup=${hasPopup ? "true" : "false"}
-			aria-pressed=${isSelected ? "true" : "false"}
-			class=${classMap({
-				[rootClass]: true,
-				[`${rootClass}--size${size?.toUpperCase()}`]:
-					typeof size !== "undefined",
-				[`${rootClass}--quiet`]: isQuiet,
-				[`${rootClass}--emphasized`]: isEmphasized,
-				[`${rootClass}--static${capitalize(lowerCase(staticColor))}`]:
-					typeof staticColor !== "undefined",
-				[`is-disabled`]: isDisabled,
-				[`is-selected`]: isSelected,
-				...customClasses.reduce((a, c) => ({ ...a, [c]: true }), {}),
-			})}
-			id=${ifDefined(id)}
-			role=${ifDefined(role)}
-			style=${ifDefined(styleMap(customStyles))}
-			?disabled=${isDisabled}
-			@click=${onclick}
-		>
-			${when(hasPopup, () =>
-				Icon({
-					...globals,
-					size,
-					iconName: "CornerTriangle100",
-					customClasses: [`${rootClass}-hold`],
-				})
-			)}
-			${when(iconName, () =>
-				Icon({
-					...globals,
-					size,
-					iconName,
-					customClasses: [`${rootClass}-icon`, ...customIconClasses],
-				})
-			)}
-			${when(
-				label && !hideLabel,
-				() => html`<span class="${rootClass}-label">${label}</span>`
-			)}
-		</button>
-	`;
-};
+				size,
+				iconName,
+				customClasses: [`${rootClass}-icon`, ...customIconClasses],
+			})
+		)}
+		${when(
+			label && !hideLabel,
+			() => html`<span class="${rootClass}-label">${label}</span>`
+		)}
+	</button>
+`;

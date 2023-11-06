@@ -1,10 +1,8 @@
-// Import the component markup template
 import { Template } from "./metertemplate";
 
+/** The meter component is a visual representations of a quantity or an achievement. Their progress is determined by user actions, rather than system actions. */
 export default {
 	title: "Components/Meter",
-	description:
-		"The meter component is a visual representations of a quantity or an achievement. Their progress is determined by user actions, rather than system actions.",
 	component: "ProgressBar",
 	argTypes: {
 		label: {
@@ -59,7 +57,7 @@ export default {
 		status: {
 			type: process.env.MIGRATED_PACKAGES.includes("progressbar")
 				? "migrated"
-				: undefined,
+				: "legacy",
 		},
 	},
 };

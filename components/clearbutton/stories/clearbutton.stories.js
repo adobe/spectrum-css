@@ -1,10 +1,12 @@
 import { html } from "lit";
 
+import { isDisabled } from "@spectrum-css/preview/types/states.js";
+
 import { Template } from "./template";
 
+/** The clear button component is an in-field button used in search and tag to clear the form field or metadata. */
 export default {
 	title: "Components/Clear button",
-	description: "The clear button component is and in-field button used in Search and Tag",
 	component: "ClearButton",
 	argTypes: {
 		size: {
@@ -17,15 +19,7 @@ export default {
 			options: ["s", "m", "l", "xl"],
 			control: "select",
 		},
-		isDisabled: {
-			name: "Disabled",
-			type: { name: "boolean" },
-			table: {
-				type: { summary: "boolean" },
-				category: "State",
-			},
-			control: "boolean",
-		},
+		isDisabled,
 		variant: { table: { disable: true }},
 	},
 	args: {
@@ -40,7 +34,7 @@ export default {
 		status: {
 			type: process.env.MIGRATED_PACKAGES.includes("clearbutton")
 				? "migrated"
-				: undefined,
+				: "legacy",
 		},
 	},
 };

@@ -1,10 +1,10 @@
-// Import the component markup template
 import { Template } from "./template";
 
+import { isDisabled } from "@spectrum-css/preview/types/states.js";
+
+/** A Logic Button displays an operator within a boolean logic sequence. */
 export default {
 	title: "Components/Logic button",
-	description:
-		"A Logic Button displays an operator within a boolean logic sequence.",
 	component: "Logicbutton",
 	argTypes: {
 		variant: {
@@ -17,15 +17,7 @@ export default {
 			options: ["and", "or"],
 			control: "inline-radio",
 		},
-		isDisabled: {
-			name: "Disabled",
-			type: { name: "boolean" },
-			table: {
-				type: { summary: "boolean" },
-				category: "State",
-			},
-			control: "boolean",
-		},
+		isDisabled,
 	},
 	args: {
 		rootClass: "spectrum-LogicButton",
@@ -39,7 +31,7 @@ export default {
 		status: {
 			type: process.env.MIGRATED_PACKAGES.includes("logicbutton")
 				? "migrated"
-				: undefined,
+				: "legacy",
 		},
 	},
 };

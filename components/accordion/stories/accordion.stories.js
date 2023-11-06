@@ -1,10 +1,8 @@
-// Import the component markup template
 import { Template } from "./template";
 
+/** The accordion element contains a list of items that can be expanded or collapsed to reveal additional content or information associated with each item. There can be zero expanded items, exactly one expanded item, or more than one item expanded at a time, depending on the configuration. This list of items is defined by child accordion item elements. */
 export default {
 	title: "Components/Accordion",
-	description:
-		"The accordion element contains a list of items that can be expanded or collapsed to reveal additional content or information associated with each item. There can be zero expanded items, exactly one expanded item, or more than one item expanded at a time, depending on the configuration. This list of items is defined by child accordion item elements.",
 	component: "Accordion",
 	argTypes: {
 		items: { table: { disable: true } },
@@ -42,6 +40,33 @@ export default {
 		rootClass: "spectrum-Accordion",
 		size: "m",
 		density: "regular",
+		disableAll: false,
+		items: [
+			{
+				heading: "Recent",
+				content: "Item 1",
+				isOpen: true,
+				isDisabled: false,
+			},
+			{
+				heading: "Architecture",
+				content: "Item 2",
+				isOpen: false,
+				isDisabled: true,
+			},
+			{
+				heading: "Nature",
+				content: "Item 3",
+				isOpen: false,
+				isDisabled: false,
+			},
+			{
+				heading: "Really long accordion heading according to our predictions",
+				content: "Item 4",
+				isOpen: false,
+				isDisabled: false,
+			},
+		],
 	},
 	parameters: {
 		actions: {
@@ -50,45 +75,10 @@ export default {
 		status: {
 			type: process.env.MIGRATED_PACKAGES.includes("accordion")
 				? "migrated"
-				: undefined,
+				: "legacy",
 		},
 	},
 };
 
 export const Default = Template.bind({});
-Default.args = {
-	items: new Map([
-		[
-			"Recent",
-			{
-				content: "Item 1",
-				isOpen: true,
-				isDisabled: false,
-			},
-		],
-		[
-			"Architecture",
-			{
-				content: "Item 2",
-				isOpen: false,
-				isDisabled: true,
-			},
-		],
-		[
-			"Nature",
-			{
-				content: "Item 3",
-				isOpen: false,
-				isDisabled: false,
-			},
-		],
-		[
-			"Really Long Accordion Item According to Our Predictions",
-			{
-				content: "Item 4",
-				isOpen: false,
-				isDisabled: false,
-			},
-		],
-	]),
-};
+Default.args = {};

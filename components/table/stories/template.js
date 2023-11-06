@@ -8,7 +8,7 @@ import { Template as Checkbox } from "@spectrum-css/checkbox/stories/template.js
 import { Template as Icon } from "@spectrum-css/icon/stories/template.js";
 import { Template as Thumbnail } from "@spectrum-css/thumbnail/stories/template.js";
 
-import "../index.css";
+import "@spectrum-css/table";
 
 export const TableRowItem = ({
 	rootClass = "spectrum-Table",
@@ -29,7 +29,6 @@ export const TableRowItem = ({
 	ariaControls,
 	customClasses = [],
 	size = "m",
-	id,
 }) => {
 	const useThumbnail = showThumbnails && !isSummaryRow && !isSectionHeader;
 
@@ -170,17 +169,8 @@ export const Template = ({
 	rowItems = [],
 	customClasses = [],
 	id,
-	...globals
 }) => {
 	if (!rowItems || !rowItems.length) return html``;
-
-	const { express } = globals;
-	try {
-		if (!express) import(/* webpackPrefetch: true */ "../themes/spectrum.css");
-		else import(/* webpackPrefetch: true */ "../themes/express.css");
-	} catch (e) {
-		console.warn(e);
-	}
 
 	// Use Table tags or Div tags.
 	const tableTag = useDivs ? literal`div` : literal`table`;
@@ -207,6 +197,7 @@ export const Template = ({
 			...rootClassMapVariants
 		})}
 		id=${ifDefined(id)}
+		data-testid=${ifDefined(testId)}
 		role=${ifDefined(useCheckboxCell ? "grid" : useDivs ? "table" : undefined)}
 		aria-multiselectable=${ifDefined(useCheckboxCell ? "true" : undefined)}
 		style="max-width: 800px;"

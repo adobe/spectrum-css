@@ -1,12 +1,12 @@
-// Import the component markup template
 import { Template } from "./template";
 
+import { isDisabled } from "@spectrum-css/preview/types/states.js";
+
+/** An image representing a user. */
 export default {
 	title: "Components/Avatar",
-	description: "An image representing a user.",
 	component: "Avatar",
 	argTypes: {
-		reducedMotion: { table: { disable: true } },
 		size: {
 			name: "Size",
 			type: { name: "string", required: true },
@@ -45,15 +45,7 @@ export default {
 			control: "boolean",
 			if: { arg: "isDisabled", truthy: false },
 		},
-		isDisabled: {
-			name: "Disabled",
-			type: { name: "boolean" },
-			table: {
-				type: { summary: "boolean" },
-				category: "State",
-			},
-			control: "boolean",
-		},
+		isDisabled,
 	},
 	args: {
 		rootClass: "spectrum-Avatar",
@@ -67,7 +59,7 @@ export default {
 		status: {
 			type: process.env.MIGRATED_PACKAGES.includes("avatar")
 				? "migrated"
-				: undefined,
+				: "legacy",
 		},
 	},
 };

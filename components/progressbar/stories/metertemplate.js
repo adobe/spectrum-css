@@ -1,8 +1,8 @@
+import { Template as FieldLabel } from "@spectrum-css/fieldlabel/stories/template.js";
 import { html } from "lit";
 import { classMap } from "lit/directives/class-map.js";
-import { Template as FieldLabel } from "@spectrum-css/fieldlabel/stories/template.js";
 
-import "../index.css";
+import "@spectrum-css/progressbar";
 
 export const Template = ({
 	rootClass = "spectrum-ProgressBar",
@@ -11,7 +11,7 @@ export const Template = ({
 	value,
 	meterFill,
 	size = "s",
-	...globals
+
 }) => {
 
 	return html`
@@ -30,14 +30,14 @@ export const Template = ({
 			aria-valuemax="100"
 		>
 			${FieldLabel({
-				...globals,
+
 				size,
 				label,
 				alignment: "",
 				customClasses: [`${rootClass}-label`],
 			})}
 			${FieldLabel({
-				...globals,
+
 				size,
 				label: `${value}%`,
 				alignment: "",

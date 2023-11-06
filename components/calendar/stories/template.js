@@ -10,7 +10,7 @@ import isChromatic from "chromatic/isChromatic";
 
 import { Template as ActionButton } from "@spectrum-css/actionbutton/stories/template.js";
 
-import "../index.css";
+import "@spectrum-css/calendar";
 
 export const Template = ({
 	rootClass = "spectrum-Calendar",
@@ -30,7 +30,7 @@ export const Template = ({
 	previousHandler,
 	nextHandler,
 	id,
-	...globals
+	testId,
 }) => {
 	const [_, updateArgs] = useArgs();
 	const [{ lang }] = useGlobals();
@@ -240,6 +240,7 @@ export const Template = ({
 			})}
 			style=${ifDefined(styleMap(customStyles))}
 			id=${ifDefined(id)}
+			data-testid=${ifDefined(testId)}
 		>
 			<div class="${rootClass}-header">
 				<div
@@ -254,7 +255,7 @@ export const Template = ({
 					})}
 				</div>
 				${ActionButton({
-					...globals,
+
 					label: "Previous",
 					hideLabel: true,
 					isQuiet: true,
@@ -268,7 +269,7 @@ export const Template = ({
 					}),
 				})}
 				${ActionButton({
-					...globals,
+
 					label: "Next",
 					hideLabel: true,
 					isQuiet: true,

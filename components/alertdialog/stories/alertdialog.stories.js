@@ -1,9 +1,10 @@
 import { Template } from "./template";
 
+import { isOpen } from "@spectrum-css/preview/types/states.js";
+
+/** Alert dialogs display important information that users need to acknowledge. They appear over the interface and block further interactions until an action is selected. */
 export default {
   title: "Components/Alert dialog",
-  description:
-    "Alert dialogs display important information that users need to acknowledge. They appear over the interface and block further interactions until an action is selected.",
   component: "AlertDialog",
   argTypes: {
     heading: {
@@ -24,15 +25,7 @@ export default {
       },
       control: { type: "text" },
     },
-    isOpen: {
-      name: "Open",
-      type: { name: "boolean" },
-      table: {
-        type: { summary: "boolean" },
-        category: "State",
-      },
-      control: "boolean",
-    },
+    isOpen,
     variant: { table: { disable: true } },
   },
   args: {

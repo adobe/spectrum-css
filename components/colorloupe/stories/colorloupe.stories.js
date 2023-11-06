@@ -1,23 +1,13 @@
-// Import the component markup template
 import { Template } from "./template";
 
+import { isOpen } from "@spectrum-css/preview/types/states.js";
+
+/** The color loupe component shows the output color that would otherwise be covered by a cursor, stylus, or finger during color selection. */
 export default {
 	title: "Components/Color loupe",
-	description:
-		"The Color loupe component shows the output color that would otherwise be covered by a cursor, stylus, or finger during color selection.",
 	component: "Colorloupe",
 	argTypes: {
-		isOpen: {
-			description: "Apply `is-open` to display the component",
-			defaultValue: true,
-			name: "Open",
-			type: { name: "boolean" },
-			table: {
-				type: { summary: "boolean" },
-				category: "State",
-			},
-			control: "boolean",
-		},
+		isOpen,
 	},
 	args: {
 		rootClass: "spectrum-ColorLoupe",
@@ -31,7 +21,7 @@ export default {
 		status: {
 			type: process.env.MIGRATED_PACKAGES.includes("colorloupe")
 				? "migrated"
-				: undefined,
+				: "legacy",
 		},
 	},
 };

@@ -5,7 +5,9 @@ import { unsafeSVG } from "lit/directives/unsafe-svg.js";
 
 import { fetchIconSVG, uiIcons, workflowIcons } from "./utilities.js";
 
-import "../index.css";
+import { fetchIconSVG, uiIcons, workflowIcons } from "./utilities.js";
+
+import "@spectrum-css/icon";
 
 /**
  * @typedef { keyof import("./icon.stories.js").default.args } IconArgs
@@ -35,9 +37,9 @@ export const Template = ({
 	id,
 	customClasses = [],
 	useRef = false,
-	...globals
+	testId,
 }) => {
-	const { scale } = globals;
+	const [{ scale }] = useGlobals();
 
 	if (!iconName) {
 		console.warn(
@@ -107,7 +109,7 @@ export const Template = ({
 	let icon;
 
 	if (!useRef) {
-		icon = fetchIconSVG({ iconName: idKey, setName, ...globals });
+		icon = fetchIconSVG({ iconName: idKey, setName, scale });
 
 		if (!icon) {
 			console.warn(`Icon: ${idKey} not found.`);
@@ -152,10 +154,10 @@ export const Template = ({
 
 	try {
 		import(
-			/* webpackPrefetch: true */ `!!raw-loader!@adobe/spectrum-css-workflow-icons/dist/spectrum-icons.svg`
+			/* webpackPrefetch: true */ `@adobe/spectrum-css-workflow-icons/dist/spectrum-icons.svg?raw`
 		);
 		import(
-			/* webpackPrefetch: true */ `!!raw-loader!@spectrum-css/ui-icons/dist/spectrum-css-icons.svg`
+			/* webpackPrefetch: true */ `@spectrum-css/ui-icons/dist/spectrum-css-icons.svg?raw`
 		);
 	} catch (e) {
 		console.warn(e);
@@ -164,6 +166,7 @@ export const Template = ({
 	return svg`<svg
 		class=${classMap(classList)}
 		id=${ifDefined(id)}
+		data-testid=${ifDefined(testId)}
 		style=${ifDefined(inlineStyle)}
 		focusable="false"
 		aria-hidden="true"

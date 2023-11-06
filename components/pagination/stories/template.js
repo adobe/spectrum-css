@@ -7,16 +7,15 @@ import { Template as Button } from "@spectrum-css/button/stories/template.js";
 import { Template as SplitButton } from "@spectrum-css/splitbutton/stories/template.js";
 import { Template as Textfield } from "@spectrum-css/textfield/stories/template.js";
 
-import "../index.css";
+import "@spectrum-css/pagination";
 
-// More on component templates: https://storybook.js.org/docs/web-components/writing-stories/introduction#using-args
 export const Template = ({
 	rootClass = "spectrum-Pagination",
 	size = "m",
 	customClasses = [],
 	variant,
 	items,
-	...globals
+
 }) => {
 	if (variant === "explicit") {
 		return html`
@@ -67,7 +66,7 @@ export const Template = ({
 			})}
 		>
 			${Button({
-				...globals,
+
 				size,
 				variant: "primary",
 				treatment: "outline",
@@ -80,7 +79,7 @@ export const Template = ({
 				(item) => {
 					if (typeof item === "object") {
 						return ActionButton({
-							...globals,
+
 							...item,
 							size,
 							isQuiet: true,
@@ -89,7 +88,7 @@ export const Template = ({
 				}
 			)}
 			${Button({
-				...globals,
+
 				size,
 				variant: "primary",
 				treatment: "outline",

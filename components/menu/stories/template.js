@@ -9,7 +9,7 @@ import { Template as Icon } from "@spectrum-css/icon/stories/template.js";
 import { Template as Switch } from "@spectrum-css/switch/stories/template.js";
 import { Template as Tray } from "@spectrum-css/tray/stories/template.js";
 
-import "../index.css";
+import "@spectrum-css/menu";
 
 export const MenuItem = ({
   rootClass,
@@ -33,7 +33,7 @@ export const MenuItem = ({
   hasActions,
   selectionMode,
   value,
-  ...globals
+  testId,
 }) => {
   return html`
     <li
@@ -49,13 +49,14 @@ export const MenuItem = ({
         "is-open": isOpen,
       })}
       id=${ifDefined(id)}
+      data-testid=${ifDefined(testId)}
       role=${ifDefined(role)}
       aria-selected=${isSelected ? "true" : "false"}
       aria-disabled=${isDisabled ? "true" : "false"}
       tabindex=${ifDefined(!isDisabled ? "0" : undefined)}>
       ${isCollapsible
         ? Icon({
-            ...globals,
+
             iconName: "ChevronRight100",
             size,
             customClasses: [
@@ -65,7 +66,7 @@ export const MenuItem = ({
           }) : ''}
       ${iconName
         ? Icon({
-            ...globals,
+
             iconName,
             size,
             customClasses: [
@@ -90,7 +91,7 @@ export const MenuItem = ({
         : ''}
       ${isDrillIn
         ? Icon({
-            ...globals,
+
             iconName: "ChevronRight100",
             size,
             customClasses: [
@@ -101,7 +102,7 @@ export const MenuItem = ({
         : ''}
       ${selectionMode == "multiple"
         ? Checkbox({
-          ...globals,
+
           size,
           isEmphasized: true,
           isChecked: isSelected,
@@ -114,7 +115,7 @@ export const MenuItem = ({
       : ''}
       ${isChecked && selectionMode == "single"
         ? Icon({
-            ...globals,
+
             iconName: "Checkmark100",
             size,
             customClasses: [
@@ -129,7 +130,7 @@ export const MenuItem = ({
         ${hasActions
           ? html`<div class="${rootClass}Actions">
           ${Switch({
-              ...globals,
+
               size,
               isChecked: isSelected,
               label: null,
@@ -140,7 +141,7 @@ export const MenuItem = ({
             })}
             </div>`
           : ''}
-      ${isCollapsible && items.length > 0 ? Template({ ...globals, items, isOpen, size }) : ''}
+      ${isCollapsible && items.length > 0 ? Template({  items, isOpen, size }) : ''}
     </li>
   `
 };
@@ -171,10 +172,11 @@ export const MenuGroup = ({
   isTraySubmenu = false,
   subrole,
   size,
-  ...globals
+  testId,
 }) => html`
   <li
     id=${ifDefined(id)}
+    data-testid=${ifDefined(testId)}
     role="presentation"
   >
     ${!isTraySubmenu 
@@ -186,7 +188,6 @@ export const MenuGroup = ({
       : html`<div class="spectrum-Menu-back">
           <button aria-label="Back to previous menu" class="spectrum-Menu-backButton" type="button" role="menuitem">
             ${Icon({
-              ...globals,
               iconName: backArrowWithScale(size),
               size,
               customClasses: [`spectrum-Menu-backIcon`] 
@@ -200,7 +201,6 @@ export const MenuGroup = ({
         </div>`
     }
     ${Template({
-      ...globals,
       role: "group",
       subrole,
       labelledby: id ?? `menu-heading-category-${idx}`,
@@ -227,28 +227,30 @@ export const Template = ({
   role = "menu",
   subrole = "menuitem",
   id,
-  ...globals
+  testId,
 }) => {
   const menuMarkup = html`
     <ul
       class=${classMap({
         [rootClass]: true,
-				[`${rootClass}--size${size?.toUpperCase()}`]: typeof size !== "undefined",
+        [`${rootClass}--size${size?.toUpperCase()}`]: typeof size !== "undefined",
         "is-selectable": selectionMode === "single",
         "is-selectableMultiple": selectionMode === "multiple",
         "is-open": isOpen,
         ...customClasses.reduce((a, c) => ({ ...a, [c]: true }), {}),
       })}
       id=${ifDefined(id)}
+      data-testid=${ifDefined(testId)}
       role=${ifDefined(role)}
       aria-labelledby=${ifDefined(labelledby)}
       aria-disabled=${isDisabled ? "true" : "false"}
       style=${ifDefined(styleMap(customStyles))}
     >
       ${items.map((i, idx) => {
+        if (!i) return;
         if (i.type === "divider")
           return Divider({
-            ...globals,
+
             tag: "li",
             size: "s",
             customClasses: [`${rootClass}-divider`],
@@ -256,7 +258,6 @@ export const Template = ({
         else if (i.heading || i.isTraySubmenu)
           return MenuGroup({ 
             ...i,
-            ...globals,
             subrole,
             size,
             selectionMode,
@@ -264,7 +265,6 @@ export const Template = ({
           });
         else
           return MenuItem({
-            ...globals,
             ...i,
             idx,
             rootClass: `${rootClass}-item`,

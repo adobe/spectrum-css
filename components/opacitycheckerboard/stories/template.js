@@ -3,7 +3,7 @@ import { classMap } from "lit/directives/class-map.js";
 import { ifDefined } from "lit/directives/if-defined.js";
 import { styleMap } from "lit/directives/style-map.js";
 
-import "../index.css";
+import "@spectrum-css/opacitycheckerboard";
 
 export const Template = ({
 	rootClass = "spectrum-OpacityCheckerboard",
@@ -11,7 +11,8 @@ export const Template = ({
 	customClasses = [],
 	customStyles = {},
 	id,
-	content = [],
+	testId,
+	items = [],
 	role,
 }) => {
 	return html`
@@ -26,7 +27,8 @@ export const Template = ({
 			}))}
 			role=${ifDefined(role)}
 			id=${ifDefined(id)}
+			data-testid=${ifDefined(testId)}
 		>
-			${content}
+			${items}
 		</div>`;
 };

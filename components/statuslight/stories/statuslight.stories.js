@@ -1,9 +1,7 @@
-// Import the component markup template
 import { Template } from "./template";
 
 export default {
 	title: "Components/Status light",
-	description: "The Status light component is...",
 	component: "Statuslight",
 	argTypes: {
 		size: {
@@ -70,7 +68,7 @@ export default {
 		status: {
 			type: process.env.MIGRATED_PACKAGES.includes("statuslight")
 				? "migrated"
-				: undefined,
+				: "legacy",
 		},
 	},
 };

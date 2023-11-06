@@ -1,31 +1,17 @@
-// Import the component markup template
 import { Template } from "./template";
 
+import { isDisabled, isFocused } from "@spectrum-css/preview/types/states.js";
+
+/** The Color slider component lets users visually change an individual channel of a color. */
 export default {
 	title: "Components/Color slider",
-	description:
-		"The Color slider component lets users visually change an individual channel of a color.",
 	component: "ColorSlider",
 	argTypes: {
 		colorHandleStyle: { table: { disable: true } },
 		vertical: { table: { disable: true } },
-		isDisabled: {
-			name: "Disabled",
-			type: { name: "boolean" },
-			table: {
-				type: { summary: "boolean" },
-				category: "State",
-			},
-			control: "boolean",
-		},
+		isDisabled,
 		isFocused: {
-			name: "Focused",
-			type: { name: "boolean" },
-			table: {
-				type: { summary: "boolean" },
-				category: "State",
-			},
-			control: "boolean",
+			...isFocused,
 			if: { arg: "isDisabled", truthy: false },
 		},
 		gradientStops: {
@@ -59,7 +45,7 @@ export default {
 		status: {
 			type: process.env.MIGRATED_PACKAGES.includes("colorslider")
 				? "migrated"
-				: undefined,
+				: "legacy",
 		},
 	},
 };

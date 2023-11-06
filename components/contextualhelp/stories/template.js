@@ -3,22 +3,21 @@ import { classMap } from "lit/directives/class-map.js";
 import { ifDefined } from "lit/directives/if-defined.js";
 
 import { Template as ActionButton } from "@spectrum-css/actionbutton/stories/template.js";
-import { Template as Popover } from "@spectrum-css/popover/stories/template.js";
 import { Template as Link } from "@spectrum-css/link/stories/template.js";
+import { Template as Popover } from "@spectrum-css/popover/stories/template.js";
 
-import "../index.css";
+import "@spectrum-css/contextualhelp";
 
-// More on component templates: https://storybook.js.org/docs/web-components/writing-stories/introduction#using-args
 export const Template = ({
 	rootClass = "spectrum-ContextualHelp",
 	id,
+	testId,
 	iconName,
 	title,
 	body,
 	link,
 	popoverPlacement,
 	customClasses = [],
-	...globals
 }) => {
 	return html`
 		<div
@@ -27,6 +26,7 @@ export const Template = ({
 				...customClasses.reduce((a, c) => ({ ...a, [c]: true }), {}),
 			})}
 			id=${ifDefined(id)}
+			data-testid=${ifDefined(testId)}
 		>
 			${popoverPlacement.includes("top")
 				? html`<div
@@ -35,7 +35,7 @@ export const Template = ({
 				  ></div> `
 				: ""}
 			${ActionButton({
-				...globals,
+
 				size: "xs",
 				iconName,
 				customClasses: [`${rootClass}-button`],

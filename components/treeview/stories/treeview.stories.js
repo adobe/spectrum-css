@@ -1,10 +1,8 @@
-// Import the component markup template
 import { Template } from "./template";
 
+/** The typical usage of a treeview involves nesting a .spectrum-Treeview element within the .spectrum-TreeView-item parent element. */
 export default {
 	title: "Components/Tree view",
-	description:
-		"The typical usage of a treeview involves nesting a .spectrum-Treeview element within the .spectrum-TreeView-item parent element.",
 	component: "Treeview",
 	argTypes: {
 		items: { table: { disable: true } },
@@ -28,15 +26,6 @@ export default {
 			},
 			control: "boolean",
 		},
-		customStyles: {
-			name: "Custom styles",
-			description: "Storybook only styles for testing the story, applied to the parent element.",
-			table: {
-				type: { summary: "object" },
-				category: "Advanced",
-			},
-			if: { arg: 'customStyles' }
-		}
 	},
 	args: {
 		rootClass: "spectrum-TreeView",
@@ -53,7 +42,7 @@ export default {
 		status: {
 			type: process.env.MIGRATED_PACKAGES.includes("treeview")
 				? "migrated"
-				: undefined,
+				: "legacy",
 		},
 	},
 };

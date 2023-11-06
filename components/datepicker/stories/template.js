@@ -1,20 +1,20 @@
 import { html } from "lit";
 import { classMap } from "lit/directives/class-map.js";
 import { ifDefined } from "lit/directives/if-defined.js";
-import { when } from 'lit-html/directives/when.js';
 
 import { Template as Calendar } from "@spectrum-css/calendar/stories/template.js";
-import { Template as TextField } from "@spectrum-css/textfield/stories/template.js";
-import { Template as Popover } from "@spectrum-css/popover/stories/template.js";
 import { Template as PickerButton } from "@spectrum-css/pickerbutton/stories/template.js";
+import { Template as Popover } from "@spectrum-css/popover/stories/template.js";
+import { Template as TextField } from "@spectrum-css/textfield/stories/template.js";
 
 import { useArgs, useGlobals } from "@storybook/client-api";
 
-import "../index.css";
+import "@spectrum-css/datepicker";
 
 export const Template = ({
 	rootClass = "spectrum-DatePicker",
 	id,
+	testId,
 	content,
 	customClasses = [],
 	isOpen = true,
@@ -25,8 +25,8 @@ export const Template = ({
 	isDateTimeRange = false,
 	isDisabled = false,
 	isRequired = false,
-	readOnly = false,
-	...globals
+	isReadOnly = false,
+	selectedDay,
 }) => {
 	const [_, updateArgs] = useArgs();
 	const [{ lang }] = useGlobals();
@@ -55,54 +55,38 @@ export const Template = ({
 				...customClasses.reduce((a, c) => ({ ...a, [c]: true }), {}),
 			})}
 			id=${ifDefined(id)}
+			data-testid=${ifDefined(testId)}
 			aria-disabled=${isDisabled ? "true" : "false"}
 			aria-invalid=${ifDefined(isInvalid && !isDisabled ? "false" : undefined)}
-			aria-readonly=${ifDefined(readOnly ? "true" : "false")}
+			aria-readonly=${ifDefined(isReadOnly ? "true" : "false")}
 			aria-required=${ifDefined(isRequired ? "true" : "false")}
 			aria-haspopup="dialog"
 		>
-			${TextField({
-				...globals,
-				size: "m",
-				isQuiet,
-				isDisabled,
-				isReadOnly: readOnly,
-				isInvalid: !isRange ? isInvalid : undefined,
-				customClasses: [`${rootClass}-textfield`],
-				customInputClasses: isRange ? [`${rootClass}-input`, `${rootClass}-startField`] : [`${rootClass}-input`],
-				placeholder: "Choose a date",
-				name: "field",
-				value: globals.selectedDay
-					? new Date(globals.selectedDay).toLocaleDateString(lang)
-					: undefined,
-				onclick: function () {
-					if (!isOpen) updateArgs({ isOpen: true });
-				},
-				})}
-				${when(isRange, () => html`<div class=${rootClass}-rangeDash></div>`)}
-				${when(isRange, () => TextField({
-					...globals,
+			${[
+				TextField({
 					size: "m",
 					isQuiet,
 					isDisabled,
 					isInvalid,
-					isReadOnly: readOnly,
+					isReadOnly,
 					customClasses: [`${rootClass}-textfield`],
 					customInputClasses: [`${rootClass}-input`, `${rootClass}-endField`],
 					placeholder: "Choose a date",
 					name: "field",
-					value: globals.lastDay
-						? new Date(globals.lastDay).toLocaleDateString(lang)
+					value: selectedDay
+						? new Date(selectedDay).toLocaleDateString(lang)
 						: undefined,
-				}))}
-				${PickerButton({
-					...globals,
+					onclick: function () {
+						if (!isOpen) updateArgs({ isOpen: true });
+					},
+				}),
+				PickerButton({
 					customClasses: [`${rootClass}-button`],
 					size: "m",
 					iconType: "workflow",
 					iconName: "Calendar",
 					isQuiet,
-					customStyles:  readOnly ? {'display': 'none'} : "",
+					customStyles: isReadOnly ? {'display': 'none'} : undefined,
 					// @todo this is not added to the button on the website; need to make sure it's not a bug
 					// isOpen,
 					isInvalid,
@@ -112,10 +96,9 @@ export const Template = ({
 					onclick: function () {
 						updateArgs({ isOpen: !isOpen });
 					},
-				})}
-				${Popover({
-					...globals,
-					isOpen: isOpen && !isDisabled && !readOnly,
+				}),
+				Popover({
+					isOpen: isOpen && !isDisabled,
 					withTip: false,
 					position: "bottom",
 					isQuiet,
@@ -127,9 +110,11 @@ export const Template = ({
 								width: undefined,
 						  }
 						: {},
-					content: [Calendar(globals)],
-					// @todo this implementation of calendar does not currently display range selections or selected date on first load
-				})}
+					content: content ?? [
+						Calendar({})
+					],
+				}),
+			]}
 		</div>
 	`;
 };

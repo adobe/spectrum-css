@@ -2,12 +2,13 @@ import { html } from "lit";
 import { classMap } from "lit/directives/class-map.js";
 import { ifDefined } from "lit/directives/if-defined.js";
 import { styleMap } from "lit/directives/style-map.js";
+import { when } from "lit/directives/when.js";
 
 import { useArgs, useGlobals } from "@storybook/client-api";
 
 import { Template as FieldLabel } from "@spectrum-css/fieldlabel/stories/template.js";
 
-import "../index.css";
+import "@spectrum-css/slider";
 
 export const Template = ({
 	rootClass = "spectrum-Slider",
@@ -26,17 +27,8 @@ export const Template = ({
 	customClasses = [],
 	style = {},
 	id,
-	...globals
+	testId,
 }) => {
-	const { express } = globals;
-
-	try {
-		if (!express) import(/* webpackPrefetch: true */ "../themes/spectrum.css");
-		else import(/* webpackPrefetch: true */ "../themes/express.css");
-	} catch (e) {
-		console.warn(e);
-	}
-
 	const [_, updateArgs] = useArgs();
 	const [{ textDirection }] = useGlobals();
 
@@ -135,6 +127,7 @@ export const Template = ({
 				...customClasses.reduce((a, c) => ({ ...a, [c]: true }), {}),
 			})}
 			id=${ifDefined(id)}
+			data-testid=${ifDefined(testId)}
 			style=${styleMap({
 				maxWidth: `var(--spectrum-global-dimension-size-3000)`,
 				["--spectrum-slider-track-color"]: fillColor,
@@ -158,7 +151,7 @@ export const Template = ({
 						role=${ifDefined(values.length > 1 ? "presentation" : undefined)}
 				  >
 						${FieldLabel({
-							...globals,
+
 							size,
 							label,
 							isDisabled,
@@ -236,23 +229,21 @@ export const Template = ({
 					];
 				})}
 			</div>
-			${values.length && labelPosition === "side"
-				? html`<div
-						class="${rootClass}-labelContainer"
-						role=${ifDefined(values.length > 1 ? "presentation" : undefined)}
-					>
-						<div
-							class="${rootClass}-value"
-							role="textbox"
-							aria-readonly="true"
-							aria-labelledby=${ifDefined(
-								id && label ? `${id}-label` : undefined
-							)}
-						>
-							${values[0]}${values.length > 1 ? ` - ${values[1]}` : ""}
-						</div>
-					</div>`
-				: ""}
+			${when(values.length && labelPosition === "side", () => html`<div
+				class="${rootClass}-labelContainer"
+				role=${ifDefined(values.length > 1 ? "presentation" : undefined)}
+			>
+				<div
+					class="${rootClass}-value"
+					role="textbox"
+					aria-readonly="true"
+					aria-labelledby=${ifDefined(
+						id && label ? `${id}-label` : undefined
+					)}
+				>
+					${values[0]}${values.length > 1 ? ` - ${values[1]}` : ""}
+				</div>
+			</div>`)}
 		</div>
 	`;
 };

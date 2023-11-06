@@ -2,11 +2,11 @@ import { html } from "lit";
 import { classMap } from "lit/directives/class-map.js";
 import { ifDefined } from "lit/directives/if-defined.js";
 
+import { Template as ActionButton } from "@spectrum-css/actionbutton/stories/template.js";
 import { AccentColor as IllustratedMessageStory } from "@spectrum-css/illustratedmessage/stories/illustratedmessage.stories.js";
 import { Template as IllustratedMessage } from "@spectrum-css/illustratedmessage/stories/template.js";
-import { Template as ActionButton } from "@spectrum-css/actionbutton/stories/template.js";
 
-import "../index.css";
+import "@spectrum-css/dropzone";
 
 export const Template = ({
 	rootClass = "spectrum-DropZone",
@@ -14,7 +14,7 @@ export const Template = ({
 	isFilled = false,
 	customClasses = [],
 	id,
-	...globals
+	testId,
 }) => {
 	return html`
 		<div
@@ -25,12 +25,13 @@ export const Template = ({
 				...customClasses.reduce((a, c) => ({ ...a, [c]: true }), {}),
 			})}
 			id=${ifDefined(id)}
+			data-testid=${ifDefined(testId)}
 			role="region"
 			tabindex="0"
 			style="width: 300px;"
 		>
 			${IllustratedMessage({
-				...globals,
+
 				heading: IllustratedMessageStory.args.heading,
 				description: IllustratedMessageStory.args.description,
 			})}

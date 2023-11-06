@@ -1,13 +1,11 @@
 import { html } from "lit";
 
-// Import the component markup template
-import { Template } from "./template";
 import { Template as Link } from "@spectrum-css/link/stories/template.js";
+import { Template } from "./template";
 
+/** The Illustrated Message component is used for status and errors. It is also used for call to actions, such as within the Drop Zone component. */
 export default {
 	title: "Components/Illustrated message",
-	description:
-		"The Illustrated Message component is used for status and errors. It is also used for call to actions, such as within the Drop Zone component.",
 	component: "IllustratedMessage",
 	argTypes: {
 		useAccentColor: {
@@ -46,7 +44,7 @@ export default {
 		status: {
 			type: process.env.MIGRATED_PACKAGES.includes("illustratedmessage")
 				? "migrated"
-				: undefined,
+				: "legacy",
 		},
 	},
 };

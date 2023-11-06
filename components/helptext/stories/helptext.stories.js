@@ -1,10 +1,10 @@
-// Import the component markup template
 import { Template } from "./template";
 
+import { isDisabled } from "@spectrum-css/preview/types/states.js";
+
+/** Help text provides either an informative description or an error message that gives more context about what a user needs to input. It’s commonly used in forms. */
 export default {
 	title: "Components/Help text",
-	description:
-		"Help text provides either an informative description or an error message that gives more context about what a user needs to input. It’s commonly used in forms.",
 	component: "HelpText",
 	argTypes: {
 		reducedMotion: { table: { disable: true } },
@@ -50,24 +50,7 @@ export default {
 			control: "boolean",
 			if: { arg: "variant", eq: "negative" },
 		},
-		isDisabled: {
-			name: "Disabled",
-			type: { name: "boolean" },
-			table: {
-				type: { summary: "boolean" },
-				category: "State",
-			},
-			control: "boolean",
-		},
-		customStyles: {
-			name: "Custom styles",
-			description: "Storybook only styles for testing the story, applied to the parent element.",
-			table: {
-				type: { summary: "object" },
-				category: "Advanced",
-			},
-			if: { arg: 'customStyles' }
-		}
+		isDisabled,
 	},
 	args: {
 		rootClass: "spectrum-HelpText",
@@ -84,7 +67,7 @@ export default {
 		status: {
 			type: process.env.MIGRATED_PACKAGES.includes("helptext")
 				? "migrated"
-				: undefined,
+				: "legacy",
 		},
 	},
 };

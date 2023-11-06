@@ -1,7 +1,7 @@
 import { html } from "lit";
 import { classMap } from "lit/directives/class-map.js";
 
-import "../index.css";
+import "@spectrum-css/modal";
 
 export const Template = ({
 	rootClass = "spectrum-Modal",
@@ -9,7 +9,6 @@ export const Template = ({
 	isOpen = true,
 	variant,
 	content = [],
-	...globals
 }) => {
 	return html`
 		<div class="${rootClass}-wrapper">

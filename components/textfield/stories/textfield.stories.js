@@ -1,48 +1,16 @@
-// Import the component markup template
 import { Template } from "./template";
 
+import { isDisabled, isFocused, isInvalid, isKeyboardFocused, isLoading, isRequired, isValid } from "@spectrum-css/preview/types/states.js";
+
+/** Text fields are text boxes that allow users to input custom text entries with a keyboard. Various decorations can be displayed around the field to communicate the entry requirements. */
 export default {
 	title: "Components/Text field",
-	description:
-		"Text fields are text boxes that allow users to input custom text entries with a keyboard. Various decorations can be displayed around the field to communicate the entry requirements.",
 	component: "TextField",
 	argTypes: {
-		isValid: {
-			name: "Valid",
-			type: { name: "boolean" },
-			table: {
-				type: { summary: "boolean" },
-				category: "State",
-			},
-			control: "boolean",
-		},
-		isInvalid: {
-			name: "Invalid",
-			type: { name: "boolean" },
-			table: {
-				type: { summary: "boolean" },
-				category: "State",
-			},
-			control: "boolean",
-		},
-		isFocused: {
-			name: "Focused",
-			type: { name: "boolean" },
-			table: {
-				type: { summary: "boolean" },
-				category: "State",
-			},
-			control: "boolean",
-		},
-		isKeyboardFocused: {
-			name: "Keyboard focused",
-			type: { name: "boolean" },
-			table: {
-				type: { summary: "boolean" },
-				category: "State",
-			},
-			control: "boolean",
-		},
+		isValid,
+		isInvalid,
+		isFocused,
+		isKeyboardFocused,
 		size: {
 			name: "Size",
 			type: { name: "string", required: true },
@@ -84,43 +52,10 @@ export default {
 		iconName: {
 			table: { disable: true },
 		},
-		isDisabled: {
-			name: "Disabled",
-			type: { name: "boolean" },
-			table: {
-				type: { summary: "boolean" },
-				category: "State",
-			},
-			control: "boolean",
-		},
-		isRequired: {
-			name: "Required",
-			type: { name: "boolean" },
-			table: {
-				type: { summary: "boolean" },
-				category: "Component",
-			},
-			control: "boolean",
-		},
-		isReadOnly: {
-			name: "Read only",
-			type: { name: "boolean" },
-			table: {
-				type: { summary: "boolean" },
-				category: "Component",
-			},
-			control: "boolean",
-		},
-		isLoading: {
-			name: "Loading",
-			type: { name: "boolean" },
-			table: {
-				disable: true,
-				type: { summary: "boolean" },
-				category: "State",
-			},
-			control: "boolean",
-		},
+		isDisabled,
+		isRequired,
+		isReadOnly,
+		isLoading,
 		pattern: {
 			name: "Pattern",
 			type: { name: "string" },
@@ -131,9 +66,7 @@ export default {
 			control: "text",
 		},
 		value: {
-			table: {
-				disable: true,
-			},
+			table: { disable: true },
 		},
 	},
 	args: {
@@ -158,7 +91,7 @@ export default {
 		status: {
 			type: process.env.MIGRATED_PACKAGES.includes("textfield")
 				? "migrated"
-				: undefined,
+				: "legacy",
 		},
 	},
 };

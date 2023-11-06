@@ -5,7 +5,7 @@ import { styleMap } from "lit/directives/style-map.js";
 
 import { Template as Swatch } from "@spectrum-css/swatch/stories/template.js";
 
-import "../index.css";
+import "@spectrum-css/swatchgroup";
 
 export const Template = ({
 	rootClass = "spectrum-SwatchGroup",

@@ -8,7 +8,7 @@ import { when } from "lit/directives/when.js";
 import { Template as Icon } from "@spectrum-css/icon/stories/template.js";
 import { Template as ProgressCircle } from "@spectrum-css/progresscircle/stories/template.js";
 
-import "../index.css";
+import "@spectrum-css/textfield";
 
 export const Template = ({
 	rootClass = "spectrum-Textfield",
@@ -38,17 +38,8 @@ export const Template = ({
 	autocomplete = true,
 	onclick,
 	customStyles = {},
-	...globals
 }) => {
 	const [, updateArgs] = useArgs();
-	const { express } = globals;
-
-	try {
-		if (!express) import(/* webpackPrefetch: true */ "../themes/spectrum.css");
-		else import(/* webpackPrefetch: true */ "../themes/express.css");
-	} catch (e) {
-		console.warn(e);
-	}
 
 	if (isInvalid) iconName = "Alert";
 	else if (isValid) iconName = "Checkmark";
@@ -87,7 +78,7 @@ export const Template = ({
 			id=${ifDefined(id)}
 		>
 			${when(iconName, () => Icon({
-				...globals,
+
 				size,
 				iconName,
 				customClasses: [

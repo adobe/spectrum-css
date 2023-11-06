@@ -1,20 +1,16 @@
-// Import the component markup template
 import { Template } from "./template";
+
+import { isOpen } from "@spectrum-css/preview/types/states.js";
 
 import { Template as Dialog } from "@spectrum-css/dialog/stories/template.js";
 
+/** Tray dialogs are typically used to portray information on mobile device or smaller screens. */
 export default {
 	title: "Components/Tray",
-	description:
-		"Tray dialogs are typically used to portray information on mobile device or smaller screens.",
 	component: "Tray",
 	argTypes: {
 		content: { table: { disable: true } },
-		isOpen: {
-			name: "Open",
-			type: { name: "boolean" },
-			table: { disable: true },
-		},
+		isOpen,
 		heading: {
 			name: "Heading",
 			type: { name: "string" },
@@ -37,7 +33,7 @@ export default {
 		status: {
 			type: process.env.MIGRATED_PACKAGES.includes("tray")
 				? "migrated"
-				: undefined,
+				: "legacy",
 		},
 	},
 };

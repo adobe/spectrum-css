@@ -2,14 +2,15 @@ import { html } from "lit";
 import { ifDefined } from "lit/directives/if-defined.js";
 import { styleMap } from "lit/directives/style-map.js";
 
-import { Template } from "./template";
+import { isDisabled } from "@spectrum-css/preview/types/states.js";
 
 import { default as IconStories } from "@spectrum-css/icon/stories/icon.stories.js";
 
+import { Template } from "./template";
+
+/** Buttons allow users to perform an action or to navigate to another page. They have multiple styles for various needs, and are ideal for calling attention to where a user needs to do something in order to move forward in a flow. */
 export default {
 	title: "Components/Button",
-	description:
-		"Buttons allow users to perform an action or to navigate to another page. They have multiple styles for various needs, and are ideal for calling attention to where a user needs to do something in order to move forward in a flow.",
 	component: "Button",
 	argTypes: {
 		size: {
@@ -60,15 +61,7 @@ export default {
 			options: ["fill", "outline"],
 			control: "inline-radio",
 		},
-		isDisabled: {
-			name: "Disabled",
-			type: { name: "boolean" },
-			table: {
-				type: { summary: "boolean" },
-				category: "State",
-			},
-			control: "boolean",
-		},
+		isDisabled,
 		staticColor: {
 			name: "Static color",
 			type: { name: "string" },
@@ -95,7 +88,7 @@ export default {
 		status: {
 			type: process.env.MIGRATED_PACKAGES.includes("button")
 				? "migrated"
-				: undefined,
+				: "legacy",
 		},
 	},
 };

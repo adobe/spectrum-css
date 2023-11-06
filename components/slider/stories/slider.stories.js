@@ -1,10 +1,10 @@
-// Import the component markup template
 import { Template } from "./template";
 
+import { isDisabled, isFocused } from "@spectrum-css/preview/types/states.js";
+
+/** A slider allows users to quickly select a value within a range. They should be used when the upper and lower bounds to the range are invariable. */
 export default {
 	title: "Components/Slider",
-	description:
-		"A slider allows users to quickly select a value within a range. They should be used when the upper and lower bounds to the range are invariable.",
 	component: "Slider",
 	argTypes: {
 		reducedMotion: { table: { disable: true } },
@@ -94,23 +94,9 @@ export default {
 			control: "boolean",
 			if: { arg: "variant", neq: "ramp" },
 		},
-		isDisabled: {
-			name: "Disabled",
-			type: { name: "boolean" },
-			table: {
-				type: { summary: "boolean" },
-				category: "State",
-			},
-			control: "boolean",
-		},
+		isDisabled,
 		isFocused: {
-			name: "Focused",
-			type: { name: "boolean" },
-			table: {
-				type: { summary: "boolean" },
-				category: "State",
-			},
-			control: "boolean",
+			...isFocused,
 			if: { arg: "isDisabled", truthy: false },
 		},
 		values: { table: { disable: true } },
@@ -132,7 +118,7 @@ export default {
 		status: {
 			type: process.env.MIGRATED_PACKAGES.includes("slider")
 				? "migrated"
-				: undefined,
+				: "legacy",
 		},
 	},
 };

@@ -2,13 +2,12 @@ import { html } from "lit";
 import { classMap } from "lit/directives/class-map.js";
 import { ifDefined } from "lit/directives/if-defined.js";
 
-import { Template as Icon } from "@spectrum-css/icon/stories/template.js";
 import { Template as Avatar } from "@spectrum-css/avatar/stories/template.js";
 import { Template as ClearButton } from "@spectrum-css/clearbutton/stories/template.js";
+import { Template as Icon } from "@spectrum-css/icon/stories/template.js";
 
-import "../index.css";
+import "@spectrum-css/tag";
 
-// More on component templates: https://storybook.js.org/docs/web-components/writing-stories/introduction#using-args
 export const Template = ({
 	rootClass = "spectrum-Tag",
 	size = "m",
@@ -22,20 +21,34 @@ export const Template = ({
 	hasClearButton = false,
 	id,
 	customClasses = [],
-	...globals
-}) => {
-	const { express } = globals;
+	testId,
+}) => html`
+	<div
+		class=${classMap({
+			[rootClass]: true,
+			[`${rootClass}--size${size?.toUpperCase()}`]:
+				typeof size !== "undefined",
+			"is-emphasized": isEmphasized,
+			"is-disabled": isDisabled,
+			"is-invalid": isInvalid,
+			"is-selected": isSelected,
+			...customClasses.reduce((a, c) => ({ ...a, [c]: true }), {}),
+		})}
+		id=${ifDefined(id)}
+		data-testid=${ifDefined(testId)}
+		tabindex=${isDisabled ? '-1' : '0'}
+	>
+		${avatarUrl
+			? Avatar({
 
-	try {
-		if (!express) import(/* webpackPrefetch: true */ "../themes/spectrum.css");
-		else import(/* webpackPrefetch: true */ "../themes/express.css");
-	} catch (e) {
-		console.warn(e);
-	}
+					image: avatarUrl,
+					size: "50",
+				})
+			: ""}
+		${iconName
+			? Icon({
 
-	if(isInvalid) {
-		iconName = 'Alert'
-	}
+	if(isInvalid) iconName = 'Alert';
 
 	return html`
 		<div
@@ -53,35 +66,28 @@ export const Template = ({
 			tabindex=${isDisabled ? '-1' : '0'}
 		>
 			${avatarUrl && !isInvalid
-				? Avatar({
-						...globals,
-						image: avatarUrl,
-						size: "50",
-				  })
+				? Avatar({ image: avatarUrl, size: "50" })
 				: ""}
 			${iconName || isInvalid
 				? Icon({
-						...globals,
-						size,
-						iconName,
-						customClasses: [`${rootClass}-itemIcon`],
-				  })
+                    size,
+                    iconName,
+                    customClasses: [`${rootClass}-itemIcon`],
+                })
 				: ""}
 			<span class="${rootClass}-itemLabel">${label}</span>
 			${hasClearButton
 				? ClearButton({
-						...globals,
-						size,
-						customClasses: [`${rootClass}-clearButton`],
-						onclick: (evt) => {
-							const el = evt.target;
-							if (!el) return;
+                    size,
+					customClasses: [`${rootClass}-clearButton`],
+					onclick: (evt) => {
+						const el = evt.target;
+						if (!el) return;
 
-							const wrapper = el.closest(rootClass);
-							wrapper.parentNode.removeChild(wrapper);
-						},
-				  })
-				: ""}
-		</div>
-	`;
-};
+						const wrapper = el.closest(rootClass);
+						wrapper.parentNode.removeChild(wrapper);
+					},
+				})
+			: ""}
+	</div>
+`;

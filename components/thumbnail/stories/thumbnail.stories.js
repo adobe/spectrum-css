@@ -1,10 +1,10 @@
-// Import the component markup template
 import { Template } from "./template";
 
+import { isDisabled, isFocused, isSelected } from "@spectrum-css/preview/types/states.js";
+
+/** A thumbnail is used to display a preview of an image, layer, or effect. */
 export default {
 	title: "Components/Thumbnail",
-	description:
-		"A thumbnail is used to display a preview of an image, layer, or effect.",
 	component: "Thumbnail",
 	argTypes: {
 		reduceMotion: { table: { disable: true } },
@@ -82,34 +82,12 @@ export default {
 			},
 			control: "boolean",
 		},
-		isDisabled: {
-			name: "Disabled",
-			type: { name: "boolean" },
-			table: {
-				type: { summary: "boolean" },
-				category: "State",
-			},
-			control: "boolean",
-		},
+		isDisabled,
 		isSelected: {
-			name: "Selected",
-			type: { name: "boolean" },
-			table: {
-				type: { summary: "boolean" },
-				category: "State",
-			},
-			control: "boolean",
+			...isSelected,
 			if: { arg: "isLayer" },
 		},
-		isFocused: {
-			name: "Focused",
-			type: { name: "boolean" },
-			table: {
-				type: { summary: "boolean" },
-				category: "State",
-			},
-			control: "boolean",
-		},
+		isFocused,
 	},
 	args: {
 		rootClass: "spectrum-Thumbnail",
@@ -129,7 +107,7 @@ export default {
 		status: {
 			type: process.env.MIGRATED_PACKAGES.includes("thumbnail")
 				? "migrated"
-				: undefined,
+				: "legacy",
 		},
 	},
 };

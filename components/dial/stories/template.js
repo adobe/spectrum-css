@@ -3,7 +3,7 @@ import { classMap } from "lit/directives/class-map.js";
 import { ifDefined } from "lit/directives/if-defined.js";
 import { when } from "lit/directives/when.js";
 
-import "../index.css";
+import "@spectrum-css/dial";
 
 export const Template = ({
 	rootClass = "spectrum-Dial",
@@ -16,7 +16,7 @@ export const Template = ({
 	max = 100,
 	customClasses = [],
 	id,
-	// ...globals
+	testId,
 }) => {
 	return html`
 		<div
@@ -27,6 +27,7 @@ export const Template = ({
 				...customClasses.reduce((a, c) => ({ ...a, [c]: true }), {}),
 			})}
 			id=${ifDefined(id)}
+			data-testid=${ifDefined(testId)}
 			@mousedown=${() => {
 				if (isDisabled) return;
 				document.body.classList.add("u-isGrabbing");

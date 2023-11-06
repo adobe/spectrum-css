@@ -1,21 +1,13 @@
-// Import the component markup template
 import { Template } from "./template";
+
+import { isOpen } from "@spectrum-css/preview/types/states.js";
 
 export default {
 	title: "Components/Quick actions",
-	description: "The Quick actions component is...",
 	component: "QuickAction",
 	argTypes: {
 		content: { table: { disable: true } },
-		isOpen: {
-			name: "Open",
-			type: { name: "boolean" },
-			table: {
-				type: { summary: "boolean" },
-				category: "Component",
-			},
-			control: "boolean",
-		},
+		isOpen,
 		position: {
 			name: "Position",
 			type: { name: "string" },
@@ -48,7 +40,7 @@ export default {
 		status: {
 			type: process.env.MIGRATED_PACKAGES.includes("quickaction")
 				? "migrated"
-				: undefined,
+				: "legacy",
 		},
 	},
 };

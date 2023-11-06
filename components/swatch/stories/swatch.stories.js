@@ -1,9 +1,10 @@
 import { Template } from "./template";
 
+import { isDisabled, isSelected } from "@spectrum-css/preview/types/states.js";
+
+/** A swatch shows a small sample of a fill&emdash;such as a color, gradient, texture, or material&emdash;that is intended to be applied to an object. */
 export default {
 	title: "Components/Swatch",
-	description:
-		"A swatch shows a small sample of a fill&emdash;such as a color, gradient, texture, or material&emdash;that is intended to be applied to an object.",
 	component: "Swatch",
 	argTypes: {
 		size: {
@@ -35,24 +36,8 @@ export default {
 			options: ["none", "regular", "full"],
 			control: "select",
 		},
-		isDisabled: {
-			name: "Disabled",
-			type: { name: "boolean" },
-			table: {
-				type: { summary: "boolean" },
-				category: "State",
-			},
-			control: "boolean",
-		},
-		isSelected: {
-			name: "Selected",
-			type: { name: "boolean" },
-			table: {
-				type: { summary: "boolean" },
-				category: "State",
-			},
-			control: "boolean",
-		},
+		isDisabled,
+		isSelected,
   },
   args: {
     rootClass: "spectrum-Swatch",

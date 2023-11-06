@@ -1,10 +1,12 @@
 import { Template as Typography } from "@spectrum-css/typography/stories/template.js";
+
 import { Template } from "./template";
 
+import { isOpen } from "@spectrum-css/preview/types/states.js";
+
+/** A dialog displays important information that users need to acknowledge. They appear over the interface and block further interactions. */
 export default {
 	title: "Components/Dialog",
-	description:
-		"A dialog displays important information that users need to acknowledge. They appear over the interface and block further interactions.",
 	component: "Dialog",
 	argTypes: {
 		heading: {
@@ -35,15 +37,7 @@ export default {
 			},
 			control: "boolean",
 		},
-		isOpen: {
-			name: "Open",
-			type: { name: "boolean" },
-			table: {
-				type: { summary: "boolean" },
-				category: "State",
-			},
-			control: "boolean",
-		},
+		isOpen,
 	},
 	args: {
 		rootClass: "spectrum-Dialog",
@@ -63,7 +57,7 @@ export default {
 		status: {
 			type: process.env.MIGRATED_PACKAGES.includes("dialog")
 				? "migrated"
-				: undefined,
+				: "legacy",
 		},
 	},
 };

@@ -3,7 +3,7 @@ import { classMap } from "lit/directives/class-map.js";
 import { ifDefined } from "lit/directives/if-defined.js";
 import { styleMap } from "lit/directives/style-map.js";
 
-import "../index.css";
+import "@spectrum-css/colorloupe";
 
 export const Template = ({
 	rootClass = "spectrum-ColorLoupe",
@@ -14,16 +14,19 @@ export const Template = ({
 		"inset-inline-start": "5px",
 	},
 	customClasses = [],
-	// ...globals
+  id,
+  testId,
 }) => {
 	return svg`
     <svg
-      class=${classMap({
+      class=${ifDefined(classMap({
         [rootClass]: true,
         "is-open": isOpen,
         ...customClasses.reduce((a, c) => ({ ...a, [c]: true }), {}),
-      })}
+      }))}
       style=${ifDefined(styleMap(customStyles))}
+			id=${ifDefined(id)}
+			data-testid=${ifDefined(testId)}
     >
       <defs>
         <path

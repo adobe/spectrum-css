@@ -1,10 +1,8 @@
-// Import the component markup template
 import { Template } from "./template";
 
+/** A menu is used for creating a menu list. The various elements inside a menu can be: a menu group, a menu item, or a menu divider. Often a menu will appear in a popover so that it displays as a togglig menu. */
 export default {
   title: "Components/Menu",
-  description:
-    "A menu is used for creating a menu list. The various elements inside a menu can be: a menu group, a menu item, or a menu divider. Often a menu will appear in a popover so that it displays as a togglig menu.",
   component: "Menu",
   argTypes: {
     selectionMode: {
@@ -118,15 +116,8 @@ MenuWithCheckmark.args = {
   ],
 };
 
+/** A few different variants and states are demonstrated in this story. Menu items are shown with icons, with short descriptions, and with both. A selected item and a disabled item are shown for each. A max-width is set for the story, to test the text wrapping. */
 export const IconsAndDescriptions = Template.bind({});
-IconsAndDescriptions.parameters = {
-	docs: {
-		description: {
-			story:
-				"A few different variants and states are demonstrated in this story. Menu items are shown with icons, with short descriptions, and with both. A selected item and a disabled item are shown for each. A max-width is set for the story, to test the text wrapping.",
-		},
-	},
-};
 IconsAndDescriptions.args = {
   role: "listbox",
   subrole: "option",
@@ -214,15 +205,8 @@ IconsAndDescriptions.args = {
   ],
 };
 
+/** For single selection menu sections, menu items show a single checkmark to indicate the selected item. */
 export const SingleSelection = Template.bind({});
-SingleSelection.parameters = {
-	docs: {
-		description: {
-			story:
-				"For single selection menu sections, menu items show a single checkmark to indicate the selected item.",
-		},
-	},
-};
 SingleSelection.args = {
   selectionMode: "single",
   customStyles: {maxWidth: '1000px'},
@@ -315,16 +299,9 @@ WithValueAndActions.args = {
   ],
 };
 
+/** When a menu item contains a submenu, a drill-in chevron will appear at the end of the menu item to show that a submenu is available. */
 export const DrillInSubmenu = Template.bind({});
 DrillInSubmenu.storyName = "Drill-in for Submenu";
-DrillInSubmenu.parameters = {
-	docs: {
-		description: {
-			story:
-				"When a menu item contains a submenu, a drill-in chevron will appear at the end of the menu item to show that a submenu is available.",
-		},
-	},
-};
 DrillInSubmenu.args = {
   items: [
     { label: "Deselect" },

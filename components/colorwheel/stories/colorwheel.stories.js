@@ -1,29 +1,15 @@
-// Import the component markup template
 import { Template } from "./template";
 
+import { isDisabled, isFocused } from "@spectrum-css/preview/types/states.js";
+
+/** The Color wheel component lets users visually change an individual channel of a color on a circular track. */
 export default {
 	title: "Components/Color wheel",
-	description:
-		"The Color wheel component lets users visually change an individual channel of a color on a circular track.",
 	component: "ColorWheel",
 	argTypes: {
-		isDisabled: {
-			name: "Disabled",
-			type: { name: "boolean" },
-			table: {
-				type: { summary: "boolean" },
-				category: "State",
-			},
-			control: "boolean",
-		},
+		isDisabled,
 		isFocused: {
-			name: "Focused",
-			type: { name: "boolean" },
-			table: {
-				type: { summary: "boolean" },
-				category: "State",
-			},
-			control: "boolean",
+			...isFocused,
 			if: { arg: "isDisabled", truthy: false },
 		},
 	},
@@ -39,7 +25,7 @@ export default {
 		status: {
 			type: process.env.MIGRATED_PACKAGES.includes("colorwheel")
 				? "migrated"
-				: undefined,
+				: "legacy",
 		},
 	},
 };

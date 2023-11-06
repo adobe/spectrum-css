@@ -1,10 +1,10 @@
-// Import the component markup template
 import { Template } from "./template";
 
+import { isDisabled, isRequired } from "@spectrum-css/preview/types/states.js";
+
+/** The Field label component is used along with inputs to display a label for that input. */
 export default {
 	title: "Components/Field label",
-	description:
-		"The Field label component is used along with inputs to display a label for that input.",
 	component: "Fieldlabel",
 	argTypes: {
 		size: {
@@ -36,24 +36,8 @@ export default {
 			options: ["left", "right"],
 			control: "select",
 		},
-		isDisabled: {
-			name: "Disabled",
-			type: { name: "boolean" },
-			table: {
-				type: { summary: "boolean" },
-				category: "State",
-			},
-			control: "boolean",
-		},
-		isRequired: {
-			name: "Required",
-			type: { name: "boolean" },
-			table: {
-				type: { summary: "boolean" },
-				category: "State",
-			},
-			control: "boolean",
-		},
+		isDisabled,
+		isRequired,
 	},
 	args: {
 		rootClass: "spectrum-FieldLabel",
@@ -69,7 +53,7 @@ export default {
 		status: {
 			type: process.env.MIGRATED_PACKAGES.includes("fieldlabel")
 				? "migrated"
-				: undefined,
+				: "legacy",
 		},
 	},
 };
@@ -83,7 +67,7 @@ export const RightAligned = Template.bind({});
 RightAligned.args = {
 	label: "Label",
 	alignment: "right",
-	style: { width: "72px" },
+	customStyle: { width: "72px" },
 };
 
 export const Required = Template.bind({});
@@ -91,7 +75,7 @@ Required.args = {
 	label: "Label example",
 	alignment: "left",
 	isRequired: true,
-	style: { width: "200px" },
+	customStyles: { width: "200px" },
 };
 
 export const WrappingAndRequired = Template.bind({});
@@ -99,5 +83,5 @@ WrappingAndRequired.args = {
 	label: "Label example with longer text that will wrap to the next line. And with an asterisk that marks it as required.",
 	alignment: "left",
 	isRequired: true,
-	style: { width: "200px" },
+	customStyles: { width: "200px" },
 };

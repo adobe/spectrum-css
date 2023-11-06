@@ -1,20 +1,13 @@
 import { Template } from "./template";
 
+import { isOpen } from "@spectrum-css/preview/types/states.js";
+
+/** The Alert banner show pressing and high-signal messages, such as system alerts. They’re meant to be noticed and prompt users to take action. */
 export default {
 	title: "Components/Alert banner",
-	description:
-		"The Alert banner show pressing and high-signal messages, such as system alerts. They’re meant to be noticed and prompt users to take action.",
 	component: "AlertBanner",
 	argTypes: {
-		isOpen: {
-			name: "Open",
-			type: { name: "boolean" },
-			table: {
-				type: { summary: "boolean" },
-				category: "State",
-			},
-			control: "boolean",
-		},
+		isOpen,
 		text: {
 			name: "Text",
 			type: { name: "string", required: true },
@@ -49,7 +42,7 @@ export default {
 		status: {
 			type: process.env.MIGRATED_PACKAGES.includes("alertbanner")
 				? "migrated"
-				: undefined,
+				: "legacy",
 		},
 	},
 };

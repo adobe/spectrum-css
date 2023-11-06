@@ -43,18 +43,7 @@ Storybook leverages webpack for bundling and we have updated it with the followi
 - CSS assets will be run automatically through their respective postcss configurations. This means you do not need to load dist assets into a story. It is recommended you load **local development assets** as they will be correctly compiled on the fly. i.e., in your template.js:
 
   ```js
-  import "../index.css";
-  ```
-
-- If you need to load an asset in your template based on storybook configurations, you can do so using dynamic imports and a webpackPrefetch flag (to prevent FOUC). These will follow the same compilation rules as noted above. i.e.,
-
-  ```js
-  try {
-   if (!express) import(/* webpackPrefetch: true */ "../themes/spectrum.css");
-   else import(/* webpackPrefetch: true */ "../themes/express.css");
-  } catch (e) {
-   console.warn(e);
-  }
+  import "@spectrum-css/asset";
   ```
 
 We are leaning on Storybook's `@storybook/web-components-webpack5` framework configuration as our stories rely on lit for dynamic attribute assignment.
@@ -133,6 +122,12 @@ argTypes: {
 
 #### Commonly used argTypes
 
+Many of our most commonly used argTypes can be imported from our storybook package `@spectrum-css/preview/types`.
+
+```js
+import { isDisabled, isFocused, isInvalid, isKeyboardFocused, isLoading, isOpen, isValid } from "@spectrum-css/preview/types/states.js";
+```
+
 ```js
 image: {
   name: "Image",
@@ -142,18 +137,6 @@ image: {
     category: "Component",
   },
   control: { type: "file", accept: ".svg,.png,.jpg,.jpeg,.webc" },
-},
-```
-
-```js
-isOpen: {
-  name: "Open",
-  type: { name: "boolean" },
-  table: {
-    type: { summary: "boolean" },
-    category: "State",
-  },
-  control: "boolean",
 },
 ```
 
@@ -224,7 +207,6 @@ Every component will have access to a few empty, global inputs to provide consis
 - `rootClass`: this holds the top-level className of the component and should match the value set in the `args` of the stories.js file.
 - `id`: allows users to pass in a custom ID value and should be added to the top-level wrapper of the component.
 - `customClasses` (array): allows passing in additional classes to be applied to the top-level component. This is necessary for nesting templates inside others while allowing the parent to assign context to the child.
-- `...globals`: this spread variable should not be decomposed on import. Instead, add a desctructuring right after instantiation, i.e., `const { express } = globals`. These values map to the globally provided settings and allow you to make rendering choices based on these values.
 
 The rest of the variables provided in the Template function's input object will map to the argTypes you defined in your stories.js file.
 
@@ -240,12 +222,13 @@ All return values for Template functions should be outputting TemplateResults. S
 import { html } from "lit";
 import { classMap } from "lit/directives/class-map.js";
 import { ifDefined } from "lit/directives/if-defined.js";
+import { when } from "lit/directives/when.js";
 
 import { Template as Icon } from "@spectrum-css/icon/stories/template.js";
 import { Template as Avatar } from "@spectrum-css/avatar/stories/template.js";
 import { Template as ClearButton } from "@spectrum-css/clearbutton/stories/template.js";
 
-import "../index.css";
+import "@spectrum-css/tag";
 
 // More on component templates: https://storybook.js.org/docs/web-components/writing-stories/introduction#using-args
 export const Template = ({
@@ -260,18 +243,9 @@ export const Template = ({
  isInvalid = false,
  hasClearButton = false,
  id,
+ testId,
  customClasses = [],
- ...globals
 }) => {
- const { express } = globals;
-
- try {
-  if (!express) import(/* webpackPrefetch: true */ "../themes/spectrum.css");
-  else import(/* webpackPrefetch: true */ "../themes/express.css");
- } catch (e) {
-  console.warn(e);
- }
-
  return html`
   <div
    class=${classMap({
@@ -285,25 +259,13 @@ export const Template = ({
     ...customClasses.reduce((a, c) => ({ ...a, [c]: true }), {}),
    })}
    id=${ifDefined(id)}
+   data-testid=${ifDefined(testId)}
    tabindex="0"
   >
-   ${avatarUrl && !iconName
-    ? Avatar({
-      ...globals,
-      image: avatarUrl,
-      size: "50",
-      })
-    : ""} ${iconName
-    ? Icon({
-      ...globals,
-      iconName,
-      customClasses: [`${rootClass}s-itemIcon`],
-      })
-    : ""}
+   ${when(avatarUrl && !iconName, () => Avatar({ image: avatarUrl, size: "50" }))}
+   ${when(iconName, () => Icon({ iconName, customClasses: [`${rootClass}s-itemIcon`] }))}
    <span class="${rootClass}s-itemLabel">${label}</span>
-   ${hasClearButton
-    ? ClearButton({
-      ...globals,
+   ${when(hasClearButton, () => ClearButton({
       customClasses: [`${rootClass}-clearButton`],
       onclick: (evt) => {
        const el = evt.target;
@@ -312,8 +274,7 @@ export const Template = ({
        const wrapper = el.closest(rootClass);
        wrapper.parentNode.removeChild(wrapper);
       },
-      })
-    : ""}
+    }))}
   </div>
  `;
 };
@@ -338,143 +299,3 @@ You can pass any supported [chromatic flag](https://www.chromatic.com/docs/cli#c
 Runs will generate a JUnit XML file with build results (`chromatic-build-{buildNumber}.xml`). This file should not be committed and is part of the .gitignore rules.
 
 Running without publishing to Chromatic? Add the `--dry-run` flag. Need more information to debug a run? Try the `--diagnostics` flag (writes process context information to `chromatic-diagnostics.json`).
-
-# Migration to Storybook 7.0(Draft)
-
-## Updates
-
----
-`*` Added support for handler actions with ```withActions``` on each stories which have action handlers.
-
-Example:
-
-```js
-import globalThis from 'global';
-+ import { withActions } from '@storybook/addon-actions/decorator';
-
-export default {
-  component: globalThis.Components.Button,
-  args: {
-    label: 'Click Me!',
-  },
-  parameters: {
-    chromatic: { disable: true },
-  },
-};
-export const Basic = {
-  parameters: {
-    handles: [{ click: 'clicked', contextmenu: 'right clicked' }],
-  },
-+  decorators: [withActions],
-};
-```
-
-`*` Upgraded to ```Webpack 5``` for improved bundling and performance from ```webpack 4```
-
-`*` @storybook addons dependencies are upgraded to v7 from v6
-
-```js
-"@storybook/addon-docs": "^7.0.12",
-"@storybook/addon-essentials": "^7.0.12",
-"@storybook/api": "^7.0.12",
-"@storybook/client-api": "^7.0.12",
-"@storybook/components": "^7.0.12",
-"@storybook/core-events": "^7.0.12",
-"@storybook/manager-api": "^7.0.12",
-"@storybook/preview-api": "^7.0.12",
-"@storybook/theming": "^7.0.12",
-"@storybook/web-components-webpack5": "^7.0.12",
-"@whitespace/storybook-addon-html": "^5.1.4",
-```
-
-`*` Added a new "Controls" addon for interactive component props editing.
-
-`*` Introduced a new "Docs-only" mode for isolating component documentation.
-
-`*` Improved the addon ecosystem with new and updated addons.
-
-<br></br>
-
-## Breaking Changes
-
----
-`*` client-api is deperacted and preview-api is introduced
-
-```js
- - import { useEffect } from '@storybook/client-api';
- + import { useEffect } from '@storybook/preview-api';
-```
-
-`*` @storybook/addons is deperacted and replaced with @storybook/manager-api
-
-```js
- - import { addons } from '@storybook/addons';
- + import { addons } from '@storybook/manager-api';
-```
-
-`*` ```@storybook-webcomponents``` is deprecated. ```@storybook/web-components-webpack'``` is added with webpack 5 support.
-
-```js
- - framework: '@storybook/web-components',
- + framework: {
-    name: '@storybook/web-components-webpack5',
-    options: {
-      fastRefresh: true,
-      builder: { lazyCompilation: true },
-    },
-  },
-
-```
-
-`*` Docs is now added to every component on the sidebar with the below code in Storybook 7
-
-```js
-  docs: {
-    autodocs: true,
-    defaultName: 'Docs',
-  },
-```
-
-`*` preview.js is exported as default in Storybook 7
-
-```js
-- export const parameters = {
-- actions: { argTypesRegex: '^on[A-Z].*' },
-- };
-
-+ export default {
-+  parameters: {
-+    actions: { argTypesRegex: '^on[A-Z].*' },
-+  },
-+ };
-```
-
-## Deprecations(Addons)
-
----
-
-`*` ```"@storybook/client-api"``` is deprecated
-
-`*` ```"@storybook/addons"``` is deprecated
-
-## Bug Fixes
-
----
-`*` Fixed various issues related to performance, rendering, and compatibility.
-
-`*` Resolved problems with the Storybook UI, including layout glitches and navigation bugs.
-
-`*` Fixed bugs in calender storybook
-
-## Improvements
-
----
-`*` Improved the overall performance and stability of the Storybook development environment.
-
-`*` Enhanced the documentation with updated examples and guides.
-
-`*` Optimized the build process for faster bundling and reduced file sizes.
-
-`*` Upgraded dependencies to their latest versions for improved compatibility and security.
-
----

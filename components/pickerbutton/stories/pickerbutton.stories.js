@@ -1,5 +1,6 @@
-// Import the component markup template
 import { Template } from "./template";
+
+import { isDisabled, isFocused, isOpen } from "@spectrum-css/preview/types/states.js";
 
 import { default as Icon } from "@spectrum-css/icon/stories/icon.stories.js";
 
@@ -42,14 +43,8 @@ export default {
 			control: { type: "text" },
 		},
 		isOpen: {
-			name: "Open",
-			type: { name: "boolean" },
-			table: {
-				type: { summary: "boolean" },
-				category: "State",
-			},
-			control: "boolean",
-			if: { arg: 'isDisabled', truthy: false }
+			...isOpen,
+			if: { arg: "isDisabled", truthy: false }
 		},
 		isRounded: {
 			name: "Rounded",
@@ -69,23 +64,9 @@ export default {
 			},
 			control: "boolean",
 		},
-		isDisabled: {
-			name: "Disabled",
-			type: { name: "boolean" },
-			table: {
-				type: { summary: "boolean" },
-				category: "State",
-			},
-			control: "boolean",
-		},
+		isDisabled,
 		isFocused: {
-			name: "Focused",
-			type: { name: "boolean" },
-			table: {
-				type: { summary: "boolean" },
-				category: "State",
-			},
-			control: "boolean",
+			...isFocused,
 			if: { arg: 'isDisabled', truthy: false }
 		},
 		position: {
@@ -120,7 +101,7 @@ export default {
 		status: {
 			type: process.env.MIGRATED_PACKAGES.includes("pickerbutton")
 				? "migrated"
-				: undefined,
+				: "legacy",
 		},
 	},
 };
@@ -144,6 +125,6 @@ Quiet.args = {
 };
 
 export const Express = Template.bind({});
-Express.args = {
+Express.globals = {
 	express: true
 };

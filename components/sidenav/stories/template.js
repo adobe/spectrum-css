@@ -6,7 +6,7 @@ import { when } from "lit/directives/when.js";
 
 import { Template as Icon } from "@spectrum-css/icon/stories/template.js";
 
-import "../index.css";
+import "@spectrum-css/sidenav";
 
 export const Template = ({
   rootClass = "spectrum-SideNav",
@@ -15,7 +15,7 @@ export const Template = ({
   hasIcon,
   iconName,
   items = [],
-  ...globals
+
 }) => {
   return html`
     <nav>
@@ -34,16 +34,15 @@ export const Template = ({
                 "is-disabled": item.isDisabled,
               })}>
               ${item.heading ?
-                html`<h2 class="${rootClass}-heading" id="${item.id}-heading">${item.heading}</h2>`
+                html`<h2
+                  class="${rootClass}-heading"
+                  id="${item.id}-heading"
+			            data-testid=${ifDefined(item.testId)}
+                >${item.heading}</h2>`
                 :
                 html`
                 <a class="${rootClass}-itemLink">
-                ${when(hasIcon, () =>
-                  Icon({
-                      ...globals,
-                      iconName,
-                    })
-                  )}
+                  ${when(hasIcon, () => Icon({ iconName }))}
                   <span class="${rootClass}-link-text">${item.title}</span>
                 </a>
                 `
@@ -59,7 +58,6 @@ export const Template = ({
                       variant,
                       hasIcon,
                       iconName,
-                      ...globals,
                       ...item
                     })
                   })}
@@ -70,7 +68,6 @@ export const Template = ({
             return SideNavItem({
               hasIcon,
               iconName,
-              ...globals,
               ...item
             })
           }
@@ -92,33 +89,27 @@ export const SideNavItem = ({
   hasIcon,
   iconName,
   customClasses = [],
-  ...globals
+  testId,
 }) => {
   const displayIcon = hasIcon & variant === "multiLevel" ? false : true
   return html`
-    <li id=${id} class=${classMap({
-      [`${rootClass}-item`]: true,
-      "is-selected": isSelected,
-      "is-disabled": isDisabled,
-      ...customClasses.reduce((a, c) => ({ ...a, [c]: true }), {}),
-    })}>
+    <li
+      id=${ifDefined(id)}
+			data-testid=${ifDefined(testId)}
+      class=${ifDefined(classMap({
+        [`${rootClass}-item`]: true,
+        "is-selected": isSelected,
+        "is-disabled": isDisabled,
+        ...customClasses.reduce((a, c) => ({ ...a, [c]: true }), {}),
+      }))}
+    >
       <a href=${link} class="${rootClass}-itemLink">
-        ${displayIcon ?
-          Icon({
-            ...globals,
-            iconName,
-          })
-        : ""}
+        ${when(displayIcon, () => Icon({ iconName }))}
         <span class="${rootClass}-link-text">${title}</span>
       </a>
       ${when(levelThreeItems, () => html`
         <ul class=${rootClass}>
-          ${repeat(levelThreeItems, (item) => item.id, (item) => {
-            return SideNavItem({
-              ...globals,
-              ...item
-            })
-          })}
+          ${repeat(levelThreeItems, (item) => item.id, (item) => SideNavItem(item))}
         </ul>`
       )}
     </li>
