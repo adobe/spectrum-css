@@ -50,10 +50,10 @@ Storybook leverages webpack for bundling and we have updated it with the followi
 
   ```js
   try {
-  	if (!express) import(/* webpackPrefetch: true */ "../themes/spectrum.css");
-  	else import(/* webpackPrefetch: true */ "../themes/express.css");
+   if (!express) import(/* webpackPrefetch: true */ "../themes/spectrum.css");
+   else import(/* webpackPrefetch: true */ "../themes/express.css");
   } catch (e) {
-  	console.warn(e);
+   console.warn(e);
   }
   ```
 
@@ -249,73 +249,73 @@ import "../index.css";
 
 // More on component templates: https://storybook.js.org/docs/web-components/writing-stories/introduction#using-args
 export const Template = ({
-	rootClass = "spectrum-Tag",
-	size = "m",
-	iconName,
-	avatarUrl,
-	label,
-	isSelected = false,
-	isEmphasized = false,
-	isDisabled = false,
-	isInvalid = false,
-	hasClearButton = false,
-	id,
-	customClasses = [],
-	...globals
+ rootClass = "spectrum-Tag",
+ size = "m",
+ iconName,
+ avatarUrl,
+ label,
+ isSelected = false,
+ isEmphasized = false,
+ isDisabled = false,
+ isInvalid = false,
+ hasClearButton = false,
+ id,
+ customClasses = [],
+ ...globals
 }) => {
-	const { express } = globals;
+ const { express } = globals;
 
-	try {
-		if (!express) import(/* webpackPrefetch: true */ "../themes/spectrum.css");
-		else import(/* webpackPrefetch: true */ "../themes/express.css");
-	} catch (e) {
-		console.warn(e);
-	}
+ try {
+  if (!express) import(/* webpackPrefetch: true */ "../themes/spectrum.css");
+  else import(/* webpackPrefetch: true */ "../themes/express.css");
+ } catch (e) {
+  console.warn(e);
+ }
 
-	return html`
-		<div
-			class=${classMap({
-				[rootClass]: true,
-				[`${rootClass}--size${size?.toUpperCase()}`]:
-					typeof size !== "undefined",
-				"is-emphasized": isEmphasized,
-				"is-disabled": isDisabled,
-				"is-invalid": isInvalid,
-				"is-selected": isSelected,
-				...customClasses.reduce((a, c) => ({ ...a, [c]: true }), {}),
-			})}
-			id=${ifDefined(id)}
-			tabindex="0"
-		>
-			${avatarUrl && !iconName
-				? Avatar({
-						...globals,
-						image: avatarUrl,
-						size: "50",
-				  })
-				: ""} ${iconName
-				? Icon({
-						...globals,
-						iconName,
-						customClasses: [`${rootClass}s-itemIcon`],
-				  })
-				: ""}
-			<span class="${rootClass}s-itemLabel">${label}</span>
-			${hasClearButton
-				? ClearButton({
-						...globals,
-						customClasses: [`${rootClass}-clearButton`],
-						onclick: (evt) => {
-							const el = evt.target;
-							if (!el) return;
+ return html`
+  <div
+   class=${classMap({
+    [rootClass]: true,
+    [`${rootClass}--size${size?.toUpperCase()}`]:
+     typeof size !== "undefined",
+    "is-emphasized": isEmphasized,
+    "is-disabled": isDisabled,
+    "is-invalid": isInvalid,
+    "is-selected": isSelected,
+    ...customClasses.reduce((a, c) => ({ ...a, [c]: true }), {}),
+   })}
+   id=${ifDefined(id)}
+   tabindex="0"
+  >
+   ${avatarUrl && !iconName
+    ? Avatar({
+      ...globals,
+      image: avatarUrl,
+      size: "50",
+      })
+    : ""} ${iconName
+    ? Icon({
+      ...globals,
+      iconName,
+      customClasses: [`${rootClass}s-itemIcon`],
+      })
+    : ""}
+   <span class="${rootClass}s-itemLabel">${label}</span>
+   ${hasClearButton
+    ? ClearButton({
+      ...globals,
+      customClasses: [`${rootClass}-clearButton`],
+      onclick: (evt) => {
+       const el = evt.target;
+       if (!el) return;
 
-							const wrapper = el.closest(rootClass);
-							wrapper.parentNode.removeChild(wrapper);
-						},
-				  })
-				: ""}
-		</div>
-	`;
+       const wrapper = el.closest(rootClass);
+       wrapper.parentNode.removeChild(wrapper);
+      },
+      })
+    : ""}
+  </div>
+ `;
 };
 ```
 
@@ -325,7 +325,7 @@ Now that your stories are written, we need to add them to our visual regression 
 
 ### Getting started
 
-Check that you have a local `.env` file in your `tools/preview` folder with a `CHROMATIC_PROJECT_TOKEN` variable defined. Get this token from the project maintainer. You should not be committing this `.env` file to the repo as it contains sensitive login information.
+Check that you have a local `.env` file in your `.storybook` folder with a `CHROMATIC_PROJECT_TOKEN` variable defined. Get this token from the project maintainer. You should not be committing this `.env` file to the repo as it contains sensitive login information.
 
 From the root of the project, there are 2 commands available for you to run:
 
@@ -339,16 +339,15 @@ Runs will generate a JUnit XML file with build results (`chromatic-build-{buildN
 
 Running without publishing to Chromatic? Add the `--dry-run` flag. Need more information to debug a run? Try the `--diagnostics` flag (writes process context information to `chromatic-diagnostics.json`).
 
-
-
 # Migration to Storybook 7.0(Draft)
 
+## Updates
 
-## Updates:
 ---
 `*` Added support for handler actions with ```withActions``` on each stories which have action handlers.
 
 Example:
+
 ```js
 import globalThis from 'global';
 + import { withActions } from '@storybook/addon-actions/decorator';
@@ -373,6 +372,7 @@ export const Basic = {
 `*` Upgraded to ```Webpack 5``` for improved bundling and performance from ```webpack 4```
 
 `*` @storybook addons dependencies are upgraded to v7 from v6
+
 ```js
 "@storybook/addon-docs": "^7.0.12",
 "@storybook/addon-essentials": "^7.0.12",
@@ -393,9 +393,10 @@ export const Basic = {
 
 `*` Improved the addon ecosystem with new and updated addons.
 
-
 <br></br>
-## Breaking Changes:
+
+## Breaking Changes
+
 ---
 `*` client-api is deperacted and preview-api is introduced
 
@@ -426,6 +427,7 @@ export const Basic = {
 ```
 
 `*` Docs is now added to every component on the sidebar with the below code in Storybook 7
+
 ```js
   docs: {
     autodocs: true,
@@ -446,15 +448,17 @@ export const Basic = {
 +  },
 + };
 ```
-## Deprecations(Addons):
+
+## Deprecations(Addons)
+
 ---
 
 `*` ```"@storybook/client-api"``` is deprecated
 
 `*` ```"@storybook/addons"``` is deprecated
 
+## Bug Fixes
 
-## Bug Fixes:
 ---
 `*` Fixed various issues related to performance, rendering, and compatibility.
 
@@ -462,8 +466,8 @@ export const Basic = {
 
 `*` Fixed bugs in calender storybook
 
+## Improvements
 
-## Improvements:
 ---
 `*` Improved the overall performance and stability of the Storybook development environment.
 

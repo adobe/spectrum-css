@@ -7,7 +7,7 @@ const legacyBuilder = require("@spectrum-css/component-builder/css/processors.js
 
 module.exports = (ctx) => {
 	let plugins = [];
-	const componentPath = resolve(__dirname, "../../components");
+	const componentPath = resolve(__dirname, "../components");
 	const folderName = relative(componentPath, ctx.file).split("/")[0];
 	const pkgPath = resolve(componentPath, folderName, "package.json");
 

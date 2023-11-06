@@ -1,6 +1,6 @@
 const { resolve } = require("path");
 const { readdirSync } = require("fs");
-const componentsPath = resolve(__dirname, "../../components");
+const componentsPath = resolve(__dirname, "../components");
 const componentPkgs = readdirSync(componentsPath, {
 	withFileTypes: true,
 })
@@ -8,11 +8,11 @@ const componentPkgs = readdirSync(componentsPath, {
 	.map((dirent) => dirent.name);
 module.exports = {
 	stories: [
-		"../../components/*/stories/*.stories.mdx",
-		"../../components/*/stories/*.stories.@(js|jsx|ts|tsx)",
+		"../components/*/stories/*.stories.mdx",
+		"../components/*/stories/*.stories.@(js|jsx|ts|tsx)",
 	],
-	rootDir: "../../",
-	staticDirs: ["../../assets"],
+	rootDir: "../",
+	staticDirs: ["../assets"],
 	addons: [
 		{
 			name: "@storybook/addon-essentials",
@@ -73,7 +73,7 @@ module.exports = {
 				...(config.resolve ? config.resolve : {}),
 				modules: [
 					...(config.resolve ? config.resolve.modules : []),
-					resolve(__dirname, "../../node_modules"),
+					resolve(__dirname, "../node_modules"),
 				],
 				alias: {
 					...(config.resolve ? config.resolve.alias : {}),

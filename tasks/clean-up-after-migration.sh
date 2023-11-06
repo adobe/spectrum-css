@@ -17,6 +17,7 @@
 # test -d "tools" && rm -rf tools
 
 test -d "tools/generator" && rm -rf tools/generator
+test -d "tools/preview" && rm -rf tools/preview
 
 # Legacy tokens packages
 # test -d "components/vars" && rm -rf components/vars
