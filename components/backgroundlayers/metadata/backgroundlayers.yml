@@ -1,0 +1,18 @@
+name: Background layers
+status: Verified
+SpectrumSiteSlug: https://spectrum.adobe.com/page/background-layers/
+examples:
+  - id: backgroundlayers-browsing
+    name: Browsing Contexts
+    markup: |
+      <div class="spectrum-Examples">
+      <div class="spectrum-BackgroundLayers spectrum-BackgroundLayers--pasteboard" style="inline-size: 100px; block-size: 100px; border-radius: 10px;">
+      </div>
+      </div>
+  - id: backgroundlayers-editting
+    name: Editting Contexts
+    markup: |
+      <div class="spectrum-Examples">
+      <div class="spectrum-BackgroundLayers spectrum-BackgroundLayers--base" style="inline-size: 100px; block-size: 100px; border-radius: 10px;">
+      </div>
+      </div>
