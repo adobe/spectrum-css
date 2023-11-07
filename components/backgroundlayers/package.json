@@ -1,0 +1,35 @@
+{
+  "name": "@spectrum-css/backgroundlayers",
+  "version": "1.0.0-alpha.0",
+  "description": "The Spectrum CSS backgroundlayers component",
+  "license": "Apache-2.0",
+  "author": "Adobe",
+  "homepage": "https://opensource.adobe.com/spectrum-css/",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/adobe/spectrum-css.git",
+    "directory": "components/backgroundlayers"
+  },
+  "bugs": {
+    "url": "https://github.com/adobe/spectrum-css/issues"
+  },
+  "main": "dist/index-vars.css",
+  "scripts": {
+    "build": "gulp",
+    "clean": "rimraf dist",
+    "test": "nx test:scope @spectrum-css/preview backgroundlayers"
+  },
+  "peerDependencies": {
+    "@spectrum-css/tokens": ">=12"
+  },
+  "devDependencies": {
+    "@spectrum-css/component-builder-simple": "^2.0.17",
+    "@spectrum-css/tokens": "^12.0.0",
+    "gulp": "^4.0.0",
+    "nx": "^17.0.3",
+    "rimraf": "^5.0.1"
+  },
+  "publishConfig": {
+    "access": "public"
+  }
+}
