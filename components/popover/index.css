@@ -119,8 +119,7 @@ governing permissions and limitations under the License.
 
   /* popover animates upward ⬆ */
   &.is-open {
-    --spectrum-overlay-animation-distance: var(--mod-popover-animation-distance, var(--spectrum-popover-animation-distance));
-    @inherit: %spectrum-overlay--top--open;
+    transform: translateY(calc(-1 * var(--mod-popover-animation-distance, var(--spectrum-popover-animation-distance))));
   }
 }
 
@@ -138,8 +137,7 @@ governing permissions and limitations under the License.
 
   /* popover animates downward ⬇ */
   &.is-open {
-    --spectrum-overlay-animation-distance: var(--mod-popover-animation-distance, var(--spectrum-popover-animation-distance));
-    @inherit: %spectrum-overlay--bottom--open;
+    transform: translateY(var(--mod-popover-animation-distance, var(--spectrum-popover-animation-distance)));
   }
 }
 
@@ -155,8 +153,7 @@ governing permissions and limitations under the License.
 
   /* popover animates towards right ⮕ */
   &.is-open {
-    --spectrum-overlay-animation-distance: var(--mod-popover-animation-distance, var(--spectrum-popover-animation-distance));
-    @inherit: %spectrum-overlay--right--open;
+    transform: translateX(var(--mod-popover-animation-distance, var(--spectrum-popover-animation-distance)));
   }
 }
 
@@ -172,8 +169,7 @@ governing permissions and limitations under the License.
 
   /* popover animates towards left ⬅ */
   &.is-open {
-    --spectrum-overlay-animation-distance: var(--mod-popover-animation-distance, var(--spectrum-popover-animation-distance));
-    @inherit: %spectrum-overlay--left--open;
+    transform: translateX(calc(-1 * var(--mod-popover-animation-distance, var(--spectrum-popover-animation-distance))));
   }
 }
 
@@ -189,15 +185,13 @@ governing permissions and limitations under the License.
 
   /* LTR read, popover animates towards left ⬅ */
   &.is-open {
-    --spectrum-overlay-animation-distance: var(--mod-popover-animation-distance, var(--spectrum-popover-animation-distance));
-    @inherit: %spectrum-overlay--left--open;
+    transform: translateX(calc(-1 * var(--mod-popover-animation-distance, var(--spectrum-popover-animation-distance))));
   }
 
   /* RTL read, popover animates towards right ⮕ */
   [dir="rtl"] & {
     &.is-open {
-      --spectrum-overlay-animation-distance: var(--mod-popover-animation-distance, var(--spectrum-popover-animation-distance));
-      @inherit: %spectrum-overlay--right--open;
+      transform: translateX(var(--mod-popover-animation-distance, var(--spectrum-popover-animation-distance)));
     }
   }
 }
@@ -214,15 +208,13 @@ governing permissions and limitations under the License.
 
   /* LTR read, popover animates towards right ⮕ */
   &.is-open {
-    --spectrum-overlay-animation-distance: var(--mod-popover-animation-distance, var(--spectrum-popover-animation-distance));
-    @inherit: %spectrum-overlay--right--open;
+    transform: translateX(var(--mod-popover-animation-distance, var(--spectrum-popover-animation-distance)));
   }
 
   /* RTL read, popover animates towards left ⬅ */
   [dir="rtl"] & {
   &.is-open {
-    --spectrum-overlay-animation-distance: var(--mod-popover-animation-distance, var(--spectrum-popover-animation-distance));
-      @inherit: %spectrum-overlay--left--open;
+      transform: translateX(calc(-1 * var(--mod-popover-animation-distance, var(--spectrum-popover-animation-distance))));
     }
   }
 }
