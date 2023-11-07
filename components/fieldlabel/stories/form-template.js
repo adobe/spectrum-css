@@ -79,7 +79,7 @@ export const Template = ({
             <div class="spectrum-Form-item">
                 ${FieldLabel({
                     label: 'Amount',
-                    forInput: 'form-example-amount',
+                    forInput: 'form-example-amount-input',
                     alignment: labelsAbove ? undefined : 'left',
                 })}
                 <div class="spectrum-Form-itemField">
