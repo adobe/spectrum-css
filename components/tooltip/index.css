@@ -15,9 +15,6 @@ governing permissions and limitations under the License.
 .spectrum-Tooltip {
   --spectrum-tooltip-animation-duration: var(--spectrum-animation-duration-100);
 
-  /* animation distance is equal to spacing to source */
-  --spectrum-tooltip-animation-distance: var(--spectrum-spacing-75);
-
   /* override if additional spacing to source is required */
   --spectrum-tooltip-margin: 0px;
 
