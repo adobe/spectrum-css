@@ -5,6 +5,7 @@ description: |
 
   An avatar image is wrapped in a link that uses the `.spectrum-Avatar-link`
   class by default, however, an avatar may also be used without a link.
+  When disabled the avatar should only be used without a link.
 SpectrumSiteSlug: https://spectrum.adobe.com/page/avatar/
 sections:
   - name: Custom Properties API
@@ -32,22 +33,12 @@ examples:
               <img class="spectrum-Avatar-image" src="img/example-ava.jpg" alt="Avatar">
             </a>
           </div>
-          <div class="spectrum-Avatar spectrum-Avatar--size50 is-disabled"">
-            <a href="#" class="spectrum-Avatar-link">
-              <img class="spectrum-Avatar-image" src="img/example-ava.jpg" alt="Disabled Avatar">
-            </a>
-          </div>
         </div>
         <div class="spectrum-Examples-item">
           <h4 class="spectrum-Heading spectrum-Heading--sizeXS spectrum-Examples-itemHeading">75</h4>
           <div class="spectrum-Avatar spectrum-Avatar--size75">
             <a href="#" class="spectrum-Avatar-link">
               <img class="spectrum-Avatar-image" src="img/example-ava.jpg" alt="Avatar">
-            </a>
-          </div>
-          <div class="spectrum-Avatar spectrum-Avatar--size75 is-disabled"">
-            <a href="#" class="spectrum-Avatar-link">
-              <img class="spectrum-Avatar-image" src="img/example-ava.jpg" alt="Disabled Avatar">
             </a>
           </div>
         </div>
@@ -58,22 +49,12 @@ examples:
               <img class="spectrum-Avatar-image" src="img/example-ava.jpg" alt="Avatar">
             </a>
           </div>
-          <div class="spectrum-Avatar spectrum-Avatar--size100 is-disabled"">
-            <a href="#" class="spectrum-Avatar-link">
-              <img class="spectrum-Avatar-image" src="img/example-ava.jpg" alt="Disabled Avatar">
-            </a>
-          </div>
         </div>
         <div class="spectrum-Examples-item">
           <h4 class="spectrum-Heading spectrum-Heading--sizeXS spectrum-Examples-itemHeading">200</h4>
           <div class="spectrum-Avatar spectrum-Avatar--size200">
             <a href="#" class="spectrum-Avatar-link">
               <img class="spectrum-Avatar-image" src="img/example-ava.jpg" alt="Avatar">
-            </a>
-          </div>
-          <div class="spectrum-Avatar spectrum-Avatar--size200 is-disabled"">
-            <a href="#" class="spectrum-Avatar-link">
-              <img class="spectrum-Avatar-image" src="img/example-ava.jpg" alt="Disabled Avatar">
             </a>
           </div>
         </div>
@@ -84,22 +65,12 @@ examples:
               <img class="spectrum-Avatar-image" src="img/example-ava.jpg" alt="Avatar">
             </a>
           </div>
-          <div class="spectrum-Avatar spectrum-Avatar--size300 is-disabled"">
-            <a href="#" class="spectrum-Avatar-link">
-              <img class="spectrum-Avatar-image" src="img/example-ava.jpg" alt="Disabled Avatar">
-            </a>
-          </div>
         </div>
         <div class="spectrum-Examples-item">
           <h4 class="spectrum-Heading spectrum-Heading--sizeXS spectrum-Examples-itemHeading">400</h4>
           <div class="spectrum-Avatar spectrum-Avatar--size400">
             <a href="#" class="spectrum-Avatar-link">
               <img class="spectrum-Avatar-image" src="img/example-ava.jpg" alt="Avatar">
-            </a>
-          </div>
-          <div class="spectrum-Avatar spectrum-Avatar--size400 is-disabled"">
-            <a href="#" class="spectrum-Avatar-link">
-              <img class="spectrum-Avatar-image" src="img/example-ava.jpg" alt="Disabled Avatar">
             </a>
           </div>
         </div>
@@ -110,11 +81,6 @@ examples:
               <img class="spectrum-Avatar-image" src="img/example-ava.jpg" alt="Avatar">
             </a>
           </div>
-          <div class="spectrum-Avatar spectrum-Avatar--size500 is-disabled"">
-            <a href="#" class="spectrum-Avatar-link">
-              <img class="spectrum-Avatar-image" src="img/example-ava.jpg" alt="Disabled Avatar">
-            </a>
-          </div>
         </div>
         <div class="spectrum-Examples-item">
           <h4 class="spectrum-Heading spectrum-Heading--sizeXS spectrum-Examples-itemHeading">600</h4>
@@ -123,22 +89,12 @@ examples:
               <img class="spectrum-Avatar-image" src="img/example-ava.jpg" alt="Avatar">
             </a>
           </div>
-          <div class="spectrum-Avatar spectrum-Avatar--size600 is-disabled"">
-            <a href="#" class="spectrum-Avatar-link">
-              <img class="spectrum-Avatar-image" src="img/example-ava.jpg" alt="Disabled Avatar">
-            </a>
-          </div>
         </div>
         <div class="spectrum-Examples-item">
           <h4 class="spectrum-Heading spectrum-Heading--sizeXS spectrum-Examples-itemHeading">700</h4>
           <div class="spectrum-Avatar spectrum-Avatar--size700">
             <a href="#" class="spectrum-Avatar-link">
               <img class="spectrum-Avatar-image" src="img/example-ava.jpg" alt="Avatar">
-            </a>
-          </div>
-          <div class="spectrum-Avatar spectrum-Avatar--size700 is-disabled"">
-            <a href="#" class="spectrum-Avatar-link">
-              <img class="spectrum-Avatar-image" src="img/example-ava.jpg" alt="Disabled Avatar">
             </a>
           </div>
         </div>
@@ -153,7 +109,7 @@ examples:
           <div class="spectrum-Avatar spectrum-Avatar--size700">
             <img class="spectrum-Avatar-image" src="img/example-ava.jpg" alt="Avatar">
           </div>
-          <div class="spectrum-Avatar spectrum-Avatar--size700 is-disabled"">
+          <div class="spectrum-Avatar spectrum-Avatar--size700 is-disabled">
             <img class="spectrum-Avatar-image" src="img/example-ava.jpg" alt="Disabled Avatar">
           </div>
         </div>
