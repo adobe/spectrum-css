@@ -27,7 +27,20 @@ export const Template = ({
 
 	const image = imageURL ? html`<img class="${rootClass}-image" src=${imageURL} alt=${ifDefined(altText)}/>` : svg ? html`${svg}` : "";
 
-	if (isLayer)
+  const checkerboardContent = html`
+			<div class="${rootClass}-image-wrapper">
+			${imageURL
+				? html`<img
+						class="${rootClass}-image"
+						src=${imageURL}
+						alt=${altText}
+					/>`
+				: ""}
+			${svg ? html`${svg}` : ""}
+		</div>
+	`;
+	
+  if (isLayer)
 		return html`
 			<div
 				class=${classMap({
@@ -44,10 +57,9 @@ export const Template = ({
 				@click=${onclick}
 			>
 				${OpacityCheckerboard({
-					...globals,
 					componentOnly: true,
 					customClasses: [`${rootClass}-layer-inner`],
-					content: checkerboardContentLayer,
+					content: checkerboardContent,
 				})}
 			</div>
 		`;
@@ -68,7 +80,7 @@ export const Template = ({
 				id=${ifDefined(id)}
 				@click=${onclick}
 			>
-				<div class="${rootClass}-background" style=${styleMap(styles)}></div>
+				<div class="${rootClass}-background" style=${styleMap({backgroundColor})}></div>
 				<div class="${rootClass}-image-wrapper">
 					${imageURL
 						? html`<img
@@ -81,18 +93,6 @@ export const Template = ({
 			</div>
 		`;
 
-	const checkerboardContent = html`
-			<div class="${rootClass}-image-wrapper">
-			${imageURL
-				? html`<img
-						class="${rootClass}-image"
-						src=${imageURL}
-						alt=${altText}
-					/>`
-				: ""}
-			${svg ? html`${svg}` : ""}
-		</div>
-	`
 	return html`
 		<div
 			class=${classMap({
