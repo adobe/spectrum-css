@@ -101,6 +101,15 @@ export default {
 			control: "boolean",
 			if: { arg: "isLayer" },
 		},
+		isFocused: {
+			name: "Focused",
+			type: { name: "boolean" },
+			table: {
+				type: { summary: "boolean" },
+				category: "State",
+			},
+			control: "boolean",
+		},
 	},
 	args: {
 		rootClass: "spectrum-Thumbnail",
@@ -109,6 +118,7 @@ export default {
 		isLayer: false,
 		isDisabled: false,
 		isSelected: false,
+		isFocused: false,
 		imageURL: "example-card-landscape.png",
 		altText: "Landscape with mountains and lake",
 	},

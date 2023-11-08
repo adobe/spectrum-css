@@ -27,6 +27,72 @@ export const Template = ({
 
 	const image = imageURL ? html`<img class="${rootClass}-image" src=${imageURL} alt=${ifDefined(altText)}/>` : svg ? html`${svg}` : "";
 
+  const checkerboardContent = html`
+			<div class="${rootClass}-image-wrapper">
+			${imageURL
+				? html`<img
+						class="${rootClass}-image"
+						src=${imageURL}
+						alt=${altText}
+					/>`
+				: ""}
+			${svg ? html`${svg}` : ""}
+		</div>
+	`;
+	
+  if (isLayer)
+		return html`
+			<div
+				class=${classMap({
+					[rootClass]: true,
+					[`${rootClass}--cover`]: isCover,
+					[`${rootClass}-layer`]: isLayer,
+					[`is-selected`]: isSelected,
+					[`is-disabled`]: isDisabled,
+					[`is-focused`]: isFocused,
+					[`${rootClass}--size${size}`]: typeof size !== "undefined",
+					...customClasses.reduce((a, c) => ({ ...a, [c]: true }), {}),
+				})}
+				id=${ifDefined(id)}
+				@click=${onclick}
+			>
+				${OpacityCheckerboard({
+					componentOnly: true,
+					customClasses: [`${rootClass}-layer-inner`],
+					content: checkerboardContent,
+				})}
+			</div>
+		`;
+
+	if (backgroundColor)
+		return html`
+			<div
+				class=${classMap({
+					[rootClass]: true,
+					[`${rootClass}--cover`]: isCover,
+					[`${rootClass}-layer`]: isLayer,
+					[`is-selected`]: isSelected,
+					[`is-disabled`]: isDisabled,
+					[`is-focused`]: isFocused,
+					[`${rootClass}--size${size}`]: typeof size !== "undefined",
+					...customClasses.reduce((a, c) => ({ ...a, [c]: true }), {}),
+				})}
+				id=${ifDefined(id)}
+				@click=${onclick}
+			>
+				<div class="${rootClass}-background" style=${styleMap({backgroundColor})}></div>
+				<div class="${rootClass}-image-wrapper">
+					${imageURL
+						? html`<img
+								class="${rootClass}-image"
+								src=${imageURL}
+								alt=${altText}
+						  />`
+						: ""}
+				</div>
+			</div>
+		`;
+
 	return html`
 		<div
 			class=${classMap({
