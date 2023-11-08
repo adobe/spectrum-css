@@ -10,11 +10,7 @@ OF ANY KIND, either express or implied. See the License for the specific languag
 governing permissions and limitations under the License.
 */
 
-.spectrum-DropIndicator {
-  background: var(--spectrum-dropindicator-border-color);
-
-  &:before,
-  &:after {
-    border-color: var(--spectrum-dropindicator-circle-border-color);
+@container (--system: express) {
+  .spectrum-Dropindicator {
   }
 }

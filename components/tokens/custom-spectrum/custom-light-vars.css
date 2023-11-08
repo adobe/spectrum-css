@@ -21,6 +21,9 @@ governing permissions and limitations under the License.
   /* Drop Zone background color rgb */
   --spectrum-drop-zone-background-color-rgb: var(--spectrum-blue-800-rgb); /* var(--spectrum-accent-color-800);*/
 
+  /* Drop Indicator color rgb */  
+  --spectrum-dropindicator-color: var(--spectrum-blue-800);
+
   --spectrum-calendar-day-background-color-selected: rgba(var(--spectrum-blue-900-rgb), 0.1);
   --spectrum-calendar-day-background-color-hover: rgba(var(--spectrum-black-rgb), 0.06);
   --spectrum-calendar-day-today-background-color-selected-hover: rgba(var(--spectrum-blue-900-rgb), 0.2);
