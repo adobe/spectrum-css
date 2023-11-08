@@ -21,16 +21,25 @@ governing permissions and limitations under the License.
   --spectrum-backgroundlayers-shadow-vertical: 0;
   --spectrum-backgroundlayers-shadow-blur: 5px;
   --spectrum-backgroundlayers-shadow-color: var(--spectrum-gray-200);
-
+    .spectrum--dark & {
+      --spectum-backgroundlayers-background-color: var(--spectrum-gray-75);
+      --spectrum-backgroundlayers-shadow-color: var(--spectrum-gray-100);
+    }
 }
 .spectrum-BackgroundLayers--layer2 {
   --spectum-backgroundlayers-background-color: var(--spectrum-gray-25);
+  .spectrum--dark & {
+    --spectum-backgroundlayers-background-color: var(--spectrum-gray-75);
+	}
 }
 .spectrum-BackgroundLayers--layer1 {
   --spectum-backgroundlayers-background-color: var(--spectrum-gray-50);
 }
 .spectrum-BackgroundLayers--pasteboard {
   --spectum-backgroundlayers-background-color: var(--spectrum-gray-100);
+  .spectrum--dark & {
+    --spectum-backgroundlayers-background-color: var(--spectrum-gray-25);
+	}
 }
 .spectrum-BackgroundLayers--base {
   --spectum-backgroundlayers-background-color: var(--spectrum-gray-25);
