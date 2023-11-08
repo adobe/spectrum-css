@@ -473,7 +473,7 @@ window.addEventListener("click", function (event) {
 								".spectrum-TreeView-itemThumbnail"
 							);
 							if (thumbnail) {
-								thumbnail.classList.remove("is-focused");
+								thumbnail.classList.remove("is-selected");
 							}
 						}
 					}
@@ -486,7 +486,7 @@ window.addEventListener("click", function (event) {
 			".spectrum-TreeView-itemThumbnail"
 		);
 		if (thumbnail) {
-			thumbnail.classList[selected ? "add" : "remove"]("is-focused");
+			thumbnail.classList[selected ? "add" : "remove"]("is-selected");
 		}
 		event.preventDefault();
 	}

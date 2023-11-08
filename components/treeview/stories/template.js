@@ -1,6 +1,7 @@
 import { html } from "lit";
 import { classMap } from "lit/directives/class-map.js";
 import { repeat } from "lit/directives/repeat.js";
+import { styleMap } from "lit/directives/style-map.js";
 
 import { Template as Icon } from "@spectrum-css/icon/stories/template.js";
 import { Template as Thumbnail } from "@spectrum-css/thumbnail/stories/template.js";
@@ -26,9 +27,26 @@ export const TreeViewItem = ({
 }) => {
 	if (type === "heading") {
 		return html`
-			<div class="${rootClass}-heading">
-				<span class="${rootClass}-itemLabel">${label}</span>
-			</div>
+			<li
+				id=${id}
+				class=${classMap({
+					[`${rootClass}-section`]: true,
+					...customClasses.reduce((a, c) => ({ ...a, [c]: true }), {}),
+				})}
+			>
+				<div class="${rootClass}-heading">
+					<span class="${rootClass}-itemLabel">${label}</span>
+				</div>
+				${typeof items !== "undefined" && items.length > 0
+					? Template({
+							...globals,
+							items: items,
+							size,
+							rootClass: "spectrum-TreeView",
+							customClasses: ["is-opened"],
+					})
+					: ""}
+			</li>
 		`;
 	}
 
@@ -62,7 +80,7 @@ export const TreeViewItem = ({
 					? Icon({
 							...globals,
 							size,
-							iconName: "Chevron",
+							iconName: "ChevronRight",
 							customClasses: [`${rootClass}-itemIndicator`],
 					  })
 					: ""}
@@ -78,13 +96,19 @@ export const TreeViewItem = ({
 					? Thumbnail({
 							...globals,
 							...thumbnail,
-							size: "300",
+							size: size == "s"  ? "200"
+								: size == "m"  ? "200"
+								: size == "l"  ? "400"
+								: size == "xl" ? "600"
+								: "300",
+							isLayer: true,
+							isSelected,
 							customClasses: [`${rootClass}-itemThumbnail`],
 					  })
 					: ""}
 				<span class="${rootClass}-itemLabel">${label}</span>
 			</a>
-			${typeof items !== "undefined"
+			${typeof items !== "undefined" && items.length > 0
 				? Template({
 						...globals,
 						items: items,
@@ -100,6 +124,7 @@ export const TreeViewItem = ({
 export const Template = ({
 	rootClass = "spectrum-TreeView",
 	customClasses = [],
+	customStyles = {},
 	size = "m",
 	variant,
 	isQuiet,
@@ -116,6 +141,7 @@ export const Template = ({
 				[`${rootClass}--quiet`]: isQuiet,
 				...customClasses.reduce((a, c) => ({ ...a, [c]: true }), {}),
 			})}
+			style=${styleMap(customStyles)}
 		>
 			${repeat(
 				items,
@@ -124,6 +150,7 @@ export const Template = ({
 					return TreeViewItem({
 						...globals,
 						...item,
+						size,
 					});
 				}
 			)}
