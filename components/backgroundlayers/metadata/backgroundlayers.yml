@@ -5,14 +5,24 @@ examples:
   - id: backgroundlayers-browsing
     name: Browsing Contexts
     markup: |
-      <div class="spectrum-Examples">
-      <div class="spectrum-BackgroundLayers spectrum-BackgroundLayers--pasteboard" style="inline-size: 100px; block-size: 100px; border-radius: 10px;">
-      </div>
+      <div class="spectrum-Examples" style="justify-content: flex-start; position: relative; height: 150px;">
+        <div class="spectrum-BackgroundLayers spectrum-BackgroundLayers--elevated" style="inline-size: 100px; block-size: 100px; border-radius: 10px; position: absolute; z-index: 4;">
+        </div>
+        <div class="spectrum-BackgroundLayers spectrum-BackgroundLayers--layer2" style="inline-size: 100px; block-size: 100px; border-radius: 10px; position: absolute; left: 15px; top: 15px; z-index: 3;">
+        </div>
+        <div class="spectrum-BackgroundLayers spectrum-BackgroundLayers--layer1" style="inline-size: 100px; block-size: 100px; border-radius: 10px; position: absolute; left: 30px; top: 30px; z-index: 2;">
+        </div>
+        <div class="spectrum-BackgroundLayers spectrum-BackgroundLayers--pasteboard" style="inline-size: 100px; block-size: 100px; border-radius: 10px; position: absolute; left: 40px; top: 40px; z-index: 1;">
+        </div>
       </div>
   - id: backgroundlayers-editting
     name: Editting Contexts
     markup: |
-      <div class="spectrum-Examples">
-      <div class="spectrum-BackgroundLayers spectrum-BackgroundLayers--base" style="inline-size: 100px; block-size: 100px; border-radius: 10px;">
-      </div>
+      <div class="spectrum-Examples" style="justify-content: flex-start; position: relative; height: 150px;">
+        <div class="spectrum-BackgroundLayers spectrum-BackgroundLayers--elevated" style="inline-size: 100px; block-size: 100px; border-radius: 10px; position: absolute; z-index: 3;">
+        </div>
+        <div class="spectrum-BackgroundLayers spectrum-BackgroundLayers--layer1" style="inline-size: 100px; block-size: 100px; border-radius: 10px; position: absolute; left: 15px; top: 15px; z-index: 2;">
+        </div>
+        <div class="spectrum-BackgroundLayers spectrum-BackgroundLayers--base"  style="inline-size: 100px; block-size: 100px; border-radius: 10px; position: absolute; left: 20px; top: 20px; z-index: 1;">
+        </div>
       </div>
