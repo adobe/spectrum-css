@@ -5,20 +5,7 @@ export default {
   title: "Elements/Background layers",
   description: "The background layers is a series of classes used to style background layers.",
   component: "BackgroundLayers",
-  argTypes: {
-    context: {
-      name: "Context",
-      type: { name: "string", required: true },
-      defaultValue: "Browsing",
-      table: {
-        type: { summary: "string" },
-        category: "Component",
-        defaultValue: { summary: "browsing" }
-      },
-      options: ["browsing", "editing"],
-      control: "select"
-    },
-  },
+  argTypes: {},
   args: {
     rootClass: "spectrum-BackgroundLayers",
   },
@@ -35,7 +22,7 @@ export default {
 const EditingContext = ({
 }) => {
 	return html`
-		<div style="display: flex; justify-content: flex-start; position: relative;">
+		<div style="display: flex; justify-content: flex-start; position: relative; block-size: 150px;">
 			${Template({
         style: "z-index: 4;",
 				layer: 'elevated',
@@ -59,7 +46,7 @@ const EditingContext = ({
 const BrowsingContext = ({
 }) => {
 	return html`
-		<div style="display: flex; justify-content: flex-start; position: relative;">
+		<div style="display: flex; justify-content: flex-start; position: relative; block-size: 150px;">
 			${Template({
         style: "z-index: 3;",
 				layer: 'elevated',
