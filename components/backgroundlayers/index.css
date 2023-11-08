@@ -9,44 +9,52 @@ the License is distributed on an "AS IS" BASIS, WITHOUT WARRANTIES OR REPRESENTA
 OF ANY KIND, either express or implied. See the License for the specific language
 governing permissions and limitations under the License.
 */
-
 .spectrum-BackgroundLayers {
-  --spectum-backgroundlayers-background-color: var(--spectrum-gray-25);
-  --spectrum-backgroundlayers-drop-shadow:
+	--spectrum-gray-25: rgb(255, 255, 255);
+	--spectrum-gray-50: rgb(248, 248, 248);
+	--spectrum-gray-75: rgb(243, 243, 243);
+	--spectrum-gray-100: rgb(233, 233, 233);
+	--spectum-backgroundlayers-background-color: var(--spectrum-gray-25);
+
 }
 
 .spectrum-BackgroundLayers--elevated {
-  --spectum-backgroundlayers-background-color: var(--spectrum-gray-25);
-  --spectrum-backgroundlayers-shadow-horizontal: 0;
-  --spectrum-backgroundlayers-shadow-vertical: 0;
-  --spectrum-backgroundlayers-shadow-blur: 5px;
-  --spectrum-backgroundlayers-shadow-color: var(--spectrum-gray-200);
-    .spectrum--dark & {
-      --spectum-backgroundlayers-background-color: var(--spectrum-gray-75);
-      --spectrum-backgroundlayers-shadow-color: var(--spectrum-gray-100);
-    }
+	--spectum-backgroundlayers-background-color: var(--spectrum-gray-25);
+	--spectrum-backgroundlayers-shadow-horizontal: 0;
+	--spectrum-backgroundlayers-shadow-vertical: 0;
+	--spectrum-backgroundlayers-shadow-blur: 5px;
+	--spectrum-backgroundlayers-shadow-color: var(--spectrum-gray-200);
+	.spectrum--dark & {
+		--spectum-backgroundlayers-background-color: var(--spectrum-gray-75);
+		--spectrum-backgroundlayers-shadow-color: var(--spectrum-gray-100);
+	}
 }
 .spectrum-BackgroundLayers--layer2 {
-  --spectum-backgroundlayers-background-color: var(--spectrum-gray-25);
-  .spectrum--dark & {
-    --spectum-backgroundlayers-background-color: var(--spectrum-gray-75);
+	--spectum-backgroundlayers-background-color: var(--spectrum-gray-25);
+	.spectrum--dark & {
+		--spectum-backgroundlayers-background-color: var(--spectrum-gray-75);
 	}
 }
 .spectrum-BackgroundLayers--layer1 {
-  --spectum-backgroundlayers-background-color: var(--spectrum-gray-50);
+	--spectum-backgroundlayers-background-color: var(--spectrum-gray-50);
 }
 .spectrum-BackgroundLayers--pasteboard {
-  --spectum-backgroundlayers-background-color: var(--spectrum-gray-100);
-  .spectrum--dark & {
-    --spectum-backgroundlayers-background-color: var(--spectrum-gray-25);
+	--spectum-backgroundlayers-background-color: var(--spectrum-gray-100);
+	.spectrum--dark & {
+		--spectum-backgroundlayers-background-color: var(--spectrum-gray-25);
 	}
 }
 .spectrum-BackgroundLayers--base {
-  --spectum-backgroundlayers-background-color: var(--spectrum-gray-25);
-  border: 2px solid rgba(180, 180, 180, 0.25);
+	--spectum-backgroundlayers-background-color: var(--spectrum-gray-25);
+	border: 2px solid rgba(180, 180, 180, 0.25);
 }
 
 .spectrum-BackgroundLayers {
-  background-color: var(--spectum-backgroundlayers-background-color);
-  filter: drop-shadow(var(--spectrum-backgroundlayers-shadow-horizontal) var(--spectrum-backgroundlayers-shadow-vertical) var(--spectrum-backgroundlayers-shadow-blur) var(--spectrum-backgroundlayers-shadow-color));
+	background-color: var(--spectum-backgroundlayers-background-color);
+	filter: drop-shadow(
+		var(--spectrum-backgroundlayers-shadow-horizontal)
+			var(--spectrum-backgroundlayers-shadow-vertical)
+			var(--spectrum-backgroundlayers-shadow-blur)
+			var(--spectrum-backgroundlayers-shadow-color)
+	);
 }
