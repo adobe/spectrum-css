@@ -37,6 +37,7 @@
 | `--mod-textfield-icon-color-invalid`                    |
 | `--mod-textfield-icon-color-valid`                      |
 | `--mod-textfield-icon-size-invalid`                     |
+| `--mod-textfield-icon-size-valid`                       |
 | `--mod-textfield-icon-spacing-block-invalid`            |
 | `--mod-textfield-icon-spacing-block-valid`              |
 | `--mod-textfield-icon-spacing-inline-end-invalid`       |
@@ -65,5 +66,3 @@
 | `--mod-textfield-text-color-readonly`                   |
 | `--mod-textfield-text-color-valid`                      |
 | `--mod-textfield-width`                                 |
-| `--mod-textfield-workflow-icon-gap`                     |
-| `--mod-textfield-workflow-icon-width`                   |
