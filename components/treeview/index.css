@@ -11,8 +11,7 @@ governing permissions and limitations under the License.
 */
 
 .spectrum-TreeView {
-  /* A line-height of 17px at --spectrum-font-size-100 (14px). */
-  --spectrum-treeview-line-height: 1.214285;
+  --spectrum-treeview-line-height: var(--spectrum-line-height-200);
   --spectrum-treeview-margin-block: 1.0em;
   --spectrum-treeview-font-size: var(--spectrum-font-size-100);
 
