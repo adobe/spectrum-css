@@ -1,29 +1,26 @@
-// Import the component markup template
 import { Template } from "./template";
+import { html } from 'lit';
 
-// More on default export: https://storybook.js.org/docs/web-components/writing-stories/introduction#default-export
 export default {
-  title: "Components/background layers",
-  description: "The background layers component is...",
+  title: "Elements/Background layers",
+  description: "The background layers is a series of classes used to style background layers.",
   component: "BackgroundLayers",
   argTypes: {
-    size: {
-      name: "Size",
+    context: {
+      name: "Context",
       type: { name: "string", required: true },
-      defaultValue: "m",
+      defaultValue: "Browsing",
       table: {
         type: { summary: "string" },
         category: "Component",
-        defaultValue: { summary: "m" }
+        defaultValue: { summary: "browsing" }
       },
-      options: ["s", "m", "l", "xl"],
+      options: ["browsing", "editing"],
       control: "select"
     },
   },
-  // More on args: https://storybook.js.org/docs/web-components/writing-stories/args
   args: {
     rootClass: "spectrum-BackgroundLayers",
-    size: "m",
   },
   parameters: {
     actions: {
@@ -35,5 +32,51 @@ export default {
   }
 };
 
-export const Default = Template.bind({});
-Default.args = {};
+const EditingContext = ({
+}) => {
+	return html`
+		<div style="display: flex; justify-content: flex-start; position: relative;">
+			${Template({
+        style: "z-index: 4;",
+				layer: 'elevated',
+			})}
+			${Template({
+        style: "z-index: 3; inset-inline-start: 15px; inset-block-start: 15px;",
+				layer: 'layer2',
+			})}
+			${Template({
+        style: "z-index: 2; inset-inline-start: 25px; inset-block-start: 25px;",
+				layer: 'layer1',
+			})}
+			${Template({
+        style: "z-index: 1; inset-inline-start: 35px; inset-block-start: 35px;",
+				layer: "pasteboard",
+			})}
+		</div>
+	`;
+};
+
+const BrowsingContext = ({
+}) => {
+	return html`
+		<div style="display: flex; justify-content: flex-start; position: relative;">
+			${Template({
+        style: "z-index: 3;",
+				layer: 'elevated',
+			})}
+			${Template({
+        style: "z-index: 2; inset-inline-start: 15px; inset-block-start: 15px;",
+				layer: 'layer1',
+			})}
+			${Template({
+        style: "z-index: 1; inset-inline-start: 25px; inset-block-start: 25px;",
+				layer: "base",
+			})}
+		</div>
+	`;
+};
+export const Editing = EditingContext.bind({});
+Editing.args = {};
+
+export const Browsing = BrowsingContext.bind({});
+Browsing.args = {};
