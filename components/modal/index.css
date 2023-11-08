@@ -80,7 +80,7 @@ governing permissions and limitations under the License.
 	max-block-size: var(--mod-modal-max-height, var(--spectrum-modal-max-height));
 	max-inline-size: var(--mod-modal-max-width, var(--spectrum-modal-max-width));
 
-	background: var(--mod-modal-background-color, var(--spectrum-modal-background-color));
+	/* TESTING BackgroundLayers background: var(--mod-modal-background-color, var(--spectrum-modal-background-color)); */
 
 	/* border-radius includes legacy token fallback, which can be deprecated once component is migrated */
 	border-radius: var(--mod-modal-confirm-border-radius, var(--spectrum-modal-confirm-border-radius));
