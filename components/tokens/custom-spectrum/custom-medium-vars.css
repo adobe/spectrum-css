@@ -82,8 +82,9 @@ governing permissions and limitations under the License.
   --spectrum-treeview-item-indentation-large: 20px;
   --spectrum-treeview-item-indentation-extra-large: var(--spectrum-spacing-400);
   --spectrum-treeview-indicator-inset-block-start: 5px;
-  --spectrum-dialog-confirm-entry-animation-distance: 20px;
+  --spectrum-treeview-item-min-block-size-thumbnail-offset-medium: 0px;
 
+  --spectrum-dialog-confirm-entry-animation-distance: 20px;
   --spectrum-dialog-confirm-hero-height: 128px;
   --spectrum-dialog-confirm-border-radius: 4px;
   --spectrum-dialog-confirm-title-text-size: 18px;
