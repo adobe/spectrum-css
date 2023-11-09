@@ -64,7 +64,7 @@ jobs:
         outputs:
             head-sha: ${{ steps.set-SHAs.outputs.head }}
             base-sha: ${{ steps.set-SHAs.outputs.base }}
-        name: Build ${{ inputs.ref }} on ${{ matrix.system }} node v${{ matrix.node-version }}
+        name: Build
         steps:
             - name: Check out code
               uses: actions/checkout@v4

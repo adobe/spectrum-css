@@ -49,7 +49,7 @@ jobs:
 
             ## --- SETUP --- ##
             - name: Use Node LTS version
-              uses: actions/setup-node@v3
+              uses: actions/setup-node@v4
               with:
                   node-version: 18
                   cache: yarn
@@ -95,7 +95,7 @@ jobs:
                   token: ${{ secrets.GITHUB_TOKEN }}
 
     fetch-build-artifacts:
-        name: Fetch & validate build artifacts for ${{ matrix.branch }}
+        name: Fetch & validate build artifacts
         strategy:
             matrix:
                 branch:
@@ -130,9 +130,9 @@ jobs:
 
             ## --- SETUP --- ##
             - name: Use Node LTS version
-              uses: actions/setup-node@v3
+              uses: actions/setup-node@v4
               with:
-                  node-version: ${{ matrix.branch == inputs.base-sha && '16' || '18' }}
+                  node-version: 18
                   cache: yarn
 
             ## --- YARN CACHE --- ##
