@@ -16,7 +16,7 @@ export const Template = ({
       [`${rootClass}--${layer}`]: true,
       ...customClasses.reduce((a, c) => ({ ...a, [c]: true }), {}),
     })}
-      style="${style} inline-size: 100px; block-size: 100px; border-radius: 10px; position: absolute;">
+      style="${style} inline-size: 150px; block-size: 150px; border-radius: 10px; position: absolute;">
     </div>
   `;
 }
