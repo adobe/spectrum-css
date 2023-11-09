@@ -30,7 +30,7 @@
     "build:site": "gulp buildDocs -LLL",
     "cache:clean": "nx reset",
     "ci": "yarn build:all",
-    "ci:storybook": "nx storybook @spectrum-css/preview",
+    "ci:storybook": "nx run-many --projects @spectrum-css/preview --target build",
     "clean": "yarn cache:clean && run-p clean:*",
     "clean:components": "lerna exec --scope \"${SCOPE:-@spectrum-css/*}\" --ignore \"@spectrum-css/{*-builder*,preview,generator}\" -- rimraf dist",
     "clean:docs": "rimraf dist",
@@ -65,7 +65,8 @@
     "tools/*",
     "plugins/*",
     "generator",
-    ".storybook"
+    ".storybook",
+    ".github/actions/*"
   ],
   "devDependencies": {
     "@adobe/focus-ring-polyfill": "^0.1.5",
@@ -90,14 +91,14 @@
     "prismjs": "^1.23.0",
     "rimraf": "^5.0.1",
     "semver": "^7.5.1",
-    "stylelint": "^15.10.2",
-    "stylelint-config-standard": "^33.0.0",
+    "stylelint": "^15.11.0",
+    "stylelint-config-standard": "^34.0.0",
     "stylelint-use-logical": "^2.1.0",
     "through2": "^3.0.1",
     "yargs": "^17.7.2"
   },
   "engines": {
-    "node": ">=14.0.0 <18"
+    "node": ">=18"
   },
   "browserslist": [
     "last 2 Edge versions",

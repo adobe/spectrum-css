@@ -65,13 +65,21 @@ To generate a new component, run the generator:
 yarn new component
 ```
 
-Build the project, open a live-reloading browser window, and watch for changes:
+To kick-off the project's storybook locally, run:
+
+```shell
+yarn start
+```
+
+This is our development environment, where you can see all the components in action, and develop new components. All components must have a storybook entry.
+
+Working on the documentation site? Run:
 
 ```shell
 yarn dev
 ```
 
-Commit changes with a [conventional commit message](https://www.conventionalcommits.org), making sure to correctly use `feat:`, `fix:`, and `BREAKING CHANGE` accordingly, and referencing the relevant issue number (if any):
+Commit all changes with a [conventional commit message](https://www.conventionalcommits.org), making sure to correctly use `feat:`, `fix:`, and `BREAKING CHANGE` accordingly, and referencing the relevant issue number (if any):
 
 ```shell
 git commit -m "fix(calendar): rendering issue in Safari, fixes #252"
@@ -82,6 +90,12 @@ Make sure your branch is up to date with the original repo:
 ```shell
 git fetch upstream
 git merge upstream/main
+```
+
+Run your updates through the formatter which will automatically fix any linting issues. Note that this is also handled on commit via lint-staged so running this manually is only necessary if you used a `--no-verify` flag on any of your commits.
+
+```shell
+nx affected --target format
 ```
 
 Review your changes and any possible conflicts and push to your fork:
@@ -96,7 +110,7 @@ At this point you're waiting on us. We do our best to keep on top of all the pul
 
 Some things that will increase the chance that your pull request is accepted:
 
-- Write a thorough pull request description, include screenshots, and test your changes across all evergreen browsers.
-- Write out your test cases for any new features or bug fixes in as much detail as possible and include them in the pull request description.
-- Make sure the PR merges cleanly with the latest main.
-- Describe your feature/bugfix and why it's needed/important in the pull request description.
+-   Write a thorough pull request description, include screenshots, and test your changes across all evergreen browsers.
+-   Write out your test cases for any new features or bug fixes in as much detail as possible and include them in the pull request description.
+-   Make sure the PR merges cleanly with the latest main.
+-   Describe your feature/bugfix and why it's needed/important in the pull request description.
