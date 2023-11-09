@@ -186,6 +186,13 @@ Disabled.args = {
 	isDisabled: true,
 };
 
+export const WithFocus = Template.bind({});
+WithFocus.args = {
+	...Default.args,
+	variant: "with focus",
+	isFocused: true,
+};
+
 export const Gradient = Template.bind({});
 Gradient.args = {
 	...Default.args,

@@ -47,7 +47,7 @@ governing permissions and limitations under the License.
   --spectrum-slider-label-top-to-text: var(--spectrum-component-top-to-text-100);
   --spectrum-slider-control-to-field-label: var(--spectrum-slider-control-to-field-label-large);
   --spectrum-slider-value-side-padding-inline: var(--spectrum-spacing-200);
-  
+
   /* TODO: placeholder value for sideLabel variant value width */
   --spectrum-slider-value-inline-size: 18px;
 }
@@ -316,7 +316,6 @@ governing permissions and limitations under the License.
   outline: none;
 
   &:active,
-  &.is-focused,
   &.is-dragged {
     border-width: var(--mod-slider-handle-border-width-down, var(--spectrum-slider-handle-border-width-down));
   }
@@ -516,22 +515,6 @@ governing permissions and limitations under the License.
   }
 }
 
-
-.spectrum-Slider {
-  &.is-disabled {
-    cursor: default;
-
-    .spectrum-Slider-handle {
-      cursor: default;
-      pointer-events: none;
-    }
-
-    .spectrum-Slider-tickLabel {
-      color: var(--highcontrast-slider-label-text-color-disabled, var(--mod-slider-label-text-color-disabled, var(--spectrum-slider-label-text-color-disabled)));
-    }
-  }
-}
-
 /* backwards compatibility: these are not required, but they make the handle go to the edegs and align right */
 .spectrum-Slider-handleContainer,
 .spectrum-Slider-trackContainer {
@@ -609,15 +592,7 @@ governing permissions and limitations under the License.
 .spectrum-Slider--ramp {
   .spectrum-Slider-handle {
     box-shadow: 0 0 0 var(--spectrum-slider-handle-gap) var(--highcontrast-slider-ramp-handle-border-color-active, var(--mod-sectrum-slider-ramp-handle-border-color-active, var(--spectrum-slider-ramp-handle-border-color-active)));
-    background: var(--mod-slider-ramp-handle-background-color, var(--spectrum-slider-ramp-handle-background-color));
-
-    @media (forced-colors: active) {
-      /* forced-color-adjust required to ensure the "circle" around the handle is transparent */
-      forced-color-adjust: none;
-      box-shadow: 0 0 0 var(--spectrum-slider-handle-gap) ButtonFace;
-      border-color: ButtonText;
-      background-color: ButtonFace;
-    }
+    background: var(--mod-slider-ramp-handle-background-color, var(--highcontrast-slider-ramp-handle-background-color, var(--spectrum-slider-ramp-handle-background-color)));
   }
 }
 
@@ -648,6 +623,16 @@ governing permissions and limitations under the License.
 }
 
 .spectrum-Slider.is-disabled {
+  cursor: default;
+
+  .spectrum-Slider-controls {
+    cursor: default;
+  }
+
+  .spectrum-Slider-tickLabel {
+    color: var(--highcontrast-slider-label-text-color-disabled, var(--mod-slider-label-text-color-disabled, var(--spectrum-slider-label-text-color-disabled)));
+  }
+
   .spectrum-Slider-labelContainer {
     color: var(--highcontrast-slider-label-text-color-disabled, var(--mod-slider-label-text-color-disabled, var(--spectrum-slider-label-text-color-disabled)));
   }
@@ -655,6 +640,8 @@ governing permissions and limitations under the License.
   .spectrum-Slider-handle {
     border-color: var(--highcontrast-slider-handle-border-color-disabled, var(--mod-slider-handle-border-color-disabled, var(--spectrum-slider-handle-border-color-disabled)));
     background: var(--highcontrast-slider-handle-disabled-background-color, var(--mod-slider-handle-disabled-background-color, var(--spectrum-slider-handle-disabled-background-color)));
+    cursor: default;
+    pointer-events: none;
 
     &:hover,
     &:active {
@@ -703,14 +690,20 @@ governing permissions and limitations under the License.
 @media (forced-colors: active) {
 
   .spectrum-Slider {
-
     /*  over-writes */
     --highcontrast-slider-track-color: ButtonText;
     --highcontrast-slider-track-fill-color: ButtonText;
     --highcontrast-slider-ramp-track-color: ButtonText;
     --highcontrast-slider-ramp-track-color-disabled: GrayText;
     --highcontrast-slider-tick-mark-color: ButtonText;
-
+    --highcontrast-slider-handle-border-color: ButtonText;
+    --highcontrast-slider-handle-border-color-hover: Highlight;
+    --highcontrast-slider-handle-border-color-down: Highlight;
+    --highcontrast-slider-handle-border-color-key-focus: Highlight;
+    --highcontrast-slider-handle-focus-ring-color-key-focus: CanvasText;
+    --highcontrast-slider-handle-background-color: ButtonFace;
+    --highcontrast-slider-ramp-handle-border-color-active: ButtonFace;
+    --highcontrast-slider-ramp-handle-background-color: ButtonFace;
 
     --spectrum-slider-track-color: ButtonText;
     --spectrum-slider-track-fill-color: ButtonText;
@@ -732,7 +725,7 @@ governing permissions and limitations under the License.
 
     --spectrum-slider-track-color-disabled: GrayText;
     --spectrum-slider-track-fill-color-disabled: GrayText;
-    
+
     --spectrum-slider-handle-border-color-disabled: GrayText;
 
     --spectrum-slider-label-text-color: CanvasText;
@@ -740,13 +733,35 @@ governing permissions and limitations under the License.
 
     --spectrum-slider-ramp-handle-border-color-active: ButtonText;
 
-  }
+    .spectrum-Slider-handle.is-focused::before {
+      forced-color-adjust: none;
+    }
 
-  /* Slider handle turns transparent in high contrast mode for ramp */
-  .spectrum-Slider.is-disabled {
-    .spectrum-Slider-ramp + .spectrum-Slider-handle {
-      fill: ButtonFace;
-      background-color: ButtonFace;
+    .spectrum-Slider--ramp .spectrum-Slider-handle {
+      /* forced-color-adjust required to ensure the "circle" around the handle is transparent */
+      forced-color-adjust: none;
+    }
+
+    /* Slider control hover and focus colors for high contrast mode */
+    &:not(.is-disabled) {
+      .spectrum-Slider-controls:hover,
+      .spectrum-Slider-controls:active,
+      .spectrum-Slider-controls:focus-within,
+      .spectrum-Slider-controls.is-focused {
+        --highcontrast-slider-track-fill-color: Highlight;
+        --highcontrast-slider-track-color: Highlight;
+        --highcontrast-slider-handle-border-color: Highlight;
+        --highcontrast-slider-ramp-track-color: Highlight;
+        --highcontrast-slider-tick-mark-color: Highlight;
+      }
+    }
+
+    /* Slider handle turns transparent in high contrast mode for ramp */
+    &.is-disabled {
+      .spectrum-Slider-ramp + .spectrum-Slider-handle {
+        fill: ButtonFace;
+        background-color: ButtonFace;
+      }
     }
   }
 }
