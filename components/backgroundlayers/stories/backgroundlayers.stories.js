@@ -2,7 +2,7 @@ import { Template } from "./template";
 import { html } from 'lit';
 
 export default {
-  title: "UtilitityClasses/Background layers",
+  title: "UtilityClasses/Background layers",
   description: "The background layers is a series of classes used to style background layers.",
   component: "BackgroundLayers",
   argTypes: {},
