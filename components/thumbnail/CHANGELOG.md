@@ -3,6 +3,15 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+<a name="5.1.0"></a>
+#5.1.0
+🗓
+2023-11-09 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/thumbnail@5.0.12...@spectrum-css/thumbnail@5.1.0)
+
+### ✨ Features
+
+- **thumbnail:**add whcm for layer variants ([#2254](https://github.com/adobe/spectrum-css/issues/2254))([7e464f6](https://github.com/adobe/spectrum-css/commit/7e464f6))
+
 <a name="5.0.12"></a>
 ##5.0.12
 🗓

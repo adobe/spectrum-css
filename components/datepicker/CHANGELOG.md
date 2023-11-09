@@ -3,6 +3,85 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+<a name="2.0.0"></a>
+#2.0.0
+🗓
+2023-11-09 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/datepicker@1.0.55...@spectrum-css/datepicker@2.0.0)
+
+\*refactor(datepicker)!: migrate to use spectrum-tokens (#2185)([7de0da2](https://github.com/adobe/spectrum-css/commit/7de0da2)), closes[#2185](https://github.com/adobe/spectrum-css/issues/2185)
+
+    	###
+    	🛑 BREAKING CHANGES
+
+    		*
+    		migrates DatePicker to use `@adobe/spectrum-tokens`
+
+Additionally:
+
+- chore(datepicker): build changes
+
+- chore(datepicker): use new tokens wip 1
+
+- chore(datepicker): use new tokens and mods
+
+- fix(datepicker): invalid icon overlap
+
+- fix(datepicker): correct package.json
+
+- chore(datepicker): add custom tokens for scale
+
+- fix(datepicker): invalid input padding end
+
+- chore(datepicker): corrects quiet variant widths
+
+- chore(datepicker): refactor index.css
+
+- feat(datepicker): add quiet variant to storybook
+
+- feat(datepicker): adds whcm
+
+- refactor(datepicker): clean up css
+
+- chore(datepicker): use themes file over custom tokens
+
+- chore(datepicker): update popover dependency
+
+- docs(datepicker): add non range invalid to docs
+
+- chore(datepicker): update padding inline for non range
+
+- chore(datepicker): clean up css
+
+- feat(Datepicker): btn border color match input
+
+- chore(datepicker): remove unneeded classes
+
+- feat(datepicker): enabled readonly in storybook
+
+- feat(datepicker): add range to stories
+
+- chore(datepicker): add themes to template
+
+- chore(datepicker): address PR feedback
+
+- chore(datepicker): rename combobox custom property
+
+- chore(datepicker): border radius custom properties
+
+- chore(datepicker): mods updates
+
+- chore(datepicker): remove unneeded custom token
+
+- chore(datepicker): regen mods.md
+
+- fix(datepicker): update package json
+
+- refactor(datepicker): css for invalid icon position
+
+- refactor(datepicker): storybook improvements
+
+- fix(datepicker): add back isValid and isRequired
+
 <a name="1.0.55"></a>
 ##1.0.55
 🗓

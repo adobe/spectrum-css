@@ -3,6 +3,19 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+<a name="4.0.0"></a>
+#4.0.0
+🗓
+2023-11-09 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/dropindicator@3.0.54...@spectrum-css/dropindicator@4.0.0)
+
+\*feat(dropindicator)!: migrate to spectrum tokens (#2198)([da24515](https://github.com/adobe/spectrum-css/commit/da24515)), closes[#2198](https://github.com/adobe/spectrum-css/issues/2198)
+
+    	###
+    	🛑 BREAKING CHANGES
+
+    		*
+    		migrates DropIndicator to use `@adobe/spectrum-tokens`
+
 <a name="3.0.54"></a>
 ##3.0.54
 🗓

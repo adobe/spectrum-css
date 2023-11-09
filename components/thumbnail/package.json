@@ -1,6 +1,6 @@
 {
   "name": "@spectrum-css/thumbnail",
-  "version": "5.0.12",
+  "version": "5.1.0",
   "description": "The Spectrum CSS thumbnail component",
   "license": "Apache-2.0",
   "author": "Adobe",
@@ -23,8 +23,8 @@
   },
   "devDependencies": {
     "@spectrum-css/component-builder-simple": "^2.0.17",
-    "@spectrum-css/opacitycheckerboard": "^1.0.4",
-    "@spectrum-css/tokens": "^12.0.0",
+    "@spectrum-css/opacitycheckerboard": "^1.0.5",
+    "@spectrum-css/tokens": "^13.0.0",
     "gulp": "^4.0.0"
   },
   "publishConfig": {

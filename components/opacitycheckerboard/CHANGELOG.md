@@ -3,6 +3,19 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+<a name="1.0.5"></a>
+##1.0.5
+🗓
+2023-11-09 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/opacitycheckerboard@1.0.4...@spectrum-css/opacitycheckerboard@1.0.5)
+
+### 🐛 Bug fixes
+
+- **opacitycheckerboard:**align token version to latest release ([#2263](https://github.com/adobe/spectrum-css/issues/2263))([140a314](https://github.com/adobe/spectrum-css/commit/140a314))
+
+### 🔙 Reverts
+
+\*gulp and build updates ([#2121](https://github.com/adobe/spectrum-css/issues/2121))([03a37f5](https://github.com/adobe/spectrum-css/commit/03a37f5)), closes[#2099](https://github.com/adobe/spectrum-css/issues/2099)
+
 <a name="1.0.4"></a>
 ##1.0.4
 🗓

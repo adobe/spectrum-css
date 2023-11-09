@@ -3,6 +3,19 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+<a name="8.0.0"></a>
+#8.0.0
+🗓
+2023-11-09 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/checkbox@7.0.16...@spectrum-css/checkbox@8.0.0)
+
+\*refactor(assetcard)!: token migration (#2229)([a0cf37b](https://github.com/adobe/spectrum-css/commit/a0cf37b)), closes[#2229](https://github.com/adobe/spectrum-css/issues/2229)
+
+    	###
+    	🛑 BREAKING CHANGES
+
+    		*
+    		migrate asset card to updated token system
+
 <a name="7.0.16"></a>
 ##7.0.16
 🗓

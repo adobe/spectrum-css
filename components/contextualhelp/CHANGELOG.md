@@ -3,6 +3,15 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+<a name="2.0.41"></a>
+##2.0.41
+🗓
+2023-11-09 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/contextualhelp@2.0.40...@spectrum-css/contextualhelp@2.0.41)
+
+### 🐛 Bug fixes
+
+- **contextualhelp:**use spectrum-tokens var for font-size([7f29eda](https://github.com/adobe/spectrum-css/commit/7f29eda))
+
 <a name="2.0.40"></a>
 ##2.0.40
 🗓

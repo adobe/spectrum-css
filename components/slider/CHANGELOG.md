@@ -3,6 +3,15 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+<a name="4.1.15"></a>
+##4.1.15
+🗓
+2023-11-09 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/slider@4.1.14...@spectrum-css/slider@4.1.15)
+
+### 🐛 Bug fixes
+
+- **slider:**focus state matches spec, supports forced-colors ([#2217](https://github.com/adobe/spectrum-css/issues/2217))([7b9c31b](https://github.com/adobe/spectrum-css/commit/7b9c31b))
+
 <a name="4.1.14"></a>
 ##4.1.14
 🗓

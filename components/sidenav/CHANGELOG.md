@@ -3,6 +3,15 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+<a name="4.0.15"></a>
+##4.0.15
+🗓
+2023-11-09 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/sidenav@4.0.14...@spectrum-css/sidenav@4.0.15)
+
+### 🐛 Bug fixes
+
+- **sidenav:**remove temporary custom tokens ([#2256](https://github.com/adobe/spectrum-css/issues/2256))([af0edde](https://github.com/adobe/spectrum-css/commit/af0edde))
+
 <a name="4.0.14"></a>
 ##4.0.14
 🗓

@@ -3,6 +3,15 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+<a name="5.1.0"></a>
+#5.1.0
+🗓
+2023-11-09 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/preview@5.0.5...@spectrum-css/preview@5.1.0)
+
+### ✨ Features
+
+- **storybook:**move config folder to root ([#2267](https://github.com/adobe/spectrum-css/issues/2267))([5f7037d](https://github.com/adobe/spectrum-css/commit/5f7037d))
+
 <a name="5.0.5"></a>
 ##5.0.5
 🗓

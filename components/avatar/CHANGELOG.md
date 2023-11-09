@@ -3,6 +3,15 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+<a name="6.0.58"></a>
+##6.0.58
+🗓
+2023-11-09 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/avatar@6.0.57...@spectrum-css/avatar@6.0.58)
+
+### 🐛 Bug fixes
+
+- **avatar:**remove link markup from disabled state, whcm fix ([#2265](https://github.com/adobe/spectrum-css/issues/2265))([026b03d](https://github.com/adobe/spectrum-css/commit/026b03d))
+
 <a name="6.0.57"></a>
 ##6.0.57
 🗓

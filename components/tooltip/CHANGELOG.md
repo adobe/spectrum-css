@@ -3,6 +3,16 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+<a name="5.1.17"></a>
+##5.1.17
+🗓
+2023-11-09 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/tooltip@5.1.16...@spectrum-css/tooltip@5.1.17)
+
+### 🐛 Bug fixes
+
+- **tooltip:**animation transform defined in tooltip instead of inherited([2c184ad](https://github.com/adobe/spectrum-css/commit/2c184ad))\*
+  **tooltip:**custom animation distance overrides overlay value([f98b8a1](https://github.com/adobe/spectrum-css/commit/f98b8a1))
+
 <a name="5.1.16"></a>
 ##5.1.16
 🗓

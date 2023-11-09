@@ -3,6 +3,53 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+<a name="5.0.0"></a>
+#5.0.0
+🗓
+2023-11-09 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/miller@4.0.0...@spectrum-css/miller@5.0.0)
+
+\*refactor(assetlist)!: migrate to spectrum tokens (#2211)([32149e5](https://github.com/adobe/spectrum-css/commit/32149e5)), closes[#2211](https://github.com/adobe/spectrum-css/issues/2211)
+
+    	###
+    	🛑 BREAKING CHANGES
+
+    		*
+    		migrates AssetList to use `@adobe/spectrum-tokens`.
+
+Additionally:
+
+- chore(assetlist): build changes
+
+- chore(assetlist): use new tokens
+
+- chore(assetlist): add custom color tokens
+
+- chore(assetlist): address empty label a11y
+
+- chore(assetlist): show focus outline
+
+- chore(assetlist): gen mods
+
+- chore(assetlist): a11y label fix
+
+- chore(assetlist): whcm wip
+
+- chore(assetlist): remove skin from template
+
+- chore(assetlist): whcm
+
+- chore(assetlist): remove unneeded code
+
+- chore(miller): address empty label
+
+- chore(assetlist): address empty label in storybook
+
+- chore(assetlist): update custom tokens
+
+- chore(assetlist): remove unused custom property
+
+- chore(assetlist): id for storybook checkbox
+
 <a name="4.0.0"></a>
 #4.0.0
 🗓
