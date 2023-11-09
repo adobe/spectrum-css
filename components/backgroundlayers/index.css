@@ -16,7 +16,7 @@ governing permissions and limitations under the License.
 	--spectrum-backgroundlayers-shadow-horizontal: 0;
 	--spectrum-backgroundlayers-shadow-vertical: 0;
 	--spectrum-backgroundlayers-shadow-blur: 5px;
-	--spectrum-backgroundlayers-shadow-color: var(--spectrum-gray-200);
+	--spectrum-backgroundlayers-shadow-color: var(--spectrum-gray-600);
 	.spectrum--dark & {
 		--spectum-backgroundlayers-background-color: var(--spectrum-gray-75);
 		--spectrum-backgroundlayers-shadow-color: var(--spectrum-gray-100);
