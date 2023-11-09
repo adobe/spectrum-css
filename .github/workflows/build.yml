@@ -80,7 +80,7 @@ jobs:
 
             - name: Derive appropriate SHAs for base and head for `nx affected` commands
               id: set-SHAs
-              uses: nrwl/nx-set-shas@v3
+              uses: nrwl/nx-set-shas@v4
 
             ## --- YARN CACHE --- ##
             - name: Check for cached dependencies
