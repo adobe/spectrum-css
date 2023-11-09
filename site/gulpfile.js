@@ -39,9 +39,17 @@ function buildSite_prism() {
 		])
 		.pipe(gulp.dest(path.join(__dirname, "../dist/css/prism/")));
 }
+function buildSite_tokens() {
+	return gulp
+		.src([
+			require.resolve("@spectrum-css/tokens"),
+		])
+		.pipe(gulp.dest(path.join(__dirname, "../dist/components/tokens/")));
+}
 
 exports.copySiteResources = gulp.parallel(
 	buildSite_resources,
+	buildSite_tokens,
 	buildSite_loadicons,
 	buildSite_lunr,
 	buildSite_prism

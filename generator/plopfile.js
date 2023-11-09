@@ -1,7 +1,7 @@
 import { spawn } from 'child_process';
 import { existsSync, readdirSync, readFileSync } from 'fs';
 import { readFile } from 'fs/promises';
-import { resolve } from 'path';
+import { dirname, resolve } from 'path';
 
 import cheerio from 'cheerio';
 import yaml from 'js-yaml';
@@ -22,7 +22,7 @@ export default async (plop) => {
 	const projectName = process.env.PROJECT_NAME ?? 'Spectrum CSS';
 	const pkg = await fetchPackage(rootFolder);
 
-	const tokens = await fetchPackage(resolve(srcPath, 'tokens'));
+	const tokens = await fetchPackage(dirname(require.resolve('@spectrum-css/tokens/package.json')));
 	const builder = await fetchPackage(resolve(process.cwd(), '../tools/component-builder-simple'));
 
 	/* Fetch the project name */
