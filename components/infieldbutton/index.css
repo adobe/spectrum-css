@@ -176,6 +176,14 @@ governing permissions and limitations under the License.
 			);
 		}
 	}
+
+	&:hover:not(:disabled),
+	&:active:not(:disabled),
+	&:focus-visible:not(:disabled) {
+		@media (forced-colors: active) {
+			--highcontrast-infield-button-border-color: Highlight;
+		}
+	}
 }
 
 .spectrum-InfieldButton {
@@ -216,8 +224,9 @@ governing permissions and limitations under the License.
 		);
 		border-style: solid;
 		border-color: var(
-			--mod-infield-button-border-color,
-			var(--spectrum-infield-button-border-color)
+			--highcontrast-infield-button-border-color,
+			var(--mod-infield-button-border-color,
+			var(--spectrum-infield-button-border-color))
 		);
 		border-end-end-radius: var(
 			--mod-infield-button-border-radius,
@@ -407,8 +416,6 @@ governing permissions and limitations under the License.
 		);
 	}
 }
-
-
 
 .spectrum-InfieldButton-icon {
 	display: initial;
