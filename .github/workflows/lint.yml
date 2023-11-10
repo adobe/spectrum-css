@@ -42,6 +42,7 @@ jobs:
     lint:
         name: Lint
         runs-on: ubuntu-latest
+        timeout-minutes: 5
         steps:
             # install but don't build - we're linting pre-compiled assets
             - name: Check out code

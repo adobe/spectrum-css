@@ -61,6 +61,7 @@ jobs:
                 node-version:
                     - ${{ inputs.node-version }}
         runs-on: ${{ matrix.system }}
+        timeout-minutes: 10
         outputs:
             head-sha: ${{ steps.set-SHAs.outputs.head }}
             base-sha: ${{ steps.set-SHAs.outputs.base }}

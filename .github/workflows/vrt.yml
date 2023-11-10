@@ -22,6 +22,7 @@ jobs:
     vrt:
         name: Chromatic
         runs-on: ubuntu-latest
+        timeout-minutes: 20
         outputs:
             storybook-url: ${{ steps.chromatic.outputs.storybookUrl }}
 
