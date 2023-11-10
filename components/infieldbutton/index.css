@@ -310,6 +310,8 @@ governing permissions and limitations under the License.
 	}
 
 	&:focus-visible {
+		outline: none;
+
 		.spectrum-InfieldButton-fill {
 			background-color: var(
 				--mod-infield-button-background-color-key-focus,
