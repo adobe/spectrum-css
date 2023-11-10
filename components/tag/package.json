@@ -18,12 +18,12 @@
     "build": "gulp"
   },
   "peerDependencies": {
-    "@spectrum-css/clearbutton": ">=1",
-    "@spectrum-css/tokens": ">=10"
+    "@spectrum-css/clearbutton": ">=5",
+    "@spectrum-css/tokens": ">=13"
   },
   "devDependencies": {
     "@spectrum-css/avatar": "^6.0.58",
-    "@spectrum-css/clearbutton": "^2.0.0",
+    "@spectrum-css/clearbutton": "^5.0.11",
     "@spectrum-css/component-builder-simple": "^2.0.17",
     "@spectrum-css/icon": "^4.0.3",
     "@spectrum-css/tokens": "^13.0.0",
