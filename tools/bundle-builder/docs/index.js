@@ -61,26 +61,23 @@ let templateData = {
 };
 
 async function buildDocs_forDep(dep) {
-	// Drop package org
-	dep = dep.split("/").pop();
-
 	let metadata = JSON.parse(
 		await fsp.readFile(
-			path.join(dirs.components, "vars", "dist", "spectrum-metadata.json")
+			require.resolve("@spectrum-css/vars")
 		)
 	);
 
-	let dependencyOrder = await depUtils.getPackageDependencyOrder(
-		path.join(dirs.components, dep)
-	);
+	let dirName = path.dirname(require.resolve(path.join(dep, "package.json")));
+	let dependencyOrder = await depUtils.getPackageDependencyOrder(dirName);
 
-	let dirName = `${dirs.components}/${dep}`;
+	logger.debug(`Will build docs for package in ${dirName}`);
 
-	logger.debug(`Will build docs for package in ${dirs.components}/${dep}`);
+	// Drop package org
+	dep = dep.split("/").pop();
 
 	return new Promise((resolve, reject) => {
 		gulp
-			.src([`${dirName}/metadata.yml`, `${dirName}/metadata/*.yml`], {
+			.src([`${dirName}/metadata/*.yml`], {
 				allowEmpty: true,
 			})
 			.pipe(
@@ -197,7 +194,6 @@ async function buildDocs_individualPackages() {
 function buildSite_generateIndex() {
 	return gulp
 		.src([
-			`${dirs.components}/*/metadata.yml`,
 			`${dirs.components}/*/metadata/*.yml`,
 		])
 		.pipe(
@@ -279,7 +275,6 @@ function buildSite_getData() {
 	let nav = [];
 	return gulp
 		.src([
-			`${dirs.components}/*/metadata.yml`,
 			`${dirs.components}/*/metadata/*.yml`,
 		])
 		.pipe(
