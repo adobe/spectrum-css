@@ -18,6 +18,10 @@
 | `--mod-card-body-font-style`                  |
 | `--mod-card-body-font-weight`                 |
 | `--mod-card-body-line-height`                 |
+| `--mod-card-body-padding-block-end`           |
+| `--mod-card-body-padding-block-start`         |
+| `--mod-card-body-padding-inline-end`          |
+| `--mod-card-body-padding-inline-start`        |
 | `--mod-card-body-spacing`                     |
 | `--mod-card-border-color`                     |
 | `--mod-card-border-color-hover`               |
@@ -29,7 +33,12 @@
 | `--mod-card-divider-color`                    |
 | `--mod-card-focus-indicator-color`            |
 | `--mod-card-focus-indicator-width`            |
+| `--mod-card-footer-margin-block-start`        |
+| `--mod-card-footer-margin-inline-end`         |
+| `--mod-card-footer-margin-inline-start`       |
 | `--mod-card-footer-margin-top`                |
+| `--mod-card-footer-padding-block-end`         |
+| `--mod-card-footer-padding-block-start`       |
 | `--mod-card-horizontal-body-padding`          |
 | `--mod-card-horizontal-preview-padding`       |
 | `--mod-card-minimum-width`                    |
