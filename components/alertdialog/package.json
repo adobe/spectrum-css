@@ -18,23 +18,23 @@
     "build": "gulp"
   },
   "peerDependencies": {
-    "@spectrum-css/button": ">=10",
+    "@spectrum-css/button": ">=11",
     "@spectrum-css/buttongroup": ">=6",
     "@spectrum-css/divider": ">=1 <=2",
-    "@spectrum-css/icon": ">=3",
-    "@spectrum-css/modal": ">=3",
-    "@spectrum-css/tokens": ">=11",
-    "@spectrum-css/underlay": ">=2"
+    "@spectrum-css/icon": ">=4",
+    "@spectrum-css/modal": ">=4",
+    "@spectrum-css/tokens": ">=13",
+    "@spectrum-css/underlay": ">=3"
   },
   "devDependencies": {
     "@spectrum-css/button": "^11.0.14",
     "@spectrum-css/buttongroup": "^6.1.12",
     "@spectrum-css/component-builder-simple": "^2.0.17",
     "@spectrum-css/divider": "^2.1.31",
-    "@spectrum-css/icon": "^3.1.0-alpha.0",
+    "@spectrum-css/icon": "^4.0.3",
     "@spectrum-css/modal": "^4.0.1",
     "@spectrum-css/tokens": "^13.0.0",
-    "@spectrum-css/underlay": "^2.1.0",
+    "@spectrum-css/underlay": "^3.0.9",
     "gulp": "^4.0.0"
   },
   "publishConfig": {

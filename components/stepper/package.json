@@ -18,10 +18,10 @@
     "build": "gulp"
   },
   "peerDependencies": {
-    "@spectrum-css/actionbutton": ">=3",
-    "@spectrum-css/icon": ">=3",
+    "@spectrum-css/actionbutton": ">=5",
+    "@spectrum-css/icon": ">=4",
     "@spectrum-css/textfield": ">=4",
-    "@spectrum-css/tokens": ">=11"
+    "@spectrum-css/tokens": ">=13"
   },
   "devDependencies": {
     "@spectrum-css/actionbutton": "^5.0.13",
