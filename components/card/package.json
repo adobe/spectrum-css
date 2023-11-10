@@ -18,12 +18,12 @@
     "build": "gulp"
   },
   "peerDependencies": {
-    "@spectrum-css/actionbutton": ">=4",
+    "@spectrum-css/actionbutton": ">=5",
     "@spectrum-css/asset": ">=3",
     "@spectrum-css/checkbox": ">=7",
-    "@spectrum-css/icon": ">=3",
+    "@spectrum-css/icon": ">=4",
     "@spectrum-css/quickaction": ">=3",
-    "@spectrum-css/tokens": ">=11",
+    "@spectrum-css/tokens": ">=13",
     "@spectrum-css/typography": ">=4 <=5"
   },
   "devDependencies": {
