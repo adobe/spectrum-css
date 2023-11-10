@@ -66,7 +66,7 @@ function watchWithinPackages(glob, task, files) {
 			}
 
 			let packageName = getPackageFromPath(changedFile);
-			let packageDir = path.join(dirs.components, packageName);
+			let packageDir = path.dirname(require.resolve(`@spectrum-css/${packageName}/package.json`));
 
 			if (typeof task === "function") {
 				task(changedFile, packageName, (err) => {
@@ -82,7 +82,7 @@ function watchWithinPackages(glob, task, files) {
 
 					// Copy files
 					gulp
-						.src(`${dirs.components}/${packageName}/dist/${files}`)
+						.src(`${packageDir}/dist/${files}`)
 						.pipe(gulp.dest(`dist/components/${packageName}/`))
 						.on("end", () => {
 							logger.debug(`Injecting files from ${packageName}/:\n  ${files}`);
@@ -179,7 +179,6 @@ function watch() {
 	watchWithinPackages(
 		[
 			`${dirs.components}/*/metadata/*.yml`,
-			`${dirs.components}/*/metadata.yml`,
 		],
 		(changedFile, package, done) => {
 			// Do this as gulp tasks to avoid premature stream termination

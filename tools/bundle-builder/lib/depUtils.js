@@ -77,11 +77,11 @@ async function solveDependencies(packages) {
   @return {Object} An array of package names in dependency order
 */
 async function getPackageDependencyOrder(packageDir) {
-	let { name, dependencies } = await getDependencies(packageDir);
+	let { dependencies } = await getDependencies(packageDir);
 
 	return solveDependencies(
 		dependencies.map((dep) =>
-			path.join(path.dirname(require.resolve(dep)), "..")
+			path.dirname(require.resolve(path.join(dep, "package.json")))
 		)
 	);
 }

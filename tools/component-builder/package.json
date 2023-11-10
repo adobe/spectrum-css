@@ -48,7 +48,13 @@
     "through2": "^3.0.1"
   },
   "peerDependencies": {
-    "@spectrum-css/tokens": ">=11",
-    "@spectrum-css/vars": ">=8 <=9"
+    "@spectrum-css/expressvars": ">=3",
+    "@spectrum-css/tokens": ">=13",
+    "@spectrum-css/vars": ">=9"
+  },
+  "peerDependenciesMeta": {
+    "@spectrum-css/expressvars": {
+      "optional": true
+    }
   }
 }
