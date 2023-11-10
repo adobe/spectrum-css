@@ -25,6 +25,8 @@ export const MenuItem = ({
   isDrillIn = false,
   isCollapsible = false,
   isOpen = false,
+  shouldTruncate = false,
+  inlineSize = false,
   role = "menuitem",
   items = [],
   size,
@@ -52,6 +54,7 @@ export const MenuItem = ({
       role=${ifDefined(role)}
       aria-selected=${isSelected ? "true" : "false"}
       aria-disabled=${isDisabled ? "true" : "false"}
+      style=${ifDefined(inlineSize) ? `inline-size: ${inlineSize};` : ""}
       tabindex=${ifDefined(!isDisabled ? "0" : undefined)}>
       ${isCollapsible
         ? Icon({
@@ -79,8 +82,9 @@ export const MenuItem = ({
       }
       ${selectionMode != "multiple" && !isCollapsible
         ? html`<span class=${classMap({
-            [`${rootClass}Label`]: true,
-            ['spectrum-Switch-label']: hasActions,
+          [`${rootClass}Label`]: true,
+          ['spectrum-Switch-label']: hasActions,
+          [`spectrum-Menu-itemLabel--truncate`]: shouldTruncate,
           })}>
           ${label}
         </span>`
@@ -177,7 +181,7 @@ export const MenuGroup = ({
     id=${ifDefined(id)}
     role="presentation"
   >
-    ${!isTraySubmenu 
+    ${!isTraySubmenu
       ? html`<span
           class="spectrum-Menu-sectionHeading"
           id=${id ?? `menu-heading-category-${idx}`}
@@ -189,7 +193,7 @@ export const MenuGroup = ({
               ...globals,
               iconName: backArrowWithScale(size),
               size,
-              customClasses: [`spectrum-Menu-backIcon`] 
+              customClasses: [`spectrum-Menu-backIcon`]
             })}
           </button>
           <span
@@ -254,7 +258,7 @@ export const Template = ({
             customClasses: [`${rootClass}-divider`],
           });
         else if (i.heading || i.isTraySubmenu)
-          return MenuGroup({ 
+          return MenuGroup({
             ...i,
             ...globals,
             subrole,

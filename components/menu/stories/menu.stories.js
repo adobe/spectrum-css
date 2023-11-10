@@ -52,12 +52,27 @@ Default.args = {
   items: [
     { label: "Deselect" },
     { label: "Select Inverse" },
-    { label: "Feather..." },
-    { label: "Select and Mask..." },
+    { label: "Feather" },
+    { label: "Select and Mask" },
     { type: "divider" },
     { label: "Save Selection" },
     { label: "Make Work Path", isDisabled: true },
   ],
+};
+
+export const Truncate = Template.bind({});
+Truncate.args = {
+  items: [
+    { label: "Deselect", },
+    { label: "Select Inverse" },
+    { label: "Feather" },
+    { label: "Select and Mask" },
+    { type: "divider" },
+    { label: "Save Selection" },
+    { label: "Make Work Path", isDisabled: true },
+  ],
+  shouldTruncate: true,
+  inlineSize: '100px',
 };
 
 export const MenuWithSections = Template.bind({});
@@ -335,7 +350,7 @@ DrillInSubmenu.args = {
       isOpen: true,
     },
     {
-      label: "Select and Mask...",
+      label: "Select and Mask",
       isDrillIn: true,
       isDisabled: true,
       isOpen: true,
