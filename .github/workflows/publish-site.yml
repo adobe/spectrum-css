@@ -38,6 +38,7 @@ jobs:
     publish_site:
         name: Publish
         runs-on: ubuntu-latest
+        timeout-minutes: 10
         steps:
             ## --- SETUP --- ##
             - name: Check out code

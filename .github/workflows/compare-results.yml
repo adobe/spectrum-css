@@ -38,6 +38,7 @@ jobs:
     compare:
         name: Compare compiled assets
         runs-on: ubuntu-latest
+        timeout-minutes: 10
         needs: [fetch-build-artifacts]
         outputs:
             has-changed: ${{ steps.compare.outputs.has-changed }}
@@ -102,6 +103,7 @@ jobs:
                     - ${{ inputs.head-sha }}
                     - ${{ inputs.base-sha }}
         runs-on: ubuntu-latest
+        timeout-minutes: 10
         steps:
             - name: Set the cache key for builds
               id: derive-key
