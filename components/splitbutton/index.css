@@ -10,7 +10,7 @@ OF ANY KIND, either express or implied. See the License for the specific languag
 governing permissions and limitations under the License.
 */
 
-@import "../vars/css/components/spectrum-button.css";
+@import "@spectrum-css/vars/dist/components/spectrum-button.css";
 
 .spectrum-SplitButton {
   --spectrum-splitbutton-trigger-border-left: 0;

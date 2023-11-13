@@ -7,6 +7,8 @@ const postcss = require("postcss");
 
 const dirs = require("../lib/dirs.js");
 
+const destination = path.join(__dirname, "../../../dist");
+
 const varDir = path.dirname(require.resolve("@spectrum-css/vars/package.json", {
 	paths: [process.cwd(), path.join(process.cwd(), "../../")]
 }));
@@ -162,7 +164,7 @@ function buildUnique() {
 					file.basename += "-unique";
 				})
 			)
-			.pipe(gulp.dest("dist/vars/"))
+			.pipe(gulp.dest(`${destination}/dependencies/@spectrum-css/vars/`))
 			.on("finish", resolve)
 			.on("error", reject);
 	});
@@ -171,19 +173,19 @@ function buildUnique() {
 function copyVars() {
 	return gulp
 		.src(path.join(varDir, "dist/spectrum-*.css"))
-		.pipe(gulp.dest("dist/components/vars/"));
+		.pipe(gulp.dest(`${destination}/dependencies/@spectrum-css/vars/`));
 }
 
 function copyExpressVars() {
 	return gulp
 		.src(path.join(expressVarDir, "dist/spectrum-*.css"))
-		.pipe(gulp.dest("dist/components/expressvars/"));
+		.pipe(gulp.dest(`${destination}/dependencies/@spectrum-css/expressvars/`));
 }
 
 function copyCoreTokens() {
 	return gulp
 		.src(path.join(coreTokensDir, "dist/**/*.css"))
-		.pipe(gulp.dest("dist/tokens/"));
+		.pipe(gulp.dest(`${destination}/tokens/`));
 }
 
 exports.buildUnique = buildUnique;

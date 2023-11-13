@@ -94,9 +94,7 @@ module.exports = {
 							{
 								loader: "file-loader",
 								options: {
-									outputPath: (url, resourcePath, context) => {
-										return `assets/images/${url.replace(/_\//g, "")}`;
-									},
+									outputPath: (url) => `assets/images/${url.replace(/_\//g, "")}`,
 								},
 							},
 						],
@@ -118,7 +116,11 @@ module.exports = {
 								loader: "file-loader",
 								options: {
 									name: "[path][name].[ext][query]",
-									outputPath: (url, resourcePath, context) => {
+									outputPath: (url) => {
+										if (/node_modules\/@spectrum-css/.test(url)) {
+											return `assets/css/${url.replace(/^_\/_\/node_modules\/@spectrum-css\//g, "")}`;
+										}
+
 										return `assets/css/${url.replace(/_\//g, "")}`;
 									},
 									esModule: false,

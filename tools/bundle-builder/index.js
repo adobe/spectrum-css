@@ -181,7 +181,7 @@ function copyPackages() {
 		.pipe(gulp.dest("dist/components/"));
 }
 
-const buildDocs = gulp.parallel(docs.build, copyPackages);
+const buildDocs = gulp.parallel(docs.build, vars.copyVars, copyPackages);
 
 function buildIfTopLevel() {
 	let builtTasks = gulp.parallel(buildCombined, buildStandalone, buildDocs);
@@ -219,8 +219,6 @@ if (process.cwd() === dirs.topLevel) {
 }
 
 exports.devHeavy = gulp.series(buildHeavy, dev.watch);
-
-exports.copyVars = vars.copyVars;
 
 exports.buildUniqueVars = vars.buildUnique;
 
