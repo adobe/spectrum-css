@@ -3,6 +3,13 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+<a name="8.0.13"></a>
+##8.0.13
+🗓
+2023-11-13 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/tag@8.0.12...@spectrum-css/tag@8.0.13)
+
+**Note:** Version bump only for package @spectrum-css/tag
+
 <a name="8.0.12"></a>
 ##8.0.12
 🗓
