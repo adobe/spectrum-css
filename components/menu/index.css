@@ -537,8 +537,6 @@ governing permissions and limitations under the License.
 
 .spectrum-Menu-itemLabel {
   grid-area: labelArea;
-  display: flex;
-  align-items: flex-start;
   font-size: var(--mod-menu-item-label-font-size, var(--spectrum-menu-item-label-font-size));
   color: var(--highcontrast-menu-item-color-default, var(--mod-menu-item-label-content-color-default, var(--spectrum-menu-item-label-content-color-default)));
 }
@@ -641,7 +639,6 @@ governing permissions and limitations under the License.
 }
 
 .spectrum-Menu-itemLabel--truncate {
-  display: block;
   text-overflow: ellipsis;
   white-space: nowrap;
   overflow: hidden;

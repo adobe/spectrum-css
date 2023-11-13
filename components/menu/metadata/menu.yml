@@ -1265,10 +1265,10 @@ examples:
           <div class="spectrum-Examples-itemGroup">
             <ul class="spectrum-Menu" role="menu">
               <li class="spectrum-Menu-item" role="menuitem" tabindex="0">
-                <label class="spectrum-Switch-label spectrum-Menu-itemLabel" for="switch-onoff-3">
                   <svg class="spectrum-Icon spectrum-Icon--sizeM spectrum-Menu-itemIcon spectrum-Menu-itemIcon--workflowIcon" focusable="false" aria-hidden="true" aria-label="Selection Icon">
                     <use xlink:href="#spectrum-icon-18-Selection"></use>
                   </svg>
+                <label class="spectrum-Switch-label spectrum-Menu-itemLabel" for="switch-onoff-3">
                   Marquee
                 </label>
                 <div class="spectrum-Menu-itemActions">
@@ -1279,10 +1279,10 @@ examples:
                 </div>
               </li>
               <li class="spectrum-Menu-item" role="menuitem" tabindex="0">
+                <svg class="spectrum-Icon spectrum-Icon--sizeM spectrum-Menu-itemIcon spectrum-Menu-itemIcon--workflowIcon" focusable="false" aria-hidden="true" aria-label="Select Add Icon">
+                  <use xlink:href="#spectrum-icon-18-SelectAdd"></use>
+                </svg>
                 <label class="spectrum-Switch-label spectrum-Menu-itemLabel" for="switch-onoff-4">
-                  <svg class="spectrum-Icon spectrum-Icon--sizeM spectrum-Menu-itemIcon spectrum-Menu-itemIcon--workflowIcon" focusable="false" aria-hidden="true" aria-label="Select Add Icon">
-                    <use xlink:href="#spectrum-icon-18-SelectAdd"></use>
-                  </svg>
                   Add
                 </label>
                 <div class="spectrum-Menu-itemActions">
@@ -1293,10 +1293,10 @@ examples:
                 </div>
               </li>
               <li class="spectrum-Menu-item" role="menuitem" tabindex="0">
+                <svg class="spectrum-Icon spectrum-Icon--sizeM spectrum-Menu-itemIcon spectrum-Menu-itemIcon--workflowIcon" focusable="false" aria-hidden="true" aria-label="Select Subtract Icon">
+                  <use xlink:href="#spectrum-icon-18-SelectSubtract"></use>
+                </svg>
                 <label class="spectrum-Switch-label spectrum-Menu-itemLabel" for="switch-onoff-5">
-                  <svg class="spectrum-Icon spectrum-Icon--sizeM spectrum-Menu-itemIcon spectrum-Menu-itemIcon--workflowIcon" focusable="false" aria-hidden="true" aria-label="Select Subtract Icon">
-                    <use xlink:href="#spectrum-icon-18-SelectSubtract"></use>
-                  </svg>
                   Subtract
                 </label>
                 <div class="spectrum-Menu-itemActions">
@@ -1383,7 +1383,7 @@ examples:
     name: Menu with truncating text
     description: To truncate menu items, use the class `spectrum-Menu-itemLabel--truncate` along with a fixed inline size on the item that should truncate
     markup: |
-      <div class="spectrum-Examples">
+      <div class="spectrum-Examples" style="justify-content: flex-start; gap: 25%;">
         <div class="spectrum-Examples-item">
           <ul class="spectrum-Menu spectrum-Menu--sizeM" role="menu" style="inline-size: 100px;">
             <li class="spectrum-Menu-item" role="menuitem" tabindex="0">
