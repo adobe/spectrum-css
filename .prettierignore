@@ -4,15 +4,11 @@
 **/node_modules
 
 components/*/dist
-components/expressvars/custom.css
-components/expressvars/css/**/*.css
-components/vars/css/**/*.css
-components/vars/custom.css
 tokens/custom-*/*.css
 .storybook/storybook-static/**
 generator
 dist
-template.hbs
+*.hbs
 
 site/includes/*.js
 

@@ -1,4 +1,4 @@
-const { resolve, relative, basename } = require("path");
+const { resolve, relative, basename, sep } = require("path");
 const { existsSync } = require("fs");
 const warnCleaner = require("postcss-warn-cleaner");
 
@@ -8,7 +8,7 @@ const legacyBuilder = require("@spectrum-css/component-builder/css/processors.js
 module.exports = (ctx) => {
 	let plugins = [];
 	const componentPath = resolve(__dirname, "../components");
-	const folderName = relative(componentPath, ctx.file).split("/")[0];
+	const folderName = ctx.file.includes('node_modules') ? relative(resolve(__dirname, "../../node_modules/@spectrum-css"), ctx.file)?.split(sep)?.shift() : relative(componentPath, ctx.file).split("/")[0];
 	const pkgPath = resolve(componentPath, folderName, "package.json");
 
 	if (["expressvars", "vars", "tokens"].includes(folderName)) {

@@ -11,87 +11,10 @@ governing permissions and limitations under the License.
 */
 
 const gulp = require("gulp");
-const logger = require("gulplog");
-const colors = require("colors");
-const path = require("path");
-const through = require("through2");
 const postcss = require("gulp-postcss");
 const concat = require("gulp-concat");
-const postcssReal = require("postcss");
-const fsp = require("fs").promises;
-const { parse } = require("postcss-values-parser");
 const processorsFunction = require("./processors").getProcessors;
 const processors = processorsFunction();
-
-function getTokensUsedInValueNode(node, usedTokens) {
-	usedTokens = usedTokens ?? [];
-	if (node.nodes) {
-		node.nodes.forEach((subNode) => {
-			if (subNode.type === "word" && subNode.value.startsWith("--")) {
-				usedTokens.push(subNode.value);
-			} else if (subNode.type === "func") {
-				getTokensUsedInValueNode(subNode, usedTokens);
-			}
-		});
-	}
-	return usedTokens;
-}
-
-function getTokensUsedInCSS(root, coreTokens, componentTokens) {
-	let usedTokens = [];
-	let coreTokensUsed = {};
-	let componentTokensUsed = {};
-
-	root.walkRules((rule) => {
-		rule.walkDecls((decl) => {
-			let matches = decl.value.match(/var\(.*?\)/g);
-			if (matches) {
-				let parsed = parse(decl.value);
-				parsed.nodes.forEach((node) => {
-					const usedTokensInValue = getTokensUsedInValueNode(node);
-					usedTokensInValue.forEach((tokenName) => {
-						if (coreTokens[tokenName]) {
-							coreTokensUsed[tokenName] = (coreTokensUsed[tokenName] ?? 0) + 1;
-						} else if (componentTokens[tokenName]) {
-							componentTokensUsed[tokenName] =
-								(componentTokensUsed[tokenName] ?? 0) + 1;
-						}
-						if (usedTokens.indexOf(tokenName) === -1) {
-							usedTokens.push(tokenName);
-						}
-					});
-				});
-			}
-		});
-	});
-
-	return { usedTokens, coreTokensUsed, componentTokensUsed };
-}
-
-function getTokensDefinedInCSS(root) {
-	let variables = {};
-
-	root.walkRules((rule) => {
-		rule.walkDecls((decl) => {
-			if (decl.prop.startsWith("--")) {
-				variables[decl.prop] = decl.value;
-			}
-		});
-	});
-
-	return variables;
-}
-
-async function getCoreTokens() {
-	const fetchOptions = {
-		paths: [process.cwd(), path.join(process.cwd(), "../../")],
-	};
-	/* Resolve core tokens first from the current working directory, or if not found, from the root of the monorepo */
-	const coreTokensFile = require.resolve("@spectrum-css/tokens", fetchOptions);
-	let contents = await fsp.readFile(coreTokensFile, "utf8");
-	let root = postcssReal.parse(contents);
-	return getTokensDefinedInCSS(root);
-}
 
 function buildCSS() {
 	return gulp
@@ -154,84 +77,10 @@ function buildExpressTheme() {
 		.pipe(gulp.dest("dist/themes/"));
 }
 
-let coreTokens = null;
-function checkCSS(glob) {
-	return gulp
-		.src(glob)
-		.pipe(concat("index-combined.css"))
-		.pipe(
-			through.obj(async function doBake(file, enc, cb) {
-				// Fetch core tokes once during the build
-				if (coreTokens === null) {
-					coreTokens = await getCoreTokens();
-				}
-
-				let pkg = JSON.parse(await fsp.readFile(path.join("package.json")));
-
-				// Parse only once
-				let root = postcssReal.parse(file.contents);
-
-				// Get tokens defined inside of the component
-				let componentTokens = getTokensDefinedInCSS(root);
-
-				// Find all tokens used in the component
-				let { usedTokens } = getTokensUsedInCSS(
-					root,
-					coreTokens,
-					componentTokens
-				);
-
-				// Make sure the component doesn't use any undefined tokens
-				usedTokens.forEach((tokenName) => {
-					if (
-						!coreTokens[tokenName] &&
-						!componentTokens[tokenName] &&
-						!tokenName.startsWith("--mod") &&
-						!tokenName.startsWith("--highcontrast")
-					) {
-						tokenName = `${tokenName}`.cyan;
-						logger.warn(
-							`${"◆".yellow}  ${pkg.name} uses ${
-								"undefined".underline
-							} token ${tokenName}`
-						);
-					}
-				});
-
-				// 2023-05-10: Should remove this to allow for more cascading values to influence nested components
-				// Make sure all tokens defined in the component are used
-				Object.keys(componentTokens).forEach((tokenName) => {
-					if (!usedTokens.includes(tokenName)) {
-						tokenName = `${tokenName}`.cyan;
-						logger.warn(
-							`${"◆".yellow}  ${
-								pkg.name
-							} defines ${tokenName}, but does not use it ${
-								"internally".italic
-							}`
-						);
-					}
-				});
-
-				cb(null);
-			})
-		);
-}
-
-function checkSourceCSS() {
-	return checkCSS(["themes/*.css", "index.css"]);
-}
-
-function checkBuiltCSS() {
-	return checkCSS("dist/index.css");
-}
-
 exports.buildCSS = gulp.series(
-	checkSourceCSS,
 	gulp.parallel(
 		buildCSS,
 		buildCSSWithoutThemes,
 		gulp.series(buildCSSThemes, buildCSSThemeIndex, buildExpressTheme)
 	),
-	checkBuiltCSS
 );
