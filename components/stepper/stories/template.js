@@ -1,10 +1,10 @@
 import { html } from "lit";
 import { classMap } from "lit/directives/class-map.js";
-import { styleMap } from "lit/directives/style-map.js";
 import { ifDefined } from "lit/directives/if-defined.js";
+import { styleMap } from "lit/directives/style-map.js";
 
-import { Template as Textfield } from "@spectrum-css/textfield/stories/template.js";
 import { Template as InfieldButton } from "@spectrum-css/infieldbutton/stories/template.js";
+import { Template as Textfield } from "@spectrum-css/textfield/stories/template.js";
 
 import "../index.css";
 
@@ -74,6 +74,7 @@ export const Template = ({
 				value: "0",
 				isDisabled,
 				isQuiet,
+				id: id ? `${id}-input` : undefined,
 				customClasses: [`${rootClass}-textfield`],
 				customInputClasses: [`${rootClass}-input`],
 			})}

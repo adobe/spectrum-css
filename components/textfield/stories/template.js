@@ -28,10 +28,11 @@ export const Template = ({
 	isReadOnly = false,
 	isKeyboardFocused = false,
 	isLoading = false,
+	iconName,
 	pattern,
 	placeholder,
 	name,
-	iconName,
+	id,
 	value,
 	type = "text",
 	autocomplete = true,
@@ -83,6 +84,7 @@ export const Template = ({
 					: { isFocused: false };
 				updateArgs(focusClass);
 			}}
+			id=${ifDefined(id)}
 		>
 			${when(iconName, () => Icon({
 				...globals,
@@ -95,34 +97,39 @@ export const Template = ({
 					...customIconClasses,
 				],
 			}))}
-			${when(multiline, () => html`<textarea
-				placeholder=${ifDefined(placeholder)}
-				name=${ifDefined(name)}
-				.value=${ifDefined(value)}
-				autocomplete=${autocomplete ? undefined : "off"}
-				?required=${isRequired}
-				?disabled=${isDisabled}
-				?readonly=${ifDefined(isReadOnly)}
-				pattern=${ifDefined(pattern)}
-				class=${classMap({
-					[`${rootClass}-input`]: true,
-					...customInputClasses.reduce((a, c) => ({ ...a, [c]: true }), {}),
-				})}
-			/>`, () => html` <input
-						type=${ifDefined(type)}
-						placeholder=${ifDefined(placeholder)}
-						name=${ifDefined(name)}
-						value=${ifDefined(value)}
-						autocomplete=${autocomplete ? undefined : "off"}
-						?required=${isRequired}
-						?disabled=${isDisabled}
-						readonly=${ifDefined(isReadOnly ? "readonly" : undefined)}
-						pattern=${ifDefined(pattern)}
-						class=${classMap({
-							[`${rootClass}-input`]: true,
-							...customInputClasses.reduce((a, c) => ({ ...a, [c]: true }), {}),
-						})}
-				  />`)}
+			${when(multiline, 
+				() => html`<textarea
+					placeholder=${ifDefined(placeholder)}
+					name=${ifDefined(name)}
+					id=${ifDefined(id ? `${id}-input` : undefined)}
+					.value=${ifDefined(value)}
+					autocomplete=${autocomplete ? undefined : "off"}
+					?required=${isRequired}
+					?disabled=${isDisabled}
+					?readonly=${ifDefined(isReadOnly)}
+					pattern=${ifDefined(pattern)}
+					class=${classMap({
+						[`${rootClass}-input`]: true,
+						...customInputClasses.reduce((a, c) => ({ ...a, [c]: true }), {}),
+					})}
+				/>`, 
+				() => html`<input
+					type=${ifDefined(type)}
+					placeholder=${ifDefined(placeholder)}
+					name=${ifDefined(name)}
+					id=${ifDefined(id ? `${id}-input` : undefined)}
+					.value=${ifDefined(value)}
+					autocomplete=${autocomplete ? undefined : "off"}
+					?required=${isRequired}
+					?disabled=${isDisabled}
+					?readonly=${ifDefined(isReadOnly)}
+					pattern=${ifDefined(pattern)}
+					class=${classMap({
+						[`${rootClass}-input`]: true,
+						...customInputClasses.reduce((a, c) => ({ ...a, [c]: true }), {}),
+					})}
+				/>`
+			)}
 			${when(isLoading, () => ProgressCircle({
 				isIndeterminate: true,
 				size: "s",
