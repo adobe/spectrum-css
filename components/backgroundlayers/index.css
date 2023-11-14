@@ -9,11 +9,9 @@ the License is distributed on an "AS IS" BASIS, WITHOUT WARRANTIES OR REPRESENTA
 OF ANY KIND, either express or implied. See the License for the specific language
 governing permissions and limitations under the License.
 */
-
-/* used in editing and browsing contexts */
-
 @import "../../tools/background-layer-props.css";
 
+/* used in editing and browsing contexts */
 .spectrum-BackgroundLayers--elevated {
 	background-color: var(--bg-color-elevated);
 	filter: drop-shadow(
@@ -43,4 +41,3 @@ governing permissions and limitations under the License.
 	border: 2px solid var(--border-color-1);
 	background-color: var(--bg-color-base);
 }
-
