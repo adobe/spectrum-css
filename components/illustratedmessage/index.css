@@ -61,7 +61,7 @@ governing permissions and limitations under the License.
   justify-content: center;
 
   text-align: center;
-  pointer-events: var(--mod-illustrated-message-pointer-events);
+  pointer-events: var(--mod-illustrated-message-pointer-events, auto);
   max-inline-size: var(--mod-illustrated-message-content-maximum-width);
 }
 
@@ -96,7 +96,7 @@ governing permissions and limitations under the License.
 .spectrum-IllustratedMessage-description {
   position: var(--mod-illustrated-message-description-position);
   z-index: var(--mod-illustrated-message-description-z-index);
-  pointer-events: var(--mod-illustrated-message-description-pointer-events);
+  pointer-events: var(--mod-illustrated-message-description-pointer-events, auto);
 
   font-family: var(--mod-illustrated-message-description-font-family, var(--spectrum-illustrated-message-description-font-family));
   font-weight: var(--mod-illustrated-message-description-font-weight, var(--spectrum-illustrated-message-description-font-weight));
