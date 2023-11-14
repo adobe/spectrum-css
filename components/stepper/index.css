@@ -227,7 +227,6 @@ governing permissions and limitations under the License.
 
   .spectrum-Stepper-button {
     --mod-infield-button-border-block-end-width: var(--mod-stepper-border-width, var(--spectrum-stepper-border-width));
-    --mod-infield-button-stacked-bottom-border-block-end-width: var(--mod-stepper-border-width, var(--spectrum-stepper-border-width));
     --mod-infield-button-stacked-bottom-border-radius-end-end: 0;
     --mod-infield-button-stacked-bottom-border-radius-end-start: 0;
     --mod-infield-button-fill-justify-content: flex-end;
