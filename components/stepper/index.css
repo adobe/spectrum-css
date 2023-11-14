@@ -226,17 +226,11 @@ governing permissions and limitations under the License.
   }
 
   .spectrum-Stepper-button {
+    --mod-infield-button-border-block-end-width: var(--mod-stepper-border-width, var(--spectrum-stepper-border-width));
+    --mod-infield-button-stacked-bottom-border-radius-end-end: 0;
+    --mod-infield-button-stacked-bottom-border-radius-end-start: 0;
+    --mod-infield-button-fill-justify-content: flex-end;
     padding: 0;
-  }
-
-  .spectrum-Stepper-button.spectrum-InfieldButton--bottom .spectrum-InfieldButton-fill {
-    border-block-end-width: var(--mod-stepper-border-width, var(--spectrum-stepper-border-width));
-    border-end-end-radius: 0;
-    border-end-start-radius: 0;
-  }
-
-  .spectrum-Stepper-button .spectrum-InfieldButton-fill {
-    justify-content: flex-end;
   }
 
   .spectrum-Stepper-input,
@@ -305,14 +299,6 @@ governing permissions and limitations under the License.
 
   background-color: var(--highcontrast-stepper-buttons-background-color, var(--mod-stepper-buttons-background-color, var(--spectrum-stepper-buttons-background-color)));
   transition: border-color var(--mod-stepper-animation-duration, var(--spectrum-stepper-animation-duration)) ease-in-out;
-}
-
-.spectrum-Stepper-button.spectrum-InfieldButton--top {
-  padding-block-start: calc(var(--mod-stepper-button-padding, var(--spectrum-stepper-button-padding)) - var(--mod-stepper-border-width, var(--spectrum-stepper-border-width)));
-}
-
-.spectrum-Stepper-button.spectrum-InfieldButton--bottom {
-  padding-block-end: calc(var(--mod-stepper-button-padding, var(--spectrum-stepper-button-padding)) - var(--mod-stepper-border-width, var(--spectrum-stepper-border-width)));
 }
 
 /* hide-stepper */
