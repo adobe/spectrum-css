@@ -92,7 +92,6 @@ governing permissions and limitations under the License.
 }
 
 .spectrum-DropZone {
-  position: relative;
   box-sizing: border-box;
   inline-size: var(--mod-drop-zone-width, var(--spectrum-drop-zone-width));
   padding: calc(var(--mod-drop-zone-padding, var(--spectrum-drop-zone-padding)) - var(--mod-drop-zone-border-width, var(--spectrum-drop-zone-border-width)));
@@ -102,16 +101,7 @@ governing permissions and limitations under the License.
   border-radius: var(--mod-drop-zone-corner-radius, var(--spectrum-drop-zone-corner-radius));
   border-style: var(--mod-drop-zone-border-style, dashed);
   background-size: cover;
-
-  &::after {
-    content: "";
-    block-size: 100%;
-    inline-size: 100%;
-    position: absolute;
-    inset-inline-start: 0;
-    inset-block-start: 0;
-    background-color: var(--mod-drop-zone-background-color, var(--spectrum-drop-zone-background-color));
-  }
+  background-color: var(--mod-drop-zone-background-color, var(--spectrum-drop-zone-background-color));
 
   &.is-dragged {
     /* @deprecation --mod-drop-zone-border-style--dragged will be removed during the S2 migration; please update your code to --mod-drop-zone-border-style-dragged */
