@@ -45,56 +45,56 @@ Spectrum CSS components have build output that uses CSS custom properties to cha
 ```html
 <!-- Include global variables first -->
 <link
-	rel="stylesheet"
-	href="node_modules/@spectrum-css/vars/dist/spectrum-global.css"
+ rel="stylesheet"
+ href="node_modules/@spectrum-css/vars/dist/spectrum-global.css"
 />
 
 <!-- Include only the scales your application needs -->
 <link
-	rel="stylesheet"
-	href="node_modules/@spectrum-css/vars/dist/spectrum-medium.css"
+ rel="stylesheet"
+ href="node_modules/@spectrum-css/vars/dist/spectrum-medium.css"
 />
 <link
-	rel="stylesheet"
-	href="node_modules/@spectrum-css/vars/dist/spectrum-large.css"
+ rel="stylesheet"
+ href="node_modules/@spectrum-css/vars/dist/spectrum-large.css"
 />
 
 <!-- Include only the colorstops your application needs -->
 <link
-	rel="stylesheet"
-	href="node_modules/@spectrum-css/vars/dist/spectrum-light.css"
+ rel="stylesheet"
+ href="node_modules/@spectrum-css/vars/dist/spectrum-light.css"
 />
 <link
-	rel="stylesheet"
-	href="node_modules/@spectrum-css/vars/dist/spectrum-dark.css"
+ rel="stylesheet"
+ href="node_modules/@spectrum-css/vars/dist/spectrum-dark.css"
 />
 <link
-	rel="stylesheet"
-	href="node_modules/@spectrum-css/vars/dist/spectrum-darkest.css"
+ rel="stylesheet"
+ href="node_modules/@spectrum-css/vars/dist/spectrum-darkest.css"
 />
 
 <!-- Include tokens -->
 <link
-	rel="stylesheet"
-	href="node_modules/@spectrum-css/tokens/dist/index.css"
+ rel="stylesheet"
+ href="node_modules/@spectrum-css/tokens/dist/index.css"
 />
 
 <!-- Include index-vars.css for all components you need -->
 <link
-	rel="stylesheet"
-	href="node_modules/@spectrum-css/page/dist/index-vars.css"
+ rel="stylesheet"
+ href="node_modules/@spectrum-css/page/dist/index-vars.css"
 />
 <link
-	rel="stylesheet"
-	href="node_modules/@spectrum-css/typography/dist/index-vars.css"
+ rel="stylesheet"
+ href="node_modules/@spectrum-css/typography/dist/index-vars.css"
 />
 <link
-	rel="stylesheet"
-	href="node_modules/@spectrum-css/icon/dist/index-vars.css"
+ rel="stylesheet"
+ href="node_modules/@spectrum-css/icon/dist/index-vars.css"
 />
 <link
-	rel="stylesheet"
-	href="node_modules/@spectrum-css/button/dist/index-vars.css"
+ rel="stylesheet"
+ href="node_modules/@spectrum-css/button/dist/index-vars.css"
 />
 ```
 
@@ -108,27 +108,27 @@ To switch to Express, load vars from `@spectrum-css/expressvars` instead of `@sp
 
 ```html
 <html class="spectrum spectrum--medium spectrum--light spectrum--express">
-	<head>
-		<!-- Include only the scales your application needs -->
-		<link
-			rel="stylesheet"
-			href="node_modules/@spectrum-css/expressvars/dist/spectrum-medium.css"
-		/>
-		<link
-			rel="stylesheet"
-			href="node_modules/@spectrum-css/expressvars/dist/spectrum-large.css"
-		/>
+ <head>
+  <!-- Include only the scales your application needs -->
+  <link
+   rel="stylesheet"
+   href="node_modules/@spectrum-css/expressvars/dist/spectrum-medium.css"
+  />
+  <link
+   rel="stylesheet"
+   href="node_modules/@spectrum-css/expressvars/dist/spectrum-large.css"
+  />
 
-		<!-- Include only the colorstops your application needs -->
-		<link
-			rel="stylesheet"
-			href="node_modules/@spectrum-css/expressvars/dist/spectrum-light.css"
-		/>
-		<link
-			rel="stylesheet"
-			href="node_modules/@spectrum-css/expressvars/dist/spectrum-dark.css"
-		/>
-	</head>
+  <!-- Include only the colorstops your application needs -->
+  <link
+   rel="stylesheet"
+   href="node_modules/@spectrum-css/expressvars/dist/spectrum-light.css"
+  />
+  <link
+   rel="stylesheet"
+   href="node_modules/@spectrum-css/expressvars/dist/spectrum-dark.css"
+  />
+ </head>
 </html>
 ```
 
@@ -169,7 +169,7 @@ These icons are released within the [`@adobe/spectrum-css-workflow-icons`](https
 
 ```js
 loadIcons(
-	"node_modules/@adobe/spectrum-css-workflow-icons/dist/spectrum-icons.svg"
+ "node_modules/@adobe/spectrum-css-workflow-icons/dist/spectrum-icons.svg"
 );
 ```
 
@@ -212,12 +212,12 @@ Spectrum CSS is designed to be as flexible as possible, and as such, leaves room
 
 ```json
 {
-	"name": "my-project",
-	"devDependencies": {
-		"@spectrum-css/button": "^3.0.0",
-		"@spectrum-css/page": "^3.0.0",
-		"@spectrum-css/vars": "^3.0.0"
-	}
+ "name": "my-project",
+ "devDependencies": {
+  "@spectrum-css/button": "^3.0.0",
+  "@spectrum-css/page": "^3.0.0",
+  "@spectrum-css/vars": "^3.0.0"
+ }
 }
 ```
 
@@ -243,12 +243,12 @@ Next, create a `postcss.config.js`:
 
 ```js
 module.exports = {
-	plugins: [
-		require("postcss-import"),
-		require("postcss-varfallback"),
-		require("postcss-dropunusedvars"),
-		require("cssnano"),
-	],
+ plugins: [
+  require("postcss-import"),
+  require("postcss-varfallback"),
+  require("postcss-dropunusedvars"),
+  require("cssnano"),
+ ],
 };
 ```
 
@@ -278,34 +278,34 @@ Then, add something like this to your `postcss.config.js`:
 
 ```js
 module.exports = {
-	plugins: [
-		require("postcss-transformselectors")({
-			replace: [
-				{ search: ".spectrum-Heading--sizeXXL", replace: "h1" },
-				{ search: ".spectrum-Heading--sizeXL", replace: "h2" },
-				{ search: ".spectrum-Heading--sizeL", replace: "h3" },
-			],
-			transform: (selector) => {
-				if (selector.startsWith(".spectrum-Heading")) {
-					// Operate on each selector in a selector list
-					return selector
-						.split(",")
-						.map((selectorPart) => {
-							// Create separate selectors for each reference to .spectrum-Heading
-							return ["h1", "h2", "h3"]
-								.map((h) => {
-									return selectorPart.replace(".spectrum-Heading", h);
-								})
-								.join(",");
-						})
-						.join(",");
-				}
+ plugins: [
+  require("postcss-transformselectors")({
+   replace: [
+    { search: ".spectrum-Heading--sizeXXL", replace: "h1" },
+    { search: ".spectrum-Heading--sizeXL", replace: "h2" },
+    { search: ".spectrum-Heading--sizeL", replace: "h3" },
+   ],
+   transform: (selector) => {
+    if (selector.startsWith(".spectrum-Heading")) {
+     // Operate on each selector in a selector list
+     return selector
+      .split(",")
+      .map((selectorPart) => {
+       // Create separate selectors for each reference to .spectrum-Heading
+       return ["h1", "h2", "h3"]
+        .map((h) => {
+         return selectorPart.replace(".spectrum-Heading", h);
+        })
+        .join(",");
+      })
+      .join(",");
+    }
 
-				// Don't mess with things that don't have .spectrum-Heading in them
-				return selector;
-			},
-		}),
-	],
+    // Don't mess with things that don't have .spectrum-Heading in them
+    return selector;
+   },
+  }),
+ ],
 };
 ```
 
@@ -330,53 +330,14 @@ This project is leveraging caching from [Nx](https://nx.dev/) to speed up the bu
 
 To spin up the local development environment ([Storybook](https://storybook.js.org/docs/web-components/get-started/introduction)) without first building the components, use: `SKIP_BUILD=true yarn start` as `yarn start` alone will start from a clean build.
 
-### Documentation site
+### Tasks
 
-#### Local documentation site
+This project includes several small scripts to help with common tasks.
 
-Building the project will build and launch the project documentation site in your browser automatically.
-
-See [site generation](site/README.md) for more information.
-
-#### Generating and deploying external documentation site
-
-Checkout `nextjs` branch, pull, and install dependencies.
-
-```shell
-git checkout nextjs
-git pull
-yarn install
-```
-
-Update `yml` data from main
-
-```shell
-yarn importdata
-```
-
-Run `prep` script to build the static site locally
-
-```shell
-yarn prep
-```
-
-Commit changes
-
-```shell
-git commit -am '<message here>'
-```
-
-Deploy
-
-```shell
-yarn deploy
-```
-
-Push changes to `nextjs` branch
-
-```shell
-git push origin nextjs
-```
+- `yarn compare`: This compares the current version of components with the previous versions published to NPM and output a list of all the changes that have been made. This is useful for reviewing changes before a release. The information is provided in the command-line output as well as in a simple web page that is opened in your default browser upon completion.  The web page includes links to the visual diffs for each component when the file sizes have changed. Components with no changes are not included in the output.
+- `yarn refresh:env`: This copies values for the project's `.env` file (an asset never committed to the repo as it contains login secrets) by using the `.env.example` file as a template. This script is useful when you need to update the `.env` file with new values from the `.env.example` file or when you checkout or clean the repo and need to restore the `.env` file.
+- `yarn refresh:directory`: This will remove any deprecated package folders that are no longer in use. The goal is to make migrating to a new project architecture easier for the most number of users.
+- `yarn lint:components`: Provides helpful updates and warnings for a component's package.json file. This helps keep all components in alignment.
 
 ### CLI
 

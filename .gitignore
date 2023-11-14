@@ -24,3 +24,6 @@ build-storybook.log
 # Chromatic
 chromatic-build-*.xml
 chromatic-diagnostics*.json
+
+# Custom diff tool
+.diff-output
