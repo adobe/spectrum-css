@@ -80,13 +80,13 @@ governing permissions and limitations under the License.
 		--spectrum-tabs-start-to-edge: var(--spectrum-tab-item-start-to-edge-small);
 		--spectrum-tabs-top-to-text: var(--spectrum-tab-item-top-to-text-small);
 		--spectrum-tabs-bottom-to-text: var(--spectrum-tab-item-bottom-to-text-small);
-	
+
 		--spectrum-tabs-icon-size: var(--spectrum-workflow-icon-size-50);
 		--spectrum-tabs-icon-to-text: var(--spectrum-text-to-visual-75);
 		--spectrum-tabs-top-to-icon: var(
 			--spectrum-tab-item-top-to-workflow-icon-small
 		);
-	
+
 		--spectrum-tabs-focus-indicator-gap: var(
 			--spectrum-tab-item-focus-indicator-gap-small
 		);
@@ -104,13 +104,13 @@ governing permissions and limitations under the License.
 		--spectrum-tabs-start-to-edge: var(--spectrum-tab-item-start-to-edge-large);
 		--spectrum-tabs-top-to-text: var(--spectrum-tab-item-top-to-text-large);
 		--spectrum-tabs-bottom-to-text: var(--spectrum-tab-item-bottom-to-text-large);
-	
+
 		--spectrum-tabs-icon-size: var(--spectrum-workflow-icon-size-100);
 		--spectrum-tabs-icon-to-text: var(--spectrum-text-to-visual-200);
 		--spectrum-tabs-top-to-icon: var(
 			--spectrum-tab-item-top-to-workflow-icon-large
 		);
-	
+
 		--spectrum-tabs-focus-indicator-gap: var(
 			--spectrum-tab-item-focus-indicator-gap-large
 		);
@@ -132,13 +132,13 @@ governing permissions and limitations under the License.
 		--spectrum-tabs-bottom-to-text: var(
 			--spectrum-tab-item-bottom-to-text-extra-large
 		);
-	
+
 		--spectrum-tabs-icon-size: var(--spectrum-workflow-icon-size-200);
 		--spectrum-tabs-icon-to-text: var(--spectrum-text-to-visual-300);
 		--spectrum-tabs-top-to-icon: var(
 			--spectrum-tab-item-top-to-workflow-icon-extra-large
 		);
-	
+
 		--spectrum-tabs-focus-indicator-gap: var(
 			--spectrum-tab-item-focus-indicator-gap-extra-large
 		);
@@ -158,7 +158,7 @@ governing permissions and limitations under the License.
 			--mod-tabs-color-key-focus-emphasized,
 			var(--spectrum-accent-content-color-key-focus)
 		);
-	
+
 		--mod-tabs-selection-indicator-color: var(
 			--mod-tabs-selection-indicator-color-emphasized,
 			var(--spectrum-accent-content-color-default)
@@ -408,7 +408,6 @@ governing permissions and limitations under the License.
 		}
 	}
 
-	&:focus,
 	&:focus-visible {
 		color: var(
 			--highcontrast-tabs-color-key-focus,
@@ -572,7 +571,7 @@ governing permissions and limitations under the License.
 	}
 }
 
-.spectrum-Tabs--vertical-right { 
+.spectrum-Tabs--vertical-right {
 	.spectrum-Tabs-selectionIndicator {
 		inset-inline: auto 0;
 	}
