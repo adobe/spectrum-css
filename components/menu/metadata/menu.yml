@@ -1340,7 +1340,8 @@ examples:
       </div>
   - id: tray-submenus
     name: Tray submenus
-    description: When a menu is displayed within a tray, a submenu will replace the tray content when the parent menu item is selected. A submenu displays a back button (labeled by the title of the parent item) at the top of the tray to return the user to the previous level of the menu.
+    description: "When a menu is displayed within a tray, a submenu will replace the tray content when the parent menu item is selected. A submenu displays a back button (labeled by the title of the parent item) at the top of the tray to return the user to the previous level of the menu.
+      The back arrow size scale used with the various menu sizes are small: `200`, medium: `300`, large: `400`, and extra large: `500`."
     markup: |
       <div class="spectrum-Tray-wrapper spectrum-CSSExample-dialog" style="background: rgba(0,0,0,0.4);">
         <div class="spectrum-Modal spectrum-Tray is-open spectrum-Tray">
@@ -1349,9 +1350,9 @@ examples:
               <div class="spectrum-Menu-back">
                 <button aria-label="Back to previous menu" class="spectrum-Menu-backButton" type="button" role="menuitem">
                   <svg
-                    class="spectrum-Icon spectrum-Icon--sizeM spectrum-UIIcon-ArrowLeft100 spectrum-Menu-backIcon"
+                    class="spectrum-Icon spectrum-Icon--sizeM spectrum-UIIcon-ArrowLeft200 spectrum-Menu-backIcon"
                     aria-hidden="true"
-                  ><use xlink:href="#spectrum-css-icon-Arrow100" /></svg>
+                  ><use xlink:href="#spectrum-css-icon-Arrow200" /></svg>
                 </button>
                 <span class="spectrum-Menu-backHeading" id="back-menu-heading" aria-hidden="true">Snap to</span>
               </div>

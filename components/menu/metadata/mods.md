@@ -4,7 +4,9 @@
 | `--mod-menu-back-icon-color-default`                               |
 | `--mod-menu-back-icon-margin-block`                                |
 | `--mod-menu-back-icon-margin-inline`                               |
-| `--mod-menu-back-padding-block`                                    |
+| `--mod-menu-back-padding-block-end`                                |
+| `--mod-menu-back-padding-block-start`                              |
+| `--mod-menu-back-padding-inline-end`                               |
 | `--mod-menu-back-padding-inline-start`                             |
 | `--mod-menu-checkmark-display`                                     |
 | `--mod-menu-checkmark-icon-color-default`                          |

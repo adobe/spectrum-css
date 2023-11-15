@@ -145,6 +145,22 @@ export const MenuItem = ({
   `
 };
 
+/**
+ * Get the tray submenu back arrow name with scale number (defined in design spec).
+ */
+const backArrowWithScale = (size = "m", iconName = "ArrowLeft") => {
+  switch (size) {
+    case "s":
+      return `${iconName}200`;
+    case "l":
+      return `${iconName}400`;
+    case "xl":
+      return `${iconName}500`;
+    default:
+      return `${iconName}300`;
+  }
+}
+
 export const MenuGroup = ({
   heading,
   id,
@@ -171,7 +187,7 @@ export const MenuGroup = ({
           <button aria-label="Back to previous menu" class="spectrum-Menu-backButton" type="button" role="menuitem">
             ${Icon({
               ...globals,
-              iconName: "ArrowLeft",
+              iconName: backArrowWithScale(size),
               size,
               customClasses: [`spectrum-Menu-backIcon`] 
             })}
