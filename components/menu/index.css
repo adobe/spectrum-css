@@ -377,7 +377,7 @@ governing permissions and limitations under the License.
   display: grid;
   /* stylelint-disable declaration-block-no-redundant-longhand-properties */
   grid-template-areas:
-    ".            chevronAreaCollapsible .             iconArea sectionHeadingArea  .         .           .                 "
+    ".            chevronAreaCollapsible .             headingIconArea  sectionHeadingArea  .         .           .                 "
     "selectedArea chevronAreaCollapsible checkmarkArea iconArea labelArea        valueArea actionsArea chevronAreaDrillIn"
     ".            .                      .             .        descriptionArea  .         .           .                 "
     ".            .                      .             .        submenuArea      .         .           .                 ";
@@ -525,6 +525,18 @@ governing permissions and limitations under the License.
   grid-area: iconArea;
   align-self: start;
 }
+
+.spectrum-Menu-item--collapsible .spectrum-Menu-itemIcon {
+  grid-area: headingIconArea;
+}
+
+.is-selectableMultiple .spectrum-Menu-item {
+  align-items: start;
+}
+.is-selectableMultiple .spectrum-Menu-itemCheckbox {
+  grid-area: iconArea;
+}
+
 
 .spectrum-Menu-checkmark {
   grid-area: checkmarkArea;

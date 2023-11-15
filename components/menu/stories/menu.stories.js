@@ -23,6 +23,25 @@ export default {
 			options: ["s", "m", "l", "xl"],
 			control: "select",
 		},
+    shouldTruncate: {
+      name: "Truncate menu item label",
+      type: { name: "boolean" },
+      table: {
+        type: { summary: "boolean" },
+        category: "Component",
+      },
+      control: "boolean",
+    },
+    maxInlineSize: {
+			name: "Max Inline Size",
+			type: { name: "text", required: true },
+			table: {
+				type: { summary: "text" },
+				category: "Component",
+			},
+			control: "number",
+      if: { arg: "shouldTruncate", truthy: true },
+		},
     hasActions: { table: { disable: true } },
     labelledby: { table: { disable: true } },
     items: { table: { disable: true } },
@@ -33,6 +52,8 @@ export default {
     rootClass: "spectrum-Menu",
     selectionMode: "none",
     size: "m",
+    shouldTruncate: false,
+    maxInlineSize: "150"
   },
   parameters: {
     actions: {
@@ -72,7 +93,7 @@ Truncate.args = {
     { label: "Make Work Path", isDisabled: true },
   ],
   shouldTruncate: true,
-  inlineSize: '100px',
+  maxInlineSize: '100',
 };
 
 export const MenuWithSections = Template.bind({});
@@ -361,6 +382,7 @@ DrillInSubmenu.args = {
 
 export const Collapsible = Template.bind({});
 Collapsible.args = {
+  shouldTruncate: true,
   items: [
     {
       label: "Web Design",
