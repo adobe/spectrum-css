@@ -475,9 +475,7 @@ governing permissions and limitations under the License.
 		);
 	}
 
-	&.is-keyboardFocused,
-	&:focus-visible,
-	&:focus-within {
+	&.is-keyboardFocused {
 		&::after {
 			background-color: var(
 				--highcontrast-textfield-focus-indicator-color,
@@ -965,8 +963,7 @@ governing permissions and limitations under the License.
 	}
 
 	/* keyboard focus */
-	.is-keyboardFocused &,
-	&:focus-visible {
+	.is-keyboardFocused & {
 		border-color: var(
 			--highcontrast-textfield-border-color-keyboard-focus,
 			var(

@@ -152,7 +152,23 @@ examples:
         </div>
       </div>
 
-  - id: textfield
+  - id: textfield-focused
+    name: Focused
+    markup: |
+      <div class="spectrum-Textfield is-focused">
+        <label for="textfield-focused" class="spectrum-FieldLabel spectrum-FieldLabel--sizeM">Enter your name</label>
+        <input id="textfield-focused" type="text" name="field" value="" class="spectrum-Textfield-input">
+      </div>
+
+  - id: textfield-keyboard-focused
+    name: Keyboard Focused
+    markup: |
+      <div class="spectrum-Textfield is-keyboardFocused">
+        <label for="textfield-keyboard-focused" class="spectrum-FieldLabel spectrum-FieldLabel--sizeM">Enter your name</label>
+        <input id="textfield-keyboard-focused" type="text" name="field" value="" class="spectrum-Textfield-input">
+      </div>
+
+  - id: textfield-disabled
     name: Disabled
     markup: |
       <div class="spectrum-Textfield is-disabled">
@@ -168,7 +184,7 @@ examples:
         <input id="textfield-readonly" type="text" name="field" value="This text is read-only" class="spectrum-Textfield-input" pattern="[\w\s]+" readonly="readonly">
       </div>
 
-  - id: textfield
+  - id: textfield-valid
     name: Valid
     description: |
       *Spectrum for Adobe Express uses a different icon. Use the `SX_Alert_18_N.svg` icon in the Express workflow icon set.*
@@ -205,7 +221,7 @@ examples:
         <input id="textfield-xl-valid" type="text" name="field" value="A valid input" class="spectrum-Textfield-input" pattern="[\w\s]+" required>
       </div>
 
-  - id: textfield
+  - id: textfield-valid-disabled
     name: Valid (disabled)
     markup: |
       <div class="spectrum-Textfield is-valid is-disabled">
@@ -216,7 +232,7 @@ examples:
         <input id="textfield-valid-disabled" type="text" name="field" value="A valid input" class="spectrum-Textfield-input" pattern="[\w\s]+" required disabled>
       </div>
 
-  - id: textfield
+  - id: textfield-invalid
     name: Invalid
     description: |
       *Spectrum for Adobe Express uses a different icon. Use the `SX_Alert_18_N.svg` icon in the Express workflow icon set.*
@@ -265,7 +281,7 @@ examples:
         </div>
       </div>
 
-  - id: textfield
+  - id: textfield-invalid-disabled
     name: Invalid (disabled)
     markup: |
       <div class="spectrum-Textfield is-invalid is-disabled">
@@ -276,23 +292,7 @@ examples:
         <input id="textfield-invalid-disabled" type="text" name="field" value="Invalid input" class="spectrum-Textfield-input" pattern="[\w\s]+" disabled>
       </div>
 
-  - id: textfield
-    name: Focused
-    markup: |
-      <div class="spectrum-Textfield is-focused">
-        <label for="textfield-focused" class="spectrum-FieldLabel spectrum-FieldLabel--sizeM">Enter your name</label>
-        <input id="textfield-focused" type="text" name="field" value="" class="spectrum-Textfield-input">
-      </div>
-
-  - id: textfield
-    name: Keyboard Focused
-    markup: |
-      <div class="spectrum-Textfield is-keyboardFocused">
-        <label for="textfield-keyboard-focused" class="spectrum-FieldLabel spectrum-FieldLabel--sizeM">Enter your name</label>
-        <input id="textfield-keyboard-focused" type="text" name="field" value="" class="spectrum-Textfield-input">
-      </div>
-
-  - id: textfield
+  - id: textfield-focused-invalid
     name: Focused (invalid)
     description: |
       *Spectrum for Adobe Express uses a different icon. Use the `SX_Alert_18_N.svg` icon in the Express workflow icon set.*
@@ -305,7 +305,7 @@ examples:
         <input id="textfield-focused-invalid" type="text" name="field" value="Invalid input" class="spectrum-Textfield-input" pattern="[\w\s]+" required>
       </div>
 
-  - id: textfield
+  - id: textfield-keyboard-focused-invalid
     name: Keyboard Focused (invalid)
     description: |
       *Spectrum for Adobe Express uses a different icon. Use the `SX_Alert_18_N.svg` icon in the Express workflow icon set.*
@@ -326,7 +326,7 @@ examples:
         <input id="textfield-quiet" type="text" name="field" value="" class="spectrum-Textfield-input">
       </div>
 
-  - id: textfield-quiet
+  - id: textfield-quiet-disabled
     name: Quiet Disabled
     markup: |
       <div class="spectrum-Textfield spectrum-Textfield--quiet is-disabled">
@@ -334,7 +334,7 @@ examples:
         <input id="textfield-quiet-disabled" type="text" name="field" value="" class="spectrum-Textfield-input" disabled>
       </div>
 
-  - id: textfield-quiet
+  - id: textfield-quiet-valid
     name: Quiet Valid
     markup: |
       <div class="spectrum-Textfield spectrum-Textfield--quiet is-valid">
@@ -345,7 +345,7 @@ examples:
         <input id="textfield-quiet-valid" type="text" name="field" value="A valid input" class="spectrum-Textfield-input" required>
       </div>
 
-  - id: textfield-quiet
+  - id: textfield-quiet-valid-disabled
     name: Quiet Valid (disabled)
     markup: |
       <div class="spectrum-Textfield spectrum-Textfield--quiet is-valid is-disabled">
@@ -390,7 +390,7 @@ examples:
         <input id="textfield-quiet-focused" type="text" name="field" value="" class="spectrum-Textfield-input">
       </div>
 
-  - id: textfield-quiet
+  - id: textfield-quiet-keyboard-focused
     name: Quiet Keyboard Focused
     markup: |
       <div class="spectrum-Textfield spectrum-Textfield--quiet is-keyboardFocused">
@@ -398,7 +398,7 @@ examples:
         <input id="textfield-quiet-keyboard-focused" type="text" name="field" value="" class="spectrum-Textfield-input">
       </div>
 
-  - id: textfield-focused-invalid
+  - id: textfield-quiet-focused-invalid
     name: Quiet Focused (invalid)
     description: |
       *Spectrum for Adobe Express uses a different icon. Use the `SX_Alert_18_N.svg` icon in the Express workflow icon set.*
@@ -411,7 +411,7 @@ examples:
         <input id="textfield-focused-invalid" type="text" name="field" value="Invalid input" class="spectrum-Textfield-input" pattern="[\w\s]+" required>
       </div>
 
-  - id: textfield-keyboard-focused-invalid
+  - id: textfield-quiet-keyboard-focused-invalid
     name: Quiet Keyboard Focused (invalid)
     description: |
       *Spectrum for Adobe Express uses a different icon. Use the `SX_Alert_18_N.svg` icon in the Express workflow icon set.*

@@ -140,7 +140,6 @@ export default {
 		rootClass: "spectrum-Textfield",
 		isValid: false,
 		isInvalid: false,
-		isValid: false,
 		isDisabled: false,
 		isRequired: false,
 		isReadOnly: false,
