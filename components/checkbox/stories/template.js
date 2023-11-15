@@ -66,10 +66,10 @@ export const Template = ({
 			<input
 				type="checkbox"
 				class="${rootClass}-input"
-				aria-labelledby=${ariaLabelledby}
+				aria-labelledby=${ifDefined(ariaLabelledby)}
 				?checked=${isChecked}
 				?disabled=${isDisabled}
-				title=${ifDefined(label || title)}
+				title=${ifDefined(title)}
 				value=${ifDefined(value)}
 				@change=${() => {
 					if (isDisabled) return;
