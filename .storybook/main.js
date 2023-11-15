@@ -117,11 +117,12 @@ module.exports = {
 								options: {
 									name: "[path][name].[ext][query]",
 									outputPath: (url) => {
+										const cleanURL = url.replace(/_\//g, "");
 										if (/node_modules\/@spectrum-css/.test(url)) {
-											return `assets/css/${url.replace(/^_\/_\/node_modules\/@spectrum-css\//g, "")}`;
+											return `assets/css/${cleanURL.replace(/node_modules\/@spectrum-css\//g, "")}`;
 										}
 
-										return `assets/css/${url.replace(/_\//g, "")}`;
+										return `assets/css/${cleanURL}`;
 									},
 									esModule: false,
 								},
