@@ -8,10 +8,10 @@ sections:
 
       ### Change workflow icon size to medium
       Please replace `.spectrum-Icon--sizeS` with `.spectrum-Icon--sizeM`.
-      ### Use Spectrum Heading for title 
+      ### Use Spectrum Heading for title
       To make the card component more flexible, products can have more fine control over the typography by using the Heading component with its corresponding sizes. To be more consistent with previous card designs you can use the following:
         * Add the `spectrum-Heading` and `spectrum-Heading--sizeXS` or `spectrum-Heading--sizeXXS` to the `spectrum-Card-title` element.
-      ### Subtitle deprecated 
+      ### Subtitle deprecated
       For this first Card iteration, the `subtitle` option has been removed.
       ### Small Card deprecated
       Card only has one size moving forward and the minimum width has been updated to allow for smaller card widths if needed. There is no longer a need for the `spectrum-Card--sizeM` class on this component.
@@ -170,7 +170,7 @@ examples:
           </div>
         </div>
       </div>
-  - id: card
+  - id: card-selected
     name: Standard (selected)
     markup: |
       <div role="grid">

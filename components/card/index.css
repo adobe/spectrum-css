@@ -178,8 +178,7 @@ governing permissions and limitations under the License.
 		);
 	}
 
-	&:focus,
-	&.is-focused {
+	&:focus-visible {
 		outline: none;
 
 		&::after {
@@ -411,7 +410,7 @@ governing permissions and limitations under the License.
 	/* @deprecation --mod-card-title-padding-top has been renamed to --mod-card-body-padding-block-start
 	   and will be removed in a future version. */
 	padding-block-start: var(
-		--mod-card-body-padding-block-start, 
+		--mod-card-body-padding-block-start,
 		var(
 			--mod-card-title-padding-top,
 			var(--spectrum-card-title-padding-top)
@@ -425,7 +424,7 @@ governing permissions and limitations under the License.
 		)
 	);
 	padding-inline-start: var(
-		--mod-card-body-padding-inline-start, 
+		--mod-card-body-padding-inline-start,
 		calc(
 			var(--mod-card-body-spacing, var(--spectrum-card-body-spacing)) -
 			var(--mod-card-border-width, var(--spectrum-card-border-width))
