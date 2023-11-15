@@ -3,6 +3,22 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+<a name="7.0.0"></a>
+#7.0.0
+🗓
+2023-11-15 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/splitbutton@6.0.14...@spectrum-css/splitbutton@7.0.0)
+
+\*feat(vars,expressvars)!: deprecate packages (#2244)([5eb391c](https://github.com/adobe/spectrum-css/commit/5eb391c)), closes[#2244](https://github.com/adobe/spectrum-css/issues/2244)
+
+    	###
+    	🛑 BREAKING CHANGES
+
+    		*
+    		as no additional changes have been or are planned to be made to
+
+these legacy token packages, these assets no longer need to exist in the monorepo
+structure for Spectrum CSS.
+
 <a name="6.0.15"></a>
 ##6.0.15
 🗓

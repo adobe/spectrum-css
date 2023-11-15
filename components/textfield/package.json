@@ -1,6 +1,6 @@
 {
   "name": "@spectrum-css/textfield",
-  "version": "6.0.27",
+  "version": "6.0.28",
   "description": "The Spectrum CSS textfield component",
   "license": "Apache-2.0",
   "author": "Adobe",
@@ -21,9 +21,9 @@
     "@spectrum-css/tokens": ">=13"
   },
   "devDependencies": {
-    "@spectrum-css/component-builder-simple": "^2.0.18",
-    "@spectrum-css/helptext": "^4.0.61",
-    "@spectrum-css/tokens": "^13.0.3",
+    "@spectrum-css/component-builder-simple": "^3.0.0",
+    "@spectrum-css/helptext": "^4.0.62",
+    "@spectrum-css/tokens": "^13.0.4",
     "gulp": "^4.0.0"
   },
   "publishConfig": {

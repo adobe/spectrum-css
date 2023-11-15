@@ -1,6 +1,6 @@
 {
   "name": "@spectrum-css/underlay",
-  "version": "3.0.10",
+  "version": "3.0.11",
   "description": "The Spectrum CSS underlay component",
   "license": "Apache-2.0",
   "author": "Adobe",
@@ -21,8 +21,8 @@
     "@spectrum-css/tokens": ">=13"
   },
   "devDependencies": {
-    "@spectrum-css/component-builder-simple": "^2.0.18",
-    "@spectrum-css/tokens": "^13.0.3",
+    "@spectrum-css/component-builder-simple": "^3.0.0",
+    "@spectrum-css/tokens": "^13.0.4",
     "gulp": "^4.0.0"
   },
   "publishConfig": {

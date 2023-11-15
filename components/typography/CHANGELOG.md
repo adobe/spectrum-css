@@ -3,6 +3,13 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+<a name="5.0.48"></a>
+##5.0.48
+🗓
+2023-11-15 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/typography@5.0.46...@spectrum-css/typography@5.0.48)
+
+**Note:** Version bump only for package @spectrum-css/typography
+
 <a name="5.0.47"></a>
 ##5.0.47
 🗓

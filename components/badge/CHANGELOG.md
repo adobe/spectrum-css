@@ -3,6 +3,13 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+<a name="3.1.16"></a>
+##3.1.16
+🗓
+2023-11-15 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/badge@3.1.14...@spectrum-css/badge@3.1.16)
+
+**Note:** Version bump only for package @spectrum-css/badge
+
 <a name="3.1.15"></a>
 ##3.1.15
 🗓

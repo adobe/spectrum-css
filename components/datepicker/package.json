@@ -1,6 +1,6 @@
 {
   "name": "@spectrum-css/datepicker",
-  "version": "2.0.1",
+  "version": "2.0.2",
   "description": "The Spectrum CSS datepicker component",
   "license": "Apache-2.0",
   "author": "Adobe",
@@ -23,13 +23,13 @@
     "@spectrum-css/tokens": ">=13"
   },
   "devDependencies": {
-    "@spectrum-css/component-builder-simple": "^2.0.18",
-    "@spectrum-css/icon": "^4.0.4",
-    "@spectrum-css/menu": "^5.1.4",
-    "@spectrum-css/pickerbutton": "^4.0.19",
-    "@spectrum-css/popover": "^6.0.81",
-    "@spectrum-css/textfield": "^6.0.27",
-    "@spectrum-css/tokens": "^13.0.3",
+    "@spectrum-css/component-builder-simple": "^3.0.0",
+    "@spectrum-css/icon": "^4.0.5",
+    "@spectrum-css/menu": "^5.1.5",
+    "@spectrum-css/pickerbutton": "^4.0.20",
+    "@spectrum-css/popover": "^6.0.82",
+    "@spectrum-css/textfield": "^6.0.28",
+    "@spectrum-css/tokens": "^13.0.4",
     "gulp": "^4.0.0"
   },
   "publishConfig": {

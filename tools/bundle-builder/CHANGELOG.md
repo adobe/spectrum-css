@@ -3,6 +3,26 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+<a name="5.0.0"></a>
+#5.0.0
+🗓
+2023-11-15 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/bundle-builder@4.0.13...@spectrum-css/bundle-builder@5.0.0)
+
+### 🔙 Reverts
+
+\*gulp and build updates ([#2121](https://github.com/adobe/spectrum-css/issues/2121))([03a37f5](https://github.com/adobe/spectrum-css/commit/03a37f5)), closes[#2099](https://github.com/adobe/spectrum-css/issues/2099)
+
+\*feat(vars,expressvars)!: deprecate packages (#2244)([5eb391c](https://github.com/adobe/spectrum-css/commit/5eb391c)), closes[#2244](https://github.com/adobe/spectrum-css/issues/2244)
+
+    	###
+    	🛑 BREAKING CHANGES
+
+    		*
+    		as no additional changes have been or are planned to be made to
+
+these legacy token packages, these assets no longer need to exist in the monorepo
+structure for Spectrum CSS.
+
 <a name="4.0.14"></a>
 ##4.0.14
 🗓

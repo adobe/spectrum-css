@@ -3,6 +3,15 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+<a name="5.0.29"></a>
+##5.0.29
+🗓
+2023-11-15 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/dropzone@5.0.27...@spectrum-css/dropzone@5.0.29)
+
+### 🐛 Bug fixes
+
+- **dropzone:**prefer background-color on parent instead of pseudo element([c71fd14](https://github.com/adobe/spectrum-css/commit/c71fd14))
+
 <a name="5.0.28"></a>
 ##5.0.28
 🗓

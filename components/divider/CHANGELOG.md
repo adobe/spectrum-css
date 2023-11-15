@@ -3,6 +3,13 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+<a name="2.1.33"></a>
+##2.1.33
+🗓
+2023-11-15 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/divider@2.1.31...@spectrum-css/divider@2.1.33)
+
+**Note:** Version bump only for package @spectrum-css/divider
+
 <a name="2.1.32"></a>
 ##2.1.32
 🗓

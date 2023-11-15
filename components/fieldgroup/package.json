@@ -1,6 +1,6 @@
 {
   "name": "@spectrum-css/fieldgroup",
-  "version": "4.0.79",
+  "version": "4.0.80",
   "description": "The Spectrum CSS fieldgroup component",
   "license": "Apache-2.0",
   "author": "Adobe",
@@ -25,12 +25,12 @@
     "@spectrum-css/tokens": ">=13"
   },
   "devDependencies": {
-    "@spectrum-css/checkbox": "^8.0.1",
-    "@spectrum-css/component-builder-simple": "^2.0.18",
-    "@spectrum-css/helptext": "^4.0.61",
-    "@spectrum-css/icon": "^4.0.4",
-    "@spectrum-css/radio": "^8.0.15",
-    "@spectrum-css/tokens": "^13.0.3",
+    "@spectrum-css/checkbox": "^8.0.2",
+    "@spectrum-css/component-builder-simple": "^3.0.0",
+    "@spectrum-css/helptext": "^4.0.62",
+    "@spectrum-css/icon": "^4.0.5",
+    "@spectrum-css/radio": "^8.0.16",
+    "@spectrum-css/tokens": "^13.0.4",
     "gulp": "^4.0.0"
   },
   "publishConfig": {

@@ -1,6 +1,6 @@
 {
   "name": "@spectrum-css/opacitycheckerboard",
-  "version": "1.0.6",
+  "version": "1.0.7",
   "description": "The Spectrum CSS opacitycheckerboard component",
   "license": "Apache-2.0",
   "author": "Adobe",
@@ -22,8 +22,8 @@
     "@spectrum-css/tokens": ">=13.0.0"
   },
   "devDependencies": {
-    "@spectrum-css/component-builder-simple": "^2.0.18",
-    "@spectrum-css/tokens": "^13.0.3",
+    "@spectrum-css/component-builder-simple": "^3.0.0",
+    "@spectrum-css/tokens": "^13.0.4",
     "gulp": "^4.0.0",
     "rimraf": "^5.0.1"
   },
