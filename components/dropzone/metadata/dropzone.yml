@@ -2,7 +2,7 @@ name: Drop zone
 description: 'A Drop Zone is an area on the screen into a which an object can be dragged and dropped to accomplish a task. For example, a Drop Zone might be used in an upload workflow to enable the user to simply drop a file from their operating system into the Drop Zone, which is a more efficient and intuitive action, rather than utilize the standard "Choose File" dialog.'
 examples:
   - id: dropzone
-    name: Drop Zone (default)
+    name: Default
     markup: |
       <div class="spectrum-DropZone" role="region" tabindex="0">
         <div class="spectrum-IllustratedMessage">
@@ -12,7 +12,7 @@ examples:
         </div>
       </div>
   - id: dropzone-dragged
-    name: Drop Zone (dragged)
+    name: Dragged
     markup: |
       <div class="spectrum-DropZone is-dragged" role="region" tabindex="0">
         <div class="spectrum-IllustratedMessage">
@@ -22,7 +22,7 @@ examples:
         </div>
       </div>
   - id: dropzone-filled
-    name: Drop Zone (filled, dragged)
+    name: Filled and dragged
     markup: |
       <div class="spectrum-DropZone is-filled is-dragged" role="region" tabindex="0" style="height: 200px; background-image:url(img/example-card-portrait.jpg)">
         <div class="spectrum-DropZone-content">
