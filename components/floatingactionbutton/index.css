@@ -96,11 +96,10 @@ governing permissions and limitations under the License.
     }
   }
 
-  &:focus, 
-  &:focus-within {
+  &:focus-visible {
     background-color: var(--highcontrast-floating-action-button-background-color-key-focus, var(--mod-floating-action-button-background-color-key-focus, var(--spectrum-floating-action-button-background-color-key-focus)));
     outline: 0;
-    
+
     .spectrum-FloatingActionButton-icon {
       fill: var(--highcontrast-floating-action-button-icon-color-key-focus, var(--mod-floating-action-button-icon-color-key-focus, var(--spectrum-floating-action-button-icon-color-key-focus)));
     }
