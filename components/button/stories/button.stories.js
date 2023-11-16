@@ -96,10 +96,16 @@ export default {
 				disable: true,
 			},
 		},
-		showOneButtonPerLine: {
-			table: {
-				disable: true,
+		layout: {
+		    name: "Layout",
+		    description: "How the buttons align in the preview (Storybook only).",
+		    type: { name: "string" },
+			table: { 
+			    type: { summary: "string" },
+			    category: "Advanced"
 			},
+			options: ["stacked","inline"],
+			control: "radio"
 		},
 	},
 	args: {
@@ -111,7 +117,7 @@ export default {
 		isDisabled: false,
 		isPending: false,
 		showIconOnlyButton: true,
-		showOneButtonPerLine: false,
+		layout: "inline",
 	},
 	parameters: {
 		actions: {
@@ -132,7 +138,7 @@ export default {
 const CustomButton = ({
 	iconName,
 	staticColor,
-	showOneButtonPerLine,
+	layout,
 	showIconOnlyButton,
 	customStyles = {},
 	...args
@@ -143,7 +149,7 @@ const CustomButton = ({
 			'margin-block': '15px',
 			'max-width': '480px',
 		};
-		return showOneButtonPerLine ? html`<div style=${styleMap(buttonWrapStyles)}>${content}</div>` : content;
+		return layout === "stacked" ? html`<div style=${styleMap(buttonWrapStyles)}>${content}</div>` : content;
 	};
 
 	return html`
@@ -302,7 +308,7 @@ WithForcedColors.args = {
 
 export const Wrapping = CustomButton.bind({});
 Wrapping.args = {
-	showOneButtonPerLine: true,
+	layout: "stacked",
 	showIconOnlyButton: false,
 	variant: "accent",
 	label: "An example of text overflow behavior within the button component. When the button text is too long for the horizontal space available, it wraps to form another line.",
