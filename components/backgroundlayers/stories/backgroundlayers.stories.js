@@ -22,7 +22,7 @@ export default {
 const EditingContext = ({
 }) => {
 	return html`
-		<div style="display: flex; justify-content: flex-start; position: relative; block-size: 150px;">
+		<div style="display: flex; justify-content: flex-start; position: relative; block-size: 200px;">
 			${Template({
         style: "z-index: 4; inset-inline-start: 10px; inset-block-start: 10px;",
 				layer: 'elevated',

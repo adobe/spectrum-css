@@ -1,19 +1,21 @@
 # @spectrum-css/backgroundlayers
 
-> The Spectrum CSS background layers is a set of utility classes used to apply Spectrum 2 app framing. Consult design documentation for further usage and infomation.
+> The Spectrum CSS background layers displays Spectrum 2 app framing using a set of custom properties. Consult design documentation for further usage and infomation.
 
-To use these classes add the approproate layers and contexts class to the element that the background styling should be applied. Make note of the context when determing the correct class to use.
+To use these custom properties include `@import "../../tools/background-layer-props.css";` with in the css file.
 
-Editing Context Classes:
-- `spectrum-BackgroundLayers--elevated`
-- `spectrum-BackgroundLayers--layer2`
-- `spectrum-BackgroundLayers--layer1`
-- `spectrum-BackgroundLayers--pasteboard`
+Editing Context:
+- `--bg-color-elevated`
+- `--bg-color-layer-2`
+- `--bg-color-layer-1`
+- `--bg-color-pasteboard`
 
-Browsing Context Classes:
-- `spectrum-BackgroundLayers--elevated`
-- `spectrum-BackgroundLayers--layer1`
-- `spectrum-BackgroundLayers--base`
+Browsing Context:
+- `--bg-color-elevated`
+- `--bg-color-layer-1`
+- `--bg-color-base`
+
+
 
 
 This package is part of the [Spectrum CSS project](https://github.com/adobe/spectrum-css).
