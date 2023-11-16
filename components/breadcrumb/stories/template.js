@@ -2,8 +2,8 @@ import { html } from "lit";
 import { classMap } from "lit/directives/class-map.js";
 import { when } from "lit/directives/when.js";
 
-import { Template as Icon } from "@spectrum-css/icon/stories/template.js";
 import { Template as ActionButton } from "@spectrum-css/actionbutton/stories/template.js";
+import { Template as Icon } from "@spectrum-css/icon/stories/template.js";
 
 import "../index.css";
 
@@ -12,6 +12,7 @@ export const Template = ({
 	customClasses = [],
 	items = [],
 	variant,
+	isDragged = false,
 	...globals
 }) => {
 	const { express } = globals;
@@ -33,12 +34,12 @@ export const Template = ({
 				})}
 			>
 				${items.map((item, idx, arr) => {
-					const { label, isDisabled, isDragged, iconName } = item;
+					const { label, isDisabled, iconName } = item;
 					return html` <li
 						class=${classMap({
 							[`${rootClass}-item`]: true,
 							"is-disabled": isDisabled,
-							"is-dragged": isDragged,
+							"is-dragged": isDragged && item.isDragged,
 						})}
 					>
 						${when(
