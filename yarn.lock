@@ -2687,10 +2687,40 @@
   resolved "https://registry.yarnpkg.com/@spectrum-css/expressvars/-/expressvars-3.0.9.tgz#72678e0845c240bc9cb6b4d828f20806810f4cab"
   integrity sha512-mnxdnF2NGNdba+3OomwFURPG0XqNRD+S2cmX0ARYnia9lv84HpzhbSoGuqmQO4+4+dXe46zYjnKRe2L8oJM/zw==
 
-"@spectrum-css/vars@^9.0.8":
-  version "9.0.8"
-  resolved "https://registry.yarnpkg.com/@spectrum-css/vars/-/vars-9.0.8.tgz#6af3bcdace903b8461f5fcd4c9aa23e70128a456"
-  integrity sha512-rGfd7jqXOdR69bEjrRP58ynuIeJU0czPfwQvzhtCzg7jKVukV+efNHqrs086sC6xutB3W4TF71K/dZMr3oyTyg==
+"@spectrum-css/clearbutton@^2.0.0":
+  version "2.0.0"
+  resolved "https://registry.yarnpkg.com/@spectrum-css/clearbutton/-/clearbutton-2.0.0.tgz#ad638dd4bd021f42c0b020ae024f487aa64198ca"
+  integrity sha512-hdJFgBVnzRPe9jne5iaGE6NFuynUpwFuNtKRB4LJ1Yt0IqDK+bXhdak9NxMnvHEFjUr4NGDdBoXFUiBHPYYlSQ==
+
+"@spectrum-css/icon@^3.1.0-alpha.0":
+  version "3.1.0-alpha.0"
+  resolved "https://registry.yarnpkg.com/@spectrum-css/icon/-/icon-3.1.0-alpha.0.tgz#5aa819f4078dd899aaed4a301014eb17b2998bc1"
+  integrity sha512-qokLJ1FvEFS/0ef6I1cKFCZr3JLfBLCPdRmAimrElocUx6hBbzwfBOVoRm0tHSZM9VIxHVMugziTA2IbSdH2EA==
+
+"@spectrum-css/menu@^4.0.50":
+  version "4.0.50"
+  resolved "https://registry.yarnpkg.com/@spectrum-css/menu/-/menu-4.0.50.tgz#d72467542b0cab858062c6fd5cb2950e8bbb0bc4"
+  integrity sha512-CBg8mUe4BFR0pKsMLWkAQW9/7tOp1V9QQkQzc8ZnT3Ayz5uFGy9saEErN5mSWxf2+22Ab5UftMU2uzgFo762eA==
+
+"@spectrum-css/stepper@^4.0.59":
+  version "4.0.59"
+  resolved "https://registry.yarnpkg.com/@spectrum-css/stepper/-/stepper-4.0.59.tgz#e5501abd0755e0032277604e9196299279dced44"
+  integrity sha512-bE1T3+kHDPY4xPKtYd7cpFtS7odRiAlenZWU0HLNPhEZBfXou/jt86PQaDfZvD6smG3aiZOyuFGy7go2aoGhlQ==
+
+"@spectrum-css/tokens@11.3.7":
+  version "11.3.7"
+  resolved "https://registry.yarnpkg.com/@spectrum-css/tokens/-/tokens-11.3.7.tgz#b4a32faa3febe1e0dc33a109e0ff5545a02bfac6"
+  integrity sha512-WX0dPqwb2t9u9WBzIRzzYXL/ZJc0r/cSBb7eJxw1xCyg5NQnUKIhGtRT+cMTTCQP0SERFgCk9CZEJcJkZDphGw==
+
+"@spectrum-css/tokens@^11.3.6", "@spectrum-css/tokens@^11.3.7":
+  version "11.4.0"
+  resolved "https://registry.yarnpkg.com/@spectrum-css/tokens/-/tokens-11.4.0.tgz#381e163c5cae2f8483b47c380a75d1dbaf60b933"
+  integrity sha512-emJOFG/rYO+bE4X+6/CBZApGgdQ8fAp8fQpd1NwF5dW0kwOYGib2XjaQXsVvuXNb64eo/2sjyD8JrB5LCOnVKw==
+
+"@spectrum-css/underlay@^2.1.0":
+  version "2.1.0"
+  resolved "https://registry.yarnpkg.com/@spectrum-css/underlay/-/underlay-2.1.0.tgz#00a30d527d29e8e1ce1567765dab363738e16fb9"
+  integrity sha512-KlOV7uel4C8HhYAoPlBvCReI+BIKpOmgRLLPo2XFVM4rTsFa1xxFVkmeP74uEPuVLcRtXGG3/6cL2+0OArhZmA==
 
 "@storybook/addon-a11y@^7.5.1":
   version "7.5.3"
