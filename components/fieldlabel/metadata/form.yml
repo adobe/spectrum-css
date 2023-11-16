@@ -23,9 +23,9 @@ examples:
           </div>
         </div>
         <div class="spectrum-Form-item">
-          <div class="spectrum-FieldLabel spectrum-FieldLabel--sizeM spectrum-Form-itemLabel spectrum-FieldLabel--left">Country</div>
+          <label class="spectrum-FieldLabel spectrum-FieldLabel--sizeM spectrum-Form-itemLabel spectrum-FieldLabel--left" for="fieldLabelExample-country-1">Country</label>
           <div class="spectrum-Form-itemField">
-            <button type="button" class="spectrum-Picker spectrum-Picker--sizeM" aria-haspopup="listbox">
+            <button type="button" class="spectrum-Picker spectrum-Picker--sizeM" aria-haspopup="listbox" id="fieldLabelExample-country-1">
               <span class="spectrum-Picker-label is-placeholder">Select a Country</span>
               <svg class="spectrum-Icon spectrum-UIIcon-ChevronDown100 spectrum-Picker-menuIcon" focusable="false" aria-hidden="true">
                 <use xlink:href="#spectrum-css-icon-Chevron100" />
@@ -109,9 +109,9 @@ examples:
           </div>
         </div>
         <div class="spectrum-Form-item">
-          <div class="spectrum-FieldLabel spectrum-FieldLabel--sizeM spectrum-Form-itemLabel spectrum-FieldLabel--right">Country</div>
+          <label class="spectrum-FieldLabel spectrum-FieldLabel--sizeM spectrum-Form-itemLabel spectrum-FieldLabel--right" for="fieldLabelExample-country-2">Country</label>
           <div class="spectrum-Form-itemField">
-            <button type="button" class="spectrum-Picker spectrum-Picker--sizeM" aria-haspopup="listbox">
+            <button type="button" class="spectrum-Picker spectrum-Picker--sizeM" aria-haspopup="listbox" id="fieldLabelExample-country-2">
               <span class="spectrum-Picker-label is-placeholder">Select a Country</span>
               <svg class="spectrum-Icon spectrum-UIIcon-ChevronDown100 spectrum-Picker-menuIcon" focusable="false" aria-hidden="true">
                 <use xlink:href="#spectrum-css-icon-Chevron100" />
@@ -195,9 +195,9 @@ examples:
           </div>
         </div>
         <div class="spectrum-Form-item">
-          <div class="spectrum-FieldLabel spectrum-FieldLabel--sizeM spectrum-Form-itemLabel">Country</div>
+          <label class="spectrum-FieldLabel spectrum-FieldLabel--sizeM spectrum-Form-itemLabel" for="fieldLabelExample-country-3">Country</label>
           <div class="spectrum-Form-itemField">
-            <button type="button" class="spectrum-Picker spectrum-Picker--sizeM" aria-haspopup="listbox">
+            <button type="button" class="spectrum-Picker spectrum-Picker--sizeM" aria-haspopup="listbox" id="fieldLabelExample-country-3">
               <span class="spectrum-Picker-label is-placeholder">Select a Country</span>
               <svg class="spectrum-Icon spectrum-UIIcon-ChevronDown100 spectrum-Picker-menuIcon" focusable="false" aria-hidden="true">
                 <use xlink:href="#spectrum-css-icon-Chevron100" />
