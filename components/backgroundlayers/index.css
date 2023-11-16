@@ -43,6 +43,7 @@ governing permissions and limitations under the License.
 		--spectum-backgroundlayers-background-color: var(--spectrum-gray-75);
 	}
 	background-color: var(--spectum-backgroundlayers-background-color);
+	border: 2px solid rgba(180, 180, 180, 0.25);
 }
 
 .spectrum-BackgroundLayers--pasteboard {
