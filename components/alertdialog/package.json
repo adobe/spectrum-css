@@ -19,8 +19,8 @@
     "clean": "rimraf dist"
   },
   "peerDependencies": {
+    "@spectrum-css/backgroundlayers": ">=1",
     "@spectrum-css/button": ">=11",
-    "@spectrum-css/backgroundlayers": ">=1",,
     "@spectrum-css/buttongroup": ">=6",
     "@spectrum-css/divider": ">=1 <=2",
     "@spectrum-css/icon": ">=4",
