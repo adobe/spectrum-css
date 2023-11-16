@@ -19,6 +19,9 @@
                   'js-fastLoad': component.fastLoad != false
                 }, href=component.href)
                   span.spectrum-SideNav-link-text #{component.name}
+                  if component.isDeprecated
+                    span.spectrum-SideNav-link-text.spectrum-StatusLight.spectrum-StatusLight--sizeS.spectrum-StatusLight--negative.spectrum-SideNav-itemIndicator(label="Deprecated", style="margin-inline-start:auto;")
+
   nav.spectrum-Site-bottomNav
     ul.spectrum-SideNav
       li.spectrum-SideNav-item

@@ -55,7 +55,7 @@ export default {
 		status: {
 			type: process.env.MIGRATED_PACKAGES.includes("splitbutton")
 				? "migrated"
-				: undefined,
+				: "legacy",
 		},
 	},
 };

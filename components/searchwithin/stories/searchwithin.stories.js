@@ -39,7 +39,7 @@ export default {
 		status: {
 			type: process.env.MIGRATED_PACKAGES.includes("searchwithin")
 				? "migrated"
-				: undefined,
+				: "legacy",
 		},
 	},
 };

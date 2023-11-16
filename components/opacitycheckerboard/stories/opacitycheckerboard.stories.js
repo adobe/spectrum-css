@@ -31,7 +31,7 @@ export default {
 		status: {
 			type: process.env.MIGRATED_PACKAGES.includes("opacitycheckerboard")
 				? "migrated"
-				: undefined,
+				: "legacy",
 		},
 	},
 	decorators: [

@@ -1,15 +1,17 @@
-const { resolve } = require("path");
-const { readdirSync } = require("fs");
+const { join, resolve } = require("path");
+const { readdirSync, existsSync } = require("fs");
+
 const componentsPath = resolve(__dirname, "../components");
 const componentPkgs = readdirSync(componentsPath, {
 	withFileTypes: true,
 })
-	.filter((dirent) => dirent.isDirectory())
+	.filter((dirent) => (dirent.isDirectory() || dirent.isSymbolicLink()) && existsSync(join(componentsPath, dirent.name, "package.json")))
 	.map((dirent) => dirent.name);
+
 module.exports = {
 	stories: [
-		"../components/*/stories/*.stories.mdx",
-		"../components/*/stories/*.stories.@(js|jsx|ts|tsx)",
+		"../components/*/stories/*.stories.js",
+		"./deprecated/*.stories.js",
 	],
 	rootDir: "../",
 	staticDirs: ["../assets"],
@@ -33,7 +35,7 @@ module.exports = {
 		"@whitespace/storybook-addon-html",
 		// https://storybook.js.org/addons/@etchteam/storybook-addon-status
 		"@etchteam/storybook-addon-status",
-    "storybook-addon-pseudo-states",
+    	"storybook-addon-pseudo-states",
 		// https://github.com/storybookjs/storybook/tree/next/code/addons/interactions
 		"@storybook/addon-interactions"
 	],

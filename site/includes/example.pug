@@ -1,7 +1,7 @@
 article.spectrum-CSSExample
-  h3.spectrum-CSSExample-heading.spectrum-Heading.spectrum-Heading--sizeS(id=example.slug)
-    a(href=`#${example.slug}`).spectrum-CSSComponent-link
-      =example.name
-    div(class=`spectrum-StatusLight spectrum-StatusLight--sizeM spectrum-CSSExample-status spectrum-StatusLight--${util.getStatusLightVariant(example.status)}`)= example.status
+  h3.spectrum-CSSExample-heading.spectrum-Heading.spectrum-Heading--sizeS(id=example.id)
+    a(href=`#${example.id}`).spectrum-CSSComponent-link= example.name
+      if example.status && example.status != component.status
+        span(class=`spectrum-StatusLight spectrum-StatusLight--sizeM spectrum-CSSExample-status spectrum-StatusLight--${util.getStatusLight(example.status)}`)= example.status
 
   include exampleContent.pug

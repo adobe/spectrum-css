@@ -50,7 +50,7 @@ export default {
 		status: {
 			type: process.env.MIGRATED_PACKAGES.includes("fieldgroup")
 				? "migrated"
-				: undefined,
+				: "legacy",
 		},
 	},
 };

@@ -1,15 +1,16 @@
-<script>
 window.adobeGlobalnavConfig = {
   locale: 'en',
   footer: {
     target: document.getElementById('footer_global'),
-    excludeNavigation: true
+    excludeNavigation: true,
   },
   callbacks: {
     globalnav_ready: function() {
       document.querySelector('.Footernav-region').style.visibility = 'hidden';
 
       document.querySelector('#AdobeFooterNav').classList.add('has-spectrum-css-customTheme');
+
+      document.querySelector('.spectrum-Site-footerContainer').style.display = undefined;
 
       var css = document.createElement('style');
       css.type = 'text/css';
@@ -44,5 +45,4 @@ window.adobeGlobalnavConfig = {
       document.getElementsByTagName("head")[0].appendChild(css);
     }
   }
-}
-</script>
+};

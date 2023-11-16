@@ -1,17 +1,16 @@
 name: Action bar
+id: action-bar
 description: Floating action bar that appears in selection mode.
+maxHeight: 200px
 SpectrumSiteSlug: https://spectrum.adobe.com/page/action-bar/
 sections:
-  - name: Custom Properties API
-    description: |
-      This component can be modified via its `--mod-*` prefixed custom properties. A list of those prefixed custom properties can be found <a href="https://github.com/adobe/spectrum-css/tree/main/components/actionbar/metadata/mods.md">here</a>.
   - name: Migration Guide
     description: |
-      ### Change in Table example markup
-      In the Table example, the Action bar has been moved outside of the Table markup.
+      ### Change in table markup
+      In the table example, the action bar has been moved outside of the table markup.
 
-      ### Popover Dependency
-      Action bar requires Popover, which is nested within Action bar. Action bar background, border, and corner radius are applied to the nested Popover component and can be overriden by Action bar.
+      ### Popover dependency
+      Action bar requires popover, which is nested within action bar. Action bar background, border, and corner radius are applied to the nested Popover component and can be overriden by Action bar.
 
       ### Action bar close button
       Checkbox has been replaced by Close button.
@@ -248,7 +247,7 @@ examples:
 
   - id: actionbar-table
     name: Table with ActionBar
-    description: Example usage of sticky ActionBar within a table. 
+    description: Example usage of sticky ActionBar within a table.
     markup: |
       <div class="spectrum-Table-scroller spectrum-Table spectrum-Table--emphasized spectrum-Table--quiet" style="height: 200px; width: 100%;">
         <div class="spectrum-Table-main" role="grid" style="width: 100%;">

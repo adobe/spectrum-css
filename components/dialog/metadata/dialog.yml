@@ -7,7 +7,7 @@ sections:
       - Alert variants of Dialog have been removed from Dialog into their own compoment, Alert Dialog.
 examples:
   - id: dialog
-    name: Dialog - Small
+    name: Small
     status: Verified
     description: A small dialog
     demoClassName: spectrum-CSSExample-example--overlay
@@ -26,7 +26,7 @@ examples:
         </div>
       </div>
   - id: dialog
-    name: Dialog - Medium
+    name: Medium
     status: Verified
     description: A medium dialog
     demoClassName: spectrum-CSSExample-example--overlay
@@ -45,7 +45,7 @@ examples:
         </div>
       </div>
   - id: dialog
-    name: Dialog - Large
+    name: Large
     status: Verified
     description: A large dialog
     demoClassName: spectrum-CSSExample-example--overlay
@@ -64,7 +64,7 @@ examples:
         </div>
       </div>
   - id: dialog
-    name: Dialog - Dismissible
+    name: Dismissible
     status: Verified
     description: A dialog that can be dismissed without taking an action. Dismissible dialogs should never have buttons.
     demoClassName: spectrum-CSSExample-example--overlay
@@ -91,7 +91,7 @@ examples:
         </div>
       </div>
   - id: dialog
-    name: Dialog - No Divider
+    name: No divider
     status: Verified
     description: Dialogs can forgo the divider if they have content that spans the entire width of the dialog.
     demoClassName: spectrum-CSSExample-example--overlay
@@ -117,7 +117,7 @@ examples:
         </div>
       </div>
   - id: dialog
-    name: Dialog - Hero
+    name: Hero
     status: Verified
     description: Dialogs can have a hero header.
     demoClassName: spectrum-CSSExample-example--overlay
@@ -142,9 +142,8 @@ examples:
         </div>
       </div>
   - id: dialog-scrolling
-    name: Dialog - Scrolling
-    dnaStatus: Contribution
-    status: Unverified
+    name: Scrolling
+    status: Contribution
     description: A dialog without `.spectrum-Dialog--alert` can expand to a larger size to house larger contents.
     demoClassName: spectrum-CSSExample-example--overlay
     markup: |
@@ -200,8 +199,8 @@ examples:
         </div>
       </div>
   - id: dialog-fullscreen
-    name: Dialog - Fullscreen
-    status: Unverified
+    name: Fullscreen
+    status: Contribution
     description: A fullscreen dialog will automatically fill almost all of the available screen space.
     demoClassName: spectrum-CSSExample-example--overlay
     markup: |
@@ -210,7 +209,7 @@ examples:
         <div class="spectrum-Modal spectrum-Modal--fullscreen" data-testid="modal">
           <section class="spectrum-Dialog spectrum-Dialog--fullscreen" role="alertdialog" tabindex="-1" aria-modal="true">
             <div class="spectrum-Dialog-grid">
-              <h1 class="spectrum-Dialog-heading spectrum-Dialog-heading--noHeader">Default Dialog - Fullscreen</h1>
+              <h1 class="spectrum-Dialog-heading spectrum-Dialog-heading--noHeader">Default dialog, fullscreen</h1>
               <hr class="spectrum-Divider spectrum-Divider--sizeM spectrum-Divider--horizontal spectrum-Dialog-divider">
               <section class="spectrum-Dialog-content">
                 <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis
@@ -257,8 +256,8 @@ examples:
         </div>
       </div>
   - id: dialog-fullscreen
-    name: Dialog - Fullscreen Takeover
-    status: Unverified
+    name: Fullscreen takeover
+    status: Contribution
     description: A fullscreen takeover dialog will fill all of the available screen space.
     demoClassName: spectrum-CSSExample-example--overlay
     markup: |

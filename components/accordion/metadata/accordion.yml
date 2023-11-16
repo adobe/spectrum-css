@@ -1,20 +1,40 @@
 name: Accordion
-description: "While remaining backward compatible, the recommended markup has been updated to implement the [WAI-ARIA 1.1 Accordion design pattern](https://www.w3.org/TR/wai-aria-practices-1.1/#accordion) to better support accessibility for keyboard and screen reader users."
+id: accordion
+status: Contribution
+sizing: ['S', 'M', 'L', 'XL']
+variants: ['Compact', 'Regular', 'Spacious']
+maxHeight: 400px
+accessibility: |
+  The Accordion component is used to display a list of items that can be expanded or collapsed to show or hide additional content. The Accordion component is a composite component that is made up of the Accordion container, Accordion item, Accordion item header, and Accordion item content.
+
+  ### WAI-ARIA Roles
+  The Accordion container uses the `role="region"` attribute to indicate that it is a container for a set of items. The Accordion item header uses the `role="button"` attribute to indicate that it is a button that can be pressed to expand or collapse the Accordion item content. The Accordion item content uses the `role="region"` attribute to indicate that it is a container for the content of an Accordion item.
+
+  ### WAI-ARIA States and Properties
+  The Accordion item header uses the `aria-expanded` attribute to indicate whether the Accordion item content is expanded or collapsed. The Accordion item content uses the `aria-labelledby` attribute to indicate the Accordion item header that controls it.
+
+  ### Keyboard Interaction
+  The Accordion item header can be expanded or collapsed by pressing the `Enter` or `Space` keys. When the Accordion item header has focus, pressing the `Enter` or `Space` keys will expand or collapse the Accordion item content. When the Accordion item content is expanded, pressing the `Tab` key will move focus to the next focusable element in the Accordion container. When the Accordion item content is collapsed, pressing the `Tab` key will move focus to the next focusable element in the Accordion container or the next focusable element in the document if there are no more focusable elements in the Accordion container.
+
+  ### Screen Reader Interaction
+  When the Accordion item header has focus, pressing the `Enter` or `Space` keys will expand or collapse the Accordion item content. When the Accordion item content is expanded, pressing the `Tab` key will move focus to the next focusable element in the Accordion container. When the Accordion item content is collapsed, pressing the `Tab` key will move focus to the next focusable element in the Accordion container or the next focusable element in the document if there are no more focusable elements in the Accordion container.
+
+  ### Design Considerations
+  The Accordion component is used to display a list of items that can be expanded or collapsed to show or hide additional content. The Accordion component is a composite component that is made up of the Accordion container, Accordion item, Accordion item header, and Accordion item content.
 
 sections:
-  - name: Custom Properties API
-    description: |
-      This component can be modified via its `--mod-*` prefixed custom properties. A list of those prefixed custom properties can be found <a href="https://github.com/adobe/spectrum-css/tree/main/components/accordion/metadata/mods.md">here</a>.
   - name: Migration Guide
     description: |
+      While remaining backward compatible, the recommended markup has been updated to implement the [WAI-ARIA 1.1 Accordion design pattern](https://www.w3.org/TR/wai-aria-practices-1.1/#accordion) to better support accessibility for keyboard and screen reader users.
+
       ### T-shirt sizing
-      Accordion now supports t-shirt sizing and requires that you specify the size by adding a `.spectrum-Accordion--size*` class.
+      Accordion supports t-shirt sizing and requires you specify the size by adding a `.spectrum-Accordion--size*` class.
 
       ### Density
-      Accordion now supports density and requires that you specify one of the density type `compact` `regular` `spacious`.
+      Accordion supports density and requires you specify one of the density type `compact` `regular` `spacious`.
 
 examples:
-  - id: accordion
+  - id: accordion-compact-s
     name: Compact - S
     markup: |
       <!-- WAI-ARIA 1.1: Accordion container role changed from "tablist" to "region" -->
@@ -70,7 +90,7 @@ examples:
         </div>
       </div>
 
-  - id: accordion
+  - id: accordion-compact-m
     name: Compact - M
     markup: |
       <!-- WAI-ARIA 1.1: Accordion container role changed from "tablist" to "region" -->
@@ -126,7 +146,7 @@ examples:
         </div>
       </div>
 
-  - id: accordion
+  - id: accordion-compact-l
     name: Compact - L
     markup: |
       <!-- WAI-ARIA 1.1: Accordion container role changed from "tablist" to "region" -->
@@ -182,7 +202,7 @@ examples:
         </div>
       </div>
 
-  - id: accordion
+  - id: accordion-compact-xl
     name: Compact - XL
     markup: |
       <!-- WAI-ARIA 1.1: Accordion container role changed from "tablist" to "region" -->
@@ -238,7 +258,7 @@ examples:
         </div>
       </div>
 
-  - id: accordion
+  - id: accordion-s
     name: Regular - S
     markup: |
       <!-- WAI-ARIA 1.1: Accordion container role changed from "tablist" to "region" -->
@@ -294,7 +314,7 @@ examples:
         </div>
       </div>
 
-  - id: accordion
+  - id: accordion-m
     name: Regular - M
     markup: |
       <!-- WAI-ARIA 1.1: Accordion container role changed from "tablist" to "region" -->
@@ -350,7 +370,7 @@ examples:
         </div>
       </div>
 
-  - id: accordion
+  - id: accordion-l
     name: Regular - L
     markup: |
       <!-- WAI-ARIA 1.1: Accordion container role changed from "tablist" to "region" -->
@@ -406,7 +426,7 @@ examples:
         </div>
       </div>
 
-  - id: accordion
+  - id: accordion-xl
     name: Regular - XL
     markup: |
       <!-- WAI-ARIA 1.1: Accordion container role changed from "tablist" to "region" -->
@@ -462,7 +482,7 @@ examples:
         </div>
       </div>
 
-  - id: accordion
+  - id: accordion-spacious-s
     name: Spacious - S
     markup: |
       <!-- WAI-ARIA 1.1: Accordion container role changed from "tablist" to "region" -->
@@ -518,7 +538,7 @@ examples:
         </div>
       </div>
 
-  - id: accordion
+  - id: accordion-spacious-m
     name: Spacious - M
     markup: |
       <!-- WAI-ARIA 1.1: Accordion container role changed from "tablist" to "region" -->
@@ -574,7 +594,7 @@ examples:
         </div>
       </div>
 
-  - id: accordion
+  - id: accordion-spacious-l
     name: Spacious - L
     markup: |
       <!-- WAI-ARIA 1.1: Accordion container role changed from "tablist" to "region" -->
@@ -630,7 +650,7 @@ examples:
         </div>
       </div>
 
-  - id: accordion
+  - id: accordion-spacious-xl
     name: Spacious - XL
     markup: |
       <!-- WAI-ARIA 1.1: Accordion container role changed from "tablist" to "region" -->

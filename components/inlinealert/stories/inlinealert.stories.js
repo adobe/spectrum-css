@@ -61,7 +61,7 @@ export default {
 		status: {
 			type: process.env.MIGRATED_PACKAGES.includes("inlinealert")
 				? "migrated"
-				: undefined,
+				: "legacy",
 		},
 	},
 };

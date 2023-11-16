@@ -41,3 +41,10 @@ pre[class*="language-"] {
 .spectrum-Slider {
 	max-width: var(--spectrum-global-dimension-size-3000);
 }
+
+iframe {
+	border: 1px solid rgb(144, 144, 144) !important;
+	border-radius: 4px !important;
+	width: 100% !important;
+    max-width: none !important;
+}

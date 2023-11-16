@@ -48,7 +48,7 @@ export default {
 		status: {
 			type: process.env.MIGRATED_PACKAGES.includes("closebutton")
 				? "migrated"
-				: undefined,
+				: "legacy",
 		},
 	},
 };

@@ -1,9 +1,6 @@
 name: In-line alert
 SpectrumSiteSlug: https://spectrum.adobe.com/page/in-line-alert/
 sections:
-  - name: Custom Properties API
-    description: |
-      This component can be modified via its `--mod-*` prefixed custom properties. A list of those prefixed custom properties can be found <a href="https://github.com/adobe/spectrum-css/tree/main/components/inlinealert/metadata/mods.md">here</a>.
 examples:
   - id: inlinealert-neutral
     name: Neutral
@@ -70,7 +67,7 @@ examples:
       </div>
   - id: inlinealert-closable
     name: Closable
-    dnaStatus: Contribution
+    status: Contribution
     description: |
       An in-line alert with a close button in the footer. Combine this strategy with any variant.
 

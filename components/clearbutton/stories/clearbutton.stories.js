@@ -40,7 +40,7 @@ export default {
 		status: {
 			type: process.env.MIGRATED_PACKAGES.includes("clearbutton")
 				? "migrated"
-				: undefined,
+				: "legacy",
 		},
 	},
 };

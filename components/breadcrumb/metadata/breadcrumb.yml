@@ -1,9 +1,9 @@
 name: Breadcrumbs
+id: breadcrumbs
+maxHeight: 200px
 SpectrumSiteSlug: https://spectrum.adobe.com/page/breadcrumbs/
+status: Verified
 sections:
-  - name: Custom Properties API
-    description: |
-      This component can be modified via its `--mod-*` prefixed custom properties. A list of those prefixed custom properties can be found <a href="https://github.com/adobe/spectrum-css/tree/main/components/breadcrumb/metadata/mods.md">here</a>.
   - name: Migration Guide
     description: |
       ### New Action Button markup
@@ -14,7 +14,6 @@ sections:
 examples:
   - id: breadcrumb
     name: Standard
-    status: Verified
     markup: |
       <nav>
         <ul class="spectrum-Breadcrumbs">
@@ -37,7 +36,6 @@ examples:
       </nav>
   - id: breadcrumb-dragged
     name: Dragged
-    status: Verified
     markup: |
       <nav>
         <ul class="spectrum-Breadcrumbs">
@@ -60,7 +58,6 @@ examples:
       </nav>
   - id: breadcrumb-nested
     name: Nested
-    status: Verified
     markup: |
       <nav>
         <ul class="spectrum-Breadcrumbs">
@@ -93,7 +90,6 @@ examples:
       </nav>
   - id: breadcrumb-nested-root
     name: Nested (root visible)
-    status: Verified
     markup: |
       <nav>
         <ul class="spectrum-Breadcrumbs">
@@ -126,7 +122,6 @@ examples:
       </nav>
   - id: breadcrumb-multiline
     name: Multiline
-    status: Verified
     markup: |
       <nav>
         <ul class="spectrum-Breadcrumbs spectrum-Breadcrumbs--multiline">
@@ -149,7 +144,6 @@ examples:
       </nav>
   - id: breadcrumb-multiline-dragged
     name: Multiline (dragged)
-    status: Verified
     markup: |
       <nav>
         <ul class="spectrum-Breadcrumbs spectrum-Breadcrumbs--multiline">
@@ -172,7 +166,6 @@ examples:
       </nav>
   - id: breadcrumb-multiline-nested
     name: Multiline Nested
-    status: Verified
     markup: |
       <nav>
         <ul class="spectrum-Breadcrumbs spectrum-Breadcrumbs--multiline">
@@ -205,7 +198,6 @@ examples:
       </nav>
   - id: breadcrumb-multiline-nested-root
     name: Multiline Nested (root visible)
-    status: Verified
     markup: |
       <nav>
         <ul class="spectrum-Breadcrumbs spectrum-Breadcrumbs--multiline">
@@ -238,7 +230,6 @@ examples:
       </nav>
   - id: breadcrumb-compact
     name: Compact
-    status: Verified
     markup: |
       <nav>
         <ul class="spectrum-Breadcrumbs spectrum-Breadcrumbs--compact">
@@ -327,7 +318,6 @@ examples:
       </nav>
   - id: breadcrumb-disabled
     name: Disabled
-    status: Verified
     markup: |
       <nav>
         <ul class="spectrum-Breadcrumbs">

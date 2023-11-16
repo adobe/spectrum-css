@@ -1,0 +1,37 @@
+{
+    "$schema": "../node_modules/nx/schemas/project-schema.json",
+    "name": "site",
+    "tags": ["tooling"],
+    "namedInputs": {
+        "core": ["{projectRoot}/*.pug", "{projectRoot}/deprecated"],
+        "tools": [
+            "{projectRoot}/includes",
+            "{projectRoot}/resources",
+            "{projectRoot}/templates",
+            "{projectRoot}/gulpfile.js",
+            "{projectRoot}/util.js"
+        ]
+    },
+    "targets": {
+        "clean": {},
+        "build": {
+            "dependsOn": ["^build"],
+            "inputs": ["core", "tools"],
+            "outputs": ["{projectRoot}/dist"],
+            "executor": "nx:run-commands",
+            "options": {
+                "commands": ["gulp --gulpfile {projectRoot}/gulpfile.js -LLL"]
+            }
+        },
+        "build:clean": {},
+        "start": {
+            "dependsOn": ["^build"],
+            "inputs": ["core", "tools"],
+            "outputs": ["{projectRoot}/dist"],
+            "executor": "nx:run-commands",
+            "options": {
+                "commands": ["gulp --gulpfile {projectRoot}/gulpfile.js dev -LLL"]
+            }
+        }
+    }
+}

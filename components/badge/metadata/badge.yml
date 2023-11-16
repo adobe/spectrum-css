@@ -1,14 +1,13 @@
 name: Badge
+maxHeight: 200px
 SpectrumSiteSlug: https://spectrum.adobe.com/page/badge/
-description: |
-  - Badge may include a label with no icon, an icon with no label, or an icon with a label
-  - Badge t-shirt sizes correspond to icon sizes
-  - Fixed positioning impacts the border radius of the badge component
-
+description: A badge element displays a small amount of color-categorized metadata; ideal for getting a user's attention.
 sections:
-  - name: Custom Properties API
+  - name: Best practices
     description: |
-      This component can be modified via its `--mod-*` prefixed custom properties. A list of those prefixed custom properties can be found <a href="https://github.com/adobe/spectrum-css/tree/main/components/badge/metadata/mods.md">here</a>.
+      - Badge may include a label with no icon, an icon with no label, or an icon with a label
+      - Badge t-shirt sizes correspond to icon sizes
+      - Fixed positioning impacts the border radius of the badge component
   - name: Migration Guide
     description: |
       ### Badge now includes icon and label elements
@@ -107,11 +106,9 @@ examples:
         <div class="spectrum-Badge-label">Magenta</div>
       </div>
 
-  - id: badge-sizing
-    name: Sizing
+  - id: badge-sizing-label-only
+    name: Sizing - Label only
     markup: |
-      <h4 class="spectrum-Heading spectrum-Heading--sizeXS spectrum-Examples-itemHeading">Label Only</h4>
-      <br>
       <div class="spectrum-Badge spectrum-Badge--sizeS spectrum-Badge--neutral">
         <div class="spectrum-Badge-label">Small</div>
       </div>
@@ -127,14 +124,9 @@ examples:
       <div class="spectrum-Badge spectrum-Badge--sizeXL spectrum-Badge--neutral">
         <div class="spectrum-Badge-label">Extra Large</div>
       </div>
-
-      <br>
-      <br>
-      <hr>
-      <br>
-
-      <h4 class="spectrum-Heading spectrum-Heading--sizeXS spectrum-Examples-itemHeading">Icon Only</h4>
-      <br>
+  - id: badge-sizing-icon-only
+    name: Sizing - Icon only
+    markup: |
       <div class="spectrum-Badge spectrum-Badge--sizeS spectrum-Badge--neutral">
         <svg class="spectrum-Icon spectrum-Icon--sizeS spectrum-Badge-icon spectrum-Badge-icon--no-label" focusable="false" aria-hidden="true">
           <use xlink:href="#spectrum-icon-18-Info" />
@@ -158,14 +150,9 @@ examples:
           <use xlink:href="#spectrum-icon-18-Info" />
         </svg>
       </div>
-
-      <br>
-      <br>
-      <hr>
-      <br>
-
-      <h4 class="spectrum-Heading spectrum-Heading--sizeXS spectrum-Examples-itemHeading">Icon with Label</h4>
-      <br>
+  - id: badge-sizing-icon-with-label
+    name: Sizing - Icon with label
+    markup: |
       <div class="spectrum-Badge spectrum-Badge--sizeS spectrum-Badge--neutral">
         <svg class="spectrum-Icon spectrum-Icon--sizeS spectrum-Badge-icon spectrum-Badge-icon" focusable="false" aria-hidden="true">
           <use xlink:href="#spectrum-icon-18-Info" />
@@ -195,7 +182,7 @@ examples:
       </div>
 
   - id: badge-text-wrapping
-    name: Text Wrapping
+    name: Text wrapping
     markup: |
       <div class="spectrum-Badge spectrum-Badge--sizeM spectrum-Badge--neutral" style="max-width: 175px;">
         <svg class="spectrum-Icon spectrum-Icon--sizeM spectrum-Badge-icon spectrum-Badge-icon" focusable="false" aria-hidden="true">
@@ -205,52 +192,33 @@ examples:
       </div>
 
   - id: badge-fixed-edge
-    name: Fixed Edge
+    name: Fixed edge
+    demoClassName: spectrum-CSSExample-example--spacious
     markup: |
+      <div class="spectrum-Badge spectrum-Badge--sizeM spectrum-Badge--neutral spectrum-Badge--fixed-inline-start">
+        <svg class="spectrum-Icon spectrum-Icon--sizeM spectrum-Badge-icon spectrum-Badge-icon" focusable="false" aria-hidden="true">
+          <use xlink:href="#spectrum-icon-18-Info" />
+        </svg>
+        <div class="spectrum-Badge-label">Fixed inline start</div>
+      </div>
 
-      <div class="spectrum-Examples">
-        <div class="spectrum-Examples-item">
-          <h4 class="spectrum-Heading spectrum-Heading--sizeXS spectrum-Examples-itemHeading">Fixed Inline Start</h4>
+      <div class="spectrum-Badge spectrum-Badge--sizeM spectrum-Badge--neutral spectrum-Badge--fixed-inline-end">
+        <svg class="spectrum-Icon spectrum-Icon--sizeM spectrum-Badge-icon spectrum-Badge-icon" focusable="false" aria-hidden="true">
+          <use xlink:href="#spectrum-icon-18-Info" />
+        </svg>
+        <div class="spectrum-Badge-label">Fixed inline end</div>
+      </div>
 
-          <div class="spectrum-Badge spectrum-Badge--sizeM spectrum-Badge--neutral spectrum-Badge--fixed-inline-start">
-            <svg class="spectrum-Icon spectrum-Icon--sizeM spectrum-Badge-icon spectrum-Badge-icon" focusable="false" aria-hidden="true">
-              <use xlink:href="#spectrum-icon-18-Info" />
-            </svg>
-            <div class="spectrum-Badge-label">Label Text</div>
-          </div>
-        </div>
+      <div class="spectrum-Badge spectrum-Badge--sizeM spectrum-Badge--neutral spectrum-Badge--fixed-block-start">
+        <svg class="spectrum-Icon spectrum-Icon--sizeM spectrum-Badge-icon spectrum-Badge-icon" focusable="false" aria-hidden="true">
+          <use xlink:href="#spectrum-icon-18-Info" />
+        </svg>
+        <div class="spectrum-Badge-label">Fixed block start</div>
+      </div>
 
-        <div class="spectrum-Examples-item">
-          <h4 class="spectrum-Heading spectrum-Heading--sizeXS spectrum-Examples-itemHeading">Fixed Inline End</h4>
-
-          <div class="spectrum-Badge spectrum-Badge--sizeM spectrum-Badge--neutral spectrum-Badge--fixed-inline-end">
-            <svg class="spectrum-Icon spectrum-Icon--sizeM spectrum-Badge-icon spectrum-Badge-icon" focusable="false" aria-hidden="true">
-              <use xlink:href="#spectrum-icon-18-Info" />
-            </svg>
-            <div class="spectrum-Badge-label">Label Text</div>
-          </div>
-        </div>
-
-        <div class="spectrum-Examples-item">
-          <h4 class="spectrum-Heading spectrum-Heading--sizeXS spectrum-Examples-itemHeading">Fixed Block Start</h4>
-
-          <div class="spectrum-Badge spectrum-Badge--sizeM spectrum-Badge--neutral spectrum-Badge--fixed-block-start">
-            <svg class="spectrum-Icon spectrum-Icon--sizeM spectrum-Badge-icon spectrum-Badge-icon" focusable="false" aria-hidden="true">
-              <use xlink:href="#spectrum-icon-18-Info" />
-            </svg>
-            <div class="spectrum-Badge-label">Label Text</div>
-          </div>
-        </div>
-
-        <div class="spectrum-Examples-item">
-          <h4 class="spectrum-Heading spectrum-Heading--sizeXS spectrum-Examples-itemHeading">Fixed Block End</h4>
-
-          <div class="spectrum-Badge spectrum-Badge--sizeM spectrum-Badge--neutral spectrum-Badge--fixed-block-end">
-            <svg class="spectrum-Icon spectrum-Icon--sizeM spectrum-Badge-icon spectrum-Badge-icon" focusable="false" aria-hidden="true">
-              <use xlink:href="#spectrum-icon-18-Info" />
-            </svg>
-            <div class="spectrum-Badge-label">Label Text</div>
-          </div>
-        </div>
-
+      <div class="spectrum-Badge spectrum-Badge--sizeM spectrum-Badge--neutral spectrum-Badge--fixed-block-end">
+        <svg class="spectrum-Icon spectrum-Icon--sizeM spectrum-Badge-icon spectrum-Badge-icon" focusable="false" aria-hidden="true">
+          <use xlink:href="#spectrum-icon-18-Info" />
+        </svg>
+        <div class="spectrum-Badge-label">Fixed block end</div>
       </div>

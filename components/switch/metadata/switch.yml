@@ -1,15 +1,12 @@
 name: Switch
 SpectrumSiteSlug: https://spectrum.adobe.com/page/switch/
 sections:
-  - name: Custom Properties API
-    description: |
-      This component can be modified via its `--mod-*` prefixed custom properties. A list of those prefixed custom properties can be found <a href="https://github.com/adobe/spectrum-css/tree/main/components/switch/metadata/mods.md">here</a>.
   - name: Migration Guide
     description: |
       ### Component renamed
       Toggle is now known as Switch. Replace all `.spectrum-ToggleSwitch*` classnames with `.spectrum-Switch*`.
       ### T-shirt sizing
-      Switch now supports t-shirt sizing and requires that you specify the size by adding a .spectrum-Switch--size* class. The default size is "medium". 
+      Switch now supports t-shirt sizing and requires that you specify the size by adding a .spectrum-Switch--size* class. The default size is "medium".
       ### Quiet and emphasized
       Spectrum has chosen the variant previously known as `quiet` to be the default and has added an `emphasized` variant with the same styles as the previous default.
       If you were using the `quiet` variant, the `.spectrum-Switch--quiet` class is no longer required and can be removed.

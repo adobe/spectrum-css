@@ -132,7 +132,7 @@ export default {
 		status: {
 			type: process.env.MIGRATED_PACKAGES.includes("slider")
 				? "migrated"
-				: undefined,
+				: "legacy",
 		},
 	},
 };

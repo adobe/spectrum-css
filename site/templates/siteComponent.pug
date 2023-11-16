@@ -1,72 +1,36 @@
 -
-
-  // Get DNA data
-  util.populateDNAInfo(component, dnaVars);
-
-  // Arrange examples for processing
-  var examples;
-  if (!component.examples) {
-    // Only one top-level example
-    examples = [component];
-  }
-  else {
-    // Multiple child examples
-    examples = component.examples;
-  }
-
-  if (!Array.isArray(examples)) {
-    examples = Object.values(examples);
-  }
-
-  examples.forEach(example => {
-    if (example.dnaStatus === 'Deprecated' || example.cssStatus === 'Deprecated') {
-      example.status = 'Deprecated';
-    }
-    else if (example.cssStatus === 'Verified' || example.dnaStatus === 'Canon') {
-      example.status = 'Verified';
-    }
-    else {
-      example.status = 'Contribution';
-    }
-  });
-
-  let dnaStatusTranslation = {
-    'Canon': 'Verified',
-    'Precursor': 'Contribution'
-  };
-
-  let exampleOrder = {
-    'Verified': 1,
-    'Contribution': 2,
-    'Deprecated': 3
-  };
-
-  let status = dnaStatusTranslation[component.dnaStatus] || component.dnaStatus;
+  util.populateInfo(component);
+  // note: can this URL be preview?
+  url = `https://64762974a45b8bc5ca1705a2-xeqxrvxbdr.chromatic.com?path=/story/components-${component.id}--${component.previewId ?? "default"}&full=true&shortcuts=false&singleStory=true`;
+  height = component.maxHeight ?? "300px";
 
 doctype html
 html(lang='en-US' dir="ltr").spectrum.spectrum--light.spectrum--medium
   head
-    title #{component.name} - Spectrum CSS
+    title #{component.name} | Spectrum CSS
 
     include ../includes/dependencies.pug
 
+    if component.styles
+      style(type='text/css')!= component.styles
+
   body
 
-    .spectrum-Site
+    div.spectrum-Site
 
       include ../includes/header.pug
 
-      .spectrum-Site-content
+      div.spectrum-Site-content
 
         include ../includes/sidebar.pug
 
-        .spectrum-Site-mainContent
+        div.spectrum-Site-mainContent
 
-          .spectrum-Site-mainContainer
+          div.spectrum-Site-mainContainer
 
             article.spectrum-CSSComponent
 
-              .spectrum-CSSComponent-switcher
+              div.spectrum-CSSComponent-switcher
                 div.spectrum-CSS-switcherContainer
                   label.spectrum-FieldLabel.spectrum-FieldLabel--sizeM(for='switcher-theme') Theme
 
@@ -144,11 +108,24 @@ html(lang='en-US' dir="ltr").spectrum.spectrum--light.spectrum--medium
                 h1.spectrum-CSSComponent-title.spectrum-Heading.spectrum-Heading--sizeXXXL.spectrum-Heading--serif
                   a(href=`#${component.slug}`).spectrum-BigSubtleLink #{component.name}
 
+              if component.description
+                header.spectrum-CSSComponent-sectionHeading(id="description")
+                section.spectrum-CSSComponent-description
+                  div.spectrum-Body.spectrum-Body--sizeM!= util.markdown.render(component.description)
+
+              if component.status == 'Deprecated'
+                div.spectrum-AlertBanner.spectrum-AlertBanner--info.is-open
+                  div.spectrum-AlertBanner-body
+                    div.spectrum-AlertBanner-content
+                      svg.spectrum-Icon.spectrum-UIIcon-Info100.spectrum-AlertBanner-icon(focusable="false" aria-hidden="true")
+                        use(xlink:href="#spectrum-icon-18-Info")
+                      p.spectrum-AlertBanner-text This component is deprecated and will no longer receive updates.
+
               table.spectrum-CSSComponent-detailsTable
                 tr.spectrum-Body
                   th.spectrum-Body--secondary Component status
                   td
-                    div(class=`spectrum-StatusLight spectrum-StatusLight--sizeM spectrum-CSSComponent-status spectrum-StatusLight--${util.getStatusLightVariant(component.dnaStatus)}`)= status
+                    div(class=`spectrum-StatusLight spectrum-StatusLight--sizeM spectrum-CSSComponent-status spectrum-StatusLight--${util.getStatusLight(component.status)}`)= component.status
                 tr.spectrum-Body
                   th.spectrum-Body--secondary Last released
                   td= releaseDate
@@ -174,17 +151,18 @@ html(lang='en-US' dir="ltr").spectrum.spectrum--light.spectrum--medium
                       .spectrum-Card-content
                         .spectrum-Card-subtitle.spectrum-Detail.spectrum-Detail--sizeS.
                           Spectrum website
-                a.spectrum-Card.spectrum-Card--sizeS.spectrum-Card--horizontal(href=`https://github.com/adobe/spectrum-css/tree/main/components/${pkg.name.split('/').pop()}` target="_blank")
-                  .spectrum-Card-preview.spectrum-CSSComponent-resource--github
-                    svg(class="spectrum-Icon spectrum-Icon--sizeXXL" focusable="false" aria-hidden="true" aria-label="GitHub" viewBox="0 0 36 36")
-                      path(d="M17.988 2a16.291 16.291 0 0 0-5.147 31.747c.814.149 1.111-.354 1.111-.786 0-.386-.014-1.411-.022-2.77-4.531.984-5.487-2.184-5.487-2.184a4.32 4.32 0 0 0-1.809-2.383c-1.479-1.01.112-.99.112-.99a3.42 3.42 0 0 1 2.495 1.679 3.468 3.468 0 0 0 4.741 1.353 3.482 3.482 0 0 1 1.034-2.177C11.4 25.078 7.6 23.68 7.6 17.438a6.3 6.3 0 0 1 1.677-4.371 5.863 5.863 0 0 1 .16-4.311s1.368-.438 4.479 1.67a15.451 15.451 0 0 1 8.157 0c3.109-2.108 4.475-1.67 4.475-1.67a5.857 5.857 0 0 1 .162 4.311 6.286 6.286 0 0 1 1.674 4.371c0 6.258-3.808 7.635-7.437 8.038a3.888 3.888 0 0 1 1.106 3.017c0 2.177-.02 3.934-.02 4.468 0 .436.293.943 1.12.784A16.292 16.292 0 0 0 17.988 2z")
-                  .spectrum-Card-body
-                    .spectrum-Card-header
-                      .spectrum-Card-title.spectrum-Heading.spectrum-Heading--sizeXS.
-                        View repository
-                    .spectrum-Card-content
-                      .spectrum-Card-subtitle.spectrum-Detail.spectrum-Detail--sizeS.
-                        GitHub
+                if component.status !== 'Deprecated'
+                  a.spectrum-Card.spectrum-Card--sizeS.spectrum-Card--horizontal(href=`https://github.com/adobe/spectrum-css/tree/main/components/${pkg.name.split('/').pop()}` target="_blank")
+                    .spectrum-Card-preview.spectrum-CSSComponent-resource--github
+                      svg(class="spectrum-Icon spectrum-Icon--sizeXXL" focusable="false" aria-hidden="true" aria-label="GitHub" viewBox="0 0 36 36")
+                        path(d="M17.988 2a16.291 16.291 0 0 0-5.147 31.747c.814.149 1.111-.354 1.111-.786 0-.386-.014-1.411-.022-2.77-4.531.984-5.487-2.184-5.487-2.184a4.32 4.32 0 0 0-1.809-2.383c-1.479-1.01.112-.99.112-.99a3.42 3.42 0 0 1 2.495 1.679 3.468 3.468 0 0 0 4.741 1.353 3.482 3.482 0 0 1 1.034-2.177C11.4 25.078 7.6 23.68 7.6 17.438a6.3 6.3 0 0 1 1.677-4.371 5.863 5.863 0 0 1 .16-4.311s1.368-.438 4.479 1.67a15.451 15.451 0 0 1 8.157 0c3.109-2.108 4.475-1.67 4.475-1.67a5.857 5.857 0 0 1 .162 4.311 6.286 6.286 0 0 1 1.674 4.371c0 6.258-3.808 7.635-7.437 8.038a3.888 3.888 0 0 1 1.106 3.017c0 2.177-.02 3.934-.02 4.468 0 .436.293.943 1.12.784A16.292 16.292 0 0 0 17.988 2z")
+                    .spectrum-Card-body
+                      .spectrum-Card-header
+                        .spectrum-Card-title.spectrum-Heading.spectrum-Heading--sizeXS.
+                          View repository
+                      .spectrum-Card-content
+                        .spectrum-Card-subtitle.spectrum-Detail.spectrum-Detail--sizeS.
+                          GitHub
                 a.spectrum-Card.spectrum-Card--sizeS.spectrum-Card--horizontal(href=`https://www.npmjs.com/package/${pkg.name}` target="_blank")
                   .spectrum-Card-preview.spectrum-CSSComponent-resource--npm
                     svg(class="spectrum-Icon spectrum-Icon--sizeXXL" viewBox="0 0 18 7" focusable="false" aria-hidden="true" aria-label="npm")
@@ -194,32 +172,33 @@ html(lang='en-US' dir="ltr").spectrum.spectrum--light.spectrum--medium
                       polygon(fill="#FFFFFF" points="11,1 11,5 13,5 13,2 14,2 14,5 15,5 15,2 16,2 16,5 17,5 17,1 ")
                   .spectrum-Card-body
                     .spectrum-Card-header
-                      .spectrum-Card-title.spectrum-Heading.spectrum-Heading--sizeXS.
-                        View package
+                      .spectrum-Card-title.spectrum-Heading.spectrum-Heading--sizeXS View package
                     .spectrum-Card-content
-                      .spectrum-Card-subtitle.spectrum-Detail.spectrum-Detail--sizeS.
-                        npm
+                      .spectrum-Card-subtitle.spectrum-Detail.spectrum-Detail--sizeS npm
 
-              if component.description
-                header.spectrum-CSSComponent-sectionHeading(id="usage")
-                  h2.spectrum-Heading.spectrum-Heading--sizeM
-                    a(href="#usage").spectrum-BigSubtleLink Usage notes
-                  hr.spectrum-Divider.spectrum-Divider--large
-                section.spectrum-CSSComponent-description
-                  div.spectrum-Body.spectrum-Body--sizeM!= util.markdown.render(component.description)
+              iframe(height=height, src=url)
 
-              if examples.length
+              if component.examples.length
                 header.spectrum-CSSComponent-sectionHeading(id="variants")
                   h2.spectrum-Heading.spectrum-Heading--sizeM
                     a(href="#variants").spectrum-BigSubtleLink=`${component.examplesHeading ? component.examplesHeading : 'Variants'}`
                   hr.spectrum-Divider.spectrum-Divider--large
-                each example in examples
+                each example in component.examples
                   include ../includes/example.pug
 
               if component.sections
                 each section in component.sections
                   include ../includes/section.pug
 
+              if component.api
+                header.spectrum-CSSComponent-sectionHeading(id="api")
+                  h2.spectrum-Heading.spectrum-Heading--sizeM
+                    a(href="#api").spectrum-BigSubtleLink Customizing components
+                  hr.spectrum-Divider.spectrum-Divider--large
+                  p.spectrum-Body.spectrum-Body--sizeM Components can be customized using any `--mod-` prefixed custom properties.
+                  p
+                  div.spectrum-Body.spectrum-Body--sizeM!= util.markdown.render(component.api)
+
           include ../includes/footer.pug
 
-    include ../includes/pageBottom.pug
+      include ../includes/pageBottom.pug

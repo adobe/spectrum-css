@@ -1,8 +1,12 @@
 name: Asset card
+id: asset-card
+previewId: portrait
+maxHeight: 400px
 SpectrumSiteSlug: https://spectrum.adobe.com/page/cards/
-description: |
-  - Set the `--spectrum-assetcard-asset-size` custom property to the size you want to display the asset as
+description: The asset card component allows users to select and manage assets and their metadata in a grid.
 sections:
+  - name: Best practice
+    description: To customize the asset size, adjust the `--spectrum-assetcard-asset-size` custom property.
   - name: Migration Guide
     description: |
       ### Remove focus-ring class

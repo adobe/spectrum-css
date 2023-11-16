@@ -42,7 +42,7 @@ export default {
 		status: {
 			type: process.env.MIGRATED_PACKAGES.includes("modal")
 				? "migrated"
-				: undefined,
+				: "legacy",
 		},
 	},
 };

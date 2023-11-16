@@ -230,10 +230,20 @@ export const parameters = {
 	status: {
 		statuses: {
 			migrated: {
-				background: "#f0f0f0",
+				background: "rgb(205, 252, 191)", // celery-100
 				color: "#444",
-				description: "Migrated to the latest tokens.",
+				description: "Migrated to @spectrum-css/tokens.",
 			},
+			legacy: {
+				background: "rgb(228, 111, 0)", // orange-700
+				color: "#fff",
+				description: "Leverages @spectrum-css/vars.",
+			},
+			deprecated: {
+				background: "rgb(234, 56, 41)", // red-800
+				color: "#fff",
+				description: "Deprecated component.",
+			}
 		},
 	},
 };

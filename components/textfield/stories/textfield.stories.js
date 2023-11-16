@@ -158,7 +158,7 @@ export default {
 		status: {
 			type: process.env.MIGRATED_PACKAGES.includes("textfield")
 				? "migrated"
-				: undefined,
+				: "legacy",
 		},
 	},
 };

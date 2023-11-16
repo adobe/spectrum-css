@@ -115,7 +115,7 @@ export default {
 		status: {
 			type: process.env.MIGRATED_PACKAGES.includes("combobox")
 				? "migrated"
-				: undefined,
+				: "legacy",
 		},
 	},
 };

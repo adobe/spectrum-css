@@ -77,7 +77,7 @@ function buildExpressTheme() {
 		.pipe(gulp.dest("dist/themes/"));
 }
 
-exports.buildCSS = gulp.series(
+exports.default = gulp.series(
 	gulp.parallel(
 		buildCSS,
 		buildCSSWithoutThemes,

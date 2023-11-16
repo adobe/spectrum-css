@@ -35,7 +35,7 @@ export default {
 		status: {
 			type: process.env.MIGRATED_PACKAGES.includes("asset")
 				? "migrated"
-				: undefined,
+				: "legacy",
 		},
 	},
 };

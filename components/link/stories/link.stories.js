@@ -68,7 +68,7 @@ export default {
 		status: {
 			type: process.env.MIGRATED_PACKAGES.includes("link")
 				? "migrated"
-				: undefined,
+				: "legacy",
 		},
 	},
 };

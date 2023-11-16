@@ -89,7 +89,7 @@ export default {
 		status: {
 			type: process.env.MIGRATED_PACKAGES.includes("stepper")
 				? "migrated"
-				: undefined,
+				: "legacy",
 		},
 	},
 };

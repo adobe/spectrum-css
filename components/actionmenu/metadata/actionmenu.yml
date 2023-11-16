@@ -1,5 +1,7 @@
 name: Action menu
-description: Simply an action button with a Popover. Note that the `is-selected` class should be applied to the button when the menu is open. Also note the accessibility roles are different for an action menu vs a normal menu.
+id: action-menu
+maxHeight: 400px
+description: An action button with a popover. Note that the `is-selected` class should be applied to the button when the menu is open and that accessibility roles differ for an action menu vs. a normal menu.
 sections:
   - name: Migration Guide
     description: |
@@ -12,62 +14,62 @@ examples:
   - id: actionmenu
     name: Standard
     markup: |
-      <button class="spectrum-ActionButton spectrum-ActionButton--sizeM spectrum-ActionButton--quiet is-selected">
-        <svg class="spectrum-Icon spectrum-Icon--sizeM spectrum-ActionButton-icon" focusable="false" aria-hidden="true">
-          <use xlink:href="#spectrum-icon-18-More" />
-        </svg>
-        <span class="spectrum-ActionButton-label">More Actions</span>
-      </button>
-      <br>
-
-      <div class="spectrum-Popover spectrum-Popover--bottom is-open">
-        <ul class="spectrum-Menu" role="menu">
-          <li class="spectrum-Menu-item" role="menuitem" tabindex="0">
-            <span class="spectrum-Menu-itemLabel">Action 1</span>
-          </li>
-          <li class="spectrum-Menu-item" role="menuitem" tabindex="0">
-            <span class="spectrum-Menu-itemLabel">Action 2</span>
-          </li>
-          <li class="spectrum-Menu-item" role="menuitem" tabindex="0">
-            <span class="spectrum-Menu-itemLabel">Action 3</span>
-          </li>
-          <li class="spectrum-Menu-item" role="menuitem" tabindex="0">
-            <span class="spectrum-Menu-itemLabel">Action 4</span>
-          </li>
-        </ul>
+      <div class="spectrum-Examples" style="height:200px">
+        <div class="spectrum-Examples-item">
+          <button class="spectrum-ActionButton spectrum-ActionButton--sizeM spectrum-ActionButton--quiet is-selected">
+            <svg class="spectrum-Icon spectrum-Icon--sizeM spectrum-ActionButton-icon" focusable="false" aria-hidden="true">
+              <use xlink:href="#spectrum-icon-18-More" />
+            </svg>
+            <span class="spectrum-ActionButton-label">More Actions</span>
+          </button>
+          <br/>
+          <div class="spectrum-Popover spectrum-Popover--bottom is-open">
+            <ul class="spectrum-Menu" role="menu">
+              <li class="spectrum-Menu-item" role="menuitem" tabindex="0">
+                <span class="spectrum-Menu-itemLabel">Action 1</span>
+              </li>
+              <li class="spectrum-Menu-item" role="menuitem" tabindex="0">
+                <span class="spectrum-Menu-itemLabel">Action 2</span>
+              </li>
+              <li class="spectrum-Menu-item" role="menuitem" tabindex="0">
+                <span class="spectrum-Menu-itemLabel">Action 3</span>
+              </li>
+              <li class="spectrum-Menu-item" role="menuitem" tabindex="0">
+                <span class="spectrum-Menu-itemLabel">Action 4</span>
+              </li>
+            </ul>
+          </div>
+        </div>
+        <div class="spectrum-Examples-item">
+          <button class="spectrum-ActionButton spectrum-ActionButton--sizeM spectrum-ActionButton--quiet is-selected">
+            <svg class="spectrum-Icon spectrum-Icon--sizeM spectrum-ActionButton-icon" focusable="false" aria-hidden="true">
+              <use xlink:href="#spectrum-icon-18-More" />
+            </svg>
+          </button>
+          <br/>
+          <div class="spectrum-Popover spectrum-Popover--bottom is-open">
+            <ul class="spectrum-Menu" role="menu">
+              <li class="spectrum-Menu-item" role="menuitem" tabindex="0">
+                <span class="spectrum-Menu-itemLabel">Action 1</span>
+              </li>
+              <li class="spectrum-Menu-item" role="menuitem" tabindex="0">
+                <span class="spectrum-Menu-itemLabel">Action 2</span>
+              </li>
+              <li class="spectrum-Menu-item" role="menuitem" tabindex="0">
+                <span class="spectrum-Menu-itemLabel">Action 3</span>
+              </li>
+              <li class="spectrum-Menu-item" role="menuitem" tabindex="0">
+                <span class="spectrum-Menu-itemLabel">Action 4</span>
+              </li>
+            </ul>
+          </div>
+        </div>
+        <div class="spectrum-Examples-item">
+          <button class="spectrum-ActionButton spectrum-ActionButton--sizeM spectrum-ActionButton--quiet">
+            <svg class="spectrum-Icon spectrum-Icon--sizeM spectrum-ActionButton-icon" focusable="false" aria-hidden="true">
+              <use xlink:href="#spectrum-icon-18-More" />
+            </svg>
+            <span class="spectrum-ActionButton-label">More Actions</span>
+          </button>
+        </div>
       </div>
-
-      <div class="dummy-spacing"></div>
-
-      <button class="spectrum-ActionButton spectrum-ActionButton--sizeM spectrum-ActionButton--quiet is-selected">
-        <svg class="spectrum-Icon spectrum-Icon--sizeM spectrum-ActionButton-icon" focusable="false" aria-hidden="true">
-          <use xlink:href="#spectrum-icon-18-More" />
-        </svg>
-      </button>
-      <br>
-
-      <div class="spectrum-Popover spectrum-Popover--bottom is-open">
-        <ul class="spectrum-Menu" role="menu">
-          <li class="spectrum-Menu-item" role="menuitem" tabindex="0">
-            <span class="spectrum-Menu-itemLabel">Action 1</span>
-          </li>
-          <li class="spectrum-Menu-item" role="menuitem" tabindex="0">
-            <span class="spectrum-Menu-itemLabel">Action 2</span>
-          </li>
-          <li class="spectrum-Menu-item" role="menuitem" tabindex="0">
-            <span class="spectrum-Menu-itemLabel">Action 3</span>
-          </li>
-          <li class="spectrum-Menu-item" role="menuitem" tabindex="0">
-            <span class="spectrum-Menu-itemLabel">Action 4</span>
-          </li>
-        </ul>
-      </div>
-
-      <div class="dummy-spacing"></div>
-
-      <button class="spectrum-ActionButton spectrum-ActionButton--sizeM spectrum-ActionButton--quiet">
-        <svg class="spectrum-Icon spectrum-Icon--sizeM spectrum-ActionButton-icon" focusable="false" aria-hidden="true">
-          <use xlink:href="#spectrum-icon-18-More" />
-        </svg>
-        <span class="spectrum-ActionButton-label">More Actions</span>
-      </button>

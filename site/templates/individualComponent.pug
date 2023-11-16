@@ -1,77 +1,15 @@
 -
-  // Backwards compatibility with old components array
-  component.examples = component.examples || component.components;
-
-  // Arrange examples for processing
-  var examples;
-  if (!component.examples) {
-    // Only one top-level example
-    examples = [component];
-  }
-  else {
-    // Multiple child examples
-    examples = component.examples;
-  }
-
-  // Filter the list of deps since we already include vars
-  var deps = dependencies.filter(function(dep) {
-    return dep !== 'vars';
-  });
-
-  if (component.examples) {
-    for (id in component.examples) {
-      let example = component.examples[id];
-      if (typeof example === 'string') {
-        // Handle markup only examples
-        example = {
-          id: id,
-          markup: example
-        };
-        component.examples[id] = example;
-      }
-      example.id = id;
-    }
-  }
+  util.populateInfo(component);
 
 doctype html
 html(lang='en-US' dir="ltr").spectrum.spectrum--light.spectrum--medium
   head
-    meta(charset = 'utf-8')
-    meta('http-equiv' = 'X-UA-Compatible', content = 'IE=edge,chrome=1')
     title #{component.name} - Spectrum CSS
-    meta(name="viewport", content="user-scalable=no,initial-scale = 1.0,maximum-scale = 1.0")
 
-    link(rel='stylesheet', type='text/css', href='dependencies/@spectrum-css/vars/dist/spectrum-light.css')
-    link(rel='stylesheet', type='text/css', href='dependencies/@spectrum-css/vars/dist/spectrum-dark.css')
-    link(rel='stylesheet', type='text/css', href='dependencies/@spectrum-css/vars/dist/spectrum-darkest.css')
-    link(rel='stylesheet', type='text/css', href='dependencies/@spectrum-css/vars/dist/spectrum-medium.css')
-    link(rel='stylesheet', type='text/css', href='dependencies/@spectrum-css/vars/dist/spectrum-large.css')
+    include ../includes/dependencies.pug
 
-    each dep in deps
-      link(rel='stylesheet', type='text/css', href='dependencies/@spectrum-css/' + dep + '/index-vars.css')
-
-    // Include the actual component
-    link(rel='stylesheet', type='text/css', href='../index-vars.css')
-
-    link(rel='stylesheet', type='text/css', href='css/site.css')
-    link(rel='stylesheet', type='text/css', href='css/docs.css')
-
-    script(src='js/loadicons/index.js')
-    script(src='js/typekit.js')
-    script(src='js/SpectrumSwitcher.js')
-
-    script.
-      loadIcons('dependencies/@spectrum-css/icon/spectrum-css-icons.svg');
-      var switcher = new SpectrumSwitcher();
-
-    style(type='text/css').
-      body {
-        overflow: auto;
-      }
-
-      .spectrum-CSSExample-example {
-        border-radius: 0;
-      }
+    if component.styles
+      style(type='text/css')!= component.styles
 
   body
 
@@ -82,10 +20,21 @@ html(lang='en-US' dir="ltr").spectrum.spectrum--light.spectrum--medium
           a(href=`#${component.slug}`).spectrum-BigSubtleLink #{component.name}
         p.spectrum-CSSComponent-version.spectrum-Body.spectrum-Body--sizeS Version #{pkg.version}
 
+      if status == 'Deprecated'
+        div.spectrum-AlertBanner.spectrum-AlertBanner--info.is-open
+          div.spectrum-AlertBanner-body
+            div.spectrum-AlertBanner-content
+              svg.spectrum-Icon.spectrum-UIIcon-Info100.spectrum-AlertBanner-icon(focusable="false" aria-hidden="true")
+                use(xlink:href="#spectrum-icon-18-Info")
+              p.spectrum-AlertBanner-text This component is deprecated and will no longer receive updates.
+
       if component.description
         section.spectrum-CSSComponent-description.spectrum-Body.spectrum-Body--sizeL!= util.markdown.render(component.description)
 
       each example in examples
+      -
+        if (status === 'Deprecated') example.status = 'Deprecated';
+
         article.spectrum-CSSExample
           if example != component
             header(id=example.slug)

@@ -1,4 +1,6 @@
 name: Alert banner
+id: alert-banner
+maxHeight: 200px
 description: Alert banners show pressing and high-signal messages, such as system alerts. They're meant to be noticed and prompt users to take action.
 examples:
   - id: alertbanner

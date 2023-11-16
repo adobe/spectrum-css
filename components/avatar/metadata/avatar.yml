@@ -1,31 +1,27 @@
 name: Avatar
 status: Verified
-description: |
-  An image representing a user.
-
-  An avatar image is wrapped in a link that uses the `.spectrum-Avatar-link`
-  class by default, however, an avatar may also be used without a link.
-  When disabled the avatar should only be used without a link.
+description: An image representing a user.
+maxHeight: 200px
 SpectrumSiteSlug: https://spectrum.adobe.com/page/avatar/
 sections:
-  - name: Custom Properties API
-    description: |
-      This component can be modified via its `--mod-*` prefixed custom properties. A list of those prefixed custom properties can be found <a href="https://github.com/adobe/spectrum-css/tree/main/components/avatar/metadata/mods.md">here</a>.
+  - name: Best practices
+    description: An avatar image that is wrapped in a link uses the `.spectrum-Avatar-link` class by default, however, an avatar may also be used without a link. When disabled the avatar should only be used without a link.
   - name: Migration Guide
     description: |
       ### A div wrapper is required for avatar
-      ```
+      A div wrapper should be used to wrap the avatar image. The `.spectrum-Avatar` class should be applied to the wrapper.
+      ```html
       <div class="spectrum-Avatar spectrum-Avatar--size50">
         <img class="spectrum-Avatar-image" src="img/example-ava.jpg" alt="Avatar">
       </div>
       ```
-      ### Sizes added to `avatar`.
-      A second class has to be added to `spectrum-Avatar` to declare which size to use. The available size classes are: `spectrum-Avatar--size50`, `spectrum-Avatar--size75`, `spectrum-Avatar--size100`, `spectrum-Avatar--size200`, `spectrum-Avatar--size300`, `spectrum-Avatar--size400`, `spectrum-Avatar--size500`, `spectrum-Avatar--size600`, and `spectrum-Avatar--size700`.
+      ### Sizes added to avatar
+      An additional class can be added to `spectrum-Avatar` to declare which size to use. The available sizes are listed below.
 examples:
   - id: avatar
     name: Standard
     markup: |
-      <div class="spectrum-Examples spectrum-Examples--vertical">
+      <div class="spectrum-Examples">
         <div class="spectrum-Examples-item">
           <h4 class="spectrum-Heading spectrum-Heading--sizeXS spectrum-Examples-itemHeading">50</h4>
           <div class="spectrum-Avatar spectrum-Avatar--size50">

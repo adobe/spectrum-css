@@ -3,9 +3,6 @@ status: Verified
 description: A group of <a href="https://opensource.adobe.com/spectrum-css/tag.html">tags</a>. Tags allow users to categorize content. They can represent keywords or people, and are grouped to describe an item or a search request. When horizontal space is limited in a tag group, the individual tags wrap to form another line.
 SpectrumSiteSlug: https://spectrum.adobe.com/page/tag/
 sections:
-  - name: Custom Properties API
-    description: |
-      This component can be modified via its `--mod-*` prefixed custom properties. A list of those prefixed custom properties can be found <a href="https://github.com/adobe/spectrum-css/tree/main/components/taggroup/metadata/mods.md">here</a>.
   - name: Migration Guide
     description: |
       ### Updated tag classes

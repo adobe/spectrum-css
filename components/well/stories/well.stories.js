@@ -20,7 +20,7 @@ export default {
 		status: {
 			type: process.env.MIGRATED_PACKAGES.includes("well")
 				? "migrated"
-				: undefined,
+				: "legacy",
 		},
 	},
 };

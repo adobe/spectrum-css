@@ -1,7 +1,7 @@
 // Import the component markup template
 import { Template } from "./template";
 
-import { workflowIcons, uiIcons } from "./utilities.js";
+import { uiIcons, workflowIcons } from "./utilities.js";
 
 export default {
 	title: "Components/Icon",
@@ -75,7 +75,7 @@ export default {
 		status: {
 			type: process.env.MIGRATED_PACKAGES.includes("icon")
 				? "migrated"
-				: undefined,
+				: "legacy",
 		},
 	},
 };

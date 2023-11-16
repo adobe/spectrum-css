@@ -49,7 +49,7 @@ export default {
 		status: {
 			type: process.env.MIGRATED_PACKAGES.includes("alertbanner")
 				? "migrated"
-				: undefined,
+				: "legacy",
 		},
 	},
 };

@@ -1,4 +1,4 @@
-import { argTypes, ActionButtons } from "./index";
+import { ActionButtons, argTypes } from "./index";
 
 export default {
 	title: "Components/Action button/Quiet",
@@ -21,7 +21,7 @@ export default {
 		status: {
 			type: process.env.MIGRATED_PACKAGES.includes("actionbutton")
 				? "migrated"
-				: undefined,
+				: "legacy",
 		},
 	},
 };

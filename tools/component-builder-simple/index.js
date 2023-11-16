@@ -12,15 +12,11 @@ governing permissions and limitations under the License.
 
 const gulp = require("gulp");
 const rename = require("gulp-rename");
-const del = require("del");
-const css = require("./css");
 
-function clean() {
-	return del("dist/*");
-}
+const buildCSS = require("./css");
 
-const build = gulp.series(clean, css.buildCSS, function copyIndex() {
-	// Just copy index.vars as index.css to maintain backwards compat
+// Copy index.vars as index.css to maintain backwards compat
+function copyIndex() {
 	return gulp
 		.src("dist/index.css")
 		.pipe(
@@ -29,12 +25,8 @@ const build = gulp.series(clean, css.buildCSS, function copyIndex() {
 			})
 		)
 		.pipe(gulp.dest("dist/"));
-});
+}
+
+const build = gulp.series(buildCSS, copyIndex);
 
 exports.default = build;
-exports.build = build;
-exports.buildLite = build;
-exports.buildMedium = build;
-exports.buildHeavy = build;
-exports.clean = clean;
-exports.buildCSS = build;

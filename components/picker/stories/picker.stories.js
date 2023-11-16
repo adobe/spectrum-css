@@ -121,7 +121,7 @@ export default {
 		status: {
 			type: process.env.MIGRATED_PACKAGES.includes("picker")
 				? "migrated"
-				: undefined,
+				: "legacy",
 		},
 	},
 };

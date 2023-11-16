@@ -1,9 +1,6 @@
 name: Button group
 SpectrumSiteSlug: https://spectrum.adobe.com/page/button/
 sections:
-  - name: Custom Properties API
-    description: |
-      This component can be modified via its `--mod-*` prefixed custom properties. A list of those prefixed custom properties can be found <a href="https://github.com/adobe/spectrum-css/tree/main/components/buttongroup/metadata/mods.md">here</a>.
 examples:
   - id: buttongroup-horizontal
     name: Horizontal

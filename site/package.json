@@ -1,0 +1,38 @@
+{
+  "name": "@spectrum-tools/documentation",
+  "version": "0.0.0-alpha.0",
+  "description": "A Spectrum-focused utility for building the documentation site.",
+  "license": "Apache-2.0",
+  "author": "Adobe",
+  "homepage": "https://opensource.adobe.com/spectrum-css/",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/adobe/spectrum-css.git",
+    "directory": "site"
+  },
+  "bugs": {
+    "url": "https://github.com/adobe/spectrum-css/issues"
+  },
+  "module": "gulpfile.js",
+  "devDependencies": {
+    "@spectrum-css/bundle-builder": "^5.0.0",
+    "@spectrum-css/expressvars": "^3.0.9",
+    "@spectrum-css/tokens": "^13.0.4",
+    "@spectrum-css/vars": "^9.0.8",
+    "browser-sync": "^2.29.3",
+    "colors": "^1.4.0",
+    "gulp": "^4.0.0",
+    "gulp-data": "^1.3.1",
+    "gulp-pug": "^5.0.0",
+    "js-yaml": "^4.1.0",
+    "loadicons": "^1.0.0",
+    "lunr": "^2.3.6",
+    "markdown-it": "^13.0.2",
+    "markdown-it-prism": "^2.3.0",
+    "npm-registry-fetch": "^16.1.0",
+    "prismjs": "^1.29.0",
+    "pug": "^3.0.2",
+    "replace-ext": "^2.0.0",
+    "through2": "^4.0.2"
+  }
+}

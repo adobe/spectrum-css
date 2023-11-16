@@ -2,9 +2,6 @@ name: Divider
 status: Verified
 SpectrumSiteSlug: https://spectrum.adobe.com/page/divider/
 sections:
-  - name: Custom Properties API
-    description: |
-      This component can be modified via its `--mod-*` prefixed custom properties. A list of those prefixed custom properties can be found <a href="https://github.com/adobe/spectrum-css/tree/main/components/divider/metadata/mods.md">here</a>.
   - name: Migration Guide
     description: |
       ### Change workflow icon size to medium

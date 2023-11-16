@@ -53,7 +53,7 @@ export default {
 		status: {
 			type: process.env.MIGRATED_PACKAGES.includes("treeview")
 				? "migrated"
-				: undefined,
+				: "legacy",
 		},
 	},
 };

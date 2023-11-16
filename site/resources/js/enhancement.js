@@ -315,8 +315,12 @@ governing permissions and limitations under the License.
 	});
 
 	function setPickerValue(picker, value, label) {
-		var menu = picker.nextElementSibling.querySelector(".spectrum-Menu");
-		var menuItem = menu.querySelector(
+		if (!picker) return;
+
+		const menu = picker.nextElementSibling.querySelector(".spectrum-Menu");
+		if (!menu) return;
+
+		const menuItem = menu.querySelector(
 			'.spectrum-Menu-item[value="' + value + '"]'
 		);
 

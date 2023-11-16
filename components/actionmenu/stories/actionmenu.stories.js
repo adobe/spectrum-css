@@ -1,4 +1,4 @@
-import { within, userEvent } from '@storybook/testing-library';
+import { userEvent, within } from '@storybook/testing-library';
 import { html } from "lit";
 
 // Import the component markup template
@@ -52,7 +52,7 @@ export default {
 		status: {
 			type: process.env.MIGRATED_PACKAGES.includes("actionmenu")
 				? "migrated"
-				: undefined,
+				: "legacy",
 		},
 		chromatic: { delay: 2000 },
 	},
