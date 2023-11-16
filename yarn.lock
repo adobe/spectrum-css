@@ -61,20 +61,10 @@
   resolved "https://registry.yarnpkg.com/@adobe/spectrum-css-workflow-icons/-/spectrum-css-workflow-icons-1.5.4.tgz#0e09ff519c36139176c3ba3ce617a995c9032f67"
   integrity sha512-sZ19YOLGw5xTZzCEkVXPjf53lXVzo063KmDTJjpSjy/XLVsF+RaX0b436SfSM4hsIUZ7n27+UsbOvzFaFjcYXw==
 
-"@adobe/spectrum-express-tokens-deprecated@^1.0.0-beta.35":
-  version "1.0.0-beta.35"
-  resolved "https://registry.yarnpkg.com/@adobe/spectrum-express-tokens-deprecated/-/spectrum-express-tokens-deprecated-1.0.0-beta.35.tgz#f45d272ccd64c43cbca086c112988f0949fbdb29"
-  integrity sha512-7DfRA/dR/8lo0+v/jYc8pCkADriRHN2EaXcUcVRwjmmeFwONRfYgpC1N9d/drvtzVjSo0q42Z1Bj12QKeFA/Zw==
-
-"@adobe/spectrum-tokens-deprecated@^11.8.0":
-  version "11.8.0"
-  resolved "https://registry.yarnpkg.com/@adobe/spectrum-tokens-deprecated/-/spectrum-tokens-deprecated-11.8.0.tgz#7edf6f7b7e3c22581e0732c8de97fa0a68ed66b9"
-  integrity sha512-LW2SA/8VhW868tEcgIcugx7xdtgFG3KiUoEz+4s2nHTdmKj0h2A9pnTNplVTNAMq2uPSfp6wKKvQNNnMSIXqCg==
-
-"@adobe/spectrum-tokens@0.0.0-s2-20230810215532":
-  version "0.0.0-s2-20230810215532"
-  resolved "https://registry.yarnpkg.com/@adobe/spectrum-tokens/-/spectrum-tokens-0.0.0-s2-20230810215532.tgz#71b2c3585183abe63a15c0c7f2c6b1a9a8319218"
-  integrity sha512-NpgZ6/lCDCubo5tMVxFJinblTCwD40gQ0G8z8lTBYESOKTR7V03cRJ1kyRrtKSvnwTrGesCZob0R3+KLXKe0Yg==
+"@adobe/spectrum-tokens@13.0.0-beta.4":
+  version "13.0.0-beta.4"
+  resolved "https://registry.yarnpkg.com/@adobe/spectrum-tokens/-/spectrum-tokens-13.0.0-beta.4.tgz#f1b3231b039395effe9d8473fb0a4abb4e7f42d7"
+  integrity sha512-oDovGy0N8AFHAqg2BRm+tRTjebWYJUd7KLxoNGJKQGZifAvLRYcyDTVevyRkvyuLLyL1q8C2CIL4tB4JgDgnGQ==
 
 "@ampproject/remapping@^2.2.0":
   version "2.2.1"
@@ -2692,10 +2682,44 @@
   resolved "https://registry.yarnpkg.com/@socket.io/component-emitter/-/component-emitter-3.1.0.tgz#96116f2a912e0c02817345b3c10751069920d553"
   integrity sha512-+9jVqKhRSpsc591z5vX+X5Yyw+he/HCB4iQ/RYxw35CEPaY1gnsNE43nf9n9AaYjAQrTiI/mOwKUKdUs9vf7Xg==
 
+"@spectrum-css/component-builder-simple@^2.0.17":
+  version "2.0.18"
+  resolved "https://registry.yarnpkg.com/@spectrum-css/component-builder-simple/-/component-builder-simple-2.0.18.tgz#975ab1402f76b4d38fcd55005fef0ce83ddf884c"
+  integrity sha512-j3zi7x++COMoChWUFajbh6nD9fyNUEfh59JghcJ3WssaPp/dGlyjQ7DKb4KzzImdOlkXJYj04CHeeOiDufN8dA==
+  dependencies:
+    "@spectrum-css/tokens" "^13.0.3"
+    autoprefixer "^6.5.3"
+    colors "^1.4.0"
+    del "^5.0.0"
+    gulp "^4.0.0"
+    gulp-concat "^2.6.1"
+    gulp-postcss "^7.0.0"
+    gulp-rename "^1.4.0"
+    gulplog "^2.0.1"
+    postcss "^7.0.36"
+    postcss-calc "^6.0.0"
+    postcss-combininator "^1.0.2"
+    postcss-discard-comments "^4.0.0"
+    postcss-discard-empty "^4.0.1"
+    postcss-dropdupedvars "^1.1.2"
+    postcss-dropunusedvars "^1.2.1"
+    postcss-import "^10.0.0"
+    postcss-inherit "^4.0.3"
+    postcss-nested "^3.0.0"
+    postcss-selector-parser "^6.0.2"
+    postcss-splitinator "^1.0.2"
+    postcss-values-parser "^3.1.1"
+    through2 "^3.0.1"
+
 "@spectrum-css/expressvars@^3.0.9":
   version "3.0.9"
   resolved "https://registry.yarnpkg.com/@spectrum-css/expressvars/-/expressvars-3.0.9.tgz#72678e0845c240bc9cb6b4d828f20806810f4cab"
   integrity sha512-mnxdnF2NGNdba+3OomwFURPG0XqNRD+S2cmX0ARYnia9lv84HpzhbSoGuqmQO4+4+dXe46zYjnKRe2L8oJM/zw==
+
+"@spectrum-css/tokens@^12.0.0":
+  version "12.0.0"
+  resolved "https://registry.yarnpkg.com/@spectrum-css/tokens/-/tokens-12.0.0.tgz#dccc297cf62be60ddc23c15e9805acf664b38613"
+  integrity sha512-P4+AieUf60i3TRa4fnD+rlSH52ZQtimsEUMCdHReYO3wUGdLWdLln7rtZ0fVh4mXJ4z3o75MEbE4PYYklqtOmA==
 
 "@spectrum-css/vars@^9.0.8":
   version "9.0.8"

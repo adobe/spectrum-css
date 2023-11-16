@@ -27,7 +27,7 @@
     "format:results": "prettier --no-config --no-error-on-unmatched-pattern --ignore-unknown --loglevel silent --write dist/"
   },
   "devDependencies": {
-    "@adobe/spectrum-tokens": "0.0.0-s2-20230810215532",
+    "@adobe/spectrum-tokens": "13.0.0-beta.4",
     "concat-cli": "^4.0.0",
     "npm-run-all": "^4.1.5",
     "postcss": "^8.4.21",
