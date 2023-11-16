@@ -19,7 +19,6 @@
   },
   "peerDependencies": {
     "@spectrum-css/button": ">=11",
-    "@spectrum-css/backgroundlayers": ">=1",
     "@spectrum-css/buttongroup": ">=6",
     "@spectrum-css/divider": ">=1 <=2",
     "@spectrum-css/icon": ">=4",
@@ -36,7 +35,6 @@
     "@spectrum-css/modal": "^4.0.3",
     "@spectrum-css/tokens": "^13.0.4",
     "@spectrum-css/underlay": "^3.0.11",
-    "@spectrum-css/backgroundlayers": "^1.0.0-alpha.0",
     "gulp": "^4.0.0"
   },
   "publishConfig": {
