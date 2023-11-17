@@ -83,7 +83,7 @@ governing permissions and limitations under the License.
     &.is-focused,
     *:focus {
       .spectrum-Steplist-marker {
-        background-color: var(--mod-steplist-current-marker-color-key-focus, var(--spectrum-steplist-current-marker-color-key-focus));
+        background-color: var(--highcontrast-steplist-current-marker-color-key-focus, var(--mod-steplist-current-marker-color-key-focus, var(--spectrum-steplist-current-marker-color-key-focus)));
       }
     }
   }
@@ -144,7 +144,7 @@ governing permissions and limitations under the License.
       color: var(--mod-steplist-complete-label-text-color, var(--spectrum-steplist-complete-label-text-color));
     }
     .spectrum-Steplist-marker {
-      background-color: var(--mod-steplist-complete-marker-background-color, var(--spectrum-steplist-complete-marker-background-color));
+      background-color: var(--highcontrast-steplist-complete-marker-background-color, var(--mod-steplist-complete-marker-background-color, var(--spectrum-steplist-complete-marker-background-color)));
       border: none;
     }
 
@@ -167,7 +167,7 @@ governing permissions and limitations under the License.
     }
     .spectrum-Steplist-marker {
       border: none;
-      background-color: var(--mod-steplist-current-marker-color, var(--spectrum-steplist-current-marker-color));
+      background-color: var(--highcontrast-steplist-current-marker-color, var(--mod-steplist-current-marker-color, var(--spectrum-steplist-current-marker-color)));
     }
   }
 
@@ -321,5 +321,23 @@ governing permissions and limitations under the License.
     /* Override last-child bits */
     margin-inline-end: 0;
     margin-inline-start: calc(-1 * calc(var(--mod-steplist-marker-hitArea, var(--spectrum-steplist-marker-hitArea)) / 2));
+  }
+}
+
+@media (forced-colors: active) {
+	.spectrum-Steplist {
+    .is-complete {
+      --highcontrast-steplist-complete-marker-background-color: ButtonText;
+    }
+
+    .is-selected {
+      --highcontrast-steplist-current-marker-color: SelectedItem;
+    }
+
+    .is-focused,
+    .focused,
+    :focus {
+      --highcontrast-steplist-current-marker-color-key-focus: Highlight;
+    }
   }
 }
