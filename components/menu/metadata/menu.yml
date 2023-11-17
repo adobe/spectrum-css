@@ -1014,10 +1014,10 @@ examples:
               <span class="spectrum-Menu-itemLabel">Select Inverse</span>
             </li>
             <li class="spectrum-Menu-item" role="menuitem" tabindex="0">
-              <span class="spectrum-Menu-itemLabel">Feather Effect </span>
+              <span class="spectrum-Menu-itemLabel">Feather Effect</span>
             </li>
             <li class="spectrum-Menu-item" role="menuitem" tabindex="0">
-              <span class="spectrum-Menu-itemLabel">Select and Mask </span>
+              <span class="spectrum-Menu-itemLabel">Select and Mask</span>
             </li>
             <li class="spectrum-Divider spectrum-Divider--sizeS spectrum-Menu-divider" role="separator"></li>
             <li class="spectrum-Menu-item" role="menuitem" tabindex="0">
@@ -1381,7 +1381,7 @@ examples:
               </ul>
   - id: menu-truncate
     name: Menu with truncating text
-    description: To truncate menu items, use the class `spectrum-Menu-itemLabel--truncate` along with a fixed inline size on the item that should truncate
+    description: Use the class `spectrum-Menu-itemLabel--truncate` on the item label or section heading that should truncate with in a menu with a set `inline-size` or `max-inline-size`
     markup: |
       <div class="spectrum-Examples" style="justify-content: flex-start; gap: 25%;">
         <div class="spectrum-Examples-item">
