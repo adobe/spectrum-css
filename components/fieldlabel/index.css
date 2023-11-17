@@ -111,6 +111,12 @@ governing permissions and limitations under the License.
 
 .spectrum-FieldLabel--right {
   text-align: end;
+  padding-block: var(--mod-fieldlabel-side-padding-top, var(--spectrum-fieldlabel-side-padding-top)) 0;
+}
+
+.spectrum-FieldLabel--left {
+  text-align: end;
+  padding-block: 8px 0;
 }
 
 /********* Form *********/

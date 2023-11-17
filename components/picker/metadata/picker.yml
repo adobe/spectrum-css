@@ -100,8 +100,8 @@ examples:
             <use xlink:href="#spectrum-css-icon-Chevron100" />
           </svg>
         </button>
-          <label class="spectrum-Checkbox spectrum-Checkbox--sizeM">
-            <input type="checkbox" class="spectrum-Checkbox-input" id="checkbox-0" style="margin-left: 32px;"">
+          <label class="spectrum-Checkbox spectrum-Checkbox--sizeM"  style="margin-left: 32px;">
+            <input type="checkbox" class="spectrum-Checkbox-input" id="checkbox-0">
             <span class="spectrum-Checkbox-box">
               <svg class="spectrum-Icon spectrum-UIIcon-Checkmark75 spectrum-Checkbox-checkmark" focusable="false" aria-hidden="true">
                 <use xlink:href="#spectrum-css-icon-Checkmark75" />

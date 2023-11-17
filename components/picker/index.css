@@ -449,7 +449,8 @@ governing permissions and limitations under the License.
   background-color: var(--highcontrast-picker-background-color, transparent);
 
   &.spectrum-Picker--sideLabel {
-    margin-block-start: calc(-1 * var(--spectrum-picker-spacing-top-to-text-side-label-quiet));
+    margin-block-start: 1px;
+    /* margin-block-start: calc(-1 * var(--spectrum-picker-spacing-top-to-text-side-label-quiet)); */
   }
 
   .spectrum-Picker-menuIcon {
