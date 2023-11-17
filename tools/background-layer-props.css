@@ -1,4 +1,4 @@
-* {
+:root {
   --bg-color-elevated: var(--spectrum-gray-25);
   --bg-color-layer-2: var(--spectrum-gray-25);
   --bg-color-layer-1: var(--spectrum-gray-50);
@@ -13,4 +13,3 @@
 
   --border-color-1: rgba(180, 180, 180, 0.25);
 }
-
