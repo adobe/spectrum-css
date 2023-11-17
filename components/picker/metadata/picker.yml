@@ -53,27 +53,6 @@ examples:
     name: With other Elements
     markup: |
       <div style="display:flex;">
-        <div class="spectrum-FieldLabel spectrum-FieldLabel--sizeM spectrum-FieldLabel--left" style="margin-left: 32px;">Spectrum</div>
-        <button type="button" class="spectrum-Picker spectrum-Picker--sizeM spectrum-Picker--quiet spectrum-Picker--sideLabel" aria-haspopup="listbox">
-          <span class="spectrum-Picker-label is-placeholder">Classic</span>
-          <svg class="spectrum-Icon spectrum-UIIcon-ChevronDown100 spectrum-Picker-menuIcon" focusable="false" aria-hidden="true">
-            <use xlink:href="#spectrum-css-icon-Chevron100" />
-          </svg>
-        </button>
-        <div class="spectrum-FieldLabel spectrum-FieldLabel--sizeM spectrum-FieldLabel--left" style="margin-left: 32px;">Theme</div>
-        <button type="button" class="spectrum-Picker spectrum-Picker--sizeM spectrum-Picker--quiet spectrum-Picker--sideLabel" aria-haspopup="listbox">
-          <span class="spectrum-Picker-label is-placeholder">Light</span>
-          <svg class="spectrum-Icon spectrum-UIIcon-ChevronDown100 spectrum-Picker-menuIcon" focusable="false" aria-hidden="true">
-            <use xlink:href="#spectrum-css-icon-Chevron100" />
-          </svg>
-        </button>
-        <div class="spectrum-FieldLabel spectrum-FieldLabel--sizeM spectrum-FieldLabel--left" style="margin-left: 32px;">Scale</div>
-        <button type="button" class="spectrum-Picker spectrum-Picker--sizeM spectrum-Picker--quiet spectrum-Picker--sideLabel" aria-haspopup="listbox">
-          <span class="spectrum-Picker-label is-placeholder">Medium</span>
-          <svg class="spectrum-Icon spectrum-UIIcon-ChevronDown100 spectrum-Picker-menuIcon" focusable="false" aria-hidden="true">
-            <use xlink:href="#spectrum-css-icon-Chevron100" />
-          </svg>
-        </button>
         <div class="spectrum-FieldLabel spectrum-FieldLabel--sizeM spectrum-FieldLabel--left" style="margin-left: 32px;">Direction</div>
         <button type="button" class="spectrum-Picker spectrum-Picker--sizeM spectrum-Picker--quiet spectrum-Picker--sideLabel" aria-haspopup="listbox">
           <span class="spectrum-Picker-label is-placeholder">LTR</span>
@@ -98,6 +77,41 @@ examples:
         <button class="spectrum-Button spectrum-Button--fill spectrum-Button--accent spectrum-Button--sizeM" style="margin-left: 32px;">
           <span class="spectrum-Button-label">Edit</span>
         </button>
+      </div>
+      <div style="display: flex;  padding-block-start: 30px;">
+        <div class="spectrum-FieldLabel spectrum-FieldLabel--sizeM spectrum-FieldLabel--left" style="margin-left: 32px;">Theme</div>
+        <button type="button" class="spectrum-Picker spectrum-Picker--sizeM spectrum-Picker--quiet spectrum-Picker--sideLabel" aria-haspopup="listbox">
+          <span class="spectrum-Picker-label is-placeholder">Light</span>
+          <svg class="spectrum-Icon spectrum-UIIcon-ChevronDown100 spectrum-Picker-menuIcon" focusable="false" aria-hidden="true">
+            <use xlink:href="#spectrum-css-icon-Chevron100" />
+          </svg>
+        </button>
+        <div class="spectrum-Radio spectrum-Radio--sizeS">
+          <input type="radio" name="pets" class="spectrum-Radio-input" id="radio-0" style="margin-left: 32px;">
+          <span class="spectrum-Radio-button spectrum-Radio-button--sizeS"></span>
+          <label class="spectrum-Radio-label spectrum-Radio-label--sizeS" for="radio-0">Kittens</label>
+        </div>
+      </div>
+      <div style="display: flex;  padding-block-start: 30px;">
+        <div class="spectrum-FieldLabel spectrum-FieldLabel--sizeM spectrum-FieldLabel--left" style="margin-left: 32px;">Theme</div>
+        <button type="button" class="spectrum-Picker spectrum-Picker--sizeM spectrum-Picker--quiet spectrum-Picker--sideLabel" aria-haspopup="listbox">
+          <span class="spectrum-Picker-label is-placeholder">Light</span>
+          <svg class="spectrum-Icon spectrum-UIIcon-ChevronDown100 spectrum-Picker-menuIcon" focusable="false" aria-hidden="true">
+            <use xlink:href="#spectrum-css-icon-Chevron100" />
+          </svg>
+        </button>
+          <label class="spectrum-Checkbox spectrum-Checkbox--sizeM">
+            <input type="checkbox" class="spectrum-Checkbox-input" id="checkbox-0" style="margin-left: 32px;"">
+            <span class="spectrum-Checkbox-box">
+              <svg class="spectrum-Icon spectrum-UIIcon-Checkmark75 spectrum-Checkbox-checkmark" focusable="false" aria-hidden="true">
+                <use xlink:href="#spectrum-css-icon-Checkmark75" />
+              </svg>
+              <svg class="spectrum-Icon spectrum-UIIcon-Dash75 spectrum-Checkbox-partialCheckmark" focusable="false" aria-hidden="true">
+                <use xlink:href="#spectrum-css-icon-Dash75" />
+              </svg>
+            </span>
+            <span class="spectrum-Checkbox-label">Checkbox</span>
+          </label>
       </div>
   - id: picker-standard
     name: Standard
