@@ -107,15 +107,14 @@ governing permissions and limitations under the License.
   vertical-align: top;
   padding-block: var(--mod-fieldlabel-side-padding-top, var(--spectrum-fieldlabel-side-padding-top)) 0;
   padding-inline: 0 var(--mod-fieldlabel-side-padding-right, var(--spectrum-fieldlabel-side-padding-right));
+  padding-block: var(--mod-fieldlabel-side-padding-top, var(--spectrum-fieldlabel-side-padding-top)) 0;
 }
 
 .spectrum-FieldLabel--right {
   text-align: end;
-  padding-block: var(--mod-fieldlabel-side-padding-top, var(--spectrum-fieldlabel-side-padding-top)) 0;
 }
 
-.spectrum-FieldLabel--left {
-  text-align: end;
+.spectrum-FieldLabel-picker--quiet {
   padding-block: 8px 0;
 }
 
