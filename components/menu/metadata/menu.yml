@@ -1344,7 +1344,7 @@ examples:
       The back arrow size scale used with the various menu sizes are small: `200`, medium: `300`, large: `400`, and extra large: `500`."
     markup: |
       <div class="spectrum-Tray-wrapper spectrum-CSSExample-dialog" style="background: rgba(0,0,0,0.4);">
-        <div class="spectrum-Modal spectrum-Tray is-open spectrum-Tray">
+        <div class="spectrum-Modal spectrum-Tray is-open">
           <ul class="spectrum-Menu is-selectableMultiple" role="menu" style="--mod-menu-inline-size: 100%;">
             <li role="presentation">
               <div class="spectrum-Menu-back">

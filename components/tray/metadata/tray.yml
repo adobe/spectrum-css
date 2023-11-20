@@ -12,7 +12,7 @@ examples:
     name: Tray
     markup: |
       <div class="spectrum-Tray-wrapper spectrum-CSSExample-dialog" style="background: rgba(0,0,0,0.4);">
-        <div class="spectrum-Modal spectrum-Tray is-open spectrum-Tray">
+        <div class="spectrum-Modal spectrum-Tray is-open">
           <section class="spectrum-Dialog spectrum-Dialog--large" role="dialog" tabindex="-1" aria-modal="true">
             <div class="spectrum-Dialog-grid">
               <h1 class="spectrum-Dialog-heading spectrum-Dialog-heading--noHeader">New Messages</h1>
