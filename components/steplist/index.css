@@ -326,8 +326,13 @@ governing permissions and limitations under the License.
 
 @media (forced-colors: active) {
 	.spectrum-Steplist {
-    --highcontrast-steplist-complete-marker-background-color: ButtonText;
-    --highcontrast-steplist-current-marker-color: SelectedItem;
+    --highcontrast-steplist-complete-marker-background-color: CanvasText;
+    --highcontrast-steplist-current-marker-color: Highlight;
     --highcontrast-steplist-current-marker-color-key-focus: Highlight;
+  }
+  @supports (color: SelectedItem) {
+    .spectrum-Steplist {
+      --highcontrast-steplist-current-marker-color: SelectedItem;
+    }
   }
 }
