@@ -231,7 +231,7 @@ governing permissions and limitations under the License.
                         var(--mod-radio-button-border-color-focus,
                             var(--spectrum-radio-button-border-color-focus)));
     }
-    
+
     /* focus ring is focused state */
     .spectrum-Radio-button::after {
       border-style: solid;
@@ -479,5 +479,9 @@ governing permissions and limitations under the License.
                             var(--spectrum-radio-animation-duration)) ease-out,
                 margin var(--mod-radio-animation-duration,
                           var(--spectrum-radio-animation-duration)) ease-out;
+
+    [dir="rtl"] & {
+      transform: translateX(50%) translateY(-50%);
+    }
   }
 }
