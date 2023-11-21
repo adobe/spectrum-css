@@ -13,21 +13,24 @@ governing permissions and limitations under the License.
 .spectrum-Icon,
 .spectrum-UIIcon {
   display: inline-block;
+  inline-size: var(--mod-icon-inline-size, var(--mod-icon-size, var(--spectrum-icon-size)));
+  block-size: var(--mod-icon-block-size, var(--mod-icon-size, var(--spectrum-icon-size)));
 
-  /* Use custom pass through or inherit the text color */
+  /* Use custom pass through or inherit the text color. */
   color: var(--mod-icon-color, inherit);
 
-  /* Fill should match the current text color */
+  /* Fill should match the current text color. */
   fill: currentColor;
 
-  /* Hide the svg overflow in IE. */
+  /* Hide the SVG overflow in IE. */
   &:not(:root) {
     overflow: hidden;
   }
 
-  /* Don't catch clicks or hover, otherwise they may not escape the SVG */
+  /* Don't catch clicks or hover, otherwise they may not escape the SVG. */
   pointer-events: none;
 }
+
 @media (forced-colors: active) {
   .spectrum-Icon,
   .spectrum-UIIcon {

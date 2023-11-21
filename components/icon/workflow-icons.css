@@ -11,55 +11,29 @@ governing permissions and limitations under the License.
 */
 
 .spectrum-Icon {
-  --spectrum-icon-size-s: var(--spectrum-alias-workflow-icon-size-s);
-  --spectrum-icon-size-m: var(--spectrum-alias-workflow-icon-size-m);
-  --spectrum-icon-size-l: var(--spectrum-alias-workflow-icon-size-l);
-  --spectrum-icon-size-xl: var(--spectrum-alias-workflow-icon-size-xl);
-  --spectrum-icon-size-xxl: var(--spectrum-global-dimension-size-400);
+  --spectrum-icon-size: var(--spectrum-workflow-icon-size-100);
 }
 
 .spectrum-Icon--sizeS {
-  &,
-  img,
-  svg {
-    block-size: var(--spectrum-icon-size-s);
-    inline-size: var(--spectrum-icon-size-s);
-  }
-}
-
-.spectrum-Icon--sizeM {
-  &,
-  img,
-  svg {
-    block-size: var(--spectrum-icon-size-m);
-    inline-size: var(--spectrum-icon-size-m);
-  }
+  --spectrum-icon-size: var(--spectrum-workflow-icon-size-75);
 }
 
 .spectrum-Icon--sizeL {
-  &,
-  img,
-  svg {
-    block-size: var(--spectrum-icon-size-l);
-    inline-size: var(--spectrum-icon-size-l);
-  }
+  --spectrum-icon-size: var(--spectrum-workflow-icon-size-200);
 }
 
 .spectrum-Icon--sizeXL {
-  &,
-  img,
-  svg {
-    block-size: var(--spectrum-icon-size-xl);
-    inline-size: var(--spectrum-icon-size-xl);
-  }
+  --spectrum-icon-size: var(--spectrum-workflow-icon-size-300);
 }
 
-
 .spectrum-Icon--sizeXXL {
-  &,
+  --spectrum-icon-size: var(--spectrum-workflow-icon-size-400);
+}
+
+.spectrum-Icon {
   img,
   svg {
-    block-size: var(--spectrum-icon-size-xxl);
-    inline-size: var(--spectrum-icon-size-xxl);
+    inline-size: var(--mod-icon-inline-size, var(--mod-icon-size, var(--spectrum-icon-size)));
+    block-size: var(--mod-icon-block-size, var(--mod-icon-size, var(--spectrum-icon-size)));
   }
 }
