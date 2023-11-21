@@ -119,4 +119,14 @@ governing permissions and limitations under the License.
 	--spectrum-assetcard-content-font-size: var(--spectrum-body-size-s);
 
   --spectrum-tooltip-animation-distance: var(--spectrum-spacing-75);
+
+  --spectrum-picker-side-label-quiet-padding-block-start-small: -1px;
+  --spectrum-picker-side-label-quiet-padding-block-start-medium: 0px;
+  --spectrum-picker-side-label-quiet-padding-block-start-large: -1px;
+  --spectrum-picker-side-label-quiet-padding-block-start-xlarge: 0px;
+
+  --spectrum-fieldlabel-picker-side-label-quiet-padding-block-start-small: 4px;
+  --spectrum-fieldlabel-picker-side-label-quiet-padding-block-start-medium: 8px;
+  --spectrum-fieldlabel-picker-side-label-quiet-padding-block-start-large: 11px;
+  --spectrum-fieldlabel-picker-side-label-quiet-padding-block-start-xlarge: 14px;
 }

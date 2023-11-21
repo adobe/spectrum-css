@@ -29,6 +29,7 @@ governing permissions and limitations under the License.
 
   --spectrum-fieldlabel-side-padding-top: var(--spectrum-component-top-to-text-75);
   --spectrum-fieldlabel-side-padding-right: var(--spectrum-spacing-100);
+  --spectrum-field-label-quiet-sidelabel-padding-block-start: 4px;
 
   --spectrum-field-label-text-to-asterisk: var(--spectrum-field-label-text-to-asterisk-small);
 }
@@ -41,6 +42,7 @@ governing permissions and limitations under the License.
 
   --spectrum-fieldlabel-side-padding-top: var(--spectrum-component-top-to-text-75);
   --spectrum-fieldlabel-side-padding-right: var(--spectrum-spacing-200);
+  --spectrum-field-label-quiet-sidelabel-padding-block-start: var(--spectrum-spacing-100);
 
   --spectrum-field-label-text-to-asterisk: var(--spectrum-field-label-text-to-asterisk-medium);
 }
@@ -53,6 +55,7 @@ governing permissions and limitations under the License.
 
   --spectrum-fieldlabel-side-padding-top: var(--spectrum-component-top-to-text-100);
   --spectrum-fieldlabel-side-padding-right: var(--spectrum-spacing-200);
+  --spectrum-field-label-quiet-sidelabel-padding-block-start: 11px;
 
   --spectrum-field-label-text-to-asterisk: var(--spectrum-field-label-text-to-asterisk-large);
 }
@@ -65,6 +68,7 @@ governing permissions and limitations under the License.
 
   --spectrum-fieldlabel-side-padding-top: var(--spectrum-component-top-to-text-200);
   --spectrum-fieldlabel-side-padding-right: var(--spectrum-spacing-200);
+  --spectrum-field-label-quiet-sidelabel-padding-block-start: 14px;
 
   --spectrum-field-label-text-to-asterisk: var(--spectrum-field-label-text-to-asterisk-extra-large);
 }
@@ -108,6 +112,20 @@ governing permissions and limitations under the License.
   padding-block: var(--mod-fieldlabel-side-padding-top, var(--spectrum-fieldlabel-side-padding-top)) 0;
   padding-inline: 0 var(--mod-fieldlabel-side-padding-right, var(--spectrum-fieldlabel-side-padding-right));
   padding-block: var(--mod-fieldlabel-side-padding-top, var(--spectrum-fieldlabel-side-padding-top)) 0;
+  &.spectrum-FieldLabel-quiet-picker-side-label {
+    &.spectrum-FieldLabel--sizeS {
+      --mod-fieldlabel-side-padding-top: var(--spectrum-fieldlabel-picker-side-label-quiet-padding-block-start-small);
+    }
+    &.spectrum-FieldLabel--sizeM {
+      --mod-fieldlabel-side-padding-top: var(--spectrum-fieldlabel-picker-side-label-quiet-padding-block-start-medium);
+    }
+    &.spectrum-FieldLabel--sizeL {
+      --mod-fieldlabel-side-padding-top: var(--spectrum-fieldlabel-picker-side-label-quiet-padding-block-start-large);
+    }
+    &.spectrum-FieldLabel--sizeXL{
+      --mod-fieldlabel-side-padding-top: var(--spectrum-fieldlabel-picker-side-label-quiet-padding-block-start-xlarge);
+    }
+  }
 }
 
 .spectrum-FieldLabel--right {
@@ -119,6 +137,7 @@ governing permissions and limitations under the License.
 }
 
 /********* Form *********/
+/* Form: two column alignment via display: table */
 .spectrum-Form {
   --spectrum-tableform-item-block-spacing: var(--spectrum-spacing-300);
 
