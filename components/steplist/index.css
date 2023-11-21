@@ -325,7 +325,7 @@ governing permissions and limitations under the License.
 }
 
 @media (forced-colors: active) {
-	.spectrum-Steplist {
+  .spectrum-Steplist {
     --highcontrast-steplist-complete-marker-background-color: CanvasText;
     --highcontrast-steplist-current-marker-color: Highlight;
     --highcontrast-steplist-current-marker-color-key-focus: Highlight;
