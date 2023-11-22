@@ -158,15 +158,6 @@ Quiet.args = {
 	],
 };
 
-export const QuietSideLabel = Template.bind({});
-QuietSideLabel.args = {
-	isQuiet: true,
-	content: [
-		() => MenuStories(MenuStories.args)
-	],
-	labelPosition: "left"
-};
-
 export const Loading = Template.bind({});
 Loading.args = {
 	isLoading: true,

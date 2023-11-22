@@ -141,7 +141,6 @@ export const Template = ({
 					label,
 					isDisabled,
 					alignment: labelPosition,
-					customClasses: [`${isQuiet && labelPosition == "left" ? "spectrum-FieldLabel-quiet-picker-side-label" : ''}`],
 			  })
 			: ""}
 		${labelPosition == "left" ?
