@@ -125,8 +125,8 @@ governing permissions and limitations under the License.
   --spectrum-picker-side-label-quiet-padding-block-start-large: -1px;
   --spectrum-picker-side-label-quiet-padding-block-start-xlarge: 0px;
 
-  --spectrum-fieldlabel-picker-side-label-quiet-padding-block-start-small: 4px;
-  --spectrum-fieldlabel-picker-side-label-quiet-padding-block-start-medium: 8px;
+  --spectrum-fieldlabel-picker-side-label-quiet-padding-block-start-small: var(--spectrum-spacing-75);
+  --spectrum-fieldlabel-picker-side-label-quiet-padding-block-start-medium: var(--spectrum-spacing-100);
   --spectrum-fieldlabel-picker-side-label-quiet-padding-block-start-large: 11px;
   --spectrum-fieldlabel-picker-side-label-quiet-padding-block-start-xlarge: 14px;
 }
