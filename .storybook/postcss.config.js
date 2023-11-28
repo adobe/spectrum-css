@@ -5,12 +5,26 @@ const warnCleaner = require("postcss-warn-cleaner");
 const simpleBuilder = require("@spectrum-css/component-builder-simple/css/processors.js");
 const legacyBuilder = require("@spectrum-css/component-builder/css/processors.js");
 
+/**
+ * Determines the package name from a file path
+ * @param {string} filePath
+ * @returns {string}
+ */
+function getPackageFromPath(filePath) {
+	return filePath.match(`(components|@spectrum-css)\/(.*?)\/`)?.[2];
+}
+
 module.exports = (ctx) => {
 	let plugins = [];
 	const componentPath = resolve(__dirname, "../components");
-	const folderName = ctx.file.includes('node_modules') ? relative(resolve(__dirname, "../../node_modules/@spectrum-css"), ctx.file)?.split(sep)?.shift() : relative(componentPath, ctx.file).split("/")[0];
+    /** @todo put together a more robust fallback determination */
+	const folderName = getPackageFromPath(ctx.file) ?? "tokens";
 	const pkgPath = resolve(componentPath, folderName, "package.json");
 
+	/**
+	 * For our token libraries, include a little extra parsing to allow duplicate
+	 * token values to exist in parallel and be toggled using args in storybook.
+	 */
 	if (["expressvars", "vars", "tokens"].includes(folderName)) {
 		const isExpress = folderName === "expressvars";
 		const modifier = basename(ctx.file, ".css").startsWith("spectrum")
@@ -43,6 +57,10 @@ module.exports = (ctx) => {
 				: []),
 		];
 	} else if (existsSync(pkgPath)) {
+		/**
+		 * If a path has a package.json, we can assume it's a component and
+		 * we want to leverage the correct plugins for it.
+		 */
 		const { devDependencies } = require(pkgPath);
 		if (
 			Object.keys(devDependencies).includes("@spectrum-css/component-builder")
@@ -57,7 +75,9 @@ module.exports = (ctx) => {
 		}
 	}
 
-	// For storybook, add a tool to suppress autoprefixer warnings
+	/**
+	 * For storybook, add a tool to suppress unnecessary warnings
+	 */
 	plugins.push(
 		warnCleaner({
 			ignoreFiles: "**/*.css",
