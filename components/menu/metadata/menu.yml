@@ -1,14 +1,17 @@
 name: Menu
 SpectrumSiteSlug: https://spectrum.adobe.com/page/menu/
 sections:
+  - name: Custom Properties API
+    description: |
+      This component can be modified via its `--mod-*` prefixed custom properties. A list of those prefixed custom properties can be found <a href="https://github.com/adobe/spectrum-css/tree/main/components/menu/metadata/mods.md">here</a>.
   - name: Migration Guide
     description: |
       ### T-shirt sizing
       Menu now supports t-shirt sizing and requires that you specify the size by adding a `.spectrum-Menu--size*` class.
-
+      
       ### Use small divider classes
       When using a section divider, add `.spectrum-Divider` and `spectrum-Divider--sizeS` classes to `spectrum-Menu-divider`. The divider has also changed from medium to small.
-
+      
       ### Change workflow icon size to medium
       Please replace `.spectrum-Icon--sizeS` with `.spectrum-Icon--sizeM`.
 examples:
