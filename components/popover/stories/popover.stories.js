@@ -1,4 +1,4 @@
-import { within, userEvent } from '@storybook/testing-library';
+import { userEvent, within } from '@storybook/testing-library';
 import { html } from "lit";
 
 // Import the component markup template
@@ -15,6 +15,7 @@ export default {
 	argTypes: {
 		trigger: { table: { disable: true } },
 		content: { table: { disable: true } },
+		nested: { table: { disable: true } },
 		isOpen: {
 			name: "Open",
 			type: { name: "boolean" },
@@ -33,6 +34,7 @@ export default {
 				category: "Component",
 			},
 			control: { type: "boolean" },
+			if: { arg: 'nested', truthy: false },
 		},
 		position: {
 			name: "Positioning",
@@ -56,6 +58,7 @@ export default {
 				"right-top",
 				"right-bottom",
 			],
+			if: { arg: 'nested', truthy: false },
 		},
 	},
 	args: {
@@ -162,12 +165,17 @@ WithTip.play = async ({ canvasElement }) => {
 
 export const Nested = Template.bind({});
 Nested.args = {
-	testId: 'popover-1',
-	id: 'popover-1',
-	triggerId: 'trigger-1',
+	nested: true,
+	testId: 'popover-nested',
+	id: 'popover-nested',
+	triggerId: 'trigger-nested',
+	isOpen: true,
+	customStyles: {
+		"margin-inline-start": "8px",
+	},
 	trigger: (passthroughs) => ActionButton({
 		label: "Hop on pop(over)",
-		id: 'trigger-1',
+		id: 'trigger-nested',
 		...passthroughs,
 	}),
 	content: [
@@ -179,14 +187,19 @@ Nested.args = {
 				},
 			],
 		}),
-		() => Default({
+		() => Nested({
 			position: "right",
-			testId: 'popover-2',
-			id: 'popover-2',
-			triggerId: "trigger-2",
+			testId: 'popover-nested-2',
+			id: 'popover-nested-2',
+			triggerId: "trigger-nested-2",
+			isOpen: true,
+			customStyles: {
+				"margin-inline-start": "136px",
+				"margin-block-start": "32px"
+			},
 			trigger: (passthroughs) => ActionButton({
 				label: "Hop on pop(over) 2",
-				id: "trigger-2",
+				id: "trigger-nested-2",
 				...passthroughs,
 			}),
 			content: [
@@ -220,4 +233,5 @@ Nested.decorators = [(Story) => html`<div style="padding: 1em;">${Story().outerH
 Nested.play = async ({ canvasElement }) => {
 	const canvas = within(canvasElement);
   await userEvent.click(canvas.getAllByRole('button')[0]);
+	await userEvent.click(canvas.getAllByRole('button')[1]);
 };
