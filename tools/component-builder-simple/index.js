@@ -13,7 +13,7 @@ governing permissions and limitations under the License.
 const gulp = require("gulp");
 const rename = require("gulp-rename");
 
-const buildCSS = require("./css");
+const css = require("./css");
 
 // Copy index.vars as index.css to maintain backwards compat
 function copyIndex() {
@@ -27,6 +27,4 @@ function copyIndex() {
 		.pipe(gulp.dest("dist/"));
 }
 
-const build = gulp.series(buildCSS, copyIndex);
-
-exports.default = build;
+exports.default = gulp.series(css.build, copyIndex);
