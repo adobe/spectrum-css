@@ -39,7 +39,7 @@ export default {
         type: { summary: "text" },
         category: "Component",
       },
-      control: "number",
+      control: "text",
       if: { arg: "shouldTruncate", truthy: true },
     },
     hasActions: { table: { disable: true } },
@@ -53,7 +53,7 @@ export default {
     selectionMode: "none",
     size: "m",
     shouldTruncate: false,
-    maxInlineSize: "150"
+    maxInlineSize: "150px"
   },
   parameters: {
     actions: {
@@ -93,7 +93,7 @@ Truncate.args = {
     { label: "Make Work Path", isDisabled: true },
   ],
   shouldTruncate: true,
-  maxInlineSize: '100',
+  maxInlineSize: '100px',
 };
 
 export const MenuWithSections = Template.bind({});
