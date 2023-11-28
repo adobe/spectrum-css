@@ -33,15 +33,15 @@ export default {
       control: "boolean",
     },
     maxInlineSize: {
-			name: "Max Inline Size",
-			type: { name: "text", required: true },
-			table: {
-				type: { summary: "text" },
-				category: "Component",
-			},
-			control: "number",
+      name: "Max Inline Size",
+      type: { name: "text", required: true },
+      table: {
+        type: { summary: "text" },
+        category: "Component",
+      },
+      control: "number",
       if: { arg: "shouldTruncate", truthy: true },
-		},
+    },
     hasActions: { table: { disable: true } },
     labelledby: { table: { disable: true } },
     items: { table: { disable: true } },
