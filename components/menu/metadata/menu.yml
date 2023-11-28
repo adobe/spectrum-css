@@ -1312,7 +1312,7 @@ examples:
       </div>
   - id: submenu-drillin
     name: Drill-in for submenu
-    description: When a menu item contains a submenu, a drill-in chevron will appear at the end of the menu item to show that a submenu is available. See the guidelines for more info on how to display submenus.
+    description: Use the class `spectrum-Menu-itemLabel--truncate` on the item label or section heading that should truncate within a menu. When text would typically overflow beyond the available horizontal space and wrap (default behavior), ellipsis will appear instead. This is demonstrated here by setting an `inline-size` on the menu.
     markup: |
       <div class="spectrum-Examples">
         <div class="spectrum-Examples-item">
