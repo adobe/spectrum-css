@@ -13,16 +13,16 @@ export default {
       table: { disable: true },
       options: ["none", "single", "multiple"],
     },
-		size: {
-			name: "Size",
-			type: { name: "string", required: true },
-			table: {
-				type: { summary: "string" },
-				category: "Component",
-			},
-			options: ["s", "m", "l", "xl"],
-			control: "select",
-		},
+    size: {
+      name: "Size",
+      type: { name: "string", required: true },
+      table: {
+        type: { summary: "string" },
+        category: "Component",
+      },
+      options: ["s", "m", "l", "xl"],
+      control: "select",
+    },
     shouldTruncate: {
       name: "Truncate menu item label",
       type: { name: "boolean" },
