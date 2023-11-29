@@ -1,0 +1,47 @@
+name: Coach indicator
+SpectrumSiteSlug: https://spectrum.adobe.com/page/coach-mark/
+sections:
+  - name: Migration Guide
+    description: |
+      - Coach Indicator is now a seperate component from Coach Mark
+examples:
+  - id: coach-indicator
+    name: Standard
+    markup: |
+      <div class="spectrum-CoachIndicator" style="display: inline-block;">
+        <div class="spectrum-CoachIndicator-ring"></div>
+        <div class="spectrum-CoachIndicator-ring"></div>
+        <div class="spectrum-CoachIndicator-ring"></div>
+      </div>
+
+      <div class="spectrum-CoachIndicator spectrum-CoachIndicator--dark" style="display: inline-block;">
+        <div class="spectrum-CoachIndicator-ring"></div>
+        <div class="spectrum-CoachIndicator-ring"></div>
+        <div class="spectrum-CoachIndicator-ring"></div>
+      </div>
+
+      <div class="spectrum-CoachIndicator spectrum-CoachIndicator--light" style="display: inline-block;">
+        <div class="spectrum-CoachIndicator-ring"></div>
+        <div class="spectrum-CoachIndicator-ring"></div>
+        <div class="spectrum-CoachIndicator-ring"></div>
+      </div>
+  - id: coach-indicator-quiet
+    name: Quiet
+    markup: |
+      <div class="spectrum-CoachIndicator spectrum-CoachIndicator--quiet" style="display: inline-block;">
+        <div class="spectrum-CoachIndicator-ring"></div>
+        <div class="spectrum-CoachIndicator-ring"></div>
+        <div class="spectrum-CoachIndicator-ring"></div>
+      </div>
+
+      <div class="spectrum-CoachIndicator spectrum-CoachIndicator--dark spectrum-CoachIndicator--quiet" style="display: inline-block;">
+        <div class="spectrum-CoachIndicator-ring"></div>
+        <div class="spectrum-CoachIndicator-ring"></div>
+        <div class="spectrum-CoachIndicator-ring"></div>
+      </div>
+
+      <div class="spectrum-CoachIndicator spectrum-CoachIndicator--light spectrum-CoachIndicator--quiet" style="display: inline-block;">
+        <div class="spectrum-CoachIndicator-ring"></div>
+        <div class="spectrum-CoachIndicator-ring"></div>
+        <div class="spectrum-CoachIndicator-ring"></div>
+      </div>
