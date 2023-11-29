@@ -14,6 +14,10 @@ sections:
 
       ### Change workflow icon size to medium
       Please replace `.spectrum-Icon--sizeS` with `.spectrum-Icon--sizeM`.
+
+      ### Menu item with switch mark up ###
+      In the case of a menu item that includes an icon and a switch, the label and icon should be seperate elements. As opposed to the icon SVG being with in the label. This matches the pattern of other variants with icons within the menu item.
+
 examples:
   - id: sizing
     name: Sizing
