@@ -1,14 +1,17 @@
 // Import the component markup template
 import { Template } from "./template";
 
+import { default as ActionButton } from "@spectrum-css/actionbutton/stories/actionbutton.stories.js";
+import { default as Menu } from "@spectrum-css/menu/stories/menu.stories.js";
+
 export default {
 	title: "Components/Coach mark",
 	description:
 		"The coach mark component can be used to bring added attention to specific parts of a page.",
 	component: "CoachMark",
 	argTypes: {
-		withPopover: {
-			name: "With Popover",
+		hasActionMenu: {
+			name: "ActionMenu",
 			type: { name: "boolean" },
 			table: {
 				type: { summary: "boolean" },
@@ -16,8 +19,8 @@ export default {
 			},
 			control: "boolean",
 		},
-		isQuiet: {
-			name: "Quiet styling",
+		hasPagination: {
+			name: "Pagination",
 			type: { name: "boolean" },
 			table: {
 				type: { summary: "boolean" },
@@ -25,25 +28,28 @@ export default {
 			},
 			control: "boolean",
 		},
-		variant: {
-			name: "Color variants",
-			type: { name: "string" },
+		hasImage: {
+			name: "Image",
+			type: { name: "boolean" },
 			table: {
-				type: { summary: "string" },
+				type: { summary: "boolean" },
 				category: "Component",
 			},
-			options: ["dark", "light"],
-			control: "inline-radio",
+			control: "boolean",
 		},
 	},
 	args: {
 		rootClass: "spectrum-CoachMark",
-		isQuiet: false,
-		withPopover: false,
+		hasActionMenu: true,
+		hasPagination: true,
+		hasImage: false,
 	},
 	parameters: {
 		actions: {
-			handles: [],
+			handles: [
+				...ActionButton.parameters.actions.handles,
+				...Menu.parameters.actions.handles,
+			],
 		},
 		status: {
 			type: process.env.MIGRATED_PACKAGES.includes("coachmark")
@@ -56,7 +62,7 @@ export default {
 export const Default = Template.bind({});
 Default.args = {};
 
-export const WithPopover = Template.bind({});
-WithPopover.args = {
-	withPopover: true,
+export const WithMedia = Template.bind({});
+WithMedia.args = {
+	hasImage: true,
 };
