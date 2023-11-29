@@ -151,11 +151,14 @@ governing permissions and limitations under the License.
 /* Windows high contrast mode */
 @media (forced-colors: active) {
   .spectrum-Picker {
-    --highcontrast-picker-focus-indicator-color: CanvasText;
+    --highcontrast-picker-focus-indicator-color: Highlight;
 
     --highcontrast-picker-border-color-default: ButtonText;
     --highcontrast-picker-border-color-active: ButtonText;
-    --highcontrast-picker-border-color-key-focus: Highlight;
+    --highcontrast-picker-border-color-key-focus: ButtonText;
+    --highcontrast-picker-border-color-default-open: ButtonText;
+    --highcontrast-picker-border-color-hover-open: Highlight;
+    --highcontrast-picker-border-color-hover: Highlight;
 
     --highcontrast-picker-border-color-error-default-open: ButtonText;
     --highcontrast-picker-border-color-error-hover: ButtonText;
@@ -173,7 +176,7 @@ governing permissions and limitations under the License.
     --highcontrast-picker-icon-color-default-open: ButtonText;
     --highcontrast-picker-icon-color-hover: ButtonText;
     --highcontrast-picker-icon-color-hover-open: ButtonText;
-    --highcontrast-picker-icon-color-key-focus: Highlight;
+    --highcontrast-picker-icon-color-key-focus: ButtonText;
 
     --highcontrast-picker-icon-color-error-default: ButtonText;
 
@@ -181,6 +184,17 @@ governing permissions and limitations under the License.
     .is-disabled {
       border-color: GrayText;
       border-width: var(--mod-picker-border-width, var(--spectrum-picker-border-width));
+    }
+
+    &:focus-visible,
+    &.is-focused {
+      --highcontrast-picker-border-color-hover-open: ButtonText;
+    }
+
+    /* Focus indicator */
+    &::after {
+      /* Make sure default transparent border stays transparent. */
+      forced-color-adjust: none;
     }
   }
   .spectrum-Picker--quiet {
@@ -222,6 +236,7 @@ governing permissions and limitations under the License.
   background-color: var(--highcontrast-picker-background-color-default, var(--mod-picker-background-color-default, var(--spectrum-picker-background-color-default)));
   border-color: var(--highcontrast-picker-border-color-default, var(--mod-picker-border-color-default, var(--spectrum-picker-border-color-default)));
 
+  /* Focus indicator */
   &::after {
     pointer-events: none;
     content: '';
@@ -255,7 +270,7 @@ governing permissions and limitations under the License.
   &:hover {
     color: var(--highcontrast-picker-font-color-default, var(--mod-picker-font-color-hover, var(--spectrum-picker-font-color-hover)));
     background-color: var(--highcontrast-picker-background-color-default, var(--mod-picker-background-color-hover, var(--spectrum-picker-background-color-hover)));
-    border-color: var(--highcontrast-picker-border-color-default, var(--mod-picker-border-color-hover, var(--spectrum-picker-border-color-hover)));
+    border-color: var(--highcontrast-picker-border-color-hover, var(--mod-picker-border-color-hover, var(--spectrum-picker-border-color-hover)));
 
     .spectrum-Picker-menuIcon {
       color: var(--highcontrast-picker-icon-color-hover, var(--mod-picker-icon-color-hover, var(--spectrum-picker-icon-color-hover)));
@@ -266,6 +281,7 @@ governing permissions and limitations under the License.
     background-color: var(--highcontrast-picker-background-active, var(--mod-picker-background-color-active, var(--spectrum-picker-background-color-active)));
     border-color: var(--highcontrast-picker-border-color-active, var(--mod-picker-border-active, var(--spectrum-picker-border-color-active)));
 
+    /* Focus indicator */
     &::after {
       border-color: transparent;
     }
@@ -284,7 +300,7 @@ governing permissions and limitations under the License.
 
     color: var(--highcontrast-picker-font-color-key-focus, var(--mod-picker-font-color-key-focus, var(--spectrum-picker-font-color-key-focus)));
 
-    /* Focus ring */
+    /* Focus indicator */
     &::after {
       border-color: var(--highcontrast-picker-focus-indicator-color, var(--mod-picker-focus-indicator-color, var(--spectrum-picker-focus-indicator-color)));
     }
@@ -495,6 +511,7 @@ governing permissions and limitations under the License.
   &.is-focused {
     background-color: transparent;
 
+    /* Focus indicator */
     &::after {
       border: none;
       border-radius: 0;
