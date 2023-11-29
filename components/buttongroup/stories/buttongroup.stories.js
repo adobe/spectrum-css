@@ -30,6 +30,7 @@ export default {
 	args: {
 		rootClass: "spectrum-ButtonGroup",
 		size: "m",
+		iconName: undefined,
 		vertical: false,
 	},
 	parameters: {
@@ -56,6 +57,7 @@ Default.args = {
 			variant: "secondary",
 			treatment: "outline",
 			label: "Remind me later",
+
 		},
 		{
 			variant: "primary",
