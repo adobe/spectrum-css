@@ -1,13 +1,16 @@
 import { html } from "lit";
 
 import { Template as ActionButton } from "@spectrum-css/actionbutton/stories/template.js";
-import { Template as Popover } from "@spectrum-css/popover/stories/template.js";
 import { Template as Menu } from "@spectrum-css/menu/stories/template.js";
+import { Template as Popover } from "@spectrum-css/popover/stories/template.js";
 
 export const Template = ({
 	customClasses = [],
 	items = [],
 	isOpen = false,
+	label,
+	iconName,
+	size = "m",
 	...globals
 }) => {
 
@@ -27,14 +30,18 @@ export const Template = ({
 			Menu({ items })
 		],
 		trigger: (passthroughs) => ActionButton({
-			size: "m",
-			isQuiet: true,
+			size,
+			label,
+			iconName,
+			isQuiet: false,
+			isEmphasized: false,
+			hasPopup: false,
 			isSelected: isOpen,
-			label: "More Actions",
+			label,
 			iconName: "More",
 			id: "trigger",
 			customClasses,
 			...passthroughs,
 		})
 	})
-};
+}
