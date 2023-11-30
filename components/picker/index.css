@@ -285,7 +285,7 @@ governing permissions and limitations under the License.
     }
   }
 
-  &.is-invalid {
+  &.is-invalid:not(:disabled, .is-disabled) {
     border-color: var(--highcontrast-picker-border-color-default, var(--mod-picker-border-color-error-default, var(--spectrum-picker-border-color-error-default)));
 
     .spectrum-Picker-validationIcon {
@@ -293,7 +293,7 @@ governing permissions and limitations under the License.
     }
 
     &:hover {
-      border-color: var(--highcontrast-picker-border-color-default, var(--mod-picker-border-color-error-hover, var(--spectrum-picker-border-color-error-hover)));
+      border-color: var(--highcontrast-picker-border-color-hover, var(--mod-picker-border-color-error-hover, var(--spectrum-picker-border-color-error-hover)));
     }
 
     &:active {
@@ -305,7 +305,7 @@ governing permissions and limitations under the License.
     }
 
     &.is-open:hover {
-      border-color: var(--highcontrast-picker-border-color-default, var(--mod-picker-border-color-error-hover-open, var(--spectrum-picker-border-color-error-hover-open)));
+      border-color: var(--highcontrast-picker-border-color-hover, var(--mod-picker-border-color-error-hover-open, var(--spectrum-picker-border-color-error-hover-open)));
     }
 
     &:focus-visible,
