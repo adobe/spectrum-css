@@ -112,6 +112,7 @@ WithLink.args = {
 export const TopPopover = Template.bind({});
 TopPopover.args = {
 	popoverPlacement: "top",
-	title: "Permission required",
+	customStyles: { "max-inline-size": "275px" },
+	title: "Top popover example of text wrapping in the title",
 	body: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
 };
