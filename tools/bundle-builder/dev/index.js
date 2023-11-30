@@ -191,7 +191,8 @@ function watch() {
 					},
 					function buildDocs_forDep() {
 						logger.debug(`Building docs for ${package}`);
-						return docs.buildDocs_forDep(package);
+						let packageDir = path.dirname(require.resolve(`@spectrum-css/${package}/package.json`));
+						return docs.buildDocs_forDep(packageDir);
 					}
 				)();
 				// this catches yaml parsing errors
