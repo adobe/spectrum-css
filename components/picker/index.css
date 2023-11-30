@@ -364,18 +364,6 @@ governing permissions and limitations under the License.
   }
 }
 
-.spectrum-Picker--quiet {
-  inline-size: auto;
-  min-inline-size: 0;
-
-  &:disabled,
-  &.is-disabled {
-    &:focus-visible {
-      border-color: transparent;
-    }
-  }
-}
-
 .spectrum-Picker-label {
   /* Be the biggest, but also shrink! */
   flex: 1 1 auto;
@@ -451,6 +439,8 @@ governing permissions and limitations under the License.
 }
 
 .spectrum-Picker--quiet {
+  inline-size: auto;
+  min-inline-size: 0;
   border: none;
   border-radius: 0;
   padding-inline: var(--mod-picker-spacing-edge-to-text-quiet, var(--spectrum-picker-spacing-edge-to-text-quiet));
