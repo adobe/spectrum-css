@@ -200,7 +200,7 @@ governing permissions and limitations under the License.
   }
 
   &.is-outsideMonth {
-    visibility: hidden;
+    display: none;
   }
 
   &::before {
