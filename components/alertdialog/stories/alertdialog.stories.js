@@ -71,7 +71,7 @@ Default.args = {
 export const Information = Template.bind({});
 Information.args = {
   variant: 'information',
-  heading: "Rate this app",
+  heading: "Informative Dialog with a wrapping title text because the text is longer than the width of the alert dialog",
   buttons: [{
     variant: "secondary",
     treatment: "outline",
