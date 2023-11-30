@@ -153,16 +153,17 @@ governing permissions and limitations under the License.
   .spectrum-Picker {
     --highcontrast-picker-focus-indicator-color: Highlight;
 
-    --highcontrast-picker-border-color-default: ButtonText;
-    --highcontrast-picker-border-color-active: ButtonText;
-    --highcontrast-picker-border-color-key-focus: ButtonText;
-    --highcontrast-picker-border-color-default-open: ButtonText;
+    --highcontrast-picker-border-color-default: ButtonBorder;
+    --highcontrast-picker-border-color-active: ButtonBorder;
+    --highcontrast-picker-border-color-key-focus: ButtonBorder;
+    --highcontrast-picker-border-color-default-open: ButtonBorder;
     --highcontrast-picker-border-color-hover-open: Highlight;
     --highcontrast-picker-border-color-hover: Highlight;
 
-    --highcontrast-picker-border-color-error-default-open: ButtonText;
-    --highcontrast-picker-border-color-error-hover: ButtonText;
-    --highcontrast-picker-border-color-error-active: ButtonText;
+    --highcontrast-picker-border-color-error-default-open: ButtonBorder;
+    --highcontrast-picker-border-color-error-hover: ButtonBorder;
+    --highcontrast-picker-border-color-error-active: ButtonBorder;
+    --highcontrast-picker-border-color-disabled: GrayText;
 
     --highcontrast-picker-font-color-default: ButtonText;
     --highcontrast-picker-font-color-default-open: ButtonText;
@@ -180,12 +181,6 @@ governing permissions and limitations under the License.
 
     --highcontrast-picker-icon-color-error-default: ButtonText;
 
-    &:disabled,
-    .is-disabled {
-      border-color: GrayText;
-      border-width: var(--mod-picker-border-width, var(--spectrum-picker-border-width));
-    }
-
     &:focus-visible,
     &.is-focused {
       --highcontrast-picker-border-color-hover-open: ButtonText;
@@ -196,12 +191,10 @@ governing permissions and limitations under the License.
       /* Make sure default transparent border stays transparent. */
       forced-color-adjust: none;
     }
-  }
-  .spectrum-Picker--quiet {
-    &:focus-visible,
-    &.is-focused {
+
+    .spectrum-Picker-label {
+      /* Remove additional text backplate added by WHCM. */
       forced-color-adjust: none;
-      outline: 0;
     }
   }
 }
@@ -296,8 +289,6 @@ governing permissions and limitations under the License.
     outline: none;
     background-color: var(--highcontrast-picker-background-color-default, var(--mod-picker-background-color-key-focus, var(--spectrum-picker-background-color-key-focus)));
     border-color: var(--highcontrast-picker-border-color-key-focus, var(--mod-picker-border-color-key-focus, var(--spectrum-picker-border-color-key-focus)));
-    border-width: var(--mod-picker-border-width, var(--spectrum-picker-border-width));
-
     color: var(--highcontrast-picker-font-color-key-focus, var(--mod-picker-font-color-key-focus, var(--spectrum-picker-font-color-key-focus)));
 
     /* Focus indicator */
@@ -351,11 +342,9 @@ governing permissions and limitations under the License.
 
   &:disabled,
   &.is-disabled {
-    border-width: var(--mod-picker-border-width, var(--spectrum-picker-border-width));
     cursor: default;
-
     background-color: var(--highcontrast-picker-background-color-disabled, var(--mod-picker-background-color-disabled, var(--spectrum-picker-background-color-disabled)));
-    border-color: transparent;
+    border-color: var(--highcontrast-picker-border-color-disabled, transparent);
     color: var(--highcontrast-picker-font-color-disabled, var(--mod-picker-font-color-disabled, var(--spectrum-picker-font-color-disabled)));
 
     .spectrum-Picker-icon,
@@ -487,7 +476,7 @@ governing permissions and limitations under the License.
   padding-inline: var(--mod-picker-spacing-edge-to-text-quiet, var(--spectrum-picker-spacing-edge-to-text-quiet));
   margin-block-start: calc( var(--mod-picker-spacing-label-to-picker-quiet, var(--spectrum-picker-spacing-label-to-picker-quiet)) + (1px));
   color: var(--highcontrast-picker-font-color-default, var(--mod-picker-font-color-default, var(--spectrum-picker-font-color-default)));
-  background-color: transparent;
+  background-color: var(--highcontrast-picker-background-color-default, transparent);
 
   &.spectrum-Picker--sideLabel {
     margin-block-start: calc(-1 * var(--spectrum-picker-spacing-top-to-text-side-label-quiet)); 
@@ -504,14 +493,14 @@ governing permissions and limitations under the License.
   }
 
   &:hover {
-    background-color: transparent;
+    background-color: var(--highcontrast-picker-background-color-default, transparent);
   }
 
   &:focus-visible,
   &.is-focused {
-    background-color: transparent;
+    background-color: var(--highcontrast-picker-background-color-default, transparent);
 
-    /* Focus indicator */
+    /* Focus indicator changes from a ring to a line underneath. */
     &::after {
       border: none;
       border-radius: 0;
@@ -522,12 +511,12 @@ governing permissions and limitations under the License.
 
   &:active,
   &.is-open {
-    background-color: transparent;
+    background-color: var(--highcontrast-picker-background-color-default, transparent);
   }
 
   &:disabled,
   &.is-disabled {
-    background-color: transparent;
+    background-color: var(--highcontrast-picker-background-color-default, transparent);
   }
 }
 
