@@ -429,6 +429,7 @@ governing permissions and limitations under the License.
   .spectrum-Slider-handle {
     background-color: var(--highcontrast-slider-tick-handle-background-color, var(--mod-slider-tick-handle-background-color, var(--spectrum-slider-tick-handle-background-color)));
   }
+
   .spectrum-Slider-controls {
     margin-block-start:
       calc(
@@ -542,13 +543,19 @@ governing permissions and limitations under the License.
   overflow: hidden;
 }
 
-
+/* Applies to the filled-offset variant to keep track the same color for highcontrast mode */
 .spectrum-Slider-track {
+  &::before {
+    background: var(--highcontrast-slider-track-color-static, var(--mod-slider-track-color, var(--spectrum-slider-track-color)));
+  }
+}
+
+/* All variants other than filled-offset get a new track color for highcontrast mode */
+.spectrum-Slider-track:not(:has(~ .spectrum-Slider-fill)) {
   &::before {
     background: var(--highcontrast-slider-track-color, var(--mod-slider-track-color, var(--spectrum-slider-track-color)));
   }
 }
-
 
 .spectrum-Slider-labelContainer {
   color: var(--highcontrast-slider-label-text-color, var(--mod-slider-label-text-color, var(--spectrum-slider-label-text-color)));
@@ -558,14 +565,14 @@ governing permissions and limitations under the License.
 .spectrum-Slider--filled {
   .spectrum-Slider-track:first-child {
     &::before {
-      background: var(--highcontrast-slider-track-fill-color, var(--mod-slider-track-fill-color, var(--spectrum-slider-track-fill-color)));
+      background: var(--highcontrast-slider-filled-track-fill-color, var(--mod-slider-track-fill-color, var(--spectrum-slider-track-fill-color)));
     }
   }
 }
 
 .spectrum-Slider-fill {
   &::before {
-    background: var(--highcontrast-slider-track-fill-color, var(--mod-slider-track-fill-color, var(--spectrum-slider-track-fill-color)));
+    background: var(--highcontrast-slider-filled-track-fill-color, var(--mod-slider-track-fill-color, var(--spectrum-slider-track-fill-color)));
   }
 }
 
@@ -626,8 +633,8 @@ governing permissions and limitations under the License.
 
 .spectrum-Slider--range {
   .spectrum-Slider-track {
-    &:not(:first-of-type):not(:last-of-type)::before {
-      background: var(--highcontrast-slider-track-fill-icolor, var(--mod-slider-track-fill-color, var(--spectrum-slider-track-fill-color)));
+    &:not(:first-of-type, :last-of-type)::before {
+      background: var(--highcontrast-slider-filled-track-fill-color, var(--mod-slider-track-fill-color, var(--spectrum-slider-track-fill-color)));
     }
   }
 }
@@ -691,18 +698,19 @@ governing permissions and limitations under the License.
   }
 
   &.spectrum-Slider--range {
-    .spectrum-Slider-track:not(:first-of-type):not(:last-of-type)::before {
+    .spectrum-Slider-track:not(:first-of-type, :last-of-type)::before {
       background: var(--highcontrast-slider-track-color-disabled, var(--mod-slider-track-color-disabled, var(--spectrum-slider-track-color-disabled)));
     }
   }
 }
 
 @media (forced-colors: active) {
-
   .spectrum-Slider {
     /*  over-writes */
     --highcontrast-slider-track-color: ButtonText;
+    --highcontrast-slider-track-color-static: ButtonText;
     --highcontrast-slider-track-fill-color: ButtonText;
+    --highcontrast-slider-filled-track-fill-color: Highlight;
     --highcontrast-slider-ramp-track-color: ButtonText;
     --highcontrast-slider-ramp-track-color-disabled: GrayText;
     --highcontrast-slider-tick-mark-color: ButtonText;
@@ -753,7 +761,8 @@ governing permissions and limitations under the License.
     }
 
     /* Slider control hover and focus colors for high contrast mode */
-    &:not(.is-disabled) {
+    /* Filled and range variants are excluded since the filled portion of the track uses Highlight */
+    &:not(.is-disabled, .spectrum-Slider--filled, .spectrum-Slider--range) {
       .spectrum-Slider-controls:hover,
       .spectrum-Slider-controls:active,
       .spectrum-Slider-controls:focus-within,
