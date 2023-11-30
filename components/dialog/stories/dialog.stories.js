@@ -70,7 +70,7 @@ export default {
 
 export const Default = Template.bind({});
 Default.args = {
-	heading: "Disclaimer",
+	heading: "Lorem ipsum dolor sit amet, consectetur adipiscing elit",
 	showModal: true,
 	content: [
 		() => Typography({
