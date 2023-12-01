@@ -1,8 +1,9 @@
+import isChromatic from "chromatic/isChromatic";
 import { html } from "lit";
 
 // Import the component markup template
-import { Template } from "./template";
 import { Template as Link } from "@spectrum-css/link/stories/template.js";
+import { Template } from "./template";
 
 export default {
 	title: "Components/Illustrated message",
@@ -51,13 +52,34 @@ export default {
 	},
 };
 
-export const Default = Template.bind({});
-Default.args = {
-	heading: "Error 404: Page not found",
-	description: [
-		"This page isn't available. Try checking the URL or visit a different page.",
-	],
-	useAccentColor: false,
+export const Default = ({
+	heading,
+	description,
+	...args
+}) => {
+	return html`
+		<div>
+			${Template({
+				...args,
+				heading: "Error 404: Page not found",
+				description: [
+					"This page isn't available. Try checking the URL or visit a different page.",
+				],
+				useAccentColor: false,
+			})}
+			${isChromatic() ?
+				Template({
+					...args,
+					heading: "Error 404: This is not the page you're looking for",
+					description: [
+						"This page isn't available.",
+					],
+					useAccentColor: false,
+				})
+				: null
+			}
+		</div>
+	`;
 };
 
 export const AccentColor = Template.bind({});
