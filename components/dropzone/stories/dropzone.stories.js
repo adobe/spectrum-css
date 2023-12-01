@@ -1,4 +1,6 @@
-// Import the component markup template
+import { Template as Link } from "@spectrum-css/link/stories/template.js";
+import isChromatic from "chromatic/isChromatic";
+import { html } from "lit";
 import { Template } from "./template";
 
 export default {
@@ -44,7 +46,33 @@ export default {
 	},
 };
 
-export const Default = Template.bind({});
+export const Default = ({
+	customHeading,
+	customDescription,
+	...args
+}) => {
+	return html`
+		<div>
+			${Template({
+				...args
+			})}
+
+			${isChromatic() ?
+				Template({
+					...args,
+					customHeading: 'Drag and drop your file to upload',
+					customDescription: [
+						() => {
+							return html`You can also ${Link({ url: "#", text: "select a file" })} from your computer.`
+						}
+					],
+					customLabel: 'Drag and drop to replace file upload'
+				})
+			: null
+		}
+		</div>
+	`;
+};
 Default.args = {};
 
 export const Dragged = Template.bind({});
