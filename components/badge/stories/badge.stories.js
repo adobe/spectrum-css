@@ -102,7 +102,6 @@ const BadgeGroup = ({
 				label: "24 days left in trial",
 				customStyles: { "max-inline-size": "100px" },
 			})}
-
 		</div>
 	`;
 };

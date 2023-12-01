@@ -1,5 +1,6 @@
 import { html } from "lit";
 import { classMap } from "lit/directives/class-map.js";
+import { styleMap } from "lit/directives/style-map.js";
 import { ifDefined } from "lit/directives/if-defined.js";
 import { when } from "lit/directives/when.js";
 
@@ -17,10 +18,13 @@ export const Template = ({
 	isEmphasized = false,
 	isIndeterminate = false,
 	isDisabled = false,
+	isInvalid = false,
+	isReadOnly = false,
 	title,
 	value,
 	id,
 	ariaLabelledby,
+	customStyles = {},
 	customClasses = [],
 	...globals
 }) => {
@@ -58,17 +62,20 @@ export const Template = ({
 					typeof size !== "undefined",
 				[`${rootClass}--emphasized`]: isEmphasized,
 				[`is-indeterminate`]: isIndeterminate,
-				[`is-disabled`]: isDisabled,
+				[`is-disabled`]: isDisabled|| isReadOnly,
+				[`is-invalid`]: isInvalid,
+				[`is-readOnly`]: isReadOnly,
 				...customClasses.reduce((a, c) => ({ ...a, [c]: true }), {}),
 			})}
 			id=${ifDefined(id)}
+			style=${ifDefined(styleMap(customStyles))}
 		>
 			<input
 				type="checkbox"
 				class="${rootClass}-input"
 				aria-labelledby=${ifDefined(ariaLabelledby)}
 				?checked=${isChecked}
-				?disabled=${isDisabled}
+				?disabled=${isDisabled || isReadOnly}
 				title=${ifDefined(title)}
 				value=${ifDefined(value)}
 				@change=${() => {
