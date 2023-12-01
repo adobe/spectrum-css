@@ -76,7 +76,7 @@ export const Template = ({
 					customInputClasses: [`${rootClass}-input`],
 					isLoading,
 					customProgressCircleClasses: ["spectrum-Combobox-progress-circle"],
-					placeholder: "Type here",
+					placeholder: "Type here this text should truncate",
 					name: "field",
 					value: globals.selectedDay
 						? new Date(globals.selectedDay).toLocaleDateString(lang)

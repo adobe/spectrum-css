@@ -150,3 +150,35 @@ Default.args = {
 		}),
 	],
 };
+
+export const Quiet = Template.bind({});
+Quiet.args = {
+	isQuiet: true,
+	content: [
+		Menu({
+			role: "listbox",
+			subrole: "option",
+			isSelectable: true,
+			items: [
+				{
+					label: "Ballard",
+					isSelected: true,
+					isChecked: true,
+				},
+				{
+					label: "Fremont",
+				},
+				{
+					label: "Greenwood",
+				},
+				{
+					type: "divider",
+				},
+				{
+					label: "United States of America",
+					isDisabled: true,
+				},
+			],
+		}),
+	],
+};
