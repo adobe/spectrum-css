@@ -35,12 +35,21 @@ export default {
 			options: ["neutral", "info", "negative"],
 			control: "radio",
 		},
+		hasActionButton: {
+			name: "Display action button",
+			type: { name: "boolean" },
+			table: {
+				type: { summary: "boolean" },
+				category: "State",
+			},
+			control: "boolean",
+		},
 	},
 	args: {
 		rootClass: "spectrum-AlertBanner",
 		isOpen: true,
 		variant: "neutral",
-		text: "Your trial has expired. Please purchase to continue. Your work has been saved and is ready for you to open again after purchase.",
+		hasActionButton: true,
 	},
 	parameters: {
 		actions: {
@@ -55,4 +64,19 @@ export default {
 };
 
 export const Default = Template.bind({});
-Default.args = {};
+Default.args = {
+	hasActionButton: false,
+	text: "Your trial has expired"
+};
+
+export const Info = Template.bind({});
+Info.args = {
+	variant: "info",
+	text: "Your trial will expire in 3 days. Once it expires your files will be saved and ready for you to open again once you have purcahsed the software."
+};
+
+export const Negative = Template.bind({});
+Negative.args = {
+	variant: "negative",
+	text: "Connection interupted. Check your network to continue."
+};
