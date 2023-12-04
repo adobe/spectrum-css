@@ -1,6 +1,6 @@
 {
   "name": "@spectrum-css/combobox",
-  "version": "2.0.45",
+  "version": "2.0.46",
   "description": "The Spectrum CSS combobox component",
   "license": "Apache-2.0",
   "author": "Adobe",
@@ -23,13 +23,13 @@
     "@spectrum-css/tokens": ">=13"
   },
   "devDependencies": {
-    "@spectrum-css/component-builder-simple": "^3.0.0",
-    "@spectrum-css/menu": "^5.1.5",
-    "@spectrum-css/pickerbutton": "^4.0.20",
-    "@spectrum-css/popover": "^6.0.82",
-    "@spectrum-css/progresscircle": "^2.0.73",
-    "@spectrum-css/textfield": "^6.0.28",
-    "@spectrum-css/tokens": "^13.0.4",
+    "@spectrum-css/component-builder-simple": "^3.0.1",
+    "@spectrum-css/menu": "^5.2.0",
+    "@spectrum-css/pickerbutton": "^4.0.21",
+    "@spectrum-css/popover": "^6.0.83",
+    "@spectrum-css/progresscircle": "^2.0.74",
+    "@spectrum-css/textfield": "^6.0.29",
+    "@spectrum-css/tokens": "^13.0.5",
     "gulp": "^4.0.0"
   },
   "publishConfig": {

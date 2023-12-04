@@ -3,6 +3,15 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+<a name="1.0.36"></a>
+##1.0.36
+🗓
+2023-12-04 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/floatingactionbutton@1.0.35...@spectrum-css/floatingactionbutton@1.0.36)
+
+### 🐛 Bug fixes
+
+- **floatingactionbutton:**focus outline only on keyboard focus([dd5b8dd](https://github.com/adobe/spectrum-css/commit/dd5b8dd))
+
 <a name="1.0.35"></a>
 ##1.0.35
 🗓

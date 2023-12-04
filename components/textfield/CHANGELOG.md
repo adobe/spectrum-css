@@ -3,6 +3,15 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+<a name="6.0.29"></a>
+##6.0.29
+🗓
+2023-12-04 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/textfield@6.0.28...@spectrum-css/textfield@6.0.29)
+
+### 🐛 Bug fixes
+
+- **textfield:**focus outline only on keyboard focus([e919679](https://github.com/adobe/spectrum-css/commit/e919679))
+
 <a name="6.0.28"></a>
 ##6.0.28
 🗓

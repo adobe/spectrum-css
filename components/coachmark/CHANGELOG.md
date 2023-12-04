@@ -3,6 +3,21 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+<a name="6.0.0"></a>
+#6.0.0
+🗓
+2023-12-04 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/coachmark@5.0.75...@spectrum-css/coachmark@6.0.0)
+
+### ✨ Features
+
+- **coachmark:**migrate to spectrum-tokens([5e5862f](https://github.com/adobe/spectrum-css/commit/5e5862f))
+
+      ###
+      🛑 BREAKING CHANGES
+
+      	*
+      	**coachmark:** migrates Coach Mark to `@adobe/spectrum-tokens`
+
 <a name="5.0.75"></a>
 ##5.0.75
 🗓

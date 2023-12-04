@@ -3,6 +3,15 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+<a name="4.0.26"></a>
+##4.0.26
+🗓
+2023-12-04 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/tabs@4.0.25...@spectrum-css/tabs@4.0.26)
+
+### 🐛 Bug fixes
+
+- **tabs:**focus outline only on keyboard focus([ec96da6](https://github.com/adobe/spectrum-css/commit/ec96da6))
+
 <a name="4.0.25"></a>
 ##4.0.25
 🗓

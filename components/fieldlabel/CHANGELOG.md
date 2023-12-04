@@ -3,6 +3,15 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+<a name="7.2.0"></a>
+#7.2.0
+🗓
+2023-12-04 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/fieldlabel@7.1.5...@spectrum-css/fieldlabel@7.2.0)
+
+### ✨ Features
+
+- **fieldlabel:**form - replace table layout with grid ([#2269](https://github.com/adobe/spectrum-css/issues/2269))([25591fc](https://github.com/adobe/spectrum-css/commit/25591fc)), closes[#2271](https://github.com/adobe/spectrum-css/issues/2271)
+
 <a name="7.1.5"></a>
 ##7.1.5
 🗓

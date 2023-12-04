@@ -3,6 +3,15 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+<a name="4.0.8"></a>
+##4.0.8
+🗓
+2023-12-04 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/steplist@4.0.7...@spectrum-css/steplist@4.0.8)
+
+### 🐛 Bug fixes
+
+- **steplist:**add WHCM for marker ([#2308](https://github.com/adobe/spectrum-css/issues/2308))([85abafc](https://github.com/adobe/spectrum-css/commit/85abafc))
+
 <a name="4.0.7"></a>
 ##4.0.7
 🗓

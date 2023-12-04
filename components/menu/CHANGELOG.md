@@ -3,6 +3,19 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+<a name="5.2.0"></a>
+#5.2.0
+🗓
+2023-12-04 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/menu@5.1.5...@spectrum-css/menu@5.2.0)
+
+### ✨ Features
+
+- **menu:**tray submenus([042ec45](https://github.com/adobe/spectrum-css/commit/042ec45))
+
+### 🐛 Bug fixes
+
+- **menu:**updated sizing of tray submenu back icon([3a5aebd](https://github.com/adobe/spectrum-css/commit/3a5aebd))
+
 <a name="5.1.5"></a>
 ##5.1.5
 🗓

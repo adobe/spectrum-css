@@ -3,6 +3,15 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+<a name="5.0.30"></a>
+##5.0.30
+🗓
+2023-12-04 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/dropzone@5.0.29...@spectrum-css/dropzone@5.0.30)
+
+### 🐛 Bug fixes
+
+- **dropzone:**focus outline only on keyboard focus([b683376](https://github.com/adobe/spectrum-css/commit/b683376))
+
 <a name="5.0.29"></a>
 ##5.0.29
 🗓

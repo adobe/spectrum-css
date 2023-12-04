@@ -3,6 +3,15 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+<a name="6.0.1"></a>
+##6.0.1
+🗓
+2023-12-04 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/preview@6.0.0...@spectrum-css/preview@6.0.1)
+
+### 🐛 Bug fixes
+
+- **storybook:**postcss parsing error for node_modules paths ([#2321](https://github.com/adobe/spectrum-css/issues/2321))([a6bd124](https://github.com/adobe/spectrum-css/commit/a6bd124))
+
 <a name="6.0.0"></a>
 #6.0.0
 🗓

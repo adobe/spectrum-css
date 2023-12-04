@@ -3,6 +3,15 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+<a name="8.0.16"></a>
+##8.0.16
+🗓
+2023-12-04 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/breadcrumb@8.0.15...@spectrum-css/breadcrumb@8.0.16)
+
+### 🐛 Bug fixes
+
+- **breadcrumb:**focus outline only on keyboard focus([1f72c3e](https://github.com/adobe/spectrum-css/commit/1f72c3e))
+
 <a name="8.0.15"></a>
 ##8.0.15
 🗓

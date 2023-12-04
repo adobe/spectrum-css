@@ -3,6 +3,13 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+<a name="4.1.8"></a>
+##4.1.8
+🗓
+2023-12-04 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/actiongroup@4.1.7...@spectrum-css/actiongroup@4.1.8)
+
+**Note:** Version bump only for package @spectrum-css/actiongroup
+
 <a name="4.1.7"></a>
 ##4.1.7
 🗓

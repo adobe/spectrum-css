@@ -3,6 +3,15 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+<a name="8.0.17"></a>
+##8.0.17
+🗓
+2023-12-04 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/radio@8.0.16...@spectrum-css/radio@8.0.17)
+
+### 🐛 Bug fixes
+
+- **radio:**focus outline has correct position for rtl ([#2315](https://github.com/adobe/spectrum-css/issues/2315))([d46c017](https://github.com/adobe/spectrum-css/commit/d46c017))
+
 <a name="8.0.16"></a>
 ##8.0.16
 🗓

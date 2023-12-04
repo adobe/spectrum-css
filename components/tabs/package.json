@@ -1,6 +1,6 @@
 {
   "name": "@spectrum-css/tabs",
-  "version": "4.0.25",
+  "version": "4.0.26",
   "description": "The Spectrum CSS tabs component",
   "license": "Apache-2.0",
   "author": "Adobe",
@@ -23,11 +23,11 @@
     "@spectrum-css/tokens": ">=13"
   },
   "devDependencies": {
-    "@spectrum-css/component-builder-simple": "^3.0.0",
+    "@spectrum-css/component-builder-simple": "^3.0.1",
     "@spectrum-css/icon": "^4.0.5",
-    "@spectrum-css/menu": "^5.1.5",
-    "@spectrum-css/picker": "^7.0.16",
-    "@spectrum-css/tokens": "^13.0.4",
+    "@spectrum-css/menu": "^5.2.0",
+    "@spectrum-css/picker": "^7.0.17",
+    "@spectrum-css/tokens": "^13.0.5",
     "gulp": "^4.0.0"
   },
   "publishConfig": {

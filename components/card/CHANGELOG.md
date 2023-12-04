@@ -3,6 +3,15 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+<a name="6.2.1"></a>
+##6.2.1
+🗓
+2023-12-04 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/card@6.2.0...@spectrum-css/card@6.2.1)
+
+### 🐛 Bug fixes
+
+- **card:**focus outline only on keyboard focus([268e3cc](https://github.com/adobe/spectrum-css/commit/268e3cc))
+
 <a name="6.2.0"></a>
 #6.2.0
 🗓

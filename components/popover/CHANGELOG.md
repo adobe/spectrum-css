@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+<a name="6.0.83"></a>
+##6.0.83
+🗓
+2023-12-04 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/popover@6.0.82...@spectrum-css/popover@6.0.83)
+
+### 🐛 Bug fixes
+
+- **popover:**animation transform defined in popover instead of inherited([94077a6](https://github.com/adobe/spectrum-css/commit/94077a6))_
+  **popover:**nested storybook example is open, static ([#2314](https://github.com/adobe/spectrum-css/issues/2314))([dbca3e7](https://github.com/adobe/spectrum-css/commit/dbca3e7))_
+  **popover:**offset from source, animation distance matches spec([632c668](https://github.com/adobe/spectrum-css/commit/632c668))
+
 <a name="6.0.82"></a>
 ##6.0.82
 🗓
