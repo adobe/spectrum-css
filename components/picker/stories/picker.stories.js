@@ -146,7 +146,8 @@ SideLabel.args = {
 	content: [
 		() => MenuStories(MenuStories.args)
 	],
-	labelPosition: "left"
+	labelPosition: "left",
+	placeholder: "Select Your State Or Province"
 };
 
 export const Quiet = Template.bind({});
