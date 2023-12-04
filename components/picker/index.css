@@ -161,8 +161,7 @@ governing permissions and limitations under the License.
     --highcontrast-picker-content-color-disabled: GrayText;
     --highcontrast-picker-background-color: ButtonFace;
 
-    &:focus-visible,
-    &.is-focused {
+    &:focus-visible {
       --highcontrast-picker-border-color-hover: ButtonText;
     }
 
@@ -264,8 +263,7 @@ governing permissions and limitations under the License.
     }
   }
 
-  &:focus-visible,
-  &.is-focused {
+  &:focus-visible {
     outline: none;
     background-color: var(--highcontrast-picker-background-color, var(--mod-picker-background-color-key-focus, var(--spectrum-picker-background-color-key-focus)));
     border-color: var(--highcontrast-picker-border-color-default, var(--mod-picker-border-color-key-focus, var(--spectrum-picker-border-color-key-focus)));
@@ -308,8 +306,7 @@ governing permissions and limitations under the License.
       border-color: var(--highcontrast-picker-border-color-hover, var(--mod-picker-border-color-error-hover-open, var(--spectrum-picker-border-color-error-hover-open)));
     }
 
-    &:focus-visible,
-    &.is-focused {
+    &:focus-visible {
       border-color: var(--highcontrast-picker-border-color-default, var(--mod-picker-border-color-error-key-focus, var(--spectrum-picker-border-color-error-key-focus)));
     }
   }
@@ -348,7 +345,7 @@ governing permissions and limitations under the License.
   color: var(--highcontrast-picker-content-color-default, var(--mod-picker-font-color-default-open, var(--spectrum-picker-font-color-default-open)));
   background-color: var(--highcontrast-picker-background-color, var(--mod-picker-background-color-default-open, var(--spectrum-picker-background-color-default-open)));
   border-color: var(--highcontrast-picker-border-color-default, var(--mod-picker-border-default-open, var(--spectrum-picker-border-color-default-open)));
-  
+
   &:hover {
     color: var(--highcontrast-picker-content-color-default, var(--mod-picker-font-color-hover-open, var(--spectrum-picker-font-color-hover-open)));
     background-color: var(--highcontrast-picker-background-color, var(--mod-picker-background-color-hover-open, var(--spectrum-picker-background-color-hover-open)));
@@ -466,8 +463,7 @@ governing permissions and limitations under the License.
     background-color: var(--highcontrast-picker-background-color, transparent);
   }
 
-  &:focus-visible,
-  &.is-focused {
+  &:focus-visible {
     background-color: var(--highcontrast-picker-background-color, transparent);
 
     /* Focus indicator changes from a ring to a line underneath. */

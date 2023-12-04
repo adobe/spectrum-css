@@ -1,7 +1,6 @@
-// Import the component markup template
-import { Template } from "./template";
-
 import { Default as MenuStories } from "@spectrum-css/menu/stories/menu.stories.js";
+import { within } from "@storybook/testing-library";
+import { Template } from "./template";
 
 export default {
 	title: "Components/Picker",
@@ -64,15 +63,6 @@ export default {
 			},
 			control: "boolean",
 		},
-		isFocused: {
-			name: "Focused",
-			type: { name: "boolean" },
-			table: {
-				type: { summary: "boolean" },
-				category: "State",
-			},
-			control: "boolean",
-		},
 		isDisabled: {
 			name: "Disabled",
 			type: { name: "boolean" },
@@ -110,7 +100,6 @@ export default {
 		isQuiet: false,
 		isLoading: false,
 		isDisabled: false,
-		isFocused: false,
 		isInvalid: false,
 		isOpen: false,
 	},
@@ -176,12 +165,16 @@ Invalid.args = {
 };
 
 export const Focused = Template.bind({});
+Focused.storyName = "Keyboard Focused";
 Focused.args = {
 	helpText: "Please select a country",
-	isFocused: true,
 	content: [
 		() => MenuStories(MenuStories.args)
 	],
+};
+Focused.play = async ({ canvasElement }) => {
+	const canvas = within(canvasElement);
+	await canvas.getByRole("button").focus();
 };
 
 export const WithForcedColors = Template.bind({
