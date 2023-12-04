@@ -66,27 +66,32 @@ export default {
 
 export const Default = Template.bind({});
 Default.args = {
-	meterFill: "default",
-};
-
-export const Large = Template.bind({});
-Large.args = {
-	meterFill: "default",
-	size: "l",
-};
-
-
-export const Postive = Template.bind({});
-Postive.args = {
-	meterFill: "positive",
-};
-
-export const Negative = Template.bind({});
-Negative.args = {
-	meterFill: "negative",
-};
-
-export const Notice = Template.bind({});
-Notice.args = {
-	meterFill: "notice",
+	items: [
+		{
+			heading: "Default",
+			meterFill: "default",
+		},
+		{
+			heading: "Large",
+			meterFill: "default",
+			size: "l",
+		},
+		{
+			heading: "Positive",
+			meterFill: "positive",
+		},
+		{
+			heading: "Negative",
+			meterFill: "negative",
+		},
+		{
+			heading: "Notice",
+			meterFill: "notice",
+		},
+		{
+			heading: "Text Overflow",
+			meterFill: "notice",
+			label: "Storage Space Remaining for XYZ User"
+		}
+	]
 };
