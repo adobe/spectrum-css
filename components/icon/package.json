@@ -16,6 +16,7 @@
   "main": "dist/index-vars.css",
   "scripts": {
     "build": "gulp",
+    "clean": "rimraf dist",
     "update": "gulp updateIcons"
   },
   "peerDependencies": {

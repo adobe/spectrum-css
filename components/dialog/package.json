@@ -15,7 +15,8 @@
   },
   "main": "dist/index-vars.css",
   "scripts": {
-    "build": "gulp"
+    "build": "gulp",
+    "clean": "rimraf dist"
   },
   "peerDependencies": {
     "@spectrum-css/button": ">=11",

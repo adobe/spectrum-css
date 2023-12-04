@@ -139,7 +139,9 @@ function buildUnique() {
 			.src([
 				path.join(varDir, "dist/*.css"),
 				"!" + path.join(varDir, "dist/index.css")
-			])
+			], {
+				allowEmpty: true
+			})
 			.pipe(
 				through.obj(function makeUnique(file, enc, cb) {
 					let css = file.contents.toString();

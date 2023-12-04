@@ -87,9 +87,14 @@ jobs:
                       components/*/dist/**
                   key: ubuntu-latest-node18-compiled-assets-${{ steps.set-SHAs.outputs.head }}
 
+            - name: Build storybook site
+              if: ${{ github.event.inputs.storybook-url == '' }}
+              shell: bash
+              run: yarn ci:storybook --output-dir {{ .github.workspace }}/dist/preview
+
             - name: Build docs site
               shell: bash
-              run: yarn build:all
+              run: yarn build:site
               env:
                   CHROMATIC_URL: ${{ inputs.storybook-url }}
 

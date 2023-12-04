@@ -15,9 +15,8 @@
   },
   "main": "dist/index-vars.css",
   "scripts": {
-    "clean": "rimraf dist",
     "build": "gulp",
-    "test": "nx test:scope @spectrum-css/preview {{ folderName }}"
+    "clean": "rimraf dist"
   },
   "peerDependencies": {
     "{{ tokens.name }}": ">={{ parse tokens.version '.' 0 1 }}"

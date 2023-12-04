@@ -6,17 +6,8 @@
   "author": "Adobe",
   "homepage": "https://opensource.adobe.com/spectrum-css/preview",
   "main": "main.js",
-  "scripts": {
-    "build": "yarn storybook",
-    "clean": "rimraf storybook-static",
-    "new": "yarn workspace @spectrum-css/generator new story",
-    "start": "WATCH_MODE=true storybook dev --quiet --config-dir .",
-    "storybook": "storybook build --quiet --config-dir .",
-    "test": "chromatic --only-changed --build-script-name build --junit-report",
-    "test:scope": "yarn test --only-story-names"
-  },
   "dependencies": {
-    "@adobe/spectrum-css-workflow-icons": "^1.2.1",
+    "@adobe/spectrum-css-workflow-icons": "^1.5.4",
     "@spectrum-css/expressvars": "^3.0.9",
     "@spectrum-css/icon": "^4.0.5",
     "@spectrum-css/site": "^4.0.2",
@@ -49,7 +40,6 @@
     "file-loader": "6.2.0",
     "lit": "^2.8.0",
     "lodash-es": "^4.17.21",
-    "npm-run-all": "^4.1.5",
     "postcss": "^7.0.36",
     "postcss-class-prefix": "^0.3.0",
     "postcss-loader": "^4.0.0",
@@ -61,46 +51,10 @@
     "react": "^18.0.0",
     "react-dom": "^18.0.0",
     "react-syntax-highlighter": "^15.5.0",
-    "rimraf": "^5.0.1",
-    "source-map-loader": "^1.0.0",
+    "source-map-loader": "^4.0.1",
     "storybook": "^7.5.1",
     "storybook-addon-pseudo-states": "^2.1.0",
     "style-loader": "3.3.3",
     "webpack": "^5.83.1"
-  },
-  "nx": {
-    "targets": {
-      "build": {
-        "dependsOn": [
-          "^build"
-        ],
-        "inputs": [
-          "{workspaceRoot}/assets",
-          "{workspaceRoot}/decorators",
-          "{workspaceRoot}/*.js",
-          "{workspaceRoot}/*.html",
-          "{projectRoot}/components/*/dist"
-        ],
-        "outputs": [
-          "{workspaceRoot}/storybook-static"
-        ]
-      },
-      "clean": {
-        "inputs": [
-          "{workspaceRoot}/storybook-static"
-        ]
-      }
-    },
-    "implicitDependencies": [
-      "@spectrum-css/*",
-      "!@spectrum-css/generator"
-    ],
-    "includedScripts": [
-      "clean",
-      "test",
-      "test:scope",
-      "storybook",
-      "build"
-    ]
   }
 }
