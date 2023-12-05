@@ -132,3 +132,16 @@ jobs:
                   # this is important, it lets us catch if the build failed silently
                   # by alterting us that no compiled assets were generated
                   if-no-files-found: error
+
+            # This step will evaluate the repo status and report the change
+            - name: Check if there are changes
+              shell: bash
+              run: |
+                if [[ -z $(git status --porcelain) ]]; then
+                    echo "No changes detected"
+                    exit 0
+                else
+                    echo "Changes detected"
+                    git status
+                    exit 1
+                fi
