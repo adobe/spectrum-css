@@ -64,7 +64,7 @@ export default {
 			control: { type: "boolean" },
 		},
 		isIndeterminate: {
-			name: "Indeterminate",
+			name: "Checkbox indeterminate",
 			type: { name: "boolean" },
 			table: {
 			type: { summary: "boolean" },
