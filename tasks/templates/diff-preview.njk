@@ -8,23 +8,23 @@
 
         <!-- Load all component stylesheets -->
         {% for component in allComponents -%}
-            {% if component not in ["actionmenu", "commons", "overlay"] %}
-                <link rel="stylesheet" type="text/css" href="{{ root }}components/{{ component }}/dist/index.css"/>
+            {% if component not in ["commons", "overlay"] %}
+                <link rel="stylesheet" type="text/css" href="../../../components/{{ component }}/dist/index.css"/>
             {% endif %}
         {%- endfor -%}
 
-        <link rel="stylesheet" type="text/css" href="{{ root }}node_modules/@spectrum-css/vars/dist/spectrum-global.css"/>
-        <link rel="stylesheet" type="text/css" href="{{ root }}node_modules/@spectrum-css/vars/dist/spectrum-light.css"/>
-        <link rel="stylesheet" type="text/css" href="{{ root }}node_modules/@spectrum-css/vars/dist/spectrum-medium.css"/>
+        <link rel="stylesheet" type="text/css" href="../../../node_modules/@spectrum-css/vars/dist/spectrum-global.css"/>
+        <link rel="stylesheet" type="text/css" href="../../../node_modules/@spectrum-css/vars/dist/spectrum-light.css"/>
+        <link rel="stylesheet" type="text/css" href="../../../node_modules/@spectrum-css/vars/dist/spectrum-medium.css"/>
 
-        <link rel="stylesheet" type="text/css" href="{{ root }}tokens/dist/index.css"/>
+        <link rel="stylesheet" type="text/css" href="../../../tokens/dist/index.css"/>
 
         <!-- CSS to render the diff2html code -->
-        <link rel="stylesheet" type="text/css" href="{{ root }}node_modules/diff2html/bundles/css/diff2html.min.css" />
+        <link rel="stylesheet" type="text/css" href="../../../node_modules/diff2html/bundles/css/diff2html.min.css" />
     </head>
     <body class="spectrum spectrum--light spectrum--medium spectrum-Typography">
-        {% raw %}{{ html }}{% endraw %}
+        {{ html|safe }}
         <!-- JS to render the diff2html code -->
-        <script type="text/javascript" src="{{ root }}node_modules/diff2html/bundles/js/diff2html.min.js"></script>
+        <script type="text/javascript" src="../../../node_modules/diff2html/bundles/js/diff2html.min.js"></script>
     </body>
 </html>

@@ -2,16 +2,19 @@
 	"npmScope": "@spectrum-css",
 	"tasksRunnerOptions": {
 		"default": {
-			"runner": "nx/tasks-runners/default",
-			"options": {
-				"cacheableOperations": ["build"]
-			}
+			"runner": "nx/tasks-runners/default"
 		}
 	},
 	"targetDefaults": {
+		"clean": {
+			"cache": true,
+			"inputs": ["{projectRoot}/dist", { "externalDependencies": ["rimraf"] }]
+		},
 		"build": {
+			"cache": true,
 			"dependsOn": ["clean", "^build"],
-			"inputs": ["{workspaceRoot}/*.css"]
+			"inputs": ["{projectRoot}/*.css", { "externalDependencies": ["gulp"] }],
+			"outputs": ["{projectRoot}/dist"]
 		}
 	},
 	"includedScripts": ["build"]

@@ -15,7 +15,8 @@
   },
   "main": "dist/index-vars.css",
   "scripts": {
-    "build": "gulp"
+    "build": "gulp",
+    "clean": "rimraf dist"
   },
   "dependencies": {
     "@spectrum-css/tokens": "^13.0.5"

@@ -67,7 +67,7 @@ exports.bytesToSize = function (bytes) {
     const sizes = ["bytes", "KB", "MB", "GB", "TB"];
     // Determine the size identifier to use (KB, MB, etc)
     const i = parseInt(Math.floor(Math.log(bytes) / Math.log(1024)));
-    if (i === 0) return "< 1KB";
+    if (i === 0) return (bytes / 1000).toFixed(2) + " " + sizes[1];
     return (bytes / Math.pow(1024, i)).toFixed(2) + " " + sizes[i];
 };
 

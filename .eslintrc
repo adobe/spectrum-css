@@ -1,22 +1,21 @@
 {
 	"env": {
 		"node": true,
-		"es6": true
+		"es2020": true
 	},
 	"parserOptions": {
-		"ecmaVersion": 6
+		"sourceType": "module"
 	},
 	"extends": "eslint:recommended",
 	"rules": {
-		"brace-style": ["error", "stroustrup", { "allowSingleLine": true }],
-		"func-call-spacing": ["error", "never"],
-		"indent": ["error", 2],
-		"linebreak-style": ["error", "unix"],
-		"no-console": "off",
-		"quotes": ["error", "single"],
-		"avoidEscape": true,
-		"semi": ["error", "always"],
-		"space-before-blocks": ["error", "always"]
+		"brace-style": ["warn", "stroustrup", { "allowSingleLine": true }],
+		"func-call-spacing": ["warn", "never"],
+		"indent": ["warn", 2],
+		"linebreak-style": ["warn", "unix"],
+		"no-console": 0,
+		"quotes": ["warn", "single"],
+		"semi": ["warn", "always"],
+		"space-before-blocks": ["warn", "always"]
 	},
 	"root": true
 }

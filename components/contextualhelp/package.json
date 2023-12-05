@@ -17,8 +17,7 @@
   "main": "dist/index-vars.css",
   "scripts": {
     "build": "gulp",
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "watch": "gulp watch"
+    "clean": "rimraf dist"
   },
   "peerDependencies": {
     "@spectrum-css/actionbutton": ">=5",
