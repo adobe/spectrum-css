@@ -142,6 +142,6 @@ jobs:
                     exit 0
                 else
                     echo "Changes detected"
-                    echo "$(git status)"
+                    git status
                     exit 1
                 fi
