@@ -29,8 +29,6 @@ export const Template = ({
 		console.warn(e);
 	}
 
-	console.log('icon', iconName)
-
 	return html`
 		<div
 			class=${classMap({
