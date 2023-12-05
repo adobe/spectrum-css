@@ -70,6 +70,7 @@ export default {
 				category: "Component",
 			},
 			control: "boolean",
+			if: { arg: "isInvalid", truthy: false },
 		},
 		isInvalid: {
 			name: "Invalid",
