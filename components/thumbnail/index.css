@@ -9,12 +9,14 @@ the License is distributed on an "AS IS" BASIS, WITHOUT WARRANTIES OR REPRESENTA
 OF ANY KIND, either express or implied. See the License for the specific language
 governing permissions and limitations under the License.
 */
+@import "../commons/opacity-checkerboard.css";
 
 .spectrum-Thumbnail {
   --spectrum-thumbnail-size: var(--spectrum-thumbnail-size-500);
 
 	--spectrum-thumbnail-border-radius: var(--spectrum-corner-radius-75);
 	--spectrum-thumbnail-border-width: var(--spectrum-border-width-100);
+
 	/* @todo Refactor with --spectrum-thumbnail-border-color once gray rgb token is no longer necessary to workaround nested rgb color token value using rgba(). */
 	--spectrum-thumbnail-border-color-rgba: rgba(
 		var(--spectrum-gray-800-rgb),
@@ -90,6 +92,8 @@ governing permissions and limitations under the License.
 }
 
 .spectrum-Thumbnail {
+	@inherit: %spectrum-OpacityCheckerboard;
+
   position: relative;
   margin: 0;
   padding: 0;
@@ -122,6 +126,7 @@ governing permissions and limitations under the License.
 	/* stylelint-disable selector-pseudo-class-no-unknown */
 	&.is-focused {
 		overflow: visible;
+
 		&::after {
 			content: "";
 			border-style: solid;
@@ -190,6 +195,7 @@ governing permissions and limitations under the License.
 					) * -1
 			);
 		}
+
 		.spectrum-Thumbnail-image-wrapper {
 			overflow: hidden;
 			border-radius: var(

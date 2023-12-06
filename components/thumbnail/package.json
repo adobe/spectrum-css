@@ -19,12 +19,10 @@
     "clean": "rimraf dist"
   },
   "peerDependencies": {
-    "@spectrum-css/opacitycheckerboard": ">=1.0.0-alpha.0",
     "@spectrum-css/tokens": ">=13"
   },
   "devDependencies": {
     "@spectrum-css/component-builder-simple": "^3.0.1",
-    "@spectrum-css/opacitycheckerboard": "^1.0.8",
     "@spectrum-css/tokens": "^13.0.5",
     "gulp": "^4.0.0"
   },

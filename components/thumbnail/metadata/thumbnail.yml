@@ -19,7 +19,7 @@ examples:
     name: Thumbnail
     markup: |
       <div class="spectrum-Thumbnail spectrum-Thumbnail--size700">
-        <div class="spectrum-Thumbnail-image-wrapper spectrum-OpacityCheckerboard">
+        <div class="spectrum-Thumbnail-image-wrapper">
           <img class="spectrum-Thumbnail-image"src="img/example-ava.jpg" alt="women resting head in hands">
         </div>
       </div>
@@ -27,7 +27,7 @@ examples:
     name: Thumbnail (focused)
     markup: |
       <div class="spectrum-Thumbnail spectrum-Thumbnail--size700 is-focused">
-        <div class="spectrum-Thumbnail-image-wrapper spectrum-OpacityCheckerboard">
+        <div class="spectrum-Thumbnail-image-wrapper">
           <img class="spectrum-Thumbnail-image" src="img/example-ava.jpg" alt="Woman crouching">
         </div>
       </div>
@@ -36,7 +36,7 @@ examples:
     description: Thumbnail should only be displayed as disabled if the entire componet is also disabled.
     markup: |
       <div class="spectrum-Thumbnail spectrum-Thumbnail--size700 is-disabled">
-        <div class="spectrum-Thumbnail-image-wrapper spectrum-OpacityCheckerboard">
+        <div class="spectrum-Thumbnail-image-wrapper">
           <img class="spectrum-Thumbnail-image" src="img/thumbnail.png" alt="Woman crouching">
         </div>
       </div>
@@ -45,7 +45,7 @@ examples:
     description: Landscape images will fill horizontally and have space above and below.
     markup: |
       <div class="spectrum-Thumbnail spectrum-Thumbnail--size700">
-        <div class="spectrum-Thumbnail-image-wrapper spectrum-OpacityCheckerboard">
+        <div class="spectrum-Thumbnail-image-wrapper">
           <img class="spectrum-Thumbnail-image" src="img/example-card-landscape.jpeg" alt="Landscape with mountains and lake">
         </div>
       </div>
@@ -54,7 +54,7 @@ examples:
     description: Portrait images will fill vertically and have space on either side.
     markup: |
       <div class="spectrum-Thumbnail spectrum-Thumbnail--size700">
-        <div class="spectrum-Thumbnail-image-wrapper spectrum-OpacityCheckerboard">
+        <div class="spectrum-Thumbnail-image-wrapper">
           <img class="spectrum-Thumbnail-image" src="img/example-card-portrait.jpg" alt="Eiffel Tower at night">
         </div>
       </div>
@@ -63,7 +63,7 @@ examples:
     description: When used in layer management (such as the Compact or Detail Layers panels)
     markup: |
       <div class="spectrum-Thumbnail spectrum-Thumbnail-layer spectrum-Thumbnail--size700">
-        <div class="spectrum-Thumbnail-layer-inner spectrum-OpacityCheckerboard">
+        <div class="spectrum-Thumbnail-layer-inner">
           <img class="spectrum-Thumbnail-image" src="img/example-ava.jpg" alt="women resting head in hands"></div>
       </div>
   - id: thumbnail-selected
@@ -71,7 +71,7 @@ examples:
     description: The thumbnail is given a thick blue border to indicate its selection when used in layer management.
     markup: |
       <div class="spectrum-Thumbnail spectrum-Thumbnail-layer spectrum-Thumbnail--size700 is-selected">
-        <div class="spectrum-Thumbnail-layer-inner spectrum-OpacityCheckerboard">
+        <div class="spectrum-Thumbnail-layer-inner">
           <img class="spectrum-Thumbnail-image" src="img/thumbnail.png" alt="Woman crouching">
         </div>
       </div>
@@ -80,7 +80,7 @@ examples:
     description: Images will maintain their aspect ratio while filling the entire content box.
     markup: |
       <div class="spectrum-Thumbnail spectrum-Thumbnail--cover spectrum-Thumbnail--size700">
-        <div class="spectrum-Thumbnail-image-wrapper spectrum-OpacityCheckerboard">
+        <div class="spectrum-Thumbnail-image-wrapper">
           <img class="spectrum-Thumbnail-image" src="img/example-card-landscape.jpeg" alt="Landscape with mountains and lake">
         </div>
       </div>
@@ -102,7 +102,7 @@ examples:
         <div class="spectrum-Examples-item">
           <h4 class="spectrum-Heading spectrum-Heading--sizeXS spectrum-Examples-itemHeading">50</h4>
           <div class="spectrum-Thumbnail spectrum-Thumbnail--size50">
-            <div class="spectrum-Thumbnail-image-wrapper spectrum-OpacityCheckerboard">
+            <div class="spectrum-Thumbnail-image-wrapper">
               <img class="spectrum-Thumbnail-image" src="img/thumbnail.png" alt="Woman crouching">
             </div>
           </div>
@@ -111,7 +111,7 @@ examples:
         <div class="spectrum-Examples-item">
           <h4 class="spectrum-Heading spectrum-Heading--sizeXS spectrum-Examples-itemHeading">75</h4>
           <div class="spectrum-Thumbnail spectrum-Thumbnail--size75">
-            <div class="spectrum-Thumbnail-image-wrapper spectrum-OpacityCheckerboard">
+            <div class="spectrum-Thumbnail-image-wrapper">
               <img class="spectrum-Thumbnail-image" src="img/thumbnail.png" alt="Woman crouching">
             </div>
           </div>
@@ -120,7 +120,7 @@ examples:
         <div class="spectrum-Examples-item">
           <h4 class="spectrum-Heading spectrum-Heading--sizeXS spectrum-Examples-itemHeading">100</h4>
           <div class="spectrum-Thumbnail spectrum-Thumbnail--size100">
-            <div class="spectrum-Thumbnail-image-wrapper spectrum-OpacityCheckerboard">
+            <div class="spectrum-Thumbnail-image-wrapper">
               <img class="spectrum-Thumbnail-image" src="img/thumbnail.png" alt="Woman crouching">
             </div>
           </div>
@@ -129,7 +129,7 @@ examples:
         <div class="spectrum-Examples-item">
           <h4 class="spectrum-Heading spectrum-Heading--sizeXS spectrum-Examples-itemHeading">200</h4>
           <div class="spectrum-Thumbnail spectrum-Thumbnail--size200">
-            <div class="spectrum-Thumbnail-image-wrapper spectrum-OpacityCheckerboard">
+            <div class="spectrum-Thumbnail-image-wrapper">
               <img class="spectrum-Thumbnail-image" src="img/thumbnail.png" alt="Woman crouching">
             </div>
           </div>
@@ -138,7 +138,7 @@ examples:
         <div class="spectrum-Examples-item">
           <h4 class="spectrum-Heading spectrum-Heading--sizeXS spectrum-Examples-itemHeading">300</h4>
           <div class="spectrum-Thumbnail spectrum-Thumbnail--size300">
-            <div class="spectrum-Thumbnail-image-wrapper spectrum-OpacityCheckerboard">
+            <div class="spectrum-Thumbnail-image-wrapper">
               <img class="spectrum-Thumbnail-image" src="img/thumbnail.png" alt="Woman crouching">
             </div>
           </div>
@@ -147,7 +147,7 @@ examples:
         <div class="spectrum-Examples-item">
           <h4 class="spectrum-Heading spectrum-Heading--sizeXS spectrum-Examples-itemHeading">400</h4>
           <div class="spectrum-Thumbnail spectrum-Thumbnail--size400">
-            <div class="spectrum-Thumbnail-image-wrapper spectrum-OpacityCheckerboard">
+            <div class="spectrum-Thumbnail-image-wrapper">
               <img class="spectrum-Thumbnail-image" src="img/thumbnail.png" alt="Woman crouching">
             </div>
           </div>
@@ -156,7 +156,7 @@ examples:
         <div class="spectrum-Examples-item">
           <h4 class="spectrum-Heading spectrum-Heading--sizeXS spectrum-Examples-itemHeading">500</h4>
           <div class="spectrum-Thumbnail spectrum-Thumbnail--size500">
-            <div class="spectrum-Thumbnail-image-wrapper spectrum-OpacityCheckerboard">
+            <div class="spectrum-Thumbnail-image-wrapper">
               <img class="spectrum-Thumbnail-image" src="img/thumbnail.png" alt="Woman crouching">
             </div>
           </div>
@@ -165,7 +165,7 @@ examples:
         <div class="spectrum-Examples-item">
           <h4 class="spectrum-Heading spectrum-Heading--sizeXS spectrum-Examples-itemHeading">600</h4>
           <div class="spectrum-Thumbnail spectrum-Thumbnail--size600">
-            <div class="spectrum-Thumbnail-image-wrapper spectrum-OpacityCheckerboard">
+            <div class="spectrum-Thumbnail-image-wrapper">
               <img class="spectrum-Thumbnail-image" src="img/thumbnail.png" alt="Woman crouching">
             </div>
           </div>
@@ -174,7 +174,7 @@ examples:
         <div class="spectrum-Examples-item">
           <h4 class="spectrum-Heading spectrum-Heading--sizeXS spectrum-Examples-itemHeading">700</h4>
           <div class="spectrum-Thumbnail spectrum-Thumbnail--size700">
-            <div class="spectrum-Thumbnail-image-wrapper spectrum-OpacityCheckerboard">
+            <div class="spectrum-Thumbnail-image-wrapper">
               <img class="spectrum-Thumbnail-image" src="img/thumbnail.png" alt="Woman crouching">
             </div>
           </div>
@@ -183,7 +183,7 @@ examples:
         <div class="spectrum-Examples-item">
           <h4 class="spectrum-Heading spectrum-Heading--sizeXS spectrum-Examples-itemHeading">800</h4>
           <div class="spectrum-Thumbnail spectrum-Thumbnail--size800">
-            <div class="spectrum-Thumbnail-image-wrapper spectrum-OpacityCheckerboard">
+            <div class="spectrum-Thumbnail-image-wrapper">
               <img class="spectrum-Thumbnail-image" src="img/thumbnail.png" alt="Woman crouching">
             </div>
           </div>
@@ -192,7 +192,7 @@ examples:
         <div class="spectrum-Examples-item">
           <h4 class="spectrum-Heading spectrum-Heading--sizeXS spectrum-Examples-itemHeading">900</h4>
           <div class="spectrum-Thumbnail spectrum-Thumbnail--size900">
-            <div class="spectrum-Thumbnail-image-wrapper spectrum-OpacityCheckerboard">
+            <div class="spectrum-Thumbnail-image-wrapper">
               <img class="spectrum-Thumbnail-image" src="img/thumbnail.png" alt="Woman crouching">
             </div>
           </div>
@@ -201,7 +201,7 @@ examples:
         <div class="spectrum-Examples-item">
           <h4 class="spectrum-Heading spectrum-Heading--sizeXS spectrum-Examples-itemHeading">1000</h4>
           <div class="spectrum-Thumbnail spectrum-Thumbnail--size1000">
-            <div class="spectrum-Thumbnail-image-wrapper spectrum-OpacityCheckerboard">
+            <div class="spectrum-Thumbnail-image-wrapper">
               <img class="spectrum-Thumbnail-image" src="img/thumbnail.png" alt="Woman crouching">
             </div>
           </div>
