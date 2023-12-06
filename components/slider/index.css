@@ -327,8 +327,9 @@ governing permissions and limitations under the License.
     z-index: 3;
   }
 
+  /* Focus indicator. */
   &::before {
-    content: " ";
+    content: "";
     display: block;
     position: absolute;
     inset-inline-start: 50%;
@@ -340,12 +341,16 @@ governing permissions and limitations under the License.
 
     inline-size: var(--mod-slider-handle-size, var(--spectrum-slider-handle-size));
     block-size: var(--mod-slider-handle-size, var(--spectrum-slider-handle-size));
+    border-radius: 100%;
 
     transform: translate(-50%, -50%);
 
-    border-radius: 100%;
+    [dir="rtl"] & {
+      transform: translate(50%, -50%);
+    }
   }
 
+  /* Keyboard focused */
   &.is-focused {
     &::before {
       inline-size: calc(var(--mod-slider-handle-size, var(--spectrum-slider-handle-size)) + var(--mod-focus-indicator-gap, var(--spectrum-focus-indicator-gap)) * 2);
@@ -574,6 +579,7 @@ governing permissions and limitations under the License.
     border-color: var(--highcontrast-slider-handle-border-color-hover, var(--mod-slider-handle-border-color-hover, var(--spectrum-slider-handle-border-color-hover)));
   }
 
+  /* Keyboard focused with focus indicator. */
   &.is-focused {
     border-color: var(--highcontrast-slider-handle-border-color-key-focus, var(--mod-slider-handle-border-color-key-focus, var(--spectrum-slider-handle-border-color-key-focus)));
 
