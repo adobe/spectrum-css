@@ -39,7 +39,7 @@ examples:
     name: Alpha
     markup: |
       <div class="spectrum-ColorSlider">
-        <div class="spectrum-OpacityCheckerboard spectrum-ColorSlider-checkerboard" role="presentation">
+        <div class="spectrum-ColorSlider-checkerboard" role="presentation">
           <div class="spectrum-ColorSlider-gradient" role="presentation" style="background: linear-gradient(to right, rgba(0, 0, 0, 1) 0%, rgba(0, 0, 0, 0) 100%);"></div>
         </div>
 
@@ -158,7 +158,7 @@ examples:
     demoClassName: spectrum-CSSExample-example--spacious
     markup: |
       <div class="spectrum-ColorSlider" style="position: relative; top: 80px;">
-        <div class="spectrum-OpacityCheckerboard spectrum-ColorSlider-checkerboard" role="presentation">
+        <div class="spectrum-ColorSlider-checkerboard" role="presentation">
           <div class="spectrum-ColorSlider-gradient" role="presentation" style="background: linear-gradient(to right, rgba(255, 0, 0, 0.5) 0%, rgba(255, 255, 0, 0.5) 17%, rgba(0, 255, 0, 0.5) 33%, rgba(0, 255, 255, 0.5) 50%, rgba(0, 0, 255, 0.5) 67%, rgba(255, 0, 255, 0.5) 83%, rgba(255, 0, 0, 0.5) 100%);"></div>
         </div>
 
