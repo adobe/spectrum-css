@@ -33,6 +33,10 @@ export const Template = ({
 		console.warn(e);
 	}
 
+	if(isInvalid) {
+		iconName = 'Alert'
+	}
+
 	return html`
 		<div
 			class=${classMap({
@@ -48,14 +52,14 @@ export const Template = ({
 			id=${ifDefined(id)}
 			tabindex=${isDisabled ? '-1' : '0'}
 		>
-			${avatarUrl
+			${avatarUrl && !isInvalid
 				? Avatar({
 						...globals,
 						image: avatarUrl,
 						size: "50",
 				  })
 				: ""}
-			${iconName
+			${iconName || isInvalid
 				? Icon({
 						...globals,
 						size,

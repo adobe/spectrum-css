@@ -21,6 +21,10 @@ sections:
       ```
       ### Icon size changed to small
       If you use an icon (`spectrum-Tag-itemIcon`) along with a tag, please replace `.spectrum-Icon--sizeXS` with `.spectrum-Icon--sizeS`.
+
+      ### Invalid
+      Docs updated to show invalid tags always including the alert icon. Invalid tags should have an icon to idenfity itself as invalid and not rely soley on the red background and border color.
+
 examples:
   - id: tag
     name: Standard
@@ -87,10 +91,6 @@ examples:
           <h4 class="spectrum-Heading spectrum-Heading--sizeXS spectrum-Examples-itemHeading">Invalid</h4>
 
           <div class="spectrum-Tag spectrum-Tag--sizeS is-invalid" tabindex="0">
-            <span class="spectrum-Tag-itemLabel">Tag label</span>
-          </div>
-
-          <div class="spectrum-Tag spectrum-Tag--sizeS is-invalid" tabindex="0">
             <svg class="spectrum-Icon spectrum-Icon--sizeS spectrum-Tag-itemIcon" focusable="false" aria-hidden="true" aria-label="Tag">
               <use xlink:href="#spectrum-icon-24-Alert" />
             </svg>
@@ -98,9 +98,9 @@ examples:
           </div>
 
           <div class="spectrum-Tag spectrum-Tag--sizeS is-invalid" tabindex="0">
-            <div class="spectrum-Avatar spectrum-Avatar--size50">
-              <img class="spectrum-Avatar-image" src="img/example-ava.jpg" alt="Avatar">
-            </div>
+            <svg class="spectrum-Icon spectrum-Icon--sizeS spectrum-Tag-itemIcon" focusable="false" aria-hidden="true" aria-label="Tag">
+              <use xlink:href="#spectrum-icon-24-Alert" />
+            </svg>
             <span class="spectrum-Tag-itemLabel">Tag label</span>
             <button type="button" class="spectrum-ClearButton spectrum-ClearButton--sizeM spectrum-Tag-clearButton" tabindex="-1">
               <div class="spectrum-ClearButton-fill">
@@ -143,11 +143,6 @@ examples:
 
         <div class="spectrum-Examples-item">
           <h4 class="spectrum-Heading spectrum-Heading--sizeXS spectrum-Examples-itemHeading">Selected + Invalid</h4>
-
-          <div class="spectrum-Tag spectrum-Tag--sizeS is-selected is-invalid" tabindex="0">
-            <span class="spectrum-Tag-itemLabel">Tag label</span>
-          </div>
-
           <div class="spectrum-Tag spectrum-Tag--sizeS is-selected is-invalid" tabindex="0">
             <svg class="spectrum-Icon spectrum-Icon--sizeS spectrum-Tag-itemIcon" focusable="false" aria-hidden="true" aria-label="Tag">
               <use xlink:href="#spectrum-icon-24-Alert" />
@@ -156,9 +151,9 @@ examples:
           </div>
 
           <div class="spectrum-Tag spectrum-Tag--sizeS is-selected is-invalid" tabindex="0">
-            <div class="spectrum-Avatar spectrum-Avatar--size50">
-              <img class="spectrum-Avatar-image" src="img/example-ava.jpg" alt="Avatar">
-            </div>
+            <svg class="spectrum-Icon spectrum-Icon--sizeS spectrum-Tag-itemIcon" focusable="false" aria-hidden="true" aria-label="Tag">
+              <use xlink:href="#spectrum-icon-24-Alert" />
+            </svg>
             <span class="spectrum-Tag-itemLabel">Tag label</span>
             <button type="button" class="spectrum-ClearButton spectrum-ClearButton--sizeM spectrum-Tag-clearButton" tabindex="-1">
               <div class="spectrum-ClearButton-fill">
@@ -390,18 +385,6 @@ examples:
         </div>
         <div class="spectrum-Examples-item">
           <h4 class="spectrum-Heading spectrum-Heading--sizeXS spectrum-Examples-itemHeading">Invalid</h4>
-
-          <div class="spectrum-Tag spectrum-Tag--sizeS is-invalid spectrum-Tag--removable" tabindex="0">
-            <span class="spectrum-Tag-itemLabel">Tag label</span>
-            <button type="button" class="spectrum-ClearButton spectrum-ClearButton--sizeS spectrum-Tag-clearButton" tabindex="-1">
-              <div class="spectrum-ClearButton-fill">
-                <svg class="spectrum-Icon spectrum-ClearButton-icon spectrum-UIIcon-Cross75" focusable="false" aria-hidden="true">
-                  <use xlink:href="#spectrum-css-icon-Cross75" />
-                </svg>
-              </div>
-            </button>
-          </div>
-
           <div class="spectrum-Tag spectrum-Tag--sizeS is-invalid spectrum-Tag--removable" tabindex="0">
             <svg class="spectrum-Icon spectrum-Icon--sizeS spectrum-Tag-itemIcon" focusable="false" aria-hidden="true" aria-label="Tag">
               <use xlink:href="#spectrum-icon-24-Alert" />
@@ -447,17 +430,6 @@ examples:
         </div>
         <div class="spectrum-Examples-item">
           <h4 class="spectrum-Heading spectrum-Heading--sizeXS spectrum-Examples-itemHeading">Selected + Invalid</h4>
-
-          <div class="spectrum-Tag spectrum-Tag--sizeS is-selected is-invalid spectrum-Tag--removable" tabindex="0">
-            <span class="spectrum-Tag-itemLabel">Tag label</span>
-            <button type="button" class="spectrum-ClearButton spectrum-ClearButton--sizeS spectrum-Tag-clearButton" tabindex="-1">
-              <div class="spectrum-ClearButton-fill">
-                <svg class="spectrum-Icon spectrum-ClearButton-icon spectrum-UIIcon-Cross75" focusable="false" aria-hidden="true">
-                  <use xlink:href="#spectrum-css-icon-Cross75" />
-                </svg>
-              </div>
-            </button>
-          </div>
 
           <div class="spectrum-Tag spectrum-Tag--sizeS is-selected is-invalid spectrum-Tag--removable" tabindex="0">
             <svg class="spectrum-Icon spectrum-Icon--sizeS spectrum-Tag-itemIcon" focusable="false" aria-hidden="true" aria-label="Tag">
