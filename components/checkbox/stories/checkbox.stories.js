@@ -107,6 +107,7 @@ export default {
 
 const CheckboxGroup = ({
 	customStyles = {},
+	isChecked = false,
 	...args
 }) => {
 	return html`
@@ -121,7 +122,11 @@ const CheckboxGroup = ({
 			})}
 			${Template({
 				...args,
-				isIndeterminate: true
+				isIndeterminate: true,
+			})}
+				${Template({
+				...args,
+				isDisabled: true,
 			})}
 			${Template({
 				...args,
