@@ -62,12 +62,20 @@ function debugEmptyDirectory(path, pattern, { core }) {
  * @returns {string} The size in human readable format
  */
 exports.bytesToSize = function (bytes) {
+    if (!bytes) return "-";
     if (bytes === 0) return "0";
 
     const sizes = ["bytes", "KB", "MB", "GB", "TB"];
+
     // Determine the size identifier to use (KB, MB, etc)
     const i = parseInt(Math.floor(Math.log(bytes) / Math.log(1024)));
-    if (i === 0) return (bytes / 1000).toFixed(2) + " " + sizes[1];
+
+    if (i === 0) {
+        const value = (bytes / 1000).toFixed(2);
+        if (value === "0.00") return "< 0.01 KB";
+        return value + " " + sizes[1];
+    }
+
     return (bytes / Math.pow(1024, i)).toFixed(2) + " " + sizes[i];
 };
 
