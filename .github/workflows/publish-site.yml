@@ -90,7 +90,7 @@ jobs:
             - name: Build storybook site
               if: ${{ github.event.inputs.storybook-url == '' }}
               shell: bash
-              run: yarn ci:storybook --output-dir {{ .github.workspace }}/dist/preview
+              run: yarn ci:storybook --output-dir ../dist/preview
 
             - name: Build docs site
               shell: bash
