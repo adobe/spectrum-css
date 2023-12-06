@@ -2225,6 +2225,9 @@
   --spectrum-well-border-radius:5px;
 
   --spectrum-icon-chevron-size-50:8px;
+  /* XXL and XXS icon sizes are not within the design spec and are planned to be deprecated in Spectrum 2. */
+  --spectrum-workflow-icon-size-xxl:40px;
+  --spectrum-workflow-icon-size-xxs:15px;
 
   --spectrum-treeview-item-indentation-medium:20px;
   --spectrum-treeview-item-indentation-small:15px;
@@ -2265,9 +2268,12 @@
   --spectrum-assetcard-selectionindicator-margin:15px;
   --spectrum-assetcard-title-font-size:var(--spectrum-heading-size-xxs);
   --spectrum-assetcard-header-content-font-size:var(--spectrum-heading-size-xxs);
-	--spectrum-assetcard-content-font-size:var(--spectrum-body-size-xs);
+  --spectrum-assetcard-content-font-size:var(--spectrum-body-size-xs);
 
   --spectrum-tooltip-animation-distance:5px;
+
+  --spectrum-ui-icon-medium-display:none;
+  --spectrum-ui-icon-large-display:block;
   --spectrum-checkbox-control-size-small:16px;
   --spectrum-checkbox-control-size-medium:18px;
   --spectrum-checkbox-control-size-large:20px;
@@ -3396,6 +3402,9 @@
   --spectrum-well-border-radius:var(--spectrum-spacing-75);
 
   --spectrum-icon-chevron-size-50:6px;
+  /* XXL and XXS icon sizes are not within the design spec and are planned to be deprecated in Spectrum 2. */
+  --spectrum-workflow-icon-size-xxl:32px;
+  --spectrum-workflow-icon-size-xxs:12px;
 
   --spectrum-treeview-item-indentation-medium:var(--spectrum-spacing-300);
   --spectrum-treeview-item-indentation-small:var(--spectrum-spacing-200);
@@ -3434,11 +3443,14 @@
 
   --spectrum-assetcard-focus-ring-border-radius:8px;
   --spectrum-assetcard-selectionindicator-margin:12px;
-	--spectrum-assetcard-title-font-size:var(--spectrum-heading-size-xs);
+  --spectrum-assetcard-title-font-size:var(--spectrum-heading-size-xs);
   --spectrum-assetcard-header-content-font-size:var(--spectrum-heading-size-xs);
-	--spectrum-assetcard-content-font-size:var(--spectrum-body-size-s);
+  --spectrum-assetcard-content-font-size:var(--spectrum-body-size-s);
 
   --spectrum-tooltip-animation-distance:var(--spectrum-spacing-75);
+
+  --spectrum-ui-icon-medium-display:block;
+  --spectrum-ui-icon-large-display:none;
   --spectrum-checkbox-control-size-small:12px;
   --spectrum-checkbox-control-size-medium:14px;
   --spectrum-checkbox-control-size-large:16px;

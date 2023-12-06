@@ -76,6 +76,9 @@ governing permissions and limitations under the License.
   --spectrum-well-border-radius: var(--spectrum-spacing-75);
 
   --spectrum-icon-chevron-size-50: 6px;
+  /* XXL and XXS icon sizes are not within the design spec and are planned to be deprecated in Spectrum 2. */
+  --spectrum-workflow-icon-size-xxl: 32px;
+  --spectrum-workflow-icon-size-xxs: 12px;
 
   --spectrum-treeview-item-indentation-medium: var(--spectrum-spacing-300);
   --spectrum-treeview-item-indentation-small: var(--spectrum-spacing-200);
@@ -114,9 +117,12 @@ governing permissions and limitations under the License.
 
   --spectrum-assetcard-focus-ring-border-radius: 8px;
   --spectrum-assetcard-selectionindicator-margin: 12px;
-	--spectrum-assetcard-title-font-size: var(--spectrum-heading-size-xs);
+  --spectrum-assetcard-title-font-size: var(--spectrum-heading-size-xs);
   --spectrum-assetcard-header-content-font-size: var(--spectrum-heading-size-xs);
-	--spectrum-assetcard-content-font-size: var(--spectrum-body-size-s);
+  --spectrum-assetcard-content-font-size: var(--spectrum-body-size-s);
 
   --spectrum-tooltip-animation-distance: var(--spectrum-spacing-75);
+
+  --spectrum-ui-icon-medium-display: block;
+  --spectrum-ui-icon-large-display: none;
 }
