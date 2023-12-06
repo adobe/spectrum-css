@@ -62,7 +62,7 @@ const AccordianGroup = ({
 	...args
 }) => {
 	return html`
-		<div style="padding: 1rem">
+		<div style="display: flex; gap: 2rem;">
 			${Template({
 				items: new Map([
 				[
@@ -137,7 +137,7 @@ const AccordianGroup = ({
 					],
 				]),
 				})
-				: null}
+				: null }
 		</div>
 	`;
 };
