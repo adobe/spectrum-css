@@ -14,23 +14,11 @@
     "url": "https://github.com/adobe/spectrum-css/issues"
   },
   "main": "dist/index-vars.css",
-  "scripts": {
-    "build": "gulp",
-    "clean": "rimraf dist"
-  },
   "peerDependencies": {
-    "@spectrum-css/button": ">=10",
-    "@spectrum-css/closebutton": ">=3",
+    "@spectrum-css/button": ">=11",
+    "@spectrum-css/closebutton": ">=4",
     "@spectrum-css/icon": ">=4",
-    "@spectrum-css/tokens": ">=10"
-  },
-  "devDependencies": {
-    "@spectrum-css/button": "^11.0.17",
-    "@spectrum-css/closebutton": "^4.0.16",
-    "@spectrum-css/component-builder-simple": "^3.0.1",
-    "@spectrum-css/icon": "^4.0.5",
-    "@spectrum-css/tokens": "^13.0.5",
-    "gulp": "^4.0.0"
+    "@spectrum-css/tokens": ">=13"
   },
   "publishConfig": {
     "access": "public"

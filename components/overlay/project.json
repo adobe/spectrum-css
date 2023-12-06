@@ -1,0 +1,19 @@
+{
+	"$schema": "../../node_modules/nx/schemas/project-schema.json",
+	"name": "overlay",
+	"tags": ["utility"],
+	"targets": {
+		"build": {
+			"executor": "nx:noop"
+		},
+		"clean": {
+			"executor": "nx:noop"
+		},
+		"compare": {
+			"executor": "nx:noop"
+		},
+		"test": {
+			"executor": "nx:noop"
+		}
+	}
+}

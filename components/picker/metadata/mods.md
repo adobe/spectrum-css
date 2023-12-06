@@ -1,5 +1,7 @@
 | Modifiable Custom Properties                           |
 | ------------------------------------------------------ |
+| `--mod-animation-duration-100`                         |
+| `--mod-line-height-100`                                |
 | `--mod-picker-animation-duration`                      |
 | `--mod-picker-background-color-active`                 |
 | `--mod-picker-background-color-default`                |
@@ -62,3 +64,4 @@
 | `--mod-picker-spacing-top-to-disclosure-icon`          |
 | `--mod-picker-spacing-top-to-progress-circle`          |
 | `--mod-picker-spacing-top-to-text`                     |
+| `--mod-sans-font-family-stack`                         |

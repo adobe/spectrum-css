@@ -6,9 +6,12 @@ import { when } from "lit/directives/when.js";
 
 import { capitalize, lowerCase } from "lodash-es";
 
-import { Template as Icon } from "@spectrum-css/icon/stories/template.js";
-
 import "../index.css";
+
+/**
+ * @todo load order should not influence the icon size but it is; fix this
+*/
+import { Template as Icon } from "@spectrum-css/icon/stories/template.js";
 
 export const Template = ({
 	rootClass = "spectrum-ActionButton",

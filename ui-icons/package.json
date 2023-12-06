@@ -14,13 +14,8 @@
     "url": "https://github.com/adobe/spectrum-css/issues"
   },
   "main": "dist/spectrum-css-icons.svg",
-  "scripts": {
-    "build": "node ./index.js",
-    "clean": "rimraf ./dist"
-  },
   "devDependencies": {
     "fast-glob": "^3.3.1",
-    "rimraf": "^5.0.5",
     "svgcombiner": "^1.0.1",
     "svgo": "^3.0.2",
     "svgstore": "^3.0.1"

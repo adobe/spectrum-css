@@ -4,7 +4,7 @@ import { styleMap } from "lit/directives/style-map.js";
 
 import { Template } from "./template";
 
-import { default as IconStories } from "@spectrum-css/icon";
+import { default as IconStories } from "@spectrum-css/icon/stories/icon.stories.js";
 
 export const argTypes = {
 	size: {
