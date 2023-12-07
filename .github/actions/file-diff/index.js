@@ -150,30 +150,32 @@ async function run() {
 								: []),
 						],
 					].map((row) => `| ${row.join(" | ")} |`),
-					...fileMap.entries().reduce(
-						(
-							table,
-							[readableFilename, { byteSize = 0, diffByteSize = 0 }]
-						) => {
-							// @todo readable filename can be linked to html diff of the file?
-							// https://github.com/adobe/spectrum-css/pull/2093/files#diff-6badd53e481452b5af234953767029ef2e364427dd84cdeed25f5778b6fca2e6
-							const row = [
-								readableFilename,
-								byteSize === 0 ? "**removed**" : bytesToSize(byteSize),
-								diffByteSize === 0 ? "" : bytesToSize(diffByteSize),
-							];
+					...[...fileMap.entries()]
+						.reduce(
+							(
+								table,
+								[readableFilename, { byteSize = 0, diffByteSize = 0 }]
+							) => {
+								// @todo readable filename can be linked to html diff of the file?
+								// https://github.com/adobe/spectrum-css/pull/2093/files#diff-6badd53e481452b5af234953767029ef2e364427dd84cdeed25f5778b6fca2e6
+								const row = [
+									readableFilename,
+									byteSize === 0 ? "**removed**" : bytesToSize(byteSize),
+									diffByteSize === 0 ? "" : bytesToSize(diffByteSize),
+								];
 
-							if (hasDiff && diffByteSize > 0) {
-								if (byteSize === 0) row.push("", "");
-								else {
-									row.push(printChange(diffByteSize - byteSize), "");
+								if (hasDiff && diffByteSize > 0) {
+									if (byteSize === 0) row.push("", "");
+									else {
+										row.push(printChange(diffByteSize - byteSize), "");
+									}
 								}
-							}
 
-							return [...table, row];
-						},
-						[]
-					).map((row) => `| ${row.join(" | ")} |`),
+								return [...table, row];
+							},
+							[]
+						)
+						.map((row) => `| ${row.join(" | ")} |`),
 				);
 
 				markdown.push(...md);
