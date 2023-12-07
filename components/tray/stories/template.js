@@ -1,6 +1,7 @@
 import { html } from "lit";
 import { classMap } from "lit/directives/class-map.js";
 import { ifDefined } from "lit/directives/if-defined.js";
+import { styleMap } from "lit/directives/style-map.js";
 
 import { Template as Modal } from "@spectrum-css/modal/stories/template.js";
 
@@ -11,6 +12,7 @@ export const Template = ({
 	isOpen = true,
 	content = [],
 	customClasses = ["spectrum-Modal"],
+	customStyles = {},
 	id,
 	...globals
 }) => {
@@ -24,7 +26,10 @@ export const Template = ({
 	}
 
 	return html`
-		<div class="${rootClass}-wrapper">
+		<div
+			class="${rootClass}-wrapper"
+			style=${ifDefined(styleMap(customStyles))}
+		>
 			<div
 				class=${classMap({
 					[rootClass]: true,

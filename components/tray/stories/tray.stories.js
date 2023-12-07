@@ -1,4 +1,5 @@
-// Import the component markup template
+import isChromatic from "chromatic/isChromatic";
+import { html } from "lit";
 import { Template } from "./template";
 
 import { Template as Dialog } from "@spectrum-css/dialog/stories/template.js";
@@ -42,14 +43,41 @@ export default {
 	},
 };
 
-export const Default = Template.bind({});
-Default.args = {
-	heading: "Tray Dialog",
-	content: [
-		() => Dialog({
-				heading: "New Messages",
-				content: ["You have 5 new messages!"],
-				isDismissable: false,
-			})
-	],
+export const Default = ({
+	...args
+}) => {
+	return html`
+		<div>
+			${Template({
+				heading: "Tray Dialog",
+				content: [
+					() => Dialog({
+							heading: "New Messages",
+							content: ["You have 5 new messages!"],
+							isDismissable: false,
+						})
+				],
+			})}
+
+			${
+				isChromatic() ?
+				Template({
+					...args,
+					heading: "Tray Dialog",
+					content: [
+						() => Dialog({
+								heading: "You have new messages waiting in your inbox",
+								content: ["You have 5 new messages! This notification is extra long so it wraps to the next line"],
+								isDismissable: false,
+							})
+					],
+					customStyles: {
+						"justify-content": "flex-end"
+					},
+				})
+			: null
+		}
+		</div>
+	`;
 };
+Default.args = {};
