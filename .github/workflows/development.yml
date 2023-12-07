@@ -104,6 +104,7 @@ jobs:
                         - components/*/index.css
                         - components/*/themes/spectrum.css
                         - components/*/themes/express.css
+                        - tokens/custom-*/*.css
                       eslint:
                         - components/*/stories/*.js
 
