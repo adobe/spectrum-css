@@ -15,20 +15,19 @@ const path = require("path");
 const fg = require("fast-glob");
 
 /**
- * Parse CSS files to extract "--mod" custom properties.
+ * Parse a component's CSS file(s) to extract "--mod" custom properties.
  *
- * @param {string} dir Parent components directory. 
- * @returns Array of objects containing the component directory and the list of mod names.
+ * @param {string} dir Directory for a single component.
+ * @param {string | string[]} patterns Fast-glob pattern(s) to find CSS file(s) within `dir`.
+ * @returns {Promise<string[]>} The found list of mod names. May contain duplicates.
  */
-async function collectMods(dir = path.join(__dirname, "../components")) {
-	let modsPerPath = [];
+async function collectMods(dir, patterns = "dist/index.css") {
+	let mods = [];
 
-	// Loop over the directories in the components folder and find the built
-	// CSS file(s) that might contain mods.
-	for (const filepath of await fg("*/dist/index.css", {
+	// Loop over the built CSS file(s) that might contain mods.
+	for (const filepath of await fg(patterns, {
 		cwd: dir,
 		absolute: true,
-		/* Skip the vars and tokens files */
 		ignore: [
 			"**/node_modules/**",
 			"**/metadata/**",
@@ -60,20 +59,10 @@ async function collectMods(dir = path.join(__dirname, "../components")) {
 		if (!matches || matches.length === 0) continue;
 
 		// Add matches to list of mods associated with this component directory.
-		// Append to existing array or add new object to array.
-		let componentDirectory = path.dirname(filepath).replace('/dist','');
-		existingPathIndex = modsPerPath.findIndex(obj => obj.directory == componentDirectory);
-		if (existingPathIndex != -1){
-			modsPerPath[existingPathIndex].matches.push(...matches);
-		} else {
-			modsPerPath.push({
-				directory: componentDirectory,
-				matches
-			});
-		}
+		mods.push(...matches);
 	}
 
-	return modsPerPath;
+	return mods;
 }
 
 /**
@@ -84,7 +73,14 @@ async function collectMods(dir = path.join(__dirname, "../components")) {
  * @param {Array} mods Array of custom properties starting with "--mod".
  */
 async function outputMods(directory, mods = []){
-	if (!mods || mods.length === 0 || !directory) return;
+	if (!mods || mods.length === 0){
+		console.log(` 〰️ No mods were found or exported for ${directory}`);
+		return;
+	}
+	if (!directory){
+		console.error(" ❌ outputMods did not receive a valid directory string and could not export anything.", directory);
+		return;
+	}
 
 	// Remove duplicates using a Set and sort the results (default is alphabetical).
 	const found = [...new Set(mods)].sort();
@@ -120,6 +116,8 @@ async function outputMods(directory, mods = []){
 	await writeFile(`${destPath}/mods.json`, formattedResults, (err) => {
 		if (err) throw err;
 	});
+
+	console.log(` ✔️  Exported ${found.length} mod${found.length > 1 ? 's' : ''} for '${directory}'`);
 }
 
 /**
@@ -127,9 +125,24 @@ async function outputMods(directory, mods = []){
  * to both a markdown file and a JSON file for each component.
  */
 (async () => {
-	const modsPerPath = await collectMods();
-	// Output mods list for each component (directory).
-	modsPerPath.forEach(m => {
-		outputMods(m.directory, m.matches);
-	});
+	console.log(`⚙️  Searching CSS for '--mod' prefixed properties and exporting files...`);
+
+	// Names of components to also search the source CSS for mods. 
+	// Some components don't generate dist files.
+	const searchSourceCSS = ['commons', 'overlay'];
+
+	// Find each component directory.
+	for (const componentDirectory of await fg(path.join(__dirname, "../components/*"), {
+		absolute: true,
+		onlyDirectories: true,
+	})) {
+		// Which CSS files to search; some exceptions to the default arg.
+		const patterns = searchSourceCSS.some(componentName => {
+			return componentDirectory.endsWith('/' + componentName);
+		}) ? ['*.css', 'dist/index.css'] : undefined;
+
+		// Collect its mods, and export them.
+		const mods = await collectMods(componentDirectory, patterns);
+		outputMods(componentDirectory, mods);
+	}
 })();
