@@ -202,6 +202,7 @@ Gradient.args = {
 		"--spectrum-slider-track-color-rtl":
 			"linear-gradient(to left, red, green 100%)",
 	},
+	label: "Slider label that is long and wraps to the next line",
 };
 
 export const SideLabel = Template.bind({});
