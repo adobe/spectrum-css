@@ -1,5 +1,7 @@
 import { html } from "lit";
 import { classMap } from "lit/directives/class-map.js";
+import { ifDefined } from "lit/directives/if-defined.js";
+import { styleMap } from "lit/directives/style-map.js";
 
 import "../index.css";
 
@@ -8,6 +10,7 @@ export const Template = ({
 	size = "m",
 	variant = "info",
 	label,
+	customStyles = {},
 	...globals
 }) => {
 	const { express } = globals;
@@ -27,6 +30,7 @@ export const Template = ({
 					typeof size !== "undefined",
 				[`${rootClass}--${variant}`]: typeof variant !== "undefined",
 			})}
+			style=${ifDefined(styleMap(customStyles))}
 		>
 			${label}
 		</div>

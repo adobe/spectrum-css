@@ -1,4 +1,5 @@
-// Import the component markup template
+import isChromatic from "chromatic/isChromatic";
+import { html } from "lit";
 import { Template } from "./template";
 
 export default {
@@ -75,5 +76,24 @@ export default {
 	},
 };
 
-export const Default = Template.bind({});
-Default.args = {};
+export const Default = ({
+	...args
+}) => {
+	return html`
+		<div>
+			${Template({
+				...args
+			})}
+
+			${
+				isChromatic() ?
+				Template({
+					...args,
+					label: "Status light label that is long and wraps to the next line",
+					customStyles: {"max-width": "150px"}
+				})
+			: null
+		}
+		</div>
+	`;
+};
