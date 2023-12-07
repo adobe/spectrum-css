@@ -105,19 +105,22 @@ governing permissions and limitations under the License.
 .spectrum-FieldLabel--right {
   display: inline-block;
   vertical-align: top;
-  padding-block: var(--mod-fieldlabel-side-padding-top, var(--spectrum-fieldlabel-side-padding-top)) 0;
   padding-inline: 0 var(--mod-fieldlabel-side-padding-right, var(--spectrum-fieldlabel-side-padding-right));
   padding-block: var(--mod-fieldlabel-side-padding-top, var(--spectrum-fieldlabel-side-padding-top)) 0;
+
   &.spectrum-FieldLabel-quiet-picker-side-label {
     &.spectrum-FieldLabel--sizeS {
       --mod-fieldlabel-side-padding-top: var(--spectrum-fieldlabel-picker-side-label-quiet-padding-block-start-small);
     }
+
     &.spectrum-FieldLabel--sizeM {
       --mod-fieldlabel-side-padding-top: var(--spectrum-fieldlabel-picker-side-label-quiet-padding-block-start-medium);
     }
+
     &.spectrum-FieldLabel--sizeL {
       --mod-fieldlabel-side-padding-top: var(--spectrum-fieldlabel-picker-side-label-quiet-padding-block-start-large);
     }
+
     &.spectrum-FieldLabel--sizeXL{
       --mod-fieldlabel-side-padding-top: var(--spectrum-fieldlabel-picker-side-label-quiet-padding-block-start-xlarge);
     }
@@ -126,10 +129,6 @@ governing permissions and limitations under the License.
 
 .spectrum-FieldLabel--right {
   text-align: end;
-}
-
-.spectrum-FieldLabel-picker--quiet {
-  padding-block: 8px 0;
 }
 
 /********* Form *********/

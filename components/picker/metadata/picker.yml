@@ -165,7 +165,7 @@ examples:
         <div class="spectrum-Examples-item">
           <h4>Closed</h4>
           <div class="spectrum-FieldLabel spectrum-FieldLabel--sizeM">Country</div>
-          <button type="button" class="spectrum-Picker spectrum-Picker--sizeM " aria-haspopup="listbox" style="width: 240px">
+          <button type="button" class="spectrum-Picker spectrum-Picker--sizeM" aria-haspopup="listbox" style="width: 240px">
             <span class="spectrum-Picker-label is-placeholder">Select a Country with a very long label, too long in fact</span>
             <svg class="spectrum-Icon spectrum-UIIcon-ChevronDown100 spectrum-Picker-menuIcon" focusable="false" aria-hidden="true">
               <use xlink:href="#spectrum-css-icon-Chevron100" />
