@@ -403,3 +403,7 @@ Occasionally, you may want to run a prerelease for an individual package and ski
 - You **must** run a build **before** continuing with the prerelease. An npm task for cleaning, building, and beta publishing is available, and it can be run via the following command: `yarn release:beta-from-package`. This command will perform a full `clean` (via the `clean` task), a full `build` (via the `build` task), and will attempt to publish the package (via `lerna publish --conventional-prerelease --preid beta --pre-dist-tag beta --no-private`).
 - Depending on the severity of your change(s), and before publishing to npm, Lerna should show a preview of the affected package version number that looks something like: `@spectrum-css/switch: 1.0.23 => 2.0.0-beta.0`. Additionally, at this time, Lerna will ask if you would like to continue with publishing the changes or cancel.
 - Selecting `y` to publish will publish the affected package(s) to npm.
+
+## Spectrum 2
+
+More information coming soon!
