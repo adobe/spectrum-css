@@ -25,7 +25,6 @@ function getProcessors({ noFlatVariables = false, noSelectors = false, keepComme
 			noFlatVariables,
 			noSelectors,
 		}),
-		require("postcss-custom-properties-passthrough")(),
 		require("postcss-hover-media-feature"),
 		require("postcss-calc"),
 		require("postcss-dropunusedvars")({ fix: false }),

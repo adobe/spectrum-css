@@ -11,57 +11,24 @@ governing permissions and limitations under the License.
 */
 
 /*
- * Medium/Large Scale
- * --------
- * UI Icons have two separate elements within the SVG, that are shown or hidden
- * based on the platform scale.
+ * Medium/large scale
+ * ------------------
+ * In the "combined" versiom of the UI Icon SVGs, the medium and the large icons are
+ * contained within the same SVG. The two separate elements are shown or hidden based
+ * on the current platform scale.
  */
- 
-/* Show/hide UI icons on older browsers with SVG 1.1 implementations */
-.spectrum--medium {
-  .spectrum-UIIcon--large {
-    display: none;
-  }
 
-  .spectrum-UIIcon--medium {
-    display: inline;
-  }
-}
-
-.spectrum--large {
-  .spectrum-UIIcon--medium {
-    display: none;
-  }
-
-  .spectrum-UIIcon--large {
-    display: inline;
-  }
-}
-
-/* Show/hide UI icons on browsers that implement SVG 2 correctly (Firefox 56+) */
-/* stylelint-disable property-no-unknown declaration-property-value-no-unknown function-no-unknown */
-.spectrum--large {
-  x--ui-icon-large-display: block;
-  x--ui-icon-medium-display: none;
-}
-
-.spectrum--medium {
-  x--ui-icon-medium-display: block;
-  x--ui-icon-large-display: none;
+.spectrum-UIIcon--medium {
+  display: var(--mod-ui-icon-medium-display, var(--spectrum-ui-icon-medium-display, block));
 }
 
 .spectrum-UIIcon--large {
-  display: xvar(--ui-icon-large-display);
+  display: var(--mod-ui-icon-large-display, var(--spectrum-ui-icon-large-display, none));
 }
-
-.spectrum-UIIcon--medium {
-  display: xvar(--ui-icon-medium-display);
-}
-/* stylelint-enable property-no-unknown declaration-property-value-no-unknown function-no-unknown */
 
 /*
- * UI Icons
- * --------
+ * UI icons list
+ * -------------
  * - Unlike workflow icons, UI icons come in various sizes, defined by their own tokens.
  * - Their base icon is rotated for directional variations (e.g. left and down).
  */
