@@ -113,19 +113,12 @@ async function run() {
 				if (hasDiff) {
 					// If a diff path was provided and the component folder doesn't exist,
 					// report that the compiled assets were removed
-					if (!existsSync(join(diffPath, "components", name))) {
+					if (
+						!existsSync(join(diffPath, "components", name)) ||
+						(totalSize === 0 && totalDiffSize > 0)
+					) {
 						data.push("🚨 package deleted/moved/renamed");
-						summaryTable.push(data);
-						return;
-					}
-
-					if (totalSize > 0 && totalDiffSize === 0) {
-						data.push("⚠️ assets deleted/moved/renamed");
-						summaryTable.push(data);
-						return;
-					}
-
-					if (totalSize === 0 && totalDiffSize > 0) {
+					} else if (totalSize > 0 && totalDiffSize === 0) {
 						data.push("🎉 new package");
 					} else {
 						data.push(printChange(totalDiffSize - totalSize));
@@ -136,16 +129,15 @@ async function run() {
 
 				md.push(
 					...[
-						["File", "Size", ...(hasDiff ? ["Original size", "Δ", "Δ%"] : [])],
-						[" - ", " - ", ...(hasDiff ? [" - ", " - ", " - "] : [])],
+						["File", "Size", ...(hasDiff ? ["Base", "Δ"] : [])],
+						[" - ", " - ", ...(hasDiff ? [" - ", " - "] : [])],
 						[
-							"**Total changes**",
+							"**Total**",
 							bytesToSize(totalSize),
 							...(hasDiff
 								? [
 									bytesToSize(totalDiffSize),
-									printChange(totalDiffSize - totalSize),
-									printPercentChange((totalDiffSize - totalSize) / totalSize),
+									`${printChange(totalDiffSize - totalSize)} (${printPercentChange((totalDiffSize - totalSize) / totalSize)})`,
 								]
 								: []),
 						],
@@ -158,20 +150,17 @@ async function run() {
 							) => {
 								// @todo readable filename can be linked to html diff of the file?
 								// https://github.com/adobe/spectrum-css/pull/2093/files#diff-6badd53e481452b5af234953767029ef2e364427dd84cdeed25f5778b6fca2e6
-								const row = [
-									readableFilename,
-									byteSize === 0 ? "**removed**" : bytesToSize(byteSize),
-									diffByteSize === 0 ? "" : bytesToSize(diffByteSize),
+								return [
+									...table,
+									[
+										readableFilename,
+										byteSize === 0 && diffByteSize > 0 ? "**removed**" : bytesToSize(byteSize),
+										...(hasDiff ? [
+											bytesToSize(diffByteSize),
+											`${printChange(diffByteSize - byteSize)} (${printPercentChange((diffByteSize - byteSize) / byteSize)})`,
+										] : []),
+									]
 								];
-
-								if (hasDiff && diffByteSize > 0) {
-									if (byteSize === 0) row.push("", "");
-									else {
-										row.push(printChange(diffByteSize - byteSize), "");
-									}
-								}
-
-								return [...table, row];
 							},
 							[]
 						)
@@ -248,10 +237,8 @@ run();
  */
 const printChange = function (difference) {
 	return difference === 0
-		? `No change 🎉`
-		: `${difference > 0 ? "+" : "-"}${bytesToSize(Math.abs(difference))} ${
-				difference > 0 ? "⬆" : "⬇"
-		  }`;
+		? `-`
+		: `${difference > 0 ? "⬆" : "⬇"} ${bytesToSize(Math.abs(difference))}`;
 };
 
 /**
@@ -262,9 +249,8 @@ const printChange = function (difference) {
  * @returns {string}
  */
 const printPercentChange = function (delta) {
-	if (delta === 0) return `0%`;
-	const direction = delta > 0 ? "+" : "-";
-	return `${direction}${Math.abs(delta * 100).toFixed(2)}%`;
+	if (delta === 0) return `no change`;
+	return `${Math.abs(delta * 100).toFixed(2)}%`;
 };
 
 /**

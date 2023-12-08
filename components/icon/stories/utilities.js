@@ -41,7 +41,7 @@ export const fetchIconSVG = ({
 
 	// Check the ui kit for icon set if not yet found
 	try {
-		icon = require(`!!raw-loader!@spectrum-css/icon/${
+		icon = require(`!!raw-loader!@spectrum-css/ui-icons/${
 			scale ? scale : "medium"
 		}/${iconName}.svg`);
 		if (icon) return icon.default ?? icon;
