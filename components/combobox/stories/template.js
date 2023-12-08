@@ -6,6 +6,7 @@ import { Template as Menu } from "@spectrum-css/menu/stories/template.js";
 import { Template as TextField } from "@spectrum-css/textfield/stories/template.js";
 import { Template as Popover } from "@spectrum-css/popover/stories/template.js";
 import { Template as PickerButton } from "@spectrum-css/pickerbutton/stories/template.js";
+import { Template as FieldLabel } from "@spectrum-css/fieldlabel/stories/template.js";
 
 import { useArgs, useGlobals } from "@storybook/client-api";
 
@@ -22,6 +23,8 @@ export const Template = ({
 	isValid = false,
 	isQuiet = false,
 	isDisabled = false,
+	showFieldLabel = false,
+	fieldLabelText = "Select location",
 	isFocused = false,
 	isKeyboardFocused = false,
 	isLoading = false,
@@ -42,6 +45,14 @@ export const Template = ({
 	}
 
 	return html`
+		${showFieldLabel ?
+			FieldLabel({
+				...globals,
+				size,
+				label: fieldLabelText,
+				style: { "max-inline-size": "100px"},
+			}) : null
+		}
 		<div
 			class=${classMap({
 				[rootClass]: true,
