@@ -149,13 +149,13 @@ For most use cases, you'll want to use `spectrum-css-icons.svg` so you have supp
 ```js
 <script src="node_modules/loadicons/index.js"></script>
 <script>
-  loadIcons('node_modules/@spectrum-css/icon/dist/spectrum-css-icons.svg');
+  loadIcons('node_modules/@spectrum-css/ui-icons/dist/spectrum-css-icons.svg');
 </script>
 ```
 
 Based on which scales you'll be using, you can choose to load different files:
 
-- `@spectrum-css/icon/dist/spectrum-css-icons.svg` - Both medium and large icons for responsive UIs that support both `.spectrum--medium` and `.spectrum--large`
+- `@spectrum-css/ui-icons/dist/spectrum-css-icons.svg` - Both medium and large icons for responsive UIs that support both `.spectrum--medium` and `.spectrum--large`
 - `@spectrum-css/icon/dist/spectrum-css-icons-medium.svg` - Medium icons only, supports `.spectrum--medium` only
 - `@spectrum-css/icon/dist/spectrum-css-icons-large.svg` - Large icons only, supports `.spectrum--large` only
 

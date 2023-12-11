@@ -73,17 +73,17 @@ jobs:
               shell: bash
               run: yarn install --frozen-lockfile --cache-folder .cache/yarn
 
-            - name: Download build artifacts for head ${{ inputs.head-sha }}
+            - name: Download build artifacts for head
               uses: actions/download-artifact@v3
               with:
                   name: ubuntu-latest-node18-compiled-assets-${{ inputs.head-sha }}
-                  path: ${{ github.workspace }}/${{ inputs.head-sha }}/components
+                  path: ${{ github.workspace }}/${{ inputs.head-sha }}
 
-            - name: Download build artifacts for base ${{ inputs.base-sha }}
+            - name: Download build artifacts for base
               uses: actions/download-artifact@v3
               with:
                   name: ubuntu-latest-node18-compiled-assets-${{ inputs.base-sha }}
-                  path: ${{ github.workspace }}/${{ inputs.base-sha }}/components
+                  path: ${{ github.workspace }}/${{ inputs.base-sha }}
 
             - name: Compare compiled output file size
               id: compare
@@ -92,7 +92,10 @@ jobs:
               with:
                   path: ${{ github.workspace }}/${{ inputs.head-sha }}/
                   diff-path: ${{ github.workspace }}/${{ inputs.base-sha }}/
-                  file-glob-pattern: components/*/dist/**
+                  file-glob-pattern: |
+                    components/*/dist/**
+                    tokens/dist/**
+                    ui-icons/dist/**
                   token: ${{ secrets.GITHUB_TOKEN }}
 
     fetch-build-artifacts:
@@ -161,16 +164,13 @@ jobs:
               uses: actions/cache@v3
               with:
                   path: |
-                      components/*/dist/**
+                    components/*/dist/**
+                    tokens/dist/**
+                    ui-icons/dist/**
                   key: ${{ steps.derive-key.outputs.key }}
 
-            - name: Build components
-              if: ${{ matrix.branch == inputs.base-sha && steps.cache-build.outputs.cache-hit != 'true' }}
-              shell: bash
-              run: yarn build
-
-            - name: Build components
-              if: ${{ matrix.branch == inputs.head-sha && steps.cache-build.outputs.cache-hit != 'true' }}
+            - name: Build
+              if: ${{ steps.cache-build.outputs.cache-hit != 'true' }}
               shell: bash
               run: yarn build
 
@@ -179,7 +179,9 @@ jobs:
               uses: actions/upload-artifact@v3
               with:
                   path: |
-                      ${{ github.workspace }}/components/*/dist/**
+                    ${{ github.workspace }}/components/*/dist/**
+                    ${{ github.workspace }}/tokens/dist/**
+                    ${{ github.workspace }}/ui-icons/dist/**
                   name: ${{ steps.derive-key.outputs.key }}
                   # this is important, it lets us catch if the build failed silently
                   # by alterting us that no compiled assets were generated

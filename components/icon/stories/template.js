@@ -1,9 +1,9 @@
 import { html } from "lit";
+import { classMap } from "lit/directives/class-map.js";
 import { ifDefined } from "lit/directives/if-defined.js";
 import { unsafeHTML } from "lit/directives/unsafe-html.js";
-import { classMap } from "lit/directives/class-map.js";
 
-import { fetchIconSVG, workflowIcons, uiIcons } from "./utilities.js";
+import { fetchIconSVG, uiIcons, workflowIcons } from "./utilities.js";
 
 import "../index.css";
 
@@ -153,7 +153,7 @@ export const Template = ({
 			/* webpackPrefetch: true */ `!!raw-loader!@adobe/spectrum-css-workflow-icons/dist/spectrum-icons.svg`
 		);
 		import(
-			/* webpackPrefetch: true */ `!!raw-loader!@spectrum-css/icon/dist/spectrum-css-icons.svg`
+			/* webpackPrefetch: true */ `!!raw-loader!@spectrum-css/ui-icons/dist/spectrum-css-icons.svg`
 		);
 	} catch (e) {
 		console.warn(e);

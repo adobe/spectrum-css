@@ -38,7 +38,7 @@
     "clean:preview": "nx clean storybook",
     "precompare": "yarn build",
     "compare": "node ./tasks/compare-compiled-output.js",
-    "predev": "yarn build:components",
+    "predev": "nx run-many --projects @spectrum-css/ui-icons,@spectrum-css/tokens --target build",
     "dev": "NODE_ENV=development BROWSERSYNC_OPEN=true gulp dev",
     "docs:mod": "node tasks/mod-extractor.js",
     "postdocs:mod": "prettier --cache --write components/*/metadata/*.md > /dev/null",
@@ -63,6 +63,7 @@
     "tools/*",
     "plugins/*",
     "tokens",
+    "ui-icons",
     "generator",
     ".storybook",
     ".github/actions/*"
