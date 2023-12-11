@@ -12,52 +12,53 @@ governing permissions and limitations under the License.
 
 /* used in editing and browsing contexts */
 .spectrum-BackgroundLayers--elevated {
-	--spectum-backgroundlayers-background-color: var(--spectrum-gray-25);
+	--spectrum-backgroundlayers-background-color: var(--spectrum-gray-25);
 	--spectrum-backgroundlayers-shadow-horizontal: 0;
 	--spectrum-backgroundlayers-shadow-vertical: 0;
 	--spectrum-backgroundlayers-shadow-blur: 5px;
 	--spectrum-backgroundlayers-shadow-color: var(--spectrum-gray-600);
+
 	.spectrum--dark & {
-		--spectum-backgroundlayers-background-color: var(--spectrum-gray-75);
+		--spectrum-backgroundlayers-background-color: var(--spectrum-gray-75);
 		--spectrum-backgroundlayers-shadow-color: var(--spectrum-gray-100);
 	}
-
-	background-color: var(--spectum-backgroundlayers-background-color);
-	filter: drop-shadow(
+	background-color: var(--spectrum-backgroundlayers-background-color);
+	box-shadow:
 		var(--spectrum-backgroundlayers-shadow-horizontal)
-			var(--spectrum-backgroundlayers-shadow-vertical)
-			var(--spectrum-backgroundlayers-shadow-blur)
-			var(--spectrum-backgroundlayers-shadow-color)
-	);
+		var(--spectrum-backgroundlayers-shadow-vertical)
+		var(--spectrum-backgroundlayers-shadow-blur)
+		var(--spectrum-backgroundlayers-shadow-color)
 }
 
 .spectrum-BackgroundLayers--layer1 {
-	--spectum-backgroundlayers-background-color: var(--spectrum-gray-50);
-	background-color: var(--spectum-backgroundlayers-background-color);
+	--spectrum-backgroundlayers-background-color: var(--spectrum-gray-50);
+	background-color: var(--spectrum-backgroundlayers-background-color);
 }
 
 /* only used in browsing contexts */
 .spectrum-BackgroundLayers--layer2 {
-	--spectum-backgroundlayers-background-color: var(--spectrum-gray-25);
+	--spectrum-backgroundlayers-background-color: var(--spectrum-gray-25);
+
 	.spectrum--dark & {
-		--spectum-backgroundlayers-background-color: var(--spectrum-gray-75);
+		--spectrum-backgroundlayers-background-color: var(--spectrum-gray-75);
 	}
-	background-color: var(--spectum-backgroundlayers-background-color);
-	border: 2px solid rgba(180, 180, 180, 0.25);
+	background-color: var(--spectrum-backgroundlayers-background-color);
+	border: 2px solid rgba(180, 180, 180, 25%);
 }
 
 .spectrum-BackgroundLayers--pasteboard {
-	--spectum-backgroundlayers-background-color: var(--spectrum-gray-100);
+	--spectrum-backgroundlayers-background-color: var(--spectrum-gray-100);
+
 	.spectrum--dark & {
-		--spectum-backgroundlayers-background-color: var(--spectrum-gray-25);
+		--spectrum-backgroundlayers-background-color: var(--spectrum-gray-25);
 	}
-	background-color: var(--spectum-backgroundlayers-background-color);
+	background-color: var(--spectrum-backgroundlayers-background-color);
 }
 
 /* only used in editing contexts */
 .spectrum-BackgroundLayers--base {
-	--spectum-backgroundlayers-background-color: var(--spectrum-gray-25);
-	border: 2px solid rgba(180, 180, 180, 0.25);
-	background-color: var(--spectum-backgroundlayers-background-color);
+	--spectrum-backgroundlayers-background-color: var(--spectrum-gray-25);
+	border: 2px solid rgba(180, 180, 180, 25%);
+	background-color: var(--spectrum-backgroundlayers-background-color);
 }
 
