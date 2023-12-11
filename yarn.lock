@@ -1979,12 +1979,12 @@
   dependencies:
     nx "15.9.7"
 
-"@nrwl/devkit@17.1.2":
-  version "17.1.2"
-  resolved "https://registry.yarnpkg.com/@nrwl/devkit/-/devkit-17.1.2.tgz#9288790a50d1db248ec46cec8db43d88796df962"
-  integrity sha512-INPZk4qts3xNJt8E9fttuVTufXdigPUOvUiAiPJmR2oUGDF8SeOlIYNForbz+XMRvxyIVtf45O32azUsgeZe3Q==
+"@nrwl/devkit@17.2.0":
+  version "17.2.0"
+  resolved "https://registry.yarnpkg.com/@nrwl/devkit/-/devkit-17.2.0.tgz#5dff00feb31f12f1d5c4f0fff41d35094b0c5914"
+  integrity sha512-FqyZbFGNwS51pKTF+d2sB4xym1yD/OYRKC4Sz3ku7mjk8yAWlJeT1JHT5gz56wrXiFKvATN/qEAXg7wlx3M1NA==
   dependencies:
-    "@nx/devkit" "17.1.2"
+    "@nx/devkit" "17.2.0"
 
 "@nrwl/devkit@>=15.5.2 < 16":
   version "15.9.7"
@@ -2057,12 +2057,12 @@
     nx "17.1.2"
     tslib "^2.3.0"
 
-"@nx/devkit@17.1.2", "@nx/devkit@^17.0.2":
-  version "17.1.2"
-  resolved "https://registry.yarnpkg.com/@nx/devkit/-/devkit-17.1.2.tgz#7e64b195a29c005d4615bfa70a9ee8c70d4e2069"
-  integrity sha512-9Izd9jsa++AaZSSlhi0zkv58k4clzE0kICurx9DjfWN6zXnD08HqJoUYCVVaeYS/SrWlQUbMig8e49BO8ZV5mw==
+"@nx/devkit@17.2.0", "@nx/devkit@^17.2.0":
+  version "17.2.0"
+  resolved "https://registry.yarnpkg.com/@nx/devkit/-/devkit-17.2.0.tgz#2d9095a74778dd98ceecfd74b55af5d17187b7e2"
+  integrity sha512-9cgVDicIf2rdlMfWLq48RIBCzpHNgLJhuUtHCyvogr1ePZfG3YGA2NPHHW/QtRAm5kT8x5dWLtf68nlrAkcP/A==
   dependencies:
-    "@nrwl/devkit" "17.1.2"
+    "@nrwl/devkit" "17.2.0"
     ejs "^3.1.7"
     enquirer "~2.3.6"
     ignore "^5.0.4"
