@@ -266,6 +266,7 @@ governing permissions and limitations under the License.
 
 .spectrum-Swatch-fill {
   @inherit: %spectrum-OpacityCheckerboard;
+
   display: flex;
   align-items: center;
   justify-content: center;
