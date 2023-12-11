@@ -127,10 +127,10 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@adobe/spectrum-tokens@npm:0.0.0-s2-foundations-20241121221506":
-  version: 0.0.0-s2-foundations-20241121221506
-  resolution: "@adobe/spectrum-tokens@npm:0.0.0-s2-foundations-20241121221506"
-  checksum: 10c0/64664995ca98170c2a089ecb215103c77bb5a3ff49848371e2dfc301dc3ca30ef4dafae3d44cda82a1609d877e54608cc2e591edef37095ee646c6cf185143ee
+"@adobe/spectrum-tokens@npm:13.0.0-beta.5":
+  version: 13.0.0-beta.5
+  resolution: "@adobe/spectrum-tokens@npm:13.0.0-beta.5"
+  checksum: 10c0/4b2d8540c552cccbfe6cd48e9e4d6019d0728d1c6108a4d711d15aa443807572978c79aac8db5810d5dc886ec4194e1a7abd6144bfc3183866018ca6e75c3d00
   languageName: node
   linkType: hard
 
@@ -4795,7 +4795,7 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "@spectrum-css/tokens@workspace:tokens"
   dependencies:
-    "@adobe/spectrum-tokens": "npm:0.0.0-s2-foundations-20241121221506"
+    "@adobe/spectrum-tokens": "npm:13.0.0-beta.5"
     "@nxkit/style-dictionary": "npm:^6.0.0"
     postcss: "npm:^8.5.0"
     postcss-cli: "npm:^11.0.0"
@@ -7324,31 +7324,10 @@ __metadata:
   languageName: node
   linkType: hard
 
-"caniuse-lite@npm:^1.0.0, caniuse-lite@npm:^1.0.30001599, caniuse-lite@npm:^1.0.30001640":
-  version: 1.0.30001643
-  resolution: "caniuse-lite@npm:1.0.30001643"
-  checksum: 10c0/7fcd0fd180bbe6764311ad57b0d39c23afdcc3bb1d8f804e7a76752c62a85b1bb7cf74b672d9da2f0afe7ad75336ff811a6fe279eb2a54bc04c272b6b62e57f1
-  languageName: node
-  linkType: hard
-
-"caniuse-lite@npm:^1.0.30001629":
-  version: 1.0.30001636
-  resolution: "caniuse-lite@npm:1.0.30001636"
-  checksum: 10c0/e5f965b4da7bae1531fd9f93477d015729ff9e3fa12670ead39a9e6cdc4c43e62c272d47857c5cc332e7b02d697cb3f2f965a1030870ac7476da60c2fc81ee94
-  languageName: node
-  linkType: hard
-
-"caniuse-lite@npm:^1.0.30001646":
-  version: 1.0.30001660
-  resolution: "caniuse-lite@npm:1.0.30001660"
-  checksum: 10c0/d28900b56c597176d515c3175ca75c454f2d30cb2c09a44d7bdb009bb0c4d8a2557905adb77642889bbe9feb85fbfe9d974c8b8e53521fb4b50ee16ab246104e
-  languageName: node
-  linkType: hard
-
-"caniuse-lite@npm:^1.0.30001669":
-  version: 1.0.30001673
-  resolution: "caniuse-lite@npm:1.0.30001673"
-  checksum: 10c0/0e73a2b0f06973052e563dec9990a6fd440d510fa2ff54fa50310e736abb86e96c96b43c10e609fc22f2109f98fe76428b70441baf6b1a49f69ccf50c1879f6b
+"caniuse-lite@npm:^1.0.0, caniuse-lite@npm:^1.0.30001599, caniuse-lite@npm:^1.0.30001629, caniuse-lite@npm:^1.0.30001640, caniuse-lite@npm:^1.0.30001646, caniuse-lite@npm:^1.0.30001669":
+  version: 1.0.30001692
+  resolution: "caniuse-lite@npm:1.0.30001692"
+  checksum: 10c0/fca5105561ea12f3de593f3b0f062af82f7d07519e8dbcb97f34e7fd23349bcef1b1622a9a6cd2164d98e3d2f20059ef7e271edae46567aef88caf4c16c7708a
   languageName: node
   linkType: hard
 
