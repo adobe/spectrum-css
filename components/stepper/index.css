@@ -72,6 +72,7 @@ governing permissions and limitations under the License.
     --mod-stepper-border-color-focus-hover: var(--mod-stepper-border-color-focus-hover-invalid, var(--spectrum-negative-border-color-focus-hover));
     --mod-stepper-border-color-keyboard-focus: var(--mod-stepper-border-color-keyboard-focus-invalid, var(--spectrum-negative-border-color-key-focus));
     --mod-infield-button-border-color: var(--mod-stepper-border-color-invalid, var(--spectrum-stepper-border-color-invalid));
+    --mod-textfield-icon-spacing-inline-start-invalid: 0;
 
     &.is-focused,
     &:focus {
