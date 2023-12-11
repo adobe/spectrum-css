@@ -120,6 +120,7 @@ governing permissions and limitations under the License.
     --highcontrast-stepper-focus-indicator-color: Highlight;
   }
 }
+
 .x {
  border-radius: var(--spectrum-stepper-button-border-radius-reset);
 }
@@ -154,12 +155,12 @@ governing permissions and limitations under the License.
   /*** Focused ***/
   &.is-focused,
   &:focus {
-    --mod-infield-button-background-color: var(--highcontrast-stepper-button-background-color-focus, var(--mod-stepper-button-background-color-focus, var(--spectrum-stepper-button-background-color-focus)));
     --mod-infield-button-border-color: var(--highcontrast-stepper-border-color-focus, var(--mod-stepper-buttons-border-color-focus, var(--spectrum-stepper-buttons-border-color-focus)));
 
     .spectrum-Stepper-input {
       outline: none;
     }
+
     .spectrum-Stepper-input,
     .spectrum-Stepper-buttons {
       border-color: var(--highcontrast-stepper-border-color-focus, var(--mod-stepper-border-color-focus, var(--spectrum-stepper-border-color-focus)));
@@ -178,7 +179,6 @@ governing permissions and limitations under the License.
   /*** Keyboard Focused ***/
   &.is-keyboardFocused,
   &:focus-visible {
-    --mod-infield-button-background-color: var(--highcontrast-stepper-button-background-color-keyboard-focus, var(--mod-stepper-button-background-color-keyboard-focus, var(--spectrum-stepper-button-background-color-keyboard-focus)));
     --mod-infield-button-border-color: var(--highcontrast-stepper-border-color-keyboard-focus, var(--mod-stepper-buttons-border-color-keyboard-focus, var(--spectrum-stepper-buttons-border-color-keyboard-focus)));
 
     /* keyboard focus indicator is visible */
@@ -201,6 +201,7 @@ governing permissions and limitations under the License.
 /*** Quiet ***/
 .spectrum-Stepper.spectrum-Stepper--quiet {
   --mod-infield-button-border-color: var(--highcontrast-stepper-border-color, var(--mod-stepper-border-color, var(--spectrum-stepper-border-color)));
+
   /* quiet corners are not rounded */
   border-start-start-radius: 0;
   border-start-end-radius: 0;
