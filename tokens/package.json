@@ -26,15 +26,8 @@
 		"*.md",
 		"package.json"
 	],
-	"scripts": {
-		"format": "run-p \"format:*\"",
-		"format:content": "prettier --write --cache --log-level error --ignore-unknown --no-error-on-unmatched-pattern *.md **/*.md",
-		"format:scripts": "eslint --fix --cache --no-error-on-unmatched-pattern *.{js,json} {tasks,utilities}/*.js",
-		"lint": "run-p \"lint:*\"",
-		"lint:scripts": "eslint --cache --no-error-on-unmatched-pattern --report-unused-disable-directives *.{js,json} {tasks,utilities}/*.js"
-	},
 	"devDependencies": {
-		"@adobe/spectrum-tokens": "0.0.0-s2-foundations-20241121221506",
+		"@adobe/spectrum-tokens": "13.0.0-beta.5",
 		"@adobe/token-diff-generator": "^1.3.0",
 		"@nxkit/style-dictionary": "^6.0.0",
 		"@spectrum-tools/postcss-rgb-mapping": "workspace:^",
