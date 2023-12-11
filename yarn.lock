@@ -139,10 +139,10 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@adobe/spectrum-tokens@npm:0.0.0-s2-foundations-20241121221506":
-  version: 0.0.0-s2-foundations-20241121221506
-  resolution: "@adobe/spectrum-tokens@npm:0.0.0-s2-foundations-20241121221506"
-  checksum: 10c0/64664995ca98170c2a089ecb215103c77bb5a3ff49848371e2dfc301dc3ca30ef4dafae3d44cda82a1609d877e54608cc2e591edef37095ee646c6cf185143ee
+"@adobe/spectrum-tokens@npm:13.0.0-beta.5":
+  version: 13.0.0-beta.5
+  resolution: "@adobe/spectrum-tokens@npm:13.0.0-beta.5"
+  checksum: 10c0/4b2d8540c552cccbfe6cd48e9e4d6019d0728d1c6108a4d711d15aa443807572978c79aac8db5810d5dc886ec4194e1a7abd6144bfc3183866018ca6e75c3d00
   languageName: node
   linkType: hard
 
@@ -308,12 +308,12 @@ __metadata:
   linkType: hard
 
 "@babel/code-frame@npm:^7.0.0, @babel/code-frame@npm:^7.10.4":
-  version: 7.24.7
-  resolution: "@babel/code-frame@npm:7.24.7"
+  version: 7.24.2
+  resolution: "@babel/code-frame@npm:7.24.2"
   dependencies:
-    "@babel/highlight": "npm:^7.24.7"
+    "@babel/highlight": "npm:^7.24.2"
     picocolors: "npm:^1.0.0"
-  checksum: 10c0/ab0af539473a9f5aeaac7047e377cb4f4edd255a81d84a76058595f8540784cc3fbe8acf73f1e073981104562490aabfb23008cd66dc677a456a4ed5390fdde6
+  checksum: 10c0/d1d4cba89475ab6aab7a88242e1fd73b15ecb9f30c109b69752956434d10a26a52cbd37727c4eca104b6d45227bd1dfce39a6a6f4a14c9b2f07f871e968cf406
   languageName: node
   linkType: hard
 
@@ -421,6 +421,13 @@ __metadata:
   languageName: node
   linkType: hard
 
+"@babel/helper-validator-identifier@npm:^7.22.20":
+  version: 7.22.20
+  resolution: "@babel/helper-validator-identifier@npm:7.22.20"
+  checksum: 10c0/dcad63db345fb110e032de46c3688384b0008a42a4845180ce7cd62b1a9c0507a1bed727c4d1060ed1a03ae57b4d918570259f81724aaac1a5b776056f37504e
+  languageName: node
+  linkType: hard
+
 "@babel/helper-validator-identifier@npm:^7.24.7":
   version: 7.24.7
   resolution: "@babel/helper-validator-identifier@npm:7.24.7"
@@ -452,24 +459,24 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@babel/highlight@npm:^7.24.7":
-  version: 7.24.7
-  resolution: "@babel/highlight@npm:7.24.7"
+"@babel/highlight@npm:^7.24.2":
+  version: 7.24.2
+  resolution: "@babel/highlight@npm:7.24.2"
   dependencies:
-    "@babel/helper-validator-identifier": "npm:^7.24.7"
+    "@babel/helper-validator-identifier": "npm:^7.22.20"
     chalk: "npm:^2.4.2"
     js-tokens: "npm:^4.0.0"
     picocolors: "npm:^1.0.0"
-  checksum: 10c0/674334c571d2bb9d1c89bdd87566383f59231e16bcdcf5bb7835babdf03c9ae585ca0887a7b25bdf78f303984af028df52831c7989fecebb5101cc132da9393a
+  checksum: 10c0/98ce00321daedeed33a4ed9362dc089a70375ff1b3b91228b9f05e6591d387a81a8cba68886e207861b8871efa0bc997ceabdd9c90f6cce3ee1b2f7f941b42db
   languageName: node
   linkType: hard
 
 "@babel/parser@npm:^7.1.0, @babel/parser@npm:^7.20.7":
-  version: 7.24.8
-  resolution: "@babel/parser@npm:7.24.8"
+  version: 7.24.1
+  resolution: "@babel/parser@npm:7.24.1"
   bin:
     parser: ./bin/babel-parser.js
-  checksum: 10c0/ce69671de8fa6f649abf849be262707ac700b573b8b1ce1893c66cc6cd76aeb1294a19e8c290b0eadeb2f47d3f413a2e57a281804ffbe76bfb9fa50194cf3c52
+  checksum: 10c0/d2a8b99aa5f33182b69d5569367403a40e7c027ae3b03a1f81fd8ac9b06ceb85b31f6ee4267fb90726dc2ac99909c6bdaa9cf16c379efab73d8dfe85cee32c50
   languageName: node
   linkType: hard
 
@@ -2030,6 +2037,13 @@ __metadata:
     prop-types: ^15.0.0
     react: ">=0.14.0"
   checksum: 10c0/e8072221f9f9c2c47c3ebc5bc6079f9a71938e181d2b4aa3e1d3922707bc097336d5260dad088cf47c1d6e1ff34839fa21f2505a95bddda0d7548c5a955b5691
+  languageName: node
+  linkType: hard
+
+"@inquirer/figures@npm:^1.0.1":
+  version: 1.0.1
+  resolution: "@inquirer/figures@npm:1.0.1"
+  checksum: 10c0/a1e9d3852e0d33c416eb39d7ee0e898971681a0a5a0d2fad5ebbb63047dd7e8b7bd32872cf2ef09578ce632bd9cc339f7e851dbd4640a9af11224481bf811e14
   languageName: node
   linkType: hard
 
@@ -4200,7 +4214,7 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "@spectrum-css/tokens@workspace:tokens"
   dependencies:
-    "@adobe/spectrum-tokens": "npm:0.0.0-s2-foundations-20241121221506"
+    "@adobe/spectrum-tokens": "npm:13.0.0-beta.5"
     "@nxkit/style-dictionary": "npm:^6.0.0"
     postcss: "npm:^8.4.49"
     postcss-cli: "npm:^11.0.0"
@@ -5241,11 +5255,11 @@ __metadata:
   linkType: hard
 
 "@types/node@npm:*":
-  version: 20.14.11
-  resolution: "@types/node@npm:20.14.11"
+  version: 20.12.3
+  resolution: "@types/node@npm:20.12.3"
   dependencies:
     undici-types: "npm:~5.26.4"
-  checksum: 10c0/5306becc0ff41d81b1e31524bd376e958d0741d1ce892dffd586b9ae0cb6553c62b0d62abd16da8bea6b9a2c17572d360450535d7c073794b0cef9cb4e39691e
+  checksum: 10c0/45c8485a0e55276b42c26ba1df6c480e4e1a3a3abbf4ea0ff6b4e2823c4f77e32b7e166d4263d464f207cfea5bd4de8879b8df2c7132a727b0346a30191d6bea
   languageName: node
   linkType: hard
 
@@ -5605,11 +5619,9 @@ __metadata:
   linkType: hard
 
 "acorn-walk@npm:^8.1.1":
-  version: 8.3.3
-  resolution: "acorn-walk@npm:8.3.3"
-  dependencies:
-    acorn: "npm:^8.11.0"
-  checksum: 10c0/4a9e24313e6a0a7b389e712ba69b66b455b4cb25988903506a8d247e7b126f02060b05a8a5b738a9284214e4ca95f383dd93443a4ba84f1af9b528305c7f243b
+  version: 8.3.2
+  resolution: "acorn-walk@npm:8.3.2"
+  checksum: 10c0/7e2a8dad5480df7f872569b9dccff2f3da7e65f5353686b1d6032ab9f4ddf6e3a2cb83a9b52cf50b1497fd522154dda92f0abf7153290cc79cd14721ff121e52
   languageName: node
   linkType: hard
 
@@ -10603,13 +10615,17 @@ __metadata:
   linkType: hard
 
 "inquirer@npm:^9.2.10":
-  version: 9.3.6
-  resolution: "inquirer@npm:9.3.6"
+  version: 9.2.20
+  resolution: "inquirer@npm:9.2.20"
   dependencies:
-    "@inquirer/figures": "npm:^1.0.3"
+    "@inquirer/figures": "npm:^1.0.1"
+    "@ljharb/through": "npm:^2.3.13"
     ansi-escapes: "npm:^4.3.2"
+    chalk: "npm:^5.3.0"
+    cli-cursor: "npm:^3.1.0"
     cli-width: "npm:^4.1.0"
     external-editor: "npm:^3.1.0"
+    lodash: "npm:^4.17.21"
     mute-stream: "npm:1.0.0"
     ora: "npm:^5.4.1"
     run-async: "npm:^3.0.0"
@@ -10617,8 +10633,7 @@ __metadata:
     string-width: "npm:^4.2.3"
     strip-ansi: "npm:^6.0.1"
     wrap-ansi: "npm:^6.2.0"
-    yoctocolors-cjs: "npm:^2.1.2"
-  checksum: 10c0/29625ffc98979a862d3db1d006464526e1dd9f62f0aae68ab0231af56a193cbdc7f90d6222541e1dcf1ff1d3c1d36e33883f314b67bb731fd68a7b18999ef6e3
+  checksum: 10c0/e7243fb3bf24975fed0284742617c8cc1b30575e069a437dbc936a8a73fec5c63e6f937eb34d557c2eaa739d9be5daa2767f003b19e40854c52e18bd3b32ff3e
   languageName: node
   linkType: hard
 
@@ -10777,11 +10792,11 @@ __metadata:
   linkType: hard
 
 "is-core-module@npm:^2.13.0":
-  version: 2.15.0
-  resolution: "is-core-module@npm:2.15.0"
+  version: 2.13.1
+  resolution: "is-core-module@npm:2.13.1"
   dependencies:
-    hasown: "npm:^2.0.2"
-  checksum: 10c0/da161f3d9906f459486da65609b2f1a2dfdc60887c689c234d04e88a062cb7920fa5be5fb7ab08dc43b732929653c4135ef05bf77888ae2a9040ce76815eb7b1
+    hasown: "npm:^2.0.0"
+  checksum: 10c0/2cba9903aaa52718f11c4896dabc189bab980870aae86a62dc0d5cedb546896770ee946fb14c84b7adf0735f5eaea4277243f1b95f5cefa90054f92fbcac2518
   languageName: node
   linkType: hard
 
@@ -15343,11 +15358,11 @@ __metadata:
   linkType: hard
 
 "qs@npm:^6.10.0":
-  version: 6.12.3
-  resolution: "qs@npm:6.12.3"
+  version: 6.12.0
+  resolution: "qs@npm:6.12.0"
   dependencies:
     side-channel: "npm:^1.0.6"
-  checksum: 10c0/243ddcc8f49dab78fc51041f7f64c500b47c671c45a101a8aca565d8537cb562921da7ef1a831b4a7051596ec88bb35a0d5e25a240025e8b32c6bfb69f00bf2f
+  checksum: 10c0/e165a77ac5f3ca60c15c5f3d51b321ddec7aa438804436b29d160117bc6fb7bf7dab94abd0c7d7c0785890d3a75ae41e1d6346e158aaf1540c6fe53a31f11675
   languageName: node
   linkType: hard
 
@@ -18334,13 +18349,6 @@ __metadata:
   version: 1.1.1
   resolution: "yocto-queue@npm:1.1.1"
   checksum: 10c0/cb287fe5e6acfa82690acb43c283de34e945c571a78a939774f6eaba7c285bacdf6c90fbc16ce530060863984c906d2b4c6ceb069c94d1e0a06d5f2b458e2a92
-  languageName: node
-  linkType: hard
-
-"yoctocolors-cjs@npm:^2.1.2":
-  version: 2.1.2
-  resolution: "yoctocolors-cjs@npm:2.1.2"
-  checksum: 10c0/a0e36eb88fea2c7981eab22d1ba45e15d8d268626e6c4143305e2c1628fa17ebfaa40cd306161a8ce04c0a60ee0262058eab12567493d5eb1409780853454c6f
   languageName: node
   linkType: hard
 
