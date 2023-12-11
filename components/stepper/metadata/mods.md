@@ -19,6 +19,11 @@
 | `--mod-stepper-button-width`                           |
 | `--mod-stepper-button-width-quiet`                     |
 | `--mod-stepper-buttons-background-color`               |
+| `--mod-stepper-buttons-border-color`                   |
+| `--mod-stepper-buttons-border-color-focus`             |
+| `--mod-stepper-buttons-border-color-focus-hover`       |
+| `--mod-stepper-buttons-border-color-hover`             |
+| `--mod-stepper-buttons-border-color-keyboard-focus`    |
 | `--mod-stepper-buttons-border-style`                   |
 | `--mod-stepper-buttons-border-width`                   |
 | `--mod-stepper-focus-indicator-color`                  |
