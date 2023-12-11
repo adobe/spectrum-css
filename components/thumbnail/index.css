@@ -92,8 +92,6 @@ governing permissions and limitations under the License.
 }
 
 .spectrum-Thumbnail {
-	@inherit: %spectrum-OpacityCheckerboard;
-
   position: relative;
   margin: 0;
   padding: 0;
@@ -311,6 +309,8 @@ governing permissions and limitations under the License.
 /* stylelint-enable declaration-block-no-redundant-longhand-properties */
 
 .spectrum-Thumbnail-image-wrapper {
+	@inherit: %spectrum-OpacityCheckerboard;
+
   display: flex;
   align-items: center;
   justify-content: center;

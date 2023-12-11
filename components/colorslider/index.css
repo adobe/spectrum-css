@@ -36,8 +36,6 @@ governing permissions and limitations under the License.
 }
 
 .spectrum-ColorSlider {
-	@inherit: %spectrum-OpacityCheckerboard;
-
 	position: relative;
 	display: block;
 
@@ -88,6 +86,8 @@ governing permissions and limitations under the License.
 }
 
 .spectrum-ColorSlider-checkerboard {
+	@inherit: %spectrum-OpacityCheckerboard;
+
 	--spectrum-color-slider-border-color-local: var(--highcontrast-color-slider-border-color, var(--mod-color-slider-border-color, var(--spectrum-color-slider-border-color-rgba)));
 
 	/* Inset border on top of background, created with box-shadow. */

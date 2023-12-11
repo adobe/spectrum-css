@@ -1,4 +1,3 @@
-import { Template as OpacityCheckerboard } from "@spectrum-css/opacitycheckerboard/stories/template.js";
 import { html } from "lit";
 import { classMap } from "lit/directives/class-map.js";
 import { ifDefined } from "lit/directives/if-defined.js";
@@ -39,7 +38,7 @@ export const Template = ({
 			${svg ? html`${svg}` : ""}
 		</div>
 	`;
-	
+
   if (isLayer)
 		return html`
 			<div
@@ -56,11 +55,11 @@ export const Template = ({
 				id=${ifDefined(id)}
 				@click=${onclick}
 			>
-				${OpacityCheckerboard({
-					componentOnly: true,
-					customClasses: [`${rootClass}-layer-inner`],
-					content: checkerboardContent,
-				})}
+				<div class="${rootClass}-layer-inner">
+					<div class="${rootClass}-image-wrapper">
+						<img class="${rootClass}-image" src="example-card-landscape.png" />
+					</div>
+				</div>
 			</div>
 		`;
 
@@ -111,12 +110,10 @@ export const Template = ({
 		id=${ifDefined(id)}
 		@click=${onclick}
 	>
-			${when(backgroundColor, () => html`<div class="${rootClass}-background" style=${ifDefined(styleMap({ backgroundColor }))}></div>`)}
-			${OpacityCheckerboard({
-				rootClass: backgroundColor ? `${rootClass}-image-wrapper` : undefined,
-				customClasses: isLayer ? [`${rootClass}-layer-inner`] : !backgroundColor ? [`${rootClass}-image-wrapper`] : [],
-				content: image ? [image] : [],
-			})}
+	${when(backgroundColor, () => html`<div class="${rootClass}-background" style=${ifDefined(styleMap({ backgroundColor }))}></div>`)}
+		<div class="${rootClass}-image-wrapper">
+			<img class="${rootClass}-image" src="example-card-landscape.png" />
 		</div>
+	</div>
 	`
 };

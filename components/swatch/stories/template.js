@@ -6,8 +6,6 @@ import { capitalize, lowerCase } from "lodash-es";
 
 import { useArgs } from '@storybook/client-api';
 
-import { Template as OpacityCheckerboard } from "@spectrum-css/opacitycheckerboard/stories/template.js";
-
 import "../index.css";
 
 export const Template = ({
@@ -61,9 +59,7 @@ export const Template = ({
 				updateArgs({ isSelected: !isSelected });
 			}}
 		>
-			${OpacityCheckerboard({
-				customClasses: [`${rootClass}-fill`],
-			})}
+		<div class="${rootClass}-fill"></div>
 		</div>
 	`;
 };

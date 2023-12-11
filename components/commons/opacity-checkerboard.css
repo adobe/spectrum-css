@@ -21,8 +21,6 @@ permissions and limitations under the License. */
 }
 
 %spectrum-OpacityCheckerboard {
-	inline-size: 100%;
-	block-size: 100%;
 	background: repeating-conic-gradient(
 			var(
 					--mod-opacity-checkerboard-light,
@@ -51,11 +49,4 @@ permissions and limitations under the License. */
 					var(--spectrum-opacity-checkerboard-size)
 				) * 2
 		);
-}
-
-@media (forced-colors: active) {
-	%spectrum-OpacityCheckerboard {
-		/* Allow checkerboard pattern to be visible. */
-		forced-color-adjust: none;
-	}
 }
