@@ -44,6 +44,8 @@ governing permissions and limitations under the License.
 		--spectrum-neutral-content-color-key-focus
 	);
 
+	--spectrum-infield-button-fill-justify-content: center;
+
 	&:disabled {
 		--mod-infield-button-background-color: var(
 			--mod-infield-button-background-color-disabled,
@@ -327,7 +329,10 @@ governing permissions and limitations under the License.
   /* center icon */
   display: flex;
   align-items: center;
-  justify-content: center;
+  justify-content: var(
+		--mod-infield-button-fill-justify-content,
+		var(--spectrum-infield-button-fill-justify-content)
+	);
 
   transition: border-color var(--spectrum-global-animation-duration-100) ease-in-out;
 }
@@ -389,6 +394,14 @@ governing permissions and limitations under the License.
 		border-start-end-radius: var(
 			--mod-infield-button-stacked-border-radius-reset,
 			var(--spectrum-infield-button-stacked-border-radius-reset)
+		);
+		border-end-end-radius: var(
+			--mod-infield-button-stacked-bottom-border-radius-end-end,
+			var(--mod-infield-button-border-radius, var(--spectrum-infield-button-border-radius))
+		);
+		border-block-end-width: var(
+			--mod-infield-button-stacked-bottom-border-block-end-width,
+			var(--mod-infield-button-border-width, var(--spectrum-infield-button-border-width))
 		);
 	}
 }
