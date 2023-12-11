@@ -21,6 +21,7 @@
 | `--mod-infield-button-border-width`                           |
 | `--mod-infield-button-border-width-quiet`                     |
 | `--mod-infield-button-edge-to-fill`                           |
+| `--mod-infield-button-fill-justify-content`                   |
 | `--mod-infield-button-fill-padding`                           |
 | `--mod-infield-button-height`                                 |
 | `--mod-infield-button-icon-color`                             |
@@ -33,6 +34,8 @@
 | `--mod-infield-button-icon-color-key-focus-disabled`          |
 | `--mod-infield-button-inner-edge-to-fill`                     |
 | `--mod-infield-button-stacked-border-radius-reset`            |
+| `--mod-infield-button-stacked-bottom-border-block-end-width`  |
+| `--mod-infield-button-stacked-bottom-border-radius-end-end`   |
 | `--mod-infield-button-stacked-bottom-border-radius-end-start` |
 | `--mod-infield-button-stacked-fill-padding-inline`            |
 | `--mod-infield-button-stacked-fill-padding-inner`             |
