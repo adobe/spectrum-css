@@ -3,10 +3,13 @@ import isChromatic from "chromatic/isChromatic";
 import { withActions } from "@storybook/addon-actions/decorator";
 import DocumentationTemplate from './DocumentationTemplate.mdx';
 import {
+	withBackgroundColorDisplayWrapper,
 	withContextWrapper,
 	withLanguageWrapper,
+	withPlatformScaleWrapper,
 	withReducedMotionWrapper,
-	withTextDirectionWrapper,
+	withSizingWrapper,
+	withTextDirectionWrapper
 } from "./decorators/index.js";
 
 // https://github.com/storybookjs/storybook-addon-console
@@ -49,11 +52,12 @@ export const globalTypes = {
 		title: "Text Direction",
 		description: "Direction of the content flow",
 		showName: true,
-		defaultValue: "ltr",
+		defaultValue: isChromatic() ? "both" : "ltr",
 		toolbar: {
 			items: [
 				{ value: "ltr", title: "ltr", right: "left to right" },
 				{ value: "rtl", title: "rtl", right: "right to left" },
+				{ value: "both", title: "ltr + rtl", right: "ltr and rtl" },
 			],
 			dynamicTitle: true,
 		},
@@ -74,6 +78,34 @@ export const globalTypes = {
 			dynamicTitle: true,
 		},
 	},
+	backgroundColorDisplay: {
+    title: "Background Color Display",
+    description: "Show default background or all background colors at once",
+    showName: true,
+    defaultValue: isChromatic() ? "side-by-side" : "default",
+    toolbar: {
+      items: [
+        {value: "default", icon: "photo", title: "default bg color", right: "default"},
+        {value: "stacked", icon: "stacked", title: "stacked bg colors", right: "stacked"},
+        {value: "side-by-side", icon: "sidebyside", title: "side-by-side bg colors", right: "side-by-side"}
+      ],
+      dynamicTitle: true,
+    }
+  },
+	platformScale: {
+		title: "Platform Scale",
+    description: "Show medium (desktop), large (mobile), or both scales at once",
+    showName: true,
+    defaultValue: isChromatic() ? "both" : "medium",
+    toolbar: {
+      items: [
+        {value: "medium", icon: "browser", title: "medium - desktop", right: "medium"},
+        {value: "large", icon: "mobile", title: "large - mobile", right: "large"},
+        {value: "both", icon: "tablet", title: "medium + large", right: "both"}
+      ],
+      dynamicTitle: true,
+    }
+	}
 };
 
 // Global properties added to each component;
@@ -97,6 +129,7 @@ export const argTypes = {
 				darkest: "Darkest",
 			},
 		},
+		if: { global: "backgroundColorDisplay", eq: "default" },
 	},
 	scale: {
 		name: "Platform scale",
@@ -115,6 +148,7 @@ export const argTypes = {
 				large: "Large",
 			},
 		},
+		if: { global: "platformScale", eq: "medium" },
 	},
 	// @todo https://jira.corp.adobe.com/browse/CSS-314
 	reducedMotion: {
@@ -244,7 +278,9 @@ export const decorators = [
 	withReducedMotionWrapper,
 	withContextWrapper,
 	withActions,
-	// ...[isChromatic() ? withSizingWrapper : false].filter(Boolean),
+	withBackgroundColorDisplayWrapper,
+	withPlatformScaleWrapper,
+	withSizingWrapper,
 ];
 
 export default {
