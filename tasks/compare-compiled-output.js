@@ -20,9 +20,6 @@ const Diff2Html = require("diff2html");
 
 require("colors");
 
-const util = require("util");
-const exec = util.promisify(require("child_process").exec);
-
 const pathing = {
 	root: join(__dirname, "../"),
 	components: join(__dirname, "../components"),
@@ -44,10 +41,12 @@ env.addFilter("print", (data) => JSON.stringify(data, null, 2));
 const log = {
 	error: (err) => process.stderr.write(`${err}\n\n`),
 	write: (msg) => process.stdout.write(msg),
-	writeTable: (data, padding = 30) => {
+	writeTable: (data, { min = 20, max = 30 } = {}) => {
 		// This utility function is used to print a table of data to the console
-		const table = (data = [], size = padding) =>
-			data.map((row) => `${row ?? " "}`.padEnd(size)).join("");
+		const table = (data = []) => {
+			return data.map((row, idx) => `${row ?? " "}`.padEnd(idx === 0 ? max : min)).join("");
+		};
+
 		process.stdout.write(`${table(data)}\n`);
 	},
 };
@@ -129,7 +128,7 @@ async function generateDiff(
 async function processComponent(
 	component,
 	{
-		cwd = process.cwd(),
+		cwd,
 		output = pathing.output,
 		cacheLocation = pathing.cache,
 	}
@@ -139,10 +138,14 @@ async function processComponent(
 	cleanAndMkdir(join(output, "diffs", component));
 	cleanAndMkdir(join(output, "latest"));
 
-	const pkgPath = join(cwd, component, "package.json");
-	const pkg = existsSync(pkgPath)
+	const pkgPath = require.resolve(`@spectrum-css/${component}/package.json`) ?? join(cwd, component, "package.json");
+	const pkg = pkgPath && existsSync(pkgPath)
 		? require(pkgPath)
 		: { name: `@spectrum-css/${component}` };
+
+	if (!cwd && pkgPath) {
+		cwd = dirname(pkgPath).split("/").slice(0, -1).join("/");
+	}
 
 	let tag;
 	let found = 0;
@@ -312,9 +315,7 @@ async function main(
 	output,
 	{ skipCache = false } = {}
 ) {
-	let buildAllComponents = false;
 	if (!components || components.length === 0) {
-		buildAllComponents = true;
 		components = allComponents;
 	}
 
@@ -339,7 +340,6 @@ async function main(
 	const results = await Promise.all(
 		components.map(async (component) => {
 			return processComponent(component, {
-				cwd: pathing.components,
 				output: pathing.output,
 				cacheLocation: pathing.cache,
 			}).catch((err) =>
@@ -399,14 +399,19 @@ async function main(
 		});
 
 		// This is our report header to indicate the start of a new component's data
-		log.writeTable([`\n${_.pad(` ${component} `, 20, "-").cyan}\n`]);
+		log.write(`\n${_.pad(` ${component} `, 20, "-").cyan}\n`);
 
 		if (warnings.length > 0) {
 			warnings.forEach((warning) => log.write(`${warning}\n`));
 		}
 
+		const maxColumnWidth = files.reduce((max, file) => {
+			if (file.length > max) max = file.length;
+			return max;
+		}, 30);
+
 		// Write a table of the file sizes to the console for easy comparison
-		log.writeTable(["Filename", "Size", "Size (release)"], 20);
+		log.writeTable(["Filename", "Size", "Size (release)"], { min: 15, max: maxColumnWidth + 5});
 
 		files.forEach(async (file) => {
 			let hasFileChange = false;
@@ -416,7 +421,7 @@ async function main(
 				`${file}`.green,
 				local?.size ? `${bytesToSize(local.size)}`.gray : `** removed **`.red,
 				npm?.size ? `${bytesToSize(npm.size)}`.gray : `** new **`.yellow,
-			]);
+			], { min: 25, max: maxColumnWidth + 15});
 
 			if (local?.size && npm?.size && local.size !== npm.size) {
 				hasFileChange = true;
