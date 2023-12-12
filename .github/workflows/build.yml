@@ -112,6 +112,8 @@ jobs:
               with:
                   path: |
                       components/*/dist/**
+                      tokens/dist/**
+                      ui-icons/dist/**
                   key: ${{ matrix.system }}-node${{ matrix.node-version }}-compiled-assets-${{ steps.set-SHAs.outputs.head }}
 
             - name: Build components
@@ -127,6 +129,8 @@ jobs:
               with:
                   path: |
                       ${{ github.workspace }}/components/*/dist/**
+                      ${{ github.workspace }}/tokens/dist/**
+                      ${{ github.workspace }}/ui-icons/dist/**
                       ${{ github.workspace }}/profile.json
                   name: ${{ matrix.system }}-node${{ matrix.node-version }}-compiled-assets-${{ steps.set-SHAs.outputs.head }}
                   # this is important, it lets us catch if the build failed silently

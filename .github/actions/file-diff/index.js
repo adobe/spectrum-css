@@ -56,8 +56,8 @@ async function run() {
 		// --------------- End evaluation  ---------------
 
 		/** Split the data by component package */
-		const COMPONENTS = splitDataByComponent(pathOutput, diffOutput);
-		const sections = makeTable(COMPONENTS);
+		const { filePath, PACKAGES } = splitDataByPackage(pathOutput, path, diffOutput);
+		const sections = makeTable(PACKAGES, filePath, path);
 
 		const overallSize = [...pathOutput.values()].reduce(
 			(acc, size) => acc + size,
@@ -106,17 +106,17 @@ async function run() {
 
 			markdown.push(`<details>`, `<summary><b>Details</b></summary>`, "");
 
-			sections.map(({ name, totalSize, totalDiffSize, fileMap }) => {
+			sections.map(({ name, filePath, totalSize, totalDiffSize, hasChange, fileMap }) => {
 				const md = ["", `#### ${name}`, ""];
 				const data = [name, bytesToSize(totalDiffSize)];
 
-				if (totalDiffSize - totalSize === 0) return;
+				if (!hasChange) return;
 
 				if (hasDiff) {
 					// If a diff path was provided and the component folder doesn't exist,
 					// report that the compiled assets were removed
 					if (
-						!existsSync(join(diffPath, "components", name)) ||
+						!existsSync(join(diffPath, filePath, name)) ||
 						(totalSize === 0 && totalDiffSize > 0)
 					) {
 						data.push("🚨 deleted, moved, or renamed");
@@ -183,7 +183,7 @@ async function run() {
 		markdown.push(
 			"",
 			"<small>",
-			"* <em>Size determined by adding together the size of the main file (index.css) for all packages in the library.</em><br/>",
+			"* <em>Size determined by adding together the size of the main file for all packages in the library.</em><br/>",
 			"* <em>Results are not gzipped or minified.</em><br/>",
 			"* <em>An ASCII character in UTF-8 is 8 bits or 1 byte.</em>",
 			"</small>"
@@ -265,15 +265,25 @@ const printPercentChange = function (delta) {
 
 /**
  *
- * @param {Map<string, Map<string, { byteSize: number, diffByteSize: number }>>} COMPONENTS
- * @returns {Array<{ name: string, totalSize: number, totalDiffSize: number, hasChange: boolean, fileMap: Map<string, { byteSize: number, diffByteSize: number }>}>}
+ * @param {Map<string, Map<string, { byteSize: number, diffByteSize: number }>>} PACKAGES
+ * @param {string} filePath - The path to the component's dist folder from the root of the repo
+ * @param {string} path - The path from the github workspace to the root of the repo
+ * @returns {Array<{ name: string, filePath: string, totalSize: number, totalDiffSize: number, hasChange: boolean, fileMap: Map<string, { byteSize: number, diffByteSize: number }>}>}
  */
-const makeTable = function (COMPONENTS) {
+const makeTable = function (PACKAGES, filePath, path) {
 	const sections = [];
 
-	/** Next convert that component data into a comment */
-	COMPONENTS.forEach((fileMap, componentName) => {
-		const mainFileOnly = [...fileMap.keys()].filter((file) => file.endsWith("index.css"));
+	/** Next convert that component data into a detailed object for reporting */
+	PACKAGES.forEach((fileMap, packageName) => {
+		// Read in the main asset file from the package.json
+		const packagePath = join(path, filePath, packageName, "package.json");
+
+		let mainFile = "index.css";
+		if (existsSync(packagePath)) {
+			mainFile = require(join(path, filePath, packageName, "package.json"))?.main;
+		}
+
+		const mainFileOnly = [...fileMap.keys()].filter((file) => file.endsWith(mainFile));
 		const totalSize = mainFileOnly.reduce(
 			(acc, filename) => {
 				const { byteSize = 0 } = fileMap.get(filename);
@@ -296,7 +306,14 @@ const makeTable = function (COMPONENTS) {
 		 */
 		if (totalSize === totalDiffSize) return;
 
-		sections.push({ name: componentName, totalSize, totalDiffSize, hasChange, fileMap });
+		sections.push({
+			name: packageName,
+			filePath,
+			totalSize,
+			totalDiffSize,
+			hasChange,
+			fileMap
+		});
 	});
 
 	return sections;
@@ -305,20 +322,28 @@ const makeTable = function (COMPONENTS) {
 /**
  * Split out the data indexed by filename into groups by component
  * @param {Map<string, number>} dataMap
+ * @param {string} path
  * @param {Map<string, number>} diffMap
- * @returns {Map<string, Map<string, { byteSize: number, diffByteSize: number }>>}
+ * @returns {{ filePath: string, PACKAGES: Map<string, Map<string, { byteSize: number, diffByteSize: number }>>}}
  */
-const splitDataByComponent = function (dataMap, diffMap = new Map()) {
-	const COMPONENTS = new Map();
+const splitDataByPackage = function (dataMap, path, diffMap = new Map()) {
+	const PACKAGES = new Map();
+
+	let filePath;
 	[...dataMap.entries()].forEach(([file, byteSize]) => {
 		// Determine the name of the component
 		const parts = file.split(sep);
 		const componentIdx = parts.findIndex((part) => part === "dist") - 1;
-		const componentName = parts[componentIdx];
+		const packageName = parts[componentIdx];
+
+		if (!filePath) {
+			filePath = `${file.replace(path, "")}/${parts.slice(componentIdx + 1, -1).join(sep)}`;
+		}
+
 		const readableFilename = file.replace(/^.*\/dist\//, "");
 
-		const fileMap = COMPONENTS.has(componentName)
-			? COMPONENTS.get(componentName)
+		const fileMap = PACKAGES.has(packageName)
+			? PACKAGES.get(packageName)
 			: new Map();
 
 		if (!fileMap.has(readableFilename)) {
@@ -331,7 +356,8 @@ const splitDataByComponent = function (dataMap, diffMap = new Map()) {
 		}
 
 		/** Update the component's table data */
-		COMPONENTS.set(componentName, fileMap);
+		PACKAGES.set(packageName, fileMap);
 	});
-	return COMPONENTS;
+
+	return { filePath, PACKAGES };
 };

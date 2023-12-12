@@ -85,10 +85,12 @@ jobs:
               with:
                   path: |
                       components/*/dist/**
+                      tokens/dist/**
+                      ui-icons/dist/**
                   key: ubuntu-latest-node18-compiled-assets-${{ steps.set-SHAs.outputs.head }}
 
             - name: Build storybook site
-              if: ${{ github.event.inputs.storybook-url == '' }}
+              if: ${{ inputs.storybook-url == '' }}
               shell: bash
               run: yarn ci:storybook --output-dir ../dist/preview
 
