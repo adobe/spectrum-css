@@ -1,7 +1,7 @@
 // Import the component markup template
 import { Template } from "./template";
 
-import { workflowIcons, uiIcons } from "./utilities.js";
+import { uiIcons, workflowIcons } from "./utilities.js";
 
 export default {
 	title: "Components/Icon",
@@ -50,7 +50,17 @@ export default {
 				type: { summary: "string" },
 				category: "Content",
 			},
-			options: uiIcons,
+			options: [
+				...uiIcons.filter((c) => !["Chevron", "Arrow"].includes(c)),
+				"ArrowRight",
+				"ArrowLeft",
+				"ArrowUp",
+				"ArrowDown",
+				"ChevronRight",
+				"ChevronLeft",
+				"ChevronUp",
+				"ChevronDown",
+			],
 			control: "select",
 			if: { arg: "setName", eq: "ui" },
 		},
@@ -80,10 +90,10 @@ export default {
 	},
 };
 
-export const Default = (args) =>
-	Template({
-		...args,
-		iconName: args.iconName ?? args.uiIconName,
-		setName: args.setName ?? (args.uiIconName ? "ui" : "workflow"),
-	});
+export const Default = (args) => Template({
+	...args,
+	iconName: args.iconName ?? args.uiIconName,
+	setName: args.setName ?? (args.uiIconName ? "ui" : "workflow"),
+});
+
 Default.args = {};

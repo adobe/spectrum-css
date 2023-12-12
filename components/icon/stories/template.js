@@ -1,7 +1,7 @@
-import { html } from "lit";
+import { html, svg } from "lit";
 import { classMap } from "lit/directives/class-map.js";
 import { ifDefined } from "lit/directives/if-defined.js";
-import { unsafeHTML } from "lit/directives/unsafe-html.js";
+import { unsafeSVG } from "lit/directives/unsafe-svg.js";
 
 import { fetchIconSVG, uiIcons, workflowIcons } from "./utilities.js";
 
@@ -93,7 +93,9 @@ export const Template = ({
 		setName = "workflow";
 	} else if (uiIcons.includes(idKey.replace(/\d{2,3}$/, ""))) {
 		setName = "ui";
-	} else if (!setName) {
+	}
+
+	if (!setName) {
 		console.warn(
 			`Icon: Could not determine the icon set for the provided icon name: ${idKey}.`
 		);
@@ -126,7 +128,7 @@ export const Template = ({
 
 	// If we found an icon above, return that value with the appended class list
 	if (icon) {
-		return html`${unsafeHTML(
+		return svg`${unsafeSVG(
 			icon.replace(
 				/^<svg(.*)>/,
 				`<svg class="${Object.entries(classList)
@@ -159,7 +161,7 @@ export const Template = ({
 		console.warn(e);
 	}
 
-	return html` <svg
+	return svg`<svg
 		class=${classMap(classList)}
 		id=${ifDefined(id)}
 		style=${ifDefined(inlineStyle)}

@@ -1,4 +1,4 @@
-const { resolve, relative, basename, sep } = require("path");
+const { resolve, basename } = require("path");
 const { existsSync } = require("fs");
 const warnCleaner = require("postcss-warn-cleaner");
 
@@ -61,9 +61,20 @@ module.exports = (ctx) => {
 		 * If a path has a package.json, we can assume it's a component and
 		 * we want to leverage the correct plugins for it.
 		 */
-		const { devDependencies } = require(pkgPath);
+		const {
+			peerDependencies = {},
+			devDependencies = {},
+			dependencies = {}
+		} = require(pkgPath);
+
+		const deps = [...new Set([
+			...Object.keys(peerDependencies),
+			...Object.keys(dependencies),
+			...Object.keys(devDependencies),
+		])];
+
 		if (
-			Object.keys(devDependencies).includes("@spectrum-css/component-builder")
+			deps.includes("@spectrum-css/vars")
 		) {
 			plugins.push(...legacyBuilder.processors);
 		} else {
