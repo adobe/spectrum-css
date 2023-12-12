@@ -110,6 +110,8 @@ async function run() {
 				const md = ["", `#### ${name}`, ""];
 				const data = [name, bytesToSize(totalDiffSize)];
 
+				if (totalDiffSize - totalSize === 0) return;
+
 				if (hasDiff) {
 					// If a diff path was provided and the component folder doesn't exist,
 					// report that the compiled assets were removed
@@ -117,15 +119,16 @@ async function run() {
 						!existsSync(join(diffPath, "components", name)) ||
 						(totalSize === 0 && totalDiffSize > 0)
 					) {
-						data.push("🚨 package deleted/moved/renamed");
+						data.push("🚨 deleted, moved, or renamed");
+						summaryTable.push(data);
 					} else if (totalSize > 0 && totalDiffSize === 0) {
-						data.push("🎉 new package");
-					} else {
+						data.push("🎉 new");
+						summaryTable.push(data);
+					} else if (bytesToSize(Math.abs(totalDiffSize - totalSize)) !== "< 0.01 KB") {
 						data.push(printChange(totalDiffSize - totalSize));
+						summaryTable.push(data);
 					}
 				}
-
-				summaryTable.push(data);
 
 				md.push(
 					...[
@@ -137,7 +140,7 @@ async function run() {
 							...(hasDiff
 								? [
 									bytesToSize(totalDiffSize),
-									`${printChange(totalDiffSize - totalSize)} (${printPercentChange((totalDiffSize - totalSize) / totalSize)})`,
+									`${printChange(totalDiffSize - totalSize)}${totalDiffSize - totalSize !== 0 ? ` (${printPercentChange((totalDiffSize - totalSize) / totalSize)})` : ""}`,
 								]
 								: []),
 						],
@@ -157,7 +160,7 @@ async function run() {
 										byteSize === 0 && diffByteSize > 0 ? "**removed**" : bytesToSize(byteSize),
 										...(hasDiff ? [
 											bytesToSize(diffByteSize),
-											`${printChange(diffByteSize - byteSize)} (${printPercentChange((diffByteSize - byteSize) / byteSize)})`,
+											`${printChange(diffByteSize - byteSize)}${diffByteSize - byteSize !== 0 ? ` (${printPercentChange((diffByteSize - byteSize) / byteSize)})` : ""}`,
 										] : []),
 									]
 								];
@@ -177,7 +180,14 @@ async function run() {
 			summary.push(...summaryTable.map((row) => `| ${row.join(" | ")} |`));
 		}
 
-		markdown.push("", `<small><sup>*</sup> <em>An ASCII character in UTF-8 is 8 bits or 1 byte.</em></small>`);
+		markdown.push(
+			"",
+			"<small>",
+			"* <em>Size determined by adding together the size of the main file (index.css) for all packages in the library.</em><br/>",
+			"* <em>Results are not gzipped or minified.</em><br/>",
+			"* <em>An ASCII character in UTF-8 is 8 bits or 1 byte.</em>",
+			"</small>"
+		);
 
 		// --------------- Start Comment  ---------------
 		if (shouldAddComment) {
@@ -255,30 +265,38 @@ const printPercentChange = function (delta) {
 
 /**
  *
- * @param {Map<string, number>} pathMap
- * @param {Map<string, number>} diffMap
- * @returns {string}
+ * @param {Map<string, Map<string, { byteSize: number, diffByteSize: number }>>} COMPONENTS
+ * @returns {Array<{ name: string, totalSize: number, totalDiffSize: number, hasChange: boolean, fileMap: Map<string, { byteSize: number, diffByteSize: number }>}>}
  */
 const makeTable = function (COMPONENTS) {
 	const sections = [];
 
 	/** Next convert that component data into a comment */
 	COMPONENTS.forEach((fileMap, componentName) => {
-		const totalSize = [...fileMap.values()].reduce(
-			(acc, { byteSize }) => acc + byteSize,
+		const mainFileOnly = [...fileMap.keys()].filter((file) => file.endsWith("index.css"));
+		const totalSize = mainFileOnly.reduce(
+			(acc, filename) => {
+				const { byteSize = 0 } = fileMap.get(filename);
+				return acc + byteSize;
+			},
 			0
 		);
-		const totalDiffSize = [...fileMap.values()].reduce(
-			(acc, { diffByteSize = 0 }) => acc + diffByteSize,
+		const totalDiffSize = mainFileOnly.reduce(
+			(acc, filename) => {
+				const { diffByteSize = 0 } = fileMap.get(filename);
+				return acc + diffByteSize;
+			},
 			0
 		);
+
+		const hasChange = fileMap.size > 0 && [...fileMap.values()].some(({ byteSize, diffByteSize }) => byteSize !== diffByteSize);
 
 		/**
 		 * We don't need to report on components that haven't changed unless they're new or removed
 		 */
 		if (totalSize === totalDiffSize) return;
 
-		sections.push({ name: componentName, totalSize, totalDiffSize, fileMap });
+		sections.push({ name: componentName, totalSize, totalDiffSize, hasChange, fileMap });
 	});
 
 	return sections;
