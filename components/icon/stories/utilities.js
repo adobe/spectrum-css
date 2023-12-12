@@ -35,16 +35,16 @@ export const fetchIconSVG = ({
 			icon = require(`!!raw-loader!@adobe/spectrum-css-workflow-icons/dist/${
 				scale !== "medium" ? `24` : `18`
 			}/${iconName}.svg`);
-			if (icon) return icon.default ?? icon;
+			if (icon) return (icon.default ?? icon).trim();
 		} catch (e) {}
 	}
 
 	// Check the ui kit for icon set if not yet found
 	try {
-		icon = require(`!!raw-loader!@spectrum-css/ui-icons/${
+		icon = require(`!!raw-loader!@spectrum-css/ui-icons/dist/${
 			scale ? scale : "medium"
 		}/${iconName}.svg`);
-		if (icon) return icon.default ?? icon;
+		if (icon) return (icon.default ?? icon).trim();
 	} catch (e) {}
 
 	return;

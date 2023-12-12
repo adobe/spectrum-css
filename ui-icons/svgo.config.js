@@ -18,34 +18,29 @@ module.exports = ({
           removeDesc: false,
           removeTitle: false,
           removeViewBox,
+          removeHiddenElems: false,
           removeUnusedNS: false,
         },
       },
     },
-    clean
-      ? {
-        name: 'removeAttrs',
-        params: {
-          attrs: ['class', 'data-name', 'id'],
-        },
-      }
-      : undefined,
-    idPrefix
-      ? {
-        name: 'prefixIds',
-        params: { delim: '-', prefix: idPrefix, prefixClassNames: false },
-      }
-      : undefined,
-    classPrefix
-      ? {
-        name: 'prefixIds',
-        params: {
-          delim: '--',
-          prefix: classPrefix,
-          prefixClassNames: true,
-          prefixIds: false,
-        },
-      }
-      : undefined,
-  ].filter(Boolean),
+    ...(clean ? [{
+      name: 'removeAttrs',
+      params: {
+        attrs: ['class', 'data-name', 'id'],
+      },
+    }] : []),
+    ...(idPrefix ? [{
+      name: 'prefixIds',
+      params: { delim: '-', prefix: idPrefix, prefixClassNames: false },
+    }] : []),
+    ...(classPrefix ? [{
+      name: 'prefixIds',
+      params: {
+        delim: '--',
+        prefix: classPrefix,
+        prefixClassNames: true,
+        prefixIds: false,
+      },
+    } ] : []),
+  ],
 });
