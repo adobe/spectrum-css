@@ -3,6 +3,16 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+<a name="5.0.6"></a>
+##5.0.6
+🗓
+2023-12-12 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/stepper@5.0.5...@spectrum-css/stepper@5.0.6)
+
+### 🐛 Bug fixes
+
+- **stepper:**express theme button border ([#2272](https://github.com/adobe/spectrum-css/issues/2272))([97b10b5](https://github.com/adobe/spectrum-css/commit/97b10b5))\*
+  **stepper:**no longer touches InfieldButton classes ([#2300](https://github.com/adobe/spectrum-css/issues/2300))([a82b8ad](https://github.com/adobe/spectrum-css/commit/a82b8ad))
+
 <a name="5.0.5"></a>
 ##5.0.5
 🗓

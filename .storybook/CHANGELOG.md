@@ -3,6 +3,25 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+<a name="7.0.0"></a>
+#7.0.0
+🗓
+2023-12-12 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/preview@6.0.1...@spectrum-css/preview@7.0.0)
+
+### 🐛 Bug fixes
+
+-     **storybook:**chromatic requires build script ([#2360](https://github.com/adobe/spectrum-css/issues/2360))([114b75b](https://github.com/adobe/spectrum-css/commit/114b75b))
+
+  \*feat(icon,ui-icons)!: migrate the icon compiler to a distinct package (#2343)([d73d594](https://github.com/adobe/spectrum-css/commit/d73d594)), closes[#2343](https://github.com/adobe/spectrum-css/issues/2343)
+
+      	###
+      	🛑 BREAKING CHANGES
+
+      		*
+      		 - @spectrum-css/icon will no longer contain SVG assets; it will be a purely CSS package with all SVG assets migrated to the new @spectrum-css/ui-icons package.
+
+* NEW: @spectrum-css/ui-icons package for all SVG icons in the UI set.
+
 <a name="6.0.1"></a>
 ##6.0.1
 🗓

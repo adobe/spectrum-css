@@ -3,6 +3,16 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+<a name="4.0.6"></a>
+##4.0.6
+🗓
+2023-12-12 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/infieldbutton@4.0.5...@spectrum-css/infieldbutton@4.0.6)
+
+### 🐛 Bug fixes
+
+- **infieldbutton:**focus wont persist after mouse interaction ([#2276](https://github.com/adobe/spectrum-css/issues/2276))([9271456](https://github.com/adobe/spectrum-css/commit/9271456))\*
+  **stepper:**no longer touches InfieldButton classes ([#2300](https://github.com/adobe/spectrum-css/issues/2300))([a82b8ad](https://github.com/adobe/spectrum-css/commit/a82b8ad))
+
 <a name="4.0.5"></a>
 ##4.0.5
 🗓
