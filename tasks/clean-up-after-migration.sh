@@ -24,6 +24,11 @@ test -d "components/vars" && rm -rf components/vars
 test -d "components/expressvars" && rm -rf components/expressvars
 test -d "components/tokens" && rm -rf components/tokens
 
+# Remove deprecated files
+for folder in components/*; do
+    test -d components/$folder/.npmignore && rm -rf components/$folder/.npmignore
+done
+
 # Migrated icons assets
 test -d "components/icon/combined" && rm -rf components/icon/combined
 test -d "components/icon/large" && rm -rf components/icon/large

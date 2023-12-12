@@ -14,20 +14,19 @@
     "url": "https://github.com/adobe/spectrum-css/issues"
   },
   "main": "dist/index-vars.css",
-  "scripts": {
-    "build": "gulp",
-    "clean": "rimraf dist"
-  },
   "peerDependencies": {
-    "@spectrum-css/colorhandle": ">=5",
+    "@spectrum-css/colorarea": ">=4",
+    "@spectrum-css/colorhandle": ">=7",
+    "@spectrum-css/colorloupe": ">=4",
     "@spectrum-css/tokens": ">=13"
   },
-  "devDependencies": {
-    "@spectrum-css/colorarea": "^4.0.50",
-    "@spectrum-css/colorhandle": "^7.0.16",
-    "@spectrum-css/component-builder-simple": "^3.0.1",
-    "@spectrum-css/tokens": "^13.0.5",
-    "gulp": "^4.0.0"
+  "peerDependenciesMeta": {
+    "@spectrum-css/colorloupe": {
+      "optional": true
+    },
+    "@spectrum-css/colorarea": {
+      "optional": true
+    }
   },
   "publishConfig": {
     "access": "public"

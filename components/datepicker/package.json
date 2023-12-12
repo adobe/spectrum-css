@@ -14,24 +14,12 @@
     "url": "https://github.com/adobe/spectrum-css/issues"
   },
   "main": "dist/index-vars.css",
-  "scripts": {
-    "build": "gulp",
-    "clean": "rimraf dist"
-  },
   "peerDependencies": {
-    "@spectrum-css/pickerbutton": ">=3",
-    "@spectrum-css/popover": ">=5",
+    "@spectrum-css/calendar": ">=4",
+    "@spectrum-css/pickerbutton": ">=4",
+    "@spectrum-css/popover": ">=6",
+    "@spectrum-css/textfield": ">=6",
     "@spectrum-css/tokens": ">=13"
-  },
-  "devDependencies": {
-    "@spectrum-css/component-builder-simple": "^3.0.1",
-    "@spectrum-css/icon": "^4.0.5",
-    "@spectrum-css/menu": "^5.2.0",
-    "@spectrum-css/pickerbutton": "^4.0.21",
-    "@spectrum-css/popover": "^6.0.83",
-    "@spectrum-css/textfield": "^6.0.29",
-    "@spectrum-css/tokens": "^13.0.5",
-    "gulp": "^4.0.0"
   },
   "publishConfig": {
     "access": "public"

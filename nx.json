@@ -1,21 +1,109 @@
 {
-	"npmScope": "@spectrum-css",
-	"tasksRunnerOptions": {
-		"default": {
-			"runner": "nx/tasks-runners/default"
+	"$schema": "./node_modules/nx/schemas/nx-schema.json",
+	"cli": {
+		"warnings": {
+			"versionMismatch": true
+		},
+		"packageManager": "yarn",
+		"analytics": false
+	},
+	"pluginsConfig": {
+		"@nx/js": {
+			"analyzeSourceFiles": false
 		}
+	},
+	"namedInputs": {
+		"core": ["{projectRoot}/*.css", "{projectRoot}/themes/*.css"],
+		"scripts": ["{projectRoot}/stories/*.js"],
+		"tools": [
+			"{projectRoot}/*.json",
+			"{workspaceRoot}/postcss.config.js",
+			"{workspaceRoot}/plugins/postcss-*/index.js"
+		]
 	},
 	"targetDefaults": {
 		"clean": {
 			"cache": true,
-			"inputs": ["{projectRoot}/dist", { "externalDependencies": ["rimraf"] }]
+			"inputs": ["{projectRoot}/dist", { "externalDependencies": ["rimraf"] }],
+			"outputs": [],
+			"executor": "nx:run-commands",
+			"options": {
+				"commands": [
+					"rimraf {projectRoot}/dist",
+					"test -d {projectRoot}/dist && echo \"Error: dist directory could not be removed\" && exit 1 || exit 0"
+				],
+				"parallel": false
+			}
 		},
 		"build": {
 			"cache": true,
-			"dependsOn": ["clean", "^build"],
-			"inputs": ["{projectRoot}/*.css", { "externalDependencies": ["gulp"] }],
-			"outputs": ["{projectRoot}/dist"]
+			"dependsOn": [
+				"^build",
+				"clean",
+				{ "target": "build", "projects": "tokens" }
+			],
+			"inputs": [
+				"core",
+				"tools",
+				"!{projectRoot}/stories/*.js",
+				"{workspaceRoot}/tasks/mod-extractor.js",
+				{ "externalDependencies": ["gulp", "postcss"] },
+				{ "env": "NODE_ENV" }
+			],
+			"outputs": ["{projectRoot}/dist", "{projectRoot}/metadata/mods.md"],
+			"executor": "nx:run-commands",
+			"options": {
+				"commands": [
+					"gulp --gulpfile {projectRoot}/gulpfile.js",
+					"node ./tasks/mod-extractor.js {projectRoot}"
+				],
+				"forwardAllArgs": true,
+				"parallel": false
+			}
+		},
+		"compare": {
+			"cache": true,
+			"dependsOn": ["build"],
+			"inputs": [
+				"{workspaceRoot}/tasks/compare-compiled-output.js",
+				{ "dependentTasksOutputFiles": "dist/*.css", "transitive": true },
+				{
+					"externalDependencies": [
+						"fast-glob",
+						"tar",
+						"lodash",
+						"nunjucks",
+						"rimraf",
+						"npm-registry-fetch",
+						"yargs",
+						"diff",
+						"diff2html",
+						"colors"
+					]
+				}
+			],
+			"outputs": ["{workspaceRoot}/.diff-output"],
+			"executor": "nx:run-commands",
+			"options": {
+				"commands": [
+					"node ./tasks/compare-compiled-output.js $NX_TASK_TARGET_PROJECT"
+				]
+			}
+		},
+		"test": {
+			"cache": true,
+			"dependsOn": [{ "target": "test", "projects": "storybook" }],
+			"configurations": {
+				"scope": {
+					"dependsOn": [
+						{
+							"target": "test",
+							"configuration": "scope",
+							"projects": "storybook"
+						}
+					]
+				}
+			}
 		}
-	},
-	"includedScripts": ["build"]
+	}
 }

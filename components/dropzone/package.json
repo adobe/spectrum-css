@@ -14,22 +14,19 @@
     "url": "https://github.com/adobe/spectrum-css/issues"
   },
   "main": "dist/index-vars.css",
-  "scripts": {
-    "build": "gulp",
-    "clean": "rimraf dist"
-  },
   "peerDependencies": {
+    "@spectrum-css/actionbutton": ">=5",
     "@spectrum-css/illustratedmessage": ">=6",
-    "@spectrum-css/link": ">=3 <=4",
+    "@spectrum-css/link": ">=4",
     "@spectrum-css/tokens": ">=13"
   },
-  "devDependencies": {
-    "@spectrum-css/actionbutton": "^5.0.16",
-    "@spectrum-css/component-builder-simple": "^3.0.1",
-    "@spectrum-css/illustratedmessage": "^6.0.30",
-    "@spectrum-css/link": "^4.0.74",
-    "@spectrum-css/tokens": "^13.0.5",
-    "gulp": "^4.0.0"
+  "peerDependenciesMeta": {
+    "@spectrum-css/actionbutton": {
+      "optional": true
+    },
+    "@spectrum-css/link": {
+      "optional": true
+    }
   },
   "publishConfig": {
     "access": "public"

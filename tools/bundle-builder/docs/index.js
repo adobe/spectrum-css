@@ -360,12 +360,7 @@ function copySiteWorkflowIcons() {
 
 function copySiteUIIcons() {
 	return gulp
-		.src(
-			path.join(
-				path.dirname(require.resolve("@spectrum-css/ui-icons")),
-				"spectrum-css-icons.svg"
-			),
-		)
+		.src(require.resolve("@spectrum-css/ui-icons"))
 		.pipe(gulp.dest("dist/img/"));
 }
 
