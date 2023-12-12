@@ -14,38 +14,39 @@ const fsp = require("fs").promises;
 const path = require("path");
 const depSolver = require("dependency-solver");
 
-/*
-  Given a package path, get its dependencies
-
-  @param {string} packages - package directory
-
-  @return {Object} An object mapping the package name to its dependencies, or null if no dependencies
-*/
+/**
+ * Given a package path, get its dependencies
+ * @param {string} packages - package directory
+ * @return {Object} An object mapping the package name to its dependencies, or null if no dependencies
+ */
 async function getDependencies(package) {
-	let pkg = JSON.parse(await fsp.readFile(path.join(package, "package.json")));
-	let dependencies = [];
+	const {
+		name,
+		peerDependencies = {},
+		dependencies = {},
+		devDependencies = {}
+	} = await fsp.readFile(path.join(package, "package.json")).then(JSON.parse);
 
-	if (pkg.devDependencies) {
-		dependencies = Object.keys(pkg.devDependencies).filter((dep) => {
-			return (
-				dep.indexOf("@spectrum-css") === 0 &&
-				dep !== "@spectrum-css/bundle-builder" &&
-				dep !== "@spectrum-css/component-builder" &&
-				dep !== "@spectrum-css/component-builder-simple"
-			);
-		});
-	}
-
-	return { name: pkg.name, dependencies: dependencies };
+	return {
+		name,
+		dependencies: [...new Set([
+			...Object.keys(peerDependencies),
+			...Object.keys(dependencies),
+			...Object.keys(devDependencies),
+		])].filter((dep) => (
+			dep.indexOf("@spectrum-css") === 0 &&
+			dep !== "@spectrum-css/bundle-builder" &&
+			dep !== "@spectrum-css/component-builder" &&
+			dep !== "@spectrum-css/component-builder-simple"
+		))
+	};
 }
 
-/*
-  Given a list of package paths, solve the dependency order
-
-  @param {string[]} packages - package directories
-
-  @return {string[]} The solved dependency order
-*/
+/**
+ * Given a list of package paths, solve the dependency order
+ * @param {string[]} packages - package directories
+ * @return {string[]} The solved dependency order
+ */
 async function solveDependencies(packages) {
 	async function getDependenciesForSolver(package) {
 		let { name, dependencies } = await getDependencies(package);
@@ -69,16 +70,13 @@ async function solveDependencies(packages) {
 	return depSolver.solve(dependencies);
 }
 
-/*
-  Get the list of all packages in given directory
-
-  @param {string} packageDir - package directory
-
-  @return {Object} An array of package names in dependency order
-*/
+/**
+ * Get the list of all packages in given directory
+ * @param {string} packageDir - package directory
+ * @return {Object} An array of package names in dependency order
+ */
 async function getPackageDependencyOrder(packageDir) {
-	let { dependencies } = await getDependencies(packageDir);
-
+	const { dependencies } = await getDependencies(packageDir);
 	return solveDependencies(
 		dependencies.map((dep) =>
 			path.dirname(require.resolve(path.join(dep, "package.json")))
@@ -86,13 +84,11 @@ async function getPackageDependencyOrder(packageDir) {
 	);
 }
 
-/*
-  Get the list of all packages in given directory
-
-  @param {string} packagesDir - directory of packages
-
-  @return {Object} An array of package names in dependency order
-*/
+/**
+ * Get the list of all packages in given directory
+ * @param {string} packagesDir - directory of packages
+ * @return {Object} An array of package names in dependency order
+ */
 async function getFolderDependencyOrder(packagesDir) {
 	// Get list of all packages
 	let packages = (await fsp.readdir(packagesDir, { withFileTypes: true }))

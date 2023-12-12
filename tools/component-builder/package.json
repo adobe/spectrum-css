@@ -12,6 +12,8 @@
     "url": "https://github.com/adobe/spectrum-css/issues"
   },
   "dependencies": {
+    "@spectrum-css/tokens": "^13.0.5",
+    "@spectrum-css/vars": "^9.0.8",
     "autoprefixer": "^6.5.3",
     "browser-sync": "^2.26.14",
     "colors": "^1.4.0",
