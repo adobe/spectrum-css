@@ -35,14 +35,14 @@ examples:
               <input type="number" class="spectrum-Textfield-input spectrum-Stepper-input" min="-2" max="2" step="0.5">
             </div>
             <span class="spectrum-Stepper-buttons">
-              <button type="button" class="spectrum-InfieldButton spectrum-InfieldButton--sizeS spectrum-InfieldButton--top spectrum-Stepper-button" aria-haspopup="listbox" aria-label="Add">
+              <button type="button" class="spectrum-InfieldButton spectrum-InfieldButton--sizeS spectrum-InfieldButton--top spectrum-Stepper-button" aria-haspopup="listbox" aria-label="Add" tabindex="-1">
                 <div class="spectrum-InfieldButton-fill">
                   <svg class="spectrum-Icon spectrum-UIIcon-ChevronUp50 spectrum-InfieldButton-icon" focusable="false" aria-hidden="true">
                       <use xlink:href="#spectrum-css-icon-Chevron50" />
                     </svg>
                 </div>
               </button>
-              <button type="button" class="spectrum-InfieldButton spectrum-InfieldButton--sizeS spectrum-InfieldButton--bottom spectrum-Stepper-button" aria-haspopup="listbox" aria-label="Add">
+              <button type="button" class="spectrum-InfieldButton spectrum-InfieldButton--sizeS spectrum-InfieldButton--bottom spectrum-Stepper-button" aria-haspopup="listbox" aria-label="Add" tabindex="-1">
                 <div class="spectrum-InfieldButton-fill">
                   <svg class="spectrum-Icon spectrum-UIIcon-ChevronDown50 spectrum-InfieldButton-icon" focusable="false" aria-hidden="true">
                     <use xlink:href="#spectrum-css-icon-Chevron50" />
@@ -59,14 +59,14 @@ examples:
               <input type="number" class="spectrum-Textfield-input spectrum-Stepper-input" min="-2" max="2" step="0.5">
             </div>
             <div class="spectrum-Stepper-buttons">
-              <button type="button" class="spectrum-InfieldButton spectrum-InfieldButton--sizeM spectrum-InfieldButton--top spectrum-Stepper-button" aria-haspopup="listbox" aria-label="Add">
+              <button type="button" class="spectrum-InfieldButton spectrum-InfieldButton--sizeM spectrum-InfieldButton--top spectrum-Stepper-button" aria-haspopup="listbox" aria-label="Add" tabindex="-1">
                 <div class="spectrum-InfieldButton-fill">
                   <svg class="spectrum-Icon spectrum-UIIcon-ChevronUp75 spectrum-InfieldButton-icon" focusable="false" aria-hidden="true">
                       <use xlink:href="#spectrum-css-icon-Chevron75" />
                     </svg>
                 </div>
               </button>
-              <button type="button" class="spectrum-InfieldButton spectrum-InfieldButton--sizeM spectrum-InfieldButton--bottom spectrum-Stepper-button" aria-haspopup="listbox" aria-label="Add">
+              <button type="button" class="spectrum-InfieldButton spectrum-InfieldButton--sizeM spectrum-InfieldButton--bottom spectrum-Stepper-button" aria-haspopup="listbox" aria-label="Add" tabindex="-1">
                 <div class="spectrum-InfieldButton-fill">
                   <svg class="spectrum-Icon spectrum-UIIcon-ChevronDown75 spectrum-InfieldButton-icon" focusable="false" aria-hidden="true">
                     <use xlink:href="#spectrum-css-icon-Chevron75" />
@@ -83,14 +83,14 @@ examples:
               <input type="number" class="spectrum-Textfield-input spectrum-Stepper-input" min="-2" max="2" step="0.5">
             </div>
             <span class="spectrum-Stepper-buttons">
-              <button type="button" class="spectrum-InfieldButton spectrum-InfieldButton--sizeL spectrum-InfieldButton--top spectrum-Stepper-button" aria-haspopup="listbox" aria-label="Add">
+              <button type="button" class="spectrum-InfieldButton spectrum-InfieldButton--sizeL spectrum-InfieldButton--top spectrum-Stepper-button" aria-haspopup="listbox" aria-label="Add" tabindex="-1">
                 <div class="spectrum-InfieldButton-fill">
                   <svg class="spectrum-Icon spectrum-UIIcon-ChevronUp100 spectrum-InfieldButton-icon" focusable="false" aria-hidden="true">
                       <use xlink:href="#spectrum-css-icon-Chevron100" />
                     </svg>
                 </div>
               </button>
-              <button type="button" class="spectrum-InfieldButton spectrum-InfieldButton--sizeL spectrum-InfieldButton--bottom spectrum-Stepper-button" aria-haspopup="listbox" aria-label="Add">
+              <button type="button" class="spectrum-InfieldButton spectrum-InfieldButton--sizeL spectrum-InfieldButton--bottom spectrum-Stepper-button" aria-haspopup="listbox" aria-label="Add" tabindex="-1">
                 <div class="spectrum-InfieldButton-fill">
                   <svg class="spectrum-Icon spectrum-UIIcon-ChevronDown100 spectrum-InfieldButton-icon" focusable="false" aria-hidden="true">
                     <use xlink:href="#spectrum-css-icon-Chevron100" />
@@ -107,14 +107,14 @@ examples:
               <input type="number" class="spectrum-Textfield-input spectrum-Stepper-input" min="-2" max="2" step="0.5">
             </div>
             <span class="spectrum-Stepper-buttons">
-              <button type="button" class="spectrum-InfieldButton spectrum-InfieldButton--sizeXL spectrum-InfieldButton--top spectrum-Stepper-button" aria-haspopup="listbox" aria-label="Add">
+              <button type="button" class="spectrum-InfieldButton spectrum-InfieldButton--sizeXL spectrum-InfieldButton--top spectrum-Stepper-button" aria-haspopup="listbox" aria-label="Add" tabindex="-1">
                 <div class="spectrum-InfieldButton-fill">
                   <svg class="spectrum-Icon spectrum-UIIcon-ChevronUp200 spectrum-InfieldButton-icon" focusable="false" aria-hidden="true">
                       <use xlink:href="#spectrum-css-icon-Chevron200" />
                     </svg>
                 </div>
               </button>
-              <button type="button" class="spectrum-InfieldButton spectrum-InfieldButton--sizeXL spectrum-InfieldButton--bottom spectrum-Stepper-button" aria-haspopup="listbox" aria-label="Add">
+              <button type="button" class="spectrum-InfieldButton spectrum-InfieldButton--sizeXL spectrum-InfieldButton--bottom spectrum-Stepper-button" aria-haspopup="listbox" aria-label="Add" tabindex="-1">
                 <div class="spectrum-InfieldButton-fill">
                   <svg class="spectrum-Icon spectrum-UIIcon-ChevronDown200 spectrum-InfieldButton-icon" focusable="false" aria-hidden="true">
                     <use xlink:href="#spectrum-css-icon-Chevron200" />
@@ -133,14 +133,14 @@ examples:
           <input type="number" class="spectrum-Textfield-input spectrum-Stepper-input" min="-2" max="2" step="0.5">
         </div>
         <span class="spectrum-Stepper-buttons">
-          <button type="button" class="spectrum-InfieldButton spectrum-InfieldButton--sizeM spectrum-InfieldButton--top spectrum-Stepper-button" aria-haspopup="listbox" aria-label="Add">
+          <button type="button" class="spectrum-InfieldButton spectrum-InfieldButton--sizeM spectrum-InfieldButton--top spectrum-Stepper-button" aria-haspopup="listbox" aria-label="Add" tabindex="-1">
             <div class="spectrum-InfieldButton-fill">
               <svg class="spectrum-Icon spectrum-UIIcon-ChevronUp75 spectrum-InfieldButton-icon" focusable="false" aria-hidden="true">
                   <use xlink:href="#spectrum-css-icon-Chevron75" />
                 </svg>
             </div>
           </button>
-          <button type="button" class="spectrum-InfieldButton spectrum-InfieldButton--sizeM spectrum-InfieldButton--bottom spectrum-Stepper-button" aria-haspopup="listbox" aria-label="Add">
+          <button type="button" class="spectrum-InfieldButton spectrum-InfieldButton--sizeM spectrum-InfieldButton--bottom spectrum-Stepper-button" aria-haspopup="listbox" aria-label="Add" tabindex="-1">
             <div class="spectrum-InfieldButton-fill">
               <svg class="spectrum-Icon spectrum-UIIcon-ChevronDown75 spectrum-InfieldButton-icon" focusable="false" aria-hidden="true">
                 <use xlink:href="#spectrum-css-icon-Chevron75" />
@@ -157,14 +157,14 @@ examples:
           <input type="number" class="spectrum-Textfield-input spectrum-Stepper-input" min="-2" max="2" step="0.5">
         </div>
         <span class="spectrum-Stepper-buttons">
-          <button type="button" class="spectrum-InfieldButton spectrum-InfieldButton--sizeM spectrum-InfieldButton--top spectrum-Stepper-button" aria-haspopup="listbox" aria-label="Add">
+          <button type="button" class="spectrum-InfieldButton spectrum-InfieldButton--sizeM spectrum-InfieldButton--top spectrum-Stepper-button" aria-haspopup="listbox" aria-label="Add" tabindex="-1">
             <div class="spectrum-InfieldButton-fill">
               <svg class="spectrum-Icon spectrum-UIIcon-ChevronUp75 spectrum-InfieldButton-icon" focusable="false" aria-hidden="true">
                   <use xlink:href="#spectrum-css-icon-Chevron75" />
                 </svg>
             </div>
           </button>
-          <button type="button" class="spectrum-InfieldButton spectrum-InfieldButton--sizeM spectrum-InfieldButton--bottom spectrum-Stepper-button" aria-haspopup="listbox" aria-label="Add">
+          <button type="button" class="spectrum-InfieldButton spectrum-InfieldButton--sizeM spectrum-InfieldButton--bottom spectrum-Stepper-button" aria-haspopup="listbox" aria-label="Add" tabindex="-1">
             <div class="spectrum-InfieldButton-fill">
               <svg class="spectrum-Icon spectrum-UIIcon-ChevronDown75 spectrum-InfieldButton-icon" focusable="false" aria-hidden="true">
                 <use xlink:href="#spectrum-css-icon-Chevron75" />
@@ -181,14 +181,14 @@ examples:
           <input type="number" class="spectrum-Textfield-input spectrum-Stepper-input" min="-2" max="2" step="0.5">
         </div>
         <span class="spectrum-Stepper-buttons">
-          <button type="button" class="spectrum-InfieldButton spectrum-InfieldButton--sizeM spectrum-InfieldButton--top spectrum-Stepper-button" aria-haspopup="listbox" aria-label="Add">
+          <button type="button" class="spectrum-InfieldButton spectrum-InfieldButton--sizeM spectrum-InfieldButton--top spectrum-Stepper-button" aria-haspopup="listbox" aria-label="Add" tabindex="-1">
             <div class="spectrum-InfieldButton-fill">
               <svg class="spectrum-Icon spectrum-UIIcon-ChevronUp75 spectrum-InfieldButton-icon" focusable="false" aria-hidden="true">
                   <use xlink:href="#spectrum-css-icon-Chevron75" />
                 </svg>
             </div>
           </button>
-          <button type="button" class="spectrum-InfieldButton spectrum-InfieldButton--sizeM spectrum-InfieldButton--bottom spectrum-Stepper-button" aria-haspopup="listbox" aria-label="Add">
+          <button type="button" class="spectrum-InfieldButton spectrum-InfieldButton--sizeM spectrum-InfieldButton--bottom spectrum-Stepper-button" aria-haspopup="listbox" aria-label="Add" tabindex="-1">
             <div class="spectrum-InfieldButton-fill">
               <svg class="spectrum-Icon spectrum-UIIcon-ChevronDown75 spectrum-InfieldButton-icon" focusable="false" aria-hidden="true">
                 <use xlink:href="#spectrum-css-icon-Chevron75" />
@@ -205,14 +205,14 @@ examples:
           <input type="number" class="spectrum-Textfield-input spectrum-Stepper-input" min="-2" max="2" step="0.5">
         </div>
         <span class="spectrum-Stepper-buttons">
-          <button type="button" class="spectrum-InfieldButton spectrum-InfieldButton--sizeM spectrum-InfieldButton--top spectrum-Stepper-button" aria-haspopup="listbox" aria-label="Add">
+          <button type="button" class="spectrum-InfieldButton spectrum-InfieldButton--sizeM spectrum-InfieldButton--top spectrum-Stepper-button" aria-haspopup="listbox" aria-label="Add" tabindex="-1">
             <div class="spectrum-InfieldButton-fill">
               <svg class="spectrum-Icon spectrum-UIIcon-ChevronUp75 spectrum-InfieldButton-icon" focusable="false" aria-hidden="true">
                   <use xlink:href="#spectrum-css-icon-Chevron75" />
                 </svg>
             </div>
           </button>
-          <button type="button" class="spectrum-InfieldButton spectrum-InfieldButton--sizeM spectrum-InfieldButton--bottom spectrum-Stepper-button" aria-haspopup="listbox" aria-label="Add">
+          <button type="button" class="spectrum-InfieldButton spectrum-InfieldButton--sizeM spectrum-InfieldButton--bottom spectrum-Stepper-button" aria-haspopup="listbox" aria-label="Add" tabindex="-1">
             <div class="spectrum-InfieldButton-fill">
               <svg class="spectrum-Icon spectrum-UIIcon-ChevronDown75 spectrum-InfieldButton-icon" focusable="false" aria-hidden="true">
                 <use xlink:href="#spectrum-css-icon-Chevron75" />
@@ -229,14 +229,14 @@ examples:
           <input type="number" class="spectrum-Textfield-input spectrum-Stepper-input" min="-2" max="2" step="0.5">
         </div>
         <span class="spectrum-Stepper-buttons">
-          <button type="button" class="spectrum-InfieldButton spectrum-InfieldButton--sizeM spectrum-InfieldButton--top spectrum-Stepper-button" aria-haspopup="listbox" aria-label="Add">
+          <button type="button" class="spectrum-InfieldButton spectrum-InfieldButton--sizeM spectrum-InfieldButton--top spectrum-Stepper-button" aria-haspopup="listbox" aria-label="Add" tabindex="-1">
             <div class="spectrum-InfieldButton-fill">
               <svg class="spectrum-Icon spectrum-UIIcon-ChevronUp75 spectrum-InfieldButton-icon" focusable="false" aria-hidden="true">
                   <use xlink:href="#spectrum-css-icon-Chevron75" />
                 </svg>
             </div>
           </button>
-          <button type="button" class="spectrum-InfieldButton spectrum-InfieldButton--sizeM spectrum-InfieldButton--bottom spectrum-Stepper-button" aria-haspopup="listbox" aria-label="Add">
+          <button type="button" class="spectrum-InfieldButton spectrum-InfieldButton--sizeM spectrum-InfieldButton--bottom spectrum-Stepper-button" aria-haspopup="listbox" aria-label="Add" tabindex="-1">
             <div class="spectrum-InfieldButton-fill">
               <svg class="spectrum-Icon spectrum-UIIcon-ChevronDown75 spectrum-InfieldButton-icon" focusable="false" aria-hidden="true">
                 <use xlink:href="#spectrum-css-icon-Chevron75" />
@@ -253,14 +253,14 @@ examples:
           <input type="number" class="spectrum-Textfield-input spectrum-Stepper-input" min="-2" max="2" step="0.5" disabled>
         </div>
         <span class="spectrum-Stepper-buttons">
-          <button type="button" class="spectrum-InfieldButton spectrum-InfieldButton--sizeM spectrum-InfieldButton--top spectrum-Stepper-button" aria-haspopup="listbox" aria-label="Add" disabled>
+          <button type="button" class="spectrum-InfieldButton spectrum-InfieldButton--sizeM spectrum-InfieldButton--top spectrum-Stepper-button" aria-haspopup="listbox" aria-label="Add" disabled tabindex="-1">
             <div class="spectrum-InfieldButton-fill">
               <svg class="spectrum-Icon spectrum-UIIcon-ChevronUp75 spectrum-InfieldButton-icon" focusable="false" aria-hidden="true">
                   <use xlink:href="#spectrum-css-icon-Chevron75" />
                 </svg>
             </div>
           </button>
-          <button type="button" class="spectrum-InfieldButton spectrum-InfieldButton--sizeM spectrum-InfieldButton--bottom spectrum-Stepper-button" aria-haspopup="listbox" aria-label="Add" disabled>
+          <button type="button" class="spectrum-InfieldButton spectrum-InfieldButton--sizeM spectrum-InfieldButton--bottom spectrum-Stepper-button" aria-haspopup="listbox" aria-label="Add" disabled tabindex="-1">
             <div class="spectrum-InfieldButton-fill">
               <svg class="spectrum-Icon spectrum-UIIcon-ChevronDown75 spectrum-InfieldButton-icon" focusable="false" aria-hidden="true">
                 <use xlink:href="#spectrum-css-icon-Chevron75" />
@@ -277,14 +277,14 @@ examples:
           <input type="number" class="spectrum-Textfield-input spectrum-Stepper-input" min="-2" max="2" step="0.5">
         </div>
         <span class="spectrum-Stepper-buttons">
-          <button type="button" class="spectrum-InfieldButton spectrum-InfieldButton--sizeM spectrum-InfieldButton--quiet spectrum-InfieldButton--top spectrum-Stepper-button" aria-haspopup="listbox" aria-label="Add">
+          <button type="button" class="spectrum-InfieldButton spectrum-InfieldButton--sizeM spectrum-InfieldButton--quiet spectrum-InfieldButton--top spectrum-Stepper-button" aria-haspopup="listbox" aria-label="Add" tabindex="-1">
             <div class="spectrum-InfieldButton-fill">
               <svg class="spectrum-Icon spectrum-UIIcon-ChevronUp75 spectrum-InfieldButton-icon" focusable="false" aria-hidden="true">
                   <use xlink:href="#spectrum-css-icon-Chevron75" />
                 </svg>
             </div>
           </button>
-          <button type="button" class="spectrum-InfieldButton spectrum-InfieldButton--sizeM spectrum-InfieldButton--quiet spectrum-InfieldButton--bottom spectrum-Stepper-button" aria-haspopup="listbox" aria-label="Add">
+          <button type="button" class="spectrum-InfieldButton spectrum-InfieldButton--sizeM spectrum-InfieldButton--quiet spectrum-InfieldButton--bottom spectrum-Stepper-button" aria-haspopup="listbox" aria-label="Add" tabindex="-1">
             <div class="spectrum-InfieldButton-fill">
               <svg class="spectrum-Icon spectrum-UIIcon-ChevronDown75 spectrum-InfieldButton-icon" focusable="false" aria-hidden="true">
                 <use xlink:href="#spectrum-css-icon-Chevron75" />
@@ -301,14 +301,14 @@ examples:
           <input type="number" class="spectrum-Textfield-input spectrum-Stepper-input" min="-2" max="2" step="0.5">
         </div>
         <span class="spectrum-Stepper-buttons">
-          <button type="button" class="spectrum-InfieldButton spectrum-InfieldButton--sizeM spectrum-InfieldButton--quiet spectrum-InfieldButton--top spectrum-Stepper-button" aria-haspopup="listbox" aria-label="Add">
+          <button type="button" class="spectrum-InfieldButton spectrum-InfieldButton--sizeM spectrum-InfieldButton--quiet spectrum-InfieldButton--top spectrum-Stepper-button" aria-haspopup="listbox" aria-label="Add" tabindex="-1">
             <div class="spectrum-InfieldButton-fill">
               <svg class="spectrum-Icon spectrum-UIIcon-ChevronUp75 spectrum-InfieldButton-icon" focusable="false" aria-hidden="true">
                   <use xlink:href="#spectrum-css-icon-Chevron75" />
                 </svg>
             </div>
           </button>
-          <button type="button" class="spectrum-InfieldButton spectrum-InfieldButton--sizeM spectrum-InfieldButton--quiet spectrum-InfieldButton--bottom spectrum-Stepper-button" aria-haspopup="listbox" aria-label="Add">
+          <button type="button" class="spectrum-InfieldButton spectrum-InfieldButton--sizeM spectrum-InfieldButton--quiet spectrum-InfieldButton--bottom spectrum-Stepper-button" aria-haspopup="listbox" aria-label="Add" tabindex="-1">
             <div class="spectrum-InfieldButton-fill">
               <svg class="spectrum-Icon spectrum-UIIcon-ChevronDown75 spectrum-InfieldButton-icon" focusable="false" aria-hidden="true">
                 <use xlink:href="#spectrum-css-icon-Chevron75" />
@@ -325,14 +325,14 @@ examples:
           <input type="number" class="spectrum-Textfield-input spectrum-Stepper-input" min="-2" max="2" step="0.5">
         </div>
         <span class="spectrum-Stepper-buttons">
-          <button type="button" class="spectrum-InfieldButton spectrum-InfieldButton--sizeM spectrum-InfieldButton--quiet spectrum-InfieldButton--top spectrum-Stepper-button" aria-haspopup="listbox" aria-label="Add">
+          <button type="button" class="spectrum-InfieldButton spectrum-InfieldButton--sizeM spectrum-InfieldButton--quiet spectrum-InfieldButton--top spectrum-Stepper-button" aria-haspopup="listbox" aria-label="Add" tabindex="-1">
             <div class="spectrum-InfieldButton-fill">
               <svg class="spectrum-Icon spectrum-UIIcon-ChevronUp75 spectrum-InfieldButton-icon" focusable="false" aria-hidden="true">
                   <use xlink:href="#spectrum-css-icon-Chevron75" />
                 </svg>
             </div>
           </button>
-          <button type="button" class="spectrum-InfieldButton spectrum-InfieldButton--sizeM spectrum-InfieldButton--quiet spectrum-InfieldButton--bottom spectrum-Stepper-button" aria-haspopup="listbox" aria-label="Add">
+          <button type="button" class="spectrum-InfieldButton spectrum-InfieldButton--sizeM spectrum-InfieldButton--quiet spectrum-InfieldButton--bottom spectrum-Stepper-button" aria-haspopup="listbox" aria-label="Add" tabindex="-1">
             <div class="spectrum-InfieldButton-fill">
               <svg class="spectrum-Icon spectrum-UIIcon-ChevronDown75 spectrum-InfieldButton-icon" focusable="false" aria-hidden="true">
                 <use xlink:href="#spectrum-css-icon-Chevron75" />
@@ -349,14 +349,14 @@ examples:
           <input type="number" class="spectrum-Textfield-input spectrum-Stepper-input" min="-2" max="2" step="0.5">
         </div>
         <span class="spectrum-Stepper-buttons">
-          <button type="button" class="spectrum-InfieldButton spectrum-InfieldButton--sizeM spectrum-InfieldButton--quiet spectrum-InfieldButton--top spectrum-Stepper-button" aria-haspopup="listbox" aria-label="Add">
+          <button type="button" class="spectrum-InfieldButton spectrum-InfieldButton--sizeM spectrum-InfieldButton--quiet spectrum-InfieldButton--top spectrum-Stepper-button" aria-haspopup="listbox" aria-label="Add" tabindex="-1">
             <div class="spectrum-InfieldButton-fill">
               <svg class="spectrum-Icon spectrum-UIIcon-ChevronUp75 spectrum-InfieldButton-icon" focusable="false" aria-hidden="true">
                   <use xlink:href="#spectrum-css-icon-Chevron75" />
                 </svg>
             </div>
           </button>
-          <button type="button" class="spectrum-InfieldButton spectrum-InfieldButton--sizeM spectrum-InfieldButton--quiet spectrum-InfieldButton--bottom spectrum-Stepper-button" aria-haspopup="listbox" aria-label="Add">
+          <button type="button" class="spectrum-InfieldButton spectrum-InfieldButton--sizeM spectrum-InfieldButton--quiet spectrum-InfieldButton--bottom spectrum-Stepper-button" aria-haspopup="listbox" aria-label="Add" tabindex="-1">
             <div class="spectrum-InfieldButton-fill">
               <svg class="spectrum-Icon spectrum-UIIcon-ChevronDown75 spectrum-InfieldButton-icon" focusable="false" aria-hidden="true">
                 <use xlink:href="#spectrum-css-icon-Chevron75" />
@@ -373,14 +373,14 @@ examples:
           <input type="number" class="spectrum-Textfield-input spectrum-Stepper-input" min="-2" max="2" step="0.5">
         </div>
         <span class="spectrum-Stepper-buttons">
-          <button type="button" class="spectrum-InfieldButton spectrum-InfieldButton--sizeM spectrum-InfieldButton--quiet spectrum-InfieldButton--top spectrum-Stepper-button" aria-haspopup="listbox" aria-label="Add">
+          <button type="button" class="spectrum-InfieldButton spectrum-InfieldButton--sizeM spectrum-InfieldButton--quiet spectrum-InfieldButton--top spectrum-Stepper-button" aria-haspopup="listbox" aria-label="Add" tabindex="-1">
             <div class="spectrum-InfieldButton-fill">
               <svg class="spectrum-Icon spectrum-UIIcon-ChevronUp75 spectrum-InfieldButton-icon" focusable="false" aria-hidden="true">
                   <use xlink:href="#spectrum-css-icon-Chevron75" />
                 </svg>
             </div>
           </button>
-          <button type="button" class="spectrum-InfieldButton spectrum-InfieldButton--sizeM spectrum-InfieldButton--quiet spectrum-InfieldButton--bottom spectrum-Stepper-button" aria-haspopup="listbox" aria-label="Add">
+          <button type="button" class="spectrum-InfieldButton spectrum-InfieldButton--sizeM spectrum-InfieldButton--quiet spectrum-InfieldButton--bottom spectrum-Stepper-button" aria-haspopup="listbox" aria-label="Add" tabindex="-1">
             <div class="spectrum-InfieldButton-fill">
               <svg class="spectrum-Icon spectrum-UIIcon-ChevronDown75 spectrum-InfieldButton-icon" focusable="false" aria-hidden="true">
                 <use xlink:href="#spectrum-css-icon-Chevron75" />
@@ -397,14 +397,14 @@ examples:
           <input type="number" class="spectrum-Textfield-input spectrum-Stepper-input" min="-2" max="2" step="0.5">
         </div>
         <span class="spectrum-Stepper-buttons">
-          <button type="button" class="spectrum-InfieldButton spectrum-InfieldButton--sizeM spectrum-InfieldButton--quiet spectrum-InfieldButton--top spectrum-Stepper-button" aria-haspopup="listbox" aria-label="Add">
+          <button type="button" class="spectrum-InfieldButton spectrum-InfieldButton--sizeM spectrum-InfieldButton--quiet spectrum-InfieldButton--top spectrum-Stepper-button" aria-haspopup="listbox" aria-label="Add" tabindex="-1">
             <div class="spectrum-InfieldButton-fill">
               <svg class="spectrum-Icon spectrum-UIIcon-ChevronUp75 spectrum-InfieldButton-icon" focusable="false" aria-hidden="true">
                   <use xlink:href="#spectrum-css-icon-Chevron75" />
                 </svg>
             </div>
           </button>
-          <button type="button" class="spectrum-InfieldButton spectrum-InfieldButton--sizeM spectrum-InfieldButton--quiet spectrum-InfieldButton--bottom spectrum-Stepper-button" aria-haspopup="listbox" aria-label="Add">
+          <button type="button" class="spectrum-InfieldButton spectrum-InfieldButton--sizeM spectrum-InfieldButton--quiet spectrum-InfieldButton--bottom spectrum-Stepper-button" aria-haspopup="listbox" aria-label="Add" tabindex="-1">
             <div class="spectrum-InfieldButton-fill">
               <svg class="spectrum-Icon spectrum-UIIcon-ChevronDown75 spectrum-InfieldButton-icon" focusable="false" aria-hidden="true">
                 <use xlink:href="#spectrum-css-icon-Chevron75" />
@@ -421,14 +421,14 @@ examples:
           <input type="number" class="spectrum-Textfield-input spectrum-Stepper-input" min="-2" max="2" step="0.5" disabled>
         </div>
         <span class="spectrum-Stepper-buttons">
-          <button type="button" class="spectrum-InfieldButton spectrum-InfieldButton--sizeM spectrum-InfieldButton--quiet spectrum-InfieldButton--top spectrum-Stepper-button" aria-haspopup="listbox" aria-label="Add" disabled>
+          <button type="button" class="spectrum-InfieldButton spectrum-InfieldButton--sizeM spectrum-InfieldButton--quiet spectrum-InfieldButton--top spectrum-Stepper-button" aria-haspopup="listbox" aria-label="Add" disabled tabindex="-1">
             <div class="spectrum-InfieldButton-fill">
               <svg class="spectrum-Icon spectrum-UIIcon-ChevronUp75 spectrum-InfieldButton-icon" focusable="false" aria-hidden="true">
                   <use xlink:href="#spectrum-css-icon-Chevron75" />
                 </svg>
             </div>
           </button>
-          <button type="button" class="spectrum-InfieldButton spectrum-InfieldButton--sizeM spectrum-InfieldButton--quiet spectrum-InfieldButton--bottom spectrum-Stepper-button" aria-haspopup="listbox" aria-label="Add" disabled>
+          <button type="button" class="spectrum-InfieldButton spectrum-InfieldButton--sizeM spectrum-InfieldButton--quiet spectrum-InfieldButton--bottom spectrum-Stepper-button" aria-haspopup="listbox" aria-label="Add" disabled tabindex="-1">
             <div class="spectrum-InfieldButton-fill">
               <svg class="spectrum-Icon spectrum-UIIcon-ChevronDown75 spectrum-InfieldButton-icon" focusable="false" aria-hidden="true">
                 <use xlink:href="#spectrum-css-icon-Chevron75" />

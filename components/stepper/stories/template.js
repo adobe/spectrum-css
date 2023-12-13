@@ -88,7 +88,8 @@ export const Template = ({
 							iconName: `ChevronUp${iconSize}`,
 							isDisabled,
 							isQuiet,
-							position: "top"
+							position: "top",
+							tabIndex: "-1"
 						})}
 						${InfieldButton({
 							...globals,
@@ -97,7 +98,8 @@ export const Template = ({
 							iconName: `ChevronDown${iconSize}`,
 							isDisabled,
 							isQuiet,
-							position: "bottom"
+							position: "bottom",
+							tabIndex: "-1"
 						})}
 				  </span>`}
 		</div>

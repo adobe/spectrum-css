@@ -15,6 +15,7 @@ export const Template = ({
   iconName = "Add",
   isDisabled,
   isInvalid,
+  tabIndex = 0,
   ...globals
 }) => {
   const { express } = globals;
@@ -35,10 +36,11 @@ export const Template = ({
         [`${rootClass}--quiet`]: isQuiet,
         "is-invalid": isInvalid,
         ...customClasses.reduce((a, c) => ({ ...a, [c]: true }), {}),
-      })} 
+      })}
       ?disabled=${isDisabled}
       aria-haspopup="listbox"
       type="button"
+      tabIndex=${tabIndex}
     >
     <div class="${rootClass}-fill">
       ${when(iconName, () => Icon({
