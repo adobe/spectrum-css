@@ -29,6 +29,7 @@ chromatic.log
 chromatic-build-*.xml
 chromatic-diagnostics*.json
 chromatic.config.json
+chromatic.log
 
 # Path to NX cache in CI-only (local cache is in node_modules/.cache/nx)
 .nx-cache

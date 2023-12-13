@@ -92,7 +92,7 @@
 					"commands": []
 				}
 			},
-			"report": {
+			"parse": {
 				"cache": true,
 				"dependsOn": ["styles"],
 				"inputs": [
@@ -128,8 +128,8 @@
 					"commands": [
 						"test -f {projectRoot}/index-base.css && FILE_NAME=index-base || FILE_NAME=index; postcss {projectRoot}/${FILE_NAME}.css --output {projectRoot}/dist/index.css",
 						"test -f {projectRoot}/index-base.css && FILE_NAME=index-base || FILE_NAME=index; postcss {projectRoot}/${FILE_NAME}.css --output {projectRoot}/dist/index-vars.css --no-lint",
-						"test -f {projectRoot}/index-base.css && FILE_NAME=index-base || FILE_NAME=index; postcss {projectRoot}/${FILE_NAME}.css --output {projectRoot}/dist/index-base.css --no-lint --flat-variables",
-						"! test -f {projectRoot}/themes/express.css && exit 0 || postcss {projectRoot}/themes/express.css --output {projectRoot}/dist/index-theme.css --no-lint",
+						"! test -f {projectRoot}/index-base.css && exit 0 || postcss {projectRoot}/index-base.css --output {projectRoot}/dist/index-base.css --no-lint",
+						"! test -f {projectRoot}/index-theme.css && exit 0 || postcss {projectRoot}/index-theme.css --output {projectRoot}/dist/index-theme.css --no-lint",
 						"! test -d {projectRoot}/themes && exit 0 || postcss {projectRoot}/themes/*.css --dir {projectRoot}/dist --base {projectRoot}"
 					],
 					"forwardAllArgs": true

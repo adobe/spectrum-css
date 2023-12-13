@@ -97,30 +97,13 @@ module.exports = {
 						test: /\.css$/i,
 						sideEffects: true,
 						use: [
-							{
-								loader: "style-loader",
-								options: {
-									injectType: "linkTag",
-									attributes: {
-										"data-source": "processed",
-									},
+							"style-loader",
+								{
+									loader: 'css-loader',
+									options: {
+										importLoaders: 1
+									}
 								},
-							},
-							{
-								loader: "file-loader",
-								options: {
-									name: "[path][name].[ext][query]",
-									outputPath: (url) => {
-										const cleanURL = url.replace(/_\//g, "");
-										if (/node_modules\/@spectrum-css/.test(url)) {
-											return `assets/css/${cleanURL.replace(/node_modules\/@spectrum-css\//g, "")}`;
-										}
-
-										return `assets/css/${cleanURL}`;
-									},
-									esModule: false,
-								},
-							},
 							{
 								loader: "postcss-loader",
 								options: {

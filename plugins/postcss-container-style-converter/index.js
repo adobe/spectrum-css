@@ -4,7 +4,7 @@
  * @property {string} keyIdentifier - The basename of the identifier to use
  * @property {string|((identifierValue: string, identifierName: string) => string)} [processIdentifier] - A function to process the identifier value
  * @property {boolean} [flatVariables=true] - Whether to create a new rule for each variable or not
- * @property {boolean} [keepSelectors=true] - Whether to keep the original selector or not
+ * @property {boolean} [keepSelectors=true] -
  */
 
 const selectorParser = require("postcss-selector-parser");
@@ -36,8 +36,8 @@ module.exports = ({ prefix = "", keyIdentifier, processIdentifier, keepSelectors
         part
           .toLowerCase()
           .replace(/^(is|u)-/, "")
-          /* @note: this is regex and the s must be escaped, not sure why eslint is throwing an error */
-          /* eslint-disable-next-line no-useless-escape */
+        /* @note: this is regex and the s must be escaped, not sure why eslint is throwing an error */
+        /* eslint-disable-next-line no-useless-escape */
           .replace(new RegExp(`(${prefix}|mod|highcontrast)(-|\s)?`), "")
           .replaceAll(/(\W|-)+/g, " ")
           .trim()
@@ -106,48 +106,16 @@ module.exports = ({ prefix = "", keyIdentifier, processIdentifier, keepSelectors
       return fallbackProcessIdentifier(identifierValue, idenifierName);
     };
 
-    // Tidy up the key identifier for use in the variable name
-    keyIdentifier = keyIdentifier ? clean(keyIdentifier) : undefined;
-
-    const rulesCache = new Map();
-
     return {
       /** @note **IMPORTANT** This MUST be run on exit in order to use the unrolled nested syntax. */
-      OnceExit(root, { Rule }) {
-        /* Walk the rules and combine any that have the same selector */
-        root.walkRules((rule) => {
-          if (rule[processed]) return;
-          rule[processed] = true;
-
-          // Must be a rule on the root
-          if (rule.parent?.type !== "root") return;
-
-          // @todo add support for rules that are the same but in different order
-          const selector = rule.selector.replace(/[\s|\n]+/g, "");
-          if (rulesCache.has(selector)) {
-            const cachedRule = rulesCache.get(selector);
-            cachedRule.walkDecls((cachedDecl) => {
-              rule.walkDecls((decl) => {
-                if (cachedDecl.prop === decl.prop && cachedDecl.value !== decl.value) {
-                  // Merge values up according to the normal cascade
-                  cachedDecl.assign({ value: decl.value });
-                } else {
-                  cachedRule.append(decl);
-                }
-              });
-            });
-
-            rule.remove();
-          } else {
-            rulesCache.set(selector, rule);
-          }
-        });
-
-        /* Walk the container queries looking for style queries */
-        root.walkAtRules("container", (container) => {
+      AtRuleExit: {
+        container: (container, { Rule }) => {
           if (container[processed]) return;
           // Ensure we don't process the same container twice
           container[processed] = true;
+
+          // Tidy up the key identifier for use in the variable name
+          keyIdentifier = keyIdentifier ? clean(keyIdentifier) : undefined;
 
           /** @todo Use a parser when released: https://github.com/postcss/postcss-at-rule-parser */
           const capture = container.params?.match(/(\w+)?\(\s*--(.*?)\s*[:=]\s*(.*?)\s*\)/);
@@ -159,143 +127,117 @@ module.exports = ({ prefix = "", keyIdentifier, processIdentifier, keepSelectors
           if (identiferFunc && identiferFunc !== "style") return;
 
           /* Determine the new selector based on the query parts */
-          /* This holds the conversion mappings for the custom properties */
-          const styleQuerySelector = getNewSelector(identifierValue, identifierName);
+          const newSelector = getNewSelector(identifierValue, identifierName);
 
-          if (!styleQuerySelector) {
+          if (!newSelector) {
             container.warn(container.root, `The identifier "${identifierValue}" is not valid.`);
             return;
           }
 
           /* First look for the rule at the root of the container */
-          let styleQueryRule;
+          let newRule;
 
-          container.root().walkRules(new RegExp(`^.${styleQuerySelector}$`), (rule) => {
-            styleQueryRule = rule;
+          container.root().walkRules((rule) => {
+            if (rule.selector === `.${newSelector}`) {
+              newRule = rule;
+            }
           });
 
-          if (!styleQueryRule) {
+          if (!newRule) {
             /* create a new rule with the new selector */
-            styleQueryRule = new Rule({
-              selector: `.${styleQuerySelector}`,
+            newRule = new Rule({
+              selector: `.${newSelector}`,
               source: container.source,
               raws: {
                 ...container.raws,
                 before: "\n  ",
               },
+              [processed]: true,
             });
 
             // Insert the new rule with system-level mapped values after the container query
             if (flatVariables) {
-              container.parent.insertAfter(container, styleQueryRule);
+              container.parent.insertAfter(container, newRule);
             }
+          } else {
+            newRule[processed] = true;
           }
 
-          /* walk the declarations and copy the values */
-          container.walkDecls((decl) => {
-            if (decl[processed]) return;
-            decl[processed] = true;
+          if (container.nodes && container.nodes.length > 0) {
+            container.nodes.forEach((node) => {
+              if (node[processed]) return;
+              node[processed] = true;
 
-            if (!decl.prop.startsWith("--")) {
-              /* @todo might be nice to add an option to remove/keep any non-custom properties */
-              /* Could probably add the property to a selector that matches it's parent and then map it's value to a property and create a new declaration? */
-              decl.warn(`The property "${decl.prop}" is not a custom property and cannot be converted to a style query fallback using this plugin.`);
+              const clone = node.clone();
 
-              decl.remove();
-              return;
-            }
+              if (node.type === "rule") {
+                /* walk the declarations and copy the values */
+                node.walkDecls((decl) => {
+                  if (decl[processed]) return;
+                  decl[processed] = true;
 
-            // Process rules that match multiple keepSelectors separately to avoid weird var names and edge cases
-            selectorParser((selectorGroup) => {
-              selectorGroup.each((selector) => {
-                /* New variable name by combining selector and property data */
-                const variableName = variableProcessor(selector, decl);
-                if (!variableName) return;
+                  /* @todo might be nice to add an option to remove any non-custom properties */
+                  if (!decl.prop.startsWith("--")) return;
 
-                // Create a new declaration for the system-level mapping
-                const conversionMapping = decl.clone({
-                  prop: variableName,
-                  raws: {
-                    ...decl.raws,
-                    before: "\n    ",
-                  },
+                  // Process rules that match multiple keepSelectors separately to avoid weird var names and edge cases
+                  selectorParser((selectorGroup) => {
+                    selectorGroup.each((selector) => {
+                      /* New variable name by combining selector and property data */
+                      const variableName = variableProcessor(selector, decl);
+                      if (!variableName) return;
+
+                      const newDecl = decl.clone({
+                        prop: variableName,
+                        source: decl.source,
+                        raws: {
+                          ...decl.raws,
+                          before: "\n    ",
+                        },
+                      });
+
+                      let value;
+
+                      // Check for fallbacks
+                      // todo: use valueparser instead of a regex
+                      const fallbackMatch = decl.value.match(
+                        /var\(\s*(.*?)\s*,\s*var\(\s*(.*?)\s*\)\)/,
+                      );
+                      if (fallbackMatch) {
+                        const [, override, fallback] = fallbackMatch;
+
+                        // The final declaration should have the override present
+                        value = `var(${override}, var(${variableName}))`;
+
+                        // The system-level declaration should only have the fallback
+                        newDecl.assign({ value: `var(${fallback})` });
+                      } else {
+                        value = `var(${variableName})`;
+                      }
+
+                      if (value) {
+                        decl.remove();
+                        clone.append(decl.clone({ value }));
+                      }
+
+                      // Remove any existing declarations with the same name
+                      newRule.walkDecls(newDecl.prop, (d) => d.remove());
+                      // Add this new declaration to the new rule
+                      newRule.append(newDecl);
+                    });
+                  }).processSync(decl.parent.selector);
                 });
+              }
 
-                // Add this mapping to the style query rule for toggling
-                styleQueryRule.append(conversionMapping);
-
-                let value;
-
-                // Check for fallbacks
-                // todo: use valueparser instead of a regex
-                const fallbackMatch = decl.value.match(
-                  /var\(\s*(.*?)\s*,\s*var\(\s*(.*?)\s*\)\)/,
-                );
-                if (fallbackMatch) {
-                  const [, override, fallback] = fallbackMatch;
-
-                  // The final declaration should have the override present
-                  value = `var(${override}, var(${variableName}))`;
-
-                  // The system-level declaration should only have the fallback
-                  conversionMapping.assign({ value: `var(${fallback})` });
-                } else {
-                  value = `var(${variableName})`;
-                }
-
-                // Update the original declaration with the new variable name
-                let updatedDecl = false;
-
-                const selectorKey = decl.parent.selector.replace(/[\s|\n]+/g, "");
-                // First check if this selector already exists on the root
-                if (rulesCache.has(selectorKey)) {
-                  const foundRule = rulesCache.get(selector.toString());
-                  let foundChild = false;
-
-                  foundRule.walkDecls(decl.prop, (child) => {
-                    if (value === child.value) foundChild = true;
-                    else {
-                      child.assign({ value });
-                      updatedDecl = true;
-                    }
-                  });
-
-                  if (!foundChild && !updatedDecl) {
-                    foundRule.append(decl.clone({ value }));
-                    updatedDecl = true;
-                  }
-                }
-
-                if (!updatedDecl) {
-                  const newSelectorForMapping = decl.parent.clone({
-                    selector: selector.toString(),
-                    nodes: [],
-                    raws: {
-                      ...decl.parent.raws,
-                      before: "\n  ",
-                    },
-                  });
-
-                  newSelectorForMapping.append(decl.clone({ value }));
-                  root.append(newSelectorForMapping);
-                  rulesCache.set(selector.toString().replace(/[\s|\n]+/g, ""), newSelectorForMapping);
-                }
-              });
-            }).processSync(decl.parent.selector);
-          });
+              if (keepSelectors) {
+                container.parent.insertAfter(container, clone);
+              }
+            });
+          }
 
           /* @todo retain the original container query for use in Chrome & Edge */
           container.remove();
-
-          if (!keepSelectors) {
-            root.walkRules((rule) => {
-              if (rule.parent?.type !== "root") return;
-              if (rule.selector === `.${styleQuerySelector}`) return;
-              rule.remove();
-            });
-          }
-        });
-      }
+        },
+      },
     };
   },
 });

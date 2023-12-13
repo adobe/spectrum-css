@@ -5,153 +5,88 @@
  */
 
 const { existsSync } = require("fs");
-const { relative, sep, join, basename, dirname } = require("path");
+const { sep, join, basename, dirname } = require("path");
 
 const { hideBin } = require("yargs/helpers");
 const yargs = require("yargs");
 
 const fetchComponentMetadata = require("./tasks/fetch-metadata-from-css");
 
+const siteConfig = require("./site/postcss.config");
+
 /** @todo use a more minified-focused build for production after migration */
 // const prodConfig = require("./postcss.prod.config");
 
 /**
- * @description This PostCSS config determines how to build the CSS for each component based on the provided configuration.
- *
- * - 11ty: **file**: { dirname, basename, extname }; **cwd**: project root; **options**: { map: { inline: true } }
- * - Storybook: **file**: string with full path to import; **cwd**: undefined; **options**: {}; **mode**: (matches **env**); **webpackLoaderContext**: { **context**: (matches **cwd**) }
- * - Vanilla postcss: **file**: { dirname, basename, extname }; **cwd**: project root; **options**: { map: { inline: true } }; _input_, _output_ are passed in as args
- *
+ * @description This PostCSS config determines which file
+ * to load based on env variable
  * @type import('postcss-load-config').ConfigFn
  */
-module.exports = ({
-  cwd: rootDir,
-  env = "development",
-  file,
-  options = {},
-  webpackLoaderContext,
-}) => {
+module.exports = ({ cwd, env = "development", file, options = {} }) => {
   const { skipLint = false } = options;
-  const fromStorybook = Boolean(webpackLoaderContext);
 
-  // If we're running in Storybook, we need to get the rootDir from the webpackLoaderContext
-  if (!rootDir && fromStorybook && Object.keys(webpackLoaderContext).includes("rootContext")) {
-    const { rootContext } = webpackLoaderContext;
-    rootDir = rootContext;
-  }
-
-  let inputDirname;
-  if (typeof file === "string") {
-    inputDirname = dirname(file);
-  } else if (typeof file === "object" && file.dirname) {
-    inputDirname = file.dirname;
-  }
-
-  let inputBasename;
-  if (typeof file === "string") {
-    inputBasename = basename(file);
-  } else if (typeof file === "object" && file.basename) {
-    inputBasename = file.basename;
-  }
-
-  // Fetch input from the command line if it's available
-  let {
+  const {
     _: input,
     output,
     lint = !skipLint,
-    flatVariables = true,
     map = options.map ?? { inline: false },
   } = yargs(hideBin(process.argv)).argv;
 
-  // If we didn't get an inputDirname from the file, try to get it from the command line
-  if (!inputDirname && input && input.length) {
-    inputDirname = dirname(input[0]);
-  }
+  const inputDirname = typeof file === "string" ? dirname(file) : file.dirname ?? dirname(input[0]);
+  const inputBasename = typeof file === "string" ? basename(file) : file.basename ?? basename(input[0]);
 
-  // If we didn't get an inputBasename from the file, try to get it from the command line
-  if (!inputBasename && input && input.length) {
-    inputBasename = basename(input[0]);
-  }
+  let prefix = "spectrum";
+  const parts = inputDirname.split(sep);
 
-  // Split the directory into an array of parts
-  const parts = relative(rootDir, inputDirname).split(sep);
-  const isPreCompiled = parts.includes("dist") || parts.includes("node_modules");
-
-  let cwd;
   // Prefer the foldername provided by the NX_TASK_TARGET_PROJECT env variable
   let foldername = process.env.NX_TASK_TARGET_PROJECT;
   if (!foldername || foldername === "storybook" || foldername === "site") {
     // If we didn't get a foldername from the env variable, try to get it from the file
     if (parts.includes("components")) {
       foldername = parts[parts.indexOf("components") + 1];
-      cwd = parts.slice(0, parts.indexOf("components") + 1).join(sep);
-    } else {
-      foldername = parts[0];
     }
   }
 
   // If we got a foldername from the interpretation above, use it to set the paths
-  try {
-    cwd = dirname(
-      require.resolve(`@spectrum-css/${foldername}/package.json`)
-    );
-  } catch (e) { /* empty */ }
+  cwd = foldername ? join(__dirname, "components", foldername) : cwd ?? process.cwd();
+  const from = inputDirname && inputBasename ? join(inputDirname, inputBasename) : join(cwd, "index.css");
+  const to = output ?? join(cwd, "dist/index.css");
 
-  const from = inputDirname && inputBasename ? join(inputDirname, inputBasename) : undefined;
-  const to = output ?? join(inputDirname, "dist", inputBasename);
+  let metadata = fetchComponentMetadata(from);
+  if (!metadata && existsSync(join(cwd, "index.css"))) {
+    metadata = fetchComponentMetadata(join(cwd, "index.css"));
+  }
+
+  if (metadata && Object.keys(metadata).length && metadata.namespace) {
+    prefix = metadata.namespace;
+  }
 
   // Determine if this is an express file
-  const isExpress = Boolean(to && basename(to, ".css") === "express");
-  const isTheme = isExpress || Boolean(to && basename(to, ".css") === "spectrum");
+  const isExpress = Boolean(basename(from, ".css") === "express");
+  const isTheme = isExpress || Boolean(basename(from, ".css") === prefix);
   const isVarsOnly = Boolean(to && basename(to, ".css") === "vars");
-  const isBaseFile = Boolean(to && basename(to, ".css").endsWith("-base")) && !fromStorybook;
 
-  if (isBaseFile) flatVariables = false;
-
-  /* Assets that are in this category are compiled in dist or node_modules */
-  if (isPreCompiled) {
-    return {
-      ...options,
-      map,
-      plugins: {
-        "postcss-selector-replace": parts.includes("vars") || parts.includes("expressvars") ? {
-          before: [":root"],
-          after: parts.includes("expressvars") ? [".spectrum--express"] : [".spectrum"],
-        } : false,
-        "postcss-prefix-selector": parts.includes("expressvars") ? {
-          prefix: ".spectrum--express",
-          transform(_prefix, selector, prefixedSelector) {
-            if (selector.startsWith(".spectrum--express")) return selector;
-            /* Smoosh the selectors together b/c they co-exist */
-            return prefixedSelector.replace(" ", "");
-          },
-        } : false,
-        "@spectrum-tools/postcss-prettier": {
-          overrides: {
-            // Extending this prevents var stacks from line-wrapping (making them easier to diff)
-            printWidth: 250,
-          },
-          // Passing the config path saves a little time b/c it doesn't have to find it
-          configFile: join(__dirname, "..", ".prettierrc")
-        },
-      },
-    };
-  }
-
-  const metadata = fetchComponentMetadata(from) ?? {};
-  const prefix = metadata?.namespace ?? "spectrum";
   let isLegacy = metadata?.legacy ?? false;
 
-  if (!cwd) cwd = process.cwd();
-
-  if (!metadata?.legacy && existsSync(join(cwd, "package.json"))) {
-    try {
-      const { peerDependencies = {} } = require(join(cwd, "package.json"));
-      if (peerDependencies["@spectrum-css/vars"]) isLegacy = true;
-    } catch (e) { /* empty */ }
+  if (
+    (
+      !metadata ||
+      (metadata && typeof metadata.legacy === "undefined")
+    ) &&
+    existsSync(join(cwd, "package.json"))
+  ) {
+    const pkg = require(join(cwd, "package.json"));
+    if (pkg.peerDependencies && pkg.peerDependencies["@spectrum-css/vars"]) {
+      isLegacy = true;
+    }
   }
 
-  const componentName = metadata?.component ?? foldername;
+  const componentName = metadata?.component ?? cwd?.split(sep).pop();
+
+  /* Assets that are in this category are compiled in dist or node_modules */
+  if (parts.includes("dist") || parts.includes("node_modules")) {
+    return siteConfig({ cwd, env, file, options });
+  }
 
   return {
     ...options,
@@ -207,7 +142,7 @@ module.exports = ({
         ? {
           prefix,
           keyIdentifier: componentName,
-          flatVariables,
+          flatVariables: !(to && basename(to, ".css").endsWith("-base")),
           keepSelectors: !(to && basename(to, ".css").endsWith("-theme")),
         }
         : false,
@@ -216,7 +151,7 @@ module.exports = ({
        * @note this is only running on updated components in the themes/express.css file
        * or on the vars.css build
        */
-      "@spectrum-tools/postcss-combine-selectors": (isExpress || isVarsOnly) ? isTheme
+      "@spectrum-tools/postcss-combine-selectors": (isTheme || isVarsOnly) ? isTheme
         ? {
           selector: isExpress ? `.${prefix}--express` : `.${prefix}`,
           customPropertiesOnly: isVarsOnly,
@@ -298,7 +233,7 @@ module.exports = ({
         allowEmptyInput: true,
         cache: true,
         // Note: this fixes the original file
-        fix: false,
+        // fix: true,
         ignorePath: join(__dirname, ".stylelintignore"),
         reportNeedlessDisables: true,
         reportInvalidScopeDisables: true,

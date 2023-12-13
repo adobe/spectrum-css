@@ -48,8 +48,8 @@ export const Picker = ({
 			style=${ifDefined(styleMap(customStyles))}
 			type="button"
 			@click=${() => {
-			updateArgs({ isOpen: !isOpen });
-		}}
+				updateArgs({ isOpen: !isOpen });
+			}}
 		>
 			<span class="${rootClass}-label is-placeholder">${placeholder}</span>
 			${isLoading

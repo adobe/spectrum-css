@@ -194,6 +194,7 @@ async function fetchRenderData(cwd) {
       id: (rawData.id ?? fileBasename ?? folderName)?.toLowerCase().trim(),
       ...rawData,
     });
+    if (cwd.split(path.sep)?.pop() === "accordion") console.log(data);
 
     if (!data) continue;
 

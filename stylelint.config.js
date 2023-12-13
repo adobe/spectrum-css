@@ -13,7 +13,7 @@ module.exports = {
     "@spectrum-tools/stylelint-no-missing-var",
     "@spectrum-tools/stylelint-no-unused-custom-properties",
     "@spectrum-tools/stylelint-no-unknown-custom-properties",
-    // "stylelint-high-performance-animation",
+    "stylelint-high-performance-animation",
   ],
   rules: {
     "at-rule-empty-line-before": [
@@ -107,7 +107,7 @@ module.exports = {
     ],
     "csstools/use-logical": true,
     /** Performance */
-    // "plugin/no-low-performance-animation-properties": [true, { severity: "warning" }],
+    "plugin/no-low-performance-animation-properties": [true, { severity: "warning" }],
     "plugin/selector-bem-pattern": [
       {
         preset: "suit",
