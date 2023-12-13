@@ -1,0 +1,23 @@
+{
+	"name": "@spectrum-tools/postcss-transform-selectors",
+	"version": "2.0.1",
+	"description": "Re-map and transform selectors",
+	"license": "Apache-2.0",
+	"author": "Adobe",
+	"main": "index.js",
+	"peerDependencies": {
+		"postcss": ">=8"
+	},
+	"devDependencies": {
+		"ava": "^5.3.1",
+		"c8": "^8.0.1",
+		"postcss": "^8.4.31"
+	},
+	"keywords": [
+		"css",
+		"custom",
+		"plugin",
+		"postcss",
+		"transforms"
+	]
+}

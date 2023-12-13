@@ -7,10 +7,12 @@ components/*/dist
 tokens/custom-*/*.css
 .storybook/storybook-static/**
 generator
-dist
-*.hbs
 
-site/includes/*.js
+*.hbs
+**/dist
+
+tokens/custom-*/*.css
+storybook-static
 
 .DS_Store*
 ehthumbs.db
@@ -18,3 +20,9 @@ Icon?
 Thumbs.db
 *~
 *.swp
+
+fixtures
+expected
+
+components/*/dist
+CHANGELOG.md

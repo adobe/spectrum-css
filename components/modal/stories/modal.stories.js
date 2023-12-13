@@ -44,6 +44,11 @@ export default {
 				? "migrated"
 				: undefined,
 		},
+		docs: {
+			story: {
+				height: "400px",
+			},
+		}
 	},
 };
 

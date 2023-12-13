@@ -13,20 +13,17 @@ export const Template = ({
 	id,
 	content = [],
 	role,
-}) => {
-	return html`
-		<div
-			class=${classMap({
-				[rootClass]: true,
-				...customClasses.reduce((a, c) => ({ ...a, [c]: true }), {}),
-			})}
-			style=${ifDefined(styleMap({
-				"--mod-opacity-checkerboard-position": backgroundPosition,
-				...customStyles,
-			}))}
-			role=${ifDefined(role)}
-			id=${ifDefined(id)}
-		>
-			${content}
-		</div>`;
-};
+}) => html`<div
+	class=${classMap({
+		[rootClass]: true,
+		...customClasses.reduce((a, c) => ({ ...a, [c]: true }), {}),
+	})}
+	style=${ifDefined(styleMap({
+		"--mod-opacity-checkerboard-position": backgroundPosition,
+		...customStyles,
+	}))}
+	role=${ifDefined(role)}
+	id=${ifDefined(id)}
+>
+	${content}
+</div>`;

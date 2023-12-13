@@ -4,9 +4,6 @@ SpectrumSiteSlug: https://spectrum.adobe.com/page/swatch/
 description: |
   - Set `--spectrum-picked-color` to customize the swatch fill background color.
 sections:
-  - name: Custom Properties API
-    description: |
-      This component can be modified via its `--mod-*` prefixed custom properties. A list of those prefixed custom properties can be found <a href="https://github.com/adobe/spectrum-css/tree/main/components/swatch/metadata/mods.md">here</a>.
 examples:
   - id: swatch-sizing
     name: Sizing
@@ -107,7 +104,7 @@ examples:
     markup: |
       <div class="spectrum-Swatch spectrum-Swatch--sizeM is-image" tabindex="0">
         <div class="spectrum-Swatch-fill">
-          <img src="img/example-ava.jpg" class="spectrum-Swatch-image">
+          <img src="images/example-ava.jpg" class="spectrum-Swatch-image">
         </div>
       </div>
   - id: swatch-gradient

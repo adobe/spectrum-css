@@ -13,8 +13,7 @@ export const Template = ({
 		"--spectrum-picked-color": "rgb(255, 0, 0)",
 	},
 	...globals
-}) => {
-	return html`
+}) => html`
     <div class=${classMap({
 			[rootClass]: true,
 			"is-disabled": isDisabled,
@@ -43,5 +42,4 @@ export const Template = ({
       <input type="range" class="${rootClass}-slider" aria-label="hue" min="0" max="360" step="">
     </div>
   </div>
-  `;
-};
+`;

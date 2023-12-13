@@ -1,0 +1,31 @@
+/*!
+ * Copyright 2023 Adobe. All rights reserved.
+ *
+ * This file is licensed to you under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License. You may obtain a copy
+ * of the License at <http://www.apache.org/licenses/LICENSE-2.0>
+ *
+ * Unless required by applicable law or agreed to in writing, software distributed under
+ * the License is distributed on an "AS IS" BASIS, WITHOUT WARRANTIES OR REPRESENTATIONS
+ * OF ANY KIND, either express or implied. See the License for the specific language
+ * governing permissions and limitations under the License.
+ */
+
+/* --- LEGACY EXPRESS TOKENS --- */
+@import "@spectrum-css/expressvars/dist/spectrum-global.css";
+@import "@spectrum-css/expressvars/dist/spectrum-light.css" ((prefers-color-scheme: light) or (prefers-color-scheme: no-preference));
+@import "@spectrum-css/expressvars/dist/spectrum-dark.css" (prefers-color-scheme: dark);
+@import "@spectrum-css/expressvars/dist/spectrum-darkest.css";
+@import "@spectrum-css/expressvars/dist/spectrum-medium.css";
+@import "@spectrum-css/expressvars/dist/spectrum-large.css" (width <= 961px);
+
+/* --- LEGACY TOKENS --- */
+@import "@spectrum-css/vars/dist/spectrum-global.css";
+@import "@spectrum-css/vars/dist/spectrum-light.css" ((prefers-color-scheme: light) or (prefers-color-scheme: no-preference));
+@import "@spectrum-css/vars/dist/spectrum-dark.css" (prefers-color-scheme: dark);
+@import "@spectrum-css/vars/dist/spectrum-darkest.css";
+@import "@spectrum-css/vars/dist/spectrum-medium.css";
+@import "@spectrum-css/vars/dist/spectrum-large.css" (width <= 961px);
+
+/* --- MODERN TOKENS --- */
+@import "@spectrum-css/tokens/dist/index.css";

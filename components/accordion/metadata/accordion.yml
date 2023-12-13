@@ -1,10 +1,8 @@
 name: Accordion
 description: "While remaining backward compatible, the recommended markup has been updated to implement the [WAI-ARIA 1.1 Accordion design pattern](https://www.w3.org/TR/wai-aria-practices-1.1/#accordion) to better support accessibility for keyboard and screen reader users."
+status: Contribution
 
 sections:
-  - name: Custom Properties API
-    description: |
-      This component can be modified via its `--mod-*` prefixed custom properties. A list of those prefixed custom properties can be found <a href="https://github.com/adobe/spectrum-css/tree/main/components/accordion/metadata/mods.md">here</a>.
   - name: Migration Guide
     description: |
       ### T-shirt sizing

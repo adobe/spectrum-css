@@ -10,7 +10,7 @@ OF ANY KIND, either express or implied. See the License for the specific languag
 governing permissions and limitations under the License.
 */
 
-@import '../overlay/index.css';
+@import '@spectrum-css/commons/overlay.css';
 
 .spectrum-Underlay {
   --spectrum-underlay-background-entry-animation-delay: var(--spectrum-animation-duration-0);
@@ -26,18 +26,18 @@ governing permissions and limitations under the License.
 }
 
 .spectrum-Underlay {
-  @inherit: %spectrum-overlay;
+  @extend %spectrum-overlay;
 
   position: fixed;
-  inset-block: 0;
-  inset-inline: 0;
-
-  background-color: var(--mod-underlay-background-color, var(--spectrum-underlay-background-color));
 
   /* Float above things by default */
   z-index: 1;
+  inset-block: 0;
+  inset-inline: 0;
 
   overflow: hidden;
+
+  background-color: var(--mod-underlay-background-color, var(--spectrum-underlay-background-color));
 
   /* Exit animations */
   transition: opacity var(--mod-underlay-background-exit-animation-duration, var(--spectrum-underlay-background-exit-animation-duration))
@@ -50,7 +50,7 @@ governing permissions and limitations under the License.
 }
 
 .spectrum-Underlay.is-open {
-  @inherit: %spectrum-overlay--open;
+  @extend %spectrum-overlay--open;
 
   /* Entry animations */
   transition: opacity var(--mod-underlay-background-entry-animation-duration, var(--spectrum-underlay-background-entry-animation-duration))

@@ -9,19 +9,45 @@ OF ANY KIND, either express or implied. See the License for the specific languag
 governing permissions and limitations under the License.
 */
 
-/* eslint-disable no-console */
-
-const { existsSync, mkdirSync } = require("fs");
+const { existsSync, mkdirSync, readdirSync } = require("fs");
 const { writeFile, readFile } = require("fs").promises;
-const path = require("path");
+const { join, sep, dirname } = require("path");
 
 const fg = require("fast-glob");
-const prettier = require("prettier");
+const postcss = require("postcss");
 
 const yargs = require("yargs");
 const { hideBin } = require("yargs/helpers");
 
 require("colors");
+
+/**
+ * A global object to store the pathing information for the script
+ */
+const pathing = {
+  root: join(__dirname, ".."),
+  components: join(__dirname, "..", "components"),
+};
+
+/**
+ * A global list of all the packages available to compare
+ */
+const allPackages = [
+  ...(readdirSync(pathing.components, { withFileTypes: true })
+    ?.filter((file) => file.isDirectory())
+    .map((file) => file.name) ?? []),
+  "ui-icons",
+  "tokens",
+];
+
+/**
+ * A global object for console logging different types of messages
+ * in a consistent way
+ */
+const log = {
+  error: (err) => console.trace(`${err}\n\n`),
+  write: (msg) => process.stdout.write(msg),
+};
 
 /**
  * This regex will find all the custom properties that start with --mod-
@@ -30,104 +56,125 @@ require("colors");
  * sub-component passthrough properties that should not be listed as mods.
  */
 async function extractProperties(
-	filepath,
-	regex = /(--mod-(?:\w|-)+)(?!:|\w|-)/g
+  filepath,
+  config = new Map(),
 ) {
-	/* Read the file and find all the matches */
-	const content = await readFile(filepath, "utf-8").catch((err) => {
-		console.log(err);
-	});
+  if (!filepath) return Promise.reject("No file specified.");
+  if (config.size === 0) return Promise.reject("No config specified.");
 
-	if (!content) return [];
+  /* Read the file and find all the matches */
+  const root = await readFile(filepath, "utf-8").then(result => {
+    return postcss.parse(result, { from: filepath });
+  }).catch((err) => {
+    return Promise.reject(err);
+  });
 
-	// assign the matches to an array through the spread operator and map the results to the first capture group
-	return [...content.matchAll(regex)].map((match) => match[1]) ?? [];
+  const metadata = new Map([...config.keys()].map((key) => [key, new Set()]));
+
+  root.walkDecls((decl) => {
+    for (const [key, regexes] of config.entries()) {
+      for (const regex of regexes) {
+        // Start by testing the property
+        if (regex.test(decl.prop)) {
+          metadata.set(key, metadata.get(key).add(decl.prop));
+        }
+
+        // Next, test the value for any property references
+        if (!decl.value.includes("var(")) continue;
+
+        const foundProps = decl.value.matchAll(/var\((--[a-z|0-9|-]+)[)|,]/g);
+        [...foundProps].forEach((found) => {
+          const prop = found[1];
+          if (regex.test(prop)) {
+            metadata.set(key, metadata.get(key).add(prop));
+          }
+        });
+      }
+    }
+  });
+
+  return metadata;
 }
 
-async function main(inputs) {
-	// Default to all component directories
-	if (inputs.length === 0) {
-		inputs = await fg("components/*", {
-			onlyDirectories: true,
-			absolute: true,
-		});
-	}
+async function processPackage(packageName) {
+  if (!packageName) return Promise.reject("No package specified.");
 
-	/* Loop over the directories passed in as arguments */
-	for (const dir of inputs) {
-		/* Remove duplicates using a Set and sort the results (default is alphabetical) */
-		const found = new Set();
+  let dir = dirname(require.resolve(`@spectrum-css/${packageName}/package.json`));
+  if (!dir && existsSync(join(pathing.root, packageName))) {
+    dir = join(pathing.root, packageName);
+  } else if (!dir && existsSync(join(pathing.components, packageName))) {
+    dir = join(pathing.components, packageName);
+  }
 
-		/* Loop over the directories in the components folder and find all the first-level css files */
-		for (const filepath of await fg("*.css", {
-			cwd: path.join(dir, "dist"),
-			absolute: true,
-			/* Skip the vars and tokens files */
-			ignore: [
-				"**/node_modules/**",
-				"**/metadata/**",
-				"**/*vars/*.css",
-				"**/tokens/*.css",
-			],
-			onlyFiles: true,
-		})) {
-			const matches = await extractProperties(filepath);
-			matches.forEach((match) => found.add(match));
-		}
+  /* Remove duplicates using a Set and sort the results (default is alphabetical) */
+  const metadata = {};
 
-		if (found.size === 0) {
-			console.log(" ");
-			console.log(
-				`${`⚠️`.yellow}  No modifiable custom properties in ${
-					`@spectrum-css/${dir.split(path.sep).pop()}`.magenta
-				}`
-			);
-			continue;
-		}
+  /* Loop over the directories in the components folder and find all the first-level css files */
+  const files = await fg("*.css", {
+    cwd: join(dir, "dist"),
+    absolute: true,
+    /* Skip the vars and tokens files */
+    ignore: [
+      "**/node_modules/**",
+      "**/metadata/**",
+      "themes/*.css",
+      "index-theme.css",
+    ],
+    onlyFiles: true,
+  });
 
-		/* -- Markdown Output -- */
-		/* Output as a markdown table in the metadata folder for site rendering */
-		let destPath = `${dir}/metadata`;
+  for (const filepath of files) {
+    const matches = await extractProperties(filepath, new Map([
+      ["mods", [/^--mod-/]],
+      ["internal", [new RegExp(`^--spectrum-${packageName}-`)]],
+      ["globals", [new RegExp(`^--spectrum-(?!${packageName})`)]],
+      ["a11y", [/^--highcontrast-/g]],
+      ["other", [/^--(?!system|mod|spectrum|highcontrast)-/]],
+    ]));
 
-		// If the metadata folder doesn't exist, create it
-		if (!existsSync(destPath)) mkdirSync(destPath);
+    matches.forEach((value, key) => {
+      if (!metadata[key]) metadata[key] = [];
+      value.forEach((match) => metadata[key].push(match));
+    });
+  }
 
-		let formattedResults = [
-			"| Modifiable Custom Properties |\n| --- |",
-			...[...found].sort().map((result) => `| \`${result}\` |`),
-		];
+  const hasProperties = Object.values(metadata).some((value) => value.length > 0);
 
-		let finalResult = await prettier.format(formattedResults.join("\n"), {
-			parser: "markdown",
-		});
+  if (!hasProperties) {
+    log.write(
+      `${"⚠️".yellow}  No custom properties in ${`@spectrum-css/${dir.split(sep).pop()}`.magenta
+      }`
+    );
+    return;
+  }
 
-		// Write the results to a markdown file in the metadata folder
-		await writeFile(`${destPath}/mods.md`, finalResult, (err) => {
-			if (err) throw err;
-		});
+  /* Remove duplicates using a Set and sort the results (default is alphabetical) */
+  Object.entries(metadata).forEach(([key, value]) => {
+    metadata[key] = [...new Set(value)].sort();
+  });
 
-		/* -- JSON Output -- */
-		destPath = `${dir}/dist`;
-		// If the dist folder doesn't exist yet, create it
-		if (!existsSync(destPath)) mkdirSync(destPath);
+  /* -- JSON Output -- */
+  const destPath = `${dir}/dist`;
+  // If the dist folder doesn't exist yet, create it
+  if (!existsSync(destPath)) mkdirSync(destPath);
 
-		formattedResults = JSON.stringify({ mods: [...found].sort() }, null, 2);
-		finalResult = await prettier.format(formattedResults, {
-			parser: "json",
-		});
-
-		// Write the JSON output to the dist folder
-		await writeFile(`${destPath}/mods.json`, finalResult, (err) => {
-			if (err) throw err;
-		});
-	}
+  // Write the JSON output to the dist folder
+  return writeFile(`${destPath}/metadata.json`, JSON.stringify(metadata, null, 2));
 }
 
-const { _ = [] } = yargs(hideBin(process.argv)).argv;
+async function main(packages) {
+  // Default to all component directories
+  if (packages.length === 0) packages = allPackages;
 
-main(_).catch((err) => {
-	console.error(err);
-	process.exit(1);
+  /* Loop over the directories passed in as arguments */
+  return Promise.all(packages.map(processPackage));
+}
+
+let {
+  _: packages,
+} = yargs(hideBin(process.argv)).argv;
+
+main(packages).catch((err) => {
+  log.error(err);
+  process.exit(1);
 });
-
-/* eslint-enable no-console */

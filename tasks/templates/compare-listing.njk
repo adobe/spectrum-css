@@ -6,18 +6,16 @@
         <meta charset="utf-8"/>
         <meta name="theme-color" content="#e1251b" />
 
-        <!-- Load all component stylesheets -->
-        {% for component in allComponents -%}
-            {% if component not in ["commons", "overlay"] %}
-                <link rel="stylesheet" type="text/css" href="{{ root }}components/{{ component }}/dist/index.css"/>
-            {% endif %}
+        <!-- Load all component stylesheets used in rendering below -->
+        {% for component in ["typography", "table", "badge"] -%}
+            <link rel="stylesheet" type="text/css" href="{{ root }}/components/{{ component }}/dist/index.css"/>
         {%- endfor -%}
 
-        <link rel="stylesheet" type="text/css" href="{{ root }}node_modules/@spectrum-css/vars/dist/spectrum-global.css"/>
-        <link rel="stylesheet" type="text/css" href="{{ root }}node_modules/@spectrum-css/vars/dist/spectrum-light.css"/>
-        <link rel="stylesheet" type="text/css" href="{{ root }}node_modules/@spectrum-css/vars/dist/spectrum-medium.css"/>
+        <link rel="stylesheet" type="text/css" href="{{ root }}/node_modules/@spectrum-css/vars/dist/spectrum-global.css"/>
+        <link rel="stylesheet" type="text/css" href="{{ root }}/node_modules/@spectrum-css/vars/dist/spectrum-light.css"/>
+        <link rel="stylesheet" type="text/css" href="{{ root }}/node_modules/@spectrum-css/vars/dist/spectrum-medium.css"/>
 
-        <link rel="stylesheet" type="text/css" href="{{ root }}tokens/dist/index.css"/>
+        <link rel="stylesheet" type="text/css" href="{{ root }}/tokens/dist/index.css"/>
     </head>
     <body class="spectrum spectrum--light spectrum--medium spectrum-Typography" style="height: 100vh; position: fixed;">
         <h1 class="spectrum-Heading spectrum-Heading--sizeXL" style="--mod-heading-margin-end: 2em;">Compiled asset comparison</h1>

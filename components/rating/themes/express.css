@@ -1,4 +1,4 @@
-/*
+/*!
 Copyright 2023 Adobe. All rights reserved.
 This file is licensed to you under the Apache License, Version 2.0 (the "License");
 you may not use this file except in compliance with the License. You may obtain a copy
@@ -9,11 +9,15 @@ OF ANY KIND, either express or implied. See the License for the specific languag
 governing permissions and limitations under the License.
 */
 
-@container (--system: express) {
-  .spectrum-Rating {
-    --spectrum-rating-icon-color-default: var(--spectrum-neutral-content-color-default);
-    --spectrum-rating-icon-color-hover: var(--spectrum-neutral-content-color-hover);
-    --spectrum-rating-icon-color-down: var(--spectrum-neutral-content-color-down);
-    --spectrum-rating-icon-color-key-focus: var(--spectrum-neutral-content-color-key-focus);
-  }
+@import "./spectrum.css";
+
+/* stylelint-disable spectrum-tools/no-unused-custom-properties */
+@container style(--system: express) {
+	.spectrum-Rating {
+		--spectrum-rating-icon-color-default: var(--spectrum-neutral-content-color-default);
+		--spectrum-rating-icon-color-hover: var(--spectrum-neutral-content-color-hover);
+		--spectrum-rating-icon-color-down: var(--spectrum-neutral-content-color-down);
+		--spectrum-rating-icon-color-key-focus: var(--spectrum-neutral-content-color-key-focus);
+	}
 }
+/* stylelint-enable spectrum-tools/no-unused-custom-properties */

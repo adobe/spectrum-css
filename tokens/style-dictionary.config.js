@@ -18,10 +18,8 @@ const generateFileConfig = require("./utilities/style-dictionary.utils.js");
 const StyleDictionary = require("style-dictionary");
 const CSSSetsFormatter = require("style-dictionary-sets").CSSSetsFormatter;
 const NameKebabTransfom = require("style-dictionary-sets").NameKebabTransfom;
-const AttributeSetsTransform =
-	require("style-dictionary-sets").AttributeSetsTransform;
-const CSSOpenTypeTransform =
-	require("style-dictionary-sets").CSSOpenTypeTransform;
+const AttributeSetsTransform = require("style-dictionary-sets").AttributeSetsTransform;
+const CSSOpenTypeTransform = require("style-dictionary-sets").CSSOpenTypeTransform;
 
 StyleDictionary.registerTransform(CSSOpenTypeTransform);
 StyleDictionary.registerTransform(NameKebabTransfom);
@@ -38,35 +36,29 @@ const tokensDir = path.dirname(tokensPath);
 const setNames = ["desktop", "mobile", "light", "dark", "darkest"];
 
 module.exports = {
-	source: [`${tokensDir}/src/*.json`],
-	platforms: {
-		CSS: {
-			buildPath: "dist/css/",
-			transforms: [
-				AttributeSetsTransform.name,
-				NameKebabTransfom.name,
-				CSSOpenTypeTransform.name,
-			],
-			prefix: "spectrum",
-			files: [
-				generateFileConfig(),
-				...["spectrum", "express"].map((subSystemName) =>
-					generateFileConfig({ subSystemName })
-				),
-				...setNames.map((context) => generateFileConfig({ setName: context })),
-				...setNames.map((context) =>
-					generateFileConfig({
-						setName: context,
-						subSystemName: "spectrum",
-					})
-				),
-				...setNames.map((context) =>
-					generateFileConfig({
-						setName: context,
-						subSystemName: "express",
-					})
-				),
-			],
-		},
-	},
+    source: [`${tokensDir}/src/*.json`],
+    platforms: {
+        CSS: {
+            buildPath: "dist/css/",
+            transforms: [AttributeSetsTransform.name, NameKebabTransfom.name, CSSOpenTypeTransform.name],
+            prefix: "spectrum",
+            files: [
+                generateFileConfig(),
+                ...["spectrum", "express"].map((subSystemName) => generateFileConfig({ subSystemName })),
+                ...setNames.map((context) => generateFileConfig({ setName: context })),
+                ...setNames.map((context) =>
+                    generateFileConfig({
+                        setName: context,
+                        subSystemName: "spectrum",
+                    }),
+                ),
+                ...setNames.map((context) =>
+                    generateFileConfig({
+                        setName: context,
+                        subSystemName: "express",
+                    }),
+                ),
+            ],
+        },
+    },
 };

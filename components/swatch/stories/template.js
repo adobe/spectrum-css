@@ -20,17 +20,8 @@ export const Template = ({
 	swatchColor = "rgb(174, 216, 230)",
 	customStyles = {},
 	id,
-	...globals
 }) => {
-	const { express } = globals;
-  	const [_, updateArgs] = useArgs();
-
-	try {
-		if (!express) import(/* webpackPrefetch: true */ "../themes/spectrum.css");
-		else import(/* webpackPrefetch: true */ "../themes/express.css");
-	} catch (e) {
-		console.warn(e);
-	}
+  	const [, updateArgs] = useArgs();
 
 	return html`
 		<div

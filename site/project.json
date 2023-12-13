@@ -1,0 +1,68 @@
+{
+    "$schema": "../node_modules/nx/schemas/project-schema.json",
+    "name": "docs",
+    "tags": ["tooling"],
+    "implicitDependencies": ["tag:component", "ui-icons", "storybook"],
+    "namedInputs": {
+        "core": ["{projectRoot}/data", "{projectRoot}/content"],
+        "tools": [
+            "{projectRoot}/_includes",
+            "{projectRoot}/_layouts",
+            "{projectRoot}/utils",
+            "{projectRoot}/.eleventy.js"
+        ]
+    },
+    "targets": {
+        "clean": {},
+        "build": {
+            "dependsOn": ["^build"],
+            "options": {
+                "cwd": "{projectRoot}",
+                "commands": ["eleventy"]
+            }
+        },
+        "start": {
+            "dependsOn": ["^build"],
+            "inputs": ["core", "tools"],
+            "outputs": ["{projectRoot}/dist"],
+            "executor": "nx:run-commands",
+            "options": {
+                "cwd": "{projectRoot}",
+                "commands": ["eleventy --serve --incremental"]
+            }
+        },
+        "lint": {
+            "inputs": ["core", "tools", "linter"],
+            "options": {
+                "commands": [
+                    "stylelint {projectRoot}/content/styles/*.css",
+                    "eslint --no-error-on-unmatched-pattern {projectRoot}/.eleventy.js {projectRoot}/**/*.{js,json} {projectRoot}/*.json"
+                ]
+            }
+        },
+        "format": {
+            "inputs": ["core", "tools", "linter"],
+            "options": {
+                "commands": [
+                    "stylelint {projectRoot}/content/styles/*.css --fix",
+                    "eslint --no-error-on-unmatched-pattern {projectRoot}/.eleventy.js {projectRoot}/**/*.{js,json} {projectRoot}/*.json --fix",
+                    "prettier --no-error-on-unmatched-pattern --write {projectRoot}/**/*.{js,json,yml,md} {projectRoot}/*.{js,json,yml,md}"
+                ]
+            }
+        },
+        "profile": {
+            "dependsOn": ["build"],
+            "inputs": ["{projectRoot}/dist/assets/styles/index.css"],
+            "outputs": ["{workspaceRoot}/dist/profile.json"],
+            "executor": "nx:run-commands",
+            "options": {
+                "commands": ["cat {inputs} | wallace --json > {projectRoot}/dist/profile.json"]
+            },
+            "configurations": {
+                "log": {
+                    "commands": ["cat {inputs} | wallace"]
+                }
+            }
+        }
+    }
+}

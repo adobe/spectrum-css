@@ -15,7 +15,7 @@ governing permissions and limitations under the License.
  * .spectrum-Closebutton::after is the Focus ring
  */
 
-@import "../commons/basebutton-coretokens.css";
+@import "@spectrum-css/commons/basebutton.css";
 
 .spectrum-CloseButton {
   /* Hardcoded tokens */
@@ -105,8 +105,8 @@ governing permissions and limitations under the License.
 
     &:focus-visible {
       &::after {
-        forced-color-adjust: none;
         margin: var(--mod-closebutton-focus-indicator-gap, var(--spectrum-closebutton-focus-indicator-gap));
+        forced-color-adjust: none;
         transition:
         opacity var(--mod-closebutton-animation-duration, var(--spectrum-closebutton-animation-duration)) ease-out,margin var(--mod-closebutton-animation-duraction, var(--spectrum-closebutton-animation-duration)) ease-out;
       }
@@ -127,51 +127,54 @@ governing permissions and limitations under the License.
 }
 
 a.spectrum-CloseButton {
-  @inherit: %spectrum-AnchorButton;
+  @extend %spectrum-AnchorButton;
 }
 
 .spectrum-CloseButton {
-  @inherit: %spectrum-BaseButton;
-
-  block-size: var(--mod-closebutton-height, var(--spectrum-closebutton-height));
-  inline-size: var(--mod-closebutton-width, var(--spectrum-closebutton-width));
+  @extend %spectrum-BaseButton;
 
   position: relative;
+
+  display: inline-flex;
+  flex-direction: row;
+  align-items: center;
+  align-self: var(--mod-closebutton-align-self);
+  justify-content: center;
+
+  inline-size: var(--mod-closebutton-width, var(--spectrum-closebutton-width));
+  block-size: var(--mod-closebutton-height, var(--spectrum-closebutton-height));
+  margin-block-start: var(--mod-closebutton-margin-top);
+  margin-inline: var(--mod-closebutton-margin-inline);
+  padding: 0;
 
   color: inherit;
 
   border-color: transparent;
-  border-radius: var(--mod-closebutton-border-radius, var(--spectrum-closebutton-border-radius));
   border-width: 0;
-
-  justify-content: center;
-  align-items: center;
-  flex-direction: row;
-  display: inline-flex;
-  padding: 0;
+  border-radius: var(--mod-closebutton-border-radius, var(--spectrum-closebutton-border-radius));
 
   transition: border-color var(--mod-closebutton-animation-duration, var(--spectrum-closebutton-animation-duration)) ease-in-out;
-
-  margin-inline: var(--mod-closebutton-margin-inline);
-  margin-block-start: var(--mod-closebutton-margin-top);
-  align-self: var(--mod-closebutton-align-self);
 
   &::after {
     pointer-events: none;
     content: '';
+
     position: absolute;
+    inset-block-start: 0;
+    inset-block-end: 0;
     inset-inline-start: 0;
     inset-inline-end: 0;
-    inset-block-end: 0;
-    inset-block-start: 0;
+
     margin: calc(var(--mod-closebutton-focus-indicator-gap, var(--spectrum-closebutton-focus-indicator-gap)) * -1);
+
     border-radius: calc(var(--mod-closebutton-size, var(--spectrum-closebutton-size)) + var(--mod-closebutton-focus-indicator-gap, var(--spectrum-closebutton-focus-indicator-gap)));
+
     transition: box-shadow var(--mod-closebutton-animation-duration, var(--spectrum-closebutton-animation-duration)) ease-in-out;
   }
 
   &:focus-visible {
-    box-shadow: none;
     outline: none;
+    box-shadow: none;
 
     &::after {
       box-shadow:

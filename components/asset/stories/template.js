@@ -1,9 +1,9 @@
 import { html, svg } from "lit";
 import { classMap } from "lit/directives/class-map.js";
 import { ifDefined } from "lit/directives/if-defined.js";
+import { styleMap } from "lit/directives/style-map.js";
 
 import "../index.css";
-import "../skin.css";
 
 export const Template = ({
 	rootClass = "spectrum-Asset",
@@ -11,7 +11,7 @@ export const Template = ({
 	preset,
 	id,
 	customClasses = [],
-	// ...globals
+	customStyles = {},
 }) => {
 	let visual;
 	if (preset === "file") {
@@ -22,16 +22,21 @@ export const Template = ({
     </svg>`;
 	} else if (preset === "folder") {
 		visual = svg`
-      <svg viewBox="0 0 32 32" class="${rootClass}-folder" width="10">
-        <path class="${rootClass}-folderBackground" d="M3,29.5c-1.4,0-2.5-1.1-2.5-2.5V5c0-1.4,1.1-2.5,2.5-2.5h10.1c0.5,0,1,0.2,1.4,0.6l3.1,3.1c0.2,0.2,0.4,0.3,0.7,0.3H29c1.4,0,2.5,1.1,2.5,2.5v18c0,1.4-1.1,2.5-2.5,2.5H3z"></path>
-        <path class="${rootClass}-folderOutline" d="M29,6H18.3c-0.1,0-0.2,0-0.4-0.2l-3.1-3.1C14.4,2.3,13.8,2,13.1,2H3C1.3,2,0,3.3,0,5v22c0,1.6,1.3,3,3,3h26c1.7,0,3-1.4,3-3V9C32,7.3,30.7,6,29,6z M31,27c0,1.1-0.9,2-2,2H3c-1.1,0-2-0.9-2-2V7h28c1.1,0,2,0.9,2,2V27z"></path>
-      </svg>`;
+        <svg viewBox="0 0 32 32" class="${rootClass}-folder">
+          <path class="${rootClass}-folderBackground" d="M3,29.5c-1.4,0-2.5-1.1-2.5-2.5V5c0-1.4,1.1-2.5,2.5-2.5h10.1c0.5,0,1,0.2,1.4,0.6l3.1,3.1c0.2,0.2,0.4,0.3,0.7,0.3H29c1.4,0,2.5,1.1,2.5,2.5v18c0,1.4-1.1,2.5-2.5,2.5H3z"></path>
+          <path class="${rootClass}-folderOutline" d="M29,6H18.3c-0.1,0-0.2,0-0.4-0.2l-3.1-3.1C14.4,2.3,13.8,2,13.1,2H3C1.3,2,0,3.3,0,5v22c0,1.6,1.3,3,3,3h26c1.7,0,3-1.4,3-3V9C32,7.3,30.7,6,29,6z M31,27c0,1.1-0.9,2-2,2H3c-1.1,0-2-0.9-2-2V7h28c1.1,0,2,0.9,2,2V27z"></path>
+        </svg>`;
 	} else if (image) {
 		visual = html`<img
 			class="${rootClass}-image"
 			src=${ifDefined(image)}
-			style="max-width: 75%; max-height: 75%; object-fit: contain;"
+			style="max-inline-size: 75%; max-block-size: 75%; object-fit: contain;"
 		/>`;
+	}
+
+	if (!visual) {
+		console.log(`Asset: please provide a preset or an image`);
+		return html``;
 	}
 
 	return html` <div
@@ -40,7 +45,6 @@ export const Template = ({
 			...customClasses.reduce((a, c) => ({ ...a, [c]: true }), {}),
 		})}
 		id=${ifDefined(id)}
-	>
-		${visual}
-	</div>`;
+		style=${ifDefined(styleMap(customStyles))}
+	>${visual}</div>`;
 };

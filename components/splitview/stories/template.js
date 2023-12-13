@@ -14,7 +14,6 @@ export const Template = ({
 	panelLabels = [],
 	panelStyles = [],
 	componentHeight = "200px",
-	// ...globals
 }) => {
 	const collapsible = isCollapsible;
 	const collapsibleStart =

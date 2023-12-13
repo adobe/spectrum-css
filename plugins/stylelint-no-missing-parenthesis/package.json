@@ -1,19 +1,23 @@
 {
-  "private": true,
-  "name": "stylelint-no-missing-parenthesis",
+  "name": "@spectrum-tools/stylelint-no-missing-parenthesis",
   "version": "1.1.0",
   "license": "Apache-2.0",
   "author": "Adobe",
   "main": "index.js",
-  "scripts": {
-    "prepublishOnly": "yarn test",
-    "test": "ava"
-  },
   "peerDependencies": {
-    "stylelint": ">=15"
+    "stylelint": "^14.0.0 || ^15.0.0"
   },
   "devDependencies": {
-    "ava": "^3.9.0",
-    "stylelint": "^15.10.2"
-  }
+    "ava": "^5.3.1",
+    "c8": "^8.0.1",
+    "stylelint": "^15.11.0"
+  },
+  "keywords": [
+    "css",
+    "fix",
+    "lint",
+    "report",
+    "stylelint-plugin",
+    "syntax"
+  ]
 }

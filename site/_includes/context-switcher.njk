@@ -1,0 +1,23 @@
+<div class="spectrum-CSSComponent-switcher">
+    <div class="spectrum-CSS-switcherContainer">
+        <label class="spectrum-FieldLabel spectrum-FieldLabel--sizeM" for="switcher-color">Color</label>
+        {% set picker = { id: "switcher-color", options: ["Light", "Dark",  "Darkest"] } %}
+        {% include "picker.njk" %}
+    </div>
+    <div class="spectrum-CSS-switcherContainer">
+        <label class="spectrum-FieldLabel spectrum-FieldLabel--sizeM" for="switcher-scale">Scale</label>
+        {% set picker = { id: "switcher-scale", options: ["Medium", "Large"] } %}
+        {% include "picker.njk" %}
+    </div>
+    <div class="spectrum-CSS-switcherContainer">
+        <label class="spectrum-FieldLabel spectrum-FieldLabel--sizeM" for="switcher-direction">Direction</label>
+        {% set picker = { id: "switcher-direction", options: ["LTR", "RTL"] } %}
+        {% include "picker.njk" %}
+    </div>
+    {# I feel like this should just be a checkbox? #}
+    <div class="spectrum-CSS-switcherContainer">
+        <label class="spectrum-FieldLabel spectrum-FieldLabel--sizeM" for="switcher-theme">Vars version</label>
+        {% set picker = { id: "switcher-theme", options: ["Default", "Express"] } %}
+        {% include "picker.njk" %}
+    </div>
+</div>

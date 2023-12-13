@@ -1,9 +1,10 @@
+# Compiled results
 dist
-dist-site
 
 # Recommended update re:https://docs.netlify.com/integrations/frameworks/eleventy/
 **/node_modules/**
 
+# Reporting and logs
 temp
 .npmrc*
 .nx
@@ -15,6 +16,8 @@ npm-debug.log*
 lerna-debug.log
 yarn-error.log
 package-lock.json
+lint-results.txt
+.diff-output
 .nx
 
 # Storybook build output
@@ -27,5 +30,14 @@ chromatic-build-*.xml
 chromatic-diagnostics*.json
 chromatic.config.json
 
-# Custom diff tool
-.diff-output
+# Path to NX cache in CI-only (local cache is in node_modules/.cache/nx)
+.nx-cache
+# Other assundry caches
+.*-cache
+.nx
+
+# Test coverage reports
+coverage
+profile.json
+
+ site/**/*.map

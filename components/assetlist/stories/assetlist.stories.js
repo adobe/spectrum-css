@@ -30,8 +30,8 @@ export const Default = Template.bind({});
 Default.args = {
 	items: [
 		{
-			image: "example-ava.png",
-			label: "Shantanu.jpg",
+			image: "images/example-ava.png",
+			label: "Shantanu",
 			isSelectable: true,
 			ariaLabelledBy: "assetitemlabel-1",
 			checkboxId: "checkbox-1"

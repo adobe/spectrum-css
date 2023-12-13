@@ -1,0 +1,257 @@
+{
+    "$schema": "http://json-schema.org/draft-04/schema#",
+    "anyOf": [
+        {
+            "$ref": "https://json.schemastore.org/jsonld#"
+        }
+    ],
+    "title": "JSON schema for Spectrum CSS documentation",
+    "type": "object",
+    "version": "1",
+    "description": "A validation schema for the Spectrum CSS documentation data.",
+    "properties": {
+        "name": {
+            "type": "string",
+            "description": "The human-readable title for the element.",
+            "deprecated": true
+        },
+        "title": {
+            "type": "string",
+            "description": "The human-readable title for the element."
+        },
+        "description": {
+            "type": "string",
+            "description": "A short description of the element's purpose and goals. For migration or additional context, add that information to the sections property."
+        },
+        "parent": {
+            "type": "string",
+            "description": "The name of the parent element."
+        },
+        "status": {
+            "type": "string",
+            "description": "The design status of the element.",
+            "enum": ["Verified", "Experimental", "Deprecated", "Contribution", "Beta"]
+        },
+        "sizing": {
+            "type": "array",
+            "description": "An array of the sizing options for the element.",
+            "items": {
+                "type": "string",
+                "enum": ["xxs", "xs", "s", "m", "l", "xl", "xxl"]
+            }
+        },
+        "states": {
+            "type": "array",
+            "description": "An array of the states for the element.",
+            "items": {
+                "type": "object",
+                "properties": {
+                    "title": {
+                        "type": "string",
+                        "description": "The title for the state."
+                    },
+                    "description": {
+                        "type": "string",
+                        "description": "The description of the state."
+                    },
+                    "classname": {
+                        "type": "string",
+                        "description": "The CSS classname for the state.",
+                        "pattern": "^(is|u)-[a-z0-9-]+$"
+                    }
+                },
+                "required": ["classname"]
+            }
+        },
+        "variants": {
+            "type": "array",
+            "description": "An array of the variants for the element.",
+            "items": {
+                "type": "object",
+                "properties": {
+                    "title": {
+                        "type": "string",
+                        "description": "The title for the state."
+                    },
+                    "description": {
+                        "type": "string",
+                        "description": "The description of the state."
+                    },
+                    "classname": {
+                        "type": "string",
+                        "description": "The CSS classname for the state."
+                    }
+                },
+                "required": ["classname"]
+            }
+        },
+        "sections": {
+            "description": "These are the sections of the documentation for the element that describe how to use the component and best practices.",
+            "type": "array",
+            "items": {
+                "type": "object",
+                "properties": {
+                    "id": {
+                        "type": "string",
+                        "description": "The id for the section."
+                    },
+                    "title": {
+                        "type": "string",
+                        "description": "The title for the section."
+                    },
+                    "description": {
+                        "type": "string",
+                        "format": "markdown",
+                        "description": "The content of the section."
+                    }
+                },
+                "required": ["description"]
+            }
+        },
+        "examples": {
+            "description": "These are the examples of the element in use.",
+            "oneOf": [
+                {
+                    "type": "array",
+                    "items": {
+                        "oneOf": [
+                            {
+                                "type": "object",
+                                "properties": {
+                                    "id": {
+                                        "type": "string",
+                                        "description": "The unique identifier to use for this example set."
+                                    },
+                                    "title": {
+                                        "type": "string",
+                                        "description": "The specific human-readable title for the example set."
+                                    },
+                                    "name": {
+                                        "type": "string",
+                                        "description": "The specific human-readable title for the example set.",
+                                        "deprecated": true
+                                    },
+                                    "description": {
+                                        "type": "string",
+                                        "format": "markdown",
+                                        "description": "The description for the example set."
+                                    },
+                                    "markup": {
+                                        "description": "The HTML markup for the example.",
+                                        "oneOf": [
+                                            {
+                                                "type": "string",
+                                                "format": "html"
+                                            },
+                                            {
+                                                "type": "string",
+                                                "format": "markdown"
+                                            },
+                                            {
+                                                "type": "array",
+                                                "items": {
+                                                    "oneOf": [
+                                                        {
+                                                            "type": "object",
+                                                            "properties": {
+                                                                "id": {
+                                                                    "type": "string",
+                                                                    "description": "The unique identifier to use for this example set."
+                                                                },
+                                                                "title": {
+                                                                    "type": "string",
+                                                                    "description": "The title for the section."
+                                                                },
+                                                                "description": {
+                                                                    "type": "string",
+                                                                    "format": "markdown",
+                                                                    "description": "The description for the example set."
+                                                                },
+                                                                "group": {
+                                                                    "oneOf": [
+                                                                        {
+                                                                            "type": "string",
+                                                                            "format": "html"
+                                                                        },
+                                                                        {
+                                                                            "type": "string",
+                                                                            "format": "markdown"
+                                                                        },
+                                                                        {
+                                                                            "type": "array",
+                                                                            "description": "The content of the section.",
+                                                                            "items": [
+                                                                                {
+                                                                                    "type": "string",
+                                                                                    "format": "html"
+                                                                                },
+                                                                                {
+                                                                                    "type": "string",
+                                                                                    "format": "markdown"
+                                                                                }
+                                                                            ]
+                                                                        }
+                                                                    ]
+                                                                }
+                                                            }
+                                                        },
+                                                        {
+                                                            "type": "string",
+                                                            "format": "html"
+                                                        },
+                                                        {
+                                                            "type": "string",
+                                                            "format": "markdown"
+                                                        }
+                                                    ]
+                                                }
+                                            }
+                                        ]
+                                    }
+                                },
+                                "required": ["id", "markup"],
+                                "oneOf": [
+                                    {"required": ["name"]},
+                                    {"required": ["title"]}
+                                ]
+                            },
+                            {
+                                "type": "string",
+                                "format": "markdown"
+                            }
+                        ]
+                    }
+                },
+                {
+                    "type": "string",
+                    "format": "markdown"
+                }
+            ]
+        },
+        "designLink": {
+            "type": "string",
+            "format": "uri",
+            "description": "The URL for the Spectrum design specifications for this element."
+        },
+        "SWC": {
+            "type": "object",
+            "description": "The matching Spectrum Web Component details.",
+            "properties": {
+                "tag": {
+                    "type": "string",
+                    "description": "The tag name for the Spectrum Web Component."
+                },
+                "url": {
+                    "type": "string",
+                    "format": "uri",
+                    "description": "The URL to the Spectrum Web Component documentation."
+                }
+            }
+        }
+    },
+    "oneOf": [
+        {"required": ["name"]},
+        {"required": ["title"]}
+    ],
+    "additionalProperties": false
+}

@@ -1,0 +1,17 @@
+{
+    "$schema": "../../node_modules/nx/schemas/project-schema.json",
+    "tags": ["tooling", "postcss"],
+    "name": "postcss-container-style-converter",
+    "targets": {
+        "lint": {
+            "defaultConfiguration": "plugins"
+        },
+        "format": {
+            "defaultConfiguration": "plugins"
+        },
+        "coverage": {},
+        "test": {
+            "defaultConfiguration": "plugins"
+        }
+    }
+}

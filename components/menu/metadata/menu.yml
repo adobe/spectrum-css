@@ -1,17 +1,14 @@
 name: Menu
 SpectrumSiteSlug: https://spectrum.adobe.com/page/menu/
 sections:
-  - name: Custom Properties API
-    description: |
-      This component can be modified via its `--mod-*` prefixed custom properties. A list of those prefixed custom properties can be found <a href="https://github.com/adobe/spectrum-css/tree/main/components/menu/metadata/mods.md">here</a>.
   - name: Migration Guide
     description: |
       ### T-shirt sizing
       Menu now supports t-shirt sizing and requires that you specify the size by adding a `.spectrum-Menu--size*` class.
-      
+
       ### Use small divider classes
       When using a section divider, add `.spectrum-Divider` and `spectrum-Divider--sizeS` classes to `spectrum-Menu-divider`. The divider has also changed from medium to small.
-      
+
       ### Change workflow icon size to medium
       Please replace `.spectrum-Icon--sizeS` with `.spectrum-Icon--sizeM`.
 examples:
@@ -551,7 +548,7 @@ examples:
                 <svg class="spectrum-Icon spectrum-Icon--sizeS spectrum-UIIcon-ChevronRight75 spectrum-Menu-chevron spectrum-Menu-itemIcon" focusable="false" aria-hidden="true" aria-label="Next">
                   <use xlink:href="#spectrum-css-icon-Chevron75" />
                 </svg>
-                
+
                 <span class="spectrum-Menu-sectionHeading" id="ex1-menu-heading-2" aria-hidden="true">Mobile</span>
                 <ul id="spectrum-menu-item-1-submenu" class="spectrum-Menu spectrum-Menu--sizeS is-open" aria-labelledby="ex1-menu-heading-2" role="menu">
                   <li class="spectrum-Menu-item" role="menuitem" tabindex="0">
@@ -671,7 +668,7 @@ examples:
                 <svg class="spectrum-Icon spectrum-Icon--sizeM spectrum-UIIcon-ChevronRight100 spectrum-Menu-chevron spectrum-Menu-itemIcon" focusable="false" aria-hidden="true" aria-label="Next">
                   <use xlink:href="#spectrum-css-icon-Chevron100" />
                 </svg>
-                
+
                 <span class="spectrum-Menu-sectionHeading" id="ex2-menu-heading-2" aria-hidden="true">Mobile</span>
                 <ul id="spectrum-menu-item-1-submenu" class="spectrum-Menu is-open" aria-labelledby="ex2-menu-heading-2" role="menu">
                   <li class="spectrum-Menu-item" role="menuitem" tabindex="0">
@@ -791,7 +788,7 @@ examples:
                 <svg class="spectrum-Icon spectrum-Icon--sizeL spectrum-UIIcon-ChevronRight200 spectrum-Menu-chevron spectrum-Menu-itemIcon" focusable="false" aria-hidden="true" aria-label="Next">
                   <use xlink:href="#spectrum-css-icon-Chevron200" />
                 </svg>
-                
+
                 <span class="spectrum-Menu-sectionHeading" id="ex3-menu-heading-2" aria-hidden="true">Mobile</span>
                 <ul id="spectrum-menu-item-1-submenu" class="spectrum-Menu spectrum-Menu--sizeL is-open" aria-labelledby="ex3-menu-heading-2" role="menu">
                   <li class="spectrum-Menu-item" role="menuitem" tabindex="0">
@@ -911,7 +908,7 @@ examples:
                 <svg class="spectrum-Icon spectrum-Icon--sizeXL spectrum-UIIcon-Chevron300 spectrum-Menu-chevron spectrum-Menu-itemIcon" focusable="false" aria-hidden="true" aria-label="Next">
                   <use xlink:href="#spectrum-css-icon-Chevron300" />
                 </svg>
-                
+
                 <span class="spectrum-Menu-sectionHeading" id="ex4-menu-heading-2" aria-hidden="true">Mobile</span>
                 <ul id="spectrum-menu-item-1-submenu" class="spectrum-Menu spectrum-Menu--sizeXL is-open" aria-labelledby="ex4-menu-heading-2" role="menu">
                   <li class="spectrum-Menu-item" role="menuitem" tabindex="0">

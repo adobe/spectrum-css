@@ -100,40 +100,38 @@ export const argTypes = {
 export const ActionButtons = ({
 	staticColor,
 	...args
-}) => {
-	return html`
-		<div
-      		style=${ifDefined(styleMap({
-				padding: "1rem",
-				backgroundColor: staticColor === "white" ? "rgb(15, 121, 125)" : staticColor === "black" ? "rgb(181, 209, 211)" : undefined,
-			}))}
-		>
-			${Template({
-				...args,
-				staticColor,
-				label: "More",
-				iconName: undefined,
-			})}
-			${Template({
-				...args,
-				staticColor,
-				label: "More",
-			})}
-			${Template({
-				...args,
-				staticColor,
-			})}
-			${Template({
-				...args,
-				staticColor,
-				hasPopup: true,
-			})}
-			${Template({
-				...args,
-				staticColor,
-				label: "More and this text should truncate",
-				customStyles: { "max-inline-size": "100px"},
-			})}
-		</div>
-	`;
-};
+}) => html`
+	<div
+		style=${ifDefined(styleMap({
+			padding: "1rem",
+			backgroundColor: staticColor === "white" ? "rgb(15, 121, 125)" : staticColor === "black" ? "rgb(181, 209, 211)" : undefined,
+		}))}
+	>
+		${Template({
+			...args,
+			staticColor,
+			label: "More",
+			iconName: undefined,
+		})}
+		${Template({
+			...args,
+			staticColor,
+			label: "More",
+		})}
+		${Template({
+			...args,
+			staticColor,
+		})}
+		${Template({
+			...args,
+			staticColor,
+			hasPopup: true,
+		})}
+		${Template({
+			...args,
+			staticColor,
+			label: "More and this text should truncate",
+			customStyles: { "max-inline-size": "100px"},
+		})}
+	</div>
+`;

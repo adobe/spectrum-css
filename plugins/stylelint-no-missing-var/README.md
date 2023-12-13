@@ -8,10 +8,8 @@ This stylelint plugin will validate against all custom properties in css and lin
 
 ## Installation
 
-```
-npm install stylelint-no-missing-var
-
-yarn install stylelint-no-missing-var
+```sh
+yarn add -D stylelint-no-missing-var
 ```
 
 ## How to use

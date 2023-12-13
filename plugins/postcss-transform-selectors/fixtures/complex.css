@@ -1,0 +1,104 @@
+.spectrum-Heading--sizeXXL {
+  font-size: var(
+    --spectrum-heading-xxl-text-size,
+    var(--spectrum-alias-heading-xxl-text-size)
+  );
+  font-weight: var(
+    --spectrum-heading-xxl-text-font-weight,
+    var(--spectrum-alias-heading-text-font-weight-regular)
+  );
+  line-height: var(
+    --spectrum-heading-xxl-text-line-height,
+    var(--spectrum-alias-heading-text-line-height)
+  );
+  font-style: var(
+    --spectrum-heading-xxl-text-font-style,
+    var(--spectrum-global-font-style-regular)
+  );
+  letter-spacing: var(
+    --spectrum-heading-xxl-text-letter-spacing,
+    var(--spectrum-global-font-letter-spacing-none)
+  );
+  text-transform: var(--spectrum-heading-xxl-text-transform, none);
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+.spectrum-Heading--sizeXL {
+  font-size: var(
+    --spectrum-heading-xl-text-size,
+    var(--spectrum-alias-heading-xl-text-size)
+  );
+  font-weight: var(
+    --spectrum-heading-xl-text-font-weight,
+    var(--spectrum-alias-heading-text-font-weight-regular)
+  );
+  line-height: var(
+    --spectrum-heading-xl-text-line-height,
+    var(--spectrum-alias-heading-text-line-height)
+  );
+  font-style: var(
+    --spectrum-heading-xl-text-font-style,
+    var(--spectrum-global-font-style-regular)
+  );
+  letter-spacing: var(
+    --spectrum-heading-xl-text-letter-spacing,
+    var(--spectrum-global-font-letter-spacing-none)
+  );
+  text-transform: var(--spectrum-heading-xl-text-transform, none);
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+.spectrum-Heading--sizeL {
+  font-size: var(
+    --spectrum-heading-l-text-size,
+    var(--spectrum-alias-heading-l-text-size)
+  );
+  font-weight: var(
+    --spectrum-heading-l-text-font-weight,
+    var(--spectrum-alias-heading-text-font-weight-regular)
+  );
+  line-height: var(
+    --spectrum-heading-l-text-line-height,
+    var(--spectrum-alias-heading-text-line-height)
+  );
+  font-style: var(
+    --spectrum-heading-l-text-font-style,
+    var(--spectrum-global-font-style-regular)
+  );
+  letter-spacing: var(
+    --spectrum-heading-l-text-letter-spacing,
+    var(--spectrum-global-font-letter-spacing-none)
+  );
+  text-transform: var(--spectrum-heading-l-text-transform, none);
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+.spectrum-Heading {
+  font-family: var(
+    --spectrum-heading-m-text-font-family,
+    var(--spectrum-alias-body-text-font-family)
+  );
+  font-weight: var(
+    --spectrum-heading-m-text-font-weight,
+    var(--spectrum-alias-heading-text-font-weight-regular)
+  );
+}
+
+.spectrum-Heading em,
+.spectrum-Heading .spectrum-Heading-emphasized {
+  font-style: var(
+    --spectrum-heading-m-emphasized-text-font-style,
+    var(--spectrum-global-font-style-italic)
+  );
+}
+
+.spectrum-Heading strong,
+.spectrum-Heading .spectrum-Heading-strong {
+  font-weight: var(
+    --spectrum-heading-m-strong-text-font-weight,
+    var(--spectrum-global-font-weight-black)
+  );
+}

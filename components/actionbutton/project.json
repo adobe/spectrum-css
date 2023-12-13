@@ -6,8 +6,11 @@
 		"build": {},
 		"clean": {},
 		"compare": {},
+		"format": {},
+		"lint": {},
+		"profile": {},
 		"test": {
-			"defaultConfiguration": "scope"
+			"defaultConfiguration": "scoped"
 		}
 	}
 }

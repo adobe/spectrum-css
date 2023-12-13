@@ -220,7 +220,7 @@ export const parameters = {
     	page: DocumentationTemplate,
 		story: {
 			inline: true,
-			iframeHeight: "200px",
+			height: "200px",
 		},
 		source: {
 			type: "dynamic",
@@ -230,9 +230,19 @@ export const parameters = {
 	status: {
 		statuses: {
 			migrated: {
-				background: "#f0f0f0",
-				color: "#444",
+				background: "#fff",
+				color: "rgb(0,122,77)",
 				description: "Migrated to the latest tokens.",
+			},
+			legacy: {
+				background: "#fff",
+				color: "rgb(246,133,17)",
+				description: "Not yet migrated to the latest tokens.",
+			},
+			deprecated: {
+				background: "#fff",
+				color: "rgb(211,21,16)",
+				description: "This component is should not be used and will not receive updates.",
 			},
 		},
 	},

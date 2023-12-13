@@ -15,26 +15,24 @@ export const Template = ({
 	customClasses = [],
 	customStyles = {},
 	...globals
-}) => {
-	return html`
-		<div
-			class=${classMap({
-				[rootClass]: true,
-				...customClasses.reduce((a, c) => ({ ...a, [c]: true }), {}),
-			})}
-			style=${ifDefined(styleMap(customStyles))}
-			role="list"
-			aria-label=${ifDefined(ariaLabel)}
-		>
-			${items.map((i) => {
-				return Tag({
-					...globals,
-					...i,
-					size: globals.size,
-					hasClearButton: isRemovable,
-					customClasses: [`${rootClass}-item`],
-				});
-			})}
-		</div>
-	`;
-};
+}) => html`
+	<div
+		class=${classMap({
+			[rootClass]: true,
+			...customClasses.reduce((a, c) => ({ ...a, [c]: true }), {}),
+		})}
+		style=${ifDefined(styleMap(customStyles))}
+		role="list"
+		aria-label=${ifDefined(ariaLabel)}
+	>
+		${items.map((i) => {
+			return Tag({
+				...globals,
+				...i,
+				size: globals.size,
+				hasClearButton: isRemovable,
+				customClasses: [`${rootClass}-item`],
+			});
+		})}
+	</div>
+`;

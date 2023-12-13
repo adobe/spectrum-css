@@ -116,7 +116,7 @@ export default {
 		label: "Tag label",
 		hasIcon: false,
 		iconName: 'Info',
-		avatarUrl: "example-ava.png",
+		avatarUrl: "images/example-ava.png",
 		hasAvatar: false,
 		isSelected: false,
 		isDisabled: false,
@@ -150,7 +150,7 @@ Icon.args = {
 export const Avatar = Template.bind({});
 Avatar.args = {
 	hasAvatar: true,
-	avatarUrl: "example-ava.png"
+	avatarUrl: "images/example-ava.png"
 };
 
 export const Removable = Template.bind({});

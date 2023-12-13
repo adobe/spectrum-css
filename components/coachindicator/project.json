@@ -3,11 +3,14 @@
 	"name": "coachindicator",
 	"tags": ["component"],
 	"targets": {
-		"build": {},
-		"clean": {},
-		"compare": {},
-		"test": {
-			"defaultConfiguration": "scope"
-		}
+        "build": {},
+        "clean": {},
+        "compare": {},
+        "format": {},
+        "lint": {},
+        "report":  {},
+        "profile": {},
+        "styles": {},
+        "test": {}
 	}
 }

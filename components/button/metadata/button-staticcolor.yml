@@ -3,9 +3,6 @@ status: Verified
 description: "When a button needs to be placed on top of a colored background or a visual, use the over background button. In order to implement this button, you must set the CSS color property of a parent element to the same value as the background the button is placed against."
 SpectrumSiteSlug: https://spectrum.adobe.com/page/button/#Over-background
 sections:
-  - name: Custom Properties API
-    description: |
-      This component can be modified via its `--mod-*` prefixed custom properties. A list of those prefixed custom properties can be found <a href="https://github.com/adobe/spectrum-css/tree/main/components/button/metadata/mods.md">here</a>.
   - name: Migration Guide
     description: |
       ### Fill or Outline class required

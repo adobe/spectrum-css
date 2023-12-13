@@ -5,9 +5,6 @@ description: |
   - Floating action button is used to give users a more prominent button for high frequency actions
   - When using Floating Action Button in dark themes, the `background-layer-color-2` will often show up on the base color `gray-50` or `gray-75` or on content, images, etc.
 sections:
-  - name: Custom Properties API
-    description: |
-      This component can be modified via its `--mod-*` prefixed custom properties. A list of those prefixed custom properties can be found <a href="https://github.com/adobe/spectrum-css/tree/main/components/floatingactionbutton/metadata/mods.md">here</a>.
 examples:
   - id: floatingactionbutton-primary
     name: Primary

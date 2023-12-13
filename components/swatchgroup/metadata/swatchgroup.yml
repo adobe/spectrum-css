@@ -5,9 +5,6 @@ description: |
   - Grouped swatches must use the `.spectrum-Swatch--roundingNone` class to help minimize the Hermann grid illusion
   - Swatches with a color that have a contrast ratio of less than 3:1 should have `.spectrum-Swatch--lightBorder` class, otherwise, it should have the `.spectrum-Swatch--noBorder` class
 sections:
-  - name: Custom Properties API
-    description: |
-      This component can be modified via its `--mod-*` prefixed custom properties. A list of those prefixed custom properties can be found <a href="https://github.com/adobe/spectrum-css/tree/main/components/swatchgroup/metadata/mods.md">here</a>.
 examples:
   - id: swatchgroup-compact
     name: Density - Compact

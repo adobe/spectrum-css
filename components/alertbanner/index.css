@@ -36,8 +36,7 @@ governing permissions and limitations under the License.
 
   /* settings for nested Button */
   --mod-button-margin-block: var(--mod-alert-banner-edge-to-button, var(--spectrum-alert-banner-edge-to-button));
-  --mod-button-margin-right: var(--mod-alert-banner-text-to-divider, var(--spectrum-alert-banner-text-to-divider));
-  --mod-button-margin-left: auto;
+  --mod-button-margin-inline: auto var(--mod-alert-banner-text-to-divider, var(--spectrum-alert-banner-text-to-divider));
 
   /* settings for nested CloseButton */
   --mod-closebutton-margin-inline: var(--mod-alert-banner-close-button-spacing, var(--spectrum-alert-banner-close-button-spacing));
@@ -48,10 +47,13 @@ governing permissions and limitations under the License.
 .spectrum-AlertBanner {
   display: none;
   justify-content: space-between;
+
   inline-size: var(--mod-alert-banner-size, var(--spectrum-alert-banner-size));
   min-block-size: var(--mod-alert-banner-min-height, var(--spectrum-alert-banner-min-height));
+
   font-size: var(--mod-alert-banner-font-size, var(--spectrum-alert-banner-font-size));
   color: var(--mod-alert-banner-font-color, var(--spectrum-alert-banner-font-color));
+
   background-color: var(--mod-alert-banner-netural-background, var(--spectrum-alert-banner-netural-background));
   border: var(--highcontrast-alert-banner-border-width, 0) solid var(--highcontrast-alert-banner-border-color, transparent);
 
@@ -60,21 +62,23 @@ governing permissions and limitations under the License.
   }
 
   &--info {
-    background-color: var(--mod-alert-banner-informative-background, var(--spectrum-alert-banner-informative-background));
+    --spectrum-alert-banner-netural-background: var(--mod-alert-banner-informative-background, var(--spectrum-alert-banner-informative-background));
   }
 
   &--negative {
-    background-color: var(--mod-alert-banner-negative-background, var(--spectrum-alert-banner-negative-background));
+    --spectrum-alert-banner-netural-background: var(--mod-alert-banner-negative-background, var(--spectrum-alert-banner-negative-background));
   }
 }
 
 .spectrum-AlertBanner-body {
-  inline-size: 100%;
   display: flex;
+  flex-wrap: wrap;
+
   /* --mod-* for alert-banner-text-to-button-vertical will only accept values larger than alert-banner-edge-to-bottom, as gap only recognizes positive values */
   gap: max(calc(var(--mod-alert-banner-text-to-button-vertical, var(--spectrum-alert-banner-text-to-button-vertical)) - var(--mod-alert-banner-edge-to-button, var(--spectrum-alert-banner-edge-to-button))), 0px);
-  flex-wrap: wrap;
   align-items: center;
+
+  inline-size: 100%;
   margin-inline-start: var(--mod-alert-banner-start-edge, var(--spectrum-alert-banner-start-edge));
 }
 
@@ -88,11 +92,12 @@ governing permissions and limitations under the License.
 }
 
 .spectrum-AlertBanner-icon {
+  flex-shrink: 0;
+
   inline-size: var(--mod-alert-banner-icon-size, var(--spectrum-alert-banner-icon-size));
   block-size: var(--mod-alert-banner-icon-size, var(--spectrum-alert-banner-icon-size));
   margin-block-start: var(--mod-alert-banner-top-icon, var(--spectrum-alert-banner-top-icon));
   margin-inline-end: var(--mod-alert-banner-icon-to-text, var(--spectrum-alert-banner-icon-to-text));
-  flex-shrink: 0;
 }
 
 .spectrum-AlertBanner-text {

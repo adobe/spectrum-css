@@ -3,9 +3,6 @@ status: Verified
 description: The negative button is for high emphasis of negative or destructive actions.
 SpectrumSiteSlug: https://spectrum.adobe.com/page/button/#Negative
 sections:
-  - name: Custom Properties API
-    description: |
-      This component can be modified via its `--mod-*` prefixed custom properties. A list of those prefixed custom properties can be found <a href="https://github.com/adobe/spectrum-css/tree/main/components/button/metadata/mods.md">here</a>.
   - name: Migration Guide
     description: |
       ### Fill or Outline class required

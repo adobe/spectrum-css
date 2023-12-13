@@ -3,9 +3,6 @@ status: Verified
 description: The primary button is used for medium emphasis.
 SpectrumSiteSlug: https://spectrum.adobe.com/page/button/#Primary
 sections:
-  - name: Custom Properties API
-    description: |
-      This component can be modified via its `--mod-*` prefixed custom properties. A list of those prefixed custom properties can be found <a href="https://github.com/adobe/spectrum-css/tree/main/components/button/metadata/mods.md">here</a>.
   - name: Migration Guide
     description: |
       ### Fill or Outline class required
@@ -204,7 +201,7 @@ examples:
             </svg>
             <span class="spectrum-Button-label">Edit</span>
           </button>
-          
+
           <button class="spectrum-Button spectrum-Button--outline spectrum-Button--primary spectrum-Button--sizeL spectrum-Button--iconOnly" aria-label="Edit">
             <svg class="spectrum-Icon spectrum-Icon--sizeL" focusable="false" aria-hidden="true">
               <use xlink:href="#spectrum-icon-18-Edit" />

@@ -1,109 +1,260 @@
 {
-	"$schema": "./node_modules/nx/schemas/nx-schema.json",
-	"cli": {
-		"warnings": {
-			"versionMismatch": true
-		},
-		"packageManager": "yarn",
-		"analytics": false
-	},
-	"pluginsConfig": {
-		"@nx/js": {
-			"analyzeSourceFiles": false
-		}
-	},
-	"namedInputs": {
-		"core": ["{projectRoot}/*.css", "{projectRoot}/themes/*.css"],
-		"scripts": ["{projectRoot}/stories/*.js"],
-		"tools": [
-			"{projectRoot}/*.json",
-			"{workspaceRoot}/postcss.config.js",
-			"{workspaceRoot}/plugins/postcss-*/index.js"
-		]
-	},
-	"targetDefaults": {
-		"clean": {
-			"cache": true,
-			"inputs": ["{projectRoot}/dist", { "externalDependencies": ["rimraf"] }],
-			"outputs": [],
-			"executor": "nx:run-commands",
-			"options": {
-				"commands": [
-					"rimraf {projectRoot}/dist",
-					"test -d {projectRoot}/dist && echo \"Error: dist directory could not be removed\" && exit 1 || exit 0"
+    "$schema": "./node_modules/nx/schemas/nx-schema.json",
+    "cli": {
+        "warnings": {
+            "versionMismatch": true
+        },
+        "packageManager": "yarn",
+        "analytics": false
+    },
+    "pluginsConfig": {
+        "@nx/js": {
+            "analyzeSourceFiles": false
+        }
+    },
+    "namedInputs": {
+        "core": ["{projectRoot}/*.css", "{projectRoot}/themes/*.css"],
+        "scripts": ["{projectRoot}/stories/*.js"],
+        "stylelint": [
+            "{workspaceRoot}/.stylelintignore",
+            "{workspaceRoot}/stylelint.config.js",
+            "{workspaceRoot}/plugins/stylelint-*/index.js"
+        ],
+        "eslint": ["{workspaceRoot}/.eslintrc"],
+        "tools": [
+            "{projectRoot}/*.json",
+            "{workspaceRoot}/postcss.config.js",
+            "{workspaceRoot}/plugins/postcss-*/index.js"
+        ]
+    },
+    "targetDefaults": {
+			"clean": {
+				"cache": true,
+				"inputs": [
+					"{projectRoot}/dist",
+					{ "externalDependencies": ["rimraf"] }
 				],
-				"parallel": false
-			}
-		},
-		"build": {
-			"cache": true,
-			"dependsOn": [
-				"^build",
-				"clean",
-				{ "target": "build", "projects": "tokens" }
-			],
-			"inputs": [
-				"core",
-				"tools",
-				"!{projectRoot}/stories/*.js",
-				"{workspaceRoot}/tasks/mod-extractor.js",
-				{ "externalDependencies": ["gulp", "postcss"] },
-				{ "env": "NODE_ENV" }
-			],
-			"outputs": ["{projectRoot}/dist", "{projectRoot}/metadata/mods.md"],
-			"executor": "nx:run-commands",
-			"options": {
-				"commands": [
-					"gulp --gulpfile {projectRoot}/gulpfile.js",
-					"node ./tasks/mod-extractor.js {projectRoot}"
+				"outputs": [],
+				"executor": "nx:run-commands",
+				"options": {
+					"commands": [
+						"rimraf {projectRoot}/dist",
+						"test -d {projectRoot}/dist && echo \"Error: dist directory could not be removed\" && exit 1 || exit 0"
+					],
+					"parallel": false
+				}
+			},
+			"compare": {
+				"cache": true,
+				"dependsOn": [
+					"build",
+					{ "target": "build", "projects": "tokens" },
+					{ "target": "build", "projects": "typography" },
+					{ "target": "build", "projects": "table" },
+					{ "target": "build", "projects": "badge" }
 				],
-				"forwardAllArgs": true,
-				"parallel": false
-			}
-		},
-		"compare": {
-			"cache": true,
-			"dependsOn": ["build"],
-			"inputs": [
-				"{workspaceRoot}/tasks/compare-compiled-output.js",
-				{ "dependentTasksOutputFiles": "dist/*.css", "transitive": true },
-				{
-					"externalDependencies": [
-						"fast-glob",
-						"tar",
-						"lodash",
-						"nunjucks",
-						"rimraf",
-						"npm-registry-fetch",
-						"yargs",
-						"diff",
-						"diff2html",
-						"colors"
+				"inputs": [
+					{ "dependentTasksOutputFiles": "dist/*.css", "transitive": true },
+					"{workspaceRoot}/tasks/compare-compiled-output.js",
+					{
+						"externalDependencies": [
+							"rimraf",
+							"fast-glob",
+							"tar",
+							"lodash",
+							"npm-registry-fetch",
+							"yargs",
+							"diff",
+							"diff2html",
+							"colors"
+						]
+					}
+				],
+				"outputs": ["{workspaceRoot}/.diff-output"],
+				"executor": "nx:run-commands",
+				"options": {
+					"commands": [
+						"node ./tasks/compare-compiled-output.js $NX_TASK_TARGET_PROJECT"
 					]
 				}
-			],
-			"outputs": ["{workspaceRoot}/.diff-output"],
-			"executor": "nx:run-commands",
-			"options": {
-				"commands": [
-					"node ./tasks/compare-compiled-output.js $NX_TASK_TARGET_PROJECT"
-				]
-			}
-		},
-		"test": {
-			"cache": true,
-			"dependsOn": [{ "target": "test", "projects": "storybook" }],
-			"configurations": {
-				"scope": {
-					"dependsOn": [
-						{
-							"target": "test",
-							"configuration": "scope",
-							"projects": "storybook"
-						}
+			},
+			"build": {
+				"cache": true,
+				"dependsOn": [
+					"^build",
+					"styles",
+					"clean",
+					"parse",
+					{ "target": "build", "projects": "tokens" }
+				],
+				"executor": "nx:run-commands",
+				"options": {
+					"commands": []
+				}
+			},
+			"report": {
+				"cache": true,
+				"dependsOn": ["styles"],
+				"inputs": [
+					"{workspaceRoot}/tasks/mod-extractor.js",
+					{ "transitive": true, "dependentTasksOutputFiles": "dist/*.css" },
+					{ "externalDependencies": ["fast-glob", "prettier", "yargs"] }
+				],
+				"outputs": ["{projectRoot}/dist/metadata.json"],
+				"executor": "nx:run-commands",
+				"options": {
+					"commands": [
+						"node ./tasks/mod-extractor.js $NX_TASK_TARGET_PROJECT"
 					]
+				}
+			},
+			"styles": {
+				"cache": true,
+				"dependsOn": [
+					"^build",
+					"clean",
+					{ "target": "build", "projects": "tokens" }
+				],
+				"inputs": [
+					"core",
+					"tools",
+					"!{projectRoot}/stories/*.js",
+					{ "externalDependencies": ["postcss"] },
+					{ "env": "NODE_ENV" }
+				],
+				"outputs": ["{projectRoot}/dist", "{projectRoot}/metadata/mods.md"],
+				"executor": "nx:run-commands",
+				"options": {
+					"commands": [
+						"test -f {projectRoot}/index-base.css && FILE_NAME=index-base || FILE_NAME=index; postcss {projectRoot}/${FILE_NAME}.css --output {projectRoot}/dist/index.css",
+						"test -f {projectRoot}/index-base.css && FILE_NAME=index-base || FILE_NAME=index; postcss {projectRoot}/${FILE_NAME}.css --output {projectRoot}/dist/index-vars.css --no-lint",
+						"test -f {projectRoot}/index-base.css && FILE_NAME=index-base || FILE_NAME=index; postcss {projectRoot}/${FILE_NAME}.css --output {projectRoot}/dist/index-base.css --no-lint --flat-variables",
+						"! test -f {projectRoot}/themes/express.css && exit 0 || postcss {projectRoot}/themes/express.css --output {projectRoot}/dist/index-theme.css --no-lint",
+						"! test -d {projectRoot}/themes && exit 0 || postcss {projectRoot}/themes/*.css --dir {projectRoot}/dist --base {projectRoot}"
+					],
+					"forwardAllArgs": true
+				},
+				"configurations": {
+					"legacy": {
+						"commands": [
+							"test -f {projectRoot}/index.css && postcss {projectRoot}/index.css --output {projectRoot}/dist/index.css",
+							"test -f {projectRoot}/index.css && postcss {projectRoot}/index.css --output {projectRoot}/dist/index-vars.css --no-lint",
+							"test -f {projectRoot}/index.css && postcss {projectRoot}/index.css --output {projectRoot}/dist/vars.css --no-lint"
+						]
+					},
+					"ci": {
+						"envFile": ".env.prod",
+						"cache": false
+					}
+				}
+			},
+			"test": {
+				"cache": true,
+				"inputs": [
+					"scripts",
+					"tools",
+					{ "externalDependencies": ["chromatic"] }
+				],
+				"executor": "nx:run-commands",
+				"options": {
+					"commands": [
+						"chromatic --build-script-name build --junit-report --only-story-names"
+					]
+				},
+				"configurations": {
+					"plugins": {
+						"inputs": [
+							"{workspaceRoot}/index.js",
+							"{workspaceRoot}/test.js",
+							"{workspaceRoot}/expected/*.css",
+							"{workspaceRoot}/fixtures/*.css"
+						],
+						"commands": ["ava {projectRoot}/test.js"]
+					}
+				}
+			},
+			"lint": {
+				"inputs": [
+					"core",
+					"scripts",
+					{ "externalDependencies": ["stylelint"] }
+				],
+				"executor": "nx:run-commands",
+				"options": {
+					"commands": [
+						"stylelint {projectRoot}/*.css {projectRoot}/themes/*.css"
+					]
+				},
+				"configurations": {
+					"plugins": {
+						"inputs": ["{projectRoot}/*.js", "{projectRoot}/*.json", "eslint"],
+						"commands": [
+							"eslint --no-error-on-unmatched-pattern {projectRoot}/*.js {projectRoot}/*.json"
+						]
+					}
+				}
+			},
+			"format": {
+				"inputs": [
+					"core",
+					"scripts",
+					{ "externalDependencies": ["stylelint", "eslint", "prettier"] }
+				],
+				"executor": "nx:run-commands",
+				"options": {
+					"commands": [
+						"stylelint {projectRoot}/*.css {projectRoot}/themes/*.css --fix",
+						"eslint --no-error-on-unmatched-pattern {projectRoot}/*.json {projectRoot}/stories/*.js --fix",
+						"prettier --no-error-on-unmatched-pattern --write {projectRoot}/**/*.{yml,md} {projectRoot}/*.{yml,md}"
+					]
+				},
+				"configurations": {
+					"plugins": {
+						"inputs": [
+							"{workspaceRoot}/*.js",
+							"{workspaceRoot}/*.json",
+							"eslint",
+							{ "externalDependencies": ["eslint", "prettier"] }
+						],
+						"commands": [
+							"eslint --no-error-on-unmatched-pattern {projectRoot}/*.js {projectRoot}/*.json --fix",
+							"prettier --no-error-on-unmatched-pattern --write {projectRoot}/**/*.{yml,md} {projectRoot}/*.{yml,md}"
+						]
+					}
+				}
+			},
+			"profile": {
+				"dependsOn": ["build"],
+				"inputs": [
+					"{projectRoot}/dist/index.css",
+					{ "externalDependencies": ["wallace"] }
+				],
+				"outputs": ["{workspaceRoot}/dist/profile.json"],
+				"executor": "nx:run-commands",
+				"options": {
+					"commands": [
+						"cat {projectRoot}/dist/index.css | wallace --json > {projectRoot}/dist/profile.json"
+					]
+				},
+				"configurations": {
+					"log": {
+						"commands": ["cat {projectRoot}/dist/index.css | wallace"]
+					}
+				}
+			},
+			"coverage": {
+				"inputs": ["{projectRoot}/.c8rc", { "externalDependencies": ["c8"] }],
+				"outputs": ["{workspaceRoot}/coverage"],
+				"executor": "nx:run-commands",
+				"options": {
+					"cwd": "{projectRoot}",
+					"commands": ["c8 nx test $NX_TASK_TARGET_PROJECT"]
+				},
+				"configurations": {
+					"log": {
+						"commands": ["c8 --reporter=lcov nx test $NX_TASK_TARGET_PROJECT"]
+					}
 				}
 			}
 		}
-	}
 }

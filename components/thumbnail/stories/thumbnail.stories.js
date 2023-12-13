@@ -119,7 +119,7 @@ export default {
 		isDisabled: false,
 		isSelected: false,
 		isFocused: false,
-		imageURL: "example-card-landscape.png",
+		imageURL: "images/example-card-landscape.png",
 		altText: "Landscape with mountains and lake",
 	},
 	parameters: {

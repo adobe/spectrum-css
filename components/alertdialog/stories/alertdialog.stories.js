@@ -34,6 +34,7 @@ export default {
       control: "boolean",
     },
     variant: { table: { disable: true } },
+    buttons: { table: { disable: true } },
   },
   args: {
     rootClass: "spectrum-AlertDialog",
@@ -48,29 +49,33 @@ export default {
         ? "migrated"
         : undefined,
     },
+		docs: {
+			story: {
+				height: "400px",
+			},
+		}
   },
 };
 
 export const Default = Template.bind({});
 Default.args = {
-  variant: 'confirmation',
-  heading: "Enable Smart Filters?",
+  variant: "confirmation",
+  heading: "Enable smart filters?",
   buttons: [{
     variant: "secondary",
     treatment: "outline",
     label: "Remind me later"
   }, {
-    variant: "primary",
     treatment: "fill",
     label: "Enable",
     variant: "accent"
   }],
-  content: 'Smart filters are nondestructive and will preserve your original images.',
+  content: "Smart filters are nondestructive and will preserve your original images.",
 };
 
 export const Information = Template.bind({});
 Information.args = {
-  variant: 'information',
+  variant: "information",
   heading: "Informative Dialog with a wrapping title text because the text is longer than the width of the alert dialog",
   buttons: [{
     variant: "secondary",
@@ -85,12 +90,12 @@ Information.args = {
     treatment: "outline",
     label: "Rate now",
   }],
-  content: 'If you enjoy our app, would you mind taking a moment to rate it?',
+  content: "If you enjoy our app, would you mind taking a moment to rate it?",
 };
 
 export const Warning = Template.bind({});
 Warning.args = {
-  variant: 'warning',
+  variant: "warning",
   heading: "Unverified format",
   icon: true,
   buttons: [{
@@ -98,17 +103,16 @@ Warning.args = {
     treatment: "outline",
     label: "Cancel"
   }, {
-    variant: "primary",
     treatment: "outline",
     label: "Continue",
     variant: "primary"
   }],
-  content: 'This format has not been verified and may not be viewable for some users. Do you want to continue publishing?',
+  content: "This format has not been verified and may not be viewable for some users. Do you want to continue publishing?",
 };
 
 export const Error = Template.bind({});
 Error.args = {
-  variant: 'error',
+  variant: "error",
   heading: "Unable to share",
   icon: true,
   buttons: [{
@@ -116,28 +120,26 @@ Error.args = {
     treatment: "outline",
     label: "Cancel"
   }, {
-    variant: "primary",
     treatment: "outline",
     label: "Continue",
     variant: "primary"
   }],
-  content: 'An error occured while sharing your project. Please verify the email address and try again.',
+  content: "An error occured while sharing your project. Please verify the email address and try again.",
 
 };
 
 export const Destructive = Template.bind({});
 Destructive.args = {
-  variant: 'destructive',
+  variant: "destructive",
   heading: "Delete 3 documents?",
   buttons: [{
     variant: "secondary",
     treatment: "outline",
     label: "Cancel"
   }, {
-    variant: "primary",
     treatment: "fill",
     label: "Delete",
     variant: "negative"
   }],
-  content: 'Are you sure you want to delete the 3 selected documents?',
+  content: "Are you sure you want to delete the 3 selected documents?",
 };

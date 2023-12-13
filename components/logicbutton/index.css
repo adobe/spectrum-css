@@ -10,7 +10,7 @@ OF ANY KIND, either express or implied. See the License for the specific languag
 governing permissions and limitations under the License.
 */
 
-@import "../commons/basebutton-coretokens.css";
+@import "@spectrum-css/commons/basebutton.css";
 
 .spectrum-LogicButton {
   --spectrum-logic-button-height: 24px;
@@ -48,18 +48,18 @@ governing permissions and limitations under the License.
 }
 
 .spectrum-LogicButton {
-  @inherit: %spectrum-BaseButton;
-  @inherit: %spectrum-ButtonWithFocusRing;
+  @extend %spectrum-BaseButton;
+  @extend %spectrum-ButtonWithFocusRing;
 
   block-size: var(--mod-logic-button-height, var(--spectrum-logic-button-height));
   padding: var(--mod-logic-button-padding, var(--spectrum-logic-button-padding));
 
-  border-width: var(--mod-logic-button-border-width, var(--spectrum-logic-button-border-width));
-  border-radius: var(--mod-logic-button-border-radius, var(--spectrum-logic-button-border-radius));
-
   font-size: var(--mod-logic-button-font-size, var(--spectrum-logic-button-font-size));
   font-weight: var(--mod-logic-button-font-weight, var(--spectrum-logic-button-font-weight));
   line-height: 0;
+
+  border-width: var(--mod-logic-button-border-width, var(--spectrum-logic-button-border-width));
+  border-radius: var(--mod-logic-button-border-radius, var(--spectrum-logic-button-border-radius));
 
   &::after {
     /* Override border-radius set in %spectrum-ButtonWithFocusRing since this is not a pill button */
@@ -73,7 +73,8 @@ governing permissions and limitations under the License.
 .spectrum-LogicButton {
   &:focus-visible {
     outline: none;
-    &:after {
+
+    &::after {
       box-shadow: 0 0 0 var(--mod-logic-button-focus-indicator-width, var(--spectrum-logic-button-focus-indicator-width))
       var(--highcontrast-logic-button-focus-indicator-color, var(--mod-logic-button-focus-indicator-color, var(--spectrum-logic-button-focus-indicator-color)));
     }
@@ -81,9 +82,9 @@ governing permissions and limitations under the License.
 }
 
 .spectrum-LogicButton--and {
+  color: var(--highcontrast-logic-button-and-text-color, var(--mod-logic-button-and-text-color, var(--spectrum-logic-button-and-text-color)));
   background-color: var(--highcontrast-logic-button-and-background-color, var(--mod-logic-button-and-background-color, var(--spectrum-logic-button-and-background-color)));
   border-color: var(--highcontrast-logic-button-and-border-color, var(--mod-logic-button-and-border-color, var(--spectrum-logic-button-and-border-color)));
-  color: var(--highcontrast-logic-button-and-text-color, var(--mod-logic-button-and-text-color, var(--spectrum-logic-button-and-text-color)));
 
   &:hover:not([disabled]) {
     background-color: var(--highcontrast-logic-button-and-background-color-hover, var(--mod-logic-button-and-background-color-hover, var(--spectrum-logic-button-and-background-color-hover)));
@@ -92,9 +93,9 @@ governing permissions and limitations under the License.
 }
 
 .spectrum-LogicButton--or {
+  color: var(--highcontrast-logic-button-or-text-color, var(--mod-logic-button-or-text-color, var(--spectrum-logic-button-or-text-color)));
   background-color: var(--highcontrast-logic-button-or-background-color, var(--mod-logic-button-or-background-color, var(--spectrum-logic-button-or-background-color)));
   border-color: var(--highcontrast-logic-button-or-border-color, var(--mod-logic-button-or-border-color, var(--spectrum-logic-button-or-border-color)));
-  color: var(--highcontrast-logic-button-or-text-color, var(--mod-logic-button-or-text-color, var(--spectrum-logic-button-or-text-color)));
 
   &:hover:not([disabled]) {
     background-color: var(--highcontrast-logic-button-or-background-color-hover, var(--mod-logic-button-or-background-color-hover, var(--spectrum-logic-button-or-background-color-hover)));
@@ -110,16 +111,6 @@ governing permissions and limitations under the License.
   }
 
   .spectrum-LogicButton {
-    forced-color-adjust: none;
-    &:disabled,
-    &.is-disabled {
-      --highcontrast-logic-button-and-background-color: ButtonFace;
-      --highcontrast-logic-button-and-border-color: GrayText;
-      --highcontrast-logic-button-and-text-color: GrayText;
-      --highcontrast-logic-button-or-background-color: ButtonFace;
-      --highcontrast-logic-button-or-border-color: GrayText;
-      --highcontrast-logic-button-or-text-color: GrayText;
-    }
 
     --highcontrast-logic-button-and-background-color: ButtonFace;
     --highcontrast-logic-button-and-background-color-hover: ButtonFace;
@@ -131,5 +122,16 @@ governing permissions and limitations under the License.
     --highcontrast-logic-button-or-border-color: ButtonText;
     --highcontrast-logic-button-or-border-color-hover: Highlight;
     --highcontrast-logic-button-or-text-color: ButtonText;
+    forced-color-adjust: none;
+
+    &:disabled,
+    &.is-disabled {
+      --highcontrast-logic-button-and-background-color: ButtonFace;
+      --highcontrast-logic-button-and-border-color: GrayText;
+      --highcontrast-logic-button-and-text-color: GrayText;
+      --highcontrast-logic-button-or-background-color: ButtonFace;
+      --highcontrast-logic-button-or-border-color: GrayText;
+      --highcontrast-logic-button-or-text-color: GrayText;
+    }
   }
 }

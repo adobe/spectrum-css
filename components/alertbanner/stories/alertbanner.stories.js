@@ -1,6 +1,5 @@
-import { Template } from "./template";
 import { html } from "lit";
-import isChromatic from "chromatic/isChromatic";
+import { Template } from "./template";
 
 export default {
 	title: "Components/Alert banner",
@@ -71,28 +70,22 @@ const AlertBannerGroup = ({
 	}) => {
 	return html`
 		<div style="display: flex; flex-direction: column; gap: 1rem">
+			${Template(args)}
 			${Template({
-				...args,
-			})}
-			${isChromatic() ?
-			Template({
 				...args,
 				hasActionButton: true,
 				variant: "info",
-				text: "Your trial will expire in 3 days. Once it expires your files will be saved and ready for you to open again once you have purcahsed the software."
-			}): null }
-			${isChromatic() ?
-					Template({
-						...args,
+				text: "Your trial will expire in 3 days. Once it expires your files will be saved and ready for you to open again once you have purchased the software."
+			}) }
+			${Template({
+				...args,
 				hasActionButton: true,
 				variant: "negative",
 				text: "Connection interupted. Check your network to continue."
-			})
-			: null }
+			})}
 		</div>
 	`;
 };
 
 export const Default = AlertBannerGroup.bind({});
-Default.args = {
-};
+Default.args = {};

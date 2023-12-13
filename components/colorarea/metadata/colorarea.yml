@@ -9,9 +9,6 @@ description: |
   - Set the value of the ColorHandle component to the selected color
   - Marshall focus between the saturation and value sliders according to which keys are pressed (up/down for value, left/right for saturation)
 sections:
-  - name: Custom Properties API
-    description: |
-      This component can be modified via its `--mod-*` prefixed custom properties. A list of those prefixed custom properties can be found <a href="https://github.com/adobe/spectrum-css/tree/main/components/colorarea/metadata/mods.md">here</a>.
   - name: Migration Guide
     description: |
       - canvas variant has been removed

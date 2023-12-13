@@ -11,123 +11,121 @@ governing permissions and limitations under the License.
 */
 
 %spectrum-BaseButton {
+	cursor: pointer;
+	user-select: none;
 
-  /* Contain halo */
-  position: relative;
+	/* Contain halo */
+	position: relative;
 
-  display: inline-flex;
-  box-sizing: border-box;
+	/* Show the button overflow in Edge. */
+	overflow: visible;
+	display: inline-flex;
+	align-items: center;
+	justify-content: center;
 
-  align-items: center;
-  justify-content: center;
+	box-sizing: border-box;
 
-  /* Show the button overflow in Edge. */
-  overflow: visible;
+	/* Remove button the margin in Firefox and Safari. */
+	margin: 0;
 
-  /* Remove button the margin in Firefox and Safari. */
-  margin: 0;
+	font-family: var(--mod-sans-font-family-stack, var(--spectrum-sans-font-family-stack));
+	line-height: var(--mod-line-height-100, var(--spectrum-line-height-100));
+	text-decoration: none;
 
-  border-style: solid;
+	/* Remove the inheritance of text transform on button in Edge, Firefox, and IE. */
+	text-transform: none;
 
-  /* Remove the inheritance of text transform on button in Edge, Firefox, and IE. */
-  text-transform: none;
-  -webkit-font-smoothing: antialiased;
-  /* Font smoothing for Firefox */
-  -moz-osx-font-smoothing: grayscale;
+	/* Adjacent buttons should be aligned correctly */
+	vertical-align: top;
 
-  /* Correct the inability to style clickable types in iOS and Safari. */
-  -webkit-appearance: button;
+	/* Correct the inability to style clickable types in iOS and Safari. */
+	appearance: button;
+	border-style: solid;
 
-  /* Adjacent buttons should be aligned correctly */
-  vertical-align: top;
+	transition:
+		background var(--mod-animation-duration-100, var(--spectrum-animation-duration-100)) ease-out,
+		border-color var(--mod-animation-duration-100, var(--spectrum-animation-duration-100)) ease-out,
+		color var(--mod-animation-duration-100, var(--spectrum-animation-duration-100)) ease-out,
+		box-shadow var(--mod-animation-duration-100, var(--spectrum-animation-duration-100)) ease-out;
 
-  transition: background var(--spectrum-global-animation-duration-100) ease-out,
-    border-color var(--spectrum-global-animation-duration-100) ease-out,
-    color var(--spectrum-global-animation-duration-100) ease-out,
-    box-shadow var(--spectrum-global-animation-duration-100) ease-out;
+	-webkit-font-smoothing: antialiased;
 
-  text-decoration: none;
-  font-family: var(--spectrum-alias-body-text-font-family);
+	/* Font smoothing for Firefox */
+	-moz-osx-font-smoothing: grayscale;
 
-  line-height: var(--spectrum-alias-component-text-line-height);
+	/* Fix Firefox */
+	&::-moz-focus-inner {
+		/* Use uppercase PX so values don't get converted to rem */
+		margin-block-start: -2px;
+		margin-block-end: -2px;
+		padding: 0;
 
-  user-select: none;
-  -webkit-user-select: none;
+		border: 0;
 
-  cursor: pointer;
+		/* Remove the inner border and padding for button in Firefox. */
+		border-style: none;
+	}
 
-  &:focus {
-    outline: none;
-  }
+	&:focus {
+		outline: none;
+	}
 
-  /* Fix Firefox */
-  &::-moz-focus-inner {
-    border: 0;
-
-    /* Remove the inner border and padding for button in Firefox. */
-    border-style: none;
-    padding: 0;
-
-    /* Use uppercase PX so values don't get converted to rem */
-    margin-block-start: -2px;
-    margin-block-end: -2px;
-  }
-
-  &:disabled,
-  &.is-disabled {
-    cursor: default;
-  }
+	&:disabled,
+	&.is-disabled {
+		cursor: default;
+	}
 }
 
 %spectrum-ButtonIcon {
-  max-block-size: 100%;
-  flex-shrink: 0;
+	flex-shrink: 0;
+	max-block-size: 100%;
 }
 
 %spectrum-ButtonWithFocusRing {
-  &::after {
-    border-radius: calc(
-      var(--spectrum-button-m-primary-fill-texticon-border-radius) +
-        var(--spectrum-alias-focus-ring-gap)
-    );
-    content: "";
-    display: block;
-    position: absolute;
-    inset-inline-start: 0;
-    inset-inline-end: 0;
-    inset-block-start: 0;
-    inset-block-end: 0;
-    margin: calc(var(--spectrum-alias-focus-ring-gap) * -1);
-    transition: opacity var(--spectrum-global-animation-duration-100) ease-out,
-                margin var(--spectrum-global-animation-duration-100) ease-out;
-  }
+	&::after {
+		content: "";
 
-  &:focus-visible {
-    &::after {
-      margin: calc(var(--spectrum-alias-focus-ring-gap) * -2);
-    }
-  }
+		position: absolute;
+		inset-block-start: 0;
+		inset-block-end: 0;
+		inset-inline-start: 0;
+		inset-inline-end: 0;
+
+		display: block;
+
+		margin: calc(var(--mod-focus-indicator-gap, var(--spectrum-focus-indicator-gap)) * -1);
+
+		transition:
+			opacity var(--mod-animation-duration-100, var(--spectrum-animation-duration-100)) ease-out,
+			margin var(--mod-animation-duration-100, var(--spectrum-animation-duration-100)) ease-out;
+	}
+
+	&:focus-visible {
+		&::after {
+			margin: calc(var(--mod-focus-indicator-gap, var(--spectrum-focus-indicator-gap)) * -2);
+		}
+	}
 }
 
-
 %spectrum-AnchorButton {
-  /* Remove appearance for clickable types in iOS and Safari. */
-  -webkit-appearance: none;
-  /* Make link text not selectable  */
-  user-select: none;
+	/* Make link text not selectable  */
+	user-select: none;
+
+	/* Remove appearance for clickable types in iOS and Safari. */
+	appearance: none;
 }
 
 %spectrum-ButtonLabel {
-  align-self: center;
-  justify-self: center;
+	align-self: center;
+	justify-self: center;
 
-  /* Fixes horizontal alignment of text in anchor buttons */
-  text-align: center;
+	/* Fixes horizontal alignment of text in anchor buttons */
+	text-align: center;
 
-  /* @safari10 Workaround for https://bugs.webkit.org/show_bug.cgi?id=169700 */
-  /*inline-size: 100%;*/
+	/* @safari10 Workaround for https://bugs.webkit.org/show_bug.cgi?id=169700 */
+	/* inline-size: 100%; */
 
-  &:empty {
-    display: none;
-  }
+	&:empty {
+		display: none;
+	}
 }

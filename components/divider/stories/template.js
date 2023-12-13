@@ -1,7 +1,7 @@
 import { html } from "lit";
 import { classMap } from "lit/directives/class-map.js";
 
-import { upperCase, lowerCase, capitalize } from "lodash-es";
+import { capitalize, lowerCase, upperCase } from "lodash-es";
 
 import "../index.css";
 
@@ -12,17 +12,7 @@ export const Template = ({
 	staticColor,
 	vertical = false,
 	customClasses = [],
-	...globals
 }) => {
-	const { express } = globals;
-
-	try {
-		if (!express) import(/* webpackPrefetch: true */ "../themes/spectrum.css");
-		else import(/* webpackPrefetch: true */ "../themes/express.css");
-	} catch (e) {
-		console.warn(e);
-	}
-
 	if (tag === "hr") {
 		return html`
     <hr

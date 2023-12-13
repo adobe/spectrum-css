@@ -197,7 +197,7 @@ Thumbnails.args = {
 			link: "#",
 			isOpen: true,
 			thumbnail: {
-				imageURL: "thumbnail.png",
+				imageURL: "images/thumbnail.png",
 				altText: "Woman crouching",
 			},
 			items: [
@@ -207,7 +207,7 @@ Thumbnails.args = {
 					link: "#",
 					isSelected: true,
 					thumbnail: {
-						imageURL: "thumbnail.png",
+						imageURL: "images/thumbnail.png",
 						altText: "Woman crouching",
 					},
 				},
@@ -216,7 +216,7 @@ Thumbnails.args = {
 					label: "Label 3",
 					link: "#",
 					thumbnail: {
-						imageURL: "flowers.png",
+						imageURL: "images/flowers.png",
 						altText: "Flowers",
 					},
 				},

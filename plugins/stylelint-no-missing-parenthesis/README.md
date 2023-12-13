@@ -21,10 +21,8 @@ For e.g:
 
 ## Installation
 
-```
-npm install stylelint-no-missing-parenthesis
-
-yarn add stylelint-no-missing-parenthesis
+```sh
+yarn add -D stylelint-no-missing-parenthesis
 ```
 
 ## How to use

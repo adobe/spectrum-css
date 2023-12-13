@@ -1,0 +1,26 @@
+{
+  "name": "@spectrum-tools/stylelint-no-unused-custom-properties",
+  "version": "1.2.1",
+  "description": "Report on any unused custom property definitions",
+  "license": "Apache-2.0",
+  "author": "Adobe",
+  "main": "index.js",
+  "dependencies": {
+    "postcss-value-parser": "^4.2.0"
+  },
+  "peerDependencies": {
+    "stylelint": "^14.0.0 || ^15.0.0"
+  },
+  "devDependencies": {
+    "ava": "^5.3.1",
+    "c8": "^8.0.1",
+    "stylelint": "^15.11.0"
+  },
+  "keywords": [
+    "css",
+    "lint",
+    "properties",
+    "report",
+    "stylelint-plugin"
+  ]
+}

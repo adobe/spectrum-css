@@ -1,0 +1,25 @@
+{
+  "name": "@spectrum-tools/postcss-container-style-converter",
+  "version": "1.0.2",
+  "description": "Container style queries are converted to a set of custom properties",
+  "license": "Apache-2.0",
+  "author": "Adobe",
+  "main": "index.js",
+  "files": [
+    "index.js"
+  ],
+  "peerDependencies": {
+    "postcss": ">=8"
+  },
+  "devDependencies": {
+    "ava": "^5.3.1",
+    "c8": "^8.0.1",
+    "postcss": "^8.4.31"
+  },
+  "keywords": [
+    "container-queries",
+    "css",
+    "plugin",
+    "postcss"
+  ]
+}

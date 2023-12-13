@@ -10,6 +10,7 @@ OF ANY KIND, either express or implied. See the License for the specific languag
 governing permissions and limitations under the License.
 */
 
+/* stylelint-disable spectrum-tools/no-unused-custom-properties */
 @container (--system: spectrum) {
   .spectrum-Textfield {
     --spectrum-textfield-border-color: var(--spectrum-gray-500);
@@ -21,3 +22,4 @@ governing permissions and limitations under the License.
     --spectrum-textfield-border-width: var(--spectrum-border-width-100);
   }
 }
+/* stylelint-enable spectrum-tools/no-unused-custom-properties */

@@ -1,0 +1,206 @@
+/*!
+ * Copyright 2023 Adobe. All rights reserved.
+ *
+ * This file is licensed to you under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License. You may obtain a copy
+ * of the License at <http://www.apache.org/licenses/LICENSE-2.0>
+ *
+ * Unless required by applicable law or agreed to in writing, software distributed under
+ * the License is distributed on an "AS IS" BASIS, WITHOUT WARRANTIES OR REPRESENTATIONS
+ * OF ANY KIND, either express or implied. See the License for the specific language
+ * governing permissions and limitations under the License.
+ */
+
+@import "../../../assets/styles/_themes.css";
+@import "./_footer.css";
+@import "./_site.css";
+@import "./_overrides.css";
+@import "../../../node_modules/prismjs/themes/prism.css" ((prefers-color-scheme: light) or (prefers-color-scheme: no-preference));
+@import "../../../node_modules/prismjs/themes/prism-dark.css" (prefers-color-scheme: dark);
+
+/* Component customizations specific to the documentation site */
+:root {
+	--site-scroll-offset: var(--spectrum-spacing-600);
+}
+
+*:not([class]) {
+	box-sizing: border-box;
+}
+
+body {
+	margin: 0;
+	font-family: var(--spectrum-sans-font-family-stack);
+	color: var(--spectrum-alias-text-color-default, var(--spectrum-gray-900));
+	background-color: var(--spectrum-gray-100, var(--spectrum-alias-background-color-default));
+}
+
+[hidden] {
+	display: none !important;
+}
+
+#skip-to-content {
+	position: absolute;
+	inset-block-start: var(--site-scroll-offset);
+	inset-inline-start: 50%;
+	transform: translateY(-200%);
+
+	transition: transform var(--spectrum-global-animation-duration-600);
+
+	&:focus {
+		transform: translateY(0%);
+	}
+}
+
+h1 + p {
+	margin-block: var(--spectrum-spacing-600) !important;
+}
+
+:not(p:has(img), img, .spectrum-Site-logo) + h2:not(:only-child) {
+	margin-block-start: var(--spectrum-global-dimension-size-700) !important;
+}
+
+:not(p:has(img)) + h3:not(:only-child) {
+	margin-block-start: var(--spectrum-global-dimension-size-400) !important;
+}
+
+:not(p:has(img)) + h4:not(:only-child) {
+	margin-block-start: var(--spectrum-global-dimension-size-4300) !important;
+}
+
+h2[id],
+h3[id] {
+	/* This ends up aligning nicely with the search bar in desktop */
+	scroll-margin-top: var(--spectrum-global-dimension-size-600);
+}
+
+:is(h1, h2, h3, h4, h5, h6):not(:has([class])):first-child {
+	margin-block: 0;
+}
+
+pre {
+	margin: 0;
+	padding: 0;
+	background: transparent;
+	border: none;
+}
+
+pre.html {
+	margin: 0;
+	white-space: pre-wrap; /* css-3 */
+}
+
+code[class*="language-"],
+pre[class*="language-"] {
+	font-size: inherit;
+	text-shadow: none;
+}
+
+article,
+section {
+	margin-block: 2rem;
+}
+
+.is-scrollable {
+	overflow-x: hidden;
+	overflow-y: auto;
+
+	-webkit-overflow-scrolling: touch;
+
+	&::-webkit-scrollbar {
+		inline-size: 10px;
+		block-size: 10px;
+	}
+
+	&::-webkit-scrollbar-thumb {
+		inline-size: 8px;
+		block-size: 8px;
+
+		background-color: transparent;
+		background-clip: padding-box;
+		border-block-start: 2px solid transparent;
+		border-block-end: 2px solid transparent;
+		border-radius: var(--spectrum-corner-radius-100);
+	}
+
+	&::-webkit-scrollbar-track,
+	&::-webkit-scrollbar-track-piece {
+		background-color: rgba(var(--spectrum-gray-50-rgb), 0.4);
+	}
+
+	&:hover::-webkit-scrollbar-thumb {
+		background-color: rgba(var(--spectrum-gray-200-rgb), 0.4);
+	}
+}
+
+[is-sticky],
+.is-sticky {
+	position: sticky;
+	inset-block-start: var(--site-sticky-top);
+}
+
+button.code-copy {
+	all: unset !important;
+
+	cursor: pointer !important;
+
+	position: absolute !important;
+	inset-block-start: var(--spectrum-spacing-75) !important;
+	inset-inline-end: var(--spectrum-spacing-75) !important;
+
+	display: inline-flex;
+	align-items: center;
+	justify-content: center;
+
+	min-block-size: var(--spectrum-button-height);
+	padding: calc(var(--spectrum-button-edge-to-visual-only) - var(--spectrum-button-border-width));
+
+	font-family: var(--mod-sans-font-family-stack, var(--spectrum-sans-font-family-stack));
+	line-height: var(--mod-line-height-100, var(--spectrum-line-height-100));
+	color: var(--spectrum-neutral-content-color-default);
+
+	appearance: button;
+	opacity: 80%;
+	border: none;
+	border-radius: calc(
+		var(--mod-button-border-radius, var(--spectrum-button-border-radius)) +
+			var(--mod-focus-indicator-gap, var(--spectrum-focus-indicator-gap))
+	);
+	outline: none;
+
+	fill: currentColor;
+
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+
+	.site-Example-markup & {
+		inset-block-start: var(--spectrum-spacing-400) !important;
+		inset-inline-end: var(--spectrum-spacing-400) !important;
+	}
+
+	span {
+		display: inline-block;
+
+		inline-size: 16px;
+		block-size: 16px;
+		margin-inline-start: calc(
+			var(--mod-button-edge-to-visual, var(--spectrum-button-edge-to-visual)) -
+				var(--mod-button-edge-to-text, var(--spectrum-button-edge-to-text))
+		);
+
+		background: url("https://api.iconify.design/mdi/content-copy.svg") no-repeat center center / contain;
+	}
+
+	&:hover {
+		color: var(--spectrum-accent-content-color-hover);
+	}
+
+	&:active {
+		color: var(--spectrum-accent-content-color-down);
+	}
+
+	&:focus {
+		color: var(--spectrum-accent-content-color-key-focus) !important;
+		border-radius: calc(var(--spectrum-button-border-radius) + var(--spectrum-focus-indicator-gap)) !important;
+		outline-offset: var(--spectrum-focus-ring-offset) !important;
+	}
+}

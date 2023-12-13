@@ -1,0 +1,26 @@
+{
+	"name": "@spectrum-tools/postcss-prettier",
+	"version": "0.0.0-alpha.0",
+	"description": "Runs file through prettier.",
+	"license": "Apache-2.0",
+	"author": "Adobe",
+	"main": "index.js",
+	"dependencies": {
+		"postcss": "^8.4.31",
+		"postcss-selector-parser": "^6.0.13",
+		"prettier": "^3.0.3"
+	},
+	"peerDependencies": {
+		"postcss": ">=8",
+		"prettier": ">=2 || >=3"
+	},
+	"devDependencies": {
+		"ava": "^5.3.1",
+		"c8": "^8.0.1"
+	},
+	"keywords": [
+		"css",
+		"postcss-plugin",
+		"prettier"
+	]
+}

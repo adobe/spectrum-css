@@ -7,7 +7,7 @@
   "homepage": "https://opensource.adobe.com/spectrum-css/preview",
   "main": "main.js",
   "scripts": {
-    "build": "storybook build --config-dir . --output-dir ./storybook-static"
+    "build": "storybook build --config-dir ."
   },
   "dependencies": {
     "@adobe/spectrum-css-workflow-icons": "^1.5.4",
@@ -21,7 +21,6 @@
     "@babel/core": "^7.22.1",
     "@chromaui/addon-visual-tests": "^0.0.124",
     "@etchteam/storybook-addon-status": "^4.2.4",
-    "@spectrum-css/component-builder": "^4.0.19",
     "@storybook/addon-a11y": "^7.5.1",
     "@storybook/addon-actions": "^7.5.1",
     "@storybook/addon-console": "^1.2.3",
@@ -41,15 +40,12 @@
     "@storybook/web-components-webpack5": "^7.5.1",
     "@whitespace/storybook-addon-html": "^5.1.6",
     "chromatic": "^7.0.0",
+    "cssnano": "^6.0.1",
     "file-loader": "6.2.0",
     "lit": "^2.8.0",
     "lodash-es": "^4.17.21",
-    "postcss": "^7.0.36",
-    "postcss-class-prefix": "^0.3.0",
-    "postcss-loader": "^4.0.0",
-    "postcss-prefix-selector": "^1.16.0",
-    "postcss-selector-replace": "^1.0.2",
-    "postcss-warn-cleaner": "^0.1.9",
+    "postcss": "^8.4.31",
+    "postcss-loader": "^7.3.3",
     "prettier": "^2.8.8",
     "raw-loader": "^4.0.2",
     "react": "^18.0.0",

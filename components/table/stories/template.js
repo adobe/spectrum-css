@@ -29,7 +29,6 @@ export const TableRowItem = ({
 	ariaControls,
 	customClasses = [],
 	size = "m",
-	id,
 }) => {
 	const useThumbnail = showThumbnails && !isSummaryRow && !isSectionHeader;
 
@@ -48,7 +47,7 @@ export const TableRowItem = ({
 				<div class="spectrum-Table-thumbnailInner">
 					${Thumbnail({
 						size: "300",
-						imageURL: "example-card-landscape.png",
+						imageURL: "images/example-card-landscape.png",
 						isCover: true,
 					})}
 					<div class="spectrum-Table-thumbnailContent">${content}</div>
@@ -170,17 +169,8 @@ export const Template = ({
 	rowItems = [],
 	customClasses = [],
 	id,
-	...globals
 }) => {
 	if (!rowItems || !rowItems.length) return html``;
-
-	const { express } = globals;
-	try {
-		if (!express) import(/* webpackPrefetch: true */ "../themes/spectrum.css");
-		else import(/* webpackPrefetch: true */ "../themes/express.css");
-	} catch (e) {
-		console.warn(e);
-	}
 
 	// Use Table tags or Div tags.
 	const tableTag = useDivs ? literal`div` : literal`table`;

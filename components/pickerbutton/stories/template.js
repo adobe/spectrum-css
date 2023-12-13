@@ -1,13 +1,13 @@
 import { html } from "lit";
 import { classMap } from "lit/directives/class-map.js";
-import { styleMap } from "lit/directives/style-map.js";
 import { ifDefined } from "lit/directives/if-defined.js";
+import { styleMap } from "lit/directives/style-map.js";
 
 import { useArgs } from "@storybook/client-api";
 
 import { Template as Icon } from "@spectrum-css/icon/stories/template.js";
 
-import "../index.css";
+import "../index-base.css";
 
 export const Template = ({
 	id,
@@ -27,15 +27,7 @@ export const Template = ({
 	onclick,
 	...globals
 }) => {
-	const [_, updateArgs] = useArgs();
-	const { express } = globals;
-
-	try {
-		if (!express) import(/* webpackPrefetch: true */ "../themes/spectrum.css");
-		else import(/* webpackPrefetch: true */ "../themes/express.css");
-	} catch (e) {
-		console.warn(e);
-	}
+	const [, updateArgs] = useArgs();
 
 	return html`
 		<button

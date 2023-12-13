@@ -11,42 +11,102 @@
  * governing permissions and limitations under the License.
  */
 
-module.exports = (ctx) => {
-	const {
-		combineSelectors = true,
-		/* This removes all copyright comments so we can add a single one at the top of the file */
-		commentsDenylist = ["Copyright", "This file contains"],
-	} = ctx.options;
-	return {
-		plugins: [
-			require("postcss-rgb-mapping")(),
-			require("postcss-sorting")({
-				order: ["custom-properties", "declarations", "at-rules", "rules"],
-				"properties-order": "alphabetical",
-			}),
-			/* Merges _adjacent_ rules only */
-			require("postcss-merge-rules"),
-			/* Combines all duplicated selectors */
-			combineSelectors
-				? require("postcss-combine-duplicated-selectors")({})
-				: null,
-			/* Remove all duplicate copyrights and add a single one at the top */
-			require("postcss-discard-comments")({
-				removeAllButFirst: true,
-				remove: (comment) => {
-					return (
-						commentsDenylist.some((str) => comment.includes(str)) ||
-						comment.trim() === ""
-					);
-				},
-			}),
-			/* After cleaning up comments, remove all empty rules */
-			require("postcss-discard-empty")(),
-			/* Ensure the license is at the top of the file */
-			require("postcss-licensing")({
-				filename: "../../COPYRIGHT",
-				skipIfEmpty: true,
-			}),
-		],
-	};
+const { join } = require("path");
+
+module.exports = ({ env = "development", options = {} }) => {
+  // const isProduction = Boolean(env === "production");
+
+  return {
+    ...options,
+    plugins: {
+      /* --------------------------------------------------- */
+      /* ------------------- IMPORTS ---------------- */
+      /** @link https://github.com/postcss/postcss-import#postcss-import */
+      "postcss-import": {},
+      /* --------------------------------------------------- */
+      /* ------------------- ORGANIZE/DEDUPE --------------- */
+      "postcss-combine-media-query": {},
+      "postcss-sorting": {
+        order: ["custom-properties", "declarations", "rules", "at-rules"],
+        "properties-order": "alphabetical",
+      },
+      /** @note Merges _adjacent_ rules only; hense the sorting is first */
+      "postcss-merge-rules": {},
+      "postcss-combine-duplicated-selectors": {},
+
+      "@spectrum-tools/postcss-rgb-mapping": {},
+
+      /* --------------------------------------------------- */
+      /* ------------------- POLYFILLS --------------------- */
+
+      /**
+       * @todo should we be documenting this for downstream users rather
+       * than polyfilling the features ourselves? what if they want to
+       * use a different support matrix?
+       *
+       * @note stage 2 (default); stage 4 === stable
+       * @link https://github.com/csstools/postcss-plugins
+       * @link https://preset-env.cssdb.org/features/#stage-2
+       */
+      "postcss-preset-env": {
+        stage: 3,
+        env,
+        features: {
+          "logical-properties-and-values": false,
+          clamp: true,
+          "color-functional-notation": true,
+          "font-format-keywords": true,
+          "opacity-percentage": true,
+        },
+      },
+
+      /* --------------------------------------------------- */
+      /* ------------------- CLEAN-UP TASKS ---------------- */
+      "postcss-discard-comments": {
+        removeAll: true,
+      },
+
+      /* After cleaning up comments, remove all empty rules */
+      cssnano: {
+        preset: [
+          "lite",
+          {
+            normalizeWhitespace: false,
+            discardComments: true,
+            orderedValues: {},
+            mergeRules: {},
+            uniqueSelectors: {},
+            cssDeclarationSorter: {},
+          },
+        ],
+      },
+
+      /* --------------------------------------------------- */
+      /* ------------------- REPORTING --------------------- */
+      "@spectrum-tools/postcss-prettier": {
+        overrides: {
+          // Extending this prevents var stacks from line-wrapping (making them easier to diff)
+          printWidth: 250,
+        },
+        // Passing the config path saves a little time b/c it doesn't have to find it
+        configFile: join(__dirname, "..", ".prettierrc")
+      },
+
+      stylelint: {
+        // Passing the config path saves a little time b/c it doesn't have to find it
+        configFile: join(__dirname, "../stylelint.config.js"),
+        allowEmptyInput: true,
+        cache: true,
+        fix: true,
+        ignorePath: join(__dirname, "../.stylelintignore"),
+        reportNeedlessDisables: true,
+        reportInvalidScopeDisables: true,
+      },
+
+      "postcss-reporter": {
+        clearReportedMessages: true,
+        noIcon: true,
+      },
+    },
+  };
 };

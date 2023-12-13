@@ -4,7 +4,7 @@ examples:
     name: Image
     markup: |
       <div class="spectrum-Asset">
-        <img class="spectrum-Asset-image" src="img/example-ava.jpg" style="max-width: 75%; max-height: 75%; object-fit: contain;">
+        <img class="spectrum-Asset-image" src="images/example-ava.jpg" style="max-width: 75%; max-height: 75%; object-fit: contain;">
       </div>
   - id: asset
     name: File

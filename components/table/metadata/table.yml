@@ -2,9 +2,6 @@ name: Table
 description: The Table component is for displaying tabular info, with the option for sorting or row selection.
 SpectrumSiteSlug: https://spectrum.adobe.com/page/table/
 sections:
-  - name: Custom properties API
-    description: |
-      This component can be modified via its `--mod-*` prefixed custom properties. A list of those prefixed custom properties can be found <a href="https://github.com/adobe/spectrum-css/tree/main/components/table/metadata/mods.md">here</a>.
   - name: Migration guide
     description: |
       ### Sorted icon moved to left side of text
@@ -1040,8 +1037,8 @@ examples:
           <tr class="spectrum-Table-row spectrum-Table-row--collapsible" data-tier="0" id="table-cr-alpha">
             <td class="spectrum-Table-cell spectrum-Table-cell--collapsible">
               <div class="spectrum-Table-collapseInner">
-                <button 
-                  class="spectrum-Button spectrum-Button--sizeM spectrum-Button--iconOnly spectrum-Table-disclosureIcon" 
+                <button
+                  class="spectrum-Button spectrum-Button--sizeM spectrum-Button--iconOnly spectrum-Table-disclosureIcon"
                   aria-label="Collapse"
                   aria-expanded="true"
                   aria-controls="table-cr-bravo table-cr-delta"
@@ -1059,8 +1056,8 @@ examples:
           <tr class="spectrum-Table-row spectrum-Table-row--collapsible" data-tier="1" id="table-cr-bravo">
             <td class="spectrum-Table-cell spectrum-Table-cell--collapsible">
               <div class="spectrum-Table-collapseInner">
-                <button 
-                  class="spectrum-Button spectrum-Button--sizeM spectrum-Button--iconOnly spectrum-Table-disclosureIcon" 
+                <button
+                  class="spectrum-Button spectrum-Button--sizeM spectrum-Button--iconOnly spectrum-Table-disclosureIcon"
                   aria-label="Expand"
                   aria-expanded="false"
                   aria-controls="table-cr-charlie"
@@ -1150,7 +1147,7 @@ examples:
               <div class="spectrum-Table-thumbnailInner">
                 <div class="spectrum-Thumbnail spectrum-Thumbnail--cover spectrum-Thumbnail--size300 spectrum-OpacityCheckerboard">
                   <div class="spectrum-Thumbnail-image-wrapper">
-                    <img class="spectrum-Thumbnail-image" src="img/flowers.png" alt="Placeholder image">
+                    <img class="spectrum-Thumbnail-image" src="images/flowers.png" alt="Placeholder image">
                   </div>
                 </div>
                 <div class="spectrum-Table-thumbnailContent">Birds</div>
@@ -1163,7 +1160,7 @@ examples:
               <div class="spectrum-Table-thumbnailInner">
                 <div class="spectrum-Thumbnail spectrum-Thumbnail--cover spectrum-Thumbnail--size300 spectrum-OpacityCheckerboard">
                   <div class="spectrum-Thumbnail-image-wrapper">
-                    <img class="spectrum-Thumbnail-image" src="img/flowers.png" alt="Placeholder image">
+                    <img class="spectrum-Thumbnail-image" src="images/flowers.png" alt="Placeholder image">
                   </div>
                 </div>
                 <div class="spectrum-Table-thumbnailContent">Ducks</div>
@@ -1176,7 +1173,7 @@ examples:
               <div class="spectrum-Table-thumbnailInner">
                 <div class="spectrum-Thumbnail spectrum-Thumbnail--cover spectrum-Thumbnail--size300 spectrum-OpacityCheckerboard">
                   <div class="spectrum-Thumbnail-image-wrapper">
-                    <img class="spectrum-Thumbnail-image" src="img/flowers.png" alt="Placeholder image">
+                    <img class="spectrum-Thumbnail-image" src="images/flowers.png" alt="Placeholder image">
                   </div>
                 </div>
                 <div class="spectrum-Table-thumbnailContent">Goats</div>
@@ -1189,7 +1186,7 @@ examples:
               <div class="spectrum-Table-thumbnailInner">
                 <div class="spectrum-Thumbnail spectrum-Thumbnail--cover spectrum-Thumbnail--size300 spectrum-OpacityCheckerboard">
                   <div class="spectrum-Thumbnail-image-wrapper">
-                    <img class="spectrum-Thumbnail-image" src="img/flowers.png" alt="Placeholder image">
+                    <img class="spectrum-Thumbnail-image" src="images/flowers.png" alt="Placeholder image">
                   </div>
                 </div>
                 <div class="spectrum-Table-thumbnailContent">Rabbits</div>

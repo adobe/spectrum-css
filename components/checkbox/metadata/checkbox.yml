@@ -7,9 +7,6 @@ description: |
   - Invalid checkboxes are indicated with an alert [HelpText](helptext.html) when included in a Fieldgroup.
 
 sections:
-  - name: Custom Properties API
-    description: |
-      This component can be modified via its `--mod-*` prefixed custom properties. A list of those prefixed custom properties can be found <a href="https://github.com/adobe/spectrum-css/tree/main/components/checkbox/metadata/mods.md">here</a>.
   - name: Migration Guide
     description: |
       ### Quiet and emphasized

@@ -3,7 +3,6 @@ import { classMap } from "lit/directives/class-map.js";
 import { ifDefined } from "lit/directives/if-defined.js";
 import { styleMap } from "lit/directives/style-map.js";
 
-import { Template as Modal } from "@spectrum-css/modal/stories/template.js";
 
 import "../index.css";
 
@@ -14,32 +13,20 @@ export const Template = ({
 	customClasses = ["spectrum-Modal"],
 	customStyles = {},
 	id,
-	...globals
-}) => {
-	const { express } = globals;
-
-	try {
-		if (!express) import(/* webpackPrefetch: true */ "../themes/spectrum.css");
-		else import(/* webpackPrefetch: true */ "../themes/express.css");
-	} catch (e) {
-		console.warn(e);
-	}
-
-	return html`
+}) => html`
+	<div
+		class="${rootClass}-wrapper"
+		style=${ifDefined(styleMap(customStyles))}
+	>
 		<div
-			class="${rootClass}-wrapper"
-			style=${ifDefined(styleMap(customStyles))}
+			class=${classMap({
+				[rootClass]: true,
+				"is-open": isOpen,
+				...customClasses.reduce((a, c) => ({ ...a, [c]: true }), {}),
+			})}
+			id=${ifDefined(id)}
 		>
-			<div
-				class=${classMap({
-					[rootClass]: true,
-					"is-open": isOpen,
-					...customClasses.reduce((a, c) => ({ ...a, [c]: true }), {}),
-				})}
-				id=${ifDefined(id)}
-			>
-			${content.map((c) => (typeof c === "function" ? c({}) : c))}
-			</div>
+		${content.map((c) => (typeof c === "function" ? c({}) : c))}
 		</div>
-	`;
-};
+	</div>
+`;

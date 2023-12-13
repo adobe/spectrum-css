@@ -1,0 +1,63 @@
+<article class="spectrum-CSSExample-container">
+
+  <h3 id="{{ example.id | slugify }}" class="spectrum-Heading spectrum-Heading--sizeS">
+    <a href="#{{ example.id | slugify }}">{% if example.title %}{{ example.title }}{% else %}{{ example.name }}{% endif %}</a>
+  </h3>
+
+  {% if example.description or example.details -%}
+    <div class="spectrum-Body spectrum-Body--sizeM">
+      {% if example.description -%}
+        {{ example.description | markdownify | safe }}
+      {%- endif %}
+
+      {% if example.details -%}
+        {{ example.details | markdownify | safe }}
+      {%- endif %}
+    </div>
+  {%- endif %}
+
+  {%- if example.markup -%}
+    <div class="spectrum-CSSExample-container"{% if example.styles %} style="{{ example.styles | safe }}"{% endif %}>
+      {%- if example.markup is string -%}
+        {% set markup %}{{ example.markup | safe }}{% endset %}
+        {% include "code-preview.njk" %}
+      {%- else -%}
+        {% set tabs = [] %}
+        {%- for item in example.markup %}
+          {%- if item is string -%}
+            {% set markup %}{{ item | safe }}{% endset %}
+            {% include "code-preview.njk" %}
+          {%- else -%}
+            {% if item.group is string %}
+              {% set tabContent %}
+                {% set markup %}{{ item.group | markdownify | safe }}{% endset %}
+                {% include "code-preview.njk" %}
+              {%- endset -%}
+            {%- else -%}
+              {% set tabContent = '<div class="spectrum-CSSExample-example">' %}
+              {%- for entry in item.group -%}
+                {% set markup %}{{ entry | markdownify | safe }}{% endset %}
+                {%- set tabContent -%}
+                  {{ tabContent | safe }}
+                  {% include "code-preview.njk" %}
+                {%- endset -%}
+              {%- endfor -%}
+              {%- set tabContent -%}{{ tabContent | safe }}</div>{%- endset -%}
+            {%- endif %}
+
+            {% set tabTitle = item.title %}
+            {% set tabSelected = item.tag | lower == "default" %}
+            {% set obj = { id: example.id + '-' + item.title | slugify, label: tabTitle, content: tabContent, isSelected: tabSelected } %}
+            {% set tabs = (tabs.push(obj), tabs) %}
+          {%- endif %}
+        {% endfor -%}
+
+        {%- if tabs.length > 0 -%}
+          {% set tab_id = example.id + '-tabs' %}
+          {% include 'tabs.njk' %}
+        {%- endif -%}
+      {%- endif %}
+    </div>
+  {%- endif -%}
+
+</article>

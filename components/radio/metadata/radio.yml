@@ -7,9 +7,6 @@ description: |
   - Invalid radio buttons are signified by including [HelpText](helptext.html) in a [FieldGroup](fieldgroup.html). Sample usage for an invalid radio state is included in the [FieldGroup](fieldgroup.html#invalid) documentation.
 
 sections:
-  - name: Custom Properties API
-    description: |
-      This component can be modified via its `--mod-*` prefixed custom properties. A list of those prefixed custom properties can be found <a href="https://github.com/adobe/spectrum-css/tree/main/components/radio/metadata/mods.md">here</a>.
   - name: Migration Guide
     description: |
       ### T-shirt sizing
@@ -21,7 +18,7 @@ sections:
       - Read-only radio buttons do not have a focus ring, but the button should be focusable.]
 
       ### Invalid/Error State
-      - Invalid radio buttons are signified by including [Help text](helptext.html) in a [Field group](fieldgroup.html). The `.is-invalid` class has been removed. See Field group for an example with an invalid radio group. 
+      - Invalid radio buttons are signified by including [Help text](helptext.html) in a [Field group](fieldgroup.html). The `.is-invalid` class has been removed. See Field group for an example with an invalid radio group.
 
       ### Remove focus-ring class
       We've migrated away from the focus-ring class in favor of the native `:focus-visible` pseudo-class due to changes in browser support.

@@ -1,0 +1,181 @@
+/*!
+Copyright 2023 Adobe. All rights reserved.
+This file is licensed to you under the Apache License, Version 2.0 (the "License");
+you may not use this file except in compliance with the License. You may obtain a copy
+of the License at http://www.apache.org/licenses/LICENSE-2.0
+
+Unless required by applicable law or agreed to in writing, software distributed under
+the License is distributed on an "AS IS" BASIS, WITHOUT WARRANTIES OR REPRESENTATIONS
+OF ANY KIND, either express or implied. See the License for the specific language
+governing permissions and limitations under the License.
+*/
+
+/**
+ * @namespace spectrum
+ * @component Body
+ * @category Typography
+ * @sizes XXS, XS, S, M, L, XL, XXL, XXXL
+ * @descendents strong, emphasized
+ * @modifiers serif
+ */
+.spectrum-Body {
+	/* Body tokens */
+	--spectrum-body-sans-serif-font-family: var(--spectrum-sans-font-family-stack);
+	--spectrum-body-serif-font-family: var(--spectrum-serif-font-family-stack);
+	--spectrum-body-cjk-font-family: var(--spectrum-cjk-font-family-stack);
+
+	--spectrum-body-cjk-letter-spacing: var(--spectrum-cjk-letter-spacing);
+
+	--spectrum-body-margin: calc(
+		var(--mod-body-font-size, var(--spectrum-body-font-size)) * var(--spectrum-body-margin-multiplier)
+	);
+
+	--spectrum-body-font-color: var(--spectrum-body-color);
+	margin-block-start: 0;
+	margin-block-end: 0;
+
+	/* Body styles */
+
+	/* Body - Default */
+	font-family: var(--mod-body-sans-serif-font-family, var(--spectrum-body-sans-serif-font-family));
+	font-size: var(--mod-body-font-size, var(--spectrum-body-font-size));
+	font-weight: var(--mod-body-sans-serif-font-weight, var(--spectrum-body-sans-serif-font-weight));
+	font-style: var(--mod-body-sans-serif-font-style, var(--spectrum-body-sans-serif-font-style));
+	line-height: var(--mod-body-line-height, var(--spectrum-body-line-height));
+	color: var(--highcontrast-body-font-color, var(--mod-body-font-color, var(--spectrum-body-font-color)));
+
+	strong,
+	.spectrum-Body-strong {
+		font-weight: var(--mod-body-sans-serif-strong-font-weight, var(--spectrum-body-sans-serif-strong-font-weight));
+		font-style: var(--mod-body-sans-serif-strong-font-style, var(--spectrum-body-sans-serif-strong-font-style));
+	}
+
+	em,
+	.spectrum-Body-emphasized {
+		font-weight: var(
+			--mod-body-sans-serif-emphasized-font-weight,
+			var(--spectrum-body-sans-serif-emphasized-font-weight)
+		);
+		font-style: var(--mod-body-sans-serif-emphasized-font-style, var(--spectrum-body-sans-serif-emphasized-font-style));
+	}
+
+	.spectrum-Body-strong.spectrum-Body-emphasized,
+	em strong,
+	strong em {
+		font-weight: var(
+			--mod-body-sans-serif-strong-emphasized-font-weight,
+			var(--spectrum-body-sans-serif-strong-emphasized-font-weight)
+		);
+		font-style: var(
+			--mod-body-sans-serif-strong-emphasized-font-style,
+			var(--spectrum-body-sans-serif-strong-emphasized-font-style)
+		);
+	}
+
+	&:lang(zh),
+	&:lang(ja),
+	&:lang(ko) {
+		font-family: var(--mod-body-cjk-font-family, var(--spectrum-body-cjk-font-family));
+		font-weight: var(--mod-body-cjk-font-weight, var(--spectrum-body-cjk-font-weight));
+		font-style: var(--mod-body-cjk-font-style, var(--spectrum-body-cjk-font-style));
+		line-height: var(--mod-body-cjk-line-height, var(--spectrum-body-cjk-line-height));
+		letter-spacing: var(--mod-body-cjk-letter-spacing, var(--spectrum-body-cjk-letter-spacing));
+
+		strong,
+		.spectrum-Body-strong {
+			font-weight: var(--mod-body-cjk-strong-font-weight, var(--spectrum-body-cjk-strong-font-weight));
+			font-style: var(--mod-body-cjk-strong-font-style, var(--spectrum-body-cjk-strong-font-style));
+		}
+
+		em,
+		.spectrum-Body-emphasized {
+			font-weight: var(--mod-body-cjk-emphasized-font-weight, var(--spectrum-body-cjk-emphasized-font-weight));
+			font-style: var(--mod-body-cjk-emphasized-font-style, var(--spectrum-body-cjk-emphasized-font-style));
+		}
+
+		.spectrum-Body-strong.spectrum-Body-emphasized,
+		em strong,
+		strong em {
+			font-weight: var(
+				--mod-body-cjk-strong-emphasized-font-weight,
+				var(--spectrum-body-cjk-strong-emphasized-font-weight)
+			);
+			font-style: var(
+				--mod-body-cjk-strong-emphasized-font-style,
+				var(--spectrum-body-cjk-strong-emphasized-font-style)
+			);
+		}
+	}
+
+	/* Add margin when inside a Typography component */
+	.spectrum-Typography & {
+		margin-block-end: var(--mod-body-margin, var(--spectrum-body-margin));
+	}
+}
+
+/* Body t-shirt sizes */
+.spectrum-Body--sizeXS {
+	--spectrum-body-font-size: var(--spectrum-body-size-xs);
+}
+
+.spectrum-Body--sizeS {
+	--spectrum-body-font-size: var(--spectrum-body-size-s);
+}
+
+.spectrum-Body--sizeM {
+	--spectrum-body-font-size: var(--spectrum-body-size-m);
+}
+
+.spectrum-Body--sizeL {
+	--spectrum-body-font-size: var(--spectrum-body-size-l);
+}
+
+.spectrum-Body--sizeXL {
+	--spectrum-body-font-size: var(--spectrum-body-size-xl);
+}
+
+.spectrum-Body--sizeXXL {
+	--spectrum-body-font-size: var(--spectrum-body-size-xxl);
+}
+
+.spectrum-Body--sizeXXXL {
+	--spectrum-body-font-size: var(--spectrum-body-size-xxxl);
+}
+
+.spectrum-Body--serif {
+	font-family: var(--mod-body-serif-font-family, var(--spectrum-body-serif-font-family));
+	font-weight: var(--mod-body-serif-font-weight, var(--spectrum-body-serif-font-weight));
+	font-style: var(--mod-body-serif-font-style, var(--spectrum-body-serif-font-style));
+
+	strong,
+	.spectrum-Body-strong {
+		font-weight: var(--mod-body-serif-strong-font-weight, var(--spectrum-body-serif-strong-font-weight));
+		font-style: var(--mod-body-serif-strong-font-style, var(--spectrum-body-serif-strong-font-style));
+	}
+
+	em,
+	.spectrum-Body-emphasized {
+		font-weight: var(--mod-body-serif-emphasized-font-weight, var(--spectrum-body-serif-emphasized-font-weight));
+		font-style: var(--mod-body-serif-emphasized-font-style, var(--spectrum-body-serif-emphasized-font-style));
+	}
+
+	.spectrum-Body-strong.spectrum-Body-emphasized,
+	em strong,
+	strong em {
+		font-weight: var(
+			--mod-body-serif-strong-emphasized-font-weight,
+			var(--spectrum-body-serif-strong-emphasized-font-weight)
+		);
+		font-style: var(
+			--mod-body-serif-strong-emphasized-font-style,
+			var(--spectrum-body-serif-strong-emphasized-font-style)
+		);
+	}
+}
+
+/* Windows high contrast mode */
+@media (forced-colors: active) {
+	.spectrum-Body {
+		--highcontrast-body-font-color: text;
+	}
+}

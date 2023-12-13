@@ -3,9 +3,6 @@ status: Verified
 description: Tags allow users to categorize content. They can represent keywords or people, and are grouped to describe an item or a search request.
 SpectrumSiteSlug: https://spectrum.adobe.com/page/tag/
 sections:
-  - name: Custom Properties API
-    description: |
-      This component can be modified via its `--mod-*` prefixed custom properties. A list of those prefixed custom properties can be found <a href="https://github.com/adobe/spectrum-css/tree/main/components/tag/metadata/mods.md">here</a>.
   - name: Migration Guide
     description: |
       ### Pluralized classes changed to singular
@@ -16,7 +13,7 @@ sections:
       ### A div wrapper is required for avatar
       ```
       <div class="spectrum-Avatar spectrum-Avatar--size50">
-        <img class="spectrum-Avatar-image" src="img/example-ava.jpg" alt="Avatar">
+        <img class="spectrum-Avatar-image" src="images/example-ava.jpg" alt="Avatar">
       </div>
       ```
       ### Icon size changed to small
@@ -46,7 +43,7 @@ examples:
 
           <div class="spectrum-Tag spectrum-Tag--sizeS" tabindex="0">
             <div class="spectrum-Avatar spectrum-Avatar--size50">
-              <img class="spectrum-Avatar-image" src="img/example-ava.jpg" alt="Avatar">
+              <img class="spectrum-Avatar-image" src="images/example-ava.jpg" alt="Avatar">
             </div>
             <span class="spectrum-Tag-itemLabel">Tag label</span>
             <button type="button" class="spectrum-ClearButton spectrum-ClearButton--sizeM spectrum-Tag-clearButton" tabindex="-1">
@@ -74,7 +71,7 @@ examples:
           </div>
           <div class="spectrum-Tag spectrum-Tag--sizeS is-selected" tabindex="0">
             <div class="spectrum-Avatar spectrum-Avatar--size50">
-              <img class="spectrum-Avatar-image" src="img/example-ava.jpg" alt="Avatar">
+              <img class="spectrum-Avatar-image" src="images/example-ava.jpg" alt="Avatar">
             </div>
             <span class="spectrum-Tag-itemLabel">Tag label</span>
             <button type="button" class="spectrum-ClearButton spectrum-ClearButton--sizeM spectrum-Tag-clearButton" tabindex="-1">
@@ -128,7 +125,7 @@ examples:
 
           <div class="spectrum-Tag spectrum-Tag--sizeS is-disabled">
             <div class="spectrum-Avatar spectrum-Avatar--size50">
-              <img class="spectrum-Avatar-image" src="img/example-ava.jpg" alt="Avatar">
+              <img class="spectrum-Avatar-image" src="images/example-ava.jpg" alt="Avatar">
             </div>
             <span class="spectrum-Tag-itemLabel">Tag label</span>
             <button type="button" class="spectrum-ClearButton spectrum-ClearButton--sizeM spectrum-Tag-clearButton" tabindex="-1">
@@ -181,7 +178,7 @@ examples:
 
           <div class="spectrum-Tag spectrum-Tag--sizeS is-emphasized" tabindex="0">
             <div class="spectrum-Avatar spectrum-Avatar--size50">
-              <img class="spectrum-Avatar-image" src="img/example-ava.jpg" alt="Avatar">
+              <img class="spectrum-Avatar-image" src="images/example-ava.jpg" alt="Avatar">
             </div>
             <span class="spectrum-Tag-itemLabel">Tag label</span>
             <button type="button" class="spectrum-ClearButton spectrum-ClearButton--sizeM spectrum-Tag-clearButton" tabindex="-1">
@@ -227,7 +224,7 @@ examples:
 
           <div class="spectrum-Tag spectrum-Tag--sizeS" tabindex="0">
             <div class="spectrum-Avatar spectrum-Avatar--size50">
-              <img class="spectrum-Avatar-image" src="img/example-ava.jpg" alt="Avatar">
+              <img class="spectrum-Avatar-image" src="images/example-ava.jpg" alt="Avatar">
             </div>
             <span class="spectrum-Tag-itemLabel">Tag label</span>
             <button type="button" class="spectrum-ClearButton spectrum-ClearButton--sizeS spectrum-Tag-clearButton" tabindex="-1">
@@ -267,7 +264,7 @@ examples:
 
           <div class="spectrum-Tag spectrum-Tag--sizeM" tabindex="0">
             <div class="spectrum-Avatar spectrum-Avatar--size100">
-              <img class="spectrum-Avatar-image" src="img/example-ava.jpg" alt="Avatar">
+              <img class="spectrum-Avatar-image" src="images/example-ava.jpg" alt="Avatar">
             </div>
             <span class="spectrum-Tag-itemLabel">Tag label</span>
             <button type="button" class="spectrum-ClearButton spectrum-ClearButton--sizeM spectrum-Tag-clearButton" tabindex="-1">
@@ -307,7 +304,7 @@ examples:
 
           <div class="spectrum-Tag spectrum-Tag--sizeL" tabindex="0">
             <div class="spectrum-Avatar spectrum-Avatar--size200">
-              <img class="spectrum-Avatar-image" src="img/example-ava.jpg" alt="Avatar">
+              <img class="spectrum-Avatar-image" src="images/example-ava.jpg" alt="Avatar">
             </div>
             <span class="spectrum-Tag-itemLabel">Tag label</span>
             <button type="button" class="spectrum-ClearButton spectrum-ClearButton--sizeL spectrum-Tag-clearButton" tabindex="-1">

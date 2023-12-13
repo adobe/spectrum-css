@@ -6,9 +6,6 @@ description: |
   - Fixed positioning impacts the border radius of the badge component
 
 sections:
-  - name: Custom Properties API
-    description: |
-      This component can be modified via its `--mod-*` prefixed custom properties. A list of those prefixed custom properties can be found <a href="https://github.com/adobe/spectrum-css/tree/main/components/badge/metadata/mods.md">here</a>.
   - name: Migration Guide
     description: |
       ### Badge now includes icon and label elements

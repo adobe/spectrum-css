@@ -32,7 +32,7 @@ export const Template = ({
 	id,
 	...globals
 }) => {
-	const [_, updateArgs] = useArgs();
+	const [, updateArgs] = useArgs();
 	const [{ lang }] = useGlobals();
 
 	const displayedDate = new Date(`${month} 1, ${year}`);

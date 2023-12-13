@@ -1,11 +1,13 @@
 const { resolve } = require("path");
 const { readdirSync } = require("fs");
+
 const componentsPath = resolve(__dirname, "../components");
 const componentPkgs = readdirSync(componentsPath, {
 	withFileTypes: true,
 })
 	.filter((dirent) => dirent.isDirectory())
 	.map((dirent) => dirent.name);
+
 module.exports = {
 	stories: [
 		"../components/*/stories/*.stories.@(js|jsx|ts|tsx)",
@@ -43,14 +45,16 @@ module.exports = {
 	},
 	env: {
 		MIGRATED_PACKAGES: componentPkgs.filter((dir) => {
-			const pkg = require(resolve(componentsPath, dir, "package.json"));
-			if (
-				pkg.devDependencies &&
-				pkg.devDependencies["@spectrum-css/component-builder-simple"]
-			) {
-				return true;
-			}
-			return false;
+			const location = require.resolve(`@spectrum-css/${dir}/package.json`);
+			if (!location) return false;
+
+			const pkg = require(location);
+
+			if (!pkg) return false;
+			return (
+				pkg.peerDependencies &&
+				pkg.peerDependencies["@spectrum-css/tokens"]
+			);
 		}),
 	},
 	webpackFinal: function (config) {
@@ -90,17 +94,6 @@ module.exports = {
 				rules: [
 					...storybookRules,
 					{
-						test: /^\w+\.{ico,jpg,jpeg,png,gif,webp}$/i,
-						use: [
-							{
-								loader: "file-loader",
-								options: {
-									outputPath: (url) => `assets/images/${url.replace(/_\//g, "")}`,
-								},
-							},
-						],
-					},
-					{
 						test: /\.css$/i,
 						sideEffects: true,
 						use: [
@@ -132,21 +125,10 @@ module.exports = {
 								loader: "postcss-loader",
 								options: {
 									implementation: require("postcss"),
-									postcssOptions: {
-										config: resolve(__dirname, "postcss.config.js"),
-									},
+									sourceMap: true,
 								},
 							},
 						],
-					},
-					{
-						test: /\.js$/,
-						enforce: "pre",
-						use: ["source-map-loader"],
-					} /* Raw SVG loader */,
-					{
-						test: /\.svg$/i,
-						loader: "raw-loader",
 					},
 				],
 			},
@@ -154,7 +136,6 @@ module.exports = {
 	},
 	framework: {
 		name: "@storybook/web-components-webpack5",
-		options: {},
 	},
 	features: {
 		/* Code splitting flag; load stories on-demand */
@@ -162,13 +143,6 @@ module.exports = {
 		/* Builds stories.json to help with on-demand loading */
 		buildStoriesJson: true,
 	},
-	// refs: {
-	//   'swc': {
-	//     title: 'Spectrum Web Components',
-	//     url: 'https://opensource.adobe.com/spectrum-web-components/storybook/',
-	//     expanded: false,
-	//   },
-	// },
 	docs: {
 		autodocs: true, // see below for alternatives
 		defaultName: "Docs", // set to change the name of generated docs entries

@@ -15,13 +15,10 @@
   },
   "main": "dist/index-vars.css",
   "peerDependencies": {
-    "@spectrum-css/overlay": ">=4",
     "@spectrum-css/tokens": ">=13"
   },
-  "peerDependenciesMeta": {
-    "@spectrum-css/overlay": {
-      "optional": true
-    }
+  "devDependencies": {
+    "@spectrum-css/commons": "^9.0.1"
   },
   "publishConfig": {
     "access": "public"

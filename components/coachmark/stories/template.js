@@ -10,8 +10,6 @@ import "../index.css";
 
 export const Template = ({
 	rootClass = "spectrum-CoachMark",
-	variant,
-	isCoachMarkOpen,
 	customClasses,
 	hasActionMenu = false,
 	hasPagination,
@@ -19,14 +17,13 @@ export const Template = ({
 	isOpen = true,
 	...globals
 }) => {
-
 	const displayedActionMenu = ActionMenu({
 		isOpen,
 		popoverPosition: "right",
 		popoverTestId: 'popover-nested-2',
 		popoverId: 'popover-nested-2',
 		popoverTriggerId: "trigger-nested-2",
-		customStyles:  { "margin-block-start": "30px", "margin-inline-start": "-32px"},
+		customStyles: { "margin-block-start": "30px", "margin-inline-start": "-32px" },
 		iconName: 'More',
 		size: globals.scale === "large" ? "s" : "m",
 		items: [
@@ -37,8 +34,7 @@ export const Template = ({
 				label: "Reset tour",
 			}
 		],
-})
-
+	});
 
 	return html`
 		<div
@@ -62,7 +58,7 @@ export const Template = ({
 				html`
 				${hasImage ? html
 					`<div class="${rootClass}-image-wrapper">
-					<img class="${rootClass}-image" src="example-card-landscape.png" />
+					<img class="${rootClass}-image" src="images/example-card-landscape.png" />
 				</div>`
 					: ''}
 				<div class="spectrum-CoachMark-header">

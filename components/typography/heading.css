@@ -1,0 +1,451 @@
+/*!
+Copyright 2023 Adobe. All rights reserved.
+This file is licensed to you under the Apache License, Version 2.0 (the "License");
+you may not use this file except in compliance with the License. You may obtain a copy
+of the License at http://www.apache.org/licenses/LICENSE-2.0
+
+Unless required by applicable law or agreed to in writing, software distributed under
+the License is distributed on an "AS IS" BASIS, WITHOUT WARRANTIES OR REPRESENTATIONS
+OF ANY KIND, either express or implied. See the License for the specific language
+governing permissions and limitations under the License.
+*/
+
+/**
+ * @namespace spectrum
+ * @component Heading
+ * @category Typography
+ * @sizes XS, S, M, L, XL, XXL, XXXL
+ * @descendents strong, emphasized
+ * @modifiers serif, heavy, light
+ */
+.spectrum-Heading {
+	/* Heading tokens */
+	--spectrum-heading-sans-serif-font-family: var(--spectrum-sans-font-family-stack);
+	--spectrum-heading-serif-font-family: var(--spectrum-serif-font-family-stack);
+	--spectrum-heading-cjk-font-family: var(--spectrum-cjk-font-family-stack);
+
+	--spectrum-heading-cjk-letter-spacing: var(--spectrum-cjk-letter-spacing);
+
+	--spectrum-heading-font-color: var(--spectrum-heading-color);
+
+	--spectrum-heading-margin-start: calc(
+		var(--mod-heading-font-size, var(--spectrum-heading-font-size)) * var(--spectrum-heading-margin-top-multiplier)
+	);
+	--spectrum-heading-margin-end: calc(
+		var(--mod-heading-font-size, var(--spectrum-heading-font-size)) * var(--spectrum-heading-margin-bottom-multiplier)
+	);
+	margin-block-start: 0;
+	margin-block-end: 0;
+
+	/* Heading styles */
+	font-family: var(--mod-heading-sans-serif-font-family, var(--spectrum-heading-sans-serif-font-family));
+	font-size: var(--mod-heading-font-size, var(--spectrum-heading-font-size));
+	font-weight: var(--mod-heading-sans-serif-font-weight, var(--spectrum-heading-sans-serif-font-weight));
+	font-style: var(--mod-heading-sans-serif-font-style, var(--spectrum-heading-sans-serif-font-style));
+	line-height: var(--mod-heading-line-height, var(--spectrum-heading-line-height));
+	color: var(--highcontrast-heading-font-color, var(--mod-heading-font-color, var(--spectrum-heading-font-color)));
+
+	strong,
+	.spectrum-Heading-strong {
+		font-weight: var(
+			--mod-heading-sans-serif-strong-font-weight,
+			var(--spectrum-heading-sans-serif-strong-font-weight)
+		);
+		font-style: var(--mod-heading-sans-serif-strong-font-style, var(--spectrum-heading-sans-serif-strong-font-style));
+	}
+
+	em,
+	.spectrum-Heading-emphasized {
+		font-weight: var(
+			--mod-heading-sans-serif-emphasized-font-weight,
+			var(--spectrum-heading-sans-serif-emphasized-font-weight)
+		);
+		font-style: var(
+			--mod-heading-sans-serif-emphasized-font-style,
+			var(--spectrum-heading-sans-serif-emphasized-font-style)
+		);
+	}
+
+	.spectrum-Heading-strong.spectrum-Heading-emphasized,
+	strong em,
+	em strong {
+		font-weight: var(
+			--mod-heading-sans-serif-strong-emphasized-font-weight,
+			var(--spectrum-heading-sans-serif-strong-emphasized-font-weight)
+		);
+		font-style: var(
+			--mod-heading-sans-serif-strong-emphasized-font-style,
+			var(--spectrum-heading-sans-serif-strong-emphasized-font-style)
+		);
+	}
+
+	&:lang(zh),
+	&:lang(ja),
+	&:lang(ko) {
+		font-family: var(--mod-heading-cjk-font-family, var(--spectrum-heading-cjk-font-family));
+		font-size: var(--mod-heading-cjk-font-size, var(--spectrum-heading-cjk-font-size));
+		font-weight: var(--mod-heading-cjk-font-weight, var(--spectrum-heading-cjk-font-weight));
+		font-style: var(--mod-heading-cjk-font-style, var(--spectrum-heading-cjk-font-style));
+		line-height: var(--mod-heading-cjk-line-height, var(--spectrum-heading-cjk-line-height));
+		letter-spacing: var(--mod-heading-cjk-letter-spacing, var(--spectrum-heading-cjk-letter-spacing));
+
+		em,
+		.spectrum-Heading-emphasized {
+			font-weight: var(--mod-heading-cjk-emphasized-font-weight, var(--spectrum-heading-cjk-emphasized-font-weight));
+			font-style: var(--mod-heading-cjk-emphasized-font-style, var(--spectrum-heading-cjk-emphasized-font-style));
+		}
+
+		strong,
+		.spectrum-Heading-strong {
+			font-weight: var(--mod-heading-cjk-strong-font-weight, var(--spectrum-heading-cjk-strong-font-weight));
+			font-style: var(--mod-heading-cjk-strong-font-style, var(--spectrum-heading-cjk-strong-font-style));
+		}
+
+		.spectrum-Heading-strong.spectrum-Heading-emphasized,
+		strong em,
+		em strong {
+			font-weight: var(
+				--mod-heading-cjk-strong-emphasized-font-weight,
+				var(--spectrum-heading-cjk-strong-emphasized-font-weight)
+			);
+			font-style: var(
+				--mod-heading-cjk-strong-emphasized-font-style,
+				var(--spectrum-heading-cjk-strong-emphasized-font-style)
+			);
+		}
+	}
+
+	/* Add margin when inside a Typography component */
+	.spectrum-Typography & {
+		margin-block-start: var(--mod-heading-margin-start, var(--spectrum-heading-margin-start));
+		margin-block-end: var(--mod-heading-margin-end, var(--spectrum-heading-margin-end));
+	}
+}
+
+/* Heading t-shirt sizes */
+.spectrum-Heading--sizeXXS {
+	--spectrum-heading-font-size: var(--spectrum-heading-size-xxs);
+	--spectrum-heading-cjk-font-size: var(--spectrum-heading-cjk-size-xxs);
+}
+
+.spectrum-Heading--sizeXS {
+	--spectrum-heading-font-size: var(--spectrum-heading-size-xs);
+	--spectrum-heading-cjk-font-size: var(--spectrum-heading-cjk-size-xs);
+}
+
+.spectrum-Heading--sizeS {
+	--spectrum-heading-font-size: var(--spectrum-heading-size-s);
+	--spectrum-heading-cjk-font-size: var(--spectrum-heading-cjk-size-s);
+}
+
+.spectrum-Heading--sizeM {
+	--spectrum-heading-font-size: var(--spectrum-heading-size-m);
+	--spectrum-heading-cjk-font-size: var(--spectrum-heading-cjk-size-m);
+}
+
+.spectrum-Heading--sizeL {
+	--spectrum-heading-font-size: var(--spectrum-heading-size-l);
+	--spectrum-heading-cjk-font-size: var(--spectrum-heading-cjk-size-l);
+}
+
+.spectrum-Heading--sizeXL {
+	--spectrum-heading-font-size: var(--spectrum-heading-size-xl);
+	--spectrum-heading-cjk-font-size: var(--spectrum-heading-cjk-size-xl);
+}
+
+.spectrum-Heading--sizeXXL {
+	--spectrum-heading-font-size: var(--spectrum-heading-size-xxl);
+	--spectrum-heading-cjk-font-size: var(--spectrum-heading-cjk-size-xxl);
+}
+
+.spectrum-Heading--sizeXXXL {
+	--spectrum-heading-font-size: var(--spectrum-heading-size-xxxl);
+	--spectrum-heading-cjk-font-size: var(--spectrum-heading-cjk-size-xxxl);
+}
+
+/* Heading - Heavy */
+.spectrum-Heading--heavy {
+	font-weight: var(--mod-heading-sans-serif-heavy-font-weight, var(--spectrum-heading-sans-serif-heavy-font-weight));
+	font-style: var(--mod-heading-sans-serif-heavy-font-style, var(--spectrum-heading-sans-serif-heavy-font-style));
+
+	strong,
+	.spectrum-Heading-strong {
+		font-weight: var(
+			--mod-heading-sans-serif-heavy-strong-font-weight,
+			var(--spectrum-heading-sans-serif-heavy-strong-font-weight)
+		);
+		font-style: var(
+			--mod-heading-sans-serif-heavy-strong-font-style,
+			var(--spectrum-heading-sans-serif-heavy-strong-font-style)
+		);
+	}
+
+	em,
+	.spectrum-Heading-emphasized {
+		font-weight: var(
+			--mod-heading-sans-serif-heavy-emphasized-font-weight,
+			var(--spectrum-heading-sans-serif-heavy-emphasized-font-weight)
+		);
+		font-style: var(
+			--mod-heading-sans-serif-heavy-emphasized-font-style,
+			var(--spectrum-heading-sans-serif-heavy-emphasized-font-style)
+		);
+	}
+
+	.spectrum-Heading-strong.spectrum-Heading-emphasized,
+	strong em,
+	em strong {
+		font-weight: var(
+			--mod-heading-sans-serif-heavy-strong-emphasized-font-weight,
+			var(--spectrum-heading-sans-serif-heavy-strong-emphasized-font-weight)
+		);
+		font-style: var(
+			--mod-heading-sans-serif-heavy-strong-emphasized-font-style,
+			var(--spectrum-heading-sans-serif-heavy-strong-emphasized-font-style)
+		);
+	}
+
+	&:lang(zh),
+	&:lang(ja),
+	&:lang(ko) {
+		font-weight: var(--mod-heading-cjk-heavy-font-weight, var(--spectrum-heading-cjk-heavy-font-weight));
+		font-style: var(--mod-heading-cjk-heavy-font-style, var(--spectrum-heading-cjk-heavy-font-style));
+
+		em,
+		.spectrum-Heading-emphasized {
+			font-weight: var(
+				--mod-heading-cjk-heavy-emphasized-font-weight,
+				var(--spectrum-heading-cjk-heavy-emphasized-font-weight)
+			);
+			font-style: var(
+				--mod-heading-cjk-heavy-emphasized-font-style,
+				var(--spectrum-heading-cjk-heavy-emphasized-font-style)
+			);
+		}
+
+		strong,
+		.spectrum-Heading-strong {
+			font-weight: var(
+				--mod-heading-cjk-heavy-strong-font-weight,
+				var(--spectrum-heading-cjk-heavy-strong-font-weight)
+			);
+			font-style: var(--mod-heading-cjk-heavy-strong-font-style, var(--spectrum-heading-cjk-heavy-strong-font-style));
+		}
+
+		.spectrum-Heading-strong.spectrum-Heading-emphasized,
+		strong em,
+		em strong {
+			font-weight: var(
+				--mod-heading-cjk-heavy-strong-emphasized-font-weight,
+				var(--spectrum-heading-cjk-heavy-strong-emphasized-font-weight)
+			);
+			font-style: var(
+				--mod-heading-cjk-heavy-strong-emphasized-font-style,
+				var(--spectrum-heading-cjk-heavy-strong-emphasized-font-style)
+			);
+		}
+	}
+}
+
+/* Heading - Light */
+.spectrum-Heading--light {
+	font-weight: var(--mod-heading-sans-serif-light-font-weight, var(--spectrum-heading-sans-serif-light-font-weight));
+	font-style: var(--mod-heading-sans-serif-light-font-style, var(--spectrum-heading-sans-serif-light-font-style));
+
+	em,
+	.spectrum-Heading-emphasized {
+		font-weight: var(
+			--mod-heading-sans-serif-light-emphasized-font-weight,
+			var(--spectrum-heading-sans-serif-light-emphasized-font-weight)
+		);
+		font-style: var(
+			--mod-heading-sans-serif-light-emphasized-font-style,
+			var(--spectrum-heading-sans-serif-light-emphasized-font-style)
+		);
+	}
+
+	strong,
+	.spectrum-Heading-strong {
+		font-weight: var(
+			--mod-heading-sans-serif-light-strong-font-weight,
+			var(--spectrum-heading-sans-serif-light-strong-font-weight)
+		);
+		font-style: var(
+			--mod-heading-sans-serif-light-strong-font-style,
+			var(--spectrum-heading-sans-serif-light-strong-font-style)
+		);
+	}
+
+	.spectrum-Heading-strong.spectrum-Heading-emphasized,
+	strong em,
+	em strong {
+		font-weight: var(
+			--mod-heading-sans-serif-light-strong-emphasized-font-weight,
+			var(--spectrum-heading-sans-serif-light-strong-emphasized-font-weight)
+		);
+		font-style: var(
+			--mod-heading-sans-serif-light-strong-emphasized-font-style,
+			var(--spectrum-heading-sans-serif-light-strong-emphasized-font-style)
+		);
+	}
+
+	&:lang(zh),
+	&:lang(ja),
+	&:lang(ko) {
+		font-weight: var(--mod-heading-cjk-light-font-weight, var(--spectrum-heading-cjk-light-font-weight));
+		font-style: var(--mod-heading-cjk-light-font-style, var(--spectrum-heading-cjk-light-font-style));
+
+		strong,
+		.spectrum-Heading-strong {
+			font-weight: var(
+				--mod-heading-cjk-light-strong-font-weight,
+				var(--spectrum-heading-cjk-light-strong-font-weight)
+			);
+			font-style: var(--mod-heading-cjk-light-strong-font-style, var(--spectrum-heading-cjk-light-strong-font-style));
+		}
+
+		em,
+		.spectrum-Heading-emphasized {
+			font-weight: var(
+				--mod-heading-cjk-light-emphasized-font-weight,
+				var(--spectrum-heading-cjk-light-emphasized-font-weight)
+			);
+			font-style: var(
+				--mod-heading-cjk-light-emphasized-font-style,
+				var(--spectrum-heading-cjk-light-emphasized-font-style)
+			);
+		}
+
+		.spectrum-Heading-strong.spectrum-Heading-emphasized,
+		strong em,
+		em strong {
+			font-weight: var(
+				--mod-heading-cjk-light-strong-emphasized-font-weight,
+				var(--spectrum-heading-cjk-light-strong-emphasized-font-weight)
+			);
+			font-style: var(
+				--mod-heading-cjk-light-strong-emphasized-font-style,
+				var(--spectrum-heading-cjk-light-strong-emphasized-font-style)
+			);
+		}
+	}
+}
+
+/* Heading - Serif */
+.spectrum-Heading--serif {
+	font-family: var(--mod-heading-serif-font-family, var(--spectrum-heading-serif-font-family));
+	font-weight: var(--mod-heading-serif-font-weight, var(--spectrum-heading-serif-font-weight));
+	font-style: var(--mod-heading-serif-font-style, var(--spectrum-heading-serif-font-style));
+
+	em,
+	.spectrum-Heading-emphasized {
+		font-weight: var(--mod-heading-serif-emphasized-font-weight, var(--spectrum-heading-serif-emphasized-font-weight));
+		font-style: var(--mod-heading-serif-emphasized-font-style, var(--spectrum-heading-serif-emphasized-font-style));
+	}
+
+	strong,
+	.spectrum-Heading-strong {
+		font-weight: var(--mod-heading-serif-strong-font-weight, var(--spectrum-heading-serif-strong-font-weight));
+		font-style: var(--mod-heading-serif-strong-font-style, var(--spectrum-heading-serif-strong-font-style));
+	}
+
+	.spectrum-Heading-strong.spectrum-Heading-emphasized,
+	strong em,
+	em strong {
+		font-weight: var(
+			--mod-heading-serif-strong-emphasized-font-weight,
+			var(--spectrum-heading-serif-strong-emphasized-font-weight)
+		);
+		font-style: var(
+			--mod-heading-serif-strong-emphasized-font-style,
+			var(--spectrum-heading-serif-strong-emphasized-font-style)
+		);
+	}
+}
+
+/* Heading - Serif - Heavy */
+.spectrum-Heading--serif.spectrum-Heading--heavy {
+	font-weight: var(--mod-heading-serif-heavy-font-weight, var(--spectrum-heading-serif-heavy-font-weight));
+	font-style: var(--mod-heading-serif-heavy-font-style, var(--spectrum-heading-serif-heavy-font-style));
+
+	strong,
+	.spectrum-Heading-strong {
+		font-weight: var(
+			--mod-heading-serif-heavy-strong-font-weight,
+			var(--spectrum-heading-serif-heavy-strong-font-weight)
+		);
+		font-style: var(--mod-heading-serif-heavy-strong-font-style, var(--spectrum-heading-serif-heavy-strong-font-style));
+	}
+
+	em,
+	.spectrum-Heading-emphasized {
+		font-weight: var(
+			--mod-heading-serif-heavy-emphasized-font-weight,
+			var(--spectrum-heading-serif-heavy-emphasized-font-weight)
+		);
+		font-style: var(
+			--mod-heading-serif-heavy-emphasized-font-style,
+			var(--spectrum-heading-serif-heavy-emphasized-font-style)
+		);
+	}
+
+	.spectrum-Heading-strong.spectrum-Heading-emphasized,
+	strong em,
+	em strong {
+		font-weight: var(
+			--mod-heading-serif-heavy-strong-emphasized-font-weight,
+			var(--spectrum-heading-serif-heavy-strong-emphasized-font-weight)
+		);
+		font-style: var(
+			--mod-heading-serif-heavy-strong-emphasized-font-style,
+			var(--spectrum-heading-serif-heavy-strong-emphasized-font-style)
+		);
+	}
+}
+
+/* Heading - Serif - Light */
+.spectrum-Heading--serif.spectrum-Heading--light {
+	font-weight: var(--mod-heading-serif-light-font-weight, var(--spectrum-heading-serif-light-font-weight));
+	font-style: var(--mod-heading-serif-light-font-style, var(--spectrum-heading-serif-light-font-style));
+
+	em,
+	.spectrum-Heading-emphasized {
+		font-weight: var(
+			--mod-heading-serif-light-emphasized-font-weight,
+			var(--spectrum-heading-serif-light-emphasized-font-weight)
+		);
+		font-style: var(
+			--mod-heading-serif-light-emphasized-font-style,
+			var(--spectrum-heading-serif-light-emphasized-font-style)
+		);
+	}
+
+	strong,
+	.spectrum-Heading-strong {
+		font-weight: var(
+			--mod-heading-serif-light-strong-font-weight,
+			var(--spectrum-heading-serif-light-strong-font-weight)
+		);
+		font-style: var(--mod-heading-serif-light-strong-font-style, var(--spectrum-heading-serif-light-strong-font-style));
+	}
+
+	.spectrum-Heading-strong.spectrum-Heading-emphasized,
+	strong em,
+	em strong {
+		font-weight: var(
+			--mod-heading-serif-light-strong-emphasized-font-weight,
+			var(--spectrum-heading-serif-light-strong-emphasized-font-weight)
+		);
+		font-style: var(
+			--mod-heading-serif-light-strong-emphasized-font-style,
+			var(--spectrum-heading-serif-light-strong-emphasized-font-style)
+		);
+	}
+}
+
+/* Windows high contrast mode */
+@media (forced-colors: active) {
+	.spectrum-Heading {
+		--highcontrast-heading-font-color: text;
+	}
+}

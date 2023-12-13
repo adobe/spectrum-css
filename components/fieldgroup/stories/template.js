@@ -17,53 +17,42 @@ export const Template = ({
 	isInvalid,
 	items,
 	...globals
-}) => {
-	const { express } = globals;
+}) => html`
+	<div
+		class=${classMap({
+			[rootClass]: true,
+			[`${rootClass}--${labelPosition}label`]:
+				typeof labelPosition !== "undefined",
+			[`${rootClass}--${layout}`]: typeof layout !== "undefined",
+			...customClasses.reduce((a, c) => ({ ...a, [c]: true }), {}),
+		})}
+		aria-invalid=${ifDefined(isInvalid ? "true" : undefined)}
+	>
+		${FieldLabel({
+			...globals,
+			size: "m",
+			label: "Field Group Label",
+			alignment: labelPosition === "side" ? "right" : "top",
+		})}
 
-	try {
-		if (!express) import(/* webpackPrefetch: true */ "../themes/spectrum.css");
-		else import(/* webpackPrefetch: true */ "../themes/express.css");
-	} catch (e) {
-		console.warn(e);
-	}
-
-	return html`
-		<div
-			class=${classMap({
-				[rootClass]: true,
-				[`${rootClass}--${labelPosition}label`]:
-					typeof labelPosition !== "undefined",
-				[`${rootClass}--${layout}`]: typeof layout !== "undefined",
-				...customClasses.reduce((a, c) => ({ ...a, [c]: true }), {}),
-			})}
-			aria-invalid=${ifDefined(isInvalid ? "true" : undefined)}
-		>
-			${FieldLabel({
+		<div class="${rootClass}InputLayout">
+			${repeat(
+				items,
+				(item) => item.id,
+				(item) => {
+					return Radio({
+						...globals,
+						...item,
+						customClasses: [`${rootClass}-item`],
+					});
+				}
+			)}
+			${HelpText({
 				...globals,
 				size: "m",
-				label: "Field Group Label",
-				alignment: labelPosition === "side" ? "right" : "top",
+				text: "Select an option",
+				variant: isInvalid ? "negative" : "neutral",
 			})}
-
-			<div class="${rootClass}InputLayout">
-				${repeat(
-					items,
-					(item) => item.id,
-					(item) => {
-						return Radio({
-							...globals,
-							...item,
-							customClasses: [`${rootClass}-item`],
-						});
-					}
-				)}
-				${HelpText({
-					...globals,
-					size: "m",
-					text: "Select an option",
-					variant: isInvalid ? "negative" : "neutral",
-				})}
-			</div>
 		</div>
-	`;
-};
+	</div>
+`;

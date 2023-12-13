@@ -2,32 +2,30 @@ import { useArgs } from "@storybook/client-api";
 import { html } from "lit";
 import { classMap } from "lit/directives/class-map.js";
 import { ifDefined } from "lit/directives/if-defined.js";
-import { when } from 'lit/directives/when.js';
+import { when } from "lit/directives/when.js";
 
-import { Template as Button } from '@spectrum-css/button/stories/template.js';
+import { Template as Button } from "@spectrum-css/button/stories/template.js";
 import { Template as ButtonGroup } from "@spectrum-css/buttongroup/stories/template.js";
 import { Template as Divider } from "@spectrum-css/divider/stories/template.js";
 import { Template as Icon } from "@spectrum-css/icon/stories/template.js";
-import { Template as Modal } from '@spectrum-css/modal/stories/template.js';
-import { Template as Underlay } from '@spectrum-css/underlay/stories/template.js';
+import { Template as Modal } from "@spectrum-css/modal/stories/template.js";
+import { Template as Underlay } from "@spectrum-css/underlay/stories/template.js";
 
-import '../index.css';
+import "../index.css";
 
 export const Template = ({
   rootClass = "spectrum-AlertDialog",
   isOpen = true,
-  showModal = false,
   heading = true,
   content = true,
   customClasses = [],
   buttons,
   variant,
-  onclick,
   icon = false,
   id,
   ...globals
 }) => {
-  const [_, updateArgs] = useArgs();
+  const [, updateArgs] = useArgs();
 
   const Dialog = html`
     <div
@@ -46,30 +44,28 @@ export const Template = ({
       <div class="spectrum-AlertDialog-header">
         <h1 class="${rootClass}-heading" id="dialog_label">${heading}</h1>
         ${when(icon, () => Icon({
-          size: 'm',
+          size: "m",
           iconName: "Alert",
           customClasses: [`${rootClass}-icon`],
           ...globals,
-        })) }
+        }))}
       </div>
       ${Divider({
-            horizontal: true,
-            customClasses: [`${rootClass}-divider`],
-            ...globals,
-          })}
+        horizontal: true,
+        customClasses: [`${rootClass}-divider`],
+        ...globals,
+      })}
       <section class="${rootClass}-content">${content}</section>
       ${ButtonGroup({
-          items: buttons,
-          onclick: () => {
-            updateArgs({ isOpen: !isOpen });
-          },
-        })
-      }
+        items: buttons,
+        onclick: () => {
+          updateArgs({ isOpen: !isOpen });
+        },
+      })}
       </div>
-    </div>
-  `;
+    </div>`;
 
-  return  html`
+  return html`
     ${Underlay({
       ...globals,
       isOpen,
@@ -78,7 +74,7 @@ export const Template = ({
       ...globals,
       size: "m",
       variant: "secondary",
-      label: "Click to open Alert Dialog",
+      label: "Click to open",
       treatment: "outline",
       customClasses: [],
       customStyles: {
@@ -96,5 +92,5 @@ export const Template = ({
       isOpen,
       content: Dialog,
     })}
-      `
-  }
+  `;
+};

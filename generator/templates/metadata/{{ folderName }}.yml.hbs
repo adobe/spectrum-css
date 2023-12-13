@@ -1,25 +1,32 @@
-name: {{ name }}
+title: {{ name }}
+description: {{ description }}
 status: Verified
-SpectrumSiteSlug: https://spectrum.adobe.com/page/{{ kebabCase name }}/
+designLink: https://spectrum.adobe.com/page/{{ kebabCase name }}/
+SWC:
+    url: https://opensource.adobe.com/spectrum-web-components/components/{{ kebabCase name }}/
+    tag: "sp-{{ kebabCase name }}"
+sizing: ["s", "m", "l", "xl"]
 examples:
   - id: {{ folderName }}-sizing
-    name: Sizing
-    markup: |
-      <div class="spectrum-Examples">
-        <div class="spectrum-Examples-item">
-          <h4 class="spectrum-Heading spectrum-Heading--sizeXS spectrum-Examples-itemHeading">S</h4>
-          <!-- Component mark-up goes here -->
-        </div>
-        <div class="spectrum-Examples-item">
-          <h4 class="spectrum-Heading spectrum-Heading--sizeXS spectrum-Examples-itemHeading">M</h4>
-          <!-- Component mark-up goes here -->
-        </div>
-        <div class="spectrum-Examples-item">
-          <h4 class="spectrum-Heading spectrum-Heading--sizeXS spectrum-Examples-itemHeading">L</h4>
-          <!-- Component mark-up goes here -->
-        </div>
-        <div class="spectrum-Examples-item">
-          <h4 class="spectrum-Heading spectrum-Heading--sizeXS spectrum-Examples-itemHeading">XL</h4>
-          <!-- Component mark-up goes here -->
-        </div>
-      </div>
+    title: Sizing
+    markup:
+      - title: XS
+        group:
+          - |
+            <div class="spectrum-{{ pascalCase name }} spectrum-{{ pascalCase name }}--sizeXS"></div>
+      - title: S
+        group:
+          - |
+            <div class="spectrum-{{ pascalCase name }} spectrum-{{ pascalCase name }}--sizeS"></div>
+      - title: M (default)
+        group:
+          - |
+            <div class="spectrum-{{ pascalCase name }} spectrum-{{ pascalCase name }}--sizeM"></div>
+      - title: L
+        group:
+          - |
+            <div class="spectrum-{{ pascalCase name }} spectrum-{{ pascalCase name }}--sizeL"></div>
+      - title: XL
+        group:
+          - |
+            <div class="spectrum-{{ pascalCase name }} spectrum-{{ pascalCase name }}--sizeXL"></div>

@@ -57,7 +57,7 @@
 				"outputPath": "./tokens",
 				"platform": "CSS",
 				"styleDictionaryConfig": "./tokens/style-dictionary.config.js",
-				"tsConfig": "./tsconfig.json"
+				"tsConfig": ""
 			},
 			"outputs": [
 				"{projectRoot}/dist/global-vars.css",

@@ -1,10 +1,7 @@
 import { spawn } from 'child_process';
-import { existsSync, readdirSync, readFileSync } from 'fs';
+import { readdirSync } from 'fs';
 import { readFile } from 'fs/promises';
-import { dirname, resolve } from 'path';
-
-import cheerio from 'cheerio';
-import yaml from 'js-yaml';
+import { resolve } from 'path';
 
 import fuzzy from 'fuzzy';
 import autocompletePrompt from 'inquirer-autocomplete-prompt';
@@ -22,8 +19,7 @@ export default async (plop) => {
 	const projectName = process.env.PROJECT_NAME ?? 'Spectrum CSS';
 	const pkg = await fetchPackage(rootFolder);
 
-	const tokens = await fetchPackage(dirname(require.resolve('@spectrum-css/tokens/package.json')));
-	const builder = await fetchPackage(resolve(process.cwd(), '../tools/component-builder-simple'));
+	const tokens = await fetchPackage(resolve(rootFolder, 'tokens'));
 
 	/* Fetch the project name */
 	plop.setWelcomeMessage(`Welcome to the ${projectName} component generator!\n  To get started, answer a few short questions about your component.`);
@@ -39,26 +35,6 @@ export default async (plop) => {
 		const array = str.split(sep);
 		return array.slice(start, end).join(sep);
 	});
-
-	function getExistingMarkupExample(metadataPath, name, plop) {
-		if (existsSync(`${metadataPath}/${name}.yml`) === false) return;
-
-		const r = readFileSync(`${metadataPath}/${name}.yml`, { encoding: 'utf8' });
-		const result = yaml.load(r);
-		if (!result) return;
-
-		const examples = result.examples || [];
-		if (examples.length === 0 || !examples[0].markup) return;
-
-		const $ = cheerio.load(examples[0].markup);
-
-		const className = plop.renderString('spectrum-{{ pascalCase name }}', { name });
-		const $example = $(`.${className}`);
-
-		if (!$example) return;
-
-		return $example.first().toString();
-	}
 
 	plop.setActionType('install', (_, config) => new Promise((resolve, reject) => {
 		const install = spawn('yarn', ['install'], {
@@ -102,7 +78,6 @@ export default async (plop) => {
 			data.folderName = plop.renderString('{{ lowerCase (camelCase name) }}', data);
 			data.pkg = pkg;
 			data.tokens = { name: tokens.name, version: tokens.version };
-			data.builder = { name: builder.name, version: builder.version };
 
 			return [
 				{
@@ -116,7 +91,7 @@ export default async (plop) => {
 					type: 'install',
 					root: rootFolder,
 				},
-				(data, config, plop) => plop.renderString(`Successfully created component {{ folderName }}. To preview your component, run \`yarn dev\` and navigate to the {{ folderName }} story.`),
+				(_, __, plop) => plop.renderString(`Successfully created component {{ folderName }}. To preview your component, run \`yarn dev\` and navigate to the {{ folderName }} story.`),
 			];
 		},
 	});
@@ -141,10 +116,7 @@ export default async (plop) => {
 		],
 		actions: (data) => {
 			data.name = plop.renderString('{{ sentenceCase folderName }}', data);
-			data.description = `The ${data.name} component is...`;
-
-			const metadataPath = plop.renderString(`${srcPath}/{{ folderName }}/metadata`, data);
-			data.example = getExistingMarkupExample(metadataPath, data.name, plop);
+			data.description = `The ${data.name} component`;
 
 			return [
 				{
@@ -158,7 +130,7 @@ export default async (plop) => {
 					type: 'install',
 					root: rootFolder,
 				},
-				(data, config, plop) => plop.renderString(`Successfully updated {{ folderName }}. To preview your component, run \`yarn dev\` and navigate to the {{ folderName }} story.`, data),
+				(data, _, plop) => plop.renderString(`Successfully updated {{ folderName }}. To preview your component, run \`yarn dev\` and navigate to the {{ folderName }} story.`, data),
 			];
 		},
 	});

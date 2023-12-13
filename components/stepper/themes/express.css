@@ -3,45 +3,57 @@ Copyright 2023 Adobe. All rights reserved.
 This file is licensed to you under the Apache License, Version 2.0 (the "License");
 you may not use this file except in compliance with the License. You may obtain a copy
 of the License at http://www.apache.org/licenses/LICENSE-2.0
-
 Unless required by applicable law or agreed to in writing, software distributed under
 the License is distributed on an "AS IS" BASIS, WITHOUT WARRANTIES OR REPRESENTATIONS
 OF ANY KIND, either express or implied. See the License for the specific language
 governing permissions and limitations under the License.
 */
 
-@container (--system: express) {
-  .spectrum-Stepper {
-    --spectrum-stepper-border-width: var(--spectrum-border-width-200);
+@import "./spectrum.css";
 
-    --spectrum-stepper-buttons-border-style: solid;
-    --spectrum-stepper-buttons-border-width: var(--spectrum-border-width-200);
-    --spectrum-stepper-buttons-border-color: transparent;
-    --spectrum-stepper-buttons-background-color: var(--spectrum-gray-50);
-    --spectrum-stepper-buttons-border-color-hover: transparent;
-    --spectrum-stepper-buttons-border-color-focus: transparent;
-    --spectrum-stepper-buttons-border-color-keyboard-focus: transparent;
+/* stylelint-disable spectrum-tools/no-unused-custom-properties */
+@container style(--system: express) {
+	/* @todo remove this when stepper is migrated; this ensures stepper buttons inherit border color and width */
+	.spectrum-Stepper {
+		--spectrum-stepper-border-width: var(--spectrum-border-width-200); /* express stepper has border */
+		--spectrum-stepper-button-border-width-reset: 0; /* express buttons have no inline start border */
+		--spectrum-stepper-button-border-radius-reset: calc(
+			var(--spectrum-corner-radius-100) - (var(--spectrum-border-width-200) * 2)
+		);
+		--spectrum-stepper-button-icon-nudge: calc(-1 * var(--spectrum-stepper-button-border-radius-reset));
 
-    --spectrum-stepper-button-border-radius-reset: var(--spectrum-in-field-button-fill-stacked-inner-border-rounding);
-    --spectrum-stepper-button-border-width: 0;
+		--spectrum-stepper-buttons-border-style: solid;
+		--spectrum-stepper-buttons-border-width: var(--spectrum-border-width-200);
+		--spectrum-stepper-buttons-border-color: transparent;
+		--spectrum-stepper-buttons-background-color: var(--spectrum-gray-50);
+		--spectrum-stepper-buttons-border-color-hover: transparent;
+		--spectrum-stepper-buttons-border-color-focus: transparent;
+		--spectrum-stepper-buttons-border-color-keyboard-focus: transparent;
 
-    --spectrum-stepper-border-color: var(--spectrum-gray-400);
-    --spectrum-stepper-border-color-hover: var(--spectrum-gray-500);
-    --spectrum-stepper-border-color-focus: var(--spectrum-gray-800);
-    --spectrum-stepper-border-color-focus-hover: var(--spectrum-gray-900);
-    --spectrum-stepper-border-color-keyboard-focus: var(--spectrum-gray-900);
+		--spectrum-stepper-button-border-radius-reset: var(--spectrum-in-field-button-fill-stacked-inner-border-rounding);
+		--spectrum-stepper-button-border-width: 0;
 
-    --spectrum-stepper-border-color-invalid: transparent;
-    --spectrum-stepper-border-color-focus-invalid: transparent;
-    --spectrum-stepper-border-color-focus-hover-invalid: transparent;
-    --spectrum-stepper-border-color-keyboard-focus-invalid: transparent;
+		--spectrum-stepper-border-color: var(--spectrum-gray-400);
+		--spectrum-stepper-border-color-hover: var(--spectrum-gray-500);
+		--spectrum-stepper-border-color-focus: var(--spectrum-gray-800);
+		--spectrum-stepper-border-color-focus-hover: var(--spectrum-gray-900);
+		--spectrum-stepper-border-color-keyboard-focus: var(--spectrum-gray-900);
 
-    --spectrum-stepper-button-background-color-focus: var(--spectrum-gray-400);
-    --spectrum-stepper-button-background-color-keyboard-focus: var(--spectrum-gray-300);
+		--spectrum-stepper-border-color-invalid: transparent;
+		--spectrum-stepper-border-color-focus-invalid: transparent;
+		--spectrum-stepper-border-color-focus-hover-invalid: transparent;
+		--spectrum-stepper-border-color-keyboard-focus-invalid: transparent;
 
-    &.is-disabled {
-      --spectrum-stepper-buttons-background-color: var(--spectrum-disabled-background-color);
-      --spectrum-stepper-buttons-border-width: 0;
-    }
-  }
+		--spectrum-stepper-button-background-color-focus: var(--spectrum-gray-400);
+		--spectrum-stepper-button-background-color-keyboard-focus: var(--spectrum-gray-300);
+
+		--spectrum-stepper-button-background-color-focus: var(--spectrum-gray-400);
+		--spectrum-stepper-button-background-color-keyboard-focus: var(--spectrum-gray-300);
+
+		&.is-disabled {
+			--spectrum-stepper-buttons-background-color: var(--spectrum-disabled-background-color);
+			--spectrum-stepper-buttons-border-width: 0;
+		}
+	}
+	/* stylelint-enable spectrum-tools/no-unused-custom-properties */
 }

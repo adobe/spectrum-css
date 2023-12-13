@@ -44,7 +44,7 @@ examples:
                   </svg>
                 </span>
               </label>
-              <img src="img/example-ava.jpg" alt="asset item thumbnail" class="spectrum-AssetList-itemThumbnail">
+              <img src="images/example-ava.jpg" alt="asset item thumbnail" class="spectrum-AssetList-itemThumbnail">
               <span class="spectrum-AssetList-itemLabel" id="assetitemlabel-3">File 3</span>
               <svg class="spectrum-Icon spectrum-UIIcon-ChevronRight100 spectrum-AssetList-itemChildIndicator" focusable="false" aria-hidden="true">
                 <use xlink:href="#spectrum-css-icon-Chevron100"/>
@@ -91,7 +91,7 @@ examples:
                   </svg>
                 </span>
               </label>
-              <img src="img/example-ava.jpg" alt="asset item thumbnail" class="spectrum-AssetList-itemThumbnail">
+              <img src="images/example-ava.jpg" alt="asset item thumbnail" class="spectrum-AssetList-itemThumbnail">
               <span class="spectrum-AssetList-itemLabel" id="assetitemlabel-6">File 3</span>
               <svg class="spectrum-Icon spectrum-UIIcon-ChevronRight100 spectrum-AssetList-itemChildIndicator" focusable="false" aria-hidden="true">
                 <use xlink:href="#spectrum-css-icon-Chevron100"/>
@@ -128,7 +128,7 @@ examples:
               </svg>
             </li>
             <li class="spectrum-AssetList-item is-navigated is-branch" tabindex="0">
-              <img src="img/example-ava.jpg" alt="asset item thumbnail" class="spectrum-AssetList-itemThumbnail">
+              <img src="images/example-ava.jpg" alt="asset item thumbnail" class="spectrum-AssetList-itemThumbnail">
               <span class="spectrum-AssetList-itemLabel">File 3</span></span>
 
               <svg class="spectrum-Icon spectrum-UIIcon-ChevronRight100 spectrum-AssetList-itemChildIndicator" focusable="false" aria-hidden="true">
@@ -161,7 +161,7 @@ examples:
               </svg>
             </li>
             <li class="spectrum-AssetList-item is-selected" tabindex="0">
-              <img src="img/example-ava.jpg" alt="asset item thumbnail" class="spectrum-AssetList-itemThumbnail">
+              <img src="images/example-ava.jpg" alt="asset item thumbnail" class="spectrum-AssetList-itemThumbnail">
               <span class="spectrum-AssetList-itemLabel" id="assetitemlabel-9">File 3</span>
               <label class="spectrum-Checkbox spectrum-Checkbox--sizeM spectrum-AssetList-itemSelector">
                 <input type="checkbox" class="spectrum-Checkbox-input" id="checkbox-2" aria-labelledby="assetitemlabel-9" checked>

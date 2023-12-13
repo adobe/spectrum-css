@@ -1,15 +1,17 @@
 /*!
-Copyright 2023 Adobe. All rights reserved.
-This file is licensed to you under the Apache License, Version 2.0 (the "License");
-you may not use this file except in compliance with the License. You may obtain a copy
-of the License at http://www.apache.org/licenses/LICENSE-2.0
+ * Copyright 2023 Adobe. All rights reserved.
+ *
+ * This file is licensed to you under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License. You may obtain a copy
+ * of the License at <http://www.apache.org/licenses/LICENSE-2.0>
+ *
+ * Unless required by applicable law or agreed to in writing, software distributed under
+ * the License is distributed on an "AS IS" BASIS, WITHOUT WARRANTIES OR REPRESENTATIONS
+ * OF ANY KIND, either express or implied. See the License for the specific language
+ * governing permissions and limitations under the License.
+ */
 
-Unless required by applicable law or agreed to in writing, software distributed under
-the License is distributed on an "AS IS" BASIS, WITHOUT WARRANTIES OR REPRESENTATIONS
-OF ANY KIND, either express or implied. See the License for the specific language
-governing permissions and limitations under the License.
-*/
-.spectrum-CoachIndicator{
+.spectrum-CoachIndicator {
   --spectrum-coach-indicator-animation-keyframe-0-scale: 1;
   --spectrum-coach-indicator-animation-keyframe-0-opacity: 0;
   --spectrum-coach-indicator-animation-keyframe-50-scale: 1.5;
@@ -22,30 +24,34 @@ governing permissions and limitations under the License.
 
 @keyframes pulse {
   0% {
-    -webkit-transform: scale(var(--spectrum-coach-indicator-animation-keyframe-0-scale));
+    transform: scale(var(--spectrum-coach-indicator-animation-keyframe-0-scale));
     opacity: var(--spectrum-coach-indicator-animation-keyframe-0-opacity);
   }
+
   50% {
-    -webkit-transform: scale(var(--spectrum-coach-indicator-animation-keyframe-50-scale));
+    transform: scale(var(--spectrum-coach-indicator-animation-keyframe-50-scale));
     opacity: var(--spectrum-coach-indicator-animation-keyframe-50-opacity);
   }
+
   100% {
-    -webkit-transform: scale(var(--spectrum-coach-indicator-animation-keyframe-100-scale));
+    transform: scale(var(--spectrum-coach-indicator-animation-keyframe-100-scale));
     opacity: var(--spectrum-coach-indicator-animation-keyframe-100-opacity);
   }
 }
 
 @keyframes pulse--quiet {
 	0% {
-		-webkit-transform: scale(var(--spectrum-coach-indicator-quiet-animation-keyframe-0-scale));
+		transform: scale(var(--spectrum-coach-indicator-quiet-animation-keyframe-0-scale));
 		opacity: var(--spectrum-coach-indicator-animation-keyframe-0-opacity);
 	}
+
 	50% {
-		-webkit-transform: scale(var(--spectrum-coach-indicator-animation-keyframe-50-scale));
+		transform: scale(var(--spectrum-coach-indicator-animation-keyframe-50-scale));
 		opacity: var(--spectrum-coach-indicator-animation-keyframe-50-opacity);
 	}
+
 	100% {
-		-webkit-transform: scale(var(--spectrum-coach-indicator-animation-keyframe-100-scale));
+		transform: scale(var(--spectrum-coach-indicator-animation-keyframe-100-scale));
 		opacity: var(--spectrum-coach-indicator-animation-keyframe-100-opacity);
 	}
 }

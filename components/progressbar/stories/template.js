@@ -23,63 +23,52 @@ export const Template = ({
 	},
 	size = "m",
 	...globals
-}) => {
-	const { express } = globals;
-
-	try {
-		if (!express) import(/* webpackPrefetch: true */ "../themes/spectrum.css");
-		else import(/* webpackPrefetch: true */ "../themes/express.css");
-	} catch (e) {
-		console.warn(e);
-	}
-
-	return html`
-		<div style=${when(staticWhite, () => styleMap({
-			backgroundColor,
-			width: "400px",
-			height: "200px",
-			display: "flex",
-			flexDirection: "column",
-			alignItems: "center",
-			justifyContent: "space-around",
-		}))}>
-			<div
-				class=${classMap({
-					[rootClass]: true,
-					[`${rootClass}--size${size?.toUpperCase()}`]:
-						typeof size !== "undefined",
-					[`${rootClass}--${labelPosition}Label`]:
-						typeof labelPosition !== "undefined",
-					[`${rootClass}--${staticWhite}`]: typeof staticWhite !== "undefined",
-					[`${rootClass}--${indeterminate}`]:
-						typeof indeterminate !== "undefined",
-					...customClasses.reduce((a, c) => ({ ...a, [c]: true }), {}),
-				})}
-				style=${ifDefined(styleMap(customStyles))}
-				value="${value}%"
-				role="progressbar"
-				aria-valuenow="${value}%"
-				aria-valuemin="0"
-				aria-valuemax="100"
-			>
-				${FieldLabel({
-					...globals,
-					size,
-					label,
-					alignment: "",
-					customClasses: [`${rootClass}-label`],
-				})}
-				${FieldLabel({
-					...globals,
-					size,
-					label: indeterminate ? "" : `${value}%`,
-					alignment: "",
-					customClasses: [`${rootClass}-percentage`],
-				})}
-				<div class="${rootClass}-track">
-					<div class="${rootClass}-fill" style="width: ${value}%;"></div>
-				</div>
+}) => html`
+	<div style=${when(staticWhite, () => styleMap({
+		backgroundColor,
+		width: "400px",
+		height: "200px",
+		display: "flex",
+		flexDirection: "column",
+		alignItems: "center",
+		justifyContent: "space-around",
+	}))}>
+		<div
+			class=${classMap({
+				[rootClass]: true,
+				[`${rootClass}--size${size?.toUpperCase()}`]:
+					typeof size !== "undefined",
+				[`${rootClass}--${labelPosition}Label`]:
+					typeof labelPosition !== "undefined",
+				[`${rootClass}--${staticWhite}`]: typeof staticWhite !== "undefined",
+				[`${rootClass}--${indeterminate}`]:
+					typeof indeterminate !== "undefined",
+				...customClasses.reduce((a, c) => ({ ...a, [c]: true }), {}),
+			})}
+			style=${ifDefined(styleMap(customStyles))}
+			value="${value}%"
+			role="progressbar"
+			aria-valuenow="${value}%"
+			aria-valuemin="0"
+			aria-valuemax="100"
+		>
+			${FieldLabel({
+				...globals,
+				size,
+				label,
+				alignment: "",
+				customClasses: [`${rootClass}-label`],
+			})}
+			${FieldLabel({
+				...globals,
+				size,
+				label: indeterminate ? "" : `${value}%`,
+				alignment: "",
+				customClasses: [`${rootClass}-percentage`],
+			})}
+			<div class="${rootClass}-track">
+				<div class="${rootClass}-fill" style="width: ${value}%;"></div>
 			</div>
 		</div>
-	`;
-};
+	</div>
+`;

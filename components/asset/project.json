@@ -1,13 +1,18 @@
 {
-	"$schema": "../../node_modules/nx/schemas/project-schema.json",
-	"name": "asset",
-	"tags": ["component", "legacy"],
-	"targets": {
-		"build": {},
-		"clean": {},
-		"compare": {},
-		"test": {
-			"defaultConfiguration": "scope"
-		}
-	}
+    "$schema": "../../node_modules/nx/schemas/project-schema.json",
+    "name": "asset",
+    "tags": ["component", "legacy"],
+    "targets": {
+        "build": {
+            "defaultConfiguration": "legacy"
+        },
+        "clean": {},
+        "compare": {},
+        "format": {},
+        "lint": {},
+        "report":  {},
+        "profile": {},
+        "styles": {},
+        "test": {}
+    }
 }
