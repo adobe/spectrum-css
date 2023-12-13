@@ -74,6 +74,10 @@ governing permissions and limitations under the License.
     --mod-infield-button-border-color: var(--mod-stepper-border-color-invalid, var(--spectrum-stepper-border-color-invalid));
     --mod-textfield-icon-spacing-inline-start-invalid: 0;
 
+    &:hover {
+      --mod-infield-button-border-color: var(--mod-stepper-border-color-hover-invalid, var(--spectrum-negative-border-color-hover));
+    }
+
     &.is-focused,
     &:focus {
       --mod-infield-button-border-color: var(--mod-stepper-border-color-focus-invalid, var(--spectrum-stepper-border-color-focus-invalid));
@@ -87,7 +91,6 @@ governing permissions and limitations under the License.
     &:focus-visible {
       --mod-infield-button-border-color: var(--mod-stepper-border-color-keyboard-focus-invalid, var(--spectrum-stepper-border-color-keyboard-focus-invalid));
     }
-
   }
 }
 
@@ -144,9 +147,11 @@ governing permissions and limitations under the License.
   }
 
   /*** Hover ***/
-  &:hover:not(.is-disabled) {
+  &:hover:not(.is-disabled, .is-invalid) {
     --mod-infield-button-border-color: var(--highcontrast-stepper-border-color-hover, var(--mod-stepper-buttons-border-color-hover, var(--spectrum-stepper-buttons-border-color-hover)));
+  }
 
+  &:hover {
     .spectrum-Stepper-input,
     .spectrum-Stepper-buttons {
       border-color: var(--highcontrast-stepper-border-color-hover, var(--mod-stepper-border-color-hover, var(--spectrum-stepper-border-color-hover)));
