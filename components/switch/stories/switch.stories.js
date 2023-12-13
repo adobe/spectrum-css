@@ -79,7 +79,9 @@ Default.args = {};
 
 export const Emphasized = Template.bind({});
 Emphasized.args = {
-	isEmphasized: true
+	isEmphasized: true,
+	label: "Switch label that is so long it wraps to the next line",
+	customStyles: {"max-width": "250px"}
 };
 
 export const Checked = Template.bind({});

@@ -142,7 +142,9 @@ Default.args = {};
 export const Icon = Template.bind({});
 Icon.args = {
 	hasIcon: true,
-	iconName: 'Info'
+	iconName: 'Info',
+	label: 'Tag label that truncates when it gets too long',
+	customStyles: {"max-inline-size": "200px"}
 };
 
 export const Avatar = Template.bind({});

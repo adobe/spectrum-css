@@ -88,7 +88,7 @@ Multilevel.args = {
         },
         {
           id: "2.2",
-          title: "Section Title 2",
+          title: "Section Title 2: The Long Title That Wraps to The Next Line",
           link: "#",
           levelThreeItems: [
             {
@@ -98,8 +98,9 @@ Multilevel.args = {
             },
             {
               id: "3.2",
-              title: "Section Title 2",
+              title: "Section Title 2: Another Long Title That Wraps to The Next Line",
               link: "#",
+              isSelected: true,
             },
             {
               id: "3.3",

@@ -1,10 +1,12 @@
 import { html } from "lit";
 import { classMap } from "lit/directives/class-map.js";
 import { ifDefined } from "lit/directives/if-defined.js";
+import { styleMap } from "lit/directives/style-map.js";
 
-import { Template as Icon } from "@spectrum-css/icon/stories/template.js";
+
 import { Template as Avatar } from "@spectrum-css/avatar/stories/template.js";
 import { Template as ClearButton } from "@spectrum-css/clearbutton/stories/template.js";
+import { Template as Icon } from "@spectrum-css/icon/stories/template.js";
 
 import "../index.css";
 
@@ -22,6 +24,7 @@ export const Template = ({
 	hasClearButton = false,
 	id,
 	customClasses = [],
+	customStyles = {},
 	...globals
 }) => {
 	const { express } = globals;
@@ -51,6 +54,7 @@ export const Template = ({
 			})}
 			id=${ifDefined(id)}
 			tabindex=${isDisabled ? '-1' : '0'}
+			style=${ifDefined(styleMap(customStyles))}
 		>
 			${avatarUrl && !isInvalid
 				? Avatar({
