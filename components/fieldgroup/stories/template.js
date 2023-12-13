@@ -7,7 +7,7 @@ import { Template as FieldLabel } from "@spectrum-css/fieldlabel/stories/templat
 import { Template as HelpText } from "@spectrum-css/helptext/stories/template.js";
 import { Template as Radio } from "@spectrum-css/radio/stories/template.js";
 
-import "../index.css";
+import "@spectrum-css/fieldgroup/index.css";
 
 export const Template = ({
 	rootClass = "spectrum-FieldGroup",
@@ -18,15 +18,6 @@ export const Template = ({
 	items,
 	...globals
 }) => {
-	const { express } = globals;
-
-	try {
-		if (!express) import(/* webpackPrefetch: true */ "../themes/spectrum.css");
-		else import(/* webpackPrefetch: true */ "../themes/express.css");
-	} catch (e) {
-		console.warn(e);
-	}
-
 	return html`
 		<div
 			class=${classMap({

@@ -54,11 +54,11 @@ Because the dependencies included in the component example pages are sorted in t
 cp getting-started.pug new-page.pug
 ```
 
-3. Manually add the new page to the navigation in `includes/nav.pug`, including the `.js-fastLoad` class on the link and the `is-selected` switch on the list item:
+3. Manually add the new page to the navigation in `includes/nav.pug`, including the `is-selected` switch on the list item:
 
 ```pug
       li.spectrum-SideNav-item(class=pageURL === 'new-page.html' ? 'is-selected' : '')
-        a.spectrum-SideNav-itemLink.js-fastLoad(href='new-page.html') New Page
+        a.spectrum-SideNav-itemLink(href='new-page.html') New Page
 ```
 
 4. Your new page will appear in the navigation. You can continue to edit it and it will live reload.

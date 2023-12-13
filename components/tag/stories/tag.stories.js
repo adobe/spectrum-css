@@ -30,7 +30,6 @@ export default {
 		},
 		iconName: {
 			...(IconStories?.argTypes?.iconName ?? {}),
-			if: false,
 			if: { arg: "hasIcon", truthy: true },
 		},
 		hasAvatar: {
@@ -115,7 +114,7 @@ export default {
 		size: "m",
 		label: "Tag label",
 		hasIcon: false,
-		iconName: 'Info',
+		iconName: "Info",
 		avatarUrl: "example-ava.png",
 		hasAvatar: false,
 		isSelected: false,
@@ -142,13 +141,13 @@ Default.args = {};
 export const Icon = Template.bind({});
 Icon.args = {
 	hasIcon: true,
-	iconName: 'Info'
+	iconName: "Info",
 };
 
 export const Avatar = Template.bind({});
 Avatar.args = {
 	hasAvatar: true,
-	avatarUrl: "example-ava.png"
+	avatarUrl: "example-ava.png",
 };
 
 export const Removable = Template.bind({});

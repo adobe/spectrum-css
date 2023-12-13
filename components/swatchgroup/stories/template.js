@@ -5,7 +5,7 @@ import { styleMap } from "lit/directives/style-map.js";
 
 import { Template as Swatch } from "@spectrum-css/swatch/stories/template.js";
 
-import "../index.css";
+import "@spectrum-css/swatchgroup/index.css";
 
 export const Template = ({
 	rootClass = "spectrum-SwatchGroup",
@@ -30,10 +30,12 @@ export const Template = ({
 		})}
 		id=${ifDefined(id)}
 	>
-		${items.map((swatch) => Swatch({
-			size,
-			rounding,
-			...swatch,
-		}))}
+		${items.map((swatch) =>
+			Swatch({
+				size,
+				rounding,
+				...swatch,
+			})
+		)}
 	</div>
 `;

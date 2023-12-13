@@ -5,7 +5,7 @@ import { styleMap } from "lit/directives/style-map.js";
 
 import { Template as Tag } from "@spectrum-css/tag/stories/template.js";
 
-import "../index.css";
+import "@spectrum-css/taggroup/index.css";
 
 export const Template = ({
 	rootClass = "spectrum-TagGroup",

@@ -1,43 +1,37 @@
 {
 	"name": "storybook",
 	"namedInputs": {
+		"core": ["{projectRoot}/patterns", "{projectRoot}/*.mdx"],
 		"tools": [
 			"{projectRoot}/assets",
 			"{projectRoot}/decorators",
 			"{projectRoot}/*.{js,html}"
 		]
 	},
-	"implicitDependencies": [
-		"@spectrum-css/*",
-		"!@spectrum-css/generator",
-		"!@spectrum-css/bundle-builder",
-		"!@spectrum-css/component-builder",
-		"!@spectrum-css/component-builder-simple"
-	],
+	"implicitDependencies": ["tag:component"],
 	"targets": {
 		"clean": {
 			"cache": true,
 			"inputs": [
 				"{projectRoot}/storybook-static",
+				"{workspaceRoot}/dist/preview",
 				{ "externalDependencies": ["rimraf"] }
 			],
+			"outputs": [],
 			"executor": "nx:run-commands",
 			"options": {
 				"commands": [
-					"rimraf {projectRoot}/storybook-static",
-					"test -d {projectRoot}/storybook-static && echo \"Error: storybook-static directory could not be removed\" && exit 1 || exit 0"
-				],
-				"parallel": false
+					"rimraf {projectRoot}/storybook-static && test -d {projectRoot}/storybook-static && echo \"Error: storybook-static directory could not be removed\" && exit 1 || exit 0",
+					"rimraf ./dist/preview && test -d ./dist/preview && echo \"Error: dist/preview directory could not be removed\" && exit 1 || exit 0"
+				]
 			}
 		},
 		"build": {
 			"cache": true,
-			"dependsOn": ["^build"],
+			"dependsOn": ["^build", "clean"],
 			"inputs": [
-				"{projectRoot}/assets",
-				"{projectRoot}/decorators",
-				"{projectRoot}/*.js",
-				"{projectRoot}/*.html",
+				"core",
+				"tools",
 				"{workspaceRoot}/components/*/dist",
 				{ "externalDependencies": ["storybook"] }
 			],
@@ -60,10 +54,8 @@
 			"cache": true,
 			"dependsOn": ["^build"],
 			"inputs": [
-				"{projectRoot}/assets",
-				"{projectRoot}/decorators",
-				"{projectRoot}/*.js",
-				"{projectRoot}/*.html",
+				"core",
+				"tools",
 				"{workspaceRoot}/components/*/dist",
 				{ "externalDependencies": ["storybook"] },
 				{ "env": "WATCH_MODE" }
@@ -77,10 +69,8 @@
 		"test": {
 			"cache": true,
 			"inputs": [
-				"{projectRoot}/assets",
-				"{projectRoot}/decorators",
-				"{projectRoot}/*.js",
-				"{projectRoot}/*.html",
+				"core",
+				"tools",
 				"{workspaceRoot}/components/*/dist",
 				{ "externalDependencies": ["chromatic", "storybook"] },
 				{ "env": "CHROMATIC_PROJECT_TOKEN" }

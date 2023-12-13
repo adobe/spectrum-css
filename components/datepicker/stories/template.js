@@ -1,21 +1,20 @@
 import { html } from "lit";
+import { when } from "lit-html/directives/when.js";
 import { classMap } from "lit/directives/class-map.js";
 import { ifDefined } from "lit/directives/if-defined.js";
-import { when } from 'lit-html/directives/when.js';
 
 import { Template as Calendar } from "@spectrum-css/calendar/stories/template.js";
-import { Template as TextField } from "@spectrum-css/textfield/stories/template.js";
-import { Template as Popover } from "@spectrum-css/popover/stories/template.js";
 import { Template as PickerButton } from "@spectrum-css/pickerbutton/stories/template.js";
+import { Template as Popover } from "@spectrum-css/popover/stories/template.js";
+import { Template as TextField } from "@spectrum-css/textfield/stories/template.js";
 
 import { useArgs, useGlobals } from "@storybook/client-api";
 
-import "../index.css";
+import "@spectrum-css/datepicker/index.css";
 
 export const Template = ({
 	rootClass = "spectrum-DatePicker",
 	id,
-	content,
 	customClasses = [],
 	isOpen = true,
 	isInvalid = false,
@@ -28,18 +27,8 @@ export const Template = ({
 	readOnly = false,
 	...globals
 }) => {
-	const [_, updateArgs] = useArgs();
+	const [, updateArgs] = useArgs();
 	const [{ lang }] = useGlobals();
-
-	const { express } = globals;
-
-	try {
-		if (!express) import(/* webpackPrefetch: true */ "../themes/spectrum.css");
-		else import(/* webpackPrefetch: true */ "../themes/express.css");
-	} catch (e) {
-		console.warn(e);
-	}
-
 
 	return html`
 		<div
@@ -69,7 +58,9 @@ export const Template = ({
 				isReadOnly: readOnly,
 				isInvalid: !isRange ? isInvalid : undefined,
 				customClasses: [`${rootClass}-textfield`],
-				customInputClasses: isRange ? [`${rootClass}-input`, `${rootClass}-startField`] : [`${rootClass}-input`],
+				customInputClasses: isRange
+					? [`${rootClass}-input`, `${rootClass}-startField`]
+					: [`${rootClass}-input`],
 				placeholder: "Choose a date",
 				name: "field",
 				value: globals.selectedDay
@@ -78,9 +69,10 @@ export const Template = ({
 				onclick: function () {
 					if (!isOpen) updateArgs({ isOpen: true });
 				},
-				})}
-				${when(isRange, () => html`<div class=${rootClass}-rangeDash></div>`)}
-				${when(isRange, () => TextField({
+			})}
+			${when(isRange, () => html`<div class="${rootClass}-rangeDash"></div>`)}
+			${when(isRange, () =>
+				TextField({
 					...globals,
 					size: "m",
 					isQuiet,
@@ -94,42 +86,43 @@ export const Template = ({
 					value: globals.lastDay
 						? new Date(globals.lastDay).toLocaleDateString(lang)
 						: undefined,
-				}))}
-				${PickerButton({
-					...globals,
-					customClasses: [`${rootClass}-button`],
-					size: "m",
-					iconType: "workflow",
-					iconName: "Calendar",
-					isQuiet,
-					customStyles:  readOnly ? {'display': 'none'} : "",
-					// @todo this is not added to the button on the website; need to make sure it's not a bug
-					// isOpen,
-					isInvalid,
-					isDisabled,
+				})
+			)}
+			${PickerButton({
+				...globals,
+				customClasses: [`${rootClass}-button`],
+				size: "m",
+				iconType: "workflow",
+				iconName: "Calendar",
+				isQuiet,
+				customStyles: readOnly ? { display: "none" } : "",
+				// @todo this is not added to the button on the website; need to make sure it's not a bug
+				// isOpen,
+				isInvalid,
+				isDisabled,
 
-					position: "right",
-					onclick: function () {
-						updateArgs({ isOpen: !isOpen });
-					},
-				})}
-				${Popover({
-					...globals,
-					isOpen: isOpen && !isDisabled && !readOnly,
-					withTip: false,
-					position: "bottom",
-					isQuiet,
-					customStyles: isOpen
-						? {
-								position: "absolute",
-								top: "100%",
-								left: "0",
-								width: undefined,
-						  }
-						: {},
-					content: [Calendar(globals)],
-					// @todo this implementation of calendar does not currently display range selections or selected date on first load
-				})}
+				position: "right",
+				onclick: function () {
+					updateArgs({ isOpen: !isOpen });
+				},
+			})}
+			${Popover({
+				...globals,
+				isOpen: isOpen && !isDisabled && !readOnly,
+				withTip: false,
+				position: "bottom",
+				isQuiet,
+				customStyles: isOpen
+					? {
+							position: "absolute",
+							top: "100%",
+							left: "0",
+							width: undefined,
+					  }
+					: {},
+				content: [Calendar(globals)],
+				// @todo this implementation of calendar does not currently display range selections or selected date on first load
+			})}
 		</div>
 	`;
 };

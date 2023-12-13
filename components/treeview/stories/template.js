@@ -6,7 +6,7 @@ import { styleMap } from "lit/directives/style-map.js";
 import { Template as Icon } from "@spectrum-css/icon/stories/template.js";
 import { Template as Thumbnail } from "@spectrum-css/thumbnail/stories/template.js";
 
-import "../index.css";
+import "@spectrum-css/treeview/index.css";
 
 export const TreeViewItem = ({
 	rootClass = "spectrum-TreeView",
@@ -44,7 +44,7 @@ export const TreeViewItem = ({
 							size,
 							rootClass: "spectrum-TreeView",
 							customClasses: ["is-opened"],
-					})
+					  })
 					: ""}
 			</li>
 		`;
@@ -96,11 +96,16 @@ export const TreeViewItem = ({
 					? Thumbnail({
 							...globals,
 							...thumbnail,
-							size: size == "s"  ? "200"
-								: size == "m"  ? "200"
-								: size == "l"  ? "400"
-								: size == "xl" ? "600"
-								: "300",
+							size:
+								size == "s"
+									? "200"
+									: size == "m"
+									? "200"
+									: size == "l"
+									? "400"
+									: size == "xl"
+									? "600"
+									: "300",
 							isLayer: true,
 							isSelected,
 							customClasses: [`${rootClass}-itemThumbnail`],

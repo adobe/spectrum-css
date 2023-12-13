@@ -2,7 +2,7 @@ import { Template as ColorHandle } from "@spectrum-css/colorhandle/stories/templ
 import { html } from "lit";
 import { classMap } from "lit/directives/class-map.js";
 
-import "../index.css";
+import "@spectrum-css/colorwheel/index.css";
 
 export const Template = ({
 	rootClass = "spectrum-ColorWheel",
@@ -13,8 +13,7 @@ export const Template = ({
 		"--spectrum-picked-color": "rgb(255, 0, 0)",
 	},
 	...globals
-}) => {
-	return html`
+}) => html`
     <div class=${classMap({
 			[rootClass]: true,
 			"is-disabled": isDisabled,
@@ -35,13 +34,12 @@ export const Template = ({
         </div>
       </div>
       ${ColorHandle({
-			...globals,
-			isDisabled,
-			customClasses: [`${rootClass}-handle`],
-			customStyles: colorHandleStyle,
-		})}
+				...globals,
+				isDisabled,
+				customClasses: [`${rootClass}-handle`],
+				customStyles: colorHandleStyle,
+			})}
       <input type="range" class="${rootClass}-slider" aria-label="hue" min="0" max="360" step="">
     </div>
   </div>
   `;
-};

@@ -1,8 +1,8 @@
+import { Template as FieldLabel } from "@spectrum-css/fieldlabel/stories/template.js";
 import { html } from "lit";
 import { classMap } from "lit/directives/class-map.js";
-import { Template as FieldLabel } from "@spectrum-css/fieldlabel/stories/template.js";
 
-import "../index.css";
+import "@spectrum-css/progressbar";
 
 export const Template = ({
 	rootClass = "spectrum-ProgressBar",
@@ -13,7 +13,6 @@ export const Template = ({
 	size = "s",
 	...globals
 }) => {
-
 	return html`
 		<div
 			class=${classMap({

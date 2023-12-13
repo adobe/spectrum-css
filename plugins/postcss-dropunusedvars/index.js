@@ -1,13 +1,26 @@
-const postcss = require("postcss");
+/*!
+Copyright 2023 Adobe. All rights reserved.
+This file is licensed to you under the Apache License, Version 2.0 (the "License");
+you may not use this file except in compliance with the License. You may obtain a copy
+of the License at http://www.apache.org/licenses/LICENSE-2.0
+
+Unless required by applicable law or agreed to in writing, software distributed under
+the License is distributed on an "AS IS" BASIS, WITHOUT WARRANTIES OR REPRESENTATIONS
+OF ANY KIND, either express or implied. See the License for the specific language
+governing permissions and limitations under the License.
+*/
+
 const valueParser = require("postcss-value-parser");
 
-function getUsedVars(root) {
-	const usedAnywhere = [];
-	const usedInProps = [];
-	const variableRelationships = {};
+const plugin = ({ fix = true }) => ({
+	postcssPlugin: "postcss-dropunusedvars",
+	Once(root) {
+		// Find all used variables
+		const usedAnywhere = [];
+		const usedInProps = [];
+		const variableRelationships = {};
 
-	root.walkRules((rule) => {
-		rule.walkDecls((decl) => {
+		root.walkDecls((decl) => {
 			const usedInDecl = [];
 			const isVar = decl.prop.startsWith("--");
 			const matches = decl.value.match(/var\(.*?\)/g);
@@ -15,16 +28,18 @@ function getUsedVars(root) {
 				// Parse value and get a list of variables used
 				const parsed = valueParser(decl.value);
 				parsed.walk((node) => {
-					if (node.type === "function" && node.value === "var") {
-						if (node.nodes.length) {
-							const varName = node.nodes[0].value;
-							usedInDecl.push(varName);
-							usedAnywhere.push(varName);
-							if (!isVar) {
-								usedInProps.push(varName);
-							}
-						}
+					if (
+						node.type !== "function" ||
+						node.value !== "var" ||
+						!node.nodes.length
+					) {
+						return;
 					}
+
+					const varName = node.nodes[0].value;
+					usedInDecl.push(varName);
+					usedAnywhere.push(varName);
+					if (!isVar) usedInProps.push(varName);
 				});
 			}
 
@@ -36,24 +51,9 @@ function getUsedVars(root) {
 				}
 			}
 		});
-	});
 
-	return {
-		usedAnywhere,
-		usedInProps,
-		variableRelationships,
-	};
-}
-
-function dropUnused(
-	root,
-	{ usedAnywhere, usedInProps, variableRelationships },
-	fix = true
-) {
-	root.walkRules((rule) => {
-		rule.walkDecls((decl) => {
-			if (!decl.prop.startsWith("--")) return;
-
+		// Drop unused variable definitions
+		root.walkDecls(/^--/, (decl) => {
 			const varName = decl.prop;
 
 			// Note if it seems like this variable is unused
@@ -94,16 +94,8 @@ function dropUnused(
 				}
 			}
 		});
-	});
-}
+	},
+});
 
-module.exports = postcss.plugin(
-	"postcss-dropunusedvars",
-	function (options = {}) {
-		return (root) => {
-			const fix = options.fix ?? true;
-			// Drop unused variable definitions
-			dropUnused(root, getUsedVars(root), fix);
-		};
-	}
-);
+plugin.postcss = true;
+module.exports = plugin;

@@ -1,29 +1,50 @@
 import { html } from 'lit';
 import { classMap } from 'lit/directives/class-map.js';
 import { ifDefined } from 'lit/directives/if-defined.js';
+import { styleMap } from "lit/directives/style-map.js";
 
-import "../index.css";
+import { useArgs } from "@storybook/client-api";
 
-// More on component templates: https://storybook.js.org/docs/web-components/writing-stories/introduction#using-args
+import "@spectrum-css/{{ folderName }}";
+
 export const Template = ({
   rootClass = "spectrum-{{ pascalCase name }}",
-  size,
+  size = "m",
+	isSelected = false,
+	isDisabled = false,
+	isFocused = false,
   id,
+	testId,
   customClasses = [],
-  ...globals
+	customStyles = {},
+	content = [],
 }) => {
-  return html`
-    <div class=${classMap({
-      [rootClass]: true,
-      [`${rootClass}--size${size.toUpperCase()}`]: true,
-      ...customClasses.reduce((a, c) => ({ ...a, [c]: true }), {}),
-    })} id=${ifDefined(id)}>
-      <!-- Component mark-up goes here -->
-    </div>{{#if example}}
+	const [, updateArgs] = useArgs();
 
-    <!-- Example markup -->
-    <!--
-      {{{ example }}}
-    -->{{/if}}
-  `;
-}
+  return html`
+    <div
+      class=${classMap({
+        [rootClass]: true,
+        [`${rootClass}--size${size.toUpperCase()}`]: typeof size !== "undefined",
+				"is-selected": !isDisabled && isSelected,
+				"is-disabled": isDisabled,
+				"is-focused": isFocused,
+        ...customClasses.reduce((a, c) => ({ ...a, [c]: true }), {}),
+      })}
+      style=${styleMap(customStyles)}
+			?disabled=${isDisabled}
+      id=${ifDefined(id)}
+			data-testid=${ifDefined(testId)}
+			@click=${() => updateArgs({ isSelected: !isSelected })}
+			@focusin=${() => {
+				updateArgs({ isFocused: true });
+			}}
+			@focusout=${() => updateArgs({ isFocused: false })}
+			@keypress=${(e) => {
+				if (e.key !== "Enter" && e.key !== " ") return;
+				updateArgs({ isSelected: !isSelected });
+			}}
+    >
+      ${content.map((c) => (typeof c === "function" ? c({}) : c))}
+    </div>`;
+};

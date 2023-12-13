@@ -7,7 +7,7 @@ import { useArgs } from "@storybook/client-api";
 
 import { Template as Icon } from "@spectrum-css/icon/stories/template.js";
 
-import "../index.css";
+import "@spectrum-css/checkbox/index.css";
 
 export const Template = ({
 	rootClass = "spectrum-Checkbox",
@@ -24,16 +24,7 @@ export const Template = ({
 	customClasses = [],
 	...globals
 }) => {
-	const [_, updateArgs] = useArgs();
-
-	const { express } = globals;
-
-	try {
-		if (!express) import(/* webpackPrefetch: true */ "../themes/spectrum.css");
-		else import(/* webpackPrefetch: true */ "../themes/express.css");
-	} catch (e) {
-		console.warn(e);
-	}
+	const [, updateArgs] = useArgs();
 
 	let iconSize = "75";
 	switch (size) {

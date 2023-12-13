@@ -10,13 +10,11 @@ OF ANY KIND, either express or implied. See the License for the specific languag
 governing permissions and limitations under the License.
 */
 
-const postcss = require("postcss");
-
-function getName(selector, prop) {
+function getNameFallback(selector, prop) {
 	selector = selector.replace(/^:where\((.*?)\)$/, "$1");
 
 	// This regex is designed to pull spectrum-ActionButton out of a selector
-	let baseSelectorMatch = selector.match(/^\.([a-z]+-[\A-Z][^-. ]+)/);
+	let baseSelectorMatch = selector.match(/^\.([a-z]+-[A-Z][^-. ]+)/);
 	if (baseSelectorMatch) {
 		const [, baseSelector] = baseSelectorMatch;
 		const baseSelectorRegExp = new RegExp(baseSelector, "gi");
@@ -36,99 +34,104 @@ function getName(selector, prop) {
 	);
 }
 
-function process(root, options = {}) {
-	options.noFlatVariables = options.noFlatVariables ?? false;
-	options.noSelectors = options.noSelectors ?? false;
-	const selectorMap = {};
+const plugin = ({
+	noFlatVariables = false,
+	noSelectors = false,
+	processIdentifier,
+	getName,
+}) => {
+	return {
+		postcssPlugin: "postcss-splitinator",
+		OnceExit(root, { Rule, Declaration }) {
+			const selectorMap = {};
 
-	root.walkAtRules((container) => {
-		if (container.name === "container") {
-			const [, identifierName, identifierValue] = container.params.match(
-				/\(\s*--(.*?)\s*[:=]\s*(.*?)\s*\)/
-			);
+			root.walkAtRules(/container/, (container) => {
+				const [, identifierName, identifierValue] = container.params.match(
+					/\(\s*--(.*?)\s*[:=]\s*(.*?)\s*\)/
+				);
 
-			const rule = postcss.rule({
-				selector: `.${
-					options && typeof options.processIdentifier === "function"
-						? options.processIdentifier(identifierValue, identifierName)
-						: identifierValue
-				}`,
-				source: container.source,
-			});
-
-			if (!options.noFlatVariables) {
-				container.parent.insertAfter(container, rule);
-			}
-
-			container.walkDecls((decl) => {
-				if (decl.prop.startsWith("--")) {
-					// Process rules that match multiple selectors separately to avoid weird var names and edge cases
-					// note: this doesn't support :where() and is likely brittle!
-					const selectors = decl.parent.selector.split(/\s*,\s*/);
-					selectors.forEach((selector) => {
-						const variableName =
-							typeof options.getName === "function"
-								? options.getName(selector, decl.prop)
-								: getName(selector, decl.prop);
-						const newDecl = decl.clone({
-							prop: variableName,
-						});
-						newDecl.raws.before = "\n  ";
-
-						if (!options.noFlatVariables) {
-							rule.append(newDecl);
-						}
-
-						const selectorNode = (selectorMap[selector] =
-							selectorMap[selector] || {});
-
-						// Check for fallbacks
-						// todo: use valueparser instead of a regex
-						const fallbackMatch = decl.value.match(
-							/var\(\s*(.*?)\s*,\s*var\(\s*(.*?)\s*\)\)/
-						);
-						if (fallbackMatch) {
-							const [, override, fallback] = fallbackMatch;
-
-							// The final declaration should have the override present
-							selectorNode[
-								decl.prop
-							] = `var(${override}, var(${variableName}))`;
-
-							// The system-level declaration should only have the fallback
-							newDecl.value = `var(${fallback})`;
-						} else {
-							selectorNode[decl.prop] = `var(${variableName})`;
-						}
-					});
-				}
-			});
-
-			container.remove();
-		}
-	});
-
-	if (!options.noSelectors) {
-		for (let [selector, props] of Object.entries(selectorMap)) {
-			const rule = postcss.rule({
-				selector,
-			});
-
-			for (let [prop, value] of Object.entries(props)) {
-				const decl = postcss.decl({
-					prop,
-					value,
+				const rule = new Rule({
+					selector: `.${
+						typeof processIdentifier === "function"
+							? processIdentifier(identifierValue, identifierName)
+							: identifierValue
+					}`,
+					source: container.source,
 				});
-				decl.raws.before = "\n  ";
 
-				rule.append(decl);
+				if (!noFlatVariables) {
+					container.parent.insertAfter(container, rule);
+				}
+
+				container.walkDecls((decl) => {
+					if (decl.prop.startsWith("--")) {
+						// Process rules that match multiple selectors separately to avoid weird var names and edge cases
+						// note: this doesn't support :where() and is likely brittle!
+						const selectors = decl.parent.selector.split(/\s*,\s*/);
+						selectors.forEach((selector) => {
+							const variableName =
+								typeof getName === "function"
+									? getName(selector, decl.prop)
+									: getNameFallback(selector, decl.prop);
+							const newDecl = decl.clone({
+								prop: variableName,
+							});
+							newDecl.raws.before = "\n  ";
+
+							if (!noFlatVariables) {
+								rule.append(newDecl);
+							}
+
+							const selectorNode = (selectorMap[selector] =
+								selectorMap[selector] || {});
+
+							// Check for fallbacks
+							// todo: use valueparser instead of a regex
+							const fallbackMatch = decl.value.match(
+								/var\(\s*(.*?)\s*,\s*var\(\s*(.*?)\s*\)\)/
+							);
+							if (fallbackMatch) {
+								const [, override, fallback] = fallbackMatch;
+
+								// The final declaration should have the override present
+								selectorNode[
+									decl.prop
+								] = `var(${override}, var(${variableName}))`;
+
+								// The system-level declaration should only have the fallback
+								newDecl.value = `var(${fallback})`;
+							} else {
+								selectorNode[decl.prop] = `var(${variableName})`;
+							}
+						});
+					}
+				});
+
+				container.remove();
+			});
+
+			if (noSelectors) return;
+
+			for (let [selector, props] of Object.entries(selectorMap)) {
+				const rule = new Rule({
+					selector,
+				});
+
+				for (let [prop, value] of Object.entries(props)) {
+					const decl = new Declaration({
+						prop,
+						value,
+					});
+					decl.raws.before = "\n  ";
+
+					rule.append(decl);
+				}
+
+				root.append(rule);
 			}
+		},
+	};
+};
 
-			root.append(rule);
-		}
-	}
-}
-
-module.exports = postcss.plugin("postcss-splitinator", function (options) {
-	return (root, result) => process(root, options);
-});
+plugin.postcss = true;
+module.exports = plugin;

@@ -10,23 +10,23 @@ OF ANY KIND, either express or implied. See the License for the specific languag
 governing permissions and limitations under the License.
 */
 
-const postcss = require("postcss");
+const plugin = () => ({
+	postcssPlugin: "postcss-combininator",
+	Once(root) {
+		const rules = [];
+		const declarations = {};
 
-function process(root, options) {
-	let rules = [];
-	let declarations = {};
-	root.walkRules((rule) => {
-		rules.push(rule);
-		rule.walkDecls((decl) => {
-			if (decl.prop.startsWith("--")) {
+		root.walkRules((rule) => {
+			rules.push(rule);
+			rule.walkDecls(/^--/, (decl) => {
 				declarations[decl.prop] = decl;
 				decl.remove();
-			}
+			});
 		});
-	});
 
-	let lastRule = rules[rules.length - 1];
-	if (lastRule) {
+		const lastRule = rules[rules.length - 1];
+		if (!lastRule) return;
+
 		rules.forEach((rule, index) => {
 			if (index !== rules.length - 1) {
 				rule.remove();
@@ -36,9 +36,8 @@ function process(root, options) {
 		for (let decl of Object.values(declarations)) {
 			lastRule.append(decl);
 		}
-	}
-}
-
-module.exports = postcss.plugin("postcss-combininator", function (options) {
-	return (root, result) => process(root, options);
+	},
 });
+
+plugin.postcss = true;
+module.exports = plugin;

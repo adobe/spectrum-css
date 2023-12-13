@@ -210,10 +210,16 @@ async function processComponent(
 
 			// The tarball path should exist locally now; if not, something went wrong
 			if (existsSync(tarballPath)) {
+				if (!existsSync(join(output, "latest", component))) {
+					mkdirSync(join(output, "latest", component), {
+						recursive: true,
+					});
+				}
+
 				await tar
 					.extract({
 						file: tarballPath,
-						cwd: join(output, "latest"),
+						cwd: join(output, "latest", component),
 						// Only unpack the dist folder
 						filter: (path) => path.startsWith("package/dist"),
 						strip: 2,
@@ -221,15 +227,13 @@ async function processComponent(
 					.catch((err) => warnings.push(err));
 			}
 
-			if (existsSync(join(output, "latest"))) {
-				const files =
-					(await fg("**/*.css", {
-						cwd: join(output, "latest"),
-					})) ?? [];
+			const files =
+				(await fg("**/*.css", {
+					cwd: join(output, "latest", component),
+				})) ?? [];
 
-				if (files.length > 0) found++;
-				files.forEach((file) => filelist.add(file));
-			}
+			if (files.length > 0) found++;
+			files.forEach((file) => filelist.add(file));
 		}
 	}
 
@@ -251,7 +255,7 @@ async function processComponent(
 			processFile(
 				filename,
 				join(cwd, component, "dist"),
-				join(output, "latest")
+				join(output, "latest", component)
 			)
 		)
 	).then((results) => {

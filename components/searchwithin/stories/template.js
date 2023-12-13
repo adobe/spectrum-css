@@ -1,16 +1,16 @@
 import { html } from "lit";
 import { classMap } from "lit/directives/class-map.js";
-import { styleMap } from "lit/directives/style-map.js";
 import { ifDefined } from "lit/directives/if-defined.js";
+import { styleMap } from "lit/directives/style-map.js";
 
+import { Template as ClearButton } from "@spectrum-css/clearbutton/stories/template.js";
 import { Template as Picker } from "@spectrum-css/picker/stories/template.js";
 import { Template as Popover } from "@spectrum-css/popover/stories/template.js";
 import { Template as Textfield } from "@spectrum-css/textfield/stories/template.js";
-import { Template as ClearButton } from "@spectrum-css/clearbutton/stories/template.js";
 
 import { Template as Menu } from "@spectrum-css/menu/stories/template.js";
 
-import "../index.css";
+import "@spectrum-css/searchwithin/index.css";
 
 export const Template = ({
 	rootClass = "spectrum-SearchWithin",

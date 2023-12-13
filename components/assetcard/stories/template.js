@@ -8,7 +8,7 @@ import { camelCase } from "lodash-es";
 
 import { Template as Checkbox } from "@spectrum-css/checkbox/stories/template.js";
 
-import "../index.css";
+import "@spectrum-css/assetcard/index.css";
 
 export const Template = ({
 	rootClass = "spectrum-AssetCard",
@@ -25,15 +25,7 @@ export const Template = ({
 	id,
 	...globals
 }) => {
-	const [_, updateArgs] = useArgs();
-	const { express } = globals;
-
-	try {
-		if (!express) import(/* webpackPrefetch: true */ "../themes/spectrum.css");
-		else import(/* webpackPrefetch: true */ "../themes/express.css");
-	} catch (e) {
-		console.warn(e);
-	}
+	const [, updateArgs] = useArgs();
 
 	if (!image && !exampleImage) {
 		console.warn("AssetCard: image is required");
@@ -61,7 +53,11 @@ export const Template = ({
 			role="figure"
 		>
 			<div class="${rootClass}-assetContainer">
-				<img class="${rootClass}-asset" alt="assetcard example image" src="${image ?? exampleImage}" />
+				<img
+					class="${rootClass}-asset"
+					alt="assetcard example image"
+					src="${image ?? exampleImage}"
+				/>
 				<div class="${rootClass}-selectionOverlay"></div>
 			</div>
 			${when(
@@ -69,7 +65,10 @@ export const Template = ({
 				() => html`<div class="${rootClass}-header">
 					${when(
 						title,
-						() => html`<div class="${rootClass}-title" id=${camelCase(title)}>${title}</div>`
+						() =>
+							html`<div class="${rootClass}-title" id=${camelCase(title)}>
+								${title}
+							</div>`
 					)}
 					${when(
 						headerContent,

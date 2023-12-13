@@ -10,11 +10,12 @@ OF ANY KIND, either express or implied. See the License for the specific languag
 governing permissions and limitations under the License.
 */
 
-@import "../commons/overlay-coretokens.css";
+@import "@spectrum-css/commons/overlay.css";
 
 .spectrum-Popover {
   /* Used in positioning popover for storybook */
   --flow-direction: 1;
+
   [dir="rtl"] & {
     --flow-direction: -1;
   }
@@ -57,7 +58,7 @@ governing permissions and limitations under the License.
 
 .spectrum-Popover {
   --spectrum-popover-filter: drop-shadow(var(--mod-popover-shadow-horizontal, var(--spectrum-popover-shadow-horizontal)) var(--mod-popover-shadow-vertical, var(--spectrum-popover-shadow-vertical)) var(--mod-popover-shadow-blur, var(--spectrum-popover-shadow-blur)) var(--mod-popover-shadow-color, var(--spectrum-popover-shadow-color)));
-  @inherit: %spectrum-overlay;
+  @extend %spectrum-overlay;
 
   box-sizing: border-box;
   position: absolute;
@@ -79,7 +80,7 @@ governing permissions and limitations under the License.
 
   /* default opens and animates upward */
   &.is-open {
-    @inherit: %spectrum-overlay--open;
+    @extend %spectrum-overlay--open;
   }
 
   /* has tip triangle */
@@ -114,7 +115,7 @@ governing permissions and limitations under the License.
   /* spacing to include tip in calculation of offset from source */
   &.spectrum-Popover--withTip {
     /* tip size minus where it overlaps with popover border */
-    margin-bottom: calc(var(--mod-popover-pointer-height, var(--spectrum-popover-pointer-height)) - var(--mod-popover-border-width, var(--spectrum-popover-border-width)));
+    margin-block-end: calc(var(--mod-popover-pointer-height, var(--spectrum-popover-pointer-height)) - var(--mod-popover-border-width, var(--spectrum-popover-border-width)));
   }
 
   /* popover animates upward ⬆ */
@@ -132,7 +133,7 @@ governing permissions and limitations under the License.
   /* spacing to include tip in calculation of offset from source */
   &.spectrum-Popover--withTip {
     /* tip size minus where it overlaps with popover border */
-    margin-top: calc(var(--mod-popover-pointer-height, var(--spectrum-popover-pointer-height)) - var(--mod-popover-border-width, var(--spectrum-popover-border-width)));
+    margin-block-start: calc(var(--mod-popover-pointer-height, var(--spectrum-popover-pointer-height)) - var(--mod-popover-border-width, var(--spectrum-popover-border-width)));
   }
 
   /* popover animates downward ⬇ */
@@ -148,7 +149,7 @@ governing permissions and limitations under the License.
   /* spacing to include tip in calculation of offset from source */
   &.spectrum-Popover--withTip {
     /* tip size minus where it overlaps with popover border */
-    margin-left: calc(var(--mod-popover-pointer-width, var(--spectrum-popover-pointer-width)) - var(--mod-popover-border-width, var(--spectrum-popover-border-width)));
+    margin-inline-start: calc(var(--mod-popover-pointer-width, var(--spectrum-popover-pointer-width)) - var(--mod-popover-border-width, var(--spectrum-popover-border-width)));
   }
 
   /* popover animates towards right ⮕ */
@@ -164,7 +165,7 @@ governing permissions and limitations under the License.
   /* spacing to include tip in calculation of offset from source */
   &.spectrum-Popover--withTip {
     /* tip size minus where it overlaps with popover border */
-    margin-right: calc(var(--mod-popover-pointer-width, var(--spectrum-popover-pointer-width)) - var(--mod-popover-border-width, var(--spectrum-popover-border-width)));
+    margin-inline-end: calc(var(--mod-popover-pointer-width, var(--spectrum-popover-pointer-width)) - var(--mod-popover-border-width, var(--spectrum-popover-border-width)));
   }
 
   /* popover animates towards left ⬅ */
@@ -234,13 +235,13 @@ governing permissions and limitations under the License.
   &.spectrum-Popover--bottom-start,
   &.spectrum-Popover--bottom-end {
     .spectrum-Popover-tip {
-      width: var(--mod-popover-pointer-width, var(--spectrum-popover-pointer-width));
-      height: var(--mod-popover-pointer-height, var(--spectrum-popover-pointer-height));
+      inline-size: var(--mod-popover-pointer-width, var(--spectrum-popover-pointer-width));
+      block-size: var(--mod-popover-pointer-height, var(--spectrum-popover-pointer-height));
       position: absolute;
-      top: 100%;
-      left: 0;
-      right: 0;
+      inset-block-start: 100%;
+      inset-inline: 0;
       margin: auto;
+
       /* https://stackoverflow.com/questions/44170229/how-to-prevent-half-pixel-svg-shift-on-high-pixel-ratio-devices-retina */
       transform: translate(0, 0);
     }
@@ -249,16 +250,14 @@ governing permissions and limitations under the License.
   /* popover is at top of source, tip left and pointing down ▽ */
   &.spectrum-Popover--top-left {
     .spectrum-Popover-tip {
-      left: var(--mod-popover-pointer-edge-spacing, var(--spectrum-popover-pointer-edge-spacing));
-      right: auto;
+      inset-inline: var(--mod-popover-pointer-edge-spacing, var(--spectrum-popover-pointer-edge-spacing)) auto;
     }
   }
 
  /* popover is at top of source, tip right and pointing down ▽ */
   &.spectrum-Popover--top-right {
     .spectrum-Popover-tip {
-      left: auto;
-      right: var(--mod-popover-pointer-edge-spacing, var(--spectrum-popover-pointer-edge-spacing));
+      inset-inline: auto var(--mod-popover-pointer-edge-spacing, var(--spectrum-popover-pointer-edge-spacing));
     }
   }
 
@@ -283,8 +282,8 @@ governing permissions and limitations under the License.
   &.spectrum-Popover--bottom-start,
   &.spectrum-Popover--bottom-end {
     .spectrum-Popover-tip {
-      top: auto;
-      bottom: 100%;
+      inset-block: auto 100%;
+
       /* flip triangle to face up */
       transform: scaleY(-1);
     }
@@ -293,16 +292,14 @@ governing permissions and limitations under the License.
   /* popover position is bottom, source is at left, tip pointing up △ */
   &.spectrum-Popover--bottom-left {
     .spectrum-Popover-tip {
-      left: var(--mod-popover-pointer-edge-spacing, var(--spectrum-popover-pointer-edge-spacing));
-      right: auto;
+      inset-inline: var(--mod-popover-pointer-edge-spacing, var(--spectrum-popover-pointer-edge-spacing)) auto;
     }
   }
 
   /* popover position is bottom, source is at right, tip pointing up △ */
   &.spectrum-Popover--bottom-right {
     .spectrum-Popover-tip {
-      left: auto;
-      right: var(--mod-popover-pointer-edge-spacing, var(--spectrum-popover-pointer-edge-spacing));
+      inset-inline: auto var(--mod-popover-pointer-edge-spacing, var(--spectrum-popover-pointer-edge-spacing));
     }
   }
 
@@ -335,10 +332,9 @@ governing permissions and limitations under the License.
   &.spectrum-Popover--end-bottom {
     .spectrum-Popover-tip {
       /* swap height and width for vertical triangle */
-      width: var(--mod-popover-pointer-height, var(--spectrum-popover-pointer-height));
-      height: var(--mod-popover-pointer-width, var(--spectrum-popover-pointer-width));
-      top: 0;
-      bottom: 0;
+      inline-size: var(--mod-popover-pointer-height, var(--spectrum-popover-pointer-height));
+      block-size: var(--mod-popover-pointer-width, var(--spectrum-popover-pointer-width));
+      inset-block: 0;
     }
 
     /* left popover with tip pointing right ▷ */
@@ -346,8 +342,7 @@ governing permissions and limitations under the License.
     &.spectrum-Popover--left-bottom,
     &.spectrum-Popover--left-top {
       .spectrum-Popover-tip {
-        left: 100%;
-        right: auto;
+        inset-inline: 100% auto;
       }
     }
 
@@ -356,8 +351,8 @@ governing permissions and limitations under the License.
     &.spectrum-Popover--right-bottom,
     &.spectrum-Popover--right-top {
       .spectrum-Popover-tip {
-        right: 100%;
-        left: auto;
+        inset-inline: auto 100%;
+
         /* flip tip to point left ◁ */
         transform: scaleX(-1);
       }
@@ -370,8 +365,7 @@ governing permissions and limitations under the License.
     &.spectrum-Popover--start-top,
     &.spectrum-Popover--end-top {
       .spectrum-Popover-tip {
-        top: var(--mod-popover-pointer-edge-spacing, var(--spectrum-popover-pointer-edge-spacing));
-        bottom: auto;
+        inset-block: var(--mod-popover-pointer-edge-spacing, var(--spectrum-popover-pointer-edge-spacing)) auto;
       }
     }
 
@@ -381,8 +375,7 @@ governing permissions and limitations under the License.
     &.spectrum-Popover--start-bottom,
     &.spectrum-Popover--end-bottom {
       .spectrum-Popover-tip {
-        top: auto;
-        bottom: var(--mod-popover-pointer-edge-spacing, var(--spectrum-popover-pointer-edge-spacing));
+        inset-block: auto var(--mod-popover-pointer-edge-spacing, var(--spectrum-popover-pointer-edge-spacing));
       }
     }
   }
@@ -396,6 +389,7 @@ governing permissions and limitations under the License.
 
       [dir="rtl"] & {
         transform: none;
+
         /* flip tip to point left ◁ */
         transform: scaleX(-1);
       }
@@ -409,6 +403,7 @@ governing permissions and limitations under the License.
     /* tip triangle  */
     .spectrum-Popover-tip {
       margin-inline-end: 100%;
+
       /* flip tip to point right ▷ */
       transform: scaleX(-1);
 

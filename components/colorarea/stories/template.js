@@ -4,7 +4,7 @@ import { classMap } from "lit/directives/class-map.js";
 import { ifDefined } from "lit/directives/if-defined.js";
 import { styleMap } from "lit/directives/style-map.js";
 
-import "../index.css";
+import "@spectrum-css/colorarea/index.css";
 
 export const Template = ({
 	rootClass = "spectrum-ColorArea",
@@ -27,7 +27,7 @@ export const Template = ({
 				"is-focused": isFocused,
 				...customClasses.reduce((a, c) => ({ ...a, [c]: true }), {}),
 			})}
-      		style=${ifDefined(styleMap(customStyles))}
+			style=${ifDefined(styleMap(customStyles))}
 		>
 			<div
 				class="spectrum-ColorArea-gradient"

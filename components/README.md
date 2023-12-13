@@ -28,7 +28,7 @@ See [documentation generation](/tools/bundle-builder/docs/README.md) documentati
 ## Adding a new component
 
 1. Generate a new component using the `yarn new component` command. The generator will prompt you to answer questions about your component.
-2. Edit the `dependencies` within the `package.json` file to use only the dependencies your component needs. All components rely on `@spectrum-css/tokens` and `@spectrum-css/component-builder-simple`, and most rely on `@spectrum-css/icon`. **Note: If you are working on a legacy component, it will dependend on `@spectrum-css/vars` and `@spectrum-css/component-builder` instead. This is expected.**
+2. Edit the `dependencies` within the `package.json` file to use only the dependencies your component needs. All components rely on `@spectrum-css/tokens`, and most rely on `@spectrum-css/icon`. **Note: If you are working on a legacy component, it will dependend on `@spectrum-css/vars` instead. This is expected.**
 3. Once your folder has been generated, you can run `yarn dev` in the root of the project to begin developing.
 4. The `index.css` file is where most of your styles will be added.
 5. Inside the `stories` directory you will find a `template.js` and an `*.stories.js` file.

@@ -1,0 +1,16 @@
+{
+  "private": true,
+  "name": "postcss-transform-logical",
+  "version": "0.0.0-alpha.1",
+  "license": "Apache-2.0",
+  "author": "Adobe",
+  "main": "index.js",
+  "dependencies": {
+    "postcss": "^8.4.31",
+    "postcss-selector-parser": "^6.0.13",
+    "postcss-values-parser": "^6.0.2"
+  },
+  "peerDependencies": {
+    "postcss": ">=8.0.0"
+  }
+}

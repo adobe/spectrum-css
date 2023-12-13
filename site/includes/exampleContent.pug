@@ -1,10 +1,10 @@
 if example.description
   .spectrum-Typography
-    section.spectrum-CSSExample-description.spectrum-Body.spectrum-Body--sizeM!= util.markdown.render(example.description)
+    section.spectrum-CSSExample-description.spectrum-Body.spectrum-Body--sizeM!= markdown.render(example.description)
 
 if example.details
   .spectrum-Typography
-    .section.spectrum-CSSExample-description.spectrum-Body.spectrum-Body--sizeM!= util.markdown.render(example.details)
+    .section.spectrum-CSSExample-description.spectrum-Body.spectrum-Body--sizeM!= markdown.render(example.details)
 
 if example.markup
   section.spectrum-CSSExample-container
@@ -14,4 +14,4 @@ if example.markup
         a.js-markup-toggle.spectrum-CSSExample-markupToggle.spectrum-Link(href="#") Show markup
       bdo(dir="ltr")
         pre.spectrum-Code.spectrum-Code--sizeXS
-          code.language-markup!= util.Prism.highlight(example.markup, util.Prism.languages.markup, 'markup')
+          code.language-markup!= Prism.highlight(example.markup, Prism.languages.markup, 'markup')

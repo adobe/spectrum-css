@@ -7,7 +7,7 @@ import { useArgs, useGlobals } from "@storybook/client-api";
 
 import { Template as FieldLabel } from "@spectrum-css/fieldlabel/stories/template.js";
 
-import "../index.css";
+import "@spectrum-css/slider/index.css";
 
 export const Template = ({
 	rootClass = "spectrum-Slider",
@@ -28,16 +28,7 @@ export const Template = ({
 	id,
 	...globals
 }) => {
-	const { express } = globals;
-
-	try {
-		if (!express) import(/* webpackPrefetch: true */ "../themes/spectrum.css");
-		else import(/* webpackPrefetch: true */ "../themes/express.css");
-	} catch (e) {
-		console.warn(e);
-	}
-
-	const [_, updateArgs] = useArgs();
+	const [, updateArgs] = useArgs();
 	const [{ textDirection }] = useGlobals();
 
 	const rtl = !!(textDirection === "rtl");
@@ -240,7 +231,7 @@ export const Template = ({
 				? html`<div
 						class="${rootClass}-labelContainer"
 						role=${ifDefined(values.length > 1 ? "presentation" : undefined)}
-					>
+				  >
 						<div
 							class="${rootClass}-value"
 							role="textbox"
@@ -251,7 +242,7 @@ export const Template = ({
 						>
 							${values[0]}${values.length > 1 ? ` - ${values[1]}` : ""}
 						</div>
-					</div>`
+				  </div>`
 				: ""}
 		</div>
 	`;

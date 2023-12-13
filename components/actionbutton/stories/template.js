@@ -6,12 +6,12 @@ import { when } from "lit/directives/when.js";
 
 import { capitalize, lowerCase } from "lodash-es";
 
-import "../index.css";
-
 /**
  * @todo load order should not influence the icon size but it is; fix this
 */
 import { Template as Icon } from "@spectrum-css/icon/stories/template.js";
+
+import "@spectrum-css/actionbutton/index.css";
 
 export const Template = ({
 	rootClass = "spectrum-ActionButton",
@@ -33,15 +33,6 @@ export const Template = ({
 	role,
 	...globals
 }) => {
-	const { express } = globals;
-
-	try {
-		if (!express) import(/* webpackPrefetch: true */ "../themes/spectrum.css");
-		else import(/* webpackPrefetch: true */ "../themes/express.css");
-	} catch (e) {
-		console.warn(e);
-	}
-
 	return html`
 		<button
 			aria-label=${ifDefined(label)}

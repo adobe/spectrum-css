@@ -10,7 +10,7 @@ import { Template as Icon } from "@spectrum-css/icon/stories/template.js";
 import { Template as Popover } from "@spectrum-css/popover/stories/template.js";
 import { Template as ProgressCircle } from "@spectrum-css/progresscircle/stories/template.js";
 
-import "../index.css";
+import "@spectrum-css/picker/index.css";
 
 export const Picker = ({
 	rootClass = "spectrum-Picker",
@@ -23,26 +23,14 @@ export const Picker = ({
 	isInvalid = false,
 	isLoading = false,
 	isDisabled = false,
-	isReadOnly = false,
 	customClasses = [],
 	customStyles = {},
-	content = [],
-	iconName,
-	id,
 	...globals
 }) => {
-	const [_, updateArgs] = useArgs();
-
-	const { express } = globals;
-	try {
-		if (!express) import(/* webpackPrefetch: true */ "../themes/spectrum.css");
-		else import(/* webpackPrefetch: true */ "../themes/express.css");
-	} catch (e) {
-		console.warn(e);
-	}
+	const [, updateArgs] = useArgs();
 
 	return html`
-	<button
+		<button
 			class=${classMap({
 				[rootClass]: true,
 				[`${rootClass}--size${size?.toUpperCase()}`]:
@@ -59,7 +47,7 @@ export const Picker = ({
 			aria-haspopup="listbox"
 			style=${ifDefined(styleMap(customStyles))}
 			type="button"
-			@click=${(e) => {
+			@click=${() => {
 				updateArgs({ isOpen: !isOpen });
 			}}
 		>
@@ -86,7 +74,7 @@ export const Picker = ({
 			})}
 		</button>
 	`;
-}
+};
 
 export const Template = ({
 	rootClass = "spectrum-Picker",
@@ -109,15 +97,6 @@ export const Template = ({
 	id,
 	...globals
 }) => {
-
-	const { express } = globals;
-	try {
-		if (!express) import(/* webpackPrefetch: true */ "../themes/spectrum.css");
-		else import(/* webpackPrefetch: true */ "../themes/express.css");
-	} catch (e) {
-		console.warn(e);
-	}
-
 	let iconName = "ChevronDown200";
 	switch (size) {
 		case "s":
@@ -143,9 +122,29 @@ export const Template = ({
 					alignment: labelPosition,
 			  })
 			: ""}
-		${labelPosition == "left" ?
-			html`<div style="display: inline-block">
-				${Picker({
+		${labelPosition == "left"
+			? html`<div style="display: inline-block">
+					${Picker({
+						...globals,
+						rootClass,
+						size,
+						placeholder,
+						isQuiet,
+						isFocused,
+						isOpen,
+						isInvalid,
+						isLoading,
+						isDisabled,
+						isReadOnly,
+						customClasses,
+						customStyles,
+						content,
+						iconName,
+						labelPosition,
+						id,
+					})}
+			  </div> `
+			: Picker({
 					...globals,
 					rootClass,
 					size,
@@ -163,31 +162,7 @@ export const Template = ({
 					iconName,
 					labelPosition,
 					id,
-				})}
-			</div>
-			`
-		:
-			Picker({
-				...globals,
-				rootClass,
-				size,
-				placeholder,
-				isQuiet,
-				isFocused,
-				isOpen,
-				isInvalid,
-				isLoading,
-				isDisabled,
-				isReadOnly,
-				customClasses,
-				customStyles,
-				content,
-				iconName,
-				labelPosition,
-				id,
-			})
-		}
-
+			  })}
 		${helpText
 			? HelpText({
 					text: helpText,

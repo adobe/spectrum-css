@@ -6,7 +6,7 @@ import { when } from "lit/directives/when.js";
 
 import { useArgs } from "@storybook/client-api";
 
-import "@spectrum-css/popover";
+import "@spectrum-css/popover/index.css";
 
 export const Template = ({
 	rootClass = "spectrum-Popover",
@@ -33,108 +33,136 @@ export const Template = ({
 		return html``;
 	}
 
-	const { express } = globals;
-
-	try {
-		if (!express) import(/* webpackPrefetch: true */ "../themes/spectrum.css");
-		else import(/* webpackPrefetch: true */ "../themes/express.css");
-	} catch (e) {
-		console.warn(e);
-	}
-
-	const nestedPopover = id === 'popover-nested' || id === 'popover-nested-2';
+	const nestedPopover = id === "popover-nested" || id === "popover-nested-2";
 
 	return html`
-		${when(typeof trigger === "function", () => trigger({
-			...globals,
-			isSelected: isOpen,
-			isOpen: nestedPopover ?? true,
-			onclick: () => {
-				// Nested popover is static and open, so we don't need transforms for it
-				!nestedPopover &&
-					setTimeout(() => {
-					// No trigger? Nothing to do.
-					if (!trigger || !position) return [];
+		${when(typeof trigger === "function", () =>
+			trigger({
+				...globals,
+				isSelected: isOpen,
+				isOpen: nestedPopover ?? true,
+				onclick: () => {
+					// Nested popover is static and open, so we don't need transforms for it
+					!nestedPopover &&
+						setTimeout(() => {
+							// No trigger? Nothing to do.
+							if (!trigger || !position) return [];
 
-					// Get trigger element and popover
-					const element = document.querySelector(`#${triggerId}`);
+							// Get trigger element and popover
+							const element = document.querySelector(`#${triggerId}`);
 
-					if (!element) return [];
-					const rect = element.getBoundingClientRect();
-					const popover = document.querySelector(`#${id}`);
-					if (!popover) return [];
+							if (!element) return [];
+							const rect = element.getBoundingClientRect();
+							const popover = document.querySelector(`#${id}`);
+							if (!popover) return [];
 
-					const transforms = [];
-					const additionalStyles = {};
-					const triggerXCenter = (rect.left + rect.right) / 2;
-					const triggerYCenter = (rect.top + rect.bottom) / 2;
-					const popWidth = popover.offsetWidth ?? 0;
-					const popHeight = popover.offsetHeight ?? 0;
-					const textDir = getComputedStyle(document.querySelector('html')).direction;
-					let x, y;
-					let xOffset = "+ 0px";
-					let yOffset = "+ 0px";
-					if (position.includes("top") || position.includes("bottom") && !(position.includes("-top") || position.includes("-bottom"))) {
-						x = triggerXCenter - (popWidth > 0 ? popWidth / 2 : popWidth);
-					}
-					if (position.includes("left") || position.includes("right")) {
-						y = triggerYCenter - (popHeight > 0 ? popHeight / 2 : popHeight);
-					}
-					if (position.includes("top") && !position.includes("-top")) {
-						y = rect.top - popHeight;
-						yOffset = withTip
-							? "- (var(--spectrum-popover-pointer-height) + var(--spectrum-popover-animation-distance) - 1px)"
-							: "- var(--spectrum-popover-animation-distance)";
-					} else if (position.includes("bottom") && !position.includes("-bottom")) {
-						y = rect.bottom;
-						yOffset = "+ (var(--spectrum-popover-animation-distance))";
-					} else if (position.includes("left")) {
-						if (textDir == 'rtl') {
-							x = rect.right;
-							xOffset = withTip ? "+ 0px" : "+ var(--spectrum-popover-animation-distance)";
-						} else {
-							x = rect.left - popWidth;
-							xOffset = withTip
-								? "- ((var(--spectrum-popover-pointer-width) / 2) + var(--spectrum-popover-animation-distance) - 2px)"
-								: "- var(--spectrum-popover-animation-distance)";
-						}
-					} else if (position.includes("right")) {
-						if (textDir == 'rtl') {
-							x = rect.left - popWidth;
-							xOffset = withTip
-								? "- ((var(--spectrum-popover-pointer-width) / 2) + var(--spectrum-popover-animation-distance) - 2px)"
-								: "- var(--spectrum-popover-animation-distance)";
-						} else {
-							x = rect.right;
-							xOffset = withTip ? "+ 0px" : "+ var(--spectrum-popover-animation-distance)";
-						}
-					}
+							const transforms = [];
+							const additionalStyles = {};
+							const triggerXCenter = (rect.left + rect.right) / 2;
+							const triggerYCenter = (rect.top + rect.bottom) / 2;
+							const popWidth = popover.offsetWidth ?? 0;
+							const popHeight = popover.offsetHeight ?? 0;
+							const textDir = getComputedStyle(
+								document.querySelector("html")
+							).direction;
+							let x, y;
+							let xOffset = "+ 0px";
+							let yOffset = "+ 0px";
+							if (
+								position.includes("top") ||
+								(position.includes("bottom") &&
+									!(position.includes("-top") || position.includes("-bottom")))
+							) {
+								x = triggerXCenter - (popWidth > 0 ? popWidth / 2 : popWidth);
+							}
+							if (position.includes("left") || position.includes("right")) {
+								y =
+									triggerYCenter - (popHeight > 0 ? popHeight / 2 : popHeight);
+							}
+							if (position.includes("top") && !position.includes("-top")) {
+								y = rect.top - popHeight;
+								yOffset = withTip
+									? "- (var(--spectrum-popover-pointer-height) + var(--spectrum-popover-animation-distance) - 1px)"
+									: "- var(--spectrum-popover-animation-distance)";
+							} else if (
+								position.includes("bottom") &&
+								!position.includes("-bottom")
+							) {
+								y = rect.bottom;
+								yOffset = "+ (var(--spectrum-popover-animation-distance))";
+							} else if (position.includes("left")) {
+								if (textDir == "rtl") {
+									x = rect.right;
+									xOffset = withTip
+										? "+ 0px"
+										: "+ var(--spectrum-popover-animation-distance)";
+								} else {
+									x = rect.left - popWidth;
+									xOffset = withTip
+										? "- ((var(--spectrum-popover-pointer-width) / 2) + var(--spectrum-popover-animation-distance) - 2px)"
+										: "- var(--spectrum-popover-animation-distance)";
+								}
+							} else if (position.includes("right")) {
+								if (textDir == "rtl") {
+									x = rect.left - popWidth;
+									xOffset = withTip
+										? "- ((var(--spectrum-popover-pointer-width) / 2) + var(--spectrum-popover-animation-distance) - 2px)"
+										: "- var(--spectrum-popover-animation-distance)";
+								} else {
+									x = rect.right;
+									xOffset = withTip
+										? "+ 0px"
+										: "+ var(--spectrum-popover-animation-distance)";
+								}
+							}
 
-					if (x) transforms.push(`translateX(calc(var(--flow-direction) * calc(${parseInt(x, 10)}px ${xOffset})))`);
-					if (y) transforms.push(`translateY(calc(${y}px ${yOffset}))`);
+							if (x)
+								transforms.push(
+									`translateX(calc(var(--flow-direction) * calc(${parseInt(
+										x,
+										10
+									)}px ${xOffset})))`
+								);
+							if (y) transforms.push(`translateY(calc(${y}px ${yOffset}))`);
 
-					// Add start and end styles
-					if (position === "top-start" || position === "bottom-start") {
-						additionalStyles["inset-inline-start"] = "calc(" + (popWidth / 2) + "px - var(--spectrum-popover-pointer-edge-offset))";
-					} else if (position === "top-end" || position === "bottom-end") {
-						additionalStyles["inset-inline-start"] = "calc(-1 *" + (popWidth / 2) + "px + var(--spectrum-popover-pointer-edge-offset))";
-					} else if (position === "left-top" || position === "right-top") {
-						additionalStyles["inset-block-start"] = "calc(" + (popHeight / 2) + "px - var(--spectrum-popover-pointer-edge-offset))";
-					} else if (position === "left-bottom" || position === "right-bottom") {
-						additionalStyles["inset-block-start"] = "calc(-1 *" + (popHeight / 2) + "px + var(--spectrum-popover-pointer-edge-offset))";
-					}
+							// Add start and end styles
+							if (position === "top-start" || position === "bottom-start") {
+								additionalStyles["inset-inline-start"] =
+									"calc(" +
+									popWidth / 2 +
+									"px - var(--spectrum-popover-pointer-edge-offset))";
+							} else if (position === "top-end" || position === "bottom-end") {
+								additionalStyles["inset-inline-start"] =
+									"calc(-1 *" +
+									popWidth / 2 +
+									"px + var(--spectrum-popover-pointer-edge-offset))";
+							} else if (position === "left-top" || position === "right-top") {
+								additionalStyles["inset-block-start"] =
+									"calc(" +
+									popHeight / 2 +
+									"px - var(--spectrum-popover-pointer-edge-offset))";
+							} else if (
+								position === "left-bottom" ||
+								position === "right-bottom"
+							) {
+								additionalStyles["inset-block-start"] =
+									"calc(-1 *" +
+									popHeight / 2 +
+									"px + var(--spectrum-popover-pointer-edge-offset))";
+							}
 
-					updateArgs({
-						isOpen: !isOpen,
-						customStyles: {
-							...customStyles,
-							transform: transforms.join(" "),
-							...additionalStyles,
-						}
-					});
-				}, 100)
-				}
-		}))}
+							updateArgs({
+								isOpen: !isOpen,
+								customStyles: {
+									...customStyles,
+									transform: transforms.join(" "),
+									...additionalStyles,
+								},
+							});
+						}, 100);
+				},
+			})
+		)}
 
 		<div
 			class=${classMap({

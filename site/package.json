@@ -1,0 +1,35 @@
+{
+  "name": "@spectrum-tools/documentation",
+  "version": "1.0.0",
+  "description": "A Spectrum-focused utility for building the documentation site.",
+  "license": "Apache-2.0",
+  "author": "Adobe",
+  "homepage": "https://opensource.adobe.com/spectrum-css/",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/adobe/spectrum-css.git",
+    "directory": "site"
+  },
+  "bugs": {
+    "url": "https://github.com/adobe/spectrum-css/issues"
+  },
+  "main": "tasks/index.js",
+  "dependencies": {
+    "@adobe/spectrum-css-workflow-icons": "^1.5.4",
+    "@spectrum-css/tokens": "^13.0.6",
+    "@spectrum-css/ui-icons": "^1.1.0",
+    "loadicons": "^1.0.0",
+    "lunr": "^2.3.9",
+    "prismjs": "^1.29.0"
+  },
+  "devDependencies": {
+    "browser-sync": "^2.29.3",
+    "chokidar": "^3.5.3",
+    "colors": "^1.4.0",
+    "fast-glob": "^3.3.2",
+    "js-yaml": "^4.1.0",
+    "markdown-it": "^12.3.2",
+    "npm-run-all": "^4.1.5",
+    "pug": "^3.0.2"
+  }
+}

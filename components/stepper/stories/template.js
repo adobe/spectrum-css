@@ -6,7 +6,7 @@ import { styleMap } from "lit/directives/style-map.js";
 import { Template as InfieldButton } from "@spectrum-css/infieldbutton/stories/template.js";
 import { Template as Textfield } from "@spectrum-css/textfield/stories/template.js";
 
-import "../index.css";
+import "@spectrum-css/stepper/index.css";
 
 export const Template = ({
 	rootClass = "spectrum-Stepper",
@@ -24,15 +24,6 @@ export const Template = ({
 	},
 	...globals
 }) => {
-	const { express } = globals;
-
-	try {
-		if (!express) import(/* webpackPrefetch: true */ "../themes/spectrum.css");
-		else import(/* webpackPrefetch: true */ "../themes/express.css");
-	} catch (e) {
-		console.warn(e);
-	}
-
 	let iconSize = "75";
 	switch (size) {
 		case "s":
@@ -52,7 +43,8 @@ export const Template = ({
 		<div
 			class=${classMap({
 				[rootClass]: true,
-				[`${rootClass}--size${size?.toUpperCase()}`]: typeof size !== "undefined",
+				[`${rootClass}--size${size?.toUpperCase()}`]:
+					typeof size !== "undefined",
 				[`${rootClass}--quiet`]: isQuiet,
 				"is-focused": isFocused,
 				"is-keyboardFocused": isKeyboardFocused,
@@ -88,7 +80,7 @@ export const Template = ({
 							iconName: `ChevronUp${iconSize}`,
 							isDisabled,
 							isQuiet,
-							position: "top"
+							position: "top",
 						})}
 						${InfieldButton({
 							...globals,
@@ -97,7 +89,7 @@ export const Template = ({
 							iconName: `ChevronDown${iconSize}`,
 							isDisabled,
 							isQuiet,
-							position: "bottom"
+							position: "bottom",
 						})}
 				  </span>`}
 		</div>

@@ -3,7 +3,7 @@ import { classMap } from "lit/directives/class-map.js";
 
 import { Template as ActionButton } from "@spectrum-css/actionbutton/stories/template.js";
 
-import "../index.css";
+import "@spectrum-css/actiongroup/index.css";
 
 export const Template = ({
 	rootClass = "spectrum-ActionGroup",
@@ -18,15 +18,6 @@ export const Template = ({
 	customClasses = [],
 	...globals
 }) => {
-	const { express } = globals;
-
-	try {
-		if (!express) import(/* webpackPrefetch: true */ "../themes/spectrum.css");
-		else import(/* webpackPrefetch: true */ "../themes/express.css");
-	} catch (e) {
-		console.warn(e);
-	}
-
 	return html`
 		<div
 			class=${classMap({

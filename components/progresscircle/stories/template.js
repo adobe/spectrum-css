@@ -1,7 +1,7 @@
 import { html } from "lit";
 import { classMap } from "lit/directives/class-map.js";
 
-import "../index.css";
+import "@spectrum-css/progresscircle/index.css";
 
 export const Template = ({
 	rootClass = "spectrum-ProgressCircle",
@@ -9,17 +9,7 @@ export const Template = ({
 	size = "m",
 	overBackground = false,
 	isIndeterminate = false,
-	...globals
 }) => {
-	const { express } = globals;
-
-	try {
-		if (!express) import(/* webpackPrefetch: true */ "../themes/spectrum.css");
-		else import(/* webpackPrefetch: true */ "../themes/express.css");
-	} catch (e) {
-		console.warn(e);
-	}
-
 	let sizeClassName = "medium";
 	switch (size) {
 		case "s":

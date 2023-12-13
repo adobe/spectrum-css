@@ -3,7 +3,7 @@ import { classMap } from "lit/directives/class-map.js";
 import { ifDefined } from "lit/directives/if-defined.js";
 import { when } from "lit/directives/when.js";
 
-import "../index.css";
+import "@spectrum-css/dial/index.css";
 
 export const Template = ({
 	rootClass = "spectrum-Dial",
@@ -70,7 +70,12 @@ export const Template = ({
 				</div>`
 			)}
 			<div class="${rootClass}-controls">
-				<div class="${rootClass}-handle ${isDragged ? "is-dragged": ""} ${isFocused ? "is-focused": ""}" tabindex="0">
+				<div
+					class="${rootClass}-handle ${isDragged
+						? "is-dragged"
+						: ""} ${isFocused ? "is-focused" : ""}"
+					tabindex="0"
+				>
 					<input
 						type="range"
 						class="${rootClass}-input"

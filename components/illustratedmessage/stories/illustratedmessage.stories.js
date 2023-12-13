@@ -1,8 +1,8 @@
 import { html } from "lit";
 
 // Import the component markup template
-import { Template } from "./template";
 import { Template as Link } from "@spectrum-css/link/stories/template.js";
+import { Template } from "./template";
 
 export default {
 	title: "Components/Illustrated message",
@@ -67,10 +67,8 @@ AccentColor.args = {
 	...Default.args,
 	heading: "Drag and drop your file",
 	description: [
-		() => {
-			return html`${Link({ url: "#", text: "Select a file" })} from your
-		computer.`
-		},
+		() =>
+			html`${Link({ url: "#", text: "Select a file" })} from your computer.`,
 	],
 	useAccentColor: true,
 };

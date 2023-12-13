@@ -36,7 +36,9 @@ export const fetchIconSVG = ({
 				scale !== "medium" ? `24` : `18`
 			}/${iconName}.svg`);
 			if (icon) return (icon.default ?? icon).trim();
-		} catch (e) {}
+		} catch (e) {
+			/* empty */
+		}
 	}
 
 	// Check the ui kit for icon set if not yet found
@@ -45,7 +47,9 @@ export const fetchIconSVG = ({
 			scale ? scale : "medium"
 		}/${iconName}.svg`);
 		if (icon) return (icon.default ?? icon).trim();
-	} catch (e) {}
+	} catch (e) {
+		/* empty */
+	}
 
 	return;
 };

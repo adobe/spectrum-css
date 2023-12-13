@@ -7,9 +7,8 @@ import { Template as Button } from "@spectrum-css/button/stories/template.js";
 import { Template as SplitButton } from "@spectrum-css/splitbutton/stories/template.js";
 import { Template as Textfield } from "@spectrum-css/textfield/stories/template.js";
 
-import "../index.css";
+import "@spectrum-css/pagination/index.css";
 
-// More on component templates: https://storybook.js.org/docs/web-components/writing-stories/introduction#using-args
 export const Template = ({
 	rootClass = "spectrum-Pagination",
 	size = "m",
@@ -47,7 +46,9 @@ export const Template = ({
 				})}
 			</nav>
 		`;
-	} else if (variant == "button") {
+	}
+
+	if (variant == "button") {
 		return SplitButton({
 			position: "left",
 			variant: "accent",
@@ -55,9 +56,10 @@ export const Template = ({
 			iconName: "ChevronLeft100",
 			labelIconName: "ChevronRight100",
 			customFirstButtonClasses: ["spectrum-Pagination-prevButton"],
-			customLastButtonClasses: ["spectrum-Pagination-nextButton"]
+			customLastButtonClasses: ["spectrum-Pagination-nextButton"],
 		});
 	}
+
 	return html`
 		<nav
 			class=${classMap({

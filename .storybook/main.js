@@ -1,15 +1,15 @@
 const { resolve } = require("path");
 const { readdirSync } = require("fs");
+
 const componentsPath = resolve(__dirname, "../components");
 const componentPkgs = readdirSync(componentsPath, {
 	withFileTypes: true,
 })
 	.filter((dirent) => dirent.isDirectory())
 	.map((dirent) => dirent.name);
+
 module.exports = {
-	stories: [
-		"../components/*/stories/*.stories.@(js|jsx|ts|tsx)",
-	],
+	stories: ["../components/*/stories/*.stories.js"],
 	rootDir: "../",
 	staticDirs: ["../assets"],
 	addons: [
@@ -32,9 +32,9 @@ module.exports = {
 		"@whitespace/storybook-addon-html",
 		// https://storybook.js.org/addons/@etchteam/storybook-addon-status
 		"@etchteam/storybook-addon-status",
-    "storybook-addon-pseudo-states",
+		"storybook-addon-pseudo-states",
 		// https://github.com/storybookjs/storybook/tree/next/code/addons/interactions
-		"@storybook/addon-interactions"
+		"@storybook/addon-interactions",
 	],
 	core: {
 		disableTelemetry: true,
@@ -43,8 +43,8 @@ module.exports = {
 		MIGRATED_PACKAGES: componentPkgs.filter((dir) => {
 			const pkg = require(resolve(componentsPath, dir, "package.json"));
 			if (
-				pkg.devDependencies &&
-				pkg.devDependencies["@spectrum-css/component-builder-simple"]
+				pkg.peerDependencies &&
+				pkg.peerDependencies["@spectrum-css/tokens"]
 			) {
 				return true;
 			}
@@ -53,6 +53,7 @@ module.exports = {
 	},
 	webpackFinal: function (config) {
 		// Removing the global alias as it conflicts with the global npm pkg
+		// eslint-disable-next-line @typescript-eslint/no-unused-vars
 		const { global, ...alias } = config.resolve.alias;
 		config.resolve.alias = alias;
 		let storybookRules =
@@ -63,10 +64,6 @@ module.exports = {
 				: [];
 		return {
 			...config,
-			stats: {
-				/* Suppress autoprefixer warnings from storybook build */
-				warningsFilter: [/autoprefixer: /],
-			},
 			/* Add support for root node_modules imports */
 			resolve: {
 				...(config.resolve ? config.resolve : {}),
@@ -93,7 +90,8 @@ module.exports = {
 							{
 								loader: "file-loader",
 								options: {
-									outputPath: (url) => `assets/images/${url.replace(/_\//g, "")}`,
+									outputPath: (url) =>
+										`assets/images/${url.replace(/_\//g, "")}`,
 								},
 							},
 						],
@@ -118,7 +116,47 @@ module.exports = {
 									outputPath: (url) => {
 										const cleanURL = url.replace(/_\//g, "");
 										if (/node_modules\/@spectrum-css/.test(url)) {
-											return `assets/css/${cleanURL.replace(/node_modules\/@spectrum-css\//g, "")}`;
+											return `assets/css/${cleanURL.replace(
+												/node_modules\/@spectrum-css\//g,
+												""
+											)}`;
+										}
+
+										return `assets/css/${cleanURL}`;
+									},
+									esModule: false,
+								},
+							},
+						],
+					},
+					/**
+					 * For our token libraries, include a little extra parsing to allow duplicate
+					 * token values to exist in parallel and be toggled using args in storybook.
+					 */
+					{
+						test: /(components|@spectrum-css)\/(expressvars|vars|tokens)\/.*\.css$/i,
+						sideEffects: true,
+						use: [
+							{
+								loader: "style-loader",
+								options: {
+									injectType: "linkTag",
+									attributes: {
+										"data-source": "processed",
+									},
+								},
+							},
+							{
+								loader: "file-loader",
+								options: {
+									name: "[path][name].[ext][query]",
+									outputPath: (url) => {
+										const cleanURL = url.replace(/_\//g, "");
+										if (/node_modules\/@spectrum-css/.test(url)) {
+											return `assets/css/${cleanURL.replace(
+												/node_modules\/@spectrum-css\//g,
+												""
+											)}`;
 										}
 
 										return `assets/css/${cleanURL}`;
@@ -130,9 +168,6 @@ module.exports = {
 								loader: "postcss-loader",
 								options: {
 									implementation: require("postcss"),
-									postcssOptions: {
-										config: resolve(__dirname, "postcss.config.js"),
-									},
 								},
 							},
 						],
@@ -152,7 +187,6 @@ module.exports = {
 	},
 	framework: {
 		name: "@storybook/web-components-webpack5",
-		options: {},
 	},
 	features: {
 		/* Code splitting flag; load stories on-demand */
@@ -160,13 +194,6 @@ module.exports = {
 		/* Builds stories.json to help with on-demand loading */
 		buildStoriesJson: true,
 	},
-	// refs: {
-	//   'swc': {
-	//     title: 'Spectrum Web Components',
-	//     url: 'https://opensource.adobe.com/spectrum-web-components/storybook/',
-	//     expanded: false,
-	//   },
-	// },
 	docs: {
 		autodocs: true, // see below for alternatives
 		defaultName: "Docs", // set to change the name of generated docs entries

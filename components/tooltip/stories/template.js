@@ -4,7 +4,7 @@ import { when } from "lit/directives/when.js";
 
 import { Template as Icon } from "@spectrum-css/icon/stories/template.js";
 
-import "../index.css";
+import "@spectrum-css/tooltip/index.css";
 
 export const Template = ({
 	rootClass = "spectrum-Tooltip",
@@ -13,18 +13,7 @@ export const Template = ({
 	placement,
 	isOpen = true,
 	isFocused = false,
-	showOnHover = false,
-	...globals
 }) => {
-	const { express } = globals;
-
-	try {
-		if (!express) import(/* webpackPrefetch: true */ "../themes/spectrum.css");
-		else import(/* webpackPrefetch: true */ "../themes/express.css");
-	} catch (e) {
-		console.warn(e);
-	}
-
 	let variantIcon;
 	if (variant === "info") {
 		variantIcon = "Info";

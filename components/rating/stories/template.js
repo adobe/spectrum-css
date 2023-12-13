@@ -1,35 +1,26 @@
 import { html } from "lit";
 import { classMap } from "lit/directives/class-map.js";
-import { repeat } from "lit/directives/repeat.js";
 import { ifDefined } from "lit/directives/if-defined.js";
+import { repeat } from "lit/directives/repeat.js";
 
 import { useArgs } from "@storybook/client-api";
 
-// Uncomment if you plan to include an icon
 import { Template as Icon } from "@spectrum-css/icon/stories/template.js";
 
-import "../index.css";
+import "@spectrum-css/rating/index.css";
 
 export const Template = ({
 	rootClass = "spectrum-Rating",
 	max = 5,
 	value = 0,
 	isReadOnly = false,
-	isFocused = false,
+	// isFocused = false,
 	isDisabled = true,
 	isEmphasized = false,
 	customClasses = [],
 	id,
 	...globals
 }) => {
-	const { express } = globals;
-	try {
-		if (express) import(/* webpackPrefetch: true */ "../themes/express.css");
-		else import(/* webpackPrefetch: true */ "../themes/spectrum.css");
-	} catch (e) {
-		console.warn(e);
-	}
-
 	const [, updateArgs] = useArgs();
 
 	return html`
@@ -79,7 +70,7 @@ export const Template = ({
 							"is-currentValue":
 								!isDisabled && !isReadOnly && idx === value - 1,
 						})}
-						@click=${(e) => {
+						@click=${() => {
 							updateArgs({ value: idx + 1, isFocused: true });
 						}}
 					>

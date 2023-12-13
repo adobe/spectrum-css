@@ -13,8 +13,9 @@ governing permissions and limitations under the License.
 .spectrum-CycleButton {
   /* Be square */
   padding-block: 0;
-  padding-inline: var(--spectrum-actionbutton-m-icononly-padding-left) var(--spectrum-actionbutton-m-icononly-padding-right);
+  padding-inline: var(--spectrum-action-button-edge-to-hold-icon-extra-large);
+
   .spectrum-CycleButton-item:not(.is-selected) {
-    display: none
+    display: none;
   }
 }

@@ -128,69 +128,53 @@ export default {
 
 export const Default = Template.bind({});
 Default.args = {
-	content: [
-		() => MenuStories(MenuStories.args)
-	],
+	content: [() => MenuStories(MenuStories.args)],
 };
 
 export const Open = Template.bind({});
 Open.args = {
 	isOpen: true,
-	content: [
-		() => MenuStories(MenuStories.args)
-	],
+	content: [() => MenuStories(MenuStories.args)],
 };
 
 export const SideLabel = Template.bind({});
 SideLabel.args = {
-	content: [
-		() => MenuStories(MenuStories.args)
-	],
-	labelPosition: "left"
+	content: [() => MenuStories(MenuStories.args)],
+	labelPosition: "left",
 };
 
 export const Quiet = Template.bind({});
 Quiet.args = {
 	isQuiet: true,
-	content: [
-		() => MenuStories(MenuStories.args)
-	],
+	content: [() => MenuStories(MenuStories.args)],
 };
 
 export const Loading = Template.bind({});
 Loading.args = {
 	isLoading: true,
-	content: [
-		() => MenuStories(MenuStories.args)
-	],
+	content: [() => MenuStories(MenuStories.args)],
 };
 
 export const Invalid = Template.bind({});
 Invalid.args = {
 	helpText: "Please select a country",
 	isInvalid: true,
-	content: [
-		() => MenuStories(MenuStories.args)
-	],
+	content: [() => MenuStories(MenuStories.args)],
 };
 
 export const Focused = Template.bind({});
 Focused.args = {
 	helpText: "Please select a country",
 	isFocused: true,
-	content: [
-		() => MenuStories(MenuStories.args)
-	],
+	content: [() => MenuStories(MenuStories.args)],
 };
 
 export const WithForcedColors = Template.bind({
-  parameters: {
-    // Sets the forced-colors media feature for a specific story.
-    chromatic: { forcedColors: 'active' },
-  },
+	parameters: {
+		// Sets the forced-colors media feature for a specific story.
+		chromatic: { forcedColors: "active" },
+	},
 });
 WithForcedColors.args = {
-	content: [
-		() => MenuStories(MenuStories.args)
-	],
-}
+	content: [() => MenuStories(MenuStories.args)],
+};

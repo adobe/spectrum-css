@@ -3,7 +3,7 @@ import { classMap } from "lit/directives/class-map.js";
 
 import { Template as AssetList } from "@spectrum-css/assetlist/stories/template.js";
 
-import "../index.css";
+import "@spectrum-css/miller/index.css";
 
 export const Template = ({
 	rootClass = "spectrum-MillerColumns",

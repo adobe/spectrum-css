@@ -4,13 +4,13 @@ import { classMap } from "lit/directives/class-map.js";
 import { ifDefined } from "lit/directives/if-defined.js";
 import { when } from "lit/directives/when.js";
 
-import { Template as Button } from '@spectrum-css/button/stories/template.js';
+import { Template as Button } from "@spectrum-css/button/stories/template.js";
 import { Template as CloseButton } from "@spectrum-css/closebutton/stories/template.js";
 import { Template as Divider } from "@spectrum-css/divider/stories/template.js";
 import { Template as Modal } from "@spectrum-css/modal/stories/template.js";
-import { Template as Underlay } from '@spectrum-css/underlay/stories/template.js';
+import { Template as Underlay } from "@spectrum-css/underlay/stories/template.js";
 
-import "../index.css";
+import "@spectrum-css/dialog/index.css";
 
 export const Template = ({
 	rootClass = "spectrum-Dialog",
@@ -20,12 +20,12 @@ export const Template = ({
 	heading,
 	content = [],
 	customClasses = [],
-	onclick,
+	// onclick,
 	id,
 	...globals
 }) => {
 	const { scale } = globals;
-	const [_, updateArgs] = useArgs();
+	const [, updateArgs] = useArgs();
 
 	const Dialog = html`
 		<div
@@ -49,7 +49,9 @@ export const Template = ({
 						...globals,
 					}),
 				])}
-				<section class="${rootClass}-content">${content.map((c) => (typeof c === "function" ? c({}) : c))}</section>
+				<section class="${rootClass}-content">
+					${content.map((c) => (typeof c === "function" ? c({}) : c))}
+				</section>
 				${when(isDismissable, () =>
 					CloseButton({
 						customClasses: [`${rootClass}-closeButton`],
@@ -91,7 +93,7 @@ export const Template = ({
 				isOpen,
 				content: Dialog,
 			})}
-		`
+		`;
 	} else {
 		return Dialog;
 	}

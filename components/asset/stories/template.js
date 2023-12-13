@@ -2,8 +2,7 @@ import { html, svg } from "lit";
 import { classMap } from "lit/directives/class-map.js";
 import { ifDefined } from "lit/directives/if-defined.js";
 
-import "../index.css";
-import "../skin.css";
+import "@spectrum-css/asset/index.css";
 
 export const Template = ({
 	rootClass = "spectrum-Asset",
@@ -11,7 +10,6 @@ export const Template = ({
 	preset,
 	id,
 	customClasses = [],
-	// ...globals
 }) => {
 	let visual;
 	if (preset === "file") {

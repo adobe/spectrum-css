@@ -1,6 +1,5 @@
 | Modifiable Custom Properties                 |
 | -------------------------------------------- |
-| `--mod-overlay-animation-duration-opened`    |
 | `--mod-tooltip-animation-distance`           |
 | `--mod-tooltip-background-color-default`     |
 | `--mod-tooltip-background-color-informative` |

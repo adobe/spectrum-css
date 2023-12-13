@@ -4,7 +4,7 @@ html(lang='en-US' dir="ltr").spectrum.spectrum--light.spectrum--medium
     title Wrapping - Spectrum CSS
 
     -
-      var exampleDependencies = [
+      const exampleDependencies = [
         'link',
         'toast',
         'tooltip',
@@ -26,7 +26,10 @@ html(lang='en-US' dir="ltr").spectrum.spectrum--light.spectrum--medium
         'switch'
       ];
 
-      dependencyOrder = dependencyOrder.concat(exampleDependencies.filter(dep => dependencyOrder.indexOf(dep) === -1))
+      dependencies = [...new Set([
+        ...dependencies,
+        ...exampleDependencies
+      ])];
 
     include includes/dependencies.pug
 

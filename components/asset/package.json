@@ -15,7 +15,7 @@
   },
   "main": "dist/index-vars.css",
   "peerDependencies": {
-    "@spectrum-css/vars": ">=9"
+    "@spectrum-css/tokens": ">=13"
   },
   "publishConfig": {
     "access": "public"

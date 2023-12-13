@@ -3,7 +3,7 @@ import { classMap } from "lit/directives/class-map.js";
 
 import { Template as Button } from "@spectrum-css/button/stories/template.js";
 
-import "../index.css";
+import "@spectrum-css/splitbutton/index.css";
 
 export const Template = ({
 	rootClass = "spectrum-SplitButton",
@@ -31,25 +31,31 @@ export const Template = ({
 				...globals,
 				variant,
 				size,
-				iconName: position === "right"
-					? typeof labelIconName != "undefined" ? labelIconName : undefined
-					: iconName,
+				iconName:
+					position === "right"
+						? typeof labelIconName != "undefined"
+							? labelIconName
+							: undefined
+						: iconName,
 				label: position === "right" ? label : undefined,
 				hideLabel: position === "right" ? false : true,
 				customClasses: [
 					position === "right"
 						? "spectrum-SplitButton-action"
 						: "spectrum-SplitButton-trigger",
-					...customFirstButtonClasses
-				]
+					...customFirstButtonClasses,
+				],
 			})}
 			${Button({
 				...globals,
 				variant,
 				size,
-				iconName: position === "right"
-					? iconName 
-					: typeof labelIconName != "undefined" ? labelIconName : undefined,
+				iconName:
+					position === "right"
+						? iconName
+						: typeof labelIconName != "undefined"
+						? labelIconName
+						: undefined,
 				iconAfterLabel: true,
 				label: position === "right" ? undefined : label,
 				hideLabel: position === "right" ? true : false,
@@ -57,8 +63,8 @@ export const Template = ({
 					position === "right"
 						? "spectrum-SplitButton-trigger"
 						: "spectrum-SplitButton-action",
-					...customLastButtonClasses
-				]
+					...customLastButtonClasses,
+				],
 			})}
 		</div>
 	`;

@@ -5,7 +5,7 @@ import { ifDefined } from "lit/directives/if-defined.js";
 import { styleMap } from "lit/directives/style-map.js";
 import { when } from "lit/directives/when.js";
 
-import "../index.css";
+import "@spectrum-css/thumbnail/index.css";
 
 export const Template = ({
 	rootClass = "spectrum-Thumbnail",
@@ -24,23 +24,30 @@ export const Template = ({
 	customStyles = {},
 	id,
 }) => {
+	const image = imageURL
+		? html`<img
+				class="${rootClass}-image"
+				src=${imageURL}
+				alt=${ifDefined(altText)}
+		  />`
+		: svg
+		? html`${svg}`
+		: "";
 
-	const image = imageURL ? html`<img class="${rootClass}-image" src=${imageURL} alt=${ifDefined(altText)}/>` : svg ? html`${svg}` : "";
-
-  const checkerboardContent = html`
-			<div class="${rootClass}-image-wrapper">
+	const checkerboardContent = html`
+		<div class="${rootClass}-image-wrapper">
 			${imageURL
 				? html`<img
 						class="${rootClass}-image"
 						src=${imageURL}
 						alt=${altText}
-					/>`
+				  />`
 				: ""}
 			${svg ? html`${svg}` : ""}
 		</div>
 	`;
-	
-  if (isLayer)
+
+	if (isLayer)
 		return html`
 			<div
 				class=${classMap({
@@ -80,7 +87,10 @@ export const Template = ({
 				id=${ifDefined(id)}
 				@click=${onclick}
 			>
-				<div class="${rootClass}-background" style=${styleMap({backgroundColor})}></div>
+				<div
+					class="${rootClass}-background"
+					style=${styleMap({ backgroundColor })}
+				></div>
 				<div class="${rootClass}-image-wrapper">
 					${imageURL
 						? html`<img
@@ -105,18 +115,31 @@ export const Template = ({
 				[`${rootClass}--size${size}`]: typeof size !== "undefined",
 				...customClasses.reduce((a, c) => ({ ...a, [c]: true }), {}),
 			})}
-		style=${ifDefined(styleMap({
-			...customStyles,
-		}))}
-		id=${ifDefined(id)}
-		@click=${onclick}
-	>
-			${when(backgroundColor, () => html`<div class="${rootClass}-background" style=${ifDefined(styleMap({ backgroundColor }))}></div>`)}
+			style=${ifDefined(
+				styleMap({
+					...customStyles,
+				})
+			)}
+			id=${ifDefined(id)}
+			@click=${onclick}
+		>
+			${when(
+				backgroundColor,
+				() =>
+					html`<div
+						class="${rootClass}-background"
+						style=${ifDefined(styleMap({ backgroundColor }))}
+					></div>`
+			)}
 			${OpacityCheckerboard({
 				rootClass: backgroundColor ? `${rootClass}-image-wrapper` : undefined,
-				customClasses: isLayer ? [`${rootClass}-layer-inner`] : !backgroundColor ? [`${rootClass}-image-wrapper`] : [],
+				customClasses: isLayer
+					? [`${rootClass}-layer-inner`]
+					: !backgroundColor
+					? [`${rootClass}-image-wrapper`]
+					: [],
 				content: image ? [image] : [],
 			})}
 		</div>
-	`
+	`;
 };

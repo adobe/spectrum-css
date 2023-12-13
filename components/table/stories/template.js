@@ -8,7 +8,7 @@ import { Template as Checkbox } from "@spectrum-css/checkbox/stories/template.js
 import { Template as Icon } from "@spectrum-css/icon/stories/template.js";
 import { Template as Thumbnail } from "@spectrum-css/thumbnail/stories/template.js";
 
-import "../index.css";
+import "@spectrum-css/table/index.css";
 
 export const TableRowItem = ({
 	rootClass = "spectrum-Table",
@@ -29,7 +29,6 @@ export const TableRowItem = ({
 	ariaControls,
 	customClasses = [],
 	size = "m",
-	id,
 }) => {
 	const useThumbnail = showThumbnails && !isSummaryRow && !isSectionHeader;
 
@@ -78,7 +77,9 @@ export const TableRowItem = ({
 		data-tier=${ifDefined(tier)}
 		?hidden=${isHidden}
 	>
-		${when(showCheckbox && !isSectionHeader, () => html`
+		${when(
+			showCheckbox && !isSectionHeader,
+			() => html`
 			<${cellTag}
 				role="gridcell"
 				class="spectrum-Table-cell spectrum-Table-checkboxCell"
@@ -94,7 +95,8 @@ export const TableRowItem = ({
 			</${cellTag}>`
 		)}
 
-		${isCollapsible
+		${
+			isCollapsible
 				? html`
 					<${cellTag}
 						role=${ifDefined(showCheckbox ? "gridcell" : useDivs ? "cell" : undefined)}
@@ -133,11 +135,19 @@ export const TableRowItem = ({
 							[`${rootClass}-cell`]: true,
 							[`${rootClass}-cell--thumbnail`]: useThumbnail,
 						})}
-						colspan=${ifDefined(isSectionHeader && showCheckbox ? "4" : isSectionHeader ? "3" : undefined)}
+						colspan=${ifDefined(
+							isSectionHeader && showCheckbox
+								? "4"
+								: isSectionHeader
+								? "3"
+								: undefined
+						)}
 					>${getCellContent(0)}</${cellTag}>`
 		}
 
-		${when(!isSectionHeader, () => html`
+		${when(
+			!isSectionHeader,
+			() => html`
 			<${cellTag}
 				role=${ifDefined(showCheckbox ? "gridcell" : useDivs ? "cell" : undefined)}
 				class=${classMap({
@@ -170,17 +180,8 @@ export const Template = ({
 	rowItems = [],
 	customClasses = [],
 	id,
-	...globals
 }) => {
 	if (!rowItems || !rowItems.length) return html``;
-
-	const { express } = globals;
-	try {
-		if (!express) import(/* webpackPrefetch: true */ "../themes/spectrum.css");
-		else import(/* webpackPrefetch: true */ "../themes/express.css");
-	} catch (e) {
-		console.warn(e);
-	}
 
 	// Use Table tags or Div tags.
 	const tableTag = useDivs ? literal`div` : literal`table`;
@@ -204,7 +205,7 @@ export const Template = ({
 		class=${classMap({
 			[rootClass]: !useScroller,
 			[`${rootClass}-main`]: useScroller,
-			...rootClassMapVariants
+			...rootClassMapVariants,
 		})}
 		id=${ifDefined(id)}
 		role=${ifDefined(useCheckboxCell ? "grid" : useDivs ? "table" : undefined)}
@@ -218,7 +219,9 @@ export const Template = ({
 			<${rowTag}
 				role=${ifDefined(useDivs ? "row" : undefined)}
 			>
-				${when(useCheckboxCell, () => html`
+				${when(
+					useCheckboxCell,
+					() => html`
 					<${thTag}
 						class="spectrum-Table-headCell spectrum-Table-checkboxCell"
 						role=${ifDefined(useDivs ? "columnheader" : undefined)}
@@ -242,12 +245,11 @@ export const Template = ({
 						iconName: "ArrowDown100",
 						size,
 						customClasses: [`${rootClass}-sortedIcon`],
-					})}<span class="${rootClass}-columnTitle">Column title</span>${
-					Icon({
-						iconName: "ChevronDown100",
-						size,
-						customClasses: [`${rootClass}-menuIcon`],
-					})}
+					})}<span class="${rootClass}-columnTitle">Column title</span>${Icon({
+		iconName: "ChevronDown100",
+		size,
+		customClasses: [`${rootClass}-menuIcon`],
+	})}
 				</${thTag}>
 				<${thTag}
 					class="${rootClass}-headCell is-sortable"

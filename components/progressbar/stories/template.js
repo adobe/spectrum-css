@@ -6,7 +6,7 @@ import { when } from "lit/directives/when.js";
 
 import { Template as FieldLabel } from "@spectrum-css/fieldlabel/stories/template.js";
 
-import "../index.css";
+import "@spectrum-css/progressbar/index.css";
 
 export const Template = ({
 	rootClass = "spectrum-ProgressBar",
@@ -24,25 +24,20 @@ export const Template = ({
 	size = "m",
 	...globals
 }) => {
-	const { express } = globals;
-
-	try {
-		if (!express) import(/* webpackPrefetch: true */ "../themes/spectrum.css");
-		else import(/* webpackPrefetch: true */ "../themes/express.css");
-	} catch (e) {
-		console.warn(e);
-	}
-
 	return html`
-		<div style=${when(staticWhite, () => styleMap({
-			backgroundColor,
-			width: "400px",
-			height: "200px",
-			display: "flex",
-			flexDirection: "column",
-			alignItems: "center",
-			justifyContent: "space-around",
-		}))}>
+		<div
+			style=${when(staticWhite, () =>
+				styleMap({
+					backgroundColor,
+					width: "400px",
+					height: "200px",
+					display: "flex",
+					flexDirection: "column",
+					alignItems: "center",
+					justifyContent: "space-around",
+				})
+			)}
+		>
 			<div
 				class=${classMap({
 					[rootClass]: true,

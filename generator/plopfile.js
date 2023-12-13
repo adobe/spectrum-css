@@ -23,7 +23,6 @@ export default async (plop) => {
 	const pkg = await fetchPackage(rootFolder);
 
 	const tokens = await fetchPackage(dirname(require.resolve('@spectrum-css/tokens/package.json')));
-	const builder = await fetchPackage(resolve(process.cwd(), '../tools/component-builder-simple'));
 
 	/* Fetch the project name */
 	plop.setWelcomeMessage(`Welcome to the ${projectName} component generator!\n  To get started, answer a few short questions about your component.`);
@@ -102,7 +101,6 @@ export default async (plop) => {
 			data.folderName = plop.renderString('{{ lowerCase (camelCase name) }}', data);
 			data.pkg = pkg;
 			data.tokens = { name: tokens.name, version: tokens.version };
-			data.builder = { name: builder.name, version: builder.version };
 
 			return [
 				{

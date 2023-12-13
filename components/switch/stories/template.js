@@ -2,7 +2,7 @@ import { html } from "lit";
 import { classMap } from "lit/directives/class-map.js";
 import { ifDefined } from "lit/directives/if-defined.js";
 
-import "../index.css";
+import "@spectrum-css/switch/index.css";
 
 export const Template = ({
 	rootClass = "spectrum-Switch",
@@ -13,26 +13,16 @@ export const Template = ({
 	isEmphasized,
 	customClasses = [],
 	id,
-	...globals
 }) => {
-	const { express } = globals;
-
-	try {
-		if (!express) import(/* webpackPrefetch: true */ "../themes/spectrum.css");
-		else import(/* webpackPrefetch: true */ "../themes/express.css");
-	} catch (e) {
-		console.warn(e);
-	}
-
 	// ID attribute value for the input element.
-	const inputId = id ? `${id}-input` : 'switch-onoff-0';
+	const inputId = id ? `${id}-input` : "switch-onoff-0";
 
 	return html`
 		<div
 			class=${classMap({
 				[rootClass]: true,
-				[`${rootClass}--disabled`] : isDisabled,
-				[`${rootClass}--emphasized`] : isEmphasized,
+				[`${rootClass}--disabled`]: isDisabled,
+				[`${rootClass}--emphasized`]: isEmphasized,
 				[`${rootClass}--size${size?.toUpperCase()}`]:
 					typeof size !== "undefined",
 				...customClasses.reduce((a, c) => ({ ...a, [c]: true }), {}),

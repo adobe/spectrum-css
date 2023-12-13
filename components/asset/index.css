@@ -11,6 +11,13 @@ governing permissions and limitations under the License.
 */
 
 .spectrum-Asset {
+  --spectrum-asset-icon-outline-color: var(--spectrum-gray-500);
+  --spectrum-asset-folder-background-color: var(--spectrum-gray-300);
+  --spectrum-asset-file-background-color: var(--spectrum-gray-50);
+  --spectrum-asset-icon-max-width: var(--spectrum-spacing-900);
+  --spectrum-asset-icon-min-width: var(--spectrum-component-height-300);
+  --spectrum-asset-icon-margin: var(--spectrum-component-height-50);
+
   inline-size: 100%;
   block-size: 100%;
   display: flex;
@@ -22,7 +29,7 @@ governing permissions and limitations under the License.
   max-inline-size: 100%;
   max-block-size: 100%;
   object-fit: contain;
-  transition: opacity var(--spectrum-global-animation-duration-100);
+  transition: opacity 130ms;
 }
 
 .spectrum-Asset-folder,
@@ -32,4 +39,17 @@ governing permissions and limitations under the License.
   min-inline-size: var(--spectrum-asset-icon-min-width);
   max-inline-size: var(--spectrum-asset-icon-max-width);
   margin: var(--spectrum-asset-icon-margin);
+}
+
+.spectrum-Asset-folderBackground {
+  fill: var(--spectrum-asset-folder-background-color);
+}
+
+.spectrum-Asset-fileBackground {
+  fill: var(--spectrum-asset-file-background-color);
+}
+
+.spectrum-Asset-folderOutline,
+.spectrum-Asset-fileOutline {
+  fill: var(--spectrum-asset-icon-outline-color);
 }

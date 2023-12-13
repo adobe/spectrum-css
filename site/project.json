@@ -1,0 +1,48 @@
+{
+	"$schema": "../node_modules/nx/schemas/project-schema.json",
+	"name": "site",
+	"tags": ["tooling"],
+	"implicitDependencies": ["tag:component"],
+	"namedInputs": {
+		"core": [
+			"{projectRoot}/resources/**/*",
+			"{projectRoot}/*.pug",
+			"{projectRoot}/patterns/*.yml",
+			"{workspaceRoot}/components/*/metadata/*.yml"
+		],
+		"tools": [
+			"{projectRoot}/includes/*.pug",
+			"{projectRoot}/includes/*.js",
+			"{projectRoot}/templates/*.pug",
+			"{projectRoot}/tasks/*.js",
+			"{projectRoot}/utils.js"
+		]
+	},
+	"targets": {
+		"clean": {},
+		"build": {
+			"dependsOn": ["^build", "clean"],
+			"inputs": ["core", "tools"],
+			"outputs": ["{workspaceRoot}/dist"],
+			"options": {
+				"cwd": "{projectRoot}",
+				"commands": ["node ./tasks/cli.js"]
+			}
+		},
+		"start": {
+			"cache": true,
+			"dependsOn": ["^build", "clean", "build"],
+			"inputs": ["core", "tools"],
+			"outputs": ["{workspaceRoot}/dist"],
+			"executor": "nx:run-commands",
+			"options": {
+				"cwd": "{projectRoot}",
+				"commands": [
+					"NODE_ENV=development node -e \"require('.').watch()\"",
+					"BROWSERSYNC_OPEN=true node -e \"require('.').serve()\""
+				],
+				"parallel": true
+			}
+		}
+	}
+}

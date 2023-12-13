@@ -3,10 +3,10 @@ import { classMap } from "lit/directives/class-map.js";
 import { ifDefined } from "lit/directives/if-defined.js";
 
 import { Template as ActionButton } from "@spectrum-css/actionbutton/stories/template.js";
-import { Template as Popover } from "@spectrum-css/popover/stories/template.js";
 import { Template as Link } from "@spectrum-css/link/stories/template.js";
+import { Template as Popover } from "@spectrum-css/popover/stories/template.js";
 
-import "../index.css";
+import "@spectrum-css/contextualhelp/index.css";
 
 // More on component templates: https://storybook.js.org/docs/web-components/writing-stories/introduction#using-args
 export const Template = ({

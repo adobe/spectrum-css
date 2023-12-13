@@ -236,7 +236,9 @@ governing permissions and limitations under the License.
 		picker.classList[isOpen ? "add" : "remove"]("is-selected");
 
 		// We have to get the coordinates relative to the parent
-		const parent = popover.closest('.spectrum-CSSExample-container') || document.querySelector("body");
+		const parent =
+			popover.closest(".spectrum-CSSExample-container") ||
+			document.querySelector("body");
 
 		const parentRect = parent.getBoundingClientRect();
 
@@ -255,10 +257,10 @@ governing permissions and limitations under the License.
 
 		if (isOpen) {
 			if (openPicker && openPicker !== picker) {
-					toggleOpen(openPicker, false);
-				}
-				openPicker = picker;
+				toggleOpen(openPicker, false);
 			}
+			openPicker = picker;
+		}
 	}
 
 	function closeAndFocusPicker(picker) {
@@ -942,47 +944,50 @@ function enhanceAll() {
 
 // Focus Indicator Classes
 var NAVIGATION_KEYS = [
-	'Tab',
-	'ArrowUp',
-	'ArrowRight',
-	'ArrowDown',
-	'ArrowLeft',
-	'Home',
-	'End',
-	'PageUp',
-	'PageDown',
-	'Enter',
-	' ',
-	'Escape',
+	"Tab",
+	"ArrowUp",
+	"ArrowRight",
+	"ArrowDown",
+	"ArrowLeft",
+	"Home",
+	"End",
+	"PageUp",
+	"PageDown",
+	"Enter",
+	" ",
+	"Escape",
 
 	/* IE9 and Firefox < 37 */
-	'Up',
-	'Right',
-	'Down',
-	'Left',
-	'Esc'
+	"Up",
+	"Right",
+	"Down",
+	"Left",
+	"Esc",
 ];
 
 var keyboardFocus = false;
 
 function onKeydownHandler(event) {
-	if (event.ctrlKey || event.altKey || event.metaKey || NAVIGATION_KEYS.indexOf(event.key) === -1) {
+	if (
+		event.ctrlKey ||
+		event.altKey ||
+		event.metaKey ||
+		NAVIGATION_KEYS.indexOf(event.key) === -1
+	) {
 		return;
 	}
 	keyboardFocus = true;
 
-	if (document.activeElement &&
-		document.activeElement !== document.body) {
-					document.activeElement.classList.add('is-keyboardFocused');
+	if (document.activeElement && document.activeElement !== document.body) {
+		document.activeElement.classList.add("is-keyboardFocused");
 	}
 }
 
 function onMousedownHandler() {
 	keyboardFocus = false;
 
-	if (document.activeElement &&
-		document.activeElement !== document.body) {
-				document.activeElement.classList.add('is-focused');
+	if (document.activeElement && document.activeElement !== document.body) {
+		document.activeElement.classList.add("is-focused");
 	}
 }
 
@@ -990,7 +995,7 @@ function onMousedownHandler() {
 function onFocusHandler(event) {
 	var classList = event.target.classList;
 	if (classList && keyboardFocus) {
-		classList.add('is-keyboardFocused');
+		classList.add("is-keyboardFocused");
 	}
 }
 
@@ -998,16 +1003,15 @@ function onFocusHandler(event) {
 function onFocusOutHandler(event) {
 	var classList = event.target.classList;
 	if (classList) {
-		classList.remove('is-keyboardFocused');
-		classList.remove('is-focused');
+		classList.remove("is-keyboardFocused");
+		classList.remove("is-focused");
 	}
 }
 
-window.addEventListener('keydown', onKeydownHandler, true);
-window.addEventListener('focusin', onFocusHandler, true);
-window.addEventListener('focusout', onFocusOutHandler, true);
-window.addEventListener('mousedown', onMousedownHandler, true);
+window.addEventListener("keydown", onKeydownHandler, true);
+window.addEventListener("focusin", onFocusHandler, true);
+window.addEventListener("focusout", onFocusOutHandler, true);
+window.addEventListener("mousedown", onMousedownHandler, true);
 
 animateCircleLoaders();
-window.addEventListener("PageFastLoaded", enhanceAll);
 window.addEventListener("DOMContentLoaded", enhanceAll);

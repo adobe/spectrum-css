@@ -1,7 +1,7 @@
 {
 	"$schema": "../../node_modules/nx/schemas/project-schema.json",
-	"name": "site",
-	"tags": ["component", "legacy"],
+	"name": "site-styles",
+	"tags": ["component"],
 	"targets": {
 		"build": {},
 		"clean": {},

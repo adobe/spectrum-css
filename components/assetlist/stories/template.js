@@ -1,14 +1,14 @@
 import { html } from "lit";
 import { classMap } from "lit/directives/class-map.js";
-import { when } from "lit/directives/when.js";
 import { ifDefined } from "lit/directives/if-defined.js";
+import { when } from "lit/directives/when.js";
 
 import { useArgs } from "@storybook/client-api";
 
 import { Template as Checkbox } from "@spectrum-css/checkbox/stories/template.js";
 import { Template as Icon } from "@spectrum-css/icon/stories/template.js";
 
-import "../index.css";
+import "@spectrum-css/assetlist/index.css";
 
 export const AssetListItem = ({
 	rootClass = "spectrum-AssetList-item",
@@ -24,7 +24,6 @@ export const AssetListItem = ({
 	onclick = () => {},
 	...globals
 }) => {
-
 	return html` <li
 		class=${classMap({
 			[rootClass]: true,
@@ -37,18 +36,23 @@ export const AssetListItem = ({
 		tabindex="0"
 	>
 		${when(isSelectable, () =>
-		Checkbox({
-			...globals,
-			size: "m",
-			isChecked: isSelected,
-			ariaLabelledby,
-			id: checkboxId,
-			customClasses: [`${rootClass}Selector`],
-		}))}
+			Checkbox({
+				...globals,
+				size: "m",
+				isChecked: isSelected,
+				ariaLabelledby,
+				id: checkboxId,
+				customClasses: [`${rootClass}Selector`],
+			})
+		)}
 		${when(
 			image,
 			() =>
-				html`<img src=${image ?? exampleImage} class="${rootClass}Thumbnail" alt="asset image thumbnail" />`
+				html`<img
+					src=${image}
+					class="${rootClass}Thumbnail"
+					alt="asset image thumbnail"
+				/>`
 		)}
 		${when(iconName, () =>
 			Icon({
@@ -66,7 +70,8 @@ export const AssetListItem = ({
 				ariaLabelledby,
 				id: checkboxId,
 				customClasses: [`${rootClass}Selector`],
-			}))}
+			})
+		)}
 		${when(isBranch, () =>
 			Icon({
 				iconName: "ChevronRight100",
@@ -96,7 +101,7 @@ export const Template = ({
 			})}
 			id=${ifDefined(id)}
 		>
-			${items.map((item, idx) => {
+			${items.map((item) => {
 				return AssetListItem({
 					rootClass: `${rootClass}-item`,
 					onclick: () => {

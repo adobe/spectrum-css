@@ -5,7 +5,7 @@ import { unsafeSVG } from "lit/directives/unsafe-svg.js";
 
 import { fetchIconSVG, uiIcons, workflowIcons } from "./utilities.js";
 
-import "../index.css";
+import "@spectrum-css/icon/index.css";
 
 /**
  * @typedef { keyof import("./icon.stories.js").default.args } IconArgs
@@ -85,7 +85,6 @@ export const Template = ({
 
 		idKey += sizeVal;
 		iconName += sizeVal;
-
 	}
 
 	// Determine which icon set contains this icon.
@@ -117,12 +116,9 @@ export const Template = ({
 
 	const classList = {
 		[rootClass]: true,
-		[`spectrum-UIIcon-${iconName}`]: !!(setName === "ui"),
-		[`${rootClass}--${scale}`]: !!(setName === "ui" && scale),
-		[`${rootClass}--size${size?.toUpperCase()}`]: !!(
-			(!setName || setName === "workflow") &&
-			size
-		),
+		[`spectrum-UIIcon-${iconName}`]: Boolean(setName === "ui"),
+		[`${rootClass}--${scale}`]: Boolean(setName === "ui" && scale),
+		[`${rootClass}--size${size?.toUpperCase()}`]: Boolean((!setName || setName === "workflow") && size),
 		...customClasses.reduce((a, c) => ({ ...a, [c]: true }), {}),
 	};
 
@@ -136,7 +132,7 @@ export const Template = ({
 					.map(([k]) => k)
 					.join(" ")}"${
 					inlineStyle ? ` style="${inlineStyle}"` : ""
-				} focusable="false" aria-hidden="true" role="img" width="10" $1>`
+				} focusable="false" aria-hidden="true" role="img" $1>`
 			)
 		)}`;
 	}

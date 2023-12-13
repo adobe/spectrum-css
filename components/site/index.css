@@ -12,55 +12,65 @@ governing permissions and limitations under the License.
 
 .spectrum-Site {
   /* .spectrum-Site */
-  --spectrum-site-header-height: var(--spectrum-global-dimension-size-600);
-  --spectrum-site-header-padding: var(--spectrum-global-dimension-size-100);
+  --spectrum-site-background-color: var(--spectrum-gray-75);
+  --spectrum-site-header-height: var(--spectrum-spacing-700);
+  --spectrum-site-header-padding: var(--spectrum-spacing-100);
+  --spectrum-site-header-background-color: var(--spectrum-gray-50);
+  --spectrum-site-header-border-color: var(--spectrum-gray-300);
+  --spectrum-site-scrollbar-thumb-color: var(--spectrum-gray-400);
+  --spectrum-site-sidebar-background-color: var(--spectrum-gray-75);
+  --spectrum-site-scrollbar-track-color: var(--spectrum-gray-75);
+  --spectrum-site-content-background-color: var(--spectrum-gray-50);
 
   /* .spectrum-Site-overlay */
+  --spectrum-site-overlay-underlay-background-color: rgba(0, 0, 0, 0.2);
   --spectrum-site-overlay-background-entry-animation-delay: 0ms;
   --spectrum-site-overlay-background-exit-animation-delay: 0ms;
-  --spectrum-site-overlay-background-entry-animation-duration: var(--spectrum-global-animation-duration-200);
-  --spectrum-site-overlay-background-exit-animation-duration: var(--spectrum-global-animation-duration-200);
+  --spectrum-site-overlay-background-entry-animation-duration: 160ms;
+  --spectrum-site-overlay-background-exit-animation-duration: 160ms;
   --spectrum-site-overlay-background-exit-animation-easing: ease-out;
   --spectrum-site-overlay-background-entry-animation-easing: ease-in;
 
   /* .spectrum-CSSComponent */
-  --spectrum-csscomponent-margin: var(--spectrum-global-dimension-size-500);
-  --spectrum-csscomponent-padding: var(--spectrum-global-dimension-size-700);
+  --spectrum-csscomponent-margin: var(--spectrum-spacing-600);
+  --spectrum-csscomponent-padding: var(--spectrum-spacing-700);
   --spectrum-csscomponent-max-width: 1080px;
-  --spectrum-csscomponent-sectionheading-margin-top: var(--spectrum-global-dimension-size-600);
-  --spectrum-csscomponent-sectionheading-margin-bottom: var(--spectrum-global-dimension-size-400);
-  --spectrum-csscomponent-heading-margin-bottom: var(--spectrum-global-dimension-size-500);
+  --spectrum-csscomponent-sectionheading-margin-top: var(--spectrum-spacing-700);
+  --spectrum-csscomponent-sectionheading-margin-bottom: var(--spectrum-spacing-500);
+  --spectrum-csscomponent-heading-margin-bottom: var(--spectrum-spacing-600);
 
-  --spectrum-csscomponent-description-margin-bottom: var(--spectrum-global-dimension-size-600);
-  --spectrum-csscomponent-description-margin-top: var(--spectrum-global-dimension-size-300);
+  --spectrum-csscomponent-description-margin-bottom: var(--spectrum-spacing-700);
+  --spectrum-csscomponent-description-margin-top: var(--spectrum-spacing-300);
 
-  --spectrum-csscomponent-statuscontainer-margin-x: var(--spectrum-global-dimension-size-200);
-  --spectrum-csscomponent-status-margin-x: var(--spectrum-global-dimension-size-100);
-  --spectrum-csscomponent-detailstable-padding-x: var(--spectrum-global-dimension-size-300);
-  --spectrum-csscomponent-detailstable-margin-top: var(--spectrum-global-dimension-size-500);
-  --spectrum-csscomponent-detailstable-margin-bottom: var(--spectrum-global-dimension-size-450);
+  --spectrum-csscomponent-statuscontainer-margin-x: var(--spectrum-spacing-200);
+  --spectrum-csscomponent-status-margin-x: var(--spectrum-spacing-100);
+  --spectrum-csscomponent-detailstable-padding-x: var(--spectrum-spacing-300);
+  --spectrum-csscomponent-detailstable-margin-top: var(--spectrum-spacing-600);
+  --spectrum-csscomponent-detailstable-margin-bottom: 36px;
 
   /* .spectrum-CSSExample */
-  --spectrum-cssexample-border-radius: var(--spectrum-global-dimension-size-50);
-  --spectrum-cssexample-margin-bottom: var(--spectrum-global-dimension-size-800);
+  --spectrum-cssexample-markup-background-color: var(--spectrum-gray-75);
+  --spectrum-cssexample-border-color: var(--spectrum-gray-100);
+
+  --spectrum-cssexample-border-radius: var(--spectrum-spacing-75);
+  --spectrum-cssexample-margin-bottom: var(--spectrum-spacing-800);
   --spectrum-cssexample-min-height: 0;
 
-  --spectrum-cssexample-heading-margin-bottom: var(--spectrum-global-dimension-size-100);
+  --spectrum-cssexample-heading-margin-bottom: var(--spectrum-spacing-100);
 
-  --spectrum-cssexample-markup-height: var(--spectrum-global-dimension-size-2400);
-  --spectrum-cssexample-markup-padding-x: var(--spectrum-global-dimension-size-225);
-  --spectrum-cssexample-markup-padding-y: var(--spectrum-global-dimension-size-125);
-  --spectrum-cssexample-markup-toggle-padding-x: var(--spectrum-global-dimension-size-300);
-  --spectrum-cssexample-markup-toggle-padding-y: var(--spectrum-global-dimension-size-300);
+  --spectrum-cssexample-markup-height: var(--spectrum-spacing-2400);
+  --spectrum-cssexample-markup-padding-x: 18px;
+  --spectrum-cssexample-markup-padding-y: 10px;
+  --spectrum-cssexample-markup-toggle-padding-x: var(--spectrum-spacing-300);
+  --spectrum-cssexample-markup-toggle-padding-y: var(--spectrum-spacing-300);
 
-  --spectrum-cssexample-padding-x: var(--spectrum-global-dimension-size-500);
-  --spectrum-cssexample-padding-y: var(--spectrum-global-dimension-size-400);
-}
+  --spectrum-cssexample-padding-x: var(--spectrum-spacing-600);
+  --spectrum-cssexample-padding-y: var(--spectrum-spacing-500);
 
-.spectrum-Site {
   block-size: 100%;
   display: flex;
   flex-direction: column;
+  background-color: var(--spectrum-site-content-background-color);
 }
 
 .spectrum-Site-content {
@@ -70,36 +80,39 @@ governing permissions and limitations under the License.
   block-size: 100%;
 }
 
+/** This is our mobile tray */
 .spectrum-Site-header {
   display: none;
 
   box-sizing: border-box;
   block-size: var(--spectrum-site-header-height);
   padding: var(--spectrum-site-header-padding);
+  border-block-end-color: var(--spectrum-site-header-border-color);
+  background-color: var(--spectrum-site-header-background-color);
 
   border-block-end-width: 1px;
   border-block-end-style: solid;
 }
 
+/** This holds the site navigation and search */
 .spectrum-Site-sideBar {
   display: flex;
   flex-direction: column;
   flex-grow: 0;
   flex-shrink: 0;
   max-inline-size: 100%;
-
+  background-color: var(--spectrum-site-sidebar-background-color);
   transition: none;
 }
 
+/** Inside the sidebar, this holds the brand identity */
 .spectrum-Site-sideBarHeader {
   flex-grow: 0;
   flex-shrink: 0;
   display: flex;
   flex-direction: row;
   align-items: center;
-
-  padding: var(--spectrum-global-dimension-size-350) var(--spectrum-global-dimension-size-300);
-
+  padding: var(--spectrum-spacing-350) var(--spectrum-spacing-300);
   text-decoration: none;
 }
 
@@ -112,7 +125,7 @@ governing permissions and limitations under the License.
 }
 
 .spectrum-Site-search {
-  padding: 0 var(--spectrum-global-dimension-size-300) var(--spectrum-global-dimension-size-300) var(--spectrum-global-dimension-size-300);
+  padding: 0 var(--spectrum-spacing-300) var(--spectrum-spacing-300) var(--spectrum-spacing-300);
 }
 
 .spectrum-Site-searchResults {
@@ -126,11 +139,11 @@ governing permissions and limitations under the License.
 }
 
 .spectrum-Site-noSearchResults {
-  padding: var(--spectrum-global-dimension-size-400) var(--spectrum-global-dimension-size-400) var(--spectrum-global-dimension-size-400);
+  padding: var(--spectrum-spacing-500) var(--spectrum-spacing-500) var(--spectrum-spacing-500);
 }
 
 .spectrum-Site-logo {
-  margin-inline-end: var(--spectrum-global-dimension-size-200);
+  margin-inline-end: var(--spectrum-spacing-200);
   color: #FA0F00;
 }
 
@@ -149,11 +162,11 @@ governing permissions and limitations under the License.
 .spectrum-Site-nav {
   flex-grow: 1;
 
-  padding: 0px var(--spectrum-global-dimension-static-size-300) var(--spectrum-global-dimension-static-size-500);
+  padding: 0px var(--spectrum-spacing-400) var(--spectrum-spacing-600);
 }
 
 .spectrum-Site-bottomNav {
-  margin-block-start: var(--spectrum-global-dimension-static-size-1000);
+  margin-block-start: var(--spectrum-spacing-900);
 }
 
 .spectrum-Site-page {
@@ -178,11 +191,15 @@ governing permissions and limitations under the License.
 .spectrum-Site-heroImage {
   display: block;
   max-inline-size: 100%;
-  margin-block-start: var(--spectrum-global-dimension-size-700);
-  margin-block-end: var(--spectrum-global-dimension-size-700);
+  margin-block-start: var(--spectrum-spacing-700);
+  margin-block-end: var(--spectrum-spacing-700);
   margin-inline-start: auto;
   margin-inline-end: auto;
-  border-radius: var(--spectrum-alias-border-radius-regular);
+  border-radius: var(--spectrum-corner-radius-100);
+}
+
+.spectrum-Site-mainContainer {
+  background: var(--spectrum-site-content-background-color);
 }
 
 .spectrum-Site-mainContent {
@@ -210,6 +227,7 @@ governing permissions and limitations under the License.
   inset-inline-end: 0;
   inset-block-end: 0;
   inset-inline-start: 0;
+  background: var(--spectrum-site-overlay-underlay-background-color);
 
   /* Float above things by default */
   z-index: 99;
@@ -254,7 +272,7 @@ governing permissions and limitations under the License.
     z-index: 100;
 
     transform: translateX(0);
-    transition: transform var(--spectrum-global-animation-duration-200) ease-in-out;
+    transition: transform 160ms ease-in-out;
   }
 
   .spectrum-Site-sideBar.is-open {
@@ -266,8 +284,8 @@ governing permissions and limitations under the License.
   }
 
   .spectrum-Site-page {
-    padding-inline-start: var(--spectrum-global-dimension-size-300);
-    padding-inline-end: var(--spectrum-global-dimension-size-300);
+    padding-inline-start: var(--spectrum-spacing-300);
+    padding-inline-end: var(--spectrum-spacing-300);
   }
 
   .spectrum-Site-hero {
@@ -275,7 +293,7 @@ governing permissions and limitations under the License.
   }
 
   .spectrum-Site-heroHeading h1.spectrum-Heading1--display {
-    font-size: var(--spectrum-global-dimension-font-size-900);
+    font-size: var(--spectrum-font-size-900);
   }
 }
 
@@ -317,8 +335,8 @@ governing permissions and limitations under the License.
 
 .spectrum-CSSComponent-detailsTable th {
   text-align: left;
-  block-size: var(--spectrum-global-dimension-size-350);
-  font-weight: var(--spectrum-global-font-weight-regular);
+  block-size: var(--spectrum-spacing-350);
+  font-weight: var(--spectrum-regular-font-weight);
   padding-inline-end: var(--spectrum-csscomponent-detailstable-padding-x);
 }
 
@@ -344,7 +362,7 @@ governing permissions and limitations under the License.
 }
 
 .spectrum-CSSExample-status {
-  margin-inline-start: var(--spectrum-global-dimension-size-200);
+  margin-inline-start: var(--spectrum-spacing-200);
 }
 
 .spectrum-CSSComponent-version {
@@ -362,12 +380,22 @@ governing permissions and limitations under the License.
   display: flex;
   flex-wrap: wrap;
   flex-direction: row;
-  margin-block-end: var(--spectrum-global-dimension-size-700);
+  margin-block-end: var(--spectrum-spacing-700);
 }
 
 .spectrum-CSSComponent-resources .spectrum-Card {
-  margin-inline-end: var(--spectrum-global-dimension-size-300);
-  margin-block-end: var(--spectrum-global-dimension-size-300);
+  margin-inline-end: var(--spectrum-spacing-300);
+  margin-block-end: var(--spectrum-spacing-300);
+}
+
+.spectrum-CSSComponent-resource--adobe {
+  color: #FA0F00 !important;
+  background-color: var(--spectrum-gray-100) !important;
+}
+
+.spectrum-CSSComponent-resource--github {
+  background-color: rgba(0, 0, 0, 0.1) !important;
+  color: black;
 }
 
 .spectrum--dark,
@@ -394,7 +422,7 @@ governing permissions and limitations under the License.
 }
 
 .spectrum-CSS-switcherContainer {
-  margin-inline-start: var(--spectrum-global-dimension-size-400);
+  margin-inline-start: var(--spectrum-spacing-500);
   white-space: nowrap;
 }
 
@@ -427,17 +455,11 @@ governing permissions and limitations under the License.
 .spectrum-CSSExample-example {
   flex: 1 0 auto;
 
-  /*
-  // this breaks layout for some examples, we'll need to fix later
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  */
-
   min-block-size: var(--spectrum-cssexample-min-height);
 
   padding: var(--spectrum-cssexample-padding-y) var(--spectrum-cssexample-padding-x);
 
+  background-color: var(--spectrum-background-layer-1-color, var(--spectrum-gray-100));
   border-radius: var(--spectrum-cssexample-border-radius) var(--spectrum-cssexample-border-radius) 0 0;
 
   &:has(> .spectrum-CSSExample-example-staticWhite) {
@@ -458,6 +480,9 @@ governing permissions and limitations under the License.
 
   padding: var(--spectrum-cssexample-markup-padding-y) var(--spectrum-cssexample-markup-padding-x);
 
+  border-block-start: 1px solid var(--spectrum-cssexample-border-color);
+
+  background: var(--spectrum-cssexample-markup-background-color);
   border-radius: 0 0 var(--spectrum-cssexample-border-radius) var(--spectrum-cssexample-border-radius);
 
   overflow: hidden;
@@ -466,7 +491,11 @@ governing permissions and limitations under the License.
 .spectrum-CSSExample-markup.is-open {
   max-block-size: 100%;
 
-  padding-block-end: var(--spectrum-global-dimension-size-700);
+  padding-block-end: var(--spectrum-spacing-700);
+}
+
+.spectrum-CSSExample-markup.is-open .spectrum-CSSExample-markupToggle {
+  background-color: transparent;
 }
 
 .spectrum-CSSExample-markup.is-open .spectrum-CSSExample-markupToggle::before {
@@ -474,7 +503,7 @@ governing permissions and limitations under the License.
 }
 
 .spectrum-CSSExample-markupToggle + pre {
-  padding-block-end: var(--spectrum-global-dimension-size-100);
+  padding-block-end: var(--spectrum-spacing-100);
 }
 
 .spectrum-CSSExample-example--spacious {
@@ -484,7 +513,13 @@ governing permissions and limitations under the License.
 
 .spectrum-CSSExample-example--overlay {
   position: relative;
-  min-height: var(--spectrum-global-dimension-size-800);
+  min-height: var(--spectrum-spacing-800);
+  background: rgba(0,0,0,0.4);
+  color: rgba(0,0,0,0.4);
+}
+
+.spectrum-CSSExample-oldAPI {
+  color: var(--spectrum-semantic-negative-text-color-small);
 }
 
 .spectrum-CSSExample-dialog {
@@ -512,12 +547,12 @@ governing permissions and limitations under the License.
 }
 
 /* .spectrum-Examples-item {
-  margin-bottom: var(--spectrum-global-dimension-size-200);
+  margin-bottom: var(--spectrum-spacing-200);
 }
 */
 
 .spectrum-Examples-item .spectrum-Examples-itemHeading {
-  margin-bottom: var(--spectrum-global-dimension-size-100);
+  margin-bottom: var(--spectrum-spacing-100);
 }
 
 .spectrum-Examples-itemGroup {
@@ -541,39 +576,40 @@ governing permissions and limitations under the License.
 
 .spectrum-CSSExample-markupToggle {
   position: absolute;
-  z-index: 0;
   inset-block-end: 0;
   inset-inline-start: 0;
   inset-inline-end: 0;
+  z-index: 1;
+
+  background: var(--spectrum-cssexample-markup-background-color);
 
   box-sizing: border-box;
   padding: var(--spectrum-cssexample-markup-toggle-padding-y) var(--spectrum-cssexample-markup-toggle-padding-x);
 
-  font-size: var(--spectrum-global-dimension-font-size-150);
+  font-size: var(--spectrum-font-size-200);
   text-align: left
 }
 
 @media screen and (max-width: 960px) {
   .spectrum-CSSComponent {
-    padding: 0 var(--spectrum-global-dimension-size-250);
-    margin: var(--spectrum-global-dimension-size-100) auto;
+    padding: 0 var(--spectrum-spacing-250);
+    margin: var(--spectrum-spacing-100) auto;
   }
 
   .spectrum-CSSComponent-description {
-    margin-block-end: var(--spectrum-global-dimension-size-150);
-    /*--spectrum-body-2-text-size: var(--spectrum-global-dimension-font-size-100);*/
+    margin-block-end: var(--spectrum-spacing-150);
   }
 
   .spectrum-CSSExample {
-    margin-block-end: var(--spectrum-global-dimension-size-200);
+    margin-block-end: var(--spectrum-spacing-200);
   }
 
   .spectrum-CSSExample-example {
-    padding: var(--spectrum-global-dimension-size-200) var(--spectrum-global-dimension-size-200);
+    padding: var(--spectrum-spacing-200) var(--spectrum-spacing-200);
   }
 
   .spectrum-CSSComponent-header {
-    margin-block-end: var(--spectrum-global-dimension-size-150);
+    margin-block-end: var(--spectrum-spacing-150);
   }
 
   .spectrum-CSSComponent-statusContainer,
@@ -581,7 +617,7 @@ governing permissions and limitations under the License.
     display: none;
   }
   .spectrum-CSSComponent-title {
-    font-size: var(--spectrum-global-dimension-font-size-700);
+    font-size: var(--spectrum-font-size-700);
   }
 }
 
@@ -593,19 +629,21 @@ governing permissions and limitations under the License.
 }
 
 .spectrum-CodeBlock {
-  border-width: var(--spectrum-alias-border-size-thin);
+  border-width: var(--spectrum-border-width-100);
   border-style: solid;
-  border-radius: var(--spectrum-global-dimension-size-50);
-  padding: var(--spectrum-global-dimension-size-175) var(--spectrum-global-dimension-size-200);
+  border-radius: var(--spectrum-spacing-50);
+  padding: var(--spectrum-spacing-175) var(--spectrum-spacing-200);
 
-  margin: var(--spectrum-global-dimension-size-250) 0;
+  margin: var(--spectrum-spacing-250) 0;
+  border-color: var(--spectrum-gray-400);
+  background-color: var(--spectrum-gray-75);
 }
 
 .spectrum-HomeCards {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(380px, 1fr));
   grid-gap: 1rem;
-  margin: var(--spectrum-global-dimension-size-700) 0;
+  margin: var(--spectrum-spacing-700) 0;
 }
 
 .spectrum-HomeCard {
@@ -613,13 +651,13 @@ governing permissions and limitations under the License.
 
   align-items: flex-start;
 
-  margin-bottom: var(--spectrum-global-dimension-size-350);
-  padding: 0 var(--spectrum-global-dimension-size-250);
+  margin-bottom: var(--spectrum-spacing-350);
+  padding: 0 var(--spectrum-spacing-250);
 }
 
 .spectrum-HomeCard-image {
-  width: var(--spectrum-global-dimension-size-1250);
-  margin-right: var(--spectrum-global-dimension-size-250);
+  width: var(--spectrum-spacing-1250);
+  margin-right: var(--spectrum-spacing-250);
   flex: 0 0 auto;
 }
 
@@ -645,5 +683,15 @@ governing permissions and limitations under the License.
   inline-size: 8px;
   block-size: 8px;
   border-block: 2px solid rgba(0, 0, 0, 0);
+  background-color: var(--spectrum-site-scrollbar-track-color);
   background-clip: padding-box;
+}
+
+.u-scrollable:hover::-webkit-scrollbar-thumb {
+  background-color: var(--spectrum-site-scrollbar-thumb-color);
+}
+
+.u-scrollable::-webkit-scrollbar-track,
+.u-scrollable::-webkit-scrollbar-track-piece {
+  background: var(--spectrum-site-scrollbar-track-color);
 }

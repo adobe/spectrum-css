@@ -2,7 +2,7 @@ import { html } from "lit";
 import { classMap } from "lit/directives/class-map.js";
 import { when } from "lit/directives/when.js";
 
-import "../index.css";
+import "@spectrum-css/illustratedmessage/index.css";
 
 export const Template = ({
 	rootClass = "spectrum-IllustratedMessage",
@@ -10,36 +10,34 @@ export const Template = ({
 	description,
 	customClasses = [],
 	useAccentColor = false,
-}) => {
-	return html`
-		<div
-			class=${classMap({
-				[rootClass]: true,
-				...customClasses.reduce((a, c) => ({ ...a, [c]: true }), {}),
-			})}
-		>
-			${illustrationSvgMarkup(useAccentColor)}
-			${when(
-				heading,
-				() =>
-					html`<h2
-						class="spectrum-Heading spectrum-Heading--sizeM spectrum-Heading--regular ${rootClass}-heading"
-					>
-						${heading}
-					</h2>`
-			)}
-			${when(
-				description,
-				() =>
-					html`<p
-						class="spectrum-Body spectrum-Body--sizeS ${rootClass}-description"
-					>
-						${description.map((c) => (typeof c === "function" ? c({}) : c))}
-					</p>`
-			)}
-		</div>
-	`;
-};
+}) => html`
+	<div
+		class=${classMap({
+			[rootClass]: true,
+			...customClasses.reduce((a, c) => ({ ...a, [c]: true }), {}),
+		})}
+	>
+		${illustrationSvgMarkup(useAccentColor)}
+		${when(
+			heading,
+			() =>
+				html`<h2
+					class="spectrum-Heading spectrum-Heading--sizeM spectrum-Heading--regular ${rootClass}-heading"
+				>
+					${heading}
+				</h2>`
+		)}
+		${when(
+			description,
+			() =>
+				html`<p
+					class="spectrum-Body spectrum-Body--sizeS ${rootClass}-description"
+				>
+					${description.map((c) => (typeof c === "function" ? c({}) : c))}
+				</p>`
+		)}
+	</div>
+`;
 
 const illustrationSvgMarkup = (withAccentColorClass = false) => {
 	return html`

@@ -4,9 +4,8 @@ import { ifDefined } from "lit/directives/if-defined.js";
 
 import { capitalize } from "lodash-es";
 
-import "../index.css";
+import "@spectrum-css/typography/index.css";
 
-// More on component templates: https://storybook.js.org/docs/web-components/writing-stories/introduction#using-args
 export const Template = ({
 	rootClass = "spectrum-Typography",
 	semantics,
@@ -17,7 +16,6 @@ export const Template = ({
 	id,
 	content = [],
 	customClasses = [],
-	// ...globals
 }) => {
 	if (Array.isArray(content)) {
 		content = content.map((c) => {

@@ -2,11 +2,11 @@ import { html } from "lit";
 import { classMap } from "lit/directives/class-map.js";
 import { ifDefined } from "lit/directives/if-defined.js";
 
-import { Template as Icon } from "@spectrum-css/icon/stories/template.js";
 import { Template as Avatar } from "@spectrum-css/avatar/stories/template.js";
 import { Template as ClearButton } from "@spectrum-css/clearbutton/stories/template.js";
+import { Template as Icon } from "@spectrum-css/icon/stories/template.js";
 
-import "../index.css";
+import "@spectrum-css/tag/index.css";
 
 // More on component templates: https://storybook.js.org/docs/web-components/writing-stories/introduction#using-args
 export const Template = ({
@@ -24,15 +24,6 @@ export const Template = ({
 	customClasses = [],
 	...globals
 }) => {
-	const { express } = globals;
-
-	try {
-		if (!express) import(/* webpackPrefetch: true */ "../themes/spectrum.css");
-		else import(/* webpackPrefetch: true */ "../themes/express.css");
-	} catch (e) {
-		console.warn(e);
-	}
-
 	if(isInvalid) {
 		iconName = 'Alert'
 	}
@@ -50,7 +41,7 @@ export const Template = ({
 				...customClasses.reduce((a, c) => ({ ...a, [c]: true }), {}),
 			})}
 			id=${ifDefined(id)}
-			tabindex=${isDisabled ? '-1' : '0'}
+			tabindex=${isDisabled ? "-1" : "0"}
 		>
 			${avatarUrl && !isInvalid
 				? Avatar({
