@@ -1,6 +1,7 @@
 import { html } from "lit";
 import { classMap } from "lit/directives/class-map.js";
 import { ifDefined } from "lit/directives/if-defined.js";
+import { styleMap } from "lit/directives/style-map.js";
 
 import "../index.css";
 
@@ -15,6 +16,7 @@ export const Template = ({
 	isReadOnly,
 	id,
 	customClasses = [],
+	customStyles = {},
 	...globals
 }) => {
 	const { express } = globals;
@@ -36,6 +38,7 @@ export const Template = ({
 				"is-readOnly" : isReadOnly,
 				...customClasses.reduce((a, c) => ({ ...a, [c]: true }), {}),
 			})}
+			style=${ifDefined(styleMap(customStyles))}
 			id=${ifDefined(id)}
 		>
 			<input

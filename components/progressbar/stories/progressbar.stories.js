@@ -86,4 +86,5 @@ export const StaticWhite = Template.bind({});
 StaticWhite.args = {
 	backgroundColor: "rgb(15, 121, 125)",
 	staticWhite: "staticWhite",
+	label: "Loading your fonts, images, and icons"
 };

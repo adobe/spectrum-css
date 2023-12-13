@@ -1,4 +1,4 @@
-// Import the component markup template
+import { html } from "lit";
 import { Template } from "./template";
 
 export default {
@@ -94,24 +94,39 @@ export default {
 	},
 };
 
-export const Default = Template.bind({});
-Default.args = {};
-
-export const Emphasized = Template.bind({});
-Emphasized.args = {
-	isEmphasized: true,
-	isChecked: true,
+// export const Default = Template.bind({});
+// Default.args = {};
+export const Default = ({
+	customHeading,
+	customDescription,
+	...args
+}) => {
+	return html`
+		<div style="display: flex; flex-direction: column; align-items: flex-start;">
+			${Template({
+				...args,
+				label: "Default"
+			})}
+			${Template({
+				...args,
+				isEmphasized: true,
+				isChecked: true,
+				label: "Emphasized radio button label that is so long it has to wrap",
+				customStyles: {
+					"max-width": "220px",
+				}
+			})}
+			${Template({
+				...args,
+				isDisabled: true,
+				label: "Disabled"
+			})}
+			${Template({
+				...args,
+				isDisabled: true,
+				isReadOnly: true,
+				label: "Read only"
+			})}
+		</div>
+	`;
 };
-
-export const Disabled = Template.bind({});
-Disabled.args = {
-	isDisabled: true,
-};
-
-export const ReadOnly = Template.bind({});
-ReadOnly.args = {
-	isDisabled: true,
-	isReadOnly: true,
-};
-
-

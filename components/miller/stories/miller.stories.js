@@ -130,7 +130,7 @@ FilesSelectable.args = {
 					isSelected: false,
 				},
 				{
-					label: "File 2.2",
+					label: "File 2.2 Shows Text Truncation For Long Names",
 					isBranch: false,
 					isSelectable: false,
 					isSelected: false,

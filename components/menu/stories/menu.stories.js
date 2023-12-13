@@ -147,7 +147,7 @@ IconsAndDescriptions.args = {
           isFocused: true
         },
         {
-          label: "A Menu Item With a Longer Label That Causes The Text to Wrap",
+          label: "A Menu Item With a Longer Label That Causes The Text to Wrap to The Next Line",
           iconName: "Share",
         },
         {
@@ -172,7 +172,7 @@ IconsAndDescriptions.args = {
           isFocused: true,
         },
         {
-          label: "A Menu Item With a Longer Label That Causes The Text to Wrap",
+          label: "A Menu Item With a Longer Label That Causes The Text to Wrap to The Next Line",
           description: "A description that is longer than average and is forced to wrap with an example max width.",
         },
         {
@@ -199,7 +199,7 @@ IconsAndDescriptions.args = {
           isFocused: true,
         },
         {
-          label: "A Menu Item With a Longer Label That Causes The Text to Wrap",
+          label: "A Menu Item With a Longer Label That Causes The Text to Wrap to The Next Line",
           iconName: "Share",
           description: "A description that is longer than average and is forced to wrap with an example max width.",
         },
