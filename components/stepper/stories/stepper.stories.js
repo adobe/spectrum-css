@@ -1,4 +1,5 @@
-// Import the component markup template
+import isChromatic from "chromatic/isChromatic";
+import { html } from "lit";
 import { Template } from "./template";
 
 export default {
@@ -94,10 +95,163 @@ export default {
 	},
 };
 
-export const Default = Template.bind({});
+export const Default = ({
+	...args
+}) => {
+	return html`
+		<div>
+			${Template({
+				...args
+			})}
+
+			${isChromatic() ? chromaticKitchenSink(args) : null}
+		</div>
+	`;
+};
 Default.args = {};
 
 export const HideStepper = Template.bind({});
 HideStepper.args = {
 	hideStepper: true,
 };
+
+const chromaticKitchenSink = (args) => html`
+	<div style="padding: 8px 0">
+		${Template({
+			...args,
+			isFocused: true,
+		})}
+	</div>
+	<div style="padding: 8px 0">
+		${Template({
+			...args,
+			isKeyboardFocused: true,
+		})}
+	</div>
+	<div style="padding: 8px 0">
+		${Template({
+			...args,
+			isInvalid: true,
+		})}
+	</div>
+	<div style="padding: 8px 0">
+		${Template({
+			...args,
+			isInvalid: true,
+			isFocused: true,
+		})}
+	</div>
+	<div style="padding: 8px 0">
+		${Template({
+			...args,
+			isInvalid: true,
+			isKeyboardFocused: true,
+		})}
+	</div>
+	<div style="padding: 8px 0">
+		${Template({
+			...args,
+			isDisabled: true,
+		})}
+	</div>
+	<div style="padding: 8px 0">
+		${Template({
+			...args,
+			isQuiet: true,
+		})}
+	</div>
+	<div style="padding: 8px 0">
+		${Template({
+			...args,
+			isQuiet: true,
+			isFocused: true,
+		})}
+	</div>
+	<div style="padding: 8px 0">
+		${Template({
+			...args,
+			isQuiet: true,
+			isKeyboardFocused: true,
+		})}
+	</div>
+	<div style="padding: 8px 0">
+		${Template({
+			...args,
+			isQuiet: true,
+			isInvalid: true,
+		})}
+	</div>
+	<div style="padding: 8px 0">
+		${Template({
+			...args,
+			isQuiet: true,
+			isInvalid: true,
+			isFocused: true,
+		})}
+	</div>
+	<div style="padding: 8px 0">
+		${Template({
+			...args,
+			isQuiet: true,
+			isInvalid: true,
+			isKeyboardFocused: true,
+		})}
+	</div>
+	<div style="padding: 8px 0">
+		${Template({
+			...args,
+			isQuiet: true,
+			isDisabled: true,
+		})}
+	</div>
+	<div style="padding: 8px 0">
+		${Template({
+			...args,
+			hideStepper: true,
+		})}
+	</div>
+	<div style="padding: 8px 0">
+		${Template({
+			...args,
+			hideStepper: true,
+			isFocused: true,
+		})}
+	</div>
+	<div style="padding: 8px 0">
+		${Template({
+			...args,
+			hideStepper: true,
+			isKeyboardFocused: true,
+		})}
+	</div>
+	<div style="padding: 8px 0">
+		${Template({
+			...args,
+			hideStepper: true,
+			isInvalid: true,
+		})}
+	</div>
+	<div style="padding: 8px 0">
+		${Template({
+			...args,
+			hideStepper: true,
+			isInvalid: true,
+			isFocused: true,
+		})}
+	</div>
+	<div style="padding: 8px 0">
+		${Template({
+			...args,
+			hideStepper: true,
+			isInvalid: true,
+			isKeyboardFocused: true,
+		})}
+	</div>
+	<div style="padding: 8px 0">
+		${Template({
+			...args,
+			hideStepper: true,
+			isDisabled: true,
+		})}
+	</div>
+`;
