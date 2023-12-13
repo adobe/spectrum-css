@@ -24,5 +24,7 @@ governing permissions and limitations under the License.
     --spectrum-picker-border-color-hover-open: var(--spectrum-gray-600);
     --spectrum-picker-border-color-active: var(--spectrum-gray-700);
     --spectrum-picker-border-color-key-focus: var(--spectrum-gray-600);
+
+    --spectrum-picker-border-width: var(--spectrum-border-width-100);
   }
 }
