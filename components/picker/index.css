@@ -151,43 +151,30 @@ governing permissions and limitations under the License.
 /* Windows high contrast mode */
 @media (forced-colors: active) {
   .spectrum-Picker {
-    --highcontrast-picker-focus-indicator-color: CanvasText;
+    --highcontrast-picker-focus-indicator-color: Highlight;
 
-    --highcontrast-picker-border-color-default: ButtonText;
-    --highcontrast-picker-border-color-active: ButtonText;
-    --highcontrast-picker-border-color-key-focus: Highlight;
+    --highcontrast-picker-border-color-default: ButtonBorder;
+    --highcontrast-picker-border-color-hover: Highlight;
+    --highcontrast-picker-border-color-disabled: GrayText;
 
-    --highcontrast-picker-border-color-error-default-open: ButtonText;
-    --highcontrast-picker-border-color-error-hover: ButtonText;
-    --highcontrast-picker-border-color-error-active: ButtonText;
+    --highcontrast-picker-content-color-default: ButtonText;
+    --highcontrast-picker-content-color-disabled: GrayText;
+    --highcontrast-picker-background-color: ButtonFace;
 
-    --highcontrast-picker-font-color-default: ButtonText;
-    --highcontrast-picker-font-color-default-open: ButtonText;
-    --highcontrast-picker-font-color-key-focus: ButtonText;
-    --highcontrast-picker-font-color-disabled: GrayText;
-
-    --highcontrast-picker-background-color-default: Background;
-    --highcontrast-picker-background-color-disabled: Background;
-
-    --highcontrast-picker-icon-color-default: ButtonText;
-    --highcontrast-picker-icon-color-default-open: ButtonText;
-    --highcontrast-picker-icon-color-hover: ButtonText;
-    --highcontrast-picker-icon-color-hover-open: ButtonText;
-    --highcontrast-picker-icon-color-key-focus: Highlight;
-
-    --highcontrast-picker-icon-color-error-default: ButtonText;
-
-    &:disabled,
-    .is-disabled {
-      border-color: GrayText;
-      border-width: var(--mod-picker-border-width, var(--spectrum-picker-border-width));
-    }
-  }
-  .spectrum-Picker--quiet {
     &:focus-visible,
     &.is-focused {
+      --highcontrast-picker-border-color-hover: ButtonText;
+    }
+
+    /* Focus indicator */
+    &::after {
+      /* Make sure default transparent border stays transparent. */
       forced-color-adjust: none;
-      outline: 0;
+    }
+
+    .spectrum-Picker-label {
+      /* Remove additional text backplate added in WHCM (Edge). */
+      forced-color-adjust: none;
     }
   }
 }
@@ -218,10 +205,11 @@ governing permissions and limitations under the License.
     box-shadow var(--mod-picker-animation-duration, var(--spectrum-picker-animation-duration)),
     border-color var(--mod-picker-animation-duration, var(--spectrum-picker-animation-duration)) ease-in-out;
 
-  color: var(--highcontrast-picker-font-color-default, var(--mod-picker-font-color-default, var(--spectrum-picker-font-color-default)));
-  background-color: var(--highcontrast-picker-background-color-default, var(--mod-picker-background-color-default, var(--spectrum-picker-background-color-default)));
+  color: var(--highcontrast-picker-content-color-default, var(--mod-picker-font-color-default, var(--spectrum-picker-font-color-default)));
+  background-color: var(--highcontrast-picker-background-color, var(--mod-picker-background-color-default, var(--spectrum-picker-background-color-default)));
   border-color: var(--highcontrast-picker-border-color-default, var(--mod-picker-border-color-default, var(--spectrum-picker-border-color-default)));
 
+  /* Focus indicator */
   &::after {
     pointer-events: none;
     content: '';
@@ -253,103 +241,100 @@ governing permissions and limitations under the License.
   }
 
   &:hover {
-    color: var(--highcontrast-picker-font-color-default, var(--mod-picker-font-color-hover, var(--spectrum-picker-font-color-hover)));
-    background-color: var(--highcontrast-picker-background-color-default, var(--mod-picker-background-color-hover, var(--spectrum-picker-background-color-hover)));
-    border-color: var(--highcontrast-picker-border-color-default, var(--mod-picker-border-color-hover, var(--spectrum-picker-border-color-hover)));
+    color: var(--highcontrast-picker-content-color-default, var(--mod-picker-font-color-hover, var(--spectrum-picker-font-color-hover)));
+    background-color: var(--highcontrast-picker-background-color, var(--mod-picker-background-color-hover, var(--spectrum-picker-background-color-hover)));
+    border-color: var(--highcontrast-picker-border-color-hover, var(--mod-picker-border-color-hover, var(--spectrum-picker-border-color-hover)));
 
     .spectrum-Picker-menuIcon {
-      color: var(--highcontrast-picker-icon-color-hover, var(--mod-picker-icon-color-hover, var(--spectrum-picker-icon-color-hover)));
+      color: var(--highcontrast-picker-content-color-default, var(--mod-picker-icon-color-hover, var(--spectrum-picker-icon-color-hover)));
     }
   }
 
   &:active {
-    background-color: var(--highcontrast-picker-background-active, var(--mod-picker-background-color-active, var(--spectrum-picker-background-color-active)));
-    border-color: var(--highcontrast-picker-border-color-active, var(--mod-picker-border-active, var(--spectrum-picker-border-color-active)));
+    background-color: var(--highcontrast-picker-background-color, var(--mod-picker-background-color-active, var(--spectrum-picker-background-color-active)));
+    border-color: var(--highcontrast-picker-border-color-default, var(--mod-picker-border-active, var(--spectrum-picker-border-color-active)));
 
+    /* Focus indicator */
     &::after {
       border-color: transparent;
     }
 
     &.is-placeholder .spectrum-Picker-label {
-      color: var(--highcontrast-picker-font-color-default, var(--mod-picker-font-color-active, var(--spectrum-picker-font-color-active)));
+      color: var(--highcontrast-picker-content-color-default, var(--mod-picker-font-color-active, var(--spectrum-picker-font-color-active)));
     }
   }
 
   &:focus-visible,
   &.is-focused {
     outline: none;
-    background-color: var(--highcontrast-picker-background-color-default, var(--mod-picker-background-color-key-focus, var(--spectrum-picker-background-color-key-focus)));
-    border-color: var(--highcontrast-picker-border-color-key-focus, var(--mod-picker-border-color-key-focus, var(--spectrum-picker-border-color-key-focus)));
-    border-width: var(--mod-picker-border-width, var(--spectrum-picker-border-width));
+    background-color: var(--highcontrast-picker-background-color, var(--mod-picker-background-color-key-focus, var(--spectrum-picker-background-color-key-focus)));
+    border-color: var(--highcontrast-picker-border-color-default, var(--mod-picker-border-color-key-focus, var(--spectrum-picker-border-color-key-focus)));
+    color: var(--highcontrast-picker-content-color-default, var(--mod-picker-font-color-key-focus, var(--spectrum-picker-font-color-key-focus)));
 
-    color: var(--highcontrast-picker-font-color-key-focus, var(--mod-picker-font-color-key-focus, var(--spectrum-picker-font-color-key-focus)));
-
-    /* Focus ring */
+    /* Focus indicator */
     &::after {
       border-color: var(--highcontrast-picker-focus-indicator-color, var(--mod-picker-focus-indicator-color, var(--spectrum-picker-focus-indicator-color)));
     }
 
     &.is-placeholder {
-      color: var(--highcontrast-picker-font-color-key-focus, var(--mod-picker-font-color-key-focus, var(--spectrum-picker-font-color-key-focus)));
+      color: var(--highcontrast-picker-content-color-default, var(--mod-picker-font-color-key-focus, var(--spectrum-picker-font-color-key-focus)));
     }
 
     .spectrum-Picker-menuIcon {
-      color: var(--highcontrast-picker-icon-color-key-focus, var(--mod-picker-icon-color-key-focus, var(--spectrum-picker-icon-color-key-focus)));
+      color: var(--highcontrast-picker-content-color-default, var(--mod-picker-icon-color-key-focus, var(--spectrum-picker-icon-color-key-focus)));
     }
   }
 
-  &.is-invalid {
-    border-color: var(--highcontrast-picker-border-color-error-default, var(--mod-picker-border-color-error-default, var(--spectrum-picker-border-color-error-default)));
+  &.is-invalid:not(:disabled, .is-disabled) {
+    border-color: var(--highcontrast-picker-border-color-default, var(--mod-picker-border-color-error-default, var(--spectrum-picker-border-color-error-default)));
 
     .spectrum-Picker-validationIcon {
-      color: var(--highcontrast-picker-icon-color-error-default, var(--mod-picker-icon-color-error, var(--spectrum-picker-icon-color-error)));
+      color: var(--highcontrast-picker-content-color-default, var(--mod-picker-icon-color-error, var(--spectrum-picker-icon-color-error)));
     }
 
     &:hover {
-      border-color: var(--highcontrast-picker-border-color-error-hover, var(--mod-picker-border-color-error-hover, var(--spectrum-picker-border-color-error-hover)));
+      border-color: var(--highcontrast-picker-border-color-hover, var(--mod-picker-border-color-error-hover, var(--spectrum-picker-border-color-error-hover)));
     }
 
     &:active {
-      border-color: var(--highcontrast-picker-border-color-error-active, var(--mod-picker-border-color-error-active, var(--spectrum-picker-border-color-error-active)));
+      border-color: var(--highcontrast-picker-border-color-default, var(--mod-picker-border-color-error-active, var(--spectrum-picker-border-color-error-active)));
     }
 
     &.is-open {
-      border-color: var(--highcontrast-picker-border-color-error-default-open, var(--mod-picker-border-color-error-default-open, var(--spectrum-picker-border-color-error-default-open)));
+      border-color: var(--highcontrast-picker-border-color-default, var(--mod-picker-border-color-error-default-open, var(--spectrum-picker-border-color-error-default-open)));
     }
 
     &.is-open:hover {
-      border-color: var(--highcontrast-picker-border-color-error-hover-open, var(--mod-picker-border-color-error-hover-open, var(--spectrum-picker-border-color-error-hover-open)));
+      border-color: var(--highcontrast-picker-border-color-hover, var(--mod-picker-border-color-error-hover-open, var(--spectrum-picker-border-color-error-hover-open)));
     }
 
     &:focus-visible,
     &.is-focused {
-      border-color: var(--highcontrast-picker-border-color-error-default, var(--mod-picker-border-color-error-key-focus, var(--spectrum-picker-border-color-error-key-focus)));
+      border-color: var(--highcontrast-picker-border-color-default, var(--mod-picker-border-color-error-key-focus, var(--spectrum-picker-border-color-error-key-focus)));
     }
   }
 
   &.is-loading {
     .spectrum-Picker-menuIcon {
-      color: var(--highcontrast-picker-icon-color-disabled, var(--mod-picker-icon-color-disabled, var(--spectrum-picker-icon-color-disabled)));
+      color: var(--highcontrast-picker-content-color-disabled, var(--mod-picker-icon-color-disabled, var(--spectrum-picker-icon-color-disabled)));
     }
   }
 
   &:disabled,
   &.is-disabled {
-    border-width: var(--mod-picker-border-width, var(--spectrum-picker-border-width));
     cursor: default;
-
-    background-color: var(--highcontrast-picker-background-color-disabled, var(--mod-picker-background-color-disabled, var(--spectrum-picker-background-color-disabled)));
-    border-color: transparent;
-    color: var(--highcontrast-picker-font-color-disabled, var(--mod-picker-font-color-disabled, var(--spectrum-picker-font-color-disabled)));
+    background-color: var(--highcontrast-picker-background-color, var(--mod-picker-background-color-disabled, var(--spectrum-picker-background-color-disabled)));
+    border-color: var(--highcontrast-picker-border-color-disabled, transparent);
+    color: var(--highcontrast-picker-content-color-disabled, var(--mod-picker-font-color-disabled, var(--spectrum-picker-font-color-disabled)));
 
     .spectrum-Picker-icon,
     .spectrum-Picker-menuIcon,
     .spectrum-Picker-validationIcon {
-      color: var(--highcontrast-picker-icon-color-disabled, var(--mod-picker-icon-color-disabled, var(--spectrum-picker-icon-color-disabled)));
+      color: var(--highcontrast-picker-content-color-disabled, var(--mod-picker-icon-color-disabled, var(--spectrum-picker-icon-color-disabled)));
     }
 
     .spectrum-Picker-label.is-placeholder {
-      color: var(--highcontrast-picker-font-color-disabled, var(--mod-picker-font-color-disabled, var(--spectrum-picker-font-color-disabled)));
+      color: var(--highcontrast-picker-content-color-disabled, var(--mod-picker-font-color-disabled, var(--spectrum-picker-font-color-disabled)));
     }
   }
 
@@ -359,35 +344,23 @@ governing permissions and limitations under the License.
   }
 }
 
-.spectrum-Picker.is-open {
-  color: var(--highcontrast-picker-font-color-default-open, var(--mod-picker-font-color-default-open, var(--spectrum-picker-font-color-default-open)));
-  background-color: var(--highcontrast-picker-background-default-open, var(--mod-picker-background-color-default-open, var(--spectrum-picker-background-color-default-open)));
-  border-color: var(--highcontrast-picker-border-color-default-open, var(--mod-picker-border-default-open, var(--spectrum-picker-border-color-default-open)));
+.spectrum-Picker.is-open:not(.spectrum-Picker--quiet) {
+  color: var(--highcontrast-picker-content-color-default, var(--mod-picker-font-color-default-open, var(--spectrum-picker-font-color-default-open)));
+  background-color: var(--highcontrast-picker-background-color, var(--mod-picker-background-color-default-open, var(--spectrum-picker-background-color-default-open)));
+  border-color: var(--highcontrast-picker-border-color-default, var(--mod-picker-border-default-open, var(--spectrum-picker-border-color-default-open)));
   
   &:hover {
-    color: var(--highcontrast-picker-font-color-default, var(--mod-picker-font-color-hover-open, var(--spectrum-picker-font-color-hover-open)));
-    background-color: var(--highcontrast-picker-background-color-hover-open, var(--mod-picker-background-color-hover-open, var(--spectrum-picker-background-color-hover-open)));
-    border-color: var(--highcontrast-picker-border-color-hover-open, var(--mod-picker-border-color-hover-open, var(--spectrum-picker-border-color-hover-open)));
+    color: var(--highcontrast-picker-content-color-default, var(--mod-picker-font-color-hover-open, var(--spectrum-picker-font-color-hover-open)));
+    background-color: var(--highcontrast-picker-background-color, var(--mod-picker-background-color-hover-open, var(--spectrum-picker-background-color-hover-open)));
+    border-color: var(--highcontrast-picker-border-color-hover, var(--mod-picker-border-color-hover-open, var(--spectrum-picker-border-color-hover-open)));
 
     .spectrum-Picker-menuIcon {
-      color: var(--highcontrast-picker-icon-color-hover-open, var(--mod-picker-icon-color-hover-open, var(--spectrum-picker-icon-color-hover-open)));
+      color: var(--highcontrast-picker-content-color-default, var(--mod-picker-icon-color-hover-open, var(--spectrum-picker-icon-color-hover-open)));
     }
   }
 
   .spectrum-Picker-menuIcon {
-    color: var(--highcontrast-picker-icon-color-default-open, var(--mod-picker-icon-color-default-open, var(--spectrum-picker-icon-color-default-open)));
-  }
-}
-
-.spectrum-Picker--quiet {
-  inline-size: auto;
-  min-inline-size: 0;
-
-  &:disabled,
-  &.is-disabled {
-    &:focus-visible {
-      border-color: transparent;
-    }
+    color: var(--highcontrast-picker-content-color-default, var(--mod-picker-icon-color-default-open, var(--spectrum-picker-icon-color-default-open)));
   }
 }
 
@@ -413,14 +386,14 @@ governing permissions and limitations under the License.
     font-style: var(--mod-picker-placeholder-font-style, var(--spectrum-picker-placeholder-font-style));
     transition: color var(--mod-picker-animation-duration, var(--spectrum-picker-animation-duration)) ease-in-out;
 
-    color: var(--highcontrast-picker-font-color-default, var(--mod-picker-font-color-default, var(--spectrum-picker-font-color-default)));
+    color: var(--highcontrast-picker-content-color-default, var(--mod-picker-font-color-default, var(--spectrum-picker-font-color-default)));
 
     &:hover {
-      color: var(--highcontrast-picker-font-color-default, var(--mod-picker-font-color-hover, var(--spectrum-picker-font-color-hover)));
+      color: var(--highcontrast-picker-content-color-default, var(--mod-picker-font-color-hover, var(--spectrum-picker-font-color-hover)));
     }
 
     &:active {
-      color: var(--highcontrast-picker-font-color-default, var(--mod-picker-font-color-active, var(--spectrum-picker-font-color-active)));
+      color: var(--highcontrast-picker-content-color-default, var(--mod-picker-font-color-active, var(--spectrum-picker-font-color-active)));
     }
   }
 }
@@ -436,10 +409,10 @@ governing permissions and limitations under the License.
   margin-inline-start: var(--mod-picker-spacing-icon-to-disclosure-icon, var(--spectrum-picker-spacing-icon-to-disclosure-icon));
   margin-block: var(--mod-picker-spacing-top-to-disclosure-icon, var(--spectrum-picker-spacing-top-to-disclosure-icon));
 
-  color: var(--highcontrast-picker-icon-color-default, var(--mod-picker-icon-color-default, var(--spectrum-picker-icon-color-default)));
+  color: var(--highcontrast-picker-content-color-default, var(--mod-picker-icon-color-default, var(--spectrum-picker-icon-color-default)));
 
   &:active {
-    color: var(--highcontrast-picker-icon-color-default, var(--mod-picker-icon-color-active, var(--spectrum-picker-icon-color-active)));
+    color: var(--highcontrast-picker-content-color-default, var(--mod-picker-icon-color-active, var(--spectrum-picker-icon-color-active)));
   }
 }
 
@@ -466,12 +439,14 @@ governing permissions and limitations under the License.
 }
 
 .spectrum-Picker--quiet {
+  inline-size: auto;
+  min-inline-size: 0;
   border: none;
   border-radius: 0;
   padding-inline: var(--mod-picker-spacing-edge-to-text-quiet, var(--spectrum-picker-spacing-edge-to-text-quiet));
   margin-block-start: calc( var(--mod-picker-spacing-label-to-picker-quiet, var(--spectrum-picker-spacing-label-to-picker-quiet)) + (1px));
-  color: var(--highcontrast-picker-font-color-default, var(--mod-picker-font-color-default, var(--spectrum-picker-font-color-default)));
-  background-color: transparent;
+  color: var(--highcontrast-picker-content-color-default, var(--mod-picker-font-color-default, var(--spectrum-picker-font-color-default)));
+  background-color: var(--highcontrast-picker-background-color, transparent);
 
   &.spectrum-Picker--sideLabel {
     margin-block-start: calc(-1 * var(--spectrum-picker-spacing-top-to-text-side-label-quiet)); 
@@ -488,13 +463,14 @@ governing permissions and limitations under the License.
   }
 
   &:hover {
-    background-color: transparent;
+    background-color: var(--highcontrast-picker-background-color, transparent);
   }
 
   &:focus-visible,
   &.is-focused {
-    background-color: transparent;
+    background-color: var(--highcontrast-picker-background-color, transparent);
 
+    /* Focus indicator changes from a ring to a line underneath. */
     &::after {
       border: none;
       border-radius: 0;
@@ -505,12 +481,12 @@ governing permissions and limitations under the License.
 
   &:active,
   &.is-open {
-    background-color: transparent;
+    background-color: var(--highcontrast-picker-background-color, transparent);
   }
 
   &:disabled,
   &.is-disabled {
-    background-color: transparent;
+    background-color: var(--highcontrast-picker-background-color, transparent);
   }
 }
 
