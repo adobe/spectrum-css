@@ -38,7 +38,7 @@ Default.args = {
 		},
 		{
 			iconName: "Document",
-			label: "Resource Allocation.csv",
+			label: "Resource Allocation Documentation should truncate",
 			isSelectable: true,
 			ariaLabelledby: "assetitemlabel-2",
 			checkboxId: "checkbox-2",

@@ -1,4 +1,5 @@
 // Import the component markup template
+import { html } from "lit";
 import { Template } from "./template";
 
 import { default as IconStories } from "@spectrum-css/icon/stories/icon.stories.js";
@@ -50,6 +51,7 @@ export default {
 				category: "Advanced",
 			},
 			options: [
+				"none",
 				"fixed-inline-start",
 				"fixed-inline-end",
 				"fixed-block-start",
@@ -62,6 +64,9 @@ export default {
 		rootClass: "spectrum-Badge",
 		size: "m",
 		variant: "neutral",
+		iconName: "Info",
+		label: "Badge",
+		fixed: "none"
 	},
 	parameters: {
 		actions: {
@@ -75,18 +80,32 @@ export default {
 	},
 };
 
-export const Default = Template.bind({});
+const BadgeGroup = ({
+	customStyles = {},
+	...args
+}) => {
+	return html`
+		<div style="padding: 1rem">
+			${Template({
+				...args,
+				iconName: undefined,
+			})}
+			${Template({
+				...args,
+			})}
+			${Template({
+				...args,
+				label: undefined,
+			})}
+			${Template({
+				...args,
+				label: "24 days left in trial",
+				customStyles: { "max-inline-size": "100px" },
+			})}
+		</div>
+	`;
+};
+
+export const Default = BadgeGroup.bind({});
 Default.args = {
-	label: "Badge",
-};
-
-export const WithIcon = Template.bind({});
-WithIcon.args = {
-	iconName: "Info",
-	label: "Badge",
-};
-
-export const IconOnly = Template.bind({});
-IconOnly.args = {
-	iconName: "Info",
 };

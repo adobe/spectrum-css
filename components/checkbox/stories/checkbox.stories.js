@@ -1,4 +1,5 @@
 // Import the component markup template
+import { html } from "lit";
 import { Template } from "./template";
 
 export default {
@@ -35,6 +36,15 @@ export default {
 			},
 			control: { type: "boolean" },
 		},
+		isInvalid: {
+			name: "Invalid",
+			type: { name: "boolean" },
+			table: {
+				type: { summary: "boolean" },
+				category: "State",
+			},
+			control: "boolean",
+		},
 		isDisabled: {
 			name: "Disabled",
 			type: { name: "boolean" },
@@ -54,11 +64,20 @@ export default {
 			control: { type: "boolean" },
 		},
 		isIndeterminate: {
-			name: "Indeterminate",
+			name: "Checkbox indeterminate",
 			type: { name: "boolean" },
 			table: {
 			type: { summary: "boolean" },
-			category: "Component",
+			category: "State",
+			},
+			control: "boolean",
+		},
+		isReadOnly: {
+			name: "Read only",
+			type: { name: "boolean" },
+			table: {
+			type: { summary: "boolean" },
+			category: "State",
 			},
 			control: "boolean",
 		},
@@ -71,6 +90,8 @@ export default {
 		isDisabled: false,
 		isEmphasized: false,
 		isIndeterminate: false,
+		isInvalid: false,
+		isReadOnly: false,
 	},
 	parameters: {
 		actions: {
@@ -84,7 +105,39 @@ export default {
 	},
 };
 
-export const Default = Template.bind({});
+const CheckboxGroup = ({
+	customStyles = {},
+	isChecked = false,
+	...args
+}) => {
+	return html`
+		<div style="display: flex; flex-direction: column; padding: 1rem">
+			${Template({
+				...args,
+				iconName: undefined,
+			})}
+			${Template({
+				...args,
+				isChecked: true,
+			})}
+			${Template({
+				...args,
+				isIndeterminate: true,
+			})}
+				${Template({
+				...args,
+				isDisabled: true,
+			})}
+			${Template({
+				...args,
+				label: "Checkbox with wrapping label text",
+				customStyles: { "max-inline-size": "100px" },
+			})}
+		</div>
+	`;
+};
+
+export const Default = CheckboxGroup.bind({});
 Default.args = {
 	id: "default-checkbox",
 };

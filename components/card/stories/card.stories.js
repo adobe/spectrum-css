@@ -140,7 +140,9 @@ Selected.args = {
 export const Focused = Template.bind({});
 Focused.args = {
   ...defaultArgs,
-  isFocused: true
+  isFocused: true,
+  title: "Card title that is longer and should wrap",
+  customStyles: { "max-inline-size": "205px"},
 }
 
 export const Quiet = Template.bind({});

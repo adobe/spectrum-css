@@ -1,5 +1,6 @@
 import { html } from "lit";
 import { classMap } from "lit/directives/class-map.js";
+import { when } from "lit/directives/when.js";
 
 import { Template as Divider } from "@spectrum-css/divider/stories/template.js";
 import { Template as Button } from "@spectrum-css/button/stories/template.js";
@@ -13,6 +14,7 @@ export const Template = ({
 	isOpen = true,
 	text,
 	variant,
+	hasActionButton,
 	customClasses = [],
 	...globals
 }) => {
@@ -47,12 +49,13 @@ export const Template = ({
 						: ""}
 					<p class="${rootClass}-text">${text}</p>
 				</div>
-				${Button({
+				${when(hasActionButton, () =>
+				Button({
 					size: "m",
 					variant: "staticWhite",
 					treatment: "outline",
 					label: "Action",
-				})}
+				}))}
 			</div>
 			<div class="${rootClass}-end">
 				${Divider({

@@ -1,5 +1,6 @@
 import { html } from "lit";
 import { classMap } from "lit/directives/class-map.js";
+import { styleMap } from "lit/directives/style-map.js";
 import { repeat } from "lit/directives/repeat.js";
 import { ifDefined } from "lit/directives/if-defined.js";
 
@@ -17,6 +18,7 @@ export const AccordionItem = ({
 	isOpen = false,
 	iconSize = "m",
 	disableAll = false,
+	customStyles = {},
 	// customClasses = [],
 	...globals
 }) => {
@@ -28,6 +30,7 @@ export const AccordionItem = ({
 				"is-disabled": isDisabled || disableAll,
 			})}
 			id=${ifDefined(id)}
+			style=${ifDefined(styleMap(customStyles))}
 			role="presentation"
 			@click=${(evt) => {
 				if (isDisabled || !evt || !evt.target) return;

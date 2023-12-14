@@ -128,6 +128,12 @@ export const ActionButtons = ({
 				staticColor,
 				hasPopup: true,
 			})}
+			${Template({
+				...args,
+				staticColor,
+				label: "More and this text should truncate",
+				customStyles: { "max-inline-size": "100px"},
+			})}
 		</div>
 	`;
 };

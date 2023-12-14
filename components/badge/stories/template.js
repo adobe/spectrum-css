@@ -1,5 +1,6 @@
 import { html } from "lit";
 import { classMap } from "lit/directives/class-map.js";
+import { styleMap } from "lit/directives/style-map.js";
 import { ifDefined } from "lit/directives/if-defined.js";
 import { when } from "lit/directives/when.js";
 
@@ -14,6 +15,7 @@ export const Template = ({
 	iconName,
 	variant = "neutral",
 	fixed,
+	customStyles = {},
 	customClasses = [],
 	id,
 	...globals
@@ -38,6 +40,7 @@ export const Template = ({
 				...customClasses.reduce((a, c) => ({ ...a, [c]: true }), {}),
 			})}
 			id=${ifDefined(id)}
+			style=${ifDefined(styleMap(customStyles))}
 		>
 			${when(iconName, () =>
 				Icon({

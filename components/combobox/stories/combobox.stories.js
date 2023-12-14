@@ -94,6 +94,25 @@ export default {
 			},
 			control: "boolean",
 		},
+		showFieldLabel: {
+			name: "Show field label",
+			type: { name: "boolean" },
+			table: {
+				type: { summary: "boolean" },
+				category: "Component",
+			},
+			control: "boolean",
+		},
+		fieldLabelText: {
+			name: "Field label text",
+			type: { name: "text" },
+			table: {
+				type: { summary: "text" },
+				category: "Component",
+			},
+			control: "text",
+			if: { arg: "showFieldLabel", truthy: true },
+		},
 		content: { table: { disable: true } },
 	},
 	args: {
@@ -107,6 +126,8 @@ export default {
 		isKeyboardFocused: false,
 		isLoading: false,
 		isDisabled: false,
+		showFieldLabel: false,
+		fieldLabelText: "Select location"
 	},
 	parameters: {
 		actions: {
@@ -122,6 +143,40 @@ export default {
 
 export const Default = Template.bind({});
 Default.args = {
+	content: [
+		Menu({
+			role: "listbox",
+			subrole: "option",
+			isSelectable: true,
+			items: [
+				{
+					label: "Ballard",
+					isSelected: true,
+					isChecked: true,
+				},
+				{
+					label: "Fremont",
+				},
+				{
+					label: "Greenwood",
+				},
+				{
+					type: "divider",
+				},
+				{
+					label: "United States of America",
+					isDisabled: true,
+				},
+			],
+		}),
+	],
+};
+
+export const Quiet = Template.bind({});
+Quiet.args = {
+	isQuiet: true,
+	showFieldLabel: true,
+	fieldLabelText: "Select location, this label should wrap",
 	content: [
 		Menu({
 			role: "listbox",

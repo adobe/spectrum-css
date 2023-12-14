@@ -1,5 +1,6 @@
 import { html } from "lit";
 import { classMap } from "lit/directives/class-map.js";
+import { styleMap } from "lit/directives/style-map.js";
 import { ifDefined } from "lit/directives/if-defined.js";
 import { when } from "lit/directives/when.js";
 
@@ -30,6 +31,7 @@ export const Template = ({
   hasQuickAction = false,
   hasActions = false,
   showAsset,
+  customStyles = {},
   customClasses = [],
   onclick,
   id,
@@ -50,6 +52,7 @@ export const Template = ({
         ...customClasses.reduce((a, c) => ({ ...a, [c]: true }), {}),
       })}
       id=${ifDefined(id)}
+      style=${ifDefined(styleMap(customStyles))}
       tabindex="0"
       role=${ifDefined(image || showAsset ? "figure" : isGrid ? "rowheader" : role)}
     >
