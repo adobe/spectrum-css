@@ -7,6 +7,7 @@ import { when } from "lit/directives/when.js";
 
 import { Template as Icon } from "@spectrum-css/icon/stories/template.js";
 import { Template as ProgressCircle } from "@spectrum-css/progresscircle/stories/template.js";
+import { Template as FieldLabel } from "@spectrum-css/fieldlabel/stories/template.js";
 
 import "../index.css";
 
@@ -28,6 +29,9 @@ export const Template = ({
 	isReadOnly = false,
 	isKeyboardFocused = false,
 	isLoading = false,
+	displayLabel = false,
+	sideLabel = false,
+	labelText,
 	iconName,
 	pattern,
 	placeholder,
@@ -62,6 +66,7 @@ export const Template = ({
 				[`${rootClass}--multiline`]: multiline,
 				[`${rootClass}--grows`]: grows,
 				[`${rootClass}--quiet`]: isQuiet,
+				[`${rootClass}--sideLabel`]: sideLabel,
 				"is-invalid": isInvalid,
 				"is-valid": isValid,
 				"is-focused": isFocused,
@@ -86,6 +91,12 @@ export const Template = ({
 			}}
 			id=${ifDefined(id)}
 		>
+		${when(displayLabel, () => FieldLabel({
+						...globals,
+						size: "s",
+						label: labelText,
+					})
+			)}
 			${when(iconName, () => Icon({
 				...globals,
 				size,
@@ -97,7 +108,7 @@ export const Template = ({
 					...customIconClasses,
 				],
 			}))}
-			${when(multiline, 
+			${when(multiline,
 				() => html`<textarea
 					placeholder=${ifDefined(placeholder)}
 					name=${ifDefined(name)}
@@ -112,7 +123,7 @@ export const Template = ({
 						[`${rootClass}-input`]: true,
 						...customInputClasses.reduce((a, c) => ({ ...a, [c]: true }), {}),
 					})}
-				/>`, 
+				/>`,
 				() => html`<input
 					type=${ifDefined(type)}
 					placeholder=${ifDefined(placeholder)}

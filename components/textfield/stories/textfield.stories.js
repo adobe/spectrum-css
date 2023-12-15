@@ -16,6 +16,35 @@ export default {
 			},
 			control: "boolean",
 		},
+		displayLabel: {
+			name: "Display label",
+			type: { name: "boolean" },
+			table: {
+				type: { summary: "boolean" },
+				category: "State",
+			},
+			control: "boolean",
+		},
+		sideLabel: {
+			name: "Side label",
+			type: { name: "boolean" },
+			table: {
+				type: { summary: "boolean" },
+				category: "State",
+			},
+			control: "boolean",
+			if: { arg: "displayLabel", truthy: true },
+		},
+		labelText: {
+			name: "Label text",
+			type: { name: "text" },
+			table: {
+				type: { summary: "text" },
+				category: "State",
+			},
+			control: "text",
+			if: { arg: "displayLabel", truthy: true },
+		},
 		isInvalid: {
 			name: "Invalid",
 			type: { name: "boolean" },
@@ -146,6 +175,9 @@ export default {
 		isFocused: false,
 		isKeyboardFocused: false,
 		isLoading: false,
+		displayLabel: false,
+		sideLabel: false,
+		labelText: "Username",
 		size: "m",
 		multiline: false,
 		grows: false,
