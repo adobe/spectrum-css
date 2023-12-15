@@ -1,15 +1,15 @@
-name: Opacity Checkerboard
-description: Opacity checkerboard is used with other components to highlight opacity.
+name: Opacity checkerboard
+description: Opacity checkerboard is a class used to highlight background color opacity.
 examples:
   - id: opacity-checkerboard
-    name: Opacity Checkerboard
+    name: Opacity checkerboard
     markup: |
       <div style="inline-size: 100px; block-size: 100px;">
-        <div class="spectrum-OpacityCheckerboard">
+        <div class="spectrum-OpacityCheckerboard" style="inline-size: 100%; block-size: 100%;">
         </div>
       </div>
   - id: opacity-checkerboard
-    name: Opacity Checkerboard with color overlay
+    name: Opacity checkerboard with color overlay
     markup: |
       <div style="inline-size: 100px; block-size: 100px;">
         <div class="spectrum-OpacityCheckerboard" style="inline-size: 100%; block-size: 100%;"></div>
