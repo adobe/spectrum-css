@@ -21,8 +21,6 @@ permissions and limitations under the License. */
 }
 
 .spectrum-OpacityCheckerboard {
-	inline-size: 100%;
-	block-size: 100%;
 	background: repeating-conic-gradient(
 			var(
 					--mod-opacity-checkerboard-light,
