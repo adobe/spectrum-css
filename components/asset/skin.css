@@ -25,7 +25,7 @@ governing permissions and limitations under the License.
 
 @media (forced-colors: active) {
 	.spectrum-Asset {
-    --highcontrast-asset-folder-background-color: CanvasText;
-    --highcontrast-asset-file-background-color: CanvasText;
+    --highcontrast-asset-folder-background-color: currentColor;
+    --highcontrast-asset-file-background-color: currentColor;
   	}
 }
