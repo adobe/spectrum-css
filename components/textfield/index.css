@@ -695,6 +695,7 @@ governing permissions and limitations under the License.
   line-height: var(--spectrum-textfield-input-line-height);
 	box-sizing: border-box;
 	inline-size: 100%;
+	overflow: hidden;
 	min-inline-size: var(
 		--mod-textfield-min-width,
 		var(--spectrum-textfield-min-width)
@@ -773,10 +774,6 @@ governing permissions and limitations under the License.
 	margin: 0;
 
 	text-overflow: ellipsis;
-
-	/* Show the overflow for input in Edge. */
-	overflow: visible;
-
 	appearance: none;
 
 	/*
