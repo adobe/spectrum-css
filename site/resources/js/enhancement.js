@@ -157,33 +157,43 @@ governing permissions and limitations under the License.
 	});
 })();
 
-// Textfield
+// Textfield and Combobox
+// -- Bubble up focus classes to component's parent element.
 (function () {
-	function setFocus(textfield, input, focused) {
-		var focusClass = input.classList.contains("is-keyboardFocused")
+	// Add or remove focused or keyboard focused classes on element.
+	function setFocusClasses(element, eventTarget, focused) {
+		var focusClass = eventTarget.classList.contains("is-keyboardFocused")
 			? "is-keyboardFocused"
 			: "is-focused";
 		if (focused) {
-			textfield.classList.add(focusClass);
+			element.classList.add(focusClass);
 		} else {
-			textfield.classList.remove("is-keyboardFocused");
-			textfield.classList.remove("is-focused");
+			element.classList.remove("is-keyboardFocused");
+			element.classList.remove("is-focused");
 		}
 	}
 
 	document.addEventListener("focusin", function (event) {
 		var textfield = event.target.closest(".spectrum-Textfield");
+		var combobox = event.target.closest(".spectrum-Combobox");
 
 		if (textfield) {
-			setFocus(textfield, event.target, true);
+			setFocusClasses(textfield, event.target, true);
+		}
+		if (combobox) {
+			setFocusClasses(combobox, event.target, true);
 		}
 	});
 
 	document.addEventListener("focusout", function (event) {
 		var textfield = event.target.closest(".spectrum-Textfield");
+		var combobox = event.target.closest(".spectrum-Combobox");
 
 		if (textfield) {
-			setFocus(textfield, event.target, false);
+			setFocusClasses(textfield, event.target, false);
+		}
+		if (combobox) {
+			setFocusClasses(combobox, event.target, false);
 		}
 	});
 })();
