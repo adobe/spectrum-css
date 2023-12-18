@@ -40,13 +40,14 @@ copy_env_file() {
                 continue
             fi
 
-            # If the variable does not exist in the home .env file, write it to the local .env file as-is
-            if [[ -z $(grep "${example_var[0]}=" $HOME/.env) ]]; then
+            if ! test -f $HOME/.env; then
                 echo "${example_var[0]}=${example_var[1]}" >> .env
                 continue
             fi
 
-            if ! test -f $HOME/.env; then
+            # If the variable does not exist in the home .env file, write it to the local .env file as-is
+            if [[ -z $(grep "${example_var[0]}=" $HOME/.env) ]]; then
+                echo "${example_var[0]}=${example_var[1]}" >> .env
                 continue
             fi
 
