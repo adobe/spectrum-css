@@ -443,7 +443,7 @@ governing permissions and limitations under the License.
     Sets the opacity to 1 as normalize.css sets an opacity to placeholders
     Details: https://github.com/csstools/normalize.css/blob/main/normalize.css#L297
   */
-	-moz-appearance: textfield;
+	appearance: textfield;
 
 	/* All browsers - Change the input font styles */
 	text-overflow: ellipsis;
@@ -531,10 +531,6 @@ governing permissions and limitations under the License.
 			--mod-textfield-icon-spacing-block-valid,
 			var(--spectrum-textfield-icon-spacing-block-valid)
 		);
-		inset-inline-start: var(
-			--mod-textfield-icon-spacing-inline-start-valid,
-			var(--spectrum-textfield-icon-spacing-inline-start-valid)
-		);
 		inset-inline-end: var(
 			--mod-textfield-icon-spacing-inline-end-valid,
 			var(--spectrum-textfield-icon-spacing-inline-end-valid)
@@ -565,10 +561,6 @@ governing permissions and limitations under the License.
 		inset-block-end: var(
 			--mod-textfield-icon-spacing-block-invalid,
 			var(--spectrum-textfield-icon-spacing-block-invalid)
-		);
-		inset-inline-start: var(
-			--mod-textfield-icon-spacing-inline-start-invalid,
-			var(--spectrum-textfield-icon-spacing-inline-start-invalid)
 		);
 		inset-inline-end: var(
 			--mod-textfield-icon-spacing-inline-end-invalid,
@@ -785,7 +777,8 @@ governing permissions and limitations under the License.
 	/* Show the overflow for input in Edge. */
 	overflow: visible;
 
-	-webkit-appearance: none;
+	appearance: none;
+
 	/*
     Removes the native spin buttons in Firefox; -moz-appearance: none results in spinners.
     This has to come after -webkit-appearance or it gets overridden (#214)
@@ -794,7 +787,7 @@ governing permissions and limitations under the License.
     Sets the opacity to 1 as normalize.css sets an opacity to placeholders
     Details: https://github.com/csstools/normalize.css/blob/main/normalize.css#L297
   */
-	-moz-appearance: textfield;
+	appearance: textfield;
 
 	/* place in same cell: input, focus indicator, and grows sizer */
 	grid-row: 2;
@@ -811,7 +804,7 @@ governing permissions and limitations under the License.
 	/* http://stackoverflow.com/questions/23372903/hide-spinner-in-input-number-firefox-29 */
 	&::-webkit-inner-spin-button,
 	&::-webkit-outer-spin-button {
-		-webkit-appearance: none;
+		appearance: none;
 		margin: 0;
 	}
 
@@ -825,14 +818,14 @@ governing permissions and limitations under the License.
    */
 	/* stylelint-disable selector-no-vendor-prefix */
 	&::-ms-input-placeholder {
-		opacity: 1;
+		opacity: 100%;
 	}
 	/* stylelint-enable selector-no-vendor-prefix */
 
 
 	/*** Input Placeholder Text ***/
 	&::placeholder {
-		opacity: 1;
+		opacity: 100%;
 		font-size: var(
 			--mod-textfield-placeholder-font-size,
 			var(--spectrum-textfield-placeholder-font-size)
@@ -1127,7 +1120,7 @@ governing permissions and limitations under the License.
 		resize: none;
 
 		/* The opacity must be set to 1 */
-		opacity: 1;
+		opacity: 100%;
 
 		&::placeholder {
 			color: var(
@@ -1275,6 +1268,7 @@ governing permissions and limitations under the License.
 /*** Text Area ***/
 .spectrum-Textfield--multiline {
   --spectrum-textfield-input-line-height: normal;
+
   .spectrum-Textfield-input {
 		min-inline-size: var(
 			--mod-text-area-min-inline-size,
@@ -1300,6 +1294,7 @@ governing permissions and limitations under the License.
 				--mod-text-area-min-block-size-quiet,
 				var(--spectrum-text-area-min-block-size-quiet)
 			);
+
 			/* Treat all quiet inputs and text areas the same */
 			resize: none;
 			overflow-y: hidden;
