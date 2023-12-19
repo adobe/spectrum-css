@@ -521,6 +521,11 @@ governing permissions and limitations under the License.
 		grid-column: 2;
 	}
 
+	.spectrum-Textfield.spectrum-Textfield--sideLabel & {
+		grid-row: 1 / span 1;
+		grid-column: 2 / span 1;
+	}
+
 	/****** Validation Icon - Valid ✅ ******/
 	.spectrum-Textfield.is-valid & {
 		inset-block-start: var(
