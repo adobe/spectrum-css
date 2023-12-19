@@ -396,24 +396,6 @@ governing permissions and limitations under the License.
   --spectrum-icon-size: var(--spectrum-cross-icon-size-600);
 }
 
-/* Triple Gripper */
-.spectrum-UIIcon-TripleGripper100 {
-  inline-size: var(--spectrum-alias-ui-icon-triplegripper-size-100-height);
-  block-size: var(--spectrum-alias-ui-icon-triplegripper-size-100-width);
-}
-
-/* Double Gripper */
-.spectrum-UIIcon-DoubleGripper100 {
-  inline-size: var(--spectrum-alias-ui-icon-doublegripper-size-100-height);
-  block-size: var(--spectrum-alias-ui-icon-doublegripper-size-100-width);
-}
-
-/* Single Gripper */
-.spectrum-UIIcon-SingleGripper100 {
-  inline-size: var(--spectrum-alias-ui-icon-singlegripper-size-100-height);
-  block-size: var(--spectrum-alias-ui-icon-singlegripper-size-100-width);
-}
-
 /* Corner Triangle */
 .spectrum-UIIcon-CornerTriangle75 {
   --spectrum-icon-size: var(--spectrum-corner-triangle-icon-size-75);
