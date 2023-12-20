@@ -5,7 +5,7 @@ import { styleMap } from "lit/directives/style-map.js";
 import { Template } from "./template";
 
 export default {
-	title: "Components/Opacity checkerboard",
+	title: "Utilities/Opacity checkerboard",
 	description:
 		"Opacity checkerboard is used with other components to highlight opacity.",
 	component: "OpacityCheckerboard",
