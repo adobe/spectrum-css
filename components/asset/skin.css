@@ -11,14 +11,21 @@ governing permissions and limitations under the License.
 */
 
 .spectrum-Asset-folderBackground {
-  fill: var(--spectrum-asset-folder-background-color);
+  fill: var(--highcontrast-asset-folder-background-color, var(--spectrum-asset-folder-background-color));
 }
 
 .spectrum-Asset-fileBackground {
-  fill: var(--spectrum-asset-file-background-color);
+  fill: var(--highcontrast-asset-file-background-color, var(--spectrum-asset-file-background-color));
 }
 
 .spectrum-Asset-folderOutline,
 .spectrum-Asset-fileOutline {
   fill: var(--spectrum-asset-icon-outline-color);
+}
+
+@media (forced-colors: active) {
+	.spectrum-Asset {
+    --highcontrast-asset-folder-background-color: currentColor;
+    --highcontrast-asset-file-background-color: currentColor;
+  	}
 }
