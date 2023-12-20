@@ -17,6 +17,8 @@ governing permissions and limitations under the License.
   --spectrum-actionbutton-border-radius: var(--spectrum-corner-radius-100);
   --spectrum-actionbutton-border-width: var(--spectrum-border-width-100);
 
+  --spectrum-actionbutton-background-color-disabled: var(--spectrum-disabled-background-color);
+
   --spectrum-actionbutton-content-color-default: var(--spectrum-neutral-content-color-default);
   --spectrum-actionbutton-content-color-hover: var(--spectrum-neutral-content-color-hover);
   --spectrum-actionbutton-content-color-down: var(--spectrum-neutral-content-color-down);
@@ -26,13 +28,13 @@ governing permissions and limitations under the License.
   --spectrum-actionbutton-focus-indicator-thickness: var(--spectrum-focus-indicator-thickness);
   --spectrum-actionbutton-focus-indicator-color: var(--spectrum-focus-indicator-color);
   --spectrum-actionbutton-focus-indicator-border-radius: calc(var(--spectrum-actionbutton-border-radius) + var(--spectrum-actionbutton-focus-indicator-gap));
-  
+
   &.is-selected {
     --mod-actionbutton-background-color-default: var(--mod-actionbutton-background-color-default-selected, var(--spectrum-neutral-background-color-selected-default));
     --mod-actionbutton-background-color-hover: var(--mod-actionbutton-background-color-hover-selected, var(--spectrum-neutral-background-color-selected-hover));
     --mod-actionbutton-background-color-down: var(--mod-actionbutton-background-color-down-selected, var(--spectrum-neutral-background-color-selected-down));
     --mod-actionbutton-background-color-focus: var(--mod-actionbutton-background-color-focus-selected, var(--spectrum-neutral-background-color-selected-key-focus));
-    
+
     --mod-actionbutton-content-color-default: var(--mod-actionbutton-content-color-default-selected, var(--spectrum-gray-50));
     --mod-actionbutton-content-color-hover: var(--mod-actionbutton-content-color-hover-selected, var(--spectrum-gray-50));
     --mod-actionbutton-content-color-down: var(--mod-actionbutton-content-color-down-selected, var(--spectrum-gray-50));
@@ -43,7 +45,7 @@ governing permissions and limitations under the License.
       --mod-actionbutton-background-color-hover: var(--mod-actionbutton-background-color-hover-selected-emphasized, var(--spectrum-accent-background-color-hover));
       --mod-actionbutton-background-color-down: var(--mod-actionbutton-background-color-down-selected-emphasized, var(--spectrum-accent-background-color-down));
       --mod-actionbutton-background-color-focus: var(--mod-actionbutton-background-color-focus-selected-emphasized, var(--spectrum-accent-background-color-key-focus));
-    
+
       --mod-actionbutton-content-color-default: var(--mod-actionbutton-content-color-default-selected-emphasized, var(--spectrum-white));
       --mod-actionbutton-content-color-hover: var(--mod-actionbutton-content-color-hover-selected-emphasized, var(--spectrum-white));
       --mod-actionbutton-content-color-down: var(--mod-actionbutton-content-color-down-selected-emphasized, var(--spectrum-white));
