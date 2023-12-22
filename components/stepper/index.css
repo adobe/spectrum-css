@@ -151,7 +151,7 @@ governing permissions and limitations under the License.
     --mod-infield-button-border-color: var(--highcontrast-stepper-border-color-hover, var(--mod-stepper-buttons-border-color-hover, var(--spectrum-stepper-buttons-border-color-hover)));
   }
 
-  &:hover {
+  &:hover:not(.is-disabled) {
     .spectrum-Stepper-input,
     .spectrum-Stepper-buttons {
       border-color: var(--highcontrast-stepper-border-color-hover, var(--mod-stepper-border-color-hover, var(--spectrum-stepper-border-color-hover)));
