@@ -61,7 +61,7 @@ governing permissions and limitations under the License.
   }
 
   &.is-disabled {
-    --mod-infield-button-border-color-quiet-disabled: var(--spectrum-disabled-border-color);
+    --mod-infield-button-border-color-quiet-disabled: var(--highcontrast-stepper-border-color, var(--spectrum-disabled-border-color));
   }
 
   /*** Invalid ***/
