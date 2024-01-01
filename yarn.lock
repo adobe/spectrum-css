@@ -2162,10 +2162,10 @@
   resolved "https://registry.yarnpkg.com/@nx/nx-win32-x64-msvc/-/nx-win32-x64-msvc-17.1.2.tgz#9d32fbf64ed617049f6cee4c34e5259bbc009bb1"
   integrity sha512-oxKCKunuo4wRusMlNu7PlhBijhtNy7eBZPAWyqUsdfnb+CjY2QncjCguW3fnsG9gHQFCa+y0b1WkSkvJ5G1DiQ==
 
-"@nxkit/style-dictionary@^3.0.2":
-  version "3.0.2"
-  resolved "https://registry.yarnpkg.com/@nxkit/style-dictionary/-/style-dictionary-3.0.2.tgz#c68988f7beef7b55133bc40751478a4754d8827c"
-  integrity sha512-prnGV1/ZFMWqUf5CXc3OMbZ0syxIpCcuyWWMGxNzrEztY3Mxo7OM8EZ+Y+tY5yr7jBLNakzRYPjlDCopz01PDA==
+"@nxkit/style-dictionary@^4.0.0":
+  version "4.0.0"
+  resolved "https://registry.yarnpkg.com/@nxkit/style-dictionary/-/style-dictionary-4.0.0.tgz#62210ee29b542496f08db41c988ca8afcf0c3c50"
+  integrity sha512-cQWOSVSTD3riJzZ6GxY+xqzlpkduIX+3LOWcpvAWe5q1Q3sRyjU/PNwqJjfCAhLzWzExTdCmB8FL2Dn/auyouQ==
   dependencies:
     "@phenomnomnominal/tsquery" "^5.0.0"
     fs-extra "^11.1.0"
