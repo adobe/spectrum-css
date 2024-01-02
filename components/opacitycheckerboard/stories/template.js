@@ -7,7 +7,7 @@ import "../index.css";
 
 export const Template = ({
 	rootClass = "spectrum-OpacityCheckerboard",
-	backgroundPosition = "top left",
+	backgroundPosition,
 	customClasses = [],
 	customStyles = {},
 	id,
@@ -22,8 +22,6 @@ export const Template = ({
 			})}
 			style=${ifDefined(styleMap({
 				"--mod-opacity-checkerboard-position": backgroundPosition,
-				"inline-size": "100%",
-				"block-size": "100%",
 				...customStyles,
 			}))}
 			role=${ifDefined(role)}
