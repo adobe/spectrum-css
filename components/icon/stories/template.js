@@ -85,7 +85,6 @@ export const Template = ({
 
 		idKey += sizeVal;
 		iconName += sizeVal;
-
 	}
 
 	// Determine which icon set contains this icon.
