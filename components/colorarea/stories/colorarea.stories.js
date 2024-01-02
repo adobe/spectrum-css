@@ -1,4 +1,3 @@
-// Import the component markup template
 import { Template } from "./template";
 
 export default {
@@ -7,6 +6,8 @@ export default {
 		"The Color area component allows users to visually select two properties of a color simultaneously. It's commonly used together with a color slider or color wheel.",
 	component: "ColorArea",
 	argTypes: {
+		/* No theme styles for express available */
+		express: { table: { disable: true } },
 		customWidth: { table: { disable: true } },
 		customHeight: { table: { disable: true } },
 		handlePosition: { table: { disable: true } },
@@ -42,7 +43,7 @@ export default {
 		status: {
 			type: process.env.MIGRATED_PACKAGES.includes("colorarea")
 				? "migrated"
-				: undefined,
+				: "legacy",
 		},
 	},
 };

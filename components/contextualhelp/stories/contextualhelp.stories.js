@@ -1,15 +1,15 @@
-// Import the component markup template
 import { Template } from "./template";
 
 import { default as ActionButtonStories } from "@spectrum-css/actionbutton/stories/actionbutton.stories.js";
 
-// More on default export: https://storybook.js.org/docs/web-components/writing-stories/introduction#default-export
 export default {
 	title: "Components/Contextual help",
 	description:
 		"Contextual Help shows a user extra information in relation to another component or view.",
 	component: "ContextualHelp",
 	argTypes: {
+		/* No theme styles for express available */
+		express: { table: { disable: true } },
 		title: {
 			name: "Title",
 			type: { name: "string", required: true },
@@ -75,7 +75,6 @@ export default {
 		},
 		link: { table: { disable: true } },
 	},
-	// More on args: https://storybook.js.org/docs/web-components/writing-stories/args
 	args: {
 		rootClass: "spectrum-ContextualHelp",
 		iconName: "Info",
@@ -88,7 +87,7 @@ export default {
 		status: {
 			type: process.env.MIGRATED_PACKAGES.includes("contextualhelp")
 				? "migrated"
-				: undefined,
+				: "legacy",
 		},
 	},
 };
@@ -104,7 +103,7 @@ WithLink.args = {
 	title: "Permission required",
 	body: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
 	link: {
-		text: "Learn about permissions",
+		content: "Learn about permissions",
 		url: "#",
 	},
 };

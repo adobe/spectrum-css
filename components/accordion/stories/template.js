@@ -1,8 +1,10 @@
 import { html } from "lit";
 import { classMap } from "lit/directives/class-map.js";
-import { styleMap } from "lit/directives/style-map.js";
-import { repeat } from "lit/directives/repeat.js";
 import { ifDefined } from "lit/directives/if-defined.js";
+import { repeat } from "lit/directives/repeat.js";
+import { styleMap } from "lit/directives/style-map.js";
+
+import { useArgs } from "@storybook/client-api";
 
 import { Template as Icon } from "@spectrum-css/icon/stories/template.js";
 
@@ -20,6 +22,7 @@ export const AccordionItem = ({
 	disableAll = false,
 	customStyles = {},
 	// customClasses = [],
+	onclick,
 	...globals
 }) => {
 	return html`
@@ -32,12 +35,7 @@ export const AccordionItem = ({
 			id=${ifDefined(id)}
 			style=${ifDefined(styleMap(customStyles))}
 			role="presentation"
-			@click=${(evt) => {
-				if (isDisabled || !evt || !evt.target) return;
-				const closest = evt.target.closest(`.${rootClass}`);
-				if (!closest) return;
-				closest.classList.toggle("is-open");
-			}}
+			@click=${onclick}
 		>
 			<!-- WAI-ARIA 1.1: Item header is a <button> wrapped within a <h3> element, rather than a <div> element with role="tab" -->
 			<h3 class="${rootClass}Heading">
@@ -54,7 +52,7 @@ export const AccordionItem = ({
 				</button>
 				<span class="${rootClass}IconContainer">
 					${Icon({
-						iconName: "ChevronRight",
+						uiIconName: !isOpen ? "ChevronRight" : "ChevronDown",
 						size: iconSize,
 						customClasses: [`${rootClass}Indicator`],
 						...globals,
@@ -81,8 +79,11 @@ export const Template = ({
 	items,
 	id,
 	customClasses = [],
+	customStyles = {},
 	...globals
 }) => {
+	const [_, updateArgs] = useArgs();
+
 	if (!items || !items.size) return html``;
 
 	return html`
@@ -97,16 +98,26 @@ export const Template = ({
 			})}"
 			id=${ifDefined(id)}
 			role="region"
+			style=${ifDefined(styleMap(customStyles))}
 		>
 			${repeat(Array.from(items.keys()), (heading, idx) => {
 				const item = items.get(heading);
 				return AccordionItem({
+					...globals,
 					rootClass: `${rootClass}-item`,
 					heading,
 					idx,
 					iconSize: `${size}`,
 					...item,
-					...globals,
+					onclick: () => {
+						// Update the args
+						const newItems = new Map(items);
+						newItems.set(heading, {
+							...item,
+							isOpen: !item.isOpen,
+						});
+						updateArgs({ items: newItems });
+					},
 				});
 			})}
 		</div>

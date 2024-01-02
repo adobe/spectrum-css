@@ -9,17 +9,7 @@ export const Template = ({
 	size = "m",
 	overBackground = false,
 	isIndeterminate = false,
-	...globals
 }) => {
-	const { express } = globals;
-
-	try {
-		if (!express) import(/* webpackPrefetch: true */ "../themes/spectrum.css");
-		else import(/* webpackPrefetch: true */ "../themes/express.css");
-	} catch (e) {
-		console.warn(e);
-	}
-
 	let sizeClassName = "medium";
 	switch (size) {
 		case "s":

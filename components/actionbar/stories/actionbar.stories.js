@@ -1,15 +1,16 @@
-// Import the component markup template
 import { Template } from "./template";
 
-import { default as Popover } from "@spectrum-css/popover/stories/popover.stories.js";
-import { default as CloseButton } from "@spectrum-css/closebutton/stories/closebutton.stories.js";
 import { default as ActionButton } from "@spectrum-css/actionbutton/stories/actionbutton.stories.js";
+import { default as CloseButton } from "@spectrum-css/closebutton/stories/closebutton.stories.js";
+import { default as Popover } from "@spectrum-css/popover/stories/popover.stories.js";
 
 export default {
 	title: "Components/Action bar",
 	description: "The Action bar component is a floating full width bar that appears upon selection",
-	component: "Actionbar",
+	component: "ActionBar",
 	argTypes: {
+		/* No theme styles for express available */
+		express: { table: { disable: true } },
 		isOpen: {
 			name: "Open",
 			type: { name: "boolean" },
@@ -63,6 +64,9 @@ export default {
 		isSticky: false,
 		isFixed: false,
 		isFlexible: false,
+		customStorybookStyles: {
+			display: "block",
+		}
 	},
 	parameters: {
 		actions: {
@@ -75,7 +79,7 @@ export default {
 		status: {
 			type: process.env.MIGRATED_PACKAGES.includes("actionbar")
 				? "migrated"
-				: undefined,
+				: "legacy",
 		},
 	},
 };

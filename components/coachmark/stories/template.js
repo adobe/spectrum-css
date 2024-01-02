@@ -1,5 +1,6 @@
 import { html } from "lit";
 import { classMap } from "lit/directives/class-map.js";
+import { when } from "lit/directives/when.js";
 
 import { Template as ActionMenu } from "@spectrum-css/actionmenu/stories/template.js";
 import { Template as ButtonGroup } from "@spectrum-css/buttongroup/stories/template.js";
@@ -19,26 +20,7 @@ export const Template = ({
 	isOpen = true,
 	...globals
 }) => {
-
-	const displayedActionMenu = ActionMenu({
-		isOpen,
-		popoverPosition: "right",
-		popoverTestId: 'popover-nested-2',
-		popoverId: 'popover-nested-2',
-		popoverTriggerId: "trigger-nested-2",
-		customStyles:  { "margin-block-start": "30px", "margin-inline-start": "-32px"},
-		iconName: 'More',
-		size: globals.scale === "large" ? "s" : "m",
-		items: [
-			{
-				label: "Skip tour",
-			},
-			{
-				label: "Reset tour",
-			}
-		],
-})
-
+	const { scale } = globals;
 
 	return html`
 		<div
@@ -60,27 +42,42 @@ export const Template = ({
 			isOpen: true,
 			content: [
 				html`
-				${hasImage ? html
+				${when(hasImage, () => html
 					`<div class="${rootClass}-image-wrapper">
 					<img class="${rootClass}-image" src="example-card-landscape.png" />
-				</div>`
-					: ''}
+				</div>`)}
 				<div class="spectrum-CoachMark-header">
 					<div class="spectrum-CoachMark-title">Try playing with a pixel brush</div>
 					<div class="spectrum-CoachMark-action-menu">
-					${hasActionMenu ? displayedActionMenu : ""}
-				</div>
+						${when(hasActionMenu, () => ActionMenu({
+							isOpen,
+							popoverPosition: "right",
+							popoverTestId: 'popover-nested-2',
+							popoverId: 'popover-nested-2',
+							popoverTriggerId: "trigger-nested-2",
+							iconName: 'More',
+							popoverPosition: "bottom-start",
+							size: scale === "large" ? "s" : "m",
+							items: [
+								{
+									label: "Skip tour",
+								},
+								{
+									label: "Reset tour",
+								}
+							],
+						}))}
+					</div>
 				</div>
 				<div class="spectrum-CoachMark-content">
 					Pixel brushes use pixels to create brush strokes, just like in other design and drawing tools. Start drawing, and zoom in to see the pixels in each stroke.
 				</div>
 				<div class="${rootClass}-footer">
-				${hasPagination ? html`<div class="spectrum-CoachMark-step"><bdo dir="ltr">2 of 8</bdo></div>` : ''}
+				${when(hasPagination, () => html`<div class="spectrum-CoachMark-step"><bdo dir="ltr">2 of 8</bdo></div>`)}
 				${ButtonGroup({
-					customClasses: globals.scale === "large" ? [`${rootClass}-buttongroup--mobile`] : [`${rootClass}-buttongroup`],
-					size: globals.scale === "large" ? "s" : "m",
-					items: globals.scale === "large" ?
-					[
+					customClasses: scale === "large" ? [`${rootClass}-buttongroup--mobile`] : [`${rootClass}-buttongroup`],
+					size: scale === "large" ? "s" : "m",
+					items: scale === "large" ? [
 						{
 							variant: "secondary",
 							treatment: "outline",
@@ -92,9 +89,7 @@ export const Template = ({
 							treatment: "outline",
 							label: "Next",
 						},
-					]
-					:
-					[
+					] : [
 						{
 							variant: "secondary",
 							treatment: "outline",

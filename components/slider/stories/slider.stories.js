@@ -1,4 +1,3 @@
-// Import the component markup template
 import { Template } from "./template";
 
 export default {
@@ -120,7 +119,17 @@ export default {
 		isDisabled: false,
 		isFocused: false,
 		showTicks: false,
-		labelPosition: "top"
+		labelPosition: "top",
+		label: "Slider label",
+		size: "m",
+		min: 10,
+		max: 20,
+		values: [14],
+		step: 2,
+		id: "spectrum-Slider",
+		customStorybookStyles: {
+			display: undefined,
+		},
 	},
 	parameters: {
 		actions: {
@@ -132,70 +141,54 @@ export default {
 		status: {
 			type: process.env.MIGRATED_PACKAGES.includes("slider")
 				? "migrated"
-				: undefined,
+				: "legacy",
 		},
 	},
 };
 
 export const Default = Template.bind({});
-Default.args = {
-	label: "Slider label",
-	size: "m",
-	min: 10,
-	max: 20,
-	values: [14],
-	step: 2,
-	id: "spectrum-Slider",
-};
+Default.args = {};
 
 export const Filled = Template.bind({});
 Filled.args = {
-	...Default.args,
 	variant: "filled",
 };
 
 export const FilledOffset = Template.bind({});
 FilledOffset.args = {
-	...Default.args,
 	min: 0,
 	variant: "offset",
 };
 
 export const Ramp = Template.bind({});
 Ramp.args = {
-	...Default.args,
 	variant: "ramp",
 };
 
 export const Range = Template.bind({});
 Range.args = {
-	...Default.args,
 	values: [14, 16],
 };
 
 export const Tick = Template.bind({});
 Tick.args = {
-	...Default.args,
 	label: undefined,
 	showTicks: true,
 };
 
 export const Disabled = Template.bind({});
 Disabled.args = {
-	...Default.args,
 	isDisabled: true,
 };
 
 export const WithFocus = Template.bind({});
 WithFocus.args = {
-	...Default.args,
 	variant: "with focus",
 	isFocused: true,
 };
 
 export const Gradient = Template.bind({});
 Gradient.args = {
-	...Default.args,
 	style: {
 		"--spectrum-slider-track-color":
 			"linear-gradient(to right, red, green 100%)",
@@ -207,6 +200,8 @@ Gradient.args = {
 
 export const SideLabel = Template.bind({});
 SideLabel.args = {
-	...Default.args,
 	labelPosition: "side",
 };
+
+export const Express = Template.bind({});
+Express.args = { express: true };

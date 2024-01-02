@@ -1,6 +1,4 @@
 import { html } from "lit";
-import { ifDefined } from "lit/directives/if-defined.js";
-import { styleMap } from "lit/directives/style-map.js";
 
 import { Template } from "./template";
 
@@ -97,43 +95,23 @@ export const argTypes = {
 	},
 };
 
-export const ActionButtons = ({
-	staticColor,
-	...args
-}) => {
-	return html`
-		<div
-      		style=${ifDefined(styleMap({
-				padding: "1rem",
-				backgroundColor: staticColor === "white" ? "rgb(15, 121, 125)" : staticColor === "black" ? "rgb(181, 209, 211)" : undefined,
-			}))}
-		>
-			${Template({
-				...args,
-				staticColor,
-				label: "More",
-				iconName: undefined,
-			})}
-			${Template({
-				...args,
-				staticColor,
-				label: "More",
-			})}
-			${Template({
-				...args,
-				staticColor,
-			})}
-			${Template({
-				...args,
-				staticColor,
-				hasPopup: true,
-			})}
-			${Template({
-				...args,
-				staticColor,
-				label: "More and this text should truncate",
-				customStyles: { "max-inline-size": "100px"},
-			})}
-		</div>
-	`;
-};
+export const ActionButtons = (args) => html`
+	${Template({
+		...args,
+		label: "More",
+		iconName: undefined,
+	})}
+	${Template({
+		...args,
+		label: "More",
+	})}
+	${Template(args)}
+	${Template({
+		...args,
+		hasPopup: true,
+	})}
+	${Template({
+		...args,
+		label: "More and this text should truncate",
+		customStyles: { maxInlineSize: "100px" },
+	})}`;

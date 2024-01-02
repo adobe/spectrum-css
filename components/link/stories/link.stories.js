@@ -1,4 +1,3 @@
-// Import the component markup template
 import { Template } from "./template";
 
 export default {
@@ -7,6 +6,8 @@ export default {
 		"A link allow users to navigate to a different location. They can be presented in-line inside a paragraph or as a standalone text.",
 	component: "Link",
 	argTypes: {
+		/* No theme styles for express available */
+		express: { table: { disable: true } },
 		url: {
 			name: "URL",
 			type: { name: "string", required: true },
@@ -16,7 +17,7 @@ export default {
 			},
 			control: "url",
 		},
-		text: {
+		content: {
 			name: "Text",
 			type: { name: "string", required: true },
 			table: {
@@ -58,7 +59,7 @@ export default {
 	args: {
 		rootClass: "spectrum-Link",
 		url: "https://www.adobe.com",
-		text: "Link using spectrum-Link",
+		content: "Link using spectrum-Link",
 		isQuiet: false,
 	},
 	parameters: {
@@ -68,7 +69,7 @@ export default {
 		status: {
 			type: process.env.MIGRATED_PACKAGES.includes("link")
 				? "migrated"
-				: undefined,
+				: "legacy",
 		},
 	},
 };

@@ -1,7 +1,7 @@
-// Import the component markup template
 import { Template } from "./template";
 
 import { default as TagStories } from "@spectrum-css/tag/stories/tag.stories.js";
+
 const ignoreProps = ["rootClass", "hasClearButton", "label"];
 
 export default {
@@ -37,19 +37,23 @@ export default {
 			},
 			control: "boolean",
 		},
-		customStyles: {
-			description: "Custom styles for testing the story, applied to the parent element.",
-			table: {
-				type: { summary: "object" },
-				category: "Storybook Only",
-			},
-			if: { arg: 'customStyles' }
-		}
 	},
 	args: {
 		rootClass: "spectrum-TagGroup",
 		ariaLabel: "Tags",
 		isRemovable: false,
+		size: "l",
+		items: [
+			{
+				label: "Tag 1",
+			},
+			{
+				label: "Tag 2",
+			},
+			{
+				label: "Tag 3",
+			},
+		],
 	},
 	parameters: {
 		actions: {
@@ -58,43 +62,18 @@ export default {
 		status: {
 			type: process.env.MIGRATED_PACKAGES.includes("taggroup")
 				? "migrated"
-				: undefined,
+				: "legacy",
 		},
 	},
 };
 
 export const Default = Template.bind({});
-Default.args = {
-	size: "l",
-	items: [
-		{
-			label: "Tag 1",
-		},
-		{
-			label: "Tag 1",
-		},
-		{
-			label: "Tag 3",
-		},
-	],
-};
+Default.args = {};
 
 export const Removable = Template.bind({});
 Removable.args = {
-	size: "l",
 	isRemovable: true,
 	isEmphasized: true,
-	items: [
-		{
-			label: "Tag 1",
-		},
-		{
-			label: "Tag 2",
-		},
-		{
-			label: "Tag 3",
-		},
-	],
 };
 
 export const OverflowItems = Template.bind({});
@@ -113,13 +92,13 @@ OverflowItems.args = {
 	customStyles: {'max-width': '300px'},
 	items: [
 		{
-			label: "Tag 1 Example",
+			label: "Tag 1 example",
 		},
 		{
-			label: "Tag 2 Example",
+			label: "Tag 2 example",
 		},
 		{
-			label: "Tag 3 Example",
+			label: "Tag 3 example",
 		},
 		{
 			label: "Tag 4",

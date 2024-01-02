@@ -69,7 +69,7 @@ export const Template = ({
 				Icon({
 					...globals,
 					size,
-					iconName: "CornerTriangle100",
+					uiIconName: "CornerTriangle",
 					customClasses: [`${rootClass}-hold`],
 				})
 			)}

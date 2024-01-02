@@ -6,6 +6,8 @@ export default {
 		"A swatch shows a small sample of a fill&emdash;such as a color, gradient, texture, or material&emdash;that is intended to be applied to an object.",
 	component: "Swatch",
 	argTypes: {
+		/* No theme styles for express available */
+		express: { table: { disable: true } },
 		size: {
 			name: "Size",
 			type: { name: "string", required: true },

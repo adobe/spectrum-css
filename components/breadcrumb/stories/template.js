@@ -15,15 +15,6 @@ export const Template = ({
 	isDragged = false,
 	...globals
 }) => {
-	const { express } = globals;
-
-	try {
-		if (!express) import(/* webpackPrefetch: true */ "../themes/spectrum.css");
-		else import(/* webpackPrefetch: true */ "../themes/express.css");
-	} catch (e) {
-		console.warn(e);
-	}
-
 	return html`
 		<nav>
 			<ul
@@ -73,7 +64,7 @@ export const Template = ({
 						${when(idx !== arr.length - 1, () =>
 							Icon({
 								...globals,
-								iconName: "ChevronRight100",
+								uiIconName: "ChevronRight",
 								customClasses: [`${rootClass}-itemSeparator`],
 							})
 						)}

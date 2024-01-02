@@ -1,9 +1,8 @@
-// More on args: https://storybook.js.org/docs/web-components/writing-stories/args
+import { html } from "lit";
+import { when } from "lit/directives/when.js";
 
-// Uncomment if you plan to include an icon
-// import { default as IconStories } from '@spectrum-css/icon/stories/icon.stories.js';
+import isChromatic from "chromatic/isChromatic";
 
-// Import the component markup template
 import { Template } from "./template";
 
 export default {
@@ -20,7 +19,7 @@ export default {
 			type: { name: "string", required: true },
 			table: {
 				type: { summary: "string" },
-				category: "Component",
+				category: "Content",
 			},
 			control: "text",
 		},
@@ -36,7 +35,12 @@ export default {
 		},
 	},
 	args: {
-		rootClass: "spectrum-Toast"
+		rootClass: "spectrum-Toast",
+		message: "File has been archived",
+		inlineButtonLabel: "Undo",
+		customStorybookStyles: {
+			alignItems: "flex-start"
+		},
 	},
 	parameters: {
 		actions: {
@@ -45,34 +49,35 @@ export default {
 		status: {
 			type: process.env.MIGRATED_PACKAGES.includes("toast")
 				? "migrated"
-				: undefined,
+				: "legacy",
 		},
 	},
 };
 
-export const Default = Template.bind({});
-Default.args = {
-	message: "File has been archived",
-	inlineButtonLabel: "Undo",
-};
+const Toasts = (args) => html`
+	${Template(args)}
+	${when(isChromatic(), () => Template({
+		...args,
+		variant: "info",
+		message: "A new version of Lightroom Classic is now available",
+		inlineButtonLabel: "Update",
+	}))}
+	${when(isChromatic(), () => Template({
+		...args,
+		variant: "positive",
+		message: "Copied to clipboard",
+		inlineButtonLabel: "Eject",
+	}))}
+	${when(isChromatic(), () => Template({
+		...args,
+		variant: "negative",
+		message: "Unable to delete file",
+		inlineButtonLabel: "Eject",
+	}))}
+`;
 
-export const Info = Template.bind({});
-Info.args = {
-	variant: "info",
-	message: "A new version of Lightroom Classic is now available",
-	inlineButtonLabel: "Update",
-};
+export const Default = Toasts.bind({});
+Default.args = {};
 
-export const Negative = Template.bind({});
-Negative.args = {
-	variant: "negative",
-	message: "Unable to delete file",
-	inlineButtonLabel: "Eject",
-};
-
-export const Positive = Template.bind({});
-Positive.args = {
-	variant: "positive",
-	message: "Copied to clipboard",
-	inlineButtonLabel: "Eject",
-};
+export const Express = Toasts.bind({});
+Express.args = { express: true };

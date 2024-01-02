@@ -1,5 +1,7 @@
 import isChromatic from "chromatic/isChromatic";
+
 import { html } from "lit";
+
 import { Template } from "./template";
 
 export default {
@@ -81,7 +83,11 @@ export default {
 		isKeyboardFocused: false,
 		isInvalid: false,
 		isDisabled: false,
-		hideStepper: false
+		hideStepper: false,
+		customStorybookStyles: {
+			flexDirection: "column",
+			alignItems: "flex-start",
+		},
 	},
 	parameters: {
 		actions: {
@@ -90,24 +96,113 @@ export default {
 		status: {
 			type: process.env.MIGRATED_PACKAGES.includes("stepper")
 				? "migrated"
-				: undefined,
+				: "legacy",
 		},
 	},
 };
 
-export const Default = ({
-	...args
-}) => {
-	return html`
-		<div>
-			${Template({
-				...args
-			})}
+const chromaticKitchenSink = (args) => html`
+	${Template(args)}
+	${Template({
+		...args,
+		isFocused: true,
+	})}
+	${Template({
+		...args,
+		isKeyboardFocused: true,
+	})}
+	${Template({
+		...args,
+		isInvalid: true,
+	})}
+	${Template({
+		...args,
+		isInvalid: true,
+		isFocused: true,
+	})}
+	${Template({
+		...args,
+		isInvalid: true,
+		isKeyboardFocused: true,
+	})}
+	${Template({
+		...args,
+		isDisabled: true,
+	})}
+	${Template({
+		...args,
+		isQuiet: true,
+	})}
+	${Template({
+		...args,
+		isQuiet: true,
+		isFocused: true,
+	})}
+	${Template({
+		...args,
+		isQuiet: true,
+		isKeyboardFocused: true,
+	})}
+	${Template({
+		...args,
+		isQuiet: true,
+		isInvalid: true,
+	})}
+	${Template({
+		...args,
+		isQuiet: true,
+		isInvalid: true,
+		isFocused: true,
+	})}
+	${Template({
+		...args,
+		isQuiet: true,
+		isInvalid: true,
+		isKeyboardFocused: true,
+	})}
+	${Template({
+		...args,
+		isQuiet: true,
+		isDisabled: true,
+	})}
+	${Template({
+		...args,
+		hideStepper: true,
+	})}
+	${Template({
+		...args,
+		hideStepper: true,
+		isFocused: true,
+	})}
+	${Template({
+		...args,
+		hideStepper: true,
+		isKeyboardFocused: true,
+	})}
+	${Template({
+		...args,
+		hideStepper: true,
+		isInvalid: true,
+	})}
+	${Template({
+		...args,
+		hideStepper: true,
+		isInvalid: true,
+		isFocused: true,
+	})}
+	${Template({
+		...args,
+		hideStepper: true,
+		isInvalid: true,
+		isKeyboardFocused: true,
+	})}
+	${Template({
+		...args,
+		hideStepper: true,
+		isDisabled: true,
+	})}`;
 
-			${isChromatic() ? chromaticKitchenSink(args) : null}
-		</div>
-	`;
-};
+export const Default = (args) => isChromatic() ? chromaticKitchenSink(args) : Template(args);
 Default.args = {};
 
 export const HideStepper = Template.bind({});
@@ -115,143 +210,5 @@ HideStepper.args = {
 	hideStepper: true,
 };
 
-const chromaticKitchenSink = (args) => html`
-	<div style="padding: 8px 0">
-		${Template({
-			...args,
-			isFocused: true,
-		})}
-	</div>
-	<div style="padding: 8px 0">
-		${Template({
-			...args,
-			isKeyboardFocused: true,
-		})}
-	</div>
-	<div style="padding: 8px 0">
-		${Template({
-			...args,
-			isInvalid: true,
-		})}
-	</div>
-	<div style="padding: 8px 0">
-		${Template({
-			...args,
-			isInvalid: true,
-			isFocused: true,
-		})}
-	</div>
-	<div style="padding: 8px 0">
-		${Template({
-			...args,
-			isInvalid: true,
-			isKeyboardFocused: true,
-		})}
-	</div>
-	<div style="padding: 8px 0">
-		${Template({
-			...args,
-			isDisabled: true,
-		})}
-	</div>
-	<div style="padding: 8px 0">
-		${Template({
-			...args,
-			isQuiet: true,
-		})}
-	</div>
-	<div style="padding: 8px 0">
-		${Template({
-			...args,
-			isQuiet: true,
-			isFocused: true,
-		})}
-	</div>
-	<div style="padding: 8px 0">
-		${Template({
-			...args,
-			isQuiet: true,
-			isKeyboardFocused: true,
-		})}
-	</div>
-	<div style="padding: 8px 0">
-		${Template({
-			...args,
-			isQuiet: true,
-			isInvalid: true,
-		})}
-	</div>
-	<div style="padding: 8px 0">
-		${Template({
-			...args,
-			isQuiet: true,
-			isInvalid: true,
-			isFocused: true,
-		})}
-	</div>
-	<div style="padding: 8px 0">
-		${Template({
-			...args,
-			isQuiet: true,
-			isInvalid: true,
-			isKeyboardFocused: true,
-		})}
-	</div>
-	<div style="padding: 8px 0">
-		${Template({
-			...args,
-			isQuiet: true,
-			isDisabled: true,
-		})}
-	</div>
-	<div style="padding: 8px 0">
-		${Template({
-			...args,
-			hideStepper: true,
-		})}
-	</div>
-	<div style="padding: 8px 0">
-		${Template({
-			...args,
-			hideStepper: true,
-			isFocused: true,
-		})}
-	</div>
-	<div style="padding: 8px 0">
-		${Template({
-			...args,
-			hideStepper: true,
-			isKeyboardFocused: true,
-		})}
-	</div>
-	<div style="padding: 8px 0">
-		${Template({
-			...args,
-			hideStepper: true,
-			isInvalid: true,
-		})}
-	</div>
-	<div style="padding: 8px 0">
-		${Template({
-			...args,
-			hideStepper: true,
-			isInvalid: true,
-			isFocused: true,
-		})}
-	</div>
-	<div style="padding: 8px 0">
-		${Template({
-			...args,
-			hideStepper: true,
-			isInvalid: true,
-			isKeyboardFocused: true,
-		})}
-	</div>
-	<div style="padding: 8px 0">
-		${Template({
-			...args,
-			hideStepper: true,
-			isDisabled: true,
-		})}
-	</div>
-`;
+export const Express = Template.bind({});
+Express.args = { express: true };

@@ -1,11 +1,11 @@
-// Import the component markup template
 import { Template } from "./template";
 
 export default {
 	title: "Components/Button group",
-	description: "The Button group component is...",
-	component: "Buttongroup",
+	component: "ButtonGroup",
 	argTypes: {
+		/* No theme styles for express available */
+		express: { table: { disable: true } },
 		size: {
 			name: "Size",
 			type: { name: "string", required: true },
@@ -32,6 +32,24 @@ export default {
 		size: "m",
 		iconName: undefined,
 		vertical: false,
+		items: [
+			{
+				variant: "secondary",
+				treatment: "outline",
+				label: "No, thanks",
+			},
+			{
+				variant: "secondary",
+				treatment: "outline",
+				label: "Remind me later",
+
+			},
+			{
+				variant: "primary",
+				treatment: "fill",
+				label: "Rate now",
+			},
+		],
 	},
 	parameters: {
 		actions: {
@@ -40,51 +58,13 @@ export default {
 		status: {
 			type: process.env.MIGRATED_PACKAGES.includes("buttongroup")
 				? "migrated"
-				: undefined,
+				: "legacy",
 		},
 	},
 };
 
 export const Default = Template.bind({});
-Default.args = {
-	items: [
-		{
-			variant: "secondary",
-			treatment: "outline",
-			label: "No, thanks",
-		},
-		{
-			variant: "secondary",
-			treatment: "outline",
-			label: "Remind me later",
-
-		},
-		{
-			variant: "primary",
-			treatment: "fill",
-			label: "Rate now",
-		},
-	],
-};
+Default.args = {};
 
 export const Vertical = Template.bind({});
-Vertical.args = {
-	vertical: true,
-	items: [
-		{
-			variant: "secondary",
-			treatment: "outline",
-			label: "No, thanks",
-		},
-		{
-			variant: "secondary",
-			treatment: "outline",
-			label: "Remind me later",
-		},
-		{
-			variant: "primary",
-			treatment: "fill",
-			label: "Rate now",
-		},
-	],
-};
+Vertical.args = { vertical: true };

@@ -1,7 +1,26 @@
-// Import the component markup template
-import { Template } from "./template";
+import path from "path";
 
-import { uiIcons, workflowIcons } from "./utilities.js";
+// Imports an array of all icon names in the workflow set
+import iconOpts from "@adobe/spectrum-css-workflow-icons";
+
+const workflowIcons = (iconOpts || []).map((icon) =>
+	path.basename(icon, ".svg")
+);
+
+const uiIcons = [
+	"Arrow",
+	"Asterisk",
+	"Checkmark",
+	"Chevron",
+	"CornerTriangle",
+	"Cross",
+	"Dash",
+	"SingleGripper",
+	"DoubleGripper",
+	"TripleGripper",
+];
+
+import { Template } from "./template";
 
 export default {
 	title: "Components/Icon",
@@ -73,19 +92,29 @@ export default {
 			},
 			control: "color",
 		},
-		useRef: { table: { disable: true } },
+		useRef: {
+			name: "Use reference instead of inline SVG",
+			type: { name: "boolean" },
+			table: {
+				type: { summary: "boolean" },
+				category: "Advanced",
+			},
+			control: "boolean",
+		},
+		// useRef: { table: { disable: true } },
 	},
 	args: {
 		rootClass: "spectrum-Icon",
 		setName: "workflow",
 		iconName: "ABC",
 		size: "xl",
+		useRef: false,
 	},
 	parameters: {
 		status: {
 			type: process.env.MIGRATED_PACKAGES.includes("icon")
 				? "migrated"
-				: undefined,
+				: "legacy",
 		},
 	},
 };

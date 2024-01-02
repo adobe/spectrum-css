@@ -1,4 +1,3 @@
-// Import the component markup template
 import { Template } from "./template";
 
 export default {
@@ -7,6 +6,8 @@ export default {
 		"A steplist can communicate the progress of a task or workflow. It can help users understand where they are in a process and what they need to do next.",
 	component: "StepList",
 	argTypes: {
+		/* No theme styles for express available */
+		express: { table: { disable: true } },
 		isSmall: {
 			name: "Small",
 			description:
@@ -49,6 +50,26 @@ export default {
 		isSmall: false,
 		isInteractive: false,
 		withTooltip: false,
+		items: [
+			{
+				label: "Step 1",
+				isComplete: true,
+			},
+			{
+				label: "Step 2",
+				isComplete: true,
+			},
+			{
+				label: "Step 3",
+				isSelected: true,
+			},
+			{
+				label: "Step 4",
+			},
+		],
+		customStorybookStyles: {
+			display: undefined,
+		},
 	},
 	parameters: {
 		actions: {
@@ -57,28 +78,10 @@ export default {
 		status: {
 			type: process.env.MIGRATED_PACKAGES.includes("steplist")
 				? "migrated"
-				: undefined,
+				: "legacy",
 		},
 	},
 };
 
 export const Default = Template.bind({});
-Default.args = {
-	items: [
-		{
-			label: "Step 1",
-			isComplete: true,
-		},
-		{
-			label: "Step 2",
-			isComplete: true,
-		},
-		{
-			label: "Step 3",
-			isSelected: true,
-		},
-		{
-			label: "Step 4",
-		},
-	],
-};
+Default.args = {};

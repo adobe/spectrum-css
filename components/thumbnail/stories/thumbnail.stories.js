@@ -1,4 +1,3 @@
-// Import the component markup template
 import { Template } from "./template";
 
 export default {
@@ -7,6 +6,8 @@ export default {
 		"A thumbnail is used to display a preview of an image, layer, or effect.",
 	component: "Thumbnail",
 	argTypes: {
+		/* No theme styles for express available */
+		express: { table: { disable: true } },
 		reduceMotion: { table: { disable: true } },
 		size: {
 			name: "Size",
@@ -129,7 +130,7 @@ export default {
 		status: {
 			type: process.env.MIGRATED_PACKAGES.includes("thumbnail")
 				? "migrated"
-				: undefined,
+				: "legacy",
 		},
 	},
 };

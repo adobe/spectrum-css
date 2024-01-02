@@ -1,4 +1,3 @@
-// Import the component markup template
 import { Template } from "./template";
 
 export default {
@@ -7,6 +6,8 @@ export default {
 		"Help text provides either an informative description or an error message that gives more context about what a user needs to input. It’s commonly used in forms.",
 	component: "HelpText",
 	argTypes: {
+		/* No theme styles for express available */
+		express: { table: { disable: true } },
 		reducedMotion: { table: { disable: true } },
 		text: {
 			name: "Text",
@@ -84,7 +85,7 @@ export default {
 		status: {
 			type: process.env.MIGRATED_PACKAGES.includes("helptext")
 				? "migrated"
-				: undefined,
+				: "legacy",
 		},
 	},
 };

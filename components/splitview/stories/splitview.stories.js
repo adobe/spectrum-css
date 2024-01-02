@@ -1,13 +1,13 @@
 import { within } from '@storybook/testing-library';
 
-// Import the component markup template
 import { Template } from "./template";
 
 export default {
 	title: "Components/Split view",
-	description: "The Splitview component is...",
-	component: "Splitview",
+	component: "SplitView",
 	argTypes: {
+		/* No theme styles for express available */
+		express: { table: { disable: true } },
 		orientation: {
 			name: "Orientation",
 			type: { name: "string" },
@@ -70,6 +70,9 @@ export default {
 		rootClass: "spectrum-SplitView",
 		isResizable: false,
 		componentHeight: "200px",
+		customStorybookStyles: {
+			display: undefined,
+		},
 	},
 	parameters: {
 		actions: {
@@ -78,7 +81,7 @@ export default {
 		status: {
 			type: process.env.MIGRATED_PACKAGES.includes("splitview")
 				? "migrated"
-				: undefined,
+				: "legacy",
 		},
 	},
 };

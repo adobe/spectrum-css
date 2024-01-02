@@ -1,4 +1,3 @@
-// Import the component markup template
 import { html } from "lit";
 import { Template } from "./template";
 
@@ -10,6 +9,8 @@ export default {
 		"A badge element displays a small amount of color-categorized metadata; ideal for getting a user's attention.",
 	component: "Badge",
 	argTypes: {
+		/* No theme styles for express available */
+		express: { table: { disable: true } },
 		size: {
 			name: "Size",
 			type: { name: "string", required: true },
@@ -66,7 +67,11 @@ export default {
 		variant: "neutral",
 		iconName: "Info",
 		label: "Badge",
-		fixed: "none"
+		fixed: "none",
+		customStorybookStyles: {
+			display: undefined,
+			padding: "1rem"
+		}
 	},
 	parameters: {
 		actions: {
@@ -75,37 +80,29 @@ export default {
 		status: {
 			type: process.env.MIGRATED_PACKAGES.includes("badge")
 				? "migrated"
-				: undefined,
+				: "legacy",
 		},
 	},
 };
 
-const BadgeGroup = ({
-	customStyles = {},
-	...args
-}) => {
-	return html`
-		<div style="padding: 1rem">
-			${Template({
-				...args,
-				iconName: undefined,
-			})}
-			${Template({
-				...args,
-			})}
-			${Template({
-				...args,
-				label: undefined,
-			})}
-			${Template({
-				...args,
-				label: "24 days left in trial",
-				customStyles: { "max-inline-size": "100px" },
-			})}
-		</div>
-	`;
-};
+const BadgeGroup = (args) => html`
+	${Template({
+		...args,
+		iconName: undefined,
+	})}
+	${Template({
+		...args,
+	})}
+	${Template({
+		...args,
+		label: undefined,
+	})}
+	${Template({
+		...args,
+		label: "24 days left in trial",
+		customStyles: { "max-inline-size": "100px" },
+	})}
+`;
 
 export const Default = BadgeGroup.bind({});
-Default.args = {
-};
+Default.args = {};

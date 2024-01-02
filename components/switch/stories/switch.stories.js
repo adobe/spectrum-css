@@ -1,4 +1,3 @@
-// Import the component markup template
 import { Template } from "./template";
 
 export default {
@@ -69,7 +68,7 @@ export default {
 		status: {
 			type: process.env.MIGRATED_PACKAGES.includes("switch")
 				? "migrated"
-				: undefined,
+				: "legacy",
 		},
 	},
 };
@@ -93,3 +92,6 @@ export const Disabled = Template.bind({});
 Disabled.args = {
 	isDisabled: true
 };
+
+export const Express = Template.bind({});
+Express.args = { express: true };

@@ -1,4 +1,3 @@
-// Import the component markup template
 import { Template } from "./template";
 
 import { default as ActionButton } from "@spectrum-css/actionbutton/stories/actionbutton.stories.js";
@@ -10,6 +9,8 @@ export default {
 		"The coach mark component can be used to bring added attention to specific parts of a page.",
 	component: "CoachMark",
 	argTypes: {
+		/* No theme styles for express available */
+		express: { table: { disable: true } },
 		hasActionMenu: {
 			name: "ActionMenu",
 			type: { name: "boolean" },
@@ -43,6 +44,9 @@ export default {
 		hasActionMenu: true,
 		hasPagination: true,
 		hasImage: false,
+		customStorybookStyles: {
+			display: "block"
+		},
 	},
 	parameters: {
 		actions: {
@@ -54,8 +58,9 @@ export default {
 		status: {
 			type: process.env.MIGRATED_PACKAGES.includes("coachmark")
 				? "migrated"
-				: undefined,
+				: "legacy",
 		},
+		chromatic: { delay: 2000 },
 	},
 };
 

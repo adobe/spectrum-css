@@ -1,4 +1,3 @@
-// Import the component markup template
 import { html } from "lit";
 import { Template } from "./template";
 
@@ -92,6 +91,12 @@ export default {
 		isIndeterminate: false,
 		isInvalid: false,
 		isReadOnly: false,
+		id: "default-checkbox",
+		customStorybookStyles: {
+			flexDirection: "column",
+			gap: undefined,
+			padding: "1rem",
+		}
 	},
 	parameters: {
 		actions: {
@@ -100,44 +105,43 @@ export default {
 		status: {
 			type: process.env.MIGRATED_PACKAGES.includes("checkbox")
 				? "migrated"
-				: undefined,
+				: "legacy",
 		},
 	},
 };
 
-const CheckboxGroup = ({
-	customStyles = {},
-	isChecked = false,
-	...args
-}) => {
-	return html`
-		<div style="display: flex; flex-direction: column; padding: 1rem">
-			${Template({
-				...args,
-				iconName: undefined,
-			})}
-			${Template({
-				...args,
-				isChecked: true,
-			})}
-			${Template({
-				...args,
-				isIndeterminate: true,
-			})}
-				${Template({
-				...args,
-				isDisabled: true,
-			})}
-			${Template({
-				...args,
-				label: "Checkbox with wrapping label text",
-				customStyles: { "max-inline-size": "100px" },
-			})}
-		</div>
-	`;
-};
+const CheckboxGroup = (args) => html`
+	${Template({
+		...args,
+		iconName: undefined,
+		label: "Unchecked",
+	})}
+	${Template({
+		...args,
+		isChecked: true,
+		label: "Checked",
+	})}
+	${Template({
+		...args,
+		isIndeterminate: true,
+		label: "Indeterminate",
+	})}
+		${Template({
+		...args,
+		isDisabled: true,
+		label: "Disabled",
+	})}
+	${Template({
+		...args,
+		label: "Overflow label text",
+		customStyles: {
+			...args.customStyles ?? {},
+			"max-inline-size": "100px",
+		},
+	})}`;
 
 export const Default = CheckboxGroup.bind({});
-Default.args = {
-	id: "default-checkbox",
-};
+Default.args = {};
+
+export const Express = CheckboxGroup.bind({});
+Express.args = { express: true };

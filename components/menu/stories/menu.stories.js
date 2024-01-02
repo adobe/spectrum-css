@@ -1,4 +1,5 @@
-// Import the component markup template
+import isChromatic from "chromatic/isChromatic";
+
 import { Template } from "./template";
 
 export default {
@@ -7,6 +8,8 @@ export default {
     "A menu is used for creating a menu list. The various elements inside a menu can be: a menu group, a menu item, or a menu divider. Often a menu will appear in a popover so that it displays as a togglig menu.",
   component: "Menu",
   argTypes: {
+		/* No theme styles for express available */
+		express: { table: { disable: true } },
     selectionMode: {
       name: "Selection Mode",
       type: { name: "boolean" },
@@ -47,13 +50,23 @@ export default {
     items: { table: { disable: true } },
     role: { table: { disable: true } },
     subrole: { table: { disable: true } },
+    customTrayStyles: { table: { disable: true } },
   },
   args: {
     rootClass: "spectrum-Menu",
     selectionMode: "none",
     size: "m",
     shouldTruncate: false,
-    maxInlineSize: "150px"
+    maxInlineSize: "150px",
+    items: [
+      { label: "Deselect" },
+      { label: "Select Inverse" },
+      { label: "Feather..." },
+      { label: "Select and Mask..." },
+      { type: "divider" },
+      { label: "Save Selection" },
+      { label: "Make Work Path", isDisabled: true },
+    ],
   },
   parameters: {
     actions: {
@@ -62,24 +75,14 @@ export default {
     status: {
       type: process.env.MIGRATED_PACKAGES.includes("menu")
         ? "migrated"
-        : undefined,
+        : "legacy",
     },
   },
 };
 
 export const Default = Template.bind({});
-Default.storyName = "Standard with Dividers";
-Default.args = {
-  items: [
-    { label: "Deselect" },
-    { label: "Select Inverse" },
-    { label: "Feather" },
-    { label: "Select and Mask" },
-    { type: "divider" },
-    { label: "Save Selection" },
-    { label: "Make Work Path", isDisabled: true },
-  ],
-};
+Default.storyName = "Standard with dividers";
+Default.args = {};
 
 export const Truncate = Template.bind({});
 Truncate.args = {
@@ -100,7 +103,7 @@ export const MenuWithSections = Template.bind({});
 MenuWithSections.args = {
   items: [
     {
-      heading: "Section Heading",
+      heading: "Section heading",
       idx: 1,
       items: [
         { label: "Action 1" },
@@ -110,7 +113,7 @@ MenuWithSections.args = {
     },
     { type: "divider" },
     {
-      heading: "Section Heading",
+      heading: "Section heading",
       idx: 2,
       items: [
         { label: "Edit", iconName: "Edit" },
@@ -170,24 +173,24 @@ IconsAndDescriptions.args = {
   items: [
     {
       idx: 1,
-      heading: "With Icons",
+      heading: "With icons",
       id: "menu-heading-with-icons",
       items: [
         {
-          label: "Default Menu Item",
+          label: "Default menu item",
           iconName: "Export"
         },
         {
-          label: "Focused Menu Item",
+          label: "Focused menu item",
           iconName: "FolderOpen",
           isFocused: true
         },
         {
-          label: "A Menu Item With a Longer Label That Causes The Text to Wrap to The Next Line",
+          label: "A menu item with a longer label that causes the text to wrap to the next line",
           iconName: "Share",
         },
         {
-          label: "Disabled Menu Item",
+          label: "Disabled menu item",
           iconName: "Share",
           isDisabled: true,
         },
@@ -195,24 +198,24 @@ IconsAndDescriptions.args = {
     },
     {
       idx: 2,
-      heading: "With Short Descriptions",
+      heading: "With short descriptions",
       id: "menu-heading-short-desc",
       items: [
         {
-          label: "Default Menu Item",
+          label: "Default menu item",
           description: "Short description",
         },
         {
-          label: "Focused Menu Item",
+          label: "Focused menu item",
           description: "Another short description",
           isFocused: true,
         },
         {
-          label: "A Menu Item With a Longer Label That Causes The Text to Wrap to The Next Line",
+          label: "A menu item with a longer label that causes the text to wrap to the next line",
           description: "A description that is longer than average and is forced to wrap with an example max width.",
         },
         {
-          label: "Disabled Menu Item",
+          label: "Disabled menu item",
           description: "Menu item description.",
           isDisabled: true,
         },
@@ -220,27 +223,27 @@ IconsAndDescriptions.args = {
     },
     {
       idx: 3,
-      heading: "With Icons and Short Descriptions",
+      heading: "With icons and short descriptions",
       id: "menu-heading-desc-and-icon",
       items: [
         {
-          label: "Default Menu Item",
+          label: "Default menu item",
           iconName: "Export",
           description: "Short description",
         },
         {
-          label: "Focused Menu Item",
+          label: "Focused menu item",
           iconName: "FolderOpen",
           description: "Another short description",
           isFocused: true,
         },
         {
-          label: "A Menu Item With a Longer Label That Causes The Text to Wrap to The Next Line",
+          label: "A menu item with a longer label that causes the text to wrap to the next line",
           iconName: "Share",
           description: "A description that is longer than average and is forced to wrap with an example max width.",
         },
         {
-          label: "Disabled Menu Item",
+          label: "Disabled menu item",
           iconName: "Share",
           description: "Menu item description.",
           isDisabled: true,
@@ -476,4 +479,13 @@ TraySubmenu.args = {
       ]
     }
   ],
+  customTrayStyles: {
+    alignItems: "end",
+    position: isChromatic() ? "relative" : undefined,
+    blockSize: isChromatic() ? "400px" : undefined,
+  },
+  customStorybookStyles: isChromatic() ? {
+    blockSize: "400px",
+    inlineSize: "400px",
+  } : {},
 };

@@ -1,12 +1,14 @@
-// Import the component markup template
-import { default as Radio } from "@spectrum-css/radio/stories/radio.stories.js";
 import { Template } from "./template";
+
+import { default as Radio } from "@spectrum-css/radio/stories/radio.stories.js";
 
 export default {
 	title: "Components/Field group",
 	description: "The Field group component is...",
 	component: "Fieldgroup",
 	argTypes: {
+		/* No theme styles for express available */
+		express: { table: { disable: true } },
 		layout: {
 			name: "Layout",
 			type: { name: "string", required: true },
@@ -50,7 +52,7 @@ export default {
 		status: {
 			type: process.env.MIGRATED_PACKAGES.includes("fieldgroup")
 				? "migrated"
-				: undefined,
+				: "legacy",
 		},
 	},
 };

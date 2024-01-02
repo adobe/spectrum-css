@@ -1,6 +1,6 @@
-const { resolve } = require("path");
-const { readdirSync } = require("fs");
-const componentsPath = resolve(__dirname, "../components");
+const { join } = require("path");
+const { existsSync, readdirSync } = require("fs");
+const componentsPath = join(__dirname, "../components");
 const componentPkgs = readdirSync(componentsPath, {
 	withFileTypes: true,
 })
@@ -28,12 +28,14 @@ module.exports = {
 		},
 		// https://github.com/storybookjs/storybook/tree/next/code/addons/a11y
 		"@storybook/addon-a11y",
+		// https://github.com/storybookjs/storybook/tree/next/code/addons/actions
+		"@storybook/addon-actions",
+		// https://github.com/storybookjs/storybook/tree/next/code/addons/interactions
+		"@storybook/addon-interactions",
 		// https://www.npmjs.com/package/@whitespace/storybook-addon-html
 		"@whitespace/storybook-addon-html",
 		// https://storybook.js.org/addons/@etchteam/storybook-addon-status
 		"@etchteam/storybook-addon-status",
-		// https://github.com/storybookjs/storybook/tree/next/code/addons/interactions
-		"@storybook/addon-interactions",
 		// https://www.chromatic.com/docs/visual-testing-addon/
 		"@chromaui/addon-visual-tests",
 	],
@@ -42,14 +44,30 @@ module.exports = {
 	},
 	env: {
 		MIGRATED_PACKAGES: componentPkgs.filter((dir) => {
-			const pkg = require(resolve(componentsPath, dir, "package.json"));
-			if (
-				pkg.devDependencies &&
-				pkg.devDependencies["@spectrum-css/component-builder-simple"]
-			) {
-				return true;
+			if (!existsSync(join(componentsPath, dir, "package.json"))) {
+				return false;
 			}
-			return false;
+
+			const {
+				peerDependencies = {},
+				devDependencies = {},
+				dependencies = {}
+			} = require(join(componentsPath, dir, "package.json"));
+
+			const allDeps = [...new Set([
+				...Object.keys(dependencies),
+				...Object.keys(devDependencies),
+				...Object.keys(peerDependencies),
+			])];
+
+			if (
+				allDeps.length > 0 &&
+				allDeps.includes("@spectrum-css/vars")
+			) {
+				return false;
+			}
+
+			return true;
 		}),
 	},
 	webpackFinal: function (config) {
@@ -73,13 +91,13 @@ module.exports = {
 				...(config.resolve ? config.resolve : {}),
 				modules: [
 					...(config.resolve ? config.resolve.modules : []),
-					resolve(__dirname, "../node_modules"),
+					join(__dirname, "../node_modules"),
 				],
 				alias: {
 					...(config.resolve ? config.resolve.alias : {}),
 					...componentPkgs.reduce((pkgs, dir) => {
-						const pkg = require(resolve(componentsPath, dir, "package.json"));
-						pkgs[pkg.name] = resolve(componentsPath, dir);
+						const pkg = require(join(componentsPath, dir, "package.json"));
+						pkgs[pkg.name] = join(componentsPath, dir);
 						return pkgs;
 					}, {}),
 				},
@@ -132,8 +150,9 @@ module.exports = {
 								options: {
 									implementation: require("postcss"),
 									postcssOptions: {
-										config: resolve(__dirname, "postcss.config.js"),
+										config: join(__dirname, "postcss.config.js"),
 									},
+									sourceMap: true,
 								},
 							},
 						],
@@ -153,7 +172,6 @@ module.exports = {
 	},
 	framework: {
 		name: "@storybook/web-components-webpack5",
-		options: {},
 	},
 	features: {
 		/* Code splitting flag; load stories on-demand */
@@ -161,13 +179,6 @@ module.exports = {
 		/* Builds stories.json to help with on-demand loading */
 		buildStoriesJson: true,
 	},
-	// refs: {
-	//   'swc': {
-	//     title: 'Spectrum Web Components',
-	//     url: 'https://opensource.adobe.com/spectrum-web-components/storybook/',
-	//     expanded: false,
-	//   },
-	// },
 	docs: {
 		autodocs: true, // see below for alternatives
 		defaultName: "Docs", // set to change the name of generated docs entries

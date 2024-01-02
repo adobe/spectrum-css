@@ -1,4 +1,3 @@
-// Import the component markup template
 import { Template } from "./template";
 
 export default {
@@ -6,6 +5,8 @@ export default {
 	description: "A dial is an input control used for selecting a value within a range, similar to a slider. It's often used in audio and video mixing and editing applications, where horizontal space is limited.",
 	component: "Dial",
 	argTypes: {
+		/* No theme styles for express available */
+		express: { table: { disable: true } },
 		size: {
 			name: "Size",
 			type: { name: "string", required: true },
@@ -66,18 +67,13 @@ export default {
 		status: {
 			type: process.env.MIGRATED_PACKAGES.includes("dial")
 				? "migrated"
-				: undefined,
+				: "legacy",
 		},
 	},
 };
 
 export const Default = Template.bind();
 Default.args = {};
-
-export const DefaultExpress = Template.bind();
-DefaultExpress.args = {
-  express: true,
-};
 
 export const Small = Template.bind();
 Small.args = {

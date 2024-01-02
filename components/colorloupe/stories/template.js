@@ -14,7 +14,6 @@ export const Template = ({
 		"inset-inline-start": "5px",
 	},
 	customClasses = [],
-	// ...globals
 }) => {
 	return svg`
     <svg

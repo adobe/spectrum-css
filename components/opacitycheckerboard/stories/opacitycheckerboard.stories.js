@@ -1,6 +1,3 @@
-import { html } from "lit";
-import { styleMap } from "lit/directives/style-map.js";
-
 
 import { Template } from "./template";
 
@@ -10,6 +7,8 @@ export default {
 		"Opacity checkerboard is used with other components to highlight opacity.",
 	component: "OpacityCheckerboard",
 	argTypes: {
+		/* No theme styles for express available */
+		express: { table: { disable: true } },
 		backgroundPosition: {
 			name: "Position",
 			type: { name: "string" },
@@ -22,7 +21,11 @@ export default {
 	},
 	args: {
 		rootClass: "spectrum-OpacityCheckerboard",
-		backgroundPosition: "top left"
+		backgroundPosition: "top left",
+		customStorybookStyles: {
+			inlineSize: "100px",
+			blockSize: "100px",
+		},
 	},
 	parameters: {
 		actions: {
@@ -31,12 +34,9 @@ export default {
 		status: {
 			type: process.env.MIGRATED_PACKAGES.includes("opacitycheckerboard")
 				? "migrated"
-				: undefined,
+				: "legacy",
 		},
 	},
-	decorators: [
-		(Story, context) => html`<div style=${styleMap({ inlineSize: "100px", blockSize: "100px" })}>${Story(context)}</div>`
-	],
 };
 export const Default = Template.bind({});
 Default.args = {};

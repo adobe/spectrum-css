@@ -22,7 +22,7 @@ export default {
 		status: {
 			type: process.env.MIGRATED_PACKAGES.includes("actionbutton")
 				? "migrated"
-				: undefined,
+				: "legacy",
 		},
 	},
 };

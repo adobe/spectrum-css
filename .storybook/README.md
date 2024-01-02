@@ -120,7 +120,7 @@ argTypes: {
 
 _Note:_ In your story, be sure to include the `if: false` override otherwise the control will only show up if you have a `setName` arg and it is equal to `workflow`.
 
-Want to load UI icons instead? Use the following variable import instead:
+Want to load UI icons instead? Use the following variable import instead of the above:
 
 ```js
 argTypes: {
@@ -205,6 +205,75 @@ label: {
 },
 ```
 
+### args
+
+In a story, the args object contains all the default values for the component. These values will be used to render the component in the storybook preview. The values can be overridden by the user via the controls or by setting a custom args object in a specific story.
+
+The default story should _almost_ always have any empty args object because it is, by nature, using all the default settings.
+
+```js
+export const Default = Template.bind({});
+Default.args = {};
+```
+
+Subsequent stories can override the default args object by setting a new value for the desired property. i.e.,
+
+```js
+export const Express = Template.bind({});
+Express.args = {
+  express: true
+};
+```
+
+Try to focus stories on a single property or set of properties. This will make it easier for users to find the story they are looking for and will help in debugging issues.
+
+#### customStorybookStyles
+
+All stories are wrapped in a custom decorator that applies a few standard display properties to the preview. If you need to override these styles, you can do so by adding a `customStorybookStyles` property to your args object. This should be a string of CSS rules. i.e.,
+
+```js
+args: {
+  customStorybookStyles: {
+    flexDirection: "column",
+    alignItems: "flex-start",
+  },
+},
+```
+
+The following properties are set on `#root-inner` by default:
+
+```css
+display: flex;
+gap: 10px;
+```
+
+If the display property is updated to something other than `*flex` or `*grid`, the gap property will be removed (`*flex` can equal `flex` or `inline-flex`). As long as the display property is not `contents`, the gap value will be assigned to `padding` instead.
+
+For example, if the display value is set to `block`, the following styles will be applied:
+
+```css
+display: block;
+padding: 10px;
+```
+
+Leveraging an argType in your component that matches `staticColor` with allowed values of `white` or `black` will automatically set the background color of the preview to an appropriate value (white will use `rgb(15, 121, 125)`; black will use `rgb(181, 209, 211)`). If you need to override this value, you can do so by setting the `customStorybookStyles` property to an object with a `backgroundColor` property. i.e.,
+
+```js
+args: {
+  customStorybookStyles: {
+    backgroundColor: "rgb(238, 14, 189)",
+  },
+},
+```
+
+Any settings added by the story will override these values. You can unset a value completely using undefined, i.e.:
+
+```js
+customStorybookStyles: {
+  display: undefined,
+},
+```
+
 ## Templates
 
 The goal of the template files is to create a definition for this component to enforce and demonstrate the allowed semantics and required classNames and settings to achieve the desired output (based on the user's selected controls).
@@ -240,6 +309,7 @@ All return values for Template functions should be outputting TemplateResults. S
 import { html } from "lit";
 import { classMap } from "lit/directives/class-map.js";
 import { ifDefined } from "lit/directives/if-defined.js";
+import { when } from "lit/directives/when.js";
 
 import { Template as Icon } from "@spectrum-css/icon/stories/template.js";
 import { Template as Avatar } from "@spectrum-css/avatar/stories/template.js";
@@ -247,7 +317,6 @@ import { Template as ClearButton } from "@spectrum-css/clearbutton/stories/templ
 
 import "../index.css";
 
-// More on component templates: https://storybook.js.org/docs/web-components/writing-stories/introduction#using-args
 export const Template = ({
  rootClass = "spectrum-Tag",
  size = "m",
@@ -272,37 +341,32 @@ export const Template = ({
   console.warn(e);
  }
 
- return html`
-  <div
-   class=${classMap({
-    [rootClass]: true,
-    [`${rootClass}--size${size?.toUpperCase()}`]:
-     typeof size !== "undefined",
-    "is-emphasized": isEmphasized,
-    "is-disabled": isDisabled,
-    "is-invalid": isInvalid,
-    "is-selected": isSelected,
-    ...customClasses.reduce((a, c) => ({ ...a, [c]: true }), {}),
-   })}
-   id=${ifDefined(id)}
-   tabindex="0"
+  return html`<div
+    class=${classMap({
+      [rootClass]: true,
+      [`${rootClass}--size${size?.toUpperCase()}`]:
+      typeof size !== "undefined",
+      "is-emphasized": isEmphasized,
+      "is-disabled": isDisabled,
+      "is-invalid": isInvalid,
+      "is-selected": isSelected,
+      ...customClasses.reduce((a, c) => ({ ...a, [c]: true }), {}),
+    })}
+    id=${ifDefined(id)}
+    tabindex="0"
   >
-   ${avatarUrl && !iconName
-    ? Avatar({
+   ${when(avatarUrl && !iconName, () => Avatar({
       ...globals,
       image: avatarUrl,
       size: "50",
-      })
-    : ""} ${iconName
-    ? Icon({
+    }))}
+    ${when(iconName, () => Icon({
       ...globals,
       iconName,
       customClasses: [`${rootClass}s-itemIcon`],
-      })
-    : ""}
+    }))}}
    <span class="${rootClass}s-itemLabel">${label}</span>
-   ${hasClearButton
-    ? ClearButton({
+   ${when(hasClearButton, () => ClearButton({
       ...globals,
       customClasses: [`${rootClass}-clearButton`],
       onclick: (evt) => {
@@ -312,10 +376,8 @@ export const Template = ({
        const wrapper = el.closest(rootClass);
        wrapper.parentNode.removeChild(wrapper);
       },
-      })
-    : ""}
-  </div>
- `;
+    }))}
+  </div>`;
 };
 ```
 
@@ -339,142 +401,5 @@ Runs will generate a JUnit XML file with build results (`chromatic-build-{buildN
 
 Running without publishing to Chromatic? Add the `--dry-run` flag. Need more information to debug a run? Try the `--diagnostics` flag (writes process context information to `chromatic-diagnostics.json`).
 
-# Migration to Storybook 7.0(Draft)
-
-## Updates
-
----
-`*` Added support for handler actions with ```withActions``` on each stories which have action handlers.
-
-Example:
-
-```js
-import globalThis from 'global';
-+ import { withActions } from '@storybook/addon-actions/decorator';
-
-export default {
-  component: globalThis.Components.Button,
-  args: {
-    label: 'Click Me!',
-  },
-  parameters: {
-    chromatic: { disable: true },
-  },
-};
-export const Basic = {
-  parameters: {
-    handles: [{ click: 'clicked', contextmenu: 'right clicked' }],
-  },
-+  decorators: [withActions],
-};
-```
-
-`*` Upgraded to ```Webpack 5``` for improved bundling and performance from ```webpack 4```
-
-`*` @storybook addons dependencies are upgraded to v7 from v6
-
-```js
-"@storybook/addon-docs": "^7.0.12",
-"@storybook/addon-essentials": "^7.0.12",
-"@storybook/api": "^7.0.12",
-"@storybook/client-api": "^7.0.12",
-"@storybook/components": "^7.0.12",
-"@storybook/core-events": "^7.0.12",
-"@storybook/manager-api": "^7.0.12",
-"@storybook/preview-api": "^7.0.12",
-"@storybook/theming": "^7.0.12",
-"@storybook/web-components-webpack5": "^7.0.12",
-"@whitespace/storybook-addon-html": "^5.1.4",
-```
-
-`*` Added a new "Controls" addon for interactive component props editing.
-
-`*` Introduced a new "Docs-only" mode for isolating component documentation.
-
-`*` Improved the addon ecosystem with new and updated addons.
-
-<br></br>
-
-## Breaking Changes
-
----
-`*` client-api is deperacted and preview-api is introduced
-
-```js
- - import { useEffect } from '@storybook/client-api';
- + import { useEffect } from '@storybook/preview-api';
-```
-
-`*` @storybook/addons is deperacted and replaced with @storybook/manager-api
-
-```js
- - import { addons } from '@storybook/addons';
- + import { addons } from '@storybook/manager-api';
-```
-
-`*` ```@storybook-webcomponents``` is deprecated. ```@storybook/web-components-webpack'``` is added with webpack 5 support.
-
-```js
- - framework: '@storybook/web-components',
- + framework: {
-    name: '@storybook/web-components-webpack5',
-    options: {
-      fastRefresh: true,
-      builder: { lazyCompilation: true },
-    },
-  },
-
-```
-
-`*` Docs is now added to every component on the sidebar with the below code in Storybook 7
-
-```js
-  docs: {
-    autodocs: true,
-    defaultName: 'Docs',
-  },
-```
-
-`*` preview.js is exported as default in Storybook 7
-
-```js
-- export const parameters = {
-- actions: { argTypesRegex: '^on[A-Z].*' },
-- };
-
-+ export default {
-+  parameters: {
-+    actions: { argTypesRegex: '^on[A-Z].*' },
-+  },
-+ };
-```
-
-## Deprecations(Addons)
-
----
-
-`*` ```"@storybook/client-api"``` is deprecated
-
-`*` ```"@storybook/addons"``` is deprecated
-
-## Bug Fixes
-
----
-`*` Fixed various issues related to performance, rendering, and compatibility.
-
-`*` Resolved problems with the Storybook UI, including layout glitches and navigation bugs.
-
-`*` Fixed bugs in calender storybook
-
-## Improvements
-
----
-`*` Improved the overall performance and stability of the Storybook development environment.
-
-`*` Enhanced the documentation with updated examples and guides.
-
-`*` Optimized the build process for faster bundling and reduced file sizes.
-
-`*` Upgraded dependencies to their latest versions for improved compatibility and security.
-
----
+<!-- @todo Document the best practices for outputting multiple template examples in one view -->
+<!-- @todo Document the best practices for chromatic-only stories and settings -->

@@ -1,12 +1,16 @@
 import isChromatic from "chromatic/isChromatic";
+
 import { html } from "lit";
+import { when } from "lit/directives/when.js";
+
 import { Template } from "./template";
 
 export default {
 	title: "Components/Status light",
-	description: "The Status light component is...",
-	component: "Statuslight",
+	component: "StatusLight",
 	argTypes: {
+		/* No theme styles for express available */
+		express: { table: { disable: true } },
 		size: {
 			name: "Size",
 			type: { name: "string", required: true },
@@ -71,29 +75,16 @@ export default {
 		status: {
 			type: process.env.MIGRATED_PACKAGES.includes("statuslight")
 				? "migrated"
-				: undefined,
+				: "legacy",
 		},
 	},
 };
 
-export const Default = ({
-	...args
-}) => {
-	return html`
-		<div>
-			${Template({
-				...args
-			})}
+export const Default = (args) => html`
+	${Template(args)}
 
-			${
-				isChromatic() ?
-				Template({
-					...args,
-					label: "Status light label that is long and wraps to the next line",
-					customStyles: {"max-width": "150px"}
-				})
-			: null
-		}
-		</div>
-	`;
-};
+	${when(isChromatic(), () => Template({
+		...args,
+		label: "Status light label that is long and wraps to the next line",
+		customStyles: {"max-width": "150px"}
+	}))}`;

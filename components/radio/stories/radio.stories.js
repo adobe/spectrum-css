@@ -80,6 +80,11 @@ export default {
 		isChecked: false,
 		isDisabled: false,
 		isReadOnly: false,
+		customStorybookStyles: {
+			flexDirection: "column",
+			alignItems: "flex-start",
+			gap: undefined,
+		},
 	},
 	parameters: {
 		actions: {
@@ -89,44 +94,38 @@ export default {
 		status: {
 			type: process.env.MIGRATED_PACKAGES.includes("radio")
 				? "migrated"
-				: undefined,
+				: "legacy",
 		},
 	},
 };
 
-// export const Default = Template.bind({});
-// Default.args = {};
-export const Default = ({
-	customHeading,
-	customDescription,
-	...args
-}) => {
-	return html`
-		<div style="display: flex; flex-direction: column; align-items: flex-start;">
-			${Template({
-				...args,
-				label: "Default"
-			})}
-			${Template({
-				...args,
-				isEmphasized: true,
-				isChecked: true,
-				label: "Emphasized radio button label that is so long it has to wrap",
-				customStyles: {
-					"max-width": "220px",
-				}
-			})}
-			${Template({
-				...args,
-				isDisabled: true,
-				label: "Disabled"
-			})}
-			${Template({
-				...args,
-				isDisabled: true,
-				isReadOnly: true,
-				label: "Read only"
-			})}
-		</div>
-	`;
-};
+export const Default = (args) => html`
+	${Template({
+		...args,
+		label: "Default"
+	})}
+	${Template({
+		...args,
+		isEmphasized: true,
+		isChecked: true,
+		label: "Emphasized radio button label that is so long it has to wrap",
+		customStyles: {
+			"max-width": "220px",
+		}
+	})}
+	${Template({
+		...args,
+		isDisabled: true,
+		label: "Disabled"
+	})}
+	${Template({
+		...args,
+		isDisabled: true,
+		isReadOnly: true,
+		label: "Read only"
+	})}
+`;
+Default.args = {};
+
+export const Express = Default.bind({});
+Express.args = { express: true };

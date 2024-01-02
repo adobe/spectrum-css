@@ -1,11 +1,12 @@
-// Import the component markup template
 import { Template } from "./template";
 
 export default {
   title: "Components/Side nav",
   description: "SideNav lets users navigate the entire content of a product or a section. These can be used for a single level or a multi-level navigation.",
-  component: "Sidenav",
+  component: "SideNav",
   argTypes: {
+		/* No theme styles for express available */
+		express: { table: { disable: true } },
     hasIcon: {
       name: "Has Icon",
       type: { name: "boolean" },
@@ -32,40 +33,42 @@ export default {
   args: {
     rootClass: "spectrum-SideNav",
     hasIcon: false,
-    iconName: "Folder"
+    iconName: "Folder",
+    items: [
+      {
+        id: "1",
+        title: "Section Title 1",
+        link: "#",
+        isSelected: true,
+      },
+      {
+        id: "2",
+        title: "Section Title 2",
+        link: "#",
+        isDisabled: true,
+      },
+      {
+        id: "3",
+        title: "Section Title 3",
+        link: "#",
+      },
+    ],
+		customStorybookStyles: {
+			display: undefined,
+		},
   },
   parameters: {
     actions: {
       handles: []
     },
     status: {
-      type: process.env.MIGRATED_PACKAGES.includes('sidenav') ? 'migrated' : undefined
+      type: process.env.MIGRATED_PACKAGES.includes('sidenav') ? 'migrated' : 'legacy'
     }
   }
 };
 
 export const Default = Template.bind({});
-Default.args = {
-	items: [
-		{
-			id: "1",
-			title: "Section Title 1",
-			link: "#",
-			isSelected: true,
-		},
-		{
-			id: "2",
-			title: "Section Title 2",
-			link: "#",
-			isDisabled: true,
-		},
-		{
-			id: "3",
-			title: "Section Title 3",
-			link: "#",
-		},
-	],
-};
+Default.args = {};
 
 export const Multilevel = Template.bind({});
 Multilevel.args = {

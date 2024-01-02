@@ -1,4 +1,3 @@
-// Import the component markup template
 import { Template } from "./template";
 
 export default {
@@ -7,6 +6,8 @@ export default {
 		"Breadcrumbs show hierarchy and navigational context for a user’s location within an app.",
 	component: "Breadcrumbs",
 	argTypes: {
+		/* No theme styles for express available */
+		express: { table: { disable: true } },
 		items: { table: { disable: true } },
 		variant: {
 			name: "Variants",
@@ -31,6 +32,23 @@ export default {
 	args: {
 		rootClass: "spectrum-Breadcrumbs",
 		isDragged: false,
+		items: [
+			{
+				label: "Nav root",
+				isDragged: true,
+			},
+			{
+				iconName: "FolderOpen",
+				isDisabled: true,
+			},
+			{
+				label: "Trend",
+				isDisabled: true,
+			},
+			{
+				label: "January 2019 assets",
+			},
+		],
 	},
 	parameters: {
 		actions: {
@@ -39,45 +57,15 @@ export default {
 		status: {
 			type: process.env.MIGRATED_PACKAGES.includes("breadcrumb")
 				? "migrated"
-				: undefined,
+				: "legacy",
 		},
 	},
 };
 
 export const Default = Template.bind({});
-Default.args = {
-	items: [
-		{
-			label: "Nav root",
-			isDragged: true,
-		},
-		{
-			label: "Trend",
-			isDisabled: true,
-		},
-		{
-			label: "January 2019 Assets",
-		},
-	],
-};
+Default.args = {};
 
 export const NestedMultiline = Template.bind({});
 NestedMultiline.args = {
-	items: [
-		{
-			label: "Nav root",
-		},
-		{
-			iconName: "FolderOpen",
-			isDisabled: true,
-		},
-		{
-			label: "Trend",
-			isDragged: true,
-		},
-		{
-			label: "January 2019 Assets",
-		},
-	],
 	variant: "multiline",
 };

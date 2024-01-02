@@ -51,10 +51,13 @@ export default {
 		status: {
 			type: process.env.MIGRATED_PACKAGES.includes("search")
 				? "migrated"
-				: undefined,
+				: "legacy",
 		},
 	},
 };
 
 export const Default = Template.bind({});
 Default.args = {};
+
+export const Express = Template.bind({});
+Express.args = { express: true };

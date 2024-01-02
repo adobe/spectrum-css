@@ -1,7 +1,7 @@
 import { html } from "lit";
 import { classMap } from "lit/directives/class-map.js";
-import { when } from "lit/directives/when.js";
 import { ifDefined } from "lit/directives/if-defined.js";
+import { when } from "lit/directives/when.js";
 
 import { useArgs } from "@storybook/client-api";
 
@@ -24,7 +24,6 @@ export const AssetListItem = ({
 	onclick = () => {},
 	...globals
 }) => {
-
 	return html` <li
 		class=${classMap({
 			[rootClass]: true,

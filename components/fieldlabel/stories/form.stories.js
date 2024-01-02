@@ -1,10 +1,12 @@
-import { Template } from "./form-template";
+import { Template } from "./form.template";
 
 export default {
 	title: "Components/Form",
 	description: "The Form component is used for aligning multiple inputs and field groups within a form.",
 	component: "Form",
 	argTypes: {
+		/* No theme styles for express available */
+		express: { table: { disable: true } },
 		labelsAbove: {
 			name: "Labels Above",
 			type: { name: "boolean" },
@@ -26,7 +28,7 @@ export default {
 		status: {
 			type: process.env.MIGRATED_PACKAGES.includes("fieldlabel")
 				? "migrated"
-				: undefined,
+				: "legacy",
 		},
 	},
 };

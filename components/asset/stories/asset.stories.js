@@ -1,4 +1,3 @@
-// Import the component markup template
 import { Template } from "./template";
 
 export default {
@@ -7,6 +6,8 @@ export default {
 		"Use an asset element to visually represent a file, folder or image. File and folder representations will center themselves horizontally and vertically in the space provided to the element. Images will be contained to the element, growing to the element's full height while centering itself within the width provided.",
 	component: "Asset",
 	argTypes: {
+		/* No theme styles for express available */
+		express: { table: { disable: true } },
 		reducedMotion: { table: { disable: true } },
 		preset: {
 			name: "Preset asset types",
@@ -35,7 +36,7 @@ export default {
 		status: {
 			type: process.env.MIGRATED_PACKAGES.includes("asset")
 				? "migrated"
-				: undefined,
+				: "legacy",
 		},
 	},
 };

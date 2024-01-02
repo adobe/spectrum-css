@@ -1,20 +1,21 @@
-import { within, userEvent } from '@storybook/testing-library';
-import { html } from "lit";
+import { userEvent, within } from '@storybook/testing-library';
 
-// Import the component markup template
 import { Template } from "./template";
 
 import { default as ActionButton } from "@spectrum-css/actionbutton/stories/actionbutton.stories.js";
+import { default as IconStories } from "@spectrum-css/icon/stories/icon.stories.js";
 import { default as Menu } from "@spectrum-css/menu/stories/menu.stories.js";
 import { default as Popover } from "@spectrum-css/popover/stories/popover.stories.js";
-import { default as IconStories } from "@spectrum-css/icon/stories/icon.stories.js";
 
 export default {
 	title: "Components/Action menu",
 	description: "The Action menu component is an action button with a Popover.",
-	component: "Action menu",
+	component: "ActionMenu",
 	argTypes: {
+		/* No theme styles for express available */
+		express: { table: { disable: true } },
 		items: { table: { disable: true } },
+		popoverPosition: { table: { disable: true } },
 		isOpen: {
 			name: "Open",
 			type: { name: "boolean" },
@@ -39,7 +40,27 @@ export default {
 		},
 	},
 	args: {
-		isOpen: true,
+		isOpen: false,
+		label: "More actions",
+		iconName: "More",
+		items: [
+			{
+				label: "Action 1",
+			},
+			{
+				label: "Action 2",
+			},
+			{
+				label: "Action 3",
+			},
+			{
+				label: "Action 4",
+			},
+		],
+		customStorybookStyles: {
+			display: "block",
+			position: "relative"
+		}
 	},
 	parameters: {
 		actions: {
@@ -52,38 +73,16 @@ export default {
 		status: {
 			type: process.env.MIGRATED_PACKAGES.includes("actionmenu")
 				? "migrated"
-				: undefined,
+				: "legacy",
 		},
 		chromatic: { delay: 2000 },
+	},
+	play: async ({ canvasElement }) => {
+		const canvas = within(canvasElement);
+		await new Promise((resolve) => setTimeout(resolve, 100));
+		await userEvent.click(canvas.getByRole('button', { id: 'trigger' }));
 	},
 };
 
 export const Default = Template.bind({});
-Default.play = async ({ canvasElement }) => {
-	const canvas = within(canvasElement);
-
-	await new Promise((resolve) => setTimeout(resolve, 100));
-
-	await userEvent.click(canvas.getByRole('button', { id: 'trigger' }));
-};
-// provide padding so that Chromatic can capture the full focus indicator
-Default.decorators = [(Story) => html`<div style="padding: 1em;">${Story().outerHTML || Story()}</div>`];
-Default.args = {
-	isOpen: false,
-	label: "More Actions",
-	iconName: "More",
-	items: [
-		{
-			label: "Action 1",
-		},
-		{
-			label: "Action 2",
-		},
-		{
-			label: "Action 3",
-		},
-		{
-			label: "Action 4",
-		},
-	],
-};
+Default.args = {};

@@ -16,7 +16,6 @@ export const Template = ({
 	max = 100,
 	customClasses = [],
 	id,
-	// ...globals
 }) => {
 	return html`
 		<div

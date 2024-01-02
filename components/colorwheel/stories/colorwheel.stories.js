@@ -1,4 +1,3 @@
-// Import the component markup template
 import { Template } from "./template";
 
 export default {
@@ -7,6 +6,8 @@ export default {
 		"The Color wheel component lets users visually change an individual channel of a color on a circular track.",
 	component: "ColorWheel",
 	argTypes: {
+		/* No theme styles for express available */
+		express: { table: { disable: true } },
 		isDisabled: {
 			name: "Disabled",
 			type: { name: "boolean" },
@@ -39,7 +40,7 @@ export default {
 		status: {
 			type: process.env.MIGRATED_PACKAGES.includes("colorwheel")
 				? "migrated"
-				: undefined,
+				: "legacy",
 		},
 	},
 };

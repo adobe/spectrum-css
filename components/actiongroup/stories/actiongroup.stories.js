@@ -1,4 +1,3 @@
-// Import the component markup template
 import { Template } from "./template";
 
 import { default as ActionButton } from "@spectrum-css/actionbutton/stories/actionbutton.stories.js";
@@ -59,6 +58,21 @@ export default {
 		vertical: false,
 		compact: false,
 		justified: false,
+		content: [
+			{
+				iconName: "Edit",
+				label: "Edit",
+			},
+			{
+				iconName: "Copy",
+				label: "Copy",
+			},
+			{
+				iconName: "Delete",
+				label: "Delete",
+				isSelected: true,
+			},
+		],
 	},
 	parameters: {
 		actions: {
@@ -67,60 +81,44 @@ export default {
 		status: {
 			type: process.env.MIGRATED_PACKAGES.includes("actiongroup")
 				? "migrated"
-				: undefined,
+				: "legacy",
 		},
 	},
 };
 
-const items = [
-	{
-		iconName: "Edit",
-		label: "Edit",
-	},
-	{
-		iconName: "Copy",
-		label: "Copy",
-	},
-	{
-		iconName: "Delete",
-		label: "Delete",
-		isSelected: true,
-	},
-];
-
 export const Default = Template.bind({});
-Default.args = {
-	content: items
-};
-
+Default.args = {};
 
 export const Compact = Template.bind({});
 Compact.args = {
 	compact: true,
-	content: items
 };
 
 export const Vertical = Template.bind({});
 Vertical.args = {
 	vertical: true,
-	content: items
 };
 
 export const VerticalCompact = Template.bind({});
 VerticalCompact.args = {
 	vertical: true,
 	compact: true,
-	content: items
 };
 
 export const Justified = Template.bind({});
 Justified.args = {
 	justified: true,
-	content: items
+	customStorybookStyles: {
+		display: "block"
+	}
 };
 
 export const Quiet = Template.bind({});
 Quiet.args = {
 	areQuiet: true,
-	content: items
+};
+
+export const Express = Template.bind({});
+Express.args = {
+	express: true
 };

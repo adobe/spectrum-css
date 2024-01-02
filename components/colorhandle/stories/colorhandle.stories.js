@@ -1,4 +1,3 @@
-// Import the component markup template
 import { Template } from "./template";
 
 export default {
@@ -7,6 +6,8 @@ export default {
 		"The Color Handle component is used with ColorArea, ColorSlider and ColorWheel as the color selector",
 	component: "ColorHandle",
 	argTypes: {
+		/* No theme styles for express available */
+		express: { table: { disable: true } },
 		isDisabled: {
 			name: "Disabled",
 			type: { name: "boolean" },
@@ -39,7 +40,7 @@ export default {
 		status: {
 			type: process.env.MIGRATED_PACKAGES.includes("colorhandle")
 				? "migrated"
-				: undefined,
+				: "legacy",
 		},
 	},
 };

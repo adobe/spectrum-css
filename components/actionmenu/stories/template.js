@@ -11,6 +11,7 @@ export const Template = ({
 	label,
 	iconName,
 	size = "m",
+	popoverPosition = "bottom",
 	...globals
 }) => {
 
@@ -21,7 +22,7 @@ export const Template = ({
 
 	return Popover({
 		...globals,
-		position: "bottom",
+		position: popoverPosition,
 		isOpen,
 		id: "popover-1",
 		testId: "popover-1",

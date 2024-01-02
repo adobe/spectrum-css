@@ -1,4 +1,3 @@
-// Import the component markup template
 import { Template } from "./template";
 
 export default {
@@ -7,6 +6,8 @@ export default {
 		"Dividers bring clarity to a layout by grouping and dividing content that exists in close proximity. It can also be used to establish rhythm and hierarchy.",
 	component: "Divider",
 	argTypes: {
+		/* No theme styles for express available */
+		express: { table: { disable: true } },
 		size: {
 			name: "Size",
 			type: { name: "string", required: true },
@@ -47,7 +48,7 @@ export default {
 		status: {
 			type: process.env.MIGRATED_PACKAGES.includes("divider")
 				? "migrated"
-				: undefined,
+				: "legacy",
 		},
 	},
 };

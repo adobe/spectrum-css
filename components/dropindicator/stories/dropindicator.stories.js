@@ -1,12 +1,13 @@
-// Import the component markup template
 import { Template } from "./template";
 
 export default {
 	title: "Components/Drop indicator",
 	description:
 		"The Drop indicator component is used to show the insertion position into a list or table.",
-	component: "Dropindicator",
+	component: "DropIndicator",
 	argTypes: {
+		/* No theme styles for express available */
+		express: { table: { disable: true } },
 		direction: {
 			name: "Direction",
 			type: { name: "string", required: true },
@@ -41,7 +42,7 @@ export default {
 		status: {
 			type: process.env.MIGRATED_PACKAGES.includes("dropindicator")
 				? "migrated"
-				: undefined,
+				: "legacy",
 		},
 	},
 };

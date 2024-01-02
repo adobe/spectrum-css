@@ -1,4 +1,3 @@
-// Import the component markup template
 import { Template } from "./template";
 
 import { default as IconStories } from "@spectrum-css/icon/stories/icon.stories.js";
@@ -131,7 +130,7 @@ export default {
 		status: {
 			type: process.env.MIGRATED_PACKAGES.includes("tag")
 				? "migrated"
-				: undefined,
+				: "legacy",
 		},
 	},
 };
@@ -157,3 +156,6 @@ export const Removable = Template.bind({});
 Removable.args = {
 	hasClearButton: true,
 };
+
+export const Express = Template.bind({});
+Express.args = { express: true };

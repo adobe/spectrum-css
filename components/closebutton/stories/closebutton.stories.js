@@ -1,4 +1,3 @@
-// Import the component markup template
 import { Template } from "./template";
 
 export default {
@@ -48,10 +47,13 @@ export default {
 		status: {
 			type: process.env.MIGRATED_PACKAGES.includes("closebutton")
 				? "migrated"
-				: undefined,
+				: "legacy",
 		},
 	},
 };
 
 export const Default = Template.bind({});
 Default.args = {};
+
+export const Express = Template.bind({});
+Express.args = { express: true };

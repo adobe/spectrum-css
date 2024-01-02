@@ -7,6 +7,8 @@ export default {
 		"The coach indicator component can be used to bring added attention to specific parts of a page.",
 	component: "CoachIndicator",
 	argTypes: {
+		/* No theme styles for express available */
+		express: { table: { disable: true } },
 		// @todo: remove the disabling of reducedMotion once this global control is enabled, coach indicator does have reduced motion styling.
 		reducedMotion: { table: { disable: true } },
 		isQuiet: {
@@ -32,29 +34,25 @@ export default {
 		status: {
 			type: process.env.MIGRATED_PACKAGES.includes("coachindicator")
 				? "migrated"
-				: undefined,
+				: "legacy",
 		},
 	},
 };
 
 const CustomCoachIndicator = (args) => {
 	return html`
-	<div
-		style="display: flex;">
-			${Template({
-				...args,
-				variant: "default"
-			})}
-			${Template({
-				...args,
-				variant: "dark"
-			})}
-			${Template({
-				...args,
-				variant: "light"
-			})}
-		<div>
-	`;
+		${Template({
+			...args,
+			variant: "default"
+		})}
+		${Template({
+			...args,
+			variant: "dark"
+		})}
+		${Template({
+			...args,
+			variant: "light"
+		})}`;
 };
 
 
@@ -65,4 +63,3 @@ export const Quiet = CustomCoachIndicator.bind({});
 Quiet.args = {
 	isQuiet: true
 };
-

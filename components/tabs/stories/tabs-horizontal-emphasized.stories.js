@@ -1,11 +1,10 @@
-// Import the component markup template
-import { Template } from "./template";
 import {
-  argTypes, 
-  horizontalProps, 
-  horizontalWithIconsProps,
-  horizontalIconOnlyProps
+  argTypes,
+  horizontalIconOnlyProps,
+  horizontalProps,
+  horizontalWithIconsProps
 } from "./index.js";
+import { Template } from "./template";
 
 export default {
   title: "Components/Tabs/Horizontal/Emphasized",
@@ -18,13 +17,16 @@ export default {
     isQuiet: false,
     isEmphasized: true,
     isCompact: false,
+		customStorybookStyles: {
+			display: undefined,
+		}
   },
   parameters: {
     actions: {
       handles: []
     },
     status: {
-      type: process.env.MIGRATED_PACKAGES.includes('tabs') ? 'migrated' : undefined
+      type: process.env.MIGRATED_PACKAGES.includes('tabs') ? 'migrated' : 'legacy'
     }
   }
 };
@@ -37,4 +39,3 @@ WithIcon.args = horizontalWithIconsProps;
 
 export const IconOnly = Template.bind({});
 IconOnly.args = horizontalIconOnlyProps;
-

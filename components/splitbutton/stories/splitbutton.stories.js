@@ -1,4 +1,3 @@
-// Import the component markup template
 import { Template } from "./template";
 
 export default {
@@ -7,6 +6,8 @@ export default {
 		"A split button surfaces an immediately invokable action via it's main button, as well as a list of alternative actions in its toggle-able menu overlay.",
 	component: "SplitButton",
 	argTypes: {
+		/* No theme styles for express available */
+		express: { table: { disable: true } },
 		size: {
 			name: "Size",
 			type: { name: "string", required: true },
@@ -55,7 +56,7 @@ export default {
 		status: {
 			type: process.env.MIGRATED_PACKAGES.includes("splitbutton")
 				? "migrated"
-				: undefined,
+				: "legacy",
 		},
 	},
 };

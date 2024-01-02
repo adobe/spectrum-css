@@ -1,4 +1,3 @@
-// Import the component markup template
 import { Template } from "./template";
 
 export default {
@@ -7,6 +6,8 @@ export default {
 		"A table is used to create a container for displaying information. It allows users to sort, compare, and take action on large amounts of data.",
 	component: "Table",
 	argTypes: {
+		/* No theme styles for express available */
+		express: { table: { disable: true } },
 		size: {
 			name: "Size",
 			table: {
@@ -107,7 +108,7 @@ export default {
 		status: {
 			type: process.env.MIGRATED_PACKAGES.includes("table")
 				? "migrated"
-				: undefined,
+				: "legacy",
 		},
 	},
 };

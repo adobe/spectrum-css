@@ -7,7 +7,7 @@
   "homepage": "https://opensource.adobe.com/spectrum-css/preview",
   "main": "main.js",
   "scripts": {
-    "build": "storybook build --config-dir . --output-dir ./storybook-static"
+    "build": "storybook build --config-dir ."
   },
   "dependencies": {
     "@adobe/spectrum-css-workflow-icons": "^1.5.4",
@@ -18,19 +18,20 @@
     "@spectrum-css/vars": "^9.0.8"
   },
   "devDependencies": {
-    "@babel/core": "^7.22.1",
+    "@babel/core": "^7.23.7",
     "@chromaui/addon-visual-tests": "^0.0.124",
     "@etchteam/storybook-addon-status": "^4.2.4",
-    "@spectrum-css/component-builder": "^4.0.19",
     "@storybook/addon-a11y": "^7.6.7",
     "@storybook/addon-actions": "~7.5",
     "@storybook/addon-console": "^1.2.3",
     "@storybook/addon-docs": "^7.6.7",
     "@storybook/addon-essentials": "^7.6.7",
     "@storybook/addon-interactions": "^7.6.7",
+    "@storybook/addons": "^7.6.7",
     "@storybook/api": "^7.6.7",
     "@storybook/blocks": "^7.6.7",
     "@storybook/client-api": "^7.6.7",
+    "@storybook/client-logger": "^7.6.7",
     "@storybook/components": "^7.6.7",
     "@storybook/core-events": "^7.6.7",
     "@storybook/jest": "^0.2.3",
@@ -38,6 +39,7 @@
     "@storybook/preview-api": "^7.6.7",
     "@storybook/testing-library": "^0.2.2",
     "@storybook/theming": "^7.6.7",
+    "@storybook/types": "^7.6.7",
     "@storybook/web-components-webpack5": "^7.6.7",
     "@whitespace/storybook-addon-html": "^5.1.6",
     "chromatic": "^10.2.0",

@@ -1,4 +1,3 @@
-// Import the component markup template
 import { Template } from "./template";
 
 import { default as Checkbox } from "@spectrum-css/checkbox/stories/checkbox.stories.js";
@@ -7,7 +6,7 @@ export default {
 	title: "Components/Asset card",
 	description:
 		"The asset card component allows users to select and manage assets and their metadata in a grid.",
-	component: "Assetcard",
+	component: "AssetCard",
 	argTypes: {
 		image: {
 			name: "Image",
@@ -102,7 +101,7 @@ export default {
 		status: {
 			type: process.env.MIGRATED_PACKAGES.includes("assetcard")
 				? "migrated"
-				: undefined,
+				: "legacy",
 		},
 	},
 };
@@ -161,3 +160,6 @@ DropTarget.args = {
 	isDropTarget: true,
 	isSelected: true,
 };
+
+export const Express = Template.bind({});
+Express.args = { express: true };

@@ -29,7 +29,7 @@ export const Template = ({
 }) => {
   const [_, updateArgs] = useArgs();
 
-  const Dialog = html`
+  const Dialog = () => html`
     <div
       class=${classMap({
         [rootClass]: true,
@@ -46,19 +46,20 @@ export const Template = ({
       <div class="spectrum-AlertDialog-header">
         <h1 class="${rootClass}-heading" id="dialog_label">${heading}</h1>
         ${when(icon, () => Icon({
+          ...globals,
           size: 'm',
           iconName: "Alert",
           customClasses: [`${rootClass}-icon`],
-          ...globals,
-        })) }
+        }))}
       </div>
       ${Divider({
+            ...globals,
             horizontal: true,
             customClasses: [`${rootClass}-divider`],
-            ...globals,
           })}
       <section class="${rootClass}-content">${content}</section>
       ${ButtonGroup({
+          ...globals,
           items: buttons,
           onclick: () => {
             updateArgs({ isOpen: !isOpen });
@@ -69,24 +70,21 @@ export const Template = ({
     </div>
   `;
 
-  return  html`
+  return html`
     ${Underlay({
       ...globals,
       isOpen,
+      onclick: () => {
+        if (isOpen) updateArgs({ isOpen: false });
+      },
     })}
     ${Button({
       ...globals,
       size: "m",
       variant: "secondary",
-      label: "Click to open Alert Dialog",
+      label: "Click to open",
       treatment: "outline",
       customClasses: [],
-      customStyles: {
-        position: "absolute",
-        insetInlineStart: "50%",
-        insetBlockStart: "50%",
-        transform: "translate(-50%, -50%)",
-      },
       onclick: () => {
         updateArgs({ isOpen: !isOpen });
       },
@@ -94,7 +92,7 @@ export const Template = ({
     ${Modal({
       ...globals,
       isOpen,
-      content: Dialog,
+      content: [Dialog()],
     })}
       `
   }

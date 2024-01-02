@@ -1,3 +1,8 @@
+html,
+body {
+	min-block-size: 100%;
+}
+
 body {
 	margin: 0;
 	font-size: 10px;
@@ -31,7 +36,7 @@ nav .spectrum-Site-logo {
 
 .docblock-argstable-body td > span:has(select),
 .docblock-argstable-body td textarea {
-	max-width: 280px !important;
+	max-inline-size: 280px !important;
 }
 
 #storybook-explorer-tree {
@@ -51,7 +56,7 @@ button.sidebar-item {
 	font-weight: 400 !important;
 	font-size: 14px !important;
 	line-height: 1.4em !important;
-	height: 32px !important;
+	block-size: 32px !important;
 	border-radius: 4px !important;
 	padding-inline-start: 24px !important;
 	padding-inline-end: 12px !important;
@@ -122,7 +127,7 @@ select:focus,
 }
 
 [role="main"] > div > div:first-child .os-content > div > div > * {
-	margin-top: 0 !important;
+	margin-block-start: 0 !important;
 }
 
 [role="main"] > div > div:first-child .os-content > div > div > div > a {
@@ -161,8 +166,8 @@ select:focus,
 	button::after {
 	content: "◢";
 	position: absolute;
-	bottom: -3px;
-	right: -1px;
+	inset-block-end: -3px;
+	inset-inline-end: -1px;
 	display: inline-block;
 	transform: scale(0.5);
 	color: rgb(177, 177, 177);
@@ -190,7 +195,7 @@ select:focus,
 	> div
 	> div
 	:is(button, a:not(:has(button)), span) {
-	height: 32px;
+	block-size: 32px;
 }
 
 [role="main"]
@@ -201,4 +206,15 @@ select:focus,
 	> div
 	:is(button:hover, a:hover:not(:has(button))) {
 	background-color: rgb(230, 230, 230) !important;
+}
+
+.docs-story {
+	background-color: var(--spectrum-background-base-color, var(
+		--spectrum-alias-background-color-default,
+		var(--spectrum-global-color-gray-100)
+	));
+}
+
+.docs-story #root-inner {
+	margin: 10px;
 }

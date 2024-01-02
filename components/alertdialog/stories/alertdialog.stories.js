@@ -6,6 +6,9 @@ export default {
     "Alert dialogs display important information that users need to acknowledge. They appear over the interface and block further interactions until an action is selected.",
   component: "AlertDialog",
   argTypes: {
+		/* No theme styles for express available */
+		express: { table: { disable: true } },
+		buttons: { table: { disable: true } },
     heading: {
       name: "Heading",
       type: { name: "string" },
@@ -38,35 +41,35 @@ export default {
   args: {
     rootClass: "spectrum-AlertDialog",
     isOpen: true,
+    variant: 'confirmation',
+    heading: "Enable Smart Filters?",
+    buttons: [{
+      variant: "secondary",
+      treatment: "outline",
+      label: "Remind me later"
+    }, {
+      variant: "primary",
+      treatment: "fill",
+      label: "Enable",
+      variant: "accent"
+    }],
+    content: 'Smart filters are nondestructive and will preserve your original images.',
   },
   parameters: {
+    layout: 'centered',
     actions: {
       handles: ["click .spectrum-AlertDialog button"],
     },
     status: {
       type: process.env.MIGRATED_PACKAGES.includes("alertdialog")
         ? "migrated"
-        : undefined,
+        : "legacy",
     },
   },
 };
 
 export const Default = Template.bind({});
-Default.args = {
-  variant: 'confirmation',
-  heading: "Enable Smart Filters?",
-  buttons: [{
-    variant: "secondary",
-    treatment: "outline",
-    label: "Remind me later"
-  }, {
-    variant: "primary",
-    treatment: "fill",
-    label: "Enable",
-    variant: "accent"
-  }],
-  content: 'Smart filters are nondestructive and will preserve your original images.',
-};
+Default.args = {};
 
 export const Information = Template.bind({});
 Information.args = {

@@ -1,7 +1,6 @@
-// Import the component markup template
 import { Template } from "./template";
 
-import { Default as MenuStories } from "@spectrum-css/menu/stories/menu.stories.js";
+import { Template as Menu } from "@spectrum-css/menu/stories/template.js";
 
 export default {
 	title: "Components/Picker",
@@ -113,6 +112,22 @@ export default {
 		isFocused: false,
 		isInvalid: false,
 		isOpen: false,
+		content: [
+			Menu.bind(null, {
+				items: [
+					{ label: "Deselect" },
+					{ label: "Select Inverse" },
+					{ label: "Feather..." },
+					{ label: "Select and Mask..." },
+					{ type: "divider" },
+					{ label: "Save Selection" },
+					{ label: "Make Work Path", isDisabled: true },
+				]
+			})
+		],
+		customStorybookStyles: {
+			display: "inline-block",
+		},
 	},
 	parameters: {
 		actions: {
@@ -121,77 +136,46 @@ export default {
 		status: {
 			type: process.env.MIGRATED_PACKAGES.includes("picker")
 				? "migrated"
-				: undefined,
+				: "legacy",
 		},
 	},
 };
 
 export const Default = Template.bind({});
-Default.args = {
-	content: [
-		() => MenuStories(MenuStories.args)
-	],
-};
+Default.args = {};
 
 export const Open = Template.bind({});
 Open.args = {
 	isOpen: true,
-	content: [
-		() => MenuStories(MenuStories.args)
-	],
 };
 
 export const SideLabel = Template.bind({});
 SideLabel.args = {
-	content: [
-		() => MenuStories(MenuStories.args)
-	],
 	labelPosition: "left",
-	placeholder: "Select Your State Or Province"
+	placeholder: "Select your state or province"
 };
 
 export const Quiet = Template.bind({});
 Quiet.args = {
 	isQuiet: true,
-	content: [
-		() => MenuStories(MenuStories.args)
-	],
 };
 
 export const Loading = Template.bind({});
 Loading.args = {
 	isLoading: true,
-	content: [
-		() => MenuStories(MenuStories.args)
-	],
 };
 
 export const Invalid = Template.bind({});
 Invalid.args = {
 	helpText: "Please select a country",
 	isInvalid: true,
-	content: [
-		() => MenuStories(MenuStories.args)
-	],
 };
 
 export const Focused = Template.bind({});
 Focused.args = {
 	helpText: "Please select a country",
 	isFocused: true,
-	content: [
-		() => MenuStories(MenuStories.args)
-	],
 };
 
-export const WithForcedColors = Template.bind({
-  parameters: {
-    // Sets the forced-colors media feature for a specific story.
-    chromatic: { forcedColors: 'active' },
-  },
-});
-WithForcedColors.args = {
-	content: [
-		() => MenuStories(MenuStories.args)
-	],
-}
+export const Express = Template.bind({});
+Express.args = { express: true };

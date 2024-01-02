@@ -1,4 +1,3 @@
-// Import the component markup template
 import { Template } from "./template";
 
 import { default as CalendarStories } from "@spectrum-css/calendar/stories/calendar.stories.js";
@@ -104,6 +103,9 @@ export default {
 		isDisabled: false,
 		isRequired: false,
 		readOnly: false,
+		month: "March",
+		selectedDay: 1,
+		year: 2023,
 	},
 	parameters: {
 		actions: {
@@ -112,35 +114,25 @@ export default {
 		status: {
 			type: process.env.MIGRATED_PACKAGES.includes("datepicker")
 				? "migrated"
-				: undefined,
+				: "legacy",
 		},
 	},
 };
 
 export const Default = Template.bind({});
-Default.args = {
-	month: "March",
-	selectedDay: 1,
-	year: 2023,
-	content: [{}],
-};
+Default.args = {};
 
 export const Quiet = Template.bind({});
 Quiet.args = {
-	month: "March",
-	selectedDay: 1,
-	year: 2023,
-	content: [{}],
 	isQuiet: true,
 };
 
 export const Range = Template.bind({});
 Range.args = {
-	month: "March",
-	selectedDay: 1,
-	year: 2023,
 	lastDay: 3,
-	content: [{}],
 	isRange: true,
 	isOpen: false,
 };
+
+export const Express = Template.bind({});
+Express.args = { express: true };

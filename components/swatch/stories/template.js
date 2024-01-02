@@ -4,7 +4,6 @@ import { ifDefined } from "lit/directives/if-defined.js";
 import { styleMap } from "lit/directives/style-map.js";
 import { capitalize, lowerCase } from "lodash-es";
 
-import { useArgs } from '@storybook/client-api';
 
 import { Template as OpacityCheckerboard } from "@spectrum-css/opacitycheckerboard/stories/template.js";
 
@@ -20,18 +19,7 @@ export const Template = ({
 	swatchColor = "rgb(174, 216, 230)",
 	customStyles = {},
 	id,
-	...globals
 }) => {
-	const { express } = globals;
-  	const [_, updateArgs] = useArgs();
-
-	try {
-		if (!express) import(/* webpackPrefetch: true */ "../themes/spectrum.css");
-		else import(/* webpackPrefetch: true */ "../themes/express.css");
-	} catch (e) {
-		console.warn(e);
-	}
-
 	return html`
 		<div
 			class=${classMap({

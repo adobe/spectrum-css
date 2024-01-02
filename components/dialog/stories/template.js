@@ -31,7 +31,7 @@ export const Template = ({
 		<div
 			class=${classMap({
 				[rootClass]: true,
-				[`${rootClass}--${scale}`]: true,
+				[`${rootClass}--${scale}`]: typeof scale !== "undefined",
 				[`${rootClass}--dismissable`]: isDismissable,
 				...customClasses.reduce((a, c) => ({ ...a, [c]: true }), {}),
 			})}
@@ -69,7 +69,7 @@ export const Template = ({
 				...globals,
 				isOpen,
 			})}
-			${Button({
+			${when(!isOpen, () => Button({
 				...globals,
 				size: "m",
 				variant: "secondary",
@@ -85,14 +85,16 @@ export const Template = ({
 				onclick: () => {
 					updateArgs({ isOpen: !isOpen });
 				},
-			})}
+			}))}
 			${Modal({
 				...globals,
 				isOpen,
 				content: Dialog,
+				customWrapperStyles: {
+					blockSize: "100%",
+					inlineSize: "100%",
+				},
 			})}
 		`
-	} else {
-		return Dialog;
-	}
+	} else return Dialog;
 };

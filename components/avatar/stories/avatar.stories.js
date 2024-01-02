@@ -1,4 +1,3 @@
-// Import the component markup template
 import { Template } from "./template";
 
 export default {
@@ -6,6 +5,8 @@ export default {
 	description: "An image representing a user.",
 	component: "Avatar",
 	argTypes: {
+		/* No theme styles for express available */
+		express: { table: { disable: true } },
 		reducedMotion: { table: { disable: true } },
 		size: {
 			name: "Size",
@@ -67,7 +68,7 @@ export default {
 		status: {
 			type: process.env.MIGRATED_PACKAGES.includes("avatar")
 				? "migrated"
-				: undefined,
+				: "legacy",
 		},
 	},
 };

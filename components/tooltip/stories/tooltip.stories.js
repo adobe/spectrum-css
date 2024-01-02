@@ -1,4 +1,8 @@
-// Import the component markup template
+import { html } from "lit";
+import { when } from "lit/directives/when.js";
+
+import isChromatic from "chromatic/isChromatic";
+
 import { Template } from "./template";
 
 export default {
@@ -105,10 +109,29 @@ export default {
 		status: {
 			type: process.env.MIGRATED_PACKAGES.includes("tooltip")
 				? "migrated"
-				: undefined,
+				: "legacy",
 		},
 	},
 };
 
-export const Default = Template.bind({});
+const Tooltips = (args) => html`
+	${Template(args)}
+	${when(isChromatic(), () => Template({
+		...args,
+		variant: "info",
+	}))}
+	${when(isChromatic(), () => Template({
+		...args,
+		variant: "positive",
+	}))}
+	${when(isChromatic(), () => Template({
+		...args,
+		variant: "negative",
+	}))}
+`;
+
+export const Default = Tooltips.bind({});
 Default.args = {};
+
+export const Express = Tooltips.bind({});
+Express.args = { express: true };

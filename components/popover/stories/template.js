@@ -4,9 +4,9 @@ import { ifDefined } from "lit/directives/if-defined.js";
 import { styleMap } from "lit/directives/style-map.js";
 import { when } from "lit/directives/when.js";
 
-import { useArgs } from "@storybook/client-api";
+import { useArgs, useGlobals } from "@storybook/client-api";
 
-import "@spectrum-css/popover";
+import "../index.css";
 
 export const Template = ({
 	rootClass = "spectrum-Popover",
@@ -18,15 +18,14 @@ export const Template = ({
 	id = "popover-1",
 	testId,
 	triggerId = "trigger",
-	customStyles = {
-		"inset-inline-start": "0px",
-		"inset-block-start": "0px",
-	},
+	// User-provided styles
+	customStyles = {},
 	trigger,
 	content = [],
 	...globals
 }) => {
 	const [, updateArgs] = useArgs();
+	const [{ textDirection }] = useGlobals();
 
 	if (content.length === 0) {
 		console.warn("Popover: No content provided.");
@@ -44,98 +43,111 @@ export const Template = ({
 
 	const nestedPopover = id === 'popover-nested' || id === 'popover-nested-2';
 
+	document.addEventListener("DOMContentLoaded", () => {
+		// Get trigger element and popover
+		const triggerEl = document.querySelector(`#${triggerId}`);
+		const popoverEl = document.querySelector(`#${id}`);
+
+		if (!triggerEl || !popoverEl) return;
+
+		setTimeout(() => {
+			// Nested popover is static and open, so we don't need transforms for it
+			if (nestedPopover || !triggerId || !id) return;
+
+			const popWidth = popoverEl.offsetWidth ?? 0;
+			const popHeight = popoverEl.offsetHeight ?? 0;
+			popoverEl.style.setProperty("--spectrum-popover-actual-width", `${popWidth}px`);
+			popoverEl.style.setProperty("--spectrum-popover-actual-height", `${popHeight}px`);
+
+			const trigWidth = triggerEl.offsetWidth ?? 0;
+			const trigHeight = triggerEl.offsetHeight ?? 0;
+
+			popoverEl.style.setProperty("--spectrum-popover-trigger-actual-width", `${trigWidth}px`);
+			popoverEl.style.setProperty("--spectrum-popover-trigger-actual-height", `${trigHeight}px`);
+		}, 0);
+
+		if (!position) return;
+
+		const top = "-1 * var(--spectrum-popover-actual-height)";
+		const left = "-1 * var(--spectrum-popover-trigger-actual-width)";
+		const bottom = "var(--spectrum-popover-trigger-actual-height)";
+
+		const blockCenter = "-1 * var(--spectrum-popover-trigger-actual-width) / 2 - var(--spectrum-popover-actual-width) / 2";
+		const blockEnd = "-1 * var(--spectrum-popover-actual-width)";
+
+		const inlineCenter = "translateY(calc(-1 * (var(--spectrum-popover-actual-height) - var(--spectrum-popover-trigger-actual-height)) / 2))";
+
+		// Determine if we're in RTL mode
+		const isRTL = Boolean(textDirection === "rtl");
+
+		switch (position) {
+			case "top":
+				popoverEl.style.transform = `translateX(calc(${blockCenter})) translateY(calc(${top} - var(--spectrum-popover-tip-height)))`;
+				break;
+			case "top-start":
+				popoverEl.style.transform = `translateX(calc(var(--flow-direction) * ${left})) translateY(calc(${top} - var(--spectrum-popover-tip-height)))`;
+				break;
+			case "top-end":
+				popoverEl.style.transform = `translateX(calc(var(--flow-direction) * ${blockEnd})) translateY(calc(${top} - var(--spectrum-popover-tip-height)))`;
+				break;
+			case "bottom":
+				popoverEl.style.transform = `translateX(calc(${blockCenter})) translateY(calc(${bottom} + var(--spectrum-popover-tip-height)))`;
+				break;
+			case "bottom-start":
+				popoverEl.style.transform = `translateX(calc(var(--flow-direction) * ${left})) translateY(calc(${bottom} + var(--spectrum-popover-tip-height)))`;
+				break;
+			case "bottom-end":
+				popoverEl.style.transform = `translateX(calc(var(--flow-direction) * ${blockEnd})) translateY(calc(${bottom} + var(--spectrum-popover-tip-height)))`;
+				break;
+			case "start":
+				popoverEl.style.transform = `translateX(calc(var(--flow-direction) * (${left} - var(--spectrum-popover-actual-width) - var(--spectrum-popover-tip-height)))) ${inlineCenter}`;
+				break;
+			case "start-top":
+				popoverEl.style.transform = `translateX(calc(var(--flow-direction) * (${left} - var(--spectrum-popover-actual-width) - var(--spectrum-popover-tip-height))))`;
+				break;
+			case "start-bottom":
+				popoverEl.style.transform = `translateX(calc(var(--flow-direction) * (${left} - var(--spectrum-popover-actual-width) - var(--spectrum-popover-tip-height)))) translateY(calc(-1 * var(--spectrum-popover-actual-height) + var(--spectrum-popover-trigger-actual-height)))`;
+				break;
+			case "left":
+				popoverEl.style.transform = `translateX(calc(${isRTL ? `-1 * var(--spectrum-popover-tip-height)` : `${left} - var(--spectrum-popover-actual-width) - var(--spectrum-popover-tip-height)`})) ${inlineCenter}`;
+				break;
+			case "left-top":
+				popoverEl.style.transform = `translateX(calc(${isRTL ? `-1 * var(--spectrum-popover-tip-height)` : `${left} - var(--spectrum-popover-actual-width) - var(--spectrum-popover-tip-height)`}))`;
+				break;
+			case "left-bottom":
+				popoverEl.style.transform = `translateX(calc(${isRTL ? `-1 * var(--spectrum-popover-tip-height)` : `${left} - var(--spectrum-popover-actual-width) - var(--spectrum-popover-tip-height)`})) translateY(calc(-1 * var(--spectrum-popover-actual-height) + var(--spectrum-popover-trigger-actual-height)))`;
+				break;
+			case "right":
+				popoverEl.style.transform = `translateX(${isRTL ? `calc(-1 * (${left} - var(--spectrum-popover-actual-width) - var(--spectrum-popover-tip-height)))` : "var(--spectrum-popover-tip-height)"}) ${inlineCenter}`;
+				break;
+			case "right-top":
+				popoverEl.style.transform = `translateX(${isRTL ? `calc(-1 * (${left} - var(--spectrum-popover-actual-width) - var(--spectrum-popover-tip-height)))` : "var(--spectrum-popover-tip-height)"})`;
+				break;
+			case "right-bottom":
+				popoverEl.style.transform = `translateX(${isRTL ? `calc(-1 * (${left} - var(--spectrum-popover-actual-width) - var(--spectrum-popover-tip-height)))` : "var(--spectrum-popover-tip-height)"}) translateY(calc(-1 * var(--spectrum-popover-actual-height) + var(--spectrum-popover-trigger-actual-height)))`;
+				break;
+			case "end":
+				popoverEl.style.transform = `translateX(calc(var(--flow-direction) * var(--spectrum-popover-tip-height))) ${inlineCenter}`;
+				break;
+			case "end-top":
+				popoverEl.style.transform = `translateX(calc(var(--flow-direction) * var(--spectrum-popover-tip-height)))`;
+				break;
+			case "end-bottom":
+				popoverEl.style.transform = `translateX(calc(var(--flow-direction) * var(--spectrum-popover-tip-height))) translateY(calc(-1 * var(--spectrum-popover-actual-height) + var(--spectrum-popover-trigger-actual-height)))`;
+				break;
+		}
+	});
+
 	return html`
 		${when(typeof trigger === "function", () => trigger({
 			...globals,
 			isSelected: isOpen,
-			isOpen: nestedPopover ?? true,
+			isOpen: nestedPopover ?? isOpen,
+			id: triggerId,
 			onclick: () => {
-				// Nested popover is static and open, so we don't need transforms for it
-				!nestedPopover &&
-					setTimeout(() => {
-					// No trigger? Nothing to do.
-					if (!trigger || !position) return [];
-
-					// Get trigger element and popover
-					const element = document.querySelector(`#${triggerId}`);
-
-					if (!element) return [];
-					const rect = element.getBoundingClientRect();
-					const popover = document.querySelector(`#${id}`);
-					if (!popover) return [];
-
-					const transforms = [];
-					const additionalStyles = {};
-					const triggerXCenter = (rect.left + rect.right) / 2;
-					const triggerYCenter = (rect.top + rect.bottom) / 2;
-					const popWidth = popover.offsetWidth ?? 0;
-					const popHeight = popover.offsetHeight ?? 0;
-					const textDir = getComputedStyle(document.querySelector('html')).direction;
-					let x, y;
-					let xOffset = "+ 0px";
-					let yOffset = "+ 0px";
-					if (position.includes("top") || position.includes("bottom") && !(position.includes("-top") || position.includes("-bottom"))) {
-						x = triggerXCenter - (popWidth > 0 ? popWidth / 2 : popWidth);
-					}
-					if (position.includes("left") || position.includes("right")) {
-						y = triggerYCenter - (popHeight > 0 ? popHeight / 2 : popHeight);
-					}
-					if (position.includes("top") && !position.includes("-top")) {
-						y = rect.top - popHeight;
-						yOffset = withTip
-							? "- (var(--spectrum-popover-pointer-height) + var(--spectrum-popover-animation-distance) - 1px)"
-							: "- var(--spectrum-popover-animation-distance)";
-					} else if (position.includes("bottom") && !position.includes("-bottom")) {
-						y = rect.bottom;
-						yOffset = "+ (var(--spectrum-popover-animation-distance))";
-					} else if (position.includes("left")) {
-						if (textDir == 'rtl') {
-							x = rect.right;
-							xOffset = withTip ? "+ 0px" : "+ var(--spectrum-popover-animation-distance)";
-						} else {
-							x = rect.left - popWidth;
-							xOffset = withTip
-								? "- ((var(--spectrum-popover-pointer-width) / 2) + var(--spectrum-popover-animation-distance) - 2px)"
-								: "- var(--spectrum-popover-animation-distance)";
-						}
-					} else if (position.includes("right")) {
-						if (textDir == 'rtl') {
-							x = rect.left - popWidth;
-							xOffset = withTip
-								? "- ((var(--spectrum-popover-pointer-width) / 2) + var(--spectrum-popover-animation-distance) - 2px)"
-								: "- var(--spectrum-popover-animation-distance)";
-						} else {
-							x = rect.right;
-							xOffset = withTip ? "+ 0px" : "+ var(--spectrum-popover-animation-distance)";
-						}
-					}
-
-					if (x) transforms.push(`translateX(calc(var(--flow-direction) * calc(${parseInt(x, 10)}px ${xOffset})))`);
-					if (y) transforms.push(`translateY(calc(${y}px ${yOffset}))`);
-
-					// Add start and end styles
-					if (position === "top-start" || position === "bottom-start") {
-						additionalStyles["inset-inline-start"] = "calc(" + (popWidth / 2) + "px - var(--spectrum-popover-pointer-edge-offset))";
-					} else if (position === "top-end" || position === "bottom-end") {
-						additionalStyles["inset-inline-start"] = "calc(-1 *" + (popWidth / 2) + "px + var(--spectrum-popover-pointer-edge-offset))";
-					} else if (position === "left-top" || position === "right-top") {
-						additionalStyles["inset-block-start"] = "calc(" + (popHeight / 2) + "px - var(--spectrum-popover-pointer-edge-offset))";
-					} else if (position === "left-bottom" || position === "right-bottom") {
-						additionalStyles["inset-block-start"] = "calc(-1 *" + (popHeight / 2) + "px + var(--spectrum-popover-pointer-edge-offset))";
-					}
-
-					updateArgs({
-						isOpen: !isOpen,
-						customStyles: {
-							...customStyles,
-							transform: transforms.join(" "),
-							...additionalStyles,
-						}
-					});
-				}, 100)
-				}
+				updateArgs({ isOpen: !isOpen });
+			},
 		}))}
-
 		<div
 			class=${classMap({
 				[rootClass]: true,
@@ -146,7 +158,10 @@ export const Template = ({
 				[`${rootClass}--${position}`]: typeof position !== "undefined",
 				...customClasses.reduce((a, c) => ({ ...a, [c]: true }), {}),
 			})}
-			style=${ifDefined(styleMap(customStyles))}
+			style=${ifDefined(styleMap({
+				...customStyles,
+				...(!withTip ? { "--spectrum-popover-tip-height": "2px" } : {}),
+			}))}
 			role="presentation"
 			id=${ifDefined(id)}
 			data-testid=${ifDefined(testId)}

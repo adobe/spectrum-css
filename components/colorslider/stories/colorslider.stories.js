@@ -1,4 +1,3 @@
-// Import the component markup template
 import { Template } from "./template";
 
 export default {
@@ -7,6 +6,8 @@ export default {
 		"The Color slider component lets users visually change an individual channel of a color.",
 	component: "ColorSlider",
 	argTypes: {
+		/* No theme styles for express available */
+		express: { table: { disable: true } },
 		colorHandleStyle: { table: { disable: true } },
 		vertical: { table: { disable: true } },
 		isDisabled: {
@@ -59,7 +60,7 @@ export default {
 		status: {
 			type: process.env.MIGRATED_PACKAGES.includes("colorslider")
 				? "migrated"
-				: undefined,
+				: "legacy",
 		},
 	},
 };

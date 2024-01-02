@@ -1,4 +1,3 @@
-// Import the component markup template
 import { Template } from "./template";
 
 export default {
@@ -7,6 +6,8 @@ export default {
 		"The Field label component is used along with inputs to display a label for that input.",
 	component: "Fieldlabel",
 	argTypes: {
+		/* No theme styles for express available */
+		express: { table: { disable: true } },
 		size: {
 			name: "Size",
 			type: { name: "string", required: true },
@@ -69,7 +70,7 @@ export default {
 		status: {
 			type: process.env.MIGRATED_PACKAGES.includes("fieldlabel")
 				? "migrated"
-				: undefined,
+				: "legacy",
 		},
 	},
 };

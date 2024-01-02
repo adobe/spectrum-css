@@ -1,9 +1,28 @@
-import { html, svg } from "lit";
-import { classMap } from "lit/directives/class-map.js";
-import { ifDefined } from "lit/directives/if-defined.js";
-import { unsafeSVG } from "lit/directives/unsafe-svg.js";
+import path from "path";
 
-import { fetchIconSVG, uiIcons, workflowIcons } from "./utilities.js";
+import { html } from "lit";
+import { unsafeHTML } from "lit/directives/unsafe-html.js";
+
+
+// Imports an array of all icon names in the workflow set
+import iconOpts from "@adobe/spectrum-css-workflow-icons";
+
+const workflowIcons = (iconOpts || []).map((icon) =>
+	path.basename(icon, ".svg")
+);
+
+const uiIcons = [
+	"Arrow",
+	"Asterisk",
+	"Checkmark",
+	"Chevron",
+	"CornerTriangle",
+	"Cross",
+	"Dash",
+	"SingleGripper",
+	"DoubleGripper",
+	"TripleGripper",
+];
 
 import "../index.css";
 
@@ -31,6 +50,7 @@ export const Template = ({
 	size = "m",
 	setName,
 	iconName,
+	uiIconName,
 	fill,
 	id,
 	customClasses = [],
@@ -38,6 +58,11 @@ export const Template = ({
 	...globals
 }) => {
 	const { scale } = globals;
+
+	if (!iconName && uiIconName) {
+		iconName = uiIconName;
+		setName = "ui";
+	}
 
 	if (!iconName) {
 		console.warn(
@@ -85,7 +110,6 @@ export const Template = ({
 
 		idKey += sizeVal;
 		iconName += sizeVal;
-
 	}
 
 	// Determine which icon set contains this icon.
@@ -104,14 +128,27 @@ export const Template = ({
 
 	let inlineStyle;
 	if (fill) inlineStyle = `color: ${fill}`;
+
 	let icon;
 
 	if (!useRef) {
-		icon = fetchIconSVG({ iconName: idKey, setName, ...globals });
+		// Check adobe workflow icons first
+		if (setName === "workflow") {
+			icon = require(/* webpackPrefetch: true */ `!!raw-loader!@adobe/spectrum-css-workflow-icons/dist/${
+				scale !== "medium" ? `24` : `18`
+			}/${idKey}.svg?raw`);
+		}
+
+		// Check the ui kit for icon set if not yet found
+		if (!icon || setName === "ui") {
+			icon = require(/* webpackPrefetch: true */ `!!raw-loader!@spectrum-css/ui-icons/dist/${scale ?? "medium"}/${idKey}.svg?raw`);
+		}
 
 		if (!icon) {
 			console.warn(`Icon: ${idKey} not found.`);
 			return html``;
+		} else {
+			icon = (icon.default ?? icon).trim();
 		}
 	}
 
@@ -126,51 +163,67 @@ export const Template = ({
 		...customClasses.reduce((a, c) => ({ ...a, [c]: true }), {}),
 	};
 
-	// If we found an icon above, return that value with the appended class list
-	if (icon) {
-		return svg`${unsafeSVG(
-			icon.replace(
-				/^<svg(.*)>/,
-				`<svg class="${Object.entries(classList)
-					.filter(([, v]) => v === true)
-					.map(([k]) => k)
-					.join(" ")}"${
-					inlineStyle ? ` style="${inlineStyle}"` : ""
-				} focusable="false" aria-hidden="true" role="img" width="10" $1>`
-			)
-		)}`;
+	const svgCapture = /<\/?svg(?:\s\w+=[\"|\']?[\w|\s|\.|:|\/]+[\"|\']?)*>/gm;
+	const attributeCapture = /(\S+)=["']?((?:.(?!["']?\s+(?:\S+)=|[>"']))+.)["']?/g;
+	const props = {
+		focusable: "false",
+		["aria-hidden"]: "true",
+		role: "img",
+	};
+
+	if (id) props.id = id;
+	if (inlineStyle) props.style = inlineStyle;
+	if (classList) {
+		props.class = Object.entries(classList)
+			.filter(([, v]) => v === true)
+			.map(([k]) => k)
+			.join(" ");
 	}
 
-	// Otherwise, we need to render a reference to the icon
+	if (!icon) {
+		// If no icon content, we need to render a reference to the icon
 
-	// ui ID: #spectrum-css-icon-${idKey}
-	// workflow ID: #spectrum-icon-(18|24)-${idKey}
-	const iconID =
-		setName !== "workflow"
-			? `spectrum-css-icon-${idKey}`
-			: `spectrum-icon-${scale !== "medium" ? `24` : `18`}-${idKey}`;
+		// ui ID: #spectrum-css-icon-${idKey}
+		// workflow ID: #spectrum-icon-(18|24)-${idKey}
+		const iconID =
+			setName !== "workflow"
+				? `spectrum-css-icon-${idKey}`
+				: `spectrum-icon-${scale !== "medium" ? `24` : `18`}-${idKey}`;
 
-	try {
-		import(
-			/* webpackPrefetch: true */ `!!raw-loader!@adobe/spectrum-css-workflow-icons/dist/spectrum-icons.svg`
-		);
-		import(
-			/* webpackPrefetch: true */ `!!raw-loader!@spectrum-css/ui-icons/dist/spectrum-css-icons.svg`
-		);
-	} catch (e) {
-		console.warn(e);
+		props["aria-labelledby"] = idKey;
+
+		return html`${unsafeHTML(`<svg ${Object.entries(props).map(([key, value]) => `${key}="${value}"`).join(" ")}>
+			<title id=${idKey}>${idKey.replace(/([A-Z])/g, " $1").trim()}</title>
+			<use xlink:href="#${iconID}" href="#${iconID}" />
+		</svg>`)}`;
 	}
 
-	return svg`<svg
-		class=${classMap(classList)}
-		id=${ifDefined(id)}
-		style=${ifDefined(inlineStyle)}
-		focusable="false"
-		aria-hidden="true"
-		aria-labelledby=${idKey}
-		role="img"
-	>
-		<title id=${idKey}>${idKey.replace(/([A-Z])/g, " $1").trim()}</title>
-		<use xlink:href="#${iconID}" href="#${iconID}" />
-	</svg>`;
+	// If we found an icon, return that value with the appended class list
+	const matches = icon.match(svgCapture)?.[0];
+
+	// Split the string into attribute key/value pairs by capturing the value inside quotes
+	const keyPairs = matches ? matches.match(attributeCapture) : [];
+
+	// Convert the array of key/value pairs into an object
+	if (keyPairs) {
+		keyPairs.forEach((pair) => {
+			const [key, value] = pair.split("=");
+			props[key] = value.replace(/"/g, "");
+		});
+	}
+
+	delete props.height;
+
+	if (setName === "ui") {
+		if (props.viewBox) {
+			const viewbox = props.viewBox.split(" ");
+			const width = viewbox[2];
+			props.width = width ?? "10";
+		} else {
+			props.width = "10";
+		}
+	} else delete props.width;
+
+	const iconContent = icon.replaceAll(svgCapture, "");
+	return html`${unsafeHTML(`<svg ${Object.entries(props).map(([key, value]) => `${key}="${value}"`).join(" ")}>${iconContent}</svg>`)}`;
 };

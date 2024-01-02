@@ -1,5 +1,9 @@
-import isChromatic from "chromatic/isChromatic";
+
 import { html } from "lit";
+import { when } from "lit/directives/when.js";
+
+import isChromatic from "chromatic/isChromatic";
+
 import { Template } from "./template";
 
 import { Template as Dialog } from "@spectrum-css/dialog/stories/template.js";
@@ -10,11 +14,12 @@ export default {
 		"Tray dialogs are typically used to portray information on mobile device or smaller screens.",
 	component: "Tray",
 	argTypes: {
+		/* No theme styles for express available */
+		express: { table: { disable: true } },
 		content: { table: { disable: true } },
 		isOpen: {
 			name: "Open",
 			type: { name: "boolean" },
-			table: { disable: true },
 		},
 		heading: {
 			name: "Heading",
@@ -29,7 +34,24 @@ export default {
 	args: {
 		rootClass: "spectrum-Tray",
 		customClasses: ["spectrum-Modal"],
+		customStyles: {
+			// Prevents overflow in the docs preview
+			// @todo block-size 100vh assumes the tray exists at the root of an app; it should conform to it's container though instead
+			blockSize: "100%",
+		},
 		isOpen: true,
+		heading: "Tray dialog",
+		content: [
+			() => Dialog({
+				heading: "New messages",
+				content: ["You have 5 new messages!"],
+				isDismissable: false,
+			})
+		],
+		customStorybookStyles: isChromatic() ? {
+			blockSize: "400px",
+			inlineSize: "800px",
+		} : {},
 	},
 	parameters: {
 		actions: {
@@ -38,46 +60,38 @@ export default {
 		status: {
 			type: process.env.MIGRATED_PACKAGES.includes("tray")
 				? "migrated"
-				: undefined,
+				: "legacy",
 		},
 	},
 };
 
-export const Default = ({
-	...args
-}) => {
-	return html`
-		<div>
-			${Template({
-				heading: "Tray Dialog",
-				content: [
-					() => Dialog({
-							heading: "New Messages",
-							content: ["You have 5 new messages!"],
-							isDismissable: false,
-						})
-				],
-			})}
-
-			${
-				isChromatic() ?
-				Template({
-					...args,
-					heading: "Tray Dialog",
-					content: [
-						() => Dialog({
-								heading: "You have new messages waiting in your inbox",
-								content: ["You have 5 new messages! This notification is extra long so it wraps to the next line"],
-								isDismissable: false,
-							})
-					],
-					customStyles: {
-						"justify-content": "flex-end"
-					},
-				})
-			: null
+export const Default = (args) => html`
+	${Template({
+		...args,
+		customStyles: isChromatic() ? {
+			blockSize: "400px",
+			justifyContent: "start",
+			alignItems: "end",
+			position: "relative",
+		} : {
+			alignItems: "end",
+		},
+	})}
+	${when(isChromatic(), () => Template({
+		...args,
+		content: [
+			() => Dialog({
+				heading: "You have new messages waiting in your inbox",
+				content: ["You have 5 new messages! This notification is extra long so it wraps to the next line"],
+				isDismissable: false,
+			})
+		],
+		customStyles: {
+			blockSize: "400px",
+			justifyContent: "end",
+			position: "relative",
+			alignItems: "end",
 		}
-		</div>
-	`;
-};
+	}))}
+`;
 Default.args = {};

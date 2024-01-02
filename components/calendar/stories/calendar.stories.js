@@ -1,8 +1,7 @@
-// Import the component markup template
 import { Template } from "./template";
 
-import isChromatic from "chromatic/isChromatic";
 import ActionButtonStories from "@spectrum-css/actionbutton/stories/actionbutton.stories.js";
+import isChromatic from "chromatic/isChromatic";
 
 const months = [...Array(12).keys()].map((key) =>
 	new Date(0, key).toLocaleString("en", { month: "long" })
@@ -14,6 +13,8 @@ export default {
 		"Calendars display a grid of days in one or more months and allow users to select a single date.",
 	component: "Calendar",
 	argTypes: {
+		/* No theme styles for express available */
+		express: { table: { disable: true } },
 		reducedMotion: { table: { disable: true } },
 		month: {
 			name: "Month",
@@ -93,6 +94,9 @@ export default {
 		isDisabled: false,
 		useDOWAbbrev: false,
 		buttonSize: ActionButtonStories.args.size,
+		month: months[6],
+		selectedDay: new Date(2023, 6, 3),
+		year: 2023,
 	},
 	parameters: {
 		actions: {
@@ -101,28 +105,21 @@ export default {
 		status: {
 			type: process.env.MIGRATED_PACKAGES.includes("calendar")
 				? "migrated"
-				: undefined,
+				: "legacy",
 		},
 	},
 };
 
 export const Default = Template.bind({});
-Default.args = {
-	month: months[6],
-	selectedDay: new Date(2023, 6, 3),
-	year: 2023,
-};
+Default.args = {};
 
 export const DefaultRTL = Template.bind({});
-DefaultRTL.args = {...Default.args};
-DefaultRTL.parameters = {textDirection: "rtl"}
+DefaultRTL.args = {};
+DefaultRTL.parameters = { textDirection: "rtl" };
 
 export const RangeSelection = Template.bind({});
 RangeSelection.args = {
-	month: months[6],
-	selectedDay: new Date(2023, 6, 3),
 	lastDay: new Date(2023, 6, 7),
-	year: 2023,
 	useDOWAbbrev: true,
 	padded: true,
 };
@@ -135,8 +132,5 @@ TodayHighlighted.args = {
 
 export const Disabled = Template.bind({});
 Disabled.args = {
-	month: months[6],
-	selectedDay: new Date(2023, 6, 3),
-	year: 2023,
 	isDisabled: true
 };

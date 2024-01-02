@@ -9,7 +9,6 @@ import { Template as Textfield } from "@spectrum-css/textfield/stories/template.
 
 import "../index.css";
 
-// More on component templates: https://storybook.js.org/docs/web-components/writing-stories/introduction#using-args
 export const Template = ({
 	rootClass = "spectrum-Pagination",
 	size = "m",
@@ -18,28 +17,31 @@ export const Template = ({
 	items,
 	...globals
 }) => {
+	const classList = {
+		[rootClass]: true,
+		[`${rootClass}--${variant}`]: typeof variant !== "undefined",
+		...customClasses.reduce((a, c) => ({ ...a, [c]: true }), {}),
+	};
+
 	if (variant === "explicit") {
 		return html`
-			<nav
-				class=${classMap({
-					[rootClass]: true,
-					[`${rootClass}--explicit`]: true,
-					...customClasses.reduce((a, c) => ({ ...a, [c]: true }), {}),
-				})}
-			>
+			<nav class=${classMap(classList)}>
 				${ActionButton({
+					...globals,
 					size,
 					isQuiet: true,
 					iconName: "ChevronLeft",
 					customClasses: [`${rootClass}-prevButton`],
 				})}
 				${Textfield({
+					...globals,
 					size,
 					value: "1",
 					customClasses: [`${rootClass}-textfield`],
 				})}
 				<span class="${rootClass}-counter">of 89 pages</span>
 				${ActionButton({
+					...globals,
 					size,
 					isQuiet: true,
 					iconName: "ChevronRight",
@@ -47,25 +49,23 @@ export const Template = ({
 				})}
 			</nav>
 		`;
-	} else if (variant == "button") {
+	}
+
+	if (variant === "button") {
 		return SplitButton({
+			...globals,
 			position: "left",
 			variant: "accent",
 			label: "Next",
 			iconName: "ChevronLeft100",
 			labelIconName: "ChevronRight100",
-			customFirstButtonClasses: ["spectrum-Pagination-prevButton"],
-			customLastButtonClasses: ["spectrum-Pagination-nextButton"]
+			customFirstButtonClasses: [`${rootClass}-prevButton`],
+			customLastButtonClasses: [`${rootClass}-nextButton`],
 		});
 	}
+
 	return html`
-		<nav
-			class=${classMap({
-				[rootClass]: true,
-				[`${rootClass}--${variant}`]: typeof variant !== "undefined",
-				...customClasses.reduce((a, c) => ({ ...a, [c]: true }), {}),
-			})}
-		>
+		<nav class=${classMap(classList)}>
 			${Button({
 				...globals,
 				size,

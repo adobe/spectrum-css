@@ -7,6 +7,8 @@ export default {
 		"A dialog displays important information that users need to acknowledge. They appear over the interface and block further interactions.",
 	component: "Dialog",
 	argTypes: {
+		/* No theme styles for express available */
+		express: { table: { disable: true } },
 		heading: {
 			name: "Heading",
 			type: { name: "string" },
@@ -50,6 +52,15 @@ export default {
 		isDismissable: true,
 		showModal: false,
 		isOpen: true,
+		heading: "Lorem ipsum dolor sit amet, consectetur adipiscing elit",
+		showModal: true,
+		content: [
+			() => Typography({
+				semantics: "body",
+				size: "m",
+				content: ["Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Auctor augue mauris augue neque gravida. Libero volutpat sed ornare arcu. Quisque egestas diam in arcu cursus euismod quis viverra. Posuere ac ut consequat semper viverra nam libero justo laoreet. Enim ut tellus elementum sagittis vitae et leo duis ut. Neque laoreet suspendisse interdum consectetur libero id faucibus nisl. Diam volutpat commodo sed egestas egestas. Dolor magna eget est lorem ipsum dolor. Vitae suscipit tellus mauris a diam maecenas sed. Turpis in eu mi bibendum neque egestas congue. Rhoncus est pellentesque elit ullamcorper dignissim cras lobortis."],
+			}),
+		],
 	},
 	parameters: {
 		actions: {
@@ -63,22 +74,10 @@ export default {
 		status: {
 			type: process.env.MIGRATED_PACKAGES.includes("dialog")
 				? "migrated"
-				: undefined,
+				: "legacy",
 		},
 	},
 };
 
 export const Default = Template.bind({});
-Default.args = {
-	heading: "Lorem ipsum dolor sit amet, consectetur adipiscing elit",
-	showModal: true,
-	content: [
-		() => Typography({
-			semantics: "body",
-			size: "m",
-			content: [
-				"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Auctor augue mauris augue neque gravida. Libero volutpat sed ornare arcu. Quisque egestas diam in arcu cursus euismod quis viverra. Posuere ac ut consequat semper viverra nam libero justo laoreet. Enim ut tellus elementum sagittis vitae et leo duis ut. Neque laoreet suspendisse interdum consectetur libero id faucibus nisl. Diam volutpat commodo sed egestas egestas. Dolor magna eget est lorem ipsum dolor. Vitae suscipit tellus mauris a diam maecenas sed. Turpis in eu mi bibendum neque egestas congue. Rhoncus est pellentesque elit ullamcorper dignissim cras lobortis."
-			]
-		}),
-	],
-};
+Default.args = {};

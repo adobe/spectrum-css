@@ -1,6 +1,8 @@
-import { Template } from "./template";
-import { html } from "lit";
 import isChromatic from "chromatic/isChromatic";
+import { html } from "lit";
+import { when } from "lit/directives/when.js";
+
+import { Template } from "./template";
 
 export default {
 	title: "Components/Alert banner",
@@ -53,6 +55,9 @@ export default {
 		variant: "neutral",
 		hasActionButton: true,
 		text: "Your trial has expired",
+		customStorybookStyles: {
+			flexDirection: "column",
+		}
 	},
 	parameters: {
 		actions: {
@@ -61,38 +66,33 @@ export default {
 		status: {
 			type: process.env.MIGRATED_PACKAGES.includes("alertbanner")
 				? "migrated"
-				: undefined,
+				: "legacy",
 		},
 	},
 };
 
-const AlertBannerGroup = ({
-	...args
-	}) => {
-	return html`
-		<div style="display: flex; flex-direction: column; gap: 1rem">
-			${Template({
-				...args,
-			})}
-			${isChromatic() ?
-			Template({
-				...args,
-				hasActionButton: true,
-				variant: "info",
-				text: "Your trial will expire in 3 days. Once it expires your files will be saved and ready for you to open again once you have purcahsed the software."
-			}): null }
-			${isChromatic() ?
-					Template({
-						...args,
-				hasActionButton: true,
-				variant: "negative",
-				text: "Connection interupted. Check your network to continue."
-			})
-			: null }
-		</div>
-	`;
-};
+const AlertBannerGroup = (args) => html`
+	${Template(args)}
+	${when(isChromatic(), () => html`
+		${Template({
+			...args,
+			hasActionButton: true,
+			variant: "info",
+			text: "Your trial will expire in 3 days. Once it expires your files will be saved and ready for you to open again once you have purcahsed the software."
+		})}
+		${Template({
+			...args,
+			hasActionButton: true,
+			variant: "negative",
+			text: "Connection interupted. Check your network to continue."
+		})}
+	`)}
+`;
 
 export const Default = AlertBannerGroup.bind({});
-Default.args = {
+Default.args = {};
+
+export const Express = AlertBannerGroup.bind({});
+Express.args = {
+	express: true
 };

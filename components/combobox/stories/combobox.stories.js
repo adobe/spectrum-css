@@ -1,4 +1,3 @@
-// Import the component markup template
 import { Template } from "./template";
 
 import { Template as Menu } from "@spectrum-css/menu/stories/template.js";
@@ -127,7 +126,37 @@ export default {
 		isLoading: false,
 		isDisabled: false,
 		showFieldLabel: false,
-		fieldLabelText: "Select location"
+		fieldLabelText: "Select location",
+		content: [
+			Menu({
+				role: "listbox",
+				subrole: "option",
+				isSelectable: true,
+				items: [
+					{
+						label: "Ballard",
+						isSelected: true,
+						isChecked: true,
+					},
+					{
+						label: "Fremont",
+					},
+					{
+						label: "Greenwood",
+					},
+					{
+						type: "divider",
+					},
+					{
+						label: "United States of America",
+						isDisabled: true,
+					},
+				],
+			}),
+		],
+		customStorybookStyles: {
+			display: "block"
+		}
 	},
 	parameters: {
 		actions: {
@@ -136,72 +165,20 @@ export default {
 		status: {
 			type: process.env.MIGRATED_PACKAGES.includes("combobox")
 				? "migrated"
-				: undefined,
+				: "legacy",
 		},
 	},
 };
 
 export const Default = Template.bind({});
-Default.args = {
-	content: [
-		Menu({
-			role: "listbox",
-			subrole: "option",
-			isSelectable: true,
-			items: [
-				{
-					label: "Ballard",
-					isSelected: true,
-					isChecked: true,
-				},
-				{
-					label: "Fremont",
-				},
-				{
-					label: "Greenwood",
-				},
-				{
-					type: "divider",
-				},
-				{
-					label: "United States of America",
-					isDisabled: true,
-				},
-			],
-		}),
-	],
-};
+Default.args = {};
 
 export const Quiet = Template.bind({});
 Quiet.args = {
 	isQuiet: true,
 	showFieldLabel: true,
 	fieldLabelText: "Select location, this label should wrap",
-	content: [
-		Menu({
-			role: "listbox",
-			subrole: "option",
-			isSelectable: true,
-			items: [
-				{
-					label: "Ballard",
-					isSelected: true,
-					isChecked: true,
-				},
-				{
-					label: "Fremont",
-				},
-				{
-					label: "Greenwood",
-				},
-				{
-					type: "divider",
-				},
-				{
-					label: "United States of America",
-					isDisabled: true,
-				},
-			],
-		}),
-	],
 };
+
+export const Express = Template.bind({});
+Express.args = { express: true };

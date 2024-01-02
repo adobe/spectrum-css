@@ -1,4 +1,3 @@
-// Import the component markup template
 import { Template } from "./template";
 
 import { default as Swatch } from "@spectrum-css/swatch/stories/swatch.stories.js";
@@ -65,7 +64,7 @@ export default {
 		status: {
 			type: process.env.MIGRATED_PACKAGES.includes("swatchgroup")
 				? "migrated"
-				: undefined,
+				: "legacy",
 		},
 	},
 };

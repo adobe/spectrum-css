@@ -7,7 +7,6 @@ export const Template = ({
 	rootClass = "spectrum-CoachIndicator",
 	isQuiet = false,
 	variant,
-	...globals
 }) => {
 	return html`
 		<div

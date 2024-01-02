@@ -7,7 +7,6 @@ import { Template as Icon } from "@spectrum-css/icon/stories/template.js";
 
 import "../index.css";
 
-// More on component templates: https://storybook.js.org/docs/web-components/writing-stories/introduction#using-args
 export const Template = ({
 	rootClass = "spectrum-HelpText",
 	size = "m",
@@ -18,17 +17,7 @@ export const Template = ({
 	id,
 	customClasses = [],
 	customStyles = {},
-	...globals
 }) => {
-	const { express } = globals;
-
-	try {
-		if (!express) import(/* webpackPrefetch: true */ "../themes/spectrum.css");
-		else import(/* webpackPrefetch: true */ "../themes/express.css");
-	} catch (e) {
-		console.warn(e);
-	}
-
 	return html`
 		<div
 			class=${classMap({

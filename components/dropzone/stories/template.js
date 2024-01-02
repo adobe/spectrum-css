@@ -1,10 +1,11 @@
 import { html } from "lit";
 import { classMap } from "lit/directives/class-map.js";
 import { ifDefined } from "lit/directives/if-defined.js";
+import { styleMap } from "lit/directives/style-map.js";
 
 import { Template as ActionButton } from "@spectrum-css/actionbutton/stories/template.js";
-import { AccentColor as IllustratedMessageStory } from "@spectrum-css/illustratedmessage/stories/illustratedmessage.stories.js";
 import { Template as IllustratedMessage } from "@spectrum-css/illustratedmessage/stories/template.js";
+import { Template as Link } from "@spectrum-css/link/stories/template.js";
 
 import "../index.css";
 
@@ -13,9 +14,9 @@ export const Template = ({
 	isDragged = false,
 	isFilled = false,
 	customClasses = [],
-	customHeading,
-	customDescription,
-	customLabel,
+	customHeading = "Drag and drop your file",
+	customDescription = () => html`${Link({ url: "#", content: "Select a file" })} from your computer.`,
+	customLabel = "Drop file to replace",
 	id,
 	...globals
 }) => {
@@ -30,17 +31,19 @@ export const Template = ({
 			id=${ifDefined(id)}
 			role="region"
 			tabindex="0"
-			style="width: 300px;"
+			style=${styleMap({
+				width: "300px"
+			})}
 		>
 			${IllustratedMessage({
 				...globals,
-				heading: customHeading ?? IllustratedMessageStory.args.heading,
-				description: customDescription ?? IllustratedMessageStory.args.description,
+				heading: customHeading,
+				description: customDescription,
 			})}
 
 			<div class="${rootClass}-content">
 				${ActionButton({
-					label: customLabel ?? "Drop file to replace",
+					label: customLabel,
 					customClasses: [`${rootClass}-button`],
 				})}
 			</div>

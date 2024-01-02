@@ -1,4 +1,4 @@
-import { argTypes, ActionButtons } from "./index";
+import { ActionButtons, argTypes } from "./index";
 
 export default {
 	title: "Components/Action button",
@@ -21,7 +21,7 @@ export default {
 		status: {
 			type: process.env.MIGRATED_PACKAGES.includes("actionbutton")
 				? "migrated"
-				: undefined,
+				: "legacy",
 		},
 	},
 };
@@ -43,6 +43,11 @@ export const SelectedDisabled = ActionButtons.bind({});
 SelectedDisabled.args = {
 	isSelected: true,
 	isDisabled: true
+};
+
+export const Express = ActionButtons.bind({});
+Express.args = {
+	express: true
 };
 
 export const Emphasized = ActionButtons.bind({});

@@ -1,4 +1,3 @@
-// Import the component markup template
 import { Template } from "./template";
 
 export default {
@@ -7,6 +6,8 @@ export default {
 		"The Color loupe component shows the output color that would otherwise be covered by a cursor, stylus, or finger during color selection.",
 	component: "Colorloupe",
 	argTypes: {
+		/* No theme styles for express available */
+		express: { table: { disable: true } },
 		isOpen: {
 			description: "Apply `is-open` to display the component",
 			defaultValue: true,
@@ -31,7 +32,7 @@ export default {
 		status: {
 			type: process.env.MIGRATED_PACKAGES.includes("colorloupe")
 				? "migrated"
-				: undefined,
+				: "legacy",
 		},
 	},
 };

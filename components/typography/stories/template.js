@@ -6,7 +6,6 @@ import { capitalize } from "lodash-es";
 
 import "../index.css";
 
-// More on component templates: https://storybook.js.org/docs/web-components/writing-stories/introduction#using-args
 export const Template = ({
 	rootClass = "spectrum-Typography",
 	semantics,
@@ -17,25 +16,32 @@ export const Template = ({
 	id,
 	content = [],
 	customClasses = [],
-	// ...globals
+	...globals
 }) => {
+	function processContent(c) {
+		if (typeof c === "string") return c;
+		if (typeof c === "function") c = c(globals);
+		if (typeof c === "object" && Object.keys(c).includes("_$litType$")) return c;
+
+		return Template({
+			rootClass,
+			semantics,
+			size,
+			variant,
+			weight,
+			glyph,
+			id,
+			customClasses,
+			...c,
+		});
+	}
+
 	if (Array.isArray(content)) {
 		content = content.map((c) => {
-			if (typeof c === "string") return c;
-			if (typeof c === "object" && c._$litType$) return c;
-
-			return Template({
-				rootClass,
-				semantics,
-				size,
-				variant,
-				weight,
-				glyph,
-				id,
-				customClasses,
-				...c,
-			});
+			return processContent(c);
 		});
+	} else {
+		content = processContent(content);
 	}
 
 	if (typeof semantics === "undefined") {

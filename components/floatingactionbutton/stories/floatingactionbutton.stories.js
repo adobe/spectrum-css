@@ -1,15 +1,15 @@
-// Import the component markup template
 import { Template } from "./template";
 
 import { default as IconStories } from "@spectrum-css/icon/stories/icon.stories.js";
 
-// More on default export: https://storybook.js.org/docs/web-components/writing-stories/introduction#default-export
 export default {
 	title: "Components/Floating action button",
 	description:
 		"The Floating action button component is used to give users a more prominent button for high frequency actions",
 	component: "FloatingActionButton",
 	argTypes: {
+		/* No theme styles for express available */
+		express: { table: { disable: true } },
 		variant: {
 			name: "Varaint",
 			type: { name: "string", required: true },
@@ -27,7 +27,6 @@ export default {
 			if: false,
 		},
 	},
-	// More on args: https://storybook.js.org/docs/web-components/writing-stories/args
 	args: {
 		rootClass: "spectrum-FloatingActionButton",
 		variant: "primary",
@@ -40,7 +39,7 @@ export default {
 		status: {
 			type: process.env.MIGRATED_PACKAGES.includes("floatingactionbutton")
 				? "migrated"
-				: undefined,
+				: "legacy",
 		},
 	},
 };

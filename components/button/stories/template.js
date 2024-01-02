@@ -29,25 +29,26 @@ export const Template = ({
   ariaControls,
   ...globals
 }) => {
-	const { express } = globals;
-	try {
-		if (express) import(/* webpackPrefetch: true */ "../themes/express.css");
-		else import(/* webpackPrefetch: true */ "../themes/spectrum.css");
-	} catch (e) {
-		console.warn(e);
-	}
+  const { express } = globals;
+
+  try {
+    if (!express) import(/* webpackPrefetch: true */ "../themes/spectrum.css");
+    else import(/* webpackPrefetch: true */ "../themes/express.css");
+  } catch (e) {
+    console.warn(e);
+  }
 
   return html`
     <button
       class=${classMap({
-        [rootClass]: true,
-        [`${rootClass}--${treatment}`]: typeof treatment !== "undefined",
-        [`${rootClass}--${variant}`]: typeof variant !== "undefined",
-        [`${rootClass}--size${size?.toUpperCase()}`]: typeof size !== "undefined",
-        [`${rootClass}--static${capitalize(lowerCase(staticColor))}`]: typeof staticColor !== "undefined",
-        [`${rootClass}--iconOnly`]: hideLabel,
-        ...customClasses.reduce((a, c) => ({ ...a, [c]: true }), {}),
-      })}
+    [rootClass]: true,
+    [`${rootClass}--${treatment}`]: typeof treatment !== "undefined",
+    [`${rootClass}--${variant}`]: typeof variant !== "undefined",
+    [`${rootClass}--size${size?.toUpperCase()}`]: typeof size !== "undefined",
+    [`${rootClass}--static${capitalize(lowerCase(staticColor))}`]: typeof staticColor !== "undefined",
+    [`${rootClass}--iconOnly`]: hideLabel,
+    ...customClasses.reduce((a, c) => ({ ...a, [c]: true }), {}),
+  })}
       id=${ifDefined(id)}
       style=${ifDefined(styleMap(customStyles))}
       ?disabled=${isDisabled}
@@ -58,8 +59,8 @@ export const Template = ({
     >
       ${when(iconName && !iconAfterLabel, () => Icon({ ...globals, iconName, size }))}
       ${when(label && !hideLabel,
-        () => html`<span class=${`${rootClass}-label`}>${label}</span>`
-      )}
+    () => html`<span class=${`${rootClass}-label`}>${label}</span>`
+  )}
       ${when(iconName && iconAfterLabel, () => Icon({ ...globals, iconName, size }))}
     </button>
   `;

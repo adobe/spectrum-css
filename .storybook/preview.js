@@ -1,16 +1,16 @@
-import isChromatic from "chromatic/isChromatic";
-
 import { withActions } from "@storybook/addon-actions/decorator";
+
 import DocumentationTemplate from './DocumentationTemplate.mdx';
+
 import {
 	withContextWrapper,
 	withLanguageWrapper,
+	withPreviewStyles,
 	withReducedMotionWrapper,
 	withTextDirectionWrapper,
 } from "./decorators/index.js";
 
 // https://github.com/storybookjs/storybook-addon-console
-import "@storybook/addon-console";
 import { setConsoleOptions } from "@storybook/addon-console";
 
 const panelExclude = setConsoleOptions({}).panelExclude || [];
@@ -39,6 +39,10 @@ import "@spectrum-css/expressvars/dist/spectrum-global.css";
 import "@spectrum-css/tokens";
 
 import "./global.js";
+
+// Imports the full raw sets of icons
+import "!!raw-loader!@adobe/spectrum-css-workflow-icons/dist/spectrum-icons.svg?raw";
+import "!!raw-loader!@spectrum-css/ui-icons/dist/spectrum-css-icons.svg?raw";
 
 // Rendered as controls; these properties are assigned
 //      to the document root element
@@ -159,6 +163,12 @@ export const argTypes = {
 		table: { disable: true },
 		control: "object",
 	},
+	customStorybookStyles: {
+		name: "Custom styles specific to Storybook",
+		type: { name: "string", required: false },
+		table: { disable: true },
+		control: "object",
+	},
 	id: {
 		name: "Element ID",
 		type: { name: "string", required: false },
@@ -190,14 +200,12 @@ export const parameters = {
 	panelPosition: "bottom",
 	showToolbar: true,
 	isFullscreen: false,
-	//👇 Defines a list of viewport widths for a single story to be captured in Chromatic.
-	chromatic: isChromatic()
-		? {
-				// viewports: [320, 1200],
-				// forcedColors: 'active',
-				// prefersReducedMotion: 'reduce',
-		  }
-		: {},
+	chromatic: {
+		delay: 100,
+		// viewports: [320, 1200],
+		// forcedColors: 'active',
+		// prefersReducedMotion: 'reduce',
+	},
 	controls: {
 		expanded: true,
 		hideNoControlsWarning: true,
@@ -220,7 +228,7 @@ export const parameters = {
     	page: DocumentationTemplate,
 		story: {
 			inline: true,
-			iframeHeight: "200px",
+			height: "200px",
 		},
 		source: {
 			type: "dynamic",
@@ -230,21 +238,31 @@ export const parameters = {
 	status: {
 		statuses: {
 			migrated: {
-				background: "#f0f0f0",
-				color: "#444",
+				background: "rgb(0,122,77)",
+				color: "#fff",
 				description: "Migrated to the latest tokens.",
+			},
+			legacy: {
+				background: "rgb(246,133,17)",
+				color: "#fff",
+				description: "Not yet migrated to the latest tokens.",
+			},
+			deprecated: {
+				background: "rgb(211,21,16)",
+				color: "#fff",
+				description: "Should not be used and will not receive updates.",
 			},
 		},
 	},
 };
 
 export const decorators = [
+	withActions,
 	withTextDirectionWrapper,
 	withLanguageWrapper,
 	withReducedMotionWrapper,
 	withContextWrapper,
-	withActions,
-	// ...[isChromatic() ? withSizingWrapper : false].filter(Boolean),
+	withPreviewStyles,
 ];
 
 export default {

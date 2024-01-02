@@ -1,8 +1,7 @@
-// Import the component markup template
 import { Template } from "./template";
 
-import { default as IconStories } from "@spectrum-css/icon/stories/icon.stories.js";
 import { default as ActionButtonStories } from "@spectrum-css/actionbutton/stories/actionbutton.stories.js";
+import { default as IconStories } from "@spectrum-css/icon/stories/icon.stories.js";
 
 export default {
 	title: "Components/Cycle button",
@@ -10,6 +9,8 @@ export default {
 		"The Cycle button component is an action button that cycles through two different icons, a play that then changes to a pause, for example.",
 	component: "CycleButton",
 	argTypes: {
+		/* No theme styles for express available */
+		express: { table: { disable: true } },
 		size: ActionButtonStories?.argTypes?.size ?? {},
 		initialIcon: {
 			...(IconStories?.argTypes?.iconName ?? {}),
@@ -38,7 +39,7 @@ export default {
 		status: {
 			type: process.env.MIGRATED_PACKAGES.includes("cyclebutton")
 				? "migrated"
-				: undefined,
+				: "legacy",
 		},
 	},
 };

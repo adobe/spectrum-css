@@ -2,6 +2,7 @@ import { html } from "lit";
 import { classMap } from "lit/directives/class-map.js";
 import { ifDefined } from "lit/directives/if-defined.js";
 import { styleMap } from "lit/directives/style-map.js";
+import { when } from "lit/directives/when.js";
 
 import { Template as Button } from "@spectrum-css/button/stories/template.js";
 import { Template as Icon } from "@spectrum-css/icon/stories/template.js";
@@ -18,15 +19,6 @@ export const Template = ({
 	isClosable = false,
 	...globals
 }) => {
-	const { express } = globals;
-
-	try {
-		if (!express) import(/* webpackPrefetch: true */ "../themes/spectrum.css");
-		else import(/* webpackPrefetch: true */ "../themes/express.css");
-	} catch (e) {
-		console.warn(e);
-	}
-
 	let iconName;
 	switch (variant) {
 		case "info":
@@ -40,35 +32,7 @@ export const Template = ({
 		case "closable":
 			iconName = "Alert";
 			break;
-		default:
-			iconName = undefined;
 	}
-
-	const iconMarkup =
-		typeof iconName !== "undefined"
-			? html`
-					${Icon({
-						...globals,
-						iconName,
-						customClasses: [`${rootClass}-icon`],
-					})}
-			  `
-			: "";
-
-	const closableMarkup = isClosable
-		? html`
-				<div class="spectrum-InLineAlert-footer">
-					${Button({
-						...globals,
-						treatment: "outline",
-						variant: "primary",
-						iconName: false,
-						hideLabel: false,
-						label: "Ok",
-					})}
-				</div>
-		  `
-		: "";
 
 	return html`
 		<div
@@ -78,14 +42,26 @@ export const Template = ({
 				...customClasses.reduce((a, c) => ({ ...a, [c]: true }), {}),
 			})}
 			style=${ifDefined(styleMap(customStyles))}
-
 		>
 			<div class="${rootClass}-header">
 				${variant.charAt(0).toUpperCase() + variant.slice(1)} ${headerText}
-				${iconMarkup}
+				${when(typeof iconName !== "undefined", () => Icon({
+					...globals,
+					iconName,
+					customClasses: [`${rootClass}-icon`],
+				}))}
 			</div>
 			<div class="${rootClass}-content">${text}</div>
-			${closableMarkup}
+			${when(isClosable, () => html`<div class="${rootClass}-footer">
+				${Button({
+					...globals,
+					treatment: "outline",
+					variant: "primary",
+					iconName: false,
+					hideLabel: false,
+					label: "Ok",
+				})}
+			</div>`)}
 		</div>
 	`;
 };

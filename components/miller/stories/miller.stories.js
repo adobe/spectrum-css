@@ -1,4 +1,3 @@
-// Import the component markup template
 import { Template } from "./template";
 
 export default {
@@ -7,6 +6,8 @@ export default {
 		"Miller columns are a browsing/visualization technique that can be applied to tree structures. The columns allow for multiple levels of the hierarchy to be open at once and provide a visual representation of the current location.",
 	component: "Miller",
 	argTypes: {
+		/* No theme styles for express available */
+		express: { table: { disable: true } },
 		columns: { table: { disable: true } },
 	},
 	args: {
@@ -19,7 +20,7 @@ export default {
 		status: {
 			type: process.env.MIGRATED_PACKAGES.includes("miller")
 				? "migrated"
-				: undefined,
+				: "legacy",
 		},
 	},
 };

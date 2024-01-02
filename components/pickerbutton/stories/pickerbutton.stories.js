@@ -1,4 +1,3 @@
-// Import the component markup template
 import { Template } from "./template";
 
 import { default as Icon } from "@spectrum-css/icon/stories/icon.stories.js";
@@ -120,7 +119,7 @@ export default {
 		status: {
 			type: process.env.MIGRATED_PACKAGES.includes("pickerbutton")
 				? "migrated"
-				: undefined,
+				: "legacy",
 		},
 	},
 };
