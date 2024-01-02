@@ -135,7 +135,7 @@ export const Template = ({
 					.map(([k]) => k)
 					.join(" ")}"${
 					inlineStyle ? ` style="${inlineStyle}"` : ""
-				} focusable="false" aria-hidden="true" role="img" width="10" $1>`
+				} focusable="false" aria-hidden="true" role="img" $1>`
 			)
 		)}`;
 	}
