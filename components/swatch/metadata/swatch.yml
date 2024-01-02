@@ -78,7 +78,7 @@ examples:
     name: Rounding - Full
     markup: |
       <div class="spectrum-Swatch spectrum-Swatch--sizeM spectrum-Swatch--roundingFull" style="--spectrum-picked-color: rgba(174, 216, 230, 0.25)" tabindex="0">
-        <div class="spectrum-OpacityCheckerboard spectrum-Swatch-fill>
+        <div class="spectrum-OpacityCheckerboard spectrum-Swatch-fill">
         </div>
       </div>
   - id: swatch-lightborder
