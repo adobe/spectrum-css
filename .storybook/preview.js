@@ -85,9 +85,9 @@ export const globalTypes = {
     defaultValue: isChromatic() ? "side-by-side" : "default",
     toolbar: {
       items: [
-        {value: "default", icon: "photo", title: "default bg color", right: "default"},
-        {value: "stacked", icon: "stacked", title: "stacked bg colors", right: "stacked"},
-        {value: "side-by-side", icon: "sidebyside", title: "side-by-side bg colors", right: "side-by-side"}
+        { value: "default", icon: "photo", title: "default bg color", right: "default" },
+        { value: "stacked", icon: "stacked", title: "stacked bg colors", right: "stacked" },
+        { value: "side-by-side", icon: "sidebyside", title: "side-by-side bg colors", right: "side-by-side" }
       ],
       dynamicTitle: true,
     }
@@ -99,9 +99,9 @@ export const globalTypes = {
     defaultValue: isChromatic() ? "both" : "medium",
     toolbar: {
       items: [
-        {value: "medium", icon: "browser", title: "medium - desktop", right: "medium"},
-        {value: "large", icon: "mobile", title: "large - mobile", right: "large"},
-        {value: "both", icon: "tablet", title: "medium + large", right: "both"}
+        { value: "medium", icon: "browser", title: "medium - desktop", right: "medium" },
+        { value: "large", icon: "mobile", title: "large - mobile", right: "large" },
+        { value: "both", icon: "tablet", title: "medium + large", right: "both" }
       ],
       dynamicTitle: true,
     }
