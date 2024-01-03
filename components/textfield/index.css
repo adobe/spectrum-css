@@ -435,6 +435,7 @@ governing permissions and limitations under the License.
 	/* Firefox and Safari - Remove the margin for input. */
 	margin: 0;
 
+	/* TODO: Determine if the vendor prefix toggling of appearanmce is still needed  */
 	/* Firefox -
     Removes the native spin buttons in Firefox; -moz-appearance: none results in spinners.
     This has to come after -webkit-appearance or it gets overridden (#214)
@@ -443,7 +444,8 @@ governing permissions and limitations under the License.
     Sets the opacity to 1 as normalize.css sets an opacity to placeholders
     Details: https://github.com/csstools/normalize.css/blob/main/normalize.css#L297
   */
-	appearance: textfield;
+	/* stylelint-disable-next-line value-no-vendor-prefix */
+	-moz-appearance: textfield;
 
 	/* All browsers - Change the input font styles */
 	text-overflow: ellipsis;
@@ -780,7 +782,9 @@ governing permissions and limitations under the License.
 
 	text-overflow: ellipsis;
 
-	appearance: none;
+	/* TODO: Determine if the vendor prefix toggling of appearanmce is still needed  */
+	/* stylelint-disable-next-line value-no-vendor-prefix */
+	-webkit-appearance: none;
 
 	/*
     Removes the native spin buttons in Firefox; -moz-appearance: none results in spinners.
@@ -790,7 +794,8 @@ governing permissions and limitations under the License.
     Sets the opacity to 1 as normalize.css sets an opacity to placeholders
     Details: https://github.com/csstools/normalize.css/blob/main/normalize.css#L297
   */
-	appearance: textfield;
+	/* stylelint-disable-next-line value-no-vendor-prefix */
+	-moz-appearance: textfield;
 
 	/* place in same cell: input, focus indicator, and grows sizer */
 	grid-row: 2;
@@ -807,7 +812,8 @@ governing permissions and limitations under the License.
 	/* http://stackoverflow.com/questions/23372903/hide-spinner-in-input-number-firefox-29 */
 	&::-webkit-inner-spin-button,
 	&::-webkit-outer-spin-button {
-		appearance: none;
+		/* stylelint-disable-next-line value-no-vendor-prefix */
+		-webkit-appearance: none;
 		margin: 0;
 	}
 
