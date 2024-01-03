@@ -2,6 +2,7 @@ import { makeDecorator, useEffect } from "@storybook/preview-api";
 import isChromatic from "chromatic/isChromatic";
 import { html } from "lit";
 import { styleMap } from "lit/directives/style-map.js";
+import { isFullscreen, isPopover } from "./utilities.js";
 
 export { withContextWrapper } from "./contextsWrapper.js";
 
@@ -28,7 +29,10 @@ export const withTextDirectionWrapper = makeDecorator({
 		};
 		const showBothDirections = textDirection === DIRECTIONS.both;
 
-		if (showBothDirections) {
+		const componentIsFullscreen = isFullscreen(context);
+		const componentHasPopover = isPopover(context);
+
+		if (showBothDirections && !componentIsFullscreen && !componentHasPopover) {
 			return html`
 				<div style="margin-bottom: 4rem" dir=${DIRECTIONS.left}>
 					${StoryFn(context)}
@@ -36,6 +40,14 @@ export const withTextDirectionWrapper = makeDecorator({
 				<div dir=${DIRECTIONS.right}>
 					${StoryFn(context)}
 				</div>
+			`;
+		};
+
+		if (showBothDirections && (componentIsFullscreen || componentHasPopover)) {
+			return html`
+				<h4 class="spectrum-Detail spectrum-Detail--sizeXS spectrum-Examples-itemHeading" style="text-transform: none; background-color: var(--spectrum-negative-color-900); color: var(--spectrum-white); padding: 1rem;">
+					⚠️ Sorry, feature is unavailable for this component. Choose a single-setting option in the toolbar to view the component, or try changing the setting in the control panel.
+				</h4>
 			`;
 		};
 
@@ -106,6 +118,9 @@ export const withPlatformScaleWrapper = makeDecorator({
 	parameterName: "context",
 	wrapper: (StoryFn, context) => {
 		const { args, globals, argTypes } = context;
+		const componentIsFullscreen = isFullscreen(context);
+		const componentHasPopover = isPopover(context);
+
 		const bodyEl = document.body;
     const bodyElClasses = bodyEl.classList;
 		const mediumClass = 'spectrum--medium';
@@ -116,7 +131,7 @@ export const withPlatformScaleWrapper = makeDecorator({
 			both: 'both',
 		};
 		const defaultScale = SCALES.medium;
-		const scale = globals.platformScale || argTypes.scale || args.scale || defaultScale;
+		let scale = globals.platformScale || argTypes.scale || args.scale || defaultScale;
 		const showBothScales = scale === 'both';
 
 		const updateBodyClasses = () => {
@@ -132,7 +147,7 @@ export const withPlatformScaleWrapper = makeDecorator({
 			};
 		}, [scale]);
 
-		if (showBothScales) {
+		if (showBothScales && !componentIsFullscreen && !componentHasPopover) {
 			return html`
 				<div style="margin-bottom: 1rem" class=${mediumClass}>
 					<h4 class="spectrum-Detail spectrum-Detail--sizeXS spectrum-Examples-itemHeading">
@@ -148,6 +163,15 @@ export const withPlatformScaleWrapper = makeDecorator({
 				</div>
 			`;
 		};
+
+		if (showBothScales && (componentIsFullscreen || componentHasPopover)) {
+			scale = defaultScale;
+			return html`
+				<h4 class="spectrum-Detail spectrum-Detail--sizeXS spectrum-Examples-itemHeading" style="text-transform: none; padding: 1rem;">
+					⚠️ Sorry, feature is unavailable for this component. Choose a single-setting option in the toolbar to view the component, or try changing the setting in the control panel.
+				</h4>
+			`;
+		}
 
 		return StoryFn(context);
 }});
@@ -248,6 +272,17 @@ export const withBackgroundColorDisplayWrapper = makeDecorator({
         padding: '2rem',
       },
     };
+
+		const componentIsFullscreen = isFullscreen(context);
+		const componentHasPopover = isPopover(context);
+
+		if (componentIsFullscreen || componentHasPopover) {
+			return html`
+				<h4 class="spectrum-Detail spectrum-Detail--sizeXS spectrum-Examples-itemHeading" style="text-transform: none; background-color: var(--spectrum-negative-color-900); color: var(--spectrum-white); padding: 1rem;">
+					⚠️ Sorry, feature is unavailable for this component. Choose a single-setting option in the toolbar to view the component, or try changing the setting in the control panel.
+				</h4>
+			`;
+		};
 
     return html`
       <div style=${styleMap(styles.grid)}>
