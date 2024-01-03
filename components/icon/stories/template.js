@@ -17,7 +17,7 @@ import "../index.css";
  * @description Icon template that renders an icon based on the provided icon name and set name.
  * @param {IconProps} props
  * @param {string} props.rootClass
- * @param {"s"|"m"|"l"|"xl"} props.size
+ * @param {"xs"|"s"|"m"|"l"|"xl"|"xxl"} props.size
  * @param {"ui"|"workflow"} props.setName
  * @param {string} props.iconName - Icon name with or without the icon scale number appended. Names with the scale (e.g. 75, 100) will replace it based upon the value of 'size'.
  * @param {string} props.fill

@@ -14,6 +14,10 @@ governing permissions and limitations under the License.
   --spectrum-icon-size: var(--spectrum-workflow-icon-size-100);
 }
 
+.spectrum-Icon--sizeXS {
+  --spectrum-icon-size: var(--spectrum-workflow-icon-size-50);
+}
+
 .spectrum-Icon--sizeS {
   --spectrum-icon-size: var(--spectrum-workflow-icon-size-75);
 }

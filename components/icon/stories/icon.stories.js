@@ -22,7 +22,7 @@ export default {
 				type: { summary: "string" },
 				category: "Component",
 			},
-			options: ["s", "m", "l", "xl", "xxl"],
+			options: ["xs", "s", "m", "l", "xl", "xxl"],
 			control: "select",
 		},
 		setName: {
@@ -152,6 +152,7 @@ const TestTemplate = ({
 					marginBottom: "16px",
 				})}
 			>
+				${Template({ ...args, ...row_args, size: "xs" })}
 				${Template({ ...args, ...row_args, size: "s" })}
 				${Template({ ...args, ...row_args, size: "m" })}
 				${Template({ ...args, ...row_args, size: "l" })}
