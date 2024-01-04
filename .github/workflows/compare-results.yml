@@ -20,6 +20,10 @@ on:
                 required: false
                 type: string
                 default: ${{ github.event.workflow_call.head.ref }}
+            artifact-id:
+                description: The artifact id to use for the build artifacts
+                required: false
+                type: string
         outputs:
             has-changed:
                 value: ${{ jobs.compare.outputs.has-changed }}
@@ -74,13 +78,13 @@ jobs:
               run: yarn install --frozen-lockfile --cache-folder .cache/yarn
 
             - name: Download build artifacts for head
-              uses: actions/download-artifact@v3
+              uses: actions/download-artifact@v4
               with:
                   name: ubuntu-latest-node18-compiled-assets-${{ inputs.head-sha }}
                   path: ${{ github.workspace }}/${{ inputs.head-sha }}
 
             - name: Download build artifacts for base
-              uses: actions/download-artifact@v3
+              uses: actions/download-artifact@v4
               with:
                   name: ubuntu-latest-node18-compiled-assets-${{ inputs.base-sha }}
                   path: ${{ github.workspace }}/${{ inputs.base-sha }}
@@ -115,7 +119,7 @@ jobs:
                   echo "key=ubuntu-latest-node18-compiled-assets-${{ matrix.branch }}" >> "$GITHUB_OUTPUT"
 
             - name: Check if build artifacts already exist
-              uses: actions/download-artifact@v3
+              uses: actions/download-artifact@v4
               id: artifact-found
               continue-on-error: true
               with:
@@ -158,25 +162,26 @@ jobs:
               run: yarn install --frozen-lockfile --cache-folder .cache/yarn
 
             ## --- BUILD --- ##
-            - name: Check for cached build assets
+            - name: Check for built assets
               continue-on-error: true
-              id: cache-build
-              uses: actions/cache@v3
+              id: download
+              uses: actions/download-artifact@v4
               with:
                   path: |
-                    components/*/dist/**
-                    tokens/dist/**
-                    ui-icons/dist/**
-                  key: ${{ steps.derive-key.outputs.key }}
+                    ${{ github.workspace }}/components/*/dist/**
+                    ${{ github.workspace }}/tokens/dist/**
+                    ${{ github.workspace }}/ui-icons/dist/**
+                  name: ${{ steps.derive-key.outputs.key }}
 
             - name: Build
-              if: ${{ steps.cache-build.outputs.cache-hit != 'true' }}
+              if: ${{ steps.download.outcome != 'success' }}
               shell: bash
               run: yarn build
 
             - name: Upload compiled assets
+              if: ${{ steps.download.outcome != 'success' }}
               id: upload
-              uses: actions/upload-artifact@v3
+              uses: actions/upload-artifact@v4
               with:
                   path: |
                     ${{ github.workspace }}/components/*/dist/**

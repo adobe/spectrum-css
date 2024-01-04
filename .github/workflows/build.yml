@@ -41,6 +41,8 @@ on:
                 type: string
                 default: ${{ github.head_ref }}
         outputs:
+            artifact-id:
+                value: ${{ jobs.build.outputs.artifact-id }}
             head-sha:
                 value: ${{ jobs.build.outputs.head-sha }}
             base-sha:
@@ -65,6 +67,7 @@ jobs:
         outputs:
             head-sha: ${{ steps.set-SHAs.outputs.head }}
             base-sha: ${{ steps.set-SHAs.outputs.base }}
+            artifact-id: ${{ steps.upload.outputs.artifact-id }}
         name: Build
         steps:
             - name: Check out code
@@ -105,19 +108,7 @@ jobs:
               run: yarn cache:clean
 
             ## --- BUILD --- ##
-            - name: Check for cached build assets
-              continue-on-error: true
-              id: cache-build
-              uses: actions/cache@v3
-              with:
-                  path: |
-                      components/*/dist/**
-                      tokens/dist/**
-                      ui-icons/dist/**
-                  key: ${{ matrix.system }}-node${{ matrix.node-version }}-compiled-assets-${{ steps.set-SHAs.outputs.head }}
-
             - name: Build components
-              if: ${{ steps.cache-build.outputs.cache-hit != 'true' }}
               shell: bash
               run: yarn build
 
@@ -125,7 +116,7 @@ jobs:
             - name: Upload compiled assets & NX performance profile
               id: upload
               if: ${{ matrix.system == 'ubuntu-latest' }}
-              uses: actions/upload-artifact@v3
+              uses: actions/upload-artifact@v4
               with:
                   path: |
                       ${{ github.workspace }}/components/*/dist/**
