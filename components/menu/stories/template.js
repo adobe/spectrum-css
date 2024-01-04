@@ -109,7 +109,6 @@ export const MenuItem = ({
           size,
           isEmphasized: true,
           isChecked: isSelected,
-          label: label,
           id: `menu-checkbox-${idx}`,
           customClasses: [
             `${rootClass}Checkbox`,
@@ -186,7 +185,7 @@ export const MenuGroup = ({
   >
     ${!isTraySubmenu
       ? html`<span
-          class="spectrum-Menu-sectionHeading"
+          class="spectrum-Menu-sectionHeading ${shouldTruncate ? "spectrum-Menu-itemLabel--truncate" : "" }"
           id=${id ?? `menu-heading-category-${idx}`}
           aria-hidden="true"
         >${heading}</span>`

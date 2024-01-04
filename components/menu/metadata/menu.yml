@@ -1383,6 +1383,9 @@ examples:
                   <span class="spectrum-Menu-itemLabel">Subtract</span>
                 </li>
               </ul>
+          </div>
+        </div>
+
   - id: menu-truncate
     name: Menu with truncating text
     description: Use the class `spectrum-Menu-itemLabel--truncate` on the item label or section heading that should truncate with in a menu with a set `inline-size` or `max-inline-size`
