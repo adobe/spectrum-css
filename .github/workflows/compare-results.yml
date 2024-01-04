@@ -90,8 +90,8 @@ jobs:
               uses: ./.github/actions/file-diff
               # uses: spectrum-tools/gh-action-file-diff@v1
               with:
-                  path: ${{ github.workspace }}/${{ inputs.head-sha }}/
-                  diff-path: ${{ github.workspace }}/${{ inputs.base-sha }}/
+                  head-path: ${{ github.workspace }}/${{ inputs.head-sha }}/
+                  base-path: ${{ github.workspace }}/${{ inputs.base-sha }}/
                   file-glob-pattern: |
                     components/*/dist/**
                     tokens/dist/**

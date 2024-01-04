@@ -5,7 +5,7 @@
 	},
 	"[javascript]": {
 		"editor.codeActionsOnSave": {
-			"source.organizeImports": true
+			"source.organizeImports": "explicit"
 		},
 		"editor.colorDecorators": true,
 		"editor.defaultFormatter": "dbaeumer.vscode-eslint"

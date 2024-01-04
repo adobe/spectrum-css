@@ -2,11 +2,11 @@ name: "File comparisons"
 description: "Compares files between branches."
 author: "spectrum-tools"
 inputs:
-    path:
+    head-path:
         description: "Path to file or directory for file sizes analysis."
         required: false
         default: ${{ github.workspace }}
-    diff-path:
+    base-path:
         description: "Optional path to another directory to perform file size diff against the provided path."
         required: false
     token:

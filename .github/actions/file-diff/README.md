@@ -4,11 +4,11 @@ A GitHub Action for comparing compiled assets between branches.
 
 ## Inputs
 
-### `path`
+### `head-path`
 
 **Required** Path to file or directory for file sizes analysis.
 
-### `diff-path`
+### `base-path`
 
 **Optional** Path to another directory against which to perform file comparisons.
 
@@ -44,8 +44,8 @@ Total size of all files for this branch in bytes.
 name: Compare compiled output file size
 uses: "spectrum-tools/gh-action-file-diff"
 with:
-    path: ${{ github.workspace }}/pull-request
-    diff-path: ${{ github.workspace }}/base-branch
+    head-path: ${{ github.workspace }}/pull-request
+    base-path: ${{ github.workspace }}/base-branch
     file-glob-pattern: |
         components/*/dist/*.{css,json}
         components/*/dist/themes/*.css
