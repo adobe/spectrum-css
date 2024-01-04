@@ -176,7 +176,7 @@ jobs:
 
             - name: Upload compiled assets
               id: upload
-              uses: actions/upload-artifact@v3
+              uses: actions/upload-artifact@v4
               with:
                   path: |
                     ${{ github.workspace }}/components/*/dist/**

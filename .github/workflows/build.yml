@@ -125,7 +125,7 @@ jobs:
             - name: Upload compiled assets & NX performance profile
               id: upload
               if: ${{ matrix.system == 'ubuntu-latest' }}
-              uses: actions/upload-artifact@v3
+              uses: actions/upload-artifact@v4
               with:
                   path: |
                       ${{ github.workspace }}/components/*/dist/**
