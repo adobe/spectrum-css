@@ -78,16 +78,16 @@ jobs:
               run: yarn cache:clean
 
             ## --- BUILD --- ##
-            - name: Check for cached build assets
+            - name: Check for built assets
               continue-on-error: true
-              id: cache-build
-              uses: actions/cache@v3
+              id: download
+              uses: actions/download-artifact@v4
               with:
                   path: |
-                      components/*/dist/**
-                      tokens/dist/**
-                      ui-icons/dist/**
-                  key: ubuntu-latest-node18-compiled-assets-${{ steps.set-SHAs.outputs.head }}
+                    components/*/dist/**
+                    tokens/dist/**
+                    ui-icons/dist/**
+                  name: ubuntu-latest-node18-compiled-assets-${{ steps.set-SHAs.outputs.head }}
 
             - name: Build storybook site
               if: ${{ inputs.storybook-url == '' }}
