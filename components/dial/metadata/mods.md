@@ -1,4 +1,4 @@
-| Modifiable Custom Properties                 |
+| Modifiable custom properties                 |
 | -------------------------------------------- |
 | `--mod-dial-background-color-default`        |
 | `--mod-dial-border-color`                    |

@@ -1,4 +1,4 @@
-| Modifiable Custom Properties             |
+| Modifiable custom properties             |
 | ---------------------------------------- |
 | `--mod-avatar-block-size`                |
 | `--mod-avatar-border-radius`             |

@@ -1,4 +1,4 @@
-| Modifiable Custom Properties                            |
+| Modifiable custom properties                            |
 | ------------------------------------------------------- |
 | `--mod-texfield-animation-duration`                     |
 | `--mod-text-area-min-block-size`                        |

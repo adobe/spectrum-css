@@ -1,4 +1,4 @@
-| Modifiable Custom Properties              |
+| Modifiable custom properties              |
 | ----------------------------------------- |
 | `--mod-link-animation-duration`           |
 | `--mod-link-text-color-black`             |

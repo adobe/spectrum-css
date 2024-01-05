@@ -1,4 +1,4 @@
-| Modifiable Custom Properties                        |
+| Modifiable custom properties                        |
 | --------------------------------------------------- |
 | `--mod-stepper-animation-duration`                  |
 | `--mod-stepper-border-color`                        |

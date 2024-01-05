@@ -1,4 +1,4 @@
-| Modifiable Custom Properties                      |
+| Modifiable custom properties                      |
 | ------------------------------------------------- |
 | `--mod-splitview-background-color`                |
 | `--mod-splitview-gripper-border-radius`           |

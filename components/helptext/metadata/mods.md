@@ -1,4 +1,4 @@
-| Modifiable Custom Properties             |
+| Modifiable custom properties             |
 | ---------------------------------------- |
 | `--mod-helptext-bottom-to-text`          |
 | `--mod-helptext-bottom-to-workflow-icon` |

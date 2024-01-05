@@ -1,4 +1,4 @@
-| Modifiable Custom Properties                            |
+| Modifiable custom properties                            |
 | ------------------------------------------------------- |
 | `--mod-illustrated-message-content-maximum-width`       |
 | `--mod-illustrated-message-description-color`           |

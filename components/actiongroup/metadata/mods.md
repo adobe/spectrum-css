@@ -1,4 +1,4 @@
-| Modifiable Custom Properties                   |
+| Modifiable custom properties                   |
 | ---------------------------------------------- |
 | `--mod-actiongroup-border-radius`              |
 | `--mod-actiongroup-border-radius-reset`        |

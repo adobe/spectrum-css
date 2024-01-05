@@ -1,4 +1,4 @@
-| Modifiable Custom Properties                                      |
+| Modifiable custom properties                                      |
 | ----------------------------------------------------------------- |
 | `--mod-actionbutton-animation-duration`                           |
 | `--mod-actionbutton-background-color-default`                     |

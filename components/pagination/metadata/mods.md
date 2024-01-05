@@ -1,4 +1,4 @@
-| Modifiable Custom Properties                   |
+| Modifiable custom properties                   |
 | ---------------------------------------------- |
 | `--mod-pagination-counter-color`               |
 | `--mod-pagination-counter-font-size`           |

@@ -1,4 +1,4 @@
-| Modifiable Custom Properties                               |
+| Modifiable custom properties                               |
 | ---------------------------------------------------------- |
 | `--mod-calendar-border-radius-reset`                       |
 | `--mod-calendar-border-width-reset`                        |

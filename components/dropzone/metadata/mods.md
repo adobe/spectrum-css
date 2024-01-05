@@ -1,4 +1,4 @@
-| Modifiable Custom Properties                      |
+| Modifiable custom properties                      |
 | ------------------------------------------------- |
 | `--mod-drop-zone-background-color`                |
 | `--mod-drop-zone-background-color-opacity`        |

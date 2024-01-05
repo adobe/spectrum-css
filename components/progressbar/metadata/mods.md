@@ -1,4 +1,4 @@
-| Modifiable Custom Properties                            |
+| Modifiable custom properties                            |
 | ------------------------------------------------------- |
 | `--mod-meter-inline-size`                               |
 | `--mod-meter-max-width`                                 |

@@ -1,4 +1,4 @@
-| Modifiable Custom Properties              |
+| Modifiable custom properties              |
 | ----------------------------------------- |
 | `--mod-millercolumns-inline-size`         |
 | `--mod-millercolumns-margin-inline-end`   |

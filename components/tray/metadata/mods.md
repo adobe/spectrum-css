@@ -1,4 +1,4 @@
-| Modifiable Custom Properties                |
+| Modifiable custom properties                |
 | ------------------------------------------- |
 | `--mod-tray-background-color`               |
 | `--mod-tray-bottom-to-content-area`         |

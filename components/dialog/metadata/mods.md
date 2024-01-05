@@ -1,4 +1,4 @@
-| Modifiable Custom Properties                        |
+| Modifiable custom properties                        |
 | --------------------------------------------------- |
 | `--mod-dialog-confirm-border-radius`                |
 | `--mod-dialog-confirm-buttongroup-padding-top`      |

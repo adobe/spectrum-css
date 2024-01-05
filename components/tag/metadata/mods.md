@@ -1,4 +1,4 @@
-| Modifiable Custom Properties                         |
+| Modifiable custom properties                         |
 | ---------------------------------------------------- |
 | `--mod-avatar-opacity-disabled`                      |
 | `--mod-clearbutton-fill-background-color`            |

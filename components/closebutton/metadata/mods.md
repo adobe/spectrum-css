@@ -1,4 +1,4 @@
-| Modifiable Custom Properties                        |
+| Modifiable custom properties                        |
 | --------------------------------------------------- |
 | `--mod-animation-duration-100`                      |
 | `--mod-closebutton-align-self`                      |

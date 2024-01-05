@@ -1,4 +1,4 @@
-| Modifiable Custom Properties                    |
+| Modifiable custom properties                    |
 | ----------------------------------------------- |
 | `--mod-checkbox-animation-duration`             |
 | `--mod-checkbox-border-width`                   |

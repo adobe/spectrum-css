@@ -1,4 +1,4 @@
-| Modifiable Custom Properties                                   |
+| Modifiable custom properties                                   |
 | -------------------------------------------------------------- |
 | `--mod-body-cjk-emphasized-font-style`                         |
 | `--mod-body-cjk-emphasized-font-weight`                        |

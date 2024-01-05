@@ -1,4 +1,4 @@
-| Modifiable Custom Properties                |
+| Modifiable custom properties                |
 | ------------------------------------------- |
 | `--mod-alert-dialog-body-color`             |
 | `--mod-alert-dialog-body-font-family`       |

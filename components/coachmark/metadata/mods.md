@@ -1,4 +1,4 @@
-| Modifiable Custom Properties               |
+| Modifiable custom properties               |
 | ------------------------------------------ |
 | `--mod-coachmark-body-to-footer`           |
 | `--mod-coachmark-border-radius`            |

@@ -1,4 +1,4 @@
-| Modifiable Custom Properties                           |
+| Modifiable custom properties                           |
 | ------------------------------------------------------ |
 | `--mod-picker-button-background-animation-duration`    |
 | `--mod-picker-button-background-color`                 |

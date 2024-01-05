@@ -1,4 +1,4 @@
-| Modifiable Custom Properties                           |
+| Modifiable custom properties                           |
 | ------------------------------------------------------ |
 | `--mod-combobox-alert-icon-color`                      |
 | `--mod-combobox-background-color-default`              |

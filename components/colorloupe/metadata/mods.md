@@ -1,4 +1,4 @@
-| Modifiable Custom Properties          |
+| Modifiable custom properties          |
 | ------------------------------------- |
 | `--mod-colorloupe-animation-distance` |
 | `--mod-colorloupe-drop-shadow-blur`   |

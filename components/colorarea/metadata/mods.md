@@ -1,4 +1,4 @@
-| Modifiable Custom Properties                |
+| Modifiable custom properties                |
 | ------------------------------------------- |
 | `--mod-colorarea-border-color`              |
 | `--mod-colorarea-border-radius`             |

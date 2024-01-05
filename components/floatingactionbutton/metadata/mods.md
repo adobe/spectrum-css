@@ -1,4 +1,4 @@
-| Modifiable Custom Properties                              |
+| Modifiable custom properties                              |
 | --------------------------------------------------------- |
 | `--mod-afloating-action-button-focus-ring-color`          |
 | `--mod-floating-action-button-background-color`           |

@@ -1,4 +1,4 @@
-| Modifiable Custom Properties  |
+| Modifiable custom properties  |
 | ----------------------------- |
 | `--mod-well-background-color` |
 | `--mod-well-border-color`     |

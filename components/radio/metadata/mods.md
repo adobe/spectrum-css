@@ -1,4 +1,4 @@
-| Modifiable Custom Properties                      |
+| Modifiable custom properties                      |
 | ------------------------------------------------- |
 | `--mod-radio-animation-duration`                  |
 | `--mod-radio-border-width`                        |
