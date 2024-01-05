@@ -1,4 +1,4 @@
-| Modifiable Custom Properties                          |
+| Modifiable custom properties                          |
 | ----------------------------------------------------- |
 | `--mod-treeview-font-size`                            |
 | `--mod-treeview-heading-bottom-to-text`               |

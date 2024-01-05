@@ -1,4 +1,4 @@
-| Modifiable Custom Properties                          |
+| Modifiable custom properties                          |
 | ----------------------------------------------------- |
 | `--mod-tabs-animation-duration`                       |
 | `--mod-tabs-animation-ease`                           |

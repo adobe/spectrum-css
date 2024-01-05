@@ -1,4 +1,4 @@
-| Modifiable Custom Properties                                      |
+| Modifiable custom properties                                      |
 | ----------------------------------------------------------------- |
 | `--mod-breadcrumbs-action-button-color`                           |
 | `--mod-breadcrumbs-action-button-color-disabled`                  |

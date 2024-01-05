@@ -1,4 +1,4 @@
-| Modifiable Custom Properties                                  |
+| Modifiable custom properties                                  |
 | ------------------------------------------------------------- |
 | `--mod-assectcard-border-color-selected-down`                 |
 | `--mod-assectcard-focus-indicator-color`                      |

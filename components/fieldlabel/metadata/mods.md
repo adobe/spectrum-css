@@ -1,4 +1,4 @@
-| Modifiable Custom Properties                      |
+| Modifiable custom properties                      |
 | ------------------------------------------------- |
 | `--mod-disabled-content-color`                    |
 | `--mod-field-label-asterisk-vertical-align`       |

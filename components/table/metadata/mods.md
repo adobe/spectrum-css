@@ -1,4 +1,4 @@
-| Modifiable Custom Properties                                     |
+| Modifiable custom properties                                     |
 | ---------------------------------------------------------------- |
 | `--mod-table-border-color`                                       |
 | `--mod-table-border-radius`                                      |

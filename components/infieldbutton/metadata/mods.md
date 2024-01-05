@@ -1,4 +1,4 @@
-| Modifiable Custom Properties                                  |
+| Modifiable custom properties                                  |
 | ------------------------------------------------------------- |
 | `--mod-infield-border-color-quiet`                            |
 | `--mod-infield-button-background-color`                       |

@@ -1,4 +1,4 @@
-| Modifiable Custom Properties                |
+| Modifiable custom properties                |
 | ------------------------------------------- |
 | `--mod-colorwheel-border-color`             |
 | `--mod-colorwheel-border-width`             |

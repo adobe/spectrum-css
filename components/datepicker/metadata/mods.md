@@ -1,4 +1,4 @@
-| Modifiable Custom Properties                         |
+| Modifiable custom properties                         |
 | ---------------------------------------------------- |
 | `--mod-datepicker-border-color-disabled`             |
 | `--mod-datepicker-border-radius`                     |

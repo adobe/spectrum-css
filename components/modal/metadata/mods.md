@@ -1,4 +1,4 @@
-| Modifiable Custom Properties                   |
+| Modifiable custom properties                   |
 | ---------------------------------------------- |
 | `--mod-modal-background-color`                 |
 | `--mod-modal-confirm-border-radius`            |

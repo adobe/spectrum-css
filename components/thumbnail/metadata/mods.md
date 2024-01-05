@@ -1,4 +1,4 @@
-| Modifiable Custom Properties                |
+| Modifiable custom properties                |
 | ------------------------------------------- |
 | `--mod-thumbnail-border-color`              |
 | `--mod-thumbnail-border-color-selected`     |

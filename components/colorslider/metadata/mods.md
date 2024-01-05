@@ -1,4 +1,4 @@
-| Modifiable Custom Properties                      |
+| Modifiable custom properties                      |
 | ------------------------------------------------- |
 | `--mod-color-slider-background-color-disabled`    |
 | `--mod-color-slider-border-color`                 |

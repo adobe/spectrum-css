@@ -1,4 +1,4 @@
-| Modifiable Custom Properties                            |
+| Modifiable custom properties                            |
 | ------------------------------------------------------- |
 | `--mod-toast-background-color-default`                  |
 | `--mod-toast-block-size`                                |

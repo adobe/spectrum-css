@@ -1,4 +1,4 @@
-| Modifiable Custom Properties                                      |
+| Modifiable custom properties                                      |
 | ----------------------------------------------------------------- |
 | `--mod-coach-animation-indicator-ring-center-delay-multiple`      |
 | `--mod-coach-animation-indicator-ring-duration`                   |

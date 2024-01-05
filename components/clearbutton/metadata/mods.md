@@ -1,4 +1,4 @@
-| Modifiable Custom Properties                    |
+| Modifiable custom properties                    |
 | ----------------------------------------------- |
 | `--mod-clear-button-background-color`           |
 | `--mod-clear-button-background-color-disabled`  |

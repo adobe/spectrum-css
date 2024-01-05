@@ -45,12 +45,21 @@ async function extractProperties(
 }
 
 async function main(inputs) {
+	const promises = [];
+
 	// Default to all component directories
 	if (inputs.length === 0) {
 		inputs = await fg("components/*", {
 			onlyDirectories: true,
 			absolute: true,
 		});
+	}
+
+	if (!inputs || inputs.length === 0) {
+		console.log(
+			`${`⚠️`.yellow}  No component directories found in ${"./components/*".yellow}.`
+		);
+		return;
 	}
 
 	/* Loop over the directories passed in as arguments */
@@ -75,15 +84,11 @@ async function main(inputs) {
 			matches.forEach((match) => found.add(match));
 		}
 
-		if (found.size === 0) {
-			console.log(" ");
-			console.log(
-				`${`⚠️`.yellow}  No modifiable custom properties in ${
-					`@spectrum-css/${dir.split(path.sep).pop()}`.magenta
-				}`
-			);
-			continue;
-		}
+		console.log(" ");
+		console.log(`[mod-extractor] 🔍 ${`@spectrum-css/${dir.split(path.sep).pop()}`.cyan}`);
+		console.log(`Found ${`${found.size}`.underline} modifiable custom propert${found.size === 1 ? "y" : "ies"}`);
+
+		if (found.size === 0) continue;
 
 		/* -- Markdown Output -- */
 		/* Output as a markdown table in the metadata folder for site rendering */
@@ -93,18 +98,24 @@ async function main(inputs) {
 		if (!existsSync(destPath)) mkdirSync(destPath);
 
 		let formattedResults = [
-			"| Modifiable Custom Properties |\n| --- |",
+			"| Modifiable custom properties |\n| --- |",
 			...[...found].sort().map((result) => `| \`${result}\` |`),
 		];
 
-		let finalResult = await prettier.format(formattedResults.join("\n"), {
+		let finalResult = prettier.format(formattedResults.join("\n"), {
 			parser: "markdown",
 		});
 
 		// Write the results to a markdown file in the metadata folder
-		await writeFile(`${destPath}/mods.md`, finalResult, (err) => {
-			if (err) throw err;
-		});
+		promises.push(
+			writeFile(`${destPath}/mods.md`, finalResult, { encoding: "utf-8" }).then(() => {
+				console.log(`${`✓`.green} ${"metadata/mods.md".yellow} written`);
+			}).catch((err) => {
+				if (!err) return;
+				console.log(`${`✗`.red} ${"metadata/mods.md".yellow} not written`);
+				return Promise.reject(err);
+			})
+		);
 
 		/* -- JSON Output -- */
 		destPath = `${dir}/dist`;
@@ -112,15 +123,23 @@ async function main(inputs) {
 		if (!existsSync(destPath)) mkdirSync(destPath);
 
 		formattedResults = JSON.stringify({ mods: [...found].sort() }, null, 2);
-		finalResult = await prettier.format(formattedResults, {
+		finalResult = prettier.format(formattedResults, {
 			parser: "json",
 		});
 
 		// Write the JSON output to the dist folder
-		await writeFile(`${destPath}/mods.json`, finalResult, (err) => {
-			if (err) throw err;
-		});
+		promises.push(
+			writeFile(`${destPath}/mods.json`, finalResult, { encoding: "utf-8" }).then(() => {
+				console.log(`${`✓`.green} ${"dist/mods.json".yellow} written`);
+			}).catch((err) => {
+				if (!err) return;
+				console.log(`${`✗`.red} ${"dist/mods.json".yellow} not written`);
+				return Promise.reject(err);
+			})
+		);
 	}
+
+	return Promise.all(promises);
 }
 
 const { _ = [] } = yargs(hideBin(process.argv)).argv;

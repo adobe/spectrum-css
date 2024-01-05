@@ -1,4 +1,4 @@
-| Modifiable Custom Properties                   |
+| Modifiable custom properties                   |
 | ---------------------------------------------- |
 | `--mod-rating-border-radius`                   |
 | `--mod-rating-emphasized-icon-color-default`   |

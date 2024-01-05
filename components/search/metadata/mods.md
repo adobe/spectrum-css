@@ -1,4 +1,4 @@
-| Modifiable Custom Properties             |
+| Modifiable custom properties             |
 | ---------------------------------------- |
 | `--mod-search-background-color`          |
 | `--mod-search-background-color-disabled` |

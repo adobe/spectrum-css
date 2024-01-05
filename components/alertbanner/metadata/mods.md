@@ -1,4 +1,4 @@
-| Modifiable Custom Properties                   |
+| Modifiable custom properties                   |
 | ---------------------------------------------- |
 | `--mod-alert-banner-bottom-text`               |
 | `--mod-alert-banner-close-button-spacing`      |

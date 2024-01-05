@@ -1,4 +1,4 @@
-| Modifiable Custom Properties                      |
+| Modifiable custom properties                      |
 | ------------------------------------------------- |
 | `--mod-statuslight-border-width`                  |
 | `--mod-statuslight-content-color-default`         |

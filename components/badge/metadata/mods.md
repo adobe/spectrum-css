@@ -1,4 +1,4 @@
-| Modifiable Custom Properties                |
+| Modifiable custom properties                |
 | ------------------------------------------- |
 | `--mod-badge-background-color-accent`       |
 | `--mod-badge-background-color-blue`         |

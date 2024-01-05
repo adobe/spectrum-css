@@ -1,4 +1,4 @@
-| Modifiable Custom Properties                         |
+| Modifiable custom properties                         |
 | ---------------------------------------------------- |
 | `--mod-divider-background-color`                     |
 | `--mod-divider-background-color-large-static-black`  |

@@ -1,4 +1,4 @@
-| Modifiable Custom Properties                           |
+| Modifiable custom properties                           |
 | ------------------------------------------------------ |
 | `--mod-assetlist-border-color-key-focus`               |
 | `--mod-assetlist-child-indicator-animation`            |

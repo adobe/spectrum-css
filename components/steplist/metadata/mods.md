@@ -1,4 +1,4 @@
-| Modifiable Custom Properties                               |
+| Modifiable custom properties                               |
 | ---------------------------------------------------------- |
 | `--mod-steplist-complete-label-text-color`                 |
 | `--mod-steplist-complete-marker-background-color`          |

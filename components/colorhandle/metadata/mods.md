@@ -1,4 +1,4 @@
-| Modifiable Custom Properties              |
+| Modifiable custom properties              |
 | ----------------------------------------- |
 | `--mod-colorhandle-animation-duration`    |
 | `--mod-colorhandle-animation-easing`      |

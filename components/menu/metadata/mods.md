@@ -1,4 +1,4 @@
-| Modifiable Custom Properties                                       |
+| Modifiable custom properties                                       |
 | ------------------------------------------------------------------ |
 | `--mod-menu-back-heading-color`                                    |
 | `--mod-menu-back-icon-color-default`                               |
