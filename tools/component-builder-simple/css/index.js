@@ -22,7 +22,9 @@ function buildCSS() {
 			"index.css",
 			"themes/spectrum.css", // spectrum comes first
 			"themes/*.css",
-		])
+		], {
+			allowEmpty: true,
+		})
 		.pipe(concat("index.css"))
 		.pipe(
 			postcss(processors, {
@@ -38,7 +40,9 @@ function buildCSSWithoutThemes() {
 			"index.css",
 			"themes/spectrum.css", // spectrum comes first
 			"themes/*.css",
-		])
+		], {
+			allowEmpty: true,
+		})
 		.pipe(concat("index-base.css"))
 		.pipe(
 			postcss(processorsFunction({ noFlatVariables: true }), {
@@ -53,7 +57,9 @@ function buildCSSThemeIndex() {
 		.src([
 			"themes/spectrum.css", // spectrum comes first
 			"themes/*.css",
-		])
+		], {
+			allowEmpty: true,
+		})
 		.pipe(concat("index-theme.css"))
 		.pipe(postcss(processorsFunction({ noSelectors: true })))
 		.pipe(gulp.dest("dist/"));
@@ -61,7 +67,9 @@ function buildCSSThemeIndex() {
 
 function buildCSSThemes() {
 	return gulp
-		.src(["themes/*.css"])
+		.src(["themes/*.css"], {
+			allowEmpty: true,
+		})
 		.pipe(postcss(processorsFunction({ noSelectors: true })))
 		.pipe(gulp.dest("dist/themes/"));
 }
@@ -71,7 +79,9 @@ function buildCSSThemes() {
 */
 function buildExpressTheme() {
 	return gulp
-		.src(["dist/index-theme.css"])
+		.src(["dist/index-theme.css"], {
+			allowEmpty: true,
+		})
 		.pipe(concat("express.css"))
 		.pipe(postcss(processorsFunction().concat(require("postcss-combininator"))))
 		.pipe(gulp.dest("dist/themes/"));
