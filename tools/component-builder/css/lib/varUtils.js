@@ -169,7 +169,9 @@ function getAllVars() {
 				`${varDir}/css/globals/*.css`,
 				`${varDir}/custom.css`,
 				coreTokensFile,
-			])
+			], {
+				allowEmpty: true,
+			})
 			.pipe(concat("everything.css"))
 			.pipe(
 				through.obj(function getAllVars(file, enc, cb) {
@@ -194,7 +196,9 @@ function getAllComponentVars() {
 				`${varDir}/css/components/*.css`,
 				`${varDir}/css/globals/*.css`,
 				`${varDir}/custom.css`,
-			])
+			], {
+				allowEmpty: true,
+			})
 			.pipe(concat("everything.css"))
 			.pipe(
 				through.obj(function getAllVars(file, enc, cb) {
