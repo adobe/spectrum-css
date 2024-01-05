@@ -18,48 +18,46 @@ export const Template = ({
 		"--mod-colorarea-width": customWidth,
 	},
 	...globals
-}) => {
-	return html`
+}) => html`
+	<div
+		class=${classMap({
+			[rootClass]: true,
+			"is-disabled": isDisabled,
+			"is-focused": isFocused,
+			...customClasses.reduce((a, c) => ({ ...a, [c]: true }), {}),
+		})}
+		style=${ifDefined(styleMap(customStyles))}
+	>
 		<div
-			class=${classMap({
-				[rootClass]: true,
-				"is-disabled": isDisabled,
-				"is-focused": isFocused,
-				...customClasses.reduce((a, c) => ({ ...a, [c]: true }), {}),
-			})}
-      		style=${ifDefined(styleMap(customStyles))}
-		>
-			<div
-				class="spectrum-ColorArea-gradient"
-				style="background: linear-gradient(to top, black 0%, rgba(0, 0, 0, 0) 100%), linear-gradient(to right, white 0%, rgba(0, 0, 0, 0) 100%), rgba(255, 0, 0);"
-			></div>
-			${ColorHandle({
-				...globals,
-				isDisabled,
-				customClasses: [`${rootClass}-handle`],
-				customStyles: {
-					"--spectrum-picked-color": "rgba(255, 0, 0)",
-					transfom: `translate(${customWidth}, 0px)`,
-				},
-			})}
-			<input
-				type="range"
-				class="spectrum-ColorArea-slider"
-				name="x"
-				aria-label="saturation and value"
-				min="0"
-				max="1"
-				step="0.01"
-			/>
-			<input
-				type="range"
-				class="spectrum-ColorArea-slider"
-				name="y"
-				aria-label="saturation and value"
-				min="0"
-				max="1"
-				step="0.01"
-			/>
-		</div>
-	`;
-};
+			class="spectrum-ColorArea-gradient"
+			style="background: linear-gradient(to top, black 0%, rgba(0, 0, 0, 0) 100%), linear-gradient(to right, white 0%, rgba(0, 0, 0, 0) 100%), rgba(255, 0, 0);"
+		></div>
+		${ColorHandle({
+			...globals,
+			isDisabled,
+			customClasses: [`${rootClass}-handle`],
+			customStyles: {
+				"--spectrum-picked-color": "rgba(255, 0, 0)",
+				transfom: `translate(${customWidth}, 0px)`,
+			},
+		})}
+		<input
+			type="range"
+			class="spectrum-ColorArea-slider"
+			name="x"
+			aria-label="saturation and value"
+			min="0"
+			max="1"
+			step="0.01"
+		/>
+		<input
+			type="range"
+			class="spectrum-ColorArea-slider"
+			name="y"
+			aria-label="saturation and value"
+			min="0"
+			max="1"
+			step="0.01"
+		/>
+	</div>
+`;

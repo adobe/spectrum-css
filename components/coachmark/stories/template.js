@@ -18,35 +18,11 @@ export const Template = ({
 	hasImage,
 	isOpen = true,
 	...globals
-}) => {
-
-	const displayedActionMenu = ActionMenu({
-		isOpen,
-		popoverPosition: "right",
-		popoverTestId: 'popover-nested-2',
-		popoverId: 'popover-nested-2',
-		popoverTriggerId: "trigger-nested-2",
-		customStyles:  { "margin-block-start": "30px", "margin-inline-start": "-32px"},
-		iconName: 'More',
-		size: globals.scale === "large" ? "s" : "m",
-		items: [
-			{
-				label: "Skip tour",
-			},
-			{
-				label: "Reset tour",
-			}
-		],
-})
-
-
-	return html`
-		<div
-		class=${classMap({
-			[rootClass]: true,
-			...customClasses.reduce((a, c) => ({ ...a, [c]: true }), {}),
-		})}
-	>
+}) => html`
+	<div class=${classMap({
+		[rootClass]: true,
+		...customClasses.reduce((a, c) => ({ ...a, [c]: true }), {}),
+	})}>
 		${Popover({
 			...globals,
 			nested: true,
@@ -68,7 +44,24 @@ export const Template = ({
 				<div class="spectrum-CoachMark-header">
 					<div class="spectrum-CoachMark-title">Try playing with a pixel brush</div>
 					<div class="spectrum-CoachMark-action-menu">
-					${hasActionMenu ? displayedActionMenu : ""}
+					${hasActionMenu ? ActionMenu({
+						isOpen,
+						popoverPosition: "right",
+						popoverTestId: 'popover-nested-2',
+						popoverId: 'popover-nested-2',
+						popoverTriggerId: "trigger-nested-2",
+						customStyles: { "margin-block-start": "30px", "margin-inline-start": "-32px" },
+						iconName: 'More',
+						size: globals.scale === "large" ? "s" : "m",
+						items: [
+							{
+								label: "Skip tour",
+							},
+							{
+								label: "Reset tour",
+							}
+						],
+					}) : ""}
 				</div>
 				</div>
 				<div class="spectrum-CoachMark-content">
@@ -111,6 +104,5 @@ export const Template = ({
 				`
 			],
 		})}
-		</div>
-	`;
-};
+	</div>
+`;

@@ -14,80 +14,68 @@ export const Template = ({
     labelsAbove,
 	customClasses = [],
 	id,
-	...globals
-}) => {
-	const { express } = globals;
-
-	try {
-		if (!express) import(/* webpackPrefetch: true */ "../themes/spectrum.css");
-		else import(/* webpackPrefetch: true */ "../themes/express.css");
-	} catch (e) {
-		console.warn(e);
-	}
-
-	return html`
-		<form
-			class=${classMap({
-				[rootClass]: true,
-                [`${rootClass}--labelsAbove`]: labelsAbove,
-				...customClasses.reduce((a, c) => ({ ...a, [c]: true }), {}),
-			})}
-			id=${ifDefined(id)}
-		>
-            <div class="spectrum-Form-item">
-                ${FieldLabel({
-                    label: 'Company Title',
-                    forInput: 'form-example-company',
-                    alignment: 'left',
+}) => html`
+    <form
+        class=${classMap({
+            [rootClass]: true,
+            [`${rootClass}--labelsAbove`]: labelsAbove,
+            ...customClasses.reduce((a, c) => ({ ...a, [c]: true }), {}),
+        })}
+        id=${ifDefined(id)}
+    >
+        <div class="spectrum-Form-item">
+            ${FieldLabel({
+                label: 'Company Title',
+                forInput: 'form-example-company',
+                alignment: 'left',
+            })}
+            <div class="spectrum-Form-itemField">
+                ${TextField({
+                    multiline: true,
+                    name: 'field',
+                    id: 'form-example-company',
                 })}
-                <div class="spectrum-Form-itemField">
-                    ${TextField({  
-                        multiline: true,
-                        name: 'field',
-                        id: 'form-example-company',
-                    })}
-                </div>
             </div>
-            <div class="spectrum-Form-item">
-                ${FieldLabel({
-                    label: 'Email Address',
-                    forInput: 'form-example-email',
-                    alignment: labelsAbove ? undefined : 'left',
+        </div>
+        <div class="spectrum-Form-item">
+            ${FieldLabel({
+                label: 'Email Address',
+                forInput: 'form-example-email',
+                alignment: labelsAbove ? undefined : 'left',
+            })}
+            <div class="spectrum-Form-itemField">
+                ${TextField({
+                    name: 'email',
+                    type: 'email',
+                    id: 'form-example-email',
                 })}
-                <div class="spectrum-Form-itemField">
-                    ${TextField({
-                        name: 'email',
-                        type: 'email',
-                        id: 'form-example-email',
-                    })}
-                </div>
             </div>
-            <div class="spectrum-Form-item">
-                ${FieldLabel({
-                    label: 'Country',
-                    forInput: 'form-example-country',
-                    alignment: labelsAbove ? undefined : 'left',
+        </div>
+        <div class="spectrum-Form-item">
+            ${FieldLabel({
+                label: 'Country',
+                forInput: 'form-example-country',
+                alignment: labelsAbove ? undefined : 'left',
+            })}
+            <div class="spectrum-Form-itemField">
+                ${Picker({
+                    placeholder: 'Select a Country',
+                    name: 'country',
+                    id: 'form-example-country',
                 })}
-                <div class="spectrum-Form-itemField">
-                    ${Picker({
-                        placeholder: 'Select a Country',
-                        name: 'country',
-                        id: 'form-example-country',
-                    })}
-                </div>
             </div>
-            <div class="spectrum-Form-item">
-                ${FieldLabel({
-                    label: 'Amount',
-                    forInput: 'form-example-amount-input',
-                    alignment: labelsAbove ? undefined : 'left',
+        </div>
+        <div class="spectrum-Form-item">
+            ${FieldLabel({
+                label: 'Amount',
+                forInput: 'form-example-amount-input',
+                alignment: labelsAbove ? undefined : 'left',
+            })}
+            <div class="spectrum-Form-itemField">
+                ${Stepper({
+                    id: 'form-example-amount'
                 })}
-                <div class="spectrum-Form-itemField">
-                    ${Stepper({
-                        id: 'form-example-amount'
-                    })}
-                </div>
             </div>
-		</form>
-	`;
-};
+        </div>
+    </form>
+`;

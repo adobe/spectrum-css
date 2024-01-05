@@ -174,14 +174,6 @@ export const Template = ({
 }) => {
 	if (!rowItems || !rowItems.length) return html``;
 
-	const { express } = globals;
-	try {
-		if (!express) import(/* webpackPrefetch: true */ "../themes/spectrum.css");
-		else import(/* webpackPrefetch: true */ "../themes/express.css");
-	} catch (e) {
-		console.warn(e);
-	}
-
 	// Use Table tags or Div tags.
 	const tableTag = useDivs ? literal`div` : literal`table`;
 	const theadTag = useDivs ? literal`div` : literal`thead`;

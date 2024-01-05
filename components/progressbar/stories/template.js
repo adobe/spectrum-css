@@ -23,17 +23,7 @@ export const Template = ({
 	},
 	size = "m",
 	...globals
-}) => {
-	const { express } = globals;
-
-	try {
-		if (!express) import(/* webpackPrefetch: true */ "../themes/spectrum.css");
-		else import(/* webpackPrefetch: true */ "../themes/express.css");
-	} catch (e) {
-		console.warn(e);
-	}
-
-	return html`
+}) => html`
 		<div style=${when(staticWhite, () => styleMap({
 			backgroundColor,
 			width: "400px",
@@ -82,4 +72,3 @@ export const Template = ({
 			</div>
 		</div>
 	`;
-};
