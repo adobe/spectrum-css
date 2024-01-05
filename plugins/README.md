@@ -4,29 +4,24 @@ Design tokens are supported by linting rules, which warn you if a token is depre
 
 If you are an Adobe employee, you must configure the lint rule in your repository and keep it up-to-date. If you are a partner developer, we strongly recommend you to use it as well.
 
-## Installation (Custom Plugins)
+## Installation
 
-```
-yarn add stylelint-no-missing-var
-yarn add stylelint-suit-naming-pattern
-yarn add stylelint-no-missing-parenthesis
+```sh
+yarn add -D stylelint-no-missing-var stylelint-suit-naming-pattern stylelint-use-logical
 ```
 
 ## Configuration
 
-Add the plugins to your Stylelint configuration file.
+Add the plugins to your Stylelint configuration file (i.e., `.stylelintrc.js`).
 
 ```js
-// .stylelintrc.js
-
 module.exports = {
-	extends: ["stylelint-config-standard"],
-	plugins: [
-		"stylelint-use-logical",
-		+"stylelint-no-missing-parenthesis",
-		+"stylelint-suit-naming-pattern",
-		+"stylelint-no-missing-var",
-	],
+  extends: ["stylelint-config-standard"],
+  plugins: [
+    "stylelint-use-logical",
+    "stylelint-suit-naming-pattern",
+    "stylelint-no-missing-var",
+  ],
 };
 ```
 
@@ -49,7 +44,6 @@ module.exports = {
         "property-no-vendor-prefix": null,
         "max-nesting-depth": 2,
         "csstools/use-logical": true,
-        "custom-rule/no-missing-parenthesis": true,
         "custom-rule/no-missing-var": true,
         "custom-rule/suit-naming-pattern": true,
         "custom-property-pattern": "^[a-zA-Z0-9]+(-[a-z0-9]([a-zA-Z0-9]+)?)+$",

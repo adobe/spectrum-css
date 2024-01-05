@@ -345,7 +345,9 @@ This project includes several small scripts to help with common tasks.
   - **Note** that you must run `yarn build` before running `yarn compare` to ensure that the latest build is being compared.
 - `yarn refresh:env`: This copies values for the project's `.env` file (an asset never committed to the repo as it contains login secrets) by using the `.env.example` file as a template. This script is useful when you need to update the `.env` file with new values from the `.env.example` file or when you checkout or clean the repo and need to restore the `.env` file.
 - `yarn refresh:directory`: This will remove any deprecated package folders that are no longer in use. The goal is to make migrating to a new project architecture easier for the most number of users.
-- `yarn lint:components`: Provides helpful updates and warnings for a component's package.json file. This helps keep all components in alignment.
+- `yarn lint`: Provides helpful updates and warnings for a component's package.json file. This helps keep all components in alignment.
+  - Use `yarn lint --fix` to automatically fix any issues that are found.
+  - To run on a single component, use `yarn linter accordion` (where `accordion` is the name of the component or components you want to lint).
 
 ### CLI
 
@@ -355,7 +357,6 @@ The following tasks are available:
 - `yarn build` - Performs a build of all components
 - `yarn dev` - Performs a component build, runs storybook, and serves the documentation on the default port (3000), then starts watching components and website files
 - `yarn clean` - Cleans all output files for the project and all components
-- `yarn watch` - Assuming a build has already been performed, re-starts starts watching components and website files. Presumes a browser is already open to your locally served docs
 
 ---
 

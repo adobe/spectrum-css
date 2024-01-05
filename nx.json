@@ -90,18 +90,39 @@
 				]
 			}
 		},
+		"lint": {
+			"inputs": ["core", { "externalDependencies": ["stylelint"] }],
+			"executor": "nx:run-commands",
+			"options": {
+				"commands": ["stylelint {projectRoot}/*.css {projectRoot}/themes/*.css"]
+			}
+		},
 		"test": {
 			"cache": true,
-			"dependsOn": [{ "target": "test", "projects": "storybook" }],
+			"inputs": ["scripts", "tools", { "externalDependencies": ["chromatic"] }],
+			"executor": "nx:run-commands",
+			"options": {
+				"cwd": ".storybook",
+				"commands": [
+					"chromatic --only-changed --build-script-name build --junit-report"
+				]
+			},
 			"configurations": {
 				"scope": {
-					"dependsOn": [
-						{
-							"target": "test",
-							"configuration": "scope",
-							"projects": "storybook"
-						}
+					"commands": [
+						"chromatic --build-script-name build --junit-report --only-story-names"
 					]
+				},
+				"plugins": {
+					"dependsOn": [],
+					"inputs": [
+						"{projectRoot}/index.js",
+						"{projectRoot}/test.js",
+						"{projectRoot}/expected/*.css",
+						"{projectRoot}/fixtures/*.css"
+					],
+					"cwd": "{projectRoot}",
+					"commands": ["ava test.js"]
 				}
 			}
 		}
