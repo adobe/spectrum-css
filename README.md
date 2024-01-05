@@ -337,7 +337,12 @@ This project is leveraging caching from [Nx](https://nx.dev/) to speed up the bu
 
 This project includes several small scripts to help with common tasks.
 
-- `yarn compare`: This compares the current version of components with the previous versions published to NPM and output a list of all the changes that have been made. This is useful for reviewing changes before a release. The information is provided in the command-line output as well as in a simple web page that is opened in your default browser upon completion.  The web page includes links to the visual diffs for each component when the file sizes have changed. Components with no changes are not included in the output.
+- `yarn compare`: This compares the current version of components with the previous versions published to NPM and output a list of all the changes that have been made. This is useful for reviewing changes before a release. The information is provided in the command-line output as well as in a simple web page that is opened in your default browser upon completion. The web page includes links to the visual diffs for each component when the file sizes have changed.
+  - Components with no changes are not included in the output.
+  - To run comparisons on one or multiple components, `yarn compare` accepts a list of components as arguments. For example, `yarn compare button` will compare the current version of the button component with the previous version published to NPM. `yarn compare button checkbox` will compare the current version of the button and checkbox components with the previous versions published to NPM.
+  - Named components should be space-separated.
+  - Running `yarn compare` with no inputs will automatically run against all packages.
+  - **Note** that you must run `yarn build` before running `yarn compare` to ensure that the latest build is being compared.
 - `yarn refresh:env`: This copies values for the project's `.env` file (an asset never committed to the repo as it contains login secrets) by using the `.env.example` file as a template. This script is useful when you need to update the `.env` file with new values from the `.env.example` file or when you checkout or clean the repo and need to restore the `.env` file.
 - `yarn refresh:directory`: This will remove any deprecated package folders that are no longer in use. The goal is to make migrating to a new project architecture easier for the most number of users.
 - `yarn lint:components`: Provides helpful updates and warnings for a component's package.json file. This helps keep all components in alignment.

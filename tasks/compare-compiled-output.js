@@ -136,7 +136,7 @@ async function processComponent(
 	if (!component) return Promise.reject("No component specified.");
 
 	cleanAndMkdir(join(output, "diffs", component));
-	cleanAndMkdir(join(output, "latest"));
+	cleanAndMkdir(join(pathing.latest, component));
 
 	const pkgPath = require.resolve(`@spectrum-css/${component}/package.json`) ?? join(cwd, component, "package.json");
 	const pkg = pkgPath && existsSync(pkgPath)
@@ -213,7 +213,7 @@ async function processComponent(
 				await tar
 					.extract({
 						file: tarballPath,
-						cwd: join(output, "latest"),
+						cwd: join(pathing.latest, component),
 						// Only unpack the dist folder
 						filter: (path) => path.startsWith("package/dist"),
 						strip: 2,
@@ -221,10 +221,10 @@ async function processComponent(
 					.catch((err) => warnings.push(err));
 			}
 
-			if (existsSync(join(output, "latest"))) {
+			if (existsSync(join(pathing.latest, component))) {
 				const files =
 					(await fg("**/*.css", {
-						cwd: join(output, "latest"),
+						cwd: join(pathing.latest, component),
 					})) ?? [];
 
 				if (files.length > 0) found++;
@@ -251,7 +251,7 @@ async function processComponent(
 			processFile(
 				filename,
 				join(cwd, component, "dist"),
-				join(output, "latest")
+				join(pathing.latest, component)
 			)
 		)
 	).then((results) => {
