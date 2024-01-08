@@ -1,5 +1,4 @@
 import { Default as MenuStories } from "@spectrum-css/menu/stories/menu.stories.js";
-import { within } from "@storybook/testing-library";
 import { Template } from "./template";
 
 export default {
@@ -63,6 +62,15 @@ export default {
 			},
 			control: "boolean",
 		},
+		isKeyboardFocused: {
+			name: "Keyboard focused",
+			type: { name: "boolean" },
+			table: {
+				type: { summary: "boolean" },
+				category: "State",
+			},
+			control: "boolean",
+		},
 		isDisabled: {
 			name: "Disabled",
 			type: { name: "boolean" },
@@ -98,6 +106,7 @@ export default {
 		label: "Country",
 		placeholder: "Select a country",
 		isQuiet: false,
+		isKeyboardFocused: false,
 		isLoading: false,
 		isDisabled: false,
 		isInvalid: false,
@@ -168,13 +177,10 @@ export const Focused = Template.bind({});
 Focused.storyName = "Keyboard Focused";
 Focused.args = {
 	helpText: "Please select a country",
+	isKeyboardFocused: true,
 	content: [
 		() => MenuStories(MenuStories.args)
 	],
-};
-Focused.play = async ({ canvasElement }) => {
-	const canvas = within(canvasElement);
-	await canvas.getByRole("button").focus();
 };
 
 export const WithForcedColors = Template.bind({

@@ -161,7 +161,8 @@ governing permissions and limitations under the License.
     --highcontrast-picker-content-color-disabled: GrayText;
     --highcontrast-picker-background-color: ButtonFace;
 
-    &:focus-visible {
+    &:focus-visible,
+    &.is-keyboardFocused {
       --highcontrast-picker-border-color-hover: ButtonText;
     }
 
@@ -263,7 +264,8 @@ governing permissions and limitations under the License.
     }
   }
 
-  &:focus-visible {
+  &:focus-visible,
+  &.is-keyboardFocused {
     outline: none;
     background-color: var(--highcontrast-picker-background-color, var(--mod-picker-background-color-key-focus, var(--spectrum-picker-background-color-key-focus)));
     border-color: var(--highcontrast-picker-border-color-default, var(--mod-picker-border-color-key-focus, var(--spectrum-picker-border-color-key-focus)));
@@ -306,7 +308,8 @@ governing permissions and limitations under the License.
       border-color: var(--highcontrast-picker-border-color-hover, var(--mod-picker-border-color-error-hover-open, var(--spectrum-picker-border-color-error-hover-open)));
     }
 
-    &:focus-visible {
+    &:focus-visible,
+    &.is-keyboardFocused {
       border-color: var(--highcontrast-picker-border-color-default, var(--mod-picker-border-color-error-key-focus, var(--spectrum-picker-border-color-error-key-focus)));
     }
   }
@@ -463,7 +466,8 @@ governing permissions and limitations under the License.
     background-color: var(--highcontrast-picker-background-color, transparent);
   }
 
-  &:focus-visible {
+  &:focus-visible,
+  &.is-keyboardFocused {
     background-color: var(--highcontrast-picker-background-color, transparent);
 
     /* Focus indicator changes from a ring to a line underneath. */
