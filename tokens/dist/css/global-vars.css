@@ -27,7 +27,6 @@
   --spectrum-neutral-background-color-selected-key-focus:var(--spectrum-gray-900);
   --spectrum-neutral-subdued-content-color-selected:var(--spectrum-neutral-subdued-content-color-down);
   --spectrum-accent-content-color-selected:var(--spectrum-accent-content-color-down);
-  --spectrum-notice-background-color-default:var(--spectrum-notice-color-800);
   --spectrum-disabled-background-color:var(--spectrum-gray-100);
   --spectrum-disabled-static-white-background-color:var(--spectrum-transparent-white-100);
   --spectrum-disabled-static-black-background-color:var(--spectrum-transparent-black-100);
@@ -91,6 +90,7 @@
   --spectrum-coach-mark-pagination-color:var(--spectrum-gray-600);
   --spectrum-color-handle-inner-border-color:var(--spectrum-black);
   --spectrum-color-handle-inner-border-opacity:0.42;
+  --spectrum-color-handle-outer-border-color:var(--spectrum-black);
   --spectrum-color-handle-outer-border-opacity:var(--spectrum-color-handle-inner-border-opacity);
   --spectrum-color-handle-drop-shadow-color:var(--spectrum-drop-shadow-color);
   --spectrum-floating-action-button-drop-shadow-color:var(--spectrum-transparent-black-300);
@@ -211,6 +211,7 @@
   --spectrum-slider-track-thickness:2px;
   --spectrum-slider-handle-gap:4px;
   --spectrum-picker-minimum-width-multiplier:2;
+  --spectrum-picker-border-width:var(--spectrum-border-width-100);
   --spectrum-picker-end-edge-to-disclousure-icon-quiet:var(--spectrum-picker-end-edge-to-disclosure-icon-quiet);
   --spectrum-picker-end-edge-to-disclosure-icon-quiet:0px;
   --spectrum-text-field-minimum-width-multiplier:1.5;
