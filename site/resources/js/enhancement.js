@@ -963,6 +963,49 @@ var NAVIGATION_KEYS = [
 	'Esc'
 ];
 
+var FOCUS_COMPONENTS = [
+	'assetlist',
+	'button',
+	'calendar',
+	'card',
+	'closebutton',
+	'colorarea',
+	'colorhandle',
+	'colorslider',
+	'colorwheel',
+	'combobox',
+	'menu',
+	'picker',
+	'pickerbutton',
+	'rating',
+	'sidenav',
+	'slider',
+	'steplist',
+	'stepper',
+	'table',
+	'tag',
+	'tooltip'
+];
+
+var KEYBOARD_FOCUS_COMPONENTS = [
+	'closebutton',
+	'combobox',
+	'datepicker',
+	'pickerbutton',
+	'sidenav',
+	'stepper',
+	'table',
+];
+
+// If pathname matches a component in the focus or keyboard focus arrays,
+// we know that component should get/is setup to handle the focus class
+function getsFocusClasses(componentArray) {
+	return componentArray.some((componentPath) => {
+		const currentPath = window.location.pathname;
+		return currentPath.includes(componentPath);
+	});
+}
+
 var keyboardFocus = false;
 
 function onKeydownHandler(event) {
@@ -971,25 +1014,26 @@ function onKeydownHandler(event) {
 	}
 	keyboardFocus = true;
 
-	if (document.activeElement &&
-		document.activeElement !== document.body) {
-					document.activeElement.classList.add('is-keyboardFocused');
+	if (getsFocusClasses(KEYBOARD_FOCUS_COMPONENTS)
+		&& document.activeElement
+		&& document.activeElement !== document.body) {
+			document.activeElement.classList.add('is-keyboardFocused');
 	}
 }
 
 function onMousedownHandler() {
 	keyboardFocus = false;
 
-	if (document.activeElement &&
-		document.activeElement !== document.body) {
-				document.activeElement.classList.add('is-focused');
+	if (getsFocusClasses(FOCUS_COMPONENTS)
+		&& document.activeElement
+		&& document.activeElement !== document.body) {
+			document.activeElement.classList.add('is-focused');
 	}
 }
 
-// Programmatic focus
 function onFocusHandler(event) {
 	var classList = event.target.classList;
-	if (classList && keyboardFocus) {
+	if (classList && keyboardFocus && getsFocusClasses(KEYBOARD_FOCUS_COMPONENTS)) {
 		classList.add('is-keyboardFocused');
 	}
 }
