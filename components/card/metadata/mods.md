@@ -10,6 +10,7 @@
 | `--mod-card-actions-drop-shadow-y`            |
 | `--mod-card-actions-size`                     |
 | `--mod-card-actions-spacing`                  |
+| `--mod-card-animation-duration`               |
 | `--mod-card-background-color`                 |
 | `--mod-card-background-color-hover`           |
 | `--mod-card-body-font-color`                  |
@@ -29,6 +30,7 @@
 | `--mod-card-border-width`                     |
 | `--mod-card-content-margin-bottom`            |
 | `--mod-card-content-margin-top`               |
+| `--mod-card-content-margin-top-quiet`         |
 | `--mod-card-corner-radius`                    |
 | `--mod-card-divider-color`                    |
 | `--mod-card-focus-indicator-color`            |
@@ -42,7 +44,11 @@
 | `--mod-card-horizontal-body-padding`          |
 | `--mod-card-horizontal-preview-padding`       |
 | `--mod-card-minimum-width`                    |
+| `--mod-card-minimum-width-quiet`              |
+| `--mod-card-preview-background-color`         |
+| `--mod-card-preview-background-color-hover`   |
 | `--mod-card-preview-border-width`             |
+| `--mod-card-preview-border-width-selected`    |
 | `--mod-card-preview-minimum-height`           |
 | `--mod-card-selected-background-color-rgb`    |
 | `--mod-card-selected-background-opacity`      |
