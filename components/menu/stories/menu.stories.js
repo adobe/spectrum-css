@@ -13,16 +13,35 @@ export default {
       table: { disable: true },
       options: ["none", "single", "multiple"],
     },
-		size: {
-			name: "Size",
-			type: { name: "string", required: true },
-			table: {
-				type: { summary: "string" },
-				category: "Component",
-			},
-			options: ["s", "m", "l", "xl"],
-			control: "select",
-		},
+    size: {
+      name: "Size",
+      type: { name: "string", required: true },
+      table: {
+        type: { summary: "string" },
+        category: "Component",
+      },
+      options: ["s", "m", "l", "xl"],
+      control: "select",
+    },
+    shouldTruncate: {
+      name: "Truncate menu item label",
+      type: { name: "boolean" },
+      table: {
+        type: { summary: "boolean" },
+        category: "Component",
+      },
+      control: "boolean",
+    },
+    maxInlineSize: {
+      name: "Max Inline Size",
+      type: { name: "text", required: true },
+      table: {
+        type: { summary: "text" },
+        category: "Component",
+      },
+      control: "text",
+      if: { arg: "shouldTruncate", truthy: true },
+    },
     hasActions: { table: { disable: true } },
     labelledby: { table: { disable: true } },
     items: { table: { disable: true } },
@@ -33,6 +52,8 @@ export default {
     rootClass: "spectrum-Menu",
     selectionMode: "none",
     size: "m",
+    shouldTruncate: false,
+    maxInlineSize: "150px"
   },
   parameters: {
     actions: {
@@ -52,12 +73,27 @@ Default.args = {
   items: [
     { label: "Deselect" },
     { label: "Select Inverse" },
-    { label: "Feather..." },
-    { label: "Select and Mask..." },
+    { label: "Feather" },
+    { label: "Select and Mask" },
     { type: "divider" },
     { label: "Save Selection" },
     { label: "Make Work Path", isDisabled: true },
   ],
+};
+
+export const Truncate = Template.bind({});
+Truncate.args = {
+  items: [
+    { label: "Deselect", },
+    { label: "Select Inverse" },
+    { label: "Feather" },
+    { label: "Select and Mask" },
+    { type: "divider" },
+    { label: "Save Selection" },
+    { label: "Make Work Path", isDisabled: true },
+  ],
+  shouldTruncate: true,
+  maxInlineSize: '100px',
 };
 
 export const MenuWithSections = Template.bind({});
@@ -335,7 +371,7 @@ DrillInSubmenu.args = {
       isOpen: true,
     },
     {
-      label: "Select and Mask...",
+      label: "Select and Mask",
       isDrillIn: true,
       isDisabled: true,
       isOpen: true,
@@ -346,6 +382,7 @@ DrillInSubmenu.args = {
 
 export const Collapsible = Template.bind({});
 Collapsible.args = {
+  shouldTruncate: true,
   items: [
     {
       label: "Web Design",

@@ -8,12 +8,16 @@ sections:
     description: |
       ### T-shirt sizing
       Menu now supports t-shirt sizing and requires that you specify the size by adding a `.spectrum-Menu--size*` class.
-      
+
       ### Use small divider classes
       When using a section divider, add `.spectrum-Divider` and `spectrum-Divider--sizeS` classes to `spectrum-Menu-divider`. The divider has also changed from medium to small.
-      
+
       ### Change workflow icon size to medium
       Please replace `.spectrum-Icon--sizeS` with `.spectrum-Icon--sizeM`.
+
+      ### Menu item with switch mark up ###
+      In the case of a menu item that includes an icon and a switch, the label and icon should be seperate elements. As opposed to the icon SVG being with in the label. This matches the pattern of other variants with icons within the menu item.
+
 examples:
   - id: sizing
     name: Sizing
@@ -551,7 +555,7 @@ examples:
                 <svg class="spectrum-Icon spectrum-Icon--sizeS spectrum-UIIcon-ChevronRight75 spectrum-Menu-chevron spectrum-Menu-itemIcon" focusable="false" aria-hidden="true" aria-label="Next">
                   <use xlink:href="#spectrum-css-icon-Chevron75" />
                 </svg>
-                
+
                 <span class="spectrum-Menu-sectionHeading" id="ex1-menu-heading-2" aria-hidden="true">Mobile</span>
                 <ul id="spectrum-menu-item-1-submenu" class="spectrum-Menu spectrum-Menu--sizeS is-open" aria-labelledby="ex1-menu-heading-2" role="menu">
                   <li class="spectrum-Menu-item" role="menuitem" tabindex="0">
@@ -671,7 +675,7 @@ examples:
                 <svg class="spectrum-Icon spectrum-Icon--sizeM spectrum-UIIcon-ChevronRight100 spectrum-Menu-chevron spectrum-Menu-itemIcon" focusable="false" aria-hidden="true" aria-label="Next">
                   <use xlink:href="#spectrum-css-icon-Chevron100" />
                 </svg>
-                
+
                 <span class="spectrum-Menu-sectionHeading" id="ex2-menu-heading-2" aria-hidden="true">Mobile</span>
                 <ul id="spectrum-menu-item-1-submenu" class="spectrum-Menu is-open" aria-labelledby="ex2-menu-heading-2" role="menu">
                   <li class="spectrum-Menu-item" role="menuitem" tabindex="0">
@@ -791,7 +795,7 @@ examples:
                 <svg class="spectrum-Icon spectrum-Icon--sizeL spectrum-UIIcon-ChevronRight200 spectrum-Menu-chevron spectrum-Menu-itemIcon" focusable="false" aria-hidden="true" aria-label="Next">
                   <use xlink:href="#spectrum-css-icon-Chevron200" />
                 </svg>
-                
+
                 <span class="spectrum-Menu-sectionHeading" id="ex3-menu-heading-2" aria-hidden="true">Mobile</span>
                 <ul id="spectrum-menu-item-1-submenu" class="spectrum-Menu spectrum-Menu--sizeL is-open" aria-labelledby="ex3-menu-heading-2" role="menu">
                   <li class="spectrum-Menu-item" role="menuitem" tabindex="0">
@@ -911,7 +915,7 @@ examples:
                 <svg class="spectrum-Icon spectrum-Icon--sizeXL spectrum-UIIcon-Chevron300 spectrum-Menu-chevron spectrum-Menu-itemIcon" focusable="false" aria-hidden="true" aria-label="Next">
                   <use xlink:href="#spectrum-css-icon-Chevron300" />
                 </svg>
-                
+
                 <span class="spectrum-Menu-sectionHeading" id="ex4-menu-heading-2" aria-hidden="true">Mobile</span>
                 <ul id="spectrum-menu-item-1-submenu" class="spectrum-Menu spectrum-Menu--sizeXL is-open" aria-labelledby="ex4-menu-heading-2" role="menu">
                   <li class="spectrum-Menu-item" role="menuitem" tabindex="0">
@@ -1014,10 +1018,10 @@ examples:
               <span class="spectrum-Menu-itemLabel">Select Inverse</span>
             </li>
             <li class="spectrum-Menu-item" role="menuitem" tabindex="0">
-              <span class="spectrum-Menu-itemLabel">Feather...</span>
+              <span class="spectrum-Menu-itemLabel">Feather Effect</span>
             </li>
             <li class="spectrum-Menu-item" role="menuitem" tabindex="0">
-              <span class="spectrum-Menu-itemLabel">Select and Mask...</span>
+              <span class="spectrum-Menu-itemLabel">Select and Mask</span>
             </li>
             <li class="spectrum-Divider spectrum-Divider--sizeS spectrum-Menu-divider" role="separator"></li>
             <li class="spectrum-Menu-item" role="menuitem" tabindex="0">
@@ -1265,10 +1269,10 @@ examples:
           <div class="spectrum-Examples-itemGroup">
             <ul class="spectrum-Menu" role="menu">
               <li class="spectrum-Menu-item" role="menuitem" tabindex="0">
-                <label class="spectrum-Switch-label spectrum-Menu-itemLabel" for="switch-onoff-3">
                   <svg class="spectrum-Icon spectrum-Icon--sizeM spectrum-Menu-itemIcon spectrum-Menu-itemIcon--workflowIcon" focusable="false" aria-hidden="true" aria-label="Selection Icon">
                     <use xlink:href="#spectrum-icon-18-Selection"></use>
                   </svg>
+                <label class="spectrum-Switch-label spectrum-Menu-itemLabel" for="switch-onoff-3">
                   Marquee
                 </label>
                 <div class="spectrum-Menu-itemActions">
@@ -1279,10 +1283,10 @@ examples:
                 </div>
               </li>
               <li class="spectrum-Menu-item" role="menuitem" tabindex="0">
+                <svg class="spectrum-Icon spectrum-Icon--sizeM spectrum-Menu-itemIcon spectrum-Menu-itemIcon--workflowIcon" focusable="false" aria-hidden="true" aria-label="Select Add Icon">
+                  <use xlink:href="#spectrum-icon-18-SelectAdd"></use>
+                </svg>
                 <label class="spectrum-Switch-label spectrum-Menu-itemLabel" for="switch-onoff-4">
-                  <svg class="spectrum-Icon spectrum-Icon--sizeM spectrum-Menu-itemIcon spectrum-Menu-itemIcon--workflowIcon" focusable="false" aria-hidden="true" aria-label="Select Add Icon">
-                    <use xlink:href="#spectrum-icon-18-SelectAdd"></use>
-                  </svg>
                   Add
                 </label>
                 <div class="spectrum-Menu-itemActions">
@@ -1293,10 +1297,10 @@ examples:
                 </div>
               </li>
               <li class="spectrum-Menu-item" role="menuitem" tabindex="0">
+                <svg class="spectrum-Icon spectrum-Icon--sizeM spectrum-Menu-itemIcon spectrum-Menu-itemIcon--workflowIcon" focusable="false" aria-hidden="true" aria-label="Select Subtract Icon">
+                  <use xlink:href="#spectrum-icon-18-SelectSubtract"></use>
+                </svg>
                 <label class="spectrum-Switch-label spectrum-Menu-itemLabel" for="switch-onoff-5">
-                  <svg class="spectrum-Icon spectrum-Icon--sizeM spectrum-Menu-itemIcon spectrum-Menu-itemIcon--workflowIcon" focusable="false" aria-hidden="true" aria-label="Select Subtract Icon">
-                    <use xlink:href="#spectrum-icon-18-SelectSubtract"></use>
-                  </svg>
                   Subtract
                 </label>
                 <div class="spectrum-Menu-itemActions">
@@ -1312,7 +1316,7 @@ examples:
       </div>
   - id: submenu-drillin
     name: Drill-in for submenu
-    description: When a menu item contains a submenu, a drill-in chevron will appear at the end of the menu item to show that a submenu is available. See the guidelines for more info on how to display submenus.
+    description: Use the class `spectrum-Menu-itemLabel--truncate` on the item label or section heading that should truncate within a menu. When text would typically overflow beyond the available horizontal space and wrap (default behavior), ellipsis will appear instead. This is demonstrated here by setting an `inline-size` on the menu.
     markup: |
       <div class="spectrum-Examples">
         <div class="spectrum-Examples-item">
@@ -1330,7 +1334,7 @@ examples:
               </svg>
             </li>
             <li class="spectrum-Menu-item" role="menuitem" tabindex="0">
-              <span class="spectrum-Menu-itemLabel">Select and Mask...</span>
+              <span class="spectrum-Menu-itemLabel">Select and Mask</span>
             </li>
             <li class="spectrum-Menu-item" role="menuitem" tabindex="0">
               <span class="spectrum-Menu-itemLabel">Save Selection</span>
@@ -1379,6 +1383,27 @@ examples:
                   <span class="spectrum-Menu-itemLabel">Subtract</span>
                 </li>
               </ul>
+          </div>
+        </div>
+
+  - id: menu-truncate
+    name: Menu with truncating text
+    description: Use the class `spectrum-Menu-itemLabel--truncate` on the item label or section heading that should truncate with in a menu with a set `inline-size` or `max-inline-size`
+    markup: |
+      <div class="spectrum-Examples" style="justify-content: flex-start; gap: 25%;">
+        <div class="spectrum-Examples-item">
+          <ul class="spectrum-Menu spectrum-Menu--sizeM" role="menu" style="inline-size: 100px;">
+            <li class="spectrum-Menu-item" role="menuitem" tabindex="0">
+              <span class="spectrum-Menu-itemLabel">Deselect</span>
+            </li>
+            <li class="spectrum-Menu-item" role="menuitem" tabindex="0">
+              <span class="spectrum-Menu-itemLabel">Select Inverse</span>
+            </li>
+            <li class="spectrum-Menu-item" role="menuitem" tabindex="0">
+              <span class="spectrum-Menu-itemLabel spectrum-Menu-itemLabel--truncate">Truncate this menu item</span>
+            </li>
+            <li class="spectrum-Menu-item" role="menuitem" tabindex="0">
+              <span class="spectrum-Menu-itemLabel">Save Selection</span>
             </li>
           </ul>
         </div>
