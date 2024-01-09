@@ -291,6 +291,11 @@ governing permissions and limitations under the License.
     --highcontrast-stepper-border-color-focus: Highlight;
     --highcontrast-stepper-border-color-focus-hover: Highlight;
     --highcontrast-stepper-border-color-keyboard-focus: CanvasText;
+    --highcontrast-stepper-button-background-color-default: Canvas;
+    --highcontrast-stepper-button-background-color-hover: Canvas;
+    --highcontrast-stepper-button-background-color-focus: Canvas;
+    --highcontrast-stepper-button-background-color-keyboard-focus: Canvas;
+    --highcontrast-stepper-focus-indicator-color: Highlight;
 
     &.is-disabled {
       --highcontrast-stepper-border-color: GrayText;
@@ -304,12 +309,5 @@ governing permissions and limitations under the License.
       --highcontrast-stepper-border-color-focus-hover: Highlight;
       --highcontrast-stepper-border-color-keyboard-focus: Highlight;
     }
-
-    --highcontrast-stepper-button-background-color-default: Canvas;
-    --highcontrast-stepper-button-background-color-hover: Canvas;
-    --highcontrast-stepper-button-background-color-focus: Canvas;
-    --highcontrast-stepper-button-background-color-keyboard-focus: Canvas;
-
-    --highcontrast-stepper-focus-indicator-color: Highlight;
   }
 }
