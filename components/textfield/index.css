@@ -435,7 +435,7 @@ governing permissions and limitations under the License.
 	/* Firefox and Safari - Remove the margin for input. */
 	margin: 0;
 
-	/* TODO: Determine if the vendor prefix toggling of appearanmce is still needed  */
+	/* TODO: Determine if the vendor prefix toggling of appearance is still needed  */
 	/* Firefox -
     Removes the native spin buttons in Firefox; -moz-appearance: none results in spinners.
     This has to come after -webkit-appearance or it gets overridden (#214)
@@ -445,7 +445,7 @@ governing permissions and limitations under the License.
     Details: https://github.com/csstools/normalize.css/blob/main/normalize.css#L297
   */
 	/* stylelint-disable-next-line value-no-vendor-prefix */
-	-moz-appearance: textfield;
+	appearance: textfield;
 
 	/* All browsers - Change the input font styles */
 	text-overflow: ellipsis;
@@ -702,7 +702,6 @@ governing permissions and limitations under the License.
   line-height: var(--spectrum-textfield-input-line-height);
 	box-sizing: border-box;
 	inline-size: 100%;
-	overflow: hidden;
 	min-inline-size: var(
 		--mod-textfield-min-width,
 		var(--spectrum-textfield-min-width)
@@ -782,9 +781,9 @@ governing permissions and limitations under the License.
 
 	text-overflow: ellipsis;
 
-	/* TODO: Determine if the vendor prefix toggling of appearanmce is still needed  */
+	/* TODO: Determine if the vendor prefix toggling of appearance is still needed  */
 	/* stylelint-disable-next-line value-no-vendor-prefix */
-	-webkit-appearance: none;
+	appearance: none;
 
 	/*
     Removes the native spin buttons in Firefox; -moz-appearance: none results in spinners.
@@ -795,7 +794,7 @@ governing permissions and limitations under the License.
     Details: https://github.com/csstools/normalize.css/blob/main/normalize.css#L297
   */
 	/* stylelint-disable-next-line value-no-vendor-prefix */
-	-moz-appearance: textfield;
+	appearance: textfield;
 
 	/* place in same cell: input, focus indicator, and grows sizer */
 	grid-row: 2;
@@ -813,7 +812,7 @@ governing permissions and limitations under the License.
 	&::-webkit-inner-spin-button,
 	&::-webkit-outer-spin-button {
 		/* stylelint-disable-next-line value-no-vendor-prefix */
-		-webkit-appearance: none;
+		appearance: none;
 		margin: 0;
 	}
 
