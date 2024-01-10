@@ -2,11 +2,11 @@ import { html } from "lit";
 import { classMap } from "lit/directives/class-map.js";
 import { ifDefined } from "lit/directives/if-defined.js";
 
-import { Template as Menu } from "@spectrum-css/menu/stories/template.js";
-import { Template as TextField } from "@spectrum-css/textfield/stories/template.js";
-import { Template as Popover } from "@spectrum-css/popover/stories/template.js";
-import { Template as PickerButton } from "@spectrum-css/pickerbutton/stories/template.js";
 import { Template as FieldLabel } from "@spectrum-css/fieldlabel/stories/template.js";
+import { Template as Menu } from "@spectrum-css/menu/stories/template.js";
+import { Template as PickerButton } from "@spectrum-css/pickerbutton/stories/template.js";
+import { Template as Popover } from "@spectrum-css/popover/stories/template.js";
+import { Template as TextField } from "@spectrum-css/textfield/stories/template.js";
 
 import { useArgs, useGlobals } from "@storybook/client-api";
 
@@ -98,14 +98,16 @@ export const Template = ({
 				}),
 				PickerButton({
 					...globals,
-					customClasses: [`${rootClass}-button`],
+					customClasses: [
+						`${rootClass}-button`,
+						... isInvalid ? ['is-invalid'] : [],
+						... isValid ? ['is-valid'] : [],
+					],
 					size,
 					iconType: "workflow",
 					iconName: "ChevronDown",
 					isQuiet,
 					isOpen,
-					isInvalid,
-					isValid,
 					isFocused,
 					isKeyboardFocused,
 					isDisabled,
