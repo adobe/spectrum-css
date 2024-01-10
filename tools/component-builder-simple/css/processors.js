@@ -10,7 +10,7 @@ OF ANY KIND, either express or implied. See the License for the specific languag
 governing permissions and limitations under the License.
 */
 
-function getProcessors(splitinatorOptions = {}) {
+function getProcessors({ noFlatVariables = false, noSelectors = false, keepComments = false } = {}) {
 	return [
 		require("postcss-import"),
 		require("postcss-nested"),
@@ -21,7 +21,8 @@ function getProcessors(splitinatorOptions = {}) {
 				}
 				return identifier;
 			},
-			...splitinatorOptions,
+			noFlatVariables,
+			noSelectors,
 		}),
 		require("postcss-inherit"),
 		require("./plugins/postcss-transform-logical")(),
@@ -30,7 +31,7 @@ function getProcessors(splitinatorOptions = {}) {
 		require("postcss-dropunusedvars")({ fix: false }),
 		require("postcss-dropdupedvars"),
 		require("postcss-discard-empty"),
-		require("postcss-discard-comments")({ removeAllButFirst: true }),
+		!keepComments ? require("postcss-discard-comments")({ removeAllButFirst: true }) : null,
 		require("autoprefixer")({}),
 	].filter(Boolean);
 }
