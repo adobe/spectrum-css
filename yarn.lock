@@ -2834,6 +2834,35 @@
   resolved "https://registry.yarnpkg.com/@socket.io/component-emitter/-/component-emitter-3.1.0.tgz#96116f2a912e0c02817345b3c10751069920d553"
   integrity sha512-+9jVqKhRSpsc591z5vX+X5Yyw+he/HCB4iQ/RYxw35CEPaY1gnsNE43nf9n9AaYjAQrTiI/mOwKUKdUs9vf7Xg==
 
+"@spectrum-css/component-builder-simple@^2.0.17":
+  version "2.0.18"
+  resolved "https://registry.yarnpkg.com/@spectrum-css/component-builder-simple/-/component-builder-simple-2.0.18.tgz#975ab1402f76b4d38fcd55005fef0ce83ddf884c"
+  integrity sha512-j3zi7x++COMoChWUFajbh6nD9fyNUEfh59JghcJ3WssaPp/dGlyjQ7DKb4KzzImdOlkXJYj04CHeeOiDufN8dA==
+  dependencies:
+    "@spectrum-css/tokens" "^13.0.3"
+    autoprefixer "^6.5.3"
+    colors "^1.4.0"
+    del "^5.0.0"
+    gulp "^4.0.0"
+    gulp-concat "^2.6.1"
+    gulp-postcss "^7.0.0"
+    gulp-rename "^1.4.0"
+    gulplog "^2.0.1"
+    postcss "^7.0.36"
+    postcss-calc "^6.0.0"
+    postcss-combininator "^1.0.2"
+    postcss-discard-comments "^4.0.0"
+    postcss-discard-empty "^4.0.1"
+    postcss-dropdupedvars "^1.1.2"
+    postcss-dropunusedvars "^1.2.1"
+    postcss-import "^10.0.0"
+    postcss-inherit "^4.0.3"
+    postcss-nested "^3.0.0"
+    postcss-selector-parser "^6.0.2"
+    postcss-splitinator "^1.0.2"
+    postcss-values-parser "^3.1.1"
+    through2 "^3.0.1"
+
 "@spectrum-css/expressvars@^3.0.9":
   version "3.0.9"
   resolved "https://registry.yarnpkg.com/@spectrum-css/expressvars/-/expressvars-3.0.9.tgz#72678e0845c240bc9cb6b4d828f20806810f4cab"
@@ -15481,7 +15510,7 @@ rimraf@^4.4.1:
   dependencies:
     glob "^9.2.0"
 
-rimraf@^5.0.5:
+rimraf@^5.0.1, rimraf@^5.0.5:
   version "5.0.5"
   resolved "https://registry.yarnpkg.com/rimraf/-/rimraf-5.0.5.tgz#9be65d2d6e683447d2e9013da2bf451139a61ccf"
   integrity sha512-CqDakW+hMe/Bz202FPEymy68P+G50RfMQK+Qo5YUqc9SPipvbGjCGKd0RSKEelbsfQuw3g5NZDSrlZZAJurH1A==
