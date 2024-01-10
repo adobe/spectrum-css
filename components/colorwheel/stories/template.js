@@ -13,35 +13,30 @@ export const Template = ({
 		"--spectrum-picked-color": "rgb(255, 0, 0)",
 	},
 	...globals
-}) => {
-	return html`
-    <div class=${classMap({
-			[rootClass]: true,
+}) => html`
+	<div class=${classMap({
+		[rootClass]: true,
+		"is-disabled": isDisabled,
+		"is-focused": isFocused,
+		...customClasses.reduce((a, c) => ({ ...a, [c]: true }), {}),
+	})}>
+		<div class="${rootClass}-inner">
+			<div class="${rootClass}-colorarea-container"></div>
+		</div>
+		<div class=${classMap({
+			[`${rootClass}-border`]: true,
 			"is-disabled": isDisabled,
-			"is-focused": isFocused,
-			...customClasses.reduce((a, c) => ({ ...a, [c]: true }), {}),
 		})}>
-      <div class="${rootClass}-inner">
-        <div class="${rootClass}-colorarea-container"></div>
-      </div>
-      <div class=${classMap({
-				[`${rootClass}-border`]: true,
+			<div class=${classMap({
+				[`${rootClass}-wheel`]: true,
 				"is-disabled": isDisabled,
-			})}>
-        <div class=${classMap({
-					[`${rootClass}-wheel`]: true,
-					"is-disabled": isDisabled,
-				})}>
-        </div>
-      </div>
-      ${ColorHandle({
+			})}></div>
+		</div>
+		${ColorHandle({
 			...globals,
 			isDisabled,
 			customClasses: [`${rootClass}-handle`],
 			customStyles: colorHandleStyle,
 		})}
-      <input type="range" class="${rootClass}-slider" aria-label="hue" min="0" max="360" step="">
-    </div>
-  </div>
-  `;
-};
+		<input type="range" class="${rootClass}-slider" aria-label="hue" min="0" max="360" step="">
+	</div>`;

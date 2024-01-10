@@ -67,10 +67,13 @@ function buildCSSThemeIndex() {
 
 function buildCSSThemes() {
 	return gulp
-		.src(["themes/*.css"], {
+		.src([
+			"themes/*.css",
+			"!themes/express.css",
+		], {
 			allowEmpty: true,
 		})
-		.pipe(postcss(processorsFunction({ noSelectors: true })))
+		.pipe(postcss(processorsFunction({ noSelectors: true, keepComments: true })))
 		.pipe(gulp.dest("dist/themes/"));
 }
 

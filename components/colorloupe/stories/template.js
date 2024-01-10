@@ -13,10 +13,8 @@ export const Template = ({
 		"inset-block-start": "5px",
 		"inset-inline-start": "5px",
 	},
-	customClasses = [],
-	// ...globals
-}) => {
-	return svg`
+	customClasses = [],s
+}) => svg`
     <svg
       class=${classMap({
         [rootClass]: true,
@@ -50,5 +48,4 @@ export const Template = ({
         <use xlink:href="#loupe-path" mask="url(#loupe-mask)" class="spectrum-ColorLoupe-outer-border" />
       </g>
     </svg>
-  `;
-};
+`;
