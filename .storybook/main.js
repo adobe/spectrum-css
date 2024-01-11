@@ -1,7 +1,7 @@
 const { resolve, join } = require("path");
 const { readdirSync, existsSync } = require("fs");
 
-const componentsPath = resolve(__dirname, "../components");
+const componentsPath = join(__dirname, "../components");
 const componentPkgs = readdirSync(componentsPath, {
 	withFileTypes: true,
 })
@@ -32,12 +32,14 @@ module.exports = {
 		},
 		// https://github.com/storybookjs/storybook/tree/next/code/addons/a11y
 		"@storybook/addon-a11y",
+		// https://github.com/storybookjs/storybook/tree/next/code/addons/actions
+		// "@storybook/addon-actions",
+		// https://github.com/storybookjs/storybook/tree/next/code/addons/interactions
+		"@storybook/addon-interactions",
 		// https://www.npmjs.com/package/@whitespace/storybook-addon-html
 		"@whitespace/storybook-addon-html",
 		// https://storybook.js.org/addons/@etchteam/storybook-addon-status
 		"@etchteam/storybook-addon-status",
-		// https://github.com/storybookjs/storybook/tree/next/code/addons/interactions
-		"@storybook/addon-interactions",
 		// https://www.chromatic.com/docs/visual-testing-addon/
 		"@chromaui/addon-visual-tests",
 		// https://storybook.js.org/addons/@storybook/addon-designs/
@@ -72,13 +74,13 @@ module.exports = {
 				...(config.resolve ? config.resolve : {}),
 				modules: [
 					...(config.resolve ? config.resolve.modules : []),
-					resolve(__dirname, "../node_modules"),
+					join(__dirname, "../node_modules"),
 				],
 				alias: {
 					...(config.resolve ? config.resolve.alias : {}),
 					...componentPkgs.reduce((pkgs, dir) => {
-						const pkg = require(resolve(componentsPath, dir, "package.json"));
-						pkgs[pkg.name] = resolve(componentsPath, dir);
+						const pkg = require(join(componentsPath, dir, "package.json"));
+						pkgs[pkg.name] = join(componentsPath, dir);
 						return pkgs;
 					}, {}),
 				},
@@ -100,6 +102,7 @@ module.exports = {
 					},
 					{
 						test: /\.css$/i,
+						exclude: /\/components\/\w+\/index\.css$/i,
 						sideEffects: true,
 						use: [
 							{
@@ -133,6 +136,39 @@ module.exports = {
 									postcssOptions: {
 										config: resolve(__dirname, "../postcss.config.js"),
 									},
+									sourceMap: true,
+								},
+							},
+						],
+					},
+					{
+						test: /\/components\/\w+\/index\.css$/i,
+						sideEffects: true,
+						use: [
+							{
+								loader: "style-loader",
+								options: {
+									injectType: "styleTag",
+									attributes: {
+										"data-source": "component",
+									},
+								},
+							},
+							{
+								loader: "css-loader",
+								options: {
+									sourceMap: true,
+									importLoaders: 1,
+								},
+							},
+							{
+								loader: "postcss-loader",
+								options: {
+									implementation: require("postcss"),
+									postcssOptions: {
+										config: join(__dirname, "postcss.config.js"),
+									},
+									sourceMap: true,
 								},
 							},
 						],

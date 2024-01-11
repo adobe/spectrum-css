@@ -53,7 +53,6 @@ export default {
 		},
 		content: { table: { disable: true } },
 	},
-	// More on args: https://storybook.js.org/docs/web-components/writing-stories/args
 	args: {
 		rootClass: "spectrum-Typography",
 		size: "m",

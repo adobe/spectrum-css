@@ -43,6 +43,7 @@ export default {
 	},
 	args: {
 		rootClass: "spectrum-QuickActions",
+		legacyTokens: true,
 		isOpen: true,
 		textOnly: false,
 		content: [

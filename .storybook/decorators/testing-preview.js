@@ -1,4 +1,5 @@
-import { makeDecorator, useEffect } from "@storybook/preview-api";
+import { FORCE_RE_RENDER } from '@storybook/core-events';
+import { addons, makeDecorator, useEffect } from "@storybook/preview-api";
 
 import isChromatic from "chromatic/isChromatic";
 
@@ -9,22 +10,26 @@ import isChromatic from "chromatic/isChromatic";
 export const withTestingPreviewWrapper = makeDecorator({
 	name: "withTestingPreviewWrapper",
 	parameterName: "testingPreview",
-	wrapper: (StoryFn, context) => {
-        const { globals } = context;
+    wrapper: (StoryFn, context) => {
+        const { globals, parameters } = context;
+        const isTestingPreview = globals.testingPreview || parameters.testingPreview || false;
 
-        function init(isTestingPreview = false) {
+        // Global initializer
+        window.isChromatic = typeof isChromatic === "function" && isChromatic() ? isChromatic : () => isTestingPreview;
+
+        useEffect(() => {
             if (!window) window = {};
+
             // Prevents the "isChromatic" function from being over written
             if (typeof window.isChromatic !== "function") {
                 // If we're not in Chromatic and we want to show the testing preview, we need to override the isChromatic function
                 // Otherwise, we need to reset it to the original function (in case it was overridden previously)
                 window.isChromatic = typeof isChromatic === "function" && isChromatic() ? isChromatic : () => isTestingPreview;
             }
-        }
 
-        init(globals.testingPreview);
-
-        useEffect(() => init(globals.testingPreview), [globals.testingPreview]);
+            // Invokes Storybook's addon API method (with the FORCE_RE_RENDER) event to trigger a UI refresh
+            addons.getChannel().emit(FORCE_RE_RENDER);
+        }, [window, isTestingPreview]);
 
         return StoryFn(context);
 	},

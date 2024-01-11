@@ -66,7 +66,7 @@ export const fetchIconSVG = ({
 	if (setName === "workflow") {
 		try {
 			icon = require(`@adobe/spectrum-css-workflow-icons/dist/${
-				scale !== "medium" ? "24" : "18"
+				scale !== "medium" ? `24` : `18`
 			}/${iconName}.svg?raw`);
 			if (icon) return (icon.default ?? icon).trim();
 		}
