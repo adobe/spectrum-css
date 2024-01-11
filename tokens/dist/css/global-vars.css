@@ -326,6 +326,9 @@
   --spectrum-field-edge-to-validation-icon-quiet:0px;
   --spectrum-text-underline-thickness:1px;
   --spectrum-text-underline-gap:1px;
+  --spectrum-component-size-width-ratio-down:0.3333;
+  --spectrum-component-size-minimum-perspective-down:24px;
+  --spectrum-component-size-difference-down:-2px;
   --spectrum-accent-color-100:var(--spectrum-blue-100);
   --spectrum-accent-color-200:var(--spectrum-blue-200);
   --spectrum-accent-color-300:var(--spectrum-blue-300);
