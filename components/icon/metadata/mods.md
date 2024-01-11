@@ -1,4 +1,4 @@
-| Modifiable Custom Properties   |
+| Modifiable custom properties   |
 | ------------------------------ |
 | `--mod-icon-block-size`        |
 | `--mod-icon-color`             |
