@@ -127,7 +127,7 @@ export const horizontalIconOnlyProps = {
 
 export const truncateProps = {
   selectorStyle: {
-    "width": "20px",
+    "width": "60px",
   },
   style: {
     "inline-size" : "90px",

@@ -66,8 +66,15 @@ export const Template = ({
 			content: [
 				Menu({
 					...globals,
+					role: "listbox",
+  				subrole: "option",
+					selectionMode: "single",
 					items: [
-						{ label: "Tab 1" },
+						{
+							label: "Tab 1",
+							isSelected: true,
+							isChecked: true
+						},
 						{ label: "Tab 2" },
 						{ label: "Tab 3" },
 					],
