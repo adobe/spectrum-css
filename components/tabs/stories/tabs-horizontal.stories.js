@@ -1,10 +1,11 @@
 // Import the component markup template
 import { Template } from "./template";
 import {
-  argTypes, 
-  horizontalProps, 
+  argTypes,
+  horizontalProps,
   horizontalWithIconsProps,
-  horizontalIconOnlyProps
+  horizontalIconOnlyProps,
+  truncateProps,
 } from "./index.js";
 
 export default {
@@ -38,3 +39,7 @@ WithIcon.args = horizontalWithIconsProps;
 
 export const IconOnly = Template.bind({});
 IconOnly.args = horizontalIconOnlyProps;
+
+export const Truncate = Template.bind({});
+Truncate.args = truncateProps;
+

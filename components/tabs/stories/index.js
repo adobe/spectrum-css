@@ -1,6 +1,7 @@
 export const argTypes = {
   items: { table: { disable: true }},
   selectorStyle: { table: { disable: true }},
+  style: { table: { disable: true }},
   size: {
     name: "Size",
     type: { name: "string", required: true },
@@ -39,6 +40,15 @@ export const argTypes = {
     },
     control: "boolean",
     if: { arg: 'isQuiet', truthy: true },
+  },
+  truncate: {
+    name: "Truncate",
+    type: { name: "boolean" },
+    table: {
+      type: { summary: "boolean" },
+      category: "State",
+    },
+    control: "boolean",
   },
 };
 
@@ -115,6 +125,18 @@ export const horizontalIconOnlyProps = {
   items: itemsIconOnly
 };
 
+export const truncateProps = {
+  selectorStyle: {
+    "width": "20px",
+  },
+  style: {
+    "inline-size" : "90px",
+  },
+  truncate: true,
+  items: items
+};
+
+
 /* Set default args and export for other stories */
 export const verticalProps = {
   selectorStyle: {
@@ -128,7 +150,7 @@ export const verticalWithIconsProps = {
   selectorStyle: {
     "height": "46px",
     "top": "0"
-  }, 
+  },
   items: itemsWithIcons
 };
 
@@ -136,6 +158,6 @@ export const verticalIconOnlyProps = {
   selectorStyle: {
     "height": "46px",
     "top": "0"
-  }, 
+  },
   items: itemsIconOnly
 };
