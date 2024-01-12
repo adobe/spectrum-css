@@ -12,6 +12,8 @@
 		"compare": {
 			"executor": "nx:noop"
 		},
+		"lint": {},
+
 		"test": {
 			"executor": "nx:noop"
 		}

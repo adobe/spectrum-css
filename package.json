@@ -31,6 +31,8 @@
     "predev": "nx run-many --projects ui-icons,tokens --target build",
     "dev": "NODE_ENV=development BROWSERSYNC_OPEN=true gulp dev",
     "preinstall": "command -v nvm >/dev/null 2>&1 && nvm use || exit 0",
+    "lint": "yarn linter tag:component --verbose",
+    "linter": "nx run-many --target lint --verbose --projects",
     "new": "nx run @spectrum-css/generator:new",
     "precommit": "lint-staged",
     "prepare": "husky install && run-p refresh:directory refresh:env && yarn refresh:config",
@@ -44,6 +46,7 @@
     "release:site": "gh-pages -d dist/ -f -e .",
     "start": "NODE_ENV=development nx start storybook",
     "test": "nx test storybook",
+    "test:plugins": "nx run-many --target test --projects tag:stylelint",
     "tester": "nx run storybook:test:scope"
   },
   "workspaces": [
@@ -89,7 +92,11 @@
     "rimraf": "^5.0.5",
     "semver": "^7.5.1",
     "stylelint": "^15.11.0",
+    "stylelint-config-clean-order": "^5.4.0",
     "stylelint-config-standard": "^34.0.0",
+    "stylelint-header": "^1.0.0",
+    "stylelint-high-performance-animation": "^1.10.0",
+    "stylelint-selector-bem-pattern": "^3.0.1",
     "stylelint-use-logical": "^2.1.0",
     "tar": "^6.2.0",
     "through2": "^3.0.1",
@@ -106,9 +113,6 @@
     "last 2 iOS versions"
   ],
   "lint-staged": {
-    "*.css": [
-      "stylelint --fix --quiet"
-    ],
     "package.json": [
       "prettier-package-json --write"
     ]
