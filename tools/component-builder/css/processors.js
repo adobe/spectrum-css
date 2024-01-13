@@ -58,7 +58,6 @@ function getProcessors(
 		require("postcss-extend"),
 		require("postcss-nested"),
 		diff ? require("postcss-varsonly")() : null,
-		require("postcss-logical")(),
 		require("postcss-dir-pseudo-class")(),
 		require("postcss-hover-media-feature"),
 		require("postcss-calc"),

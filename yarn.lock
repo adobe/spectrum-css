@@ -14526,13 +14526,6 @@ postcss-loader@^4.0.0:
     schema-utils "^3.0.0"
     semver "^7.3.4"
 
-postcss-logical@^7.0.1:
-  version "7.0.1"
-  resolved "https://registry.yarnpkg.com/postcss-logical/-/postcss-logical-7.0.1.tgz#a3121f6510591b195321b16e65fbe13b1cfd3115"
-  integrity sha512-8GwUQZE0ri0K0HJHkDv87XOLC8DE0msc+HoWLeKdtjDZEwpZ5xuK3QdV6FhmHSQW40LPkg43QzvATRAI3LsRkg==
-  dependencies:
-    postcss-value-parser "^4.2.0"
-
 postcss-merge-rules@^6.0.3:
   version "6.0.3"
   resolved "https://registry.yarnpkg.com/postcss-merge-rules/-/postcss-merge-rules-6.0.3.tgz#08fcf714faaad75b1980ecd961b080ae2f8ddeb3"
