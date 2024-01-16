@@ -2,6 +2,7 @@ export const argTypes = {
   items: { table: { disable: true }},
   selectorStyle: { table: { disable: true }},
   style: { table: { disable: true }},
+  overflow: { table: { disable: true }},
   size: {
     name: "Size",
     type: { name: "string", required: true },
@@ -40,15 +41,6 @@ export const argTypes = {
     },
     control: "boolean",
     if: { arg: 'isQuiet', truthy: true },
-  },
-  truncate: {
-    name: "Truncate",
-    type: { name: "boolean" },
-    table: {
-      type: { summary: "boolean" },
-      category: "State",
-    },
-    control: "boolean",
   },
 };
 
@@ -125,17 +117,16 @@ export const horizontalIconOnlyProps = {
   items: itemsIconOnly
 };
 
-export const truncateProps = {
+export const overflowProps = {
   selectorStyle: {
     "width": "60px",
   },
   style: {
-    "inline-size" : "90px",
+    "inline-size" : "409px",
   },
-  truncate: true,
+  overflow: true,
   items: items
 };
-
 
 /* Set default args and export for other stories */
 export const verticalProps = {

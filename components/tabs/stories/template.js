@@ -23,11 +23,11 @@ export const Template = ({
 	isOpen = true,
   selectorStyle = {},
   style = {},
-	truncate,
+	overflow,
   ...globals
 }) => {
 
-	const truncateHtml = html`
+	const overflowHtml = html`
 	<div
 			class=${classMap({
 				[rootClass]: true,
@@ -84,8 +84,8 @@ export const Template = ({
 		</div>
 	`
 
-	if (truncate) {
-		return truncateHtml
+	if (overflow) {
+		return overflowHtml
 	} else {
 	return html`
 		<div

@@ -5,7 +5,7 @@ import {
   horizontalProps,
   horizontalWithIconsProps,
   horizontalIconOnlyProps,
-  truncateProps,
+  overflowProps,
 } from "./index.js";
 
 export default {
@@ -40,6 +40,6 @@ WithIcon.args = horizontalWithIconsProps;
 export const IconOnly = Template.bind({});
 IconOnly.args = horizontalIconOnlyProps;
 
-export const Truncate = Template.bind({});
-Truncate.args = truncateProps;
+export const Overflow = Template.bind({});
+Overflow.args = overflowProps;
 
