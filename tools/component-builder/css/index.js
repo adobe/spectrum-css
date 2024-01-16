@@ -24,9 +24,7 @@ const vars = require("./vars");
 
 function buildIndexVars() {
 	return gulp
-		.src(["index.css", "skin.css"], {
-			allowEmpty: true, // Allow missing skin.css
-		})
+		.src(["index.css"])
 		.pipe(concat("index-vars.css"))
 		.pipe(postcss(processors))
 		.pipe(gulp.dest("dist/"));

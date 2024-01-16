@@ -13,16 +13,12 @@ Each component has the following files:
 - `themes/*.css` - The theme-specific styles for the component.
 - `stories/*.stories.js` and `stories/template.js` - The storybook assets for rendering components in the Storybook tool and eventually to be used for visual regression testing.
 
-The following asset will only be seen in legacy components that have not yet migrated to the new tokens system:
-
-- `skin.css` - The theme-specific styles for the component: colors, box-shadows, etc (these change between color stops)
-
 See [documentation generation](/tools/bundle-builder/docs/README.md) documentation for more information on the properties available within the `.yml` files.
 
 ## Editing an existing component
 
 1. Run `gulp dev` in the root of the project to begin developing.
-2. Edit `components/$COMPONENT/index.css` and `components/$COMPONENT/skin.css` with dimensions and color properties respectively. The documentation will live reload with your changes.
+2. Edit `components/$COMPONENT/index.css` with dimensions and color properties. The documentation will live reload with your changes.
 3. Edit the markup examples within `components/$COMPONENT/metadata/*.yml`. The documentation will live reload with your changes.
 
 ## Adding a new component
