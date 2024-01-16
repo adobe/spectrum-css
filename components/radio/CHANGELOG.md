@@ -3,6 +3,13 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+<a name="8.0.19"></a>
+##8.0.19
+🗓
+2024-01-16 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/radio@8.0.18...@spectrum-css/radio@8.0.19)
+
+**Note:** Version bump only for package @spectrum-css/radio
+
 <a name="8.0.18"></a>
 ##8.0.18
 🗓

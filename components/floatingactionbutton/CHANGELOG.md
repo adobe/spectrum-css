@@ -3,6 +3,15 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+<a name="1.1.0"></a>
+#1.1.0
+🗓
+2024-01-16 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/floatingactionbutton@1.0.37...@spectrum-css/floatingactionbutton@1.1.0)
+
+### ✨ Features
+
+\*remove theme files without content([1eadd4f](https://github.com/adobe/spectrum-css/commit/1eadd4f))
+
 <a name="1.0.37"></a>
 ##1.0.37
 🗓

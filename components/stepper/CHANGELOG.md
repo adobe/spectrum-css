@@ -3,6 +3,21 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+<a name="5.0.7"></a>
+##5.0.7
+🗓
+2024-01-16 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/stepper@5.0.6...@spectrum-css/stepper@5.0.7)
+
+### 🐛 Bug fixes
+
+- **stepper:**button size + space match infieldbutton spec([6ab77f8](https://github.com/adobe/spectrum-css/commit/6ab77f8))_
+  **stepper:**express whcm ([#2384](https://github.com/adobe/spectrum-css/issues/2384))([890f469](https://github.com/adobe/spectrum-css/commit/890f469))_
+  **stepper:**infieldbutton background unchanged on stepper focus([c01d2b6](https://github.com/adobe/spectrum-css/commit/c01d2b6))_
+  **stepper:**infieldbutton isnt focusable in stepper([4529874](https://github.com/adobe/spectrum-css/commit/4529874))_
+  **stepper:**invalid hover state border color([4ea4e6c](https://github.com/adobe/spectrum-css/commit/4ea4e6c))_
+  **stepper:**invalid keyboard focus outline alignment([5b74dfe](https://github.com/adobe/spectrum-css/commit/5b74dfe))_
+  **stepper:**no longer touches InfieldButton classes([e408272](https://github.com/adobe/spectrum-css/commit/e408272))
+
 <a name="5.0.6"></a>
 ##5.0.6
 🗓

@@ -3,6 +3,21 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+<a name="4.1.0"></a>
+#4.1.0
+🗓
+2024-01-16 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/infieldbutton@4.0.6...@spectrum-css/infieldbutton@4.1.0)
+
+### ✨ Features
+
+\*remove theme files without content([1eadd4f](https://github.com/adobe/spectrum-css/commit/1eadd4f))
+
+### 🐛 Bug fixes
+
+- **infieldbutton:**high contrast mode has a focus outline([d3a131a](https://github.com/adobe/spectrum-css/commit/d3a131a))_
+  **infieldbutton:**no outline on focus-visible([a6ed495](https://github.com/adobe/spectrum-css/commit/a6ed495))_
+  **stepper:**infieldbutton isnt focusable in stepper([4529874](https://github.com/adobe/spectrum-css/commit/4529874))
+
 <a name="4.0.6"></a>
 ##4.0.6
 🗓

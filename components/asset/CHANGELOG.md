@@ -3,6 +3,15 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+<a name="3.0.52"></a>
+##3.0.52
+🗓
+2024-01-16 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/asset@3.0.51...@spectrum-css/asset@3.0.52)
+
+### 🐛 Bug fixes
+
+- **asset:**add whcm values for asset background color ([#2369](https://github.com/adobe/spectrum-css/issues/2369))([4c1c959](https://github.com/adobe/spectrum-css/commit/4c1c959))
+
 <a name="3.0.51"></a>
 ##3.0.51
 🗓

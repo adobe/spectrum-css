@@ -3,6 +3,15 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+<a name="5.1.0"></a>
+#5.1.0
+🗓
+2024-01-16 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/assetlist@5.0.4...@spectrum-css/assetlist@5.1.0)
+
+### ✨ Features
+
+\*remove theme files without content([1eadd4f](https://github.com/adobe/spectrum-css/commit/1eadd4f))
+
 <a name="5.0.4"></a>
 ##5.0.4
 🗓

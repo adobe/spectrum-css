@@ -3,6 +3,13 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+<a name="2.0.1"></a>
+##2.0.1
+🗓
+2024-01-16 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-tools/gh-action-file-diff@2.0.0...@spectrum-tools/gh-action-file-diff@2.0.1)
+
+**Note:** Version bump only for package @spectrum-tools/gh-action-file-diff
+
 <a name="2.0.0"></a>
 #2.0.0
 🗓

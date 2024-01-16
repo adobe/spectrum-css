@@ -3,6 +3,19 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+<a name="7.2.0"></a>
+#7.2.0
+🗓
+2024-01-16 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/preview@7.1.0...@spectrum-css/preview@7.2.0)
+
+### ✨ Features
+
+- **storybook:**incorporate the new chromatic plugin ([#2376](https://github.com/adobe/spectrum-css/issues/2376))([e54ba6a](https://github.com/adobe/spectrum-css/commit/e54ba6a))
+
+### 🐛 Bug fixes
+
+\*remove storybook-addon-pseudo-states ([#2401](https://github.com/adobe/spectrum-css/issues/2401))([4510975](https://github.com/adobe/spectrum-css/commit/4510975))
+
 <a name="7.1.0"></a>
 #7.1.0
 🗓

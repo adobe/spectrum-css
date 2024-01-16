@@ -3,6 +3,40 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+<a name="6.0.0"></a>
+#6.0.0
+🗓
+2024-01-16 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/menu@5.2.1...@spectrum-css/menu@6.0.0)
+
+### ✨ Features
+
+\*remove theme files without content([1eadd4f](https://github.com/adobe/spectrum-css/commit/1eadd4f))
+
+\*fix(menu)!: reimplement text truncating (#2299)([9752d02](https://github.com/adobe/spectrum-css/commit/9752d02)), closes[#2299](https://github.com/adobe/spectrum-css/issues/2299)
+
+    	###
+    	🛑 BREAKING CHANGES
+
+    		*
+    		removes flex-based display, renames classes, reintroduces truncation
+
+Additionally:
+
+- fix(menu): truncating class
+- docs(menu): add truncating example
+- docs(menu): improve docs
+- feat(menu): add truncate example to storybook
+- refactor(menu): remove flex from itemLabel
+- feat(menu): wip adds truncating to all stories
+- refactor(menu): removes uneeded code
+- refactor(menu): removes hard coded ellipsis
+- docs(menu): improve description
+- chore(menu): story indenting
+- docs(menu): improve storybook max-width
+- refactor(menu): improves story
+- docs(menu): adds to migration guide
+- fix(menu): post rebase issues
+
 <a name="5.2.1"></a>
 ##5.2.1
 🗓

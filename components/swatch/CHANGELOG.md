@@ -3,6 +3,20 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+<a name="5.1.0"></a>
+#5.1.0
+🗓
+2024-01-16 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/swatch@5.0.22...@spectrum-css/swatch@5.1.0)
+
+### ✨ Features
+
+\*remove theme files without content([1eadd4f](https://github.com/adobe/spectrum-css/commit/1eadd4f))
+
+### 🐛 Bug fixes
+
+- **swatch:**correct markup ([#2399](https://github.com/adobe/spectrum-css/issues/2399))([3edd7cc](https://github.com/adobe/spectrum-css/commit/3edd7cc))\*
+  **swatch:**icons use display instead of visibility([569bd2e](https://github.com/adobe/spectrum-css/commit/569bd2e))
+
 <a name="5.0.22"></a>
 ##5.0.22
 🗓

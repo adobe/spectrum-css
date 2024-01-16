@@ -3,6 +3,16 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+<a name="7.0.19"></a>
+##7.0.19
+🗓
+2024-01-16 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/picker@7.0.18...@spectrum-css/picker@7.0.19)
+
+### 🐛 Bug fixes
+
+- **picker:**express border width values ([#2367](https://github.com/adobe/spectrum-css/issues/2367))([4932f12](https://github.com/adobe/spectrum-css/commit/4932f12))\*
+  **picker:**high contrast and other color fixes ([#2326](https://github.com/adobe/spectrum-css/issues/2326))([c80bbd6](https://github.com/adobe/spectrum-css/commit/c80bbd6))
+
 <a name="7.0.18"></a>
 ##7.0.18
 🗓
