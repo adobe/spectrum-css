@@ -10,7 +10,7 @@ OF ANY KIND, either express or implied. See the License for the specific languag
 governing permissions and limitations under the License.
 */
 
-@import "../commons/basebutton-coretokens.css";
+@import "@spectrum-css/commons/basebutton.css";
 
 .spectrum-LogicButton {
   --spectrum-logic-button-height: 24px;
@@ -48,8 +48,8 @@ governing permissions and limitations under the License.
 }
 
 .spectrum-LogicButton {
-  @inherit: %spectrum-BaseButton;
-  @inherit: %spectrum-ButtonWithFocusRing;
+  @extend %spectrum-BaseButton;
+  @extend %spectrum-ButtonWithFocusRing;
 
   block-size: var(--mod-logic-button-height, var(--spectrum-logic-button-height));
   padding: var(--mod-logic-button-padding, var(--spectrum-logic-button-padding));

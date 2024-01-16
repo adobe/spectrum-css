@@ -10,10 +10,6 @@ OF ANY KIND, either express or implied. See the License for the specific languag
 governing permissions and limitations under the License.
 */
 
-@import "../overlay/index.css";
-
-
-
 .spectrum-Dialog {
   /* The font-size of the fullscreen dialog header */
   --spectrum-dialog-fullscreen-header-text-size: 28px;
@@ -173,7 +169,7 @@ governing permissions and limitations under the License.
   font-weight: var(--mod-dialog-confirm-description-font-weight, var(--spectrum-regular-font-weight));
   line-height: var(--mod-dialog-confirm-description-text-line-height, var(--spectrum-dialog-confirm-description-text-line-height));
   color: var(--mod-dialog-confirm-description-text-color, var(--spectrum-dialog-confirm-description-text-color));
-  
+
 
   /* this is kinda dumb,  but needed for the keyboard focus rings so they don't get clipped. is there a better way to treat this */
   padding: calc(var(--mod-dialog-confirm-description-padding, var(--spectrum-dialog-confirm-description-padding)) * 2);
@@ -191,7 +187,7 @@ governing permissions and limitations under the License.
   outline: none; /* Hide focus outline */
 
   /* Both selectors are required to override the button + button rule */
-  > *, 
+  > *,
   > .spectrum-Button + .spectrum-Button {
     margin-bottom: 0;
   }
@@ -257,7 +253,7 @@ governing permissions and limitations under the License.
   border-radius: 0;
 }
 
-.spectrum-Dialog--fullscreen, 
+.spectrum-Dialog--fullscreen,
 .spectrum-Dialog--fullscreenTakeover {
   max-height: none;
   max-inline-size: none;
@@ -284,11 +280,11 @@ governing permissions and limitations under the License.
 
   .spectrum-Dialog-content {
     max-height: none;
-    
-    
+
+
   }
 
-  .spectrum-Dialog-footer, 
+  .spectrum-Dialog-footer,
   .spectrum-Dialog-buttonGroup {
     padding-block-start: 0px;
   }
@@ -344,7 +340,7 @@ governing permissions and limitations under the License.
     justify-content: flex-start;
   }
 
-  .spectrum-Dialog--fullscreen, 
+  .spectrum-Dialog--fullscreen,
   .spectrum-Dialog--fullscreenTakeover {
     &.spectrum-Dialog .spectrum-Dialog-grid {
       display: grid;

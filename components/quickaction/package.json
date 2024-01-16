@@ -17,13 +17,10 @@
   "peerDependencies": {
     "@spectrum-css/actionbutton": ">=5",
     "@spectrum-css/checkbox": ">=8",
-    "@spectrum-css/overlay": ">=4",
     "@spectrum-css/vars": ">=9"
   },
-  "peerDependenciesMeta": {
-    "@spectrum-css/overlay": {
-      "optional": true
-    }
+  "devDependencies": {
+    "@spectrum-css/commons": "^9.0.2"
   },
   "publishConfig": {
     "access": "public"
