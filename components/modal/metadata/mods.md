@@ -11,4 +11,5 @@
 | `--mod-modal-max-height`                       |
 | `--mod-modal-max-width`                        |
 | `--mod-modal-transition-animation-duration`    |
+| `--mod-overlay-animation-duration`             |
 | `--mod-overlay-animation-duration-opened`      |

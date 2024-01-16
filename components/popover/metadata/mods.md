@@ -1,5 +1,6 @@
 | Modifiable custom properties                  |
 | --------------------------------------------- |
+| `--mod-overlay-animation-duration`            |
 | `--mod-overlay-animation-duration-opened`     |
 | `--mod-popover-animation-distance`            |
 | `--mod-popover-background-color`              |
