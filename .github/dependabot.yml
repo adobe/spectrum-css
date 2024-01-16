@@ -24,6 +24,10 @@ updates:
           # Ignore chalk >=5.x until this project uses TS or ESM
           - dependency-name: "chalk"
             versions: [">=5.x"]
+          # Lock storybook addon-actions to 7.5.x until console plugin resolves issue
+          # https://github.com/storybookjs/storybook-addon-console/issues/80#issuecomment-1876601028
+          - dependency-name: "@storybook/addon-actions"
+            versions: [">=7.6"]
       groups:
           # Specify a name for the group, which will be used in pull request titles
           # and branch names
