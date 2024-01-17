@@ -105,7 +105,7 @@ jobs:
 
             - name: Reset nx cache to prevent cross-machine errors
               shell: bash
-              run: yarn cache:clean
+              run: yarn nx reset
 
             ## --- BUILD --- ##
             - name: Build components

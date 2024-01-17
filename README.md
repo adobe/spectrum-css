@@ -331,7 +331,7 @@ yarn start
 
 This will spin up the local development environment ([Storybook](https://storybook.js.org/docs/web-components/get-started/introduction)). Editing any of the `.css` or the `.stories.js` files in `components/*` will live reload in your browser.
 
-This project is leveraging caching from [Nx](https://nx.dev/) to speed up the build process. If you are seeing unexpected results, you can clear the cache by running `yarn cache:clean`.
+This project is leveraging caching from [Nx](https://nx.dev/) to speed up the build process. If you are seeing unexpected results, you can clear the cache by running `yarn nx reset`.
 
 ### Tasks
 

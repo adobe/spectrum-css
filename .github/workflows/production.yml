@@ -1,4 +1,12 @@
 name: Build and verify production
+    # -------------------------------------------------------------
+    # This workflow will build and verify pull requests. It will:
+    # - Build the main branch
+    # - Report on the compiled output
+    # - Run visual regression tests
+    # - Publish the PR branch to Netlify
+    # -------------------------------------------------------------
+
 
 on:
     push:
@@ -16,32 +24,54 @@ defaults:
     run:
         shell: bash
 
-# todo: this could add deploy steps as well
 jobs:
+    # -------------------------------------------------------------
+    # Validate build for various environments
+    # -------------------------------------------------------------
     build:
+        name: Build
         strategy:
             fail-fast: false
             matrix:
                 system:
                     - macos-latest
                     - ubuntu-latest
+                    # - windows-latest
                 node-version:
                     - 18
-        name: Build
         uses: ./.github/workflows/build.yml
         with:
-            ref: ${{ github.sha }}
             system: ${{ matrix.system }}
             node-version: ${{ matrix.node-version }}
         secrets: inherit
 
-    # Run VRT on ALL pushes to main
+    # -------------------------------------------------------------
+    # Report on the compiled assets
+    # -------------------------------------------------------------
+    report:
+        name: Report
+        needs: [build]
+        uses: ./.github/workflows/compare-results.yml
+        with:
+            base-sha: ${{ needs.build.outputs.base-sha }}
+            head-sha: ${{ needs.build.outputs.head-sha }}
+        secrets: inherit
+
+    # -------------------------------------------------------------
+    # RUN VISUAL REGRESSION TESTS --- #
+    # Run VRT on all pushes to main
+    # -------------------------------------------------------------
+
     vrt:
         name: Testing
         needs: [build]
         uses: ./.github/workflows/vrt.yml
         secrets: inherit
 
+    # -------------------------------------------------------------
+    # PUBLISH TO NETLIFY --- #
+    # Publish to netlify by leveraging the previous build and then building the site as well
+    # -------------------------------------------------------------
     publish_site:
         name: Publish
         # The build step ensures we are leveraging the cache for the build
@@ -52,6 +82,7 @@ jobs:
         secrets: inherit
 
     todo_to_issue:
+        name: Add issues for new TODOs
         runs-on: ubuntu-latest
         timeout-minutes: 5
         steps:
