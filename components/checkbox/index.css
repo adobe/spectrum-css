@@ -533,7 +533,7 @@ governing permissions and limitations under the License.
 
   .spectrum-Checkbox-checkmark,
   .spectrum-Checkbox-partialCheckmark {
-    color: var(--highcontrast-checkbox-background-color-default, var(--mode-checkbox-checkmark-color, var(--spectrum-checkbox-checkmark-color)));
+    color: var(--highcontrast-checkbox-background-color-default, var(--mod-checkbox-checkmark-color, var(--spectrum-checkbox-checkmark-color)));
     opacity: 0;
     transform: scale(0);
 
