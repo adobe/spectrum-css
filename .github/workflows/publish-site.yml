@@ -75,30 +75,19 @@ jobs:
 
             - name: Reset nx cache to prevent cross-machine errors
               shell: bash
-              run: yarn cache:clean
+              run: yarn nx reset
 
             ## --- BUILD --- ##
-            - name: Check for built assets
-              continue-on-error: true
-              id: download
-              uses: actions/download-artifact@v4
-              with:
-                  path: |
-                    components/*/dist/**
-                    tokens/dist/**
-                    ui-icons/dist/**
-                  name: ubuntu-latest-node18-compiled-assets-${{ steps.set-SHAs.outputs.head }}
-
-            - name: Build storybook site
-              if: ${{ inputs.storybook-url == '' }}
-              shell: bash
-              run: yarn ci:storybook --output-dir ../dist/preview
-
             - name: Build docs site
               shell: bash
               run: yarn build:site
               env:
                   CHROMATIC_URL: ${{ inputs.storybook-url }}
+
+            - name: Build storybook site
+              if: ${{ inputs.storybook-url == '' }}
+              shell: bash
+              run: yarn ci:storybook --output-dir ../dist/preview
 
             ## --- DEPLOY WEBSITE TO NETLIFY --- ##
             - name: Deploy
