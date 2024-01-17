@@ -14,6 +14,7 @@ function getProcessors({ noFlatVariables = false, noSelectors = false, keepComme
 	return [
 		require("postcss-import"),
 		require("postcss-nested"),
+		require("postcss-extend"),
 		require("postcss-splitinator")({
 			processIdentifier: (identifier) => {
 				if (identifier === "express") {
@@ -24,7 +25,6 @@ function getProcessors({ noFlatVariables = false, noSelectors = false, keepComme
 			noFlatVariables,
 			noSelectors,
 		}),
-		require("postcss-inherit"),
 		require("./plugins/postcss-transform-logical")(),
 		require("./plugins/postcss-custom-properties-passthrough")(),
 		require("postcss-calc"),

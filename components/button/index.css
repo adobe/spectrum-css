@@ -10,7 +10,7 @@ OF ANY KIND, either express or implied. See the License for the specific languag
 governing permissions and limitations under the License.
 */
 
-@import "../commons/basebutton-coretokens.css";
+@import "@spectrum-css/commons/basebutton.css";
 
 /* default for all buttons */
 .spectrum-Button {
@@ -92,8 +92,8 @@ governing permissions and limitations under the License.
 }
 
 .spectrum-Button {
-  @inherit: %spectrum-BaseButton;
-  @inherit: %spectrum-ButtonWithFocusRing;
+  @extend %spectrum-BaseButton;
+  @extend %spectrum-ButtonWithFocusRing;
 
   border-radius: var(--mod-button-border-radius, var(--spectrum-button-border-radius));
   border-width: var(--mod-button-border-width, var(--spectrum-button-border-width));
@@ -149,11 +149,11 @@ governing permissions and limitations under the License.
 }
 
 a.spectrum-Button {
-  @inherit: %spectrum-AnchorButton;
+  @extend %spectrum-AnchorButton;
 }
 
 .spectrum-Button-label {
-  @inherit: %spectrum-ButtonLabel;
+  @extend %spectrum-ButtonLabel;
   padding-block-start: calc(var(--mod-button-top-to-text, var(--spectrum-button-top-to-text)) - var(--mod-button-border-width, var(--spectrum-button-border-width)));
   padding-block-end: calc(var(--mod-button-bottom-to-text, var(--spectrum-button-bottom-to-text)) - var(--mod-button-border-width, var(--spectrum-button-border-width)));
   white-space: nowrap;
@@ -204,7 +204,7 @@ a.spectrum-Button {
 /* former skin.css, applied / copied from actionbutton/index.css  */
 
 .spectrum-Button {
-  @inherit: %spectrum-BaseButton;
+  @extend %spectrum-BaseButton;
 
   background-color: var(--highcontrast-button-background-color-default, var(--mod-button-background-color-default, var(--spectrum-button-background-color-default)));
   border-color: var(--highcontrast-button-border-color-default, var(--mod-button-border-color-default, var(--spectrum-button-border-color-default)));

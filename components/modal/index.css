@@ -10,7 +10,7 @@ OF ANY KIND, either express or implied. See the License for the specific languag
 governing permissions and limitations under the License.
 */
 
-@import "../overlay/index.css";
+@import "@spectrum-css/commons/overlay.css";
 
 .spectrum-Modal {
 	/* Bug: this must be 0ms, not 0 */
@@ -41,9 +41,12 @@ governing permissions and limitations under the License.
 
 	box-sizing: border-box;
 	inline-size: 100vw;
-	/* On mobile browsers, vh units are fixed based on the maximum height of the screen.
-   * However, when you scroll, the toolbar and address bar shrink, making the viewport resize.
-   * We use the stretch value to counteract this where supported. */
+
+	/**
+	 * On mobile browsers, vh units are fixed based on the maximum height of the screen.
+	 * However, when you scroll, the toolbar and address bar shrink, making the viewport resize.
+	 * We use the stretch value to counteract this where supported.
+	 */
 	block-size: 100vh;
 	/* stylelint-disable-next-line value-no-vendor-prefix */
 	block-size: -moz-available;
@@ -68,7 +71,7 @@ governing permissions and limitations under the License.
 }
 
 .spectrum-Modal {
-	@inherit: %spectrum-overlay;
+	@extend %spectrum-overlay;
 
 	/* Start offset by the animation distance */
 	transform: translateY(var(--mod-modal-confirm-entry-animation-distance, var(--spectrum-modal-confirm-entry-animation-distance)));
@@ -103,7 +106,7 @@ governing permissions and limitations under the License.
 			);
 
 	&.is-open {
-		@inherit: %spectrum-overlay--open;
+		@extend %spectrum-overlay--open;
 
 		/* Entry animations */
 		transition: transform var(--mod-modal-confirm-entry-animation-duration, var(--spectrum-modal-confirm-entry-animation-duration)) var(--spectrum-animation-ease-out)

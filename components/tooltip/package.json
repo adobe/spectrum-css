@@ -16,13 +16,7 @@
   "main": "dist/index-vars.css",
   "peerDependencies": {
     "@spectrum-css/icon": ">=4",
-    "@spectrum-css/overlay": ">=4",
     "@spectrum-css/tokens": ">=13"
-  },
-  "peerDependenciesMeta": {
-    "@spectrum-css/overlay": {
-      "optional": true
-    }
   },
   "devDependencies": {
     "@spectrum-css/commons": "^9.0.2"

@@ -19,13 +19,9 @@
     "@spectrum-css/dialog": ">=9",
     "@spectrum-css/divider": ">=2",
     "@spectrum-css/menu": ">=5",
-    "@spectrum-css/overlay": ">=4",
     "@spectrum-css/tokens": ">=13"
   },
   "peerDependenciesMeta": {
-    "@spectrum-css/overlay": {
-      "optional": true
-    },
     "@spectrum-css/divider": {
       "optional": true
     },

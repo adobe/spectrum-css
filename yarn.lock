@@ -7834,13 +7834,6 @@ debug@4.3.2:
   dependencies:
     ms "2.1.2"
 
-debug@^3.1.0:
-  version "3.2.7"
-  resolved "https://registry.yarnpkg.com/debug/-/debug-3.2.7.tgz#72580b7e9145fb39b6676f9c5e5fb100b934179a"
-  integrity sha512-CFjzYYAi4ThfiQvizrFQevTTXHtnCqWfe7x1AhgEscTz6ZbLbfoLRLPugTQyBth6f8ZERVUSyWHFD/7Wu4t1XQ==
-  dependencies:
-    ms "^2.1.1"
-
 decamelize-keys@^1.1.0:
   version "1.1.1"
   resolved "https://registry.yarnpkg.com/decamelize-keys/-/decamelize-keys-1.1.1.tgz#04a2d523b2f18d80d0158a43b895d56dff8d19d8"
@@ -12898,7 +12891,7 @@ ms@2.1.2:
   resolved "https://registry.yarnpkg.com/ms/-/ms-2.1.2.tgz#d09d1f357b443f493382a8eb3ccd183872ae6009"
   integrity sha512-sGkPx+VjMtmA6MX27oA4FBFELFCZZ4S4XqeGOXCv68tT+jb3vk/RyaKWP0PTKyWtmLSM0b+adUTEvbs1PEaH2w==
 
-ms@2.1.3, ms@^2.0.0, ms@^2.1.1, ms@^2.1.3:
+ms@2.1.3, ms@^2.0.0, ms@^2.1.3:
   version "2.1.3"
   resolved "https://registry.yarnpkg.com/ms/-/ms-2.1.3.tgz#574c8138ce1d2b5861f0b44579dbadd60c6615b2"
   integrity sha512-6FlzubTLZG3J2a/NVCAleEhjzq5oxgHyaCU9yYXvcLsvoVaHJq/s5xXI6/XXP6tz7R9xAOtHnSO/tXtF3WRTlA==
@@ -14503,6 +14496,13 @@ postcss-discard-empty@^6.0.1:
     postcss "^7.0.32"
     postcss-value-parser "^4.1.0"
 
+postcss-extend@^1.0.5:
+  version "1.0.5"
+  resolved "https://registry.yarnpkg.com/postcss-extend/-/postcss-extend-1.0.5.tgz#5ea98bf787ba3cacf4df4609743f80a833b1d0e7"
+  integrity sha512-zplAc8IovPMe/JqV0B9nl6o6sElIX7VX1CP2FbV+lGZud3hcnDMr4clN0S8xdHthQoTNDN2K1Q+z0YEW5FWc8A==
+  dependencies:
+    postcss "^5.0.4"
+
 postcss-import@^10.0.0:
   version "10.0.0"
   resolved "https://registry.yarnpkg.com/postcss-import/-/postcss-import-10.0.0.tgz#4c85c97b099136cc5ea0240dc1dfdbfde4e2ebbe"
@@ -14513,22 +14513,6 @@ postcss-import@^10.0.0:
     postcss-value-parser "^3.2.3"
     read-cache "^1.0.0"
     resolve "^1.1.7"
-
-postcss-inherit-parser@^0.2.0:
-  version "0.2.0"
-  resolved "https://registry.yarnpkg.com/postcss-inherit-parser/-/postcss-inherit-parser-0.2.0.tgz#661af4b77fa6c0005dd4ae76c4710d5a756210a7"
-  integrity sha512-XL3QoYrPh+PQqIc4N3x1y0AEcXjG4gjAF+6kvD/vXNmIQRQ1Ck25Z6dyYY7clx6jrG5nlg3v+max6mzoH+K26g==
-  dependencies:
-    postcss "^6.0.22"
-
-postcss-inherit@^4.0.3:
-  version "4.1.0"
-  resolved "https://registry.yarnpkg.com/postcss-inherit/-/postcss-inherit-4.1.0.tgz#54268633ec137700e72c9eb40ea961571db4d61b"
-  integrity sha512-BI3Dme4twf9uk4LInRtG3NKo3eTmfywXmazVqFvQdVHUb5qlnGItXzUTEj0ihqxpoo1u4bA1lEro3C6+UQxdvg==
-  dependencies:
-    debug "^3.1.0"
-    postcss "^6.0.22"
-    postcss-inherit-parser "^0.2.0"
 
 postcss-licensing@^1.0.1:
   version "1.0.1"
@@ -14780,7 +14764,7 @@ postcss@^5.0.4, postcss@^5.1.0, postcss@^5.2.16:
     source-map "^0.5.6"
     supports-color "^3.2.3"
 
-postcss@^6.0.0, postcss@^6.0.1, postcss@^6.0.14, postcss@^6.0.22, postcss@^6.0.8:
+postcss@^6.0.0, postcss@^6.0.1, postcss@^6.0.14, postcss@^6.0.8:
   version "6.0.23"
   resolved "https://registry.yarnpkg.com/postcss/-/postcss-6.0.23.tgz#61c82cc328ac60e677645f979054eb98bc0e3324"
   integrity sha512-soOk1h6J3VMTZtVeVpv15/Hpdl2cBLX3CAw4TAbkpTJiNPk9YP/zWcD1ND+xEtvyuuvKzbxliTOIyvkSeSJ6ag==

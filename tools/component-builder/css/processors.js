@@ -43,7 +43,7 @@ function getProcessors(
 		require("postcss-import"),
 		require("postcss-remapvars"),
 		require("postcss-nested"),
-		require("postcss-inherit"),
+		require("postcss-extend"),
 		diff ? require("./plugins/postcss-varsonly")() : null,
 		require("postcss-logical")(),
 		require("./plugins/postcss-transform-logical")(),
