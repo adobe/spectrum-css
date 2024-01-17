@@ -24,6 +24,7 @@ export const Template = ({
   selectorStyle = {},
   style = {},
 	overflow,
+	popoverOffset,
   ...globals
 }) => {
 
@@ -61,7 +62,7 @@ export const Template = ({
 			position: "bottom",
 			customStyles: {
 				position: "absolute",
-				"--spectrum-picker-spacing-picker-to-popover" : "65px"
+				"--spectrum-picker-spacing-picker-to-popover" : popoverOffset
 			},
 			content: [
 				Menu({

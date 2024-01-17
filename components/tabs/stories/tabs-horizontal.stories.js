@@ -41,5 +41,8 @@ export const IconOnly = Template.bind({});
 IconOnly.args = horizontalIconOnlyProps;
 
 export const Overflow = Template.bind({});
-Overflow.args = overflowProps;
+Overflow.args = {
+  popoverOffset: "65px",
+  ...overflowProps
+};
 

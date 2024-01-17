@@ -121,9 +121,6 @@ export const overflowProps = {
   selectorStyle: {
     "width": "60px",
   },
-  style: {
-    "inline-size" : "409px",
-  },
   overflow: true,
   items: items
 };

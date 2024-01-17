@@ -1,10 +1,11 @@
 // Import the component markup template
 import { Template } from "./template";
 import {
-  argTypes, 
-  horizontalProps, 
+  argTypes,
+  horizontalProps,
   horizontalWithIconsProps,
-  horizontalIconOnlyProps
+  horizontalIconOnlyProps,
+  overflowProps
 } from "./index.js";
 
 export default {
@@ -54,4 +55,10 @@ export const CompactEmphasizedIconOnly = Template.bind({});
 CompactEmphasizedIconOnly.args = {
   isEmphasized: true,
   ...horizontalIconOnlyProps
+};
+
+export const Overflow = Template.bind({});
+Overflow.args = {
+  popoverOffset: "162px",
+  ...overflowProps
 };
