@@ -1,7 +1,5 @@
-// Import the component markup template
-import { Template } from "./template";
-
 import { Default as MenuStories } from "@spectrum-css/menu/stories/menu.stories.js";
+import { Template } from "./template";
 
 export default {
 	title: "Components/Picker",
@@ -64,8 +62,8 @@ export default {
 			},
 			control: "boolean",
 		},
-		isFocused: {
-			name: "Focused",
+		isKeyboardFocused: {
+			name: "Keyboard focused",
 			type: { name: "boolean" },
 			table: {
 				type: { summary: "boolean" },
@@ -108,9 +106,9 @@ export default {
 		label: "Country",
 		placeholder: "Select a country",
 		isQuiet: false,
+		isKeyboardFocused: false,
 		isLoading: false,
 		isDisabled: false,
-		isFocused: false,
 		isInvalid: false,
 		isOpen: false,
 	},
@@ -176,9 +174,10 @@ Invalid.args = {
 };
 
 export const Focused = Template.bind({});
+Focused.storyName = "Keyboard Focused";
 Focused.args = {
 	helpText: "Please select a country",
-	isFocused: true,
+	isKeyboardFocused: true,
 	content: [
 		() => MenuStories(MenuStories.args)
 	],
