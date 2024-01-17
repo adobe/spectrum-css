@@ -137,16 +137,11 @@ governing permissions and limitations under the License.
 		--highcontrast-card-border-color,
 		var(--mod-card-border-color, var(--spectrum-card-border-color))
 	);
-	/* @deprecation --mod-spectrum-card-background-color has been renamed to
-		--mod-card-background-color. The fallback will be removed in a future version. */
 	background-color: var(
 		--highcontrast-card-background-color,
 		var(
-			--mod-card-background-color,
-			var(
-				--mod-spectrum-card-background-color,
-				var(--spectrum-card-background-color)
-			)
+			--mod-spectrum-card-background-color,
+			var(--spectrum-card-background-color)
 		)
 	);
 
