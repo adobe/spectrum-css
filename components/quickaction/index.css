@@ -54,3 +54,11 @@ governing permissions and limitations under the License.
     @inherit: %spectrum-overlay--right--open; /* should animate to the right when aligned left */
   }
 }
+
+.spectrum-QuickActions-overlay {
+  background-color: var(--spectrum-quickactions-overlay-color);
+}
+
+.spectrum-QuickActions {
+  background-color: var(--spectrum-quickactions-background-color);
+}
