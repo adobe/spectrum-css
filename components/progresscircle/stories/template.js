@@ -9,6 +9,7 @@ export const Template = ({
 	size = "m",
 	overBackground = false,
 	isIndeterminate = false,
+	addStaticBackground = overBackground,
 }) => {
 	let sizeClassName = "medium";
 	switch (size) {
@@ -52,5 +53,5 @@ export const Template = ({
 		<div style="background-color: #0F797D;">${componentMarkup}</div>
 	`;
 
-	return overBackground ? decoratedMarkup : componentMarkup;
+	return overBackground && addStaticBackground ? decoratedMarkup : componentMarkup;
 };

@@ -16,10 +16,14 @@
   "main": "dist/index-vars.css",
   "peerDependencies": {
     "@spectrum-css/icon": ">=4",
+    "@spectrum-css/progresscircle": ">=2",
     "@spectrum-css/tokens": ">=13"
   },
   "peerDependenciesMeta": {
     "@spectrum-css/icon": {
+      "optional": true
+    },
+    "@spectrum-css/progresscircle": {
       "optional": true
     }
   },

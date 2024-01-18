@@ -7,6 +7,7 @@ import { when } from "lit/directives/when.js";
 import { capitalize, lowerCase } from "lodash-es";
 
 import { Template as Icon } from "@spectrum-css/icon/stories/template.js";
+import { Template as ProgressCircle } from "@spectrum-css/progresscircle/stories/template.js";
 
 import "../index.css";
 
@@ -25,6 +26,7 @@ export const Template = ({
   treatment,
   onclick,
   isDisabled = false,
+  isPending = false,
   ariaExpanded,
   ariaControls,
   ...globals
@@ -46,6 +48,7 @@ export const Template = ({
         [`${rootClass}--size${size?.toUpperCase()}`]: typeof size !== "undefined",
         [`${rootClass}--static${capitalize(lowerCase(staticColor))}`]: typeof staticColor !== "undefined",
         [`${rootClass}--iconOnly`]: hideLabel,
+        "is-pending": isPending,
         ...customClasses.reduce((a, c) => ({ ...a, [c]: true }), {}),
       })}
       id=${ifDefined(id)}
@@ -61,6 +64,11 @@ export const Template = ({
         () => html`<span class=${`${rootClass}-label`}>${label}</span>`
       )}
       ${when(iconName && iconAfterLabel, () => Icon({ ...globals, iconName, size }))}
+      ${when(isPending, () => {
+          const isOverBackground = staticColor === 'white';
+          return ProgressCircle({ ...globals, size: 's', overBackground: isOverBackground, isIndeterminate: true, addStaticBackground: false })
+        }
+      )}
     </button>
   `;
 };

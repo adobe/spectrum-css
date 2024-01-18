@@ -2,6 +2,7 @@ import { html } from "lit";
 import { ifDefined } from "lit/directives/if-defined.js";
 import { styleMap } from "lit/directives/style-map.js";
 
+import { Template as Typography } from "@spectrum-css/typography/stories/template.js";
 import { Template } from "./template";
 
 import { default as IconStories } from "@spectrum-css/icon/stories/icon.stories.js";
@@ -69,6 +70,16 @@ export default {
 			},
 			control: "boolean",
 		},
+		isPending: {
+			name: "Pending",
+			type: { name: "boolean" },
+			table: {
+				type: { summary: "boolean" },
+				category: "State",
+			},
+			control: "boolean",
+			if: { arg: "staticColor", neq: "black" }
+		},
 		staticColor: {
 			name: "Static color",
 			type: { name: "string" },
@@ -78,7 +89,7 @@ export default {
 			},
 			options: ["white", "black"],
 			control: "select",
-		},
+		}
 	},
 	args: {
 		rootClass: "spectrum-Button",
@@ -87,6 +98,7 @@ export default {
 		variant: "accent",
 		treatment: "fill",
 		isDisabled: false,
+		isPending: false,
 	},
 	parameters: {
 		actions: {
@@ -105,40 +117,107 @@ const CustomButton = ({
 	staticColor,
 	customStyles = {},
 	...args
-}) => {
-	return html`
-		<div
-      		style=${ifDefined(styleMap({
-				padding: "1rem",
-				backgroundColor: staticColor === "white" ? "rgb(15, 121, 125)" : staticColor === "black" ? "rgb(181, 209, 211)" : undefined,
-				...customStyles
-			}))}
-		>
-			${Template({
-				...args,
-				staticColor,
-				iconName: undefined,
+}) => html`
+	<div
+				style=${ifDefined(styleMap({
+			padding: "1rem",
+			backgroundColor: staticColor === "white" ? "rgb(15, 121, 125)" : staticColor === "black" ? "rgb(181, 209, 211)" : undefined,
+			...customStyles
+		}))}
+	>
+		${Template({
+			...args,
+			staticColor,
+			iconName: undefined,
+		})}
+		${Template({
+			...args,
+			staticColor,
+			iconName: undefined,
+			treatment: "outline",
+		})}
+		${Template({
+			...args,
+			staticColor,
+			iconName: iconName ?? "Edit",
+		})}
+		${Template({
+			...args,
+			staticColor,
+			hideLabel: true,
+			iconName: iconName ?? "Edit",
+		})}
+	</div>
+`;
+
+const PendingButton = ({
+	staticColor,
+	customStyles = {},
+	...args
+}) => html`
+	<div style=${styleMap({
+		display: "flex",
+		flexDirection: "column",
+		gap: ".3rem",
+	})}>
+		<div>
+		${Typography({
+				semantics: "heading",
+				size: "xxs",
+				content: ["Default"],
 			})}
-			${Template({
+			${CustomButton({
 				...args,
-				staticColor,
-				iconName: undefined,
-				treatment: "outline",
-			})}
-			${Template({
-				...args,
-				staticColor,
-				iconName: iconName ?? "Edit",
-			})}
-			${Template({
-				...args,
-				staticColor,
-				hideLabel: true,
-				iconName: iconName ?? "Edit",
 			})}
 		</div>
-	`;
-};
+		<div>
+			${Typography({
+				semantics: "heading",
+				size: "xxs",
+				content: ["Static White"],
+			})}
+			${CustomButton({
+				...args,
+				staticColor: "white",
+			})}
+		</div>
+	</div>
+`;
+
+const ButtonsWithForcedColors = ({
+	customStyles = {},
+	...args
+}) => html`
+	<div style=${styleMap({
+		display: "flex",
+		flexDirection: "column",
+		gap: ".3rem",
+	})}>
+		<div>
+		${Typography({
+				semantics: "heading",
+				size: "xxs",
+				content: ["Default"],
+			})}
+			${CustomButton({
+				...args,
+				variant: "accent"
+			})}
+		</div>
+		<div>
+			${Typography({
+				semantics: "heading",
+				size: "xxs",
+				content: ["Pending State"],
+			})}
+			${CustomButton({
+				...args,
+				isDisabled: true,
+				isPending: true,
+			})}
+		</div>
+	</div>
+`;
 
 export const Accent = CustomButton.bind({});
 Accent.args = {
@@ -177,7 +256,13 @@ Disabled.args = {
 	iconName: "Actions",
 };
 
-export const WithForcedColors = CustomButton.bind({});
+export const Pending = PendingButton.bind({});
+Pending.args = {
+	isDisabled: true,
+	isPending: true,
+};
+
+export const WithForcedColors = ButtonsWithForcedColors.bind({});
 WithForcedColors.parameters = {
   chromatic: { forcedColors: "active" },
 };

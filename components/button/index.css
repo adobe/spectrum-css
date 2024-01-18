@@ -56,6 +56,11 @@ governing permissions and limitations under the License.
   --spectrum-button-padding-label-to-icon: var(--spectrum-text-to-visual-100);
   --spectrum-button-top-to-text: var(--spectrum-button-top-to-text-medium);
   --spectrum-button-bottom-to-text: var(--spectrum-button-bottom-to-text-medium);
+
+  &[pending],
+  &.is-pending {
+    --mod-button-edge-to-visual-only: calc(1px + var(--spectrum-button-edge-to-visual-only));
+  }
 }
 
 .spectrum-Button--sizeL {
@@ -72,6 +77,12 @@ governing permissions and limitations under the License.
   --spectrum-button-padding-label-to-icon: var(--spectrum-text-to-visual-200);
   --spectrum-button-top-to-text: var(--spectrum-button-top-to-text-large);
   --spectrum-button-bottom-to-text: var(--spectrum-button-bottom-to-text-large);
+
+
+  &[pending],
+  &.is-pending {
+    --mod-button-edge-to-visual-only: calc(2px + var(--spectrum-button-edge-to-visual-only));
+  }
 }
 
 .spectrum-Button--sizeXL {
@@ -89,6 +100,15 @@ governing permissions and limitations under the License.
   --spectrum-button-top-to-text: var(--spectrum-button-top-to-text-extra-large);
   --spectrum-button-bottom-to-text: var(--spectrum-button-bottom-to-text-extra-large);
 
+  .spectrum--medium &[pending],
+  .spectrum--medium &.is-pending {
+    --mod-button-edge-to-visual-only: calc(3px + var(--spectrum-button-edge-to-visual-only));
+  }
+
+  .spectrum--large &[pending],
+  .spectrum--large &.is-pending {
+    --mod-button-edge-to-visual-only: calc(4px + var(--spectrum-button-edge-to-visual-only));
+  }
 }
 
 .spectrum-Button {
@@ -229,10 +249,22 @@ a.spectrum-Button {
   }
 
   &:disabled,
-  &.is-disabled {
+  &.is-disabled,
+  &[pending],
+  &.is-pending {
     background-color: var(--highcontrast-button-background-color-disabled, var(--mod-button-background-color-disabled, var(--spectrum-button-background-color-disabled)));
     border-color: var(--highcontrast-button-border-color-disabled, var(--mod-button-border-color-disabled, var(--spectrum-button-border-color-disabled)));
     color: var(--highcontrast-button-content-color-disabled, var(--mod-button-content-color-disabled, var(--spectrum-button-content-color-disabled)));
+  }
+
+  &[pending],
+  &.is-pending {
+    cursor: default;
+
+    .spectrum-Icon,
+    .spectrum-Button-label {
+      display: none;
+    }
   }
 }
 
@@ -241,6 +273,9 @@ a.spectrum-Button {
   .spectrum-Button {
     --highcontrast-button-content-color-disabled: GrayText;
     --highcontrast-button-border-color-disabled: GrayText;
+    --mod-progress-circle-track-border-color: ButtonText;
+    --mod-progress-circle-track-border-color-over-background: ButtonText;
+    --mod-progress-circle-thickness: var(--spectrum-progress-circle-thickness-medium);
 
     &:focus-visible {
       &::after {
