@@ -445,7 +445,7 @@ governing permissions and limitations under the License.
     Details: https://github.com/csstools/normalize.css/blob/main/normalize.css#L297
   */
 	/* stylelint-disable-next-line value-no-vendor-prefix */
-	appearance: textfield;
+	-moz-appearance: textfield;
 
 	/* All browsers - Change the input font styles */
 	text-overflow: ellipsis;
@@ -783,7 +783,7 @@ governing permissions and limitations under the License.
 
 	/* TODO: Determine if the vendor prefix toggling of appearance is still needed  */
 	/* stylelint-disable-next-line value-no-vendor-prefix */
-	appearance: none;
+	-webkit-appearance: none;
 
 	/*
     Removes the native spin buttons in Firefox; -moz-appearance: none results in spinners.
@@ -794,7 +794,7 @@ governing permissions and limitations under the License.
     Details: https://github.com/csstools/normalize.css/blob/main/normalize.css#L297
   */
 	/* stylelint-disable-next-line value-no-vendor-prefix */
-	appearance: textfield;
+	-moz-appearance: textfield;
 
 	/* place in same cell: input, focus indicator, and grows sizer */
 	grid-row: 2;
@@ -812,7 +812,7 @@ governing permissions and limitations under the License.
 	&::-webkit-inner-spin-button,
 	&::-webkit-outer-spin-button {
 		/* stylelint-disable-next-line value-no-vendor-prefix */
-		appearance: none;
+		-webkit-appearance: none;
 		margin: 0;
 	}
 
