@@ -1294,10 +1294,8 @@ governing permissions and limitations under the License.
 			grid-row: 2 / auto;
 		}
 
-		&.spectrum-Textfield--sideLabel {
-			.spectrum-Textfield-input {
+		&.spectrum-Textfield--sideLabel .spectrum-Textfield-input {
 				grid-row: 1 / auto
-			}
 		}
 	}
 

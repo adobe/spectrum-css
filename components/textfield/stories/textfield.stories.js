@@ -19,22 +19,23 @@ export default {
 			control: "boolean",
 		},
 		displayLabel: {
-			name: "Display label",
+			name: "Display field label",
 			type: { name: "boolean" },
 			table: {
 				type: { summary: "boolean" },
-				category: "State",
+				category: "Component",
 			},
 			control: "boolean",
 		},
-		sideLabel: {
-			name: "Side label",
+		labelPosition: {
+			name: "Label position",
 			type: { name: "boolean" },
 			table: {
 				type: { summary: "boolean" },
-				category: "State",
+				category: "Component",
 			},
-			control: "boolean",
+			options: ["top", "side"],
+			control: "select",
 			if: { arg: "displayLabel", truthy: true },
 		},
 		labelText: {
@@ -42,7 +43,7 @@ export default {
 			type: { name: "text" },
 			table: {
 				type: { summary: "text" },
-				category: "State",
+				category: "Component",
 			},
 			control: "text",
 			if: { arg: "displayLabel", truthy: true },
@@ -178,7 +179,7 @@ export default {
 		isKeyboardFocused: false,
 		isLoading: false,
 		displayLabel: false,
-		sideLabel: false,
+		labelPosition: "top",
 		labelText: "Username",
 		size: "m",
 		multiline: false,
@@ -222,7 +223,7 @@ const TextFieldGroup = ({
 				Template({
 					displayLabel: true,
 					labelText: "Username",
-					sideLabel: true,
+					labelPosition: 'side',
 					isValid: true,
 					value: "username@reallylongemail.com"
 				})
@@ -262,7 +263,7 @@ const TextAreaGroup = ({
 				Template({
 					displayLabel: true,
 					labelText: "Username",
-					sideLabel: true,
+					labelPosition: 'side',
 					isValid: true,
 					multiline: true,
 					value: "Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt.",
