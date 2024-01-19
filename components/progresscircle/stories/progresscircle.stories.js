@@ -1,4 +1,5 @@
-// Import the component markup template
+import isChromatic from "chromatic/isChromatic";
+import { html } from "lit";
 import { Template } from "./template";
 
 export default {
@@ -54,5 +55,22 @@ export default {
 	},
 };
 
-export const Default = Template.bind({});
+const chromaticKitchenSink = (args) => html`
+	${Template(args)}
+	${Template({
+		...args,
+		isIndeterminate: true,
+	})}
+	${Template({
+		...args,
+		overBackground: true,
+	})}
+	${Template({
+		...args,
+		isIndeterminate: true,
+		overBackground: true,
+	})}
+`;
+
+export const Default = (args) => isChromatic() ? chromaticKitchenSink(args) : Template(args);
 Default.args = {};
