@@ -2,14 +2,7 @@
 import { Template } from "./template";
 import { html } from "lit";
 import isChromatic from "chromatic/isChromatic";
-
-import {
-  argTypes,
-  horizontalProps,
-  horizontalWithIconsProps,
-  horizontalIconOnlyProps,
-  overflowProps,
-} from "./index.js";
+import { argTypes, overflowProps } from "./index.js";
 
 export default {
   title: "Components/Tabs/Horizontal/Emphasized",
@@ -22,6 +15,8 @@ export default {
     isQuiet: false,
     isEmphasized: true,
     isCompact: false,
+    iconOnly: false,
+    labelWithIcons: false
   },
   parameters: {
     actions: {
@@ -34,42 +29,39 @@ export default {
 };
 
 const TabsGroup = ({
-	customStyles = {},
 	...args
 }) => {
 	return html`
 		<div style="display: flex; flex-direction: column; gap: 2rem;">
 			${Template({
           selectorStyle: {"width": "35px"},
-            ...args,
-            isEmphasized: true,
+          ...args,
 			})}
 			${!isChromatic() ?
 				Template({
-            selectorStyle: {"width": "60px"},
-            withIcons: true,
-            ...args,
-            isEmphasized: true
+          selectorStyle: {"width": "60px"},
+          ...args,
+          labelWithIcons: true,
 				})
-				: null }
-        ${!isChromatic() ?
+			: null }
+      ${!isChromatic() ?
 				Template({
-            selectorStyle: {"width": "60px"},
-            iconOnly: true,
-            ...args,
-            isEmphasized: true
+          selectorStyle: {"width": "20px"},
+          ...args,
+          iconOnly: true,
 				})
-				: null }
+			: null }
 		</div>
 	`;
 };
 
 export const Default = TabsGroup.bind({});
-Default.args = {};
+Default.args = {
+  isEmphasized: true
+};
 
 export const Overflow = Template.bind({});
 Overflow.args = {
   popoverOffset: "65px",
   ...overflowProps
 };
-

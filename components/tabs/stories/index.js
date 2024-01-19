@@ -42,7 +42,7 @@ export const argTypes = {
     control: "boolean",
     if: { arg: 'isQuiet', truthy: true },
   },
-  withIcons: {
+  labelWithIcons: {
     name: "Label with Icons",
     type: { name: "boolean" },
     table: {
@@ -50,6 +50,7 @@ export const argTypes = {
       category: "Component",
     },
     control: "boolean",
+    if: { arg: 'overflow', truthy: false },
   },
   iconOnly: {
     name: "Icon only",
@@ -59,6 +60,7 @@ export const argTypes = {
       category: "Component",
     },
     control: "boolean",
+    if: { arg: 'overflow', truthy: false },
   }
 };
 

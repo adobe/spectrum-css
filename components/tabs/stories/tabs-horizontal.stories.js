@@ -2,10 +2,7 @@
 import { Template } from "./template";
 import { html } from "lit";
 import isChromatic from "chromatic/isChromatic";
-import {
-  argTypes,
-  overflowProps,
-} from "./index.js";
+import { argTypes, overflowProps } from "./index.js";
 
 export default {
   title: "Components/Tabs/Horizontal",
@@ -19,6 +16,8 @@ export default {
     isQuiet: false,
     isEmphasized: false,
     isCompact: false,
+    labelWithIcons: false,
+    iconOnly: false
   },
   parameters: {
     actions: {
@@ -31,7 +30,6 @@ export default {
 };
 
 const TabsGroup = ({
-	customStyles = {},
 	...args
 }) => {
 	return html`
@@ -43,17 +41,17 @@ const TabsGroup = ({
 			${!isChromatic() ?
 				Template({
             selectorStyle: {"width": "60px"},
-            withIcons: true,
+            labelWithIcons: true,
             ...args
-				})
-				: null }
-        ${!isChromatic() ?
-				Template({
-            selectorStyle: {"width": "60px"},
-            iconOnly: true,
-            ...args
-				})
-				: null }
+       })
+      : null }
+      ${!isChromatic() ?
+        Template({
+          selectorStyle: {"width": "20px"},
+          iconOnly: true,
+          ...args
+        })
+      : null }
 		</div>
 	`;
 };
@@ -66,4 +64,3 @@ Overflow.args = {
   popoverOffset: "65px",
   ...overflowProps
 };
-

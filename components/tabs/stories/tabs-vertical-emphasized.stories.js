@@ -16,6 +16,8 @@ export default {
     isQuiet: false,
     isEmphasized: true,
     isCompact: false,
+    labelWithIcons: false,
+    iconOnly: false
   },
   parameters: {
     actions: {
@@ -27,48 +29,37 @@ export default {
   }
 };
 
-
 const TabsGroup = ({
-	customStyles = {},
 	...args
 }) => {
 	return html`
 		<div style="display: flex; gap: 2rem;">
 			${Template({
-          selectorStyle: {
-            "height": "46px",
-            "top": "0"
-          },
-            ...args,
-            isEmphasized: true,
+          ...args,
+          isEmphasized: true,
 			})}
 			${!isChromatic() ?
 				Template({
-          selectorStyle: {
-            "height": "46px",
-            "top": "0"
-          },
-            withIcons: true,
-            ...args,
-            isEmphasized: true
+          ...args,
+          labelWithIcons: true,
+          isEmphasized: true
 				})
-				: null }
-        ${!isChromatic() ?
-				Template({
-          selectorStyle: {
-            "height": "46px",
-            "top": "0"
-          },
-            iconOnly: true,
-            ...args,
-            isEmphasized: true
-				})
-				: null }
+      : null }
+      ${!isChromatic() ?
+        Template({
+          ...args,
+          iconOnly: true,
+          isEmphasized: true
+        })
+      : null }
 		</div>
 	`;
 };
 
 export const Default = TabsGroup.bind({});
-Default.args = {};
-
-
+Default.args = {
+  selectorStyle: {
+    "height": "46px",
+    "top": "0"
+  },
+};

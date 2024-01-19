@@ -2,11 +2,7 @@
 import { Template } from "./template";
 import { html } from "lit";
 import isChromatic from "chromatic/isChromatic";
-
-import {
-  argTypes,
-  overflowProps
-} from "./index.js";
+import { argTypes, overflowProps } from "./index.js";
 
 export default {
   title: "Components/Tabs/Horizontal/Quiet/Compact",
@@ -19,6 +15,8 @@ export default {
     isQuiet: true,
     isEmphasized: false,
     isCompact: true,
+    labelWithIcons: false,
+    iconOnly: false
   },
   parameters: {
     actions: {
@@ -31,52 +29,51 @@ export default {
 };
 
 const TabsGroup = ({
-	customStyles = {},
 	...args
 }) => {
 	return html`
 		<div style="display: flex; flex-direction: column; gap: 2rem;">
 			${Template({
           selectorStyle: {"width": "35px"},
-            ...args
+          ...args
 			})}
 			${!isChromatic() ?
 				Template({
-            selectorStyle: {"width": "35px"},
-            withIcons: true,
-            ...args
+          selectorStyle: {"width": "60px"},
+          ...args,
+          labelWithIcons: true
 				})
+			: null }
+      ${!isChromatic() ?
+        Template({
+          selectorStyle: {"width": "20px"},
+          iconOnly: true,
+          ...args
+        })
 				: null }
-        ${!isChromatic() ?
-          Template({
-              selectorStyle: {"width": "60px"},
-              iconOnly: true,
-              ...args
-          })
-				: null }
-        ${!isChromatic() ?
-          Template({
-            selectorStyle: {"width": "35px"},
-            ...args,
-            isEmphasized: true,
-          })
-				: null }
-        ${!isChromatic() ?
-          Template({
-            selectorStyle: {"width": "35px"},
-            ...args,
-            isEmphasized: true,
-            withIcons: true,
-          })
-				: null }
-        ${!isChromatic() ?
-          Template({
-            selectorStyle: {"width": "35px"},
-            ...args,
-            isEmphasized: true,
-            iconOnly: true,
-          })
-				: null }
+      ${!isChromatic() ?
+        Template({
+          selectorStyle: {"width": "35px"},
+          ...args,
+          isEmphasized: true,
+        })
+      : null }
+      ${!isChromatic() ?
+        Template({
+          selectorStyle: {"width": "60px"},
+          ...args,
+          isEmphasized: true,
+          labelWithIcons: true,
+        })
+      : null }
+      ${!isChromatic() ?
+        Template({
+          selectorStyle: {"width": "20px"},
+          ...args,
+          isEmphasized: true,
+          iconOnly: true,
+        })
+      : null }
 		</div>
 	`;
 };

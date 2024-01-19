@@ -2,10 +2,7 @@
 import { Template } from "./template";
 import { html } from "lit";
 import isChromatic from "chromatic/isChromatic";
-import {
-  argTypes,
-  overflowProps
-} from "./index.js";
+import { argTypes, overflowProps } from "./index.js";
 
 export default {
   title: "Components/Tabs/Horizontal/Quiet",
@@ -18,6 +15,8 @@ export default {
     isQuiet: true,
     isEmphasized: false,
     isCompact: false,
+    labelWithIcons: false,
+    iconOnly: false
   },
   parameters: {
     actions: {
@@ -30,36 +29,35 @@ export default {
 };
 
 const TabsGroup = ({
-	customStyles = {},
 	...args
 }) => {
 	return html`
 		<div style="display: flex; flex-direction: column; gap: 2rem;">
 			${Template({
           selectorStyle: {"width": "35px"},
-            ...args
+          ...args
 			})}
 			${!isChromatic() ?
 				Template({
-            selectorStyle: {"width": "60px"},
-            withIcons: true,
-            ...args
+          selectorStyle: {"width": "60px"},
+          ...args,
+          labelWithIcons: true
 				})
-				: null }
-        ${!isChromatic() ?
-				Template({
-            selectorStyle: {"width": "60px"},
-            iconOnly: true,
-            ...args
-				})
-				: null }
-                ${!isChromatic() ?
-				Template({
-            selectorStyle: {"width": "60px"},
-            ...args,
-            isEmphasized: true,
-				})
-				: null }
+      : null }
+      ${!isChromatic() ?
+        Template({
+          selectorStyle: {"width": "20px"},
+          ...args,
+          iconOnly: true,
+        })
+      : null }
+      ${!isChromatic() ?
+        Template({
+          selectorStyle: {"width": "35px"},
+          ...args,
+          isEmphasized: true
+        })
+      : null }
 		</div>
 	`;
 };

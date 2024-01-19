@@ -19,7 +19,7 @@ export const Template = ({
   isQuiet,
   isEmphasized,
   isCompact,
-	withIcons,
+	labelWithIcons,
 	iconOnly,
 	isOpen = true,
   selectorStyle = {},
@@ -30,9 +30,8 @@ export const Template = ({
 }) => {
 
 	let displayedItems = []
-	let selectorStyles = {}
 
-	if (withIcons) {
+	if (labelWithIcons) {
 		displayedItems = [
 			{
 				id: "tab-1",
@@ -51,7 +50,6 @@ export const Template = ({
 				icon: "Document"
 			}
 		]
-		selectorStyles = { "width": "60px"}
 	} else if (iconOnly){
 		displayedItems = [
 			{
@@ -68,7 +66,6 @@ export const Template = ({
 				icon: "Document"
 			}
 		]
-		selectorStyles = { "width": "20px"}
 	} else {
 		displayedItems = [
 			{
@@ -85,7 +82,6 @@ export const Template = ({
 				label: "Tab 3",
 			}
 		]
-		selectorStyles = { "width": "35px"}
 	}
 
 	const overflowHtml = html`
@@ -104,7 +100,7 @@ export const Template = ({
 		>
 		<div
 			class="${rootClass}-selectionIndicator"
-			style=${ifDefined(styleMap(selectorStyles))}
+			style=${ifDefined(styleMap(selectorStyle))}
 		></div>
 		${Picker({
 			isQuiet: true,
@@ -194,7 +190,7 @@ export const Template = ({
 			)}
 			<div
 				class="${rootClass}-selectionIndicator"
-				style=${ifDefined(styleMap(selectorStyles))}
+				style=${ifDefined(styleMap(selectorStyle))}
 			></div>
 		</div>
 	`; }
