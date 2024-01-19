@@ -37,7 +37,7 @@ export default {
 		},
 	},
 	args: {
-		rootClass: "spectrum-QuickAction",
+		rootClass: "spectrum-QuickActions",
 		isOpen: true,
 		textOnly: false,
 	},
