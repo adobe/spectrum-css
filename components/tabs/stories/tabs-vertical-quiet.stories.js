@@ -1,10 +1,8 @@
 // Import the component markup template
 import { Template } from "./template";
-import {
-  argTypes, 
-  verticalProps, 
-  verticalWithIconsProps,
-} from "./index.js";
+import { html } from "lit";
+import isChromatic from "chromatic/isChromatic";
+import { argTypes } from "./index.js";
 
 export default {
   title: "Components/Tabs/Vertical/Quiet",
@@ -28,9 +26,37 @@ export default {
   }
 };
 
-export const Default = Template.bind({});
-Default.args = verticalProps;
+const TabsGroup = ({
+	customStyles = {},
+	...args
+}) => {
+	return html`
+		<div style="display: flex; gap: 2rem;">
+			${Template({
+            selectorStyle: {
+            "height": "46px",
+            "top": "0"
+          },
+            ...args
+			})}
+			${!isChromatic() ?
+				Template({
+            selectorStyle: {"width": "60px"},
+            withIcons: true,
+            ...args
+				})
+				: null }
+        ${!isChromatic() ?
+				Template({
+            selectorStyle: {"width": "60px"},
+            iconOnly: true,
+            ...args
+				})
+				: null }
+		</div>
+	`;
+};
 
-export const WithIcon = Template.bind({});
-WithIcon.args = verticalWithIconsProps;
+export const Default = TabsGroup.bind({});
+Default.args = {};
 

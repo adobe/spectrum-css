@@ -1,10 +1,10 @@
 // Import the component markup template
 import { Template } from "./template";
+import { html } from "lit";
+import isChromatic from "chromatic/isChromatic";
+
 import {
   argTypes,
-  horizontalProps,
-  horizontalWithIconsProps,
-  horizontalIconOnlyProps,
   overflowProps
 } from "./index.js";
 
@@ -30,32 +30,59 @@ export default {
   }
 };
 
-export const Default = Template.bind({});
-Default.args = horizontalProps;
-
-export const WithIcon = Template.bind({});
-WithIcon.args = horizontalWithIconsProps;
-
-export const IconOnly = Template.bind({});
-IconOnly.args = horizontalIconOnlyProps;
-
-export const CompactEmphasized = Template.bind({});
-CompactEmphasized.args = {
-  isEmphasized: true,
-  ...horizontalProps
+const TabsGroup = ({
+	customStyles = {},
+	...args
+}) => {
+	return html`
+		<div style="display: flex; flex-direction: column; gap: 2rem;">
+			${Template({
+          selectorStyle: {"width": "35px"},
+            ...args
+			})}
+			${!isChromatic() ?
+				Template({
+            selectorStyle: {"width": "35px"},
+            withIcons: true,
+            ...args
+				})
+				: null }
+        ${!isChromatic() ?
+          Template({
+              selectorStyle: {"width": "60px"},
+              iconOnly: true,
+              ...args
+          })
+				: null }
+        ${!isChromatic() ?
+          Template({
+            selectorStyle: {"width": "35px"},
+            ...args,
+            isEmphasized: true,
+          })
+				: null }
+        ${!isChromatic() ?
+          Template({
+            selectorStyle: {"width": "35px"},
+            ...args,
+            isEmphasized: true,
+            withIcons: true,
+          })
+				: null }
+        ${!isChromatic() ?
+          Template({
+            selectorStyle: {"width": "35px"},
+            ...args,
+            isEmphasized: true,
+            iconOnly: true,
+          })
+				: null }
+		</div>
+	`;
 };
 
-export const CompactEmphasizedWithIcons = Template.bind({});
-CompactEmphasizedWithIcons.args = {
-  isEmphasized: true,
-  ...horizontalWithIconsProps
-};
-
-export const CompactEmphasizedIconOnly = Template.bind({});
-CompactEmphasizedIconOnly.args = {
-  isEmphasized: true,
-  ...horizontalIconOnlyProps
-};
+export const Default = TabsGroup.bind({});
+Default.args = {};
 
 export const Overflow = Template.bind({});
 Overflow.args = {

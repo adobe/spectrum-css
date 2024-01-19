@@ -42,79 +42,24 @@ export const argTypes = {
     control: "boolean",
     if: { arg: 'isQuiet', truthy: true },
   },
-};
-
-const items = [
-  {
-    id: "tab-1",
-    label: "Tab 1",
-    isSelected: true
+  withIcons: {
+    name: "Label with Icons",
+    type: { name: "boolean" },
+    table: {
+      type: { summary: "boolean" },
+      category: "Component",
+    },
+    control: "boolean",
   },
-  {
-    id: "tab-2",
-    label: "Tab 2",
-  },
-  {
-    id: "tab-3",
-    label: "Tab 3",
+  iconOnly: {
+    name: "Icon only",
+    type: { name: "boolean" },
+    table: {
+      type: { summary: "boolean" },
+      category: "Component",
+    },
+    control: "boolean",
   }
-];
-
-const itemsWithIcons = [
-  {
-    id: "tab-1",
-    label: "Tab 1",
-    icon: "Folder",
-    isSelected: true
-  },
-  {
-    id: "tab-2",
-    label: "Tab 2",
-    icon: "Image"
-  },
-  {
-    id: "tab-3",
-    label: "Tab 3",
-    icon: "Document"
-  }
-]
-
-const itemsIconOnly = [
-  {
-    id: "tab-1",
-    icon: "Folder",
-    isSelected: true
-  },
-  {
-    id: "tab-2",
-    icon: "Image"
-  },
-  {
-    id: "tab-3",
-    icon: "Document"
-  }
-]
-
-/* Set default args and export for other stories */
-export const horizontalProps = {
-  selectorStyle: {
-    "width": "35px",
-  },
-  items: items
-};
-
-export const horizontalWithIconsProps = {
-  selectorStyle: {
-    "width": "60px",
-  },
-  items: itemsWithIcons
-};
-
-export const horizontalIconOnlyProps = {
-  selectorStyle: {
-    "width": "20px",
-  },
-  items: itemsIconOnly
 };
 
 export const overflowProps = {
@@ -122,30 +67,4 @@ export const overflowProps = {
     "width": "60px",
   },
   overflow: true,
-  items: items
-};
-
-/* Set default args and export for other stories */
-export const verticalProps = {
-  selectorStyle: {
-    "height": "46px",
-    "top": "0"
-  },
-  items: items
-};
-
-export const verticalWithIconsProps = {
-  selectorStyle: {
-    "height": "46px",
-    "top": "0"
-  },
-  items: itemsWithIcons
-};
-
-export const verticalIconOnlyProps = {
-  selectorStyle: {
-    "height": "46px",
-    "top": "0"
-  },
-  items: itemsIconOnly
 };

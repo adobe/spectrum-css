@@ -1,10 +1,8 @@
 // Import the component markup template
 import { Template } from "./template";
-import {
-  argTypes, 
-  verticalProps, 
-  verticalWithIconsProps,
-} from "./index.js";
+import { html } from "lit";
+import isChromatic from "chromatic/isChromatic";
+import { argTypes } from "./index.js";
 
 export default {
   title: "Components/Tabs/Vertical/Emphasized",
@@ -29,9 +27,48 @@ export default {
   }
 };
 
-export const Default = Template.bind({});
-Default.args = verticalProps;
 
-export const WithIcon = Template.bind({});
-WithIcon.args = verticalWithIconsProps;
+const TabsGroup = ({
+	customStyles = {},
+	...args
+}) => {
+	return html`
+		<div style="display: flex; gap: 2rem;">
+			${Template({
+          selectorStyle: {
+            "height": "46px",
+            "top": "0"
+          },
+            ...args,
+            isEmphasized: true,
+			})}
+			${!isChromatic() ?
+				Template({
+          selectorStyle: {
+            "height": "46px",
+            "top": "0"
+          },
+            withIcons: true,
+            ...args,
+            isEmphasized: true
+				})
+				: null }
+        ${!isChromatic() ?
+				Template({
+          selectorStyle: {
+            "height": "46px",
+            "top": "0"
+          },
+            iconOnly: true,
+            ...args,
+            isEmphasized: true
+				})
+				: null }
+		</div>
+	`;
+};
+
+export const Default = TabsGroup.bind({});
+Default.args = {};
+
 

@@ -19,7 +19,8 @@ export const Template = ({
   isQuiet,
   isEmphasized,
   isCompact,
-  items,
+	withIcons,
+	iconOnly,
 	isOpen = true,
   selectorStyle = {},
   style = {},
@@ -27,6 +28,65 @@ export const Template = ({
 	popoverOffset,
   ...globals
 }) => {
+
+	let displayedItems = []
+	let selectorStyles = {}
+
+	if (withIcons) {
+		displayedItems = [
+			{
+				id: "tab-1",
+				label: "Tab 1",
+				icon: "Folder",
+				isSelected: true
+			},
+			{
+				id: "tab-2",
+				label: "Tab 2",
+				icon: "Image"
+			},
+			{
+				id: "tab-3",
+				label: "Tab 3",
+				icon: "Document"
+			}
+		]
+		selectorStyles = { "width": "60px"}
+	} else if (iconOnly){
+		displayedItems = [
+			{
+				id: "tab-1",
+				icon: "Folder",
+				isSelected: true
+			},
+			{
+				id: "tab-2",
+				icon: "Image"
+			},
+			{
+				id: "tab-3",
+				icon: "Document"
+			}
+		]
+		selectorStyles = { "width": "20px"}
+	} else {
+		displayedItems = [
+			{
+				id: "tab-1",
+				label: "Tab 1",
+				isSelected: true
+			},
+			{
+				id: "tab-2",
+				label: "Tab 2",
+			},
+			{
+				id: "tab-3",
+				label: "Tab 3",
+			}
+		]
+		selectorStyles = { "width": "35px"}
+	}
 
 	const overflowHtml = html`
 	<div
@@ -44,12 +104,12 @@ export const Template = ({
 		>
 		<div
 			class="${rootClass}-selectionIndicator"
-			style=${ifDefined(styleMap(selectorStyle))}
+			style=${ifDefined(styleMap(selectorStyles))}
 		></div>
 		${Picker({
 			isQuiet: true,
 			isOpen: isOpen,
-			placeholder: items[0].label,
+			placeholder: displayedItems[0].label,
 			name: 'country',
 			id: 'form-example-country',
 		})}
@@ -103,7 +163,7 @@ export const Template = ({
 			style=${ifDefined(styleMap(style))}
 		>
 			${repeat(
-				items,
+				displayedItems,
 				(item) => item.id,
 				(item) => {
 					if (typeof item === "object") {
@@ -134,7 +194,7 @@ export const Template = ({
 			)}
 			<div
 				class="${rootClass}-selectionIndicator"
-				style=${ifDefined(styleMap(selectorStyle))}
+				style=${ifDefined(styleMap(selectorStyles))}
 			></div>
 		</div>
 	`; }
