@@ -4,7 +4,23 @@ import { html } from "lit";
 import { styleMap } from "lit/directives/style-map.js";
 import { Template } from "./template";
 
-import { uiIcons, workflowIcons } from "./utilities.js";
+import { uiIconSizes, uiIconsWithDirections, workflowIcons } from "./utilities.js";
+
+/**
+ * Create a list of all UI Icons with their sizing numbers.
+ * 
+ * The list is a little long until Storybook adds a way to use conditional options
+ * in controls, e.g. a "uiSize" control with options pulled from uiIconSizes:
+ * @see https://github.com/storybookjs/storybook/discussions/24235
+ */
+const uiIconNameOptions = uiIconsWithDirections.map((iconName) => {
+	const baseIconName = iconName.replace(/(Left|Right|Up|Down)$/, '');
+	// Icons like Gripper that don't have sizes yet, represented by any empty array.
+	if (Array.isArray(uiIconSizes[baseIconName]) && uiIconSizes[baseIconName].length == 0){
+		return [baseIconName];
+	} 
+	return uiIconSizes[baseIconName]?.map(sizeNum => iconName + sizeNum) ?? [];
+}).flat();
 
 export default {
 	title: "Components/Icon",
@@ -16,7 +32,7 @@ export default {
 		express: { table: { disable: true } },
 		reducedMotion: { table: { disable: true } },
 		size: {
-			name: "Size",
+			name: "Workflow Icon Size",
 			type: { name: "string", required: true },
 			table: {
 				type: { summary: "string" },
@@ -24,6 +40,7 @@ export default {
 			},
 			options: ["xs", "s", "m", "l", "xl", "xxl"],
 			control: "select",
+			if: { arg: "setName", eq: "workflow" },
 		},
 		setName: {
 			name: "Icon set",
@@ -54,15 +71,7 @@ export default {
 				category: "Content",
 			},
 			options: [
-				...uiIcons.filter((c) => !["Chevron", "Arrow"].includes(c)),
-				"ArrowRight",
-				"ArrowLeft",
-				"ArrowUp",
-				"ArrowDown",
-				"ChevronRight",
-				"ChevronLeft",
-				"ChevronUp",
-				"ChevronDown",
+				...uiIconNameOptions,
 			],
 			control: "select",
 			if: { arg: "setName", eq: "ui" },
