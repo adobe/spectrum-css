@@ -36,16 +36,18 @@ const TabsGroup = ({
 			${Template({
           ...args
 			})}
-			${!isChromatic() ?
+			${isChromatic() ?
 				Template({
           ...args,
           labelWithIcons: true
 				})
       : null }
-      ${!isChromatic() ?
+      ${isChromatic() ?
         Template({
             ...args,
-            isEmphasized: true,
+            isEmphasized: true
+
+
         })
       : null }
 		</div>

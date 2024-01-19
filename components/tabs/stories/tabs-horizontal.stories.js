@@ -38,18 +38,18 @@ const TabsGroup = ({
           selectorStyle: {"width": "35px"},
             ...args
 			})}
-			${!isChromatic() ?
+			${isChromatic() ?
 				Template({
-            selectorStyle: {"width": "60px"},
-            labelWithIcons: true,
-            ...args
+          selectorStyle: {"width": "60px"},
+          ...args,
+          labelWithIcons: true
        })
       : null }
-      ${!isChromatic() ?
+      ${isChromatic() ?
         Template({
           selectorStyle: {"width": "20px"},
-          iconOnly: true,
-          ...args
+          ...args,
+          iconOnly: true
         })
       : null }
 		</div>

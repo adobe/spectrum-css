@@ -37,41 +37,41 @@ const TabsGroup = ({
           selectorStyle: {"width": "35px"},
           ...args
 			})}
-			${!isChromatic() ?
+			${isChromatic() ?
 				Template({
           selectorStyle: {"width": "60px"},
           ...args,
           labelWithIcons: true
 				})
 			: null }
-      ${!isChromatic() ?
+      ${isChromatic() ?
         Template({
           selectorStyle: {"width": "20px"},
-          iconOnly: true,
-          ...args
+          ...args,
+          iconOnly: true
         })
 				: null }
-      ${!isChromatic() ?
+      ${isChromatic() ?
         Template({
           selectorStyle: {"width": "35px"},
           ...args,
-          isEmphasized: true,
+          isEmphasized: true
         })
       : null }
-      ${!isChromatic() ?
+      ${isChromatic() ?
         Template({
           selectorStyle: {"width": "60px"},
           ...args,
           isEmphasized: true,
-          labelWithIcons: true,
+          labelWithIcons: true
         })
       : null }
-      ${!isChromatic() ?
+      ${isChromatic() ?
         Template({
           selectorStyle: {"width": "20px"},
           ...args,
           isEmphasized: true,
-          iconOnly: true,
+          iconOnly: true
         })
       : null }
 		</div>

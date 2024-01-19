@@ -38,14 +38,14 @@ const TabsGroup = ({
           ...args,
           isEmphasized: true,
 			})}
-			${!isChromatic() ?
+			${isChromatic() ?
 				Template({
           ...args,
           labelWithIcons: true,
           isEmphasized: true
 				})
       : null }
-      ${!isChromatic() ?
+      ${isChromatic() ?
         Template({
           ...args,
           iconOnly: true,
