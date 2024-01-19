@@ -83,6 +83,6 @@ Default.args = {};
 
 export const Overflow = Template.bind({});
 Overflow.args = {
-  popoverOffset: "162px",
+  popoverOffset: "160px",
   ...overflowProps
 };
