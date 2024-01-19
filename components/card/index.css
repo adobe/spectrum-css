@@ -814,22 +814,10 @@ governing permissions and limitations under the License.
 		align-items: center;
 		justify-content: center;
 
-		border-start-start-radius: var(
-			--mod-card-corner-radius,
-			var(--spectrum-card-corner-radius)
-		);
+		border-start-start-radius: calc(var(--mod-card-corner-radius, var(--spectrum-card-corner-radius)) - var(--mod-card-border-width, var(--spectrum-card-border-width)));
 		border-start-end-radius: 0;
-		border-end-start-radius: var(
-			--mod-card-corner-radius,
-			var(--spectrum-card-corner-radius)
-		);
+		border-end-start-radius: calc(var(--mod-card-corner-radius, var(--spectrum-card-corner-radius)) - var(--mod-card-border-width, var(--spectrum-card-border-width)));
 		border-end-end-radius: 0;
-
-		border-inline-end: var(
-				--mod-card-border-width,
-				var(--spectrum-card-border-width)
-			)
-			solid transparent;
 
 		padding: var(
 			--mod-card-horizontal-preview-padding,
