@@ -104,12 +104,12 @@ export const Template = ({
 		></div>
 		${Picker({
 			isQuiet: true,
+			size,
 			isOpen: isOpen,
 			placeholder: displayedItems[0].label,
-			name: 'country',
-			id: 'form-example-country',
+			name: `${displayedItems[0].label}`,
+			id: 'tab-selector',
 		})}
-
 		${Popover({
 			...globals,
 			isOpen: isOpen,
