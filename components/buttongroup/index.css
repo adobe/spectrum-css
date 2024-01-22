@@ -11,28 +11,20 @@ governing permissions and limitations under the License.
 */
 
 .spectrum-ButtonGroup {
-  --spectrum-buttongroup-spacing-horizontal: var(--spectrum-spacing-300);
-  --spectrum-buttongroup-spacing-vertical: var(--spectrum-spacing-300);
-}
-
-.spectrum-ButtonGroup--sizeS {
   --spectrum-buttongroup-spacing-horizontal: var(--spectrum-spacing-200);
   --spectrum-buttongroup-spacing-vertical: var(--spectrum-spacing-200);
 }
 
-.spectrum-ButtonGroup--sizeM {
-  --spectrum-buttongroup-spacing-horizontal: var(--spectrum-spacing-300);
-  --spectrum-buttongroup-spacing-vertical: var(--spectrum-spacing-300);
+.spectrum-ButtonGroup--sizeS {
+  --spectrum-buttongroup-spacing-horizontal: var(--spectrum-spacing-100);
+  --spectrum-buttongroup-spacing-vertical: var(--spectrum-spacing-100);
 }
 
-.spectrum-ButtonGroup--sizeL {
-  --spectrum-buttongroup-spacing-horizontal: var(--spectrum-spacing-300);
-  --spectrum-buttongroup-spacing-vertical: var(--spectrum-spacing-300);
-}
-
+.spectrum-ButtonGroup--sizeM,
+.spectrum-ButtonGroup--sizeL,
 .spectrum-ButtonGroup--sizeXL {
-  --spectrum-buttongroup-spacing-horizontal: var(--spectrum-spacing-300);
-  --spectrum-buttongroup-spacing-vertical: var(--spectrum-spacing-300);
+  --spectrum-buttongroup-spacing-horizontal: var(--spectrum-spacing-200);
+  --spectrum-buttongroup-spacing-vertical: var(--spectrum-spacing-200);
 }
 
 .spectrum-ButtonGroup {
