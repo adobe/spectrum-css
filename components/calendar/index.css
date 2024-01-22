@@ -49,8 +49,11 @@ governing permissions and limitations under the License.
   --spectrum-calendar-day-text-color-key-focus: var(--spectrum-gray-900);
 
   --spectrum-calendar-button-icon-color: var(--spectrum-gray-700);
-  --spectrum-calendar-button-icon-color-disabled: var(--spectrum-disabled-content-color);
 
+	[dir="rtl"] &,
+	&:dir(rtl) {
+		--spectrum-logical-rotation: matrix(-1, 0, 0, 1, 0, 0);
+	}
 }
 
 .spectrum-Calendar {
@@ -86,7 +89,7 @@ governing permissions and limitations under the License.
 
 .spectrum-Calendar-prevMonth,
 .spectrum-Calendar-nextMonth {
-  transform: logical rotate(0deg); /* stylelint-disable-line declaration-property-value-no-unknown */
+  transform: var(--spectrum-logical-rotation);
 
   &:not([disabled]) {
     color: var(--highcontrast-calendar-button-icon-color, var(--mod-calendar-button-icon-color, var(--spectrum-calendar-button-icon-color)));
@@ -239,7 +242,7 @@ governing permissions and limitations under the License.
 
     inline-size: calc(
       var(--mod-calendar-day-width, var(--spectrum-calendar-day-width)) +
-        calc(var(--mod-calendar-day-padding, var(--spectrum-calendar-day-padding)) * 2)
+      calc(var(--mod-calendar-day-padding, var(--spectrum-calendar-day-padding)) * 2)
     );
 
     &.is-range-start,

@@ -20,7 +20,6 @@
 					"postcss ./custom-spectrum/*.css --dir ./dist/css/spectrum/",
 					"postcss ./dist/css/*.css ./dist/css/spectrum/*.css ./dist/css/express/*.css --replace",
 					"cat ./dist/css/*.css ./dist/css/spectrum/*.css ./dist/css/express/*.css | postcss --output ./dist/index.css",
-					"prettier --no-config --no-error-on-unmatched-pattern --ignore-unknown --loglevel silent --write dist/",
 					"find dist -type f -empty -delete"
 				],
 				"cwd": "{projectRoot}",

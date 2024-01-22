@@ -101,7 +101,7 @@ governing permissions and limitations under the License.
   --spectrum-table-thumbnail-block-spacing: var(--spectrum-table-thumbnail-to-top-minimum-medium-regular);
   --spectrum-table-thumbnail-size: var(--spectrum-thumbnail-size-300);
 
-  /* Local custom properties used to assign row color to child cells, to help get around Firefox bug 921341 
+  /* Local custom properties used to assign row color to child cells, to help get around Firefox bug 921341
      and for modifying emphasized/non-emphasized background colors from the root element. */
   --spectrum-table-cell-background-color: var(--highcontrast-table-row-background-color, var(--mod-table-row-background-color, var(--spectrum-table-row-background-color)));
   --spectrum-table-selected-cell-background-color: var(--highcontrast-table-selected-row-background-color, var(--mod-table-selected-row-background-color-non-emphasized, var(--spectrum-table-selected-row-background-color-non-emphasized)));
@@ -109,6 +109,11 @@ governing permissions and limitations under the License.
 
   /* Passthrough for nested component(s) */
   --mod-thumbnail-size: var(--mod-table-thumbnail-size, var(--spectrum-table-thumbnail-size));
+
+	[dir="rtl"] &,
+	&:dir(rtl) {
+		--spectrum-logical-rotation: matrix(-1, 0, 0, 1, 0, 0);
+	}
 }
 
 /********* T-SHIRT SIZES (Regular Density) *********/
@@ -512,14 +517,14 @@ governing permissions and limitations under the License.
 }
 
 /* Outside border, row divider lines, and rounded corners:
-    The tbody tag doesn't allow setting a border or border-radius. To make them work, border styles are 
+    The tbody tag doesn't allow setting a border or border-radius. To make them work, border styles are
     instead applied to the individual cells around the outside, while using border-collapse: separate. */
 
 /* Row divider lines */
 .spectrum-Table-cell {
   border-block-start:
     var(--mod-table-border-width, var(--spectrum-table-border-width))
-    solid 
+    solid
     var(--highcontrast-table-divider-color, var(--mod-table-divider-color, var(--spectrum-table-divider-color)));
 }
 
@@ -528,26 +533,26 @@ governing permissions and limitations under the License.
   &:first-child .spectrum-Table-cell {
     border-block-start:
       var(--mod-table-border-width, var(--spectrum-table-border-width))
-      solid 
+      solid
       var(--highcontrast-table-border-color, var(--mod-table-border-color, var(--spectrum-table-border-color)));
   }
 
   &:last-child .spectrum-Table-cell {
     border-block-end:
       var(--mod-table-border-width, var(--spectrum-table-border-width))
-      solid 
+      solid
       var(--highcontrast-table-border-color, var(--mod-table-border-color, var(--spectrum-table-border-color)));
   }
 
   .spectrum-Table-cell:first-child {
-    border-inline-start: 
-      var(--mod-table-outer-border-inline-width, var(--spectrum-table-outer-border-inline-width)) 
-      solid 
+    border-inline-start:
+      var(--mod-table-outer-border-inline-width, var(--spectrum-table-outer-border-inline-width))
+      solid
       var(--highcontrast-table-border-color, var(--mod-table-border-color, var(--spectrum-table-border-color)));
   }
 
   .spectrum-Table-cell:last-child {
-    border-inline-end: 
+    border-inline-end:
       var(--mod-table-outer-border-inline-width, var(--spectrum-table-outer-border-inline-width))
       solid
       var(--highcontrast-table-border-color, var(--mod-table-border-color, var(--spectrum-table-border-color)));
@@ -592,7 +597,7 @@ governing permissions and limitations under the License.
   );
   padding-block-end: var(--mod-table-row-bottom-to-text, var(--spectrum-table-row-bottom-to-text));
   padding-inline: calc(
-    var(--mod-table-edge-to-content, var(--spectrum-table-edge-to-content)) - 
+    var(--mod-table-edge-to-content, var(--spectrum-table-edge-to-content)) -
     var(--mod-table-outer-border-inline-width, var(--spectrum-table-outer-border-inline-width))
   );
 }
@@ -659,7 +664,7 @@ governing permissions and limitations under the License.
     --highcontrast-table-row-text-color: var(--highcontrast-table-selected-row-text-color);
     --highcontrast-table-icon-color: var(--highcontrast-table-selected-row-text-color);
     --spectrum-table-cell-background-color: var(--spectrum-table-selected-cell-background-color);
-  
+
     &:hover,
     &:focus-visible,
     &.is-focused {
@@ -684,7 +689,7 @@ governing permissions and limitations under the License.
 
     /* Make sure negative offset outline is not covered by borders. */
     --mod-table-border-color: var(--highcontrast-table-focus-indicator-color, transparent);
-    
+
     .spectrum-Table-cell {
       border-top-color: var(--highcontrast-table-focus-indicator-color, var(--mod-table-drop-zone-outline-color, var(--spectrum-table-drop-zone-outline-color)));
     }
@@ -746,12 +751,12 @@ governing permissions and limitations under the License.
   /* The calc subtraction is because the --spectrum-table-checkbox-to-text spacing value
      includes the inline start padding in the adjacent cell. */
   padding-inline-end: calc(
-    var(--mod-table-checkbox-to-text, var(--spectrum-table-checkbox-to-text)) - 
+    var(--mod-table-checkbox-to-text, var(--spectrum-table-checkbox-to-text)) -
     var(--mod-table-edge-to-content, var(--spectrum-table-edge-to-content))
   );
   /* Block spacing must be moved to calculated margin on the checkbox element. */
   padding-block: 0;
-  
+
   .spectrum-Table-checkbox {
     --mod-checkbox-spacing: 0px;
     min-block-size: initial;
@@ -813,10 +818,10 @@ governing permissions and limitations under the License.
   border-block: var(--mod-table-border-width, var(--spectrum-table-border-width))
     solid
     var(--highcontrast-table-border-color, var(--mod-table-border-color, var(--spectrum-table-border-color)));
-  border-inline: var(--mod-table-outer-border-inline-width, var(--spectrum-table-outer-border-inline-width)) 
-    solid 
+  border-inline: var(--mod-table-outer-border-inline-width, var(--spectrum-table-outer-border-inline-width))
+    solid
     var(--highcontrast-table-border-color, var(--mod-table-border-color, var(--spectrum-table-border-color)));
-  
+
   &.spectrum-Table--quiet {
     --mod-table-header-background-color--quiet: var(--mod-table-header-background-color-scrollable, var(--spectrum-background-layer-1-color, var(--spectrum-gray-100)));
     border-block-start: none;
@@ -825,8 +830,8 @@ governing permissions and limitations under the License.
   /* Make sure shift-tab reverse keyboard navigation keeps the whole cell in focus.
      --mod-table-current-header-height should be dynamically updated with JS to match the table header height. */
   scroll-padding-top: var(--mod-table-current-header-height, calc(
-    (var(--mod-table-header-line-height, var(--spectrum-table-row-line-height)) * var(--mod-table-header-font-size, var(--spectrum-table-row-font-size))) + 
-    var(--mod-table-header-top-to-text, var(--spectrum-table-header-top-to-text)) + 
+    (var(--mod-table-header-line-height, var(--spectrum-table-row-line-height)) * var(--mod-table-header-font-size, var(--spectrum-table-row-font-size))) +
+    var(--mod-table-header-top-to-text, var(--spectrum-table-header-top-to-text)) +
     var(--mod-table-header-bottom-to-text, var(--spectrum-table-header-bottom-to-text)) +
     var(--mod-table-border-width, var(--spectrum-table-border-width))
   ));
@@ -849,7 +854,7 @@ governing permissions and limitations under the License.
       border-block-start: none;
       border-radius: 0;
     }
-  
+
     &:last-child .spectrum-Table-cell {
       border-block-end: none;
       border-radius: 0;
@@ -858,7 +863,7 @@ governing permissions and limitations under the License.
     .spectrum-Table-cell:first-child {
       border-inline-start: none;
     }
-  
+
     .spectrum-Table-cell:last-child {
       border-inline-end: none;
     }
@@ -896,8 +901,8 @@ governing permissions and limitations under the License.
   .spectrum-Table-disclosureIcon {
     margin-inline: var(--mod-table-collapsible-disclosure-inline-spacing, var(--spectrum-table-collapsible-disclosure-inline-spacing));
     margin-block-start: max(0px, calc(
-        (var(--mod-table-min-row-height, var(--spectrum-table-min-row-height)) - 
-         var(--mod-table-disclosure-icon-size, var(--spectrum-table-disclosure-icon-size))) 
+        (var(--mod-table-min-row-height, var(--spectrum-table-min-row-height)) -
+         var(--mod-table-disclosure-icon-size, var(--spectrum-table-disclosure-icon-size)))
         / 2
       )
     );
@@ -943,10 +948,10 @@ governing permissions and limitations under the License.
   border: 0;
   color: var(--spectrum-table-icon-color);
 
-  transform: logical rotate(0deg);
+  transform: var(--spectrum-logical-rotation);
 
   &[aria-expanded="true"]{
-    transform: logical rotate(90deg);
+    transform: var(--spectrum-logical-rotation,) rotate(90deg);
   }
 
   &::after {
@@ -1008,7 +1013,7 @@ governing permissions and limitations under the License.
       ) / 2
     ));
     --table-thumbnail-cell-block-spacing: max(
-      var(--mod-table-thumbnail-block-spacing, var(--spectrum-table-thumbnail-block-spacing)), 
+      var(--mod-table-thumbnail-block-spacing, var(--spectrum-table-thumbnail-block-spacing)),
       var(--table-thumbnail-inner-minimum-block-spacing)
     );
   }
@@ -1025,7 +1030,7 @@ governing permissions and limitations under the License.
   .spectrum-Thumbnail {
     flex-grow: 0;
     flex-shrink: 0;
-    margin-inline-end: var(--mod-table-thumbnail-to-text, var(--spectrum-table-thumbnail-to-text)); 
+    margin-inline-end: var(--mod-table-thumbnail-to-text, var(--spectrum-table-thumbnail-to-text));
     line-height: var(--mod-table-row-line-height, var(--spectrum-table-row-line-height));
   }
 

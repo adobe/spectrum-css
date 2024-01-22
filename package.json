@@ -115,6 +115,9 @@
   "lint-staged": {
     "package.json": [
       "prettier-package-json --write"
+    ],
+    "dist/*.css": [
+      "prettier --no-config --no-error-on-unmatched-pattern --ignore-unknown --loglevel silent --write"
     ]
   }
 }

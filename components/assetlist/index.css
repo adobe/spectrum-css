@@ -34,6 +34,11 @@ governing permissions and limitations under the License.
   /* label */
   --spectrum-assetlist-item-label-padding-inline-start: var(--spectrum-spacing-100);
   --spectrum-assetlist-label-color: var(--spectrum-neutral-content-color-default);
+
+	[dir="rtl"] &,
+	&:dir(rtl) {
+		--spectrum-logical-rotation: matrix(-1, 0, 0, 1, 0, 0);
+	}
 }
 
 .spectrum-AssetList {
@@ -152,8 +157,7 @@ governing permissions and limitations under the License.
 .spectrum-AssetList-itemChildIndicator {
   display: none;
   transition: transform ease var(--mod-assetlist-child-indicator-animation, var(--spectrum-assetlist-child-indicator-animation));
-
-  transform: logical rotate(0deg);
+  transform: var(--spectrum-logical-rotation);
 }
 
 .spectrum-AssetList-itemLabel {
@@ -182,4 +186,3 @@ governing permissions and limitations under the License.
     }
   }
 }
-

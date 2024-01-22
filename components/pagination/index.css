@@ -15,7 +15,12 @@ governing permissions and limitations under the License.
   --spectrum-pagination-page-button-inline-spacing: var(--spectrum-pagination-item-inline-spacing);
   --spectrum-pagination-counter-color: var(--spectrum-neutral-subdued-content-color-default);
   --spectrum-pagination-counter-font-size: var(--spectrum-font-size-100);
-  --spectrum-pagination-counter-line-height: var(-spectrum-line-height-100);
+  --spectrum-pagination-counter-line-height: var(--spectrum-line-height-100);
+
+	[dir="rtl"] &,
+	&:dir(rtl) {
+		--spectrum-logical-rotation: matrix(-1, 0, 0, 1, 0, 0);
+	}
 }
 
 .spectrum-Pagination--explicit,
@@ -49,9 +54,9 @@ governing permissions and limitations under the License.
 
 /* Correct the direction of the arrows when viewing right-to-left */
 .spectrum-Pagination-prevButton .spectrum-Icon {
-  transform: logical rotate(180deg);
+  transform: var(--spectrum-logical-rotation,) rotate(180deg);
 }
 
 .spectrum-Pagination-nextButton .spectrum-Icon {
-  transform: logical rotate(0deg);
+    transform: var(--spectrum-logical-rotation);
 }
