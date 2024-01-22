@@ -110,34 +110,6 @@ export const Template = ({
 			name: `${displayedItems[0].label}`,
 			id: 'tab-selector',
 		})}
-		${Popover({
-			...globals,
-			isOpen: isOpen,
-			isQuiet: true,
-			withTip: false,
-			position: "bottom",
-			customStyles: {
-				position: "absolute",
-				"--spectrum-picker-spacing-picker-to-popover" : popoverOffset
-			},
-			content: [
-				Menu({
-					...globals,
-					role: "listbox",
-  				subrole: "option",
-					selectionMode: "single",
-					items: [
-						{
-							label: "Tab 1",
-							isSelected: true,
-							isChecked: true
-						},
-						{ label: "Tab 2" },
-						{ label: "Tab 3" },
-					],
-				}),
-			],
-		})}
 		</div>
 	`
 
