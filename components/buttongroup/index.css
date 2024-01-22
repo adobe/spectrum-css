@@ -10,7 +10,10 @@ OF ANY KIND, either express or implied. See the License for the specific languag
 governing permissions and limitations under the License.
 */
 
-.spectrum-ButtonGroup {
+.spectrum-ButtonGroup,
+.spectrum-ButtonGroup--sizeM,
+.spectrum-ButtonGroup--sizeL,
+.spectrum-ButtonGroup--sizeXL {
   --spectrum-buttongroup-spacing-horizontal: var(--spectrum-spacing-200);
   --spectrum-buttongroup-spacing-vertical: var(--spectrum-spacing-200);
 }
@@ -18,13 +21,6 @@ governing permissions and limitations under the License.
 .spectrum-ButtonGroup--sizeS {
   --spectrum-buttongroup-spacing-horizontal: var(--spectrum-spacing-100);
   --spectrum-buttongroup-spacing-vertical: var(--spectrum-spacing-100);
-}
-
-.spectrum-ButtonGroup--sizeM,
-.spectrum-ButtonGroup--sizeL,
-.spectrum-ButtonGroup--sizeXL {
-  --spectrum-buttongroup-spacing-horizontal: var(--spectrum-spacing-200);
-  --spectrum-buttongroup-spacing-vertical: var(--spectrum-spacing-200);
 }
 
 .spectrum-ButtonGroup {
