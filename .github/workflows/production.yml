@@ -36,7 +36,6 @@ jobs:
                 system:
                     - macos-latest
                     - ubuntu-latest
-                    # - windows-latest
                 node-version:
                     - 18
         uses: ./.github/workflows/build.yml
