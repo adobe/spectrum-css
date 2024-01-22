@@ -2,8 +2,9 @@
 import isChromatic from "chromatic/isChromatic";
 import { html } from "lit";
 import { styleMap } from "lit/directives/style-map.js";
-import { Template } from "./template";
+import { when } from "lit/directives/when.js";
 
+import { Template } from "./template";
 import { uiIconSizes, uiIconsWithDirections, workflowIcons } from "./utilities.js";
 
 /**
@@ -161,31 +162,27 @@ const TestTemplate = ({
 					marginBottom: "16px",
 				})}
 			>
-				${Template({ ...args, ...row_args, size: "xs" })}
-				${Template({ ...args, ...row_args, size: "s" })}
-				${Template({ ...args, ...row_args, size: "m" })}
-				${Template({ ...args, ...row_args, size: "l" })}
-				${Template({ ...args, ...row_args, size: "xl" })}
+				${['xs','s','m','l','xl','xxl'].map(
+					(size) => Template({ ...args, ...row_args, size })
+				)}
 			</div>`
 		)}
-		<div
-			style=${styleMap({
-				display: "flex",
-				gap: "16px",
-			})}
-		>
-			${Template({ ...args, setName: "ui", iconName: "Asterisk75", })}
-			${Template({ ...args, setName: "ui", iconName: "Asterisk100", })}
-			${Template({ ...args, setName: "ui", iconName: "Asterisk200", })}
-			${Template({ ...args, setName: "ui", iconName: "Asterisk300", })}
-			${Template({ ...args, setName: "ui", iconName: "Checkmark100", })}
-			${Template({ ...args, setName: "ui", iconName: "ArrowLeft75", })}
-			${Template({ ...args, setName: "ui", iconName: "ArrowLeft100", })}
-			${Template({ ...args, setName: "ui", iconName: "ArrowLeft600", })}
-			${Template({ ...args, setName: "ui", iconName: "ArrowRight200", })}
-			${Template({ ...args, setName: "ui", iconName: "ChevronDown50", })}
-			${Template({ ...args, setName: "ui", iconName: "ChevronDown75", })}
-			${Template({ ...args, setName: "ui", iconName: "ChevronDown500", })}
+		<div style="margin-top:32px;">
+			${uiIconsWithDirections.map(iconName => html`
+				<div
+					style=${styleMap({
+						display: "flex",
+						gap: "16px",
+					})}
+				>
+					${uiIconSizes[iconName.replace(/(Left|Right|Up|Down)$/, '')].map((iconSize) =>
+						Template({ ...args, setName: "ui", iconName: iconName + iconSize })
+					)}
+					${when(Array.isArray(uiIconSizes[iconName]) && uiIconSizes[iconName].length == 0, () =>
+						Template({ ...args, setName: "ui", iconName })
+					)}
+				</div>`
+			)}
 		</div>
 	`;
 };
