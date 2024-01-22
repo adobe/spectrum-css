@@ -10,7 +10,7 @@ name: Build and verify production
 
 on:
     push:
-        branches: [main]
+        branches: [main, spectrum-two]
 
 permissions:
     contents: read

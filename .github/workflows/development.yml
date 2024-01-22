@@ -12,6 +12,7 @@ on:
     pull_request:
         branches:
             - main
+            - spectrum-two
             # Allow us to run tests for PRs updating github actions
             - chore-*ci*
             - chore-*github-actions*
