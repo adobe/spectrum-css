@@ -60,6 +60,8 @@ jobs:
                 include:
                     - system: windows-latest
                       experimental: true
+                    - system: windows-latest
+                      experimental: true
         uses: ./.github/workflows/build.yml
         with:
             system: ${{ matrix.system }}
