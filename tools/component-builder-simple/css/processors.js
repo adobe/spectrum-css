@@ -25,7 +25,6 @@ function getProcessors({ noFlatVariables = false, noSelectors = false, keepComme
 			noFlatVariables,
 			noSelectors,
 		}),
-		require("./plugins/postcss-transform-logical")(),
 		require("./plugins/postcss-custom-properties-passthrough")(),
 		require("postcss-calc"),
 		require("postcss-dropunusedvars")({ fix: false }),

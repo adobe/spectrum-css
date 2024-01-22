@@ -24,6 +24,11 @@ governing permissions and limitations under the License.
 
   /* TODO: placeholder value for sideLabel variant value width */
   --spectrum-slider-value-inline-size: 18px;
+
+	[dir="rtl"] &,
+	&:dir(rtl) {
+		--spectrum-logical-rotation: matrix(-1, 0, 0, 1, 0, 0);
+	}
 }
 
 
@@ -286,8 +291,7 @@ governing permissions and limitations under the License.
     block-size: 100%;
 
     /* Flip the ramp automatically for RTL */
-    /* stylelint-disable-next-line declaration-property-value-no-unknown */
-    transform: logical rotate(0deg);
+    transform: var(--spectrum-logical-rotation);
   }
 }
 
@@ -623,7 +627,7 @@ governing permissions and limitations under the License.
 .spectrum-Slider--range {
   .spectrum-Slider-track {
     &:not(:first-of-type):not(:last-of-type)::before {
-      background: var(--highcontrast-slider-track-fill-color, var(--mod-slider-track-fill-color, var(--spectrum-slider-track-fill-color)));
+      background: var(--highcontrast-slider-track-fill-icolor, var(--mod-slider-track-fill-color, var(--spectrum-slider-track-fill-color)));
     }
   }
 }

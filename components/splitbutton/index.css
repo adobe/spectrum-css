@@ -21,6 +21,11 @@ governing permissions and limitations under the License.
   --spectrum-splitbutton-border-radius-edge: var(
     --spectrum-alias-border-radius-small
   );
+
+  [dir="rtl"] &,
+	&:dir(rtl) {
+		--spectrum-logical-rotation: matrix(-1, 0, 0, 1, 0, 0);
+	}
 }
 
 .spectrum-SplitButton-trigger {
@@ -117,6 +122,15 @@ governing permissions and limitations under the License.
     /* Be on top when focused or border leaks */
     z-index: 1;
     outline: none;
+  }
+
+  /* Correct the direction of the arrows when viewing right-to-left */
+  &.spectrum-Pagination-prevButton .spectrum-Icon {
+    transform: var(--spectrum-logical-rotation,) rotate(180deg);
+  }
+
+  &.spectrum-Pagination-nextButton .spectrum-Icon {
+    transform: var(--spectrum-logical-rotation);
   }
 }
 

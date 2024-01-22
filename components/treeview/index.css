@@ -56,6 +56,11 @@ governing permissions and limitations under the License.
   --spectrum-treeview-item-min-block-size-thumbnail-offset: var(--spectrum-treeview-item-min-block-size-thumbnail-offset-medium, 0px);
 
   --spectrum-treeview-indicator-animation-duration: var(--spectrum-animation-duration-100);
+
+	[dir="rtl"] &,
+	&:dir(rtl) {
+		--spectrum-logical-rotation: matrix(-1, 0, 0, 1, 0, 0);
+	}
 }
 
 .spectrum-TreeView--sizeS {
@@ -187,7 +192,7 @@ governing permissions and limitations under the License.
   &.is-open {
     > .spectrum-TreeView-itemLink > .spectrum-TreeView-itemIndicator {
       /* Rotate the chevron */
-      transform: logical rotate(90deg);
+      transform: var(--spectrum-logical-rotation,) rotate(90deg);
     }
 
     > .spectrum-TreeView {
@@ -337,9 +342,9 @@ governing permissions and limitations under the License.
   padding-block: var(--mod-treeview-indicator-padding-block, var(--spectrum-treeview-indicator-padding));
   margin-inline-start: var(--mod-treeview-indicator-margin-inline-start, var(--spectrum-treeview-indicator-margin-inline-start));
 
-  transform: logical rotate(0deg);
   transition: transform ease var(--mod-treeview-indicator-animation-duration, var(--spectrum-treeview-indicator-animation-duration));
   pointer-events: all;
+  transform: var(--spectrum-logical-rotation);
 }
 
 /* Section headings */

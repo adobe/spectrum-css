@@ -27,6 +27,11 @@ governing permissions and limitations under the License.
   --spectrum-actionbutton-focus-indicator-color: var(--spectrum-focus-indicator-color);
   --spectrum-actionbutton-focus-indicator-border-radius: calc(var(--spectrum-actionbutton-border-radius) + var(--spectrum-actionbutton-focus-indicator-gap));
 
+	[dir="rtl"] &,
+	&:dir(rtl) {
+		--spectrum-logical-rotation: matrix(-1, 0, 0, 1, 0, 0);
+	}
+
   &.is-selected {
     --mod-actionbutton-background-color-default: var(--mod-actionbutton-background-color-default-selected, var(--spectrum-neutral-background-color-selected-default));
     --mod-actionbutton-background-color-hover: var(--mod-actionbutton-background-color-hover-selected, var(--spectrum-neutral-background-color-selected-hover));
@@ -253,7 +258,7 @@ a.spectrum-ActionButton {
 
   color: inherit;
 
-  transform: logical rotate(0deg); /* stylelint-disable-line declaration-property-value-no-unknown */
+  transform: var(--spectrum-logical-rotation);
 }
 
 /* special cases for focus-ring */

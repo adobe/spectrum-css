@@ -46,7 +46,6 @@ function getProcessors(
 		require("postcss-extend"),
 		diff ? require("./plugins/postcss-varsonly")() : null,
 		require("postcss-logical")(),
-		require("./plugins/postcss-transform-logical")(),
 		require("postcss-dir-pseudo-class")(),
 		require("./plugins/postcss-custom-properties-passthrough")(),
 		require("postcss-calc"),
