@@ -7,7 +7,7 @@ import "../index.css";
 
 export const Template = ({
 	rootClass = "spectrum-OpacityCheckerboard",
-	backgroundPosition = "top left",
+	backgroundPosition,
 	customClasses = [],
 	customStyles = {},
 	id,

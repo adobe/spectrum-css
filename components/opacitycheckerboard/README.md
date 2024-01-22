@@ -1,6 +1,7 @@
 # @spectrum-css/opacitycheckerboard
 
-> Opacity checkerboard
+> Opacity checkerboard is a class used to highlight background color opacity.
+
 
 This package is part of the [Spectrum CSS project](https://github.com/adobe/spectrum-css).
 

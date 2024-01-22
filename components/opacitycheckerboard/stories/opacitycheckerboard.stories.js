@@ -22,7 +22,7 @@ export default {
 	},
 	args: {
 		rootClass: "spectrum-OpacityCheckerboard",
-		backgroundPosition: "top left"
+		backgroundPosition: "left top"
 	},
 	parameters: {
 		actions: {
@@ -39,11 +39,20 @@ export default {
 	],
 };
 export const Default = Template.bind({});
-Default.args = {};
+Default.args = {
+	customStyles: {
+		"inline-size": "100%",
+		"block-size": "100%"
+	}
+};
 
 export const CheckerboardPosition = Template.bind({});
 CheckerboardPosition.args = {
 	backgroundPosition: 'center center',
+	customStyles: {
+		"inline-size": "100%",
+		"block-size": "100%"
+	}
 };
 CheckerboardPosition.parameters = {
 	docs: {
