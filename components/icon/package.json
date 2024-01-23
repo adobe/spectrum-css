@@ -1,6 +1,6 @@
 {
   "name": "@spectrum-css/icon",
-  "version": "5.1.0",
+  "version": "6.0.0-beta.0",
   "description": "The Spectrum CSS icon component",
   "license": "Apache-2.0",
   "author": "Adobe",
@@ -13,7 +13,7 @@
   "bugs": {
     "url": "https://github.com/adobe/spectrum-css/issues"
   },
-  "main": "dist/index-vars.css",
+  "main": "dist/index.css",
   "peerDependencies": {
     "@spectrum-css/tokens": ">=11.4"
   },
