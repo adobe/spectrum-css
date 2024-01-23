@@ -52,7 +52,7 @@
 			"configurations": {
 				"ci": {
 					"cache": false,
-					"commands": ["storybook build --config-dir ."]
+					"commands": ["storybook build --config-dir . --webpack-stats-json"]
 				}
 			}
 		},
