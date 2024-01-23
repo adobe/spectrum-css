@@ -1,7 +1,7 @@
 import { html } from "lit";
 import { classMap } from "lit/directives/class-map.js";
-import { styleMap } from "lit/directives/style-map.js";
 import { ifDefined } from "lit/directives/if-defined.js";
+import { styleMap } from "lit/directives/style-map.js";
 
 import { useArgs } from "@storybook/client-api";
 
@@ -72,6 +72,7 @@ export const Template = ({
 					: ""}
 				${Icon({
 					...globals,
+					setName: iconType,
 					iconName: iconName ?? "ChevronDown",
 					size,
 					customClasses: [`${rootClass}-icon`],

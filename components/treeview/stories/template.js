@@ -20,6 +20,7 @@ export const TreeViewItem = ({
 	isOpen,
 	isDropTarget,
 	icon,
+	iconSet,
 	thumbnail,
 	items,
 	customClasses = [],
@@ -80,6 +81,7 @@ export const TreeViewItem = ({
 					? Icon({
 							...globals,
 							size,
+							setName: "ui",
 							iconName: "ChevronRight",
 							customClasses: [`${rootClass}-itemIndicator`],
 					  })
@@ -89,6 +91,7 @@ export const TreeViewItem = ({
 							...globals,
 							size,
 							iconName: icon,
+							setName: iconSet,
 							customClasses: [`${rootClass}-itemIcon`],
 					  })
 					: ""}

@@ -104,7 +104,7 @@ export const Template = ({
 						... isValid ? ['is-valid'] : [],
 					],
 					size,
-					iconType: "workflow",
+					iconType: "ui",
 					iconName: "ChevronDown",
 					isQuiet,
 					isOpen,

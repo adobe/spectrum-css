@@ -17,6 +17,7 @@ export const Template = ({
 	rootClass = "spectrum-ActionButton",
 	size = "m",
 	iconName,
+	iconSet,
 	label,
 	isQuiet = false,
 	isSelected = false,
@@ -78,6 +79,7 @@ export const Template = ({
 					...globals,
 					size,
 					iconName,
+					setName: iconSet,
 					customClasses: [`${rootClass}-icon`, ...customIconClasses],
 				})
 			)}
