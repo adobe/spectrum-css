@@ -21,7 +21,7 @@ export default {
 			control: "select",
 		},
 		disableAll: {
-			name: "Disabled",
+			name: "Disable all items",
 			type: { name: "boolean" },
 			table: {
 				type: { summary: "boolean" },
@@ -44,6 +44,7 @@ export default {
 		rootClass: "spectrum-Accordion",
 		size: "m",
 		density: "regular",
+		disableAll: false,
 	},
 	parameters: {
 		actions: {
@@ -64,6 +65,7 @@ const AccordianGroup = ({
 	return html`
 		<div style="display: flex; gap: 2rem;">
 			${Template({
+				...args,
 				items: new Map([
 				[
 					"Recent",
@@ -101,6 +103,7 @@ const AccordianGroup = ({
 			})}
 			${isChromatic() ?
 				Template({
+					...args,
 					customStyles: { "max-inline-size": "300px"},
 					items: new Map([
 					[
