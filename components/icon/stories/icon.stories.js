@@ -17,7 +17,7 @@ import { uiIconSizes, uiIconsWithDirections, workflowIcons } from "./utilities.j
 const uiIconNameOptions = uiIconsWithDirections.map((iconName) => {
 	const baseIconName = iconName.replace(/(Left|Right|Up|Down)$/, '');
 	// Icons like Gripper that don't have sizes yet, represented by any empty array.
-	if (Array.isArray(uiIconSizes[baseIconName]) && uiIconSizes[baseIconName].length == 0){
+	if (uiIconSizes[baseIconName]?.length == 0){
 		return [baseIconName];
 	} 
 	return uiIconSizes[baseIconName]?.map(sizeNum => iconName + sizeNum) ?? [];
@@ -133,19 +133,19 @@ const TestTemplate = ({
 		},
 		{
 			setName: "workflow",
+			iconName: "Hand",
+		},
+		{
+			setName: "workflow",
+			iconName: "Help",
+		},
+		{
+			setName: "workflow",
 			iconName: "ArrowLeft",
 		},
 		{
 			setName: "workflow",
 			iconName: "ArrowRight",
-		},
-		{
-			setName: "workflow",
-			iconName: "ArrowUp",
-		},
-		{
-			setName: "workflow",
-			iconName: "ArrowDown",
 		},
 		{
 			setName: "workflow",
@@ -175,10 +175,10 @@ const TestTemplate = ({
 						gap: "16px",
 					})}
 				>
-					${uiIconSizes[iconName.replace(/(Left|Right|Up|Down)$/, '')].map((iconSize) =>
+					${uiIconSizes[iconName.replace(/(Left|Right|Up|Down)$/, '')]?.map((iconSize) =>
 						Template({ ...args, setName: "ui", iconName: iconName + iconSize })
 					)}
-					${when(Array.isArray(uiIconSizes[iconName]) && uiIconSizes[iconName].length == 0, () =>
+					${when(uiIconSizes[iconName]?.length == 0, () =>
 						Template({ ...args, setName: "ui", iconName })
 					)}
 				</div>`
