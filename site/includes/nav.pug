@@ -2,7 +2,7 @@
   nav
     ul.spectrum-SideNav.spectrum-SideNav--multiLevel
       li.spectrum-SideNav-item(class=pageURL === 'getting-started.html' ? 'is-selected' : '')
-        a.spectrum-SideNav-itemLink.js-fastLoad(href='get-started.html')
+        a.spectrum-SideNav-itemLink(href='get-started.html')
           span.spectrum-SideNav-link-text Get started
       li.spectrum-SideNav-item
         a.spectrum-SideNav-itemLink(href='https://github.com/adobe/spectrum-css', target='_blank', rel='noopener')
@@ -11,12 +11,12 @@
         a.spectrum-SideNav-itemLink(href='#')
           span.spectrum-SideNav-link-text Components
         ul.spectrum-SideNav.spectrum-SideNav--multiLevel
+        if nav
           each component in nav
             unless component.hide
               li.spectrum-SideNav-item(class=pageURL === component.href ? 'is-selected' : '')
                 a(class={
                   'spectrum-SideNav-itemLink': true,
-                  'js-fastLoad': component.fastLoad != false
                 }, href=component.href)
                   span.spectrum-SideNav-link-text #{component.name}
   nav.spectrum-Site-bottomNav

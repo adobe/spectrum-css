@@ -332,8 +332,8 @@ Search.prototype.search = function (val) {
           <ul class="spectrum-Menu spectrum-Menu--sizeM" role="group">
             ${results[category]
 							.map(function (result, i) {
-								return `  
-                  <a class="spectrum-Menu-item js-fastLoad" href="${result.href}" role="option">
+								return `
+                  <a class="spectrum-Menu-item" href="${result.href}" role="option">
                     <span class="spectrum-Menu-itemLabel">${result.name}</span>
                   </a>
                 `;

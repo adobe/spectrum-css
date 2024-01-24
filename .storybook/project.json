@@ -7,13 +7,6 @@
 			"{projectRoot}/*.{js,html}"
 		]
 	},
-	"implicitDependencies": [
-		"@spectrum-css/*",
-		"!@spectrum-css/generator",
-		"!@spectrum-css/bundle-builder",
-		"!@spectrum-css/component-builder",
-		"!@spectrum-css/component-builder-simple"
-	],
 	"targets": {
 		"clean": {
 			"cache": true,
@@ -64,7 +57,6 @@
 				"{projectRoot}/decorators",
 				"{projectRoot}/*.js",
 				"{projectRoot}/*.html",
-				"{workspaceRoot}/components/*/dist",
 				{ "externalDependencies": ["storybook"] },
 				{ "env": "WATCH_MODE" }
 			],

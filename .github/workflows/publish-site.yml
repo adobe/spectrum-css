@@ -93,8 +93,7 @@ jobs:
             - name: Deploy
               uses: nwtgck/actions-netlify@v2
               with:
-                #   publish-dir: site/dist
-                  publish-dir: dist
+                  publish-dir: site/dist
                   production-branch: main
                   production-deploy: false
                   netlify-config-path: ./netlify.toml
