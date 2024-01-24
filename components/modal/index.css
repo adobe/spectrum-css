@@ -104,18 +104,18 @@ governing permissions and limitations under the License.
 				var(--mod-modal-confirm-exit-animation-delay, var(--spectrum-modal-confirm-exit-animation-delay)) +
 					var(--mod-modal-confirm-exit-animation-duration, var(--spectrum-modal-confirm-exit-animation-duration))
 			);
+}
 
-	&.is-open {
-		@extend %spectrum-overlay--open;
+.spectrum-Modal.is-open {
+	@extend %spectrum-overlay--open;
 
-		/* Entry animations */
-		transition: transform var(--mod-modal-confirm-entry-animation-duration, var(--spectrum-modal-confirm-entry-animation-duration)) var(--spectrum-animation-ease-out)
-				var(--mod-modal-confirm-entry-animation-delay, var(--spectrum-modal-confirm-entry-animation-delay)),
-			opacity var(--mod-modal-confirm-entry-animation-duration, var(--spectrum-modal-confirm-entry-animation-duration)) var(--spectrum-animation-ease-out)
-				var(--mod-modal-confirm-entry-animation-delay, var(--spectrum-modal-confirm-entry-animation-delay));
+	/* Entry animations */
+	transition: transform var(--mod-modal-confirm-entry-animation-duration, var(--spectrum-modal-confirm-entry-animation-duration)) var(--spectrum-animation-ease-out)
+			var(--mod-modal-confirm-entry-animation-delay, var(--spectrum-modal-confirm-entry-animation-delay)),
+		opacity var(--mod-modal-confirm-entry-animation-duration, var(--spectrum-modal-confirm-entry-animation-duration)) var(--spectrum-animation-ease-out)
+			var(--mod-modal-confirm-entry-animation-delay, var(--spectrum-modal-confirm-entry-animation-delay));
 
-		transform: translateY(0);
-	}
+	transform: translateY(0);
 }
 
 /* Responsive modals will fill the screen on small viewports */

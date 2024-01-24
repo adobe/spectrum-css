@@ -10,6 +10,20 @@ OF ANY KIND, either express or implied. See the License for the specific languag
 governing permissions and limitations under the License.
 */
 
+const path = require("path");
+
+const varDir = path.join(
+	path.dirname(
+		require.resolve("@spectrum-css/vars", {
+			paths: [
+				process.cwd(),
+				path.join(process.cwd(), "../../")
+			],
+		})
+	),
+	".."
+);
+
 /**
  * Spectrum CSS PostCSS Processor
  *
@@ -41,23 +55,35 @@ function getProcessors(
 ) {
 	return [
 		require("postcss-import"),
-		require("postcss-remapvars"),
-		require("postcss-nested"),
 		require("postcss-extend"),
-		diff ? require("./plugins/postcss-varsonly")() : null,
+		require("postcss-nested"),
+		diff ? require("postcss-varsonly")() : null,
 		require("postcss-logical")(),
 		require("postcss-dir-pseudo-class")(),
-		require("./plugins/postcss-custom-properties-passthrough")(),
+		require("postcss-custom-properties-passthrough")(),
 		require("postcss-calc"),
-		keepVars ? require("./plugins/postcss-custom-properties-mapping") : null,
+		keepVars ? require("postcss-custom-properties-mapping")({
+			tokenDir: varDir,
+			staticFiles: [
+				"css/globals/spectrum-staticAliases.css",
+				"css/globals/spectrum-fontGlobals.css",
+				"css/globals/spectrum-dimensionGlobals.css",
+				"css/globals/spectrum-colorGlobals.css",
+				"css/globals/spectrum-animationGlobals.css",
+			],
+			extendedFiles: [
+				`css/components/*.css`,
+				`custom.css`,
+			],
+		}) : null,
 		notNested
-			? require("./plugins/postcss-notnested")({ replace: ".spectrum" })
+			? require("postcss-notnested")({ replace: ".spectrum" })
 			: null,
 		require("postcss-svg"),
 		require("legacy-postcss-dropunusedvars"),
 		require("legacy-postcss-dropdupedvars"),
 		require("postcss-droproot"),
-		secondNotNested ? require("./plugins/postcss-notnested")() : null, // Second one to catch all stray &
+		secondNotNested ? require("postcss-notnested")() : null, // Second one to catch all stray &
 		require("postcss-discard-empty"),
 		require("postcss-discard-comments")({ removeAllButFirst: true }),
 		require("autoprefixer")({}),

@@ -9,10 +9,11 @@
   "scripts": {
     "test": "ava"
   },
-  "dependencies": {
-    "postcss": "^7.0.32"
+  "peerDependencies": {
+    "postcss": ">=8"
   },
   "devDependencies": {
-    "ava": "^5.3.1"
+    "ava": "^6.1.0",
+    "postcss": "^8.4.33"
   }
 }
