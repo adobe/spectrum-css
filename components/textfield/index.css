@@ -1277,6 +1277,10 @@ governing permissions and limitations under the License.
 		resize: inherit;
 	}
 
+	&.spectrum-Textfield--drag {
+		resize: both;
+	}
+
 	&.spectrum-Textfield--grows {
 		.spectrum-Textfield-input {
 			grid-row: 2 / auto;
