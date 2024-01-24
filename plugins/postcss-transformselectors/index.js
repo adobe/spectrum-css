@@ -1,22 +1,33 @@
-const postcss = require("postcss");
+/*!
+Copyright 2023 Adobe. All rights reserved.
+This file is licensed to you under the Apache License, Version 2.0 (the "License");
+you may not use this file except in compliance with the License. You may obtain a copy
+of the License at http://www.apache.org/licenses/LICENSE-2.0
 
-const defaultOptions = {
-	map: {},
-};
+Unless required by applicable law or agreed to in writing, software distributed under
+the License is distributed on an "AS IS" BASIS, WITHOUT WARRANTIES OR REPRESENTATIONS
+OF ANY KIND, either express or implied. See the License for the specific language
+governing permissions and limitations under the License.
+*/
 
-module.exports = function (options) {
-	options = {
-		...defaultOptions,
-		...options,
-	};
+/**
+ * @typedef {object} Options
+ * @property {{ search: string | RegExp, replace: string }[]} replace
+ * @property {(selector: string, rule: import('postcss').Rule) => string} transform
+ */
 
+/** @type import('postcss').PluginCreator<Options> */
+module.exports = ({
+	replace,
+	transform,
+}) => {
 	return {
 		postcssPlugin: "postcss-transformselectors",
 		Rule(rule) {
-			if (options.replace) {
-				for (let { search, replace } of options.replace) {
+			if (replace && Array.isArray(replace)) {
+				for (let { search, replace } of replace) {
+					// always replace globally for strings
 					if (typeof search === "string") {
-						// always replace globally for strings
 						search = new RegExp(search, "g");
 					}
 
@@ -24,8 +35,8 @@ module.exports = function (options) {
 				}
 			}
 
-			if (options.transform) {
-				rule.selector = options.transform(rule.selector, rule);
+			if (typeof transform === "function") {
+				rule.selector = transform(rule.selector, rule);
 			}
 		},
 	};

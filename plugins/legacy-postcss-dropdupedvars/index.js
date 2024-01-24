@@ -1,22 +1,37 @@
-const postcss = require("postcss");
+/*!
+Copyright 2023 Adobe. All rights reserved.
+This file is licensed to you under the Apache License, Version 2.0 (the "License");
+you may not use this file except in compliance with the License. You may obtain a copy
+of the License at http://www.apache.org/licenses/LICENSE-2.0
 
-function dropDupes(root, variableList) {
-	root.walkRules((rule, ruleIndex) => {
-		let seen = {};
-		rule.walkDecls((decl) => {
-			if (decl.prop.startsWith("--")) {
-				if (seen[decl.prop]) {
-					seen[decl.prop].remove();
-				}
+Unless required by applicable law or agreed to in writing, software distributed under
+the License is distributed on an "AS IS" BASIS, WITHOUT WARRANTIES OR REPRESENTATIONS
+OF ANY KIND, either express or implied. See the License for the specific language
+governing permissions and limitations under the License.
+*/
 
-				seen[decl.prop] = decl;
-			}
-		});
-	});
-}
+/**
+ * @typedef Options
+ */
 
-module.exports = postcss.plugin("legacy-postcss-dropdupedvars", function () {
-	return (root, result) => {
-		dropDupes(root);
+/** @type import('postcss').PluginCreator<Options> */
+module.exports = () => {
+	return {
+		postcssPlugin: "legacy-postcss-dropdupedvars",
+		OnceExit(root) {
+			root.walkRules((rule) => {
+				const seen = {};
+
+				rule.walkDecls(/^--/, (decl) => {
+					if (seen[decl.prop]) {
+						seen[decl.prop].remove();
+					}
+
+					seen[decl.prop] = decl;
+				});
+			});
+		},
 	};
-});
+};
+
+module.exports.postcss = true;

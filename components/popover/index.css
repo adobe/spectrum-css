@@ -77,11 +77,6 @@ governing permissions and limitations under the License.
   background-color: var(--mod-popover-background-color, var(--spectrum-popover-background-color));
   filter: var(--mod-popover-filter, var(--spectrum-popover-filter));
 
-  /* default opens and animates upward */
-  &.is-open {
-    @extend %spectrum-overlay--open;
-  }
-
   /* has tip triangle */
   &.spectrum-Popover--withTip {
     .spectrum-Popover-tip {
@@ -95,6 +90,11 @@ governing permissions and limitations under the License.
       }
     }
   }
+}
+
+/* default opens and animates upward */
+.spectrum-Popover.is-open {
+  @extend %spectrum-overlay--open;
 }
 
 /* prevent nested popovers from affecting each others drop shadow filters */

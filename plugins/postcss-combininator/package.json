@@ -1,7 +1,7 @@
 {
   "private": true,
   "name": "postcss-combininator",
-  "version": "1.0.2",
+  "version": "1.1.0",
   "description": "Combines multiple blocks of custom properties",
   "license": "Apache-2.0",
   "author": "Adobe",
@@ -10,7 +10,7 @@
     "test": "ava"
   },
   "dependencies": {
-    "postcss": "^7.0.32"
+    "postcss": "^8.4.33"
   },
   "publishConfig": {
     "access": "public"
