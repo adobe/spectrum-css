@@ -21,81 +21,32 @@ governing permissions and limitations under the License.
   position:relative;
 }
 
-[dir="ltr"] .spectrum-SearchWithin-picker{
-  border-top-right-radius:var(--spectrum-searchwithin-border-radius);
-}
-
-[dir="rtl"] .spectrum-SearchWithin-picker{
-  border-top-left-radius:var(--spectrum-searchwithin-border-radius);
-}
-
-[dir="ltr"] .spectrum-SearchWithin-picker{
-  border-bottom-right-radius:var(--spectrum-searchwithin-border-radius);
-}
-
-[dir="rtl"] .spectrum-SearchWithin-picker{
-  border-bottom-left-radius:var(--spectrum-searchwithin-border-radius);
-}
-
-[dir="ltr"] .spectrum-SearchWithin-picker{
-  border-right:0;
-}
-
-[dir="rtl"] .spectrum-SearchWithin-picker{
-  border-left:0;
-}
-
 .spectrum-SearchWithin-picker{
   width:auto;
   min-width:0;
   flex-shrink:0;
-}
-
-[dir="ltr"] .spectrum-SearchWithin-input{
-  margin-left:calc(-1 * var(--spectrum-textfield-m-texticon-border-size, var(--spectrum-alias-input-border-size)));
-}
-
-[dir="rtl"] .spectrum-SearchWithin-input{
-  margin-right:calc(-1 * var(--spectrum-textfield-m-texticon-border-size, var(--spectrum-alias-input-border-size)));
-}
-
-[dir="ltr"] .spectrum-SearchWithin-input{
-  border-top-left-radius:var(--spectrum-searchwithin-border-radius);
-}
-
-[dir="rtl"] .spectrum-SearchWithin-input{
   border-top-right-radius:var(--spectrum-searchwithin-border-radius);
-}
-
-[dir="ltr"] .spectrum-SearchWithin-input{
-  border-bottom-left-radius:var(--spectrum-searchwithin-border-radius);
-}
-
-[dir="rtl"] .spectrum-SearchWithin-input{
   border-bottom-right-radius:var(--spectrum-searchwithin-border-radius);
+  border-right:0;
 }
 
 .spectrum-SearchWithin-input{
   flex:1;
   box-sizing:border-box;
   min-width:inherit;
+  margin-left:calc(var(--spectrum-textfield-m-texticon-border-size, var(--spectrum-alias-input-border-size))*-1);
+  border-top-left-radius:var(--spectrum-searchwithin-border-radius);
+  border-bottom-left-radius:var(--spectrum-searchwithin-border-radius);
 }
 
 .spectrum-SearchWithin-input:hover, .spectrum-SearchWithin-input:focus{
     position:relative;
   }
 
-[dir="ltr"] .spectrum-SearchWithin-clearButton{
-  right:0;
-}
-
-[dir="rtl"] .spectrum-SearchWithin-clearButton{
-  left:0;
-}
-
 .spectrum-SearchWithin-clearButton{
   position:absolute;
   top:0;
+  right:0;
 }
 
 .spectrum-SearchWithin > .spectrum-Textfield{

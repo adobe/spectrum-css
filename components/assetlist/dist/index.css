@@ -52,8 +52,7 @@ governing permissions and limitations under the License.
   block-size:var(--mod-assetlist-item-height, var(--spectrum-assetlist-item-height));
 
   padding-block:0;
-  padding-inline:var(--mod-assetlist-item-padding-inline-start, var(--spectrum-assetlist-item-padding-inline-start))
-    var(--mod-assetlist-item-padding-inline-end, var(--spectrum-assetlist-item-padding-inline-end));
+  padding-inline:var(--mod-assetlist-item-padding-inline-start, var(--spectrum-assetlist-item-padding-inline-start)) var(--mod-assetlist-item-padding-inline-end, var(--spectrum-assetlist-item-padding-inline-end));
   margin-block:0 var(--mod-assetlist-item-margin-bottom, var(--spectrum-assetlist-item-margin-block-end));
   margin-inline:0;
 

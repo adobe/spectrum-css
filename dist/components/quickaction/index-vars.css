@@ -14,9 +14,7 @@ governing permissions and limitations under the License.
   pointer-events:none;
   visibility:hidden;
   opacity:0%;
-  transition:transform var(--mod-overlay-animation-duration, var(--spectrum-animation-duration-100, 130ms)) ease-in-out,
-              opacity var(--mod-overlay-animation-duration, var(--spectrum-animation-duration-100, 130ms)) ease-in-out,
-              visibility 0ms linear var(--mod-overlay-animation-duration, var(--spectrum-animation-duration-100, 130ms));
+  transition:transform var(--mod-overlay-animation-duration, var(--spectrum-animation-duration-100, 130ms)) ease-in-out, opacity var(--mod-overlay-animation-duration, var(--spectrum-animation-duration-100, 130ms)) ease-in-out, visibility 0ms linear var(--mod-overlay-animation-duration, var(--spectrum-animation-duration-100, 130ms));
 }
 
 .spectrum-QuickActions.is-open{
@@ -31,10 +29,11 @@ governing permissions and limitations under the License.
 }
 
 .spectrum-QuickActions--right.is-open{
-  transform:translateX(calc(-1 * var(--mod-overlay-animation-distance, var(--spectrum-overlay-animation-distance, 6px))));
+  transform:translateX(calc(var(--mod-overlay-animation-distance, var(--spectrum-overlay-animation-distance, 6px))*-1));
 }
 
 .spectrum-QuickActions{
+
   box-sizing:border-box;
 
   display:inline-flex;
@@ -50,34 +49,24 @@ governing permissions and limitations under the License.
   height:var(--spectrum-quickactions-height, var(--spectrum-global-dimension-size-500));
 
   border-radius:var(--spectrum-quickactions-border-radius, var(--spectrum-alias-border-radius-regular));
+
+  background-color:var(--spectrum-quickactions-background-color, var(--spectrum-alias-background-color-quickactions));
 }
 
-[dir="ltr"] .spectrum-QuickActions .spectrum-ActionButton + .spectrum-ActionButton{
+.spectrum-QuickActions .spectrum-ActionButton + .spectrum-ActionButton{
     margin-left:var(--spectrum-quickactions-button-gap-x, var(--spectrum-global-dimension-size-100));
-}
-
-[dir="rtl"] .spectrum-QuickActions .spectrum-ActionButton + .spectrum-ActionButton{
-    margin-right:var(--spectrum-quickactions-button-gap-x, var(--spectrum-global-dimension-size-100));
-}
-
-[dir="ltr"] .spectrum-QuickActions--textOnly .spectrum-ActionButton + .spectrum-ActionButton{
-    margin-left:var(--spectrum-quickactions-text-button-gap-x, var(--spectrum-global-dimension-size-50));
-}
-
-[dir="rtl"] .spectrum-QuickActions--textOnly .spectrum-ActionButton + .spectrum-ActionButton{
-    margin-right:var(--spectrum-quickactions-text-button-gap-x, var(--spectrum-global-dimension-size-50));
-}
-
-.spectrum-QuickActions--right.is-open{
-  }
-
-.spectrum-QuickActions--left.is-open{
   }
 
 .spectrum-QuickActions-overlay{
   background-color:var(--spectrum-quickactions-overlay-color, var(--spectrum-alias-background-color-quickactions-overlay));
 }
 
-.spectrum-QuickActions{
-  background-color:var(--spectrum-quickactions-background-color, var(--spectrum-alias-background-color-quickactions));
+.spectrum-QuickActions--textOnly .spectrum-ActionButton + .spectrum-ActionButton{
+    margin-left:var(--spectrum-quickactions-text-button-gap-x, var(--spectrum-global-dimension-size-50));
+  }
+
+.spectrum-QuickActions--right.is-open{
+}
+
+.spectrum-QuickActions--left.is-open{
 }

@@ -38,6 +38,7 @@ governing permissions and limitations under the License.
 .spectrum-AlertDialog{
   display:flex;
   box-sizing:border-box;
+  inline-size:-moz-fit-content;
   inline-size:fit-content;
   min-inline-size:var(--mod-alert-dialog-min-width, var(--spectrum-alert-dialog-min-width));
   max-inline-size:var(--mod-alert-dialog-max-width, var(--spectrum-alert-dialog-max-width));

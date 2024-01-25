@@ -28,21 +28,21 @@ governing permissions and limitations under the License.
 }
 
 .spectrum-Button {
-  --spectrum-button-background-color-default: var(--system-spectrum-button-background-color-default);
-  --spectrum-button-background-color-hover: var(--system-spectrum-button-background-color-hover);
-  --spectrum-button-background-color-down: var(--system-spectrum-button-background-color-down);
-  --spectrum-button-background-color-focus: var(--system-spectrum-button-background-color-focus);
-  --spectrum-button-border-color-default: var(--system-spectrum-button-border-color-default);
-  --spectrum-button-border-color-hover: var(--system-spectrum-button-border-color-hover);
-  --spectrum-button-border-color-down: var(--system-spectrum-button-border-color-down);
-  --spectrum-button-border-color-focus: var(--system-spectrum-button-border-color-focus);
-  --spectrum-button-background-color-disabled: var(--system-spectrum-button-background-color-disabled);
-  --spectrum-button-border-color-disabled: var(--system-spectrum-button-border-color-disabled)
+  --spectrum-button-background-color-default:var(--system-spectrum-button-background-color-default);
+  --spectrum-button-background-color-hover:var(--system-spectrum-button-background-color-hover);
+  --spectrum-button-background-color-down:var(--system-spectrum-button-background-color-down);
+  --spectrum-button-background-color-focus:var(--system-spectrum-button-background-color-focus);
+  --spectrum-button-border-color-default:var(--system-spectrum-button-border-color-default);
+  --spectrum-button-border-color-hover:var(--system-spectrum-button-border-color-hover);
+  --spectrum-button-border-color-down:var(--system-spectrum-button-border-color-down);
+  --spectrum-button-border-color-focus:var(--system-spectrum-button-border-color-focus);
+  --spectrum-button-background-color-disabled:var(--system-spectrum-button-background-color-disabled);
+  --spectrum-button-border-color-disabled:var(--system-spectrum-button-border-color-disabled)
 }
 
 .spectrum-Button.is-selected {
-  --spectrum-button-background-color-default: var(--system-spectrum-button-selected-background-color-default);
-  --spectrum-button-background-color-hover: var(--system-spectrum-button-selected-background-color-hover);
-  --spectrum-button-background-color-down: var(--system-spectrum-button-selected-background-color-down);
-  --spectrum-button-background-color-focus: var(--system-spectrum-button-selected-background-color-focus)
+  --spectrum-button-background-color-default:var(--system-spectrum-button-selected-background-color-default);
+  --spectrum-button-background-color-hover:var(--system-spectrum-button-selected-background-color-hover);
+  --spectrum-button-background-color-down:var(--system-spectrum-button-selected-background-color-down);
+  --spectrum-button-background-color-focus:var(--system-spectrum-button-selected-background-color-focus)
 }

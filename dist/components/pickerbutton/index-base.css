@@ -355,12 +355,10 @@ governing permissions and limitations under the License.
 		var(--spectrum-picker-button-border-radius)
 	);
 
-	transition:border-color
-		var(
+	transition:border-color var(
 			--mod-picker-button-background-animation-duration,
 			var(--spectrum-picker-button-background-animation-duration)
-		)
-		ease-in-out;
+		) ease-in-out;
 }
 
 .spectrum-PickerButton-icon{

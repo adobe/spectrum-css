@@ -14,9 +14,7 @@ governing permissions and limitations under the License.
   pointer-events:none;
   visibility:hidden;
   opacity:0%;
-  transition:transform var(--mod-overlay-animation-duration, var(--spectrum-animation-duration-100, 130ms)) ease-in-out,
-              opacity var(--mod-overlay-animation-duration, var(--spectrum-animation-duration-100, 130ms)) ease-in-out,
-              visibility 0ms linear var(--mod-overlay-animation-duration, var(--spectrum-animation-duration-100, 130ms));
+  transition:transform var(--mod-overlay-animation-duration, var(--spectrum-animation-duration-100, 130ms)) ease-in-out, opacity var(--mod-overlay-animation-duration, var(--spectrum-animation-duration-100, 130ms)) ease-in-out, visibility 0ms linear var(--mod-overlay-animation-duration, var(--spectrum-animation-duration-100, 130ms));
 }
 
 .spectrum-Popover.is-open{
@@ -28,6 +26,13 @@ governing permissions and limitations under the License.
 
 .spectrum-Popover{
   --flow-direction:1;
+}
+
+[dir="rtl"] .spectrum-Popover{
+    --flow-direction:-1;
+  }
+
+.spectrum-Popover{
   --spectrum-popover-animation-distance:var(--spectrum-spacing-100);
 
   --spectrum-popover-background-color:var(--spectrum-background-layer-2-color);
@@ -40,13 +45,9 @@ governing permissions and limitations under the License.
   --spectrum-popover-corner-radius:var(--spectrum-corner-radius-100);
   --spectrum-popover-pointer-width:var(--spectrum-popover-tip-width);
   --spectrum-popover-pointer-height:var(--spectrum-popover-tip-height);
-  --spectrum-popover-pointer-edge-offset:calc(var(--spectrum-corner-radius-100) + var(--spectrum-popover-tip-width) / 2);
-  --spectrum-popover-pointer-edge-spacing:calc(var(--spectrum-popover-pointer-edge-offset) - var(--spectrum-popover-tip-width) / 2);
+  --spectrum-popover-pointer-edge-offset:calc(var(--spectrum-corner-radius-100) + var(--spectrum-popover-tip-width)/2);
+  --spectrum-popover-pointer-edge-spacing:calc(var(--spectrum-popover-pointer-edge-offset) - var(--spectrum-popover-tip-width)/2);
 }
-
-[dir="rtl"] .spectrum-Popover{
-    --flow-direction:-1;
-  }
 
 @media (forced-colors: active){
   .spectrum-Popover{
@@ -93,7 +94,7 @@ governing permissions and limitations under the License.
   }
 
 .spectrum-Popover--top.is-open, .spectrum-Popover--top-left.is-open, .spectrum-Popover--top-right.is-open, .spectrum-Popover--top-start.is-open, .spectrum-Popover--top-end.is-open{
-    transform:translateY(calc(-1 * var(--mod-popover-animation-distance, var(--spectrum-popover-animation-distance))));
+    transform:translateY(calc(var(--mod-popover-animation-distance, var(--spectrum-popover-animation-distance))*-1));
   }
 
 .spectrum-Popover--bottom.spectrum-Popover--withTip, .spectrum-Popover--bottom-left.spectrum-Popover--withTip, .spectrum-Popover--bottom-right.spectrum-Popover--withTip, .spectrum-Popover--bottom-start.spectrum-Popover--withTip, .spectrum-Popover--bottom-end.spectrum-Popover--withTip{
@@ -117,7 +118,7 @@ governing permissions and limitations under the License.
   }
 
 .spectrum-Popover--left.is-open, .spectrum-Popover--left-bottom.is-open, .spectrum-Popover--left-top.is-open{
-    transform:translateX(calc(-1 * var(--mod-popover-animation-distance, var(--spectrum-popover-animation-distance))));
+    transform:translateX(calc(var(--mod-popover-animation-distance, var(--spectrum-popover-animation-distance))*-1));
   }
 
 .spectrum-Popover--start.spectrum-Popover--withTip, .spectrum-Popover--start-top.spectrum-Popover--withTip, .spectrum-Popover--start-bottom.spectrum-Popover--withTip{
@@ -125,7 +126,7 @@ governing permissions and limitations under the License.
   }
 
 .spectrum-Popover--start.is-open, .spectrum-Popover--start-top.is-open, .spectrum-Popover--start-bottom.is-open{
-    transform:translateX(calc(-1 * var(--mod-popover-animation-distance, var(--spectrum-popover-animation-distance))));
+    transform:translateX(calc(var(--mod-popover-animation-distance, var(--spectrum-popover-animation-distance))*-1));
   }
 
 [dir="rtl"] .spectrum-Popover--start.is-open, [dir="rtl"] .spectrum-Popover--start-top.is-open, [dir="rtl"] .spectrum-Popover--start-bottom.is-open{
@@ -141,7 +142,7 @@ governing permissions and limitations under the License.
   }
 
 [dir="rtl"] .spectrum-Popover--end.is-open, [dir="rtl"] .spectrum-Popover--end-top.is-open, [dir="rtl"] .spectrum-Popover--end-bottom.is-open{
-      transform:translateX(calc(-1 * var(--mod-popover-animation-distance, var(--spectrum-popover-animation-distance))));
+      transform:translateX(calc(var(--mod-popover-animation-distance, var(--spectrum-popover-animation-distance))*-1));
     }
 
 .spectrum-Popover--withTip.spectrum-Popover .spectrum-Popover-tip, .spectrum-Popover--withTip.spectrum-Popover--top .spectrum-Popover-tip, .spectrum-Popover--withTip.spectrum-Popover--top-left .spectrum-Popover-tip, .spectrum-Popover--withTip.spectrum-Popover--top-right .spectrum-Popover-tip, .spectrum-Popover--withTip.spectrum-Popover--top-start .spectrum-Popover-tip, .spectrum-Popover--withTip.spectrum-Popover--top-end .spectrum-Popover-tip, .spectrum-Popover--withTip.spectrum-Popover--bottom .spectrum-Popover-tip, .spectrum-Popover--withTip.spectrum-Popover--bottom-left .spectrum-Popover-tip, .spectrum-Popover--withTip.spectrum-Popover--bottom-right .spectrum-Popover-tip, .spectrum-Popover--withTip.spectrum-Popover--bottom-start .spectrum-Popover-tip, .spectrum-Popover--withTip.spectrum-Popover--bottom-end .spectrum-Popover-tip{

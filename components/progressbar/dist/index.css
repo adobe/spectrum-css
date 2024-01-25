@@ -130,13 +130,16 @@ governing permissions and limitations under the License.
     margin-block-end:var(--mod-progressbar-spacing-label-to-progressbar, var(--spectrum-progressbar-spacing-label-to-progressbar));
 
     line-height:var(--mod-progressbar-line-height, var(--spectrum-progressbar-line-height));
-
-    color:var(--mod-progressbar-text-color, var(--spectrum-progressbar-text-color));
   }
 
 .spectrum-ProgressBar .spectrum-ProgressBar-label:lang(ja), .spectrum-ProgressBar .spectrum-ProgressBar-label:lang(zh), .spectrum-ProgressBar .spectrum-ProgressBar-label:lang(ko), .spectrum-ProgressBar .spectrum-ProgressBar-percentage:lang(ja), .spectrum-ProgressBar .spectrum-ProgressBar-percentage:lang(zh), .spectrum-ProgressBar .spectrum-ProgressBar-percentage:lang(ko){
       line-height:var(--mod-progressbar-line-height-cjk, var(--spectrum-progressbar-line-height-cjk));
     }
+
+.spectrum-ProgressBar .spectrum-ProgressBar-label, .spectrum-ProgressBar .spectrum-ProgressBar-percentage{
+
+    color:var(--mod-progressbar-text-color, var(--spectrum-progressbar-text-color));
+}
 
 .spectrum-ProgressBar .spectrum-ProgressBar-label{
     flex:1 1 0%;
@@ -207,19 +210,17 @@ governing permissions and limitations under the License.
     }
 
 [dir="ltr"] .spectrum-ProgressBar--indeterminate .spectrum-ProgressBar-fill{
-  animation:indeterminate-loop-ltr
-             var(--mod-progressbar-animation-duration-indeterminate, var(--spectrum-progressbar-animation-duration-indeterminate)) infinite;
+  animation:indeterminate-loop-ltr var(--mod-progressbar-animation-duration-indeterminate, var(--spectrum-progressbar-animation-duration-indeterminate)) infinite;
 }
 
 [dir="rtl"] .spectrum-ProgressBar--indeterminate .spectrum-ProgressBar-fill{
-  animation:indeterminate-loop-rtl
-             var(--mod-progressbar-animation-duration-indeterminate, var(--spectrum-progressbar-animation-duration-indeterminate)) infinite;
+  animation:indeterminate-loop-rtl var(--mod-progressbar-animation-duration-indeterminate, var(--spectrum-progressbar-animation-duration-indeterminate)) infinite;
 }
 
 @keyframes indeterminate-loop-ltr{
   from{
     transform:translate(
-      calc(-1 * var(--mod-progressbar-fill-size-indeterminate, var(--spectrum-progressbar-fill-size-indeterminate)))
+      calc(var(--mod-progressbar-fill-size-indeterminate, var(--spectrum-progressbar-fill-size-indeterminate))*-1)
     );
   }
   to{
@@ -232,7 +233,7 @@ governing permissions and limitations under the License.
     transform:translate(var(--mod-progressbar-size-default, var(--spectrum-progressbar-fill-size-indeterminate)));
   }
   to{
-    transform:translate(calc(-1 * var(--mod-progressbar-size-default, var(--spectrum-progressbar-size-default))));
+    transform:translate(calc(var(--mod-progressbar-size-default, var(--spectrum-progressbar-size-default))*-1));
   }
 }
 

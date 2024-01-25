@@ -118,14 +118,14 @@ governing permissions and limitations under the License.
 
 .spectrum-Swatch.is-selected .spectrum-Swatch-fill{
       clip-path:polygon(
-        calc(var(--mod-swatch-border-thickness-selected, var(--spectrum-swatch-border-thickness-selected)) * 2)
-        calc(var(--mod-swatch-border-thickness-selected, var(--spectrum-swatch-border-thickness-selected)) * 2),
-        calc(100% - var(--mod-swatch-border-thickness-selected, var(--spectrum-swatch-border-thickness-selected)) * 2)
-        calc(var(--mod-swatch-border-thickness-selected, var(--spectrum-swatch-border-thickness-selected)) * 2),
-        calc(100% - var(--mod-swatch-border-thickness-selected, var(--spectrum-swatch-border-thickness-selected)) * 2)
-        calc(100% - var(--mod-swatch-border-thickness-selected, var(--spectrum-swatch-border-thickness-selected)) * 2),
-        calc(var(--mod-swatch-border-thickness-selected, var(--spectrum-swatch-border-thickness-selected)) * 2)
-        calc(100% - var(--mod-swatch-border-thickness-selected, var(--spectrum-swatch-border-thickness-selected)) * 2));
+        calc(var(--mod-swatch-border-thickness-selected, var(--spectrum-swatch-border-thickness-selected))*2)
+        calc(var(--mod-swatch-border-thickness-selected, var(--spectrum-swatch-border-thickness-selected))*2),
+        calc(100% - var(--mod-swatch-border-thickness-selected, var(--spectrum-swatch-border-thickness-selected))*2)
+        calc(var(--mod-swatch-border-thickness-selected, var(--spectrum-swatch-border-thickness-selected))*2),
+        calc(100% - var(--mod-swatch-border-thickness-selected, var(--spectrum-swatch-border-thickness-selected))*2)
+        calc(100% - var(--mod-swatch-border-thickness-selected, var(--spectrum-swatch-border-thickness-selected))*2),
+        calc(var(--mod-swatch-border-thickness-selected, var(--spectrum-swatch-border-thickness-selected))*2)
+        calc(100% - var(--mod-swatch-border-thickness-selected, var(--spectrum-swatch-border-thickness-selected))*2));
       border-radius:0;
 		}
 
@@ -199,7 +199,7 @@ governing permissions and limitations under the License.
 .spectrum-Swatch::after{
 		content:"";
 		position:absolute;
-		inset:calc(-2 * var(--mod-swatch-focus-indicator-gap, var(--spectrum-swatch-focus-indicator-gap)));
+		inset:calc(var(--mod-swatch-focus-indicator-gap, var(--spectrum-swatch-focus-indicator-gap))*-2);
 
     opacity:0;
 
@@ -272,7 +272,7 @@ governing permissions and limitations under the License.
   }
 
 .spectrum-Swatch--rectangle{
-	inline-size:calc(var(--mod-swatch-size, var(--spectrum-swatch-size)) * 2);
+	inline-size:calc(var(--mod-swatch-size, var(--spectrum-swatch-size))*2);
 }
 
 .spectrum-Swatch--roundingNone, .spectrum-Swatch--roundingNone::before, .spectrum-Swatch--roundingNone::after, .spectrum-Swatch--roundingNone .spectrum-Swatch-fill, .spectrum-Swatch--roundingNone .spectrum-Swatch-fill::before, .spectrum-Swatch--roundingNone.is-selected .spectrum-Swatch-fill, .spectrum-Swatch--roundingNone.is-selected .spectrum-Swatch-fill::before{
@@ -284,7 +284,7 @@ governing permissions and limitations under the License.
 		}
 
 .spectrum-Swatch--roundingFull:not(.spectrum-Swatch--rectangle).is-selected .spectrum-Swatch-fill{
-      clip-path:circle(calc(50% - var(--mod-swatch-border-thickness-selected, var(--spectrum-swatch-border-thickness-selected)) * 2) at 50% 50%);
+      clip-path:circle(calc(50% - var(--mod-swatch-border-thickness-selected, var(--spectrum-swatch-border-thickness-selected))*2) at 50% 50%);
     }
 
 .spectrum-Swatch-image{
@@ -293,6 +293,5 @@ governing permissions and limitations under the License.
 	inline-size:100%;
 	block-size:100%;
 
-  transition:width var(--mod-animation-duration-100, var(--spectrum-animation-duration-100)) ease-in-out,
-              height var(--mod-animation-duration-100, var(--spectrum-animation-duration-100)) ease-in-out;
+  transition:width var(--mod-animation-duration-100, var(--spectrum-animation-duration-100)) ease-in-out, height var(--mod-animation-duration-100, var(--spectrum-animation-duration-100)) ease-in-out;
 }

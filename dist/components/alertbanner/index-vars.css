@@ -97,14 +97,14 @@ governing permissions and limitations under the License.
   }
 }
 
-.spectrum {
+.spectrum{
   --system-spectrum-alertbanner-spectrum-alert-banner-netural-background:var(--spectrum-neutral-subdued-background-color-default);
 }
 
-.spectrum--express {
+.spectrum--express{
   --system-spectrum-alertbanner-spectrum-alert-banner-netural-background:var(--spectrum-neutral-background-color-default);
 }
 
-.spectrum-AlertBanner {
-  --spectrum-alert-banner-netural-background: var(--system-spectrum-alertbanner-spectrum-alert-banner-netural-background);
+.spectrum-AlertBanner{
+  --spectrum-alert-banner-netural-background:var(--system-spectrum-alertbanner-spectrum-alert-banner-netural-background);
 }

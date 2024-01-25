@@ -100,7 +100,7 @@ governing permissions and limitations under the License.
   box-sizing:content-box;
   inline-size:var(--mod-steplist-step-width, var(--spectrum-steplist-step-width));
   padding-block:0;
-  padding-inline:0 calc(var(--mod-steplist-step-width, var(--spectrum-steplist-step-width)) / 2);
+  padding-inline:0 calc(var(--mod-steplist-step-width, var(--spectrum-steplist-step-width))/2);
 }
 
 .spectrum-Steplist-item.is-complete .spectrum-Steplist-label{
@@ -140,7 +140,7 @@ governing permissions and limitations under the License.
   inset-block-end:var(--mod-steplist-label-labelOffset, var(--spectrum-steplist-label-labelOffset));
 
   display:block;
-  inline-size:calc(var(--mod-steplist-step-width, var(--spectrum-steplist-step-width)) * 1.5);
+  inline-size:calc(var(--mod-steplist-step-width, var(--spectrum-steplist-step-width))*1.5);
 
   font-size:var(--mod-steplist-label-text-size, var(--spectrum-steplist-label-text-size));
   white-space:normal;
@@ -165,7 +165,7 @@ governing permissions and limitations under the License.
   inline-size:var(--mod-steplist-marker-hitArea, var(--spectrum-steplist-marker-hitArea));
   block-size:var(--mod-steplist-marker-hitArea, var(--spectrum-steplist-marker-hitArea));
 
-  margin-inline-start:calc(-1 * var(--mod-steplist-marker-hitArea, var(--spectrum-steplist-marker-hitArea)) / 2);
+  margin-inline-start:calc(var(--mod-steplist-marker-hitArea, var(--spectrum-steplist-marker-hitArea))/2*-1);
 }
 
 .spectrum-Steplist-marker{
@@ -175,8 +175,8 @@ governing permissions and limitations under the License.
   position:absolute;
   inset-block-start:50%;
   inset-inline-start:50%;
-  margin-block-start:calc(-1 * var(--mod-steplist-marker-diameter, var(--spectrum-steplist-marker-diameter)) / 2);
-  margin-inline-start:calc(-1 * var(--mod-steplist-marker-diameter, var(--spectrum-steplist-marker-diameter)) / 2);
+  margin-block-start:calc(var(--mod-steplist-marker-diameter, var(--spectrum-steplist-marker-diameter))/2*-1);
+  margin-inline-start:calc(var(--mod-steplist-marker-diameter, var(--spectrum-steplist-marker-diameter))/2*-1);
 
   inline-size:var(--mod-steplist-marker-diameter, var(--spectrum-steplist-marker-diameter));
   block-size:var(--mod-steplist-marker-diameter, var(--spectrum-steplist-marker-diameter));
@@ -192,11 +192,11 @@ governing permissions and limitations under the License.
   display:block;
   z-index:1;
   position:absolute;
-  inset-inline-end:calc(var(--mod-steplist-step-width, var(--spectrum-steplist-step-width)) - var(--mod-steplist-marker-diameter, var(--spectrum-steplist-marker-diameter)) * 1.5);
+  inset-inline-end:calc(var(--mod-steplist-step-width, var(--spectrum-steplist-step-width)) - var(--mod-steplist-marker-diameter, var(--spectrum-steplist-marker-diameter))*1.5);
 
   box-sizing:content-box;
-  inline-size:calc(var(--mod-steplist-step-width, var(--spectrum-steplist-step-width)) * 1.5 - var(--mod-steplist-marker-diameter, var(--spectrum-steplist-marker-diameter)) * 2);
-  inset-block-end:calc(-1 * var(--mod-steplist-segment-height, var(--spectrum-steplist-segment-height)) / 2);
+  inline-size:calc(var(--mod-steplist-step-width, var(--spectrum-steplist-step-width))*1.5 - var(--mod-steplist-marker-diameter, var(--spectrum-steplist-marker-diameter))*2);
+  inset-block-end:calc(var(--mod-steplist-segment-height, var(--spectrum-steplist-segment-height))/2*-1);
   border-block-end-width:var(--mod-steplist-segment-height, var(--spectrum-steplist-segment-height));
   border-block-end-style:dashed;
 
@@ -231,7 +231,7 @@ governing permissions and limitations under the License.
     inset-inline-end:0;
 
     margin-inline-start:0;
-    margin-inline-end:calc(-1 * var(--mod-steplist-marker-hitArea, var(--spectrum-steplist-marker-hitArea)) / 2);
+    margin-inline-end:calc(var(--mod-steplist-marker-hitArea, var(--spectrum-steplist-marker-hitArea))/2*-1);
   }
 
 .spectrum-Steplist-item:last-child .spectrum-Steplist-segment{
@@ -240,7 +240,7 @@ governing permissions and limitations under the License.
   }
 
 .spectrum-Steplist-item:first-child, .spectrum-Steplist-item:last-child{
-  inline-size:calc(var(--mod-steplist-step-width, var(--spectrum-steplist-step-width)) / 2 - var(--mod-steplist-marker-diameter, var(--spectrum-steplist-marker-diameter)) * 2.5);
+  inline-size:calc(var(--mod-steplist-step-width, var(--spectrum-steplist-step-width))/2 - var(--mod-steplist-marker-diameter, var(--spectrum-steplist-marker-diameter))*2.5);
 }
 
 .spectrum-Steplist-item:only-child .spectrum-Steplist-label{
@@ -255,7 +255,7 @@ governing permissions and limitations under the License.
 .spectrum-Steplist-item:only-child .spectrum-Steplist-markerContainer{
     inset-inline-start:50%;
     margin-inline-end:0;
-    margin-inline-start:calc(-1 * var(--mod-steplist-marker-hitArea, var(--spectrum-steplist-marker-hitArea)) / 2);
+    margin-inline-start:calc(var(--mod-steplist-marker-hitArea, var(--spectrum-steplist-marker-hitArea))/2*-1);
   }
 
 @media (forced-colors: active){

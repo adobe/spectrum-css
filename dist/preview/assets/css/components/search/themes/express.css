@@ -11,7 +11,7 @@ governing permissions and limitations under the License.
 */
 
 .spectrum--express {
-  --system-spectrum-search-border-radius:calc(var(--spectrum-component-height-100) / 2);
+  --system-spectrum-search-border-radius:calc(var(--spectrum-component-height-100)/2);
   --system-spectrum-search-edge-to-visual:var(
 			--spectrum-component-pill-edge-to-visual-100
 		);
@@ -20,50 +20,50 @@ governing permissions and limitations under the License.
   --system-spectrum-search-border-color-focus:var(--spectrum-gray-800);
   --system-spectrum-search-border-color-focus-hover:var(--spectrum-gray-900);
   --system-spectrum-search-border-color-key-focus:var(--spectrum-gray-900);
-  --system-spectrum-search-sizes-border-radius:calc(var(--spectrum-component-height-75) / 2);
+  --system-spectrum-search-sizes-border-radius:calc(var(--spectrum-component-height-75)/2);
   --system-spectrum-search-sizes-edge-to-visual:var(
 			--spectrum-component-pill-edge-to-visual-75
 		);
-  --system-spectrum-search-sizem-border-radius:calc(var(--spectrum-component-height-100) / 2);
+  --system-spectrum-search-sizem-border-radius:calc(var(--spectrum-component-height-100)/2);
   --system-spectrum-search-sizem-edge-to-visual:var(
 			--spectrum-component-pill-edge-to-visual-100
 		);
-  --system-spectrum-search-sizel-border-radius:calc(var(--spectrum-component-height-200) / 2);
+  --system-spectrum-search-sizel-border-radius:calc(var(--spectrum-component-height-200)/2);
   --system-spectrum-search-sizel-edge-to-visual:var(
 			--spectrum-component-pill-edge-to-visual-200
 		);
-  --system-spectrum-search-sizexl-border-radius:calc(var(--spectrum-component-height-300) / 2);
+  --system-spectrum-search-sizexl-border-radius:calc(var(--spectrum-component-height-300)/2);
   --system-spectrum-search-sizexl-edge-to-visual:var(
 			--spectrum-component-pill-edge-to-visual-300
 		)
 }
 
 .spectrum-Search {
-  --spectrum-search-border-radius: var(--system-spectrum-search-border-radius);
-  --spectrum-search-edge-to-visual: var(--system-spectrum-search-edge-to-visual);
-  --spectrum-search-border-color-default: var(--system-spectrum-search-border-color-default);
-  --spectrum-search-border-color-hover: var(--system-spectrum-search-border-color-hover);
-  --spectrum-search-border-color-focus: var(--system-spectrum-search-border-color-focus);
-  --spectrum-search-border-color-focus-hover: var(--system-spectrum-search-border-color-focus-hover);
-  --spectrum-search-border-color-key-focus: var(--system-spectrum-search-border-color-key-focus)
+  --spectrum-search-border-radius:var(--system-spectrum-search-border-radius);
+  --spectrum-search-edge-to-visual:var(--system-spectrum-search-edge-to-visual);
+  --spectrum-search-border-color-default:var(--system-spectrum-search-border-color-default);
+  --spectrum-search-border-color-hover:var(--system-spectrum-search-border-color-hover);
+  --spectrum-search-border-color-focus:var(--system-spectrum-search-border-color-focus);
+  --spectrum-search-border-color-focus-hover:var(--system-spectrum-search-border-color-focus-hover);
+  --spectrum-search-border-color-key-focus:var(--system-spectrum-search-border-color-key-focus)
 }
 
 .spectrum-Search--sizeS {
-  --spectrum-search-border-radius: var(--system-spectrum-search-sizes-border-radius);
-  --spectrum-search-edge-to-visual: var(--system-spectrum-search-sizes-edge-to-visual)
+  --spectrum-search-border-radius:var(--system-spectrum-search-sizes-border-radius);
+  --spectrum-search-edge-to-visual:var(--system-spectrum-search-sizes-edge-to-visual)
 }
 
 .spectrum-Search--sizeM {
-  --spectrum-search-border-radius: var(--system-spectrum-search-sizem-border-radius);
-  --spectrum-search-edge-to-visual: var(--system-spectrum-search-sizem-edge-to-visual)
+  --spectrum-search-border-radius:var(--system-spectrum-search-sizem-border-radius);
+  --spectrum-search-edge-to-visual:var(--system-spectrum-search-sizem-edge-to-visual)
 }
 
 .spectrum-Search--sizeL {
-  --spectrum-search-border-radius: var(--system-spectrum-search-sizel-border-radius);
-  --spectrum-search-edge-to-visual: var(--system-spectrum-search-sizel-edge-to-visual)
+  --spectrum-search-border-radius:var(--system-spectrum-search-sizel-border-radius);
+  --spectrum-search-edge-to-visual:var(--system-spectrum-search-sizel-edge-to-visual)
 }
 
 .spectrum-Search--sizeXL {
-  --spectrum-search-border-radius: var(--system-spectrum-search-sizexl-border-radius);
-  --spectrum-search-edge-to-visual: var(--system-spectrum-search-sizexl-edge-to-visual)
+  --spectrum-search-border-radius:var(--system-spectrum-search-sizexl-border-radius);
+  --spectrum-search-edge-to-visual:var(--system-spectrum-search-sizexl-edge-to-visual)
 }

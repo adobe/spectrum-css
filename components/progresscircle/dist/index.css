@@ -631,8 +631,7 @@ governing permissions and limitations under the License.
 .spectrum-ProgressCircle--indeterminate .spectrum-ProgressCircle-fills{
     will-change:transform;
     transform:translateZ(0);
-    animation:1s infinite cubic-bezier(0.25, 0.78, 0.48, 0.89)
-      spectrum-fills-rotate;
+    animation:1s infinite cubic-bezier(0.25, 0.78, 0.48, 0.89) spectrum-fills-rotate;
     transform-origin:center;
   }
 

@@ -39,31 +39,31 @@ governing permissions and limitations under the License.
 }
 
 .spectrum-Search {
-  --spectrum-search-border-radius: var(--system-spectrum-search-border-radius);
-  --spectrum-search-edge-to-visual: var(--system-spectrum-search-edge-to-visual);
-  --spectrum-search-border-color-default: var(--system-spectrum-search-border-color-default);
-  --spectrum-search-border-color-hover: var(--system-spectrum-search-border-color-hover);
-  --spectrum-search-border-color-focus: var(--system-spectrum-search-border-color-focus);
-  --spectrum-search-border-color-focus-hover: var(--system-spectrum-search-border-color-focus-hover);
-  --spectrum-search-border-color-key-focus: var(--system-spectrum-search-border-color-key-focus)
+  --spectrum-search-border-radius:var(--system-spectrum-search-border-radius);
+  --spectrum-search-edge-to-visual:var(--system-spectrum-search-edge-to-visual);
+  --spectrum-search-border-color-default:var(--system-spectrum-search-border-color-default);
+  --spectrum-search-border-color-hover:var(--system-spectrum-search-border-color-hover);
+  --spectrum-search-border-color-focus:var(--system-spectrum-search-border-color-focus);
+  --spectrum-search-border-color-focus-hover:var(--system-spectrum-search-border-color-focus-hover);
+  --spectrum-search-border-color-key-focus:var(--system-spectrum-search-border-color-key-focus)
 }
 
 .spectrum-Search--sizeS {
-  --spectrum-search-border-radius: var(--system-spectrum-search-sizes-border-radius);
-  --spectrum-search-edge-to-visual: var(--system-spectrum-search-sizes-edge-to-visual)
+  --spectrum-search-border-radius:var(--system-spectrum-search-sizes-border-radius);
+  --spectrum-search-edge-to-visual:var(--system-spectrum-search-sizes-edge-to-visual)
 }
 
 .spectrum-Search--sizeM {
-  --spectrum-search-border-radius: var(--system-spectrum-search-sizem-border-radius);
-  --spectrum-search-edge-to-visual: var(--system-spectrum-search-sizem-edge-to-visual)
+  --spectrum-search-border-radius:var(--system-spectrum-search-sizem-border-radius);
+  --spectrum-search-edge-to-visual:var(--system-spectrum-search-sizem-edge-to-visual)
 }
 
 .spectrum-Search--sizeL {
-  --spectrum-search-border-radius: var(--system-spectrum-search-sizel-border-radius);
-  --spectrum-search-edge-to-visual: var(--system-spectrum-search-sizel-edge-to-visual)
+  --spectrum-search-border-radius:var(--system-spectrum-search-sizel-border-radius);
+  --spectrum-search-edge-to-visual:var(--system-spectrum-search-sizel-edge-to-visual)
 }
 
 .spectrum-Search--sizeXL {
-  --spectrum-search-border-radius: var(--system-spectrum-search-sizexl-border-radius);
-  --spectrum-search-edge-to-visual: var(--system-spectrum-search-sizexl-edge-to-visual)
+  --spectrum-search-border-radius:var(--system-spectrum-search-sizexl-border-radius);
+  --spectrum-search-edge-to-visual:var(--system-spectrum-search-sizexl-edge-to-visual)
 }

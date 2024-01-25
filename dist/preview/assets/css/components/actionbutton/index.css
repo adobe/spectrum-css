@@ -30,10 +30,7 @@ governing permissions and limitations under the License.
   -webkit-appearance:button;
   border-style:solid;
 
-  transition:background var(--mod-button-animation-duration, var(--mod-animation-duration-100, var(--spectrum-animation-duration-100))) ease-out,
-    border-color var(--mod-button-animation-duration, var(--mod-animation-duration-100, var(--spectrum-animation-duration-100))) ease-out,
-    color var(--mod-button-animation-duration, var(--mod-animation-duration-100, var(--spectrum-animation-duration-100))) ease-out,
-    box-shadow var(--mod-button-animation-duration, var(--mod-animation-duration-100, var(--spectrum-animation-duration-100))) ease-out;
+  transition:background var(--mod-button-animation-duration, var(--mod-animation-duration-100, var(--spectrum-animation-duration-100))) ease-out, border-color var(--mod-button-animation-duration, var(--mod-animation-duration-100, var(--spectrum-animation-duration-100))) ease-out, color var(--mod-button-animation-duration, var(--mod-animation-duration-100, var(--spectrum-animation-duration-100))) ease-out, box-shadow var(--mod-button-animation-duration, var(--mod-animation-duration-100, var(--spectrum-animation-duration-100))) ease-out;
 
   -webkit-font-smoothing:antialiased;
   -moz-osx-font-smoothing:grayscale;
@@ -122,7 +119,7 @@ a.spectrum-ActionButton{
     }
 
 .spectrum-ActionButton--sizeXS{
-  --spectrum-actionbutton-min-width:calc(var(--spectrum-component-edge-to-visual-only-50) * 2 + var(--spectrum-workflow-icon-size-50));
+  --spectrum-actionbutton-min-width:calc(var(--spectrum-component-edge-to-visual-only-50)*2 + var(--spectrum-workflow-icon-size-50));
   --spectrum-actionbutton-height:var(--spectrum-component-height-50);
 
   --spectrum-actionbutton-icon-size:var(--spectrum-workflow-icon-size-50);
@@ -135,7 +132,7 @@ a.spectrum-ActionButton{
 }
 
 .spectrum-ActionButton--sizeS{
-  --spectrum-actionbutton-min-width:calc(var(--spectrum-component-edge-to-visual-only-75) * 2 + var(--spectrum-workflow-icon-size-75));
+  --spectrum-actionbutton-min-width:calc(var(--spectrum-component-edge-to-visual-only-75)*2 + var(--spectrum-workflow-icon-size-75));
   --spectrum-actionbutton-height:var(--spectrum-component-height-75);
 
   --spectrum-actionbutton-icon-size:var(--spectrum-workflow-icon-size-75);
@@ -148,7 +145,7 @@ a.spectrum-ActionButton{
 }
 
 .spectrum-ActionButton--sizeM{
-  --spectrum-actionbutton-min-width:calc(var(--spectrum-component-edge-to-visual-only-100) * 2 + var(--spectrum-workflow-icon-size-100));
+  --spectrum-actionbutton-min-width:calc(var(--spectrum-component-edge-to-visual-only-100)*2 + var(--spectrum-workflow-icon-size-100));
   --spectrum-actionbutton-height:var(--spectrum-component-height-100);
 
   --spectrum-actionbutton-icon-size:var(--spectrum-workflow-icon-size-100);
@@ -161,7 +158,7 @@ a.spectrum-ActionButton{
 }
 
 .spectrum-ActionButton--sizeL{
-  --spectrum-actionbutton-min-width:calc(var(--spectrum-component-edge-to-visual-only-200) * 2 + var(--spectrum-workflow-icon-size-200));
+  --spectrum-actionbutton-min-width:calc(var(--spectrum-component-edge-to-visual-only-200)*2 + var(--spectrum-workflow-icon-size-200));
   --spectrum-actionbutton-height:var(--spectrum-component-height-200);
 
   --spectrum-actionbutton-icon-size:var(--spectrum-workflow-icon-size-200);
@@ -174,7 +171,7 @@ a.spectrum-ActionButton{
 }
 
 .spectrum-ActionButton--sizeXL{
-  --spectrum-actionbutton-min-width:calc(var(--spectrum-component-edge-to-visual-only-300) * 2 + var(--spectrum-workflow-icon-size-300));
+  --spectrum-actionbutton-min-width:calc(var(--spectrum-component-edge-to-visual-only-300)*2 + var(--spectrum-workflow-icon-size-300));
   --spectrum-actionbutton-height:var(--spectrum-component-height-300);
 
   --spectrum-actionbutton-icon-size:var(--spectrum-workflow-icon-size-300);
@@ -187,12 +184,12 @@ a.spectrum-ActionButton{
 }
 
 @media (forced-colors: active){
-  .spectrum-ActionButton{
-    --highcontrast-actionbutton-focus-indicator-color:ButtonText;
-  }
     .spectrum-ActionButton::after{
       forced-color-adjust:none;
     }
+    .spectrum-ActionButton{
+    --highcontrast-actionbutton-focus-indicator-color:ButtonText;
+  }
 
     .spectrum-ActionButton.is-selected{
       --highcontrast-actionbutton-background-color-default:Highlight;
@@ -303,7 +300,7 @@ a.spectrum-ActionButton{
     position:absolute;
     inset:0;
 
-    margin:calc((var(--mod-actionbutton-focus-indicator-gap, var(--spectrum-actionbutton-focus-indicator-gap)) + var(--mod-actionbutton-border-width, var(--spectrum-actionbutton-border-width))) * -1);
+    margin:calc((var(--mod-actionbutton-focus-indicator-gap, var(--spectrum-actionbutton-focus-indicator-gap)) + var(--mod-actionbutton-border-width, var(--spectrum-actionbutton-border-width)))*-1);
 
     border-radius:var(--mod-actionbutton-focus-indicator-border-radius, var(--spectrum-actionbutton-focus-indicator-border-radius));
 

@@ -14,9 +14,7 @@ governing permissions and limitations under the License.
   pointer-events:none;
   visibility:hidden;
   opacity:0%;
-  transition:transform var(--mod-overlay-animation-duration, var(--spectrum-animation-duration-100, 130ms)) ease-in-out,
-              opacity var(--mod-overlay-animation-duration, var(--spectrum-animation-duration-100, 130ms)) ease-in-out,
-              visibility 0ms linear var(--mod-overlay-animation-duration, var(--spectrum-animation-duration-100, 130ms));
+  transition:transform var(--mod-overlay-animation-duration, var(--spectrum-animation-duration-100, 130ms)) ease-in-out, opacity var(--mod-overlay-animation-duration, var(--spectrum-animation-duration-100, 130ms)) ease-in-out, visibility 0ms linear var(--mod-overlay-animation-duration, var(--spectrum-animation-duration-100, 130ms));
 }
 
 .spectrum-Underlay.is-open{
@@ -46,15 +44,9 @@ governing permissions and limitations under the License.
   z-index:1;
 
   overflow:hidden;
-  transition:opacity var(--mod-underlay-background-exit-animation-duration, var(--spectrum-underlay-background-exit-animation-duration))
-                      var(--mod-underlay-background-exit-animation-ease, var(--spectrum-underlay-background-exit-animation-ease))
-                      var(--mod-underlay-background-exit-animation-delay, var(--spectrum-underlay-background-exit-animation-delay)),
-              visibility 0ms
-              linear calc(var(--mod-underlay-background-exit-animation-delay, var(--spectrum-underlay-background-exit-animation-delay)) + var(--mod-underlay-background-exit-animation-duration, var(--spectrum-underlay-background-exit-animation-duration)));
+  transition:opacity var(--mod-underlay-background-exit-animation-duration, var(--spectrum-underlay-background-exit-animation-duration)) var(--mod-underlay-background-exit-animation-ease, var(--spectrum-underlay-background-exit-animation-ease)) var(--mod-underlay-background-exit-animation-delay, var(--spectrum-underlay-background-exit-animation-delay)), visibility 0ms linear calc(var(--mod-underlay-background-exit-animation-delay, var(--spectrum-underlay-background-exit-animation-delay)) + var(--mod-underlay-background-exit-animation-duration, var(--spectrum-underlay-background-exit-animation-duration)));
 }
 
 .spectrum-Underlay.is-open{
-  transition:opacity var(--mod-underlay-background-entry-animation-duration, var(--spectrum-underlay-background-entry-animation-duration))
-                      var(--mod-underlay-background-entry-animation-ease, var(--spectrum-underlay-background-entry-animation-ease))
-                      var(--mod-underlay-background-entry-animation-delay, var(--spectrum-underlay-background-entry-animation-delay));
+  transition:opacity var(--mod-underlay-background-entry-animation-duration, var(--spectrum-underlay-background-entry-animation-duration)) var(--mod-underlay-background-entry-animation-ease, var(--spectrum-underlay-background-entry-animation-ease)) var(--mod-underlay-background-entry-animation-delay, var(--spectrum-underlay-background-entry-animation-delay));
 }

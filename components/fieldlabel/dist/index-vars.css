@@ -115,6 +115,7 @@ governing permissions and limitations under the License.
   margin:0;
   display:grid;
   grid-template-columns:var(--mod-form-grid-template-columns, auto auto);
+  inline-size:var(--mod-form-inline-size, -moz-fit-content);
   inline-size:var(--mod-form-inline-size, fit-content);
   justify-content:start;
   row-gap:var(--mod-form-item-block-spacing, var(--mod-tableform-item-block-spacing, var(--spectrum-tableform-item-block-spacing)));

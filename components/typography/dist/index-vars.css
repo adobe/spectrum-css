@@ -40,8 +40,8 @@ governing permissions and limitations under the License.
 
   --spectrum-heading-font-color:var(--spectrum-heading-color);
 
-  --spectrum-heading-margin-start:calc(var(--mod-heading-font-size, var(--spectrum-heading-font-size)) * var(--spectrum-heading-margin-top-multiplier));
-  --spectrum-heading-margin-end:calc(var(--mod-heading-font-size, var(--spectrum-heading-font-size)) * var(--spectrum-heading-margin-bottom-multiplier));
+  --spectrum-heading-margin-start:calc(var(--mod-heading-font-size, var(--spectrum-heading-font-size))*var(--spectrum-heading-margin-top-multiplier));
+  --spectrum-heading-margin-end:calc(var(--mod-heading-font-size, var(--spectrum-heading-font-size))*var(--spectrum-heading-margin-bottom-multiplier));
 
 }
 
@@ -295,7 +295,7 @@ governing permissions and limitations under the License.
 
   --spectrum-body-cjk-letter-spacing:var(--spectrum-cjk-letter-spacing);
 
-  --spectrum-body-margin:calc(var(--mod-body-font-size, var(--spectrum-body-font-size)) * var(--spectrum-body-margin-multiplier));
+  --spectrum-body-margin:calc(var(--mod-body-font-size, var(--spectrum-body-font-size))*var(--spectrum-body-margin-multiplier));
 
   --spectrum-body-font-color:var(--spectrum-body-color);
 }
@@ -416,8 +416,8 @@ governing permissions and limitations under the License.
   --spectrum-detail-serif-font-family:var(--spectrum-serif-font-family-stack);
   --spectrum-detail-cjk-font-family:var(--spectrum-cjk-font-family-stack);
 
-  --spectrum-detail-margin-start:calc(var(--mod-detail-font-size, var(--spectrum-detail-font-size)) * var(--spectrum-detail-margin-top-multiplier));
-  --spectrum-detail-margin-end:calc(var(--mod-detail-font-size, var(--spectrum-detail-font-size)) * var(--spectrum-detail-margin-bottom-multiplier));
+  --spectrum-detail-margin-start:calc(var(--mod-detail-font-size, var(--spectrum-detail-font-size))*var(--spectrum-detail-margin-top-multiplier));
+  --spectrum-detail-margin-end:calc(var(--mod-detail-font-size, var(--spectrum-detail-font-size))*var(--spectrum-detail-margin-bottom-multiplier));
 
   --spectrum-detail-font-color:var(--spectrum-detail-color);
 }

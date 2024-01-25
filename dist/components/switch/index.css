@@ -123,7 +123,7 @@ governing permissions and limitations under the License.
     }
 
 [dir="rtl"] .spectrum-Switch-input:checked+.spectrum-Switch-switch::before{
-      transform:translateX(calc(-1 * (var(--mod-switch-control-width, var(--spectrum-switch-control-width)) - 100%)));
+      transform:translateX(calc((var(--mod-switch-control-width, var(--spectrum-switch-control-width)) - 100%)*-1));
     }
 
 .spectrum-Switch-input:disabled, .spectrum-Switch-input[disabled]{
@@ -131,7 +131,7 @@ governing permissions and limitations under the License.
   }
 
 .spectrum-Switch-input:focus-visible + .spectrum-Switch-switch::after{
-      margin:calc(var(--mod-focus-indicator-gap, var(--spectrum-focus-indicator-gap)) * -1);
+      margin:calc(var(--mod-focus-indicator-gap, var(--spectrum-focus-indicator-gap))*-1);
     }
 
 .spectrum-Switch-label{
@@ -158,15 +158,14 @@ governing permissions and limitations under the License.
 
   vertical-align:middle;
 
-  transition:background var(--mod-animation-duration-100, var(--spectrum-animation-duration-100)) ease-in-out,
-    border var(--mod-animation-duration-100, var(--spectrum-animation-duration-100)) ease-in-out;
+  transition:background var(--mod-animation-duration-100, var(--spectrum-animation-duration-100)) ease-in-out, border var(--mod-animation-duration-100, var(--spectrum-animation-duration-100)) ease-in-out;
 
   block-size:var(--mod-switch-control-height, var(--spectrum-switch-control-height));
 
   inset-inline-start:0;
   inset-inline-end:0;
 
-  border-radius:calc(var(--mod-switch-control-height, var(--spectrum-switch-control-height)) / 2);
+  border-radius:calc(var(--mod-switch-control-height, var(--spectrum-switch-control-height))/2);
 }
 
 .spectrum-Switch-switch::before{
@@ -177,10 +176,7 @@ governing permissions and limitations under the License.
   }
 
 .spectrum-Switch-switch::before{
-    transition:background var(--mod-animation-duration-100, var(--spectrum-animation-duration-100)) ease-in-out,
-      border var(--mod-animation-duration-100, var(--spectrum-animation-duration-100)) ease-in-out,
-      transform var(--mod-animation-duration-100, var(--spectrum-animation-duration-100)) ease-in-out,
-      box-shadow var(--mod-animation-duration-100, var(--spectrum-animation-duration-100)) ease-in-out;
+    transition:background var(--mod-animation-duration-100, var(--spectrum-animation-duration-100)) ease-in-out, border var(--mod-animation-duration-100, var(--spectrum-animation-duration-100)) ease-in-out, transform var(--mod-animation-duration-100, var(--spectrum-animation-duration-100)) ease-in-out, box-shadow var(--mod-animation-duration-100, var(--spectrum-animation-duration-100)) ease-in-out;
 
     inline-size:var(--mod-switch-control-height, var(--spectrum-switch-control-height));
     block-size:var(--mod-switch-control-height, var(--spectrum-switch-control-height));
@@ -189,12 +185,12 @@ governing permissions and limitations under the License.
     inset-inline-start:0;
 
     border-width:var(--mod-border-width-200, var(--spectrum-border-width-200));
-    border-radius:calc(var(--mod-switch-control-height, var(--spectrum-switch-control-height)) / 2);
+    border-radius:calc(var(--mod-switch-control-height, var(--spectrum-switch-control-height))/2);
     border-style:solid;
   }
 
 .spectrum-Switch-switch::after{
-    border-radius:calc(var(--mod-switch-control-height, var(--spectrum-switch-control-height)) + var(--mod-focus-indicator-gap, var(--spectrum-focus-indicator-gap)));
+    border-radius:calc(var(--mod-switch-control-height, var(--spectrum-switch-control-height))/2 + var(--mod-focus-indicator-gap, var(--spectrum-focus-indicator-gap))*2);
     content:"";
     display:block;
     position:absolute;
@@ -204,8 +200,7 @@ governing permissions and limitations under the License.
     inset-block-start:0;
     margin:0;
 
-    transition:opacity var(--mod-animation-duration-100, var(--spectrum-animation-duration-100)) ease-out,
-      margin var(--spectrum-animation-duration-100, var(--spectrum-animation-duration-100)) ease-out;
+    transition:opacity var(--mod-animation-duration-100, var(--spectrum-animation-duration-100)) ease-out, margin var(--spectrum-animation-duration-100, var(--spectrum-animation-duration-100)) ease-out;
   }
 
 .spectrum-Switch .spectrum-Switch-switch{
@@ -275,9 +270,7 @@ governing permissions and limitations under the License.
       }
 
 .spectrum-Switch .spectrum-Switch-input:focus-visible + .spectrum-Switch-switch::after, .spectrum-Switch:hover .spectrum-Switch-input:focus-visible + .spectrum-Switch-switch::after{
-        box-shadow:0 0 0
-          var(--mod-switch-focus-indicator-thickness, var(--spectrum-switch-focus-indicator-thickness))
-          var(--highcontrast-switch-focus-indicator-color, var(--mod-switch-focus-indicator-color, var(--spectrum-switch-focus-indicator-color)));
+        box-shadow:0 0 0 var(--mod-switch-focus-indicator-thickness, var(--spectrum-switch-focus-indicator-thickness)) var(--highcontrast-switch-focus-indicator-color, var(--mod-switch-focus-indicator-color, var(--spectrum-switch-focus-indicator-color)));
       }
 
 .spectrum-Switch .spectrum-Switch-input:focus-visible + .spectrum-Switch-switch::before, .spectrum-Switch:hover .spectrum-Switch-input:focus-visible + .spectrum-Switch-switch::before{

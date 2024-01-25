@@ -50,7 +50,7 @@ governing permissions and limitations under the License.
   --spectrum-treeview-item-text-color-focus:var(--spectrum-gray-900);
   --spectrum-treeview-item-text-color-hover:var(--spectrum-gray-900);
 
-  --spectrum-treeview-indicator-margin-inline-start:calc(-1 * var(--spectrum-component-height-100));
+  --spectrum-treeview-indicator-margin-inline-start:calc(var(--spectrum-component-height-100)*-1);
   --spectrum-treeview-indicator-padding:var(--spectrum-disclosure-indicator-top-to-disclosure-icon-medium);
 
   --spectrum-treeview-item-min-block-size-thumbnail-offset:var(--spectrum-treeview-item-min-block-size-thumbnail-offset-medium, 0px);
@@ -70,7 +70,7 @@ governing permissions and limitations under the License.
   --spectrum-treeview-heading-bottom-to-text:var(--spectrum-component-edge-to-text-75);
 
   --spectrum-treeview-item-padding-inline-start:var(--spectrum-component-height-75);
-  --spectrum-treeview-indicator-margin-inline-start:calc(-1 * var(--spectrum-component-height-75));
+  --spectrum-treeview-indicator-margin-inline-start:calc(var(--spectrum-component-height-75)*-1);
   --spectrum-treeview-item-padding-inline-end:var(--spectrum-component-edge-to-text-75);
   --spectrum-treeview-indicator-padding:var(--spectrum-disclosure-indicator-top-to-disclosure-icon-small);
 
@@ -85,7 +85,7 @@ governing permissions and limitations under the License.
   --spectrum-treeview-heading-bottom-to-text:var(--spectrum-component-edge-to-text-200);
 
   --spectrum-treeview-item-padding-inline-start:var(--spectrum-component-height-200);
-  --spectrum-treeview-indicator-margin-inline-start:calc(-1 * var(--spectrum-component-height-200));
+  --spectrum-treeview-indicator-margin-inline-start:calc(var(--spectrum-component-height-200)*-1);
   --spectrum-treeview-item-padding-inline-end:var(--spectrum-component-edge-to-text-200);
   --spectrum-treeview-indicator-padding:var(--spectrum-disclosure-indicator-top-to-disclosure-icon-large);
 
@@ -100,7 +100,7 @@ governing permissions and limitations under the License.
   --spectrum-treeview-heading-bottom-to-text:var(--spectrum-component-edge-to-text-300);
 
   --spectrum-treeview-item-padding-inline-start:var(--spectrum-component-height-300);
-  --spectrum-treeview-indicator-margin-inline-start:calc(-1 * var(--spectrum-component-height-300));
+  --spectrum-treeview-indicator-margin-inline-start:calc(var(--spectrum-component-height-300)*-1);
   --spectrum-treeview-item-padding-inline-end:var(--spectrum-component-edge-to-text-300);
   --spectrum-treeview-indicator-padding:var(--spectrum-disclosure-indicator-top-to-disclosure-icon-extra-large);
 
@@ -340,39 +340,39 @@ governing permissions and limitations under the License.
   }
 
 .spectrum-TreeView-item--indent2{
-    padding-inline-start:calc(2 * var(--mod-treeview-item-indentation, var(--spectrum-treeview-item-indentation)));
+    padding-inline-start:calc(var(--mod-treeview-item-indentation, var(--spectrum-treeview-item-indentation))*2);
   }
 
 .spectrum-TreeView-item--indent3{
-    padding-inline-start:calc(3 * var(--mod-treeview-item-indentation, var(--spectrum-treeview-item-indentation)));
+    padding-inline-start:calc(var(--mod-treeview-item-indentation, var(--spectrum-treeview-item-indentation))*3);
   }
 
 .spectrum-TreeView-item--indent4{
-    padding-inline-start:calc(4 * var(--mod-treeview-item-indentation, var(--spectrum-treeview-item-indentation)));
+    padding-inline-start:calc(var(--mod-treeview-item-indentation, var(--spectrum-treeview-item-indentation))*4);
   }
 
 .spectrum-TreeView-item--indent5{
-    padding-inline-start:calc(5 * var(--mod-treeview-item-indentation, var(--spectrum-treeview-item-indentation)));
+    padding-inline-start:calc(var(--mod-treeview-item-indentation, var(--spectrum-treeview-item-indentation))*5);
   }
 
 .spectrum-TreeView-item--indent6{
-    padding-inline-start:calc(6 * var(--mod-treeview-item-indentation, var(--spectrum-treeview-item-indentation)));
+    padding-inline-start:calc(var(--mod-treeview-item-indentation, var(--spectrum-treeview-item-indentation))*6);
   }
 
 .spectrum-TreeView-item--indent7{
-    padding-inline-start:calc(7 * var(--mod-treeview-item-indentation, var(--spectrum-treeview-item-indentation)));
+    padding-inline-start:calc(var(--mod-treeview-item-indentation, var(--spectrum-treeview-item-indentation))*7);
   }
 
 .spectrum-TreeView-item-indent8{
-    padding-inline-start:calc(8 * var(--mod-treeview-item-indentation, var(--spectrum-treeview-item-indentation)));
+    padding-inline-start:calc(var(--mod-treeview-item-indentation, var(--spectrum-treeview-item-indentation))*8);
   }
 
 .spectrum-TreeView-item--indent9{
-    padding-inline-start:calc(9 * var(--mod-treeview-item-indentation, var(--spectrum-treeview-item-indentation)));
+    padding-inline-start:calc(var(--mod-treeview-item-indentation, var(--spectrum-treeview-item-indentation))*9);
   }
 
 .spectrum-TreeView-item--indent10{
-    padding-inline-start:calc(10 * var(--mod-treeview-item-indentation, var(--spectrum-treeview-item-indentation)));
+    padding-inline-start:calc(var(--mod-treeview-item-indentation, var(--spectrum-treeview-item-indentation))*10);
   }
 
 .spectrum-TreeView--thumbnail .spectrum-TreeView-itemThumbnail{

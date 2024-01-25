@@ -223,10 +223,7 @@ governing permissions and limitations under the License.
       --highcontrast-menu-item-color-default:var(--highcontrast-menu-item-selected-color);
     }
       .spectrum-Menu .spectrum-Menu-item--collapsible.is-open:hover, .spectrum-Menu .spectrum-Menu-item--collapsible.is-open:focus-within{
-        box-shadow:inset
-          calc(var(--mod-menu-item-focus-indicator-width, var(--spectrum-menu-item-focus-indicator-width)) * var(--spectrum-menu-item-focus-indicator-direction-scalar, 1))
-          0 0 0
-          var(--highcontrast-menu-item-focus-indicator-color, var(--mod-menu-item-focus-indicator-color, var(--spectrum-menu-item-focus-indicator-color)));
+        box-shadow:inset calc(var(--mod-menu-item-focus-indicator-width, var(--spectrum-menu-item-focus-indicator-width))*var(--spectrum-menu-item-focus-indicator-direction-scalar, 1)) 0 0 0 var(--highcontrast-menu-item-focus-indicator-color, var(--mod-menu-item-focus-indicator-color, var(--spectrum-menu-item-focus-indicator-color)));
       }
 
       .spectrum-Menu .spectrum-Menu-item--collapsible.is-open:hover, .spectrum-Menu .spectrum-Menu-item--collapsible.is-open:active, .spectrum-Menu .spectrum-Menu-item--collapsible.is-open:focus, .spectrum-Menu .spectrum-Menu-item--collapsible.is-open.is-focused{
@@ -252,6 +249,13 @@ governing permissions and limitations under the License.
 
 .spectrum-Menu .spectrum-Menu-divider{
     --spectrum-menu-divider-thickness:var(--spectrum-divider-thickness-medium);
+  }
+
+.spectrum-Menu .spectrum-Menu-divider.spectrum-Divider--sizeS{
+      --spectrum-menu-divider-thickness:var(--spectrum-divider-thickness-small);
+    }
+
+.spectrum-Menu .spectrum-Menu-divider{
 
     overflow:visible;
     inline-size:auto;
@@ -260,11 +264,7 @@ governing permissions and limitations under the License.
       max(0px, (var(--spectrum-menu-item-section-divider-height) - var(--spectrum-menu-divider-thickness)) / 2)
     );
     margin-inline:var(--mod-menu-item-label-inline-edge-to-content, var(--spectrum-menu-item-label-inline-edge-to-content));
-  }
-
-.spectrum-Menu .spectrum-Menu-divider.spectrum-Divider--sizeS{
-      --spectrum-menu-divider-thickness:var(--spectrum-divider-thickness-small);
-    }
+}
 
 .spectrum-Menu.is-selectable .spectrum-Menu-item{
     --spectrum-menu-checkmark-display:var(--spectrum-menu-checkmark-display-hidden);
@@ -341,10 +341,7 @@ governing permissions and limitations under the License.
 
 .spectrum-Menu-item{
   display:grid;
-  grid-template-areas:".            chevronAreaCollapsible .             headingIconArea  sectionHeadingArea  .         .           .                 "
-    "selectedArea chevronAreaCollapsible checkmarkArea iconArea labelArea        valueArea actionsArea chevronAreaDrillIn"
-    ".            .                      .             .        descriptionArea  .         .           .                 "
-    ".            .                      .             .        submenuArea      .         .           .                 ";
+  grid-template-areas:".            chevronAreaCollapsible .             headingIconArea  sectionHeadingArea  .         .           .                 " "selectedArea chevronAreaCollapsible checkmarkArea iconArea labelArea        valueArea actionsArea chevronAreaDrillIn" ".            .                      .             .        descriptionArea  .         .           .                 " ".            .                      .             .        submenuArea      .         .           .                 ";
 
   grid-template-columns:auto auto auto auto 1fr auto auto auto;
   grid-template-rows:1fr auto;
@@ -402,10 +399,7 @@ governing permissions and limitations under the License.
   }
 
 .spectrum-Menu-item:focus-visible, .spectrum-Menu-back:focus-visible{
-  box-shadow:inset
-    calc(var(--mod-menu-item-focus-indicator-width, var(--spectrum-menu-item-focus-indicator-width)) * var(--spectrum-menu-item-focus-indicator-direction-scalar, 1))
-    0 0 0
-    var(--highcontrast-menu-item-focus-indicator-color, var(--mod-menu-item-focus-indicator-color, var(--spectrum-menu-item-focus-indicator-color)));
+  box-shadow:inset calc(var(--mod-menu-item-focus-indicator-width, var(--spectrum-menu-item-focus-indicator-width))*var(--spectrum-menu-item-focus-indicator-direction-scalar, 1)) 0 0 0 var(--highcontrast-menu-item-focus-indicator-color, var(--mod-menu-item-focus-indicator-color, var(--spectrum-menu-item-focus-indicator-color)));
 }
 
 [dir="rtl"] .spectrum-Menu-item{
@@ -651,7 +645,7 @@ governing permissions and limitations under the License.
 }
 
 .spectrum-Menu-item--collapsible .spectrum-Menu{
-  margin-inline:calc(var(--mod-menu-item-label-inline-edge-to-content, var(--spectrum-menu-item-label-inline-edge-to-content)) * -1);
+  margin-inline:calc(var(--mod-menu-item-label-inline-edge-to-content, var(--spectrum-menu-item-label-inline-edge-to-content))*-1);
 }
 
 .spectrum-Menu-item--collapsible .spectrum-Menu .spectrum-Menu-item{
@@ -748,7 +742,7 @@ governing permissions and limitations under the License.
 
 .spectrum-Menu-backButton:focus-visible{
     outline:var(--spectrum-focus-indicator-thickness) solid var(--spectrum-focus-indicator-color);
-    outline-offset:calc(-1 * (var(--spectrum-focus-indicator-thickness) + 1px));
+    outline-offset:calc((var(--spectrum-focus-indicator-thickness) + 1px)*-1);
   }
 
 .spectrum-Menu-backHeading{

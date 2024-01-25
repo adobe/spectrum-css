@@ -158,10 +158,7 @@ governing permissions and limitations under the License.
   -webkit-user-select:none;
           user-select:none;
 
-  transition:border-color var(--mod-tag-animation-duration, var(--spectrum-tag-animation-duration)) ease-in-out,
-              color var(--mod-tag-animation-duration, var(--spectrum-tag-animation-duration)) ease-in-out,
-              box-shadow var(--mod-tag-animation-duration, var(--spectrum-tag-animation-duration)) ease-in-out,
-              background-color var(--mod-tag-animation-duration, var(--spectrum-tag-animation-duration)) ease-in-out;
+  transition:border-color var(--mod-tag-animation-duration, var(--spectrum-tag-animation-duration)) ease-in-out, color var(--mod-tag-animation-duration, var(--spectrum-tag-animation-duration)) ease-in-out, box-shadow var(--mod-tag-animation-duration, var(--spectrum-tag-animation-duration)) ease-in-out, background-color var(--mod-tag-animation-duration, var(--spectrum-tag-animation-duration)) ease-in-out;
 }
 
 .spectrum-Tag .spectrum-Tag-itemIcon{
@@ -184,7 +181,7 @@ governing permissions and limitations under the License.
 
     padding-block-start:calc(var(--mod-tag-clear-button-spacing-block, var(--spectrum-tag-clear-button-spacing-block)) - var(--mod-tag-border-width, var(--spectrum-tag-border-width)));
     padding-block-end:calc(var(--mod-tag-clear-button-spacing-block, var(--spectrum-tag-clear-button-spacing-block)) - var(--mod-tag-border-width, var(--spectrum-tag-border-width)));
-    margin-inline-start:calc(var(--mod-tag-clear-button-spacing-inline-start, var(--spectrum-tag-clear-button-spacing-inline-start)) + var(--mod-tag-label-spacing-inline-end, var(--spectrum-tag-label-spacing-inline-end)) * -1);
+    margin-inline-start:calc(var(--mod-tag-clear-button-spacing-inline-start, var(--spectrum-tag-clear-button-spacing-inline-start)) + var(--mod-tag-label-spacing-inline-end, var(--spectrum-tag-label-spacing-inline-end))*-1);
     margin-inline-end:calc(var(--mod-tag-clear-button-spacing-inline-end, var(--spectrum-tag-clear-button-spacing-inline-end)) - var(--mod-tag-border-width, var(--spectrum-tag-border-width)));
     color:currentcolor;
     --mod-clear-button-width:fit-content;
@@ -238,10 +235,10 @@ governing permissions and limitations under the License.
       content:"";
       display:inline-block;
       position:absolute;
-      inset-block-start:calc(-1 * var(--mod-tag-focus-ring-gap, var(--spectrum-tag-focus-ring-gap)) - var(--mod-tag-border-width, var(--spectrum-tag-border-width)) - var(--mod-tag-focus-ring-thickness, var(--spectrum-tag-focus-ring-thickness)));
-      inset-block-end:calc(-1 * var(--mod-tag-focus-ring-gap, var(--spectrum-tag-focus-ring-gap)) - var(--mod-tag-border-width, var(--spectrum-tag-border-width)) - var(--mod-tag-focus-ring-thickness, var(--spectrum-tag-focus-ring-thickness)));
-      inset-inline-start:calc(-1 * var(--mod-tag-focus-ring-gap, var(--spectrum-tag-focus-ring-gap)) - var(--mod-tag-border-width, var(--spectrum-tag-border-width)) - var(--mod-tag-focus-ring-thickness, var(--spectrum-tag-focus-ring-thickness)));
-      inset-inline-end:calc(-1 * var(--mod-tag-focus-ring-gap, var(--spectrum-tag-focus-ring-gap)) - var(--mod-tag-border-width, var(--spectrum-tag-border-width)) - var(--mod-tag-focus-ring-thickness, var(--spectrum-tag-focus-ring-thickness)));
+      inset-block-start:calc(var(--mod-tag-focus-ring-gap, var(--spectrum-tag-focus-ring-gap))*-1 - var(--mod-tag-border-width, var(--spectrum-tag-border-width)) - var(--mod-tag-focus-ring-thickness, var(--spectrum-tag-focus-ring-thickness)));
+      inset-block-end:calc(var(--mod-tag-focus-ring-gap, var(--spectrum-tag-focus-ring-gap))*-1 - var(--mod-tag-border-width, var(--spectrum-tag-border-width)) - var(--mod-tag-focus-ring-thickness, var(--spectrum-tag-focus-ring-thickness)));
+      inset-inline-start:calc(var(--mod-tag-focus-ring-gap, var(--spectrum-tag-focus-ring-gap))*-1 - var(--mod-tag-border-width, var(--spectrum-tag-border-width)) - var(--mod-tag-focus-ring-thickness, var(--spectrum-tag-focus-ring-thickness)));
+      inset-inline-end:calc(var(--mod-tag-focus-ring-gap, var(--spectrum-tag-focus-ring-gap))*-1 - var(--mod-tag-border-width, var(--spectrum-tag-border-width)) - var(--mod-tag-focus-ring-thickness, var(--spectrum-tag-focus-ring-thickness)));
       border-color:var(--highcontrast-tag-focus-ring-color, var(--mod-tag-focus-ring-color, var(--spectrum-tag-focus-ring-color)));
       border-radius:calc(var(--mod-tag-corner-radius, var(--spectrum-tag-corner-radius)) + var(--mod-tag-focus-ring-gap, var(--spectrum-tag-focus-ring-gap)) + var(--mod-tag-border-width, var(--spectrum-tag-border-width)));
       border-width:var(--mod-tag-focus-ring-thickness, var(--spectrum-tag-focus-ring-thickness));
@@ -426,7 +423,7 @@ governing permissions and limitations under the License.
     }
 }
 
-.spectrum {
+.spectrum{
   --system-spectrum-tag-border-color:var(--spectrum-gray-700);
   --system-spectrum-tag-border-color-hover:var(--spectrum-gray-800);
   --system-spectrum-tag-border-color-active:var(--spectrum-gray-900);
@@ -459,7 +456,7 @@ governing permissions and limitations under the License.
   --system-spectrum-tag-size-large-clear-button-spacing-inline-end:var(--spectrum-component-edge-to-visual-200);
 }
 
-.spectrum--express {
+.spectrum--express{
   --system-spectrum-tag-background-color:transparent;
   --system-spectrum-tag-background-color-hover:var(--spectrum-gray-300);
   --system-spectrum-tag-background-color-active:var(--spectrum-gray-400);
@@ -492,35 +489,35 @@ governing permissions and limitations under the License.
   --system-spectrum-tag-size-large-clear-button-spacing-inline-end:var(--spectrum-component-pill-edge-to-visual-200);
 }
 
-.spectrum-Tag {
-  --spectrum-tag-border-color: var(--system-spectrum-tag-border-color);
-  --spectrum-tag-border-color-hover: var(--system-spectrum-tag-border-color-hover);
-  --spectrum-tag-border-color-active: var(--system-spectrum-tag-border-color-active);
-  --spectrum-tag-border-color-focus: var(--system-spectrum-tag-border-color-focus);
-  --spectrum-tag-size-small-corner-radius: var(--system-spectrum-tag-size-small-corner-radius);
-  --spectrum-tag-size-medium-corner-radius: var(--system-spectrum-tag-size-medium-corner-radius);
-  --spectrum-tag-size-large-corner-radius: var(--system-spectrum-tag-size-large-corner-radius);
-  --spectrum-tag-background-color: var(--system-spectrum-tag-background-color);
-  --spectrum-tag-background-color-hover: var(--system-spectrum-tag-background-color-hover);
-  --spectrum-tag-background-color-active: var(--system-spectrum-tag-background-color-active);
-  --spectrum-tag-background-color-focus: var(--system-spectrum-tag-background-color-focus);
-  --spectrum-tag-content-color: var(--system-spectrum-tag-content-color);
-  --spectrum-tag-content-color-hover: var(--system-spectrum-tag-content-color-hover);
-  --spectrum-tag-content-color-active: var(--system-spectrum-tag-content-color-active);
-  --spectrum-tag-content-color-focus: var(--system-spectrum-tag-content-color-focus);
-  --spectrum-tag-border-color-selected: var(--system-spectrum-tag-border-color-selected);
-  --spectrum-tag-border-color-selected-hover: var(--system-spectrum-tag-border-color-selected-hover);
-  --spectrum-tag-border-color-selected-active: var(--system-spectrum-tag-border-color-selected-active);
-  --spectrum-tag-border-color-selected-focus: var(--system-spectrum-tag-border-color-selected-focus);
-  --spectrum-tag-border-color-disabled: var(--system-spectrum-tag-border-color-disabled);
-  --spectrum-tag-background-color-disabled: var(--system-spectrum-tag-background-color-disabled);
-  --spectrum-tag-size-small-spacing-inline-start: var(--system-spectrum-tag-size-small-spacing-inline-start);
-  --spectrum-tag-size-small-label-spacing-inline-end: var(--system-spectrum-tag-size-small-label-spacing-inline-end);
-  --spectrum-tag-size-small-clear-button-spacing-inline-end: var(--system-spectrum-tag-size-small-clear-button-spacing-inline-end);
-  --spectrum-tag-size-medium-spacing-inline-start: var(--system-spectrum-tag-size-medium-spacing-inline-start);
-  --spectrum-tag-size-medium-label-spacing-inline-end: var(--system-spectrum-tag-size-medium-label-spacing-inline-end);
-  --spectrum-tag-size-medium-clear-button-spacing-inline-end: var(--system-spectrum-tag-size-medium-clear-button-spacing-inline-end);
-  --spectrum-tag-size-large-spacing-inline-start: var(--system-spectrum-tag-size-large-spacing-inline-start);
-  --spectrum-tag-size-large-label-spacing-inline-end: var(--system-spectrum-tag-size-large-label-spacing-inline-end);
-  --spectrum-tag-size-large-clear-button-spacing-inline-end: var(--system-spectrum-tag-size-large-clear-button-spacing-inline-end);
+.spectrum-Tag{
+  --spectrum-tag-border-color:var(--system-spectrum-tag-border-color);
+  --spectrum-tag-border-color-hover:var(--system-spectrum-tag-border-color-hover);
+  --spectrum-tag-border-color-active:var(--system-spectrum-tag-border-color-active);
+  --spectrum-tag-border-color-focus:var(--system-spectrum-tag-border-color-focus);
+  --spectrum-tag-size-small-corner-radius:var(--system-spectrum-tag-size-small-corner-radius);
+  --spectrum-tag-size-medium-corner-radius:var(--system-spectrum-tag-size-medium-corner-radius);
+  --spectrum-tag-size-large-corner-radius:var(--system-spectrum-tag-size-large-corner-radius);
+  --spectrum-tag-background-color:var(--system-spectrum-tag-background-color);
+  --spectrum-tag-background-color-hover:var(--system-spectrum-tag-background-color-hover);
+  --spectrum-tag-background-color-active:var(--system-spectrum-tag-background-color-active);
+  --spectrum-tag-background-color-focus:var(--system-spectrum-tag-background-color-focus);
+  --spectrum-tag-content-color:var(--system-spectrum-tag-content-color);
+  --spectrum-tag-content-color-hover:var(--system-spectrum-tag-content-color-hover);
+  --spectrum-tag-content-color-active:var(--system-spectrum-tag-content-color-active);
+  --spectrum-tag-content-color-focus:var(--system-spectrum-tag-content-color-focus);
+  --spectrum-tag-border-color-selected:var(--system-spectrum-tag-border-color-selected);
+  --spectrum-tag-border-color-selected-hover:var(--system-spectrum-tag-border-color-selected-hover);
+  --spectrum-tag-border-color-selected-active:var(--system-spectrum-tag-border-color-selected-active);
+  --spectrum-tag-border-color-selected-focus:var(--system-spectrum-tag-border-color-selected-focus);
+  --spectrum-tag-border-color-disabled:var(--system-spectrum-tag-border-color-disabled);
+  --spectrum-tag-background-color-disabled:var(--system-spectrum-tag-background-color-disabled);
+  --spectrum-tag-size-small-spacing-inline-start:var(--system-spectrum-tag-size-small-spacing-inline-start);
+  --spectrum-tag-size-small-label-spacing-inline-end:var(--system-spectrum-tag-size-small-label-spacing-inline-end);
+  --spectrum-tag-size-small-clear-button-spacing-inline-end:var(--system-spectrum-tag-size-small-clear-button-spacing-inline-end);
+  --spectrum-tag-size-medium-spacing-inline-start:var(--system-spectrum-tag-size-medium-spacing-inline-start);
+  --spectrum-tag-size-medium-label-spacing-inline-end:var(--system-spectrum-tag-size-medium-label-spacing-inline-end);
+  --spectrum-tag-size-medium-clear-button-spacing-inline-end:var(--system-spectrum-tag-size-medium-clear-button-spacing-inline-end);
+  --spectrum-tag-size-large-spacing-inline-start:var(--system-spectrum-tag-size-large-spacing-inline-start);
+  --spectrum-tag-size-large-label-spacing-inline-end:var(--system-spectrum-tag-size-large-label-spacing-inline-end);
+  --spectrum-tag-size-large-clear-button-spacing-inline-end:var(--system-spectrum-tag-size-large-clear-button-spacing-inline-end);
 }

@@ -309,9 +309,7 @@ governing permissions and limitations under the License.
 		var(--mod-tabs-color, var(--spectrum-tabs-color))
 	);
 
-	transition:color
-		var(--mod-tabs-animation-duration, var(--spectrum-tabs-animation-duration))
-		ease-out;
+	transition:color var(--mod-tabs-animation-duration, var(--spectrum-tabs-animation-duration)) ease-out;
 	cursor:pointer;
 	outline:none;
 }
@@ -339,17 +337,19 @@ governing permissions and limitations under the License.
     box-sizing:border-box;
 
 		block-size:calc(100% - var(--mod-tabs-top-to-text, var(--spectrum-tabs-top-to-text)));
-		inline-size:calc(100% + var(--mod-tabs-focus-indicator-gap, var(--spectrum-tabs-focus-indicator-gap)) * 2);
+		inline-size:calc(100% + var(
+					--mod-tabs-focus-indicator-gap,
+					var(--spectrum-tabs-focus-indicator-gap)
+				)*2);
 
-		inset-block-start:calc(var(--mod-tabs-top-to-text, var(--spectrum-tabs-top-to-text)) / 2);
-		inset-inline-start:calc(-1 * var(--mod-tabs-focus-indicator-gap, var(--spectrum-tabs-focus-indicator-gap)));
-		inset-inline-end:calc(-1 * var(--mod-tabs-focus-indicator-gap, var(--spectrum-tabs-focus-indicator-gap)));
+		inset-block-start:calc(var(--mod-tabs-top-to-text, var(--spectrum-tabs-top-to-text))/2);
+		inset-inline-start:calc(var(--mod-tabs-focus-indicator-gap, var(--spectrum-tabs-focus-indicator-gap))*-1);
+		inset-inline-end:calc(var(--mod-tabs-focus-indicator-gap, var(--spectrum-tabs-focus-indicator-gap))*-1);
 
 		border:var(
 				--mod-tabs-focus-indicator-width,
 				var(--spectrum-tabs-focus-indicator-width)
-			)
-			solid transparent;
+			) solid transparent;
 		border-radius:var(
 			--mod-tabs-focus-indicator-border-radius,
 			var(--spectrum-tabs-focus-indicator-border-radius)
@@ -438,9 +438,7 @@ governing permissions and limitations under the License.
 	);
   z-index:0;
 
-	transition:transform
-		var(--mod-tabs-animation-duration, var(--spectrum-tabs-animation-duration))
-		var(--mod-tabs-animation-ease, var(--spectrum-tabs-animation-ease));
+	transition:transform var(--mod-tabs-animation-duration, var(--spectrum-tabs-animation-duration)) var(--mod-tabs-animation-ease, var(--spectrum-tabs-animation-ease));
 	transform-origin:top left;
 
 	border-radius:var(
@@ -518,7 +516,7 @@ governing permissions and limitations under the License.
 	}
 
 .spectrum-Tabs--vertical .spectrum-Tabs-item::before, .spectrum-Tabs--vertical-right .spectrum-Tabs-item::before{
-			inset-inline-start:calc(-1 * var(--mod-tabs-focus-indicator-gap, var(--spectrum-tabs-focus-indicator-gap)));
+			inset-inline-start:calc(var(--mod-tabs-focus-indicator-gap, var(--spectrum-tabs-focus-indicator-gap))*-1);
 		}
 
 .spectrum-Tabs--vertical .spectrum-Icon, .spectrum-Tabs--vertical-right .spectrum-Icon{

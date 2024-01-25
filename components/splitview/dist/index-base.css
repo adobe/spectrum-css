@@ -52,7 +52,7 @@ governing permissions and limitations under the License.
   inset-block-start:50%;
   transform:translate(0, -50%);
   touch-action:none;
-  inset-inline-start:calc((var(--mod-splitview-gripper-width, var(--spectrum-splitview-gripper-width)) + 2 * var(--mod-splitview-gripper-border-width-vertical, var(--spectrum-splitview-gripper-border-width-vertical)) - var(--mod-splitview-gripper-width, var(--spectrum-splitview-gripper-width))) / 2 * -1);
+  inset-inline-start:calc((var(--mod-splitview-gripper-width, var(--spectrum-splitview-gripper-width)) + (2*var(--mod-splitview-gripper-border-width-vertical, var(--spectrum-splitview-gripper-border-width-vertical))) - var(--mod-splitview-gripper-width, var(--spectrum-splitview-gripper-width)))/2*-1);
   inline-size:var(--mod-splitview-gripper-width, var(--spectrum-splitview-gripper-width));
   block-size:var(--mod-splitview-gripper-height, var(--spectrum-splitview-gripper-height));
   border-block-width:var(--mod-splitview-gripper-border-width-vertical, var(--spectrum-splitview-gripper-border-width-vertical));
@@ -80,7 +80,7 @@ governing permissions and limitations under the License.
       position:absolute;
 
       inset-block-start:0;
-      inset-inline-start:calc(50% - var(--mod-splitview-handle-width, var(--spectrum-splitview-handle-width)) / 2);
+      inset-inline-start:calc(50% - var(--mod-splitview-handle-width, var(--spectrum-splitview-handle-width))/2);
       inline-size:var(--mod-splitview-handle-width, var(--spectrum-splitview-handle-width));
       block-size:100%;
     }
@@ -146,10 +146,10 @@ governing permissions and limitations under the License.
   }
 
 .spectrum-SplitView--vertical .spectrum-SplitView-gripper{
-    inset-block-start:calc((var(--mod-splitview-gripper-width, var(--spectrum-splitview-gripper-width)) + 2 * var(--mod-splitview-gripper-border-width-vertical, var(--spectrum-splitview-gripper-border-width-vertical)) - var(--mod-splitview-gripper-width, var(--spectrum-splitview-gripper-width))) / 2 * -1);
+    inset-block-start:calc((var(--mod-splitview-gripper-width, var(--spectrum-splitview-gripper-width)) + (2*var(--mod-splitview-gripper-border-width-vertical, var(--spectrum-splitview-gripper-border-width-vertical))) - var(--mod-splitview-gripper-width, var(--spectrum-splitview-gripper-width)))/2*-1);
 
     transform:translate(
-      calc(-1 * var(--mod-splitview-vertical-gripper-width, var(--spectrum-splitview-vertical-gripper-width))),
+      calc(var(--mod-splitview-vertical-gripper-width, var(--spectrum-splitview-vertical-gripper-width))*-1),
       0
     );
     inset-inline-start:var(--mod-splitview-vertical-gripper-width, var(--spectrum-splitview-vertical-gripper-width));
@@ -169,7 +169,7 @@ governing permissions and limitations under the License.
     }
 
 .spectrum-SplitView--vertical .spectrum-SplitView-splitter.is-collapsed-start .spectrum-SplitView-gripper::before, .spectrum-SplitView--vertical .spectrum-SplitView-splitter.is-collapsed-end .spectrum-SplitView-gripper::before{
-      inset-block-start:calc(var(--mod-splitview-vertical-gripper-width, var(--spectrum-splitview-vertical-gripper-width)) - var(--mod-splitview-handle-width, var(--spectrum-splitview-handle-width)) / 2);
+      inset-block-start:calc(var(--mod-splitview-vertical-gripper-width, var(--spectrum-splitview-vertical-gripper-width)) - var(--mod-splitview-handle-width, var(--spectrum-splitview-handle-width))/2);
       inset-inline-start:var(--mod-splitview-vertical-gripper-reset, var(--spectrum-splitview-vertical-gripper-reset));
       inline-size:var(--mod-splitview-vertical-gripper-outer-width, var(--spectrum-splitview-vertical-gripper-outer-width));
       block-size:var(--mod-splitview-handle-width, var(--spectrum-splitview-handle-width));

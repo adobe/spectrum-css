@@ -340,7 +340,7 @@ governing permissions and limitations under the License.
 }
 
 .spectrum-InfieldButton--top, .spectrum-InfieldButton--bottom{
-	block-size:calc(var(--mod-infield-button-height, var(--spectrum-infield-button-height)) / 2);
+	block-size:calc(var(--mod-infield-button-height, var(--spectrum-infield-button-height))/2);
 }
 
 .spectrum-InfieldButton--top .spectrum-InfieldButton-fill, .spectrum-InfieldButton--bottom .spectrum-InfieldButton-fill{

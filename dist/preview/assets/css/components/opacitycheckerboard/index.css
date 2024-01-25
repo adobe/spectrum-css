@@ -32,13 +32,16 @@ permissions and limitations under the License. */
 					var(--spectrum-opacity-checkerboard-dark)
 				)
 				0% 50%
-		)
-		var(
+		) var(
 			--mod-opacity-checkerboard-position,
 			var(--spectrum-opacity-checkerboard-position)
-		) /
-		calc(var(--mod-opacity-checkerboard-size, var(--spectrum-opacity-checkerboard-size)) * 2)
-		calc(var(--mod-opacity-checkerboard-size, var(--spectrum-opacity-checkerboard-size)) * 2);
+		) / calc(var(
+					--mod-opacity-checkerboard-size,
+					var(--spectrum-opacity-checkerboard-size)
+				)*2) calc(var(
+					--mod-opacity-checkerboard-size,
+					var(--spectrum-opacity-checkerboard-size)
+				)*2);
 }
 
 @media (forced-colors: active){

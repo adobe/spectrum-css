@@ -79,7 +79,7 @@ governing permissions and limitations under the License.
 .spectrum-CoachMark-image-wrapper{
 	block-size:var(--mod-coachmark-media-height, var(--spectrum-coachmark-media-height));
 	min-block-size:var(--mod-coachmark-media-min-height, var(--spectrum-coachmark-media-min-height));
-	inline-size:calc(var(--mod-coachmark-width, var(--spectrum-coachmark-width)) - var(--mod-coachmark-border-size, var(--spectrum-coachmark-border-size)) * 2);
+	inline-size:calc(var(--mod-coachmark-width, var(--spectrum-coachmark-width)) - var(--mod-coachmark-border-size, var(--spectrum-coachmark-border-size))*2);
 	object-fit:cover;
 	object-position:center;
 	border-start-start-radius:inherit;

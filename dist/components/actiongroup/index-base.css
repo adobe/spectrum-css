@@ -142,8 +142,8 @@ governing permissions and limitations under the License.
   flex:1;
 }
 
-.spectrum-ActionGroup {
-  --spectrum-actiongroup-gap-size-compact: var(--system-spectrum-actiongroup-gap-size-compact);
-  --spectrum-actiongroup-horizontal-spacing-compact: var(--system-spectrum-actiongroup-horizontal-spacing-compact);
-  --spectrum-actiongroup-vertical-spacing-compact: var(--system-spectrum-actiongroup-vertical-spacing-compact);
+.spectrum-ActionGroup{
+  --spectrum-actiongroup-gap-size-compact:var(--system-spectrum-actiongroup-gap-size-compact);
+  --spectrum-actiongroup-horizontal-spacing-compact:var(--system-spectrum-actiongroup-horizontal-spacing-compact);
+  --spectrum-actiongroup-vertical-spacing-compact:var(--system-spectrum-actiongroup-vertical-spacing-compact);
 }

@@ -65,15 +65,15 @@ governing permissions and limitations under the License.
 }
 
 .spectrum-DropIndicator--horizontal:before, .spectrum-DropIndicator--horizontal:after{
-    inset-block-start:calc(-1 * var(--mod-dropindicator-circle-size, var(--spectrum-dropindicator-circle-size)) / 2 + var(--mod-dropindicator-border-size, var(--spectrum-dropindicator-border-size)) / 2);
+    inset-block-start:calc(var(--mod-dropindicator-circle-size, var(--spectrum-dropindicator-circle-size))*-1/2 + var(--mod-dropindicator-border-size, var(--spectrum-dropindicator-border-size))/2);
   }
 
 .spectrum-DropIndicator--horizontal:before{
-    inset-inline-start:calc(-1 * var(--mod-dropindicator-circle-size, var(--spectrum-dropindicator-circle-size)));
+    inset-inline-start:calc(var(--mod-dropindicator-circle-size, var(--spectrum-dropindicator-circle-size))*-1);
   }
 
 .spectrum-DropIndicator--horizontal:after{
-    inset-inline-end:calc(-1 * var(--mod-dropindicator-circle-size, var(--spectrum-dropindicator-circle-size)));
+    inset-inline-end:calc(var(--mod-dropindicator-circle-size, var(--spectrum-dropindicator-circle-size))*-1);
   }
 
 .spectrum-DropIndicator--vertical{
@@ -89,13 +89,13 @@ governing permissions and limitations under the License.
 }
 
 .spectrum-DropIndicator--vertical:before, .spectrum-DropIndicator--vertical:after{
-    inset-inline-start:calc(-1 * var(--mod-dropindicator-circle-size, var(--spectrum-dropindicator-circle-size)) / 2 + var(--mod-dropindicator-border-size, var(--spectrum-dropindicator-border-size)) / 2);
+    inset-inline-start:calc(var(--mod-dropindicator-circle-size, var(--spectrum-dropindicator-circle-size))*-1/2 + var(--mod-dropindicator-border-size, var(--spectrum-dropindicator-border-size))/2);
   }
 
 .spectrum-DropIndicator--vertical:before{
-    inset-block-start:calc(-1 * var(--mod-dropindicator-circle-size, var(--spectrum-dropindicator-circle-size)));
+    inset-block-start:calc(var(--mod-dropindicator-circle-size, var(--spectrum-dropindicator-circle-size))*-1);
   }
 
 .spectrum-DropIndicator--vertical:after{
-    inset-block-end:calc(-1 * var(--mod-dropindicator-circle-size, var(--spectrum-dropindicator-circle-size)));
+    inset-block-end:calc(var(--mod-dropindicator-circle-size, var(--spectrum-dropindicator-circle-size))*-1);
   }

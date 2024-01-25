@@ -63,7 +63,7 @@ governing permissions and limitations under the License.
 
   gap:var(--mod-rating-icon-spacing, var(--spectrum-rating-icon-spacing));
 
-  inline-size:calc((var(--mod-rating-icon-width, var(--spectrum-rating-icon-width)) + var(--mod-rating-icon-spacing, var(--spectrum-rating-icon-spacing))) * var(--mod-rating-icon-count, var(--spectrum-rating-icon-count)));
+  inline-size:calc((var(--mod-rating-icon-width, var(--spectrum-rating-icon-width)) + var(--mod-rating-icon-spacing, var(--spectrum-rating-icon-spacing)))*var(--mod-rating-icon-count, var(--spectrum-rating-icon-count)));
   border-radius:var(--mod-rating-border-radius, var(--spectrum-rating-border-radius));
 
   padding-inline:calc(var(--mod-rating-icon-spacing, var(--spectrum-rating-icon-spacing)) + var(--mod-rating-focus-indicator-gap, var(--spectrum-rating-focus-indicator-gap)) - 1.5px);
@@ -124,7 +124,7 @@ governing permissions and limitations under the License.
     content:'';
     block-size:var(--mod-rating-indicator-height, var(--spectrum-rating-indicator-height));
     inline-size:var(--spectrum-rating-indicator-width);
-    inset-block-end:calc(var(--mod-rating-focus-indicator-gap, var(--spectrum-rating-focus-indicator-gap)) * 2 - 1px);
+    inset-block-end:calc(var(--mod-rating-focus-indicator-gap, var(--spectrum-rating-focus-indicator-gap))*2 - 1px);
     position:absolute;
   }
 

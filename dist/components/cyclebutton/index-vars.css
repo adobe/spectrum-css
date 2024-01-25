@@ -10,19 +10,11 @@ OF ANY KIND, either express or implied. See the License for the specific languag
 governing permissions and limitations under the License.
 */
 
-[dir="ltr"] .spectrum-CycleButton{
-  padding-left:var(--spectrum-actionbutton-m-icononly-padding-left, var(--spectrum-global-dimension-size-85));
-  padding-right:var(--spectrum-actionbutton-m-icononly-padding-right, var(--spectrum-global-dimension-size-85));
-}
-
-[dir="rtl"] .spectrum-CycleButton{
-  padding-right:var(--spectrum-actionbutton-m-icononly-padding-left, var(--spectrum-global-dimension-size-85));
-  padding-left:var(--spectrum-actionbutton-m-icononly-padding-right, var(--spectrum-global-dimension-size-85));
-}
-
 .spectrum-CycleButton{
   padding-top:0;
   padding-bottom:0;
+  padding-left:var(--spectrum-actionbutton-m-icononly-padding-left, var(--spectrum-global-dimension-size-85));
+  padding-right:var(--spectrum-actionbutton-m-icononly-padding-right, var(--spectrum-global-dimension-size-85));
 }
 
 .spectrum-CycleButton .spectrum-CycleButton-item:not(.is-selected){

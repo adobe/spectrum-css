@@ -7,8 +7,8 @@
   --spectrum-quickactions-padding-x: var(--spectrum-global-dimension-size-50);
   --spectrum-quickactions-height: var(--spectrum-global-dimension-size-500);
   --spectrum-quickactions-border-radius: var(--spectrum-alias-border-radius-regular);
-  --spectrum-quickactions-button-gap-x: var(--spectrum-global-dimension-size-100);
-  --spectrum-quickactions-text-button-gap-x: var(--spectrum-global-dimension-size-50);
-  --spectrum-quickactions-overlay-color: var(--spectrum-alias-background-color-quickactions-overlay);
   --spectrum-quickactions-background-color: var(--spectrum-alias-background-color-quickactions);
+  --spectrum-quickactions-button-gap-x: var(--spectrum-global-dimension-size-100);
+  --spectrum-quickactions-overlay-color: var(--spectrum-alias-background-color-quickactions-overlay);
+  --spectrum-quickactions-text-button-gap-x: var(--spectrum-global-dimension-size-50);
 }

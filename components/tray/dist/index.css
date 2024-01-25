@@ -49,30 +49,13 @@ governing permissions and limitations under the License.
   outline:none;
   border-radius:unset;
   transform:translateY(100%);
-  transition:opacity
-      var(--mod-tray-exit-animation-duration, var(--spectrum-tray-exit-animation-duration))
-      cubic-bezier(0.5, 0, 1, 1)
-      var(--mod-tray-exit-animation-delay, var(--spectrum-tray-exit-animation-delay)),
-    visibility
-      var(--mod-tray-exit-animation-duration, var(--spectrum-tray-exit-animation-duration))
-      linear
-      calc(var(--mod-tray-exit-animation-delay, var(--spectrum-tray-exit-animation-delay)) + var(--mod-tray-exit-animation-duration, var(--spectrum-tray-exit-animation-duration))),
-    transform
-      var(--mod-tray-exit-animation-duration, var(--spectrum-tray-exit-animation-duration))
-      cubic-bezier(0.5, 0, 1, 1)
-      var(--mod-tray-exit-animation-delay, var(--spectrum-tray-exit-animation-delay));
+  transition:opacity var(--mod-tray-exit-animation-duration, var(--spectrum-tray-exit-animation-duration)) cubic-bezier(0.5, 0, 1, 1) var(--mod-tray-exit-animation-delay, var(--spectrum-tray-exit-animation-delay)), visibility var(--mod-tray-exit-animation-duration, var(--spectrum-tray-exit-animation-duration)) linear calc(var(--mod-tray-exit-animation-delay, var(--spectrum-tray-exit-animation-delay)) + var(--mod-tray-exit-animation-duration, var(--spectrum-tray-exit-animation-duration))), transform var(--mod-tray-exit-animation-duration, var(--spectrum-tray-exit-animation-duration)) cubic-bezier(0.5, 0, 1, 1) var(--mod-tray-exit-animation-delay, var(--spectrum-tray-exit-animation-delay));
 
   background-color:var(--highcontrast-tray-background-color, var(--mod-tray-background-color, var(--spectrum-tray-background-color)));
 }
 
 .spectrum-Tray.is-open{
-    transition:transform
-        var(--mod-tray-entry-animation-duration, var(--spectrum-tray-entry-animation-duration))
-        cubic-bezier(0, 0, 0.4, 1)
-        var(--mod-tray-entry-animation-delay, var(--spectrum-tray-entry-animation-delay)),
-      opacity var(--spectrum-tray-entry-animation-duration, var(--mod-tray-entry-animation-duration))
-        cubic-bezier(0, 0, 0.4, 1)
-        var(--mod-tray-entry-animation-delay, var(--spectrum-tray-entry-animation-delay));
+    transition:transform var(--mod-tray-entry-animation-duration, var(--spectrum-tray-entry-animation-duration)) cubic-bezier(0, 0, 0.4, 1) var(--mod-tray-entry-animation-delay, var(--spectrum-tray-entry-animation-delay)), opacity var(--spectrum-tray-entry-animation-duration, var(--mod-tray-entry-animation-duration)) cubic-bezier(0, 0, 0.4, 1) var(--mod-tray-entry-animation-delay, var(--spectrum-tray-entry-animation-delay));
     transform:translateY(0);
   }
 

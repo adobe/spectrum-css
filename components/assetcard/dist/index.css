@@ -84,21 +84,24 @@ governing permissions and limitations under the License.
   inline-size:var(--mod-assetcard-asset-size, var(--spectrum-assetcard-asset-size));
 
   cursor:pointer;
-
-  outline:none;
 }
 
 .spectrum-AssetCard.is-selected .spectrum-AssetCard-assetContainer::after, .spectrum-AssetCard:hover .spectrum-AssetCard-assetContainer::after, .spectrum-AssetCard:focus-visible .spectrum-AssetCard-assetContainer::after{
       border-color:var(--highcontrast-assetcard-border-color-hover, var(--mod-assetcard-border-color-hover, var(--spectrum-assetcard-border-color-hover)));
     }
 
-.spectrum-AssetCard.is-selected .spectrum-Checkbox-box::before, .spectrum-AssetCard:hover .spectrum-Checkbox-box::before, .spectrum-AssetCard:focus-visible .spectrum-Checkbox-box::before{
+.spectrum-AssetCard.is-selected .spectrum-Checkbox-box::before,.spectrum-AssetCard:hover .spectrum-Checkbox-box::before,.spectrum-AssetCard:focus-visible .spectrum-Checkbox-box::before{
       border-color:var(--highcontrast-assetcard-border-color-hover, var(--mod-assetcard-border-color-hover, var(--spectrum-assetcard-border-color-hover)));
     }
 
 .spectrum-AssetCard:active .spectrum-AssetCard-assetContainer::after{
       border-color:var(--mod-assetcard-border-color-down, var(--spectrum-assetcard-border-color-down));
     }
+
+.spectrum-AssetCard{
+
+  outline:none;
+}
 
 .spectrum-AssetCard:focus-visible .spectrum-AssetCard-assetContainer::before{
       opacity:1;
@@ -125,11 +128,9 @@ governing permissions and limitations under the License.
     content:'';
 
     position:absolute;
-    inset:calc(-1 * var(--mod-assetcard-focus-ring-gap, var(--spectrum-assetcard-focus-ring-gap)));
+    inset:calc(var(--mod-assetcard-focus-ring-gap, var(--spectrum-assetcard-focus-ring-gap))*-1);
 
-    border:var(--mod-assetcard-focus-indicator-thickness, var(--spectrum-assetcard-focus-indicator-thickness))
-      solid
-      var(--mod-assectcard-focus-indicator-color, var(--spectrum-assestcard-focus-indicator-color));
+    border:var(--mod-assetcard-focus-indicator-thickness, var(--spectrum-assetcard-focus-indicator-thickness)) solid var(--mod-assectcard-focus-indicator-color, var(--spectrum-assestcard-focus-indicator-color));
 
     border-radius:var(--mod-assetcard-focus-ring-border-radius, var(--spectrum-assetcard-focus-ring-border-radius));
 
@@ -144,9 +145,7 @@ governing permissions and limitations under the License.
     inset:0;
     z-index:3;
 
-    border:var(--mod-assetcard-asset-container-border-size, var(--spectrum-assetcard-asset-container-border-size))
-      solid
-      var(--mod-assetcard-border-color, var(--spectrum-assetcard-border-color));
+    border:var(--mod-assetcard-asset-container-border-size, var(--spectrum-assetcard-asset-container-border-size)) solid var(--mod-assetcard-border-color, var(--spectrum-assetcard-border-color));
     border-radius:calc(var(--mod-assetcard-border-radius, var(--spectrum-assetcard-border-radius)) - 1px);
   }
 
@@ -156,8 +155,7 @@ governing permissions and limitations under the License.
   inline-size:100%;
   block-size:100%;
 
-  transition:inline-size var(--mod-assetcard-asset-animation-duration, var(--spectrum-assetcard-asset-animation-duration)) ease-in-out,
-              block-size var(--mod-assetcard-asset-animation-duration, var(--spectrum-assetcard-asset-animation-duration)) ease-in-out;
+  transition:inline-size var(--mod-assetcard-asset-animation-duration, var(--spectrum-assetcard-asset-animation-duration)) ease-in-out, block-size var(--mod-assetcard-asset-animation-duration, var(--spectrum-assetcard-asset-animation-duration)) ease-in-out;
 
   border-radius:calc(var(--mod-assetcard-border-radius, var(--spectrum-assetcard-border-radius)) - 1px);
 }

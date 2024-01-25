@@ -64,10 +64,8 @@ governing permissions and limitations under the License.
 .spectrum-Link:focus-visible{
     color:var(--highcontrast-link-text-color-primary-focus, var(--mod-link-text-color-primary-focus, var(--spectrum-link-text-color-primary-focus)));
     text-decoration:underline;
-    -webkit-text-decoration-style:double;
-            text-decoration-style:double;
-    -webkit-text-decoration-color:var(--highcontrast-link-focus-color, inherit);
-            text-decoration-color:var(--highcontrast-link-focus-color, inherit);
+    text-decoration-style:double;
+    text-decoration-color:var(--highcontrast-link-focus-color, inherit);
   }
 
 .spectrum-Link--secondary{

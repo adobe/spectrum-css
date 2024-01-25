@@ -18,8 +18,8 @@ governing permissions and limitations under the License.
 }
 
 .spectrum-Radio {
-  --spectrum-radio-button-border-color-default: var(--system-spectrum-radio-button-border-color-default);
-  --spectrum-radio-button-border-color-hover: var(--system-spectrum-radio-button-border-color-hover);
-  --spectrum-radio-button-border-color-down: var(--system-spectrum-radio-button-border-color-down);
-  --spectrum-radio-button-border-color-focus: var(--system-spectrum-radio-button-border-color-focus)
+  --spectrum-radio-button-border-color-default:var(--system-spectrum-radio-button-border-color-default);
+  --spectrum-radio-button-border-color-hover:var(--system-spectrum-radio-button-border-color-hover);
+  --spectrum-radio-button-border-color-down:var(--system-spectrum-radio-button-border-color-down);
+  --spectrum-radio-button-border-color-focus:var(--system-spectrum-radio-button-border-color-focus)
 }

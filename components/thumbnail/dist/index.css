@@ -101,9 +101,6 @@ governing permissions and limitations under the License.
 		--mod-thumbnail-border-radius,
 		var(--spectrum-thumbnail-border-radius)
 	);
-  vertical-align:top;
-  overflow:hidden;
-  z-index:0;
 }
 
 .spectrum-Thumbnail::before{
@@ -146,10 +143,34 @@ governing permissions and limitations under the License.
 				var(--spectrum-thumbnail-border-radius)
 			);
 			position:absolute;
-			inset-inline-start:calc((var(--mod-thumbnail-focus-indicator-gap, var(--spectrum-thumbnail-focus-indicator-gap)) + var(--mod-thumbnail-focus-indicator-thickness, var(--spectrum-thumbnail-focus-indicator-thickness))) * -1);
-			inset-inline-end:calc((var(--mod-thumbnail-focus-indicator-gap, var(--spectrum-thumbnail-focus-indicator-gap)) + var(--mod-thumbnail-focus-indicator-thickness, var(--spectrum-thumbnail-focus-indicator-thickness))) * -1);
-			inset-block-end:calc((var(--mod-thumbnail-focus-indicator-gap, var(--spectrum-thumbnail-focus-indicator-gap)) + var(--mod-thumbnail-focus-indicator-thickness, var(--spectrum-thumbnail-focus-indicator-thickness))) * -1);
-			inset-block-start:calc((var(--mod-thumbnail-focus-indicator-gap, var(--spectrum-thumbnail-focus-indicator-gap)) + var(--mod-thumbnail-focus-indicator-thickness, var(--spectrum-thumbnail-focus-indicator-thickness))) * -1);
+			inset-inline-start:calc((var(
+								--mod-thumbnail-focus-indicator-gap,
+								var(--spectrum-thumbnail-focus-indicator-gap)
+							) + var(
+								--mod-thumbnail-focus-indicator-thickness,
+								var(--spectrum-thumbnail-focus-indicator-thickness)
+							))*-1);
+			inset-inline-end:calc((var(
+								--mod-thumbnail-focus-indicator-gap,
+								var(--spectrum-thumbnail-focus-indicator-gap)
+							) + var(
+								--mod-thumbnail-focus-indicator-thickness,
+								var(--spectrum-thumbnail-focus-indicator-thickness)
+							))*-1);
+			inset-block-end:calc((var(
+								--mod-thumbnail-focus-indicator-gap,
+								var(--spectrum-thumbnail-focus-indicator-gap)
+							) + var(
+								--mod-thumbnail-focus-indicator-thickness,
+								var(--spectrum-thumbnail-focus-indicator-thickness)
+							))*-1);
+			inset-block-start:calc((var(
+								--mod-thumbnail-focus-indicator-gap,
+								var(--spectrum-thumbnail-focus-indicator-gap)
+							) + var(
+								--mod-thumbnail-focus-indicator-thickness,
+								var(--spectrum-thumbnail-focus-indicator-thickness)
+							))*-1);
 		}
 
 .spectrum-Thumbnail.is-focused .spectrum-Thumbnail-image-wrapper{
@@ -159,6 +180,12 @@ governing permissions and limitations under the License.
 				var(--spectrum-thumbnail-border-radius)
 			);
 		}
+
+.spectrum-Thumbnail{
+  vertical-align:top;
+  overflow:hidden;
+  z-index:0;
+}
 
 .spectrum-Thumbnail-layer{
 	border-style:solid;
@@ -197,7 +224,13 @@ governing permissions and limitations under the License.
 			--mod-thumbnail-border-width-selected,
 			var(--spectrum-thumbnail-border-width-selected)
 		);
-		outline-offset:calc(var(--mod-thumbnail-border-width-selected, var(--spectrum-thumbnail-border-width-selected)) - var(--mod-thumbnail-layer-border-width-inner, var(--spectrum-thumbnail-layer-border-width-inner)));
+		outline-offset:calc(var(
+					--mod-thumbnail-border-width-selected,
+					var(--spectrum-thumbnail-border-width-selected)
+				) - var(
+					--mod-thumbnail-layer-border-width-inner,
+					var(--spectrum-thumbnail-layer-border-width-inner)
+				));
 	}
 
 .spectrum-Thumbnail-layer-inner{
@@ -205,8 +238,14 @@ governing permissions and limitations under the License.
   align-items:center;
   justify-content:center;
 
-	inline-size:calc(var(--spectrum-thumbnail-size) - var(--mod-thumbnail-layer-border-width-inner, var(--spectrum-thumbnail-layer-border-width-inner)) * 2);
-	block-size:calc(var(--spectrum-thumbnail-size) - var(--mod-thumbnail-layer-border-width-inner, var(--spectrum-thumbnail-layer-border-width-inner)) * 2);
+	inline-size:calc(var(--spectrum-thumbnail-size) - (var(
+						--mod-thumbnail-layer-border-width-inner,
+						var(--spectrum-thumbnail-layer-border-width-inner)
+					))*2);
+	block-size:calc(var(--spectrum-thumbnail-size) - (var(
+						--mod-thumbnail-layer-border-width-inner,
+						var(--spectrum-thumbnail-layer-border-width-inner)
+					))*2);
 	outline-style:solid;
 	outline-color:var(
 		--highcontrast-thumbnail-layer-border-color-inner,
@@ -215,7 +254,13 @@ governing permissions and limitations under the License.
 			var(--spectrum-thumbnail-layer-border-color-inner)
 		)
 	);
-	outline-width:calc(var(--mod-thumbnail-layer-border-width-inner, var(--spectrum-thumbnail-layer-border-width-inner)) - var(--mod-thumbnail-layer-border-width-outer, var(--spectrum-thumbnail-layer-border-width-outer)));
+	outline-width:calc(var(
+				--mod-thumbnail-layer-border-width-inner,
+				var(--spectrum-thumbnail-layer-border-width-inner)
+			) - var(
+				--mod-thumbnail-layer-border-width-outer,
+				var(--spectrum-thumbnail-layer-border-width-outer)
+			));
 }
 
 .spectrum-Thumbnail-image-wrapper{

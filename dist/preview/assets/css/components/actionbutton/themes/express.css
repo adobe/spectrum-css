@@ -44,43 +44,43 @@ governing permissions and limitations under the License.
 }
 
 .spectrum-ActionButton {
-  --spectrum-actionbutton-background-color-default: var(--system-spectrum-actionbutton-background-color-default);
-  --spectrum-actionbutton-background-color-hover: var(--system-spectrum-actionbutton-background-color-hover);
-  --spectrum-actionbutton-background-color-down: var(--system-spectrum-actionbutton-background-color-down);
-  --spectrum-actionbutton-background-color-focus: var(--system-spectrum-actionbutton-background-color-focus);
-  --spectrum-actionbutton-border-color-default: var(--system-spectrum-actionbutton-border-color-default);
-  --spectrum-actionbutton-border-color-hover: var(--system-spectrum-actionbutton-border-color-hover);
-  --spectrum-actionbutton-border-color-down: var(--system-spectrum-actionbutton-border-color-down);
-  --spectrum-actionbutton-border-color-focus: var(--system-spectrum-actionbutton-border-color-focus);
-  --spectrum-actionbutton-background-color-disabled: var(--system-spectrum-actionbutton-background-color-disabled);
-  --spectrum-actionbutton-border-color-disabled: var(--system-spectrum-actionbutton-border-color-disabled)
+  --spectrum-actionbutton-background-color-default:var(--system-spectrum-actionbutton-background-color-default);
+  --spectrum-actionbutton-background-color-hover:var(--system-spectrum-actionbutton-background-color-hover);
+  --spectrum-actionbutton-background-color-down:var(--system-spectrum-actionbutton-background-color-down);
+  --spectrum-actionbutton-background-color-focus:var(--system-spectrum-actionbutton-background-color-focus);
+  --spectrum-actionbutton-border-color-default:var(--system-spectrum-actionbutton-border-color-default);
+  --spectrum-actionbutton-border-color-hover:var(--system-spectrum-actionbutton-border-color-hover);
+  --spectrum-actionbutton-border-color-down:var(--system-spectrum-actionbutton-border-color-down);
+  --spectrum-actionbutton-border-color-focus:var(--system-spectrum-actionbutton-border-color-focus);
+  --spectrum-actionbutton-background-color-disabled:var(--system-spectrum-actionbutton-background-color-disabled);
+  --spectrum-actionbutton-border-color-disabled:var(--system-spectrum-actionbutton-border-color-disabled)
 }
 
 .spectrum-ActionButton.spectrum-ActionButton--quiet {
-  --spectrum-actionbutton-background-color-default: var(--system-spectrum-actionbutton-quiet-background-color-default);
-  --spectrum-actionbutton-background-color-hover: var(--system-spectrum-actionbutton-quiet-background-color-hover);
-  --spectrum-actionbutton-background-color-down: var(--system-spectrum-actionbutton-quiet-background-color-down);
-  --spectrum-actionbutton-background-color-focus: var(--system-spectrum-actionbutton-quiet-background-color-focus)
+  --spectrum-actionbutton-background-color-default:var(--system-spectrum-actionbutton-quiet-background-color-default);
+  --spectrum-actionbutton-background-color-hover:var(--system-spectrum-actionbutton-quiet-background-color-hover);
+  --spectrum-actionbutton-background-color-down:var(--system-spectrum-actionbutton-quiet-background-color-down);
+  --spectrum-actionbutton-background-color-focus:var(--system-spectrum-actionbutton-quiet-background-color-focus)
 }
 
 .spectrum-ActionButton.spectrum-ActionButton--staticBlack {
-  --spectrum-actionbutton-border-color-default: var(--system-spectrum-actionbutton-staticblack-border-color-default);
-  --spectrum-actionbutton-border-color-hover: var(--system-spectrum-actionbutton-staticblack-border-color-hover);
-  --spectrum-actionbutton-border-color-down: var(--system-spectrum-actionbutton-staticblack-border-color-down);
-  --spectrum-actionbutton-border-color-focus: var(--system-spectrum-actionbutton-staticblack-border-color-focus);
-  --spectrum-actionbutton-background-color-default: var(--system-spectrum-actionbutton-staticblack-background-color-default);
-  --spectrum-actionbutton-background-color-hover: var(--system-spectrum-actionbutton-staticblack-background-color-hover);
-  --spectrum-actionbutton-background-color-down: var(--system-spectrum-actionbutton-staticblack-background-color-down);
-  --spectrum-actionbutton-background-color-focus: var(--system-spectrum-actionbutton-staticblack-background-color-focus)
+  --spectrum-actionbutton-border-color-default:var(--system-spectrum-actionbutton-staticblack-border-color-default);
+  --spectrum-actionbutton-border-color-hover:var(--system-spectrum-actionbutton-staticblack-border-color-hover);
+  --spectrum-actionbutton-border-color-down:var(--system-spectrum-actionbutton-staticblack-border-color-down);
+  --spectrum-actionbutton-border-color-focus:var(--system-spectrum-actionbutton-staticblack-border-color-focus);
+  --spectrum-actionbutton-background-color-default:var(--system-spectrum-actionbutton-staticblack-background-color-default);
+  --spectrum-actionbutton-background-color-hover:var(--system-spectrum-actionbutton-staticblack-background-color-hover);
+  --spectrum-actionbutton-background-color-down:var(--system-spectrum-actionbutton-staticblack-background-color-down);
+  --spectrum-actionbutton-background-color-focus:var(--system-spectrum-actionbutton-staticblack-background-color-focus)
 }
 
 .spectrum-ActionButton.spectrum-ActionButton--staticWhite {
-  --spectrum-actionbutton-border-color-default: var(--system-spectrum-actionbutton-staticwhite-border-color-default);
-  --spectrum-actionbutton-border-color-hover: var(--system-spectrum-actionbutton-staticwhite-border-color-hover);
-  --spectrum-actionbutton-border-color-down: var(--system-spectrum-actionbutton-staticwhite-border-color-down);
-  --spectrum-actionbutton-border-color-focus: var(--system-spectrum-actionbutton-staticwhite-border-color-focus);
-  --spectrum-actionbutton-background-color-default: var(--system-spectrum-actionbutton-staticwhite-background-color-default);
-  --spectrum-actionbutton-background-color-hover: var(--system-spectrum-actionbutton-staticwhite-background-color-hover);
-  --spectrum-actionbutton-background-color-down: var(--system-spectrum-actionbutton-staticwhite-background-color-down);
-  --spectrum-actionbutton-background-color-focus: var(--system-spectrum-actionbutton-staticwhite-background-color-focus)
+  --spectrum-actionbutton-border-color-default:var(--system-spectrum-actionbutton-staticwhite-border-color-default);
+  --spectrum-actionbutton-border-color-hover:var(--system-spectrum-actionbutton-staticwhite-border-color-hover);
+  --spectrum-actionbutton-border-color-down:var(--system-spectrum-actionbutton-staticwhite-border-color-down);
+  --spectrum-actionbutton-border-color-focus:var(--system-spectrum-actionbutton-staticwhite-border-color-focus);
+  --spectrum-actionbutton-background-color-default:var(--system-spectrum-actionbutton-staticwhite-background-color-default);
+  --spectrum-actionbutton-background-color-hover:var(--system-spectrum-actionbutton-staticwhite-background-color-hover);
+  --spectrum-actionbutton-background-color-down:var(--system-spectrum-actionbutton-staticwhite-background-color-down);
+  --spectrum-actionbutton-background-color-focus:var(--system-spectrum-actionbutton-staticwhite-background-color-focus)
 }

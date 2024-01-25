@@ -387,7 +387,11 @@ governing permissions and limitations under the License.
 .spectrum-Textfield.spectrum-Textfield--quiet::after{
 		content:"";
 		position:absolute;
-		inset-block-end:calc(-1 * (var(--mod-textfield-focus-indicator-gap, var(--spectrum-textfield-focus-indicator-gap)) + var(--mod-textfield-focus-indicator-width, var(--spectrum-textfield-focus-indicator-width))));
+		inset-block-end:calc((var(--mod-textfield-focus-indicator-gap,
+				var(--spectrum-textfield-focus-indicator-gap)
+			) + var(--mod-textfield-focus-indicator-width,
+				var(--spectrum-textfield-focus-indicator-width)
+			))*-1);
 		inset-inline-start:0;
 		inline-size:100%;
 		block-size:var(
@@ -512,7 +516,10 @@ governing permissions and limitations under the License.
 		);
 		grid-row:1;
 		grid-column:1 / span 1;
-		padding-inline-start:calc(var(--mod-textfield-corner-radius, var(--spectrum-textfield-corner-radius)) / 2);
+		padding-inline-start:calc(var(
+					--mod-textfield-corner-radius,
+					var(--spectrum-textfield-corner-radius)
+				)/2);
 	}
 
 .spectrum-Textfield--quiet .spectrum-FieldLabel{
@@ -533,7 +540,10 @@ governing permissions and limitations under the License.
 		);
 		grid-row:3;
 		grid-column:1 / span 2;
-		padding-inline-start:calc(var(--mod-textfield-corner-radius, var(--spectrum-textfield-corner-radius)) / 2);
+		padding-inline-start:calc(var(
+					--mod-textfield-corner-radius,
+					var(--spectrum-textfield-corner-radius)
+				)/2);
 	}
 
 .spectrum-Textfield-characterCount{
@@ -564,7 +574,7 @@ governing permissions and limitations under the License.
 	);
 	grid-row:1;
 	grid-column:2 / span 1;
-	padding-inline-end:calc(var(--mod-textfield-corner-radius, var(--spectrum-textfield-corner-radius)) / 2);
+	padding-inline-end:calc(var(--mod-textfield-corner-radius, var(--spectrum-textfield-corner-radius))/2);
 }
 
 .spectrum-Textfield--quiet .spectrum-Textfield-characterCount{
@@ -583,8 +593,14 @@ governing permissions and limitations under the License.
 		var(--spectrum-textfield-min-width)
 	);
 	block-size:var(--mod-textfield-height, var(--spectrum-textfield-height));
-	padding-block-start:calc(var(--mod-textfield-spacing-block-start, var(--spectrum-textfield-spacing-block-start)) - var(--mod-textfield-border-width, var(--spectrum-textfield-border-width)));
-	padding-block-end:calc(var(--mod-textfield-spacing-block-end, var(--spectrum-textfield-spacing-block-end)) - var(--mod-textfield-border-width, var(--spectrum-textfield-border-width)));
+	padding-block-start:calc(var(
+				--mod-textfield-spacing-block-start,
+				var(--spectrum-textfield-spacing-block-start)
+			) - var(--mod-textfield-border-width, var(--spectrum-textfield-border-width)));
+	padding-block-end:calc(var(
+				--mod-textfield-spacing-block-end,
+				var(--spectrum-textfield-spacing-block-end)
+			) - var(--mod-textfield-border-width, var(--spectrum-textfield-border-width)));
 
 	padding-inline:calc(var(--mod-textfield-spacing-inline, var(--spectrum-textfield-spacing-inline)) - var(--mod-textfield-border-width, var(--spectrum-textfield-border-width)));
 	text-indent:0;
@@ -597,9 +613,7 @@ governing permissions and limitations under the License.
 	border:var(
 			--mod-textfield-border-width,
 			var(--spectrum-textfield-border-width)
-		)
-		solid
-		var(
+		) solid var(
 			--highcontrast-textfield-border-color,
 			var(--mod-textfield-border-color, var(--spectrum-textfield-border-color))
 		);
@@ -607,12 +621,10 @@ governing permissions and limitations under the License.
 		--mod-textfield-corner-radius,
 		var(--spectrum-textfield-corner-radius)
 	);
-	transition:border-color
-		var(
+	transition:border-color var(
 			--mod-texfield-animation-duration,
 			var(--spectrum-texfield-animation-duration)
-		)
-		ease-in-out;
+		) ease-in-out;
 
 	font-size:var(
 		--mod-textfield-placeholder-font-size,
@@ -658,10 +670,6 @@ governing permissions and limitations under the License.
 		box-shadow:none;
 	}
 
-.spectrum-Textfield-input::-ms-input-placeholder{
-		opacity:1;
-	}
-
 .spectrum-Textfield-input::placeholder{
 		opacity:1;
 		font-size:var(
@@ -683,12 +691,10 @@ governing permissions and limitations under the License.
 				var(--spectrum-textfield-text-color-default)
 			)
 		);
-		transition:color
-			var(
+		transition:color var(
 				--mod-texfield-animation-duration,
 				var(--spectrum-texfield-animation-duration)
-			)
-			ease-in-out;
+			) ease-in-out;
 	}
 
 .spectrum-Textfield-input:lang(ja), .spectrum-Textfield-input:lang(zh), .spectrum-Textfield-input:lang(ko){
@@ -798,22 +804,6 @@ governing permissions and limitations under the License.
 				var(--spectrum-textfield-text-color-keyboard-focus)
 			)
 		);
-		outline:var(
-				--mod-textfield-focus-indicator-width,
-				var(--spectrum-textfield-focus-indicator-width)
-			)
-			solid;
-		outline-color:var(
-			--highcontrast-textfield-focus-indicator-color,
-			var(
-				--mod-textfield-focus-indicator-color,
-				var(--spectrum-textfield-focus-indicator-color)
-			)
-		);
-		outline-offset:var(
-			--mod-textfield-focus-indicator-gap,
-			var(--spectrum-textfield-focus-indicator-gap)
-		);
 	}
 
 .is-keyboardFocused .spectrum-Textfield-input::placeholder{
@@ -825,6 +815,24 @@ governing permissions and limitations under the License.
 				)
 			);
 		}
+
+.is-keyboardFocused .spectrum-Textfield-input{
+		outline:var(
+				--mod-textfield-focus-indicator-width,
+				var(--spectrum-textfield-focus-indicator-width)
+			) solid;
+		outline-color:var(
+			--highcontrast-textfield-focus-indicator-color,
+			var(
+				--mod-textfield-focus-indicator-color,
+				var(--spectrum-textfield-focus-indicator-color)
+			)
+		);
+		outline-offset:var(
+			--mod-textfield-focus-indicator-gap,
+			var(--spectrum-textfield-focus-indicator-gap)
+		);
+}
 
 .is-valid .spectrum-Textfield-input{
 		padding-inline-end:calc(var(--mod-textfield-icon-spacing-inline-start-valid, var(--spectrum-textfield-icon-spacing-inline-start-valid)) + var(--mod-textfield-icon-size-valid, var(--spectrum-textfield-icon-size-valid)) + var(--mod-textfield-icon-spacing-inline-end-valid, var(--spectrum-textfield-icon-spacing-inline-end-valid)) - var(--mod-textfield-border-width, var(--spectrum-textfield-border-width)));

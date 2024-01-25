@@ -38,37 +38,37 @@ governing permissions and limitations under the License.
   inline-size:var(--mod-colorhandle-size, var(--spectrum-colorhandle-size));
   block-size:var(--mod-colorhandle-size, var(--spectrum-colorhandle-size));
 
-  margin-inline:calc(-1 * var(--mod-colorhandle-size, var(--spectrum-colorhandle-size)) / 2);
-  margin-block:calc(-1 * var(--mod-colorhandle-size, var(--spectrum-colorhandle-size)) / 2);
+  margin-inline:calc(var(--mod-colorhandle-size, var(--spectrum-colorhandle-size))/2*-1);
+  margin-block:calc(var(--mod-colorhandle-size, var(--spectrum-colorhandle-size))/2*-1);
 
   border-width:var(--mod-colorhandle-border-width, var(--spectrum-colorhandle-border-width));
   border-color:var(--highcontrast-colorhandle-border-color, var(--mod-colorhandle-border-color, var(--spectrum-colorhandle-border-color)));
   border-style:solid;
 
-  box-shadow:0 0 0
-    var(--mod-colorhandle-outer-border-width, var(--spectrum-colorhandle-outer-border-width))
-    var(--mod-colorhandle-outer-border-color, var(--spectrum-colorhandle-outer-border-color));
+  box-shadow:0 0 0 var(--mod-colorhandle-outer-border-width, var(--spectrum-colorhandle-outer-border-width)) var(--mod-colorhandle-outer-border-color, var(--spectrum-colorhandle-outer-border-color));
 
   border-radius:100%;
-
-  transition:all var(--mod-colorhandle-animation-duration, var(--spectrum-colorhandle-animation-duration)) var(--mod-colorhandle-animation-easing, var(--spectrum-colorhandle-animation-easing));
 }
 .spectrum-ColorHandle::after{
     content:'';
-    inset-inline:calc(50% - var(--mod-colorhandle-hitarea-size, var(--spectrum-colorhandle-hitarea-size)) / 2);
-    inset-block:calc(50% - var(--mod-colorhandle-hitarea-size, var(--spectrum-colorhandle-hitarea-size)) / 2);
+    inset-inline:calc(50% - var(--mod-colorhandle-hitarea-size, var(--spectrum-colorhandle-hitarea-size))/2);
+    inset-block:calc(50% - var(--mod-colorhandle-hitarea-size, var(--spectrum-colorhandle-hitarea-size))/2);
     position:absolute;
     display:block;
     inline-size:var(--mod-colorhandle-hitarea-size, var(--spectrum-colorhandle-hitarea-size));
     block-size:var(--mod-colorhandle-hitarea-size, var(--spectrum-colorhandle-hitarea-size));
     border-radius:var(--mod-colorhandle-hitarea-border-radius, 100%);
   }
+.spectrum-ColorHandle{
+
+  transition:all var(--mod-colorhandle-animation-duration, var(--spectrum-colorhandle-animation-duration)) var(--mod-colorhandle-animation-easing, var(--spectrum-colorhandle-animation-easing));
+}
 .spectrum-ColorHandle.is-focused, .spectrum-ColorHandle:focus-visible{
       inline-size:var(--mod-colorhandle-focused-size, var(--spectrum-colorhandle-focused-size));
       block-size:var(--mod-colorhandle-focused-size, var(--spectrum-colorhandle-focused-size));
 
-      margin-inline:calc(-1 * var(--mod-colorhandle-size, var(--spectrum-colorhandle-size)));
-      margin-block:calc(-1 * var(--mod-colorhandle-size, var(--spectrum-colorhandle-size)));
+      margin-inline:calc(var(--mod-colorhandle-size, var(--spectrum-colorhandle-size))*-1);
+      margin-block:calc(var(--mod-colorhandle-size, var(--spectrum-colorhandle-size))*-1);
       outline:none;
   }
 .spectrum-ColorHandle.is-disabled{

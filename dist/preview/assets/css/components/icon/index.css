@@ -2,12 +2,15 @@
   display:inline-block;
   color:var(--mod-icon-color, inherit);
   fill:currentColor;
-  pointer-events:none;
 }
 
 .spectrum-Icon:not(:root), .spectrum-UIIcon:not(:root){
     overflow:hidden;
   }
+
+.spectrum-Icon, .spectrum-UIIcon{
+  pointer-events:none;
+}
 
 @media (forced-colors: active){
   .spectrum-Icon, .spectrum-UIIcon{
@@ -16,10 +19,10 @@
 }
 
 .spectrum-Icon{
-  --spectrum-icon-size-s:var(--spectrum-alias-workflow-icon-size-s, var(--spectrum-global-dimension-size-200));
-  --spectrum-icon-size-m:var(--spectrum-alias-workflow-icon-size-m, var(--spectrum-global-dimension-size-225));
+  --spectrum-icon-size-s:var(--spectrum-alias-workflow-icon-size-s);
+  --spectrum-icon-size-m:var(--spectrum-alias-workflow-icon-size-m);
   --spectrum-icon-size-l:var(--spectrum-alias-workflow-icon-size-l);
-  --spectrum-icon-size-xl:var(--spectrum-alias-workflow-icon-size-xl, var(--spectrum-global-dimension-size-275));
+  --spectrum-icon-size-xl:var(--spectrum-alias-workflow-icon-size-xl);
   --spectrum-icon-size-xxl:var(--spectrum-global-dimension-size-400);
 }
 
@@ -280,23 +283,23 @@
 }
 
 .spectrum-UIIcon-TripleGripper100{
-  width:var(--spectrum-alias-ui-icon-triplegripper-size-100-height, var(--spectrum-global-dimension-size-100));
+  width:var(--spectrum-alias-ui-icon-triplegripper-size-100-height);
   height:var(--spectrum-alias-ui-icon-triplegripper-size-100-width);
 }
 
 .spectrum-UIIcon-DoubleGripper100{
   width:var(--spectrum-alias-ui-icon-doublegripper-size-100-height);
-  height:var(--spectrum-alias-ui-icon-doublegripper-size-100-width, var(--spectrum-global-dimension-size-200));
+  height:var(--spectrum-alias-ui-icon-doublegripper-size-100-width);
 }
 
 .spectrum-UIIcon-SingleGripper100{
   width:var(--spectrum-alias-ui-icon-singlegripper-size-100-height);
-  height:var(--spectrum-alias-ui-icon-singlegripper-size-100-width, var(--spectrum-global-dimension-size-300));
+  height:var(--spectrum-alias-ui-icon-singlegripper-size-100-width);
 }
 
 .spectrum-UIIcon-CornerTriangle75{
-  width:var(--spectrum-alias-ui-icon-cornertriangle-size-75, var(--spectrum-global-dimension-size-65));
-  height:var(--spectrum-alias-ui-icon-cornertriangle-size-75, var(--spectrum-global-dimension-size-65));
+  width:var(--spectrum-alias-ui-icon-cornertriangle-size-75);
+  height:var(--spectrum-alias-ui-icon-cornertriangle-size-75);
 }
 
 .spectrum-UIIcon-CornerTriangle100{
@@ -305,8 +308,8 @@
 }
 
 .spectrum-UIIcon-CornerTriangle200{
-  width:var(--spectrum-alias-ui-icon-cornertriangle-size-200, var(--spectrum-global-dimension-size-75));
-  height:var(--spectrum-alias-ui-icon-cornertriangle-size-200, var(--spectrum-global-dimension-size-75));
+  width:var(--spectrum-alias-ui-icon-cornertriangle-size-200);
+  height:var(--spectrum-alias-ui-icon-cornertriangle-size-200);
 }
 
 .spectrum-UIIcon-CornerTriangle300{
@@ -315,13 +318,13 @@
 }
 
 .spectrum-UIIcon-Asterisk75{
-  width:var(--spectrum-alias-ui-icon-asterisk-size-75, var(--spectrum-global-dimension-static-size-100));
+  width:var(--spectrum-alias-ui-icon-asterisk-size-75);
   height:var(--spectrum-alias-ui-icon-asterisk-size-300);
 }
 
 .spectrum-UIIcon-Asterisk100{
-  width:var(--spectrum-alias-ui-icon-asterisk-size-100, var(--spectrum-global-dimension-size-100));
-  height:var(--spectrum-alias-ui-icon-asterisk-size-100, var(--spectrum-global-dimension-size-100));
+  width:var(--spectrum-alias-ui-icon-asterisk-size-100);
+  height:var(--spectrum-alias-ui-icon-asterisk-size-100);
 }
 
 .spectrum-UIIcon-Asterisk200{

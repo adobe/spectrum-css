@@ -20,10 +20,10 @@ governing permissions and limitations under the License.
 }
 
 .spectrum-Textfield {
-  --spectrum-textfield-border-color: var(--system-spectrum-textfield-border-color);
-  --spectrum-textfield-border-color-hover: var(--system-spectrum-textfield-border-color-hover);
-  --spectrum-textfield-border-color-focus: var(--system-spectrum-textfield-border-color-focus);
-  --spectrum-textfield-border-color-focus-hover: var(--system-spectrum-textfield-border-color-focus-hover);
-  --spectrum-textfield-border-color-keyboard-focus: var(--system-spectrum-textfield-border-color-keyboard-focus);
-  --spectrum-textfield-border-width: var(--system-spectrum-textfield-border-width)
+  --spectrum-textfield-border-color:var(--system-spectrum-textfield-border-color);
+  --spectrum-textfield-border-color-hover:var(--system-spectrum-textfield-border-color-hover);
+  --spectrum-textfield-border-color-focus:var(--system-spectrum-textfield-border-color-focus);
+  --spectrum-textfield-border-color-focus-hover:var(--system-spectrum-textfield-border-color-focus-hover);
+  --spectrum-textfield-border-color-keyboard-focus:var(--system-spectrum-textfield-border-color-keyboard-focus);
+  --spectrum-textfield-border-width:var(--system-spectrum-textfield-border-width)
 }

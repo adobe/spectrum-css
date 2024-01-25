@@ -47,7 +47,7 @@ governing permissions and limitations under the License.
   --spectrum-checkbox-focus-indicator-thickness:var(--spectrum-focus-indicator-thickness);
 
   --spectrum-checkbox-border-width:var(--spectrum-border-width-200);;
-  --spectrum-checkbox-selected-border-width:calc(var(--spectrum-checkbox-control-size) / 2);
+  --spectrum-checkbox-selected-border-width:calc(var(--spectrum-checkbox-control-size)/2);
   --spectrum-checkbox-top-to-text:var(--spectrum-component-top-to-text-100);
   --spectrum-checkbox-text-to-control:var(--spectrum-text-to-control-100);
   --spectrum-checkbox-animation-duration:var(--spectrum-animation-duration-100);
@@ -295,9 +295,8 @@ governing permissions and limitations under the License.
 
 .spectrum-Checkbox-input:focus-visible + .spectrum-Checkbox-box::after{
       forced-color-adjust:none;
-      box-shadow:0 0 0 var(--mod-checkbox-focus-indicator-thinkness, var(--spectrum-checkbox-focus-indicator-thickness))
-        var(--highcontrast-checkbox-focus-indicator-color, var(--mod-checkbox-focus-indicator-color, var(--spectrum-checkbox-focus-indicator-color)));
-      margin:calc(var(--mod-checkbox-focus-indicator-gap, var(--spectrum-checkbox-focus-indicator-gap)) * -1);
+      box-shadow:0 0 0 var(--mod-checkbox-focus-indicator-thinkness, var(--spectrum-checkbox-focus-indicator-thickness)) var(--highcontrast-checkbox-focus-indicator-color, var(--mod-checkbox-focus-indicator-color, var(--spectrum-checkbox-focus-indicator-color)));
+      margin:calc(var(--mod-checkbox-focus-indicator-gap, var(--spectrum-checkbox-focus-indicator-gap))*-1);
     }
 
 .spectrum-Checkbox-input:focus-visible + .spectrum-Checkbox-label{
@@ -318,7 +317,7 @@ governing permissions and limitations under the License.
   inline-size:var(--mod-checkbox-control-size, var(--spectrum-checkbox-control-size));
   block-size:var(--mod-checkbox-control-size, var(--spectrum-checkbox-control-size));
   --spectrum-checkbox-spacing:calc(var(--mod-checkbox-height, var(--spectrum-checkbox-height)) - var(--mod-checkbox-control-size, var(--spectrum-checkbox-control-size)));
-  margin:calc(var(--mod-checkbox-spacing, var(--spectrum-checkbox-spacing)) / 2) 0;
+  margin:calc(var(--mod-checkbox-spacing, var(--spectrum-checkbox-spacing))/2) 0;
 
   flex-grow:0;
   flex-shrink:0;
@@ -341,8 +340,7 @@ governing permissions and limitations under the License.
     border-width:var(--mod-checkbox-border-width, var(--spectrum-checkbox-border-width));
     border-style:solid;
 
-    transition:border var(--mod-checkbox-animation-duration, var(--spectrum-checkbox-animation-duration)) ease-in-out,
-    box-shadow var(--mod-checkbox-animation-duration, var(--spectrum-checkbox-animation-duration)) ease-in-out;
+    transition:border var(--mod-checkbox-animation-duration, var(--spectrum-checkbox-animation-duration)) ease-in-out, box-shadow var(--mod-checkbox-animation-duration, var(--spectrum-checkbox-animation-duration)) ease-in-out;
   }
 
 .spectrum-Checkbox-box::after{
@@ -356,8 +354,7 @@ governing permissions and limitations under the License.
     inset-block-start:0;
     margin:var(--mod-checkbox-focus-indicator-gap, var(--spectrum-checkbox-focus-indicator-gap));
 
-    transition:box-shadow var(--mod-checkbox-animation-duration, var(--spectrum-checkbox-animation-duration)) ease-out,
-    margin var(--mod-checkbox-animation-duration, var(--spectrum-checkbox-animation-duration)) ease-out;
+    transition:box-shadow var(--mod-checkbox-animation-duration, var(--spectrum-checkbox-animation-duration)) ease-out, margin var(--mod-checkbox-animation-duration, var(--spectrum-checkbox-animation-duration)) ease-out;
     transform:translate(0, 0);
   }
 

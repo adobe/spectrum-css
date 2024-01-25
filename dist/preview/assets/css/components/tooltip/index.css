@@ -14,9 +14,7 @@ governing permissions and limitations under the License.
   pointer-events:none;
   visibility:hidden;
   opacity:0%;
-  transition:transform var(--mod-overlay-animation-duration, var(--spectrum-animation-duration-100, 130ms)) ease-in-out,
-              opacity var(--mod-overlay-animation-duration, var(--spectrum-animation-duration-100, 130ms)) ease-in-out,
-              visibility 0ms linear var(--mod-overlay-animation-duration, var(--spectrum-animation-duration-100, 130ms));
+  transition:transform var(--mod-overlay-animation-duration, var(--spectrum-animation-duration-100, 130ms)) ease-in-out, opacity var(--mod-overlay-animation-duration, var(--spectrum-animation-duration-100, 130ms)) ease-in-out, visibility 0ms linear var(--mod-overlay-animation-duration, var(--spectrum-animation-duration-100, 130ms));
 }
 
 .spectrum-Tooltip.is-open{
@@ -286,7 +284,7 @@ governing permissions and limitations under the License.
 }
 
 .spectrum-Tooltip.is-open, .spectrum-Tooltip--top.is-open, .spectrum-Tooltip--top-left.is-open, .spectrum-Tooltip--top-right.is-open, .spectrum-Tooltip--top-start.is-open, .spectrum-Tooltip--top-end.is-open{
-    transform:translateY(calc(-1 * var(--mod-tooltip-animation-distance, var(--spectrum-tooltip-animation-distance))));
+    transform:translateY(calc(var(--mod-tooltip-animation-distance, var(--spectrum-tooltip-animation-distance))*-1));
   }
 
 .spectrum-Tooltip--bottom, .spectrum-Tooltip--bottom-left, .spectrum-Tooltip--bottom-right, .spectrum-Tooltip--bottom-start, .spectrum-Tooltip--bottom-end{
@@ -310,7 +308,7 @@ governing permissions and limitations under the License.
 }
 
 .spectrum-Tooltip--left.is-open, .spectrum-Tooltip--left-bottom.is-open, .spectrum-Tooltip--left-top.is-open{
-    transform:translateX(calc(-1 * var(--mod-tooltip-animation-distance, var(--spectrum-tooltip-animation-distance))));
+    transform:translateX(calc(var(--mod-tooltip-animation-distance, var(--spectrum-tooltip-animation-distance))*-1));
   }
 
 .spectrum-Tooltip--start, .spectrum-Tooltip--start-top, .spectrum-Tooltip--start-bottom{
@@ -318,7 +316,7 @@ governing permissions and limitations under the License.
 }
 
 .spectrum-Tooltip--start.is-open, .spectrum-Tooltip--start-top.is-open, .spectrum-Tooltip--start-bottom.is-open{
-    transform:translateX(calc(-1 * var(--mod-tooltip-animation-distance, var(--spectrum-tooltip-animation-distance))));
+    transform:translateX(calc(var(--mod-tooltip-animation-distance, var(--spectrum-tooltip-animation-distance))*-1));
   }
 
 [dir="rtl"] .spectrum-Tooltip--start.is-open, [dir="rtl"] .spectrum-Tooltip--start-top.is-open, [dir="rtl"] .spectrum-Tooltip--start-bottom.is-open{
@@ -334,7 +332,7 @@ governing permissions and limitations under the License.
   }
 
 [dir="rtl"] .spectrum-Tooltip--end.is-open, [dir="rtl"] .spectrum-Tooltip--end-top.is-open, [dir="rtl"] .spectrum-Tooltip--end-bottom.is-open{
-      transform:translateX(calc(-1 * var(--mod-tooltip-animation-distance, var(--spectrum-tooltip-animation-distance))));
+      transform:translateX(calc(var(--mod-tooltip-animation-distance, var(--spectrum-tooltip-animation-distance))*-1));
     }
 
 .u-tooltip-showOnHover{
@@ -395,7 +393,7 @@ governing permissions and limitations under the License.
     }
 
 .u-tooltip-showOnHover:hover .spectrum-Tooltip--top, .u-tooltip-showOnHover:hover .spectrum-Tooltip--top-left, .u-tooltip-showOnHover:hover .spectrum-Tooltip--top-right, .u-tooltip-showOnHover:hover .spectrum-Tooltip--top-start, .u-tooltip-showOnHover:hover .spectrum-Tooltip--top-end, .u-tooltip-showOnHover:focus .spectrum-Tooltip--top, .u-tooltip-showOnHover:focus .spectrum-Tooltip--top-left, .u-tooltip-showOnHover:focus .spectrum-Tooltip--top-right, .u-tooltip-showOnHover:focus .spectrum-Tooltip--top-start, .u-tooltip-showOnHover:focus .spectrum-Tooltip--top-end, .u-tooltip-showOnHover.is-focused .spectrum-Tooltip--top, .u-tooltip-showOnHover.is-focused .spectrum-Tooltip--top-left, .u-tooltip-showOnHover.is-focused .spectrum-Tooltip--top-right, .u-tooltip-showOnHover.is-focused .spectrum-Tooltip--top-start, .u-tooltip-showOnHover.is-focused .spectrum-Tooltip--top-end, .u-tooltip-showOnHover *:focus .spectrum-Tooltip--top, .u-tooltip-showOnHover *:focus .spectrum-Tooltip--top-left, .u-tooltip-showOnHover *:focus .spectrum-Tooltip--top-right, .u-tooltip-showOnHover *:focus .spectrum-Tooltip--top-start, .u-tooltip-showOnHover *:focus .spectrum-Tooltip--top-end{
-      transform:translate(-50%, calc(var(--mod-tooltip-animation-distance, var(--spectrum-tooltip-animation-distance)) * -1));
+      transform:translate(-50%, calc(var(--mod-tooltip-animation-distance, var(--spectrum-tooltip-animation-distance))*-1));
     }
 
 .u-tooltip-showOnHover:hover .spectrum-Tooltip--bottom, .u-tooltip-showOnHover:hover .spectrum-Tooltip--bottom-left, .u-tooltip-showOnHover:hover .spectrum-Tooltip--bottom-right, .u-tooltip-showOnHover:hover .spectrum-Tooltip--bottom-start, .u-tooltip-showOnHover:hover .spectrum-Tooltip--bottom-end, .u-tooltip-showOnHover:focus .spectrum-Tooltip--bottom, .u-tooltip-showOnHover:focus .spectrum-Tooltip--bottom-left, .u-tooltip-showOnHover:focus .spectrum-Tooltip--bottom-right, .u-tooltip-showOnHover:focus .spectrum-Tooltip--bottom-start, .u-tooltip-showOnHover:focus .spectrum-Tooltip--bottom-end, .u-tooltip-showOnHover.is-focused .spectrum-Tooltip--bottom, .u-tooltip-showOnHover.is-focused .spectrum-Tooltip--bottom-left, .u-tooltip-showOnHover.is-focused .spectrum-Tooltip--bottom-right, .u-tooltip-showOnHover.is-focused .spectrum-Tooltip--bottom-start, .u-tooltip-showOnHover.is-focused .spectrum-Tooltip--bottom-end, .u-tooltip-showOnHover *:focus .spectrum-Tooltip--bottom, .u-tooltip-showOnHover *:focus .spectrum-Tooltip--bottom-left, .u-tooltip-showOnHover *:focus .spectrum-Tooltip--bottom-right, .u-tooltip-showOnHover *:focus .spectrum-Tooltip--bottom-start, .u-tooltip-showOnHover *:focus .spectrum-Tooltip--bottom-end{
@@ -403,7 +401,7 @@ governing permissions and limitations under the License.
     }
 
 .u-tooltip-showOnHover:hover .spectrum-Tooltip--left, .u-tooltip-showOnHover:hover .spectrum-Tooltip--left-bottom, .u-tooltip-showOnHover:hover .spectrum-Tooltip--left-top, .u-tooltip-showOnHover:hover .spectrum-Tooltip--start, .u-tooltip-showOnHover:hover .spectrum-Tooltip--start-top, .u-tooltip-showOnHover:hover .spectrum-Tooltip--start-bottom, .u-tooltip-showOnHover:focus .spectrum-Tooltip--left, .u-tooltip-showOnHover:focus .spectrum-Tooltip--left-bottom, .u-tooltip-showOnHover:focus .spectrum-Tooltip--left-top, .u-tooltip-showOnHover:focus .spectrum-Tooltip--start, .u-tooltip-showOnHover:focus .spectrum-Tooltip--start-top, .u-tooltip-showOnHover:focus .spectrum-Tooltip--start-bottom, .u-tooltip-showOnHover.is-focused .spectrum-Tooltip--left, .u-tooltip-showOnHover.is-focused .spectrum-Tooltip--left-bottom, .u-tooltip-showOnHover.is-focused .spectrum-Tooltip--left-top, .u-tooltip-showOnHover.is-focused .spectrum-Tooltip--start, .u-tooltip-showOnHover.is-focused .spectrum-Tooltip--start-top, .u-tooltip-showOnHover.is-focused .spectrum-Tooltip--start-bottom, .u-tooltip-showOnHover *:focus .spectrum-Tooltip--left, .u-tooltip-showOnHover *:focus .spectrum-Tooltip--left-bottom, .u-tooltip-showOnHover *:focus .spectrum-Tooltip--left-top, .u-tooltip-showOnHover *:focus .spectrum-Tooltip--start, .u-tooltip-showOnHover *:focus .spectrum-Tooltip--start-top, .u-tooltip-showOnHover *:focus .spectrum-Tooltip--start-bottom{
-      transform:translate(calc(var(--mod-tooltip-animation-distance, var(--spectrum-tooltip-animation-distance)) * -1), -50%);
+      transform:translate(calc(var(--mod-tooltip-animation-distance, var(--spectrum-tooltip-animation-distance))*-1), -50%);
     }
 
 [dir="rtl"] .u-tooltip-showOnHover:hover .spectrum-Tooltip--start, [dir="rtl"] .u-tooltip-showOnHover:hover .spectrum-Tooltip--start-top, [dir="rtl"] .u-tooltip-showOnHover:hover .spectrum-Tooltip--start-bottom, [dir="rtl"] .u-tooltip-showOnHover:focus .spectrum-Tooltip--start, [dir="rtl"] .u-tooltip-showOnHover:focus .spectrum-Tooltip--start-top, [dir="rtl"] .u-tooltip-showOnHover:focus .spectrum-Tooltip--start-bottom, [dir="rtl"] .u-tooltip-showOnHover.is-focused .spectrum-Tooltip--start, [dir="rtl"] .u-tooltip-showOnHover.is-focused .spectrum-Tooltip--start-top, [dir="rtl"] .u-tooltip-showOnHover.is-focused .spectrum-Tooltip--start-bottom, [dir="rtl"] .u-tooltip-showOnHover *:focus .spectrum-Tooltip--start, [dir="rtl"] .u-tooltip-showOnHover *:focus .spectrum-Tooltip--start-top, [dir="rtl"] .u-tooltip-showOnHover *:focus .spectrum-Tooltip--start-bottom{
@@ -415,5 +413,5 @@ governing permissions and limitations under the License.
     }
 
 [dir="rtl"] .u-tooltip-showOnHover:hover .spectrum-Tooltip--end, [dir="rtl"] .u-tooltip-showOnHover:hover .spectrum-Tooltip--end-top, [dir="rtl"] .u-tooltip-showOnHover:hover .spectrum-Tooltip--end-bottom, [dir="rtl"] .u-tooltip-showOnHover:focus .spectrum-Tooltip--end, [dir="rtl"] .u-tooltip-showOnHover:focus .spectrum-Tooltip--end-top, [dir="rtl"] .u-tooltip-showOnHover:focus .spectrum-Tooltip--end-bottom, [dir="rtl"] .u-tooltip-showOnHover.is-focused .spectrum-Tooltip--end, [dir="rtl"] .u-tooltip-showOnHover.is-focused .spectrum-Tooltip--end-top, [dir="rtl"] .u-tooltip-showOnHover.is-focused .spectrum-Tooltip--end-bottom, [dir="rtl"] .u-tooltip-showOnHover *:focus .spectrum-Tooltip--end, [dir="rtl"] .u-tooltip-showOnHover *:focus .spectrum-Tooltip--end-top, [dir="rtl"] .u-tooltip-showOnHover *:focus .spectrum-Tooltip--end-bottom{
-        transform:translate(calc(var(--mod-tooltip-animation-distance, var(--spectrum-tooltip-animation-distance)) * -1), -50%);
+        transform:translate(calc(var(--mod-tooltip-animation-distance, var(--spectrum-tooltip-animation-distance))*-1), -50%);
       }

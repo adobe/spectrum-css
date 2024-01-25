@@ -260,6 +260,17 @@ governing permissions and limitations under the License.
     --highcontrast-table-selected-row-background-color:Highlight;
     --highcontrast-table-selected-row-text-color:HighlightText;
     --highcontrast-table-selected-row-text-color-default:HighlightText;
+  }
+
+    @supports (color: SelectedItem){
+  .spectrum-Table{
+      --highcontrast-table-selected-row-background-color:SelectedItem;
+      --highcontrast-table-selected-row-text-color:SelectedItemText;
+      --highcontrast-table-selected-row-text-color-default:SelectedItemText;
+  }
+    }
+
+    .spectrum-Table{
 
     --highcontrast-table-selected-row-background-color-focus:Highlight;
     --highcontrast-table-selected-row-text-color-focus:HighlightText;
@@ -272,14 +283,6 @@ governing permissions and limitations under the License.
     --highcontrast-table-focus-indicator-color:Highlight;
     --highcontrast-table-transition-duration:0;
   }
-
-    @supports (color: SelectedItem){
-  .spectrum-Table{
-      --highcontrast-table-selected-row-background-color:SelectedItem;
-      --highcontrast-table-selected-row-text-color:SelectedItemText;
-      --highcontrast-table-selected-row-text-color-default:SelectedItemText;
-  }
-    }
 
   .spectrum-Table-cell{
     forced-color-adjust:none;
@@ -404,33 +407,23 @@ governing permissions and limitations under the License.
   }
 
 .spectrum-Table-cell{
-  border-block-start:var(--mod-table-border-width, var(--spectrum-table-border-width))
-    solid
-    var(--highcontrast-table-divider-color, var(--mod-table-divider-color, var(--spectrum-table-divider-color)));
+  border-block-start:var(--mod-table-border-width, var(--spectrum-table-border-width)) solid var(--highcontrast-table-divider-color, var(--mod-table-divider-color, var(--spectrum-table-divider-color)));
 }
 
 .spectrum-Table-body .spectrum-Table-row:first-child .spectrum-Table-cell{
-    border-block-start:var(--mod-table-border-width, var(--spectrum-table-border-width))
-      solid
-      var(--highcontrast-table-border-color, var(--mod-table-border-color, var(--spectrum-table-border-color)));
+    border-block-start:var(--mod-table-border-width, var(--spectrum-table-border-width)) solid var(--highcontrast-table-border-color, var(--mod-table-border-color, var(--spectrum-table-border-color)));
   }
 
 .spectrum-Table-body .spectrum-Table-row:last-child .spectrum-Table-cell{
-    border-block-end:var(--mod-table-border-width, var(--spectrum-table-border-width))
-      solid
-      var(--highcontrast-table-border-color, var(--mod-table-border-color, var(--spectrum-table-border-color)));
+    border-block-end:var(--mod-table-border-width, var(--spectrum-table-border-width)) solid var(--highcontrast-table-border-color, var(--mod-table-border-color, var(--spectrum-table-border-color)));
   }
 
 .spectrum-Table-body .spectrum-Table-row .spectrum-Table-cell:first-child{
-    border-inline-start:var(--mod-table-outer-border-inline-width, var(--spectrum-table-outer-border-inline-width))
-      solid
-      var(--highcontrast-table-border-color, var(--mod-table-border-color, var(--spectrum-table-border-color)));
+    border-inline-start:var(--mod-table-outer-border-inline-width, var(--spectrum-table-outer-border-inline-width)) solid var(--highcontrast-table-border-color, var(--mod-table-border-color, var(--spectrum-table-border-color)));
   }
 
 .spectrum-Table-body .spectrum-Table-row .spectrum-Table-cell:last-child{
-    border-inline-end:var(--mod-table-outer-border-inline-width, var(--spectrum-table-outer-border-inline-width))
-      solid
-      var(--highcontrast-table-border-color, var(--mod-table-border-color, var(--spectrum-table-border-color)));
+    border-inline-end:var(--mod-table-outer-border-inline-width, var(--spectrum-table-outer-border-inline-width)) solid var(--highcontrast-table-border-color, var(--mod-table-border-color, var(--spectrum-table-border-color)));
   }
 
 .spectrum-Table-row:first-child .spectrum-Table-cell:first-child{
@@ -472,7 +465,7 @@ governing permissions and limitations under the License.
     outline-width:var(--mod-table-focus-indicator-thickness, var(--spectrum-table-focus-indicator-thickness));
     outline-style:solid;
     outline-color:var(--highcontrast-table-cell-focus-indicator-color, var(--highcontrast-table-focus-indicator-color, var(--mod-table-focus-indicator-color, var(--spectrum-table-focus-indicator-color))));
-    outline-offset:calc(-1 * var(--mod-table-focus-indicator-thickness, var(--spectrum-table-focus-indicator-thickness)) - var(--highcontrast-table-cell-focus-extra-offset, 0px));
+    outline-offset:calc(var(--mod-table-focus-indicator-thickness, var(--spectrum-table-focus-indicator-thickness))*-1 - var(--highcontrast-table-cell-focus-extra-offset, 0px));
   }
 
 .spectrum-Table-cell--divider{
@@ -534,7 +527,7 @@ governing permissions and limitations under the License.
     outline-width:var(--mod-table-focus-indicator-thickness, var(--spectrum-table-focus-indicator-thickness));
     outline-style:solid;
     outline-color:var(--highcontrast-table-focus-indicator-color, var(--mod-table-drop-zone-outline-color, var(--spectrum-table-drop-zone-outline-color)));
-    outline-offset:calc(-1 * var(--mod-table-focus-indicator-thickness, var(--spectrum-table-focus-indicator-thickness)));
+    outline-offset:calc(var(--mod-table-focus-indicator-thickness, var(--spectrum-table-focus-indicator-thickness))*-1);
     --mod-table-border-color:var(--highcontrast-table-focus-indicator-color, transparent);
   }
 
@@ -629,19 +622,18 @@ governing permissions and limitations under the License.
   overflow:auto;
 
   border-radius:var(--mod-table-border-radius, var(--spectrum-table-border-radius));
-  border-block:var(--mod-table-border-width, var(--spectrum-table-border-width))
-    solid
-    var(--highcontrast-table-border-color, var(--mod-table-border-color, var(--spectrum-table-border-color)));
-  border-inline:var(--mod-table-outer-border-inline-width, var(--spectrum-table-outer-border-inline-width))
-    solid
-    var(--highcontrast-table-border-color, var(--mod-table-border-color, var(--spectrum-table-border-color)));
-  scroll-padding-top:var(--mod-table-current-header-height, calc(var(--mod-table-header-line-height, var(--spectrum-table-row-line-height)) * var(--mod-table-header-font-size, var(--spectrum-table-row-font-size)) + var(--mod-table-header-top-to-text, var(--spectrum-table-header-top-to-text)) + var(--mod-table-header-bottom-to-text, var(--spectrum-table-header-bottom-to-text)) + var(--mod-table-border-width, var(--spectrum-table-border-width))));
+  border-block:var(--mod-table-border-width, var(--spectrum-table-border-width)) solid var(--highcontrast-table-border-color, var(--mod-table-border-color, var(--spectrum-table-border-color)));
+  border-inline:var(--mod-table-outer-border-inline-width, var(--spectrum-table-outer-border-inline-width)) solid var(--highcontrast-table-border-color, var(--mod-table-border-color, var(--spectrum-table-border-color)));
 }
 
 .spectrum-Table-scroller.spectrum-Table--quiet{
     --mod-table-header-background-color--quiet:var(--mod-table-header-background-color-scrollable, var(--spectrum-background-layer-1-color, var(--spectrum-gray-100)));
     border-block-start:none;
   }
+
+.spectrum-Table-scroller{
+  scroll-padding-top:var(--mod-table-current-header-height, calc(var(--mod-table-header-line-height, var(--spectrum-table-row-line-height))*var(--mod-table-header-font-size, var(--spectrum-table-row-font-size)) + var(--mod-table-header-top-to-text, var(--spectrum-table-header-top-to-text)) + var(--mod-table-header-bottom-to-text, var(--spectrum-table-header-bottom-to-text)) + var(--mod-table-border-width, var(--spectrum-table-border-width))));
+}
 
 .spectrum-Table-scroller .spectrum-Table-head{
     position:sticky;
@@ -650,9 +642,7 @@ governing permissions and limitations under the License.
   }
 
 .spectrum-Table-scroller .spectrum-Table-headCell{
-    border-block-end:var(--mod-table-border-width, var(--spectrum-table-border-width))
-      solid
-      var(--highcontrast-table-border-color, var(--mod-table-border-color, var(--spectrum-table-border-color)));
+    border-block-end:var(--mod-table-border-width, var(--spectrum-table-border-width)) solid var(--highcontrast-table-border-color, var(--mod-table-border-color, var(--spectrum-table-border-color)));
   }
 
 .spectrum-Table-scroller .spectrum-Table-body .spectrum-Table-row:first-child .spectrum-Table-cell{
@@ -694,7 +684,7 @@ governing permissions and limitations under the License.
   }
 
 .spectrum-Table-row--collapsible.is-last-tier .spectrum-Table-cell--collapsible{
-      padding-inline-start:calc(var(--spectrum-table-row-tier) * var(--spectrum-table-collapsible-tier-indent) + var(--mod-table-disclosure-icon-size, var(--spectrum-table-disclosure-icon-size)) + var(--mod-table-collapsible-disclosure-inline-spacing, var(--spectrum-table-collapsible-disclosure-inline-spacing)) * 2);
+      padding-inline-start:calc(var(--spectrum-table-row-tier)*var(--spectrum-table-collapsible-tier-indent) + var(--mod-table-disclosure-icon-size, var(--spectrum-table-disclosure-icon-size)) + var(--mod-table-collapsible-disclosure-inline-spacing, var(--spectrum-table-collapsible-disclosure-inline-spacing))*2);
     }
 
 .spectrum-Table-row--collapsible.is-last-tier .spectrum-Table-disclosureIcon{
@@ -703,7 +693,7 @@ governing permissions and limitations under the License.
 
 .spectrum-Table-row--collapsible .spectrum-Table-disclosureIcon{
     margin-inline:var(--mod-table-collapsible-disclosure-inline-spacing, var(--spectrum-table-collapsible-disclosure-inline-spacing));
-    margin-block-start:max(0px, calc((var(--mod-table-min-row-height, var(--spectrum-table-min-row-height)) - var(--mod-table-disclosure-icon-size, var(--spectrum-table-disclosure-icon-size))) / 2)
+    margin-block-start:max(0px, calc((var(--mod-table-min-row-height, var(--spectrum-table-min-row-height)) - var(--mod-table-disclosure-icon-size, var(--spectrum-table-disclosure-icon-size)))/2)
     );
   }
 
@@ -712,7 +702,7 @@ governing permissions and limitations under the License.
   }
 
 .spectrum-Table-cell--collapsible{
-  padding-inline-start:calc(var(--spectrum-table-row-tier, 0px) * var(--spectrum-table-collapsible-tier-indent));
+  padding-inline-start:calc(var(--spectrum-table-row-tier, 0px)*var(--spectrum-table-collapsible-tier-indent));
   padding-block:0;
 }
 
@@ -776,12 +766,12 @@ governing permissions and limitations under the License.
     outline-width:var(--mod-table-focus-indicator-thickness, var(--spectrum-table-focus-indicator-thickness));
     outline-style:solid;
     outline-color:var(--highcontrast-table-focus-indicator-color, var(--mod-table-focus-indicator-color, var(--spectrum-table-focus-indicator-color)));
-    outline-offset:calc(-1 * var(--mod-table-focus-indicator-thickness, var(--spectrum-table-focus-indicator-thickness)) - 2px);
+    outline-offset:calc(var(--mod-table-focus-indicator-thickness, var(--spectrum-table-focus-indicator-thickness))*-1 - 2px);
   }
 
 .spectrum-Table-row--thumbnail{
   --table-thumbnail-cell-block-spacing:var(--mod-table-thumbnail-block-spacing, var(--spectrum-table-thumbnail-block-spacing));
-  --table-thumbnail-inner-content-block-spacing:max(0px, calc((var(--mod-table-thumbnail-size, var(--spectrum-table-thumbnail-size)) - var(--mod-table-row-line-height, var(--spectrum-table-row-line-height)) * var(--mod-table-header-font-size, var(--spectrum-table-row-font-size))) / 2));
+  --table-thumbnail-inner-content-block-spacing:max(0px, calc((var(--mod-table-thumbnail-size, var(--spectrum-table-thumbnail-size)) - (var(--mod-table-row-line-height, var(--spectrum-table-row-line-height))*var(--mod-table-header-font-size, var(--spectrum-table-row-font-size))))/2));
 }
 
 .spectrum-Table-row--thumbnail .spectrum-Table-cell{
@@ -793,7 +783,7 @@ governing permissions and limitations under the License.
   }
 
 .spectrum-Table-row--thumbnail.spectrum-Table-row--collapsible{
-    --table-thumbnail-inner-minimum-block-spacing:max(0px, calc((var(--mod-table-disclosure-icon-size, var(--spectrum-table-disclosure-icon-size)) - var(--mod-table-thumbnail-size, var(--spectrum-table-thumbnail-size))) / 2));
+    --table-thumbnail-inner-minimum-block-spacing:max(0px, calc((var(--mod-table-disclosure-icon-size, var(--spectrum-table-disclosure-icon-size)) - var(--mod-table-thumbnail-size, var(--spectrum-table-thumbnail-size)))/2));
     --table-thumbnail-cell-block-spacing:max(
       var(--mod-table-thumbnail-block-spacing, var(--spectrum-table-thumbnail-block-spacing)),
       var(--table-thumbnail-inner-minimum-block-spacing)

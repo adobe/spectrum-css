@@ -19,9 +19,9 @@ governing permissions and limitations under the License.
 }
 
 .spectrum-Combobox {
-  --spectrum-combobox-border-color-default: var(--system-spectrum-combobox-border-color-default);
-  --spectrum-combobox-border-color-hover: var(--system-spectrum-combobox-border-color-hover);
-  --spectrum-combobox-border-color-focus: var(--system-spectrum-combobox-border-color-focus);
-  --spectrum-combobox-border-color-focus-hover: var(--system-spectrum-combobox-border-color-focus-hover);
-  --spectrum-combobox-border-color-key-focus: var(--system-spectrum-combobox-border-color-key-focus)
+  --spectrum-combobox-border-color-default:var(--system-spectrum-combobox-border-color-default);
+  --spectrum-combobox-border-color-hover:var(--system-spectrum-combobox-border-color-hover);
+  --spectrum-combobox-border-color-focus:var(--system-spectrum-combobox-border-color-focus);
+  --spectrum-combobox-border-color-focus-hover:var(--system-spectrum-combobox-border-color-focus-hover);
+  --spectrum-combobox-border-color-key-focus:var(--system-spectrum-combobox-border-color-key-focus)
 }
