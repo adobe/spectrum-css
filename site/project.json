@@ -2,6 +2,7 @@
 	"$schema": "../node_modules/nx/schemas/project-schema.json",
 	"name": "docs",
 	"tags": ["tooling"],
+	"implicitDependencies": ["tag:component", "ui-icons"],
 	"namedInputs": {
 		"core": ["{projectRoot}/*.pug"],
 		"tools": [
@@ -9,37 +10,29 @@
 			"{projectRoot}/resources",
 			"{projectRoot}/templates",
 			"{projectRoot}/index.js",
-			"{projectRoot}/util.js"
+			"{projectRoot}/util.js",
+			"{projectRoot}/.eleventy.js"
 		]
 	},
 	"targets": {
 		"clean": {},
 		"build": {
-			"cache": true,
-			"dependsOn": [
-				"^build",
-				"clean",
-				{ "target": "build", "projects": "tag:component" }
-			],
+			"dependsOn": ["^build", "clean"],
 			"outputs": ["{workspaceRoot}/dist"],
 			"options": {
 				"cwd": "{projectRoot}",
-				"commands": ["node ./tasks/cli.js"]
+				"commands": ["eleventy"]
 			}
 		},
 		"start": {
 			"cache": true,
-			"dependsOn": [
-				"^build",
-				"clean",
-				{ "target": "build", "projects": "tag:component" }
-			],
+			"dependsOn": ["^build", "clean"],
 			"inputs": ["core", "tools"],
 			"outputs": ["{workspaceRoot}/dist"],
 			"executor": "nx:run-commands",
 			"options": {
 				"cwd": "{projectRoot}",
-				"commands": ["node ./tasks/cli.js --start"]
+				"commands": ["eleventy --serve --incremental"]
 			}
 		}
 	}
