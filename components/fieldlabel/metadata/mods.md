@@ -10,8 +10,8 @@
 | `--mod-fieldlabel-line-height`                    |
 | `--mod-fieldlabel-line-height-cjk`                |
 | `--mod-fieldlabel-min-height`                     |
+| `--mod-fieldlabel-side-margin-block-start`        |
 | `--mod-fieldlabel-side-padding-right`             |
-| `--mod-fieldlabel-side-padding-top`               |
 | `--mod-form-grid-template-columns`                |
 | `--mod-form-grid-template-columns-labels-above`   |
 | `--mod-form-inline-size`                          |
