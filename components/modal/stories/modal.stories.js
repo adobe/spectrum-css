@@ -49,5 +49,5 @@ export default {
 
 export const Default = Template.bind({});
 Default.args = {
-	content: ["This is a modal. Don't use it like this; get yourself a Modal."],
+	content: ["Modal is a base component used by other components, and should not be used on its own."],
 };
