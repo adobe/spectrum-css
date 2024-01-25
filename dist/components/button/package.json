@@ -1,0 +1,32 @@
+{
+  "name": "@spectrum-css/button",
+  "version": "11.0.19",
+  "description": "The Spectrum CSS button component",
+  "license": "Apache-2.0",
+  "author": "Adobe",
+  "homepage": "https://opensource.adobe.com/spectrum-css/button-accent",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/adobe/spectrum-css.git",
+    "directory": "components/button"
+  },
+  "bugs": {
+    "url": "https://github.com/adobe/spectrum-css/issues"
+  },
+  "main": "dist/index-vars.css",
+  "peerDependencies": {
+    "@spectrum-css/icon": ">=4",
+    "@spectrum-css/tokens": ">=13"
+  },
+  "peerDependenciesMeta": {
+    "@spectrum-css/icon": {
+      "optional": true
+    }
+  },
+  "devDependencies": {
+    "@spectrum-css/commons": "^9.0.2"
+  },
+  "publishConfig": {
+    "access": "public"
+  }
+}

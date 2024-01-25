@@ -1,0 +1,17 @@
+ {
+  --spectrum-global-color-red-600: rgb(var(--spectrum-global-color-red-600-rgb));
+  --spectrum-global-color-blue-400: rgb(var(--spectrum-global-color-blue-400-rgb));
+  --spectrum-global-color-gray-50: rgb(var(--spectrum-global-color-gray-50-rgb));
+  --spectrum-global-color-gray-75: rgb(var(--spectrum-global-color-gray-75-rgb));
+  --spectrum-global-color-gray-100: rgb(var(--spectrum-global-color-gray-100-rgb));
+  --spectrum-global-color-gray-300: rgb(var(--spectrum-global-color-gray-300-rgb));
+  --spectrum-global-color-gray-400: rgb(var(--spectrum-global-color-gray-400-rgb));
+  --spectrum-global-color-gray-500: rgb(var(--spectrum-global-color-gray-500-rgb));
+  --spectrum-global-color-gray-600: rgb(var(--spectrum-global-color-gray-600-rgb));
+  --spectrum-global-color-gray-700: rgb(var(--spectrum-global-color-gray-700-rgb));
+  --spectrum-global-color-gray-800: rgb(var(--spectrum-global-color-gray-800-rgb));
+  --spectrum-alias-background-color-primary: var(--spectrum-global-color-gray-100);
+  --spectrum-alias-dropshadow-color: rgba(0,0,0,0.3);
+  --spectrum-alias-background-color-quickactions: rgba(75,75,75,0.9);
+  --spectrum-alias-border-color-translucent: rgba(255,255,255,0.1);
+}

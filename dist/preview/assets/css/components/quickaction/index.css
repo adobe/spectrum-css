@@ -1,0 +1,71 @@
+.spectrum-QuickActions{
+  pointer-events:none;
+  visibility:hidden;
+  opacity:0%;
+  transition:transform var(--mod-overlay-animation-duration, var(--spectrum-animation-duration-100, 130ms)) ease-in-out,
+              opacity var(--mod-overlay-animation-duration, var(--spectrum-animation-duration-100, 130ms)) ease-in-out,
+              visibility 0ms linear var(--mod-overlay-animation-duration, var(--spectrum-animation-duration-100, 130ms));
+}
+
+.spectrum-QuickActions.is-open{
+  pointer-events:auto;
+  visibility:visible;
+  opacity:100%;
+  transition-delay:var(--mod-overlay-animation-duration-opened, var(--spectrum-animation-duration-0, 0ms));
+}
+
+.spectrum-QuickActions--left.is-open{
+  transform:translateX(var(--mod-overlay-animation-distance, var(--spectrum-overlay-animation-distance, 6px)));
+}
+
+.spectrum-QuickActions--right.is-open{
+  transform:translateX(calc(-1 * var(--mod-overlay-animation-distance, var(--spectrum-overlay-animation-distance, 6px))));
+}
+
+.spectrum-QuickActions{
+  box-sizing:border-box;
+
+  display:inline-flex;
+  align-items:center;
+  justify-content:center;
+
+  padding-top:var(--spectrum-quickactions-padding-y, var(--spectrum-global-dimension-size-50));
+
+  padding-bottom:var(--spectrum-quickactions-padding-y, var(--spectrum-global-dimension-size-50));
+  padding-left:var(--spectrum-quickactions-padding-x, var(--spectrum-global-dimension-size-50));
+  padding-right:var(--spectrum-quickactions-padding-x, var(--spectrum-global-dimension-size-50));
+
+  height:var(--spectrum-quickactions-height, var(--spectrum-global-dimension-size-500));
+
+  border-radius:var(--spectrum-quickactions-border-radius, var(--spectrum-alias-border-radius-regular));
+}
+
+[dir="ltr"] .spectrum-QuickActions .spectrum-ActionButton + .spectrum-ActionButton{
+    margin-left:var(--spectrum-quickactions-button-gap-x, var(--spectrum-global-dimension-size-100));
+}
+
+[dir="rtl"] .spectrum-QuickActions .spectrum-ActionButton + .spectrum-ActionButton{
+    margin-right:var(--spectrum-quickactions-button-gap-x, var(--spectrum-global-dimension-size-100));
+}
+
+[dir="ltr"] .spectrum-QuickActions--textOnly .spectrum-ActionButton + .spectrum-ActionButton{
+    margin-left:var(--spectrum-quickactions-text-button-gap-x, var(--spectrum-global-dimension-size-50));
+}
+
+[dir="rtl"] .spectrum-QuickActions--textOnly .spectrum-ActionButton + .spectrum-ActionButton{
+    margin-right:var(--spectrum-quickactions-text-button-gap-x, var(--spectrum-global-dimension-size-50));
+}
+
+.spectrum-QuickActions--right.is-open{
+  }
+
+.spectrum-QuickActions--left.is-open{
+  }
+
+.spectrum-QuickActions-overlay{
+  background-color:var(--spectrum-quickactions-overlay-color, var(--spectrum-alias-background-color-quickactions-overlay));
+}
+
+.spectrum-QuickActions{
+  background-color:var(--spectrum-quickactions-background-color, var(--spectrum-alias-background-color-quickactions));
+}

@@ -1,0 +1,30 @@
+{
+  "name": "@spectrum-css/splitbutton",
+  "version": "7.0.3",
+  "description": "The Spectrum CSS splitbutton component",
+  "license": "Apache-2.0",
+  "author": "Adobe",
+  "homepage": "https://opensource.adobe.com/spectrum-css/splitbutton",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/adobe/spectrum-css.git",
+    "directory": "components/splitbutton"
+  },
+  "bugs": {
+    "url": "https://github.com/adobe/spectrum-css/issues"
+  },
+  "main": "dist/index-vars.css",
+  "peerDependencies": {
+    "@spectrum-css/button": ">=11",
+    "@spectrum-css/icon": ">=4",
+    "@spectrum-css/vars": ">=9"
+  },
+  "peerDependenciesMeta": {
+    "@spectrum-css/icon": {
+      "optional": true
+    }
+  },
+  "publishConfig": {
+    "access": "public"
+  }
+}

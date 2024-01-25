@@ -1,0 +1,38 @@
+{
+  "name": "@spectrum-css/popover",
+  "version": "6.1.0",
+  "description": "The Spectrum CSS popover component",
+  "license": "Apache-2.0",
+  "author": "Adobe",
+  "homepage": "https://opensource.adobe.com/spectrum-css/popover",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/adobe/spectrum-css.git",
+    "directory": "components/popover"
+  },
+  "bugs": {
+    "url": "https://github.com/adobe/spectrum-css/issues"
+  },
+  "main": "dist/index-vars.css",
+  "peerDependencies": {
+    "@spectrum-css/alertdialog": ">=1",
+    "@spectrum-css/dialog": ">=9",
+    "@spectrum-css/divider": ">=2",
+    "@spectrum-css/menu": ">=5",
+    "@spectrum-css/tokens": ">=13"
+  },
+  "peerDependenciesMeta": {
+    "@spectrum-css/divider": {
+      "optional": true
+    },
+    "@spectrum-css/menu": {
+      "optional": true
+    }
+  },
+  "devDependencies": {
+    "@spectrum-css/commons": "^9.0.2"
+  },
+  "publishConfig": {
+    "access": "public"
+  }
+}

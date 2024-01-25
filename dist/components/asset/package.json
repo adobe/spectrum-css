@@ -1,0 +1,23 @@
+{
+  "name": "@spectrum-css/asset",
+  "version": "3.0.52",
+  "description": "The Spectrum CSS asset component",
+  "license": "Apache-2.0",
+  "author": "Adobe",
+  "homepage": "https://opensource.adobe.com/spectrum-css/asset",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/adobe/spectrum-css.git",
+    "directory": "components/asset"
+  },
+  "bugs": {
+    "url": "https://github.com/adobe/spectrum-css/issues"
+  },
+  "main": "dist/index-vars.css",
+  "peerDependencies": {
+    "@spectrum-css/vars": ">=9"
+  },
+  "publishConfig": {
+    "access": "public"
+  }
+}

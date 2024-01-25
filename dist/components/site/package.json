@@ -1,0 +1,23 @@
+{
+  "name": "@spectrum-css/site",
+  "version": "4.0.4",
+  "description": "The Spectrum CSS Site component",
+  "license": "Apache-2.0",
+  "author": "Adobe",
+  "homepage": "https://opensource.adobe.com/spectrum-css/",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/adobe/spectrum-css.git",
+    "directory": "components/site"
+  },
+  "bugs": {
+    "url": "https://github.com/adobe/spectrum-css/issues"
+  },
+  "main": "dist/index-vars.css",
+  "peerDependencies": {
+    "@spectrum-css/vars": ">=9"
+  },
+  "publishConfig": {
+    "access": "public"
+  }
+}

@@ -1,0 +1,215 @@
+/*!
+Copyright 2023 Adobe. All rights reserved.
+This file is licensed to you under the Apache License, Version 2.0 (the "License");
+you may not use this file except in compliance with the License. You may obtain a copy
+of the License at http://www.apache.org/licenses/LICENSE-2.0
+
+Unless required by applicable law or agreed to in writing, software distributed under
+the License is distributed on an "AS IS" BASIS, WITHOUT WARRANTIES OR REPRESENTATIONS
+OF ANY KIND, either express or implied. See the License for the specific language
+governing permissions and limitations under the License.
+*/
+
+.spectrum-Rating{
+  --spectrum-rating-icon-height:var(--spectrum-workflow-icon-size-100);
+  --spectrum-rating-icon-width:var(--spectrum-workflow-icon-size-100);
+  --spectrum-rating-border-radius:var(--spectrum-corner-radius-100);
+  --spectrum-rating-focus-indicator-thickness:var(--spectrum-focus-indicator-thickness);
+  --spectrum-rating-focus-indicator-color:var(--spectrum-focus-indicator-color);
+  --spectrum-rating-focus-indicator-gap:var(--spectrum-focus-indicator-gap);
+  --spectrum-rating-icon-spacing-vertical-top:var(--spectrum-component-top-to-workflow-icon-100);
+  --spectrum-rating-indicator-border-radius:var(--spectrum-corner-radius-75);
+  --spectrum-rating-indicator-height:var(--spectrum-border-width-200);
+  --spectrum-rating-emphasized-icon-color-default:var(--spectrum-accent-content-color-default);
+  --spectrum-rating-emphasized-icon-color-hover:var(--spectrum-accent-content-color-hover);
+  --spectrum-rating-emphasized-icon-color-down:var(--spectrum-accent-content-color-down);
+  --spectrum-rating-emphasized-icon-color-key-focus:var(--spectrum-accent-content-color-key-focus);
+  --spectrum-rating-icon-color-disabled:var(--spectrum-disabled-content-color);
+  --spectrum-rating-icon-count:var(--spectrum-rating-icon-count);
+}
+
+.spectrum-Rating.is-focused{
+    box-shadow:0 0 0 var(--mod-rating-focus-indicator-thickness, var(--spectrum-rating-focus-indicator-thickness)) var(--highcontrast-rating-focus-indicator-color, var(--mod-rating-focus-indicator-color, var(--spectrum-rating-focus-indicator-color)));
+  }
+
+.spectrum-Rating.is-focused .spectrum-Rating-icon{
+      color:var(--highcontrast-rating-icon-color-key-focus, var(--mod-rating-icon-color-key-focus, var(--spectrum-rating-icon-color-key-focus)));
+    }
+
+.spectrum-Rating.is-focused .spectrum-Rating-icon.is-selected{
+      color:var(--highcontrast-rating-icon-color-key-focus, var(--mod-rating-icon-color-key-focus, var(--spectrum-rating-icon-color-key-focus)));
+    }
+
+.spectrum-Rating:hover .spectrum-Rating-icon{
+      color:var(--highcontrast-rating-icon-color-default, var(--mod-rating-icon-color-default, var(--spectrum-rating-icon-color-default)));
+    }
+
+.spectrum-Rating:hover .spectrum-Rating-icon:hover{
+      color:var(--highcontrast-rating-icon-color-hover, var(--mod-rating-icon-color-hover, var(--spectrum-rating-icon-color-hover)));
+    }
+
+.spectrum-Rating:hover .spectrum-Rating-icon:active{
+      color:var(--highcontrast-rating-icon-color-down, var(--mod-rating-icon-color-down, var(--spectrum-rating-icon-color-down)));
+    }
+
+.spectrum-Rating:hover .spectrum-Rating-icon.is-currentValue::after{
+      background:currentColor;
+    }
+
+.spectrum-Rating{
+  position:relative;
+  display:inline-flex;
+  flex:0 0 auto;
+
+  gap:var(--mod-rating-icon-spacing, var(--spectrum-rating-icon-spacing));
+
+  inline-size:calc((var(--mod-rating-icon-width, var(--spectrum-rating-icon-width)) + var(--mod-rating-icon-spacing, var(--spectrum-rating-icon-spacing))) * var(--mod-rating-icon-count, var(--spectrum-rating-icon-count)));
+  border-radius:var(--mod-rating-border-radius, var(--spectrum-rating-border-radius));
+
+  padding-inline:calc(var(--mod-rating-icon-spacing, var(--spectrum-rating-icon-spacing)) + var(--mod-rating-focus-indicator-gap, var(--spectrum-rating-focus-indicator-gap)) - 1.5px);
+
+  cursor:pointer;
+}
+
+.spectrum-Rating.is-disabled, .spectrum-Rating.is-readOnly{
+    cursor:default;
+    pointer-events:none;
+  }
+
+.spectrum-Rating:hover .spectrum-Rating-starActive{
+      display:block;
+    }
+
+.spectrum-Rating:hover .spectrum-Rating-starInactive{
+      display:none;
+    }
+
+.spectrum-Rating-input{
+  position:absolute;
+  z-index:0;
+  inline-size:100%;
+  block-size:100%;
+  margin:0;
+  opacity:0;
+  pointer-events:none;
+}
+
+.spectrum-Rating-icon{
+  position:relative;
+  background-size:contain;
+  background-repeat:no-repeat;
+  inline-size:var(--mod-rating-icon-width, var(--spectrum-rating-icon-width));
+  block-size:var(--mod-rating-icon-height, var(--spectrum-rating-icon-height));
+  padding-block:calc(var(--mod-rating-icon-spacing-vertical-top, var(--spectrum-rating-icon-spacing-vertical-top)) + var(--mod-rating-focus-indicator-gap, var(--spectrum-rating-focus-indicator-gap)));
+}
+
+.spectrum-Rating-icon .spectrum-Rating-starActive{
+    display:none;
+  }
+
+.spectrum-Rating-icon .spectrum-Rating-starInactive{
+    display:block;
+  }
+
+.spectrum-Rating-icon.is-selected .spectrum-Rating-starActive{
+      display:block;
+    }
+
+.spectrum-Rating-icon.is-selected .spectrum-Rating-starInactive{
+      display:none;
+    }
+
+.spectrum-Rating-icon.is-currentValue::after{
+    border-radius:var(--mod-rating-indicator-border-radius, var(--spectrum-rating-indicator-border-radius));
+    content:'';
+    block-size:var(--mod-rating-indicator-height, var(--spectrum-rating-indicator-height));
+    inline-size:var(--spectrum-rating-indicator-width);
+    inset-block-end:calc(var(--mod-rating-focus-indicator-gap, var(--spectrum-rating-focus-indicator-gap)) * 2 - 1px);
+    position:absolute;
+  }
+
+.spectrum-Rating-icon:hover ~ .spectrum-Rating-icon .spectrum-Rating-starActive{
+      display:none;
+    }
+
+.spectrum-Rating-icon:hover ~ .spectrum-Rating-icon .spectrum-Rating-starInactive{
+      display:block;
+    }
+
+.spectrum-Rating-starActive, .spectrum-Rating-starInactive{
+  margin:0 auto;
+}
+
+.spectrum-Rating-icon{
+  color:var(--highcontrast-rating-icon-color-default, var(--mod-rating-icon-color-default, var(--spectrum-rating-icon-color-default)));
+}
+
+.spectrum-Rating-icon.is-selected{
+    color:var(--highcontrast-rating-icon-color-default, var(--mod-rating-icon-color-default, var(--spectrum-rating-icon-color-default)));
+  }
+
+.spectrum-Rating-icon:hover ~ .spectrum-Rating-icon{
+      color:var(--highcontrast-rating-icon-color-default, var(--mod-rating-icon-color-default, var(--spectrum-rating-icon-color-default)));
+    }
+
+.spectrum-Rating--emphasized.is-focused .spectrum-Rating-icon.is-selected{
+      color:var(--highcontrast-rating-emphasized-icon-color-key-focus, var(--mod-rating-emphasized-icon-color-key-focus, var(--spectrum-rating-emphasized-icon-color-key-focus)));
+    }
+
+.spectrum-Rating--emphasized .spectrum-Rating-icon{
+    color:var(--highcontrast-rating-icon-color-default, var(--mod-rating-icon-color-default, var(--spectrum-rating-icon-color-default)));
+  }
+
+.spectrum-Rating--emphasized .spectrum-Rating-icon.is-selected{
+      color:var(--highcontrast-rating-emphasized-icon-color-default, var(--mod-rating-emphasized-icon-color-default, var(--spectrum-rating-emphasized-icon-color-default)));
+    }
+
+.spectrum-Rating--emphasized .spectrum-Rating-icon:hover ~ .spectrum-Rating-icon{
+       color:var(--highcontrast-rating-icon-color-default, var(--mod-rating-icon-color-default, var(--spectrum-rating-icon-color-default)));
+    }
+
+.spectrum-Rating--emphasized:hover .spectrum-Rating-icon{
+    color:var(--highcontrast-rating-emphasized-icon-color-default, var(--mod-rating-emphasized-icon-color-default, var(--spectrum-rating-emphasized-icon-color-default)));
+  }
+
+.spectrum-Rating--emphasized:hover .spectrum-Rating-icon:hover{
+      color:var(--highcontrast-rating-emphasized-icon-color-hover, var(--mod-rating-emphasized-icon-color-hover, var(--spectrum-rating-emphasized-icon-color-hover)));
+    }
+
+.spectrum-Rating--emphasized:hover .spectrum-Rating-icon:hover ~ .spectrum-Rating-icon{
+      color:var(--highcontrast-rating-icon-color-default, var(--mod-rating-icon-color-default, var(--spectrum-rating-icon-color-default)));
+    }
+
+.spectrum-Rating--emphasized:hover .spectrum-Rating-icon:active{
+      color:var(--highcontrast-rating-emphasized-icon-color-down, var(--mod-rating-emphasized-icon-color-down, var(--spectrum-rating-emphasized-icon-color-down)));
+    }
+
+.spectrum-Rating.is-disabled .spectrum-Rating-icon{
+    color:var(--highcontrast-rating-icon-color-disabled, var(--mod-rating-icon-color-disabled, var(--spectrum-rating-icon-color-disabled)));
+  }
+
+.spectrum-Rating.is-disabled .spectrum-Rating-icon.is-selected{
+      color:var(--highcontrast-rating-icon-color-disabled, var(--mod-rating-icon-color-disabled, var(--spectrum-rating-icon-color-disabled)));
+    }
+
+@media (forced-colors: active){
+  .spectrum-Rating{
+    --highcontrast-rating-icon-color-key-focus:CanvasText;
+    --highcontrast-rating-icon-color-disabled:GrayText;
+    --highcontrast-rating-emphasized-icon-color-default:Highlight;
+    --highcontrast-rating-emphasized-icon-color-hover:Highlight;
+    --highcontrast-rating-emphasized-icon-color-down:Highlight;
+  }
+
+    .spectrum-Rating.is-focused{
+      outline:1px solid CanvasText;
+    }
+
+    .spectrum-Rating:hover .spectrum-Rating-icon.is-currentValue::after{
+      background-color:var(--highcontrast-rating-icon-color-key-focus);
+    }
+
+    .spectrum-Rating--emphasized:hover .spectrum-Rating-icon.is-currentValue::after{
+      background-color:var(--highcontrast-rating-emphasized-icon-color-default);
+    }
+}

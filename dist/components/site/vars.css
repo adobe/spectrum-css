@@ -1,0 +1,18 @@
+
+.spectrum-Site,
+.spectrum-CSSComponent,
+.spectrum-CSSExample,
+.spectrum-CSS,
+.spectrum-Examples,
+.spectrum-Button,
+.spectrum-CenteredImage,
+.spectrum-CodeBlock,
+.spectrum-HomeCards,
+.spectrum-HomeCard {
+  --spectrum-alias-border-radius-regular: var(--spectrum-global-dimension-size-50);
+  --spectrum-docs-static-white-background-color: undefined;
+  --spectrum-docs-static-black-background-color: undefined;
+  --spectrum-alias-border-size-thin: var(--spectrum-global-dimension-static-size-10);
+  --spectrum-alias-background-color-default: var(--spectrum-global-color-gray-100);
+  --spectrum-semantic-negative-text-color-small: var(--spectrum-global-color-red-600);
+}

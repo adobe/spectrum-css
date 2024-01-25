@@ -1,0 +1,27 @@
+{
+  "name": "@spectrum-css/tooltip",
+  "version": "5.1.22",
+  "description": "The Spectrum CSS tooltip component",
+  "license": "Apache-2.0",
+  "author": "Adobe",
+  "homepage": "https://opensource.adobe.com/spectrum-css/tooltip",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/adobe/spectrum-css.git",
+    "directory": "components/tooltip"
+  },
+  "bugs": {
+    "url": "https://github.com/adobe/spectrum-css/issues"
+  },
+  "main": "dist/index-vars.css",
+  "peerDependencies": {
+    "@spectrum-css/icon": ">=4",
+    "@spectrum-css/tokens": ">=13"
+  },
+  "devDependencies": {
+    "@spectrum-css/commons": "^9.0.2"
+  },
+  "publishConfig": {
+    "access": "public"
+  }
+}

@@ -1,0 +1,9 @@
+
+.spectrum-Asset {
+  --spectrum-asset-icon-min-width: var(--spectrum-global-dimension-size-600);
+  --spectrum-asset-icon-max-width: var(--spectrum-global-dimension-static-size-1000);
+  --spectrum-asset-icon-margin: var(--spectrum-global-dimension-size-250);
+  --highcontrast-asset-folder-background-color: undefined;
+  --highcontrast-asset-file-background-color: undefined;
+  --spectrum-asset-icon-outline-color: var(--spectrum-global-color-gray-500);
+}
