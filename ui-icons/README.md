@@ -2,7 +2,7 @@
 
 > The source for UI iconography used in Spectrum CSS
 
-This package uses SVGO to process SVGs and combines them into several sprite sheets for use in this and other projects.
+This package uses [SVGO](https://github.com/svg/svgo) to process SVGs and combines them into several sprite sheets for use in this and other projects.
 
 _Please do not import assets from the source directory as these are fluid and not part of the semantic publishing contract. Instead, use the `dist` directory._
 
