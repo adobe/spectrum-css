@@ -21,13 +21,14 @@ const yaml = require("js-yaml");
 const through = require("through2");
 const ext = require("replace-ext");
 const logger = require("gulplog");
-const colors = require("colors");
 const lunr = require("lunr");
 
 const dirs = require("../lib/dirs");
 const depUtils = require("../lib/depUtils");
 
 const npmFetch = require("npm-registry-fetch");
+
+require("colors");
 
 let minimumDeps = [
 	"icon",

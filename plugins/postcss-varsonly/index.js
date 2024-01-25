@@ -11,26 +11,38 @@ governing permissions and limitations under the License.
 */
 
 /**
- * @typedef Options
+ * @typedef {Object} Options
  */
 
 /** @type import('postcss').PluginCreator<Options> */
 module.exports = () => {
 	return {
-		postcssPlugin: "postcss-dropdupedvars",
-		Rule(rule, { result }) {
-			const seen = {};
+		postcssPlugin: "postcss-varsonly",
+		OnceExit(root) {
+			// Delete all comments
+			root.walkComments((comment) => {
+				comment.remove();
+			});
 
-			rule.walkDecls(/^--/, (decl) => {
-				if (seen[decl.prop]) {
-					decl.warn(
-						result,
-						`Dropping duplicate variable ${decl.prop}`
-					);
-					seen[decl.prop].remove();
+			// Process each rule
+			root.walkRules((rule) => {
+				// Don't break variable declarations
+				if (rule.selector === ":root") {
+					return;
 				}
 
-				seen[decl.prop] = decl;
+				// Check every declaration
+				rule.walkDecls((decl) => {
+					// Remove if not variable
+					if (!decl.value.match("var(.*?)")) {
+						decl.remove();
+					}
+				});
+
+				// Delete the rule if it's empty
+				if (rule.nodes.length === 0) {
+					rule.remove();
+				}
 			});
 		},
 	};

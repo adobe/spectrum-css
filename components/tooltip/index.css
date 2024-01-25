@@ -118,10 +118,6 @@ governing permissions and limitations under the License.
     line-height: var(--mod-tooltip-cjk-line-height, var(--spectrum-tooltip-cjk-line-height));
   }
 
-  &.is-open {
-    @extend %spectrum-overlay--open;
-  }
-
   & {
     cursor: default;
     -webkit-user-select: none;
@@ -146,6 +142,10 @@ governing permissions and limitations under the License.
   &--negative {
     background-color: var(--highcontrast-tooltip-background-color-negative, var(--mod-tooltip-background-color-negative, var(--spectrum-tooltip-background-color-negative)));
   }
+}
+
+.spectrum-Tooltip.is-open {
+  @extend %spectrum-overlay--open;
 }
 
 /****** Tip Base Styles ******/

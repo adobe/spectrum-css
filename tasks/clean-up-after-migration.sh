@@ -40,6 +40,6 @@ test -d "components/icon/medium" && rm -rf components/icon/medium
 # test -d "plugins/postcss-dropdupedvars" && rm -rf plugins/postcss-dropdupedvars
 # test -d "plugins/postcss-droproot" && rm -rf plugins/postcss-droproot
 # test -d "plugins/postcss-dropunusedvars" && rm -rf plugins/postcss-dropunusedvars
-# test -d "plugins/postcss-remapvars" && rm -rf plugins/postcss-remapvars
+test -d "plugins/postcss-remapvars" && rm -rf plugins/postcss-remapvars
 # test -d "plugins/postcss-transformselectors" && rm -rf plugins/postcss-transformselectors
 # test -d "plugins/postcss-varfallback" && rm -rf plugins/postcss-varfallback

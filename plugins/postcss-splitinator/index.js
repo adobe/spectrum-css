@@ -10,72 +10,78 @@ OF ANY KIND, either express or implied. See the License for the specific languag
 governing permissions and limitations under the License.
 */
 
-const postcss = require("postcss");
+/**
+ * @typedef Options
+ * @property {boolean} [noFlatVariables=false]
+ * @property {boolean} [noSelectors=false]
+ * @property {(identifierValue: string, identifierName: string) => string} [processIdentifier]
+ * @property {(selector: string, prop: string) => string} [getName]
+*/
 
-function getName(selector, prop) {
-	selector = selector.replace(/^:where\((.*?)\)$/, "$1");
+/** @type import('postcss').PluginCreator<Options> */
+module.exports = ({
+	noFlatVariables = false,
+	noSelectors = false,
+	processIdentifier,
+	getName = (selector, prop) => {
+		selector = selector.replace(/^:where\((.*?)\)$/, "$1");
 
-	// This regex is designed to pull spectrum-ActionButton out of a selector
-	let baseSelectorMatch = selector.match(/^\.([a-z]+-[\A-Z][^-. ]+)/);
-	if (baseSelectorMatch) {
-		const [, baseSelector] = baseSelectorMatch;
-		const baseSelectorRegExp = new RegExp(baseSelector, "gi");
-		prop = prop.replace(baseSelectorRegExp, "");
-		selector = baseSelector + selector.replace(baseSelectorRegExp, "");
-	}
+		// This regex is designed to pull spectrum-ActionButton out of a selector
+		let baseSelectorMatch = selector.match(/^\.([a-z]+-[\A-Z][^-. ]+)/);
+		if (baseSelectorMatch) {
+			const [, baseSelector] = baseSelectorMatch;
+			const baseSelectorRegExp = new RegExp(baseSelector, "gi");
+			prop = prop.replace(baseSelectorRegExp, "");
+			selector = baseSelector + selector.replace(baseSelectorRegExp, "");
+		}
 
-	selector = selector.replace(/is-/g, "");
+		selector = selector.replace(/is-/g, "");
 
-	let selectorParts = selector.replace(/\s+/g, "").replace(/,/g, "").split(".");
+		let selectorParts = selector.replace(/\s+/g, "").replace(/,/g, "").split(".");
 
-	return (
-		"--" +
-		(`system-` + `${selectorParts.join("-")}-${prop.substr(2)}`)
-			.replace(/-+/g, "-")
-			.toLowerCase()
-	);
-}
+		return (
+			"--" +
+			(`system-` + `${selectorParts.join("-")}-${prop.substr(2)}`)
+				.replace(/-+/g, "-")
+				.toLowerCase()
+		);
+	},
+}) => {
+	return {
+		postcssPlugin: "postcss-splitinator",
+		OnceExit(root, { Rule, Declaration }) {
+			const selectorMap = {};
 
-function process(root, options = {}) {
-	options.noFlatVariables = options.noFlatVariables ?? false;
-	options.noSelectors = options.noSelectors ?? false;
-	const selectorMap = {};
+			root.walkAtRules(/container/, (container) => {
+				const [, identifierName, identifierValue] = container.params.match(
+					/\(\s*--(.*?)\s*[:=]\s*(.*?)\s*\)/
+				);
 
-	root.walkAtRules((container) => {
-		if (container.name === "container") {
-			const [, identifierName, identifierValue] = container.params.match(
-				/\(\s*--(.*?)\s*[:=]\s*(.*?)\s*\)/
-			);
+				const rule = new Rule({
+					selector: `.${
+						typeof processIdentifier === "function"
+							? processIdentifier(identifierValue, identifierName)
+							: identifierValue
+					}`,
+					source: container.source,
+				});
 
-			const rule = postcss.rule({
-				selector: `.${
-					options && typeof options.processIdentifier === "function"
-						? options.processIdentifier(identifierValue, identifierName)
-						: identifierValue
-				}`,
-				source: container.source,
-			});
+				if (!noFlatVariables) {
+					container.parent.insertAfter(container, rule);
+				}
 
-			if (!options.noFlatVariables) {
-				container.parent.insertAfter(container, rule);
-			}
-
-			container.walkDecls((decl) => {
-				if (decl.prop.startsWith("--")) {
+				container.walkDecls(/^--/, (decl) => {
 					// Process rules that match multiple selectors separately to avoid weird var names and edge cases
 					// note: this doesn't support :where() and is likely brittle!
 					const selectors = decl.parent.selector.split(/\s*,\s*/);
 					selectors.forEach((selector) => {
-						const variableName =
-							typeof options.getName === "function"
-								? options.getName(selector, decl.prop)
-								: getName(selector, decl.prop);
+						const variableName = getName(selector, decl.prop);
 						const newDecl = decl.clone({
 							prop: variableName,
 						});
 						newDecl.raws.before = "\n  ";
 
-						if (!options.noFlatVariables) {
+						if (!noFlatVariables) {
 							rule.append(newDecl);
 						}
 
@@ -101,34 +107,27 @@ function process(root, options = {}) {
 							selectorNode[decl.prop] = `var(${variableName})`;
 						}
 					});
-				}
-			});
-
-			container.remove();
-		}
-	});
-
-	if (!options.noSelectors) {
-		for (let [selector, props] of Object.entries(selectorMap)) {
-			const rule = postcss.rule({
-				selector,
-			});
-
-			for (let [prop, value] of Object.entries(props)) {
-				const decl = postcss.decl({
-					prop,
-					value,
 				});
-				decl.raws.before = "\n  ";
 
-				rule.append(decl);
+				container.remove();
+			});
+
+			if (noSelectors) return;
+
+			for (let [selector, props] of Object.entries(selectorMap)) {
+				const rule = new Rule({ selector });
+
+				for (let [prop, value] of Object.entries(props)) {
+					const decl = new Declaration({ prop, value });
+					decl.raws.before = "\n  ";
+
+					rule.append(decl);
+				}
+
+				root.append(rule);
 			}
+		},
+	};
+};
 
-			root.append(rule);
-		}
-	}
-}
-
-module.exports = postcss.plugin("postcss-splitinator", function (options) {
-	return (root, result) => process(root, options);
-});
+module.exports.postcss = true;

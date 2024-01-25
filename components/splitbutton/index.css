@@ -10,8 +10,6 @@ OF ANY KIND, either express or implied. See the License for the specific languag
 governing permissions and limitations under the License.
 */
 
-@import "@spectrum-css/vars/dist/components/spectrum-button.css";
-
 .spectrum-SplitButton {
   --spectrum-splitbutton-trigger-border-left: 0;
   --spectrum-splitbutton-trigger-min-width: 0;
@@ -26,27 +24,27 @@ governing permissions and limitations under the License.
 	&:dir(rtl) {
 		--spectrum-logical-rotation: matrix(-1, 0, 0, 1, 0, 0);
 	}
-}
 
-.spectrum-SplitButton-trigger {
-  --spectrum-splitbutton-trigger-round-edge-padding: var(--spectrum-global-dimension-size-125);
-  --spectrum-splitbutton-trigger-flat-edge-padding: var(--spectrum-global-dimension-size-100);
+  & .spectrum-SplitButton-trigger {
+    --spectrum-splitbutton-trigger-round-edge-padding: var(--spectrum-global-dimension-size-125);
+    --spectrum-splitbutton-trigger-flat-edge-padding: var(--spectrum-global-dimension-size-100);
 
-  --spectrum-splitbutton-cta-trigger-flat-edge-padding: calc(var(--spectrum-splitbutton-trigger-flat-edge-padding) - var(--spectrum-button-m-primary-outline-texticon-border-size));
-}
+    --spectrum-splitbutton-cta-trigger-flat-edge-padding: calc(var(--spectrum-splitbutton-trigger-flat-edge-padding) - var(--spectrum-button-m-primary-outline-texticon-border-size));
+  }
 
-.spectrum-SplitButton-action {
-  --spectrum-splitbutton-flat-edge-padding: calc(
-    var(--spectrum-button-m-primary-outline-texticon-padding-left) -
-    var(--spectrum-button-m-primary-outline-texticon-border-size) * 2
-  );
+  & .spectrum-SplitButton-action {
+    --spectrum-splitbutton-flat-edge-padding: calc(
+      var(--spectrum-button-m-primary-outline-texticon-padding-left) -
+      var(--spectrum-button-m-primary-outline-texticon-border-size) * 2
+    );
 
-  --spectrum-splitbutton-round-edge-padding: var(--spectrum-button-m-primary-outline-texticon-padding-right);
+    --spectrum-splitbutton-round-edge-padding: var(--spectrum-button-m-primary-outline-texticon-padding-right);
 
-  --spectrum-splitbutton-cta-flat-edge-padding: calc(
-    var(--spectrum-button-m-primary-outline-texticon-padding-left) -
-    var(--spectrum-button-m-primary-outline-texticon-border-size) * 3
-  );
+    --spectrum-splitbutton-cta-flat-edge-padding: calc(
+      var(--spectrum-button-m-primary-outline-texticon-padding-left) -
+      var(--spectrum-button-m-primary-outline-texticon-border-size) * 3
+    );
+  }
 }
 
 .spectrum-SplitButton {
@@ -54,143 +52,141 @@ governing permissions and limitations under the License.
   display: inline-flex;
   flex-direction: row;
   vertical-align: top;
-}
 
-.spectrum-SplitButton-action {
-  margin-inline-start: 0;
-
-  border-start-start-radius: var(--spectrum-button-m-primary-outline-texticon-border-radius);
-  border-start-end-radius: 0;
-  border-end-end-radius: 0;
-  border-end-start-radius: var(--spectrum-button-m-primary-outline-texticon-border-radius);
-
-  padding-inline-end: var(--spectrum-splitbutton-flat-edge-padding);
-  padding-inline-start: var(--spectrum-splitbutton-round-edge-padding);
-
-  /* CTA is special and doesn't have a border between the buttons */
-  &.spectrum-Button--accent {
-    padding-inline-end: var(--spectrum-splitbutton-cta-flat-edge-padding);
-    margin-inline-end: var(--spectrum-button-m-primary-outline-texticon-border-size);
-  }
-
-  &::after {
-    border-start-end-radius: var(--spectrum-splitbutton-border-radius-edge);
-    border-end-end-radius: var(--spectrum-splitbutton-border-radius-edge);
-  }
-}
-
-.spectrum-SplitButton-trigger {
-  margin-inline-start: 0;
-
-  border-start-start-radius: 0;
-  border-start-end-radius: var(--spectrum-button-m-primary-outline-texticon-border-radius);
-  border-end-end-radius: var(--spectrum-button-m-primary-outline-texticon-border-radius);
-  border-end-start-radius: 0;
-  border-inline-start-width: var(--spectrum-splitbutton-trigger-border-left);
-
-  padding-inline-start: var(--spectrum-splitbutton-trigger-flat-edge-padding);
-  padding-inline-end: var(--spectrum-splitbutton-trigger-round-edge-padding);
-
-  min-inline-size: var(--spectrum-splitbutton-trigger-min-width);
-
-  /* Fix CTA button focus ring alignment */
-  &.spectrum-Button--accent {
-    padding-inline-start: var(--spectrum-splitbutton-cta-trigger-flat-edge-padding);
-    border-inline-start-width: var(--spectrum-button-m-primary-outline-texticon-border-size);
-  }
-
-  &:focus-visible {
-    box-shadow: none;
-  }
-
-  &::after {
-    border-start-start-radius: var(--spectrum-splitbutton-border-radius-edge);
-    border-end-start-radius: var(--spectrum-splitbutton-border-radius-edge);
-  }
-}
-
-.spectrum-SplitButton-icon {
-  display: block;
-  margin-block-start: 1px;
-}
-
-.spectrum-SplitButton-action,
-.spectrum-SplitButton-trigger {
-  position: relative;
-
-  &:focus-visible {
-    /* Be on top when focused or border leaks */
-    z-index: 1;
-    outline: none;
-  }
-
-  /* Correct the direction of the arrows when viewing right-to-left */
-  &.spectrum-Pagination-prevButton .spectrum-Icon {
-    transform: var(--spectrum-logical-rotation,) rotate(180deg);
-  }
-
-  &.spectrum-Pagination-nextButton .spectrum-Icon {
-    transform: var(--spectrum-logical-rotation);
-  }
-}
-
-.spectrum-SplitButton-action {
-  .spectrum-Button-label + .spectrum-Icon {
-    margin-inline-start: var(--spectrum-splitbutton-icon-gap);
-  }
-}
-
-.spectrum-SplitButton--left {
-  .spectrum-SplitButton-action {
-    border-start-start-radius: 0;
-    border-start-end-radius: var(--spectrum-button-m-primary-outline-texticon-border-radius);
-    border-end-end-radius: var(--spectrum-button-m-primary-outline-texticon-border-radius);
-    border-end-start-radius: 0;
-    margin-inline-end: 0;
-    margin-inline-start: var(--spectrum-spltibutton-margin-left);
-
-    padding-inline-start: var(--spectrum-splitbutton-flat-edge-padding);
-    padding-inline-end: var(--spectrum-splitbutton-round-edge-padding);
-
-    /* CTA is special and doesn't have a border between the buttons */
-    &.spectrum-Button--accent {
-      padding-inline-start: var(--spectrum-splitbutton-cta-flat-edge-padding);
-      margin-inline-start: var(--spectrum-button-m-primary-outline-texticon-border-size);
-    }
-
-    &::after {
-      border-start-start-radius: var(--spectrum-splitbutton-border-radius-edge);
-      border-start-end-radius: var(--spectrum-button-m-primary-outline-texticon-border-radius);
-      border-end-end-radius: var(--spectrum-button-m-primary-outline-texticon-border-radius);
-      border-end-start-radius: var(--spectrum-splitbutton-border-radius-edge);
-    }
-  }
-
-  .spectrum-SplitButton-trigger {
-    margin-inline-end: 0;
+  & .spectrum-SplitButton-action {
+    margin-inline-start: 0;
 
     border-start-start-radius: var(--spectrum-button-m-primary-outline-texticon-border-radius);
     border-start-end-radius: 0;
     border-end-end-radius: 0;
     border-end-start-radius: var(--spectrum-button-m-primary-outline-texticon-border-radius);
 
-    border-inline-start-width: var(--spectrum-button-m-primary-outline-texticon-border-size);
-    border-inline-end-width: var(--spectrum-splitbutton-trigger-border-left);
+    padding-inline-end: var(--spectrum-splitbutton-flat-edge-padding);
+    padding-inline-start: var(--spectrum-splitbutton-round-edge-padding);
 
-    padding-inline-end: var(--spectrum-splitbutton-trigger-flat-edge-padding);
-    padding-inline-start: var(--spectrum-splitbutton-trigger-round-edge-padding);
-
-    /* Fix CTA button focus ring alignment */
+    /* CTA is special and doesn't have a border between the buttons */
     &.spectrum-Button--accent {
-      padding-inline-end: var(--spectrum-splitbutton-cta-trigger-flat-edge-padding);
-      border-inline-end-width: var(--spectrum-button-m-primary-outline-texticon-border-size);
+      padding-inline-end: var(--spectrum-splitbutton-cta-flat-edge-padding);
+      margin-inline-end: var(--spectrum-button-m-primary-outline-texticon-border-size);
     }
 
     &::after {
-      border-start-start-radius: var(--spectrum-button-m-primary-outline-texticon-border-radius);
       border-start-end-radius: var(--spectrum-splitbutton-border-radius-edge);
       border-end-end-radius: var(--spectrum-splitbutton-border-radius-edge);
-      border-end-start-radius: var(--spectrum-button-m-primary-outline-texticon-border-radius);
     }
+  }
+
+  & .spectrum-SplitButton-trigger {
+    margin-inline-start: 0;
+
+    border-start-start-radius: 0;
+    border-start-end-radius: var(--spectrum-button-m-primary-outline-texticon-border-radius);
+    border-end-end-radius: var(--spectrum-button-m-primary-outline-texticon-border-radius);
+    border-end-start-radius: 0;
+    border-inline-start-width: var(--spectrum-splitbutton-trigger-border-left);
+
+    padding-inline-start: var(--spectrum-splitbutton-trigger-flat-edge-padding);
+    padding-inline-end: var(--spectrum-splitbutton-trigger-round-edge-padding);
+
+    min-inline-size: var(--spectrum-splitbutton-trigger-min-width);
+
+    /* Fix CTA button focus ring alignment */
+    &.spectrum-Button--accent {
+      padding-inline-start: var(--spectrum-splitbutton-cta-trigger-flat-edge-padding);
+      border-inline-start-width: var(--spectrum-button-m-primary-outline-texticon-border-size);
+    }
+
+    &:focus-visible {
+      box-shadow: none;
+    }
+
+    &::after {
+      border-start-start-radius: var(--spectrum-splitbutton-border-radius-edge);
+      border-end-start-radius: var(--spectrum-splitbutton-border-radius-edge);
+    }
+  }
+
+  & .spectrum-SplitButton-icon {
+    display: block;
+    margin-block-start: 1px;
+  }
+
+  & .spectrum-SplitButton-action,
+  & .spectrum-SplitButton-trigger {
+    position: relative;
+
+    &:focus-visible {
+      /* Be on top when focused or border leaks */
+      z-index: 1;
+      outline: none;
+    }
+
+    /* Correct the direction of the arrows when viewing right-to-left */
+    &.spectrum-Pagination-prevButton .spectrum-Icon {
+      transform: var(--spectrum-logical-rotation,) rotate(180deg);
+    }
+
+    &.spectrum-Pagination-nextButton .spectrum-Icon {
+      transform: var(--spectrum-logical-rotation);
+    }
+  }
+
+  &.spectrum-SplitButton--left {
+    & .spectrum-SplitButton-action {
+      border-start-start-radius: 0;
+      border-start-end-radius: var(--spectrum-button-m-primary-outline-texticon-border-radius);
+      border-end-end-radius: var(--spectrum-button-m-primary-outline-texticon-border-radius);
+      border-end-start-radius: 0;
+      margin-inline-end: 0;
+      margin-inline-start: var(--spectrum-spltibutton-margin-left);
+
+      padding-inline-start: var(--spectrum-splitbutton-flat-edge-padding);
+      padding-inline-end: var(--spectrum-splitbutton-round-edge-padding);
+
+      &::after {
+        border-start-start-radius: var(--spectrum-splitbutton-border-radius-edge);
+        border-start-end-radius: var(--spectrum-button-m-primary-outline-texticon-border-radius);
+        border-end-end-radius: var(--spectrum-button-m-primary-outline-texticon-border-radius);
+        border-end-start-radius: var(--spectrum-splitbutton-border-radius-edge);
+      }
+
+      /* CTA is special and doesn't have a border between the buttons */
+      &.spectrum-Button--accent {
+        padding-inline-start: var(--spectrum-splitbutton-cta-flat-edge-padding);
+        margin-inline-start: var(--spectrum-button-m-primary-outline-texticon-border-size);
+      }
+    }
+
+    & .spectrum-SplitButton-trigger {
+      margin-inline-end: 0;
+
+      border-start-start-radius: var(--spectrum-button-m-primary-outline-texticon-border-radius);
+      border-start-end-radius: 0;
+      border-end-end-radius: 0;
+      border-end-start-radius: var(--spectrum-button-m-primary-outline-texticon-border-radius);
+
+      border-inline-start-width: var(--spectrum-button-m-primary-outline-texticon-border-size);
+      border-inline-end-width: var(--spectrum-splitbutton-trigger-border-left);
+
+      padding-inline-end: var(--spectrum-splitbutton-trigger-flat-edge-padding);
+      padding-inline-start: var(--spectrum-splitbutton-trigger-round-edge-padding);
+
+      &::after {
+        border-start-start-radius: var(--spectrum-button-m-primary-outline-texticon-border-radius);
+        border-start-end-radius: var(--spectrum-splitbutton-border-radius-edge);
+        border-end-end-radius: var(--spectrum-splitbutton-border-radius-edge);
+        border-end-start-radius: var(--spectrum-button-m-primary-outline-texticon-border-radius);
+      }
+
+      /* Fix CTA button focus ring alignment */
+      &.spectrum-Button--accent {
+        padding-inline-end: var(--spectrum-splitbutton-cta-trigger-flat-edge-padding);
+        border-inline-end-width: var(--spectrum-button-m-primary-outline-texticon-border-size);
+      }
+    }
+  }
+
+  & .spectrum-SplitButton-action .spectrum-Button-label + .spectrum-Icon {
+    margin-inline-start: var(--spectrum-splitbutton-icon-gap);
   }
 }

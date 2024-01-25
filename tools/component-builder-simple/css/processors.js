@@ -13,8 +13,8 @@ governing permissions and limitations under the License.
 function getProcessors({ noFlatVariables = false, noSelectors = false, keepComments = false } = {}) {
 	return [
 		require("postcss-import"),
-		require("postcss-nested"),
 		require("postcss-extend"),
+		require("postcss-nested"),
 		require("postcss-splitinator")({
 			processIdentifier: (identifier) => {
 				if (identifier === "express") {
@@ -25,7 +25,7 @@ function getProcessors({ noFlatVariables = false, noSelectors = false, keepComme
 			noFlatVariables,
 			noSelectors,
 		}),
-		require("./plugins/postcss-custom-properties-passthrough")(),
+		require("postcss-custom-properties-passthrough")(),
 		require("postcss-calc"),
 		require("postcss-dropunusedvars")({ fix: false }),
 		require("postcss-dropdupedvars"),
