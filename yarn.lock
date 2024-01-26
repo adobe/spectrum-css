@@ -14481,6 +14481,13 @@ postcss-extend@^1.0.5:
   dependencies:
     postcss "^5.0.4"
 
+postcss-hover-media-feature@1.0.2:
+  version "1.0.2"
+  resolved "https://registry.yarnpkg.com/postcss-hover-media-feature/-/postcss-hover-media-feature-1.0.2.tgz#7c2046ddee1521148660195864b014d6c1d13b3c"
+  integrity sha512-o5xDUqCQ4xtilWOcvo5LKYxFVSLWcBN0IlTqa0IJwAwHTd4pxKmX4c0fGIpgLQCcBB/+aFizt2NVWNGJWG4Izg==
+  dependencies:
+    postcss-selector-parser "^6.0.4"
+
 postcss-import@^16.0.0:
   version "16.0.0"
   resolved "https://registry.yarnpkg.com/postcss-import/-/postcss-import-16.0.0.tgz#2be1c78391b3f43f129fccfe5cc0cc1a11baef54"
