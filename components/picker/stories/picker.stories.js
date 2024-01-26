@@ -1,4 +1,6 @@
 import { Default as MenuStories } from "@spectrum-css/menu/stories/menu.stories.js";
+import { html } from "lit";
+import isChromatic from "chromatic/isChromatic";
 import { Template } from "./template";
 
 export default {
@@ -134,7 +136,82 @@ export default {
 	},
 };
 
-export const Default = Template.bind({});
+
+const ChromaticPickerGroup = ({
+	customStyles = {},
+	...args
+}) => {
+	return html`
+		<div style="display: grid; gap: 20px;">
+			<div>
+				${Template({
+					labelPosition: "top",
+					...args,
+					isOpen: false,
+					placeholder: "Select Your State Or Province"
+				})}
+			</div>
+			<div>
+				${Template({
+					labelPosition: "top",
+					...args,
+					isOpen: false,
+					isQuiet: true,
+					placeholder: "Select Your State Or Province"
+				})}
+			</div>
+			<div>
+				${Template({
+					labelPosition: "top",
+					...args,
+					isOpen: false,
+					isLoading: true,
+					placeholder: "Select Your State Or Province"
+				})}
+			</div>
+			<div>
+				${Template({
+					labelPosition: "top",
+					...args,
+					isOpen: false,
+					isInvalid: true,
+					placeholder: "Select Your State Or Province"
+				})}
+			</div>
+			<div>
+				${Template({
+					labelPosition: "top",
+					...args,
+					isOpen: false,
+					isKeyboardFocused: true,
+					helpText: "Please select a country",
+					placeholder: "Select Your State Or Province"
+				})}
+			</div>
+			<div>
+				${Template({
+					labelPosition: "left",
+					...args,
+					isOpen: false,
+					withSwitch: true,
+					placeholder: "Select Your State Or Province"
+				})}
+			</div>
+			<div>
+				${Template({
+						labelPosition: "left",
+						...args,
+						isOpen: false,
+						withSwitch: true,
+						placeholder: "Select Your State Or Province",
+						isQuiet: true,
+					})}
+			</div>
+		</div>
+	`;
+};
+
+export const Default = (args) => isChromatic() ? ChromaticPickerGroup(args) : Template(args);
 Default.args = {
 	content: [
 		() => MenuStories(MenuStories.args)
@@ -144,50 +221,6 @@ Default.args = {
 export const Open = Template.bind({});
 Open.args = {
 	isOpen: true,
-	content: [
-		() => MenuStories(MenuStories.args)
-	],
-};
-
-export const SideLabel = Template.bind({});
-SideLabel.args = {
-	content: [
-		() => MenuStories(MenuStories.args)
-	],
-	labelPosition: "left",
-	placeholder: "Select Your State Or Province"
-};
-
-export const Quiet = Template.bind({});
-Quiet.args = {
-	isQuiet: true,
-	content: [
-		() => MenuStories(MenuStories.args)
-	],
-};
-
-export const Loading = Template.bind({});
-Loading.args = {
-	isLoading: true,
-	content: [
-		() => MenuStories(MenuStories.args)
-	],
-};
-
-export const Invalid = Template.bind({});
-Invalid.args = {
-	helpText: "Please select a country",
-	isInvalid: true,
-	content: [
-		() => MenuStories(MenuStories.args)
-	],
-};
-
-export const Focused = Template.bind({});
-Focused.storyName = "Keyboard Focused";
-Focused.args = {
-	helpText: "Please select a country",
-	isKeyboardFocused: true,
 	content: [
 		() => MenuStories(MenuStories.args)
 	],
