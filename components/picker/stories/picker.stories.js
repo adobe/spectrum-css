@@ -35,6 +35,15 @@ export default {
 			options: ["top", "left"],
 			control: { type: "select" },
 		},
+		withSwitch: {
+			name: "Display with a switch component",
+			type: { name: "boolean" },
+			table: {
+				type: { summary: "boolean" },
+				category: "Component",
+			},
+			control: "boolean",
+		},
 		placeholder: {
 			name: "Placeholder",
 			type: { name: "string" },
@@ -111,6 +120,7 @@ export default {
 		isDisabled: false,
 		isInvalid: false,
 		isOpen: false,
+		withSwitch: false,
 	},
 	parameters: {
 		actions: {

@@ -9,6 +9,7 @@ import { Template as HelpText } from "@spectrum-css/helptext/stories/template.js
 import { Template as Icon } from "@spectrum-css/icon/stories/template.js";
 import { Template as Popover } from "@spectrum-css/popover/stories/template.js";
 import { Template as ProgressCircle } from "@spectrum-css/progresscircle/stories/template.js";
+import { Template as Switch } from "@spectrum-css/switch/stories/template.js";
 
 import "../index.css";
 
@@ -103,6 +104,7 @@ export const Template = ({
 	isLoading = false,
 	isDisabled = false,
 	isReadOnly = false,
+	withSwitch = false,
 	customClasses = [],
 	customStyles = {},
 	customPopoverStyles = {},
@@ -205,5 +207,15 @@ export const Template = ({
 			customStyles: customPopoverStyles,
 			content,
 		})}
+		${withSwitch ?
+			Switch({
+				...globals,
+				size,
+				label: "Toggle switch",
+				customStyles: {
+					"padding-inline-start": "15px"
+				}
+			})
+			: null}
 	`;
 };
