@@ -30,6 +30,7 @@ function getProcessors({ noFlatVariables = false, noSelectors = false, keepComme
 		require("postcss-dropunusedvars")({ fix: false }),
 		require("postcss-dropdupedvars"),
 		require("postcss-discard-empty"),
+    require("postcss-hover-media-feature"),
 		!keepComments ? require("postcss-discard-comments")({ removeAllButFirst: true }) : null,
 		require("autoprefixer")({}),
 	].filter(Boolean);
