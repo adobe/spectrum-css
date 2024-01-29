@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+<a name="6.3.1"></a>
+##6.3.1
+🗓
+2024-01-29 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/card@6.3.0...@spectrum-css/card@6.3.1)
+
+### 🐛 Bug fixes
+
+- **card:**gap between preview and horizontal card border([f6e972d](https://github.com/adobe/spectrum-css/commit/f6e972d))_
+  **card:**rename misnamed instance of background color mod ([#2417](https://github.com/adobe/spectrum-css/issues/2417))([cf44e69](https://github.com/adobe/spectrum-css/commit/cf44e69))_
+  **card:**revert misnamed instance of background color mod([80b3b78](https://github.com/adobe/spectrum-css/commit/80b3b78))
+
 <a name="6.3.0"></a>
 #6.3.0
 🗓

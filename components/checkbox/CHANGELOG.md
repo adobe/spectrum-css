@@ -3,6 +3,15 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+<a name="8.0.6"></a>
+##8.0.6
+🗓
+2024-01-29 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/checkbox@8.0.5...@spectrum-css/checkbox@8.0.6)
+
+### 🐛 Bug fixes
+
+- **checkbox:**address typo([174d386](https://github.com/adobe/spectrum-css/commit/174d386))
+
 <a name="8.0.5"></a>
 ##8.0.5
 🗓
