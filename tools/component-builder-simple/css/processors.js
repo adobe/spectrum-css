@@ -26,11 +26,12 @@ function getProcessors({ noFlatVariables = false, noSelectors = false, keepComme
 			noSelectors,
 		}),
 		require("postcss-custom-properties-passthrough")(),
+		require("postcss-hover-media-feature"),
 		require("postcss-calc"),
 		require("postcss-dropunusedvars")({ fix: false }),
 		require("postcss-dropdupedvars"),
 		require("postcss-discard-empty"),
-    require("postcss-hover-media-feature"),
+		require("at-rule-packer"),
 		!keepComments ? require("postcss-discard-comments")({ removeAllButFirst: true }) : null,
 		require("autoprefixer")({}),
 	].filter(Boolean);

@@ -61,6 +61,7 @@ function getProcessors(
 		require("postcss-logical")(),
 		require("postcss-dir-pseudo-class")(),
 		require("postcss-custom-properties-passthrough")(),
+		require("postcss-hover-media-feature"),
 		require("postcss-calc"),
 		keepVars ? require("postcss-custom-properties-mapping")({
 			tokenDir: varDir,
@@ -85,7 +86,7 @@ function getProcessors(
 		require("postcss-droproot"),
 		secondNotNested ? require("postcss-notnested")() : null, // Second one to catch all stray &
 		require("postcss-discard-empty"),
-    require("postcss-hover-media-feature"),
+		require("at-rule-packer"),
 		require("postcss-discard-comments")({ removeAllButFirst: true }),
 		require("autoprefixer")({}),
 	].filter(Boolean);
