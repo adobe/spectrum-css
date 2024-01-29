@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+<a name="8.0.0"></a>
+
+## 8.0.0
+
+🗓
+2024-01-16 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/splitbutton@7.0.2...@spectrum-css/splitbutton@8.0.0)
+
+### 🛑 BREAKING CHANGES
+
+increase specificity to override race condition with button ([bd6c40e](https://github.com/adobe/spectrum-css/commit/bd6c40eb5a4b43df94dff1f325502e5cd08b7f5f))
+
 <a name="7.0.3"></a>
 ##7.0.3
 🗓

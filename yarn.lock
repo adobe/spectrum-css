@@ -11751,14 +11751,6 @@ lead@^1.0.0:
   dependencies:
     flush-write-stream "^1.0.2"
 
-"legacy-postcss-dropdupedvars@file:plugins/legacy-postcss-dropdupedvars":
-  version "1.0.0"
-
-"legacy-postcss-dropunusedvars@file:plugins/legacy-postcss-dropunusedvars":
-  version "1.0.0"
-  dependencies:
-    postcss-value-parser "^4.2.0"
-
 lerna@^6.6.2:
   version "6.6.2"
   resolved "https://registry.yarnpkg.com/lerna/-/lerna-6.6.2.tgz#ad921f913aca4e7307123a598768b6f15ca5804f"
@@ -14465,11 +14457,6 @@ postcss-combine-duplicated-selectors@^10.0.3:
   dependencies:
     postcss-selector-parser "^6.0.4"
 
-"postcss-combininator@file:plugins/postcss-combininator":
-  version "1.1.0"
-  dependencies:
-    postcss "^8.4.33"
-
 postcss-dir-pseudo-class@^8.0.1:
   version "8.0.1"
   resolved "https://registry.yarnpkg.com/postcss-dir-pseudo-class/-/postcss-dir-pseudo-class-8.0.1.tgz#b93755f52fb90215301b1d3ecb7c5e6416930a1e"
@@ -14486,14 +14473,6 @@ postcss-discard-empty@^6.0.1:
   version "6.0.1"
   resolved "https://registry.yarnpkg.com/postcss-discard-empty/-/postcss-discard-empty-6.0.1.tgz#b34cb45ec891246da4506b53e352390fdef126c4"
   integrity sha512-yitcmKwmVWtNsrrRqGJ7/C0YRy53i0mjexBDQ9zYxDwTWVBgbU4+C9jIZLmQlTDT9zhml+u0OMFJh8+31krmOg==
-
-"postcss-dropdupedvars@file:plugins/postcss-dropdupedvars":
-  version "1.1.2"
-
-"postcss-dropunusedvars@file:plugins/postcss-dropunusedvars":
-  version "1.2.1"
-  dependencies:
-    postcss-value-parser "^4.2.0"
 
 postcss-extend@^1.0.5:
   version "1.0.5"
