@@ -29,7 +29,7 @@
     "cleaner": "nx run-many --target clean --projects",
     "compare": "node ./tasks/compare-compiled-output.js",
     "predev": "nx run-many --projects ui-icons,tokens --target build",
-    "dev": "NODE_ENV=development BROWSERSYNC_OPEN=true gulp dev",
+    "dev": "NODE_ENV=development BROWSERSYNC_OPEN=true gulp devHeavy",
     "preinstall": "command -v nvm >/dev/null 2>&1 && nvm use || exit 0",
     "lint": "yarn linter tag:component --verbose",
     "linter": "nx run-many --target lint --verbose --projects",
