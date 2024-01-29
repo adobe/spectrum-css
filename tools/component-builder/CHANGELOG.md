@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+<a name="5.0.0"></a>
+
+## 5.0.0
+
+🗓
+2024-01-29 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/component-builder-simple@4.0.21...@spectrum-css/component-builder-simple@5.0.0)
+
+### 🛑 BREAKING CHANGES
+
+Migrates PostCSS and all plugins to support PostCSS v8+. This is a breaking change as it requires a major version bump for all packages that depend on PostCSS and a rewrite of all local PostCSS plugins to support the new API.
+
 <a name="4.0.21"></a>
 ##4.0.21
 🗓

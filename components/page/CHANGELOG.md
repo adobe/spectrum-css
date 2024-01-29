@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+<a name="7.0.0"></a>
+
+# 7.0.0
+
+🗓
+2024-01-29 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/page@6.1.0...@spectrum-css/page@7.0.0)
+
+### 🛑 BREAKING CHANGES
+
+replace & with :root ([1eadd4f](https://github.com/adobe/spectrum-css/commit/bd6c40eb5a4b43df94dff1f325502e5cd08b7f5f))
+
 <a name="6.1.0"></a>
 #6.1.0
 🗓
