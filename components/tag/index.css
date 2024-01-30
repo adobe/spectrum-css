@@ -330,6 +330,7 @@ governing permissions and limitations under the License.
   &:hover {
     border-color: var(--highcontrast-tag-border-color-selected-hover, var(--mod-tag-border-color-selected-hover, var(--spectrum-tag-border-color-selected-hover)));
     background-color: var(--highcontrast-tag-background-color-selected-hover, var(--mod-tag-background-color-selected-hover, var(--spectrum-tag-background-color-selected-hover)));
+    color: var(--highcontrast-tag-content-color-selected, var(--mod-tag-content-color-selected, var(--spectrum-tag-content-color-selected)));
   }
 
   &:active {
@@ -373,6 +374,7 @@ governing permissions and limitations under the License.
     &:hover {
       border-color: var(--highcontrast-tag-border-color-invalid-selected-hover, var(--mod-tag-border-color-invalid-selected-hover, var(--spectrum-tag-border-color-invalid-selected-hover)));
       background-color: var(--highcontrast-tag-background-color-invalid-selected-hover, var(--mod-tag-background-color-invalid-selected-hover, var(--spectrum-tag-background-color-invalid-selected-hover)));
+      color: var(--highcontrast-tag-content-color-invalid-selected, var(--mod-tag-content-color-invalid-selected, var(--spectrum-tag-content-color-invalid-selected)));
     }
 
     &:active {
@@ -398,6 +400,7 @@ governing permissions and limitations under the License.
   &:hover {
     border-color: var(--highcontrast-tag-border-color-emphasized-hover, var(--mod-tag-border-color-emphasized-hover, var(--spectrum-tag-border-color-emphasized-hover)));
     background-color: var(--highcontrast-tag-background-color-emphasized-hover, var(--mod-tag-background-color-emphasized-hover, var(--spectrum-tag-background-color-emphasized-hover)));
+    color: var(--highcontrast-tag-content-color-emphasized, var(--mod-tag-content-color-emphasized, var(--spectrum-tag-content-color-emphasized)));
   }
 
   &:active {
