@@ -300,7 +300,7 @@ examples:
   - id: tooltip-showOnHover
     name: Show on hover
     status: Unverified
-    description: A tooltip that shows on hover using CSS only. Note that this approach does not support text wrapping.
+    description: A tooltip that shows on hover using CSS only. Note that this approach does not support text wrapping. Also, note that these Tooltips will likely not work on touch-enabled devices without additional client-side scripting.
     markup: |
       <div class="spectrum-Examples">
         <div class="spectrum-Examples-item">
