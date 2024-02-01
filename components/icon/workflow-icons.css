@@ -14,6 +14,11 @@ governing permissions and limitations under the License.
   --spectrum-icon-size: var(--spectrum-workflow-icon-size-100);
 }
 
+/* XXS icon size is not within the design spec and is planned to be deprecated in Spectrum 2. */
+.spectrum-Icon--sizeXXS {
+  --spectrum-icon-size: var(--spectrum-workflow-icon-size-xxs);  
+}
+
 .spectrum-Icon--sizeXS {
   --spectrum-icon-size: var(--spectrum-workflow-icon-size-50);
 }
@@ -30,8 +35,9 @@ governing permissions and limitations under the License.
   --spectrum-icon-size: var(--spectrum-workflow-icon-size-300);
 }
 
+/* XXL icon size is not within the design spec and is planned to be deprecated in Spectrum 2. */
 .spectrum-Icon--sizeXXL {
-  --spectrum-icon-size: var(--spectrum-workflow-icon-size-400);
+  --spectrum-icon-size: var(--spectrum-workflow-icon-size-xxl);
 }
 
 .spectrum-Icon {
