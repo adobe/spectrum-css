@@ -106,6 +106,8 @@ export const Template = ({
 	isDisabled = false,
 	isReadOnly = false,
 	withSwitch = false,
+	fieldLabelStyle = {},
+	fieldLabelText,
 	customClasses = [],
 	customStyles = {},
 	customPopoverStyles = {},
@@ -144,6 +146,7 @@ export const Template = ({
 					size,
 					label,
 					isDisabled,
+					style: fieldLabelStyle,
 					alignment: labelPosition,
 			  })
 			: ""}

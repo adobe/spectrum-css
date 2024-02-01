@@ -200,6 +200,17 @@ const ChromaticPickerGroup = ({
 			</div>
 			<div>
 				${Template({
+					labelPosition: "left",
+					...args,
+					isOpen: false,
+					withSwitch: true,
+					fieldLabelStyle: {'max-width': '90px'},
+					label: "Enter country, text should wrap",
+					placeholder: "Select Your State Or Province"
+				})}
+			</div>
+			<div>
+				${Template({
 						labelPosition: "left",
 						...args,
 						isOpen: false,
@@ -207,6 +218,18 @@ const ChromaticPickerGroup = ({
 						placeholder: "Select Your State Or Province",
 						isQuiet: true,
 					})}
+			</div>
+			<div>
+				${Template({
+					labelPosition: "left",
+					...args,
+					isOpen: false,
+					withSwitch: true,
+					isQuiet: true,
+					fieldLabelStyle: {'max-width': '90px'},
+					label: "Enter country, text should wrap",
+					placeholder: "Select Your State Or Province"
+				})}
 			</div>
 		</div>
 	`;
