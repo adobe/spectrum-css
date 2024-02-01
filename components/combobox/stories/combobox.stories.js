@@ -1,4 +1,7 @@
-// Import the component markup template
+import isChromatic from "chromatic/isChromatic";
+
+import { html } from "lit";
+
 import { Template } from "./template";
 
 import { Template as Menu } from "@spectrum-css/menu/stories/template.js";
@@ -37,17 +40,6 @@ export default {
 			},
 			control: "boolean",
 		},
-		isValid: {
-			name: "Valid",
-			type: { name: "boolean" },
-			table: {
-				disable: true,
-				type: { summary: "boolean" },
-				category: "State",
-			},
-			control: "boolean",
-			if: { arg: "isInvalid", truthy: false },
-		},
 		isInvalid: {
 			name: "Invalid",
 			type: { name: "boolean" },
@@ -56,7 +48,6 @@ export default {
 				category: "State",
 			},
 			control: "boolean",
-			if: { arg: "isValid", truthy: false },
 		},
 		isFocused: {
 			name: "Focused",
@@ -113,6 +104,17 @@ export default {
 			control: "text",
 			if: { arg: "showFieldLabel", truthy: true },
 		},
+		fieldLabelPosition: {
+			name: "Field label position",
+			type: { name: "string" },
+			table: {
+				type: { summary: "string" },
+				category: "Component",
+			},
+			options: ["top", "left"],
+			control: "select",
+			if: { arg: "showFieldLabel", truthy: true },
+		},
 		content: { table: { disable: true } },
 	},
 	args: {
@@ -121,13 +123,39 @@ export default {
 		isOpen: true,
 		isQuiet: false,
 		isInvalid: false,
-		isValid: false,
 		isFocused: false,
 		isKeyboardFocused: false,
 		isLoading: false,
 		isDisabled: false,
 		showFieldLabel: false,
-		fieldLabelText: "Select location"
+		fieldLabelText: "Select location",
+		content: [
+			Menu({
+				role: "listbox",
+				subrole: "option",
+				isSelectable: true,
+				items: [
+					{
+						label: "Ballard",
+						isSelected: true,
+						isChecked: true,
+					},
+					{
+						label: "Fremont",
+					},
+					{
+						label: "Greenwood",
+					},
+					{
+						type: "divider",
+					},
+					{
+						label: "United States of America",
+						isDisabled: true,
+					},
+				],
+			}),
+		],
 	},
 	parameters: {
 		actions: {
@@ -141,67 +169,78 @@ export default {
 	},
 };
 
-export const Default = Template.bind({});
-Default.args = {
-	content: [
-		Menu({
-			role: "listbox",
-			subrole: "option",
-			isSelectable: true,
-			items: [
-				{
-					label: "Ballard",
-					isSelected: true,
-					isChecked: true,
-				},
-				{
-					label: "Fremont",
-				},
-				{
-					label: "Greenwood",
-				},
-				{
-					type: "divider",
-				},
-				{
-					label: "United States of America",
-					isDisabled: true,
-				},
-			],
-		}),
-	],
-};
+const defaultVariants = (args) => html`
+	<div style=${args.isOpen && "padding-bottom: 10rem;"}>
+		${Template({
+			...args,
+		})}
+	</div>
+	<div style=${args.isOpen && "padding-bottom: 10rem;"}>
+		${Template({
+			...args,
+			isFocused: true,
+		})}
+	</div>
+	<div style=${args.isOpen && "padding-bottom: 10rem;"}>
+		${Template({
+			...args,
+			isKeyboardFocused: true,
+		})}
+	</div>
+	<div style=${args.isOpen && "padding-bottom: 10rem;"}>
+		${Template({
+			...args,
+			isDisabled: true,
+		})}
+	</div>
+	<div style=${args.isOpen && "padding-bottom: 10rem;"}>
+		${Template({
+			...args,
+			isLoading: true,
+		})}
+	</div>
+	<div style=${args.isOpen && "padding-bottom: 10rem;"}>
+		${Template({
+			...args,
+			isInvalid: true,
+		})}
+	</div>
+	<div style=${args.isOpen && "padding-bottom: 10rem;"}>
+		${Template({
+			...args,
+			showFieldLabel: true,
+			fieldLabelText: "Select location, this label should wrap",
+		})}
+	</div>
+	<div style=${args.isOpen && "padding-bottom: 10rem;"}>
+		${Template({
+			...args,
+			showFieldLabel: true,
+			fieldLabelText: "Select location, this label should wrap",
+			fieldLabelPosition: "left",
+		})}
+	</div>
+`;
 
-export const Quiet = Template.bind({});
+const closedVariants = (args) => defaultVariants({...args, isOpen: false});
+
+const chromaticKitchenSink = (args) => html`
+	<div style="display: flex; gap: 1rem; flex-direction: column;">
+		${closedVariants(args)}
+	</div>
+	<div style="display: flex; gap: 1rem; flex-direction: column; margin-top: 2rem;">
+		${defaultVariants(args)}
+	</div>
+`;
+
+export const Default = (args) => isChromatic() ? chromaticKitchenSink(args) : Template(args);
+Default.args = {};
+
+export const Quiet = (args) => isChromatic()
+	? chromaticKitchenSink(args)
+	: Template({
+		...args
+	});
 Quiet.args = {
 	isQuiet: true,
-	showFieldLabel: true,
-	fieldLabelText: "Select location, this label should wrap",
-	content: [
-		Menu({
-			role: "listbox",
-			subrole: "option",
-			isSelectable: true,
-			items: [
-				{
-					label: "Ballard",
-					isSelected: true,
-					isChecked: true,
-				},
-				{
-					label: "Fremont",
-				},
-				{
-					label: "Greenwood",
-				},
-				{
-					type: "divider",
-				},
-				{
-					label: "United States of America",
-					isDisabled: true,
-				},
-			],
-		}),
-	],
 };

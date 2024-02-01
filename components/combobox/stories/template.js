@@ -20,11 +20,11 @@ export const Template = ({
 	size = "m",
 	isOpen = true,
 	isInvalid = false,
-	isValid = false,
 	isQuiet = false,
 	isDisabled = false,
 	showFieldLabel = false,
 	fieldLabelText = "Select location",
+	fieldLabelPosition = "top",
 	isFocused = false,
 	isKeyboardFocused = false,
 	isLoading = false,
@@ -51,6 +51,7 @@ export const Template = ({
 				size,
 				label: fieldLabelText,
 				style: { "max-inline-size": "100px"},
+				alignment: fieldLabelPosition === "left" && "left",
 			}) : null
 		}
 		<div
@@ -61,7 +62,6 @@ export const Template = ({
 				"is-open": !isDisabled && isOpen,
 				[`${rootClass}--quiet`]: isQuiet,
 				"is-invalid": !isDisabled && isInvalid,
-				"is-valid": !isDisabled && isValid,
 				"is-focused": !isDisabled && isFocused,
 				"is-keyboardFocused": !isDisabled && isKeyboardFocused,
 				"is-loading": isLoading,
@@ -76,7 +76,6 @@ export const Template = ({
 					size,
 					isQuiet,
 					isDisabled,
-					isValid,
 					isInvalid,
 					isFocused,
 					isKeyboardFocused,
@@ -101,7 +100,6 @@ export const Template = ({
 					customClasses: [
 						`${rootClass}-button`,
 						... isInvalid ? ['is-invalid'] : [],
-						... isValid ? ['is-valid'] : [],
 					],
 					size,
 					iconType: "ui",
@@ -133,6 +131,7 @@ export const Template = ({
 					content: [
 						Menu({
 							...globals,
+							size,
 							items: [
 								{
 									label: "Ballard",
