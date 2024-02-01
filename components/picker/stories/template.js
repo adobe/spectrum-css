@@ -3,6 +3,7 @@ import { html } from "lit";
 import { classMap } from "lit/directives/class-map.js";
 import { ifDefined } from "lit/directives/if-defined.js";
 import { styleMap } from "lit/directives/style-map.js";
+import { when } from 'lit/directives/when.js';
 
 import { Template as FieldLabel } from "@spectrum-css/fieldlabel/stories/template.js";
 import { Template as HelpText } from "@spectrum-css/helptext/stories/template.js";
@@ -207,15 +208,13 @@ export const Template = ({
 			customStyles: customPopoverStyles,
 			content,
 		})}
-		${withSwitch ?
-			Switch({
+		${when (withSwitch, () => Switch({
 				...globals,
 				size,
 				label: "Toggle switch",
 				customStyles: {
 					"padding-inline-start": "15px"
 				}
-			})
-			: null}
+			})) }
 	`;
 };

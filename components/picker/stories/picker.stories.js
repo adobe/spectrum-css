@@ -45,6 +45,7 @@ export default {
 				category: "Component",
 			},
 			control: "boolean",
+			if: { arg: "labelPosition", eq: "left" },
 		},
 		placeholder: {
 			name: "Placeholder",
