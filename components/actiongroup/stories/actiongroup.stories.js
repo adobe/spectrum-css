@@ -118,8 +118,22 @@ Justified.args = {
 	content: items
 };
 
+export const JustifiedCompact = Template.bind({});
+JustifiedCompact.args = {
+	justified: true,
+	compact: true,
+	content: items,
+};
+
 export const Quiet = Template.bind({});
 Quiet.args = {
 	areQuiet: true,
 	content: items
+};
+
+export const QuietCompact = Template.bind({});
+QuietCompact.args = {
+	areQuiet: true,
+	compact: true,
+	content: items,
 };
