@@ -1,6 +1,11 @@
 name: Button group
 SpectrumSiteSlug: https://spectrum.adobe.com/page/button/
 sections:
+  - name: Migration Guide
+    description: |
+      ### 1/24/2024 - Version 7.0.0
+      #### Spectrum 2 migration also removed `.spectrum-ButtonGroup--sizeM`, `.spectrum-ButtonGroup--sizeL`, and `.spectrum-ButtonGroup--sizeXL`
+        Since each of these classes were using the same tokens for spacing, these classes were removed.
   - name: Custom Properties API
     description: |
       This component can be modified via its `--mod-*` prefixed custom properties. A list of those prefixed custom properties can be found <a href="https://github.com/adobe/spectrum-css/tree/main/components/buttongroup/metadata/mods.md">here</a>.
@@ -8,7 +13,7 @@ examples:
   - id: buttongroup-horizontal
     name: Horizontal
     description: |
-      Default spacing for Medium, Large, and Extra Large t-shirt sizes.
+      Default horizontal spacing for when using medium, large, and extra large buttons.
     markup: |
       <div class="spectrum-ButtonGroup">
         <button class="spectrum-Button spectrum-Button--sizeM spectrum-Button--outline spectrum-Button--secondary spectrum-ButtonGroup-item">
@@ -25,7 +30,7 @@ examples:
   - id: buttongroup-horizontal-small
     name: Horizontal - Small
     description: |
-      Spacing for the Small t-shirt size.
+      Horizontal spacing for the small t-shirt size. Should be used with small buttons.
     markup: |
       <div class="spectrum-ButtonGroup spectrum-ButtonGroup--sizeS">
         <button class="spectrum-Button spectrum-Button--sizeS spectrum-Button--outline spectrum-Button--secondary spectrum-ButtonGroup-item">
@@ -42,7 +47,7 @@ examples:
   - id: buttongroup-vertical
     name: Vertical
     description: |
-      Default spacing for Medium, Large, and Extra Large t-shirt sizes.
+      Default vertical spacing for when using medium, large, and extra large buttons.
     markup: |
       <div class="spectrum-ButtonGroup spectrum-ButtonGroup--vertical">
         <button class="spectrum-Button spectrum-Button--sizeM spectrum-Button--outline spectrum-Button--secondary spectrum-ButtonGroup-item">
@@ -59,7 +64,7 @@ examples:
   - id: buttongroup-vertical-small
     name: Vertical - Small
     description: |
-      Spacing for the Small t-shirt size.
+      Vertical spacing for the small t-shirt size. Should be used with small buttons.
     markup: |
       <div class="spectrum-ButtonGroup spectrum-ButtonGroup--sizeS spectrum-ButtonGroup--vertical">
         <button class="spectrum-Button spectrum-Button--sizeS spectrum-Button--outline spectrum-Button--secondary spectrum-ButtonGroup-item">
