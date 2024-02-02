@@ -16,8 +16,8 @@ governing permissions and limitations under the License.
   --spectrum-coach-indicator-ring-border-size: var(--spectrum-border-width-200);
   --spectrum-coach-indicator-min-inline-size: calc(var(--spectrum-coach-indicator-ring-diameter) * 3);
   --spectrum-coach-indicator-min-block-size: calc(var(--spectrum-coach-indicator-ring-diameter) * 3);
-  --spectrum-coach-indicator-inline-size: calc(var(--spectrum-coach-indicator-ring-diameter) * 3);
-  --spectrum-coach-indicator-block-size: calc(var(--spectrum-coach-indicator-ring-diameter) * 3);
+  --spectrum-coach-indicator-inline-size: var(--spectrum-coach-indicator-min-inline-size);
+  --spectrum-coach-indicator-block-size: var(--spectrum-coach-indicator-min-block-size);
   --spectrum-coach-indicator-ring-inline-size: var(--spectrum-coach-indicator-ring-diameter);
   --spectrum-coach-indicator-ring-block-size: var(--spectrum-coach-indicator-ring-diameter);
 
