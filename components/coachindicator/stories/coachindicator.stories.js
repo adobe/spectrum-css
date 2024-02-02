@@ -39,8 +39,7 @@ export default {
 
 const CustomCoachIndicator = (args) => {
 	return html`
-	<div
-		style="display: flex;">
+		<div>
 			${Template({
 				...args,
 				variant: "default"
@@ -52,8 +51,8 @@ const CustomCoachIndicator = (args) => {
 			${Template({
 				...args,
 				variant: "light"
-			})}
-		<div>
+				})}
+		</div>
 	`;
 };
 

@@ -8,19 +8,19 @@ examples:
   - id: coach-indicator
     name: Standard
     markup: |
-      <div class="spectrum-CoachIndicator" style="display: inline-block;">
+      <div class="spectrum-CoachIndicator">
         <div class="spectrum-CoachIndicator-ring"></div>
         <div class="spectrum-CoachIndicator-ring"></div>
         <div class="spectrum-CoachIndicator-ring"></div>
       </div>
 
-      <div class="spectrum-CoachIndicator spectrum-CoachIndicator--dark" style="display: inline-block;">
+      <div class="spectrum-CoachIndicator spectrum-CoachIndicator--dark">
         <div class="spectrum-CoachIndicator-ring"></div>
         <div class="spectrum-CoachIndicator-ring"></div>
         <div class="spectrum-CoachIndicator-ring"></div>
       </div>
 
-      <div class="spectrum-CoachIndicator spectrum-CoachIndicator--light" style="display: inline-block;">
+      <div class="spectrum-CoachIndicator spectrum-CoachIndicator--light">
         <div class="spectrum-CoachIndicator-ring"></div>
         <div class="spectrum-CoachIndicator-ring"></div>
         <div class="spectrum-CoachIndicator-ring"></div>
@@ -28,19 +28,19 @@ examples:
   - id: coach-indicator-quiet
     name: Quiet
     markup: |
-      <div class="spectrum-CoachIndicator spectrum-CoachIndicator--quiet" style="display: inline-block;">
+      <div class="spectrum-CoachIndicator spectrum-CoachIndicator--quiet">
         <div class="spectrum-CoachIndicator-ring"></div>
         <div class="spectrum-CoachIndicator-ring"></div>
         <div class="spectrum-CoachIndicator-ring"></div>
       </div>
 
-      <div class="spectrum-CoachIndicator spectrum-CoachIndicator--dark spectrum-CoachIndicator--quiet" style="display: inline-block;">
+      <div class="spectrum-CoachIndicator spectrum-CoachIndicator--dark spectrum-CoachIndicator--quiet">
         <div class="spectrum-CoachIndicator-ring"></div>
         <div class="spectrum-CoachIndicator-ring"></div>
         <div class="spectrum-CoachIndicator-ring"></div>
       </div>
 
-      <div class="spectrum-CoachIndicator spectrum-CoachIndicator--light spectrum-CoachIndicator--quiet" style="display: inline-block;">
+      <div class="spectrum-CoachIndicator spectrum-CoachIndicator--light spectrum-CoachIndicator--quiet">
         <div class="spectrum-CoachIndicator-ring"></div>
         <div class="spectrum-CoachIndicator-ring"></div>
         <div class="spectrum-CoachIndicator-ring"></div>
