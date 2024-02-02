@@ -2,15 +2,13 @@
   "sourceFile": "index.css",
   "selectors": [
     ".spectrum-ButtonGroup",
-    ".spectrum-ButtonGroup-item",
-    ".spectrum-ButtonGroup.spectrum-ButtonGroup--sizeS",
-    ".spectrum-ButtonGroup.spectrum-ButtonGroup--vertical"
+    ".spectrum-ButtonGroup--sizeS",
+    ".spectrum-ButtonGroup--vertical",
+    ".spectrum-ButtonGroup-item"
   ],
   "modifiers": [
     "--mod-buttongroup-justify-content",
-    "--mod-buttongroup-spacing",
-    "--mod-buttongroup-spacing-horizontal",
-    "--mod-buttongroup-spacing-vertical"
+    "--mod-buttongroup-spacing"
   ],
   "component": [
     "--spectrum-buttongroup-display",
