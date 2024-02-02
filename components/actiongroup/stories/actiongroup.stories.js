@@ -279,6 +279,15 @@ JustifiedIconOnlyCompact.parameters = {
 	chromatic: { disableSnapshot: true },
 };
 
+export const Quiet = Template.bind({});
+Quiet.tags = ["!dev"];
+Quiet.args = {
+    areQuiet: true,
+};
+Quiet.parameters = {
+	chromatic: { disableSnapshot: true },
+};
+
 /**
  * When space is limited in an action group, there are 2 options for the group's overflow behavior: wrap or collapse. By default, an action group is set to wrap, meaning that the action buttons inside the group wrap to form another line. Alternatively, an action group can be set to collapse inside a **More (...)** action button.
 */
