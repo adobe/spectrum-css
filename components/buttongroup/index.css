@@ -11,27 +11,20 @@
  * governing permissions and limitations under the License.
  */
 
-@import "./themes/spectrum-two.css";
-
 .spectrum-ButtonGroup {
-	/* @deprecated --mod-buttongroup-spacing-horizontal -- replaced by --mod-buttongroup-spacing */
-	--spectrum-buttongroup-spacing: var(--mod-buttongroup-spacing, var(--mod-buttongroup-spacing-horizontal, var(--spectrum-spacing-300)));
+	--spectrum-buttongroup-spacing: var(--mod-buttongroup-spacing, var(--spectrum-spacing-300));
 	--spectrum-buttongroup-display: flex;
 	--spectrum-buttongroup-flex-direction: row;
-	--spectrum-buttongroup-justify-content: var(--mod-buttongroup-justify-content, normal);
+	--spectrum-buttongroup-justify-content: var(--mod-buttongroup-justify-content, flex-start);
+}
 
-	&.spectrum-ButtonGroup--sizeS {
-		/* @deprecated --mod-buttongroup-spacing-horizontal -- replaced by --mod-buttongroup-spacing */
-		--spectrum-buttongroup-spacing: var(--mod-buttongroup-spacing, var(--mod-buttongroup-spacing-horizontal, var(--spectrum-spacing-200)));
-	}
+.spectrum-ButtonGroup--sizeS {
+	--spectrum-buttongroup-spacing: var(--mod-buttongroup-spacing, var(--spectrum-spacing-200));
+}
 
-	&.spectrum-ButtonGroup--vertical {
-		/* @deprecated --mod-buttongroup-spacing-vertical -- replaced by generic --mod-buttongroup-spacing */
-		--mod-buttongroup-spacing: var(--mod-buttongroup-spacing-vertical);
-
-		--spectrum-buttongroup-display: inline-flex;
-		--spectrum-buttongroup-flex-direction: column;
-	}
+.spectrum-ButtonGroup--vertical {
+	--spectrum-buttongroup-display: inline-flex;
+	--spectrum-buttongroup-flex-direction: column;
 }
 
 .spectrum-ButtonGroup {
