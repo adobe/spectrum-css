@@ -14,6 +14,7 @@ governing permissions and limitations under the License.
   --spectrum-actiongroup-button-spacing-reset: 0;
   --spectrum-actiongroup-border-radius-reset: 0;
   --spectrum-actiongroup-border-radius: var(--spectrum-corner-radius-100);
+  --spectrum-actiongroup-gap-size-compact: var(--spectrum-spacing-50);
 }
 
 .spectrum-ActionGroup--sizeXS,
@@ -36,7 +37,7 @@ governing permissions and limitations under the License.
 
   .spectrum-ActionGroup-item {
     flex-shrink: 0;
-    
+
     /* Focus indicator should appear above hovered and selected borders */
     &:focus-visible {
       z-index: 3;
@@ -74,15 +75,6 @@ governing permissions and limitations under the License.
 
       border-start-start-radius: var(--mod-actiongroup-border-radius, var(--spectrum-actiongroup-border-radius));
       border-end-start-radius: var(--mod-actiongroup-border-radius, var(--spectrum-actiongroup-border-radius));
-      margin-inline-start: var(--mod-actiongroup-button-spacing-reset, var(--spectrum-actiongroup-button-spacing-reset));
-    }
-
-    & + .spectrum-ActionGroup-item {
-      /* Action button passthrough styling */
-      --mod-actionbutton-focus-indicator-border-radius: 0px;
-
-      margin-inline-start: var(--mod-actiongroup-horizontal-spacing-compact, var(--spectrum-actiongroup-horizontal-spacing-compact));
-      margin-inline-end: var(--mod-actiongroup-horizontal-spacing-compact, var(--spectrum-actiongroup-horizontal-spacing-compact));
     }
 
     &:last-child {
@@ -91,8 +83,6 @@ governing permissions and limitations under the License.
 
       border-start-end-radius: var(--mod-actiongroup-border-radius, var(--spectrum-actiongroup-border-radius));
       border-end-end-radius: var(--mod-actiongroup-border-radius, var(--spectrum-actiongroup-border-radius));
-      margin-inline-start: var(--mod-actiongroup-horizontal-spacing-compact, var(--spectrum-actiongroup-horizontal-spacing-compact));
-      margin-inline-end: var(--mod-actiongroup-border-radius-reset, var(--spectrum-actiongroup-border-radius-reset));
     }
 
     &.is-selected {
@@ -126,16 +116,6 @@ governing permissions and limitations under the License.
 
       border-start-start-radius: var(--mod-actiongroup-border-radius, var(--spectrum-actiongroup-border-radius));
       border-start-end-radius: var(--mod-actiongroup-border-radius, var(--spectrum-actiongroup-border-radius));
-      margin-inline-end: var(--mod-actiongroup-button-spacing-reset, var(--spectrum-actiongroup-button-spacing-reset));
-      margin-block-start: var(--mod-actiongroup-vertical-spacing-compact, var(--spectrum-actiongroup-vertical-spacing-compact));
-      margin-block-end: var(--mod-actiongroup-vertical-spacing-compact, var(--spectrum-actiongroup-vertical-spacing-compact));
-    }
-
-    & + .spectrum-ActionGroup-item {
-      margin-inline-start: var(--mod-actiongroup-button-spacing-reset, var(--spectrum-actiongroup-button-spacing-reset));
-      margin-inline-end: var(--mod-actiongroup-button-spacing-reset, var(--spectrum-actiongroup-button-spacing-reset));
-      margin-block-start: var(--mod-actiongroup-button-spacing-reset, var(--spectrum-actiongroup-button-spacing-reset));
-      margin-block-end: var(--mod-actiongroup-vertical-spacing-compact, var(--spectrum-actiongroup-vertical-spacing-compact));
     }
 
     &:last-child {
@@ -144,8 +124,6 @@ governing permissions and limitations under the License.
 
       border-end-start-radius: var(--mod-actiongroup-border-radius, var(--spectrum-actiongroup-border-radius));
       border-end-end-radius: var(--mod-actiongroup-border-radius, var(--spectrum-actiongroup-border-radius));
-      margin-block-start: var(--mod-actiongroup-vertical-spacing-compact, var(--spectrum-actiongroup-vertical-spacing-compact));
-      margin-block-end: var(--mod-actiongroup-button-spacing-reset, var(--spectrum-actiongroup-button-spacing-reset));
     }
   }
 }
