@@ -1,5 +1,7 @@
 // Import the component markup template
 import { Template } from "./template";
+import isChromatic from "chromatic/isChromatic";
+import { html } from "lit";
 
 export default {
 	title: "Components/Button group",
@@ -45,7 +47,17 @@ export default {
 	},
 };
 
-export const Default = Template.bind({});
+const chromaticKitchenSink = (args) => html`
+	<div style="display: grid; justify-content: start; gap: 2rem;">
+		${Template(args)}
+		${Template({
+			...args,
+			size: "s"
+		})}
+	</div>
+`;
+
+export const Default = (args) => isChromatic() ? chromaticKitchenSink(args) : Template(args);
 Default.args = {
 	items: [
 		{
@@ -67,7 +79,7 @@ Default.args = {
 	],
 };
 
-export const Vertical = Template.bind({});
+export const Vertical = (args) => isChromatic() ? chromaticKitchenSink(args) : Template(args);
 Vertical.args = {
 	vertical: true,
 	items: [
