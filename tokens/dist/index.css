@@ -1165,9 +1165,14 @@
   --spectrum-transparent-black-900:rgba(var(--spectrum-transparent-black-900-rgb));
   --spectrum-icon-color-inverse:var(--spectrum-gray-50);
   --spectrum-icon-color-primary-default:var(--spectrum-neutral-content-color-default);
+  --spectrum-asterisk-icon-size-75:8px;
   --spectrum-radio-button-selection-indicator:4px;
+  --spectrum-field-label-top-margin-small:0px;
   --spectrum-field-label-to-component:0px;
   --spectrum-help-text-to-component:0px;
+  --spectrum-status-light-dot-size-small:8px;
+  --spectrum-action-button-edge-to-hold-icon-extra-small:3px;
+  --spectrum-action-button-edge-to-hold-icon-small:3px;
   --spectrum-button-minimum-width-multiplier:2.25;
   --spectrum-divider-thickness-small:1px;
   --spectrum-divider-thickness-medium:2px;
@@ -1232,6 +1237,12 @@
   --spectrum-drop-zone-title-size:var(--spectrum-illustrated-message-title-size);
   --spectrum-drop-zone-cjk-title-size:var(--spectrum-illustrated-message-cjk-title-size);
   --spectrum-drop-zone-body-size:var(--spectrum-illustrated-message-body-size);
+  --spectrum-accordion-top-to-text-compact-small:2px;
+  --spectrum-accordion-top-to-text-compact-medium:4px;
+  --spectrum-accordion-disclosure-indicator-to-text:0px;
+  --spectrum-accordion-edge-to-disclosure-indicator:0px;
+  --spectrum-accordion-edge-to-text:0px;
+  --spectrum-accordion-focus-indicator-gap:0px;
   --spectrum-color-handle-border-width:var(--spectrum-border-width-200);
   --spectrum-color-handle-inner-border-width:1px;
   --spectrum-color-handle-outer-border-width:1px;
@@ -1250,6 +1261,7 @@
   --spectrum-table-row-bottom-to-text-medium-compact:var(--spectrum-component-bottom-to-text-100);
   --spectrum-table-row-bottom-to-text-large-compact:var(--spectrum-component-bottom-to-text-200);
   --spectrum-table-row-bottom-to-text-extra-large-compact:var(--spectrum-component-bottom-to-text-300);
+  --spectrum-table-edge-to-content:16px;
   --spectrum-table-border-divider-width:1px;
   --spectrum-tab-item-height-small:var(--spectrum-component-height-200);
   --spectrum-tab-item-height-medium:var(--spectrum-component-height-300);
@@ -1639,6 +1651,8 @@
   --spectrum-in-field-button-inner-edge-to-disclosure-icon-stacked-medium:var(--spectrum-in-field-button-outer-edge-to-disclosure-icon-stacked-medium);
   --spectrum-in-field-button-inner-edge-to-disclosure-icon-stacked-large:var(--spectrum-in-field-button-outer-edge-to-disclosure-icon-stacked-large);
   --spectrum-in-field-button-inner-edge-to-disclosure-icon-stacked-extra-large:var(--spectrum-in-field-button-outer-edge-to-disclosure-icon-stacked-extra-large);
+  --spectrum-corner-radius-75:2px;
+  --spectrum-drop-shadow-x:0px;
   --spectrum-border-width-100:1px;
   --spectrum-accent-color-100:var(--spectrum-blue-100);
   --spectrum-accent-color-200:var(--spectrum-blue-200);
@@ -1673,7 +1687,6 @@
   --spectrum-arrow-icon-size-400:18px;
   --spectrum-arrow-icon-size-500:22px;
   --spectrum-arrow-icon-size-600:24px;
-  --spectrum-asterisk-icon-size-75:8px;
   --spectrum-asterisk-icon-size-100:10px;
   --spectrum-asterisk-icon-size-200:12px;
   --spectrum-asterisk-icon-size-300:12px;
@@ -1720,7 +1733,6 @@
   --spectrum-field-label-top-to-asterisk-medium:15px;
   --spectrum-field-label-top-to-asterisk-large:19px;
   --spectrum-field-label-top-to-asterisk-extra-large:24px;
-  --spectrum-field-label-top-margin-small:0px;
   --spectrum-field-label-top-margin-medium:5px;
   --spectrum-field-label-top-margin-large:6px;
   --spectrum-field-label-top-margin-extra-large:6px;
@@ -1732,7 +1744,6 @@
   --spectrum-help-text-top-to-workflow-icon-medium:4px;
   --spectrum-help-text-top-to-workflow-icon-large:8px;
   --spectrum-help-text-top-to-workflow-icon-extra-large:11px;
-  --spectrum-status-light-dot-size-small:8px;
   --spectrum-status-light-dot-size-medium:10px;
   --spectrum-status-light-dot-size-large:12px;
   --spectrum-status-light-dot-size-extra-large:12px;
@@ -1740,8 +1751,6 @@
   --spectrum-status-light-top-to-dot-medium:15px;
   --spectrum-status-light-top-to-dot-large:19px;
   --spectrum-status-light-top-to-dot-extra-large:24px;
-  --spectrum-action-button-edge-to-hold-icon-extra-small:3px;
-  --spectrum-action-button-edge-to-hold-icon-small:3px;
   --spectrum-action-button-edge-to-hold-icon-medium:5px;
   --spectrum-action-button-edge-to-hold-icon-large:6px;
   --spectrum-action-button-edge-to-hold-icon-extra-large:7px;
@@ -1874,10 +1883,8 @@
   --spectrum-coach-mark-title-size:var(--spectrum-heading-size-xxs);
   --spectrum-coach-mark-body-size:var(--spectrum-body-size-xs);
   --spectrum-coach-mark-pagination-body-size:var(--spectrum-body-size-xs);
-  --spectrum-accordion-top-to-text-compact-small:2px;
   --spectrum-accordion-top-to-text-regular-small:7px;
   --spectrum-accordion-small-top-to-text-spacious:12px;
-  --spectrum-accordion-top-to-text-compact-medium:4px;
   --spectrum-accordion-top-to-text-regular-medium:9px;
   --spectrum-accordion-top-to-text-spacious-medium:14px;
   --spectrum-accordion-top-to-text-compact-large:7px;
@@ -1899,10 +1906,6 @@
   --spectrum-accordion-bottom-to-text-regular-extra-large:15px;
   --spectrum-accordion-bottom-to-text-spacious-extra-large:21px;
   --spectrum-accordion-minimum-width:250px;
-  --spectrum-accordion-disclosure-indicator-to-text:0px;
-  --spectrum-accordion-edge-to-disclosure-indicator:0px;
-  --spectrum-accordion-edge-to-text:0px;
-  --spectrum-accordion-focus-indicator-gap:0px;
   --spectrum-accordion-content-area-top-to-content:10px;
   --spectrum-accordion-content-area-bottom-to-content:20px;
   --spectrum-color-handle-size:20px;
@@ -1939,7 +1942,6 @@
   --spectrum-table-row-bottom-to-text-medium-spacious:18px;
   --spectrum-table-row-bottom-to-text-large-spacious:23px;
   --spectrum-table-row-bottom-to-text-extra-large-spacious:27px;
-  --spectrum-table-edge-to-content:16px;
   --spectrum-table-checkbox-to-text:30px;
   --spectrum-table-header-row-checkbox-to-top-small:14px;
   --spectrum-table-header-row-checkbox-to-top-medium:13px;
@@ -2318,10 +2320,8 @@
   --spectrum-slider-bottom-to-handle-medium:10px;
   --spectrum-slider-bottom-to-handle-large:14px;
   --spectrum-slider-bottom-to-handle-extra-large:17px;
-  --spectrum-corner-radius-75:2px;
   --spectrum-corner-radius-100:5px;
   --spectrum-corner-radius-200:10px;
-  --spectrum-drop-shadow-x:0px;
   --spectrum-drop-shadow-y:2px;
   --spectrum-drop-shadow-blur:6px;
 }
@@ -2851,7 +2851,6 @@
   --spectrum-arrow-icon-size-400:16px;
   --spectrum-arrow-icon-size-500:18px;
   --spectrum-arrow-icon-size-600:20px;
-  --spectrum-asterisk-icon-size-75:8px;
   --spectrum-asterisk-icon-size-100:8px;
   --spectrum-asterisk-icon-size-200:10px;
   --spectrum-asterisk-icon-size-300:10px;
@@ -2898,7 +2897,6 @@
   --spectrum-field-label-top-to-asterisk-medium:12px;
   --spectrum-field-label-top-to-asterisk-large:15px;
   --spectrum-field-label-top-to-asterisk-extra-large:19px;
-  --spectrum-field-label-top-margin-small:0px;
   --spectrum-field-label-top-margin-medium:4px;
   --spectrum-field-label-top-margin-large:5px;
   --spectrum-field-label-top-margin-extra-large:5px;
@@ -2910,7 +2908,6 @@
   --spectrum-help-text-top-to-workflow-icon-medium:3px;
   --spectrum-help-text-top-to-workflow-icon-large:6px;
   --spectrum-help-text-top-to-workflow-icon-extra-large:9px;
-  --spectrum-status-light-dot-size-small:8px;
   --spectrum-status-light-dot-size-medium:8px;
   --spectrum-status-light-dot-size-large:10px;
   --spectrum-status-light-dot-size-extra-large:10px;
@@ -2918,8 +2915,6 @@
   --spectrum-status-light-top-to-dot-medium:12px;
   --spectrum-status-light-top-to-dot-large:15px;
   --spectrum-status-light-top-to-dot-extra-large:19px;
-  --spectrum-action-button-edge-to-hold-icon-extra-small:3px;
-  --spectrum-action-button-edge-to-hold-icon-small:3px;
   --spectrum-action-button-edge-to-hold-icon-medium:4px;
   --spectrum-action-button-edge-to-hold-icon-large:5px;
   --spectrum-action-button-edge-to-hold-icon-extra-large:6px;
@@ -3052,10 +3047,8 @@
   --spectrum-coach-mark-title-size:var(--spectrum-heading-size-xs);
   --spectrum-coach-mark-body-size:var(--spectrum-body-size-s);
   --spectrum-coach-mark-pagination-body-size:var(--spectrum-body-size-s);
-  --spectrum-accordion-top-to-text-compact-small:2px;
   --spectrum-accordion-top-to-text-regular-small:5px;
   --spectrum-accordion-small-top-to-text-spacious:9px;
-  --spectrum-accordion-top-to-text-compact-medium:4px;
   --spectrum-accordion-top-to-text-regular-medium:8px;
   --spectrum-accordion-top-to-text-spacious-medium:12px;
   --spectrum-accordion-top-to-text-compact-large:4px;
@@ -3077,10 +3070,6 @@
   --spectrum-accordion-bottom-to-text-regular-extra-large:12px;
   --spectrum-accordion-bottom-to-text-spacious-extra-large:16px;
   --spectrum-accordion-minimum-width:200px;
-  --spectrum-accordion-disclosure-indicator-to-text:0px;
-  --spectrum-accordion-edge-to-disclosure-indicator:0px;
-  --spectrum-accordion-edge-to-text:0px;
-  --spectrum-accordion-focus-indicator-gap:0px;
   --spectrum-accordion-content-area-top-to-content:8px;
   --spectrum-accordion-content-area-bottom-to-content:16px;
   --spectrum-color-handle-size:16px;
@@ -3117,7 +3106,6 @@
   --spectrum-table-row-bottom-to-text-medium-spacious:16px;
   --spectrum-table-row-bottom-to-text-large-spacious:18px;
   --spectrum-table-row-bottom-to-text-extra-large-spacious:21px;
-  --spectrum-table-edge-to-content:16px;
   --spectrum-table-checkbox-to-text:24px;
   --spectrum-table-header-row-checkbox-to-top-small:10px;
   --spectrum-table-header-row-checkbox-to-top-medium:9px;
@@ -3495,10 +3483,8 @@
   --spectrum-slider-bottom-to-handle-medium:8px;
   --spectrum-slider-bottom-to-handle-large:11px;
   --spectrum-slider-bottom-to-handle-extra-large:14px;
-  --spectrum-corner-radius-75:2px;
   --spectrum-corner-radius-100:4px;
   --spectrum-corner-radius-200:8px;
-  --spectrum-drop-shadow-x:0px;
   --spectrum-drop-shadow-y:1px;
   --spectrum-drop-shadow-blur:4px;
 }
