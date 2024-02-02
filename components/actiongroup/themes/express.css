@@ -11,11 +11,4 @@ governing permissions and limitations under the License.
 */
 
 @container (--system: express) {
-  .spectrum-ActionGroup {
-    --spectrum-actiongroup-gap-size-compact: var(--spectrum-spacing-50);
-
-    /* account for button border */
-    --spectrum-actiongroup-horizontal-spacing-compact: calc(-1px * var(--spectrum-spacing-50));
-    --spectrum-actiongroup-vertical-spacing-compact: calc(-1px * var(--spectrum-spacing-50));
-  }
 }
