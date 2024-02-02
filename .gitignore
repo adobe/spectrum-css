@@ -1,5 +1,6 @@
 dist
 dist-site
+!tokens/dist
 
 # Recommended update re:https://docs.netlify.com/integrations/frameworks/eleventy/
 **/node_modules/**
