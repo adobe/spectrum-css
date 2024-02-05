@@ -3,6 +3,131 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+<a name="6.0.0"></a>
+#6.0.0
+🗓
+2024-02-05 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/icon@5.1.0...@spectrum-css/icon@6.0.0)
+
+\*refactor(icon)!: tokens migration (#2347)([b63631a](https://github.com/adobe/spectrum-css/commit/b63631a)), closes[#2347](https://github.com/adobe/spectrum-css/issues/2347)
+
+    	###
+    	🛑 BREAKING CHANGES
+
+    		*
+    		migrate Icon from DNA tokens to Spectrum tokens.
+
+Additionally:
+
+- refactor(icon): migrate css to spectrum tokens
+
+Migrates Icon CSS from using DNA/vars tokens to Spectrum tokens.
+Refactors UI Icons to be a little cleaner and not need placeholders.
+
+Icons now change the value of the property "--spectrum-icon-size" to
+set their width and height. They also have three additional mods
+available for setting the size (both width and height) or the individual
+width and height.
+
+- refactor(icon): remove legacy xvar css and plugin for combined icons
+
+* Remove 'xvar' and 'x--' code within UI icon CSS, along with the build
+  plugins that were used only for this. This was only only needed
+  previously when the build did not allow 'var()' and '--property' here.
+
+* Simplify and better document code used for combined UI icons and the
+  medium/large platform scale. Remove old browser support here that is
+  no longer needed with the browsers and features that are currently
+  supported by the library. The old fallback to set display inline was
+  pre Firefox version 56 [2017].
+
+- refactor(icon): remove gripper icon classes
+
+Removing the gripper icon classes as they were incorrect and not used,
+and there are no tokens defined yet to set the actual classes to.
+
+The gripper icon classes used previously were wrong in several ways.
+For one, they were using '100' size naming in the classes which are not
+currently used or displayed. These icons are without the number size.
+The old alias values being applied to them also looked incorrect when
+looking at the widths, and the CSS was swapping width for height.
+
+That there is no size applied to these icons was obfuscated by the fact
+that the attribute width="10" is being applied to icons in Storybook.
+
+Note: SWC is currently showing these icons with workflow sizing.
+These gripper icons do not have size tokens defined yet, but they may be
+added in the future "as they are needed"; when these icons start being
+used.
+
+- docs(icon): storybook - add kitchen sink style story for chromatic
+
+Cover the various types of icons in a Chromatic only story.
+Covers different icon sets, sizes, and color in the VRTs.
+
+- feat(icon): adjust icon sizing custom properties
+
+Make sure we always have custom properties that contains the width and
+height, that we can rely upon for CSS calculations. Regardless of
+whether the individual dimensions are specified or just the size is
+specified (that applies to both dimensions).
+
+- fix(icon): storybook - remove inline width attribute
+
+The icons in Storybook were adding an inline "width" attribute set to
+10, which was previously obfuscating issues with sizing. Removes this
+attribute and leaves sizing up to CSS.
+
+- feat(icon): support for xs workflow icon size
+
+Added extra small workflow icon size. This has a token, is defined on
+some of the design redlines (Action Button), and is currently used in
+the Contextual Help component, as seen in the VRT run.
+
+- feat(icon): remove theme files without content
+
+Recent updates to main make it no longer necessary to include empty
+theme files for the build to work.
+
+- feat(icon): storybook - use ui icon size numbers
+
+Disables the size control for UI icons and adds each size number to the
+list of available UI icon names in Storybook.
+
+UI icons have specific sizing and don't use the t-shirt sizing that
+Workflow icons do. They have more size numbers than there are t-shirt
+sizes, so they can't be directly mapped to each other. The different
+UI icons have different size numbers, so the size numbers can't use a
+single control.
+
+- feat(icon): storybook - show all ui icons in chromatic template
+
+Show all UI icons, including number sizing, in the Chromatic template.
+Condenses and improves some of the template logic.
+
+- fix(icon): wrong workflow icons appearing for arrow and chevron
+
+Fix bug where the wrong icon was being rendered for workflow arrow and
+chevron. These are both icons with names that exist in both icon sets.
+There was logic being applied to the workflow icons that should have
+only have been applied to the UI icon.
+
+- chore(icon): manual version bump for beta release
+
+- feat(icon): add xxs size for migration and use renamed xxl property
+
+Add XXS size to support existing SWC size. Uses the values from
+--spectrum-global-dimension-size-150, as used in SWC's custom icon CSS.
+
+Included comments to note that xxs and xxl are planned to be deprecated
+in Spectrum 2, as they are not a part of the design spec.
+
+- chore(icon): set current beta versions already released
+
+- build(icon): minimum tokens version with xxl and xxs sizing
+
+Update required tokens version with a minimum of the latest release that
+includes the new custom-vars for the xxl and xxs workflow icon sizes.
+
 <a name="5.1.0"></a>
 #5.1.0
 🗓
