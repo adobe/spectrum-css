@@ -3,7 +3,7 @@ import { classMap } from "lit/directives/class-map.js";
 import { ifDefined } from "lit/directives/if-defined.js";
 import { unsafeSVG } from "lit/directives/unsafe-svg.js";
 
-import { fetchIconSVG, uiIcons, workflowIcons } from "./utilities.js";
+import { fetchIconSVG, uiIcons, uiIconSizes, workflowIcons } from "./utilities.js";
 
 import "../index.css";
 
@@ -17,7 +17,7 @@ import "../index.css";
  * @description Icon template that renders an icon based on the provided icon name and set name.
  * @param {IconProps} props
  * @param {string} props.rootClass
- * @param {"s"|"m"|"l"|"xl"} props.size
+ * @param {"xs"|"s"|"m"|"l"|"xl"|"xxl"} props.size
  * @param {"ui"|"workflow"} props.setName
  * @param {string} props.iconName - Icon name with or without the icon scale number appended. Names with the scale (e.g. 75, 100) will replace it based upon the value of 'size'.
  * @param {string} props.fill
@@ -48,22 +48,50 @@ export const Template = ({
 
 	let idKey = iconName;
 
-	// If a descriptor like Right, Left, Down, or Up is present for the Chevron or the
+	// If icon set was not provided, try determine which icon set contains this icon.
+	// Note: icon sets can contain the same icon name, with different icons.
+	if (!['workflow','ui'].includes(setName)){
+		if (workflowIcons.includes(idKey)) {
+			setName = "workflow";
+		} else if (uiIcons.includes(idKey.replace(/\d{2,3}$/, "").replace(/(Right|Left|Down|Up)$/, ""))) {
+			setName = "ui";
+		}
+	}
+
+	if (!setName) {
+		console.warn(
+			`Icon: Could not determine the icon set for the provided icon name: ${idKey}.`
+		);
+		return html``;
+	}
+
+	// If a descriptor like Right, Left, Down, or Up is present for the UI icons Chevron or
 	// Arrow, use that only for the class and not the icon fetch.
 	if (
+		setName == "ui" &&
 		uiIcons.some((c) => idKey.startsWith(c)) &&
 		["Right", "Left", "Down", "Up"].some((c) => idKey.includes(c))
 	) {
 		idKey = idKey.replace(/(Right|Left|Down|Up)/, "");
 	}
 
-	// If the icon name includes its scale, we want to leave that scale
-	// If the icon name does not include scale, reformat it to match the provided sizing.
-	// E.g. with a size of "s", the icon name "ChevronRight" would become "ChevronRight75".
+	/**
+	 * Fallback UI Icon sizing number.
+	 * 
+	 * If the icon name includes its scale, we want to leave that scale. This is preferred,
+	 * as UI icons do not use workflow icon sizing.
+	 * 
+	 * If the UI icon name does not include scale, reformat it to match the provided sizing.
+	 * E.g. with a size of "s", the icon name "ChevronRight" would become "ChevronRight75".
+	 */
 	if (
+		setName == "ui" &&
+		// Exists in the list of available UI icons.
 		uiIcons.includes(idKey.replace(/\d{2,3}$/, "")) &&
+		// Does not already have size number at the end.
 		!idKey.match(/^(?!\d).*\d{2,3}$/) &&
-		!idKey.endsWith("Gripper")
+		// Exclude some UI icons that do not (yet) have size numbers.
+		uiIconSizes[idKey]?.length != 0
 	) {
 		let sizeVal;
 		switch (size) {
@@ -85,23 +113,9 @@ export const Template = ({
 
 		idKey += sizeVal;
 		iconName += sizeVal;
-
 	}
 
-	// Determine which icon set contains this icon.
-	if (workflowIcons.includes(idKey)) {
-		setName = "workflow";
-	} else if (uiIcons.includes(idKey.replace(/\d{2,3}$/, ""))) {
-		setName = "ui";
-	}
-
-	if (!setName) {
-		console.warn(
-			`Icon: Could not determine the icon set for the provided icon name: ${idKey}.`
-		);
-		return html``;
-	}
-
+	// Fetch SVG file markup, and set optional fill color.
 	let inlineStyle;
 	if (fill) inlineStyle = `color: ${fill}`;
 	let icon;
@@ -110,11 +124,15 @@ export const Template = ({
 		icon = fetchIconSVG({ iconName: idKey, setName, ...globals });
 
 		if (!icon) {
-			console.warn(`Icon: ${idKey} not found.`);
+			console.warn(`Icon: "${idKey}" was not found in the "${setName}" icon set.`);
 			return html``;
 		}
 	}
 
+	/**
+	 * Classes to apply to the SVG element. Object as used by the classMap function.
+	 * @type {[name: string]: string | boolean | number}
+	 */
 	const classList = {
 		[rootClass]: true,
 		[`spectrum-UIIcon-${iconName}`]: !!(setName === "ui"),
@@ -136,7 +154,7 @@ export const Template = ({
 					.map(([k]) => k)
 					.join(" ")}"${
 					inlineStyle ? ` style="${inlineStyle}"` : ""
-				} focusable="false" aria-hidden="true" role="img" width="10" $1>`
+				} focusable="false" aria-hidden="true" role="img" $1>`
 			)
 		)}`;
 	}

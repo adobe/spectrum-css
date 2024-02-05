@@ -1,7 +1,27 @@
 // Import the component markup template
-import { Template } from "./template";
+import isChromatic from "chromatic/isChromatic";
+import { html } from "lit";
+import { styleMap } from "lit/directives/style-map.js";
+import { when } from "lit/directives/when.js";
 
-import { uiIcons, workflowIcons } from "./utilities.js";
+import { Template } from "./template";
+import { uiIconSizes, uiIconsWithDirections, workflowIcons } from "./utilities.js";
+
+/**
+ * Create a list of all UI Icons with their sizing numbers.
+ * 
+ * The list is a little long until Storybook adds a way to use conditional options
+ * in controls, e.g. a "uiSize" control with options pulled from uiIconSizes:
+ * @see https://github.com/storybookjs/storybook/discussions/24235
+ */
+const uiIconNameOptions = uiIconsWithDirections.map((iconName) => {
+	const baseIconName = iconName.replace(/(Left|Right|Up|Down)$/, '');
+	// Icons like Gripper that don't have sizes yet, represented by any empty array.
+	if (uiIconSizes[baseIconName]?.length == 0){
+		return [baseIconName];
+	} 
+	return uiIconSizes[baseIconName]?.map(sizeNum => iconName + sizeNum) ?? [];
+}).flat();
 
 export default {
 	title: "Components/Icon",
@@ -13,14 +33,15 @@ export default {
 		express: { table: { disable: true } },
 		reducedMotion: { table: { disable: true } },
 		size: {
-			name: "Size",
+			name: "Workflow Icon Size",
 			type: { name: "string", required: true },
 			table: {
 				type: { summary: "string" },
 				category: "Component",
 			},
-			options: ["s", "m", "l", "xl", "xxl"],
+			options: ["xs", "s", "m", "l", "xl", "xxl"],
 			control: "select",
+			if: { arg: "setName", eq: "workflow" },
 		},
 		setName: {
 			name: "Icon set",
@@ -51,15 +72,7 @@ export default {
 				category: "Content",
 			},
 			options: [
-				...uiIcons.filter((c) => !["Chevron", "Arrow"].includes(c)),
-				"ArrowRight",
-				"ArrowLeft",
-				"ArrowUp",
-				"ArrowDown",
-				"ChevronRight",
-				"ChevronLeft",
-				"ChevronUp",
-				"ChevronDown",
+				...uiIconNameOptions,
 			],
 			control: "select",
 			if: { arg: "setName", eq: "ui" },
@@ -90,10 +103,86 @@ export default {
 	},
 };
 
-export const Default = (args) => Template({
-	...args,
-	iconName: args.iconName ?? args.uiIconName,
-	setName: args.setName ?? (args.uiIconName ? "ui" : "workflow"),
-});
+export const Default = (args) => {
+	if (isChromatic()){
+		return TestTemplate({ ...args });
+	} else {
+		return Template({
+			...args,
+			iconName: args.iconName ?? args.uiIconName,
+			setName: args.setName ?? (args.uiIconName ? "ui" : "workflow"),
+		});
+	}
+} 
 
 Default.args = {};
+
+/**
+ * Chromatic VRT template that displays multiple icons to cover various options.
+ */
+const TestTemplate = ({
+	staticColor,
+	customStyles = {},
+	...args
+}) => {
+	const workflow_row_args = [
+		{
+			setName: "workflow",
+			iconName: "Alert",
+			fill: "var(--spectrum-negative-content-color-default)",
+		},
+		{
+			setName: "workflow",
+			iconName: "Hand",
+		},
+		{
+			setName: "workflow",
+			iconName: "Help",
+		},
+		{
+			setName: "workflow",
+			iconName: "ArrowLeft",
+		},
+		{
+			setName: "workflow",
+			iconName: "ArrowRight",
+		},
+		{
+			setName: "workflow",
+			iconName: "ChevronDown",
+		}
+	];
+
+	return html`
+		${workflow_row_args.map((row_args) => html`
+			<div
+				style=${styleMap({
+					display: "flex",
+					gap: "16px",
+					marginBottom: "16px",
+				})}
+			>
+				${['xs','s','m','l','xl','xxl'].map(
+					(size) => Template({ ...args, ...row_args, size })
+				)}
+			</div>`
+		)}
+		<div style="margin-top:32px;">
+			${uiIconsWithDirections.map(iconName => html`
+				<div
+					style=${styleMap({
+						display: "flex",
+						gap: "16px",
+					})}
+				>
+					${uiIconSizes[iconName.replace(/(Left|Right|Up|Down)$/, '')]?.map((iconSize) =>
+						Template({ ...args, setName: "ui", iconName: iconName + iconSize })
+					)}
+					${when(uiIconSizes[iconName]?.length == 0, () =>
+						Template({ ...args, setName: "ui", iconName })
+					)}
+				</div>`
+			)}
+		</div>
+	`;
+};

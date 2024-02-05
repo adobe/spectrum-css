@@ -60,7 +60,6 @@ function getProcessors(
 		diff ? require("postcss-varsonly")() : null,
 		require("postcss-logical")(),
 		require("postcss-dir-pseudo-class")(),
-		require("postcss-custom-properties-passthrough")(),
 		require("postcss-hover-media-feature"),
 		require("postcss-calc"),
 		keepVars ? require("postcss-custom-properties-mapping")({

@@ -11,55 +11,39 @@ governing permissions and limitations under the License.
 */
 
 .spectrum-Icon {
-  --spectrum-icon-size-s: var(--spectrum-alias-workflow-icon-size-s);
-  --spectrum-icon-size-m: var(--spectrum-alias-workflow-icon-size-m);
-  --spectrum-icon-size-l: var(--spectrum-alias-workflow-icon-size-l);
-  --spectrum-icon-size-xl: var(--spectrum-alias-workflow-icon-size-xl);
-  --spectrum-icon-size-xxl: var(--spectrum-global-dimension-size-400);
+  --spectrum-icon-size: var(--spectrum-workflow-icon-size-100);
+}
+
+/* XXS icon size is not within the design spec and is planned to be deprecated in Spectrum 2. */
+.spectrum-Icon--sizeXXS {
+  --spectrum-icon-size: var(--spectrum-workflow-icon-size-xxs);  
+}
+
+.spectrum-Icon--sizeXS {
+  --spectrum-icon-size: var(--spectrum-workflow-icon-size-50);
 }
 
 .spectrum-Icon--sizeS {
-  &,
-  img,
-  svg {
-    block-size: var(--spectrum-icon-size-s);
-    inline-size: var(--spectrum-icon-size-s);
-  }
-}
-
-.spectrum-Icon--sizeM {
-  &,
-  img,
-  svg {
-    block-size: var(--spectrum-icon-size-m);
-    inline-size: var(--spectrum-icon-size-m);
-  }
+  --spectrum-icon-size: var(--spectrum-workflow-icon-size-75);
 }
 
 .spectrum-Icon--sizeL {
-  &,
-  img,
-  svg {
-    block-size: var(--spectrum-icon-size-l);
-    inline-size: var(--spectrum-icon-size-l);
-  }
+  --spectrum-icon-size: var(--spectrum-workflow-icon-size-200);
 }
 
 .spectrum-Icon--sizeXL {
-  &,
-  img,
-  svg {
-    block-size: var(--spectrum-icon-size-xl);
-    inline-size: var(--spectrum-icon-size-xl);
-  }
+  --spectrum-icon-size: var(--spectrum-workflow-icon-size-300);
 }
 
-
+/* XXL icon size is not within the design spec and is planned to be deprecated in Spectrum 2. */
 .spectrum-Icon--sizeXXL {
-  &,
+  --spectrum-icon-size: var(--spectrum-workflow-icon-size-xxl);
+}
+
+.spectrum-Icon {
   img,
   svg {
-    block-size: var(--spectrum-icon-size-xxl);
-    inline-size: var(--spectrum-icon-size-xxl);
+    inline-size: var(--spectrum-icon-inline-size);
+    block-size: var(--spectrum-icon-block-size);
   }
 }
