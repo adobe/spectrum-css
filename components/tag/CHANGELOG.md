@@ -3,6 +3,15 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+<a name="8.1.0"></a>
+#8.1.0
+🗓
+2024-02-05 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/tag@8.0.17...@spectrum-css/tag@8.1.0)
+
+### 🐛 Bug fixes
+
+- **tag:**higher specificity for color definition in hover states([fa8cd37](https://github.com/adobe/spectrum-css/commit/fa8cd37))
+
 <a name="8.0.17"></a>
 ##8.0.17
 🗓

@@ -3,6 +3,13 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+<a name="5.1.0"></a>
+#5.1.0
+🗓
+2024-02-05 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/searchwithin@5.0.25...@spectrum-css/searchwithin@5.1.0)
+
+**Note:** Version bump only for package @spectrum-css/searchwithin
+
 <a name="5.0.25"></a>
 ##5.0.25
 🗓

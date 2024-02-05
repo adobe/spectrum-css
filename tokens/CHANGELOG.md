@@ -3,6 +3,15 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+<a name="13.1.0"></a>
+#13.1.0
+🗓
+2024-02-05 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/tokens@13.0.9...@spectrum-css/tokens@13.1.0)
+
+### ✨ Features
+
+- **tokens:**add icon xxl and xxs tokens([b2d71bc](https://github.com/adobe/spectrum-css/commit/b2d71bc))
+
 <a name="13.0.9"></a>
 ##13.0.9
 🗓

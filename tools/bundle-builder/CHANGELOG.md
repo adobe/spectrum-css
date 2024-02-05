@@ -3,6 +3,13 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+<a name="6.3.0"></a>
+#6.3.0
+🗓
+2024-02-05 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/bundle-builder@6.2.0...@spectrum-css/bundle-builder@6.3.0)
+
+**Note:** Version bump only for package @spectrum-css/bundle-builder
+
 <a name="6.2.0"></a>
 #6.2.0
 🗓

@@ -3,6 +3,13 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+<a name="5.2.0"></a>
+#5.2.0
+🗓
+2024-02-05 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/assetlist@5.1.1...@spectrum-css/assetlist@5.2.0)
+
+**Note:** Version bump only for package @spectrum-css/assetlist
+
 <a name="5.1.1"></a>
 ##5.1.1
 🗓

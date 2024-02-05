@@ -3,6 +3,16 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+<a name="5.2.0"></a>
+#5.2.0
+🗓
+2024-02-05 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/component-builder@5.1.0...@spectrum-css/component-builder@5.2.0)
+
+### ✨ Features
+
+*add postcss-hover-media-feature plugin([d45886c](https://github.com/adobe/spectrum-css/commit/d45886c))*add postcss-hover-media-feature to build([3910325](https://github.com/adobe/spectrum-css/commit/3910325))\*
+**component-builder,component-builder-simple:**add at-rule-packer to combine like at-rules([0a83b8c](https://github.com/adobe/spectrum-css/commit/0a83b8c))
+
 <a name="5.1.0"></a>
 #5.1.0
 🗓
