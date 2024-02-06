@@ -35,6 +35,10 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 ##5.0.1
 🗓
 2024-02-06
+<a name="5.0.1-next.0"></a>
+##5.0.1-next.0
+🗓
+2024-02-06 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/component-builder-simple@5.0.0...@spectrum-css/component-builder-simple@5.0.1-next.0)
 
 **Note:** Version bump only for package @spectrum-css/component-builder-simple
 
